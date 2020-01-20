@@ -4,12 +4,12 @@ description: パッケージ マネージャーを使用して、.NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: c81f9046fc96e640848f26d86e4a513916fa07ba
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a40180881ec0962d89f03c2c9d7aad9bbb052d2a
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998919"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740655"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12 パッケージ マネージャー - .NET Core をインストールする
 
@@ -21,9 +21,9 @@ ms.locfileid: "74998919"
 
 .NET をインストールする前に、次のことを行う必要があります。
 
-- Microsoft キーを登録する
-- 製品リポジトリを登録する
-- 必要な依存関係をインストールする
+- Microsoft キーを登録する。
+- 製品リポジトリを登録する。
+- 必要な依存関係をインストールする。
 
 これは、コンピューターごとに 1 回実行する必要があるだけです。
 

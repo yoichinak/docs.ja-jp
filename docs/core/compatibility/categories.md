@@ -2,12 +2,12 @@
 title: 破壊的変更のカテゴリ - .NET Core
 description: .NET Core での破壊的変更のカテゴリの分類方法について説明します。
 ms.date: 06/10/2019
-ms.openlocfilehash: 4569c1ab19cb9bfa3e16aa8d5f941705eb926fa7
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 32cf55dc3ba0b16bae8cfe6179211150b2c90e2c
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567919"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343596"
 ---
 # <a name="breaking-change-categories"></a>破壊的変更のカテゴリ
 
@@ -18,8 +18,7 @@ ms.locfileid: "74567919"
 - [ソースの互換性](#source-compatibility)
 - [デザイン時の互換性](#design-time-compatibility)
 - [下位互換性](#backwards-compatibility)
-
-[上位互換性](#forward-compatibility)は .NET Core の目標ではありません。
+- [上位互換性](#forward-compatibility) (.NET Core の目標ではありません)
 
 ## <a name="behavioral-change"></a>動作の変更
 
@@ -43,7 +42,7 @@ ms.locfileid: "74567919"
 
 下位互換性とは、API の既存のコンシューマーが、新しいバージョンに対して同じ動作で実行できることを指します。 動作の変更とバイナリの互換性の変更の両方が、下位互換性に影響します。 コンシューマーがその API の新しいバージョンで実行されるときに、実行できない、または動作が異なる場合、その API は "*下位非互換*" です。
 
-開発者は新しいバージョンの API が既定で下位互換であることを期待しているので、下位互換性に影響する変更は行わないことを強く推奨します。
+開発者は新しいバージョンの API が下位互換であることを期待しているので、下位互換性に影響する変更は行わないことを推奨します。
 
 ## <a name="forward-compatibility"></a>上位互換性
 

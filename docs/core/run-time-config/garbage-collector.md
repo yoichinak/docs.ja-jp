@@ -1,14 +1,14 @@
 ---
 title: ガベージ コレクター構成の設定
 description: ガベージ コレクターでの .NET Core アプリ用のメモリの管理方法を構成するための、実行時設定について学習します。
-ms.date: 11/13/2019
+ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: e7f6877a3cbc7f28776a93b9126f4b64026487fa
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74998817"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900097"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>ガベージ コレクションの実行時構成オプション
 
@@ -20,7 +20,7 @@ ms.locfileid: "74998817"
 >
 > - これらの設定は、実行中にアプリで動的に変更することもできます。したがって、設定した実行時の設定が上書きされる可能性があります。
 > - [待機時間レベル](../../standard/garbage-collection/latency.md)などの一部の設定は、通常、デザイン時に API を介してのみ設定されます。 このページでは、このような設定は省略されています。
-> - 数値の場合、*runtimeconfig.json* ファイルの設定には 10 進表記、環境変数の設定には 16 進表記を使用します。
+> - 数値の場合、*runtimeconfig.json* ファイルの設定には 10 進表記、環境変数の設定には 16 進表記を使用します。 16 進値の場合は、プレフィックス "0x" を付けても付けなくても指定できます。
 
 ## <a name="flavors-of-garbage-collection"></a>ガベージ コレクションのフレーバー
 
@@ -41,6 +41,18 @@ ms.locfileid: "74998817"
 | **環境変数** | `COMPlus_gcServer` | `0` - ワークステーション<br/>`1` - サーバー | .NET Core 1.0 |
 | **.NET Framework 用の app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` - ワークステーション<br/>`true` - サーバー |  |
 
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Server": true
+      }
+   }
+}
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - バックグラウンド (同時実行) ガベージ コレクションを有効にするかどうかを構成します。
@@ -53,6 +65,18 @@ ms.locfileid: "74998817"
 | **環境変数** | `COMPlus_gcConcurrent` | `true` - バックグラウンド GC<br/>`false` -非同時実行 GC | .NET Core 1.0 |
 | **.NET Framework 用の app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` - バックグラウンド GC<br/>`false` -非同時実行 GC |  |
 
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.Concurrent": false
+      }
+   }
+}
+```
+
 ## <a name="manage-resource-usage"></a>リソース使用量を管理する
 
 このセクションで説明する設定を使用して、ガベージ コレクターのメモリとプロセッサの使用量を管理します。
@@ -62,8 +86,8 @@ ms.locfileid: "74998817"
 ### <a name="systemgcheapcountcomplus_gcheapcount"></a>System.GC.HeapCount/COMPlus_GCHeapCount
 
 - ガベージ コレクターによって作成されるヒープの数を制限します。
-- サーバー ガベージ コレクション (GC) にのみ適用されます。
-- GC プロセッサの関係が有効になっている場合 (既定値)、ヒープ数の設定では、最初の `n` プロセッサに `n` GC ヒープやスレッドを関連付けます  (関係付けマスクまたは関係付け範囲の設定を使用して、関係付けるプロセッサを正確に指定します)。
+- サーバー ガベージ コレクションにのみ適用されます。
+- GC プロセッサの関係が有効になっている場合 (既定値)、ヒープ数の設定では、最初の `n` プロセッサに `n` GC ヒープやスレッドを関連付けます (関係付けマスクまたは関係付け範囲の設定を使用して、関係付けるプロセッサを正確に指定します)。
 - GC プロセッサの関係が無効になっている場合、この設定によって GC ヒープの数が制限されます。
 - 詳細については、[GCHeapCount の解説](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)に関する記述を参照してください。
 
@@ -71,23 +95,47 @@ ms.locfileid: "74998817"
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.HeapCount` | "*10 進値*" | .NET Core 3.0 |
 | **環境変数** | `COMPlus_GCHeapCount` | "*16 進値*" | .NET Core 3.0 |
-| **.NET Framework 用の app.config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | "*10 進値*" | 4.6.2 |
+| **.NET Framework 用の app.config** | [GCHeapCount](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md) | "*10 進値*" | .NET Framework 4.6.2 |
+
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapCount": 16
+      }
+   }
+}
+```
 
 > [!TIP]
-> *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープの数を 16 に制限する場合、値は JSON ファイルでは 16、環境変数では 10 になります。
+> *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープの数を 16 に制限する場合、値は JSON ファイルでは 16、環境変数では 0x10 または 10 になります。
 
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - ガベージ コレクター スレッドで使用する必要がある正確なプロセッサを指定します。
 - `System.GC.NoAffinitize` を `true` に設定してプロセッサの関係を無効にした場合、この設定は無視されます。
-- サーバー ガベージ コレクション (GC) にのみ適用されます。
-- この値は、プロセスで使用できるプロセッサを定義するビット マスクです。 たとえば、10 進値の 1023 (環境変数を使用する場合は、16 進値の 3FF) は、バイナリ表記では 0011 1111 1111 となります。 これにより、最初の 10 プロセッサが使用されることが指定されます。 次の 10 プロセッサ (つまり、10 から 19 プロセッサ) を指定するには、10 進値の 1047552 (または 16 進値の FFC00) を指定します。これは、バイナリ値の 1111 1111 1100 0000 0000 に相当します。
+- サーバー ガベージ コレクションにのみ適用されます。
+- この値は、プロセスで使用できるプロセッサを定義するビット マスクです。 たとえば、10 進値の 1023 (環境変数を使用する場合は、16 進値の 0x3FF または 3FF) は、バイナリ表記では 0011 1111 1111 となります。 これにより、最初の 10 プロセッサが使用されることが指定されます。 次の 10 プロセッサ (つまり、10 から 19 プロセッサ) を指定するには、10 進値の 1047552 (または 16 進値の 0xFFC00 または FFC00) を指定します。これは、バイナリ値の 1111 1111 1100 0000 0000 に相当します。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.HeapAffinitizeMask` | "*10 進値*" | .NET Core 3.0 |
 | **環境変数** | `COMPlus_GCHeapAffinitizeMask` | "*16 進値*" | .NET Core 3.0 |
-| **.NET Framework 用の app.config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | "*10 進値*" | 4.6.2 |
+| **.NET Framework 用の app.config** | [GCHeapAffinitizeMask](../../framework/configure-apps/file-schema/runtime/gcheapaffinitizemask-element.md) | "*10 進値*" | .NET Framework 4.6.2 |
+
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapAffinitizeMask": 1023
+      }
+   }
+}
+```
 
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
@@ -95,7 +143,7 @@ ms.locfileid: "74998817"
 - この設定は `System.GC.HeapAffinitizeMask` に似ていますが、64 を超えるプロセッサを指定できる点が異なります。
 - Windows オペレーティング システムの場合、プロセッサの番号または範囲の前に、対応する [CPU グループ](/windows/win32/procthread/processor-groups)を付けます。たとえば、"0:1-10,0:12,1:50-52,1:70" となります。
 - `System.GC.NoAffinitize` を `true` に設定してプロセッサの関係を無効にした場合、この設定は無視されます。
-- サーバー ガベージ コレクション (GC) にのみ適用されます。
+- サーバー ガベージ コレクションにのみ適用されます。
 - 詳細については、Maoni Stephens のブログの「[CPU が 64 を超えるコンピューター上での GC のための CPU 構成の向上](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)」を参照してください。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
@@ -103,19 +151,31 @@ ms.locfileid: "74998817"
 | **runtimeconfig.json** | `System.GC.GCHeapAffinitizeRanges` | プロセッサ番号またはプロセッサ番号の範囲のコンマ区切りリスト。<br/>Unix の例:"1-10,12,50-52,70"<br/>Windows の例:"0:1-10,0:12,1:50-52,1:70" | .NET Core 3.0 |
 | **環境変数** | `COMPlus_GCHeapAffinitizeRanges` | プロセッサ番号またはプロセッサ番号の範囲のコンマ区切りリスト。<br/>Unix の例:"1-10,12,50-52,70"<br/>Windows の例:"0:1-10,0:12,1:50-52,1:70" | .NET Core 3.0 |
 
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.GCHeapAffinitizeRanges": "0:1-10,0:12,1:50-52,1:70"
+      }
+   }
+}
+```
+
 ### <a name="complus_gccpugroup"></a>COMPlus_GCCpuGroup
 
 - ガベージ コレクターで [CPU グループ](/windows/win32/procthread/processor-groups)を使用するかどうかを構成します。
 
   64 ビットの Windows コンピューターに複数の CPU グループがある (つまり、64 を超えるプロセッサがある) 場合、この要素を有効にすると、すべての CPU グループ全体にガベージ コレクションが拡張されます。 ガベージ コレクターではすべてのコアを使用し、ヒープを作成して分散させます。
 
-- 64 ビット Windows オペレーティング システムのみのサーバー ガベージ コレクション (GC) に適用されます。
+- 64 ビット Windows オペレーティング システムのみのサーバー ガベージ コレクションに適用されます。
 - 既定:無効 (`0`)。
 - 詳細については、Maoni Stephens のブログの「[CPU が 64 を超えるコンピューター上での GC のための CPU 構成の向上](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)」を参照してください。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | 該当なし | N/A |
+| **runtimeconfig.json** | N/A | N/A | N/A |
 | **環境変数** | `COMPlus_GCCpuGroup` | `0` - 無効<br/>`1` - 有効 | .NET Core 1.0 |
 | **.NET Framework 用の app.config** | [GCCpuGroup](../../framework/configure-apps/file-schema/runtime/gccpugroup-element.md) | `false` - 無効<br/>`true` - 有効 |  |
 
@@ -125,14 +185,26 @@ ms.locfileid: "74998817"
 ### <a name="systemgcnoaffinitizecomplus_gcnoaffinitize"></a>System.GC.NoAffinitize/COMPlus_GCNoAffinitize
 
 - ガベージ コレクション スレッドをプロセッサに "*関係付ける*" かどうかを指定します。 GC スレッドを関係付けることは、その特定の CPU でのみ実行できることを意味します。 各 GC スレッドに対してヒープが作成されます。
-- サーバー ガベージ コレクション (GC) にのみ適用されます。
+- サーバー ガベージ コレクションにのみ適用されます。
 - 既定:ガベージ コレクション スレッドをプロセッサに関係付けます (`false`)。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.NoAffinitize` | `false` -関係付ける<br/>`true` -関係付けない | .NET Core 3.0 |
 | **環境変数** | `COMPlus_GCNoAffinitize` | `0` -関係付ける<br/>`1` -関係付けない | .NET Core 3.0 |
-| **.NET Framework 用の app.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false` -関係付ける<br/>`true` -関係付けない | 4.6.2 |
+| **.NET Framework 用の app.config** | [GCNoAffinitize](../../framework/configure-apps/file-schema/runtime/gcnoaffinitize-element.md) | `false` -関係付ける<br/>`true` -関係付けない | .NET Framework 4.6.2 |
+
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.NoAffinitize": true
+      }
+   }
+}
+```
 
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
@@ -143,8 +215,20 @@ ms.locfileid: "74998817"
 | **runtimeconfig.json** | `System.GC.HeapHardLimit` | "*10 進値*" | .NET Core 3.0 |
 | **環境変数** | `COMPlus_GCHeapHardLimit` | "*16 進値*" | .NET Core 3.0 |
 
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimit": 209715200
+      }
+   }
+}
+```
+
 > [!TIP]
-> *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープのハード制限を 80,000 バイトに指定する場合、値は JSON ファイルでは 80000、環境変数では 13880 になります。
+> *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープのハード制限を 200 メビバイト (MiB) に指定する場合、値は JSON ファイルでは 209715200、環境変数では 0xC800000 または C800000 になります。
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
@@ -155,8 +239,20 @@ ms.locfileid: "74998817"
 | **runtimeconfig.json** | `System.GC.HeapHardLimitPercent` | "*10 進値*" | .NET Core 3.0 |
 | **環境変数** | `COMPlus_GCHeapHardLimitPercent` | "*16 進値*" | .NET Core 3.0 |
 
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.HeapHardLimitPercent": 30
+      }
+   }
+}
+```
+
 > [!TIP]
-> *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープの使用量を 30% に制限する場合、値は JSON ファイルでは 30、環境変数では 1E になります。
+> *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、ヒープの使用量を 30% に制限する場合、値は JSON ファイルでは 30、環境変数では 0x1E または 1E になります。
 
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 
@@ -168,6 +264,18 @@ ms.locfileid: "74998817"
 | **runtimeconfig.json** | `System.GC.RetainVM` | `false` -OS に解放する<br/>`true` - スタンバイに配置する| .NET Core 1.0 |
 | **環境変数** | `COMPlus_GCRetainVM` | `0` -OS に解放する<br/>`1` - スタンバイに配置する | .NET Core 1.0 |
 
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.RetainVM": true
+      }
+   }
+}
+```
+
 ## <a name="large-pages"></a>大きいページ
 
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
@@ -178,7 +286,7 @@ ms.locfileid: "74998817"
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | 該当なし | N/A |
+| **runtimeconfig.json** | N/A | N/A | N/A |
 | **環境変数** | `COMPlus_GCLargePages` | `0` - 無効<br/>`1` - 有効 | .NET Core 3.0 |
 
 ## <a name="large-objects"></a>大きなオブジェクト
@@ -191,7 +299,7 @@ ms.locfileid: "74998817"
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | 該当なし | N/A |
+| **runtimeconfig.json** | N/A | N/A | N/A |
 | **環境変数** | `COMPlus_gcAllowVeryLargeObjects` | `1` - 有効<br/> `0` - 無効 | .NET Core 1.0 |
 | **.NET Framework 用の app.config** | [gcAllowVeryLargeObjects](../../framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md) | `1` - 有効<br/> `0` - 無効 | .NET Framework 4.5 |
 
@@ -209,17 +317,29 @@ ms.locfileid: "74998817"
 | **環境変数** | `COMPlus_GCLOHThreshold` | "*16 進値*" | .NET Core 1.0 |
 | **.NET Framework 用の app.config** | [GCLOHThreshold](../../framework/configure-apps/file-schema/runtime/gclohthreshold-element.md) | "*10 進値*" | .NET Framework 4.8 |
 
+例:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.GC.LOHThreshold": 120000
+      }
+   }
+}
+```
+
 > [!TIP]
-> *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、しきい値のサイズを 120,000 バイトに設定する場合、値は JSON ファイルでは 120000、環境変数では 1D4C0 になります。
+> *runtimeconfig.json* でオプションを設定する場合は、10 進値を指定します。 環境変数としてオプションを設定する場合は、16 進値を指定します。 たとえば、しきい値のサイズを 120,000 バイトに設定する場合、値は JSON ファイルでは 120000、環境変数では 0x1D4C0 または 1D4C0 になります。
 
 ## <a name="standalone-gc"></a>スタンドアロン GC
 
 ### <a name="complus_gcname"></a>COMPlus_GCName
 
 - ランタイムで読み込む対象となる、ガベージ コレクターを含むライブラリへのパスを指定します。
-- 詳細については、「[スタンドアロン GC ローダーの設計](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/standalone-gc-loading.md)」を参照してください。
+- 詳細については、「[スタンドアロン GC ローダーの設計](https://github.com/dotnet/runtime/blob/master/docs/design/features/standalone-gc-loading.md)」を参照してください。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
-| **runtimeconfig.json** | N/A | 該当なし | N/A |
+| **runtimeconfig.json** | N/A | N/A | N/A |
 | **環境変数** | `COMPlus_GCName` | *string_path* | .NET Core 2.0 |

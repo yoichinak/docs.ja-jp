@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 5183781d6a131aa395cf7c1fd8a09e05ed0bd71d
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70926151"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340378"
 ---
 # <a name="tutorial-create-an-item-template"></a>チュートリアル: 項目テンプレートを作成する
 
@@ -33,7 +33,7 @@ ms.locfileid: "70926151"
 
   この参照記事では、テンプレートの基本と、テンプレートをまとめる方法が説明されています。 ここでは、この情報の一部を繰り返して示します。
 
-* ターミナルを開いて _working\templates\\_ フォルダーに移動します。
+* ターミナルを開いて、_working\templates_ フォルダーに移動します。
 
 ## <a name="create-the-required-folders"></a>必要なフォルダーを作成する
 
@@ -54,7 +54,7 @@ parent_folder
 
 項目テンプレートは、1 つ以上のファイルを含む特定の種類のテンプレートです。 この種類のテンプレートは、構成、コード、ソリューションなどのファイルを生成する場合に役立ちます。 この例では、文字列型に拡張メソッドを追加するクラスを作成します。
 
-ターミナルで _working\templates\\_ フォルダーに移動し、_extensions_ という名前の新しいサブフォルダーを作成します。 このフォルダーに入ります。
+ターミナルで、_working\templates_ フォルダーに移動し、_extensions_ という名前の新しいサブフォルダーを作成します。 このフォルダーに入ります。
 
 ```console
 working
@@ -85,7 +85,7 @@ namespace System
 
 ## <a name="create-the-template-config"></a>テンプレートの構成を作成する
 
-.NET Core では、テンプレートが、テンプレートのルートに存在する特別なフォルダーと構成ファイルによって認識されます。 このチュートリアルでは、テンプレート フォルダーは _working\templates\extensions\\_ にあります。
+.NET Core では、テンプレートが、テンプレートのルートに存在する特別なフォルダーと構成ファイルによって認識されます。 このチュートリアルでは、テンプレート フォルダーは _working\templates\extensions_ にあります。
 
 テンプレートを作成すると、特別な構成フォルダーを除く、テンプレート フォルダー内のすべてのファイルとフォルダーがテンプレートの一部として含まれます。 この構成フォルダーの名前は _.template.config_ です。
 

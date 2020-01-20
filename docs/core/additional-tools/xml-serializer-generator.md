@@ -4,13 +4,13 @@ description: Microsoft XML Serializer Generator の概要。 XML Serializer Gene
 author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 403651978667c8cf531c3f87f1156f67206fb490
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.custom: mvc
+ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522820"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714521"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core で Microsoft XML Serializer Generator を使用する
 
@@ -131,5 +131,5 @@ dotnet run
 ## <a name="related-resources"></a>関連資料
 
 - [XML シリアル化の概要](../../standard/serialization/introducing-xml-serialization.md)
-- [方法: XmlSerializer を使用してシリアル化する (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
+- [XmlSerializer を使用してシリアル化する方法 (C#)](../../csharp/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)
 - [方法: XmlSerializer を使用してシリアル化する (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/how-to-serialize-using-xmlserializer.md)

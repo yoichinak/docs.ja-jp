@@ -4,12 +4,12 @@ description: パッケージ マネージャーを使用して、Ubuntu 18.04 �
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 38568b31bf9cd02a19a15addfe4926e8857a87b5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a8e92cab30302c5636d23f098eb60637141545ca
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999045"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740625"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Ubuntu 18.04 パッケージ マネージャー - .NET Core のインストール
 
@@ -21,9 +21,9 @@ ms.locfileid: "74999045"
 
 .NET をインストールする前に、次のことを行う必要があります。
 
-- Microsoft キーを登録する
-- 製品リポジトリを登録する
-- 必要な依存関係をインストールする
+- Microsoft キーを登録する。
+- 製品リポジトリを登録する。
+- 必要な依存関係をインストールする。
 
 これは、コンピューターごとに 1 回実行する必要があるだけです。
 

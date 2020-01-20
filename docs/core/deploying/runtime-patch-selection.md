@@ -3,13 +3,12 @@ title: .NET Core での自己完結型アプリのデプロイにおけるラン
 description: 自己完結型展開における dotnet publish の変更について説明します。
 author: KathleenDollard
 ms.date: 05/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 6a0cdfb34973822c2f40cdb37d4038d3b7ad8e2a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 22385c7b5d2bf87755fd51cd6268d21fe3431c74
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72522091"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740782"
 ---
 # <a name="self-contained-deployment-runtime-roll-forward"></a>自己完結型展開ランタイムのロール フォワード
 

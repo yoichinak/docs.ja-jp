@@ -1,16 +1,16 @@
 ---
-ms.openlocfilehash: b0d093cc30a09b3248cc57a521b386bf581b5451
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552164"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75901678"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP:ブラウザー SameSite の変更による認証への影響
 
 Chrome や Firefox などの一部のブラウザーでは、Cookie の `SameSite` の実装に破壊的変更が加えられました。 この変更は、OpenID Connect や WS-Federation などのリモート認証シナリオに影響します。これをオプトアウトするには、`SameSite=None` を送信します。 ただし、iOS 12 および一部の古いバージョンの他のブラウザーでは `SameSite=None` は中断します。 アプリはこれらのバージョンをスニッフィングし、`SameSite` を省略する必要があります。
 
-この問題に関するディスカッションについては、[aspnet/AspNetCore#14996](https://github.com/aspnet/AspNetCore/issues/14996) を参照してください。
+この問題に関するディスカッションについては、[dotnet/aspnetcore#14996](https://github.com/dotnet/aspnetcore/issues/14996) を参照してください。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
@@ -32,7 +32,7 @@ ASP.NET Core 3.1 は、新しい `SameSite` 動作を実装するように更新
 
 既に概要を説明したように、ブラウザーと仕様が変わっています。
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 サードパーティ ログインなどを介してリモート サイトとやり取りするアプリは、以下を行う必要があります。
 

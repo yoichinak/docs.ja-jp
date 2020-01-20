@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 1f7efaedaa1a0be90f7b619f954bdf78eecafa07
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 4a6c8b27812e9f60e52132169dda0464c24abcc2
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74999063"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740567"
 ---
 # <a name="install-the-net-core-sdk"></a>.NET Core SDK をインストールする
 
@@ -44,9 +44,11 @@ macOS には、.NET Core 3.1 SDK のインストールに使用できるスタ�
 
 多くの一般的な Linux パッケージ マネージャーを使用して、.NET Core SDK をインストールできます。 詳細については、[Linux パッケージ マネージャー - .NET Core のインストール](linux-package-managers.md)に関するページを参照してください。
 
+パッケージ マネージャーを使用したインストールは、x64 アーキテクチャでのみサポートされています。 ARM などの別のアーキテクチャを使用して .NET Core SDK をインストールする場合は、以下の「[手動でダウンロードしてインストールする](#download-and-manually-install)」の手順に従ってください。 サポートされているアーキテクチャの詳細については、「[.NET Core の依存関係と要件](dependencies.md)」を参照してください。
+
 ## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
 
-SDK を抽出し、コマンドをターミナルで使用できるようにするには、最初に .NET Core のバイナリ リリースを[ダウンロード](#all-net-core-downloads)します。 次に、ターミナルを開き、以下のコマンドを実行します。
+SDK を抽出し、.NET Core CLI コマンドをターミナルで使用できるようにするには、最初に .NET Core のバイナリ リリースを[ダウンロード](#all-net-core-downloads)します。 次に、ターミナルを開き、以下のコマンドを実行します。
 
 ```bash
 mkdir -p $HOME/dotnet && tar zxf dotnet-sdk-3.1.100-linux-x64.tar.gz -C $HOME/dotnet
@@ -55,14 +57,14 @@ export PATH=$PATH:$HOME/dotnet
 ```
 
 > [!TIP]
-> 上記のコマンドでは、それを実行したターミナル セッションでのみ、.NET SDK コマンドを使用できるようになります。
+> 上記の `export` コマンドでは、それを実行したターミナル セッションでのみ .NET Core CLI コマンドを使用できるようになります。
 >
 > シェル プロファイルを編集して、コマンドを永続的に追加することができます。 Linux ではさまざまなシェルを使用でき、それぞれに異なるプロファイルがあります。 次に例を示します。
 >
 > - **Bash シェル**: *~/.bash_profile*、 *~/.bashrc*
 > - **Korn シェル**: *~/.kshrc* または *.profile*
 > - **Z シェル**: *~/.zshrc* または *.zprofile*
-> 
+>
 > シェルの適切なソース ファイルを編集し、既存の `PATH` ステートメントの末尾に `:$HOME/dotnet` を追加します。 `PATH` ステートメントが含まれていない場合は、`export PATH=$PATH:$HOME/dotnet` を含む新しい行を追加します。
 >
 > また、ファイルの末尾に `export DOTNET_ROOT=$HOME/dotnet` を追加します。
@@ -94,7 +96,7 @@ Visual Studio では、最新の .NET Core SDK とランタイムをインスト
 
 ### <a name="select-a-workload"></a>ワークロードを選択する
 
-Visual Studio をインストールまたは変更するときは、ビルドするアプリケーションの種類に応じて、次のいずれかのワークロードを選択します。
+Visual Studio をインストールまたは変更するときは、ビルドするアプリケーションの種類に応じて、次の 1 つ以上のワークロードを選択します。
 
 - **[他のツールセット]** セクションの **[.NET Core クロスプラットフォームの開発]** ワークロード。
 - **[Web クラウド]** セクションの **[ASP.NET と Web 開発]** ワークロード。
@@ -131,7 +133,7 @@ Visual Studio Code には、Visual Studio のような自動化された .NET Co
 
 [dotnet-install スクリプト](../tools/dotnet-install-script.md)は、SDK のインストールの自動化および管理者以外によるインストールに使用されます。 スクリプトは、[dotnet-install スクリプト参照ページ](../tools/dotnet-install-script.md)からダウンロードできます。
 
-スクリプトでは、最新の[長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 2.1) が既定でインストールされます。 NET Core の最新リリースをインストールするには、次のスイッチを使用してスクリプトを実行します。
+スクリプトでは、既定で最新の [長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) がインストールされます。 NET Core の最新リリースをインストールするには、次のスイッチを使用してスクリプトを実行します。
 
 ```powershell
 dotnet-install.ps1 -Channel Current
@@ -145,7 +147,7 @@ dotnet-install.ps1 -Channel Current
 
 [dotnet-install スクリプト](../tools/dotnet-install-script.md)は、SDK のインストールの自動化および管理者以外によるインストールに使用されます。 スクリプトは、[dotnet-install スクリプト参照ページ](../tools/dotnet-install-script.md)からダウンロードできます。
 
-スクリプトでは、最新の[長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 2.1) が既定でインストールされます。 NET Core の最新リリースをインストールするには、次のスイッチを使用してスクリプトを実行します。
+スクリプトでは、既定で最新の [長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) がインストールされます。 NET Core の最新リリースをインストールするには、次のスイッチを使用してスクリプトを実行します。
 
 ```bash
 ./dotnet-install.sh -c Current
@@ -176,8 +178,7 @@ Docker コンテナー内で .NET Core を使用する方法の詳細につい�
 
 ::: zone pivot="os-windows"
 
-- [チュートリアル: C# Hello World チュートリアル](../tutorials/with-visual-studio.md).
-- [チュートリアル: Visual Basic Hello World チュートリアル](../tutorials/vb-with-visual-studio.md).
+- [チュートリアル: Hello World チュートリアル](../tutorials/with-visual-studio.md)。
 - [チュートリアル: Visual Studio Code を使用して新しいアプリを作成する](../tutorials/with-visual-studio-code.md)。
 - [チュートリアル: NET Core アプリをコンテナー化する](../docker/build-container.md)。
 

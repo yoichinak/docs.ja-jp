@@ -3,13 +3,12 @@ title: .NET Core の配布パッケージ
 description: .NET Core を配布用にパッケージ化、名前付け、およびバージョン管理する方法について説明します。
 author: tmds
 ms.date: 10/09/2019
-ms.custom: seodec18
-ms.openlocfilehash: 715eb944c3e7626696f64e63b874e2f77595cf46
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: cfd6003cfac5c00fc06ebc6195eccd55a0d7afe7
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72393584"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740928"
 ---
 # <a name="net-core-distribution-packaging"></a>.NET Core の配布パッケージ
 
@@ -132,7 +131,7 @@ SDK バージョンは同じ `[major].[minor]` を利用し、SDK の機能と�
   - **バージョン:** \<ランタイム バージョン>
   - **例:** dotnet-runtime-2.1
   - **内容:** (5)
-  - **依存関係:** `dotnet-hostfxr-[major].[minor]`、`dotnet-runtime-deps-[major].[minor]`
+  - **依存関係:** `dotnet-hostfxr-[major].[minor]`, `dotnet-runtime-deps-[major].[minor]`
 
 - `dotnet-hostfxr-[major].[minor]`: 依存関係
   - **バージョン:** \<ランタイム バージョン>

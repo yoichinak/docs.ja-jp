@@ -1,16 +1,16 @@
 ---
 title: .NET Core ランタイムと SDK を削除する
 description: この記事では、現在インストールされている .NET Core ランタイムと SDK のバージョンを確認する方法と、Windows、Mac、および Linux でそれらを削除する方法について説明します。
-ms.date: 07/28/2018
+ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
-ms.custom: seodec18
-ms.openlocfilehash: 6d1012b8ddc5fd4a5ee8227902886727dbb10739
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.custom: updateeachrelease
+ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70970302"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713983"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core ランタイムと SDK を削除する方法
 
@@ -20,7 +20,7 @@ ms.locfileid: "70970302"
 
 [.NET Core バージョン選択](selection.md)動作および更新プログラム間での .NET Core のランタイム互換性により、以前のバージョンを安全に削除することができます。 1\.x や 2.x などのメジャー バージョン 'バンド' 内で .NET Core ランタイム更新プログラムは互換性があります。 さらに、.NET Core SDK のより新しいリリースでは、通常、互換性を保ちながら、ランタイムの前バージョンを対象とするアプリケーションをビルドする機能が維持されます。
 
-通常、必要なのは、ご自分のアプリケーションに必須である最新の SDK および最新のパッチ バージョンのランタイムのみです。 より古い SDK またはランタイムのバージョンが保持されるインスタンスでは、**project.json** ベースのアプリケーションを管理することも必要になります。 ご利用のアプリケーションには以前の SDK やランタイムを維持する特別な理由がない場合、以前のバージョンを安全に削除することができます。
+通常、必要なのは、ご自分のアプリケーションに必須である最新の SDK および最新のパッチ バージョンのランタイムのみです。 より古い SDK またはランタイムのバージョンが保持されるインスタンスでは、**project.json** ベースのアプリケーションを管理することも含まれます。 ご利用のアプリケーションには以前の SDK やランタイムを維持する特別な理由がない場合、以前のバージョンを安全に削除することができます。
 
 ## <a name="determine-what-is-installed"></a>インストールされている内容を確認する
 
@@ -153,7 +153,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 > [!IMPORTANT]
 > Red Hat インストールの場合、.NET Core のインストールとアンインストールについては、[Red Hat ファースト ステップ ガイド](https://access.redhat.com/documentation/en-us/net_core/2.0/html/getting_started_guide/gs_install_dotnet#install_register_rehel) を参照してください。
 
-.NET Core 2.1 以降では、パッケージ マネージャーを使用してアップグレードする場合、.NET Core SDK をアンインストールする必要はありません。 パッケージ マネージャーの `update` または `refresh` コマンドでは、新しいバージョンが正常にインストールされると、古いバージョンが自動的に削除されます。
+.NET Core 2.1 以降では、パッケージ マネージャーを使用して .NET Core SDK をアップグレードする場合、それをアンインストールする必要はありません。 パッケージ マネージャーの `update` または `refresh` コマンドでは、新しいバージョンが正常にインストールされると、古いバージョンが自動的に削除されます。
 
 パッケージ マネージャーを使用して .NET Core をインストールした場合は、それと同じパッケージ マネージャーを使用して .NET SDK またはランタイムをアンインストールします。 .NET Core インストールでは、最も一般的なパッケージ マネージャーがサポートされています。 ご利用の環境内での正確な構文については、ご利用の配布のパッケージ マネージャーのドキュメントを参照してください。
 
@@ -203,3 +203,37 @@ sudo rm -rf /usr/local/share/dotnet/host/fxr/1.0.1
 上記の表に示したように、SDK とランタイムの親ディレクトリは、`dotnet --list-sdks` コマンドおよび `dotnet --list-runtimes` コマンドからの出力に一覧表示されます。
 
 ---
+
+## <a name="net-core-uninstall-tool"></a>.NET Core アンインストール ツール
+
+[.NET Core アンインストール ツール](../additional-tools/uninstall-tool.md) (`dotnet-core-uninstall`) を使用すると、.NET Core SDK とランタイムをシステムから削除できます。 一連のオプションを使用して、アンインストールするバージョンを指定できます。
+
+## <a name="visual-studio-dependency-on-net-core-sdk-versions"></a>.NET Core SDK バージョンに対する Visual Studio の依存関係
+
+Visual Studio 2019 バージョン 16.3 より前では、Visual Studio インストーラーはスタンドアロンの .NET Core SDK インストーラーを呼び出しました。 その結果、Windows の **[プログラムの追加と削除]** ダイアログに SDK のバージョンが表示されます。 スタンドアロン インストーラーを使用して Visual Studio によってインストールされた .NET Core SDK を削除すると、Visual Studio が破損する可能性があります。 SDK をアンインストールした後に Visual Studio で問題が発生した場合は、その特定のバージョンの Visual Studio で [修復] を実行します。 次の表に、.NET Core SDK バージョンに対する Visual Studio の依存関係の一部を示します。
+
+| Visual Studio のバージョン | .NET Core SDK のバージョン |
+| -- | -- |
+| Visual Studio 2019 バージョン 16.2 | .NET Core SDK 2.2.4xx、2.1.8xx |
+| Visual Studio 2019 バージョン 16.1 | .NET Core SDK 2.2.3xx、2.1.7xx |
+| Visual Studio 2019 バージョン 16.0 | .NET Core SDK 2.2.2xx、2.1.6xx |
+| Visual Studio 2017 バージョン 15.9 | .NET Core SDK 2.2.1xx、2.1.5xx |
+| Visual Studio 2017 バージョン 15.8 | .NET Core SDK 2.1.4xx |
+
+Visual Studio 2019 16.3 以降では、Visual Studio は .NET Core SDK の独自のコピーを管理します。 そのため、 **[プログラムの追加と削除]** ダイアログにこれらの SDK バージョンが表示されなくなりました。
+
+## <a name="remove-the-nuget-fallback-folder"></a>NuGet フォールバック フォルダーの削除
+
+.NET Core 3.0 SDK より前では、.NET Core SDK インストーラーは *NuGetFallbackFolder* を使用して、NuGet パッケージのキャッシュを格納していました。 このキャッシュは、`dotnet restore` や `dotnet build /t:Restore` などの操作中に使用されました。 `NuGetFallbackFolder` は、Windows では *C:\Program Files\dotnet\sdk* に、macOS では */usr/local/share/dotnet/sdk* にあります。
+
+次の場合は、このフォルダーを削除することができます。
+
+* .NET Core 3.0 SDK 以降のバージョンのみを使用して開発している。
+* 3\.0 より前の .NET Core SDK のバージョンを使用して開発しているが、オンラインで作業することができ、処理が遅くなることがある。
+
+NuGet フォールバック フォルダーを削除する場合は、管理者特権が必要になります。
+
+*dotnet* フォルダーの削除はお勧めしません。 これを行うと、以前にインストールしたグローバル ツールがすべて削除されます。 また、Windows の場合は、次のことが発生します。
+
+- Visual Studio 2019 バージョン 16.3 以降のバージョンが破損します。 **[修復]** を実行して回復できます。
+- **[プログラムの追加と削除]** ダイアログに .NET Core SDK エントリがある場合、それらは孤立状態になります。

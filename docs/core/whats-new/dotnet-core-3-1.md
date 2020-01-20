@@ -6,18 +6,18 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 08ae824b79ba6a1ff5a92a0b4306eabe5ccadfd2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: a9f47c2909375251460b45792822e491d56fb242
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838309"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342860"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 の新機能
 
 この記事では、.NET Core 3.1 の新機能について説明します。 このリリースには、小規模であるが重要な修正に重点を置いた .NET Core 3.0 のマイナー機能強化が含まれています。 .NET Core 3.1 に関する最も重要な機能は、[長期的なサポート (LTS)](#long-term-support) リリースであるということです。
 
-Visual Studio 2019 を使用している場合は、.NET Core 3.1 プロジェクトを操作するために [Visual Studio 2019 16.4](https://visualstudio.microsoft.com/downloads/) に更新する必要があります。 Visual Studio 全体の新機能の詳細については、[Visual Studio のブログ](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/)を参照してください。
+Visual Studio 2019 を使用している場合は、.NET Core 3.1 プロジェクトを操作するために [Visual Studio 2019 バージョン 16.4](https://visualstudio.microsoft.com/downloads/) に更新する必要があります。 Visual Studio 全体の新機能の詳細については、[Visual Studio のブログ](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/)を参照してください。
 
 Visual Studio for Mac でも .NET Core 3.1 がサポートされており、Visual Studio for Mac 8.4 Preview チャネルに含まれています。 .NET Core 3.1 を使用するには、Preview チャネルを選択する必要があります。
 
@@ -25,7 +25,7 @@ Visual Studio for Mac でも .NET Core 3.1 がサポートされており、Visu
 
 - Windows、macOS、または Linux 上に [.NET Core 3.1 をダウンロードして使い始めましょう](https://dotnet.microsoft.com/download/dotnet-core/3.1)。
 
-## <a name="long-term-support"></a>長期サポート
+## <a name="long-term-support"></a>長期的なサポート
 
 .NET Core 3.1 は、次の 3 年間にわたって Microsoft のサポートが提供される LTS リリースです。 アプリを .NET Core 3.1 に移行することを強くお勧めします。 他のメジャー リリースの現在のライフサイクルは次のとおりです。
 

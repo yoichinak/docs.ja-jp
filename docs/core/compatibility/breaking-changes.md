@@ -2,12 +2,12 @@
 title: .NET Core の破壊的変更
 description: .NET Core の各バージョンの破壊的変更について説明します。
 ms.date: 11/27/2019
-ms.openlocfilehash: 30459ca1178c0d62427138b22dd42f11cd2c2475
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568029"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937345"
 ---
 # <a name="breaking-change-selectors"></a>破壊的変更のセレクター
 
@@ -15,7 +15,7 @@ ms.locfileid: "74568029"
 
 ## <a name="by-version"></a>バージョン別
 
-現在ターゲットにしている .NET Core のバージョンを選択してから、移行先の .NET Core のバージョンを選択します。
+現在ターゲットにしている .NET のバージョンを選択してから、移行先の .NET Core のバージョンを選択します。
 
 [!INCLUDE[versionselector](~/includes/core-changes/versionselector.md)]
 
@@ -31,7 +31,7 @@ ms.locfileid: "74568029"
 
 - .NET Core の場合は、[dotnet/ docs](https://github.com/dotnet/docs/issues?q=is%3Aissue+label%3Abreaking-change) リポジトリ。
 - ASP.NET Core の場合は、[aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) リポジトリ。
-- Entity Framework Core の場合は、[aspnet/EntityFrameworkCore](https://github.com/aspnet/EntityFrameworkCore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) リポジトリ。
+- Entity Framework Core の場合は、[dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) リポジトリ。
 
 ## <a name="see-also"></a>関連項目
 

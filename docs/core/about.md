@@ -2,12 +2,12 @@
 title: .NET Core について
 description: .NET Core について説明します。
 ms.date: 09/17/2019
-ms.openlocfilehash: 22530e861f6a13a6930b2fb35c91b4f7a95a17c7
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 12611c2cd0b872a683d070ff17dcf9f111578627
+ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74801947"
+ms.lasthandoff: 01/11/2020
+ms.locfileid: "75900613"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -57,8 +57,8 @@ ms.locfileid: "74801947"
 .NET Core は、次の部分で構成されます。
 
 - 型システム、アセンブリ読み込み、ガベージ コレクター、ネイティブ相互運用機能、およびその他の基本的なサービスを提供する [.NET Core ランタイム](https://github.com/dotnet/runtime/tree/master/src/coreclr)。 [.NET Core フレームワーク ライブラリ](https://github.com/dotnet/runtime/tree/master/src/libraries)はプリミティブ データ型、アプリ コンポジションの種類、および基本的なユーティリティを提供します。
-- Web アプリ、IoT アプリ、モバイル バックエンドなど、最新のクラウド ベースのインターネットに接続されているアプリケーションを構築するためのフレームワークを提供する [ASP.NET ランタイム](https://github.com/aspnet/home)。
-- .NET Core 開発者エクスペリエンスを有効にする [.NET Core CLI ツール](https://github.com/dotnet/cli)と言語コンパイラ ([Roslyn](https://github.com/dotnet/roslyn) および [F#](https://github.com/microsoft/visualfsharp))。
+- Web アプリ、IoT アプリ、モバイル バックエンドなど、最新のクラウド ベースのインターネットに接続されているアプリケーションを構築するためのフレームワークを提供する [ASP.NET Core ランタイム](https://github.com/dotnet/aspnetcore)。
+- .NET Core 開発者エクスペリエンスを有効にする [.NET Core CLI ツール](https://github.com/dotnet/sdk)と言語コンパイラ ([Roslyn](https://github.com/dotnet/roslyn) および [F#](https://github.com/microsoft/visualfsharp))。
 - .NET Core アプリと CLI ツールの起動に使用する [dotnet ツール](https://github.com/dotnet/core-setup)。 ランタイムの選択、ランタイムのホスト、アセンブリ読み込みポリシーの提供、アプリおよびツールの起動を行います。
 
 これらのコンポーネントは、次の方法で配布されます。
@@ -113,7 +113,7 @@ Windows 実装と Unix 実装はほぼ同じサイズです。 .NET Core ライ�
 
 ### <a name="comparison-with-mono"></a>Mono との比較
 
-[Mono](https://www.mono-project.com/) は .NET の元のクロスプラットフォーム実装です。 .NET Framework の[オープンソース](https://github.com/mono/mono)の代替として始まり、iOS および Android デバイスが普及するにつれてモバイル デバイスをターゲットとするように移行してきました。 .NET Framework のコミュニティの複製として考えることができます。 Mono プロジェクト チームは、互換性のある実装を提供するために、Microsoft によって発行されたオープン [.NET standards](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) (特に ECMA 335) に依存していました。
+[Mono](https://www.mono-project.com/) は .NET の元のクロスプラットフォーム実装です。 .NET Framework の[オープンソース](https://github.com/mono/mono)の代替として始まり、iOS および Android デバイスが普及するにつれてモバイル デバイスをターゲットとするように移行してきました。 .NET Framework のコミュニティの複製として考えることができます。 Mono プロジェクト チームは、互換性のある実装を提供するために、Microsoft によって発行されたオープン [.NET standards](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) (特に ECMA 335) に依存していました。
 
 .NET Core と .NET Mono の主な違いは、次のとおりです。
 

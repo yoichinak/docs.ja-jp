@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 1f4e73287fca650b20ed5617c8dfd80e0bd8363c
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 64b029f87135c3424d01a6833619f0aec3833883
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72318279"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340366"
 ---
 # <a name="tutorial-create-a-project-template"></a>チュートリアル: プロジェクト テンプレートを作成する
 
@@ -29,13 +29,13 @@ ms.locfileid: "72318279"
 ## <a name="prerequisites"></a>必須コンポーネント
 
 * このチュートリアル シリーズの[パート 1](cli-templates-create-item-template.md) を完了します。
-* ターミナルを開いて _working\templates\\_ フォルダーに移動します。
+* ターミナルを開いて _working\templates_ フォルダーに移動します。
 
 ## <a name="create-a-project-template"></a>プロジェクト テンプレートを作成する
 
 プロジェクト テンプレートを使用すると、ユーザーがコードのワーキング セットを使用して簡単に作業を開始できる、すぐに実行できるプロジェクトが作成されます。 .NET Core には、コンソール アプリケーションやクラス ライブラリなど、いくつかのプロジェクト テンプレートが含まれています。 この例では、C# 8.0 を有効にし、`async main` エントリ ポイントを生成する、新しいコンソール プロジェクトを作成します。
 
-ターミナルで _working\templates\\_ フォルダーに移動し、_consoleasync_ という名前の新しいサブフォルダーを作成します。 このサブフォルダーに入り、`dotnet new console` を実行して標準コンソール アプリケーションを生成します。 このテンプレートによって生成されたファイルを編集して、新しいテンプレートを作成します。
+ターミナルで _working\templates_ フォルダーに移動し、_consoleasync_ という名前の新しいサブフォルダーを作成します。 このサブフォルダーに入り、`dotnet new console` を実行して標準コンソール アプリケーションを生成します。 このテンプレートによって生成されたファイルを編集して、新しいテンプレートを作成します。
 
 ```console
 working
@@ -98,7 +98,7 @@ Hello World with C# 8.0!
 
 ## <a name="create-the-template-config"></a>テンプレートの構成を作成する
 
-.NET Core では、テンプレートが、テンプレートのルートに存在する特別なフォルダーと構成ファイルによって認識されます。 このチュートリアルでは、テンプレート フォルダーは _working\templates\consoleasync\\_ にあります。
+.NET Core では、テンプレートが、テンプレートのルートに存在する特別なフォルダーと構成ファイルによって認識されます。 このチュートリアルでは、テンプレート フォルダーは _working\templates\consoleasync_ にあります。
 
 テンプレートを作成すると、特別な構成フォルダーを除く、テンプレート フォルダー内のすべてのファイルとフォルダーがテンプレートの一部として含まれます。 この構成フォルダーの名前は _.template.config_ です。
 

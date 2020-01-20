@@ -1,16 +1,15 @@
 ---
-title: .NET Core コマンドライン インターフェイス (CLI) ツールを使用して NuGet パッケージを作成する
+title: .NET Core CLI を使用した NuGet パッケージの作成
 description: ’dotnet pack’ コマンドを使用して NuGet パッケージを作成する方法を説明します。
 author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
-ms.custom: seodec18
-ms.openlocfilehash: 2d876f921d079972e2a638788195aa69a2423c49
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: ddc19faa7547637036686146f8600f40713541a8
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72771937"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740866"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core コマンド ライン インターフェイス (CLI) ツールを使用して NuGet パッケージを作成する方法
 
@@ -21,7 +20,7 @@ ms.locfileid: "72771937"
 
 たとえば、NuGet 経由で配布する新しい優れたライブラリを作成したとします。 クロス プラットフォーム ツールを使用して NuGet パッケージを作成すれば、正確に実行できます。 次の例では、`netstandard1.0` をターゲットとする **SuperAwesomeLibrary** というライブラリを想定します。
 
-推移的依存関係がある (つまり、別のパッケージに依存するプロジェクトがある) 場合、NuGet パッケージを作成する前に `dotnet restore` コマンドでソリューション全体のパッケージを復元する必要があります。 そうしないと、`dotnet pack` コマンドが正しく機能しません。
+推移的依存関係がある (つまり、別のパッケージに依存するプロジェクトがある) 場合、NuGet パッケージを作成する前に、`dotnet restore` コマンドを使用してソリューション全体のパッケージを必ず復元します。 そうしないと、`dotnet pack` コマンドが正しく機能しません。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
@@ -46,7 +45,7 @@ SuperAwesomeLibrary.1.0.0.nupkg
 SuperAwesomeLibrary.1.0.0.symbols.nupkg
 ```
 
-この場合、デバッグ可能なパッケージが生成されることに注意してください。 リリース バイナリと共に NuGet パッケージをビルドする場合、必要なのは、`--configuration` (または `-c`) スイッチを追加し、引数として `release` を使用することだけです。
+これにより、デバッグ可能なパッケージが生成されます。 リリース バイナリと共に NuGet パッケージをビルドする場合、必要なのは、`--configuration` (または `-c`) スイッチを追加し、引数として `release` を使用することだけです。
 
 ```dotnetcli
 dotnet pack --configuration release

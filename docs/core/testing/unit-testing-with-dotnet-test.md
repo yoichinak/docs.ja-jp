@@ -4,13 +4,12 @@ description: dotnet テストおよび xUnit を使用したサンプル ソリ�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.custom: seodec18
-ms.openlocfilehash: 420ab4c7f23ef3fd6cd26d91c2b4f075f1a205f5
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74835448"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714230"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した .NET Core での単体テスト C#
 
@@ -125,7 +124,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 前のセクションの「*PrimeService.cs* 内のコードを次のコードに置き換える」の指示に従います。
 
-## <a name="create-a-test"></a>テストを作成する
+## <a name="create-a-test"></a>テストの作成
 
 テスト駆動開発 (TDD) の一般的なアプローチは、ターゲット コードを実装する前にテストを記述することです。 このチュートリアルでは、この TDD アプローチを使用します。 `IsPrime` メソッドは呼び出し可能ですが、実装されていません。 `IsPrime` のテスト呼び出しは失敗します。 TDD では、失敗することがわかっているテストを記述します。 テストに合格するように、ターゲット コードを更新します。 このアプローチを繰り返して、失敗するテストを記述した後、テストに合格するようにターゲット コードを更新します。
 
@@ -194,7 +193,7 @@ Assert.False(result, "1 should not be prime");
 
 - `[InlineData]` 属性は、これらの入力の値を指定します。
 
-新しいテストを作成するのではなく、上記の xUnit 属性を適用することで、単一の理論を作成できます。 次のコードを探してください。
+新しいテストを作成するのではなく、上記の xUnit 属性を適用することで、単一の理論を作成できます。 以下のコードを
 
 ```csharp
 [Fact]
@@ -206,7 +205,7 @@ public void IsPrime_InputIs1_ReturnFalse()
 }
 ```
 
-を、以下のコードに置き換えます。
+次のコードに置き換えます。
 
 [!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 

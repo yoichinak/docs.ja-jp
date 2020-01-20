@@ -4,12 +4,12 @@ description: Windows で .NET Core を使用して .NET for Apache Spark アプ�
 ms.date: 11/04/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 1b736e078eea40e399882c0df020062b6aa758ad
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 934b91a258937a976804109c71df232b8ce6d6d7
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740531"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337586"
 ---
 # <a name="tutorial-get-started-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark の概要
 
@@ -31,18 +31,18 @@ ms.locfileid: "73740531"
 
 .NET アプリのビルドを開始するには、.NET SDK (ソフトウェア開発キット) をダウンロードしてインストールする必要があります。
 
-[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) をダウンロードしてインストールします。 SDK をインストールすると、`dotnet` ツールチェーンが PATH に追加されます。 
+[.NET Core SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) をダウンロードしてインストールします。 SDK をインストールすると、`dotnet` ツールチェーンが PATH に追加されます。
 
 .NET Core SDK をインストールしたら、新しいコマンド プロンプトを開き、`dotnet` を実行します。
 
-コマンドが実行され、dotnet の使用方法に関する情報が出力された場合は、次の手順に進むことができます。 `'dotnet' is not recognized as an internal or external command` エラーが発生した場合は、コマンドを実行する前に**新しい**コマンド プロンプトを開いたことを確認してください。 
+コマンドが実行され、dotnet の使用方法に関する情報が出力された場合は、次の手順に進むことができます。 `'dotnet' is not recognized as an internal or external command` エラーが発生した場合は、コマンドを実行する前に**新しい**コマンド プロンプトを開いたことを確認してください。
 
 ### <a name="2-install-java"></a>2.Java のインストール
 
 [Java 8.1](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) をインストールします。
 
 ご使用のオペレーティング システムに適したバージョンを選択します。 たとえば、Windows x64 マシンには、**jdk-8u201-windows-x64.exe** を選択します。 次に、コマンド `java` を使用してインストールを確認します。
-   
+
 ![Java のダウンロード](https://dotnet.microsoft.com/static/images/java-jdk-downloads-windows.png?v=6BbJHoNyDO-PyYVciImr5wzh2AW_YHNcyb3p093AwPA)
 
 ### <a name="3-install-7-zip"></a>3.7-zip のインストール
@@ -52,12 +52,12 @@ Apache Spark は、圧縮された .tgz ファイルとしてダウンロード�
 * [7-Zip のダウンロード](https://www.7-zip.org/) ページにアクセスします。
 * ページの最初の表で、使用しているオペレーティング システムに応じて、32-bit x86 または 64-bit x64 ダウンロードを選択します。
 * ダウンロードが完了したら、インストーラーを実行します。
-   
+
 ![7Zip のダウンロード](https://dotnet.microsoft.com/static/images/7-zip-downloads.png?v=W6qWtFC1tTMKv3YGXz7lBa9F3M22uWyTvkMmunyroNk)
 
 ### <a name="4-install-apache-spark"></a>4.Apache Spark のインストール
 
-[Apache Spark をダウンロードしてインストールします](https://spark.apache.org/downloads.html)。 バージョン 2.3.*、2.4.0、2.4.1、2.4.3、または 2.4.4 から選択する必要があります (.NET for Apache Spark は、他のバージョンの Apache Spark と互換性がありません)。  
+[Apache Spark をダウンロードしてインストールします](https://spark.apache.org/downloads.html)。 バージョン 2.3.*、2.4.0、2.4.1、2.4.3、または 2.4.4 から選択する必要があります (.NET for Apache Spark は、他のバージョンの Apache Spark と互換性がありません)。
 
 次の手順で使用するコマンドは、[Apache Spark 2.4.1 をダウンロードしてインストールしていること](https://archive.apache.org/dist/spark/spark-2.4.1/spark-2.4.1-bin-hadoop2.7.tgz)を前提としています。 別のバージョンを使用する場合は、**2.4.1** を適切なバージョン番号に置き換えます。 その後、 **.tar** ファイルと Apache Spark ファイルを抽出します。
 
@@ -74,9 +74,9 @@ Apache Spark ファイルを抽出するには、次のようにします。
 * **[展開先]** フィールドの下のチェックボックスをオフにします。
 * **[OK]** を選択します。
 * Apache Spark ファイルが C:\bin\spark-2.4.1-bin-hadoop2.7\ に抽出されます。
-      
+
 ![Spark のインストール](https://dotnet.microsoft.com/static/images/spark-extract-with-7-zip.png?v=YvjUv54LIxI9FbALPC3h8zSQdyMtK2-NKbFOliG-f8M)
-    
+
 次のコマンドを実行して、Apache Spark を検索するために使用する環境変数を設定します。
 
 ```console
@@ -103,7 +103,7 @@ Microsoft.Spark.Worker を抽出するには、次のようにします。
 * **[展開先]** フィールドに「**C:\bin**」と入力します。
 * **[展開先]** フィールドの下のチェックボックスをオフにします。
 * **[OK]** を選択します。
-  
+
 ![.NET Spark のインストール](https://dotnet.microsoft.com/static/images/dotnet-for-spark-extract-with-7-zip.png?v=jwCyum9mL0mGIi4V5zC7yuvLfcj1_nL-QFFD8TClhZk)
 
 ### <a name="6-install-winutils"></a>6.WinUtils のインストール
@@ -111,7 +111,7 @@ Microsoft.Spark.Worker を抽出するには、次のようにします。
 .NET for Apache Spark では、Apache Spark と共に WinUtils をインストールする必要があります。 [winutils.exe をダウンロード](https://github.com/steveloughran/winutils/blob/master/hadoop-2.7.1/bin/winutils.exe)します。 次に、WinUtils を **C:\bin\spark-2.4.1-bin-hadoop2.7\bin** にコピーします。
 
 > [!NOTE]
-> Spark インストール フォルダー名の末尾に注釈が付けられている別のバージョンの Hadoop を使用している場合は、使用している Hadoop のバージョンと互換性のある[バージョンの WinUtils を選択](https://github.com/steveloughran/winutils)します。 
+> Spark インストール フォルダー名の末尾に注釈が付けられている別のバージョンの Hadoop を使用している場合は、使用している Hadoop のバージョンと互換性のある[バージョンの WinUtils を選択](https://github.com/steveloughran/winutils)します。
 
 ### <a name="7-set-dotnet_worker_dir-and-check-dependencies"></a>7.DOTNET_WORKER_DIR の設定と依存関係の確認
 

@@ -2,15 +2,15 @@
 title: dotnet new 用のテンプレート パックを作成する
 description: dotnet new コマンド用のテンプレート パックをビルドする csproj ファイルを作成する方法を説明します。
 author: thraka
-ms.date: 06/25/2019
+ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 520af5022e061236c0cfe80379679d9c7b5896b2
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117407"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75340166"
 ---
 # <a name="tutorial-create-a-template-pack"></a>チュートリアル: テンプレート パックを作成する
 
@@ -31,7 +31,7 @@ ms.locfileid: "71117407"
 
   このチュートリアルでは、チュートリアルの最初の 2 つのパートで作成した 2 つのテンプレートを使用します。 そのテンプレートをフォルダーとして _working\templates\\_ フォルダー内にコピーしていれば、別のテンプレートを使用することもできます。
 
-* ターミナルを開いて _working\templates\\_ フォルダーに移動します。
+* ターミナルを開いて _working\\_ フォルダーに移動します。
 
 ## <a name="create-a-template-pack-project"></a>テンプレート パック プロジェクトを作成する
 

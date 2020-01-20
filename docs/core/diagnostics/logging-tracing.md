@@ -1,15 +1,13 @@
 ---
 title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
-author: sdmaclea
-ms.author: stmaclea
 ms.date: 08/05/2019
-ms.openlocfilehash: 46e64a7f60b88c26ceef9ac817be885bfa180c8e
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "72303654"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714423"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
 
@@ -31,7 +29,7 @@ ms.locfileid: "72303654"
 
 <xref:System.Console?displayProperty=nameWithType>、<xref:System.Diagnostics.Trace?displayProperty=nameWithType>、および <xref:System.Diagnostics.Debug?displayProperty=nameWithType> クラスはそれぞれ、ログ記録に便利な出力スタイルの API を備えています。
 
-どの出力スタイル API を使用するかは、ユーザーが決定します。 主な違いは次のとおりです。
+どの出力スタイル API を使用するかは、ユーザーが決定します。 主な違いを次に示します。
 
 - <xref:System.Console?displayProperty=nameWithType>
   - 常に有効であり、常にコンソールに書き込みます。

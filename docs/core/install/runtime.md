@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 8f4a895ad66dea3063a32f785e4c521196266978
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74998889"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740590"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core ランタイムのインストール
 
@@ -19,7 +19,7 @@ ms.locfileid: "74998889"
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-an-installer"></a>インストーラーを使用したインストール
+## <a name="install-with-an-installer"></a>インストーラーを使用してインストールする
 
 Windows には、.NET Core 3.1 ランタイムのインストールに使用できるスタンドアロン インストーラーが用意されています。
 
@@ -42,13 +42,38 @@ macOS には、.NET Core 3.1 ランタイムのインストールに使用でき
 
 ## <a name="install-with-a-package-manager"></a>パッケージ マネージャーを使用したインストール
 
-多くの一般的な Linux パッケージ マネージャーを使用して .NET Core ランタイムをインストールできます。 詳細については、[Linux パッケージ マネージャー - .NET Core のインストール](linux-package-manager-rhel7.md)に関するページを参照してください。
+多くの一般的な Linux パッケージ マネージャーを使用して .NET Core ランタイムをインストールできます。 詳細については、[Linux パッケージ マネージャー - .NET Core のインストール](linux-package-managers.md)に関するページを参照してください。
+
+パッケージ マネージャーを使用したインストールは、x64 アーキテクチャでのみサポートされています。 ARM などの別のアーキテクチャを使用して .NET Core ランタイムをインストールする場合は、「[手動でダウンロードしてインストールする](#download-and-manually-install)」セクションの手順に従ってください。 サポートされているアーキテクチャの詳細については、「[.NET Core の依存関係と要件](dependencies.md)」を参照してください。
+
+## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
+
+ランタイムを抽出し、.NET Core CLI コマンドをターミナルで使用できるようにするには、最初に .NET Core のバイナリ リリースを[ダウンロード](#all-net-core-downloads)します。 次に、ターミナルを開き、以下のコマンドを実行します。
+
+```bash
+mkdir -p $HOME/dotnet && tar zxf aspnetcore-runtime-3.1.0-linux-x64.tar.gz -C $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
+> [!TIP]
+> 上記の `export` コマンドでは、それを実行したターミナル セッションでのみ .NET Core CLI コマンドを使用できるようになります。
+>
+> シェル プロファイルを編集して、コマンドを永続的に追加することができます。 Linux ではさまざまなシェルを使用でき、それぞれに異なるプロファイルがあります。 次に例を示します。
+>
+> - **Bash シェル**: *~/.bash_profile*、 *~/.bashrc*
+> - **Korn シェル**: *~/.kshrc* または *.profile*
+> - **Z シェル**: *~/.zshrc* または *.zprofile*
+> 
+> シェルの適切なソース ファイルを編集し、既存の `PATH` ステートメントの末尾に `:$HOME/dotnet` を追加します。 `PATH` ステートメントが含まれていない場合は、`export PATH=$PATH:$HOME/dotnet` を含む新しい行を追加します。
+>
+> また、ファイルの末尾に `export DOTNET_ROOT=$HOME/dotnet` を追加します。
 
 ::: zone-end
 
 ::: zone pivot="os-windows"
 
-## <a name="install-with-powershell-automation"></a>PowerShell オートメーションを使用したインストール
+## <a name="install-with-powershell-automation"></a>PowerShell オートメーションを使用してインストールする
 
 [dotnet-install スクリプト](../tools/dotnet-install-script.md)は、ランタイムの自動化および管理者以外によるインストールに使用されます。 スクリプトは、[dotnet-install スクリプト参照ページ](../tools/dotnet-install-script.md)からダウンロードできます。
 
@@ -72,7 +97,7 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 スクリプトでは、既定で最新の [長期サポート (LTS)](https://dotnet.microsoft.com/platform/support/policy/dotnet-core) バージョン (.NET Core 3.1) がインストールされます。 `current` スイッチを指定することで、特定のリリースを選択できます。 ランタイムをインストールするには、`runtime` スイッチを含めます。 それ以外の場合は、スクリプトによって [SDK](sdk.md) がインストールされます。
 
 ```bash
-./dotnet-install.sh --current 3.1 --runtime aspnetcore
+./dotnet-install.sh --channel 3.1 --runtime aspnetcore
 ```
 
 > [!NOTE]

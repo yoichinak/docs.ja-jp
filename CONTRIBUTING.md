@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 25615dd43f1ae4f56c7bced7f79a0612093a21fb
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73191694"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75336720"
 ---
 # <a name="contributing"></a>コントリビューション
 
@@ -22,12 +22,9 @@ ms.locfileid: "73191694"
 
 このリポジトリには、.NET の概念に関するドキュメントが含まれています。 .NET ドキュメント サイトは、このリポジトリに加え、次の複数のリポジトリで構築されています。
 
-- [コード サンプルとスニペット](https://github.com/dotnet/samples)  
-    このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
-- [.NET API リファレンス](https://github.com/dotnet/dotnet-api-docs)  
-    このリポジトリの問題とタスクについては、[dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) で追跡されます。
-- [.NET Compiler Platform SDK リファレンス](https://github.com/dotnet/roslyn-api-docs)  
-    このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
+- [コードのサンプルとスニペット](https://github.com/dotnet/samples) このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
+- [.NET API リファレンス](https://github.com/dotnet/dotnet-api-docs) このリポジトリの問題とタスクについては、[dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) で追跡されます。
+- [.NET Compiler Platform SDK リファレンス](https://github.com/dotnet/roslyn-api-docs) このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
 
 ## <a name="dos-and-donts"></a>注意事項
 
@@ -37,7 +34,7 @@ ms.locfileid: "73191694"
 - タスクに関する提案については、最新の [up for grabs](https://github.com/dotnet/docs/labels/up-for-grabs) 問題を**調べてください**。
 - タスクごとに 1 つの PR を**作成してください**。 PR に複数の関連のない変更が含まれていると、レビューがはるかに難しくなり、 レビューや PR のマージに時間がかかることになります。 このガイドラインは、レビューにも適用されます。Microsoft では、レビューで、関連のない変更を提案しないようにしています。Microsoft は、コミュニティに対して、このガイドラインに従ってレビューを行うことを要請しています。
 - PR では、作業についてわかりやすい説明を**提供してください**。 変更の内容と理由を説明してください。 "update article.md" の既定の説明は、レビュー担当者にとって有用ではありません。
-- 事前の説明なしにスタイルのみの変更に関する PR を**送信しないでください**。 このような PR は、正確性を確認するために余分な時間がかかり、多くの場合、これらのマージによって、他の重要な更新との間でマージの競合が発生します。 Microsoft では、一貫したスタイルに従って作業することに取り組んでいますが、その作業と他のタスクのバランスを取っています。 他の理由で大規模な更新を行う場合、記事のスタイルを一致させるようにしています。 
+- 事前の説明なしにスタイルのみの変更に関する PR を**送信しないでください**。 このような PR は、正確性を確認するために余分な時間がかかり、多くの場合、これらのマージによって、他の重要な更新との間でマージの競合が発生します。 Microsoft では、一貫したスタイルに従って作業することに取り組んでいますが、その作業と他のタスクのバランスを取っています。 他の理由で大規模な更新を行う場合、記事のスタイルを一致させるようにしています。
 - [スタイル ガイド](./styleguide/template.md)と[スタイルとトーン](./styleguide/voice-tone.md)のガイドラインを**お読みください**。 新しい追加機能は、これらのガイドラインに従う必要があります。
 - 記事に取り掛かる前に、フォークに個別のブランチを**作成してください**。
 - [GitHub フロー ワークフロー](https://guides.github.com/introduction/flow/)に**従ってください**。
@@ -54,7 +51,7 @@ ms.locfileid: "73191694"
 **手順 1:** 少しの変更の場合 (たとえば、入力ミスを修正する場合や、すぐに pull request を開いてドキュメント内に見つけた問題に対処する場合) は、この手順をスキップします。 新しいコンテンツを書き込んだり、既存のコンテンツを完全に改訂したりすることに興味がある場合は、自分が何をしたいかを説明する[問題](https://github.com/dotnet/docs/issues)を開きます。
 *docs* フォルダーのコンテンツはセクションで構成され、それらが目次 (TOC) に反映されます。 TOC のどこにトピックを配置するかを明確にします。 提案に対するフィードバックを得ます。
 
-または
+\- または -
 
 コミュニティへの投稿が歓迎されている既存の問題から選択することもできます。 [Projects for .NET Community contributors](https://github.com/dotnet/docs/projects/35) (.NET コミュニティへの投稿者向けのプロジェクト) に、コミュニティへの投稿者が利用できる多くの作業項目が一覧で示されています。 自分の興味と責任のレベルに応じて、次のカテゴリに属する問題から選択できます。
 
@@ -64,7 +61,7 @@ ms.locfileid: "73191694"
 
 - **新しいコンテンツの作成**。 ご自分で独自のトピックを作成することに興味がある場合は、Microsoft がドキュメント セットに追加したいと思っているトピックが問題の一覧に示されています。 ただし、トピックに取り掛かる前に Microsoft にお知らせください。 ここに記載されていないトピックを記述することに関心がある場合は、問題を開いてください。
 
-[未解決の問題](https://github.com/dotnet/docs/issues)の一覧を調べて、ご自分が興味のある問題に取り組むことを志願することもできます。 投稿できる問題には、[up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) ラベルがタグ付けされています。 
+[未解決の問題](https://github.com/dotnet/docs/issues)の一覧を調べて、ご自分が興味のある問題に取り組むことを志願することもできます。 投稿できる問題には、[up-for-grabs](https://github.com/dotnet/docs/labels/up-for-grabs) ラベルがタグ付けされています。
 
 **手順 2:** 必要に応じて、`dotnet/docs`、`dotnet/samples`、または `dotnet/dotnet-api-docs` リポジトリをフォークして、変更を行うためのブランチを作成します。
 
@@ -138,7 +135,7 @@ Microsoft では、リポジトリ内に存在するコードを次のように�
 
 ## <a name="the-c-interactive-experience"></a>C# の対話型エクスペリエンス
 
-C# で記述された短いサンプル コードでは、`csharp-interactive` 言語タグを使用して、ブラウザーで実行される C# のサンプルを指定できます (インライン コード サンプルでは `csharp-interactive` タグを使用し、ソースから含まれるスニペットでは `code-csharp-interactive` タグを使用します)。これらのコード サンプルでは、記事内の コード ウィンドウと出力ウィンドウが表示されます。 ユーザーがサンプルを実行すると、対話型コードの実行による出力が出力ウィンドウに表示されます。 
+C# で記述された短いサンプル コードでは、`csharp-interactive` 言語タグを使用して、ブラウザーで実行される C# のサンプルを指定できます (インライン コード サンプルでは `csharp-interactive` タグを使用し、ソースから含まれるスニペットでは `code-csharp-interactive` タグを使用します)。これらのコード サンプルでは、記事内の コード ウィンドウと出力ウィンドウが表示されます。 ユーザーがサンプルを実行すると、対話型コードの実行による出力が出力ウィンドウに表示されます。
 
 C# の対話型エクスペリエンスでは、サンプルの操作方法が変わります。 訪問者は、サンプルを実行して結果を確認できます。 サンプルまたは対応するテキストに出力に関する情報を含める必要があるかどうかを判断するために役立つさまざまな要素があります。
 
@@ -149,7 +146,7 @@ C# の対話型エクスペリエンスでは、サンプルの操作方法が�
 - サンプルと予想される出力の両方が短い場合は、出力を表示することを検討してください。 それによって、少し時間を節約できます。
 - 現在のカルチャまたはインバリアント カルチャが出力にどのように影響するかを説明する記事では、予想される出力を説明する必要があります。 Linux ベースのホスト上では、対話型 REPL (Read Evaluate Print Loop) が実行されます。 既定のカルチャとインバリアント カルチャでは、オペレーティング システムが異なるコンピューター上では生成される出力が異なります。 Windows、Linux、および Mac の各システム上での出力を、記事で説明する必要があります。
 
-### <a name="when-to-exclude-expected-output-from-the-sample"></a>予想される出力をサンプルから除外する状況 
+### <a name="when-to-exclude-expected-output-from-the-sample"></a>予想される出力をサンプルから除外する状況
 
 - サンプルを実行すると大量の出力が生成される記事では、出力をコメントに含める必要はありません。 サンプルが実行されると、コードがわかりにくくなります。
 - トピックの実例をサンプルで示す記事で、記事を理解するために出力が不可欠ではない場合があります。 例として、クエリの構文を説明するために LINQ クエリを実行するコードで、実行すると出力コレクション内のすべての項目が表示されるコードがあります。

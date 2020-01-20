@@ -4,12 +4,12 @@ description: グローバル ツールを作成する方法について説明し
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 5c2b1e459f0308f5f96eb041c10f4d7a7ae0ca20
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 1daecf7234f02a5fe0dcf25cf7edbb0af327b8c1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117443"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75343520"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core グローバル ツールを作成する
 
@@ -115,7 +115,7 @@ static void ShowBot(string message)
 
 ### <a name="test-the-tool"></a>ツールをテストする
 
-プロジェクトを実行して出力を確認します。 次のようにコマンドラインを変えて、異なる結果を表示してみてください。
+プロジェクトを実行して出力を確認します。 次のようにコマンド ラインを変えて、異なる結果を表示してみてください。
 
 ```dotnetcli
 dotnet run
@@ -125,7 +125,7 @@ dotnet run -- hello from the bot
 
 区切り記号 `--` の後の引数は、すべてアプリケーションに渡されます。
 
-## <a name="setup-the-global-tool"></a>グローバル ツールを設定する
+## <a name="set-up-the-global-tool"></a>グローバル ツールを設定する
 
 アプリケーションをパッケージ化してグローバル ツールとして配布する前に、プロジェクト ファイルを変更する必要があります。 `botsay.csproj` ファイルを開き、3 つの新しい XML ノードを `<Project><PropertyGroup>` ノードに追加します。
 
