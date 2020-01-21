@@ -37,7 +37,7 @@ ms.locfileid: "75716717"
 
 `-netcf` オプションは、次の言語機能を変更します。
 
-- [End \<キーワード > Statement](../../../visual-basic/language-reference/statements/end-keyword-statement.md)キーワードは、プログラムの実行を終了しますが、無効になっています。 次のプログラムは `-netcf` せずにコンパイルして実行しますが、コンパイル時に `-netcf`で失敗します。
+- [End \<keyword > ステートメント](../../../visual-basic/language-reference/statements/end-keyword-statement.md)キーワードは、プログラムの実行を終了しますが、無効になっています。 次のプログラムは `-netcf` せずにコンパイルして実行しますが、コンパイル時に `-netcf`で失敗します。
 
   [!code-vb[VbVbalrCompiler#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/netcf.vb#34)]
 

@@ -53,7 +53,7 @@ End Structure
 
 ## <a name="remarks"></a>コメント
 
-`Structure` ステートメントは、カスタマイズできる複合値型を定義します。 *構造体*は、以前のバージョンの Visual Basic のユーザー定義型 (UDT) を一般化したものです。 詳細については、「[構造](../../programming-guide/language-features/data-types/structures.md)」を参照してください。
+`Structure` ステートメントは、カスタマイズできる複合値型を定義します。 *構造体*は、以前のバージョンの Visual Basic のユーザー定義型 (UDT) を一般化したものです。 詳細については、「[構造体](../../programming-guide/language-features/data-types/structures.md)」を参照してください。
 
 構造体は、クラスと同じ機能の多くをサポートします。 たとえば、構造体は、プロパティやプロシージャを持つことができ、インターフェイスを実装でき、パラメーター化されたコンストラクターを持つことができます。 ただし、継承、宣言、および使用方法に関しては、構造体とクラスの間には大きな違いがあります。 また、クラスは参照型ですが、構造体は値型です。 詳細については、「[構造体とクラス](../../programming-guide/language-features/data-types/structures-and-classes.md)」を参照してください。
 
@@ -77,7 +77,7 @@ End Structure
 
 - **実装。** 構造体が [Implements ステートメント](implements-statement.md)を使用する場合は、`interfacenames`で指定するすべてのインターフェイスで定義されているすべてのメンバーを実装する必要があります。
 
-- **既定のプロパティ。** 構造体では、[既定](../modifiers/default.md)の修飾子を使用して、最大で1つのプロパティを*既定のプロパティ*として指定できます。 詳細については、「[Default](../modifiers/default.md)」を参照してください。
+- **既定のプロパティ。** 構造体では、[Default](../modifiers/default.md)の修飾子を使用して、最大で1つのプロパティを*既定のプロパティ*として指定できます。 詳細については、「[Default](../modifiers/default.md)」を参照してください。
 
 ## <a name="behavior"></a>動作
 
@@ -95,7 +95,7 @@ End Structure
 
      構造体メンバーの有効期間は、それを宣言する方法と場所で決まります。 詳細については、「[Class ステートメント](class-statement.md)」の「有効期間」を参照してください。
 
-- **修飾。 ** 構造体の外部にあるコードでは、メンバーの名前をその構造体の名前で修飾する必要があります。
+- **修飾**。 構造体の外部にあるコードでは、メンバーの名前をその構造体の名前で修飾する必要があります。
 
      入れ子構造体の内部のコードでプログラミング要素を修飾なしで参照した場合、Visual Basic はその要素をまず入れ子構造体の内部で探し、その次にコンテナー構造体の内部で探します。この手順が、最も外側のコンテナー要素にまで繰り返されます。 詳細については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。
 
