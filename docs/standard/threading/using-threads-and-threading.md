@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 863fa565f7c107214273912a6d110b7664bffe6b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131496"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936840"
 ---
 # <a name="using-threads-and-threading"></a>スレッドの使用とスレッド処理
 
@@ -28,11 +28,13 @@ ms.locfileid: "73131496"
 
 ## <a name="how-to-stop-a-thread"></a>方法: スレッドを停止する
 
-スレッドの実行を終了するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドでは、呼び出されたスレッド上で <xref:System.Threading.ThreadAbortException> が生成されます。 詳細については、「[スレッドの破棄](destroying-threads.md)」を参照してください。
+スレッドの実行を終了するには、<xref:System.Threading.CancellationToken?displayProperty=nameWithType> を使用します。 これにより、統一された方法で協調的にスレッドを停止することができます。 詳細については、「[マネージド スレッドのキャンセル](cancellation-in-managed-threads.md)」を参照してください。
 
-.NET Framework 4 以降、<xref:System.Threading.CancellationToken?displayProperty=nameWithType> を使用してスレッドを協調的にキャンセルできます。 詳細については、「[マネージド スレッドのキャンセル](cancellation-in-managed-threads.md)」を参照してください。
+協調的なキャンセルを行うように設計されていないサード パーティのコードがスレッドで実行されているために、スレッドを協調的に停止できない場合があります。 この場合は、その実行を強制的に終了することができます。 スレッドの実行を強制的に終了する場合、.NET Framework では <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用できます。 このメソッドでは、呼び出されたスレッド上で <xref:System.Threading.ThreadAbortException> が生成されます。 詳細については、「[スレッドの破棄](destroying-threads.md)」を参照してください。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドは、.NET Core ではサポートされていません。 .NET Core でサード パーティのコードの実行を強制的に終了する必要がある場合は、それを別のプロセスで実行し、<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> を使用します。
 
-<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> メソッドを使用すると、そのメソッドが呼び出されたスレッドが終了するまで呼び出し元のスレッドを待機させるようにすることができます。
+.NET Framework 4 よりも前では、<xref:System.Threading.CancellationToken?displayProperty=nameWithType> は使用できません。 以前の .NET Framework バージョンでスレッドを停止するには、スレッド同期の手法を使用して、協調的なキャンセルを手動で実装する必要があります。 たとえば、volatile bool 型のフィールド `shouldStop` を作成し、それを使ってスレッドで実行されるコードの停止を要求することができます。 詳細については、C# リファレンスの [volatile](../../csharp/language-reference/keywords/volatile.md) に関する記事と、<xref:System.Threading.Volatile?displayProperty=nameWithType> に関する記事をご覧ください。
+
+<xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> メソッドを使用すると、停止させるスレッドが終了するまで、呼び出し元のスレッドを待機させることができます。
 
 ## <a name="how-to-pause-or-interrupt-a-thread"></a>方法: スレッドを一時停止または中断する
 

@@ -2,16 +2,16 @@
 title: Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Seedwork 概念を開始点として使用し、DDD 指向ドメイン モデルの実装を開始する。'
 ms.date: 10/08/2018
-ms.openlocfilehash: f53988b92a05fb54f3f05d9f463450d1a11a0843
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ab0aadc28dbd1175c75b04dadca29b7b0947f29b
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "73737220"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116572"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (ドメイン モデルの再利用可能な基底クラスとインターフェイス)
 
-ソリューション フォルダーには、*SeedWork* フォルダーが含まれています。 このフォルダー内にあるカスタム基底クラスは、ドメイン エンティティおよび値オブジェクトの基礎として使用できます。 これらの基底クラスを使用すると、各ドメインのオブジェクト クラスで冗長なコードがなくなります。 これらのタイプのクラス用のフォルダーは、*Framework* のような名前ではなく、*SeedWork* という名前になっています。 *SeedWork* という名前になっているのは、このフォルダーには再利用可能なクラスのほんの一部しか含まれておらず、実際にはフレームワークと見なすことができないためです。 *Seedwork* は、[Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) が発表し、[Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) が普及させた用語ですが、Common や SharedKernel といった名前で呼ばれる場合もあります。
+ソリューション フォルダーには、*SeedWork* フォルダーが含まれています。 このフォルダー内にあるカスタム基底クラスは、ドメイン エンティティおよび値オブジェクトの基礎として使用できます。 これらの基底クラスを使用して、各ドメインのオブジェクト クラスに冗長なコードが含まれないようにします。 これらのタイプのクラス用のフォルダーは、*Framework* のような名前ではなく、*SeedWork* という名前になっています。 *SeedWork* という名前になっているのは、このフォルダーには再利用可能なクラスのほんの一部しか含まれておらず、実際にはフレームワークと見なすことができないためです。 *Seedwork* は、[Michael Feathers](https://www.artima.com/forums/flat.jsp?forum=106&thread=8826) が発表し、[Martin Fowler](https://martinfowler.com/bliki/Seedwork.html) が普及させた用語ですが、Common や SharedKernel といった名前で呼ばれる場合もあります。
 
 図 7-12 は、注文マイクロサービスのドメイン モデルの SeedWork を構成するクラスを示しています。 カスタム基底クラス (Entity、ValueObject、Enumeration など) とインターフェイスがいくつか含まれています。 これらのインターフェイス (IRepository と IUnitOfWork) は、実装する必要があるものをインフラストラクチャ レイヤーに通知します。 また、これらのインターフェイスは、アプリケーション レイヤーから依存関係の挿入を通じて使用されます。
 
@@ -21,7 +21,7 @@ ms.locfileid: "73737220"
 
 **図 7-12**。 ドメイン モデル "SeedWork" の基底クラスとインターフェイスのサンプル セット
 
-これは、コピーと貼り付けによって再利用するタイプのもので、多くの開発者によってプロジェクト間で共有されます。正式なフレームワークではありません。 SeedWork は、どのレイヤーやライブラリでも使用できます。 ただし、クラスとインターフェイスのセットが十分に大きくなったら、単一のクラス ライブラリを作成するのがよいでしょう。
+これは、コピーと貼り付けによって再利用するタイプのもので、多くの開発者によってプロジェクト間で共有されます。正式なフレームワークではありません。 SeedWork は、どのレイヤーやライブラリでも使用できます。 ただし、クラスとインターフェイスのセットが十分に大きくなった場合は、単一のクラス ライブラリを作成することをお勧めします。
 
 ## <a name="the-custom-entity-base-class"></a>カスタム Entity 基底クラス
 
@@ -85,7 +85,7 @@ public abstract class Entity
             if (!_requestedHashCode.HasValue)
                 _requestedHashCode = this.Id.GetHashCode() ^ 31;
             // XOR for random distribution. See:
-            // https://blogs.msdn.microsoft.com/ericlippert/2011/02/28/guidelines-and-rules-for-gethashcode/
+            // https://docs.microsoft.com/archive/blogs/ericlippert/guidelines-and-rules-for-gethashcode
             return _requestedHashCode.Value;
         }
         else

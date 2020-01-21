@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: 4a05709da63c4f6a200039ba5dd59358c700130e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: da066625b445eca9186acedf06a941564921a6dd
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899883"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115839"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -15,7 +15,7 @@ ms.locfileid: "75899883"
 
 ## <a name="implicit-package-references"></a>暗黙的なパッケージ参照
 
-メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。 詳しくは、「[パッケージ、メタパッケージ、フレームワーク](../packages.md)」をご覧ください。 
+メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。 詳細については、「[パッケージ、メタパッケージ、フレームワーク](../packages.md)」を参照してください。 
 
 ```xml
  <PropertyGroup>
@@ -392,7 +392,7 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 
 ### <a name="includebuildoutput"></a>IncludeBuildOutput
 
-このブール値は、ビルド出力アセンブリを *.nupkg* ファイルにパックするかどうかを指定します。
+このブール値は、ビルド出力アセンブリを *.nupkg* ファイルにパッケージ化するかどうかを指定します。
 
 ### <a name="includecontentinpack"></a>IncludeContentInPack
 

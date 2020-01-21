@@ -3,18 +3,18 @@ title: .NET Core で使用できない .NET Framework テクノロジ
 description: .NET Core で使用できない .NET Framework テクノロジの詳細情報
 author: cartermp
 ms.date: 04/30/2019
-ms.openlocfilehash: d474b694b80b2f0e74dd2916106016802f7e0c68
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.openlocfilehash: 89871753fef92a30bf2151a618207a73b40bb402
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777313"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936944"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core で使用できない .NET Framework テクノロジ
 
 .NET Framework ライブラリで使用できるテクノロジの中には、.NET Core で使用できないものがあります。たとえば、AppDomain、リモート処理、コード アクセス セキュリティ (CAS)、セキュリティ透過性、System.EnterpriseServices などです。 ライブラリがこれらのテクノロジの 1 つ以上に依存する場合、以下に示す代替方法を検討してください。 API の互換性の詳細については、「[.NET Core の破壊的変更](../compatibility/breaking-changes.md)」を参照してください。
 
-API またはテクノロジが現在実装されていないからといって、意図的にサポートされていないわけではありません。 GitHub リポジトリで .NET Core を検索して、発生した特定の問題が設計によるものかどうかを確認します。 このようなインジケーターが見つからない場合は、特定の API とテクノロジを求めるために [dotnet/runtime リポジトリ](https://github.com/dotnet/runtime/issues)で問題を報告してください。 移植に関する要求の問題は、[port-to-core](https://github.com/dotnet/runtime/labels/port-to-core) ラベルでマークされています。
+API またはテクノロジが現在実装されていないからといって、意図的にサポートされていないわけではありません。 GitHub リポジトリで .NET Core を検索して、発生した特定の問題が設計によるものかどうかを確認します。 このようなインジケーターが見つからない場合は、特定の API とテクノロジを求めるために [dotnet/runtime リポジトリ](https://github.com/dotnet/runtime/issues)でイシューを報告してください。 移植に関する要求の問題は、[port-to-core](https://github.com/dotnet/runtime/labels/port-to-core) ラベルでマークされています。
 
 ## <a name="appdomains"></a>AppDomain
 
@@ -46,7 +46,6 @@ CAS と同様に、セキュリティ透過性はサンドボックス コード
 
 System.EnterpriseServices (COM+) は、.NET Core でサポートされていません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="see-also"></a>関連項目
 
->[!div class="nextstepaction"]
->[依存関係の分析](third-party-deps.md)
+- [.NET Framework から .NET Core への移植の概要](../porting/index.md)

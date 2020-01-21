@@ -2,12 +2,12 @@
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
 description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
 ms.date: 10/02/2018
-ms.openlocfilehash: 02db27feb1320d8b9c6823b8f9ef51c2ddf9791c
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: f9cab35ac8e11ca89a83f646c29bf72f84e66ef4
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737096"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116541"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -82,7 +82,7 @@ services:
     image: redis
 ```
 
-このファイルのルート キーはサービスです。 そのキーの下で、`docker-compose up` コマンドを実行する場合、または docker-compose.yml ファイルを使用して Visual Studio から展開する場合に、展開および実行するサービスを定義します。 この例では、次の表に示すように、docker-compose.yml ファイルでは複数のサービスが定義されています。
+このファイルのルート キーはサービスです。 そのキーの下で、`docker-compose up` コマンドを実行するとき、またはこの docker-compose.yml ファイルを使用して Visual Studio から展開するときに、展開および実行するサービスを定義します。 この例では、次の表に示すように、docker-compose.yml ファイルでは複数のサービスが定義されています。
 
 | サービス名 | 説明 |
 |--------------|-------------|
@@ -129,7 +129,7 @@ services:
 
 - Web サービスを sql.data サービス (コンテナーで実行されている Linux データベースの SQL Server インスタンス) にリンクします。 この依存関係を指定すると、catalog.api コンテナーは、sql.data コンテナーが起動するまで起動しなくなります。これが重要なのは、catalog.api には、SQL Server データベースが先に起動していて、実行されている必要があるからです。 ただし、このようなコンテナーの依存関係は、Docker がコンテナー レベルでしかチェックしないため、多くの場合、不十分です。 サービス (この場合は SQL Server) がまだ準備できていない場合もあるため、クライアント マイクロサービスで指数バックオフによる再試行ロジックを実装することをお勧めします。 そうすることで、依存関係のコンテナーが少しの間、準備できない場合でも、アプリケーションが回復力を保つことができます。
 
-- 外部サーバーへのアクセスを許可するように構成されます: extra\_hosts 設定により、開発 PC 上のローカル SQL Server インスタンスなど、外部サーバーまたは Docker ホストの外部のマシン (つまり、開発 Docker ホストである既定の Linux VM の外側) にアクセスすることができます。
+- これは外部サーバーへのアクセスを許可するように構成されます: extra\_hosts 設定により、開発用 PC 上のローカル SQL Server インスタンスなど、Docker ホストの外 (つまり、開発用 Docker ホストである既定の Linux VM の外) にある外部のサーバーやマシンにアクセスすることができます。
 
 より高度な他の docker-compose.yml 設定もあります。これについては以降のセクションで説明します。
 
@@ -141,7 +141,7 @@ docker-compose.yml ファイルは定義ファイルで、その形式を理解�
 
 #### <a name="development-environments"></a>開発環境
 
-アプリケーションを開発するときには、アプリケーションを分離開発環境で実行できることが重要です。 docker-compose CLI コマンドを使用してその環境を作成するか、内部で docker-compose を使用する Visual Studio を使用できます。
+アプリケーションを開発するときには、アプリケーションを分離開発環境で実行できることが重要です。 docker-compose CLI コマンドを使用してその環境を作成するか、Visual Studio を使用することができます。そこでは内部的に docker-compose が使用されます。
 
 docker-compose.yml ファイルを使用すると、アプリケーションのすべてのサービスの依存関係 (その他のサービス、キャッシュ、データベース、キューなど) を構成および文書化できます。 docker-compose CLI コマンドを使用すると、1 つのコマンド (docker-compose up) を使用して、依存関係ごとに 1 つ以上のコンテナーを作成して起動することができます。
 
@@ -151,7 +151,7 @@ docker-compose.yml ファイルは、Docker エンジンによって解釈され
 
 継続的配置 (CD) または継続的インテグレーション (CI) プロセスの重要な部分は、単体テストと統合テストです。 これらの自動テストでは、ユーザーまたはアプリケーションのデータ内の他の変更による影響を受けないように、分離環境が必要です。
 
-Docker Compose を使用すると、コマンド プロンプトまたはスクリプトから、次のようないくつかのコマンドでその分離環境を非常に簡単に作成および破棄することができます。
+Docker Compose を使用すると、コマンド プロンプトまたはスクリプトから、次のコマンドのように、いくつかのコマンドで簡単にその分離環境を作成および破棄することができます。
 
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
@@ -201,7 +201,7 @@ docker-compose.override.yml ファイルには、その名前が示すように�
 
 **図 6-12**。 基本の docker-compose.yml ファイル内の値をオーバーライドする複数の docker-compose ファイル
 
-複数の docker-compose*.yml ファイルを組み合わせて、さまざまな環境を処理することができます。 基本の docker-compose.yml ファイルから開始します。 この基本ファイルには、環境に合わせて変更されない基本構成または静的な構成設定が含まれている必要があります。 たとえば、eShopOnContainers には、基本ファイルとして次の docker-compose.yml ファイル (サービスを少なくして簡略化) があります。
+複数の docker-compose*.yml ファイルを組み合わせて、さまざまな環境を処理することができます。 基本の docker-compose.yml ファイルから開始します。 この基本ファイルには、環境に合わせて変更されない基本構成または静的な構成設定が含まれている必要があります。 たとえば、eShopOnContainers には、基本ファイルとして次の docker-compose.yml ファイル (サービスを減らして簡略化したもの) があります。
 
 ```yml
 #docker-compose.yml (Base)
@@ -422,7 +422,7 @@ ESHOP_PROD_EXTERNAL_DNS_NAME_OR_IP=10.121.122.92
 
 Docker-compose は、.env ファイル内の各行が \<変数\>=\<値\> の形式になることを想定しています。
 
-ランタイム環境で設定された値は、.env ファイル内で定義されている値を常にオーバーライドすることに注意してください。 同様の方法で、コマンドラインのコマンド引数を介して渡される値も、.env ファイルで設定された既定値をオーバーライドします。
+ランタイム環境で設定された値は、.env ファイル内で定義されている値を常にオーバーライドします。 同様に、コマンド ライン引数を介して渡される値も、.env ファイルで設定された既定値をオーバーライドします。
 
 #### <a name="additional-resources"></a>その他の技術情報
 
@@ -470,7 +470,7 @@ ENTRYPOINT ["dotnet", "run"]
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **ASP.NET Core を使用して最適化された Docker イメージをビルドする**  
-  <https://blogs.msdn.microsoft.com/stevelasker/2016/09/29/building-optimized-docker-images-with-asp-net-core/>
+  <https://docs.microsoft.com/archive/blogs/stevelasker/building-optimized-docker-images-with-asp-net-core>
 
 - **.NET Core アプリケーションの Docker イメージのビルド**  
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](/aspnet/core/host-and-deploy/docker/building-net-docker-images)

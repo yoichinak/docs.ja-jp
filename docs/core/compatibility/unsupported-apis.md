@@ -2,16 +2,16 @@
 title: .NET Core でサポートされていない API
 description: .NET Core で常に例外をスローする .NET Framework の API について説明します。
 ms.date: 12/23/2019
-ms.openlocfilehash: 0cb533f10d53fd3d287265032e3de13c242a8ae0
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: f27aeca31226a95dacf100813762eedb56876fbd
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901344"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75936975"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core で常に例外をスローする API
 
-次の API は、指定されたプラットフォームの .NET Core で実行されると、常に <xref:System.PlatformNotSupportedException> をスローします。
+次の API は、すべてまたは一部のプラットフォームの .NET Core で <xref:System.PlatformNotSupportedException> を常にスローします。
 
 この記事では、影響を受ける API メンバーを名前空間別に整理しています。
 
@@ -22,7 +22,7 @@ ms.locfileid: "75901344"
 
 ## <a name="system"></a>システム
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType> | すべて |
 | <xref:System.AppDomain.ExecuteAssembly(System.String,System.String[],System.Byte[],System.Configuration.Assemblies.AssemblyHashAlgorithm)?displayProperty=nameWithType> | すべて |
@@ -37,7 +37,7 @@ ms.locfileid: "75901344"
 
 ## <a name="systemcodedomcompiler"></a>System.CodeDom.Compiler
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromDom%2A?displayProperty=nameWithType> | すべて |
 | <xref:System.CodeDom.Compiler.CodeDomProvider.CompileAssemblyFromFile%2A?displayProperty=nameWithType> | すべて |
@@ -45,7 +45,7 @@ ms.locfileid: "75901344"
 
 ## <a name="systemcollectionsspecialized"></a>System.Collections.Specialized
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 | <xref:System.Collections.Specialized.NameObjectCollectionBase.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
@@ -53,13 +53,13 @@ ms.locfileid: "75901344"
 
 ## <a name="systemconfiguration"></a>System.Configuration
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Configuration.RsaProtectedConfigurationProvider?displayProperty=nameWithType> (すべてのメンバー) | すべて |
 
 ## <a name="systemconsole"></a>System.Console
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Console.Beep?displayProperty=nameWithType> | Linux と macOS |
 | <xref:System.Console.BufferHeight?displayProperty=nameWithType> (set のみ) | Linux と macOS |
@@ -77,13 +77,13 @@ ms.locfileid: "75901344"
 
 ## <a name="systemdatacommon"></a>System.Data.Common
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Data.Common.DbDataReader.GetSchemaTable%2A?displayProperty=nameWithType> (<xref:System.NotSupportedException> をスローする) | すべて |
 
 ## <a name="systemdiagnosticsprocess"></a>System.Diagnostics.Process
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Diagnostics.Process.MaxWorkingSet?displayProperty=nameWithType> (set のみ) | Linux |
 | <xref:System.Diagnostics.Process.MinWorkingSet?displayProperty=nameWithType> (set のみ) | Linux |
@@ -100,14 +100,14 @@ ms.locfileid: "75901344"
 
 ## <a name="systemio"></a>System.IO
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.IO.FileSystemInfo.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 | <xref:System.IO.FileSystemInfo.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemiopipes"></a>System.IO.Pipes
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.IO.Pipes.NamedPipeClientStream.NumberOfServerInstances?displayProperty=nameWithType> | Linux と macOS |
 | <xref:System.IO.Pipes.NamedPipeServerStream.GetImpersonationUserName?displayProperty=nameWithType> | Linux と macOS |
@@ -118,13 +118,13 @@ ms.locfileid: "75901344"
 
 ## <a name="systemmedia"></a>System.Media
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Media.SoundPlayer.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemnet"></a>System.Net
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Net.AuthenticationManager.Authenticate(System.String,System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | すべて |
 | <xref:System.Net.AuthenticationManager.PreAuthenticate(System.Net.WebRequest,System.Net.ICredentials)?displayProperty=nameWithType> | すべて |
@@ -146,25 +146,25 @@ ms.locfileid: "75901344"
 
 ## <a name="systemnetnetworkinformation"></a>System.Net.NetworkInformation
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Net.NetworkInformation.Ping.Send%2A?displayProperty=nameWithType> | Windows (UWP) |
 
 ## <a name="systemnetsockets"></a>System.Net.Sockets
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Net.Sockets.Socket.DuplicateAndClose(System.Int32)?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemnetwebsockets"></a>System.Net.WebSockets
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Net.WebSockets.WebSocket.RegisterPrefixes?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemreflection"></a>System.Reflection
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> | すべて |
 | <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom(System.String)?displayProperty=nameWithType> | すべて |
@@ -176,13 +176,13 @@ ms.locfileid: "75901344"
 
 ## <a name="systemruntimecompilerservices"></a>System.Runtime.CompilerServices
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Runtime.CompilerServices.DebugInfoGenerator.CreatePdbGenerator?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemruntimeinteropservices"></a>System.Runtime.InteropServices
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Runtime.InteropServices.Marshal.GetIDispatchForObject(System.Object)?displayProperty=nameWithType> | すべて |
 | <xref:System.Runtime.InteropServices.RuntimeEnvironment.SystemConfigurationFile?displayProperty=nameWithType> | すべて |
@@ -194,13 +194,13 @@ ms.locfileid: "75901344"
 
 ## <a name="systemruntimeserialization"></a>System.Runtime.Serialization
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemsecurity"></a>System.Security
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Security.CodeAccessPermission.Deny?displayProperty=nameWithType> | すべて |
 | <xref:System.Security.CodeAccessPermission.PermitOnly?displayProperty=nameWithType> | すべて |
@@ -219,7 +219,7 @@ ms.locfileid: "75901344"
 
 ## <a name="systemsecurityclaims"></a>System.Security.Claims
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Security.Claims.ClaimsPrincipal.%23ctor?displayProperty=nameWithType> | すべて |
 | <xref:System.Security.Claims.ClaimsPrincipal.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
@@ -229,7 +229,7 @@ ms.locfileid: "75901344"
 
 ## <a name="systemsecuritycryptography"></a>System.Security.Cryptography
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create(System.String)?displayProperty=nameWithType> | すべて |
 | <xref:System.Security.Cryptography.CspKeyContainerInfo.%23ctor%2A?displayProperty=nameWithType> | Linux と macOS |
@@ -263,7 +263,7 @@ ms.locfileid: "75901344"
 
 ## <a name="systemsecuritycryptographypkcs"></a>System.Security.Cryptography.Pkcs
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Security.Cryptography.Pkcs.CmsSigner.%23ctor(System.Security.Cryptography.CspParameters)?displayProperty=nameWithType> | すべて |
 | <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> | すべて |
@@ -271,7 +271,7 @@ ms.locfileid: "75901344"
 
 ## <a name="systemsecuritycryptographyx509certificates"></a>System.Security.Cryptography.X509Certificates
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 | <xref:System.Security.Cryptography.X509Certificates.X509Certificate.Import%2A?displayProperty=nameWithType> | すべて |
@@ -280,31 +280,31 @@ ms.locfileid: "75901344"
 
 ## <a name="systemsecurityauthenticationextendedprotection"></a>System.Security.Authentication.ExtendedProtection
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemsecuritypolicy"></a>System.Security.Policy
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Security.Policy.Hash.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemserviceprocessservicecontroller"></a>System.ServiceProcess.ServiceController
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.ServiceProcess.TimeoutException.%23ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemtextregularexpressions"></a>System.Text.RegularExpressions
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> | すべて |
 
 ## <a name="systemthreading"></a>System.Threading
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Threading.CompressedStack.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
 | <xref:System.Threading.ExecutionContext.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)?displayProperty=nameWithType> | すべて |
@@ -315,7 +315,7 @@ ms.locfileid: "75901344"
 
 ## <a name="systemxml"></a>System.Xml
 
-| メンバー | プラットフォーム |
+| メンバー | スローするプラットフォーム |
 | - | - |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.Byte[],System.Int32,System.Int32,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | すべて |
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | すべて |
