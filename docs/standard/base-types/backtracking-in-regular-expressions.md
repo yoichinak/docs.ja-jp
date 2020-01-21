@@ -194,4 +194,4 @@ ms.locfileid: "75711520"
 - [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
 - [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
 - [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
