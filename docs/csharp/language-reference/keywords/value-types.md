@@ -8,12 +8,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 0ab9b6e089f5add9963ffae73e196643ad999763
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cfa92923ff5c7d5e7e4e2a9a965dc1562c183b74
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712911"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964650"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
@@ -33,7 +33,7 @@ ms.locfileid: "75712911"
 
 値型の変数は既定で `null` にすることはできません。 ただし、対応する [null 許容値型](../builtin-types/nullable-value-types.md)の変数を `null` にすることはできます。
 
-各値型には、その型の既定値を初期化する暗黙のパラメーターなしのコンストラクターがあります。 値型の既定値の詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。
+各値型には、その型の既定値を初期化する暗黙のパラメーターなしのコンストラクターがあります。 値型の既定値の詳細については、「[C# 型の既定値](../builtin-types/default-values.md)」を参照してください。
 
 ## <a name="simple-types"></a>単純型
 
@@ -87,7 +87,7 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-[new](../operators/new-operator.md) 演算子を使用すると、特定の型のパラメーターなしのコンストラクターを呼び出し、既定値を変数に代入します。 前の例では、パラメーターなしのコンス トラクターで値 `0` を `myInt` に代入していました。 パラメーターなしのコンストラクターの呼び出しによって代入される値の詳細については、「[既定値の一覧表](default-values-table.md)」をご覧ください。
+[new](../operators/new-operator.md) 演算子を使用すると、特定の型のパラメーターなしのコンストラクターを呼び出し、既定値を変数に代入します。 前の例では、パラメーターなしのコンス トラクターで値 `0` を `myInt` に代入していました。 パラメーターなしのコンストラクターの呼び出しによって代入される値の詳細については、「[C# 型の既定値](../builtin-types/default-values.md)」を参照してください。
 
 ユーザー定義型では、[new](../operators/new-operator.md) を使用してパラメーターなしのコンストラクターを呼び出します。 たとえば、次のステートメントは、`Point` 構造体のパラメーターなしのコンストラクターを呼び出します。
 

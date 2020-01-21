@@ -5,12 +5,12 @@ helpviewer_keywords:
 - SecAnnotate.exe
 - Security Annotator tool
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
-ms.openlocfilehash: cc57bd01c5626c889b5d94eac1e7358cafa4ab10
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: ffc275c588775fb79da276be904ada90a5a31bad
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447314"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937928"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe (.NET セキュリティ アノテーター ツール)
 .NET セキュリティ アノテーター ツール (SecAnnotate.exe) は、1 つ以上のアセンブリの `SecurityCritical` 部分と `SecuritySafeCritical` 部分を識別するコマンド ライン アプリケーションです。  
@@ -47,9 +47,9 @@ SecAnnotate.exe [parameters] [assemblies]
 |`/x`<br /><br /> or<br /><br /> `/verbose`|注釈の処理時に詳細を出力することを指定します。|  
 |`/y:` *directory*<br /><br /> or<br /><br /> `/symbolpath:` *directory*|注釈の処理時、シンボル ファイルを検索するときに、指定したディレクトリを含めます。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  パラメーターとアセンブリは、コマンド ラインでアット マーク (@) をプレフィックスとして付けて指定する応答ファイルで指定することもできます。 応答ファイルの各行には、1 つのパラメーターまたはアセンブリの名前を指定する必要があります。  
   
- .NET セキュリティ アノテーターについて詳しくは、.NET セキュリティ ブログの「[Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](https://blogs.msdn.microsoft.com/shawnfa/2009/11/18/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example/)」(SecAnnotate を使用したアセンブリでの透過性違反の分析) をご覧ください。  
+ .NET セキュリティ アノテーターについて詳しくは、.NET セキュリティ ブログの「[Using SecAnnotate to Analyze Your Assemblies for Transparency Violations](https://docs.microsoft.com/archive/blogs/shawnfa/using-secannotate-to-analyze-your-assemblies-for-transparency-violations-an-example)」(SecAnnotate を使用したアセンブリでの透過性違反の分析) をご覧ください。  
   
 ## <a name="examples"></a>使用例

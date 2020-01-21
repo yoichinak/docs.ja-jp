@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: f14b92aba270eab845ca50e5407da3502b5c4087
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: a9f507ecdfced5b044b9d6338f723f53b1b4c4b7
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345341"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115832"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>ビットごとの演算子とシフト演算子 (C# リファレンス)
 
@@ -60,7 +60,7 @@ ms.locfileid: "75345341"
 
 ## <a name="left-shift-operator-"></a>左シフト演算子 \<\<
 
-`<<` 演算子では、左側のオペランドが、右側のオペランドで定義されたビット数だけ左にシフトされます。
+`<<` 演算子では、左側のオペランドが、[右側のオペランドで定義されたビット数](#shift-count-of-the-shift-operators)だけ左にシフトされます。
 
 次の例に示すように、左シフト演算子では、結果の型の範囲外にある上位ビットは破棄され、空の下位ビット位置は、ゼロに設定されます。
 
@@ -74,7 +74,7 @@ ms.locfileid: "75345341"
 
 ## <a name="right-shift-operator-"></a>右シフト演算子 >>
 
-`>>` 演算子では、左側のオペランドが、右側のオペランドで定義されたビット数だけ右にシフトされます。
+`>>` 演算子では、左側のオペランドが、[右側のオペランドで定義されたビット数](#shift-count-of-the-shift-operators)だけ右にシフトされます。
 
 次の例で示すように、右シフト演算では、下位ビットが破棄されます。
 
@@ -169,6 +169,9 @@ x = x op y
 次の例は、その動作を示します。
 
 [!code-csharp-interactive[shift count example](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ShiftCount)]
+
+> [!NOTE]
+> 前の例で示したように、右側のオペランドの値が左側のオペランドのビット数よりも大きい場合でも、シフト演算の結果が 0 以外になることがあります。
 
 ## <a name="enumeration-logical-operators"></a>列挙論理演算子
 

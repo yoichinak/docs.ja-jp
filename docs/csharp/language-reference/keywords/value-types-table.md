@@ -5,12 +5,12 @@ helpviewer_keywords:
 - value types [C#], table
 - types [C#], value types
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: c0db75cc502426490d82c369a919079e8f53284c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6e6f14635f47a3bf016ca5aca72ada643ea29f08
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712924"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964450"
 ---
 # <a name="value-types-table-c-reference"></a>値型の一覧表 (C# リファレンス)
 
@@ -37,6 +37,6 @@ C# の値の型を次の表に示します。
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [既定値の一覧表](default-values-table.md)
+- [C# 型の既定値](../builtin-types/default-values.md)
 - [値型](value-types.md)
 - [数値結果テーブルの書式設定](formatting-numeric-results-table.md)

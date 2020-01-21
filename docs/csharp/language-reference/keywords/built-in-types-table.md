@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 1344b29a8751722e36eae58ece5242a2bcdb8a69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1836458972c453b733287e58e783f32892d27fde
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713746"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964383"
 ---
 # <a name="built-in-types-table-c-reference"></a>組み込み型の一覧表 (C# リファレンス)
 
@@ -67,5 +67,5 @@ Console.WriteLine(doubleType.FullName);
 - [C# のキーワード](index.md)
 - [値型](value-types.md)
 - [参照型](reference-types.md)
-- [既定値の一覧表](default-values-table.md)
-- [dynamic](../builtin-types/reference-types.md)
+- [C# 型の既定値](../builtin-types/default-values.md)
+- [dynamic](../builtin-types/reference-types.md#the-dynamic-type)

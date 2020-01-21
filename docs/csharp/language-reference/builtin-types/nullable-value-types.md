@@ -4,16 +4,16 @@ description: C# の Null 許容値型とその使用方法について説明し�
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: b9400cd76eb0430dbe9c278e835a3cec7f9f131e
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740967"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964325"
 ---
 # <a name="nullable-value-types-c-reference"></a>null 許容値型 (C# リファレンス)
 
-null 許容値型 `T?` は、基になる [値型](../keywords/value-types.md) `T` のすべての値と、追加の [null](../keywords/null.md) 値を表す型です。 たとえば、`bool?` 変数には、`true`、`false`、`null` の 3 つの値のいずれかを割り当てることができます。 基になる値型 `T` を null 許容値型にすることはできません。
+null 許容値型 `T?` は、基になる[値型](../keywords/value-types.md) `T` のすべての値と、追加の [null](../keywords/null.md) 値を表します。 たとえば、`bool?` 変数には、`true`、`false`、`null` の 3 つの値のいずれかを割り当てることができます。 基になる値型 `T` を null 許容値型にすることはできません。
 
 > [!NOTE]
 > C# 8.0 で、Null 許容参照型機能が導入されました。 詳細については、「[null 許容参照型](../../nullable-references.md)」を参照してください。 null 許容値型は、C# 2 から使用できます。
@@ -56,7 +56,7 @@ null 許容値型の値を null 非許容値型の変数に割り当てる場合
 
 [!code-csharp-interactive[?? operator](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#NullCoalescing)]
 
-`null` の代わりに基になる値の型の[既定](../keywords/default-values-table.md)値を使用する場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
+`null` の代わりに基になる値の型の[既定](default-values.md)値を使用する場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
 
 次の例に示すように、null 許容値型を null 非許容型に明示的にキャストすることもできます。
 
@@ -133,7 +133,7 @@ null 許容値型のインスタンス `T?` は、次のように[ボックス�
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://blogs.msdn.microsoft.com/ericlippert/2007/06/27/what-exactly-does-lifted-mean/)
+- [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>

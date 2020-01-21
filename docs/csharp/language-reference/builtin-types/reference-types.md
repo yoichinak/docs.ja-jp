@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ string literal'
 - string literals [C#]
 - string keyword [C#]
-ms.openlocfilehash: d8858acb2743b26cc3a5172edf4765976d81adf4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: d5ca0593d802d331d980cf35c701e0a79d54abee
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973012"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163099"
 ---
 # <a name="built-in-reference-types-c-reference"></a>組み込みの参照型 (C# リファレンス)
 
@@ -33,7 +33,7 @@ C# には複数の組み込み参照型があります。 それらには、.NET
 
 ## <a name="the-object-type"></a>オブジェクト型
 
-`object` 型は .NET での <xref:System.Object?displayProperty=nameWithType> の別名です。 C# の統一型システムでは、すべての型 (定義済み、ユーザー定義、参照型、および値型) が、直接または間接的に <xref:System.Object?displayProperty=nameWithType> を継承します。 `object` 型の変数には、任意の型の値を割り当てることができます。 すべての `object` 変数には、リテラル `null` を使って既定値を割り当てることができます。 値型の変数が object に変換されることを、*ボックス化*されると言います。 object 型の変数が値型に変換されることを、*ボックス化解除*されると言います。 詳細については、「[ボックス化とボックス化解除](../../programming-guide/types/boxing-and-unboxing.md)」を参照してください。 
+`object` 型は .NET での <xref:System.Object?displayProperty=nameWithType> の別名です。 C# の統一型システムでは、すべての型 (定義済み、ユーザー定義、参照型、および値型) が、直接または間接的に <xref:System.Object?displayProperty=nameWithType> を継承します。 `object` 型の変数には、任意の型の値を割り当てることができます。 すべての `object` 変数には、リテラル `null` を使って既定値を割り当てることができます。 値型の変数が object に変換されることを、*ボックス化*されると言います。 `object` 型の変数が値型に変換されることを、*ボックス化解除*されると言います。 詳細については、「[ボックス化とボックス化解除](../../programming-guide/types/boxing-and-unboxing.md)」を参照してください。 
 
 ## <a name="the-string-type"></a>文字列型
 
@@ -67,14 +67,14 @@ string b = "h";
 b += "ello";
 ```
 
-`[]` [演算子](../operators/member-access-operators.md#indexer-operator-)は、`string` の各文字への読み取り専用アクセスに使用できます。 有効な値は `0` から始まり、`string` の長さ未満である必要があります。
+`[]` [演算子](../operators/member-access-operators.md#indexer-operator-)は、文字列の各文字への読み取り専用アクセスに使用できます。 有効なインデックス値は `0` から始まり、文字列の長さ未満である必要があります。
 
 ```csharp
 string str = "test";
 char x = str[2];  // x = 's';
 ```
 
-同様に、`[]` 演算子を使って `string` 内の各文字を反復処理することもできます。
+同様に、`[]` 演算子を使って文字列内の各文字を反復処理することもできます。
 
 ```csharp-interactive
 string str = "test";

@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 681328af3f3624a8398d5125b952593f2c0510c7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427677"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75938140"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -22,7 +22,7 @@ ms.locfileid: "74427677"
 
 アプリのターゲットが .NET Framework 4.7 である場合、またはそれより前のバージョンがターゲットであっても実行環境が .NET Framework 4.7.1 以降である場合は、ユーザー補助機能を使用するようにアプリを構成できます。 また、アプリのターゲットが 4.7.1 .NET Framework 以降である場合は、従来の機能を使用するように (そして、ユーザー補助機能を利用しないように) アプリを構成することもできます。 ユーザー補助機能が含まれる .NET Framework の各バージョンには、バージョン固有のアクセシビリティ スイッチがあります。これを、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素に追加します。 サポートされているスイッチは次のとおりです。
 
-|Version|Switch|
+|バージョン|Switch|
 |---|---|
 |.NET Framework 4.7.1|"Switch.UseLegacyAccessibilityFeatures"|
 |.NET Framework 4.7.2|"Switch.UseLegacyAccessibilityFeatures.2"|
@@ -136,7 +136,7 @@ namespace WindowsFormsApplication
 
 **UIA 通知イベント**
 
-Windows 10 Fall Creators Update で導入された UIA 通知イベントをアプリで使用すると、UIA イベントを発生させ、対応するコントロールを UI に準備することなく、イベント用に指定したテキストに基づいてナレーターに単純に読み上げさせることができます。 一部のシナリオでは、これはアプリのアクセシビリティを飛躍的に向上させる最も簡単な方法です。 長時間かかる可能性のあるいくつかのプロセスの進行状況を通知するのにも便利です。 UIA 通知イベントの詳細については、[デスクトップ アプリで新しい UI 通知イベントを使用する方法](https://blogs.msdn.microsoft.com/winuiautomation/2017/11/08/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need/)に関する記事を参照してください。
+Windows 10 Fall Creators Update で導入された UIA 通知イベントをアプリで使用すると、UIA イベントを発生させ、対応するコントロールを UI に準備することなく、イベント用に指定したテキストに基づいてナレーターに単純に読み上げさせることができます。 一部のシナリオでは、これはアプリのアクセシビリティを飛躍的に向上させる最も簡単な方法です。 長時間かかる可能性のあるいくつかのプロセスの進行状況を通知するのにも便利です。 UIA 通知イベントの詳細については、[デスクトップ アプリで新しい UI 通知イベントを使用する方法](https://docs.microsoft.com/archive/blogs/winuiautomation/can-your-desktop-app-leverage-the-new-uia-notification-event-in-order-to-have-narrator-say-exactly-what-your-customers-need)に関する記事を参照してください。
 
 次の例では、[通知イベント](xref:System.Windows.Forms.AccessibleObject.RaiseAutomationNotification%2A)を発生させています。
 

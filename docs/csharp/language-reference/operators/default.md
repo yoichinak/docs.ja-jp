@@ -4,16 +4,16 @@ description: 型の既定値を生成するには、default 演算子を使い�
 ms.date: 08/01/2019
 helpviewer_keywords:
 - default keyword [C#]
-ms.openlocfilehash: 744bdf1ec683ef32bba508c260590c0ed4c6e987
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 651c4698514aee8cf4dab75ea32c98493e19a30b
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712716"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964618"
 ---
 # <a name="default-operator-c-reference"></a>default 演算子 (C# リファレンス)
 
-`default` 演算子では、型の[既定値](../keywords/default-values-table.md)が生成されます。 `default` 演算子への引数では、型または型パラメーターの名前を指定する必要があります。
+`default` 演算子では、型の[既定値](../builtin-types/default-values.md)が生成されます。 `default` 演算子への引数では、型または型パラメーターの名前を指定する必要があります。
 
 `default` 演算子の使い方を次の例に示します。
 
@@ -44,5 +44,5 @@ C# 7.1 以降では、`default` リテラルを使って、コンパイラが式
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)
-- [既定値の一覧表](../keywords/default-values-table.md)
+- [C# 型の既定値](../builtin-types/default-values.md)
 - [.NET のジェネリック](../../../standard/generics/index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constructors [C#], about constructors
 ms.assetid: 464253b2-fd5d-469a-836d-df0fdf2a43f7
-ms.openlocfilehash: 7d027a67e533cb1ed7b2cea38112b4f585bf5fbc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: faab6ac57629db11c60ee5b563ea95ebb90016dd
+ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714639"
+ms.lasthandoff: 01/15/2020
+ms.locfileid: "75964358"
 ---
 # <a name="using-constructors-c-programming-guide"></a>コンストラクターの使用 (C# プログラミング ガイド)
 
@@ -29,7 +29,7 @@ ms.locfileid: "75714639"
   
  詳細については、「[プライベート コンストラクター](./private-constructors.md)」を参照してください。  
   
- [struct](../../language-reference/keywords/struct.md) 型のコンストラクターはクラス コンストラクターに似ていますが、`structs` には、明示的なパラメーターなしのコンストラクターを含めることができません。パラメーターなしのコンストラクターは、コンパイラによって自動的に提供されるためです。 このコンストラクターは、`struct` 内の各フィールドを既定値に初期化します。 詳細については、「[既定値の一覧表](../../language-reference/keywords/default-values-table.md)」を参照してください。 ただし、このパラメーターなしのコンストラクターは、`struct` が `new` によってインスタンス化される場合にのみ呼び出されます。 たとえば、次のコードでは、<xref:System.Int32> のパラメーターなしのコンストラクターが使用されるため、整数が確実に初期化されます。  
+ [struct](../../language-reference/keywords/struct.md) 型のコンストラクターはクラス コンストラクターに似ていますが、`structs` には、明示的なパラメーターなしのコンストラクターを含めることができません。パラメーターなしのコンストラクターは、コンパイラによって自動的に提供されるためです。 このコンストラクターは、`struct` 内の各フィールドを[既定値](../../language-reference/builtin-types/default-values.md)に初期化します。 ただし、このパラメーターなしのコンストラクターは、`struct` が `new` によってインスタンス化される場合にのみ呼び出されます。 たとえば、次のコードでは、<xref:System.Int32> のパラメーターなしのコンストラクターが使用されるため、整数が確実に初期化されます。  
   
 ```csharp  
 int i = new int();  
