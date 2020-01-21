@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 459e7e1f0b5543f069682dadf60668e94b472377
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 80fc75d0736e2ae17699073a025e79b52b340613
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643863"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937067"
 ---
-### <a name="switchsystemwindowsformsdomainupdownuselegacyscrolling-compatibility-switch-not-supported"></a>Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling 互換性スイッチはサポートされていません
+### <a name="domainupdownuselegacyscrolling-compatibility-switch-not-supported"></a>DomainUpDown.UseLegacyScrolling 互換性スイッチはサポートされていません
 
 .NET Framework 4.7.1 で導入された `Switch.System.Windows.Forms.DomainUpDown.UseLegacyScrolling` 互換スイッチは、.NET Core 3.0 上の Windows フォームではサポートされていません。
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643863"
 
 3.0 Preview 9
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 スイッチを削除します。 そのスイッチはサポートされておらず、代替機能はありません。
 

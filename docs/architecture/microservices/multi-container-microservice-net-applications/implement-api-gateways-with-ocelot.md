@@ -38,7 +38,7 @@ ms.locfileid: "73737727"
 
 たとえば、API ゲートウェイ層を細分化することは、マイクロサービスに基づくより高度な複合 UI アプリケーションで特に役立つ場合があります。これは、きめ細かい API ゲートウェイの概念が UI コンポジション サービスと似ているためです。
 
-詳細は前のセクション「[Creating composite UI based on microservices](../architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md)」(マイクロサービスを基にしている複合 UI を作成する) で取り上げています。
+詳細は前のセクション「[マイクロサービスを基にしている複合 UI を作成する](../architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md)」で取り上げています。
 
 重要な点は、多くの中規模および大規模なアプリケーションの場合、カスタム ビルドの API ゲートウェイ製品の使用は、通常は有効なアプローチですが、API ゲートウェイで自立型マイクロサービスを作成している複数の開発チームに対して、複数の独立した構成領域を許可している場合を除き、単一のモノシリック アグリゲーターや一意の中央カスタム API ゲートウェイとしては適切なアプローチではないことです。
 

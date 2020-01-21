@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 58e65bae1593f23945a971b896a1db4a929b4587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d207a937917da78f6b902ad8ca4f02fa9a46c2e1
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567417"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116382"
 ---
 ### <a name="types-in-microsoftvisualbasicmyservices-namespace-not-available"></a>Microsoft.VisualBasic.MyServices 名前空間の型は使用できません
 
@@ -20,7 +20,7 @@ ms.locfileid: "74567417"
 
 これらの型は、今後のリリースでの不要なアセンブリの依存関係や破壊的変更を回避するために削除されました。
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 コードが **Microsoft.VisualBasic.MyServices** 型とそのメンバーの使用に依存している場合は、.NET クラス ライブラリに、対応する型とメンバーがあります。 **Microsoft.VisualBasic.MyServices** の型と、それと同等の .NET クラス ライブラリの型との対応を次に示します。
 
@@ -45,5 +45,4 @@ Visual Basic
 
 - `N:Microsoft.VisualBasic.MyServices`
 
--- >
-
+-->

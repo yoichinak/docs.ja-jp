@@ -3,12 +3,12 @@ title: パッケージ、メタパッケージ、フレームワーク - .NET Co
 description: パッケージ、メタパッケージ、フレームワークの用語を説明します。
 author: richlander
 ms.date: 06/20/2016
-ms.openlocfilehash: bd40ca603aaa9685fca9934368895bf7e945d962
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 6a8e257ebf493365518dd9663fbd2a9cadc83875
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715508"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116066"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>パッケージ、メタパッケージ、フレームワーク
 
@@ -18,7 +18,7 @@ ms.locfileid: "75715508"
 
 ## <a name="packages"></a>パッケージ
 
-.NET core は、プリミティブ、上位レベルのデータ型、アプリ コンポジション型、および一般的なユーティリティを提供する一連のパッケージに分割されます。 これらのパッケージはいずれも、同じ名前の単一アセンブリです。 たとえば、[System.Runtime](https://www.nuget.org/packages/System.Runtime) には、System.Runtime.dll が含まれています。 
+.NET core は、プリミティブ、上位レベルのデータ型、アプリ コンポジション型、および一般的なユーティリティを提供する一連のパッケージに分割されます。 これらのパッケージはいずれも、同じ名前の単一アセンブリです。 たとえば、[System.Runtime パッケージ](https://www.nuget.org/packages/System.Runtime)には、System.Runtime.dll が含まれています。 
 
 粒度の細かい方法でパッケージを定義することには、次の利点があります。
 

@@ -38,6 +38,6 @@ ms.locfileid: "73128968"
 - <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - [スレッドの使用とスレッド処理](using-threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [非同期ファイル I/O](../io/asynchronous-file-i-o.md)
 - [並列プログラミング](../parallel-programming/index.md)
 - [タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)

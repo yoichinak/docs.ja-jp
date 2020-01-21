@@ -43,7 +43,7 @@ side-by-side 実行と .NET Framework によって、DLL の競合を防ぐ次�
   
 - 分離。  
   
-     .NET Framework を使用すると、分離して実行できるアプリケーションとコンポーネントを作成できます。 分離は、side-by-side 実行に欠くことのできない構成要素です。 分離には、使用しているリソースを認識し、アプリケーションまたはコンポーネントの複数のバージョンでこれを確実に共有する処理も含まれます。 また、分離には、バージョンに固有の方法でファイルを格納する方法も含まれます。 分離の詳細については、「[Guidelines for Creating Components for Side-by-Side Execution](guidelines-for-creating-components-for-side-by-side-execution.md)」(side-by-side 実行用のコンポーネントを作成するためのガイドライン) を参照してください。  
+     .NET Framework を使用すると、分離して実行できるアプリケーションとコンポーネントを作成できます。 分離は、side-by-side 実行に欠くことのできない構成要素です。 分離には、使用しているリソースを認識し、アプリケーションまたはコンポーネントの複数のバージョンでこれを確実に共有する処理も含まれます。 また、分離には、バージョンに固有の方法でファイルを格納する方法も含まれます。 分離の詳細については、「[side-by-side 実行用のコンポーネントを作成するためのガイドライン](guidelines-for-creating-components-for-side-by-side-execution.md)」 を参照してください。  
   
 ## <a name="version-compatibility"></a>バージョンの互換性  
 

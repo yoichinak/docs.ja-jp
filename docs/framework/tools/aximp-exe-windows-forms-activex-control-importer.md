@@ -62,7 +62,7 @@ aximp [options]{file.dll | file.ocx}
 > [!NOTE]
 > ActiveX コントロールのメンバーの名前が .NET Framework で定義された名前と一致する場合、Aximp.exe は、AxHost 派生クラスを作成するときにメンバー名の前に "Ctl" を付けます。 たとえば、ActiveX コントロールに "Layout" というメンバーが含まれている場合、.NET Framework 内で Layout イベントが定義されているため、メンバー名は、AxHost 派生クラスでは "CtlLayout" に変更されます。  
   
- これらの生成されたファイルは、[Ildasm.exe (IL Disassembler)](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
+ これらの生成されたファイルは、[Ildasm.exe (IL 逆アセンブラー)](ildasm-exe-il-disassembler.md) などのツールでチェックできます。  
   
  Aximp.exe を使用して ActiveX WebBrowser コントロール (shdocvw.dll) 用の .NET アセンブリを生成する方法はサポートされていません。  
   

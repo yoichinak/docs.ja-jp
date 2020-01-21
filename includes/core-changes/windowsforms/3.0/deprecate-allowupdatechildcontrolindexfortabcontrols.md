@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 1d01de4b978309e05a6036953f2a6909628a2480
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 7e76c32ddeb50eaf1ee93d7cf3cac7469187cc41
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643887"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937107"
 ---
-### <a name="switchsystemwindowsformsallowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls 互換性スイッチはサポートされていません
+### <a name="allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported"></a>AllowUpdateChildControlIndexForTabControls 互換性スイッチはサポートされていません
 
 `Switch.System.Windows.Forms.AllowUpdateChildControlIndexForTabControls` 互換性スイッチは、.NET Framework 4.6 以降のバージョンの Windows フォームではサポートされていますが、.NET Core 3.0 以降の Windows フォームではサポートされていません。
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643887"
 
 3.0 Preview 9
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 スイッチを削除します。 そのスイッチはサポートされておらず、代替機能はありません。
 
@@ -30,7 +30,7 @@ Windows フォーム
 
 #### <a name="affected-apis"></a>影響を受ける API
 
-- なし
+- None
 
 <!-- 
 

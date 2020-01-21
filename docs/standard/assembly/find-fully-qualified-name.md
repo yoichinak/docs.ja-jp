@@ -23,7 +23,7 @@ ms.locfileid: "74348198"
 
 .NET Core アセンブリの場合、およびグローバル アセンブリ キャッシュにない .NET Framework アセンブリの場合、完全修飾アセンブリ名をいくつかの方法で取得できます。
 
-- コードを使用しコンソールや変数に情報を出力したり、[Ildasm.exe (IL Disassembler)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用して完全修飾名を含むアセンブリのメタデータを調べたりできます。
+- コードを使用しコンソールや変数に情報を出力したり、[Ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md) を使用して完全修飾名を含むアセンブリのメタデータを調べたりできます。
 
 - アセンブリがアプリケーションによって既に読み込まれている場合、<xref:System.Reflection.Assembly.FullName%2A?displayProperty=nameWithType> プロパティの値を取得して、完全修飾名を取得できます。 アセンブリに定義されている <xref:System.Type> の <xref:System.Type.Assembly> プロパティを使用して、<xref:System.Reflection.Assembly> オブジェクトへの参照を取得できます。 具体的な例を次に示します。
 

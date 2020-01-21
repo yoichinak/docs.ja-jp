@@ -4,12 +4,12 @@ description: .NET Framework Windows フォーム アプリケーションを .NE
 author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
-ms.openlocfilehash: 959b506fe23691e160d7e88e0ae61cc71c1f3421
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567275"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116030"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows フォーム デスクトップ アプリを .NET Core に移植する方法
 
@@ -106,7 +106,7 @@ SolutionFolder
     └───MyFormsCore.csproj
 ```
 
-**SolutionFolder** ディレクトリから Visual Studio または .NET Core CLI を使用して、**MyFormsCore.csproj** プロジェクトを **MyApps.sln** に追加できます。
+**SolutionFolder** ディレクトリから Visual Studio または .NET Core CLI を使用して、**MyFormsCore.csproj** プロジェクトを **MyApps.sln** に追加します。
 
 ```dotnetcli
 dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
@@ -261,7 +261,7 @@ SolutionFolder
 
 ご覧のとおり、`<OutputType>` ノードが削除され、コンパイラでは、実行可能ファイルではなくライブラリが既定で生成されます。 `<AssemblyName>` と `<RootNamespace>` が変更されました。 具体的には、`<RootNamespace>` が、移植する Windows Forms 制御ライブラリの名前空間と一致するようになりました。 最後に、`<Compile>` と `<EmbeddedResource>` ノードが、移植する Windows Forms 制御ライブラリのフォルダーを指すように調整されました。
 
-次に、メインの .NET Core **MyFormsCore.csproj** プロジェクトに、新しい .NET Core Windows Forms 制御ライブラリへの参照を追加します。 **SolutionFolder** ディレクトリから、Visual Studio または .NET Core CLI のいずれかを使用して、参照を追加します。
+次に、メインの .NET Core **MyFormsCore.csproj** プロジェクトに、新しい .NET Core Windows フォーム コントロール ライブラリへの参照を追加します。 **SolutionFolder** ディレクトリから、Visual Studio または .NET Core CLI のいずれかを使用して、参照を追加します。
 
 ```dotnetcli
 dotnet add .\MyFormsAppCore\MyFormsCore.csproj reference .\MyFormsControlsCore\MyControlsCore.csproj
@@ -287,7 +287,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 ```xml
   <ItemGroup>
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Windows.Compatibility" Version="3.1.0" />
   </ItemGroup>
 ```
 
@@ -299,6 +299,7 @@ Visual Studio 2019 で Windows Forms デザイナーがサポートされるよ�
 
 ## <a name="next-steps"></a>次の手順
 
+- [.NET Framework から .NET Core への破壊的変更](../compatibility/fx-core.md)について学習する。
 - [Windows 互換機能パック][compat-pack]の詳細を確認する。
 - .NET Framework Windows Forms プロジェクトの .NET Core への[移植に関するビデオ](https://www.youtube.com/watch?v=upVQEUc_KwU)を視聴する。
 

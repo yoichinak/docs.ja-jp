@@ -360,7 +360,7 @@ ms.locfileid: "75348253"
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|列挙型の文字列形式を作成するために使用される標準書式指定文字列について説明します。|
 |[複合書式指定](../../../docs/standard/base-types/composite-formatting.md)|文字列に 1 つ以上の書式指定された値を埋め込む方法について説明します。 この文字列は、コンソールに表示したり、ストリームに書き込んだりできます。|
 |[書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)|特定の書式設定操作を行うための手順を説明するトピックの一覧を示します。|
-|[Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)|オブジェクトの文字列表現によって指定された値にオブジェクトを初期化する方法について説明します。 解析は書式設定の逆の操作です。|
+|[文字列の解析](../../../docs/standard/base-types/parsing-strings.md)|オブジェクトの文字列表現によって指定された値にオブジェクトを初期化する方法について説明します。 解析は書式設定の逆の操作です。|
 
 ## <a name="reference"></a>関連項目
 

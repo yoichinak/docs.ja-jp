@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: 5c1dc42a451d2c6a82e2c2429115db023c610334
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 5aca2b8b3ca6572194692888eae3c5614245b481
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74643905"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937039"
 ---
-### <a name="switchsystemwindowsformsuselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported"></a>Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue 互換性スイッチはサポートされていません
+### <a name="uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported"></a>UseLegacyContextMenuStripSourceControlValue 互換性スイッチはサポートされていません
 
 .NET Framework 4.7.2 で導入された `Switch.System.Windows.Forms.UseLegacyContextMenuStripSourceControlValue` 互換スイッチは、.NET Core 3.0 上の Windows フォームではサポートされていません。
 
@@ -20,7 +20,7 @@ ms.locfileid: "74643905"
 
 3.0 Preview 9
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 スイッチを削除します。 そのスイッチはサポートされておらず、代替機能はありません。
 

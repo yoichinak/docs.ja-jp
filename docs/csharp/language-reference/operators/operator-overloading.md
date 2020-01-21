@@ -29,7 +29,7 @@ ms.locfileid: "75937193"
 
 `int` から `Fraction` への[暗黙的な変換を定義する](user-defined-conversion-operators.md)ことで、前の例を拡張できます。 その場合、オーバーロードされた演算子はこれら 2 つの型の引数をサポートします。 つまり、整数を分数に足し、結果として分数を取得できるようになります。
 
-また、`operator` キーワードを使用してカスタムの型変換を定義することもできます。 詳細については、「[User-defined conversion operators](user-defined-conversion-operators.md)」(ユーザー定義の変換演算子) を参照してください。
+また、`operator` キーワードを使用してカスタムの型変換を定義することもできます。 詳細については、「[ユーザー定義の変換演算子](user-defined-conversion-operators.md)」 に関するページを参照してください。
 
 ## <a name="overloadable-operators"></a>オーバーロード可能な演算子
 

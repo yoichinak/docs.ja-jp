@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ff156afb3da4b921517fd841c5de2295265a8d7b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: 9aff20e35469f9e786f0f790fda4ffaa04e76e64
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567748"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116423"
 ---
 ### <a name="default-value-of-httprequestmessageversion-changed-to-11"></a>HttpRequestMessage.Version の既定値が 1.1 に変更された
 
@@ -20,7 +20,7 @@ ms.locfileid: "74567748"
 
 .NET Core 3.0 以降では、<xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> プロパティによって返される既定のバージョン番号は再び 1.1 になりました。
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 既定値 2.0 を返す <xref:System.Net.Http.HttpRequestMessage.Version?displayProperty=fullName> プロパティに依存している場合は、コードを更新します。
 
@@ -38,5 +38,4 @@ a def
 
 - `P:System.Net.Http.HttpRequestMessage.Version`
 
--- >
-
+-->

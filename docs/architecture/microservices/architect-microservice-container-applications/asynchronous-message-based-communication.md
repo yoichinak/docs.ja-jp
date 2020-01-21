@@ -79,7 +79,7 @@ ms.locfileid: "73454234"
 
 - [送信トレイ パターン](https://www.kamilgrzybek.com/design/the-outbox-pattern/)を使用します。これは、イベントを作成してパブリッシュするイベントクリエーター コンポーネントの基盤となる、メッセージ キューとしてのトランザクション データベース テーブルです。
 
-非同期通信を使用する際に考慮する必要がある他のトピックは、メッセージのべき等性とメッセージの重複除去です。 これらのトピックについては、このガイドで後から説明する「[Implementing event-based communication between microservices (integration events)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md)」(マイクロサービス (統合イベント) 間でのイベントベース通信の実装) をご覧ください。
+非同期通信を使用する際に考慮する必要がある他のトピックは、メッセージのべき等性とメッセージの重複除去です。 これらのトピックについては、このガイドで後から説明する「[マイクロサービス間でイベント ベースの通信を実装する (統合イベント)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md)」をご覧ください。
 
 ## <a name="additional-resources"></a>その他の技術情報
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c676a185ff4a7a825acb059bf0a5842ca3922fc
-ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
+ms.openlocfilehash: b60f74947a537c602c7bd1a89587b76bd847c82a
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72394014"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937264"
 ---
 ### <a name="target-framework-net-framework-support-dropped"></a>ターゲット フレームワーク: .NET Framework のサポートが廃止されました
 
@@ -20,7 +20,7 @@ ASP.NET Core 3.0 以降、.NET Framework はサポート対象外のターゲッ
 
 `Microsoft.Extensions` パッケージ (ログ記録、依存関係の挿入、構成など) と Entity Framework Core は影響を受けません。 .NET Standard はそれらで引き続きサポートされます。
 
-この変更の目的の詳細については、[元のブログ記事](https://blogs.msdn.microsoft.com/webdev/2018/10/29/a-first-look-at-changes-coming-in-asp-net-core-3-0)をご覧ください。
+この変更の目的の詳細については、[元のブログ記事](https://devblogs.microsoft.com/aspnet/a-first-look-at-changes-coming-in-asp-net-core-3-0/)をご覧ください。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
@@ -34,7 +34,7 @@ ASP.NET Core アプリは .NET Core または .NET Framework で実行できま�
 
 ASP.NET Core アプリは .NET Core でのみ実行できます。
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 次のいずれかのアクションを実行します。
 
@@ -47,7 +47,7 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>影響を受ける API
 
-なし
+None
 
 <!-- 
 

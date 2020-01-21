@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 10/22/2019
-ms.openlocfilehash: 8c2d586a444412abd67198ad7f295e81cb3101fb
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: eb1815f965e86a6f8f709b32f84f879eb03de447
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567335"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115797"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -74,7 +74,7 @@ Visual Studio を使用している場合、Visual Studio 2017 では **.NET Sta
 </PropertyGroup>
 ```
 
-または
+\- または -
 
 ```dotnetcli
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
@@ -497,9 +497,13 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 
 ### <a name="fast-built-in-json-support"></a>高速な組み込み JSON のサポート
 
-.NET ユーザーは、[**Json.NET**](https://www.newtonsoft.com/json) や他のよく使われている JSON ライブラリに大きく依存しています。これは今後も推奨されます。 **Json.NET** では .NET の文字列が基本のデータ型 (内部的には UTF-16) として使用されます。
+.NET ユーザーは、[Newtonsoft.Json](https://www.newtonsoft.com/json) や他のよく使われている JSON ライブラリに大きく依存しています。これは今後も推奨されます。 `Newtonsoft.Json` では .NET の文字列が基本のデータ型 (内部的には UTF-16) として使用されます。
 
-新しい組み込みの JSON サポートは、高パフォーマンス、低割り当てで、`Span<byte>` に基づいています。 <xref:System.Text.Json>名前空間と種類の詳細については、「[.NET での JSON のシリアル化 - 概要](../../standard/serialization/system-text-json-overview.md)」を参照してください。 JSON シリアル化の一般的なシナリオに関するチュートリアルについては、「[.NET で JSON をシリアル化および逆シリアル化する方法](../../standard/serialization/system-text-json-how-to.md)」を参照してください。参照してください。
+新しい組み込みの JSON サポートは、高パフォーマンス、低割り当てで、UTF-8 でエンコードされた JSON テキストを使用します。 <xref:System.Text.Json> 名前空間と種類の詳細については、次の記事をご覧ください。
+
+* [.NET での JSON のシリアル化 - 概要](../../standard/serialization/system-text-json-overview.md)
+* [.NET で JSON をシリアル化および逆シリアル化する方法](../../standard/serialization/system-text-json-how-to.md)。
+* [Newtonsoft. Json から System.Text.Json に移行する方法](../../standard/serialization/system-text-json-migrate-from-newtonsoft-how-to.md)
 
 ### <a name="http2-support"></a>HTTP/2 のサポート
 
@@ -520,4 +524,4 @@ System.Console.WriteLine($"RuntimeInformation.FrameworkDescription: {System.Runt
 ## <a name="next-steps"></a>次の手順
 
 - [バージョン 2.2 から 3.0 への破壊的変更を確認する。](../compatibility/2.2-3.0.md)
-- [Windows フォーム アプリ用の .NET Framework と .NET Core 3.0 の間の破壊的変更を確認します。](../porting/winforms-breaking-changes.md)
+- [Windows フォーム アプリ用の .NET Core 3.0 における破壊的変更を確認します。](../compatibility/winforms.md#net-core-30)

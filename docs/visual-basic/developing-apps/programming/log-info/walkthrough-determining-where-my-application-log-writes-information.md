@@ -55,7 +55,7 @@ ms.locfileid: "74353606"
 
     - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> リスナーは、導入部で説明したように、ファイル ログに書き込みます。
 
-    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> リスナーは、`initializeData` パラメーターで指定された、コンピューターのイベント ログに情報を書き込みます。 イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー**を使用できます。 詳細については、「 [ETW Events in the .NET Framework](../../../../framework/performance/etw-events.md)」を参照してください。
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> リスナーは、`initializeData` パラメーターで指定された、コンピューターのイベント ログに情報を書き込みます。 イベント ログを参照するには、 **サーバー エクスプローラー** または **Windows イベント ビューアー**を使用できます。 詳細については、「 [.NET Framework の ETW イベント](../../../../framework/performance/etw-events.md)」を参照してください。
 
     - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> リスナーおよび <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> リスナーは、`initializeData` パラメーターで指定されたファイルに書き込みます。
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d888aba597cb6981828ca67fba04912cbcf7935f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: d8cc506d60f3c24087ebde8ead345656fea0f484
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74567426"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76116339"
 ---
 ### <a name="types-in-microsoftvisualbasicapplicationservices-namespace-not-available"></a>Microsoft.VisualBasic.ApplicationServices 名前空間の型は使用できません
 
@@ -20,7 +20,7 @@ ms.locfileid: "74567426"
 
 これらの型は、今後のリリースでの不要なアセンブリの依存関係や破壊的変更を回避するために削除されました。
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 コードが <xref:Microsoft.VisualBasic.ApplicationServices> 型とそのメンバーの使用に依存している場合は、.NET クラス ライブラリ内の対応する型またはメンバーを使用できる可能性があります。 たとえば、一部の <xref:System.Environment?displayProperty=nameWithType> および <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> メンバーには、<xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType> クラスのプロパティと同等の機能が用意されています。
 
@@ -38,5 +38,4 @@ Visual Basic
 
 - `N:Microsoft.VisualBasic.ApplicationServices`
 
--- >
-
+-->
