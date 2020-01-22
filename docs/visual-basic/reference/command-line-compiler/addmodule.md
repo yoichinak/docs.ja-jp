@@ -47,7 +47,7 @@ ms.locfileid: "72524482"
   
  [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   
- @No__t_0 を実行すると、`802` が出力されます。  
+ `t1` を実行すると、`802` が出力されます。  
   
 ## <a name="see-also"></a>関連項目
 
