@@ -26,15 +26,16 @@ Visual Basic のプロジェクトは、1つまたは複数の個別のソース
 
 Visual Basic は、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする代わりに、コマンドラインコンパイラを提供します。 コマンドラインコンパイラは、システムメモリまたは記憶域スペースが制限されているコンピューターを使用したり、書き込みを行ったりする場合など、IDE のすべての機能を必要としない場合に適しています。
 
-Visual Studio IDE 内からソースファイルをコンパイルするには、[**ビルド**] メニューの [**ビルド**] をクリックします。
+Visual Studio IDE 内からソースファイルをコンパイルするには、 **[ビルド]** メニューの **[ビルド]** をクリックします。
 
 > [!TIP]
-> Visual Studio IDE を使用してプロジェクトファイルをビルドする場合、関連付けられている **vbc.exe** コマンドとそのスイッチに関する情報を出力ウィンドウに表示できます。 この情報を表示するには、[\[オプション\] ダイアログ ボックス: \[プロジェクトおよびソリューション\] > \[ビルド/実行\]](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)] の順に開き、 **MSBuild プロジェクトのビルド出力の詳細** レベルを [**標準**] または、高レベルの詳細に設定します。 詳細については、「[方法: ビルド ログ ファイルを表示、保存、および構成する](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)」を参照してください。
+> Visual Studio IDE を使用してプロジェクトファイルをビルドする場合、関連付けられている **vbc.exe** コマンドとそのスイッチに関する情報を出力ウィンドウに表示できます。 この情報を表示するには、[[オプション] ダイアログボックス、[プロジェクトとソリューション]、[ビルドと実行](/visualstudio/ide/reference/options-dialog-box-projects-and-solutions-build-and-run)] の順に開き、 **MSBuild プロジェクトのビルド出力の詳細**レベルを **[標準]** または、高レベルの詳細に設定します。 詳細については、「[方法 :ビルドログファイルを表示、保存、および構成します](/visualstudio/ide/how-to-view-save-and-configure-build-log-files)。
+
 MSBuild を使用してコマンド プロンプトで、プロジェクト (.vbproj) ファイルをコンパイルすることができます。 詳細については、次を参照してください。[コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)と[チュートリアル:MSBuild の使用](/visualstudio/msbuild/walkthrough-using-msbuild)に関するページを参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[方法: コマンド ライン コンパイラを起動する](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md)\
+[方法: コマンド ライン コンパイラを起動する](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
 MS-DOS プロンプトまたは特定のサブディレクトリからコマンドラインコンパイラを呼び出す方法について説明します。
 
 [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
