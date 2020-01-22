@@ -70,7 +70,7 @@ Await AsyncMethodThatReturnsTask()
 
 障害の発生した状態にある単一のタスクで、複数の例外が反映される場合があります。  たとえば、タスクは <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> の呼び出しの結果になることがあります。 このようなタスクを待機すると、await 操作によって 1 つの例外のみが再スローされます。 ただし、どの例外が再スローされるかを予測することはできません。
 
-非同期メソッドのエラー処理の例については、次を参照してください[を再試行してください...キャッチしてください.Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)です。
+非同期メソッドのエラー処理の例については、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」を参照してください。
 
 ## <a name="example"></a>使用例
 

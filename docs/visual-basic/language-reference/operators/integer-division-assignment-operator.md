@@ -35,7 +35,7 @@ variableorproperty \= expression
  必須。 任意の数式。  
   
 ## <a name="remarks"></a>コメント  
- `\=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) にすることはできません。  
+ `\=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) にすることはできません。  
   
  `\=` 演算子は、変数またはプロパティの値を右側の値で除算し、整数の結果をその左側の変数またはプロパティに代入します。  
   
