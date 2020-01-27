@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : カスタム Windows フォーム コントロールのデザイン時のデバッグ'
+title: デザイン時にカスタムコントロールをデバッグする
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -18,12 +18,12 @@ ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: a8572c1e70e36faf3a179de7a69e88e9cf1e781b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d9e292a1219c24571bcb35db2fe357b0197c8812
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460620"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740184"
 ---
 # <a name="walkthrough-debug-custom-windows-forms-controls-at-design-time"></a>チュートリアル: デザイン時にカスタム Windows フォームコントロールをデバッグする
 
@@ -139,7 +139,7 @@ Visual Studio で、Windows アプリケーションプロジェクトを作成�
 
 6. デバッグを停止するには、Visual Studio のホストされたインスタンスを終了するか、デバッグインスタンスで **[デバッグの停止]** ボタンを選択します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 デザイン時にカスタムコントロールをデバッグできるようになったので、Visual Studio IDE とのコントロールの相互作用を拡張する多くの可能性があります。
 

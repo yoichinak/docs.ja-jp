@@ -1,5 +1,5 @@
 ---
-title: Windows フォームでの高 DPI サポート
+title: 高 DPI のサポート
 ms.date: 05/16/2017
 helpviewer_keywords:
 - High DPI in Windows Forms
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Windows Forms layout
 - Windows Forms dynamic resizing
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
-ms.openlocfilehash: f9183b15da24f70b6fceaa90f718c5af93a3cdda
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a5c3125475c2de2cf83a3d97e356b26c0acdde99
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139075"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741889"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows フォームでの高 DPI サポート
 
-.NET Framework 4.7 以降の Windows フォームには、一般的な高 DPI および動的 DPI シナリオの機能強化が含まれています。 次の設定があります。
+.NET Framework 4.7 以降、Windows フォームには、一般的な高 DPI や動的な DPI の状況に応じた機能強化が含まれています。 次の設定があります。
 
-- <xref:System.Windows.Forms.MonthCalendar> コントロールや <xref:System.Windows.Forms.CheckedListBox> コントロールなど、多数の Windows フォームコントロールのスケーリングとレイアウトの機能強化。
+- <xref:System.Windows.Forms.MonthCalendar> コントロールや <xref:System.Windows.Forms.CheckedListBox> コントロールなど、多数の Windows フォーム コントロールのスケーリングとレイアウトの改善。
 
-- シングルパススケーリング。  .NET Framework 4.6 以前のバージョンでは、複数のパスによってスケーリングが実行され、いくつかのコントロールが必要以上に拡大縮小されました。
+- 単一パスのスケーリング。  .NET Framework 4.6 以前のバージョンでは、スケーリングは複数パスにより実行され、いくつかのコントロールが必要以上にスケーリングされていました。
 
-- Windows フォームアプリケーションの起動後にユーザーが DPI またはスケールファクターを変更する動的な DPI シナリオのサポート。
+- Windows フォーム アプリケーション起動後に、ユーザーにより DPI やスケールファクターが変更される、動的 DPI の状況に対応。
 
-.NET Framework 4.7 以降の .NET Framework のバージョンでは、強化された高 DPI サポートはオプトイン機能です。 アプリケーションを利用するように構成する必要があります。
+.NET Framework 4.7 以降のバージョンでは、高 DPI 対応の強化はオプトインの機能です。 この機能を活用するには、アプリケーションの設定が必要です。
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>高 DPI サポート用の Windows フォームアプリの構成
 
@@ -60,7 +60,7 @@ ms.locfileid: "73139075"
 
 - 静的 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> メソッドを呼び出します。
 
-  これは、アプリケーションのエントリポイントの最初のメソッド呼び出しである必要があります。 (例:
+  これは、アプリケーションのエントリポイントの最初のメソッド呼び出しである必要があります。 例:
 
   ```csharp
   static void Main()

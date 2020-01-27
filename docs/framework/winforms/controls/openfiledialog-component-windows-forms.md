@@ -1,19 +1,19 @@
 ---
-title: OpenFileDialog コンポーネント (Windows フォーム)
+title: OpenFileDialog コンポーネント
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: 0e13417e43e9cda79e9e253135e564990361dcf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936345"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744365"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog コンポーネント (Windows フォーム)
-Windows フォームの <xref:System.Windows.Forms.OpenFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは同じ**ファイルを開く** ダイアログ ボックスが、Windows オペレーティング システムによって公開されています。 これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。  
+Windows フォームの <xref:System.Windows.Forms.OpenFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは、Windows オペレーティングシステムによって公開されているのと同じ **[ファイルを開く**] ダイアログボックスです。 これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [OpenFileDialog コンポーネントの概要](openfiledialog-component-overview-windows-forms.md)  
@@ -22,11 +22,11 @@ Windows フォームの <xref:System.Windows.Forms.OpenFileDialog> コンポー�
  [方法: OpenFileDialog コンポーネントを使用してファイルを開く](how-to-open-files-using-the-openfiledialog-component.md)  
  <xref:System.Windows.Forms.OpenFileDialog> コンポーネントのインスタンスを使用して実行時にファイルを開く方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>参照先  
  <xref:System.Windows.Forms.OpenFileDialog>  
  <xref:System.Windows.Forms.OpenFileDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)  
  ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。  
   

@@ -43,8 +43,7 @@ ms.locfileid: "74344043"
 
 - **パフォーマンス。** `Decimal` データ型は、すべての数値型の中で最も低速なデータ型です。 データ型を選択する前に、精度の重要性をパフォーマンスと比較する必要があります。
 
-- **拡大変換。** `Decimal` データ型は、`Single` または `Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、これらの型のいずれかに `Decimal` を変換できます。
-
+- **拡大変換。  **   `Decimal` データ型は、`Single` または `Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、これらの型のいずれかに `Decimal` を変換できます。
 
 - **後続のゼロ。** Visual Basic は、末尾のゼロを `Decimal` リテラルに格納しません。 ただし、`Decimal` 変数は、計算を取得した後続のゼロを保持します。 これを次の例に示します。
 
@@ -64,8 +63,7 @@ ms.locfileid: "74344043"
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **型文字。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 `Decimal` に変換されます。
-
+- **文字を入力します。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 `Decimal` に変換されます。
 
 - **Framework のデータ型。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。
 

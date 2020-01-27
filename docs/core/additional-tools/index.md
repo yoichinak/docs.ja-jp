@@ -4,12 +4,12 @@ description: .NET Core 機能をサポートおよび拡張する、インスト
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 1f066523a24d4e1fd7aaaa5a19e8d6c9d72d35af
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714535"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740708"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core の追加ツールの概要
 
@@ -17,7 +17,7 @@ ms.locfileid: "75714535"
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core アンインストール ツール](uninstall-tool.md)
 
-[.NET Core アンインストール ツール](https://dotnet.microsoft.com/download/dotnet-core/uninstall-tool) (`dotnet-core-uninstall`) を使うと、システム上の .NET Core SDK とランタイムをクリーンアップし、指定したバージョンのみを残すことができます。 一連のオプションを使用して、アンインストールするバージョンを指定できます。
+[.NET Core アンインストール ツール](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) を使うと、システム上の .NET Core SDK とランタイムをクリーンアップし、指定したバージョンのみを残すことができます。 一連のオプションを使用して、アンインストールするバージョンを指定できます。
 
 ## <a name="wcf-web-service-reference-toolwcf-web-service-reference-guidemd"></a>[WCF Web Service Reference ツール](wcf-web-service-reference-guide.md)
 

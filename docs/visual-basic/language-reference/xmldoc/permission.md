@@ -1,5 +1,5 @@
 ---
-title: <permission> (Visual Basic)
+title: <permission>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <permission> XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352264"
 ---
-# <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
+# <a name="permission-visual-basic"></a>\<のアクセス許可 > (Visual Basic)
 メンバーに必要な権限を指定します。  
   
 ## <a name="syntax"></a>構文  

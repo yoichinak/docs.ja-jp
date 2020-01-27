@@ -2,12 +2,12 @@
 title: メッセージ相関
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: adabf02cb8ec232a887bd4720ea9552a7d870fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9ded0886920f9f0b3d2f9b441061253b42a1c567
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348332"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747172"
 ---
 # <a name="message-correlation"></a>メッセージ相関
 
@@ -316,4 +316,4 @@ static void DisplayOrderStatus()
 ## <a name="see-also"></a>関連項目
 
 - [WCF でのキュー](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [メッセージキュー](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [メッセージキュー](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

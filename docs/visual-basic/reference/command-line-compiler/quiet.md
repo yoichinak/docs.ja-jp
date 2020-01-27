@@ -49,14 +49,14 @@ C:\projects\vb2.vb(3) : error BC30451: 'x' is not declared. It may be inaccessib
         ~
 ```
 
-@No__t-0 を使用してコンパイルされた場合、コンパイラは次のものだけを出力します。
+`-quiet` を使用してコンパイルされた場合、コンパイラは次のものだけを出力します。
 
 ```console
 E:\test\t2.vb(3) : error BC30451: Name 'x' is not declared.
 ```
 
 > [!NOTE]
-> @No__t-0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。
+> `-quiet` オプションは Visual Studio の開発環境内からは利用できません。このオプションを利用できるのは、コマンド ラインからコンパイルするときだけです。
 
 ## <a name="example"></a>例
 

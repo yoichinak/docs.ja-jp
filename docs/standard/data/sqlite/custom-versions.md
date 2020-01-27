@@ -1,19 +1,19 @@
 ---
-title: カスタム SQLite バージョン
+title: カスタム SQLite のバージョン
 ms.date: 12/13/2019
 description: ネイティブ SQLite ライブラリのカスタムバージョンを使用する方法について説明します。
-ms.openlocfilehash: 8a2646138ea9dbecf412a2e8e0e347e2d71a5b0b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: dd27278c1dbe17b12e5067d04d19043bf259b1e8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450388"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746995"
 ---
-# <a name="custom-sqlite-versions"></a>カスタム SQLite バージョン
+# <a name="custom-sqlite-versions"></a>カスタム SQLite のバージョン
 
 SQLitePCLRaw は、上に構築されています。 バンドルを使用するか、SQLitePCLRaw プロバイダーを構成することによって、ネイティブ SQLite ライブラリのカスタムバージョンを使用できます。
 
-## <a name="bundles"></a>バンドル
+## <a name="bundles"></a>同梱
 
 SQLitePCLRaw にはバンドルパッケージが用意されているため、さまざまなプラットフォーム間で適切な依存関係を簡単に取り込むことができます。
 
@@ -21,9 +21,9 @@ SQLitePCLRaw にはバンドルパッケージが用意されているため、�
 
 別のバンドルを使用するには、使用するバンドルパッケージと共に `Microsoft.Data.Sqlite.Core` パッケージをインストールします。 バンドルは、自動的に Microsoft. Data. Sqlite によって初期化されます。
 
-| バンドル | 説明 |
+| ・ | 説明 |
 | --- | --- |
-| Bundle_e_sqlite3 SQLitePCLRaw | すべてのプラットフォームで SQLite の一貫性のあるバージョンを提供します。 FTS4、FTS5、JSON1 が含まれています。 | R * ツリー拡張。 これは既定です。 |
+| Bundle_e_sqlite3 SQLitePCLRaw | すべてのプラットフォームで SQLite の一貫性のあるバージョンを提供します。 には、FTS4、FTS5、JSON1、および R * ツリー拡張が含まれています。 これは既定です。 |
 | Bundle_green SQLitePCLRaw | Bundle_e_sqlite3 と同じですが、システム SQLite ライブラリを使用する iOS を除きます。 |
 | Bundle_zetetic SQLitePCLRaw | では、Zetetic (含まれていません) からの公式の SQLCipher ビルドが使用されます。 |
 | Bundle_winsqlite3 SQLitePCLRaw | Windows 10 のシステム SQLite ライブラリである winsqlite3 を使用します。 |

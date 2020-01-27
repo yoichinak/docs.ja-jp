@@ -1,21 +1,21 @@
 ---
-title: WPF での Win32 コンテンツのホスト
+title: Win32 コンテンツのホスト
 ms.date: 03/30/2017
 helpviewer_keywords:
 - interoperability [WPF], tutorials
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: a9d9de1f35375e48981f895d096e46fd501ef8ec
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: b3113d9f3146e1590363dc9db6f751a429dda74b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740376"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747014"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF での Win32 コンテンツのホスト
 
-## <a name="prerequisites"></a>[前提条件]
+## <a name="prerequisites"></a>Prerequisites
 
 「 [WPF と Win32 の相互運用」を](wpf-and-win32-interoperation.md)参照してください。
 

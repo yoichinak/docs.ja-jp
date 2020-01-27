@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : スナップ線を使用した Windows フォーム上のコントロールの配置'
+title: スナップ線を使用したコントロールの配置
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 04bef7162662f4fbefdaa151de13468d88530914
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460646"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740220"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>チュートリアル: スナップ線を使用した Windows フォームでのコントロールの配置
 
@@ -29,7 +29,7 @@ ms.locfileid: "73460646"
 
 1. Visual Studio で、"SnaplineExample" という名前の Windows ベースのアプリケーションプロジェクトを作成します。
 
-2. フォームデザイナーでフォームを選択します。
+2. フォーム デザイナーでフォームを選びます。
 
 ## <a name="space-and-align-controls"></a>[スペースとコントロールの整列]
 
@@ -90,7 +90,7 @@ ms.locfileid: "73460646"
 
 ## <a name="use-snaplines-to-place-a-control-by-outlining-its-size"></a>スナップ線を使用して、サイズをアウトラインし、コントロールを配置する
 
-1. **[ツールボックス]** で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
+1. **ツールボックス**で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
 
 2. フォームのデザイン画面上にマウスポインターを移動します。 ポインターが <xref:System.Windows.Forms.Button> コントロール アイコンが付いた十字カーソルに変わることにご注意ください。 また、<xref:System.Windows.Forms.Button> コントロールに対して配置された位置を示すために表示されるスナップ線もメモします。
 
@@ -180,7 +180,7 @@ ms.locfileid: "73460646"
 
 4. フォーム上のコントロールを選択し、他のコントロールの周囲に移動します。 スナップ線が表示されないことに注意してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 スナップ線は、フォーム上にコントロールを配置するための直感的な手段を提供します。 さらに詳しく調べるための推奨事項を次に示します。
 
@@ -193,4 +193,4 @@ ms.locfileid: "73460646"
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
 - [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: Padding、Margin、および AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)
+- [チュートリアル : Padding、Margin、および AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)

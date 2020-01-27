@@ -1,16 +1,16 @@
 ---
-title: スタイルでアニメーション化する方法 (WPF)
+title: スタイルでアニメーション化する方法
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: 617d41ca1c97463bf1c61c0d1e2728756fd8f1fb
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 0b29648bf15f0046adcdee610f9565f7deb24972
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459245"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744879"
 ---
 # <a name="how-to-animate-in-a-style"></a>スタイルでアニメーション化する方法
 
@@ -18,7 +18,7 @@ ms.locfileid: "73459245"
 
 次の例では、いくつかのアニメーションがスタイル内で定義され、<xref:System.Windows.Controls.Button>に適用されます。 ユーザーがボタンの上にマウスを移動すると、不透明から部分的に半透明にフェードし、もう一度繰り返し戻ることができます。 ユーザーがマウスポインターをボタンの外に移動すると、完全に不透明になります。 ボタンがクリックされると、背景色がオレンジ色から白に変わり、もう一度戻るようになります。 ボタンの描画に使用される <xref:System.Windows.Media.SolidColorBrush> を直接対象にすることはできません。そのため、ボタンの <xref:System.Windows.Controls.Control.Background%2A> プロパティから、このボタンにアクセスします。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 [!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 

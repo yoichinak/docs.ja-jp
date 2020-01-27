@@ -4,16 +4,16 @@ description: C# の Null 許容値型とその使用方法について説明し�
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 3b9a29e75fe894f7d8a0751feefa9eb0a39baa2c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964325"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740948"
 ---
 # <a name="nullable-value-types-c-reference"></a>null 許容値型 (C# リファレンス)
 
-null 許容値型 `T?` は、基になる[値型](../keywords/value-types.md) `T` のすべての値と、追加の [null](../keywords/null.md) 値を表します。 たとえば、`bool?` 変数には、`true`、`false`、`null` の 3 つの値のいずれかを割り当てることができます。 基になる値型 `T` を null 許容値型にすることはできません。
+null 許容値型 `T?` は、基になる[値型](value-types.md) `T` のすべての値と、追加の [null](../keywords/null.md) 値を表します。 たとえば、`bool?` 変数には、`true`、`false`、`null` の 3 つの値のいずれかを割り当てることができます。 基になる値型 `T` を null 許容値型にすることはできません。
 
 > [!NOTE]
 > C# 8.0 で、Null 許容参照型機能が導入されました。 詳細については、「[null 許容参照型](../../nullable-references.md)」を参照してください。 null 許容値型は、C# 2 から使用できます。
