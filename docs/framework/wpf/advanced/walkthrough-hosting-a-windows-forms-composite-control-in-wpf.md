@@ -1,5 +1,6 @@
 ---
-title: 'チュートリアル: WPF での Windows フォーム複合コントロールのホスト'
+title: WPF で Windows フォーム複合コントロールをホストする
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: e42737b9fccd3b91dee2c446dfb0653e57f9dd1b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 16c09b4bb393fa830412385b4b405dd1fae9878b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197951"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744998"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>チュートリアル: WPF での Windows フォーム複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コードに多大な投資をしている場合は、最初から書き換えるのではなく、少なくともそのコードの一部を [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションで再利用する方が効率的な場合があります。 最も一般的なシナリオは、既存の Windows フォームコントロールがある場合です。 場合によっては、これらのコントロールのソースコードにアクセスできないこともあります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、このようなコントロールを [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでホストするための簡単な手順が用意されています。 たとえば、特殊な <xref:System.Windows.Forms.DataGridView> コントロールをホストしているときに、ほとんどのプログラミングで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を使用できます。  
@@ -30,7 +31,7 @@ ms.locfileid: "73197951"
   
  このチュートリアルで示すタスクの完全なコード一覧については、「 [WPF での Windows フォーム複合コントロールのホスト](https://go.microsoft.com/fwlink/?LinkID=159999)」のサンプルを参照してください。  
   
-## <a name="prerequisites"></a>必要条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 このチュートリアルを完了するには Visual Studio が必要です。
   
@@ -58,7 +59,7 @@ ms.locfileid: "73197951"
   
  プロジェクトは、以下のシステム DLL を参照している必要があります。 これらの Dll のいずれかが既定で含まれていない場合は、プロジェクトに追加します。  
   
-- システム  
+- System  
   
 - System.Data  
   

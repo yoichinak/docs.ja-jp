@@ -21,7 +21,7 @@ ms.locfileid: "75636082"
   
  XML リテラルに Visual Basic 式を埋め込むことができます。 実行時に、アプリケーションは、埋め込み式の値を組み込んで、各リテラルの [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成します。 これにより、XML リテラル内に動的コンテンツを指定できます。 詳細については、「[XML での埋め込み式](../../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。  
   
- Xml リテラル構文と XML 1.0 構文の違いの詳細については、「[XML リテラルと XML 1.0 仕様 (Visual Basic)](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
+ Xml リテラル構文と XML 1.0 構文の違いの詳細については、「 [Xml リテラルと xml 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
   
 ## <a name="simple-literals"></a>単純なリテラル  
  Visual Basic コードに [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] オブジェクトを作成するには、有効な XML を入力するか、貼り付けます。 XML 要素リテラルは <xref:System.Xml.Linq.XElement> オブジェクトを返します。 詳細については、「[XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)」と「[XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。 次の例では、複数の子要素を持つ XML 要素を作成します。  
@@ -33,7 +33,7 @@ ms.locfileid: "75636082"
  [!code-vb[VbXMLSamples#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#6)]  
   
 > [!NOTE]
-> Visual Basic の XML リテラル構文は、XML 1.0 仕様の構文と同一ではありません。 詳細については、「XML リテラルと XML 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
+> Visual Basic の XML リテラル構文は、XML 1.0 仕様の構文と同一ではありません。 詳細については、「 [Xml リテラル」と「xml 1.0 仕様](../../../../visual-basic/programming-guide/language-features/xml/xml-literals-and-the-xml-1-0-specification.md)」を参照してください。  
   
 ## <a name="line-continuation"></a>行継続  
  XML リテラルは、行連結文字を使用せずに、複数の行にまたがることができます (スペース-アンダースコア-入力シーケンス)。 これにより、コード内の XML リテラルを XML ドキュメントと比較しやすくなります。  

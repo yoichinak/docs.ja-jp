@@ -1,5 +1,6 @@
 ---
-title: 'チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成'
+title: Windows フォームでの新しい WPF コンテンツの作成
+titleSuffix: ''
 ms.date: 08/18/2018
 helpviewer_keywords:
 - interoperability [Windows Forms], WPF and Windows Forms
@@ -11,24 +12,24 @@ ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 395543a3141af66038cabef9a3c9fed40a36b47e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 69a0598b05d1b2bff84b203317d6d5a166ce109d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460657"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746391"
 ---
 # <a name="walkthrough-create-new-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成
 
 この記事では、Windows フォームベースのアプリケーションで使用するための Windows Presentation Foundation (WPF) コントロールを作成する方法について説明します。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
 ## <a name="create-the-project"></a>プロジェクトの作成
 
-Visual Studio を開き、新しい**Windows フォーム App (.NET Framework)** プロジェクトを Visual Basic または visual C# `HostingWpf`名前付きで作成します。
+Visual Studio を開き、`HostingWpf` という新しい **Windows フォーム アプリ (.NET Framework)** プロジェクトを Visual Basic または Visual C# で作成します。
 
 > [!NOTE]
 > WPF コンテンツをホストする場合は、C# プロジェクトと Visual Basic プロジェクトのみがサポートされます。
@@ -65,7 +66,7 @@ Visual Studio を開き、新しい**Windows フォーム App (.NET Framework)**
    > [!NOTE]
    > 一般的には、もう少し高度な WPF コンテンツをホストしてください。 ここでは、説明する目的でのみ <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> コントロールを使用しています。
 
-6. プロジェクトをビルドします。
+6. プロジェクトをビルドする。
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>WPF コントロールを Windows フォームに追加する
 
@@ -91,7 +92,7 @@ WPF コントロールを Windows フォームに追加するには、次のよ�
 
 5. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 Windows フォームと WPF は異なるテクノロジですが、密接に相互運用するよう設計されています。 アプリケーションの外観と動作を充実させるには、次の操作を実行します。
 
