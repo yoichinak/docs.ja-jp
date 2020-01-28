@@ -1,17 +1,17 @@
 ---
-title: WPF のツリー
+title: ツリー
 ms.date: 03/30/2017
 helpviewer_keywords:
 - logical tree [WPF]
 - element tree [WPF]
 - visual tree [WPF]
 ms.assetid: e83f25e5-d66b-4fc7-92d2-50130c9a6649
-ms.openlocfilehash: 0dfae3a601a07c68b2dfe029f061dcf838e98af7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: d4b17c34fb33f73ca1c173bebc8f94ddac5b1942
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459501"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746567"
 ---
 # <a name="trees-in-wpf"></a>WPF のツリー
 多くのテクノロジでは、要素とコンポーネントはツリー構造で構成されており、開発者はツリー内のオブジェクトノードを直接操作して、アプリケーションのレンダリングや動作に影響を与えます。 また [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、複数のツリー構造のメタファを使用して、プログラム要素間の関係を定義します。 ほとんどの場合、WPF 開発者は、オブジェクトツリーの比喩について概念的に考えると同時に、コードでアプリケーションを作成したり、アプリケーションの一部を XAML で定義したりできますが、特定の API を呼び出すか、特定のマークアップを使用して汎用的なものではありません。などのオブジェクトツリー操作 API は、XML DOM でを使用する場合があります。 WPF は、ツリーの比喩ビュー、<xref:System.Windows.LogicalTreeHelper> および <xref:System.Windows.Media.VisualTreeHelper>を提供する2つのヘルパークラスを公開します。 これらの同じツリーが特定の主要な WPF 機能の動作を理解するのに役立ちます。そのため、ビジュアルツリーと論理ツリーは WPF ドキュメントでも使用されます。 このトピックでは、ビジュアルツリーと論理ツリーが表す内容を定義し、そのようなツリーが全体的なオブジェクトツリーの概念とどのように関連しているかについて説明し、<xref:System.Windows.LogicalTreeHelper> と <xref:System.Windows.Media.VisualTreeHelper>を紹介します。  
@@ -35,7 +35,7 @@ ms.locfileid: "73459501"
   
  この XAML をドキュメントオブジェクトモデルの下で XML として処理した場合、(有効な) 暗黙的にコメントアウトされたタグを含めると、結果の XML DOM ツリーには `<ListBox.Items>` とその他の暗黙的な項目の要素が含まれます。 ただし、XAML では、マークアップを読み取ってオブジェクトに書き込むときに、このような処理は行われません。結果として得られるオブジェクトグラフには、`ListBox.Items`は含まれません。 ただし、<xref:System.Windows.Controls.ItemCollection>を含む `Items` という名前の <xref:System.Windows.Controls.ListBox> プロパティがあり、<xref:System.Windows.Controls.ListBox> XAML が処理されると <xref:System.Windows.Controls.ItemCollection> は初期化されますが、空になります。 次に、<xref:System.Windows.Controls.ListBox> のコンテンツとして存在する各子オブジェクト要素が、`ItemCollection.Add`のパーサー呼び出しによって <xref:System.Windows.Controls.ItemCollection> に追加されます。 このように、XAML をオブジェクトツリーに処理する例では、作成されたオブジェクトツリーが基本的に論理ツリーであるという一見のように見えます。  
   
- ただし、論理ツリーは、XAML の暗黙的な構文項目が考慮されていない場合でも、実行時にアプリケーション UI に存在するオブジェクトグラフ全体ではありません。主な理由は、ビジュアルとテンプレートです。 たとえば、<xref:System.Windows.Controls.Button>について考えてみます。 論理ツリーは、<xref:System.Windows.Controls.Button> オブジェクトとその文字列 `Content`を報告します。 ただし、実行時のオブジェクトツリーには、このボタンが追加されています。 特に、特定の <xref:System.Windows.Controls.Button> コントロールテンプレートが適用されたため、ボタンは画面に表示されるだけです。 実行時に論理ツリーを表示している場合でも、適用されたテンプレート (ビジュアルボタンの周囲に濃い灰色のテンプレート定義 <xref:System.Windows.Controls.Border> など) から取得したビジュアルは、論理ツリーでは報告されません。表示されている UI を参照し、次に論理ツリーを読み取ります)。 テンプレートビジュアルを検索するには、代わりにビジュアルツリーを調べる必要があります。  
+ ただし、論理ツリーは、XAML の暗黙的な構文項目が考慮されていない場合でも、実行時にアプリケーション UI に存在するオブジェクトグラフ全体ではありません。主な理由は、ビジュアルとテンプレートです。 たとえば、<xref:System.Windows.Controls.Button>について考えてみます。 論理ツリーは、<xref:System.Windows.Controls.Button> オブジェクトとその文字列 `Content`を報告します。 ただし、実行時のオブジェクトツリーには、このボタンが追加されています。 特に、特定の <xref:System.Windows.Controls.Button> コントロールテンプレートが適用されたため、ボタンは画面に表示されるだけです。 適用されたテンプレート <xref:System.Windows.Controls.Border> (表示されている UI からの入力イベントの処理、論理ツリーの読み取りなど) で論理ツリーを参照している場合でも、論理ツリー内ではそのビジュアルは報告されません。これは、実行時に論理ツリーを見ている場合でも同様です。 テンプレートビジュアルを検索するには、代わりにビジュアルツリーを調べる必要があります。  
   
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 構文を、作成されたオブジェクトグラフにマップする方法、および XAML で暗黙的な構文を使用する方法の詳細については、「 [Xaml 構文の詳細](xaml-syntax-in-detail.md)」または「 [xaml の概要 (WPF)](xaml-overview-wpf.md)」を参照してください。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "73459501"
 ### <a name="the-purpose-of-the-logical-tree"></a>論理ツリーの目的  
  論理ツリーは、コンテンツモデルが可能な子オブジェクトを簡単に反復処理できるようにし、コンテンツモデルを拡張できるようにするためのものです。 また、論理ツリーは、論理ツリー内のすべてのオブジェクトが読み込まれるときなど、特定の通知のためのフレームワークを提供します。 基本的に、論理ツリーは、フレームワークレベルでの実行時のオブジェクトグラフの近似値です。ビジュアルは除外されますが、独自の実行時アプリケーションの構成に対する多くのクエリ操作には適しています。  
   
- さらに、静的リソース参照と動的リソース参照の両方が解決されます。そのためには、最初に要求を行うオブジェクトの <xref:System.Windows.FrameworkElement.Resources%2A> コレクションの論理ツリーを上方向に検索し、次に論理ツリーを続行し、の各 <xref:System.Windows.FrameworkElement> (または <xref:System.Windows.FrameworkContentElement>) を確認します。そのキーが含まれている可能性がある <xref:System.Windows.ResourceDictionary>を含む別の `Resources` 値。 論理ツリーは、論理ツリーとビジュアルツリーの両方が存在する場合に、リソース検索に使用されます。 リソースディクショナリと参照の詳細については、「 [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)」を参照してください。  
+ さらに、静的リソース参照と動的リソース参照の両方が解決されます。そのためには、最初に要求しているオブジェクトの <xref:System.Windows.FrameworkElement.Resources%2A> コレクションの論理ツリーを上方向に検索し、その後、論理ツリーを処理してから、そのキーを含む可能性のある <xref:System.Windows.ResourceDictionary>を含む別の `Resources` 値 (または <xref:System.Windows.FrameworkContentElement>) を <xref:System.Windows.FrameworkElement> 確認します。 論理ツリーは、論理ツリーとビジュアルツリーの両方が存在する場合に、リソース検索に使用されます。 リソースディクショナリと参照の詳細については、「 [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)」を参照してください。  
   
 <a name="composition"></a>   
 ### <a name="composition-of-the-logical-tree"></a>論理ツリーの構成  
@@ -67,12 +67,12 @@ ms.locfileid: "73459501"
   
 <a name="tree_traversal"></a>   
 ## <a name="tree-traversal"></a>ツリートラバーサル  
- <xref:System.Windows.LogicalTreeHelper> クラスには、論理ツリートラバーサルの <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>、<xref:System.Windows.LogicalTreeHelper.GetParent%2A>、および <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> の各メソッドが用意されています。 ほとんどの場合、既存のコントロールの論理ツリーを走査する必要はありません。これらのコントロールは、ほとんどの場合、論理上の子要素を、`Add`、インデクサーなどのコレクションアクセスをサポートする専用のコレクションプロパティとして公開するためです. ツリートラバーサルは、主に、<xref:System.Windows.Controls.ItemsControl> などの意図したコントロールパターンからの派生を選択しない、またはコレクションのプロパティが既に定義されている <xref:System.Windows.Controls.Panel>、独自のコレクションプロパティを提供するユーザーを選択するコントロールの作成者が使用するシナリオです。ご.  
+ <xref:System.Windows.LogicalTreeHelper> クラスには、論理ツリートラバーサルの <xref:System.Windows.LogicalTreeHelper.GetChildren%2A>、<xref:System.Windows.LogicalTreeHelper.GetParent%2A>、および <xref:System.Windows.LogicalTreeHelper.FindLogicalNode%2A> の各メソッドが用意されています。 ほとんどの場合、既存のコントロールの論理ツリーを走査する必要はありません。これらのコントロールは、ほとんどの場合、論理上の子要素を、`Add`、インデクサーなどのコレクションアクセスをサポートする専用のコレクションプロパティとして公開するためです。 ツリートラバーサルは、主に、<xref:System.Windows.Controls.Panel> <xref:System.Windows.Controls.ItemsControl> などの目的のコントロールパターンからの派生を選択せず、コレクションプロパティが既に定義されている場合や、独自のコレクションプロパティサポートを提供する場合に使用する、コントロールの作成者によって使用されるシナリオです。  
   
  ビジュアルツリーでは、ビジュアルツリートラバーサル、<xref:System.Windows.Media.VisualTreeHelper>のヘルパークラスもサポートされています。 ビジュアルツリーは、コントロール固有のプロパティによって簡単に公開されないため、プログラミングシナリオに必要な場合は、<xref:System.Windows.Media.VisualTreeHelper> クラスを使用してビジュアルツリーを走査することをお勧めします。 詳しくは、「[WPF グラフィックス レンダリングの概要](../graphics-multimedia/wpf-graphics-rendering-overview.md)」をご覧ください。  
   
 > [!NOTE]
-> 適用されているテンプレートのビジュアルツリーを調べることが必要になる場合があります。 この手法を使用する場合は注意が必要です。 テンプレートを定義するコントロールのビジュアルツリーを走査している場合でも、コントロールのコンシューマーは常にインスタンスの <xref:System.Windows.Controls.Control.Template%2A> プロパティを設定してテンプレートを変更できます。また、エンドユーザーは、システムを変更することによって適用されたテンプレートに影響を与えることもできます。デザイン.  
+> 適用されているテンプレートのビジュアルツリーを調べることが必要になる場合があります。 この手法を使用する場合は注意が必要です。 テンプレートを定義するコントロールのビジュアルツリーを走査している場合でも、コントロールのコンシューマーはインスタンスの <xref:System.Windows.Controls.Control.Template%2A> プロパティを設定することによっていつでもテンプレートを変更できます。また、エンドユーザーは、システムテーマを変更することによって、適用されているテンプレートにも影響を与えることができます。  
   
 <a name="routes"></a>   
 ## <a name="routes-for-routed-events-as-a-tree"></a>"ツリー" としてのルーティングイベントのルート  

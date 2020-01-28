@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 0b7c9fc0e9dd0f559c52f692c405a3f9e68814d0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: be2af77f9680ab3285720525638bba8ef2041999
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711884"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745382"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -113,7 +113,7 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-構造体の詳細については、「[Structs](../classes-and-structs/structs.md)」を参照してください。 .NET における値型の詳細については、「[値型](../../language-reference/keywords/value-types.md)」を参照してください。
+構造体の詳細については、「[Structs](../classes-and-structs/structs.md)」を参照してください。 値型の詳細については、[値型](../../language-reference/builtin-types/value-types.md)に関するページを参照してください。
 
 別の種類の値型として、[列挙体](../../language-reference/builtin-types/enum.md)があります。 列挙体は、一連の名前付き整数定数を定義します。 たとえば、.NET クラス ライブラリの <xref:System.IO.FileMode?displayProperty=nameWithType> 列挙体には、ファイルを開く方法を指定する一連の名前付き整数定数が格納されています。 これは、次の例のように定義されます。
 
@@ -148,7 +148,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="types-of-literal-values"></a>リテラル値の型
 
-C# では、リテラル値の型がコンパイラによって決定されます。 数値リテラルの型指定の方法を指定するには、その数値の末尾に文字を付加します。 たとえば、値 4.56 を float 型として扱うには、数値の後に "f" または "F" を付加して、`4.56f` のように指定します。 文字を付加しない場合、リテラルの型はコンパイラによって推論されます。 文字サフィックスによって指定できる型の詳細については、「[値型](../../language-reference/keywords/value-types.md)」の各型のリファレンス ページを参照してください。
+C# では、リテラル値の型がコンパイラによって決定されます。 数値リテラルの型指定の方法を指定するには、その数値の末尾に文字を付加します。 たとえば、値 4.56 を float 型として扱うには、数値の後に "f" または "F" を付加して、`4.56f` のように指定します。 文字を付加しない場合、リテラルの型はコンパイラによって推論されます。 文字サフィックスで指定できる型の詳細については、「[整数数値型 ](../../language-reference/builtin-types/integral-numeric-types.md)」と「[浮動小数点数値型](../../language-reference/builtin-types/floating-point-numeric-types.md)」を参照してください。
 
 リテラルは型指定され、すべての型は最終的に <xref:System.Object?displayProperty=nameWithType> から派生するため、次のようなコードを記述してコンパイルできます。
 
@@ -185,7 +185,7 @@ stringList.Add(4);
 
 - [dynamic 型の使用](./using-type-dynamic.md)
 
-- [値型](../../language-reference/keywords/value-types.md)
+- [値型](../../language-reference/builtin-types/value-types.md)
 
 - [参照型](../../language-reference/keywords/reference-types.md)
 

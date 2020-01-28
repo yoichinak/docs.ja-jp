@@ -2,12 +2,12 @@
 title: Windows Communication Foundation へのメッセージ キュー
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
-ms.openlocfilehash: 08ab6468ed638b4e9f1ca2fdbac1c55076eafe99
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 541ea23e6748242db57661ceda8e1fedecb66884
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337619"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747123"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation へのメッセージ キュー
 
@@ -158,4 +158,4 @@ Console.ReadLine();
 
 - [WCF のキュー](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [方法 : WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
-- [メッセージキュー](https://go.microsoft.com/fwlink/?LinkId=94968)
+- [メッセージキュー](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms711472(v=vs.85))

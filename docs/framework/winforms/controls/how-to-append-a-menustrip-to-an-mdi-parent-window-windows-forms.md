@@ -1,5 +1,5 @@
 ---
-title: '方法: MenuStrip を MDI 親ウィンドウ (Windows フォーム) に追加します。'
+title: '方法 : MenuStrip を MDI 親ウィンドウに追加する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: fdd5a24d444e494caedeed56402658399e97b90a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 06e5c9daab8b7eb72024fff27d661c0eb3bf84c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457497"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747158"
 ---
-# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>方法: MenuStrip を MDI 親ウィンドウ (Windows フォーム) に追加します。
+# <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>方法 : MenuStrip を MDI 親ウィンドウに追加する (Windows フォーム)
 アプリケーションの中には、マルチ ドキュメント インターフェイス (MDI) 子ウィンドウの種類が MDI 親ウィンドウと異なるものがあります。 たとえば、MDI 親がスプレッドシートで、MDI 子がグラフの場合があります。 そのような場合は、異なる種類の MDI 子ウィンドウがアクティブになったときに、MDI 子メニューの内容で MDI 親メニューの内容を更新する必要があります。  
   
  次の手順では、<xref:System.Windows.Forms.Form.IsMdiContainer%2A>、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>、<xref:System.Windows.Forms.MergeAction>、および <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> の各プロパティを使用して MDI 子メニューを MDI 親メニューに追加します MDI 子ウィンドウを閉じると、追加したメニューが MDI 親から削除されます。  
   
- 参照してください[マルチ ドキュメント インターフェイス (MDI) アプリケーション](../advanced/multiple-document-interface-mdi-applications.md)します。  
+ 「[マルチドキュメントインターフェイス (MDI) アプリケーション](../advanced/multiple-document-interface-mdi-applications.md)」も参照してください。  
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>メニュー項目を MDI 親に追加するには  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66457497"
   
 9. `&Special`、`Command&1`、および `Command&2` メニュー項目の <xref:System.Windows.Forms.MergeAction> プロパティを <xref:System.Windows.Forms.MergeAction.Append> に設定します。  
   
-10. イベント ハンドラーを作成、<xref:System.Windows.Forms.Control.Click>のイベント、 `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>します。  
+10. `&Open` <xref:System.Windows.Forms.ToolStripMenuItem>の <xref:System.Windows.Forms.Control.Click> イベントのイベントハンドラーを作成します。  
   
 11. このイベント ハンドラー内に次のコード例のようなコードを挿入し、`Form2` の新規インスタンスを `Form1` の MDI 子フォームとして作成し、表示します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66457497"
     this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compiling-the-code"></a>コードのコンパイル方法  
  この例で必要な要素は次のとおりです。  
   
 - `Form1` と `Form2` という名前の 2 つの <xref:System.Windows.Forms.Form> コントロール。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 862ae61112db475825901f7c3f1d5127b384bb22
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 304da4fa7d2bb48899cdec864fb2dc1f9fdfb9ef
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74711612"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746427"
 ---
 # <a name="iis-hosting-using-inline-code"></a>インライン コードを使用した IIS ホスティング
 
@@ -94,6 +94,6 @@ Press <ENTER> to terminate client.
 
 4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。 このサービスを呼び出すことができるクライアントアプリケーションを作成する方法の例については、「[方法: クライアントを作成](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)する」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [AppFabric のホスティングと永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric のホスティングと永続化のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

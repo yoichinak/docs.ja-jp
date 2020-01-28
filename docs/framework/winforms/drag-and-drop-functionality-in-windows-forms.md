@@ -1,19 +1,19 @@
 ---
-title: Windows フォームにおけるドラッグ アンド ドロップ機能
+title: ドラッグアンドドロップ機能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
-ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 603dc158719c0b11def4386eb24a33f235cf3a42
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966860"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732748"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows フォームにおけるドラッグ アンド ドロップ機能
-Windows フォームには、ドラッグ アンド ドロップの動作を実装する一連のメソッド、イベント、およびクラスが含まれています。 このトピックでは、Windows フォームでのドラッグ アンド ドロップのサポートの概要について説明します。  参照してください[ドラッグ アンド ドロップ操作とクリップボードのサポート](./advanced/drag-and-drop-operations-and-clipboard-support.md)します。  
+Windows フォームには、ドラッグ アンド ドロップの動作を実装する一連のメソッド、イベント、およびクラスが含まれています。 このトピックでは、Windows フォームでのドラッグ アンド ドロップのサポートの概要について説明します。  「[ドラッグアンドドロップ操作とクリップボードのサポート](./advanced/drag-and-drop-operations-and-clipboard-support.md)」も参照してください。  
   
 ## <a name="performing-drag-and-drop-operations"></a>ドラッグ アンド ドロップ操作の実行  
  ドラッグ アンド ドロップ操作を実行するには、<xref:System.Windows.Forms.Control> クラスの <xref:System.Windows.Forms.Control.DoDragDrop%2A> メソッドを使用します。 ドラッグ アンド ドロップ操作の実行方法の詳細については、「<xref:System.Windows.Forms.Control.DoDragDrop%2A>」を参照してください。 ドラッグ アンド ドロップ操作が開始される前に、マウス ポインターがドラッグされる四角形を取得するには、<xref:System.Windows.Forms.SystemInformation> クラスの <xref:System.Windows.Forms.SystemInformation.DragSize%2A> プロパティを使用します。  

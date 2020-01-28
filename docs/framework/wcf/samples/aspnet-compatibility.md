@@ -2,12 +2,12 @@
 title: ASP.NET 互換性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 0938075464a0f2739bdb2a9d8ed1f16f61edff2b
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 1f1690cdd1a880c852abc04ea8e4958bae2c5432
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716156"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728020"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 互換性
 
@@ -26,7 +26,7 @@ ms.locfileid: "74716156"
 
 3. 既定のアプリケーションプールで .NET Framework 4 を使用するように設定するには (既存のサイトで非互換性の問題が発生する可能性があります)、 **DefaultAppPool**リスト項目を右クリックし、 **[基本設定...]** を選択します。 **.Net Framework バージョン**のプルダウンを **.net framework v v4.0.30128** (またはそれ以降) に設定します。
 
-4. (他のアプリケーションとの互換性を維持するために) .NET Framework 4 を使用する新しいアプリケーションプールを作成するには、 **[アプリケーション]** プール ノードを右クリックし、 **[アプリケーションプールの追加]** を選択します。 新しいアプリケーションプールにという名前を設定し、 **[.Net Framework バージョン]** プルダウンを **[.net framework v v4.0.30128]** (またはそれ以降) に設定します。 次のセットアップ手順を実行したら、 **ServiceModelSamples**アプリケーションを右クリックし、 **[アプリケーションの管理]** 、 **[詳細設定.]** . の順に選択します。 **アプリケーションプール**を新しいアプリケーションプールに設定します。
+4. (他のアプリケーションとの互換性を維持するために) .NET Framework 4 を使用する新しいアプリケーションプールを作成するには、 **[アプリケーション]** プール ノードを右クリックし、 **[アプリケーションプールの追加]** を選択します。 新しいアプリケーションプールにという名前を設定し、 **[.Net Framework バージョン]** プルダウンを **[.net framework v v4.0.30128]** (またはそれ以降) に設定します。 下、セットアップを実行する手順は、後に右クリックし、 **ServiceModelSamples**アプリケーションと選択**アプリケーションの管理**、**詳細設定しています...** . **アプリケーションプール**を新しいアプリケーションプールに設定します。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。
@@ -128,6 +128,6 @@ Press <ENTER> to terminate client.
 
 4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [AppFabric のホスティングと永続化のサンプル](https://go.microsoft.com/fwlink/?LinkId=193961)
+- [AppFabric のホスティングと永続化のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

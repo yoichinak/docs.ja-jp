@@ -1,5 +1,5 @@
 ---
-title: WPF のグローバリゼーション
+title: グローバリゼーション
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], international user interface
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 769afe4d301a7b0fafd26018255f98b6faa29887
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 95c0368889dfa4e69b5e40b32ea19ba845aa5c30
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559436"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76747058"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックでは、グローバル市場向けに [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成するときに注意する必要がある問題について説明します。 グローバリゼーションプログラミング要素は、.NET で <xref:System.Globalization> 名前空間に定義されています。

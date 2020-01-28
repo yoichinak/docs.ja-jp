@@ -386,10 +386,7 @@
           href: tutorials/creating-app-with-plugin-support.md
         - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
           href: ../standard/assembly/unloadability-howto.md
-- name: ソースから .NET Core をビルドする
-  href: build/index.md
+- name: .NET Core の配布パッケージ
   items:
-    - name: .NET Core の配布パッケージ
-      href: build/distribution-packaging.md
-- name: VS 2015/project.json ドキュメント
-  href: ../project-json.md
+    - name: 概要
+      href: distribution-packaging.md

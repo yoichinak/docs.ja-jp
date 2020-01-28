@@ -2,15 +2,16 @@
 title: 探索のセキュリティのサンプル
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 8469b69baabcd2ba9185956c276554b4bb929d85
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: cfee226f52bc5f001b2952b76b40ce0eb8aebceb
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74712055"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76728854"
 ---
 # <a name="discovery-security-sample"></a>探索のセキュリティのサンプル
-Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、 [2005 検出仕様](https://go.microsoft.com/fwlink/?LinkId=177912)と[1.1 バージョン](https://go.microsoft.com/fwlink/?LinkId=179677)の両方がサポートされています。  
+
+Discovery 仕様では、探索プロセスに参加するエンドポイントをセキュリティで保護する必要はありません。 探索メッセージをセキュリティで強化することで、さまざまな種類の攻撃 (メッセージの改ざん、サービス拒否、リプレイ、なりすまし) が軽減されます。 このサンプルでは、コンパクトな署名形式 (WS-Discovery 仕様のセクション 8.2 を参照) を使用してメッセージ署名の計算と検証を行うカスタム チャネルの実装方法を示します。 このサンプルでは、 [2005 検出仕様](http://specs.xmlsoap.org/ws/2005/04/discovery/ws-discovery.pdf)と[1.1 バージョン](http://docs.oasis-open.org/ws-dd/discovery/1.1/cs-01/wsdd-discovery-1.1-spec-cs-01.pdf)の両方がサポートされています。  
   
  カスタム チャネルは、探索エンドポイントおよびアナウンス エンドポイントの既存のチャネル スタックの上に適用されます。 これにより、署名ヘッダーがすべての送信メッセージに適用されます。 署名は受信メッセージで検証され、署名が一致しない場合やメッセージに署名がない場合、そのメッセージは破棄されます。 このサンプルでは、メッセージの署名と検証を行うために証明書を使用します。  
   

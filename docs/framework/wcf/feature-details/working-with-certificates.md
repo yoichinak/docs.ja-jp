@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 0764ca29fc959092e77629ff3888e65f0d68d70c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e38ead0d378092af086218277fd2e85b4a6396c3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938049"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746888"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 
@@ -164,9 +164,9 @@ WCF では、認証、暗号化、またはメッセージのデジタル署名�
 
 ## <a name="mapping-a-certificate-to-a-user-account"></a>ユーザー アカウントへの証明書のマッピング
 
-IIS と Active Directory には、証明書を Windows ユーザー アカウントにマップできる機能があります。 この機能の詳細については、「[Map certificates to user accounts](https://go.microsoft.com/fwlink/?LinkId=88917)」(ユーザー アカウントへの証明書のマッピング) を参照してください。
+IIS と Active Directory には、証明書を Windows ユーザー アカウントにマップできる機能があります。 この機能の詳細については、「[Map certificates to user accounts](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc736706(v=ws.10))」(ユーザー アカウントへの証明書のマッピング) を参照してください。
 
-Active Directory のマッピングを使用する方法の詳細については、「[Mapping Client Certificates with Directory Service Mapping](https://go.microsoft.com/fwlink/?LinkId=88918)」(ディレクトリ サービスのマッピングによるクライアント証明書のマッピング) を参照してください。
+Active Directory のマッピングを使用する方法の詳細については、「[Mapping Client Certificates with Directory Service Mapping](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))」(ディレクトリ サービスのマッピングによるクライアント証明書のマッピング) を参照してください。
 
 この機能が有効になっている場合、<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> クラスの <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> プロパティを `true` に設定できます。 構成では、次のコードに示すように、[\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 要素の `mapClientCertificateToWindowsAccount` 属性を `true` に設定できます。
 

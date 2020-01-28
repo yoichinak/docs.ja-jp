@@ -1,5 +1,6 @@
 ---
 title: Windows フォームデザイナーのデザイン時エラー
+titleSuffix: ''
 ms.date: 09/09/2019
 f1_keywords:
 - DTELErrorList
@@ -11,12 +12,12 @@ ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 0dd112f89071f6981b438a79f350dfab02af73d5
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 2a39c76d011c6d129f91647fabe3f129245b9466
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460112"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746086"
 ---
 # <a name="windows-forms-designer-error-page"></a>Windows フォームデザイナーのエラーページ
 

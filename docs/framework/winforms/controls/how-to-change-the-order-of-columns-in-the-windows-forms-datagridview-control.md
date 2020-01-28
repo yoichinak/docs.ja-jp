@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム DataGridView コントロールの列の順序を変更する'
+title: DataGridView コントロールの列の順序を変更する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
 - data grids [Windows Forms], changing column order
 ms.assetid: 5e9ac3bc-b0f0-48cb-a3d5-b005af905395
-ms.openlocfilehash: 4b3859579814f4a10f38fd47df6fe933e2722cb2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2aef196e9544a81f42a563783ce6c357869aa247
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643348"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746547"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの列の順序を変更する
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control"></a>方法 : Windows フォーム DataGridView コントロールの列の順序を変更する
 <xref:System.Windows.Forms.DataGridView> を使用してデータをデータ ソースから表示する場合、データ ソースのスキーマの列が、表示したい順序で表示されないことがあります。 <xref:System.Windows.Forms.DataGridViewColumn> クラスの <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A> プロパティを使用して、列の表示順序を変更できます。  
   
- 次のコード例は、Northwind サンプル データベース内の Customers テーブルにバインドするときに自動的に生成される列のいくつかを再配置します。 バインドする方法について、<xref:System.Windows.Forms.DataGridView>データベース テーブルにコントロールを参照してください[方法。バインド データを Windows フォーム DataGridView コントロール](how-to-bind-data-to-the-windows-forms-datagridview-control.md)します。  
+ 次のコード例は、Northwind サンプル データベース内の Customers テーブルにバインドするときに自動的に生成される列のいくつかを再配置します。 <xref:System.Windows.Forms.DataGridView> コントロールをデータベーステーブルにバインドする方法の詳細については、「[方法: データを Windows フォーム DataGridView コントロールにバインド](how-to-bind-data-to-the-windows-forms-datagridview-control.md)する」を参照してください。  
   
- Visual Studio では、このタスクに対するサポートが用意されています。  参照してください[方法。デザイナーを使用して Windows フォーム DataGridView コントロール内の列の順序を変更する](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)します。  
+ Visual Studio では、このタスクに対するサポートが用意されています。  「[方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列の順序を変更する](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)」も参照してください。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#040](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#040)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#040](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#040)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compiling-the-code"></a>コードのコンパイル方法  
  この例で必要な要素は次のとおりです。  
   
 - Northwind サンプル データベース内の <xref:System.Windows.Forms.DataGridView> テーブルなど、示されている列の名前を持つテーブルにバインドされた、`customersDataGridView` という名前の `Customers` コントロール。  
@@ -41,4 +41,4 @@ ms.locfileid: "64643348"
 - <xref:System.Windows.Forms.DataGridViewColumn.DisplayIndex%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
 - [Windows フォーム DataGridView コントロールでのデータの表示](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォームの DataGridView コントロールにデータをバインドします。](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [方法: データを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-data-to-the-windows-forms-datagridview-control.md)

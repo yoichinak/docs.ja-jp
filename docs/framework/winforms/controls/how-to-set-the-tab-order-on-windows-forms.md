@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム上のタブ オーダーを設定する'
+title: コントロールのタブオーダーを設定する
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -13,12 +13,12 @@ ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 026cff06a8d662cb40107fa76cf6d7989fe30cf1
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5d53e411bda0279271e4f73e1842c52fd6d9b3a9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458526"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746836"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>方法: Windows フォームのタブオーダーを設定する
 
