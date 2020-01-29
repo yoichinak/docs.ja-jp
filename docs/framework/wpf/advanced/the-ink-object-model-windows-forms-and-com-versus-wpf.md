@@ -1,5 +1,6 @@
 ---
-title: インク オブジェクト モデル:Windows フォームおよび COM と WPF の比較
+title: デジタルインク-Windows フォームと COM と WPF の比較
+titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - ink [WPF], enabling
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
-ms.openlocfilehash: 2c0d155d320bab2f0114280e962c8f2f0b559681
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 4a183bba2c5cfb2d12a9cf435ae1f92b4cf63948
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636420"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737286"
 ---
-# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>インク オブジェクト モデル:Windows フォームおよび COM と WPF の比較
+# <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>インク オブジェクト モデル : Windows フォームおよび COM と WPF の比較
 
 基本的に、デジタルインクをサポートするプラットフォームには、Tablet PC Windows フォームプラットフォーム、Tablet PC COM プラットフォーム、および Windows Presentation Foundation (WPF) プラットフォームの3つがあります。  Windows フォームと COM プラットフォームは同様のオブジェクトモデルを共有しますが、WPF プラットフォームのオブジェクトモデルは大きく異なります。  このトピックでは、1つのオブジェクトモデルを操作した開発者がもう一方のオブジェクトモデルを理解しやすくなるように、大まかな違いについて説明します。  
   
@@ -85,7 +86,7 @@ ms.locfileid: "75636420"
 [!code-vb[WinFormWPFInk#LoadWinforms](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#loadwinforms)]
 ## <a name="events-from-the-tablet-pen"></a>タブレットペンからのイベント  
 
- Windows フォームと COM プラットフォーム上の[InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))および[microsoft は、](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))ユーザーがペンデータを入力したときに[イベントを受信](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583740(v=vs.90))することができます。 InkCollector[は、ウィンドウ](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))またはコントロール[Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))にアタッチされ、タブレット入力データによって生成されたイベントをサブスクライブできます。 これらのイベントが発生するスレッドは、ペン、マウス、またはプログラムによってイベントが発生したかどうかによって異なります。 これらのイベントに関連したスレッド処理の詳細については、「[イベントが発生](/windows/desktop/tablet/threads-on-which-an-event-can-fire)する[一般的なスレッド処理の考慮事項](/windows/desktop/tablet/general-threading-considerations)とスレッド」を参照してください。  
+ Windows フォームと COM プラットフォーム上の[InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))および[microsoft は、](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))ユーザーがペンデータを入力したときに[イベントを受信](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583740(v=vs.90))することができます。 InkCollector[は、ウィンドウ](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))または[コントロール](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))にアタッチされ、タブレット入力データによって生成されたイベントをサブスクライブできます。 これらのイベントが発生するスレッドは、ペン、マウス、またはプログラムによってイベントが発生したかどうかによって異なります。 これらのイベントに関連したスレッド処理の詳細については、「[イベントが発生](/windows/desktop/tablet/threads-on-which-an-event-can-fire)する[一般的なスレッド処理の考慮事項](/windows/desktop/tablet/general-threading-considerations)とスレッド」を参照してください。  
   
  Windows Presentation Foundation プラットフォームでは、<xref:System.Windows.UIElement> クラスにはペン入力のイベントがあります。 これは、すべてのコントロールがスタイラスイベントの完全なセットを公開することを意味します。  スタイラスイベントは、トンネルイベントとバブルイベントのペアを持ち、常にアプリケーションスレッド上で発生します。  詳細については、「[ルーティングイベントの概要](routed-events-overview.md)」を参照してください。  
   

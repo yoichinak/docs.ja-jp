@@ -6,12 +6,12 @@ helpviewer_keywords:
 - exceptions [C#]
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
-ms.openlocfilehash: f5d709a35e160a8b03ac59e52f7bcb46196a3ce4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705289"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735647"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外と例外処理 (C# プログラミング ガイド)
 
@@ -25,7 +25,7 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 
 ## <a name="exceptions-overview"></a>例外の概要
 
-例外には、次の特徴があります。  
+例外には、次の特徴があります。
 
 - 例外はすべて最終的に `System.Exception` から派生した種類になります。
 - 例外をスローする可能性のあるステートメントの周囲で `try` ブロックを使用します。
@@ -36,7 +36,7 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 - 例外は、`throw` キーワードを使用してプログラムで明示的に生成することができます。
 - 例外オブジェクトには、呼び出し履歴の状態やエラーの説明など、エラーに関する詳細情報が含まれています。
 - `finally` ブロック内のコードは、例外がスローされた場合でも実行されます。 `finally` ブロックを使用してリソースを解放します。たとえば、`try` ブロックで開かれたストリームまたはファイルを閉じます。
-- .NET Framework のマネージド例外は、Win32 構造化例外処理メカニズムの上に実装されます。 詳細については、「[構造化例外処理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp)」と「[A Crash Course on the Depths of Win32 Structured Exception Handling (Win32 構造化例外処理に関する短期集中コース)」](https://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)を参照してください。
+- .NET Framework のマネージド例外は、Win32 構造化例外処理メカニズムの上に実装されます。 詳細については、「[構造化例外処理 (C/C++)](/cpp/cpp/structured-exception-handling-c-cpp)」と「[A Crash Course on the Depths of Win32 Structured Exception Handling (Win32 構造化例外処理に関する短期集中コース)」](http://bytepointer.com/resources/pietrek_crash_course_depths_of_win32_seh.htm)を参照してください。
 
 ## <a name="related-sections"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォームにコントロールをロックする'
+title: コントロールをロックする
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, locking
@@ -8,12 +8,12 @@ ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d157ddc8be4b5fa0057241b562e76b566e8dad99
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 16eb151dc435614e1edc82bf9f0acf3974f36690
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458345"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736239"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>方法: Windows フォームにコントロールをロックする
 

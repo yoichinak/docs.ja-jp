@@ -1,32 +1,32 @@
 ---
-title: ColorDialog コンポーネント (Windows フォーム)
+title: ColorDialog コンポーネント
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ColorDialog component
 - colors [Windows Forms], dialog box
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
-ms.openlocfilehash: d04794df6bce82573ff8f53b282a4d945933b1bb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0b44774fcace82f7e209440bc15705ad632bc223
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956313"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736924"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog コンポーネント (Windows フォーム)
-Windows フォーム<xref:System.Windows.Forms.ColorDialog>コンポーネントは、ユーザー、パレットから色を選択して、そのパレットにカスタムの色を追加できる構成済みのダイアログ ボックス。 このダイアログ ボックスは、他の Windows ベースのアプリケーションで表示される色を選択するためのダイアログ ボックスと同じです。 このコントロールは、独自のダイアログ ボックスを使用しない簡易ソリューションとして、Windows ベースのアプリケーションの中で使用します。  
+Windows フォーム <xref:System.Windows.Forms.ColorDialog> コンポーネントは、ユーザーがパレットから色を選択し、そのパレットにカスタムの色を追加できるようにする、事前に構成されたダイアログボックスです。 このダイアログ ボックスは、他の Windows ベースのアプリケーションで表示される色を選択するためのダイアログ ボックスと同じです。 このコントロールは、独自のダイアログ ボックスを使用しない簡易ソリューションとして、Windows ベースのアプリケーションの中で使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ColorDialog コンポーネントの概要](colordialog-component-overview-windows-forms.md)  
- 一般的な概念が導入されています、<xref:System.Windows.Forms.ColorDialog>コンポーネントで、ユーザーが構成済みのダイアログ ボックスを表示することができますが、パレットから色の選択に使用できます。  
+ <xref:System.Windows.Forms.ColorDialog> コンポーネントの一般的な概念について説明します。これにより、ユーザーがパレットから色を選択するために使用できる、事前に構成されたダイアログボックスを表示できます。  
   
- [方法: Windows フォーム ColorDialog コンポーネントの外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
+ [方法 : Windows フォーム ColorDialog コンポーネントの表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)  
  ユーザーが使用できる色、およびその他のプロパティを変更する方法について説明します。  
   
- [方法: ColorDialog コンポーネントを使用して、カラー パレットを表示します。](how-to-show-a-color-palette-with-the-colordialog-component.md)  
- インスタンスを使用して、実行時に色を選択する方法について説明します、<xref:System.Windows.Forms.ColorDialog>コンポーネント。  
+ [方法 : ColorDialog コンポーネントを使用してカラー パレットを表示する](how-to-show-a-color-palette-with-the-colordialog-component.md)  
+ <xref:System.Windows.Forms.ColorDialog> コンポーネントのインスタンスを使って実行時に色を選択する方法について説明します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   

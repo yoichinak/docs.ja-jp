@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: bc2d600afabbac9783e8fb12e3bd47e83a3495b7
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
+  ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/12/2019
-  ms.locfileid: "73969443"
+  ms.lasthandoff: 01/24/2020
+  ms.locfileid: "76737536"
 items:
 - durationInMinutes: 2
   content: >
@@ -67,7 +67,7 @@ items:
 
     var date = DateTime.Now;
 
-    Console.WriteLine($"On {date}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items.");
+    Console.WriteLine($"On {date}, the price of {item.Name} was {item.Price} per {item.perPackage} items.");
 
     ```
 
@@ -95,7 +95,7 @@ items:
 
     ```csharp
 
-    Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price} per {item.perPackage} items");
+    Console.WriteLine($"On {date:d}, the price of {item.Name} was {item.Price:C2} per {item.perPackage} items");
 
     ```
 

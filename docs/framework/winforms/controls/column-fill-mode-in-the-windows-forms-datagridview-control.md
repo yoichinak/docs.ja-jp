@@ -1,5 +1,5 @@
 ---
-title: Windows フォーム DataGridView コントロールの列フィル モード
+title: DataGridView コントロールの列の塗りつぶしモード
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: f9eb45e9b96ccb97938c7396d177ccedbea329e6
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 43b8915efe303b6f56cd4adf5fdbd69f51b0b754
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590374"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736873"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの列フィル モード
 列フィル モードでは、<xref:System.Windows.Forms.DataGridView> コントロールの列は、コントロールの表示領域の幅を満たすように自動的にサイズ変更されます。 すべての列の幅を <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> プロパティの値以上にするために水平スクロール バーが必要な場合を除き、コントロールに水平スクロール バーは表示されません。  
@@ -31,7 +31,7 @@ ms.locfileid: "65590374"
 ## <a name="content-based-fillweight-adjustment"></a>内容に基づく FillWeight の調整  
  フィル モード列の <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> の値は、<xref:System.Windows.Forms.DataGridView> の自動サイズ変更メソッドを使用して初期化できます。たとえば、<xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> メソッドがあります。 このメソッドは、まず、列の内容を表示するのに必要な幅を計算します。 次に、計算した幅の比率に一致するように、すべてのフィル モード列の <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> の値がコントロールによって調整されます。 最後に、この新しい <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> の比率を使用して、コントロール内のすべての列が水平方向に使用可能な領域を満たすようにフィル モード列のサイズがコントロールによって変更されます。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
   
 ### <a name="description"></a>説明  
  <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>、<xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A>、<xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>、および <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> の各プロパティに適切な値を使用すると、さまざまなシナリオに応じて列のサイズ変更動作をカスタマイズできます。  
@@ -55,7 +55,7 @@ ms.locfileid: "65590374"
   
 - 一部の列の <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 値を変更します。 列またはフォームのサイズの変更によって何が起きるかを確認します。  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compiling-the-code"></a>コードのコンパイル方法  
  この例で必要な要素は次のとおりです。  
   
 - System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  

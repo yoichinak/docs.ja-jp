@@ -1,5 +1,5 @@
 ---
-title: WPF アドインの概要
+title: アドインの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - add-ins and XAML browser applications [WPF]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 319f8b8c0225c7730112b1db073884b391945ac8
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 93904e308932ea41c736ca849ce0efb200502a7e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73421100"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738944"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 
@@ -25,7 +25,7 @@ ms.locfileid: "73421100"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 .NET Framework アドインモデルに関する知識が必要です。 詳細については、「[アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。
 
@@ -252,7 +252,7 @@ Xbap は、ClickOnce 配置キャッシュ内の安全なフォルダーにダ�
 
 ## <a name="wpf-add-in-benefits"></a>WPF アドインの利点
 
-WPF アドインのユーザーインターフェイスは <xref:System.Windows.Interop.HwndHost>から派生した内部クラスを使用してホストアプリケーションから表示されるため、これらのユーザーインターフェイスは、レイアウト、レンダリング、データなどの WPF UI サービスに関して <xref:System.Windows.Interop.HwndHost> の機能によって制限されます。バインド、スタイル、テンプレート、およびリソース。 ただし、WPF は、次のような追加機能を使用して内部 <xref:System.Windows.Interop.HwndHost> サブクラスを補強します。
+WPF アドインのユーザーインターフェイスは <xref:System.Windows.Interop.HwndHost>から派生した内部クラスを使用してホストアプリケーションから表示されるため、これらのユーザーインターフェイスは、レイアウト、レンダリング、データバインディング、スタイル、テンプレート、リソースなどの WPF UI サービスに関して、<xref:System.Windows.Interop.HwndHost> の機能によって制限されます。 ただし、WPF は、次のような追加機能を使用して内部 <xref:System.Windows.Interop.HwndHost> サブクラスを補強します。
 
 - ホストアプリケーションの UI とアドインの UI の間をタブ移動します。 "アドインは UI です" のプログラミングモデルでは、アドインが完全に信頼されているか、部分的に信頼されているかにかかわらず、アドイン側アダプターが <xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A> をオーバーライドして、tab キーを有効にする必要があることに注意してください。
 
@@ -315,4 +315,4 @@ WPF が <xref:System.Windows.Interop.HwndSource>、<xref:System.Windows.Interop.
 - [アプリケーション ドメイン](../../app-domains/application-domains.md)
 - [.NET Framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [オブジェクトをリモート処理可能にする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [方法トピック](how-to-topics.md)
+- [方法のトピック](how-to-topics.md)

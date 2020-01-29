@@ -1,5 +1,5 @@
 ---
-title: WPF のドキュメント
+title: ドキュメント
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 36704d56b66de977ac7f63fd7e766c925ef9023b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: eccb333b8e9a71ea30454f8bdf9fd2bf6dc90b9b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974686"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737970"
 ---
 # <a name="documents-in-wpf"></a>WPF のドキュメント
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、以前の世代の Windows よりも簡単にアクセスして読み取ることができるように設計された忠実度の高いコンテンツの作成を可能にする幅広いドキュメント機能が用意されています。 拡張された機能と品質に加えて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、ドキュメントの表示、パッケージ化、およびセキュリティの統合されたサービスも提供します。 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のドキュメントの種類とドキュメントのパッケージ化の概要を説明します。  
@@ -46,7 +46,7 @@ ms.locfileid: "73974686"
  フロードキュメントの内容の表示は、<xref:System.Windows.Controls.FlowDocumentReader>、<xref:System.Windows.Controls.FlowDocumentPageViewer>、および <xref:System.Windows.Controls.FlowDocumentScrollViewer>の3つのコントロールでサポートされています。  
   
 #### <a name="flowdocumentreader"></a>FlowDocumentReader  
- <xref:System.Windows.Controls.FlowDocumentReader> には、シングルページ (一度に1ページ) 表示モード、2ページずつ (書籍読み取り形式) 表示モード、連続スクロール (制限カラム) など、さまざまな表示モードからユーザーが動的に選択できる機能が含まれています。表示モード。  これらの表示モードの詳細については、「<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>」を参照してください。  さまざまな表示モードを動的に切り替える機能が必要ない場合は、<xref:System.Windows.Controls.FlowDocumentPageViewer> および <xref:System.Windows.Controls.FlowDocumentScrollViewer>、特定の表示モードで固定されている軽量のフローコンテンツビューアーを提供します。  
+ <xref:System.Windows.Controls.FlowDocumentReader> には、シングルページ (一度に1ページ) 表示モード、2ページずつ (書籍の読み取り形式) 表示モード、連続スクロール (制限カラム) 表示モードなど、さまざまな表示モードからユーザーが動的に選択できる機能が含まれています。  これらの表示モードの詳細については、「<xref:System.Windows.Controls.FlowDocumentReaderViewingMode>」を参照してください。  さまざまな表示モードを動的に切り替える機能が必要ない場合は、<xref:System.Windows.Controls.FlowDocumentPageViewer> および <xref:System.Windows.Controls.FlowDocumentScrollViewer>、特定の表示モードで固定されている軽量のフローコンテンツビューアーを提供します。  
   
 #### <a name="flowdocumentpageviewer-and-flowdocumentscrollviewer"></a>FlowDocumentPageViewer と FlowDocumentScrollViewer  
  <xref:System.Windows.Controls.FlowDocumentPageViewer> では、コンテンツは一度に表示される表示モードで表示されますが、<xref:System.Windows.Controls.FlowDocumentScrollViewer> ではコンテンツが連続スクロールモードで表示されます。  <xref:System.Windows.Controls.FlowDocumentPageViewer> と <xref:System.Windows.Controls.FlowDocumentScrollViewer> の両方が特定の表示モードに固定されています。 <xref:System.Windows.Controls.FlowDocumentReader>と比較します。これには、<xref:System.Windows.Controls.FlowDocumentPageViewer> または <xref:System.Windows.Controls.FlowDocumentScrollViewer>よりも多くの表示モードをユーザーが動的に選択できるようにする機能が含まれています (<xref:System.Windows.Controls.FlowDocumentReaderViewingMode> 列挙型によって提供されます)。  
@@ -55,7 +55,7 @@ ms.locfileid: "73974686"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>ユーザー インターフェイスのテキスト  
- ドキュメントへのテキストの追加だけでなく、テキストはもちろん、フォームなどのアプリケーション UI で使用できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。 一般に、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]の簡単な文など、制限されたテキストのサポートが必要な場合は、<xref:System.Windows.Controls.TextBlock> 要素を使用する必要があります。 <xref:System.Windows.Controls.Label> は、最小限のテキストのサポートが必要な場合に使用できます。 詳細については、「[TextBlock の概要](../controls/textblock-overview.md)」を参照してください。  
+ ドキュメントへのテキストの追加だけでなく、テキストはもちろん、フォームなどのアプリケーション UI で使用できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは、異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。 一般に、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]の簡単な文など、制限されたテキストのサポートが必要な場合は、<xref:System.Windows.Controls.TextBlock> 要素を使用する必要があります。 <xref:System.Windows.Controls.Label> は、最小限のテキストのサポートが必要な場合に使用できます。 詳細については、「[TextBlock の概要](../controls/textblock-overview.md)」を参照してください。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>ドキュメントのパッケージ化  
@@ -144,7 +144,7 @@ ms.locfileid: "73974686"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [[テキスト]](optimizing-performance-text.md)
+- [テキスト](optimizing-performance-text.md)
 - [フロー ドキュメントの概要](flow-document-overview.md)
 - [印刷の概要](printing-overview.md)
 - [ドキュメントのシリアル化および保存](document-serialization-and-storage.md)

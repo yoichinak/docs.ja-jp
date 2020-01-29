@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: WPF コンテンツへのスタイルの適用'
+title: 'チュートリアル: WPF コンテンツのスタイルを適用する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF Designer [Windows Forms], styling WPF content
@@ -9,18 +9,18 @@ ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: d0aa2c54f05cea658c95dc2c23b7ba4bb78835c9
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: e52297f51c74fc3dba93c987fd5b9bd5b6801777
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74138930"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732543"
 ---
 # <a name="walkthrough-style-wpf-content"></a>チュートリアル: WPF コンテンツのスタイルを適用する
 
 この記事では、Windows フォームでホストされている Windows Presentation Foundation (WPF) コントロールにスタイルを適用する方法について説明します。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
@@ -45,7 +45,7 @@ Visual Studio を開き、Visual Basic または `StylingWpfContent`C#という�
 
 5. 2つ目の <xref:System.Windows.Controls.Button?displayProperty=nameWithType> コントロールを <xref:System.Windows.Controls.UserControl> に追加し、<xref:System.Windows.Controls.ContentControl.Content%2A> プロパティの値を**OK**に設定します。
 
-6. プロジェクトをビルドします。
+6. プロジェクトをビルドする。
 
 ## <a name="apply-a-style-to-a-wpf-control"></a>WPF コントロールへのスタイルの適用
 
@@ -124,7 +124,7 @@ Visual Studio を開き、Visual Basic または `StylingWpfContent`C#という�
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-1. プロジェクトをビルドします。
+1. プロジェクトをビルドする。
 
 1. Windows フォーム デザイナーで `Form1` を開きます。
 

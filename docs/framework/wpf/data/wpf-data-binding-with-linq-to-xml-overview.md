@@ -2,12 +2,12 @@
 title: LINQ to XML による WPF のデータ バインディング
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 53aba3295b98ae4a476b321cb585e1bbbdd45dad
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: 3c5567c81d2097a1524f5bbbf9010836ca8c0646
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197393"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733823"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>LINQ to XML による WPF のデータバインディングの概要
 
@@ -27,7 +27,7 @@ XAML と LINQ to XML の相互作用には、大きく分けて次の 2 つの�
 
 ## <a name="data-binding-in-the-windows-presentation-foundation"></a>Windows Presentation Foundation でのデータバインディング
 
-WPF のデータ バインドでは、UI 要素のプロパティをデータ ソースに関連付けることができます。 たとえば、ユーザー定義オブジェクトのパブリック プロパティの値をテキストとして表示する <xref:System.Windows.Controls.Label> はその簡単な例です。 WPF のデータ バインドは次のコンポーネントに依存しています。
+WPF のデータ バインディングでは、UI 要素のプロパティをデータ ソースに関連付けることができます。 たとえば、ユーザー定義オブジェクトのパブリック プロパティの値をテキストとして表示する <xref:System.Windows.Controls.Label> はその簡単な例です。 WPF のデータ バインディングは次のコンポーネントに依存しています。
 
 |コンポーネント|説明|
 |---------------|-----------------|

@@ -17,7 +17,7 @@ ms.locfileid: "64624306"
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
 Visual Basic プログラムは、標準の構成ブロックから構築します。 *ソリューション*は 1 つまたは複数のプロジェクトで構成されます *プロジェクト*は、1 つまたは複数のアセンブリを含めることができます。 各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。 A*ソース ファイル*は、クラス、構造体、モジュール、およびインターフェイスの定義と実装を提供し、最終的にはすべてのコードが含まれます。  
   
- Visual Basic プログラムのこれらのビルディング ブロックの詳細については、[Visual Studio のソリューションおよびプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)および [.NET のアセンブリ](../../../standard/assembly/index.md)を参照してください。  
+ これらのビルディング ブロックの Visual Basic プログラムの詳細については、[ソリューションとプロジェクト](/visualstudio/ide/solutions-and-projects-in-visual-studio)と [.NET のアセンブリ](../../../standard/assembly/index.md)を参照してください。  
   
 ## <a name="file-level-programming-elements"></a>ファイル レベルのプログラミング要素  
  プロジェクトまたはファイルを開始し、コード エディターを開き、既にとを正しい順序でいくつかのコードが表示されます。 作成するすべてのコードは、次のシーケンスに従う必要があります。  

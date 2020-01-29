@@ -1,5 +1,5 @@
 ---
-title: '方法 : Windows フォーム上のコントロールのサイズを変更する'
+title: コントロールのサイズを変更する
 ms.date: 03/30/2017
 f1_keywords:
 - Size.Height
@@ -12,12 +12,12 @@ ms.assetid: d2dba441-a8c0-4705-b8e8-2e5d86d6e7ec
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3aacc9434199eb7881e362a67e1fe0c08784c4a7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 13eec4fd3777da832b3c54c64eaa9663df881228
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459556"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735737"
 ---
 # <a name="how-to-resize-controls-on-windows-forms"></a>方法: Windows フォーム上のコントロールのサイズを変更する
 

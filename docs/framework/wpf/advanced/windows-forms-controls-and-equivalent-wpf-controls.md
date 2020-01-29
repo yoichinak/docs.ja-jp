@@ -1,17 +1,18 @@
 ---
 title: Windows フォーム コントロールおよび同等の WPF コントロール
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms [WPF], interoperability with
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: e80379700b43ed5d0e74ea890c2a0eafe67159e6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.openlocfilehash: 7f531b60d8b31181688f3d0a6753b234ffc6c7dd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740229"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735208"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Windows フォーム コントロールおよび同等の WPF コントロール
 多くの [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロールに相当しますが、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]では、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールには同等のものがありません。 このトピックでは、2つのテクノロジによって提供されるコントロールの種類を比較します。  
@@ -20,7 +21,7 @@ ms.locfileid: "75740229"
   
  次の表に、コントロールとコンポーネントが同等の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロール機能を持つ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] を示します。  
   
-|Windows フォーム コントロール|WPF の同等のコントロール|Remarks|  
+|Windows フォーム コントロール|WPF の同等のコントロール|コメント|  
 |---------------------------|----------------------------|-------------|  
 |<xref:System.Windows.Forms.BindingNavigator>|同等のコントロールはありません。||  
 |<xref:System.Windows.Forms.BindingSource>|<xref:System.Windows.Data.CollectionViewSource>||  
@@ -82,7 +83,7 @@ ms.locfileid: "75740229"
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Controls.UserControl>||  
 |<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|スクロールは、コンテナーコントロールに組み込まれています。|  
-|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>、 <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> コントロールは、HTML ページをホストできます。<br /><br /> .NET Framework 3.5 SP1 以降では、<xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> コントロールは HTML ページをホストし、<xref:System.Windows.Controls.Frame> コントロールもバックアップできます。|  
+|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>、<xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> コントロールは、HTML ページをホストできます。<br /><br /> .NET Framework 3.5 SP1 以降では、<xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> コントロールは HTML ページをホストし、<xref:System.Windows.Controls.Frame> コントロールもバックアップできます。|  
   
 ## <a name="see-also"></a>関連項目
 

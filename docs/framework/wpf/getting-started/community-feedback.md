@@ -1,5 +1,5 @@
 ---
-title: WPF コミュニティのフィードバック
+title: コミュニティ リソース
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebeae3e51cedd3add2de4062c8914693ac94f7b
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73196997"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733810"
 ---
 # <a name="wpf-community-feedback"></a>WPF コミュニティのフィードバック
 
@@ -22,7 +22,7 @@ Microsoft では、Windows Presentation Foundation (WPF) について学習し�
 > [!NOTE]
 > 各ページの下部にある [フィードバック] セクションを使用して、製品のフィードバックを送信しないでください。 これらのリンクはドキュメントに関するフィードバック専用です。
 
-## <a name="forums"></a>フォーラム
+## <a name="forums"></a>Forums
 
 [WPF フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf)は、問題を説明して解決するための主要なコミュニティリソースです。 フォーラムでは、次のような総合的なサポート機能が提供され、ディスカッションと問題解決が促進されます。
 

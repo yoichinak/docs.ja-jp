@@ -1,5 +1,5 @@
 ---
-title: <summary> (Visual Basic)
+title: <summary>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <summary> XML tag
@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352198"
 ---
-# <a name="summary-visual-basic"></a>\<summary> (Visual Basic)
+# <a name="summary-visual-basic"></a>\<概要 > (Visual Basic)
 メンバーの概要を指定します。  
   
 ## <a name="syntax"></a>構文  

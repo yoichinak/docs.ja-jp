@@ -1,5 +1,5 @@
 ---
-title: Windows フォームでのユーザー入力の検証
+title: ユーザー入力の検証
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, validating user input
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 2b83e94f188f46d0cedc9fed9e9c5a946ada59c5
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dc56c09677d1054e8f264169b78638fa83bd7d9e
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960421"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734696"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows フォームでのユーザー入力の検証
 ユーザーがアプリケーションにデータを入力するときに、アプリケーションで使用する前にデータが有効であることを確認する必要がある場合があります。 特定のテキストフィールドの長さがゼロでないこと、フィールドが電話番号またはその他の整形式のデータとして書式設定されていること、または、データベースのセキュリティを侵害するために使用できる安全でない文字が文字列に含まれていないことが必要になる場合があります。 Windows フォームには、アプリケーションの入力を検証するためのいくつかの方法が用意されています。  
@@ -90,7 +90,7 @@ ms.locfileid: "74960421"
 > [!NOTE]
 > フォームがこのように強制的に閉じられるようにすると、フォームのコントロールに保存されていないデータはすべて失われます。 また、モーダルフォームは、コントロールが閉じられたときに、その内容を検証しません。 コントロールの検証を引き続き使用してコントロールにフォーカスを移すことはできますが、フォームの終了に関連する動作について心配する必要はありません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

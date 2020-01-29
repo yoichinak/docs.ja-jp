@@ -2,12 +2,12 @@
 title: 回復力の高い Entity Framework Core SQL 接続を実装する
 description: 回復力の高い Entity Framework Core SQL 接続を実装する方法について説明します。 この手法は、クラウドで Azure SQL Database を使用する場合に特に重要です。
 ms.date: 10/16/2018
-ms.openlocfilehash: 3128cf1be7f2dc8804a002556db232f4e0fc8c33
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7899fc263ab3cde6ac2410ca614a7e5fa285576b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73094046"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732728"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>回復力の高い Entity Framework Core SQL 接続を実装する
 
@@ -88,7 +88,7 @@ public async Task<IActionResult> UpdateProduct(
 }
 ```
 
-最初の <xref:Microsoft.EntityFrameworkCore.DbContext> は `_catalogContext` であり、2 つ目の `DbContext` は `_integrationEventLogService` オブジェクト内にあります。 Commit アクションは、EF 実行戦略を使用してすべての `DbContext` オブジェクト全体で実行されます。
+最初の <xref:Microsoft.EntityFrameworkCore.DbContext> は `_catalogContext` であり、2 つ目の `DbContext` は `_catalogIntegrationEventService` オブジェクト内にあります。 Commit アクションは、EF 実行戦略を使用してすべての `DbContext` オブジェクト全体で実行されます。
 
 この複数の `DbContext` コミットを達成するために、次のコード例に示すように、`SaveEventAndCatalogContextChangesAsync` には `ResilientTransaction` クラスが使用されます。
 

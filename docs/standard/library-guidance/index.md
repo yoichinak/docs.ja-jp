@@ -2,12 +2,12 @@
 title: オープン ソース .NET ライブラリのガイダンス
 description: 高品質の .NET ライブラリを作成するための開発者向けのベスト プラクティスとしての推奨事項。
 ms.date: 10/17/2018
-ms.openlocfilehash: c1e1c302eede86fd5555a8e84630e216e96f1ce7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706453"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731427"
 ---
 # <a name="open-source-library-guidance"></a>オープン ソース ライブラリのガイダンス
 
@@ -32,19 +32,19 @@ ms.locfileid: "75706453"
 
 **実施**の推奨事項にはほとんど常に従う必要があります。 次に例を示します。
 
-NuGet パッケージを使用してご利用のライブラリの配布を **✔️ 実施**してください。
+NuGet パッケージを使用してご利用のライブラリの配布を✔️ 実施してください。
 
 その一方で、**検討**推奨事項は、一般に実施する必要がありますが、ルールには正当な例外があり、ガイダンスに従っていないことを気する必要はありません。
 
-ご利用の NuGet パッケージのバージョンに [SemVer 2.0.0](https://semver.org/) を使用することを **✔️ 検討**してください。
+ご利用の NuGet パッケージのバージョンに [SemVer 2.0.0](https://semver.org/) を使用することを ✔️ 検討してください。
 
 **回避**の推奨事項は一般には良いアイデアではありませんが、規則に違反することが効果的である場合があります。
 
-正確なバージョンを要求する NuGet パッケージ参照は **❌ 回避**してください。
+バージョンが正確である必要がある NuGet パッケージ参照は ❌ 回避してください。
 
 最後に、**実施しない**の推奨事項は、ほとんどの場合でやってはいけないことを示しています。
 
-ご利用のライブラリについては、厳密な名前が指定されたバージョンおよび厳密でない名前が指定されたバージョンを **❌ 発行しない**でください。 たとえば、`Contoso.Api` と`Contoso.Api.StrongNamed` です。
+ご利用のライブラリで、厳密な名前が指定されたバージョンおよび厳密でない名前が指定されたバージョンを ❌ 発行しないでください。 たとえば、`Contoso.Api` と`Contoso.Api.StrongNamed` です。
 
 >[!div class="step-by-step"]
 >[次へ](get-started.md)

@@ -1,5 +1,6 @@
 ---
-title: 'チュートリアル: WPF での Windows フォーム コントロールの配置'
+title: WPF で Windows フォームコントロールを配置する
+titleSuffix: ''
 ms.date: 04/03/2018
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 484895db539b288bf388ff6c2ce3c29db55080b1
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
-ms.translationtype: MT
+ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73197844"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76735290"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>チュートリアル: WPF での Windows フォーム コントロールの配置
 
@@ -31,7 +32,7 @@ ms.locfileid: "73197844"
 - ドッキング。
 - 可視性の設定。
 - 伸縮しないコントロールのホスト。
-- スケーリング。
+- Scaling。
 - 回転。
 - パディングとマージンの設定。
 - 動的レイアウト コンテナーの使用。
@@ -40,7 +41,7 @@ ms.locfileid: "73197844"
 
 完了すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのアプリケーションの [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] レイアウト機能について理解できるようになります。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
@@ -149,7 +150,7 @@ ms.locfileid: "73197844"
 
 2. <kbd>F5</kbd> キーを押してアプリケーションをビルドし、実行します。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素は、label 要素上に描画されます。
 
-## <a name="docking"></a>ドッキング
+## <a name="docking"></a>Docking
 
 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素は [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ドッキングをサポートします。 <xref:System.Windows.Controls.DockPanel> 要素にホストされるコントロールをドッキングするには、<xref:System.Windows.Controls.DockPanel.Dock%2A> 添付プロパティを設定します。
 
