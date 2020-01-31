@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d23a3408-b525-4aec-a186-2ac7ca65d7a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6bbb41f8fd3ac37f1c21fe8b4f6159e3d303777c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d280b008b34befce04159d02dfbb3de37b262c3c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445183"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866664"
 ---
 # <a name="icorprofilercallbackappdomainshutdownstarted-method"></a>ICorProfilerCallback::AppDomainShutdownStarted メソッド
 アプリケーションドメインがプロセスからアンロードされていることをプロファイラーに通知します。  
@@ -32,10 +32,12 @@ HRESULT AppDomainShutdownStarted(
     [in] AppDomainID appDomainId);  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `appDomainId`  
- からアプリケーションのアセンブリが格納されているドメインを識別します。  
-  
+## <a name="parameters"></a>パラメーター
+
+- `appDomainId`
+
+  の \[] アプリケーションのアセンブリが格納されているドメインを識別します。
+
 ## <a name="remarks"></a>コメント  
  `appDomainId` の値は、`AppDomainShutdownStarted` メソッドから返された後の情報要求に対して無効です。これは、このアプリケーションドメインに関する情報を取得するためのプロファイラーの最後の機会です。  
   
@@ -48,6 +50,6 @@ HRESULT AppDomainShutdownStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1f6b8f3-dcfc-49e8-be76-ea50ea90d5a7
 topic_type:
 - apiref
-ms.openlocfilehash: e2a4df262e076c960640977bea0d22be19802140
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 96cde35c7151bb7ce58715f2826feaa59b30efab
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449672"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862309"
 ---
 # <a name="icorprofilerinfo3getmoduleinfo2-method"></a>ICorProfilerInfo3::GetModuleInfo2 メソッド
 モジュール ID を指定して、モジュールのファイル名、モジュールの親アセンブリの ID、およびモジュールのプロパティを示すビットマスクを返します。  
@@ -59,12 +59,12 @@ HRESULT GetModuleInfo2(
  [out] モジュールの親アセンブリ ID へのポインター。  
   
  `pdwModuleFlags`  
- 入出力モジュールのプロパティを指定する[COR_PRF_MODULE_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-module-flags-enumeration.md)列挙体の値のビットマスク。  
+ 入出力モジュールのプロパティを指定する[COR_PRF_MODULE_FLAGS](cor-prf-module-flags-enumeration.md)列挙体の値のビットマスク。  
   
 ## <a name="remarks"></a>コメント  
  動的モジュールの場合、`szName` パラメーターはモジュールのメタデータ名になり、ベース アドレスは 0 (ゼロ) になります。 メタデータ名は、メタデータ内の Module テーブルの Name 列の値です。 これは、<xref:System.Reflection.Module.ScopeName%2A?displayProperty=nameWithType> プロパティとしてマネージコードにも公開されます。また、 [IMetaDataImport:: GetScopeProps](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getscopeprops-method.md)メソッドの `szName` パラメーターとして、アンマネージメタデータクライアントコードにも公開されます。  
   
- `GetModuleInfo2` メソッドは、モジュールの ID が存在するとすぐに呼び出される場合がありますが、プロファイラーが[ICorProfilerCallback:: ModuleAttachedToAssembly](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleattachedtoassembly-method.md)コールバックを受け取るまで、親アセンブリの id は使用できません。  
+ `GetModuleInfo2` メソッドは、モジュールの ID が存在するとすぐに呼び出される場合がありますが、プロファイラーが[ICorProfilerCallback:: ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md)コールバックを受け取るまで、親アセンブリの id は使用できません。  
   
  `GetModuleInfo2` から制御が戻ったら、`szName` バッファーのサイズが十分で、モジュールのファイル名全体を格納できたかどうかを確認する必要があります。 これを行うには、`pcchName` が指している値を `cchName` パラメーターの値と比較します。 `pcchName` が指している値が `cchName` の値より大きい場合は、`szName` バッファーの割り当てを増やし、`cchName` を新しい大きいサイズに更新して、`GetModuleInfo2` を再度呼び出します。  
   
@@ -81,6 +81,6 @@ HRESULT GetModuleInfo2(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [プロファイル](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [プロファイル](index.md)

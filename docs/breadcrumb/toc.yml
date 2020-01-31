@@ -166,9 +166,6 @@
             - name: 依存関係の読み込み
               tocHref: /dotnet/core/dependency-loading/
               topicHref: /dotnet/core/dependency-loading/overview
-            - name: .NET Core でのビルド
-              tocHref: /dotnet/core/build/
-              topicHref: /dotnet/core/build/index
         - name: .NET Framework
           tocHref: /dotnet/framework/
           topicHref: /dotnet/framework/index

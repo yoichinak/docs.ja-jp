@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 72399636-c219-4ffd-8ac8-39432c9d4641
 topic_type:
 - apiref
-ms.openlocfilehash: 45593e7e30e1c8f8036489936aab3c607b01dd52
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f7bc1954d11134a4515d2e29e9e0eb1626ae5d26
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438648"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863429"
 ---
 # <a name="icorprofilerinfosetenterleavefunctionhooks-method"></a>ICorProfilerInfo::SetEnterLeaveFunctionHooks メソッド
 マネージ関数の "enter"、"leave"、および "tailcall" フックで呼び出されるプロファイラー実装関数を指定します。  
@@ -36,20 +36,20 @@ HRESULT SetEnterLeaveFunctionHooks(
   
 ## <a name="parameters"></a>パラメーター  
  `pFuncEnter`  
- から[Functionenter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)コールバックとして使用される実装へのポインター。  
+ から[Functionenter](functionenter-function.md)コールバックとして使用される実装へのポインター。  
   
  `pFuncLeave`  
- から[Functionleave](../../../../docs/framework/unmanaged-api/profiling/functionleave-function.md)コールバックとして使用される実装へのポインター。  
+ から[Functionleave](functionleave-function.md)コールバックとして使用される実装へのポインター。  
   
  `pFuncTailcall`  
- から[FunctionTailcall](../../../../docs/framework/unmanaged-api/profiling/functiontailcall-function.md)コールバックとして使用される実装へのポインター。  
+ から[FunctionTailcall](functiontailcall-function.md)コールバックとして使用される実装へのポインター。  
   
 ## <a name="remarks"></a>コメント  
  .NET Framework バージョン1.0 では、対応するコールバックを無効にするために、各関数ポインターを null にすることができます。  
   
- 一度にアクティブにできるコールバックのセットは1つだけです。 したがって、プロファイラーが `SetEnterLeaveFunctionHooks` と[ICorProfilerInfo2:: SetEnterLeaveFunctionHooks2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)の両方を呼び出すと、`SetEnterLeaveFunctionHooks2` が優先されます。  
+ 一度にアクティブにできるコールバックのセットは1つだけです。 したがって、プロファイラーが `SetEnterLeaveFunctionHooks` と[ICorProfilerInfo2:: SetEnterLeaveFunctionHooks2](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)の両方を呼び出すと、`SetEnterLeaveFunctionHooks2` が優先されます。  
   
- `SetEnterLeaveFunctionHooks` メソッドは、プロファイラーの[ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)コールバックからのみ呼び出すことができます。  
+ `SetEnterLeaveFunctionHooks` メソッドは、プロファイラーの[ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)コールバックからのみ呼び出すことができます。  
   
 ## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -62,4 +62,4 @@ HRESULT SetEnterLeaveFunctionHooks(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

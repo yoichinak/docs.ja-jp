@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: f4deec3e2b49b5cd6a924af8024e775c5c549f97
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6cd35c180b8a322b3402b050c6d6840073010b1f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440854"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866984"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 関数
-コントロールが関数に渡されていることをプロファイラーに通知し、スタックフレームと関数の引数に関する情報を提供します。 この関数は、 [Functionenter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)関数よりも優先されます。  
+コントロールが関数に渡されていることをプロファイラーに通知し、スタックフレームと関数の引数に関する情報を提供します。 この関数は、 [Functionenter](functionenter-function.md)関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,23 +35,28 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `funcId`  
- からコントロールが渡される関数の識別子。  
+## <a name="parameters"></a>パラメーター
+
+- `funcId`
+
+  \[] には、コントロールが渡される関数の識別子を指定します。
+
+- `clientData`
+
+  \[] マップされていない関数の識別子。これは、プロファイラーが以前に[Functionidmapper](functionidmapper-function.md)関数を使用して指定したものです。
   
- `clientData`  
- からマップされた関数の識別子。これは、プロファイラーが以前に[Functionidmapper](../../../../docs/framework/unmanaged-api/profiling/functionidmapper-function.md)関数を使用して指定したものです。  
+- `func`
+
+  \[] で、スタックフレームに関する情報を指す `COR_PRF_FRAME_INFO` 値です。
   
- `func`  
- からスタックフレームに関する情報を指す `COR_PRF_FRAME_INFO` 値。  
+  プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
   
- プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
-  
- `argumentInfo`  
- から関数の引数のメモリ内の場所を指定する[COR_PRF_FUNCTION_ARGUMENT_INFO](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-info-structure.md)構造体へのポインター。  
-  
- 引数情報にアクセスするには、`COR_PRF_ENABLE_FUNCTION_ARGS` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)メソッドを使用してイベントフラグを設定できます。  
-  
+- `argumentInfo`
+
+  \[]、関数の引数のメモリ内の場所を指定する[COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md)構造体へのポインター。
+
+  引数情報にアクセスするには、`COR_PRF_ENABLE_FUNCTION_ARGS` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッドを使用してイベントフラグを設定できます。
+
 ## <a name="remarks"></a>コメント  
  `func` パラメーターと `argumentInfo` パラメーターの値は、値が変更されるか、または破棄される可能性があるため、`FunctionEnter2` 関数から制御が戻った後に無効になります。  
   
@@ -78,7 +83,7 @@ void __stdcall FunctionEnter2 (
   
 ## <a name="see-also"></a>関連項目
 
-- [FunctionLeave2 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [グローバル静的関数のプロファイル](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionLeave2 関数](functionleave2-function.md)
+- [FunctionTailcall2 関数](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 メソッド](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [グローバル静的関数のプロファイル](profiling-global-static-functions.md)

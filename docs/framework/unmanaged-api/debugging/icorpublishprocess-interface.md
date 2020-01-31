@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-ms.openlocfilehash: 04f6a088c5bbe96e3909ba600aa8ffab937abe2d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3ae48df9e66890161c1aef944d37b0a279939d56
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140404"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790539"
 ---
 # <a name="icorpublishprocess-interface"></a>ICorPublishProcess インターフェイス
 プロセスについて表示される情報にアクセスするメソッドを提供します。  
@@ -28,12 +28,12 @@ ms.locfileid: "73140404"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumAppDomains メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-enumappdomains-method.md)|この `ICorPublishProcess`によって参照されるプロセス内のアプリケーションドメインを含む[ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)インスタンスを取得します。|  
-|[GetDisplayName メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getdisplayname-method.md)|この `ICorPublishProcess`によって参照されるプロセスの実行可能ファイルの完全パスを取得します。|  
-|[GetProcessID メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-getprocessid-method.md)|この `ICorPublishProcess`によって参照されるプロセスのオペレーティングシステム識別子を取得します。|  
-|[IsManaged メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-ismanaged-method.md)|この `ICorPublishProcess` によって参照されるプロセスがマネージコードを実行していることがわかっているかどうかを示す値を取得します。|  
+|[EnumAppDomains メソッド](icorpublishprocess-enumappdomains-method.md)|この `ICorPublishProcess`によって参照されるプロセス内のアプリケーションドメインを含む[ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)インスタンスを取得します。|  
+|[GetDisplayName メソッド](icorpublishprocess-getdisplayname-method.md)|この `ICorPublishProcess`によって参照されるプロセスの実行可能ファイルの完全パスを取得します。|  
+|[GetProcessID メソッド](icorpublishprocess-getprocessid-method.md)|この `ICorPublishProcess`によって参照されるプロセスのオペレーティングシステム識別子を取得します。|  
+|[IsManaged メソッド](icorpublishprocess-ismanaged-method.md)|この `ICorPublishProcess` によって参照されるプロセスがマネージコードを実行していることがわかっているかどうかを示す値を取得します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  
@@ -44,5 +44,5 @@ ms.locfileid: "73140404"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish コクラス](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [CorpubPublish コクラス](corpubpublish-coclass.md)

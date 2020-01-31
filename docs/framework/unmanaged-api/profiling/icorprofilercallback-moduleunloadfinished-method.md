@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 185e3327-9f9c-44bc-8a5c-febea9a6bb5b
 topic_type:
 - apiref
-ms.openlocfilehash: 40cb666c47c690dc930ec2cb7f6c89662464780e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b13573d19ab4d8bb655c1e153530dc70173abe82
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445911"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866144"
 ---
 # <a name="icorprofilercallbackmoduleunloadfinished-method"></a>ICorProfilerCallback::ModuleUnloadFinished メソッド
 モジュールがアンロードを終了したことをプロファイラーに通知します。  
@@ -41,7 +41,7 @@ HRESULT ModuleUnloadFinished(
  からモジュールが正常にアンロードされたかどうかを示す HRESULT。  
   
 ## <a name="remarks"></a>コメント  
- `moduleId` の値は、 [ICorProfilerCallback:: ModuleUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleunloadstarted-method.md)メソッドが返された後の情報要求に対して無効です。  
+ `moduleId` の値は、 [ICorProfilerCallback:: ModuleUnloadStarted](icorprofilercallback-moduleunloadstarted-method.md)メソッドが返された後の情報要求に対して無効です。  
   
  `ModuleUnloadFinished` コールバックの後に、クラスのアンロードの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、モジュールのアンロードの最初の部分が成功したことのみを示します。  
   
@@ -54,6 +54,6 @@ HRESULT ModuleUnloadFinished(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

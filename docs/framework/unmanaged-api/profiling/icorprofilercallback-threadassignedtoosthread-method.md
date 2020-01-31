@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9671e5a-7b14-4f5b-8404-58136422c8b2
 topic_type:
 - apiref
-ms.openlocfilehash: 1b69c0522c47d4e675180af67adab166626da4d7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0e8c91f65d4ebec07689a42d4517fc100fce136d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440028"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865845"
 ---
 # <a name="icorprofilercallbackthreadassignedtoosthread-method"></a>ICorProfilerCallback::ThreadAssignedToOSThread メソッド
 特定のオペレーティングシステムスレッドを使用してマネージスレッドが実装されていることをプロファイラーに通知します。  
@@ -40,7 +40,7 @@ HRESULT ThreadAssignedToOSThread(
  `osThreadId`  
  からオペレーティングシステムスレッドの識別子。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `ThreadAssignedToOSThread` コールバックが存在するので、プロファイラーは、オペレーティングシステムスレッドのファイバー全体でマネージスレッドに対して正確なマッピングを維持できます。  
   
 ## <a name="requirements"></a>要件  
@@ -52,6 +52,6 @@ HRESULT ThreadAssignedToOSThread(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

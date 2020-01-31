@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c2f45801-dd38-4b78-b6b7-64397dc73f83
 topic_type:
 - apiref
-ms.openlocfilehash: 62035d623d56f7521e0a599a13bc20778e3f18d1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3e13b17fb03530730a78f6889309f1993419574b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449908"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866214"
 ---
 # <a name="icorprofilercallbackjitinlining-method"></a>ICorProfilerCallback::JITInlining メソッド
 Just-in-time (JIT) コンパイラが、別の関数と共に関数を挿入しようとしていることをプロファイラーに通知します。  
@@ -45,7 +45,7 @@ HRESULT JITInlining(
  [out] 挿入を行うことができるように `true` します。それ以外の場合は、`false`ます。  
   
 ## <a name="remarks"></a>コメント  
- プロファイラーは `pfShouldInline` を `false` に設定して、`calleeId` 関数が `callerId` 関数に挿入されないようにすることができます。 また、プロファイラーは、 [COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列挙体の COR_PRF_DISABLE_INLINING 値を使用して、インライン挿入をグローバルに無効にすることができます。  
+ プロファイラーは `pfShouldInline` を `false` に設定して、`calleeId` 関数が `callerId` 関数に挿入されないようにすることができます。 また、プロファイラーは、 [COR_PRF_MONITOR](cor-prf-monitor-enumeration.md)列挙体の COR_PRF_DISABLE_INLINING 値を使用して、インライン挿入をグローバルに無効にすることができます。  
   
  インラインで挿入された関数は、入力または終了するためのイベントを発生させません。 したがって、正確なコールグラフを生成するためには、プロファイラーで `pfShouldInline` を `false` に設定する必要があります。 `pfShouldInline` を `false` に設定すると、パフォーマンスに影響します。インライン挿入では通常、速度が向上し、挿入されたメソッドの個別の JIT コンパイルイベントの数が減少するためです。  
   
@@ -58,6 +58,6 @@ HRESULT JITInlining(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

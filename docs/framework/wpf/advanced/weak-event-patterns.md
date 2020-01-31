@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: c0bf92c9b6046d531e75771a9205e6dffe0fd367
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 9f61a5a60b2ba1305158d1ab570079fe6aac19ac
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458486"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76870741"
 ---
 # <a name="weak-event-patterns"></a>弱いイベント パターン
 アプリケーションでは、イベントソースにアタッチされているハンドラーが、ハンドラーをソースにアタッチしたリスナーオブジェクトと連携して破棄されない可能性があります。 このような状況では、メモリリークが発生する可能性があります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、特定のイベントに専用のマネージャークラスを提供し、そのイベントのリスナーにインターフェイスを実装することによって、この問題に対処するために使用できるデザインパターンが導入されています。 この設計パターンは、*弱いイベントパターン*と呼ばれます。  
@@ -36,7 +36,7 @@ ms.locfileid: "73458486"
 |既存の weak イベントマネージャークラスを使用する|サブスクライブするイベントに対応する <xref:System.Windows.WeakEventManager>がある場合は、既存の弱いイベントマネージャーを使用します。 WPF に含まれる弱いイベントマネージャーの一覧については、<xref:System.Windows.WeakEventManager> クラスの継承階層を参照してください。 含まれている弱いイベントマネージャーには制限があるため、他の方法のいずれかを選択する必要がある場合があります。|  
 |汎用の弱いイベントマネージャークラスを使用する|既存の <xref:System.Windows.WeakEventManager> を使用できない場合は、汎用 <xref:System.Windows.WeakEventManager%602> を使用します。これにより簡単に実装できます。効率について心配する必要はありません。 汎用 <xref:System.Windows.WeakEventManager%602> は、既存またはカスタムの弱いイベントマネージャーよりも効率が悪くなります。 たとえば、ジェネリッククラスは、イベントの名前を指定してイベントを検出するために、より多くのリフレクションを行います。 また、ジェネリック <xref:System.Windows.WeakEventManager%602> を使用してイベントを登録するコードは、既存またはカスタムの <xref:System.Windows.WeakEventManager>を使用するよりも詳細です。|  
 |カスタムの weak イベントマネージャークラスを作成する|既存の <xref:System.Windows.WeakEventManager> を使用できず、効率を上げるために、カスタム <xref:System.Windows.WeakEventManager> を作成します。 カスタム <xref:System.Windows.WeakEventManager> を使用してイベントをサブスクライブする方が効率的ですが、最初により多くのコードを記述するコストが発生します。|  
-|サードパーティの弱いイベントマネージャーを使用する|NuGet には[いくつかの弱いイベントマネージャー](https://www.nuget.org/packages?q=weak+event+manager&prerel=false)があり、多くの WPF フレームワークでもパターンがサポートされています (例については、[疎結合イベントサブスクリプションに関する Prism のドキュメント](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/Communication.md#subscribing-to-events)を参照してください)。|
+|サードパーティの弱いイベントマネージャーを使用する|NuGet には[いくつかの弱いイベントマネージャー](https://www.nuget.org/packages?q=weak+event+manager&prerel=false)があり、多くの WPF フレームワークでもパターンがサポートされています (例については、[疎結合イベントサブスクリプションに関する Prism のドキュメント](https://github.com/PrismLibrary/Prism-Documentation/blob/master/docs/wpf/legacy/Communication.md#subscribing-to-events)を参照してください)。|
 
  以下のセクションでは、弱いイベントパターンを実装する方法について説明します。  この説明のために、サブスクライブするイベントには次の特性があります。  
   

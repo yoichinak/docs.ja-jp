@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 051465b9-e479-494a-804b-c880323b4cbe
 topic_type:
 - apiref
-ms.openlocfilehash: d2a0bff0d3d93ab8542699cffd3d0ecc032246ad
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5f4ef55561c23997fca51dc7d463e2eefdba7d65
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448201"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864311"
 ---
 # <a name="icorprofilerfunctionenumskip-method"></a>ICorProfilerFunctionEnum::Skip メソッド
 指定した数の要素がスキップされるように、この列挙子のカーソルを現在の位置から進めます。  
@@ -55,7 +55,7 @@ HRESULT Skip([in] ULONG celt);
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerFunctionEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerFunctionEnum インターフェイス](icorprofilerfunctionenum-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)

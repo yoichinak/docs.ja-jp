@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce8f6aa6-4ebf-4a86-b429-4bbc8af41a8f
 topic_type:
 - apiref
-ms.openlocfilehash: 41021a524142afe34727584265aee578e31a64b3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 945cf84e6f6201879514e29a21f7f5462aa33fdb
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433216"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868669"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs メソッド
 指定されたメタデータトークン、格納クラス、および任意の型引数の `ClassID` 値を使用して、関数の `FunctionID` を取得します。  
@@ -61,7 +61,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
  関数がまだ読み込まれていない場合は、`GetFunctionFromTokenAndTypeArgs` を呼び出すと読み込みが発生します。これは、多くのコンテキストでは危険な操作です。 たとえば、モジュールまたは型の読み込み中にこのメソッドを呼び出すと、ランタイムが循環読み込みを試みたときに無限ループが発生する可能性があります。  
   
- 一般に、`GetFunctionFromTokenAndTypeArgs` の使用は推奨されていません。 プロファイラーが特定の関数のイベントに関心を持っている場合は、その関数の `ModuleID` と `mdMethodDef` を格納し、 [ICorProfilerInfo2:: GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)を使用して、特定の `FunctionID` が目的の関数のものであるかどうかを確認する必要があります。  
+ 一般に、`GetFunctionFromTokenAndTypeArgs` の使用は推奨されていません。 プロファイラーが特定の関数のイベントに関心を持っている場合は、その関数の `ModuleID` と `mdMethodDef` を格納し、 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)を使用して、特定の `FunctionID` が目的の関数のものであるかどうかを確認する必要があります。  
   
 ## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -74,5 +74,5 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 インターフェイス](icorprofilerinfo2-interface.md)

@@ -2,12 +2,12 @@
 title: NuGet パッケージの公開
 description: .NET ライブラリを NuGet に公開するためのベスト プラクティスの推奨事項。
 ms.date: 10/02/2018
-ms.openlocfilehash: e567fe3f7e00bf322cdd50786e50128961107469
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 089c660bc51252c6295858b1462ae59bde968564
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706466"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744562"
 ---
 # <a name="publishing-a-nuget-package"></a>NuGet パッケージの公開
 
@@ -22,11 +22,11 @@ NuGet パッケージは、パッケージ リポジトリから公開され、�
 > [!NOTE]
 > NuGet.org では、一度アップロードしたら[パッケージを削除することはできません](/nuget/policies/deleting-packages)。 一般の UI から見えないようにパッケージを一覧から外すことはできますが、`*.nupkg` は引き続き復元でダウンロードできます。 また、nuget.org では、パッケージのバージョンを重複させることはできません。 エラーを含む NuGet パッケージを修正するには、正しくないパッケージを一覧から外し、バージョン番号をインクリメントして新しいバージョンのパッケージを公開する必要があります。
 
-**✔️ 実行** コミュニティからのフィードバックが必要な[安定版パッケージとプレリリース パッケージを公開する](/nuget/create-packages/publish-a-package)場合、NuGet.org を選択します。
+✔️ 実行 コミュニティからのフィードバックが必要な[安定版パッケージとプレリリース パッケージを公開する](/nuget/create-packages/publish-a-package)場合、NuGet.org を選択します。
 
-**✔️ 検討** 継続的インテグレーションによるビルドから、プレリリース パッケージを MyGet のフィードに公開します。
+✔️ 検討 継続的インテグレーションによるビルドから、プレリリース パッケージを MyGet のフィードに公開します。
 
-**✔️ 検討** ローカル フィードか MyGet を使用して、開発環境でパッケージをテストします。 パッケージの動作を確認したら、NuGet.org に公開します。
+✔️ 検討 ローカル フィードか MyGet を使用して、開発環境でパッケージをテストします。 パッケージの動作を確認したら、NuGet.org に公開します。
 
 ## <a name="nugetorg-security"></a>NuGet.org のセキュリティ
 
@@ -34,11 +34,11 @@ NuGet パッケージは、パッケージ リポジトリから公開され、�
 
 ![代替テキスト](./media/publish-nuget-package/nuget-2fa.png "NuGet アカウントのセキュリティ")
 
-**✔️ 実行** Microsoft アカウントを使用して NuGet にサインインします。
+✔️ 実行 Microsoft アカウントを使用して NuGet にサインインします。
 
-**✔️ 実行** NuGet へのアクセスに対して 2 要素認証を有効にします。
+✔️ 実行 NuGet へのアクセスに対して 2 要素認証を有効にします。
 
-**✔️ 実行** パッケージが公開されたときの電子メール通知を有効にします。
+✔️ 実行 パッケージが公開されたときの電子メール通知を有効にします。
 
 >[!div class="step-by-step"]
 >[前へ](sourcelink.md)

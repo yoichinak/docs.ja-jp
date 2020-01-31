@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 55a2f907-d216-42eb-8f2f-e5d59c2eebd6
 topic_type:
 - apiref
-ms.openlocfilehash: dffd4365669da61f7b321110ad663c131ce591e6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ce9a7a56847efcadf09924ffc56c41f20a1c58
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439670"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865728"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 メソッド
-ガベージコレクションが発生した後のルート参照をプロファイラーに通知します。 このメソッドは、 [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)メソッドの拡張です。  
+ガベージコレクションが発生した後のルート参照をプロファイラーに通知します。 このメソッドは、 [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md)メソッドの拡張です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,10 +44,10 @@ HRESULT RootReferences2(
  からオブジェクト Id の配列。それぞれが静的オブジェクトまたはスタック上のオブジェクトを参照します。 `rootKinds` 配列内の要素は、`rootRefIds` 配列内の対応する要素を分類するための情報を提供します。  
   
  `rootKinds`  
- からガベージコレクションのルートの型を示す[COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md)値の配列。  
+ からガベージコレクションのルートの型を示す[COR_PRF_GC_ROOT_KIND](cor-prf-gc-root-kind-enumeration.md)値の配列。  
   
  `rootFlags`  
- からガベージコレクションのルートのプロパティを記述する[COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md)値の配列。  
+ からガベージコレクションのルートのプロパティを記述する[COR_PRF_GC_ROOT_FLAGS](cor-prf-gc-root-flags-enumeration.md)値の配列。  
   
  `rootIds`  
  から`rootKinds` パラメーターの値に応じて、ガベージコレクションのルートに関する追加情報を格納している整数を指す UINT_PTR 値の配列。  
@@ -61,7 +61,7 @@ HRESULT RootReferences2(
   
  `rootRefIds` のエントリをゼロにすることができます。これは、対応するルート参照が null で、マネージヒープ上のオブジェクトを参照しないことを意味します。  
   
- `RootReferences2` によって返されるオブジェクト Id は、コールバック自体では無効です。これは、ガベージコレクションが古いアドレスから新しいアドレスにオブジェクトを移動する途中である可能性があるためです。 このため、`RootReferences2` 呼び出しの間、プロファイラーはオブジェクトを検査するべきではありません。 [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)が呼び出されると、すべてのオブジェクトが新しい場所に移動され、安全に検査できるようになります。  
+ `RootReferences2` によって返されるオブジェクト Id は、コールバック自体では無効です。これは、ガベージコレクションが古いアドレスから新しいアドレスにオブジェクトを移動する途中である可能性があるためです。 このため、`RootReferences2` 呼び出しの間、プロファイラーはオブジェクトを検査するべきではありません。 [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)が呼び出されると、すべてのオブジェクトが新しい場所に移動され、安全に検査できるようになります。  
   
 ## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -72,7 +72,7 @@ HRESULT RootReferences2(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 インターフェイス](icorprofilercallback2-interface.md)

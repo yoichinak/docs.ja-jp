@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92d76893-683c-475d-9996-5bff03cdb10f
 topic_type:
 - apiref
-ms.openlocfilehash: ade0ba0517e47e9500683836b87d7a8ac1dfcfdb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b9093f920a8c14247bc51471da3682c7e500afa4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439850"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865806"
 ---
 # <a name="icorprofilercallback2finalizeableobjectqueued-method"></a>ICorProfilerCallback2::FinalizeableObjectQueued メソッド
 ファイナライザーを持つオブジェクトが `Finalize` メソッドを実行するためにファイナライザースレッドに対してキューに登録されていることをコードプロファイラーに通知します。  
@@ -35,7 +35,7 @@ HRESULT FinalizeableObjectQueued(
   
 ## <a name="parameters"></a>パラメーター  
  `finalizerFlags`  
- からファイナライザーの側面を説明する[COR_PRF_FINALIZER_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-finalizer-flags-enumeration.md)列挙体の値。  
+ からファイナライザーの側面を説明する[COR_PRF_FINALIZER_FLAGS](cor-prf-finalizer-flags-enumeration.md)列挙体の値。  
   
  `objectID`  
  からキューに登録されたオブジェクトの ID。  
@@ -49,7 +49,7 @@ HRESULT FinalizeableObjectQueued(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 インターフェイス](icorprofilercallback2-interface.md)

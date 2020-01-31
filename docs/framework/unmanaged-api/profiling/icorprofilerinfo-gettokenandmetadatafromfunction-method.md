@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e525aa16-c923-4b16-833b-36f1f0dd70fc
 topic_type:
 - apiref
-ms.openlocfilehash: b3e14230888e9bf846879d5728c2b20883fb8d53
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: d924dbf21a0f0b046c8d8f8f294e91bc5ff6c015
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74438742"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869412"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction メソッド
 指定された関数のトークンに対して使用できるメタデータトークンとメタデータインターフェイスインスタンスを取得します。  
@@ -57,6 +57,6 @@ HRESULT GetTokenAndMetaDataFromFunction(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b159c712-00f4-4fc7-a990-40bf9f642e8f
 topic_type:
 - apiref
-ms.openlocfilehash: da81bd3e255898543c94d4ac64c6afbf39b6bdba
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 296c3973403a5b09332efa24961d7a474d814aab
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449877"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863349"
 ---
 # <a name="icorprofilerinfosetilfunctionbody-method"></a>ICorProfilerInfo::SetILFunctionBody メソッド
 指定したモジュール内の指定した関数の本体を置き換えます。  
@@ -49,7 +49,7 @@ HRESULT SetILFunctionBody(
   
  `SetILFunctionBody` メソッドは、just-in-time (JIT) コンパイラによってコンパイルされたことがない関数に対してのみ呼び出すことができます。  
   
- [ICorProfilerInfo:: GetILFunctionBodyAllocator](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getilfunctionbodyallocator-method.md)メソッドを使用して、新しいメソッドの領域を割り当て、バッファーに互換性があることを確認します。  
+ [ICorProfilerInfo:: GetILFunctionBodyAllocator](icorprofilerinfo-getilfunctionbodyallocator-method.md)メソッドを使用して、新しいメソッドの領域を割り当て、バッファーに互換性があることを確認します。  
   
 ## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -60,6 +60,6 @@ HRESULT SetILFunctionBody(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

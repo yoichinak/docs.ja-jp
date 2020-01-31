@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Image
 - Image control type
 ms.assetid: 4e0eeefb-e09b-46d2-b83b-0a7e35543ab8
-ms.openlocfilehash: 504ef2e8ceb5a359ecb9ac74c5da5c8dfabccaa2
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ffc6c047390eca4110201265207e25181ef7740d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741201"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789449"
 ---
 # <a name="ui-automation-support-for-the-image-control-type"></a>UI オートメーションによる Image コントロール型のサポート
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741201"
   
  アイコン、情報のグラフィック、チャートとして使用されるイメージ コントロールは、Image コントロール型をサポートします。 背景、またはウォーターマークのイメージとして使用されるコントロールは、Image コントロール型をサポートしません。  
   
- 以降のセクションで、Image コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、イベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]にかかわらず、すべてのイメージコントロールに適用されます。  
+ 以降のセクションで、Image コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、イベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32、Windows フォームにかかわらず、すべてのイメージコントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  

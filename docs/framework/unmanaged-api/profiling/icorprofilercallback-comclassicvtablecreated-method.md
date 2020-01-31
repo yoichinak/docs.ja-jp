@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e1834ab-c359-498a-b10b-984ae23cdda4
 topic_type:
 - apiref
-ms.openlocfilehash: 79be2572f52ec509d9551261074204bf62ad5388
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 808c26f53c4089248420280a43c88a1b3af0dad9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445053"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866547"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated メソッド
 指定した IID およびクラスの COM 相互運用機能の vtable が作成されたことをプロファイラーに通知します。  
@@ -35,20 +35,25 @@ HRESULT COMClassicVTableCreated(
     [in] ULONG   cSlots);  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `wrappedClasId`  
- からVtable が作成されたクラスの ID。  
-  
- `implementedIID`  
- からクラスによって実装されるインターフェイスの ID。 この値は、インターフェイスが内部でのみ使用されている場合は NULL になります。  
-  
- `pVTable`  
- からVtable の先頭へのポインター。  
-  
- `cSlots`  
- からVtable 内のスロットの数。  
-  
-## <a name="remarks"></a>コメント  
+## <a name="parameters"></a>パラメーター
+
+- `wrappedClasId`
+
+  \[] には、vtable が作成されたクラスの ID を指定します。
+
+- `implementedIID`
+
+  \[] クラスによって実装されるインターフェイスの ID。 この値は、インターフェイスが内部でのみ使用されている場合は NULL になります。
+
+- `pVTable`
+
+  \[] には、vtable の先頭へのポインターが含まれています。
+
+- `cSlots`
+
+  \[] には、vtable 内のスロットの数を指定します。
+
+## <a name="remarks"></a>Remarks  
  プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   
  プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
@@ -64,5 +69,5 @@ HRESULT COMClassicVTableCreated(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [COMClassicVTableDestroyed メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtabledestroyed-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [COMClassicVTableDestroyed メソッド](icorprofilercallback-comclassicvtabledestroyed-method.md)

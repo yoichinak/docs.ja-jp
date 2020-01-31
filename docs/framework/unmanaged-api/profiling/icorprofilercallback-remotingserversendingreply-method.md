@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe84a19-2e03-4be2-8b25-f02bad38e4a9
 topic_type:
 - apiref
-ms.openlocfilehash: 1aa5a0d20ee87fe4362016ed0d7fa29ef786460e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f77901623ef4df7b43276c18a910cf62fcc4451d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74430719"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865975"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply メソッド
 プロセスがリモートメソッド呼び出し要求の処理を完了したこと、およびチャネルを介して応答を送信しようとしていることをプロファイラーに通知します。  
@@ -35,7 +35,7 @@ HRESULT RemotingServerSendingReply(
   
 ## <a name="parameters"></a>パラメーター  
  `pCookie`  
- から次の条件下で[ICorProfilerCallback:: RemotingClientReceivingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)で指定された値に対応する GUID へのポインター。  
+ から次の条件下で[ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md)で指定された値に対応する GUID へのポインター。  
   
 - リモート処理 GUID クッキーはアクティブです。  
   
@@ -57,6 +57,6 @@ HRESULT RemotingServerSendingReply(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

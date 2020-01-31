@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3a36987-5666-4e2f-95b5-d0cb246502ec
 topic_type:
 - apiref
-ms.openlocfilehash: 37400e3b69b3884e31479fd7cdfccb473408bfbf
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 85319a45861b2b48f7690f69bb8f9f9469af014c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433394"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862803"
 ---
 # <a name="icorprofilerinfo2getclasslayout-method"></a>ICorProfilerInfo2::GetClassLayout メソッド
 指定したクラスで定義されるフィールドのメモリ内レイアウトに関する情報を取得します。 つまり、このメソッドはクラスのフィールドのオフセットを取得します。  
@@ -55,7 +55,7 @@ HRESULT GetClassLayout(
 ## <a name="remarks"></a>コメント  
  `GetClassLayout` メソッドは、クラス自体によって定義されているフィールドのみを返します。 クラスの親クラスもフィールドを定義している場合、プロファイラーは親クラスで `GetClassLayout` を呼び出してそのフィールドを取得する必要があります。  
   
- `GetClassLayout` を文字列クラスと一緒に使用する場合、このメソッドは E_INVALIDARG というエラー コードで失敗します。 文字列のレイアウトに関する情報を取得するには、 [ICorProfilerInfo2:: GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)を使用します。 `GetClassLayout` は、配列クラスを使用して呼び出された場合にも失敗します。  
+ `GetClassLayout` を文字列クラスと一緒に使用する場合、このメソッドは E_INVALIDARG というエラー コードで失敗します。 文字列のレイアウトに関する情報を取得するには、 [ICorProfilerInfo2:: GetStringLayout](icorprofilerinfo2-getstringlayout-method.md)を使用します。 `GetClassLayout` は、配列クラスを使用して呼び出される場合も失敗します。  
   
  `GetClassLayout` から制御が戻ったら、`rFieldOffset` バッファーのサイズが十分で、すべての使用可能な `COR_FIELD_OFFSET` 構造体を格納できたかどうかを確認する必要があります。 これを行うには、`pcFieldOffset` が指している値と、`rFieldOffset` のサイズを `COR_FIELD_OFFSET` 構造体のサイズで割った値を比較します。 `rFieldOffset` の大きさが十分でない場合は、`rFieldOffset` バッファーの割り当てを増やし、`cFieldOffset` を新しい大きいサイズに更新して、`GetClassLayout` を再度呼び出します。  
   
@@ -72,7 +72,7 @@ HRESULT GetClassLayout(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [プロファイル](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 インターフェイス](icorprofilerinfo2-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [プロファイル](index.md)

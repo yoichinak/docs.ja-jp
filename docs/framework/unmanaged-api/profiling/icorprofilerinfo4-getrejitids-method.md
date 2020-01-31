@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 634ac28c-a5b7-4fc3-af84-256c24ca8177
 topic_type:
 - apiref
-ms.openlocfilehash: f6d26abba649b608858fde8beaac750600493869
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9069498a4f62f4d9dbb50a7075323b14c3cc5ab9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74442856"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868448"
 ---
 # <a name="icorprofilerinfo4getrejitids-method"></a>ICorProfilerInfo4::GetReJITIDs メソッド
 割り当てられている指定された関数のすべての JIT 再コンパイルバージョンを識別する Id の配列を返します。 これには、後で元に戻されたがまだ解放されていない関数の JIT 再コンパイルバージョンが含まれます (たとえば、元に戻された関数を含むアプリケーションドメインがまだ使用されている場合など)。  
@@ -48,7 +48,7 @@ HRESULT GetReJITIDs (
  `reJitIds`  
  入出力指定した関数の JIT 再コンパイルされた Id を格納する、呼び出し元が割り当てた配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `GetReJITIDs` は、指定された関数インスタンスのアクティブな JIT 再コンパイル済み Id を列挙します。 これは、呼び出し元が割り当てたバッファーを受け入れる他の `ICorProfilerInfo` 関数と同じ使用パターンに従います。  
   
 ## <a name="requirements"></a>要件  
@@ -60,8 +60,8 @@ HRESULT GetReJITIDs (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [プロファイル](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo4 インターフェイス](icorprofilerinfo4-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [プロファイル](index.md)

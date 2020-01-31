@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 700e0af05828b9fe0a50c1aac114e840adc276b5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9953d0f3e1a4d4cd935918f0e5721e474453ca7d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131851"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791909"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext メソッド
-[は、テキストオブジェクト内](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)の現在のフレームのコンテキストを返します。  
+[は、テキストオブジェクト内](icordebugstackwalk-interface.md)の現在のフレームのコンテキストを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,15 +54,15 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |-------------|-----------------|  
 |S_OK|現在のフレームのコンテキストが正常に返されました。|  
 |E_FAIL|コンテキストを返すことができませんでした。|  
-|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT BUFFER)|コンテキストバッファーが小さすぎます。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|コンテキストバッファーが小さすぎます。|  
 |CORDBG_E_PAST_END_OF_STACK|フレームポインターは既にスタックの末尾にあります。そのため、追加のフレームにアクセスすることはできません。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  アンワインドでは、非揮発性レジスタなどのレジスタのサブセットのみが復元されるため、呼び出し時にコンテキストがレジスタの状態と完全に一致するとは限りません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -73,5 +73,5 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

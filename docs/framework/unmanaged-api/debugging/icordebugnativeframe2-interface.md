@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52a80838-af36-4399-bc97-d8a4c6d76df2
 topic_type:
 - apiref
-ms.openlocfilehash: bff6dea0e870cf62734fa583eefa481c594481b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22a3f39bc1f9b4e6cad1db4fd0a6480b7c04e8fa
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096519"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792751"
 ---
 # <a name="icordebugnativeframe2-interface"></a>ICorDebugNativeFrame2 インターフェイス
 子と親のフレームの関係をテストするメソッドを提供します。  
@@ -28,17 +28,17 @@ ms.locfileid: "73096519"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[IsChild メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ischild-method.md)|現在のフレームが子フレームであるかどうかを判断します。|  
-|[IsMatchingParentFrame メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)|指定したフレームが現在のフレームの親であるかどうかを判断します。|  
-|[GetStackParameterSize メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-getstackparametersize-method.md)|X86 オペレーティングシステムのスタックのパラメーターの累積サイズを返します。|  
+|[IsChild メソッド](icordebugnativeframe2-ischild-method.md)|現在のフレームが子フレームであるかどうかを判断します。|  
+|[IsMatchingParentFrame メソッド](icordebugnativeframe2-ismatchingparentframe-method.md)|指定したフレームが現在のフレームの親であるかどうかを判断します。|  
+|[GetStackParameterSize メソッド](icordebugnativeframe2-getstackparametersize-method.md)|X86 オペレーティングシステムのスタックのパラメーターの累積サイズを返します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このインターフェイスは、"" の "テキスト" インターフェイスを論理的に拡張します。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -49,5 +49,5 @@ ms.locfileid: "73096519"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

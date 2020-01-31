@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f8e498f8-f93a-4b82-bd22-55bdbf5e8d45
 topic_type:
 - apiref
-ms.openlocfilehash: 3c573c709e765fa723a726f5c8990ba59222ed1f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 096489fcdc9d604e003386501c22967b45ba6d7f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428135"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861113"
 ---
 # <a name="icorprofilerobjectenumskip-method"></a>ICorProfilerObjectEnum::Skip メソッド
 指定された数の要素がスキップされるように、この列挙子のカーソルを現在の位置から進めます。  
@@ -49,6 +49,6 @@ HRESULT Skip (
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerObjectEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)
+- [ICorProfilerObjectEnum インターフェイス](icorprofilerobjectenum-interface.md)

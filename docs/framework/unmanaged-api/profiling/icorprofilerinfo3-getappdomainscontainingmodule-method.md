@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 603b3881-ea94-4dca-95cd-91eebac873a0
 topic_type:
 - apiref
-ms.openlocfilehash: 93c042d760eab4bcb1846701ad92ac38cb473c69
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 56221c6b3ac40595e999f2a2a3739f023441c46d
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449737"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862413"
 ---
 # <a name="icorprofilerinfo3getappdomainscontainingmodule-method"></a>ICorProfilerInfo3::GetAppDomainsContainingModule メソッド
 指定したモジュールが読み込まれているアプリケーション ドメインの識別子を取得します。  
@@ -61,9 +61,9 @@ HRESULT GetAppDomainsContainingModule(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerFunctionEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [ICorProfilerInfo3 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [プロファイル](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerFunctionEnum インターフェイス](icorprofilerfunctionenum-interface.md)
+- [ICorProfilerInfo3 インターフェイス](icorprofilerinfo3-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [プロファイル](index.md)

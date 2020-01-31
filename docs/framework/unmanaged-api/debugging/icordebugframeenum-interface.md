@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f85d3-044e-46b8-945c-93ebfa5d9e91
 topic_type:
 - apiref
-ms.openlocfilehash: 3a33d25ee13e12a2612d0132da1dc84c24f2f95b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6cc1ef5f778902efaa53156fbefe334046c82114
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090537"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794536"
 ---
 # <a name="icordebugframeenum-interface"></a>ICorDebugFrameEnum インターフェイス
 
@@ -29,14 +29,14 @@ ICorDebugEnum メソッドを実装し、テキストボックスの配列を列
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugframeenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugFrame` インスタンスを列挙から取得します。|  
+|[Next メソッド](icordebugframeenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugFrame` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -47,4 +47,4 @@ ICorDebugEnum メソッドを実装し、テキストボックスの配列を列
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

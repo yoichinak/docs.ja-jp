@@ -8,16 +8,16 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 94d175ec58f35b7e807786c221437d05c605c0bc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c076937d6431adf1750793d47ece88dc82edf95c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974226"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794100"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>チュートリアル : WindowsFormsHost 要素を使用したプロパティの割り当て
 
-このチュートリアルでは、<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> プロパティを使用して、ホストされている [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールの対応するプロパティに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティをマップする方法について説明します。
+このチュートリアルでは、<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A> プロパティを使用して、ホストされている Windows フォームコントロールの対応するプロパティに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティをマップする方法について説明します。
 
 このチュートリアルでは、以下のタスクを行います。
 
@@ -35,9 +35,9 @@ ms.locfileid: "73974226"
 
 このチュートリアルで示すタスクの完全なコード一覧については、「 [WindowsFormsHost 要素のサンプルを使用したプロパティのマッピング](https://go.microsoft.com/fwlink/?LinkID=160019)」を参照してください。
 
-終了すると、ホストされている [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールの対応するプロパティに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティをマップできるようになります。
+終了すると、ホストされている Windows フォームコントロールの対応するプロパティに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティをマップできるようになります。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
@@ -53,7 +53,7 @@ ms.locfileid: "73974226"
 
 ## <a name="defining-the-application-layout"></a>アプリケーションレイアウトの定義
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのアプリケーションでは、<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素を使用して [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールをホストします。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのアプリケーションでは、<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素を使用して Windows フォームコントロールをホストします。
 
 ### <a name="to-define-the-application-layout"></a>アプリケーションのレイアウトを定義するには
 
@@ -83,7 +83,7 @@ ms.locfileid: "73974226"
 
      `AddClipMapping` メソッドは、<xref:System.Windows.UIElement.Clip%2A> プロパティの新しいマッピングを追加します。
 
-     `OnClipChange` メソッドは、<xref:System.Windows.UIElement.Clip%2A> プロパティを [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.Region%2A> プロパティに変換します。
+     `OnClipChange` メソッドは、<xref:System.Windows.UIElement.Clip%2A> プロパティを Windows フォーム<xref:System.Windows.Forms.Control.Region%2A> プロパティに変換します。
 
      `Window1_SizeChanged` メソッドは、ウィンドウの <xref:System.Windows.FrameworkElement.SizeChanged> イベントを処理し、アプリケーションウィンドウに合うようにクリッピング領域のサイズを調整します。
 
@@ -113,7 +113,7 @@ ms.locfileid: "73974226"
 
      `ReplaceFlowDirectionMapping` メソッドは、<xref:System.Windows.FrameworkElement.FlowDirection%2A> プロパティの既定のマッピングを置き換えます。
 
-     `OnFlowDirectionChange` メソッドは、<xref:System.Windows.FrameworkElement.FlowDirection%2A> プロパティを [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティに変換します。
+     `OnFlowDirectionChange` メソッドは、<xref:System.Windows.FrameworkElement.FlowDirection%2A> プロパティを Windows フォーム<xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティに変換します。
 
      `cb_CheckedChanged` メソッドは、<xref:System.Windows.Forms.CheckBox> コントロールの <xref:System.Windows.Forms.CheckBox.CheckedChanged> イベントを処理します。 <xref:System.Windows.Forms.CheckBox.CheckState%2A> プロパティの値に基づいて <xref:System.Windows.FrameworkElement.FlowDirection%2A> プロパティを割り当てます。
 
@@ -145,7 +145,7 @@ ms.locfileid: "73974226"
 
      `WindowLoaded` メソッドは、<xref:System.Windows.FrameworkElement.Loaded> イベントを処理し、次の初期化を実行します。
 
-    - <xref:System.Windows.Forms.CheckBox> コントロール [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]を作成します。
+    - <xref:System.Windows.Forms.CheckBox> コントロール Windows フォームを作成します。
 
     - チュートリアルの前の手順で定義したメソッドを呼び出して、プロパティマッピングを設定します。
 

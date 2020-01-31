@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 91d688f3-a80e-419d-9755-ff94bc04188a
 topic_type:
 - apiref
-ms.openlocfilehash: 9ba021ec223d00e57081567b76f70f59768e6b9a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 028207486f43e35086ed2e515eb3ae6bca304491
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445858"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866079"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass メソッド
 最後のガベージコレクション以降に作成された、指定した各クラスのインスタンスの数をプロファイラーに通知します。  
@@ -47,7 +47,7 @@ HRESULT ObjectsAllocatedByClass(
 ## <a name="remarks"></a>コメント  
  `classIds` 配列と `cObjects` 配列は、並列配列です。 たとえば、`classIds[i]` と `cObjects[i]` は同じクラスを参照します。 前のガベージコレクションの後にクラスのインスタンスが作成されていない場合、クラスは省略されます。 `ObjectsAllocatedByClass` コールバックは、大きなオブジェクトヒープに割り当てられたオブジェクトを報告しません。  
   
- `ObjectsAllocatedByClass` によって報告される数値は、推定値のみです。 正確にカウントするには、 [ICorProfilerCallback:: ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)を使用します。  
+ `ObjectsAllocatedByClass` によって報告される数値は、推定値のみです。 正確にカウントするには、 [ICorProfilerCallback:: ObjectAllocated](icorprofilercallback-objectallocated-method.md)を使用します。  
   
  対応する `cObjects` 配列にアンロードされている型がある場合、`classIds` 配列には1つ以上の null エントリを含めることができます。  
   
@@ -60,6 +60,6 @@ HRESULT ObjectsAllocatedByClass(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

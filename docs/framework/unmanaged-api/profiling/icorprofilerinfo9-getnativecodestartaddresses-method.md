@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 7593e8873c2714df85146903c0052a9909a95ccd
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8412020fb98fde245b873a2f0c6a355f6436f712
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444716"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868279"
 ---
 # <a name="icorprofilerinfo9getnativecodestartaddresses-method"></a>ICorProfilerInfo9:: GetNativeCodeStartAddresses メソッド
 
@@ -32,22 +32,27 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
                                      [out] UINT_PTR codeStartAddresses[]);
 ```
 
-#### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`functionId` \
-からネイティブコードの開始アドレスを返す関数の ID。
+- `functionId`
 
-`reJitId` \
-[in] JIT 再コンパイルされた関数のID。
+  \[] には、ネイティブコードの開始アドレスを返す関数の ID を指定します。
 
-`cCodeStartAddresses` \
-[in] `codeStartAddresses` 配列の最大サイズ。
+- `reJitId`
 
-`pcCodeStartAddresses` \
-入出力使用可能なアドレスの数。
+  \[] JIT 再コンパイルされた関数の id。
 
-`codeStartAddresses` \
-入出力`UINT_PTR`の配列。各配列は、指定された関数のネイティブ本体の開始アドレスです。
+- `cCodeStartAddresses`
+
+  \[] `codeStartAddresses` 配列の最大サイズ。
+
+- `pcCodeStartAddresses`
+
+  \[out] 使用可能なアドレスの数。
+
+- `codeStartAddresses`
+
+  \[out] `UINT_PTR`の配列。それぞれが指定された関数のネイティブ本体の開始アドレスです。
 
 ## <a name="remarks"></a>コメント
 
@@ -65,4 +70,4 @@ HRESULT GetNativeCodeStartAddresses( [in]  FunctionID functionID,
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo9 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo9-interface.md)
+- [ICorProfilerInfo9 インターフェイス](icorprofilerinfo9-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 89e4d046deced4294edb98d55e4816f00480fe19
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 2b228337a55d50b94da966b45877e2000b3c03e4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790075"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866313"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted メソッド
 ランタイムが関数のアンロードを開始したことをプロファイラーに通知します。  
@@ -52,4 +52,4 @@ HRESULT FunctionUnloadStarted(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 66a08cf60ae4ca9bb6e373d230d0819ee6f9b28c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790006"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861685"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo メソッド
 
@@ -82,4 +82,4 @@ IL スタブや LCG などの特定のメソッドには、 [IMetaDataImport](..
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo8 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo8-interface.md)
+- [ICorProfilerInfo8 インターフェイス](icorprofilerinfo8-interface.md)

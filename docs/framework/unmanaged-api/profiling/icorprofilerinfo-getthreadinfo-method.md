@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fc994fef-65c9-432a-84cb-66c8141147e7
 topic_type:
 - apiref
-ms.openlocfilehash: 5edc4e0e2fc25ddae6ccabc1aa9c9a031292b63a
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7318d7d1494b0cf4db54b92ff09775be5500bdb1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449895"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869557"
 ---
 # <a name="icorprofilerinfogetthreadinfo-method"></a>ICorProfilerInfo::GetThreadInfo メソッド
 指定したスレッドの現在の Win32 スレッド id を取得します。  
@@ -49,6 +49,6 @@ HRESULT GetThreadInfo(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

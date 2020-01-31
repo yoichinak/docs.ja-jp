@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7bc3a938-0df1-4739-9ff1-89cff454b704
 topic_type:
 - apiref
-ms.openlocfilehash: bdbf93ba4df50cf26538f0e527fdc3c982bb274e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0f6fb469aa9d6d40b762bfd2feec28c28299732f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447336"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867114"
 ---
 # <a name="cor_prf_module_flags-enumeration"></a>COR_PRF_MODULE_FLAGS 列挙体
 モジュールのプロパティを指定します。  
@@ -51,8 +51,8 @@ typedef enum
 |COR_PRF_MODULE_FLAT_LAYOUT|メモリ内のモジュールのレイアウトはフラットであり、マップされていません。 モジュールにこのビットが設定されている場合、移植可能な実行可能 (PE) ファイルヘッダーから情報を直接読み取るプロファイラーは、ヘッダーの相対仮想アドレス (RVAs) を解釈する際に注意する必要があります。|  
 |COR_PRF_MODULE_WINDOWS_RUNTIME|Windows ランタイム content type フラグが、このモジュールのアセンブリのメタデータで設定されています。 これは、すべての Windows メタデータ (winmd) モジュールに当てはまります。|  
   
-## <a name="remarks"></a>コメント  
- COR_PRF_MODULE_FLAGS のビットは、 [ICorProfilerInfo3:: GetModuleInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getmoduleinfo2-method.md)メソッドの `pdwModuleFlags` output パラメーターでプロファイラーに返されます。 複数のフラグの組み合わせが可能ですが、すべての組み合わせが可能であるとは限りません。  
+## <a name="remarks"></a>Remarks  
+ COR_PRF_MODULE_FLAGS のビットは、 [ICorProfilerInfo3:: GetModuleInfo2](icorprofilerinfo3-getmoduleinfo2-method.md)メソッドの `pdwModuleFlags` output パラメーターでプロファイラーに返されます。 複数のフラグの組み合わせが可能ですが、すべての組み合わせが可能であるとは限りません。  
   
 ## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
@@ -63,6 +63,6 @@ typedef enum
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+- [列挙型のプロファイリング](profiling-enumerations.md)

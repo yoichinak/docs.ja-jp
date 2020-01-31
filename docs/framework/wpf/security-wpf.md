@@ -1,5 +1,5 @@
 ---
-title: セキュリティ (WPF)
+title: セキュリティ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML files [WPF], sandbox behavior
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 612b99354310c18030cefce4e6f02fab8ed20f83
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a49634fd955b0dc1f4cac5c785d49c24d16bbc60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636771"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868045"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a>Windows Presentation Foundation (WPF) のスタンドアロンアプリケーションとブラウザーでホストされるアプリケーションを開発する場合は、セキュリティモデルを考慮する必要があります。 WPF スタンドアロンアプリケーションは、Windows インストーラー (.msi)、XCopy、または ClickOnce を使用してデプロイされているかどうかにかかわらず、無制限のアクセス許可 (CAS**FullTrust**アクセス許可セット) で実行されます。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホストアプリケーションでは、.NET Framework アドインモデルを使用して部分信頼 <xref:System.AppDomain> を作成できます。 詳細については、「 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)」を参照してください。  
@@ -184,7 +184,7 @@ ms.locfileid: "75636771"
  機能コントロールは、WebBrowser ActiveX オブジェクトをインスタンス化するプロセスによって適用されます。 そのため、信頼されていないコンテンツに移動できるスタンドアロン アプリケーションを作成する場合は、その他の機能コントロールを有効にすることを検討すべきです。  
   
 > [!NOTE]
-> この推奨事項は、MSHTML および SHDOCVW ホスト セキュリティの一般的な推奨事項に基づいています。 詳細については、「 [Mshtml ホストのセキュリティに関する faq: パート I ii](https://msrc-blog.microsoft.com/archive/2009/04/02/the-mshtml-host-security-faq.aspx) 」と「 [Mshtml ホストのセキュリティに関する FAQ: 第2部](https://msrc-blog.microsoft.com/archive/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii.aspx)」を参照してください。  
+> この推奨事項は、MSHTML および SHDOCVW ホスト セキュリティの一般的な推奨事項に基づいています。 詳細については、「 [Mshtml ホストのセキュリティに関する faq: パート I ii](https://msrc-blog.microsoft.com/2009/04/02/the-mshtml-host-security-faq-part-i-of-ii/) 」と「 [Mshtml ホストのセキュリティに関する FAQ: 第2部](https://msrc-blog.microsoft.com/2009/04/03/the-mshtml-host-security-faq-part-ii-of-ii/)」を参照してください。  
   
  実行可能ファイルでは、レジストリ値を 1 に設定して以下の機能コントロールを有効にすることを検討してください。  
   

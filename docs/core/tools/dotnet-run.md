@@ -2,22 +2,22 @@
 title: dotnet run コマンド
 description: dotnet run コマンドは、ソース コードからアプリケーションを実行する便利なオプションを提供します。
 ms.date: 10/31/2019
-ms.openlocfilehash: 87e9a57e874116533951a9c5eb676be76be2c98d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 5920f0d1f04204b286fdf6f51f5fd13644846390
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454777"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734102"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
-**この記事の対象: ✓** .NET Core 1.x SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet run` -- 明示的なコンパイルや起動コマンドなしで、ソース コードを実行します。
 

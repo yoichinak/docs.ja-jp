@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01de7ac6-0aad-42ef-bf93-50737667b0a4
 topic_type:
 - apiref
-ms.openlocfilehash: 6cd6b7981c9b6b7f2efd30b045e8e179a22a3b87
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bbd4c9e40f257cc66b638ba01ef8e51205922ece
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445373"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866391"
 ---
 # <a name="icorprofilercallbackexceptionsearchfunctionleave-method"></a>ICorProfilerCallback::ExceptionSearchFunctionLeave メソッド
 例外処理の検索フェーズで関数の検索が終了したことをプロファイラーに通知します。  
@@ -40,7 +40,7 @@ HRESULT ExceptionSearchFunctionLeave();
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ExceptionSearchFunctionEnter メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptionsearchfunctionenter-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ExceptionSearchFunctionEnter メソッド](icorprofilercallback-exceptionsearchfunctionenter-method.md)

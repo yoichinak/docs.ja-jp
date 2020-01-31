@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1a268496-ee51-4d84-8700-ee56fd0c499d
 topic_type:
 - apiref
-ms.openlocfilehash: 1e3dc4735af68da7f76fc6fce84d2dd4ac3f576e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f3727343755d7014202f844be28414d31ce55bc1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449656"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76862257"
 ---
 # <a name="icorprofilerinfo3getstringlayout2-method"></a>ICorProfilerInfo3::GetStringLayout2 メソッド
-文字列オブジェクトのレイアウトに関する情報を取得します。 このメソッドは、 [ICorProfilerInfo2:: GetStringLayout](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getstringlayout-method.md)メソッドよりも優先されます。  
+文字列オブジェクトのレイアウトに関する情報を取得します。 このメソッドは、 [ICorProfilerInfo2:: GetStringLayout](icorprofilerinfo2-getstringlayout-method.md)メソッドよりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -54,5 +54,5 @@ HRESULT GetStringLayout2(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo3 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerInfo3 インターフェイス](icorprofilerinfo3-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)

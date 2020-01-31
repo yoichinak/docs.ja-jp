@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c2b66fd-0595-40a3-8931-f9c4fff97ac8
 topic_type:
 - apiref
-ms.openlocfilehash: 35b87b3a2c0230b26fb68af44dc1aa864a6449e0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 07041d06668d474a3d30968fb623854a24ebf0eb
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439931"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865819"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed メソッド
 スレッドが破棄されたことをプロファイラーに通知します。  
@@ -36,7 +36,7 @@ HRESULT ThreadDestroyed(
  `threadId`  
  から破棄されたスレッドの ID。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  この呼び出し時に、`threadId` の値は有効ではなくなりました。  
   
 ## <a name="requirements"></a>要件  
@@ -50,5 +50,5 @@ HRESULT ThreadDestroyed(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ThreadCreated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threadcreated-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ThreadCreated メソッド](icorprofilercallback-threadcreated-method.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eb412622-77cc-4abd-a2cd-c910fe8edd54
 topic_type:
 - apiref
-ms.openlocfilehash: 66643bbb8dbc914b2e0e48a7f0c87630fe95e5d3
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 38d9e83e9fa0e9cd0586fb10a6fd79c29bead4a6
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445849"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866105"
 ---
 # <a name="icorprofilercallbackobjectallocated-method"></a>ICorProfilerCallback::ObjectAllocated メソッド
 ヒープ内のメモリがオブジェクトに割り当てられたことをプロファイラーに通知します。  
@@ -52,8 +52,8 @@ HRESULT ObjectAllocated(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ClassLoadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
-- [ClassLoadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ClassLoadStarted メソッド](icorprofilercallback-classloadstarted-method.md)
+- [ClassLoadFinished メソッド](icorprofilercallback-classloadfinished-method.md)

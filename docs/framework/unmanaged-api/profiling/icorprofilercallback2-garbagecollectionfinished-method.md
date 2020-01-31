@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a5758ea-2354-43c0-92a3-32c9909d64e1
 topic_type:
 - apiref
-ms.openlocfilehash: 1217bb30be8b88f8ba1cf21f03f2531778358d4b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 30f2e675532848c2dbb1f055a0f1489cf3b2baa1
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74439844"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865793"
 ---
 # <a name="icorprofilercallback2garbagecollectionfinished-method"></a>ICorProfilerCallback2::GarbageCollectionFinished メソッド
 ガベージコレクションが完了し、すべてのガベージコレクションコールバックが発行されたことをプロファイラーに通知します。  
@@ -31,7 +31,7 @@ ms.locfileid: "74439844"
 HRESULT GarbageCollectionFinished();  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `GarbageCollectionFinished` メソッドが呼び出されたときに、プロファイラーが最終的な場所のオブジェクトを検査するのは安全です。  
   
 ## <a name="requirements"></a>要件  
@@ -43,7 +43,7 @@ HRESULT GarbageCollectionFinished();
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 インターフェイス](icorprofilercallback2-interface.md)

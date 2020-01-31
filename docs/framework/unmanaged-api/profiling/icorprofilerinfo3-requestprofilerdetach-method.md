@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea102e62-0454-4477-bcf3-126773acd184
 topic_type:
 - apiref
-ms.openlocfilehash: 226f24ad8f1636101b283c3cb6662905cbf7eebe
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 8520f5fc0a6ff7e71f40cd7fbb1caf68aab63197
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938205"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868513"
 ---
 # <a name="icorprofilerinfo3requestprofilerdetach-method"></a>ICorProfilerInfo3::RequestProfilerDetach メソッド
 プロファイラーをデタッチするようにランタイムに指示します。  
@@ -42,11 +42,11 @@ HRESULT RequestProfilerDetach(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|デタッチ要求は有効です。またデタッチ プロシージャは別のスレッドで継続しています。 デタッチが完了すると、`ProfilerDetachSucceeded` イベントが発行されます。|  
-|E_ CORPROF_E_CALLBACK3_REQUIRED|プロファイラーは、 [ICorProfilerCallback3](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-interface.md)インターフェイスの[IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))の試行に失敗しました。デタッチ操作をサポートするには、このインターフェイスを実装する必要があります。 デタッチは試行されませんでした。|  
+|E_ CORPROF_E_CALLBACK3_REQUIRED|プロファイラーは、 [ICorProfilerCallback3](icorprofilercallback3-interface.md)インターフェイスの[IUnknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))の試行に失敗しました。デタッチ操作をサポートするには、このインターフェイスを実装する必要があります。 デタッチは試行されませんでした。|  
 |CORPROF_E_IMMUTABLE_FLAGS_SET|プロファイラーが起動時に変更できないフラグを設定しているため、デタッチできません。 デタッチは試行されませんでした。プロファイラーは完全にアタッチされたままです。|  
-|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|プロファイラーがインストルメント化された Microsoft 中間言語 (MSIL) コードを使用したか、または `enter`/`leave` フックを挿入したため、デタッチは不可能です。 デタッチは試行されませんでした。プロファイラーは完全にアタッチされたままです。<br /><br /> **メモ**インストルメント化された MSIL はコードであり、 [SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)メソッドを使用してプロファイラーによって提供されます。|  
-|CORPROF_E_RUNTIME_UNINITIALIZED|マネージド アプリケーションでランタイムがまだ初期化されていません。 (つまり、ランタイムが完全に読み込まれていません)。このエラーコードは、プロファイラーコールバックの[ICorProfilerCallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)メソッド内でデタッチが要求された場合に返されることがあります。|  
-|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT|サポートされていないタイミングで `RequestProfilerDetach` が呼び出されました。 このエラーは、メソッドがマネージスレッドで呼び出されたが、 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)メソッド内、またはガベージコレクションを許容できない[ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)メソッド内から呼び出されなかった場合に発生します。 詳細については、「 [HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](../../../../docs/framework/unmanaged-api/profiling/corprof-e-unsupported-call-sequence-hresult.md)」を参照してください。|  
+|CORPROF_E_IRREVERSIBLE_INSTRUMENTATION_PRESENT|プロファイラーがインストルメント化された Microsoft 中間言語 (MSIL) コードを使用したか、または `enter`/`leave` フックを挿入したため、デタッチは不可能です。 デタッチは試行されませんでした。プロファイラーは完全にアタッチされたままです。<br /><br /> **メモ**インストルメント化された MSIL はコードであり、 [SetILFunctionBody](icorprofilerinfo-setilfunctionbody-method.md)メソッドを使用してプロファイラーによって提供されます。|  
+|CORPROF_E_RUNTIME_UNINITIALIZED|マネージド アプリケーションでランタイムがまだ初期化されていません。 (つまり、ランタイムが完全に読み込まれていません)。このエラーコードは、プロファイラーコールバックの[ICorProfilerCallback:: Initialize](icorprofilercallback-initialize-method.md)メソッド内でデタッチが要求された場合に返されることがあります。|  
+|CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT|サポートされていないタイミングで `RequestProfilerDetach` が呼び出されました。 このエラーは、メソッドがマネージスレッドで呼び出されたが、 [ICorProfilerCallback](icorprofilercallback-interface.md)メソッド内、またはガベージコレクションを許容できない[ICorProfilerCallback](icorprofilercallback-interface.md)メソッド内から呼び出されなかった場合に発生します。 詳細については、「 [HRESULT CORPROF_E_UNSUPPORTED_CALL_SEQUENCE](corprof-e-unsupported-call-sequence-hresult.md)」を参照してください。|  
   
 ## <a name="remarks"></a>Remarks  
  デタッチ プロシージャの実行中に、デタッチ スレッド (プロファイラーのデタッチのために作成されたスレッド) は、すべてのスレッドがプロファイラーのコードを終了したかどうかを時々チェックします。 プロファイラーは、退避が終了するまでの予想時間を、`dwExpectedCompletionMilliseconds` パラメーターを介して提供する必要があります。 使用に適した値は、特定の `ICorProfilerCallback*` メソッド内でプロファイラーが使う通常の時間です。この値は、プロファイラーが使うと想定される最大時間の半分未満にしないでください。  
@@ -66,6 +66,6 @@ HRESULT RequestProfilerDetach(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo3 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [プロファイル](../../../../docs/framework/unmanaged-api/profiling/index.md)
+- [ICorProfilerInfo3 インターフェイス](icorprofilerinfo3-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [プロファイル](index.md)

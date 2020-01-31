@@ -9,25 +9,25 @@ api_location:
 api_type:
 - COM
 ms.assetid: a0be019e-aaa1-4036-990f-565f114d4b5c
-ms.openlocfilehash: f8c2fb544cf9fd6642bd0581211e0e4e49633221
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e61f6a104b8b9613db32ed6912395fd07c18dcff
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139762"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864818"
 ---
 # <a name="icorprofilercallback7-interface"></a>ICorProfilerCallback7 インターフェイス
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
   
- [ICorProfilerCallback6](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback6-interface.md) のサブクラスは、メモリ内のモジュールに関連付けられているシンボルのストリームが更新されたことをプロファイラーに通知するために、共通言語ランタイムが使用するコールバック メソッドを提供します。  
+ [ICorProfilerCallback6](icorprofilercallback6-interface.md) のサブクラスは、メモリ内のモジュールに関連付けられているシンボルのストリームが更新されたことをプロファイラーに通知するために、共通言語ランタイムが使用するコールバック メソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ModuleInMemorySymbolsUpdated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|メモリ内のモジュールに関連付けられているシンボルのストリームが更新されていることをプロファイラーに通知します。|  
+|[ModuleInMemorySymbolsUpdated メソッド](icorprofilercallback7-moduleinmemorysymbolsupdated-method.md)|メモリ内のモジュールに関連付けられているシンボルのストリームが更新されていることをプロファイラーに通知します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -36,4 +36,4 @@ ms.locfileid: "73139762"
   
 ## <a name="see-also"></a>関連項目
 
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)

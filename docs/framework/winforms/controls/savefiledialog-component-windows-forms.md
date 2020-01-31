@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Save File dialog box
 - SaveFileDialog component
 ms.assetid: 6f5d9321-37d7-4448-ac4c-a33c42b2a766
-ms.openlocfilehash: 920816c648f5dbdd50f869e58769655e8be8e1a1
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 8490261068684385678ccb830ee179015a0644f4
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743084"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867400"
 ---
 # <a name="savefiledialog-component-windows-forms"></a>SaveFileDialog コンポーネント (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.SaveFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは、Windows で使用される標準の [ファイルを保存] ダイアログ ボックスと同じです。 これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。  
@@ -31,7 +31,4 @@ Windows フォームの <xref:System.Windows.Forms.SaveFileDialog> コンポー�
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
  [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)  
- ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。  
-  
- [Windows フォーム ダイアログ ボックスの重要コード](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Windows フォーム ダイアログ ボックスのコントロールとコンポーネント、基本的な機能を実行するために必要なコードについて説明します。 (MSDN オンライン ライブラリの技術記事)
+ ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。

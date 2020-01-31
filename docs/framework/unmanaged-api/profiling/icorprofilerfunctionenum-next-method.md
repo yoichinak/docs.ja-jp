@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ed4aa83-ce56-4b9f-9237-5da7587787fe
 topic_type:
 - apiref
-ms.openlocfilehash: 2ad4494cf3a429020099b4bd9d961341437fcd1e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 9c7fa25712858d1119b45fc742a5d23454b55273
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447790"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864468"
 ---
 # <a name="icorprofilerfunctionenumnext-method"></a>ICorProfilerFunctionEnum::Next メソッド
 関数のシーケンシャル コレクションから、列挙子の現在の位置以降にある、指定した数の隣接する関数を取得します。  
@@ -63,5 +63,5 @@ HRESULT Next([in]  ULONG      celt,
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerFunctionEnum インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctionenum-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerFunctionEnum インターフェイス](icorprofilerfunctionenum-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)

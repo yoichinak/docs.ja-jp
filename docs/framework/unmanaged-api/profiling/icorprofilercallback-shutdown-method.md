@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ea194f0-a331-4855-a2ce-37393b8e5f84
 topic_type:
 - apiref
-ms.openlocfilehash: 63e41df8af85d94df068526ef69708687b341e78
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 490f9dd5446a51bd07881cdb9825d737e380a63e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74446944"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865858"
 ---
 # <a name="icorprofilercallbackshutdown-method"></a>ICorProfilerCallback::Shutdown メソッド
 アプリケーションがシャットダウン中であることをプロファイラーに通知します。  
@@ -31,8 +31,8 @@ ms.locfileid: "74446944"
 HRESULT Shutdown();  
 ```  
   
-## <a name="remarks"></a>コメント  
- `Shutdown` メソッドが呼び出された後に、プロファイラーコードが[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)インターフェイスのメソッドを安全に呼び出すことはできません。 `ICorProfilerInfo` メソッドを呼び出すと、`Shutdown` メソッドから制御が戻った後に、未定義の動作が発生します。 シャットダウン後も、特定の不変イベントが発生する可能性があります。プロファイラーは、このようになるとすぐに制御を戻す必要があります。  
+## <a name="remarks"></a>Remarks  
+ `Shutdown` メソッドが呼び出された後に、プロファイラーコードが[ICorProfilerInfo](icorprofilerinfo-interface.md)インターフェイスのメソッドを安全に呼び出すことはできません。 `ICorProfilerInfo` メソッドを呼び出すと、`Shutdown` メソッドから制御が戻った後に、未定義の動作が発生します。 シャットダウン後も、特定の不変イベントが発生する可能性があります。プロファイラーは、このようになるとすぐに制御を戻す必要があります。  
   
  `Shutdown` メソッドは、プロファイリングされているマネージアプリケーションがマネージコードとして開始されている場合 (つまり、プロセススタックの初期フレームが管理されている場合) にのみ呼び出されます。 アプリケーションがアンマネージコードとして起動され、後でマネージコードにジャンプし、その結果、共通言語ランタイム (CLR) のインスタンスが作成された場合、`Shutdown` は呼び出されません。 このような場合、プロファイラーは、DLL_PROCESS_DETACH 値を使用してリソースを解放し、トレースをディスクにフラッシュするなどのデータのクリーンアップ処理を実行する `DllMain` ルーチンをライブラリに組み込む必要があります。  
   
@@ -47,7 +47,7 @@ HRESULT Shutdown();
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [Initialize メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [Initialize メソッド](icorprofilercallback-initialize-method.md)

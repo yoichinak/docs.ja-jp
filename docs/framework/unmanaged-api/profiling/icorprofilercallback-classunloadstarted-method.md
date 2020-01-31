@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc93bead-f3a9-415c-b919-ddd3ca80facc
 topic_type:
 - apiref
-ms.openlocfilehash: 752ebc4fcb284fbeb91a1efcda476249632adc5c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
-ms.translationtype: HT
+ms.openlocfilehash: 75fb92be078c40f49ddcdc6662535b2a0be7a6ad
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790183"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866560"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted メソッド
 クラスがアンロードされていることをプロファイラーに通知します。  
@@ -38,7 +38,7 @@ HRESULT ClassUnloadStarted(
 
   の \[] は、アンロードするクラスを識別します。
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `classId` の値は、`ClassUnloadStarted` メソッドから返された後の情報要求に対して無効です。これは、このクラスに関する情報を取得するためのプロファイラーの最後の機会です。  
   
 ## <a name="requirements"></a>要件  
@@ -52,5 +52,5 @@ HRESULT ClassUnloadStarted(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ClassUnloadFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classunloadfinished-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ClassUnloadFinished メソッド](icorprofilercallback-classunloadfinished-method.md)

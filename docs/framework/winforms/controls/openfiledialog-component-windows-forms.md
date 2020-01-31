@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Open File dialog box
 - OpenFileDialog component
 ms.assetid: d2efa832-a272-42ff-aa26-c4ac13ff59ba
-ms.openlocfilehash: ef6b69a90a048caf7924b00ddd0b79a0a7efaeb9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1f831297ec9d34cbf0c3c55390abd8be0f5013ee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744365"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868097"
 ---
 # <a name="openfiledialog-component-windows-forms"></a>OpenFileDialog コンポーネント (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.OpenFileDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは、Windows オペレーティングシステムによって公開されているのと同じ **[ファイルを開く**] ダイアログボックスです。 これは、<xref:System.Windows.Forms.CommonDialog> クラスを継承しています。  
@@ -31,7 +31,4 @@ Windows フォームの <xref:System.Windows.Forms.OpenFileDialog> コンポー�
  ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。  
   
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
- Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
-  
- [Windows フォーム ダイアログ ボックスの重要コード](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Windows フォーム ダイアログ ボックスのコントロールとコンポーネント、基本的な機能を実行するために必要なコードについて説明します。 (MSDN オンライン ライブラリの技術記事)
+ Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

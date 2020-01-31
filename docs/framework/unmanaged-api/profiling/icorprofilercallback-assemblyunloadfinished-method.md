@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 53fca564-84b1-44d4-9e21-17a492d2aae7
 topic_type:
 - apiref
-ms.openlocfilehash: 01404d23707be90b6b15cf741632400d49f164de
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 734ae1d14d02d47c7d3126f1b4cf55dcb4ad151b
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445152"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866625"
 ---
 # <a name="icorprofilercallbackassemblyunloadfinished-method"></a>ICorProfilerCallback::AssemblyUnloadFinished メソッド
 アセンブリがアンロードされたことをプロファイラーに通知します。  
@@ -33,15 +33,18 @@ HRESULT AssemblyUnloadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `assemblyId`  
- からアンロードされるアセンブリを識別します。  
-  
- `hrStatus`  
- からアセンブリが正常にアンロードされたかどうかを示す HRESULT。  
-  
+## <a name="parameters"></a>パラメーター
+
+- `assemblyId`
+
+  の \[] アンロードされるアセンブリを識別します。
+
+- `hrStatus`
+
+  \[] アセンブリが正常にアンロードされたかどうかを示す HRESULT。
+
 ## <a name="remarks"></a>コメント  
- `assemblyId` の値は、 [ICorProfilerCallback:: AssemblyUnloadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-assemblyunloadstarted-method.md)メソッドが返された後の情報要求に対して無効です。  
+ `assemblyId` の値は、 [ICorProfilerCallback:: AssemblyUnloadStarted](icorprofilercallback-assemblyunloadstarted-method.md)メソッドが返された後の情報要求に対して無効です。  
   
  `AssemblyUnloadFinished` コールバックの後も、アセンブリのアンロードの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、アセンブリのアンロードの最初の部分が成功したことのみを示します。  
   
@@ -54,6 +57,6 @@ HRESULT AssemblyUnloadFinished(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

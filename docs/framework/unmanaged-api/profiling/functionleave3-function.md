@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5d798088-7992-48a0-ae55-d2a7ee31913f
 topic_type:
 - apiref
-ms.openlocfilehash: 104a6c3c42c310513040cb45db7f51ffe729c19d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 32d86f19e9c50694c7d113195e6967645b710666
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427435"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866870"
 ---
 # <a name="functionleave3-function"></a>FunctionLeave3 関数
 関数から制御が返されていることをプロファイラーに通知します。  
@@ -31,11 +31,13 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- `functionOrRemappedID`  
- からコントロールが返される関数の識別子。  
+
+- `functionOrRemappedID`
+
+  \[] には、コントロールが返される関数の識別子を指定します。
   
-## <a name="remarks"></a>コメント  
- `FunctionLeave3` コールバック関数は、関数が呼び出されていることをプロファイラーに通知しますが、戻り値の検査はサポートしていません。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
+## <a name="remarks"></a>Remarks  
+ `FunctionLeave3` コールバック関数は、関数が呼び出されていることをプロファイラーに通知しますが、戻り値の検査はサポートしていません。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
   
  `FunctionLeave3` 関数はコールバックです。実装する必要があります。 実装では、`__declspec(naked)` のストレージクラス属性を使用する必要があります。  
   
@@ -58,15 +60,15 @@ void __stdcall FunctionLeave3(FunctionOrRemappedID functionOrRemappedID);
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
-- [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)
-- [FunctionLeave3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)
-- [FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)
-- [SetEnterLeaveFunctionHooks3](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
-- [SetEnterLeaveFunctionHooks3WithInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
-- [SetFunctionIDMapper](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setfunctionidmapper-method.md)
-- [SetFunctionIDMapper2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-setfunctionidmapper2-method.md)
-- [グローバル静的関数のプロファイル](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter3](functionenter3-function.md)
+- [FunctionTailcall3](functiontailcall3-function.md)
+- [FunctionEnter3WithInfo](functiontailcall3-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
+- [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
+- [SetEnterLeaveFunctionHooks3](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)
+- [SetEnterLeaveFunctionHooks3WithInfo](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)
+- [SetFunctionIDMapper](icorprofilerinfo-setfunctionidmapper-method.md)
+- [SetFunctionIDMapper2](icorprofilerinfo3-setfunctionidmapper2-method.md)
+- [グローバル静的関数のプロファイル](profiling-global-static-functions.md)

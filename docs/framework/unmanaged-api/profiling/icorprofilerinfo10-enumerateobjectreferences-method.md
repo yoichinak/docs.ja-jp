@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: d6518612c213d21c2dc7d80878121ccd3b7e2abb
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7fd62e0d3d9173f3b75882131e57126075c0677f
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449858"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863310"
 ---
 # <a name="icorprofilerinfo10enumerateobjectreferences-method"></a>ICorProfilerInfo10:: EnumerateObjectReferences メソッド
 
@@ -30,20 +30,23 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
                                    [in] void* clientData);
 ```
 
-#### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`objectId` \
-から参照を列挙するオブジェクト。
+- `objectId`
 
-`callback` \
-からオブジェクトの参照を使用して呼び出される関数。
+  で \[] 参照を列挙するオブジェクト。
 
-`clientData` \
-から`callback` 関数に渡すプロファイラー提供のデータ。
+- `callback`
+
+  \[] オブジェクトの参照を使用して呼び出される関数。
+
+- `clientData`
+
+  \[] `callback` 関数に渡すプロファイラーが提供するデータ。
 
 ## <a name="remarks"></a>コメント
 
-`EnumerateObjectReferences` メソッドは[ObjectReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)に似ていますが、参照を格納するために配列を事前に割り当てるのではなく、プロファイラーの要求時に参照をステップインする点が異なります。
+`EnumerateObjectReferences` メソッドは [ObjectReferences](icorprofilercallback-objectreferences-method.md) に似ていますが、参照を格納するために配列を事前に割り当てるのではなく、プロファイラーの要求時に参照をステップインする点が異なります。
 
 ## <a name="requirements"></a>要件
 
@@ -57,4 +60,4 @@ HRESULT EnumerateObjectReferences( [in] ObjectID objectId,
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo10 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo10-interface.md)
+- [ICorProfilerInfo10 インターフェイス](icorprofilerinfo10-interface.md)

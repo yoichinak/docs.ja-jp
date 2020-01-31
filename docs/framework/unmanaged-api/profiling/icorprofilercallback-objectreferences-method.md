@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dd5e9b64-b4a3-4ba6-9be6-ddb540f4ffcf
 topic_type:
 - apiref
-ms.openlocfilehash: 4f8cfd912a3d6f66f5f2586a8942c7ce9bd52a63
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 6e6cc44c2f9028c0e26c4f933242cad93e3a98c3
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445891"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866092"
 ---
 # <a name="icorprofilercallbackobjectreferences-method"></a>ICorProfilerCallback::ObjectReferences メソッド
 指定したオブジェクトによって参照されているメモリ内のオブジェクトに関する情報をプロファイラーに通知します。  
@@ -51,9 +51,9 @@ HRESULT ObjectReferences(
 ## <a name="remarks"></a>コメント  
  `ObjectReferences` メソッドは、ガベージコレクションが完了した後にヒープ内の残りのオブジェクトに対して呼び出されます。 プロファイラーがこのコールバックからエラーを返すと、プロファイリングサービスは、次のガベージコレクションまでこのコールバックの呼び出しを中止します。  
   
- `ObjectReferences` コールバックは、 [ICorProfilerCallback:: RootReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)コールバックと組み合わせて使用して、ランタイムの完全なオブジェクト参照グラフを作成できます。 共通言語ランタイム (CLR) では、各オブジェクト参照が `ObjectReferences` メソッドによって1回だけ報告されるようにします。  
+ `ObjectReferences` コールバックは、 [ICorProfilerCallback:: RootReferences](icorprofilercallback-rootreferences-method.md)コールバックと組み合わせて使用して、ランタイムの完全なオブジェクト参照グラフを作成できます。 共通言語ランタイム (CLR) では、各オブジェクト参照が `ObjectReferences` メソッドによって1回だけ報告されるようにします。  
   
- `ObjectReferences` によって返されるオブジェクト Id は、コールバック自体では無効です。これは、ガベージコレクションがオブジェクトを移動する途中である可能性があるためです。 そのため、`ObjectReferences` の呼び出し中に、プロファイラーがオブジェクトの検査を試行することはできません。 [ICorProfilerCallback2:: GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)が呼び出されると、ガベージコレクションが完了し、検査を安全に行うことができます。  
+ `ObjectReferences` によって返されるオブジェクト Id は、コールバック自体では無効です。これは、ガベージコレクションがオブジェクトを移動する途中である可能性があるためです。 そのため、`ObjectReferences` の呼び出し中に、プロファイラーがオブジェクトの検査を試行することはできません。 [ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)が呼び出されると、ガベージコレクションが完了し、検査を安全に行うことができます。  
   
  Null `ClassId` は、`objectId` にアンロード中の型があることを示します。  
   
@@ -68,4 +68,4 @@ HRESULT ObjectReferences(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
