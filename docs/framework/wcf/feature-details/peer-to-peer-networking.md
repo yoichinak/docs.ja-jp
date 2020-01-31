@@ -2,12 +2,12 @@
 title: ピアツーピア ネットワーク
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
-ms.openlocfilehash: 74566d7bc7c8d817cedb0ff6f64590ba827ed4c4
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 2905a429e907f7e97c482c22229a6bc928c52243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837364"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744677"
 ---
 # <a name="peer-to-peer-networking"></a>ピアツーピア ネットワーク
 ピアチャネルは、Windows Communication Foundation (WCF) における、マルチパーティのピアツーピア (P2P) 通信テクノロジです。 この技術によって、アプリケーション開発者は安全で拡張可能なメッセージ ベースの P2P 通信チャネルを利用できます。 ピア チャネルのメリットを活用するマルチパーティ アプリケーションの一般的な例は、チャットなどの共同作業アプリケーションです。チャットでは、ユーザーのグループがサーバーなしのピアツーピア方式で互いに会話します。 ピア チャネルを使用することで、顧客シナリオや企業シナリオでの P2P コラボレーション、コンテンツ配布、負荷分散、および分散処理が実現します。  
@@ -27,4 +27,4 @@ ms.locfileid: "74837364"
  [ピアチャネルカスタムピアリゾルバー](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751466(v=vs.90))  
   
 ## <a name="peer-channel-team-blog"></a>ピア チャネル チームのブログ  
- [ピアチャネルチームのブログ](https://go.microsoft.com/fwlink/?LinkID=114530)
+ [ピアチャネルチームのブログ](https://docs.microsoft.com/archive/blogs/peerchan/)

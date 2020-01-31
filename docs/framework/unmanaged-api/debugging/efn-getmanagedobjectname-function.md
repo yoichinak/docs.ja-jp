@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e7c6bee-7ced-495f-bf6c-2a5f0c716f7e
 topic_type:
 - apiref
-ms.openlocfilehash: c7333f8f7b95655ac821e9a2977d5db3794486a2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9230e1fcba7c0492e50773e7ca13fb16f07238a2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122999"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789132"
 ---
 # <a name="_efn_getmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName 関数
 指定されたマネージオブジェクトポインターを使用して、型の名前を取得します。  
@@ -48,10 +48,10 @@ HRESULT _EFN_GetManagedObjectName(
  `cbName`  
  入出力文字列バッファーで使用できる文字数。  
   
-## <a name="remarks"></a>Remarks  
- 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 で、エラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
+## <a name="remarks"></a>コメント  
+ 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 でエラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** SOS_Stacktrace  
@@ -60,4 +60,4 @@ HRESULT _EFN_GetManagedObjectName(
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [デバッグ グローバル静的関数](debugging-global-static-functions.md)

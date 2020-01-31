@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: b0f452ba7aabcaa5ea995acba1873029c67f0f5d
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: b75dd523d4c88eae70f8d21ac8b3c9f72ae055ed
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75544669"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744775"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 
@@ -24,7 +24,7 @@ ms.locfileid: "75544669"
 
 2. .NET Framework 4 がインストールされていることを確認します。 次のバージョンの v2.0 (またはそれ以降) のディレクトリを検索します: **\windows\ microsoft.net \framework**
 
-3. Visual Studio 2012 がインストールされておらず、オペレーティングシステムが Windows Server 2008 SP2 以降ではない場合は、[修正プログラム 251798](https://go.microsoft.com/fwlink/?LinkId=184693)をインストールします。
+3. Visual Studio 2012 以降がインストールされていること、またはオペレーティングシステムが Windows Server 2008 SP2 以降であることを確認します。
 
 4. 次のコマンドを実行します。 これらのコマンドを実行する必要がある理由の詳細については、「 [IIS ホステッドサービスが失敗](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))する」を参照してください。
 

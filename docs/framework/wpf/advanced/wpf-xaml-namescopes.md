@@ -1,5 +1,5 @@
 ---
-title: WPF XAML 名前スコープ
+title: XAML 名前スコープ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namescopes [WPF]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: 97889b302aac06e118c93f2d000b0eeeed8b71bb
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 4383492157191f61cf04a2fdd6ce27e9183bda8b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559938"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744421"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名前スコープ
 XAML 名前スコープは、XAML で定義されているオブジェクトを識別する概念です。 XAML 名前スコープ内の名前を使用すると、オブジェクトの XAML 定義の名前と、オブジェクトツリー内のそのインスタンスに対応するオブジェクトの間のリレーションシップを確立できます。 通常、xaml アプリケーションの個々の XAML ページルートを読み込むときに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マネージコード内の XAML 名前スコープが作成されます。 プログラミングオブジェクトとしての XAML 名前スコープは、<xref:System.Windows.Markup.INameScope> インターフェイスによって定義され、実際のクラス <xref:System.Windows.NameScope>によっても実装されます。  
@@ -51,13 +51,13 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
   
 <a name="Namescopes_in_Styles_and_Templates"></a>   
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>スタイルとテンプレートでの XAML 名前スコープ  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のスタイルとテンプレートを使用すると、簡単な方法でコンテンツを再利用したり、再適用したりすることができます。 ただし、スタイルやテンプレートには、テンプレートレベルで定義された XAML 名を持つ要素が含まれる場合もあります。 同一のテンプレートが、ページ内で複数回使われる可能性があります。 このため、スタイルとテンプレートは、スタイルまたはテンプレートが適用されているオブジェクトツリー内の任意の場所に関係なく、独自の XAML 名前スコープを定義します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のスタイルとテンプレートを使用すると、簡単な方法でコンテンツを再利用したり、再適用したりすることができます。 ただし、スタイルやテンプレートには、テンプレートレベルで定義された XAML 名を持つ要素が含まれる場合もあります。 同じテンプレートを1ページで複数回使用することもできます。 このため、スタイルとテンプレートは、スタイルまたはテンプレートが適用されているオブジェクトツリー内の任意の場所に関係なく、独自の XAML 名前スコープを定義します。  
   
  次に例を示します。  
   
  [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
- ここでは、同じテンプレートが2つの異なるボタンに適用されます。 テンプレートに個別の XAML 名前スコープがない場合は、テンプレートで使用される `TheBorder` 名によって、XAML 名前スコープで名前の競合が発生します。 テンプレートの各インスタンスは独自の XAML 名前スコープを持つため、この例の場合、インスタンス化された各テンプレートの XAML 名前スコープに、名前が必ず 1 つずつ含まれます。  
+ ここでは、同じテンプレートが2つの異なるボタンに適用されます。 テンプレートに個別の XAML 名前スコープがない場合は、テンプレートで使用される `TheBorder` 名によって、XAML 名前スコープで名前の競合が発生します。 テンプレートの各インスタンス化には独自の XAML 名前スコープがあるため、この例では、インスタンス化されたテンプレートの XAML 名前スコープには名前が1つだけ含まれます。  
   
  また、スタイルは独自の XAML 名前スコープも定義します。これは、ストーリーボードの一部に特定の名前を割り当てることができるようにするためです。 これらの名前を使用すると、コントロールのカスタマイズの一部としてテンプレートを再定義した場合でも、その名前の要素を対象とするコントロール固有の動作が有効になります。  
   

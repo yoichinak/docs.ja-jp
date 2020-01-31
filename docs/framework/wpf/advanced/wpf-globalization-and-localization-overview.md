@@ -1,16 +1,16 @@
 ---
-title: WPF のグローバリゼーションおよびローカリゼーションの概要
+title: グローバリゼーションとローカリゼーションの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: c2b78b990969fb5bc9814ebda8ffcf38efa458b1
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559925"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744478"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 
@@ -174,7 +174,7 @@ ms.locfileid: "75559925"
 
 アプリケーションをビルドした後、ローカライズするための最初の手順として、ローカライズ可能なリソースをサテライトアセンブリから解析します。 このトピックでは、 [Locbaml ツールサンプル](https://go.microsoft.com/fwlink/?LinkID=160016)にある locbaml ツールのサンプルを使用します。 LocBaml は、ローカライズプロセスに適したローカリゼーションツールの構築を開始するのに役立つサンプルツールでのみあることに注意してください。 LocBaml を使用して、次を実行して解析します。 **locbaml/Parse RunDialog. .resources/out:** "rundialog. .resources. .RESOURCES. .csv" ファイルを生成します。
 
-**ローカライズ**
+**地域**
 
 Unicode をサポートしているお気に入りの CSV エディターを使用して、このファイルを編集します。 ローカライズカテゴリが "なし" のすべてのエントリを除外します。 次のエントリが表示されます。
 
@@ -184,8 +184,8 @@ Unicode をサポートしているお気に入りの CSV エディターを使�
 |Button_2:.... $Content|Button|[キャンセル]|
 |Button_3:System.Windows.Controls.Button.$Content|Button|参照...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1: system.string. $Content のようになります。|テキスト|実行するプログラム名、または開くフォルダーやドキュメント名、インターネット リソース名を入力してください。|
-|TextBlock_2: system.string. $Content のようになります。|テキスト|オープン:|
+|TextBlock_1: system.string. $Content のようになります。|テキスト|プログラム、フォルダー、ドキュメント、またはインターネットリソースの名前を入力すると、Windows によってファイルが開きます。|
+|TextBlock_2: system.string. $Content のようになります。|テキスト|開き|
 |Window_1:System.Windows.Window.Title|[タイトル]|を実行します。|
 
 アプリケーションをドイツ語にローカライズするには、次の変換が必要です。
@@ -200,7 +200,7 @@ Unicode をサポートしているお気に入りの CSV エディターを使�
 |TextBlock_2: system.string. $Content のようになります。|テキスト|Öffnen:|
 |Window_1:System.Windows.Window.Title|[タイトル]|を実行します。|
 
-**Generate**
+**生み**
 
 ローカリゼーションの最後の手順では、新たにローカライズされたサテライトアセンブリを作成します。 これは、次の LocBaml コマンドを使用して実現できます。
 

@@ -6,20 +6,20 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: eba3d21cfc787c5d388de31f988b835522118151
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936925"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742577"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 の新機能
 
 この記事では、.NET Core 3.1 の新機能について説明します。 このリリースには、小規模であるが重要な修正に重点を置いた .NET Core 3.0 のマイナー機能強化が含まれています。 .NET Core 3.1 に関する最も重要な機能は、[長期的なサポート (LTS)](#long-term-support) リリースであるということです。
 
-Visual Studio 2019 を使用している場合は、.NET Core 3.1 プロジェクトを操作するために [Visual Studio 2019 バージョン 16.4](https://visualstudio.microsoft.com/downloads/) に更新する必要があります。 Visual Studio 全体の新機能の詳細については、[Visual Studio のブログ](https://devblogs.microsoft.com/visualstudio/tis-the-season-visual-studio-2019/)を参照してください。
+Visual Studio 2019 を使用している場合は、.NET Core 3.1 プロジェクトを操作するために [Visual Studio 2019 バージョン 16.4](https://visualstudio.microsoft.com/downloads/) に更新する必要があります。 Visual Studio の新機能の詳細については、「[Visual Studio 2019 バージョン 16.4 の新機能](/visualstudio/releases/2019/release-notes#whats-new-in-visual-studio-2019-version-164)」を参照してください。
 
-Visual Studio for Mac でも .NET Core 3.1 がサポートされており、Visual Studio for Mac 8.4 Preview チャネルに含まれています。 .NET Core 3.1 を使用するには、Preview チャネルを選択する必要があります。
+Visual Studio for Mac でも .NET Core 3.1 がサポートされており、Visual Studio for Mac 8.4 に含まれています。
 
 リリースの詳細については、「[.NET Core 3.1 についてのお知らせ](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-1/)」を参照してください。
 
@@ -64,7 +64,7 @@ Windows フォームには、Visual Studio Designer Toolbox でしばらくの�
 
 C++/CLI (別名 "マネージド C++") プロジェクトを作成するためのサポートが追加されています。 これらのプロジェクトから生成されるバイナリは、.NET Core 3.0 以降のバージョンと互換性があります。
 
-Visual Studio 2019 16.4 に C++/CLI のサポートを追加するには、[C++ ワークロードを使用するデスクトップ開発](https://docs.microsoft.com/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)をインストールします。 このワークロードによって、次の 2 つのテンプレートが Visual Studio に追加されます。
+Visual Studio 2019 バージョン 16.4 に C++/CLI のサポートを追加するには、[C++ ワークロードを使用するデスクトップ開発](/cpp/build/vscpp-step-0-installation?view=vs-2019#step-4---choose-workloads)をインストールします。 このワークロードによって、次の 2 つのテンプレートが Visual Studio に追加されます。
 
 - CLR クラス ライブラリ (.NET Core)
 - CLR 空のプロジェクト (.NET Framework)
@@ -72,4 +72,4 @@ Visual Studio 2019 16.4 に C++/CLI のサポートを追加するには、[C++ 
 ## <a name="next-steps"></a>次の手順
 
 - [.NET Core 3.0 と 3.1 の間の破壊的変更を確認する](../compatibility/3.0-3.1.md)
-- [Windows フォーム アプリの .NET Core 3.1 における破壊的変更を確認します。](../compatibility/winforms.md#net-core-31)
+- [Windows フォーム アプリ用の .NET Core 3.1 における破壊的変更を確認します。](../compatibility/winforms.md#net-core-31)

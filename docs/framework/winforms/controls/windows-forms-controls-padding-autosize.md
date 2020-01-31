@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : Padding、Margin、および AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト'
+title: 余白、余白、および AutoSize プロパティを使用してコントロールをレイアウトします
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -18,12 +18,12 @@ ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 76c880c208355b01d0fbaf46cf58091ad147846b
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ca7942c04434592f2541252c47ac3dd17e03dbac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460601"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742376"
 ---
 # <a name="walkthrough-lay-out-controls-with-padding-margins-and-the-autosize-property"></a>チュートリアル: padding、margin、および AutoSize プロパティを使用してコントロールをレイアウトする
 
@@ -39,7 +39,7 @@ ms.locfileid: "73460601"
 
 <xref:System.Windows.Forms.Control.AutoSize%2A> プロパティは、コントロールの内容に合わせて自動的にサイズを変更するようにコントロールに指示します。 元の <xref:System.Windows.Forms.Control.Size%2A> プロパティの値よりも小さいサイズになることはなく、<xref:System.Windows.Forms.Control.Padding%2A> プロパティの値が考慮されます。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを完了するには、Visual Studio が必要です。
 
@@ -164,7 +164,7 @@ ms.locfileid: "73460601"
 
    <xref:System.Windows.Forms.Panel> コントロールは、<xref:System.Windows.Forms.Button> コントロールの新しい位置にサイズ変更されます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 Windows フォームアプリケーションにコントロールを配置するためのレイアウト機能は他にも多数あります。 いくつかの組み合わせを次に示します。
 
@@ -183,4 +183,4 @@ Windows フォームアプリケーションにコントロールを配置する
 - [AutoSize プロパティの概要](autosize-property-overview.md)
 - [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル : スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

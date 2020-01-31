@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8ecd8c8-9627-4356-9c6f-bd05e24637c0
 topic_type:
 - apiref
-ms.openlocfilehash: 011da6aacbf4c40420329952f47b1fabdfc2c1a3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 98709c0ce7469db1d0365d71e10d2d021cd3b3f0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125629"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777886"
 ---
 # <a name="icordebugcodegetiltonativemapping-method"></a>ICorDebugCode::GetILToNativeMapping メソッド
 Microsoft 中間言語 (MSIL) オフセットからネイティブオフセットへのマッピングを表す "COR_DEBUG_IL_TO_NATIVE_MAP" インスタンスの配列を取得します。  
@@ -48,10 +48,10 @@ HRESULT GetILToNativeMapping (
   
  返される要素の配列への順序はありません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `GetILToNativeMapping` メソッドは、この "" コード "インスタンスが MSIL コードからコンパイルされたジャストインタイム (JIT) コードを表している場合にのみ、意味のある結果を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -62,4 +62,4 @@ HRESULT GetILToNativeMapping (
   
 ## <a name="see-also"></a>関連項目
 
-- [のコードインターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-interface1.md)
+- [のコードインターフェイス](icordebugcode-interface1.md)

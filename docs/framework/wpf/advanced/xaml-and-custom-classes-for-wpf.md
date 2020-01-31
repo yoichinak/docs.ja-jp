@@ -1,17 +1,17 @@
 ---
-title: WPF における XAML とカスタム クラス
+title: XAML とカスタムクラス
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom classes in XAML [WPF]
 - XAML [WPF], custom classes
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
-ms.openlocfilehash: aa2dd7a5c30894f85ed1d4aae0228b76ece3c005
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 8dab7310826357d7fbe434002298032b8722e5b5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559873"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744427"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF における XAML とカスタム クラス
 共通言語ランタイム (CLR) フレームワークで実装されている XAML は、任意の共通言語ランタイム (CLR) 言語でカスタムクラスまたは構造体を定義し、そのクラスに XAML マークアップを使用してアクセスする機能をサポートしています。 同じマークアップファイル内で [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]定義型とカスタム型の組み合わせを使用できます。通常は、カスタム型を XAML 名前空間プレフィックスにマップします。 このトピックでは、カスタムクラスが XAML 要素として使用できるようにするために満たす必要がある要件について説明します。  
@@ -81,7 +81,7 @@ ms.locfileid: "75559873"
   
  .NET Framework XAML サービスの実装であるため、WPF XAML プロセッサは、コレクションプロパティを構成するために次の定義を使用します。 プロパティのプロパティの型は、次のいずれかを実装する必要があります。  
   
-- <xref:System.Collections.IList> を実装します。  
+- <xref:System.Collections.IList>を実装します。  
   
 - <xref:System.Collections.IDictionary> または同等の汎用 (<xref:System.Collections.Generic.IDictionary%602>) を実装します。  
   

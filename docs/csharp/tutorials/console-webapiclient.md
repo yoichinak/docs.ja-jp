@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 85a3c8e17e14db86786950380ba745ae286dccca
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76115873"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737577"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -71,7 +71,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-`Main` メソッドの先頭に `using` ステートメントを追加して、C# コンパイラに <xref:System.Threading.Tasks.Task> 型を認識させる必要があります。
+`Main` メソッドの先頭に `using` ディレクティブを追加して、C# コンパイラに <xref:System.Threading.Tasks.Task> 型を認識させる必要があります。
 
 ```csharp
 using System.Threading.Tasks;
@@ -81,10 +81,10 @@ using System.Threading.Tasks;
 
 次に、`namespace` ステートメントに定義されている名前空間の名前を、既定値の `ConsoleApp` から `WebAPIClient` に変更します。 後から、この名前空間で `repo` クラスを定義します。
 
-次に、`Main` メソッドを更新してこのメソッドを呼び出します。 `ProcessRepositories` メソッドはタスクを返します。そのタスクが完了する前にプログラムを終了しないでください。 そのため、`Main` のシグネチャを変更する必要があります。 `async` 修飾子を追加し、戻り値の型を `Task` に変更します。 次に、メソッドの本体で、呼び出しを `ProcessRepositories` に追加します。 そのメソッド呼び出しに `await` キーワード when を追加します。
+次に、`Main` メソッドを更新してこのメソッドを呼び出します。 `ProcessRepositories` メソッドはタスクを返します。そのタスクが完了する前にプログラムを終了しないでください。 そのため、`Main` のシグネチャを変更する必要があります。 `async` 修飾子を追加し、戻り値の型を `Task` に変更します。 次に、メソッドの本体で、呼び出しを `ProcessRepositories` に追加します。 そのメソッド呼び出しに `await` キーワードを追加します。
 
 ```csharp
-static Task Main(string[] args)
+static async Task Main(string[] args)
 {
     await ProcessRepositories();
 }
@@ -92,7 +92,7 @@ static Task Main(string[] args)
 
 これで、何も実行せず、非同期的に実行されるプログラムの準備ができました。 これを改善しましょう。
 
-まず、Web からデータを取得できるオブジェクトが必要です。この条件に合うものとして、<xref:System.Net.Http.HttpClient> を使用できます。 このオブジェクトは要求と応答を処理します。 Program.cs ファイル内の `Program` クラスで該当する型の単一のインスタンスをインスタンス化します。
+まず、Web からデータを取得できるオブジェクトが必要です。この条件に合うものとして、<xref:System.Net.Http.HttpClient> を使用できます。 このオブジェクトは要求と応答を処理します。 *Program.cs* ファイル内の `Program` クラスで該当する型の単一のインスタンスをインスタンス化します。
 
 ```csharp
 namespace WebAPIClient
@@ -101,7 +101,7 @@ namespace WebAPIClient
     {
         private static readonly HttpClient client = new HttpClient();
 
-        static Task Main(string[] args)
+        static async Task Main(string[] args)
         {
             //...
         }
@@ -126,7 +126,7 @@ private static async Task ProcessRepositories()
 }
 ```
 
-また、ファイルの先頭に 2 つの新しい using ステートメントを追加して、プログラムをコンパイルする必要があります。
+また、ファイルの先頭に 2 つの新しい `using` ディレクティブを追加して、プログラムをコンパイルする必要があります。
 
 ```csharp
 using System.Net.Http;
@@ -206,6 +206,12 @@ foreach (var repo in repositories)
 public string Name { get; set; }
 ```
 
+`[JsonPropertyName]` 属性を使用するには、`using` ディレクティブに <xref:System.Text.Json.Serialization> 名前空間を追加する必要があります。
+
+```csharp
+using System.Text.Json.Serialization;
+```
+
 この変更により、program.cs で各リポジトリの名前を記述するコードを変更する必要があります。
 
 ```csharp
@@ -233,7 +239,7 @@ return repositories;
 次に、`Main` メソッドを変更して、それらの結果をキャプチャし、各リポジトリ名をコンソールに書き込むようにします。 `Main` メソッドは次のようになります。
 
 ```csharp
-public static Task Main(string[] args)
+public static async Task Main(string[] args)
 {
     var repositories = await ProcessRepositories();
 
@@ -296,7 +302,7 @@ public DateTime LastPush =>
 
 定義したばかりの新しいコンストラクトについて詳しく見てみましょう。 `LastPush` プロパティは、"*式形式のメンバー*" を使用して `get` アクセサーに対して定義されます。 `set` アクセサーがない。 C# では `set` アクセサーを省略することで "*読み取り専用*" プロパティを定義します (C# では "*書き込み専用*" プロパティを作成できますが、その値は制限されています)。<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> メソッドは、指定された日付形式を使用して文字列を解析し、<xref:System.DateTime> オブジェクトを作成します。次に、`CultureInfo` オブジェクトを使用して `DateTime` にメタデータを追加します。 解析操作が失敗した場合、プロパティのアクセサーは例外をスローします。
 
-<xref:System.Globalization.CultureInfo.InvariantCulture> を使用するには、`repo.cs` 内の `using` ステートメントに <xref:System.Globalization> 名前空間を追加する必要があります。
+<xref:System.Globalization.CultureInfo.InvariantCulture> を使用するには、`repo.cs` の `using` ディレクティブに <xref:System.Globalization> 名前空間を追加する必要があります。
 
 ```csharp
 using System.Globalization;

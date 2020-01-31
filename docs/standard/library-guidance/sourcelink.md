@@ -2,12 +2,12 @@
 title: ソース リンクと .NET ライブラリ
 description: ソース リンクを使用して .NET ライブラリのデバッグ機能を改善するためのベスト プラクティス推奨事項。
 ms.date: 01/15/2019
-ms.openlocfilehash: 0ebc7601f1ad92b0fc6ab4c7599b010cb42feb5d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706440"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744540"
 ---
 # <a name="source-link"></a>ソース リンク
 
@@ -25,7 +25,7 @@ ms.locfileid: "75706440"
 
 ![NuGet パッケージ エクスプローラーのソース リンク](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet パッケージ エクスプローラーのソース リンク")
 
-**✔️ 検討** ソース リンクを使用して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
+✔️ 検討 ソース リンクを使用して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
 
 > [!TIP]
 > デバッガー属性を型に追加することで開発者のデバッグ機能をさらに強化できます。
@@ -34,7 +34,7 @@ ms.locfileid: "75706440"
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> では、デバッガーに対してコードのステップ インではなくステップ実行が指示されます。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> では、デバッガー変数ウィンドウにメンバーを表示するかどうかが制御されます。
 
-**✔️ 検討** シンボル ファイルを発行する (`*.pdb`)。
+✔️ 検討 シンボル ファイルを発行する (`*.pdb`)。
 
 > デバッグのエクスペリエンスを最善にするには、ライブラリ上でシンボル ファイルを発行してソース リンクを使用する必要があります。 シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d384aa2daea17581402dc45dc3104a0d97f77f3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73035441"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76727876"
 ---
 # <a name="net-docs"></a>.NET ドキュメント
 
@@ -20,9 +20,7 @@ API リファレンス リポジトリ以外のすべての問題とタスクに
 
 ご投稿いただく場合は、[.NET コミュニティの共同作成者用のプロジェクト](https://github.com/dotnet/docs/projects/35)でさまざまなアイデアをご覧ください。 [共同作成ガイド](CONTRIBUTING.md)に、使用されている手順に関する説明があります。 
 
-[Code Gallery](https://code.msdn.microsoft.com) から[サンプル リポジトリ](https://github.com/dotnet/samples)に格納されている .NET Core アプリケーションへの .NET Framework を対象とする既存のコードの移行をサポートすることに関心があり、[サンプル ブラウザー](https://docs.microsoft.com/samples/browse)からダウンロードできる場合、[Code Gallery の移行](https://github.com/dotnet/docs/projects/88)プロジェクトを参照してください。 
-
-[Xamarin](https://docs.microsoft.com/xamarin)、[Mono](http://docs.go-mono.com/?link=root%3a%2fclasslib) および [Unity](https://docs.unity3d.com/Manual/index.html) でもこのドキュメントが使用される予定です。
+.NET Framework を対象とする既存のコードを、[提供終了したコード ギャラリー](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired) サイトから、[サンプル リポジトリ](https://github.com/dotnet/samples)に格納されていて[サンプル ブラウザー](https://docs.microsoft.com/samples/browse)からダウンロードできる .NET Core アプリケーションに移行するのをサポートすることに関心がある場合は、[コード ギャラリーの移行](https://github.com/dotnet/docs/projects/88)プロジェクトを参照してください。 コード ギャラリーのサンプルは、[Microsoft アーカイブ](https://github.com/microsoftarchive?q=msdn-code-gallery)組織に移動しました。
 
 このプロジェクトでは、当コミュニティで期待される動作を明らかにするために共同作成者契約で定義された倫理規定を採用しています。
 詳細については、「[.NET Foundation Code of Conduct](https://dotnetfoundation.org/code-of-conduct)」(.NET Foundation の倫理規定) を参照してください。

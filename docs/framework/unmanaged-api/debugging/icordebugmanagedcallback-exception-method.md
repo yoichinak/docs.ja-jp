@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-ms.openlocfilehash: af2dab65629093401219f1016538b912bee4d067
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 328c10c1895f65b43dc365b1be6b4ec5ef01e720
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130826"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777358"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception メソッド
 マネージコードから例外がスローされたことをデバッガーに通知します。  
@@ -45,10 +45,10 @@ HRESULT Exception (
  `unhandled`  
  からこの値が `false`場合は、アプリケーションによって例外がまだ処理されていません。それ以外の場合、例外はハンドルされないため、プロセスを終了します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  スレッドオブジェクトから特定の例外を取得できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -59,4 +59,4 @@ HRESULT Exception (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

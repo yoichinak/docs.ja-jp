@@ -2,12 +2,12 @@
 title: ICorDebugLoadedModule::GetName メソッド
 ms.date: 03/30/2017
 ms.assetid: 88c304d5-edaa-4c0e-a8e1-144e8a76877e
-ms.openlocfilehash: 4cf2c5c099de3d66878f09ff702a1cad6ddb8f57
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 628f85f3045533ead7ace47b11573a0b1a46df46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122625"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782046"
 ---
 # <a name="icordebugloadedmodulegetname-method"></a>ICorDebugLoadedModule::GetName メソッド
 読み込まれたモジュールの名前を取得します。  
@@ -33,12 +33,12 @@ HRESULT GetName(
  `szName`  
  [out] 読み込まれたモジュールの名前が含まれている文字配列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -49,5 +49,5 @@ HRESULT GetName(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugLoadedModule インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugLoadedModule インターフェイス](icordebugloadedmodule-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

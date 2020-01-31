@@ -1,5 +1,5 @@
 ---
-title: WPF のブラシの概要
+title: ブラシの概要
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
-ms.openlocfilehash: 8a1d05ad48ce75ce67d21d5a4d508015fea879b2
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 18ca9b79a6ee801638a54fcb227c44e9aea21fd0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458624"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746210"
 ---
 # <a name="wpf-brushes-overview"></a>WPF のブラシの概要
 画面に表示されるすべてのものは、ブラシによって描画されているため、表示されます。 たとえば、ブラシを使用して、ボタンの背景、テキストの前景色、および図形の塗りつぶしを記述します。 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ブラシを使用した描画の概念と例を紹介します。 ブラシを使用すると、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] オブジェクトを単色で塗りつぶすことも、パターンとイメージの複雑な組み合わせで塗りつぶすこともできます。  
@@ -26,13 +26,13 @@ ms.locfileid: "73458624"
   
  ほとんどのビジュアルオブジェクトを使用すると、描画方法を指定できます。 次の表に、<xref:System.Windows.Media.Brush>を使用できる一般的なオブジェクトとプロパティの一覧を示します。  
   
-|インスタンス|ブラシのプロパティ|  
+|&lt;クラス&gt; のすべてのオブジェクト|ブラシのプロパティ|  
 |-----------|----------------------|  
-|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>、 <xref:System.Windows.Controls.Border.Background%2A>|  
-|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>、 <xref:System.Windows.Controls.Control.Foreground%2A>|  
+|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>、<xref:System.Windows.Controls.Border.Background%2A>|  
+|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>、<xref:System.Windows.Controls.Control.Foreground%2A>|  
 |<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Panel.Background%2A>|  
 |<xref:System.Windows.Media.Pen>|<xref:System.Windows.Media.Pen.Brush%2A>|  
-|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>、 <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
+|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>、<xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
  次のセクションでは、さまざまな種類の <xref:System.Windows.Media.Brush> について説明し、それぞれの例を示します。  
@@ -170,5 +170,5 @@ VisualBrush を使用して塗りつぶされる四角形
 - [ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush サンプル](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [方法トピック](brushes-how-to-topics.md)
+- [方法のトピック](brushes-how-to-topics.md)
 - [パフォーマンスに関するその他の推奨事項](../advanced/optimizing-performance-other-recommendations.md)

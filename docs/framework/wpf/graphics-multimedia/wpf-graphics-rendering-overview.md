@@ -1,5 +1,5 @@
 ---
-title: WPF グラフィックス レンダリングの概要
+title: グラフィックスレンダリングの概要
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: 09f5f026ed320aaa253d8cdf6e0b271235aff604
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 103d086857bce8ae0960452bb92a69b68dc49dfa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72004171"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744807"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF グラフィックス レンダリングの概要
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のビジュアル層の概要について説明します。 この記事では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] モデルでのレンダリングのサポートのための <xref:System.Windows.Media.Visual> クラスの役割に焦点を当てています。  
@@ -51,7 +51,7 @@ ms.locfileid: "72004171"
  ![Visual オブジェクトから派生したクラスのダイアグラム](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual クラス  
- <xref:System.Windows.Media.DrawingVisual> は、図形、画像、またはテキストを表示するために使用される軽量の描画クラスです。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないため、実行時のパフォーマンスが向上するからです。 そのため、背景やクリップ アートの描画に適しています。 <xref:System.Windows.Media.DrawingVisual> を使用すると、カスタムビジュアルオブジェクトを作成できます。 詳しくは、「[DrawingVisual オブジェクトの使用](using-drawingvisual-objects.md)」を参照してください。  
+ <xref:System.Windows.Media.DrawingVisual> は、図形、画像、またはテキストを表示するために使用される軽量の描画クラスです。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないため、実行時のパフォーマンスが向上するからです。 そのため、背景やクリップ アートの描画に適しています。 <xref:System.Windows.Media.DrawingVisual> を使用すると、カスタムビジュアルオブジェクトを作成できます。 詳しくは、「[DrawingVisual オブジェクトの使用](using-drawingvisual-objects.md)」をご覧ください。  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual クラス  
  <xref:System.Windows.Media.Media3D.Viewport3DVisual> は、2D <xref:System.Windows.Media.Visual> と <xref:System.Windows.Media.Media3D.Visual3D> オブジェクトの間のブリッジを提供します。 <xref:System.Windows.Media.Media3D.Visual3D> クラスは、すべての3D ビジュアル要素の基本クラスです。 <xref:System.Windows.Media.Media3D.Viewport3DVisual> では、<xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> 値と <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> 値を定義する必要があります。 カメラを使用するとシーンを表示できます。 ビューポートは、投影が 2D サーフェイス上にマップされる場所を設定します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の 3D について詳しくは、「[3-D グラフィックスの概要](3-d-graphics-overview.md)」をご覧ください。  
@@ -77,8 +77,8 @@ ms.locfileid: "72004171"
   
  次の図は、レンダリングシーケンス中に <xref:System.Windows.Media.DrawingGroup> 操作が適用される順序を示しています。  
   
- ![操作の図面グループの順序](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
-DrawingGroup の操作の順序  
+ ![DrawingGroup 操作の順序](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+DrawingGroup 操作の順序  
   
  詳しくは、「[Drawing オブジェクトの概要](drawing-objects-overview.md)」をご覧ください。  
   
@@ -162,12 +162,12 @@ DrawingGroup の操作の順序
   
  マークアップの例で <xref:System.Windows.Controls.DockPanel> 要素を構成する論理オブジェクトを列挙すると、次の図に示すような論理オブジェクトの階層が表示されます。  
   
- ![ツリーダイアグラム](./media/tree1-wcp.gif "Tree1_wcp")  
+ ![ツリー ダイアグラム](./media/tree1-wcp.gif "Tree1_wcp")  
 論理ツリーのダイアグラム  
   
  ビジュアル ツリーと論理ツリーはどちらも、現在のアプリケーション要素セットと同期し、要素の追加、削除、または変更をすべて反映します。 ただし、これらのツリーが表すアプリケーションのビューはそれぞれ異なるものです。 ビジュアルツリーとは異なり、論理ツリーはコントロールの <xref:System.Windows.Controls.ContentPresenter> 要素を展開しません。 つまり、同じオブジェクト セットについて見ても、論理ツリーとビジュアルツリーの間に 1 対 1 の対応関係はありません。 実際、パラメーターと同じ要素を使用して、 **Logicaltreehelper**オブジェクトの <xref:System.Windows.LogicalTreeHelper.GetChildren%2A> メソッドと**VisualTreeHelper**オブジェクトの <xref:System.Windows.Media.VisualTreeHelper.GetChild%2A> メソッドを呼び出すと、結果は異なります。  
   
- 論理ツリーの詳細については、「[WPF のツリー](../advanced/trees-in-wpf.md)」を参照してください。  
+ 論理ツリーについて詳しくは、「[WPF のツリー](../advanced/trees-in-wpf.md)」をご覧ください。  
   
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>XamlPad を使用したビジュアル ツリーの表示  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ツール XamlPad は、現在定義されている XAML コンテンツに対応するビジュアルツリーを表示し、探索するためのオプションを提供します。 ビジュアル ツリーを表示するには、メニュー バーの **[Show Visual Tree]** (ビジュアル ツリーを表示) ボタンをクリックします。 次に示すのは、XamlPad の**ビジュアルツリーエクスプローラー**パネルで、ビジュアルツリーノードに XAML コンテンツを展開する方法を示しています。  
@@ -179,7 +179,7 @@ DrawingGroup の操作の順序
 ### <a name="profiling-visual-performance"></a>ビジュアル パフォーマンスのプロファイリング  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] にはパフォーマンス プロファイリング ツールのセットがあります。アプリケーションの実行時動作を分析したり、適用できるパフォーマンス最適化の種類を決定したりできます。 Visual Profiler ツールでは、パフォーマンス データをアプリケーションのビジュアル ツリーに直接マップすることにより、それらのデータを多彩なグラフィカル ビューで表示できます。 このスクリーンショットでは、Visual Profiler の **[CPU 使用率]** セクションに、オブジェクトの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サービスの使用率が詳しく表示されています (レンダリングやレイアウトなど)。  
   
- ![Visual Profiler の出力](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")の表示  
+ ![Visual Profiler の表示出力](./media/wpfperf-visualprofiler-04.png "WPFPerf_VisualProfiler_04")  
 Visual Profiler 表示出力  
   
 <a name="visual_rendering_behavior"></a>   
@@ -220,7 +220,7 @@ Visual Profiler 表示出力
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、ハードウェア ピクセルの代わりに、デバイス非依存のピクセルを主要測定単位として用いた、自動拡大縮小機能がサポートされています。つまり、アプリケーション開発者が手を加えなくても、グラフィックスとテキストが適切に拡大縮小されます。 次の図は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストとグラフィックスが、さまざまな DPI でどのように表示されるかを示したものです。  
   
- ![異なる DPI 設定のグラフィックスとテキスト](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
+ ![異なる DPI 設定のグラフィックとテキスト](./media/graphicsmm-dpi-setting-examples.png "graphicsmm_dpi_setting_examples")  
 異なる DPI 設定のグラフィックスとテキスト  
   
 <a name="visualtreehelper_class"></a>   
@@ -240,14 +240,14 @@ Visual Profiler 表示出力
  [!code-csharp[VisualsOverview#101](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#101)]
  [!code-vb[VisualsOverview#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#101)]  
   
- ほとんどの場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの要素を表すのには、論理ツリーの方が役立ちます。 論理ツリーを直接変更することはありませんが、アプリケーションのこのビューは、プロパティの継承やイベントのルーティングを理解する上で役立ちます。 ビジュアルツリーとは異なり、論理ツリーは、<xref:System.Windows.Documents.ListItem>などの非ビジュアルデータオブジェクトを表すことができます。 論理ツリーの詳細については、「[WPF のツリー](../advanced/trees-in-wpf.md)」を参照してください。  
+ ほとんどの場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの要素を表すのには、論理ツリーの方が役立ちます。 論理ツリーを直接変更することはありませんが、アプリケーションのこのビューは、プロパティの継承やイベントのルーティングを理解する上で役立ちます。 ビジュアルツリーとは異なり、論理ツリーは、<xref:System.Windows.Documents.ListItem>などの非ビジュアルデータオブジェクトを表すことができます。 論理ツリーについて詳しくは、「[WPF のツリー](../advanced/trees-in-wpf.md)」をご覧ください。  
   
  <xref:System.Windows.Media.VisualTreeHelper> クラスには、ビジュアルオブジェクトの外接する四角形を返すメソッドが用意されています。 <xref:System.Windows.Media.VisualTreeHelper.GetContentBounds%2A>を呼び出すことによって、ビジュアルオブジェクトの外接する四角形を返すことができます。 <xref:System.Windows.Media.VisualTreeHelper.GetDescendantBounds%2A>を呼び出すことによって、ビジュアルオブジェクト自体を含む、ビジュアルオブジェクトのすべての子孫の外接する四角形を返すことができます。 次のコードは、ビジュアル オブジェクトとそのすべての子孫の四角形領域を計算する方法を示したものです。  
   
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

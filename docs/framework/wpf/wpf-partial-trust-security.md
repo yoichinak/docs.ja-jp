@@ -1,5 +1,5 @@
 ---
-title: WPF 部分信頼セキュリティ
+title: 部分信頼セキュリティ
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ce9341a45b43c4af4543cf473597c273c33701fc
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 0d9bbcc32eea49afc6ecc713b0cf005b4434a67d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636550"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743330"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信頼セキュリティ
 <a name="introduction"></a>一般に、インターネットアプリケーションは、重要なシステムリソースへの直接アクセスを制限して、悪意のある損害を防ぐ必要があります。 既定では、HTML およびクライアント側のスクリプト言語は、重要なシステムリソースにアクセスできません。 Windows Presentation Foundation (WPF) ブラウザーでホストされるアプリケーションは、ブラウザーから起動できるため、同様の制限のセットに準拠している必要があります。 これらの制限を適用するために、WPF はコードアクセスセキュリティ (CAS) と ClickOnce の両方に依存しています (「 [wpf のセキュリティ方針-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」を参照してください)。 既定では、ブラウザーでホストされるアプリケーションは、インターネット、ローカルイントラネット、またはローカルコンピューターのどちらから起動するかに関係なく、インターネットゾーンの CA のアクセス許可セットを要求します。 すべてのアクセス許可のセットよりも少ないアプリケーションで実行されるアプリケーションは、部分信頼で実行されていると言います。  
@@ -43,11 +43,11 @@ ms.locfileid: "75636550"
   
 |機能分野|特性|  
 |------------------|-------------|  
-|[全般]|ブラウザー ウィンドウ<br /><br /> 起点サイトアクセス<br /><br /> & lt; (512 KB)<br /><br /> UIAutomation プロバイダー<br /><br /> コマンド実行<br /><br /> 入力方式エディター (IME)<br /><br /> タブレットのスタイラスとインク<br /><br /> マウスキャプチャイベントおよび移動イベントを使用した、シミュレートされたドラッグアンドドロップ<br /><br /> OpenFileDialog<br /><br /> XAML 逆シリアル化 (XamlReader 経由)|  
+|[全般]|ブラウザーウィンドウ<br /><br /> 起点サイトアクセス<br /><br /> & lt; (512 KB)<br /><br /> UIAutomation プロバイダー<br /><br /> コマンド実行<br /><br /> 入力方式エディター (IME)<br /><br /> タブレットのスタイラスとインク<br /><br /> マウスキャプチャイベントおよび移動イベントを使用した、シミュレートされたドラッグアンドドロップ<br /><br /> OpenFileDialog<br /><br /> XAML 逆シリアル化 (XamlReader 経由)|  
 |Web 統合|ブラウザーダウンロードダイアログ<br /><br /> 最上位レベルのユーザーが開始したナビゲーション<br /><br /> mailto: リンク<br /><br /> Uniform Resource Identifier パラメーター<br /><br /> HTTPWebRequest<br /><br /> IFRAME でホストされている WPF コンテンツ<br /><br /> Frame を使用した同一サイトの HTML ページのホスト<br /><br /> WebBrowser を使用した同じサイトの HTML ページのホスト<br /><br /> Web サービス (ASMX)<br /><br /> Web サービス (Windows Communication Foundation を使用)<br /><br /> スクリプト<br /><br /> ドキュメント オブジェクト モデル|  
-|ビジュアル|2D と3D<br /><br /> アニメーション<br /><br /> メディア (起点サイトとクロスドメイン)<br /><br /> イメージング/オーディオ/ビデオ|  
-|リーディング|FlowDocument<br /><br /> XPS ドキュメント<br /><br /> 埋め込み & システムフォント<br /><br /> CFF & TrueType フォント|  
-|編集中|スペル チェック<br /><br /> RichTextBox<br /><br /> プレーンテキストとインククリップボードのサポート<br /><br /> ユーザーが開始した貼り付け<br /><br /> 選択したコンテンツのコピー|  
+|効果|2D と3D<br /><br /> アニメーション<br /><br /> メディア (起点サイトとクロスドメイン)<br /><br /> イメージング/オーディオ/ビデオ|  
+|リード|FlowDocument<br /><br /> XPS ドキュメント<br /><br /> 埋め込み & システムフォント<br /><br /> CFF & TrueType フォント|  
+|編集中|スペルチェック<br /><br /> RichTextBox<br /><br /> プレーンテキストとインククリップボードのサポート<br /><br /> ユーザーが開始した貼り付け<br /><br /> 選択したコンテンツのコピー|  
 |Controls|一般的なコントロール|  
   
  この表では、大まかな WPF 機能について説明します。 詳細については、Windows SDK が WPF の各メンバーに必要なアクセス許可を文書に記載しています。 また、次の機能には、特別な考慮事項など、部分的な信頼の実行に関する詳細情報が含まれています。  
@@ -73,7 +73,7 @@ ms.locfileid: "75636550"
 |機能分野|特性|  
 |------------------|-------------|  
 |[全般]|ウィンドウ (アプリケーション定義のウィンドウおよびダイアログボックス)<br /><br /> SaveFileDialog<br /><br /> [ファイル システム]<br /><br /> レジストリへのアクセス<br /><br /> ドラッグ アンド ドロップ<br /><br /> XAML シリアル化 (XamlWriter 経由)<br /><br /> UIAutomation クライアント<br /><br /> ソースウィンドウへのアクセス (HwndHost)<br /><br /> 完全な音声サポート<br /><br /> Windows フォームの相互運用性|  
-|ビジュアル|ビットマップ効果<br /><br /> イメージのエンコード|  
+|効果|ビットマップ効果<br /><br /> イメージのエンコード|  
 |編集中|リッチテキスト形式のクリップボード<br /><br /> XAML の完全なサポート|  
   
 <a name="Partial_Trust_Programming"></a>   

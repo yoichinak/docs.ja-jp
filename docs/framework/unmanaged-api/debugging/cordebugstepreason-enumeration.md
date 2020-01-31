@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 6c73afb00cbd104cff3d310d1369097b459c131e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 92aee981aca3bac32c0ef264799e486315ca5103
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133686"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789252"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 列挙型
 個々のステップの結果を示します。  
@@ -50,7 +50,7 @@ typedef enum CorDebugStepReason {
 |`STEP_INTERCEPT`|コントロールがインターセプターに渡されました。|  
 |`STEP_EXIT`|ステップが完了する前にスレッドが終了しました。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -61,5 +61,5 @@ typedef enum CorDebugStepReason {
   
 ## <a name="see-also"></a>関連項目
 
-- [StepComplete メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [StepComplete メソッド](icordebugmanagedcallback-stepcomplete-method.md)
+- [列挙型のデバッグ](debugging-enumerations.md)

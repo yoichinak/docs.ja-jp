@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b5589171-a4a0-4c00-bbdc-6e0a42233b75
 topic_type:
 - apiref
-ms.openlocfilehash: f4baaf5e4f5117ee936fa6d758798c340551c48b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 127022fb8e9f9559ccb0f0c877d25db67eea3037
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121081"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784012"
 ---
 # <a name="icordebugcodeenum-interface"></a>ICorDebugCodeEnum インターフェイス
 
@@ -29,14 +29,14 @@ ms.locfileid: "73121081"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcodeenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugCode` インスタンスを列挙から取得します。|  
+|[Next メソッド](icordebugcodeenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugCode` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -47,4 +47,4 @@ ms.locfileid: "73121081"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

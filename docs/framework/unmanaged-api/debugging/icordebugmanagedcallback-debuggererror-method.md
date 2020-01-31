@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e983d11-eaf3-4741-b936-29ec456384a3
 topic_type:
 - apiref
-ms.openlocfilehash: c03be2405e1ab0287a2921b6e2e293862c67a193
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9b96c0a2eca543b9e01ccf92b271b1aa7003c5c9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137373"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781948"
 ---
 # <a name="icordebugmanagedcallbackdebuggererror-method"></a>ICorDebugManagedCallback::DebuggerError メソッド
 共通言語ランタイム (CLR) からのイベントを処理しようとしたときに、エラーが発生したことをデバッガーに通知します。  
@@ -45,12 +45,12 @@ HRESULT DebuggerError (
  `errorCode`  
  からCLR エラーを示す整数です。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  プロセスは、エラーの性質によっては、パススルーモードに配置される場合があります。  
   
- `DebugError` のコールバックは、エラーのためにデバッグサービスが無効になっていることを示します。そのため、デバッガーは、ユーザーがエラーメッセージを使用できるようにする必要があります。 [GetID:](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md) : ICorDebug は安全に呼び出すことができますが、他のすべてのメソッド ( [:: Terminate](../../../../docs/framework/unmanaged-api/debugging/icordebug-terminate-method.md)を含む) は呼び出さないでください。 デバッガーでは、プロセスを終了するためにオペレーティングシステムの機能を使用する必要があります。  
+ `DebugError` のコールバックは、エラーのためにデバッグサービスが無効になっていることを示します。そのため、デバッガーは、ユーザーがエラーメッセージを使用できるようにする必要があります。 [GetID:](icordebugprocess-getid-method.md) : ICorDebug は安全に呼び出すことができますが、他のすべてのメソッド ( [:: Terminate](icordebug-terminate-method.md)を含む) は呼び出さないでください。 デバッガーでは、プロセスを終了するためにオペレーティングシステムの機能を使用する必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -61,4 +61,4 @@ HRESULT DebuggerError (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

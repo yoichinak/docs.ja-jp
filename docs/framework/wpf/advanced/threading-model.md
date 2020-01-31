@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 72fa95bde0c41e913bdaa35da7fdcd34f81b3057
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740271"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794269"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、スレッド処理の難しさから開発者を節約するように設計されています。 その結果、多くの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッドプログラムは複雑でデバッグが困難なため、シングルスレッドソリューションが存在する場合は回避する必要があります。
@@ -177,7 +177,7 @@ ms.locfileid: "75740271"
 
  `GetWeatherAsync` では、バックグラウンドスレッドの作成など、前に説明した手法のいずれかを使用して、呼び出し元のスレッドをブロックするのではなく、非同期に処理します。
 
- このパターンの最も重要な部分の1つは、 *methodname*`Async` メソッドを呼び出したのと同じスレッドで*methodname*`Completed` メソッドを呼び出すことです。 これは、<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>を格納することによって [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 非常に簡単に実行できますが、グラフィカルでないコンポーネントは、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] や ASP.NET プログラムではなく [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでのみ使用できます。
+ このパターンの最も重要な部分の1つは、 *methodname*`Async` メソッドを呼び出したのと同じスレッドで*methodname*`Completed` メソッドを呼び出すことです。 これは、<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>を格納することによって [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 非常に簡単に実行できますが、グラフィカルでないコンポーネントは、Windows フォームや ASP.NET プログラムではなく [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでのみ使用できます。
 
  <xref:System.Windows.Threading.DispatcherSynchronizationContext> クラスはこのニーズに対応しており、他の [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] フレームワークとも連携する <xref:System.Windows.Threading.Dispatcher> の簡略化されたバージョンと考えることができます。
 
