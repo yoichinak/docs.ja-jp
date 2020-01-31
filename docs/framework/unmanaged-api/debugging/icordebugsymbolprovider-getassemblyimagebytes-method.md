@@ -1,15 +1,15 @@
 ---
-title: 'GetAssemblyImageBytes Method Provider:: メソッド'
+title: ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
 ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
-ms.openlocfilehash: 3184ba116704df8945b53766e62435a4252eaa11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b7a8f942d493b7b775a31dce5ab4d351a77cfe5f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138934"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791674"
 ---
-# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>GetAssemblyImageBytes Method Provider:: メソッド
+# <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
 マージされたアセンブリ内の指定の相対仮想アドレス (RVA: relative virtual address) で、マージされたアセンブリのデータを読み取ります。  
   
 ## <a name="syntax"></a>構文  
@@ -30,14 +30,14 @@ HRESULT GetAssemblyImageBytes(
  マージされたアセンブリから読み取るバイト数。  
   
  `ppMemoryBuffer`  
- マージされたアセンブリメタデータを持つメモリバッファーに関する情報を格納している、[のオブジェクトの](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)アドレスへのポインター。  
+ マージされたアセンブリメタデータを持つメモリバッファーに関する情報を格納している、[のオブジェクトの](icordebugmemorybuffer-interface.md)アドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -48,5 +48,5 @@ HRESULT GetAssemblyImageBytes(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

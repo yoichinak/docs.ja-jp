@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fee56a29-3154-4192-958d-71da2ced3740
 topic_type:
 - apiref
-ms.openlocfilehash: 72a1b6fdc40f3169500d8cf3b3028315106ecc69
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ae06d825565faff70b0c8be2ccbee5228737e41
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140234"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791100"
 ---
 # <a name="icordebugvalue3getsize64-method"></a>ICorDebugValue3::GetSize64 メソッド
-この[ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)オブジェクトのサイズ (バイト単位) を取得します。  
+この[ICorDebugValue3](icordebugvalue3-interface.md)オブジェクトのサイズ (バイト単位) を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,12 +37,12 @@ HRESULT GetSize64(
  pSize  
  入出力このオブジェクトのサイズ (バイト単位) へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  この値の型が参照型の場合、このメソッドはオブジェクトのサイズではなく、ポインターのサイズを返します。  
   
- `ICorDebugValue3::GetSize` メソッドは、その出力パラメーターの型の[ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)メソッドとは異なります。 [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-getsize-method.md)では、出力パラメーターは `ULONG32`です。`ICorDebugValue3::GetSize`では、`ULONG64`です。 これにより、 [ICorDebugValue3](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)インターフェイスは、2gb を超える配列のサイズを報告できます。  
+ `ICorDebugValue3::GetSize` メソッドは、その出力パラメーターの型の[ICorDebugValue:: GetSize](icordebugvalue-getsize-method.md)メソッドとは異なります。 [Icordebugvalue::getsize](icordebugvalue-getsize-method.md)、出力パラメーターが、 `ULONG32`;`ICorDebugValue3::GetSize`は、`ULONG64`です。 これにより、 [ICorDebugValue3](icordebugvalue3-interface.md)インターフェイスは、2gb を超える配列のサイズを報告できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -53,5 +53,5 @@ HRESULT GetSize64(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugValue3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugValue3 インターフェイス](icordebugvalue3-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

@@ -5,20 +5,20 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 281afad0c0de856ca67abc74c65aff0e7afc3e01
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b406d539f2446824027e9462c8ecbe20c18cfb27
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976505"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794126"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>チュートリアル : ハイブリッド アプリケーションのローカライズ
 
-このチュートリアルでは、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ベースのハイブリッドアプリケーションで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素をローカライズする方法について説明します。
+このチュートリアルでは、Windows フォームベースのハイブリッドアプリケーションで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素をローカライズする方法について説明します。
 
 このチュートリアルでは、以下のタスクを行います。
 
-- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] ホストプロジェクトを作成しています。
+- Windows フォームホストプロジェクトを作成しています。
 
 - ローカライズ可能なコンテンツの追加
 
@@ -32,7 +32,7 @@ ms.locfileid: "73976505"
 
 完了すると、ローカライズされたハイブリッドアプリケーションが完成します。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
@@ -40,7 +40,7 @@ ms.locfileid: "73976505"
 
 ## <a name="creating-the-windows-forms-host-project"></a>Windows フォームホストプロジェクトの作成
 
-最初の手順として、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションプロジェクトを作成し、ローカライズするコンテンツを含む [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素を追加します。
+最初の手順として、Windows フォームアプリケーションプロジェクトを作成し、ローカライズするコンテンツを含む [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素を追加します。
 
 ### <a name="to-create-the-host-project"></a>ホストプロジェクトを作成するには
 
@@ -52,7 +52,7 @@ ms.locfileid: "73976505"
 
 ## <a name="adding-localizable-content"></a>ローカライズ可能なコンテンツの追加
 
-次に、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] label コントロールを追加し、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素のコンテンツをローカライズ可能な文字列に設定します。
+次に、Windows フォーム label コントロールを追加し、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素のコンテンツをローカライズ可能な文字列に設定します。
 
 ### <a name="to-add-localizable-content"></a>ローカライズ可能なコンテンツを追加するには
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 79f79e42652ca51c409fabb12a572485ad734b35
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744902"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794157"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>チュートリアル: Win32 での WPF クロックのホスト
 
@@ -86,7 +86,7 @@ int APIENTRY _tWinMain(HINSTANCE hInstance,
                      int       nCmdShow)
 ```
 
-この属性は、コンポーネントオブジェクトモデル (COM) を初期化するときに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (および [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]) に必要なシングルスレッドアパートメントモデル (STA) を使用する必要があることを、共通言語ランタイム (CLR) に通知します。
+この属性は、コンポーネントオブジェクトモデル (COM) を初期化するときに、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] (および Windows フォーム) に必要なシングルスレッドアパートメントモデル (STA) を使用する必要があることを、共通言語ランタイム (CLR) に通知します。
 
 ## <a name="create-a-windows-presentation-framework-page"></a>Windows Presentation Framework ページを作成する
 

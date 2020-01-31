@@ -2,12 +2,12 @@
 title: カスタム サービス ホスト
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 86dd8c5cebfb8ea6f9a2b95f7698362eb34c1a7c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 271233015739024428a7a29815f66278c9d7aa04
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716793"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789928"
 ---
 # <a name="custom-service-host"></a>カスタム サービス ホスト
 このサンプルでは、<xref:System.ServiceModel.ServiceHost> クラスから派生したカスタムのサービス ホストを使用して、サービスの実行時動作を変更する方法を示します。 この方法は、多数のサービスを共通方式で構成するという方法の代わりに使用でき、再利用可能です。 このサンプルでは、<xref:System.ServiceModel.Activation.ServiceHostFactory> クラスを使用して、カスタムの ServiceHost を、インターネット インフォメーション サービス (IIS) または Windows プロセス アクティブ化サービス (WAS) でホストされる環境で使用する方法も示します。  
@@ -21,7 +21,7 @@ ms.locfileid: "74716793"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
-## <a name="about-the-scenario"></a>シナリオについて  
+## <a name="about-the-scenario"></a>シナリオについて
  機密性の高いサービスメタデータが誤って公開されるのを防ぐために、Windows Communication Foundation (WCF) サービスの既定の構成では、メタデータの公開が無効になっています。 この動作は、既定の設定ではセキュリティで保護されますが、同時に、サービスの構成の中でメタデータ発行の動作が明示的に有効化されない限り、サービスの呼び出しに必要なクライアント コードをメタデータ インポート ツール (Svcutil.exe など) を使用して生成できないことも意味します。  
   
  多数のサービスのメタデータ公開を有効にすると、同一の構成要素が各サービスに追加されます。この結果、本質的に同じ構成情報が大量に発生することになります。 各サービスを個別に構成する代わりに、メタデータ公開を有効化する命令型コードを一度だけプログラミングして、そのコードを複数のサービスで再利用するという方法もあります。 この方法を使用するには、<xref:System.ServiceModel.ServiceHost> から派生する新しいクラスを作成し、`ApplyConfiguration`() メソッドをオーバーライドして命令型コードでメタデータ公開動作を追加します。  
@@ -29,7 +29,7 @@ ms.locfileid: "74716793"
 > [!IMPORTANT]
 > このサンプルでは、わかりやすくするために、セキュリティで保護されていないメタデータ公開エンドポイントを作成する方法を示します。 このようなエンドポイントを利用するコンシューマーは、匿名で、認証を受けていない可能性もあります。したがって、エンドポイントを配置する前には注意を払い、サービスのメタデータをパブリックに開示することが適切であることを確認する必要があります。  
   
-## <a name="implementing-a-custom-servicehost"></a>カスタム ServiceHost の実装  
+## <a name="implementing-a-custom-servicehost"></a>カスタム ServiceHost の実装
  <xref:System.ServiceModel.ServiceHost> クラスは、便利な仮想メソッドを多数公開しています。継承側でこの仮想メソッドをオーバーライドして、サービスの実行時動作を変更することができます。 たとえば、`ApplyConfiguration`() メソッドはサービスの構成情報を構成ストアから読み取り、それに応じてホストの <xref:System.ServiceModel.Description.ServiceDescription> を変更します。 既定の実装は構成をアプリケーションの構成ファイルから読み取りますが、 カスタム実装では、`ApplyConfiguration`() をオーバーライドすれば、命令型コードを使用して <xref:System.ServiceModel.Description.ServiceDescription> にさらに変更を加えることや、既定の構成ストア全体を置き換えることも可能です ( たとえば、サービスのエンドポイント構成を、アプリケーションの構成ファイルではなくデータベースから読み取るようにする場合)。  
   
  このサンプルでは、ServiceMetadataBehavior (メタデータ公開を有効にする動作) がサービスの構成ファイルに明示的に追加されていない場合でもこの動作を追加する、カスタムの ServiceHost を構築します。 これを実現するには、<xref:System.ServiceModel.ServiceHost> から継承する新しいクラスを作成して `ApplyConfiguration`() をオーバーライドします。  
@@ -145,35 +145,35 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
  サービス実装と共にカスタム ファクトリを使用するには、いくつかのメタデータをサービスの .svc ファイルに追加する必要があります。  
   
-```  
-<%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"  
-               Factory="Microsoft.ServiceModel.Samples.SelfDescribingServiceHostFactory"  
-               language=c# Debug="true" %>  
-```  
+```xml
+<%@ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
+               Factory="Microsoft.ServiceModel.Samples.SelfDescribingServiceHostFactory"
+               language=c# Debug="true" %>
+```
   
  ここでは、`Factory` 属性を `@ServiceHost` ディレクティブに追加し、カスタム ファクトリの CLR 型の名前を属性値として渡しました。 IIS または WAS がこのサービスのメッセージを受信すると、WCF ホスティングインフラストラクチャはまず ServiceHostFactory のインスタンスを作成し、次に `ServiceHostFactory.CreateServiceHost()`を呼び出してサービスホスト自体をインスタンス化します。  
   
 ## <a name="running-the-sample"></a>サンプルの実行  
  このサンプルには完全な機能を持つクライアントとサービスの実装が用意されていますが、ここでの目的は、カスタム ホストを使用してサービスのランタイム動作を変更する方法を示すことです。次の手順を実行します。  
   
-#### <a name="to-observe-the-effect-of-the-custom-host"></a>カスタム ホストの影響を確認するには  
+### <a name="observe-the-effect-of-the-custom-host"></a>カスタムホストの効果を確認する
   
-1. サービスの Web.config ファイルを開き、その構成ではサービスのメタデータが明示的には有効にされていないことを確認します。  
+1. サービスの Web.config ファイルを開き、サービスのメタデータを明示的に有効にする構成がないことを確認します。  
   
 2. サービスの .svc ファイルを開き、@ServiceHost ディレクティブに、カスタム ServiceHostFactory の名前を指定するファクトリ属性が含まれていることを確認します。  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
+### <a name="set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行する
   
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
-  
-2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
-  
-3. ソリューションがビルドされたら、Setup.exe を実行して IIS 7.0 で ServiceModelSamples アプリケーションを設定します。 これで、ServiceModelSamples ディレクトリが IIS 7.0 アプリケーションとして表示されます。  
-  
-4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
-  
-5. IIS 7.0 アプリケーションを削除するには、クリーンアップを実行します。  
-  
-## <a name="see-also"></a>参照
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
 
-- [方法 : IIS で WCF サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。
+
+3. ソリューションがビルドされたら、Setup.exe を実行して IIS 7.0 で ServiceModelSamples アプリケーションを設定します。 これで、ServiceModelSamples ディレクトリが IIS 7.0 アプリケーションとして表示されます。
+
+4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。
+
+5. IIS 7.0 アプリケーションを削除するには、*クリーンアップ*を実行します。
+
+## <a name="see-also"></a>関連項目
+
+- [方法 : IIS で WCF サービスをホストする](../feature-details/how-to-host-a-wcf-service-in-iis.md)

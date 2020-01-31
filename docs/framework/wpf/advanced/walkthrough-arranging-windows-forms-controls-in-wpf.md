@@ -9,16 +9,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
-ms.openlocfilehash: 5e7544dfdbee234bb968c9a7f39814e8749ece15
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: eee26165e17b3327166a160e7c4ee3726215dcfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735290"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794250"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>チュートリアル: WPF での Windows フォーム コントロールの配置
 
-このチュートリアルでは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウト機能を使用して、ハイブリッドアプリケーションで [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを配置する方法について説明します。
+このチュートリアルでは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウト機能を使用して、ハイブリッドアプリケーションで Windows フォームコントロールを配置する方法について説明します。
 
 このチュートリアルでは、以下のタスクを行います。
 
@@ -39,7 +39,7 @@ ms.locfileid: "76735290"
 
 このチュートリアルで示すタスクの完全なコード一覧については、「 [WPF の Windows フォームコントロールの配置](https://go.microsoft.com/fwlink/?LinkID=159971)」を参照してください。
 
-完了すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのアプリケーションの [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] レイアウト機能について理解できるようになります。
+完了すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのアプリケーションの Windows フォームレイアウト機能について理解できるようになります。
 
 ## <a name="prerequisites"></a>Prerequisites
 
@@ -59,7 +59,7 @@ ms.locfileid: "76735290"
 
 3. *Mainwindow.xaml*をダブルクリックして、xaml ビューで開きます。
 
-4. <xref:System.Windows.Window> 要素に、次の [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 名前空間マッピングを追加します。
+4. <xref:System.Windows.Window> 要素に、次の Windows フォーム名前空間マッピングを追加します。
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -71,7 +71,7 @@ ms.locfileid: "76735290"
 
 ## <a name="using-default-layout-settings"></a>既定のレイアウト設定の使用
 
-既定では、<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素は、ホストされている [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールのレイアウトを処理します。
+既定では、<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素は、ホストされている Windows フォームコントロールのレイアウトを処理します。
 
 既定のレイアウト設定を使用するには、次の手順を実行します。
 
@@ -79,7 +79,7 @@ ms.locfileid: "76735290"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#3)]
 
-2. <kbd>F5</kbd> キーを押してアプリケーションをビルドし、実行します。 <xref:System.Windows.Controls.Canvas>に [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.Button?displayProperty=nameWithType> コントロールが表示されます。 ホストされるコントロールは、そのコンテンツに基づいてサイズが変更され、ホストされるコントロールに合わせて <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素のサイズが変更されます。
+2. <kbd>F5</kbd> キーを押してアプリケーションをビルドし、実行します。 <xref:System.Windows.Controls.Canvas>に Windows フォーム <xref:System.Windows.Forms.Button?displayProperty=nameWithType> コントロールが表示されます。 ホストされるコントロールは、そのコンテンツに基づいてサイズが変更され、ホストされるコントロールに合わせて <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素のサイズが変更されます。
 
 ## <a name="sizing-to-content"></a>コンテンツに合わせたサイズの変更
 
@@ -115,7 +115,7 @@ ms.locfileid: "76735290"
 
      [!code-xaml[WpfLayoutHostingWfWithXaml#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#6)]
 
-2. <kbd>F5</kbd> キーを押してアプリケーションをビルドし、実行します。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素は、既定のレイアウト設定よりも小さい50ピクセルのサイズ (高さ70ピクセル) に設定されます。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールの内容は、それに応じて再配置されます。
+2. <kbd>F5</kbd> キーを押してアプリケーションをビルドし、実行します。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素は、既定のレイアウト設定よりも小さい50ピクセルのサイズ (高さ70ピクセル) に設定されます。 Windows フォームコントロールの内容は、それに応じて再配置されます。
 
 ## <a name="setting-layout-properties"></a>レイアウト プロパティの設定
 
@@ -164,7 +164,7 @@ ms.locfileid: "76735290"
 
 ## <a name="setting-visibility"></a>可視性の設定
 
-<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素の <xref:System.Windows.UIElement.Visibility%2A> プロパティを設定することによって、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを非表示にしたり折りたたんだりできます。 コントロールを非表示にすると、そのコントロールは表示されませんが、レイアウト空間は使用されます。 コントロールを折りたたむと、そのコントロールは表示されず、レイアウト空間も使用されません。
+<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素の <xref:System.Windows.UIElement.Visibility%2A> プロパティを設定することによって、Windows フォームコントロールを非表示にしたり折りたたんだりできます。 コントロールを非表示にすると、そのコントロールは表示されませんが、レイアウト空間は使用されます。 コントロールを折りたたむと、そのコントロールは表示されず、レイアウト空間も使用されません。
 
 ホストされるコントロールの表示を設定するには、次の手順を実行します。
 
@@ -181,11 +181,11 @@ ms.locfileid: "76735290"
 
 4. [クリックして**非表示に**する] ボタンをクリックすると、<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素が非表示になります。
 
-5. レイアウトの <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素を完全に非表示にするには、 **[クリック**して閉じる] ボタンをクリックします。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを折りたたむと、周囲の要素が再配置され、そのスペースが占有されます。
+5. レイアウトの <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素を完全に非表示にするには、 **[クリック**して閉じる] ボタンをクリックします。 Windows フォームコントロールを折りたたむと、周囲の要素が再配置され、そのスペースが占有されます。
 
 ## <a name="hosting-a-control-that-does-not-stretch"></a>伸縮しないコントロールのホスト
 
-一部の [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールのサイズは固定されており、レイアウト内の使用可能な領域を塗りつぶすために伸縮しません。 たとえば、<xref:System.Windows.Forms.MonthCalendar> コントロールでは、固定領域に月が表示されます。
+一部の Windows フォームコントロールのサイズは固定されており、レイアウト内の使用可能な領域を塗りつぶすために伸縮しません。 たとえば、<xref:System.Windows.Forms.MonthCalendar> コントロールでは、固定領域に月が表示されます。
 
 ストレッチされないコントロールをホストするには、次の手順を実行します。
 
@@ -223,7 +223,7 @@ WPF 要素とは異なり、Windows フォームコントロールは回転を�
 
 ## <a name="setting-padding-and-margins"></a>パディングとマージンの設定
 
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトの埋め込みと余白は [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]の埋め込みと余白に似ています。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素の <xref:System.Windows.Controls.Control.Padding%2A> と <xref:System.Windows.FrameworkElement.Margin%2A> のプロパティを設定するだけです。
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトの埋め込みと余白は Windows フォームの埋め込みと余白に似ています。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素の <xref:System.Windows.Controls.Control.Padding%2A> と <xref:System.Windows.FrameworkElement.Margin%2A> のプロパティを設定するだけです。
 
 ホストされるコントロールの埋め込みと余白を設定するには、次の手順を実行します。
 
@@ -232,11 +232,11 @@ WPF 要素とは異なり、Windows フォームコントロールは回転を�
      [!code-xaml[WpfLayoutHostingWfWithXaml#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#14)]
     [!code-xaml[WpfLayoutHostingWfWithXaml#15](~/samples/snippets/csharp/VS_Snippets_Wpf/WpfLayoutHostingWfWithXaml/CSharp/Window1.xaml#15)]
 
-2. <kbd>F5</kbd> キーを押してアプリケーションをビルドし、実行します。 埋め込みと余白の設定は、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]で適用されるのと同じ方法で、ホストされる [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールに適用されます。
+2. <kbd>F5</kbd> キーを押してアプリケーションをビルドし、実行します。 埋め込みと余白の設定は、Windows フォームで適用されるのと同じ方法で、ホストされる Windows フォームコントロールに適用されます。
 
 ## <a name="using-dynamic-layout-containers"></a>動的レイアウト コンテナーの使用
 
-[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] には、<xref:System.Windows.Forms.FlowLayoutPanel> と <xref:System.Windows.Forms.TableLayoutPanel>の2つの動的レイアウトコンテナーが用意されています。 これらのコンテナーは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトでも使用できます。
+Windows フォームには、<xref:System.Windows.Forms.FlowLayoutPanel> と <xref:System.Windows.Forms.TableLayoutPanel>の2つの動的レイアウトコンテナーが用意されています。 これらのコンテナーは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトでも使用できます。
 
 動的レイアウトコンテナーを使用するには、次の手順を実行します。
 

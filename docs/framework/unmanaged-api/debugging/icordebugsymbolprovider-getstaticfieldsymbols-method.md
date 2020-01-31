@@ -1,15 +1,15 @@
 ---
-title: 'いいね Provider:: GetStaticFieldSymbols メソッド'
+title: ICorDebugSymbolProvider::GetStaticFieldSymbols メソッド
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-ms.openlocfilehash: 8c4211a60786016e25cc3e3419804817b57ab64e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02cc62a421058f83e28ce945ae9e76745f768988
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138806"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791552"
 ---
-# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>いいね Provider:: GetStaticFieldSymbols メソッド
+# <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols メソッド
 typespec シグネチャに対応する静的フィールド シンボルを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -38,14 +38,14 @@ HRESULT GetStaticFieldSymbols(
  [out] メソッドによって取得されたシンボル数へのポインター。  
   
  `pSymbols`  
- 入出力要求された静的なフィールドシンボルが格納されている、表示名のある[シンボル](../../../../docs/framework/unmanaged-api/debugging/icordebugstaticfieldsymbol-interface.md)配列へのポインター。  
+ 入出力要求された静的なフィールドシンボルが格納されている、表示名のある[シンボル](icordebugstaticfieldsymbol-interface.md)配列へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -56,6 +56,6 @@ HRESULT GetStaticFieldSymbols(
   
 ## <a name="see-also"></a>関連項目
 
-- [GetInstanceFieldSymbols メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-getinstancefieldsymbols-method.md)
-- [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [GetInstanceFieldSymbols メソッド](icordebugsymbolprovider-getinstancefieldsymbols-method.md)
+- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

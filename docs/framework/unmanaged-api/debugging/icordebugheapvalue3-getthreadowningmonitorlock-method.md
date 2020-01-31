@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e06fc19d-2cf4-4cad-81a3-137a68af8969
 topic_type:
 - apiref
-ms.openlocfilehash: ec265525d01dab0669939569501fce91b500a900
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8be7c0e32f6183deb354d8b3936ef55c2520fe9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73127491"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788617"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock メソッド
 このオブジェクトのモニターロックを所有するマネージスレッドを返します。  
@@ -46,12 +46,12 @@ HRESULT GetThreadOwningMonitorLock (
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|メソッドは正常に完了しました。|  
+|S_OK|メソッドは正常に終了しました。|  
 |S_FALSE|このオブジェクトのモニターロックを所有しているマネージスレッドはありません。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  マネージスレッドがこのオブジェクトのモニターロックを所有している場合は、次のようになります。  
   
 - メソッドは S_OK を返します。  
@@ -64,7 +64,7 @@ HRESULT GetThreadOwningMonitorLock (
   
  このオブジェクトのモニターロックを所有しているスレッドが特定できない場合にエラーが発生すると、メソッドはエラーを示す HRESULT を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -75,5 +75,5 @@ HRESULT GetThreadOwningMonitorLock (
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

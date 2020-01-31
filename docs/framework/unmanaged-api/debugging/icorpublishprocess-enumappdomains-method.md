@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7da621fc-e7d0-4c00-9439-5c93619d7414
 topic_type:
 - apiref
-ms.openlocfilehash: aa76bf511ff1e1710a7ff86ad2ac97665969f2bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 4799c1d04e8172c604eeec50f2b841a6db063949
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140444"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790580"
 ---
 # <a name="icorpublishprocessenumappdomains-method"></a>ICorPublishProcess::EnumAppDomains メソッド
-この[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)によって参照されるプロセス内のアプリケーションドメインの列挙子を取得します。  
+この[ICorPublishProcess](icorpublishprocess-interface.md)によって参照されるプロセス内のアプリケーションドメインの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,14 +35,14 @@ HRESULT EnumAppDomains (
   
 ## <a name="parameters"></a>パラメーター  
  `ppEnum`  
- 入出力このプロセス内のアプリケーションドメインのコレクションを反復処理できる[ICorPublishAppDomainEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)インスタンスのアドレスへのポインター。  
+ 入出力このプロセス内のアプリケーションドメインのコレクションを反復処理できる[ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)インスタンスのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  アプリケーションドメインの一覧は、`EnumAppDomains` メソッドが呼び出されたときに存在するアプリケーションドメインのスナップショットに基づいています。 このメソッドは、新しい最新の一覧を作成するために複数回呼び出すことができます。 既存のリストは、このメソッドの後続の呼び出しの影響を受けません。  
   
- プロセスが終了した場合、`EnumAppDomains` は HRESULT 値 CORDBG_E_PROCESS_TERMINATED を使用して失敗します。  
+ プロセスが終了した場合、`EnumAppDomains` は HRESULT 値 CORDBG_E_PROCESS_TERMINATED で失敗します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  
@@ -53,4 +53,4 @@ HRESULT EnumAppDomains (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorPublishProcess インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)
+- [ICorPublishProcess インターフェイス](icorpublishprocess-interface.md)

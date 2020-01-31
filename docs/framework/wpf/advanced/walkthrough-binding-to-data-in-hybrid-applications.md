@@ -8,16 +8,16 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: 92d267ee9e87e9d204fe76172ca7e0fe33cf1a1b
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 1bb38436049e338ab6033ae3b6370732a457d520
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976580"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794221"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>チュートリアル : ハイブリッド アプリケーションでのデータへのバインディング
 
-データソースをコントロールにバインドすることは、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] と [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のどちらを使用しているかにかかわらず、ユーザーが基になるデータにアクセスできるようにするために不可欠です。 このチュートリアルでは、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] と [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の両方のコントロールを含むハイブリッドアプリケーションでデータバインディングを使用する方法について説明します。
+データソースをコントロールにバインドすることは、Windows フォームと [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のどちらを使用しているかにかかわらず、ユーザーが基になるデータにアクセスできるようにするために不可欠です。 このチュートリアルでは、Windows フォームと [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の両方のコントロールを含むハイブリッドアプリケーションでデータバインディングを使用する方法について説明します。
 
 このチュートリアルでは、以下のタスクを行います。
 
@@ -39,11 +39,11 @@ ms.locfileid: "73976580"
 
 完了すると、ハイブリッドアプリケーションのデータバインディング機能について理解できるようになります。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
-- Visual Studio
+- Visual Studio:
 
 - Microsoft SQL Server で実行されている Northwind サンプルデータベースへのアクセス。
 
@@ -61,7 +61,7 @@ ms.locfileid: "73976580"
 
 3. WPF デザイナーで Mainwindow.xaml を開きます。
 
-4. <xref:System.Windows.Window> 要素に、次の [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 名前空間マッピングを追加します。
+4. <xref:System.Windows.Window> 要素に、次の Windows フォーム名前空間マッピングを追加します。
 
     ```xaml
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
@@ -113,7 +113,7 @@ ms.locfileid: "73976580"
 
 ## <a name="displaying-data-by-using-interoperation"></a>相互運用を使用したデータの表示
 
-選択した顧客に対応する注文が `dataGridView1`という名前の <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> コントロールに表示されます。 `dataGridView1` コントロールは、分離コードファイル内のデータソースにバインドされます。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> コントロールは、この [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールの親です。
+選択した顧客に対応する注文が `dataGridView1`という名前の <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> コントロールに表示されます。 `dataGridView1` コントロールは、分離コードファイル内のデータソースにバインドされます。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> コントロールは、この Windows フォームコントロールの親です。
 
 ### <a name="to-display-data-in-the-datagridview-control"></a>DataGridView コントロールにデータを表示するには
 

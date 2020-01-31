@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86f06245-9517-49be-8d8c-ca5deaf34c02
 topic_type:
 - apiref
-ms.openlocfilehash: 8fc2abd0728115edbbfae42958d8013029523ed1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d0c283232ff8eca1af9f3ff4448fb7f4c81d554f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73111357"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789034"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary メソッド
 
@@ -56,13 +56,13 @@ HRESULT ProvideLibrary(
 
 |HRESULT|説明|
 |-------------|-----------------|
-|S_OK|メソッドは正常に完了しました。|
+|S_OK|メソッドは正常に終了しました。|
 
 ## <a name="exceptions"></a>例外
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-`ProvideLibrary` を使用すると、デバッガーは、mscordbi.dll や mscordacwks などの特定の CLR ファイルをデバッグするために必要なモジュールを提供できます。 モジュールハンドルは、 [ICLRDebugging:: CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)メソッドの呼び出しによって解放される可能性があることが示されるまで有効なままにしておく必要があります。その時点で、呼び出し元がハンドルを解放する必要があります。
+`ProvideLibrary` を使用すると、デバッガーは、mscordbi.dll や mscordacwks などの特定の CLR ファイルをデバッグするために必要なモジュールを提供できます。 モジュールハンドルは、 [ICLRDebugging:: CanUnloadNow](iclrdebugging-canunloadnow-method.md)メソッドの呼び出しによって解放される可能性があることが示されるまで有効なままにしておく必要があります。その時点で、呼び出し元がハンドルを解放する必要があります。
 
 デバッガーは、使用可能な任意の方法を使用して、デバッグモジュールを見つけたり調達したりすることができます。
 
@@ -71,7 +71,7 @@ HRESULT ProvideLibrary(
 >
 > Mscordbi.dll や mscordacwks など、既にリリースされているライブラリで深刻なセキュリティの問題が検出された場合、shim には、ファイルの不適切なバージョンを認識するように修正プログラムを適用できます。 その後、shim は、修正されたバージョンのファイルに対する要求を発行し、要求に応答して指定されている場合は無効なバージョンを拒否します。 これは、ユーザーが shim の新しいバージョンに修正プログラムを適用している場合にのみ発生します。 修正プログラム脆弱性のバージョンは脆弱なままです。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
@@ -83,5 +83,5 @@ HRESULT ProvideLibrary(
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

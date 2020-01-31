@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4723bd1c-eddb-4ed2-897a-010024a47e01
 topic_type:
 - apiref
-ms.openlocfilehash: e5d7a6b9826a734363d6beeb2e3fab8422964558
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 0a7e764d89dd42bcaf81da5cf6a16991b6b8a16e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73113350"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793702"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request メソッド
 実装で定義されているように、操作を要求するために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
@@ -55,12 +55,12 @@ HRESULT Request (
  `outBuffer`  
  入出力応答を格納しているバッファー。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `Request` メソッドは、指定されていないカスタム操作の追加を容易にします。 つまり、このメソッドは、インターフェイス定義のリビジョンを必要とせずに、拡張機能を提供します。  
   
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  
@@ -71,4 +71,4 @@ HRESULT Request (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

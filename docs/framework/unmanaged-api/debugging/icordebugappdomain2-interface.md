@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 314d29f3-feb0-4a92-9530-b569c280cc31
 topic_type:
 - apiref
-ms.openlocfilehash: bff270ff774692d058a36c7f47ab474b08bceb35
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f9bcec66ff613d19c1198ac9849ca28c978f537
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088957"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788942"
 ---
 # <a name="icordebugappdomain2-interface"></a>ICorDebugAppDomain2 インターフェイス
 
@@ -29,15 +29,15 @@ ms.locfileid: "73088957"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetArrayOrPointerType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getarrayorpointertype-method.md)|指定した型、または指定した型へのポインターまたは参照の配列を取得します。|  
-|[GetFunctionPointerType](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain2-getfunctionpointertype-method.md)|指定されたシグネチャを持つ関数へのポインターを取得します。|  
+|[GetArrayOrPointerType メソッド](icordebugappdomain2-getarrayorpointertype-method.md)|指定した型、または指定した型へのポインターまたは参照の配列を取得します。|  
+|[GetFunctionPointerType](icordebugappdomain2-getfunctionpointertype-method.md)|指定されたシグネチャを持つ関数へのポインターを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -48,4 +48,4 @@ ms.locfileid: "73088957"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

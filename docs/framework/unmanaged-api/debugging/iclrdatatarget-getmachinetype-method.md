@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f1f9c61-3e3b-48b2-b111-a4395f7623a7
 topic_type:
 - apiref
-ms.openlocfilehash: 941d1b4057ef78a6235a0ba853e48a000f2087e8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 50ea9caf08b2ffb689760da95af4e5c3fdd77301
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122884"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793739"
 ---
 # <a name="iclrdatatargetgetmachinetype-method"></a>ICLRDataTarget::GetMachineType メソッド
 ターゲットプロセスが使用している命令セットの種類の識別子を取得します。  
@@ -35,9 +35,9 @@ HRESULT GetMachineType (
   
 ## <a name="parameters"></a>パラメーター  
  `machineType`  
- 入出力ターゲットプロセスが使用している命令セットを示す値へのポインター。 返される `machineType` は、IMAGE_FILE_MACHINE 定数の1つです。これは、Winnt.h ヘッダーファイルで定義されています。  
+ 入出力ターゲットプロセスが使用している命令セットを示す値へのポインター。 返される `machineType` は、Winnt.h ヘッダーファイルで定義されている IMAGE_FILE_MACHINE 定数の1つです。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  
@@ -48,4 +48,4 @@ HRESULT GetMachineType (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

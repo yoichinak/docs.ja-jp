@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e47b7e5-0335-4dd3-8c42-d3c07d62b102
 topic_type:
 - apiref
-ms.openlocfilehash: 3abf944df3619256791882bf61dfc4072b642c54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 4c14b3e8b9d0116d638e2983955598a6c51c405a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445131"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790204"
 ---
 # <a name="icorprofilercallbackassemblyunloadstarted-method"></a>ICorProfilerCallback::AssemblyUnloadStarted メソッド
 アセンブリがアンロードされていることをプロファイラーに通知します。  
@@ -32,10 +32,12 @@ HRESULT AssemblyUnloadStarted(
     [in] AssemblyID assemblyId);  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `assemblyId`  
- からアンロードされるアセンブリを識別します。  
-  
+## <a name="parameters"></a>パラメーター
+
+- `assemblyId`
+
+  の \[] アンロードされるアセンブリを識別します。
+
 ## <a name="remarks"></a>コメント  
  `assemblyId` の値は、`AssemblyUnloadStarted` メソッドから返された後の情報要求に対して無効です。これは、このアセンブリに関する情報を取得するためのプロファイラーの最後の機会です。  
   

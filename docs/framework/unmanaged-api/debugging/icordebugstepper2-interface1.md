@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a191c2a-95ea-4d47-83b0-44de2b632d63
 topic_type:
 - apiref
-ms.openlocfilehash: 28ec18864158641a337ebdea189080ba4247a7c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d154cf10e60935d12653c70875323079f92ae288
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120520"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791742"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 インターフェイス
 マイコードのみ (JMC) デバッグのサポートを提供します。  
@@ -28,14 +28,14 @@ ms.locfileid: "73120520"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[SetJMC メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper2-setjmc-method.md)|この ICorDebugStepper が、アプリケーションの開発者によって作成されたコードのみを使用するかどうかを指定する値を設定します。|  
+|[SetJMC メソッド](icordebugstepper2-setjmc-method.md)|この ICorDebugStepper が、アプリケーションの開発者によって作成されたコードのみを使用するかどうかを指定する値を設定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -46,4 +46,4 @@ ms.locfileid: "73120520"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: ICorDebugLoadedModule::GetSize メソッド
 ms.date: 03/30/2017
 ms.assetid: aaa0e5c0-be9d-4fe1-8418-5295b9b184d6
-ms.openlocfilehash: 3f2f8a1721847b8f7b845c42aa3c91e032c2d474
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f207cd1c612b6444a9512adaa356ac2d01de7b9f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122645"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788463"
 ---
 # <a name="icordebugloadedmodulegetsize-method"></a>ICorDebugLoadedModule::GetSize メソッド
 読み込まれたモジュールのサイズ (バイト単位) を取得します。  
@@ -24,12 +24,12 @@ HRESULT GetSize(
  `pcBytes`  
  [out] 読み込まれたモジュールのバイト数へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -40,5 +40,5 @@ HRESULT GetSize(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugLoadedModule インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugloadedmodule-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugLoadedModule インターフェイス](icordebugloadedmodule-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

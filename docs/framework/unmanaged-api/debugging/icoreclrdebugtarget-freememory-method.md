@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 98f2a0db-a6ec-4f9b-861d-f82485237d08
 topic_type:
 - apiref
-ms.openlocfilehash: 6821aacb80726cf202c99428a401b53b5c6ee566
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cfa313d286d0decad82f51bcedc582470549c8e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121806"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790771"
 ---
 # <a name="icoreclrdebugtargetfreememory-method"></a>ICoreClrDebugTarget::FreeMemory メソッド
-[ICoreClrDebugTarget:: EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)メソッドおよび[ICoreClrDebugTarget:: enumruntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)メソッドによって割り当てられたメモリを解放します。  
+[ICoreClrDebugTarget:: EnumProcesses](icoreclrdebugtarget-enumprocesses-method.md)メソッドおよび[ICoreClrDebugTarget:: enumruntimes](icoreclrdebugtarget-enumruntimes-method.md)メソッドによって割り当てられたメモリを解放します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,17 +36,17 @@ void FreeMemory (
   
 ## <a name="parameters"></a>パラメーター  
  `pMemory`  
- から[ICoreClrDebugTarget:: EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)または[ICoreClrDebugTarget:: enumruntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)メソッドによって返される配列へのポインター。  
+ から[ICoreClrDebugTarget:: EnumProcesses](icoreclrdebugtarget-enumprocesses-method.md)または[ICoreClrDebugTarget:: enumruntimes](icoreclrdebugtarget-enumruntimes-method.md)メソッドによって返される配列へのポインター。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86  
+ **Library:** mscordbi_macx86 .dll  
   
  **.NET Framework のバージョン:** 3.5 SP1  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICoreClrDebugTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+- [ICoreClrDebugTarget インターフェイス](icoreclrdebugtarget-interface.md)

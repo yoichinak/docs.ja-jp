@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, server-side provider implementation
 - provider implementation, UI Automation
 ms.assetid: 6acc6d08-bd67-4e2e-915c-9c1d34eb86fe
-ms.openlocfilehash: 25f22d5e8caacc69643f6d79e109ebaa94159d80
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 8a52d84f7152b9cb431ad0aa97c88b143463be2d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632315"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789623"
 ---
 # <a name="server-side-ui-automation-provider-implementation"></a>サーバー側 UI オートメーション プロバイダーの実装
 
@@ -20,7 +20,7 @@ ms.locfileid: "75632315"
 
 このセクションでは、カスタム コントロールのサーバー側 UI オートメーション プロバイダーを実装する方法について説明します。
 
-Windows Presentation Foundation (WPF) 要素と非 WPF 要素 ([!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]向けに設計された要素など) の実装は、根本的に異なります。 WPF 要素は、<xref:System.Windows.Automation.Peers.AutomationPeer>から派生したクラスを使用した [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートを提供します。 非 WPF 要素は、プロバイダーインターフェイスの実装を通じてサポートを提供します。
+Windows Presentation Foundation (WPF) 要素と非 WPF 要素 (Windows フォーム向けに設計された要素など) の実装は、根本的に異なります。 WPF 要素は、<xref:System.Windows.Automation.Peers.AutomationPeer>から派生したクラスを使用した [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートを提供します。 非 WPF 要素は、プロバイダーインターフェイスの実装を通じてサポートを提供します。
 
 <a name="Security_Considerations"></a>
 
@@ -40,7 +40,7 @@ Windows Presentation Foundation (WPF) 要素と非 WPF 要素 ([!INCLUDE[TLA#tla
 
 ## <a name="provider-implementation-by-non-wpf-elements"></a>非 WPF 要素によるプロバイダーの実装
 
-WPF フレームワークの一部ではないが、マネージコードで記述されたカスタムコントロール (多くの場合、これらは [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] コントロール)、インターフェイスを実装することによって [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートを提供します。 すべての要素は、次のセクションの最初のテーブルに示されているインターフェイスを 1 つ以上実装する必要があります。 さらに、要素が 1 つ以上のコントロール パターンをサポートする場合、コントロール パターンごとに適切なインターフェイスを実装する必要があります。
+WPF フレームワークの一部ではないが、マネージコードで記述されたカスタムコントロール (多くの場合、これらは Windows フォームコントロール)、インターフェイスを実装することによって [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のサポートを提供します。 すべての要素は、次のセクションの最初のテーブルに示されているインターフェイスを 1 つ以上実装する必要があります。 さらに、要素が 1 つ以上のコントロール パターンをサポートする場合、コントロール パターンごとに適切なインターフェイスを実装する必要があります。
 
 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プロバイダー プロジェクトは、次のアセンブリを参照する必要があります。
 
@@ -117,7 +117,7 @@ HWND ベースのコントロールのプロバイダーは通常、次のプロ
 > [!NOTE]
 > 単純な要素またはウィンドウでホストされているフラグメント ルートの <xref:System.Windows.Automation.AutomationElementIdentifiers.RuntimeIdProperty> は、ウィンドウから取得されます。ただし、ルートの下にあるフラグメント要素 (リスト ボックス内のリスト項目など) は独自の識別子を提供する必要があります。 詳細については、「 <xref:System.Windows.Automation.Provider.IRawElementProviderFragment.GetRuntimeId%2A>」を参照してください。
 >
-> <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> は、 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] コントロールでホストされるプロバイダーに返される必要があります。 この場合、ウィンドウの既定のプロバイダーは適切な値を取得できないことがあります。
+> Windows フォームコントロールでホストされているプロバイダーに対して <xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty> が返される必要があります。 この場合、ウィンドウの既定のプロバイダーは適切な値を取得できないことがあります。
 >
 > <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty> は通常、ホスト プロバイダーによって提供されます。 たとえば、カスタム コントロールが <xref:System.Windows.Forms.Control>から派生している場合、名前はこのコントロールの `Text` プロパティから派生します。
 

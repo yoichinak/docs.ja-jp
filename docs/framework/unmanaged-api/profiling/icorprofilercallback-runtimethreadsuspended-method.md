@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: de830a8b-6ee1-4900-ace3-4237108f6b12
 topic_type:
 - apiref
-ms.openlocfilehash: 509d6cd2e65c2eb8c92f6d79deae9e01e75298f6
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c8645bf828d0ad99bd25c1909cbee3314a11abf9
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74433448"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865871"
 ---
 # <a name="icorprofilercallbackruntimethreadsuspended-method"></a>ICorProfilerCallback::RuntimeThreadSuspended メソッド
 指定されたスレッドが中断されたか、中断されようとしていることをプロファイラーに通知します。  
@@ -37,7 +37,7 @@ HRESULT RuntimeThreadSuspended(
  から中断されたスレッドの ID。  
   
 ## <a name="remarks"></a>コメント  
- `RuntimeThreadSuspended` 通知は、 [ICorProfilerCallback:: RuntimeSuspendStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendstarted-method.md)と、関連付けられている[ICorProfilerCallback:: RuntimeResumeStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimeresumestarted-method.md)コールバックの間でいつでも発生する可能性があります。 [ICorProfilerCallback:: RuntimeSuspendFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimesuspendfinished-method.md)と `RuntimeResumeStarted` 間で発生する通知は、アンマネージコードで実行されていて、ランタイムへの入力時に中断されたスレッドに対して行われます。  
+ `RuntimeThreadSuspended` 通知は、 [ICorProfilerCallback:: RuntimeSuspendStarted](icorprofilercallback-runtimesuspendstarted-method.md)と、関連付けられている[ICorProfilerCallback:: RuntimeResumeStarted](icorprofilercallback-runtimeresumestarted-method.md)コールバックの間でいつでも発生する可能性があります。 [ICorProfilerCallback:: RuntimeSuspendFinished](icorprofilercallback-runtimesuspendfinished-method.md)と `RuntimeResumeStarted` 間で発生する通知は、アンマネージコードで実行されていて、ランタイムへの入力時に中断されたスレッドに対して行われます。  
   
  通常、このコールバックは、スレッドが中断された直後に発生します。 ただし、現在実行中のスレッド (このコールバックを呼び出したスレッド) が中断されているスレッドである場合、このコールバックはスレッドが中断される直前に発生します。  
   
@@ -52,5 +52,5 @@ HRESULT RuntimeThreadSuspended(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [RuntimeThreadResumed メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadresumed-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [RuntimeThreadResumed メソッド](icorprofilercallback-runtimethreadresumed-method.md)

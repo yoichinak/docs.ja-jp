@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e9aae1b-d1b7-4b6e-b577-6faf36dcec85
 topic_type:
 - apiref
-ms.openlocfilehash: 441d225dadbbca09ab27c8ccd70debe32f4c12da
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6c5e5d1c9f734e097fc9e871d7a0cffdc9bb9138
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140258"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791123"
 ---
 # <a name="icordebugvalue2getexacttype-method"></a>ICorDebugValue2::GetExactType メソッド
 この値の <xref:System.Type> を表す "の型のオブジェクトへのインターフェイスポインターを取得します。  
@@ -37,10 +37,10 @@ HRESULT GetExactType (
  `ppType`  
  入出力この "ICorDebugValue2" オブジェクトによって表される値の <xref:System.Type> を表す `ICorDebugType` オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- ジェネリック対応の `GetExactType` メソッドは、、の各メソッドと、値の型に関する情報を返す、それぞれのメソッドと[ICorDebugValue:: GetType](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue-gettype-method.md) [メソッドの両方](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectvalue-getclass-method.md)を置き換えます。  
+## <a name="remarks"></a>コメント  
+ ジェネリック対応の `GetExactType` メソッドは、、の各メソッドと、値の型に関する情報を返す、それぞれのメソッドと[ICorDebugValue:: GetType](icordebugvalue-gettype-method.md) [メソッドの両方](icordebugobjectvalue-getclass-method.md)を置き換えます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

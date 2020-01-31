@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 15212cb5-93d4-4025-bec9-d4b9919eb1fe
 topic_type:
 - apiref
-ms.openlocfilehash: b3094eb6e3006be49cf17c1ca2a220b8ec58b673
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 739c648173d45a9c147ea2a4e469a3a4b518e893
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73139060"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794335"
 ---
 # <a name="icordebugilframe3-interface"></a>ICorDebugILFrame3 インターフェイス
 関数の戻り値をカプセル化するメソッドを提供します。 `ICorDebugILFrame3` は、ICorDebugILFrame2 インターフェイスとインターフェイスを論理的に拡張したものです。  
@@ -24,14 +24,14 @@ ms.locfileid: "73139060"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetReturnValueForILOffSet メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe3-getreturnvalueforiloffset-method.md)|関数の戻り値をカプセル化する ICorDebugValue オブジェクトを取得します。|  
+|[GetReturnValueForILOffSet メソッド](icordebugilframe3-getreturnvalueforiloffset-method.md)|関数の戻り値をカプセル化する ICorDebugValue オブジェクトを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -42,5 +42,5 @@ ms.locfileid: "73139060"
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugCode3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3 インターフェイス](icordebugcode3-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

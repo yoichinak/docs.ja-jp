@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03a6facb-f12f-49be-9839-e73b9c791cd5
 topic_type:
 - apiref
-ms.openlocfilehash: 5714597b5e5ca2936aad53217ae934684e75585c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7ac588591222a1abbc7b99ec7e973284c055f95e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125750"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784166"
 ---
 # <a name="icordebugclass-interface"></a>ICorDebugClass インターフェイス
 
@@ -29,11 +29,11 @@ ms.locfileid: "73125750"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetModule メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getmodule-method.md)|このクラスを定義するモジュールを取得します。|  
-|[GetStaticFieldValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-getstaticfieldvalue-method.md)|指定された静的フィールドの値を取得します。|  
-|[GetToken メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugclass-gettoken-method.md)|このクラスの `TypeDef` メタデータトークンを取得します。|  
+|[GetModule メソッド](icordebugclass-getmodule-method.md)|このクラスを定義するモジュールを取得します。|  
+|[GetStaticFieldValue メソッド](icordebugclass-getstaticfieldvalue-method.md)|指定された静的フィールドの値を取得します。|  
+|[GetToken メソッド](icordebugclass-gettoken-method.md)|このクラスの `TypeDef` メタデータトークンを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `ICorDebugClass` インターフェイスは、インスタンスジェネリック型を表します。 は、インスタンス化されたジェネリック型を表します。 たとえば、`Hashtable<K, V>` は `ICorDebugClass`によって表されるのに対し、`Hashtable<Int32, String>` は `ICorDebugType`で表されます。  
   
  非ジェネリック型は、`ICorDebugClass` と `ICorDebugType`の両方で表されます。 後者のインターフェイスは、型のインスタンス化を処理するために .NET Framework バージョン2.0 で導入されました。  
@@ -41,7 +41,7 @@ ms.locfileid: "73125750"
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -52,4 +52,4 @@ ms.locfileid: "73125750"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

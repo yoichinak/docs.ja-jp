@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 0e350a1b-6997-46d0-bfc5-962a5011ef43
 topic_type:
 - apiref
-ms.openlocfilehash: f35e979a5107064d2987a385a989075ef71283ff
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 197c33511a474eb8291e4361ebb3c21fb3720cae
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73098856"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789424"
 ---
 # <a name="cordebugehclause-structure"></a>CorDebugEHClause 構造体
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -50,21 +50,21 @@ typedef struct _CorDebugEHClause {
 |`ClassToken`|型に基づく例外ハンドラーのメタデータ トークン。|  
 |`FilterOffset`|フィルターに基づく例外ハンドラーのメソッド本体の先頭からのオフセット (バイト単位)。|  
   
-## <a name="remarks"></a>Remarks  
- [GetEHClauses](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)メソッドによって `CoreDebugEHClause` 値の配列が返されます。  
+## <a name="remarks"></a>コメント  
+ [GetEHClauses](icordebugilcode-getehclauses-method.md)メソッドによって `CoreDebugEHClause` 値の配列が返されます。  
   
  EH 句の情報は CLI 仕様によって定義されます。 詳細については、「 [STANDARD ECMA-355: 共通言語基盤 (CLI)、第6版](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」を参照してください。  
   
  `flags` フィールドには、次のフラグを含めることができます。 これらは、CorDebug.idl または CorDebug.h に定義されていないことに注意してください。  
   
-|フラグ|[値]|説明|  
+|フラグ|Value|説明|  
 |----------|-----------|-----------------|  
 |`COR_ILEXCEPTION_CLAUSE_EXCEPTION`|0x00000000|入力された例外句。|  
 |`COR_ILEXCEPTION_CLAUSE_FILTER`|0x00000001|例外フィルターおよびハンドラー句。|  
 |`COR_ILEXCEPTION_CLAUSE_FINALLY`|0x00000002|`finally` 句。|  
 |`COR_ILEXCEPTION_CLAUSE_FAULT`|0x00000004|fault 句 (例外がスローされた場合にのみ `finally` 句が呼び出される)。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -75,5 +75,5 @@ typedef struct _CorDebugEHClause {
   
 ## <a name="see-also"></a>関連項目
 
-- [GetEHClauses メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-getehclauses-method.md)
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [GetEHClauses メソッド](icordebugilcode-getehclauses-method.md)
+- [デバッグ構造体](debugging-structures.md)

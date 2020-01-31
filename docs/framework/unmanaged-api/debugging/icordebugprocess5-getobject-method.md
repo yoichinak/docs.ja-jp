@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: e4d297023d96de83965c3d04ca9efe2613fd54d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 540ca78c5548d4fbdd3338671ea02314736f15cd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084442"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792360"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject メソッド
 オブジェクトのアドレスを "の値" オブジェクトに変換します。  
@@ -41,10 +41,10 @@ HRESULT GetObject(
  `ppObject`  
  入出力"の値" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `addr` が有効なマネージオブジェクトを指していない場合、`GetObject` メソッドは `E_FAIL`を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -55,5 +55,5 @@ HRESULT GetObject(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugProcess5 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 インターフェイス](icordebugprocess5-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

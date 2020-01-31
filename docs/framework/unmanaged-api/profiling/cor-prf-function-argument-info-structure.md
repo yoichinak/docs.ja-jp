@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 07cf3bab-e193-4991-8205-3f41cf2d67b3
 topic_type:
 - apiref
-ms.openlocfilehash: 2b01acbd617b13a64ef3dca6c8661f1e6bb067ac
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: c92ee580caed9f1fb87a31b676747769ad31a0e2
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447385"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867253"
 ---
 # <a name="cor_prf_function_argument_info-structure"></a>COR_PRF_FUNCTION_ARGUMENT_INFO 構造体
 関数の引数を左から右方向で表します。  
@@ -38,7 +38,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`numRanges`|引数のブロックの数。 つまり、この値は、`ranges` 配列内の[COR_PRF_FUNCTION_ARGUMENT_RANGE](../../../../docs/framework/unmanaged-api/profiling/cor-prf-function-argument-range-structure.md)構造体の数です。|  
+|`numRanges`|引数のブロックの数。 つまり、この値は、`ranges` 配列内の[COR_PRF_FUNCTION_ARGUMENT_RANGE](cor-prf-function-argument-range-structure.md)構造体の数です。|  
 |`totalArgumentSize`|すべての引数の合計サイズ。 言い換えると、この値は引数の長さの合計になります。|  
 |`ranges`|`COR_PRF_FUNCTION_ARGUMENT_RANGE` 構造体の配列。それぞれが関数の引数の1つのブロックを表します。|  
   
@@ -58,6 +58,6 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_INFO {
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [構造体のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [構造体のプロファイリング](profiling-structures.md)

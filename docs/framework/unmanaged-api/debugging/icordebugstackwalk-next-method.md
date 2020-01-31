@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 189c36be-028c-4fba-a002-5edfb8fcd07f
 topic_type:
 - apiref
-ms.openlocfilehash: 8cebb66ecf298eaaca0e7af23a9b8c6a2932c23f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b76d17337408653d130ee0cb8594e759bdade37c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131829"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791867"
 ---
 # <a name="icordebugstackwalknext-method"></a>ICorDebugStackWalk::Next メソッド
-このオブジェクトを次のフレームに[移動します](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)。  
+このオブジェクトを次のフレームに[移動します](icordebugstackwalk-interface.md)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,10 +43,10 @@ HRESULT Next();
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `Next` メソッドは、ランタイムが現在のフレームをアンワインドできる場合にのみ、`ICorDebugStackWalk` オブジェクトを呼び出し元のフレームに進めます。 それ以外の場合、オブジェクトは、ランタイムがアンワインドできる次のフレームに進みます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -57,6 +57,6 @@ HRESULT Next();
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugStackWalk インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugStackWalk インターフェイス](icordebugstackwalk-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

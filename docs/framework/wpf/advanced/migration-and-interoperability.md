@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: 3e7b838bddef535572afaaaf962cdda4b0272a62
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 76641d8bd6061e3b234aaa16efbb77b0a32e3a3f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740333"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794313"
 ---
 # <a name="migration-and-interoperability"></a>移行と相互運用性
 このページには、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションとその他の種類の Microsoft Windows アプリケーションとの間の相互運用を実装する方法について説明しているドキュメントへのリンクが含まれています。  
@@ -32,8 +32,8 @@ ms.locfileid: "75740333"
   
 |用語|Definition|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ページの要素として [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールをホストするために使用できる要素。|  
-|<xref:System.Windows.Forms.Integration.ElementHost>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] コントロールをホストするために使用できる [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロール。|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ページの要素として Windows フォームコントロールをホストするために使用できる要素。|  
+|<xref:System.Windows.Forms.Integration.ElementHost>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] コントロールをホストするために使用できる Windows フォームコントロール。|  
 |<xref:System.Windows.Interop.HwndSource>|Win32 アプリケーション内の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 領域をホストします。|  
 |<xref:System.Windows.Interop.HwndHost>|<xref:System.Windows.Forms.Integration.WindowsFormsHost>の基本クラスは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションによってホストされるときに、すべての HWND ベースのテクノロジが使用するいくつかの基本的な機能を定義します。 このをサブクラス化して、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーション内で Win32 ウィンドウをホストします。|  
 |<xref:System.Windows.Interop.BrowserInteropHelper>|ブラウザーでホストされている [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションのブラウザー環境の条件を報告するためのヘルパークラス。|  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16d695e8-975d-431b-8421-e9e6c3e3f476
 topic_type:
 - apiref
-ms.openlocfilehash: 48f1b485b6dfa8fd898f6ea00eee2d7b397deba6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a6283d699263dc9b79e457010f31923f77443129
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131865"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791876"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk インターフェイス
 スレッドのスタック上のマネージド メソッド (フレーム) を取得するメソッドを提供します。  
@@ -28,17 +28,17 @@ ms.locfileid: "73131865"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetContext メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|`ICorDebugStackWalk` オブジェクト内の現在のフレームのコンテキストを返します。|  
-|[SetContext メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|`ICorDebugStackWalk` オブジェクトの現在のコンテキストをスレッドの有効なコンテキストに設定します。|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|`ICorDebugStackWalk` オブジェクトを次のフレームに移動します。|  
-|[GetFrame メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|`ICorDebugStackWalk` オブジェクト内の現在のフレームを取得します。|  
+|[GetContext メソッド](icordebugstackwalk-getcontext-method.md)|`ICorDebugStackWalk` オブジェクト内の現在のフレームのコンテキストを返します。|  
+|[SetContext メソッド](icordebugstackwalk-setcontext-method.md)|`ICorDebugStackWalk` オブジェクトの現在のコンテキストをスレッドの有効なコンテキストに設定します。|  
+|[Next メソッド](icordebugstackwalk-next-method.md)|`ICorDebugStackWalk` オブジェクトを次のフレームに移動します。|  
+|[GetFrame メソッド](icordebugstackwalk-getframe-method.md)|`ICorDebugStackWalk` オブジェクト内の現在のフレームを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -49,5 +49,5 @@ ms.locfileid: "73131865"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

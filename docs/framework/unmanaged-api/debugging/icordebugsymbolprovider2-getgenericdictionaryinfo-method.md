@@ -1,15 +1,15 @@
 ---
-title: 'ICorDebugSymbolProvider2:: GetGenericDictionaryInfo メソッド'
+title: ICorDebugSymbolProvider2::GetGenericDictionaryInfo メソッド
 ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
-ms.openlocfilehash: c9f7206cac54d64c28eb50d81fea00a6f3c494d4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 02ecaf56e845680472f42c04f3978e54e7a69272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73133629"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791504"
 ---
-# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2:: GetGenericDictionaryInfo メソッド
+# <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo メソッド
 
 汎用のディクショナリ マップを取得します。
 
@@ -24,9 +24,9 @@ HRESULT GetGenericDictionaryInfo(
 ## <a name="parameters"></a>パラメーター
 
 `ppMemoryBuffer`\
-入出力ジェネリックディクショナリマップを格納している、[のオブジェクトの](../../../../docs/framework/unmanaged-api/debugging/icordebugmemorybuffer-interface.md)アドレスへのポインター。 詳細については、次の「解説」を参照してください。
+入出力ジェネリックディクショナリマップを格納している、[のオブジェクトの](icordebugmemorybuffer-interface.md)アドレスへのポインター。 詳細については、次の「解説」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。
@@ -75,7 +75,7 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 各ヒープ要素の長さを含めることで、ヒープに影響を与えずに、ディレクトリ セクションの単純な並べ替えを実行できるようになります。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
@@ -87,5 +87,5 @@ Heap Size = Stream.Length – (Directory Size + 4)
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugSymbolProvider2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider2 インターフェイス](icordebugsymbolprovider2-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

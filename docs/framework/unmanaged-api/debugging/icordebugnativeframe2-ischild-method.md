@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e2aae09-49cb-4fbd-81e5-e29cd864a88b
 topic_type:
 - apiref
-ms.openlocfilehash: 539fa612234c4cc37bed5a8fd4b1e727a35b1d6f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 22722e4d602bdb9df9877b2199b4d4271a4d3105
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73096394"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792728"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild メソッド
 現在のフレームが子フレームであるかどうかを判断します。  
@@ -46,10 +46,10 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
- `IsChild` メソッドは、メソッドを呼び出す frame オブジェクトが別のフレームの子である場合に `true` を返します。 この場合は、 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)メソッドを使用して、フレームが親であるかどうかを確認します。  
+## <a name="remarks"></a>コメント  
+ `IsChild` メソッドは、メソッドを呼び出す frame オブジェクトが別のフレームの子である場合に `true` を返します。 この場合は、 [IsMatchingParentFrame](icordebugnativeframe2-ismatchingparentframe-method.md)メソッドを使用して、フレームが親であるかどうかを確認します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -60,6 +60,6 @@ HRESULT IsChild([out] BOOL * pIsChild);
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugNativeFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugNativeFrame2 インターフェイス](icordebugnativeframe2-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)
