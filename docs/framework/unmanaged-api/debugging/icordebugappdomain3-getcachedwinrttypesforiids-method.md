@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23682ca0-1bcf-48e6-996e-69f7ba337682
 topic_type:
 - apiref
-ms.openlocfilehash: 0369cc6d98736542b764e5914d733a9341753b24
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8b259636a8bd28abd3bba12c4a05dda3c13557e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088882"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784890"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs メソッド
 インターフェイス識別子に基づいて、アプリケーションドメイン内のキャッシュされた Windows ランタイム型の列挙子を取得します。  
@@ -45,10 +45,10 @@ HRESULT GetCachedWinRTTypesForIIDs (
  `ppTypesEnum`  
  入出力`iidsToResolve`のインターフェイス識別子に基づいて、取得された Windows ランタイム型のキャッシュされたマネージ表現を列挙できるようにする、"" "の" "ツール" インターフェイスオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  メソッドが特定のインターフェイス識別子に関する情報の取得に失敗した場合、データの取得に関する問題が原因でエラーが発生した場合、または不明なインターフェイス識別子の `ELEMENT_TYPE_VOID` については、"" の種類 "というコレクション内の対応するエントリの `ELEMENT_TYPE_END` 型になります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **プラットフォーム:** Windows ランタイム  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -59,4 +59,4 @@ HRESULT GetCachedWinRTTypesForIIDs (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugAppDomain3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-interface.md)
+- [ICorDebugAppDomain3 インターフェイス](icordebugappdomain3-interface.md)

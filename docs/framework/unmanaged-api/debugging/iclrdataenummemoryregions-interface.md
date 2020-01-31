@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a453f75a-c37b-4013-8f0e-35771fa5d792
 topic_type:
 - apiref
-ms.openlocfilehash: 7d8b3151c8effcf16b2a371010b84d06ce60a703
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: cea5439dc5ad50a2d833fcda103488d5a0f8b517
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122926"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789099"
 ---
 # <a name="iclrdataenummemoryregions-interface"></a>ICLRDataEnumMemoryRegions インターフェイス
 呼び出し元が指定したメモリ範囲を列挙するメソッドを提供します。  
@@ -28,9 +28,9 @@ ms.locfileid: "73122926"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumMemoryRegions メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)|指定されたメモリ領域を列挙します。|  
+|[EnumMemoryRegions メソッド](iclrdataenummemoryregions-enummemoryregions-method.md)|指定されたメモリ領域を列挙します。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  
@@ -41,4 +41,4 @@ ms.locfileid: "73122926"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

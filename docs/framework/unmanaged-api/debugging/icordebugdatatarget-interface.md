@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: df5f05be-bed7-4f3c-bc89-dbb435d79a0b
 topic_type:
 - apiref
-ms.openlocfilehash: f8b216d370f7278f6d2a4beed5bab88afa666200
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9029d53872108bc1953fd22c584b6e01a6f3c7ab
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122215"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788863"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget インターフェイス
 特定のターゲット プロセスにアクセスするためのコールバック インターフェイスが用意されています。  
@@ -28,11 +28,11 @@ ms.locfileid: "73122215"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetPlatform メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)|ターゲットプロセスが実行されているプラットフォーム (プロセッサアーキテクチャやオペレーティングシステムなど) に関する情報を提供します。|  
-|[ReadVirtual メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-readvirtual-method.md)|指定したアドレスを開始位置として連続したメモリのブロックを取得し、指定したバッファー内でそれを返します。|  
-|[GetThreadContext メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getthreadcontext-method.md)|指定されたスレッドの現在のスレッドコンテキストを要求します。|  
+|[GetPlatform メソッド](icordebugdatatarget-getplatform-method.md)|ターゲットプロセスが実行されているプラットフォーム (プロセッサアーキテクチャやオペレーティングシステムなど) に関する情報を提供します。|  
+|[ReadVirtual メソッド](icordebugdatatarget-readvirtual-method.md)|指定したアドレスを開始位置として連続したメモリのブロックを取得し、指定したバッファー内でそれを返します。|  
+|[GetThreadContext メソッド](icordebugdatatarget-getthreadcontext-method.md)|指定されたスレッドの現在のスレッドコンテキストを要求します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `ICorDebugDataTarget` とそのメソッドには、次の特性があります。  
   
 - デバッグサービスは、このインターフェイスのメソッドを呼び出して、ターゲットプロセス内のメモリおよびその他のデータにアクセスします。  
@@ -43,12 +43,12 @@ ms.locfileid: "73122215"
   
 - `ICorDebugDataTarget` の実装は、常にターゲットに関する最新の情報を返す必要があります。  
   
- `ICorDebug*` インターフェイス (および `ICorDebugDataTarget` メソッド) が呼び出されている間は、ターゲットプロセスを停止し、変更することはできません。 ターゲットがライブプロセスであり、その状態が変更された場合、 [ICLRDebugging:: OpenVirtualProcess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッドを再度呼び出して、置換されたののインスタンスを提供する必要があります。  
+ `ICorDebug*` インターフェイス (および `ICorDebugDataTarget` メソッド) が呼び出されている間は、ターゲットプロセスを停止し、変更することはできません。 ターゲットがライブプロセスであり、その状態が変更された場合、 [ICLRDebugging:: OpenVirtualProcess](iclrdebugging-openvirtualprocess-method.md)メソッドを再度呼び出して、置換されたののインスタンスを提供する必要があります。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -59,5 +59,5 @@ ms.locfileid: "73122215"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

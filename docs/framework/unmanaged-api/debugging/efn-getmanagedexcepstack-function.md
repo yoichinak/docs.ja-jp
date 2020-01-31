@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 21ceed9e-62b2-4024-b027-6d095109955a
 topic_type:
 - apiref
-ms.openlocfilehash: 9bcc03cc97a62b4c1cadacd7c0b2bc46b9fec470
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 824be4a401d265575b48f66045dd944d521e64a4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134142"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789145"
 ---
 # <a name="_efn_getmanagedexcepstack-function"></a>\_EFN\_GetManagedExcepStack 関数
 指定したマネージド例外オブジェクトのアドレスに応じて、中に含まれているスタック トレースの文字列バージョンを返します。  
@@ -48,10 +48,10 @@ HRESULT _EFN_GetManagedExcepStack(
  `cbString`  
  入出力文字列バッファーで使用できる文字数。  
   
-## <a name="remarks"></a>Remarks  
- 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 で、エラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
+## <a name="remarks"></a>コメント  
+ 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 でエラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** SOS_Stacktrace  
@@ -60,4 +60,4 @@ HRESULT _EFN_GetManagedExcepStack(
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [デバッグ グローバル静的関数](debugging-global-static-functions.md)

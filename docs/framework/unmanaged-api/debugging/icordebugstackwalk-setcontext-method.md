@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: bac0b156-31a3-4e7f-be4d-ab21789c81f1
 topic_type:
 - apiref
-ms.openlocfilehash: 90156152a2c133446dedbe22426785ab63f8dfb9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 23ad8882ad97e5ceaeb690dfae08a6be55b85f64
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131812"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791854"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext メソッド
-[オブジェクトの現在のコンテキスト](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)をスレッドの有効なコンテキストに設定します。  
+[オブジェクトの現在のコンテキスト](icordebugstackwalk-interface.md)をスレッドの有効なコンテキストに設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="parameters"></a>パラメーター  
  `flag`  
- からコンテキストがスタックのアクティブなフレームからのものであるか、またはスタックのアンワインドによって取得されたコンテキストであるかを示す[Cordebugsetcontextflag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md)フラグ。  
+ からコンテキストがスタックのアクティブなフレームからのものであるか、またはスタックのアンワインドによって取得されたコンテキストであるかを示す[Cordebugsetcontextflag](cordebugsetcontextflag-enumeration.md)フラグ。  
   
  `contextSize`  
  から`CONTEXT` バッファーに割り当てられたサイズ。  
@@ -55,14 +55,14 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このメソッドは、スレッドの現在のコンテキストを変更しません。  
   
  現在のコンテキストを無効なコンテキストに設定すると、スタックウォーカーから予期しない結果が発生する可能性があります。  
   
- このコンテキストの完全なビットごとのコピーを取得するには、次のようにして、" [GetContext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) " メソッドを直ちに呼び出します。  
+ このコンテキストの完全なビットごとのコピーを取得するには、次のようにして、" [GetContext](icordebugstackwalk-getcontext-method.md) " メソッドを直ちに呼び出します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -73,5 +73,5 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

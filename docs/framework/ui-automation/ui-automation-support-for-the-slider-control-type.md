@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Slider control type
 - Slider control type
 ms.assetid: 045ea62f-7b50-46cf-a5a9-8eb97704355f
-ms.openlocfilehash: 24de9d504055da788ceee46a26e493a9c6989202
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 34a093fa0be68ddab75d78c0113fe110d4332773
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741152"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76786063"
 ---
 # <a name="ui-automation-support-for-the-slider-control-type"></a>UI オートメーションによる Slider コントロール型のサポート
 > [!NOTE]
@@ -21,7 +21,7 @@ ms.locfileid: "75741152"
   
  スライダー コントロールは、ボタンを使用した複合コントロールであり、ユーザーはこれらのボタンを使用して、マウスで数値の範囲を設定したり、項目のセットから選択したりできます。  
   
- 以降のセクションで、スライダー コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32、[!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]にかかわらず、すべてのスライダーコントロールに適用されます。  
+ 以降のセクションで、スライダー コントロール型に必要な [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー構造、プロパティ、コントロール パターン、およびイベントを定義します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の要件は、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Win32、Windows フォームにかかわらず、すべてのスライダーコントロールに適用されます。  
   
 <a name="Required_UI_Automation_Tree_Structure"></a>   
 ## <a name="required-ui-automation-tree-structure"></a>必須の UI オートメーション ツリー構造  

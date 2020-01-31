@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 4d946ad4-3c19-42cb-bec9-8633325ba769
 topic_type:
 - apiref
-ms.openlocfilehash: c927dcde99f5217ee7c160359385e0b953034380
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 977b1608539a302c6a27a1b54cfb2ad687025fe6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132241"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789405"
 ---
 # <a name="cordebugexceptioncallbacktype-enumeration"></a>CorDebugExceptionCallbackType 列挙型
-[ICorDebugManagedCallback2:: Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)イベントから作成されたコールバックの種類を示します。  
+[ICorDebugManagedCallback2:: Exception](icordebugmanagedcallback2-exception-method.md)イベントから作成されたコールバックの種類を示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -44,7 +44,7 @@ typedef enum CorDebugExceptionCallbackType {
 |`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|例外 windup プロセスで、ユーザーコードに `catch` ブロックが見つかりました。|  
 |`DEBUG_EXCEPTION_UNHANDLED`|例外は処理されませんでした。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -55,4 +55,4 @@ typedef enum CorDebugExceptionCallbackType {
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [列挙型のデバッグ](debugging-enumerations.md)

@@ -1,15 +1,16 @@
 ---
-title: 'チュートリアル: Windows フォームでの WPF 複合コントロールのホスト'
+title: Windows フォームでの WPF 複合コントロールのホスト
+titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 39124b03b21fe1bc2a5dce3d8fb90ff372ab4853
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 59243e1810757ff0ff58a60ac3eb007bbc227be0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458921"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742686"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コードに多大な投資をしている場合は、最初から書き換えるのではなく、既存の [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アプリケーションを [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で拡張する方が効果的です。 一般的なシナリオは、Windows フォームアプリケーション内の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で実装された1つ以上のコントロールを埋め込む場合です。 WPF コントロールのカスタマイズの詳細については、「[コントロールのカスタマイズ](../controls/control-customization.md)」を参照してください。  
@@ -26,7 +27,7 @@ ms.locfileid: "73458921"
   
  このチュートリアルで示すタスクの完全なコード一覧については、「 [Windows フォームサンプルでの WPF 複合コントロールのホスト](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)」を参照してください。  
   
-## <a name="prerequisites"></a>必要条件  
+## <a name="prerequisites"></a>Prerequisites  
 
 このチュートリアルを完了するには Visual Studio が必要です。  
   
@@ -58,7 +59,7 @@ ms.locfileid: "73458921"
   
 - PresentationFramework  
   
-- システム  
+- System  
   
 - WindowsBase  
   
@@ -230,19 +231,19 @@ namespace MyControls
   
 4. 次の <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> コントロールをフォームに追加します。  
   
-    |名|テキスト|  
+    |[名前]|テキスト|  
     |----------|----------|  
     |groupBox1|背景色|  
     |groupBox2|前景色|  
     |groupBox3|フォント サイズ|  
     |groupBox4|フォント ファミリ|  
-    |groupBox5|[スタイル]|  
+    |groupBox5|フォント スタイル|  
     |groupBox6|フォントの太さ|  
     |groupBox7|コントロールからのデータ|  
   
 5. 次の <xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType> コントロールを <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType> コントロールに追加します。  
   
-    |GroupBox|名|テキスト|  
+    |GroupBox|[名前]|テキスト|  
     |--------------|----------|----------|  
     |groupBox1|radioBackgroundOriginal|元|  
     |groupBox1|radioBackgroundLightGreen|ライトグリーン|  
@@ -259,16 +260,16 @@ namespace MyControls
     |groupBox5|radioStyleOriginal|標準|  
     |groupBox5|radioStyleItalic|[斜体]|  
     |groupBox6|radioWeightOriginal|元|  
-    |groupBox6|radioWeightBold|[太字]|  
+    |groupBox6|radioWeightBold|太字|  
   
 6. 次の <xref:System.Windows.Forms.Label?displayProperty=nameWithType> コントロールを最後の <xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>に追加します。 これらのコントロールは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 複合コントロールによって返されるデータを表示します。  
   
-    |GroupBox|名|テキスト|  
+    |GroupBox|[名前]|テキスト|  
     |--------------|----------|----------|  
     |groupBox7|lblName|名前:|  
     |groupBox7|lblAddress|番地:|  
-    |groupBox7|lblCity|市区町村:|  
-    |groupBox7|lblState|都道府県:|  
+    |groupBox7|lblCity|都市:|  
+    |groupBox7|lblState|状態:|  
     |groupBox7|lblZip|郵便番号:|  
   
 ### <a name="initializing-the-form"></a>フォームの初期化  
