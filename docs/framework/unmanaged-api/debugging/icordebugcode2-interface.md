@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9321903b-7dea-40d8-ba32-99016c00cc46
 topic_type:
 - apiref
-ms.openlocfilehash: 7f0570b668cc33ca509c8522d1ba35ebcfca2453
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a9ce778cfa1aed4dcf6117c4fe2eca23ccda37a3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125572"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777946"
 ---
 # <a name="icordebugcode2-interface"></a>ICorDebugCode2 インターフェイス
 
@@ -29,15 +29,15 @@ ms.locfileid: "73125572"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetCodeChunks メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)|このコード オブジェクトを構成しているコード チャンクを取得します。|  
-|[GetCompilerFlags メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcompilerflags-method.md)|このコード オブジェクトが Just-In-Time (JIT) コンパイルされたとき、またはネイティブ イメージ ジェネレーター (Ngen.exe) を使用して生成されたときの条件を指定するフラグを取得します。|  
+|[GetCodeChunks メソッド](icordebugcode2-getcodechunks-method.md)|このコード オブジェクトを構成しているコード チャンクを取得します。|  
+|[GetCompilerFlags メソッド](icordebugcode2-getcompilerflags-method.md)|このコード オブジェクトが Just-In-Time (JIT) コンパイルされたとき、またはネイティブ イメージ ジェネレーター (Ngen.exe) を使用して生成されたときの条件を指定するフラグを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -48,5 +48,5 @@ ms.locfileid: "73125572"
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugCode3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugcode3-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugCode3 インターフェイス](icordebugcode3-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 445a9ee3-e050-4f3a-931a-96b0efb00110
 topic_type:
 - apiref
-ms.openlocfilehash: 3d6caa02333229bcd49f4c6ccf8b93265181a0b3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3d26ddb6d89af60acf6dc1214b0423ba75e488ff
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137093"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791164"
 ---
 # <a name="icordebugvaluegetsize-method"></a>ICorDebugValue::GetSize メソッド
 この "ICorDebugValue" オブジェクトのサイズ (バイト単位) を取得します。  
@@ -37,12 +37,12 @@ HRESULT GetSize (
  `pSize`  
  入出力この値オブジェクトのサイズ (バイト単位)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  値の型が参照型の場合、このメソッドはオブジェクトのサイズではなく、ポインターのサイズを返します。  
   
- `ICorDebugValue::GetSize` メソッドは、64ビットプラットフォームで 4 GB を超えるオブジェクトの `COR_E_OVERFLOW` を返します。 4 GB を超えるオブジェクトには、代わりに[ICorDebugValue3:: GetSize64](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)メソッドを使用してください。  
+ `ICorDebugValue::GetSize` メソッドは、64ビットプラットフォームで 4 GB を超えるオブジェクトの `COR_E_OVERFLOW` を返します。 4 GB を超えるオブジェクトには、代わりに[ICorDebugValue3:: GetSize64](icordebugvalue3-getsize64-method.md)メソッドを使用してください。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -53,4 +53,4 @@ HRESULT GetSize (
   
 ## <a name="see-also"></a>関連項目
 
-- [GetSize64 メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)
+- [GetSize64 メソッド](icordebugvalue3-getsize64-method.md)

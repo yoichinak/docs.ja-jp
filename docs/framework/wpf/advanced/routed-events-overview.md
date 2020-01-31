@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: ecd340d00e7f02655dfdcd8eee548309d424a5ea
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f47eccac4e960bd6869da0da139803cd4e433393
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458748"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794301"
 ---
 # <a name="routed-events-overview"></a>ルーティング イベントの概要
 
@@ -28,7 +28,7 @@ ms.locfileid: "73458748"
 
 <a name="prerequisites"></a>
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このトピックでは、共通言語ランタイム (CLR) とオブジェクト指向プログラミングについての基本的な知識があること、および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 要素間のリレーションシップをツリーとして概念化する方法の概念を理解していることを前提としています。 このトピックの例に従うには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] について理解し、ごく基本的な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションまたはページを作成できる必要があります。 詳細については、「[チュートリアル: 初めての wpf デスクトップアプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)と[XAML の概要 (wpf)](../../../desktop-wpf/fundamentals/xaml.md)」を参照してください。
 
@@ -64,7 +64,7 @@ Button-->StackPanel-->Border-->...
 
 **コントロールの複合とカプセル化:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のさまざまなコントロールには、多機能のコンテンツ モデルが採用されています。 たとえば、<xref:System.Windows.Controls.Button>内にイメージを配置すると、ボタンのビジュアルツリーを効果的に拡張できます。 ただし、追加されたイメージは、ユーザーがイメージの技術的な部分にあるピクセルをクリックした場合でも、ボタンがそのコンテンツの <xref:System.Windows.Controls.Primitives.ButtonBase.Click> に応答するようにするヒットテスト動作を中断しないようにする必要があります。
 
-**単一のハンドラー アタッチ ポイント:** [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]では、複数の要素から発生する可能性があるイベントを処理するために同じハンドラーを複数回アタッチする必要があります。 ルーティング イベントを使用すると、前の例に示したとおり、ハンドラーを一度だけアタッチし、必要に応じてハンドラーのロジックを使用してイベントの発生元を特定することができます。 たとえば、前に示した [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では次のようなハンドラーを使用します。
+**単一ハンドラーの添付ファイルポイント:** Windows フォームでは、複数の要素から発生する可能性のあるイベントを処理するために、同じハンドラーを複数回アタッチする必要があります。 ルーティング イベントを使用すると、前の例に示したとおり、ハンドラーを一度だけアタッチし、必要に応じてハンドラーのロジックを使用してイベントの発生元を特定することができます。 たとえば、前に示した [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では次のようなハンドラーを使用します。
 
 [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
 [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]
@@ -98,7 +98,7 @@ Button-->StackPanel-->Border-->...
 
 - **バブル:** イベント ソースのイベント ハンドラーが呼び出されます。 ルーティング イベントは、次に、要素ツリー ルートに到達するまで、連続する親要素にルーティングします。 ほとんどのルーティング イベントでは、このバブル ルーティング方法を使用します。 バブル ルーティング イベントは、一般に個別のコントロールまたはその他の UI 要素からの入力や状態変化を報告するために使用されます。
 
-- **直接:** ソース要素自体のみに、応答としてハンドラーを呼び出す機会が与えられます。 これは、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] がイベントに使用する "ルーティング" と似ています。 ただし、標準の CLR イベントとは異なり、ダイレクトルーティングイベントはクラスの処理をサポートしています (クラスの処理については、今後のセクションで説明します)。 <xref:System.Windows.EventSetter> と <xref:System.Windows.EventTrigger>で使用できます。
+- **直接:** ソース要素自体のみに、応答としてハンドラーを呼び出す機会が与えられます。 これは、Windows フォームがイベントに使用する "ルーティング" に似ています。 ただし、標準の CLR イベントとは異なり、ダイレクトルーティングイベントはクラスの処理をサポートしています (クラスの処理については、今後のセクションで説明します)。 <xref:System.Windows.EventSetter> と <xref:System.Windows.EventTrigger>で使用できます。
 
 - **トンネル:**  要素ツリー ルートのイベント ハンドラーが最初に呼び出されます。 ルーティング イベントは、次に、経路沿いにルーティング イベント ソース (ルーティング イベントを発生させた要素) のノード要素まで、連続する子要素間の経路をたどります。 多くの場合にトンネル ルーティング イベントは、コントロールの複合部分として使用または処理されます。たとえば、複合部分で発生したイベントは、完全なコントロールに固有のイベントによって意図的に抑止されるか置き換えられます。 多くの場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] から提供される入力イベントはトンネルとバブルのペアとして実装されます。 トンネル イベントは、このペアに使用される名前付け規則から、プレビュー イベントと呼ばれることもあります。
 
@@ -179,7 +179,7 @@ Visual Basic を使用している場合は、`Handles` キーワードを使用
 
   - イベントに応答してコードを実行します。 実行したアクションはイベントを処理済みとしてマークするのに十分と考えられるため、ハンドラーに渡されたイベント データでイベントを処理済みとしてマークします。 イベントは次のリスナーにルーティングされますが、イベントデータには <xref:System.Windows.RoutedEventArgs.Handled%2A>=`true` があるため、`handledEventsToo` リスナーだけがさらにハンドラーを呼び出すことができます。
 
-この概念設計は、前に説明したルーティング動作によって強化されています。ルート上の前のハンドラーが既に設定されている場合でも呼び出されるルーティングイベントのハンドラーをアタッチするのは、(コードまたはスタイルでも可能ですが) より困難です <xref:System.Windows.RoutedEventArgs.Handled%2A>`true`します。
+この概念設計は、前に説明したルーティング動作によって強化されています。ルートの前のハンドラーが既に `true`に <xref:System.Windows.RoutedEventArgs.Handled%2A> 設定されている場合でも呼び出されるルーティングイベントのハンドラーをアタッチすることは、より困難です (コードまたはスタイルでも可能です)。
 
 <xref:System.Windows.RoutedEventArgs.Handled%2A>、ルーティングイベントのクラス処理、およびルーティングイベントを <xref:System.Windows.RoutedEventArgs.Handled%2A>としてマークする適切なタイミングに関する推奨事項の詳細については、「ルーティングイベントを[処理済みとして](marking-routed-events-as-handled-and-class-handling.md)マークする」および「クラス処理」を参照してください。
 

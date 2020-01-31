@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 536d2357-1b97-49e0-a10c-c860aed74e6e
 topic_type:
 - apiref
-ms.openlocfilehash: 1f3cf3db5df610e57a957147f0ab79121679e00b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c25a03ef5bbba18da31787c911f83a1348badd4b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138700"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791449"
 ---
 # <a name="icordebugthread2interceptcurrentexception-method"></a>ICorDebugThread2::InterceptCurrentException メソッド
 デバッガーがこのスレッドの現在の例外をインターセプトできるようにします。  
@@ -37,10 +37,10 @@ HRESULT InterceptCurrentException (
  `pFrame`  
  からアクティブなスタックフレームを表すテキストフレームへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- `InterceptCurrentException` メソッドは、例外コール[バック (](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exception-method.md) [ICorDebugManagedCallback2:: exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)) と、それに関連付けられている:: [Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)の間で呼び出すことができます。  
+## <a name="remarks"></a>コメント  
+ `InterceptCurrentException` メソッドは、例外コール[バック (](icordebugmanagedcallback-exception-method.md) [ICorDebugManagedCallback2:: exception](icordebugmanagedcallback2-exception-method.md)) と、それに関連付けられている:: [Continue](icordebugcontroller-continue-method.md)の間で呼び出すことができます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

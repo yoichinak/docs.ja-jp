@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb4772ca-0d54-4185-b738-7a6ffe9ea85a
 topic_type:
 - apiref
-ms.openlocfilehash: b1ee5a155afa4e33340108e7295adef2309986cf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6bc24450cdda2e3ed324256b53b2d137d1eb90e4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122701"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788483"
 ---
 # <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame インターフェイス
 
@@ -29,14 +29,14 @@ ms.locfileid: "73122701"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetFrameType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|この内部フレームの型を取得します。|  
+|[GetFrameType メソッド](icordebuginternalframe-getframetype-method.md)|この内部フレームの型を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -47,4 +47,4 @@ ms.locfileid: "73122701"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

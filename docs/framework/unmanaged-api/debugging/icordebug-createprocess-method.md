@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6128694-11ed-46e7-bd4e-49ea1914c46a
 topic_type:
 - apiref
-ms.openlocfilehash: a69fb861f7c2671a5c26245aa544ee99bcbdb56b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: cb16bae2dfe151d04c40269a8e6872ecb49b4269
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901008"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789006"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess メソッド
 デバッガーの制御下でプロセスとそのプライマリスレッドを起動します。  
@@ -81,7 +81,7 @@ HRESULT CreateProcess (
  `ppProcess`  
  入出力プロセスを表す、オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このメソッドのパラメーターは、Win32 `CreateProcess` メソッドのパラメーターと同じです。  
   
  アンマネージ混合モードのデバッグを有効にするには&#124; 、`dwCreationFlags` を DEBUG_PROCESS DEBUG_ONLY_THIS_PROCESS に設定します。 マネージデバッグのみを使用する場合は、これらのフラグを設定しないでください。  
@@ -101,4 +101,4 @@ HRESULT CreateProcess (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)

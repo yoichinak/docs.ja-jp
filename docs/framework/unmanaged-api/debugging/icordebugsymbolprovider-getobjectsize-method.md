@@ -1,15 +1,15 @@
 ---
-title: 'いいね Provider:: GetObjectSize メソッド'
+title: ICorDebugSymbolProvider::GetObjectSize メソッド
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-ms.openlocfilehash: a5c0fe6d73302abbfabe2272cc878d6fd8f5fdec
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fce7410b5ae9571af0c8a5963596e2af41737798
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138817"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791563"
 ---
-# <a name="icordebugsymbolprovidergetobjectsize-method"></a>いいね Provider:: GetObjectSize メソッド
+# <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize メソッド
 typespec シグネチャに基づいてオブジェクトのオブジェクト サイズを返します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,12 +32,12 @@ HRESULT GetObjectSize(
  `pObjectSize`  
  [out] オブジェクトのサイズへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -48,5 +48,5 @@ HRESULT GetObjectSize(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

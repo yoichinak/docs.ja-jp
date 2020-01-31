@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5cba642c-0d80-48ee-889d-198c5044d821
 topic_type:
 - apiref
-ms.openlocfilehash: 5d3fe6691a2d9989de002bad09c2e8f66a094f56
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
-ms.translationtype: MT
+ms.openlocfilehash: 01989812b85cf98aedfd8855bee7b2dfbfd375f4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448435"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790055"
 ---
 # <a name="icorprofilercallbackjitcachedfunctionsearchstarted-method"></a>ICorProfilerCallback::JITCachedFunctionSearchStarted メソッド
 以前にネイティブイメージジェネレーター (Ngen.exe) を使用してコンパイルされた関数に対して検索が開始されたことをプロファイラーに通知します。  
@@ -33,13 +33,16 @@ HRESULT JITCachedFunctionSearchStarted(
     [out] BOOL *pbUseCachedFunction);  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `functionId`  
- から検索を実行する関数の ID。  
-  
- `pbUseCachedFunction`  
- [out] キャッシュされたバージョンの関数を実行エンジンが使用する必要がある場合 (使用可能な場合) に `true` します。それ以外の場合は `false`。 値が `false`場合、実行エンジンは、JIT コンパイルされていないバージョンを使用するのではなく、関数を JIT コンパイルします。  
-  
+## <a name="parameters"></a>パラメーター
+
+- `functionId`
+
+  \[] 検索を実行する関数の ID です。
+
+- `pbUseCachedFunction`
+
+  \[out] `true` キャッシュされたバージョンの関数を実行エンジンが使用する必要がある場合 (使用可能な場合)、それ以外の場合は `false`。 値が `false`場合、実行エンジンは、JIT コンパイルされていないバージョンを使用するのではなく、関数を JIT コンパイルします。
+
 ## <a name="remarks"></a>コメント  
  .NET Framework バージョン2.0 では、通常の NGen イメージのすべての関数に対して `JITCachedFunctionSearchStarted` および[ICorProfilerCallback:: JITCachedFunctionSearchFinished メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcachedfunctionsearchfinished-method.md)のコールバックは行われません。 プロファイル用に最適化された NGen イメージのみが、イメージ内のすべての関数のコールバックを生成します。 ただし、オーバーヘッドが増加するため、プロファイラーは、これらのコールバックを使用して just-in-time (JIT) コンパイルを強制的に実行する場合にのみ、プロファイラーで最適化された NGen イメージを要求する必要があります。 それ以外の場合、プロファイラーは関数情報を収集するためにレイジー戦略を使用する必要があります。  
   
@@ -58,6 +61,6 @@ HRESULT JITCachedFunctionSearchStarted(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

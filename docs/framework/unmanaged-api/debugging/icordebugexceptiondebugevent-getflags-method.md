@@ -1,15 +1,15 @@
 ---
-title: 'いい Exceptiondebugevent:: GetFlags メソッド'
+title: ICorDebugExceptionDebugEvent::GetFlags メソッド
 ms.date: 03/30/2017
 ms.assetid: 73225303-8852-487e-9a0e-9f0cb95e99d9
-ms.openlocfilehash: 6c330ce5b375daacdf257eda16fd5e34012f5d69
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aaf137b1d851d0de86bde697c9e3a512f34d2aa9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73084753"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782915"
 ---
-# <a name="icordebugexceptiondebugeventgetflags-method"></a>いい Exceptiondebugevent:: GetFlags メソッド
+# <a name="icordebugexceptiondebugeventgetflags-method"></a>ICorDebugExceptionDebugEvent::GetFlags メソッド
 例外をインターセプトできるかどうかを示すフラグを取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -22,14 +22,14 @@ HRESULT GetFlags(
   
 ## <a name="parameters"></a>パラメーター  
  `pdwFlags`  
- 入出力例外をインターセプトできるかどうかを示す[Cordebugexceptionflags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)値へのポインター。  
+ 入出力例外をインターセプトできるかどうかを示す[Cordebugexceptionflags](cordebugexceptionflags-enumeration.md)値へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -40,5 +40,5 @@ HRESULT GetFlags(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugExceptionDebugEvent インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptiondebugevent-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugExceptionDebugEvent インターフェイス](icordebugexceptiondebugevent-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

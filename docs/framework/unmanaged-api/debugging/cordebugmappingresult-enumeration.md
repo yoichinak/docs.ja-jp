@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 701281dd-2936-45c8-a1f0-3bf7332b093b
 topic_type:
 - apiref
-ms.openlocfilehash: fc3f77adf33502bfbc3d65ff5131420093fbbec8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 317dc2fe8403ae25949410423f1a28ad365caf6a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73097929"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789308"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 列挙型
 命令ポインター (IP) の値が得られた方法の詳細を提供します。  
@@ -48,10 +48,10 @@ typedef enum CorDebugMappingResult {
 |`MAPPING_EXACT`|メソッドが MSIL コードに厳密にマップされているか、フレームが解釈されているため、IP の値は正確です。|  
 |`MAPPING_APPROXIMATE`|メソッドは正常にマップされましたが、IP の値は概数である可能性があります。|  
   
-## <a name="remarks"></a>Remarks  
- 指示ポインターの値を取得するには、「ツール」を[使用します](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md)。  
+## <a name="remarks"></a>コメント  
+ 指示ポインターの値を取得するには、「ツール」を[使用します](icordebugilframe-getip-method.md)。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -62,4 +62,4 @@ typedef enum CorDebugMappingResult {
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [列挙型のデバッグ](debugging-enumerations.md)

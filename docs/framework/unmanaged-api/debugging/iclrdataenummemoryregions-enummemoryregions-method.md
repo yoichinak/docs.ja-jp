@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 22d2e339-f174-40b5-a478-0b744501566f
 topic_type:
 - apiref
-ms.openlocfilehash: 693ec07176f80711709cd9b85c6886bea8be74b2
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2b2bbe8bcecf71f6d3016fb35dfbf5ba1353aea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122967"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785635"
 ---
 # <a name="iclrdataenummemoryregionsenummemoryregions-method"></a>ICLRDataEnumMemoryRegions::EnumMemoryRegions メソッド
 指定されたメモリ領域を列挙します。  
@@ -37,7 +37,7 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="parameters"></a>パラメーター  
  `callback`  
- から結果をデバッガーに通知するために、列挙される各メモリ領域に対してこのメソッドによって呼び出される[ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)インスタンスへのポインター。  
+ から結果をデバッガーに通知するために、列挙される各メモリ領域に対してこのメソッドによって呼び出される[ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md)インスタンスへのポインター。  
   
  コールバックがエラーを示す場合でも、メモリ領域の列挙は続行されます。  
   
@@ -45,12 +45,12 @@ HRESULT EnumMemoryRegions (
  から使用しません。  
   
  `clrFlags`  
- から列挙するメモリ領域を指定する[Clrdataenummemoryflags](../../../../docs/framework/unmanaged-api/debugging/clrdataenummemoryflags-enumeration.md)列挙体の値。  
+ から列挙するメモリ領域を指定する[Clrdataenummemoryflags](clrdataenummemoryflags-enumeration.md)列挙体の値。  
   
-## <a name="remarks"></a>Remarks  
- このメソッドは、指定された[ICLRDataEnumMemoryRegionsCallback](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregionscallback-interface.md)インスタンスを使用して、結果を呼び出し元に通知します。  
+## <a name="remarks"></a>コメント  
+ このメソッドは、指定された[ICLRDataEnumMemoryRegionsCallback](iclrdataenummemoryregionscallback-interface.md)インスタンスを使用して、結果を呼び出し元に通知します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  
@@ -61,4 +61,4 @@ HRESULT EnumMemoryRegions (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataEnumMemoryRegions インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-interface.md)
+- [ICLRDataEnumMemoryRegions インターフェイス](iclrdataenummemoryregions-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ab03dcb8-ceed-4f7a-abf8-9d31604bf90c
 topic_type:
 - apiref
-ms.openlocfilehash: fdf7ce97d45dc54d711389af822f2ca7d1ea67a5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f338a4e50d50e7dad67160ff66ea4be3d08b0dcd
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090636"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788780"
 ---
 # <a name="icordebugenumreset-method"></a>ICorDebugEnum::Reset メソッド
 カーソルを列挙体の先頭に移動します。  
@@ -31,7 +31,7 @@ ms.locfileid: "73090636"
 HRESULT Reset ();  
 ```  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -42,4 +42,4 @@ HRESULT Reset ();
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-interface1.md)
+- [ICorDebugEnum インターフェイス](icordebugenum-interface1.md)

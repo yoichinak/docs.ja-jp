@@ -10,12 +10,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
-ms.openlocfilehash: 00d9bef1e2b59a2d2207d1e343380e0e81bee848
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b9e488a512ad506a8975bfff44ae02cd84c29f74
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130357"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76861698"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>ICorProfilerInfo7:: ApplyMetaData メソッド
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
@@ -34,12 +34,12 @@ HRESULT ApplyMetaData(
  `moduleID`  
  からメタデータが変更されたモジュールの識別子。  
   
-## <a name="remarks"></a>Remarks  
- [Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)コールバックの後にメタデータの変更が行われた場合は、新しいメタデータを使用する前にこのメソッドを呼び出す必要があります。  
+## <a name="remarks"></a>コメント  
+ [Moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md)コールバックの後にメタデータの変更が行われた場合は、新しいメタデータを使用する前にこのメソッドを呼び出す必要があります。  
   
  `ApplyMetaData` は、次の種類のメタデータの追加のみをサポートしています。  
   
-- `AssemblyRef` レコードは、 [IMetaDataAssemblyEmit::D efineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)を呼び出すことによって作成します。 メソッドをオーバーライドします。  
+- `AssemblyRef` レコードは、 [IMetaDataAssemblyEmit::D efineAssemblyRef](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)を呼び出すことによって作成します。 メソッドからキャッシュされました。  
   
 - `TypeRef` レコードは、 [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)メソッドを呼び出すことによって作成します。  
   
@@ -55,9 +55,9 @@ HRESULT ApplyMetaData(
 
 - `TypeDef` レコードは、 [IMetaDataEmit::D efineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)メソッドを呼び出すことによって作成します。
 
-- `MethodDef` レコードは、 [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)メソッドを呼び出すことによって作成します。 ただし、既存の型に仮想メソッドを追加することはサポートされていません。 仮想メソッドは、 [Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)コールバックの前に追加する必要があります。
+- `MethodDef` レコードは、 [IMetaDataEmit::D efinemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)メソッドを呼び出すことによって作成します。 ただし、既存の型に仮想メソッドを追加することはサポートされていません。 仮想メソッドは、 [Moduleloadfinished](icorprofilercallback-moduleloadfinished-method.md)コールバックの前に追加する必要があります。
 
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
@@ -68,4 +68,4 @@ HRESULT ApplyMetaData(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerInfo7 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)
+- [ICorProfilerInfo7 インターフェイス](icorprofilerinfo7-interface.md)

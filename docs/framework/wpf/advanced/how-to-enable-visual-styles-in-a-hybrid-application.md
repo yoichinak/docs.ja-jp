@@ -8,17 +8,17 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 251c53a8665d2eae7c3b5bb23b0a388009362dcc
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: dd52313e9100f9c6a1141b53ccc5a23a4b54410a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960114"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789920"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>方法 : ハイブリッド アプリケーションで視覚スタイルを有効にする
-このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのアプリケーションでホストされている [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールで visual スタイルを有効にする方法について説明します。  
+このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ベースのアプリケーションでホストされている Windows フォームコントロールで visual スタイルを有効にする方法について説明します。  
   
- アプリケーションが <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> メソッドを呼び出すと、ほとんどの [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールで自動的に visual スタイルが使用されます。 詳細については、「[visual スタイルが使用されているコントロールのレンダリング](../../winforms/controls/rendering-controls-with-visual-styles.md)」を参照してください。  
+ アプリケーションが <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> メソッドを呼び出すと、ほとんどの Windows フォームコントロールで自動的に visual スタイルが使用されます。 詳細については、「[visual スタイルが使用されているコントロールのレンダリング](../../winforms/controls/rendering-controls-with-visual-styles.md)」を参照してください。  
   
  このトピックで説明されているタスクの完全なコード一覧については、「[ハイブリッドアプリケーションでの Visual スタイルの有効化](https://go.microsoft.com/fwlink/?LinkID=159986)」のサンプルを参照してください。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "74960114"
   
 9. F5 キーを押してアプリケーションをビルドし、実行します。  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、visual スタイルを使用して描画されます。  
+     Windows フォームコントロールは、visual スタイルを使用して描画されます。  
   
 ## <a name="disabling-windows-forms-visual-styles"></a>Windows フォーム視覚スタイルの無効化  
  視覚スタイルを無効にするには、単に <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> メソッドの呼び出しを削除します。  
@@ -64,9 +64,9 @@ ms.locfileid: "74960114"
   
 3. F5 キーを押してアプリケーションをビルドし、実行します。  
   
-     [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、既定のシステムスタイルで描画されます。  
+     Windows フォームコントロールは、既定のシステムスタイルで描画されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>
 - <xref:System.Windows.Forms.VisualStyles>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 5955228d51d2f6845a363bcaf32581b6598273f6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714763"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743909"
 ---
 # <a name="methods-c-programming-guide"></a>メソッド (C# プログラミング ガイド)
 
@@ -44,7 +44,7 @@ ms.locfileid: "75714763"
 
 ## <a name="passing-by-reference-vs-passing-by-value"></a>参照渡しと値渡し
 
-既定では、値型がメソッドに渡されるときは、オブジェクト自体ではなく、そのコピーが渡されます。 したがって、引数に加えた変更は、呼び出し元のメソッドにある元のコピーには影響しません。 ref キーワードを使用すると、値型を参照によって引き渡すことができます。 詳細については、「[値型パラメーターの引き渡し](./passing-value-type-parameters.md)」を参照してください。 組み込みの値型の一覧については、「[値型の一覧表](../../language-reference/keywords/value-types-table.md)」を参照してください。
+既定では、[値の型](../../language-reference/builtin-types/value-types.md)のインスタンスがメソッドに渡されるときは、インスタンス自体ではなく、そのコピーが渡されます。 したがって、引数に加えた変更は、呼び出し元のメソッドにある元のインスタンスには影響しません。 値の型インスタンスを参照で渡すには、`ref` キーワードを使用します。 詳細については、「[値型パラメーターの引き渡し](./passing-value-type-parameters.md)」を参照してください。
 
 参照型のオブジェクトがメソッドに渡されると、オブジェクトへの参照が渡されます。 つまり、メソッドは、オブジェクト自体ではなく、オブジェクトの場所を示す引数を受け取ります。 この参照を使用してオブジェクトのメンバーを変更した場合は、オブジェクトを値で渡しても、呼び出し元のメソッドの引数に変更が反映されます。
 

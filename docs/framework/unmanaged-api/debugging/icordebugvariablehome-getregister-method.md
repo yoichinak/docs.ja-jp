@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a5eecd7b-b04c-4266-bff2-7c8771d519a8
 topic_type:
 - apiref
-ms.openlocfilehash: 4c9932c3eeebd0101ee364c9b4d0b0a26862c4b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 396dd9c017fca6dc7037b43355ba7f726d7390ea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125067"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790988"
 ---
 # <a name="icordebugvariablehomegetregister-method"></a>いい変数 Home:: GetRegister メソッド
 `VLT_REGISTER`の場所の種類を持つ変数と、場所の種類が `VLT_REGISTER_RELATIVE`の変数の基本レジスタを含むレジスタを取得します。  
@@ -40,12 +40,12 @@ HRESULT GetRegister(
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の値を返します。  
   
-|[値]|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |`S_OK`|変数は、`pRegister` 引数によって示されるレジスタにあります。|  
 |`E_FAIL`|変数がレジスタまたはレジスタの相対位置にありません。|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -56,5 +56,5 @@ HRESULT GetRegister(
   
 ## <a name="see-also"></a>関連項目
 
-- [VariableLocationType 列挙型](../../../../docs/framework/unmanaged-api/debugging/variablelocationtype-enumeration.md)
-- [ICorDebugVariableHome インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [VariableLocationType 列挙型](variablelocationtype-enumeration.md)
+- [ICorDebugVariableHome インターフェイス](icordebugvariablehome-interface.md)

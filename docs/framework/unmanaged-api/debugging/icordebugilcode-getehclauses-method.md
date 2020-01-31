@@ -12,12 +12,12 @@ api_type:
 ms.assetid: cf7a0e00-06ae-47a5-8037-598b26196802
 topic_type:
 - apiref
-ms.openlocfilehash: df9859f33b4146486a046253cf4705cd19c66adf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ac9a4e4b54b302afeae4ede1dd574c15ded3ff12
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131095"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788599"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -41,12 +41,12 @@ HRESULT GetEHClauses(
  [out] 情報が `clauses` アレイに書き込まれる場合に、対象となる句の数。  
   
  clauses  
- 入出力この IL に対して定義されている例外処理句に関する情報を格納する[CorDebugEHClause](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)オブジェクトの配列。  
+ 入出力この IL に対して定義されている例外処理句に関する情報を格納する[CorDebugEHClause](cordebugehclause-structure.md)オブジェクトの配列。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `cClauses` が0で `pcClauses` が**null**以外の場合、`pcClauses` は使用可能な例外処理句の数に設定されます。 `cClauses` が 0 以外の場合は、`clauses` アレイの記憶容量を表します。 メソッドが戻るとき、`clauses` には、`cClauses` の最大項目が含まれ、`pcClauses` は、実際に`clauses` アレイに書き込まれる句の数が設定されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -57,6 +57,6 @@ HRESULT GetEHClauses(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugILCode インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
-- [CorDebugEHClause 構造体](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugILCode インターフェイス](icordebugilcode-interface.md)
+- [CorDebugEHClause 構造体](cordebugehclause-structure.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

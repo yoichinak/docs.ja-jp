@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7263f9a9-4c0b-4d82-a181-288873fb2b18
 topic_type:
 - apiref
-ms.openlocfilehash: 4558074bc23334bd697461a00ccb31db3e3fe397
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d60644d54373dfb3d1d191900df71d3e5f6547a6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130607"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788290"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection メソッド
 指定した接続に関連付けられたタスクのセットが変更されたことをデバッガーに通知します。  
@@ -41,16 +41,16 @@ HRESULT ChangeConnection (
  `dwConnectionId`  
  から変更された接続の ID。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `ChangeConnection` コールバックは、次のいずれかの場合に発生します。  
   
-- デバッガーが接続を含むプロセスにアタッチする場合。 この場合、ランタイムは、プロセス内の各接続に対して[ICorDebugManagedCallback2:: CreateConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md)イベントと `ChangeConnection` イベントを生成してディスパッチします。 接続のタスクのセットが作成後に変更されたかどうかに関係なく、既存のすべての接続に対して `ChangeConnection` イベントが生成されます。  
+- デバッガーが接続を含むプロセスにアタッチする場合。 この場合、ランタイムは、プロセス内の各接続に対して[ICorDebugManagedCallback2:: CreateConnection](icordebugmanagedcallback2-createconnection-method.md)イベントと `ChangeConnection` イベントを生成してディスパッチします。 接続のタスクのセットが作成後に変更されたかどうかに関係なく、既存のすべての接続に対して `ChangeConnection` イベントが生成されます。  
   
 - ホストが[ホスティング API](../../../../docs/framework/unmanaged-api/hosting/index.md)で[ICLRDebugManager:: setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)を呼び出すとき。  
   
  デバッガーは、新しい変更を取得するために、プロセス内のすべてのスレッドをスキャンする必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -61,5 +61,5 @@ HRESULT ChangeConnection (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 インターフェイス](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

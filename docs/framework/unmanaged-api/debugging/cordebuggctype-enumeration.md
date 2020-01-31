@@ -1,5 +1,5 @@
 ---
-title: CorDebugGCType 列挙型
+title: CorDebugGCType 列挙体
 ms.date: 03/30/2017
 api_name:
 - CorDebugGCType
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 880ca92a-42d4-42a5-9b9c-c2848eb39c6a
 topic_type:
 - apiref
-ms.openlocfilehash: b954aa0e4db10fd4b3bde951c7f27d18b8634f5a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6f4c96517375df4cd249b72953bf37812a498c0c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132181"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789357"
 ---
-# <a name="cordebuggctype-enumeration"></a>CorDebugGCType 列挙型
+# <a name="cordebuggctype-enumeration"></a>CorDebugGCType 列挙体
 ガベージ コレクターがワークステーションまたはサーバーのどちらで実行されているかを示します。  
   
 ## <a name="syntax"></a>構文  
@@ -42,9 +42,9 @@ typedef enum CorDebugGCType {
 |`CorDebugWorkstationGC`|ガベージコレクターはワークステーション上で実行されています。|  
 |`CorDebugServerGC`|ガベージコレクターはサーバーで実行されています。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -55,4 +55,4 @@ typedef enum CorDebugGCType {
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [列挙型のデバッグ](debugging-enumerations.md)

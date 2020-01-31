@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-ms.openlocfilehash: d0b6960a24e246c7a538e8ffc59fa380a4b8e2a7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 00c9939b25f395010f6ea5832b405c3e9928a223
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73131367"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792024"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable メソッド
 使用できるレジスタのビットマップを提供するバイト配列を取得します。  
@@ -41,7 +41,7 @@ HRESULT GetRegistersAvailable (
  `availableRegChunks`  
  入出力バイト配列。各ビットはレジスタに対応します。 レジスタが使用可能な場合は、レジスタの対応するビットが設定されます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  CorDebugRegister 列挙子の値は、異なるマイクロプロセッサのレジスタを指定します。 各値の上位5ビットは、`availableRegChunks` バイト配列のインデックスになります。 各値の下位3ビットは、インデックス付きバイト内のビット位置を識別します。 特定のレジスタを指定する `CorDebugRegister` 値を指定すると、マスク内のレジスタの位置は次のように決定されます。  
   
 1. `availableRegChunks` 配列内の正しいバイトにアクセスするために必要なインデックスを抽出します。  
@@ -52,7 +52,7 @@ HRESULT GetRegistersAvailable (
   
      `CorDebugRegister` 値 & 7  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -63,5 +63,5 @@ HRESULT GetRegistersAvailable (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugRegisterSet2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [ICorDebugRegisterSet インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 インターフェイス](icordebugregisterset2-interface.md)
+- [ICorDebugRegisterSet インターフェイス](icordebugregisterset-interface.md)

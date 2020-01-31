@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::GetImageLocation メソッド
 ms.date: 03/30/2017
 ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
-ms.openlocfilehash: 8b873e28bfab31ea18924f471f916475efd345d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: ba1cc8c91c53547c6ed4025ee67a69e253f3596d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122135"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783579"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation メソッド
 モジュールのベース アドレスからモジュールのパスを返します。  
@@ -35,12 +35,12 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
  `szName`  
  [出力] モジュールのパス。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -51,5 +51,5 @@ HRESULT GetImageLocation(    [in] CORDB_ADDRESS baseAddress,
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget2-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugDataTarget2 インターフェイス](icordebugdatatarget2-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

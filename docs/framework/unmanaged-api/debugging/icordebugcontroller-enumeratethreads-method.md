@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 73f536f6-4668-4a4a-b3e4-ac7df862d5be
 topic_type:
 - apiref
-ms.openlocfilehash: 291f6c05171b5e507afaa70537aafdc9002a506e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 815dc63a2dedecc613506b0f98702f58d6e7bd04
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125409"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783783"
 ---
 # <a name="icordebugcontrollerenumeratethreads-method"></a>ICorDebugController::EnumerateThreads メソッド
 プロセス内のアクティブなマネージスレッドの列挙子を取得します。  
@@ -38,14 +38,14 @@ HRESULT EnumerateThreads (
  入出力プロセス内でアクティブになっているすべてのマネージスレッドの列挙子を表す "いい Threadenum" オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>コメント  
- スレッドがアクティブであると見なされるのは、["CreateThread"](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createthread-method.md) コールバックがディスパッチされてから、"  [Managedcallback:: exitthread](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitthread-method.md) " コールバックがディスパッチされる前です。 マネージスレッドは、必ずしもスタック上にマネージフレームを持つとは限りません。 スレッドは、によっては、"、 [" という](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)ように列挙できます。 列挙体は、自然に空になります。  
+ スレッドがアクティブであると見なされるのは、"[CreateThread](icordebugmanagedcallback-createthread-method.md)" コールバックがディスパッチされてから、" [Managedcallback:: exitthread](icordebugmanagedcallback-exitthread-method.md) " コールバックがディスパッチされる前です。 マネージスレッドは、必ずしもスタック上にマネージフレームを持つとは限りません。 スレッドは、によっては、"、 [" という](icordebugmanagedcallback-createprocess-method.md)ように列挙できます。 列挙体は、自然に空になります。  
   
 ## <a name="requirements"></a>要件  
- **・** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug .idl、CorDebug. h  
+ **ヘッダー:** CorDebug.idl、CorDebug.h  
   
- **ライブラリ**CorGuids .lib  
+ **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
