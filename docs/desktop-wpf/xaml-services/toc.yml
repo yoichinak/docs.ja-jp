@@ -76,7 +76,7 @@
           href: service-contexts-with-type-converters-and-markup-extensions.md
     - name: XAML のジェネリック
       href: generics.md
-    - name: .NET Framework XAML サービスで使用するためのカスタム型の定義
+    - name: .NET XAML サービスで使用するカスタム型の定義
       href: define-custom-types.md
       items:
         - name: カスタム型およびライブラリの XAML 関連の CLR 属性

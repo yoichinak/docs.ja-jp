@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ced9c82e-d7b0-4806-a151-98b6611d3097
 topic_type:
 - apiref
-ms.openlocfilehash: 5e2d68d1e2dcaa656df4e35b135eeaf522878c6d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 28d1d426276e9654c2122f03fb64735b7e67f44f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137122"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792482"
 ---
 # <a name="icordebugprocess3-interface"></a>ICorDebugProcess3 インターフェイス
 カスタムのデバッガー通知を制御します。  
@@ -28,15 +28,15 @@ ms.locfileid: "73137122"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[SetEnableCustomNotification メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-setenablecustomnotification-method.md)|指定された型のカスタムデバッガー通知を有効または無効にします。|  
+|[SetEnableCustomNotification メソッド](icordebugprocess3-setenablecustomnotification-method.md)|指定された型のカスタムデバッガー通知を有効または無効にします。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このインターフェイスは、ICorDebugProcess2 インターフェイスとインターフェイスを論理的に拡張します。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -47,5 +47,5 @@ ms.locfileid: "73137122"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

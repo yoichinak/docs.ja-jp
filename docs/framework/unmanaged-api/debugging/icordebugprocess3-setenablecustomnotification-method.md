@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: afd88ee9-2589-4461-a75a-9b6fe55a2525
 topic_type:
 - apiref
-ms.openlocfilehash: ec60274648315c4fa38f3832d8d39c1a269956b1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2f365f3fe1568f2dd3bad677dd77a13946002e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129702"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792460"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification メソッド
 指定された型のカスタムデバッガー通知を有効または無効にします。  
@@ -39,12 +39,12 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
  `fEnable`  
  [in] カスタムデバッガー通知を有効にする `true`通知を無効にする `false` ます。 既定値は `false`です。  
   
-## <a name="remarks"></a>Remarks  
- `fEnable` が `true`に設定されている場合、<xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> メソッドを呼び出すと、 [ICorDebugManagedCallback3:: CustomNotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)コールバックがトリガーされます。 既定では、通知は無効になっています。そのため、デバッガーは、認識している通知の種類を指定し、処理を希望する必要があります。 このクラス[のクラスはアプリケーション](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)ドメインによってスコープが設定されているため、プロセス全体で通知を受け取る必要がある場合は、プロセス内のすべてのアプリケーションドメインに対して `SetEnableCustomNotification` を呼び出す必要があります。  
+## <a name="remarks"></a>コメント  
+ `fEnable` が `true`に設定されている場合、<xref:System.Diagnostics.Debugger.NotifyOfCrossThreadDependency%2A?displayProperty=nameWithType> メソッドを呼び出すと、 [ICorDebugManagedCallback3:: CustomNotification](icordebugmanagedcallback3-customnotification-method.md)コールバックがトリガーされます。 既定では、通知は無効になっています。そのため、デバッガーは、認識している通知の種類を指定し、処理を希望する必要があります。 このクラス[のクラスはアプリケーション](icordebug-interface.md)ドメインによってスコープが設定されているため、プロセス全体で通知を受け取る必要がある場合は、プロセス内のすべてのアプリケーションドメインに対して `SetEnableCustomNotification` を呼び出す必要があります。  
   
  .NET Framework 4 以降、サポートされている通知は、スレッド間の依存関係通知だけです。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -55,6 +55,6 @@ HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugProcess3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess3-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugProcess3 インターフェイス](icordebugprocess3-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

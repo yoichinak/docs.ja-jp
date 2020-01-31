@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7d5385d3-f4a5-47c4-8478-a3513b5e9406
 topic_type:
 - apiref
-ms.openlocfilehash: 1f46866a1b975455acd294221e38ef3b4c358660
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5fa042223e47961dad0a6799ab8ca999ef76e285
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140208"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791092"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 インターフェイス
 "ICorDebugValue" インターフェイスと "ICorDebugValue2" インターフェイスを拡張して、2 GB を超える配列のサポートを提供します。  
@@ -28,12 +28,12 @@ ms.locfileid: "73140208"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetSize64 メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|この `ICorDebugValue3` オブジェクトのサイズ (バイト単位) を取得します。|  
+|[GetSize64 メソッド](icordebugvalue3-getsize64-method.md)|この `ICorDebugValue3` オブジェクトのサイズ (バイト単位) を取得します。|  
   
-## <a name="remarks"></a>Remarks  
- [ICorDebugValue:: GetSize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)メソッドは、0 ~ 2147483647 バイトの範囲のオブジェクトサイズを返します。 .NET Framework 4.5 では、配列のサイズが 2 GB を超える場合があります。 `ICorDebugValue3` インターフェイスを使用すると、これらの配列のサイズを決定できます。  
+## <a name="remarks"></a>コメント  
+ [ICorDebugValue:: GetSize](icordebugvalue3-getsize64-method.md)メソッドは、0 ~ 2147483647 バイトの範囲のオブジェクトサイズを返します。 .NET Framework 4.5 では、配列のサイズが 2 GB を超える場合があります。 `ICorDebugValue3` インターフェイスを使用すると、これらの配列のサイズを決定できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -44,5 +44,5 @@ ms.locfileid: "73140208"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

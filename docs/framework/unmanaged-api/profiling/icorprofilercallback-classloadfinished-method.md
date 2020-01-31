@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3dd80fbe-d62d-4d4d-acf8-5b7d0efe607e
 topic_type:
 - apiref
-ms.openlocfilehash: ef2c518f8f3f3069e93f06de89add1385cb4e45e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e0ff90f99c1127b5a4626f47514ba7099b5d48af
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445124"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866599"
 ---
 # <a name="icorprofilercallbackclassloadfinished-method"></a>ICorProfilerCallback::ClassLoadFinished メソッド
 クラスが読み込みを完了したことをプロファイラーに通知します。  
@@ -33,14 +33,17 @@ HRESULT ClassLoadFinished(
     [in] HRESULT hrStatus);  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `classId`  
- から読み込まれたクラスを識別します。  
-  
- `hrStatus`  
- からクラスが正常に読み込まれたかどうかを示す HRESULT。  
-  
-## <a name="remarks"></a>コメント  
+## <a name="parameters"></a>パラメーター
+
+- `classId`
+
+  の \[] は、読み込まれたクラスを識別します。
+
+- `hrStatus`
+
+  \[]) クラスが正常に読み込まれたかどうかを示す HRESULT。
+
+## <a name="remarks"></a>Remarks  
  `classId` の値は、`ClassLoadFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
  `ClassLoadFinished` コールバックの後も、クラスの読み込みの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、クラスの読み込みの最初の部分が成功したことのみを示します。  
@@ -56,5 +59,5 @@ HRESULT ClassLoadFinished(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ClassLoadStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ClassLoadStarted メソッド](icorprofilercallback-classloadstarted-method.md)

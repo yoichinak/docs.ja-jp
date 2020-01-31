@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 18e89f45-e068-426a-be16-9f53a4346860
 topic_type:
 - apiref
-ms.openlocfilehash: 774a5d4e48f00ea8c28977f3f685dcd5a8da3199
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: a9ab8c81c995bbec41db217c904e03dd70351aee
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440586"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866885"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 関数
 関数が呼び出し元に戻りようとしていることをプロファイラーに通知します。  
   
 > [!NOTE]
-> `FunctionLeave` 関数は、.NET Framework 2.0 では非推奨とされます。 これは引き続き機能しますが、パフォーマンスが低下します。 代わりに、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)関数を使用してください。  
+> `FunctionLeave` 関数は、.NET Framework 2.0 では非推奨とされます。 これは引き続き機能しますが、パフォーマンスが低下します。 代わりに、 [FunctionLeave2](functionleave2-function.md)関数を使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,11 +35,13 @@ void __stdcall FunctionLeave (
 );  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `funcID`  
- からを返す関数の識別子。  
-  
-## <a name="remarks"></a>コメント  
+## <a name="parameters"></a>パラメーター
+
+- `funcID`
+
+  \[] を返す関数の識別子。
+
+## <a name="remarks"></a>Remarks  
  `FunctionLeave` 関数はコールバックです。実装する必要があります。 実装では、`__declspec`(`naked`) ストレージクラス属性を使用する必要があります。  
   
  この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
@@ -61,10 +63,10 @@ void __stdcall FunctionLeave (
   
  **.NET Framework のバージョン:** 1.1、1.0  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [FunctionEnter2 関数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)
-- [FunctionLeave2 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)
-- [FunctionTailcall2 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)
-- [SetEnterLeaveFunctionHooks2 メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
-- [グローバル静的関数のプロファイル](../../../../docs/framework/unmanaged-api/profiling/profiling-global-static-functions.md)
+- [FunctionEnter2 関数](functionenter2-function.md)
+- [FunctionLeave2 関数](functionleave2-function.md)
+- [FunctionTailcall2 関数](functiontailcall2-function.md)
+- [SetEnterLeaveFunctionHooks2 メソッド](icorprofilerinfo2-setenterleavefunctionhooks2-method.md)
+- [グローバル静的関数のプロファイル](profiling-global-static-functions.md)

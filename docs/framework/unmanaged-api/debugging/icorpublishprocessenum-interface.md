@@ -14,28 +14,28 @@ helpviewer_keywords:
 ms.assetid: aac8fcf9-ac09-437c-bd5c-2fda14ae1007
 topic_type:
 - apiref
-ms.openlocfilehash: 3a7267548a957d403cfe02aa3d800a410c14b82a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 188ff8feabd704d828256a09aca20f9db2227f2c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73103414"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790507"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum インターフェイス
-[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)オブジェクトのコレクションを走査するメソッドを提供する[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)インターフェイスのサブクラス。  
+[ICorPublishProcess](icorpublishprocess-interface.md)オブジェクトのコレクションを走査するメソッドを提供する[ICorPublishEnum](icorpublishenum-interface.md)インターフェイスのサブクラス。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|現在の位置から開始して、指定した数の `ICorPublishProcess` インスタンスをコレクションから取得します。|  
+|[Next メソッド](icorpublishprocessenum-next-method.md)|現在の位置から開始して、指定した数の `ICorPublishProcess` インスタンスをコレクションから取得します。|  
   
-## <a name="remarks"></a>Remarks  
- `ICorPublishProcessEnum` インターフェイスは、抽象インターフェイス[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)のメソッドを実装します。  
+## <a name="remarks"></a>コメント  
+ `ICorPublishProcessEnum` インターフェイスは、抽象インターフェイス[ICorPublishEnum](icorpublishenum-interface.md)のメソッドを実装します。  
   
- `ICorPublishProcessEnum` インスタンスは、 [ICorPublish:: EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icorpublish-enumprocesses-method.md)メソッドによって作成されます。 `ICorPublishProcess` オブジェクトのコレクションの走査は、`ICorPublishProcessEnum` インスタンスの作成時に指定されたフィルター条件に基づいています。  
+ `ICorPublishProcessEnum` インスタンスは、 [ICorPublish:: EnumProcesses](icorpublish-enumprocesses-method.md)メソッドによって作成されます。 `ICorPublishProcess` オブジェクトのコレクションの走査は、`ICorPublishProcessEnum` インスタンスの作成時に指定されたフィルター条件に基づいています。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  
@@ -46,5 +46,5 @@ ms.locfileid: "73103414"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [CorpubPublish コクラス](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [CorpubPublish コクラス](corpubpublish-coclass.md)

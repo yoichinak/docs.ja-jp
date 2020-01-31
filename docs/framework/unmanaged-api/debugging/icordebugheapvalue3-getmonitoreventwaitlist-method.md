@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 035a9035-ac66-4953-b48a-99652b42b7fe
 topic_type:
 - apiref
-ms.openlocfilehash: 0fbff178efd4d0dff3593907b3d40e946be2ff6e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 15900fab59d172ada67d8aefeab698e1b44f808e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121304"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794389"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList メソッド
 モニターロックに関連付けられているイベントでキューに登録されているスレッドの順序付きリストを提供します。  
@@ -47,7 +47,7 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  リスト内の最初のスレッドは、次に <xref:System.Threading.Monitor.Pulse%28System.Object%29?displayProperty=nameWithType>を呼び出すことによって解放される最初のスレッドです。 リスト内の次のスレッドは、次の呼び出しで解放されます。  
   
  リストが空でない場合、このメソッドは S_OK を返します。 リストが空の場合、メソッドは S_FALSE を返します。この場合、列挙体は空ですが、有効です。  
@@ -58,7 +58,7 @@ HRESULT GetMonitorEventWaitList (
   
  どのスレッドがモニターを待機しているかを特定できないようなエラーが発生した場合、メソッドはエラーを示す HRESULT を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -69,5 +69,5 @@ HRESULT GetMonitorEventWaitList (
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

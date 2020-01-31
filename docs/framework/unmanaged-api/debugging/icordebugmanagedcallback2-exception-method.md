@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 78b0f14f-2fae-4e63-8412-4df119ee8468
 topic_type:
 - apiref
-ms.openlocfilehash: f40030a2034057e83de51a21655a686f30b9ee88
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e7125d923fb1d3757bb4ca53f5a7db806b241dd9
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137456"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781527"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception メソッド
 例外ハンドラーの検索が開始されたことをデバッガーに通知します。  
@@ -55,9 +55,9 @@ HRESULT Exception (
  からこの例外コールバックの種類を指定する Cordebugexceptioncallback Type 列挙体の値。  
   
  `dwFlags`  
- から例外に関する追加情報を指定する[Cordebugexceptionflags](../../../../docs/framework/unmanaged-api/debugging/cordebugexceptionflags-enumeration.md)列挙値  
+ から例外に関する追加情報を指定する[Cordebugexceptionflags](cordebugexceptionflags-enumeration.md)列挙値  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `Exception` コールバックは、例外処理プロセスの検索フェーズ中にさまざまなポイントで呼び出されます。 つまり、例外のアンワインド中に複数回呼び出すことができます。  
   
  処理されている例外は、`pThread` パラメーターによって参照される、のスレッドオブジェクトから取得できます。  
@@ -71,7 +71,7 @@ HRESULT Exception (
 |DEBUG_EXCEPTION_CATCH_HANDLER_FOUND|Catch ハンドラーを格納しているフレーム。|Catch ハンドラーの先頭の MSIL (Microsoft 中間言語) オフセット。|  
 |DEBUG_EXCEPTION_UNHANDLED|NULL|シンボル.|  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -82,5 +82,5 @@ HRESULT Exception (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugManagedCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+- [ICorDebugManagedCallback2 インターフェイス](icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

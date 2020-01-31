@@ -2,12 +2,12 @@
 title: 機械学習のタスク
 description: ML.NET でサポートされる機械学習のさまざまなタスクと、それらに関連するタスクについて説明します。
 ms.date: 12/23/2019
-ms.openlocfilehash: badb096ab3e7fbd575d8594b4fbd0e2ebaf63820
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739627"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745104"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET での機械学習のタスク
 
@@ -85,6 +85,7 @@ ms.locfileid: "75739627"
 * <xref:Microsoft.ML.Trainers.NaiveBayesMulticlassTrainer>
 * <xref:Microsoft.ML.Trainers.OneVersusAllTrainer>
 * <xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer>
+* <xref:Microsoft.ML.Vision.ImageClassificationTrainer>
 
 ### <a name="multiclass-classification-inputs-and-outputs"></a>多クラス分類の入力と出力
 
@@ -219,3 +220,13 @@ ms.locfileid: "75739627"
 次のアルゴリズムを使ってレコメンデーション モデルをトレーニングすることができます。
 
 * <xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer>
+
+## <a name="forecasting"></a>予測
+
+予測タスクでは過去の時系列データを使用し、将来の行動を予測します。 予測に適したシナリオには、気象予測、季節別の売上予測、予防保守管理などがあります。
+
+### <a name="forecasting-trainers"></a>予測トレーナー
+
+次のアルゴリズムを使って予測モデルをトレーニングすることができます。
+
+<xref:Microsoft.ML.TimeSeriesCatalog.ForecastBySsa*>

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d079131b-685b-4869-95be-826b88d28bd2
 topic_type:
 - apiref
-ms.openlocfilehash: 88a007654646ba42ebcaf1b42e002282a1040c7f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 54ef1cab27a39de39b39996729be6b8160570745
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134064"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788969"
 ---
 # <a name="icordebugsetmanagedhandler-method"></a>ICorDebug::SetManagedHandler メソッド
 マネージイベントのイベントハンドラーオブジェクトを指定します。  
@@ -35,14 +35,14 @@ HRESULT SetManagedHandler (
   
 ## <a name="parameters"></a>パラメーター  
  `pCallback`  
- からイベントハンドラーオブジェクトである、ツール[コールバック](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)オブジェクトへのポインター。  
+ からイベントハンドラーオブジェクトである、ツール[コールバック](icordebugmanagedcallback-interface.md)オブジェクトへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `SetManagedHandler` は、作成時に呼び出す必要があります。  
   
- `ICorDebugManagedCallback` の実装に、デバッグ中のアプリケーションのデバッグイベントを処理するための十分なインターフェイスが含まれていない場合、`SetManagedHandler` は E_NOINTERFACE の HRESULT を返します。  
+ `ICorDebugManagedCallback` の実装に、デバッグ対象のアプリケーションのデバッグイベントを処理するための十分なインターフェイスが含まれていない場合、`SetManagedHandler` は E_NOINTERFACE の HRESULT を返します。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -53,4 +53,4 @@ HRESULT SetManagedHandler (
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)

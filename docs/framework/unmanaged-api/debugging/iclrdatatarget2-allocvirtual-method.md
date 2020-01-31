@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e3226230-964b-47fb-9f53-d6fdbeda1e9e
 topic_type:
 - apiref
-ms.openlocfilehash: 7640f7fafd0bf52a302ac0da1e5df39b5da22d68
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 51c06a7f8ea22fc73236131954781d8755274041
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091153"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789085"
 ---
 # <a name="iclrdatatarget2allocvirtual-method"></a>ICLRDataTarget2::AllocVirtual メソッド
 このターゲットプロセスのアドレス空間にメモリを割り当てるために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
@@ -53,12 +53,12 @@ HRESULT AllocVirtual(
  `virt`  
  入出力割り当てられたメモリの実際の開始アドレスを指定する `CLRDATA_ADDRESS` 値へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `AllocVirtual` メソッドは、Win32 `VirtualAlloc` 関数の論理ラッパーとして機能します。  
   
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  
@@ -69,5 +69,5 @@ HRESULT AllocVirtual(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRDataTarget2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-interface.md)
-- [FreeVirtual メソッド](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget2-freevirtual-method.md)
+- [ICLRDataTarget2 インターフェイス](iclrdatatarget2-interface.md)
+- [FreeVirtual メソッド](iclrdatatarget2-freevirtual-method.md)

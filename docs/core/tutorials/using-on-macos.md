@@ -2,12 +2,12 @@
 title: 'チュートリアル: macOS での Visual Studio Code を使用した .NET Core ソリューションの作成'
 description: このドキュメントでは、Visual Studio Code を使用して .NET Core ソリューションを作成する手順とワークフローを説明します。
 ms.date: 12/19/2019
-ms.openlocfilehash: 4dc44a0aa155dca3c106a7da68cf100ef644b58b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715301"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741547"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>チュートリアル: macOS での Visual Studio Code を使用した .NET Core ソリューションの作成
 
@@ -28,7 +28,7 @@ Visual Studio Code C# 拡張機能をインストールするには、Visual Stu
 
 このチュートリアルでは 3 つのプロジェクト (ライブラリ プロジェクト、そのライブラリ プロジェクトのテスト、およびライブラリを使用するコンソール アプリケーション) を作成します。 GitHub の dotnet/samples レポジトリで、この記事の[ソースを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)することができます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
-Visual Studio Code を開始します。 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (バッククォートまたはアクサン グラーブ) キーを押すか、メニューから **[表示] > [ターミナル]** の順に選択し、Visual Studio Code で埋め込みターミナルを開きます。 Visual Studio Code の外部で作業を行う場合は、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (Ma または Linux の場合は **[ターミナルで開く]** ) を使用して外部シェルを開くこともできます。
+Visual Studio Code を開始します。 <kbd>Ctrl</kbd><kbd>\`</kbd> (バッククォートまたはアクサン グラーブ) キーを押すか、メニューから **[表示]** 、 **[ターミナル]** の順に選択し、Visual Studio Code で埋め込みターミナルを開きます。 Visual Studio Code の外部で作業を行う場合は、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (macOS または Linux の場合は **[ターミナルで開く]** ) を使用して外部シェルを開くこともできます。
 
 1 つ以上の .NET Core プロジェクトのコンテナーとして機能する、ソリューション ファイルの作成を開始します。 ターミナル内で、[`dotnet new`](../tools/dotnet-new.md) コマンドを実行し、*golden* という名前の新しいフォルダー内に、新しいソリューション *golden.sln* を作成します。
 
@@ -142,7 +142,8 @@ namespace TestApp
     public class LibraryTests
     {
         [Fact]
-        public void TestThing() {
+        public void TestThing()
+        {
             Assert.NotEqual(42, new Thing().Get(19, 23));
         }
     }
@@ -211,7 +212,7 @@ dotnet run -p app/app.csproj
 
 `Main` メソッドの `WriteLine` ステートメントにブレークポイントを設定します。 そのためには、カーソルが `WriteLine` 行にある状態で <kbd>Fn</kbd>+<kbd>F9</kbd> キーを押すか、ブレークポイントを設定する行の左余白でマウスをクリックします。 コード行の横の余白に赤い丸が表示されます。 ブレークポイントに達した場合、ブレークポイント行が実行される*前*にコードの実行が停止します。
 
-Visual Studio Code ツール バーで [デバッグ] アイコンを選択するか、メニュー バーから **[表示] > [デバッグ]** の順に選択するか、あるいはキーボード ショートカットの <kbd>Command</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd> を使用して、デバッガー タブを開きます。
+Visual Studio Code ツール バーでデバッグ アイコンを選択するか、メニュー バーから **[表示]** 、 **[デバッグ]** の順に選択するか、あるいはキーボード ショートカットの <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd> を使用して、デバッガー タブを開きます。
 
 ![Visual Studio Code デバッガー](./media/using-on-macos/visual-studio-code-debugger.png)
 

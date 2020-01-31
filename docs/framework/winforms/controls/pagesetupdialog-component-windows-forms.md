@@ -19,12 +19,12 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 94626ff5d0d8625433f950528d65919023c0f853
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: HT
+ms.openlocfilehash: 59c5599aa5d36e61b89e1a67ac3064d2c8358206
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744325"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868071"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog コンポーネント (Windows フォーム)
 Windows フォーム <xref:System.Windows.Forms.PageSetupDialog> コンポーネントは、Windows ベースのアプリケーションで印刷するページの詳細を設定するための構成済みダイアログボックスです。 ユーザーが独自のダイアログボックスを構成する代わりにページ設定を設定するための簡単なソリューションとして、Windows ベースのアプリケーション内で使用します。 ユーザーが罫線と余白の調整、ヘッダーとフッター、縦と横の向きを設定できるようにすることができます。 Windows の標準のダイアログ ボックスを使用して、ユーザーがすぐに慣れる基本的な機能を持つアプリケーションを作成します。  
@@ -45,7 +45,5 @@ Windows フォーム <xref:System.Windows.Forms.PageSetupDialog> コンポーネ
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
  [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)  
- ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。  
-  
- [Windows フォーム ダイアログ ボックスの重要コード](https://go.microsoft.com/fwlink/?LinkID=102575)  
- Windows フォーム ダイアログ ボックスのコントロールとコンポーネント、基本的な機能を実行するために必要なコードについて説明します。 (MSDN オンライン ライブラリの技術記事)
+ ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。
+ 

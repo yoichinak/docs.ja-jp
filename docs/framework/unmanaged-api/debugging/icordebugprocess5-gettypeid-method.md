@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 47dbaea4-8857-462e-93ba-fff880fc9e50
 topic_type:
 - apiref
-ms.openlocfilehash: 6c159780b9019127d166e8437ea4ed214284011f
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9153503fc114b0e4052265fca7c9399510d687ef
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121264"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792321"
 ---
 # <a name="icordebugprocess5gettypeid-method"></a>ICorDebugProcess5::GetTypeID メソッド
-オブジェクトのアドレスを[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)識別子に変換します。  
+オブジェクトのアドレスを[COR_TYPEID](cor-typeid-structure.md)識別子に変換します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,11 +41,11 @@ HRESULT GetTypeID(
  からオブジェクトのアドレス。  
   
  `pId`  
- オブジェクトを識別する[COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)値へのポインター。  
+ オブジェクトを識別する[COR_TYPEID](cor-typeid-structure.md)値へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -56,5 +56,5 @@ HRESULT GetTypeID(
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugProcess5 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugProcess5 インターフェイス](icordebugprocess5-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

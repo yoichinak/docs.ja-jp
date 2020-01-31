@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 86d98f39-52e6-4c61-a625-9760f695ff12
 topic_type:
 - apiref
-ms.openlocfilehash: 33b72c8d089e5b335069fe465987086dfa1243bc
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15ce195af0c0e8f8777f6e5d02043e17e32308da
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445174"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866651"
 ---
 # <a name="icorprofilercallbackassemblyloadfinished-method"></a>ICorProfilerCallback::AssemblyLoadFinished メソッド
 アセンブリの読み込みが完了したことをプロファイラーに通知します。  
@@ -33,13 +33,16 @@ HRESULT AssemblyLoadFinished(
     [in] HRESULT    hrStatus);  
 ```  
   
-## <a name="parameters"></a>パラメーター  
- `assemblyId`  
- から読み込まれたアセンブリを識別します。  
-  
- `hrStatus`  
- からアセンブリの読み込みが正常に終了したかどうかを示す HRESULT。  
-  
+## <a name="parameters"></a>パラメーター
+
+- `assemblyId`
+
+  の \[] は、読み込まれたアセンブリを識別します。
+
+- `hrStatus`
+
+  \[] アセンブリの読み込みが正常に終了したかどうかを示す HRESULT。
+
 ## <a name="remarks"></a>コメント  
  `assemblyId` の値は、`AssemblyLoadFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
   
@@ -54,6 +57,6 @@ HRESULT AssemblyLoadFinished(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
