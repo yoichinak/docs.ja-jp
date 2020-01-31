@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : Visual C# による Windows フォーム コントロールからの継承'
+title: コントロールから継承する
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], custom controls
@@ -11,16 +11,16 @@ ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: c54733a340b1855b3fc7b90ff2b5178fad8c5303
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 713ccf97a73ce9684b9124a121369f22751861d0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460597"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740140"
 ---
 # <a name="walkthrough-inherit-from-a-windows-forms-control-with-c"></a>チュートリアル: Windows フォームコントロールから C\# を継承する
 
-ビジュアルC#を使用すると、*継承*によって強力なカスタムコントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォーム <xref:System.Windows.Forms.Button> コントロールから機能を継承し、`ButtonValue`というカスタムプロパティを公開します。
+でC#は、*継承*によって強力なカスタムコントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォーム <xref:System.Windows.Forms.Button> コントロールから機能を継承し、`ButtonValue`というカスタムプロパティを公開します。
 
 ## <a name="create-the-project"></a>プロジェクトの作成
 
@@ -55,7 +55,7 @@ ms.locfileid: "73460597"
 
 1. **ソリューション エクスプローラー**で、 **[ValueButton.cs]** を右クリックし、ショートカット メニューの **[コードの表示]** をクリックします。
 
-2. `class` ステートメントを見つけます。 `{` の直後に次のコードを入力します。
+2. `class` ステートメントを探します。 `{` の直後に次のコードを入力します。
 
     ```csharp
     // Creates the private variable that will store the value of your
@@ -144,4 +144,4 @@ ms.locfileid: "73460597"
 ## <a name="see-also"></a>関連項目
 
 - [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [チュートリアル : Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [チュートリアル: Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

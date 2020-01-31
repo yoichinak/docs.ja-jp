@@ -2,18 +2,18 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
 ms.date: 06/04/2018
-ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117502"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734066"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet` - .NET のソース コードとバイナリを管理するためのツール。
 
@@ -107,7 +107,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* ファイルへのパス。
 
-*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
+*runtimeconfig.json* ファイルは、ランタイム設定を含む構成ファイルです。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
 
 `-v|--verbosity <LEVEL>`
 
@@ -157,7 +157,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* ファイルへのパス。
 
-*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
+*runtimeconfig.json* ファイルは、ランタイム設定を含む構成ファイルです。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
 
 `-v|--verbosity <LEVEL>`
 
@@ -199,7 +199,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 
 *runtimeconfig.json* ファイルへのパス。
 
-*runtimeconfig.json* ファイルは、ランタイム構成設定が含まれる構成ファイルです。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
+*runtimeconfig.json* ファイルは、ランタイム設定を含む構成ファイルです。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
 
 `-v|--verbosity <LEVEL>`
 
@@ -399,3 +399,4 @@ dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagno
 ## <a name="see-also"></a>関連項目
 
 - [ランタイム構成ファイル](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [.NET Core ランタイム構成設定](../run-time-config/index.md)

@@ -1,5 +1,5 @@
 ---
-title: XAML 名前空間および WPF XAML の名前空間の割り当て
+title: XAML 名前空間と名前空間のマッピング
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: 5cce8ff04dbf163aba95346447f0557da14197da
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 85f35c29cdd1d9e4ea9776b756245a75af58e912
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976775"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741830"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML 名前空間および WPF XAML の名前空間の割り当て
 このトピックでは、WPF XAML ファイルのルートタグでよく見られる2つの XAML 名前空間マッピングの存在と目的について詳しく説明します。 また、独自のコードで定義されている要素、または別のアセンブリ内に定義されている要素を使用するために、同様のマッピングを生成する方法についても説明します。  
@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>アセンブリ内の XML 名前空間への CLR 名前空間のマッピング  
  WPF では、複数の CLR 名前空間を1つの XAML 名前空間にマップするために XAML プロセッサによって使用される CLR 属性を定義します。 この属性 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>は、アセンブリを生成するソースコードのアセンブリレベルに配置されます。 WPF アセンブリソースコードでは、この属性を使用して、<xref:System.Windows> や <xref:System.Windows.Controls>などのさまざまな共通名前空間を `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 名前空間にマップします。  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> は、XML/XAML 名前空間名と CLR 名前空間名の2つのパラメーターを受け取ります。 複数の CLR 名前空間を同じ XML 名前空間にマップするために、複数の <xref:System.Windows.Markup.XmlnsDefinitionAttribute> を存在させることができます。 これらの名前空間のメンバーは、マップされた後、部分クラスの分離コードページで適切な `using` ステートメントを指定することにより、必要に応じて完全修飾なしで参照することもできます。 詳細については、「<xref:System.Windows.Markup.XmlnsDefinitionAttribute>」を参照してください。  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute> は、XML/XAML 名前空間名と CLR 名前空間名の2つのパラメーターを受け取ります。 複数の CLR 名前空間を同じ XML 名前空間にマップするために、複数の <xref:System.Windows.Markup.XmlnsDefinitionAttribute> を存在させることができます。 これらの名前空間のメンバーは、マップされた後、部分クラスの分離コードページで適切な `using` ステートメントを指定することにより、必要に応じて完全修飾なしで参照することもできます。 詳細については、「<xref:System.Windows.Markup.XmlnsDefinitionAttribute>」をご覧ください。  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>デザイナーの名前空間と XAML テンプレートからのその他のプレフィックス  
  WPF XAML 用の開発環境やデザインツールで作業している場合は、xaml マークアップ内に他の定義済みの XAML 名前空間/プレフィックスがあることがわかります。  

@@ -3,12 +3,12 @@ title: サービス メッシュ通信インフラストラクチャ
 description: サービスメッシュテクノロジがクラウドネイティブマイクロサービス通信を効率化するしくみについて説明します
 author: robvet
 ms.date: 09/10/2019
-ms.openlocfilehash: a9192bf9f5827d05b2453c796c72e11782f9f911
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 66bc69580cc56efe725683c16a047aeb07e7e840
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "73841283"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76780928"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>サービス メッシュ通信インフラストラクチャ
 
@@ -36,7 +36,7 @@ ms.locfileid: "73841283"
 
 6章では、アーキテクチャと使用可能なオープンソースの実装に関する議論など、サービスメッシュテクノロジについて詳しく説明します。
 
-## <a name="summary"></a>概要
+## <a name="summary"></a>要約
 
 この章では、クラウドネイティブの通信パターンについて説明しました。 まず、フロントエンドクライアントがバックエンドマイクロサービスと通信する方法について説明します。 その過程で、API ゲートウェイのプラットフォームとリアルタイム通信について説明します。 次に、マイクロサービスが他のバックエンドサービスと通信する方法について見ていきます。 サービス間の同期 HTTP 通信と非同期メッセージングの両方を検討しました。 GRPC は、クラウドネイティブ環境における今後のテクノロジです。 最後に、マイクロサービスの通信を効率化することができる、サービスメッシュを持つ、急速に進化する新しいテクノロジが導入されました。
 
@@ -74,4 +74,4 @@ ms.locfileid: "73841283"
 
 >[!div class="step-by-step"]
 >[前へ](rest-grpc.md)
->[次へ](distributed-data.md)
+>[次へ](Database-per-microservice.md)

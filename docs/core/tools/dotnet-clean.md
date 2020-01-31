@@ -2,29 +2,29 @@
 title: dotnet clean コマンド
 description: dotnet clean コマンドは現在のディレクトリを消去します。
 ms.date: 06/26/2019
-ms.openlocfilehash: 982232833b460b4ea4181acebee74dcef54d3131
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 736c0bba5d156e919534f1ad811641e815b3ffac
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117746"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734253"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-**このトピックの対象: ✓** .NET Core 1.x SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet clean` - プロジェクトの出力を消去します。
 
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
     [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```

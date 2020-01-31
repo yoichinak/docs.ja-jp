@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e86fcc72-388d-4009-ab21-8f9c3323e9a3
 topic_type:
 - apiref
-ms.openlocfilehash: 86b2815c6f95c674c49bba7455e8497192bd8bac
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 12d4e63480f03bfad613f30362ddaeaf12b57a88
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73125153"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791047"
 ---
 # <a name="icordebugvariablehomegetargumentindex-method"></a>いい変数 Home:: GetArgumentIndex メソッド
 
@@ -43,16 +43,16 @@ HRESULT GetArgumentIndex(
 
 メソッドは、次の値を返します。
 
-|[値]|説明|
+|Value|説明|
 |-----------|-----------------|
 |`S_OK`|メソッド呼び出しによって有効な引数インデックスが返されました。|
-|`E_FAIL`|現在の[ページ](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)は、ローカル変数を表します。|
+|`E_FAIL`|現在の[ページ](icordebugvariablehome-interface.md)は、ローカル変数を表します。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 引数インデックスは、この引数のメタデータを取得するために使用できます。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
@@ -64,4 +64,4 @@ HRESULT GetArgumentIndex(
 
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugVariableHome インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+- [ICorDebugVariableHome インターフェイス](icordebugvariablehome-interface.md)

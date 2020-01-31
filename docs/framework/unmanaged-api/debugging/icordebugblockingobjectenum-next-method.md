@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 0121753f-ebea-48d0-aeb2-ed7fda76dc60
 topic_type:
 - apiref
-ms.openlocfilehash: 3a1c4a931a61186c4737aada47ceb861e7848e7b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: c25f26bb0f1f34e3799bab4bec7e697d393cccb4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122831"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784513"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next メソッド
-現在の位置から開始して、指定した数の[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)オブジェクトを列挙から取得します。  
+現在の位置から開始して、指定した数の[CorDebugBlockingObject](cordebugblockingobject-structure.md)オブジェクトを列挙から取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ HRESULT Next([in] ULONG  celt,
  から取得するオブジェクトの数。  
   
  `values`  
- 入出力[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)オブジェクトへのポインターの配列。  
+ 入出力[CorDebugBlockingObject](cordebugblockingobject-structure.md)オブジェクトへのポインターの配列。  
   
  `pceltFetched`  
  入出力取得されたオブジェクトの数へのポインター。  
@@ -49,18 +49,18 @@ HRESULT Next([in] ULONG  celt,
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|メソッドは正常に完了しました。|  
+|S_OK|メソッドは正常に終了しました。|  
 |S_FALSE|`pceltFetched` は `celt` と一致しません。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このメソッドは、一般的な COM 列挙子と同様に機能します。  
   
  入力配列の値は `celt`以上である必要があります。 配列には、列挙体の次の `celt` 値、または `celt` 未満の値が残っている場合は、残りのすべての値が格納されます。 このメソッドから制御が戻るときに、取得された値の数が `pceltFetched` に格納されます。 `values` に無効なポインターが含まれている場合、または `celt`より小さいバッファーを指している場合、または `pceltFetched` が無効なポインターである場合、結果は未定義になります。  
   
 > [!NOTE]
-> [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)構造体を解放する必要はありませんが、その中の "ICorDebugValue" インターフェイスは解放する必要があります。  
+> [CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体を解放する必要はありませんが、その中の "ICorDebugValue" インターフェイスは解放する必要があります。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -71,6 +71,6 @@ HRESULT Next([in] ULONG  celt,
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugDataTarget インターフェイス](icordebugdatatarget-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

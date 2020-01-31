@@ -2,12 +2,12 @@
 title: WCF Web HTTP プログラミング モデルの概要
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 4862ae0e5151177e74da0f94d06b5b39205ed4c0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8a4b4ff6c0482ed8a09fe30b7d03afc1f84db581
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283289"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76739905"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP プログラミング モデルの概要
 Windows Communication Foundation (WCF) WEB HTTP プログラミングモデルは、WCF を使用した WEB HTTP サービスの構築に必要な基本的な要素を提供します。 WCF WEB HTTP サービスは、Web ブラウザーなどの幅広いクライアントからアクセスできるように設計されており、次のような固有の要件があります。  
@@ -43,15 +43,15 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミングモデル�
   
  このテンプレートでは、中かっこによる表記 ("{segment}") で、リテラル値ではなく、変数のセグメントを示しています。  
   
- .NET Framework は <xref:System.UriTemplate> という URI テンプレートでの作業に使用できる新しい API を提供します。 `UriTemplates` では、次の操作を実行できます。  
+ .NET Framework は <xref:System.UriTemplate> という URI テンプレートでの作業に使用できる新しい API を提供します。 `UriTemplates` を使用すると、次のことができます。  
   
 - パラメーターのセットを使用していずれかの `Bind` メソッドを呼び出すと、テンプレートに一致する*完全に終了*した URI を生成できます。 つまり、URI テンプレート内の変数がすべて、実際の値に置き換えられます。  
   
 - 候補の URI を使用して `Match`() を呼び出すことができます。このメソッドは、テンプレートを使用して候補の URI を構成要素に分解し、テンプレート内の変数に従って分類される URI のさまざまな要素を収めたディクショナリを返します。  
   
-- `Bind`() と `Match`() は逆であり、`Match`(`Bind`(x)) を呼び出して、開始したのと同じ環境に戻すことができます。  
+- `Bind`() と `Match`() は逆のもので、`Match`( `Bind`( x ) ) を呼び出し、最初と同じ環境に戻ることができます。  
   
- 包含されたテンプレートを個別に扱うことができるデータ構造内の一連の <xref:System.UriTemplate> オブジェクトを追跡することが必要になる場合がよくあります (特に、URI に基づいて要求をサービス操作にディスパッチすることが必要なサーバー上)。 <xref:System.UriTemplateTable> は一連の URI テンプレートを表し、一連のテンプレートと候補 URI に対して最適な一致を選択します。 これは、必要に応じて使用できるように、特定のネットワークスタック (WCF を含む) には関連していません。  
+ 包含されたテンプレートを個別に扱うことができるデータ構造内の一連の <xref:System.UriTemplate> オブジェクトを追跡することが必要になる場合がよくあります (特に、URI に基づいて要求をサービス操作にディスパッチすることが必要なサーバー上)。 <xref:System.UriTemplateTable> は、URI テンプレートのセットを表し、テンプレート セットと候補の URI が与えられると、最適の組み合わせを選択します。 これは、必要に応じて使用できるように、特定のネットワークスタック (WCF を含む) には関連していません。  
   
  WCF サービス モデルは、<xref:System.UriTemplate> および <xref:System.UriTemplateTable> を使用して、<xref:System.UriTemplate> によって記述された URI セットにサービス操作を関連付けます。 サービス操作は、<xref:System.UriTemplate> または <xref:System.ServiceModel.Web.WebGetAttribute> によって <xref:System.ServiceModel.Web.WebInvokeAttribute> に関連付けられます。 <xref:System.UriTemplate> と <xref:System.UriTemplateTable>の詳細については、「 [UriTemplate と UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md) 」を参照してください。  
   
@@ -80,7 +80,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- 既定では POST に <xref:System.ServiceModel.Web.WebInvokeAttribute> ますが、他の動詞にも使用できます。  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> は、既定で POST に設定されていますが、他の動詞にも使用できます。  
   
 ```csharp
 [ServiceContract]  
@@ -101,7 +101,7 @@ interface ICustomer
 ## <a name="uritemplate-query-string-parameters-and-urls"></a>UriTemplate クエリ文字列パラメーターと URL  
  サービス操作に関連付けられた URL を入力することによって、Web ブラウザーから Web スタイルのサービスを呼び出すことができます。 このようなサービス操作は、文字列形式で指定する必要があるクエリ文字列パラメーターを URL 内で受け取ることができます。 次の表に、URL 内で渡すことができる型と、使用される形式を示します。  
   
-|型|[形式]|  
+|の型|形式|  
 |----------|------------|  
 |<xref:System.Byte>|0 - 255|  
 |<xref:System.SByte>|-128 - 127|  
@@ -138,7 +138,8 @@ interface ICustomer
  .NET Framework 3.5 では、JSON データ (AJAX) と配信フィード (ATOM と RSS を含む) がサポートされています。 これらの機能の詳細については、「wcf [WEB HTTP 書式設定](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[Wcf 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)」および「 [AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)」を参照してください。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP プログラミング モデルとセキュリティ  
- WCF WEB HTTP プログラミングモデルでは WS-* プロトコルがサポートされていないため、WCF WEB HTTP サービスをセキュリティで保護する唯一の方法は、SSL を使用して HTTPS 経由でサービスを公開することです。 IIS 7.0 での SSL の設定の詳細については、「 [iis で ssl を実装する方法](https://go.microsoft.com/fwlink/?LinkId=131613)」を参照してください。  
+
+WCF WEB HTTP プログラミングモデルでは WS-* プロトコルがサポートされていないため、WCF WEB HTTP サービスをセキュリティで保護する唯一の方法は、SSL を使用して HTTPS 経由でサービスを公開することです。 IIS 7.0 での SSL の設定の詳細については、「 [iis で ssl を実装する方法](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis)」を参照してください。
   
 ## <a name="troubleshooting-the-wcf-web-http-programming-model"></a>WCF WEB HTTP プログラミング モデルのトラブルシューティング  
  <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> を使用してチャネルを作成するために WCF WEB HTTP サービスを呼び出すと、異なる <xref:System.ServiceModel.Description.WebHttpBehavior> が <xref:System.ServiceModel.EndpointAddress> に渡されるとしても、<xref:System.ServiceModel.EndpointAddress> は構成ファイルに設定されている <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> を使用します。  

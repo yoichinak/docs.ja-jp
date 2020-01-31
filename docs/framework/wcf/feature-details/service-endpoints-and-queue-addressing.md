@@ -2,12 +2,12 @@
 title: サービス エンドポイントとキューのアドレス指定
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 6bdd3b0966f85ff456e0e2ed0b6da773046201dc
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: ec932e83a2b37330f54be545a45358a5ab055423
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837988"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744620"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>サービス エンドポイントとキューのアドレス指定
 ここでは、キューから読み取るサービスをクライアントがアドレス指定するしくみと、サービス エンドポイントがキューにマップされるしくみについて説明します。 次の図は、従来の Windows Communication Foundation (WCF) のキューに置かれたアプリケーションの展開を示しています。  
@@ -21,7 +21,7 @@ ms.locfileid: "74837988"
   
  パス名は "FormatNames" にマップされ、ルーティングやキューマネージャー転送プロトコルなど、アドレスの追加の側面を決定します。 キュー マネージャーは、ネイティブの MSMQ プロトコルと SOAP リライアブル メッセージ プロトコル (SRMP: SOAP Reliable Messaging Protocol) の 2 つの転送プロトコルをサポートしています。  
   
- MSMQ のパスと形式名の詳細については、「[メッセージキューについ](https://go.microsoft.com/fwlink/?LinkId=94837)て」を参照してください。  
+ MSMQ のパスと形式名の詳細については、「[メッセージキューについ](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))て」を参照してください。  
   
 ## <a name="netmsmqbinding-and-service-addressing"></a>NetMsmqBinding とサービスのアドレス指定  
  メッセージをサービスにアドレス指定するときは、通信に使用するトランスポートに基づいて URI のスキームが選択されます。 WCF の各トランスポートには、一意のスキームがあります。 このスキームには、通信に使用されるトランスポートの性質を反映する必要があります。 たとえば、net.tcp、net.pipe、HTTP などがあります。  
@@ -32,7 +32,7 @@ ms.locfileid: "74837988"
   
  net.msmq: // \<*host-name*> / [private/] \<*queue-name*>  
   
- ここで、  
+ それぞれの文字について以下に説明します。  
   
 - \<*ホスト名*> は、ターゲットキューをホストするコンピューターの名前です。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "74837988"
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
- MSMQ 形式名は、「 [About Message Queuing](https://go.microsoft.com/fwlink/?LinkId=94837)」で msmq によって指定された形式です。  
+ MSMQ 形式名は、「 [About Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))」で msmq によって指定された形式です。  
   
  `MsmqIntegrationBinding` を使用してキューからメッセージを受信する場合、使用できるのは、直接形式名とパブリック/プライベート形式名 (ActiveDirectory 統合が必要です) のみです。 ただし、直接形式名を使用することをお勧めします。 たとえば、Windows Vista では、他の形式名を使用するとエラーが発生します。これは、システムがサブキューを開こうとして、直接形式名でのみ開くことができるためです。  
   
@@ -104,6 +104,6 @@ ms.locfileid: "74837988"
   
  `MsmqIntegrationBinding` では、net.msmq:// によるアドレス指定を使用できないことに注意してください。 `MsmqIntegrationBinding` は自由形式の MSMQ 形式名のアドレス指定をサポートしているため、このバインディングを使用する WCF サービスを使用して、MSMQ のマルチキャストおよび配布リスト機能を使用できます。 ただし、`CustomDeadLetterQueue` を使用するときに、`MsmqIntegrationBinding` を指定する場合を除きます。 これは、`NetMsmqBinding` を使用して指定するのと同様に、net.msmq:// という形式にする必要があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [キューに置かれたアプリケーションの Web ホスト](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

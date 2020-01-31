@@ -2,16 +2,16 @@
 title: dotnet-counters - .NET Core
 description: dotnet-counter コマンドライン ツールをインストールして使用する方法について説明します。
 ms.date: 10/14/2019
-ms.openlocfilehash: 10af451a8b1b4d8b27da1490b99b19a4359c860f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740802"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737705"
 ---
 # <a name="dotnet-counters"></a>dotnet-カウンター
 
-**この記事の対象: ✓** .NET Core 3.0 SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 3.0 SDK 以降のバージョン
 
 ## <a name="install-dotnet-counters"></a>dotnet-counters のインストール
 

@@ -2,22 +2,22 @@
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 10/14/2019
-ms.openlocfilehash: b85ef06aa445e4708487deed9ec6bfeffeab3657
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73454219"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734318"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**この記事の対象: ✓** .NET Core 1.x SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet build` - プロジェクトとそのすべての依存関係をビルドします。
 
@@ -25,7 +25,7 @@ ms.locfileid: "73454219"
 
 ```dotnetcli
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--force]
-    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo] 
+    [--interactive] [--no-dependencies] [--no-incremental] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [-v|--verbosity] [--version-suffix]
 
 dotnet build [-h|--help]

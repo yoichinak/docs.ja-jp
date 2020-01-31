@@ -2,16 +2,16 @@
 title: dotnet sln コマンド
 description: dotnet-sln コマンドは、ソリューション ファイルでプロジェクトを追加、削除、一覧表示するための便利なオプションを提供します。
 ms.date: 10/29/2019
-ms.openlocfilehash: c0badfeba1438a795106691a86c09a8b1675829b
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: e344deaae0867202a79a3c38df48a2be8d4d7d13
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937248"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733075"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
-**この記事の対象: ✓** .NET Core 1.x SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
 
 <!-- todo: uncomment when all CLI commands are reviewed
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
@@ -122,7 +122,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 ```dotnetcli
 dotnet sln list [-h|--help]
 ```
-  
+
 #### <a name="arguments"></a>引数
 
 - **`SOLUTION_FILE`**

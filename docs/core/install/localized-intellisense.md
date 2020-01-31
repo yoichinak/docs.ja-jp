@@ -1,15 +1,13 @@
 ---
 title: ローカライズされた IntelliSense ファイルをインストールする
 description: Visual Studio で .NET Core プロジェクトのローカライズされた IntelliSense ファイルを使用するように開発用マシンを設定する方法について説明します。
-author: mairaw
-ms.author: mairaw
-ms.date: 12/18/2019
-ms.openlocfilehash: 98d75544ab853e75c175dd2919991b250cfaa3b0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.date: 01/23/2020
+ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75436674"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733657"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>.NET Core のローカライズされた IntelliSense ファイルをインストールする方法
 
@@ -34,9 +32,10 @@ ms.locfileid: "75436674"
 
 1. .zip ファイルの内容を抽出します。
 
-1. .NET Core のインストール フォルダーに移動します。 既定では *%ProgramFiles%\dotnet\packs* の下にあります。
+1. .NET Core の IntelliSense フォルダーに移動します。
 
-   - IntelliSense をインストールする SDK を選択し、関連付けられているパスに移動します。 次のオプションがあります。
+   1. .NET Core のインストール フォルダーに移動します。 既定では *%ProgramFiles%\dotnet\packs* の下にあります。
+   1. IntelliSense をインストールする SDK を選択し、関連付けられているパスに移動します。 次のオプションがあります。
 
       | SDK の種類        | パス                               |
       | --------------- | ---------------------------------- |
@@ -44,9 +43,9 @@ ms.locfileid: "75436674"
       | Windows デスクトップ | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
    
-   - ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、*3.1.0* です。
-   - *ref* フォルダーを開きます。
-   - モニカー フォルダーを開きます。 たとえば、*netcoreapp3.1* です。
+   1. ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、*3.1.0* です。
+   1. *ref* フォルダーを開きます。
+   1. モニカー フォルダーを開きます。 たとえば、*netcoreapp3.1* です。
 
    したがって、移動先の完全なパスは *C:\Program Files\dotnet\packs\Microsoft.NETCore.App.Ref\3.1.0\ref\netcoreapp3.1* のようになります。
 
@@ -76,7 +75,7 @@ Visual Studio で IntelliSense に別の言語を使用するには、適切な�
 設定時に目的の言語パックをインストールしなかった場合は、次のようにして Visual Studio を更新して言語パックをインストールします。
 
 > [!IMPORTANT]
-> Visual Studio をインストール、更新、または変更するには、管理アクセス許可を持つアカウントでログオンする必要があります。 詳細については、「[ユーザー アクセス許可と Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio)」を参照してください。
+> Visual Studio をインストール、更新、または変更するには、管理者のアクセス許可を持つアカウントでログオンする必要があります。 詳細については、「[ユーザー アクセス許可と Visual Studio](/visualstudio/ide/user-permissions-and-visual-studio)」を参照してください。
 
 1. コンピューター上で Visual Studio インストーラーを見つけます。
 
@@ -103,7 +102,7 @@ Visual Studio で IntelliSense に別の言語を使用するには、適切な�
 
    ![Visual Studio の [言語パック] タブ](./media/localized-intellisense/vs-modify-language-packs.png)
 
-1. **[変更]** を選択します。 更新プログラムが開始します。
+1. **[変更]** を選択します。 更新が開始されます。
 
 ### <a name="modify-language-settings-in-visual-studio"></a>Visual Studio の言語設定を変更する
 
@@ -113,9 +112,9 @@ Visual Studio で IntelliSense に別の言語を使用するには、適切な�
 
 1. スタート ウィンドウで、 **[コードなしで続行]** を選択します。
 
-1. メイン メニューで、 **[ツール]**  >  **[オプション]** を選択します。 [オプション] ダイアログが表示されます。
+1. メニュー バーで、 **[ツール]**  >  **[オプション]** の順に選択します。 [オプション] ダイアログが表示されます。
 
-1. **[環境]** フォルダーで、 **[国際対応の設定]** を選択します。
+1. **[環境]** ノードで、 **[国際対応の設定]** を選択します。
 
 1. **[言語]** ドロップダウンで目的の言語を選択します。 **[OK]** をクリックします。 
 

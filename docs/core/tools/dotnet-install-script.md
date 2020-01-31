@@ -1,63 +1,71 @@
 ---
 title: dotnet-install スクリプト
-description: .NET Core CLI ツールと共有ランタイムをインストールする dotnet-install スクリプトについて説明します。
-ms.date: 01/16/2019
-ms.openlocfilehash: 765141ae92645db448ac7c9c3448a79b895faac6
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
+ms.date: 01/23/2020
+ms.openlocfilehash: 169991ac4cd24ccab90634ff265c3ae5b603f8e9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964343"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76734207"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
 ## <a name="name"></a>名前
 
-`dotnet-install.ps1` | `dotnet-install.sh` - .NET Core CLI ツールと共有ランタイムをインストールするために使うスクリプトです。
+`dotnet-install.ps1` | `dotnet-install.sh` - .NET Core SDK と共有ランタイムをインストールするために使うスクリプトです。
 
 ## <a name="synopsis"></a>構文
 
 Windows の場合:
 
-`dotnet-install.ps1 [-Channel] [-Version] [-InstallDir] [-Architecture] [-SharedRuntime] [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential] [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]`
+```powershell
+dotnet-install.ps1 [-Channel] [-Version] [-JSonFile] [-InstallDir] [-Architecture]
+    [-Runtime] [-DryRun] [-NoPath] [-Verbose] [-AzureFeed] [-UncachedFeed] [-NoCdn] [-FeedCredential]
+    [-ProxyAddress] [-ProxyUseDefaultCredentials] [-SkipNonVersionedFiles] [-Help]
+```
 
-macOS/Linux の場合:
+Linux または macOS の場合:
 
-`dotnet-install.sh [--channel] [--version] [--install-dir] [--architecture] [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential] [--runtime-id] [--skip-non-versioned-files] [--help]`
+```bash
+dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--architecture]
+    [--runtime] [--dry-run] [--no-path] [--verbose] [--azure-feed] [--uncached-feed] [--no-cdn] [--feed-credential]
+    [--runtime-id] [--skip-non-versioned-files] [--help]
+```
 
 ## <a name="description"></a>説明
 
 `dotnet-install` スクリプトは、.NET Core CLI ツールや共有ランタイムが含まれる .NET Core SDK の非管理者インストールを実行するために使用されます。
 
-[.NET Core のメインの Web サイト](https://dot.net)でホストされる安定したバージョンを使用することをお勧めします。 スクリプトへの直接パスは次のとおりです。
+安定したバージョンのスクリプトを使用することをお勧めします。
 
-- <https://dot.net/v1/dotnet-install.sh> (Bash、UNIX)
-- <https://dot.net/v1/dotnet-install.ps1> (PowerShell、Windows)
+- Bash (Linux、macOS): <https://dot.net/v1/dotnet-install.sh>
+- PowerShell (Windows): <https://dot.net/v1/dotnet-install.ps1>
 
 これらのスクリプトの主な有用性は、オートメーションのシナリオと管理者以外のインストールにおいてです。 2 つのスクリプトがあります。1 つは Windows 上で動作する PowerShell スクリプトで、もう 1 つは Linux/macOS 上で動作する bash スクリプトです。 スクリプトの動作は両方とも同じです。 bash スクリプトは PowerShell のスイッチも読み取るので、Linux/macOS システムのスクリプトで PowerShell のスイッチを使うことができます。
 
-インストール スクリプトは CLI ビルド ドロップから ZIP/tarball ファイルをダウンロードし、既定の場所または `-InstallDir|--install-dir` で指定された場所へのインストールに進みます。 既定では、インストール スクリプトは SDK をダウンロードしてインストールします。 共有ランタイムの取得だけを行いたい場合は、`--runtime` 引数を指定します。
+インストール スクリプトは CLI ビルド ドロップから ZIP/tarball ファイルをダウンロードし、既定の場所または `-InstallDir|--install-dir` で指定された場所へのインストールに進みます。 既定では、インストール スクリプトは SDK をダウンロードしてインストールします。 共有ランタイムの取得だけを行いたい場合は、`-Runtime|--runtime` 引数を指定します。
 
-既定では、スクリプトはインストールの場所を現在のセッションの $PATH に追加します。 `--no-path` 引数を指定することによってこの既定の動作をオーバーライドします。
+既定では、スクリプトはインストールの場所を現在のセッションの $PATH に追加します。 `-NoPath|--no-path` 引数を指定することによってこの既定の動作をオーバーライドします。
 
-スクリプトを実行する前に、必要な[依存関係](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)をすべてインストールします。
+スクリプトを実行する前に、必要な[依存関係](../install/dependencies.md)をすべてインストールします。
 
-`--version` 引数を使用して、特定のバージョンをインストールすることができます。 バージョンは 3 つの部分からなるバージョン (1.0.0-13232 など) を指定する必要があります。 指定しない場合は、`latest` バージョンが使用されます。
+`-Version|--version` 引数を使用して、特定のバージョンをインストールすることができます。 バージョンは 3 つの部分からなるバージョン (`2.1.0` など) を指定する必要があります。 指定しない場合は、`latest` バージョンが使用されます。
 
 ## <a name="options"></a>オプション
 
-- **`-Channel <CHANNEL>`**
+- **`-Channel|--channel <CHANNEL>`**
 
   インストールのソース チャネルを指定します。 次の値を指定できます。
 
   - `Current` - 最新リリース。
   - `LTS` - 長期的なサポート チャネル (サポートされている最新リリース)。
-  - 特定のリリースを表す X.Y 形式の 2 部構成のバージョン (たとえば、`2.0` または `1.0`)。
-  - ブランチ名。 たとえば、`release/2.0.0`、`release/2.0.0-preview2`、`master` (夜間リリース用)
+  - 特定のリリースを表す X.Y 形式の 2 部構成のバージョン (たとえば、`2.1` または `3.0`)。
+  - ブランチ名: たとえば、`release/3.1.1xx` または `master` (夜間リリース用) プレビュー チャネルからバージョンをインストールするには、このオプションを使用します。 「[インストーラーとバイナリ](https://github.com/dotnet/core-sdk#installers-and-binaries)」に記載されているチャネルの名前を使用します。
 
   既定値は `LTS` です。 .NET のサポート チャネルの詳細については、「[.NET Support Policy](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」(.NET のサポート ポリシー) ページを参照してください。
 
-- **`-Version <VERSION>`**
+- **`-Version|--version <VERSION>`**
 
   特定のビルド バージョンを表します。 次の値を指定できます。
 
@@ -67,55 +75,64 @@ macOS/Linux の場合:
 
   指定しない場合、`-Version` の既定値は `latest` です。
 
-- **`-InstallDir <DIRECTORY>`**
+- **`-JSonFile|--jsonfile <JSONFILE>`**
+
+  SDK バージョンを決定するために使用される [global.json](global-json.md) ファイルへのパスを指定します。 *global.json* ファイルには `sdk:version` の値が必要です。
+
+- **`-InstallDir|--install-dir <DIRECTORY>`**
 
   インストール パスを指定します。 存在しない場合は、ディレクトリが作成されます。 既定値は *%LocalAppData%\Microsoft\dotnet*です。 バイナリは、このディレクトリに直接配置されます。
 
-- **`-Architecture <ARCHITECTURE>`**
+- **`-Architecture|--architecture <ARCHITECTURE>`**
 
   インストールする .NET Core バイナリのアーキテクチャです。 指定できる値は、`<auto>`、`amd64`、`x64`、`x86`、`arm64`、および `arm` です。 既定値は `<auto>` です。これは実行中の OS アーキテクチャを示します。
 
-- **`-SharedRuntime`**
+- **`-SharedRuntime|--shared-runtime`**
 
   > [!NOTE]
-  > このパラメーターは非推奨であり、今後のバージョンのスクリプトでは削除される可能性があります。 別の方法として、`Runtime` オプションを使用することをお勧めします。
+  > このパラメーターは非推奨であり、今後のバージョンのスクリプトでは削除される可能性があります。 別の方法として、`-Runtime|--runtime` オプションを使用することをお勧めします。
 
-  SDK 全体ではなく共有ランタイム ビットのみがインストールされます。 これは、`-Runtime dotnet` を指定することと同じです。
+  SDK 全体ではなく共有ランタイム ビットのみがインストールされます。 このオプションは、`-Runtime|--runtime dotnet` を指定することと同じです。
 
-- **`-Runtime <RUNTIME>`**
+- **`-Runtime|--runtime <RUNTIME>`**
 
   SDK 全体ではなく共有ランタイムのみがインストールされます。 次の値を指定できます。
 
   - `dotnet` - `Microsoft.NETCore.App` 共有ランタイム。
   - `aspnetcore` - `Microsoft.AspNetCore.App` 共有ランタイム。
+  - `windowsdesktop` - `Microsoft.WindowsDesktop.App` 共有ランタイム。
 
-- **`-DryRun`**
+- **`-DryRun|--dry-run`**
 
   設定すると、スクリプトでインストールは実行されません。 代わりに、現在要求されているバージョンの .NET Core CLI を一貫してインストールするために使用するコマンド ラインが表示されます。 たとえば、バージョン `latest` を指定すると、そのバージョンのリンクが表示されるので、ビルド スクリプトで確定的にこのコマンドを使用できます。 また、自分でインストールまたはダウンロードしたい場合、バイナリの場所も表示されます。
 
-- **`-NoPath`**
+- **`-NoPath|--no-path`**
 
   設定すると、インストール フォルダーは現在のセッションのパスにはエクスポートされません。 既定では、スクリプトによって PATH が変更されます。その結果、インストール後すぐに CLI ツールを使用できるようになります。
 
-- **`-Verbose`**
+- **`-Verbose|--verbose`**
 
   診断情報を表示します。
 
-- **`-AzureFeed`**
+- **`-AzureFeed|--azure-feed`**
 
   Azure フィードの URL をインストーラーに指定します。 この値は変更しないことをお勧めします。 既定値は `https://dotnetcli.azureedge.net/dotnet` です。
 
-- **`-UncachedFeed`**
+- **`-UncachedFeed|--uncached-feed`**
 
   このインストーラーで使用されている、キャッシュされていないフィードの URL を変更することを許可します。 この値は変更しないことをお勧めします。
 
-- **`-NoCdn`**
+- **`-NoCdn|--no-cdn`**
 
   [Azure Content Delivery Network (CDN)](https://docs.microsoft.com/azure/cdn/cdn-overview) からのダウンロードを無効にし、キャッシュされていないフィードを直接使用します。
 
-- **`-FeedCredential`**
+- **`-FeedCredential|--feed-credential`**
 
   Azure フィードに付加するクエリ文字列として使用されます。 非公開の BLOB ストレージ アカウントを使用するように URL を変更することができます。
+
+- **`--runtime-id`**
+
+  ツールのインストール先の[ランタイム識別子](../rid-catalog.md)を指定します。 Portable Linux には `linux-x64` を使用します。 (Linux または macOS でのみ有効)
 
 - **`-ProxyAddress`**
 
@@ -125,11 +142,11 @@ macOS/Linux の場合:
 
   設定すると、プロキシ アドレスの使用時に、インストーラーでは現在のユーザーの資格情報が使用されます。 (Windows でのみ有効)
 
-- **`-SkipNonVersionedFiles`**
+- **`-SkipNonVersionedFiles|--skip-non-versioned-files`**
 
   *dotnet.exe* など、バージョン管理されていないファイルが既に存在する場合は、そのインストールをスキップします。
 
-- **`-Help`**
+- **`-Help|--help`**
 
   スクリプトのヘルプを出力します。
 
@@ -149,32 +166,32 @@ macOS/Linux の場合:
   ./dotnet-install.sh --channel LTS
   ```
 
-- 2\.0 チャネルから、最新バージョンを指定した場所にインストールします。
+- 3\.1 チャネルから、最新バージョンを指定した場所にインストールします。
 
   Windows の場合:
 
   ```powershell
-  ./dotnet-install.ps1 -Channel 2.0 -InstallDir C:\cli
+  ./dotnet-install.ps1 -Channel 3.1 -InstallDir C:\cli
   ```
 
   macOS/Linux の場合:
 
   ```bash
-  ./dotnet-install.sh --channel 2.0 --install-dir ~/cli
+  ./dotnet-install.sh --channel 3.1 --install-dir ~/cli
   ```
 
-- 共有ランタイムの 1.1.0 バージョンをインストールします。
+- 共有ランタイムの 3.0.0 バージョンをインストールします。
 
   Windows の場合:
 
   ```powershell
-  ./dotnet-install.ps1 -Runtime dotnet -Version 1.1.0
+  ./dotnet-install.ps1 -Runtime dotnet -Version 3.0.0
   ```
 
   macOS/Linux の場合:
 
   ```bash
-  ./dotnet-install.sh --runtime dotnet --version 1.1.0
+  ./dotnet-install.sh --runtime dotnet --version 3.0.0
   ```
 
 - スクリプトを入手し、会社のプロキシの背後に 2.1.2 バージョンをインストールします (Windows のみ)。

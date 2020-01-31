@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成'
+title: Visual Studio のデザイン時機能を利用するコントロールを作成する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,12 +13,12 @@ ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 64f637b232cf21701185e7b87d86f63fdece5127
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7166b4203c54ab31f1d929c85cf1e6481ff120f8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459527"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744079"
 ---
 # <a name="walkthrough-create-a-control-that-takes-advantage-of-design-time-features"></a>チュートリアル: デザイン時機能を活用したコントロールの作成
 
@@ -36,7 +36,7 @@ ms.locfileid: "73459527"
 
 完全なコードリストについては、「[方法: デザイン時機能を利用する Windows フォームコントロールを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))する」を参照してください。
 
-## <a name="prerequisites"></a>必要条件
+## <a name="prerequisites"></a>Prerequisites
 
 このチュートリアルを完了するには、Visual Studio が必要です。
 
@@ -120,13 +120,13 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
 
 3. `MarqueeControl` クラスを継承するように `DemoMarqueeControl` の宣言を変更します。
 
-4. プロジェクトをビルドします。
+4. プロジェクトをビルドする。
 
 5. Windows フォームデザイナーで Form1 を開きます。
 
 6. **ツールボックス**の **[MarqueeControlTest Components]** タブを見つけて開きます。 **[ツールボックス]** から `DemoMarqueeControl` をフォームにドラッグします。
 
-7. プロジェクトをビルドします。
+7. プロジェクトをビルドする。
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>デザイン時デバッグ用にプロジェクトを設定する
 
@@ -430,7 +430,7 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>デザイナー動詞をカスタムデザイナーに追加する
 
-デザイナー動詞は、イベントハンドラーにリンクされたメニューコマンドです。 デザイナー動詞は、デザイン時にコンポーネントのショートカットメニューに追加されます。 詳細については、「<xref:System.ComponentModel.Design.DesignerVerb>」を参照してください。
+デザイナー動詞は、イベントハンドラーにリンクされたメニューコマンドです。 デザイナー動詞は、デザイン時にコンポーネントのショートカットメニューに追加されます。 詳細については、「 <xref:System.ComponentModel.Design.DesignerVerb>」を参照してください。
 
 デザイナーに2つのデザイナー動詞を追加します。**テストを実行**し、**テストを停止**します。 これらの動詞を使用すると、デザイン時に `MarqueeControl` の実行時の動作を表示できます。 これらの動詞は `MarqueeControlRootDesigner`に追加されます。
 
@@ -594,7 +594,7 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
 
 13. `MarqueeControlTest` プロジェクトをスタートアッププロジェクトとして設定し、実行します。 `DemoMarqueeControl`を表示するフォームが表示されます。 **[開始]** ボタンを選択して、アニメーションを開始します。 テキストが点滅し、ライトが境界内を移動していることを確認します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 `MarqueeControlLibrary` は、カスタムコントロールおよび関連するデザイナーの単純な実装を示しています。 このサンプルは、いくつかの方法でより高度なものにすることができます。
 

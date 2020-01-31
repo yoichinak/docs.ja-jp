@@ -3,12 +3,12 @@ title: グローバリゼーションの構成設定
 description: .NET Core アプリのグローバリゼーションの側面 (たとえば、日本語の日付の解析方法など) を構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 76cd4a0a0f93f4df3ff243c6024b952576e8e6cb
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 3764d0eb714c094b44ae843a1e626073ff8d82e4
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740546"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733457"
 ---
 # <a name="run-time-configuration-options-for-globalization"></a>グローバリゼーションのランタイム構成オプション
 
@@ -21,7 +21,34 @@ ms.locfileid: "75740546"
 | | 設定の名前 | 値 |
 | - | - | - |
 | **runtimeconfig.json** | `System.Globalization.Invariant` | `false` - カルチャ データにアクセスする<br/>`true` - インバリアント モードで実行する |
+| **MSBuild のプロパティ** | `InvariantGlobalization` | `false` - カルチャ データにアクセスする<br/>`true` - インバリアント モードで実行する |
 | **環境変数** | `DOTNET_SYSTEM_GLOBALIZATION_INVARIANT` | `0` - カルチャ データにアクセスする<br/>`1` - インバリアント モードで実行する |
+
+### <a name="examples"></a>使用例
+
+*runtimeconfig.json* ファイル:
+
+```json
+{
+   "runtimeOptions": {
+      "configProperties": {
+         "System.Globalization.Invariant": true
+      }
+   }
+}
+```
+
+プロジェクト ファイル:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+
+</Project>
+```
 
 ## <a name="era-year-ranges"></a>年号の範囲
 

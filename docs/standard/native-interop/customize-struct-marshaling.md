@@ -5,12 +5,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: e69746e03cefa2444d4c34b582730824ff357858
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706349"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741533"
 ---
 # <a name="customizing-structure-marshaling"></a>構造体のマーシャリングのカスタマイズ
 
@@ -20,11 +20,11 @@ ms.locfileid: "75706349"
 
 .NET には <xref:System.Runtime.InteropServices.StructLayoutAttribute?displayProperty=nameWithType> 属性と <xref:System.Runtime.InteropServices.LayoutKind?displayProperty=nameWithType> 列挙型が用意されており、フィールドをメモリに配置する方法をカスタマイズできます。 次のガイダンスを使用すると、一般的な問題を回避できます。
 
-**✔️ 推奨**: 可能な限り `LayoutKind.Sequential` を使用するようにします。
+✔️は、可能な限り `LayoutKind.Sequential` の使用を検討してください。
 
-**✔️ 実行**: ネイティブ構造体に共用体などの明示的なレイアウトもある場合は、マーシャリング時に `LayoutKind.Explicit` のみを使用します。
+✔️は、ネイティブ構造体に共用体などの明示的なレイアウトがある場合にのみ、マーシャリングで `LayoutKind.Explicit` を使用します。
 
-.NET Core 3.0 より前のランタイムを対象にする必要がある場合は、Windows 以外のプラットフォームで構造体をマーシャリングするときに `LayoutKind.Explicit` を使用し**ないように❌** します。 3\.0 より前の .NET Core ランタイムでは、Intel または AMD 64 ビットの Windows 以外のシステムでは、明示的な構造を値でネイティブ関数に渡すことがサポートされていません。 ただし、ランタイムはすべてのプラットフォーム上で明示的な構造体の参照渡しをサポートしています。
+.NET Core 3.0 より前のランタイムを対象にする必要がある場合は、Windows 以外のプラットフォームで構造体をマーシャリングするときに `LayoutKind.Explicit` を使用しないように ❌ します。 3\.0 より前の .NET Core ランタイムでは、Intel または AMD 64 ビットの Windows 以外のシステムでは、明示的な構造を値でネイティブ関数に渡すことがサポートされていません。 ただし、ランタイムはすべてのプラットフォーム上で明示的な構造体の参照渡しをサポートしています。
 
 ## <a name="customizing-boolean-field-marshaling"></a>ブール値フィールドのマーシャリングのカスタマイズ
 

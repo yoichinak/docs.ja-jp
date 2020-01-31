@@ -2,12 +2,12 @@
 title: eShopOnContainers を Azure サービスにマッピングする
 description: Azure Kubernetes Service、API Gateway、Azure Service Bus などの Azure サービスへの eShopOnContainers のマッピング。
 ms.date: 06/30/2019
-ms.openlocfilehash: 67430da18c0a12c694426214de33e85c2113e454
-ms.sourcegitcommit: 992f80328b51b165051c42ff5330788627abe973
+ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "73841193"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781212"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers を Azure サービスにマッピングする
 
@@ -44,7 +44,7 @@ APIM を使用すると、アプリケーションは複数の異なるサービ
 
 アプリケーションが AKS を使用している場合のもう1つのオプションは、AKS クラスター内のポッドとして Azure ゲートウェイの受信コントローラーをデプロイすることです。 これにより、クラスターを Azure アプリケーションゲートウェイと統合し、ゲートウェイがトラフィックを AKS ポッドに負荷分散できるようになります。 [詳細については、AKS 用の Azure ゲートウェイの受信コントローラーに関するページを参照して](https://github.com/Azure/application-gateway-kubernetes-ingress)ください。
 
-## <a name="data"></a>Data
+## <a name="data"></a>データ
 
 EShopOnContainers で使用されるさまざまなバックエンドサービスには、異なる記憶域要件があります。 複数のマイクロサービスで SQL Server データベースを使用します。 バスケットマイクロサービスは、永続化のために Redis キャッシュを活用します。 場所マイクロサービスでは、データに MongoDB API が必要です。 Azure では、これらの各データ形式をサポートしています。
 
@@ -54,7 +54,7 @@ EShopOnContainers アプリケーションでは、ユーザーの現在の買�
 
 場所マイクロサービスは、その永続化に MongoDB NoSQL データベースを使用します。 開発時には、データベースを独自のコンテナーに配置できます。運用環境では、サービスは[Azure Cosmos DB の MongoDB 用 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)を活用できます。 Azure Cosmos DB の利点の1つは、SQL API や、MongoDB、Cassandra、NoSQL、Azure Table Storage などの一般的な Api を含む、複数の異なる通信プロトコルを利用できることです。 Azure Cosmos DB は、完全に管理されたグローバルに分散されたデータベースをサービスとして提供し、それを使用するサービスのニーズに合わせて拡張することができます。
 
-クラウドネイティブアプリケーションの分散データの詳細については、[第5章](distributed-data.md)を参照してください。
+クラウドネイティブアプリケーションの分散データの詳細については、[第5章](database-per-microservice.md)を参照してください。
 
 ## <a name="event-bus"></a>イベントバス
 

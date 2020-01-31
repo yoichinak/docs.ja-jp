@@ -2,16 +2,16 @@
 title: dotnet-trace ツール - .NET Core
 description: dotnet-trace コマンドライン ツールのインストールおよび使用。
 ms.date: 11/21/2019
-ms.openlocfilehash: 64c931db5a18659707e832aaca910cfbbd6823c0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b19b159636fbf57fa2d461b398fcf9234aab491c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714432"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76737644"
 ---
 # <a name="dotnet-trace-performance-analysis-utility"></a>dotnet-trace パフォーマンス分析ユーティリティ
 
-**この記事の対象:** ✓ .NET Core 3.0 SDK 以降のバージョン
+**この記事の対象:** ✔️ .NET Core 3.0 SDK 以降のバージョン
 
 ## <a name="install-dotnet-trace"></a>dotnet-trace をインストールする
 
@@ -38,7 +38,7 @@ dotnet-trace [-h, --help] [--version] <command>
 
 ## <a name="options"></a>オプション
 
-- **`--version`**  
+- **`--version`**
 
   dotnet-counters ユーティリティのバージョンを表示します。
 

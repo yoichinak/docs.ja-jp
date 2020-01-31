@@ -3,12 +3,12 @@ title: ガベージ コレクター構成の設定
 description: ガベージ コレクターでの .NET Core アプリ用のメモリの管理方法を構成するための、実行時設定について学習します。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 24e5c47de781e7eed5f76d2c551cac2dce1e8f05
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900097"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733525"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>ガベージ コレクションの実行時構成オプション
 
@@ -38,10 +38,13 @@ ms.locfileid: "75900097"
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Server` | `false` - ワークステーション<br/>`true` - サーバー | .NET Core 1.0 |
+| **MSBuild のプロパティ** | `ServerGarbageCollection` | `false` - ワークステーション<br/>`true` - サーバー | .NET Core 1.0 |
 | **環境変数** | `COMPlus_gcServer` | `0` - ワークステーション<br/>`1` - サーバー | .NET Core 1.0 |
 | **.NET Framework 用の app.config** | [GCServer](../../framework/configure-apps/file-schema/runtime/gcserver-element.md) | `false` - ワークステーション<br/>`true` - サーバー |  |
 
-例:
+### <a name="examples"></a>使用例
+
+*runtimeconfig.json* ファイル:
 
 ```json
 {
@@ -53,6 +56,18 @@ ms.locfileid: "75900097"
 }
 ```
 
+プロジェクト ファイル:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+
+</Project>
+```
+
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - バックグラウンド (同時実行) ガベージ コレクションを有効にするかどうかを構成します。
@@ -62,10 +77,13 @@ ms.locfileid: "75900097"
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
 | **runtimeconfig.json** | `System.GC.Concurrent` | `true` - バックグラウンド GC<br/>`false` -非同時実行 GC | .NET Core 1.0 |
+| **MSBuild のプロパティ** | `ConcurrentGarbageCollection` | `true` - バックグラウンド GC<br/>`false` -非同時実行 GC | .NET Core 1.0 |
 | **環境変数** | `COMPlus_gcConcurrent` | `true` - バックグラウンド GC<br/>`false` -非同時実行 GC | .NET Core 1.0 |
 | **.NET Framework 用の app.config** | [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) | `true` - バックグラウンド GC<br/>`false` -非同時実行 GC |  |
 
-例:
+### <a name="examples"></a>使用例
+
+*runtimeconfig.json* ファイル:
 
 ```json
 {
@@ -75,6 +93,18 @@ ms.locfileid: "75900097"
       }
    }
 }
+```
+
+プロジェクト ファイル:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="manage-resource-usage"></a>リソース使用量を管理する
@@ -261,10 +291,13 @@ ms.locfileid: "75900097"
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
-| **runtimeconfig.json** | `System.GC.RetainVM` | `false` -OS に解放する<br/>`true` - スタンバイに配置する| .NET Core 1.0 |
+| **runtimeconfig.json** | `System.GC.RetainVM` | `false` -OS に解放する<br/>`true` - スタンバイに配置する | .NET Core 1.0 |
+| **MSBuild のプロパティ** | `RetainVMGarbageCollection` | `false` -OS に解放する<br/>`true` - スタンバイに配置する | .NET Core 1.0 |
 | **環境変数** | `COMPlus_GCRetainVM` | `0` -OS に解放する<br/>`1` - スタンバイに配置する | .NET Core 1.0 |
 
-例:
+### <a name="examples"></a>使用例
+
+*runtimeconfig.json* ファイル:
 
 ```json
 {
@@ -274,6 +307,18 @@ ms.locfileid: "75900097"
       }
    }
 }
+```
+
+プロジェクト ファイル:
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+
+</Project>
 ```
 
 ## <a name="large-pages"></a>大きいページ

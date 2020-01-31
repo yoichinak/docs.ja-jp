@@ -1,19 +1,20 @@
 ---
-title: WPF アプリケーションの配置 (WPF)
+title: アプリをデプロイする
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: d67919ba38c2e306672966ddc2f62140ef92b638
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 9d4b7dd0464960441410d8ff2a196f0912354e5f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636303"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741947"
 ---
-# <a name="deploying-a-wpf-application-wpf"></a>WPF アプリケーションの配置 (WPF)
-Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 Windows と .NET Framework には、いくつかの展開テクノロジが含まれています。 WPF アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって異なります。 このトピックでは、各配置テクノロジの概要と、各 WPF アプリケーションの種類の配置要件と組み合わせて使用する方法について説明します。  
+# <a name="deploy-a-wpf-application"></a>WPF アプリケーションの配置
+
+Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 Windows と .NET Framework には、いくつかの展開テクノロジが含まれています。 WPF アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって異なります。 このトピックでは、各配置テクノロジの概要と、各 WPF アプリケーションの種類の配置要件と組み合わせて使用する方法について説明します。
 
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>配置テクノロジ  
