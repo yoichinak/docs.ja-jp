@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 068ddcab5cfb7bfb5f37a1858820195a5a05269f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 6399d64746db158ba0569eaf0137127603973513
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964576"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919342"
 ---
 # <a name="configure-ws-atomic-transaction-support"></a>WS-ATOMICTRANSACTION のサポートを構成する
 
@@ -25,7 +25,7 @@ WS-AT 構成ユーティリティ (wsatConfig.exe) は、WS-AT 設定の構成�
 
 コマンドラインツールの詳細については、「ws-atomictransaction[構成ユーティリティ (wsatConfig .exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)」を参照してください。
 
-[!INCLUDE[wxp](../../../../includes/wxp-md.md)] または Windows Server 2003 を実行している場合、MMC スナップインにアクセスするには、コントロールパネル、管理ツール、 **[コンポーネントサービス]** の順に移動し、 **[マイコンピューター]** を右クリックして、 **[プロパティ]** を選択します。 この場所では、Microsoft 分散トランザクション コーディネーター (MSDTC) を構成することもできます。 構成に使用できるオプションは、 **[ws-at]** タブの下にグループ化されています。Windows Vista または Windows Server 2008 を実行している場合は、 **[スタート]** ボタンをクリックして **[検索]** ボックスに `dcomcnfg.exe` を入力すると、MMC スナップインが表示されます。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。
+Windows XP または Windows Server 2003 を実行している場合、MMC スナップインにアクセスするには、コントロールパネル、管理ツール、**コンポーネントサービス** の順に移動し、**マイコンピューター**を右クリックして、**プロパティ** を選択します。 この場所では、Microsoft 分散トランザクション コーディネーター (MSDTC) を構成することもできます。 構成に使用できるオプションは、 **[ws-at]** タブの下にグループ化されています。Windows Vista または Windows Server 2008 を実行している場合は、 **[スタート]** ボタンをクリックして **[検索]** ボックスに `dcomcnfg.exe` を入力すると、MMC スナップインが表示されます。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。
 
 スナップインの詳細については、「ws-atomictransaction[構成 MMC スナップ](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)イン」を参照してください。
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 6505cc027b2983fd61ae53ca7ae43319024c74f7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: e1c3e3d7697bf9a85cf0ab7df35a4755939d1df0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964713"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921408"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
 Windows Communication Foundation (WCF) を使用して作成されたアプリケーションは、監査機能を使用してセキュリティイベント (成功、失敗、またはその両方) をログに記録できます。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) を使用して作成されたアプリ�
   
  セキュリティ ログへの書き込みを行うには、`SeAuditPrivilege` が必要です。 既定では、この権限は Local System アカウントと Network Service アカウントだけに与えられています。 セキュリティ ログの `read` および `delete` 機能を管理するには、`SeSecurityPrivilege` が必要です。 既定では、この権限は管理者だけに与えられています。  
   
- これに対し、アプリケーション ログは認証済みユーザーが読み書きできます。 既定では、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] は、監査イベントをアプリケーション ログに書き込みます。 すべての認証済みユーザーに表示される個人情報をログに格納することもできます。  
+ これに対し、アプリケーション ログは認証済みユーザーが読み書きできます。 既定では、Windows XP は監査イベントをアプリケーションログに書き込みます。 すべての認証済みユーザーに表示される個人情報をログに格納することもできます。  
   
 ## <a name="suppressing-audit-failures"></a>監査エラーの抑制  
  監査中に監査エラーを表示しないように指定するオプションも用意されています。 既定では、監査エラーはアプリケーションに影響を与えません。 ただし、必要に応じて、このオプションを `false` に設定し、例外をスローすることもできます。  
@@ -78,7 +78,7 @@ Windows Communication Foundation (WCF) を使用して作成されたアプリ�
 ## <a name="security-considerations"></a>セキュリティの考慮事項  
  監査が有効になっていることが悪意のあるユーザーに知られた場合、そのユーザーは監査エントリの書き込みにつながる無効なメッセージを送信する可能性があります。 このような方法で監査ログに書き込みが行われると、監査システムに障害が発生します。 これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。  
   
- [!INCLUDE[wxp](../../../../includes/wxp-md.md)] のアプリケーション ログに書き込まれた監査イベントは、すべての認証済みユーザーに表示されます。  
+ Windows XP 上のアプリケーションログに書き込まれる監査イベントは、認証されたユーザーに表示されます。  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>アプリケーションまたはセキュリティ イベント ログの選択  
  アプリケーション イベント ログとセキュリティ イベント ログのどちらにログを記録するかを選択するには、次の表の情報を参考にしてください。  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) を使用して作成されたアプリ�
   
 |System|アプリケーション ログ|セキュリティ ログ|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 以降|サポートされています|サポートなし|  
+|Windows XP SP2 以降|サポートされています|サポートなし|  
 |Windows Server 2003 SP1 および Windows Vista|サポートされています|スレッド コンテキストが `SeAuditPrivilege` を持つ必要があります。|  
   
 #### <a name="other-factors"></a>その他の要素  

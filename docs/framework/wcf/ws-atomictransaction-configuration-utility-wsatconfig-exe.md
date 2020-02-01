@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: c57d0266102c5ad79657e875cb0107a2c11cabca
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3b37c271afa20de120682d093e40c0f30f4730de
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337607"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921332"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)
 WS-AtomicTransaction 構成ユーティリティは、基本的な WS-AtomicTransaction サポート設定を構成するために使用されます。  
@@ -18,14 +18,14 @@ WS-AtomicTransaction 構成ユーティリティは、基本的な WS-AtomicTran
 wsatConfig [Options]  
 ```  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このコマンド ライン ツールを使用して、基本的な WS-AtomicTransaction 設定をローカル マシンでのみ構成できます。 ローカルコンピューターとリモートコンピューターの両方で設定を構成する必要がある場合は、「 [ws-atomictransaction のサポートを構成](./feature-details/configuring-ws-atomic-transaction-support.md)する」の説明に従って、MMC スナップインを使用する必要があります。  
   
  コマンド ライン ツールは、Windows SDK の次のインストール場所にあります。  
   
  %SystemRoot%\Microsoft.Net\Framework\v3.0\Windows Communication Foundation\wsatConfig.exe  
   
- [!INCLUDE[wxp](../../../includes/wxp-md.md)] または Windows Server 2003 を実行している場合は、WsatConfig .exe を実行する前に更新プログラムをダウンロードする必要があります。 この更新プログラムの詳細については、「 [update for Windows Communication Foundation」 (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520)を参照してください。  
+ Windows XP または Windows Server 2003 を実行している場合は、WsatConfig .exe を実行する前に更新プログラムをダウンロードする必要があります。 この更新プログラムの詳細については、「 [update for Windows Communication Foundation」 (KB912817)](https://www.microsoft.com/download/details.aspx?id=21520)を参照してください。  
   
  次の表は、WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe) で使用できるオプションを示します。  
   

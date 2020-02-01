@@ -2,12 +2,12 @@
 title: キューに置かれたメッセージングのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: 3d2d48076fafe44687546ca27e4d8670b81ce433
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5c039c34983647884561f33645f26e4a89280248
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742669"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921267"
 ---
 # <a name="troubleshooting-queued-messaging"></a>キューに置かれたメッセージングのトラブルシューティング
 
@@ -25,7 +25,7 @@ ms.locfileid: "76742669"
 
 **Q:** <xref:System.ServiceModel.NetMsmqBinding> バインドと `MsmqIntegration` バインドを使用するには、MSMQ をアップグレードする必要がありますか。
 
-**A:** いいえ。 どちらのバインドも、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] と Windows Server 2003 の MSMQ 3.0 で動作します。 Windows Vista で MSMQ 4.0 にアップグレードすると、バインドの特定の機能が使用できるようになります。
+**A:** いいえ。 どちらのバインドも、Windows XP と Windows Server 2003 の MSMQ 3.0 で動作します。 Windows Vista で MSMQ 4.0 にアップグレードすると、バインドの特定の機能が使用できるようになります。
 
 **Q:** Msmq 4.0 では、<xref:System.ServiceModel.NetMsmqBinding> バインドと <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> バインドのどの機能を使用できますが、MSMQ 3.0 では使用できませんか。
 

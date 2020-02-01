@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9e891c6a-d960-45ea-904f-1a00e202d61a
-ms.openlocfilehash: 0be22fa1e81c85d82494bc4b93468a18f05d6423
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 48e3a080097aae2e539c238bfe33c3e107f81bf0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345556"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921146"
 ---
 # <a name="using-dead-letter-queues-to-handle-message-transfer-failures"></a>配信不能キューを使用したメッセージ転送エラー処理
 キューに置かれたメッセージは、配信に失敗する可能性があります。 配信に失敗したメッセージは、配信不能キューに記録されます。 配信の失敗は、ネットワーク エラー、キューが削除されている、キューがいっぱいになっている、認証エラー、配信が時間どおりに行われなかったなど、さまざまな理由で生じる可能性があります。  
@@ -23,7 +23,7 @@ ms.locfileid: "75345556"
   
  カスタム配信不能キューでは、同じ MSMQ サービスを共有してメッセージを送信するクライアントをそれぞれ分離できます。  
   
- Windows Server 2003 および [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では、Windows Communication Foundation (WCF) は、キューに置かれたすべてのクライアントアプリケーションに対してシステム全体の配信不能キューを提供します。 Windows Vista では、WCF は、キューに登録されたクライアントアプリケーションごとに配信不能キューを提供します。  
+ Windows Server 2003 および Windows XP では、Windows Communication Foundation (WCF) は、キューに置かれたすべてのクライアントアプリケーションに対してシステム全体の配信不能キューを提供します。 Windows Vista では、WCF は、キューに登録されたクライアントアプリケーションごとに配信不能キューを提供します。  
   
 ## <a name="specifying-use-of-the-dead-letter-queue"></a>配信不能キューの使用の指定  
  配信不能キューは、送信元アプリケーションのキュー マネージャーに存在します。 ここには、有効期限が切れたメッセージと転送または配信に失敗したメッセージが格納されます。  

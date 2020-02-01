@@ -2,12 +2,12 @@
 title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: d493aba9a3f7a51824243fe8d06441ab563b2261
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344536"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921433"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
 このサンプルでは、配信できなかったメッセージの処理方法を示します。 これは、トランザクション処理された[MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)のサンプルに基づいています。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -16,7 +16,7 @@ ms.locfileid: "75344536"
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
 
 > [!NOTE]
-> このサンプルでは、Windows Vista でのみ使用できるアプリケーション配信不能キューを示します。 このサンプルは、Windows Server 2003 と [!INCLUDE[wxp](../../../../includes/wxp-md.md)]の MSMQ 3.0 で既定のシステム全体のキューを使用するように変更できます。
+> このサンプルでは、Windows Vista でのみ使用できるアプリケーション配信不能キューを示します。 このサンプルは、Windows Server 2003 および Windows XP 上の MSMQ 3.0 の既定のシステム全体のキューを使用するように変更できます。
 
  キュー通信では、クライアントはサービスとの通信にキューを使用します。 厳密には、クライアントはメッセージをキューに送信します。 サービスは、メッセージをキューから受信します。 したがって、キューを使用する通信では、サービスとクライアントが同時に実行されていなくてもかまいません。
 

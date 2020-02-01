@@ -2,12 +2,12 @@
 title: ピア リゾルバー
 ms.date: 03/30/2017
 ms.assetid: d86d12a1-7358-450f-9727-b6afb95adb9c
-ms.openlocfilehash: 33afffcbf11d757dfd003d1fd2bc9a17a3047a69
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 3bcdeffac3673c1c464a35d8b6e089efd7394907
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74837377"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919239"
 ---
 # <a name="peer-resolvers"></a>ピア リゾルバー
 メッシュに接続するには、ピア ノードに他のノードの IP アドレスが必要です。 IP アドレスを取得するには、リゾルバー サービスにアクセスします。このサービスは、メッシュ ID を受け取り、そのメッシュ ID で登録されているノードに対応するアドレスの一覧を返します。 リゾルバーは登録されたアドレスのリストを保持します。そのリストには、メッシュ レジスタの各ノードとサービスが含まれます。  
@@ -20,7 +20,7 @@ ms.locfileid: "74837377"
  既定で、ピア チャネルは PNRP ピア リゾルバー サービスを使用して、メッシュ内のピアと近隣ノードを検出します。 PNRP が使用できない、または実現可能でない状況やプラットフォームでは、Windows Communication Foundation (WCF) によって、別のサーバーベースの探索サービス (<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>) が提供されます。 また、<xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> インターフェイスを実装するクラスを書き込むと、カスタム リゾルバー サービスを明示的に定義することもできます。  
   
 ### <a name="peer-name-resolution-protocol-pnrp"></a>PNRP (Peer Name Resolution Protocol)  
- Windows Vista の既定の競合回避モジュールである PNRP は、分散型のサーバーレスの名前リゾルバーサービスです。 PNRP は、Advanced Networking Pack をインストールすれば [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] でも使用できます。 2 つのクライアントが同じバージョンの PNRP を実行している場合、特定の条件 (途中に企業のファイアウォールが存在しないなどの条件) を満たせば、このプロトコルを使用してお互いを検索できます。 Windows Vista に付属するバージョンの PNRP は、Advanced Network Pack に含まれているバージョンより新しいものであることに注意してください。 [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 用の PNRP への更新については、Microsoft ダウンロード センターで確認してください。  
+ Windows Vista の既定の競合回避モジュールである PNRP は、分散型のサーバーレスの名前リゾルバーサービスです。 また、Windows XP SP2 では、Advanced Network Pack をインストールすることによって、PNRP を使用することもできます。 2 つのクライアントが同じバージョンの PNRP を実行している場合、特定の条件 (途中に企業のファイアウォールが存在しないなどの条件) を満たせば、このプロトコルを使用してお互いを検索できます。 Windows Vista に付属するバージョンの PNRP は、Advanced Network Pack に含まれているバージョンより新しいものであることに注意してください。 Windows XP SP2 の PNRP の更新プログラムについては、Microsoft ダウンロードセンターを確認してください。  
   
 ### <a name="custom-resolver-services"></a>カスタム リゾルバー サービス  
  PNRP サービスを利用できない場合、またはメッシュ形状を完全に制御する必要がある場合は、サーバー ベースのカスタム リゾルバー サービスを使用できます。 このサービスは、<xref:System.ServiceModel.PeerResolvers.IPeerResolverContract> インターフェイスを実装するリゾルバー クラスを記述するか、既定の受信トレイ実装 (<xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>) を使用することで、明示的に定義できます。  
@@ -37,7 +37,7 @@ ms.locfileid: "74837377"
 ## <a name="in-this-section"></a>このセクションの内容  
  [CustomPeerResolverService 内部 : クライアント登録](../../../../docs/framework/wcf/feature-details/inside-the-custompeerresolverservice-client-registrations.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ピア チャネルの概要](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [ピア チャネルのセキュリティ](../../../../docs/framework/wcf/feature-details/peer-channel-security.md)

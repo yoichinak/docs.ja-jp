@@ -2,12 +2,12 @@
 title: 有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: ff1eaec99308b06250722b290b7005ac21731570
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 389d0651438036cd23d30cf7dd866956ac8e5dae
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337645"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921204"
 ---
 # <a name="poison-message-handling"></a>有害メッセージ処理
 *有害なメッセージ*とは、アプリケーションへの配信試行の最大回数を超えたことを示すメッセージのことです。 この状況は、キュー ベースのアプリケーションがエラーによってメッセージを処理できないときに発生する可能性があります。 信頼性に対する要求を満たすために、キューに置かれたアプリケーションはトランザクションの下でメッセージを受信します。 キューに置かれたメッセージを受信したトランザクションを中止すると、メッセージはそのままキューに残り、新しいトランザクションの下で再試行されます。 トランザクションを中止させた問題が解決されなければ、受信側のアプリケーションは、配信試行回数の最大値を超えるまで同じメッセージの受信と中止を繰り返す悪循環に陥る可能性があり、その結果、有害メッセージが生じることになります。  
@@ -21,7 +21,7 @@ ms.locfileid: "75337645"
   
 - `ReceiveRetryCount`. アプリケーション キューからアプリケーションへのメッセージの配信を再試行する最大回数を示す整数値。 既定値は 5 です。 データベースの一時的なデッドロックなどの問題を即時再試行で解決する場合は、この値で十分です。  
   
-- `MaxRetryCycles`. 再試行サイクルの最大数を示す整数値。 再試行サイクルは、アプリケーション キューから再試行サブキューにメッセージを転送し、構成可能な遅延の後に再試行サブキューからアプリケーション キューにメッセージを転送して配信を再試行するプロセスで構成されます。 既定値は 2 です。 Windows Vista では、メッセージは最大で (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) 回試行されます。 `MaxRetryCycles` は、Windows Server 2003 および [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では無視されます。  
+- `MaxRetryCycles`. 再試行サイクルの最大数を示す整数値。 再試行サイクルは、アプリケーション キューから再試行サブキューにメッセージを転送し、構成可能な遅延の後に再試行サブキューからアプリケーション キューにメッセージを転送して配信を再試行するプロセスで構成されます。 既定値は 2 です。 Windows Vista では、メッセージは最大で (`ReceiveRetryCount` + 1) * (`MaxRetryCycles` + 1) 回試行されます。 `MaxRetryCycles` は、Windows Server 2003 および Windows XP では無視されます。  
   
 - `RetryCycleDelay`. 再試行サイクル間の遅延時間。 既定値は 30 分です。 `MaxRetryCycles` と `RetryCycleDelay` の組み合わせにより、問題に対処する機構が提供されます。この場合、定期的な遅延後に再試行が行われ、問題が解決されます。 たとえば、SQL Server の保留中のトランザクションのコミットでロックされた行セットが処理されます。  
   
@@ -39,12 +39,12 @@ ms.locfileid: "75337645"
   
 - ((ReceiveRetryCount + 1) * (MaxRetryCycles + 1)) (Windows Vista の場合)。  
   
-- (ReceiveRetryCount + 1) (Windows Server 2003 および [!INCLUDE[wxp](../../../../includes/wxp-md.md)])。  
+- (ReceiveRetryCount + 1) (Windows Server 2003 および Windows XP の場合)。  
   
 > [!NOTE]
 > 正常に配信されたメッセージについては、再試行は行われません。  
   
- メッセージの読み取りが試行された回数を追跡するために、Windows Vista は、中断の回数と、アプリケーションキューとサブキューの間でメッセージが移動する回数をカウントする "移動数" プロパティを保持します。 WCF チャネルはこれらを使用して、受信再試行回数と再試行サイクル数を計算します。 Windows Server 2003 および [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では、abort カウントは WCF チャネルによってメモリ内に保持され、アプリケーションが失敗した場合はリセットされます。 また、WCF チャネルは、最大256のメッセージの中止回数をメモリ内でいつでも保持できます。 257 番目のメッセージを読み取ると、最も古いメッセージの中止回数がリセットされます。  
+ メッセージの読み取りが試行された回数を追跡するために、Windows Vista は、中断の回数と、アプリケーションキューとサブキューの間でメッセージが移動する回数をカウントする "移動数" プロパティを保持します。 WCF チャネルはこれらを使用して、受信再試行回数と再試行サイクル数を計算します。 Windows Server 2003 および Windows XP では、abort カウントは WCF チャネルによってメモリ内に保持され、アプリケーションが失敗した場合はリセットされます。 また、WCF チャネルは、最大256のメッセージの中止回数をメモリ内でいつでも保持できます。 257 番目のメッセージを読み取ると、最も古いメッセージの中止回数がリセットされます。  
   
  中止回数と移動回数のプロパティは、操作コンテキストを通じてサービス操作で使用できます。 これらのプロパティにアクセスする方法を次のコード例に示します。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "75337645"
   
  アプリケーションでは、有害メッセージを有害メッセージ キューに移動し、サービスがキュー内の残りのメッセージにアクセスできるようにする、なんらかの有害メッセージ自動処理を必要とする場合があります。 エラー処理機構を使用して有害メッセージの例外をリッスンする唯一のシナリオは、<xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> の設定を <xref:System.ServiceModel.ReceiveErrorHandling.Fault> に設定した場合です。 メッセージ キュー 3.0 の有害メッセージ サンプルは、この動作を示しています。 ベスト プラクティスを含め、有害メッセージを処理するために必要な手順の概要を以下に示します。  
   
-1. 有害メッセージの設定がアプリケーションの要件を反映していることを確認します。 設定を使用する場合は、Windows Vista、Windows Server 2003、および [!INCLUDE[wxp](../../../../includes/wxp-md.md)]でのメッセージキューの機能の違いを理解しておく必要があります。  
+1. 有害メッセージの設定がアプリケーションの要件を反映していることを確認します。 設定を使用する場合は、Windows Vista、Windows Server 2003、および Windows XP でのメッセージキューの機能の違いを理解しておく必要があります。  
   
 2. 必要に応じて `IErrorHandler` を実装し、有害メッセージのエラーを処理します。 `ReceiveErrorHandling` を `Fault` に設定する場合、有害メッセージをキューから取り除いたり、外部の従属的な問題を解決したりする手動の機構が必要となります。そのため、`IErrorHandler` を `ReceiveErrorHandling` に設定するときは、次のコードに示すように `Fault` を実装するのが一般的です。  
   
@@ -95,13 +95,13 @@ ms.locfileid: "75337645"
  有害メッセージ処理は、メッセージが有害メッセージ キューに配置された時点では終了しません。 有害メッセージ キューに置かれたメッセージは、依然として読み取り、処理する必要があります。 最終有害サブキューからメッセージを読み取るときは、有害メッセージ処理設定のサブセットを使用できます。 適用できる設定は、`ReceiveRetryCount` と `ReceiveErrorHandling` です。 `ReceiveErrorHandling` は Drop、Rreject、Fault のいずれかに設定できます。 `MaxRetryCycles` が Move に設定されている場合は、`ReceiveErrorHandling` が無視され、例外がスローされます。  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003、および Windows XP の相違点  
- 既に説明したように、すべての有害メッセージ処理の設定が Windows Server 2003 および [!INCLUDE[wxp](../../../../includes/wxp-md.md)]に適用されるわけではありません。 Windows Server 2003、[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、および Windows Vista のメッセージキューの主な相違点は、有害メッセージの処理に関連しています。  
+ 前述のように、有害メッセージの処理のすべての設定が Windows Server 2003 および Windows XP に適用されるわけではありません。 Windows Server 2003、Windows XP、および Windows Vista のメッセージキューの主な相違点は、有害メッセージの処理に関連しています。  
   
-- Windows Vista のメッセージキューは、サブキューをサポートしていますが、Windows Server 2003 と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] はサブキューをサポートしていません。 サブキューは、有害メッセージ処理で使用されます。 再試行キューと有害キューは、有害メッセージ処理の設定に基づいて作成されるアプリケーション キューのサブキューです。 作成する再試行サブキューの数は、`MaxRetryCycles` で指定します。 このため、Windows Server 2003 または [!INCLUDE[wxp](../../../../includes/wxp-md.md)]で実行している場合、`MaxRetryCycles` は無視され、`ReceiveErrorHandling.Move` は許可されません。  
+- Windows Vista のメッセージキューは、サブキューをサポートします。一方、Windows Server 2003 および Windows XP では、サブキューはサポートされません。 サブキューは、有害メッセージ処理で使用されます。 再試行キューと有害キューは、有害メッセージ処理の設定に基づいて作成されるアプリケーション キューのサブキューです。 作成する再試行サブキューの数は、`MaxRetryCycles` で指定します。 このため、Windows Server 2003 または Windows XP で実行している場合、`MaxRetryCycles` は無視され、`ReceiveErrorHandling.Move` は許可されません。  
   
-- Windows Vista のメッセージキューでは否定受信確認がサポートされていますが、Windows Server 2003 と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] ではサポートされていません。 受信側キュー マネージャーから否定受信確認を受け取ると、送信側キュー マネージャーは拒否されたメッセージを配信不能キューに入れます。 そのため、Windows Server 2003 および [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では `ReceiveErrorHandling.Reject` は許可されていません。  
+- Windows Vista のメッセージキューは否定受信確認をサポートしていますが、Windows Server 2003 および Windows XP ではサポートされていません。 受信側キュー マネージャーから否定受信確認を受け取ると、送信側キュー マネージャーは拒否されたメッセージを配信不能キューに入れます。 そのため、`ReceiveErrorHandling.Reject` は、Windows Server 2003 および Windows XP では許可されていません。  
   
-- Windows Vista のメッセージキューは、メッセージの配信が試行された回数を保持するメッセージプロパティをサポートしています。 この中止回数のプロパティは、Windows Server 2003 および [!INCLUDE[wxp](../../../../includes/wxp-md.md)]では使用できません。 WCF では、中止回数がメモリ内に保持されるため、同じメッセージがファーム内の複数の WCF サービスによって読み取られる場合、このプロパティに正確な値が含まれていない可能性があります。  
+- Windows Vista のメッセージキューは、メッセージの配信が試行された回数を保持するメッセージプロパティをサポートしています。 この中止回数のプロパティは、Windows Server 2003 および Windows XP では使用できません。 WCF では、中止回数がメモリ内に保持されるため、同じメッセージがファーム内の複数の WCF サービスによって読み取られる場合、このプロパティに正確な値が含まれていない可能性があります。  
   
 ## <a name="see-also"></a>関連項目
 

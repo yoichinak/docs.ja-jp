@@ -2,12 +2,12 @@
 title: サービス ID サンプル
 ms.date: 03/30/2017
 ms.assetid: 79fa8c1c-85bb-4b67-bc67-bfaf721303f8
-ms.openlocfilehash: 375246127b6b39440360f48fc7b24bd0388a35e5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 868bd6e0ac7429224462c973c1c48132ec3860ba
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347922"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919374"
 ---
 # <a name="service-identity-sample"></a>サービス ID サンプル
 このサービス ID サンプルでは、サービスの ID を設定する方法を示します。 クライアントは、デザイン時にサービスのメタデータを使用して ID を取得し、実行時にそのサービス ID を認証することができます。 サービス ID の概念は、クライアントがサービス操作を呼び出す前にそのサービスを認証できるようにし、それによって認証されていない呼び出しからクライアントを保護することにあります。 セキュリティ保護されている接続では、サービスがクライアントの資格情報を認証した後にクライアントのアクセスを許可できますが、このサンプルではこのことを主眼とはしていません。 「サーバー認証を表示する[クライアント](../../../../docs/framework/wcf/samples/client.md)」のサンプルを参照してください。
@@ -115,7 +115,7 @@ class CustomIdentityVerifier : IdentityVerifier
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1. [!INCLUDE[wxp](../../../../includes/wxp-md.md)] または Windows Vista では、MMC スナップインツールを使用して、id ソリューションフォルダー内の Id .pfx 証明書ファイルを LocalMachine/My (Personal) 証明書ストアにインポートします。 このファイルは、パスワードで保護されています。 インポート中に、パスワードの入力を求められます。 [パスワード] ボックスに「`xyz`」と入力します。 詳細については、「[方法: MMC スナップインを使用して証明書を表示する](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。 この処理が完了したら、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで Setup.exe を実行します。これにより、クライアントで使用するために、この証明書が CurrentUser/Trusted People ストアにコピーされます。
+1. Windows XP または Windows Vista では、MMC スナップインツールを使用して、id ソリューションフォルダー内の Id .pfx 証明書ファイルを LocalMachine/My (Personal) 証明書ストアにインポートします。 このファイルは、パスワードで保護されています。 インポート中に、パスワードの入力を求められます。 [パスワード] ボックスに「`xyz`」と入力します。 詳細については、「[方法: MMC スナップインを使用して証明書を表示する](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。 この処理が完了したら、管理者特権を使用して Visual Studio の開発者コマンドプロンプトで Setup.exe を実行します。これにより、クライアントで使用するために、この証明書が CurrentUser/Trusted People ストアにコピーされます。
 
 2. Windows Server 2003 で、管理者特権を使用して Visual Studio 2012 コマンドプロンプト内のサンプルのインストールフォルダーから、Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 

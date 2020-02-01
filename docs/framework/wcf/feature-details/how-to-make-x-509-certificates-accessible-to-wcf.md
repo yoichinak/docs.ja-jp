@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7f24966f06730e62ea7a8967c3930f05ca78f50e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 71dbf395f43c8028a703a342c032f2b8d022a61c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347080"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921296"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>方法 : X.509 証明書を WCF からアクセス可能にする
 Windows Communication Foundation (WCF) から x.509 証明書にアクセスできるようにするには、アプリケーションコードで証明書ストアの名前と場所を指定する必要があります。 特定の状況では、X.509 証明書に関連付けられた秘密キーを格納しているファイルにプロセス ID がアクセスできる必要があります。 証明書ストアの x.509 証明書に関連付けられている秘密キーを取得するには、WCF にアクセス許可が必要です。 既定では、所有者と System アカウントだけが証明書の秘密キーにアクセスできます。  
@@ -60,7 +60,7 @@ Windows Communication Foundation (WCF) から x.509 証明書にアクセスで�
         |クライアント (コンソールまたは WinForms アプリケーション)|現在ログインしているユーザー|  
         |自己ホスト型のサービス|現在ログインしているユーザー|  
         |IIS 6.0 (Windows Server 2003) または IIS 7.0 (Windows Vista) でホストされるサービス。|NETWORK SERVICE|  
-        |IIS 5.X ([!INCLUDE[wxp](../../../../includes/wxp-md.md)]) でホストされているサービス|Machine.config ファイル内の `<processModel>` 要素によって制御されます。 既定のアカウントは ASPNET です。|  
+        |IIS 5.x (Windows XP) でホストされているサービス。|Machine.config ファイル内の `<processModel>` 要素によって制御されます。 既定のアカウントは ASPNET です。|  
   
     5. Icacls などのツールを使用して、WCF を実行しているアカウントに、秘密キーを含むファイルへの読み取りアクセス権を付与します。  
   

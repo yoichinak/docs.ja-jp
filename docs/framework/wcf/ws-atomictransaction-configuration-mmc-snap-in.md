@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 構成 MMC スナップイン
 ms.date: 03/30/2017
 ms.assetid: 23592973-1d51-44cc-b887-bf8b0d801e9e
-ms.openlocfilehash: 9b6c7ecf112309b6c10414bfe506559e153911c2
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 0bcd08f9a3450c850ead941df6313526d076df2d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900723"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921343"
 ---
 # <a name="ws-atomictransaction-configuration-mmc-snap-in"></a>Ws-atomictransaction 構成 MMC スナップイン
 
@@ -15,11 +15,11 @@ Ws-atomictransaction 構成 MMC スナップインは、ローカルコンピュ
 
 ## <a name="remarks"></a>Remarks
 
-[!INCLUDE[wxp](../../../includes/wxp-md.md)] または Windows Server 2003 を実行している場合、MMC スナップインを見つけるには、コントロールパネル、管理ツール、 **[コンポーネントサービス]** の順に移動し、**マイコンピューター**を右クリックして、 **[プロパティ]** を選択します。 これは MSDTC を構成する場合と同じ場所です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。
+Windows XP または Windows Server 2003 を実行している場合は、MMC スナップインが表示されます。そのためには、コントロールパネル、管理ツール、**コンポーネントサービス** の順に移動し、**マイコンピューター**を右クリックして **プロパティ** を選択します。 これは MSDTC を構成する場合と同じ場所です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。
 
  Windows Vista または Windows Server 2008 を実行している場合は、MMC スナップインを見つけるには、 **[スタート]** ボタンをクリックし、 **[検索]** ボックスに `dcomcnfg.exe` 入力します。 MMC が開いているときに移動、**マイ Computer\Distributed トランザクション コーディネーター DTC**ノードを右クリックし、**プロパティ**です。 構成できるオプションは、グループ化されて、 **WS-AT**タブです。
 
- 前の手順は、ローカル マシンを構成するためのスナップインを起動するために使用します。 リモートコンピューターを構成する場合は、[**コントロールパネル]、[管理ツール]、[コンポーネントサービス**]、の順に移動し、[!INCLUDE[wxp](../../../includes/wxp-md.md)] または Windows Server 2003 を実行している場合は同様の手順を実行します。 Windows Vista または windows Server 2008 を実行している場合は、Vista と Windows Server 2008 の前の手順に従いますが、リモートコンピューターのノードの下にある **[分散トランザクション COORDINATOR\LOCAL DTC]** ノードを使用します。
+ 前の手順は、ローカル マシンを構成するためのスナップインを起動するために使用します。 リモートコンピューターを構成する場合は、[**コントロールパネル]、[管理ツール]、[コンポーネントサービス**]、の順に移動し、windows XP または windows Server 2003 を実行している場合は同様の手順を実行します。 Windows Vista または windows Server 2008 を実行している場合は、Vista と Windows Server 2008 の前の手順に従いますが、リモートコンピューターのノードの下にある **[分散トランザクション COORDINATOR\LOCAL DTC]** ノードを使用します。
 
  ツールのユーザー インターフェイスを使用するには、WsatUI.dll ファイルを登録する必要があります。このファイルのパスは次のとおりです。
 

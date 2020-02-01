@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF]
 ms.assetid: 43008409-1bb4-4bd4-85d7-862c8f10ae20
-ms.openlocfilehash: fbe3a546fd431beb5ddf1d71153d38580a19ecc9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 92bd3a6809386764251c4a69c6bc583ed745205d
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348345"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921356"
 ---
 # <a name="queues-in-windows-communication-foundation"></a>Windows Communication Foundation のキュー
 このセクションのトピックでは、キューの Windows Communication Foundation (WCF) のサポートについて説明します。 WCF では、Microsoft Message Queuing (旧称 MSMQ) をトランスポートとして利用してキューをサポートし、次のシナリオを実現します。  
@@ -50,7 +50,7 @@ ms.locfileid: "75348345"
  有害メッセージ (受信側アプリケーションへの配信試行の回数が最大値を超えたメッセージ) の処理方法を説明します。  
   
  [Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)  
- Windows Vista、Windows Server 2003、および [!INCLUDE[wxp](../../../../includes/wxp-md.md)]間の WCF キュー機能の違いについて概要を説明します。  
+ Windows Vista、Windows Server 2003、および Windows XP の WCF キュー機能の違いについて概要を説明します。  
   
  [トランスポート セキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)  
  トランスポート セキュリティを使用して、キューに置かれたメッセージを保護する方法を説明します。  

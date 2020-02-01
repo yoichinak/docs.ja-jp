@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - basic samples [WCF], getting started
 ms.assetid: 967a3d94-0261-49ff-b85a-20bb07f1af20
-ms.openlocfilehash: 12568b2bb86257ed7075f2dc83b8077714a1318e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7bfef2c3fa5d0d3c6dafad5a6015eb9f5ca2b5c6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347037"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921316"
 ---
 # <a name="getting-started-sample"></a>入門サンプル
 
@@ -34,7 +34,7 @@ ms.locfileid: "75347037"
 
 クライアントには、サービス コントラクトの定義と、サービスにアクセスするためのプロキシ クラスが含まれています。 プロキシコードは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してサービスメタデータから生成されます。
 
-Windows Vista では、サービスは Windows アクティブ化サービス (WAS) でホストされます。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] と Windows Server 2003 では、インターネットインフォメーションサービス (IIS) と ASP.NET によってホストされています。 サービスを IIS または WAS でホストすることにより、サービスに初めてアクセスしたときにそのサービスを自動的にアクティブ化できます。
+Windows Vista では、サービスは Windows アクティブ化サービス (WAS) でホストされます。 Windows XP および Windows Server 2003 では、インターネットインフォメーションサービス (IIS) と ASP.NET によってホストされています。 サービスを IIS または WAS でホストすることにより、サービスに初めてアクセスしたときにそのサービスを自動的にアクティブ化できます。
 
 > [!NOTE]
 > IIS ではなくコンソールアプリケーションでサービスをホストするサンプルを使い始める場合は、[自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)のサンプルを参照してください。

@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 45b710c3b2d1647e1bf7e57b30a96192abb9d788
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7101719f77a03909d9a38dca93100ec90c1add13
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345058"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921386"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 カスタム バインドのメッセージを転送するためにチャネルで使用できる TCP トランスポートを定義します。  
@@ -62,7 +62,7 @@ ms.locfileid: "75345058"
 |maxPendingConnections|サービスでディスパッチを待機している最大接続数を取得または設定します。|  
 |maxReceivedMessageSize|受信できる最大メッセージ サイズを取得または設定します。|  
 |portSharingEnabled|TCP ポート共有をこの接続で有効にする場合に指定するブール値。 これが `false` の場合、各バインディングは独自の排他ポートを使用します。 既定値は、 `false`です。<br /><br /> この設定は、サービスのみに関連します。 クライアントには影響はありません。<br /><br /> この設定を使用するには、[スタートアップの種類] を [手動] または [自動] に変更して、Windows Communication Foundation (WCF) の TCP ポート共有サービスを有効にする必要があります。|  
-|teredoEnabled|Teredo (ファイアウォールの内側にあるクライアントをアドレス指定するためのテクノロジ) が有効であるかどうかを指定するブール値。 既定値は、 `false`です。<br /><br /> このプロパティは、基になる TCP ソケットで Tredo を有効にします。 詳細については、「 [Teredo の概要](https://go.microsoft.com/fwlink/?LinkId=95339)」を参照してください。<br /><br /> このプロパティは [!INCLUDE[wxpsp2](../../../../../includes/wxpsp2-md.md)] および Windows Server 2003 にのみ適用できます。 Windows Vista には、Teredo 用のコンピューター全体の構成オプションがあるため、Vista を実行する場合、このプロパティは無視されます。 Teredo の場合、クライアント コンピューターおよびサービス コンピューターの両方に Microsoft IPv6 スタックをインストールし、Teredo 用に正しく設定する必要があります。 Teredo の構成の詳細については、「 [teredo の概要](https://go.microsoft.com/fwlink/?LinkId=95339)」を参照してください。 詳細については、「 [Windows Server 2003 テクノロジセンター](https://go.microsoft.com/fwlink/?LinkId=49888)」を参照してください。|  
+|teredoEnabled|Teredo (ファイアウォールの内側にあるクライアントをアドレス指定するためのテクノロジ) が有効であるかどうかを指定するブール値。 既定値は、 `false`です。<br /><br /> このプロパティは、基になる TCP ソケットで Tredo を有効にします。 詳細については、「 [Teredo の概要](https://go.microsoft.com/fwlink/?LinkId=95339)」を参照してください。<br /><br /> このプロパティは、Windows XP SP2 および Windows Server 2003 でのみ適用できます。 Windows Vista には、Teredo 用のコンピューター全体の構成オプションがあるため、Vista を実行する場合、このプロパティは無視されます。 Teredo の場合、クライアント コンピューターおよびサービス コンピューターの両方に Microsoft IPv6 スタックをインストールし、Teredo 用に正しく設定する必要があります。 Teredo の構成の詳細については、「 [teredo の概要](https://go.microsoft.com/fwlink/?LinkId=95339)」を参照してください。 詳細については、「 [Windows Server 2003 テクノロジセンター](https://go.microsoft.com/fwlink/?LinkId=49888)」を参照してください。|  
 |transferMode|接続指向のトランスポートでメッセージをバッファーするか、ストリーム配信するかを示す値を取得または設定します。|  
 |connectionPoolSettings|名前付きパイプ バインディングの追加の接続プール設定を指定します。|  
   
@@ -75,7 +75,7 @@ ms.locfileid: "75345058"
 |-------------|-----------------|  
 |[\<binding>](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このトランスポートは、"net.tcp://hostname:port/path" の形式の URI を使用します。 他の URI コンポーネントは省略可能です。  
   
  `tcpTransport` 要素は、TCP トランスポート プロトコルを実装するカスタム バインディングを作成する場合の開始点となります。 このトランスポートは、WCF 間の通信用に最適化されています。  

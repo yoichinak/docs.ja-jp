@@ -4,14 +4,14 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 7a77f7d11bbd2b685bdcf53a3992b4e04b3691b8
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9608f9cc55bbba29686440be529659c6606b0eb8
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901227"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921045"
 ---
-# <a name="hosting-services"></a>ホスティング サービス
+# <a name="hosting-services"></a>ホスティングサービス
 
 アクティブにするには、サービスを作成してそのコンテキストと有効期間を制御するランタイム環境内で、サービスをホストする必要があります。 Windows Communication Foundation (WCF) サービスは、マネージコードをサポートする任意の Windows プロセスで実行するように設計されています。
 
@@ -19,7 +19,7 @@ WCF は、サービス指向アプリケーションを構築するための統�
 
 これらのホスト オプションの範囲は、コンソール アプリケーション内部での実行から、Windows サービスのようなサーバー環境、インターネット インフォメーション サービス (IIS) または Windows プロセス アクティブ化サービス (WAS) で管理されるワーカー プロセス内での実行までさまざまです。 開発者は、サービスの展開要件を満たすホスト環境を選択します。 このような要件は、アプリケーションを展開するプラットフォーム、メッセージの送受信を行うトランスポート、適切な可用性を保証するために必要なプロセスのリサイクルや管理、その他、管理上または信頼性上の要件から導き出されます。 ホスト オプションの情報とガイドラインについて、次のセクションで説明します。
 
-## <a name="hosting-options"></a>ホスティング オプション
+## <a name="hosting-options"></a>ホスティングオプション
 
 ### <a name="self-host-in-a-managed-application"></a>マネージアプリケーションでの自己ホスト
  WCF サービスは、任意のマネージアプリケーションでホストできます。 これは、展開に必要なインフラストラクチャが最小限になるため、最も柔軟なオプションです。 マネージド アプリケーション コード内にサービスのコードを埋め込み、続いて <xref:System.ServiceModel.ServiceHost> のインスタンスを作成して開き、サービスを有効にします。 詳細については、「[方法: マネージアプリケーションで WCF サービスをホスト](how-to-host-a-wcf-service-in-a-managed-application.md)する」を参照してください。
@@ -32,9 +32,9 @@ WCF は、サービス指向アプリケーションを構築するための統�
 
 ### <a name="internet-information-services-iis"></a>インターネット インフォメーション サービス (IIS)
 
-IIS ホストオプションは ASP.NET と統合され、プロセスのリサイクル、アイドルシャットダウン、プロセスの正常性の監視、メッセージベースのアクティブ化など、これらのテクノロジによって提供される機能を使用します。 [!INCLUDE[wxp](../../../includes/wxp-md.md)] および Windows Server 2003 オペレーティングシステムでは、これは高可用性と拡張性を必要とする Web サービスアプリケーションをホストするために推奨されるソリューションです。 IIS では、顧客がエンタープライズ クラスのサーバー製品に求める統合された管理性も提供されます。 このホスト オプションでは、IIS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 WCF サービスの IIS ホストを構成する方法の詳細については、「 [how to: Host a Wcf service IN iis](./feature-details/how-to-host-a-wcf-service-in-iis.md)」を参照してください。
+IIS ホストオプションは ASP.NET と統合され、プロセスのリサイクル、アイドルシャットダウン、プロセスの正常性の監視、メッセージベースのアクティブ化など、これらのテクノロジによって提供される機能を使用します。 Windows XP および Windows Server 2003 オペレーティングシステムでは、これは高可用性と拡張性を必要とする Web サービスアプリケーションをホストするために推奨されるソリューションです。 IIS では、顧客がエンタープライズ クラスのサーバー製品に求める統合された管理性も提供されます。 このホスト オプションでは、IIS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 WCF サービスの IIS ホストを構成する方法の詳細については、「 [how to: Host a Wcf service IN iis](./feature-details/how-to-host-a-wcf-service-in-iis.md)」を参照してください。
 
- IIS でホストされるサービスは、HTTP トランスポートのみを使用できます。 IIS 5.1 の実装では、 [!INCLUDE[wxp](../../../includes/wxp-md.md)]にいくつかの制限がありました。 [!INCLUDE[wxp](../../../includes/wxp-md.md)] の IIS 5.1 によって WCF サービスに対して提供されるメッセージベースのアクティブ化では、同じコンピューター上の他のすべての自己ホスト型 WCF サービスがポート80を使用して通信することをブロックします。 WCF サービスは、Windows Server 2003 上の IIS 6.0 でホストされている場合、他のアプリケーションと同じ AppDomain/アプリケーションプール/ワーカープロセスで実行できます。 ただし、WCF と IIS 6.0 はどちらもカーネルモードの HTTP スタック (http.sys) を使用するため、iis 6.0 は、IIS 5.1 とは異なり、同じコンピューターで実行されている他の自己ホスト型 WCF サービスとポート80を共有できます。
+ IIS でホストされるサービスは、HTTP トランスポートのみを使用できます。 IIS 5.1 での実装には、Windows XP でいくつかの制限事項が導入されています。 Windows XP 上の IIS 5.1 によって WCF サービスに対して提供されるメッセージベースのアクティブ化では、同じコンピューター上の他の自己ホスト型 WCF サービスは、ポート80を使用して通信することができません。 WCF サービスは、Windows Server 2003 上の IIS 6.0 でホストされている場合、他のアプリケーションと同じ AppDomain/アプリケーションプール/ワーカープロセスで実行できます。 ただし、WCF と IIS 6.0 はどちらもカーネルモードの HTTP スタック (http.sys) を使用するため、iis 6.0 は、IIS 5.1 とは異なり、同じコンピューターで実行されている他の自己ホスト型 WCF サービスとポート80を共有できます。
 
 ### <a name="windows-process-activation-service-was"></a>Windows プロセス アクティブ化サービス (WAS)
 
@@ -57,9 +57,9 @@ Windows プロセスアクティブ化サービス (WAS) は、windows Vista で
 
 |ホスト環境|プラットフォームの可用性|サポートされるトランスポート|プロセスと AppDomain のリサイクル|
 |-------------------------|---------------------------|--------------------------|-------------------------------------|
-|マネージド アプリケーション ("自己ホスト")|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|いいえ|
-|Windows サービス (従来 NT サービスと呼ばれていたもの)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|いいえ|
-|IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|○|
+|マネージド アプリケーション ("自己ホスト")|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|いいえ|
+|Windows サービス (従来 NT サービスと呼ばれていたもの)|Windows XP、Windows Server 2003、Windows Vista、<br /><br /> Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|いいえ|
+|IIS 5.1|Windows XP|HTTP|○|
 |IIS 6.0|Windows Server 2003|HTTP|○|
 |Windows プロセス アクティブ化サービス (WAS)|Windows Vista、Windows Server 2008|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|○|
 
