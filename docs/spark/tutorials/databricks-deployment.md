@@ -1,15 +1,15 @@
 ---
 title: .NET for Apache Spark アプリケーションを Databricks にデプロイする
 description: .NET for Apache Spark アプリケーションを Databricks にデプロイする方法を説明します。
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: dfd33e83c04428b7a6a72e4992c40f00982b1958
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a117d85ab911b380598c93417f6ff95661ab864c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960462"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868032"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>チュートリアル: .NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -175,7 +175,7 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
    databricks fs cp microsoft-spark-2.4.x-0.6.0.jar dbfs:/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar
    ```
 
-## <a name="create-a-job"></a>ジョブを作成する
+## <a name="create-a-job"></a>ジョブの作成
 
 アプリは、**spark-submit** を実行するジョブを介して Azure Databricks で実行されます。spark-submit は、.NET for Apache Spark ジョブを実行するために使用するコマンドです。
 
@@ -190,7 +190,7 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
 3. ジョブ構成に次のパラメーターを貼り付けます。 次に、 **[確認]** を選択します。
 
    ```
-   ["--class","org.apache.spark.deploy.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
+   ["--class","org.apache.spark.deploy.dotnet.DotnetRunner","/dbfs/spark-dotnet/microsoft-spark-2.4.x-0.6.0.jar","/dbfs/spark-dotnet/publish.zip","mySparkApp"]
    ```
 
 ## <a name="create-a-cluster"></a>クラスターの作成

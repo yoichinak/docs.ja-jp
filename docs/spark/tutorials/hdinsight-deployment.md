@@ -1,15 +1,15 @@
 ---
 title: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 description: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする方法を説明します。
-ms.date: 05/17/2019
+ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 3604aff5d1f138071c941ea85546af03185d722d
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460721"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76860779"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>チュートリアル: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
@@ -69,7 +69,7 @@ ms.locfileid: "73460721"
     |クラスター ログイン パスワード| ログイン パスワードを入力します。 |
     |Secure Shell (SSH) ユーザー名| SSH ユーザー名を入力します。 既定では、このアカウントは "*クラスター ログイン ユーザー名*" アカウントと同じパスワードを共有します。 |
 
-4. **[次へ:ストレージ >>]** を選択して **[ストレージ]** ページに進みます。 **[ストレージ]** で次の値を指定します。
+4. **ストレージ >>** を選択して **ストレージ** ページに進みます。 **[ストレージ]** で次の値を指定します。
 
     |プロパティ  |説明  |
     |---------|---------|
@@ -151,7 +151,7 @@ ms.locfileid: "73460721"
    |プロパティ  |説明  |
    |---------|---------|
    | スクリプトの種類 |カスタム|
-   | name | Install Worker|
+   | 名前 | Install Worker|
    | Bash スクリプト URI |https://mystorageaccount.blob.core.windows.net/mycontainer/install-worker.sh </br> この URI を確認するには、Azure Storage Explorer で install-worker.sh を右クリックして、[プロパティ] を選択します。 |
    | ノードの種類| ワーカー|
    | パラメーター | azure </br> wasbs://mycontainer@myStorageAccount.blob.core.windows.net/Microsoft.Spark.Worker.netcoreapp2.1.linux-x64-0.6.0.tar.gz </br> /usr/local/bin
@@ -169,7 +169,7 @@ ms.locfileid: "73460721"
    ```bash
    $SPARK_HOME/bin/spark-submit \
    --master yarn \
-   --class org.apache.spark.deploy.DotnetRunner \
+   --class org.apache.spark.deploy.dotnet.DotnetRunner \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/microsoft-spark-2.3.x-0.6.0.jar \
    wasbs://mycontainer@mystorageaccount.blob.core.windows.net/publish.zip mySparkApp
    ```
