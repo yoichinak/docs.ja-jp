@@ -20,7 +20,7 @@ ms.locfileid: "76737888"
 
 Windows Presentation Foundation (WPF) には、デジタルインクをアプリに簡単に組み込むことができるインク機能があります。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 次の例を使用するには、最初に[Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)をインストールします。 また、基本的な WPF アプリの記述方法を理解するのにも役立ちます。 WPF の概要については、「[チュートリアル: 初めての wpf デスクトップアプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)」を参照してください。
 
@@ -108,7 +108,7 @@ XAML を使用すると、ユーザーインターフェイスを簡単にデザ
 
 1. **F5**キーを押してアプリケーションをビルドします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [デジタル インク](digital-ink.md)
 - [インクの収集](collecting-ink.md)

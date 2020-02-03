@@ -146,7 +146,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![System.windows.media.solidcolorbrush> の図](./media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
   
- 図形のストロークまたは塗りつぶしをグラデーション、イメージ、パターンなどで塗りつぶすこともできます。 詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。  
+ 図形のストロークまたは塗りつぶしをグラデーション、イメージ、パターンなどで塗りつぶすこともできます。 詳細については、「[純色とグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。  
   
 <a name="stretchableshapessection"></a>   
 ## <a name="stretchable-shapes"></a>伸縮可能な図形  
@@ -213,7 +213,7 @@ myPolygon.StrokeThickness = 2;
   
  前の例では、単一の変換を各図形オブジェクトに適用しました。 図形 (またはその他の UI 要素) に複数の変換を適用するには、<xref:System.Windows.Media.TransformGroup>を使用します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [2D グラフィックスとイメージング](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)

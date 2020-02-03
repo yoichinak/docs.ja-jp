@@ -21,7 +21,7 @@ Windows フォーム <xref:System.Windows.Forms.PictureBox> コントロール�
 ## <a name="key-properties-and-methods"></a>キーのプロパティとメソッド  
  表示される画像は、<xref:System.Windows.Forms.PictureBox.Image%2A> プロパティによって決定されます。このプロパティは、実行時またはデザイン時に設定できます。 または、<xref:System.Windows.Forms.PictureBox.ImageLocation%2A> プロパティを設定してイメージを指定し、<xref:System.Windows.Forms.PictureBox.Load%2A> メソッドを使用して、または <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> メソッドを使用して非同期的にイメージを読み込むこともできます。 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> プロパティは、イメージとコントロールが相互にどのように適合するかを制御します。 詳細については、「[方法: 実行時に画像のサイズまたは配置を変更する](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.PictureBox>
 - [方法: デザイナーを使用してピクチャを読み込む](how-to-load-a-picture-using-the-designer-windows-forms.md)

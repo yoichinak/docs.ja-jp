@@ -56,7 +56,7 @@ ms.locfileid: "76744389"
 
      **DataSource** UI 型エディターが閉じ、そのデータ接続に固有のデータセット、<xref:System.Windows.Forms.BindingSource> およびテーブルアダプターがフォームに追加されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>

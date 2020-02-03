@@ -1,5 +1,5 @@
 ---
-title: アプリをデプロイする
+title: アプリのデプロイ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
@@ -47,7 +47,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
  Windows インストーラーの詳細については、「 [Windows インストーラーの展開](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)」を参照してください。
   
 <a name="ClickOnce_Deployment"></a>   
-### <a name="clickonce-deployment"></a>ClickOnce の配置  
+### <a name="clickonce-deployment"></a>ClickOnce 配置  
  ClickOnce を使用すると、Web 以外のアプリケーションに対して Web スタイルのアプリケーションを配置できます。 アプリケーションは、Web サーバーまたはファイル サーバーに公開され、これらのサーバーから配置されます。 ClickOnce は、Windows インストーラーインストールされているアプリケーションが実行するクライアント機能のすべてをサポートしているわけではありませんが、次のようなサブセットをサポートしています。  
   
 - [スタート] メニューおよび [プログラム] コントロール パネルとの統合。  
@@ -121,7 +121,7 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
   
  詳細については、「[.NET Framework およびアプリケーションの配置](../../deployment/index.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)
-- [Security](../security-wpf.md)
+- [セキュリティ](../security-wpf.md)

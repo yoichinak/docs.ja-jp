@@ -32,17 +32,17 @@ ms.locfileid: "76732483"
  [基本フォームの外観を変更した場合の影響](effects-of-modifying-base-form-appearance.md)  
  基本フォームのコントロールとそのプロパティを変更する方法について説明します。  
   
- [チュートリアル : ビジュアル継承のデモンストレーション](walkthrough-demonstrating-visual-inheritance.md)  
+ [チュートリアル: ビジュアル継承のデモンストレーション](walkthrough-demonstrating-visual-inheritance.md)  
  基本的な Windows フォームを作成し、クラス ライブラリにコンパイルする方法について説明します。 このクラス ライブラリを別のプロジェクトにインポートし、基本フォームから継承した新しいフォームを作成します。  
   
- [方法 : Modifiers プロパティおよび GenerateMember プロパティを使用する](how-to-use-the-modifiers-and-generatemember-properties.md)  
+ [方法: Modifiers プロパティおよび GenerateMember プロパティを使用する](how-to-use-the-modifiers-and-generatemember-properties.md)  
  `GenerateMember` プロパティと `Modifiers` プロパティの使用方法について説明します。これらのプロパティは、Windows フォーム デザイナーでコンポーネントのメンバー変数を生成するときに使用されます。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [継承の基本 (Visual Basic)](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)  
  他のクラスの基本クラスとして機能する Visual Basic クラスを定義する方法について説明します。  
   
- [クラス](../../../csharp/language-reference/keywords/class.md)  
+ [class](../../../csharp/language-reference/keywords/class.md)  
  C# で許可されるクラスの単一継承について説明します。  
   
  [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)  

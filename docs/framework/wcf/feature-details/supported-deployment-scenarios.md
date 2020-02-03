@@ -41,11 +41,11 @@ ASP.NET Web アプリケーションホスティングサービスの多くの�
 
 信頼されていないインターネット サイトからコードをダウンロードして実行する場合、ある程度のセキュリティ対策が必要です。 [ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)と WPF の XAML ブラウザーアプリケーション (XBAP) テクノロジはどちらも、部分信頼を使用して、信頼されていないコードに制限付きのアクセス許可 (インターネットゾーン) を付与します。
 
-WCF を使用すると、 [ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)または XBAP によって配置された部分信頼アプリケーション内からリモートサーバーと通信できます。 インターネット ゾーン アクセス許可のセットが含まれる<xref:System.Net.WebPermission>で説明されている、サポートされている WCF バインドのいずれかを使用して、配信元サーバーとの通信にこれらのアプリケーションの元のホスト用できる[部分信頼機能の互換性](partial-trust-feature-compatibility.md).
+WCF を使用すると、 [ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)または XBAP によって配置された部分信頼アプリケーション内からリモートサーバーと通信できます。 インターネットゾーンのアクセス許可セットには、元のホストの <xref:System.Net.WebPermission> が含まれています。これにより、これらのアプリケーションは、「[部分信頼機能の互換性](partial-trust-feature-compatibility.md)」で説明されているサポート対象の WCF バインディングを使用して、配信元サーバーと通信できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [コード アクセス セキュリティ](../../misc/code-access-security.md)
-- [WPF XAML ブラウザー アプリケーションの概要](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [ブラウザーでホストされるアプリケーションの Windows Presentation Foundation の概要](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
 - [部分信頼](partial-trust.md)
 - [ASP.NET の信頼レベルとポリシーファイル](https://docs.microsoft.com/previous-versions/wyts434y(v=vs.140))

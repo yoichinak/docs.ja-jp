@@ -26,10 +26,10 @@ ms.locfileid: "76744963"
  [方法: MaskedTextBox コントロールにデータをバインドする](how-to-bind-data-to-the-maskedtextbox-control.md)  
  データベース内のデータがマスク定義で期待される形式と一致しない場合に、データを再フォーマットする方法を示します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.MaskedTextBox>  
  マスクされたテキストボックスコントロールの実装のプライマリクラス。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

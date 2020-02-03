@@ -70,20 +70,20 @@ ms.locfileid: "76735525"
      [!code-csharp[ToolStripRadioButtonMenuItem#180](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#180)]
      [!code-vb[ToolStripRadioButtonMenuItem#180](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#180)]
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次のコード例は、完全な `ToolStripRadioButtonMenuItem` クラスを提供し、<xref:System.Windows.Forms.Form> クラスと `Program` クラスを使用して、オプションボタンの動作を示します。
 
 [!code-csharp[ToolStripRadioButtonMenuItem#000](~/samples/snippets/csharp/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/cs/ToolStripRadioButtonMenuItem.cs#000)]
 [!code-vb[ToolStripRadioButtonMenuItem#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ToolStripRadioButtonMenuItem/vb/ToolStripRadioButtonMenuItem.vb#000)]
 
-## <a name="compiling-the-code"></a>コードのコンパイル方法
+## <a name="compiling-the-code"></a>コードのコンパイル
 
 この例で必要な要素は次のとおりです。
 
 - System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>

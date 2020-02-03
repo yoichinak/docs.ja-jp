@@ -79,7 +79,7 @@ ms.locfileid: "76746564"
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>

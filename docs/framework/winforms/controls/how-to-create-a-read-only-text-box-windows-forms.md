@@ -24,7 +24,7 @@ ms.locfileid: "76731272"
     > [!NOTE]
     > <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A> プロパティは、実行時のユーザーの操作にのみ影響します。 テキストボックスのコンテンツは、実行時にプログラムによって変更することもできます。そのためには、テキストボックスの [<xref:System.Windows.Forms.TextBox.Text%2A>] プロパティを変更します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)

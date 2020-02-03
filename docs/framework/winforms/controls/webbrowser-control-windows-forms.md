@@ -41,7 +41,7 @@ Windows フォーム `WebBrowser` コントロールは、Web ページをホス
  [マネージド HTML DOM (Document Object Model) の使用](using-the-managed-html-document-object-model.md)  
  <xref:System.Windows.Forms.WebBrowser> コントロールによってホストされる HTML ページを操作または作成する方法について説明するトピックを示します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.WebBrowser> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
@@ -78,6 +78,6 @@ Windows フォーム `WebBrowser` コントロールは、Web ページをホス
  <xref:System.Windows.Forms.WebBrowserRefreshOption>  
  この列挙体とそのすべての値について説明します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

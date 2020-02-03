@@ -21,7 +21,7 @@ Windows フォームでは、ユーザー入力は Windows メッセージの形
 ## <a name="methods-that-process-user-input-messages"></a>ユーザー入力メッセージを処理するメソッド  
  フォームとコントロールは、<xref:System.Windows.Forms.IMessageFilter> インターフェイス、およびメッセージキュー内のさまざまなポイントで Windows メッセージを処理するオーバーライド可能なメソッドのセットにアクセスできます。 これらのメソッドにはすべて、Windows メッセージの下位レベルの詳細をカプセル化する <xref:System.Windows.Forms.Message> パラメーターがあります。 これらのメソッドを実装またはオーバーライドしてメッセージを確認し、メッセージを使用するか、メッセージキュー内の次のコンシューマーにメッセージを渡すことができます。 次の表に、Windows フォーム内のすべての Windows メッセージを処理するメソッドを示します。  
   
-|メソッド|メモ|  
+|方法|メモ|  
 |------------|-----------|  
 |<xref:System.Windows.Forms.IMessageFilter.PreFilterMessage%2A>|このメソッドは、キューに置かれた (ポストされた) Windows メッセージをアプリケーションレベルでインターセプトします。|  
 |<xref:System.Windows.Forms.Control.PreProcessMessage%2A>|このメソッドは、Windows メッセージが処理される前に、フォームとコントロールレベルでインターセプトします。|  
@@ -31,7 +31,7 @@ Windows フォームでは、ユーザー入力は Windows メッセージの形
   
  キーボードとマウスのメッセージは、これらの種類のメッセージに固有のオーバーライド可能なメソッドの追加のセットによっても処理されます。 詳細については、「[キーボード入力](how-keyboard-input-works.md)のしくみ」と「 [Windows フォームにおけるマウス入力の](how-mouse-input-works-in-windows-forms.md)しくみ」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームでのユーザー入力](user-input-in-windows-forms.md)
 - [Windows フォーム アプリケーションにおけるキーボード入力](keyboard-input-in-a-windows-forms-application.md)

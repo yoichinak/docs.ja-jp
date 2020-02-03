@@ -20,7 +20,7 @@ ms.locfileid: "76743410"
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>方法 : Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する
 <xref:System.Windows.Forms.ToolStrip> コントロールを使うと、テーマとスタイルを簡単にサポートできます。 <xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> プロパティをカスタムレンダラーに設定することにより、完全にカスタムの外観と動作 (ルックアンドフィール) を実現できます。  
   
- レンダラーは、個々の <xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip>、<xref:System.Windows.Forms.ContextMenuStrip>、または <xref:System.Windows.Forms.StatusStrip> コントロールに割り当てることができます。また、<xref:System.Windows.Forms.ToolStripManager.Renderer%2A> プロパティを <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> に設定することで、すべてのオブジェクトに影響を与えることができます。  
+ レンダラーは、個々の <xref:System.Windows.Forms.ToolStrip>、<xref:System.Windows.Forms.MenuStrip>、<xref:System.Windows.Forms.ContextMenuStrip>、または <xref:System.Windows.Forms.StatusStrip> コントロールに割り当てることができます。また、<xref:System.Windows.Forms.ToolStripManager.Renderer%2A> プロパティを <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> に設定することで、すべてのオブジェクトに影響を与えることができます。<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>  
   
 > [!NOTE]
 > <xref:System.Windows.Forms.ToolStrip.RenderMode%2A> は、<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType> の値が `null`ない場合にのみ <xref:System.Windows.Forms.ToolStripRenderMode.Custom> を返します。  
@@ -29,7 +29,7 @@ ms.locfileid: "76743410"
   
 1. <xref:System.Windows.Forms.ToolStripRenderer> クラスを拡張します。  
   
-2. 適切にオーバーライドして、必要なカスタムレンダリングを実装します. *.* メンバー  
+2. 適切にオーバーライドして、必要なカスタムレンダリングを実装します. *.* members  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -81,7 +81,7 @@ ms.locfileid: "76743410"
     ToolStripManager.Renderer = new RedTextRenderer();  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>

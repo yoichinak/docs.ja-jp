@@ -24,7 +24,7 @@ ms.locfileid: "76745116"
 ## <a name="key-properties"></a>キー プロパティ  
  メニュー項目を既定の項目として指定するには、[<xref:System.Windows.Forms.MenuItem.DefaultItem%2A>] プロパティを `true`に設定します。 メニューがクリックされると、既定の項目が太字で表示されます。 メニュー項目の <xref:System.Windows.Forms.MenuItem.Checked%2A> プロパティは `true` または `false`のいずれかで、メニュー項目が選択されているかどうかを示します。 メニュー項目の <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> プロパティによって、選択した項目の外観がカスタマイズされます。 <xref:System.Windows.Forms.MenuItem.RadioCheck%2A> が `true`に設定されている場合は、項目の横にラジオボタンが表示されます。<xref:System.Windows.Forms.MenuItem.RadioCheck%2A> が `false`に設定されている場合は、項目の横にチェックマークが表示されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.MainMenu>
 - <xref:System.Windows.Forms.Menu>

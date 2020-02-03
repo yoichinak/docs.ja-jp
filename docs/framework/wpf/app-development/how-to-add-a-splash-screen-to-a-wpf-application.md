@@ -44,7 +44,7 @@ ms.locfileid: "76740450"
 
 **ソリューションエクスプローラー**で、スプラッシュスクリーンのイメージを削除します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.SplashScreen>
 - [方法: プロジェクトに既存の項目を追加する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/9f4t9t92(v=vs.100))

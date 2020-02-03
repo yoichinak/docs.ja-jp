@@ -42,7 +42,7 @@ MessageBox.Show("Good morning " + User + ". You are connected to "
   
  <xref:System.Windows.Forms.SystemInformation> クラスの便利なメンバーの中には、<xref:System.Windows.Forms.SystemInformation.ComputerName%2A>、<xref:System.Windows.Forms.SystemInformation.DbcsEnabled%2A>、<xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>、<xref:System.Windows.Forms.SystemInformation.TerminalServerSession%2A>などがあります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.SystemInformation>
 - [Windows フォームでの電源管理](power-management-in-windows-forms.md)

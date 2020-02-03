@@ -17,7 +17,7 @@ ms.locfileid: "76742475"
   
  表形式でのデータの表示は、頻繁に実行されるタスクです。 `DataGridView` コントロールは、グリッドにデータを表示するための完全なソリューションとして設計されています。  
   
-## <a name="keywords"></a>キーワード  
+## <a name="keywords"></a>Keywords  
  DataGridView、BindingSource、テーブル、セル、データバインディング、仮想モード  
   
 ## <a name="namespaces"></a>名前空間  
@@ -25,10 +25,10 @@ ms.locfileid: "76742475"
   
  <xref:System.Data?displayProperty=nameWithType>  
   
-## <a name="related-technologies"></a>関連技術  
+## <a name="related-technologies"></a>関連技術情報  
  `BindingSource`  
   
-## <a name="background"></a>の背景情報  
+## <a name="background"></a>バックグラウンド  
  ユーザーインターフェイス (UI) デザイナーでは、表形式のデータをユーザーに表示するために必要となることがよくあります。 .NET Framework には、テーブルまたはグリッドにデータを表示するいくつかの方法が用意されています。 `DataGridView` コントロールは、Windows フォームアプリケーションのこのテクノロジの最新の進化を表します。  
   
  `DataGridView` コントロールでは、データストアのデータ行を表示できます。 多くの種類のデータストアがサポートされています。 データストアは、1次元配列などの単純な型指定されていないデータを保持することも、<xref:System.Data.DataSet>などの型指定されたデータを保持することもできます。 詳細については、「[方法: データを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-data-to-the-windows-forms-datagridview-control.md)」を参照してください。  
@@ -44,7 +44,7 @@ ms.locfileid: "76742475"
   
  派生セルクラスに `IDataGridViewEditingCell` インターフェイスを実装して、編集機能を持つセル型を作成できますが、編集モードではコントロールをホストしません。 編集モードのセルでホストできるコントロールを作成するには、<xref:System.Windows.Forms.Control>から派生したクラスに `IDataGridViewEditingControl` インターフェイスを実装します。  
   
- 詳細については、次を参照してください[する方法: セルのカスタマイズおよびその動作を拡張すると外観が Windows フォーム DataGridView コントロールで列](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)と[する方法: Windows フォーム DataGridView セルでホストコントロール](how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
+ 詳細については、「[方法: 動作と外観を拡張して Windows フォーム Datagridview コントロールのセルと列をカスタマイズ](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)する」および「[方法: Windows フォーム Datagridview セルのコントロールをホストする](how-to-host-controls-in-windows-forms-datagridview-cells.md)」を参照してください。  
   
 ## <a name="datagridview-classes-at-a-glance"></a>DataGridView クラスの概要  
  <xref:System.Windows.Forms>  
@@ -60,7 +60,7 @@ ms.locfileid: "76742475"
   
  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.BindingSource> コンポーネントと密接に連携して動作します。 このコンポーネントは、フォームのプライマリデータソースとして設計されています。 データソースの種類に関係なく、<xref:System.Windows.Forms.DataGridView> コントロールとそのデータソースとの間の相互作用を管理できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)
 - [DataGridView コントロールのアーキテクチャ](datagridview-control-architecture-windows-forms.md)

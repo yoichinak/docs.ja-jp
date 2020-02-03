@@ -63,11 +63,11 @@ ms.locfileid: "76742230"
     ```
 
     > [!IMPORTANT]
-    > このクラスを使用するには、アセンブリに、<xref:System.Security.Permissions.FileIOPermissionAccess> 列挙体の一部である <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> プロパティによって付与される特権レベルが必要です。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないため例外をスローする可能性があります。 詳細については、「 [Code Access Security Basics](../../misc/code-access-security-basics.md)」を参照してください。
+    > このクラスを使用するには、アセンブリに、<xref:System.Security.Permissions.FileIOPermissionAccess> 列挙体の一部である <xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> プロパティによって付与される特権レベルが必要です。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないため例外をスローする可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)」をご覧ください。
 
 ファイルの保存方法については、「[方法: SaveFileDialog コンポーネントを使用してファイルを保存する](how-to-save-files-using-the-savefiledialog-component.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [FolderBrowserDialog コンポーネントの概要 (Windows フォーム)](folderbrowserdialog-component-overview-windows-forms.md)

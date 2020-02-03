@@ -40,7 +40,7 @@ ms.locfileid: "76745522"
    > [!NOTE]
    > 継承できるようにするには、継承されたコントロールを `Protected` する必要があります。 コントロールのアクセスレベルを変更するには、 **[プロパティ]** ウィンドウでその **[修飾子]** プロパティを設定します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
@@ -49,4 +49,4 @@ ms.locfileid: "76745522"
 - [方法: FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [AutoSize プロパティの概要](autosize-property-overview.md)
-- [方法 : Windows フォームにコントロールを固定する](how-to-anchor-controls-on-windows-forms.md)
+- [方法: Windows フォームにコントロールを固定する](how-to-anchor-controls-on-windows-forms.md)

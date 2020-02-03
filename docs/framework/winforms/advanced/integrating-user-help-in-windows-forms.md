@@ -31,7 +31,7 @@ Windows ベースのアプリケーションの構築については、重要な
  [ツールヒントを使用したコントロールのヘルプ](control-help-using-tooltips.md)  
  `ToolTip` コンポーネントを使用してコントロール固有のヘルプを表示する方法について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [HelpProvider コンポーネント](../controls/helpprovider-component-windows-forms.md)  
  `HelpProvider` コンポーネントの基本について説明します。  
   

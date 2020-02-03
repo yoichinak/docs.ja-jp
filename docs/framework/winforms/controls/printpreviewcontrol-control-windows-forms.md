@@ -21,11 +21,11 @@ Windows フォーム `PrintPreviewControl` は、印刷するときに表示さ�
  [PrintPreviewControl コントロールの概要](printpreviewcontrol-control-overview-windows-forms.md)  
  独自の印刷プレビュー ダイアログまたはコンポーネントの設計に使用できる、`PrintPreviewControl` の一般的な概念について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.PrintPreviewControl>  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [PrintPreviewDialog コントロール](printpreviewdialog-control-windows-forms.md)  
  印刷プレビュー機能を作成する別の方法について説明します。  
   

@@ -34,13 +34,13 @@ ms.locfileid: "76742851"
  [チュートリアル: ステータス バー情報の実行時更新](walkthrough-updating-status-bar-information-at-run-time.md)  
  ステータスバーパネル内のデータをプログラムで制御する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.StatusBar>  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
  <xref:System.Windows.Forms.StatusBar> コントロールに置き換えて機能を追加します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

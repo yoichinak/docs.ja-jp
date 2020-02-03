@@ -23,7 +23,7 @@ ms.locfileid: "76731779"
  [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF におけるパッケージの URI](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.ResourceDictionary>  
   
  [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)  
@@ -32,5 +32,5 @@ ms.locfileid: "76731779"
   
  [x:Key ディレクティブ](../../../desktop-wpf/xaml-services/xkey-directive.md)  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [WPF の XAML](xaml-in-wpf.md)

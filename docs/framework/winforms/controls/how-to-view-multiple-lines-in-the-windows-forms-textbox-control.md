@@ -29,11 +29,11 @@ ms.locfileid: "76728276"
   
 ### <a name="to-view-multiple-lines-in-the-textbox-control"></a>TextBox コントロールで複数の行を表示するには  
   
-1. <xref:System.Windows.Forms.TextBox.Multiline%2A> プロパティを `true`に設定します。 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> が `true` (既定値) の場合、コントロールのテキストは1つ以上の段落として表示されます。それ以外の場合は、リストとして表示され、コントロールの端で一部の行がクリップされることがあります。  
+1. <xref:System.Windows.Forms.TextBox.Multiline%2A> プロパティを `true` に設定します。 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> が `true` (既定値) の場合、コントロールのテキストは1つ以上の段落として表示されます。それ以外の場合は、リストとして表示され、コントロールの端で一部の行がクリップされることがあります。  
   
 2. <xref:System.Windows.Forms.TextBox.ScrollBars%2A> プロパティに適切な値を設定します。  
   
-    |Value|説明|  
+    |値|[説明]|  
     |-----------|-----------------|  
     |<xref:System.Windows.Forms.ScrollBars.None>|この値は、ほとんど常にコントロールに収まらない段落の場合に使用します。 テキストが長すぎて一度に表示できない場合、ユーザーはマウスポインターを使用してコントロール内を移動できます。|  
     |<xref:System.Windows.Forms.ScrollBars.Horizontal>|この値は、行の一覧を表示する場合に使用します。一部の行は <xref:System.Windows.Forms.TextBox> コントロールの幅よりも長くなる場合があります。|  
@@ -41,12 +41,12 @@ ms.locfileid: "76728276"
   
 3. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
   
-    |Value|説明|  
+    |値|[説明]|  
     |-----------|-----------------|  
     |`false`|コントロール内のテキストは自動的に折り返されないため、改行に達するまで右にスクロールします。 上のスクロールバーまたは <xref:System.Windows.Forms.ScrollBars.Both>を <xref:System.Windows.Forms.ScrollBars.Horizontal> 選択した場合は、この値を使用します。|  
-    |`true` (既定)|水平スクロールバーは表示されません。 この値は、1つまたは複数の段落を表示するために、<xref:System.Windows.Forms.ScrollBars.Vertical> のスクロールバーまたは <xref:System.Windows.Forms.ScrollBars.None>を選択した場合に使用します。|  
+    |`true` (規定値)|水平スクロールバーは表示されません。 この値は、1つまたは複数の段落を表示するために、<xref:System.Windows.Forms.ScrollBars.Vertical> のスクロールバーまたは <xref:System.Windows.Forms.ScrollBars.None>を選択した場合に使用します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)

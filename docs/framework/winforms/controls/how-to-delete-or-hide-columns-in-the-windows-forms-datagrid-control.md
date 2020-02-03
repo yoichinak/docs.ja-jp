@@ -124,7 +124,7 @@ ms.locfileid: "76743303"
     }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [方法 : Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する](change-displayed-data-at-run-time-wf-datagrid-control.md)
-- [方法 : Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

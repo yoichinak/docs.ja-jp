@@ -26,10 +26,10 @@ Windows フォーム `ErrorProvider` コンポーネントを使用して、問�
  [方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内にエラーを表示する](view-errors-within-a-dataset-with-wf-errorprovider-component.md)  
  エラープロバイダーコンポーネントを使用してデータエラーを表示する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ErrorProvider>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

@@ -57,7 +57,7 @@ Windows フォーム <xref:System.Windows.Forms.MonthCalendar> 制御の重要�
   
      または  
   
-     <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> プロパティと <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> プロパティを設定します。  
+     <xref:System.Windows.Forms.MonthCalendar.SelectionStart%2A> と <xref:System.Windows.Forms.MonthCalendar.SelectionEnd%2A> プロパティを設定します。  
   
     ```vb  
     MonthCalendar1.SelectionStart = projectStart  
@@ -74,7 +74,7 @@ Windows フォーム <xref:System.Windows.Forms.MonthCalendar> 制御の重要�
     monthCalendar1->SelectionEnd = projectEnd;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)
 - [方法: Windows フォームの MonthCalendar コントロールの外観を変更する](how-to-change-monthcalendar-control-appearance.md)

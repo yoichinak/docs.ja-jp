@@ -63,9 +63,9 @@ ms.locfileid: "76746445"
 ## <a name="using-transport-and-message-security"></a>トランスポート セキュリティとメッセージ セキュリティの使用  
  トランスポート セキュリティとメッセージ セキュリティの両方を使用する場合は、トランスポート レベルと SOAP メッセージ レベルの両方で同じ証明書を使用してメッセージを保護する必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [トランスポート セキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [メッセージ キューを介したメッセージ セキュリティ](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
 - [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

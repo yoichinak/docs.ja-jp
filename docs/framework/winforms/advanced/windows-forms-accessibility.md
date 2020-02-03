@@ -1,5 +1,5 @@
 ---
-title: ユーザー補助
+title: アクセシビリティ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, accessibility
@@ -19,14 +19,14 @@ Windows フォームのアクセシビリティ機能により、さまざまな
  [チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成](walkthrough-creating-an-accessible-windows-based-application.md)  
  アクセシビリティを強化するためにサポートする必要があるすべての機能について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:Accessibility>  
  アクセシビリティと関係のあるクラスを数多く含む名前空間。  
   
  <xref:System.Windows.Forms.AccessibleObject>  
  障碍を持つユーザーに合わせてアプリケーションのユーザー インターフェイス (UI) を調整するため、ユーザー補助対応アプリケーションで使用される情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム上のコントロールのユーザー補助情報の提供](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)  
  障碍を持つユーザーを支援するために Windows フォーム コントロールで使用できる情報の提供方法について説明します。  
   

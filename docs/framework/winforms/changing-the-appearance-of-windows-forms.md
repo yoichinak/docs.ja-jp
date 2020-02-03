@@ -18,7 +18,7 @@ ms.locfileid: "76732369"
  [方法: Windows フォームの境界線を変更する](how-to-change-the-borders-of-windows-forms.md)  
  フォームの罫線のスタイルを変更する方法を示します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.Form>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "76732369"
  <xref:System.Drawing.Color>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームのサイズとスケールを調整する](adjusting-the-size-and-scale-of-windows-forms.md)  
  フォームのサイズとスケールを変更する方法を説明するトピックへのリンクが含まれます。  
   

@@ -23,7 +23,7 @@ ms.locfileid: "76740805"
 ## <a name="key-properties-and-methods"></a>キーのプロパティとメソッド  
  コントロールのテキストボックスに表示される数値は、16進数などのさまざまな形式にすることができます。 詳細については、「[方法: Windows フォーム NumericUpDown コントロールの形式を設定する](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)」を参照してください。 コントロールのキープロパティは、<xref:System.Windows.Forms.NumericUpDown.Value%2A>、<xref:System.Windows.Forms.NumericUpDown.Maximum%2A> (既定値は 100)、<xref:System.Windows.Forms.NumericUpDown.Minimum%2A> (既定値は 0)、および <xref:System.Windows.Forms.NumericUpDown.Increment%2A> (既定値 1) です。 <xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティは、コントロールで選択されている現在の数値を設定します。 <xref:System.Windows.Forms.NumericUpDown.Increment%2A> プロパティは、ユーザーが上矢印または下矢印をクリックしたときに、数値が調整される量を設定します。 フォーカスがコントロールから移動すると、型指定された入力は、最小値と最大値に対して検証されます。 ユーザーが <xref:System.Windows.Forms.NumericUpDown.Accelerations%2A> プロパティを使用して上矢印または下矢印を連続して押すと、コントロールが数値を移動する速度を上げることができます。 コントロールの主要なメソッドは <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> と <xref:System.Windows.Forms.NumericUpDown.DownButton%2A>です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown コントロール](numericupdown-control-windows-forms.md)

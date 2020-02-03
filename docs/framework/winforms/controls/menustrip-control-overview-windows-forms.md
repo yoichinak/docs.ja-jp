@@ -34,7 +34,7 @@ ms.locfileid: "76734470"
   
  次の表は、<xref:System.Windows.Forms.MenuStrip> と関連クラスのいくつかの重要なプロパティを示しています。  
   
-|property|説明|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>|MDI 子フォームの一覧を表示するために使用される <xref:System.Windows.Forms.ToolStripMenuItem> を取得または設定します。|  
 |<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A?displayProperty=nameWithType>|MDI アプリケーションの親メニューと子メニューをマージする方法を取得または設定します。|  
@@ -42,19 +42,19 @@ ms.locfileid: "76734470"
 |<xref:System.Windows.Forms.Form.IsMdiContainer%2A?displayProperty=nameWithType>|フォームが MDI 子フォームのコンテナーかどうかを示す値を取得または設定します。|  
 |<xref:System.Windows.Forms.MenuStrip.ShowItemToolTips%2A>|<xref:System.Windows.Forms.MenuStrip>にツールヒントを表示するかどうかを示す値を取得または設定します。|  
 |<xref:System.Windows.Forms.MenuStrip.CanOverflow%2A>|<xref:System.Windows.Forms.MenuStrip> がオーバーフロー機能をサポートするかどうかを示す値を取得または設定します。|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|<xref:System.Windows.Forms.ToolStripMenuItem>に関連付けられているショートカットキーを取得または設定します。|  
-|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|<xref:System.Windows.Forms.ToolStripMenuItem> に関連付けられているショートカットキーが <xref:System.Windows.Forms.ToolStripMenuItem>の横に表示されるかどうかを示す値を取得または設定します。|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys%2A>|<xref:System.Windows.Forms.ToolStripMenuItem> に関連付けられたショートカット キーを取得または設定します。|  
+|<xref:System.Windows.Forms.ToolStripMenuItem.ShowShortcutKeys%2A>|<xref:System.Windows.Forms.ToolStripMenuItem> に関連付けられたショートカット キーを <xref:System.Windows.Forms.ToolStripMenuItem> の横に表示するかどうかを示す値を取得または設定します。|  
   
  次の表は、重要な <xref:System.Windows.Forms.MenuStrip> コンパニオンクラスを示しています。  
   
-|&lt;クラス&gt; のすべてのオブジェクト|説明|  
+|クラス|[説明]|  
 |-----------|-----------------|  
-|<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip> または <xref:System.Windows.Forms.ContextMenuStrip>に表示される選択可能なオプションを表します。|  
+|<xref:System.Windows.Forms.ToolStripMenuItem>|<xref:System.Windows.Forms.MenuStrip> または <xref:System.Windows.Forms.ContextMenuStrip> に表示される選択可能なオプションを表します。|  
 |<xref:System.Windows.Forms.ContextMenuStrip>|ショートカット メニューを表します。|  
 |<xref:System.Windows.Forms.ToolStripDropDown>|ユーザーが <xref:System.Windows.Forms.ToolStripDropDownButton> または上位レベルのメニュー項目をクリックしたときに表示される一覧から1つの項目を選択できるようにするコントロールを表します。|  
 |<xref:System.Windows.Forms.ToolStripDropDownItem>|クリックしたときにドロップダウン項目を表示する <xref:System.Windows.Forms.ToolStripItem> から派生したコントロールの基本機能を提供します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>

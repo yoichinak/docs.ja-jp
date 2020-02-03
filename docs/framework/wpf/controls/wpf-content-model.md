@@ -29,7 +29,7 @@ ms.locfileid: "76738273"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、任意のコンテンツを含めることができる 4 つのクラスがあります。 次の表に、<xref:System.Windows.Controls.Control>から継承するクラスの一覧を示します。  
   
-|任意のコンテンツを含むクラス|Content|  
+|任意のコンテンツを含むクラス|コンテンツ|  
 |-------------------------------------------|-------------|  
 |<xref:System.Windows.Controls.ContentControl>|1 つの任意のオブジェクト。|  
 |<xref:System.Windows.Controls.HeaderedContentControl>|ヘッダーと 1 つの項目。両方とも任意のオブジェクトです。|  
@@ -135,11 +135,11 @@ ms.locfileid: "76738273"
   
  次の図は、これらの種類の項目を含む <xref:System.Windows.Controls.ListBox> を示しています。  
   
-- 文字列  
+- 文字列。  
   
-- <xref:System.DateTime> オブジェクトです。  
+- <xref:System.DateTime> オブジェクト。  
   
-- <xref:System.Windows.UIElement>。  
+- <xref:System.Windows.UIElement> です。  
   
 - <xref:System.Windows.Shapes.Ellipse> と <xref:System.Windows.Controls.TextBlock>を格納している <xref:System.Windows.Controls.Panel>。  
   
@@ -184,7 +184,7 @@ ms.locfileid: "76738273"
   
 - <xref:System.Windows.Controls.WrapPanel>  
   
- 詳細については、「[Panels Overview](panels-overview.md)」を参照してください。  
+ 詳細については、「[パネルの概要](panels-overview.md)」を参照してください。  
   
 <a name="classes_that_affects_the_appearance_of_a_uielement"></a>   
 ## <a name="classes-that-affect-the-appearance-of-a-uielement"></a>UIElement の外観に影響を与えるクラス  
@@ -221,9 +221,9 @@ ms.locfileid: "76738273"
 ## <a name="classes-that-enable-users-to-enter-text"></a>ユーザーがテキストを入力できるようにするクラス  
  WPF は、ユーザーがテキストを入力できるようにする 3 つの主なコントロールを提供します。 各コントロールは、異なる方法で、テキストを表示します。 次の表は、これら 3 つのテキスト関連のコントロール、テキストを表示するときのそれぞれの機能、およびコントロールのテキストを格納するそれぞれのプロパティの一覧です。  
   
-|Control|テキストの表示形態|コンテンツのプロパティ|  
+|コントロール|テキストの表示形態|コンテンツのプロパティ|  
 |-------------|--------------------------|----------------------|  
-|<xref:System.Windows.Controls.TextBox>|プレーンテキスト|<xref:System.Windows.Controls.TextBox.Text%2A>|  
+|<xref:System.Windows.Controls.TextBox>|プレーンテキスト ファイル|<xref:System.Windows.Controls.TextBox.Text%2A>|  
 |<xref:System.Windows.Controls.RichTextBox>|書式付きテキスト|<xref:System.Windows.Controls.RichTextBox.Document%2A>|  
 |<xref:System.Windows.Controls.PasswordBox>|非表示のテキスト (文字はマスクされます)|<xref:System.Windows.Controls.PasswordBox.Password%2A>|  
   
@@ -235,7 +235,7 @@ ms.locfileid: "76738273"
   
  次の表は、<xref:System.Windows.Controls.FlowDocumentReader>、<xref:System.Windows.Controls.FlowDocumentPageViewer>、および <xref:System.Windows.Controls.FlowDocumentScrollViewer> クラスのコンテンツプロパティを示しています。  
   
-|Control|コンテンツのプロパティ|コンテンツのプロパティの型|  
+|コントロール|コンテンツのプロパティ|コンテンツのプロパティの型|  
 |-------------|----------------------|---------------------------|  
 |<xref:System.Windows.Controls.FlowDocumentPageViewer>|ドキュメント|<xref:System.Windows.Documents.IDocumentPaginatorSource>|  
 |<xref:System.Windows.Controls.FlowDocumentReader>|ドキュメント|<xref:System.Windows.Documents.FlowDocument>|  
@@ -247,6 +247,6 @@ ms.locfileid: "76738273"
 ## <a name="classes-that-format-your-text"></a>テキストを書式設定するクラス  
  <xref:System.Windows.Documents.TextElement> とその関連クラスを使用すると、テキストの書式を設定できます。 <xref:System.Windows.Documents.TextElement> オブジェクトは、<xref:System.Windows.Controls.TextBlock> オブジェクトと <xref:System.Windows.Documents.FlowDocument> オブジェクトのテキストを格納および書式設定します。 <xref:System.Windows.Documents.TextElement> オブジェクトの2つの主な種類は、<xref:System.Windows.Documents.Block> 要素と <xref:System.Windows.Documents.Inline> 要素です。 <xref:System.Windows.Documents.Block> 要素は、段落やリストなどのテキストのブロックを表します。 <xref:System.Windows.Documents.Inline> 要素は、ブロック内のテキストの一部を表します。 多くの <xref:System.Windows.Documents.Inline> クラスは、適用先のテキストの書式を指定します。 各 <xref:System.Windows.Documents.TextElement> には、独自のコンテンツモデルがあります。 詳細については、「[TextElement Content Model Overview](../advanced/textelement-content-model-overview.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [詳細設定](../advanced/index.md)
+- [詳細](../advanced/index.md)

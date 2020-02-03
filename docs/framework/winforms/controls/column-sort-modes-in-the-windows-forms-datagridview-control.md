@@ -15,7 +15,7 @@ ms.locfileid: "76744194"
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロール内の列の並べ替えモード
 <xref:System.Windows.Forms.DataGridView> 列には3つの並べ替えモードがあります。 各列の並べ替えモードは、列の <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> プロパティによって指定されます。これは、次のいずれかの <xref:System.Windows.Forms.DataGridViewColumnSortMode> 列挙値に設定できます。  
   
-|`DataGridViewColumnSortMode` 値|説明|  
+|`DataGridViewColumnSortMode` 値|[説明]|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|テキストボックスの列の既定値。 列ヘッダーを選択に使用しない限り、列ヘッダーをクリックすると、この列によって <xref:System.Windows.Forms.DataGridView> が自動的に並べ替えられ、並べ替え順序を示すグリフが表示されます。|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|テキストボックス以外の列の既定値。 この列はプログラムで並べ替えることができます。ただし、並べ替えのためのものではないため、並べ替えグリフ用の領域は予約されていません。|  
@@ -58,7 +58,7 @@ ms.locfileid: "76744194"
 > [!NOTE]
 > <xref:System.Windows.Forms.DataGridView.DataSource%2A> プロパティが設定されている場合、または <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> プロパティ値が `true`場合、<xref:System.Windows.Forms.DataGridView.SortCompare> イベントは発生しません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>

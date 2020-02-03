@@ -84,7 +84,7 @@ Windows フォーム <xref:System.Windows.Forms.DataGrid> コントロールに�
     customersDataSet1.Tables["Customers"].ColumnChanging += new DataColumnChangeEventHandler(this.Customers_ColumnChanging);
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>

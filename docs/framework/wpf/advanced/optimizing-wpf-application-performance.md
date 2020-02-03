@@ -33,7 +33,7 @@ ms.locfileid: "76743946"
   
  [アプリケーション リソース](optimizing-performance-application-resources.md)  
   
- [テキスト](optimizing-performance-text.md)  
+ [[テキスト]](optimizing-performance-text.md)  
   
  [データ バインディング](optimizing-performance-data-binding.md)  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76743946"
   
  [アプリケーションの起動時間](application-startup-time.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Media.RenderOptions>
 - <xref:System.Windows.Media.RenderCapability>

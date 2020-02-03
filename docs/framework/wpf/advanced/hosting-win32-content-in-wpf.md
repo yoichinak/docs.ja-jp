@@ -15,7 +15,7 @@ ms.locfileid: "76747014"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF での Win32 コンテンツのホスト
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 「 [WPF と Win32 の相互運用」を](wpf-and-win32-interoperation.md)参照してください。
 
@@ -368,6 +368,6 @@ public partial class Window1 : Window {
 
 ![実行中の WPF アプリのスクリーンショット。](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)

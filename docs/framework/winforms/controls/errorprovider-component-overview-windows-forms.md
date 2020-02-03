@@ -26,7 +26,7 @@ Windows フォーム[ErrorProvider](errorprovider-component-windows-forms.md)コ
 > [!NOTE]
 > <xref:System.Windows.Forms.ErrorProvider> コンポーネントには、ユーザー補助クライアントのサポートが組み込まれていません。 このコンポーネントを使用してアプリケーションにアクセスできるようにするには、追加のアクセス可能なフィードバックメカニズムを提供する必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ErrorProvider>
 - [方法: Windows フォーム ErrorProvider コンポーネントで DataSet 内にエラーを表示する](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

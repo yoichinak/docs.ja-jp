@@ -28,20 +28,20 @@ ms.locfileid: "76746778"
   
  負の数値が含まれている `Balance` 列のセルは、赤の背景が指定されます。 これらのセルを通貨として書式設定し、負の値をかっこで囲んで表示することもできます。 詳細については、「[方法 : Windows フォーム DataGridView コントロールのデータの書式を設定する](how-to-format-data-in-the-windows-forms-datagridview-control.md)」を参照してください。  
   
- `Priority` 列のセルは、対応するテキスト セル値の代わりにイメージを表示します。 <xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> の<xref:System.Windows.Forms.ConvertEventArgs.Value%2A> プロパティはテキストのセル値を取得して、対応するイメージの表示値に設定する場合に使用されます。  
+ `Priority` 列のセルは、対応するテキスト セル値の代わりにイメージを表示します。 <xref:System.Windows.Forms.ConvertEventArgs.Value%2A> の<xref:System.Windows.Forms.DataGridViewCellFormattingEventArgs> プロパティはテキストのセル値を取得して、対応するイメージの表示値に設定する場合に使用されます。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/cs/customFormatting.cs#00)]
  [!code-vb[System.Windows.Forms.DataGridViewCustomizeDataFormatting#00](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCustomizeDataFormatting/vb/customFormatting.vb#00)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
 - System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
-- `highPri.bmp`、`mediumPri.bmp`、および `lowPri.bmp` という名前の <xref:System.Drawing.Bitmap> イメージは、実行可能ファイルと同じディレクトリにあります。  
+- <xref:System.Drawing.Bitmap>、`highPri.bmp`、および `mediumPri.bmp` という名前の `lowPri.bmp` イメージは、実行可能ファイルと同じディレクトリにあります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>

@@ -24,7 +24,7 @@ Windows フォーム <xref:System.Windows.Forms.PageSetupDialog> コンポーネ
 
 フォームに追加されると、Visual Studio の Windows フォームデザイナーの下部にあるトレイに <xref:System.Windows.Forms.PageSetupDialog> コンポーネントが表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog コンポーネント](pagesetupdialog-component-windows-forms.md)

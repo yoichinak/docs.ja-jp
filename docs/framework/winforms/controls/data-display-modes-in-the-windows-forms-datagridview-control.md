@@ -23,7 +23,7 @@ ms.locfileid: "76744008"
   
  読み取り専用のバインドされていない <xref:System.Windows.Forms.DataGridView>を使用する例については、「方法: バインドされていない[Windows フォーム DataGridView コントロールを作成](how-to-create-an-unbound-windows-forms-datagridview-control.md)する」を参照してください。  
   
-## <a name="bound"></a>バインド済み  
+## <a name="bound"></a>Bound  
  バインドモードは、データストアとの自動操作を使用したデータの管理に適しています。 <xref:System.Windows.Forms.DataGridView.DataSource%2A> プロパティを設定して、<xref:System.Windows.Forms.DataGridView> コントロールをデータソースに直接アタッチできます。 コントロールがデータにバインドされると、データ行がプッシュされ、その部分を明示的に管理する必要がなくプルされます。 <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A> プロパティが `true`と、データソース内の各列によって、対応する列がコントロールに作成されます。 独自の列を作成する場合は、このプロパティを `false` に設定し、<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A> プロパティを使用して、構成時に各列をバインドできます。 これは、既定で生成される型以外の列の型を使用する場合に便利です。 詳細については、「 [Windows フォーム DataGridView コントロールの列の型](column-types-in-the-windows-forms-datagridview-control.md)」を参照してください。  
   
  バインドされた <xref:System.Windows.Forms.DataGridView> コントロールを使用する例については、「[チュートリアル: Windows フォーム DataGridView コントロールでのデータの検証](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "76744008"
   
  バインドモードでの非バインド列による並べ替えはサポートされていません。 バインドモードでユーザー編集可能な値を含む非バインド列を作成する場合は、バインドされた列によってコントロールが並べ替えられるときに、仮想モードを実装してこれらの値を維持する必要があります。  
   
-## <a name="virtual"></a>Virtual  
+## <a name="virtual"></a>仮想的  
  仮想モードを使用すると、独自のデータ管理操作を実装できます。 バインドされた列によってコントロールが並べ替えられている場合は、バインドモードのバインドされていない列の値を維持するために必要です。 ただし、仮想モードの主な用途は、大量のデータを操作するときのパフォーマンスを最適化することです。  
   
  <xref:System.Windows.Forms.DataGridView> コントロールを管理するキャッシュにアタッチすると、データ行をプッシュおよびプルするタイミングがコードによって制御されます。 メモリフットプリントを小さくするために、キャッシュのサイズは現在表示されている行の数と同じにする必要があります。 ユーザーが新しい行をスクロールして表示すると、コードはキャッシュから新しいデータを要求し、必要に応じて、メモリから古いデータをフラッシュします。  
@@ -41,7 +41,7 @@ ms.locfileid: "76744008"
   
  仮想モードの詳細については、「 [Windows フォーム DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)」を参照してください。 仮想モードイベントの使用方法を示す例については、「[チュートリアル: Windows フォーム DataGridView コントロールでの仮想モードの実装](implementing-virtual-mode-wf-datagridview-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

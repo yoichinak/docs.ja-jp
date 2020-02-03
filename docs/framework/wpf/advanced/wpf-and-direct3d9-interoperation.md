@@ -148,7 +148,7 @@ Windows Presentation Foundation (WPF) アプリケーションに Direct3D9 コ�
 > [!NOTE]
 > WPF が完全にソフトウェアでレンダリングされている場合、WPF にフロントバッファーがないため <xref:System.Windows.Interop.D3DImage> は表示されません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

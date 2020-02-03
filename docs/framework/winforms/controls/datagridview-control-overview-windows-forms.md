@@ -65,7 +65,7 @@ ms.locfileid: "76742486"
  [DataGridView コントロールのコード ディレクトリ](datagridview-control-code-directory-windows-forms.md)  
  さまざまな <xref:System.Windows.Forms.DataGridView> タスクに関するドキュメントのコード例へのリンクを示します。 コード例はタスクの種類ごとに分類されています。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)  
  情報を表示し、ユーザーが情報を変更または追加できるようにするために使用される、Windows フォーム <xref:System.Windows.Forms.DataGridView> コントロール内の列の型について説明します。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "76742486"
  [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  大量のデータを扱うときのパフォーマンスの問題を避けるために、このコントロールを効率的に使用する方法について説明するトピックを示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

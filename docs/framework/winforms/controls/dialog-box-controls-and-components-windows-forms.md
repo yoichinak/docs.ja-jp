@@ -17,7 +17,7 @@ ms.locfileid: "76745975"
 # <a name="dialog-box-controls-and-components-windows-forms"></a>ダイアログ ボックス コントロールおよびコンポーネント (Windows フォーム)
 次の Windows フォーム コントロールおよびコンポーネントは、標準のダイアログ ボックスを表示します。 各ダイアログ ボックスで使用できる機能に関する詳細については、リンクに従ってください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ColorDialog>  
  <xref:System.Windows.Forms.ColorDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "76745975"
  <xref:System.Windows.Forms.SaveFileDialog>  
  <xref:System.Windows.Forms.SaveFileDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)  
  Windows フォームのダイアログ ボックスを作成する方法について説明します。  
   

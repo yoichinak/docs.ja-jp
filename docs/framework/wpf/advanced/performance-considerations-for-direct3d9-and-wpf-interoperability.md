@@ -38,7 +38,7 @@ ms.locfileid: "76743933"
 > [!NOTE]
 > XDDM は Windows XP と Windows Vista の両方で使用できます。ただし、WDDM は Windows Vista でのみ使用できます。  
   
-## <a name="general-best-practices"></a>一般的なベストプラクティス  
+## <a name="general-best-practices"></a>一般的なベスト プラクティス  
  デバイスを作成するときに、`D3DCREATE_MULTITHREADED` 作成フラグを使用します。 これにより、パフォーマンスが低下しますが、WPF レンダリングシステムは、このデバイスのメソッドを別のスレッドから呼び出します。 2つのスレッドが同時にデバイスにアクセスしないように、必ずロックプロトコルに従ってください。  
   
  WPF マネージスレッドでレンダリングを実行する場合は、`D3DCREATE_FPU_PRESERVE` 作成フラグを使用してデバイスを作成することを強くお勧めします。 この設定がないと、D3D レンダリングにより、WPF の倍精度演算の精度が低下し、レンダリングの問題が発生する可能性があります。  
@@ -60,7 +60,7 @@ ms.locfileid: "76743933"
 |D3DFMT_A8R8G8B8 (ロックできません)|**ハードウェアの更新**|ソフトウェア更新プログラム|ソフトウェア更新プログラム|ソフトウェア更新プログラム|  
 |D3DFMT_A8R8G8B8 (ロック可能)|**ハードウェアの更新**|ソフトウェア更新プログラム|**ハードウェアの更新**|ソフトウェア更新プログラム|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Interop.D3DImage>
 - [WPF と Direct3D9 の相互運用性](wpf-and-direct3d9-interoperation.md)

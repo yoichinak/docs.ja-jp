@@ -53,7 +53,7 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
 ## <a name="xaml-namescopes-in-styles-and-templates"></a>スタイルとテンプレートでの XAML 名前スコープ  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のスタイルとテンプレートを使用すると、簡単な方法でコンテンツを再利用したり、再適用したりすることができます。 ただし、スタイルやテンプレートには、テンプレートレベルで定義された XAML 名を持つ要素が含まれる場合もあります。 同じテンプレートを1ページで複数回使用することもできます。 このため、スタイルとテンプレートは、スタイルまたはテンプレートが適用されているオブジェクトツリー内の任意の場所に関係なく、独自の XAML 名前スコープを定義します。  
   
- 次に例を示します。  
+ 次の例を確認してください。  
   
  [!code-xaml[XamlOvwSupport#NameScopeTemplates](~/samples/snippets/csharp/VS_Snippets_Wpf/XAMLOvwSupport/CSharp/page6.xaml#namescopetemplates)]  
   
@@ -94,7 +94,7 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
   
 - <xref:System.Windows.FrameworkContentElement>  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XAML 名前空間および WPF XAML の名前空間の割り当て](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [x:Name ディレクティブ](../../../desktop-wpf/xaml-services/xname-directive.md)

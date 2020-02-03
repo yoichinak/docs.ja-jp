@@ -53,17 +53,17 @@ Windows フォームのプログラミングでは、印刷サービスに加え
      [!code-csharp[System.Drawing.Printing.PrintPreviewExample#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#4)]
      [!code-vb[System.Drawing.Printing.PrintPreviewExample#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#4)]  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/CS/Form1.cs#0)]
  [!code-vb[System.Drawing.Printing.PrintPreviewExample#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintPreviewExample/VB/Form1.vb#0)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
 - System、System.Windows.Forms、System.Drawing の各アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [方法 : Windows フォームで複数ページのテキスト ファイルを印刷する](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [方法: Windows フォームで複数ページのテキスト ファイルを印刷する](how-to-print-a-multi-page-text-file-in-windows-forms.md)
 - [Windows フォームにおける印刷のサポート](windows-forms-print-support.md)
 - [Windows フォームでのより安全な印刷](../more-secure-printing-in-windows-forms.md)

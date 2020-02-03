@@ -40,7 +40,7 @@ ms.locfileid: "76745436"
   
  次のイベントは、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A> プロパティが `true`に設定されている場合にのみ発生します。  
   
-|Event|説明|  
+|Event|[説明]|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.CellValueNeeded>|データキャッシュからセル値を取得して表示するために、コントロールによって使用されます。 このイベントは、バインドされていない列のセルに対してのみ発生します。|  
 |<xref:System.Windows.Forms.DataGridView.CellValuePushed>|セルのユーザー入力をデータキャッシュにコミットするために、コントロールによって使用されます。 このイベントは、バインドされていない列のセルに対してのみ発生します。<br /><br /> <xref:System.Windows.Forms.DataGridView.CellValuePushed> イベントハンドラーの外部でキャッシュされた値を変更する場合は、<xref:System.Windows.Forms.DataGridView.UpdateCellValue%2A> メソッドを呼び出して、現在の値がコントロールに表示されることを確認し、現在有効になっている自動サイズ変更モードを適用します。|  
@@ -50,7 +50,7 @@ ms.locfileid: "76745436"
   
  次のイベントは、仮想モードでは便利ですが、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A> プロパティの設定に関係なく使用できます。  
   
-|Events|説明|  
+|events|[説明]|  
 |------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridView.UserDeletingRow><br /><br /> <xref:System.Windows.Forms.DataGridView.UserDeletedRow><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsRemoved><br /><br /> <xref:System.Windows.Forms.DataGridView.RowsAdded>|コントロールによって使用され、行が削除または追加されたことを示します。これにより、データキャッシュを適宜更新できます。|  
 |<xref:System.Windows.Forms.DataGridView.CellFormatting><br /><br /> <xref:System.Windows.Forms.DataGridView.CellParsing><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.CellValidated><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidating><br /><br /> <xref:System.Windows.Forms.DataGridView.RowValidated>|コントロールが、表示するセルの値を書式設定し、ユーザー入力を解析および検証するために使用します。|  
@@ -62,7 +62,7 @@ ms.locfileid: "76745436"
 ## <a name="best-practices-in-virtual-mode"></a>仮想モードのベストプラクティス  
  大量のデータを効率的に処理するために仮想モードを実装する場合は、<xref:System.Windows.Forms.DataGridView> コントロール自体を使用して効率的に作業していることも確認する必要があります。 セルスタイル、自動サイズ変更、選択、および行共有の効率的な使用方法の詳細については、「 [Windows フォーム DataGridView コントロールのスケーリングに関するベストプラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

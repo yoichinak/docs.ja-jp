@@ -34,7 +34,7 @@ Windows フォームには、ユーザーの固有のニーズに合わせて、
  [Windows フォームアプリケーションのグローバル化](globalizing-windows-forms.md)  
  Windows フォーム アプリケーションをグローバル化する方法を示すトピックへのリンクが含まれます。  
   
- [Windows フォームとアンマネージ アプリケーション](windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
  Windows フォーム アプリケーションから COM コンポーネントにアクセスする方法について説明したトピックへのリンクを示します。  
   
  [システム情報と Windows フォーム](system-information-and-windows-forms.md)  
@@ -58,7 +58,7 @@ Windows フォームには、ユーザーの固有のニーズに合わせて、
  [WPF コントロールの使用](using-wpf-controls.md)  
  Windows フォーム ベースのアプリケーションで WPF コントロールを使用する方法について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム アプリケーションのヘルプ システム](help-systems-in-windows-forms-applications.md)  
  Windows フォーム アプリケーションでユーザーにヘルプを提供する方法について説明したトピックへのリンクを示します。  
   

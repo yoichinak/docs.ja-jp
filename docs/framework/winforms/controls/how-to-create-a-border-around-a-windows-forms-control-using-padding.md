@@ -24,11 +24,11 @@ ms.locfileid: "76742188"
 # <a name="how-to-create-a-border-around-a-windows-forms-control-using-padding"></a>方法 : 埋め込みを使用して Windows フォーム コントロールの周囲に境界線を作成する
 次のコード例では、<xref:System.Windows.Forms.RichTextBox> コントロールの周囲に罫線を作成したりアウトラインを作成したりする方法を示します。 この例では、<xref:System.Windows.Forms.Panel> コントロールの <xref:System.Windows.Forms.Padding> プロパティの値を5に設定し、子 <xref:System.Windows.Forms.RichTextBox> コントロールの <xref:System.Windows.Forms.Control.Dock%2A> プロパティを <xref:System.Windows.Forms.DockStyle.Fill>に設定します。 <xref:System.Windows.Forms.Panel> コントロールの <xref:System.Windows.Forms.Control.BackColor%2A> は <xref:System.Drawing.Color.Blue%2A>に設定されます。これにより、<xref:System.Windows.Forms.RichTextBox> コントロールの周囲に青い境界線が作成されます。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.Padding#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Padding/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.Padding#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Padding/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Padding>
 - [Windows フォーム コントロールでのマージンと埋め込み](margin-and-padding-in-windows-forms-controls.md)

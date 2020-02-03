@@ -23,13 +23,13 @@ ms.locfileid: "76746391"
 
 この記事では、Windows フォームベースのアプリケーションで使用するための Windows Presentation Foundation (WPF) コントロールを作成する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
-## <a name="create-the-project"></a>プロジェクトの作成
+## <a name="create-the-project"></a>プロジェクトを作成する
 
-Visual Studio を開き、`HostingWpf` という新しい **Windows フォーム アプリ (.NET Framework)** プロジェクトを Visual Basic または Visual C# で作成します。
+Visual Studio を開き、新しい**Windows フォーム App (.NET Framework)** プロジェクトを Visual Basic または visual C# `HostingWpf`名前付きで作成します。
 
 > [!NOTE]
 > WPF コンテンツをホストする場合は、C# プロジェクトと Visual Basic プロジェクトのみがサポートされます。
@@ -66,7 +66,7 @@ Visual Studio を開き、`HostingWpf` という新しい **Windows フォーム
    > [!NOTE]
    > 一般的には、もう少し高度な WPF コンテンツをホストしてください。 ここでは、説明する目的でのみ <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> コントロールを使用しています。
 
-6. プロジェクトをビルドする。
+6. プロジェクトをビルドします。
 
 ## <a name="add-a-wpf-control-to-a-windows-form"></a>WPF コントロールを Windows フォームに追加する
 
@@ -92,7 +92,7 @@ WPF コントロールを Windows フォームに追加するには、次のよ�
 
 5. **F5** キーを押してアプリケーションをビルドし、実行します。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 Windows フォームと WPF は異なるテクノロジですが、密接に相互運用するよう設計されています。 アプリケーションの外観と動作を充実させるには、次の操作を実行します。
 
@@ -102,7 +102,7 @@ Windows フォームと WPF は異なるテクノロジですが、密接に相�
 
 - WPF コンテンツのスタイルを変更します。 詳細については、「[チュートリアル: WPF コンテンツのスタイル](walkthrough-styling-wpf-content.md)を設定する」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

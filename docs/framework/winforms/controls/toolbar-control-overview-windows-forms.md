@@ -30,7 +30,7 @@ ms.locfileid: "76735488"
   
  <xref:System.Windows.Forms.ToolBar> コントロールを使用すると、<xref:System.Windows.Forms.Button> オブジェクトを <xref:System.Windows.Forms.ToolBar.Buttons%2A> コレクションに追加することで、ツールバーを作成できます。 コレクションエディターを使用して、<xref:System.Windows.Forms.ToolBar> コントロールにボタンを追加できます。各 <xref:System.Windows.Forms.Button> オブジェクトにはテキストまたはイメージが割り当てられている必要がありますが、両方を割り当てることができます。 イメージは、関連付けられた [ImageList](imagelist-component-windows-forms.md) コンポーネントから取得されます。 実行時には、<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A> メソッドと <xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A> メソッドを使用して、<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection> のボタンを追加または削除できます。 <xref:System.Windows.Forms.ToolBar>のボタンをプログラミングするには、<xref:System.Windows.Forms.ToolBarButtonClickEventArgs> クラスの <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> プロパティを使用して、クリックされたボタンを判別するために、<xref:System.Windows.Forms.ToolBar>の <xref:System.Windows.Forms.ToolBar.ButtonClick> イベントにコードを追加します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar コントロール](toolbar-control-windows-forms.md)

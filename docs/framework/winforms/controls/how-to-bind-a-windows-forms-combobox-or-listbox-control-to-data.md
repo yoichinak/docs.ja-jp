@@ -31,7 +31,7 @@ ms.locfileid: "76742033"
   
 2. テーブルにバインドする場合は、`DisplayMember` プロパティをデータソース内の列の名前に設定します。  
   
-     \- または  
+     \- - または -  
   
      <xref:System.Collections.IList>にバインドする場合は、表示メンバーをリスト内の型のパブリックプロパティに設定します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "76742033"
     > [!NOTE]
     > <xref:System.Collections.ArrayList>などの <xref:System.ComponentModel.IBindingList> インターフェイスを実装していないデータソースにバインドされている場合、データソースの更新時にバインドされたコントロールのデータは更新されません。 たとえば、<xref:System.Collections.ArrayList> にバインドされたコンボボックスがあり、データが <xref:System.Collections.ArrayList>に追加されている場合、これらの新しい項目はコンボボックスに表示されません。 ただし、コントロールがバインドされている <xref:System.Windows.Forms.BindingContext> クラスのインスタンスで <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> および <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> メソッドを呼び出すことによって、コンボボックスを強制的に更新できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

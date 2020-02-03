@@ -21,20 +21,20 @@ ms.locfileid: "76746236"
   
  <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A> プロパティを設定するときに、<xref:System.Windows.Forms.DataGridView> コントロールに既に列がある場合、既存のバインドされた列はデータソース内の列と比較され、一致がある場合は常に保持されます。 非バインド列は常に保持されます。 データソースに一致するものがないバインド列は削除されます。 コントロールに一致するものがないデータソース内の列によって、新しい <xref:System.Windows.Forms.DataGridViewColumn> オブジェクトが生成されます。これは <xref:System.Windows.Forms.DataGridView.Columns%2A> コレクションの末尾に追加されます。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#020](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#020)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#020](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#020)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- `customersDataGridView` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- <xref:System.Windows.Forms.DataGridView> という名前の `customersDataGridView` コントロール。  
   
 - `Customers`という名前のテーブルを持つ `customersDataSet` という名前の <xref:System.Data.DataSet> オブジェクト。  
   
 - <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType>、および <xref:System.Xml?displayProperty=nameWithType> の各アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A?displayProperty=nameWithType>

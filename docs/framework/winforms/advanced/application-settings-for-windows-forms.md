@@ -1,5 +1,5 @@
 ---
-title: アプリケーション設定
+title: アプリケーションの設定
 ms.date: 04/07/2017
 f1_keywords:
 - ClientApplicationSettings
@@ -30,7 +30,7 @@ Windows フォームのアプリケーション設定の機能により、カス
  [Application Settings for Custom Controls](application-settings-for-custom-controls.md)  
  サード パーティ製のアプリケーションでホストされている場合、アプリケーション設定を保存する機能をカスタム コントロールに追加するためにしなければならないことについて説明します。  
   
- [方法 : アプリケーション設定を作成する](how-to-create-application-settings.md)  
+ [方法: アプリケーション設定を作成する](how-to-create-application-settings.md)  
  アプリケーション セッション間で永続化される新しいアプリケーション設定を作成する方法を示します。  
   
  [方法: アプリケーション設定を検証する](how-to-validate-application-settings.md)  
@@ -41,6 +41,6 @@ Windows フォームのアプリケーション設定の機能により、カス
 [Windows フォーム構成セクション](../../configure-apps/file-schema/winforms/index.md)    
 .NET Framework 4.7 以降の Windows フォームアプリケーションで高 DPI サポートを有効にするための設定について説明します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム](../index.md)

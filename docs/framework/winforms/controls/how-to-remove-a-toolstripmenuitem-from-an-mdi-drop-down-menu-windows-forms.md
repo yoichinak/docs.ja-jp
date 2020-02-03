@@ -26,7 +26,7 @@ ms.locfileid: "76735844"
   
 1. フォームを作成し、その <xref:System.Windows.Forms.Form.IsMdiContainer%2A> プロパティを `true` に設定します。  
   
-2. <xref:System.Windows.Forms.MenuStrip> を `Form1` に追加し、<xref:System.Windows.Forms.MenuStrip> の <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> プロパティを `true` に設定します。  
+2. <xref:System.Windows.Forms.MenuStrip> を `Form1` に追加し、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> の <xref:System.Windows.Forms.MenuStrip> プロパティを `true` に設定します。  
   
 3. トップレベル メニュー項目を `Form1` の <xref:System.Windows.Forms.MenuStrip> に追加し、その <xref:System.Windows.Forms.Control.Text%2A> プロパティを「`&File`」に設定しますす。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76735844"
   
 5. `&Import from` サブメニュー項目に2つのサブメニュー項目を追加し、それらの <xref:System.Windows.Forms.ToolStripItem.Text%2A> プロパティを `&Word` および `&Excel`に設定します。  
   
-6. プロジェクトにフォームを追加し、フォームに <xref:System.Windows.Forms.MenuStrip> を追加し、`Form2` の <xref:System.Windows.Forms.MenuStrip> の <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> のプロパティを `true` に設定します。  
+6. プロジェクトにフォームを追加し、フォームに <xref:System.Windows.Forms.MenuStrip> を追加し、<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> の `Form2` の <xref:System.Windows.Forms.MenuStrip> のプロパティを `true` に設定します。  
   
 7. トップレベル メニュー項目を `Form2` の <xref:System.Windows.Forms.MenuStrip> に追加し、その <xref:System.Windows.Forms.ToolStripItem.Text%2A> プロパティを「`&File`」に設定しますす。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "76735844"
   
     |Form2 のメニュー項目|MergeAction 値|MergeIndex 値|  
     |---------------------|-----------------------|----------------------|  
-    |File|MatchOnly|-1|  
-    |からのインポート|MatchOnly|-1|  
+    |ファイル|MatchOnly|-1|  
+    |インポート:|MatchOnly|-1|  
     |Word|[削除]|-1|  
   
 10. `Form1`で、`&Open`<xref:System.Windows.Forms.ToolStripMenuItem>の <xref:System.Windows.Forms.Control.Click> イベントのイベントハンドラーを作成します。  
@@ -85,16 +85,16 @@ ms.locfileid: "76735844"
     System.EventHandler(this.openToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- `Form1` と `Form2` という名前の 2 つの <xref:System.Windows.Forms.Form> コントロール。  
+- <xref:System.Windows.Forms.Form> と `Form1` という名前の 2 つの `Form2` コントロール。  
   
-- `Form1` 上の `menuStrip1` という名前の <xref:System.Windows.Forms.MenuStrip> コントロールと、`Form2` 上の `menuStrip2` という名前の <xref:System.Windows.Forms.MenuStrip> コントロール。  
+- <xref:System.Windows.Forms.MenuStrip> 上の `Form1` という名前の `menuStrip1` コントロールと、<xref:System.Windows.Forms.MenuStrip> 上の `Form2` という名前の `menuStrip2` コントロール。  
   
 - <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: MDI 親フォームを作成する](../advanced/how-to-create-mdi-parent-forms.md)
 - [方法: MDI 子フォームを作成する](../advanced/how-to-create-mdi-child-forms.md)

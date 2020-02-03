@@ -23,11 +23,11 @@ Windows フォームの <xref:System.Windows.Forms.FontDialog> コンポーネ�
  [方法: FontDialog コンポーネントを使用してフォントの一覧を表示する](how-to-show-a-font-list-with-the-fontdialog-component.md)  
  実行時に <xref:System.Windows.Forms.FontDialog> コンポーネントのインスタンスを使用してフォントを選択する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.FontDialog>  
  <xref:System.Windows.Forms.FontDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)  
  ユーザーがアプリケーションまたはシステムとの標準的な対話を実行できるようにするコントロールとコンポーネントのセットについて説明します。  
   

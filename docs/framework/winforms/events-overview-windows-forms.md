@@ -43,7 +43,7 @@ ms.locfileid: "76743487"
 
  デリゲートと共に使用される関連付けの機構は動的です。デリゲートは、シグネチャがイベント ハンドラのシグネチャと一致する任意のメソッドに実行時に関連付けできます。 この機能によって、状況に応じて関連付けるメソッドを設定または変更したり、イベント ハンドラをコントロールに動的に関連付けることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
+- [Windows フォーム内のイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
 - [イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)

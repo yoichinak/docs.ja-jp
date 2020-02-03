@@ -106,6 +106,6 @@ logman stop Wcf
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [AppFabric の監視のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

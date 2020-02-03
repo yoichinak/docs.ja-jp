@@ -62,7 +62,7 @@ Windows フォーム <xref:System.Windows.Forms.ErrorProvider> コンポーネ�
     this.BindingContext [DataTable1].Position = 5;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ErrorProvider コンポーネントの概要](errorprovider-component-overview-windows-forms.md)
 - [方法: Windows フォーム ErrorProvider コンポーネントを使用してフォーム検証でエラー アイコンを表示する](display-error-icons-for-form-validation-with-wf-errorprovider.md)

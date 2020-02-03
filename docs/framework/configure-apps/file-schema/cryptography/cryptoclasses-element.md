@@ -35,24 +35,24 @@ ms.locfileid: "76732880"
  次のセクションでは、属性、子要素、親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- ありません。  
+ [なし] :  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|説明|  
+|要素|[説明]|  
 |-------------|-----------------|  
 |[\<cryptoClass >](cryptoclass-element.md)|**\<nameEntry>** 要素内の表示名へのマッピングを持つ暗号化クラスを含みます。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|[説明]|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
 |`cryptoNameMapping`|表示名へのクラスのマッピングを含みます。|  
-|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
+|`mscorlib`|`cryptographySettings` 要素を格納します。|  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次の例は、\<の**cryptoclass >** 要素を使用して、暗号化クラスを参照し、ランタイムを構成する方法を示しています。 その後、文字列 "RSA" を <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> メソッドに渡し、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> メソッドを使用して `MyCryptoRSAClass` オブジェクトを返すことができます。  
   
 ```xml  
@@ -76,11 +76,11 @@ ms.locfileid: "76732880"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Security.Cryptography>
 - [構成ファイル スキーマ](../index.md)
 - [暗号化設定スキーマ](index.md)
-- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
-- [System.Security.Cryptography.CryptoConfig.CreateFromName](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
+- [暗号サービス](../../../../standard/security/cryptographic-services.md)
+- [CryptoConfig. CreateFromName のようになります。](xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A)
 - [暗号化クラスの設定](../../configure-cryptography-classes.md)

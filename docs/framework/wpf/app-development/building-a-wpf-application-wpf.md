@@ -28,7 +28,7 @@ WPF アプリケーションは、次の方法でコンパイルできます。
 
 - Microsoft Build Engine (MSBuild)。 コードと XAML ファイルに加えて、アプリケーションには MSBuild プロジェクト ファイルを含める必要があります。 詳細については、「MSBuild」を参照してください。
 
-- Visual Studio: Visual Studio は、MSBuild を使用して WPF アプリケーションをコンパイルする統合開発環境であり、UI を作成するためのビジュアル デザイナーを含んでいます。 詳細については、「 [Visual studio を使用したコードの記述と管理](/visualstudio/ide/index-writing-code)」および「 [visual STUDIO での XAML のデザイン](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)」を参照してください。
+- 見ることができます。 Visual Studio は、MSBuild を使用して WPF アプリケーションをコンパイルする統合開発環境であり、UI を作成するためのビジュアル デザイナーを含んでいます。 詳細については、「 [Visual studio を使用したコードの記述と管理](/visualstudio/ide/index-writing-code)」および「 [visual STUDIO での XAML のデザイン](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)」を参照してください。
 
 <a name="The_Windows_Presentation_Foundation_Build_Pipeline"></a>
 
@@ -66,7 +66,7 @@ MSBuild がアセンブリを検索する最初の場所は、参照アセンブ
 
 この手順では、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルを解析してコンパイルし、ランタイムが XML の解析とプロパティ値の検証に時間を費やすことがないようにします。 コンパイルされた [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルを事前にトークン化するため、実行時の読み込みは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルを読み込むよりもはるかに短時間で終わります。
 
-この手順では、`Page` ビルド項目である [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルごとに、次のアクティビティが実行されます。
+この手順では、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ビルド項目である `Page` ファイルごとに、次のアクティビティが実行されます。
 
 1. [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルがマークアップ コンパイラによって解析されます。
 
@@ -186,9 +186,9 @@ WPF ビルドシステムでは、インクリメンタルビルドがサポー�
 
 - 何も再コンパイルされない (プロジェクトに何も変更が加えられていない場合)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)
-- [WPF MSBuild Reference (WPF MSBuild リファレンス)](/visualstudio/msbuild/wpf-msbuild-reference)
+- [WPF MSBuild のリファレンス](/visualstudio/msbuild/wpf-msbuild-reference)
 - [WPF におけるパッケージの URI](pack-uris-in-wpf.md)
 - [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)

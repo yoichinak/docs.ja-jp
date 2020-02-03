@@ -79,7 +79,7 @@ ms.locfileid: "76740179"
   
      `PopulateDataGridView`に表示されている曲を表示する <xref:System.Windows.Forms.DataGridView> コントロールが表示されます。 **[行の追加]** ボタンを使用して新しい行を追加できます。また、 **[行の削除]** ボタンを使用して、選択した行を削除できます。 バインドされていない <xref:System.Windows.Forms.DataGridView> コントロールはデータストアであり、そのデータは、<xref:System.Data.DataSet> や配列などの外部ソースからは独立しています。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  このアプリケーションでは、<xref:System.Windows.Forms.DataGridView> コントロールの機能についての基本的な理解を得ることができます。 <xref:System.Windows.Forms.DataGridView> コントロールの外観と動作は、次のいくつかの方法でカスタマイズできます。  
   
 - 罫線とヘッダーのスタイルを変更します。 詳細については、「[方法: Windows フォーム DataGridView コントロールの境界線とグリッド線のスタイルを変更する](change-the-border-and-gridline-styles-in-the-datagrid.md)」を参照してください。  
@@ -92,7 +92,7 @@ ms.locfileid: "76740179"
   
 - セルの外観をカスタマイズします。 詳細については、「[方法: Windows フォーム Datagridview コントロールのセルの外観をカスタマイズ](customize-the-appearance-of-cells-in-the-datagrid.md)する」および「[方法: Windows フォーム Datagridview コントロールの既定のセルスタイルを設定する](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows フォーム DataGridView コントロールでのデータの表示](displaying-data-in-the-windows-forms-datagridview-control.md)

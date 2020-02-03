@@ -18,7 +18,7 @@ ms.locfileid: "76744597"
   
 ## <a name="performance-impact-high"></a>パフォーマンスへの影響: 高  
   
-|property|[推奨設定]|  
+|プロパティ|推奨|  
 |-|-|  
 |<xref:System.Windows.Media.Brush>|ブラシの速度 (最速から低速):<br /><br /> <xref:System.Windows.Media.SolidColorBrush><br /><br /> <xref:System.Windows.Media.LinearGradientBrush><br /><br /> <xref:System.Windows.Media.ImageBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (キャッシュ済み)<br /><br /> <xref:System.Windows.Media.VisualBrush> (キャッシュ済み)<br /><br /> <xref:System.Windows.Media.RadialGradientBrush><br /><br /> <xref:System.Windows.Media.DrawingBrush> (キャッシュなし)<br /><br /> <xref:System.Windows.Media.VisualBrush> (キャッシュなし)|  
 |<xref:System.Windows.UIElement.ClipToBoundsProperty>|<xref:System.Windows.Controls.Viewport3D> の内容を Viewport3D's 四角形に明示的にクリップ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 必要がない場合は常に、`Viewport3D.ClipToBounds` を false に設定します。 アンチエイリアス化されたクリップ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は非常に遅くなり、<xref:System.Windows.Controls.Viewport3D>では `ClipToBounds` が既定で有効 (低速) になります。|  
@@ -26,13 +26,13 @@ ms.locfileid: "76744597"
 |<xref:System.Windows.Media.Media3D.GeometryModel3D>|異なるモデルを作成するのは、異なる素材または変換が必要な場合のみにしてください。  それ以外の場合は、同じ素材を持つ多数の <xref:System.Windows.Media.Media3D.GeometryModel3D> インスタンスを結合し、いくつかの大きな <xref:System.Windows.Media.Media3D.GeometryModel3D> と <xref:System.Windows.Media.Media3D.MeshGeometry3D> インスタンスに変換します。|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|メッシュアニメーション—フレームごとにメッシュの個々の頂点を変更することは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]では常に効率的であるとは限りません。  各頂点が変更されたときの変更通知のパフォーマンスへの影響を最小限に抑えるには、頂点ごとの変更を実行する前に、ビジュアルツリーからメッシュをデタッチします。  メッシュが変更されたら、ビジュアルツリーに再アタッチします。  また、この方法でアニメーション化されるメッシュのサイズを最小化してみてください。|  
 |3D アンチエイリアシング|表示速度を上げるには、添付プロパティ <xref:System.Windows.Media.RenderOptions.EdgeMode%2A> を `Aliased`に設定して、<xref:System.Windows.Controls.Viewport3D> のマルチサンプリングを無効にします。  既定では、3D アンチエイリアシングは、1ピクセルあたり4サンプルの Windows で有効になっています。|  
-|テキスト|3D シーンのライブテキスト (<xref:System.Windows.Media.DrawingBrush> または <xref:System.Windows.Media.VisualBrush>内にあるためライブテキスト) が低速になることがあります。 テキストが変更されない限り、(<xref:System.Windows.Media.Imaging.RenderTargetBitmap>経由で) テキストの画像を使用してください。|  
+|Text|3D シーンのライブテキスト (<xref:System.Windows.Media.DrawingBrush> または <xref:System.Windows.Media.VisualBrush>内にあるためライブテキスト) が低速になることがあります。 テキストが変更されない限り、(<xref:System.Windows.Media.Imaging.RenderTargetBitmap>経由で) テキストの画像を使用してください。|  
 |<xref:System.Windows.Media.TileBrush>|ブラシの内容が静的でないために3D シーンで <xref:System.Windows.Media.VisualBrush> または <xref:System.Windows.Media.DrawingBrush> を使用する必要がある場合は、ブラシのキャッシュを試します (添付プロパティ <xref:System.Windows.Media.RenderOptions.CachingHint%2A> を `Cache`に設定します)。  必要な品質レベルを維持したまま、キャッシュされたブラシが頻繁に再生成されないように、(添付プロパティ <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMinimum%2A> および <xref:System.Windows.Media.RenderOptions.CacheInvalidationThresholdMaximum%2A>) のスケール無効化の最小しきい値と最大値を設定します。  既定では、<xref:System.Windows.Media.DrawingBrush> と <xref:System.Windows.Media.VisualBrush> はキャッシュされません。つまり、ブラシで塗りつぶされたものを再描画する必要があるたびに、ブラシのコンテンツ全体を中間サーフェイスに再描画する必要があります。|  
 |<xref:System.Windows.Media.Effects.BitmapEffect>|<xref:System.Windows.Media.Effects.BitmapEffect> は、影響を受けるすべてのコンテンツを強制的にハードウェアアクセラレータなしで表示します。  最適なパフォーマンスを得るには、<xref:System.Windows.Media.Effects.BitmapEffect>を使用しないでください。|  
   
 ## <a name="performance-impact-medium"></a>パフォーマンスへの影響: 中  
   
-|property|[推奨設定]|  
+|プロパティ|推奨|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|メッシュが共有頂点を持つ隣接する三角形として定義され、それらの頂点の位置、法線、およびテクスチャの座標が同じである場合は、各共有頂点を1回だけ定義し、<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>でインデックスを使用して三角形を定義します。|  
 |<xref:System.Windows.Media.ImageBrush>|サイズを明示的に制御している場合 (<xref:System.Windows.Media.Imaging.RenderTargetBitmap> や <xref:System.Windows.Media.ImageBrush>を使用している場合) は、テクスチャのサイズを最小限に抑えてください。  解像度が低くなると、画質が低下する可能性があるので、品質とパフォーマンスのバランスを適切に見つけることができます。|  
@@ -50,15 +50,15 @@ ms.locfileid: "76744597"
   
 ## <a name="performance-impact-low"></a>パフォーマンスへの影響: 低  
   
-|property|[推奨設定]|  
+|プロパティ|推奨|  
 |-|-|  
 |<xref:System.Windows.Media.Media3D.Transform3DGroup>|アニメーションまたはデータバインディングが不要な場合は、複数の変換を含む変換グループを使用するのではなく、1つの <xref:System.Windows.Media.Media3D.MatrixTransform3D>を使用して、変換グループに個別に存在する可能性があるすべての変換の積として設定します。|  
 |<xref:System.Windows.Media.Media3D.Light>|シーンのライト数を最小限に抑えます。 シーン内のライトが多すぎると、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 強制的にソフトウェアレンダリングにフォールバックされます。  制限は、約 110 <xref:System.Windows.Media.Media3D.DirectionalLight> オブジェクト、70 <xref:System.Windows.Media.Media3D.PointLight> オブジェクト、または 40 <xref:System.Windows.Media.Media3D.SpotLight> オブジェクトです。|  
 |<xref:System.Windows.Media.Media3D.ModelVisual3D>|オブジェクトを別の <xref:System.Windows.Media.Media3D.ModelVisual3D> インスタンスに配置することで、オブジェクトを静的オブジェクトから分離します。  ModelVisual3D は、変換された境界をキャッシュするため <xref:System.Windows.Media.Media3D.GeometryModel3D> よりも "重い" です。  GeometryModel3D はモデルとして最適化されています。ModelVisual3D はシーンノードになるように最適化されています。  ModelVisual3D を使用して、GeometryModel3D の共有インスタンスをシーンに配置します。|  
 |<xref:System.Windows.Media.Media3D.Light>|シーンのライト数を変更する回数を最小限に抑えます。  これらの構成が既に存在していて、シェーダーがキャッシュされている場合を除き、ライト数を変更するたびにシェーダーの再生成と再コンパイルが行われます。|  
-|淡色|黒のライトは表示されませんが、レンダリング時間が追加されます。省略することを検討してください。|  
+|浅煎り|黒のライトは表示されませんが、レンダリング時間が追加されます。省略することを検討してください。|  
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|MeshGeometry3D's <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>、<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>、<xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>、<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>など、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]の大きなコレクションの構築時間を最小限に抑えるには、値を作成する前にコレクションのサイズを事前に設定します。 可能であれば、コレクションのコンストラクターに、配列やリストなどの事前設定されたデータ構造を渡します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [3-D グラフィックスの概要](3-d-graphics-overview.md)

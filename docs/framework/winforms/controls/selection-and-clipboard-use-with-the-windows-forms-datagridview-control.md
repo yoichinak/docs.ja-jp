@@ -32,7 +32,7 @@ ms.locfileid: "76743068"
  [方法: ユーザーが、Windows フォーム DataGridView コントロールからクリップボードに複数のセルをコピーできるようにする](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  コントロールでクリップボードのサポートを有効にする方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "76743068"
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection>  
  <xref:System.Windows.Forms.DataGridViewSelectedColumnCollection> クラスのリファレンスドキュメントを提供します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
 - [Windows フォーム DataGridView コントロールの既定のキーボード処理とマウス処理](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

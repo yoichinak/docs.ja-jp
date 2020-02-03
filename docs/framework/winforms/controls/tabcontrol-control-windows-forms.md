@@ -38,11 +38,11 @@ Windows フォーム `TabControl` は、ノートの仕切りや書類キャビ�
   
  「[方法: デザイナーを使用して Windows フォーム TabControl を使用してタブを追加および削除](add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md)する」、「[方法: デザイナーを使用してタブページにコントロールを追加](how-to-add-a-control-to-a-tab-page-using-the-designer.md)する」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.TabControl> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)  
  多くの場合、タブを表示するダイアログ ボックスのタスクの一覧を示します。  
   

@@ -30,7 +30,7 @@ ms.locfileid: "76745802"
 
 2. **[プロパティ]** ウィンドウで、[<xref:System.Windows.Forms.ListView.View%2A>] プロパティを選択し、 **[タイル]** を選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [ListView コントロールの概要](listview-control-overview-windows-forms.md)

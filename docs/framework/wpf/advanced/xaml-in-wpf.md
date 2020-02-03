@@ -35,7 +35,7 @@ ms.locfileid: "76741881"
 [WPF XAML 拡張機能](wpf-xaml-extensions.md)  
 [マークアップの互換性 (mc:) 言語機能](markup-compatibility-mc-language-features.md)  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
 
 [WPF アーキテクチャ](wpf-architecture.md)  
 [基本要素](base-elements.md)  

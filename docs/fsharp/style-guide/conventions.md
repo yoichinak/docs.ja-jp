@@ -189,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>ドメインに固有の型のエラーケースと無効な状態を表します。
 
-[判別共用体](../language-reference/discriminated-unions.md)をF#使用すると、によって、型システム内の問題のあるプログラムの状態を表すことができます。 例:
+[判別共用体](../language-reference/discriminated-unions.md)をF#使用すると、によって、型システム内の問題のあるプログラムの状態を表すことができます。 次に例を示します。
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -224,7 +224,7 @@ let handleWithdrawal amount =
 
 例外を発生させるF#ためにで使用できる主な構成要素は、次の優先順位で考慮する必要があります。
 
-| 関数 | 構文 | 目的 |
+| Function | 構文 | 目的 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 指定された引数名を使用して `System.ArgumentNullException` を発生させます。 |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 指定された引数名とメッセージを使用して `System.ArgumentException` を発生させます。 |
@@ -523,7 +523,7 @@ let rec processStructPoint (p: SPoint) offset times =
 
 #### <a name="prefer-struct-discriminated-unions-when-the-data-type-is-small"></a>データ型が小さい場合に構造体の判別共用体を優先する
 
-構造体の[ F# ](../language-reference/discriminated-unions.md)組とレコードを使用したパフォーマンスに関する前の観察でも、判別共用体が保持されます。 次のコードがあるとします。
+構造体の[ F# ](../language-reference/discriminated-unions.md)組とレコードを使用したパフォーマンスに関する前の観察でも、判別共用体が保持されます。 次のコードについて考えてみましょう。
 
 ```fsharp
     type Name = Name of string
@@ -620,7 +620,7 @@ type Closure1Table() =
 
 #### <a name="prefer-let-mutable-to-reference-cells"></a>セルの参照に `let mutable` を優先する
 
-参照セルは、値自体ではなく、値への参照を表す方法です。 パフォーマンスクリティカルなコードには使用できますが、推奨されません。 次に例を示します。
+参照セルは、値自体ではなく、値への参照を表す方法です。 パフォーマンスクリティカルなコードには使用できますが、推奨されません。 次の例を確認してください。
 
 ```fsharp
 let kernels =
@@ -672,10 +672,10 @@ F#では、オブジェクトとオブジェクト指向 (OO) の概念が完全
 * 自動プロパティ
 * `IDisposable` と `IEnumerable` の実装
 * 型拡張
-* Events
+* events
 * 構造体
 * デリゲート
-* 列挙体
+* 列挙型
 
 **一般に、これらの機能を使用する必要がない場合は、次のようにしてください。**
 

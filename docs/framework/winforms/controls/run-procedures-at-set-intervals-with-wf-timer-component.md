@@ -43,7 +43,7 @@ ms.locfileid: "76743117"
   
 5. 適切なタイミングで <xref:System.Windows.Forms.Timer.Enabled%2A> プロパティを `false` に設定し、プロシージャがもう一度実行されることがないようにします。 間隔を `0` に設定しても、タイマーは停止しません。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  この最初のコード例は、1 秒単位で 1 日の時間を追跡します。 フォーム上で <xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.Label>、および <xref:System.Windows.Forms.Timer> コンポーネントを使用します。 <xref:System.Windows.Forms.Timer.Interval%2A> プロパティが 1000 (1 秒に等しい) に設定されます。 <xref:System.Windows.Forms.Timer.Tick> イベントで、ラベルのキャプションが現在の時刻に設定されます。 ボタンをクリックしたときに、<xref:System.Windows.Forms.Timer.Enabled%2A> プロパティが `false` に設定されると、タイマーがラベルのキャプションを更新しなくなります。 次のコード例では、`Button1`という名前の <xref:System.Windows.Forms.Button> コントロール、`Timer1`という名前の <xref:System.Windows.Forms.Timer> コントロール、および <xref:System.Windows.Forms.Label> という名前の `Label1`コントロールを持つフォームがある必要があります。  
   
 ```vb  
@@ -148,7 +148,7 @@ private:
    }  
 ```  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  この 2 つ目のコード例は、ループが終了するまでにプロシージャを 600 ミリ秒ごとに実行します。 次のコード例では、`Button1`という名前の <xref:System.Windows.Forms.Button> コントロール、`Timer1`という名前の <xref:System.Windows.Forms.Timer> コントロール、および <xref:System.Windows.Forms.Label> という名前の `Label1`コントロールを持つフォームがある必要があります。  
   
 ```vb  
@@ -242,7 +242,7 @@ private:
    }  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer コンポーネント](timer-component-windows-forms.md)

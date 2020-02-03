@@ -25,7 +25,7 @@ ms.locfileid: "76742143"
  [方法: バックグラウンド スレッドを使用してファイルを検索する](how-to-use-a-background-thread-to-search-for-files.md)  
  <xref:System.Threading> 名前空間と <xref:System.Windows.Forms.Control.BeginInvoke%2A> メソッドを使用してファイルを非同期的に検索する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.ComponentModel.BackgroundWorker>  
  非同期操作のワーカースレッドをカプセル化するコンポーネントについて説明します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76742143"
  <xref:System.Windows.Forms.PictureBox.LoadAsync%2A>  
  画像を非同期に読み込む方法を説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [方法: バックグラウンドで操作を実行する](how-to-run-an-operation-in-the-background.md)  
  <xref:System.ComponentModel.BackgroundWorker> コンポーネントで時間のかかる操作を実行する方法について説明します。  
   

@@ -17,16 +17,16 @@ ms.locfileid: "76742879"
 Windows フォーム `Splitter` コントロールを使用して、ドッキングされたコントロールのサイズを実行時に変更します。 `Splitter` コントロールは、多くの場合、フォームで使用されます。 Windows エクスプローラーのように、データペインにはさまざまな時間の異なる幅の情報が含まれています。  
   
 > [!NOTE]
-> <xref:System.Windows.Forms.SplitContainer> に置き換えられ、以前のバージョンの `Splitter` コントロールに機能が追加されますが、`Splitter` は下位互換性と将来の使用の両方のために保持されます。  
+> <xref:System.Windows.Forms.SplitContainer> コントロールは、以前のバージョンの `Splitter` コントロールに代わると共に追加の機能を提供します。ただし、`Splitter` コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Splitter コントロールの概要](splitter-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.Splitter> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

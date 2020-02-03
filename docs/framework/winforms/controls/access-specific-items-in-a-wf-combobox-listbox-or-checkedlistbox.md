@@ -51,7 +51,7 @@ Windows フォームコンボボックス、リストボックス、またはチ
        }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

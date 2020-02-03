@@ -21,7 +21,7 @@ Windows フォームには、多数の関数を実行するコントロールと
   
 ## <a name="recommended-controls-and-components-by-function"></a>関数別の推奨されるコントロールとコンポーネント  
   
-|関数|Control|説明|  
+|Function|コントロール|[説明]|  
 |--------------|-------------|-----------------|  
 |データ表示|<xref:System.Windows.Forms.DataGridView> コントロール|<xref:System.Windows.Forms.DataGridView> コントロールは、データを表示するためのカスタマイズ可能なテーブルを提供します。 <xref:System.Windows.Forms.DataGridView> クラスを使用すると、セル、行、列、および罫線をカスタマイズできます。 **注:** <xref:System.Windows.Forms.DataGridView> コントロールには、<xref:System.Windows.Forms.DataGrid> コントロールに不足している基本的な機能と高度な機能が多数用意されています。 詳細については、「 [Windows フォーム DataGridView コントロールと DataGrid コントロールの違い](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。|  
 |データバインディングとナビゲーション|<xref:System.Windows.Forms.BindingSource> コンポーネント|通貨管理、変更通知、およびその他のサービスを提供することにより、フォーム上のコントロールを簡単にデータにバインドできます。|  
@@ -62,7 +62,7 @@ Windows フォームには、多数の関数を実行するコントロールと
 ||<xref:System.Windows.Forms.LinkLabel> コントロール|テキストを Web スタイルのリンクとして表示し、ユーザーが特別なテキストをクリックしたときにイベントをトリガーします。 通常、テキストは別のウィンドウまたは Web サイトへのリンクです。|  
 ||<xref:System.Windows.Forms.NotifyIcon> コントロール|バックグラウンドで実行されているアプリケーションを表すタスクバーの状態通知領域にアイコンを表示します。|  
 ||<xref:System.Windows.Forms.ToolStrip> コントロール|テーマの有無にかかわらず、Microsoft Windows XP、Microsoft Office、Microsoft Internet Explorer、またはカスタムのルックアンドフィールを備えたツールバーを作成します。また、テーマを使用するかどうか、およびオーバーフローと実行時の項目の並べ替えをサポートします。 **注:** <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールを置き換えるように設計されています。|  
-|ユーザーヘルプ|<xref:System.Windows.Forms.HelpProvider> コンポーネント|コントロールのポップアップまたはオンラインヘルプを提供します。|  
+|ユーザー ヘルプ|<xref:System.Windows.Forms.HelpProvider> コンポーネント|コントロールのポップアップ ヘルプまたはオンライン ヘルプを提供します。|  
 ||<xref:System.Windows.Forms.ToolTip> コンポーネント|ユーザーがポインターをコントロールの上に置いたときに、コントロールの目的の簡単な説明を表示するポップアップウィンドウを提供します。|  
 |その他のコントロールのグループ化|<xref:System.Windows.Forms.Panel> コントロール|ラベル付けされていないスクロール可能なフレーム上のコントロールのセットをグループ化します。|  
 ||<xref:System.Windows.Forms.GroupBox> コントロール|ラベル付けされた nonscrollable frame で、一連のコントロール (ラジオボタンなど) をグループ化します。|  
@@ -74,7 +74,7 @@ Windows フォームには、多数の関数を実行するコントロールと
   
 ## <a name="superseded-controls-and-components-by-function"></a>置き換えられたコントロールとコンポーネント (関数別)  
   
-|関数|置き換えられるコントロール|推奨代替|  
+|Function|置き換えられるコントロール|推奨代替|  
 |--------------|------------------------|-----------------------------|  
 |データ表示|<xref:System.Windows.Forms.DataGrid>|<xref:System.Windows.Forms.DataGridView>|  
 |情報の表示 (読み取り専用コントロール)|<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
@@ -84,7 +84,7 @@ Windows フォームには、多数の関数を実行するコントロールと
 ||<xref:System.Windows.Forms.StatusBar>|<xref:System.Windows.Forms.StatusStrip>|  
 |フォームのレイアウト|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)

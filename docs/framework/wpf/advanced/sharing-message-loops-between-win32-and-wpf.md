@@ -62,7 +62,7 @@ ms.locfileid: "76731711"
   
  <xref:System.Windows.Interop.HwndSource.AddHook%2A> メソッドを使用してそのメッセージにフックを追加した場合、キーボードシンクに送信されるメッセージが HWND に送られないことがあります。 メッセージがメッセージポンプレベルで直接処理され、`DispatchMessage` 関数に送信されていない可能性があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>

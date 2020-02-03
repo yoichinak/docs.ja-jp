@@ -1,5 +1,5 @@
 ---
-title: Serialization
+title: シリアル化
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
@@ -10,12 +10,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743631"
 ---
-# <a name="serialization"></a>Serialization
+# <a name="serialization"></a>シリアル化
 シリアル化は、オブジェクトを、簡単に永続化または転送できる形式に変換するプロセスです。 たとえば、オブジェクトをシリアル化し、HTTP を使用してインターネット経由で転送し、ターゲットコンピューターで逆シリアル化することができます。
 
  .NET Framework には、さまざまなシリアル化シナリオ用に最適化された3つの主要なシリアル化テクノロジがあります。 これらのテクノロジ、およびテクノロジに関連した主な Framework 型を次の表に示します。
 
-|**テクノロジ名**|**主要な型**|**モデル**|
+|**テクノロジ名**|**主要な型**|**シナリオ**|
 |-------------------------|--------------------|-------------------|
 |**データコントラクトのシリアル化**|<xref:System.Runtime.Serialization.DataContractAttribute> <br /> <xref:System.Runtime.Serialization.DataMemberAttribute> <br /> <xref:System.Runtime.Serialization.DataContractSerializer> <br /> <xref:System.Runtime.Serialization.NetDataContractSerializer> <br /> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> <br /> <xref:System.Runtime.Serialization.ISerializable>|永続化全般<br />Web サービス<br />JSON|
 |**XML シリアル化**|<xref:System.Xml.Serialization.XmlSerializer>|Xml の構造を完全に制御する XML 形式|
@@ -102,7 +102,7 @@ public class Person : ISerializable
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [使用方法のガイドライン](../../../docs/standard/design-guidelines/usage-guidelines.md)

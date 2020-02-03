@@ -32,7 +32,7 @@ Windows フォーム <xref:System.Windows.Forms.TreeView> コントロールで�
 
 4. ノードを削除するには、削除するノードを選択し、 **[削除]** ボタンをクリックします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [TreeView コントロール](treeview-control-windows-forms.md)
 - [TreeView コントロールの概要](treeview-control-overview-windows-forms.md)

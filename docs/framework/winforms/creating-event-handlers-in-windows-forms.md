@@ -38,7 +38,7 @@ ms.locfileid: "76742337"
 
  [方法: デザイナーを使用してイベントハンドラーを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))Windows フォームデザイナーを使用してイベントハンドラーを作成する方法について説明します。
 
-## <a name="related-sections"></a>関連セクション
+## <a name="related-sections"></a>関連項目
 
  [イベント](../../standard/events/index.md)\
  .NET Framework を使用したイベントの処理と発生に関するトピックへのリンクを示します。

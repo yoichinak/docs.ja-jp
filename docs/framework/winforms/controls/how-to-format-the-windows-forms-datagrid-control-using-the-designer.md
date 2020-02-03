@@ -41,7 +41,7 @@ ms.locfileid: "76736797"
 
 2. **[プロパティ]** ウィンドウで、必要に応じて次のプロパティを設定します。
 
-    |property|説明|
+    |プロパティ|[説明]|
     |--------------|-----------------|
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|`BackColor` プロパティは、グリッドの偶数行の色を定義します。 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> プロパティを別の色に設定すると、他のすべての行がこの新しい色 (行1、3、5など) に設定されます。|
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|グリッドの偶数行の背景色 (行0、2、4、6など) です (行0、2、4、6など)。|
@@ -76,7 +76,7 @@ ms.locfileid: "76736797"
 
 1. フォームの <xref:System.Windows.Forms.DataGrid> コントロールを選択します。
 
-2. **[プロパティ]** ウィンドウ<xref:System.Windows.Forms.DataGrid.TableStyles%2A>で、プロパティを選択し、**省略記号**(![Visual Studio](./media/visual-studio-ellipsis-button.png)のプロパティウィンドウ の省略記号ボタン ([...]) をクリックします。
+2. **[プロパティ]** ウィンドウで、[<xref:System.Windows.Forms.DataGrid.TableStyles%2A> プロパティを選択し、**省略記号**(省略記号ボタン ([...]) をクリックします (Visual](./media/visual-studio-ellipsis-button.png)Studio のプロパティウィンドウの![)] ボタンをクリックします。
 
 3. **[DataGridTableStyle コレクションエディター]** ダイアログボックスで、 **[追加]** をクリックして、テーブルスタイルをコレクションに追加します。
 
@@ -86,7 +86,7 @@ ms.locfileid: "76736797"
 
      マッピング名は、どのテーブルスタイルをどのテーブルに使用するかを指定するために使用されます。
 
-5. **DataGridTableStyle Collection エディター**で、 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティを選択し、省略記号ボタン(![Visual Studio](./media/visual-studio-ellipsis-button.png)のプロパティウィンドウの省略記号ボタン ([...]) をクリックします。
+5. **DataGridTableStyle Collection エディター**で、[<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>] プロパティを選択し、省略記号ボタン![(Visual Studio のプロパティウィンドウの省略記号ボタン ([...]) をクリックします。](./media/visual-studio-ellipsis-button.png))。
 
 6. **[System.windows.forms.datagridcolumnstyle> コレクションエディター]** ダイアログボックスで、作成したテーブルのスタイルに列のスタイルを追加します。
 
@@ -95,10 +95,10 @@ ms.locfileid: "76736797"
     > [!NOTE]
     > 書式設定文字列の詳細については、「[型の書式設定](../../../standard/base-types/formatting-types.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [方法 : Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)

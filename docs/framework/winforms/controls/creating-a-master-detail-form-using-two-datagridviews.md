@@ -25,9 +25,9 @@ ms.locfileid: "76740585"
 
 このトピックのコードを単一のリストとしてコピーする方法については、「[方法: 2 つの Windows フォーム DataGridView コントロールを使用してマスター/詳細フォームを作成](create-a-master-detail-form-using-two-datagridviews.md)する」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを完了するための要件は次のとおりです。
+このチュートリアルを完了するには、以下が必要です。
 
 - Northwind SQL Server サンプルデータベースを持つサーバーへのアクセス。
 
@@ -65,7 +65,7 @@ ms.locfileid: "76740585"
 
   2つの <xref:System.Windows.Forms.DataGridView> コントロールが表示されます。 [上位] は Northwind `Customers` テーブルの顧客であり、下部は選択した顧客に対応する `Orders` です。 上部 <xref:System.Windows.Forms.DataGridView>で異なる行を選択すると、それに応じて低い <xref:System.Windows.Forms.DataGridView> の内容が変更されます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このアプリケーションでは、<xref:System.Windows.Forms.DataGridView> コントロールの機能についての基本的な理解を得ることができます。 <xref:System.Windows.Forms.DataGridView> コントロールの外観と動作は、次のいくつかの方法でカスタマイズできます。
 
@@ -79,7 +79,7 @@ ms.locfileid: "76740585"
 
 - セルの外観をカスタマイズします。 詳細については、「[方法: Windows フォーム Datagridview コントロールのセルの外観をカスタマイズ](customize-the-appearance-of-cells-in-the-datagrid.md)する」および「[方法: Windows フォーム Datagridview コントロールの既定のセルスタイルを設定する](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

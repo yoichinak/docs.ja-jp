@@ -44,16 +44,16 @@ ms.locfileid: "76742969"
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#12)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#12)]  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次のコード例では、Northwind サンプルデータベースの Customers テーブルから <xref:System.Windows.Forms.DataGridView> コントロールにデータを読み込み、表示されるデータをフィルター処理して並べ替えます。  
   
  [!code-csharp[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.DataConnectorFilterAndSort#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorFilterAndSort/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例を実行するには、`BindingSource1` という名前の <xref:System.Windows.Forms.BindingSource> と `dataGridView1`という名前の <xref:System.Windows.Forms.DataGridView> を含むフォームにコードを貼り付けます。 フォームの <xref:System.Windows.Forms.Form.Load> イベントを処理し、load イベントハンドラーメソッドで `InitializeSortedFilteredBindingSource` を呼び出します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.BindingSource.Sort%2A>
 - <xref:System.Windows.Forms.BindingSource.Filter%2A>

@@ -26,7 +26,7 @@ Windows フォームの <xref:System.Windows.Forms.OpenFileDialog> コンポー�
 
 フォームに追加されると、Visual Studio の Windows フォームデザイナーの下部にあるトレイに <xref:System.Windows.Forms.OpenFileDialog> コンポーネントが表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.OpenFileDialog>
 - [OpenFileDialog コンポーネント](openfiledialog-component-windows-forms.md)

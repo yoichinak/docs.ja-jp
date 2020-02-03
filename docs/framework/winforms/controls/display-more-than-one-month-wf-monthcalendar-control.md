@@ -37,7 +37,7 @@ Windows フォーム <xref:System.Windows.Forms.MonthCalendar> コントロー�
     monthCalendar1->CalendarDimensions = System::Drawing::Size (3,2);  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)
 - [方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択する](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

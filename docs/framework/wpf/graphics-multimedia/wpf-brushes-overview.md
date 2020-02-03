@@ -26,13 +26,13 @@ ms.locfileid: "76746210"
   
  ほとんどのビジュアルオブジェクトを使用すると、描画方法を指定できます。 次の表に、<xref:System.Windows.Media.Brush>を使用できる一般的なオブジェクトとプロパティの一覧を示します。  
   
-|&lt;クラス&gt; のすべてのオブジェクト|ブラシのプロパティ|  
+|クラス|ブラシのプロパティ|  
 |-----------|----------------------|  
-|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>、<xref:System.Windows.Controls.Border.Background%2A>|  
-|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>、<xref:System.Windows.Controls.Control.Foreground%2A>|  
+|<xref:System.Windows.Controls.Border>|<xref:System.Windows.Controls.Border.BorderBrush%2A>, <xref:System.Windows.Controls.Border.Background%2A>|  
+|<xref:System.Windows.Controls.Control>|<xref:System.Windows.Controls.Control.Background%2A>, <xref:System.Windows.Controls.Control.Foreground%2A>|  
 |<xref:System.Windows.Controls.Panel>|<xref:System.Windows.Controls.Panel.Background%2A>|  
 |<xref:System.Windows.Media.Pen>|<xref:System.Windows.Media.Pen.Brush%2A>|  
-|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>、<xref:System.Windows.Shapes.Shape.Stroke%2A>|  
+|<xref:System.Windows.Shapes.Shape>|<xref:System.Windows.Shapes.Shape.Fill%2A>, <xref:System.Windows.Shapes.Shape.Stroke%2A>|  
 |<xref:System.Windows.Controls.TextBlock>|<xref:System.Windows.Controls.TextBlock.Background%2A>|  
   
  次のセクションでは、さまざまな種類の <xref:System.Windows.Media.Brush> について説明し、それぞれの例を示します。  
@@ -160,7 +160,7 @@ VisualBrush を使用して塗りつぶされる四角形
   
  <xref:System.Windows.Media.VisualBrush> オブジェクトを固定できない理由の詳細については、<xref:System.Windows.Media.VisualBrush> の種類に関するページを参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.Brushes>
@@ -170,5 +170,5 @@ VisualBrush を使用して塗りつぶされる四角形
 - [ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush サンプル](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [方法のトピック](brushes-how-to-topics.md)
+- [データ バインドに関する「方法」トピック](brushes-how-to-topics.md)
 - [パフォーマンスに関するその他の推奨事項](../advanced/optimizing-performance-other-recommendations.md)

@@ -81,7 +81,7 @@ ms.locfileid: "76744427"
   
  .NET Framework XAML サービスの実装であるため、WPF XAML プロセッサは、コレクションプロパティを構成するために次の定義を使用します。 プロパティのプロパティの型は、次のいずれかを実装する必要があります。  
   
-- <xref:System.Collections.IList>を実装します。  
+- <xref:System.Collections.IList> を実装します。  
   
 - <xref:System.Collections.IDictionary> または同等の汎用 (<xref:System.Collections.Generic.IDictionary%602>) を実装します。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "76744427"
 ## <a name="serializing-xaml"></a>XAML のシリアル化  
  コントロールの作成者である場合など、特定のシナリオでは、XAML でインスタンス化できるすべてのオブジェクト表現を、同等の XAML マークアップにシリアル化することもできます。 このトピックでは、シリアル化の要件については説明しません。 「[コントロールの作成の概要](../controls/control-authoring-overview.md)」と「[要素ツリーとシリアル化」を](element-tree-and-serialization.md)参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)

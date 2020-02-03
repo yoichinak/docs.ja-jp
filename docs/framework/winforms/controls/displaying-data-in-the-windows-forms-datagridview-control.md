@@ -49,7 +49,7 @@ ms.locfileid: "76745868"
  [方法: オブジェクトを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
  コントロールを任意のオブジェクトのコレクションにバインドして、各オブジェクトがそれぞれの行に表示されるようにする方法について説明します。  
   
- [方法 : Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+ [方法: Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
  コントロールの特定の行にバインドされたオブジェクトを取得する方法について説明します。  
   
  [チュートリアル: Windows フォームの 2 つの DataGridView コントロールを使用したマスター/詳細形式のフォームの作成](creating-a-master-detail-form-using-two-datagridviews.md)  
@@ -58,7 +58,7 @@ ms.locfileid: "76745868"
  [方法: Windows フォーム DataGridView コントロールのデータの書式設定をカスタマイズする](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)  
  <xref:System.Windows.Forms.DataGridView.CellFormatting?displayProperty=nameWithType> イベントを処理して、セルの値に応じてセルの外観を変更する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
@@ -68,11 +68,11 @@ ms.locfileid: "76745868"
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingSource> コンポーネントのリファレンス ドキュメントを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム DataGridView コントロールでのデータ入力](data-entry-in-the-windows-forms-datagridview-control.md)  
  コントロールのデータに対してユーザーが実行できる追加および修正の仕方を変更する方法を説明するトピックを示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
 - [Windows フォーム DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)

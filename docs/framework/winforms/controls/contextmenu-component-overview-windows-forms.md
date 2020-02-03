@@ -26,7 +26,7 @@ ms.locfileid: "76746202"
   
  <xref:System.Windows.Forms.ContextMenu> コンポーネントのキープロパティは、<xref:System.Windows.Forms.Menu.MenuItems%2A> プロパティです。 メニュー項目を追加するには、プログラムを使用して <xref:System.Windows.Forms.MenuItem> オブジェクトを作成し、ショートカットメニューの <xref:System.Windows.Forms.Menu.MenuItemCollection> に追加します。 ショートカットメニュー内の項目は通常、他のメニューから描画されるので、ほとんどの場合、項目をコピーすることでショートカットメニューに追加します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>

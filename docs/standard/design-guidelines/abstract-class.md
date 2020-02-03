@@ -31,13 +31,13 @@ ms.locfileid: "76739062"
 
  ✔️は、出荷する各抽象クラスから継承される具象型を少なくとも1つ指定する必要があります。
 
- こうすることにより、抽象クラスのデザインを検証できます。 たとえば、<xref:System.IO.FileStream?displayProperty=nameWithType>は<xref:System.IO.Stream?displayProperty=nameWithType>の具象実装です。
+ こうすることにより、抽象クラスのデザインを検証できます。 たとえば、<xref:System.IO.FileStream?displayProperty=nameWithType> は <xref:System.IO.Stream?displayProperty=nameWithType> 抽象クラスの実装です。
 
  *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [型デザインのガイドライン](../../../docs/standard/design-guidelines/type.md)
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)

@@ -15,9 +15,9 @@ ms.locfileid: "76738091"
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF における分離コードと XAML
 <a name="introduction"></a>分離コードは、マークアップで定義されたオブジェクトと結合されるコードを記述するために使用される用語です。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページがマークアップコンパイルされている場合です。 このトピックでは、分離コードの要件と、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]のコードの代替インラインコード機構について説明します。  
   
- このトピックは、次のセクションで構成されています。  
+ このトピックには、次のセクションが含まれます。  
   
-- [必要条件](#Prerequisites)  
+- [前提条件](#Prerequisites)  
   
 - [分離コードと XAML 言語](#codebehind_and_the_xaml_language)  
   
@@ -28,7 +28,7 @@ ms.locfileid: "76738091"
 - [インラインコードの制限事項](#Inline_Code_Limitations)  
   
 <a name="Prerequisites"></a>   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  このトピックでは、「XAML の[概要 (WPF)」](../../../desktop-wpf/fundamentals/xaml.md)を読み、CLR とオブジェクト指向プログラミングに関する基本的な知識を持っていることを前提としています。  
   
 <a name="codebehind_and_the_xaml_language"></a>   
@@ -58,7 +58,7 @@ ms.locfileid: "76738091"
 ## <a name="inline-code-limitations"></a>インラインコードの制限事項  
  インラインコードの使用を回避または制限することを検討してください。 アーキテクチャとコーディングの理念に関して、マークアップと分離コードの分離を維持することで、デザイナーと開発者のロールがより明確になります。 より技術的なレベルでは、インラインコード用に記述するコードを記述するのは困難な場合があります。これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 生成された部分クラスに常に書き込みを行い、既定の XML 名前空間マッピングのみを使用できるためです。 `using` ステートメントを追加することはできないため、作成する API 呼び出しの多くを完全に修飾する必要があります。 既定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マッピングには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アセンブリに存在するほとんどの CLR 名前空間が含まれます。他の CLR 名前空間内に含まれる型およびメンバーの呼び出しを完全に修飾する必要があります。 また、インラインコードで部分クラスを超えるものを定義することはできません。また、参照するすべてのユーザーコードエンティティは、生成された部分クラス内のメンバーまたは変数として存在する必要があります。 マクロや、グローバル変数やビルド変数に対する `#ifdef` など、言語固有のプログラミング機能も使用できません。 詳細については、「 [X:Code 組み込み XAML 型](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [x:Code 組み込み XAML 型 ](../../../desktop-wpf/xaml-services/xcode-intrinsic-xaml-type.md)

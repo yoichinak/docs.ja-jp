@@ -22,8 +22,8 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
  このトピックでは、Win32 のリストボックスコントロールをホストする、 [WPF の ListBox コントロール](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)をホストするアプリケーションについて説明します。 この一般的な手順は、Win32 ウィンドウをホストするように拡張できます。  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>要件  
- このトピックでは、WPF と Windows API プログラミングの基本的な知識があることを前提としています。 WPF プログラミングの基本的な概要については、[概要](../getting-started/index.md)に関するページを参照してください。 Windows API プログラミングの概要については、「チャールズ Petzold 著) による特定の*プログラミングウィンドウ*」に記載されている、多くの書籍を参照してください。  
+## <a name="requirements"></a>必要条件  
+ このトピックでは、WPF と Windows API プログラミングの基本的な知識があることを前提としています。 WPF プログラミングの基本的な概要については、「[はじめに](../getting-started/index.md)」を参照してください。 Windows API プログラミングの概要については、「チャールズ Petzold 著) による特定の*プログラミングウィンドウ*」に記載されている、多くの書籍を参照してください。  
   
  このトピックに付属するサンプルはにC#実装されているため、プラットフォーム呼び出しサービス (PInvoke) を使用して Windows API にアクセスします。 PInvoke の知識は役に立ちますが、必須ではありません。  
   
@@ -46,7 +46,7 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
 5. ホストウィンドウを作成したら、ホストされているウィンドウの HWND を返します。 1つ以上の Win32 コントロールをホストする場合は、通常、ホストウィンドウを HWND の子として作成し、そのホストウィンドウの子コントロールを作成します。 ホストウィンドウでコントロールをラップすると、WPF ページでコントロールからの通知を簡単に受信できるようになります。これは、HWND 境界を越えた通知に関する特定の Win32 の問題を処理します。  
   
-6. 子コントロールからの通知など、ホストウィンドウに送信される選択されたメッセージを処理します。 これには、2 つの方法があります。  
+6. 子コントロールからの通知など、ホストウィンドウに送信される選択されたメッセージを処理します。 2 つの方法があります。  
   
     - ホスティングクラスでメッセージを処理する場合は、<xref:System.Windows.Interop.HwndHost> クラスの <xref:System.Windows.Interop.HwndHost.WndProc%2A> メソッドをオーバーライドします。  
   
@@ -153,7 +153,7 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
  最後に、`handled` を `true` に設定して、メッセージが処理されたことを示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Interop.HwndHost>
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)

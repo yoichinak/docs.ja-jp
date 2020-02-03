@@ -25,7 +25,7 @@ ms.locfileid: "76738944"
 
 <a name="Requirements"></a>
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 .NET Framework アドインモデルに関する知識が必要です。 詳細については、「[アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))」を参照してください。
 
@@ -308,11 +308,11 @@ WPF が <xref:System.Windows.Interop.HwndSource>、<xref:System.Windows.Interop.
 
 既定では、複数のアプリケーションドメインを使用すると、各アプリケーションに必要なさまざまな .NET Framework アセンブリが、そのアプリケーションのドメインに読み込まれます。 その結果、新しいアプリケーション ドメインを作成してその中でアプリケーションを開始するために必要な時間がパフォーマンスに影響します。 ただし、アプリケーションドメインが既に読み込まれている場合は、アプリケーションドメイン間でアセンブリを共有するようにアプリケーションに指示することによって、開始時間を短縮する方法を .NET Framework ます。 これを行うには、<xref:System.LoaderOptimizationAttribute> 属性を使用します。これは、エントリポイントメソッド (`Main`) に適用する必要があります。 この場合、アプリケーション定義を実装するコードのみを使用する必要があります (「[アプリケーション管理の概要](application-management-overview.md)」を参照)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.LoaderOptimizationAttribute>
 - [アドインおよび拡張機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [アプリケーション ドメイン](../../app-domains/application-domains.md)
 - [.NET Framework リモート処理の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [オブジェクトをリモート処理可能にする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [方法のトピック](how-to-topics.md)
+- [データ バインドに関する「方法」トピック](how-to-topics.md)

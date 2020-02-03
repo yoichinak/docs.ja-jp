@@ -51,7 +51,7 @@ ms.locfileid: "76744807"
  ![Visual オブジェクトから派生したクラスのダイアグラム](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual クラス  
- <xref:System.Windows.Media.DrawingVisual> は、図形、画像、またはテキストを表示するために使用される軽量の描画クラスです。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないため、実行時のパフォーマンスが向上するからです。 そのため、背景やクリップ アートの描画に適しています。 <xref:System.Windows.Media.DrawingVisual> を使用すると、カスタムビジュアルオブジェクトを作成できます。 詳しくは、「[DrawingVisual オブジェクトの使用](using-drawingvisual-objects.md)」をご覧ください。  
+ <xref:System.Windows.Media.DrawingVisual> は、図形、画像、またはテキストを表示するために使用される軽量の描画クラスです。 このクラスが軽量と見なされる理由は、レイアウトやイベントの処理を行わないため、実行時のパフォーマンスが向上するからです。 このため、背景やクリップ アートの描画に適しています。 <xref:System.Windows.Media.DrawingVisual> を使用すると、カスタムビジュアルオブジェクトを作成できます。 詳しくは、「[DrawingVisual オブジェクトの使用](using-drawingvisual-objects.md)」を参照してください。  
   
 ### <a name="viewport3dvisual-class"></a>Viewport3DVisual クラス  
  <xref:System.Windows.Media.Media3D.Viewport3DVisual> は、2D <xref:System.Windows.Media.Visual> と <xref:System.Windows.Media.Media3D.Visual3D> オブジェクトの間のブリッジを提供します。 <xref:System.Windows.Media.Media3D.Visual3D> クラスは、すべての3D ビジュアル要素の基本クラスです。 <xref:System.Windows.Media.Media3D.Viewport3DVisual> では、<xref:System.Windows.Media.Media3D.Viewport3DVisual.Camera%2A> 値と <xref:System.Windows.Media.Media3D.Viewport3DVisual.Viewport%2A> 値を定義する必要があります。 カメラを使用するとシーンを表示できます。 ビューポートは、投影が 2D サーフェイス上にマップされる場所を設定します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の 3D について詳しくは、「[3-D グラフィックスの概要](3-d-graphics-overview.md)」をご覧ください。  
@@ -62,10 +62,10 @@ ms.locfileid: "76744807"
 ### <a name="drawing-content-in-visual-objects"></a>ビジュアル オブジェクトの描画コンテンツ  
  <xref:System.Windows.Media.Visual> オブジェクトは、そのレンダリングデータを**ベクターグラフィックス命令リスト**として格納します。 命令リスト内の各項目は、グラフィックス データと関連リソースの低レベル セットを、シリアル化された形式で表します。 描画コンテンツを格納できるレンダリング データには、次の 4 つの種類があります。  
   
-|描画コンテンツの種類|説明|  
+|描画コンテンツの種類|[説明]|  
 |--------------------------|-----------------|  
 |ベクター グラフィックス|ベクターグラフィックスデータ、および関連付けられているすべての <xref:System.Windows.Media.Brush> と <xref:System.Windows.Media.Pen> 情報を表します。|  
-|イメージ|<xref:System.Windows.Rect>によって定義される領域内のイメージを表します。|  
+|Image|<xref:System.Windows.Rect>によって定義される領域内のイメージを表します。|  
 |グリフ|指定されたフォントリソースからの一連のグリフである <xref:System.Windows.Media.GlyphRun>を表示する描画を表します。 テキストはこれによって表示されます。|  
 |ビデオ|ビデオをレンダリングする描画を表します。|  
   
@@ -77,8 +77,8 @@ ms.locfileid: "76744807"
   
  次の図は、レンダリングシーケンス中に <xref:System.Windows.Media.DrawingGroup> 操作が適用される順序を示しています。  
   
- ![DrawingGroup 操作の順序](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
-DrawingGroup 操作の順序  
+ ![DrawingGroup の操作の順序](./media/graphcismm-drawinggroup-order.png "graphcismm_drawinggroup_order")  
+DrawingGroup の操作の順序  
   
  詳しくは、「[Drawing オブジェクトの概要](drawing-objects-overview.md)」をご覧ください。  
   
@@ -247,7 +247,7 @@ Visual Profiler 表示出力
  [!code-csharp[VisualsOverview#102](~/samples/snippets/csharp/VS_Snippets_Wpf/VisualsOverview/CSharp/Window1.xaml.cs#102)]
  [!code-vb[VisualsOverview#102](~/samples/snippets/visualbasic/VS_Snippets_Wpf/VisualsOverview/visualbasic/window1.xaml.vb#102)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>

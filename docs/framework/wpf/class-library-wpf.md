@@ -17,7 +17,7 @@ ms.locfileid: "76742296"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   

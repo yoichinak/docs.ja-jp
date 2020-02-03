@@ -11,7 +11,7 @@ ms.locfileid: "76733823"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>LINQ to XML による WPF のデータバインディングの概要
 
-この記事では、<xref:System.Xml.Linq> 名前空間の動的データバインディング機能について説明します。 これらの機能は、Windows Presentation Foundation (WPF) アプリのユーザー インターフェイス (UI) 要素のデータ ソースとして使用できます。 このシナリオは、<xref:System.Xml.Linq.XAttribute?displayProperty=fullName> および <xref:System.Xml.Linq.XElement?displayProperty=fullName> の特殊な*動的プロパティ* に依存しています。
+この記事では、<xref:System.Xml.Linq> 名前空間の動的データバインディング機能について説明します。 これらの機能は、Windows Presentation Foundation (WPF) アプリのユーザー インターフェイス (UI) 要素のデータ ソースとして使用できます。 このシナリオは、*および* の特殊な<xref:System.Xml.Linq.XAttribute?displayProperty=fullName>動的プロパティ<xref:System.Xml.Linq.XElement?displayProperty=fullName> に依存しています。
 
 ## <a name="xaml-and-linq-to-xml"></a>XAML と LINQ to XML
 
@@ -27,9 +27,9 @@ XAML と LINQ to XML の相互作用には、大きく分けて次の 2 つの�
 
 ## <a name="data-binding-in-the-windows-presentation-foundation"></a>Windows Presentation Foundation でのデータバインディング
 
-WPF のデータ バインディングでは、UI 要素のプロパティをデータ ソースに関連付けることができます。 たとえば、ユーザー定義オブジェクトのパブリック プロパティの値をテキストとして表示する <xref:System.Windows.Controls.Label> はその簡単な例です。 WPF のデータ バインディングは次のコンポーネントに依存しています。
+WPF のデータ バインドでは、UI 要素のプロパティをデータ ソースに関連付けることができます。 たとえば、ユーザー定義オブジェクトのパブリック プロパティの値をテキストとして表示する <xref:System.Windows.Controls.Label> はその簡単な例です。 WPF のデータ バインドは次のコンポーネントに依存しています。
 
-|コンポーネント|説明|
+|コンポーネント|[説明]|
 |---------------|-----------------|
 |バインド ターゲット|データ ソースに関連付ける UI 要素。 WPF のビジュアル要素は <xref:System.Windows.UIElement> クラスから派生します。|
 |対象になるプロパティ|バインド ターゲットの*依存プロパティ*。データ バインディング ソースの値が反映されます。 依存プロパティは、<xref:System.Windows.DependencyObject> の派生元である <xref:System.Windows.UIElement> クラスによって直接サポートされます。|
@@ -85,7 +85,7 @@ C# で動的プロパティへアクセスするには、実行時に <xref:Syst
 
 WPF の動的バインドを実装するには、動的プロパティを <xref:System.Windows.Data> 名前空間 (特に <xref:System.Windows.Data.Binding> クラス) の機能と共に使用します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to XML による WPF のデータ バインディング](wpf-data-binding-with-linq-to-xml-overview.md)
 - [LINQ to XML の動的プロパティ](linq-to-xml-dynamic-properties.md)

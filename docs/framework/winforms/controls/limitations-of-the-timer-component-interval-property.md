@@ -28,7 +28,7 @@ Windows フォーム <xref:System.Windows.Forms.Timer> コンポーネントに�
   
 - <xref:System.Windows.Forms.Timer.Interval%2A> プロパティの有効桁数はミリ秒単位です。 コンピューターによっては、ミリ秒よりも高い解像度の高解像度カウンターが提供される場合があります。 このようなカウンターの可用性は、コンピューターのプロセッサハードウェアによって異なります。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer コンポーネント](timer-component-windows-forms.md)

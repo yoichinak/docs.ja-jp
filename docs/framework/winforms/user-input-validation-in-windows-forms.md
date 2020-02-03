@@ -67,7 +67,7 @@ ms.locfileid: "76734696"
 #### <a name="default-implicit-validation-behavior-for-windows-forms-controls"></a>Windows フォームコントロールの既定の暗黙的な検証動作  
  さまざまな Windows フォームコントロールには、<xref:System.Windows.Forms.ContainerControl.AutoValidate%2A> プロパティに対して異なる既定値が設定されています。 次の表は、最も一般的なコントロールとその既定値を示しています。  
   
-|Control|既定の検証動作|  
+|コントロール|既定の検証動作|  
 |-------------|---------------------------------|  
 |<xref:System.Windows.Forms.ContainerControl>|<xref:System.Windows.Forms.AutoValidate.Inherit>|  
 |<xref:System.Windows.Forms.Form>|<xref:System.Windows.Forms.AutoValidate.EnableAllowFocusChange>|  
@@ -90,7 +90,7 @@ ms.locfileid: "76734696"
 > [!NOTE]
 > フォームがこのように強制的に閉じられるようにすると、フォームのコントロールに保存されていないデータはすべて失われます。 また、モーダルフォームは、コントロールが閉じられたときに、その内容を検証しません。 コントロールの検証を引き続き使用してコントロールにフォーカスを移すことはできますが、フォームの終了に関連する動作について心配する必要はありません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.FormClosing?displayProperty=nameWithType>

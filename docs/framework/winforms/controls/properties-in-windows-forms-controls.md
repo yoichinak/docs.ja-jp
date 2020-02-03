@@ -28,13 +28,13 @@ Windows フォームコントロールは、基本クラス <xref:System.Windows
  [プロパティ変更イベント](property-changed-events.md)  
  プロパティ値が変更されたときに、プロパティ変更通知を有効にする方法について説明します。  
   
- [方法: 内在コントロールのプロパティを公開する](how-to-expose-properties-of-constituent-controls.md)  
+ [方法 : 内在コントロールのプロパティを公開する](how-to-expose-properties-of-constituent-controls.md)  
  カスタム複合コントロール内の内在コントロールのプロパティを公開する方法について説明します。  
   
  [カスタム コントロールへのメソッドの実装](method-implementation-in-custom-controls.md)  
  カスタム コントロールおよびカスタム コンポーネントにメソッドを実装する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.UserControl>  
  複合コントロールを実装するための基本クラスについて説明します。  
   
@@ -44,7 +44,7 @@ Windows フォームコントロールは、基本クラス <xref:System.Windows
  <xref:System.ComponentModel.EditorAttribute>  
  カスタムプロパティに使用する <xref:System.Drawing.Design.UITypeEditor> を指定する属性を文書にします。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム コントロールの属性](attributes-in-windows-forms-controls.md)  
  カスタム コントロールとコンポーネントのプロパティや他のメンバーに適用できる属性について説明します。  
   

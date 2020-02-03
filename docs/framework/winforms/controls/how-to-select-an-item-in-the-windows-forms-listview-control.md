@@ -18,20 +18,20 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743232"
 ---
 # <a name="how-to-select-an-item-in-the-windows-forms-listview-control"></a>方法 : Windows フォーム ListView コントロール内の項目を選択する
-この例では、Windows Forms <xref:System.Windows.Forms.ListView> コントロールで項目をプログラムで選択する方法を示します。 プログラムで項目を選択しても、<xref:System.Windows.Forms.ListView> コントロールへのフォーカスは自動的には変更されません。 このため、通常は項目を設定するときにその項目をフォーカスもするように設定できます。  
+この例では、Windows フォーム <xref:System.Windows.Forms.ListView> コントロール内の項目をプログラムで選択する方法を示します。 プログラムによって項目を選択しても、フォーカスが <xref:System.Windows.Forms.ListView> コントロールに自動的に変更されることはありません。 このため、通常は項目を設定するときにその項目をフォーカスもするように設定できます。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/CS/form1.cs#1)]
  [!code-vb[System.Windows.Forms.ListView.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListView.Misc/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
 - 少なくとも1つの項目を含む `listView1` という名前の <xref:System.Windows.Forms.ListView> コントロール。  
   
 - <xref:System?displayProperty=nameWithType> 名前空間と <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間への参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListViewItem.Selected%2A?displayProperty=nameWithType>

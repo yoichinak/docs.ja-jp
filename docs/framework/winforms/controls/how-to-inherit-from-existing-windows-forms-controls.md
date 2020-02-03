@@ -85,11 +85,11 @@ ms.locfileid: "76736486"
 
 1. コントロールを保存して、動作確認を行います。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)
 - [方法: コントロール クラスを継承する](how-to-inherit-from-the-control-class.md)
-- [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
+- [方法 : UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
 - [方法: Windows フォームのコントロールを作成する](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [チュートリアル: Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

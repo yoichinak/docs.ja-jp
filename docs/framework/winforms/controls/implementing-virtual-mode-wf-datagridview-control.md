@@ -116,7 +116,7 @@ ms.locfileid: "76746516"
   
      3つの顧客レコードが設定された <xref:System.Windows.Forms.DataGridView> コントロールが表示されます。 行の複数のセルの値を変更して、編集モードで ESC キーを2回押すと、編集モードの外に1回押して、行全体を元の値に戻すことができます。 コントロールの行を変更、追加、または削除すると、データストア内の `Customer` オブジェクトも変更、追加、または削除されます。  
   
-## <a name="next-steps"></a>次のステップ  
+## <a name="next-steps"></a>次の手順  
  このアプリケーションでは、<xref:System.Windows.Forms.DataGridView> コントロールで仮想モードを実装するために処理する必要があるイベントについての基本的な知識が得られます。 この基本的なアプリケーションは、さまざまな方法で改善できます。  
   
 - 外部データベースからの値をキャッシュするデータストアを実装します。 キャッシュは必要に応じて値を取得および破棄する必要があります。これにより、クライアントコンピューターで少量のメモリを消費しているときに、表示に必要なものだけが格納されます。  
@@ -125,7 +125,7 @@ ms.locfileid: "76746516"
   
  外部データベースからの値のキャッシュの詳細については、「[方法: Windows フォーム DataGridView コントロールで Just-in-time データ読み込みを使用して仮想モードを実装する](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

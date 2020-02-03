@@ -47,17 +47,17 @@ ms.locfileid: "76741757"
 
  次の表では、さまざまな種類の識別子の大文字と小文字の規則について説明します。
 
-|識別子|大文字|使用例|
+|[Identifier]|大文字小文字の区別|例|
 |----------------|------------|-------------|
 |名前空間|Pascal|`namespace System.Security { ... }`|
-|の型|Pascal|`public class StreamReader { ... }`|
-|Interface|Pascal|`public interface IEnumerable { ... }`|
-|メソッド|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
-|property|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
+|種類|Pascal|`public class StreamReader { ... }`|
+|インターフェイス|Pascal|`public interface IEnumerable { ... }`|
+|方法|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
+|プロパティ|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
 |Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |フィールド|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |列挙値|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
-|パラメータ|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
+|パラメーター|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|
 
 ## <a name="capitalizing-compound-words-and-common-terms"></a>複合語と一般的な用語を大文字にする
  ほとんどの複合用語は、大文字と小文字を区別するために1つの単語として扱われます。
@@ -66,7 +66,7 @@ ms.locfileid: "76741757"
 
  これらは、エンドポイントなどの1つの単語として記述された複合ワードです。 大文字と小文字のガイドラインのために、閉じた複合ワードを1つの単語として扱います。 現在のディクショナリを使用して、複合単語が閉じた形式で記述されているかどうかを判断します。
 
-|Pascal|Camel|not|
+|Pascal|Camel|Not|
 |------------|-----------|---------|
 |`BitFlag`|`bitFlag`|`Bitflag`|
 |`Callback`|`callback`|`CallBack`|
@@ -94,7 +94,7 @@ ms.locfileid: "76741757"
 |`WhiteSpace`|`whiteSpace`|`Whitespace`|
 |`Writable`|`writable`|`Writeable`|
 
-## <a name="case-sensitivity"></a>大文字と小文字の区別
+## <a name="case-sensitivity"></a>大文字小文字の区別
  CLR で実行できる言語は、大文字と小文字の区別をサポートするためには必要ありません。 お使いの言語でサポートされている場合でも、フレームワークにアクセスする可能性のある他の言語はありません。 したがって、外部からアクセスできるすべての Api では、同じコンテキスト内の2つの名前を区別するために大文字と小文字だけを使用することはできません。
 
  ❌ では、すべてのプログラミング言語で大文字と小文字が区別されるとは限りません。 しかし、そうではありません。 名前は大文字と小文字のみで異なることはできません。
@@ -103,7 +103,7 @@ ms.locfileid: "76741757"
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

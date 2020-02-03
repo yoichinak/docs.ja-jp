@@ -68,7 +68,7 @@ Windows フォーム <xref:System.Windows.Forms.TreeView> コントロールで�
     treeView1->SelectedNode->SelectedImageIndex = 1;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [TreeView コントロールの概要](treeview-control-overview-windows-forms.md)
 - [方法: Windows フォーム TreeView コントロールでノードを追加および削除する](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)

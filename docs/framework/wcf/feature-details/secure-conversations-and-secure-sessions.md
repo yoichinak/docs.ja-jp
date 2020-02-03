@@ -16,7 +16,7 @@ Windows Communication Foundation (WCF) の機能は、相互に認証を行い�
   
  セッションの詳細については、「[セッションの使用](../../../../docs/framework/wcf/using-sessions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [セッション、インスタンス化、およびコンカレンシー](../../../../docs/framework/wcf/feature-details/sessions-instancing-and-concurrency.md)
 - [方法 : セッションを必要とするサービスを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)

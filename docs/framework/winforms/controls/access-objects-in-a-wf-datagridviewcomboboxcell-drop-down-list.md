@@ -32,7 +32,7 @@ ms.locfileid: "76746315"
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> プロパティと <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> プロパティを設定します。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> は、ドロップダウンリストに表示するビジネスオブジェクトのプロパティを示します。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> は、ビジネスオブジェクトへの参照を返すプロパティを示します。  
+2. <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> と <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> プロパティを設定します。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> は、ドロップダウンリストに表示するビジネスオブジェクトのプロパティを示します。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> は、ビジネスオブジェクトへの参照を返すプロパティを示します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
@@ -49,7 +49,7 @@ ms.locfileid: "76746315"
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#120)]  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  完全な例では、ドロップダウンリストでビジネスオブジェクトを使用する方法を示します。 この例では、<xref:System.Windows.Forms.DataGridView> コントロールが `Task` オブジェクトのコレクションにバインドされています。 各 `Task` オブジェクトには、そのタスクに現在割り当てられている `Employee` オブジェクトを示す `AssignedTo` プロパティがあります。 `Assigned To` 列には、割り当てられた各従業員の `Name` プロパティ値が表示されます。また、`Task.AssignedTo` プロパティ値が `null`場合は、"未割り当て" が表示されます。  
   
  この例の動作を表示するには、次の手順を実行します。  
@@ -63,12 +63,12 @@ ms.locfileid: "76746315"
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
 - System アセンブリおよび System.Windows.Forms アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>

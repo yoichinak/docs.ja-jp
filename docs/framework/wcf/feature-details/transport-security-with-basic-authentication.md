@@ -17,18 +17,18 @@ ms.locfileid: "76742694"
   
  ![基本認証を使用したトランスポートセキュリティを示すスクリーンショット。](./media/transport-security-with-basic-authentication/transport-security-basic-authentication.gif)  
   
-|特徴|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
-|セキュリティ モード|Transport|  
+|セキュリティ モード|トランスポート|  
 |相互運用性|既存の Web サービス クライアントとサービスを使用する|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (HTTPS を使用)<br /><br /> ○ (ユーザー名とパスワードを使用)|  
-|整合性|○|  
-|機密性|○|  
-|Transport|HTTPS|  
-|バインディング|<xref:System.ServiceModel.WSHttpBinding>|  
+|整合性|はい|  
+|機密情報|はい|  
+|トランスポート|HTTPS|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>サービス  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "76742694"
  [!code-csharp[C_SecurityScenarios#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#1)]
  [!code-vb[C_SecurityScenarios#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#1)]  
   
-## <a name="configuration"></a>の構成  
+## <a name="configuration"></a>構成  
  次の例では、トランスポート レベルのセキュリティの基本認証を使用するサービスを構成します。  
   
 ```xml  
@@ -69,7 +69,7 @@ ms.locfileid: "76742694"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>コード  
  次のコードは、ユーザー名とパスワードが含まれるクライアント コードを示しています。 ユーザーは、有効な Windows ユーザー名とパスワードを指定する必要があります。 ユーザー名とパスワードを返すコードは、ここに示されていません。 ダイアログボックスまたは他のインターフェースを使用して、ユーザーにこれらの情報を照会してください。  
@@ -80,7 +80,7 @@ ms.locfileid: "76742694"
  [!code-csharp[C_SecurityScenarios#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#2)]
  [!code-vb[C_SecurityScenarios#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#2)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  次のコードは、クライアントの構成を示しています。  
   
 > [!NOTE]
@@ -110,12 +110,12 @@ ms.locfileid: "76742694"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [方法 : SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
+- [clientCredentials > の \<](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
 - [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

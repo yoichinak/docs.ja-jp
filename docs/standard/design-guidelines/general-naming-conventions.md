@@ -27,11 +27,11 @@ ms.locfileid: "76741593"
 ## <a name="word-choice"></a>単語の選択
  ✔️は、簡単に判読できる識別子名を選択します。
 
- たとえば、`HorizontalAlignment`よりも英語読みしやすい `AlignmentHorizontal`という名前を選択します。
+ たとえば、`HorizontalAlignment` という名前のプロパティは、`AlignmentHorizontal`よりも英語で読みやすくなります。
 
  ✔️簡潔にするために読みやすさを優先します。
 
- プロパティ名として（Ｘ軸というのがわかりにくい）`ScrollableX` よりも `CanScrollHorizontally` の方が良いです。
+ プロパティ名 `CanScrollHorizontally` は、`ScrollableX` (X 軸へのあいまいな参照) よりも優れています。
 
  ❌ アンダースコア、ハイフン、またはその他の英数字以外の文字を使用しないでください。
 
@@ -44,18 +44,18 @@ ms.locfileid: "76741593"
 ## <a name="using-abbreviations-and-acronyms"></a>省略形と頭字語の使用
  ❌、識別子名の一部として省略形または短縮形を使用しないでください。
 
- たとえば、`GetWin` ではなく、`GetWindow` を使用します。
+ たとえば、`GetWin`ではなく `GetWindow` を使用します。
 
  ❌ は、広く受け入れられていない頭字語や、必要な場合にのみ使用されます。
 
 ## <a name="avoiding-language-specific-names"></a>言語固有の名前の回避
  型名の言語固有のキーワードではなく、意味的に興味深い名前を使用する✔️ます。
 
- たとえば、`GetInt` よりも `GetLength`を使用します。
+ たとえば、`GetLength` は `GetInt`よりもわかりやすい名前です。
 
  通常は、言語固有の名前ではなく、汎用的な CLR 型名を使用します。これは、識別子が型以外のセマンティックの意味を持たない場合に、まれに発生します。✔️
 
- たとえば、<xref:System.Int64>へ変換するメソッドは、`ToLong` ではなく `ToInt64` という名前を付けます (<xref:System.Int64> は、C# 固有の `long`の CLR 名です-特定のエイリアス`long`)。 次の表は、CLR 型名 (だけでなく C#、Visual Basic、および C++ の対応する型名) を使用していくつかの基本データ型を示します。
+ たとえば、<xref:System.Int64> に変換するメソッドは、`ToLong` ではなく `ToInt64`という名前にする必要があります ( C#<xref:System.Int64> は固有のエイリアス `long`の CLR 名であるため)。 次の表は、CLR 型名 (だけでなく C#、Visual Basic、および C++ の対応する型名) を使用していくつかの基本データ型を示します。
 
 |C#|Visual Basic|C++|CLR|
 |---------|------------------|-----------|---------|
@@ -63,7 +63,7 @@ ms.locfileid: "76741593"
 |**byte**|**Byte**|**unsigned char**|**Byte**|
 |**short**|**Short**|**short**|**Int16**|
 |**ushort**|**UInt16**|**unsigned short**|**UInt16**|
-|**int**|**Integer**|**int**|**Int32**|
+|**int**|**整数**|**int**|**Int32**|
 |**uint**|**UInt32**|**unsigned int**|**UInt32**|
 |**long**|**Long**|**__int64**|**Int64**|
 |**ulong**|**UInt64**|**unsigned __int64**|**UInt64**|
@@ -72,7 +72,7 @@ ms.locfileid: "76741593"
 |**bool**|**Boolean**|**bool**|**Boolean**|
 |**char**|**Char**|**wchar_t**|**Char**|
 |**string**|**String**|**String**|**String**|
-|**object**|**オブジェクト**|**オブジェクト**|**オブジェクト**|
+|**object**|**Object**|**Object**|**Object**|
 
  型名を繰り返すのではなく、`value` や `item`などの共通名を使用する✔️、まれなケースでは、識別子にセマンティックの意味がなく、パラメーターの型が重要でない場合に、このような名前を使用します。
 
@@ -97,7 +97,7 @@ ms.locfileid: "76741593"
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

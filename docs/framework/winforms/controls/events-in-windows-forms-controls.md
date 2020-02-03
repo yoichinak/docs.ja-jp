@@ -17,7 +17,7 @@ Windows フォームコントロールは、<xref:System.Windows.Forms.Control?d
   
  継承されたイベントの機能をカスタム コントロールでオーバーライドする必要がある場合、デリゲートを結び付けるのではなく、継承された `On`*EventName* メソッドをオーバーライドします。 .NET Framework でのイベント モデルに詳しくない場合は、「[コンポーネントからのイベントの生成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/sh2e3k5z(v=vs.120))」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [OnPaint メソッドのオーバーライド](overriding-the-onpaint-method.md)
 - [ユーザーの入力の処理](handling-user-input.md)

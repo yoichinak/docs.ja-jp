@@ -38,7 +38,7 @@ Windows フォーム <xref:System.Windows.Forms.NumericUpDown> コントロー�
     numericUpDown1->ThousandsSeparator = true;  
     ```  
   
-     -または-  
+     または  
   
 - <xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A> プロパティを `true`に設定して、16進数の値を表示します。  
   
@@ -57,7 +57,7 @@ Windows フォーム <xref:System.Windows.Forms.NumericUpDown> コントロー�
     > [!NOTE]
     > 値が16進数としてフォームに表示されている場合でも、<xref:System.Windows.Forms.NumericUpDown.Value%2A> プロパティで実行するテストでは、その10進値がテストされます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown コントロール](numericupdown-control-windows-forms.md)

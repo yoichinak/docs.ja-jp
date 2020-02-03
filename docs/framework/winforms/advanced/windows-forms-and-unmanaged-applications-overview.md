@@ -27,7 +27,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
   
  Windows フォーム コントロールのサポートをホストしている、使用できる ActiveX を次の表に示します。  
   
-|Windows フォームのバージョン|でのサポート|  
+|Windows フォームのバージョン|サポート|  
 |---------------------------|-------------|  
 |.NET Framework version 1.0|Internet Explorer 5.01 以降のバージョン|  
 |.NET Framework version 1.1 以降|Internet Explorer 5.01 以降のバージョン<br /><br /> Microsoft Foundation Classes (MFC) 7.0 以降|  
@@ -51,13 +51,13 @@ Windows フォーム アプリケーションとコントロールは、いく�
   
  Windows フォームが COM クライアント アプリケーションから正しく動作するには、Windows フォームのメッセージ ループ上で実行する必要があります。 そのためには、次の方法のいずれかを使用します。  
   
-- <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドを使用して、Windows フォームを表示します。 詳細については、「[方法 : ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする](com-interop-by-displaying-a-windows-form-shadow.md)」を参照してください。  
+- <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドを使用して、Windows フォームを表示します。 詳細については、「 [How to: Support COM Interop by Displaying a Windows Form with the ShowDialog Method](com-interop-by-displaying-a-windows-form-shadow.md)」を参照してください。  
   
-- 各 Windows フォームを新しいスレッドで表示します。 詳細については、「[方法 : 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)」を参照してください。  
+- 各 Windows フォームを新しいスレッドで表示します。 詳細については、「 [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Windows フォームとアンマネージ アプリケーション](windows-forms-and-unmanaged-applications.md)
+- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)
 - [COM 相互運用](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework アプリケーションにおける COM 相互運用性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 相互運用性のサンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
@@ -66,4 +66,4 @@ Windows フォーム アプリケーションとコントロールは、いく�
 - [COM 用のアセンブリのパッケージ化](../../interop/packaging-an-assembly-for-com.md)
 - [COM へのアセンブリの登録](../../interop/registering-assemblies-with-com.md)
 - [方法: ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする](com-interop-by-displaying-a-windows-form-shadow.md)
-- [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

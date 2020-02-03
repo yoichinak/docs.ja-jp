@@ -25,17 +25,17 @@ ms.locfileid: "76744372"
  [方法: Windows フォーム BindingNavigator コントロールを使用してデータ間を移動する](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)  
  `BindingNavigator` コントロールをデータ ソースにバインドする手順を示します。  
   
- [方法 : Windows フォームの BindingNavigator コントロールを使用して DataSet を移動する](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
+ [方法: Windows フォームの BindingNavigator コントロールを使用して DataSet を移動する](move-through-a-dataset-with-wf-bindingnavigator-control.md)  
  `BindingNavigator` コントロールを使用して <xref:System.Data.DataSet> 内のレコードを移動する方法を示します。  
   
  「[方法 : Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する](load-save-and-cancel-bindingnavigator.md)」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.BindingNavigator>  
  <xref:System.Windows.Forms.BindingNavigator> コントロールのリファレンス ドキュメントを提供します。  
   
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingSource> コントロールのリファレンス ドキュメントを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Visual Studio でのデータへのコントロールのバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

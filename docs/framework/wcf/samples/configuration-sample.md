@@ -24,7 +24,7 @@ ms.locfileid: "76741956"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
-## <a name="service-configuration"></a>サービスの構成  
+## <a name="service-configuration"></a>サービス構成  
  このサンプルの構成ファイルでは、次の 2 つの機能を示します。  
   
 - 標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。  
@@ -154,7 +154,7 @@ ms.locfileid: "76741956"
 </configuration>  
 ```  
   
-## <a name="client-configuration"></a>クライアント構成  
+## <a name="client-configuration"></a>クライアントの構成  
  クライアントのアプリケーション構成ファイルでは、`standardEndpoint` 型の `dynamicEndpoint` を使用して次の構成スニペットに示すように探索を利用します。  
   
 ```xml  

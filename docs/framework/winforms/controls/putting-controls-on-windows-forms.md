@@ -17,7 +17,7 @@ ms.locfileid: "76741168"
 Windows フォームには、アプリケーションのニーズに応じてさまざまなコントロールを配置できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法 : Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)  
+ [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)  
  フォームにコントロールを接続する方法について説明します。  
   
  [方法: ユーザー インターフェイスを持たないコントロールを Windows フォームに追加する](how-to-add-controls-without-a-user-interface-to-windows-forms.md)  
@@ -35,7 +35,7 @@ Windows フォームには、アプリケーションのニーズに応じてさ
  [Windows フォームで ActiveX コントロールをホストする場合の考慮事項](considerations-when-hosting-an-activex-control-on-a-windows-form.md)  
  ActiveX コントロールを使用するアプリケーションを計画するときの注意事項について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム コントロール](index.md)  
  コントロールとその機能についての基本的なトピックへのリンクを示します。  
   

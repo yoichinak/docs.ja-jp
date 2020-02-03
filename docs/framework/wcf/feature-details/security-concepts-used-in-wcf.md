@@ -48,7 +48,7 @@ Microsoft のパターンとプラクティスグループでは、 [WCF セキ�
   
  これらのトピックの詳細については、「」、「 [Access Control メカニズム](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

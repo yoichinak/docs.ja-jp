@@ -33,6 +33,6 @@ Windows フォームには、さまざまなマウス イベントがあり、�
  [Windows フォームにおけるドラッグ アンド ドロップ機能](drag-and-drop-functionality-in-windows-forms.md)  
  ドラッグ アンド ドロップ動作を実装する方法について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [マウスへのアクセス](../../visual-basic/developing-apps/programming/computer-resources/accessing-the-mouse.md)  
  Visual Basic を使用したマウスへのアクセスに関するトピックの一覧を示します。

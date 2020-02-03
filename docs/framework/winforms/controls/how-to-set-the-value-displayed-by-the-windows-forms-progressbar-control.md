@@ -21,7 +21,7 @@ ms.locfileid: "76743805"
   
  .NET Framework には、<xref:System.Windows.Forms.ProgressBar> コントロール内に特定の値を表示するためのさまざまな方法が用意されています。 どの方法を選択するかは、当面のタスクや、解決する問題によって異なります。 次の表に、選択できる方法を示します。  
   
-|方法|説明|  
+|アプローチ|[説明]|  
 |--------------|-----------------|  
 |<xref:System.Windows.Forms.ProgressBar> コントロールの値を直接設定します。|この方法は、データソースからのレコードの読み取りなど、関連する項目の合計がわかっているタスクに役立ちます。 また、値を1回または2回だけ設定する必要がある場合は、これを簡単に行うことができます。 最後に、進行状況バーに表示される値を小さくする必要がある場合に、このプロセスを使用します。|  
 |固定値によって表示 <xref:System.Windows.Forms.ProgressBar> を増やします。|この方法は、最小値と最大値の間に単純なカウント (経過時間、または既知の合計から処理されたファイルの数など) を表示する場合に便利です。|  
@@ -224,7 +224,7 @@ ms.locfileid: "76743805"
     }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>

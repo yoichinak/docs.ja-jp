@@ -17,7 +17,7 @@ ms.locfileid: "76727916"
 # <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>チュートリアル : WPF でホストするための Direct3D9 コンテンツの作成
 このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションでのホストに適した Direct3D9 コンテンツを作成する方法について説明します。 WPF アプリケーションで Direct3D9 コンテンツをホストする方法の詳細については、「 [wpf と Direct3D9 の相互運用](wpf-and-direct3d9-interoperation.md)」を参照してください。
 
- このチュートリアルでは次のタスクを実行します。
+ このチュートリアルでは、次のタスクを実行します。
 
 - Direct3D9 プロジェクトを作成します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "76727916"
 
  完了すると、WPF アプリケーションで使用する Direct3D9 コンテンツを含む DLL が作成されます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
  このチュートリアルを実行するには、次のコンポーネントが必要です。
 
 - Visual Studio 2010。
@@ -41,7 +41,7 @@ ms.locfileid: "76727916"
 
      Win32 アプリケーションウィザードが開き、[ようこそ] 画面が表示されます。
 
-2. [次へ] をクリックします。
+2. **[次へ]** をクリックします。
 
      [アプリケーションの設定] 画面が表示されます。
 
@@ -133,13 +133,13 @@ ms.locfileid: "76727916"
     Destroy
     ```
 
-12. プロジェクトをビルドする。
+12. プロジェクトをビルドします。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - WPF アプリケーションで Direct3D9 コンテンツをホストします。 詳細については、「[チュートリアル: WPF での Direct3D9 コンテンツのホスト](walkthrough-hosting-direct3d9-content-in-wpf.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

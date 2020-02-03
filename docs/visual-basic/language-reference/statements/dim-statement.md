@@ -47,23 +47,23 @@ ms.locfileid: "76744729"
 Dim [ WithEvents ] variablelist
 ```
 
-## <a name="parts"></a>のコンポーネント
+## <a name="parts"></a>要素
 
 - `attributelist`
 
-  省略可。 「[属性リスト](attribute-list.md)」を参照してください。
+  省略可能。 「[属性リスト](attribute-list.md)」を参照してください。
 
 - `accessmodifier`
 
-  省略可。 次のいずれかの値を指定します。
+  省略可能。 以下のいずれかを指定できます。
 
-  - [Public](../modifiers/public.md)
+  - [パブリック](../modifiers/public.md)
 
   - [Protected](../modifiers/protected.md)
 
   - [Friend](../modifiers/friend.md)
 
-  - [Private](../modifiers/private.md)
+  - [プライベート](../modifiers/private.md)
 
   - [Protected Friend](../modifiers/protected-friend.md)
 
@@ -73,27 +73,27 @@ Dim [ WithEvents ] variablelist
 
 - `Shared`
 
-  省略可。 「[共有](../modifiers/shared.md)」を参照してください。
+  省略可能。 「[共有](../modifiers/shared.md)」を参照してください。
 
 - `Shadows`
 
-  省略可。 「[Shadows](../modifiers/shadows.md)」を参照してください。
+  省略可能。 「[シャドウ](../modifiers/shadows.md)」を参照してください。
 
 - `Static`
 
-  省略可。 「[静的](../modifiers/static.md)」を参照してください。
+  省略可能。 「[静的](../modifiers/static.md)」を参照してください。
 
 - `ReadOnly`
 
-  省略可。 「 [ReadOnly](../modifiers/readonly.md)」を参照してください。
+  省略可能。 「 [ReadOnly](../modifiers/readonly.md)」を参照してください。
 
 - `WithEvents`
 
-  省略可。 イベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 「[WithEvents](../modifiers/withevents.md)」を参照してください。
+  省略可能。 イベントを発生させるクラスのインスタンスを参照するオブジェクト変数であることを指定します。 「 [WithEvents](../modifiers/withevents.md)」を参照してください。
 
 - `variablelist`
 
-  必ず指定します。 このステートメントで宣言されている変数のリスト。
+  必須。 このステートメントで宣言されている変数のリスト。
 
   `variable [ , variable ... ]`
 
@@ -101,18 +101,18 @@ Dim [ WithEvents ] variablelist
 
   `variablename [ ( [ boundslist ] ) ] [ As [ New ] datatype [ With`{`[ .propertyname = propinitializer [ , ... ] ] } ] ] [ = initializer ]`
 
-  |のコンポーネント|説明|
+  |要素|[説明]|
   |---|---|
-  |`variablename`|必ず指定します。 変数名。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
-  |`boundslist`|省略可。 配列変数の各次元の境界の一覧。|
-  |`New`|省略可。 `Dim` ステートメントの実行時に、クラスの新しいインスタンスを作成します。|
-  |`datatype`|省略可。 変数のデータ型。|
-  |`With`|省略可。 オブジェクト初期化子リストについて説明します。|
-  |`propertyname`|省略可。 インスタンスを作成しているクラスのプロパティの名前。|
+  |`variablename`|必須。 変数の名前。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+  |`boundslist`|省略可能。 配列変数の各次元の境界の一覧。|
+  |`New`|省略可能。 `Dim` ステートメントの実行時に、クラスの新しいインスタンスを作成します。|
+  |`datatype`|省略可能。 変数のデータ型。|
+  |`With`|省略可能。 オブジェクト初期化子リストについて説明します。|
+  |`propertyname`|省略可能。 インスタンスを作成しているクラスのプロパティの名前。|
   |`propinitializer`|`propertyname` = の後に指定する必要があります。 評価され、プロパティ名に割り当てられる式。|
   |`initializer`|`New` が指定されていない場合は省略可能です。 評価され、作成時に変数に割り当てられる式。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Visual Basic コンパイラは、`Dim` ステートメントを使用して、変数のデータ型やその他の情報 (変数にアクセスできるコードなど) を決定します。 次の例では、`Integer` 値を保持する変数を宣言しています。
 
@@ -137,7 +137,7 @@ Dim bottomLabel As New System.Windows.Forms.Label
 
 モジュールレベルで、プロシージャの外部で宣言されている変数は、*メンバー変数*または*フィールド*です。 メンバー変数は、クラス、構造体、またはモジュール全体でスコープ内にあります。 プロシージャレベルで宣言された変数は、*ローカル変数*です。 ローカル変数は、プロシージャまたはブロック内でのみスコープ内にあります。
 
-次のアクセス修飾子は、プロシージャの外部で変数を宣言するために使用されます: `Public`、`Protected`、`Friend`、`Protected Friend`、および `Private`。 詳細については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+次のアクセス修飾子は、プロシージャの外部で変数を宣言するために使用されます: `Public`、`Protected`、`Friend`、`Protected Friend`、および `Private`。 詳細については、「 [Visual Basic のアクセスレベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 `Dim` キーワードは省略可能で、通常、`Public`、`Protected`、`Friend`、`Protected Friend`、`Private`、`Shared`、`Shadows`、`Static`、`ReadOnly`、`WithEvents`のいずれかの修飾子を指定すると省略されます。
 
@@ -148,7 +148,7 @@ Private salary As Decimal
 Static runningTotal As Integer
 ```
 
-`Option Explicit` が on (既定値) の場合、コンパイラは使用するすべての変数の宣言を必要とします。 詳細については、「[Option Explicit ステートメント](option-explicit-statement.md)」を参照してください。
+`Option Explicit` が on (既定値) の場合、コンパイラは使用するすべての変数の宣言を必要とします。 詳細については、「 [Option Explicit ステートメント](option-explicit-statement.md)」を参照してください。
 
 ## <a name="specifying-an-initial-value"></a>初期値の指定
 
@@ -180,7 +180,7 @@ Dim student1 As New Student With {.First = "Michael",
                                   .Last = "Tucker"}
 ```
 
-オブジェクト初期化子の詳細については、次を参照してください[する方法: オブジェクト初期化子を使用してオブジェクトを宣言](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)、[オブジェクト初期化子: 名前付きおよび匿名型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)、および[匿名型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+オブジェクト初期化子の詳細については、「[方法: オブジェクト初期化子を使用してオブジェクトを宣言](../../programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)する」、「[オブジェクト初期化子: 名前付きおよび匿名型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)」、および「[匿名型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
 
 ## <a name="declaring-multiple-variables"></a>複数の変数の宣言
 
@@ -255,16 +255,16 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 次の表では、`Dim` ステートメントのデータ型と初期化子を指定するさまざまな組み合わせの結果を示します。
 
-|データ型が指定されているか|初期化子が指定されているか|使用例|結果|
+|データ型が指定されているか|初期化子が指定されているか|例|結果|
 |---|---|---|---|
 |いいえ|いいえ|`Dim qty`|[Option Strict](option-strict-statement.md)がオフ (既定値) の場合、変数は `Nothing`に設定されます。<br /><br /> `Option Strict` がオンの場合、コンパイル時エラーが発生します。|
-|いいえ|○|`Dim qty = 5`|[オプションの推論](option-infer-statement.md)が on (既定値) の場合、変数は初期化子のデータ型を受け取ります。 「[ローカル型の推定](../../programming-guide/language-features/variables/local-type-inference.md)」を参照してください。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|
-|○|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 このセクションで後述する表を参照してください。|
-|○|○|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|
+|いいえ|はい|`Dim qty = 5`|[オプションの推論](option-infer-statement.md)が on (既定値) の場合、変数は初期化子のデータ型を受け取ります。 「[ローカル型の推定](../../programming-guide/language-features/variables/local-type-inference.md)」を参照してください。<br /><br /> `Option Infer` がオフで、`Option Strict` がオフの場合、変数は `Object` のデータ型になります。<br /><br /> `Option Infer` がオフで、`Option Strict` がオンの場合、コンパイル時エラーが発生します。|
+|はい|いいえ|`Dim qty As Integer`|変数は、データ型の既定値に初期化されます。 このセクションで後述する表を参照してください。|
+|はい|はい|`Dim qty  As Integer = 5`|初期化子のデータ型を指定したデータ型に変換できない場合は、コンパイル時エラーが発生します。|
 
 データ型を指定しても初期化子を指定しなかった場合は、Visual Basic 変数をそのデータ型の既定値に初期化します。 既定の初期化値を次の表に示します。
 
-|[データ型]|既定値|
+|データ型|既定値|
 |---|---|
 |すべての数値型 (`Byte` と `SByte`を含む)|0|
 |`Char`|バイナリ0|
@@ -303,21 +303,21 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 クラスが特に貴重なリソース (データベース接続やファイルハンドルなど) を保持している場合は、次のガベージコレクションが使用されなくなったクラスインスタンスをクリーンアップするまで待機することはできません。 クラスは、ガベージコレクションの前にリソースを解放する手段を提供するために、<xref:System.IDisposable> インターフェイスを実装できます。 このインターフェイスを実装するクラスは、重要なリソースを直ちに解放するために呼び出すことができる `Dispose` メソッドを公開します。
 
-`Using` ステートメントは、リソースを取得し、一連のステートメントを実行して、リソースを破棄するプロセスを自動化します。 ただし、リソースは <xref:System.IDisposable> インターフェイスを実装する必要があります。 詳細については、「[sing ステートメント](using-statement.md)」を参照してください。
+`Using` ステートメントは、リソースを取得し、一連のステートメントを実行して、リソースを破棄するプロセスを自動化します。 ただし、リソースは <xref:System.IDisposable> インターフェイスを実装する必要があります。 詳細については、「[Using ステートメント](using-statement.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、さまざまなオプションを使用して `Dim` ステートメントを使用して変数を宣言しています。
 
 [!code-vb[VbVbalrStatements#141](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#141)]
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、1から30までの素数を一覧表示します。 ローカル変数のスコープについては、「コードコメント」を参照してください。
 
 [!code-vb[VbVbalrStatements#142](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#142)]
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、`speedValue` 変数がクラスレベルで宣言されています。 `Private` キーワードは、変数を宣言するために使用されます。 変数には、`Car` クラスの任意のプロシージャからアクセスできます。
 
@@ -325,7 +325,7 @@ Dim twoDimensions(,) As Integer = {{0, 1, 2}, {10, 11, 12}}
 
 [!code-vb[VbVbalrStatements#145](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class11.vb#145)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Const ステートメント](const-statement.md)
 - [ReDim ステートメント](redim-statement.md)

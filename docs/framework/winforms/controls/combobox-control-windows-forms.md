@@ -27,14 +27,14 @@ Windows フォーム `ComboBox` コントロールは、ドロップダウンコ
  [方法: ComboBox コントロールにサイズ変更可能なテキストを作成する](how-to-create-variable-sized-text-in-a-combobox-control.md)  
  `ComboBox` コントロールのテキストをカスタム描画する方法を示します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ComboBox> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)  
  リストボックス、コンボボックス、およびチェックリストボックスを使用して実行できる操作の一覧を示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

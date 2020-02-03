@@ -91,7 +91,7 @@ ms.locfileid: "76736814"
   
 8. <xref:System.Windows.Forms.ComboBox> および <xref:System.Windows.Forms.BindingNavigator> コントロール以外のコントロールを、表示する子テーブルの <xref:System.Windows.Forms.BindingSource> (`OrdersBindingSource` など) の詳細フィールドにバインドします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource コンポーネント](bindingsource-component.md)

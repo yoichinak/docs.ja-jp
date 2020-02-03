@@ -123,7 +123,7 @@ ms.locfileid: "76736369"
        }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [TreeView コントロール](treeview-control-windows-forms.md)
 - [再帰プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

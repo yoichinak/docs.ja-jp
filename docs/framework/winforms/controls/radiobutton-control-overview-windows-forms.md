@@ -24,7 +24,7 @@ Windows フォーム <xref:System.Windows.Forms.RadioButton> コントロール�
   
  <xref:System.Windows.Forms.RadioButton> コントロールは、<xref:System.Windows.Forms.RadioButton.Appearance%2A> プロパティが <xref:System.Windows.Forms.Appearance.Button>に設定されている場合、選択されている場合には押されたようなコマンドボタンのように表示されます。 オプションボタンでは、<xref:System.Windows.Forms.ButtonBase.Image%2A> と <xref:System.Windows.Forms.ButtonBase.ImageList%2A> のプロパティを使用してイメージを表示することもできます。 詳細については、「[方法: Windows フォームコントロールによって表示されるイメージを設定する](how-to-set-the-image-displayed-by-a-windows-forms-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.RadioButton>
 - [Panel コントロールの概要](panel-control-overview-windows-forms.md)
@@ -32,5 +32,5 @@ Windows フォーム <xref:System.Windows.Forms.RadioButton> コントロール�
 - [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)
 - [方法: Windows フォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)
 - [方法: Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [方法 : セットとして機能する Windows フォーム RadioButton コントロールをグループ化する](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [方法: セットとして機能する Windows フォーム RadioButton コントロールをグループ化する](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton コントロール](radiobutton-control-windows-forms.md)

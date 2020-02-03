@@ -21,7 +21,7 @@ ms.locfileid: "76739527"
 
 次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  「[チュートリアル: WPF での Windows フォームコントロールのホスト](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)」も参照してください。
   
-## <a name="procedure"></a>プロシージャ  
+## <a name="procedure"></a>手順  
   
 #### <a name="to-create-the-form"></a>フォームを作成するには  
   
@@ -65,7 +65,7 @@ ms.locfileid: "76739527"
   
     - Visual Basic を使用している場合は、次のように入力します。 `vbc form1.vb`  
   
-3. コマンドプロンプトで、次のように入力し `Form1.exe`  
+3. コマンド プロンプトに `Form1.exe` を入力します。  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>コントロールの追加とイベントの処理
 
@@ -104,14 +104,14 @@ ms.locfileid: "76739527"
   
 7. 前の手順で説明したように、アプリケーションをコンパイルして実行します。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  
 次のコード例は、前の手順の完全な例です。
   
  [!code-csharp[System.Windows.Forms.FormWithButton#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#1)]
  [!code-vb[System.Windows.Forms.FormWithButton#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>

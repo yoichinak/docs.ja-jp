@@ -37,7 +37,7 @@ ms.locfileid: "76743019"
     numericUpDown1->Value = 55;  
     ```  
   
-     -または-  
+     または  
   
 2. <xref:System.Windows.Forms.NumericUpDown.UpButton%2A> または <xref:System.Windows.Forms.NumericUpDown.DownButton%2A> メソッドを呼び出して、<xref:System.Windows.Forms.NumericUpDown.Increment%2A> プロパティで指定した量だけ値を増減させます。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "76743019"
     }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - <xref:System.Windows.Forms.NumericUpDown.Value%2A?displayProperty=nameWithType>

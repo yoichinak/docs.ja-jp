@@ -32,10 +32,10 @@ Windows フォームでの印刷は、主に[PrintDocument コンポーネント
  [方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する](how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md)  
  実行時に <xref:System.Windows.Forms.PrintDialog> コンポーネントを使用して印刷するようにプリンターを変更する方法について説明します。  
   
- [方法 : Windows フォームでグラフィックスを印刷する](how-to-print-graphics-in-windows-forms.md)  
+ [方法: Windows フォームでグラフィックスを印刷する](how-to-print-graphics-in-windows-forms.md)  
  プリンターへのグラフィックスの送信について説明します。  
   
- [方法 : Windows フォームで複数ページのテキスト ファイルを印刷する](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
+ [方法: Windows フォームで複数ページのテキスト ファイルを印刷する](how-to-print-a-multi-page-text-file-in-windows-forms.md)  
  プリンターにテキストを送信する方法について説明します。  
   
  [方法: Windows フォームの印刷ジョブを完了する](how-to-complete-windows-forms-print-jobs.md)  
@@ -47,7 +47,7 @@ Windows フォームでの印刷は、主に[PrintDocument コンポーネント
  [方法: Windows フォームで印刷プレビューを使用して印刷する](how-to-print-in-windows-forms-using-print-preview.md)  
  ドキュメントの印刷に <xref:System.Windows.Forms.PrintPreviewDialog> を使用する方法について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [PrintDocument コンポーネント](../controls/printdocument-component-windows-forms.md)  
  <xref:System.Drawing.Printing.PrintDocument> コンポーネントの使用方法について説明します。  
   
@@ -57,7 +57,7 @@ Windows フォームでの印刷は、主に[PrintDocument コンポーネント
  [PrintPreviewDialog コントロール](../controls/printpreviewdialog-control-windows-forms.md)  
  <xref:System.Windows.Forms.PrintPreviewDialog> コントロールの使用方法について説明します。  
   
- [PageSetupDialog Component](../controls/pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog コンポーネント](../controls/pagesetupdialog-component-windows-forms.md)  
  <xref:System.Windows.Forms.PageSetupDialog> コンポーネントの使用方法について説明します。  
   
  <xref:System.Drawing.Printing>  

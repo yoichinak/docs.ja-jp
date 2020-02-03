@@ -37,7 +37,7 @@ ms.locfileid: "76739040"
   
  次の表では、使用可能なマージアクションの意味と一般的な使用方法について説明します。  
   
-|MergeAction 値|説明|一般的な用途|  
+|MergeAction 値|[説明]|一般的な使用方法|  
 |-----------------------|-----------------|-----------------|  
 |<xref:System.Windows.Forms.MergeAction.Append>|標準ソース項目をターゲット項目のコレクションの末尾に追加します。|プログラムの一部がアクティブになったときにメニューの最後にメニュー項目を追加する。|  
 |<xref:System.Windows.Forms.MergeAction.Insert>|ソース項目の <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> プロパティによって指定された場所で、ターゲット項目のコレクションにソース項目を追加します。|プログラムの一部がアクティブになったときに、メニューの中央または先頭にメニュー項目を追加します。<br /><br /> <xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> の値が両方のメニュー項目で同じ場合は、逆順に追加されます。 元の順序を維持するには、<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A> 適切に設定します。|  
@@ -53,7 +53,7 @@ ms.locfileid: "76739040"
   
  自動マージをトリガーするには、MDI ソースの <xref:System.Windows.Forms.MenuStrip> をアクティブにします。 アクティブ化時には、ソース <xref:System.Windows.Forms.MenuStrip> が MDI ターゲットにマージされます。 新しいフォームがアクティブになると、最後のフォームでマージが元に戻され、新しいフォームでトリガーされます。 この動作を制御するには、各 <xref:System.Windows.Forms.ToolStripItem>で必要に応じて <xref:System.Windows.Forms.ToolStripItem.MergeAction%2A> プロパティを設定し、<xref:System.Windows.Forms.MenuStrip>ごとに <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> プロパティを設定します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>

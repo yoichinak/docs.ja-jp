@@ -36,10 +36,10 @@ ms.locfileid: "76742411"
  [方法: Windows フォームの DataGridView コントロールの内容変更時にセルのサイズを自動的に変更する](automatically-resize-cells-when-content-changes-in-the-datagrid.md)  
  自動サイズ調整モードを試すために使用できるデモコードを示します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)

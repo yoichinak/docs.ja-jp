@@ -96,6 +96,6 @@ ms.locfileid: "76734927"
   
 3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [AppFabric の監視のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

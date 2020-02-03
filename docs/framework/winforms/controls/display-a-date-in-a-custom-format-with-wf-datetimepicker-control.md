@@ -22,7 +22,7 @@ Windows フォーム <xref:System.Windows.Forms.DateTimePicker> コントロー�
   
 ### <a name="to-display-a-custom-format"></a>カスタム書式を表示するには  
   
-1. <xref:System.Windows.Forms.DateTimePicker.Format%2A> プロパティを `DateTimePickerFormat.Custom`に設定します。  
+1. <xref:System.Windows.Forms.DateTimePicker.Format%2A> プロパティを `DateTimePickerFormat.Custom` に設定します。  
   
 2. <xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> プロパティを書式設定文字列に設定します。  
   
@@ -63,7 +63,7 @@ Windows フォーム <xref:System.Windows.Forms.DateTimePicker> コントロー�
   
      カルチャの設定によっては、単一引用符で囲まれていない文字は変更される可能性があります。 たとえば、上記の書式指定文字列は、現在の日付を英語 (米国) カルチャの "Today は05:30:31 年3月 02, 2012" の形式で表示します。 先頭のコロンは、"hh: mm: ss" のように区切り文字として使用されないため、単一引用符で囲まれていることに注意してください。 別のカルチャでは、"今日は: 05.30.31 金曜日3月 02, 2012" と表示される場合があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DateTimePicker コントロール](datetimepicker-control-windows-forms.md)
 - [方法: Windows フォームの DateTimePicker コントロールを使用して日付を設定および取得する](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

@@ -1,5 +1,5 @@
 ---
-title: ClickOnce の配置
+title: ClickOnce 配置
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ClickOnce deployment [Windows Forms]
@@ -16,7 +16,7 @@ ms.locfileid: "76746333"
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows フォームの ClickOnce 配置
 次のトピックでは、Windows フォームアプリケーションをクライアントコンピューターに簡単に展開するために使用されるテクノロジである ClickOnce について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [ClickOnce 配置ストラテジの選択](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)  
  ClickOnce アプリケーションを配置するためのいくつかのオプションを示します。  
   
@@ -59,10 +59,10 @@ ms.locfileid: "76746333"
  [ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)  
  ClickOnce アプリケーションからローカルデータファイルとリモートデータソースにアクセスする方法について説明します。  
   
- [方法 : ClickOnce アプリケーションにデータ ファイルを含める](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
+ [How to: Include a Data File in a ClickOnce Application](/visualstudio/deployment/how-to-include-a-data-file-in-a-clickonce-application)  
  ファイルを ClickOnce データディレクトリで使用できるようにマークする方法を示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [アプリケーション設定の概要](./advanced/application-settings-overview.md)
 - [ClickOnce アプリケーションの発行](/visualstudio/deployment/publishing-clickonce-applications)

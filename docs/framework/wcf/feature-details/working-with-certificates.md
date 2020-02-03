@@ -26,7 +26,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 
 ## <a name="viewing-certificates"></a>証明書の表示
 
-証明書を使用するには、多くの場合、証明書を表示し、プロパティを確認する必要があります。 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップイン ツールを使用すると、これを簡単に行うことができます。 詳細については、「[方法: MMC スナップインを使用して証明書を参照する](how-to-view-certificates-with-the-mmc-snap-in.md)」を参照してください。
+証明書を使用するには、多くの場合、証明書を表示し、プロパティを確認する必要があります。 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップイン ツールを使用すると、これを簡単に行うことができます。 詳細については、「 [方法: MMC スナップインを使用して証明書を参照する](how-to-view-certificates-with-the-mmc-snap-in.md)」をご覧ください。
 
 ## <a name="certificate-stores"></a>証明書ストア
 
@@ -72,7 +72,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 
 新しいサービスの作成時には、信頼されたルート証明書によって発行されていない証明書を使用できます。また、発行する証明書が、信頼されたルート証明機関ストアになくてもかまいません。 開発だけを目的としている場合は、証明書の信頼チェーンをチェックする機構を一時的に無効にできます。 これを行うには、`CertificateValidationMode` プロパティを `PeerTrust` または `PeerOrChainTrust` に設定します。 これらのモードにより、証明書を自己発行するか (ピア信頼)、信頼チェーンに含めるかを指定できます。 このプロパティは、次のどのクラスでも設定できます。
 
-|&lt;クラス&gt; のすべてのオブジェクト|property|
+|クラス|プロパティ|
 |-----------|--------------|
 |<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>|<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
 |<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>|<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication.CertificateValidationMode%2A?displayProperty=nameWithType>|
@@ -121,7 +121,7 @@ PowerShell の新しい SelfSignedCertificate コマンドレットは、x.509 �
 
 ### <a name="client-certificates"></a>クライアント証明書
 
-通常、クライアント証明書はサードパーティ証明機関によって発行されません。 通常は、"クライアント認証" という目的で、ルート証明機関によって、この証明書が現在のユーザー ストアの個人ストアに配置されます。 クライアントは、相互認証が必要なときにこのような証明書を使用できます。
+通常、クライアント証明書はサードパーティ証明機関によって発行されません。 通常は、"クライアント認証" という目的で、ルート証明機関によって、この証明書が現在のユーザー ストアの個人ストアに配置されます。 相互認証が必要な場合、クライアントはこのような証明書を使用できます。
 
 ## <a name="online-revocation-and-offline-revocation"></a>オンラインの失効とオフラインの失効
 
@@ -135,13 +135,13 @@ PowerShell の新しい SelfSignedCertificate コマンドレットは、x.509 �
 
 証明書が失効した場合、失効した証明書から発生した下位のチェーンも無効になり、認証手順において信頼されなくなります。 失効した証明書を検出するために、各発行者は日時が記された"*証明書失効リスト*" (CRL) を発行します。 このリストは、オンラインの失効またはオフラインの失効を使用してチェックできます。これを使用するには、`RevocationMode`、`DefaultRevocationMode`、<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode>、および <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> の各クラスの <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> プロパティまたは <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication> プロパティを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 列挙値のいずれかに設定します。 すべてのプロパティの既定値は、`Online` です。
 
-([\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) の) [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md) と ([\<endpointBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) の) [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md).の両方の `revocationMode` 属性を使用することにより、構成でモードを設定することもできます。
+(`revocationMode`[serviceBehaviors>\< の) ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[authentication>\< と (](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)[endpointBehaviors>\< の) ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)[authentication>\<.の両方の ](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md) 属性を使用することにより、構成でモードを設定することもできます。
 
 ## <a name="the-setcertificate-method"></a>SetCertificate メソッド
 
 WCF では、認証、暗号化、またはメッセージのデジタル署名を行うために、多くの場合、サービスまたはクライアントが使用する証明書または証明書のセットを指定する必要があります。 これは、X.509 証明書を表すさまざまなクラスの `SetCertificate` メソッドを使用することで、プログラムによって実行できます。 `SetCertificate` メソッドを使用して証明書を指定するクラスは次のとおりです。
 
-|&lt;クラス&gt; のすべてのオブジェクト|メソッド|
+|クラス|方法|
 |-----------|------------|
 |<xref:System.ServiceModel.Security.PeerCredential>|<xref:System.ServiceModel.Security.PeerCredential.SetCertificate%2A>|
 |<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A>|
@@ -168,7 +168,7 @@ IIS と Active Directory には、証明書を Windows ユーザー アカウン
 
 Active Directory のマッピングを使用する方法の詳細については、「[Mapping Client Certificates with Directory Service Mapping](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc758484(v=ws.10))」(ディレクトリ サービスのマッピングによるクライアント証明書のマッピング) を参照してください。
 
-この機能が有効になっている場合、<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> クラスの <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> プロパティを `true` に設定できます。 構成では、次のコードに示すように、[\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 要素の `mapClientCertificateToWindowsAccount` 属性を `true` に設定できます。
+この機能が有効になっている場合、<xref:System.ServiceModel.Security.X509ClientCertificateAuthentication.MapClientCertificateToWindowsAccount%2A> クラスの <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> プロパティを `true` に設定できます。 構成では、次のコードに示すように、`mapClientCertificateToWindowsAccount`[authentication>\< 要素の ](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md) 属性を `true` に設定できます。
 
 ```xml
 <serviceBehaviors>
@@ -188,10 +188,10 @@ Windows ユーザー アカウントを表すトークンに X.509 証明書を�
 
 WCF の最初のリリースでは、ドメイン ポリシーを参照せずにマッピングが実行されます。 そのため、マッピングが有効になっており、X.509 証明書がドメイン ポリシーを満たしていない場合は、最初のリリースの下で実行しているときには動作していた古いアプリケーションが動作しなくなる可能性があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

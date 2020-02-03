@@ -26,7 +26,7 @@ Windows フォームの <xref:System.Windows.Forms.SaveFileDialog> コンポー�
 
 フォームに追加されると、Visual Studio の Windows フォームデザイナーの下部にあるトレイに <xref:System.Windows.Forms.SaveFileDialog> コンポーネントが表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [SaveFileDialog コンポーネント](savefiledialog-component-windows-forms.md)

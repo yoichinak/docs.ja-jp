@@ -30,9 +30,9 @@ ms.locfileid: "76744620"
   
  WCF でのキューのアドレス指定は、次のパターンに基づいています。  
   
- net.msmq: // \<*host-name*> / [private/] \<*queue-name*>  
+ net.tcp://\<*host-name*>/[private/] \<*キュー名*>  
   
- それぞれの文字について以下に説明します。  
+ 各値の説明:  
   
 - \<*ホスト名*> は、ターゲットキューをホストするコンピューターの名前です。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "76744620"
 ### <a name="multiple-contracts-in-a-queue"></a>キュー内の複数のコントラクト  
  キュー内のメッセージは、さまざまなコントラクトを実装している可能性があります。 この場合、すべてのメッセージを正常に読み取って処理するためには、次のいずれかの処置を行う必要があります。  
   
-- すべてのコントラクトを実装するサービス エンドポイントを指定します。 この方法をお勧めします。  
+- すべてのコントラクトを実装するサービス エンドポイントを指定します。 これが推奨される方法です。  
   
 - 異なるコントラクトを持つ複数のエンドポイントを指定します。ただし、すべてのエンドポイントで同じ `NetMsmqBinding` オブジェクトを使用するようにしてください。 ServiceModel のディスパッチ ロジックでは、ディスパッチ用のトランスポート チャネルからメッセージを読み取るメッセージ ポンプを使用します。メッセージ ポンプは、最終的にコントラクトに基づいてこれらのメッセージをさまざまなエンドポイントに非多重化します。 メッセージ ポンプは、リッスン URI とバインディングの組み合わせに対して作成されます。 キュー アドレスは、キューに格納されたリスナーにより、リッスン URI として使用されます。 すべてのエンドポイントで同じバインディング オブジェクトを使用するようにすると、1 つのメッセージ ポンプを使用してメッセージを読み取り、コントラクトに基づいて関連するエンドポイントに非多重化できるようになります。  
   
@@ -72,9 +72,9 @@ ms.locfileid: "76744620"
   
 |WCF の URI ベースのキュー アドレス|UseActiveDirectory プロパティ|QueueTransferProtocol プロパティ|結果の MSMQ 形式名|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
-|Net.msmq://\<machine-name>/private/abc|False (既定値)|Native (既定値)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|[False]|SRMP|DIRECT =http://machine/msmq/private $/abc|  
-|Net.msmq://\<machine-name>/private/abc|True|ネイティブ|PUBLIC=some-guid (キューの GUID)|  
+|Net.tcp://\<マシン名 >//|False (既定値)|Native (既定値)|DIRECT=OS:machine-name\private$\abc|  
+|Net.tcp://\<マシン名 >//|False|SRMP|DIRECT =http://machine/msmq/private$/abc|  
+|Net.tcp://\<マシン名 >//|True|ネイティブ|PUBLIC=some-guid (キューの GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>配信不能キューまたは有害メッセージ キューからのメッセージの読み取り  
  ターゲット キューのサブキューである有害メッセージ キューからメッセージを読み取るには、サブキューのアドレスを使用して `ServiceHost` を開きます。  
@@ -87,23 +87,23 @@ ms.locfileid: "76744620"
   
  カスタムの配信不能キューを使用する場合は、配信不能キューをローカル コンピューターに配置する必要があります。 そのため、配信不能キューの URI は次の形式に限定されます。  
   
- net.msmq: //localhost/ [private/]  \<*custom-dead-letter-queue-name*>.  
+ net.tcp://localhost/[private/] \<、*カスタム配信不能キュー名*> です。  
   
  WCF サービスは、受信したすべてのメッセージが、リッスンしている特定のキューにアドレス指定されていることを確認します。 メッセージの送信先キューとメッセージが置かれているキューが一致しない場合、サービスはメッセージを処理しません。 この問題には、配信不能キューをリッスンしているサービスが対処する必要があります。これは、配信不能キューにあるメッセージが、他の場所に配信されることになっていたメッセージであるためです。 配信不能キューや有害メッセージ キューからメッセージを読み取るには、`ServiceBehavior` パラメーターが設定された <xref:System.ServiceModel.AddressFilterMode.Any> を使用する必要があります。 例については、「[配信不能キュー](../../../../docs/framework/wcf/samples/dead-letter-queues.md)」を参照してください。  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding とサービスのアドレス指定  
  `MsmqIntegrationBinding` は、従来の MSMQ アプリケーションとの通信に使用されます。 既存の MSMQ アプリケーションとの相互運用を容易にするために、WCF では、形式名のアドレス指定のみがサポートされています。 そのため、このバインディングを使用して送信されるメッセージは、次の URI スキームに従う必要があります。  
   
- msmq.formatname:\<*MSMQ-format-name*>>  
+ msmq. formatname:\<*msmq-形式名*>>  
   
  MSMQ 形式名は、「 [About Message Queuing](https://docs.microsoft.com/previous-versions/windows/desktop/legacy/ms706032(v=vs.85))」で msmq によって指定された形式です。  
   
  `MsmqIntegrationBinding` を使用してキューからメッセージを受信する場合、使用できるのは、直接形式名とパブリック/プライベート形式名 (ActiveDirectory 統合が必要です) のみです。 ただし、直接形式名を使用することをお勧めします。 たとえば、Windows Vista では、他の形式名を使用するとエラーが発生します。これは、システムがサブキューを開こうとして、直接形式名でのみ開くことができるためです。  
   
- `MsmqIntegrationBinding` を使用して SRMP のアドレス指定を行う場合は、インターネット インフォメーション サービス (IIS: Internet Information Services) のディスパッチを支援するために、直接形式名で /msmq/ を追加するという要件はありません。 たとえば、DIRECT =http://adatum.com/msmq/private $/abc ではなく、SRMP プロトコルを使用してキュー abc を指定する場合は、DIRECT =http://adatum.com/private $/abc. を使用する必要があります。  
+ `MsmqIntegrationBinding` を使用して SRMP のアドレス指定を行う場合は、インターネット インフォメーション サービス (IIS: Internet Information Services) のディスパッチを支援するために、直接形式名で /msmq/ を追加するという要件はありません。 たとえば、DIRECT =http://adatum.com/msmq/private$/abc ではなく、SRMP プロトコルを使用してキュー abc を指定する場合は、DIRECT =http://adatum.com/private$/abc. を使用する必要があります。  
   
  `MsmqIntegrationBinding` では、net.msmq:// によるアドレス指定を使用できないことに注意してください。 `MsmqIntegrationBinding` は自由形式の MSMQ 形式名のアドレス指定をサポートしているため、このバインディングを使用する WCF サービスを使用して、MSMQ のマルチキャストおよび配布リスト機能を使用できます。 ただし、`CustomDeadLetterQueue` を使用するときに、`MsmqIntegrationBinding` を指定する場合を除きます。 これは、`NetMsmqBinding` を使用して指定するのと同様に、net.msmq:// という形式にする必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [キューに置かれたアプリケーションの Web ホスト](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

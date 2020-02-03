@@ -23,7 +23,7 @@ Firefox 用の Windows Presentation Foundation (WPF) プラグインを使用す
 > [!NOTE]
 > .NET Framework のインストール、配置、および検出の詳細については、「[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)」を参照してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 .NET Framework 3.5 がインストールされている場合、クライアントコンピューターは Firefox 用の WPF プラグインを使用して構成されます。 次のサンプルスクリプトでは、Firefox 用の WPF プラグインを確認し、適切なステータスメッセージを表示します。
 
@@ -65,7 +65,7 @@ Firefox の WPF プラグインの確認が成功すると、次のステータ�
 
 `The WPF plug-in for Firefox is not installed. Please install or reinstall the .NET Framework 3.5.`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework 3.0 がインストールされているかどうかを確認する](how-to-detect-whether-the-net-framework-3-0-is-installed.md)
 - [.NET Framework 3.5 がインストールされているかどうかを確認する](how-to-detect-whether-the-net-framework-3-5-is-installed.md)

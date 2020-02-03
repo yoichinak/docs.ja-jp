@@ -154,7 +154,7 @@ Console.ReadLine();
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MsmqToWcf`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WCF のキュー](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [方法 : WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)

@@ -50,7 +50,7 @@ Windows アプリケーションでは、データソース内のレコード間
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームがサポートするデータ ソース](data-sources-supported-by-windows-forms.md)
 - [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)

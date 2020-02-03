@@ -30,12 +30,12 @@ Windows Presentation Foundation (WPF) ホスト (プレゼンテーションホ�
   
  このトピックでは、PresentationHost.exe で使用できるコマンド ライン パラメーターについて説明します。  
   
-## <a name="usage"></a>使用状況  
+## <a name="usage"></a>使用法  
  `PresentationHost.exe [parameters] uri|filename`  
   
 ## <a name="parameters"></a>パラメーター  
   
-|パラメータ|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |filename|アクティブにするファイルのパス。 は URI でもかまいません。|  
 |-debug|アプリケーションをアクティブにする場合に、このアプリケーションをストアにコミットしたり、ストアから実行しません。 これは、ローカル ファイルをアクティブにする場合に限って使用できます。|  
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF) ホスト (プレゼンテーションホ�
 |-event \<eventname>|この名前のイベントを開き、プレゼンテーションの cluster.exe が初期化され、WPF コンテンツをホストする準備ができたら、そのイベントを通知します。 PresentationHost.exe は、イベントを開く際にエラーが発生すると (そのイベントがまだ作成されていない場合など) 終了します。|  
 |-launchApplication \<url>|指定された URL からスタンドアロンの ClickOnce アプリケーションを起動します。 .NET アプリケーションに関する Internet Explorer と WinINet のセキュリティポリシーが適用されます。|  
   
-## <a name="scenarios"></a>監視プロセス  
+## <a name="scenarios"></a>シナリオ  
   
 ### <a name="shell-handler"></a>シェル ハンドラー  
  `PresentationHost.exe example.xbap`  
@@ -58,6 +58,6 @@ Windows Presentation Foundation (WPF) ホスト (プレゼンテーションホ�
 ### <a name="visual-studio-debugging-in-zone"></a>Visual Studio によるゾーンでのデバッグ  
  `PresentationHost.exe -debug -debugSecurityZoneURL http://www.example.com c:\folderpath\example.xbap`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Security](../security-wpf.md)
+- [セキュリティ](../security-wpf.md)

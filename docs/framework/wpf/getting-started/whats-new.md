@@ -16,7 +16,7 @@ ms.locfileid: "76746920"
 # <a name="whats-new-in-wpf-version-45"></a>WPF Version 4.5 の新機能
 <a name="introduction"></a>このトピックでは [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] バージョン4.5 の新機能と強化された機能について説明します。  
   
- このトピックは、次のセクションで構成されています。  
+ このトピックには、次のセクションが含まれます。  
   
 - [リボン コントロール](#ribbon_control)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "76746920"
   
 <a name="INotifyDataErrorInfo"></a>   
 ## <a name="synchronously-and-asynchronously-validating-data"></a>データの同期および非同期検証  
- <xref:System.ComponentModel.INotifyDataErrorInfo> インターフェイスにより、データ エンティティ クラスは、ユーザー定義の検証規則を実装し、検証結果を非同期的に公開することができます。 このインターフェイスは、カスタム エラー オブジェクト、プロパティごとの複数のエラー、プロパティ間のエラー、およびエンティティ レベルのエラーもサポートします。  詳細については、「 <xref:System.ComponentModel.INotifyDataErrorInfo>」を参照してください。  
+ <xref:System.ComponentModel.INotifyDataErrorInfo> インターフェイスにより、データ エンティティ クラスは、ユーザー定義の検証規則を実装し、検証結果を非同期的に公開することができます。 このインターフェイスは、カスタム エラー オブジェクト、プロパティごとの複数のエラー、プロパティ間のエラー、およびエンティティ レベルのエラーもサポートします。  詳細については、<xref:System.ComponentModel.INotifyDataErrorInfo> を参照してください。  
   
 <a name="delay"></a>   
 ## <a name="automatically-updating-the-source-of-a-data-binding"></a>データ バインディングのソースの自動更新  
@@ -126,6 +126,6 @@ ms.locfileid: "76746920"
 ## <a name="markup-extensions-for-events"></a>イベントのマークアップ拡張機能  
  WPF 4.5 では、イベントのマークアップ拡張機能がサポートされます。  WPF はイベントに使用されるマークアップ拡張機能を定義しませんが、サードパーティがイベントで使用できるマークアップ拡張機能を作成できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework の新機能](../../whats-new/index.md)

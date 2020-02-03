@@ -18,7 +18,7 @@ ms.locfileid: "76744879"
 
 次の例では、いくつかのアニメーションがスタイル内で定義され、<xref:System.Windows.Controls.Button>に適用されます。 ユーザーがボタンの上にマウスを移動すると、不透明から部分的に半透明にフェードし、もう一度繰り返し戻ることができます。 ユーザーがマウスポインターをボタンの外に移動すると、完全に不透明になります。 ボタンがクリックされると、背景色がオレンジ色から白に変わり、もう一度戻るようになります。 ボタンの描画に使用される <xref:System.Windows.Media.SolidColorBrush> を直接対象にすることはできません。そのため、ボタンの <xref:System.Windows.Controls.Control.Background%2A> プロパティから、このボタンにアクセスします。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 [!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 

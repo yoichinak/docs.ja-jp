@@ -31,7 +31,7 @@ Windows フォーム <xref:System.Windows.Forms.Label> コントロールを使�
   
 1. まず、ラベルを描画してから、もう一方のコントロールを描画します。  
   
-     -または-  
+     または  
   
      コントロールを任意の順序で描画し、ラベルの [<xref:System.Windows.Forms.Control.TabIndex%2A>] プロパティをもう一方のコントロールよりも1小さい値に設定します。  
   
@@ -63,7 +63,7 @@ Windows フォーム <xref:System.Windows.Forms.Label> コントロールを使�
     label2->Text = "&Copy && Paste";  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label コントロールの概要](label-control-overview-windows-forms.md)

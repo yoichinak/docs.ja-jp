@@ -24,9 +24,9 @@ Visual Studio の Windows フォームデザイナーには、ユーザーコン
 
 - [チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化](serializing-collections-designerserializationvisibilityattribute.md)
 
-- [チュートリアル: Visual C# による Windows フォーム コントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [チュートリアル : Visual C# による Windows フォーム コントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 
-- [方法: コントロールにツールボックス ビットマップを指定する](how-to-provide-a-toolbox-bitmap-for-a-control.md)
+- [方法 : コントロールにツールボックス ビットマップを指定する](how-to-provide-a-toolbox-bitmap-for-a-control.md)
 
 - [方法: 既存の Windows フォーム コントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)
 
@@ -34,23 +34,23 @@ Visual Studio の Windows フォームデザイナーには、ユーザーコン
 
 - [方法: コントロール クラスを継承する](how-to-inherit-from-the-control-class.md)
 
-- [方法: UserControl の実行時の動作をテストする](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [方法 : UserControl の実行時の動作をテストする](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 
 - [方法: デザイン時にフォームの端に合わせてコントロールを配置する](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
 
-- [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
+- [方法 : UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
 
 - [方法: Windows フォームのコントロールを作成する](how-to-author-controls-for-windows-forms.md)
 
 - [方法: 複合コントロールを作成する](how-to-author-composite-controls.md)
 
-- [チュートリアル: Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [チュートリアル : Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 
 - [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](creating-a-wf-control-design-time-features.md)
 
-- [方法 : デザイン時機能を活用した Windows フォーム コントロールを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
+- [方法: デザイン時機能を活用した Windows フォーム コントロールを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: Windows フォーム コントロールに属性を適用する](how-to-apply-attributes-in-windows-forms-controls.md)
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)

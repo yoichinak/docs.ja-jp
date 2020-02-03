@@ -48,7 +48,7 @@ ms.locfileid: "76746157"
   
  次の表に、<xref:System.Windows.Forms.DataGridViewCellStyle> オブジェクトを取得または設定する主なプロパティを示します。  
   
-|property|クラス|説明|  
+|プロパティ|クラス|[説明]|  
 |--------------|-------------|-----------------|  
 |`DefaultCellStyle`|<xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.DataGridViewColumn>、<xref:System.Windows.Forms.DataGridViewRow>、および派生クラス|コントロール全体 (ヘッダーセルを含む)、列、または行内のすべてのセルで使用される既定のスタイルを取得または設定します。|  
 |<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>|<xref:System.Windows.Forms.DataGridView>|コントロールのすべての行で使用される既定のセルスタイルを取得または設定します。 これには、ヘッダーセルは含まれません。|  
@@ -144,7 +144,7 @@ ms.locfileid: "76746157"
 > [!NOTE]
 > 特定のスタイル値が設定されているかどうかに関係なく、セルの <xref:System.Windows.Forms.DataGridViewCell.Style%2A> プロパティに格納されている値をキャッシュすることが重要です。 スタイル設定を一時的に置き換える場合は、元の "設定なし" の状態に復元することで、そのセルが上位レベルからスタイル設定を継承するようになります。 スタイルが継承されているかどうかに関係なく、セルに対して実際に有効なスタイルを決定する必要がある場合は、セルの <xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A> プロパティを使用します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

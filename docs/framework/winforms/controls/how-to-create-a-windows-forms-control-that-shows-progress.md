@@ -30,11 +30,11 @@ ms.locfileid: "76731178"
   
 - <xref:System.Windows.Forms.Control.ClientRectangle%2A> プロパティを使用して、コントロールを描画するために使用できる領域を計算します。 `FlashTrackBar` は、`OptimizedInvalidate` メソッドでこの計算を実行します。  
   
-- Windows フォーム デザイナー内でプロパティが変更されたときの、プロパティのシリアル化または永続化の実装。 `FlashTrackBar` は `StartColor` プロパティと `EndColor` プロパティをシリアル化するために、`ShouldSerializeStartColor` メソッドと `ShouldSerializeEndColor` メソッドを定義します。  
+- Windows フォーム デザイナー内でプロパティが変更されたときの、プロパティのシリアル化または永続化の実装。 `FlashTrackBar` は `ShouldSerializeStartColor` プロパティと `ShouldSerializeEndColor` プロパティをシリアル化するために、`StartColor` メソッドと `EndColor` メソッドを定義します。  
   
  `FlashTrackBar` によって定義されるカスタム プロパティを次の表に示します。  
   
-|property|説明|  
+|プロパティ|[説明]|  
 |--------------|-----------------|  
 |`AllowUserEdit`|フラッシュ トラック バーをクリックまたはドラッグして値を変更できるかどうかを示します。|  
 |`EndColor`|トラック バーの終了色を指定します。|  
@@ -49,7 +49,7 @@ ms.locfileid: "76731178"
   
  次の表は、`FlashTrackBar:` によって定義される追加メンバーである、プロパティ変更イベント、およびイベントを発生させるメソッドを示しています。  
   
-|メンバー|説明|  
+|メンバー|[説明]|  
 |------------|-----------------|  
 |`ValueChanged`|トラック バーの `Value` プロパティが変更されたときに発生するイベント。|  
 |`OnValueChanged`|`ValueChanged` イベントを発生させるメソッド。|  
@@ -77,7 +77,7 @@ ms.locfileid: "76731178"
   
 - <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  `FlashTrackBar` コントロールは、次のコード一覧に示すとおり、`FlashTrackBarValueEditor` と `FlashTrackBarDarkenByEditor` という 2 つの UI 型エディターを定義します。 `HostApp` クラスは、Windows フォームで `FlashTrackBar` コントロールを使用します。  
   
  [!code-csharp[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
@@ -92,7 +92,7 @@ ms.locfileid: "76731178"
  [!code-csharp[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
  [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
 - [Windows フォーム コントロール開発の基本概念](windows-forms-control-development-basics.md)

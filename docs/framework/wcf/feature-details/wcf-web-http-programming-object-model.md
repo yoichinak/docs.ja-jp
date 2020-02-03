@@ -44,7 +44,7 @@ WCF WEB HTTP プログラミングモデルを使用すると、開発者は SOA
 ## <a name="webgetattribute"></a>WebGetAttribute  
  <xref:System.ServiceModel.Web.WebGetAttribute> 属性は、サービス操作を HTTP GET 要求に応答する操作としてマークするために使用されます。 メタデータを操作の説明に追加する受信操作の動作です (<xref:System.ServiceModel.Description.IOperationBehavior> メソッドは何の処理も行いません)。 このメタデータを操作の説明で検索する動作 (特に <xref:System.ServiceModel.Web.WebGetAttribute>) がサービスの動作コレクションに追加されていない場合は、<xref:System.ServiceModel.Description.WebHttpBehavior> を適用しても機能しません。 <xref:System.ServiceModel.Web.WebGetAttribute> 属性には、次の表に示すパラメーターをオプションで指定できます。  
   
-|パラメータ|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |`BodyStyle`|属性が適用されているサービス操作との間で送受信される要求と応答をラップするかどうかを制御します。|  
 |`RequestFormat`|要求メッセージの書式設定方法を制御します。|  
@@ -59,7 +59,7 @@ WCF WEB HTTP プログラミングモデルを使用すると、開発者は SOA
   
  <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性には、次の表に示すパラメーターをオプションで指定できます。  
   
-|パラメータ|説明|  
+|パラメーター|[説明]|  
 |---------------|-----------------|  
 |`BodyStyle`|属性が適用されているサービス操作との間で送受信される要求と応答をラップするかどうかを制御します。|  
 |`Method`|サービス操作がマップされる HTTP メソッドを指定します。|  
@@ -96,11 +96,11 @@ WCF WEB HTTP プログラミングモデルを使用すると、開発者は SOA
 ## <a name="compatibility"></a>互換性  
  WCF WEB HTTP プログラミングモデルは、SOAP ベースのメッセージを使用しないため、WS-* プロトコルをサポートしていません。 ただし、SOAP を使用するエンドポイントと SOAP を使用しないその他のエンドポイントの 2 つの異なるエンドポイントを使用して、同じコントラクトを公開できます。 例については、「[方法: SOAP および Web クライアントにコントラクトを公開](../../../../docs/framework/wcf/feature-details/how-to-expose-a-contract-to-soap-and-web-clients.md)する」を参照してください。  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
 
 WCF WEB HTTP プログラミングモデルでは WS-* プロトコルがサポートされていないため、WCF WEB HTTP プログラミングモデル上に構築された Web サービスをセキュリティで保護する唯一の方法は、SSL を使用してサービスを公開することです。 IIS 7.0 での SSL の設定の詳細については、「 [iis で ssl を実装する方法](https://support.microsoft.com/help/299875/how-to-implement-ssl-in-iis)」を参照してください。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

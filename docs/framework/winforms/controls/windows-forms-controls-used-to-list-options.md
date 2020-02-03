@@ -34,7 +34,7 @@ ms.locfileid: "76742343"
  [方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)  
  データソースでリストデータを並べ替える方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.CheckedListBox>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "76742343"
  <xref:System.Windows.Forms.ListBox>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [CheckedListBox コントロールの概要](checkedlistbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   

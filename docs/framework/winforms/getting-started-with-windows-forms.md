@@ -25,7 +25,7 @@ Windows フォームを使用すると、強力な Windows ベースのアプリ
  [新しい Windows フォームの作成](creating-a-new-windows-form.md)  
  Windows フォームアプリケーションを作成するための基本的な概念について説明するトピックへのリンクが含まれています。  
   
- [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)  
+ [Windows フォーム内のイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)  
  Windows フォームイベントハンドラーの作成方法について説明するトピックへのリンクが含まれています。  
   
  [Windows フォームのサイズとスケールを調整する](adjusting-the-size-and-scale-of-windows-forms.md)  
@@ -55,6 +55,6 @@ Windows フォームを使用すると、強力な Windows ベースのアプリ
  [方法: Windows フォームのコレクションにアクセス キーを指定する](how-to-access-keyed-collections-in-windows-forms.md)  
  インデックスではなくキーを使用してコレクションにアクセスする方法を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム アプリケーションの拡張](./advanced/index.md)  
  Windows フォームアプリケーションを作成するための高度な概念を説明するトピックへのリンクが含まれています。

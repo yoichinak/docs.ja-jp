@@ -30,14 +30,14 @@ ms.locfileid: "76746417"
  [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
  X.509 証明書を使用する際に必要となる主なタスクの解説  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)  
   
  [セキュリティの拡張](../../../../docs/framework/wcf/extending/extending-security.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "76746417"
   
  [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

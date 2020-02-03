@@ -20,7 +20,7 @@ Windows フォーム <xref:System.Windows.Forms.PrintPreviewControl> は、印�
 ## <a name="key-properties"></a>キー プロパティ  
  コントロールのキープロパティは <xref:System.Windows.Forms.PrintPreviewControl.Document%2A>であり、プレビューするドキュメントを設定します。 ドキュメントは <xref:System.Drawing.Printing.PrintDocument> オブジェクトである必要があります。 印刷用のドキュメントの作成の概要については、「 [PrintDocument Component の概要](printdocument-component-overview-windows-forms.md)」および「[印刷サポートの Windows フォーム](../advanced/windows-forms-print-support.md)」を参照してください。 <xref:System.Windows.Forms.PrintPreviewControl.Columns%2A> プロパティと <xref:System.Windows.Forms.PrintPreviewControl.Rows%2A> プロパティによって、コントロールの水平方向および垂直方向に表示されるページ数が決まります。 アンチエイリアシングを使用すると、テキストが滑らかに見えるようになりますが、表示速度が低下する可能性があります。これを使用するには、<xref:System.Windows.Forms.PrintPreviewControl.UseAntiAlias%2A> プロパティを `true`に設定します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.PrintPreviewControl>
 - [PrintPreviewDialog コントロールの概要](printpreviewdialog-control-overview-windows-forms.md)

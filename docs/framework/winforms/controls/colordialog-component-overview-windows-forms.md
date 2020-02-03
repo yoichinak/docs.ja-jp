@@ -19,9 +19,9 @@ Windows フォーム <xref:System.Windows.Forms.ColorDialog> コンポーネン�
   
  ダイアログボックスで選択した色が <xref:System.Windows.Forms.ColorDialog.Color%2A> プロパティに返されます。 <xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A> プロパティが `false`に設定されている場合、[ユーザー設定の色の定義] ボタンは無効になり、ユーザーはパレットの定義済みの色に制限されます。 <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A> プロパティが `true`に設定されている場合、ユーザーはディザーカラーを選択できません。 ダイアログボックスを表示するには、<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> メソッドを呼び出す必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog コンポーネント](colordialog-component-windows-forms.md)
 - [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)
-- [方法 : Windows フォーム ColorDialog コンポーネントの表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
+- [方法: Windows フォーム ColorDialog コンポーネントの表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)

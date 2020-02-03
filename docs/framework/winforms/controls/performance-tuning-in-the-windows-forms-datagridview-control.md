@@ -29,14 +29,14 @@ ms.locfileid: "76744275"
  [Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
  必要に応じてデータを読み込む方法について説明します。これは、使用可能なクライアントメモリが格納できる量よりも多くのデータを表示する場合に便利です。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>  
  <xref:System.Windows.Forms.DataGridView.VirtualMode%2A> プロパティのリファレンスドキュメントを提供します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
 - [Windows フォーム DataGridView コントロールでのデータ表示モード](data-display-modes-in-the-windows-forms-datagridview-control.md)

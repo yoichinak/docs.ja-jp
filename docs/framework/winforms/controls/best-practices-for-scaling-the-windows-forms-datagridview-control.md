@@ -142,7 +142,7 @@ ms.locfileid: "76744123"
 
 - <xref:System.Windows.Forms.DataGridView.Sort%2A> メソッドの `Sort(IComparer)` オーバーロードは呼び出さないでください。 カスタム比較子を使用して並べ替えると、すべての行の共有が解除されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows フォーム DataGridView コントロールでのパフォーマンス チューニング](performance-tuning-in-the-windows-forms-datagridview-control.md)

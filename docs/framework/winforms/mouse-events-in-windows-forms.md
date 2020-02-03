@@ -30,11 +30,11 @@ ms.locfileid: "76740967"
 
 <xref:System.Windows.Forms.MouseEventArgs> は、マウス ボタンのクリック、およびマウスの動きの追跡に関連するマウス イベントのハンドラーに送信します。 <xref:System.Windows.Forms.MouseEventArgs> は、マウスのボタンが押された、およびマウスのホイールがスクロールされたといった、クライアント座標のマウス ポインターの場所を含む、マウスの現在の状態に関する情報を提供します。 マウス ポインターがコントロールの境界内に入った、または境界から出たときの通知など、いくつかのマウスイベントは、それ以上の情報はなしで <xref:System.EventArgs> をイベント ハンドラーに送信します。
 
-マウス ボタン、または、マウス ポインターの位置の現在の状態を確認して、マウス イベントの処理を回避する場合は、<xref:System.Windows.Forms.Control> クラスの <xref:System.Windows.Forms.Control.MouseButtons%2A> プロパティと <xref:System.Windows.Forms.Control.MousePosition%2A> プロパティも使用できます。 <xref:System.Windows.Forms.Control.MouseButtons%2A> は現在押されているマウス ボタンに関する情報を返します。 <xref:System.Windows.Forms.Control.MousePosition%2A> はマウス ポインターの画面の座標を返しますが、<xref:System.Windows.Forms.Cursor.Position%2A> によって返される値と同じです。
+マウス ボタン、または、マウス ポインターの位置の現在の状態を確認して、マウス イベントの処理を回避する場合は、<xref:System.Windows.Forms.Control.MouseButtons%2A> クラスの <xref:System.Windows.Forms.Control.MousePosition%2A> プロパティと <xref:System.Windows.Forms.Control> プロパティも使用できます。 <xref:System.Windows.Forms.Control.MouseButtons%2A> は現在押されているマウス ボタンに関する情報を返します。 <xref:System.Windows.Forms.Control.MousePosition%2A> はマウス ポインターの画面の座標を返しますが、<xref:System.Windows.Forms.Cursor.Position%2A> によって返される値と同じです。
 
 ## <a name="converting-between-screen-and-client-coordinates"></a>画面の座標とクライアント座標の間の変換
 
-マウスの位置情報は、クライアント座標の場合と画面の座標の場合があるため、ポインターの座標システムの変換が必要になることがあります。 これは、<xref:System.Windows.Forms.Control> クラスで利用できる <xref:System.Windows.Forms.Control.PointToClient%2A> メソッドと <xref:System.Windows.Forms.Control.PointToScreen%2A> メソッドを使用して簡単に実行できます。
+マウスの位置情報は、クライアント座標の場合と画面の座標の場合があるため、ポインターの座標システムの変換が必要になることがあります。 これは、<xref:System.Windows.Forms.Control.PointToClient%2A> クラスで利用できる <xref:System.Windows.Forms.Control.PointToScreen%2A> メソッドと <xref:System.Windows.Forms.Control> メソッドを使用して簡単に実行できます。
 
 ## <a name="standard-click-event-behavior"></a>標準のクリック イベントの動作
 
@@ -150,6 +150,6 @@ ms.locfileid: "76740967"
     > [!NOTE]
     > マウス ボタンが押されているときにユーザーがポインターを切り替えコントロールの外に移動した (例 : <xref:System.Windows.Forms.Button> コントロールを押しているときにマウスを移動した) 場合、離された状態で切り替えコントロールが描画し、<xref:System.Windows.Forms.Control.MouseUp> イベントのみが発生します。 <xref:System.Windows.Forms.Control.Click> イベントまたは <xref:System.Windows.Forms.Control.MouseClick> イベントは、このような状況では発生しません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)

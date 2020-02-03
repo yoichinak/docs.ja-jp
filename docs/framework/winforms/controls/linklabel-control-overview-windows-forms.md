@@ -23,7 +23,7 @@ Windows フォーム <xref:System.Windows.Forms.LinkLabel> コントロールを
   
  <xref:System.Windows.Forms.LinkLabel> コントロールの最も簡単な用途は、<xref:System.Windows.Forms.LinkLabel.LinkArea%2A> プロパティを使用して1つのリンクを表示することですが、<xref:System.Windows.Forms.LinkLabel.Links%2A> プロパティを使用して複数のハイパーリンクを表示することもできます。 <xref:System.Windows.Forms.LinkLabel.Links%2A> プロパティを使用すると、リンクのコレクションにアクセスできます。 個々の <xref:System.Windows.Forms.LinkLabel.Link> オブジェクトの <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> プロパティでデータを指定することもできます。 <xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A> プロパティの値は、表示するファイルの場所または Web サイトのアドレスを格納するために使用できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [Label コントロールの概要](label-control-overview-windows-forms.md)

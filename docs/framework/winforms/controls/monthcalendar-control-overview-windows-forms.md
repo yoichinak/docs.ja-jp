@@ -25,7 +25,7 @@ Windows フォーム <xref:System.Windows.Forms.MonthCalendar> コントロー�
   
  <xref:System.Windows.Forms.MonthCalendar> コントロールのキープロパティは、コントロールで選択されている日付の範囲 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A>です。 <xref:System.Windows.Forms.MonthCalendar.SelectionRange%2A> 値は、<xref:System.Windows.Forms.MonthCalendar.MaxSelectionCount%2A> プロパティで設定できる最大日数を超えることはできません。 ユーザーが選択できる最も早い日と最後の日付は、<xref:System.Windows.Forms.MonthCalendar.MaxDate%2A> プロパティと <xref:System.Windows.Forms.MonthCalendar.MinDate%2A> プロパティによって決まります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.MonthCalendar>
 - [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)

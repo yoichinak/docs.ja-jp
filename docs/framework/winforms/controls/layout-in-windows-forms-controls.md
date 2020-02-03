@@ -35,7 +35,7 @@ ms.locfileid: "76745252"
 [方法: カスタムレイアウトエンジンを実装](how-to-implement-a-custom-layout-engine.md)する\
 Windows フォームコントロールを配置するための <xref:System.Windows.Forms.Layout.LayoutEngine> を実装する方法を示します。
 
-## <a name="reference"></a>参照先
+## <a name="reference"></a>リファレンス
 
 <xref:System.Windows.Forms.TableLayoutPanel>\
 <xref:System.Windows.Forms.TableLayoutPanel> コントロールのリファレンス ドキュメントを提供します。
@@ -43,7 +43,7 @@ Windows フォームコントロールを配置するための <xref:System.Wind
 <xref:System.Windows.Forms.FlowLayoutPanel>\
 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールのリファレンス ドキュメントを提供します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
 - [方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)

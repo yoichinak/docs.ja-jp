@@ -19,11 +19,11 @@ Windows フォーム `PrintDocument` コンポーネントを使用して印刷�
  [PrintDocument コンポーネントの概要](printdocument-component-overview-windows-forms.md)  
  印刷する内容を記述し、Windows ベースのアプリケーションで印刷を起動するプロパティを設定できる `PrintDocument` コンポーネントの一般的な概念を紹介します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Drawing.Printing.PrintDocument>  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームにおける印刷のサポート](../advanced/windows-forms-print-support.md)  
  Windows フォームに関連する印刷のトピックの一覧を表示します。  
   

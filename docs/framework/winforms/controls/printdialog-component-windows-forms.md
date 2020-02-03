@@ -25,10 +25,10 @@ Windows フォーム `PrintDialog` コンポーネントは、構成済みのダ
  [方法: PrintDialog コンポーネントを表示する](how-to-display-the-printdialog-component.md)  
  ダイアログを表示する方法とプロパティが保存される場所について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.PrintDialog>  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

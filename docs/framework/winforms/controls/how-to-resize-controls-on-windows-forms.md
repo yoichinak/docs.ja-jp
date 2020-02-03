@@ -36,7 +36,7 @@ Visual Studio で、サイズを変更するコントロールを選択し、8�
 
 2. **[書式]** メニューの **[同じサイズに揃える]** をクリックし、4つのオプションのいずれかを選択します。 最初の3つのコマンドは、最初に選択されたコントロールに合わせてコントロールのサイズを変更します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

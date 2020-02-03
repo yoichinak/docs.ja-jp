@@ -46,7 +46,7 @@ Windows フォーム <xref:System.Windows.Forms.MonthCalendar> コントロー�
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>コントロールの下部に現在の日付を表示するには  
   
-- <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> プロパティを `true`に設定します。 次の例では、フォームがダブルクリックされたときの今日の日付の表示と非表示を切り替えます。  
+- <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> プロパティを `true` に設定します。 次の例では、フォームがダブルクリックされたときの今日の日付の表示と非表示を切り替えます。  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows フォーム <xref:System.Windows.Forms.MonthCalendar> コントロー�
   
 ### <a name="to-display-week-numbers"></a>週番号を表示するには  
   
-- <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> プロパティを `true`に設定します。 このプロパティは、コードまたはプロパティウィンドウで設定できます。  
+- <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> プロパティを `true` に設定します。 このプロパティは、コードまたはプロパティウィンドウで設定できます。  
   
      週番号は、週の最初の曜日の左側にある別の列に表示されます。  
   
@@ -103,7 +103,7 @@ Windows フォーム <xref:System.Windows.Forms.MonthCalendar> コントロー�
     monthCalendar1->ShowWeekNumbers = true;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)
 - [方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択する](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)

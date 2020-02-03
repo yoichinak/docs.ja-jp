@@ -19,7 +19,7 @@ ms.locfileid: "76741493"
 # <a name="how-to-apply-attributes-in-windows-forms-controls"></a>方法 : Windows フォーム コントロールに属性を適用する
 デザイン環境と正しく対話し、実行時に正常に実行されるコンポーネントとコントロールを開発するには、クラスおよびメンバーに属性を正しく適用する必要があります。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次のコード例は、カスタムコントロールでいくつかの属性を使用する方法を示しています。 このコントロールは、単純なログ記録機能を示しています。 コントロールがデータソースにバインドされると、<xref:System.Windows.Forms.DataGridView> コントロールにデータソースから送信された値が表示されます。 値が `Threshold` プロパティによって指定された値を超えると、`ThresholdExceeded` イベントが発生します。  
   
  `AttributesDemoControl` は、`LogEntry` クラスを使用して値をログに記録します。 `LogEntry` クラスはテンプレートクラスであり、これはログに記録される型でパラメーター化されることを意味します。 たとえば、`AttributesDemoControl` が `float`型の値をログに記録している場合、各 `LogEntry` インスタンスは次のように宣言されて使用されます。  
@@ -73,11 +73,11 @@ ms.locfileid: "76741493"
  [!code-csharp[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/CS/attributesdemocontrol.cs#26)]
  [!code-vb[System.ComponentModel.AttributesDemoControl#26](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AttributesDemoControl/VB/attributesdemocontrol.vb#26)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
   
 - `AttributesDemoControl` をホストするフォームは、ビルドするために `AttributesDemoControl` アセンブリへの参照を必要とします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>

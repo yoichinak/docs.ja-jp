@@ -15,15 +15,15 @@ ms.locfileid: "76742889"
 ---
 # <a name="splitter-control-overview-windows-forms"></a>Splitter コントロールの概要 (Windows フォーム)
 > [!IMPORTANT]
-> <xref:System.Windows.Forms.SplitContainer> に置き換えられ、以前のバージョンの <xref:System.Windows.Forms.Splitter> コントロールに機能が追加されますが、<xref:System.Windows.Forms.Splitter> は下位互換性と将来の使用の両方のために保持されます。  
+> <xref:System.Windows.Forms.SplitContainer> コントロールは、以前のバージョンの <xref:System.Windows.Forms.Splitter> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.Splitter> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  Windows フォーム <xref:System.Windows.Forms.Splitter> コントロールを使用して、ドッキングされたコントロールのサイズを実行時に変更します。 <xref:System.Windows.Forms.Splitter> コントロールは、多くの場合、フォームで使用されます。 Windows エクスプローラーのように、データペインにはさまざまな時間の異なる幅の情報が含まれています。  
   
 ## <a name="working-with-the-splitter-control"></a>スプリッターコントロールの操作  
  ユーザーが、スプリッターコントロールによってサイズ変更できるコントロールのドッキング解除された端でマウスポインターをポイントすると、ポインターの外観が変化して、コントロールのサイズを変更できることを示します。 スプリッターコントロールを使用すると、ドッキングされたコントロールのサイズを変更できます。 そのため、ユーザーがドッキングされたコントロールのサイズを実行時に変更できるようにするには、サイズを変更するコントロールをコンテナーの端にドッキングし、そのコンテナーの同じ側に分割コントロールをドッキングします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.SplitContainer>
-- [方法 : Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
+- [方法: Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

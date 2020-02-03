@@ -31,7 +31,7 @@ ms.locfileid: "76740184"
 
 他の .NET Framework クラスをデバッグする場合と同様に、Visual Studio を使用してカスタムコントロールをデバッグできます。 違いは、カスタムコントロールのコードを実行している Visual Studio の別のインスタンスをデバッグすることです。
 
-## <a name="create-the-project"></a>プロジェクトの作成
+## <a name="create-the-project"></a>プロジェクトを作成する
 
 最初にアプリケーションのプロジェクトを作成します。 このプロジェクトは、カスタムコントロールをホストするアプリケーションをビルドするために使用します。
 
@@ -47,7 +47,7 @@ Visual Studio で、Windows アプリケーションプロジェクトを作成�
 
 4. ソリューションをビルドします。
 
-## <a name="checkpoint"></a>チェックポイント
+## <a name="checkpoint"></a>Checkpoint
 
 この時点で、**ツールボックス**にカスタムコントロールが表示されます。
 
@@ -139,16 +139,16 @@ Visual Studio で、Windows アプリケーションプロジェクトを作成�
 
 6. デバッグを停止するには、Visual Studio のホストされたインスタンスを終了するか、デバッグインスタンスで **[デバッグの停止]** ボタンを選択します。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 デザイン時にカスタムコントロールをデバッグできるようになったので、Visual Studio IDE とのコントロールの相互作用を拡張する多くの可能性があります。
 
-- <xref:System.ComponentModel.Component> クラスの <xref:System.ComponentModel.Component.DesignMode%2A> プロパティを使用して、デザイン時にのみ実行されるコードを記述できます。 詳細については、「<xref:System.ComponentModel.Component.DesignMode%2A>」を参照してください。
+- <xref:System.ComponentModel.Component> クラスの <xref:System.ComponentModel.Component.DesignMode%2A> プロパティを使用して、デザイン時にのみ実行されるコードを記述できます。 詳細については、<xref:System.ComponentModel.Component.DesignMode%2A> を参照してください。
 
 - コントロールのプロパティには、デザイナーとのカスタムコントロールの対話を操作するために適用できる属性がいくつかあります。 これらの属性は、<xref:System.ComponentModel?displayProperty=nameWithType> 名前空間にあります。
 
 - カスタムコントロールのカスタムデザイナーを作成できます。 これにより、Visual Studio によって公開される拡張可能なデザイナーインフラストラクチャを使用して、デザインエクスペリエンスを完全に制御できます。 詳細については、「[チュートリアル: Visual Studio のデザイン時機能を利用する Windows フォームコントロールの作成](creating-a-wf-control-design-time-features.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](creating-a-wf-control-design-time-features.md)

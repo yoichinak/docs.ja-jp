@@ -69,7 +69,7 @@ ms.locfileid: "76732793"
   
 - [[MenuStrip タスク] ダイアログボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.MenuStrip>  
  フォームにメニュー システムを提供する <xref:System.Windows.Forms.MenuStrip> クラスの機能について説明します。  
   
@@ -77,8 +77,8 @@ ms.locfileid: "76732793"
  ショートカット メニューを表す <xref:System.Windows.Forms.ContextMenuStrip> の機能について説明します。  
   
  <xref:System.Windows.Forms.ToolStripMenuItem>  
- <xref:System.Windows.Forms.MenuStrip> または <xref:System.Windows.Forms.ContextMenuStrip> に表示される選択可能なオプションを表す <xref:System.Windows.Forms.ToolStripMenuItem> クラスの機能について説明します。  
+ <xref:System.Windows.Forms.ToolStripMenuItem> または <xref:System.Windows.Forms.MenuStrip> に表示される選択可能なオプションを表す <xref:System.Windows.Forms.ContextMenuStrip> クラスの機能について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

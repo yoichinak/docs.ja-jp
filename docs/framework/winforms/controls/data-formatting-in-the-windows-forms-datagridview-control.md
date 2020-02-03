@@ -31,7 +31,7 @@ ms.locfileid: "76743982"
   
  ユーザー指定の値の既定の解析がニーズに合わない場合は、<xref:System.Windows.Forms.DataGridView> コントロールの <xref:System.Windows.Forms.DataGridView.CellParsing> イベントを処理して、カスタム解析を提供できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>

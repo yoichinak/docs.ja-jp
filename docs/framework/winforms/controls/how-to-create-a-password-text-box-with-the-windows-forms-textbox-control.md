@@ -72,7 +72,7 @@ ms.locfileid: "76731287"
        }
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)

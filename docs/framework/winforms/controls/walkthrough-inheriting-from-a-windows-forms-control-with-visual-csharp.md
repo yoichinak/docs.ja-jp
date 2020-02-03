@@ -22,7 +22,7 @@ ms.locfileid: "76740140"
 
 でC#は、*継承*によって強力なカスタムコントロールを作成できます。 継承を使用すると、標準の Windows フォーム コントロールの固有の機能をすべて保持しながら、カスタム機能も組み込んだコントロールを作成できます。 このチュートリアルでは、`ValueButton` という単純な継承されたコントロールを作成します。 このボタンは、標準の Windows フォーム <xref:System.Windows.Forms.Button> コントロールから機能を継承し、`ButtonValue`というカスタムプロパティを公開します。
 
-## <a name="create-the-project"></a>プロジェクトの作成
+## <a name="create-the-project"></a>プロジェクトを作成する
 
 新しいプロジェクトを作成するときは、ルート名前空間、アセンブリ名、プロジェクト名を設定し、既定のコンポーネントが適切な名前空間に含まれるようにするために、プロジェクトの名前を指定します。
 
@@ -30,9 +30,9 @@ ms.locfileid: "76740140"
 
 1. Visual Studio で、新しい**Windows フォームコントロールライブラリ**プロジェクトを作成し、 **valuebuttonlib**という名前を指定します。
 
-     プロジェクト名 `ValueButtonLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ValueButton` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ValueButtonLib.ValueButton` を使用して目的の `ValueButton` コンポーネントを指定できます。 詳細については、「[名前空間](../../../csharp/programming-guide/namespaces/index.md)」を参照してください。
+     プロジェクト名 `ValueButtonLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ValueButton` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ValueButton` を使用して目的の `ValueButtonLib.ValueButton` コンポーネントを指定できます。 詳細については、「[名前空間](../../../csharp/programming-guide/namespaces/index.md)」を参照してください。
 
-2. **ソリューション エクスプローラー**で、 **[UserControl1.cs]** を右クリックし、ショートカット メニューの **[名前の変更]** をクリックします。 ファイル名を**ValueButton.cs**に変更します。 コード要素 "`UserControl1`" へのすべての参照の名前を変更するかどうかをたずねられたら、 **[はい]** をクリックします。
+2. **ソリューション エクスプローラー**で、 **[UserControl1.cs]** を右クリックし、ショートカット メニューの **[名前の変更]** をクリックします。 ファイル名を**ValueButton.cs**に変更します。 コード要素 " **" へのすべての参照の名前を変更するかどうかをたずねられたら、** [はい]`UserControl1` をクリックします。
 
 3. **ソリューション エクスプローラー**で、 **[ValueButton.cs]** を右クリックし、 **[コードの表示]** をクリックします。
 
@@ -55,7 +55,7 @@ ms.locfileid: "76740140"
 
 1. **ソリューション エクスプローラー**で、 **[ValueButton.cs]** を右クリックし、ショートカット メニューの **[コードの表示]** をクリックします。
 
-2. `class` ステートメントを探します。 `{` の直後に次のコードを入力します。
+2. `class` ステートメントを見つけます。 `{` の直後に次のコードを入力します。
 
     ```csharp
     // Creates the private variable that will store the value of your
@@ -139,9 +139,9 @@ ms.locfileid: "76740140"
 
 12. [`valueButton1`] をクリックします。
 
-     `label1` に数字の "5" が表示されます。これは、継承されたコントロールの `ButtonValue` プロパティが、`valueButton1_Click` メソッドによって `label1` に渡されたことを示しています。 このようにして、`ValueButton` コントロールは標準の Windows フォーム ボタンの機能をすべて継承しながら、追加のカスタム プロパティを公開します。
+     `label1` に数字の "5" が表示されます。これは、継承されたコントロールの `ButtonValue` プロパティが、`label1` メソッドによって `valueButton1_Click` に渡されたことを示しています。 このようにして、`ValueButton` コントロールは標準の Windows フォーム ボタンの機能をすべて継承しながら、追加のカスタム プロパティを公開します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [チュートリアル: Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [チュートリアル : Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

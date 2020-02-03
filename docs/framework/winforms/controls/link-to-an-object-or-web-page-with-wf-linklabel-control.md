@@ -180,7 +180,7 @@ Windows フォーム <xref:System.Windows.Forms.LinkLabel> コントロールを
        }
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel コントロールの概要](linklabel-control-overview-windows-forms.md)

@@ -164,7 +164,7 @@ Windows フォームでのドラッグ アンド ドロップ操作の <xref:Sys
   
      マウス ボタンを放すと、選択したテキストがドロップ (つまり <xref:System.Windows.Forms.RichTextBox.DragDrop> イベントが発生) し、 <xref:System.Windows.Forms.RichTextBox> コントロール内に挿入されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [方法: アプリケーション間でドラッグ アンド ドロップ操作を実行する](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)

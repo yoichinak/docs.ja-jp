@@ -22,13 +22,13 @@ Windows フォームのスクロール バー コントロールを使用する�
  [HScrollBar コントロールと VScrollBar コントロールの概要](hscrollbar-and-vscrollbar-controls-overview-windows-forms.md)  
  <xref:System.Windows.Forms.HScrollBar> コントロールと <xref:System.Windows.Forms.VScrollBar> コントロールの全般的な概念を説明します。これらのコントロールにより、ユーザーは大量の情報を水平および垂直にスクロールして見ることができます。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.HScrollBar>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
  <xref:System.Windows.Forms.VScrollBar>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

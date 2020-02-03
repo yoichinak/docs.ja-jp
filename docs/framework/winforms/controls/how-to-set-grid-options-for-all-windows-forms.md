@@ -30,6 +30,6 @@ Visual Studio 開発環境で作業する際には、Windows フォームデザ�
 
    右側のウィンドウの **[レイアウト設定]** 見出しの下で、作成するすべての新しいフォームに対して既定のグリッド設定を設定できます。 これらの設定には、グリッドのサイズ、コントロールにスナップするかどうか、および既定でオンになっているかどうかが含まれます。 さらに、 **SnapToGrid**と**スナップ線**の両方のレイアウトモードを選択できます。 スナップガイドラインの詳細については、「[チュートリアル: スナップ線を使用した Windows フォームでのコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [オプション: Windows フォームデザイナー](/visualstudio/ide/reference/options-windows-forms-designer)

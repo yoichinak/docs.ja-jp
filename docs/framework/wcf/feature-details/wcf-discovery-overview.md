@@ -57,7 +57,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
   
  サービスを探索可能にするには、<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> のインスタンスをサービスの説明に追加する必要があります。 探索要求をリッスンするサービスを指定するには、<xref:System.ServiceModel.Discovery.DiscoveryEndpoint> のインスタンスをサービス ホストに追加する必要があります。 この例では、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> (<xref:System.ServiceModel.Discovery.DiscoveryEndpoint> から派生した) を追加して、サービスが UDP マルチキャスト トランスポートを利用して探索要求をリッスンするように指定しています。 すべてのメッセージがマルチキャストで送信されるため、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を使用してアドホック探索が実行されるようにしています。  
   
-## <a name="announcement"></a>アナウンス  
+## <a name="announcement"></a>告知  
  既定では、サービスを公開しても、アナウンス メッセージは送信されません。 アナウンス メッセージを送信するように、サービスを構成する必要があります。 このため、探索メッセージのリッスンとは別に、サービスをアナウンスできるため、より柔軟にサービスを作成できます。 サービス アナウンスは、探索プロキシまたはその他のサービス レジストリにサービスを登録するメカニズムとしても使用できます。 次のコード例は、UDP バインドを利用してアナウンス メッセージを送信するようにサービスを構成する方法を示しています。  
   
 ```csharp  

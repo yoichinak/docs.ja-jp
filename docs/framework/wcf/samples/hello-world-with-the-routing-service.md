@@ -27,7 +27,7 @@ ms.locfileid: "76743712"
 
 3. Enter キーを押してクライアントを起動します。
 
-     以下の出力が表示されます。
+     次の出力が表示されます。
 
     ```console
      Add(100,15.99) = 115.99
@@ -42,7 +42,7 @@ ms.locfileid: "76743712"
 ## <a name="configurable-via-code-or-appconfig"></a>コードまたは App.Config で構成可能
  サンプルは、提供された時点では、App.config ファイルを使用してルーターの動作を定義するように構成されています。 App.config ファイルの名前を別の名前に変更して認識されないようにし、ConfigureRouterViaCode() に対するメソッド呼び出しのコメントを解除することもできます。 どちらの方法でも、ルーターの動作は同じになります。
 
-### <a name="scenario"></a>通信の種類
+### <a name="scenario"></a>シナリオ
  このサンプルでは、基本的なメッセージ ポンプとして機能するルーターを示します。 ルーティング サービスは、構成済みの一連の送信先エンドポイントに直接メッセージを渡すように構成された透過的なプロキシ ノードとして機能します。
 
 ### <a name="real-world-scenario"></a>実際のシナリオ
@@ -57,6 +57,6 @@ ms.locfileid: "76743712"
 >   
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\RoutingServices\HelloRoutingService`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [AppFabric のホスティングと永続化のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

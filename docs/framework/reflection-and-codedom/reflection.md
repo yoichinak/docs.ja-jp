@@ -40,11 +40,11 @@ ms.locfileid: "76744568"
   
 - モジュールを含んでいるアセンブリや、モジュール内のクラスなどの情報を探索するには、<xref:System.Reflection.Module> を使用します。 また、すべてのグローバル メソッドも取得できます。その他、モジュールに定義されている固有の非グローバルなメソッドも取得できます。  
   
-- 名前、パラメーター、アクセス修飾子 (`public` または `private` など)、およびコンストラクターの実装詳細 (`abstract` または `virtual` など) の情報を探索するには、<xref:System.Reflection.ConstructorInfo> を使用します。 特定のコンストラクターを呼び出すには、<xref:System.Type> の <xref:System.Type.GetConstructors%2A> メソッドまたは <xref:System.Type.GetConstructor%2A> メソッドを使用します。  
+- 名前、パラメーター、アクセス修飾子 (<xref:System.Reflection.ConstructorInfo> または `public` など)、およびコンストラクターの実装詳細 (`private` または `abstract` など) の情報を探索するには、`virtual` を使用します。 特定のコンストラクターを呼び出すには、<xref:System.Type.GetConstructors%2A> の <xref:System.Type.GetConstructor%2A> メソッドまたは <xref:System.Type> メソッドを使用します。  
   
-- 名前、戻り値の型、パラメーター、アクセス修飾子 (`public` または `private` など)、およびメソッドの実装詳細 (`abstract` または `virtual` など) の情報を探索するには、<xref:System.Reflection.MethodInfo> を使用します。 特定のメソッドを呼び出すには、<xref:System.Type> の <xref:System.Type.GetMethods%2A> メソッドまたは <xref:System.Type.GetMethod%2A> メソッドを使用します。  
+- 名前、戻り値の型、パラメーター、アクセス修飾子 (<xref:System.Reflection.MethodInfo> または `public` など)、およびメソッドの実装詳細 (`private` または `abstract` など) の情報を探索するには、`virtual` を使用します。 特定のメソッドを呼び出すには、<xref:System.Type.GetMethods%2A> の <xref:System.Type.GetMethod%2A> メソッドまたは <xref:System.Type> メソッドを使用します。  
   
-- フィールドの名前、アクセス修飾子 (`public` または `private` など)、フィールドの実装詳細 (`static` など) などの情報を探索したり、フィールドの値を取得または設定したりするには、<xref:System.Reflection.FieldInfo> を使用します。  
+- フィールドの名前、アクセス修飾子 (<xref:System.Reflection.FieldInfo> または `public` など)、フィールドの実装詳細 (`private` など) などの情報を探索したり、フィールドの値を取得または設定したりするには、`static` を使用します。  
   
 - 名前、イベント ハンドラーのデータ型、カスタム属性、宣言型、イベントのリフレクションされた型などの情報を探索したり、イベント ハンドラーを追加および削除したりするには、<xref:System.Reflection.EventInfo> を使用します。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "76744568"
 
 ## <a name="related-topics"></a>関連トピック  
   
-|[タイトル]|説明|  
+|タイトル|[説明]|  
 |-----------|-----------------|  
 |[型情報の表示](viewing-type-information.md)|<xref:System.Type> クラスについて説明します。<xref:System.Type> をさまざまなリフレクション クラスと共に使用して、コンストラクター、メソッド、フィールド、プロパティ、およびイベントについての情報を取得する方法を示すコード例を提供します。|  
 |[リフレクションとジェネリック型](reflection-and-generic-types.md)|ジェネリック型およびジェネリック メソッドの型パラメーターと型引数がリフレクションでどのように処理されるかについて説明します。|  
@@ -83,7 +83,7 @@ ms.locfileid: "76744568"
 |[方法 : リフレクションを使用してデリゲートをフックする](how-to-hook-up-a-delegate-using-reflection.md)|メソッドのデリゲートを作成し、デリゲートをイベントにフックする方法について説明します。 また、<xref:System.Reflection.Emit.DynamicMethod> を使用して実行時にイベント処理メソッドを作成する方法について説明します。|  
 |[動的メソッドおよびアセンブリの出力](emitting-dynamic-methods-and-assemblies.md)|動的アセンブリや動的メソッドを生成する方法について説明します。|  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
 
 <xref:System.Type?displayProperty=nameWithType>  
   

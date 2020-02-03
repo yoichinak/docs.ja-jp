@@ -38,7 +38,7 @@ Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロ�
   
 ## <a name="commonly-used-properties-methods-and-events"></a>一般的に使用されるプロパティ、メソッド、およびイベント  
   
-|[名前]|説明|  
+|Name|[説明]|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> プロパティ|<xref:System.Windows.Forms.SplitContainer> コントロールのサイズを変更した後、どのパネルが同じサイズになるかを指定します。|  
 |<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> プロパティ|キーボードまたはマウスを使用してスプリッターを移動できるかどうかを決定します。|  
@@ -49,7 +49,7 @@ Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロ�
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoving> イベント|スプリッターの移動中に発生します。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterMoved> イベント|スプリッターが移動したときに発生します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

@@ -92,7 +92,7 @@ Windows フォーム <xref:System.Windows.Forms.ErrorProvider> コンポーネ�
   
 4. プロジェクトを実行します。 1つ目のコントロールに無効な (この例では数値以外の) データを入力し、tab キーを押します。 エラーアイコンが表示されたら、マウスポインターをポイントしてエラーテキストを確認します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider コンポーネントの概要](errorprovider-component-overview-windows-forms.md)

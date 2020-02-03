@@ -20,11 +20,11 @@ ms.locfileid: "76732543"
 
 この記事では、Windows フォームでホストされている Windows Presentation Foundation (WPF) コントロールにスタイルを適用する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
-## <a name="create-the-project"></a>プロジェクトの作成
+## <a name="create-the-project"></a>プロジェクトを作成する
 
 Visual Studio を開き、Visual Basic または `StylingWpfContent`C#という名前の新しい Windows フォームアプリケーションプロジェクトを作成します。
 
@@ -45,7 +45,7 @@ Visual Studio を開き、Visual Basic または `StylingWpfContent`C#という�
 
 5. 2つ目の <xref:System.Windows.Controls.Button?displayProperty=nameWithType> コントロールを <xref:System.Windows.Controls.UserControl> に追加し、<xref:System.Windows.Controls.ContentControl.Content%2A> プロパティの値を**OK**に設定します。
 
-6. プロジェクトをビルドする。
+6. プロジェクトをビルドします。
 
 ## <a name="apply-a-style-to-a-wpf-control"></a>WPF コントロールへのスタイルの適用
 
@@ -55,7 +55,7 @@ Visual Studio を開き、Visual Basic または `StylingWpfContent`C#という�
 
 1. **ツールボックス**の [`UserControl1`] をダブルクリックして、フォームに `UserControl1` のインスタンスを作成します。
 
-   `UserControl1` のインスタンスは、`elementHost1` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。
+   `UserControl1` のインスタンスは、<xref:System.Windows.Forms.Integration.ElementHost> という名前の新しい `elementHost1` コントロールでホストされます。
 
 1. `elementHost1`のスマートタグパネルで、ドロップダウンリストから [ホストされている**コンテンツの編集**] をクリックします。
 
@@ -124,7 +124,7 @@ Visual Studio を開き、Visual Basic または `StylingWpfContent`C#という�
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-1. プロジェクトをビルドする。
+1. プロジェクトをビルドします。
 
 1. Windows フォーム デザイナーで `Form1` を開きます。
 
@@ -134,7 +134,7 @@ Visual Studio を開き、Visual Basic または `StylingWpfContent`C#という�
 
 1. [ **OK]** ボタンと **[キャンセル**] ボタンをクリックして、相違点を確認します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

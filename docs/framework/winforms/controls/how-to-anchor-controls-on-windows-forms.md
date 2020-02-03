@@ -54,11 +54,11 @@ ms.locfileid: "76747183"
 
 継承されたコントロールは、固定できるように `Protected` する必要があります。 コントロールのアクセスレベルを変更するには、 **[プロパティ]** ウィンドウで `Modifiers` プロパティを設定します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
 - [AutoSize プロパティの概要](autosize-property-overview.md)
-- [方法 : Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
+- [方法: Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
 - [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル : Padding、Margin、および AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)
+- [チュートリアル: Padding、Margin、および AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)

@@ -22,7 +22,7 @@ ms.locfileid: "76739809"
 ## <a name="clipboard-access"></a>クリップボードへのアクセス  
  <xref:System.Security.Permissions.UIPermission> クラスはクリップボードへのアクセスを制御し、関連付けられた <xref:System.Security.Permissions.UIPermissionClipboard> 列挙値はアクセスのレベルを示します。 使用されるアクセス許可レベルを次の表に示します。  
   
-|UIPermissionClipboard の値|説明|  
+|UIPermissionClipboard の値|[説明]|  
 |---------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.AllClipboard>|クリップボードは制限なしに使用できます。|  
 |<xref:System.Security.Permissions.UIPermissionClipboard.OwnClipboard>|クリップボードは制限付きで使用できます。 クリップボードにデータを格納する機能 ([コピー] または [切り取り] のコマンド操作) は制限されません。 テキスト ボックスなど、[貼り付け] を受け入れる固有のコントロールは、クリップボードのデータを受け入れます。しかし、ユーザー コントロールはプログラムでクリップボードからデータを読み取ることができません。|  
@@ -35,7 +35,7 @@ ms.locfileid: "76739809"
   
  既定では、ローカルイントラネットゾーンは <xref:System.Security.Permissions.UIPermissionWindow.AllWindows> アクセスを受信し、インターネットゾーンは <xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows> アクセスを受け取ります。 つまり、[インターネット] ゾーンでは、アプリケーションがほとんどのウィンドウ操作および UI 関連処理を実行できますが、ウィンドウの外観が変更されます。 変更されたウィンドウには、最初の実行時にバルーン通知が表示され、変更されたタイトル バー テキストが表示され、タイトル バーに閉じるボタンが必要になります。 バルーン通知とタイトル バーは、アプリケーションのユーザーに、アプリケーションが部分信頼で動作していることを示します。  
   
-|UIPermissionWindow の値|説明|  
+|UIPermissionWindow の値|[説明]|  
 |------------------------------|-----------------|  
 |<xref:System.Security.Permissions.UIPermissionWindow.AllWindows>|ユーザーは、すべてのウィンドウとユーザー入力イベントを無制限に使用できます。|  
 |<xref:System.Security.Permissions.UIPermissionWindow.SafeTopLevelWindows>|ユーザーは、セーフ トップレベル ウィンドウとセーフ サブウィンドウだけを描画に使用でき、それらのセーフ トップレベル ウィンドウとセーフ サブウィンドウの中のユーザー インターフェイスに対するユーザー入力イベントだけを使用できます。 これらのセーフ ウィンドウには明確なラベルが付けられ、最小サイズと最大サイズに制限があります。 この制限により、偽システムログオン画面やシステムデスクトップなど、有害な可能性のあるスプーフィング攻撃を防止し、プログラムによるアクセスを親ウィンドウ、フォーカス関連 Api、および <xref:System.Windows.Forms.ToolTip> コントロールに制限することができます。|  
@@ -88,7 +88,7 @@ ms.locfileid: "76739809"
   
  アンマネージ コードを呼び出すアクセス許可を与えられたアプリケーションは、ほとんどの処理を実行できます。 そのため、アンマネージ コードを呼び出すアクセス許可は、信頼されたソースからのアプリケーションに対してだけ与えるようにしてください。 また、アプリケーションによっては、アンマネージ コードの呼び出しを生成するアプリケーション機能の一部をオプションにするか、完全に信頼された環境でのみ有効にすることもできます。 危険なアクセス許可の詳細については、「[危険なアクセス許可とポリシー管理](../misc/dangerous-permissions-and-policy-administration.md)」を参照してください。 アクセス許可の昇格の詳細については、「[一般的なセキュリティ ポリシー管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームにおけるファイルおよびデータへのより安全なアクセス](more-secure-file-and-data-access-in-windows-forms.md)
 - [Windows フォームでのより安全な印刷](more-secure-printing-in-windows-forms.md)

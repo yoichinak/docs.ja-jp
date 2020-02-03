@@ -57,7 +57,7 @@ ms.locfileid: "76731357"
 
 4. Null 値が含まれる可能性のあるデータソースに <xref:System.Windows.Forms.DataGridView> コントロールをバインドする場合は、 **[Null 値]** ボックスに入力します。 この値は、セルの値が null 参照 (Visual Basic では`Nothing`) または <xref:System.DBNull.Value?displayProperty=nameWithType>の場合に表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
@@ -68,4 +68,4 @@ ms.locfileid: "76731357"
 - [Windows フォーム DataGridView コントロールでのセルのスタイル](cell-styles-in-the-windows-forms-datagridview-control.md)
 - [方法: デザイナーを使用して Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
 - [方法: Windows フォームアプリケーションプロジェクトを作成する](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法 : Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)

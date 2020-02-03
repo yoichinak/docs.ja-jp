@@ -22,7 +22,7 @@ Windows フォーム <xref:System.Windows.Forms.TabControl> は、ノートの�
 ## <a name="working-with-tabcontrol"></a>TabControl の操作  
  <xref:System.Windows.Forms.TabControl> の最も重要なプロパティは <xref:System.Windows.Forms.TabControl.TabPages%2A>であり、個々のタブが含まれています。 個々のタブは <xref:System.Windows.Forms.TabPage> オブジェクトです。 タブをクリックすると、その <xref:System.Windows.Forms.TabPage> オブジェクトの <xref:System.Windows.Forms.Control.Click> イベントが発生します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.TabControl>
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)

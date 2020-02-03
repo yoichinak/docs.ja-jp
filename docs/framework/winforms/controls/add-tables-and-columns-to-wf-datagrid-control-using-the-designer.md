@@ -26,8 +26,7 @@ ms.locfileid: "76746265"
 
 1. テーブルにデータを表示するには、最初に <xref:System.Windows.Forms.DataGrid> コントロールをデータセットにバインドする必要があります。 詳細については、「[方法: デザイナーを使用してデータソースに Windows フォーム DataGrid コントロールをバインド](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)する」を参照してください。
 
-2. ![プロパティウィンドウで] <xref:System.Windows.Forms.DataGrid> コントロールの <xref:System.Windows.Forms.DataGrid.TableStyles%2A> プロパティを選択し、プロパティの横にある省略記号ボタン ([...]) をクリックして、 **DataGridTableStyle Collection エディター**を表示します (プロパティウィンドウ)。
-
+2. プロパティウィンドウで <xref:System.Windows.Forms.DataGrid> コントロールの <xref:System.Windows.Forms.DataGrid.TableStyles%2A> プロパティを選択し、プロパティの横にある省略記号ボタン ([...]) をクリックして、 **DataGridTableStyle Collection エディター**を表示します![(プロパティウィンドウ)。](./media/visual-studio-ellipsis-button.png)
 
 3. コレクションエディターで、 **[追加]** をクリックしてテーブルのスタイルを挿入します。
 
@@ -41,7 +40,7 @@ ms.locfileid: "76746265"
 
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>デザイナーで DataGrid コントロールに列を追加するには
 
-1. **DataGridTableStyle コレクションエディター**の **[メンバー]** ボックスで、適切なテーブルのスタイルを選択します。 コレクションエディターの **[プロパティ]** ボックスで<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>コレクションを選択し、![プロパティの横にプロパティウィンドウある省略記号ボタン (省略記号ボタン ([...]) をクリック](./media/visual-studio-ellipsis-button.png)します。**System.windows.forms.datagridcolumnstyle> コレクションエディター**を表示します。
+1. **DataGridTableStyle コレクションエディター**の **[メンバー]** ボックスで、適切なテーブルのスタイルを選択します。 コレクションエディターの **[プロパティ]** ボックスで、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> コレクションを選択してから、省略記号ボタン ([...] プロパティウィンドウ) をクリックします](./media/visual-studio-ellipsis-button.png)。プロパティの横にある [![] をクリックすると、 **system.windows.forms.datagridcolumnstyle> コレクションエディター**が表示されます。
 
 2. コレクションエディターで、 **[追加]** をクリックして列のスタイルを挿入するか、 **[追加]** の横にある下矢印をクリックして列の種類を指定します。
 
@@ -55,7 +54,7 @@ ms.locfileid: "76746265"
 
 5. コレクションエディターの **[プロパティ]** ボックスで、表示する列の <xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A> 値を選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
-- [方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [方法 : Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

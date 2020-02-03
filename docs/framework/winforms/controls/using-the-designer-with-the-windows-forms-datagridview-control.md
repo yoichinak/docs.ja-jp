@@ -50,10 +50,10 @@ Visual Studio では、コードを記述しなくても多くのセットアッ
  [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定する](default-cell-styles-datagridview.md)  
  **[CellStyle ビルダー]** ダイアログボックスを使用して、コントロールの基本的な外観とデータ表示形式を設定する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)

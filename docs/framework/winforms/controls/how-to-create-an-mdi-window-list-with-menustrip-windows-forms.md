@@ -34,7 +34,7 @@ ms.locfileid: "76731008"
   
 6. プロジェクトにフォームを追加し、必要なコントロールを追加します (別の <xref:System.Windows.Forms.MenuStrip>など)。  
   
-7. <xref:System.Windows.Forms.ToolStripMenuItem> の `&New` の <xref:System.Windows.Forms.Control.Click> イベントにイベント ハンドラーを作成します。  
+7. <xref:System.Windows.Forms.Control.Click> の `&New` の <xref:System.Windows.Forms.ToolStripMenuItem> イベントにイベント ハンドラーを作成します。  
   
 8. イベントハンドラー内に次のようなコードを挿入し、`Form1`の MDI 子として `Form2` の新しいインスタンスを作成して表示します。  
   
@@ -72,16 +72,16 @@ ms.locfileid: "76731008"
     this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);  
     ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- `Form1` と `Form2` という名前の 2 つの <xref:System.Windows.Forms.Form> コントロール。  
+- <xref:System.Windows.Forms.Form> と `Form1` という名前の 2 つの `Form2` コントロール。  
   
-- `Form1` 上の `menuStrip1` という名前の <xref:System.Windows.Forms.MenuStrip> コントロールと、`Form2` 上の `menuStrip2` という名前の <xref:System.Windows.Forms.MenuStrip> コントロール。  
+- <xref:System.Windows.Forms.MenuStrip> 上の `Form1` という名前の `menuStrip1` コントロールと、<xref:System.Windows.Forms.MenuStrip> 上の `Form2` という名前の `menuStrip2` コントロール。  
   
 - <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: MDI 親フォームを作成する](../advanced/how-to-create-mdi-parent-forms.md)
 - [方法: MDI 子フォームを作成する](../advanced/how-to-create-mdi-child-forms.md)

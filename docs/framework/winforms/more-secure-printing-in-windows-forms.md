@@ -19,14 +19,14 @@ Windows フォームアプリケーションには、多くの場合、印刷機
   
  次の表は、各印刷アクセス許可レベルで使用できる機能を示しています。  
   
-|増刷レベル|説明|  
+|増刷レベル|[説明]|  
 |-----------------------------|-----------------|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting>|インストールされているすべてのプリンターへのフルアクセスを提供します。|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>|既定のプリンターへのプログラムによる印刷、および [制限付き印刷] ダイアログボックスを使用した印刷の安全性を有効にします。 <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> は <xref:System.Drawing.Printing.PrintingPermissionLevel.AllPrinting> のサブセットです。|  
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>|は、より制限されたダイアログボックスからのみ印刷を提供します。 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> は <xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting> のサブセットです。|  
-|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|プリンターへのアクセスを禁止します。 <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> は <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> のサブセットです。|  
+|<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|プリンターへのアクセスを防止します。 <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> は <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> のサブセットです。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームにおけるファイルおよびデータへのより安全なアクセス](more-secure-file-and-data-access-in-windows-forms.md)
 - [Windows フォームのセキュリティに関するその他の考慮事項](additional-security-considerations-in-windows-forms.md)

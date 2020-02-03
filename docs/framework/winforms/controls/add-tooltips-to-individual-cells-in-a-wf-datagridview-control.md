@@ -30,7 +30,7 @@ ms.locfileid: "76732181"
      [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]
      [!code-vb[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/VB/datagridviewcell.tooltiptext.vb#1)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
   
 - この例で必要な要素は次のとおりです。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "76732181"
 ## <a name="robust-programming"></a>堅牢性の高いプログラミング  
  <xref:System.Windows.Forms.DataGridView> コントロールを外部データソースにバインドしたり、仮想モードを実装して独自のデータソースを提供したりすると、パフォーマンスの問題が発生する可能性があります。 大量のデータを処理するときにパフォーマンスが低下しないようにするには、複数のセルの <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> プロパティを設定するのではなく、<xref:System.Windows.Forms.DataGridView.CellToolTipTextNeeded> イベントを処理します。 このイベントを処理するときに、セル <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A> プロパティの値を取得すると、イベントが発生し、イベントハンドラーに指定されている <xref:System.Windows.Forms.DataGridViewCellToolTipTextNeededEventArgs.ToolTipText%2A?displayProperty=nameWithType> プロパティの値が返されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ShowCellToolTips%2A?displayProperty=nameWithType>

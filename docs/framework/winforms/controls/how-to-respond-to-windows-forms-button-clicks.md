@@ -55,7 +55,7 @@ Windows フォーム <xref:System.Windows.Forms.Button> コントロールの最
        }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)

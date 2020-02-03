@@ -134,7 +134,7 @@ XAML 要素には、各要素の言語を定義する XML 属性 (`xml:lang`) �
 
 <xref:System.Windows.FlowDirection> が想定どおりに動作しないケースがいくつかあります。 ここでは、そのような例外を 2 つ取り上げて説明します。
 
-**イメージ**
+**Image**
 
 イメージを表示するコントロールを表す <xref:System.Windows.Controls.Image>。 XAML では、表示する <xref:System.Windows.Controls.Image> の URI (uniform resource identifier) を定義する <xref:System.Windows.Controls.Image.Source%2A> プロパティと共に使用できます。
 
@@ -154,7 +154,7 @@ XAML 要素には、各要素の言語を定義する XML 属性 (`xml:lang`) �
 > [!NOTE]
 > ダウンロードファイルには、 **ms_logo .jpg**ファイルが含まれています。 コードは、この .jpg ファイルがプロジェクト内ではなく、C:\ ドライブ上にあることを前提としています。 プロジェクト内のファイルを検索するためには、プロジェクト ファイルから C:\ドライブに .jpg をコピーするかコードを変更する必要があります。 これを行うには、`Source="file://c:/ms_logo.jpg"` を `Source="ms_logo.jpg"`に変更します。
 
-**パス**
+**Paths**
 
 <xref:System.Windows.Controls.Image>に加えて、もう1つの興味深い要素が <xref:System.Windows.Shapes.Path>ます。 パスは、接続された一連の線と曲線を描画できるオブジェクトです。 <xref:System.Windows.FlowDirection>に関する <xref:System.Windows.Controls.Image> と同様の方法で動作します。たとえば、<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection> は <xref:System.Windows.FlowDirection.LeftToRight> 1 つの水平方向のミラーです。 ただし、<xref:System.Windows.Controls.Image>とは異なり、<xref:System.Windows.Shapes.Path> はコンテナーからその <xref:System.Windows.FlowDirection> を継承し、1つを明示的に指定する必要はありません。
 
@@ -198,7 +198,7 @@ XAML 要素には、各要素の言語を定義する XML 属性 (`xml:lang`) �
 
 このプロパティは、実行する数字の置換の種類を指定します。 次の <xref:System.Windows.Media.NumberSubstitutionMethod> 列挙値のいずれかを取得します。
 
-- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 置換メソッドは、数値カルチャの <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> プロパティに基づいて決定されます。 これは既定です。
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 置換メソッドは、数値カルチャの <xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType> プロパティに基づいて決定されます。 これは既定値です。
 
 - <xref:System.Windows.Media.NumberSubstitutionMethod.Context>: 数字カルチャがアラビア語またはペルシャ語のカルチャである場合は、数字がコンテキストに依存することを指定します。
 
@@ -226,7 +226,7 @@ XAML 要素には、各要素の言語を定義する XML 属性 (`xml:lang`) �
 
 最初に、アプリケーションコンポーネントの `NumberSubstitution.CultureSource="Text"`を設定します。 この設定を使用すると、<xref:System.Windows.Controls.TextBlock>のように、既定値として "User" を持つテキスト要素の設定が [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] から取得されないようになります。
 
-例:
+次に例を示します。
 
 ```xaml
 <TextBlock

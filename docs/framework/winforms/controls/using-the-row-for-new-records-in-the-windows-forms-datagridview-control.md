@@ -31,33 +31,33 @@ ms.locfileid: "76728340"
   
 - 新しいレコードの行は、プログラムで <xref:System.Windows.Forms.DataGridView.Rows%2A> コレクションから削除することはできません。 このような場合は、<xref:System.InvalidOperationException> がスローされます。 ユーザーは、新しいレコードの行を削除することもできません。 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType> メソッドでは、この行が <xref:System.Windows.Forms.DataGridView.Rows%2A> コレクションから削除されることはありません。  
   
-- 新しいレコードの行の後に行を追加することはできません。 An <xref:System.InvalidOperationException> is raised if this is attempted. その結果、新しいレコードの行は常に <xref:System.Windows.Forms.DataGridView> コントロールの最後の行になります。 行を追加する <xref:System.Windows.Forms.DataGridViewRowCollection> のメソッド (<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>、<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>、および <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>) は、新しいレコードの行が存在する場合に、すべての挿入メソッドを内部的に呼び出します。  
+- 新しいレコードの行の後に行を追加することはできません。 このような場合は、<xref:System.InvalidOperationException> が発生します。 その結果、新しいレコードの行は常に <xref:System.Windows.Forms.DataGridView> コントロールの最後の行になります。 行を追加する <xref:System.Windows.Forms.DataGridViewRowCollection> のメソッド (<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>、<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>、および <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>) は、新しいレコードの行が存在する場合に、すべての挿入メソッドを内部的に呼び出します。  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>新しいレコードの行のビジュアルカスタマイズ  
- 新しいレコードの行が作成されると、その行は <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> プロパティによって指定された行に基づいて作成されます。 この行に対して指定されていないセルスタイルは、他のプロパティから継承されます。 For more information about cell style inheritance, see [Cell Styles in the Windows Forms DataGridView Control](cell-styles-in-the-windows-forms-datagridview-control.md).  
+ 新しいレコードの行が作成されると、その行は <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> プロパティによって指定された行に基づいて作成されます。 この行に対して指定されていないセルスタイルは、他のプロパティから継承されます。 セルスタイルの継承の詳細については、「 [Windows フォーム DataGridView コントロールのセルのスタイル](cell-styles-in-the-windows-forms-datagridview-control.md)」を参照してください。  
   
- The initial values displayed by cells in the row for new records are retrieved from each cell's <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> property. For cells of type <xref:System.Windows.Forms.DataGridViewImageCell>, this property returns a placeholder image. Otherwise, this property returns `null`. You can override this property to return a custom value. However, these initial values can be replaced by a <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event handler when focus enters the row for new records.  
+ 新しいレコードの行のセルによって表示される初期値は、各セルの <xref:System.Windows.Forms.DataGridViewCell.DefaultNewRowValue%2A> プロパティから取得されます。 <xref:System.Windows.Forms.DataGridViewImageCell>型のセルの場合、このプロパティはプレースホルダーイメージを返します。 それ以外の場合は、`null` を返します。 このプロパティをオーバーライドして、カスタム値を返すことができます。 ただし、これらの初期値は、新しいレコードの行にフォーカスが入ったときに、<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> のイベントハンドラーに置き換えることができます。  
   
- The standard icons for this row's header, which are an arrow or an asterisk, are not exposed publicly. If you want to customize the icons, you will need to create a custom <xref:System.Windows.Forms.DataGridViewRowHeaderCell> class.  
+ この行のヘッダーの標準アイコン (矢印またはアスタリスク) は、一般公開されていません。 アイコンをカスタマイズする場合は、カスタム <xref:System.Windows.Forms.DataGridViewRowHeaderCell> クラスを作成する必要があります。  
   
- The standard icons use the <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> property of the <xref:System.Windows.Forms.DataGridViewCellStyle> in use by the row header cell. The standard icons are not rendered if there is not enough space to display them completely.  
+ 標準アイコンは、行ヘッダーセルによって使用されている <xref:System.Windows.Forms.DataGridViewCellStyle> の <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A> プロパティを使用します。 標準アイコンは、完全に表示するための十分な領域がない場合はレンダリングされません。  
   
- If the row header cell has a string value set, and if there is not enough room for both the text and icon, the icon is dropped first.  
+ 行ヘッダーセルに文字列値が設定されていて、テキストとアイコンの両方に十分な領域がない場合は、まずアイコンがドロップされます。  
   
 ## <a name="sorting"></a>並べ替え  
- In unbound mode, new records will always be added to the end of the <xref:System.Windows.Forms.DataGridView> even if the user has sorted the content of the <xref:System.Windows.Forms.DataGridView>. The user will need to apply the sort again in order to sort the row to the correct position; this behavior is similar to that of the <xref:System.Windows.Forms.ListView> control.  
+ 非バインドモードでは、ユーザーが <xref:System.Windows.Forms.DataGridView>の内容を並べ替えた場合でも、新しいレコードは常に <xref:System.Windows.Forms.DataGridView> の最後に追加されます。 ユーザーは、行を正しい位置に並べ替えるために並べ替えを再度適用する必要があります。この動作は、<xref:System.Windows.Forms.ListView> コントロールの動作と似ています。  
   
- In data bound and virtual modes, the insertion behavior when a sort is applied will be dependent on the implementation of the data model. For ADO.NET, the row is immediately sorted into the correct position.  
+ データバインドモードと仮想モードでは、並べ替えが適用されるときの挿入動作は、データモデルの実装に依存します。 ADO.NET の場合、行はすぐに正しい位置に並べ替えられます。  
   
-## <a name="other-notes-on-the-row-for-new-records"></a>Other Notes on the Row for New Records  
- You cannot set the <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> property of this row to `false`. An <xref:System.InvalidOperationException> is raised if this is attempted.  
+## <a name="other-notes-on-the-row-for-new-records"></a>新しいレコードの行に関するその他のメモ  
+ この行の <xref:System.Windows.Forms.DataGridViewRow.Visible%2A> プロパティを `false`に設定することはできません。 このような場合は、<xref:System.InvalidOperationException> が発生します。  
   
- The row for new records is always created in the unselected state.  
+ 新しいレコードの行は、常に選択されていない状態で作成されます。  
   
-## <a name="virtual-mode"></a>Virtual Mode  
- If you are implementing virtual mode, you will need to track when a row for new records is needed in the data model and when to roll back the addition of the row. The exact implementation of this functionality depends on the implementation of the data model and its transaction semantics, for example, whether commit scope is at the cell or row level. For more information, see [Virtual Mode in the Windows Forms DataGridView Control](virtual-mode-in-the-windows-forms-datagridview-control.md).  
+## <a name="virtual-mode"></a>仮想モード  
+ 仮想モードを実装する場合は、データモデルで新しいレコードの行が必要になるタイミングと、行の追加をロールバックするタイミングを追跡する必要があります。 この機能の正確な実装は、データモデルの実装とそのトランザクションセマンティクスによって異なります。たとえば、コミットスコープがセルレベルまたは行レベルのどちらであるかなどです。 詳細については、「 [Windows フォーム DataGridView コントロールでの仮想モード](virtual-mode-in-the-windows-forms-datagridview-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>

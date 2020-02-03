@@ -36,6 +36,6 @@ Windows フォーム[HelpProvider](helpprovider-component-windows-forms.md)コ�
 > [!NOTE]
 > <xref:System.Windows.Forms.HelpProvider> コントロールの <xref:System.Windows.Forms.Help.ShowHelp%2A> メソッドまたは <xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A> プロパティでヘルプファイルへのパスを指定するときに、相対パスを使用すると問題が発生することがあります。 そのため、絶対ファイルパスを使用してヘルプファイルを指定してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム アプリケーションのヘルプ システム](../advanced/help-systems-in-windows-forms-applications.md)

@@ -32,14 +32,14 @@ ms.locfileid: "76732846"
      [!code-csharp[WebBrowserMisc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- `webBrowser1` という名前の <xref:System.Windows.Forms.WebBrowser> コントロール。  
+- <xref:System.Windows.Forms.WebBrowser> という名前の `webBrowser1` コントロール。  
   
 - `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>

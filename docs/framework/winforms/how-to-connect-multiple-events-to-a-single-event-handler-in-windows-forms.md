@@ -60,7 +60,7 @@ ms.locfileid: "76739611"
   
      イベントを既存のイベントハンドラーにバインドするためのコードがフォームに追加されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
+- [Windows フォーム内のイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
 - [イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)

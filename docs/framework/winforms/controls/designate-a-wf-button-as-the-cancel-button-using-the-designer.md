@@ -21,11 +21,11 @@ ms.locfileid: "76746051"
 
 2. **[プロパティ]** ウィンドウで、フォームの <xref:System.Windows.Forms.Form.CancelButton%2A> プロパティを <xref:System.Windows.Forms.Button> コントロールの名前に設定します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
 - [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
-- [方法 : デザイナーを使用して Windows フォームの Button コントロールを承認ボタンとして指定する](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォームの Button コントロールを承認ボタンとして指定する](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
 - [Button コントロール](button-control-windows-forms.md)

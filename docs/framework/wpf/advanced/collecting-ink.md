@@ -24,7 +24,7 @@ ms.locfileid: "76747027"
 
 [Windows Presentation Foundation](../index.md) プラットフォームでは、その機能の中核としてデジタル インクが収集されます。 このトピックでは、Windows Presentation Foundation (WPF) でインクを収集する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 次の例を使用するには、最初に Visual Studio と Windows SDK をインストールする必要があります。 WPF 用のアプリケーションを作成する方法についても理解しておく必要があります。 WPF の概要については、「[チュートリアル: 初めての wpf デスクトップアプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)」を参照してください。
 
@@ -52,7 +52,7 @@ XAML を使用すると、 **system.windows.controls.inkcanvas>** 要素をツ�
 
 <xref:System.Windows.Controls.InkCanvas> では、多くのインク編集操作がサポートされています。 たとえば、<xref:System.Windows.Controls.InkCanvas> では、ペンの前の消去がサポートされており、要素に機能を追加するための追加のコードは必要ありません。
 
-#### <a name="selection"></a>選択内容
+#### <a name="selection"></a>[選択]
 
 選択モードの設定は、<xref:System.Windows.Controls.InkCanvasEditingMode> プロパティを **[選択]** に設定するのと同じように簡単です。
 
@@ -88,7 +88,7 @@ XAML を使用すると、 **system.windows.controls.inkcanvas>** 要素をツ�
 
 <xref:System.Windows.Controls.StackPanel> によって、ボタンが <xref:System.Windows.Controls.InkCanvas>の上に配置されることに注意してください。 ボタンの上部でインクを試すと、<xref:System.Windows.Controls.InkCanvas> はボタンの背後にあるインクを収集してレンダリングします。 これは、ボタンが子ではなく、<xref:System.Windows.Controls.InkCanvas> の兄弟であるためです。 また、ボタンは z オーダーの上位に位置するため、インクはその背後で描画されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Ink.DrawingAttributes>
 - <xref:System.Windows.Controls.InkCanvas.DefaultDrawingAttributes%2A>

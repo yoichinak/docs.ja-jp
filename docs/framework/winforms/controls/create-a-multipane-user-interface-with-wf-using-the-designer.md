@@ -43,7 +43,7 @@ ms.locfileid: "76737277"
 
 アプリケーション開発のこの時点で、洗練されたユーザーインターフェイスを作成しました。 次の手順では、アプリケーション自体のプログラミングに進みます。たとえば、<xref:System.Windows.Forms.TreeView> コントロールと <xref:System.Windows.Forms.ListView> コントロールを何らかの種類のデータソースに接続します。 コントロールをデータに接続する方法の詳細については、「[データバインディングと Windows フォーム](../data-binding-and-windows-forms.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

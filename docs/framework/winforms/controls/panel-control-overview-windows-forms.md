@@ -23,7 +23,7 @@ Windows フォーム <xref:System.Windows.Forms.Panel> コントロールを使�
 ## <a name="key-properties"></a>キー プロパティ  
  スクロールバーを表示するには、<xref:System.Windows.Forms.ScrollableControl.AutoScroll%2A> プロパティを `true`に設定します。 <xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.BackgroundImage%2A>、および <xref:System.Windows.Forms.Panel.BorderStyle%2A> の各プロパティを設定して、パネルの外観をカスタマイズすることもできます。 <xref:System.Windows.Forms.Control.BackColor%2A> と <xref:System.Windows.Forms.Control.BackgroundImage%2A> のプロパティの詳細については、「[方法: パネルの背景を設定する](how-to-set-the-background-of-a-windows-forms-panel.md)」を参照してください。 <xref:System.Windows.Forms.Panel.BorderStyle%2A> プロパティは、表示されている境界線 (<xref:System.Windows.Forms.BorderStyle.None>)、線 (<xref:System.Windows.Forms.BorderStyle.FixedSingle>)、または影付きの線 (<xref:System.Windows.Forms.BorderStyle.Fixed3D>) を含まないパネルを表示するかどうかを決定します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox コントロール](groupbox-control-windows-forms.md)

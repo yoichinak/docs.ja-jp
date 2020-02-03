@@ -169,7 +169,7 @@ Win32 ウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2
 
 これらのインターフェイスは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] と Win32 の領域間の遷移で発生する処理をサポートします。 Win32 領域内では、タブの動作は、tab キーを使用している場合は、タブに実装されている Win32 のロジックによって完全に制御されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>

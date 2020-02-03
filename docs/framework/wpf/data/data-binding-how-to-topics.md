@@ -26,7 +26,7 @@ ms.locfileid: "76733840"
 - [TextBox テキストでソースを更新するタイミングを制御する](how-to-control-when-the-textbox-text-updates-the-source.md)
 - [バインディングの方向を指定する](how-to-specify-the-direction-of-the-binding.md)
 - [コレクションにバインドして選択に基づく情報を表示する](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
-- [方法: 列挙値にバインドする](how-to-bind-to-an-enumeration.md)
+- [方法 : 列挙値にバインドする](how-to-bind-to-an-enumeration.md)
 - [2 つのコントロールのプロパティをバインドする](how-to-bind-the-properties-of-two-controls.md)
 - [バインディングの検証の実装](how-to-implement-binding-validation.md)
 - [カスタム オブジェクトに検証ロジックを実装する](how-to-implement-validation-logic-on-custom-objects.md)
@@ -56,7 +56,7 @@ ms.locfileid: "76733840"
 - [DataTemplate によって生成された要素を検索する](how-to-find-datatemplate-generated-elements.md)
 - [Web サービスにバインドする](how-to-bind-to-a-web-service.md)
 
-## <a name="reference"></a>参照先
+## <a name="reference"></a>リファレンス
 
 - <xref:System.Windows.Data>
 - <xref:System.Windows.Data.Binding>

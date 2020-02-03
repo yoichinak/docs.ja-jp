@@ -28,7 +28,7 @@ Windows フォームボタンは、次の方法で選択できます。
   
 - <xref:System.Windows.Forms.Button.PerformClick%2A> メソッドを呼び出して、プログラムでボタンを選択します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)

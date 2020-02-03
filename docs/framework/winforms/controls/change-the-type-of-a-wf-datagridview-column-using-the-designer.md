@@ -30,9 +30,9 @@ Windows フォーム <xref:System.Windows.Forms.DataGridView> コントロール
     > [!NOTE]
     > `ColumnType` プロパティは、列の型を表すクラスを示すデザイン時専用のプロパティです。 これは、列クラスで定義された実際のプロパティではありません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - [方法: Windows フォームアプリケーションプロジェクトを作成する](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法 : Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)

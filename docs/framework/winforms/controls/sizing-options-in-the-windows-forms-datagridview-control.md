@@ -19,7 +19,7 @@ ms.locfileid: "76742981"
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールのサイズ変更オプション
 行、列、およびヘッダーを <xref:System.Windows.Forms.DataGridView> と、多数の異なるオカレンスの結果としてサイズを変更できます。 次の表は、これらの出現を示しています。  
   
-|[回数]|説明|  
+|個数|[説明]|  
 |----------------|-----------------|  
 |ユーザーのサイズ変更|ユーザーは、行、列、またはヘッダーの区切り線をドラッグまたはダブルクリックしてサイズ調整を行うことができます。|  
 |コントロールのサイズ変更|列の塗りつぶしモードでは、コントロールの幅が変化したときに列幅が変化します。たとえば、コントロールが親フォームにドッキングされ、ユーザーがフォームのサイズを変更した場合などです。|  
@@ -31,11 +31,11 @@ ms.locfileid: "76742981"
   
  次の表は、既定の動作を調整したり、特定のサイズ変更オプションを使用して特定の効果を実現するために使用できるシナリオを示しています。  
   
-|通信の種類|実装|  
+|シナリオ|実装|  
 |--------------|--------------------|  
-|列の塗りつぶしモードは、水平スクロールバーを表示せずに、コントロールの幅全体を占める、比較的少数の列に同じサイズのデータを表示する場合に使用します。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> プロパティを <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>に設定します。|  
-|さまざまなサイズの表示値を使用して、列フィルモードを使用します。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> プロパティを <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>に設定します。 列 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> プロパティを設定するか、コントロールにデータを入力した後でコントロール <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> メソッドを呼び出すことによって、列の相対幅を初期化します。|  
-|列フィルモードは、さまざまな重要度の値と共に使用してください。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> プロパティを <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill>に設定します。 データの一部を常に表示するか、特定の列に対して fill モード以外のサイズ変更オプションを使用する必要がある列には、大きな <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 値を設定します。|  
+|列の塗りつぶしモードは、水平スクロールバーを表示せずに、コントロールの幅全体を占める、比較的少数の列に同じサイズのデータを表示する場合に使用します。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> プロパティを <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill> に設定します。|  
+|さまざまなサイズの表示値を使用して、列フィルモードを使用します。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> プロパティを <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill> に設定します。 列 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> プロパティを設定するか、コントロールにデータを入力した後でコントロール <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A> メソッドを呼び出すことによって、列の相対幅を初期化します。|  
+|列フィルモードは、さまざまな重要度の値と共に使用してください。|<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A> プロパティを <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill> に設定します。 データの一部を常に表示するか、特定の列に対して fill モード以外のサイズ変更オプションを使用する必要がある列には、大きな <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 値を設定します。|  
 |コントロールの背景が表示されないようにするには、列フィルモードを使用します。|最後の列の [<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>] プロパティを <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill> に設定し、他の列のサイズ変更オプションを使用します。 他の列で使用可能な領域が多すぎる場合は、最後の列の <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> プロパティを設定します。|  
 |固定幅の列 (アイコンや ID 列など) を表示します。|<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> を <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.None> に設定して、列の <xref:System.Windows.Forms.DataGridViewTriState.False> に <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A> します。 <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> プロパティを設定するか、コントロールにデータを入力した後でコントロール <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A> メソッドを呼び出すことによって、幅を初期化します。|  
 |クリッピングを回避し、領域の使用を最適化するためにセルの内容が変更されるたびに、サイズを自動的に調整します。|自動サイズ変更プロパティを、コンテンツベースのサイズ変更モードを表す値に設定します。 大量のデータを処理するときにパフォーマンスが低下しないようにするには、表示されている行のみを計算するサイズ変更モードを使用します。|  
@@ -127,7 +127,7 @@ ms.locfileid: "76742981"
 ## <a name="content-based-sizing-options"></a>コンテンツベースのサイズ変更オプション  
  サイズ変更プロパティとメソッドによって使用される列挙体の値は、コンテンツベースのサイズ変更に似ています。 これらの値を使用すると、どのセルを使用して適切なサイズを計算するかを制限できます。 すべてのサイズ指定の列挙体では、表示されているセルを参照する名前を持つ値は、表示される行のセルに対する計算を制限します。 行を除外すると、大量の行を処理するときにパフォーマンスが低下しないようにするのに役立ちます。 また、ヘッダーまたは nonheader セルのセル値に対して計算を制限することもできます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>

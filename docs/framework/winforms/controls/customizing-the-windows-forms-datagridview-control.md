@@ -18,7 +18,7 @@ ms.locfileid: "76744028"
  セルと行を自分で描画するには、さまざまな `DataGridView` の描画イベントを処理できます。 既存の機能を変更したり、新しい機能を提供したりするには、既存の `DataGridViewCell`、`DataGridViewColumn`、および `DataGridViewRow` 型から派生した独自の型を作成できます。 また、セルが編集モードのときに選択したコントロールを表示する派生型を作成することによって、新しい編集機能を提供することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: Windows フォームの DataGridView コントロールのセルの外観をカスタマイズする](customize-the-appearance-of-cells-in-the-datagrid.md)  
+ [方法 : Windows フォームの DataGridView コントロールのセルの外観をカスタマイズする](customize-the-appearance-of-cells-in-the-datagrid.md)  
  セルを手動で描画するために <xref:System.Windows.Forms.DataGridView.CellPainting> イベントを処理する方法について説明します。  
   
  [方法: Windows フォームの DataGridView コントロールの行の外観をカスタマイズする](customize-the-appearance-of-rows-in-the-datagrid.md)  
@@ -33,7 +33,7 @@ ms.locfileid: "76744028"
  [方法: Windows フォーム DataGridView Cells でコントロールをホストする](how-to-host-controls-in-windows-forms-datagridview-cells.md)  
  セルが編集モードのときに <xref:System.Windows.Forms.DateTimePicker> コントロールを表示するために、`IDataGridViewEditingControl` インターフェイスを実装し、`DataGridViewCell` および `DataGridViewColumn` から派生したカスタム型を作成する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
@@ -49,11 +49,11 @@ ms.locfileid: "76744028"
  <xref:System.Windows.Forms.IDataGridViewEditingControl>  
  <xref:System.Windows.Forms.IDataGridViewEditingControl> インターフェイスのリファレンスドキュメントを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームの DataGridView コントロールの基本的な書式設定およびスタイル設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  コントロールの基本の外観およびセル データの書式設定を変更する方法を説明するトピックを示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
 - [Windows フォーム DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)

@@ -135,7 +135,7 @@ ms.locfileid: "76735670"
     > [!NOTE]
     > <xref:System.Windows.Forms.CheckBox.ThreeState%2A> プロパティが `true`に設定されている場合、<xref:System.Windows.Forms.CheckBox.Checked%2A> プロパティは <xref:System.Windows.Forms.CheckState.Checked> と <xref:System.Windows.Forms.CheckState.Indeterminate>の両方に対して `true` を返します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)

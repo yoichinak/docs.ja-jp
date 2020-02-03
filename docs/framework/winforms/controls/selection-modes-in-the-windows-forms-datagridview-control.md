@@ -18,7 +18,7 @@ ms.locfileid: "76743043"
 
 <xref:System.Windows.Forms.DataGridView.SelectionMode%2A?displayProperty=nameWithType> プロパティを次の <xref:System.Windows.Forms.DataGridViewSelectionMode> 列挙値のいずれかに設定することによって、許可される選択を指定できます。
 
-|DataGridViewSelectionMode 値|説明|
+|DataGridViewSelectionMode 値|[説明]|
 |-------------------------------------|-----------------|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.CellSelect>|セルをクリックすると、そのセルが選択されます。 行と列のヘッダーを選択に使用することはできません。|
 |<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>|セルをクリックすると、そのセルが選択されます。 列ヘッダーをクリックすると、列全体が選択されます。 列ヘッダーを並べ替えに使用することはできません。|
@@ -46,7 +46,7 @@ ms.locfileid: "76743043"
 > [!TIP]
 > 選択したセルのプログラムによる使用方法を示すコード例については、「<xref:System.Windows.Forms.DataGridView> クラスの概要」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.MultiSelect%2A>

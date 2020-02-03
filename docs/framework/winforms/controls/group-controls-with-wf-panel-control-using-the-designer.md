@@ -26,7 +26,7 @@ Windows フォーム <xref:System.Windows.Forms.Panel> コントロールは、�
 
 3. Optionalパネルに罫線を追加する場合は、その <xref:System.Windows.Forms.BorderStyle> プロパティを設定します。 <xref:System.Windows.Forms.BorderStyle.Fixed3D>、<xref:System.Windows.Forms.BorderStyle.FixedSingle>、<xref:System.Windows.Forms.BorderStyle.None>の3つの選択肢があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Panel コントロール](panel-control-windows-forms.md)
 - [Panel コントロールの概要](panel-control-overview-windows-forms.md)

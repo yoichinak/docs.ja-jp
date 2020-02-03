@@ -23,7 +23,7 @@ Windows フォーム <xref:System.Windows.Forms.FontDialog> コンポーネン�
 ## <a name="key-properties"></a>キー プロパティ  
  コンポーネントには、その外観を構成する多数のプロパティがあります。 ダイアログボックスの選択項目を設定するプロパティは、<xref:System.Windows.Forms.FontDialog.Font%2A> と <xref:System.Windows.Forms.FontDialog.Color%2A>です。 <xref:System.Windows.Forms.FontDialog.Font%2A> プロパティは、フォント、スタイル、サイズ、スクリプト、および効果を設定します。たとえば、`Arial, 10pt, style=Italic, Strikeout`のようにします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog コンポーネント](fontdialog-component-windows-forms.md)

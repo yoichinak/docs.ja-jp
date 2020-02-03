@@ -96,7 +96,7 @@ public class Grid {
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [共通デザイン パターン](../../../docs/standard/design-guidelines/common-design-patterns.md)

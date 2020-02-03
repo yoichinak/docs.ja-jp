@@ -21,11 +21,11 @@ ms.locfileid: "76747141"
  [MainMenu コンポーネントの概要](mainmenu-component-overview-windows-forms.md)  
  このコンポーネントの概要と主な機能とプロパティについて説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.MainMenu>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

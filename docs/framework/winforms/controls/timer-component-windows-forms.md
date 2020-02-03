@@ -26,13 +26,13 @@ Windows フォーム <xref:System.Windows.Forms.Timer> は、一定の間隔で�
  [方法: Windows フォームの Timer コンポーネントを使用して一定間隔でプロシージャを実行する](run-procedures-at-set-intervals-with-wf-timer-component.md)  
  一定の時間間隔で Windows ベースのアプリケーションに応答する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.Timer?displayProperty=nameWithType> クラス  
  Windows フォームで使用されるクラスとそのメンバーに関するリファレンス情報を提供します。  
   
  <xref:System.Timers.Timer?displayProperty=nameWithType> クラス  
  サーバー ベースのタイマーによって使用される <xref:System.Timers.Timer?displayProperty=nameWithType> クラスのリファレンス情報について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  

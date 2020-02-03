@@ -89,9 +89,9 @@ ms.locfileid: "76741837"
 ### <a name="critical-code-management"></a>クリティカル コードの管理  
  XAML ブラウザーアプリケーション (Xbap) の場合、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] は、特権を昇格させるセキュリティクリティカルなコードをマークおよび追跡するための .NET Framework サポートを使用してセキュリティサンドボックスを構築します (「 [WPF セキュリティ戦略-プラットフォームセキュリティ](wpf-security-strategy-platform-security.md)」の「**セキュリティクリティカルな方法**」を参照してください)。 セキュリティ クリティカルなコードに対して高度なセキュリティの品質要件を指定すると、このようなコードは、追加レベルのソース管理の制御とセキュリティの監査を受けします。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] の約 5 ～ 10% はセキュリティ クリティカルなコードで構成され、専用のレビュー チームによって確認されます。 ソース コードとチェックイン プロセスの管理は、セキュリティ クリティカルなコードを追跡し、各クリティカル エンティティ (重要なコードを含むメソッド) をサイン オフ状態にマップすることにより行われています。 サイン オフ状態には、1 つ以上のレビュー担当者の名前が含まれています。 毎日の [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] のビルドは、前のビルドのクリティカル コードと比較されて、承認されていない変更がチェックされます。 エンジニアがレビュー チームからの承認を得ずにクリティカル コードを変更すると、そのクリティカル コードはすぐに識別および修正されます。 このプロセスでは、[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] サンドボックス コードで特に高いレベルの監視の適用と維持が可能になります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Security](security-wpf.md)
+- [セキュリティ](security-wpf.md)
 - [WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)
 - [WPF のセキュリティ方針 - プラットフォーム セキュリティ](wpf-security-strategy-platform-security.md)
 - [信頼できるコンピューティング](https://www.microsoft.com/mscorp/twc/default.mspx)

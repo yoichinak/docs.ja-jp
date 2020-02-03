@@ -144,7 +144,7 @@ ms.locfileid: "76744478"
 
 この例では、<xref:System.Windows.Controls.Grid>の共有サイズ設定機能を使用していることに注意してください。 最後の3つの列は、同じ <xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>に配置することで、これを利用します。 これにより、プロパティの名前と同じように、列が同じサイズを共有できるようになります。 "Browse..."長い文字列 "Durchsuchen..." にローカライズされているので、すべてのボタンの幅が大きくなります。小さい "OK" ボタンと、大規模な "Durchsuchen..." を指定する必要はありません。;.
 
-**xml:lang**
+**xml: lang**
 
 `xml:lang="en-US"`
 
@@ -170,7 +170,7 @@ ms.locfileid: "76744478"
 
 **[実行] ダイアログのローカライズ**
 
-**Parse**
+**解析**
 
 アプリケーションをビルドした後、ローカライズするための最初の手順として、ローカライズ可能なリソースをサテライトアセンブリから解析します。 このトピックでは、 [Locbaml ツールサンプル](https://go.microsoft.com/fwlink/?LinkID=160016)にある locbaml ツールのサンプルを使用します。 LocBaml は、ローカライズプロセスに適したローカリゼーションツールの構築を開始するのに役立つサンプルツールでのみあることに注意してください。 LocBaml を使用して、次を実行して解析します。 **locbaml/Parse RunDialog. .resources/out:** "rundialog. .resources. .RESOURCES. .csv" ファイルを生成します。
 
@@ -178,29 +178,29 @@ ms.locfileid: "76744478"
 
 Unicode をサポートしているお気に入りの CSV エディターを使用して、このファイルを編集します。 ローカライズカテゴリが "なし" のすべてのエントリを除外します。 次のエントリが表示されます。
 
-|リソースキー|ローカライズのカテゴリ|Value|
+|リソースキー|ローカライズのカテゴリ|値|
 |-|-|-|
-|Button_1:.... $Content|Button|OK|
-|Button_2:.... $Content|Button|[キャンセル]|
-|Button_3:System.Windows.Controls.Button.$Content|Button|参照...|
-|ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1: system.string. $Content のようになります。|テキスト|プログラム、フォルダー、ドキュメント、またはインターネットリソースの名前を入力すると、Windows によってファイルが開きます。|
-|TextBlock_2: system.string. $Content のようになります。|テキスト|開き|
-|Window_1:System.Windows.Window.Title|[タイトル]|を実行します。|
+|Button_1:.... $Content|ボタン|[OK]|
+|Button_2:.... $Content|ボタン|Cancel|
+|Button_3:System.Windows.Controls.Button.$Content|ボタン|参照...|
+|ComboBox_1:System.Windows.Controls.ComboBox.$Content|コンボ ボックス||
+|TextBlock_1: system.string. $Content のようになります。|Text|プログラム、フォルダー、ドキュメント、またはインターネットリソースの名前を入力すると、Windows によってファイルが開きます。|
+|TextBlock_2: system.string. $Content のようになります。|Text|[オープン]:|
+|Window_1:System.Windows.Window.Title|タイトル|ラン|
 
 アプリケーションをドイツ語にローカライズするには、次の変換が必要です。
 
-|リソースキー|ローカライズのカテゴリ|Value|
+|リソースキー|ローカライズのカテゴリ|値|
 |-|-|-|
-|Button_1:.... $Content|Button|OK|
-|Button_2:.... $Content|Button|Abbrechen|
-|Button_3:System.Windows.Controls.Button.$Content|Button|Durchsuchen...|
-|ComboBox_1:System.Windows.Controls.ComboBox.$Content|ComboBox||
-|TextBlock_1: system.string. $Content のようになります。|テキスト|Geben Sie den namen eines programms、Ordners、Dokuments 順番 einer internetresource an。|
-|TextBlock_2: system.string. $Content のようになります。|テキスト|Öffnen:|
-|Window_1:System.Windows.Window.Title|[タイトル]|を実行します。|
+|Button_1:.... $Content|ボタン|[OK]|
+|Button_2:.... $Content|ボタン|Abbrechen|
+|Button_3:System.Windows.Controls.Button.$Content|ボタン|Durchsuchen...|
+|ComboBox_1:System.Windows.Controls.ComboBox.$Content|コンボ ボックス||
+|TextBlock_1: system.string. $Content のようになります。|Text|Geben Sie den namen eines programms、Ordners、Dokuments 順番 einer internetresource an。|
+|TextBlock_2: system.string. $Content のようになります。|Text|Öffnen:|
+|Window_1:System.Windows.Window.Title|タイトル|ラン|
 
-**生み**
+**Generate**
 
 ローカリゼーションの最後の手順では、新たにローカライズされたサテライトアセンブリを作成します。 これは、次の LocBaml コマンドを使用して実現できます。
 
@@ -237,7 +237,7 @@ de-DE\MyDialog.resources.dll または de\MyDialog.resources.dll が両方とも
 
 Microsoft サウジアラビア web サイトのこのモックアップでは、RightToLeft 言語用に提供されているグローバリゼーション機能について説明しています。 ヘブライ語やアラビア語などの言語では、右から左への読み取り順序が使用されているため、多くの場合、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] のレイアウトは、英語などの左から右に記述する言語とはまったく異なるレイアウトになることがあります。 左から右に記述する言語から右から左の言語へのローカライズや、その逆の変換は、非常に困難な場合があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、このようなローカライズをはるかに簡単にするように設計されています。
 
-**FlowDirection**
+**System.windows.flowdirection>**
 
 *ホームページ:*
 
@@ -247,11 +247,11 @@ Microsoft サウジアラビア web サイトのこのモックアップでは�
 
 ルート <xref:System.Windows.FrameworkElement.FlowDirection%2A> が変更されたときに、背景のグラデーションブラシが正しく反転していることを確認します。
 
-**FlowDirection="LeftToRight"**
+**System.windows.flowdirection> = "LeftToRight"**
 
 ![グラデーションフローを左から右に示すスクリーンショット。](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)
 
-**FlowDirection="RightToLeft"**
+**System.windows.flowdirection> = "RightToLeft"**
 
 ![右から左へのグラデーションフローを示すスクリーンショット。](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)
 
@@ -267,9 +267,9 @@ Microsoft サウジアラビア web サイトのこのモックアップでは�
 
 このコメントは TextBlock_1 のコンテンツに関連付けられ、LocBaml ツール (「[アプリケーションのローカライズ](how-to-localize-an-application.md)」を参照) の場合は、出力 .csv ファイルの TextBlock_1 行の6番目の列に表示されます。
 
-|リソースキー|[カテゴリ]|できる|修正|コメント|Value|
+|リソースキー|カテゴリ|できる|修正|解説|値|
 |-|-|-|-|-|-|
-|TextBlock_1: system.string. $Content のようになります。|テキスト|true|true|この文字は、装飾規則として使用されます。|&#124;|
+|TextBlock_1: system.string. $Content のようになります。|Text|TRUE|TRUE|この文字は、装飾規則として使用されます。|&#124;|
 
 コメントは、次の構文を使用して、任意の要素のコンテンツまたはプロパティに配置できます。
 
@@ -277,7 +277,7 @@ Microsoft サウジアラビア web サイトのこのモックアップでは�
 
 **ローカリゼーション属性**
 
-多くの場合、開発者またはローカライズマネージャーは、ローカライザーの読み取りと変更を制御する必要があります。 たとえば、ローカライザーが会社の名前や法律上の表現を翻訳したくない場合があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、要素のコンテンツまたはプロパティの読みやすさ、変更可能性、カテゴリを設定できる属性が用意されています。この属性を使用して、ローカライズツールで要素のロック、非表示、または並べ替えを行うことができます。 詳細については、「 <xref:System.Windows.Localization.Attributes%2A>」を参照してください。 このサンプルでは、LocBaml ツールはこれらの属性の値のみを出力します。 すべてのコントロールにこれらの属性の既定値がありますが、ではこれらの属性をオーバーライドできます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] たとえば、次の例では、`TextBlock_1` の既定のローカリゼーション属性をオーバーライドし、コンテンツを読み取り可能に設定しますが、ローカライザーでは変更できないように設定します。
+多くの場合、開発者またはローカライズマネージャーは、ローカライザーの読み取りと変更を制御する必要があります。 たとえば、ローカライザーが会社の名前や法律上の表現を翻訳したくない場合があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、要素のコンテンツまたはプロパティの読みやすさ、変更可能性、カテゴリを設定できる属性が用意されています。この属性を使用して、ローカライズツールで要素のロック、非表示、または並べ替えを行うことができます。 詳細については、<xref:System.Windows.Localization.Attributes%2A> を参照してください。 このサンプルでは、LocBaml ツールはこれらの属性の値のみを出力します。 すべてのコントロールにこれらの属性の既定値がありますが、ではこれらの属性をオーバーライドできます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] たとえば、次の例では、`TextBlock_1` の既定のローカリゼーション属性をオーバーライドし、コンテンツを読み取り可能に設定しますが、ローカライザーでは変更できないように設定します。
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributes](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributes)]
 
@@ -285,7 +285,7 @@ Microsoft サウジアラビア web サイトのこのモックアップでは�
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-によって提供さ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 既定のローカリゼーション属性は、コードを使用してオーバーライドすることもできます。これにより、カスタムコントロールに適切な既定値を正しく設定できます。 例:
+によって提供さ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 既定のローカリゼーション属性は、コードを使用してオーバーライドすることもできます。これにより、カスタムコントロールに適切な既定値を正しく設定できます。 次に例を示します。
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

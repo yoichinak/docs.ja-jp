@@ -87,9 +87,9 @@ ms.locfileid: "76743954"
     > [!IMPORTANT]
     > 悪意のある `UserControl`を参照することにより、ネットワーク経由でローカルコンピューターをセキュリティ上のリスクにさらすことがあります。 これは、悪意のあるユーザーが有害なカスタムコントロールを作成した後、誤ってプロジェクトに追加した場合にのみ問題になります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
-- [方法 : Windows フォーム上のコントロールのサイズを変更する](how-to-resize-controls-on-windows-forms.md)
+- [方法: Windows フォーム上のコントロールのサイズを変更する](how-to-resize-controls-on-windows-forms.md)
 - [方法: Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

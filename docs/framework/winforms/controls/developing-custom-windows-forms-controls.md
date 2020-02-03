@@ -43,14 +43,14 @@ Windows フォーム コントロールは、ユーザー インターフェイ�
  [Windows フォーム コントロールのマルチスレッド処理](multithreading-in-windows-forms-controls.md)  
  マルチスレッド コントロールを実装する方法を示します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.Control?displayProperty=nameWithType>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
  <xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [コンポーネントのデザイン時属性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))  
  ビジュアル デザイナーでデザインするときに正しく表示されるようにコンポーネントとコントロールに適用するメタデータ属性の一覧を表示します。  
   

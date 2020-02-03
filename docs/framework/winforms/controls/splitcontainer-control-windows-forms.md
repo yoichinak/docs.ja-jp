@@ -35,11 +35,11 @@ Windows フォームの `SplitContainer` コントロールは複合と考える
   
  「[方法: デザイナーを使用してウィンドウを水平方向に分割](how-to-split-a-window-horizontally-using-the-designer.md)する」、「[方法: Windows フォームで windows エクスプローラースタイルのインターフェイスを作成](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md)する」、「[方法: デザイナーを使用して Windows フォームでマルチペインユーザーインターフェイスを作成する](create-a-multipane-user-interface-with-wf-using-the-designer.md)」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.SplitContainer> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム コントロール](index.md)  
  Windows フォームでの操作専用に設計されているコントロールについてのトピックへのリンクを提供します。  
   

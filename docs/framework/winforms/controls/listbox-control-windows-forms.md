@@ -23,10 +23,10 @@ Windows フォームの `ListBox` コントロールには、ユーザーが選�
  [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ListBox> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)  
  リストボックス、コンボボックス、およびチェックリストボックスを使用して実行できる操作の一覧を示します。

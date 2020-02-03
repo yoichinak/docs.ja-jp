@@ -32,7 +32,7 @@ ms.locfileid: "76737516"
 ### <a name="listener-adapters"></a>リスナー アダプター  
  リスナー アダプターは個別の Windows サービスであり、リッスンするネットワーク プロトコルを使用して、メッセージ受信に使用されるネットワーク通信ロジックを実装します。 次の表は、Windows Communication Foundation (WCF) プロトコルのリスナーアダプターの一覧です。  
   
-|リスナー アダプターのサービス名|[プロトコル]|メモ|  
+|リスナー アダプターのサービス名|Protocol|メモ|  
 |-----------------------------------|--------------|-----------|  
 |W3SVC|http|IIS 7.0 と WCF の両方に対して HTTP アクティベーションを提供する共通コンポーネント。|  
 |NetTcpActivator|net.tcp|NetTcpPortSharing サービスに依存します。|  
@@ -85,7 +85,7 @@ ms.locfileid: "76737516"
 </system.web>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WCF で使用するための WAS を設定する](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
 - [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

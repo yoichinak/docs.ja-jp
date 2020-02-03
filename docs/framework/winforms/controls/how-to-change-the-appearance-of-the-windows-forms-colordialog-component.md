@@ -49,7 +49,7 @@ Windows フォーム <xref:System.Windows.Forms.ColorDialog> コンポーネン�
     colorDialog1->ShowHelp = true;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog コンポーネント](colordialog-component-windows-forms.md)

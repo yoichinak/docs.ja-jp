@@ -80,7 +80,7 @@ Windows フォーム <xref:System.Windows.Forms.RichTextBox> コントロール�
        }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>

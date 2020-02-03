@@ -36,5 +36,5 @@ Windows フォームには、関連する Windows メッセージの処理中に
  [Windows フォームでのユーザー入力の検証](user-input-validation-in-windows-forms.md)  
  Windows フォーム アプリケーションでユーザー入力を検証する方法について説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  「 [Windows フォームでのイベントハンドラーの作成](creating-event-handlers-in-windows-forms.md)」も参照してください。

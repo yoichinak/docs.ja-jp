@@ -45,7 +45,7 @@ ms.locfileid: "76728576"
 
 IdentityServer4 はオープンソースであり、自由に使用できます。 NuGet パッケージを使用して、アプリケーションに追加することができます。 メインパッケージは、400万回以上ダウンロードされた[IdentityServer4](https://www.nuget.org/packages/IdentityServer4/)です。 基本パッケージには、ユーザーインターフェイスコードは含まれず、メモリ構成でのみサポートされます。 データベースで使用するには、Entity Framework Core を使用して、ユーザーの構成データとオペレーションデータを格納する[IdentityServer4](https://www.nuget.org/packages/IdentityServer4.EntityFramework)のようなデータプロバイダーも必要になります。 ユーザーインターフェイスでは、[クイックスタート UI リポジトリ](https://github.com/IdentityServer/IdentityServer4.Quickstart.UI)から ASP.NET Core MVC アプリケーションにファイルをコピーして、ユーザーのサインインとサインアウトのサポートを追加することができます。
 
-## <a name="configuration"></a>の構成
+## <a name="configuration"></a>構成
 
 ユーザーは、各カスタムインストールの一部として構成できるさまざまな種類のプロトコルとソーシャル認証プロバイダーをサポートしています。 これは通常、`ConfigureServices` メソッドの ASP.NET Core アプリケーションの `Startup` クラスで行われます。 構成には、サポートされるプロトコル、および使用されるサーバーとエンドポイントへのパスの指定が含まれます。 図8-2 は、IdentityServer4 クイックスタート UI プロジェクトから取得した構成の例を示しています。
 
@@ -98,7 +98,7 @@ public class Startup
 
 多くのクラウドネイティブアプリケーションでは、フロントエンドでサーバー側 Api とリッチクライアントシングルページアプリケーション (spa) を利用しています。 ユーザーは、NPM を使用して[JavaScript クライアント](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)(`oidc-client.js`) を提供します。これを spas に追加することにより、web api のサインイン、サインアウト、トークンベースの認証に使用できるようになります。
 
-## <a name="references"></a>参照
+## <a name="references"></a>References
 
 - [サーバーのドキュメント](http://docs.identityserver.io/en/latest/)
 - [アプリケーションの種類](https://docs.microsoft.com/azure/active-directory/develop/app-types)

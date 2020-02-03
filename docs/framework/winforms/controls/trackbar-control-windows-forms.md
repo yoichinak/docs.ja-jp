@@ -20,10 +20,10 @@ Windows フォーム `TrackBar` コントロール ("スライダー" コント�
  [TrackBar コントロールの概要](trackbar-control-overview-windows-forms.md)  
  `TrackBar` コントロールの一般的な概念について説明します。これにより、数値設定を視覚的に調整することによって、ユーザーが情報をナビゲートできるようになります。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.TrackBar> クラス  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

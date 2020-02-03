@@ -40,8 +40,8 @@ ms.locfileid: "76728060"
 
 - キャッシュされたファイルのパスを監視し、監視対象の項目に対する変更についてキャッシュインスタンスに通知します。
 
-## <a name="prerequisites"></a>Prerequisites
- このチュートリアルを完了するための要件は次のとおりです。
+## <a name="prerequisites"></a>前提条件
+ このチュートリアルを完了するには、以下が必要です。
 
 - Visual Studio 2010。
 
@@ -93,7 +93,7 @@ ms.locfileid: "76728060"
 
 2. **[コンパイル]** タブをクリックします。
 
-3. ウィンドウの下部には、をクリックして**詳細コンパイル オプション**.
+3. ウィンドウの下部にある **[詳細コンパイルオプション]** をクリックします。
 
      **[コンパイラの詳細設定**] ダイアログボックスが表示されます。
 
@@ -136,7 +136,7 @@ ms.locfileid: "76728060"
 
 1. **ソリューションエクスプローラー**で、mainwindow.xaml ファイルをダブルクリックして開きます。
 
-2. **ツールボックス** **コモン WPF コントロール** 、ドラッグ、 `Button` への制御、 `MainWindow` ウィンドウ。
+2. **[ツールボックス]** の **[共通の WPF コントロール]** で、`Button` コントロールを `MainWindow` ウィンドウにドラッグします。
 
 3. **[プロパティ]** ウィンドウで、`Button` コントロールの `Content` プロパティを **[キャッシュを取得]** する に設定します。
 
@@ -325,7 +325,7 @@ ms.locfileid: "76728060"
  [!code-csharp[CachingWPFApplications#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CachingWPFApplications/CSharp/MainWindow.xaml.cs#1)]
  [!code-vb[CachingWPFApplications#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CachingWPFApplications/VisualBasic/MainWindow.xaml.vb#1)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.Caching.MemoryCache>
 - <xref:System.Runtime.Caching.ObjectCache>

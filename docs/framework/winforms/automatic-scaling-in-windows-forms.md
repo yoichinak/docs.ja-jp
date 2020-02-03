@@ -32,11 +32,11 @@ ms.locfileid: "76732376"
 
 1. デザイン時は、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> プロパティ (これは現在非推奨とされます) が、開発者のマシンの既定のシステム フォントの高さと幅に設定されていました。
 
-2. 実行時は、ユーザーのマシンの既定のシステム フォントが <xref:System.Windows.Forms.Form> クラスの <xref:System.Windows.Forms.Control.Font%2A> プロパティを初期化するために使用されていました。
+2. 実行時は、ユーザーのマシンの既定のシステム フォントが <xref:System.Windows.Forms.Control.Font%2A> クラスの <xref:System.Windows.Forms.Form> プロパティを初期化するために使用されていました。
 
 3. フォームを表示する前に、フォームのスケーリングのため、<xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> メソッドが呼び出されました。 このメソッドは、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> と <xref:System.Windows.Forms.Control.Font%2A> から相対スケール サイズを計算し、<xref:System.Windows.Forms.Control.Scale%2A> メソッドを呼び出してフォームとその子を実際にスケーリングしました。
 
-4. <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> への後続の呼び出しがフォームを段階的にサイズ変更することがないよう、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> の値が更新されました。
+4. <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> への後続の呼び出しがフォームを段階的にサイズ変更することがないよう、<xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> の値が更新されました。
 
 このメカニズムは、ほとんどの目的では十分ですが、次の制限がありました。
 
@@ -84,7 +84,7 @@ Windows フォームは、次のロジックを使用して、フォームとそ
 
 4. また、<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> は次のような状況でも自動的に呼び出されます。
 
-    - スケーリング モードが <xref:System.Windows.Forms.AutoScaleMode.Font> の場合の <xref:System.Windows.Forms.Control.OnFontChanged%2A> イベントへの応答。
+    - スケーリング モードが <xref:System.Windows.Forms.Control.OnFontChanged%2A> の場合の <xref:System.Windows.Forms.AutoScaleMode.Font> イベントへの応答。
 
     - コンテナー コントロールのレイアウトが再開され、<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> プロパティまたは <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> プロパティで変更が検出されたとき。
 
@@ -98,11 +98,11 @@ Windows フォームは、次のロジックを使用して、フォームとそ
 
     - <xref:System.Windows.Forms.Control.ScaleControl%2A> メソッドをオーバーライドして、現在のコントロールのスケーリングのロジックを変更することができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
 - <xref:System.Windows.Forms.Control.Scale%2A>
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A>
 - [visual スタイルが使用されているコントロールのレンダリング](./controls/rendering-controls-with-visual-styles.md)
-- [方法 : 自動スケーリングを解除してパフォーマンスを向上させる](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)
+- [方法: 自動スケーリングを解除してパフォーマンスを向上させる](./advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)

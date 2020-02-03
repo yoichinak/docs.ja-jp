@@ -37,12 +37,12 @@ ms.locfileid: "76735409"
 > XAML で同じイベントに対してイベントハンドラーを指定する場合は、Visual Basic コードで `Handles` 構文を使用しないでください。 この場合、イベントハンドラーは2回呼び出されます。  
   
 ## <a name="how-wpf-implements-handles-functionality"></a>WPF が "ハンドル" 機能を実装する方法  
- [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページがコンパイルされると、中間ファイルは、<xref:System.Windows.FrameworkContentElement.Name%2A> プロパティが設定されている (または [x:Name Directive](../../../desktop-wpf/xaml-services/xname-directive.md) が宣言されている) ページ上のすべての要素への `Friend` `WithEvents` 参照を宣言します。 各名前付きインスタンスは、`Handles`によってハンドラーに割り当てることができる要素である可能性があります。  
+ [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページがコンパイルされると、中間ファイルによって、<xref:System.Windows.FrameworkContentElement.Name%2A> プロパティが設定されている (または[X:Name ディレクティブ](../../../desktop-wpf/xaml-services/xname-directive.md)が宣言されている) ページ上のすべての要素への `Friend` `WithEvents` 参照が宣言されます。 各名前付きインスタンスは、`Handles`によってハンドラーに割り当てることができる要素である可能性があります。  
   
 > [!NOTE]
 > Visual Studio では、IntelliSense を使用して、ページ内の `Handles` 参照に使用できる要素の完了を確認できます。 ただし、この場合、中間ファイルがすべての `Friends` 参照を設定できるように、1つのコンパイルパスが必要になることがあります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [ルーティング イベントの処理済みとしてのマーキング、およびクラス処理](marking-routed-events-as-handled-and-class-handling.md)

@@ -21,14 +21,14 @@ ms.locfileid: "76739009"
 ## <a name="in-this-section"></a>このセクションの内容  
  [WPF ウィンドウの概要](wpf-windows-overview.md)  
  [ダイアログ ボックスの概要](dialog-boxes-overview.md)  
- [方法のトピック](window-management-how-to-topics.md)  
+ [データ バインドに関する「方法」トピック](window-management-how-to-topics.md)  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [アプリケーション管理の概要](application-management-overview.md)  
   [ナビゲーションの概要](navigation-overview.md)  
   [ホスティング](hosting-wpf-applications.md)  

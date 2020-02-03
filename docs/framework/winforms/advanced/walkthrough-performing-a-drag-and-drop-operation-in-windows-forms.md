@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746792"
 ---
-# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行
+# <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>チュートリアル : Windows フォームにおけるドラッグ アンド ドロップ操作の実行
 Windows ベースのアプリケーション内でドラッグアンドドロップ操作を実行するには、一連のイベント (特に、<xref:System.Windows.Forms.Control.DragEnter>、<xref:System.Windows.Forms.Control.DragLeave>、および <xref:System.Windows.Forms.Control.DragDrop> イベント) を処理する必要があります。 これらのイベントのイベント引数で使用できる情報を操作することにより、ドラッグアンドドロップ操作を容易に行うことができます。  
   
 ## <a name="dragging-data"></a>データのドラッグ  
@@ -28,7 +28,7 @@ Windows ベースのアプリケーション内でドラッグアンドドロッ
   
 #### <a name="to-start-a-drag-operation"></a>ドラッグ操作を開始するには  
   
-1. ドラッグが開始されるコントロールの <xref:System.Windows.Forms.Control.MouseDown> イベントで、`DoDragDrop` メソッドを使用して、ドラッグするデータを設定します。ドラッグすると、許可される効果はになります。 詳細については、「<xref:System.Windows.Forms.DragEventArgs.Data%2A>」および「<xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>」を参照してください。  
+1. ドラッグが開始されるコントロールの <xref:System.Windows.Forms.Control.MouseDown> イベントで、`DoDragDrop` メソッドを使用して、ドラッグするデータを設定します。ドラッグすると、許可される効果はになります。 詳細については、「 <xref:System.Windows.Forms.DragEventArgs.Data%2A> および <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A>」を参照してください。  
   
      次の例は、ドラッグ操作を開始する方法を示しています。 ドラッグが開始するコントロールは <xref:System.Windows.Forms.Button> コントロールで、ドラッグされるデータは <xref:System.Windows.Forms.Button> コントロールの <xref:System.Windows.Forms.Control.Text%2A> プロパティを表す文字列です。また、許可される効果はコピーまたは移動します。  
   
@@ -59,7 +59,7 @@ Windows ベースのアプリケーション内でドラッグアンドドロッ
   
 1. <xref:System.Windows.Forms.Control.AllowDrop%2A> プロパティを true に設定します。  
   
-2. ドロップが発生するコントロールの `DragEnter` イベントで、ドラッグされるデータが許容される型 (この場合は <xref:System.Windows.Forms.Control.Text%2A>) であることを確認します。 次に、このコードでは、<xref:System.Windows.Forms.DragDropEffects> 列挙体の値にドロップすると発生する効果を設定します。 詳細については、「 <xref:System.Windows.Forms.DragEventArgs.Effect%2A>」を参照してください。  
+2. ドロップが発生するコントロールの `DragEnter` イベントで、ドラッグされるデータが許容される型 (この場合は <xref:System.Windows.Forms.Control.Text%2A>) であることを確認します。 次に、このコードでは、<xref:System.Windows.Forms.DragDropEffects> 列挙体の値にドロップすると発生する効果を設定します。 詳細については、<xref:System.Windows.Forms.DragEventArgs.Effect%2A> を参照してください。  
   
     ```vb  
     Private Sub TextBox1_DragEnter(ByVal sender As Object, ByVal e As System.Windows.Forms.DragEventArgs) Handles TextBox1.DragEnter  
@@ -83,9 +83,9 @@ Windows ベースのアプリケーション内でドラッグアンドドロッ
     ```  
   
     > [!NOTE]
-    > 独自のオブジェクトを <xref:System.Windows.Forms.DataObject.SetData%2A> メソッドの <xref:System.Object> パラメーターとして指定することで、独自の <xref:System.Windows.Forms.DataFormats> を定義できます。 これを行うときは、指定されたオブジェクトがシリアル化可能であることを確認してください。 詳細については、「 <xref:System.Runtime.Serialization.ISerializable>」を参照してください。  
+    > 独自のオブジェクトを <xref:System.Windows.Forms.DataObject.SetData%2A> メソッドの <xref:System.Object> パラメーターとして指定することで、独自の <xref:System.Windows.Forms.DataFormats> を定義できます。 これを行うときは、指定されたオブジェクトがシリアル化可能であることを確認してください。 詳細については、<xref:System.Runtime.Serialization.ISerializable> を参照してください。  
   
-3. ドロップが発生するコントロールの <xref:System.Windows.Forms.Control.DragDrop> イベントで、<xref:System.Windows.Forms.DataObject.GetData%2A> メソッドを使用して、ドラッグされているデータを取得します。 詳細については、「 <xref:System.Security.Cryptography.Xml.DataObject.Data%2A>」を参照してください。  
+3. ドロップが発生するコントロールの <xref:System.Windows.Forms.Control.DragDrop> イベントで、<xref:System.Windows.Forms.DataObject.GetData%2A> メソッドを使用して、ドラッグされているデータを取得します。 詳細については、<xref:System.Security.Cryptography.Xml.DataObject.Data%2A> を参照してください。  
   
      次の例では、<xref:System.Windows.Forms.TextBox> コントロールがドラッグされているコントロールです (ドロップが発生します)。 このコードは、ドラッグされているデータと同じ <xref:System.Windows.Forms.TextBox> コントロールの <xref:System.Windows.Forms.Control.Text%2A> プロパティを設定します。  
   
@@ -106,7 +106,7 @@ Windows ベースのアプリケーション内でドラッグアンドドロッ
     > [!NOTE]
     > また、<xref:System.Windows.Forms.DragEventArgs.KeyState%2A> プロパティを操作することもできます。これにより、ドラッグアンドドロップ操作中に押されたキーに応じて、特定の効果が発生します (たとえば、CTRL キーが押されたときにドラッグしたデータをコピーするのは標準です)。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: クリップボードにデータを追加する](how-to-add-data-to-the-clipboard.md)
 - [方法: クリップボードからデータを取得する](how-to-retrieve-data-from-the-clipboard.md)

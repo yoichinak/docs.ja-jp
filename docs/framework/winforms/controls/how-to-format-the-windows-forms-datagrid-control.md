@@ -35,7 +35,7 @@ ms.locfileid: "76732962"
   
 1. 必要に応じて、次のプロパティを設定します。  
   
-    |property|説明|  
+    |プロパティ|[説明]|  
     |--------------|-----------------|  
     |<xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A>|<xref:System.Windows.Forms.DataGrid.BackColor%2A> プロパティは、グリッドの偶数行の色を定義します。 <xref:System.Windows.Forms.DataGrid.AlternatingBackColor%2A> プロパティを別の色に設定すると、他のすべての行がこの新しい色 (行1、3、5など) に設定されます。|  
     |<xref:System.Windows.Forms.DataGrid.BackColor%2A>|グリッドの偶数行の背景色 (行0、2、4、6など) です (行0、2、4、6など)。|  
@@ -153,10 +153,10 @@ ms.locfileid: "76732962"
        }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [方法: Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [方法 : Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)

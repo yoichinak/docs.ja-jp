@@ -23,7 +23,7 @@ ms.locfileid: "76742249"
   
  Html ヘルプ 1. x ファイルは、HTML ヘルプワークショップを使用して生成できます。 HTML ヘルプの詳細については、MSDN の「HTML ヘルプワークショップ」またはその他の「HTML ヘルプ」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームでのヘルプの統合](integrating-user-help-in-windows-forms.md)
 - [HelpProvider コンポーネント](../controls/helpprovider-component-windows-forms.md)

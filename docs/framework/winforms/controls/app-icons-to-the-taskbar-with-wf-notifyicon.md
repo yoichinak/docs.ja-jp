@@ -31,7 +31,7 @@ Windows フォーム <xref:System.Windows.Forms.NotifyIcon> コンポーネン�
 
 1. <xref:System.Windows.Forms.NotifyIcon.Icon%2A> プロパティに値を割り当てます。 値は `System.Drawing.Icon` 型である必要があり、.ico ファイルから読み込むことができます。 アイコンファイルは、コードで指定することも、 **[プロパティ]** ウィンドウの <xref:System.Windows.Forms.NotifyIcon.Icon%2A> プロパティの横にある省略記号ボタン ([.. プロパティウィンドウ.]) を![クリックして指定することもできます。その後、表示される **[開く]** ダイアログボックスでファイルを選択します](./media/visual-studio-ellipsis-button.png)。
 
-2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> プロパティを `true`に設定します。
+2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> プロパティを `true` に設定します。
 
 3. <xref:System.Windows.Forms.NotifyIcon.Text%2A> プロパティを適切なツールヒント文字列に設定します。
 
@@ -72,7 +72,7 @@ Windows フォーム <xref:System.Windows.Forms.NotifyIcon> コンポーネン�
     notifyIcon1->Text = "Antivirus program";
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>

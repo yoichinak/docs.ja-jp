@@ -1,5 +1,5 @@
 ---
-title: 等値演算子
+title: 等価演算子
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76741694"
 ---
-# <a name="equality-operators"></a>等値演算子
+# <a name="equality-operators"></a>等価演算子
 ここでは、等値演算子のオーバーロードと、等値演算子として `operator==` と `operator!=` を参照する方法について説明します。
 
  ❌ は、等値演算子の1つをオーバーロードしません。
@@ -47,7 +47,7 @@ ms.locfileid: "76741694"
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [使用方法のガイドライン](../../../docs/standard/design-guidelines/usage-guidelines.md)
