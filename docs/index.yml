@@ -32,7 +32,7 @@ highlightedContent:
     itemType: whats-new
     url: whats-new/index.yml
 conceptualContent:
-  title: '.NET: 無料。 クロスプラットフォーム。 オープンソース。'
+  title: '.NET: フリー。 クロスプラットフォーム。 オープン ソース。'
   summary: Web、モバイル、デスクトップ、ゲーム、IoT など、あらゆるアプリを構築するための開発者用プラットフォームです。 Windows、Linux、macOS でサポートされています。
   items:
   - title: オープンソースの .NET

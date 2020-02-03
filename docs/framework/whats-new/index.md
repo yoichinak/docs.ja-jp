@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: 538806627a31366d4b8597eb010a4bbe3f8f9202
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860960"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76966011"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -46,9 +46,9 @@ ms.locfileid: "76860960"
 
 .NET Framework 4.8 は、次の場所からダウンロードできます。
 
-- [.NET Framework 4.8 の Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=2085155)
+- [.NET Framework 4.8 の Web インストーラー](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-- [NET Framework 4.8 のオフライン インストーラー](https://go.microsoft.com/fwlink/?linkid=2088631)
+- [NET Framework 4.8 のオフライン インストーラー](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
 .NET Framework 4.8 は、Windows 10、Windows 8.1、Windows 7 SP1、および Windows Server 2008 R2 SP1 以降に相当するサーバー プラットフォームにインストールできます。 .NET Framework 4.8 は、Web インストーラーまたはオフライン インストーラーを使用してインストールできます。 ほとんどのユーザーにお勧めする方法は、Web インストーラーの使用です。
 
@@ -2132,3 +2132,4 @@ Visual Studio 2012 (および以降のバージョン) のポータブル クラ
 - [Visual Studio 2019 の新機能](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio での C++ の新機能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
+ 

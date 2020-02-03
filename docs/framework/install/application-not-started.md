@@ -2,12 +2,12 @@
 title: "\"このアプリケーションを開始できませんでした\" のトラブルシューティング"
 description: "\"このアプリケーションを開始できませんでした\" のダイアログ ボックスが表示された場合の対処方法を説明します。"
 ms.date: 09/05/2019
-ms.openlocfilehash: 2140ab38c29d610634f71305c4337c324e0550d8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092044"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965907"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>"このアプリケーションを開始できませんでした" のエラー メッセージのトラブルシューティング
 
@@ -25,7 +25,7 @@ ms.locfileid: "73092044"
 
 1. [.NET Framework 修復ツール (NetFxRepairTool.exe)](https://www.microsoft.com/download/details.aspx?id=30135) をダウンロードします。 ダウンロードが完了すると、ツールが自動的に実行されます。
 
-1. .NET Framework 修復ツールで、次の図に示すような追加のアクションが推奨される場合は、 **[次へ]** を選択します。
+1. .NET Framework 修復ツールで、次の図に示すような追加のアクションが推奨される場合は、**[次へ]** を選択します。
 
    ![推奨される変更](media/application-not-started/repair-tool-recommended-changes.png)
 
@@ -33,7 +33,7 @@ ms.locfileid: "73092044"
 
    ![推奨される変更](media/application-not-started/repair-tool-changes-complete.png)
 
-1. アプリケーションが正常に実行された場合は、 **[完了]** ボタンを選択します。 それ以外の場合は、 **[次へ]** ボタンを選択します。
+1. アプリケーションが正常に実行された場合は、**[完了]** ボタンを選択します。 それ以外の場合は、**[次へ]** ボタンを選択します。
 
 1. **[次へ]** ボタンを選択した場合、.NET Framework 修復ツールでは次のようなダイアログ ボックスが表示されます。 **[完了]** ボタンを選択して、診断情報を Microsoft に送信します。
 
@@ -44,11 +44,11 @@ ms.locfileid: "73092044"
    |Windows のバージョン|.NET framework のインストール|
    |---|---|
    |Windows 10 Anniversary Update 以降のバージョン|[.NET Framework 4.8 ランタイム](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 10、Windows 10 November Update|[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345)|
+   |Windows 10、Windows 10 November Update|[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)|
    |Windows 8.1|[.NET Framework 4.8 ランタイム](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows 8|[.NET Framework 4.6.1](https://www.microsoft.com/download/details.aspx?id=49981)|
+   |Windows 8|[.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)|
    |Windows 7 SP1|[.NET Framework 4.8 ランタイム](https://dotnet.microsoft.com/download/dotnet-framework/net48)|
-   |Windows Vista SP2|[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130)|
+   |Windows Vista SP2|[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)|
 
    > [!NOTE]
    > .NET Framework 4.8 は、Windows 10 May 2019 Update にプレインストールされています。

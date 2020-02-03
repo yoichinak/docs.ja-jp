@@ -4,12 +4,12 @@ description: .NET マイクロサービスおよび Web アプリケーション
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: b25f02140915ce87c5c478d8a8a5fe28ba7693b3
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 6d318f4efc6958610947f164d6ca63634f3d7db5
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73736955"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777208"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
@@ -121,7 +121,7 @@ else
 }
 ```
 
-Visual Studio で ASP.NET コードの Web アプリケーション プロジェクトを作成するときに、 **[個人のユーザー アカウント]** 認証オプションを選択すると、図 9-3 に示すように、外部プロバイダーでサインインするために必要なすべてのコードがすでにプロジェクト内にあります。
+Visual Studio で ASP.NET Core の Web アプリケーション プロジェクトを作成するときに、 **[個人のユーザー アカウント]** の認証オプションを選択すると、図 9-3 に示すように、外部プロバイダーでサインインするために必要なすべてのコードが既にプロジェクト内にあります。
 
 ![[新しい ASP.NET Core Web アプリケーション] ダイアログのスクリーンショット。](./media/index/select-external-authentication-option.png)
 

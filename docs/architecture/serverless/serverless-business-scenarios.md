@@ -4,12 +4,12 @@ description: 画像処理からモバイル バックエンドおよび ETL パ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 8a2301b3c7a5f4a1f465677f31371d5b94783692
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 5f0d7a4c5cd736d1168ec76c1c0ea19627505f15
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522393"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787891"
 ---
 # <a name="serverless-business-scenarios-and-use-cases"></a>サーバーレスのビジネス シナリオとユース ケース
 
@@ -33,7 +33,7 @@ ms.locfileid: "72522393"
 
 Azure Web Portal または Visual Studio で、シンプルなサーバーレス Azure 関数を実装する方法を確認します。 Android、iOS、Windows で実行される Xamarin.Forms を使用してクライアントを構築します。 その後、アプリケーションは、サーバーレス バックエンドを使用するモバイル クライアントとサーバーの間の通信メディアとして、JavaScript Object Notation (JSON) を使用するように調整されます。
 
-詳細については、「[Xamarin.Forms クライアントを使用するシンプルな Azure 関数の実装](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)」を参照してください。
+詳細については、「[Xamarin.Forms クライアントを使用するシンプルな Azure 関数の実装](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)」を参照してください。
 
 ## <a name="generate-a-photo-mosaic-with-serverless-image-recognition"></a>サーバーレス画像認識で写真のモザイクを生成する
 
@@ -43,7 +43,7 @@ Azure Web Portal または Visual Studio で、シンプルなサーバーレス
 
 たとえば、オーランド アイなど、オーランドのランドマークを使用してモデルをトレーニングできます。 Custom Vision ではオーランド アイの画像を認識し、関数で "オーランド アイ" の Bing 画像検索結果で構成された写真のモザイクが作成されます。
 
-詳細については、[Azure Functions の写真のモザイク ジェネレーター](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)に関するページを参照してください。
+詳細については、[Azure Functions の写真のモザイク ジェネレーター](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)に関するページを参照してください。
 
 ## <a name="migrate-an-existing-application-to-the-cloud"></a>既存のアプリケーションをクラウドに移行する
 
@@ -83,17 +83,17 @@ Azure Functions は、長い URL を貼り付けて短い URL を生成できる
 
 サンプルは、Azure IoT Hub と Azure 関数で構成されています。 IoT Hub の新しいメッセージで、Azure 関数がトリガーされます。 サーバーレス コードでは、送信元のデバイスに同じメッセージの内容が送り返されます。 プロジェクトには、ソリューションに必要なすべてのコードとデプロイの構成が含まれています。
 
-詳細については、[Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/) に関するページを参照してください。
+詳細については、[Azure IoT Hub ping](https://github.com/Azure-Samples/iot-hub-node-ping) に関するページを参照してください。
 
 ## <a name="recommended-resources"></a>推奨リソース
 
-- [Azure Functions の写真のモザイク ジェネレーター](https://azure.microsoft.com/resources/samples/functions-dotnet-photo-mosaic/)
-- [Azure IoT Hub ping](https://azure.microsoft.com/resources/samples/iot-hub-node-ping/)
+- [Azure Functions の写真のモザイク ジェネレーター](https://github.com/Azure-Samples/functions-dotnet-photo-mosaic)
+- [Azure IoT Hub ping](https://github.com/Azure-Samples/iot-hub-node-ping)
 - [数分のサーバーレス .NET アプリの Azure Storage](https://devblogs.microsoft.com/aspnet/azure-storage-for-serverless-net-apps-in-minutes/)
 - [独自のアプリを持ち込む](https://github.com/JeremyLikness/bring-own-app-connect-17)
 - [CSV インポート ラボ](https://github.com/JeremyLikness/azure-fn-file-process-hol)
 - [Event Grid Glue](https://github.com/JeremyLikness/Event-Grid-Glue)
-- [Xamarin.Forms クライアントを使用するシンプルな Azure 関数の実装](https://azure.microsoft.com/resources/samples/functions-xamarin-getting-started/)
+- [Xamarin.Forms クライアントを使用するシンプルな Azure 関数の実装](https://docs.microsoft.com/samples/azure-samples/functions-xamarin-getting-started/implementing-a-simple-azure-function-with-a-xamarinforms-client/)
 - [サーバーレスの Azure 関数を使用するリフトアンドシフト](https://channel9.msdn.com/Events/Connect/2017/E102)
 - [サーバーレスの URL 短縮ツール](https://github.com/jeremylikness/serverless-url-shortener)
 

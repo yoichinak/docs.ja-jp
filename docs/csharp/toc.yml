@@ -1190,12 +1190,12 @@
               href: programming-guide/unsafe-code-pointers/pointer-conversions.md
             - name: ポインターを使用してバイトの配列をコピーする方法
               href: programming-guide/unsafe-code-pointers/how-to-use-pointers-to-copy-an-array-of-bytes.md
-    - name: XML ドキュメントのコメント
+    - name: XML ドキュメント コメント
       items:
         - name: 概要
           displayName: xml documentation comments
           href: programming-guide/xmldoc/index.md
-        - name: ドキュメント コメントとして推奨されるタグ
+        - name: ドキュメント コメント用の推奨タグ
           href: programming-guide/xmldoc/recommended-tags-for-documentation-comments.md
         - name: XML ファイルの処理
           href: programming-guide/xmldoc/processing-the-xml-file.md

@@ -64,7 +64,7 @@ ms.locfileid: "73738190"
 
 ### <a name="use-registry-editor"></a>レジストリ エディターを使用する
 
-1. **スタート** メニューの **[ファイル名を指定して実行]** を選択し、「*regedit*」と入力し、 **[OK]** を選択します。
+1. **スタート** メニューの **[ファイル名を指定して実行]** を選択し、「*regedit*」と入力し、**[OK]** を選択します。
 
      regedit を実行するには、管理特権が必要です。
 
@@ -156,7 +156,7 @@ PowerShell コマンドを使用し、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NE
 (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
-別の最低限必要なの .NET Framework バージョンを確認するには、例の `394802` を [.NET Framework バージョン一覧](#version_table)の値に置き換えます。 そのバージョンに対して示されている最小値を使用します。
+別の最低限必要な .NET Framework のバージョンを確認するには、例の `394802` を [.NET Framework バージョン一覧](#version_table)の値に置き換えます。 そのバージョンに対して示されている最小値を使用します。
 
 ## <a name="find-older-net-framework-versions-1-through-4"></a>.NET Framework の以前のバージョンを探す (1 から 4)
 
@@ -164,7 +164,7 @@ PowerShell コマンドを使用し、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NE
 
 ### <a name="use-registry-editor-older-framework-versions"></a>レジストリ エディターを使用する (古いバージョンのフレームワーク)
 
-1. **スタート** メニューの **[ファイル名を指定して実行]** を選択し、「*regedit*」と入力し、 **[OK]** を選択します。
+1. **スタート** メニューの **[ファイル名を指定して実行]** を選択し、「*regedit*」と入力し、**[OK]** を選択します。
 
     regedit を実行するには、管理特権が必要です。
 
@@ -221,7 +221,7 @@ PowerShell コマンドを使用し、**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NE
 
     返された `System.Version` オブジェクトは、現在コードを実行しているランタイムのバージョンを示しています。 コンピューターにインストールされている可能性のある、アセンブリのバージョンやランタイムのその他のバージョンは返されません。
 
-    .NET Framework バージョン 4、4.5、4.5.1、4.5.2 の場合は、返される <xref:System.Version> オブジェクトの文字列表現は 4.0.30319.*xxxxx* という形式です。ここでの *xxxxx* は 42000 より小さいです。 .NET Framework 4.6 以降のバージョンの場合は、4.0.30319.42000 という形式です。
+    .NET Framework バージョン 4、4.5、4.5.1、4.5.2 の場合は、返される <xref:System.Version> オブジェクトの文字列表現は 4.0.30319.*xxxxx* という形式です。この *xxxxx* は 42000 より小さいものになります。 .NET Framework 4.6 以降のバージョンの場合は、4.0.30319.42000 という形式です。
 
 2. `Version` オブジェクトを取得したら、次のように照会します。
 

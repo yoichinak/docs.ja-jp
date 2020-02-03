@@ -3,12 +3,12 @@ title: Windows 8 への .NET Framework のインストール
 ms.custom: updateeachrelease
 description: Windows 8 に .NET Framework をインストールする方法について説明します
 ms.date: 04/18/2019
-ms.openlocfilehash: 0d9afb30088256b6c5c1fd8c0b2c99e3a9760b89
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1db8ac9837821eb7111b9d0015787509bc27b398
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716726"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965998"
 ---
 # <a name="install-the-net-framework-on-windows-8-and-windows-server-2012"></a>Windows 8 と Windows Server 2012 に .NET Framework をインストールする
 
@@ -29,7 +29,7 @@ ms.locfileid: "75716726"
 
 ## <a name="net-framework-46"></a>.NET Framework 4.6
 
-[.NET Framework 4.6](https://www.microsoft.com/download/details.aspx?id=48130) は Windows 8 でサポートされている最も新しい .NET Framework バージョンです。
+[.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46) は Windows 8 でサポートされている最も新しい .NET Framework バージョンです。
 
 .NET Framework 4.6 は、.NET Framework 4.0 から 4.6 用に構築されたアプリをサポートします。
 

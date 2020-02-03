@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: d8dc1fd9ba99116d4d6ec84ca6e48b4307b30dbb
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d366fb6f79593866cb8cb2ae761ba656fe33c598
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75699185"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867374"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>等価比較 (C# プログラミング ガイド)
 
@@ -34,7 +34,7 @@ int a = GetOriginalValue();
 int b = GetCurrentValue();  
   
 // Test for value equality.   
-if( b == a)   
+if (b == a)
 {  
     // The two integers are equal.  
 }  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c1d3d1eb-8370-4f25-8297-3bd262b4740a
 topic_type:
 - apiref
-ms.openlocfilehash: 8b9ec94184945c19b77247175e51bd5e8dc1ceee
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5dd93dcc29ace6573e313f732c45af0dfbb900e1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122660"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782215"
 ---
 # <a name="icordebuginternalframe2isclosertoleaf-method"></a>ICorDebugInternalFrame2::IsCloserToLeaf メソッド
 `this` 内部フレームが、指定されたは、指定されたテキストボックスオブジェクトよりもリーフに近いかどうかを確認します。  
@@ -48,10 +48,10 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
 |E_FAIL|比較を実行できませんでした。|  
 |E_INVALIDARG|`pFrameToCompare` または `pIsCloser` が null です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `IsCloserToLeaf` を使用すると、スタック上の他のフレームと内部フレームをインターリーブするポリシーを実装できます。  
   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>要件  
  **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
@@ -62,6 +62,6 @@ HRESULT IsCloserToLeaf([in] ICorDebugFrame * pFrameToCompare,
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorDebugInternalFrame2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [ICorDebugInternalFrame2 インターフェイス](icordebuginternalframe2-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

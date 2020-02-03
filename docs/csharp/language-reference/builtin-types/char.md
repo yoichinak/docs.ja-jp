@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: ab49b8cbddac2569d6063a5f312105bef3033e84
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 3952e9e30706a8cd362ef248955918de5dacf4a3
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552299"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787818"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
 
 `char` 型のキーワードは、Unicode UTF-16 文字を表す .NET <xref:System.Char?displayProperty=nameWithType> 構造体型のエイリアスです。
 
-|型|範囲|サイズ|.NET 型|
+|種類|範囲|サイズ|.NET 型|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 ～ U+FFFF|16 ビット|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -58,3 +58,4 @@ ms.locfileid: "74552299"
 - [C# リファレンス](../index.md)
 - [組み込み型の一覧表](../keywords/built-in-types-table.md)
 - [文字列](../../programming-guide/strings/index.md)
+- <xref:System.Text.Rune?displayProperty=nameWithType>

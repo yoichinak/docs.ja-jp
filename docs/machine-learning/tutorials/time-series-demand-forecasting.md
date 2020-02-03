@@ -6,12 +6,12 @@ ms.topic: tutorial
 ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 2482709abfadad0505a40f4c37fd58cee4a2634c
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73978198"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921252"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>チュートリアル: 時系列解析と ML.NET を使用して自転車レンタル サービスの需要を予測する
 
@@ -29,7 +29,7 @@ ML.NET を使用して SQL Server データベースに格納されているデ�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
+- [Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラットフォーム開発" ワークロードと共にインストールされている。
 
 ## <a name="time-series-forecasting-sample-overview"></a>時系列予測のサンプルの概要
 
@@ -43,12 +43,12 @@ ML.NET を使用して SQL Server データベースに格納されているデ�
 
 このチュートリアルで使用されているアルゴリズムは、[特異スペクトル解析 (SSA: Singular Spectrum Analysis)](http://ssa.cf.ac.uk/zhigljavsky/pdfs/SSA/SSA_encyclopedia.pdf) です。 SSA は、時系列を一連のプリンシパル コンポーネントに分解することによって機能します。 これらのコンポーネントは、傾向、ノイズ、季節性、およびその他の多くの要因に対応するシグナルの部分として解釈することができます。 その後、これらのコンポーネントは再構築され、将来の値の予測に使用されます。
 
-## <a name="create-console-application"></a>コンソール アプリケーションの作成
+## <a name="create-console-application"></a>コンソール アプリケーションを作成する
 
 1. "BikeDemandForecasting" という名前の新しい **C# .NET Core コンソール アプリケーション**を作成します。
 1. **Microsoft.ML** バージョン **1.4.0** NuGet パッケージをインストールします。
-    1. ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。
-    1. [パッケージ ソース] として "nuget.org" を選択し、 **[参照]** タブを選択し、"**Microsoft.ML**" を検索します。
+    1. ソリューション エクスプローラーで、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。
+    1. [パッケージ ソース] として "nuget.org" を選択し、**[参照]** タブを選択し、"**Microsoft.ML**" を検索します。
     1. **[プレリリースを含める]** チェックボックスをオンにします。
     1. **[インストール]** ボタンを選択します。
     1. **[変更のプレビュー]** ダイアログで **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、[ライセンスの同意] ダイアログの **[同意する]** を選択します。
@@ -280,7 +280,7 @@ CREATE TABLE [Rentals] (
 
 予測値は、レンタルの正確な数を予測するものではありませんが、より絞り込んだ値の範囲が提供されるため、リソースの使用を最適化した事業が可能になります。
 
-おめでとうございます! これで、自転車のレンタル需要を予測するための時系列の機械学習モデルが正常に作成されました。
+おめでとうございます!  これで、自転車のレンタル需要を予測するための時系列の機械学習モデルが正常に作成されました。
 
 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) リポジトリにあります。
 

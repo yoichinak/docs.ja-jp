@@ -5,19 +5,20 @@ ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
 no-loc:
 - Join
 - GroupJoin
-ms.openlocfilehash: d4bf9fe76238d8824c5255df8910c1000503dcdf
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e2ec1a0c8120f6869b7c0a196b77d118762a8dd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746957"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868006"
 ---
-# <a name="opno-locjoin-operations-c"></a>[!OP.NO-LOC(Join)] 演算 (C#)
+# <a name="join-operations-c"></a>結合操作 (C#)
+
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  
   
  相互に直接の関連がない 2 つのデータ ソースを対象とするクエリにおいて、結合は重要な操作になります。 オブジェクト指向プログラミングでは、これは一方向の関係における逆の方向など、モデル化されていないオブジェクト間の相関関係を意味する場合があります。 一方向の関係の例として、City 型のプロパティを持つ Customer クラスがあるとします。ただし、City クラスには、Customer オブジェクトのコレクションを表すプロパティはありません。 City オブジェクトのリストから各都市のすべての顧客を取得する場合は、結合演算を使用して顧客を検索できます。  
   
- LINQ framework で用意された結合メソッドは <xref:System.Linq.Enumerable.[!OP.NO-LOC(Join)]%2A> と <xref:System.Linq.Enumerable.[!OP.NO-LOC(GroupJoin)]%2A> です。 この 2 つのメソッドは、等結合 (キーが等しいかどうかに基づいて 2 つのデータ ソースを対応させる結合) を実行します。 (比較に関して、Transact-SQL では、"小なり" 演算子などの "等値" 以外の結合演算子もサポートされます)。リレーショナル データベース用語で説明すると、<xref:System.Linq.Enumerable.[!OP.NO-LOC(Join)]%2A> は内部結合 (両方のデータ セットで一致するオブジェクトだけが返される結合) を実装します。 リレーショナル データベース用語で <xref:System.Linq.Enumerable.[!OP.NO-LOC(GroupJoin)]%2A> メソッドに直接相当するものはありませんが、このメソッドは内部結合と左外部結合のスーパーセットを実装します。 左外部結合とは、最初 (左側) のデータ ソースの各要素を返す結合です。これらの要素は、もう一方のデータ ソースの要素と相関関係がなくても返されます。  
+ LINQ framework で用意された結合メソッドは <xref:System.Linq.Enumerable.Join%2A> と <xref:System.Linq.Enumerable.GroupJoin%2A> です。 この 2 つのメソッドは、等結合 (キーが等しいかどうかに基づいて 2 つのデータ ソースを対応させる結合) を実行します。 (比較に関して、Transact-SQL では、"小なり" 演算子などの "等値" 以外の結合演算子もサポートされます)。リレーショナル データベース用語で説明すると、<xref:System.Linq.Enumerable.Join%2A> は内部結合 (両方のデータ セットで一致するオブジェクトだけが返される結合) を実装します。 リレーショナル データベース用語で <xref:System.Linq.Enumerable.GroupJoin%2A> メソッドに直接相当するものはありませんが、このメソッドは内部結合と左外部結合のスーパーセットを実装します。 左外部結合とは、最初 (左側) のデータ ソースの各要素を返す結合です。これらの要素は、もう一方のデータ ソースの要素と相関関係がなくても返されます。  
   
  次の図は、2 つのセットと、内部結合または左外部結合としてこれらのセットに含まれている要素の概念図を示しています。  
   
@@ -36,13 +37,13 @@ ms.locfileid: "76746957"
   
 次の例では、`join … in … on … equals …` 句を使用し、特定の値に基づいて 2 つのシーケンスを結合します。
   
-[!code-csharp[Join](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQJoin/CS/JoinOperation.cs#Join)]  
+[!code-csharp[Join](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csLINQJoinOperation/CS/JoinOperation.cs#Join)]  
 
 ### GroupJoin  
 
 次の例では、`join … in … on … equals … into …` 句を使用し、特定の値に基づいて 2 つのシーケンスを結合し、要素ごとに結果として得られる一致をグループ化します。
   
-[!code-csharp[GroupJoin](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQJoin/CS/JoinOperation.cs#GroupJoin)]  
+[!code-csharp[GroupJoin](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csLINQJoinOperation/CS/JoinOperation.cs#GroupJoin)]  
   
 ## <a name="see-also"></a>関連項目
 

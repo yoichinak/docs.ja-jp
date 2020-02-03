@@ -3,12 +3,12 @@ title: Windows 10 への .NET Framework のインストール
 description: Windows 10 または Windows Server 2016 に .NET Framework をインストールする方法について説明します。
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: c2b274bb85b6d4c496e7b6b6b62f05aa932202dd
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eed15b9088d6ba46d8f5bc6d16ba779dd6115b0d
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716379"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965972"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 と Windows Server 2016 以降に .NET Framework をインストールする
 
@@ -50,7 +50,7 @@ Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.8 
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) は Windows 10 1507 と 1511 でサポートされている最も新しい .NET Framework バージョンです。
+[.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462) は Windows 10 1507 と 1511 でサポートされている最も新しい .NET Framework バージョンです。
 
 .NET Framework 4.6.2 は、.NET Framework 4.0 から 4.6.2 用に構築されたアプリケーションをサポートします。
 
