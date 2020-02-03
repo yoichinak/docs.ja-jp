@@ -29,11 +29,11 @@ Windows フォーム `Panel` コントロールを使用して、他のコント
  [方法: パネルの背景を設定する](how-to-set-the-background-of-a-windows-forms-panel.md)  
  パネルに背景色と背景イメージを表示する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.Panel>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   

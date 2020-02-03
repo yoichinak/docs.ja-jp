@@ -28,7 +28,7 @@ ms.locfileid: "76742952"
 [方法: Windows フォーム DataGridView コントロールの並べ替え機能をカスタマイズする](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
 プログラムによってデータを並べ替える方法と、<xref:System.Windows.Forms.DataGridView.SortCompare?displayProperty=nameWithType> イベントを使用するか <xref:System.Collections.IComparer> インターフェイスを実装することによって並べ替えをカスタマイズする方法について説明します。
 
-## <a name="reference"></a>参照先
+## <a name="reference"></a>リファレンス
 
 <xref:System.Windows.Forms.DataGridView>  
 <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
@@ -42,7 +42,7 @@ ms.locfileid: "76742952"
 <xref:System.Windows.Forms.DataGridViewColumnSortMode>  
 <xref:System.Windows.Forms.DataGridViewColumnSortMode> 列挙体に関するリファレンスドキュメントを提供します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
 - [Windows フォーム DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)

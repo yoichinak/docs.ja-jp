@@ -10,7 +10,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76743443"
 ---
 # <a name="supporting-multiple-iis-site-bindings"></a>複数の IIS サイト バインディングのサポート
-インターネットインフォメーションサービス (IIS) 7.0 で Windows Communication Foundation (WCF) サービスをホストする場合、同じサイトで同じプロトコルを使用する複数のベースアドレスを指定することができます。 これにより、同じサービスで多数の異なる URI に応答できます。 リッスンするサービスをホストする場合に便利ですが `http://www.contoso.com` と `http://contoso.com` です。 また、内部ユーザー用に 1 つのベース アドレスを持ち、外部ユーザー用に別のベース アドレスを持つサービスを作成するのにも役立ちます。 例: `http://internal.contoso.com` と `http://www.contoso.com` です。  
+インターネットインフォメーションサービス (IIS) 7.0 で Windows Communication Foundation (WCF) サービスをホストする場合、同じサイトで同じプロトコルを使用する複数のベースアドレスを指定することができます。 これにより、同じサービスで多数の異なる URI に応答できます。 これは、`http://www.contoso.com` と `http://contoso.com`でリッスンするサービスをホストする場合に便利です。 また、内部ユーザー用に 1 つのベース アドレスを持ち、外部ユーザー用に別のベース アドレスを持つサービスを作成するのにも役立ちます。 たとえば、`http://internal.contoso.com` と `http://www.contoso.com` などです。  
   
 > [!NOTE]
 > この機能は、HTTP プロトコルを使用してのみ、使用可能です。  

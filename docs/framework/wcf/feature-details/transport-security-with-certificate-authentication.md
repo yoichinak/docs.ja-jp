@@ -21,15 +21,15 @@ ms.locfileid: "76742654"
   
  サービスで証明書を使用する方法の詳細については、「[証明書の操作](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)」および「[方法: SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。 このシナリオのさまざまな特性を次の表に示します。  
   
-|特徴|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
-|セキュリティ モード|Transport|  
+|セキュリティ モード|トランスポート|  
 |相互運用性|既存の Web サービス クライアントおよびサービスとの相互運用性|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (SSL 証明書を使用)<br /><br /> ○ (X.509 証明書を使用)|  
-|データ整合性|○|  
-|データの機密性|○|  
-|Transport|HTTPS|  
-|バインディング|<xref:System.ServiceModel.WSHttpBinding>|  
+|データ整合性|はい|  
+|データの機密性|はい|  
+|トランスポート|HTTPS|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="configure-the-service"></a>サービスの構成  
  このシナリオのサービスは IIS でホストされるので、web.config ファイルを使用して構成します。 次の web.config は、トランスポート セキュリティと X.509 クライアント資格情報を使用するように <xref:System.ServiceModel.WSHttpBinding> を構成する方法を示しています。  
@@ -138,7 +138,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

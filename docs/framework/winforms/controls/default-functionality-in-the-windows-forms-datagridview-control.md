@@ -13,10 +13,10 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746133"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの既定の機能
-Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロールは多くの既定の機能をユーザーに提供します。  
+Windows フォーム <xref:System.Windows.Forms.DataGridView> コントロールにより、ユーザーは大量の既定機能を使用できます。  
   
 ## <a name="default-functionality"></a>既定の機能  
- <xref:System.Windows.Forms.DataGridView>コントロールは、既定で次のような機能を持ちます:  
+ 既定では、<xref:System.Windows.Forms.DataGridView> コントロールです。  
   
 - テーブルを垂直方向にスクロールしても列ヘッダーおよび行ヘッダーが見える状態のまま自動的に表示します。  
   
@@ -28,7 +28,7 @@ Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロール�
   
 - では、アプリケーションの `Main` メソッドから <xref:System.Windows.Forms.Application.EnableVisualStyles%2A> メソッドが呼び出されたときに、Windows XP と Windows Server 2003 ファミリの visual スタイルが自動的にサポートされます。  
   
- さらに、<xref:System.Windows.Forms.DataGridView>コントロールの内容は既定で編集できます:  
+ また、既定では、<xref:System.Windows.Forms.DataGridView> コントロールの内容を編集できます。  
   
 - ユーザーがダブルクリックするか、セル中で F2 キーを押した場合、コントロールは自動的にセルを編集モードにし、ユーザーが入力したセルの内容を更新します。  
   
@@ -36,7 +36,7 @@ Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロール�
   
 - ユーザーが行ヘッダーをクリックすると、行全体が選択されます。  
   
- <xref:System.Windows.Forms.DataGridView> プロパティの設定から<xref:System.Windows.Forms.DataGridView.DataSource%2A> コントロールをデータ ソースにバインドしたとき、コントロールは次のように振る舞います:  
+ <xref:System.Windows.Forms.DataGridView.DataSource%2A> プロパティを設定して、<xref:System.Windows.Forms.DataGridView> コントロールをデータソースにバインドする場合、コントロールは次のようになります。  
   
 - では、データソースの列の名前が列ヘッダーのテキストとして自動的に使用されます。  
   
@@ -46,7 +46,7 @@ Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロール�
   
 - は、ユーザーが列ヘッダーをクリックしたときに、基になるデータに基づいて行を自動的に並べ替えます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView コントロール](datagridview-control-windows-forms.md)

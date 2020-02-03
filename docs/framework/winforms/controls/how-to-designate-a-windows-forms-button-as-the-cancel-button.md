@@ -44,7 +44,7 @@ ms.locfileid: "76743260"
        }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Button コントロールの概要](button-control-overview-windows-forms.md)

@@ -35,7 +35,7 @@ ms.locfileid: "76735770"
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     -または-  
+     または  
   
 - 位置によって項目を削除するには、<xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> メソッドを使用します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76735770"
     domainUpDown1->Items->RemoveAt(0);  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>

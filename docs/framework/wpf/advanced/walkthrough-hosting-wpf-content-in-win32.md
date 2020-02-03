@@ -20,7 +20,7 @@ ms.locfileid: "76735311"
  このチュートリアルでは、win32 ウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツをホストするサンプルアプリケーション ( [Win32 ウィンドウで WPF コンテンツ](https://go.microsoft.com/fwlink/?LinkID=160004)をホストするサンプル) を記述する方法について説明します。 このサンプルを拡張して、任意の Win32 ウィンドウをホストすることができます。 マネージコードとアンマネージコードの混在が必要になるため、 C++アプリケーションは/cli で記述されています。  
 
 <a name="requirements"></a>   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  このチュートリアルでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] と Win32 プログラミングの基本的な知識があることを前提としています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プログラミングの基本的な概要については、「[はじめに](../getting-started/index.md)」を参照してください。 Win32 プログラミングの概要については、「チャールズ Petzold 著) による特定の*プログラミングウィンドウ*」で、件名に関する多くの書籍を参照する必要があります。  
   
  このチュートリアルに付属するサンプルは/Cli でC++実装されているので、このチュートリアルでC++は、を使用して Windows API をプログラミングする方法とマネージコードプログラミングについて理解していることを前提としています。 /Cli にC++関する知識は役に立ちますが、必須ではありません。  
@@ -225,7 +225,7 @@ ms.locfileid: "76735311"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageSetFontFamily](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagesetfontfamily)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)

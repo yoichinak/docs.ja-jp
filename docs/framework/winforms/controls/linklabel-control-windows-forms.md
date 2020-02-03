@@ -31,10 +31,10 @@ Windows フォーム `LinkLabel` コントロールを使用すると、Windows 
  [方法: Windows フォームの LinkLabel コントロールから Web ページを表示する (Visual Basic)](display-a-web-page-from-a-wf-linklabel-control-visual-basic.md)  
  ユーザーが Windows フォーム `LinkLabel` コントロールをクリックしたときに、既定のブラウザーで Web ページを表示する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.LinkLabel> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォームコントロールの完全な一覧と、それらの使用方法に関する情報へのリンクを示します。

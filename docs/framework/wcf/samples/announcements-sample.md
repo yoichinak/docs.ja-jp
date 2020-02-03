@@ -38,7 +38,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(CalculatorService), base
 }
 ```
 
-## <a name="client"></a>クライアント
+## <a name="client"></a>Client
 
 このプロジェクトでは、クライアントが <xref:System.ServiceModel.Discovery.AnnouncementService> をホストすることに注意してください。 また、2 つのデリゲートがイベントに登録されます。 これらのイベントにより、オンラインおよびオフラインのアナウンスを受信したときのクライアントの処理が決定されます。
 

@@ -22,7 +22,7 @@ ms.locfileid: "76743768"
   
 - <xref:System.Windows.Forms.DataGridView> コントロールが有効になっています。  
   
-- <xref:System.Windows.Forms.DataGridView.EditMode%2A> プロパティの値が <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>ではありません。  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A> プロパティ値が <xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically> ではない。  
   
 - セル、行、列、およびコントロールの `ReadOnly` プロパティはすべて `false`に設定されます。  
   
@@ -37,14 +37,14 @@ ms.locfileid: "76743768"
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- <xref:System.Windows.Forms.DataGridView> という名前の `dataGridView1` コントロール。  
   
 - <xref:System> アセンブリおよび <xref:System.Windows.Forms> アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>

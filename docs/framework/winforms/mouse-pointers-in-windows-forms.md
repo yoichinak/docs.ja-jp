@@ -30,7 +30,7 @@ ms.locfileid: "76740956"
   
  マウスポインターを変更する主な方法は、コントロールの <xref:System.Windows.Forms.Control.Cursor%2A?displayProperty=nameWithType> または <xref:System.Windows.Forms.Control.DefaultCursor%2A> プロパティを新しい <xref:System.Windows.Forms.Cursor>に設定することです。 マウスポインターを変更する例については、<xref:System.Windows.Forms.Cursor> クラスのコード例を参照してください。 さらに、<xref:System.Windows.Forms.Cursors> クラスは、手に似たポインターなど、さまざまな種類のポインターに対して <xref:System.Windows.Forms.Cursor> オブジェクトのセットを公開します。 砂時計に似た待機ポインターを表示するには、マウスポインターがコントロール上にあるときは常に、<xref:System.Windows.Forms.Control> クラスの <xref:System.Windows.Forms.Control.UseWaitCursor%2A> プロパティを使用します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Cursor>
 - [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)

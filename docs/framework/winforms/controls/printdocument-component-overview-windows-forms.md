@@ -28,7 +28,7 @@ Windows フォーム [PrintDocument](printdocument-component-windows-forms.md) �
 
 フォームに追加されると、Visual Studio の Windows フォームデザイナーの下部にあるトレイに <xref:System.Drawing.Printing.PrintDocument> コンポーネントが表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Printing.PrintDocument>

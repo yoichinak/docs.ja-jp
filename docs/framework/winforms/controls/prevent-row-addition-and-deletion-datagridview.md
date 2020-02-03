@@ -21,18 +21,18 @@ ms.locfileid: "76728725"
   
  Visual Studio では、このタスクに対するサポートが用意されています。 「[方法: デザイナーを使用して Windows フォーム DataGridView コントロールで行の追加と削除を回避する](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)」も参照してください。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#090](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#090)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#090](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#090)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- <xref:System.Windows.Forms.DataGridView> という名前の `dataGridView1` コントロール。  
   
 - <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>

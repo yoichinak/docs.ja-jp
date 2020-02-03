@@ -19,9 +19,9 @@ ms.locfileid: "76736330"
 
 Windows フォーム <xref:System.Windows.Forms.PictureBox> コントロールを使用すると、<xref:System.Windows.Forms.PictureBox.Image%2A> プロパティを有効な画像に設定することによって、デザイン時にフォームの画像を読み込んで表示することができます。 次の表に、許容されるファイルの種類を示します。
 
-|の型|ファイル名拡張子|
+|種類|ファイル名拡張子|
 |---|---|
-|ビットマップ|.bmp|
+|Bitmap|.bmp|
 |アイコン|.ico|
 |GIF|.gif|
 |Metafile|.wmf|
@@ -41,7 +41,7 @@ Windows フォーム <xref:System.Windows.Forms.PictureBox> コントロール�
 
 1. **[プロパティ]** ウィンドウで、[<xref:System.Windows.Forms.PictureBox.Image%2A>] プロパティを選択します。 イメージオブジェクトの名前の左側に表示される小さいサムネイル画像を右クリックし、 **[リセット]** を選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.PictureBox>
 - [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)

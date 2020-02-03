@@ -52,18 +52,18 @@ ms.locfileid: "76728179"
      [!code-csharp[System.Windows.Forms.ToolStripControlHost#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#17)]
      [!code-vb[System.Windows.Forms.ToolStripControlHost#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#17)]  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-cpp[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CPP/form1.cpp#13)]
  [!code-csharp[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/CS/form1.cs#13)]
  [!code-vb[System.Windows.Forms.ToolStripControlHost#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStripControlHost/VB/form1.vb#13)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
   
 この例で必要な要素は次のとおりです。
   
 - System アセンブリおよび System.Windows.Forms アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStripControlHost>
 - [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

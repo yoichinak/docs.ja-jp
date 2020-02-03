@@ -19,18 +19,18 @@ ms.locfileid: "76742649"
   
  ![Windows 認証を利用したトランスポート セキュリティ](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|特徴|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
-|セキュリティ モード|Transport|  
+|セキュリティ モード|トランスポート|  
 |相互運用性|WCF のみ|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (Windows 統合認証を使用)<br /><br /> ○ (Windows 統合認証を使用)|  
-|整合性|○|  
-|機密性|○|  
-|Transport|NET.TCP|  
-|バインディング|<xref:System.ServiceModel.NetTcpBinding>|  
+|整合性|はい|  
+|機密情報|はい|  
+|トランスポート|NET.TCP|  
+|バインド|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>サービス  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "76742649"
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  コードの代わりに次の構成を使用して、サービス エンドポイントをセットアップできます。  
   
 ```xml  
@@ -73,12 +73,12 @@ ms.locfileid: "76742649"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+## <a name="client"></a>Client  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
-- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 例:  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -89,7 +89,7 @@ ms.locfileid: "76742649"
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  コードの代わりに次の構成を使用して、クライアントを作成できます。  
   
 ```xml  
@@ -117,7 +117,7 @@ ms.locfileid: "76742649"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [方法: Windows 資格情報でサービスをセキュリティで保護する](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)

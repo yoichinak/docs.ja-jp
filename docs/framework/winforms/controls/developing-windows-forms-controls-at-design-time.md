@@ -48,19 +48,19 @@ Windows フォーム コントロールのデザイン時動作をデバッグ�
 [チュートリアル: Visual Studio のデザイン時機能を利用する Windows フォームコントロールの作成](creating-a-wf-control-design-time-features.md)\
 デザイン環境に複合コントロールを緊密に統合する方法を示します。
 
-[方法: Windows フォームのコントロールを作成する](how-to-author-controls-for-windows-forms.md)\
+[方法 : Windows フォームのコントロールを作成する](how-to-author-controls-for-windows-forms.md)\
 Windows フォーム コントロールの実装に関する考慮事項の概要を説明します。
 
 [方法 : 複合コントロールを作成する](how-to-author-composite-controls.md)\
 複合コントロールから継承することでコントロールを作る方法を示します。
 
-[方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)\
+[方法 : UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)\
 複合コントロール作成手順の概要を説明します。
 
 [方法 : 既存の Windows フォーム コントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)\
 <xref:System.Windows.Forms.Button> コントロールクラスから継承することによって拡張コントロールを作成する方法について説明します。
 
-[方法: コントロール クラスを継承する](how-to-inherit-from-the-control-class.md)\
+[方法 : コントロール クラスを継承する](how-to-inherit-from-the-control-class.md)\
 拡張コントロールの作成の概要を説明します。
 
 [方法: デザイン時にフォームの端に合わせてコントロールを配置](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)する\
@@ -81,7 +81,7 @@ Windows フォーム デザイナーで読み込みに失敗したときに Micr
 [コントロールとコンポーネントの作成時のトラブルシューティング](troubleshooting-control-and-component-authoring.md)\
 カスタム コンポーネントやコントロールを作るときに発生する可能性がある一般的な問題を診断して解決する方法を示します。
 
-## <a name="reference"></a>参照先
+## <a name="reference"></a>リファレンス
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 
@@ -92,8 +92,8 @@ Windows フォーム デザイナーで読み込みに失敗したときに Micr
 [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)\
 .NET Framework で独自のカスタム コントロールを作る方法について説明します。
 
-[Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
+[言語への非依存性、および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md)\
 コンポーネントの作成と使用を簡略化するように設計されている共通言語ランタイムの概要について説明します。 この簡略化の重要な側面は、さまざまなプログラミング言語で記述されたコンポーネント間の相互運用性の拡張です。 共通言語仕様 (CLS) を使うと、複数のプログラミング言語で動作するツールやコンポーネントを作ることができます。
 
-[チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
+[チュートリアル : ツールボックスへのカスタム コンポーネントの自動設定](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\
 コンポーネントやコントロールを**ツールボックスのカスタマイズ** ダイアログ ボックスに表示できるようにする方法を説明します。

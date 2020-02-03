@@ -32,7 +32,7 @@ Windows フォーム <xref:System.Windows.Forms.GroupBox> コントロールは�
   
 3. グループボックスの [<xref:System.Windows.Forms.GroupBox.Text%2A>] プロパティを適切なキャプションに設定します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox コントロール](groupbox-control-windows-forms.md)

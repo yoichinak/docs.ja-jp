@@ -70,8 +70,8 @@ ms.locfileid: "76730990"
     GridDetails->SetDataBinding(ds, "Customers.CustOrd");  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
 - [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
-- [方法 : データ ソースに Windows フォーム DataGrid コントロールをバインドする](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

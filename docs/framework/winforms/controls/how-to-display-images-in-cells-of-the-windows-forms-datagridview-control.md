@@ -26,20 +26,20 @@ ms.locfileid: "76740276"
   
  次のコード例では、埋め込みリソースからアイコンを抽出し、イメージ列のすべてのセルに表示するビットマップに変換する方法を示します。 テキストのセル値を対応する画像に置き換える別の例については、「[方法: Windows フォーム DataGridView コントロールでデータの書式をカスタマイズ](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)する」を参照してください。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#050)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#050](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#050)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- <xref:System.Windows.Forms.DataGridView> という名前の `dataGridView1` コントロール。  
   
 - `tree.ico`という名前の埋め込みアイコンリソース。  
   
 - <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、および <xref:System.Drawing?displayProperty=nameWithType> の各アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - [Windows フォーム DataGridView コントロールでの列、行、およびセルの基本機能](basic-column-row-and-cell-features-wf-datagridview-control.md)

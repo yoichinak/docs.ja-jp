@@ -55,7 +55,7 @@ Tab キーを使用してコントロールを巡回するときにコントロ�
 > [!NOTE]
 > ラジオボタングループには、実行時に1つのタブストップがあります。 選択したボタン ([<xref:System.Windows.Forms.RadioButton.Checked%2A>] プロパティが [`true`] に設定されているボタン) では、[<xref:System.Windows.Forms.Control.TabStop%2A>] プロパティが [`true`] に自動的に設定されます。一方、他のボタンでは <xref:System.Windows.Forms.Control.TabStop%2A> プロパティが `false`に設定されています。 <xref:System.Windows.Forms.RadioButton> コントロールのグループ化の詳細については、「 [Set Windows フォーム RadioButton コントロールをセットとして機能させる](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

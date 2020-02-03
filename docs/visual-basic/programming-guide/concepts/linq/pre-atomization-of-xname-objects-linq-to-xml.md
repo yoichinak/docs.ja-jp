@@ -17,7 +17,7 @@ LINQ to XML でパフォーマンスを向上させる方法の 1 つは、<xref
 
 各自のシナリオで事前アトミック化をテストし、使用すべきかどうかを判断してください。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 この動作を次の例で示します。
 
@@ -33,7 +33,7 @@ Dim root2 As New XElement(root1, New XElement(data, New XAttribute(id, "1"), "4,
 Console.WriteLine(root2)
 ```
 
-この例を実行すると、次の出力が生成されます。
+この例の結果は、次のようになります。
 
 ```xml
 <Root>
@@ -59,7 +59,7 @@ Dim root2 As New XElement(root1, New XAttribute(XNamespace.Xmlns + "aw", aw),
 Console.WriteLine(root2)
 ```
 
-この例を実行すると、次の出力が生成されます。
+この例の結果は、次のようになります。
 
 ```xml
 <aw:Root xmlns:aw="http://www.adventure-works.com">
@@ -93,7 +93,7 @@ sw.Stop()
 Console.WriteLine($"Time to construct: {sw.ElapsedMilliseconds} milliseconds")
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [パフォーマンス (LINQ to XML) (Visual Basic)](performance-linq-to-xml.md)
 - [アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (Visual Basic)](atomized-xname-and-xnamespace-objects-linq-to-xml.md)

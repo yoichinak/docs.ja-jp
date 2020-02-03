@@ -40,23 +40,23 @@ ms.locfileid: "76744696"
   
 ### <a name="to-change-the-border-styles-for-datagridview-cells-programmatically"></a>DataGridView セルの罫線のスタイルをプログラムで変更するには  
   
-- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>、<xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>、および <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> の各プロパティを設定します。  
+- <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A>、 <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A>、 <xref:System.Windows.Forms.DataGridView.ColumnHeadersBorderStyle%2A> の各プロパティを設定します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#033)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#033](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#033)]  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#030](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#030)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#030](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#030)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- <xref:System.Windows.Forms.DataGridView> という名前の `dataGridView1` コントロール。  
   
 - <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、および <xref:System.Drawing?displayProperty=nameWithType> の各アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.BorderStyle>
 - <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>

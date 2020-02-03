@@ -22,6 +22,6 @@ Windows Presentation Foundation (WPF) ライブラリでは、内部使用のみ
  [SaveToHistory 関数](savetohistory-function-wpf-unmanaged-api-reference.md)  
  [SetFakeActiveWindow 関数](setfakeactivewindow-function-wpf-unmanaged-api-reference.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [詳細設定](index.md)
+- [詳細](index.md)

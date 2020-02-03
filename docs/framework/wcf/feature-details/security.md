@@ -34,7 +34,7 @@ ms.locfileid: "76744636"
  [バインディングとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  カスタム セキュリティ バインディングの作成方法を示すトピックなど、バインディングをセキュリティの観点から説明します。  
   
- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  WCF のセキュリティ機能を使用してメッセージをセキュリティで保護する方法について説明します。  
   
  [認証](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
@@ -55,20 +55,20 @@ ms.locfileid: "76744636"
  [セキュリティ ガイドラインとベスト プラクティス](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  セキュリティで保護された WCF アプリケーションを作成するためのガイドライン。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Security>  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [WCF 機能の詳細](../../../../docs/framework/wcf/feature-details/index.md)  
   
  [基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)  
   
- [チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)  
+ [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
  [概念](../../../../docs/framework/wcf/conceptual-overview.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [アプリケーションの構成](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

@@ -49,7 +49,7 @@ ms.locfileid: "76732719"
   
 - 選択したタブを削除するには、<xref:System.Windows.Forms.TabControl.TabPages%2A> プロパティの <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> メソッドを使用します。  
   
-     -または-  
+     または  
   
 - すべてのタブを削除するには、<xref:System.Windows.Forms.TabControl.TabPages%2A> プロパティの <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> メソッドを使用します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "76732719"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)
 - [方法: タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)

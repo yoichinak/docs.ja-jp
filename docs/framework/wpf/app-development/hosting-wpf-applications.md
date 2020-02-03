@@ -24,7 +24,7 @@ WPF XAML ブラウザーアプリケーション (Xbap) は、Web サーバー�
   [.NET アプリケーションの配置をサポートするための Firefox のアドオン](firefox-add-ons-to-support-net-application-deployment.md)  
   [WPF のブラウザーのホスト処理をサポートするネイティブ API](native-wpf-browser-hosting-support-apis.md)  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [アプリケーション管理の概要](application-management-overview.md)  
   [WPF のウィンドウ](windows-in-wpf-applications.md)  
   [ナビゲーションの概要](navigation-overview.md)  

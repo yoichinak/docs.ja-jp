@@ -18,7 +18,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76735898"
 ---
 # <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a>方法 : 文字列に引用符を挿入する (Windows フォーム)
-テキストの文字列に引用符 (" ") を挿入することが必要な場合があります。 例:  
+テキストの文字列に引用符 (" ") を挿入することが必要な場合があります。 次に例を示します。  
   
  私は、「私たちは、  
   
@@ -48,7 +48,7 @@ ms.locfileid: "76735898"
        }  
     ```  
   
-     -または-  
+     または  
   
 2. 引用符を表す ASCII 文字または Unicode 文字を挿入します。 Visual Basic では、ASCII 文字 (34) を使用します。 ビジュアルC#では、Unicode 文字 (\u0022) を使用します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "76735898"
     > [!NOTE]
     > この例では、基本文字セットの文字を指定するユニバーサル文字名を使用できないため、\u0022 を使用することはできません。 使用した場合、C3851 が発生します。 詳細については、「[コンパイラ エラー C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)」を参照してください。  
   
-     -または-  
+     または  
   
 3. 文字の定数を定義し、必要に応じてその定数を使用することもできます。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "76735898"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>

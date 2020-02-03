@@ -28,7 +28,7 @@ DataGridView コントロールをデータに接続するには:
 
 2. フォームの <xref:System.Windows.Forms.Form.Load> イベントハンドラーで、<xref:System.Windows.Forms.DataGridView> コントロールを <xref:System.Windows.Forms.BindingSource>にバインドし、`GetData` メソッドを呼び出してデータを取得します。  
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 この完全なコード例では、データベースからデータを取得して、Windows フォームに DataGridView コントロールを設定します。 フォームには、データを再読み込みし、変更をデータベースに送信するためのボタンもあります。  
 
@@ -45,7 +45,7 @@ Northwind SQL Server サンプルデータベース接続の値を使用して�
 [!code-csharp[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/CS/datagridviewboundeditable.cs)]
 [!code-vb[System.Windows.Forms.DataGridViewBoundEditable](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewBoundEditable/VB/datagridviewboundeditable.vb)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>

@@ -23,7 +23,7 @@ ms.locfileid: "76746870"
 
 いくつかの Windows フォームコントロールでイメージを表示できます。 これらのイメージは、[保存] コマンドを示すボタン上のフロッピーディスクアイコンなど、コントロールの目的を明確にするアイコンにすることができます。 または、アイコンに背景画像を使用して、コントロールの外観と動作を指定することもできます。
 
-## <a name="programmatic"></a>一定
+## <a name="programmatic"></a>プログラムによる
 
 コントロールの `Image` または `BackgroundImage` プロパティを <xref:System.Drawing.Image>型のオブジェクトに設定します。 通常は、<xref:System.Drawing.Image.FromFile%2A> メソッドを使用して、ファイルからイメージを読み込みます。
 
@@ -60,7 +60,7 @@ pictureBox1->Image = Image::FromFile(String::Concat
 
 2. 表示するイメージを選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>

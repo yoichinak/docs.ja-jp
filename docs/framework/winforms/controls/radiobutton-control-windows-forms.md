@@ -22,13 +22,13 @@ Windows フォーム `RadioButton` コントロールは、複数の相互に排
  [RadioButton コントロールの概要](radiobutton-control-overview-windows-forms.md)  
  このコントロールについて、および主な機能とプロパティについて説明します。  
   
- [方法 : セットとして機能する Windows フォーム RadioButton コントロールをグループ化する](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
+ [方法: セットとして機能する Windows フォーム RadioButton コントロールをグループ化する](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)  
  ラジオボタンをセットとしてグループ化する方法について説明します。これらのオプションは1つだけ選択できます。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.RadioButton> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

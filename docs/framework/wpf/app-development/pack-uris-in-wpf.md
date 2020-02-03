@@ -297,7 +297,7 @@ URI 解決は、次を参照する Uri には適用されません。
 
 ### <a name="using-pack-uris-in-markup"></a>マークアップでのパック URI の使用
 
-パック URI をマークアップで指定するには、属性の要素にパック URI を設定します。 例:
+パック URI をマークアップで指定するには、属性の要素にパック URI を設定します。 次に例を示します。
 
 `<element attribute="pack://application:,,,/File.xaml" />`
 
@@ -305,7 +305,7 @@ URI 解決は、次を参照する Uri には適用されません。
 
 表 1: マークアップでの絶対パック URI
 
-|File|絶対パック URI|
+|ファイル|絶対パック URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |リソース ファイル - ローカル アセンブリ|`"pack://application:,,,/ResourceFile.xaml"`|
 |サブフォルダー内のリソース ファイル - ローカル アセンブリ|`"pack://application:,,,/Subfolder/ResourceFile.xaml"`|
@@ -321,7 +321,7 @@ URI 解決は、次を参照する Uri には適用されません。
 
 表 2: マークアップでの相対パック URI
 
-|File|相対パック URI|
+|ファイル|相対パック URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |ローカル アセンブリ内のリソース ファイル|`"/ResourceFile.xaml"`|
 |ローカル アセンブリのサブフォルダー内のリソース ファイル|`"/Subfolder/ResourceFile.xaml"`|
@@ -334,7 +334,7 @@ URI 解決は、次を参照する Uri には適用されません。
 
 ### <a name="using-pack-uris-in-code"></a>コードでのパック URI の使用
 
-コードでパック URI を指定するには、<xref:System.Uri> クラスをインスタンス化し、パック URI をパラメーターとしてコンストラクターに渡します。 このコード例を次に示します。
+コードでパック URI を指定するには、<xref:System.Uri> クラスをインスタンス化し、パック URI をパラメーターとしてコンストラクターに渡します。 これを次の例に示します。
 
 ```csharp
 Uri uri = new Uri("pack://application:,,,/File.xaml");
@@ -368,7 +368,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 表 3: コードでの絶対パック URI
 
-|File|絶対パック URI|
+|ファイル|絶対パック URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |リソース ファイル - ローカル アセンブリ|`Uri uri = new Uri("pack://application:,,,/ResourceFile.xaml", UriKind.Absolute);`|
 |サブフォルダー内のリソース ファイル - ローカル アセンブリ|`Uri uri = new Uri("pack://application:,,,/Subfolder/ResourceFile.xaml", UriKind.Absolute);`|
@@ -384,7 +384,7 @@ Uri uri = new Uri(userProvidedUriTextBox.Text, UriKind.RelativeOrAbsolute);
 
 表 4: コードでの相対パック URI
 
-|File|相対パック URI|
+|ファイル|相対パック URI|
 |----------|-------------------------------------------------------------------------------------------------------------------------|
 |リソース ファイル - ローカル アセンブリ|`Uri uri = new Uri("/ResourceFile.xaml", UriKind.Relative);`|
 |サブフォルダー内のリソース ファイル - ローカル アセンブリ|`Uri uri = new Uri("/Subfolder/ResourceFile.xaml", UriKind.Relative);`|
@@ -433,7 +433,7 @@ WPF で移動するさまざまな方法の詳細については、「[ナビゲ
 
 [!code-xaml[WindowIconSnippets#WindowIconSetXAML](~/samples/snippets/xaml/VS_Snippets_Wpf/WindowIconSnippets/XAML/MainWindow.xaml#windowiconsetxaml)]
 
-詳細については、「 <xref:System.Windows.Window.Icon%2A>」を参照してください。
+詳細については、<xref:System.Windows.Window.Icon%2A> を参照してください。
 
 <a name="Loading_Image__Audio__and_Video_Files"></a>
 
@@ -459,6 +459,6 @@ WPF では、次の例に示すように、アプリケーションでさまざ�
 
 WPF のテーマの概要については、「[スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](wpf-application-resource-content-and-data-files.md)

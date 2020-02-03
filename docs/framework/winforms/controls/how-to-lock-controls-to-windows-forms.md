@@ -47,7 +47,7 @@ Visual Studio の **[プロパティ]** ウィンドウで、 **[Locked]** プ�
 
 **[プロパティ]** ウィンドウで、 **[Locked]** プロパティを選択し、 **[false]** を選択します。 (名前をダブルクリックすると、プロパティの設定が切り替わります)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

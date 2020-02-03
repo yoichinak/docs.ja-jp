@@ -24,7 +24,7 @@ Windows フォーム <xref:System.Windows.Forms.Label> コントロールは、�
   
  <xref:System.Windows.Forms.Label.AutoSize%2A> が `false`に設定されている場合、可能であれば、<xref:System.Windows.Forms.Label.Text%2A> プロパティで指定された単語は次の行に折り返されますが、コントロールは拡張されません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: Windows フォームの Label コントロールでアクセス キーを作成する](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Label コントロールの概要](label-control-overview-windows-forms.md)

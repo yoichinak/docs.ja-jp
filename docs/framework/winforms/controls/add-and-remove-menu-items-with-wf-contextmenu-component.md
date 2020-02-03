@@ -58,7 +58,7 @@ Windows フォームでショートカットメニュー項目を追加および
     contextMenu1->MenuItems->Remove(mnuItemNew);  
     ```  
   
-     -または-  
+     または  
   
 2. <xref:System.Windows.Forms.ContextMenu> コンポーネントの `MenuItems` コレクションの `Clear` メソッドを使用して、メニューからすべての項目を削除します。  
   
@@ -74,7 +74,7 @@ Windows フォームでショートカットメニュー項目を追加および
     contextMenu1->MenuItems->Clear();  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu コンポーネント](contextmenu-component-windows-forms.md)

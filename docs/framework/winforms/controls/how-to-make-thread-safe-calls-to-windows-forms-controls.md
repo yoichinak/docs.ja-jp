@@ -68,7 +68,7 @@ Visual Studio デバッガーは、メッセージを使用して <xref:System.I
 
 これらの例は、または Visual Basic のC#コマンドラインから .NET Framework アプリとしてビルドして実行できます。 詳細については、「 [csc.exe を使用したコマンドライン](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)からのビルド」または「[コマンドラインからのビルド (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)」を参照してください。 
 
-.NET Core 3.0 以降では、ことができますもビルドおよび実行する例では、.NET Core アプリを Windows として .NET Core の Windows フォームのあるフォルダーから *\<フォルダー名>.csproj* プロジェクト ファイル。 
+.NET Core 3.0 以降では、.NET Core Windows フォーム *\<フォルダー名 > .csproj*プロジェクトファイルを持つフォルダーから、Windows .net core アプリとして例をビルドして実行することもできます。 
 
 ## <a name="example-use-the-invoke-method-with-a-delegate"></a>例: デリゲートで Invoke メソッドを使用する
 
@@ -90,7 +90,7 @@ Visual Studio デバッガーは、メッセージを使用して <xref:System.I
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ComponentModel.BackgroundWorker>
 - [方法: バックグラウンドで操作を実行する](how-to-run-an-operation-in-the-background.md)

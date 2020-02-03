@@ -24,10 +24,10 @@ Windows フォーム `ImageList` コンポーネントは、コントロール�
   
  「[方法: デザイナーを使用して ImageList イメージを追加または削除する](how-to-add-or-remove-imagelist-images-with-the-designer.md)」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ImageList>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

@@ -32,7 +32,7 @@ ms.locfileid: "76744001"
  [チュートリアル: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーの処理](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
  ユーザーが新しい値をコミットしようとしたときにデータソースから発生したデータ入力エラーを処理する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "76744001"
  <xref:System.Windows.Forms.DataGridView.CellValidating?displayProperty=nameWithType>  
  <xref:System.Windows.Forms.DataGridView.CellValidating> イベントのリファレンスドキュメントを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム DataGridView コントロールでのデータの表示](displaying-data-in-the-windows-forms-datagridview-control.md)  
  手動または外部データソースからコントロールにデータを設定する方法を説明するトピックを提供します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
 - [Windows フォーム DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)

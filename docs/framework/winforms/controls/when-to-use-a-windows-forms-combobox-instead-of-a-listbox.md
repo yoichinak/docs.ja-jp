@@ -25,7 +25,7 @@ ms.locfileid: "76739931"
   
  また、コンボボックスでは、フォーム上の領域が節約されます。 ユーザーが下矢印をクリックするまでは完全な一覧が表示されないため、コンボボックスは、リストボックスが収まらない小さなスペースに簡単に収めることができます。 例外は、<xref:System.Windows.Forms.ComboBox.DropDownStyle%2A> プロパティが <xref:System.Windows.Forms.ComboBoxStyle.Simple>に設定されている場合です。完全な一覧が表示されます。コンボボックスは、リストボックスの場合よりも多くの領域を必要とします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

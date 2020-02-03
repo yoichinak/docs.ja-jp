@@ -32,7 +32,7 @@ ms.locfileid: "76738494"
 
   次の表に、リフレクション ポリシー種類と、この種類で使用できるプログラム要素を示します。
 
-  |要素|Activate|[参照]|Dynamic|
+  |要素|アクティブ化|参照|動的|
   |-------------|--------------|------------|-------------|
   |[\<Application>](application-element-net-native.md)|✔️|✔️|✔️|
   |[\<Assembly>](assembly-element-net-native.md)|✔️|✔️|✔️|
@@ -111,11 +111,11 @@ ms.locfileid: "76738494"
   |[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|✔️|✔️|✔️|
   |[\<TypeParameter>](typeparameter-element-net-native.md)|✔️|✔️|✔️|
 
-## <a name="policy-settings"></a>ポリシーの設定
+## <a name="policy-settings"></a>ポリシー設定
 
 各ポリシーの種類は、次の表に示すいずれかの値に設定できます。 型のメンバーを表す要素は、他の要素とは異なる一連のポリシー設定をサポートしていることに注意してください。
 
-|ポリシー設定|説明|`Assembly`、`Namespace`、`Type`、および `TypeInstantiation` 要素|`Event`、`Field`、`Method`、`MethodInstantiation`、および `Property` 要素|
+|ポリシー設定|[説明]|`Assembly`、`Namespace`、`Type`、および `TypeInstantiation` 要素|`Event`、`Field`、`Method`、`MethodInstantiation`、および `Property` 要素|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|.NET ネイティブ ツール チェーンが削除しないすべての型とメンバーのポリシーを有効にします。|✔️||
 |`Auto`|そのプログラム要素のポリシーの種類に、既定のポリシーを使用する必要があることを指定します。 これは、そのポリシーの種類のポリシーを省略することと同じです。 `Auto` は通常、ポリシーが親要素から継承されることを示すために使用されます。|✔️|✔️|
@@ -128,7 +128,7 @@ ms.locfileid: "76738494"
 |`Required PublicAndInternal`|パブリックおよび内部の型またはメンバーのポリシーを有効にして、パブリックおよび内部の型とメンバーのメタデータが常に使用可能であるようにします。 この設定は、ツール チェーンが必要であると判断した場合にのみ、パブリックおよび内部の型とメンバーのメタデータを使用可能にする `PublicAndInternal` とは異なります。|✔️||
 |`Required All`|使用されているかどうかに関係なく、すべての型とメンバーを保持し、そのポリシーを有効にするために、ツール チェーンを要求します。|✔️||
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)

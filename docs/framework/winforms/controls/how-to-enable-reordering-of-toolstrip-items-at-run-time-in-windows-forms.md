@@ -22,7 +22,7 @@ ms.locfileid: "76745479"
   
 ### <a name="to-enable-toolstripitem-rearrangement-at-run-time"></a>実行時に ToolStripItem の再配置を有効にするには  
   
-- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> プロパティを `true`に設定します。 既定では、<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> は `false`です。  
+- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> プロパティを `true` に設定します。 既定では、<xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> は `false`です。  
   
      実行時には、ユーザーは ALT キーを押したままマウスの左ボタンを押すと、<xref:System.Windows.Forms.ToolStripItem> が <xref:System.Windows.Forms.ToolStrip>上の別の場所にドラッグされます。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "76745479"
     toolStrip1.AllowItemReorder = true;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A>

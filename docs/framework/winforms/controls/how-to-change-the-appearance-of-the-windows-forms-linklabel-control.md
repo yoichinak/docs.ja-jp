@@ -121,7 +121,7 @@ ms.locfileid: "76746619"
        }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>

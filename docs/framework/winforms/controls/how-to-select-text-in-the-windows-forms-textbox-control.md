@@ -67,7 +67,7 @@ Windows フォーム <xref:System.Windows.Forms.TextBox> コントロールで�
     }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox コントロールの概要](textbox-control-overview-windows-forms.md)

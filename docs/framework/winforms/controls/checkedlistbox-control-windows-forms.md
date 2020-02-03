@@ -30,11 +30,11 @@ Windows フォーム `CheckedListBox` コントロールには、<xref:System.Wi
  [方法: Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)  
  リストをステップ実行して、どの項目がチェックされるかを判断する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.CheckedListBox> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)  
  リストボックス、コンボボックス、およびチェックリストボックスを使用して実行できる操作の一覧を示します。  
   

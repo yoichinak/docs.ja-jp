@@ -66,7 +66,7 @@ XAML は、アプリケーションの外観を宣言的に実装する XML ベ�
 
 XAML は XML ベースなので、XAML を使用して作成する UI は [要素ツリー](advanced/trees-in-wpf.md)と呼ばれるネストされた要素の階層で組み立てられます。 要素ツリーは UI を作成し、管理するための論理的かつ直感的な方法を提供します。
 
-### <a name="code-behind"></a>分離コード
+### <a name="code-behind"></a>コードビハインド
 
 アプリケーションの主な動作は、ユーザー インタラクションに対して応答する機能を実装することです。これにはイベントの処理 (メニュー、ツールバー、またはボタンをクリックする、など) および応答のビジネス ロジックやデータ アクセス ロジックの呼び出しなどが含まれます。 WPF では、この動作が、マークアップと関連付けられたコードで実装されます。 このタイプのコードは分離コードと呼ばれています。 次の例は、前の例の更新されたマークアップと分離コードを示しています。
 
@@ -141,7 +141,7 @@ End Namespace
 
 ![MessageBox](media/introduction-to-wpf/wpfintrofigure25.png)
 
-## <a name="controls"></a>Controls
+## <a name="controls"></a>コントロール
 
 アプリケーション モデルにより提供されるユーザー エクスペリエンスは、構築済みのコントロールです。 WPF において、"*コントロール*" とはウィンドウまたはページによりホストされ、ユーザー インターフェイスを持ち、何らかの動作を実装する WPF クラスのカテゴリに適用される総称です。
 
@@ -394,7 +394,7 @@ WPF のアニメーション サポートを使用すると、コントロール
 
 ![テキストを含む TextBox コントロール](media/introduction-to-wpf/wpfintrofigure21.png)
 
-しかし、さまざまな種類の複数のアイテムのコンテンツを含めることができるコントロールもあります。<xref:System.Windows.Controls.ContentControl.Content%2A> プロパティで指定された <xref:System.Windows.Controls.Button> のコンテンツには、レイアウト コントロール、テキスト、画像、図形などのさまざまなアイテムを含めることができます。 次の例は、<xref:System.Windows.Controls.DockPanel>、<xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.Border>、および <xref:System.Windows.Controls.MediaElement>を含むコンテンツを含む <xref:System.Windows.Controls.Button> を示しています。
+しかし、さまざまな種類の複数のアイテムのコンテンツを含めることができるコントロールもあります。 <xref:System.Windows.Controls.Button>プロパティで指定された <xref:System.Windows.Controls.ContentControl.Content%2A> のコンテンツには、レイアウト コントロール、テキスト、画像、図形などのさまざまなアイテムを含めることができます。 次の例は、<xref:System.Windows.Controls.DockPanel>、<xref:System.Windows.Controls.Label>、<xref:System.Windows.Controls.Border>、および <xref:System.Windows.Controls.MediaElement>を含むコンテンツを含む <xref:System.Windows.Controls.Button> を示しています。
 
 ```xaml
 <Window
@@ -439,7 +439,7 @@ WPF コントロールの既定のユーザー インターフェイスは、通
 [!code-csharp[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](~/samples/snippets/csharp/wpf/introduction-to-wpf/introduction-to-wpf_17.cs)]
 [!code-vb[IntroToWPFSnippets#ButtonControlTemplateWindowCODEBEHIND](~/samples/snippets/visualbasic/wpf/introduction-to-wpf/introduction-to-wpf_17.vb)]
 
-この例では、既定のボタン ユーザー インターフェイスが、濃い青の枠線を持ち、<xref:System.Windows.Media.RadialGradientBrush> で塗りつぶされた <xref:System.Windows.Shapes.Ellipse> に置き換えられています。 <xref:System.Windows.Controls.ContentPresenter> コントロールは <xref:System.Windows.Controls.Button>のコンテンツである "Click Me!" を表示します。 <xref:System.Windows.Controls.Button> がクリックされると、 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> コントロールの既定の動作の一部として <xref:System.Windows.Controls.Button> イベントが発生します。 結果を次の図に示します。
+この例では、既定のボタン ユーザー インターフェイスが、濃い青の枠線を持ち、 <xref:System.Windows.Shapes.Ellipse> で塗りつぶされた <xref:System.Windows.Media.RadialGradientBrush>に置き換えられています。 <xref:System.Windows.Controls.ContentPresenter> コントロールは <xref:System.Windows.Controls.Button>のコンテンツである "Click Me!" を表示します。 <xref:System.Windows.Controls.Button> がクリックされると、 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> コントロールの既定の動作の一部として <xref:System.Windows.Controls.Button> イベントが発生します。 結果を次の図に示します。
 
 ![省略記号ボタンと 2 番目のウィンドウ](media/introduction-to-wpf/wpfintrofigure2.png)
 
@@ -449,7 +449,7 @@ WPF コントロールの既定のユーザー インターフェイスは、通
 
 ![既定の外観を使用したリスト ボックス](media/introduction-to-wpf/wpfintrofigure18.png)
 
-既定の外観は <xref:System.Windows.Controls.ListBox> に期待されるものです。 ただし、各タスクの既定の外観にはタスク名しか含まれていません。 タスク名、説明、優先度の既定の外観を表示するには、 <xref:System.Windows.Controls.ListBox> コントロールのバインドされたリスト項目の既定の外観を、 <xref:System.Windows.DataTemplate>を使用して変更する必要があります。 次の XAML は、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 属性を使用して各タスクに適用される、このような <xref:System.Windows.DataTemplate>を定義します。
+既定の外観は <xref:System.Windows.Controls.ListBox>に期待されるものです。 ただし、各タスクの既定の外観にはタスク名しか含まれていません。 タスク名、説明、優先度の既定の外観を表示するには、 <xref:System.Windows.Controls.ListBox> コントロールのバインドされたリスト項目の既定の外観を、 <xref:System.Windows.DataTemplate>を使用して変更する必要があります。 次の XAML は、<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> 属性を使用して各タスクに適用される、このような <xref:System.Windows.DataTemplate>を定義します。
 
 ```xaml
 <Window
@@ -613,7 +613,7 @@ WPF コントロールの既定のユーザー インターフェイスは、通
 
 リソースおよびリソース ディクショナリは、テーマとスキンに対する WPF サポートの基礎です。
 
-詳細については、[リソース](../../desktop-wpf/fundamentals/xaml-resources-define.md)に関連するページを参照してください。
+詳しくは、[リソース](../../desktop-wpf/fundamentals/xaml-resources-define.md)に関する記事をご覧ください。
 
 ### <a name="custom-controls"></a>カスタム コントロール
 
@@ -650,21 +650,21 @@ WPF にはカスタマイズに対する多くのサポートが用意されて�
 
 ## <a name="wpf-best-practices"></a>WPF のベスト プラクティス
 
-WPF はすべての開発プラットフォームと同様、目的の結果を得るために、さまざまな方法で使用できます。 必要なユーザー エクスペリエンスを WPF アプリケーションが確実に提供し、オーディエンス一般の需要に応える 1 つの方法として、アクセシビリティ、グローバリゼーションとローカリゼーション、パフォーマンスに関するお勧めのベスト プラクティスがあります。 詳細については、次のトピックを参照してください。
+WPF はすべての開発プラットフォームと同様、目的の結果を得るために、さまざまな方法で使用できます。 必要なユーザー エクスペリエンスを WPF アプリケーションが確実に提供し、オーディエンス一般の需要に応える 1 つの方法として、アクセシビリティ、グローバリゼーションとローカリゼーション、パフォーマンスに関するお勧めのベスト プラクティスがあります。 詳細については、次を参照してください。
 
 - [ユーザー補助](../ui-automation/accessibility-best-practices.md)
 - [WPF のグローバリゼーションとローカライズ](advanced/wpf-globalization-and-localization-overview.md)
 - [WPF アプリのパフォーマンス](advanced/optimizing-wpf-application-performance.md)
 - [WPF のセキュリティ](security-wpf.md)
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 WPF の主な機能を確認しました。 次は、初めての WPF アプリをビルドします。
 
 > [!div class="nextstepaction"]
 > [チュートリアル: 初めての WPF デスクトップ アプリケーション](getting-started/walkthrough-my-first-wpf-desktop-application.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF の使用を開始する](getting-started/index.md)
 - [Windows Presentation Foundation](index.md)

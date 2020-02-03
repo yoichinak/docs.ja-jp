@@ -85,7 +85,7 @@ Windows Communication Foundation (WCF) は、SOAP メッセージベースの分
   
 - 一方、*メッセージセキュリティモード*では、ws-security (およびその他の仕様) を使用して転送セキュリティを実装します。 メッセージ セキュリティは、SOAP メッセージに直接適用され、また SOAP エンベロープ内にアプリケーション データと共に格納されるため、トランスポート プロトコルに依存しない、拡張性が高い、エンド ツー エンド (Point-to-Point と対照) のセキュリティが保証される、という利点があります。ただし、SOAP メッセージの XML の性質を処理する必要があるため、トランスポート セキュリティ モードよりも処理が数倍遅くなる欠点があります。  
   
- これらの違いの詳細については、「[サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)」を参照してください。  
+ これらの違いの詳細については、「[サービスとクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)」を参照してください。  
   
  3 番目のセキュリティ モードは、上記の 2 つのモードを使用し、その両方の利点を引き継ぎます。 このモードは、`TransportWithMessageCredential` と呼ばれます。 このモードでは、クライアントの認証にメッセージ セキュリティを使用し、サーバーの認証にトランスポート セキュリティを使用して、メッセージの機密性と整合性を実現します。 これにより、`TransportWithMessageCredential` セキュリティ モードでは、トランスポート セキュリティ モードと同じ速度で処理が実行され、メッセージ セキュリティ モードと同じ方法でクライアント認証の拡張性が提供されます。 ただし、メッセージ セキュリティ モードと異なり、完全なエンド ツー エンド セキュリティは提供されません。  
   
@@ -97,13 +97,13 @@ Windows Communication Foundation (WCF) は、SOAP メッセージベースの分
 ### <a name="auditing"></a>監査  
  *監査*とは、Windows イベントログへのセキュリティイベントのログ記録です。 認証の失敗 (または成功) などのセキュリティ関連のイベントをログに記録できます。 詳細については、「[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」を参照してください。 プログラミングの詳細については、「[方法: セキュリティイベントを監査](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)する」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
 - [サービスのセキュリティ保護](../../../../docs/framework/wcf/securing-services.md)
 - [一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [バインディングとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [認証](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
 - [承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
 - [フェデレーションと発行済みトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)

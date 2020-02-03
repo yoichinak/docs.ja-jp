@@ -63,14 +63,14 @@ ms.locfileid: "76745059"
  [!code-csharp[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/CS/lazyloading.cs#300)]
  [!code-vb[System.Windows.Forms.DataGridView.Virtual_lazyloading#300](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.Virtual_lazyloading/VB/lazyloading.vb#300)]  
   
-## <a name="additional-considerations"></a>その他の考慮事項  
+## <a name="additional-considerations"></a>その他の注意点  
  前のコード例は、just-in-time データ読み込みのデモとして提供されています。 最大限の効率を実現するには、独自のニーズに合わせてコードを変更する必要があります。 少なくとも、キャッシュ内のデータの1ページあたりの行数に適切な値を選択する必要があります。 この値は `Cache` コンストラクターに渡されます。 1ページあたりの行数は、<xref:System.Windows.Forms.DataGridView> コントロールに同時に表示できる行数より少なくする必要があります。  
   
  最良の結果を得るには、パフォーマンステストとユーザビリティテストを実施して、システムとユーザーの要件を決定する必要があります。 考慮する必要がある要素には、アプリケーションを実行しているクライアントコンピューターのメモリの量、使用されるネットワーク接続の使用可能な帯域幅、および使用されるサーバーの待機時間などがあります。 帯域幅と待機時間は、ピーク時の使用時に決定する必要があります。  
   
  アプリケーションのスクロールパフォーマンスを向上させるために、ローカルに保存されるデータの量を増やすことができます。 ただし、起動時間を短縮するには、最初に大量のデータが読み込まれないようにする必要があります。 `Cache` クラスを変更して、格納できるデータページの数を増やすことができます。 より多くのデータページを使用すると、スクロール効率が向上しますが、使用可能な帯域幅とサーバーの待機時間によっては、データページ内の最適な行数を確認する必要があります。 ページ数を小さくすると、サーバーにはより頻繁にアクセスされますが、要求されたデータが返されるまでにかかる時間は短くなります。 待機時間が帯域幅よりも大きな問題である場合は、より大きなデータページを使用することをお勧めします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>

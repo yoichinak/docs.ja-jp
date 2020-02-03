@@ -53,7 +53,7 @@ Windows フォーム <xref:System.Windows.Forms.PrintPreviewDialog> コントロ
 
 <xref:System.Drawing.Printing.PrintDocument.QueryPageSettings> イベントを使用してプリンターの設定を変更した場合、最適化構成スイッチが設定されていても、<xref:System.Windows.Forms.PrintPreviewDialog> コントロールのパフォーマンスは向上しません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [PrintPreviewControl コントロールの概要](printpreviewcontrol-control-overview-windows-forms.md)

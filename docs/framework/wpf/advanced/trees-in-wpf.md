@@ -84,7 +84,7 @@ ms.locfileid: "76746567"
   
  ただし、リソースルックアップは、直接の論理ツリーの範囲を超えて拡張することもできます。 アプリケーションマークアップの場合、リソースルックアップは、アプリケーションレベルのリソースディクショナリに続き、次に、静的なプロパティまたはキーとして参照されるテーマサポートとシステム値に進みます。 また、リソース参照が動的である場合は、テーマの論理ツリーの外側のシステム値を参照することもできます。 リソースディクショナリと参照ロジックの詳細については、「 [XAML Resources](../../../desktop-wpf/fundamentals/xaml-resources-define.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [入力の概要](input-overview.md)
 - [WPF グラフィックス レンダリングの概要](../graphics-multimedia/wpf-graphics-rendering-overview.md)

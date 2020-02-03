@@ -104,7 +104,7 @@ ms.locfileid: "76742258"
 [!code-csharp[System.Windows.Forms.FirstControl#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/SimpleForm.cs#10)]
 [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロールのプロパティ](properties-in-windows-forms-controls.md)
 - [Windows フォーム コントロールのイベント](events-in-windows-forms-controls.md)

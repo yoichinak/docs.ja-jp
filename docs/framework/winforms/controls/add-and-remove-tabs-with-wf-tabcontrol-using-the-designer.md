@@ -24,11 +24,11 @@ ms.locfileid: "76746287"
 
 - コントロールのスマートタグで、 **[タブの追加]** または **[タブの削除]** をクリックします。
 
-     -または-
+     または
 
      **[プロパティ]** ウィンドウで、<xref:System.Windows.Forms.TabControl.TabPages%2A> プロパティの横にある省略記号ボタン ([...]) をクリックして、[](./media/visual-studio-ellipsis-button.png)プロパティウィンドウ] をクリックし、[ **TabPage コレクションエディター** **![] を**開きます。 **[追加]** または **[削除]** ボタンをクリックします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)

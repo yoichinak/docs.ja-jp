@@ -94,6 +94,6 @@ Press <ENTER> to terminate client.
 
 4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。 このサービスを呼び出すことができるクライアントアプリケーションを作成する方法の例については、「[方法: クライアントを作成](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)する」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [AppFabric のホスティングと永続化のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

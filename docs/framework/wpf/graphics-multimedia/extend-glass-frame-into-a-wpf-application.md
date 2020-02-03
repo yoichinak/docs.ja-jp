@@ -25,7 +25,7 @@ ms.locfileid: "76746532"
 > [!NOTE]
 > この例は、ガラスが有効になっているデスクトップウィンドウマネージャー (DWM) を実行している Windows Vista コンピューターでのみ機能します。 Windows Vista Home Basic edition では、透明なガラス効果はサポートされていません。 通常、他のエディションの Windows Vista では、透明なガラス効果でレンダリングされる領域は不透明に表示されます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の図は、Internet Explorer 7 のアドレスバーに拡張されたグラスフレームを示しています。
 
@@ -65,7 +65,7 @@ End Function
 
 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) は、クライアント領域にフレームを拡張する DWM 関数です。 ウィンドウ ハンドルと [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) 構造体の 2 つのパラメーターを受け取ります。 [MARGINS](/windows/win32/api/uxtheme/ns-uxtheme-margins) は、フレームがクライアント領域に余分に拡張する量を DWM に通知するために使われます。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 [DwmExtendFrameIntoClientArea](/windows/desktop/api/dwmapi/nf-dwmapi-dwmextendframeintoclientarea) 関数を使うには、ウィンドウ ハンドルを取得する必要があります。 WPF では、ウィンドウハンドルは、<xref:System.Windows.Interop.HwndSource>の <xref:System.Windows.Interop.HwndSource.Handle%2A> プロパティから取得できます。 次の例では、フレームがウィンドウの <xref:System.Windows.FrameworkElement.Loaded> イベントのクライアント領域に拡張されます。
 
@@ -110,7 +110,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 }
 ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 次の例では、クライアント領域にフレームが拡張される簡単なウィンドウを示します。 フレームは、2つの <xref:System.Windows.Controls.TextBox> オブジェクトを含む上罫線の背後に拡張されます。
 
@@ -150,7 +150,7 @@ void OnLoaded(object sender, RoutedEventArgs e)
 
 ![WPF アプリケーションに拡張されたグラスフレームを示すスクリーンショット。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [デスクトップウィンドウマネージャーの概要](/windows/desktop/dwm/dwm-overview)
 - [ぼかしのデスクトップウィンドウマネージャーの概要](/windows/desktop/dwm/blur-ovw)

@@ -30,7 +30,7 @@ ms.locfileid: "76746487"
 > [!NOTE]
 > フォームの <xref:System.Windows.Forms.Control.DoubleBuffered%2A> プロパティを `true` に設定すると、<xref:System.Windows.Forms.Control.Paint> イベント内のグラフィックスベースのコードがダブルバッファリングされます。 以下のコードを使用すると、これによって認識できないパフォーマンスが向上することはありませんが、より複雑なグラフィックス操作コードを使用する場合は注意が必要です。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
   
 ```vb  
 Private Sub Form1_Paint(ByVal sender As Object, ByVal e As _  
@@ -59,10 +59,10 @@ private void Form1_Paint(System.Object sender,
 }  
 ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  上記のコードはフォームの <xref:System.Windows.Forms.Control.Paint> イベントハンドラーで実行されるので、フォームが再描画されるときにグラフィックスが保持されます。 そのため、<xref:System.Windows.Forms.Form.Load> イベントハンドラーでは、フォームのサイズが変更されたり、別の形式によって隠されたりした場合に描画コンテンツが再描画されないため、グラフィックス関連のメソッドを呼び出さないでください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>

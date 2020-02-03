@@ -23,7 +23,7 @@ Windows フォーム <xref:System.Windows.Forms.TrackBar> コントロール ("�
   
  もう1つの重要なプロパティは、<xref:System.Windows.Forms.TrackBar.SmallChange%2A> と <xref:System.Windows.Forms.TrackBar.LargeChange%2A>です。 <xref:System.Windows.Forms.TrackBar.SmallChange%2A> プロパティの値は、左または右方向キーが押されたときに、thumb が移動する位置の数です。 <xref:System.Windows.Forms.TrackBar.LargeChange%2A> プロパティの値は、pageup キーが押されたとき、またはつまみの両側のトラックバーにマウスクリックが反応したときに、thumb が移動する位置の数です。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar コントロール](trackbar-control-windows-forms.md)

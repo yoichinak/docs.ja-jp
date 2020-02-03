@@ -20,9 +20,9 @@ ms.locfileid: "76737912"
  [OpenType フォントの機能](opentype-font-features.md)  
  [アプリケーションでのフォントのパッケージング](packaging-fonts-with-applications.md)  
  [OpenType フォント パックのサンプル](sample-opentype-font-pack.md)  
- [方法のトピック](fonts-how-to-topics.md)  
+ [データ バインドに関する「方法」トピック](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>

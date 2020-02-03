@@ -26,7 +26,7 @@ ms.locfileid: "76739790"
  [Windows フォーム   での高 DPI サポート](high-dpi-support-in-windows-forms.md)  
  高 DPI および動的スケーリングの Windows フォームのサポートについて説明します。 
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Drawing.Size>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
@@ -37,5 +37,5 @@ ms.locfileid: "76739790"
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームの表示形式の変更](changing-the-appearance-of-windows-forms.md)  
+ [Windows フォームの外観の変更](changing-the-appearance-of-windows-forms.md)  
  Windows フォームの外観を変更する他の方法を説明するトピックへのリンクを提供します。

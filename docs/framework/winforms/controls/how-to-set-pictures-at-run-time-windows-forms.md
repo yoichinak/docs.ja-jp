@@ -97,7 +97,7 @@ Windows フォーム <xref:System.Windows.Forms.PictureBox> コントロール�
   
      このコードは、デザイン時にグラフィックがコントロールに読み込まれた場合でも、イメージをクリアします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>

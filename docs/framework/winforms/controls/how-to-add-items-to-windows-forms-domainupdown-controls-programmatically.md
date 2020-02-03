@@ -35,7 +35,7 @@ ms.locfileid: "76745581"
     domainUpDown1->Items->Add("noodles");  
     ```  
   
-     -または-  
+     または  
   
 2. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Insert%2A> メソッドを使用して、リスト内の指定した位置に項目を挿入します。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "76745581"
     domainUpDown1->Items->Insert(2, "rice");  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Add%2A?displayProperty=nameWithType>

@@ -37,7 +37,7 @@ ms.locfileid: "76731996"
  [方法: 行テンプレートを使用して Windows フォーム DataGridView コントロールの行をカスタマイズする](use-the-row-template-to-customize-rows-in-the-datagrid.md)  
  `RowTemplate` プロパティを使用して、コントロールのすべての行に使用される行のプロパティを設定する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "76731996"
  <xref:System.Windows.Forms.DataGridView.RowTemplate%2A>  
  <xref:System.Windows.Forms.DataGridView.RowTemplate%2A> プロパティのリファレンスドキュメントを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)  
  <xref:System.Windows.Forms.DataGridView> のセルおよび行のカスタム描画と、セル、列、および行の派生型の作成について説明するトピックを示します。  
   
  [Windows フォーム DataGridView コントロールでの列、行、およびセルの基本機能](basic-column-row-and-cell-features-wf-datagridview-control.md)  
  一般的に使用されるセル、行、および列のプロパティについて説明するトピックを示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)

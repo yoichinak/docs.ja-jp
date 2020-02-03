@@ -23,13 +23,13 @@ Windows フォーム <xref:System.Windows.Forms.GroupBox> コントロールを�
  [方法: Windows フォーム GroupBox コントロールを使用してコントロールをグループ化する](how-to-group-controls-with-the-windows-forms-groupbox-control.md)  
  このコントロールを使用してコントロールをグループ化する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.GroupBox>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
  <xref:System.Windows.Forms.Panel>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

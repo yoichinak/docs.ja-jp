@@ -1,5 +1,5 @@
 ---
-title: ドキュメント
+title: Documents
 ms.date: 03/30/2017
 helpviewer_keywords:
 - documents [WPF], packaging
@@ -55,7 +55,7 @@ ms.locfileid: "76737970"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>ユーザー インターフェイスのテキスト  
- ドキュメントへのテキストの追加だけでなく、テキストはもちろん、フォームなどのアプリケーション UI で使用できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは、異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。 一般に、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]の簡単な文など、制限されたテキストのサポートが必要な場合は、<xref:System.Windows.Controls.TextBlock> 要素を使用する必要があります。 <xref:System.Windows.Controls.Label> は、最小限のテキストのサポートが必要な場合に使用できます。 詳細については、「[TextBlock の概要](../controls/textblock-overview.md)」を参照してください。  
+ ドキュメントへのテキストの追加だけでなく、テキストはもちろん、フォームなどのアプリケーション UI で使用できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には画面にテキストを描画するための複数のコントロールが含まれています。 各コントロールは異なるシナリオを対象にしており、それぞれに一連の機能と制限があります。 一般に、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]の簡単な文など、制限されたテキストのサポートが必要な場合は、<xref:System.Windows.Controls.TextBlock> 要素を使用する必要があります。 <xref:System.Windows.Controls.Label> は、最小限のテキストのサポートが必要な場合に使用できます。 詳細については、「[TextBlock の概要](../controls/textblock-overview.md)」を参照してください。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>ドキュメントのパッケージ化  
@@ -135,7 +135,7 @@ ms.locfileid: "76737970"
   
 - XPS 互換プリンターにドキュメントを直接ルーティングする。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
@@ -144,7 +144,7 @@ ms.locfileid: "76737970"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [テキスト](optimizing-performance-text.md)
+- [[テキスト]](optimizing-performance-text.md)
 - [フロー ドキュメントの概要](flow-document-overview.md)
 - [印刷の概要](printing-overview.md)
 - [ドキュメントのシリアル化および保存](document-serialization-and-storage.md)

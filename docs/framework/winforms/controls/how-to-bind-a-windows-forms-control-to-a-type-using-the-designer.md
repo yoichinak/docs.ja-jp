@@ -52,8 +52,8 @@ ms.locfileid: "76742019"
 
 4. **DATASOURCE UI 型エディター**で、前に追加した <xref:System.Windows.Forms.BindingSource> のノードを展開し、<xref:System.Windows.Forms.TextBox>の <xref:System.Windows.Forms.TextBox.Text%2A> プロパティにバインドするバインドされた型のプロパティを選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [BindingSource コンポーネント](bindingsource-component.md)
-- [方法 : Windows フォーム コントロールを型にバインドする](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [方法: Windows フォーム コントロールを型にバインドする](how-to-bind-a-windows-forms-control-to-a-type.md)
 - [Visual Studio でのデータへのコントロールのバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

@@ -61,20 +61,20 @@ UI の仮想化は、リスト コントロールにとって重要な処理で�
 
 次の表は、データを表示するための一般的なコントロールと、各コントロールのパフォーマンス機能に対するサポートを示しています。 これらの機能を有効にする方法については、前のセクションを参照してください。
 
-|Control|仮想化|コンテナーのリサイクル|遅延スクロール|
+|コントロール|仮想化|コンテナーのリサイクル|遅延スクロール|
 |-------------|--------------------|-------------------------|------------------------|
 |<xref:System.Windows.Controls.ComboBox>|有効にできます|有効にできます|有効にできます|
 |<xref:System.Windows.Controls.ContextMenu>|有効にできます|有効にできます|有効にできます|
-|<xref:System.Windows.Controls.DocumentViewer>|使用できません|使用できません|有効にできます|
-|<xref:System.Windows.Controls.ListBox>|[既定値]|有効にできます|有効にできます|
-|<xref:System.Windows.Controls.ListView>|[既定値]|有効にできます|有効にできます|
+|<xref:System.Windows.Controls.DocumentViewer>|使用不可|使用不可|有効にできます|
+|<xref:System.Windows.Controls.ListBox>|Default|有効にできます|有効にできます|
+|<xref:System.Windows.Controls.ListView>|Default|有効にできます|有効にできます|
 |<xref:System.Windows.Controls.TreeView>|有効にできます|有効にできます|有効にできます|
-|<xref:System.Windows.Controls.ToolBar>|使用できません|使用できません|有効にできます|
+|<xref:System.Windows.Controls.ToolBar>|使用不可|使用不可|有効にできます|
 
 > [!NOTE]
 > <xref:System.Windows.Controls.TreeView>で仮想化とコンテナーのリサイクルを有効にする方法の例については、「 [TreeView のパフォーマンスの向上](../controls/how-to-improve-the-performance-of-a-treeview.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [レイアウト](layout.md)
 - [レイアウトとデザイン](optimizing-performance-layout-and-design.md)

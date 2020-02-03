@@ -35,7 +35,7 @@ Windows フォーム <xref:System.Windows.Forms.ScrollBar> コントロールを
   
  ユーザーがいずれかの方向キーを押すか、またはスクロールバーのボタンのいずれかをクリックすると、<xref:System.Windows.Forms.ScrollBar.SmallChange%2A> プロパティに設定されている値に従って <xref:System.Windows.Forms.ScrollBar.Value%2A> プロパティが変更されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>

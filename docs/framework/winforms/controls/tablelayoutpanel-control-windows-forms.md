@@ -46,7 +46,7 @@ ms.locfileid: "76735509"
   
 4. [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.TableLayoutPanel>  
  <xref:System.Windows.Forms.TableLayoutPanel> コントロールのリファレンス ドキュメントを提供します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "76735509"
  <xref:System.Windows.Forms.FlowLayoutPanel>  
  <xref:System.Windows.Forms.FlowLayoutPanel> コントロールのリファレンス ドキュメントを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [ローカリゼーション](../../../standard/globalization-localization/localization.md)  
  ローカリゼーションに関連するトピックの概要を示します。  
   

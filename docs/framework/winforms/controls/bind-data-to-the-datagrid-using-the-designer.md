@@ -30,7 +30,7 @@ ms.locfileid: "76744119"
 
 3. プロジェクトにまだデータ ソースがない場合は、 **[プロジェクト データ ソースの追加]** をクリックし、ウィザードに示される手順に従います。
 
-     詳細については、「[データ ソース構成ウィザード](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))」を参照してください。 **[データ ソースの選択]** ドロップダウン ウィンドウに新しいデータ ソースが表示されます。 新しいデータ ソースに含まれるのが単一データベース テーブルなど、1 つのメンバーのみの場合、コントロールはそのメンバーに自動的にバインドされます。 それ以外の場合は、次の手順に進みます。
+     詳細については、「[データ ソース構成ウィザード](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))」を参照してください。 **[データ ソースの選択]** ドロップダウン ウィンドウに新しいデータ ソースが表示されます。 新しいデータ ソースに含まれるのが単一データベース テーブルなど、1 つのメンバーのみの場合、コントロールはそのメンバーに自動的にバインドされます。 使用する場合は、次の手順に進みます。
 
 4. 展開されていない場合は **[他のデータ ソース]** ノードと **[プロジェクト データ ソース]** ノードを展開し、コントロールをバインドするデータ ソースを選択します。
 
@@ -41,7 +41,7 @@ ms.locfileid: "76744119"
     > [!NOTE]
     > プロジェクトにデータ ソースが既にある場合は、 **[データソース]** ウィンドウを使用してデータ フォームを作成することもできます。 詳細については、「[[データ ソース] ウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
@@ -55,6 +55,6 @@ ms.locfileid: "76744119"
 - [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を非表示にする](hide-columns-in-the-datagrid-using-the-designer.md)
 - [方法: デザイナーを使用して Windows フォームの DataGridView コントロールで列を読み取り専用にする](make-columns-read-only-in-the-datagrid-using-the-designer.md)
 - [方法: Windows フォームアプリケーションプロジェクトを作成する](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法 : Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
 - [データソースウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [方法: 関連するデータを Windows フォーム アプリケーションに表示する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

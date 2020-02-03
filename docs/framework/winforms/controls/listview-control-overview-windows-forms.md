@@ -27,7 +27,7 @@ Windows フォーム <xref:System.Windows.Forms.ListView> コントロールに�
   
  次の表に、<xref:System.Windows.Forms.ListView> メンバーの一部と、で有効なビューを示します。  
   
-|ListView メンバー|ビュー|  
+|ListView メンバー|表示|  
 |---------------------|----------|  
 |<xref:System.Windows.Forms.ListView.Alignment%2A> プロパティ|<xref:System.Windows.Forms.View.SmallIcon> または <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.AutoArrange%2A> プロパティ|<xref:System.Windows.Forms.View.SmallIcon> または <xref:System.Windows.Forms.View.LargeIcon>|  
@@ -38,7 +38,7 @@ Windows フォーム <xref:System.Windows.Forms.ListView> コントロールに�
 |<xref:System.Windows.Forms.ListView.FindNearestItem%2A> メソッド|<xref:System.Windows.Forms.View.SmallIcon> または <xref:System.Windows.Forms.View.LargeIcon>|  
 |<xref:System.Windows.Forms.ListView.GetItemAt%2A> メソッド|<xref:System.Windows.Forms.View.Details> または <xref:System.Windows.Forms.View.Tile>|  
 |<xref:System.Windows.Forms.ListView.Groups%2A> プロパティ|<xref:System.Windows.Forms.View.List> を除くすべてのビュー|  
-|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> プロパティ|<xref:System.Windows.Forms.View.Details>.|  
+|<xref:System.Windows.Forms.ListView.HeaderStyle%2A> プロパティ|[https://login.microsoftonline.com/consumers/](<xref:System.Windows.Forms.View.Details>)|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> プロパティ|<xref:System.Windows.Forms.View.LargeIcon>、<xref:System.Windows.Forms.View.SmallIcon>、または <xref:System.Windows.Forms.View.Tile>|  
   
  <xref:System.Windows.Forms.ListView> コントロールのキープロパティは <xref:System.Windows.Forms.ListView.Items%2A>で、コントロールによって表示される項目が含まれています。 <xref:System.Windows.Forms.ListView.SelectedItems%2A> プロパティには、コントロールで現在選択されている項目のコレクションが含まれます。 ユーザーは複数の項目を選択できます。たとえば、<xref:System.Windows.Forms.ListView.MultiSelect%2A> プロパティが `true`に設定されている場合は、複数の項目を一度にドラッグアンドドロップして別のコントロールに移動できます。 <xref:System.Windows.Forms.ListView.CheckBoxes%2A> プロパティが `true`に設定されている場合、<xref:System.Windows.Forms.ListView> コントロールは、項目の横にチェックボックスを表示できます。  
@@ -47,7 +47,7 @@ Windows フォーム <xref:System.Windows.Forms.ListView> コントロールに�
   
  <xref:System.Windows.Forms.ListView> コントロールでは、グループ化、タイルビュー、挿入マークなど、Windows XP プラットフォームで使用できる視覚スタイルやその他の機能もサポートされています。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ListView>
 - [ListView コントロール](listview-control-windows-forms.md)

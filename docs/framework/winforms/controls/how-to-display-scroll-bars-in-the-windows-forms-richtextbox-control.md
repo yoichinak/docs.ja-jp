@@ -18,13 +18,13 @@ ms.locfileid: "76745557"
   
 ### <a name="to-display-scroll-bars-in-a-richtextbox-control"></a>RichTextBox コントロールにスクロールバーを表示するには  
   
-1. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> プロパティを `true`に設定します。 <xref:System.Windows.Forms.RichTextBox.Multiline%2A> プロパティが `false`に設定されている場合、水平を含むスクロールバーの種類は表示されません。  
+1. <xref:System.Windows.Forms.RichTextBox.Multiline%2A> プロパティを `true` に設定します。 <xref:System.Windows.Forms.RichTextBox.Multiline%2A> プロパティが `false`に設定されている場合、水平を含むスクロールバーの種類は表示されません。  
   
 2. <xref:System.Windows.Forms.RichTextBox.ScrollBars%2A> プロパティを <xref:System.Windows.Forms.RichTextBoxScrollBars> 列挙の適切な値に設定します。  
   
-    |Value|説明|  
+    |値|[説明]|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (既定)|テキストがコントロールの幅または長さを超えた場合にのみ、水平または垂直のスクロールバー、またはその両方を表示します。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (規定値)|テキストがコントロールの幅または長さを超えた場合にのみ、水平または垂直のスクロールバー、またはその両方を表示します。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|どの種類のスクロールバーも表示されません。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|テキストがコントロールの幅を超えた場合にのみ、水平スクロールバーを表示します。 (これを行うには、<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティを `false`に設定する必要があります)。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|テキストがコントロールの高さを超えた場合にのみ、垂直スクロールバーを表示します。|  
@@ -34,12 +34,12 @@ ms.locfileid: "76745557"
   
 3. <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A> プロパティに適切な値を設定します。  
   
-    |Value|説明|  
+    |値|[説明]|  
     |-----------|-----------------|  
     |`false`|コントロール内のテキストは、コントロールの幅に合わせて自動的に調整されないので、改行に達するまで右にスクロールします。 上にある水平スクロールバーまたは両方を選択した場合は、この値を使用します。|  
-    |`true` (既定)|コントロール内のテキストは、コントロールの幅に合わせて自動的に調整されます。 水平スクロールバーは表示されません。 1つ以上の段落を表示する場合は、この値を使用します。|  
+    |`true` (規定値)|コントロール内のテキストは、コントロールの幅に合わせて自動的に調整されます。 水平スクロールバーは表示されません。 1つ以上の段落を表示する場合は、この値を使用します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>

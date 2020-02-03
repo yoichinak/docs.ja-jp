@@ -46,7 +46,7 @@ Windows フォーム アプリケーションでイベントが発生する順�
   
 - <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- <xref:System.Windows.Forms.Application> クラスの <xref:System.Windows.Forms.Application.ApplicationExit> イベントは、メイン フォームのシャットダウン イベントの後に発生します。  
+ <xref:System.Windows.Forms.Application.ApplicationExit> クラスの <xref:System.Windows.Forms.Application> イベントは、メイン フォームのシャットダウン イベントの後に発生します。  
   
 > [!NOTE]
 > Visual Basic 2005 には、追加のアプリケーション イベント (<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> や <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType> など) があります。  
@@ -80,6 +80,6 @@ Windows フォーム アプリケーションでイベントが発生する順�
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
+- [Windows フォーム内のイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)

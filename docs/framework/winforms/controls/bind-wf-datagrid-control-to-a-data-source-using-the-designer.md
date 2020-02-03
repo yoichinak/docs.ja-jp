@@ -66,10 +66,10 @@ ms.locfileid: "76744091"
 
 3. データセットを埋めるコードを記述します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
-- [方法 : Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
 - [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
 - [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)

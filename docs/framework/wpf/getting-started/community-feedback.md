@@ -1,5 +1,5 @@
 ---
-title: コミュニティ リソース
+title: コミュニティのリソース
 ms.date: 03/01/2018
 helpviewer_keywords:
 - community resources [WPF]
@@ -22,7 +22,7 @@ Microsoft では、Windows Presentation Foundation (WPF) について学習し�
 > [!NOTE]
 > 各ページの下部にある [フィードバック] セクションを使用して、製品のフィードバックを送信しないでください。 これらのリンクはドキュメントに関するフィードバック専用です。
 
-## <a name="forums"></a>Forums
+## <a name="forums"></a>フォーラム
 
 [WPF フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf)は、問題を説明して解決するための主要なコミュニティリソースです。 フォーラムでは、次のような総合的なサポート機能が提供され、ディスカッションと問題解決が促進されます。
 
@@ -104,12 +104,12 @@ Visual Studio 開発者コミュニティへの投稿では、既存の投稿を
   - MSBuild
   - 式グラフィックデザイナー
   - 式対話型デザイナー
-  - Visual Studio
+  - Visual Studio
 - ソリューション構成:
   - ソリューション
   - 1つのプロジェクト
   - 複数の依存プロジェクトを含むソリューション
-- アプリケーションのリソースが言語に対して固有かニュートラルか。 たとえば、`Application`、`Page`、`Resource` の各種類で、`UICulture` プロジェクト プロパティとローカライズ可能なメタデータのどちらを指定しましたか。
+- アプリケーションのリソースが言語に対して固有かニュートラルか。 たとえば、`UICulture`、`Application`、`Page` の各種類で、`Resource` プロジェクト プロパティとローカライズ可能なメタデータのどちらを指定しましたか。
 - AssemblyInfo.cs ファイルまたは AssemblyInfo.vb ファイルでニュートラル言語設定を使用したかどうか。
 
 #### <a name="provide-scenario-and-impact-information"></a>シナリオと影響に関する情報を提供する
@@ -118,6 +118,6 @@ Visual Studio 開発者コミュニティへの投稿では、既存の投稿を
 
 通常、クラッシュやデータ損失が関連するシナリオは影響が大きいため、優先されることが多くなります。 ただし、一部のバグはまれなシナリオのみで発生しますが、そうしたシナリオも状況によっては主流として使用される場合があります。 シナリオと影響に関するコンテキストを提供することで、WPF チームは適切な決定を行うことができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Studio 2017 で問題を報告する方法](/visualstudio/ide/how-to-report-a-problem-with-visual-studio)

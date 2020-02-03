@@ -223,7 +223,7 @@ public class MyForm : Form {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
 - [Windows フォーム コントロール開発の基本概念](windows-forms-control-development-basics.md)

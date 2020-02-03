@@ -20,7 +20,7 @@ Windows フォーム <xref:System.Windows.Forms.Timer> は、一定の間隔で�
 ## <a name="key-properties-methods-and-events"></a>主要なプロパティ、メソッド、およびイベント  
  間隔の長さは、<xref:System.Windows.Forms.Timer.Interval%2A> プロパティによって定義され、その値はミリ秒単位です。 コンポーネントが有効になると、<xref:System.Windows.Forms.Timer.Tick> イベントがすべての間隔で発生します。 ここで、実行するコードを追加します。 詳細については、「[方法: Windows フォーム Timer コンポーネントを使用して一定間隔でプロシージャを実行する](run-procedures-at-set-intervals-with-wf-timer-component.md)」を参照してください。 <xref:System.Windows.Forms.Timer> コンポーネントの主要なメソッドは <xref:System.Windows.Forms.Timer.Start%2A> と <xref:System.Windows.Forms.Timer.Stop%2A>であり、タイマーをオンまたはオフにします。 タイマーがオフに切り替わると、リセットされます。<xref:System.Windows.Forms.Timer> コンポーネントを一時停止する方法はありません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Timer>
 - [Timer コンポーネント](timer-component-windows-forms.md)

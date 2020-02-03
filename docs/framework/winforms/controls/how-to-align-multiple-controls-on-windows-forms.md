@@ -29,13 +29,13 @@ Windows ベースのアプリケーションのユーザーインターフェイ
 
 3. **[書式]** メニューの **[配置]** をクリックし、使用可能な7つの選択肢のいずれかを選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
-- [方法 : Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
 - [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)
-- [チュートリアル : スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [方法 : 既存のコントロールを別の親に再配置する](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [方法: 既存のコントロールを別の親に再配置する](how-to-reassign-existing-controls-to-a-different-parent.md)

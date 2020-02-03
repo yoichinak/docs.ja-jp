@@ -39,21 +39,21 @@ ms.locfileid: "76746219"
  [方法: Windows フォーム DataGridView コントロールの現在のセルを取得および設定する](get-and-set-the-current-cell-wf-datagridview-control.md)  
  コントロールに現在フォーカスがあるセルにアクセスする方法について説明します。  
   
- [方法 : Windows フォーム DataGridView コントロールのセルにイメージを表示する](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+ [方法: Windows フォーム DataGridView コントロールのセルにイメージを表示する](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
  すべてのセルにアイコンを表示する画像列を作成する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  コントロールのリファレンスドキュメントを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームの DataGridView コントロールの基本的な書式設定およびスタイル設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
  コントロールの基本の外観およびセル データの書式設定を変更する方法を説明するトピックを示します。  
   
  [Windows フォーム DataGridView コントロールのセル、行、および列を使用したプログラミング](programming-with-cells-rows-and-columns-in-the-datagrid.md)  
  セル、行、および列オブジェクトを使用したプログラミング方法を説明するトピックを示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
 - [Windows フォーム DataGridView コントロールの列型](column-types-in-the-windows-forms-datagridview-control.md)

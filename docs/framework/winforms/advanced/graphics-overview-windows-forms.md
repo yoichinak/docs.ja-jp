@@ -28,7 +28,7 @@ GDI + は、プログラマがデバイスに依存しないアプリケーシ�
  [グラフィックス インターフェイスの構造体](structure-of-the-graphics-interface.md)  
  GDI + のマネージクラスインターフェイスについて説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Drawing>  
  GDI + の基本的なグラフィックス機能へのアクセスを提供します。  
   

@@ -1,5 +1,5 @@
 ---
-title: '[ネットワーク]'
+title: ネットワーク
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
@@ -15,7 +15,7 @@ ms.locfileid: "76745008"
 # <a name="networking-in-windows-forms-applications"></a>Windows フォーム アプリケーションにおけるネットワーク
 .NET Framework には、web ページを表示したり、Web コンテンツをダウンロードしたり、ファイル転送プロトコル (FTP) サイトと対話したり、Web サービスを使用したりするためのクラスが用意されており、アプリケーションにネットワーク機能を簡単に組み込むことができます。 次のリソースは、.NET Framework のネットワークテクノロジと、それらを Windows フォームに統合する方法を理解するのに役立ちます。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Net>  
  ネットワーク接続を処理する .NET Framework 内のクラスのルート名前空間。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "76745008"
  <xref:System.Windows.Forms.WebBrowser>  
  Windows に含まれる `WebBrowser` コントロールのマネージラッパークラス。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [.NET Framework のネットワーク プログラミング](../../network-programming/index.md)  
  .NET Framework でのネットワークの概要。  
   

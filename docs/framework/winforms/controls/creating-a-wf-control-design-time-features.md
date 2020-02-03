@@ -36,11 +36,11 @@ ms.locfileid: "76744079"
 
 完全なコードリストについては、「[方法: デザイン時機能を利用する Windows フォームコントロールを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))する」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには、Visual Studio が必要です。
 
-## <a name="create-the-project"></a>プロジェクトの作成
+## <a name="create-the-project"></a>プロジェクトを作成する
 
 最初にアプリケーションのプロジェクトを作成します。 このプロジェクトは、カスタムコントロールをホストするアプリケーションをビルドするために使用します。
 
@@ -120,13 +120,13 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
 
 3. `MarqueeControl` クラスを継承するように `DemoMarqueeControl` の宣言を変更します。
 
-4. プロジェクトをビルドする。
+4. プロジェクトをビルドします。
 
 5. Windows フォームデザイナーで Form1 を開きます。
 
 6. **ツールボックス**の **[MarqueeControlTest Components]** タブを見つけて開きます。 **[ツールボックス]** から `DemoMarqueeControl` をフォームにドラッグします。
 
-7. プロジェクトをビルドする。
+7. プロジェクトをビルドします。
 
 ## <a name="set-up-the-project-for-design-time-debugging"></a>デザイン時デバッグ用にプロジェクトを設定する
 
@@ -142,7 +142,7 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
 
 5. MarqueeControlLibrary プロジェクトを右クリックし、 **[スタートアッププロジェクトに設定]** を選択して、このデバッグ構成を有効にします。
 
-## <a name="checkpoint"></a>チェックポイント
+## <a name="checkpoint"></a>Checkpoint
 
 これで、カスタムコントロールのデザイン時動作をデバッグする準備ができました。 デバッグ環境が正しく設定されていることを確認したら、カスタムコントロールとカスタムデザイナーの関連付けをテストします。
 
@@ -261,7 +261,7 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueetext.cs#170)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#170](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueetext.vb#170)]
 
-14. **F6**キーを押してソリューションをビルドします。
+14. **F6** キーを押して、ソリューションをビルドします。
 
 ## <a name="create-the-marqueeborder-child-control"></a>MarqueeBorder 子コントロールを作成する
 
@@ -430,7 +430,7 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
 
 ## <a name="add-designer-verbs-to-your-custom-designer"></a>デザイナー動詞をカスタムデザイナーに追加する
 
-デザイナー動詞は、イベントハンドラーにリンクされたメニューコマンドです。 デザイナー動詞は、デザイン時にコンポーネントのショートカットメニューに追加されます。 詳細については、「 <xref:System.ComponentModel.Design.DesignerVerb>」を参照してください。
+デザイナー動詞は、イベント ハンドラーにリンクされたメニュー コマンドです。 デザイナー動詞は、デザイン時にコンポーネントのショートカットメニューに追加されます。 詳細については、<xref:System.ComponentModel.Design.DesignerVerb> を参照してください。
 
 デザイナーに2つのデザイナー動詞を追加します。**テストを実行**し、**テストを停止**します。 これらの動詞を使用すると、デザイン時に `MarqueeControl` の実行時の動作を表示できます。 これらの動詞は `MarqueeControlRootDesigner`に追加されます。
 
@@ -594,7 +594,7 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
 
 13. `MarqueeControlTest` プロジェクトをスタートアッププロジェクトとして設定し、実行します。 `DemoMarqueeControl`を表示するフォームが表示されます。 **[開始]** ボタンを選択して、アニメーションを開始します。 テキストが点滅し、ライトが境界内を移動していることを確認します。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 `MarqueeControlLibrary` は、カスタムコントロールおよび関連するデザイナーの単純な実装を示しています。 このサンプルは、いくつかの方法でより高度なものにすることができます。
 
@@ -608,7 +608,7 @@ Visual Studio で、新しい Windows フォームアプリケーションプロ
 
 - コントロールのシリアル化方法とコードの生成方法を制御します。 詳細については、「[動的なソースコードの生成とコンパイル](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.UserControl>
 - <xref:System.Windows.Forms.Design.ParentControlDesigner>

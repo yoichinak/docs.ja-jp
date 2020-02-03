@@ -86,7 +86,7 @@ ms.locfileid: "76742461"
   
 - 組み込みの列型によって提供されるもの以外のコントロールをホストするために、独自のセルクラスおよび列クラスを実装できます。 詳細については、「[方法: Windows フォーム DataGridView セルのコントロールをホストする](how-to-host-controls-in-windows-forms-datagridview-cells.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)

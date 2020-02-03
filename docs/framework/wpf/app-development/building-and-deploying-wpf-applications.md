@@ -27,12 +27,12 @@ ms.locfileid: "76742102"
 ## <a name="in-this-section"></a>このセクションの内容  
  [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)  
  [WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)  
- [方法のトピック](build-and-deploy-how-to-topics.md)  
+ [データ バインドに関する「方法」トピック](build-and-deploy-how-to-topics.md)  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  MSBuild  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [アプリケーション管理の概要](application-management-overview.md)  
   [WPF のウィンドウ](windows-in-wpf-applications.md)  
   [ナビゲーションの概要](navigation-overview.md)  

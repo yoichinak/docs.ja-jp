@@ -56,9 +56,9 @@ Form1.Width = 300;
 Form1->Width = 300;
 ```
 
--または-
+または
 
-<xref:System.Windows.Forms.Form.Size%2A> プロパティを設定して、<xref:System.Drawing.Size.Width%2A> または <xref:System.Drawing.Size.Height%2A> を変更します。
+<xref:System.Drawing.Size.Width%2A> プロパティを設定して、<xref:System.Drawing.Size.Height%2A> または <xref:System.Windows.Forms.Form.Size%2A> を変更します。
 
 ただし、次のコード例が示すように、この方法は、<xref:System.Windows.Forms.Control.Width%2A> プロパティまたは <xref:System.Windows.Forms.Control.Height%2A> プロパティをただ設定する方法よりも煩雑になります。
 
@@ -93,7 +93,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> <xref:System.Windows.Forms.Form.Size%2A> プロパティを新しい <xref:System.Drawing.Size> 構造に設定することにより高さと幅の両方のディメンションを同時に設定するというのでない限り、フォームのディメンションを変更するには、常に <xref:System.Drawing.Size.Height%2A> プロパティまたは <xref:System.Drawing.Size.Width%2A> プロパティを使用します。 <xref:System.Windows.Forms.Form.Size%2A> プロパティは、値型である <xref:System.Drawing.Size> 構造を返します。 値型のプロパティに新しい値を割り当てることはできません。 このため、次のコード例はコンパイルされません。
+> <xref:System.Drawing.Size.Height%2A> プロパティを新しい <xref:System.Drawing.Size.Width%2A> 構造に設定することにより高さと幅の両方のディメンションを同時に設定するというのでない限り、フォームのディメンションを変更するには、常に <xref:System.Windows.Forms.Form.Size%2A> プロパティまたは <xref:System.Drawing.Size> プロパティを使用します。 <xref:System.Windows.Forms.Form.Size%2A> プロパティは、値型である <xref:System.Drawing.Size> 構造を返します。 値型のプロパティに新しい値を割り当てることはできません。 このため、次のコード例はコンパイルされません。
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE
@@ -113,7 +113,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームについて](getting-started-with-windows-forms.md)
 - [Windows フォーム アプリケーションの拡張](./advanced/index.md)

@@ -39,7 +39,7 @@ HRESULT CreateIDispatchSTAForwarder(
  ppForwarder  
  `IDispatch` インターフェイスのアドレスへのポインター。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
  **プラットフォーム:** 「 [.NET Framework のシステム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **DLL**  
@@ -50,6 +50,6 @@ HRESULT CreateIDispatchSTAForwarder(
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)

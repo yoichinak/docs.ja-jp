@@ -20,7 +20,7 @@ ms.locfileid: "76732768"
  [方法: Windows フォームのダイアログ ボックスを表示する](how-to-display-dialog-boxes-for-windows-forms.md)  
  ダイアログ ボックスを表示する手順を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [ダイアログ ボックス コントロールおよびコンポーネント](./controls/dialog-box-controls-and-components-windows-forms.md)  
  定義済みダイアログ ボックス コントロールの一覧を示します。  
   

@@ -30,7 +30,7 @@ ms.locfileid: "76732296"
 
 4. 項目を削除するには、項目を選択し、 **[削除]** ボタンをクリックします。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ListView コントロールの概要](listview-control-overview-windows-forms.md)
 - [方法: Windows フォーム ListView コントロールに列を追加する](how-to-add-columns-to-the-windows-forms-listview-control.md)

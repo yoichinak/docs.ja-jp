@@ -67,7 +67,7 @@ Windows フォーム <xref:System.Windows.Forms.Panel> コントロールには�
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

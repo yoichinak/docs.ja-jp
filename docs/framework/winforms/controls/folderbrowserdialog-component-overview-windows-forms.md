@@ -26,7 +26,7 @@ Windows フォーム <xref:System.Windows.Forms.FolderBrowserDialog> コンポ�
 
 フォームに追加されると、Visual Studio の Windows フォームデザイナーの下部にあるトレイに <xref:System.Windows.Forms.FolderBrowserDialog> コンポーネントが表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.FolderBrowserDialog>
 - [方法: Windows フォーム FolderBrowserDialog コンポーネントを使用してフォルダーを選択する](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)

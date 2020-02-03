@@ -58,6 +58,6 @@ Windows フォーム <xref:System.Windows.Forms.TreeView> コントロールを�
     > [!NOTE]
     > 別の方法として、<xref:System.Windows.Forms.Control.MouseDown> または <xref:System.Windows.Forms.Control.MouseUp> イベントの <xref:System.Windows.Forms.MouseEventArgs> を使用して、クリックが発生した <xref:System.Drawing.Point.Y%2A> の <xref:System.Drawing.Point.X%2A> と <xref:System.Drawing.Point> の座標値を取得することもできます。 次に、<xref:System.Windows.Forms.TreeView> コントロールの <xref:System.Windows.Forms.TreeView.GetNodeAt%2A> メソッドを使用して、どのノードがクリックされたかを確認します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [TreeView コントロール](treeview-control-windows-forms.md)

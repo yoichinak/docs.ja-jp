@@ -28,7 +28,7 @@ Windows フォーム <xref:System.Windows.Forms.ListView> コントロールで�
 
 3. 新しい列を追加するには、 **[追加]** ボタンを使用します。 次に、列ヘッダーを選択し、そのテキスト (列のキャプション)、テキストの配置、および幅を設定できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ListView コントロールの概要](listview-control-overview-windows-forms.md)
 - [方法: Windows フォーム ListView コントロールで項目を追加および削除する](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

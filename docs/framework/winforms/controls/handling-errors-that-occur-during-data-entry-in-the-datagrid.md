@@ -27,9 +27,9 @@ ms.locfileid: "76738739"
 
 このトピックのコードを単一のリストとしてコピーする方法については、「[方法: Windows フォーム DataGridView コントロールでのデータ入力中に発生したエラーを処理](handle-errors-that-occur-during-data-entry-in-the-datagrid.md)する」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを完了するための要件は次のとおりです。
+このチュートリアルを完了するには、以下が必要です。
 
 - Northwind SQL Server サンプルデータベースを持つサーバーへのアクセス。
 
@@ -78,7 +78,7 @@ ms.locfileid: "76738739"
 
   Customers テーブルのデータが入力された <xref:System.Windows.Forms.DataGridView> コントロールが表示されます。 `CustomerID` に重複する値を入力して編集をコミットすると、セルの値は自動的に元に戻り、データエントリエラーを表示する <xref:System.Windows.Forms.MessageBox> が表示されます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このアプリケーションでは、<xref:System.Windows.Forms.DataGridView> コントロールの機能についての基本的な理解を得ることができます。 <xref:System.Windows.Forms.DataGridView> コントロールの外観と動作は、次のいくつかの方法でカスタマイズできます。
 
@@ -92,7 +92,7 @@ ms.locfileid: "76738739"
 
 - セルの外観をカスタマイズします。 詳細については、「[方法: Windows フォーム Datagridview コントロールのセルの外観をカスタマイズ](customize-the-appearance-of-cells-in-the-datagrid.md)する」および「[方法: Windows フォーム Datagridview コントロールの既定のセルスタイルを設定する](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

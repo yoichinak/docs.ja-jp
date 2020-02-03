@@ -29,16 +29,16 @@ ms.locfileid: "76742637"
   
 5. 信頼できるサブシステムはこの応答を処理し、自身の応答をクライアントに発行します。  
   
-|特徴|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
-|セキュリティ モード|[メッセージ]|  
+|セキュリティ モード|Message|  
 |相互運用性|Windows Communication Foundation (WCF) のみ。|  
 |認証 (サービス)|セキュリティ トークン サービスはクライアントの認証と承認を行います。|  
 |認証 (クライアント)|信頼できるサブシステムがクライアントを認証し、リソースが信頼できるサブシステム サービスを認証します。|  
-|整合性|○|  
-|機密性|○|  
-|Transport|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
-|バインディング|<xref:System.ServiceModel.WSHttpBinding> と <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|整合性|はい|  
+|機密情報|はい|  
+|トランスポート|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding> と <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>リソース (バックエンド サービス)  
   
@@ -48,7 +48,7 @@ ms.locfileid: "76742637"
  [!code-csharp[TrustedSubSystemsResource#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsresource/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsResource#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsresource/vb/source.vb#1)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  次の構成では、構成を使用して同一のエンドポイントをセットアップします。  
   
 ```xml  
@@ -100,7 +100,7 @@ ms.locfileid: "76742637"
  [!code-csharp[TrustedSubSystems#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystems/cs/source.cs#2)]
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  次の構成では、構成を使用して同一のエンドポイントをセットアップします。 2 つのバインディングがあることに注意してください。1 つは、信頼できるサブシステムでホストされるサービスをセキュリティで保護するバインディングで、もう 1 つは、信頼できるサブシステムとバックエンド サービスの間の通信のためのバインディングです。  
   
 ```xml  
@@ -163,7 +163,7 @@ ms.locfileid: "76742637"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>コード  
  次のコードでは、HTTP プロトコル上のメッセージ セキュリティで認証にユーザー名とパスワードを使用することで、信頼できるサブシステムと通信を行うクライアントを作成する方法を示します。  
@@ -171,7 +171,7 @@ ms.locfileid: "76742637"
  [!code-csharp[TrustedSubSystemsClient#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/trustedsubsystemsclient/cs/source.cs#1)]
  [!code-vb[TrustedSubSystemsClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystemsclient/vb/source.vb#1)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  次のコードでは、HTTP プロトコル上のメッセージ セキュリティ、および認証用のユーザー名とパスワードを使用するようにクライアントを構成します。 ユーザー名とパスワードの指定はコードを使用する場合に限られます (構成可能ではありません)。  
   
 ```xml  
@@ -210,7 +210,7 @@ ms.locfileid: "76742637"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

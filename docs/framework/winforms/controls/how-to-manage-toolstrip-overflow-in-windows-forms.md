@@ -25,13 +25,13 @@ ms.locfileid: "76736147"
 
 ## <a name="to-enable-overflow-on-a-toolstrip-control"></a>ToolStrip コントロールでオーバーフローを有効にするには
 
-- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> プロパティが <xref:System.Windows.Forms.ToolStrip>の `false` に設定されていないことを確認します。 既定値は、 `True`です。
+- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> プロパティが <xref:System.Windows.Forms.ToolStrip>の `false` に設定されていないことを確認します。 既定では、 `True`です。
 
      <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> が `True` (既定値) の場合、<xref:System.Windows.Forms.ToolStripItem> のコンテンツが水平方向の <xref:System.Windows.Forms.ToolStrip> の幅または垂直 <xref:System.Windows.Forms.ToolStrip>の高さを超えたときに、<xref:System.Windows.Forms.ToolStripItem> がドロップダウンオーバーフローメニューに送信されます。
 
 ## <a name="to-specify-overflow-behavior-of-a-specific-toolstripitem"></a>特定の ToolStripItem のオーバーフロー動作を指定するには
 
-- <xref:System.Windows.Forms.ToolStripItem> の <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> プロパティを目的の値に設定します。 `Always`、`Never`、`AsNeeded`の可能性があります。 既定値は、 `AsNeeded`です。
+- <xref:System.Windows.Forms.ToolStripItem> の <xref:System.Windows.Forms.ToolStripItem.Overflow%2A> プロパティを目的の値に設定します。 `Always`、`Never`、`AsNeeded`の可能性があります。 既定では、 `AsNeeded`です。
 
     ```vb
     toolStripTextBox1.Overflow = _
@@ -43,7 +43,7 @@ ms.locfileid: "76736147"
     System.Windows.Forms.ToolStripItemOverflow.Never;
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripOverflowButton>

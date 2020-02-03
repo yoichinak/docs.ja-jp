@@ -41,7 +41,7 @@ ms.locfileid: "76736685"
 
 3. [<xref:System.Windows.Forms.ListViewItem.Group%2A>] プロパティを選択し、ドロップダウンリストからグループを選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>

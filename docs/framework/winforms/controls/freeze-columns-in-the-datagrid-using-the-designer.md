@@ -32,7 +32,7 @@ ms.locfileid: "76745672"
     > [!NOTE]
     > **[列の追加]** ダイアログボックスで**固定**されたボックスを選択して、列を追加するときに固定することもできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
@@ -40,4 +40,4 @@ ms.locfileid: "76745672"
 - [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列の並べ替えを有効にする](enable-column-reordering-in-the-datagrid-using-the-designer.md)
 - [方法: グローバリゼーションのために Windows フォームに右から左に記述するテキストを表示する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
 - [方法: Windows フォームアプリケーションプロジェクトを作成する](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法 : Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)

@@ -40,7 +40,7 @@ ms.locfileid: "76746296"
     comboBox1->Items->Add("Tokyo");  
     ```  
   
-     - または  
+     - \- または -  
   
 2. `Insert` メソッドを使用して、リスト内の目的の位置に文字列またはオブジェクトを挿入します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "76746296"
     checkedListBox1->Items->Insert(0, "Copenhagen");  
     ```  
   
-     - または  
+     - \- または -  
   
 3. 配列全体を `Items` コレクションに割り当てます。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "76746296"
     listBox1->Items->Clear();  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

@@ -24,7 +24,7 @@ ms.locfileid: "76741965"
 
 このリスナーは、`XmlWriteTraceListener` から派生し、[サービストレースビューアーツール (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)でログを表示できるようにします。 ログの表示を試みる際に、サービス トレース ビューア ツールで 2 つのログ ファイルを両方同時に開くと、これらのファイルを簡単に再結合することができます。 サービス トレース ビューア ツールは、トレースが正しい順序で表示されるように自動的にトレースの並べ替えを管理します。
 
-## <a name="configuration"></a>の構成
+## <a name="configuration"></a>構成
 
 サービスは、リスナとソースの要素に対して次のコードを追加することによって、循環バッファ トレース リスナを使用するように構成できます。 ファイルの最大サイズは、循環トレース リスナの構成の `maxFileSizeKB` 属性を設定することによって指定します。 このコードを次に示します。
 
@@ -62,6 +62,6 @@ ms.locfileid: "76741965"
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\CircularTracing`
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [AppFabric の監視のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383407(v=azure.10))

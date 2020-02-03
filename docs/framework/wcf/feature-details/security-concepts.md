@@ -22,7 +22,7 @@ ms.locfileid: "76730833"
  [セキュリティ用語](../../../../docs/framework/wcf/feature-details/wcf-security-terminology.md)  
  WCF のセキュリティについて説明するときに使用される用語集です。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.ServiceModel>  
   
  <xref:System.ServiceModel.Channels>  
@@ -33,11 +33,11 @@ ms.locfileid: "76730833"
   
  <xref:System.Security>  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [セキュリティの拡張](../../../../docs/framework/wcf/extending/extending-security.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Security](../../../../docs/framework/wcf/feature-details/security.md)
+- [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

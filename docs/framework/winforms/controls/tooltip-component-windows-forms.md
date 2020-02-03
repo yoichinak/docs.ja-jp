@@ -25,11 +25,11 @@ Windows フォーム <xref:System.Windows.Forms.ToolTip> コンポーネント�
  [方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)  
  ツールヒントが表示されるまでの時間の長さ、および表示される時間を制御する値の設定方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ToolTip> クラス  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   

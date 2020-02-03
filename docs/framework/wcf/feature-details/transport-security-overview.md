@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) のトランスポートセキュリテ�
 #### <a name="certificate"></a>Certificate  
  IIS には、クライアントに証明書を使用してログオンすることを要求するオプションがあります。 この機能により、IIS はクライアント証明書を Windows アカウントにマップすることもできます。 IIS 6.0 の詳細については、「 [iis 6.0 でクライアント証明書を有効にする](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「 [iis 7 でサーバー証明書を構成する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))」を参照してください。  
   
-#### <a name="digest"></a>Digest  
+#### <a name="digest"></a>ダイジェスト  
  ダイジェスト認証は基本認証と似ていますが、資格情報をクリア テキストではなくハッシュとして送信できるという利点があります。 IIS 6.0 の詳細については、「 [iis 6.0 でのダイジェスト認証](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「[ダイジェスト認証を構成する (iis 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10))」を参照してください。  
   
 #### <a name="windows"></a>Windows  
@@ -82,7 +82,7 @@ Windows Communication Foundation (WCF) のトランスポートセキュリテ�
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>クライアント  
+#### <a name="client"></a>Client  
  クライアントでは、<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> クラスの <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> メソッドを使用して証明書を指定する必要があります。  
   
 > [!NOTE]
@@ -120,6 +120,6 @@ Windows Communication Foundation (WCF) のトランスポートセキュリテ�
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding と NetMsmqBinding  
  メッセージキュー (旧称 MSMQ) を使用したトランスポートセキュリティの詳細については、「[トランスポートセキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

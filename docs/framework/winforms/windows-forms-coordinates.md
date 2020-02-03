@@ -1,5 +1,5 @@
 ---
-title: 値
+title: 座標
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms coordinates
@@ -28,7 +28,7 @@ Windows フォームの座標系はデバイス座標に基づいており、Win
 ## <a name="mapping-from-one-type-of-coordinate-to-another"></a>ある種類の座標から別の型へのマッピング  
  場合によっては、画面座標からクライアント座標にマップする必要があります。 これは、<xref:System.Windows.Forms.Control> クラスで使用可能な <xref:System.Windows.Forms.Control.PointToClient%2A> および <xref:System.Windows.Forms.Control.PointToScreen%2A> メソッドを使用して簡単に実行できます。 たとえば、<xref:System.Windows.Forms.Control> の <xref:System.Windows.Forms.Control.MousePosition%2A> プロパティは画面座標で報告されますが、これらをクライアント座標に変換することができます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

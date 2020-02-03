@@ -47,17 +47,17 @@ ms.locfileid: "76742315"
  ADO.NET data オブジェクト  
  ADO.NET には、へのバインドに適したさまざまなデータ構造体が用意されています。 それぞれの方法は、洗練され、複雑さによって異なります。  
   
-- <xref:System.Data.DataColumn>. <xref:System.Data.DataColumn> は、テーブルを構成する複数の列で構成される <xref:System.Data.DataTable>の重要な構成要素です。 各 <xref:System.Data.DataColumn> には、列に保持されるデータの種類を決定する <xref:System.Data.DataColumn.DataType%2A> のプロパティがあります (たとえば、自動車を説明するテーブルの自動車の作成)。 コントロール (<xref:System.Windows.Forms.TextBox> コントロールの <xref:System.Windows.Forms.Control.Text%2A> プロパティなど) をデータテーブル内の列に単純にバインドすることができます。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Data.DataColumn>) <xref:System.Data.DataColumn> は、テーブルを構成する複数の列で構成される <xref:System.Data.DataTable>の重要な構成要素です。 各 <xref:System.Data.DataColumn> には、列に保持されるデータの種類を決定する <xref:System.Data.DataColumn.DataType%2A> のプロパティがあります (たとえば、自動車を説明するテーブルの自動車の作成)。 コントロール (<xref:System.Windows.Forms.TextBox> コントロールの <xref:System.Windows.Forms.Control.Text%2A> プロパティなど) をデータテーブル内の列に単純にバインドすることができます。  
   
-- <xref:System.Data.DataTable>. <xref:System.Data.DataTable> は、ADO.NET に行と列を含むテーブルを表現したものです。 データテーブルには、<xref:System.Data.DataColumn>という2つのコレクションが含まれています。これは、指定されたテーブル内のデータの列 (最終的には、そのテーブルに入力できるデータの種類を決定します) を表し、<xref:System.Data.DataRow>は特定のテーブル内のデータ行を表します。 データテーブルに格納されている情報 (<xref:System.Windows.Forms.DataGridView> コントロールをデータテーブルにバインドするなど) に、コントロールを複雑にバインドできます。 ただし、<xref:System.Data.DataTable>にバインドすると、実際にはテーブルの既定のビューにバインドされます。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Data.DataTable>) <xref:System.Data.DataTable> は、ADO.NET に行と列を含むテーブルを表現したものです。 データテーブルには、<xref:System.Data.DataColumn>という2つのコレクションが含まれています。これは、指定されたテーブル内のデータの列 (最終的には、そのテーブルに入力できるデータの種類を決定します) を表し、<xref:System.Data.DataRow>は特定のテーブル内のデータ行を表します。 データテーブルに格納されている情報 (<xref:System.Windows.Forms.DataGridView> コントロールをデータテーブルにバインドするなど) に、コントロールを複雑にバインドできます。 ただし、<xref:System.Data.DataTable>にバインドすると、実際にはテーブルの既定のビューにバインドされます。  
   
-- <xref:System.Data.DataView>. <xref:System.Data.DataView> は、フィルター処理または並べ替えが可能な単一のデータテーブルのカスタマイズされたビューです。 データビューは、複合バインドコントロールによって使用されるデータ "スナップショット" です。 データビュー内のデータに単純バインドまたは複雑なバインドを行うことができますが、クリーンな更新データソースではなく、データの固定の "画像" にバインドすることに注意してください。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Data.DataView>) <xref:System.Data.DataView> は、フィルター処理または並べ替えが可能な単一のデータテーブルのカスタマイズされたビューです。 データビューは、複合バインドコントロールによって使用されるデータ "スナップショット" です。 データビュー内のデータに単純バインドまたは複雑なバインドを行うことができますが、クリーンな更新データソースではなく、データの固定の "画像" にバインドすることに注意してください。  
   
-- <xref:System.Data.DataSet>. <xref:System.Data.DataSet> は、データベース内のデータのテーブル、リレーションシップ、および制約のコレクションです。 データセット内のデータに単純バインドまたは複雑なバインドを行うことができますが、<xref:System.Data.DataSet> の既定の <xref:System.Data.DataViewManager> にバインドしている点に注意してください (次の箇条書きを参照)。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Data.DataSet>) <xref:System.Data.DataSet> は、データベース内のデータのテーブル、リレーションシップ、および制約のコレクションです。 データセット内のデータに単純バインドまたは複雑なバインドを行うことができますが、<xref:System.Data.DataSet> の既定の <xref:System.Data.DataViewManager> にバインドしている点に注意してください (次の箇条書きを参照)。  
   
-- <xref:System.Data.DataViewManager>. <xref:System.Data.DataViewManager> は、<xref:System.Data.DataView>に似ていますが、関係が含まれている <xref:System.Data.DataSet>全体のカスタマイズされたビューです。 <xref:System.Data.DataViewManager.DataViewSettings%2A> コレクションを使用すると、特定のテーブルに対して <xref:System.Data.DataViewManager> が持つすべてのビューに対して、既定のフィルターおよび並べ替えオプションを設定できます。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Data.DataViewManager>) <xref:System.Data.DataViewManager> は、<xref:System.Data.DataView>に似ていますが、関係が含まれている <xref:System.Data.DataSet>全体のカスタマイズされたビューです。 <xref:System.Data.DataViewManager.DataViewSettings%2A> コレクションを使用すると、特定のテーブルに対して <xref:System.Data.DataViewManager> が持つすべてのビューに対して、既定のフィルターおよび並べ替えオプションを設定できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)
 - [データ連結と Windows フォーム](data-binding-and-windows-forms.md)

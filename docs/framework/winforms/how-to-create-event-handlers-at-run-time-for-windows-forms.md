@@ -73,8 +73,8 @@ Visual Studio の Windows フォームデザイナーを使用してイベント
 
      上の Visual Basic コードに示されている <xref:System.ComponentModel.EventHandlerList.AddHandler%2A> メソッドは、ボタンのクリックイベントハンドラーを確立します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
+- [Windows フォーム内のイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
 - [イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)
 - [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)

@@ -55,7 +55,7 @@ Windows Communication Foundation (WCF) では、動作によって、サービ�
   
  要素の使用方法の詳細については、「[方法: クライアント資格情報の値を指定する](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)」を参照してください。  
   
-### <a name="certificate-of-clientcertificate-element"></a>\<証明書 > の\<clientCertificate > 要素  
+### <a name="certificate-of-clientcertificate-element"></a>\<clientCertificate > 要素の \<証明書 >  
  サービスがクライアントと安全に通信するためにクライアントの証明書を事前に持っている必要がある場合は、 [\<certificate >](../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)要素を使用します。 このような状況は、双方向通信パターンを使用する場合に生じます。 より一般的な要求/応答パターンでは、クライアントが自身の証明書を要求に含め、サービスはこの証明書を使用して、クライアントへの応答をセキュリティで保護します。 ただし、双方向通信パターンには要求も応答もありません。 サービスは、クライアントの証明書を通信から推測できないため、クライアントへのメッセージをセキュリティで保護するためにクライアントの証明書が前もって必要になります。 クライアントの証明書を帯域外方式で取得し、この要素を使用して証明書を指定する必要があります。 双方向サービスの詳細については、「[方法: 双方向コントラクトを作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)する」を参照してください。  
   
 ### <a name="authentication-of-clientcertificate-element"></a>\<clientCertificate > 要素の認証 > を \<  
@@ -82,14 +82,14 @@ Windows Communication Foundation (WCF) では、動作によって、サービ�
   
 - このコレクションに URI を追加して、有効な URI のセットを指定します。 これを行うには、URI ごとに[> を追加\<](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)を挿入します。  
   
- 詳細については、「 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>」を参照してください。  
+ 詳細については、<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> を参照してください。  
   
  この構成要素の使用方法の詳細については、「[方法: フェデレーションサービスで資格情報を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)」を参照してください。  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>匿名の CardSpace ユーザーの許可  
  `AllowUntrustedRsaIssuers` 要素の `<IssuedTokenAuthentication>` 属性を `true` に設定すると、任意の RSA キー ペアで署名された自己発行トークンを提示することがすべてのクライアントに明示的に許可されます。 発行者は、キーに発行者データが関連付けられていないため、*信頼*されていません。 CardSpace ユーザーは、id の自己提供のクレームを含む自己発行のカードを作成できます。 この機能を使用するときは十分に注意してください。 この機能を使用する場合は、RSA 公開キーを、ユーザー名と一緒にデータベースに格納する必要のある比較的安全なパスワードとして考えます。 サービスへのクライアント アクセスを許可する前に、クライアントから提示された RSA 公開キーを、提示されたユーザー名に対応する格納済みの公開キーと比較して検証します。 これは、ユーザーが各自のユーザー名を登録し、自己発行の RSA 公開キーに関連付けることができる登録プロセスが確立されていることが前提となります。  
   
-## <a name="client-credentials"></a>クライアント資格情報  
+## <a name="client-credentials"></a>クライアントの資格情報  
  クライアント資格情報は、相互認証が必要な場合にサービスに対するクライアントの認証に使用されます。 また、このセクションを使用して、クライアントがサービスの証明書によってサービスへのメッセージをセキュリティで保護する必要がある場合に使用するサービス証明書を指定することもできます。  
   
  セキュリティ トークン サービスまたはローカル発行者から発行されたトークンを使用するフェデレーション シナリオの一部として、クライアントを構成することもできます。 フェデレーションシナリオの詳細については、「[フェデレーションと発行済みトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)」を参照してください。 すべてのクライアント資格情報は、次のコードに示すように、 [\<endpointBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)の下にあります。  
@@ -124,7 +124,7 @@ Windows Communication Foundation (WCF) では、動作によって、サービ�
  [\<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)には、トークンのローカル発行者、または Security Token Service で使用される動作を構成するために使用される要素が含まれています。 ローカル発行者を使用するようにクライアントを構成する方法については、「[方法: ローカル発行者を構成](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)する」を参照してください。  
   
 #### <a name="localissueraddress"></a>\<localIssuerAddress >  
- 既定のセキュリティ トークン サービス アドレスを指定します。 これは、使用時に、<xref:System.ServiceModel.WSFederationHttpBinding>またはフェデレーション バインディングの発行者アドレスが、セキュリティ トークン サービスの URL を指定していません `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` または`null`です。 そのような場合、<xref:System.ServiceModel.Description.ClientCredentials> は、ローカルの発行者およびバインディングのアドレスと共に構成し、その発行者と通信するために使用する必要があります。  
+ 既定のセキュリティ トークン サービス アドレスを指定します。 これは、<xref:System.ServiceModel.WSFederationHttpBinding> が Security Token Service の URL を指定しない場合、またはフェデレーションバインディングの発行者アドレスが `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` または `null`場合に使用されます。 そのような場合、<xref:System.ServiceModel.Description.ClientCredentials> は、ローカルの発行者およびバインディングのアドレスと共に構成し、その発行者と通信するために使用する必要があります。  
   
 #### <a name="issuerchannelbehaviors"></a>\<issuerChannelBehaviors >  
  Security Token Service との通信時に使用される WCF クライアントの動作を追加するには、 [\<issuerChannelBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/issuerchannelbehaviors-element.md)を使用します。 [\<endpointbehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)セクションでクライアントの動作を定義します。 定義された動作を使用するには、2つの属性を持つ `<issuerChannelBehaviors>` 要素に <`add`> 要素を追加します。 次の例に示すように、`issuerAddress` をセキュリティ トークン サービスの URL に設定し、`behaviorConfiguration` 属性を定義済みのエンドポイントの動作の名前に設定します。  
@@ -217,7 +217,7 @@ Windows Communication Foundation (WCF) では、動作によって、サービ�
 </behaviors>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
 - [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

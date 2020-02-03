@@ -34,7 +34,7 @@ Windows フォーム <xref:System.Windows.Forms.RichTextBox> コントロール�
     次の例では、<xref:System.Windows.Forms.RichTextBox.LinkClicked> イベントによって、Internet Explorer のインスタンスが <xref:System.Windows.Forms.RichTextBox> コントロールの <xref:System.Windows.Forms.RichTextBox.Text%2A> プロパティで指定された URL に開かれます。 この例では、フォームに <xref:System.Windows.Forms.RichTextBox> コントロールがあることを前提としています。
 
     > [!IMPORTANT]
-    > 権限が不十分であるために部分信頼コンテキストでコードを実行している場合、<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> メソッドを呼び出すと、<xref:System.Security.SecurityException> 例外が発生します。 詳細については、「 [Code Access Security Basics](../../misc/code-access-security-basics.md)」を参照してください。
+    > 権限が不十分であるために部分信頼コンテキストでコードを実行している場合、<xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType> メソッドを呼び出すと、<xref:System.Security.SecurityException> 例外が発生します。 詳しくは、「[コード アクセス セキュリティの基礎](../../misc/code-access-security-basics.md)」をご覧ください。
 
     ```vb
     Public p As New System.Diagnostics.Process
@@ -117,7 +117,7 @@ Windows フォーム <xref:System.Windows.Forms.RichTextBox> コントロール�
     }
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>

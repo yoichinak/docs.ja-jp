@@ -167,7 +167,7 @@ ms.locfileid: "76742359"
   
 - もう一方のウィンドウに影響を与えずに、最小化/最大化し、元のサイズに戻す。  
   
- 一部のウィンドウには、そのウィンドウを開いたウィンドウとの関係が必要です。 たとえば、統合開発環境 (IDE: Integrated Development Environment) アプリケーションでは、プロパティウィンドウとツールウィンドウを開くことができます。このウィンドウは、通常の動作が、そのウィンドウを作成するウィンドウをカバーするために使用されます。 また、そのようなウィンドウは、必ず作成元のウィンドウと一緒に閉じ、最小化/最大化し、元のサイズに戻す必要があります。 このような関係を確立するには、1*つのウィンドウを別の*ウィンドウにし、所有*ウィンドウ*の [<xref:System.Windows.Window.Owner%2A>] プロパティに [*所有者] ウィンドウ*への参照を設定します。 これを次の例に示します。  
+ 一部のウィンドウには、そのウィンドウを開いたウィンドウとの関係が必要です。 たとえば、統合開発環境 (IDE: Integrated Development Environment) アプリケーションでは、プロパティウィンドウとツールウィンドウを開くことができます。このウィンドウは、通常の動作が、そのウィンドウを作成するウィンドウをカバーするために使用されます。 また、そのようなウィンドウは、必ず作成元のウィンドウと一緒に閉じ、最小化/最大化し、元のサイズに戻す必要があります。 このような関係を確立するには、1*つのウィンドウを別の*ウィンドウにし、所有*ウィンドウ*の [<xref:System.Windows.Window.Owner%2A>] プロパティに [*所有者] ウィンドウ*への参照を設定します。 次の例を参照してください。  
   
  [!code-csharp[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/CSharp/MainWindow.xaml.cs#setwindowownercode)]
  [!code-vb[WindowOwnerOwnedWindowsSnippets#SetWindowOwnerCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowOwnerOwnedWindowsSnippets/visualbasic/mainwindow.xaml.vb#setwindowownercode)]  
@@ -262,7 +262,7 @@ ms.locfileid: "76742359"
  <xref:System.Windows.Window.Closing> が処理されない場合、または処理されても取り消されない場合は、ウィンドウが閉じます。 ウィンドウが実際に閉じられる直前に、<xref:System.Windows.Window.Closed> が発生します。 この時点で、ウィンドウが閉じるのを防ぐことはできません。  
   
 > [!NOTE]
-> メインアプリケーションウィンドウを閉じるか、最後のウィンドウを閉じると、アプリケーションを自動的にシャットダウンするように構成できます (「<xref:System.Windows.Application.MainWindow%2A>」を参照)。 詳細については、「<xref:System.Windows.Application.ShutdownMode%2A>」を参照してください。  
+> メインアプリケーションウィンドウを閉じるか、最後のウィンドウを閉じると、アプリケーションを自動的にシャットダウンするように構成できます (「<xref:System.Windows.Application.MainWindow%2A>」を参照)。 詳細については、<xref:System.Windows.Application.ShutdownMode%2A> を参照してください。  
   
  ウィンドウは、非クライアント領域とクライアント領域に用意されている機構を使用して明示的に閉じることができますが、次のようなアプリケーションまたはウィンドウの他の部分での動作の結果として、ウィンドウを暗黙的に閉じることもできます。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "76742359"
   
 - メインアプリケーションウィンドウが閉じられ、<xref:System.Windows.Application.ShutdownMode%2A> が <xref:System.Windows.ShutdownMode.OnMainWindowClose>ます。  
   
-- <xref:System.Windows.Application.Shutdown%2A> が呼ばれたとき。  
+- <xref:System.Windows.Application.Shutdown%2A> が呼び出されます  
   
 > [!NOTE]
 > ウィンドウを閉じると、再度開くことはできません。  
@@ -293,7 +293,7 @@ ms.locfileid: "76742359"
   
  また、<xref:System.Windows.Window.WindowStartupLocation%2A> プロパティに次のいずれかの <xref:System.Windows.WindowStartupLocation> 列挙値を設定して最初に表示されたときに <xref:System.Windows.Window> の初期位置を指定することもできます。  
   
-- <xref:System.Windows.WindowStartupLocation.CenterOwner> (既定)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (規定値)  
   
 - <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -325,13 +325,13 @@ ms.locfileid: "76742359"
   
  ウィンドウの幅と高さに、ウィンドウのコンテンツのサイズに合わせてサイズを設定する場合は、次の値を持つ <xref:System.Windows.Window.SizeToContent%2A> プロパティを使用できます。  
   
-- <xref:System.Windows.SizeToContent.Manual>. 効果 (既定値)。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Manual>) 効果 (既定値)。  
   
-- <xref:System.Windows.SizeToContent.Width>. コンテンツの幅に合わせる。 <xref:System.Windows.FrameworkElement.MinWidth%2A> と <xref:System.Windows.FrameworkElement.MaxWidth%2A> の両方をコンテンツの幅に設定するのと同じ効果があります。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Width>) コンテンツの幅に合わせる。 <xref:System.Windows.FrameworkElement.MinWidth%2A> と <xref:System.Windows.FrameworkElement.MaxWidth%2A> の両方をコンテンツの幅に設定するのと同じ効果があります。  
   
-- <xref:System.Windows.SizeToContent.Height>. コンテンツの高さに合わせる。 <xref:System.Windows.FrameworkElement.MinHeight%2A> と <xref:System.Windows.FrameworkElement.MaxHeight%2A> の両方をコンテンツの高さに設定するのと同じ効果があります。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.Height>) コンテンツの高さに合わせる。 <xref:System.Windows.FrameworkElement.MinHeight%2A> と <xref:System.Windows.FrameworkElement.MaxHeight%2A> の両方をコンテンツの高さに設定するのと同じ効果があります。  
   
-- <xref:System.Windows.SizeToContent.WidthAndHeight>. コンテンツの幅と高さに合わせる。 <xref:System.Windows.FrameworkElement.MinHeight%2A> と <xref:System.Windows.FrameworkElement.MaxHeight%2A> の両方をコンテンツの高さに設定し、<xref:System.Windows.FrameworkElement.MinWidth%2A> と <xref:System.Windows.FrameworkElement.MaxWidth%2A> の両方をコンテンツの幅に設定した場合と同じ効果を持ちます。  
+- [https://login.microsoftonline.com/consumers/](<xref:System.Windows.SizeToContent.WidthAndHeight>) コンテンツの幅と高さに合わせる。 <xref:System.Windows.FrameworkElement.MinHeight%2A> と <xref:System.Windows.FrameworkElement.MaxHeight%2A> の両方をコンテンツの高さに設定し、<xref:System.Windows.FrameworkElement.MinWidth%2A> と <xref:System.Windows.FrameworkElement.MaxWidth%2A> の両方をコンテンツの幅に設定した場合と同じ効果を持ちます。  
   
  次の例では、ウィンドウを最初に表示するときに、そのコンテンツに合わせて垂直方向と水平方向の両方のサイズを自動的に変更するウィンドウを示しています。  
   
@@ -381,7 +381,7 @@ ms.locfileid: "76742359"
   
  ウィンドウの状態を構成するには、その <xref:System.Windows.Window.WindowState%2A> プロパティを設定します。次の <xref:System.Windows.WindowState> 列挙値のいずれかを指定できます。  
   
-- <xref:System.Windows.WindowState.Normal> (既定)  
+- <xref:System.Windows.WindowState.Normal> (規定値)  
   
 - <xref:System.Windows.WindowState.Maximized>  
   
@@ -409,7 +409,7 @@ ms.locfileid: "76742359"
   
 - <xref:System.Windows.ResizeMode.CanMinimize>  
   
-- <xref:System.Windows.ResizeMode.CanResize> (既定)  
+- <xref:System.Windows.ResizeMode.CanResize> (規定値)  
   
 - <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -427,7 +427,7 @@ ms.locfileid: "76742359"
   
 - <xref:System.Windows.WindowStyle.None>  
   
-- <xref:System.Windows.WindowStyle.SingleBorderWindow> (既定)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (規定値)  
   
 - <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -466,7 +466,7 @@ ms.locfileid: "76742359"
  [!code-xaml[WindowsOverviewSnippets#ShowInTaskbarWindowMARKUP1](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowsOverviewSnippets/CSharp/ShowInTaskbarWindow.xaml#showintaskbarwindowmarkup1)]  
   
 <a name="SecurityConsiderations"></a>   
-## <a name="security-considerations"></a>セキュリティの考慮事項  
+## <a name="security-considerations"></a>セキュリティに関する考慮事項  
  <xref:System.Windows.Window> には、`UnmanagedCode` セキュリティ権限をインスタンス化する必要があります。 ローカル コンピューターにインストールされ、ローカル コンピューターから起動されるアプリケーションの場合は、アプリケーションに付与されるアクセス許可セットの範囲内になります。  
   
  ただし、これは、ClickOnce を使用してインターネットまたはローカルイントラネットゾーンから起動されるアプリケーションに付与されるアクセス許可のセットの範囲外です。 その結果、ユーザーには ClickOnce のセキュリティ警告が表示され、アプリケーションのアクセス許可セットを完全信頼に昇格させる必要があります。  
@@ -479,7 +479,7 @@ ms.locfileid: "76742359"
   
  ダイアログ ボックスは、ユーザーから情報を収集して機能を完了するためによく使用されるウィンドウです。 たとえば、ユーザーがファイルを開こうとした場合、通常、 **[ファイルを開く]** ダイアログボックスは、ユーザーからファイル名を取得するためにアプリケーションによって表示されます。 詳細については、「[ダイアログ ボックスの概要](dialog-boxes-overview.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>

@@ -347,6 +347,6 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     sc sidtype netmsmqactivator unrestricted
     ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [AppFabric のホスティングと永続化のサンプル](https://docs.microsoft.com/previous-versions/appfabric/ff383418(v=azure.10))

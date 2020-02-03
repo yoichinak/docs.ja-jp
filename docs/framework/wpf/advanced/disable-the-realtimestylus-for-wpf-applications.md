@@ -15,7 +15,7 @@ Windows Presentation Foundation (WPF) には、Windows 7 タッチ入力を処�
   
  スタイラス入力をリッスンしている WPF を無効にするには、WPF ウィンドウによって追加されたすべてのタブレットサポートを削除します。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次のサンプルコードは、リフレクションを使用して既定のタブレットプラットフォームのサポートを削除する方法を示しています。  
   
 ```csharp  
@@ -53,6 +53,6 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [スタイラスからの入力のインターセプト](intercepting-input-from-the-stylus.md)

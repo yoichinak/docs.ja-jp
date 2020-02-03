@@ -36,11 +36,11 @@ ms.locfileid: "76735454"
   
  「[方法: デザイナーを使用してツールバーのボタンのアイコンを定義](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)する」、「[方法: デザイナーを使用してツールバーコントロールにボタンを追加](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)する」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ToolBar> クラス  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   

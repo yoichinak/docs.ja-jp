@@ -26,14 +26,14 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
   
 ### <a name="orderdetailstable"></a>OrderDetailsTable  
   
-|OrderID|ItemID|数量|  
+|OrderID|ItemID|Quantity|  
 |-------------|------------|--------------|  
 |4085|12|1|  
 |4086|13|3|  
   
 ### <a name="itemtable"></a>ItemTable  
   
-|ID|[名前]|  
+|id|Name|  
 |--------|----------|  
 |12|ポテト|  
 |13|チキン|  
@@ -54,13 +54,13 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
   
 4. 次のプロパティを設定します。 これらはコードまたはデザイナーで設定できます。  
   
-    |property|設定|  
+    |プロパティ|設定|  
     |--------------|-------------|  
     |<xref:System.Windows.Forms.ListControl.DataSource%2A>|どの ID 番号がどの項目に相当するかについての情報を含むテーブル。 前のシナリオでは、これは `ItemTable`です。|  
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|コントロールに表示するデータ ソース テーブルの列。 前のシナリオでは、これは `"Name"` です (コードで設定するには、引用符を使用します)。|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|格納された情報を含むデータ ソース テーブルの列。 前のシナリオでは、これは `"ID"` です (コードで設定するには、引用符を使用します)。|  
   
-5. プロシージャで <xref:System.Windows.Forms.ControlBindingsCollection> クラスの <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> メソッドを呼び出して、フォーム入力を記録するテーブルにコントロールの <xref:System.Windows.Forms.ListControl.SelectedValue%2A> プロパティをバインドします。 また、 **[プロパティ]** ウィンドウでコントロールの <xref:System.Windows.Forms.Control.DataBindings%2A> プロパティにアクセスすることにより、コードではなくデザイナーでこの操作を行うこともできます。 前のシナリオでは、これは `OrderDetailsTable`であり、列は `"ItemID"`です。  
+5. プロシージャで <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> クラスの <xref:System.Windows.Forms.ControlBindingsCollection> メソッドを呼び出して、フォーム入力を記録するテーブルにコントロールの <xref:System.Windows.Forms.ListControl.SelectedValue%2A> プロパティをバインドします。 また、 **[プロパティ]** ウィンドウでコントロールの <xref:System.Windows.Forms.Control.DataBindings%2A> プロパティにアクセスすることにより、コードではなくデザイナーでこの操作を行うこともできます。 前のシナリオでは、これは `OrderDetailsTable`であり、列は `"ItemID"`です。  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  
@@ -70,7 +70,7 @@ Windows フォーム上ではわかりやすい形式でデータを表示し、
     listBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID");  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データ連結と Windows フォーム](../data-binding-and-windows-forms.md)
 - [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)

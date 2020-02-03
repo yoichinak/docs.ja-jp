@@ -25,12 +25,12 @@ Windows フォーム アプリケーションとコントロールは、いく�
  [方法: ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする](com-interop-by-displaying-a-windows-form-shadow.md)  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドを使用して Windows フォームをアンマネージ アプリケーションで実行する方法を示すコード例を提供します。  
   
- [How to: Support COM Interop by Displaying Each Windows Form on Its Own Thread](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
+ [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  独自のスレッドで Windows フォームを実行する方法を示すコード例を提供します。  
   
  「 [チュートリアル: Windows フォームを別個のスレッドに表示することによって COM 相互運用をサポートする](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233639(v=vs.100))」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType>  
  Windows フォーム用の個別のスレッドの作成に使用します。  
   
@@ -40,6 +40,6 @@ Windows フォーム アプリケーションとコントロールは、いく�
  <xref:System.Windows.Forms.Control.Invoke%2A>  
  フォームにアンマネージ アプリケーションからの呼び出しをマーシャリングします。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [COM への .NET Framework コンポーネントの公開](../../interop/exposing-dotnet-components-to-com.md)  
  .NET Framework の型をアンマネージ アプリケーションで使用する方法に関する一般情報を提供します。

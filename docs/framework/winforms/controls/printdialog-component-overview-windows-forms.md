@@ -24,7 +24,7 @@ Windows フォーム[PrintDialog](printdialog-component-windows-forms.md)コン�
 
 フォームに追加されると、Visual Studio の Windows フォームデザイナーの下部にあるトレイに <xref:System.Windows.Forms.PrintDialog> コンポーネントが表示されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.PrintDialog>
 - [PrintDialog コンポーネント](printdialog-component-windows-forms.md)

@@ -49,7 +49,7 @@ ms.locfileid: "76745128"
 
     4. 各ボタンの [<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>] プロパティを **[テキスト]** に設定します。 または、このプロパティを**image**または**imageandtext**に設定し、<xref:System.Windows.Forms.ToolStripItem.Image%2A> プロパティに表示されるようにイメージを設定することもできます。
 
-    5. [OK ] をクリックしてダイアログ ボックスを閉じます。 ボタンが <xref:System.Windows.Forms.ToolStrip>に追加されます。
+    5. **[OK]** をクリックしてダイアログ ボックスを閉じます。 ボタンが <xref:System.Windows.Forms.ToolStrip>に追加されます。
 
 8. フォームを右クリックし、 **[コードの表示]** を選択します。
 
@@ -110,7 +110,7 @@ ms.locfileid: "76745128"
     > [!NOTE]
     > <xref:System.Windows.Forms.BindingSource.CancelEdit%2A> メソッドは、データの行にスコープが設定されています。 次のレコードに移動する前に、個々のレコードを表示しているときに行ったすべての変更を保存します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>

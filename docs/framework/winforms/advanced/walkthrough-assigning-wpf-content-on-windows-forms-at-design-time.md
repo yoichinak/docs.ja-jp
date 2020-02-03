@@ -23,11 +23,11 @@ ms.locfileid: "76746802"
 
 この記事では、フォームに表示する Windows Presentation Foundation (WPF) コントロールの種類を選択する方法について説明します。 プロジェクトに含まれている WPF コントロールの種類を選択できます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 このチュートリアルを完了するには Visual Studio が必要です。
 
-## <a name="create-the-project"></a>プロジェクトの作成
+## <a name="create-the-project"></a>プロジェクトを作成する
 
 Visual Studio を開き、Visual Basic または `SelectingWpfContent`C#という名前の新しい Windows フォームアプリケーションプロジェクトを作成します。
 
@@ -55,7 +55,7 @@ Visual Studio を開き、Visual Basic または `SelectingWpfContent`C#とい�
    > [!NOTE]
    > 一般的には、もう少し高度な WPF コンテンツをホストしてください。 ここでは、説明する目的でのみ <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> コントロールを使用しています。
 
-8. プロジェクトをビルドする。
+8. プロジェクトをビルドします。
 
 ## <a name="select-wpf-controls"></a>WPF コントロールの選択
 
@@ -65,7 +65,7 @@ Visual Studio を開き、Visual Basic または `SelectingWpfContent`C#とい�
 
 2. **ツールボックス**の [`UserControl1`] をダブルクリックして、フォームに `UserControl1` のインスタンスを作成します。
 
-   `UserControl1` のインスタンスは、`elementHost1` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。
+   `UserControl1` のインスタンスは、<xref:System.Windows.Forms.Integration.ElementHost> という名前の新しい `elementHost1` コントロールでホストされます。
 
 3. `elementHost1`のスマートタグパネルで、 **[ホスト**されているコンテンツの選択] ドロップダウンリストを開きます。
 
@@ -85,7 +85,7 @@ Visual Studio を開き、Visual Basic または `SelectingWpfContent`C#とい�
 
 9. これで、`elementHost2` コントロールが `UserControl1` 型のインスタンスをホストするようになりました。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>

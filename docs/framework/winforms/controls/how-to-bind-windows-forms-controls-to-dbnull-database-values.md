@@ -19,7 +19,7 @@ ms.locfileid: "76746668"
 # <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>方法 : Windows フォーム コントロールを DBNull データベース値にバインドする
 データ ソースに Windows フォーム コントロールをバインドして、データ ソースが <xref:System.DBNull> 値を返す場合、イベントの処理、書式設定、または解析なしで、適切な値に置き換えることができます。 <xref:System.Windows.Forms.Binding.NullValue%2A> プロパティは、データ ソースの値を書式設定または解析する際、<xref:System.DBNull> を指定されたオブジェクトに変換します。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次の例では、2 つの異なる状況で <xref:System.DBNull> の値をバインドする方法を示しています。 1 つ目は、文字列のプロパティに対して <xref:System.Windows.Forms.Binding.NullValue%2A> を設定する方法を示し、2 つ目は、イメージのプロパティに対して <xref:System.Windows.Forms.Binding.NullValue%2A> を設定する方法を示します。  
   
  [!code-csharp[System.Windows.Forms.BindingDBNull#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingDBNull/CS/form1.cs#1)]
@@ -27,13 +27,13 @@ ms.locfileid: "76746668"
   
  バインドされたプロパティの種類と <xref:System.Windows.Forms.Binding.NullValue%2A> プロパティは同じにする必要があります。そうでないとエラーが発生し、<xref:System.Windows.Forms.Binding.NullValue%2A> の値はそれ以上処理されません。 このような場合は、例外はスローされません。  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
 - System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [BindingSource コンポーネント](bindingsource-component.md)
 - [方法: データ バインドで発生するエラーと例外を処理する](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [方法 : Windows フォーム コントロールを型にバインドする](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [方法: Windows フォーム コントロールを型にバインドする](how-to-bind-a-windows-forms-control-to-a-type.md)

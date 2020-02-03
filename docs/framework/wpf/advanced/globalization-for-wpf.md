@@ -36,7 +36,7 @@ ms.locfileid: "76747058"
 ```
 
 <a name="encoding"></a>
-### <a name="encoding"></a>Encoding
+### <a name="encoding"></a>エンコード
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] によってサポートされるエンコーディングは、ASCII、Unicode UTF-16、および UTF-8 です。 Encoding ステートメントは [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ドキュメントの先頭にあります。 エンコーディング属性が存在せず、バイト順もない場合、パーサーでは既定として UTF-8 が使用されます。 UTF-8 と UTF-16 は優先エンコードです。 UTF-7 には対応していません。 次の例は、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイルで UTF-8 エンコーディングを指定する方法を示しています。
 
 ```xaml
@@ -73,21 +73,21 @@ ms.locfileid: "76747058"
 
 - ベンガル語
 
-- デバナガリ
+- デーヴァナーガリー
 
-- キリル言語
+- キリル文字
 
-- ギリシャ語
+- Greek
 
 - グジャラート語
 
-- グルムキー
+- グルムキー文字
 
 - ヘブライ語
 
 - 表意文字スクリプト
 
-- カナラ語
+- カンナダ語
 
 - ラオス語
 
@@ -101,7 +101,7 @@ ms.locfileid: "76747058"
 
 - シリア語
 
-- タミール語
+- タミル語
 
 - テルグ語
 
@@ -178,6 +178,6 @@ ms.locfileid: "76747058"
     "de" , UltimateResourceFallbackLocation.Satellite)]
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF のグローバリゼーションおよびローカリゼーションの概要](wpf-globalization-and-localization-overview.md)

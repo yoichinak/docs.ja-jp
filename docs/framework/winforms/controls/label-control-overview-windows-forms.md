@@ -23,7 +23,7 @@ Windows フォーム <xref:System.Windows.Forms.Label> コントロールは、�
   
  ラベルに表示されるキャプションは、<xref:System.Windows.Forms.Label.Text%2A> プロパティに含まれています。 <xref:System.Windows.Forms.Label.TextAlign%2A> プロパティを使用すると、ラベル内のテキストの配置を設定できます。 詳細については、「[方法: Windows フォームコントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Label>
 - [方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)

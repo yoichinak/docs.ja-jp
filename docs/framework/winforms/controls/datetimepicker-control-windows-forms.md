@@ -30,14 +30,14 @@ Windows フォーム `DateTimePicker` コントロールを使用すると、ユ
  [方法: DateTimePicker コントロールを使用して時間を表示する](how-to-display-time-with-the-datetimepicker-control.md)  
  `DateTimePicker` で時刻のみを表示する手順を示します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DateTimePicker>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
  <xref:System.Windows.Forms.MonthCalendar>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   

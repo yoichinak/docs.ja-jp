@@ -31,11 +31,11 @@ Visual Studio は、プロジェクト内のコントロールへのすべての
 > [!NOTE]
 > Activex コントロールインポーター (Aximp.exe) Windows フォームは、ActiveX ダイナミックリンクライブラリをインポートするときに、予期しない種類のイベント引数を作成します。 Aximp.exe によって作成される引数は、`Invoke(object sender, DWebBrowserEvents2_ProgressChangeEventArgs e)` が必要な場合に `Invoke(object sender, DWebBrowserEvents2_ProgressChangeEvent e)`に似ています。 この irregularity では、コードが正常に機能しないようにすることはできないことに注意してください。 詳細については、「 [Windows フォーム ActiveX コントロールインポーター (aximp.exe)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
 - [各言語およびライブラリにおける、コントロールとプログラミング可能オブジェクトの比較](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [方法 : Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
 - [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)

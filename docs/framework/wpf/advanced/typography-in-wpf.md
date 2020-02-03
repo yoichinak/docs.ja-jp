@@ -29,7 +29,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 <a name="Rich_Typography"></a>   
 ## <a name="rich-typography"></a>多彩な文字体裁  
- OpenType フォント形式は、TrueType®フォント形式を拡張したものです。 OpenType フォント形式は、Microsoft と Adobe が共同で開発したものであり、高度な文字体裁機能が豊富に用意されています。 <xref:System.Windows.Documents.Typography> オブジェクトは、スタイルの代替や巻きひげなど、OpenType フォントの高度な機能の多くを公開します。 Windows SDK には、Pericles や Pescadero フォントなどの豊富な機能を使用して設計されたサンプルの OpenType フォントのセットが用意されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」を参照してください。  
+ OpenType フォント形式は、TrueType®フォント形式を拡張したものです。 OpenType フォント形式は、Microsoft と Adobe が共同で開発したものであり、高度な文字体裁機能が豊富に用意されています。 <xref:System.Windows.Documents.Typography> オブジェクトは、スタイルの代替や巻きひげなど、OpenType フォントの高度な機能の多くを公開します。 Windows SDK には、Pericles や Pescadero フォントなどの豊富な機能を使用して設計されたサンプルの OpenType フォントのセットが用意されています。 詳細については、「[OpenType フォント パックのサンプル](sample-opentype-font-pack.md)」をご覧ください。  
   
  Pericles OpenType フォントには、グリフの標準セットに対してスタイルの代替を提供する追加のグリフが含まれています。 次のテキストでは、スタイル代替グリフが表示されています。  
   
@@ -148,7 +148,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
  カスタム テキスト レイアウトの作成の詳細については、「[テキストの高度な書式設定](advanced-text-formatting.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Media.FormattedText>
 - <xref:System.Windows.Media.TextFormatting.TextFormatter>
@@ -156,5 +156,5 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 - [OpenType フォントの機能](opentype-font-features.md)
 - [書式設定されたテキストの描画](drawing-formatted-text.md)
 - [テキストの高度な書式設定](advanced-text-formatting.md)
-- [テキスト](optimizing-performance-text.md)
+- [[テキスト]](optimizing-performance-text.md)
 - [Microsoft の文字体裁](https://docs.microsoft.com/typography/)

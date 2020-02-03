@@ -25,7 +25,7 @@ ms.locfileid: "76746601"
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>ToolStripItem に表示される内容を定義するには  
   
-- <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> プロパティを目的の値に設定します。 `Image`、`ImageAndText`、`None`、および `Text`の可能性があります。 既定値は、 `ImageAndText`です。  
+- <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A> プロパティを目的の値に設定します。 `Image`、`ImageAndText`、`None`、および `Text`の可能性があります。 既定では、 `ImageAndText`です。  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ ms.locfileid: "76746601"
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>ToolStripItem のテキストを揃えるには  
   
-- <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> プロパティを目的の値に設定します。 Left、center、right を使用すると、上下左右の任意の組み合わせを使用できます。 既定値は、 `MiddleCenter`です。  
+- <xref:System.Windows.Forms.ToolStripItem.TextAlign%2A> プロパティを目的の値に設定します。 Left、center、right を使用すると、上下左右の任意の組み合わせを使用できます。 既定では、 `MiddleCenter`です。  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ ms.locfileid: "76746601"
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>ToolStripItem 上のイメージを整列させるには  
   
-- <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> プロパティを目的の値に設定します。 Left、center、right を使用すると、上下左右の任意の組み合わせを使用できます。 既定値は、 `MiddleLeft`です。  
+- <xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A> プロパティを目的の値に設定します。 Left、center、right を使用すると、上下左右の任意の組み合わせを使用できます。 既定では、 `MiddleLeft`です。  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ ms.locfileid: "76746601"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>ToolStripItem テキストと画像を相互に相対的に表示する方法を定義するには  
   
-- <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> プロパティを目的の値に設定します。 `ImageAboveText`、`ImageBeforeText`、`Overlay`、`TextAboveImage`、および `TextBeforeImage`の可能性があります。 既定値は、 `ImageBeforeText`です。  
+- <xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A> プロパティを目的の値に設定します。 設定できる値は、`ImageAboveText`、`ImageBeforeText`、`Overlay`、`TextAboveImage`、および `TextBeforeImage` です。 既定では、 `ImageBeforeText`です。  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  
@@ -75,7 +75,7 @@ ms.locfileid: "76746601"
     toolStripButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

@@ -62,11 +62,11 @@ Windows フォーム `ListView` コントロールにはアイコン表示で項
   
 - [チュートリアル: デザイナーを使用した、ListView コントロールと TreeView コントロールを含むエクスプローラー スタイルのインターフェイスの作成](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ListView> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
  リスト ビュー内のアイテムまたはツリー ビュー内のノードから継承して、必要なフィールド、メソッド、またはコンストラクターを追加するための手順を説明します。  
   
@@ -76,6 +76,6 @@ Windows フォーム `ListView` コントロールにはアイコン表示で項
  [方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  複数のペインで Windows フォームのレイアウトを設定するための方法を説明します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

@@ -24,7 +24,7 @@ Windows フォーム <xref:System.Windows.Forms.RichTextBox> コントロール�
   
  <xref:System.Windows.Forms.TextBoxBase.Undo%2A> メソッドと <xref:System.Windows.Forms.RichTextBox.Redo%2A> メソッドを呼び出すことによって、<xref:System.Windows.Forms.RichTextBox> コントロールでほとんどの編集操作を元に戻したり、やり直したりできます。 <xref:System.Windows.Forms.RichTextBox.CanRedo%2A> メソッドを使用すると、ユーザーが最後に元に戻した操作をコントロールに再適用できるかどうかを判断できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox コントロール](richtextbox-control-windows-forms.md)

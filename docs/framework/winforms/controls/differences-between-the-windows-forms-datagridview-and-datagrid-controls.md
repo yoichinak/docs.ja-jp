@@ -18,7 +18,7 @@ ms.locfileid: "76745958"
   
  次の表では、<xref:System.Windows.Forms.DataGrid> コントロールにない <xref:System.Windows.Forms.DataGridView> コントロールで使用できる主な機能のいくつかについて説明します。  
   
-|DataGridView コントロール機能|説明|  
+|DataGridView コントロール機能|[説明]|  
 |----------------------------------|-----------------|  
 |複数の列の型|<xref:System.Windows.Forms.DataGridView> コントロールには、<xref:System.Windows.Forms.DataGrid> コントロールよりも多くの組み込み列型が用意されています。 これらの列の型は、最も一般的なシナリオのニーズを満たしますが、<xref:System.Windows.Forms.DataGrid> コントロールの列の型よりも簡単に拡張または置換することができます。 詳細については、「 [Windows フォーム DataGridView コントロールの列の型](column-types-in-the-windows-forms-datagridview-control.md)」を参照してください。|  
 |データを表示する複数の方法|<xref:System.Windows.Forms.DataGrid> コントロールは、外部データソースのデータの表示に限定されます。 ただし、<xref:System.Windows.Forms.DataGridView> コントロールでは、コントロールに格納されている非バインドデータ、バインドされたデータソースのデータ、またはバインドされたデータとバインドされていないデータの両方を表示できます。 また、<xref:System.Windows.Forms.DataGridView> コントロールに仮想モードを実装して、カスタムデータ管理を提供することもできます。 詳細については、「 [Windows フォーム DataGridView コントロールのデータ表示モード](data-display-modes-in-the-windows-forms-datagridview-control.md)」を参照してください。|  
@@ -32,7 +32,7 @@ ms.locfileid: "76745958"
   
  <xref:System.Windows.Forms.DataGridView> コントロールにはまったく新しいアーキテクチャがあるため、<xref:System.Windows.Forms.DataGridView> コントロールで <xref:System.Windows.Forms.DataGrid> カスタマイズを使用できるようにするための単純な変換パスはありません。 ただし、新しいコントロールで使用できる組み込みの機能により、多くの <xref:System.Windows.Forms.DataGrid> カスタマイズは、<xref:System.Windows.Forms.DataGridView> コントロールでは不要です。 <xref:System.Windows.Forms.DataGridView> コントロールで使用する <xref:System.Windows.Forms.DataGrid> コントロールに対してカスタムの列の型を作成した場合は、新しいアーキテクチャを使用してもう一度実装する必要があります。 詳細については、「 [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>

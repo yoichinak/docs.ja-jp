@@ -24,11 +24,11 @@ Windows フォーム `FolderBrowserDialog` コンポーネントには、ユー�
  [方法: Windows フォーム FolderBrowserDialog コンポーネントを使用してフォルダーを選択する](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)  
  ダイアログボックスから選択したフォルダーをプログラムによって抽出する方法と、コンポーネントの他のオプションのプロパティを使用する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.FolderBrowserDialog>  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)  
  多くの場合、タブを表示するダイアログ ボックスのタスクの一覧を示します。  
   

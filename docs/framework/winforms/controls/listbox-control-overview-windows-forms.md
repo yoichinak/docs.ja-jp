@@ -22,7 +22,7 @@ Windows フォームの <xref:System.Windows.Forms.ListBox> コントロール�
   
  <xref:System.Windows.Forms.ListBox> コントロールの項目を追加または削除するには、<xref:System.Windows.Forms.ListBox.ObjectCollection.Add%2A>、<xref:System.Windows.Forms.ListBox.ObjectCollection.Insert%2A>、<xref:System.Windows.Forms.ListBox.ObjectCollection.Clear%2A>、または <xref:System.Windows.Forms.ListBox.ObjectCollection.Remove%2A> メソッドを使用します。 または、デザイン時に <xref:System.Windows.Forms.ListBox.Items%2A> プロパティを使用して、リストに項目を追加することもできます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ListBox>
 - [方法: Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する](add-and-remove-items-from-a-wf-combobox.md)

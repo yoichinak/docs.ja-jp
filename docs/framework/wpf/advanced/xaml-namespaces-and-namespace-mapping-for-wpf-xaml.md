@@ -107,7 +107,7 @@ End Namespace
 ## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>アセンブリ内の XML 名前空間への CLR 名前空間のマッピング  
  WPF では、複数の CLR 名前空間を1つの XAML 名前空間にマップするために XAML プロセッサによって使用される CLR 属性を定義します。 この属性 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>は、アセンブリを生成するソースコードのアセンブリレベルに配置されます。 WPF アセンブリソースコードでは、この属性を使用して、<xref:System.Windows> や <xref:System.Windows.Controls>などのさまざまな共通名前空間を `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 名前空間にマップします。  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> は、XML/XAML 名前空間名と CLR 名前空間名の2つのパラメーターを受け取ります。 複数の CLR 名前空間を同じ XML 名前空間にマップするために、複数の <xref:System.Windows.Markup.XmlnsDefinitionAttribute> を存在させることができます。 これらの名前空間のメンバーは、マップされた後、部分クラスの分離コードページで適切な `using` ステートメントを指定することにより、必要に応じて完全修飾なしで参照することもできます。 詳細については、「<xref:System.Windows.Markup.XmlnsDefinitionAttribute>」をご覧ください。  
+ <xref:System.Windows.Markup.XmlnsDefinitionAttribute> は、XML/XAML 名前空間名と CLR 名前空間名の2つのパラメーターを受け取ります。 複数の CLR 名前空間を同じ XML 名前空間にマップするために、複数の <xref:System.Windows.Markup.XmlnsDefinitionAttribute> を存在させることができます。 これらの名前空間のメンバーは、マップされた後、部分クラスの分離コードページで適切な `using` ステートメントを指定することにより、必要に応じて完全修飾なしで参照することもできます。 詳細については、「<xref:System.Windows.Markup.XmlnsDefinitionAttribute>」を参照してください。  
   
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>デザイナーの名前空間と XAML テンプレートからのその他のプレフィックス  
  WPF XAML 用の開発環境やデザインツールで作業している場合は、xaml マークアップ内に他の定義済みの XAML 名前空間/プレフィックスがあることがわかります。  
@@ -135,7 +135,7 @@ End Namespace
   
  (プレゼンテーション Buildtask によって生成される) コンパイル済みの BAML はすべての手順を使用しますが、BAML には修飾されていないアセンブリ名を含めることはできません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML 名前空間について](https://go.microsoft.com/fwlink/?LinkId=98069)
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

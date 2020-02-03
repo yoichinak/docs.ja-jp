@@ -151,7 +151,7 @@ ms.locfileid: "76740324"
 
 1. <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。
 
-2. **ツールボックス**で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
+2. **[ツールボックス]** で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
 
 3. <xref:System.Windows.Forms.TableLayoutPanel> コントロールにマウス ポインターを置きます。 ポインターが <xref:System.Windows.Forms.Button> コントロール アイコンが付いた十字カーソルに変わることにご注意ください。
 
@@ -175,9 +175,9 @@ ms.locfileid: "76740324"
 
 - 占有されているセルから <xref:System.Windows.Forms.Button> コントロールの1つをドラッグし、別の占有セルにドロップします。 2つのコントロールが1つのセルから別のセルに移動されることに注意してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-レイアウト パネルとコントロールを組み合わせて使用すると、複雑なレイアウトを作成できます。 さらに詳しく調べるための推奨事項を次に示します。
+レイアウト パネルとコントロールを組み合わせて使用すると、複雑なレイアウトを作成できます。 さらに理解を深めるには、次の操作を行うことをお勧めします。
 
 - <xref:System.Windows.Forms.Button> コントロールのいずれかを大きなサイズに変更してみて、レイアウトへの影響を確認してください。
 
@@ -187,16 +187,16 @@ ms.locfileid: "76740324"
 
 - <xref:System.Windows.Forms.TableLayoutPanel> コントロールを親フォームにドッキングします。 フォームのサイズを変更し、レイアウトの変化を確認します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [チュートリアル : スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [チュートリアル: データ入力用のサイズ変更可能な Windows フォームの作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))
 - [チュートリアル: ローカライズ可能な Windows フォームの作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))
 - [TableLayoutPanel コントロールの推奨される手順](best-practices-for-the-tablelayoutpanel-control.md)
 - [AutoSize プロパティの概要](autosize-property-overview.md)
-- [方法 : Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
-- [方法 : Windows フォームにコントロールを固定する](how-to-anchor-controls-on-windows-forms.md)
-- [チュートリアル : Padding、Margin、および AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)
+- [方法: Windows フォーム上のコントロールをドッキングする](how-to-dock-controls-on-windows-forms.md)
+- [方法: Windows フォームにコントロールを固定する](how-to-anchor-controls-on-windows-forms.md)
+- [チュートリアル: Padding、Margin、および AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト](windows-forms-controls-padding-autosize.md)

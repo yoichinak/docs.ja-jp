@@ -25,7 +25,7 @@ Windows フォーム <xref:System.Windows.Forms.RadioButton> コントロール�
   
 2. <xref:System.Windows.Forms.GroupBox> コントロールまたは <xref:System.Windows.Forms.Panel> コントロールに <xref:System.Windows.Forms.RadioButton> コントロールを描画します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.RadioButton>
 - [RadioButton コントロールの概要](radiobutton-control-overview-windows-forms.md)

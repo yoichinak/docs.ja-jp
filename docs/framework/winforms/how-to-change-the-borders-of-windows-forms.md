@@ -16,7 +16,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739570"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>方法 : Windows フォームの境界線を変更する
-Windows フォームの外観や動作を決定する際にはさまざまな境界線スタイルを選択できます。 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> プロパティを変更して、フォームのサイズ変更動作を制御できます。 また、<xref:System.Windows.Forms.Form.FormBorderStyle%2A> を設定すると、キャプション バーの表示方法や、キャプション バーに表示されるボタンを変更できます。 詳細については、「 <xref:System.Windows.Forms.FormBorderStyle>」を参照してください。  
+Windows フォームの外観や動作を決定する際にはさまざまな境界線スタイルを選択できます。 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> プロパティを変更して、フォームのサイズ変更動作を制御できます。 また、<xref:System.Windows.Forms.Form.FormBorderStyle%2A> を設定すると、キャプション バーの表示方法や、キャプション バーに表示されるボタンを変更できます。 詳細については、<xref:System.Windows.Forms.FormBorderStyle> を参照してください。  
   
  Visual Studio では、このタスクに対する広範なサポートが用意されています。  
   
@@ -43,7 +43,7 @@ Windows フォームの外観や動作を決定する際にはさまざまな境
   
      また、オプションの **[最小化]** ボタンと **[最大化]** ボタンを提供するフォームの境界線スタイルを選択した場合は、これらのボタンのいずれかまたは両方を機能させるかどうかを指定できます。 これらのボタンは、ユーザーの操作感を細かく調節する場合に便利です。 既定では、 **[最小化]** ボタンと **[最大化]** ボタンが有効になり、それらの機能は **[プロパティ]** ウィンドウで操作されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>

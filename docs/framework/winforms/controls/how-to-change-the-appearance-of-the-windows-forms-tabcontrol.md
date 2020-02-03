@@ -65,7 +65,7 @@ Windows フォームのタブの外観を変更するには、<xref:System.Windo
   
 - <xref:System.Windows.Forms.TabControl> の <xref:System.Windows.Forms.TabControl.Appearance%2A> プロパティを <xref:System.Windows.Forms.TabAppearance.Buttons> または <xref:System.Windows.Forms.TabAppearance.FlatButtons>に設定します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)
 - [TabControl コントロールの概要](tabcontrol-control-overview-windows-forms.md)

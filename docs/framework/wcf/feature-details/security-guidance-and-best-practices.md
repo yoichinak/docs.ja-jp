@@ -19,13 +19,13 @@ ms.locfileid: "76728921"
  [セキュリティのベスト プラクティス](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)  
  アプリケーションをセキュリティで保護する際に役立つ推奨事項を示します。  
   
- [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
+ [セキュリティに関する考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)  
  WCF アプリケーションの作成時に考慮する項目。  
   
  [パフォーマンスに関する考慮事項](../../../../docs/framework/wcf/feature-details/performance-considerations.md)  
  パフォーマンスとセキュリティに関連するトピックが含まれています。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)
 - [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

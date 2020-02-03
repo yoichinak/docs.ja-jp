@@ -75,13 +75,13 @@ ms.locfileid: "76746953"
   
  「[デザイナーと Windows フォーム DataGridView コントロールの使用](using-the-designer-with-the-windows-forms-datagridview-control.md)」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.DataGridView>  
  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
   
  <xref:System.Windows.Forms.BindingSource>  
  <xref:System.Windows.Forms.BindingSource> コンポーネントのリファレンス ドキュメントを提供します。 <xref:System.Windows.Forms.DataGridView> コントロールと <xref:System.Windows.Forms.BindingSource> コンポーネントは、密接に連携して機能するようにデザインされています。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

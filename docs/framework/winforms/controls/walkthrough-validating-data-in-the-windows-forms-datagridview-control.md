@@ -27,9 +27,9 @@ ms.locfileid: "76740095"
 
 このトピックのコードを単一のリストとしてコピーする方法については、「[方法: Windows フォーム DataGridView コントロールでデータを検証](how-to-validate-data-in-the-windows-forms-datagridview-control.md)する」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-このチュートリアルを完了するための要件は次のとおりです。
+このチュートリアルを完了するには、以下が必要です。
 
 - Northwind SQL Server サンプルデータベースを持つサーバーへのアクセス。
 
@@ -78,7 +78,7 @@ ms.locfileid: "76740095"
 
   `Customers` テーブルのデータが入力された <xref:System.Windows.Forms.DataGridView> が表示されます。 [`CompanyName`] 列のセルをダブルクリックすると、値を編集できます。 すべての文字を削除し、TAB キーを押してセルを終了すると、<xref:System.Windows.Forms.DataGridView> によって終了できなくなります。 空でない文字列をセルに入力すると、<xref:System.Windows.Forms.DataGridView> コントロールによってセルを終了できます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このアプリケーションでは、<xref:System.Windows.Forms.DataGridView> コントロールの機能についての基本的な理解を得ることができます。 <xref:System.Windows.Forms.DataGridView> コントロールの外観と動作は、次のいくつかの方法でカスタマイズできます。
 
@@ -92,7 +92,7 @@ ms.locfileid: "76740095"
 
 - セルの外観をカスタマイズします。 詳細については、「[方法: Windows フォーム Datagridview コントロールのセルの外観をカスタマイズ](customize-the-appearance-of-cells-in-the-datagrid.md)する」および「[方法: Windows フォーム Datagridview コントロールのフォントと色のスタイルを設定する](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>

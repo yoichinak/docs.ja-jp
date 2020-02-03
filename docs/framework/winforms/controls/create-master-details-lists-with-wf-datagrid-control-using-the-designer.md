@@ -49,9 +49,9 @@ ms.locfileid: "76743389"
 
     2. <xref:System.Windows.Forms.DataGrid.DataMember%2A> プロパティのドロップダウンリストから、マスターテーブルと詳細テーブルの間のリレーションシップ (例: "CustOrd") を選択します。 リレーションシップを表示するには、ドロップダウンリストでマスターテーブルの横にあるプラス記号 ( **+** ) をクリックして、ノードを展開します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGrid コントロール](datagrid-control-windows-forms.md)
 - [DataGrid コントロールの概要](datagrid-control-overview-windows-forms.md)
-- [方法 : データ ソースに Windows フォーム DataGrid コントロールをバインドする](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [Visual Studio でのデータへのコントロールのバインド](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

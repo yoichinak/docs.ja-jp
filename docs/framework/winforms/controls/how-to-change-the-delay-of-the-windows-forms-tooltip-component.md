@@ -42,7 +42,7 @@ Windows フォーム <xref:System.Windows.Forms.ToolTip> コンポーネント�
     toolTip1->AutoPopDelay = 5000;  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ToolTip コンポーネントの概要](tooltip-component-overview-windows-forms.md)
 - [方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

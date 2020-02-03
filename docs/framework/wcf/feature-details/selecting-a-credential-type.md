@@ -10,7 +10,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76746140"
 ---
 # <a name="selecting-a-credential-type"></a>資格情報の種類の選択
-*資格情報* とはWindows Communication Foundation (WCF) が要求された身分証明または資格を確立するために使用するデータです。 たとえば、パスポートは、政府によって発行される、国籍または地域籍を証明するための資格情報です。 WCF では、資格情報は、ユーザー名トークンや x.509 証明書など、さまざまな形式になります。 このトピックでは、資格情報、WCF での使用方法、およびアプリケーションに適切な資格情報を選択する方法について説明します。  
+*資格情報*は、要求された id または機能のいずれかを確立するために使用されるデータ WINDOWS COMMUNICATION FOUNDATION (WCF) です。 たとえば、パスポートは、政府によって発行される、国籍または地域籍を証明するための資格情報です。 WCF では、資格情報は、ユーザー名トークンや x.509 証明書など、さまざまな形式になります。 このトピックでは、資格情報、WCF での使用方法、およびアプリケーションに適切な資格情報を選択する方法について説明します。  
   
  多くの国や地域において、運転免許証は資格情報の一例です。 運転免許証には、個人を識別する情報や能力を表すデータが記載されます。 この免許証には、所有者の写真という形式で所有の証明が含まれています。 免許証は、政府機関など、信頼された証明機関によって発行されます。 免許証には発行機関印が押され (国や地域によってはホログラムが使用され) ており、これによって、改ざんあるいは偽造されたものではないことが示されています。  
   
@@ -23,11 +23,11 @@ ms.locfileid: "76746140"
 ## <a name="transport-credential-types"></a>トランスポート資格情報の種類  
  転送セキュリティ モードのバインディングによって使用できるクライアント資格情報の種類を次の表に示します。 サービスを作成する際には、`ClientCredentialType` プロパティを次のいずれかの値に設定し、クライアントがサービスと通信するときに提供する必要がある資格情報の種類を指定します。 この種類は、コードまたは構成ファイルで設定できます。  
   
-|設定|説明|  
+|設定|[説明]|  
 |-------------|-----------------|  
-|[なし]|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
+|なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
 |Basic|クライアントに基本認証を指定します。 詳細については、「RFC2617-[HTTP 認証: 基本認証とダイジェスト認証](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)」を参照してください。|  
-|Digest|クライアントにダイジェスト認証を指定します。 詳細については、「RFC2617-[HTTP 認証: 基本認証とダイジェスト認証](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)」を参照してください。|  
+|ダイジェスト|クライアントにダイジェスト認証を指定します。 詳細については、「RFC2617-[HTTP 認証: 基本認証とダイジェスト認証](ftp://ftp.rfc-editor.org/in-notes/rfc2617.txt)」を参照してください。|  
 |Ntlm|NT LAN Manager (NTLM) 認証を指定します。 これは、何らかの理由で Kerberos 認証を使用できないときに使用されます。 また、<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> プロパティを `false`に設定して、フォールバックとして使用を無効にすることもできます。これにより、NTLM が使用された場合に WCF がベストエフォートで例外をスローするようになります。 ただし、このプロパティを `false` に設定しても、ネットワーク経由で NTLM 資格情報が送信されなくなるとは限りません。|  
 |Windows|Windows 認証を指定します。 Windows ドメインで Kerberos プロトコルだけを指定するには、<xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> プロパティを `false` (既定値は `true`) に設定する必要があります。|  
 |Certificate|X.509 証明書を使用したクライアント認証を実行します。|  
@@ -36,9 +36,9 @@ ms.locfileid: "76746140"
 ### <a name="message-client-credential-types"></a>メッセージ クライアント資格情報の種類  
  メッセージ セキュリティを使用するアプリケーションを作成するときに使用できる資格情報の種類を次の表に示します。 これらの値は、コードまたは構成ファイルで使用できます。  
   
-|設定|説明|  
+|設定|[説明]|  
 |-------------|-----------------|  
-|[なし]|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
+|なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
 |Windows|Windows 資格情報によって確立されたセキュリティ コンテキストで、SOAP メッセージ交換を実行できます。|  
 |ユーザー名|ユーザー名資格情報を使用したクライアントの認証をサービスで要求できるようにします。 WCF では、署名の生成やデータの暗号化など、ユーザー名を使用した暗号化操作が許可されていないことに注意してください。 WCF では、ユーザー名の資格情報を使用するときに、トランスポートが確実にセキュリティで保護されます。|  
 |Certificate|X.509 証明書を使用したクライアントの認証をサービスで要求できるようにします。|  
@@ -97,7 +97,7 @@ ms.locfileid: "76746140"
   
  資格情報とセキュリティで保護されたセッションの詳細については、「[セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A?displayProperty=nameWithType>
@@ -111,6 +111,6 @@ ms.locfileid: "76746140"
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
 - [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

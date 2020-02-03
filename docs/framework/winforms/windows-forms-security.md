@@ -1,5 +1,5 @@
 ---
-title: セキュリティ
+title: Security
 ms.date: 03/30/2017
 helpviewer_keywords:
 - designer access security [Windows Forms]
@@ -32,7 +32,7 @@ Windows フォームには、コードベースのセキュリティモデル (�
  [Windows フォームのセキュリティに関するその他の考慮事項](additional-security-considerations-in-windows-forms.md)  
  ウィンドウの操作の実行、クリップボードの使用、および、信頼されていない環境でのアンマネージコードへの呼び出しについて説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [既定のセキュリティポリシー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))  
  完全信頼、ローカルイントラネット、およびインターネットのアクセス許可セットに付与されている既定のアクセス許可を一覧表示します。  
   

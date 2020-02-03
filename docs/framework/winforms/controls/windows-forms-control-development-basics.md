@@ -30,7 +30,7 @@ Windows フォームコントロールは、<xref:System.Windows.Forms.Control?d
   
  Windows フォームコントロールの基本クラス <xref:System.Windows.Forms.Control>を使用すると、クライアント側の Windows ベースのアプリケーションで視覚的に表示するために必要な機能が提供されます。 <xref:System.Windows.Forms.Control> は、ウィンドウハンドルを提供し、メッセージのルーティングを処理します。また、マウスおよびキーボードイベントだけでなく、その他多くのユーザーインターフェイスイベントも提供します。 高度なレイアウトが提供され、<xref:System.Windows.Forms.Control.ForeColor%2A>、<xref:System.Windows.Forms.Control.BackColor%2A>、<xref:System.Windows.Forms.Control.Height%2A>、<xref:System.Windows.Forms.Control.Width%2A>などのビジュアル表示に固有のプロパティがあります。 さらに、セキュリティ、スレッド処理のサポート、および ActiveX コントロールとの相互運用性が提供されます。 インフラストラクチャの大部分は基本クラスによって提供されるため、独自の Windows フォーム コントロールを比較的簡単に開発できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: シンプルな Windows フォーム コントロールを開発する](how-to-develop-a-simple-windows-forms-control.md)
 - [複合 Windows フォーム コントロールの開発](developing-a-composite-windows-forms-control.md)

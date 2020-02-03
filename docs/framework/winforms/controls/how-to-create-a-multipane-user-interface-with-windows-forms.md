@@ -176,7 +176,7 @@ ms.locfileid: "76731339"
     createOutlookUI();  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

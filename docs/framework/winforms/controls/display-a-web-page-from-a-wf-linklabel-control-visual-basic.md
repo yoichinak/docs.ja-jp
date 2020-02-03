@@ -22,7 +22,7 @@ ms.locfileid: "76745920"
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>方法 : Windows フォームの LinkLabel コントロールから Web ページを表示する (Visual Basic)
 この例では、ユーザーが Windows フォーム <xref:System.Windows.Forms.LinkLabel> コントロールをクリックしたときに、既定のブラウザーに Web ページを表示します。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
   
 ```vb  
 Private Sub Form1_Load(ByVal sender As System.Object, ByVal e _  
@@ -37,19 +37,19 @@ LinkLabel1.LinkClicked
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
 - `Form1`という名前の Windows フォーム。  
   
-- `LinkLabel1` という名前の <xref:System.Windows.Forms.LinkLabel> コントロール。  
+- <xref:System.Windows.Forms.LinkLabel> という名前の `LinkLabel1` コントロール。  
   
 - アクティブなインターネット接続。  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- <xref:System.Diagnostics.Process.Start%2A> メソッドを呼び出すには、完全信頼が必要です。 詳細については、「 <xref:System.Security.SecurityException>」を参照してください。  
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+ <xref:System.Diagnostics.Process.Start%2A> メソッドを呼び出すには、完全信頼が必要です。 詳細については、<xref:System.Security.SecurityException> を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel コントロール](linklabel-control-windows-forms.md)

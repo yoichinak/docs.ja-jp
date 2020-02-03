@@ -33,7 +33,7 @@ ms.locfileid: "76731173"
 
 フォーカスを受け取ることができないコントロールは、アクセスキーを持つことができません。
 
-## <a name="programmatic"></a>一定
+## <a name="programmatic"></a>プログラムによる
 
 `Text` プロパティを、ショートカットにする文字の前にアンパサンド (&) を含む文字列に設定します。
 
@@ -59,7 +59,7 @@ button1->Text = "&Print";
 
 Visual Studio の **[プロパティ]** ウィンドウで、 **[Text]** プロパティを、アクセスキーにする文字の前にアンパサンド (' & ') を含む文字列に設定します。 たとえば、文字 "P" をアクセスキーとして設定するには、「 **& Print**」と入力します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Button>
 - [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)

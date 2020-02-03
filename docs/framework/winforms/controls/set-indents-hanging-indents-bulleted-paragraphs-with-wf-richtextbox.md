@@ -25,7 +25,7 @@ Windows フォーム <xref:System.Windows.Forms.RichTextBox> コントロール�
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>段落を箇条書きとして書式設定するには  
   
-1. <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> プロパティを `true`に設定します。  
+1. <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> プロパティを `true` に設定します。  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -68,7 +68,7 @@ Windows フォーム <xref:System.Windows.Forms.RichTextBox> コントロール�
     > [!NOTE]
     > これらすべてのプロパティは、選択したテキストを含む段落に影響し、現在の挿入ポイントの後に入力されるテキストにも影響します。 たとえば、ユーザーが段落内の単語を選択して、インデントを調整すると、新しい設定はその単語を含む段落全体に適用され、選択した段落の後に入力される段落にも適用されます。 プログラムによるテキストの選択の詳細については、「<xref:System.Windows.Forms.TextBoxBase.Select%2A>」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox コントロール](richtextbox-control-windows-forms.md)

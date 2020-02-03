@@ -1,5 +1,5 @@
 ---
-title: Windows Forms
+title: Windows フォーム
 titleSuffix: ''
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -14,7 +14,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739185"
 ---
-# <a name="windows-forms"></a>Windows Forms
+# <a name="windows-forms"></a>Windows フォーム
 フォームはアプリケーションの基本単位であるため、機能とデザインにある程度の配慮を与えることが重要です。 フォームは、最終的には開発者がユーザー インターフェイスを作成するコントロールとデータを操作するコードを拡張する白紙状態です。 そのため、Visual Studio には、コードの記述を支援する統合開発環境 (IDE) と、.NET Framework で記述された豊富なコントロールセットが用意されています。 これらのコントロールの機能をコードに補完することにより、必要なソリューションを簡単に素早く開発できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -24,7 +24,7 @@ ms.locfileid: "76739185"
  [Windows フォーム アプリケーションの拡張](./advanced/index.md)  
  Windows フォームでのさまざまな機能を拡張する方法に関するトピックへのリンクを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム コントロール](./controls/index.md)  
  Windows フォーム コントロールの説明および、その実装方法について説明するトピックへのリンクが含まれます。  
   

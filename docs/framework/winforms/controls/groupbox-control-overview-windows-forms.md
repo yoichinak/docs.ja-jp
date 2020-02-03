@@ -22,6 +22,6 @@ Windows フォーム <xref:System.Windows.Forms.GroupBox> コントロールを�
 ## <a name="groupbox-and-panel"></a>GroupBox とパネル  
  <xref:System.Windows.Forms.GroupBox> コントロールは、<xref:System.Windows.Forms.Panel> コントロールに似ています。ただし、<xref:System.Windows.Forms.GroupBox> コントロールのみがキャプションを表示し、スクロールバーを持つことができるのは <xref:System.Windows.Forms.Panel> コントロールだけです。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [GroupBox コントロール](groupbox-control-windows-forms.md)

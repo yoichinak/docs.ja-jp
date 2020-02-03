@@ -22,11 +22,11 @@ Windows フォームコントロールは、データバインドされている
   
 ### <a name="to-sort-the-list"></a>リストを並べ替えるには  
   
-1. `Sorted` プロパティを `true`に設定します。  
+1. `Sorted` プロパティを `true` に設定します。  
   
      この設定により、既存のすべてのリスト項目が並べ替えられた順序で再配置されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>

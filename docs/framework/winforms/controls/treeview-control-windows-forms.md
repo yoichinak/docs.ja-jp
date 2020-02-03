@@ -41,10 +41,10 @@ Windows フォームの `TreeView` コントロールでは、Windows オペレ�
 
 「[方法: デザイナーを使用して Windows フォーム TreeView コントロール](add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md)を使用してノードを追加および削除する」および「[方法: デザイナーを使用して、ショートカットメニューを TreeNode にアタッチ](how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md)する」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.TreeView> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

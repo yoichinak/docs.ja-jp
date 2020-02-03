@@ -27,7 +27,7 @@ Windows フォーム <xref:System.Windows.Forms.DomainUpDown> コントロール
   
  このコントロールは、テキスト文字列のみを表示します。 数値を表示するコントロールが必要な場合は、<xref:System.Windows.Forms.NumericUpDown> コントロールを使用します。 詳細については、「 [NumericUpDown Control の概要](numericupdown-control-overview-windows-forms.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DomainUpDown>
 - [DomainUpDown コントロール](domainupdown-control-windows-forms.md)

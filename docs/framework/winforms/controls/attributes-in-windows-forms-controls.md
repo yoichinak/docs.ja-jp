@@ -20,7 +20,7 @@ ms.locfileid: "76732133"
 ## <a name="attributes-for-control-and-component-properties"></a>コントロールおよびコンポーネントのプロパティの属性  
  次の表には、カスタム コントロールおよびカスタム コンポーネントのプロパティや他のメンバーに適用できる属性が示されています。 これらの属性の多くの使用例については、「[方法: Windows フォーム コントロールに属性を適用する](how-to-apply-attributes-in-windows-forms-controls.md)」を参照してください。  
   
-|属性|説明|  
+|Attribute|[説明]|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.AmbientValueAttribute>|プロパティに渡す値を指定し、そのプロパティが別のソースから値を取得するようにします。 これは "*アンビエンス*" と呼ばれています。|  
 |<xref:System.ComponentModel.BrowsableAttribute>|プロパティまたはイベントが **[プロパティ]** ウィンドウに表示されるかどうかを指定します。|  
@@ -40,7 +40,7 @@ ms.locfileid: "76732133"
 ## <a name="attributes-for-data-binding-properties"></a>データ バインディング プロパティの属性  
  次の表には、カスタム コントロールおよびカスタム コンポーネントがデータ バインディングと相互作用する方法を指定するために適用できる属性が示されています。  
   
-|属性|説明|  
+|Attribute|[説明]|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.BindableAttribute>|バインディングにプロパティが通常、使用されるかどうかを指定します。|  
 |<xref:System.ComponentModel.ComplexBindingPropertiesAttribute>|コンポーネントのデータ ソースおよびデータ メンバーのプロパティを指定します。|  
@@ -51,7 +51,7 @@ ms.locfileid: "76732133"
 ## <a name="attributes-for-classes"></a>クラスの属性  
  次の表には、デザイン時にカスタム コントロールおよびカスタム コンポーネントの動作を指定するために適用できる属性が示されています。  
   
-|属性|説明|  
+|Attribute|[説明]|  
 |---------------|-----------------|  
 |<xref:System.ComponentModel.DefaultEventAttribute>|コンポーネントの既定のイベントを指定します。|  
 |<xref:System.ComponentModel.DefaultPropertyAttribute>|コンポーネントの既定のプロパティを指定します。|  
@@ -60,7 +60,7 @@ ms.locfileid: "76732133"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|ツールボックス項目の属性を表します。|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|ツールボックス項目に使用するフィルター文字列とフィルターの種類を指定します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Attribute>
 - [方法: Windows フォーム コントロールに属性を適用する](how-to-apply-attributes-in-windows-forms-controls.md)

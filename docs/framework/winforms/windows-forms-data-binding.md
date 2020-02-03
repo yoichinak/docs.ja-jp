@@ -53,14 +53,14 @@ Windows フォームでのデータ バインディングは、データ ソー�
   
  「[データバインディングに関連するインターフェイス](interfaces-related-to-data-binding.md)」、「[方法: Windows フォームでデータを移動](how-to-navigate-data-in-windows-forms.md)する」、および「[方法: Windows フォームに単純バインドコントロールを作成する](how-to-create-a-simple-bound-control-on-a-windows-form.md)」も参照してください。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.Binding?displayProperty=nameWithType>  
  バインドできるコンポーネントとデータ ソースの間のバインディングを表すクラスについて説明します。  
   
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>  
  コントロールにバインドするためにデータ ソースをカプセル化するクラスについて説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [BindingSource コンポーネント](./controls/bindingsource-component.md)  
  <xref:System.Windows.Forms.BindingSource> コンポーネントの使用方法の例を示すトピックの一覧を示します。  
   

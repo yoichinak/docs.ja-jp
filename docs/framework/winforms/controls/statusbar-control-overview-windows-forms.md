@@ -25,7 +25,7 @@ ms.locfileid: "76742866"
   
  ステータスバーに1つのメッセージを表示するには、[<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>] プロパティを `false` (既定値) に設定し、ステータスバーの [<xref:System.Windows.Forms.StatusBar.Text%2A>] プロパティをステータスバーに表示するテキストに設定します。 ステータスバーをパネルに分割して、複数の種類の情報を表示するには、<xref:System.Windows.Forms.StatusBar.ShowPanels%2A> プロパティを `true` に設定し、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>の <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> メソッドを使用します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>

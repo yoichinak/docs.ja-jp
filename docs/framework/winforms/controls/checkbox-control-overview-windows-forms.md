@@ -24,7 +24,7 @@ Windows フォーム <xref:System.Windows.Forms.CheckBox> コントロールは�
   
  <xref:System.Windows.Forms.CheckBox> コントロールには、<xref:System.Windows.Forms.CheckBox.Checked%2A> と <xref:System.Windows.Forms.CheckBox.CheckState%2A>という2つの重要なプロパティがあります。 <xref:System.Windows.Forms.CheckBox.Checked%2A> プロパティは、`true` または `false`のいずれかを返します。 <xref:System.Windows.Forms.CheckBox.CheckState%2A> プロパティは、<xref:System.Windows.Forms.CheckState.Checked> または <xref:System.Windows.Forms.CheckState.Unchecked>のいずれかを返します。または、<xref:System.Windows.Forms.CheckBox.ThreeState%2A> プロパティが `true`に設定されている場合、<xref:System.Windows.Forms.CheckBox.CheckState%2A> は <xref:System.Windows.Forms.CheckState.Indeterminate>も返すことがあります。 不確定状態では、オプションが使用できないことを示す淡色表示のボックスが表示されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.CheckBox>
 - [方法: Windows フォームの CheckBox コントロールでオプションを設定する](how-to-set-options-with-windows-forms-checkbox-controls.md)

@@ -66,7 +66,7 @@ Windows フォーム <xref:System.Windows.Forms.CheckedListBox> コントロー�
     }  
     ```  
   
-     - または  
+     - \- または -  
   
 2. コレクションが0から始まるため、<xref:System.Windows.Forms.CheckedListBox.Items%2A> コレクションをステップ実行し、各項目に対して <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> メソッドを呼び出します。 この方法では、一覧の項目番号が表示されるので、リスト内の最初の項目がチェックされず、2番目の項目がオンになっている場合は、"Item 2 = MyListItem2" のような内容が表示されます。  
   
@@ -111,6 +111,6 @@ Windows フォーム <xref:System.Windows.Forms.CheckedListBox> コントロー�
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

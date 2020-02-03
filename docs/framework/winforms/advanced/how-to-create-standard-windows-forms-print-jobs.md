@@ -76,7 +76,7 @@ Windows フォームでの印刷の基礎は、<xref:System.Drawing.Printing.Pri
   
      プログラムで印刷ジョブを作成する方法など、Windows フォームの印刷ジョブの詳細については、「<xref:System.Drawing.Printing.PrintPageEventArgs>」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Drawing.Printing.PrintDocument>
 - [Windows フォームにおける印刷のサポート](windows-forms-print-support.md)

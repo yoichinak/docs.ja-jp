@@ -29,13 +29,13 @@ ms.locfileid: "76733874"
  <xref:System.Windows.Forms.ToolStripComboBox> の自動補完機能について説明します。  
   
  [方法: Windows フォーム内の ToolStrip 項目の間隔と配置を変更する](how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md)  
- <xref:System.Windows.Forms.ToolStrip> 上で <xref:System.Windows.Forms.ToolStripItem> を並べ替えるためのさまざまな方法について説明します。  
+ <xref:System.Windows.Forms.ToolStripItem> 上で <xref:System.Windows.Forms.ToolStrip> を並べ替えるためのさまざまな方法について説明します。  
   
  [方法: Windows フォーム内の ToolStrip テキストとイメージの外観を変更する](how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md)  
  <xref:System.Windows.Forms.ToolStripItem> コントロール上のテキストとイメージの配置を定義および変更する方法について説明します。  
   
  [方法: ToolStripControlHost を使用して Windows フォーム コントロールをラップする](how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md)  
- <xref:System.Windows.Forms.ToolStripControlHost> で <xref:System.Windows.Forms.MonthCalendar> コントロールをホストする方法について説明します。  
+ <xref:System.Windows.Forms.MonthCalendar> で <xref:System.Windows.Forms.ToolStripControlHost> コントロールをホストする方法について説明します。  
   
  [方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
  <xref:System.Windows.Forms.ToolStrip> コントロール内で標準の描画およびカスタマイズされた描画を行う方法について説明します。  
@@ -53,7 +53,7 @@ ms.locfileid: "76733874"
  コンテナーを持たないものの、フォームを持つ <xref:System.Windows.Forms.ToolStrip> を設定する方法について説明します。  
   
  [方法: ToolStrip に ToolStripItem を配置する](how-to-position-a-toolstripitem-on-a-toolstrip.md)  
- <xref:System.Windows.Forms.ToolStrip> の左端または右端に <xref:System.Windows.Forms.ToolStripButton> を配置する方法について説明します。  
+ <xref:System.Windows.Forms.ToolStripButton> の左端または右端に <xref:System.Windows.Forms.ToolStrip> を配置する方法について説明します。  
   
  [方法: Tab キーで ToolStrip コントロールから移動できるようにする](how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md)  
  Tab キーを使用して、<xref:System.Windows.Forms.ToolStrip> 内および ToolStrip 外の次のタブ オーダーのコントロールに移動する方法について説明します。  
@@ -71,7 +71,7 @@ ms.locfileid: "76733874"
  <xref:System.Windows.Forms.ToolStripProfessionalRenderer> クラスを使用して、Microsoft® Outlook®によって提供される**ナビゲーションウィンドウ**に似た複合コントロールを作成する方法について説明します。  
   
  [方法: カスタムの ToolStripRenderer を実装する](how-to-implement-a-custom-toolstriprenderer.md)  
- <xref:System.Windows.Forms.ToolStripRenderer> から派生するクラスを実装することによって、<xref:System.Windows.Forms.ToolStrip> コントロールの外観をカスタマイズする方法について説明します。  
+ <xref:System.Windows.Forms.ToolStrip> から派生するクラスを実装することによって、<xref:System.Windows.Forms.ToolStripRenderer> コントロールの外観をカスタマイズする方法について説明します。  
   
 - [方法: デザイナーを使用して標準の項目で基本的な Windows フォーム ToolStrip を作成する](create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "76733874"
   
 - [チュートリアル: メニューのマージと ToolStrip コントロールのある MDI フォームを作成する](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.ToolStrip> クラス  
  このクラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
@@ -91,6 +91,6 @@ ms.locfileid: "76733874"
  <xref:System.Windows.Forms.ToolStripItem>  
  <xref:System.Windows.Forms.ToolStripItem> クラスについて説明し、すべてのメンバーへのリンクの一覧を示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。

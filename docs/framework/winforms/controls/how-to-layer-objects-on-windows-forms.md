@@ -53,7 +53,7 @@ txtFirstName->BringToFront();
 > [!NOTE]
 > Windows フォームは*コントロールの含有*をサポートします。 コントロールの含有では、<xref:System.Windows.Forms.GroupBox> コントロール内の <xref:System.Windows.Forms.RadioButton> コントロールの数など、多数のコントロールを含んでいるコントロール内に配置する必要があります。 次に、それを含んでいるコントロール内のコントロールをレイヤー化できます。 グループボックスを移動すると、コントロールがその中に含まれているため、コントロールも移動します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

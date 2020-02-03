@@ -20,7 +20,7 @@ Windows フォーム <xref:System.Windows.Forms.CheckedListBox> コントロー�
   
  チェックボックスをオンにすると、**文字列コレクションエディター**を使用してデザイン時に項目を追加できます。また、<xref:System.Windows.Forms.CheckedListBox.Items%2A> プロパティを使用して、実行時にコレクションから動的に項目を追加することもできます。 詳細については、「[方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールの項目を追加および削除](add-and-remove-items-from-a-wf-combobox.md)する」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.CheckedListBox>
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>

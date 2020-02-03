@@ -34,7 +34,7 @@ Windows フォームコントロールには、通常、コントロールの主
 
 [デザイナー](#designer)を使用してテキストを設定することもできます。
 
-## <a name="programmatic"></a>一定
+## <a name="programmatic"></a>プログラムによる
 
 1. <xref:System.Windows.Forms.Control.Text%2A> プロパティを文字列に設定します。
 
@@ -82,7 +82,7 @@ Windows フォームコントロールには、通常、コントロールの主
 
    [標準フォント] ダイアログボックスで、フォント、フォントスタイル、サイズ、効果 (取り消し線、下線など)、および必要なスクリプトを選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
 - [方法: Windows フォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)

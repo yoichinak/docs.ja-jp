@@ -30,7 +30,7 @@ Windows フォームアプリケーションのフォームとコントロール
 
 スマートタグは、デザイナーの有効期間中はコントロールインスタンスにアタッチされたままであり、常に使用できます。
 
-## <a name="create-the-project"></a>プロジェクトの作成
+## <a name="create-the-project"></a>プロジェクトを作成する
 
 最初にプロジェクトを作成し、フォームを設定します。
 
@@ -54,7 +54,7 @@ Windows フォームアプリケーションのフォームとコントロール
 
 6. スマートタググリフをクリックします。 グリフの横に表示されるショートカットメニューで、 **[横スプリッターの方向]** 項目を選択します。 <xref:System.Windows.Forms.SplitContainer> コントロールのスプリッターバーが水平方向に配置されていることを確認します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>

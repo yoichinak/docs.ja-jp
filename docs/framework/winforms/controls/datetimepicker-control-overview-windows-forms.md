@@ -24,7 +24,7 @@ Windows フォーム <xref:System.Windows.Forms.DateTimePicker> コントロー�
   
  コントロールの <xref:System.Windows.Forms.DateTimePicker.MaxDate%2A> プロパティと <xref:System.Windows.Forms.DateTimePicker.MinDate%2A> プロパティによって、日付と時刻の範囲が決まります。 <xref:System.Windows.Forms.DateTimePicker.Value%2A> プロパティには、コントロールが設定されている現在の日付と時刻が格納されます。 詳細については、「[方法: Windows フォーム DateTimePicker コントロールを使用して日付を設定して返す](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)」を参照してください。 値は、<xref:System.Windows.Forms.DateTimePicker.Format%2A> プロパティ (<xref:System.Windows.Forms.DateTimePickerFormat.Long>、<xref:System.Windows.Forms.DateTimePickerFormat.Short>、<xref:System.Windows.Forms.DateTimePickerFormat.Time>、または <xref:System.Windows.Forms.DateTimePickerFormat.Custom>) によって設定される4つの形式で表示できます。 カスタム形式を選択した場合は、<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A> プロパティを適切な文字列に設定する必要があります。 詳細については、「[方法: Windows フォーム DateTimePicker コントロールを使用してカスタム書式で日付を表示する](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: Windows フォームの DateTimePicker コントロールを使用してカスタム形式で日付を表示する](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
 - [方法: Windows フォームの DateTimePicker コントロールを使用して日付を設定および取得する](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

@@ -38,8 +38,8 @@ ms.locfileid: "76732352"
 
 3. 列を削除するには、 **[削除]** ボタンをクリックします。これにより、デザイナーに表示されなくなります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - [方法: Windows フォームアプリケーションプロジェクトを作成する](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法 : Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)

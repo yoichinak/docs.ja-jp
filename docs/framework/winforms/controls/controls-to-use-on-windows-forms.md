@@ -109,13 +109,13 @@ Windows フォームで使うことができるコントロールとコンポー
  Windows エクスプローラーの形式で、アイコン付きの項目一覧を表示します。  
   
  [MainMenu コンポーネント](mainmenu-component-windows-forms.md)  
- 実行時にメニューを表示します。 <xref:System.Windows.Forms.MenuStrip> に置き換えられ、以前のバージョンの <xref:System.Windows.Forms.MainMenu> コントロールに機能が追加されますが、<xref:System.Windows.Forms.MainMenu> は下位互換性と将来の使用の両方のために保持されます。  
+ 実行時にメニューを表示します。 <xref:System.Windows.Forms.MenuStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.MainMenu> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.MainMenu> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  [MaskedTextBox コントロール](maskedtextbox-control-windows-forms.md)  
  フォームでのユーザー入力の形式を制限します。  
   
  [MenuStrip コントロール](menustrip-control-windows-forms.md)  
- フォーム用のメニュー システムを提供します。 <xref:System.Windows.Forms.MenuStrip> に置き換えられ、以前のバージョンの <xref:System.Windows.Forms.MainMenu> コントロールに機能が追加されますが、<xref:System.Windows.Forms.MainMenu> は下位互換性と将来の使用の両方のために保持されます。  
+ フォーム用のメニュー システムを提供します。 <xref:System.Windows.Forms.MenuStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.MainMenu> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.MainMenu> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)  
  ユーザーが日付情報を表示して設定するための直感的なグラフィカル インターフェイスを提供します。  
@@ -129,7 +129,7 @@ Windows フォームで使うことができるコントロールとコンポー
  [OpenFileDialog コンポーネント](openfiledialog-component-windows-forms.md)  
  ユーザーが構成済みのダイアログ ボックスを使ってファイルを開くことができるようにします。  
   
- [PageSetupDialog Component](pagesetupdialog-component-windows-forms.md)  
+ [PageSetupDialog コンポーネント](pagesetupdialog-component-windows-forms.md)  
  構成済みのダイアログ ボックスを使って、印刷するページの詳細を設定します。  
   
  [Panel コントロール](panel-control-windows-forms.md)  
@@ -189,10 +189,10 @@ Windows フォームで使うことができるコントロールとコンポー
  一定の間隔でイベントを発生させます。  
   
  [ToolBar コントロール](toolbar-control-windows-forms.md)  
- コマンドをアクティブ化するメニューとビットマップのボタンを表示します。 コントロールの機能を拡張し、その外観と動作を変更できます。 <xref:System.Windows.Forms.ToolStrip> に置き換えられ、以前のバージョンの <xref:System.Windows.Forms.ToolBar> コントロールに機能が追加されますが、<xref:System.Windows.Forms.ToolBar> は下位互換性と将来の使用の両方のために保持されます。  
+ コマンドをアクティブ化するメニューとビットマップのボタンを表示します。 コントロールの機能を拡張し、その外観と動作を変更できます。 <xref:System.Windows.Forms.ToolStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  [ToolStrip コントロール](toolstrip-control-windows-forms.md)  
- Windows フォーム アプリケーションにカスタムのツールバーとメニューを作成します。 <xref:System.Windows.Forms.ToolStrip> に置き換えられ、以前のバージョンの <xref:System.Windows.Forms.ToolBar> コントロールに機能が追加されますが、<xref:System.Windows.Forms.ToolBar> は下位互換性と将来の使用の両方のために保持されます。  
+ Windows フォーム アプリケーションにカスタムのツールバーとメニューを作成します。 <xref:System.Windows.Forms.ToolStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  [ToolStripContainer コントロール](toolstripcontainer-control.md)  
  <xref:System.Windows.Forms.ToolStrip> コントロールのドッキング、ラフティング、および配置、および従来のコントロールの中央 <xref:System.Windows.Forms.ToolStripContentPanel> を行うために、フォームの各側面にパネルを提供します。  
@@ -221,7 +221,7 @@ Windows フォームで使うことができるコントロールとコンポー
  [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)  
  選択できるオプションの一覧をユーザーに提供するために使用するコントロールのセットについて説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォーム コントロール](index.md)  
  Windows フォーム コントロールの使用、それらを操作するための重要な概念について説明します。  
   

@@ -96,10 +96,10 @@ button1->Left += 200;
 > [!NOTE]
 > コントロールの X 位置と Y 位置を同時に設定するには、<xref:System.Windows.Forms.Control.Location%2A> プロパティを使用します。 位置を個別に設定するには、コントロールの <xref:System.Windows.Forms.Control.Left%2A> (**X**) または <xref:System.Windows.Forms.Control.Top%2A> (**Y**) サブプロパティを使用します。 この構造体にはボタンの座標のコピーが含まれているため、ボタンの位置を表す <xref:System.Drawing.Point> 構造体の X 座標と Y 座標を暗黙的に設定することは避けてください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロール](index.md)
-- [チュートリアル : スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
 - [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
 - [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

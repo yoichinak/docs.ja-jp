@@ -31,7 +31,7 @@ ms.locfileid: "76746402"
  [マネージド グラフィックス クラスの使用](using-managed-graphics-classes.md)  
  GDI + マネージクラスを使用してさまざまなタスクを完了する方法を示します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Drawing>  
  GDI + の基本的なグラフィックス機能へのアクセスを提供します。  
   
@@ -47,6 +47,6 @@ ms.locfileid: "76746402"
  <xref:System.Drawing.Printing>  
  印刷機能を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [コントロールのカスタム描画およびレンダリング](../controls/custom-control-painting-and-rendering.md)  
  描画コントロールのコードを提供する方法について詳しく説明します。

@@ -18,7 +18,7 @@ ms.lasthandoff: 01/24/2020
 ms.locfileid: "76747103"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>方法 : Windows フォームの DateTimePicker コントロールを使用して日付を設定および取得する
-Windows フォーム <xref:System.Windows.Forms.DateTimePicker> コントロールで現在選択されている日付または時刻は、<xref:System.Windows.Forms.DateTimePicker.Value%2A> プロパティによって決定されます。 コントロールが表示される前 (デザイン時またはフォームの <xref:System.Windows.Forms.Form.Load> イベントなど) に <xref:System.Windows.Forms.DateTimePicker.Value%2A> プロパティを設定して、コントロールで最初に選択される日付を決定します。 既定では、コントロールの <xref:System.Windows.Forms.DateTimePicker.Value%2A> は現在の日付に設定されます。 コントロールの <xref:System.Windows.Forms.DateTimePicker.Value%2A> をコードで変更するには、フォームでコントロールが新しい設定を反映するよう自動的に更新されます。  
+Windows フォーム <xref:System.Windows.Forms.DateTimePicker> コントロールで現在選択されている日付または時刻は、<xref:System.Windows.Forms.DateTimePicker.Value%2A> プロパティによって決定されます。 コントロールが表示される前 (デザイン時またはフォームの <xref:System.Windows.Forms.DateTimePicker.Value%2A> イベントなど) に <xref:System.Windows.Forms.Form.Load> プロパティを設定して、コントロールで最初に選択される日付を決定します。 既定では、コントロールの <xref:System.Windows.Forms.DateTimePicker.Value%2A> は現在の日付に設定されます。 コントロールの <xref:System.Windows.Forms.DateTimePicker.Value%2A> をコードで変更するには、フォームでコントロールが新しい設定を反映するよう自動的に更新されます。  
   
  <xref:System.Windows.Forms.DateTimePicker.Value%2A> プロパティは、値として <xref:System.DateTime> 構造を返します。 表示される日付に関する特定の情報を返す <xref:System.DateTime> 構造のプロパティはいくつかあります。 これらのプロパティは値を返す貯めにのみ使用でき、値の設定には使用しません。  
   
@@ -72,7 +72,7 @@ Windows フォーム <xref:System.Windows.Forms.DateTimePicker> コントロー�
        dateTimePicker1->Value.Millisecond.ToString()));  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DateTimePicker コントロール](datetimepicker-control-windows-forms.md)
 - [方法: Windows フォームの DateTimePicker コントロールを使用してカスタム形式で日付を表示する](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

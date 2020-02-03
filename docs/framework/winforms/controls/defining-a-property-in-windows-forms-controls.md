@@ -27,7 +27,7 @@ ms.locfileid: "76746111"
     > [!NOTE]
     > 型コンバーターまたは UI 型エディターをカスタム プロパティに使用できない場合、「[デザイン時サポートの拡張](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))」に示されているものを実装できます。  
   
- 次のコード フラグメントは、カスタム コントロール `FlashTrackBar` に対して `EndColor` という名前のカスタム プロパティを定義します。  
+ 次のコード フラグメントは、カスタム コントロール `EndColor` に対して `FlashTrackBar` という名前のカスタム プロパティを定義します。  
   
 ```vb  
 Public Class FlashTrackBar  
@@ -120,7 +120,7 @@ public int Value {
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム コントロールのプロパティ](properties-in-windows-forms-controls.md)
 - [ShouldSerialize メソッドと Reset メソッドによる既定値の定義](defining-default-values-with-the-shouldserialize-and-reset-methods.md)

@@ -59,13 +59,13 @@ Windows オペレーティングシステムでは、ユーザーはシステム
   
      このフォームは、デスクトップフォントスキームの実行時の変更に反応するようになります。 ユーザーが**通常**のフォント、**大きなフォント**、および**特大のフォント**を変更すると、フォントが変更され、適切に拡大縮小されます。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[WinFormsAutoScaling#1](~/samples/snippets/csharp/VS_Snippets_Winforms/WinFormsAutoScaling/CS/Form1.cs#1)]
  [!code-vb[WinFormsAutoScaling#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WinFormsAutoScaling/VB/Form1.vb#1)]  
   
  このコード例のコンストラクターには `InitializeComponent`の呼び出しが含まれています。これは、Visual Studio で新しい Windows フォームプロジェクトを作成するときに定義されます。 コマンドラインでアプリケーションをビルドする場合は、このコード行を削除します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
 - [Windows フォームにおける自動スケーリング](automatic-scaling-in-windows-forms.md)

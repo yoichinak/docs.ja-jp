@@ -22,7 +22,7 @@ ms.locfileid: "76743853"
   
  次の表では、<xref:System.Windows.Forms.DataGridView> コントロールで使用できるさまざまな列クラスについて説明します。  
   
-|&lt;クラス&gt; のすべてのオブジェクト|説明|  
+|クラス|[説明]|  
 |-----------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|テキストベースの値と共に使用されます。 数値および文字列にバインドするときに自動的に生成されます。|  
 |<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|<xref:System.Boolean> および <xref:System.Windows.Forms.CheckState> 値と共に使用されます。 これらの型の値にバインドするときに自動的に生成されます。|  
@@ -80,7 +80,7 @@ ms.locfileid: "76743853"
   
  <xref:System.Windows.Forms.DataGridViewLinkColumn> クラスには、リンクの表示を変更するためのいくつかのプロパティが用意されています。これらのプロパティは、クリックされる前、中、およびクリックした後に  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
@@ -91,6 +91,6 @@ ms.locfileid: "76743853"
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [DataGridView コントロール](datagridview-control-windows-forms.md)
-- [方法 : Windows フォーム DataGridView コントロールのセルにイメージを表示する](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォーム DataGridView コントロールのセルにイメージを表示する](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
 - [方法: Windows フォーム DataGridView コントロールのイメージ列を操作する](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)

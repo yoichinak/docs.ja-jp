@@ -42,7 +42,7 @@ ms.locfileid: "76742498"
   
 - [方法: オブジェクトを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-objects-to-windows-forms-datagridview-controls.md)  
   
-- [方法 : Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
+- [方法: Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする](how-to-access-objects-bound-to-windows-forms-datagridview-rows.md)  
   
 - [方法: Windows フォームの 2 つの DataGridView コントロールを使用してマスター/詳細形式のフォームを作成する](create-a-master-detail-form-using-two-datagridviews.md)  
   
@@ -90,7 +90,7 @@ ms.locfileid: "76742498"
   
 - [方法: Windows フォーム DataGridView コントロールの各セルにツールヒントを追加する](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
   
-- [方法 : Windows フォーム DataGridView コントロールのセルにイメージを表示する](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
+- [方法: Windows フォーム DataGridView コントロールのセルにイメージを表示する](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)  
   
 - [方法: Windows フォーム DataGridView コントロールの並べ替え機能をカスタマイズする](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)  
   
@@ -134,7 +134,7 @@ ms.locfileid: "76742498"
   
 ## <a name="advanced-customization-examples"></a>高度なカスタマイズの例  
   
-- [方法: Windows フォームの DataGridView コントロールのセルの外観をカスタマイズする](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [方法 : Windows フォームの DataGridView コントロールのセルの外観をカスタマイズする](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
 - [方法: Windows フォームの DataGridView コントロールの行の外観をカスタマイズする](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
@@ -152,7 +152,7 @@ ms.locfileid: "76742498"
   
 - [Windows フォーム DataGridView コントロールでの Just-In-Time データ読み込みによる仮想モードの実装](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)

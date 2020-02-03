@@ -25,7 +25,7 @@ ms.locfileid: "76737380"
 
 3. **[ToolStrip タスク]** ウィンドウで、 **[標準アイテムの挿入]** を選択します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolStrip>
 - [ToolStrip コントロールの概要](toolstrip-control-overview-windows-forms.md)

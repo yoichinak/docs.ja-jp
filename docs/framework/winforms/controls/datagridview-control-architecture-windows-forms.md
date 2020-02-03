@@ -120,11 +120,11 @@ ms.locfileid: "76742527"
   
 |セルの種類|ホストされるコントロール|列の型|  
 |---------------|--------------------|-----------------|  
-|<xref:System.Windows.Forms.DataGridViewButtonCell>|N/A|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
-|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|N/A|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
+|<xref:System.Windows.Forms.DataGridViewButtonCell>|該当なし|<xref:System.Windows.Forms.DataGridViewButtonColumn>|  
+|<xref:System.Windows.Forms.DataGridViewCheckBoxCell>|該当なし|<xref:System.Windows.Forms.DataGridViewCheckBoxColumn>|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxCell>|<xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|  
-|<xref:System.Windows.Forms.DataGridViewImageCell>|N/A|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
-|<xref:System.Windows.Forms.DataGridViewLinkCell>|N/A|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
+|<xref:System.Windows.Forms.DataGridViewImageCell>|該当なし|<xref:System.Windows.Forms.DataGridViewImageColumn>|  
+|<xref:System.Windows.Forms.DataGridViewLinkCell>|該当なし|<xref:System.Windows.Forms.DataGridViewLinkColumn>|  
 |<xref:System.Windows.Forms.DataGridViewTextBoxCell>|<xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>|<xref:System.Windows.Forms.DataGridViewTextBoxColumn>|  
   
 ### <a name="datagridviewrow"></a>DataGridViewRow  
@@ -136,7 +136,7 @@ ms.locfileid: "76742527"
   
  <xref:System.Windows.Forms.DataGridView> コントロールの <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> プロパティを有効にすると、新しい行を追加するための特殊な行が最後の行として表示されます。 この行は <xref:System.Windows.Forms.DataGridView.Rows%2A> コレクションの一部ですが、注意が必要な特別な機能を備えています。 詳細については、「 [Windows フォーム DataGridView コントロールでの新しいレコードの行の使用](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [DataGridView コントロールの概要](datagridview-control-overview-windows-forms.md)
 - [Windows フォーム DataGridView コントロールのカスタマイズ](customizing-the-windows-forms-datagridview-control.md)

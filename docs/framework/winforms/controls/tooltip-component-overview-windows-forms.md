@@ -22,7 +22,7 @@ Windows フォーム <xref:System.Windows.Forms.ToolTip> コンポーネント�
   
  <xref:System.Windows.Forms.ToolTip> コンポーネントの主要なメソッドは <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> と <xref:System.Windows.Forms.ToolTip.GetToolTip%2A>です。 <xref:System.Windows.Forms.ToolTip.SetToolTip%2A> メソッドを使用して、コントロールに表示されるツールヒントを設定できます。 詳細については、「[方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)」を参照してください。 キーのプロパティは <xref:System.Windows.Forms.ToolTip.Active%2A>です。ツールヒントを表示するには、`true` に設定する必要があります。 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>また、ツールヒントの文字列を表示する時間の長さ、ツールヒントを表示するためにユーザーがコントロールをポイントする必要がある期間、およびその後のツールヒントウィンドウが表示されるまでの時間を設定します。 詳細については、「[方法: Windows フォーム ToolTip コンポーネントの遅延を変更する](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.ToolTip>
 - [方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)

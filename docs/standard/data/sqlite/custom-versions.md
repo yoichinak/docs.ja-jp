@@ -21,9 +21,9 @@ SQLitePCLRaw にはバンドルパッケージが用意されているため、�
 
 別のバンドルを使用するには、使用するバンドルパッケージと共に `Microsoft.Data.Sqlite.Core` パッケージをインストールします。 バンドルは、自動的に Microsoft. Data. Sqlite によって初期化されます。
 
-| ・ | 説明 |
+| バンドル | [説明] |
 | --- | --- |
-| Bundle_e_sqlite3 SQLitePCLRaw | すべてのプラットフォームで SQLite の一貫性のあるバージョンを提供します。 には、FTS4、FTS5、JSON1、および R * ツリー拡張が含まれています。 これは既定です。 |
+| Bundle_e_sqlite3 SQLitePCLRaw | すべてのプラットフォームで SQLite の一貫性のあるバージョンを提供します。 には、FTS4、FTS5、JSON1、および R * ツリー拡張が含まれています。 これは既定値です。 |
 | Bundle_green SQLitePCLRaw | Bundle_e_sqlite3 と同じですが、システム SQLite ライブラリを使用する iOS を除きます。 |
 | Bundle_zetetic SQLitePCLRaw | では、Zetetic (含まれていません) からの公式の SQLCipher ビルドが使用されます。 |
 | Bundle_winsqlite3 SQLitePCLRaw | Windows 10 のシステム SQLite ライブラリである winsqlite3 を使用します。 |

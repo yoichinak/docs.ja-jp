@@ -27,14 +27,14 @@ ms.locfileid: "76736781"
   
 ### <a name="to-format-currency-and-date-values"></a>通貨と日付の値を書式設定するには  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle> の <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> プロパティを設定します。 次のコード例では、列の <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> プロパティを使用して、特定の列の形式を設定します。 `UnitPrice` 列の値は、現在のカルチャ固有の通貨書式で表示され、負の値はかっこで囲まれます。 `ShipDate` 列の値は、現在のカルチャに固有の短い日付形式で表示されます。 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 値の詳細については、「[型の書式設定](../../../standard/base-types/formatting-types.md)」を参照してください。  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> の <xref:System.Windows.Forms.DataGridViewCellStyle> プロパティを設定します。 次のコード例では、列の <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> プロパティを使用して、特定の列の形式を設定します。 `UnitPrice` 列の値は、現在のカルチャ固有の通貨書式で表示され、負の値はかっこで囲まれます。 `ShipDate` 列の値は、現在のカルチャに固有の短い日付形式で表示されます。 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> 値の詳細については、「[型の書式設定](../../../standard/base-types/formatting-types.md)」を参照してください。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#071)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#071](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#071)]  
   
 ### <a name="to-customize-the-display-of-null-database-values"></a>Null データベース値の表示をカスタマイズするには  
   
-- <xref:System.Windows.Forms.DataGridViewCellStyle> の <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> プロパティを設定します。 次のコード例では、<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> プロパティを使用して、<xref:System.DBNull.Value?displayProperty=nameWithType>と等しい値を含むすべてのセルに "no entry" と表示します。  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> の <xref:System.Windows.Forms.DataGridViewCellStyle> プロパティを設定します。 次のコード例では、<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType> プロパティを使用して、<xref:System.DBNull.Value?displayProperty=nameWithType>と等しい値を含むすべてのセルに "no entry" と表示します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#073)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#073](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#073)]  
@@ -53,21 +53,21 @@ ms.locfileid: "76736781"
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#072)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#072](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#072)]  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#070](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#070)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#070](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#070)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
- これらの例には次の項目が必要です。  
+## <a name="compiling-the-code"></a>コードのコンパイル  
+ これらの例には以下のものが必要です。  
   
 - `UnitPrice`という名前の列、`ShipDate`という名前の列、および `CustomerName`という名前の列を含む `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
 - <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType>、および <xref:System.Windows.Forms?displayProperty=nameWithType> の各アセンブリへの参照。  
   
 ## <a name="robust-programming"></a>堅牢性の高いプログラミング  
- 最大限のスケーラビリティを実現するには、各要素のスタイルプロパティを個別に設定するのではなく、同じスタイルを使用する複数の行、列、またはセルにわたって <xref:System.Windows.Forms.DataGridViewCellStyle> オブジェクトを共有する必要があります。 詳細については、「 [Windows フォーム DataGridView コントロールのスケーリングのベストプラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)」を参照してください。  
+ 最大限のスケーラビリティを実現するには、各要素のスタイルプロパティを個別に設定するのではなく、同じスタイルを使用する複数の行、列、またはセルにわたって <xref:System.Windows.Forms.DataGridViewCellStyle> オブジェクトを共有する必要があります。 詳細については、「 [Windows フォーム DataGridView コントロールを拡張するための推奨される手順](best-practices-for-scaling-the-windows-forms-datagridview-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
