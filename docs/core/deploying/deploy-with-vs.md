@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 6116b2322ed2071b78bcd77de7c38ad07c327aa6
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740840"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920891"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
@@ -28,7 +28,7 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
 ## <a name="framework-dependent-deployment"></a>フレームワークに依存する展開
 
-サードパーティの依存関係を含まない、フレームワークに依存する展開を展開するプロセスには、アプリのビルド、テスト、および発行が含まれます。 C# で記述された次の単純な例は、このプロセスを示しています。  
+サードパーティの依存関係を含まない、フレームワークに依存する展開を展開するプロセスには、アプリのビルド、テスト、および発行が含まれます。 C# で記述された次の単純な例は、このプロセスを示しています。
 
 1. プロジェクトを作成します。
 
@@ -189,7 +189,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
    プロファイルを既に作成している場合、そのプロファイルを右クリックし、 **[発行]** ダイアログを開きます (まだ開いていない場合)。 **[新しいプロファイル]** を選択します。
 
    **[発行先を選択]** ダイアログ ボックスが開きます。
-  
+
 1. Visual Studio によってアプリケーションが発行される場所を選択します。
 
    発行先のプラットフォームが 1 つだけの場合、 **[フォルダーを選択してください]** テキスト ボックスで既定値をそのまま選択しても問題ありません。これでアプリケーションのフレームワーク依存展開が *\<project-directory>\bin\Release\netcoreapp2.1\publish* ディレクトリに発行されます。
@@ -244,7 +244,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-https://go.microsoft.com/fwlink/?LinkID=208121. 
+https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
