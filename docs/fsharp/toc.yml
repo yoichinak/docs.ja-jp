@@ -256,6 +256,8 @@
       href: language-reference/caller-information.md
     - name: 冗語構文
       href: language-reference/verbose-syntax.md
+    - name: コンパイラのエラーと警告
+      href: language-reference/compiler-messages/index.md
 - name: 'F# スタイル ガイド'
   href: style-guide/index.md
   items:

@@ -1,19 +1,19 @@
 ---
-title: 追加の CLI ツール
+title: その他のツール
 description: .NET Core 機能をサポートおよび拡張する、インストール可能な追加ツールについての概要。
 author: mlacouture
 ms.date: 12/02/2019
 ms.custom: mvc
-ms.openlocfilehash: 853633f5ef159eee39ed1a8682372d4291a752f5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 23b94ceef729cdc3d83032e3897312eb1d1afd79
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740708"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920928"
 ---
 # <a name="net-core-additional-tools-overview"></a>.NET Core の追加ツールの概要
 
-このセクションでは、[.NET Core コマンドライン インターフェイス (CLI)](../tools/index.md) ツールに加え、.NET Core 機能を支援し、拡張するツールを一覧で紹介します。
+このセクションでは、.NET Core CLI に加えて、.NET Core 機能をサポートおよび拡張するツールの一覧をまとめて説明します。
 
 ## <a name="net-core-uninstall-tooluninstall-toolmd"></a>[.NET Core アンインストール ツール](uninstall-tool.md)
 
@@ -25,9 +25,9 @@ WCF (Windows Communication Foundation) Web Service Reference は、Visual Studio
 
 ## <a name="wcf-dotnet-svcutil-tooldotnet-svcutil-guidemd"></a>[WCF dotnet-svcutil ツール](dotnet-svcutil-guide.md)
 
-WCF (Windows Communication Foundation) の dotnet-svcutil ツールは、ネットワーク上の Web サービスまたは WSDL ファイルからメタデータを取得する .NET Core CLI ツールです。 それにより、.NET Core と互換性のあるソース ファイルが生成され、Web サービス操作へのアクセスに使用できるメソッドを含む WCF プロキシ クラスが定義されます。
+WCF (Windows Communication Foundation) の dotnet-svcutil ツールは、ネットワークの場所にある Web サービスまたは WSDL ファイルからメタデータを取得する .NET ツールです。 それにより、.NET Core と互換性のあるソース ファイルが生成され、Web サービス操作へのアクセスに使用できるメソッドを含む WCF プロキシ クラスが定義されます。
 
-**dotnet-svcutil** ツールは、Visual Studio 2017 バージョン 15.5 で最初に用意された Visual Studio 接続済みサービス プロバイダーである、[**WCF Web Service Reference**](wcf-web-service-reference-guide.md) に対する代わりのオプションです。 .NET Core CLI ツールである **dotnet-svcutil** ツールは、Linux、macOS、Windows 上で利用可能なクロスプラットフォームです。
+**dotnet-svcutil** ツールは、Visual Studio 2017 バージョン 15.5 で最初に用意された Visual Studio 接続済みサービス プロバイダーである、[**WCF Web Service Reference**](wcf-web-service-reference-guide.md) に対する代わりのオプションです。 **dotnet-svcutil** ツールは、.NET ツールとして、Linux、macOS、Windows 上でクロスプラットフォームで利用できます。
 
 ## <a name="wcf-dotnet-svcutilxmlserializer-tooldotnet-svcutilxmlserializer-guidemd"></a>[WCF dotnet-svcutil.xmlserializer ツール](dotnet-svcutil.xmlserializer-guide.md)
 

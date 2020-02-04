@@ -1,26 +1,20 @@
 ---
-title: .NET Core コマンドライン インターフェイス (CLI) ツール
-description: .NET Core コマンドライン インターフェイス (CLI) ツールとその機能の概要です。
+title: .NET Core CLI
+titleSuffix: ''
+description: .NET Core CLI とその機能に関する概要です。
 ms.date: 08/14/2017
-ms.openlocfilehash: f19dcb19fb9d0203b3d3795c3fdc0b026c4c60e3
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163216"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920478"
 ---
-# <a name="net-core-command-line-interface-cli-tools"></a>.NET Core コマンドライン インターフェイス (CLI) ツール
+# <a name="net-core-cli-overview"></a>.NET Core CLI の概要
 
-.NET Core コマンド ライン インターフェイス (CLI) は、.NET アプリケーションを開発するためのクロスプラットフォーム ツールチェーンです。 CLI は、統合開発環境 (IDE)、エディター、ビルド オーケストレーターなど、上位レベルのツールの基礎になるものです。
+.NET Core コマンド ライン インターフェイス (CLI) は、.NET Core アプリケーションを開発、ビルド、実行、発行するためのクロスプラットフォーム ツールチェーンです。
 
-## <a name="installation"></a>インストール
-
-ネイティブ インストーラーを使用するか、インストール シェル スクリプトを使用します。
-
-- ネイティブ インストーラーは主に開発者のコンピューター上で使用され、それぞれサポートされるプラットフォームのネイティブ インストール メカニズムを使用します。たとえば、Ubuntu の場合は DEB パッケージ、Windows の場合は MSI バンドルを使用します。 これらのインストーラーでは、開発者がすぐに使用できる環境をインストールして構成します。ただし、コンピューターに対する管理者特権が必要になります。 インストール手順は、[.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)で確認できます。
-- シェル スクリプトは主に管理者特権なしでツールをインストールするときや、ビルド サーバーを設定するために使用されます。 インストール スクリプトの場合、前提条件はインストールされないため、手動でインストールする必要があります。 詳細については、[インストール スクリプト参照](dotnet-install-script.md)に関するトピックを参照してください。 継続的インテグレーション (CI) ビルド サーバーで CLI を設定する方法については、「[継続的インテグレーション (CI) で .NET Core SDK とツールを使用する](using-ci-with-cli.md)」を参照してください。
-
-既定では、CLI は SxS (side-by-side) 方式でインストールを実行するため、複数のバージョンの CLI ツールが 1 台のコンピューターで共存できます。 複数のバージョンがインストールされたコンピューターで使用するバージョンの決定方法について詳しくは、「[ドライバー](#driver)」セクションを参照してください。
+.NET Core CLI は、[.NET Core SDK](../sdk.md) に含まれています。 .NET Core SDK をインストールする方法については、「[.NET Core SDK をインストールする](../install/sdk.md)」をご覧ください。
 
 ## <a name="cli-commands"></a>CLI コマンド
 
@@ -153,5 +147,5 @@ Preview 2 ツールを使用して *project.json* ベースのプロジェクト
 
 ## <a name="see-also"></a>関連項目
 
-- [dotnet/CLI GitHub リポジトリ](https://github.com/dotnet/cli/)
+- [dotnet/sdk GitHub リポジトリ](https://github.com/dotnet/sdk/)
 - [.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)

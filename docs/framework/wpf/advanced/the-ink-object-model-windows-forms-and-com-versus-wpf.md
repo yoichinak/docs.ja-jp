@@ -31,7 +31,7 @@ ms.locfileid: "76737286"
   
  次の表に、アプリケーションでインクを有効にする方法の詳細について説明します。  
   
-|これを行う.|WPF プラットフォームで...|Windows フォーム/COM プラットフォームで...|  
+|操作方法|WPF プラットフォームで...|Windows フォーム/COM プラットフォームで...|  
 |-----------------|--------------------------|------------------------------------------|  
 |アプリケーションにインク対応コントロールを追加する|「[インクを使用したはじめに」を](getting-started-with-ink.md)参照してください。|[自動要求フォームのサンプル](/windows/desktop/tablet/auto-claims-form-sample)を参照してください|  
 |カスタムコントロールでインクを有効にする|「[インク入力コントロールの作成」を](creating-an-ink-input-control.md)参照してください。|「[インククリップボードのサンプル](/windows/desktop/tablet/ink-clipboard-sample)」を参照してください。|  
@@ -55,8 +55,8 @@ ms.locfileid: "76737286"
 |----------|-------------------------------------|---------------------------|  
 |インクを保存する|<xref:System.Windows.Ink.StrokeCollection.Save%2A>|[Microsoft. Ink. 保存](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571335(v=vs.90))|  
 |インクの読み込み|<xref:System.Windows.Ink.StrokeCollection.%23ctor%2A> コンストラクターを使用して <xref:System.Windows.Ink.StrokeCollection> を作成します。|[Microsoft Ink。読み込み](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms569609(v=vs.90))|  
-|ヒットテスト|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[Microsoft.Ink.Ink.HitTest](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90))|  
-|インクをコピーする|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft.Ink.Ink.ClipboardCopy](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571316(v=vs.90))|  
+|ヒットテスト|<xref:System.Windows.Ink.StrokeCollection.HitTest%2A>|[System.windows.media.visualtreehelper.hittest (Microsoft Ink)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571330(v=vs.90))|  
+|インクをコピーする|<xref:System.Windows.Controls.InkCanvas.CopySelection%2A>|[Microsoft Ink クリップボードのコピー](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571316(v=vs.90))|  
 |インクの貼り付け|<xref:System.Windows.Controls.InkCanvas.Paste%2A>|[Microsoft. Ink. クリップボードの貼り付け](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms571318(v=vs.90))|  
 |ストロークのコレクションのカスタムプロパティにアクセスする|<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A> (プロパティは内部的に格納され、<xref:System.Windows.Ink.StrokeCollection.AddPropertyData%2A>、<xref:System.Windows.Ink.StrokeCollection.RemovePropertyData%2A>、および <xref:System.Windows.Ink.StrokeCollection.ContainsPropertyData%2A>を介してアクセスされます)|[Microsoft Ink プロパティ](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms582214(v=vs.90))を使用する|  
   
@@ -86,7 +86,7 @@ ms.locfileid: "76737286"
 [!code-vb[WinFormWPFInk#LoadWinforms](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#loadwinforms)]
 ## <a name="events-from-the-tablet-pen"></a>タブレットペンからのイベント  
 
- Windows フォームと COM プラットフォーム上の[InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))および[microsoft は、](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))ユーザーがペンデータを入力したときに[イベントを受信](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583740(v=vs.90))することができます。 InkCollector[は、ウィンドウ](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))または[コントロール](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))にアタッチされ、タブレット入力データによって生成されたイベントをサブスクライブできます。 これらのイベントが発生するスレッドは、ペン、マウス、またはプログラムによってイベントが発生したかどうかによって異なります。 これらのイベントに関連したスレッド処理の詳細については、「[イベントが発生](/windows/desktop/tablet/threads-on-which-an-event-can-fire)する[一般的なスレッド処理の考慮事項](/windows/desktop/tablet/general-threading-considerations)とスレッド」を参照してください。  
+ Windows フォームと COM プラットフォーム上の[InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))および[microsoft は、](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))ユーザーがペンデータを入力したときに[イベントを受信](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583740(v=vs.90))することができます。 InkCollector[は、ウィンドウ](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))またはコントロール[Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))にアタッチされ、タブレット入力データによって生成されたイベントをサブスクライブできます。 これらのイベントが発生するスレッドは、ペン、マウス、またはプログラムによってイベントが発生したかどうかによって異なります。 これらのイベントに関連したスレッド処理の詳細については、「[イベントが発生](/windows/desktop/tablet/threads-on-which-an-event-can-fire)する[一般的なスレッド処理の考慮事項](/windows/desktop/tablet/general-threading-considerations)とスレッド」を参照してください。  
   
  Windows Presentation Foundation プラットフォームでは、<xref:System.Windows.UIElement> クラスにはペン入力のイベントがあります。 これは、すべてのコントロールがスタイラスイベントの完全なセットを公開することを意味します。  スタイラスイベントは、トンネルイベントとバブルイベントのペアを持ち、常にアプリケーションスレッド上で発生します。  詳細については、「[ルーティングイベントの概要](routed-events-overview.md)」を参照してください。  
   

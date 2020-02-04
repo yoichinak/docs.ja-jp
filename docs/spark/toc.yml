@@ -31,6 +31,10 @@
       href: how-to-guides/databricks-deploy-methods.md
     - name: ワーカーおよび UDF のバイナリを展開する
       href: how-to-guides/deploy-worker-udf-binaries.md
+    - name: Ubuntu 上でアプリケーションをビルドする
+      href: how-to-guides/ubuntu-instructions.md
+    - name: Windows 上でアプリケーションをビルドする
+      href: how-to-guides/windows-instructions.md
 - name: 関連項目
   items:
     - name: API リファレンス

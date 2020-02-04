@@ -97,7 +97,7 @@
       href: tutorials/using-on-mac-vs.md
     - name: macOS での完全な .NET Core ソリューションの構築
       href: tutorials/using-on-mac-vs-full-solution.md
-    - name: CLI ツールを使用する .NET Core に関する概要
+    - name: CLI を使用する .NET Core に関する概要
       href: tutorials/cli-create-console-app.md
     - name: .NET Core CLI を使用したプロジェクトの整理およびテスト
       href: tutorials/testing-with-cli.md
@@ -151,11 +151,11 @@
 - name: アプリケーションの展開
   href: deploying/index.md
   items:
-    - name: CLI ツールを使用したアプリの展開
+    - name: CLI を使用してアプリを発行する
       href: deploying/deploy-with-cli.md
     - name: Visual Studio を使用したアプリの展開
       href: deploying/deploy-with-vs.md
-    - name: クロスプラットフォーム ツールを使用した NuGet パッケージの作成
+    - name: CLI を使用して NuGet パッケージを作成する
       href: deploying/creating-nuget-packages.md
     - name: 自己完結型展開ランタイムのロール フォワード
       href: deploying/runtime-patch-selection.md

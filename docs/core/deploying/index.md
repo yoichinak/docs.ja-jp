@@ -2,12 +2,12 @@
 title: .NET Core アプリケーション展開
 description: .NET Core アプリケーションを展開する方法について説明します。
 ms.date: 12/03/2018
-ms.openlocfilehash: 41c5285f2a9ddf38e4be7326bd5cba1c58370fe7
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 425f0d5bf11fd0572825d2025005aacf65d7d2cd
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740811"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920875"
 ---
 # <a name="net-core-application-deployment"></a>.NET Core アプリケーションの展開
 
@@ -91,11 +91,11 @@ FDE の展開には、次のいくつかの利点があります。
 
 ## <a name="step-by-step-examples"></a>手順の例
 
-CLI ツールで .NET Core アプリを展開する手順の例については、「[CLI を使用して .NET Core アプリを展開する](deploy-with-cli.md)」をご覧ください。 Visual Studio で .NET Core アプリを展開する手順の例については、「[Visual Studio を使用して .NET Core アプリを展開する](deploy-with-vs.md)」 をご覧ください。 
+.NET Core CLI を使って .NET Core アプリを展開する手順の例については、「[.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)」をご覧ください。 Visual Studio で .NET Core アプリを展開する手順の例については、「[Visual Studio を使用して .NET Core アプリを展開する](deploy-with-vs.md)」 をご覧ください。 
 
 ## <a name="see-also"></a>関連項目
 
-- [CLI を使用して .NET Core アプリを展開する](deploy-with-cli.md)
+- [.NET Core CLI を使用して .NET Core アプリを発行する](deploy-with-cli.md)
 - [Visual Studio を使用して .NET Core アプリを展開する](deploy-with-vs.md)
 - [パッケージ、メタパッケージ、フレームワーク](../packages.md)
 - [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

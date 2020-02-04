@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 9fd0c55294815c191f1e116dd4e16a44693f3565
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900594"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921370"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -63,7 +63,7 @@ ms.locfileid: "75900594"
 
 アセンブリを作成するには、いくつかの方法があります。 Visual Studio など、 *.dll* ファイルや *.exe* ファイルを作成できる開発ツールを使用できます。 他の開発環境のモジュールを使ってアセンブリを作成するには、Windows SDK の各種ツールを使用できます。 動的アセンブリの作成には、<xref:System.Reflection.Emit?displayProperty=nameWithType> などの共通言語ランタイム API も使用できます。
 
-アセンブリをコンパイルするには、Visual Studio でビルドするか、.NET Core コマンド ライン インターフェイス ツールでビルドするか、コマンド ライン コンパイラを使用して .NET Framework アセンブリを構築します。 .NET Core コマンド ライン インターフェイス ツールを使ったアセンブリのビルドについて詳しくは、「[.NET Core コマンド ライン インターフェイス (CLI) ツール](../../core/tools/index.md)」を参照してください。 コマンド ライン コンパイラを使ったアセンブリのビルドについては、「[csc.exe を使用したコマンド ラインからのビルド](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」(C#)、および[コマンド ラインからのビルド](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) (Visual Basic) に関する記事を参照してください。
+アセンブリをコンパイルするには、Visual Studio でビルドするか、.NET Core コマンド ライン インターフェイス ツールでビルドするか、コマンド ライン コンパイラを使用して .NET Framework アセンブリを構築します。 .NET Core CLI を使ったアセンブリのビルドについて詳しくは、「[.NET Core CLI の概要](../../core/tools/index.md)」をご覧ください。 コマンド ライン コンパイラを使ったアセンブリのビルドについては、「[csc.exe を使用したコマンド ラインからのビルド](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」(C#)、および[コマンド ラインからのビルド](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) (Visual Basic) に関する記事を参照してください。
 
 > [!NOTE]
 > Visual Studio でアセンブリをビルドするには、 **[ビルド]** メニューの **[ビルド]** を選択します。

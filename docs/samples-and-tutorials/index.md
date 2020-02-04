@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: e64d0fdd02b28a1c9f21f06305f5ef278fb2827b
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 9a161d5325125fba8d4f4e53a0a306c989ed6bc5
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901033"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921399"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -25,13 +25,13 @@ ms.locfileid: "75901033"
 
 ### <a name="tutorials"></a>チュートリアル
 
-**[CLI ツールを使用する .NET Core コンソール アプリの作成: 手順ガイド](../core/tutorials/cli-create-console-app.md)**
+**[.NET Core CLI を使用した .NET Core コンソール アプリの作成:手順ガイド](../core/tutorials/cli-create-console-app.md)**
 
 このガイドでは、.NET Core CLI ツールを使用してクロスプラットフォーム コンソール アプリを作成する方法を説明します。 基本的なコンソール アプリから始めて、最終的にテストを含む複数プロジェクトまで拡張します。 段階的に機能を追加し、作業を進めながらナレッジを構築します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/console-apps)は、GitHub の dotnet/samples リポジトリにあります。
 
 **[クロス プラットフォーム ツールによるライブラリの作成](../core/tutorials/libraries.md)**
 
-このサンプルでは、クロスプラットフォーム CLI ツールを使用して .NET 用ライブラリを作成する方法について説明します。 これらのツールは、サポートされる任意のオペレーティング システムで動作する効率的で低レベルのエクスペリエンスを提供します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library)は、GitHub の dotnet/samples リポジトリにあります。
+このサンプルでは、.NET Core CLI を使用して .NET 用ライブラリを作成する方法について説明します。 これらのツールは、サポートされる任意のオペレーティング システムで動作する効率的で低レベルのエクスペリエンスを提供します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/framework/libraries/frameworks-library)は、GitHub の dotnet/samples リポジトリにあります。
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
@@ -111,7 +111,7 @@ ms.locfileid: "75901033"
    * リポジトリをローカル環境にクローンします。 ローカル システムにドキュメントのリポジトリを直接クローンすると、公式のリポジトリに対して直接コミットできないため、後でドキュメントに貢献できなくなります。 後でドキュメントに貢献する可能性がある場合は、前述のフォークとクローンの手順を使用してください。
 1. リポジトリ フォルダー内のサンプルがある場所に移動します。 サンプルへのリンクをクリックすると、サンプルがある場所への相対パスがブラウザーのアドレス バーに表示されます。
 1. サンプルを実行するには、次のいくつかのオプションがあります。
-   * [dotnet CLI ツール](../core/tools/index.md)を使用する: コンソール ウィンドウで、サンプルのフォルダーに移動し、dotnet CLI コマンドを使用する。
+   * [.NET Core CLI](../core/tools/index.md) を使用する:コンソール ウィンドウで、サンプルのフォルダーに移動し、dotnet CLI コマンドを使用する。
    * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) または [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用する: メニュー バーから **[ファイル] > [開く] > [プロジェクト/ソリューション]** の順に選択し、サンプルを開きます。次にサンプルのプロジェクト フォルダーに移動し、プロジェクト ファイル ( *.csproj* または *.fsproj*) を選択します。
    * [Visual Studio Code](https://code.visualstudio.com/) を使用する: メニュー バーから **[ファイル] > [フォルダーを開く]** の順に選択し、サンプルのプロジェクト フォルダーを選択してサンプルを開きます。
    * .NET Core プロジェクトをサポートする別の IDE を使用する。

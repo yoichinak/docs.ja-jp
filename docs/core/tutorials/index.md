@@ -4,12 +4,12 @@ description: Mac、Linux、および Windows でアプリとライブラリを�
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 7039d5877ecbd4477d64991321a7fc46cadc2848
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714042"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920426"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>これらのチュートリアルを詳しく確認して .NET Core と .NET Core SDK ツールについて学習する
 
@@ -35,10 +35,10 @@ ms.locfileid: "75714042"
 - [Visual Studio for Mac を使用した macOS での .NET Core の概要](using-on-mac-vs.md)
 - [Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築](using-on-mac-vs-full-solution.md)
 
-## <a name="build-applications-with-the-net-core-cli-tools"></a>.NET Core CLI ツールを使用してアプリケーションを構築する
+## <a name="build-applications-with-the-net-core-cli"></a>.NET Core CLI を使用してアプリケーションを構築する
 
-- [.NET Core CLI ツールを使用した Windows/Linux/macOS での .NET Core の概要](cli-create-console-app.md)
-- [.NET Core CLI ツールを使用したプロジェクトの整理およびテスト](testing-with-cli.md)
+- [.NET Core CLI を使用して Windows/Linux/macOS 上で .NET Core の使用を開始する](cli-create-console-app.md)
+- [.NET Core CLI を使用したプロジェクトの整理およびテスト](testing-with-cli.md)
 - [F# の使用を開始する](../../fsharp/get-started/get-started-command-line.md)
 
 ## <a name="other"></a>その他
