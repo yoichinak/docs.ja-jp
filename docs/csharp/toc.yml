@@ -1542,11 +1542,11 @@
               href: language-reference/keywords/partial-method.md
             - name: remove
               href: language-reference/keywords/remove.md
-            - name: 設定
+            - name: set
               href: language-reference/keywords/set.md
             - name: when (フィルター条件)
               href: language-reference/keywords/when.md
-            - name: 値
+            - name: value
               href: language-reference/keywords/value.md
             - name: yield
               href: language-reference/keywords/yield.md
@@ -1581,7 +1581,7 @@
               href: language-reference/keywords/equals.md
             - name: by
               href: language-reference/keywords/by.md
-            - name: の
+            - name: in
               href: language-reference/keywords/in.md
     - name: 'C# 演算子'
       items:
@@ -1642,7 +1642,7 @@
         - name: await 演算子
           href: language-reference/operators/await.md
           displayName: async
-        - name: 既定の演算子
+        - name: default 演算子
           href: language-reference/operators/default.md
           displayName: 'default value, default literal, type default'
         - name: delegate 演算子

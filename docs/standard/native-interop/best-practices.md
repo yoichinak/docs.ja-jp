@@ -19,7 +19,7 @@ ms.locfileid: "76742749"
 
 - メソッドとパラメーターには、呼び出すネイティブメソッドと同じ名前付けと大文字小文字を使用✔️ます。
 - ✔️定数値には、同じ名前と大文字小文字の使用を検討してください。
-- ネイティブ型に最も近い型にマップされる .NET 型を使用✔️ます。 たとえば、C# では、ネイティブ型が `unsigned int` の場合は `uint` を使用します。
+- ネイティブ型に最も近い型にマップされる .NET 型を使用✔️ます。 たとえば、C# では、ネイティブ型が `uint` の場合は `unsigned int` を使用します。
 - ✔️は、必要な動作が既定の動作と異なる場合にのみ `[In]` と `[Out]` 属性を使用します。
 - ✔️ <xref:System.Buffers.ArrayPool%601?displayProperty=nameWithType> を使用して、ネイティブ配列バッファーをプールすることを検討してください。
 - ネイティブライブラリと同じ名前で大文字と小文字を区別するクラスで P/Invoke 宣言をラップする✔️ます。
@@ -27,11 +27,11 @@ ms.locfileid: "76742749"
 
 ## <a name="dllimport-attribute-settings"></a>dllImport 属性の設定
 
-| 設定 | [既定値] | [推奨設定] | [詳細] |
+| 設定 | Default | 推奨 | 詳細 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  既定値のままにします  | これが明示的に false に設定されている場合、失敗した HRESULT の戻り値は例外になります (そして結果として定義内の戻り値は null になります)。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API によって異なります  | API が GetLastError を使用し、Marshal.GetLastWin32Error を使用して値を取得する場合は、true に設定します。 API がエラーがあるという条件を設定している場合は、誤って上書きされないように他の呼び出しを行う前にエラーを取得します。|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` (`CharSet.Ansi` の動作にフォールバックします)  | 定義内に文字列または文字が存在する場合は、明示的に `CharSet.Unicode` または `CharSet.Ansi` を使用します。 | これは、文字列のマーシャリング動作と `false` の場合の `ExactSpelling` の動作を指定します。 Unix では `CharSet.Ansi` は実際には UTF8 である点に注意してください。 "_ほとんど_" の場合、Windows では Unicode が使用され、Unix では UTF8 が使用されます。 詳細については、[文字セットのドキュメント](./charset.md)を参照してください。 |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` (`CharSet.Ansi` の動作にフォールバックします)  | 定義内に文字列または文字が存在する場合は、明示的に `CharSet.Unicode` または `CharSet.Ansi` を使用します。 | これは、文字列のマーシャリング動作と `ExactSpelling` の場合の `false` の動作を指定します。 Unix では `CharSet.Ansi` は実際には UTF8 である点に注意してください。 "_ほとんど_" の場合、Windows では Unicode が使用され、Unix では UTF8 が使用されます。 詳細については、[文字セットのドキュメント](./charset.md)を参照してください。 |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | ランタイムで `CharSet` 設定の値に応じてサフィックスが "A" または "W" (`CharSet.Ansi` の場合は "A"、`CharSet.Unicode` の場合は "W") の代替の関数名が検索されないときに、これを true に設定し、わずかなパフォーマンス上のメリットを得ます。 |
 
 ## <a name="string-parameters"></a>文字列パラメーター
@@ -45,17 +45,17 @@ ms.locfileid: "76742749"
 `StringBuilder` パラメーターを ❌ しないようにします。 `StringBuilder` のマーシャリングによって "*常に*" ネイティブ バッファー コピーが作成されます。 そのため、非常に非能率的になる場合もあります。 その典型的なシナリオとして、文字列を受け取る Windows API を呼び出す場合があります。
 
 1. 目的の容量の SB を作成します (管理容量を割り当てます) **{1}**
-2. 呼び出し
+2. Invoke
    1. ネイティブ バッファーを割り当てます **{2}**
    2. `[In]` の場合にコンテンツをコピーします _(`StringBuilder` パラメーターの既定値)_
    3. `[Out]` **{3}** _(`StringBuilder`の既定値も)_ の場合は、新しく割り当てられたマネージ配列にネイティブバッファーをコピーします。
-3. `ToString()` でさらに別のマネージド配列を割り当てます **{4}**
+3. `ToString()` でさらに別のマネージド配列を割り当てます **** **
 
 これは、ネイティブ コードから文字列を取得する *{4}* の割り当てです。 これを制限するために最適な方法は、`StringBuilder` を別の呼び出しで再利用することですが、それでも *1* つの割り当てが節約されるだけです。 `ArrayPool` から文字バッファーを使用してキャッシュする方がはるかにお勧めです。以降の呼び出しでは `ToString()` の割り当てのみで済むようになります。
 
 `StringBuilder` に関するもう 1 つの問題は、戻り値のバッファーが常に最初の null までコピーされることです。 渡された文字列が null で終了していない場合、または null 終端文字列が 2 つある場合、よくても P/Invoke は不正確になります。
 
-`StringBuilder` を "*使用する*" 場合、最後の問題は、相互運用のために常に考慮される非表示の null が容量に "**含まれない**" ことです。ます。 ほとんどの API はバッファー サイズに null が "*含まれる*" ことを想定しているため、これを誤りと考えられることがよくあります。 その結果、無駄な、または不要な割り当てが行われる可能性があります。 さらに、この問題によって、ランタイムでコピーを最小化する `StringBuilder` のマーシャリングを最適化できなくなります。
+*を "* 使用する`StringBuilder`" 場合、最後の問題は、相互運用のために常に考慮される非表示の null が容量に "**含まれない**" ことです。ます。 ほとんどの API はバッファー サイズに null が "*含まれる*" ことを想定しているため、これを誤りと考えられることがよくあります。 その結果、無駄な、または不要な割り当てが行われる可能性があります。 さらに、この問題によって、ランタイムでコピーを最小化する `StringBuilder` のマーシャリングを最適化できなくなります。
 
 ✔️ `char[]`を `ArrayPool`から使用することを検討してください。
 
@@ -74,7 +74,7 @@ ms.locfileid: "76742749"
 
 ## <a name="guids"></a>GUID
 
-GUID はシグネチャに直接使用できます。 多くの Windows API は、`REFIID` のような `GUID&` 型のエイリアスを受け取ります。 参照渡しするときに、`ref` で渡すか、`[MarshalAs(UnmanagedType.LPStruct)]` 属性を使用して渡すことができます。
+GUID はシグネチャに直接使用できます。 多くの Windows API は、`GUID&` のような `REFIID` 型のエイリアスを受け取ります。 参照渡しするときに、`ref` で渡すか、`[MarshalAs(UnmanagedType.LPStruct)]` 属性を使用して渡すことができます。
 
 | GUID | 参照渡しの GUID |
 |------|-------------|
@@ -100,11 +100,11 @@ blittable 型は、マネージド コードとネイティブ コードで同�
 
 **blittable の場合がある:**
 
-- `char`、`string`
+- `char`, `string`
 
 blittable 型が参照渡しされると、中間バッファーにコピーされるのではなく、マーシャラーによって単純に固定されます (クラスは本質的に参照渡しされ、構造体は `ref` または `out` と共に使用されるときに参照渡しされます)。
 
-1 次元配列、"**または**" `CharSet = CharSet.Unicode` が指定された `[StructLayout]` で明示的にマークされている型の一部である場合、`char`は blittable です。
+1 次元配列、"`char`または **"**  が指定された `[StructLayout]` で明示的にマークされている型の一部である場合、`CharSet = CharSet.Unicode`は blittable です。
 
 ```csharp
 [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
@@ -114,13 +114,13 @@ public struct UnicodeCharStruct
 }
 ```
 
-別の型に含まれておらず、`[MarshalAs(UnmanagedType.LPWStr)]` でマークされた引数として渡される場合、または `[DllImport]` に `CharSet = CharSet.Unicode` が設定されている場合、`string` は blittable です。
+別の型に含まれておらず、`string` でマークされた引数として渡される場合、または `[MarshalAs(UnmanagedType.LPWStr)]` に `[DllImport]` が設定されている場合、`CharSet = CharSet.Unicode` は blittable です。
 
 固定された `GCHandle` を作成しようとすることで、型が blittable かどうかを確認できます。 型が文字列ではない場合、または blittable と見なされる場合、`GCHandle.Alloc` は `ArgumentException` をスローします。
 
 可能な場合は、✔️構造を blittable にすることができます。
 
-詳細については、次のトピックを参照してください。
+詳細については、次を参照してください。
 
 - [Blittable 型と非 Blittable 型](../../framework/interop/blittable-and-non-blittable-types.md)
 - [型のマーシャリング](type-marshaling.md)
@@ -161,7 +161,7 @@ Windows API で一般的に使用されるデータ型と、Windows コードを
 
 次の型は、32 ビット版と 64 ビット版の Windows でサイズは同じですが、名前は異なります。
 
-| [幅] | Windows          | C (Windows)          | C#       | 代替                          |
+| 幅 | Windows          | C (Windows)          | C#       | 代替手段                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -197,7 +197,7 @@ Windows API で一般的に使用されるデータ型と、Windows コードを
 | `LONG_PTR`                          |                                        |
 | `INT_PTR`                           |                                        |
 
-C `void*` である Windows `PVOID` は `IntPtr` または `UIntPtr` のいずれかとしてマーシャリングできますが、可能であれば `void*` を使用します。
+C `PVOID` である Windows `void*` は `IntPtr` または `UIntPtr` のいずれかとしてマーシャリングできますが、可能であれば `void*` を使用します。
 
 [Windows のデータ型](/windows/desktop/WinProg/windows-data-types)
 
@@ -209,7 +209,7 @@ C `void*` である Windows `PVOID` は `IntPtr` または `UIntPtr` のいず�
 
 blittable 型の構造体は、単純にマーシャリング層から直接使用できるため、はるかに高パフォーマンスです。 できれば構造体を blittable 型にしてください (たとえば、`bool` を避けます)。 詳細については、「[Blittable Types (blittable 型)](#blittable-types)」セクションを参照してください。
 
-構造体が blittable 型の "*場合*"、パフォーマンスを向上するために `Marshal.SizeOf<MyStruct>()` ではなく `sizeof()` を使用してください。 前述のように、固定された `GCHandle` を作成しようとすることで、型が blittable であることを確認できます。 型が文字列ではない場合、または blittable と見なされる場合、`GCHandle.Alloc` は `ArgumentException` をスローします。
+構造体が blittable 型の "*場合*"、パフォーマンスを向上するために `sizeof()` ではなく `Marshal.SizeOf<MyStruct>()` を使用してください。 前述のように、固定された `GCHandle` を作成しようとすることで、型が blittable であることを確認できます。 型が文字列ではない場合、または blittable と見なされる場合、`GCHandle.Alloc` は `ArgumentException` をスローします。
 
 定義内の構造体へのポインターは、`ref` で渡すか、`unsafe` と `*` を使用する必要があります。
 
