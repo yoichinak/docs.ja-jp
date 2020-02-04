@@ -2,12 +2,12 @@
 title: Byrefs
 description: 下位レベルのプログラミングに使用される、 F#の byref および byref に似た型について説明します。
 ms.date: 11/04/2019
-ms.openlocfilehash: 5aaee1e4eac9ce0d7e9ba89a2ab5f745d31367a0
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901307"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965816"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -166,7 +166,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` は `Struct`を意味しません。 両方とも型に存在する必要があります。
 
-のF# "`byref`に似た" 構造体は、スタックバインド値型です。 マネージヒープに割り当てられることはありません。 `byref`のような構造体は、有効期間と非キャプチャに関する厳密なチェックセットによって適用されるため、高パフォーマンスのプログラミングに役立ちます。 このコードでは、次の規則が適用されます。
+のF# "`byref`に似た" 構造体は、スタックバインド値型です。 マネージヒープに割り当てられることはありません。 `byref`のような構造体は、有効期間と非キャプチャに関する厳密なチェックセットによって適用されるため、高パフォーマンスのプログラミングに役立ちます。 規則は次のとおりです。
 
 * これらは、関数パラメーター、メソッドパラメーター、ローカル変数、メソッドが返す値として使用できます。
 * これらは、クラスまたは通常の構造体の静的メンバーまたはインスタンスメンバーにすることはできません。
@@ -182,14 +182,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 関数またはF#メンバーからの Byref 戻り値は、生成および使用できます。 `byref`を返すメソッドを使用する場合、値は暗黙的に逆参照されます。 例:
 
 ```fsharp
-let safeSum(bytes: Span<byte>) =
-    let mutable sum = 0
+let squareAndPrint (data : byref<int>) = 
+    let squared = data*data    // data is implicitly dereferenced
+    printfn "%d" squared
+```
+
+値を表す値を返すには、値を含む変数が現在のスコープよりも長く有効である必要があります。
+また、byref を返すには & 値を使用します (value は、現在のスコープよりも長い変数です)。
+
+```fsharp
+let mutable sum = 0
+let safeSum (bytes: Span<byte>) =
     for i in 0 .. bytes.Length - 1 do
         sum <- sum + int bytes.[i]
-    sum
-
-let sum = safeSum(mySpanOfBytes)
-printfn "%d" sum // 'sum' is of type 'int'
+    &sum  // sum lives longer than the scope of this function.
 ```
 
 複数のチェーン呼び出しを通じて参照を渡すなど、暗黙的な逆参照を回避するには、`&x` (`x` は値) を使用します。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f0c00e4cc866c537fe26dd1ad466d6cde95bc608
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 964c63e01a6b09e63e305e9a10dca46e62c18648
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706228"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965959"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework の暗号モデル
 
@@ -33,15 +33,11 @@ ms.locfileid: "75706228"
 
 アルゴリズムに使用できるさまざまな実装例として、対称アルゴリズムを検討します。 すべての対称アルゴリズムのベースは <xref:System.Security.Cryptography.SymmetricAlgorithm> であり、次のアルゴリズムによって継承されます。
 
-1. <xref:System.Security.Cryptography.Aes>
-
-2. <xref:System.Security.Cryptography.DES>
-
-3. <xref:System.Security.Cryptography.RC2>
-
-4. <xref:System.Security.Cryptography.Rijndael>
-
-5. <xref:System.Security.Cryptography.TripleDES>
+* <xref:System.Security.Cryptography.Aes>
+* <xref:System.Security.Cryptography.DES>
+* <xref:System.Security.Cryptography.RC2>
+* <xref:System.Security.Cryptography.Rijndael>
+* <xref:System.Security.Cryptography.TripleDES>
 
 <xref:System.Security.Cryptography.Aes> は、<xref:System.Security.Cryptography.AesCryptoServiceProvider> と <xref:System.Security.Cryptography.AesManaged> の 2 つのクラスによって継承されます。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> クラスは Aes の Windows 暗号化 API (CAPI) 実装のラッパーですが、<xref:System.Security.Cryptography.AesManaged> クラスは全体がマネージド コードで書かれています。 さらに、マネージド実装と CAPI 実装に加え、3 つ目の実装、Cryptography Next Generation (CNG) もあります。 CNG アルゴリズムの例が <xref:System.Security.Cryptography.ECDiffieHellmanCng> です。 CNG アルゴリズムは、Windows Vista 以降のバージョンで利用可能です。
 
@@ -62,35 +58,22 @@ ms.locfileid: "75706228"
 アプリケーションで推奨されるアルゴリズムの一覧を示します。
 
 - データのプライバシー :
-
   - <xref:System.Security.Cryptography.Aes>
-
 - データの整合性 :
-
   - <xref:System.Security.Cryptography.HMACSHA256>
-
   - <xref:System.Security.Cryptography.HMACSHA512>
-
 - デジタル署名:
-
   - <xref:System.Security.Cryptography.ECDsa>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - キー交換 :
-
   - <xref:System.Security.Cryptography.ECDiffieHellman>
-
   - <xref:System.Security.Cryptography.RSA>
-
 - 乱数生成 :
-
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-
 - パスワードからのキー生成 :
-
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
 ## <a name="see-also"></a>関連項目
 
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)
+- [C での暗号化プロトコル、アルゴリズム、およびソースコードの適用 (Schneier)](https://www.schneier.com/books/applied_cryptography/)
