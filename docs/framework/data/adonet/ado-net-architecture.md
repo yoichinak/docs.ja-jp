@@ -1,13 +1,13 @@
 ---
-title: ADO.NET のアーキテクチャ
+title: アーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2692959d5a3e12d503d91b55e19f744bb9abd112
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.openlocfilehash: de33c9964f3c03b18593b0df0607f941d2117be0
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
-ms.locfileid: "74568456"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980315"
 ---
 # <a name="adonet-architecture"></a>ADO.NET のアーキテクチャ
 従来のデータ処理は、主に接続をベースとした 2 層モデルに基づいていました。 近年、データ処理では多層アーキテクチャの採用が増えてきており、アプリケーションのスケーラビリティを高める非接続型アプローチが主流になりつつあります。  
@@ -37,7 +37,7 @@ ADO.NET のアーキテクチャ
   
 - データ ソースとの接続を開かずにデータに対する広範な処理を実行する場合。他のクライアントが使用できるように、接続が解放されます。  
   
- `DataSet` の機能が必要ない場合は、`DataReader` を使用して前方参照専用、読み取り専用の方法でデータを返すことにより、アプリケーションのパフォーマンスを向上させることができます。 `DataAdapter` は `DataReader` を使用して `DataSet` の内容を入力しますが (「 [DataAdapter からのデータセットの読み込み](populating-a-dataset-from-a-dataadapter.md)」を参照)、`DataSet`によって `DataReader`使用されるメモリを節約し、`DataSet`の内容を作成して格納するために必要な処理を回避することで、パフォーマンスを向上させることができます。  
+ `DataSet` の機能が必要ない場合は、`DataReader` を使用して前方参照専用、読み取り専用の方法でデータを返すことにより、アプリケーションのパフォーマンスを向上させることができます。 `DataReader` `DataSet`はを`DataAdapter` `DataReader`使用しての内容を塗りつぶします (「[DataAdapter からのデータセットの読み込み](populating-a-dataset-from-a-dataadapter.md)」を参照してください)。を使用して、パフォーマンスを向上させることができます。、の内容を作成して格納するために必要な処理を回避します。`DataSet` `DataSet`  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  LINQ to DataSet はクエリ機能を備え、DataSet オブジェクトでキャッシュされたデータに対するコンパイル時の型チェックを行います。 これを使用すると、C# や Visual Basic などのいずれかの .NET Framework 開発言語でクエリを記述できます。 詳細については、「[LINQ to DataSet](linq-to-dataset.md)」を参照してください。  
@@ -56,6 +56,6 @@ ADO.NET のアーキテクチャ
   
  ADO.NET および .NET Framework 内の XML クラスが `DataSet` オブジェクトに集約されています。 `DataSet` に、XML ソース (ファイルまたは XML ストリーム) に含まれるデータを入力できます。 `DataSet` は、XML スキーマ定義言語 (XSD) スキーマを含む、W3C (World Wide Web Consortium) 準拠の XML として作成できます。これには `DataSet` 内のデータのソースは関係ありません。 `DataSet` のネイティブのシリアル化形式は XML であることから、層間でデータを移動するための媒体として優れており、XML Web サービスとの間でデータとスキーマ コンテキストをリモート処理する場合には `DataSet` が最適な選択となります。 詳細については、「[XML ドキュメントと XML データ](../../../standard/data/xml/index.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ADO.NET の概要](ado-net-overview.md)

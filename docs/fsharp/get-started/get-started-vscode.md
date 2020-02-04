@@ -2,12 +2,12 @@
 title: Visual Studio Code での F# の概要
 description: を Visual Studio Code と Ionide F# plugin suite と共に使用する方法について説明します。
 ms.date: 12/23/2018
-ms.openlocfilehash: 91265303c2954387df0f500940c9af68b3c97dac
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 2aa62bb1afc220348f884865e55c4d7de4359b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559665"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980354"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code での F# の概要
 
@@ -121,7 +121,7 @@ val toPigLatin : word:string -> string
 
 入力された単語の最初の文字が母音であるかどうかを確認します。 母音の場合は、単語の末尾に "yay" を付加します。 それ以外の場合は、最初の文字を単語の末尾に移動し、それに "ay" を追加します。
 
-この点については最後に説明します。他の多くの言語とは異なり、関数から戻る明示的な命令はありません。 これは、 F# が式ベースであり、関数本体の最後の式が戻り値であるためです。 `if..then..else`はそれ自体が式であるため、`then`ブロックの本体または`else`ブロックの本体の値が返されます。
+この点については最後に説明しますF#。では、関数から戻る明示的な命令がありません。 これは、 F#が式ベースであり、関数の本体で評価された最後の式によってその関数の戻り値が決定されるためです。 `if..then..else` 自体が式であるため、`then` ブロックの本体または `else` ブロックの本体を評価すると、`toPigLatin` 関数によって返される値が決まります。
 
 ## <a name="turn-the-console-app-into-a-pig-latin-generator"></a>コンソールアプリを Pig Latin ジェネレーターにする
 

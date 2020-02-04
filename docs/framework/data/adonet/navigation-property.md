@@ -1,13 +1,13 @@
 ---
-title: ナビゲーションプロパティ-ADO.NET
+title: ナビゲーション プロパティ
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: afb2043abf70fa92ea7cdf8d1e8246d5cdfdba74
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: b6c286e63322a66be0407c864295a20685df2b7f
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738385"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980159"
 ---
 # <a name="navigation-property"></a>ナビゲーション プロパティ
 
@@ -25,7 +25,7 @@ ms.locfileid: "73738385"
 
 ナビゲーションプロパティのデータ型は、リモートの[アソシエーション end](association-end.md)の[複数要素](association-end-multiplicity.md)の接続性によって決まります。 たとえば、ナビゲーション プロパティ `OrdersNavProp` が `Customer` エンティティ型に存在し、`Customer` と `Order` の間の一対多のアソシエーションで移動するとします。 ナビゲーションプロパティのリモートアソシエーション end の多重度は多く (\*) であるため、そのデータ型はコレクション (`Order`) です。 同様に、`CustomerNavProp` エンティティ型にナビゲーション プロパティ、`Order` が存在する場合、リモート End の多重度が (1) であるため、データ型は `Customer` になります。
 
-## <a name="example"></a>例
+## <a name="example"></a>使用例
 
 下のダイアグラムは、`Book`、`Publisher`、および `Author` という 3 つのエンティティ型の概念モデルを示しています。 Book エンティティ型には、ナビゲーション プロパティ、`Publisher` および `Authors` が定義されています。 Publisher エンティティ型と `Books` エンティティ型には、ナビゲーション プロパティ、`Author` が定義されています。
 

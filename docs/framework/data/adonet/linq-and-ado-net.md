@@ -1,13 +1,14 @@
 ---
 title: LINQ と ADO.NET
+titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: f6b956aa4d19a5bf558681975da3125b45b36c5f
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e24473f68fe5ccd993c5d205660ea8f397b6f797
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634847"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980094"
 ---
 # <a name="linq-and-adonet"></a>LINQ と ADO.NET
 現在、多くのビジネス開発者は、2つ (またはそれ以上) のプログラミング言語を使用する必要があります。ビジネスロジックとC#プレゼンテーション層の高水準言語 (Visual や Visual Basic など) と、データベースと対話するためのクエリ言語 (transact-sql など) です。 開発者は実質的に複数の言語に精通していることが要求され、開発環境における言語の不整合が生じる原因にもなっています。 たとえば、データ アクセス API を使用してデータベースを照会するアプリケーションでは、クエリは文字列リテラルとして引用符で囲んで指定する必要があります。 コンパイラはこのクエリ文字列を認識できないため、エラー (無効な構文、参照されている列または行が実際に存在するかどうかなど) のチェック機構が働きません。 クエリ パラメーターの型チェックや `IntelliSense` のサポートもありません。  
@@ -37,7 +38,7 @@ ms.locfileid: "75634847"
 ## <a name="linq-to-entities"></a>LINQ to Entities  
  現在、多くのアプリケーションが、リレーショナル データベースを基にして作成されています。 ある時点で、これらのアプリケーションにはリレーショナル形式で表されるデータと対話する必要が生じます。 データベース スキーマはアプリケーションの構築に理想的であるとは限らず、アプリケーションの概念モデルはデータベースの論理モデルと同じではありません。 Entity Data Model は、アプリケーションがデータをオブジェクトとして操作できるように、特定のドメインのデータをモデル化するために使用できる概念データモデルです。 詳細については、「 [ADO.NET Entity Framework](./ef/index.md) 」を参照してください。  
   
- Entity Data Model では、リレーショナル データが .NET 環境にオブジェクトとして公開されます。 これにより、オブジェクトレイヤーは LINQ のサポートに最適なターゲットになり、開発者はビジネスロジックの構築に使用される言語からデータベースに対するクエリを作成できます。 この機能は、LINQ to Entities と呼ばれます。 LINQ の詳細については、「[LINQ to Entities](./ef/language-reference/linq-to-entities.md)」を参照してください。  
+ Entity Data Model では、リレーショナル データが .NET 環境にオブジェクトとして公開されます。 これにより、LINQ の利用に最適なオブジェクト レイヤーが実現されます。開発者は、ビジネス ロジックの構築に使用する言語で、データベースを照会するクエリを作成できます。 この機能は、LINQ to Entities と呼ばれます。 LINQ の詳細については、「[LINQ to Entities](./ef/language-reference/linq-to-entities.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

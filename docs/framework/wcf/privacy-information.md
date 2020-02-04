@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: 7bd56d44eeb6af70b94cdde77d48e917ef8afb9a
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 30ea92f09bc655796b6bc268212b6d9e0e05bd9b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347780"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76919329"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation のプライバシー情報
 マイクロソフトは、エンド ユーザーのプライバシー保護に力を入れています。 Windows Communication Foundation (WCF) バージョン3.0 を使用してアプリケーションをビルドすると、アプリケーションがエンドユーザーのプライバシーに影響を与える可能性があります。 たとえば、アプリケーションが明示的にユーザーの連絡先情報を収集することがあります。つまり、アプリケーションがインターネットを経由して Web サイトに情報を要求したり、情報を送信したりすることがあります。 マイクロソフトの技術をアプリケーションに組み込んでいる場合、その技術にプライバシーに影響を与える可能性がある独自の動作が存在することがあります。 WCF は、お客様またはエンドユーザーが Microsoft に送信することを選択しない限り、アプリケーションからマイクロソフトに情報を送信しません。  
@@ -28,7 +28,7 @@ ms.locfileid: "75347780"
   
  WCF メッセージングレイヤーは、個人情報をローカルコンピューターに書き込みません。 ただし、サービスの開発者が個人情報を公開するサービスを作成した場合は、ネットワーク レベルで個人情報を公開することがあります。このような例として、エンドポイント名に個人名を使用している場合や、エンドポイントの Web サービス記述言語に個人情報を追加しても、https を使用して WSDL にアクセスすることをクライアントに要求しない場合などがあります。 また、開発者が個人情報を公開するエンドポイントに対して[ServiceModel メタデータユーティリティツール (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)ツールを実行した場合、ツールの出力にその情報が含まれている可能性があり、出力ファイルはローカルハードディスクに書き込まれます。  
   
-## <a name="hosting"></a>ホスト  
+## <a name="hosting"></a>ホスティング  
  WCF のホスティング機能を使用すると、アプリケーションをオンデマンドで開始したり、複数のアプリケーション間でポートの共有を有効にしたりできます。 WCF アプリケーションは、ASP.NET と同様にインターネットインフォメーションサービス (IIS) でホストできます。  
   
  ホストでは、特定の情報をネットワークに公開せず、コンピューター上にデータを格納しません。  
@@ -44,7 +44,7 @@ ms.locfileid: "75347780"
   
  認証によって、通信するエンドポイント間にセキュリティで保護されたセッションを確立できます。 このセッションは、セキュリティ セッションの有効期間が切れるまで有効な GUID によって識別されます。 格納されるデータと格納場所を次の表に示します。  
   
-|data|ストレージ|  
+|データ|Storage|  
 |----------|-------------|  
 |ユーザー名、X.509 証明書、Kerberos トークンなどのプレゼンテーション資格情報、および資格情報への参照|Windows 証明書ストアなど、標準の Windows 資格情報管理機構|  
 |ユーザー名とパスワードなど、ユーザーのメンバーシップ情報|ASP.NET メンバーシッププロバイダー。|  
@@ -54,7 +54,7 @@ ms.locfileid: "75347780"
 ## <a name="auditing"></a>監査  
  監査では、認証イベントと承認イベントの成功と失敗を記録します。 監査レコードには、サービス URI、アクション URI、および呼び出し元の ID が入ります。  
   
- また、監査では、管理者がメッセージ ログの設定 (オンまたはオフ) を変更した時刻を記録します。その理由は、メッセージ ログが、ヘッダーと本文のアプリケーション固有のデータをログに記録する可能性があるためです。 [!INCLUDE[wxp](../../../includes/wxp-md.md)] の場合、レコードはアプリケーション イベント ログに記録されます。 Windows Vista および Windows Server 2003 では、レコードがセキュリティイベントログに記録されます。  
+ また、監査では、管理者がメッセージ ログの設定 (オンまたはオフ) を変更した時刻を記録します。その理由は、メッセージ ログが、ヘッダーと本文のアプリケーション固有のデータをログに記録する可能性があるためです。 Windows XP では、レコードはアプリケーションイベントログに記録されます。 Windows Vista および Windows Server 2003 では、レコードがセキュリティイベントログに記録されます。  
   
 ## <a name="transactions"></a>トランザクション  
  トランザクション機能は、WCF アプリケーションにトランザクションサービスを提供します。  
@@ -95,7 +95,7 @@ ms.locfileid: "75347780"
 ### <a name="tracing"></a>トレース  
  WCF インフラストラクチャの診断機能では、トランスポート層とサービスモデルレイヤーを通過するメッセージと、これらのメッセージに関連付けられているアクティビティとイベントがログに記録されます。 この機能は既定で無効になっています。 アプリケーションの構成ファイルを使用して有効にし、実行時に WCF WMI プロバイダーを使用してトレース動作を変更することができます。 有効にすると、トレース インフラストラクチャは、メッセージ、アクティビティ、および処理イベントを含んだ診断トレースを構成済みリスナーに出力します。 出力の形式と場所は、管理者が選択するリスナー構成によって決まりますが、通常は XML 形式のファイルです。 管理者は、トレース ファイルでアクセス制御リスト (ACL) を設定する必要があります。 特に、Windows アクティベーション システム (WAS) でホストするとき、管理者は、ファイルがパブリック仮想ルート ディレクトリから提供されていないことを確認する必要があります (提供されることを望まない場合)。  
   
- トレースには、次の2種類があります。次のセクションで説明するメッセージログとサービスモデル診断トレース。 この 2 つのトレースは、それぞれ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> と <xref:System.ServiceModel> というトレース ソースから構成されます。 このログ トレース ソースは両方とも、アプリケーションにローカルなデータを取り込みます。  
+ トレースには、メッセージ ログとサービス モデル診断トレースの 2 種類があります。この 2 種類のトレースについて次のセクションで説明します。 この 2 つのトレースは、それぞれ <xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A> と <xref:System.ServiceModel> というトレース ソースから構成されます。 このログ トレース ソースは両方とも、アプリケーションにローカルなデータを取り込みます。  
   
 ### <a name="message-logging"></a>メッセージ ログ  
  メッセージ ログのトレース ソース (<xref:System.ServiceModel.Configuration.DiagnosticSection.MessageLogging%2A>) によって管理者は、システムを通過するメッセージをログに記録できます。 ユーザーは構成によって、メッセージ全体またはメッセージ ヘッダーだけをログに記録するかどうか、トランスポート レイヤーまたはサービス モデル レイヤーでログに記録するかどうか、および形式が正しくないメッセージをログに記録するかどうかを設定できます。 また、ユーザーは、フィルター処理を設定して、ログに記録するメッセージを制限できます。  
@@ -127,13 +127,13 @@ ms.locfileid: "75347780"
   
  削除されるキー :  
   
- xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" と xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" の \-  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" と xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" の \-  
   
  wst:BinarySecret  
   
  wst:Entropy  
   
- xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" と xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" の \-  
+ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" と xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" の \-  
   
  wsse:Password  
   
@@ -141,7 +141,7 @@ ms.locfileid: "75347780"
   
  削除される個人情報の可能性がある情報 :  
   
- xmlns: wsse = "http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" と xmlns: wsse = "http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" の \-  
+ xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.1.xsd" と xmlns:wsse="http://docs.oasis-open.org/wss/2005/xx/oasis-2005xx-wss-wssecurity-secext-1.1.xsd" の \-  
   
  wsse:Username  
   
@@ -304,7 +304,7 @@ ms.locfileid: "75347780"
   
  次の名前空間の場合 :  
   
- xmlns: wst = "http://schemas.xmlsoap.org/ws/2004/04/trust" と xmlns: wst = "http://schemas.xmlsoap.org/ws/2005/02/trust" (たとえば、使用可能なアクションがない場合)  
+ xmlns:wst="http://schemas.xmlsoap.org/ws/2004/04/trust" と xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust" (たとえば、使用可能なアクションがない場合)  
   
  キー交換を伴うこの本文要素について情報が削除されます。  
   

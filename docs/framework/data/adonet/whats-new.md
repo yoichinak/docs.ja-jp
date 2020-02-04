@@ -1,13 +1,13 @@
 ---
-title: ADO.NET の新機能
+title: 新機能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: db903f801994202ac50ac72ad5352f20367efed7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2ac8ebced700dc6c874ac22304773b3b9c19f8b3
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337021"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76979770"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET の新機能
 
