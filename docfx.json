@@ -17,6 +17,7 @@
         "exclude": [
           "samples/**/*.*",
           "**/includes/**",
+          "**/util/**",
           "***/contributing.md"
         ]
       },
@@ -88,18 +89,12 @@
     "externalReference": [],
     "globalMetadata": {
       "breadcrumb_path": "/dotnet/breadcrumb/toc.json",
-      "_displayLangs": [
-        "csharp"
-      ],
-      "dev_langs": [
-        "csharp"
-      ],
+      "_displayLangs": ["csharp"],
+      "dev_langs": ["csharp"],
       "ms.devlang": "dotnet",
       "author": "dotnet-bot",
       "ms.author": "dotnetcontent",
-      "searchScope": [
-        ".NET"
-      ],
+      "searchScope": [".NET"],
       "uhfHeaderId": "MSDocsHeader-DotNet",
       "apiPlatform": "dotnet",
       "ms.prod":"dotnet",
@@ -176,12 +171,8 @@
         "docs/fsharp/language-reference/**/**.md": "language-reference"
       },
       "dev_langs": {
-        "docs/fsharp/**/**.md": [
-          "fsharp"
-        ],
-        "docs/visual-basic/**/**.md": [
-          "vb"
-        ]
+        "docs/fsharp/**/**.md": ["fsharp"],
+        "docs/visual-basic/**/**.md": ["vb"]
       },
       "ms.devlang": {
         "docs/csharp/**/**.md": "csharp",
@@ -515,6 +506,7 @@
         "_csharplang/proposals/csharp-7.2/*.md": "C# 7.2 specification proposals",
         "_csharplang/proposals/csharp-7.3/*.md": "C# 7.3 specification proposals",
         "_csharplang/proposals/csharp-8.0/*.md": "C# 8.0 specification proposals",
+        "docs/framework/data/adonet/**/**.md": "ADO.NET",
         "docs/framework/wcf/**/**.md": "WCF",
         "docs/framework/winforms/**/**.md": "Windows Forms",
         "docs/framework/wpf/**/**.md": "WPF",
