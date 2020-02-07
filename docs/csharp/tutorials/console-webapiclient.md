@@ -3,20 +3,18 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 09eda08f82490070c66d0b290359872c1043b0c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: eb7946d669de60c3469ca8098e40b159082ea270
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737577"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921089"
 ---
 # <a name="rest-client"></a>REST クライアント
 
-## <a name="introduction"></a>はじめに
-
 このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。 内容は以下のとおりです。
 
-* .NET Core コマンド ライン インターフェイス (CLI) の基本
+* .NET Core CLI の基本事項。
 * C# 言語機能の概要
 * NuGet での依存関係の管理
 * HTTP 通信
@@ -154,7 +152,7 @@ namespace WebAPIClient
 {
     public class Repository
     {
-        public string name { get; set; };
+        public string name { get; set; }
     }
 }
 ```
@@ -170,7 +168,6 @@ JSON シリアライザーは、使用されているクラス型に含まれて
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
 var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
-return repositories;
 ```
 
 新しい名前空間を使用しているため、ファイルの先頭にそれを追加する必要もあります。
@@ -231,7 +228,8 @@ private static async Task<List<Repository>> ProcessRepositories()
 続いて、JSON 応答の処理後にリポジトリを返します。
 
 ```csharp
-var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
+var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
+var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await streamTask);
 return repositories;
 ```
 
@@ -255,16 +253,16 @@ public static async Task Main(string[] args)
 最初に、いくつかの単純型を `Repository` クラスの定義に追加します。 そのクラスに次のプロパティを追加します。
 
 ```csharp
-[JsonPropertyName(Name="description")]
+[JsonPropertyName("description")]
 public string Description { get; set; }
 
-[JsonPropertyName(Name="html_url")]
+[JsonPropertyName("html_url")]
 public Uri GitHubHomeUrl { get; set; }
 
-[JsonPropertyName(Name="homepage")]
+[JsonPropertyName("homepage")]
 public Uri Homepage { get; set; }
 
-[JsonPropertyName(Name="watchers")]
+[JsonPropertyName("watchers")]
 public int Watchers { get; set; }
 ```
 
@@ -293,7 +291,7 @@ foreach (var repo in repositories)
 この形式は .NET の標準の <xref:System.DateTime> 形式に従っていません。 そのため、カスタムの変換メソッドを記述する必要があります。 また、`Repository` クラスのユーザーに公開されている未加工の文字列もおそらく不要でしょう。 この文字列も属性を使用して制御できます。 最初に、日時の文字列表現を `Repository` クラスに保持する `public` プロパティと、返される日付を表す書式設定された文字列を返す `LastPush` `readonly` プロパティを定義します。
 
 ```csharp
-[JsonPropertyName(Name="pushed_at")]
+[JsonPropertyName("pushed_at")]
 public string JsonDate { get; set; }
 
 public DateTime LastPush =>

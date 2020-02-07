@@ -1,15 +1,15 @@
 ---
 title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
-ms.date: 02/14/2017
+ms.date: 01/21/2020
 ms.technology: csharp-fundamentals
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 6aa52030e20f61b26311347a57629658ebe0e609
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1ec088db1de7c953bdb20b1129c5fd40f9e31454
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713938"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965933"
 ---
 # <a name="document-your-code-with-xml-comments"></a>XML コメントを含むコードの文書化
 
@@ -49,7 +49,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 [!code-csharp[Sample Library](../../samples/snippets/csharp/concepts/codedoc/sample-library.cs)]
 
-この例のライブラリは、4 つの主要な算術演算である `add`、 `subtract`、`multiply`、`divide` を、`int` と `double` のデータ型でサポートします。
+サンプル ライブラリでは、4 つの主要な算術演算 (`add`、`subtract`、`multiply`、`divide`) が、`int` と `double` のデータ型でサポートされています。
 
 このライブラリを使用するがそのソース コードにはアクセスできないサード パーティの開発者向けに、コードから API リファレンス ドキュメントを作成できるようにする必要があります。
 前述のように、このために XML ドキュメント タグを使用できます。 そこで、C# コンパイラがサポートする標準の XML タグを紹介します。
@@ -61,7 +61,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 [!code-csharp[Summary Tag](~/samples/snippets/csharp/concepts/codedoc/summary-tag.cs)]
 
-`<summary>` は非常に重要なタグです。IntelliSense や API のリファレンス ドキュメントでは、このタグの内容が型やメンバーに関する主要な情報源であるため、このタグを記述に含めることをお勧めします。
+`<summary>` は重要なタグです。IntelliSense や API のリファレンス ドキュメントでは、このタグの内容が型やメンバーに関する主要な情報源であるため、このタグを含めることをお勧めします。
 
 ## <a name="remarks"></a>\<remarks>
 
@@ -163,12 +163,17 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 ## <a name="list"></a>\<list>
 
-`<list>` タグは、文書化の情報を順序付きリスト、順不同のリスト、または表として書式設定するために使用します。
-`Math` ライブラリがサポートするそれぞれの算術演算の順不同のリストを作成します。
+`<list>` タグを使用して、ドキュメント情報を、順序指定済みリスト、順序指定されていないリスト、または表として書式設定します。 `Math` ライブラリがサポートするそれぞれの算術演算の順不同のリストを作成します。
 
 [!code-csharp[List Tag](~/samples/snippets/csharp/concepts/codedoc/list-tag.cs)]
 
 `type` 属性を `number` または `table` に変更することで、順序付きリストまたは表をそれぞれ作成できます。
+
+## <a name="inheritdoc"></a>\<inheritdoc>
+
+`<inheritdoc>` タグを使用して、基底クラス、インターフェイス、および同様のメソッドから XML コメントを継承できます。 これにより、重複する XML コメントの不要なコピーと貼り付けを行う必要がなくなり、XML コメントが自動的に同期されたままになります。
+
+[!code-csharp-interactive[InheritDoc Tag](~/samples/snippets/csharp/concepts/codedoc/inheritdoc-tag.cs)]
 
 ### <a name="put-it-all-together"></a>まとめ
 

@@ -5,13 +5,13 @@ dev_langs:
 - csharp
 author: thraka
 ms.author: adegeo
-ms.date: 10/22/2019
-ms.openlocfilehash: 4bf1c4826273535bfe824828f0fad96998b29483
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 01/27/2020
+ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742589"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920378"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -121,7 +121,7 @@ TC が有効になっていると、アプリの起動時、メソッド コン�
 - メソッドに Ahead Of Time コンパイル済みコード ([ReadyToRun](#readytorun-images)) がある場合、事前に生成されたコードが使用されます。
 - ない場合、メソッドは JIT になります。 通常、これらのメソッドは値の型を超えるジェネリックです。
   - *クイック JIT* では、低品質 (最適化の程度が低い) コードが高速で生成されます。 .NET Core 3.0 では、ループを含まないメソッドに対してクイック JIT が既定で有効になり、起動時に優先されます。
-  - 完全最適化 JIT では、高品質な (最適化の程度が高い) コードが低速で生成されます。 クイック JIT が使用されないメソッド (たとえば、メソッドの属性が <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> の場合) では、完全最適化 JIT が使用されます。
+  - 完全最適化 JIT では、より高品質な (またはより最適化された) コードがより低速で生成されます。 クイック JIT が使用されないメソッド (たとえば、メソッドが属性 <xref:System.Runtime.CompilerServices.MethodImplOptions.AggressiveOptimization?displayProperty=nameWithType> を持つ場合) では、完全最適化 JIT が使用されます。
 
 頻繁に呼び出されるメソッドについては、JIT コンパイラにより最終的に、バックグラウンドで完全に最適化されたコードが生成されます。 この最適化されたコードがそのメソッドに対して事前コンパイルされたコードに取って代わります。
 
@@ -180,7 +180,7 @@ ReadyToRun としてプロジェクトをコンパイルするには、次の手
 
 ## <a name="runtimesdk"></a>ランタイム/SDK
 
-### <a name="major-version-roll-forward"></a>メジャーバージョンのロールフォワード
+### <a name="major-version-runtime-roll-forward"></a>メジャーバージョン ランタイムのロールフォワード
 
 .NET Core 3.0 では、アプリを最新メジャー バージョンの .NET Core にロールフォワードできるようにするオプトイン機能が導入されました。 さらに、ロールフォワードをアプリに適用する方法を制御する新しい設定が追加されました。 これは、以下の方法で構成できます。
 
@@ -226,6 +226,15 @@ ReadyToRun としてプロジェクトをコンパイルするには、次の手
 ローカル ツールは、現在のディレクトリ内のマニフェスト ファイル名 `dotnet-tools.json` に依存しています。 このマニフェスト ファイルは、ツールをそのフォルダー下で使用できるように定義します。 コードを使用するすべての人が確実に同じツールを復元して使用できるように、自分のコードと一緒にマニフェスト ファイルを配布することができます。
 
 グローバル ツールとローカル ツールの両方で、ランタイムの互換バージョンが必要です。 現在 NuGet.org 上にある多くのツールは、.NET Core Runtime 2.1 をターゲットとしています。 グローバルにまたはローカルにこのようなツールをインストールするには、[NET Core 2.1 ランタイム](https://dotnet.microsoft.com/download/dotnet-core/2.1)をインストールする必要があります。
+
+### <a name="new-globaljson-options"></a>新しい global.json オプション
+
+*global.json* ファイルには、どのバージョンの .NET Core SD を使用するか定義する際にさらなる柔軟性をもたらす新しいオプションが含まれています。 新しいオプションは次のとおりです。
+
+- `allowPrerelease`:使用する SDK バージョンを選択するときに、SDK リゾルバーでプレリリース バージョンを考慮する必要があるかどうかを示します。
+- `rollForward`:SDK バージョンを選択するときに使用するロールフォワード ポリシーを示します。特定の SDK バージョンが不足している場合のフォールバックとして、またはより新しいバージョンを使用するためのディレクティブとして指定できます。
+
+既定値、サポートされている値、新しい照合ルールなどの変更について詳しくは、「[global.json の概要](../tools/global-json.md)」をご覧ください。
 
 ### <a name="smaller-garbage-collection-heap-sizes"></a>小さいガベージ コレクションのヒープ サイズ
 
@@ -458,7 +467,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 `log2` IEEE 演算に相当します。2 を底とする対数を返します。 丸め誤差を最小限に抑えます。
 
 - <xref:System.Math.FusedMultiplyAdd(System.Double,System.Double,System.Double)>\
-`fma` IEEE 演算に相当します。融合型積和演算を実行します。 つまり、単一操作として `(x * y) + z` を実行することで、丸め誤差を最小限に抑えます。 例では、`FusedMultiplyAdd(1e308, 2.0, -1e308)` は `1e308` を返します。 正規の `(1e308 * 2.0) - 1e308` は `double.PositiveInfinity` を返します。
+`fma` IEEE 演算に相当します。融合型積和演算を実行します。 つまり、単一操作として `(x * y) + z` を実行することで、丸め誤差を最小限に抑えます。 たとえば、`FusedMultiplyAdd(1e308, 2.0, -1e308)` では `1e308` が返されます。 正規の `(1e308 * 2.0) - 1e308` は `double.PositiveInfinity` を返します。
 
 - <xref:System.Math.CopySign(System.Double,System.Double)>\
 `copySign` IEEE 演算に相当します。`x` の値を返しますが、`y` の符号と共に返されます。

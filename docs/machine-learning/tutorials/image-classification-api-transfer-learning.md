@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 4781e39a0c8827adb6ab0155d5215645242208a5
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2dfa3cdab9de47b55f7a3f73f0d6e9460390700c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348150"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920096"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>チュートリアル: 転移学習と ML.NET Image Classification API を利用した自動ビジュアル検査
 
@@ -28,7 +28,7 @@ ms.locfileid: "75348150"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
+- [Visual Studio 2017 バージョン 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラットフォーム開発" ワークロードと共にインストールされている。
 
 ## <a name="image-classification-transfer-learning-sample-overview"></a>画像分類の転移学習の概要
 
@@ -140,10 +140,10 @@ SDNET2018 は、ひび割れあり/ひび割れなしのコンクリート構造
 
         `ModelInput` には次のプロパティが含まれます。
 
-        - `ImagePath` は、画像が保存されている完全修飾パスです。
-        - `Label` は、画像が属するカテゴリです。 これが予測する値です。
         - `Image` は画像の `byte[]` 表現です。 モデルでは、トレーニングのために画像データがこの種類になることが求められます。
         - `LabelAsKey` は `Label` の数値表現です。
+        - `ImagePath` は、画像が保存されている完全修飾パスです。
+        - `Label` は、画像が属するカテゴリです。 これが予測する値です。
 
         `Image` と `LabelAsKey` のみ、モデルのトレーニングと予測に使用されます。 `ImagePath` プロパティと `Label` プロパティは、元の画像ファイルの名前やカテゴリにアクセスするときに便利なため、維持されます。
 
@@ -171,7 +171,7 @@ SDNET2018 は、ひび割れあり/ひび割れなしのコンクリート構造
 
     [!code-csharp [DefinePaths](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L15-L17)]
 
-1. 次に、[MLContext](xref:Microsoft.ML.MLContext) の新しいインスタンスを使用して `mlContext` 変数を初期化します。
+1. [MLContext](xref:Microsoft.ML.MLContext) の新しいインスタンスを使用して `mlContext` 変数を初期化します。
 
     [!code-csharp [MLContext](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L19)]
 
@@ -253,7 +253,7 @@ public static IEnumerable<ImageData> LoadImagesFromDirectory(string folder, bool
 
 モデル トレーニングはいくつかのステップから構成されます。 まず、Image Classification API を利用し、モデルがトレーニングされます。 次に、`PredictedLabel` 列のエンコード済みラベルが `MapKeyToValue` 変換により元のカテゴリ値に戻されます。
 
-1. `ImageClassificationTrainer` の必須パラメーターと省略可能なパラメーターのセットを格納するために、新しい変数を作成します。 
+1. `ImageClassificationTrainer` の必須パラメーターと省略可能なパラメーターのセットを格納するために、新しい変数を作成します。
 
     [!code-csharp [ClassifierOptions](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ImageClassification_Binary/DeepLearning_ImageClassification_Binary/Program.cs#L46-L57)]
 

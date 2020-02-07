@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d6a7a388cb51bf08996adc654db5722a5ef1303
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 126f5b10999e65d9715e9b52cb54a2bf1dbd3933
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733344"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787880"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -15,7 +15,7 @@ ms.locfileid: "76733344"
 
 ## <a name="implicit-package-references"></a>暗黙的なパッケージ参照
 
-メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。 詳細については、「[パッケージ、メタパッケージ、フレームワーク](../packages.md)」を参照してください。 
+メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。 詳細については、「[パッケージ、メタパッケージ、フレームワーク](../packages.md)」を参照してください。
 
 ```xml
  <PropertyGroup>
@@ -248,7 +248,7 @@ SDK スタイルのプロジェクトでは、`PreBuild` または `PostBuild` �
 ```
 
 > [!NOTE]
->MSBuild ターゲットには任意の名前を使用できますが、Visual Studio IDE では `PreBuild` と `PostBuild` ターゲットが認識されるため、Visual Studio IDE でコマンドを編集できるようにするには、これらの名前を使用することをお勧めします。 
+>MSBuild ターゲットには任意の名前を使用できますが、Visual Studio IDE では `PreBuild` と `PostBuild` ターゲットが認識されるため、Visual Studio IDE でコマンドを編集できるようにするには、これらの名前を使用することをお勧めします。
 
 ## <a name="nuget-metadata-properties"></a>NuGet メタデータ プロパティ
 
@@ -321,7 +321,7 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 
 SPDX 識別子が割り当てられていないライセンス、またはカスタム ライセンスを使用している場合、パッケージ内のライセンス ファイルへのパス (それ以外の場合は、`PackageLicenseExpression` が優先されます)
 
-`PackageLicenseUrl` を置き換えるもので、`PackageLicenseExpression` と組み合わせることはできず、Visual Studio 15.9.4、.NET SDK 2.1.502 または 2.2.101 以降が必要です。
+`PackageLicenseUrl` が置き換えられ、`PackageLicenseExpression` と組み合わせることはできず、Visual Studio バージョン 15.9.4 および.NET SDK 2.1.502 または 2.2.101 以降が必要です。
 
 プロジェクトに明示的に追加することによって、ライセンス ファイルをパックする必要があります。使用例を次に示します。
 
@@ -427,7 +427,7 @@ nuget.exe および Visual Studio パッケージ マネージャーで強制す
 
 ### <a name="properties-per-attribute"></a>属性ごとのプロパティ
 
-次の表に示すように、各属性にはコンテンツを制御するプロパティと生成を無効にするプロパティがあります。
+次の表に示すように、各属性にはその内容を制御するプロパティと、その生成を無効にするプロパティがあります。
 
 | 属性                                                      | プロパティ               | 無効にするプロパティ                             |
 |----------------------------------------------------------------|------------------------|-------------------------------------------------|

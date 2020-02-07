@@ -1,21 +1,21 @@
 ---
 title: .NET Core CLI の拡張モデル
-description: コマンド ライン インターフェイス (CLI) ツールを拡張する方法について説明します。
+description: .NET Core CLI を拡張する方法について説明します。
 ms.date: 04/12/2017
-ms.openlocfilehash: 4f49735fa94b2a7ee32e0d80590f9e680edeff16
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714180"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920525"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI ツールの拡張モデル
+# <a name="net-core-cli-extensibility-model"></a>.NET Core CLI の拡張モデル
 
-ここでは、.NET Core コマンド ライン インターフェイス (CLI) ツールを拡張する方法と、各方法を利用するシナリオについて説明します。
+この記事では、.NET Core CLI を拡張するためのさまざまな方法と、それぞれの方法を利用するシナリオについて説明します。
 ツールの使用方法だけでなく、さまざまなツールを構築する方法についても紹介します。
 
-## <a name="how-to-extend-cli-tools"></a>CLI ツールを拡張する方法
-CLI ツールは、主に次の 3 つの方法で拡張できます。
+## <a name="how-to-extend-the-cli"></a>CLI を拡張する方法
+CLI は、主に次の 3 つの方法で拡張できます。
 
 1. [プロジェクトごとに NuGet パッケージを使用](#per-project-based-extensibility)
 
@@ -79,7 +79,7 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 
 ## <a name="custom-targets"></a>カスタム ターゲット
 
-NuGet には、[カスタム MSBuild ターゲット ファイルとプロパティ ファイルをパッケージ化](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)する機能があります。 .NET Core CLI ツールが MSBuild を使用するようになり、同じ拡張機能のメカニズムが .NET Core プロジェクトに適用されています。 このような拡張機能は、ビルド プロセスの拡張が必要な場合や、生成されたファイルなどのビルド プロセスの成果物にアクセスする必要がある場合、またはビルドが呼び出される構成を検査する場合などに使用できます。
+NuGet には、[カスタム MSBuild ターゲット ファイルとプロパティ ファイルをパッケージ化](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)する機能があります。 .NET Core で MSBuild が使用されるようになったため、同じ拡張機能のメカニズムが .NET Core プロジェクトに適用されるようになりました。 このような拡張機能は、ビルド プロセスの拡張が必要な場合や、生成されたファイルなどのビルド プロセスの成果物にアクセスする必要がある場合、またはビルドが呼び出される構成を検査する場合などに使用できます。
 
 次の例では、ターゲットのプロジェクト ファイルで `csproj` 構文を使用しています。 これは、[`dotnet pack`](dotnet-pack.md) コマンドにパッケージ対象を指示し、ターゲット ファイルだけでなくアセンブリをパッケージ内の *build* フォルダーに格納する例です。 `Label` プロパティが `dotnet pack instructions` に設定された `<ItemGroup>` 要素があり、その下に Target が定義されています。
 

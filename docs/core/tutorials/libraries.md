@@ -1,18 +1,18 @@
 ---
-title: クロス プラットフォーム ツールによるライブラリの開発
-description: .NET Core CLI ツールを使用して .NET Core ライブラリを作成する方法について説明します。 複数のフレームワークをサポートするライブラリを作成します。
+title: .NET Core CLI を使用したライブラリの開発
+description: .NET Core CLI を使用して .NET Core ライブラリを作成する方法について説明します。 複数のフレームワークをサポートするライブラリを作成します。
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: 4132113037e6c5ec555d2d1859b8217a1a53d07f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714024"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920446"
 ---
-# <a name="develop-libraries-with-cross-platform-tools"></a>クロスプラットフォーム ツールによるライブラリの開発
+# <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI を使用したライブラリの開発
 
-この記事では、クロスプラットフォーム CLI ツールを使用して .NET 用ライブラリを作成する方法について説明します。 CLI は、サポートされる任意の OS で動作する効率的で低レベルのエクスペリエンスを提供します。 Visual Studio でライブラリを構築することもできます。Visual Studio で構築する場合は、[Visual Studio ガイドを参照](library-with-visual-studio.md)してください。
+この記事では、.NET Core CLI を使用して .NET 用ライブラリを作成する方法について説明します。 CLI は、サポートされる任意の OS で動作する効率的で低レベルのエクスペリエンスを提供します。 Visual Studio でライブラリを構築することもできます。Visual Studio で構築する場合は、[Visual Studio ガイドを参照](library-with-visual-studio.md)してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -216,7 +216,7 @@ netstandard1.4/
 プラットフォーム全体でテストできることが重要です。 [xUnit](https://xunit.github.io/) または MSTest はそのまま利用できます。 どちらも、.NET Core 上のライブラリの単体テストに最適です。 テスト プロジェクトでソリューションをセットアップする方法は、[ソリューションの構造](#structuring-a-solution)によって異なります。 次の例は、テスト ディレクトリとソース ディレクトリが同じ最上位ディレクトリにある場合です。
 
 > [!NOTE]
-> この例ではいくつかの [.NET CLI コマンド](../tools/index.md)を使用しています。 詳細については、「[dotnet new](../tools/dotnet-new.md)」と「[dotnet sln](../tools/dotnet-sln.md)」を参照してください。
+> ここでは、いくつかの [.NET Core CLI](../tools/index.md) コマンドが使用されます。 詳細については、「[dotnet new](../tools/dotnet-new.md)」と「[dotnet sln](../tools/dotnet-sln.md)」を参照してください。
 
 1. ソリューションを設定します。 次のコマンドで実行することができます。
 

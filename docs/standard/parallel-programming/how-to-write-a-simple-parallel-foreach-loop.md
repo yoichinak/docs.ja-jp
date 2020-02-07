@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach, parallel version
 - parallel programming, foreach
 ms.assetid: cb5fab92-1c19-499e-ae91-8b7525dd875f
-ms.openlocfilehash: c2f2484f37c0e99f45b3f10951540c2bb3a4cb8d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 528e22d6b54179181d1479f4feaedfbf82933c58
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73134173"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921211"
 ---
 # <a name="how-to-write-a-simple-parallelforeach-loop"></a>方法: 単純な Parallel.ForEach ループを記述する
 
@@ -47,7 +47,7 @@ ms.locfileid: "73134173"
 
 Visual Studio には、Windows デスクトップと .NET Core 向けに、Visual Basic と C# のコンソール アプリケーション テンプレートがあります。
 
-コマンド ラインから .NET Core とその CLI ツール (`dotnet new console` や `dotnet new console -lang vb` など) を使用するか、またはファイルを作成して .NET Framework アプリケーションのコマンド ライン コンパイラを使用することができます。
+コマンド ラインから .NET Core CLI コマンド (`dotnet new console` や `dotnet new console -lang vb` など) を使用するか、またはファイルを作成して .NET Framework アプリケーション用のコマンド ライン コンパイラを使用することができます。
 
 .NET Core プロジェクトの場合は、**System.Drawing.Common** NuGet パッケージを参照する必要があります。 Visual Studio ではパッケージのインストールに NuGet パッケージ マネージャーを使用します。 または、\*.csproj または \*.vbproj ファイルにパッケージへの参照を追加することもできます。
  

@@ -1,20 +1,20 @@
 ---
-title: CLI を使用して .NET Core アプリを展開する
-description: .NET Core SDK のコマンド ライン インターフェイス (CLI) ツールを使用して .NET Core アプリを公開する方法を説明します。
+title: .NET Core CLI を使用してアプリを発行する
+description: .NET Core CLI コマンドを使用して .NET Core アプリを発行する方法について説明します。
 author: thraka
 ms.author: adegeo
 ms.date: 12/12/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 98f1e96ac087727e711f9ebf3d3eaf86c4d4eec9
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740855"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920909"
 ---
-# <a name="publish-net-core-apps-with-the-cli"></a>CLI を使用して .NET Core アプリを展開する
+# <a name="publish-net-core-apps-with-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core アプリを発行する
 
 この記事では、コマンド ラインから .NET Core アプリケーションを公開する方法を示します。 .NET Core では、アプリケーションを公開する方法が 3 つ用意されています。 フレームワークに依存する展開では、ローカル環境にインストールされている .NET Core ランタイムを使用するクロス プラットフォームの .dll ファイルが生成されます。 フレームワークに依存する実行可能ファイルでは、ローカル環境にインストールされている .NET Core ランタイムを使用するプラットフォーム固有の実行可能ファイルが生成されます。 自己完結型の実行可能ファイルでは、プラットフォーム固有の実行可能ファイルが生成されて、.NET Core ランタイムのローカル コピーが組み込まれます。
 

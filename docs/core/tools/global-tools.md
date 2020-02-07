@@ -3,12 +3,12 @@ title: .NET Core グローバル ツール
 description: .NET Core グローバル ツールとそれらに使用できる .NET Core CLI コマンドの概要。
 author: KathleenDollard
 ms.date: 05/29/2018
-ms.openlocfilehash: 0df3c1b615adfeaaf41542dc8252a8f14f49f6f9
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1531df48b7ca9c816b897d06e725ec375f6cae31
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899867"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920492"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET core グローバル ツールの概要
 
@@ -30,7 +30,7 @@ ms.locfileid: "75899867"
 
 ## <a name="find-a-net-core-global-tool"></a>.NET Core グローバル ツールの検索
 
-現時点では、.NET Core コマンド ライン インターフェイス (CLI) には、グローバル ツールの検索機能はありません。 次に、ツールの検索方法に関する推奨事項をいくつか示します。
+現時点では、.NET Core CLI にはグローバル ツールの検索機能はありません。 次に、ツールの検索方法に関する推奨事項をいくつか示します。
 
 * .NET Core グローバル ツールは、[NuGet](https://www.nuget.org) で見つけることができます。 ただし、NuGet では、具体的に .NET Core グローバル ツールを検索することはまだできません。
 * ブログの投稿や [natemcmaster/dotnet-tools](https://github.com/natemcmaster/dotnet-tools) GitHub リポジトリで、ツールの推奨事項を検索することができます。

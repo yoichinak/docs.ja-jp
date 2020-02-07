@@ -3,12 +3,12 @@ title: 既定のインターフェイス メソッドを使用して mixin 型�
 description: 既定のインターフェイス メンバーを使用すると、実装のためにオプションの既定の実装を使用してインターフェイスを拡張できます。
 ms.technology: csharp-advanced-concepts
 ms.date: 10/04/2019
-ms.openlocfilehash: fb8fc1f432bdf909bae4f54bb76d10d7619f71a3
-ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.openlocfilehash: f97410124a4ca5bbb10972ab5e7942fa4af68d72
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2019
-ms.locfileid: "74140846"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921445"
 ---
 # <a name="tutorial-mix-functionality-in-when-creating-classes-using-interfaces-with-default-interface-methods"></a>チュートリアル: 既定のインターフェイス メソッドでインターフェイスを使用してクラスを作成するときの機能の混合
 
@@ -24,7 +24,7 @@ ms.locfileid: "74140846"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 コンパイラも実行されるようにします。 C# 8.0 コンパイラは [Visual Studio 2019 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降で使用できます。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 コンパイラも実行されるようにします。 C# 8.0 コンパイラは [Visual Studio 2019 バージョン 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降から使用できます。
 
 ## <a name="limitations-of-extension-methods"></a>拡張メソッドの制限事項
 
@@ -45,7 +45,7 @@ C# 8.0 以降では、既定の実装をインターフェイス メソッドと
 
 これらの拡張機能の一部は、最小セットをサポートするデバイスでエミュレートできます。 これは、既定の実装を提供することを示します。 より多くの機能が組み込まれているデバイスの場合、デバイス ソフトウェアではネイティブ機能を使用します。 他の照明については、インターフェイスを実装し、既定の実装を使用することを選択できます。
 
-このシナリオでは、拡張メソッドよりも既定のインターフェイス メンバーの方が適したソリューションです。 クラス作成者は、実装するインターフェイスを制御できます。 選択したインターフェイスはメソッドとして利用できます。 また、既定のインターフェイス メソッドは既定で仮想であるため、メソッドのディスパッチでは常にクラス内の実装が選択されます。 
+このシナリオでは、拡張メソッドよりも既定のインターフェイス メンバーの方が適したソリューションです。 クラス作成者は、実装するインターフェイスを制御できます。 選択したインターフェイスはメソッドとして利用できます。 また、既定のインターフェイス メソッドは既定で仮想であるため、メソッドのディスパッチでは常にクラス内の実装が選択されます。
 
 これらの違いを示すコードを作成してみましょう。
 
@@ -79,7 +79,7 @@ public class OverheadLight : ITimerLight { }
 
 [!code-csharp[Override the timer function](~/samples/csharp/tutorials/mixins-with-interfaces/HalogenLight.cs?name=SnippetHalogenLight)]
 
-仮想クラス メソッドのオーバーライドとは異なり、`HalogenLight` クラスの `TurnOnFor` の宣言では、`override` キーワードは使用されません。 
+仮想クラス メソッドのオーバーライドとは異なり、`HalogenLight` クラスの `TurnOnFor` の宣言では、`override` キーワードは使用されません。
 
 ## <a name="mix-and-match-capabilities"></a>機能の混在と対応付け
 

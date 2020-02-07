@@ -3,12 +3,12 @@ title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 9bca68753a93721e48d1ff90aa7baf3a147da0ee
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708205"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921110"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -167,7 +167,7 @@ Mono について詳しくは、[Mono のドキュメント](https://www.mono-pr
 
 .NET Core アプリケーション開発用のクロスプラットフォーム ツールチェーン。
 
-「[.NET Core コマンドライン インターフェイス (CLI) ツール](../core/tools/index.md)」をご覧ください。
+[.NET Core CLI](../core/tools/index.md) に関する記事をご覧ください。
 
 ## <a name="net-core-sdk"></a>.NET Core SDK
 

@@ -4,12 +4,12 @@ description: パッケージ マネージャーを使用して、Ubuntu 19.04 �
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a229369b9252d08fe5fc83add98c694214ce5ba5
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: c7b30d2760a0a83a0fdd7ff5fa35b2f3d490494f
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740606"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920679"
 ---
 # <a name="ubuntu-1904-package-manager---install-net-core"></a>Ubuntu 19.04 パッケージ マネージャー - .NET Core のインストール
 
@@ -82,6 +82,10 @@ sudo apt-get install dotnet-runtime-3.1
 
 ## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
 
+このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+
+### <a name="unable-to-locate"></a>見つからない
+
 "**パッケージ <.NET Core パッケージ> が見つかりません**" のようなエラー メッセージが表示される場合は、次のコマンドを実行します。
 
 ```bash
@@ -104,3 +108,7 @@ sudo apt-get install -y apt-transport-https
 sudo apt-get update
 sudo apt-get install {the .NET Core package}
 ```
+
+### <a name="failed-to-fetch"></a>フェッチできない
+
+[!INCLUDE [package-manager-failed-to-fetch-deb](includes/package-manager-failed-to-fetch-deb.md)]

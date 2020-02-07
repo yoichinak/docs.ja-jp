@@ -5,12 +5,12 @@ ms.date: 12/17/2019
 author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8f8dbf7a8730712dc546643a6ef86425a3e19794
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 82fbccdec0323b54d313960279fcbfeeb6033319
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713983"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920406"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core ランタイムと SDK を削除する方法
 
@@ -136,7 +136,7 @@ Microsoft.NETCore.App 2.1.1 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ---
 
-## <a name="uninstalling-net-core"></a>.NET Core のアンインストール
+## <a name="uninstall-net-core"></a>.NET Core のアンインストール
 
 # <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
@@ -220,7 +220,7 @@ Visual Studio 2019 バージョン 16.3 より前では、Visual Studio イン�
 | Visual Studio 2017 バージョン 15.9 | .NET Core SDK 2.2.1xx、2.1.5xx |
 | Visual Studio 2017 バージョン 15.8 | .NET Core SDK 2.1.4xx |
 
-Visual Studio 2019 16.3 以降では、Visual Studio は .NET Core SDK の独自のコピーを管理します。 そのため、 **[プログラムの追加と削除]** ダイアログにこれらの SDK バージョンが表示されなくなりました。
+Visual Studio 2019 バージョン 16.3 以降では、Visual Studio によって .NET Core SDK の独自のコピーが管理されます。 そのため、 **[プログラムの追加と削除]** ダイアログにこれらの SDK バージョンが表示されなくなりました。
 
 ## <a name="remove-the-nuget-fallback-folder"></a>NuGet フォールバック フォルダーの削除
 

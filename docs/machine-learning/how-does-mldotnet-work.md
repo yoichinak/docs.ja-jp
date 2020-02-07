@@ -4,16 +4,16 @@ description: ML.NET を使用すると、オンラインまたはオフライン
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 98251c39a4bdaba8203c26c6a781a86efc46efa4
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bc157b22201c66bceecf78aaa36b9c653fe6a131
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740082"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794576"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
-ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使う自動予測をアプリケーションに利用できるようになります。
+ML.NET を使用すると、オンラインまたはオフラインのどちらのシナリオでも、.NET アプリケーションに機械学習を追加できます。 この機能により、データを使う自動予測をアプリケーションに利用できるようになります。 機械学習アプリケーションでは、明示的なプログラミングを必要とする代わりに、データ内のパターンを利用して予測を行います。
 
 ML.NET の中心となるのは、機械学習**モデル**です。 このモデルでは、入力データを予測に変換するために必要な手順が指定されます。 .ML.NET を使用すると、アルゴリズムを指定してカスタム モデルをトレーニングすることができます。または、事前トレーニング済みの TensorFlow および ONNX モデルをインポートすることもできます。
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 5de94b1f1ab44f954b5bab9f8b5212c33325c19d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696715"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789769"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML ドキュメント機能を使用する方法
 
@@ -20,7 +20,7 @@ ms.locfileid: "75696715"
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-この例では、次の内容の .xml ファイルが生成されます。
+この例では、次の内容を含む *.xml* ファイルが生成されます。
 
 ```xml
 <?xml version="1.0"?>
@@ -120,7 +120,7 @@ XML ドキュメントは、/// で始まります。 新しいプロジェク�
 
 - ドキュメントは整形式の XML である必要があります。 XML が整形式ではない場合は、警告が生成され、エラーが発生したことを示すコメントがドキュメント ファイルに追加されます。
 
-- 開発者は、独自のタグ セットを自由に作成できます。 推奨されるタグのセットがあります (「[ドキュメント コメントとして推奨されるタグ](recommended-tags-for-documentation-comments.md)」を参照)。 推奨されるタグの一部には特別な意味があります。
+- 開発者は、独自のタグ セットを自由に作成できます。 [推奨されるタグのセット](recommended-tags-for-documentation-comments.md)があります。 推奨されるタグの一部には特別な意味があります。
 
   - \<param> タグは、パラメーターの記述に使われます。 このタグがあると、コンパイラは、パラメーターが存在すること、およびすべてのパラメーターがドキュメントで記述されていることを確認します。 検証で問題がある場合、コンパイラは警告を生成します。
 

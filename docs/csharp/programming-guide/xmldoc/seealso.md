@@ -12,35 +12,40 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: 600affdfd8cb524a7fba479d3a68ad8b3e40098c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ad22b423d085a152f47c4e34d7ee4247ef9836b8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75694921"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789680"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (C# プログラミング ガイド)
-## <a name="syntax"></a>構文  
-  
-```xml  
-<seealso cref="member"/>  
-```  
-  
-## <a name="parameters"></a>パラメーター  
- cref = "`member`"  
- 現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。`member` は二重引用符 (" ") で囲む必要があります。  
-  
- ジェネリック型への cref 参照を作成する方法については、「[\<see>](./see.md)」を参照してください。  
-  
-## <a name="remarks"></a>Remarks  
- \<seealso > タグを使用して、「See Also」セクションに表示するテキストを指定することができます。 [\<see>](./see.md) タグを使用すると、テキスト内からリンクを指定できます。  
-  
- コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  
-  
-## <a name="example"></a>例  
- \<seealso> の使用例については、[\<summary>](./summary.md) を参照してください。  
-  
+
+## <a name="syntax"></a>構文
+
+```xml
+<seealso cref="member"/>
+```
+
+## <a name="parameters"></a>パラメーター
+
+- cref = "`member`"
+
+  現在のコンパイル環境からの呼び出しに利用できる、メンバーまたはフィールドへの参照。 コンパイラは、指定されたコード要素が存在するかどうかを確認し、`member` を出力 XML 内の要素名に渡します。`member` は二重引用符 (" ") で囲む必要があります。
+
+  ジェネリック型への cref 参照を作成する方法については、「[\<see>](./see.md)」を参照してください。
+
+## <a name="remarks"></a>Remarks
+
+\<seealso > タグを使用して、「See Also」セクションに表示するテキストを指定することができます。 [\<see>](./see.md) タグを使用すると、テキスト内からリンクを指定できます。
+
+コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
+
+## <a name="example"></a>例
+
+\<seealso> の使用例については、[\<summary>](./summary.md) を参照してください。
+
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
-- [ドキュメント コメントとして推奨されるタグ](./recommended-tags-for-documentation-comments.md)
+- [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

@@ -4,12 +4,12 @@ description: この記事では、.NET Standard の新しいバージョンご�
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ebf656c4a5499fff54cb5a70a93c4e8cc9c82d0a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73101765"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921057"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard の新機能
 
@@ -63,7 +63,7 @@ Visual Basic で .NET Standard ライブラリを開発できるようになり�
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard ライブラリのツールのサポート
 
-.NET Core 2.0 と .NET Standard 2.0 がリリースされ、Visual Studio 2017 と [.NET Core コマンドライン インターフェイス (CLI) ツール](../../core/tools/index.md) には .NET Standard ライブラリの作成をサポートするツールが追加されました。
+.NET Core 2.0 と .NET Standard 2.0 がリリースされ、Visual Studio 2017 と [.NET Core CLI](../../core/tools/index.md) の両方に .NET Standard ライブラリの作成をサポートするツールが追加されました。
 
 **.NET Core クロスプラットフォーム開発**ワークロードを使用して Visual Studio をインストールする場合は、次の図に示すように、プロジェクト テンプレートを使用して .NET Standard 2.0 ライブラリ プロジェクトを作成できます。
 

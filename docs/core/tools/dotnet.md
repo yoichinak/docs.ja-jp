@@ -1,13 +1,13 @@
 ---
 title: dotnet コマンド
-description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
+description: dotnet コマンド (.NET Core CLI の汎用ドライバー) とその使用方法について説明します。
 ms.date: 06/04/2018
-ms.openlocfilehash: fe90968560b58471c279fcd2097741ea476cef0b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7674529980623caa2291987bdeba52f50ce2fc2c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734066"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920546"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 

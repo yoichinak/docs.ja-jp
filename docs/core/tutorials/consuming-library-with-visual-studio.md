@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: ec9c6f992bcd4a76e2f70018f3facca42b7b660c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4eb75f23359334ea483cba1498f1804c4b24c80c
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714067"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920453"
 ---
 # <a name="consume-a-net-standard-library-in-visual-studio"></a>Visual Studio での .NET Standard ライブラリの使用
 
@@ -86,4 +86,4 @@ NuGet パッケージとして発行すると、クラス ライブラリが広�
    > [!TIP]
    > *dotnet.exe* を含むディレクトリが PATH になくても、コンソール ウィンドウで「`where dotnet.exe`」と入力して、場所を検索できます。
 
-NuGet パッケージの作成の詳細については、「[クロスプラットフォーム ツールを使用して NuGet パッケージを作成する方法](../deploying/creating-nuget-packages.md)」を参照してください。
+NuGet パッケージの作成に関する詳細については、「[.NET Core CLI を使用して NuGet パッケージを作成する方法](../deploying/creating-nuget-packages.md)」をご覧ください。

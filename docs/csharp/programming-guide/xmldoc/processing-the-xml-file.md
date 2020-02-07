@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML processing [C#]
 - XML [C#], processing
 ms.assetid: 60c71193-9dac-4cd3-98c5-100bd0edcc42
-ms.openlocfilehash: 2c3ba0e12d0d7e6a568c4c3741d99b901fca2722
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: bc72cade9ce6edddb88d741a3424405bba0a7ad8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75696520"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793391"
 ---
 # <a name="processing-the-xml-file-c-programming-guide"></a>XML ファイルの処理 (C# プログラミング ガイド)
 
@@ -27,7 +27,7 @@ XML ファイルは、コードの階層表現ではなく、要素ごとに生�
     |文字|説明|
     |---------------|-----------------|
     |N|名前空間<br /><br /> ドキュメント コメントを名前空間に追加することはできませんが、名前空間への cref 参照を行うことはできます (サポートされている場合)。|
-    |T|型: クラス、インターフェイス、構造体、列挙、デリゲート|
+    |T|型: クラス、インターフェイス、構造体、列挙型、またはデリゲート|
     |F|フィールド|
     |P|プロパティ (インデクサーまたはその他のインデックス付きプロパティを含む)|
     |M|メソッド (コンストラクター、演算子などの特殊なメソッドを含む)|

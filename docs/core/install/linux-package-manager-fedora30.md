@@ -4,12 +4,12 @@ description: パッケージ マネージャーを使用して、.NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: bd7a199f551be0c51032510279ee9da74bcf0c7c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: bce30c9fd3fad8b3a63ef938d7446c2516a756cc
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740693"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920794"
 ---
 # <a name="fedora-30-package-manager---install-net-core"></a>Fedora 30 パッケージ マネージャー - .NET Core をインストールする
 
@@ -61,3 +61,11 @@ sudo dnf install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
+
+このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+
+### <a name="failed-to-fetch"></a>フェッチできない
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

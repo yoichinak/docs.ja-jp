@@ -3,18 +3,18 @@ title: global.json の概要
 description: .NET Core CLI コマンドを実行するときに global.json ファイルを使用して .NET Core SDK のバージョンを設定する方法について説明します。
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: f02c9129a707ddddb2c5e1975b75cc35abc5cd55
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733980"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920509"
 ---
 # <a name="globaljson-overview"></a>global.json の概要
 
 **この記事の対象:** ✔️ .NET Core 2.0 SDK 以降のバージョン
 
-*global.json* ファイルを使うと、.NET Core CLI コマンドを実行するときに使う .NET Core SDK のバージョンを定義できます。 .NET Core SDK の選択は、プロジェクトのターゲットであるランタイムの指定とは関係ありません。 .NET Core SDK のバージョンは、使われている .NET Core CLI ツールのバージョンを示します。
+*global.json* ファイルを使うと、.NET Core CLI コマンドを実行するときに使う .NET Core SDK のバージョンを定義できます。 .NET Core SDK の選択は、プロジェクトのターゲットであるランタイムの指定とは関係ありません。 .NET Core SDK のバージョンは、使われている .NET Core CLI のバージョンを示します。
 
 通常は、最新バージョンの SDK ツールを使うので、*global.json* ファイルは必要ありません。 一部の高度なシナリオでは、SDK ツールのバージョンを管理する必要がある場合があります。この記事では、この方法について説明します。
 

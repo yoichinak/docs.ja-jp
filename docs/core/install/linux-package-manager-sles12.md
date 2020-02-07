@@ -4,12 +4,12 @@ description: パッケージ マネージャーを使用して、.NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: a40180881ec0962d89f03c2c9d7aad9bbb052d2a
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740655"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920730"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12 パッケージ マネージャー - .NET Core をインストールする
 
@@ -60,3 +60,11 @@ sudo zypper install dotnet-runtime-3.1
 ## <a name="how-to-install-other-versions"></a>その他のバージョンをインストールする方法
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-heading-hack-pkgname.md)]
+
+## <a name="troubleshoot-the-package-manager"></a>パッケージ マネージャーのトラブルシューティング
+
+このセクションでは、パッケージ マネージャーを使用して .NET Core をインストールするときに発生する可能性のある一般的なエラーについて説明します。
+
+### <a name="failed-to-fetch"></a>フェッチできない
+
+[!INCLUDE [package-manager-failed-to-fetch-rpm](includes/package-manager-failed-to-fetch-rpm.md)]

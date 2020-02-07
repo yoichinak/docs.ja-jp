@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 47e8e15a64236d8ade2febb1add81fa4e5c030d9
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: ef3e4f9f8145677732b9d2e66d416be277697f55
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116157"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920667"
 ---
 
 パッケージ マネージャーのフィードに追加されたパッケージは、`{product}-{type}-{version}` のハック可能な形式で名前が付けられます。
@@ -34,6 +34,6 @@ SDK またはランタイムを選択します。 有効なオプションは次
 - ASP.NET Core 3.1 ランタイムをインストールする: `aspnetcore-runtime-3.1`
 - .NET Core 2.1 ランタイムをインストールする: `dotnet-runtime-2.1`
 
-### <a name="troubleshoot"></a>トラブルシューティング
+### <a name="package-missing"></a>パッケージがない
 
-パッケージの組み合わせが機能しない場合は、使用できません。 たとえば、ASP.NET Core SDK がない場合、SDK コンポーネントは .NET Core SDK に含まれています。 値 `aspnetcore-sdk-2.2` は正しくありません。これは、`dotnet-sdk-2.2` である必要があります
+パッケージ バージョンの組み合わせが正しくない場合は、使用できません。 たとえば、ASP.NET Core SDK がない場合、SDK コンポーネントは .NET Core SDK に含まれています。 値 `aspnetcore-sdk-2.2` は正しくありません。`dotnet-sdk-2.2` にする必要があります

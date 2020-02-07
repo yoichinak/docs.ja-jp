@@ -1,23 +1,23 @@
 ---
-title: CLI ツールを使用する .NET Core に関する概要 - .NET Core CLI
-description: Windows、Linux、または macOS の .NET Core での、.NET Core コマンド ライン インターフェイス (CLI) の使用方法を段階的に説明するチュートリアル。
+title: CLI を使用する .NET Core に関する概要
+description: Windows、Linux、または macOS 上で .NET Core CLI を使用して .NET Core の使用を開始する方法を詳細に説明するチュートリアルです。
 author: thraka
 ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 4285ed3c0488ea615ca89b0b771bf09c8c29b318
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739130"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920463"
 ---
-# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>Windows/Linux/macOS の .NET Core でのコマンド ラインの使用に関する概要
+# <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI を使用した .NET Core の概要
 
-この記事では、.NET Core CLI ツールを使用して、お使いのコンピューターでプラットフォームに依存しないアプリを開発する方法について説明します。
+この記事では、.NET Core CLI を使用して、Windows、Linux、macOS 上で動作する .NET Core アプリの開発を開始する方法について説明します。
 
-.NET Core CLI ツールセットに慣れていない場合は、[.NET Core SDK の概要](../tools/index.md) に関するページを参照してください。
+.NET Core CLI に慣れていない場合は、「[.NET Core CLI の概要](../tools/index.md)」をご覧ください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -194,6 +194,6 @@ Hello World!
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Core CLI ツールを使用したプロジェクトの整理およびテスト](testing-with-cli.md)
-- [CLI を使用して .NET Core アプリを公開する](../deploying/deploy-with-cli.md)
-- [アプリの展開についてさらに学習する](../deploying/index.md)
+- [.NET Core CLI を使用したプロジェクトの整理およびテスト](testing-with-cli.md)
+- [.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)
+- [.NET Core アプリケーションの展開](../deploying/index.md)

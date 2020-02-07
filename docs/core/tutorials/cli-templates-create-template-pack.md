@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: a4723d6d63c5739123fad774bc75fae7c9fd6703
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340166"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76787837"
 ---
 # <a name="tutorial-create-a-template-pack"></a>チュートリアル: テンプレート パックを作成する
 
@@ -49,7 +49,7 @@ ms.locfileid: "75340166"
 dotnet new console -n templatepack -o .
 ```
 
-`-n` パラメーターによって _.csproj_ ファイルの名前が _templatepack.csproj_ に設定され、`-o` パラメーターによってファイルが現在のディレクトリ内に作成されます。 次の出力のような結果が表示されます。
+`-n` パラメーターを指定すると、 _.csproj_ のファイル名が _templatepack.csproj_ に設定されます。 `-o` パラメーターを指定すると、現在のディレクトリにファイルが作成されます。 次の出力のような結果が表示されます。
 
 ```console
 C:\working> dotnet new console -n templatepack -o .
@@ -91,7 +91,7 @@ Restore succeeded.
 </Project>
 ```
 
-上の XML 内の `<PropertyGroup>` の設定は、3 つのグループに分かれています。 最初のグループでは、NuGet パッケージに必要なプロパティが処理されます。 `<Package` の 3 つの設定は、NuGet フィード上でパッケージを識別するための NuGet パッケージ プロパティと関係しています。 具体的には、`<PacakgeId>` 値は、ディレクトリ パスではなく単一の名前を使用してテンプレート パックをアンインストールするために使用されます。 また、NuGet フィードからテンプレート パックをインストールするためにも使用されます。 `<Title>`、`<Tags>` などの残りの設定は、NuGet フィードに表示されるメタデータに関連しています。 NuGet の設定の詳細については、[NuGet と MSBuild のプロパティ](/nuget/reference/msbuild-targets)に関する記事を参照してください。
+上の XML 内の `<PropertyGroup>` の設定は、3 つのグループに分かれています。 最初のグループでは、NuGet パッケージに必要なプロパティが処理されます。 `<Package` の 3 つの設定は、NuGet フィード上でパッケージを識別するための NuGet パッケージ プロパティと関係しています。 具体的には、`<PackageId>` 値は、ディレクトリ パスではなく単一の名前を使用してテンプレート パックをアンインストールするために使用されます。 また、NuGet フィードからテンプレート パックをインストールするためにも使用されます。 `<Title>`、`<PackageTags>` などの残りの設定は、NuGet フィードに表示されるメタデータに関連しています。 NuGet の設定の詳細については、[NuGet と MSBuild のプロパティ](/nuget/reference/msbuild-targets)に関する記事を参照してください。
 
 `<TargetFramework>` の設定は、パック コマンドを実行してプロジェクトのコンパイルとパッケージ化を行うときに MSBuild が正しく実行されるように設定する必要があります。
 
@@ -178,7 +178,7 @@ Currently installed items:
 
 `dotnet new -u AdatumCorporation.Utility.Templates` を実行してテンプレートをアンインストールします。 `dotnet new` コマンドを実行するとヘルプ情報が出力され、前にインストールしたテンプレートが除外されているはずです。
 
-おめでとうございます! テンプレート パックをインストールしてアンインストールしました。 
+おめでとうございます! テンプレート パックをインストールしてアンインストールしました。
 
 ## <a name="next-steps"></a>次の手順
 

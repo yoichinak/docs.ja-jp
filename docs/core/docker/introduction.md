@@ -3,12 +3,12 @@ title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
 ms.date: 03/20/2019
 ms.custom: mvc
-ms.openlocfilehash: 278c921de83282d61b25f4d44e91535981285e83
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 40c8a3c8d81d23c621ccb83a283f49aa34a58ac1
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715547"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920819"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
@@ -18,7 +18,7 @@ Docker をインストールする方法について詳しくは、次のダウ�
 
 ## <a name="docker-basics"></a>Docker の基礎
 
-いくつかの概念を理解しておく必要があります。 Docker クライアントには、イメージとコンテナーの管理に使用するコマンド ライン インターフェイスのプログラムが備わっています。 前述のように、[Docker の概要](https://docs.docker.com/engine/docker-overview/)に関するドキュメントを読むための時間を取ることをお勧めします。 
+いくつかの概念を理解しておく必要があります。 Docker クライアントには、イメージとコンテナーの管理に使用できる CLI が用意されています。 前述のように、[Docker の概要](https://docs.docker.com/engine/docker-overview/)に関するドキュメントを読むための時間を取ることをお勧めします。 
 
 ### <a name="images"></a>イメージ
 

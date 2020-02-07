@@ -1,63 +1,51 @@
 ---
 title: .NET Framework 配置ガイド (開発者向け)
 ms.custom: updateeachrelease
-ms.date: 04/18/2019
+ms.date: 01/17/2020
 helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 1b7fccc673f82986a53dcb3dfcb68e8575b99dfd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: a346a19400c1d2c536fff56ed7fb6dc27570df29
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959993"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965829"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
 
-ダウンロード リンクについては、「[頒布可能パッケージ](#redistributable-packages)」を参照してください。 再頒布可能パッケージと言語パックは、Microsoft ダウンロード センターの次のページからダウンロードすることもできます。
+.NET Framework の再頒布可能パッケージと言語パックは、次のダウンロード ページからダウンロードできます。
 
-- すべてのオペレーティング システムの .NET Framework 4.8 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=2085155)または[オフライン インストーラー](https://go.microsoft.com/fwlink/?linkid=2088631))
-
-- すべてのオペレーティング システムの .NET Framework 4.7.2 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=863262) または [オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=863265))
-
-- すべてのオペレーティング システムの .NET Framework 4.7.1 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=852095) または [オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=852107))
-
-- すべてのオペレーティング システムの .NET Framework 4.7 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=825299)または[オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=825303))
-
-- すべてのオペレーティング システムの .NET Framework 4.6.2 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=780597)または[オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=780601))
-
-- すべてのオペレーティング システムの .NET Framework 4.6.1 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=671729)または[オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=671744))
-
-- すべてのオペレーティング システムの .NET Framework 4.6 ([Web インストーラー](https://go.microsoft.com/fwlink/?LinkId=528222)または[オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=528232))
-
-- すべてのオペレーティング システムの .NET Framework 4.5.2 ([Web インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=397703) または [オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=397706))
-
-- すべてのオペレーティング システムの .NET Framework 4.5.1 ([Web インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=310158) または [オフライン インストーラー](https://go.microsoft.com/fwlink/p/?LinkId=310159))
-
-- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+- [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+- [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+- [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+- [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
  重要なメモ:
 
-> [!NOTE]
-> ".NET Framework 4.5 とそのポイント リリース" という表記は、.NET Framework 4.5 およびそれ以降のすべてのバージョンを指します。
-
 - .NET Framework 4.5.1 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの .NET Framework のバージョンは、.NET Framework 4.5 へのインプレース更新です。つまり、同じバージョンのランタイムを使用しますが、アセンブリのバージョンが更新され、新しい型とメンバーが含まれます。
 
-- .NET Framework 4.5 とそのポイント リリースは、.NET Framework 4 の上にインクリメンタル方式でビルドされます。 .NET Framework 4 がインストールされたシステムに .NET Framework 4.5 またはそのポイント リリースをインストールすると、バージョン 4 のアセンブリが新しいバージョンに置き換えられます。
+- .NET Framework 4.5 以降のバージョンは、.NET Framework 4 の上にインクリメンタル方式でビルドされます。 .NET Framework 4 がインストールされたシステムに .NET Framework 4.5 以降のバージョンをインストールすると、バージョン 4 のアセンブリが新しいバージョンに置き換えられます。
 
 - アプリで Microsoft [帯域外のパッケージ](../get-started/the-net-framework-and-out-of-band-releases.md) を参照している場合、アセンブリはアプリのパッケージに組み込まれます。
 
-- .NET Framework 4.5 とそのポイント リリースをインストールするには、管理者特権が必要です。
+- .NET Framework 4.5 以降のバージョンをインストールするには、管理者特権が必要です。
 
 - .NET Framework 4.5 は、Windows 8 と Windows Server 2012 に含まれているため、これらのオペレーティング システムではアプリと一緒に配置する必要はありません。 同様に、.NET Framework 4.5.1 は Windows 8.1 と Windows Server 2012 R2 に含まれます。 .NET Framework 4.5.2 はどのオペレーティング システムにも含まれていません。 .NET Framework 4.6 は Windows 10 に含まれます。 .NET Framework 4.6.1 は Windows 10 November Update に含まれます。 .NET Framework 4.6.2 は Windows 10 Anniversary Update に含まれます。  .NET Framework 4.7 は Windows 10 Creators Update に、.NET Framework 4.7.1 は Windows 10 Fall Creators Update に、.NET Framework 4.7.2 は Windows 10 October 2018 Update と Windows 10 April 2018 Update にそれぞれ含まれます。 .NET Framework 4.8 は Windows 10 May 2019 Update に含まれています。 ハードウェア要件とソフトウェア要件の一覧については、「[システム要件](../get-started/system-requirements.md)」を参照してください。
 
 - .NET Framework 4.5 以降では、ユーザーはセットアップ中に、実行されている .NET Framework アプリケーションの一覧を表示し、簡単に終了できます。 これにより、.NET Framework のインストールによるシステムの再起動を回避できます。 「 [システム再起動の削減](reducing-system-restarts.md)」を参照してください。
 
-- .NET Framework 4.5 またはそのポイント リリースのいずれかをアンインストールすると、前に存在していた .NET Framework 4 ファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 「[.NET Framework 4 のインストール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))」を参照してください。
+- .NET Framework 4.5 以降のバージョンをアンインストールすると、前に存在していた .NET Framework 4 ファイルも削除されます。 .NET Framework 4 に戻る場合は、そのバージョンとすべての更新プログラムを再インストールする必要があります。 「[.NET Framework 4 のインストール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5a4x27ek(v=vs.100))」を参照してください。
 
-- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージをインストールしていた場合は、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/p/?LinkId=245484)から最新の再頒布可能パッケージを入手して更新を行うことをお勧めします。 この問題について詳しくは、「 [マイクロソフト セキュリティ アドバイザリ (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)」をご覧ください。
+- .NET Framework 4.5 再頒布可能パッケージは、2012 年 10 月 9 に更新されています。この更新により、Microsoft によって生成および署名されたファイルへのデジタル署名が途中で有効期限切れになるという、デジタル証明書の不適切なタイムスタンプに関連する問題が解決しました。 2012 年 8 月 16 日付けの .NET Framework 4.5 再頒布可能パッケージを以前にインストールしていた場合は、[.NET Framework ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-framework/net45)から最新の再頒布可能パッケージを入手して更新することをお勧めします。 この問題について詳しくは、「 [マイクロソフト セキュリティ アドバイザリ (2749655)](https://docs.microsoft.com/security-updates/SecurityAdvisories/2012/2749655)」をご覧ください。
 
 システム管理者が .NET Framework とそのシステムの依存関係をネットワーク経由で配置する方法については、[管理者向け配置ガイド](guide-for-administrators.md)に関するページを参照してください。
 
@@ -71,18 +59,16 @@ ms.locfileid: "74959993"
 |ディスクからのインストール|- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [WiX ツールセット](#wix)<br />- [手動インストール](#installing_manually)|[Offline installer](#redistributable-packages)|
 |ローカル エリア ネットワークからのインストール (エンタープライズ アプリケーションの場合)|- [ClickOnce](#clickonce-deployment)|[Web インストーラー](#redistributable-packages) (制約については「 [ClickOnce](#clickonce-deployment) 」を参照) または [オフライン インストーラー](#redistributable-packages)|
 
-## <a name="redistributable-packages"></a>頒布可能パッケージ
+## <a name="redistributable-packages"></a>再頒布可能パッケージ
 
-.NET Framework は、Web インストーラー (ブートストラップ) とオフライン インストーラー (スタンドアロン再頒布可能パッケージ) の 2 種類の再頒布可能パッケージで入手できます。 2 つのパッケージの比較を次の表に示します。
+.NET Framework は、Web インストーラー (ブートストラップ) とオフライン インストーラー (スタンドアロン再頒布可能パッケージ) の 2 種類の再頒布可能パッケージで入手できます。 すべての .NET Framework ダウンロードは、[.NET Framework ダウンロード ページ](https://dotnet.microsoft.com/download/dotnet-framework/)上でホストされています。 2 つのパッケージの比較を次の表に示します。
 
 ||Web インストーラー|オフライン インストーラー|
 |-|-------------------|-----------------------|
-|ファイルのダウンロード|.NET Framework 4.8: <br/>[ndp48-web.exe](https://go.microsoft.com/fwlink/?LinkId=2085155)<br/><br/>.NET Framework 4.7.2: <br/>[NDP472-KB4054531-Web.exe](https://go.microsoft.com/fwlink/?LinkId=863262)<br/><br/>.NET Framework 4.7.1: <br/>[NDP471-KB4033344-Web.exe](https://go.microsoft.com/fwlink/?LinkId=852092)<br/><br/>.NET Framework 4.7: <br />[NDP47-KB3186500-Web.exe](https://go.microsoft.com/fwlink/?LinkId=825298) <br /><br />.NET Framework 4.6.2: <br />[NDP462-KB3151802-Web.exe](https://go.microsoft.com/fwlink/?LinkId=780596)<br /><br /> .NET Framework 4.6.1:<br />[NDP461-KB3102438-Web.exe](https://go.microsoft.com/fwlink/?LinkId=671728)<br /><br /> .NET Framework 4.6:<br />[NDP46-KB3045560-Web.exe](https://go.microsoft.com/fwlink/?LinkId=528222)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901954-Web.exe](https://go.microsoft.com/fwlink/?LinkId=397707)<br /><br /> .NET Framework 4.5.1: <br />[NDP451-KB2859818-Web.exe](https://go.microsoft.com/fwlink/?LinkId=322115)<br /><br /> .NET Framework 4.5: <br />[dotNetFx45_Full_setup.exe](https://go.microsoft.com/fwlink/?LinkId=225704)|.NET Framework 4.8: <br/>[NDP48-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?linkid=2088631)<br/><br/>.NET Framework 4.7.2: <br/>[NDP472-KB4054530-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=863265)<br/><br/>.NET Framework 4.7.1: <br />[NDP471-KB4033342-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=852104) <br /><br />.NET Framework 4.7: <br />[NDP47-KB3186497-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=825302) <br /><br />.NET Framework 4.6.2: <br />[NDP462-KB3151800-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=780600)<br /><br /> .NET Framework 4.6.1: <br />[NDP461-KB3102436-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=671743)<br /><br /> .NET Framework 4.6: <br />[NDP46-KB3045557-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=528232)<br /><br /> .NET Framework 4.5.2: <br />[NDP452-KB2901907-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=397708)<br /><br /> .NET Framework 4.5.1: <br />[NDP451-KB2858728-x86-x64-AllOS-ENU.exe](https://go.microsoft.com/fwlink/?LinkId=322116)<br /><br /> .NET Framework 4.5: <br />[dotNetFx45_Full_x86_x64.exe](https://go.microsoft.com/fwlink/?LinkId=225702)|
 |インターネット接続の必要性|はい|いいえ|
 |ダウンロードのサイズ|小 (ターゲット プラットフォームのインストーラーのみを含む)*|Larger*|
 |言語パック|含む**|すべてのオペレーティング システムを対象とするパッケージを使用しない場合は、 [個別にインストールする](#chain_langpack)必要があります|
 |配置方法|すべてのメソッドをサポート<br /><br />- [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows インストーラー XML (WiX)](#wix)<br />- [手動インストール](#installing_manually)<br />- [カスタム セットアップ (チェーン)](#chaining)|すべてのメソッドをサポート<br /><br /> - [ClickOnce](#clickonce-deployment)<br />- [InstallAware](#installaware-deployment)<br />- [InstallShield](#installshield-deployment)<br />- [Windows インストーラー XML (WiX)](#wix)<br />- [手動インストール](#installing_manually)<br />- [カスタム セットアップ (チェーン)](#chaining)|
-|ClickOnce 配置のダウンロード場所|Microsoft ダウンロード センター:<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?LinkId=2085155) <br/> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863262) <br/> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852092) <br/> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825298) <br/> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780596)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671728)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528222)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/?LinkId=397703)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310158)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|独自のサーバーまたは Microsoft ダウンロード センター:<br /><br /> - [.NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631)<br /> - [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkId=863265)<br /> - [.NET Framework 4.7.1](https://go.microsoft.com/fwlink/?LinkId=852104)<br /> - [.NET Framework 4.7](https://go.microsoft.com/fwlink/?LinkId=825302)<br /> - [.NET Framework 4.6.2](https://go.microsoft.com/fwlink/?LinkId=780600)<br />- [.NET Framework 4.6.1](https://go.microsoft.com/fwlink/?LinkId=671743)<br />- [.NET Framework 4.6](https://go.microsoft.com/fwlink/?LinkId=528232)<br />- [.NET Framework 4.5.2](https://go.microsoft.com/fwlink/p/?LinkId=397706)<br />- [.NET Framework 4.5.1](https://go.microsoft.com/fwlink/p/?LinkId=310159)<br />- [.NET Framework 4.5](https://go.microsoft.com/fwlink/p/?LinkId=245484)|
 
 \* オフライン インストーラーは、すべての対象プラットフォームのコンポーネントを含むため、より大きくなっています。 セットアップの実行が終了すると、Windows オペレーティング システムは使用されたインストーラーのみキャッシュします。 オフライン インストーラーがインストール後に削除されると、使用されるディスク領域は Web インストーラーに使用される領域と同じになります。 アプリのセットアップ プログラムの作成に使用するツール (たとえば、[InstallAware](#installaware-deployment) または [InstallShield](#installshield-deployment)) によって、インストール後に削除されるセットアップ ファイル フォルダーが提供される場合は、オフライン インストーラーをそのセットアップ フォルダー内に配置することで自動的に削除できます。
 
@@ -136,7 +122,7 @@ Visual Studio で ClickOnce 配置を選択し、.NET Framework の依存関係�
 
 7. 必須コンポーネントのソースの場所を指定するオプションを選択し、 **[OK]** をクリックします。
 
-     .NET Framework のダウンロード場所の URL を指定する場合は、Microsoft ダウンロード センター サイトまたは独自のサイトを指定できます。 再頒布可能パッケージを独自のサーバーに配置する場合は、Web インストーラーではなく、オフライン インストーラーを使用する必要があります。 Microsoft ダウンロード センターの Web インストーラーにのみリンクできます。 URL には、独自のアプリケーションを配布する CD を指定することもできます。
+     .NET Framework のダウンロード場所の URL を指定する場合は、.NET Framework ダウンロード ページまたは独自のサイトを指定できます。 再頒布可能パッケージを独自のサーバーに配置する場合は、Web インストーラーではなく、オフライン インストーラーを使用する必要があります。 .NET Framework ダウンロード ページ上の Web インストーラーにのみリンクできます。 URL には、独自のアプリケーションを配布する CD を指定することもできます。
 
 8. **[プロパティ ページ]** ダイアログ ボックスの **[OK]** をクリックします。
 
@@ -259,7 +245,7 @@ Windows インストーラー XML (WiX) ツールセットは、XML ソース �
 
 [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
 
-|Version|Release DWORD の値|
+|バージョン|Release DWORD の値|
 |-------------|--------------------------------|
 |Windows 10 May 2019 Update にインストールされた .NET Framework 4.8|528040|
 |Windows 10 May 2019 Update 以外のすべての OS バージョンにインストールされた .NET Framework 4.8|528049|
@@ -288,9 +274,9 @@ Windows インストーラー XML (WiX) ツールセットは、XML ソース �
 
 | | |
 |-|-|
-| キー | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
-| name | 解放 |
-| 型 | DWORD |
+| Key | HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\1041 |
+| 名前 | リリース |
+| 種類 | DWORD |
 
 言語パックの最終リリース バージョンがバージョン 4.5 から 4.7.2 までの特定のバージョンの .NET Framework にインストールされているかどうかを確認するには、前のセクション「[.NET Framework の検出](#detect_net)」で説明した Release キー DWORD の値を確認します。
 
@@ -298,27 +284,18 @@ Windows インストーラー XML (WiX) ツールセットは、XML ソース �
 
 ### <a name="chaining-the-language-packs-to-your-app-setup"></a>アプリケーション セットアップへの言語パックのチェーン
 
-.NET Framework には、特定のカルチャにローカライズされたリソースを含むスタンドアロンの言語パックの実行可能ファイルのセットが用意されています。 言語パックは Microsoft ダウンロード センターから入手できます。
+.NET Framework には、特定のカルチャにローカライズされたリソースを含むスタンドアロンの言語パックの実行可能ファイルのセットが用意されています。 言語パックは .NET Framework ダウンロード ページから入手できます。
 
-- [.NET Framework 4.8 言語パック](https://go.microsoft.com/fwlink/p/?LinkId=2086170)
-
-- [.NET Framework 4.7.2 の言語パック](https://go.microsoft.com/fwlink/?LinkId=863275)
-
-- [.NET Framework 4.7.1 の言語パック](https://go.microsoft.com/fwlink/p/?LinkId=852090)
-
-- [.NET Framework 4.7 の言語パック](https://go.microsoft.com/fwlink/p/?LinkId=825306)
-
-- [.NET Framework 4.6.2 言語パック](https://go.microsoft.com/fwlink/p/?LinkId=780604)
-
-- [.NET Framework 4.6.1 言語パック](https://go.microsoft.com/fwlink/p/?LinkId=671747)
-
-- [.NET Framework 4.6 言語パック](https://go.microsoft.com/fwlink/p/?LinkId=528314)
-
-- [.NET Framework 4.5.2 言語パック](https://go.microsoft.com/fwlink/p/?LinkId=397701)
-
-- [.NET Framework 4.5.1 言語パック](https://go.microsoft.com/fwlink/p/?LinkId=322101)
-
-- [.NET Framework 4.5 の言語パック](https://go.microsoft.com/fwlink/p/?LinkId=245451)
+- [.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48)
+- [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework/net472)
+- [.NET Framework 4.7.1](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [.NET Framework 4.7](https://dotnet.microsoft.com/download/dotnet-framework/net47)
+- [.NET Framework 4.6.2](https://dotnet.microsoft.com/download/dotnet-framework/net462)
+- [.NET Framework 4.6.1](https://dotnet.microsoft.com/download/dotnet-framework/net461)
+- [.NET Framework 4.6](https://dotnet.microsoft.com/download/dotnet-framework/net46)
+- [.NET Framework 4.5.2](https://dotnet.microsoft.com/download/dotnet-framework/net452)
+- [.NET Framework 4.5.1](https://dotnet.microsoft.com/download/dotnet-framework/net451)
+- [.NET Framework 4.5](https://dotnet.microsoft.com/download/dotnet-framework/net45)
 
 > [!IMPORTANT]
 > 言語パックには、アプリの実行に必要な .NET Framework コンポーネントは含まれていません。言語パックをインストールする前に、Web インストーラーまたはオフラインのインストーラーを使用して .NET Framework をインストールする必要があります。
@@ -368,7 +345,7 @@ Web インストーラーを使用する場合は、言語パックをチェー�
 
 ## <a name="uninstalling-the-net-framework"></a>.NET Framework のアンインストール
 
-Windows 8 以降、コントロール パネルの **[Windows の機能の有効化または無効化]** を使用して、.NET Framework 4.5 またはそのポイント リリースの 1 つをアンインストールできます。 Windows の旧バージョンでは、コントロール パネルの **[プログラムの追加と削除]** を使用して .NET Framework 4.5 またはそのポイントリリースの 1 つをアンインストールできます。
+Windows 8 以降、コントロール パネルの **[Windows の機能の有効化または無効化]** を使用して、.NET Framework 4.5 以降のバージョンをアンインストールできます。 Windows の旧バージョンでは、コントロール パネルの **[プログラムの追加と削除]** を使用して .NET Framework 4.5 以降のバージョンをアンインストールできます。
 
 > [!IMPORTANT]
 > Windows 7 およびそれ以前のオペレーティング システムでは、.NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2、または 4.8 をアンインストールしても .NET Framework 4.5 のファイルは復元されず、.NET Framework 4.5 をアンインストールしても .NET Framework 4 のファイルは復元されません。 旧バージョンに戻る場合は、更新プログラムと共に再インストールする必要があります。
@@ -399,9 +376,9 @@ Windows 8 以降、コントロール パネルの **[Windows の機能の有効
 
 ### <a name="supported-languages"></a>サポートされる言語
 
-.NET Framework 4.5 とそのポイント リリースで使用可能な .NET Framework 言語パックを次の表に示します。
+.NET Framework 4.5 以降のバージョンで使用可能な .NET Framework 言語パックを次の表に示します。
 
-|LCID|言語 - 国/地域|culture|
+|LCID|言語 - 国/地域|カルチャ|
 |----------|--------------------------------|-------------|
 |1025|アラビア語 - サウジアラビア|ar|
 |1028|中国語 - 繁体字|zh-Hant|

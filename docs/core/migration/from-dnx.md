@@ -2,12 +2,12 @@
 title: DNX から .NET Core CLI への移行
 description: DNX ツールの使用から .NET Core CLI ツールの使用に移行します。
 ms.date: 06/20/2016
-ms.openlocfilehash: 91a43ffda31b34332d2e545a90c857221aa162c4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715520"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920626"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX から .NET Core CLI への移行 (project.json)
 
@@ -30,9 +30,9 @@ CLI の導入により、上記のすべてが単一のツールセットに含�
 ### <a name="no-more-dnvm"></a>DNVM の終了
 DNVM (*DotNet Version Manager* の略) は、コンピューターに DNX をインストールするための bash/PowerShell スクリプトでした。 DNVM を使用することにより、ユーザーは自分で指定したフィード (または既定のフィード) から必要な DNX を容易に取得することができ、さらに、特定のセッションで $PATH にプッシュされるように特定の DNX に "アクティブ" マークを付けることができました。 これがあれば、さまざまなツールを使用できます。
 
-DNVM の機能セットは .NET Core CLI ツールで実施された変更内容と重複することから、DNVM は使用中止になりました。
+.NET Core CLI に加えられた変更によって DNVM の機能セットが冗長になったため、DNVM は廃止されました。
 
-CLI ツールは、主に次の 2 つの方法でパッケージ化されています。
+CLI は、主に次の 2 つの方法でパッケージ化されています。
 
 1. 特定のプラットフォームのネイティブ インストーラー
 2. その他の状況 (CI サーバーなど) に対応するインストール スクリプト
@@ -69,7 +69,7 @@ DNU には、"グローバル コマンド" と呼ばれる概念が採用され
 CLI では、この概念をサポートしていません。 しかし、使い慣れた `dotnet <command>` 構文を使用して呼び出し可能なプロジェクトごとのコマンドを追加する、という概念はサポートされています。
 
 ### <a name="installing-dependencies"></a>依存関係のインストール
-V1 の時点で、.NET Core CLI ツールは、依存関係をインストールするための `install` コマンドを備えていません。 NuGet からパッケージをインストールするには、該当するパッケージを依存関係として `project.json` ファイルに追加し、`dotnet restore` を実行する必要があります ([注記参照](#dotnet-restore-note))。
+v1 の時点で、.NET Core CLI には依存関係をインストールするための `install` コマンドが用意されていません。 NuGet からパッケージをインストールするには、該当するパッケージを依存関係として `project.json` ファイルに追加し、`dotnet restore` を実行する必要があります ([注記参照](#dotnet-restore-note))。
 
 ### <a name="running-your-code"></a>コードの実行
 コードを実行する方法は、主に 2 つあります。 1 つは、`dotnet run` を使用してソースから実行する方法です。 この方法では、`dnx run` の場合とは異なり、メモリ内のコンパイルを行いません。 `dotnet build` を実際に呼び出すことで、コードをビルドし、ビルドされたバイナリを実行します。
@@ -84,7 +84,7 @@ DNX から移行する際には、コードの操作時に新しいコマンド�
 3. 任意の DNX API を、対応する BCL API に移行します。
 
 ### <a name="changing-the-globaljson-file"></a>global.json ファイルの変更
-`global.json` ファイルは、RC1 プロジェクトと RC2 (またはそれ以降の) プロジェクトの両方に対して、ソリューション ファイルのように機能します。 CLI ツール (および Visual Studio) で RC1 とそれ以降のバージョンを区別するために、`"sdk": { "version" }` プロパティを使用して、RC1 のプロジェクトまたはそれ以降のプロジェクトを区別します。 `global.json` にこのノードがまったく存在しない場合は、最新の状態であると見なされます。
+`global.json` ファイルは、RC1 プロジェクトと RC2 (またはそれ以降の) プロジェクトの両方に対して、ソリューション ファイルのように機能します。 .NET Core CLI (および Visual Studio) で RC1 とそれ以降のバージョンを区別するために、`"sdk": { "version" }` プロパティを使用して、RC1 のプロジェクトまたはそれ以降のプロジェクトが区別されます。 `global.json` にこのノードがまったく存在しない場合は、最新の状態であると見なされます。
 
 `global.json` ファイルを更新するには、プロパティを削除するか、使用するツールの正確なバージョンをプロパティに設定します (次の例では、**1.0.0-preview2-003121**)。
 

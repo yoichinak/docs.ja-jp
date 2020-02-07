@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 04d7dedf9f882d9f0e0396949c71e4941c207fe3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345046"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794636"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
@@ -213,7 +213,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
     [!code-csharp [DimensionsBaseClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/DimensionsBase.cs#L3-L9)]
 
-    `DimensionsBase` には、次の `float` フィールドがあります。
+    `DimensionsBase` には、次の `float` プロパティがあります。
 
     - `X` には、x 軸に沿ったオブジェクトの位置が格納されます。
     - `Y` には、y 軸に沿ったオブジェクトの位置が格納されます。
@@ -237,7 +237,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
     [!code-csharp [YoloBoundingBoxClass](~/machinelearning-samples/samples/csharp/getting-started/DeepLearning_ObjectDetection_Onnx/ObjectDetectionConsoleApp/YoloParser/YoloBoundingBox.cs#L7-L21)]
 
-    `YoloBoundingBox` には次のフィールドがあります。
+    `YoloBoundingBox` には、次のプロパティがあります。
 
     - `Dimensions` には、境界ボックスの寸法が格納されます。
     - `Label` には、境界ボックス内で検出されるオブジェクトのクラスが格納されます。
