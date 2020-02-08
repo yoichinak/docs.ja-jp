@@ -4,12 +4,12 @@ description: Azure Functions には、イベント ドリブンのインスタ�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 5e8187b3752a0f0d0bcf8e15f2ce440dc5a64e45
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 8764e6a33f3fdd53e60fa767d0fb584a9c07de7e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "72522870"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920974"
 ---
 # <a name="azure-functions"></a>Azure Functions
 
@@ -61,7 +61,7 @@ Functions は "*App Service プラン*" によってサポートされていま�
 関数アプリを作成するには、3 つの一般的な方法があります。
 
 - ポータルで関数をスクリプト化します。
-- Azure コマンド ライン インターフェイス (CLI) を使用して必要なリソースを作成します。
+- Azure CLI を使用して必要なリソースを作成します。
 - お気に入りの IDE を使用してローカルで関数をビルドし、Azure に発行します。
 
 スクリプト化された関数をポータル上で作成する方法の詳細については、「[Azure portal で初めての関数を作成する](https://docs.microsoft.com/azure/azure-functions/functions-create-first-azure-function)」を参照してください。

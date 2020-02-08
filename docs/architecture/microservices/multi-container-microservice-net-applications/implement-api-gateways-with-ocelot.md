@@ -2,12 +2,12 @@
 title: Ocelot を使った API ゲートウェイの実装
 description: Ocelot を使用して API ゲートウェイを実装する方法と、コンテナー ベースの環境で Ocelot を使用する方法について説明します。
 ms.date: 10/02/2018
-ms.openlocfilehash: 1ade05cc6935ce6a1bc74e6d6e4cdd5ef9fc6873
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734596"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777307"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot を使った API ゲートウェイの実装
 
@@ -414,7 +414,7 @@ eShopOnContainers では、BFF に基づく境界とビジネス領域を持つ�
 
 **図 6-40**。 Ocelot での認証
 
-前の図に示したように、ID マイクロサービスが API ゲートウェイ (AG) の下にある場合は、次のようになります。1) AG で ID マイクロサービスに認証トークンを要求し、2) ID マイクロサービスによって AG にトークンが返され、3-4) AG で認証トークンを使用してマイクロサービスに要求します。 eShopOnContainers アプリケーションは API ゲートウェイを複数の Backend for Frontend (BFF) とビジネス領域の API ゲートウェイに分割しているため、もう 1 つのオプションは、横断的関心事に対して追加の API ゲートウェイを作成することでした。 その選択は、複数の横断的関心事のマイクロサービスを持つより複雑なマイクロサービス ベースのアーキテクチャでは適切でしょう。 eShopOnContainers には横断的関心事は 1 つしかないので、簡素化するため、API ゲートウェイ領域外のセキュリティ サービスだけを処理すると判断されました。
+前の図に示したように、ID マイクロサービスが API ゲートウェイ (AG) の下にある場合は、次のようになります。1) AG で ID マイクロサービスに認証トークンを要求し、2) ID マイクロサービスによって AG にトークンが返され、3-4) AG で認証トークンを使用してマイクロサービスに要求します。 eShopOnContainers アプリケーションによって API ゲートウェイが複数の BFF (Backend for Frontend) とビジネス領域の API ゲートウェイに分割されているため、もう 1 つのオプションは、横断的な問題に対して追加の API ゲートウェイを作成することでした。 その選択は、複数の横断的関心事のマイクロサービスを持つより複雑なマイクロサービス ベースのアーキテクチャでは適切でしょう。 eShopOnContainers には横断的関心事は 1 つしかないので、簡素化するため、API ゲートウェイ領域外のセキュリティ サービスだけを処理すると判断されました。
 
 いずれの場合も、アプリが API ゲートウェイ レベルでセキュリティ保護されている場合は、任意のセキュリティで保護されたマイクロサービスを使用するときに、最初にアクセスされるのは、Ocelot API ゲートウェイの認証モジュールです。 これは HTTP 要求をリダイレクトして、ID/認証マイクロサービスにアクセスして、access_token で保護されたサービスにアクセスできるように、アクセス トークンを取得します。
 

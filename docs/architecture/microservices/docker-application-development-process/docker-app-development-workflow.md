@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/07/2019
-ms.openlocfilehash: 0c2789377bc388b8ac7373ee7fa46e3141f1b518
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 53675bf974069e9052d6d03b2743314af6f13cf9
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "73740190"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965790"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -409,7 +409,7 @@ docker-compose.yml ファイルについては、マイクロサービスとマ�
 
 ### <a name="working-with-docker-composeyml-in-visual-studio-2017"></a>Visual Studio 2017 での docker-compose.yml の操作
 
-Dockerfile をプロジェクトに追加するだけでなく、前述のとおり、Visual Studio 2017 (15.8 以降) では、ソリューションに Docker Compose のオーケストレーター サポートを追加できます。
+Dockerfile をプロジェクトに追加するだけでなく、前述のとおり、Visual Studio 2017 (バージョン 15.8 以降) では、ソリューションに Docker Compose のオーケストレーター サポートを追加できます。
 
 図 5-7 に示すように、コンテナー オーケストレーターのサポートを最初に追加するときに、Visual Studio でプロジェクト用の Dockerfile が作成され、いくつかのグローバル `docker-compose*.yml` ファイルを含むソリューションに新しい (サービス セクション) プロジェクトが作成されてから、それらのファイルにプロジェクトが追加されます。 その後、docker-compose.yml ファイルを開き、追加機能で更新することができます。
 
@@ -442,10 +442,10 @@ Visual Studio でソリューションにオーケストレーター サポー�
 図 5-9 に示すように、`docker run` コマンドを使用して Docker コンテナーを実行できます。
 
 ```console
-  docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
+docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 ```
 
-上記のコマンドでは、実行されるたびに、指定されたイメージから新しいコンテナー インスタンスが作成されます。 `--name` パラメーターを使用して、コンテナーに名前を付けてから、`docker start {name}` (またはコンテナー ID あるいは自動名) を使って、既存のコンテナー インスタンスを実行することができます。
+上記のコマンドでは、実行されるたびに、指定されたイメージから新しいコンテナー インスタンスが作成されます。 `--name` パラメーターを使用してコンテナーに名前を付けてから、`docker start {name}` (またはコンテナー ID あるいは自動名) を使って、既存のコンテナー インスタンスを実行することができます。
 
 ![docker run コマンドを使用して Docker コンテナーを実行しているスクリーンショット。](./media/docker-app-development-workflow/use-docker-run-command.png)
 
@@ -453,7 +453,7 @@ Visual Studio でソリューションにオーケストレーター サポー�
 
 この場合、このコマンドによって、コンテナーの内部ポート 5000 がホスト コンピューターのポート 80 にバインドされます。 つまり、ホストはポート 80 をリッスンし、コンテナーのポート 5000 に転送することを意味します。
 
-表示されるハッシュはコンテナー ID であり、`--name` オプションが使用されていない場合はランダムな読み取り可能な名前も割り当てられます。
+表示されるハッシュはコンテナー ID であり、`--name` オプションが指定されていない場合は、ランダムな読み取り可能な名前も割り当てられます。
 
 #### <a name="using-visual-studio"></a>Visual Studio の使用
 
@@ -500,7 +500,7 @@ Visual Studio 2017 を使用したマルチコンテナー アプリケーショ
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>オーケストレーターを使用したテストと展開に関する注意事項
 
-docker-compose up および docker run コマンド (または Visual Studio でのコンテナーの実行およびデバッグ) を使用して、開発環境でコンテナーを十分にテストできます。 しかし、[Kubernetes](https://kubernetes.io/) や [Service Fabric](https://azure.microsoft.com/services/service-fabric/) などのオーケストレーターをターゲットにする必要がある、運用での展開にはこの方法を使用しないでください。 Kubernetes を使用している場合は、[ポッド](https://kubernetes.io/docs/concepts/workloads/pods/pod/)を使ってコンテナーと[サービス](https://kubernetes.io/docs/concepts/services-networking/service/)を整理し、ネットワーク接続する必要があります。 [展開](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)を使用して、ポッドの作成と変更を整理することもできます。
+docker-compose up および docker run コマンド (または Visual Studio でのコンテナーの実行およびデバッグ) を使用して、開発環境でコンテナーを十分にテストできます。 しかし、[Kubernetes](https://kubernetes.io/) や [Service Fabric](https://azure.microsoft.com/services/service-fabric/) などのオーケストレーターをターゲットにする必要がある、運用での展開にはこの方法を使用しないでください。 Kubernetes を使用している場合は、[ポッド](https://kubernetes.io/docs/concepts/workloads/pods/pod/)を使ってコンテナーと[サービス](https://kubernetes.io/docs/concepts/services-networking/service/)を整理し、それらをネットワーク接続する必要があります。 [展開](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)を使用して、ポッドの作成と変更を整理することもできます。
 
 ![手順 6 の画像。](./media/docker-app-development-workflow/step-6-test-app-microservices.png)
 

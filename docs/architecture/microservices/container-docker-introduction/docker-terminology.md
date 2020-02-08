@@ -2,12 +2,12 @@
 title: Docker に関する用語
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Docker 用語
 ms.date: 01/07/2019
-ms.openlocfilehash: 2735188c508a7bbb0101946429faec122b13a17b
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 33f2918df5b63cc4bd54ddb84900c6bd91e9f77e
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73090049"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921007"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 
@@ -47,7 +47,7 @@ ms.locfileid: "73090049"
 
 **クラスター**:クラスター内の複数のホストに分散されたサービスの複数のインスタンスに対応できるように、単一の仮想 Docker ホストであるかのように公開された Docker ホストのコレクションです。 Docker クラスターは、Kubernetes、Azure Service Fabric、Docker Swarm、Mesosphere DC/OS を使用して作成できます。
 
-**Orchestrator**:クラスターと Docker ホストの管理を簡略化するツールです。 Orchestrator を使用すると、そのイメージ、コンテナー、およびホストをコマンド ライン インターフェイス (CLI) またはグラフィカル UI を介して管理することができます。 コンテナー ネットワーク、構成、負荷分散、サービス検出、高可用性、Docker ホストの構成などを管理することができます。 オーケストレーターは、ノードのコレクション全体にわたりワークロードの実行、配布、スケーリング、修復を担当します。 通常、オーケストレーター製品は、市場の他のオファリングの中でも、Kubernetes や Azure Service Fabric などのクラスター インフラストラクチャを提供する同じ製品です。
+**Orchestrator**:クラスターと Docker ホストの管理を簡略化するツールです。 Orchestrator を使用すると、そのイメージ、コンテナー、およびホストを CLI またはグラフィカル UI を介して管理することができます。 コンテナー ネットワーク、構成、負荷分散、サービス検出、高可用性、Docker ホストの構成などを管理することができます。 オーケストレーターは、ノードのコレクション全体にわたりワークロードの実行、配布、スケーリング、修復を担当します。 通常、オーケストレーター製品は、市場の他のオファリングの中でも、Kubernetes や Azure Service Fabric などのクラスター インフラストラクチャを提供する同じ製品です。
 
 >[!div class="step-by-step"]
 >[前へ](docker-defined.md)

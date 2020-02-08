@@ -2,12 +2,12 @@
 title: Docker コンテナー用 .Net Core を選択するタイミング
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Docker コンテナー用 .Net Core を選択するタイミング'
 ms.date: 09/11/2018
-ms.openlocfilehash: 54ed1b4bbb16352b8c99204383f85ffb25d62be7
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.openlocfilehash: d17b6b7620f485f09f8f18ac792418a48ae40037
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68675729"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920977"
 ---
 # <a name="when-to-choose-net-core-for-docker-containers"></a>Docker コンテナー用 .Net Core を選択するタイミング
 
@@ -27,9 +27,9 @@ Docker (Linux と Windows) でサポートされている複数のプラット�
 
 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) は、macOS 上で実行する、Docker ベースのアプリケーションの開発をサポートする Xamarin Studio の進化版の IDE です。 これは、強力な IDE を使用したい Mac コンピューターで作業する開発者にとって好ましい選択肢です。
 
-また、macOS、Linux、および Windows 上で [Visual Studio Code](https://code.visualstudio.com/) (VS Code) も使用できます。 VS Code は、IntelliSense、デバッグなどの .NET Core を完全にサポートしています。 VS Code は軽量なエディターなので、Docker CLI や [.NET Core コマンドライン インターフェイス (CLI)](../../../core/tools/index.md) と組み合わせて、コンテナー化されたアプリケーションを Mac 上で開発することができます。 Sublime、Emacs、vi、オープンソースの OmniSharp プロジェクト (IntelliSense サポートも提供) など、ほとんどのサードパーティ製エディターで .NET Core を対象にすることもできます。
+また、macOS、Linux、および Windows 上で [Visual Studio Code](https://code.visualstudio.com/) を使用することもできます。 Visual Studio Code では、IntelliSense やデバッグなども含め、.NET Core が完全にサポートされています。 VS Code は軽量なエディターなので、Docker CLI や [.NET Core CLI](../../../core/tools/index.md) と組み合わせて使用し、コンテナー化されたアプリケーションを Mac 上で開発することができます。 Sublime、Emacs、vi、オープンソースの OmniSharp プロジェクト (IntelliSense サポートも提供) など、ほとんどのサードパーティ製エディターで .NET Core を対象にすることもできます。
 
-IDE とエディターだけでなく、サポートされているすべてのプラットフォームで [.NET Core CLI](../../../core/tools/index.md) ツールを使用できます。
+IDE とエディターだけでなく、サポートされているすべてのプラットフォームで [.NET Core CLI](../../../core/tools/index.md) を使用できます。
 
 ## <a name="using-containers-for-new-green-field-projects"></a>新しい ("グリーン フィールド") プロジェクトにコンテナーを使用する
 
