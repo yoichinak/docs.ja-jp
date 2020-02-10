@@ -10,12 +10,12 @@ helpviewer_keywords:
 - string interpolation [C#]
 - interpolated string [C#]
 author: pkulikov
-ms.openlocfilehash: b32bbbb0bd99878822d7ca5abdba80b46539846a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 97bc606569b83bd14cd3b32495deb8e529747e9c
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715077"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980120"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
@@ -101,6 +101,6 @@ verbatim 補間文字列は、`$` 文字で始まり、`@` 文字が続きます
 - [C# リファレンス](../index.md)
 - [C# 特殊文字](index.md)
 - [文字列](../../programming-guide/strings/index.md)
-- [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
+- [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)
 - [複合書式指定](../../../standard/base-types/composite-formatting.md)
 - <xref:System.String.Format%2A?displayProperty=nameWithType>

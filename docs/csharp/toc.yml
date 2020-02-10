@@ -1313,7 +1313,7 @@
         - name: 概要
           displayName: keywords
           href: language-reference/keywords/index.md
-        - name: 組み込み型
+        - name: 型
           items:
             - name: 値型
               items:
@@ -1357,14 +1357,12 @@
               href: language-reference/keywords/void.md
             - name: var
               href: language-reference/keywords/var.md
+            - name: 組み込み型
+              href: language-reference/builtin-types/built-in-types.md
             - name: アンマネージ型
               href: language-reference/builtin-types/unmanaged-types.md
             - name: 既定の値
               href: language-reference/builtin-types/default-values.md
-            - name: 型のリファレンス表
-              items:
-                - name: 組み込み型の一覧表
-                  href: language-reference/keywords/built-in-types-table.md
         - name: 修飾子
           items:
             - name: アクセス修飾子

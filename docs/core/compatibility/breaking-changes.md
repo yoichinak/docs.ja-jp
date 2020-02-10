@@ -1,13 +1,13 @@
 ---
-title: .NET Core の破壊的変更
+title: 互換性に影響する変更
 description: .NET Core の各バージョンの破壊的変更について説明します。
 ms.date: 11/27/2019
-ms.openlocfilehash: c03054972a5e1cd427e069c65fa8e8b601af5894
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 664d83f5bfa455764de8823c4bbdb4a2018e1875
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937345"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093072"
 ---
 # <a name="breaking-change-selectors"></a>破壊的変更のセレクター
 

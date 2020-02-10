@@ -1,13 +1,13 @@
 ---
-title: ネットワークに関する破壊的変更 - .NET Core
+title: ネットワークに関する破壊的変更
 description: .NET Core のネットワークに関する破壊的変更の一覧を示します。
 ms.date: 10/03/2019
-ms.openlocfilehash: fb53dfc230623d7fda515341209a1853d4319468
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: d5d445827554d2c898e07dac53d8a571ebdf9359
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116409"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092994"
 ---
 # <a name="networking-breaking-changes"></a>ネットワークに関する破壊的変更
 

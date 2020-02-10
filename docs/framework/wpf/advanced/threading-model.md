@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: 550ba74c7ceba16c2040932918364ae2a59ea665
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87dcfa22bcce730c5a9b61721c3a846a08146475
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794269"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094502"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、スレッド処理の難しさから開発者を節約するように設計されています。 その結果、多くの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 開発者は、複数のスレッドを使用するインターフェイスを作成する必要がなくなります。 マルチスレッドプログラムは複雑でデバッグが困難なため、シングルスレッドソリューションが存在する場合は回避する必要があります。
@@ -58,7 +58,7 @@ ms.locfileid: "76794269"
 ### <a name="a-single-threaded-application-with-a-long-running-calculation"></a>実行時間の長い計算を含むシングルスレッドアプリケーション
  ほとんどのグラフィカルユーザーインターフェイス (Gui) は、ユーザーの操作に応じて生成されたイベントを待機している間、時間の長い部分を消費します。 プログラムを注意深くプログラミングすると、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]の応答性に影響を与えることなく、このアイドル時間を constructively に使用できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のスレッドモデルでは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] のスレッドで発生する操作を中断するための入力を許可していません。 これは、保留中の入力イベントが古くなる前に処理するために、定期的に <xref:System.Windows.Threading.Dispatcher> に戻る必要があることを意味します。
 
- 次に例を示します。
+ 次の例を確認してください。
 
  ![素数のスレッド処理を示すスクリーンショット。](./media/threading-model/threading-prime-numbers.png)
 
@@ -99,7 +99,7 @@ ms.locfileid: "76794269"
 
  このメソッドは、次の奇数の値が素数かどうかを確認します。 素数の場合、メソッドは、検出を反映するために `bigPrime`<xref:System.Windows.Controls.TextBlock> を直接更新します。 これは、コンポーネントの作成に使用されたのと同じスレッドで計算が行われているためです。 計算に別のスレッドを使用することを選択した場合は、より複雑な同期機構を使用して、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] のスレッドで更新を実行する必要があります。 この状況を次に示します。
 
- このサンプルの完全なソースコードについては、「[実行時間の長い計算サンプルを使用したシングルスレッドアプリケーション](https://go.microsoft.com/fwlink/?LinkID=160038)」を参照してください。
+ このサンプルの完全なソースコードについては、「[実行時間の長い計算サンプルを使用したシングルスレッドアプリケーション](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)」を参照してください。
 
 <a name="weather_sim"></a>
 ### <a name="handling-a-blocking-operation-with-a-background-thread"></a>バックグラウンドスレッドを使用したブロッキング操作の処理
@@ -215,6 +215,6 @@ ms.locfileid: "76794269"
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のタスクでは、メモリリークを再導入ことなく予期しない再入を避けることができます。これは、どこでも再入をブロックしないためです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [実行時間の長い計算サンプルを使用したシングルスレッドアプリケーション](https://go.microsoft.com/fwlink/?LinkID=160038)
+- [実行時間の長い計算サンプルを使用したシングルスレッドアプリケーション](https://github.com/Microsoft/WPF-Samples/tree/master/Threading/SingleThreadedApplication)

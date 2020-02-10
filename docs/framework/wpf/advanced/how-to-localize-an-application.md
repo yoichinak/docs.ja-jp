@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 26c09e547205e7819ebb43d6e34b6e18d6d9ff98
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 7e034e92e1ff2b9bec0eaf8e0f3330f7a832a7e5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460837"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095167"
 ---
 # <a name="how-to-localize-an-application"></a>方法 : アプリケーションをローカライズする
 このチュートリアルでは、LocBaml ツールを使用して、ローカライズされたアプリケーションを作成する方法について説明します。  
@@ -27,7 +27,7 @@ ms.locfileid: "73460837"
  この説明では、アプリケーションのローカリゼーションの手順を段階を追って示します。 最初に、翻訳されるテキストを抽出できるようにアプリケーションを準備します。 テキストの翻訳後、翻訳されたテキストを元のアプリケーションの新しいコピーにマージします。  
   
 <a name="Requirements"></a>   
-## <a name="requirements"></a>［要件］  
+## <a name="requirements"></a>必要条件  
  この説明では、コマンドラインから実行するコンパイラである Microsoft build engine (MSBuild) を使用します。  
   
  また、プロジェクト ファイルを使用するよう指示されます。 MSBuild とプロジェクトファイルの使用方法については、「[ビルドと配置](../app-development/building-and-deploying-wpf-applications.md)」を参照してください。  
@@ -64,7 +64,7 @@ ms.locfileid: "73460837"
   
 <a name="create_dll"></a>   
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>ニュートラル言語リソースのサテライト アセンブリを作成する  
- ニュートラル言語リソースのサテライト アセンブリを生成するようにアプリケーションを構成した後、アプリケーションをビルドします。 これにより、メイン アプリケーション アセンブリだけでなく、ローカリゼーションで LocBaml が必要とするニュートラル言語リソースのサテライト アセンブリが生成されます。 アプリケーションをビルドするには  
+ ニュートラル言語リソースのサテライト アセンブリを生成するようにアプリケーションを構成した後、アプリケーションをビルドします。 これにより、メイン アプリケーション アセンブリだけでなく、ローカリゼーションで LocBaml が必要とするニュートラル言語リソースのサテライト アセンブリが生成されます。 アプリケーションをビルドするには:  
   
 1. Helloapp.resources.dll をコンパイルして、ダイナミックリンクライブラリ (DLL) を作成します。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "73460837"
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>LocBaml ツールをビルドする  
   
-1. LocBaml のビルドに必要なすべてのファイルは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サンプルに配置されています。 C# [LocBaml ツールサンプル](https://go.microsoft.com/fwlink/?LinkID=160016)からファイルをダウンロードします。  
+1. LocBaml のビルドに必要なすべてのファイルは [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サンプルに配置されています。 C# [LocBaml ツールサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)からファイルをダウンロードします。  
   
 2. ツールをビルドするには、コマンド ラインでプロジェクト ファイル (locbaml.csproj) を実行します。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "73460837"
   
    2. **リソース キー**。 ローカライズされたリソースの識別子。  
   
-   3. **カテゴリ**。 値の型です。 「[ローカリゼーション属性とコメント」を](localization-attributes-and-comments.md)参照してください。  
+   3. **[カテゴリ]** 。 値の型です。 「[ローカリゼーション属性とコメント」を](localization-attributes-and-comments.md)参照してください。  
   
    4. **読みやすさ**。 ローカライザーによって値が読み取れるかどうか。 「[ローカリゼーション属性とコメント」を](localization-attributes-and-comments.md)参照してください。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "73460837"
   
    次の表は、.csv ファイルの区切り記号付きの値にこれらのフィールドをマップする方法を示しています。  
   
-   |BAML 名|リソース キー|カテゴリ|読みやすさ|変更可能性|コメント|[値]|  
+   |BAML 名|リソース キー|カテゴリ|読みやすさ|変更可能性|説明|値|  
    |---------------|------------------|--------------|-----------------|-------------------|--------------|-----------|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|false|false||#Text1;#Text2|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|None|true|true||Hello World|
-   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|None|true|true||Goodbye World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|Ignore|FALSE|FALSE||#Text1;#Text2|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|TRUE|TRUE||Hello World|
+   |HelloApp.g.en-US.resources:window1.baml|Stack1:System.Windows.Controls.StackPanel.$Content|なし|TRUE|TRUE||Goodbye World|
   
    **[コメント]** フィールドのすべての値に値が含まれていないことに注意してください。フィールドに値がない場合は、空になります。 また、最初の行の項目は読み取りも変更もできず、**カテゴリ**値として "Ignore" が含まれていることにも注意してください。これらはすべて、値がローカライズ可能ではないことを示します。  
   
@@ -186,7 +186,7 @@ ms.locfileid: "73460837"
   
 6. 新しいフォルダーに生成されたサテライト アセンブリをコピーします。  
   
-7. 新しいサテライト アセンブリをテストするには、アプリケーションが実行するカルチャを変更する必要があります。 2 つの方法のいずれかでこれを行うことができます。  
+7. 新しいサテライト アセンブリをテストするには、アプリケーションが実行するカルチャを変更する必要があります。 これは、次の 2 つの方法のいずれかで行うことができます。  
   
     - オペレーティングシステムの地域設定を変更します ([**スタート** &#124; **] コントロールパネル** &#124;の **[地域と言語] オプション**)。  
   
@@ -206,10 +206,10 @@ ms.locfileid: "73460837"
 - ローカライズされたリソースの DLL は、メインのアセンブリと同期する必要があります。  
   
 <a name="Whats_Next"></a>   
-## <a name="whats-next"></a>次の内容  
+## <a name="whats-next"></a>参照トピック  
  これで、LocBaml ツールの使用方法に関する基本的な知識が得られました。  UID を含むファイルを作成できるようになりました。 LocBaml ツールを使用することで、ローカライズ可能なコンテンツを抽出するファイルを解析できます。コンテンツを翻訳すると、翻訳済みのコンテンツをマージする .resources.dll ファイルを生成できます。 このトピックには、可能性のあるすべての詳細情報は含まれていませんが、LocBaml を使用してアプリケーションをローカライズするために必要な知識は得られました。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF のグローバリゼーション](globalization-for-wpf.md)
 - [自動レイアウトの使用の概要](use-automatic-layout-overview.md)

@@ -2,12 +2,12 @@
 title: Byrefs
 description: 下位レベルのプログラミングに使用される、 F#の byref および byref に似た型について説明します。
 ms.date: 11/04/2019
-ms.openlocfilehash: 05a40059ad5b72829233b0c4135c76eb1cff4da5
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 2d98d325dc4ad26548fb2cc6aa5b872e152ee0a8
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965816"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092789"
 ---
 # <a name="byrefs"></a>Byrefs
 
@@ -82,7 +82,7 @@ f &dt
 
 ### <a name="inref-semantics"></a>Inref セマンティクス
 
-次のコードがあるとします。
+次のコードについて考えてみましょう。
 
 ```fsharp
 let f (x: inref<SomeStruct>) = x.SomeField
@@ -134,7 +134,7 @@ C#では、`ref` が返すだけでなく、`in ref` キーワードと `out ref
 2. 変更可能なフィールドを持たない構造体型の `this` ポインター。
 3. 別の `inref<_>` ポインターから派生したメモリ位置のアドレス。
 
-`inref` の暗黙的なアドレスを取得するときに、型 `SomeType` の引数を持つオーバーロードは `inref<SomeType>`型の引数を持つオーバーロードに優先されます。 例:
+`inref` の暗黙的なアドレスを取得するときに、型 `SomeType` の引数を持つオーバーロードは `inref<SomeType>`型の引数を持つオーバーロードに優先されます。 次に例を示します。
 
 ```fsharp
 type C() =
@@ -179,7 +179,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 ## <a name="byref-returns"></a>Byref の戻り値
 
-関数またはF#メンバーからの Byref 戻り値は、生成および使用できます。 `byref`を返すメソッドを使用する場合、値は暗黙的に逆参照されます。 例:
+関数またはF#メンバーからの Byref 戻り値は、生成および使用できます。 `byref`を返すメソッドを使用する場合、値は暗黙的に逆参照されます。 次に例を示します。
 
 ```fsharp
 let squareAndPrint (data : byref<int>) = 
@@ -188,7 +188,7 @@ let squareAndPrint (data : byref<int>) =
 ```
 
 値を表す値を返すには、値を含む変数が現在のスコープよりも長く有効である必要があります。
-また、byref を返すには & 値を使用します (value は、現在のスコープよりも長い変数です)。
+また、byref を返すには `&value` を使用します (value は、現在のスコープよりも長い変数です)。
 
 ```fsharp
 let mutable sum = 0
@@ -252,4 +252,4 @@ let test () =
     ()
 ```
 
-これにより、最適化を使用してコンパイルした場合に、によって異なる結果が得られるのを防ぐことができます。
+これにより、最適化でコンパイルするかどうかによって、異なる結果が得られるのを防ぐことができます。

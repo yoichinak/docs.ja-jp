@@ -2,17 +2,17 @@
 title: OperationContext へのアクセス
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: b8a09aff7b5a30b5267fbdbd7bd6391996f359c7
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 83f3a6cacd3ee86050f65a886d446ab8da7d3690
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715101"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094710"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext へのアクセス
 このサンプルでは、メッセージングアクティビティ (<xref:System.ServiceModel.Activities.Receive> と <xref:System.ServiceModel.Activities.Send>) をカスタムスコープアクティビティと共に使用して <xref:System.ServiceModel.OperationContext.Current%2A> にアクセスし、送信メッセージまたは受信メッセージ内のカスタムメッセージヘッダーを添付または取得する方法を示します。  
   
-## <a name="demonstrates"></a>例  
+## <a name="demonstrates"></a>対象  
  メッセージング アクティビティ、<xref:System.ServiceModel.Activities.ISendMessageCallback>、<xref:System.ServiceModel.Activities.IReceiveMessageCallback>。  
   
 ## <a name="discussion"></a>ディスカッション  
@@ -20,7 +20,7 @@ ms.locfileid: "74715101"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. このサンプルでは、HTTP エンドポイントを使用してワークフロー サービスを公開します。 このサンプルを実行するには、適切な URL Acl を追加する必要があります (詳細については、「 [HTTP および HTTPS の構成](https://go.microsoft.com/fwlink/?LinkId=70353)」を参照してください)。管理者として Visual Studio を実行するか、管理者特権のプロンプトで次のコマンドを実行して適切な acl を追加します。 ドメインとユーザー名は置き換えてください。  
+1. このサンプルでは、HTTP エンドポイントを使用してワークフロー サービスを公開します。 このサンプルを実行するには、適切な URL Acl を追加する必要があります (詳細については、「 [HTTP および HTTPS の構成](../../wcf/feature-details/configuring-http-and-https.md)」を参照してください)。管理者として Visual Studio を実行するか、管理者特権のプロンプトで次のコマンドを実行して適切な acl を追加します。 ドメインとユーザー名は置き換えてください。  
   
     ```console  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
