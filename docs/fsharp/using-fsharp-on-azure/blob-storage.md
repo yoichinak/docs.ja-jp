@@ -3,24 +3,24 @@ title: F# を使用した Azure Blob Storage の概要
 description: Azure Blob storage を使用して、非構造化データをクラウドに格納します。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 90ec0d63b11ad00c53a1740211e9a6509582e863
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 79f6a559ac603b0544916764126a988d3f3f43d7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75935503"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092630"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F\# を使用した Azure Blob storage の概要
 
-Azure BLOB Storage は、非構造化データをオブジェクト/BLOB としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキストまたはバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
+Azure Blob Storage は、非構造化データをクラウド内にオブジェクト/BLOB として格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキスト データやバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 
 この記事では、Blob storage を使用して一般的なタスクを実行する方法について説明します。 サンプルは、.NET 用F#の Azure Storage クライアントライブラリを使用して記述されています。 説明するタスクには、blob のアップロード、一覧表示、ダウンロード、および削除の方法が含まれます。
 
-Blob storage の概念の概要については、「 [.net ガイド](/azure/storage/storage-dotnet-how-to-use-blobs)」を参照してください。
+Blob storage の概念の概要については、「 [.net ガイド](/azure/storage/blobs/storage-quickstart-blobs-dotnet)」を参照してください。
 
-## <a name="prerequisites"></a>[前提条件]
+## <a name="prerequisites"></a>前提条件
 
-このガイドを使用するには、最初に[Azure ストレージアカウントを作成](/azure/storage/storage-create-storage-account)する必要があります。 また、このアカウントのストレージアクセスキーも必要です。
+このガイドを使用するには、最初に[Azure ストレージアカウントを作成](/azure/storage/common/storage-account-create)する必要があります。 また、このアカウントのストレージアクセスキーも必要です。
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>F#スクリプトを作成してF#対話形式で起動する
 
@@ -28,7 +28,7 @@ Blob storage の概念の概要については、「 [.net ガイド](/azure/sto
 
 次に、[パケット](https://fsprojects.github.io/Paket/)や[NuGet](https://www.nuget.org/)などの[パッケージマネージャー](package-management.md)を使用して `WindowsAzure.Storage` をインストールし `Microsoft.WindowsAzure.ConfigurationManager` パッケージと参照 `WindowsAzure.Storage.dll` を `#r` ディレクティブを使用してスクリプトに `Microsoft.WindowsAzure.Configuration.dll` します。
 
-### <a name="add-namespace-declarations"></a>名前空間宣言を追加する
+### <a name="add-namespace-declarations"></a>名前空間宣言の追加
 
 次の `open` ステートメントを `blobs.fsx` ファイルの先頭に追加します。
 
@@ -72,7 +72,7 @@ Azure Configuration Manager の使用はオプションです。 .NET Framework 
 
 これで、Blob Storage に対してデータの読み取りと書き込みを実行するコードを記述する準備が整いました。
 
-## <a name="create-a-container"></a>コンテナーの作成
+## <a name="create-a-container"></a>コンテナーを作成する
 
 この例は、コンテナーがない場合に、コンテナーを作成する方法を示しています。
 
@@ -102,14 +102,14 @@ Blob には、名前にパス情報を指定することもできます。 こ�
 
 たとえば、 `photos`という名前のコンテナーに次の一連のブロック BLOB があったとします。
 
-*photo1.jpg*\
+*photo1*\
 *2015/architecture/description .txt*\
-*2015/architecture/photo3.jpg*\
-*2015/architecture/photo4.jpg*\
-*2016/architecture/photo5.jpg*\
-*2016/architecture/photo6.jpg*\
+*2015/architecture/photo3*\
+*2015/architecture/photo4*\
+*2016/architecture/photo5*\
+*2016/architecture/photo6*\
 *2016/architecture/description .txt*\
-*2016/photo7.jpg*\
+*2016/photo7*\
 
 コンテナーで `ListBlobs` を呼び出すと (上記のサンプルのように)、階層化された一覧が返されます。 コンテナー内のディレクトリと blob をそれぞれ表す `CloudBlobDirectory` オブジェクトと `CloudBlockBlob` オブジェクトの両方が含まれている場合、結果の出力は次のようになります。
 
@@ -196,8 +196,8 @@ Blob を削除するには、まず blob の参照を取得してから、その
 
 Azure Storage のどの BLOB もコンテナーに格納する必要があります。 コンテナーは、BLOB 名の一部を形成しています。 たとえば、次の BLOB の URI のサンプルでは、 `mydata` がコンテナーの名前です。
 
-- https://storagesample.blob.core.windows.net/mydata/blob1.txt
-- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- `https://storagesample.blob.core.windows.net/mydata/blob1.txt`
+- `https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg`
 
 コンテナー名は有効な DNS 名で、次の名前規則に準拠している必要があります。
 
@@ -220,7 +220,7 @@ Azure Storage のどの BLOB もコンテナーに格納する必要がありま
 
 Azure Storage は、クライアントとサーバーの両方で blob データの暗号化をサポートしています。
 
-## <a name="next-steps"></a>次のステップ:
+## <a name="next-steps"></a>次のステップ
 
 これで、Blob Storage の基本を学習できました。さらに詳細な情報が必要な場合は、次のリンク先を参照してください。
 
@@ -238,13 +238,12 @@ Windows、OS X、Linux で Azure Storage データを視覚的に操作できる
 ### <a name="blob-storage-reference"></a>Blob Storage リファレンス
 
 - [.NET 用 Azure Storage API](/dotnet/api/overview/azure/storage)
-- [Azure Storage サービスの REST API リファレンス](/rest/api/storageservices/Azure-Storage-Services-REST-API-Reference)
+- [Azure Storage サービスの REST API リファレンス](/rest/api/storageservices/)
 
 ### <a name="related-guides"></a>関連ガイド
 
-- [Azure Blob Storage でのはじめにC#](https://azure.microsoft.com/resources/samples/storage-blob-dotnet-getting-started/)
-- [Windows で AzCopy コマンドラインユーティリティを使用してデータを転送する](/azure/storage/common/storage-use-azcopy)
-- [Linux で AzCopy コマンドラインユーティリティを使用してデータを転送する](/azure/storage/common/storage-use-azcopy-linux)
+- [.NET 用の Azure Blob Storage サンプル](https://docs.microsoft.com/samples/azure-samples/storage-blob-dotnet-getting-started/storage-blob-dotnet-getting-started/)
+- [AzCopy を使ってみる](/azure/storage/common/storage-use-azcopy-v10)
 - [Azure Storage の接続文字列を構成する](/azure/storage/common/storage-configure-connection-string)
 - [Azure のストレージ チーム ブログ](https://docs.microsoft.com/archive/blogs/windowsazurestorage/)
 - [クイックスタート: .NET を使用してオブジェクトストレージに blob を作成する](/azure/storage/blobs/storage-quickstart-blobs-dotnet)

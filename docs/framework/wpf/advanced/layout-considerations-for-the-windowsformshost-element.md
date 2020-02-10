@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 9f97639447284b792d52cf4aa25b81f584d7291a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 89ed57a787b93a1326b4accd3bb1bc5ff9a825fd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787902"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095152"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 要素のレイアウトに関する考慮事項
 このトピックでは、<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素が [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトシステムとどのように連携するかについて説明します。  
@@ -28,11 +28,11 @@ ms.locfileid: "76787902"
   
  Windows フォームのレイアウトはデバイスに依存しており、静的である可能性が高くなります。 通常、Windows フォームコントロールは、ハードウェアピクセルで指定された寸法を使用してフォーム上に絶対に配置されます。 ただし、次の表に示すように、Windows フォームでは動的レイアウト機能がいくつかサポートされています。  
   
-|レイアウト機能|説明|  
+|レイアウト機能|[説明]|  
 |--------------------|-----------------|  
 |自動サイズ調整|一部の Windows フォームコントロール自体のサイズを変更して、内容が正しく表示されるようにします。 詳細については、「 [AutoSize プロパティの概要](../../winforms/controls/autosize-property-overview.md)」を参照してください。|  
-|固定とドッキング|Windows フォームコントロールは、親コンテナーに基づく配置とサイズ設定をサポートします。 詳細については、「<xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>」および「<xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>」を参照してください。|  
-|自動|コンテナーコントロールは、出力デバイスの解像度または既定のコンテナーフォントのサイズ (ピクセル単位) に基づいて、自身とその子のサイズを変更します。 詳細については、「 [Windows フォームでの自動スケーリング](../../winforms/automatic-scaling-in-windows-forms.md)」を参照してください。|  
+|固定とドッキング|Windows フォームコントロールは、親コンテナーに基づく配置とサイズ設定をサポートします。 詳細については、「 <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType> および <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>」を参照してください。|  
+|自動スケール|コンテナーコントロールは、出力デバイスの解像度または既定のコンテナーフォントのサイズ (ピクセル単位) に基づいて、自身とその子のサイズを変更します。 詳細については、「 [Windows フォームでの自動スケーリング](../../winforms/automatic-scaling-in-windows-forms.md)」を参照してください。|  
 |レイアウトコンテナー|<xref:System.Windows.Forms.FlowLayoutPanel> コントロールと <xref:System.Windows.Forms.TableLayoutPanel> コントロールは、そのコンテンツに応じて子コントロールを配置し、サイズを調整します。|  
   
 ## <a name="layout-limitations"></a>レイアウトの制限事項  
@@ -67,7 +67,7 @@ ms.locfileid: "76787902"
   
  スケーリングに加えて、<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素は、次の表で説明する丸めとオーバーフローのケースを処理します。  
   
-|変換の問題|説明|  
+|変換の問題|[説明]|  
 |----------------------|-----------------|  
 |丸め|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] デバイスに依存しないピクセルディメンションは `double`として指定され Windows フォームハードウェアピクセルディメンションは `int`として指定されます。 `double`ベースのディメンションが `int`ベースのディメンションに変換される場合、<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素は標準の丸め処理を使用するため、0.5 未満の小数値は0に切り捨てられます。|  
 |オーバーフロー|<xref:System.Windows.Forms.Integration.WindowsFormsHost> 要素が `double` 値から `int` 値に変換されると、オーバーフローが発生する可能性があります。 <xref:System.Int32.MaxValue> より大きい値は <xref:System.Int32.MaxValue>に設定されます。|  
@@ -98,11 +98,11 @@ ms.locfileid: "76787902"
   
 - <xref:System.Windows.Forms.Control.Size%2A> プロパティが、指定された制約よりも小さいサイズを返す場合、<xref:System.Windows.Forms.Integration.WindowsFormsHost> はこのサイズの値を受け入れ、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] レイアウトシステムに値を返します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [チュートリアル: WPF での Windows フォーム コントロールの配置](walkthrough-arranging-windows-forms-controls-in-wpf.md)
-- [WPF サンプルでの Windows フォームコントロールの配置](https://go.microsoft.com/fwlink/?LinkID=159971)
+- [WPF サンプルでの Windows フォームコントロールの配置](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WpfLayoutHostingWfWithXaml)
 - [Windows フォームと WPF プロパティの割り当て](windows-forms-and-wpf-property-mapping.md)
 - [移行と相互運用性](migration-and-interoperability.md)

@@ -1,13 +1,13 @@
 ---
-title: 暗号に関する破壊的変更 - .NET Core
+title: 暗号での破壊的変更
 description: .NET Core での暗号に関連する破壊的変更の一覧を示します。
 ms.date: 09/20/2019
-ms.openlocfilehash: 4b13985a12ee0530edd3a0960923aafef1696d90
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.openlocfilehash: fcef4b65245a5dd9219cbdbb548ca575a823a949
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76116470"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093033"
 ---
 # <a name="cryptography-breaking-changes"></a>暗号での破壊的変更
 

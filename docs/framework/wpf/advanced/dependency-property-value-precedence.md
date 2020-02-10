@@ -7,18 +7,18 @@ helpviewer_keywords:
 - classes [WPF], owners of dependency properties
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
-ms.openlocfilehash: 178145b06cb937fb677b8454357bed774ed3003b
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: a9ff3a4f6ac08a0f7ec6dd9fc26bf190f43f3584
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73740851"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095204"
 ---
 # <a name="dependency-property-value-precedence"></a>依存関係プロパティ値の優先順位
 <a name="introduction"></a>このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムの動作が依存関係プロパティの値に与える影響と、システムのさまざまな部分がプロパティの有効な値に適用する優先順位について説明します。  
 
 <a name="prerequisites"></a>   
-## <a name="prerequisites"></a>必要条件  
+## <a name="prerequisites"></a>前提条件  
  このトピックは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] クラスの既存の依存関係プロパティのコンシューマーの観点から依存関係プロパティを理解しており、「[依存関係プロパティの概要](dependency-properties-overview.md)」を読んでいることを前提としています。 このトピックの例について理解するには、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの記述方法について知っておく必要もあります。  
   
 <a name="intro"></a>   
@@ -71,7 +71,7 @@ ms.locfileid: "73740851"
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
- 優先順位の項目としての TemplatedParent は、標準アプリケーション マークアップで直接宣言された要素のプロパティには適用されません。 TemplatedParent の概念は、テンプレートの適用によって作成されるビジュアル ツリー内の子項目に対してのみ存在します。 プロパティシステムが <xref:System.Windows.FrameworkElement.TemplatedParent%2A> テンプレート内で値を検索すると、その要素を作成したテンプレートが検索されます。 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> テンプレートのプロパティ値は、通常、子要素のローカル値として設定されているかのように機能しますが、テンプレートは共有される可能性があるため、この優先順位はローカル値とは異なります。 詳細については、「<xref:System.Windows.FrameworkElement.TemplatedParent%2A>」を参照してください。  
+ 優先順位の項目としての TemplatedParent は、標準アプリケーション マークアップで直接宣言された要素のプロパティには適用されません。 TemplatedParent の概念は、テンプレートの適用によって作成されるビジュアル ツリー内の子項目に対してのみ存在します。 プロパティシステムが <xref:System.Windows.FrameworkElement.TemplatedParent%2A> テンプレート内で値を検索すると、その要素を作成したテンプレートが検索されます。 <xref:System.Windows.FrameworkElement.TemplatedParent%2A> テンプレートのプロパティ値は、通常、子要素のローカル値として設定されているかのように機能しますが、テンプレートは共有される可能性があるため、この優先順位はローカル値とは異なります。 詳細については、<xref:System.Windows.FrameworkElement.TemplatedParent%2A> を参照してください。  
   
 <a name="style_property"></a>   
 ## <a name="the-style-property"></a>スタイル プロパティ  
@@ -93,7 +93,7 @@ ms.locfileid: "73740851"
   
  <xref:System.Windows.Controls.Primitives.Thumb> には、カスタマイズ可能な特定のプロパティがあります。 <xref:System.Windows.Controls.Primitives.Thumb> の既定のテンプレートでは、いくつかの入れ子になった <xref:System.Windows.Controls.Border> コンポーネントがある基本構造体/ビジュアルツリーを作成して、ベベルの外観を作成します。 テンプレートの一部であるプロパティが <xref:System.Windows.Controls.Primitives.Thumb> クラスによるカスタマイズのために公開されるように設定されている場合、そのプロパティは、テンプレート内で[TemplateBinding](templatebinding-markup-extension.md)によって公開される必要があります。 <xref:System.Windows.Controls.Primitives.Thumb>の場合は、これらの境界のさまざまなプロパティが <xref:System.Windows.Controls.Border.Background%2A> や <xref:System.Windows.Controls.Border.BorderThickness%2A>などのプロパティにテンプレートバインドを共有します。 しかし、他の特定のプロパティや視覚的な配置は、コントロール テンプレートにハードコードされているか、またはテーマから直接取得される値にバインドされており、テンプレート全体を置き換えない限り変更できません。 一般に、プロパティがテンプレート化された親から取得され、テンプレートのバインドによって公開されない場合は、それをターゲットにする簡単な方法がないため、そのプロパティをスタイルによって調整することはできません。 ただし、適用されるテンプレートのプロパティ値継承または既定値によって、そのプロパティに影響を与えることはできます。  
   
- テーマのスタイルでは、定義のキーとして型を使います。 ただし、特定の要素インスタンスにテーマを適用すると、コントロールの <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> プロパティをチェックすることによって、この型のテーマの検索が実行されます。 これは、暗黙的スタイルで行われるリテラル型の使用とは対照的です。 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> の値は、実装側によって変更されていない場合でも派生クラスに継承されます (プロパティを変更する場合は、プロパティレベルでオーバーライドするのではなく、プロパティメタデータの既定値を変更することをお勧めします)。 この間接参照により、基底クラスは、他の方法ではスタイルを持たない派生要素に対してテーマのスタイルを定義できます (または、さらに重要なのは、スタイル内にテンプレートを持たず、既定の外観がないということです)。 したがって、<xref:System.Windows.Controls.Button> から `MyButton` を派生させることができ、<xref:System.Windows.Controls.Button> の既定のテンプレートが引き続き取得されます。 `MyButton` のコントロールの作成者であり、別の動作が必要な場合は、`MyButton` 上の <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> の依存関係プロパティのメタデータをオーバーライドして別のキーを返し、次に `MyButton` のテンプレートを含む、関連するテーマスタイルを定義します。`MyButton` コントロールでパッケージ化する必要があります。 テーマ、スタイル、コントロールの作成について詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」をご覧ください。  
+ テーマのスタイルでは、定義のキーとして型を使います。 ただし、特定の要素インスタンスにテーマを適用すると、コントロールの <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> プロパティをチェックすることによって、この型のテーマの検索が実行されます。 これは、暗黙的スタイルで行われるリテラル型の使用とは対照的です。 <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> の値は、実装側によって変更されていない場合でも派生クラスに継承されます (プロパティを変更する場合は、プロパティレベルでオーバーライドするのではなく、プロパティメタデータの既定値を変更することをお勧めします)。 この間接参照により、基底クラスは、他の方法ではスタイルを持たない派生要素に対してテーマのスタイルを定義できます (または、さらに重要なのは、スタイル内にテンプレートを持たず、既定の外観がないということです)。 したがって、<xref:System.Windows.Controls.Button> から `MyButton` を派生させることができ、<xref:System.Windows.Controls.Button> の既定のテンプレートが引き続き取得されます。 `MyButton` のコントロールの作成者であり、別の動作が必要な場合は `MyButton` で <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> の依存関係プロパティのメタデータをオーバーライドして別のキーを返し、`MyButton` コントロールでパッケージ化する必要がある `MyButton` のテンプレートなど、関連するテーマスタイルを定義することができます。 テーマ、スタイル、コントロールの作成について詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」をご覧ください。  
   
 <a name="resources"></a>   
 ## <a name="dynamic-resource-references-and-binding"></a>動的リソース参照とバインド  
@@ -111,9 +111,9 @@ ms.locfileid: "73740851"
 ## <a name="coercion-animations-and-base-value"></a>強制型変換、アニメーション、基本値  
  強制型変換とアニメーションは、この SDK 全体で "ベース値" と呼ばれる値に対して動作します。 したがって、基本値とは、項目 2 に達するまで項目をさかのぼって評価されることにより決定される値です。  
   
- アニメーションの場合、アニメーションで特定の動作に対して "From" と "To" の両方が指定されていない場合、またはアニメーションが完了すると基本値に意図的に戻る場合は、基本値を使ってアニメーション化される値に影響を及ぼすことができます。 実際にどうなるのかを見るには、「[From, To, and By Animation Target Values Sample](https://go.microsoft.com/fwlink/?LinkID=159988)」(アニメーション ターゲット値 From、To、By のサンプル) をご覧ください。 この例で、四角形の高さのローカル値を、初期ローカル値がアニメーションの "From" と異なるように設定してみます。 アニメーションが "From" の値を使ってすぐに開始し、開始すると基本値を置き換えることがわかります。 アニメーションは、停止 <xref:System.Windows.Media.Animation.FillBehavior>を指定することによって完了した後、アニメーションの前に見つかった値に戻るように指定できます。 その後は、通常の優先順位が基本値の決定に使用されます。  
+ アニメーションの場合、アニメーションで特定の動作に対して "From" と "To" の両方が指定されていない場合、またはアニメーションが完了すると基本値に意図的に戻る場合は、基本値を使ってアニメーション化される値に影響を及ぼすことができます。 実際にどうなるのかを見るには、「[From, To, and By Animation Target Values Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)」(アニメーション ターゲット値 From、To、By のサンプル) をご覧ください。 この例で、四角形の高さのローカル値を、初期ローカル値がアニメーションの "From" と異なるように設定してみます。 アニメーションが "From" の値を使ってすぐに開始し、開始すると基本値を置き換えることがわかります。 アニメーションは、停止 <xref:System.Windows.Media.Animation.FillBehavior>を指定することによって完了した後、アニメーションの前に見つかった値に戻るように指定できます。 その後は、通常の優先順位が基本値の決定に使用されます。  
   
- 1 つのプロパティに複数のアニメーションが適用され、各アニメーションが値の優先順位の異なるポイントから定義されている場合があります。 ただし、これらのアニメーションは、優先順位の高いアニメーションから単純に適用されるのではなく、値が合成される可能性があります。 これは、アニメーションの定義方法と、アニメーション化される値の型に依存します。 プロパティのアニメーション化の詳細については、「[アニメーションの概要](../graphics-multimedia/animation-overview.md)」を参照してください。  
+ 1 つのプロパティに複数のアニメーションが適用され、各アニメーションが値の優先順位の異なるポイントから定義されている場合があります。 ただし、これらのアニメーションは、優先順位の高いアニメーションから単純に適用されるのではなく、値が合成される可能性があります。 これは、アニメーションの定義方法と、アニメーション化される値の型に依存します。 プロパティのアニメーション化について詳しくは、「[アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。  
   
  強制型変換は、すべての最高レベルで適用されます。 既に実行されているアニメーションであっても値の強制型変換が適用されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の特定の既存の依存関係プロパティには、組み込みの強制型変換があります。 カスタム依存関係プロパティの場合は、<xref:System.Windows.CoerceValueCallback> を記述し、プロパティを作成するときにメタデータの一部としてコールバックを渡すことによって、カスタム依存関係プロパティの強制型変換の動作を定義します。 派生クラスでプロパティのメタデータをオーバーライドすることにより、既存のプロパティの強制型変換の動作をオーバーライドすることもできます。 強制型変換と基本値の相互作用は、その時点で強制型変換に対する制約が存在するものとして適用されるように行われますが、基本値はそれでも保持されます。 したがって、強制型変換の制約が後で無効になった場合、強制型変換はその基本値に可能な最も近い値を返し、プロパティに対する強制型変換の影響はすべての制約が無効になるとすぐに終了する可能性があります。 強制型変換の動作について詳しくは、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」をご覧ください。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "73740851"
   
 <a name="clearvalue"></a>   
 ## <a name="clearvalue-and-value-precedence"></a>ClearValue と値の優先順位  
- <xref:System.Windows.DependencyObject.ClearValue%2A> メソッドは、要素に設定されている依存関係プロパティからローカルに適用された値をクリアするための便利な手段を提供します。 ただし、<xref:System.Windows.DependencyObject.ClearValue%2A> を呼び出すと、プロパティの登録時にメタデータに設定された既定値が新しい有効値になるという保証はありません。 値の優先順位に関係する他のすべての要因はアクティブなままです。 ローカルで設定された値が優先順位のシーケンスから削除されるだけです。 たとえば、プロパティがテーマスタイルによっても設定されているプロパティで <xref:System.Windows.DependencyObject.ClearValue%2A> を呼び出すと、テーマの値が、メタデータベースの既定値ではなく、新しい値として適用されます。 すべてのプロパティ値の参加者をプロセスから除外し、その値を登録済みメタデータの既定値に設定する場合は、依存関係プロパティのメタデータに対してクエリを実行することで既定値を取得できます。その後、既定値をローカルに使用できます。<xref:System.Windows.DependencyObject.SetValue%2A>の呼び出しを使用して、プロパティを設定します。  
+ <xref:System.Windows.DependencyObject.ClearValue%2A> メソッドは、要素に設定されている依存関係プロパティからローカルに適用された値をクリアするための便利な手段を提供します。 ただし、<xref:System.Windows.DependencyObject.ClearValue%2A> を呼び出すと、プロパティの登録時にメタデータに設定された既定値が新しい有効値になるという保証はありません。 値の優先順位に関係する他のすべての要因はアクティブなままです。 ローカルで設定された値が優先順位のシーケンスから削除されるだけです。 たとえば、プロパティがテーマスタイルによっても設定されているプロパティで <xref:System.Windows.DependencyObject.ClearValue%2A> を呼び出すと、テーマの値が、メタデータベースの既定値ではなく、新しい値として適用されます。 すべてのプロパティ値の参加者をプロセスから除外し、その値を登録済みメタデータの既定値に設定する場合は、依存関係プロパティのメタデータに対してクエリを実行することで、既定値を取得できます。その後、既定値を使用して、プロパティをローカルに設定し、<xref:System.Windows.DependencyObject.SetValue%2A>を呼び出すことができます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.DependencyObject>
 - <xref:System.Windows.DependencyProperty>

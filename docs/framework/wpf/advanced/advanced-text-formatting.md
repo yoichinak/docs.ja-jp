@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: d509de02cd1b3f645ee439c0b0eb33fd1ddbdb07
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 26ee3c2b8a431200c3dc04130deb2247b6c1446d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636108"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095243"
 ---
 # <a name="advanced-text-formatting"></a>テキストの高度な書式設定
 Windows Presentation Foundation (WPF) は、アプリケーションにテキストを含めるための堅牢な Api のセットを提供します。 レイアウトと [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] Api (<xref:System.Windows.Controls.TextBlock>など) は、テキスト表示に最も一般的で一般的な要素を提供します。 <xref:System.Windows.Media.GlyphRunDrawing> や <xref:System.Windows.Media.FormattedText>などの描画 Api は、書式設定されたテキストを描画に含めるための手段を提供します。 最も高度なレベルでは、テキストストア管理、テキストラン書式設定管理、埋め込みオブジェクト管理など、テキスト表示のあらゆる側面を制御するための拡張テキスト書式設定エンジンが WPF に用意されています。  
@@ -22,10 +22,10 @@ Windows Presentation Foundation (WPF) は、アプリケーションにテキス
  このトピックでは、WPF テキストの書式設定の概要について説明します。 クライアントの実装と WPF テキスト書式設定エンジンの使用に焦点を当てています。  
   
 > [!NOTE]
-> このドキュメント内のすべてのコード例は、[高度なテキストの書式設定のサンプル](https://go.microsoft.com/fwlink/?LinkID=159965)に記載されています。  
+> このドキュメント内のすべてのコード例は、[高度なテキストの書式設定のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI/TextFormatting)に記載されています。  
 
 <a name="prereq"></a>   
-## <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>前提条件  
  このトピックでは、テキスト表示に使用される高レベルの Api について理解していることを前提としています。 ほとんどのユーザーシナリオでは、このトピックで説明する高度なテキスト書式設定 Api は必要ありません。 さまざまなテキスト Api の概要については、「 [WPF のドキュメント](documents-in-wpf.md)」を参照してください。  
   
 <a name="section1"></a>   
@@ -67,7 +67,7 @@ Windows Presentation Foundation (WPF) は、アプリケーションにテキス
   
  次の表は、定義済みの <xref:System.Windows.Media.TextFormatting.TextRun> オブジェクトの一部を示しています。  
   
-|TextRun の種類|使用状況|  
+|TextRun の種類|使用法|  
 |------------------|-----------|  
 |<xref:System.Windows.Media.TextFormatting.TextCharacters>|文字グリフの表示をテキスト フォーマッタに返すために使用される特殊なテキスト ラン。|  
 |<xref:System.Windows.Media.TextFormatting.TextEmbeddedObject>|テキスト内のボタンやイメージなど、測定、ヒット テスト、描画が全部行われるコンテンツを提供するための特殊なテキスト ラン。|  
@@ -91,7 +91,7 @@ Windows Presentation Foundation (WPF) は、アプリケーションにテキス
 ## <a name="specifying-formatting-properties"></a>書式設定プロパティを指定する  
  <xref:System.Windows.Media.TextFormatting.TextRun> オブジェクトは、テキストストアによって提供されるプロパティを使用して書式設定されます。 これらのプロパティには、<xref:System.Windows.Media.TextFormatting.TextParagraphProperties> と <xref:System.Windows.Media.TextFormatting.TextRunProperties>の2種類があります。 <xref:System.Windows.TextAlignment> や <xref:System.Windows.FlowDirection>などの段落包括プロパティを <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> ハンドルします。 <xref:System.Windows.Media.TextFormatting.TextRunProperties> は、前景ブラシ、<xref:System.Windows.Media.Typeface>、フォントサイズなど、段落内の各テキストランで異なる可能性があるプロパティです。 カスタム段落およびカスタムテキスト実行プロパティの型を実装するには、アプリケーションで <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> から派生したクラスを作成し、それぞれ <xref:System.Windows.Media.TextFormatting.TextRunProperties> する必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [WPF のタイポグラフィ](typography-in-wpf.md)
 - [WPF のドキュメント](documents-in-wpf.md)

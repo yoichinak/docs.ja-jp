@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: aac6c347886b2c29e599952d7642fbe76441b617
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: 6b8b58228e94ed12557e97406e55cc4165753076
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73458913"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095087"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters および XAML
 このトピックでは、一般的な XAML 言語機能としての文字列からの型変換の目的について説明します。 .NET Framework では、<xref:System.ComponentModel.TypeConverter> クラスは、XAML 属性の使用でプロパティ値として使用できるマネージカスタムクラスの実装の一部として特定の目的を果たします。 カスタムクラスを作成し、クラスのインスタンスを XAML 設定可能な属性値として使用できるようにする場合は、クラスに <xref:System.ComponentModel.TypeConverterAttribute> を適用したり、カスタム <xref:System.ComponentModel.TypeConverter> クラス、またはその両方を記述したりすることが必要になる場合があります。  
@@ -22,7 +22,7 @@ ms.locfileid: "73458913"
  XAML プロセッサは、属性値を処理するために2つの情報を必要とします。 第 1 の情報は、設定しようとしているプロパティの値の型です。 属性値を定義するすべての文字列は、XAML で処理され、最終的にはその型の値に変換 (解決) される必要があります。 値が、XAML パーサーで認識できるプリミティブ (数値など) である場合は、文字列の直接的な変換が試みられます。 値が列挙型の場合、文字列は、その列挙体の名前付き定数に一致する名前があるかどうかを確認するために使用されます。 値がパーサーで認識されるプリミティブでも列挙でもない場合、問題の型は、変換後の文字列に基づいて、型のインスタンスまたは値を提供できる必要があります。 これを行うには、型コンバータークラスを指定します。 型コンバーターは、実際には、XAML シナリオに対しても、.NET コードのコード呼び出しの場合でも、別のクラスの値を提供するためのヘルパークラスです。  
   
 ### <a name="using-existing-type-conversion-behavior-in-xaml"></a>XAML での既存の型変換動作の使用  
- 基になる XAML の概念に関する知識によっては、基本的なアプリケーション XAML で型変換の動作を使用していることがわかっていない場合があります。 たとえば、WPF では、<xref:System.Windows.Point>型の値を受け取る文字どおり数百のプロパティが定義されています。 <xref:System.Windows.Point> は、2次元の座標空間内の座標を表す値であり、実際には <xref:System.Windows.Point.X%2A> と <xref:System.Windows.Point.Y%2A>の2つの重要なプロパティがあります。 XAML でポイントを指定する場合は、指定した <xref:System.Windows.Point.X%2A> と <xref:System.Windows.Point.Y%2A> の値の間に区切り記号 (通常はコンマ) を含む文字列として指定します。 たとえば、`<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>` のように指定します。  
+ 基になる XAML の概念に関する知識によっては、基本的なアプリケーション XAML で型変換の動作を使用していることがわかっていない場合があります。 たとえば、WPF では、<xref:System.Windows.Point>型の値を受け取る文字どおり数百のプロパティが定義されています。 <xref:System.Windows.Point> は、2次元の座標空間内の座標を表す値であり、実際には <xref:System.Windows.Point.X%2A> と <xref:System.Windows.Point.Y%2A>の2つの重要なプロパティがあります。 XAML でポイントを指定する場合は、指定した <xref:System.Windows.Point.X%2A> と <xref:System.Windows.Point.Y%2A> の値の間に区切り記号 (通常はコンマ) を含む文字列として指定します。 (例: `<LinearGradientBrush StartPoint="0,0" EndPoint="1,1"/>`)。  
   
  この単純型の <xref:System.Windows.Point> と XAML での単純な使用についても、型コンバーターが必要です。 この場合は、<xref:System.Windows.PointConverter>クラスです。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "73458913"
  既存の型コンバーターは、通常、クラス (またはプロパティ) で適用された <xref:System.ComponentModel.TypeConverterAttribute>が存在するかどうかをチェックすることによって、WPF および .NET Framework 型で検出できます。 この属性は、XAML の目的だけでなく、他の目的でも、その型の値に対してサポートされている型コンバーターであるクラスに名前を付けます。  
   
 ### <a name="type-converters-and-markup-extensions"></a>型コンバーターとマークアップ拡張機能  
- マークアップ拡張機能と型コンバーターは、XAML プロセッサの動作と、それらが適用されるシナリオに関して直交ロールを設定します。 マークアップ拡張機能の使用時にはコンテキストを利用できますが、マークアップ拡張機能が値を提供するプロパティの型変換動作は一般にマークアップ拡張機能の実装ではチェックされません。 つまり、マークアップ拡張機能が `ProvideValue` 出力としてテキスト文字列を返す場合でも、特定のプロパティまたはプロパティ値型に適用される、その文字列に対する型変換動作は呼び出されません。一般に、マークアップ拡張機能の目的は文字列を処理することです。とは、型コンバーターを含まないオブジェクトを返します。  
+ マークアップ拡張機能と型コンバーターは、XAML プロセッサの動作と、それらが適用されるシナリオに関して直交ロールを設定します。 マークアップ拡張機能の使用時にはコンテキストを利用できますが、マークアップ拡張機能が値を提供するプロパティの型変換動作は一般にマークアップ拡張機能の実装ではチェックされません。 つまり、マークアップ拡張機能が `ProvideValue` 出力としてテキスト文字列を返す場合でも、特定のプロパティまたはプロパティ値型に適用される、その文字列に対する型変換動作は呼び出されません。一般に、マークアップ拡張機能の目的は、文字列を処理し、型コンバーターを含まないオブジェクトを返すことです。  
   
  型コンバーターではなく、マークアップ拡張機能が必要となる一般的な状況の1つは、既に存在するオブジェクトへの参照を作成することです。 最良の場合、ステートレスな型コンバーターは新しいインスタンスを生成するだけで、望ましくない可能性があります。 マークアップ拡張機能の詳細については、「[マークアップ拡張機能」および「WPF XAML](markup-extensions-and-wpf-xaml.md)」を参照してください。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73458913"
 ## <a name="implementing-a-type-converter"></a>型コンバーターの実装  
   
 ### <a name="typeconverter"></a>TypeConverter  
- 前に示した <xref:System.Windows.Point> の例では、クラス <xref:System.Windows.PointConverter> について説明しました。 XAML の .NET 実装では、XAML の目的で使用されるすべての型コンバーターは、<xref:System.ComponentModel.TypeConverter>基底クラスから派生するクラスです。 <xref:System.ComponentModel.TypeConverter> クラスは、XAML の存在前に .NET Framework のバージョンに存在しています。最初の使用方法の1つは、ビジュアルデザイナーのプロパティダイアログに文字列変換を提供することでした。 XAML の場合、<xref:System.ComponentModel.TypeConverter> のロールが拡張され、文字列属性値の解析を有効にし、場合によっては、特定のオブジェクトプロパティの実行時の値を文字列に変換するために、属性としてのシリアル化。  
+ 前に示した <xref:System.Windows.Point> の例では、クラス <xref:System.Windows.PointConverter> について説明しました。 XAML の .NET 実装では、XAML の目的で使用されるすべての型コンバーターは、<xref:System.ComponentModel.TypeConverter>基底クラスから派生するクラスです。 <xref:System.ComponentModel.TypeConverter> クラスは、XAML の存在前に .NET Framework のバージョンに存在しています。最初の使用方法の1つは、ビジュアルデザイナーのプロパティダイアログに文字列変換を提供することでした。 XAML の場合、<xref:System.ComponentModel.TypeConverter> のロールが拡張され、文字列属性値の解析を有効にし、場合によっては特定のオブジェクトプロパティの実行時の値を属性としてシリアル化するために文字列に変換することができます。  
   
  <xref:System.ComponentModel.TypeConverter> は、XAML 処理のために文字列との間の変換に関連する4つのメンバーを定義します。  
   
@@ -67,14 +67,15 @@ ms.locfileid: "73458913"
   
 - <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
- これらのうち、最も重要な方法は <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>です。 このメソッドは、入力文字列を必要なオブジェクト型に変換します。 厳密に言えば、<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> メソッドを実装して、より広範な型をコンバーターの目的の型に変換することができます。これにより、実行時の変換をサポートするなど、XAML を超えて拡張できるようになりますが、XAML の場合は、次のようになります。<xref:System.String> 入力を処理できるコードパスのみが重要です。  
+ これらのうち、最も重要な方法は <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>です。 このメソッドは、入力文字列を必要なオブジェクト型に変換します。 厳密に言えば、<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> メソッドを実装して、より広範な型をコンバーターの目的の型に変換することができます。これにより、実行時の変換をサポートするなど、XAML を超えて拡張できるようになりますが、XAML の目的では、重要な <xref:System.String> 入力を処理できるコードパスにすぎません。  
   
  次に重要なメソッドは <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>です。 アプリケーションがマークアップ表現に変換された場合 (たとえば、ファイルとして XAML に保存されている場合)、<xref:System.ComponentModel.TypeConverter.ConvertTo%2A> はマークアップ表現の生成を行います。 この場合、XAML にとって重要なコードパスは、<xref:System.String> の `destinationType` を渡すときに使用されます。  
   
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> と <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> は、サービスが <xref:System.ComponentModel.TypeConverter> の実装の機能を照会する時に使用されるサポート メソッドです。 これらのメソッドは、その型について、相当する変換メソッドをコンバーターがサポートしている場合に `true` を返すように実装する必要があります。 XAML の目的では、通常、 <xref:System.String> 型であることを意味します。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>カルチャ情報と XAML の型コンバーター  
- 各 <xref:System.ComponentModel.TypeConverter> 実装では、変換の有効な文字列を構成する内容を独自に解釈できます。また、パラメーターとして渡される型の説明を使用したり無視したりすることもできます。 カルチャと XAML の型変換に関しては、重要な考慮事項があります。 属性値としてローカライズ可能な文字列を使用することは、XAML で完全にサポートされています。 ただし、このローカライズ可能な文字列を特定のカルチャ要件での型コンバーター入力として使用することはサポートされていません。これは、XAML 属性値の型コンバーターは、`en-US` カルチャを使用して、必ずしも固定言語の解析動作を行うためです。 この制限の設計上の理由の詳細については、XAML 言語仕様 ([\[\]](https://go.microsoft.com/fwlink/?LinkId=114525)) を参照してください。  
+
+ 各 <xref:System.ComponentModel.TypeConverter> 実装では、変換の有効な文字列を構成する内容を独自に解釈できます。また、パラメーターとして渡される型の説明を使用したり無視したりすることもできます。 カルチャと XAML の型変換に関しては、重要な考慮事項があります。 属性値としてローカライズ可能な文字列を使用することは、XAML で完全にサポートされています。 ただし、このローカライズ可能な文字列を特定のカルチャ要件での型コンバーター入力として使用することはサポートされていません。これは、XAML 属性値の型コンバーターは、`en-US` カルチャを使用して、必ずしも固定言語の解析動作を行うためです。 この制限の設計上の理由の詳細については、「XAML 言語仕様 ([\[\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf)」を参照してください。  
   
  カルチャが問題になる可能性のある例として、一部のカルチャでは、数値の小数点の区切り記号としてコンマを使用しています。 これは、WPF XAML 型コンバーターの多くが持つ動作と競合します。これは、コンマを区切り記号として使用します。これは、共通の X、Y 形式、またはコンマ区切りの一覧などの履歴の参照元に基づいています。 周囲の XAML でカルチャを渡すこともできます (`Language` または `xml:lang` を `sl-SI` カルチャに設定します。この方法では、10進数にコンマを使用するカルチャの例) では問題は解決されません。  
   
@@ -93,7 +94,7 @@ ms.locfileid: "73458913"
   
  値をシリアル化できない場合、またはコンバーターがシリアル化をサポートしていない場合、<xref:System.ComponentModel.TypeConverter.ConvertTo%2A> の実装は `null`を返す必要があり、この場合は例外をスローすることが許可されます。 ただし、例外をスローする場合は、<xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 実装の一部としてその変換を使用できないことを報告して、例外を回避するために <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 最初に確認することをお勧めします。  
   
- `destinationType` パラメーターの型が <xref:System.String>でない場合は、独自のコンバーター処理を選択できます。 通常は、基本実装の処理に戻します。これは、basemost によって特定の例外が発生します。  
+ `destinationType` パラメーターの型が <xref:System.String>でない場合は、独自のコンバーター処理を選択できます。 通常は、基本実装の処理に戻します。これは、basemost によって特定の例外が発生します。<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
 ### <a name="implementing-canconvertto"></a>CanConvertTo の実装  
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> の実装は、 `true` が `destinationType` 型の場合は <xref:System.String>を返し、それ以外の場合は基底の実装に任せる必要があります。  
@@ -107,7 +108,7 @@ ms.locfileid: "73458913"
   
  また、プロパティごとに型コンバーターを提供することもできます。 クラス定義に <xref:System.ComponentModel.TypeConverterAttribute> を適用する代わりに、プロパティ定義に適用します (`get`/`set` の実装ではなく、メイン定義)。 プロパティの型は、カスタム型コンバーターによって処理される型と一致する必要があります。 この属性を適用すると、プロパティの値を XAML プロセッサが処理する際に、入力文字列を処理して、オブジェクトのインスタンスを返すことができます。 プロパティごとの型コンバーターの手法は、Microsoft .NET Framework から、またはクラス定義を制御できない他のライブラリからプロパティ型を使用する場合に特に便利であり、そこに <xref:System.ComponentModel.TypeConverterAttribute> を適用することはできません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ComponentModel.TypeConverter>
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

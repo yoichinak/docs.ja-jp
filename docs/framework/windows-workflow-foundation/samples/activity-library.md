@@ -2,12 +2,12 @@
 title: アクティビティ ライブラリ
 ms.date: 03/30/2017
 ms.assetid: 5323e9d4-71d6-47eb-bfa6-31feac62044d
-ms.openlocfilehash: 15260fc2ad96e1761a8a41ccc84b2c199e3d448a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ce65bf8e7adad6acefd7aac6d69c3f836b94be29
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74283153"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094697"
 ---
 # <a name="activity-library"></a>アクティビティ ライブラリ
 このセクションには、Windows Workflow Foundation (WF) の高度なカスタムアクティビティを示すサンプルが含まれています。  
@@ -21,7 +21,7 @@ ms.locfileid: "74283153"
  ph x="1" /&gt; アクティビティは、実行するコンカレンシー分岐の数を制限するためのコンカレンシー要因を設定できるという 1 つの例外を除き、`ThrottleParallelForEach` アクティビティと似ていることについて示します。
   
  [データベース アクセス アクティビティ](database-access-activities.md)  
- データベースにアクセスして情報を取得または変更し、 [ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)を使用してデータベースにアクセスできるようにするアクティビティを作成する方法を示します。  
+ データベースにアクセスして情報を取得または変更し、 [ADO.NET](../../data/adonet/index.md)を使用してデータベースにアクセスできるようにするアクティビティを作成する方法を示します。  
   
  [.NET Framework 4.5 の外部化されたポリシー アクティビティ](externalized-policy-activity-in-net-framework-4-5.md)  
  ExternalizedPolicy4 アクティビティを使用して、WF 3.5 に同梱されているルールエンジンを使用して、[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] (WF 4.5) の Windows Workflow Foundation にある .NET Framework 3.5 (wf 3.5) <xref:System.Workflow.Activities.Rules.RuleSet> オブジェクトの既存の Windows Workflow Foundation を直接実行する方法を示します。 

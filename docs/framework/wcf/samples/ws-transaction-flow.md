@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: db23c250014006655fa51ee5a2e5b54e15e4f964
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 781934e9ab27f761e71841c2edc509f9b8022aa7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714586"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094749"
 ---
 # <a name="ws-transaction-flow"></a>WS トランザクション フロー
 このサンプルでは、クライアントによって調整されるトランザクションの使用方法と、WS-AtomicTransaction プロトコルまたは OleTransactions プロトコルを使用するトランザクション フローに関するクライアントとサーバーのオプションの使用方法を示します。 このサンプルは、電卓サービスを実装する[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいていますが、この操作には、トランザクションフローが有効になっているかどうかを判断するために、`TransactionFlowAttribute` を**TransactionFlowOption**列挙と共に使用する方法が示されています。 フローされたトランザクションのスコープ内では、要求された操作のログがデータベースに書き込まれ、クライアント調整トランザクションが完了するまで保持されます。クライアント トランザクションが完了しない場合は、データベースに対する該当する更新はコミットされません。  
@@ -230,7 +230,7 @@ Press <ENTER> to terminate the service.
 3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
     > [!NOTE]
-    > 複数コンピューター構成の場合は、次の説明に従って分散トランザクション コーディネーターを有効にし、Windows SDK の WsatConfig.exe ツールを使用して WCF トランザクション ネットワークのサポートを有効にします。 WsatConfig の設定の詳細については、「 [ws-atomictransaction のサポートの構成](https://go.microsoft.com/fwlink/?LinkId=190370)」を参照してください。  
+    > 複数コンピューター構成の場合は、次の説明に従って分散トランザクション コーディネーターを有効にし、Windows SDK の WsatConfig.exe ツールを使用して WCF トランザクション ネットワークのサポートを有効にします。 WsatConfig の設定の詳細については、「 [ws-atomictransaction のサポートの構成](../feature-details/configuring-ws-atomic-transaction-support.md)」を参照してください。  
   
  サンプルを同じコンピューターで実行するか、別のコンピューターで実行するかにかかわらず、ネットワークトランザクションフローを有効にするために Microsoft 分散トランザクションコーディネーター (MSDTC) を構成し、WsatConfig .exe ツールを使用して WCF トランザクションネットワークサポートを有効にする必要があります。  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate the service.
   
     6. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
-    7. [OK ] をクリックしてダイアログ ボックスを閉じます。  
+    7. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 2. Windows Server 2008 または Windows Vista が動作するサービス コンピューターで、次の説明に従い、受信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
@@ -264,7 +264,7 @@ Press <ENTER> to terminate the service.
   
     5. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
-    6. [OK ] をクリックしてダイアログ ボックスを閉じます。  
+    6. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 3. クライアント コンピューターで、送信ネットワーク トランザクションを許可するよう MSDTC を構成します。  
   
@@ -278,7 +278,7 @@ Press <ENTER> to terminate the service.
   
     5. **[OK]** をクリックし、 **[はい]** をクリックして MSDTC サービスを再起動します。  
   
-    6. [OK ] をクリックしてダイアログ ボックスを閉じます。  
+    6. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
