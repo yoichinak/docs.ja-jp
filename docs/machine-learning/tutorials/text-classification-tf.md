@@ -1,15 +1,15 @@
 ---
-title: 'チュートリアル: 事前トレーニング済みの TensorFlow モデルを使用して映画レビューのセンチメントを分析する'
+title: 'チュートリアル: TensorFlow モデルを使用してレビューのセンチメントを分析する'
 description: このチュートリアルでは、事前トレーニング済みの TensorFlow モデルを使用して、Web サイトのセンチメントを分類する方法について示します。 センチメントの 2 項分類子は、Visual Studio を使用して開発された C# コンソール アプリケーションです。
 ms.date: 11/15/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 0e80cdc6bb7dcc62a57466e909451da972c92db8
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 7a6043f56a2ecaca633ba5545170f27a85a22efc
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75738697"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092396"
 ---
 # <a name="tutorial-analyze-sentiment-of-movie-reviews-using-a-pre-trained-tensorflow-model-in-mlnet"></a>チュートリアル: ML.NET で事前トレーニング済みの TensorFlow モデルを使用して映画レビューのセンチメントを分析する
 

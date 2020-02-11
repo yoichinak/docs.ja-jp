@@ -1,17 +1,17 @@
 ---
 title: 'チュートリアル: サポートの問題の分類 - 多クラス分類'
 description: GitHub の問題を分類し、それを特定の領域に割り当てるための多クラス分類シナリオで、ML.NET を使用する方法について説明します。
-ms.date: 11/15/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0516
-ms.openlocfilehash: 44e6234a56ae1890a7f485ffaca827945c1a33ff
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: d5d397cfa6475574b6d6cc6d8cbb48b51c2d0af1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739646"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092526"
 ---
-# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>チュートリアル: ML .NET での多クラス分類を使用したサポートの問題の分類
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-mlnet"></a>チュートリアル: ML.NET での多クラス分類を使用したサポートの問題の分類
 
 このサンプル チュートリアルでは ML.NET を使用して GitHub の問題の分類子を作成し、Visual Studio で C# を使用する .NET Core コンソール アプリケーションから GitHub の問題に対する区分ラベルを分類して予測するモデルをトレーニングする方法を示します。
 

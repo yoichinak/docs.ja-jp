@@ -1,14 +1,14 @@
 ---
-title: Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
-description: 確率論的プログラミングと Infer.NET を使用して、TrueSkill の簡易バージョンに基づいたゲーム対戦リスト アプリについて紹介します。
-ms.date: 05/06/2019
+title: Infer.NET ゲーム対戦アプリ - 確率論的プログラミング
+description: 確率論的プログラミングと Infer.NET を使用して、TrueSkill の簡易バージョンに基づいたゲーム対戦リスト アプリを作成する方法を探索します。
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: 69515c7b3518c35bf84335c453408b1466f93f34
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72774537"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092604"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
 

@@ -1,17 +1,17 @@
 ---
-title: 'チュートリアル: ONNX と ML.NET でディープ ラーニングを使用してオブジェクトを検出する'
+title: 'チュートリアル: ONNX ディープ ラーニング モデルを使用してオブジェクトを検出する'
 description: このチュートリアルでは、ML.NET の事前トレーニング済みの ONNX ディープ ラーニング モデルを使用して画像内のオブジェクトを検出する方法について説明します。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 12/12/2019
+ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 6aaf5acc605067f378ff5d42f713fe1c63d91e46
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7ff9986c09e39f5c4d24f52c351db6455ff63e77
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794636"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092721"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
