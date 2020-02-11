@@ -1,16 +1,14 @@
 ---
 title: .NET にようこそ
 description: .NET ファミリのテクノロジの概要です。
-author: mairaw
-ms.author: mairaw
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 15daaafed02ab1132a3c82c12efa6fad0e0a6db2
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838131"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124222"
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
 

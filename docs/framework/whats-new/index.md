@@ -8,14 +8,14 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: c38127281139d0c85b54a5d5077034804f1102a8
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 00026fee12e447b7fba56b42cd86699aba38cc52
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76966011"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094684"
 ---
-# <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
+# <a name="whats-new-in-net-framework"></a>.NET Framework の新機能
 
 この記事は、.NET Framework の次のバージョンにおける主な新機能と機能強化の概要を示します。
 
@@ -519,7 +519,7 @@ Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagn
 
 .NET Framework 4.7.2 以降、診断アシスタントでは、特定の <xref:Windows.UI.Xaml.ResourceDictionary> の所有者を見つけることができます。 (この機能は、実稼働アプリケーションではなく診断アシスタントによって使用されます。)<xref:Windows.UI.Xaml.ResourceDictionary> の変更が行われたときに、WPF が、変更の影響を受ける可能性があるすべての [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) の参照を自動的に見つけます。
 
-Visual Studio の "エディット コンティニュ" 機能などの診断アシスタントが、場合によっては [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 参照を処理するためにこれを拡張する必要があります。 このプロセスの最初の手順は、ディクショナリの所有者を検索することです。つまり、`Resources` プロパティがディクショナリを (直接または <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> プロパティを使用して間接的に) 参照しているすべてのオブジェクトを見つけます。 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> クラスに実装された 3 つの新しい静的メソッドは、`Resources` プロパティを持つ各基本データ型ごとに 1 つずつあり、次の手順をサポートします。
+Visual Studio の "エディット コンティニュ" 機能などの診断アシスタントでは、場合によっては [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 参照を処理するためにこれを拡張する必要があります。 このプロセスの最初の手順は、ディクショナリの所有者を検索することです。つまり、`Resources` プロパティがディクショナリを (直接または <xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> プロパティを使用して間接的に) 参照しているすべてのオブジェクトを見つけます。 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> クラスに実装された 3 つの新しい静的メソッドは、`Resources` プロパティを持つ各基本データ型ごとに 1 つずつあり、次の手順をサポートします。
 
 - [`public static IEnumerable<FrameworkElement> GetFrameworkElementOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetFrameworkElementOwners%2A)
 
@@ -677,7 +677,7 @@ ASP.NET は、23 のイベントを含む定義済みのパイプラインで要
 - [Windows フォーム](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-.NET Framework 4.7 に追加された新しい API の一覧については、GitHub で [.NET Framework 4.7 API の変更点](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)に関するページをご覧ください。 .NET Framework 4.7 における機能の改善とバグ修正の一覧については、GitHub で「[.NET Framework 4.7 List of Changes (.NET Framework 4.7 の変更点の一覧)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)」を参照してください。  詳細については、.NET Blog の「[Announcing the .NET Framework 4.7 (.NET Framework 4.7 の発表)](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/)」をご覧ください。
+.NET Framework 4.7 に追加された新しい API の一覧については、GitHub で [.NET Framework 4.7 API の変更点](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)に関するページをご覧ください。 .NET Framework 4.7 における機能の改善とバグ修正の一覧については、GitHub で「[.NET Framework 4.7 List of Changes (.NET Framework 4.7 の変更点の一覧)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)」を参照してください。 詳細については、.NET ブログの「[.NET Framework 4.7 の発表](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/)」を参照してください。
 
 <a name="Core47" />
 
@@ -800,7 +800,7 @@ Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ
 
 - [デバッグの機能強化](#Debug462)
 
-.NET Framework 4.6.2 に追加された新しい API の一覧については、GitHub で「[.NET Framework 4.6.2 API Changes (.NET Framework 4.6.2 API の変更点)](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)」をご覧ください。 .NET Framework 4.6.2 における機能の改善とバグ修正の一覧については、GitHub で「[.NET Framework 4.6.2 List of Changes (.NET Framework 4.6.2 の変更点の一覧)](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md)」を参照してください。 詳細については、.NET Blog の「[Announcing .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)」(.NET Framework 4.6.2 の発表) を参照してください。
+.NET Framework 4.6.2 に追加された新しい API の一覧については、GitHub で「[.NET Framework 4.6.2 API Changes (.NET Framework 4.6.2 API の変更点)](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)」をご覧ください。 .NET Framework 4.6.2 における機能の改善とバグ修正の一覧については、GitHub で「[.NET Framework 4.6.2 List of Changes (.NET Framework 4.6.2 の変更点の一覧)](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-changes.md)」を参照してください。 詳細については、.NET ブログの「[.NET Framework 4.6.2 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)」を参照してください。
 
 <a name="ASPNET462" />
 
@@ -1029,11 +1029,11 @@ End Function
 
 **Azure SQL Database への接続プールとタイムアウト**
 
-接続プールが有効な状態で、タイムアウトまたは他のログイン エラーが発生した場合は、例外がキャッシュされ、キャッシュされた例外は次の 5 秒から 1 分の間の後続の接続試行時にすべてスローされます。  詳細については、「[SQL Server の接続プール (ADO.NET)](../data/adonet/sql-server-connection-pooling.md)」を参照してください。
+接続プールが有効な状態で、タイムアウトまたは他のログイン エラーが発生した場合は、例外がキャッシュされ、キャッシュされた例外は次の 5 秒から 1 分の間の後続の接続試行時にすべてスローされます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../data/adonet/sql-server-connection-pooling.md)」をご覧ください。
 
 通常は迅速に復旧される一時的なエラーで接続試行が失敗する可能性があるため、Azure SQL Database への接続時のこの動作は望ましくありません。 接続試行操作をより最適化するため、Azure SQL Database への接続が失敗した場合は、接続プールのブロック期間の動作は削除されます。
 
-新しい `PoolBlockingPeriod` キーワードを追加することで、使用しているアプリに最適なブロック期間を選択できます。 次の値が含まれます。
+新しい `PoolBlockingPeriod` キーワードを追加することで、ご利用のアプリに最適なブロック期間を選択できます。 次の値が含まれます。
 
 <xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
@@ -1168,11 +1168,11 @@ WCF には、クライアント アプリケーションで設定できる新し
 </SortDescriptions>
 ```
 
-**ソフト キーボードのサポート**
+**タッチ キーボードのサポート**
 
-ソフト キーボードのサポートにより、WPF アプリケーションでのフォーカス追跡が可能になります。テキスト入力が可能なコントロールによりタッチ入力を受信すると、Windows 10 の新しいソフト キーボードが自動的に起動および終了します。
+タッチ キーボードのサポートにより、WPF アプリケーションでのフォーカス追跡が可能になります。テキスト入力が可能なコントロールによってタッチ入力が受信されると、Windows 10 の新しいタッチ キーボードが自動的に起動および終了します。
 
-.NET Framework の以前のバージョンでは、WPF アプリケーションは、WPF のペン/タッチ ジェスチャ サポートを無効にしないとフォーカス追跡を選択できません。  そのため、WPF アプリケーションは完全な WPF タッチのフル サポートを選ぶか、Windows のマウス プロモーションに依存する必要があります。
+.NET Framework の以前のバージョンでは、WPF アプリケーションで、WPF のペンまたはタッチ ジェスチャ サポートを無効にしないとフォーカス追跡を選択できません。 そのため、WPF アプリケーションは完全な WPF タッチのフル サポートを選ぶか、Windows のマウス プロモーションに依存する必要があります。
 
 **モニターごとの DPI**
 
@@ -1198,7 +1198,7 @@ WPF アプリ用の高 DPI とハイブリッド DPI 環境の最近の急激な
 
 .NET Framework 4.5 以降では、WF によって、Visual Studio デザイナーとコード ワークフローの両方で C# 式がサポートされます。 再ホストされたワークフロー デザイナーは WF の主な機能です。これにより、ワークフロー デザイナーを Visual Studio の外部のアプリケーション (WPF など) で使用できるようになります。  Windows Workflow Foundation は、再ホストされたワークフロー デザイナーで C# 式と IntelliSense をサポートできるようにします。 詳細については、[Windows Workflow Foundation のブログ](https://docs.microsoft.com/archive/blogs/workflowteam/building-c-expressions-support-and-intellisense-in-the-rehosted-workflow-designer)を参照してください。
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトをリビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、 **[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 .NET Framework 4.6.2 はこの問題に対処し、IntelliSense を使うことができるようにします。
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` 4.6.2 より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトを再ビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、 **[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 .NET Framework 4.6.2 ではこのイシューに対処し、IntelliSense を使用できるようにします。
 
 **ワークフロー追跡を有効にしたワークフロー V1 アプリケーションを FIPS モードで実行**
 
@@ -1462,7 +1462,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 - **マネージド コードの JIT コンパイラ (64 ビット)**
 
-  .NET Framework 4.6 の特徴の 1 つとして、新しいバージョンの 64 ビット JIT コンパイラ (RyuJIT というコードネームで呼ばれていたもの) があります。 この新しい 64 ビット コンパイラは、これまでの 64 ビット JIT コンパイラよりもパフォーマンスが大幅に向上しています。 新しい 64 ビット コンパイラは、.NET Framework 4.6 上で実行される 64 ビット プロセスで有効になります。 64 ビットまたは AnyCPU としてコンパイルされ、64 ビット オペレーティング システム上で実行されるアプリは、64 ビットで動作します。 新しいコンパイラへの移行をできる限り透過的に行うように注意を払いましたが、動作の変更が発生する可能性があります。 新しい JIT コンパイラの使用中に発生した問題については、直接お聞かせいただければと思います。 新しい 64 ビット JIT コンパイラに関連する可能性のある問題が発生した場合は、[Microsoft Connect](https://connect.microsoft.com/) にご連絡ください。
+  .NET Framework 4.6 の特徴の 1 つとして、新しいバージョンの 64 ビット JIT コンパイラ (RyuJIT というコードネームで呼ばれていたもの) があります。 この新しい 64 ビット コンパイラは、これまでの 64 ビット JIT コンパイラよりもパフォーマンスが大幅に向上しています。 新しい 64 ビット コンパイラは、.NET Framework 4.6 上で実行される 64 ビット プロセスで有効になります。 64 ビットまたは AnyCPU としてコンパイルされ、64 ビット オペレーティング システム上で実行されるアプリは、64 ビットで動作します。 新しいコンパイラへの移行をできる限り透過的に行うように注意を払いましたが、動作の変更が発生する可能性があります。
 
   新しい 64 ビット JIT コンパイラには、ハードウェア SIMD アクセラレータ機能も含まれています。これを <xref:System.Numerics> 名前空間の SIMD 対応の型と組み合わせると、パフォーマンスが大幅に向上する可能性があります。
 
@@ -1528,7 +1528,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
   - **互換性スイッチ**
 
-    新しい <xref:System.AppContext> クラスは、ライブラリの作成者が統一された新機能のオプトアウト メカニズムをユーザーに提供できるようにする、新しい互換性機能を追加します。 これは、オプトアウト要求を伝達するために、コンポーネント間に疎結合のコントラクトを確立します。 通常、この機能は既存の機能が変更されるときに重要となります。 それに対して、新しい機能には暗黙のオプトインが既に存在しています。
+    <xref:System.AppContext> クラスでは、ライブラリの作成者が統一された新機能のオプトアウト メカニズムをユーザーに提供できるようにする、新しい互換性機能を追加します。 これにより、オプトアウト要求を伝達するために、コンポーネント間に疎結合のコントラクトが確立されます。 通常、この機能は既存の機能が変更されるときに重要となります。 それに対して、新しい機能には暗黙のオプトインが既に存在しています。
 
     <xref:System.AppContext> によって、ライブラリは互換性スイッチを定義して公開します。また、それらに依存するコードは、それらのスイッチを設定してライブラリの動作に影響を与えることができます。 ライブラリは、既定では新しい機能を提供し、スイッチが設定されている場合のみそれを変更する (つまり以前の機能を提供する) ことができます。
 
@@ -1715,7 +1715,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
     Windows 10 には、送信 TCP 接続のローカル ポートを再利用してコンピューターのリソースを効率的に使用する新しいスケーラビリティの高いネットワーク アルゴリズムが含まれています。 .NET Framework 4.6 では、この新しいアルゴリズムがサポートされ、.NET アプリで新しい動作を利用できます。 以前のバージョンの Windows では、人工的なコンカレント接続の制限 (通常は動的なポート範囲の既定のサイズである 16,384) があったため、負荷がかかったときにポートが使い尽くされ、サービスのスケーラビリティが制限されることがありました。
 
-    .NET Framework 4.6 では、ポートの再利用を有効にする次の 2 つの新しい API が追加され、コンカレント接続に対する 64K の制限が実質的になくなりました。
+    .NET Framework 4.6 では、ポートの再利用を有効にする次の 2 つの API が追加され、コンカレント接続に対する 64 KB の制限が実質的になくなりました。
 
     - <xref:System.Net.Sockets.SocketOptionName?displayProperty=nameWithType> 列挙型値。
 
@@ -1755,7 +1755,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 - **オープン ソースの .NET Framework パッケージ**
 
-  .NET Core のパッケージ (変更できないコレクションなど)、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd)、およびネットワーク API (<xref:System.Net.Http> 名前空間に含まれるものなど) は、[GitHub](https://github.com/) でオープン ソース パッケージとして入手できるようになりました。 このコードにアクセスするには、[GitHub 上の .NET](https://github.com/dotnet/runtime) をご覧ください。 これらのパッケージの詳細、および投稿方法については、「[.NET Core とオープン ソース](../get-started/net-core-and-open-source.md)」および [GitHub の .NET ホーム ページ](https://github.com/dotnet/home)を参照してください。
+  .NET Core のパッケージ (変更できないコレクションなど)、[SIMD API](https://www.nuget.org/packages/Microsoft.Bcl.Simd)、およびネットワーク API (<xref:System.Net.Http> 名前空間に含まれるものなど) は、[GitHub](https://github.com/) でオープンソース パッケージとして入手できるようになりました。 このコードにアクセスするには、[GitHub 上の .NET](https://github.com/dotnet/runtime) をご覧ください。 これらのパッケージの詳細、および投稿方法については、「[.NET Core とオープン ソース](../get-started/net-core-and-open-source.md)」および [GitHub の .NET ホーム ページ](https://github.com/dotnet/home)を参照してください。
 
 <a name="v452" />
 
@@ -2132,4 +2132,3 @@ Visual Studio 2012 (および以降のバージョン) のポータブル クラ
 - [Visual Studio 2019 の新機能](/visualstudio/ide/whats-new-visual-studio-2019)
 - [ASP.NET](/aspnet)
 - [Visual Studio での C++ の新機能](/cpp/what-s-new-for-visual-cpp-in-visual-studio)
- 
