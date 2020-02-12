@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: cd9d3f69f8135b608ced91c34f747600352bafe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 047d0ea7b3783f8cf45afde2a15470adda94cd6e
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711455"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095048"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
