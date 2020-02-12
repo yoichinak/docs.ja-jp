@@ -2,12 +2,12 @@
 title: .NET Core について
 description: .NET Core について説明します。
 ms.date: 09/17/2019
-ms.openlocfilehash: e5460fd1d968a49478a1bdc5f18962de2c7cbbe0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 7908cf70e91dcd68668008c2c3082dc293330ec1
+ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920955"
+ms.lasthandoff: 02/02/2020
+ms.locfileid: "76965842"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -73,7 +73,7 @@ ms.locfileid: "76920955"
 
 ### <a name="designed-for-adaptability"></a>適応できる設計
 
-.NET Core は、その他の .NET 製品と比較すると非常に似ているがユニークな製品としてビルドされています。 新しいプラットフォームとワークロードに幅広く適応できるように設計されており、複数の OS および CPU ポートを使用できます (また、移植先が増える可能性があります)。
+.NET Core は、その他の .NET 製品と比較すると似ていますが、独自の製品として構築されています。 新しいプラットフォームとワークロードに幅広く適応できるように設計されており、複数の OS および CPU ポートを使用できます (また、移植先が増える可能性があります)。
 
 この製品は複数の部分に分割されており、さまざまな時間で新しいプラットフォームにさまざまな部分を適応させることができます。 ランタイムとプラットフォーム固有の基本的なライブラリは、ユニットとして移植する必要があります。 プラットフォームに依存しないライブラリは、構造により、すべてのプラットフォームでそのまま機能します。 開発者の効率性を高めるために、プロジェクトではプラットフォーム固有の実装を低減する傾向にあり、その方向でアルゴリズムまたは API を完全または部分的に実装できる場合は、プラットフォームに依存しない C# コードが常に優先されます。
 

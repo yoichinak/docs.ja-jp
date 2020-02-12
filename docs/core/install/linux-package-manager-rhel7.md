@@ -4,18 +4,18 @@ description: パッケージ マネージャーを使用して、.NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
-ms.openlocfilehash: bcc41bfcd7c6d03038952e3faaf07952c3deb69d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 4f85ed3da8a434fcd5b6ee88491daf623c3c8b31
+ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715536"
+ms.lasthandoff: 02/04/2020
+ms.locfileid: "76980185"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 パッケージ マネージャー - .NET Core をインストールする
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
-この記事では、パッケージ マネージャーを使用して RHEL 7 に .NET Core をインストールする方法について説明します。 .NET Core 3.1 は、RHEL 7 ではまだ使用できません。
+この記事では、パッケージ マネージャーを使用して RHEL 7 に .NET Core をインストールする方法について説明します。
 
 ## <a name="register-your-red-hat-subscription"></a>ご利用の Red Hat サブスクリプションを登録する
 
@@ -27,8 +27,8 @@ Subscription Manager に登録すると、.NET Core SDK をインストールし
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="install-the-aspnet-core-runtime"></a>ASP.NET Core ランタイムをインストールする
@@ -37,8 +37,8 @@ Subscription Manager に登録すると、ASP.NET Core ランタイムをイン�
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30-aspnetcore-runtime-3.0 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="install-the-net-core-runtime"></a>.NET Core ランタイムをインストールする
@@ -47,10 +47,10 @@ Subscription Manager に登録すると、.NET Core ランタイムをインス�
 
 ```bash
 subscription-manager repos --enable=rhel-7-server-dotnet-rpms
-yum install rh-dotnet30-dotnet-runtime-3.0 -y
-scl enable rh-dotnet30 bash
+yum install rh-dotnet31-dotnet-runtime-3.1 -y
+scl enable rh-dotnet31 bash
 ```
 
 ## <a name="see-also"></a>関連項目
 
-- [Red Hat Enterprise Linux 7 での .NET Core 3.0 の使用](https://access.redhat.com/documentation/en-us/net_core/3.0/html/getting_started_guide/gs_install_dotnet)
+- [Red Hat Enterprise Linux 7 での .NET Core 3.1 の使用](https://access.redhat.com/documentation/en-us/net_core/3.1/html/getting_started_guide/gs_install_dotnet)

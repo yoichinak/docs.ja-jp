@@ -4,16 +4,16 @@ description: C# の Null 許容値型とその使用方法について説明し�
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: 42673d16ac68bbf119e57e4c357b1b2b2a0b5c51
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bd90a0b1b77349efe581eb8aae44c58802ba756d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740948"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093189"
 ---
 # <a name="nullable-value-types-c-reference"></a>null 許容値型 (C# リファレンス)
 
-null 許容値型 `T?` は、基になる[値型](value-types.md) `T` のすべての値と、追加の [null](../keywords/null.md) 値を表します。 たとえば、`bool?` 変数には、`true`、`false`、`null` の 3 つの値のいずれかを割り当てることができます。 基になる値型 `T` を null 許容値型にすることはできません。
+"*null 許容値型*" `T?` は、基になる[値型](value-types.md) `T` のすべての値と、追加の [null](../keywords/null.md) 値を表します。 たとえば、`bool?` 変数には、`true`、`false`、`null` の 3 つの値のいずれかを割り当てることができます。 基になる値型 `T` を null 許容値型にすることはできません。
 
 > [!NOTE]
 > C# 8.0 で、Null 許容参照型機能が導入されました。 詳細については、「[null 許容参照型](../../nullable-references.md)」を参照してください。 null 許容値型は、C# 2 から使用できます。
@@ -68,7 +68,7 @@ null 非許容値型 `T` は、対応する null 許容値型 `T?` に暗黙的�
 
 ## <a name="lifted-operators"></a>リフト演算子
 
-定義済みの単項演算子および 2 項演算子、または値型 `T` によってサポートされるオーバーロードされた任意の演算子は、対応する null 許容値型 `T?` でもサポートされます。 "*リフト演算子*" とも呼ばれるこれらの演算子では、一方または両方のオペランドが `null` の場合に `null` が生成されます。それ以外の場合は、そのオペランドに含まれている値を使用して結果が算出されます。 次に例を示します。
+定義済みの単項[演算子](../operators/index.md)および 2 項演算子、または値型 `T` によってサポートされるオーバーロードされた任意の演算子は、対応する null 許容値型 `T?` でもサポートされます。 "*リフト演算子*" とも呼ばれるこれらの演算子では、一方または両方のオペランドが `null` の場合に `null` が生成されます。それ以外の場合は、そのオペランドに含まれている値を使用して結果が算出されます。 次に例を示します。
 
 [!code-csharp[lifted operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#LiftedOperator)]
 
@@ -82,7 +82,9 @@ null 非許容値型 `T` は、対応する null 許容値型 `T?` に暗黙的�
 
 [!code-csharp-interactive[relational and equality operators](~/samples/csharp/language-reference/builtin-types/NullableValueTypes.cs#ComparisonOperators)]
 
-また、前の例では、どちらも `null` である 2 つの null 許容値型インスタンスの等価比較が `true` に評価されることも示されています。
+[等値演算子](../operators/equality-operators.md#equality-operator-) `==` では、両方のオペランドが `null` の場合、結果は `true` になります。一方のオペランドだけが `null` の場合、結果は `false` です。それ以外の場合は、オペランドに含まれる値が比較されます。
+
+[非等値演算子](../operators/equality-operators.md#inequality-operator-) `!=` では、両方のオペランドが `null` の場合、結果は `false` になります。一方のオペランドだけが `null` の場合、結果は `true` です。それ以外の場合は、オペランドに含まれる値が比較されます。
 
 2 つの値型の間に[ユーザー定義の変換](../operators/user-defined-conversion-operators.md)が存在する場合は、それに対応する null 許容値型間でも同じ変換を使用することができます。
 

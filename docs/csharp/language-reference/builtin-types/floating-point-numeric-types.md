@@ -18,16 +18,16 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 23aa33c6887db48a12f995efc5e1e2220d30216c
-ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
+ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2019
-ms.locfileid: "74552280"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093215"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮動小数点数値型 (C# リファレンス)
 
-**浮動小数点型**は**単純型**のサブセットであり、[*リテラル*](#real-literals)を使用して初期化できます。 すべての浮動小数点型は値の型でもあります。 すべての浮動小数点数値型は、[算術](../operators/arithmetic-operators.md)、[比較](../operators/comparison-operators.md)、および[等値](../operators/equality-operators.md)演算子をサポートしています。
+"*浮動小数点数値型*" は実数を表します。 浮動小数点数値型は、[値の型](value-types.md)です。 また、[単純型](value-types.md#built-in-value-types)でもあり、[リテラル](#real-literals)を使用して初期化することができます。 すべての浮動小数点数値型は、[算術](../operators/arithmetic-operators.md)、[比較](../operators/comparison-operators.md)、および[等値](../operators/equality-operators.md)演算子をサポートしています。
 
 ## <a name="characteristics-of-the-floating-point-types"></a>浮動小数点型の特性
 
@@ -118,9 +118,8 @@ Console.WriteLine(m);  // output: 1500000
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [組み込み型の一覧表](../keywords/built-in-types-table.md)
+- [値型](value-types.md)
 - [整数型](integral-numeric-types.md)
-- [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)
 - [.NET における数値](../../../standard/numerics.md)
 - <xref:System.Numerics.Complex?displayProperty=nameWithType>

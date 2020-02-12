@@ -4,12 +4,12 @@ description: この高度なチュートリアルでは、null 許容参照型�
 ms.date: 02/19/2019
 ms.technology: csharp-null-safety
 ms.custom: mvc
-ms.openlocfilehash: e480cfa7c041d18a2bdaf8caa2468165e855186e
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 4edeab7b2a4211d50c424f567ad7df6ced0bf4ce
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740468"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093306"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>チュートリアル: null 許容参照型で既存のコードを移行する
 
@@ -40,7 +40,7 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 
 ## <a name="upgrade-the-projects-to-c-8"></a>プロジェクトを C# 8 にアップグレードする
 
-最初のステップとして、移行タスクの範囲を決定します。 まず最初に、プロジェクトを C# 8.0 (またはそれ以降) にアップグレードします。 `LangVersion` 要素を、Web プロジェクトと単体テスト プロジェクト両方の csproj ファイルに追加します。
+最初のステップとして、移行タスクの範囲を決定します。 まず最初に、プロジェクトを C# 8.0 (またはそれ以降) にアップグレードします。 Web プロジェクトと単体テスト プロジェクトの両方について、csproj ファイルの PropertyGroup に `LangVersion` 要素を追加します。
 
 ```xml
 <LangVersion>8.0</LangVersion>
