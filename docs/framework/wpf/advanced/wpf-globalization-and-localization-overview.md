@@ -5,20 +5,20 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 9be6245d7429466490d9dac93c5b94d70bde30bd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744478"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124560"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 
-製品の利用可能性を1つの言語のみに制限すると、お客様の潜在顧客ベースを世界の65億人口の一部に限定できます。 アプリケーションを世界中のユーザーに提供する場合、製品のコスト効率に優れたローカライズ方法の1つは、より多くの顧客にリーチするための最良で経済的な方法の1つです。
+製品の利用可能性を1つの言語のみに制限すると、お客様の潜在顧客ベースを世界の75億人口の一部に限定できます。 アプリケーションを世界中のユーザーに提供する場合、製品のコスト効率に優れたローカライズ方法の1つは、より多くの顧客にリーチするための最良で経済的な方法の1つです。
 
 この概要では、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]でのグローバリゼーションとローカライズについて説明します。 グローバリゼーションとは、複数の場所で実行されるアプリケーションの設計および開発です。 たとえば、グローバリゼーションでは、異なるカルチャのユーザーに対して、ローカライズされたユーザーインターフェイスと地域データをサポートしています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、自動レイアウト、サテライトアセンブリ、ローカライズされた属性、コメントなど、グローバリゼーションのデザイン機能が用意されています。
 
-ローカライズとは、アプリケーションがサポートする特定のカルチャに合わせて、アプリケーションリソースをローカライズされたバージョンに変換することです。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でローカライズする場合は、<xref:System.Windows.Markup.Localizer> 名前空間の Api を使用します。 これらの Api は、 [LocBaml ツールサンプル](https://go.microsoft.com/fwlink/?LinkID=160016)コマンドラインツールを活用しています。 LocBaml を構築して使用する方法の詳細については、「[アプリケーションをローカライズ](how-to-localize-an-application.md)する」を参照してください。
+ローカライズとは、アプリケーションがサポートする特定のカルチャに合わせて、アプリケーションリソースをローカライズされたバージョンに変換することです。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でローカライズする場合は、<xref:System.Windows.Markup.Localizer> 名前空間の Api を使用します。 これらの Api は、 [LocBaml ツールサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)コマンドラインツールを活用しています。 LocBaml を構築して使用する方法の詳細については、「[アプリケーションをローカライズ](how-to-localize-an-application.md)する」を参照してください。
 
 ## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF でのグローバリゼーションとローカライズのベストプラクティス
 
@@ -48,7 +48,7 @@ ms.locfileid: "76744478"
 
 - テキストを右から左に記述するカルチャでローカライズできるナビゲーションアプリケーションを作成する場合は、ページが <xref:System.Windows.Navigation.NavigationWindow>から <xref:System.Windows.FlowDirection> を継承しないように、すべてのページの <xref:System.Windows.FlowDirection> を明示的に設定します。
 
-- ブラウザーの外部でホストされているスタンドアロンナビゲーションアプリケーションを作成する場合は、最初のアプリケーションの <xref:System.Windows.Application.StartupUri%2A> をページではなく <xref:System.Windows.Navigation.NavigationWindow> に設定します (たとえば、`<Application StartupUri="NavigationWindow.xaml">`)。 このデザインでは、ウィンドウとナビゲーションバーの <xref:System.Windows.FlowDirection> を変更できます。 詳細と例については、「[グローバリゼーションのホームページのサンプル](https://go.microsoft.com/fwlink/?LinkID=159990)」を参照してください。
+- ブラウザーの外部でホストされているスタンドアロンナビゲーションアプリケーションを作成する場合は、最初のアプリケーションの <xref:System.Windows.Application.StartupUri%2A> をページではなく <xref:System.Windows.Navigation.NavigationWindow> に設定します (たとえば、`<Application StartupUri="NavigationWindow.xaml">`)。 このデザインでは、ウィンドウとナビゲーションバーの <xref:System.Windows.FlowDirection> を変更できます。 詳細と例については、「[グローバリゼーションのホームページのサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)」を参照してください。
 
 ### <a name="best-practices-for-wpf-localization"></a>WPF のローカライズのベストプラクティス
 
@@ -64,7 +64,7 @@ ms.locfileid: "76744478"
 
   - 重複する <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A> プロパティは使用しないでください (コピーと貼り付けコマンドを使用する場合は、この点に注意してください)。
 
-  - AssemblyInfo. * の `UltimateResourceFallback` の場所を設定して、フォールバックに適した言語を指定します (たとえば、`[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`)。
+  - AssemblyInfo の `UltimateResourceFallback` の場所を設定します。\* して、適切なフォールバック言語を指定します (`[assembly: NeutralResourcesLanguage("en-US",   UltimateResourceFallbackLocation.Satellite)]`など)。
 
     プロジェクトファイルの `<UICulture>` タグを省略して、メインアセンブリにソース言語を含める場合は、`UltimateResourceFallback` の場所をサテライトではなくメインアセンブリとして設定します (たとえば、`[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`)。
 
@@ -102,7 +102,7 @@ ms.locfileid: "76744478"
 
 このセクションには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションをビルドおよびローカライズする方法を理解するのに役立つ、ローカライズされたアプリケーションの例が含まれています。
 
-#### <a name="run-dialog-box-example"></a>[実行] ダイアログボックスの例
+### <a name="run-dialog-box-example"></a>[実行] ダイアログボックスの例
 
 次の図は、 **[実行]** ダイアログボックスのサンプルの出力を示しています。
 
@@ -172,7 +172,7 @@ ms.locfileid: "76744478"
 
 **解析**
 
-アプリケーションをビルドした後、ローカライズするための最初の手順として、ローカライズ可能なリソースをサテライトアセンブリから解析します。 このトピックでは、 [Locbaml ツールサンプル](https://go.microsoft.com/fwlink/?LinkID=160016)にある locbaml ツールのサンプルを使用します。 LocBaml は、ローカライズプロセスに適したローカリゼーションツールの構築を開始するのに役立つサンプルツールでのみあることに注意してください。 LocBaml を使用して、次を実行して解析します。 **locbaml/Parse RunDialog. .resources/out:** "rundialog. .resources. .RESOURCES. .csv" ファイルを生成します。
+アプリケーションをビルドした後、ローカライズするための最初の手順として、ローカライズ可能なリソースをサテライトアセンブリから解析します。 このトピックでは、 [Locbaml ツールサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Tools/LocBaml)にある locbaml ツールのサンプルを使用します。 LocBaml は、ローカライズプロセスに適したローカリゼーションツールの構築を開始するのに役立つサンプルツールでのみあることに注意してください。 LocBaml を使用して、次を実行して解析します。 **locbaml/Parse RunDialog. .resources/out:** "rundialog. .resources. .RESOURCES. .csv" ファイルを生成します。
 
 **地域**
 
@@ -215,7 +215,7 @@ Unicode をサポートしているお気に入りの CSV エディターを使�
 |コード|元の英語の BAML|ローカライズされた BAML|
 |カルチャに依存しないリソース|英語のその他のリソース|ドイツ語にローカライズされたその他のリソース|
 
-.NET framework は、アプリケーションの `Thread.CurrentThread.CurrentUICulture`に基づいて、読み込むサテライトリソースアセンブリを自動的に選択します。 これは、既定では、Windows OS のカルチャになります。 そのため、ドイツ語版の Windows を使用している場合は、de-DE\MyDialog.resources.dll が読み込まれます。英語版の Windows を使用している場合は、en-US\MyDialog.resources.dll が読み込まれます。 プロジェクトの AssemblyInfo. * で NeutralResourcesLanguage を指定することにより、アプリケーションの最終的なフォールバックリソースを設定できます。 たとえば、次のように指定します。
+.NET framework は、アプリケーションの `Thread.CurrentThread.CurrentUICulture`に基づいて、読み込むサテライトリソースアセンブリを自動的に選択します。 これは、既定では、Windows OS のカルチャになります。 そのため、ドイツ語版の Windows を使用している場合は、de-DE\MyDialog.resources.dll が読み込まれます。英語版の Windows を使用している場合は、en-US\MyDialog.resources.dll が読み込まれます。 プロジェクトの AssemblyInfo で NeutralResourcesLanguage を指定することにより、アプリケーションの最終的なフォールバックリソースを設定できます。\* たとえば、次のように指定します。
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
@@ -223,7 +223,7 @@ de-DE\MyDialog.resources.dll または de\MyDialog.resources.dll が両方とも
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft サウジアラビアホームページ
 
-次の図は、英語とアラビアのホームページを示しています。 これらのグラフィックスを生成する完全なサンプルについては、「[グローバリゼーションのホームページのサンプル](https://go.microsoft.com/fwlink/?LinkID=159990)」を参照してください。
+次の図は、英語とアラビアのホームページを示しています。 これらのグラフィックスを生成する完全なサンプルについては、「[グローバリゼーションのホームページのサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)」を参照してください。
 
 **英語：**
 
@@ -305,4 +305,4 @@ public class CorporateLogo : TextBlock
 
 **Microsoft ホームページのローカライズ**
 
-このアプリケーションをローカライズするには、[実行] ダイアログの例と同じ手順に従います。 アラビア語用のローカライズされた .csv ファイルは、[グローバリゼーションホームページのサンプル](https://go.microsoft.com/fwlink/?LinkID=159990)でご利用いただけます。
+このアプリケーションをローカライズするには、[実行] ダイアログの例と同じ手順に従います。 アラビア語用のローカライズされた .csv ファイルは、[グローバリゼーションホームページのサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Globalization%20and%20Localization/GlobalizationHomepage)でご利用いただけます。

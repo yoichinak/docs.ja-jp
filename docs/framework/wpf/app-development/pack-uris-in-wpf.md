@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 0fec72bdedbcc2c84d8bc65e72391366e42d82be
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a98c97a4aa95fb956a2ca6d417e009a281a938b6
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739166"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124482"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF におけるパッケージの URI
 
@@ -44,7 +44,7 @@ Windows Presentation Foundation (WPF) では、次のようなさまざまな方
 
 ## <a name="the-pack-uri-scheme"></a>パック URI スキーム
 
-パッケージ URI スキームは、コンテンツを整理および識別するためのモデルを記述する[Open パッケージング規則](https://go.microsoft.com/fwlink/?LinkID=71255)(OPC) 仕様によって使用されます。 このモデルの主要な要素はパッケージとパーツで、*パッケージ*は1つ以上の論理*部分*の論理コンテナーです。 この概念を次の図に示します。
+パッケージ URI スキームは、コンテンツを整理および識別するためのモデルを記述する[Open パッケージング規則](https://www.ecma-international.org/publications/standards/Ecma-376.htm)(OPC) 仕様によって使用されます。 このモデルの主要な要素はパッケージとパーツで、*パッケージ*は1つ以上の論理*部分*の論理コンテナーです。 この概念を次の図に示します。
 
 ![パッケージとパーツのダイアグラム](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 2c6a8662236b614545e7fb8545b7b60e1b08b6bd
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 38c77086075e79c0ec5b4b1564ed753eded23b34
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559834"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124495"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素について説明するために使用される用語を定義します。 これらの用語は、このドキュメントの残りの部分で頻繁に使用されます。 WPF ドキュメントについては、特に、xaml を使用する他のフレームワークの場合と、xaml 言語サポートによってシステム .Xaml レベルで有効になっている基本的な XAML 概念の両方で使用されます。 このトピックでは、「 [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)」で紹介した基本的な用語について説明します。  
@@ -43,7 +43,7 @@ ms.locfileid: "75559834"
 ## <a name="the-xaml-language-specification"></a>XAML 言語仕様  
  ここで定義されている XAML 構文の用語は、XAML 言語仕様内でも定義または参照されています。 XAML は XML に基づく言語で、XML 構造ルールに従って、または拡張されます。 一部の用語は、XML 言語または XML ドキュメントオブジェクトモデルを記述するときに一般的に使用される用語に基づいて、またはによって共有されます。  
   
- XAML 言語仕様の詳細については、Microsoft ダウンロードセンターから[\[の MS xaml\]](https://go.microsoft.com/fwlink/?LinkId=114525)をダウンロードしてください。  
+ XAML 言語仕様の詳細については、Microsoft ダウンロードセンターから[\[の MS xaml\]](https://download.microsoft.com/download/0/A/6/0A6F7755-9AF5-448B-907D-13985ACCF53E/[MS-XAML].pdf)をダウンロードしてください。  
   
 <a name="xaml_and_clr"></a>   
 ## <a name="xaml-and-clr"></a>XAML と CLR  
@@ -259,7 +259,7 @@ ms.locfileid: "75559834"
  マークアップ拡張機能の詳細については、 「[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)」を参照してください。 一般的な .NET XAML 実装で有効になっているマークアップ拡張機能とその他の XAML プログラミング機能のリファレンスについては、「 [XAML 名前空間 (x:)」を参照してください。言語機能](../../../desktop-wpf/xaml-services/namespace-language-features.md)。 WPF 固有のマークアップ拡張機能については、「 [WPF XAML 拡張](wpf-xaml-extensions.md)機能」を参照してください。  
   
 <a name="attached_properties"></a>   
-## <a name="attached-properties"></a>添付プロパティ  
+## <a name="attached-properties"></a>アタッチされるプロパティ  
  添付プロパティは、XAML で導入されたプログラミング概念です。プロパティは、特定の型で所有および定義できますが、任意の要素の属性またはプロパティ要素として設定できます。 添付プロパティが対象となる主なシナリオは、マークアップ構造内の子要素が、すべての要素にわたって広範囲に共有されるオブジェクトモデルを必要とせずに、親要素に情報を報告できるようにすることです。 逆に、添付プロパティは、親要素が子要素に情報を報告するために使用できます。 添付プロパティの目的と、アタッチされたプロパティを作成する方法の詳細については、「[添付プロパティの概要](attached-properties-overview.md)」を参照してください。  
   
  添付プロパティでは、 *typeName*を指定することによって、プロパティ要素の構文に似た構文を使用します、一見、。*propertyName*の組み合わせ。 次の 2 つの重要な違いがあります。  
@@ -313,7 +313,7 @@ ms.locfileid: "75559834"
   
  ただし、 *typeName*と同様です。属性の*memberName*フォーム、 *basetypename*。*memberName*はマークアップの形式が不適切なため、回避する必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)
 - [XAML 名前空間 (x:) 言語機能](../../../desktop-wpf/xaml-services/namespace-language-features.md)

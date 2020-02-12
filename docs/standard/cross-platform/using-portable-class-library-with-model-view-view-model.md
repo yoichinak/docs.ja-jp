@@ -9,14 +9,12 @@ helpviewer_keywords:
 - Portable Class Library [.NET Framework], and MVVM
 - MVVM, and Portable Class Library
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 87e756445255f1bd2417a06dfa611eba23208575
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: f5312177b9f437d9b5474d38fca80db6fc45245b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716752"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123676"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model を利用した汎用性のあるクラス ライブラリの使用
 .NET Framework[ポータブルクラスライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)を使用して、モデルビュービューモデル (MVVM) パターンを実装し、複数のプラットフォーム間でアセンブリを共有できます。
@@ -59,7 +57,7 @@ ms.locfileid: "74716752"
 
  モデルおよびビューモデルのプロジェクトをコンパイルした後、ビューを含むアプリでこれらのアセンブリを参照します。 ビューがビューモデルとのみ対話する場合は、ビューモデルを含むアセンブリを参照するだけで済みます。
 
-### <a name="model"></a>Model
+### <a name="model"></a>モデル
  次の例は、ポータブルクラスライブラリプロジェクトに存在する可能性がある簡略化されたモデルクラスを示しています。
 
  [!code-csharp[PortableClassLibraryMVVM#1](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/customer.cs#1)]
@@ -86,7 +84,7 @@ ms.locfileid: "74716752"
  [!code-csharp[PortableClassLibraryMVVM#5](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainpageviewmodel.cs#5)]
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
-### <a name="view"></a>ビュー  
+### <a name="view"></a>表示  
  .NET Framework 4.5 アプリ、Windows 8.x ストアアプリ、Silverlight ベースのアプリ、または Windows Phone 7.5 アプリから、モデルプロジェクトとビューモデルプロジェクトを含むアセンブリを参照できます。  次に、ビューモデルと対話するビューを作成します。 次の例は、ビューモデルからデータを取得して更新する簡素化された Windows Presentation Foundation (WPF) アプリを示しています。 Silverlight、Windows Phone、または Windows 8.x ストアアプリでも同様のビューを作成できます。  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  

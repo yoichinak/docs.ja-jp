@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: d77ce78fe914bf300c5b33019d7cf67aa4ad74c3
-ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
+ms.openlocfilehash: d0962793854a6066112eb987fbdb3f703617787f
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72291448"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124430"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel> 要素は、要素のサイズと大きさ、位置、および子コンテンツの配置を制御するコンポーネントです。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、定義済みの <xref:System.Windows.Controls.Panel> 要素が多数用意されています。また、カスタム <xref:System.Windows.Controls.Panel> 要素を作成することもできます。  
@@ -62,7 +62,7 @@ ms.locfileid: "72291448"
   
  次の表に各パネル要素でカプセル化されているそれぞれの特殊機能を示します。  
   
-|要素名|UI パネル?|説明|  
+|要素名|UI パネル?|[説明]|  
 |------------------|---------------|-----------------|  
 |<xref:System.Windows.Controls.Canvas>|はい|<xref:System.Windows.Controls.Canvas> 領域を基準にして相対的に子要素を座標によって明示的に配置できる領域を定義します。|  
 |<xref:System.Windows.Controls.DockPanel>|はい|子要素を互いに水平方向または垂直方向に整列する領域を定義します。|  
@@ -93,7 +93,7 @@ ms.locfileid: "72291448"
  これらの各要素の詳細な説明と使用例を次に示します。  
   
 <a name="Panels_overview_Canvas_subsection"></a>   
-### <a name="canvas"></a>Canvas  
+### <a name="canvas"></a>キャンバス  
  <xref:System.Windows.Controls.Canvas> 要素を使用すると、 *x*座標と*y*座標の絶対値に応じてコンテンツを配置できます。 要素は一意の場所に描画できます。または、要素が同じ座標を占める場合、マークアップに表示される順序が要素の描画順序を決定します。  
   
  <xref:System.Windows.Controls.Canvas> は、<xref:System.Windows.Controls.Panel>のレイアウトを最も柔軟にサポートします。 Height プロパティと Width プロパティは、キャンバスの領域を定義するために使用され、内の要素には親 <xref:System.Windows.Controls.Canvas>の領域を基準とした絶対座標が割り当てられます。 4つのアタッチされたプロパティ、<xref:System.Windows.Controls.Canvas.Left%2A?displayProperty=nameWithType>、<xref:System.Windows.Controls.Canvas.Top%2A?displayProperty=nameWithType>、<xref:System.Windows.Controls.Canvas.Right%2A?displayProperty=nameWithType> および <xref:System.Windows.Controls.Canvas.Bottom%2A?displayProperty=nameWithType>では、<xref:System.Windows.Controls.Canvas>内のオブジェクトの配置を細かく制御できます。これにより、開発者は、画面上で要素を正確に配置して配置することができます。  
@@ -101,7 +101,7 @@ ms.locfileid: "72291448"
 #### <a name="cliptobounds-within-a-canvas"></a>キャンバス内の ClipToBounds  
  <xref:System.Windows.Controls.Canvas> は、独自に定義された <xref:System.Windows.FrameworkElement.Height%2A> と <xref:System.Windows.FrameworkElement.Width%2A>の外側にある座標でも、画面上の任意の位置に子要素を配置できます。 さらに、<xref:System.Windows.Controls.Canvas> は、子のサイズの影響を受けません。 その結果、子要素は、親 <xref:System.Windows.Controls.Canvas>の外接する四角形の外側にある他の要素にオーバードローする可能性があります。 <xref:System.Windows.Controls.Canvas> の既定の動作では、親 <xref:System.Windows.Controls.Canvas>の境界の外側に子を描画できます。 この動作が望ましくない場合は、<xref:System.Windows.UIElement.ClipToBounds%2A> プロパティを `true`に設定できます。 これにより、<xref:System.Windows.Controls.Canvas> によって独自のサイズにクリップされます。 <xref:System.Windows.Controls.Canvas> は、子を境界の外側に描画できる唯一のレイアウト要素です。  
   
- この動作は、[Width のプロパティの比較のサンプル](https://go.microsoft.com/fwlink/?LinkID=160050)に図示されています。  
+ この動作は、[Width のプロパティの比較のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Elements/WidthProperties)に図示されています。  
   
 #### <a name="defining-and-using-a-canvas"></a>キャンバスの定義と使用  
  <xref:System.Windows.Controls.Canvas> は、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] またはコードを使用するだけでインスタンス化できます。 次の例では、<xref:System.Windows.Controls.Canvas> を使用して、コンテンツを絶対に配置する方法を示します。 このコードでは、100 ピクセルの四角形を 3 つ生成します。 最初の四角形は赤色で、左上 (*x, y*) の位置が (0, 0) に指定されます。 2 番目の四角形は緑色で、左上の位置は (100, 100) となり、最初の四角形の右下になります。 3 番目の四角形は青色で、左上の位置は (50, 50) となるため、最初の四角形の右下の象限および 2 番目の四角形の左上の象限を囲む状態になります。 3 番目の四角形が最後にレイアウトされるため、他の 2 つの四角形の上に重なっているように見えます。つまり、重複している部分は 3 番目の四角形の色とみなされます。  
@@ -112,7 +112,7 @@ ms.locfileid: "72291448"
   
  コンパイルされたアプリケーションは、これと同様の新しい [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を生成します。  
   
- ![代表的なキャンバス要素: ](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
+ ![一般的な Canvas 要素。](./media/panel-intro-canvas.PNG "panel_intro_canvas")  
   
 <a name="Panels_overview_DockPanel_subsection"></a>   
 ### <a name="dockpanel"></a>DockPanel  
@@ -136,10 +136,10 @@ ms.locfileid: "72291448"
   
  コンパイルされたアプリケーションは、これと同様の新しい [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を生成します。  
   
- ![一般的な DockPanel シナリオ。](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
+ ![一般的な System.windows.controls.dockpanel> シナリオ。](./media/panel-intro-dockpanel.PNG "panel_intro_dockpanel")  
   
 <a name="Panels_overview_Grid_subsection"></a>   
-### <a name="grid"></a>Grid  
+### <a name="grid"></a>グリッド  
  <xref:System.Windows.Controls.Grid> 要素は、絶対位置と表形式のデータコントロールの機能をマージします。 <xref:System.Windows.Controls.Grid> を使用すると、要素を簡単に配置したりスタイルを適用したりできます。 <xref:System.Windows.Controls.Grid> を使用すると、柔軟な行と列のグループ化を定義できるだけでなく、複数の <xref:System.Windows.Controls.Grid> 要素間でサイズ設定情報を共有するためのメカニズムも提供されます。  
   
 #### <a name="how-is-grid-different-from-table"></a>グリッドとテーブルを区別する方法  
@@ -156,7 +156,7 @@ ms.locfileid: "72291448"
   
  コンパイルされたアプリケーションは、これと同様の新しい [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を生成します。  
   
- ![代表的なグリッド要素: ](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
+ ![一般的な Grid 要素。](./media/avalon-run-dialog.PNG "avalon_run_dialog")  
   
 <a name="Panels_overview_StackPanel_subsection"></a>   
 ### <a name="stackpanel"></a>StackPanel  
@@ -174,7 +174,7 @@ ms.locfileid: "72291448"
   
  このイメージにはレンダリング動作の違いが見られます。  
   
- ![スクリーンショット: StackPanel system.windows.controls.dockpanel> スクリーンショット](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
+ ![スクリーンショット: StackPanel System.windows.controls.dockpanel> スクリーンショット](./media/layout-smiley-stackpanel.PNG "layout_smiley_stackpanel")  
   
 #### <a name="defining-and-using-a-stackpanel"></a>StackPanel の定義と使用  
  次の例では、<xref:System.Windows.Controls.StackPanel> を使用して、垂直方向に配置された一連のボタンを作成する方法を示します。 水平方向の配置の場合は、<xref:System.Windows.Controls.StackPanel.Orientation%2A> プロパティを <xref:System.Windows.Controls.Orientation.Horizontal>に設定します。  
@@ -184,7 +184,7 @@ ms.locfileid: "72291448"
   
  コンパイルされたアプリケーションは、これと同様の新しい [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を生成します。  
   
- ![代表的な StackPanel 要素: ](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
+ ![一般的な StackPanel 要素。](./media/panel-intro-stackpanel.PNG "panel_intro_stackpanel")  
   
 <a name="Panels_overview_VirtualizingStackPanel_subsection"></a>   
 #### <a name="virtualizingstackpanel"></a>VirtualizingStackPanel  
@@ -209,7 +209,7 @@ ms.locfileid: "72291448"
   
  コンパイルされたアプリケーションは、これと同様の新しい [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を生成します。  
   
- ![代表的な WrapPanel 要素: ](./media/wrappanel-element.PNG "WrapPanel_Element")  
+ ![一般的な WrapPanel 要素。](./media/wrappanel-element.PNG "WrapPanel_Element")  
   
 <a name="Panels_nested_panel_elements"></a>   
 ## <a name="nested-panel-elements"></a>入れ子になったパネル要素  
@@ -224,7 +224,7 @@ ms.locfileid: "72291448"
   
  コンパイルされたアプリケーションは、これと同様の新しい [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] を生成します。  
   
- ![入れ子になったパネルを利用する UI: ](./media/nested-panels.PNG "nested_panels")  
+ ![入れ子になったパネルを利用する UI。](./media/nested-panels.PNG "nested_panels")  
   
 <a name="Panels_custom_panel_elements"></a>   
 ## <a name="custom-panel-elements"></a>カスタム パネル要素  
@@ -244,7 +244,7 @@ ms.locfileid: "72291448"
 ## <a name="localizationglobalization-support"></a>ローカライズ/グローバリゼーション サポート  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、ローカライズ可能な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] の作成を支援する多数の機能をサポートしています。  
   
- すべてのパネル要素は、<xref:System.Windows.FrameworkElement.FlowDirection%2A> プロパティをネイティブでサポートしています。これを使用すると、ユーザーのロケールまたは言語設定に基づいてコンテンツを動的に再フローできます。 詳細については、「 <xref:System.Windows.FrameworkElement.FlowDirection%2A>」を参照してください。  
+ すべてのパネル要素は、<xref:System.Windows.FrameworkElement.FlowDirection%2A> プロパティをネイティブでサポートしています。これを使用すると、ユーザーのロケールまたは言語設定に基づいてコンテンツを動的に再フローできます。 詳細については、<xref:System.Windows.FrameworkElement.FlowDirection%2A> を参照してください。  
   
  <xref:System.Windows.Window.SizeToContent%2A> プロパティは、アプリケーション開発者がローカライズされた [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]のニーズを予測できるようにするためのメカニズムを提供します。 親 <xref:System.Windows.Window> は、このプロパティの <xref:System.Windows.SizeToContent.WidthAndHeight> 値を使用して、常に動的にサイズを調整してコンテンツに合わせることができ、人為的な高さや幅の制限によって制約されることはありません。  
   
@@ -257,7 +257,7 @@ ms.locfileid: "72291448"
 - [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF レイアウト ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160054)
 - [レイアウト](../advanced/layout.md)
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF Controls Gallery Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [配置、余白、パディングの概要](../advanced/alignment-margins-and-padding-overview.md)
 - [カスタムコンテンツラッピングパネルサンプルの作成](https://go.microsoft.com/fwlink/?LinkID=159979)
 - [添付プロパティの概要](../advanced/attached-properties-overview.md)

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - .NET Framework, and Windows Store apps
 - .NET Framework, and Windows Runtime
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dd7e045bf54b09fe2a229efefc0218eb3f2f731a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 56c9cb60ab46a583c34f898d20abf85f5ff0fe4c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802753"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123702"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート
 
@@ -58,9 +56,9 @@ ms.locfileid: "74802753"
 
 Windows ランタイムと .NET Framework のドキュメントセットは別々になっています。 型またはメンバーに関するヘルプを表示するために F1 キーを押すと、該当するセットのリファレンス ドキュメントが表示されます。 ただし、 [Windows ランタイムリファレンス](/uwp/api/)を参照すると、不可解のような例が発生する可能性があります。
 
-- <xref:Windows.Foundation.Collections.IIterable%601> インターフェイスなどのトピックには Visual Basic またはC#の宣言構文がありません。 代わりに、構文セクションの上にメモが表示されます (この例では、".NET: このインターフェイスは、system.string\<T >" として表示されます)。 これは、.NET Framework と Windows ランタイムは、インターフェイスが異なる同様の機能を提供するためです。 さらに、`IIterable` では列挙子を返すのに `First` メソッドではなく <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> メソッドを使用するという、動作の違いもあります。 一般的なタスクを実行する別の方法を学習するのではなく、.NET Framework は、使い慣れた型を使用するようにマネージコードを表示することによって、Windows ランタイムをサポートしています。 IDE に `IIterable` インターフェイスは表示されません。したがって、Windows ランタイムのリファレンスドキュメントでは、そのドキュメントを直接参照することによってのみ表示されます。
+- <xref:Windows.Foundation.Collections.IIterable%601> インターフェイスなどのトピックには Visual Basic またはC#の宣言構文がありません。 代わりに、構文のセクション (この場合は ".NET:このインターフェイスは、system.string\<T > ") として表示されます。 これは、.NET Framework と Windows ランタイムは、インターフェイスが異なる同様の機能を提供するためです。 さらに、`IIterable` では列挙子を返すのに `First` メソッドではなく <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> メソッドを使用するという、動作の違いもあります。 一般的なタスクを実行する別の方法を学習するのではなく、.NET Framework は、使い慣れた型を使用するようにマネージコードを表示することによって、Windows ランタイムをサポートしています。 IDE に `IIterable` インターフェイスは表示されません。したがって、Windows ランタイムのリファレンスドキュメントでは、そのドキュメントを直接参照することによってのみ表示されます。
 
-- <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> のドキュメントは、そのパラメーターの型が言語によって異なる場合があるという、密接に関連する問題を示しています。 C# と Visual Basic の場合、パラメーターの型は <xref:System.String?displayProperty=nameWithType> と <xref:System.Uri?displayProperty=nameWithType> です。 これもやはり、.NET Framework で独自の `String` 型と `Uri` 型が使われるためであり、このようなよく使用される型について、.NET Framework ユーザーが処理を実行する別の方法を学習しても意味はありません。 IDE では、.NET Framework は対応する Windows ランタイムの種類を非表示にします。
+- <xref:Windows.Web.Syndication.SyndicationFeed.%23ctor(System.String,System.String,Windows.Foundation.Uri)> のドキュメントは、密接に関連する問題を示しています。このパラメーターの型は、言語によって異なる場合があります。 C# と Visual Basic の場合、パラメーターの型は <xref:System.String?displayProperty=nameWithType> と <xref:System.Uri?displayProperty=nameWithType> です。 これもやはり、.NET Framework で独自の `String` 型と `Uri` 型が使われるためであり、このようなよく使用される型について、.NET Framework ユーザーが処理を実行する別の方法を学習しても意味はありません。 IDE では、.NET Framework は対応する Windows ランタイムの種類を非表示にします。
 
 - <xref:Windows.UI.Xaml.GridLength> 構造体など、いくつかのケースでは、.NET Framework は同じ名前で、より多くの機能を持つ型を提供します。 たとえば、一連のコンストラクターとプロパティのトピックは `GridLength` に関連付けられますが、メンバーがマネージド コードでのみ使用可能であるために、Visual Basic と C# に関してのみ構文ブロックの機能を備えています。 Windows ランタイムでは、構造体にはフィールドしかありません。 Windows ランタイム構造体には、同等の機能を提供するために、<xref:Windows.UI.Xaml.GridLengthHelper>のヘルパークラスが必要です。 このヘルパー クラスは、マネージド コードを記述している間は IDE に表示されません。
 

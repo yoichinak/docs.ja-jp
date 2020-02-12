@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 9ec6716fefdc8de75d7e523c56ae0b3a02c8cf02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: bce2eed5f0e78c16b85b399e588c3d0d68ce7cb7
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424640"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123715"
 ---
 # <a name="dialog-boxes-overview"></a>ダイアログボックスの概要
 スタンドアロンアプリケーションには、通常、アプリケーションが動作するメインデータを表示し、メニューバー、ツールバー、ステータスバーなどの [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] メカニズムによってデータを処理する機能を公開するメインウィンドウがあります。 重要なアプリケーションは、次のようなことをするための追加のウィンドウを表示することもあります。  
@@ -32,7 +32,7 @@ ms.locfileid: "73424640"
   
  一方、*モードレス*ダイアログボックスでは、ユーザーが開いている間に他のウィンドウをアクティブ化することはできません。 たとえば、ユーザーがドキュメント内の特定の単語の出現箇所を検索する場合、メイン ウィンドウは、多くの場合、ダイアログ ボックスを開いて、検索する単語をユーザーに尋ねます。 しかし、単語の検索中もユーザーはドキュメントを編集できるため、ダイアログ ボックスがモーダルである必要はありません。 モードレスダイアログボックスには、ダイアログボックスを閉じるための **[閉じる]** ボタンが用意されています。また、次を **[検索]** ボタンをクリックして、単語検索の検索条件に一致する次の単語を検索するなど、特定の機能を実行するためのボタンを追加することもできます。  
   
- Windows Presentation Foundation (WPF) を使用すると、メッセージボックス、コモンダイアログボックス、カスタムダイアログボックスなど、いくつかの種類のダイアログボックスを作成できます。 このトピックでは、それぞれについて説明し、[ダイアログボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984)で一致例を示します。  
+ Windows Presentation Foundation (WPF) を使用すると、メッセージボックス、コモンダイアログボックス、カスタムダイアログボックスなど、いくつかの種類のダイアログボックスを作成できます。 このトピックでは、それぞれについて説明し、[ダイアログボックスのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)で一致例を示します。  
 
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>メッセージボックス  
@@ -55,9 +55,9 @@ ms.locfileid: "73424640"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowandresultcodebehind1)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowAndResultCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowandresultcodebehind1)]  
   
- メッセージボックスの使用方法の詳細については、「<xref:System.Windows.MessageBox>、 [MessageBox サンプル](https://go.microsoft.com/fwlink/?LinkID=160023)、および[ダイアログボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984)」を参照してください。  
+ メッセージボックスの使用方法の詳細については、「<xref:System.Windows.MessageBox>、 [MessageBox サンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/MessageBox)、および[ダイアログボックスのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)」を参照してください。  
   
- <xref:System.Windows.MessageBox> は簡単なダイアログボックスのユーザーエクスペリエンスを提供する場合がありますが、<xref:System.Windows.MessageBox> を使用する利点は、XAML ブラウザーなど、部分信頼セキュリティサンドボックス内で実行されるアプリケーションで表示できる唯一のウィンドウです (「[セキュリティ](../security-wpf.md)」を参照してください)。アプリケーション (Xbap)。  
+ <xref:System.Windows.MessageBox> は簡単なダイアログボックスのユーザーエクスペリエンスを提供する場合がありますが、<xref:System.Windows.MessageBox> を使用する利点は、XAML ブラウザーアプリケーション ( [xbap) など](../security-wpf.md)、部分信頼セキュリティサンドボックス内で実行されるアプリケーションで表示できる唯一の種類のウィンドウです。  
   
  ほとんどのダイアログ ボックスは、テキスト、選択 (チェック ボックス)、相互に排他的な選択 (オプション ボタン)、リスト選択 (リスト ボックス、コンボ ボックス、ドロップダウン リスト ボックス) など、メッセージ ボックスの結果よりも複雑なデータを表示し、収集します。 これらの場合、Windows Presentation Foundation (WPF) にはいくつかの一般的なダイアログボックスが用意されており、独自のダイアログボックスを作成することができます。ただし、どちらの方法も、完全信頼で実行されるアプリケーションに限定されます。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "73424640"
 <a name="Creating_a_Modal_Custom_Dialog_Box"></a>   
 ### <a name="creating-a-modal-custom-dialog-box"></a>モーダルカスタムダイアログボックスの作成
 
-このトピックでは、<xref:System.Windows.Window> を使用して、`Margins` ダイアログボックスを例として使用して、一般的なモーダルダイアログボックスの実装を作成する方法について説明します (「[ダイアログボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984)」を参照してください)。 [`Margins`] ダイアログボックスを次の図に示します。  
+このトピックでは、<xref:System.Windows.Window> を使用して、`Margins` ダイアログボックスを例として使用して、一般的なモーダルダイアログボックスの実装を作成する方法について説明します (「[ダイアログボックスのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)」を参照してください)。 [`Margins`] ダイアログボックスを次の図に示します。  
   
  ![左余白、上余白、右余白、および下余白を定義するフィールドを含む [余白] ダイアログボックス。](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
@@ -304,7 +304,7 @@ WPF では、有効なデータを入力しない限り、ユーザーは無効�
 [!code-csharp[Calling the Close method](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/FindDialogBox.xaml.cs?range=1-9,119-126)]
 [!code-vb[Calling the Close method](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb?range=1-9,99-103)]  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ポップアップの概要](../controls/popup-overview.md)
-- [ダイアログボックスのサンプル](https://go.microsoft.com/fwlink/?LinkID=159984)
+- [ダイアログボックスのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Windows/DialogBox)

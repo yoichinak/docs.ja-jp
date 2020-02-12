@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: bec7e14ceed867e89c3117efbc245938356b9d78
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 825b689dea145d18035344cd902ea1b8a50e82c3
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742284"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124209"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML ブラウザー アプリケーションの概要
 <a name="introduction"></a>XAML ブラウザーアプリケーション (Xbap) は、Web アプリケーションとリッチクライアントアプリケーションの両方の機能を組み合わせたものです。 たとえば、Web アプリケーションと同様、Web サーバーに配置して、Internet Explorer または Firefox から開始できます。 リッチクライアントアプリケーションと同様に、Xbap は WPF の機能を利用できます。 XBAP の開発方法もリッチ クライアントの開発に似ています。 このトピックでは、XBAP 開発の概要を示し、XBAP 開発が標準的なリッチ クライアント開発と異なる点について説明します。
@@ -91,7 +91,7 @@ ms.locfileid: "76742284"
 
 <a name="communicating_with_the_host_web_page"></a>
 ## <a name="communicating-with-the-host-web-page"></a>ホスト Web ページとの通信
- アプリケーションが HTML フレーム内でホストされている場合は、XBAP を含む Web ページと通信できます。 これを行うには、<xref:System.Windows.Interop.BrowserInteropHelper>の <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> プロパティを取得します。 このプロパティは、HTML ウィンドウを表すスクリプト オブジェクトを返します。 [window オブジェクト](https://go.microsoft.com/fwlink/?LinkId=160274)上のプロパティ、メソッド、およびイベントにアクセスするには、標準のドット構文を使用します。 スクリプト メソッドおよびグローバル変数にアクセスすることもできます。 次の例は、スクリプト オブジェクトを取得して、ブラウザーを閉じる方法を示しています。
+ アプリケーションが HTML フレーム内でホストされている場合は、XBAP を含む Web ページと通信できます。 これを行うには、<xref:System.Windows.Interop.BrowserInteropHelper>の <xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A> プロパティを取得します。 このプロパティは、HTML ウィンドウを表すスクリプト オブジェクトを返します。 [window オブジェクト](https://developer.mozilla.org/en-US/docs/Web/API/Window)上のプロパティ、メソッド、およびイベントにアクセスするには、標準のドット構文を使用します。 スクリプト メソッドおよびグローバル変数にアクセスすることもできます。 次の例は、スクリプト オブジェクトを取得して、ブラウザーを閉じる方法を示しています。
 
  [!code-csharp[XbapBrowserInterop#10](~/samples/snippets/csharp/VS_Snippets_Wpf/xbapbrowserinterop/cs/page1.xaml.cs#10)]
  [!code-vb[XbapBrowserInterop#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/xbapbrowserinterop/vb/page1.xaml.vb#10)]
@@ -175,7 +175,7 @@ ms.locfileid: "76742284"
 > [!NOTE]
 > 前の表で説明した動作は、ClickOnce 信頼済み配置モデルに従っていない完全な信頼の XBAP の動作です。
 
- 完全な信頼の XBAP を配置する場合は、ClickOnce 信頼済み配置モデルを使用することをお勧めします。 このモデルにより、セキュリティ ゾーンに関係なく、完全な信頼を XBAP に自動的に付与できるため、ユーザーにプロンプトが表示されることはありません。 このモデルの一部として、信頼された発行元からの証明書を使用して、アプリケーションに署名する必要があります。 細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」および「[Introduction to Code Signing (コード署名の概要)](https://go.microsoft.com/fwlink/?LinkId=166327)」を参照してください。
+ 完全な信頼の XBAP を配置する場合は、ClickOnce 信頼済み配置モデルを使用することをお勧めします。 このモデルにより、セキュリティ ゾーンに関係なく、完全な信頼を XBAP に自動的に付与できるため、ユーザーにプロンプトが表示されることはありません。 このモデルの一部として、信頼された発行元からの証明書を使用して、アプリケーションに署名する必要があります。 細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」および「[Introduction to Code Signing (コード署名の概要)](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537361(v=vs.85))」を参照してください。
 
 <a name="xbap_start_time_performance_considerations"></a>
 ## <a name="xbap-start-time-performance-considerations"></a>XBAP 起動時のパフォーマンスに関する考慮事項

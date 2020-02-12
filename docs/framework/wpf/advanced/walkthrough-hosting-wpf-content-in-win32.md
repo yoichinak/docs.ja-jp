@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: ff95b330ff67e916a4d27ef841e757998d847c8b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 418c5a4708a7842e5e441235738b73a009c9c956
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735311"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124548"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>チュートリアル: Win32 での WPF コンテンツのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、Win32 コードに多大な投資をしている場合は、元のコードを書き換えるのではなく、アプリケーションに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 機能を追加する方がより効果的な場合があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、Win32 ウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツをホストするための簡単なメカニズムを提供します。  
   
- このチュートリアルでは、win32 ウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツをホストするサンプルアプリケーション ( [Win32 ウィンドウで WPF コンテンツ](https://go.microsoft.com/fwlink/?LinkID=160004)をホストするサンプル) を記述する方法について説明します。 このサンプルを拡張して、任意の Win32 ウィンドウをホストすることができます。 マネージコードとアンマネージコードの混在が必要になるため、 C++アプリケーションは/cli で記述されています。  
+ このチュートリアルでは、win32 ウィンドウで [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のコンテンツをホストするサンプルアプリケーション ( [Win32 ウィンドウで WPF コンテンツ](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage)をホストするサンプル) を記述する方法について説明します。 このサンプルを拡張して、任意の Win32 ウィンドウをホストすることができます。 マネージコードとアンマネージコードの混在が必要になるため、 C++アプリケーションは/cli で記述されています。  
 
 <a name="requirements"></a>   
 ## <a name="requirements"></a>必要条件  
@@ -26,7 +26,7 @@ ms.locfileid: "76735311"
  このチュートリアルに付属するサンプルは/Cli でC++実装されているので、このチュートリアルでC++は、を使用して Windows API をプログラミングする方法とマネージコードプログラミングについて理解していることを前提としています。 /Cli にC++関する知識は役に立ちますが、必須ではありません。  
   
 > [!NOTE]
-> このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプルコードについては、「 [Win32 ウィンドウでの WPF コンテンツのホスト](https://go.microsoft.com/fwlink/?LinkID=160004)」のサンプルを参照してください。  
+> このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプルコードについては、「 [Win32 ウィンドウでの WPF コンテンツのホスト](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32HostingWPFPage)」のサンプルを参照してください。  
   
 <a name="basic_procedure"></a>   
 ## <a name="the-basic-procedure"></a>基本手順  

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - resources, for multiple platforms
 - targeting multiple platforms, resources for
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b32c2e354ea48e25ddb0aa561eb576cbfd89e3fb
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.openlocfilehash: 3bf475117a85c2fced260dcc9460d55cd7007277
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74204740"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123663"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>複数のプラットフォームを対象とするライブラリのアプリケーション リソース
 .NET Framework[ポータブルクラスライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)のプロジェクトタイプを使用して、クラスライブラリ内のリソースに複数のプラットフォームからアクセスできるようにすることができます。 このプロジェクトの種類は Visual Studio 2012 で使用でき、.NET Framework クラスライブラリの移植可能なサブセットを対象とします。 ポータブルクラスライブラリを使用すると、デスクトップアプリ、Silverlight アプリ、Windows Phone アプリ、Windows 8.x ストアアプリからライブラリにアクセスできるようになります。
@@ -35,7 +33,7 @@ ms.locfileid: "74204740"
 
  ポータブルクラスライブラリプロジェクトには、次の表に示す4つの <xref:System.Resources.ResourceManager> メンバーが含まれています。 これらのコンストラクターおよびメソッドを使用すると、<xref:System.Resources.ResourceManager> オブジェクトをインスタンス化して文字列リソースを取得できます。
 
-|`ResourceManager` のメンバー|説明|
+|`ResourceManager` のメンバー|[説明]|
 |------------------------------|-----------------|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.String%2CSystem.Reflection.Assembly%29>|<xref:System.Resources.ResourceManager> インスタンスを作成し、指定されたアセンブリ内にある、名前の指定されたリソース ファイルにアクセスします。|
 |<xref:System.Resources.ResourceManager.%23ctor%28System.Type%29>|指定された型に対応する <xref:System.Resources.ResourceManager> インスタンスを作成します。|
@@ -61,7 +59,7 @@ ms.locfileid: "74204740"
 |BornLength|12|
 |Hired|Hire Date|
 |HiredLength|12|
-|ID|ID|
+|id|id|
 |ID.Length|12|
 |Name|Name|
 |NameLength|25|
@@ -90,7 +88,7 @@ ms.locfileid: "74204740"
 |BornLength|20|
 |Hired|Date embauché|
 |HiredLength|16|
-|ID|ID|
+|id|id|
 |Name|Nom|
 |タイトル|Base de données des employés|
 

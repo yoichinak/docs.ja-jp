@@ -6,14 +6,12 @@ helpviewer_keywords:
 - forums [WPF]
 - bug descriptions [WPF]
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a9e903045195d6f464659876334f7fedc5c695e9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0bb94626d4e97f55c89bf239fc298b6bce8fd870
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733810"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124677"
 ---
 # <a name="wpf-community-feedback"></a>WPF コミュニティのフィードバック
 

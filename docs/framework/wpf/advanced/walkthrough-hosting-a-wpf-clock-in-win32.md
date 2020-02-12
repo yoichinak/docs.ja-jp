@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: 1fdc0c9ccf1464d7519a4c5935520de1206ca9bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0aecde96d182e12ab72b1a6cba129ab1d8a28391
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794157"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77123780"
 ---
 # <a name="walkthrough-host-a-wpf-clock-in-win32"></a>チュートリアル: Win32 での WPF クロックのホスト
 
 Win32 アプリケーション内に [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を配置するには、<xref:System.Windows.Interop.HwndSource>を使用します。これにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツを含む HWND が提供されます。 まず、<xref:System.Windows.Interop.HwndSource>を作成し、CreateWindow のようなパラメーターを指定します。 次に、その内部に必要な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツについて <xref:System.Windows.Interop.HwndSource> を伝えます。 最後に、<xref:System.Windows.Interop.HwndSource>から HWND を取得します。 このチュートリアルでは、[オペレーティングシステムの**日付と時刻のプロパティ**] ダイアログを再実装する Win32 アプリケーション内で混合 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] を作成する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 「 [WPF と Win32 の相互運用」を](wpf-and-win32-interoperation.md)参照してください。
 
 ## <a name="how-to-use-this-tutorial"></a>このチュートリアルの使用方法
 
-このチュートリアルでは、相互運用アプリケーションを生成するための重要な手順について説明します。 このチュートリアルは、サンプルの[Win32 クロック相互運用のサンプル](https://go.microsoft.com/fwlink/?LinkID=160051)によって支えられていますが、そのサンプルは終了製品を反映しています。 このチュートリアルでは、独自の既存の Win32 プロジェクト (通常は既存のプロジェクト) を使用して作業を開始し、ホストされている [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] をアプリケーションに追加している場合と同様の手順について説明します。 [Win32 クロック相互運用のサンプル](https://go.microsoft.com/fwlink/?LinkID=160051)を使用して、終了製品を比較することができます。
+このチュートリアルでは、相互運用アプリケーションを生成するための重要な手順について説明します。 このチュートリアルは、サンプルの[Win32 クロック相互運用のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)によって支えられていますが、そのサンプルは終了製品を反映しています。 このチュートリアルでは、独自の既存の Win32 プロジェクト (通常は既存のプロジェクト) を使用して作業を開始し、ホストされている [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] をアプリケーションに追加している場合と同様の手順について説明します。 [Win32 クロック相互運用のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)を使用して、終了製品を比較することができます。
 
 ## <a name="a-walkthrough-of-windows-presentation-framework-inside-win32-hwndsource"></a>Win32 内の Windows Presentation Framework のチュートリアル (System.windows.interop.hwndsource>)
 
@@ -232,10 +232,10 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 ![[最終結果の日付と時刻のプロパティ] ダイアログボックス](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
-このスクリーンショットを生成したコードと結果を比較するには、「 [Win32 Clock 相互運用のサンプル](https://go.microsoft.com/fwlink/?LinkID=160051)」を参照してください。
+このスクリーンショットを生成したコードと結果を比較するには、「 [Win32 Clock 相互運用のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Interop.HwndSource>
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)
-- [Win32 クロック相互運用のサンプル](https://go.microsoft.com/fwlink/?LinkID=160051)
+- [Win32 クロック相互運用のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/Win32Clock)
