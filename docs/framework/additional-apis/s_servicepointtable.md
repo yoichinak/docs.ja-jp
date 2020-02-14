@@ -10,14 +10,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 68445f4a290b9f4fe2696e35cda391b6c0ee8f85
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 272a0c113fd70d804c763ba0e7e6e9a4a4ee04ce
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119996"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214920"
 ---
 # <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager. s\_Servicepointmanager フィールド
 
@@ -34,7 +32,7 @@ private static Hashtable s_ServicePointTable
 > 
 > Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **名前空間:** <xref:System.Net>
 

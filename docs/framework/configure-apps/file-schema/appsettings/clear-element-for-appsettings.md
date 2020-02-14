@@ -1,5 +1,5 @@
 ---
-title: <appSettings> の <clear> 要素
+title: <clear> の <appSettings> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
@@ -7,22 +7,20 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d321f3169344e9aa40d65b1722a533549de5315a
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088733"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214805"
 ---
-# <a name="clear-element-for-appsettings"></a>\<appSettings > の \<clear> 要素
+# <a name="clear-element-for-appsettings"></a>\<appSettings > の \<クリア > 要素
 
 カスタムアプリケーション設定をクリアします。
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<クリア >**
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +32,7 @@ ms.locfileid: "74088733"
 
 ## <a name="attributes"></a>属性
 
-None
+なし
 
 ## <a name="parent-element"></a>親要素
 
@@ -44,7 +42,7 @@ None
 
 ## <a name="child-elements"></a>子要素
 
-None
+なし
 
 ## <a name="example"></a>例
 
@@ -56,6 +54,6 @@ None
 </appSettings>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework の構成ファイルスキーマ](../index.md)

@@ -1,5 +1,5 @@
 ---
-title: 透過的セキュリティ コード、レベル 2
+title: セキュリティ透過コード、レベル 2
 ms.date: 03/30/2017
 helpviewer_keywords:
 - transparency
@@ -7,16 +7,14 @@ helpviewer_keywords:
 - security-transparent code
 - security-critical code
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ea782b346f6c53664a8aeb736c7d7a4509d83985
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 7ac5660c2c431505f4992f5e687974c2b9d06672
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73974943"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216994"
 ---
-# <a name="security-transparent-code-level-2"></a>透過的セキュリティ コード、レベル 2
+# <a name="security-transparent-code-level-2"></a>セキュリティ透過コード、レベル 2
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
@@ -72,7 +70,7 @@ ms.locfileid: "73974943"
 
 次の表は、レベル2のアセンブリレベルの動作とレベル1を比較したものです。
 
-|Assembly 属性|レベル 2|レベル 1|
+|Assembly 属性|[レベル 2]|[レベル 1]|
 |------------------------|-------------|-------------|
 |部分的に信頼されたアセンブリで属性なし|型およびメンバーは既定で透過的になりますが、セキュリティ クリティカルまたはセキュリティ セーフ クリティカルにすることもできます。|すべての型およびメンバーは透過的です。|
 |属性なし|属性を指定しない場合、透過性規則は共通言語ランタイムによって自動的に判断されます。 すべての型およびメンバーはセキュリティ クリティカルになります (ただし、セキュリティ クリティカルになると継承ルールに違反する場所を除く)。|完全に信頼されたアセンブリ (グローバル アセンブリ キャッシュ内に存在するか、`AppDomain` で完全に信頼と指定されている) では、すべての型は透過的であり、すべてのメンバーはセキュリティ セーフ クリティカルです。|
@@ -115,7 +113,7 @@ ms.locfileid: "73974943"
 
 次の表に、使用できる型の継承パターンを示します。
 
-|基底クラス|派生クラスで可能なレベル|
+|[基底クラス]|派生クラスで可能なレベル|
 |----------------|--------------------------|
 |`Transparent`|`Transparent`|
 |`Transparent`|`SafeCritical`|
@@ -126,7 +124,7 @@ ms.locfileid: "73974943"
 
 次の表に、使用できない型の継承パターンを示します。
 
-|基底クラス|派生クラスで不可のレベル|
+|[基底クラス]|派生クラスで不可のレベル|
 |----------------|-----------------------------|
 |`SafeCritical`|`Transparent`|
 |`Critical`|`Transparent`|
@@ -164,7 +162,7 @@ ms.locfileid: "73974943"
 
 クリティカル メソッドを呼び出したりクリティカル フィールドを読み取ったりすると、完全信頼の確認要求がトリガーされます (プライベート メソッドまたはプライベート フィールドを呼び出す場合と同様)。 したがって、完全に信頼されているコードではクリティカル メソッドを呼び出すことができるのに対し、部分的に信頼されたコードでは呼び出すことができません。
 
-<xref:System.Reflection> 名前空間に追加された <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>、および <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> の各プロパティを使用すると、型、メソッド、またはフィールドが `SecurityCritical`、`SecuritySafeCritical`、または `SecurityTransparent` のどれであるかを判断できます。 属性の存在を確認する代わりに、リフレクションを使用して透過性を判断するには、これらのプロパティを使用します。 透過性の規則は複雑なので、属性のチェックでは不十分なことがあります。
+<xref:System.Reflection> 名前空間に追加された `SecurityCritical`、`SecuritySafeCritical`、および `SecurityTransparent` の各プロパティを使用すると、型、メソッド、またはフィールドが <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>、または <xref:System.Reflection.MethodBase.IsSecurityTransparent%2A> のどれであるかを判断できます。 属性の存在を確認する代わりに、リフレクションを使用して透過性を判断するには、これらのプロパティを使用します。 透過性の規則は複雑なので、属性のチェックでは不十分なことがあります。
 
 > [!NOTE]
 > `SafeCritical` メソッドは、<xref:System.Type.IsSecurityCritical%2A> と <xref:System.Reflection.MethodBase.IsSecuritySafeCritical%2A>の両方に対して `true` を返します。これは、`SafeCritical` は実際には重要です (クリティカルコードと同じ機能を持ちますが、透過的なコードから呼び出すことができます)。
@@ -173,13 +171,13 @@ ms.locfileid: "73974943"
 
 ### <a name="skip-verification-in-full-trust"></a>完全な信頼での検証のスキップ
 
-完全に信頼されている透過的なアセンブリの検証をスキップするには、<xref:System.Security.SecurityRulesAttribute> 属性の <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> プロパティを `true` に設定します。
+完全に信頼されている透過的なアセンブリの検証をスキップするには、<xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> 属性の `true` プロパティを <xref:System.Security.SecurityRulesAttribute> に設定します。
 
 `[assembly: SecurityRules(SecurityRuleSet.Level2, SkipVerificationInFullTrust = true)]`
 
 <xref:System.Security.SecurityRulesAttribute.SkipVerificationInFullTrust%2A> プロパティは既定では `false` であるため、検証をスキップするにはこのプロパティを `true` に設定する必要があります。 これをするのは、最適化のためだけにしてください。 [PEVerify ツール](../tools/peverify-exe-peverify-tool.md)の `transparent` オプションを使用して、アセンブリ内の透過的なコードが検証可能であることを確認する必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [透過的セキュリティコード、レベル1](security-transparent-code-level-1.md)
 - [セキュリティの変更](../security/security-changes.md)

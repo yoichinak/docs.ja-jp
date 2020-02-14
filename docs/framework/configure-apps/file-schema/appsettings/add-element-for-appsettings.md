@@ -1,5 +1,5 @@
 ---
-title: <appSettings> の <add> 要素
+title: <add> の <appSettings> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -7,22 +7,20 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 865c693bf8f23bf050064ac097b72aa6fa3b371e
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088744"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214804"
 ---
-# <a name="add-element-for-appsettings"></a>\<appSettings> の \<add> 要素には
+# <a name="add-element-for-appsettings"></a>\<appSettings > の > 要素を追加 \<には
 
 カスタムアプリケーション設定を追加します。
 
 [ **\<configuration>** ](../configuration-element.md)\
 &nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
+&nbsp;&nbsp;&nbsp;&nbsp; **\<追加 >**
 
 ## <a name="syntax"></a>構文
 
@@ -47,7 +45,7 @@ ms.locfileid: "74088744"
 
 ## <a name="child-elements"></a>子要素
 
-None
+なし
 
 ## <a name="example"></a>例
 
@@ -68,6 +66,6 @@ None
 </appSettings>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework の構成ファイルスキーマ](../index.md)

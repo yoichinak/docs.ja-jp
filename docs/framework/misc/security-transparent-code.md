@@ -5,14 +5,12 @@ helpviewer_keywords:
 - transparent code
 - security-transparent code
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f90b64b5e9ab5a167333a594ace7f247b1b2b7e7
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ca251ec3084d40269b107e7bd8bef708e8d49622
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975526"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215824"
 ---
 # <a name="security-transparent-code"></a>透過的セキュリティ コード
 
@@ -96,7 +94,7 @@ ms.locfileid: "73975526"
 
 透過性規則は、透過性が計算されるまで適用されません。 このとき、透過性規則に違反すると、<xref:System.InvalidOperationException> がスローされます。 透過性が計算されるタイミングは、複数の要因によって左右されるので予測できません。 できる限り遅く計算されます。 .NET Framework 4 では、アセンブリレベルの透過性の計算は、.NET Framework 2.0 の場合よりも早く行われます。 保証されるのは、必要になるまでに透過性の計算が行われるということだけです。 これは、メソッドがコンパイルされてメソッドのエラーが検出される時点が JIT コンパイラで変更される方法に似ています。 透過性の計算は、コードに透過性エラーがない場合は目に見えません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [透過的セキュリティコード、レベル1](security-transparent-code-level-1.md)
 - [透過的セキュリティコード、レベル2](security-transparent-code-level-2.md)

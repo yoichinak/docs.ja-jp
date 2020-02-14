@@ -8,14 +8,12 @@ helpviewer_keywords:
 - section Element
 - <section> Element
 ms.assetid: ec7d4110-2403-47ac-8218-499bfe9d5ddb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8c1675540df6844f98572c11cfb140bff23b31a8
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 8785523d664294e3ca3792fb0f84d739d1f1a376
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089016"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215726"
 ---
 # <a name="section-element"></a>\<section > 要素
 
@@ -39,7 +37,7 @@ ms.locfileid: "74089016"
          allowLocation="true|false" />
 ```
 
-## <a name="required-attributes"></a>必要な属性
+## <a name="required-attributes"></a>必須属性
 
 |           | 説明 |
 | --------- | ----------- |
@@ -52,8 +50,8 @@ ms.locfileid: "74089016"
 
 |                     | 説明 |
 | ------------------- | ----------- |
-| **allowDefinition** | セクションを使用できる構成ファイルを指定します。 次のいずれかの値を使用します。<br><br>**全体**<br>すべての構成ファイルでセクションを使用できるようにします。 既定値です。<br>**MachineOnly**<br>セクション*をコンピューターの構成ファイル (machine.config*) でのみ使用できるようにします。<br>**MachineToApplication**<br>コンピューターの構成ファイルまたはアプリケーション構成ファイルでセクションを使用できるようにします。 |
-| **allowLocation**   | セクションを **\<location >** 要素内で使用できるかどうかを判断します。 次のいずれかの値を使用します。<br><br>**true**<br>セクションを **\<location >** 要素内で使用できるようにします。 既定値です。<br>**false**<br>では、 **\<location >** 要素内でセクションを使用することはできません。 |
+| **allowDefinition** | セクションを使用できる構成ファイルを指定します。 次のいずれかの値を使用します。<br><br>**全体**<br>すべての構成ファイルでセクションを使用できるようにします。 これは既定値です。<br>**MachineOnly**<br>セクション*をコンピューターの構成ファイル (machine.config*) でのみ使用できるようにします。<br>**MachineToApplication**<br>コンピューターの構成ファイルまたはアプリケーション構成ファイルでセクションを使用できるようにします。 |
+| **allowLocation**   | セクションを **\<location >** 要素内で使用できるかどうかを判断します。 次のいずれかの値を使用します。<br><br>**true**<br>セクションを **\<location >** 要素内で使用できるようにします。 これは既定値です。<br>**false**<br>では、 **\<location >** 要素内でセクションを使用することはできません。 |
 
 ## <a name="parent-elements"></a>親要素
 
@@ -67,9 +65,9 @@ ms.locfileid: "74089016"
 
 ## <a name="child-elements"></a>子要素
 
-None
+なし
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 構成セクションを宣言すると、基本的に構成ファイルの新しい要素が定義されます。 新しい要素には、構成セクションハンドラー (つまり、<xref:System.Configuration.IConfigurationSectionHandler> インターフェイスを実装するクラス) が読み取る設定が含まれています。 定義するセクションの属性と子要素は、設定の読み取りに使用するセクションハンドラーによって異なります。
 
@@ -92,10 +90,10 @@ None
 </configuration>
 ```
 
-## <a name="configuration-file"></a>構成ファイル
+## <a name="configuration-file"></a>［構成ファイル］
 
 この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework の構成ファイルスキーマ](index.md)

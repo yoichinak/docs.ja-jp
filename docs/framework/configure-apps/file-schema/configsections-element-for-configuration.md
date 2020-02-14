@@ -7,14 +7,12 @@ helpviewer_keywords:
 - configSections Element
 - <configSections> Element
 ms.assetid: 9f963c1b-dc3f-4220-a8b6-2dd7a5a8e039
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 6024144b6f12df22369366f04c3cbad02c5011d5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b71eb81769db1188f97b1646a608df172ff56c5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119016"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214818"
 ---
 # <a name="configsections-element-for-configuration"></a>\<> 構成の \<configSections > 要素
 
@@ -62,7 +60,7 @@ ms.locfileid: "73119016"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>構成ファイル
+## <a name="configuration-file"></a>［構成ファイル］
 
 この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 

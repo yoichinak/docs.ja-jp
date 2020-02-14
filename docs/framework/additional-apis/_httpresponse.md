@@ -1,5 +1,5 @@
 ---
-title: HttpWebRequest. _HttpResponse フィールド
+title: _HttpResponse HttpWebRequest フィールド
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,14 +10,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d993021ccb87ccafb5f6f2fc4c6c7c288288adae
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 236298921ecd286ddba4e74dbce1b63e96055412
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120075"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215101"
 ---
 # <a name="httpwebrequest_httpresponse-field"></a>HttpWebRequest.\_Httpresponse.cache フィールド
 
@@ -34,7 +32,7 @@ internal HttpWebResponse _HttpResponse
 > 
 > Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **名前空間:** <xref:System.Net>
 

@@ -10,14 +10,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1991dae4d03f617857b860f920077531f7937bf1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f2759f82f335415edf7bab33edbd446eec6ffbb5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120055"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215518"
 ---
 # <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint. m\_ConnectionGroupList フィールド
 
@@ -34,7 +32,7 @@ private Hashtable m_ConnectionGroupList
 > 
 > Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **名前空間:** <xref:System.Net>
 

@@ -1,5 +1,5 @@
 ---
-title: <configSections> の <sectionGroup> 要素
+title: <sectionGroup> の <configSections> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/configSections/sectionGroup
@@ -7,14 +7,12 @@ helpviewer_keywords:
 - sectionGroup Element
 - <sectionGroup> Element
 ms.assetid: 6c27f9e2-809c-4bc9-aca9-72f90360e7a3
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 746a997e162b0fd370a249b8d039be623b57d77f
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: eb221027470fe6e485f8fcc4b939b71e4f219712
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089015"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215257"
 ---
 # <a name="sectiongroup-element-for-configsections"></a>\<configSections の \<sectionGroup > 要素 >
 
@@ -50,7 +48,7 @@ ms.locfileid: "74089015"
 | --- | ----------- |
 | [ **\<セクション >** ](section-element.md) | 構成セクションの宣言が含まれています。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 セクショングループを宣言すると、構成セクションのコンテナータグが作成され、他のユーザーが定義した構成セクションと名前の競合が発生しなくなります。 **\<sectionGroup >** 要素を入れ子にすることができます。
 
@@ -74,10 +72,10 @@ ms.locfileid: "74089015"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>構成ファイル
+## <a name="configuration-file"></a>［構成ファイル］
 
 この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework の構成ファイルスキーマ](index.md)

@@ -10,14 +10,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5a9041ab75836b4239d492987e94c9104133e9bf
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 9620eb25837a5cf6dd592f4222e0fa5a13751278
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120036"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214929"
 ---
 # <a name="connectiongroup-class"></a>ConnectionGroup クラス
 
@@ -34,7 +32,7 @@ internal class ConnectionGroup
 > 
 > Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>要件
 
 **名前空間:** <xref:System.Net>
 

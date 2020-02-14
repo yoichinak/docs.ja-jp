@@ -7,14 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Code contracts
 ms.assetid: 84526045-496f-489d-8517-a258cf76f040
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 103d668dd7a7436fd1acdccdc0afc2431ed8372a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: b60f992cf9d934ed622c89a49c491a80377fb6fe
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73975010"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216714"
 ---
 # <a name="code-contracts"></a>コード コントラクト
 
@@ -38,7 +36,7 @@ ms.locfileid: "73975010"
 
 コードコントラクトを使用するためのツールと詳細な手順については、Visual Studio marketplace サイトの[コードコントラクト](https://marketplace.visualstudio.com/items?itemName=RiSEResearchinSoftwareEngineering.CodeContractsforNET)に関するページを参照してください。
 
-## <a name="preconditions"></a>前提条件
+## <a name="preconditions"></a>Preconditions
 
 事前条件を指定するには、<xref:System.Diagnostics.Contracts.Contract.Requires%2A?displayProperty=nameWithType> メソッドを使用します。 事前条件では、メソッドが呼び出される状態を指定します。 通常は、有効なパラメーター値を指定するために使用されます。 事前条件で参照されるすべてのメンバーは、アクセス レベルが少なくともメソッド自体と同じである必要があります。そうでない場合、メソッドのすべての呼び出し元がその事前条件を理解できない場合があります。 また、条件に副作用がないようにする必要もあります。 事前条件が満たされなかった場合の実行時の動作は、ランタイム アナライザーによって決定されます。
 
@@ -93,9 +91,9 @@ Contract.Ensures(this.F > 0);
 Contract.EnsuresOnThrow<T>(this.F > 0);
 ```
 
-引数は、`T` のサブタイプである例外がスローされた場合に `true` になる必要がある条件です。
+引数は、`true` のサブタイプである例外がスローされた場合に `T` になる必要がある条件です。
 
-例外型の中には、例外の事後条件で使用するのが困難なものもあります。 たとえば、`T` に対して <xref:System.Exception> 型を使用する場合は、指定する条件が、スローされる例外の型に関係なく (スタック オーバーフローなどの制御不可能な例外の場合でも) メソッドによって保証される必要があります。 例外の事後条件は、メンバーが呼び出されたときにスローされる可能性がある特定の例外に対してのみ使用するようにしてください (<xref:System.TimeZoneInfo> メソッドの呼び出しに対して <xref:System.InvalidTimeZoneException> がスローされる場合など)。
+例外型の中には、例外の事後条件で使用するのが困難なものもあります。 たとえば、<xref:System.Exception> に対して `T` 型を使用する場合は、指定する条件が、スローされる例外の型に関係なく (スタック オーバーフローなどの制御不可能な例外の場合でも) メソッドによって保証される必要があります。 例外の事後条件は、メンバーが呼び出されたときにスローされる可能性がある特定の例外に対してのみ使用するようにしてください (<xref:System.InvalidTimeZoneException> メソッドの呼び出しに対して <xref:System.TimeZoneInfo> がスローされる場合など)。
 
 ### <a name="special-postconditions"></a>特殊な事後条件
 
@@ -169,7 +167,7 @@ protected void ObjectInvariant ()
 
 <a name="usage_guidelines"></a>
 
-## <a name="usage-guidelines"></a>使用方法のガイドライン
+## <a name="usage-guidelines"></a>使用上のガイドライン
 
 ### <a name="contract-ordering"></a>コントラクトの順序
 
