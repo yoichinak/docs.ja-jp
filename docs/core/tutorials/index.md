@@ -4,12 +4,12 @@ description: Mac、Linux、および Windows でアプリとライブラリを�
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 4e0acc357453d3bd3fb877e357264cc1aa715e4c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e9fc5544904fc5a1304dcce135e01b1895d3446b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920426"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215185"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>これらのチュートリアルを詳しく確認して .NET Core と .NET Core SDK ツールについて学習する
 
@@ -47,6 +47,6 @@ ms.locfileid: "76920426"
 - [MSTest と .NET Core による単体テスト](../testing/unit-testing-with-mstest.md)
 - [クロス プラットフォーム ツールによるライブラリの開発](libraries.md)
 - [ネイティブ コードからの .NET Core のホスト](netcore-hosting.md)
-- [dotnet new のカスタム テンプレートを作成する](cli-templates-create-item-template.md)
+- [CLI のテンプレートを作成する](cli-templates-create-item-template.md)
 
 ASP.NET Core Web アプリケーションの開発に関するチュートリアルについては、[ASP.NET Core のドキュメント](/aspnet/core/)を参照してください。

@@ -49,8 +49,9 @@
     - name: ローカライズされた IntelliSense をインストールする
       href: install/localized-intellisense.md
 - name: 作業開始
-  href: get-started.md
   items:
+    - name: 作業開始
+      href: get-started.md
     - name: 'C# および Visual Studio Code の使用を開始する'
       href: tutorials/with-visual-studio-code.md
     - name: macOS 上の .NET Core での Visual Studio Code の使用に関する概要
@@ -83,16 +84,9 @@
   displayName: app compatibility
   href: compatibility/
 - name: チュートリアル
-  href: tutorials/index.md
   items:
-    - name: CLI のテンプレート
-      items:
-        - name: 1 - 項目テンプレートを作成する
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 - プロジェクト テンプレートを作成する
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 - テンプレート パックを作成する
-          href: tutorials/cli-templates-create-template-pack.md
+    - name: 概要
+      href: tutorials/index.md
     - name: Visual Studio for Mac を使用した .NET Core の概要
       href: tutorials/using-on-mac-vs.md
     - name: macOS での完全な .NET Core ソリューションの構築
@@ -109,6 +103,14 @@
       href: tutorials/aspnet-core.md
     - name: ネイティブ コードからの .NET Core のホスト
       href: tutorials/netcore-hosting.md
+    - name: CLI のテンプレートを作成する
+      items:
+        - name: 1 - 項目テンプレートを作成する
+          href: tutorials/cli-templates-create-item-template.md
+        - name: 2 - プロジェクト テンプレートを作成する
+          href: tutorials/cli-templates-create-project-template.md
+        - name: 3 - テンプレート パックを作成する
+          href: tutorials/cli-templates-create-template-pack.md
 - name: ランタイム構成
   items:
     - name: 設定
@@ -131,13 +133,6 @@
       href: native-interop/expose-components-to-com.md
 - name: パッケージ、メタパッケージ、フレームワーク
   href: packages.md
-- name: CLI の変更概要
-  href: tools/cli-msbuild-architecture.md
-  items:
-    - name: 依存関係管理
-      href: tools/dependencies.md
-    - name: csproj 形式に追加されたもの
-      href: tools/csproj.md
 - name: 移行
   items:
     - name: .NET Core 2.0 から 2.1 へ
@@ -146,11 +141,16 @@
       href: migration/index.md
     - name: project.json と csproj 間のマッピング
       href: tools/project-json-to-csproj.md
+    - name: CLI の変更概要
+      href: tools/cli-msbuild-architecture.md
+    - name: csproj 形式に追加されたもの
+      href: tools/csproj.md
     - name: DNX からの移行
       href: migration/from-dnx.md
 - name: アプリケーションの展開
-  href: deploying/index.md
   items:
+    - name: 概要
+      href: deploying/index.md
     - name: CLI を使用してアプリを発行する
       href: deploying/deploy-with-cli.md
     - name: Visual Studio を使用したアプリの展開
@@ -192,6 +192,8 @@
 - name: 単体テスト
   href: testing/index.md
   items:
+    - name: 概要
+      href: testing/index.md
     - name: 単体テストのベスト プラクティス
       href: testing/unit-testing-best-practices.md
     - name: 'xUnit を使用した C# の単体テスト'
@@ -221,8 +223,9 @@
 - name: 継続的インテグレーション
   href: tools/using-ci-with-cli.md
 - name: バージョン管理
-  href: versions/index.md
   items:
+    - name: 概要
+      href: versions/index.md
     - name: .NET Core のバージョンの選択
       href: versions/selection.md
     - name: 期限切れのランタイムと SDK の削除
@@ -330,8 +333,9 @@
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
 - name: .NET Core の追加ツール
-  href: additional-tools/index.md
   items:
+    - name: 概要
+      href: additional-tools/index.md
     - name: .NET Core アンインストール ツール
       href: additional-tools/uninstall-tool.md
     - name: WCF Web サービス リファレンス プロバイダー
@@ -364,13 +368,15 @@
       href: porting/wpf.md
     - name: C++/CLI プロジェクトを移植する
       href: porting/cpp-cli.md
-- name: 依存関係の読み込み
+- name: 依存関係の管理と読み込み
   items:
-    - name: 概要
+    - name: 依存関係管理
+      href: tools/dependencies.md
+    - name: 依存関係の読み込み
       href: dependency-loading/overview.md
     - name: AssemblyLoadContext について
       href: dependency-loading/understanding-assemblyloadcontext.md
-    - name: 読み込みの詳細
+    - name: 依存関係の読み込みの詳細
       items:
         - name: 既定の依存関係プローブ
           href: dependency-loading/default-probing.md
@@ -387,6 +393,4 @@
         - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
           href: ../standard/assembly/unloadability-howto.md
 - name: .NET Core の配布パッケージ
-  items:
-    - name: 概要
-      href: distribution-packaging.md
+  href: distribution-packaging.md
