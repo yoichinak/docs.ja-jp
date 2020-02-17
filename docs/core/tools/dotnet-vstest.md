@@ -1,20 +1,19 @@
 ---
 title: dotnet vstest コマンド
 description: dotnet vstest コマンドは、プロジェクトとそのすべての依存関係をビルドします。
-author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: ffe3807be2c35fb4d6b46b83ed84200433f551d8
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: c3838617ed539cf56f2840b826e9de58833820fd
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117520"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215314"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet-vstest` - 指定されたファイルからテストを実行します。
 
