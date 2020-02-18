@@ -2,16 +2,15 @@
 title: .NET の使用を開始する
 description: 言語とプラットフォームの観点から、.NET の使用開始に関するさまざまな記事の一覧を示します。
 author: cartermp
-ms.author: mairaw
 ms.date: 01/21/2020
 ms.technology: dotnet-standard
 ms.assetid: 81c07080-acdf-4aef-a66d-0ab52fab2c04
-ms.openlocfilehash: 98134478e8fef37e5cc6193a656d9baa3a41a482
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: af0ce454a986f22dfb00888cab6e34901930c5a9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733658"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124261"
 ---
 # <a name="get-started"></a>作業開始
 
