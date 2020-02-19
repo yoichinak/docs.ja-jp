@@ -2,12 +2,12 @@
 title: project.json からの .NET Core の移行
 description: project.json を使って以前の .NET Core プロジェクトを移行する方法について説明します
 ms.date: 07/19/2017
-ms.openlocfilehash: f81d01c052c3632c48a5f961be86eab686c2074e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 8a9dc05c82fd5476a70ee36a294a287abbfb68c4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714351"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450688"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>project.json からの .NET Core プロジェクトの移行
 
@@ -65,7 +65,7 @@ Visual Studio 2017 または Visual Studio 2019 バージョン 16.2 以前で *
 .NET Core 開発にまだ DNX を使用している場合、移行プロセスは次の 2 段階で実行する必要があります。
 
 1. [既存の DNX 移行ガイダンス](from-dnx.md)を使用して DNX から project-json 対応の CLI に移行します。
-2. 前のセクションの手順に従って、*project.json* から *.csproj* に移行します。  
+2. 前のセクションの手順に従って、*project.json* から *.csproj* に移行します。
 
 > [!NOTE]
 > Preview 1 リリースの .NET Core CLI で、DNX は公式に非推奨になりました。
@@ -80,7 +80,7 @@ Visual Studio 2017 または Visual Studio 2019 バージョン 16.2 以前で *
 - プロジェクトの一番上と一番下から `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` および `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` ステートメントを削除します。 これらの import ステートメントは SDK で暗黙的に指定されているので、プロジェクトに含める必要はありません。
 - プロジェクト内に `Microsoft.NETCore.App` または `NETStandard.Library` `<PackageReference>` アイテムがある場合は、削除することをお勧めします。 これらのパッケージ参照は、[SDK で暗黙的に指定されています](https://aka.ms/sdkimplicitrefs)。
 - `Microsoft.NET.Sdk` `<PackageReference>` 要素がある場合は削除します。 SDK の参照は、`<Project>` 要素の `Sdk` 属性によって行われます。
-- [SDK で暗黙的に指定](../tools/csproj.md#default-compilation-includes-in-net-core-projects)されている [glob](https://en.wikipedia.org/wiki/Glob_(programming)) を削除します。 プロジェクトにこれらの glob を残すと、コンパイル アイテムが重複するため、ビルド時にエラーが発生します。
+- [SDK で暗黙的に指定](../project-sdk/overview.md#default-compilation-includes)されている [glob](https://en.wikipedia.org/wiki/Glob_(programming)) を削除します。 プロジェクトにこれらの glob を残すと、コンパイル アイテムが重複するため、ビルド時にエラーが発生します。
 
 これらの手順を実行すると、RTM .NET Core csproj 形式と完全に互換性のあるプロジェクトになります。
 
