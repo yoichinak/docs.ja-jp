@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 8bf6870e3eb3ef65b498f431cb2b8805eee7ec3c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140114"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124326"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのコンストラクトのグループ化
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "73140114"
 |[ゼロ幅の否定先読みアサーション](#zerowidth_negative_lookahead_assertion)|非キャプチャ|  
 |[ゼロ幅の正の後読みアサーション](#zerowidth_positive_lookbehind_assertion)|非キャプチャ|  
 |[ゼロ幅の負の後読みアサーション](#zerowidth_negative_lookbehind_assertion)|非キャプチャ|  
-|[非バックトラッキング部分式](#nonbacktracking_subexpression)|非キャプチャ|  
+|[アトミック グループ](#atomic_groups)|非キャプチャ|  
   
  グループと正規表現オブジェクト モデルの詳細については、「 [グループ化構成体および正規表現オブジェクト](#Objects)」を参照してください。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "73140114"
   
  簡単な正規表現パターンで、プログラムまたは正規表現言語構文を使用して番号付き (名前のない) グループおよび名前付きグループをどのように参照できるかを示します。 正規表現 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` からは、次のように番号と名前の付いたキャプチャ グループが作成されます。 最初のキャプチャ グループ (番号 0) は、常にパターン全体を指します。  
   
-|number|name|パターン|  
+|number|名前|パターン|  
 |------------|----------|-------------|  
 |0|0 (既定名)|`((?<One>abc)\d+)?(?<Two>xyz)(.*)`|  
 |1|1 (既定名)|`((?<One>abc)\d+)`|  
@@ -395,9 +395,9 @@ ms.locfileid: "73140114"
 |`\d{4}\b`|4 桁の 10 進数と一致し、ワード境界で照合を終了します。|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|文字列 "Saturday" または "Sunday" の後に空白が続くパターン以外が一致の前にある場合は、一致と見なされます。|  
   
-<a name="nonbacktracking_subexpression"></a>   
-## <a name="nonbacktracking-subexpressions"></a>非バックトラッキング部分式  
- 次のグループ化構成体は、非バックトラッキング部分式を表します。"最長" 部分式とも呼ばれます。  
+<a name="atomic_groups"></a>   
+## <a name="atomic-groups"></a>アトミック グループ  
+ 次のグループ化構成体は、アトミック グループを表します (他の正規表現エンジンでは、非バックトラッキング部分式、アトミック部分式、または 1 回のみの部分式として知られています)。
   
  `(?>` *subexpression* `)`  
   
@@ -409,7 +409,7 @@ ms.locfileid: "73140114"
   
  バックトラッキングが成功しないことがわかっている場合は、このオプションを使用することをお勧めします。 正規表現エンジンで不要な検索が実行されないようにすることで、パフォーマンスが向上します。  
   
- 次の例は、非バックトラッキング部分式によってパターン一致の結果がどのように変わるかを示しています。 バックトラッキング正規表現は、ワード境界で一連の文字の繰り返しの後に同じ文字がもう一度出現するパターンと一致しますが、非バックトラッキング正規表現は一致しません。  
+ 次の例は、アトミック グループによってパターン一致の結果がどのように変わるかを示しています。 バックトラッキング正規表現は、ワード境界で一連の文字の繰り返しの後に同じ文字がもう一度出現するパターンと一致しますが、非バックトラッキング正規表現は一致しません。  
   
  [!code-csharp[RegularExpressions.Language.Grouping#11](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.grouping/cs/nonbacktracking1.cs#11)]
  [!code-vb[RegularExpressions.Language.Grouping#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.grouping/vb/nonbacktracking1.vb#11)]  

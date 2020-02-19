@@ -1,7 +1,7 @@
 ---
 title: 浮動小数点数値型 - C# リファレンス
-description: Overview of the built-in C# floating-point types (組み込みの C# 浮動小数点型の概要)
-ms.date: 10/22/2019
+description: 組み込みの C# 浮動小数点型 (float、double、decimal) について説明します
+ms.date: 02/10/2020
 f1_keywords:
 - float
 - float_CSharpKeyword
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - floating-point numbers [C#], float keyword
 - double data type [C#]
 - decimal keyword [C#]
-ms.openlocfilehash: 9c8b11f9337ee9de90f2d4d96b5be162713bfcbd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093215"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215249"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮動小数点数値型 (C# リファレンス)
 
@@ -50,19 +50,21 @@ System.Double b = 12.3;
 
 `decimal` 型は、`float` と `double` の両方よりも有効桁数が多く、範囲が狭いため、財務や金融の計算に適しています。
 
-[整数](integral-numeric-types.md)型と浮動小数点型を 1 つの式の中で混在させることができます。 この場合、整数型が浮動小数点型に変換されます。 式の評価は、次の規則に従って実行されます。
+[整数](integral-numeric-types.md)型と `float` および `double` 型を 1 つの式の中で混在させることができます。 この場合、整数型は、浮動小数点型の 1 つに暗黙的に変換されます。また、必要に応じて、`float` 型は `double` に暗黙的に変換されます。 この式は、次のように評価されます。
 
-- 浮動小数点型のいずれかが `double` の場合、リレーショナル比較と等価比較で、式は `double`、または[ブール](bool.md)に評価されます。
-- 式に `double` 型がない場合、リレーショナル比較と等価比較で、式は `float`、または[ブール](bool.md)に評価されます。
+- 式に `double` 型がある場合、リレーショナル比較と等価比較で、式は `double`、または [`bool`](bool.md) に評価されます。
+- 式に `double` 型がない場合、リレーショナル比較と等価比較で、式は `float`、または `bool` に評価されます。
 
-浮動小数点式は、次の値のセットを含むことができます。
+また、整数型と `decimal` 型を 1 つの式の中で混在させることもできます。 この場合、整数型は `decimal` 型に暗黙的に変換され、リレーショナル比較と等価比較で、式は `decimal`、または `bool` に評価されます。
 
-- 正および負のゼロ
-- 正および負の無限大
-- Not-a-Number (NaN) 値
-- ゼロ以外の値の有限のセット
+`decimal` 型と `float` および `double` 型を 1 つの式の中で混在させることはできません。 この場合、算術演算、比較演算、または等値演算を実行するには、次の例に示すように、`decimal` 型との間でオペランドを明示的に変換する必要があります。
 
-これらの値について詳しくは、[IEEE](https://www.ieee.org) の Web サイトで入手できるバイナリ浮動小数点演算の IEEE 標準に関する資料をご覧ください。
+```csharp-interactive
+double a = 1.0;
+decimal b = 2.1m;
+Console.WriteLine(a + (double)b);
+Console.WriteLine((decimal)a + b);
+```
 
 浮動小数点値の書式指定には、[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md)または[カスタムの数値書式指定文字列](../../../standard/base-types/custom-numeric-format-strings.md)のいずれかを使用できます。
 

@@ -2,15 +2,14 @@
 title: .NET API アナライザー
 description: 非推奨の API およびプラットフォームの互換性の問題を検出するのに .NET API アナライザーがどのように役立つかについて説明します。
 author: oliag
-ms.author: mairaw
 ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
-ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929358"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124248"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -45,7 +44,7 @@ API アナライザーは、DE (Deprecation Error の略) で始まる API 固�
 
 **[エラー一覧]** ウィンドウには、非推奨の API ごとに一意の ID を含む警告が表示されます。次に示すのは `DE004` の例です。 
 
-!["警告の ID と説明が表示されている [エラー一覧] ウィンドウのスクリーンショット"](media/api-analyzer/warnings-id-and-descriptions.jpg "警告が含まれている [エラー一覧] ウィンドウ。")
+!["警告の ID と説明が表示されている [エラー一覧] ウィンドウのスクリーンショット"](media/api-analyzer/warnings-id-and-descriptions.jpg "警告を含むエラー一覧ウィンドウ。")
 
 ID をクリックすると、API が非推奨になった理由に関する詳細情報と、使用できる代替 API に関する提案が表示される Web ページに移動します。
 
