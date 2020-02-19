@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: ea49897ca5e9cb6b639cf7d98ff05bd287c51761
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: f15bcfd1e3c4175f8b4b97244f120d5edbdec9b8
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73453485"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453079"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>方法 : ビュー内のデータをフィルター処理する
 この例では、ビュー内のデータをフィルター処理する方法を示します。  
@@ -35,7 +35,7 @@ ms.locfileid: "73453485"
  [!code-csharp[SortFilter#Unfilter](~/samples/snippets/csharp/VS_Snippets_Wpf/SortFilter/CSharp/Page1.xaml.cs#unfilter)]
  [!code-vb[SortFilter#Unfilter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SortFilter/VisualBasic/Page1.xaml.vb#unfilter)]  
   
- ビューを作成または取得する方法の詳細については、「[データコレクションの既定のビューを取得](how-to-get-the-default-view-of-a-data-collection.md)する」を参照してください。 完全な例については、「[ビューの項目の並べ替えとフィルター処理のサンプル](https://go.microsoft.com/fwlink/?LinkID=160040)」を参照してください。  
+ ビューを作成または取得する方法の詳細については、「[データコレクションの既定のビューを取得](how-to-get-the-default-view-of-a-data-collection.md)する」を参照してください。 完全な例については、「[ビューの項目の並べ替えとフィルター処理のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Data%20Binding/SortFilter)」を参照してください。  
   
  ビューオブジェクトが <xref:System.Windows.Data.CollectionViewSource> オブジェクトから取得される場合は、<xref:System.Windows.Data.CollectionViewSource.Filter> イベントのイベントハンドラーを設定することによって、フィルター処理ロジックを適用します。 次の例では、`listingDataView` は <xref:System.Windows.Data.CollectionViewSource>のインスタンスです。  
   
@@ -47,10 +47,10 @@ ms.locfileid: "73453485"
  [!code-csharp[DataBindingLab#5](~/samples/snippets/csharp/VS_Snippets_Wpf/DataBindingLab/CSharp/MainWindow.xaml.cs#5)]
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
 - [データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)
 - [ビュー内のデータの並べ替え](how-to-sort-data-in-a-view.md)
-- [方法トピック](data-binding-how-to-topics.md)
+- [データ バインドに関する「方法」トピック](data-binding-how-to-topics.md)

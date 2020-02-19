@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 5c49d75432980d2f3af77ee040bc6eb20886b027
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 22fe5608b0a3f86baf80abb3810a512077954ac3
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861672"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449752"
 ---
 # <a name="icorprofilerinfo9getiltonativemapping3-method"></a>ICorProfilerInfo9:: GetILToNativeMapping3 メソッド
 
@@ -47,7 +47,7 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 - `map`
 
-  \[out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md)構造体の配列。それぞれがオフセットを指定します。 `GetILToNativeMapping3` メソッドから制御が戻ると、`COR_DEBUG_IL_TO_NATIVE_MAP` 構造体の一部または全部が `map` に格納されます。
+  \[out] [COR_DEBUG_IL_TO_NATIVE_MAP](../debugging/cor-debug-il-to-native-map-structure.md)構造体の配列。それぞれがオフセットを指定します。 `GetILToNativeMapping3` メソッドから制御が戻ると、`map` 構造体の一部または全部が `COR_DEBUG_IL_TO_NATIVE_MAP` に格納されます。
 
 ## <a name="remarks"></a>コメント
 
@@ -55,7 +55,7 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 ## <a name="requirements"></a>要件
 
-**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)」を参照してください。
+**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?pivots=os-windows)」を参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
@@ -63,6 +63,6 @@ HRESULT GetILToNativeMapping3( [in]  UINT_PTR pNativeCodeStartAddress,
 
 **.NET Framework のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo9 インターフェイス](icorprofilerinfo9-interface.md)

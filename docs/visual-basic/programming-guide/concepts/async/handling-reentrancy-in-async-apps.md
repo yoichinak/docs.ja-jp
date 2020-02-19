@@ -2,12 +2,12 @@
 title: 非同期アプリにおける再入の処理
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: cd8b43aa9b2373b5ce038e5007678778201f0746
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44c2cdbadd02aef6b2bbb32bde8bcb9b19f8360d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354266"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452579"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>非同期アプリでの再入の処理 (Visual Basic)
 
@@ -17,7 +17,7 @@ ms.locfileid: "74354266"
 > この例を実行するには、Visual Studio 2012 以降と .NET Framework 4.5 以降が、コンピューターにインストールされている必要があります。
 
 > [!NOTE]
-> 現在、アプリ開発で使用する最小バージョンは、トランスポート層セキュリティ (TLS) バージョン 1.2 です。 ご利用のアプリがバージョン 4.7 より前の .NET Framework を対象としている場合は、「[.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](../../../../framework/network-programming/tls.md)」の記事を参照してください。 
+> 現在、アプリ開発で使用する最小バージョンは、トランスポート層セキュリティ (TLS) バージョン 1.2 です。 アプリが4.7 より前のバージョンの .NET Framework を対象としている場合は、 [.NET Framework を使用したトランスポート層セキュリティ (TLS) のベストプラクティス](../../../../framework/network-programming/tls.md)に関する記事を参照してください。
 
 ## <a name="BKMK_RecognizingReentrancy"></a>再入を認識する
 
@@ -558,7 +558,7 @@ End Function
 
 2. メニュー バーで、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
-     **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
+     **[新しいプロジェクト]** ダイアログ ボックスが開きます。
 
 3. **[インストールされたテンプレート]** ペインで、 **[Visual Basic]** を展開し、 **[Windows]** を展開します。
 

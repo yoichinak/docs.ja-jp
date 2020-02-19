@@ -2,12 +2,12 @@
 title: Entity Framework の概要
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: b68db4f139330ccc1da5057498a37a08d00ba266
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: ff0c85da89c44834620831c041df3ccdcaf8282f
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738498"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452527"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework の概要
 
@@ -20,9 +20,9 @@ Entity Framework を使用すると、開発者は、顧客や顧客の住所な
 
  物理モデルは、パフォーマンスを向上させるためにデータベース管理者が調整しますが、アプリケーション コードを記述するプログラマは、主に SQL クエリを記述したりストアド プロシージャを呼び出したりすることによって論理モデルを扱うことに専念します。 ドメイン モデルは通常、アプリケーションの要件を収集して伝達するためのツールとして使用されます。プロジェクトの初期段階でのみ表示および検討され、その後ほとんど使用されないのが一般的です。 概念モデルの作成を省略し、実際にリレーショナル データベースのテーブル、列、およびキーを指定することから開始する開発チームも多く存在します。
 
- Entity Framework は、開発者がドメインモデル内のエンティティとリレーションシップ (Entity Framework の*概念*モデルと呼ばれます) のクエリを実行しながら、Entity Framework に依存してそれらの操作をデータソースに変換できるようにすることで、モデルの有効期間を提供します。-固有のコマンド。 これにより、特定のデータ ソースへの依存関係をアプリケーションにハードコーディングしなくても済みます。
+ Entity Framework では、開発者がドメインモデル内のエンティティとリレーションシップ (Entity Framework の*概念*モデルと呼ばれます) のクエリを実行しながら、Entity Framework に依存してそれらの操作をデータソース固有のコマンドに変換することにより、モデルを有効活用できます。 これにより、特定のデータ ソースへの依存関係をアプリケーションにハードコーディングしなくても済みます。
 
- Code First を使用すると、概念モデルはコードのストレージ モデルにマッピングされます。 Entity Framework は、オブジェクトの種類と定義した追加の構成に基づいて概念モデルを推論できます。 マッピング メタデータは、ドメインの種類を定義した方法とコードで指定する追加の構成情報の組み合わせに基づいて実行時に生成されます。 Entity Framework は、メタデータに基づいて必要に応じてデータベースを生成します。 詳細については、「[概念モデルの作成とマッピング](https://go.microsoft.com/fwlink/?LinkID=235382)」を参照してください。
+ Code First を使用すると、概念モデルはコードのストレージ モデルにマッピングされます。 Entity Framework は、オブジェクトの種類と定義した追加の構成に基づいて概念モデルを推論できます。 マッピング メタデータは、ドメインの種類を定義した方法とコードで指定する追加の構成情報の組み合わせに基づいて実行時に生成されます。 Entity Framework は、メタデータに基づいて必要に応じてデータベースを生成します。 詳細については、「[モデルの作成](/ef/ef6/modeling/)」を参照してください。
 
  Entity Data Model ツールでの作業時には、概念モデル、ストレージ モデル、およびこの 2 者間のマッピングは、XML ベースのスキーマで表され、名前の拡張子が同じファイルで定義されます。
 
@@ -47,7 +47,7 @@ Entity Framework は単なるオブジェクト リレーショナル マッピ�
 
 - LINQ to Entities。 概念モデルで定義されているエンティティ型に対してクエリを実行するための統合言語クエリ (LINQ) のサポートを提供します。 詳細については、「 [LINQ to Entities](./language-reference/linq-to-entities.md)」を参照してください。
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]. 概念モデルのエンティティを直接操作し、Entity Data Model の概念をサポートする、ストレージに依存しない SQL の言語。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、EntityClient プロバイダーを使用して実行されるオブジェクトクエリとクエリの両方で使用されます。 詳細については、「 [Entity SQL の概要](./language-reference/entity-sql-overview.md)」を参照してください。
+- [https://login.microsoftonline.com/consumers/]([!INCLUDE[esql](../../../../../includes/esql-md.md)]) 概念モデルのエンティティを直接操作し、Entity Data Model の概念をサポートする、ストレージに依存しない SQL の言語。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、EntityClient プロバイダーを使用して実行されるオブジェクトクエリとクエリの両方で使用されます。 詳細については、「 [Entity SQL の概要](./language-reference/entity-sql-overview.md)」を参照してください。
 
 Entity Framework には、EntityClient データプロバイダーが含まれています。 このプロバイダーは接続を管理し、エンティティクエリをデータソース固有のクエリに変換し、エンティティデータをオブジェクトに具体化するために Entity Framework が使用するデータリーダーを返します。 オブジェクトの具体化が不要であれば、アプリケーションで [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリを実行して返された読み取り専用のデータ リーダーを使用できるようにすることで、EntityClient プロバイダーを標準の ADO.NET データ プロバイダーと同様に使用することもできます。 詳細については、「 [Entity Framework 用の EntityClient プロバイダー](entityclient-provider-for-the-entity-framework.md)」を参照してください。
 
@@ -77,6 +77,6 @@ Entity Framework の詳細については、以下を参照してください。
 
 [Entity Framework リソース](resources.md)-概念説明のトピックへのリンク、および Entity Framework アプリケーションを構築するための外部のトピックとリソースへのリンクを示します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ADO.NET Entity Framework](index.md)

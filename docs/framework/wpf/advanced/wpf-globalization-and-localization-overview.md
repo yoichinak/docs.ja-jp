@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 665daa14b543a357b17747a7d9d34dac2224711d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: ba49b3ec0f6edebff6278f4e90ae22baba9f1edf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124560"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452670"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 
@@ -180,8 +180,8 @@ Unicode をサポートしているお気に入りの CSV エディターを使�
 
 |リソースキー|ローカライズのカテゴリ|値|
 |-|-|-|
-|Button_1:.... $Content|ボタン|[OK]|
-|Button_2:.... $Content|ボタン|Cancel|
+|Button_1:.... $Content|ボタン|OK|
+|Button_2:.... $Content|ボタン|キャンセル|
 |Button_3:System.Windows.Controls.Button.$Content|ボタン|参照...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|コンボ ボックス||
 |TextBlock_1: system.string. $Content のようになります。|Text|プログラム、フォルダー、ドキュメント、またはインターネットリソースの名前を入力すると、Windows によってファイルが開きます。|
@@ -192,7 +192,7 @@ Unicode をサポートしているお気に入りの CSV エディターを使�
 
 |リソースキー|ローカライズのカテゴリ|値|
 |-|-|-|
-|Button_1:.... $Content|ボタン|[OK]|
+|Button_1:.... $Content|ボタン|OK|
 |Button_2:.... $Content|ボタン|Abbrechen|
 |Button_3:System.Windows.Controls.Button.$Content|ボタン|Durchsuchen...|
 |ComboBox_1:System.Windows.Controls.ComboBox.$Content|コンボ ボックス||
@@ -215,11 +215,11 @@ Unicode をサポートしているお気に入りの CSV エディターを使�
 |コード|元の英語の BAML|ローカライズされた BAML|
 |カルチャに依存しないリソース|英語のその他のリソース|ドイツ語にローカライズされたその他のリソース|
 
-.NET framework は、アプリケーションの `Thread.CurrentThread.CurrentUICulture`に基づいて、読み込むサテライトリソースアセンブリを自動的に選択します。 これは、既定では、Windows OS のカルチャになります。 そのため、ドイツ語版の Windows を使用している場合は、de-DE\MyDialog.resources.dll が読み込まれます。英語版の Windows を使用している場合は、en-US\MyDialog.resources.dll が読み込まれます。 プロジェクトの AssemblyInfo で NeutralResourcesLanguage を指定することにより、アプリケーションの最終的なフォールバックリソースを設定できます。\* たとえば、次のように指定します。
+.NET は、アプリケーションの <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType>に基づいて、読み込むサテライトリソースアセンブリを自動的に選択します。 これは、既定では、Windows OS のカルチャになります。 ドイツ語版の Windows を使用している場合は、 *de-DE\MyDialog.resources.dll*ファイルが読み込まれます。 英語版の Windows を使用している場合は、 *en-US\MyDialog.resources.dll*ファイルが読み込まれます。 プロジェクトの*AssemblyInfo*ファイルで `NeutralResourcesLanguage` 属性を指定することによって、アプリケーションの最終的なフォールバックリソースを設定できます。 たとえば、次のように指定します。
 
 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.Satellite)]`
 
-de-DE\MyDialog.resources.dll または de\MyDialog.resources.dll が両方とも使用できない場合、en-US\MyDialog.resources.dll はドイツ語のウィンドウで使用されます。
+その後、 *en-US\MyDialog.resources.dll*ファイルは、 *De-DE\MyDialog.resources.dll*または*DE\MyDialog.resources.dll*のいずれのファイルも使用できない場合に、ドイツ語のウィンドウと共に使用されます。
 
 ### <a name="microsoft-saudi-arabia-homepage"></a>Microsoft サウジアラビアホームページ
 
@@ -267,7 +267,7 @@ Microsoft サウジアラビア web サイトのこのモックアップでは�
 
 このコメントは TextBlock_1 のコンテンツに関連付けられ、LocBaml ツール (「[アプリケーションのローカライズ](how-to-localize-an-application.md)」を参照) の場合は、出力 .csv ファイルの TextBlock_1 行の6番目の列に表示されます。
 
-|リソースキー|カテゴリ|できる|修正|解説|値|
+|リソースキー|カテゴリ|できる|修正|コメント|値|
 |-|-|-|-|-|-|
 |TextBlock_1: system.string. $Content のようになります。|Text|TRUE|TRUE|この文字は、装飾規則として使用されます。|&#124;|
 
@@ -285,7 +285,7 @@ Microsoft サウジアラビア web サイトのこのモックアップでは�
 
 [!code-xaml[LocalizationComAtt#LocalizationAttributesOverridden](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationComAtt/CSharp/Attributes.xaml#localizationattributesoverridden)]
 
-によって提供さ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 既定のローカリゼーション属性は、コードを使用してオーバーライドすることもできます。これにより、カスタムコントロールに適切な既定値を正しく設定できます。 次に例を示します。
+によって提供さ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 既定のローカリゼーション属性は、コードを使用してオーバーライドすることもできます。これにより、カスタムコントロールに適切な既定値を正しく設定できます。 例 :
 
 ```csharp
 [Localizability(Readability = Readability.Readable, Modifiability=Modifiability.Unmodifiable, LocalizationCategory.None)]

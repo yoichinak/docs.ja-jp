@@ -7,12 +7,12 @@ helpviewer_keywords:
 - appSettings Element
 - <appSettings> Element
 ms.assetid: 39694cc4-6b84-45a6-9329-385a0d8b48fe
-ms.openlocfilehash: 47d7648aae08544890a4dd2e42cedbf68a8acc72
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: e1f285aae10a89fa49846534d5b47e15920294ea
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77214733"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452280"
 ---
 # <a name="appsettings-element-for-configuration"></a>\<構成の appSettings > 要素を \<>
 
@@ -33,7 +33,7 @@ ms.locfileid: "77214733"
 
 |           | 説明 |
 | --------- | ----------- |
-| **file**  | 省略可能な属性です。<br><br>カスタムアプリケーション構成設定を含む外部ファイルへの相対パスを指定します。 指定されたファイルには、> の追加 **\<、> の削除**、 **\<のクリア >** 要素の **\<** で指定されているものと同じ種類の設定が含まれており、それらの要素と同じキー/値ペアの形式を使用します。<br><br>指定されたパスは、メイン構成ファイルに対する相対パスです。 Windows フォームアプリケーションの場合、これはアプリケーション構成ファイルの場所ではなく、バイナリフォルダー ( */bin/debug*など) です。 Web フォームアプリケーションの場合、パスは、web.config ファイルが配置さ*れている*アプリケーションルートに対する相対パスです。<br><br>指定されたファイルが見つからない場合、ランタイムは属性を無視することに注意してください。 |
+| **file**  | 省略可能な属性です。<br><br>カスタムアプリケーション構成設定を含む外部ファイルへの相対パスを指定します。 指定されたファイルには、> の追加 **\<、> の削除**、 **\<のクリア >** 要素の **\<** で指定されているものと同じ種類の設定が含まれており、それらの要素と同じキー/値ペアの形式を使用します。<br><br>指定されたパスは、メイン構成ファイルに対する相対パスです。 Windows フォームアプリケーションの場合、これはアプリケーション構成ファイルの場所ではなく、バイナリフォルダー ( */bin/debug*など) です。 Web フォームアプリケーションの場合、パスは、web.config ファイルが配置さ*れている*アプリケーションルートに対する相対パスです。<br><br>指定されたファイルが見つからない場合、ランタイムは属性を無視します。 |
 
 ## <a name="parent-element"></a>親要素
 

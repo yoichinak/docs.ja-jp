@@ -3,12 +3,12 @@ title: ICorProfilerInfo10 インターフェイス
 ms.date: 08/06/2019
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: e90a1ffbc037636e4296bbd4f4c3c5082885e9f3
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 30179c7c198a343baa3fa01ae64f6d580a3f9e7e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863245"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452202"
 ---
 # <a name="icorprofilerinfo10-interface"></a>ICorProfilerInfo10 インターフェイス
 
@@ -16,7 +16,7 @@ ms.locfileid: "76863245"
 
 ## <a name="methods"></a>メソッド  
 
-| メソッド|説明|  
+| 方法|説明|  
 | ------------|-----------------|  
 |[EnumerateObjectReferences メソッド](icorprofilerinfo10-enumerateobjectreferences-method.md)|ObjectID、callback、および clientData を指定すると、各オブジェクト参照 (存在する場合) が列挙されます。 |
 |[IsFrozenObject メソッド](icorprofilerinfo10-isfrozenobject-method.md)|ObjectID が指定された場合、オブジェクトが読み取り専用セグメント内にあるかどうかを判断します。 |
@@ -26,10 +26,10 @@ ms.locfileid: "76863245"
 |[ResumeRuntime メソッド](icorprofilerinfo10-resumeruntime-method.md)| GC を実行せずにランタイムを再開します。 |
 
 ## <a name="requirements"></a>要件  
-**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)」を参照してください。  
+**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?pivots=os-windows)」を参照してください。  
 **ヘッダー** : CorProf.idl、CorProf.h  
 **.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)] 
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [プロファイリングのインターフェイス](profiling-interfaces.md)

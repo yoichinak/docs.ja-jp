@@ -2,12 +2,12 @@
 title: LINQ to XML による WPF のデータ バインディング
 ms.date: 10/22/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3c5567c81d2097a1524f5bbbf9010836ca8c0646
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 65e1524a88f1920c037b2747b0bbe30386951635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733823"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452735"
 ---
 # <a name="overview-of-wpf-data-binding-with-linq-to-xml"></a>LINQ to XML による WPF のデータバインディングの概要
 
@@ -29,7 +29,7 @@ XAML と LINQ to XML の相互作用には、大きく分けて次の 2 つの�
 
 WPF のデータ バインドでは、UI 要素のプロパティをデータ ソースに関連付けることができます。 たとえば、ユーザー定義オブジェクトのパブリック プロパティの値をテキストとして表示する <xref:System.Windows.Controls.Label> はその簡単な例です。 WPF のデータ バインドは次のコンポーネントに依存しています。
 
-|コンポーネント|[説明]|
+|コンポーネント|説明|
 |---------------|-----------------|
 |バインド ターゲット|データ ソースに関連付ける UI 要素。 WPF のビジュアル要素は <xref:System.Windows.UIElement> クラスから派生します。|
 |対象になるプロパティ|バインド ターゲットの*依存プロパティ*。データ バインディング ソースの値が反映されます。 依存プロパティは、<xref:System.Windows.DependencyObject> の派生元である <xref:System.Windows.UIElement> クラスによって直接サポートされます。|
@@ -91,4 +91,4 @@ WPF の動的バインドを実装するには、動的プロパティを <xref:
 - [LINQ to XML の動的プロパティ](linq-to-xml-dynamic-properties.md)
 - [WPF の XAML](../advanced/xaml-in-wpf.md)
 - [データ バインド (WPF)](/dotnet/framework/wpf/data/data-binding-wpf)
-- [ワークフロー マークアップの使用](https://go.microsoft.com/fwlink/?LinkId=98685)
+- [ワークフロー マークアップの使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms735921(v=vs.90))

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], what's new
 - Windows Communication Foundation [WCF], what's new
 ms.assetid: 7e93fe73-af93-46b5-9f63-32f761ee40cf
-ms.openlocfilehash: e01b3a39a004e963e5bb66c5fa71433cb4e7204a
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: b22266efe2e775acd04c400cf9da50bffab28183
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802376"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449505"
 ---
 # <a name="whats-new-in-windows-communication-foundation-45"></a>Windows Communication Foundation 4.5 の新機能
 
@@ -36,7 +36,7 @@ WCF では、コントラクト優先の開発がサポートされるように�
 
 ### <a name="add-service-reference-from-a-portable-subset-project"></a>ポータブル サブセット プロジェクトからのサービス参照の追加
 
-ポータブル サブセット プロジェクトにより、.NET アセンブリ プログラマは 1 つのソース ツリーを保持しつつ、システムを構築できるようになります。また、ポータブル サブセット プロジェクトは、複数の .NET プラットフォーム (デスクトップ、Silverlight、Windows Phone、および XBOX) をサポートしています。 ポータブルサブセットプロジェクトは、.net プラットフォームで使用できる .net framework アセンブリである .net ポータブルライブラリのみを参照します。 開発者から見れば、他の WCF クライアント アプリケーション内でサービス参照を追加するのと同じです。 詳細については、「[ポータブルサブセットプロジェクトでのサービス参照の追加](add-service-reference-in-a-portable-subset-project.md)」を参照してください。
+ポータブルサブセットプロジェクトを使用すると、.NET アセンブリプログラマは、1つのソースツリーとビルドシステムを維持しながら、複数の .NET プラットフォーム (デスクトップ、Silverlight、Windows Phone、Xbox) をサポートできます。 ポータブルサブセットプロジェクトは、任意の .NET プラットフォームで使用できるアセンブリである .NET ポータブルライブラリのみを参照します。 開発者から見れば、他の WCF クライアント アプリケーション内でサービス参照を追加するのと同じです。 詳細については、「[ポータブルサブセットプロジェクトでのサービス参照の追加](add-service-reference-in-a-portable-subset-project.md)」を参照してください。
 
 ### <a name="aspnet-compatibility-mode-default-changed"></a>ASP.NET 互換性モードの既定値の変更
 
@@ -78,7 +78,7 @@ Websocket は、TCP と同様のパフォーマンス特性を持つポート 80
 
 次の表は、変更された設定と追加情報の場所を示しています。
 
-|property|On|新しい既定値|詳細については、「」を参照してください。|
+|プロパティ|On|新しい既定値|詳細については、「|
 |--------------|--------|-----------------|------------------------------|
 |channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|<xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|12 * プロセッサの数|<xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|

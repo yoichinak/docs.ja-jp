@@ -5,12 +5,12 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-ms.openlocfilehash: a4dbcd0a0b848e5ef57965b5b3f4fcee9161b724
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 454314bf1002a9648f669cc708c8ac42461fccaf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73116561"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452267"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 要素
 リモートソースから読み込まれたアセンブリに .NET Framework 4 以降で完全信頼を付与するかどうかを指定します。
@@ -30,7 +30,7 @@ ms.locfileid: "73116561"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性と要素
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+ 次のセクションでは、属性、子要素、親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
@@ -40,13 +40,13 @@ ms.locfileid: "73116561"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|リモートソースからアプリケーションへの完全な信頼を付与しないでください。 既定値です。|  
+|`false`|リモートソースからアプリケーションへの完全な信頼を付与しないでください。 これは既定値です。|  
 |`true`|リモートソースからアプリケーションへの完全な信頼を付与します。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし]。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -55,7 +55,7 @@ ms.locfileid: "73116561"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 .NET Framework 3.5 以前のバージョンでは、リモートの場所からアセンブリを読み込む場合、アセンブリ内のコードは、読み込み元のゾーンに依存する許可セットを使用して部分信頼で実行されます。 たとえば、web サイトからアセンブリを読み込むと、インターネットゾーンに読み込まれ、インターネットのアクセス許可セットが付与されます。 つまり、インターネットサンドボックスで実行されます。
 
@@ -89,17 +89,17 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 
 `<loadFromRemoteSources>` 要素を `true` に設定すると、この例外がスローされるのを防ぐことができます。 これにより、共通言語ランタイムに依存しないように指定して、読み込まれたアセンブリのセキュリティをサンドボックス化することができます。また、完全信頼での実行を許可することもできます。
 
-## <a name="notes"></a>ノート
+## <a name="notes"></a>説明
 
 - .NET Framework 4.5 以降のバージョンでは、ローカルネットワーク共有上のアセンブリは既定で完全信頼で実行されます。`<loadFromRemoteSources>` 要素を有効にする必要はありません。
 
 - アプリケーションが web からコピーされた場合、ローカルコンピューターに存在する場合でも、web アプリケーションとして Windows によってフラグが設定されます。 この指定は、ファイルのプロパティを変更することで変更できます。または、`<loadFromRemoteSources>` 要素を使用して、アセンブリに完全信頼を付与することもできます。 または、<xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> メソッドを使用して、オペレーティングシステムによって web から読み込まれたとしてフラグが設定されているローカルアセンブリを読み込むことができます。
 
-- Windows 仮想 PC アプリケーションで実行されているアプリケーションで <xref:System.IO.FileLoadException> を取得できます。 これは、ホストコンピューター上のリンクフォルダーからファイルを読み込もうとした場合に発生する可能性があります。 また、[リモートデスクトップサービス](https://go.microsoft.com/fwlink/?LinkId=182775)(ターミナルサービス) にリンクされているフォルダーからファイルを読み込もうとした場合にも発生することがあります。 この例外を回避するには、`enabled` を `true`に設定します。
+- Windows 仮想 PC アプリケーションで実行されているアプリケーションで <xref:System.IO.FileLoadException> を取得できます。 これは、ホストコンピューター上のリンクフォルダーからファイルを読み込もうとした場合に発生する可能性があります。 また、[リモートデスクトップサービス](/windows/win32/termserv/terminal-services-portal)(ターミナルサービス) にリンクされているフォルダーからファイルを読み込もうとした場合にも発生することがあります。 この例外を回避するには、`enabled` を `true`に設定します。
 
-## <a name="configuration-file"></a>構成ファイル
+## <a name="configuration-file"></a>［構成ファイル］
 
-この要素は通常、アプリケーション構成ファイルで使用されますが、コンテキストに応じて他の構成ファイルで使用することもできます。 詳細については、.NET セキュリティブログの「 [CAS Policy: loadFromRemoteSources の暗黙的な使用方法](https://go.microsoft.com/fwlink/p/?LinkId=266839)」を参照してください。  
+この要素は通常、アプリケーション構成ファイルで使用されますが、コンテキストに応じて他の構成ファイルで使用することもできます。 詳細については、.NET セキュリティブログの「 [CAS Policy: loadFromRemoteSources の暗黙的な使用方法](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)」を参照してください。  
 
 ## <a name="example"></a>例
 
@@ -113,9 +113,9 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 </configuration>  
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [CAS ポリシーの暗黙的な使用方法: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
+- [CAS ポリシーの暗黙的な使用方法: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
 - [方法 : サンドボックスで部分信頼コードを実行する](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
 - [ランタイム設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)

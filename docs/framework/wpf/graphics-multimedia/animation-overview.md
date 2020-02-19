@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: f0f55c948d10c61ebab57f47e3461531ccf5f610
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 00f01b63cdf9397fe25f28fff08767dfc3a83e69
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559717"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77453118"
 ---
 # <a name="animation-overview"></a>アニメーションの概要
 
@@ -184,7 +184,7 @@ ms.locfileid: "75559717"
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/MainWindow.xaml.cs#rectangleopacityfadeexamplecode_105)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_105](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/MainWindow.xaml.vb#rectangleopacityfadeexamplecode_105)]
 
-### <a name="complete-example"></a>コード例全体
+### <a name="complete-example"></a>完全なサンプル コード
 
 次に、XAML でフェードインおよびフェードアウトする四角形を作成する方法を示します。
 
@@ -229,12 +229,12 @@ ms.locfileid: "75559717"
 
 次の表は、いくつかの一般的なアニメーションの種類と、そこで使われるいくつかのプロパティを示しています。
 
-|プロパティの型|対応する基本 (From/To/By) アニメーション|対応するキー フレーム アニメーション|対応するパス アニメーション|使用例|
+|プロパティの種類|対応する基本 (From/To/By) アニメーション|対応するキー フレーム アニメーション|対応するパス アニメーション|使用例|
 |-------------------|----------------------------------------------------|---------------------------------------|----------------------------------|-------------------|
-|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|[なし]|<xref:System.Windows.Media.SolidColorBrush> または <xref:System.Windows.Media.GradientStop>の <xref:System.Windows.Media.SolidColorBrush.Color%2A> をアニメーション化します。|
+|<xref:System.Windows.Media.Color>|<xref:System.Windows.Media.Animation.ColorAnimation>|<xref:System.Windows.Media.Animation.ColorAnimationUsingKeyFrames>|なし|<xref:System.Windows.Media.SolidColorBrush> または <xref:System.Windows.Media.GradientStop>の <xref:System.Windows.Media.SolidColorBrush.Color%2A> をアニメーション化します。|
 |<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimation>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|<xref:System.Windows.Controls.DockPanel> または <xref:System.Windows.Controls.Button>の <xref:System.Windows.FrameworkElement.Height%2A> の <xref:System.Windows.FrameworkElement.Width%2A> をアニメーション化します。|
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimation>|<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|<xref:System.Windows.Media.EllipseGeometry>の <xref:System.Windows.Media.EllipseGeometry.Center%2A> 位置をアニメーション化します。|
-|<xref:System.String>|[なし]|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|[なし]|<xref:System.Windows.Controls.TextBlock> または <xref:System.Windows.Controls.Button>の <xref:System.Windows.Controls.ContentControl.Content%2A> の <xref:System.Windows.Controls.TextBlock.Text%2A> をアニメーション化します。|
+|<xref:System.String>|なし|<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>|なし|<xref:System.Windows.Controls.TextBlock> または <xref:System.Windows.Controls.Button>の <xref:System.Windows.Controls.ContentControl.Content%2A> の <xref:System.Windows.Controls.TextBlock.Text%2A> をアニメーション化します。|
 
 <a name="animationsaretimelines"></a>
 
@@ -341,7 +341,7 @@ ms.locfileid: "75559717"
 
 アニメーションがデータ バインディングまたはアニメーションの変更を反映するためには、そのクロックを再生成する必要があります。 クロックは、自動的には再生成されません。 アニメーションに変更を反映させるには、<xref:System.Windows.Media.Animation.BeginStoryboard> または <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッドを使用して、そのストーリーボードを再適用します。 これらのメソッドのいずれかを使うと、アニメーションが再起動されます。 コードでは、<xref:System.Windows.Media.Animation.Storyboard.Seek%2A> メソッドを使用して、ストーリーボードを前の位置に戻すことができます。
 
-データバインドされたアニメーションの例については、「[キースプラインアニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160011)」を参照してください。 アニメーションとタイミングシステムの動作の詳細については、「[アニメーションとタイミングシステムの概要](animation-and-timing-system-overview.md)」を参照してください。
+データバインドされたアニメーションの例については、「[キースプラインアニメーションのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/KeySplineAnimations)」を参照してください。 アニメーションとタイミングシステムの動作の詳細については、「[アニメーションとタイミングシステムの概要](animation-and-timing-system-overview.md)」を参照してください。
 
 <a name="otherWaysToAnimateSection"></a>
 
@@ -355,11 +355,11 @@ ms.locfileid: "75559717"
 
 以下のサンプルは、アプリケーションへのアニメーションの追加を開始するのに役立つ場合があります。
 
-- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/TargetValues)
 
   さまざまな From/To/By 設定を示します。
 
-- [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)
+- [アニメーションのタイミング動作のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Animation/AnimationTiming)
 
   アニメーションのタイミング動作を制御するさまざまな方法を示します。 このサンプルは、アニメーションの宛先値をデータ バインドする方法も示しています。
 
@@ -367,7 +367,7 @@ ms.locfileid: "75559717"
 
 ## <a name="related-topics"></a>関連トピック
 
-|[タイトル]|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)|タイミングシステムが <xref:System.Windows.Media.Animation.Timeline> クラスと <xref:System.Windows.Media.Animation.Clock> クラスを使用して、アニメーションを作成できるようにする方法について説明します。|
 |[アニメーションのヒントとテクニック](animation-tips-and-tricks.md)|パフォーマンスなど、アニメーションでの問題を解決するための役に立つヒントの一覧を示します。|
@@ -380,14 +380,14 @@ ms.locfileid: "75559717"
 |[ストーリーボードの概要](storyboards-overview.md)|複数のタイムラインを持つストーリーボードを使って複雑なアニメーションを作成する方法について説明します。|
 |[タイミング動作の概要](timing-behaviors-overview.md)|アニメーションで使用される <xref:System.Windows.Media.Animation.Timeline> の型とプロパティについて説明します。|
 |[タイミング イベントの概要](timing-events-overview.md)|開始、一時停止、再開、スキップ、停止など、タイムラインのポイントでコードを実行するために <xref:System.Windows.Media.Animation.Timeline> および <xref:System.Windows.Media.Animation.Clock> オブジェクトで使用できるイベントについて説明します。|
-|[方法のトピック](animation-and-timing-how-to-topics.md)|アプリケーションでアニメーションとタイムラインを使うためのコード例を示します。|
+|[データ バインドに関する「方法」トピック](animation-and-timing-how-to-topics.md)|アプリケーションでアニメーションとタイムラインを使うためのコード例を示します。|
 |[クロックに関する「方法」トピック](clocks-how-to-topics.md)|アプリケーションで <xref:System.Windows.Media.Animation.Clock> オブジェクトを使用するためのコード例が含まれています。|
 |[キー フレームに関する「方法」トピック](key-frame-animation-how-to-topics.md)|アプリケーションでキー フレーム アニメーションを使うためのコード例を示します。|
 |[パス アニメーションに関する「方法」トピック](path-animation-how-to-topics.md)|アプリケーションでパス アニメーションを使うためのコード例を示します。|
 
 <a name="reference"></a>
 
-## <a name="reference"></a>参照先
+## <a name="reference"></a>参照
 
 - <xref:System.Windows.Media.Animation.Timeline>
 

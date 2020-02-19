@@ -2,16 +2,16 @@
 title: .NET Framework アプリケーションにおける COM 相互運用性
 ms.date: 07/20/2015
 helpviewer_keywords:
-- interoperability, COM and .NET framework objects
+- interoperability, COM and .NET Framework objects
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 1c484ae948c247a97dd57539e3b0be263736aceb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c3567464616d3b0b3f91ff57e8a169aca046c866
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348745"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452293"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework アプリケーションにおける COM 相互運用性 (Visual Basic)
 

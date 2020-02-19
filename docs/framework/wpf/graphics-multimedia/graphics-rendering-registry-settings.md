@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 53f25be3bc38d88aa7723f6a0858317ee5ce6143
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.openlocfilehash: 04bf2d2ec78a02e8fd3d71200c64a807b874bc97
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559652"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452605"
 ---
 # <a name="graphics-rendering-registry-settings"></a>グラフィックス レンダリングのレジストリ設定
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションに影響を与える [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス レンダリングのレジストリ設定の概要を示します。  
@@ -24,11 +24,11 @@ ms.locfileid: "75559652"
   
 <a name="xpdmandwddm"></a>   
 ## <a name="what-are-xpdm-and-wddm"></a>XPDM と WDDM について  
- グラフィックス レンダリングのレジストリの一部の設定は、ビデオ カードが XPDM ドライバーまたは WDDM ドライバーのどちらを使用するかによって既定値が異なります。 XPDM は Microsoft Windows XP Display Driver Model で、WDDM は Windows Display Driver Model です。 WDDM は、Windows Vista および Windows 7 を実行しているコンピューターで使用できます。 XPDM は、Windows Vista、Microsoft Windows XP、および Microsoft Windows Server 2003 を実行しているコンピューターで使用できます。 WDDM について詳しくは、「[Windows Vista Display Driver Model Design Guide](https://go.microsoft.com/fwlink/?LinkId=178394)」(Windows Vista Display Driver Model 設計ガイド) をご覧ください。  
+ グラフィックス レンダリングのレジストリの一部の設定は、ビデオ カードが XPDM ドライバーまたは WDDM ドライバーのどちらを使用するかによって既定値が異なります。 XPDM は Microsoft Windows XP Display Driver Model で、WDDM は Windows Display Driver Model です。 WDDM は、Windows Vista および Windows 7 を実行しているコンピューターで使用できます。 XPDM は、Windows Vista、Microsoft Windows XP、および Microsoft Windows Server 2003 を実行しているコンピューターで使用できます。 WDDM の詳細については、「 [Windows Display Driver Model (wddm) 設計ガイド](/windows-hardware/drivers/display/windows-vista-display-driver-model-design-guide)」を参照してください。  
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>レジストリ設定  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の描画を制御するためのレジストリ設定が 4 つあります。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のレンダリングを制御するために 4 つのレジストリ設定が用意されています。  
   
 |設定|説明|  
 |-------------|-----------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "75559652"
 <a name="disablehardwareacceleration"></a>   
 ## <a name="disable-hardware-acceleration-option"></a>Disable Hardware Acceleration Option (ハードウェアの高速化オプションを無効にする)  
   
-|レジストリ キー|値の種類|  
+|レジストリ キー|値の型|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\DisableHWAcceleration`|DWORD|  
   
@@ -53,7 +53,7 @@ ms.locfileid: "75559652"
 <a name="maxmultisample"></a>   
 ## <a name="maximum-multisample-value"></a>Maximum Multisample Value (最大マルチサンプル値)  
   
-|レジストリ キー|値の種類|  
+|レジストリ キー|値の型|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\MaxMultisampleType`|DWORD|  
   
@@ -66,9 +66,9 @@ ms.locfileid: "75559652"
 <a name="requiredvideodriverdatesetting"></a>   
 ## <a name="required-video-driver-date-setting"></a>Required Video Driver Date Setting (ビデオ ドライバーの日付設定が必須)  
   
-|レジストリ キー|値の種類|  
+|レジストリ キー|値の型|  
 |------------------|----------------|  
-|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|文字列型|  
+|`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\RequiredVideoDriverDate`|String|  
   
  2004年11月に、Microsoft はドライバーテストガイドラインの新しいバージョンをリリースしました。この日付より後に記述されたドライバーでは、安定性が向上します。 既定では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、これらのドライバーに対してはハードウェアの高速化パイプラインを使用し、この日より前に公開された XPDM ドライバーについてはソフトウェア レンダリングを使用します。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "75559652"
 <a name="usereferencerasterizeroption"></a>   
 ## <a name="use-reference-rasterizer-option"></a>Use Reference Rasterizer Option (リファレンス ラスタライザー オプションを使用する)  
   
-|レジストリ キー|値の種類|  
+|レジストリ キー|値の型|  
 |------------------|----------------|  
 |`HKEY_CURRENT_USER\SOFTWARE\Microsoft\Avalon.Graphics\UseReferenceRasterizer`|DWORD|  
   
@@ -95,7 +95,7 @@ ms.locfileid: "75559652"
   
  **[use reference rasterizer option]** (リファレンス ラスタライザー オプションを使用する) は、DWORD 値を受け取ります。 値 0 は、リファレンス ラスタライザーを使用しないことを示します。 他の 0 以外の値は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] にリファレンス ラスタライザーの使用を強制します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [グラフィックスの描画層](../advanced/graphics-rendering-tiers.md)
 - [WPF グラフィックス レンダリングの概要](wpf-graphics-rendering-overview.md)

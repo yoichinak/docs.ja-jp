@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: a4c875f6aae996271dee9ac193768ef6981efc19
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8d00718579f44a164cd83e2b05d41f70f1c65785
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863037"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452150"
 ---
 # <a name="icorprofilerinfo10suspendruntime-method"></a>ICorProfilerInfo10:: SuspendRuntime メソッド
 
@@ -30,7 +30,7 @@ HRESULT SuspendRuntime();
 
 ## <a name="requirements"></a>要件
 
-**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?tabs=netcore30&pivots=os-windows)」を参照してください。
+**プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?pivots=os-windows)」を参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
@@ -38,6 +38,6 @@ HRESULT SuspendRuntime();
 
 **.Net のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-30-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ICorProfilerInfo10 インターフェイス](icorprofilerinfo10-interface.md)
