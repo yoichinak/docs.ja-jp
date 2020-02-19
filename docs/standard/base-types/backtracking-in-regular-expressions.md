@@ -17,12 +17,12 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: a11e3501aa57fc81a28d27d1280d299f99e1dea1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e7922294db1236e697df80203583b2dbb3e41a01
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711520"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124443"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正規表現におけるバックトラッキング
 バックトラッキングは、正規表現パターンに省略可能な[量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)または[代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
@@ -103,7 +103,7 @@ ms.locfileid: "75711520"
  このようにして、正規表現エンジンがすべての可能な一致の組み合わせを試行し終わるまで入力文字列と正規表現の比較が続けられます。一致しないという結論に到達するのはその後です。 この比較は、入れ子になった量指定子があるため、O(2<sup>n</sup>) (指数演算、*n* は入力文字列の文字数) です。 そのため、最悪のケースでは、30 文字の入力文字列で約 1,073,741,824 回、40 文字の入力文字列では約 1,099,511,627,776 回の比較が必要になります。 使用する文字列の長さがこのレベル以上になると、正規表現パターンに一致しない入力を処理するときに、正規表現メソッドの完了までに膨大な時間がかかる可能性があります。 
 
 ## <a name="controlling-backtracking"></a>バックトラッキングの制御  
- バックトラッキングを使用すると、強力かつ柔軟な正規表現を作成できますが、 前のセクションで見たように、受け入れられないほどのパフォーマンスの低下が伴うことがあります。 過度なバックトラッキングを回避するには、 <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化したり静的な正規表現の一致メソッドを呼び出したりするときに、タイムアウト間隔を定義する必要があります。 これについては、次のセクションで説明します。 また、.NET では、バックトラッキングを制限または抑制する 3 つの正規表現言語要素がサポートされています。これらを使用すると、パフォーマンスをほとんど低下させずに複雑な正規表現を使用できます。それらの言語要素とは、[非バックトラッキング部分式](#nonbacktracking-subexpression)、[後読みアサーション](#lookbehind-assertions)、および[先読みアサーション](#lookahead-assertions)です。 各言語要素の詳細については、[コンストラクトのグループ化](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)に関するページを参照してください。  
+ バックトラッキングを使用すると、強力かつ柔軟な正規表現を作成できますが、 前のセクションで見たように、受け入れられないほどのパフォーマンスの低下が伴うことがあります。 過度なバックトラッキングを回避するには、 <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化したり静的な正規表現の一致メソッドを呼び出したりするときに、タイムアウト間隔を定義する必要があります。 これについては、次のセクションで説明します。 また、.NET では、バックトラッキングを制限または抑制する 3 つの正規表現言語要素がサポートされています。これらを使用すると、パフォーマンスをほとんど低下させずに複雑な正規表現を使用できます。それらの言語要素とは、[アトミック グループ](#atomic-groups)、[後読みアサーション](#lookbehind-assertions)、および[先読みアサーション](#lookahead-assertions)です。 各言語要素の詳細については、[コンストラクトのグループ化](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)に関するページを参照してください。  
 
 ### <a name="defining-a-time-out-interval"></a>タイムアウト間隔の定義  
  .NET Framework 4.5 以降では、試行が中止されて <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外がスローされるまでの、正規表現エンジンが単一の一致を検索する最長間隔を表すタイムアウト値を設定できます。 タイムアウト間隔を指定するには、インスタンス正規表現の <xref:System.TimeSpan> コンストラクターに <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29?displayProperty=nameWithType> 値を指定します。 また、各静的パターン一致メソッドには、 <xref:System.TimeSpan> パラメーターを持つオーバーロードがあり、これを使用してタイムアウト値を指定できます。 既定のタイムアウト間隔は <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> に設定されており、正規表現エンジンはタイムアウトしません。  
@@ -118,8 +118,8 @@ ms.locfileid: "75711520"
  [!code-csharp[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/cs/ctor1.cs#1)]
  [!code-vb[System.Text.RegularExpressions.Regex.ctor#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.text.regularexpressions.regex.ctor/vb/ctor1.vb#1)]  
 
-### <a name="nonbacktracking-subexpression"></a>非バックトラッキング部分式  
- `(?>` *subexpression*`)` 言語要素を使用すると、部分式でバックトラッキングがなされないようにすることができます。 これは、照合の失敗に関連するパフォーマンスの問題の防止に役立ちます。  
+### <a name="atomic-groups"></a>アトミック グループ
+ `(?>` *subexpression*`)` 言語要素を使用すると、部分式でのバックトラッキングが抑制されます。 一致すると、後続のバックトラッキングに対して一致したものが破棄されなくなります。 たとえば、パターン `(?>\w*\d*)1` で `1` が一致しない場合、`1` で一致することがわかっていても `\d*` の一致は破棄されません。 アトミック グループは、照合の失敗に関連するパフォーマンスの問題の防止に役立ちます。
   
  次の例は、入れ子になった量指定子を使用している場合にバックトラッキングを抑制すると、いかにパフォーマンスが向上するかを示しています。 この例では、入力文字列が 2 つの正規表現に一致しないことが正規表現エンジンによって確認されるまでの時間を測定しています。 1 つ目の正規表現は、1 つ以上の 16 進数、コロン、1 つ以上の 16 進数、2 つのコロンというパターンを 1 つ以上含む文字列を、バックトラッキングを使用して照合します。 2 つ目の正規表現は、バックトラッキングを無効にする以外は 1 つ目と同じです。 出力を見るとわかるように、バックトラッキングを無効にするとパフォーマンスが大幅に向上します。  
   

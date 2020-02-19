@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: af812e1e42d57c349e94b5992b768636857d2a0c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348275"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124352"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細
 
@@ -106,7 +106,7 @@ ms.locfileid: "75348275"
 
 - グループ定義の均等化: `(?<`*name1*`-`*name2*`>` *subexpression*`)`。 この機能により、正規表現エンジンは、かっこや左右の角かっこなどの入れ子になった構成体を追跡できます。 例については、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。
 
-- 非バックトラッキング部分式 (別名: 最長一致部分式): `(?>`*subexpression*`)`。 この機能により、バックトラッキング エンジンは、部分式と最初に一致した文字列だけを確実に検索できるようになります。この場合、表現は、部分式を含む表現とは関係ないように処理されます。 この構成体を使用しない場合は、より大きな表現によるバックトラッキング検索時に、部分式の動作が変化する可能性があります。 たとえば、正規表現 `(a+)\w` は 1 つ以上の "a" 文字を、一連の "a" 文字に続く単語文字と共に照合し、一連の "a" 文字を最初のキャプチャ グループに代入します。ただし、入力文字列の最後の文字も "a" の場合は、`\w` 言語要素によって照合され、キャプチャ グループには含められません。
+- アトミック グループ: `(?>`*subexpression*`)`。 この機能により、バックトラッキング エンジンは、部分式と最初に一致した文字列だけを確実に検索できるようになります。この場合、表現は、部分式を含む表現とは関係ないように処理されます。 この構成体を使用しない場合は、より大きな表現によるバックトラッキング検索時に、部分式の動作が変化する可能性があります。 たとえば、正規表現 `(a+)\w` は、1 つ以上の "a" の文字と、"a" の文字のシーケンスに続く単語文字と一致し、最初のキャプチャ グループに "a" の文字のシーケンスを割り当てます。 ただし、入力文字列の最後の文字も "a" である場合は、`\w` 言語要素で照合され、キャプチャされたグループには含まれません。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking2.cs#7)]
      [!code-vb[Conceptual.RegularExpressions.Design#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking2.vb#7)]
@@ -116,7 +116,7 @@ ms.locfileid: "75348275"
      [!code-csharp[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/nonbacktracking1.cs#8)]
      [!code-vb[Conceptual.RegularExpressions.Design#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/nonbacktracking1.vb#8)]
 
-     非バックトラッキング部分式について詳しくは、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。
+     アトミック グループの詳細については、[グループ化構造体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)に関する記事を参照してください。
 
 - 右から左への一致。<xref:System.Text.RegularExpressions.Regex> クラス コンストラクターまたは静的インスタンス一致メソッドに <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> オプションを設定すると指定されます。 この機能は、左から右ではなく右から左に向かって検索する場合や、パターンの左側ではなく右側で検索を開始した方が効果的な場合に便利です。 次の例に示すように、右から左への一致を使用すると、最長一致の量指定子の動作を変更できます。 この例では、数字で終わる文に対して 2 つの検索を実行します。 最長一致の量指定子 `+` を使用する左から右への検索では、文中の 6 桁の数字の 1 つと一致しますが、右から左への検索では 6 桁の数字すべてと一致します。 正規表現パターンの説明については、このセクションで前に示した最短一致の量指定子の例を参照してください。
 
