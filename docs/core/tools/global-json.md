@@ -54,7 +54,7 @@ ms.locfileid: "76920509"
 この値を明示的に設定しない場合、Visual Studio から実行しているかどうかによって既定値が決まります。
 
 - Visual Studio を使用して**いない**場合、既定値は `true` になります。
-- Visual Studio を使用している場合は、要求されたプレリリース状態が使用されます。 つまり、Visual Studio のプレビュー バージョンを使用している場合、または ( **[ツール]**  >  **[オプション]**  >  **[環境]**  >  **[プレビュー機能]** で) **[.NET Core SDK のプレビューを使用する]** オプションを設定している場合、既定値は `true` で、それ以外の場合は、`false` です。
+- Visual Studio を使用している場合は、要求されたプレリリース状態が使用されます。 つまり、Visual Studio のプレビュー バージョンを使用している場合、または (**[ツール]** > **[オプション]** > **[環境]** > **[プレビュー機能]** で) **[.NET Core SDK のプレビューを使用する]** オプションを設定している場合、既定値は `true` で、それ以外の場合は、`false` です。
 
 #### <a name="rollforward"></a>rollForward
 
@@ -147,20 +147,20 @@ dotnet new globaljson --sdk-version 3.0.100
 > [!NOTE]
 > 照合ルールは、すべてのインストール済み .NET Core のインストール済みランタイムで共通の `dotnet.exe` エントリ ポイントによって管理されます。 .NET Core ランタイムのインストール済みの最新バージョンの照合ルールは、複数のランタイムがサイドバイサイドでインストールされている場合に使用されます。
 
-## <a name="net-core-3xtabnetcore3x"></a>[.NET Core 3.x](#tab/netcore3x)
+## <a name="net-core-3x"></a>[.NET Core 3.x](#tab/netcore3x)
 
 .NET Core 3.0 以降では、使用する SDK のバージョンを決定するときに次のルールが適用されます。
 
 - *global.json* ファイルが見つからない場合、または *global.json* で SDK のバージョンまたは `allowPrerelease` 値が指定されていない場合は、インストールされている最新バージョンの SDK が使用されます (`rollForward` を `latestMajor` に設定するのと同じ)。 プレリリース SDK のバージョンを考慮するかどうかは、`dotnet` の呼び出し方法によって決まります。
   - Visual Studio を使用して**いない**場合は、プレリリース バージョンが考慮されます。
-  - Visual Studio を使用している場合は、要求されたプレリリース状態が使用されます。 つまり、Visual Studio のプレビュー バージョンを使用している場合、または ( **[ツール]**  >  **[オプション]**  >  **[環境]**  >  **[プレビュー機能]** で) **[.NET Core SDK のプレビューを使用する]** オプションを設定している場合、プレリリース バージョンが考慮され、それ以外の場合は、リリース バージョンのみが考慮されます。
+  - Visual Studio を使用している場合は、要求されたプレリリース状態が使用されます。 つまり、Visual Studio のプレビュー バージョンを使用している場合、または (**[ツール]** > **[オプション]** > **[環境]** > **[プレビュー機能]** で) **[.NET Core SDK のプレビューを使用する]** オプションを設定している場合、プレリリース バージョンが考慮され、それ以外の場合は、リリース バージョンのみが考慮されます。
 - SDK のバージョンは指定していないが `allowPrerelease` 値を指定している *global.json* ファイルが見つかった場合は、インストールされている最新の SDK バージョンが使用されます (`rollForward` を `latestMajor` に設定するのと同じ)。 最新の SDK バージョンをリリースまたはプレリリースにできるかどうかは、`allowPrerelease` の値によって決まります。 `true` は、プレリリースバージョンが考慮されることを示し、`false` は、リリース バージョンのみが考慮されることを示します。
 - *global.json* ファイルが見つかり、そこで SDK バージョンが指定されている場合は、次のようになります。
 
   - `rollFoward` 値が設定されていない場合、`latestPatch` が既定の `rollForward` ポリシーとして使用されます。 それ以外の場合は、「[rollForward](#rollforward)」セクションで各値とその動作を確認します。
   - 「[allowPrerelease](#allowprerelease)」セクションには、プレリリース バージョンが考慮されるかどうか、`allowPrerelease` が設定されていない場合の既定の動作についての説明があります。
 
-## <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+## <a name="net-core-2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x SDK では、使用する SDK のバージョンを決定するときに次のルールが適用されます。
 
@@ -185,7 +185,7 @@ SDK バージョン 2.1.100 以降の番号の最後の部分 (`xyz`) の最初�
 ## <a name="troubleshooting-build-warnings"></a>ビルドの警告のトラブルシューティング
 
 > [!WARNING]
-> NET Core SDK のプレビュー バージョンを使用しています。 You can define the SDK version via a global.json file in the current project. More at <https://go.microsoft.com/fwlink/?linkid=869452> (.NET Core SDK のプレビュー バージョンを使用しています。現在のプロジェクトの global.json ファイルを使用して、SDK のバージョンを定義できます。詳しくは https://go.microsoft.com/fwlink/?linkid=869452 をご覧ください)
+> .NET Core SDK のプレビュー バージョンを使用しています。 現在のプロジェクトの global.json ファイルを使用して、SDK のバージョンを定義できます。 詳しくは <https://go.microsoft.com/fwlink/?linkid=869452>
 
 この警告は、プロジェクトがプレリリース バージョンの .NET Core SDK を使用してコンパイルされたことを示しています。 .NET Core SDK のバージョンには高品質の履歴とコミットメントがあります。 ただし、プレリリース バージョンを使用しない場合は、「[allowPrerelease](#allowprerelease)」セクションで、.NET Core 3.0 SDK 以降のバージョンで使用できるさまざまな方法を確認してください。 .NET Core 3.0 以降のランタイムまたは SDK がインストールされていないマシンの場合は、*global.json* ファイルを作成し、使用する正確なバージョンを指定する必要があります。
 
