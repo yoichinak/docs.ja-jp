@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 12/19/2019
-  ms.openlocfilehash: e416292663cb72404ea0c9bbb3dceccacd9faf32
-  ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+  ms.openlocfilehash: 6b23ab2f0214f23d45499fcf8ab7c3f2771be15c
+  ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 12/25/2019
-  ms.locfileid: "75353455"
+  ms.lasthandoff: 02/19/2020
+  ms.locfileid: "77452743"
 highlightedContent:
   items:
   - title: C# の概要。 クイック インタラクティブ スタート。
@@ -225,6 +225,9 @@ additionalContent:
     - title: .NET Framework API リファレンス
       summary: .NET Framework の API リファレンス ドキュメント
       url: https://docs.microsoft.com/dotnet/api/?view=netframework-4.8
+    - title: ASP.NET Core API リファレンス
+      summary: ASP.NET Core の API リファレンス ドキュメント
+      url: https://docs.microsoft.com/dotnet/api/?view=aspnetcore-3.1
     - title: ML.NET API リファレンス
       summary: ML.NET の API リファレンス ドキュメント
       url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
