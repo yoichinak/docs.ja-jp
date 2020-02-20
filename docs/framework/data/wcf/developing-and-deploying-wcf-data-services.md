@@ -7,16 +7,16 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: e34f7c8a0194e3901453923530a5cd07202801f6
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 1a017267c034fa1d6ea522855b7e0e7f056637ac
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937456"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504027"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF Data Services の開発とデプロイ
 
-このトピックでは、WCF Data Services の開発と配置について説明します。 WCF Data Services の基本情報については、[作業の開始](getting-started-with-wcf-data-services.md) と [概要](wcf-data-services-overview.md) に関するページを参照してください。
+このトピックでは、WCF Data Services の開発と配置について説明します。 WCF Data Services の基本情報については、「[はじめに](getting-started-with-wcf-data-services.md)と[概要](wcf-data-services-overview.md)」を参照してください。
 
 ## <a name="develop-wcf-data-services"></a>WCF Data Services の開発
 
@@ -26,7 +26,7 @@ WCF Data Services を使用して、Open Data Protocol (OData) をサポート�
 
      WCF Data Services は、リレーショナルデータベースから遅延バインディングデータ型まで、さまざまなデータソースのデータに基づいてデータモデルを定義できるようにする、さまざまなデータサービスプロバイダーをサポートしています。 詳細については、「 [Data Services プロバイダー](data-services-providers-wcf-data-services.md)」を参照してください。
 
-2. **データ サービスを作成する**
+2. **Create the data service**
 
      最も基本的なデータ サービスでは、 <xref:System.Data.Services.DataService%601> クラスを継承するクラスを `T` 型 (エンティティ コンテナーの名前空間修飾名) と一緒に公開します。 詳細については、「 [Defining WCF Data Services](defining-wcf-data-services.md)の開発と配置について説明します。
 
@@ -61,7 +61,7 @@ Visual Studio 2015 を使用して WCF Data Service を ASP.NET アプリケー�
 
     - このサーバーには、認証など、IIS の必要以上の機能は含まれていません。
 
-    - このサーバーは、データサービスから大きなバイナリデータにアクセスするときに、WCF Data Services クライアントによって既定で送信されるチャンク HTTP ストリームを処理できません。 詳細については、[ストリーミング プロバイダー](streaming-provider-wcf-data-services.md)を参照してください。
+    - このサーバーは、データサービスから大きなバイナリデータにアクセスするときに、WCF Data Services クライアントによって既定で送信されるチャンク HTTP ストリームを処理できません。 詳細については、「 [Streaming Provider](streaming-provider-wcf-data-services.md)」を参照してください。
 
     - このサーバーでは、キー値の WCF Data Services でこの文字がサポートされていても、URL のピリオド (`.`) 文字の処理に問題があります。
 
@@ -80,7 +80,7 @@ Visual Studio 2015 を使用して WCF Data Service を ASP.NET アプリケー�
 
 - データ サービスをデバッグするときは、HTTP 検査プログラムを使用すると、要求メッセージおよび応答メッセージの内容を検査できるので非常に便利です。 生のパケットを表示できるネットワーク パケット アナライザーを使用すると、データ サービスの HTTP 要求および HTTP 応答を検査できます。
 
-- データサービスをデバッグするときに、通常の操作ではなく、データサービスからエラーに関する詳細情報を取得する必要がある場合があります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、デバッグ後の[WCF Data Services](https://blogs.msdn.microsoft.com/phaniraj/?m=20086)を参照してください。 また、WCF でトレースを有効にして、HTTP メッセージングレイヤーで発生した例外を表示することもできます。 詳細については、「 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
+- データサービスをデバッグするときに、通常の操作ではなく、データサービスからエラーに関する詳細情報を取得する必要がある場合があります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、デバッグ後の[WCF Data Services](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)を参照してください。 また、WCF でトレースを有効にして、HTTP メッセージングレイヤーで発生した例外を表示することもできます。 詳細については、「 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
 
 - 通常、データサービスは ASP.NET アプリケーションプロジェクトとして開発されますが、データサービスは、Visual Studio で ASP.NET Web サイトプロジェクトとして作成することもできます。 2種類のプロジェクトの違いについては、「 [Visual Studio での Web アプリケーションプロジェクトと Web サイトプロジェクト](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))」を参照してください。
 
@@ -125,8 +125,8 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 - WCF Data Services には基本的な WCF 実装が含まれているため、windows server AppFabric を使用して、Windows Server 上で実行されている IIS に配置されたデータサービスを監視できます。 Windows Server AppFabric を使用したデータサービスの監視の詳細については、「 [Windows Server appfabric を使用した WCF Data Services の追跡](https://docs.microsoft.com/archive/blogs/rjacobs/tracking-wcf-data-services-with-windows-server-appfabric)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データ サービスのホスティング](hosting-the-data-service-wcf-data-services.md)
 - [WCF Data Services のセキュリティ保護](securing-wcf-data-services.md)
-- [WCF Data Services の定義](defining-wcf-data-services.md)
+- [Defining WCF Data Services](defining-wcf-data-services.md)
