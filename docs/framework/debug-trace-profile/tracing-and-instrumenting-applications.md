@@ -13,12 +13,12 @@ helpviewer_keywords:
 - performance monitoring, tracing code
 - Trace class, instrumentation for .NET applications
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
-ms.openlocfilehash: 1dd7317e38b6bee44dda75319c9f7c2a6567e3b4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2dcdbaf50ed053d43fc2df2c80fe7688e7b3e51f
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216036"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542612"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>アプリケーションのトレースとインストルメント
 トレースは、アプリケーションの稼働中にアプリケーションの実行を監視する手段です。 .NET Framework アプリケーションの開発時に、トレースとデバッグのインストルメンテーションをアプリケーションに追加できます。このインストルメンテーションは、アプリケーションの開発中でも開発したアプリケーションの配置後でも使用できます。 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>、および <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> の各クラスを使用すると、エラーおよびアプリケーションの実行についての情報を後で分析するために、ログ、テキスト ファイル、またはその他のデバイスに記録できます。  
@@ -97,7 +97,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 7. 問題が実行時に発生する場合は、適切なトレース スイッチをオンにしてください。 詳細については、「[トレース スイッチを設定する](how-to-create-initialize-and-configure-trace-switches.md)」を参照してください。  
   
-     トレース コードは、指定された場所 (画面、テキスト ファイル、イベント ログなど) にトレース メッセージを書き込みます。 **Trace.Listeners** コレクションに含めたリスナーの種類によって、この場所が決定されます。  
+     トレース コードは、指定された場所 (画面、テキスト ファイル、イベント ログなど) にトレース メッセージを書き込みます。 <xref:System.Diagnostics.Trace.Listeners%2A?displayProperty=nameWithType> コレクションに含まれるリスナーの種類によって、ターゲットが決まります。  
   
 8. トレース メッセージを分析して、アプリケーションの問題を識別および理解します。  
   
@@ -120,18 +120,18 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |方法|出力|  
 |------------|------------|  
-|**Filter**|指定されたテキスト。何も指定されない場合は、呼び出し履歴。 **Assert** ステートメントの引数として指定された条件が **false** の場合にだけ、出力が書き込まれます。|  
-|**失敗**|指定されたテキスト。何も指定されない場合は、呼び出し履歴。|  
-|**書き込み**|指定されたテキスト。|  
-|**WriteIf**|指定されたテキスト。**WriteIf** ステートメントの引数として指定された条件が満たされた場合にだけ出力されます。|  
-|**WriteLine**|指定されたテキストおよびキャリッジ リターン。|  
-|**WriteLineIf**|指定されたテキストおよびキャリッジ リターン。**WriteLineIf** ステートメントの引数として指定された条件が満たされた場合にだけ出力されます。|  
+|`Assert`|指定されたテキスト。何も指定されない場合は、呼び出し履歴。 `Assert` ステートメントの引数として指定された条件が**false**の場合にのみ、出力が書き込まれます。|  
+|`Fail`|指定されたテキスト。何も指定されない場合は、呼び出し履歴。|  
+|`Write`|指定されたテキスト。|  
+|`WriteIf`|`WriteIf` ステートメントの引数として指定された条件が満たされる場合は、指定されたテキスト。|  
+|`WriteLine`|指定されたテキストおよびキャリッジ リターン。|  
+|`WriteLineIf`|`WriteLineIf` ステートメントの引数として指定された条件が満たされる場合は、指定されたテキストと復帰。|  
   
- <xref:System.Diagnostics.Trace.Listeners%2A> のコレクションのすべてのリスナーは、上の表で説明したメッセージを受け取りますが、取られるアクションは、どのリスナーがメッセージを受け取るかによって異なる場合があります。 たとえば、<xref:System.Diagnostics.DefaultTraceListener> は **Assert** の **Fail** に障害通知を受信し、<xref:System.Diagnostics.TextWriterTraceListener> は出力をストリームに単純に書き込むときにアサーションの追加ダイアログ ボックスが表示されます。  
+ <xref:System.Diagnostics.Trace.Listeners%2A> のコレクションのすべてのリスナーは、上の表で説明したメッセージを受け取りますが、取られるアクションは、どのリスナーがメッセージを受け取るかによって異なる場合があります。 たとえば、<xref:System.Diagnostics.DefaultTraceListener> は `Fail` または失敗した `Assert` 通知を受信したときにアサーションダイアログボックスを表示しますが、<xref:System.Diagnostics.TextWriterTraceListener> は単にストリームに出力を書き込みます。  
   
  独自のリスナーを実装することにより、結果をカスタマイズできます。 たとえば、メッセージ ボックスにメッセージを表示するカスタム トレース リスナーや、データベースに接続してメッセージをテーブルに追加するトレース リスナーなどを実装できます。 すべてのカスタム リスナーは、前に示した 6 つのメソッドをサポートする必要があります。 開発者が定義するリスナーの作成については、「.NET Framework リファレンス」の「<xref:System.Diagnostics.TraceListener>」を参照してください。  
   
- **Write** メソッドおよび **WriteLine** メソッドでは、必ず指定されたテキストが書き込まれます。 **Assert**、**WriteIf**、および **WriteLineIf** は、指定されたテキストを書き込むかどうかを制御するブール型の引数を必要とします。式が **true** (**WriteIf** および **WriteLineIf** の場合)、または **false** (**Assert** の場合) の場合のみ、指定されたテキストを書き込みます。 **Fail** メソッドでは、常に指定されたテキストが書き込まれます。 詳細については、「[方法 : アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)」および「.NET Framework リファレンス」を参照してください。  
+ `Write` メソッドと `WriteLine` メソッドは、指定したテキストを常に書き込みます。 `Assert`、`WriteIf`、および `WriteLineIf` には、指定されたテキストを書き込むかどうかを制御するブール型の引数が必要です。式が**true**の場合 (`WriteIf` と `WriteLineIf`の場合)、または**false** (`Assert`の場合) の場合にのみ、指定されたテキストを書き込みます。 `Fail` メソッドは、常に指定されたテキストを書き込みます。 詳細については、「[方法 : アプリケーション コードにトレース ステートメントを追加する](how-to-add-trace-statements-to-application-code.md)」および「.NET Framework リファレンス」を参照してください。  
   
 ## <a name="security-concerns"></a>セキュリティに関する注意事項  
  ASP.NET アプリケーションを配置する前にトレースとデバッグを無効にしないと、アプリケーションに関する情報が公開され、悪意を持ったプログラムによって利用される可能性があります。 詳細については、「[方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](how-to-compile-conditionally-with-trace-and-debug.md)」、「[Compiling and Building](/visualstudio/ide/compiling-and-building-in-visual-studio)」(コンパイルとビルド)、および「[方法 : トレース スイッチを作成、初期化、および構成する](how-to-create-initialize-and-configure-trace-switches.md)」を参照してください。 デバッグは、IIS (Internet Information Services) で設定することもできます。  
