@@ -54,6 +54,6 @@
     - name: Xamarin
       href: xamarin.md
 - name: API リファレンス >>
-  href: /dotnet/api/?view=msdata-sqlite-3.0.0
+  href: /dotnet/api/?view=msdata-sqlite-3.0
 - name: SQL の構文 >>
   href: 'https://www.sqlite.org/lang.html'
