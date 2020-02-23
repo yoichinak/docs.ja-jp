@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: a535048fc8756b55068098ad61fdc37fc8c1f04e
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74999009"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448894"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core の依存関係と要件
 
@@ -23,14 +23,14 @@ ms.locfileid: "74999009"
 <!-- markdownlint-disable MD025 -->
 <!-- markdownlint-disable MD024 -->
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1 では以下の Windows のバージョンがサポートされます。
 
 > [!NOTE]
 > `+` 記号は、最小バージョンを表します。
 
-| OS                            | Version                        | アーキテクチャ   |
+| OS                            | バージョン                        | アーキテクチャ   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows クライアント                | 7 SP1+、8.1                    | x64、x86        |
 | Windows 10 クライアント             | バージョン 1607+                  | x64、x86        |
@@ -39,14 +39,14 @@ ms.locfileid: "74999009"
 
 .NET Core 3.1 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 3.1 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.1/3.1-supported-os.md)」(.NET Core 3.1 でサポートされている OS バージョン) を参照してください。
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0 では以下の Windows のバージョンがサポートされます。
 
 > [!NOTE]
 > `+` 記号は、最小バージョンを表します。
 
-| OS                            | Version                        | アーキテクチャ   |
+| OS                            | バージョン                        | アーキテクチャ   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows クライアント                | 7 SP1+、8.1                    | x64、x86        |
 | Windows 10 クライアント             | バージョン 1607+                  | x64、x86        |
@@ -55,14 +55,14 @@ ms.locfileid: "74999009"
 
 .NET Core 3.0 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)」(.NET Core 3.0 でサポートされている OS バージョン) を参照してください。
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 .NET Core 2.2 では以下の Windows のバージョンがサポートされます。
 
 > [!NOTE]
 > `+` 記号は、最小バージョンを表します。
 
-| OS                            | Version                        | アーキテクチャ   |
+| OS                            | バージョン                        | アーキテクチャ   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows クライアント                | 7 SP1+、8.1                    | x64、x86        |
 | Windows 10 クライアント             | バージョン 1607+                  | x64、x86        |
@@ -71,14 +71,14 @@ ms.locfileid: "74999009"
 
 .NET Core 2.2 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)」(.NET Core 2.2 でサポートされている OS バージョン) を参照してください。
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 .NET Core 2.1 では以下の Windows のバージョンがサポートされます。
 
 > [!NOTE]
 > `+` 記号は、最小バージョンを表します。
 
-| OS                            | Version                        | アーキテクチャ   |
+| OS                            | バージョン                        | アーキテクチャ   |
 | ----------------------------- | ------------------------------ | --------------- |
 | Windows クライアント                | 7 SP1+、8.1                    | x64、x86        |
 | Windows 10 クライアント             | バージョン 1607+                  | x64、x86        |
@@ -118,7 +118,7 @@ ms.locfileid: "74999009"
 
 ::: zone pivot="os-linux"
 
-# <a name="net-core-31tabnetcore31"></a>[.NET Core 3.1](#tab/netcore31)
+# <a name="net-core-31"></a>[.NET Core 3.1](#tab/netcore31)
 
 .NET Core 3.1 は、1 つのオペレーティング システムとして Linux を扱います。 サポートされている Linux ディストリビューション用に、1 つの Linux ビルド (チップ アーキテクチャあたり) があります。
 
@@ -127,7 +127,7 @@ ms.locfileid: "74999009"
 > [!NOTE]
 > `+` 記号は、最小バージョンを表します。
 
-| OS                             | Version               | アーキテクチャ    |
+| OS                             | バージョン               | アーキテクチャ    |
 | ------------------------------ | --------------------- | ---------------- |
 | Red Hat Enterprise Linux       | 6、7、8               | X64 |
 | CentOS                         | 7+                    | X64 |
@@ -147,7 +147,7 @@ ARM64 (カーネル 4.14+) 上に .NET Core 3.1 をインストールする方�
 > [!IMPORTANT]
 > ARM64 のサポートには、Linux カーネル 4.14 以降が必要です。 一部の linux ディストリビューションは、この要件を満たしていますが、そうでないものもあります。 たとえば、Ubuntu 18.04 ではサポートされていますが、Ubuntu 16.04 ではされていません。
 
-# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+# <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
 .NET Core 3.0 は、1 つのオペレーティング システムとして Linux を扱います。 サポートされている Linux ディストリビューション用に、1 つの Linux ビルド (チップ アーキテクチャあたり) があります。
 
@@ -156,7 +156,7 @@ ARM64 (カーネル 4.14+) 上に .NET Core 3.1 をインストールする方�
 > [!NOTE]
 > `+` 記号は、最小バージョンを表します。
 
-| OS                             | Version               | アーキテクチャ    |
+| OS                             | バージョン               | アーキテクチャ    |
 | ------------------------------ | --------------------- | ---------------- |
 | Red Hat Enterprise Linux       | 6、7、8               | X64 |
 | CentOS                         | 7+                    | X64 |
@@ -173,7 +173,7 @@ ARM64 (カーネル 4.14+) 上に .NET Core 3.1 をインストールする方�
 
 ARM64 で .NET Core 3.0 をインストールする方法の詳細については、「[Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)」 (Linux ARM64 での .NET Core 3.0 のインストール) を参照してください。
 
-# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+# <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
 
 .NET Core 2.2 は、1 つのオペレーティング システムとして Linux を扱います。 サポートされている Linux ディストリビューション用に、1 つの Linux ビルド (チップ アーキテクチャあたり) があります。
 
@@ -182,14 +182,14 @@ ARM64 で .NET Core 3.0 をインストールする方法の詳細について�
 > [!NOTE]
 > `+` 記号は、最小バージョンを表します。
 
-| OS                             |  Version                |  アーキテクチャ   |
+| OS                             |  バージョン                |  アーキテクチャ   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6、7                   | X64 |
 | CentOS                         |  7                      | X64 |
 | Oracle Linux                   |  7                      | X64 |
 | Fedora                         |  29、30                 | X64 |
 | Debian                         |  9                      | x64、ARM32 |
-| Ubuntu                         |  16.04、18.04、18.10、19.04    | x64、ARM32 |
+| Ubuntu                         |  16.04、18.04、18.10    | x64、ARM32 |
 | Linux Mint                     |  17、18                 | X64 |
 | openSUSE                       |  15+                    | X64 |
 | SUSE Enterprise Linux (SLES)   |  12 SP2+                | X64 |
@@ -197,7 +197,7 @@ ARM64 で .NET Core 3.0 をインストールする方法の詳細について�
 
 .NET Core 2.2 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 2.2 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)」(.NET Core 2.2 でサポートされている OS バージョン) を参照してください。
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 .NET Core 2.1 は、1 つのオペレーティング システムとして Linux を扱います。 サポートされている Linux ディストリビューション用に、1 つの Linux ビルド (チップ アーキテクチャあたり) があります。
 
@@ -206,7 +206,7 @@ ARM64 で .NET Core 3.0 をインストールする方法の詳細について�
 > [!NOTE]
 > `+` 記号は、最小バージョンを表します。
 
-| OS                             |  Version                |  アーキテクチャ   |
+| OS                             |  バージョン                |  アーキテクチャ   |
 | ------------------------------ | ----------------------- | ---------------- |
 | Red Hat Enterprise Linux       |  6、7、8                | X64 |
 | CentOS                         |  7+                     | X64 |
@@ -250,7 +250,7 @@ Ubuntu ディストリビューションには、次のライブラリがイン�
 - libgdiplus (バージョン 6.0.1 以降)
 
 > [!WARNING]
-> Ubuntu のほとんどのバージョンには、以前のバージョンの libgdiplus が含まれています。 新しいバージョンの libgdiplus をインストールするには、システムに Mono リポジトリを追加します。 詳細については、<https://www.mono-project.com/download/stable/> を参照してください。
+> Ubuntu のほとんどのバージョンには、以前のバージョンの libgdiplus が含まれています。 新しいバージョンの libgdiplus をインストールするには、システムに Mono リポジトリを追加します。 詳細については、「<https://www.mono-project.com/download/stable/>」を参照してください。
 
 ### <a name="centos-and-fedora"></a>CentOS と Fedora
 
@@ -277,7 +277,7 @@ Fedora ユーザー:ご使用の OpenSSL のバージョンが 1.1 以降の場�
 - libgdiplus (バージョン 6.0.1 以降)
 
 > [!WARNING]
-> CentOS と Fedora のほとんどのバージョンには、以前のバージョンの libgdiplus が含まれています。 新しいバージョンの libgdiplus をインストールするには、システムに Mono リポジトリを追加します。 詳細については、<https://www.mono-project.com/download/stable/> を参照してください。
+> CentOS と Fedora のほとんどのバージョンには、以前のバージョンの libgdiplus が含まれています。 新しいバージョンの libgdiplus をインストールするには、システムに Mono リポジトリを追加します。 詳細については、「<https://www.mono-project.com/download/stable/>」を参照してください。
 
 ::: zone-end
 

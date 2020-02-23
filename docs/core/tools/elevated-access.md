@@ -3,12 +3,12 @@ title: dotnet コマンドの特権アクセス
 description: 特権アクセスを必要とする dotnet コマンドのベスト プラクティスについて説明します。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: cf7c93a0adcae7092a61a6fc6046cd45cf00bf58
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: fe33cbe966d175f71ba350737b283c1e83f64fa6
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71216310"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543431"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet コマンドの特権アクセス
 
@@ -29,9 +29,9 @@ ms.locfileid: "71216310"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
-### <a name="install-the-global-tool"></a>グローバル ツールをインストールする
+### <a name="install-the-tool"></a>ツールをインストールする
 
 フォルダー `%ProgramFiles%\dotnet-tools` が既に存在する場合、次を行い、そのディレクトリを記述または変更する許可が "Users" グループに与えられているかどうかを確認します。
 
@@ -73,11 +73,11 @@ TOOLCOMMAND
 dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 ```
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 [!INCLUDE [elevated-access-unix](../../../includes/elevated-access-unix.md)]
 
@@ -93,14 +93,14 @@ dotnet tool uninstall PACKAGEID --tool-path "%ProgramFiles%\dotnet-tools"
 
 - 生成された実行可能ファイルを使用する (最高のスタートアップ パフォーマンスが与えられます):
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo ./bin/Debug/netcoreapp3.0/APPLICATIONNAME
    ```
     
 - [dotnet run](dotnet-run.md) コマンドを使用するとき、`—no-build` フラグを指定し、新しいバイナリの生成を回避します。
 
-   ```bash
+   ```dotnetcli
    dotnet build
    sudo dotnet run --no-build
    ```

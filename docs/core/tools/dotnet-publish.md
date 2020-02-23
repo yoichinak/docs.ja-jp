@@ -2,18 +2,18 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドは、.NET Core プロジェクトをディレクトリに発行します。
 ms.date: 05/29/2018
-ms.openlocfilehash: 4612c8cd1f63550905ef7c6d94af050892b1620c
-ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
+ms.openlocfilehash: 0653a7b1e1abd6d7ffd3d21a0410279235b43a28
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71117612"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451293"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet publish` - ホスティング システムへの展開のため、アプリケーションとその依存関係をフォルダーにパックします。
 
@@ -21,7 +21,7 @@ ms.locfileid: "71117612"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-build] [--no-dependencies]
@@ -29,7 +29,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--manifest] [--no-dependencies]
@@ -37,7 +37,7 @@ dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [--force] [--ma
 dotnet publish [-h|--help]
 ```
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 ```dotnetcli
 dotnet publish [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
@@ -68,7 +68,7 @@ dotnet publish [-h|--help]
 
 ## <a name="options"></a>オプション
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `-c|--configuration {Debug|Release}`
 
@@ -113,7 +113,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) が発行されます。
+指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#publish-self-contained) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#publish-runtime-dependent) が発行されます。
 
 `-v|--verbosity <LEVEL>`
 
@@ -123,7 +123,7 @@ dotnet publish [-h|--help]
 
 プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) を置き換えるバージョン サフィックスを定義します。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `-c|--configuration {Debug|Release}`
 
@@ -164,7 +164,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) が発行されます。
+指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#publish-self-contained) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#publish-runtime-dependent) が発行されます。
 
 `-v|--verbosity <LEVEL>`
 
@@ -174,7 +174,7 @@ dotnet publish [-h|--help]
 
 プロジェクト ファイルのバージョン フィールドでアスタリスク (`*`) を置き換えるバージョン サフィックスを定義します。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `-c|--configuration {Debug|Release}`
 
@@ -199,7 +199,7 @@ dotnet publish [-h|--help]
 
 `-r|--runtime <RUNTIME_IDENTIFIER>`
 
-指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#framework-dependent-deployments-fdd) が発行されます。
+指定されたランタイムのアプリケーションを発行します。 これは、[自己完結型の展開 (SCD)](../deploying/index.md#publish-self-contained) を作成するときに使われます。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 既定では、[フレームワークに依存する展開 (FDD)](../deploying/index.md#publish-runtime-dependent) が発行されます。
 
 `-v|--verbosity <LEVEL>`
 

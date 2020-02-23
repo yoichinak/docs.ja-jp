@@ -3,12 +3,12 @@ title: project.json と csproj の比較
 description: 「project.json 要素と csproj 要素の間のマッピング」を参照してください。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: c31590cf34990867b81af4d073846c2952928798
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714134"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451106"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -337,7 +337,7 @@ MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*�
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-詳細については、「[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd)」を参照してください。
+詳細については、「[自己完結型の展開 (SCD)](../deploying/index.md#publish-self-contained)」を参照してください。
 
 ## <a name="tools"></a>tools
 

@@ -2,12 +2,12 @@
 title: DNX から .NET Core CLI への移行
 description: DNX ツールの使用から .NET Core CLI ツールの使用に移行します。
 ms.date: 06/20/2016
-ms.openlocfilehash: e15e7ce10bb7a36deb2acd2abb9a0bd4ec8cd4a9
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 31317f110ae1e8586b78becd757d0a8ff07f1459
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920626"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503821"
 ---
 # <a name="migrating-from-dnx-to-net-core-cli-projectjson"></a>DNX から .NET Core CLI への移行 (project.json)
 
@@ -48,13 +48,13 @@ DNX の場合、一部のコマンドについては 3 つのパート (DNX、DN
 
 | DNX コマンド                    | CLI コマンド    | 説明                                                                                                     |
 |--------------------------------|----------------|-----------------------------------------------------------------------------------------------------------------|
-| dnx run                        | dotnet run     | ソースからコードを実行します。                                                                                           |
-| dnu build                      | dotnet build   | コードの IL バイナリをビルドします。                                                                                |
-| dnu pack                       | dotnet pack    | コードの NuGet パッケージをパッケージ化します。                                                                        |
+| dnx run                        | `dotnet run`     | ソースからコードを実行します。                                                                                           |
+| dnu build                      | `dotnet build`   | コードの IL バイナリをビルドします。                                                                                |
+| dnu pack                       | `dotnet pack`    | コードの NuGet パッケージをパッケージ化します。                                                                        |
 | dnx \[command] ("dnx web" など) | 適用なし\*          | DNX の環境では、project.json 内の定義に従ってコマンドを実行します。                                                     |
 | dnu install                    | 適用なし\*          | DNX の環境では、パッケージを依存関係としてインストールします。                                                            |
-| dnu restore                    | dotnet restore | project.json に指定された依存関係を復元します。 ([注記参照](#dotnet-restore-note))                                                            |
-| dnu publish                    | dotnet publish | 展開対象のアプリケーションを 3 つの形式 (ポータブル、ネイティブ アプリ、スタンドアロン) のいずれかで発行します。 |
+| dnu restore                    | `dotnet restore` | project.json に指定された依存関係を復元します。 ([注記参照](#dotnet-restore-note))                                                            |
+| dnu publish                    | `dotnet publish` | 展開対象のアプリケーションを 3 つの形式 (ポータブル、ネイティブ アプリ、スタンドアロン) のいずれかで発行します。 |
 | dnu wrap                       | 適用なし\*          | DNX の環境では、csproj で project.json をラップします。                                                                    |
 | dnu commands                   | 適用なし\*          | DNX の環境では、インストールされたコマンドをグローバルに管理します。                                                           |
 

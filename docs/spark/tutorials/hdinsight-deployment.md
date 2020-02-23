@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Azure HDInsight �
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 76a150879324640352aa36f753ec3d6e7342bcaf
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 77b57463375c36444532bdd383ec4b3bfe3ab056
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76860779"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504169"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>チュートリアル: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
@@ -88,7 +88,7 @@ ms.locfileid: "76860779"
 
    **Windows の場合:**
 
-   ```console
+   ```dotnetcli
    cd mySparkApp
    dotnet publish -c Release -f netcoreapp3.0 -r ubuntu.16.04-x64
    ```

@@ -2,12 +2,12 @@
 title: ランタイム パッケージ ストア
 description: .NET Core で使用されるランタイム パッケージ ストアとターゲット マニフェストの使用方法について説明します。
 ms.date: 08/12/2017
-ms.openlocfilehash: 8c58ccdb90e5ae9830313f52c19f58629ea5b0a2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737786"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448959"
 ---
 # <a name="runtime-package-store"></a>ランタイム パッケージ ストア
 
@@ -122,11 +122,11 @@ dotnet publish --manifest manifest.xml
 
 ASP.NET Core の暗黙的なストアは、ASP.NET Core 2.0 にのみ適用されます。 暗黙的なストアを使用**しない** ASP.NET Core 2.1 以降を、アプリケーションで使用することを強くお勧めします。 ASP.NET Core 2.1 以降では、共有フレームワークを使用します。
 
-このランタイム パッケージ ストア機能は、アプリが[フレームワークに依存する展開 (FDD)](index.md#framework-dependent-deployments-fdd) のアプリとして展開されるときに、ASP.NET Core アプリによって暗黙的に使用されます。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) のターゲットには、ターゲット システムの暗黙的なパッケージ ストアを参照しているマニフェストが含まれます。 さらに、`Microsoft.AspNetCore.All` パッケージによって異なる FDD アプリは、アプリとそのアセットのみを含み、`Microsoft.AspNetCore.All` メタパッケージに一覧されるパッケージは含まないアプリとして発行されます。 それらのパッケージは、ターゲット システムに存在すると想定されます。
+このランタイム パッケージ ストア機能は、アプリが[フレームワークに依存する展開 (FDD)](index.md#publish-runtime-dependent) のアプリとして展開されるときに、ASP.NET Core アプリによって暗黙的に使用されます。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) のターゲットには、ターゲット システムの暗黙的なパッケージ ストアを参照しているマニフェストが含まれます。 さらに、`Microsoft.AspNetCore.All` パッケージによって異なる FDD アプリは、アプリとそのアセットのみを含み、`Microsoft.AspNetCore.All` メタパッケージに一覧されるパッケージは含まないアプリとして発行されます。 それらのパッケージは、ターゲット システムに存在すると想定されます。
 
 ランタイム パッケージ ストアは、.NET Core SDK がインストールされるときに、ホストにインストールされます。 その他のインストーラーでは、Zip/tarball インストールの .NET Core SDK、`apt-get`、Red Hat Yum、.NET Core Windows Server Hosting バンドル、および手動のランタイム パッケージ ストアのインストールなど、ランタイム パッケージ ストアを提供する場合があります。
 
-[フレームワークに依存する展開 (FDD)](index.md#framework-dependent-deployments-fdd) アプリを展開するときに、ターゲット環境に .NET Core SDK がインストールされていることを確認します。 アプリが ASP.NET Core を含まない環境に展開される場合、次の例のように、プロジェクト ファイルで **\<PublishWithAspNetCoreTargetManifest>** を `false` に指定して、暗黙的なストアを無効にできます。
+[フレームワークに依存する展開 (FDD)](index.md#publish-runtime-dependent) アプリを展開するときに、ターゲット環境に .NET Core SDK がインストールされていることを確認します。 アプリが ASP.NET Core を含まない環境に展開される場合、次の例のように、プロジェクト ファイルで **\<PublishWithAspNetCoreTargetManifest>** を `false` に指定して、暗黙的なストアを無効にできます。
 
 ```xml
 <PropertyGroup>
@@ -135,7 +135,7 @@ ASP.NET Core の暗黙的なストアは、ASP.NET Core 2.0 にのみ適用さ�
 ```
 
 > [!NOTE]
-> [自己完結型の展開 (SCD)](index.md#self-contained-deployments-scd) アプリの場合、ターゲット システムには必ずしも必要なマニフェスト パッケージを含んでいないと想定されます。 そのため、SCD アプリの場合、 **\<PublishWithAspNetCoreTargetManifest>** を `true` に設定することはできません。
+> [自己完結型の展開 (SCD)](index.md#publish-self-contained) アプリの場合、ターゲット システムには必ずしも必要なマニフェスト パッケージを含んでいないと想定されます。 そのため、SCD アプリの場合、 **\<PublishWithAspNetCoreTargetManifest>** を `true` に設定することはできません。
 
 展開に存在するマニフェストの依存関係を持つアプリケーションを展開する場合は (アセンブリは *bin* フォルダーに存在します)、ランタイム パッケージ ストアはそのアセンブリ用のホスト上では*使用されません*。 ホスト上のランタイム パッケージ ストアに存在するかに関係なく、*bin* フォルダーのアセンブリが使用されます。
 

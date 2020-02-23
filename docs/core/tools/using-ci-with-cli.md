@@ -2,12 +2,12 @@
 title: .NET Core SDK とツールを使用した継続的インテグレーション (CI)
 description: 継続的インテグレーションで .NET Core SDK とそのツールをビルド サーバー上で使用する方法について説明します。
 ms.date: 05/18/2017
-ms.openlocfilehash: bdb3913cbe588377d9fbee0f1c054e682629ac96
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215232"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451039"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
 
@@ -32,7 +32,7 @@ macOS をご利用の場合、PKG インストーラーをお使いください�
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> インストーラー スクリプトの使用時、ネイティブ依存性は自動的にはインストールされません。 オペレーティング システムにネイティブ依存性がない場合、それをインストールする必要があります。 詳細については、[.NET Core の依存関係と要件](../install/dependencies.md?tabs=netcore30&pivots=os-linux)に関する記事を参照してください。
+> インストーラー スクリプトの使用時、ネイティブ依存性は自動的にはインストールされません。 オペレーティング システムにネイティブ依存性がない場合、それをインストールする必要があります。 詳細については、[.NET Core の依存関係と要件](../install/dependencies.md)に関する記事を参照してください。
 
 ## <a name="ci-setup-examples"></a>CI セットアップ例
 

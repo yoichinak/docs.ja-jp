@@ -5,12 +5,12 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: d0fe79ef79125c06be9acd8ba80001a33e150adb
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802859"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504043"
 ---
 # <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark を使用した構造化ストリーミング 
 
@@ -32,7 +32,7 @@ ms.locfileid: "74802859"
 
 1. コマンド プロンプトで、次のコマンドを実行して、新しいコンソール アプリケーションを作成します。
 
-   ```console
+   ```dotnetcli
    dotnet new console -o mySparkStreamingApp
    cd mySparkStreamingApp
    ```
@@ -41,7 +41,7 @@ ms.locfileid: "74802859"
 
 1. アプリで .NET for Apache Spark を使用するには、Microsoft.Spark パッケージをインストールします。 コンソールで、次のコマンドを実行します。
 
-   ```console
+   ```dotnetcli
    dotnet add package Microsoft.Spark
    ```
 

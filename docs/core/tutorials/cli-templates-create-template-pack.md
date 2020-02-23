@@ -5,12 +5,12 @@ author: thraka
 ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: 3a72f68f5634c9ee5b137baf12a279130861e61a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76787837"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503489"
 ---
 # <a name="tutorial-create-a-template-pack"></a>チュートリアル: テンプレート パックを作成する
 
@@ -51,8 +51,11 @@ dotnet new console -n templatepack -o .
 
 `-n` パラメーターを指定すると、 _.csproj_ のファイル名が _templatepack.csproj_ に設定されます。 `-o` パラメーターを指定すると、現在のディレクトリにファイルが作成されます。 次の出力のような結果が表示されます。
 
+```dotnetcli
+dotnet new console -n templatepack -o .
+```
+
 ```console
-C:\working> dotnet new console -n templatepack -o .
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -109,8 +112,11 @@ dotnet pack
 
 このコマンドを実行すると、プロジェクトがビルドされ、_working\bin\Debug_ フォルダー内に NuGet パッケージが作成されます。
 
+```dotnetcli
+dotnet pack
+```
+
 ```console
-C:\working> dotnet pack
 Microsoft (R) Build Engine version 16.2.0-preview-19278-01+d635043bd for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -146,8 +152,11 @@ NuGet パッケージを NuGet フィードにアップロードした場合は�
 
 テンプレート パックを削除する方法は、テンプレート パックをインストールした方法 ( _.nupkg_ ファイルを使用して直接、または NuGet フィードを使用) にかかわらず同じです。 アンインストールするテンプレートの `<PackageId>` を使用します。 `dotnet new -u` コマンドを実行すると、インストールされているテンプレートの一覧を取得できます。
 
+```dotnetcli
+dotnet new -u
+```
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:

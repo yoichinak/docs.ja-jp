@@ -3,12 +3,12 @@ title: .NET Core CLI を使用したライブラリの開発
 description: .NET Core CLI を使用して .NET Core ライブラリを作成する方法について説明します。 複数のフレームワークをサポートするライブラリを作成します。
 author: cartermp
 ms.date: 05/01/2017
-ms.openlocfilehash: a7c0175d29f483571578b58d698dd790cf66f7f4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920446"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503511"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI を使用したライブラリの開発
 
@@ -220,7 +220,7 @@ netstandard1.4/
 
 1. ソリューションを設定します。 次のコマンドで実行することができます。
 
-   ```bash
+   ```dotnetcli
    mkdir SolutionWithSrcAndTest
    cd SolutionWithSrcAndTest
    dotnet new sln
@@ -241,7 +241,7 @@ netstandard1.4/
 
 1. テスト プロジェクトのディレクトリに移動し、`MyProject` から `MyProject.Test` への参照を追加します。
 
-   ```bash
+   ```dotnetcli
    cd MyProject.Test
    dotnet add reference ../MyProject/MyProject.csproj
    ```
@@ -300,7 +300,7 @@ let doWork data = async {
 
 自分の端末で次のコマンドを実行し、このガイドと同じ構造を作成することができます。
 
-```console
+```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
 dotnet new sln
 mkdir AwesomeLibrary.Core && cd AwesomeLibrary.Core && dotnet new classlib

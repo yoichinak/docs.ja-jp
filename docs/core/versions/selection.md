@@ -4,12 +4,12 @@ description: .NET Core がお使いのプログラム用のランタイム バ�
 author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
-ms.openlocfilehash: 546725db907937dea6fe0739656fb585a8855644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713972"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451000"
 ---
 # <a name="select-the-net-core-version-to-use"></a>使用する .NET Core のバージョンを選択する
 
@@ -78,7 +78,7 @@ SDK バージョンの選択に関する詳細は、*global.json* に関する�
 
 ## <a name="framework-dependent-apps-roll-forward"></a>フレームワーク依存のアプリをロールフォワードする
 
-[`dotnet myapp.dll`](../tools/dotnet.md#description) が存在する[**フレームワークに依存するデプロイ**](../deploying/index.md#framework-dependent-deployments-fdd)で [`dotnet run`](../tools/dotnet-run.md) を使用する、または `myapp.exe` が存在する[**フレームワークに依存する実行可能ファイル**](../deploying/index.md#framework-dependent-executables-fde)を使用して、ソースからアプリケーションを実行した場合、`dotnet` 実行可能ファイルがアプリケーションの**ホスト**になります。
+[`dotnet myapp.dll`](../tools/dotnet.md#description) が存在する[**フレームワークに依存するデプロイ**](../deploying/index.md#publish-runtime-dependent)で [`dotnet run`](../tools/dotnet-run.md) を使用する、または `myapp.exe` が存在する[**フレームワークに依存する実行可能ファイル**](../deploying/index.md#publish-runtime-dependent)を使用して、ソースからアプリケーションを実行した場合、`dotnet` 実行可能ファイルがアプリケーションの**ホスト**になります。
 
 このホストがコンピューターにインストールされている最新版のパッチを選択します。 たとえば、プロジェクト ファイルに `netcoreapp2.0` を指定したとき、`2.0.4` がインストールされている最新の .NET ランタイムであれば、`2.0.4` ランタイムが使用されます。
 
@@ -101,7 +101,7 @@ SDK バージョンの選択に関する詳細は、*global.json* に関する�
 
 ## <a name="self-contained-deployments-include-the-selected-runtime"></a>自己完結型の展開に選択したランタイムが含まれる
 
-[**自己完結型ディストリビューション**](../deploying/index.md#self-contained-deployments-scd)としてアプリケーションを公開できます。 この手法では、.NET Core のランタイムとライブラリがアプリケーションと共にバンドルされます。 自己完結型の展開には、ランタイム環境に対する依存性がありません。 ランタイム バージョンは実行時ではなく、公開時に選択されます。
+[**自己完結型ディストリビューション**](../deploying/index.md#publish-self-contained)としてアプリケーションを公開できます。 この手法では、.NET Core のランタイムとライブラリがアプリケーションと共にバンドルされます。 自己完結型の展開には、ランタイム環境に対する依存性がありません。 ランタイム バージョンは実行時ではなく、公開時に選択されます。
 
 公開プロセスでは、特定のランタイム ファミリの最新版パッチが選択されます。 たとえば、`dotnet publish` では、.NET Core 2.0 ランタイム ファミリの最新版パッチが .NET Core 2.0.4 であればそれが選択されます。 ターゲット フレームワーク (インストールされているセキュリティ パッチを含む) がアプリケーションと共にパッケージ化されます。
 

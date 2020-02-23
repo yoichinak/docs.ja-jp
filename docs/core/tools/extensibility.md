@@ -2,12 +2,12 @@
 title: .NET Core CLI の拡張モデル
 description: .NET Core CLI を拡張する方法について説明します。
 ms.date: 04/12/2017
-ms.openlocfilehash: 74da895fb3a3f6c77640a2b9a64acdb2894a954b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920525"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451156"
 ---
 # <a name="net-core-cli-extensibility-model"></a>.NET Core CLI の拡張モデル
 
@@ -32,7 +32,7 @@ CLI は、主に次の 3 つの方法で拡張できます。
 上記で概説されている 3 つの拡張メカニズムは排他的ではありません。 メカニズムの 1 つ、すべて、または組み合わせて使用することができます。 選択するメカニズムは、拡張機能で実現しようとしている目標によって大きく異なります。
 
 ## <a name="per-project-based-extensibility"></a>各プロジェクト ベースの拡張機能
-各プロジェクトのツールは、NuGet パッケージとして配布される[フレームワーク依存の展開](../deploying/index.md#framework-dependent-deployments-fdd)です。 ツールを参照するプロジェクトのコンテキスト内と、復元する対象にのみ、ツールを使用できます。 プロジェクトのコンテキスト以外で呼び出すと (たとえば、プロジェクトを含むディレクトリ以外)、コマンドが見つからないので失敗します。
+各プロジェクトのツールは、NuGet パッケージとして配布される[フレームワーク依存の展開](../deploying/index.md#publish-runtime-dependent)です。 ツールを参照するプロジェクトのコンテキスト内と、復元する対象にのみ、ツールを使用できます。 プロジェクトのコンテキスト以外で呼び出すと (たとえば、プロジェクトを含むディレクトリ以外)、コマンドが見つからないので失敗します。
 
 プロジェクト ファイルの外部は必要ないため、これらのツールはビルド サーバーに最適です。 ビルド処理では、ビルドを行うプロジェクトの復元が実行され、ツールが利用可能になります。 各プロジェクトは 1 つの特定の言語でのみ記述できるので、F# などの言語プロジェクトも、このカテゴリに入ります。
 

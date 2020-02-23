@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 92d97ca3efe761c879d0940a02342edb5a8180f0
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920378"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450981"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -54,7 +54,7 @@ Visual Studio を使用している場合、Visual Studio 2017 では **.NET Sta
 
 ### <a name="default-executables"></a>既定の実行可能ファイル
 
-.NET Core では、既定で[フレームワーク依存の実行可能ファイル](../deploying/index.md#framework-dependent-executables-fde)が作成されるようになりました。 この動作は、グローバルにインストールされているバージョンの .NET Core を使用するアプリケーションの新機能です。 以前は、[自己完結型の配置](../deploying/index.md#self-contained-deployments-scd)でのみ実行可能ファイルが生成されました。
+.NET Core では、既定で[フレームワーク依存の実行可能ファイル](../deploying/index.md#publish-runtime-dependent)が作成されるようになりました。 この動作は、グローバルにインストールされているバージョンの .NET Core を使用するアプリケーションの新機能です。 以前は、[自己完結型の配置](../deploying/index.md#publish-self-contained)でのみ実行可能ファイルが生成されました。
 
 `dotnet build` または `dotnet publish` の実行中に、使用している SDK の環境およびプラットフォームと一致する実行可能ファイルが作成されます。 これらの実行可能ファイルでは、次のような他のネイティブ実行可能ファイルと同じことを期待できます。
 
@@ -301,7 +301,7 @@ Windows では、フラット C API、COM、および WinRT の形式で、質�
 
 [MSIX](https://docs.microsoft.com/windows/msix/) は新しい Windows アプリケーション パッケージ形式です。 これは、Windows 10 に .NET Core 3.0 のデスクトップ アプリケーションを展開するために使用できます。
 
-[Windows アプリケーション パッケージ プロジェクト](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 で使用でき、[自己完結型](../deploying/index.md#self-contained-deployments-scd)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
+[Windows アプリケーション パッケージ プロジェクト](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)は、Visual Studio 2019 で使用でき、[自己完結型](../deploying/index.md#publish-self-contained)の .NET Core アプリケーションを使用して、MSIX パッケージを作成することができます。
 
 .NET Core プロジェクト ファイルの `<RuntimeIdentifiers>` プロパティで、サポートされているランタイムを指定する必要があります。
 

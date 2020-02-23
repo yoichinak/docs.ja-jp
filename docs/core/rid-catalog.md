@@ -2,12 +2,12 @@
 title: .NET Core のランタイム識別子 (RID) のカタログ
 description: ランタイム識別子 (RID) と .NET Core での RID の使用方法について説明します。
 ms.date: 02/22/2019
-ms.openlocfilehash: 4369e263f1f46c73f04c65e4124f63c68d133520
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789905"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451734"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core の RID カタログ
 
@@ -108,7 +108,7 @@ RID を使用するには、どのような RID があるのか知る必要が�
   - `win10-arm`
   - `win10-arm64`
 
-詳細については、[.NET Core の依存関係と要件](install/dependencies.md?tabs=netcore30&pivots=os-windows)に関する記事を参照してください。
+詳細については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-windows)に関する記事を参照してください。
 
 ## <a name="linux-rids"></a>Linux RID
 
@@ -126,7 +126,7 @@ RID を使用するには、どのような RID があるのか知る必要が�
   - `tizen.4.0.0`
   - `tizen.5.0.0`
 
-詳細については、[.NET Core の依存関係と要件](install/dependencies.md?tabs=netcore30&pivots=os-linux)に関する記事を参照してください。
+詳細については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-linux)に関する記事を参照してください。
 
 ## <a name="macos-rids"></a>macOS RID
 
@@ -145,7 +145,7 @@ macOS RID では、以前の "OSX" ブランドが使用されています。 �
 - macOS 10.14 Mojave (.NET Core 1.1 以降のバージョン)
   - `osx.10.14-x64`
 
-詳細については、[.NET Core の依存関係と要件](install/dependencies.md?tabs=netcore30&pivots=os-macos)に関する記事を参照してください。
+詳細については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-macos)に関する記事を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
