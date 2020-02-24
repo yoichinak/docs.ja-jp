@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 21e780470f455ac133fd4d11ae43c63a4b18c582
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712040"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504001"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -39,8 +39,11 @@ ms.locfileid: "75712040"
 
 コードがゼロを返すため、バッチ ファイルで成功が報告されます。 ただし、MainReturnValTest.cs が 0 以外の値を返すように変更して、プログラムを再コンパイルする場合、PowerShell スクリプトの後続の実行では失敗が報告されます。
 
-```powershell
+```dotnetcli
 dotnet run
+```
+
+```powershell
 if ($LastExitCode -eq 0) {
     Write-Host "Execution succeeded"
 } else

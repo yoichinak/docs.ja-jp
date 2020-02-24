@@ -8,12 +8,12 @@ helpviewer_keywords:
 - async method [C#]
 - async [C#]
 ms.assetid: 16f14f09-b2ce-42c7-a875-e4eca5d50674
-ms.openlocfilehash: 3d3f045eed3bad3624ed4994aebb862c52a4e196
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 30ee13a4174a137481fbcd36ccef721958b94a12
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75713780"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450857"
 ---
 # <a name="async-c-reference"></a>async (C# リファレンス)
 
@@ -71,7 +71,7 @@ Windows ストア アプリとしてコードを実行するには:
 
 - <xref:System.Threading.Tasks.Task>
 - <xref:System.Threading.Tasks.Task%601>
-- [void](./void.md)。 `async void` メソッドは、呼び出し元でそれらのメソッドを `await` できず、正常終了またはエラー状態を報告するために別のメカニズムを実装する必要があるため、一般に、イベント ハンドラー以外のコードには推奨されません。
+- [void](../builtin-types/void.md)。 `async void` メソッドは、呼び出し元でそれらのメソッドを `await` できず、正常終了またはエラー状態を報告するために別のメカニズムを実装する必要があるため、一般に、イベント ハンドラー以外のコードには推奨されません。
 - C# 7.0 以降、アクセス可能な `GetAwaiter` を持つ任意の型です。 `System.Threading.Tasks.ValueTask<TResult>` 型はこの実装例で、 NuGet パッケージ `System.Threading.Tasks.Extensions` を追加することで使用できます。 
 
 非同期メソッドでは [in](./in-parameter-modifier.md)、[ref](./ref.md)、[out](./out-parameter-modifier.md) パラメーターを宣言できません。また、[参照戻り値](../../programming-guide/classes-and-structs/ref-returns.md)を指定することもできません。ただし、これらのパラメーターを持つメソッドを呼び出すことはできます。  

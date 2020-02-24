@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - delegates [C#], how to use
 ms.assetid: 99a2fc27-a32e-4a34-921c-e65497520eec
-ms.openlocfilehash: 643e2fad1fd07ecb48c66452533cd80af7557be0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dcc73aba738d6296a44c48aad8b66cd6fc7f4a7b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712352"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448440"
 ---
 # <a name="using-delegates-c-programming-guide"></a>デリゲートの使用 (C# プログラミング ガイド)
 
-[デリゲート](../../language-reference/builtin-types/reference-types.md)は、C および C++ の関数ポインターのようなメソッドを安全にカプセル化する型です。 ただし、C 関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 デリゲートの型は、デリゲートの名前によって定義されます。 次の例では、引数として[文字列](../../language-reference/builtin-types/reference-types.md)を受け取り、[void](../../language-reference/keywords/void.md) を返すメソッドをカプセル化できる `Del` という名前のデリゲートを宣言しています。
+[デリゲート](../../language-reference/builtin-types/reference-types.md)は、C および C++ の関数ポインターのようなメソッドを安全にカプセル化する型です。 ただし、C 関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 デリゲートの型は、デリゲートの名前によって定義されます。 次の例では、引数として[文字列](../../language-reference/builtin-types/reference-types.md)を受け取り、[void](../../language-reference/builtin-types/void.md) を返すメソッドをカプセル化できる `Del` という名前のデリゲートを宣言しています。
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 

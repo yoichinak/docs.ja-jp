@@ -6,12 +6,12 @@ helpviewer_keywords:
 - get accessor [C#]
 - properties [C#], about properties
 ms.assetid: f7f67b05-0983-4cdb-96af-1855d24c967c
-ms.openlocfilehash: 5f4697ea518e7fe03df4ecac9d748386a8ac6313
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d873f626b660bb6bd94710add4543e21e11823d6
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705406"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452020"
 ---
 # <a name="using-properties-c-programming-guide"></a>プロパティの使用 (C# プログラミング ガイド)
 
@@ -53,7 +53,7 @@ ms.locfileid: "75705406"
 
 ## <a name="the-set-accessor"></a>set アクセサー
 
-`set` アクセサーは、戻り値の型が [void](../../language-reference/keywords/void.md) のメソッドと似ています。 型がプロパティの型の `value` と呼ばれる暗黙のパラメーターを使用します。 次の例では、`set` アクセサーが `Name` プロパティに追加されます。
+`set` アクセサーは、戻り値の型が [void](../../language-reference/builtin-types/void.md) のメソッドと似ています。 型がプロパティの型の `value` と呼ばれる暗黙のパラメーターを使用します。 次の例では、`set` アクセサーが `Name` プロパティに追加されます。
 
 [!code-csharp[csProgGuideProperties#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideProperties/CS/Properties.cs#12)]
 

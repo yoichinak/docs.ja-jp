@@ -4,12 +4,12 @@ description: 構造体型と、構造体を作成する方法について説明�
 ms.date: 10/12/2016
 ms.technology: csharp-fundamentals
 ms.assetid: a7094b8c-7229-4b6f-82fc-824d0ea0ec40
-ms.openlocfilehash: cdfe2a763058b8f568ede2ff93c918c2dae874f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 540742ea6a215e09f0cc31b218ac10fbf6192352
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346899"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503989"
 ---
 # <a name="structs"></a>構造体
 
@@ -46,9 +46,6 @@ ms.locfileid: "75346899"
 - 構造体は値型ですが、クラスは参照型です。
 
 - クラスとは異なり、構造体は `new` 演算子を使用せずにインスタンス化できます。
-
-   > [!NOTE]
-   > .NET Core 2.1 以降では、構造体型は、[new 演算子](language-reference/operators/new-operator.md)または [default リテラル](language-reference/operators/default.md#default-literal)を使用するか、それぞれのプライベート フィールドを初期化してインスタンス化する必要があります。 詳細については、「[バージョン 2.0 から 2.1 への移行の破壊的変更](../core/compatibility/2.0-2.1.md#corefx)」を参照してください。
 
 - 構造体は、パラメーターのあるコンストラクターを宣言できます。
 
