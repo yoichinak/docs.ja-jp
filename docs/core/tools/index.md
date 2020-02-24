@@ -2,15 +2,17 @@
 title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI とその機能に関する概要です。
-ms.date: 08/14/2017
-ms.openlocfilehash: b0a8e0dd8cf77bb6f7567c27e9972f62515ec0f2
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.date: 02/13/2020
+ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920478"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543315"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI の概要
+
+**この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
 .NET Core コマンド ライン インターフェイス (CLI) は、.NET Core アプリケーションを開発、ビルド、実行、発行するためのクロスプラットフォーム ツールチェーンです。
 
@@ -20,11 +22,7 @@ ms.locfileid: "76920478"
 
 既定では、次のコマンドがインストールされます。
 
-<!-- markdownlint-disable MD025 -->
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-**基本的なコマンド**
+### <a name="basic-commands"></a>基本的なコマンド
 
 - [new](dotnet-new.md)
 - [restore](dotnet-restore.md)
@@ -40,7 +38,7 @@ ms.locfileid: "76920478"
 - [help](dotnet-help.md)
 - [store](dotnet-store.md)
 
-**プロジェクトの変更コマンド**
+### <a name="project-modification-commands"></a>プロジェクトの変更コマンド
 
 - [add package](dotnet-add-package.md)
 - [add reference](dotnet-add-reference.md)
@@ -48,7 +46,7 @@ ms.locfileid: "76920478"
 - [remove reference](dotnet-remove-reference.md)
 - [list reference](dotnet-list-reference.md)
 
-**高度なコマンド**
+### <a name="advanced-commands"></a>高度なコマンド
 
 - [nuget delete](dotnet-nuget-delete.md)
 - [nuget locals](dotnet-nuget-locals.md)
@@ -56,64 +54,26 @@ ms.locfileid: "76920478"
 - [msbuild](dotnet-msbuild.md)
 - [dotnet install スクリプト](dotnet-install-script.md)
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+### <a name="tool-management-commands"></a>ツール管理コマンド
 
-**基本的なコマンド**
+- [tool install](dotnet-tool-install.md)
+- [tool list](dotnet-tool-list.md)
+- [tool update](dotnet-tool-update.md)
+- [tool restore](global-tools.md#install-a-local-tool) **.NET Core SDK 3.0 以降で使用可能**
+- [tool run](global-tools.md#invoke-a-local-tool) **.NET Core SDK 3.0 以降で使用可能**
+- [tool uninstall](dotnet-tool-uninstall.md)
 
-- [new](dotnet-new.md)
-- [restore](dotnet-restore.md)
-- [build](dotnet-build.md)
-- [publish](dotnet-publish.md)
-- [run](dotnet-run.md)
-- [test](dotnet-test.md)
-- [vstest](dotnet-vstest.md)
-- [pack](dotnet-pack.md)
-- [migrate](dotnet-migrate.md)
-- [clean](dotnet-clean.md)
-- [sln](dotnet-sln.md)
-
-**プロジェクトの変更コマンド**
-
-- [add package](dotnet-add-package.md)
-- [add reference](dotnet-add-reference.md)
-- [remove package](dotnet-remove-package.md)
-- [remove reference](dotnet-remove-reference.md)
-- [list reference](dotnet-list-reference.md)
-
-**高度なコマンド**
-
-- [nuget delete](dotnet-nuget-delete.md)
-- [nuget locals](dotnet-nuget-locals.md)
-- [nuget push](dotnet-nuget-push.md)
-- [msbuild](dotnet-msbuild.md)
-- [dotnet install スクリプト](dotnet-install-script.md)
-
----
-
-CLI では、プロジェクトに追加のツールを指定できるようにする拡張モデルが適用されます。 詳細については、「[.NET Core CLI の拡張モデル](extensibility.md)」を参照してください。
+ツールは、NuGet パッケージからインストールされ、コマンド プロンプトから呼び出されるコンソール アプリケーションです。 ツールは自分で作成することも、サードパーティによって作成されたツールをインストールすることもできます。 ツールは、グローバル ツール、ツールパス ツール、およびローカル ツールとも呼ばれます。 詳細については、[.NET Core ツールの概要](global-tools.md)に関するページを参照してください。
 
 ## <a name="command-structure"></a>コマンド構造
 
 CLI コマンド構造は、[ドライバー ("dotnet")](#driver) と[コマンド](#command)、また場合によってはコマンドの[引数](#arguments)と[オプション](#options)で構成されます。 *my_app* という名前のディレクトリから実行する場合、次のコマンドで示されているように、新しいコンソール アプリの作成やコマンド ラインからの実行など、ほとんどの CLI 操作でこのパターンが見られます。
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
 ```dotnetcli
 dotnet new console
 dotnet build --output /build_output
 dotnet /build_output/my_app.dll
 ```
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-```dotnetcli
-dotnet new console
-dotnet restore
-dotnet build --output /build_output
-dotnet /build_output/my_app.dll
-```
-
----
 
 ### <a name="driver"></a>ドライバー
 
@@ -141,11 +101,7 @@ dotnet build
 
 コマンド ラインで渡すオプションは、呼び出されたコマンドへのオプションです。 たとえば、`dotnet publish --output /build_output` を実行した場合、`--output` オプションとその値は `publish` コマンドに渡されます。
 
-## <a name="migration-from-projectjson"></a>project.json からの移行
-
-Preview 2 ツールを使用して *project.json* ベースのプロジェクトを生成した場合は、リリース ツールで使用するための MSBuild/ *.csproj* へのプロジェクトの移行について、「[dotnet-migrate](dotnet-migrate.md)」トピックを参照してください。 Preview 2 ツールのリリースの前に作成された .NET Core プロジェクトの場合は、「[DNX から .NET Core CLI への移行 (project.json)](../migration/from-dnx.md)」のガイダンスに従って手動でプロジェクトを更新してから `dotnet migrate` を使用するか、プロジェクトを直接アップグレードします。
-
 ## <a name="see-also"></a>関連項目
 
 - [dotnet/sdk GitHub リポジトリ](https://github.com/dotnet/sdk/)
-- [.NET Core のインストール ガイド](https://aka.ms/dotnetcoregs)
+- [.NET Core のインストール ガイド](../install/sdk.md)

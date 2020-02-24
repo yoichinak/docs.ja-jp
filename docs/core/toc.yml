@@ -250,17 +250,23 @@
   items:
     - name: 概要
       href: tools/index.md
-    - name: ツール
+    - name: グローバル ツールとローカル ツール
       expanded: true
       items:
-        - name: グローバル ツール
-          expanded: true
+        - name: ツールを管理する方法
+          href: tools/global-tools.md
+        - name: チュートリアル
           items:
-            - name: 概要
-              href: tools/global-tools.md
-            - name: グローバル ツールを作成する
+            - name: ツールを作成する
+              displayName: tools
               href: tools/global-tools-how-to-create.md
-        - name: ツールの使用に関するイシューのトラブルシューティング
+            - name: グローバル ツールをインストールして使用する
+              displayName: tools
+              href: tools/global-tools-how-to-use.md
+            - name: ローカル ツールをインストールして使用する
+              displayName: tools
+              href: tools/local-tools-how-to-use.md
+        - name: ツールのトラブルシューティング
           href: tools/troubleshoot-usage-issues.md
     - name: 昇格されたアクセス権
       href: tools/elevated-access.md
@@ -320,6 +326,10 @@
               href: tools/dotnet-tool-install.md
             - name: dotnet tool list
               href: tools/dotnet-tool-list.md
+            - name: dotnet tool restore
+              href: tools/dotnet-tool-restore.md
+            - name: dotnet tool run
+              href: tools/dotnet-tool-run.md
             - name: dotnet tool uninstall
               href: tools/dotnet-tool-uninstall.md
             - name: dotnet tool update
