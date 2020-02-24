@@ -53,7 +53,7 @@ ms.locfileid: "77092981"
 
   `readonly struct` 型の `struct` 型への変更は許可されていません。
 
-- ✔️ **許可:*アクセス可能な* (パブリックまたは保護された) コンストラクターがない場合に [sealed](../../csharp/language-reference/keywords/sealed.md) または [abstract](../../csharp/language-reference/keywords/abstract.md) キーワードを型に追加する**
+- ✔️ **許可: *アクセス可能な* (パブリックまたは保護された) コンストラクターがない場合に [sealed](../../csharp/language-reference/keywords/sealed.md) または [abstract](../../csharp/language-reference/keywords/abstract.md) キーワードを型に追加する**
 
 - ✔️ **許可:型の可視性を拡張する**
 
@@ -91,7 +91,7 @@ ms.locfileid: "77092981"
 
 - ✔️ **許可:[virtual](../../csharp/language-reference/keywords/sealed.md) ではないメンバーの可視性を拡張する**
 
-- ✔️ **許可:*アクセス可能な* (パブリックまたは保護された) コンストラクターを持たない、または型が[シールされている](../../csharp/language-reference/keywords/sealed.md)パブリック型に抽象メンバーを追加する**
+- ✔️ **許可: *アクセス可能な* (パブリックまたは保護された) コンストラクターを持たない、または型が[シールされている](../../csharp/language-reference/keywords/sealed.md)パブリック型に抽象メンバーを追加する**
 
   ただし、アクセス可能な (パブリックまたは保護された) コンストラクターを持ち、`sealed` ではない型に抽象メンバーを追加することは許可されていません。
 
