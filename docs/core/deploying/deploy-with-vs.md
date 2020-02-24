@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 23dc0f691c8a8d80a0bd2a5d301ace0d129007af
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920891"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449024"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
@@ -24,7 +24,7 @@ ms.locfileid: "76920891"
 - 自己完結型の展開
 - サードパーティの依存関係を含む、自己完結型の展開
 
-Visual Studio を使用して、.NET Core アプリケーションを開発する方法の詳細については、[.NET Core の依存関係と要件](../install/dependencies.md?tabs=netcore30&pivots=os-windows)に関する記事を参照してください。
+Visual Studio を使用して、.NET Core アプリケーションを開発する方法の詳細については、[.NET Core の依存関係と要件](../install/dependencies.md?pivots=os-windows)に関する記事を参照してください。
 
 ## <a name="framework-dependent-deployment"></a>フレームワークに依存する展開
 
@@ -110,7 +110,7 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 以前](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 以前](#tab/vs156)
 
 プログラムをデバッグしてテストしたら、アプリと共に展開するファイルをアプリの対象のプラットフォームごとに作成します。
 
@@ -176,7 +176,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 以降](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 以降](#tab/vs157)
 
 プログラムをデバッグしてテストしたら、アプリと共に展開するファイルをアプリの対象のプラットフォームごとに作成します。 これを行う場合、対象のプラットフォームごとに別のプロファイルも作成します。
 
@@ -274,7 +274,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 
 このプロジェクトの完全な *csproj* ファイルを次に示します。
 
-# <a name="visual-studio-156-and-earliertabvs156"></a>[Visual Studio 15.6 以前](#tab/vs156)
+# <a name="visual-studio-156-and-earlier"></a>[Visual Studio 15.6 以前](#tab/vs156)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -289,7 +289,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 </Project>
 ```
 
-# <a name="visual-studio-157-and-latertabvs157"></a>[Visual Studio 15.7 以降](#tab/vs157)
+# <a name="visual-studio-157-and-later"></a>[Visual Studio 15.7 以降](#tab/vs157)
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">

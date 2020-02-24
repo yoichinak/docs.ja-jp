@@ -3,12 +3,12 @@ title: C# および Visual Studio Code の使用を開始する
 description: Visual Studio Code を使用した、C# で初めての .NET Core アプリケーションを作成してデバッグする方法について説明します。
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: fdf26d67ca06ffb5ae9f8c12aa29819280770d5c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: acd1c300545bc6c107552576180afd7dec6b7382
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715319"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503522"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -129,8 +129,13 @@ ms.locfileid: "75715319"
 
 5. 変更を保存し、プログラムを再度実行します。 新しいメッセージと共に追加した文字列が表示されます。
 
+    ```dotnetcli
+    dotnet run
+    ```
+
+    次の出力が得られます。
+
     ```console
-    > dotnet run
     Hello World! Happy coding!
     ```
 
