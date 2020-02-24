@@ -14,15 +14,15 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76731357"
 ---
-# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定する
+# <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定する
 
 <xref:System.Windows.Forms.DataGridView> コントロールを使用すると、コントロール全体、特定の列、行ヘッダー、列ヘッダー、および行と列のヘッダーに対して、既定のセルスタイルとセルデータ形式を指定できます。また、行を交互に使用して、元帳効果を作成することもできます。 コントロール全体に対して設定されている既定のスタイルは、列および交互の行に対して設定された既定のスタイルによって上書きされます。 また、個々の行およびセルのコードで設定したスタイルは、既定のスタイルを上書きします。
 
-セルスタイルの詳細については、「 [Windows フォーム DataGridView コントロールのセルのスタイル](cell-styles-in-the-windows-forms-datagridview-control.md)」を参照してください。 交互の行のスタイルを設定する方法については、「[方法: デザイナーを使用して Windows フォーム DataGridView コントロールに交互の行のスタイルを設定](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)する」を参照してください。
+セルスタイルの詳細については、「 [Windows フォーム DataGridView コントロールのセルのスタイル](cell-styles-in-the-windows-forms-datagridview-control.md)」を参照してください。 交互の行のスタイルを設定するには、「[方法:デザイナー](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)を使用して、Windows フォーム DataGridView コントロールに交互の行のスタイルを設定します。
 
-また、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A> プロパティを使用してスタイルを設定し、コントロールに追加されるすべての行に影響を与えることもできます。 行テンプレートの詳細については、「[方法: 行テンプレートを使用して Windows フォーム DataGridView コントロールで行をカスタマイズする](use-the-row-template-to-customize-rows-in-the-datagrid.md)」を参照してください。
+また、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A> プロパティを使用してスタイルを設定し、コントロールに追加されるすべての行に影響を与えることもできます。 行テンプレートの詳細については、「[方法:行テンプレートを使用して、Windows フォーム DataGridView コントロール](use-the-row-template-to-customize-rows-in-the-datagrid.md)の行をカスタマイズします。
 
-次の手順では、<xref:System.Windows.Forms.DataGridView> コントロールを含むフォームを含む**Windows アプリケーション**プロジェクトが必要です。 このようなプロジェクトの設定の詳細については、「[方法: Windows フォームアプリケーションプロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)する」および「[方法: Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)する」を参照してください。
+次の手順では、<xref:System.Windows.Forms.DataGridView> コントロールを含むフォームを含む**Windows アプリケーション**プロジェクトが必要です。 このようなプロジェクトの設定の詳細については、「[方法:Windows フォームアプリケーションプロジェクトを作成し、次の操作方法を [](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ます。Windows フォーム](how-to-add-controls-to-windows-forms.md)にコントロールを追加します。
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>コントロール内のすべてのセルに既定のスタイルを設定するには
 
@@ -57,7 +57,7 @@ ms.locfileid: "76731357"
 
 4. Null 値が含まれる可能性のあるデータソースに <xref:System.Windows.Forms.DataGridView> コントロールをバインドする場合は、 **[Null 値]** ボックスに入力します。 この値は、セルの値が null 参照 (Visual Basic では`Nothing`) または <xref:System.DBNull.Value?displayProperty=nameWithType>の場合に表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
@@ -66,6 +66,6 @@ ms.locfileid: "76731357"
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
 - [Windows フォーム DataGridView コントロールでのセルのスタイル](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
-- [方法: Windows フォームアプリケーションプロジェクトを作成する](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: デザイナーを使用して、Windows フォーム DataGridView コントロールに交互の行のスタイルを設定し](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [方法: Windows フォーム アプリケーション プロジェクトの作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [方法: Windows フォーム](how-to-add-controls-to-windows-forms.md) にコントロールを追加する
