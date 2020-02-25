@@ -2,12 +2,12 @@
 title: 自己ホスト型 gRPC アプリケーション-WCF 開発者向け gRPC
 description: ASP.NET Core gRPC アプリケーションを自己ホスト型サービスとして展開する。
 ms.date: 09/02/2019
-ms.openlocfilehash: 2244f161ad4b5d60138ae0f7b4d6a9c8c8829aa8
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: ee370ba1893b060505b38ddf84235bd84433ad32
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503404"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542990"
 ---
 # <a name="self-hosted-grpc-applications"></a>自己ホスト型 gRPC アプリケーション
 
@@ -90,6 +90,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
   ```dotnetcli
   dotnet publish -c Release -r linux-x64 -o ./publish
   ```
+  
 `publish` ディレクトリの完全な内容を、Linux ホストのインストールフォルダーにコピーします。 サービスを登録するには、`/etc/systemd/system` ディレクトリに追加する、*ユニットファイル*と呼ばれる特殊なファイルが必要です。 このフォルダーにファイルを作成するには、ルートアクセス許可が必要です。 ファイルに、使用する `systemd` する識別子と、`.service` 拡張機能の名前を指定します。 たとえば、 `/etc/systemd/system/myapp.service`を使用します。
 
 次の例に示すように、サービスファイルは INI 形式を使用します。
