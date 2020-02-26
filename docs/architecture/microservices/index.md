@@ -2,12 +2,12 @@
 title: .NET マイクロサービス。 コンテナー化された .NET アプリケーションのアーキテクチャ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 5da167de1ffd2169aea44b9872281e71c87927b1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1337fe56e78e03a85627737bd52a089fd946b842
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502626"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543535"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ
 
@@ -21,7 +21,7 @@ ms.locfileid: "77502626"
 
 ## <a name="action-links"></a>アクション リンク
 
-- この e-book を任意の形式でダウンロードする (英語版のみ): | [PDF](https://aka.ms/microservicesebook) | [MOBI](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-mobi) | [EPUB](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook-epub) |
+- この電子書籍は、PDF 形式 (英語版のみ) で[ダウンロード](https://aka.ms/microservicesebook)することもできます
 
 - 参照アプリケーションを複製/フォーク[ on GitHub の eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 
@@ -78,9 +78,7 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 
 ## <a name="send-us-your-feedback"></a>フィードバックをお寄せください。
 
-このガイドは、コンテナー化されたアプリケーションと .NET のマイクロサービスのアーキテクチャの理解を促進する目的で書かれています。 ガイドと関連する参照アプリケーションは進化していくため、お客様のフィードバックをお待ちしています。 このガイドを改善する方法についてご意見があれば、以下のアドレスに送信してください。
-
-[dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com)
+このガイドは、コンテナー化されたアプリケーションと .NET のマイクロサービスのアーキテクチャの理解を促進する目的で書かれています。 ガイドと関連する参照アプリケーションは進化していくため、お客様のフィードバックをお待ちしています。 このガイドを改善する方法に関するコメントがある場合は、<https://aka.ms/ebookfeedback> にフィードバックを送信してください。
 
 ## <a name="credits"></a>謝辞
 
@@ -149,8 +147,6 @@ eShopOnContainers アプリケーションは、 Docker コンテナーを使用
 > **Miguel Veloso**、Plain Concepts のソフトウェア開発エンジニア
 
 ## <a name="copyright"></a>Copyright
-
-次の場所でダウンロードできます: <https://aka.ms/microservicesebook>
 
 発行者
 
