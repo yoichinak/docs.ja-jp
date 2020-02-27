@@ -10,12 +10,12 @@ ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: 3b88f64fca8d3f11308f1cbfde97de2e6c2f22cc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0b68a70b55cbf03d480fd388a637a4caf78b6eaa
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76740220"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628801"
 ---
 # <a name="walkthrough-arrange-controls-on-windows-forms-using-snaplines"></a>チュートリアル: スナップ線を使用した Windows フォームでのコントロールの配置
 
@@ -124,7 +124,7 @@ ms.locfileid: "76740220"
 
 ## <a name="align-a-label-to-a-controls-text"></a>コントロールのテキストにラベルを揃える
 
-1. <xref:System.Windows.Forms.TextBox> ツールボックス **から** コントロールをフォームにドラッグします。 フォームに <xref:System.Windows.Forms.TextBox> コントロールをドロップする場合は、スマートタググリフをクリックし、 **[テキストを textBox1 に設定]** オプションを選択します。 詳細については、「[チュートリアル: Windows フォームコントロールのスマートタグを使用した一般的なタスクの実行](performing-common-tasks-using-smart-tags-on-wf-controls.md)」を参照してください。
+1. <xref:System.Windows.Forms.TextBox> ツールボックス **から** コントロールをフォームにドラッグします。 フォームに <xref:System.Windows.Forms.TextBox> コントロールをドロップする場合は、スマートタググリフをクリックし、 **[テキストを textBox1 に設定]** オプションを選択します。 詳細については、「[チュートリアル: デザイナーアクションを使用した一般的なタスクの実行](perform-common-tasks-design-actions.md)」を参照してください。
 
 2. <xref:System.Windows.Forms.Label> ツールボックス **から** コントロールをフォームにドラッグします。
 
@@ -180,7 +180,7 @@ ms.locfileid: "76740220"
 
 4. フォーム上のコントロールを選択し、他のコントロールの周囲に移動します。 スナップ線が表示されないことに注意してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次のステップ:
 
 スナップ線は、フォーム上にコントロールを配置するための直感的な手段を提供します。 さらに理解を深めるには、次の操作を行うことをお勧めします。
 

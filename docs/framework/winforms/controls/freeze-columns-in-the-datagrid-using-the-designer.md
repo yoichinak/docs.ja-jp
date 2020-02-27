@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: af8e07d7b1b0524e33688fd9d879818aa13be041
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 469b32d41798089e3acf4bd62c2ae1172a3ab740
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745672"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628827"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム DataGridView コントロールの列を固定する
 ユーザーが Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールに表示されるデータを確認するときに、1 つの列または列のセットを頻繁に参照しなければならないことがあります。 たとえば、多数の列が含まれている顧客情報のテーブルを表示する場合、他の列を表示可能な領域の外側にスクロールできるようにしながら、常に顧客名を表示すると便利です。
@@ -23,7 +23,7 @@ ms.locfileid: "76745672"
 
 ## <a name="to-freeze-a-column-using-the-designer"></a>デザイナーを使用して列を固定するには
 
-1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にあるスマートタググリフ (![スマートタググリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) をクリックし、 **[列の編集]** を選択します。
+1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にある [デザイナーアクション] グリフ (![小さい黒い矢印](./media/designer-actions-glyph.gif)) をクリックし、[列の**編集**] を選択します。
 
 2. **[選択された列]** ボックスの一覧から列を選択します。
 

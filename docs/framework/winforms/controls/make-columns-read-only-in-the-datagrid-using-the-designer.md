@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 - columns [Windows Forms], read-only
 ms.assetid: b4ef7a75-ab33-4ee3-b2cf-201530e454e9
-ms.openlocfilehash: 51d9488ef83f7d2c1c01c9ffd756edf8944d738d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 2dd3f8bfcad39ca3d530c79a6e6a8170585f7adf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744978"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627956"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法 : デザイナーを使用して Windows フォームの DataGridView コントロールで列を読み取り専用にする
 既定では、ユーザーは Windows フォーム <xref:System.Windows.Forms.DataGridView> コントロールに表示されるテキストおよび数値データを変更できます。 変更を意図していないデータを表示する場合は、データを含む列を読み取り専用にする必要があります。 コントロールを完全に読み取り専用にする方法については、「[方法: デザイナーを使用して Windows フォーム DataGridView コントロールで行の追加と削除を回避](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)する」を参照してください。
@@ -21,7 +21,7 @@ ms.locfileid: "76744978"
 
 ## <a name="to-make-a-column-read-only-by-using-the-designer"></a>デザイナーを使用して列を読み取り専用にするには
 
-1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にあるスマートタググリフ (![スマートタググリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) をクリックし、 **[列の編集]** を選択します。
+1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にある [デザイナーアクション] グリフ (![小さい黒い矢印](./media/designer-actions-glyph.gif)) をクリックし、[列の**編集**] を選択します。
 
 2. **[選択された列]** ボックスの一覧から列を選択します。
 

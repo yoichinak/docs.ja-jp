@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: 976f257d38dc7be5c904e63da47c61486bd3301c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 470f350a4791a3db39d08ab7992d86eb7b2e270a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737135"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628619"
 ---
 # <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム DataGridView 列の種類を変更する
 Windows フォーム <xref:System.Windows.Forms.DataGridView> コントロールに既に追加されている列の型を変更することが必要になる場合があります。 たとえば、データソースにコントロールをバインドするときに自動的に生成されるいくつかの列の型を変更することができます。 これは、表示するテーブルに、関連テーブル内の行に対する外部キーを含む列がある場合に便利です。 この場合は、これらの外部キーを表示するテキストボックスの列を、関連するテーブルの意味のある値を表示するコンボボックスの列に置き換えることができます。
@@ -21,7 +21,7 @@ Windows フォーム <xref:System.Windows.Forms.DataGridView> コントロール
 
 ### <a name="to-change-the-type-of-a-column-using-the-designer"></a>デザイナーを使用して列の型を変更するには
 
-1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にあるスマートタググリフ (![スマートタググリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) をクリックし、 **[列の編集]** を選択します。
+1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にある [デザイナーアクション] グリフ (![小さい黒い矢印](./media/designer-actions-glyph.gif)) をクリックし、[列の**編集**] を選択します。
 
 2. **[選択された列]** ボックスの一覧から列を選択します。
 

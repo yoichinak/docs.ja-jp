@@ -2,16 +2,18 @@
 title: コンパイラ オプション
 description: コンパイラF#のコマンドラインオプションを使用して、 F#アプリとライブラリのコンパイルを制御します。
 ms.date: 12/10/2018
-ms.openlocfilehash: d0f4d1ca5ae45af25d6c304a2920d5c457700b1a
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: ecaae538a5db2f5dfefa79cb8e7b8b51d39c440d
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73424752"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628879"
 ---
 # <a name="compiler-options"></a>コンパイラ オプション
 
-このトピックでは、F# コンパイラ (fsc.exe) のコマンド ライン オプションについて説明します。 コンパイル環境は、プロジェクトのプロパティを設定して制御することもできます。
+このトピックでは、F# コンパイラ (fsc.exe) のコマンド ライン オプションについて説明します。
+
+コンパイル環境は、プロジェクトのプロパティを設定して制御することもできます。 .NET Core を対象とするプロジェクトの場合、`.fsproj`の "その他のフラグ" `<OtherFlags>...</OtherFlags>` プロパティは、余分なコマンドラインオプションを指定するために使用されます。
 
 ## <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -26,7 +28,7 @@ ms.locfileid: "73424752"
 |`--crossoptimize[+|-]`|モジュール間の最適化を有効または無効にします。|
 |<code>--delaysign[+&#124;-]</code>|厳密な名前のキーのパブリックな部分のみを使ってアセンブリに遅延署名します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、「 [ &#47;delaysign &#40;&#35; C&#41;コンパイラオプション](https://msdn.microsoft.com/library/ta1sxwy8.aspx)」を参照してください。|
 |<code>--checked[+&#124;-]</code>|オーバーフロー チェックの生成を有効または無効にします。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、「 [ &#47;checked &#40;&#35; C&#41;Compiler Options](https://msdn.microsoft.com/library/h25wtyxf.aspx)」を参照してください。|
-|<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|デバッグ情報の生成を有効または無効にしたり、生成するデバッグ情報の種類を指定したりします。 既定値は、実行中のプログラムにアタッチできる full です。 Pdb (プログラムデータベース) ファイルに格納されている限られたデバッグ情報を取得するには、 **pdbonly**を選択します。<br /><br />同じ名前の C# コンパイラ オプションに相当します。 詳細については、「<br /><br />[C コンパイラオプション&#41;をデバッグ&#40;します。&#35; &#47;](https://msdn.microsoft.com/library/8cw0bt21.aspx)|
+|<code>--debug[+&#124;-]</code><br /><br /><code>-g[+&#124;-]</code><br /><br /><code>--debug:[full&#124;pdbonly]</code><br /><br /><code>-g: [full&#124;pdbonly]</code>|デバッグ情報の生成を有効または無効にしたり、生成するデバッグ情報の種類を指定したりします。 既定値は、実行中のプログラムにアタッチできる full です。 Pdb (プログラムデータベース) ファイルに格納されている限られたデバッグ情報を取得するには、 **pdbonly**を選択します。<br /><br />同じ名前の C# コンパイラ オプションに相当します。 詳細については、 を参照してください。<br /><br />[C コンパイラオプション&#41;をデバッグ&#40;します。&#35; &#47;](https://msdn.microsoft.com/library/8cw0bt21.aspx)|
 |`--define:symbol`<br /><br />`-d:symbol`|条件付きコンパイルで使用する記号を定義します。|
 |<code>--deterministic[+&#124;-]</code>|決定的なアセンブリ (モジュールのバージョン GUID とタイムスタンプを含む) を生成します。 このオプションは、ワイルドカードのバージョン番号と共に使用することはできません。また、埋め込みおよびポータブルデバッグの種類のみをサポートします。|
 |`--doc:xmldoc-filename`|指定したファイルに XML ドキュメント コメントを生成するようにコンパイラに指示します。 詳細については、「 [XML Documentation](xml-documentation.md)」を参照してください。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、「 [ &#47;doc &#40;&#35; C&#41;コンパイラオプション](https://msdn.microsoft.com/library/3260k4x7.aspx)」を参照してください。|
@@ -57,7 +59,7 @@ ms.locfileid: "73424752"
 |`--standalone`|F# ライブラリなどの追加のアセンブリを行わなくても、単独で実行できるように、すべての依存関係を含むアセンブリを生成するように指定します。|
 |`--staticlink:assembly-name`|指定したアセンブリと、そのアセンブリに依存するすべての参照 DLL を静的にリンクします。 DLL 名ではなく、アセンブリ名を使用します。|
 |`--subsystemversion`|生成された実行可能ファイルが使用できる OS サブシステムのバージョンを指定します。 Windows 8.1 の場合は6.02、windows 7 の場合は6.01、Windows Vista の場合は6.00 を使用します。 このオプションは、DLL ではなく、実行可能ファイルのみに適用され、アプリケーションが OS の特定のバージョンでのみ使用できる特定のセキュリティ機能に依存している場合にのみ使用される必要があります。 このオプションが使用され、低いバージョンの OS でアプリケーションを実行しようとすると、失敗してエラー メッセージが表示されます。|
-|<code>--tailcalls[+&#124;-]</code>|tail IL 命令の使用を有効または無効にします。有効にすると、スタック フレームが tail 再帰関数で再利用されます。 既定では、このオプションは有効になっています。|
+|<code>--tailcalls[+&#124;-]</code>|tail IL 命令の使用を有効または無効にします。有効にすると、スタック フレームが tail 再帰関数で再利用されます。 このオプションは、既定の設定で有効になります。|
 |<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|生成されるコンパイル済みコードの種類とファイル名を指定します。<ul><li>`exe` はコンソール アプリケーションを表します。<br /></li><li>`winexe` は Windows アプリケーションを表します。コンソール アプリケーションとの違いは、標準入出力ストリーム (stdin、stdout、および stderr) が定義されていないことです。<br /></li><li>`library` は、エントリ ポイントのないアセンブリです。<br /></li><li>`module` は .NET Framework モジュール (.netmodule) です。後で他のモジュールと組み合わせて、1 つのアセンブリにまとめることができます。<br /></li><ul/>このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、「 [ &#47;target &#40;&#35; C&#41;Compiler Options](https://msdn.microsoft.com/library/6h25dztx.aspx)」を参照してください。|
 |`--times`|コンパイルのタイミング情報を表示します。|
 |`--utf8output`|UTF-8 エンコーディングでのコンパイラ出力を有効にします。|
@@ -67,9 +69,9 @@ ms.locfileid: "73424752"
 |`--win32manifest:manifest-filename`|コンパイルに Win32 マニフェスト ファイルを追加します。 このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、「 [ &#47;win32manifest &#40;&#35; C&#41;コンパイラオプション](https://msdn.microsoft.com/library/bb545961.aspx)」を参照してください。|
 |`--win32res:resource-filename`|コンパイルに Win32 リソース ファイルを追加します。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、「 [ &#47;win32res (&#40;C&#35;)&#41;コンパイラオプション](https://msdn.microsoft.com/library/8f2f5x2e.aspx)」を参照してください。|
 
-## <a name="related-articles"></a>関連記事
+## <a name="related-articles"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |-----|-----------|
 |[F# Interactive オプション](fsharp-interactive-options.md)|F# インタープリター (fsi.exe) でサポートされるコマンド ライン オプションについて説明します。|
 |[プロジェクトのプロパティのリファレンス](/visualstudio/ide/reference/project-properties-reference)|ビルド オプションを提供するプロジェクトのプロパティのページなど、プロジェクトの UI について説明します。|

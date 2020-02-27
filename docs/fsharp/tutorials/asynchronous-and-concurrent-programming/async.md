@@ -2,12 +2,12 @@
 title: 非同期プログラミング
 description: がコアF#関数型プログラミングの概念から派生した言語レベルのプログラミングモデルに基づいて、非同期性のクリーンなサポートを提供する方法について説明します。
 ms.date: 12/17/2018
-ms.openlocfilehash: 471566befd69f330fb9254dbd57b19569d9f9ad3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7021d7936d10f9ea6fceb4aa56db3285d21624ad
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344669"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628853"
 ---
 # <a name="async-programming-in-f"></a>F\# での非同期プログラミング
 
@@ -39,7 +39,7 @@ ms.locfileid: "75344669"
 
 重要なことは、非同期計算はメインプログラムフローから独立していることです。 非同期計算がいつまたはどのように実行されるかに関する保証はほとんどありませんが、それらを調整しスケジューリングするためのアプローチがいくつかあります。 この記事の残りの部分では、 F# の非同期処理に関する主要な概念と、F# に組み込まれている型、関数、および式の使用方法について説明します。
 
-## <a name="core-concepts"></a>コア概念
+## <a name="core-concepts"></a>主要な概念
 
 F# では、非同期プログラミングは次の 3 つの主要な概念を中心にしています。
 
@@ -69,11 +69,11 @@ let main argv =
     0
 ```
 
-この例では、`printTotalFileBytes` 関数は `string -> Async<unit>`型です。 関数を呼び出すと、実際には非同期計算が実行されません。 代わりに、非同期に実行する作業の*仕様*として機能する `Async<unit>` が返されます。 その本体で `Async.AwaitTask` を呼び出し、<xref:System.IO.File.WriteAllBytesAsync%2A> の結果を適切な型に変換します。
+この例では、`printTotalFileBytes` 関数は `string -> Async<unit>`型です。 関数を呼び出すと、実際には非同期計算が実行されません。 代わりに、非同期に実行する作業の*仕様*として機能する `Async<unit>` が返されます。 その本体で `Async.AwaitTask` を呼び出し、<xref:System.IO.File.ReadAllBytesAsync%2A> の結果を適切な型に変換します。
 
-もう 1 つの重要な行は `Async.RunSynchronously` の呼び出しです。 これは、 F# の非同期計算を実際に実行する際に呼び出す必要のある Async モジュールの開始関数の 1 つです。
+もう1つの重要な行は、`Async.RunSynchronously`の呼び出しです。 これは、 F# の非同期計算を実際に実行する際に呼び出す必要のある Async モジュールの開始関数の 1 つです。
 
-これは、 C#`async` プログラミングの Visual Basic スタイルとの基本的な違いです。 F#では、非同期計算は**コールド(冷たい)タスク**として考えることができます。 これらを実際に実行するには、明示的に開始する必要があります。 これにはいくつかのC#利点があります。これにより、または Visual Basic よりもはるかに簡単に非同期作業を組み合わせることができます。
+これは、 C#`async` プログラミングの Visual Basic スタイルとの基本的な違いです。 でF#は、非同期計算は**コールドタスク**と考えることができます。 これらを実際に実行するには、明示的に開始する必要があります。 これにはいくつかのC#利点があります。これにより、または Visual Basic よりもはるかに簡単に非同期作業を組み合わせることができます。
 
 ## <a name="combine-asynchronous-computations"></a>非同期計算の結合
 
@@ -101,11 +101,11 @@ let main argv =
     0
 ```
 
-ご覧のように、`main` 関数には、さらに多くの呼び出しが行われています。 概念的には、次のことが行われます。
+ご覧のように、`main` 関数には多くの呼び出しが行われています。 概念的には、次のことが行われます。
 
-1. コマンドライン引数を、`Array.map` を指定して `Async<unit>` の計算に変換します。
-2. 実行時に並列で `printTotalFileBytes` の計算をスケジュールして実行する `Async<'T[]>` を作成します。
-3. `Async<unit>` を生成しますが、これは並列計算を実行してその結果を無視します。
+1. コマンドライン引数を、`Array.map`を使用して `Async<unit>` の計算に変換します。
+2. `printTotalFileBytes` 計算の実行時に並列実行をスケジュールして実行する `Async<'T[]>` を作成します。
+3. 並列計算を実行し、その結果を無視する `Async<unit>` を作成します。
 4. `Async.RunSynchronously` で最後の計算を明示的に実行し、完了するまでブロックします。
 
 このプログラムを実行すると、コマンドライン引数ごとに `printTotalFileBytes` が並列実行されます。 非同期計算はプログラムフローとは無関係に実行されるため、それぞれ情報を出力して終了する順序は決まりません。 計算処理は並列にスケジューリングされますが、その実行順序は保証されません。
@@ -138,19 +138,19 @@ let main argv =
 
 非同期コードF#を記述する場合は、通常、計算のスケジューリングを処理するフレームワークと対話します。 ただし、これは常にであるとは限りません。そのため、非同期処理をスケジュールするためのさまざまな開始関数について学習することをお勧めします。
 
-F# の非同期計算は、既に実行されている作業を表すのではなく、作業の_仕様_を表しているので、開始関数を使用して明示的に開始する必要があります。 さまざまなコンテキストで役に立つ[Async開始関数](https://msdn.microsoft.com/library/ee370232.aspx) が多数あります。 次のセクションでは、より一般的な開始関数のいくつかについて説明します。
+非同期F#計算は、既に実行されている作業の表現ではなく、作業の_仕様_であるため、開始関数を使用して明示的に開始する必要があります。 さまざまなコンテキストで役に立つ[非同期開始関数](https://msdn.microsoft.com/library/ee370232.aspx)が多数あります。 次のセクションでは、より一般的な開始関数のいくつかについて説明します。
 
 ### <a name="asyncstartchild"></a>Async.StartChild
 
 非同期計算内で子計算を開始します。 これを用いることで、複数の非同期計算を同時に実行できます。 子の計算では、キャンセルトークンを親計算と共有しています。 親の計算が取り消された場合は、子の計算も取り消されます。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 ```
 
-いつ使用するか:
+使用すべき状況:
 
 - 一度に 1 つずつではなく、複数の非同期計算を同時に実行するが、並列でスケジューリングされない場合。
 - 子計算の有効期間を親計算の有効期間に関連付ける場合。
@@ -164,13 +164,13 @@ computation: Async<'T> - timeout: ?int -> Async<Async<'T>>
 
 非同期計算を実行し、現在のオペレーティング システムのスレッドですぐに開始します。 これは、計算中に呼び出し元のスレッドで何かを更新する必要がある場合に便利です。 たとえば、非同期計算で UI を更新する必要がある場合 (進行状況バーを更新する場合など) は、`Async.StartImmediate` を使用する必要があります。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 ```
 
-いつ使用するか:
+使用すべき状況:
 
 - 非同期計算の途中で、呼び出し元のスレッドで何かを更新する必要がある場合。
 
@@ -182,25 +182,25 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 
 スレッド プールで計算を実行します。 計算が終了した後、対応する状態で完了する <xref:System.Threading.Tasks.Task%601> を返します (結果を生成するか、例外をスローするか、または取り消されます)。 キャンセルトークンが指定されていない場合は、既定のキャンセルトークンが使用されます。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computation: Async<'T> - taskCreationOptions: ?TaskCreationOptions - cancellationToken: ?CancellationToken -> Task<'T>
 ```
 
-いつ使用するか:
+使用すべき状況:
 
 - 非同期計算の結果を表すために <xref:System.Threading.Tasks.Task%601> を想定している .NET API を呼び出す必要がある場合。
 
 注意事項:
 
-- この呼び出しでは、追加の `Task` オブジェクトを割り当てます。よってこれを頻繁に使用される場合にオーバーヘッドが増加する可能性があります。
+- この呼び出しでは、追加の `Task` オブジェクトが割り当てられます。これにより、頻繁に使用される場合にオーバーヘッドが増加する可能性があります。
 
 ### <a name="asyncparallel"></a>Async.Parallel
 
-並列で実行される一連の非同期計算をスケジューリングします。 `maxDegreesOfParallelism` パラメーターを指定することによって、必要に応じて並列処理の次数をチューニング/調整できます。
+並列で実行される一連の非同期計算をスケジューリングします。 並列処理の次数は、`maxDegreesOfParallelism` パラメーターを指定することによって、必要に応じてチューニング/調整できます。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
@@ -220,7 +220,7 @@ computations: seq<Async<'T>> - ?maxDegreesOfParallelism: int -> Async<'T[]>
 
 一連の非同期計算を渡された順序で実行されるようにスケジューリングします。 最初の計算を実行し、その後、その次という具合です。 計算は並列実行されません。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computations: seq<Async<'T>> -> Async<'T[]>
@@ -237,33 +237,33 @@ computations: seq<Async<'T>> -> Async<'T[]>
 
 ### <a name="asyncawaittask"></a>Async.AwaitTask
 
-指定された <xref:System.Threading.Tasks.Task%601> が完了するまで待機し、その結果を `Async<'T>` として返すような非同期計算を返します。
+指定された <xref:System.Threading.Tasks.Task%601> が完了するまで待機し、その結果をとして返す非同期計算を返し `Async<'T>`
 
-型シグニチャ:
+署名:
 
 ```fsharp
 task: Task<'T>  -> Async<'T>
 ```
 
-いつ使用するか:
+使用すべき状況:
 
-- F#の非同期計算内で <xref:System.Threading.Tasks.Task%601> を返す .NET API を使用する場合。
+- F#非同期計算内で <xref:System.Threading.Tasks.Task%601> を返す .net API を使用する場合。
 
 注意事項:
 
-- 例外は、タスク並列ライブラリ(Task Parallel Library)の規則に従って <xref:System.AggregateException> でラップされます。これは、 F#の非同期における例外の処理方法と異なります。
+- 例外は、タスク並列ライブラリの規則に従って <xref:System.AggregateException> にラップされます。これはF# 、async が例外を一般に示す方法とは異なります。
 
 ### <a name="asynccatch"></a>Async.Catch
 
 指定された `Async<'T>`を実行し、`Async<Choice<'T, exn>>`を返す非同期計算を作成します。 指定された `Async<'T>` が正常に完了した場合、結果の値と共に `Choice1Of2` が返されます。 完了前に例外がスローされた場合は、発生した例外と共に `Choice2of2` が返されます。 多くの計算で構成され、その計算の1つが例外をスローする非同期計算で使用される場合、外側の計算は完全に停止されます。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computation: Async<'T> -> Async<Choice<'T, exn>>
 ```
 
-いつ使用するか:
+使用すべき状況:
 
 - 例外によって失敗する可能性があり、呼び出し元でその例外を処理する必要がある非同期処理を実行する場合。
 
@@ -275,13 +275,13 @@ computation: Async<'T> -> Async<Choice<'T, exn>>
 
 指定された計算を実行し、その結果を無視する非同期計算を作成します。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computation: Async<'T> -> Async<unit>
 ```
 
-いつ使用するか:
+使用すべき状況:
 
 - 結果が不要な非同期計算がある場合。 これは、非非同期コードの `ignore` コードに似ています。
 
@@ -293,7 +293,7 @@ computation: Async<'T> -> Async<unit>
 
 非同期計算を実行し、呼び出し元のスレッドでその結果を待機します。 これはブロッキングする呼び出しです。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -> 'T
@@ -312,7 +312,7 @@ computation: Async<'T> - timeout: ?int - cancellationToken: ?CancellationToken -
 
 `unit`を返すスレッドプール内の非同期計算を開始します。 は結果を待機しません。 `Async.Start` で開始された入れ子になった計算は、それを呼び出した親計算とは無関係に完全に開始されます。 有効期間は、どの親計算にも関連付けられていません。 親計算が取り消された場合、子計算は取り消されません。
 
-型シグニチャ:
+署名:
 
 ```fsharp
 computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
@@ -328,15 +328,15 @@ computation: Async<unit> - cancellationToken: ?CancellationToken -> unit
 注意事項:
 
 - `Async.Start` で開始された計算によって発生した例外は、呼び出し元に反映されません。 呼び出し履歴は完全にアンワインドされます。
-- `Async.Start` で開始された effectful 作業 (`printfn` の呼び出しなど) では、プログラムの実行のメインスレッドで効果が発生しません。
+- すべての effectful 作業 (`printfn`の呼び出しなど) が `Async.Start` で開始されても、プログラムの実行のメインスレッドで効果が発生することはありません。
 
 ## <a name="interoperate-with-net"></a>.NET との相互運用
 
 非同期[/await](../../../standard/async.md)スタイルの非同期プログラミングを使用C#する .net ライブラリまたはコードベースを使用する場合があります。 ほとんどC#の .net ライブラリでは、`Async<'T>`ではなく、<xref:System.Threading.Tasks.Task%601> と <xref:System.Threading.Tasks.Task> の種類を中核となる抽象化として使用するため、これらの2つの方法の間には、非同期性にまたがる境界を越える必要があります。
 
-### <a name="how-to-work-with-net-async-and-taskt"></a>.NET async と `Task<T>` を使用する方法-
+### <a name="how-to-work-with-net-async-and-taskt"></a>.NET async と `Task<T>` の使用方法
 
-<xref:System.Threading.Tasks.Task%601> (つまり、戻り値を持つ非同期計算) を使用する .NET 非同期ライブラリおよびコードベースを操作するのは簡単であり、F#には組み込みのサポート機能があります。
+<xref:System.Threading.Tasks.Task%601> を使用する .NET 非同期ライブラリおよびコードベースの操作 (つまり、戻り値を持つ非同期計算) は簡単であり、でF#のサポートが組み込まれています。
 
 `Async.AwaitTask` 関数を使用すると、.NET の非同期計算を待機できます。
 
@@ -348,7 +348,7 @@ let getValueFromLibrary param =
     }
 ```
 
-`Async.StartAsTask` 関数を使用して、非同期計算を .NET 呼び出し元に渡すことができます。
+`Async.StartAsTask` 関数を使用すると、非同期計算を .NET 呼び出し元に渡すことができます。
 
 ```fsharp
 let computationForCaller param =
@@ -358,9 +358,9 @@ let computationForCaller param =
     } |> Async.StartAsTask
 ```
 
-### <a name="how-to-work-with-net-async-and-task"></a>.NET async と `Task` を使用する方法-
+### <a name="how-to-work-with-net-async-and-task"></a>.NET async と `Task` の使用方法
 
-<xref:System.Threading.Tasks.Task> (つまり、値を返さない .NET 非同期計算) を使用する Api を操作するには、`Async<'T>` を <xref:System.Threading.Tasks.Task> に変換する関数を追加することが必要になる場合があります。
+<xref:System.Threading.Tasks.Task> を使用する Api (つまり、値を返さない .NET 非同期計算) を操作するには、`Async<'T>` を <xref:System.Threading.Tasks.Task>に変換する関数を追加する必要があります。
 
 ```fsharp
 module Async =
@@ -369,7 +369,7 @@ module Async =
         Async.StartAsTask comp :> Task
 ```
 
-`Async.AwaitTask` を入力として受け取る <xref:System.Threading.Tasks.Task> が既に存在します。 これと以前に定義した `startTaskFromAsyncUnit` 関数を使用すると、 F#非同期計算から <xref:System.Threading.Tasks.Task> 型を開始および待機できます。
+入力として <xref:System.Threading.Tasks.Task> を受け入れる `Async.AwaitTask` が既に存在します。 これと以前に定義した `startTaskFromAsyncUnit` 関数を使用すると、 F#非同期計算から <xref:System.Threading.Tasks.Task> 型を開始および待機できます。
 
 ## <a name="relationship-to-multi-threading"></a>マルチスレッドとの関係
 
@@ -382,9 +382,9 @@ module Async =
 
 F# には現在のスレッド (または現在のスレッド以外) で 非同期計算を開始する機能を提供していますが、一般的には非同期処理は特定のスレッド処理方法に関連付けられません。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [F#非同期プログラミングモデル](https://www.microsoft.com/research/publication/the-f-asynchronous-programming-model)
-- [Jet.com の F# 非同期ガイド](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
-- [F# の楽しく得する非同期プログラミングガイド](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
-- [C# と F# における非同期処理: C# の非同期処理の注意事項](http://tomasp.net/blog/csharp-async-gotchas.aspx/)
+- [Jet com のF#非同期ガイド](https://medium.com/jettech/f-async-guide-eb3c8a2d180a)
+- [F#楽しいと利益の非同期プログラミングガイド](https://fsharpforfunandprofit.com/posts/concurrency-async-and-parallel/)
+- [とF#でC#の非同期: 非同期の注意事項C#](http://tomasp.net/blog/csharp-async-gotchas.aspx/)

@@ -2,22 +2,22 @@
 title: 反復子
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 465a8e6650c3d015520164030a146c9502ebe603
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353738"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628736"
 ---
 # <a name="iterators-visual-basic"></a>反復子 (Visual Basic)
 
 *反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。
 
-iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 Iterator メソッドは [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを使用して、各要素を 1 回に 1 つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。
+iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 Iterator メソッドは[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを使用して、各要素を1回に1つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。
 
-[For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメントを使用するか、LINQ クエリを使用して、クライアントコードから反復子を使用します。
+For Each を使用して、クライアントコードから反復子を使用します。 [次](../../../visual-basic/language-reference/statements/for-each-next-statement.md)のステートメント、または LINQ クエリを使用します。
 
-次の例では、`For Each` ループの最初の反復子により、最初の `SomeNumbers` ステートメントに達するまで `Yield` iterator メソッドで実行が続行されます。 このイテレーションは 3 の値を返し、反復子メソッドの現在の場所が保持されます。 ループの次のイテレーションでは、iterator メソッドの実行が中断した場所から続行し、`Yield` ステートメントに達したときに再度停止します。 このイテレーションは 5 の値を返し、ここでも反復子メソッドの現在の場所が保持されます。 反復子メソッドの最後に達すると、ループが完了します。
+次の例では、`For Each` ループの最初の反復子により、最初の `SomeNumbers` ステートメントに達するまで `Yield` iterator メソッドで実行が続行されます。 このイテレーションは 3 の値を返し、iterator メソッドの現在の場所が保持されます。 ループの次のイテレーションでは、iterator メソッドの実行が中断した場所から続行し、`Yield` ステートメントに達したときに再度停止します。 このイテレーションは 5 の値を返し、ここでも iterator メソッドの現在の場所が保持されます。 iterator メソッドの最後に達すると、ループが完了します。
 
 ```vb
 Sub Main()
@@ -435,7 +435,7 @@ Visual Basic では、"Yield" は予約語ではなく、`Iterator` メソッド
 
 コンパイラの動作を確認するには、Ildasm.exe ツールを使用して、iterator メソッドに対して生成される Microsoft 中間言語コードを表示します。
 
-[クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)の反復子を作成する場合、<xref:System.Collections.IEnumerator> インターフェイス全体を実装する必要はありません。 コンパイラは、反復子を検出すると、`Current` または `MoveNext` インターフェイスの `Dispose`、<xref:System.Collections.IEnumerator>、および <xref:System.Collections.Generic.IEnumerator%601> メソッドを自動的に生成します。
+[クラス](../../language-reference/statements/class-statement.md)または[構造体](../../language-reference/statements/structure-statement.md)の反復子を作成する場合、<xref:System.Collections.IEnumerator> インターフェイス全体を実装する必要はありません。 コンパイラは、反復子を検出すると、`Current` または `MoveNext` インターフェイスの `Dispose`、<xref:System.Collections.IEnumerator>、および <xref:System.Collections.Generic.IEnumerator%601> メソッドを自動的に生成します。
 
 `For Each…Next` ループの連続する反復ごとに (または `IEnumerator.MoveNext` を直接呼び出すと)、前の `Yield` ステートメントの後で次の反復子コード本体が再開されます。 次に、反復子本体の末尾に到達するか、`Exit Function` または `Return` ステートメントが検出されるまで、次の `Yield` ステートメントに進みます。
 

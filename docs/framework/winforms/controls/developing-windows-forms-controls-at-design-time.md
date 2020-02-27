@@ -12,12 +12,12 @@ ms.assetid: e5a8e088-7ec8-4fd9-bcb3-9078fd134829
 author: jillre
 ms.author: jillfra
 manager: jillfra
-ms.openlocfilehash: dac049ea6a51037daa0e23dc93476e4410b2df06
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7626e1efbb30ef3bfe9b5b1278c0adb18dd5944b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745984"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628710"
 ---
 # <a name="develop-windows-forms-controls-at-design-time"></a>デザイン時に Windows フォームコントロールを開発する
 
@@ -36,7 +36,7 @@ C# で簡単な複合コントロールを作る方法を示します。
 [チュートリアル: Windows フォームコントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)\
 C# で継承を使って簡単な Windows フォーム コントロールを作る方法を示します。
 
-[チュートリアル: Windows フォームコントロールでのスマートタグを使用した一般的なタスクの実行](performing-common-tasks-using-smart-tags-on-wf-controls.md)\
+[チュートリアル: デザイナーアクションを使用した一般的なタスクの実行](perform-common-tasks-design-actions.md)\
 Windows フォーム コントロールでスマート タグ機能を使う方法を示します。
 
 [チュートリアル: DesignerSerializationVisibilityAttribute\ を使用した標準型のコレクションのシリアル](serializing-collections-designerserializationvisibilityattribute.md)化
@@ -81,7 +81,7 @@ Windows フォーム デザイナーで読み込みに失敗したときに Micr
 [コントロールとコンポーネントの作成時のトラブルシューティング](troubleshooting-control-and-component-authoring.md)\
 カスタム コンポーネントやコントロールを作るときに発生する可能性がある一般的な問題を診断して解決する方法を示します。
 
-## <a name="reference"></a>リファレンス
+## <a name="reference"></a>参照
 
 - <xref:System.Windows.Forms.Control?displayProperty=nameWithType>
 
@@ -92,7 +92,7 @@ Windows フォーム デザイナーで読み込みに失敗したときに Micr
 [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)\
 .NET Framework で独自のカスタム コントロールを作る方法について説明します。
 
-[言語への非依存性、および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md)\
+[Language Independence and Language-Independent Components](../../../standard/language-independence-and-language-independent-components.md)\
 コンポーネントの作成と使用を簡略化するように設計されている共通言語ランタイムの概要について説明します。 この簡略化の重要な側面は、さまざまなプログラミング言語で記述されたコンポーネント間の相互運用性の拡張です。 共通言語仕様 (CLS) を使うと、複数のプログラミング言語で動作するツールやコンポーネントを作ることができます。
 
 [チュートリアル : ツールボックスへのカスタム コンポーネントの自動設定](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)\

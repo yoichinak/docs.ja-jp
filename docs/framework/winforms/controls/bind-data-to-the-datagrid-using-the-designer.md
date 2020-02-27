@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: d5fab6acc53e5b8be247e958bdba78f0d3647fdc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d49a718e42a989c731cdf748fb63a6305ee096bf
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744119"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626329"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>方法 : デザイナーを使用してデータを Windows フォーム DataGridView コントロールにバインドする
 デザイナーを使用すると、データベース、ビジネスオブジェクト、Web サービスなど、さまざまな種類のデータソースに <xref:System.Windows.Forms.DataGridView> コントロールを接続できます。 デザイナーを使用してコントロールをデータソースにバインドすると、コントロールはデータソースを表す <xref:System.Windows.Forms.BindingSource> コンポーネントに自動的にバインドされます。 さらに、データ ソースによって提供されるスキーマ情報に対応するように、このコントロールの列が自動的に生成されます。
@@ -24,7 +24,7 @@ ms.locfileid: "76744119"
 
 ## <a name="to-bind-the-control-to-a-data-source"></a>コントロールをデータ ソースにバインドするには
 
-1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にあるスマートタググリフ (![スマートタググリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) をクリックします。
+1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にある [デザイナーアクション] グリフ (![小さい黒い矢印](./media/designer-actions-glyph.gif)) をクリックします。
 
 2. **[データ ソースの選択]** オプションのドロップダウン矢印をクリックします。
 

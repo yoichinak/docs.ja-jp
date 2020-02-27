@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: ac862d163f1bd8b66f29160d836bc459e4bf4081
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0305df5e7566f9441ce09fa3346a8b2dc67c8943
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745128"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77627969"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>方法 : Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する
 
@@ -35,7 +35,7 @@ ms.locfileid: "76745128"
 
 5. <xref:System.Windows.Forms.BindingNavigator> コントロールを選択します。
 
-6. **[BindingNavigator タスク]** ダイアログボックスが表示されるように、スマートタググリフ (![スマートタググリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) をクリックし、 **[アイテムの編集]** を選択します。
+6. [デザイナーアクション] グリフ (![小さい黒い矢印](./media/designer-actions-glyph.gif)) をクリックして **[BindingNavigator タスク]** ダイアログボックスを表示し、 **[アイテムの編集]** を選択します。
 
      **項目コレクションエディター**が表示されます。
 
@@ -49,7 +49,7 @@ ms.locfileid: "76745128"
 
     4. 各ボタンの [<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>] プロパティを **[テキスト]** に設定します。 または、このプロパティを**image**または**imageandtext**に設定し、<xref:System.Windows.Forms.ToolStripItem.Image%2A> プロパティに表示されるようにイメージを設定することもできます。
 
-    5. **[OK]** をクリックしてダイアログ ボックスを閉じます。 ボタンが <xref:System.Windows.Forms.ToolStrip>に追加されます。
+    5. **[OK]** をクリックして、ダイアログ ボックスを閉じます。 ボタンが <xref:System.Windows.Forms.ToolStrip>に追加されます。
 
 8. フォームを右クリックし、 **[コードの表示]** を選択します。
 

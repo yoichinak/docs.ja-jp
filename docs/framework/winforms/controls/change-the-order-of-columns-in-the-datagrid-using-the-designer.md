@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-ms.openlocfilehash: be4f67ca6530b74fc90cb50a10463b2378edb933
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 7540203fb1c0465caeb045275734d1a7c6f25ee8
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743156"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628749"
 ---
 # <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム DataGridView コントロールの列の順序を変更する
 
@@ -22,7 +22,7 @@ Windows フォーム <xref:System.Windows.Forms.DataGridView> コントロール
 
 ## <a name="to-change-the-column-order-using-the-designer"></a>デザイナーを使用して列の順序を変更するには
 
-1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にあるスマートタググリフ (![スマートタググリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) をクリックし、 **[列の編集]** を選択します。
+1. <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にある [デザイナーアクション] グリフ (![小さい黒い矢印](./media/designer-actions-glyph.gif)) をクリックし、[列の**編集**] を選択します。
 
 2. **[選択された列]** ボックスの一覧から列を選択します。
 
