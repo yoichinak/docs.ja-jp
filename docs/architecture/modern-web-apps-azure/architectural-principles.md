@@ -3,13 +3,13 @@ title: アーキテクチャの原則
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | アーキテクチャの原則
 author: ardalis
 ms.author: wiwagn
-ms.date: 02/16/2019
-ms.openlocfilehash: 656c92c417283366e4bb757489c189ecbc0ea815
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.date: 12/04/2019
+ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73416687"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450272"
 ---
 # <a name="architectural-principles"></a>アーキテクチャの原則
 
@@ -46,7 +46,7 @@ ms.locfileid: "73416687"
 
 **図 4-2** 逆転された依存関係グラフ。
 
-**依存関係逆転**は、疎結合のアプリケーションを構築する上で重要な部分となります。その理由は、より低いレベルの抽象化ではなく、より高いレベルの抽象化に依存しそれらを実装するように、実装の詳細を記述することができるからです。 したがって、結果として得られるアプリケーションは、テストが容易で、モジュール性が高く、保守も容易です。 *依存関係挿入*の実施は、次に示す依存関係逆転の原則に従うことで可能になります。
+**依存関係逆転**は、疎結合のアプリケーションをビルドする上で重要な部分となります。その理由は、より低いレベルの抽象化ではなく、より高いレベルの抽象化に依存しそれらを実装するように、実装の詳細を記述することができるからです。 したがって、結果として得られるアプリケーションは、テストが容易で、モジュール性が高く、保守も容易です。 *依存関係挿入*の実施は、次に示す依存関係逆転の原則に従うことで可能になります。
 
 ### <a name="explicit-dependencies"></a>明示的な依存関係
 

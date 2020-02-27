@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, security
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
-ms.openlocfilehash: e2f8f1304de587e1bedd8cde60e665971d903183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: bae6bf6a1a5d87241b619bf024c099c48af6af43
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937694"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452683"
 ---
 # <a name="transport-layer-security-tls-best-practices-with-the-net-framework"></a>.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス
 
@@ -140,7 +140,7 @@ OS の最新の修正プログラムをインストールする必要があり�
 
 ## <a name="if-your-app-targets-net-framework-35"></a>アプリの対象が .NET Framework 3.5 の場合
 
-.NET Framework または OS にセキュリティ プロトコルを選択させるのではなく、明示的にセキュリティ プロトコルを設定する必要がある場合は、`SecurityProtocolTypeExtensions` および `SslProtocolsExtension` 列挙型をコードに追加します。 `SecurityProtocolTypeExtensions` および `SslProtocolsExtension` には、`Tls12`、`Tls11`、`SystemDefault` に対する値が含まれます。 「[Support for TLS System Default Versions included in .NET Framework 3.5 on Windows 8.1 and Windows Server 2012 R2](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)」(Windows 8.1 および Windows Server 2012 R2 の .NET Framework 3.5 に含まれる TLS システムの既定バージョンのサポート) をご覧ください。
+.NET または OS にセキュリティ プロトコルを選択させるのではなく、明示的にセキュリティ プロトコルを設定する必要がある場合は、`SecurityProtocolTypeExtensions` および `SslProtocolsExtension` 列挙型をコードに追加します。 `SecurityProtocolTypeExtensions` および `SslProtocolsExtension` には、`Tls12`、`Tls11`、`SystemDefault` に対する値が含まれます。 詳細については、「[Windows 8.1 と Windows Server 2012 R2 上の .NET Framework 3.5 に含まれる TLS システムの既定のバージョンのサポート](https://support.microsoft.com/help/3154520/support-for-tls-system-default-versions-included-in-the--net-framework)」を参照してください。
 
 <a name="configuring-security-via-appcontext-switches"></a>
 
@@ -209,7 +209,7 @@ HTTP ネットワーク (<xref:System.Net.ServicePointManager>) または TCP �
 
 詳細については、「[Windows 10 Version 1511 および Windows Server 2016 Technical Preview 4 用の累積的な更新プログラム(2016 年 5 月 10 日)](https://support.microsoft.com/help/3156421/cumulative-update-for-windows-10-version-1511-and-windows-server-2016)」をご覧ください。
 
-.NET Framework 3.5.1 の場合について詳しくは、「[Support for TLS System Default Versions included in .NET Framework 3.5.1 on Windows 7 SP1 and Server 2008 R2 SP1](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework)」(Windows 7 SP1 および Server 2008 R2 SP1 の .NET Framework 3.5.1 に含まれる TLS システムの既定バージョンのサポート) をご覧ください。
+.NET Framework 3.5.1 の場合について詳しくは、「[Windows 7 SP1 と Server 2008 R2 SP1 上の .NET Framework 3.5.1 に含まれている TLS システムの既定のバージョンのサポート](https://support.microsoft.com/help/3154518/support-for-tls-system-default-versions-included-in-the--net-framework)」を参照してください。
 
 次の _.REG_ ファイルは、レジストリ キーとそのバリエーションを最も安全な値に設定します。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ac4dafef92bbc900d291a5b653c55ba295f1a6d6
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093228"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450870"
 ---
 # <a name="enumeration-types-c-reference"></a>列挙型 (C# リファレンス)
 
@@ -89,5 +89,6 @@ C# 7.3 以降、基底クラス制約 ([列挙の制約](../../programming-guide
 
 - [C# リファレンス](../index.md)
 - [列挙型書式指定文字列](../../../standard/base-types/enumeration-format-strings.md)
-- [列挙型名前付け規則](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
+- [設計ガイドライン - 列挙型の設計](../../../standard/design-guidelines/enum.md)
+- [設計ガイドライン - 列挙型の名前付け規則](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)
 - [switch ステートメント](../keywords/switch.md)

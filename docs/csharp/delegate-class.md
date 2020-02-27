@@ -1,23 +1,23 @@
 ---
 title: System.Delegate と `delegate` キーワード
-description: デリゲートをサポートする .NET Framework のクラスと、それが ’delegate’ キーワードにどのように対応付けられるかについて取り上げます。
+description: デリゲートをサポートする .NET のクラスと、それが ’delegate’ キーワードにどのように対応付けられるかについて取り上げます。
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: f4635ff623feec9407021792cabd1677184b4d34
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: 3cfc9925be0f191dc3fc93c02f4a8f9a40b71895
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73420367"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450922"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate と `delegate` キーワード
 
 [前へ](delegates-overview.md)
 
-この記事では、デリゲートをサポートする .NET Framework のクラスと、それらが `delegate` キーワードにどのようにして対応付けられるかについて取り上げます。
+この記事では、デリゲートをサポートする .NET のクラスと、それが `delegate` キーワードにどのように対応付けられるかについて取り上げます。
 
-## <a name="defining-delegate-types"></a>デリゲート型の定義
+## <a name="define-delegate-types"></a>デリゲート型を定義する
 
 最初に、'delegate' キーワードから始めましょう。これは、主に、デリゲートを操作する際に使用するためです。 `delegate` キーワードを使用したときにコンパイラで生成されるコードは、<xref:System.Delegate> クラスおよび <xref:System.MulticastDelegate> クラスのメンバーを呼び出すメソッド呼び出しにマップされます。 
 
@@ -41,7 +41,7 @@ public delegate int Comparison<in T>(T left, T right);
 
 コンパイラは、この新しい型用の追加ハンドラーと削除ハンドラーも生成するため、このクラスのクライアントは、インスタンスの呼び出しリストでメソッドを追加したり削除したりできます。 コンパイラでは、追加または削除されるメソッドのシグネチャが、メソッドの宣言時に使用されたシグネチャと一致することが強制されます。 
 
-## <a name="declaring-instances-of-delegates"></a>デリゲートのインスタンスの宣言
+## <a name="declare-instances-of-delegates"></a>デリゲートのインスタンスを宣言する
 
 デリゲートを定義した後に、その型のインスタンスを作成できます。
 C# のすべての変数と同様に、デリゲート インスタンスを名前空間で直接宣言することも、グローバル名前空間で宣言することもできません。
@@ -57,7 +57,7 @@ public Comparison<T> comparator;
  
  上記のコード スニペットでは、クラス内でメンバー変数を宣言しました。 ローカル変数であるデリゲート変数、またはメソッドの引数も宣言できます。
 
-## <a name="invoking-delegates"></a>デリゲートの呼び出し
+## <a name="invoke-delegates"></a>デリゲートを呼び出す
 
 デリゲートの呼び出しリストに含まれているメソッドを呼び出すには、そのデリゲートを呼び出します。 `Sort()` メソッドの内部で、コードは比較メソッドを呼び出して、オブジェクトを配置する順番を決定します。
 
@@ -70,7 +70,7 @@ int result = comparator(left, right);
 
 このコード行は安全でない想定を行っています。つまり、ターゲットがデリゲートに追加済みであるという保証はありません。 ターゲットがアタッチされていない場合、上の行によって `NullReferenceException` がスローされます。 この問題に対処するための用法は、単純な null チェックよりも複雑で、この[シリーズ](delegates-patterns.md)の後の方で説明します。
 
-## <a name="assigning-adding-and-removing-invocation-targets"></a>呼び出しターゲットの割り当て、追加、削除
+## <a name="assign-add-and-remove-invocation-targets"></a>呼び出しターゲットの割り当て、追加、および削除を行う
 
 デリゲート型の定義方法と、デリゲート インスタンスの宣言および呼び出しの方法は以上です。
 
@@ -115,7 +115,7 @@ Sort() の例では、通常、デリゲートに 1 つのターゲット メソ
 
 前述の言語サポートは、デリゲートの操作で一般的に必要となる機能と支援を提供します。 これらの機能は、.NET Core Framework の 2 つのクラスである <xref:System.Delegate> と <xref:System.MulticastDelegate> に基づいています。
 
-`System.Delegate` クラスと、その直接的なサブクラス `System.MulticastDelegate` は、デリゲートの作成、デリゲート ターゲットとしてのメソッドの登録、デリゲート ターゲットとして登録されているすべてのメソッドの呼び出しについてフレームワークをサポートします。 
+`System.Delegate` クラスとその単一の直接的なサブクラス `System.MulticastDelegate` では、デリゲートの作成、デリゲート ターゲットとしてのメソッドの登録、デリゲート ターゲットとして登録されているすべてのメソッドの呼び出しに対するフレームワークのサポートが提供されます。 
 
 興味深いことに、`System.Delegate` クラスと `System.MulticastDelegate` クラス自体は、デリゲート型ではありません。 これらのクラスは、すべてのデリゲート型の基礎となります。 この言語設計プロセスにより、`Delegate` または `MulticastDelegate` から派生するクラスを宣言することはできません。 C# 言語の規則によって禁止されています。
  

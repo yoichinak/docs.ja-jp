@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 2f4858d729093d3520e97610e0eac8600093187a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75936874"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450675"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>ユーザー定義の変換演算子 (C# リファレンス)
 
@@ -49,4 +49,5 @@ ms.locfileid: "75936874"
 - [演算子のオーバーロード](operator-overloading.md)
 - [型テストとキャスト演算子](type-testing-and-cast.md)
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)
+- [設計ガイドライン - 変換演算子](../../../standard/design-guidelines/operator-overloads.md#conversion-operators)
 - [Chained user-defined explicit conversions in C#](https://docs.microsoft.com/archive/blogs/ericlippert/chained-user-defined-explicit-conversions-in-c) (C# でのユーザー定義の明示的変換の連結)

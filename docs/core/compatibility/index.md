@@ -2,12 +2,12 @@
 title: 破壊的変更の種類
 description: .NET Core が .NET のバージョン間で開発者向けの互換性をどのように維持しようとしているか、およびどのような変更が重大な変更と見なされるかについて説明します。
 ms.date: 06/10/2019
-ms.openlocfilehash: 1c5790e39754b91aacbde9e87ed99f9dcc36ce9f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77092981"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628593"
 ---
 # <a name="changes-that-affect-compatibility"></a>互換性に影響を与える変更点
 
@@ -49,11 +49,11 @@ ms.locfileid: "77092981"
 
   *以前の*アセンブリは、新しいアセンブリを指す <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute> でマークする必要があります。
 
-- ✔️ **許可:[struct](../../csharp/language-reference/keywords/struct.md) 型を `readonly struct` 型に変更する**
+- ✔️ **許可:[struct](../../csharp/language-reference/builtin-types/struct.md) 型を `readonly struct` 型に変更する**
 
   `readonly struct` 型の `struct` 型への変更は許可されていません。
 
-- ✔️ **許可: *アクセス可能な* (パブリックまたは保護された) コンストラクターがない場合に [sealed](../../csharp/language-reference/keywords/sealed.md) または [abstract](../../csharp/language-reference/keywords/abstract.md) キーワードを型に追加する**
+- ✔️ **許可:*アクセス可能な* (パブリックまたは保護された) コンストラクターがない場合に [sealed](../../csharp/language-reference/keywords/sealed.md) または [abstract](../../csharp/language-reference/keywords/abstract.md) キーワードを型に追加する**
 
 - ✔️ **許可:型の可視性を拡張する**
 
@@ -77,11 +77,11 @@ ms.locfileid: "77092981"
 
   インターフェイス削除の規則には 1 つの例外があります。削除したインターフェイスから派生するインターフェイスの実装を追加することができます。 たとえば、型またはインターフェイスが <xref:System.ComponentModel.IComponent> を実装し、それが <xref:System.IDisposable> を実装している場合は、<xref:System.IDisposable> を削除できます。
 
-- ❌ **未許可:`readonly struct` 型を [struct](../../csharp/language-reference/keywords/struct.md) 型に変更する**
+- ❌ **未許可:`readonly struct` 型を [struct](../../csharp/language-reference/builtin-types/struct.md) 型に変更する**
 
   ただし、`struct` 型から `readonly struct` 型への変更は許可されています。
 
-- ❌ **未許可:[struct](../../csharp/language-reference/keywords/struct.md) 型を `ref struct` 型に、またはその逆に変更する**
+- ❌ **未許可:[struct](../../csharp/language-reference/builtin-types/struct.md) 型を `ref struct` 型に、またはその逆に変更する**
 
 - ❌ **未許可:型の可視性を下げる**
 
@@ -91,7 +91,7 @@ ms.locfileid: "77092981"
 
 - ✔️ **許可:[virtual](../../csharp/language-reference/keywords/sealed.md) ではないメンバーの可視性を拡張する**
 
-- ✔️ **許可: *アクセス可能な* (パブリックまたは保護された) コンストラクターを持たない、または型が[シールされている](../../csharp/language-reference/keywords/sealed.md)パブリック型に抽象メンバーを追加する**
+- ✔️ **許可:*アクセス可能な* (パブリックまたは保護された) コンストラクターを持たない、または型が[シールされている](../../csharp/language-reference/keywords/sealed.md)パブリック型に抽象メンバーを追加する**
 
   ただし、アクセス可能な (パブリックまたは保護された) コンストラクターを持ち、`sealed` ではない型に抽象メンバーを追加することは許可されていません。
 
@@ -300,7 +300,7 @@ ms.locfileid: "77092981"
 
 - ✔️ **許可:パラメーターに [params](../../csharp/language-reference/keywords/params.md) を追加する**
 
-- ❌ **未許可:[struct](../../csharp/language-reference/keywords/struct.md) を [class](../../csharp/language-reference/keywords/class.md) に変更する (およびその逆)**
+- ❌ **未許可:[struct](../../csharp/language-reference/builtin-types/struct.md) を [class](../../csharp/language-reference/keywords/class.md) に変更する (およびその逆)**
 
 - ❌ **未許可:[checked](../../csharp/language-reference/keywords/virtual.md) キーワードをコード ブロックに追加する**
 

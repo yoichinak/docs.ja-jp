@@ -1,20 +1,20 @@
 ---
 title: .NET Standard
 description: .NET Standard、そのバージョン、.NET Standard をサポートする .NET 実装について説明します。
-ms.date: 09/23/2019
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 25490d5063a1f6c31b76af30ac6d37de6cb8c07f
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124638"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452592"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) は、すべての .NET 実装で使用できるようにすることを目的とした .NET API の正式な仕様です。 .NET Standard の背後にある意図は、.NET エコシステムの高度な統一性を確立することです。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) は引き続き .NET 実装の動作の統一性を確立しますが、.NET ライブラリの実装用の .NET 基底クラス ライブラリ (BCL) に同様の仕様はありません。
+[.NET Standard](https://github.com/dotnet/standard) は、すべての .NET 実装で使用できるようにすることを目的とした .NET API の正式な仕様です。 .NET Standard の背後にある意図は、.NET エコシステムの高度な統一性を確立することです。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) では引き続き .NET 実装の動作に対する統一性が確立されます。ECMA 335 では標準ライブラリの小さなセットが指定されていますが、.NET Standard 仕様には幅広い .NET API が含まれています。
 
 .NET Standard により、次の主なシナリオが可能になります。
 

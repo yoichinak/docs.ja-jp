@@ -3,12 +3,12 @@ title: NET マイクロサービスおよび Web アプリケーションをセ�
 description: .NET マイクロサービスおよび Web アプリケーションのセキュリティ - ASP.NET Core Web アプリケーションの認証オプションをご確認ください。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f82212956f5492a51ec99d092e1a5131d1b31313
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 0ac2591f8650e9f8cf29560735a9ec803d29ee4f
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77501644"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628333"
 ---
 # <a name="make-secure-net-microservices-and-web-applications"></a>NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
 
@@ -135,8 +135,8 @@ public void ConfigureServices(IServiceCollection services)
 
 お使いのアプリを外部プロバイダー用に構成する方法の詳細については、[ASP.NET Core のドキュメントにおけるの外部プロバイダーの認証](/aspnet/core/security/authentication/social/)に関する記事を参照してください。
 
-> [!TIP]
-すべての詳細は、前に説明した認証ミドルウェアおよびサービスによって処理されます。 つまり、前述の認証プロバイダーの登録を行うのではなく、図 9-3 のとおり、Visual Studio で ASP.NET コードの Web アプリケーション プロジェクトを作成するときに、 **[個人のユーザー アカウント]** 認証オプションを選択します。
+>[!TIP]
+>すべての詳細は、前に説明した認証ミドルウェアおよびサービスによって処理されます。 つまり、前述の認証プロバイダーの登録を行うのではなく、図 9-3 のとおり、Visual Studio で ASP.NET コードの Web アプリケーション プロジェクトを作成するときに、 **[個人のユーザー アカウント]** 認証オプションを選択します。
 
 ![[新しい ASP.NET Core Web アプリケーション] ダイアログのスクリーンショット。](./media/index/select-individual-user-account-authentication-option.png)
 

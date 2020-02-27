@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 830271d76e5a87ed782d81fa9491328c580f0f87
-ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70849589"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450045"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
 
@@ -26,13 +26,9 @@ ms.locfileid: "70849589"
 
 完全で強力な IDE または軽量でアジャイルなエディターのどちらを選んでも、Microsoft は ASP.NET Core アプリケーションの開発に対応できます。
 
-**Visual Studio 2017。** *Visual Studio 2017* を使用する場合、 *.NET Core クロスプラットフォームの開発* ワークロードがインストールされている限り、ASP.NET Core アプリケーションを構築できます。 図 10-1 には、Visual Studio 2017 の必要なワークロードのセットアップ ダイアログが示されています。
+**Visual Studio 2019。** Visual Studio 2019 は ASP.NET Core 用のアプリケーションを開発するためのクラス最高の IDE です。 開発者の生産性を向上させる多数の機能が用意されています。 それを使用してアプリケーションを開発し、その後、パフォーマンスやその他の特性を分析できます。 統合デバッガーを使用して、コードの実行を一時停止し、実行中のコードを前後にステップ実行できます。 組み込みのテスト ランナーを使用して、テストとその結果を整理したり、コーディング中にライブ単体テストを実行したりできます。 Live Share を使用して、他の開発者とリアルタイムで共同作業を行い、ネットワーク経由でコード セッションをシームレスに共有できます。 準備が完了すると、アプリケーションを Azure またはそれをホストする任意の場所に発行するために必要なすべてのものが Visual Studio 内に用意されます。
 
-![Visual Studio 2017 での .NET Core ワークロードのインストール](./media/image10-1.png)
-
-**図 10-1** Visual Studio 2017 での .NET Core ワークロードのインストール。
-
-[Visual Studio 2017 をダウンロードする](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+[Visual Studio 2019 のダウンロード](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
 
 **Visual Studio Code と dotnet CLI** (Mac、Linux および Windows 用のクロスプラット フォーム ツール)。 任意の開発言語をサポートする軽量なクロスプラットフォーム エディターを選択すると、Microsoft Visual Studio Code と dotnet CLI を使用することができます。 これらの製品は、開発者のワークフローを効率化する、簡単かつ堅牢性の高いエクスペリエンスを提供します。 さらに、Visual Studio Code は C\# および Web 開発の拡張機能をサポートし、エディター内での IntelliSense およびショートカット タスクを提供します。
 
@@ -58,7 +54,7 @@ CI/CD を使用して ASP.NET Core アプリケーションの開発を開始す
 
 ![AzureWebApp](./media/image10-2.png)
 
-**図 10-2** Azure Portal での新しい Azure App Service Web アプリの作成。
+**図 10-1** Azure Portal での新しい Azure App Service Web アプリの作成。
 
 CI ビルド プロセスでは、新しいコードがプロジェクトのソース管理リポジトリにコミットされるたびに自動ビルドが実行されます。 これにより、コードがビルドし (理想的には、自動テストに合格し)、デプロイされる可能性のあるフィードバックがすぐに返されます。 この CI ビルドでは Web デプロイ パッケージ成果物が生成され、CD プロセスで使用するために公開されます。
 
@@ -74,11 +70,11 @@ CI/CD パイプラインが構成されたら、Web アプリを更新して、�
 
 ### <a name="workflow-for-developing-azure-hosted-aspnet-core-applications"></a>Azure でホストされる ASP.NET Core アプリケーションの開発ワークフロー
 
-Azure アカウントと CI/CD プロセスを構成したら、Azure でホストされる ASP.NET Core アプリケーションの開発は簡単にできます。 以下の図 10-3 に示されているように、Web アプリとして Azure App Service でホストされる、ASP.NET Core アプリを構築する場合に通常行う基本的な手順があります。
+Azure アカウントと CI/CD プロセスを構成したら、Azure でホストされる ASP.NET Core アプリケーションの開発は簡単にできます。 以下の図 10-2 に示されているように、Web アプリとして Azure App Service でホストされる、ASP.NET Core アプリを構築する場合に通常行う基本的な手順があります。
 
 ![EndToEndDevDeployWorkflow](./media/image10-3.png)
 
-**図 10-3** ASP.NET Core アプリを構築して Azure でホストするステップ バイ ステップのワークフロー
+**図 10-2** ASP.NET Core アプリを構築して Azure でホストするステップ バイ ステップのワークフロー
 
 #### <a name="step-1-local-dev-environment-inner-loop"></a>手順 1. ローカル開発環境の内側のループ
 

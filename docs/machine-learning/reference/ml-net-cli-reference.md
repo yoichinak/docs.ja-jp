@@ -1,17 +1,17 @@
 ---
 title: ML.NET CLI コマンド リファレンス
-description: ML.NET CLI ツールの auto-train コマンドの概要、サンプル、およびリファレンス。
+description: ML.NET CLI ツールの auto-train コマンドの概要
 ms.date: 12/18/2019
-ms.openlocfilehash: 5e59eba91721b26622360818a73adb07a654dc28
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636121"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449700"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI コマンド リファレンス
 
-`auto-train` コマンドは、ML.NET CLI ツールが提供するメイン コマンドです。 このコマンドを使用すると、自動機械学習 (AutoML) が採用された高品質の ML.NET モデルと、そのモデルを実行/スコア付けするサンプル C# コードを生成できます。 さらに、そのモデルをトレーニングするための C# コードも生成され、そのモデルのアルゴリズムと設定を調べることができます。
+`auto-train` コマンドは、ML.NET CLI ツールが提供するメイン コマンドです。 このコマンドを使用すると、自動機械学習 (AutoML) を使用する高品質の ML.NET モデルと、そのモデルを実行/スコア付けするサンプル C# コードを生成できます。 さらに、そのモデルをトレーニングするための C# コードも生成され、そのモデルのアルゴリズムと設定を調べることができます。
 
 > [!NOTE]
 > このトピックは、現在プレビュー段階の ML.NET CLI と ML.NET AutoML について述べており、内容が変更される場合があります。

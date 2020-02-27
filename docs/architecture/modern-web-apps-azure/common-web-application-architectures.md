@@ -3,13 +3,13 @@ title: 一般的な Web アプリケーション アーキテクチャ
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | 一般的な Web アプリケーション アーキテクチャの探索
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 6a4e971c1cb19a12710ad7893378a49758b4016e
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.date: 12/04/2019
+ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74884242"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450183"
 ---
 # <a name="common-web-application-architectures"></a>一般的な Web アプリケーション アーキテクチャ
 
@@ -99,8 +99,7 @@ Azure 内で Web アプリケーションをスケーリングする最も簡単
 
 依存関係逆転の原則ならびにドメイン駆動設計 (DDD) の原則に従うアプリケーションは、同様のアーキテクチャに到達する傾向があります。 このアーキテクチャには長年にわたってさまざまな名称が付けられてきました。 最初の名前の 1 つがヘキサゴナル アーキテクチャ (Hexagonal Architecture) でした。その後に使用された名前がポート アンド アダプター (Ports-and-Adapters) でした。 最近では、このアーキテクチャは[オニオン アーキテクチャ](https://jeffreypalermo.com/blog/the-onion-architecture-part-1/)または[クリーン アーキテクチャ](https://8thlight.com/blog/uncle-bob/2012/08/13/the-clean-architecture.html)として引用されています。 後者のクリーン アーキテクチャは、この電子書籍でアーキテクチャの名前として使用されています。
 
-> [!NOTE]
-> クリーン アーキテクチャという用語は、DDD 原則を使用して構築されたアプリケーションにも、DDD 原則を使用して構築されていないアプリケーションにも適用できます。 前者の場合、この組み合わせを "クリーン DDD アーキテクチャ" と呼ぶことがあります。
+eShopOnWeb 参照アプリケーションでは、そのコードをプロジェクトに整理するためにクリーン アーキテクチャ アプローチが使用されています。 独自の ASP.NET Core の出発点として使用できるソリューション テンプレートについては、[ardalis/cleanarchitecture](https://github.com/ardalis/cleanarchitecture) GitHub リポジトリ を参照してください。
 
 クリーン アーキテクチャでは、ビジネス ロジックとアプリケーション モデルをアプリケーションの中心に配置します。 ビジネス ロジックはデータ アクセスまたはその他のインフラストラクチャの懸念事項に依存するのでなく、この依存関係は逆転されます。つまり、インフラストラクチャおよび実装の詳細はアプリケーション コアに依存します。 これを達成するには、アプリケーション コア内で抽象化またはインターフェイスを定義し、それらをインフラストラクチャ レイヤーで定義された型によって実装します。 このアーキテクチャを視覚化するための一般的な方法としては、オニオンに似た一連の同心円を使用します。 図 5-7 に、このスタイルのアーキテクチャを表現した例を示します。
 
@@ -263,21 +262,19 @@ networks:
 `docker-compose.yml` ファイルは `Web` プロジェクトで `Dockerfile` を参照します。 `Dockerfile` は、使用される基本コンテナーと、その基本コンテナーでのアプリケーションの構成方法を指定する場合に使います。 `Web` の `Dockerfile` は次のとおりです。
 
 ```Dockerfile
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build
 WORKDIR /app
 
+COPY *.sln .
 COPY . .
 WORKDIR /app/src/Web
 RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
-
-# Optional: Set this here if not setting it from docker-compose.yml
-# ENV ASPNETCORE_ENVIRONMENT Development
 
 ENTRYPOINT ["dotnet", "Web.dll"]
 ```
@@ -298,7 +295,7 @@ Visual Studio を使用して、ご利用のアプリケーションに Docker �
   <https://jeffreypalermo.com/blog/the-onion-architecture-part-1/>
 - **リポジトリ パターン**  
   <https://deviq.com/repository-pattern/>
-- **クリーン アーキテクチャ ソリューションのサンプル**  
+- **クリーン アーキテクチャ ソリューション テンプレート**  
   <https://github.com/ardalis/cleanarchitecture>
 - **マイクロサービス電子書籍の設計**  
   <https://aka.ms/MicroservicesEbook>

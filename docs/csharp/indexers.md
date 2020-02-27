@@ -4,12 +4,12 @@ description: C# のインデクサーとインデックス付きプロパティ�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 86e646b341cf098d8621f095d4bfc9ea2191940d
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 966483e80d8dd0421dce1b7fabdb0d443d73a0fc
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039119"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450883"
 ---
 # <a name="indexers"></a>インデクサー
 
@@ -321,7 +321,7 @@ using CityDataMeasurements = System.Collections.Generic.Dictionary<string, Syste
 
 構築ジェネリック型の "*エイリアス*" を作成しています。 これらのステートメントにより、後のコードでは、`Dictionary<DateTime, Measurements>` と `Dictionary<string, Dictionary<DateTime, Measurements> >` のジェネリック コンストラクションではなく、よりわかりやすい `DateMeasurements` と `CityDateMeasurements` という名前を使用できます。 このコンストラクトでは、`=` 記号の右辺で完全修飾型名を使用する必要はありません。
 
-2 つ目の手法では、コレクションへのインデックス作成に使用された任意の `DateTime` オブジェクトから時間部分を取り除きます。 .NET Framework には、日付のみの型が含まれていません。
+2 つ目の手法では、コレクションへのインデックス作成に使用された任意の `DateTime` オブジェクトから時間部分を取り除きます。 .NET には、日付のみの型は含まれません。
 開発者は `DateTime` 型を使用しますが、`Date` プロパティを使用して、その日のすべての `DateTime` オブジェクトが等しくなるようにしてください。
 
 ## <a name="summing-up"></a>まとめ
