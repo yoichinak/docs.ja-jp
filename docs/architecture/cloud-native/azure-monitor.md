@@ -2,12 +2,12 @@
 title: Azure Monitor
 description: Azure Monitor を使用すると、システムが実行されていることを確認できます。
 ms.date: 02/05/2020
-ms.openlocfilehash: 961331011db4e59583438a2dbdf366bbe0e34261
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 87ffca186346c3356c0277809d1d67145d1dd17b
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448924"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628034"
 ---
 # <a name="azure-monitor"></a>Azure Monitor
 
@@ -59,7 +59,7 @@ Azure Monitor から情報を表示するために使用できる、いくつか
 Power BI ダッシュボードの例を ![](./media/azure-monitor.png)
 **図 7-15**。 ダッシュボード Power BI 例。
 
-## <a name="alerts"></a>警告
+## <a name="alerts"></a>アラート
 
 データダッシュボードが不十分な場合もあります。 ダッシュボードの監視が開始されていない場合でも、問題が解決されるまで、または検出されるまでに数時間かかることがあります。 このため、Azure Monitor には、上位ノッチの[アラートソリューション](https://docs.microsoft.com/azure/azure-monitor/platform/alerts-overview)も用意されています。 アラートは、次のような幅広い条件によってトリガーできます。
 
@@ -75,10 +75,10 @@ Power BI ダッシュボードの例を ![](./media/azure-monitor.png)
 
 Azure Monitor は、自動的に機械学習を活用して、デプロイされたアプリケーションの通常の動作パラメーターを把握します。 これにより、通常のパラメーターの外部で動作しているサービスを検出できます。 たとえば、サイトでの一般的な平日のトラフィックは、1分あたり1万の要求になることがあります。 その後、特定の週に、要求の数が突然、1分あたりの非常に異常な2万要求に達します。 [スマート検出](https://docs.microsoft.com/azure/azure-monitor/app/proactive-diagnostics)では、この偏差が基準からのものであることがわかり、アラートがトリガーされます。 同時に、傾向分析は、トラフィックの負荷が予想されるときに偽陽性が発生しないようにするのに十分なスマートです。
 
-## <a name="references"></a>References
+## <a name="references"></a>参照
 
 - [Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/overview)
-- [スマート Alert Management-MS Ignite-ビデオ](https://oxfordcomputergroup.com/resourceso365-security-native-cloud-authentication/)
+- [スマート Alert Management-MS Ignite-ビデオ](https://oxfordcomputergroup.com/resources/o365-security-native-cloud-authentication/)
 
 >[!div class="step-by-step"]
 >[前へ](monitoring-azure-kubernetes.md)
