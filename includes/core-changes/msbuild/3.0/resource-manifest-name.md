@@ -72,7 +72,7 @@ ms.locfileid: "77451892"
 
 - 前述の名前付け規則のいずれかに従って、リソース ファイルのメタデータを変更します。
 
-- プロジェクト ファイルで `EmbeddedResourceUseDependentUponConvention` を `false` に設定して、新しい規則全体をオプトアウトします。
+- プロジェクト ファイルで `EmbeddedResourceUseDependentUponConvention` を `false` に設定して、新しい規則全体が無効になるようにします。
 
    ```xml
    <EmbeddedResourceUseDependentUponConvention>false</EmbeddedResourceUseDependentUponConvention>
