@@ -82,8 +82,6 @@
       href: tour-of-csharp/statements.md
     - name: クラスとオブジェクト
       href: tour-of-csharp/classes-and-objects.md
-    - name: 構造体
-      href: tour-of-csharp/structs.md
     - name: 配列
       href: tour-of-csharp/arrays.md
     - name: インターフェイス
@@ -129,8 +127,6 @@
       href: basic-types.md
     - name: クラス
       href: programming-guide/classes-and-structs/classes.md
-    - name: 構造体
-      href: structs.md
     - name: タプル
       href: tuples.md
     - name: タプルとその他の型の分解
@@ -941,19 +937,12 @@
     - name: クラスと構造体
       items:
         - name: 概要
-          displayName: classes structs
+          displayName: classes
           href: programming-guide/classes-and-structs/index.md
         - name: クラス
           href: programming-guide/classes-and-structs/classes.md
         - name: オブジェクト
           href: programming-guide/classes-and-structs/objects.md
-        - name: 構造体
-          items:
-            - name: 概要
-              displayName: structs
-              href: programming-guide/classes-and-structs/structs.md
-            - name: 構造体の使用
-              href: programming-guide/classes-and-structs/using-structs.md
         - name: 継承
           href: programming-guide/classes-and-structs/inheritance.md
         - name: ポリモーフィズム
