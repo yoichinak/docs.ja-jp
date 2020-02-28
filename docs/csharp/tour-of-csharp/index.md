@@ -2,12 +2,12 @@
 title: C# のツアー - C# ガイド
 description: C# を始めてお使いの方のために、 この言語の基本を説明します。
 ms.date: 04/05/2019
-ms.openlocfilehash: e2d7af3a35dc9d4fdeddf9eb742d155ab33094b4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b510342f957a259a6c7763441778461b3dd4ef1e
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711663"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673291"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 言語のツアー
 
@@ -64,8 +64,6 @@ C# について学ぶべきことはまだたくさんあります。 以下の�
   - "***ステートメント***" はプログラムの処理を表すために使用されます。
 - [クラスとオブジェクト](classes-and-objects.md)
   - "***クラス***" は C# の最も基本的な型です。 "***オブジェクト***" はクラスのインスタンスです。 クラスは "***メンバー***" を使用して構築されます。メンバーについてもこのトピックで説明します。
-- [構造体](structs.md)
-  - "***構造体***" はデータ構造で、クラスとは異なり値型です。
 - [配列](arrays.md)
   - "***配列***" はデータ構造で、算出されたインデックスを介してアクセスされる多くの変数を含みます。
 - [インターフェイス](interfaces.md)

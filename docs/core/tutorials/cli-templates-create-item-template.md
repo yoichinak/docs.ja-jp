@@ -5,12 +5,12 @@ author: thraka
 ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
-ms.openlocfilehash: fa0ae18221c33d196960239411f8860a561b20ee
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75340378"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503561"
 ---
 # <a name="tutorial-create-an-item-template"></a>チュートリアル: 項目テンプレートを作成する
 
@@ -151,8 +151,13 @@ Worker Service                                    worker                [C#]    
 
 項目テンプレートをインストールしたので、テストします。 _test/_ フォルダーに移動し、`dotnet new console` を使用して新しいコンソール アプリケーションを作成します。 これにより、`dotnet run` コマンドを使用して簡単にテストできる作業プロジェクトが生成されます。
 
+```dotnetcli
+dotnet new console
+```
+
+次のような出力が得られます。
+
 ```console
-C:\test> dotnet new console
 The template "Console Application" was created successfully.
 
 Processing post-creation actions...
@@ -162,15 +167,27 @@ Running 'dotnet restore' on C:\test\test.csproj...
 Restore succeeded.
 ```
 
+以下を使用してプロジェクトを実行します。
+
+```dotnetcli
+dotnet run
+```
+
+次の出力が得られます。
+
 ```console
-C:\test> dotnet run
 Hello World!
 ```
 
 次に、`dotnet new stringext` を実行して、テンプレートから _CommonExtensions.cs_ を生成します。
 
+```dotnetcli
+dotnet new stringext
+```
+
+次の出力が得られます。
+
 ```console
-C:\test> dotnet new stringext
 The template "Example templates: string extensions" was created successfully.
 ```
 
@@ -182,8 +199,13 @@ Console.WriteLine("Hello World!".Reverse());
 
 プログラムをもう一度実行すると、結果が反転されたことを確認できます。
 
+```dotnetcli
+dotnet run
+```
+
+次の出力が得られます。
+
 ```console
-C:\test> dotnet run
 !dlroW olleH
 ```
 
@@ -193,8 +215,13 @@ C:\test> dotnet run
 
 ファイル パスを使用してテンプレートをインストールしたので、**絶対**ファイル パスを使用してアンインストールする必要があります。 `dotnet new -u` コマンドを実行すると、インストールされているテンプレートの一覧を表示できます。 作成したテンプレートは最後に表示されているはずです。 一覧にあるパスを使用して、`dotnet new -u <ABSOLUTE PATH TO TEMPLATE DIRECTORY>` コマンドでテンプレートをアンインストールします。
 
+```dotnetcli
+dotnet new -u
+```
+
+次のような出力が得られます。
+
 ```console
-C:\working> dotnet new -u
 Template Instantiation Commands for .NET Core CLI
 
 Currently installed items:
@@ -222,8 +249,10 @@ Currently installed items:
       Example templates: string extensions (stringext) C#
 ```
 
-```console
-C:\working> dotnet new -u C:\working\templates\extensions
+テンプレートをアンインストールするには、次のコマンドを実行します。
+
+```dotnetcli
+dotnet new -u C:\working\templates\extensions
 ```
 
 ## <a name="next-steps"></a>次の手順

@@ -1,21 +1,17 @@
 ---
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
-ms.date: 10/14/2019
-ms.openlocfilehash: ec37d82c9e22a59acf7617f80a7491c0bcab89c9
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734318"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503766"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
-**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
 ## <a name="name"></a>名前
 
@@ -75,7 +71,7 @@ dotnet build [-h|--help]
 
 ## <a name="options"></a>オプション
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   ビルド構成を定義します。 ほとんどのプロジェクトの既定値は `Debug` ですが、プロジェクトでビルド構成設定をオーバーライドできます。
 
@@ -85,7 +81,7 @@ dotnet build [-h|--help]
 
 - **`--force`**
 
-  最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。 .NET Core 2.0 SDK 以降で使用できます。
+  最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
 
 - **`-h|--help`**
 
@@ -105,7 +101,7 @@ dotnet build [-h|--help]
 
 - **`--no-restore`**
 
-  ビルド時に暗黙的な復元は実行されません。 .NET Core 2.0 SDK 以降で使用できます。
+  ビルド時に暗黙的な復元は実行されません。
 
 - **`--nologo`**
 

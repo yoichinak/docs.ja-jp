@@ -3,13 +3,13 @@ title: 一般的なクライアント側の Web テクノロジ
 description: ASP.NET Core および Azure での最新の Web アプリケーションの設計 | 一般的なクライアント側の Web テクノロジ
 author: ardalis
 ms.author: wiwagn
-ms.date: 01/30/2019
-ms.openlocfilehash: 7dd3765b1b71d8c1ef22d714a00be3e171fab523
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.date: 12/04/2019
+ms.openlocfilehash: 2809c8539b42e8e2250039dceed1389b3cbdcd8a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093124"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449375"
 ---
 # <a name="common-client-side-web-technologies"></a>一般的なクライアント側の Web テクノロジ
 
@@ -20,9 +20,12 @@ ASP.NET Core アプリケーションは Web アプリケーションであり�
 
 HTML と CSS は比較的安定していますが、Web ベースのアプリケーションを構築する際に開発者が使用するアプリケーション フレームワークであり、ユーティリティである JavaScript は猛烈な速さで進化しています。 この章では、Web 開発者が JavaScript を使用する方法をいくつか確認し、クライアント側のライブラリである Angular と React の概要を示します。
 
+> [!NOTE]
+> Blazor には、高機能で対話型のクライアント ユーザー インターフェイスを構築するための JavaScript フレームワークに代わる機能が用意されています。 クライアント側の Blazor のサポートはまだプレビュー段階なので、この章では取り上げません。
+
 ## <a name="html"></a>HTML
 
-HTML (ハイパーテキスト マークアップ言語) は、Web ページと Web アプリケーションの作成に利用される標準のマークアップ言語です。 その要素でページの基本構成要素が形成され、書式設定されたテキスト、画像、フォーム入力、その他の構造体が表されます。 ページやアプリケーションの取得など、ブラウザーが URL に要求を行うと、最初に HTML ドキュメントが返されます。 この HTML ドキュメントは、CSS 形式で外観やレイアウトに関する情報を、あるいは JavaScript 形式で動作に関する情報を参照することがあります。そのような情報が含まれていることもあります。
+HTML は、Web ページおよび Web アプリケーションの作成に使用される標準のマークアップ言語です。 その要素でページの基本構成要素が形成され、書式設定されたテキスト、画像、フォーム入力、その他の構造体が表されます。 ページやアプリケーションの取得など、ブラウザーが URL に要求を行うと、最初に HTML ドキュメントが返されます。 この HTML ドキュメントは、CSS 形式で外観やレイアウトに関する情報を、あるいは JavaScript 形式で動作に関する情報を参照することがあります。そのような情報が含まれていることもあります。
 
 ## <a name="css"></a>CSS
 
@@ -42,7 +45,7 @@ CSS スタイルシートは、条件付きロジック、変数、その他の�
 
 ## <a name="javascript"></a>JavaScript
 
-JavaScript は解釈型 (コンパイルされず、直接解釈される) の動的なプログラミング言語であり、ECMAScript 言語仕様で標準化されています。 Web のプログラミング言語です。 CSS と同様に、JavaScript は HTML 要素内の属性として、ページや個別ファイル内のスクリプト ブロックとして定義できます。 CSS と同様に、一般的に、JavaScript は個別ファイルに整理することをお勧めします。個々の Web ページやアプリケーション ビューの HTML からは可能な限り切り離します。
+JavaScript は解釈型 (コンパイルされず、直接解釈される) の動的なプログラミング言語であり、ECMAScript 言語仕様で標準化されています。 Web のプログラミング言語です。 CSS と同様に、JavaScript は HTML 要素内の属性として、ページや個別ファイル内のスクリプト ブロックとして定義できます。 CSS と同様に、JavaScript は個別ファイルに整理することをお勧めします。個々の Web ページやアプリケーション ビューの HTML からは可能な限り切り離します。
 
 Web アプリケーションで JavaScript を使用するとき、通常実行する必要があるタスクがいくつか存在します。
 
@@ -79,7 +82,7 @@ jQuery にない機能の多くは、他のライブラリを追加すると補�
 
 ### <a name="angular-spas"></a>Angular SPA
 
-AngularJS は短期間で世界で最も人気がある JavaScript フレームワークとなりました。 Angular 2 では、([TypeScript](https://www.typescriptlang.org/) を利用し) フレームワークが一から作り直され、AngularJS から Angular にブランド名が変更されました。 現在バージョン 4 の Angular は、シングル ページ アプリケーションを構築するための堅牢なフレームワークであり続けています。
+Angular は、世界で最も人気のある JavaScript フレームワークの 1 つです。 Angular 2 以降、チームは ([TypeScript](https://www.typescriptlang.org/) を使用して) フレームワークを一から作り直し、元の AngularJS という名前から単なる Angular にブランドを変更しました。 再設計された Angular は、数年経った今でも、シングル ページ アプリケーションを構築するために適した堅牢なフレームワークです。
 
 Angular アプリケーションはコンポーネントから構築されます。 コンポーネントは HTML テンプレートと特別なオブジェクトを組み合わせ、ページの一部を制御します。 次は Angular のドキュメントから抜粋した単純なコンポーネントです。
 
@@ -104,7 +107,7 @@ Microsoft は [eShopOnContainers](https://aka.ms/MicroservicesArchitecture) と�
 
 ### <a name="react"></a>React
 
-Model-View-Controller パターンの完全実装を提供する Angular とは異なり、React はビューのみを扱います。 これはフレームワークではなく、単なるライブラリです。そのため、SPA を構築するには、追加のライブラリを活用する必要があります。
+Model-View-Controller パターンの完全実装を提供する Angular とは異なり、React はビューのみを扱います。 これはフレームワークではなく、単なるライブラリです。そのため、SPA を構築するには、追加のライブラリを活用する必要があります。 React と共に使用して高機能なシングル ページ アプリケーションを作成するように設計されたライブラリが多数あります。
 
 React の最も重要な特徴の 1 つはそれが仮想 DOM を使用することです。 仮想 DOM は React にさまざまな利点を与えます。たとえば、パフォーマンスが上がります。仮想 DOM は、実際の DOM の更新が必要な部分を最適化できます。また、テストが可能になります。React や React とその仮想 DOM のやり取りをテストするためのブラウザーを用意する必要がありません。
 
@@ -121,6 +124,40 @@ React はまた、HTML と連動するしくみが変わっています。 (HTML
 JavaScript を既に理解している場合、React は簡単に学習できます。 Angular やその他の人気ライブラリほどの学習曲線はなく、特別な構文もありません。
 
 React は完全なフレームワークではないため、通常、ルーティング、Web API 呼び出し、依存性管理などを処理する他のライブラリが必要になります。 その良い点は、それぞれに適したライブラリを選択できることです。ただし、欠点があり、自分ですべてを決定し、完了後、選択したライブラリがうまく連動することを確認する必要があります。 最良の出発点を求める場合、React Slingshot のようなスターター キットを利用できます。React と互換性のあるライブラリが既にパッケージ化されています。
+
+### <a name="vue"></a>Vue
+
+入門ガイドから引用します。「Vue はユーザー インターフェイスを構築するための段階的なフレームワークです。 他のモノリシック フレームワークとは異なり、Vue は一から徐々に採用できるように設計されています。 コア ライブラリはビュー レイヤーのみに焦点を当てており、他のライブラリや既存のプロジェクトを簡単に選択して統合できます。 一方、Vue を最新のツールやサポート ライブラリと組み合わせて使用すると、洗練されたシングル ページ アプリケーションを強化できます」
+
+スクリプトを HTML ファイルに含めるだけで、Vue を使い始めることができます。
+
+```html
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+```
+
+フレームワークを追加すると、Vue の単純なテンプレート構文を使用し、宣言によって DOM にデータをレンダリングできます。
+
+```html
+<div id="app">
+  {{ message }}
+</div>
+```
+
+次のスクリプトを追加します。
+
+```js
+var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+```
+
+これだけで "Hello Vue!" と ページに表示されます。 ただし、Vue によって、一度だけメッセージが div に表示されるわけではない点に注意してください。 `message` の値が変更された場合、`<div>` の値がすぐに更新されて反映されるように、データ バインディングと動的更新をサポートします。
+
+もちろん、これは Vue の機能のほんの一部にすぎません。 ここ数年は非常に人気があり、大きなコミュニティがあります。 Vue と連携して拡張できる[サポート コンポーネントとライブラリは膨大な数があり、増え続けています](https://github.com/vuejs/awesome-vue#redux)。 Web アプリケーションにクライアント側の動作を追加する場合、または完全な SPA を構築することを検討している場合、Vue を調査することをお勧めします。
 
 ### <a name="choosing-a-spa-framework"></a>SPA フレームワークを選択する
 
@@ -157,13 +194,13 @@ JavaScript フレームワークは今後も猛烈な速さで進化を続けま
 > - **Angular**  
 > <https://angular.io/>
 > - **React**  
-> <https://facebook.github.io/react/>
-> - **React Slingshot**  
-> <https://github.com/coryhouse/react-slingshot>
-> - **React と Angular 2 の比較**  
-> <https://www.codementor.io/codementorteam/react-vs-angular-2-comparison-beginners-guide-lvz5710ha>
-> - **2017 年度最高の JavaScript フレームワーク 5 作品**  
-> <https://hackernoon.com/5-best-javascript-frameworks-in-2017-7a63b3870282>
+> <https://reactjs.org/>
+> - **Vue**  
+> <https://vuejs.org/>
+> - **Angular 対 React 対 Vue:2020 年に選択すべきフレームワーク**
+> <https://www.codeinwp.com/blog/angular-vs-vue-vs-react/>
+> - **2020 年のフロントエンド開発用の上位の JavaScript フレームワーク**  
+> <https://www.freecodecamp.org/news/complete-guide-for-front-end-developers-javascript-frameworks-2019/>
 
 >[!div class="step-by-step"]
 >[前へ](common-web-application-architectures.md)

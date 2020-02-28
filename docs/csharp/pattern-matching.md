@@ -4,12 +4,12 @@ description: C# のパターン マッチング式について説明します
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: ff84ddd4f07fb77dc9fe648a495a441ed8f9198b
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: db509a0ebf1e205e9996ba8102757fe8c0b9ea3a
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039362"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77501628"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
@@ -136,3 +136,7 @@ match 式の 1 つとしての `var` の導入により、パターン マッチ
 パターン マッチングは、あらゆるデータ型で使用できます。 オブジェクトを調査する式を記述し、それらの条件に基づいて制御フローを決定します。
 
 このサンプルのコードを、抽象的な `Shape` と特定の派生図形のクラス階層を作成し、それぞれに面積を計算するための仮想メソッドが独自に実装されている場合の設計と比較してください。 一般に、パターン マッチング式は、データを扱う際にデータ ストレージの問題と動作の問題を分離したい場合に非常に便利なツールであることがわかります。
+
+## <a name="see-also"></a>関連項目
+
+- [チュートリアル: パターン マッチング機能を使用してデータ型を拡張する](tutorials/pattern-matching.md)

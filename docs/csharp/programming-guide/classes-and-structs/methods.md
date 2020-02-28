@@ -5,12 +5,12 @@ helpviewer_keywords:
 - methods [C#]
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
-ms.openlocfilehash: 8c90f06bfadc528bd9575ead30e6b01263055fe8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 8348e080d833e79dd364aee511ac7d05fb53d1cc
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743909"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543561"
 ---
 # <a name="methods-c-programming-guide"></a>メソッド (C# プログラミング ガイド)
 
@@ -21,7 +21,7 @@ ms.locfileid: "76743909"
 
 ## <a name="method-signatures"></a>メソッド シグネチャ
 
-メソッドは、 [クラス](../../language-reference/keywords/class.md) または [構造体](../../language-reference/keywords/struct.md) で、アクセス レベル ( `public` や `private`など)、オプションの修飾子 ( `abstract` や `sealed`など)、戻り値、メソッドの名前、およびメソッド パラメーターを指定して宣言します。 これらのまとまりがメソッドのシグネチャとなります。
+メソッドは、[クラス](../../language-reference/keywords/class.md)、[構造体](../../language-reference/keywords/struct.md)、または[インターフェイス](../interfaces/index.md)内で、アクセス レベル (`public` や `private` など)、オプションの修飾子 (`abstract` や `sealed` など)、戻り値、メソッドの名前、およびメソッド パラメーターを指定して宣言されます。 これらのまとまりがメソッドのシグネチャとなります。
 
 > [!NOTE]
 > メソッドのオーバーロードを可能にするために、メソッドの戻り値の型はメソッドのシグネチャには含まれません。 ただし、デリゲートとそれが指すメソッドの互換性を決定する場合には、メソッドのシグネチャの一部となります。

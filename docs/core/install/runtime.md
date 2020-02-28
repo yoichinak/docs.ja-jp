@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: d36909e06bd9a3de0940c4c1b2b9eacbf9cafe7f
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740590"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543522"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core ランタイムのインストール
 
@@ -69,6 +69,8 @@ export PATH=$PATH:$HOME/dotnet
 >
 > また、ファイルの末尾に `export DOTNET_ROOT=$HOME/dotnet` を追加します。
 
+この方法では、別々の場所に異なるバージョンをインストールして、どのアプリケーションにどれを使用するかを明示的に選択できます。
+
 ::: zone-end
 
 ::: zone pivot="os-windows"
@@ -86,11 +88,30 @@ dotnet-install.ps1 -Channel 3.1 -Runtime aspnetcore
 > [!NOTE]
 > 上のコマンドでは、互換性を最大限に高めるために ASP.NET Core ランタイムをインストールします。 ASP.NET Core ランタイムには、標準の .NET Core ランタイムも含まれています。
 
+## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
+
+ランタイムを抽出し、.NET Core CLI コマンドをターミナルで使用できるようにするには、最初に .NET Core のバイナリ リリースを[ダウンロード](#all-net-core-downloads)します。 次に、インストール先のディレクトリ (`%USERPROFILE%\dotnet` など) を作成します。 最後に、ダウンロードした zip ファイルをそのディレクトリに抽出します。
+
+既定では、.NET Core CLI コマンドおよびアプリでは、この方法でインストールされた .NET Core は使用されません。 使用するには、明示的に選択する必要があります。 これを行うには、アプリケーションの起動に使用する環境変数を変更します。
+
+```console
+set DOTNET_ROOT=%USERPROFILE%\dotnet
+set PATH=%USERPROFILE%\dotnet;%PATH%
+```
+
+この方法では、複数のバージョンを別々の場所にインストールして、その場所を参照する環境変数を使ってアプリケーションを実行することで、アプリケーションによって使用されるインストール場所を明示的に選択できます。
+
+これらの環境変数が設定されている場合でも、.NET Core では、アプリケーションを実行するための最適なフレームワークを選択するときに、既定のグローバル インストールの場所が引き続き考慮されます。 既定値は通常、インストーラーによって使用される `C:\Program Files\dotnet` です。 この環境変数の設定も行うことで、カスタムのインストール場所のみを使用するように、ランタイムに指示できます。
+
+```console
+set DOTNET_MULTILEVEL_LOOKUP=0
+```
+
 ::: zone-end
 
 ::: zone pivot="os-linux,os-macos"
 
-## <a name="install-with-bash-automation"></a>bash オートメーションを使用したインストール
+## <a name="install-with-bash-automation"></a>bash オートメーションを使用してインストールする
 
 [dotnet-install スクリプト](../tools/dotnet-install-script.md)は、ランタイムの自動化および管理者以外によるインストールに使用されます。 スクリプトは、[dotnet-install スクリプト参照ページ](../tools/dotnet-install-script.md)からダウンロードできます。
 

@@ -3,16 +3,20 @@ title: 選択的単体テストの実行
 description: .NET Core において dotnet test コマンドでフィルター式を使用して、選択的単体テストを実行する方法。
 author: smadala
 ms.date: 03/22/2017
-ms.openlocfilehash: 57428dad2de6c2507ca2cdc42e3df9e83a1edd69
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715459"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543509"
 ---
 # <a name="running-selective-unit-tests"></a>選択的単体テストの実行
 
 .NET Core で `dotnet test` コマンドを使用することで、フィルター式を使用して、選択的テストを実行することができます。 この記事では、実行するテストをフィルター処理する方法を示します。 次の例では、`dotnet test` を使用します。 `vstest.console.exe` を使用している場合は、`--filter` を `--testcasefilter:` に置き換えます。
+
+> [!NOTE]
+> `*nix` に感嘆符 (!) を含むフィルターを使用すると、`!` が予約されているために、エスケープが必要になります。 たとえば、名前空間に IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests` が含まれている場合、このフィルターではすべてのテストがスキップされます。
+> 感嘆符の前にある円記号に注意してください。
 
 ## <a name="mstest"></a>MSTest
 

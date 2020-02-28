@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 6e1c7881aa415ea54307d80214001a2f0fe5b4a6
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920463"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503544"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI を使用した .NET Core の概要
 
@@ -28,7 +28,7 @@ ms.locfileid: "76920463"
 
 GitHub の dotnet/samples レポジトリから、[サンプル コードを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/core/console-apps/HelloMsBuild)することができます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
-コマンド プロンプトを開き、*Hello* という名前のフォルダーを作成します。 作成したフォルダーに移動して、次のように入力します。
+コマンド プロンプトを開き、*Hello* という名前のフォルダーを作成します。 作成したフォルダーに移動して、以下を入力します。
 
 ```dotnetcli
 dotnet new console
@@ -64,17 +64,25 @@ dotnet run
 
     [dotnet run](../tools/dotnet-run.md) で [dotnet build](../tools/dotnet-build.md) が呼び出され、ビルド ターゲットがビルドされていることを確認した後、`dotnet <assembly.dll>` が呼び出されてターゲット アプリケーションが実行されます。
     
-    ```console
+    ```dotnetcli
     dotnet run
+    ```
 
+    次の出力が得られます。
+
+    ```console
     Hello World!
     ```
     
     または、`dotnet build` を実行して、ビルド コンソール アプリケーションを実行しないでコードをコンパイルすることもできます。 これにより、プロジェクトの名前に基づいて、コンパイル済みのアプリケーションが DLL ファイルとして生成されます。 この場合、作成されるファイルの名前は *Hello.dll* になります。 このアプリを、Windows 上で `dotnet bin\Debug\netcoreapp3.1\Hello.dll` を使用して実行できます (Windows 以外のシステムでは `/` を使用します)。
     
-    ```console
+    ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
+    ```
 
+    次の出力が得られます。
+
+    ```console
     Hello World!
     ```
     
@@ -98,8 +106,13 @@ dotnet run
 
 03. アプリにパラメーターを渡すプログラムを実行します。 `dotnet` コマンドを使用してアプリを実行する場合は、`--` を末尾に追加します。 `--` の右側にあるものは、パラメーターとしてアプリに渡されます。 次の例では、値 `John` がアプリに渡されます。
 
+    ```dotnetcli
+    dotnet run -- John
+    ```
+
+    次の出力が得られます。
+
     ```console
-    $ dotnet run -- John
     Hello John!
     Fibonacci Numbers 1-15:
     1: 0
@@ -135,10 +148,15 @@ dotnet run
 
 03. [dotnet build](../tools/dotnet-build.md) を実行して、変更をコンパイルします。
 
-04. [dotnet run](../tools/dotnet-run.md) を実行することで、アプリを実行します。 プログラムの出力は次のようになります。
+04. [dotnet run](../tools/dotnet-run.md) を実行することで、アプリを実行します。
+
+    ```dotnetcli
+    dotnet run
+    ```
+
+    次の出力が得られます。
 
     ```console
-    $ dotnet run
     0
     1
     1
@@ -160,8 +178,13 @@ dotnet run
 
 アプリを配布する準備ができたら、[dotnet publish](../tools/dotnet-publish.md) コマンドを使用して、_bin\\debug\\netcoreapp3.1\\publish\\_ に _publish_ フォルダーを生成します (Windows 以外のシステムの場合は `/` を使用します)。 dotnet ランタイムが既にインストールされている他のプラットフォームには、_publish_ フォルダーの内容を配布できます。
 
-```console
+```dotnetcli
 dotnet publish
+```
+
+次のような出力が得られます。
+
+```console
 Microsoft (R) Build Engine version 16.4.0+e901037fe for .NET Core
 Copyright (C) Microsoft Corporation. All rights reserved.
 
@@ -174,9 +197,13 @@ Copyright (C) Microsoft Corporation. All rights reserved.
 
 [dotnet](../tools/dotnet.md) コマンドを使って、発行されたアプリを実行できます。
 
-```console
+```dotnetcli
 dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
+```
 
+次の出力が得られます。
+
+```console
 Hello World!
 ```
 

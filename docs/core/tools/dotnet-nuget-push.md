@@ -2,21 +2,17 @@
 title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
-ms.date: 12/04/2019
-ms.openlocfilehash: a352120efa199b871e67eb8ba2442bd69a9fc4ed
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 02/14/2020
+ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789879"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503660"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
-**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
 ## <a name="name"></a>名前
 
@@ -36,69 +32,69 @@ dotnet nuget push [-h|--help]
 
 ## <a name="arguments"></a>引数
 
-* **`ROOT`**
+- **`ROOT`**
 
   プッシュされるパッケージのファイル パスを指定します。
 
 ## <a name="options"></a>オプション
 
-* **`-d|--disable-buffering`**
+- **`-d|--disable-buffering`**
 
   メモリ使用量を削減するために、HTTP(S) サーバーにプッシュするときのバッファリングを無効にします。
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   コマンドの短いヘルプを印刷します。
 
-* **`--interactive`**
+- **`--interactive`**
 
   コマンドが認証などの操作をブロックして、手動アクションを要求することを許可します。 .NET Core 2.2 SDK 以降、使用できるオプションです。
 
-* **`-k|--api-key <API_KEY>`**
+- **`-k|--api-key <API_KEY>`**
 
   サーバーの API キーです。
 
-* **`-n|--no-symbols`**
+- **`-n|--no-symbols`**
 
   シンボルをプッシュしません (存在する場合でも)。
 
-* **`--no-service-endpoint`**
+- **`--no-service-endpoint`**
 
   ソース URL に "api/v2/package" を追加しません。 .NET Core 2.1 SDK 以降、使用できるオプションです。
 
-* **`-s|--source <SOURCE>`**
+- **`-s|--source <SOURCE>`**
 
   サーバー URL を指定します。 `DefaultPushSource` 構成値が NuGet 構成ファイルに設定されない限り、このオプションは必須です。
 
-* **`--skip-duplicate`**
+- **`--skip-duplicate`**
 
   複数のパッケージを HTTP(S) サーバーにプッシュする場合は、すべての 409 競合応答を警告として処理して、プッシュを続行できるようにします。 .NET Core 3.1 SDK 以降で利用できます。
 
-* **`-sk|--symbol-api-key <API_KEY>`**
+- **`-sk|--symbol-api-key <API_KEY>`**
 
   シンボル サーバーの API キーです。
 
-* **`-ss|--symbol-source <SOURCE>`**
+- **`-ss|--symbol-source <SOURCE>`**
 
   シンボル サーバーの URL を指定します。
 
-* **`-t|--timeout <TIMEOUT>`**
+- **`-t|--timeout <TIMEOUT>`**
 
   秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
 
 ## <a name="examples"></a>使用例
 
-* API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+- API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a
   ```
 
-* API キーを指定して、公式 NuGet サーバーに *foo.nupkg* をプッシュします。
+- API キーを指定して、公式 NuGet サーバーに *foo.nupkg* をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
@@ -110,25 +106,25 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
   ```
 
-* 既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+- 既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg
   ```
 
-* 既定のシンボル ソースに *foo.symbols.nupkg* をプッシュします。
+- 既定のシンボル ソースに *foo.symbols.nupkg* をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.symbols.nupkg
   ```
 
-* 360 秒のタイムアウトを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
+- 360 秒のタイムアウトを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg --timeout 360
   ```
 
-* 既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
+- 既定のプッシュ ソースに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
 
   ```dotnetcli
   dotnet nuget push *.nupkg
@@ -138,7 +134,7 @@ dotnet nuget push [-h|--help]
   > このコマンドがうまくいかない場合は、古いバージョンの SDK (.NET Core 2.1 SDK 以前のバージョン) に存在したバグが原因である可能性があります。
   > これを解決するには、SDK のバージョンをアップグレードするか、代わりに次のコマンドを実行します: `dotnet nuget push **/*.nupkg`
 
-* HTTP(S) サーバーによって 409 競合応答が返された場合でも、すべての *.nupkg* ファイルをプッシュします。
+- HTTP(S) サーバーによって 409 競合応答が返された場合でも、すべての *.nupkg* ファイルをプッシュします。
 
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate

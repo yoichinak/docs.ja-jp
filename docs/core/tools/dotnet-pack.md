@@ -1,21 +1,17 @@
 ---
 title: dotnet pack コマンド
 description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
-ms.date: 08/08/2019
-ms.openlocfilehash: 057d1029e5c933912c43c178b6db8a8498f2ed57
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734124"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503648"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
-**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
 ## <a name="name"></a>名前
 
@@ -63,13 +59,13 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 ## <a name="options"></a>オプション
 
-- **`-c|--configuration {Debug|Release}`**
+- **`-c|--configuration <CONFIGURATION>`**
 
-  ビルド構成を定義します。 既定値は `Debug` です。
+  ビルド構成を定義します。 ほとんどのプロジェクトの既定値は `Debug` ですが、プロジェクトでビルド構成設定をオーバーライドできます。
 
 - **`--force`**
 
-  最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。 .NET Core 2.0 SDK 以降、使用できるオプションです。
+  最後の復元が成功した場合でも、すべての依存関係が強制的に解決されます。 このフラグを指定することは、*project.assets.json* ファイルを削除することと同じです。
 
 - **`-h|--help`**
 
@@ -93,11 +89,11 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 - **`--no-dependencies`**
 
-  プロジェクト間参照を無視し、ルート プロジェクトのみを復元します。 .NET Core 2.0 SDK 以降、使用できるオプションです。
+  プロジェクト間参照を無視し、ルート プロジェクトのみを復元します。
 
 - **`--no-restore`**
 
-  コマンドを実行するときに、暗黙的な復元を実行しません。 .NET Core 2.0 SDK 以降、使用できるオプションです。
+  コマンドを実行するときに、暗黙的な復元を実行しません。
 
 - **`--nologo`**
 
@@ -109,7 +105,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
-  パッケージを復元するターゲット ランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。 .NET Core 2.0 SDK 以降、使用できるオプションです。
+  パッケージを復元するターゲット ランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
 
 - **`-s|--serviceable`**
 
@@ -167,7 +163,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
   dotnet pack -p:TargetFrameworks=net45
   ```
 
-- プロジェクトをパックして、復元操作の特定のランタイム (Windows 10) を使用します(.NET Core SDK 2.0 以降のバージョン)。
+- プロジェクトをパックして、復元操作用の特定のランタイム (Windows 10) を使用する:
 
   ```dotnetcli
   dotnet pack --runtime win10-x64

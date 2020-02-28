@@ -2,21 +2,17 @@
 title: dotnet nuget locals コマンド
 description: dotnet nuget locals コマンドは、HTTP 要求キャッシュ、一時的なキャッシュ、コンピューター全体のグローバル パッケージ フォルダーなどのローカルの NuGet リソースをクリアまたは一覧表示します。
 author: karann-msft
-ms.date: 06/26/2019
-ms.openlocfilehash: b57c127650555e412af08df6656fb62d75c8ed7c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734081"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503684"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
-**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
-
-<!-- todo: uncomment when all CLI commands are reviewed
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
--->
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
 ## <a name="name"></a>名前
 
@@ -35,7 +31,7 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="arguments"></a>引数
 
-* **`CACHE_LOCATION`**
+- **`CACHE_LOCATION`**
 
   一覧表示またはクリアするキャッシュの場所。 次のいずれかの値を受け入れます。
 
@@ -46,49 +42,49 @@ dotnet nuget locals [-h|--help]
 
 ## <a name="options"></a>オプション
 
-* **`--force-english-output`**
+- **`--force-english-output`**
 
   インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   コマンドの短いヘルプを印刷します。
 
-* **`-c|--clear`**
+- **`-c|--clear`**
 
   クリア オプションは、指定されたキャッシュの種類でクリア操作を実行します。 キャッシュ ディレクトリの内容は、再帰的に削除されます。 実行中のユーザー/グループには、キャッシュ ディレクトリ内のファイルへのアクセス許可が必要です。 アクセス許可がない場合は、ファイル/フォルダーがクリアされなかったことを示すエラーが表示されます。
 
-* **`-l|--list`**
+- **`-l|--list`**
 
   一覧表示オプションは、指定されたキャッシュの種類の場所を表示するために使用されます。
 
 ## <a name="examples"></a>使用例
 
-* すべてのローカルのキャッシュ ディレクトリ (HTTP キャッシュ ディレクトリ、グローバル パッケージ キャッシュ ディレクトリ、および一時的なキャッシュ ディレクトリ) のパスを表示します。
+- すべてのローカルのキャッシュ ディレクトリ (HTTP キャッシュ ディレクトリ、グローバル パッケージ キャッシュ ディレクトリ、および一時的なキャッシュ ディレクトリ) のパスを表示します。
 
   ```dotnetcli
   dotnet nuget locals all –l
   ```
 
-* ローカルの HTTP キャッシュ ディレクトリのパスを表示します。
+- ローカルの HTTP キャッシュ ディレクトリのパスを表示します。
 
   ```dotnetcli
   dotnet nuget locals http-cache --list
   ```
 
-* すべてのローカルのキャッシュ ディレクトリ (HTTP キャッシュ ディレクトリ、グローバル パッケージ キャッシュ ディレクトリ、および一時的なキャッシュ ディレクトリ) からすべてのファイルをクリアします。
+- すべてのローカルのキャッシュ ディレクトリ (HTTP キャッシュ ディレクトリ、グローバル パッケージ キャッシュ ディレクトリ、および一時的なキャッシュ ディレクトリ) からすべてのファイルをクリアします。
 
   ```dotnetcli
   dotnet nuget locals all --clear
   ```
 
-* ローカルのグローバル キャッシュ ディレクトリのファイルをすべてクリアします。
+- ローカルのグローバル キャッシュ ディレクトリのファイルをすべてクリアします。
 
   ```dotnetcli
   dotnet nuget locals global-packages -c
   ```
 
-* ローカルの一時的なキャッシュ ディレクトリのファイルをすべてクリアします。
+- ローカルの一時的なキャッシュ ディレクトリのファイルをすべてクリアします。
 
   ```dotnetcli
   dotnet nuget locals temp -c

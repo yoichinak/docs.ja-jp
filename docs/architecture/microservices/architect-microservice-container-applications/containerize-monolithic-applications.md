@@ -1,13 +1,13 @@
 ---
 title: モノリシック アプリケーションのコンテナー化
 description: モノリシック アプリケーションのコンテナー化は、マイクロサービス アーキテクチャからすべての利点を得ることはありませんが、すぐに提供できる重要な展開の利点があります。
-ms.date: 09/20/2018
-ms.openlocfilehash: e02aa4ff644fc26b7f15721866f8862f6a175cf2
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 0e6f7504a91d2b1a89193471746168fc34f50956
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73738009"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503279"
 ---
 # <a name="containerizing-monolithic-applications"></a>モノリシック アプリケーションのコンテナー化
 
@@ -61,7 +61,7 @@ Azure に展開されたコンテナーを検証する場合でも、アプリ�
 
 ![Container Registry が表示される [App Service の作成] ダイアログのスクリーンショット。](./media/containerize-monolithic-applications/publish-azure-app-service-container.png)
 
-**図 4-4** Visual Studio から Azure App Service に単一のコンテナー アプリケーションを発行する
+**図 4-4** Visual Studio 2019 から Azure App Service に単一のコンテナー アプリケーションを発行する
 
 Docker を使用せずに、Azure App Service でサポートされていない他の機能、フレームワーク、または依存関係が必要な場合には、Azure チームが App Service の依存関係を更新するまで待つ必要がありました。 また、Azure Cloud Services や VM などの他のサービスに切り替えて、詳細な制御を行い、ご利用のアプリケーションに必要なコンポーネントやフレームワークをインストールする必要がありました。
 

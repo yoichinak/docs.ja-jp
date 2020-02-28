@@ -1,17 +1,17 @@
 ---
 title: dotnet msbuild コマンド
 description: dotnet msbuild コマンドは、MSBuild コマンド ラインへのアクセスを提供します。
-ms.date: 12/03/2018
-ms.openlocfilehash: dae1e9f0ca355166d41c11fbafb80c7c9fb29748
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733203"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503669"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
 ## <a name="name"></a>名前
 
@@ -31,25 +31,25 @@ ms.locfileid: "76733203"
 
 ## <a name="examples"></a>使用例
 
-* プロジェクトとその依存関係をビルドします。
+- プロジェクトとその依存関係をビルドします。
 
   ```dotnetcli
   dotnet msbuild
   ```
 
-* リリース構成を使用して、プロジェクトとその依存関係をビルドします。
+- リリース構成を使用して、プロジェクトとその依存関係をビルドします。
 
   ```dotnetcli
   dotnet msbuild -property:Configuration=Release
   ```
 
-* 発行先を実行して、RID `osx.10.11-x64` に発行します。
+- 発行先を実行して、RID `osx.10.11-x64` に発行します。
 
   ```dotnetcli
   dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* プロジェクト全体と SDK に付属するすべてのターゲットをご覧ください。
+- プロジェクト全体と SDK に付属するすべてのターゲットをご覧ください。
 
   ```dotnetcli
   dotnet msbuild -preprocess

@@ -1,13 +1,13 @@
 ---
 title: マイクロサービス ドメイン モデルの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの設計時の主な概念を理解する
-ms.date: 10/08/2018
-ms.openlocfilehash: 3a02059064305ca148b7909923e2f51e60ee54d5
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.date: 01/30/2020
+ms.openlocfilehash: 628fb5c76362ec8f48367b3d69d16ea6ebd24f09
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737460"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502331"
 ---
 # <a name="design-a-microservice-domain-model"></a>マイクロサービス ドメイン モデルの設計
 
@@ -74,9 +74,9 @@ Eric Evans は、"多くのオブジェクトは、概念 ID を持ちません�
 
 通常、個人は ID を持つため、名と姓を持つ個人はエンティティです。これは、その名と姓が別の値セットに一致した場合 (たとえば、それらの名前が別の個人も指している場合) にも当てはまります。
 
-値オブジェクトは、関係データベースや ORM (EF など) では管理が難しいですが、ドキュメント指向データベースでは簡単に実装して使用できます。
+値オブジェクトは、リレーショナル データベースや Entity Framework (EF) などの ORM では管理が難しいですが、ドキュメント指向データベースでは簡単に実装して使用できます。
 
-EF Core 2.0 には、後で詳しく説明しているように、値オブジェクトを処理しやすくする[所有エンティティ](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)機能が含まれます。
+EF Core 2.0 以降のバージョンには、後で詳しく説明しているように、値オブジェクトを処理しやすくする[所有エンティティ](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)機能が含まれます。
 
 #### <a name="additional-resources"></a>その他の技術情報
 

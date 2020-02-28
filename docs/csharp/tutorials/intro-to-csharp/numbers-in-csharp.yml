@@ -11,12 +11,12 @@ metadata:
   nextTutorialTitle: C# の分岐とループ
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: b417ba7ff340019c74b0c3430242f59d6217b07f
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.openlocfilehash: 48268c6e839ae4f72aae0e872c837b153325b68b
+  ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/12/2019
-  ms.locfileid: "73969366"
+  ms.lasthandoff: 02/20/2020
+  ms.locfileid: "77504014"
 items:
 - durationInMinutes: 1
   content: >
@@ -192,7 +192,7 @@ items:
   content: >
     この最後のサンプルでは、整数の除算における結果の切り捨てについて確認します。
 
-    **modulo** 演算子 (`%` 文字) を使用して、**剰余**を得ることができます。
+    **remainder** 演算子 (`%` 文字) を使用して、**リマインダー**を得ることができます。
 
 
     ```csharp

@@ -3,12 +3,12 @@ title: 文字列の内容を変更する方法 - C# ガイド
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 539e313173d46c2c92399cefe94207c8beed03b4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973264"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543262"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\# で文字列の内容を変更する方法
 
@@ -62,12 +62,13 @@ ms.locfileid: "73973264"
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
-## <a name="unsafe-modifications-to-string"></a>文字列のアンセーフな変更
+## <a name="programmatically-build-up-string-content"></a>プログラムによって文字列の内容を作成する
 
-**アンセーフ** コードを使用すると、文字列の作成後に "インプレース" で変更することができます。 アンセーフ コードでは、コード内の特定の種類のバグが最小化されるように設計された .NET の多くの機能がバイパスされます。 文字列クラスは**不変**型として設計されているため、文字列を変更するにはアンセーフ コードを使用する必要があります。 一度作成されると、その値は変わりません。 アンセーフ コードでは、標準の `string` メソッドを使用せずに `string` で使用されたメモリにアクセスして変更できるため、このプロパティが回避されます。
-次の例は、アンセーフ コードを使用して文字列をインプレース変更するような、まれな状況のために提供されています。 この例では、`fixed` キーワードの使用方法を示します。 `fixed` キーワードにより、コードがアンセーフ ポインターを使用してメモリにアクセスしている間、ガベージ コレクター (GC) でメモリ内の文字列オブジェクトが移動しなくなります。 また、文字列に対してアンセーフ操作を実行すると発生する可能性のある副作用を示します。この副作用の原因は、C# コンパイラが文字列を内部に格納する (保持する) 方法にあります。 通常、この方法は、特に必要な場合以外は使用しないでください。 [unsafe](../language-reference/keywords/unsafe.md) と [fixed](../language-reference/keywords/fixed-statement.md) についての詳細を各記事でご確認ください。 <xref:System.String.Intern%2A> の API 参照には文字列インターンの情報も含まれています。
+文字列は不変なので、これまでの例ではすべて、一時的な文字列または文字の配列を作成しています。 ハイパフォーマンスのシナリオでは、これらのヒープの割り当てを回避することが望ましい場合があります。 .NET Core では <xref:System.String.Create%2A?displayProperty=nameWithType> メソッドを提供しており、中間の一時的な文字列の割り当てを回避しながら、コールバックを介してプログラムによって文字列の文字の内容を入力できます。
 
-[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[using string.Create to programmatically build the string content for a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+
+アンセーフ コードを使用して固定ブロック内の文字列を変更することは可能ですが、文字列が作成された後に文字列の内容を変更することは**強く**お勧めしません。 そうすると、予期できない方法で中断が発生します。 たとえば、他のユーザーがあなたの文字列と同じ内容の文字列をインターンした場合、彼らによってコピーが取得され、あなたが文字列を変更しようとしているとは全く想定されません。
 
 [GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 

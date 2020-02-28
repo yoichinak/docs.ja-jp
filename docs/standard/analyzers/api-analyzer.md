@@ -2,14 +2,14 @@
 title: .NET API アナライザー
 description: 非推奨の API およびプラットフォームの互換性の問題を検出するのに .NET API アナライザーがどのように役立つかについて説明します。
 author: oliag
-ms.date: 04/26/2019
+ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: efbfa89f431bd02cdf86b8eff8704aec63a29b6c
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124248"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77542625"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -24,7 +24,7 @@ API アナライザーは、NuGet パッケージ [Microsoft.DotNet.Analyzers.Co
 
 - Visual Studio 2017 以降のバージョン、または Visual Studio for Mac (すべてのバージョン)。
 
-## <a name="discovering-deprecated-apis"></a>非推奨の API の検出
+## <a name="discover-deprecated-apis"></a>非推奨の API を検出する
 
 ### <a name="what-are-deprecated-apis"></a>非推奨の API とは
 
@@ -36,7 +36,21 @@ API アナライザーは、NuGet パッケージ [Microsoft.DotNet.Analyzers.Co
 
 API アナライザーは、DE (Deprecation Error の略) で始まる API 固有のエラー コードを使うので、個々の警告の表示を制御できます。 アナライザーによって識別された非推奨の API は、[dotnet/platform-compat](https://github.com/dotnet/platform-compat) リポジトリで定義されています。
 
-### <a name="using-the-api-analyzer"></a>API アナライザーの使用
+### <a name="add-the-api-analyzer-to-your-project"></a>API アナライザーをプロジェクトに追加する
+
+1. Visual Studio を開きます。
+2. アナライザーを実行するプロジェクトを開きます。
+3. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 (このオプションは、 **[プロジェクト]** メニューからも使用できます。)
+4. [NuGet パッケージ マネージャー] タブ上で、次を実行します。
+   1. [パッケージ ソース] として [nuget.org] を選択します。
+   2. **[参照]** タブに移動します。
+   3. **[プレリリースを含める]** を選択します。
+   4. **[Microsoft.DotNet.Analyzers.Compatibility]** を検索します。
+   5. 一覧にある該当のパッケージを選択します。
+   6. **[インストール]** ボタンを選択します。 
+   7. **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
+
+### <a name="use-the-api-analyzer"></a>API アナライザーを使用する
 
 非推奨の API (<xref:System.Net.WebClient> など) がコードで使われていると、API アナライザーは緑の波線でそれを強調します。 API 呼び出しをポイントすると、次の例のように、電球アイコンと API の非推奨に関する情報が表示されます。
 
@@ -50,14 +64,14 @@ ID をクリックすると、API が非推奨になった理由に関する詳�
 
 強調表示されたメンバーを右クリックして **[\<診断 ID> の非表示]** を選ぶと、警告を抑制できます。 警告を抑制するには 2 つの方法があります。 
 
-- [ローカル (ソース内)](#suppressing-warnings-locally)
-- [グローバル (抑制ファイル内)](#suppressing-warnings-globally) - 推奨
+- [ローカル (ソース内)](#suppress-warnings-locally)
+- [グローバル (抑制ファイル内)](#suppress-warnings-globally) - 推奨
 
-### <a name="suppressing-warnings-locally"></a>警告をローカルに抑制する
+### <a name="suppress-warnings-locally"></a>警告をローカルに抑制する
 
 警告をローカルに抑制するには、警告を抑制するメンバーを右クリックして、 **[クイック アクションとリファクタリング]**  >  **[\<*診断 ID*> の非表示]**  >  **[ソース内]** の順に選びます。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告プリプロセッサ ディレクティブが、定義されているスコープ内のソース コードに追加されます。!["#pragma warning disable で囲まれたコードのスクリーンショット"](media/api-analyzer/suppress-in-source.jpg)
 
-### <a name="suppressing-warnings-globally"></a>警告をグローバルに抑制する
+### <a name="suppress-warnings-globally"></a>警告をグローバルに抑制する
 
 警告をグローバルに抑制するには、警告を抑制するメンバーを右クリックして、 **[クイック アクションとリファクタリング]**  >  **[\<*診断 ID*> の非表示]**  >  **[抑制ファイル内]** の順に選びます。
 
@@ -69,7 +83,7 @@ ID をクリックすると、API が非推奨になった理由に関する詳�
 
 グローバル抑制は、プロジェクト間で API 使用の一貫性を確保するのに推奨される方法です。
 
-## <a name="discovering-cross-platform-issues"></a>クロスプラットフォームの問題の検出
+## <a name="discover-cross-platform-issues"></a>クロスプラットフォームの問題を検出する
 
 非推奨の API と同様に、アナライザーはクロスプラットフォームではないすべての API を識別します。 たとえば、<xref:System.Console.WindowWidth?displayProperty=nameWithType> は Windows では動作しますが、Linux や macOS では動作しません。 診断 ID は、 **[エラー一覧]** ウィンドウに表示されます。 右クリックして **[クイック アクションとリファクタリング]** を選ぶことで、その警告を抑制することができます。 2 つのオプション (非推奨のメンバーを使い続けて警告を抑制するか、まったく使わない) がある非推奨の場合とは異なり、特定のプラットフォーム用にのみコードを開発している場合は、コードを実行する予定のない他のすべてのプラットフォームですべての警告を抑制できます。 そのために必要なことは、プロジェクト ファイルを編集し、無視するすべてのプラットフォームを列記した `PlatformCompatIgnore` プロパティを追加するだけです。 指定できる値は、`Linux`、`macOS`、`Windows` です。
 

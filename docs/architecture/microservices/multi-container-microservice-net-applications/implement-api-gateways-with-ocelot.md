@@ -1,26 +1,24 @@
 ---
 title: Ocelot を使った API ゲートウェイの実装
 description: Ocelot を使用して API ゲートウェイを実装する方法と、コンテナー ベースの環境で Ocelot を使用する方法について説明します。
-ms.date: 10/02/2018
-ms.openlocfilehash: c0bcd240b6bd190dd02266c7faaf9fd668eb23bb
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 01/30/2020
+ms.openlocfilehash: 0eb834829a418cfa1ccdf13c5fc8849f6855c4ba
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777307"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77502414"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>Ocelot を使った API ゲートウェイの実装
 
-参照マイクロサービス アプリケーション [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) では [Ocelot](https://github.com/ThreeMammals/Ocelot) が使用されています。これはシンプルかつ軽量な API ゲートウェイであり、eShopOnContainers で使用される次のような環境であればどこにでもマイクロサービス/コンテナーと共に配置できます。
-
-- Docker ホスト、ローカル開発用 PC、オンプレミス、またはクラウド。
-- Kubernetes クラスター、オンプレミスまたは Azure Kubernetes Service (AKS) などのマネージド クラウド。
-- Service Fabric クラスター、オンプレミス、またはクラウド。
-- Service Fabric メッシュ、Azure で PaaS/Serverless として。
+> [!IMPORTANT]
+> 現在、参照マイクロサービス アプリケーション [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) では、[Envoy](https://www.envoyproxy.io/) が提供する機能を使用して、前に参照された [Ocelot](https://github.com/ThreeMammals/Ocelot) ではなく、API ゲートウェイを実装しています。
+> この設計が選択されたのは、eShopOnContainers に実装される新しい gRPC サービス間通信で必要な WebSocket プロトコルのサポートが Envoy に組み込まれているためです。
+> ただし、ガイドにこのセクションが含まれているのは、Ocelot を実稼働レベルのシナリオに適したシンプルで有能な軽量の API ゲートウェイとして 検討できるようにするためです。
 
 ## <a name="architect-and-design-your-api-gateways"></a>API ゲートウェイのアーキテクチャとデザイン
 
-次のアーキテクチャ図は、eShopOnContainers で Ocelot を使用した API ゲートウェイの実装方法を示しています。
+次のアーキテクチャ図は、eShopOnContainers で Ocelot を使用して API ゲートウェイがどのように実装されたかを示しています。
 
 ![eShopOnContainers アーキテクチャを示す図。](./media/implement-api-gateways-with-ocelot/eshoponcontainers-architecture.png)
 
@@ -89,7 +87,7 @@ HTTP 要求は、マイクロサービス データベースと追加の必須�
 マイクロサービス URL については、コンテナーがローカル開発用 PC (ローカル Docker ホスト) に配置されると、各マイクロサービスのコンテナーには、次の dockerfile にあるように、その dockerfile で指定された内部ポート (通常はポート 80) が常に与えられます。
 
 ```Dockerfile
-FROM microsoft/aspnetcore:2.0.5 AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS base
 WORKDIR /app
 EXPOSE 80
 ```
@@ -105,7 +103,7 @@ EXPOSE 80
 Catalog マイクロサービスの `docker-compose.override.yml` ファイルの例を次に示します。
 
 ```yml
-catalog.api:
+catalog-api:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
     - ASPNETCORE_URLS=http://0.0.0.0:80
@@ -123,10 +121,10 @@ docker-compose.override.yml の構成では、Catalog コンテナーの内部�
 ローカルの Docker ホストで Catalog マイクロサービスを実行します。 Visual Studio から完全な eShopOnContainers ソリューションを実行する (docker-compose ファイル内のすべてのサービスを実行する) か、`docker-compose.yml` と `docker-compose.override.yml` が配置されているフォルダーにある CMD または PowerShell で次の docker-compose コマンドを使用して Catalog マイクロサービスを起動します。
 
 ```console
-docker-compose run --service-ports catalog.api
+docker-compose run --service-ports catalog-api
 ```
 
-このコマンドは、catalog.api サービス コンテナーと docker-compose.yml で指定されている依存関係のみを実行します。 この例では、SQL Server コンテナーと RabbitMQ コンテナーです。
+このコマンドでは、catalog.api サービス コンテナーと docker-compose.yml に指定されている依存関係のみが実行されます。 この例では、SQL Server コンテナーと RabbitMQ コンテナーです。
 
 こうすると、"外部" ポート (この例では `http://localhost:5101/swagger`) を経由して直接アクセスする Swagger UI を使用して、Catalog マイクロサービスに直接アクセスして、そのメソッドを表示できるようになります。
 
@@ -142,7 +140,7 @@ docker-compose run --service-ports catalog.api
 
 Ocelot は、基本的に特定の順序で適用できるミドルウェアのセットです。
 
-Ocelot は、ASP.NET Core でのみ動作するように設計されています。 これは netstandard 2.0 をターゲットにしているため、.NET Standard 2.0 がサポートされていれば、どこでも使用できます。これには、.NET Core 2.0 ランタイムと .NET Framework 4.6.1 ランタイム以降が含まれます。
+Ocelot は、ASP.NET Core でのみ動作するように設計されています。 これは `netstandard2.0` をターゲットにしているため、.NET Standard 2.0 がサポートされていれば、どこでも使用できます。これには、.NET Core 2.0 ランタイムと .NET Framework 4.6.1 ランタイム以降が含まれます。
 
 [Ocelot の NuGet パッケージ](https://www.nuget.org/packages/Ocelot/)を使用して、Visual Studio から ASP.NET Core プロジェクトに Ocelot とその依存関係をインストールします。
 
@@ -150,7 +148,7 @@ Ocelot は、ASP.NET Core でのみ動作するように設計されています
 Install-Package Ocelot
 ```
 
-eShopOnContainers では、その API ゲートウェイの実装はシンプルな ASP.NET Core WebHost プロジェクトで、次の図に示すように、Ocelot のミドルウェアがすべての API ゲートウェイ機能を処理します。
+eShopOnContainers では、その API ゲートウェイの実装はシンプルな ASP.NET Core WebHost プロジェクトであり、次の図に示すように、Ocelot のミドルウェアによってすべての API ゲートウェイ機能が処理されます。
 
 ![Ocelot API ゲートウェイ プロジェクトを表示しているソリューション エクスプローラーのスクリーンショット。](./media/implement-api-gateways-with-ocelot/ocelotapigw-base-project.png)
 
@@ -207,7 +205,7 @@ eShopOnContainers のうちの 1 つの API ゲートウェイから、[ReRoute 
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "catalog.api",
+          "Host": "catalog-api",
           "Port": 80
         }
       ],
@@ -219,7 +217,7 @@ eShopOnContainers のうちの 1 つの API ゲートウェイから、[ReRoute 
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -249,7 +247,7 @@ Ocelot API ゲートウェイの主な機能は、HTTP 要求を受け取り、�
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],
@@ -318,7 +316,7 @@ eShopOnContainers では、"OcelotApiGw" という名前のプロジェクトと
 mobileshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5200:80"
   volumes:
@@ -327,7 +325,7 @@ mobileshoppingapigw:
 mobilemarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5201:80"
   volumes:
@@ -336,7 +334,7 @@ mobilemarketingapigw:
 webshoppingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5202:80"
   volumes:
@@ -345,7 +343,7 @@ webshoppingapigw:
 webmarketingapigw:
   environment:
     - ASPNETCORE_ENVIRONMENT=Development
-    - IdentityUrl=http://identity.api
+    - IdentityUrl=http://identity-api
   ports:
     - "5203:80"
   volumes:
@@ -362,7 +360,7 @@ API ゲートウェイを複数の API ゲートウェイに分割すること�
 
 ここで、(eShopOnContainers ServicesAndWebApps.sln ソリューションを開くとき、または "docker-compose up" を実行している場合に、VS に既定で含まれる) API ゲートウェイを使用して eShopOnContainers を実行すると、次のサンプル ルートが実行されます。
 
-たとえば、webshoppingapigw API ゲートウェイによって提供されるアップストリーム URL `http://localhost:5202/api/v1/c/catalog/items/2/` にアクセスすると、次のブラウザーにあるように、Docker ホスト内の内部ダウンストリーム URL `http://catalog.api/api/v1/2` からの同じ結果が得られます。
+たとえば、webshoppingapigw API ゲートウェイによって提供されるアップストリーム URL `http://localhost:5202/api/v1/c/catalog/items/2/` にアクセスすると、次のブラウザーにあるように、Docker ホスト内の内部ダウンストリーム URL `http://catalog-api/api/v1/2` からの同じ結果が得られます。
 
 ![API ゲートウェイ経由の応答を表示しているブラウザーのスクリーンショット。](./media/implement-api-gateways-with-ocelot/access-microservice-through-url.png)
 
@@ -426,7 +424,7 @@ eShopOnContainers では、BFF に基づく境界とビジネス領域を持つ�
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "basket.api",
+          "Host": "basket-api",
           "Port": 80
         }
       ],

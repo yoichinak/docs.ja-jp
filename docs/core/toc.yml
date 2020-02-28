@@ -49,25 +49,7 @@
     - name: ローカライズされた IntelliSense をインストールする
       href: install/localized-intellisense.md
 - name: 作業開始
-  items:
-    - name: 作業開始
-      href: get-started.md
-    - name: 'C# および Visual Studio Code の使用を開始する'
-      href: tutorials/with-visual-studio-code.md
-    - name: macOS 上の .NET Core での Visual Studio Code の使用に関する概要
-      href: tutorials/using-on-macos.md
-    - name: Visual Studio で初めてのコンソール アプリを作成する
-      href: tutorials/with-visual-studio.md
-    - name: Visual Studio を使用したアプリケーションのデバッグ
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio でのアプリケーションの発行
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Visual Studio での .NET Standard ライブラリの作成
-      href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio での .NET Standard ライブラリのテスト
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio での .NET Standard ライブラリの使用
-      href: tutorials/consuming-library-with-visual-studio.md
+  href: get-started.md
 - name: .NET Core の新機能
   items:
     - name: .NET Core 3.1 の新機能
@@ -87,12 +69,28 @@
   items:
     - name: 概要
       href: tutorials/index.md
-    - name: Visual Studio for Mac を使用した .NET Core の概要
-      href: tutorials/using-on-mac-vs.md
-    - name: macOS での完全な .NET Core ソリューションの構築
-      href: tutorials/using-on-mac-vs-full-solution.md
+    - name: Visual Studio を使用した .NET Core の概要
+      href: tutorials/with-visual-studio.md
+    - name: Visual Studio Code を使用した .NET Core の概要
+      href: tutorials/with-visual-studio-code.md
     - name: CLI を使用する .NET Core に関する概要
       href: tutorials/cli-create-console-app.md
+    - name: macOS 上での Visual Studio Code を使用した .NET Core の概要
+      href: tutorials/using-on-macos.md
+    - name: Visual Studio for Mac を使用した .NET Core の概要
+      href: tutorials/using-on-mac-vs.md
+    - name: Visual Studio を使用したアプリケーションのデバッグ
+      href: tutorials/debugging-with-visual-studio.md
+    - name: Visual Studio でのアプリケーションの発行
+      href: tutorials/publishing-with-visual-studio.md
+    - name: Visual Studio での .NET Standard ライブラリの作成
+      href: tutorials/library-with-visual-studio.md
+    - name: Visual Studio での .NET Standard ライブラリのテスト
+      href: tutorials/testing-library-with-visual-studio.md
+    - name: Visual Studio での .NET Standard ライブラリの使用
+      href: tutorials/consuming-library-with-visual-studio.md
+    - name: macOS での完全な .NET Core ソリューションの構築
+      href: tutorials/using-on-mac-vs-full-solution.md
     - name: .NET Core CLI を使用したプロジェクトの整理およびテスト
       href: tutorials/testing-with-cli.md
     - name: クロスプラットフォーム ツールによるライブラリの開発

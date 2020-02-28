@@ -1,6 +1,6 @@
 - name: 'C# 関連のドキュメント'
   href: index.yml
-- name: はじめに
+- name: 作業開始
   items:
     - name: 概要
       displayName: get started
@@ -1337,8 +1337,9 @@
                 - name: 列挙型
                   href: language-reference/builtin-types/enum.md
                   displayName: 'enum, bit flags, bit field'
-                - name: struct
-                  href: language-reference/keywords/struct.md
+                - name: 構造体型
+                  href: language-reference/builtin-types/struct.md
+                  displayName: struct type
                 - name: null 許容値型
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'

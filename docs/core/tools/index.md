@@ -3,12 +3,12 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI とその機能に関する概要です。
 ms.date: 02/13/2020
-ms.openlocfilehash: 1078d68ddc088274fa14b0094a81765f7af69dad
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543315"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625983"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI の概要
 
@@ -87,7 +87,7 @@ dotnet /build_output/my_app.dll
 dotnet build
 ```
 
-最初に、ドライバーは使用する SDK のバージョンを決定します。 ['global.json'](global-json.md) がない場合は、利用可能な SDK の最新バージョンを使用します。 コンピューターで最新のプレビューまたは安定したバージョンになります。  SDK バージョンが決定されたら、コマンドを実行します。
+最初に、ドライバーは使用する SDK のバージョンを決定します。 [global.json](global-json.md) ファイルがない場合は、利用可能な SDK の最新バージョンを使用します。 コンピューターで最新のプレビューまたは安定したバージョンになります。  SDK バージョンが決定されたら、コマンドを実行します。
 
 ### <a name="command"></a>コマンド
 
