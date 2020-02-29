@@ -6,12 +6,12 @@ helpviewer_keywords:
 - asynchronous design patterns, .NET
 - .NET Framework, asynchronous design patterns
 ms.assetid: 4ece5c0b-f8fe-4114-9862-ac02cfe5a5d7
-ms.openlocfilehash: dfce69ee18b8346cd802b4934de63bf0a39c72f0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e1efe9c3eb57f317def91e527506c358eb086679
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124267"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160054"
 ---
 # <a name="asynchronous-programming-patterns"></a>非同期プログラミングのパターン
 
@@ -59,7 +59,7 @@ APM の対応する部分では `BeginRead` メソッドと `EndRead` メソッ�
 public class MyClass  
 {  
     public IAsyncResult BeginRead(  
-        byte [] buffer, int offset, int count,   
+        byte [] buffer, int offset, int count,
         AsyncCallback callback, object state);  
     public int EndRead(IAsyncResult asyncResult);  
 }  

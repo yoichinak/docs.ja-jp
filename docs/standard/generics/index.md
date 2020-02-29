@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: f04b6fcd1641a53efe75d38ab7122967bff6a58d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75708372"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156310"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -124,7 +124,7 @@ ms.locfileid: "75708372"
   
  共通言語ランタイムでは、Microsoft Intermediate Language (MSIL) のジェネリック型をサポートするために、新しいオペコードとプレフィックスを提供しています ( <xref:System.Reflection.Emit.OpCodes.Stelem>、 <xref:System.Reflection.Emit.OpCodes.Ldelem>、 <xref:System.Reflection.Emit.OpCodes.Unbox_Any>、 <xref:System.Reflection.Emit.OpCodes.Constrained>、 <xref:System.Reflection.Emit.OpCodes.Readonly>など)。  
   
- Visual C++、C#、および Visual Basic のすべてで、ジェネリックの定義と使用が完全にサポートされています。 言語サポートの詳細については、「[Visual Basic におけるジェネリック型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」、「[ジェネリックの概要](../../csharp/programming-guide/generics/index.md)」、および「[Overview of Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)」 (Visual C++ のジェネリックの概要) を参照してください。 
+ Visual C++、C#、および Visual Basic のすべてで、ジェネリックの定義と使用が完全にサポートされています。 言語サポートの詳細については、「[Visual Basic におけるジェネリック型](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)」、「[ジェネリックの概要](../../csharp/programming-guide/generics/index.md)」、および「[Overview of Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)」 (Visual C++ のジェネリックの概要) を参照してください。
 
 ## <a name="nested-types-and-generics"></a>入れ子にされた型とジェネリック  
  ジェネリック型に入れ子にされている型は、外側のジェネリック型の型パラメーターに依存している可能性があります。 共通言語ランタイムでは、独自のジェネリック型パラメーターがない場合でも、入れ子にされた型をジェネリックと見なします。 入れ子にされた型のインスタンスを作成するときに、外側のすべてのジェネリック型の型引数を指定する必要があります。  

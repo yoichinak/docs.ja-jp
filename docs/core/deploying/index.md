@@ -2,18 +2,18 @@
 title: アプリケーションの発行
 description: .NET Core アプリケーションを発行する方法について説明します。 .NET Core では、プラットフォーム固有の、またはクロスプラットフォームのアプリを発行できます。 アプリは、自己完結型として、またはランタイム依存として発行できます。 各モードは、お客様のアプリをユーザーが実行する方法に影響を与えます。
 ms.date: 01/31/2020
-ms.openlocfilehash: 696cca436c73601a3e7825033152d43a659a7dce
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448985"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157936"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core アプリケーションの発行の概要
 
 .NET Core を使用して作成したアプリケーションは、2 つの異なるモードで発行できます。モードは、お客様のアプリをユーザーが実行する方法に影響します。
 
-ご自分のアプリを "*自己完結型*" として発行すると、.NET Core ランタイムとライブラリ、さらにご自分のアプリケーションとその依存関係を含むアプリケーションが生成されます。 そのアプリケーションのユーザーは、.NET Core ランタイムがインストールされていないコンピューター上でそれを実行することができます。 
+ご自分のアプリを "*自己完結型*" として発行すると、.NET Core ランタイムとライブラリ、さらにご自分のアプリケーションとその依存関係を含むアプリケーションが生成されます。 そのアプリケーションのユーザーは、.NET Core ランタイムがインストールされていないコンピューター上でそれを実行することができます。
 
 ご自分のアプリを "*ランタイム依存*" として発行すると、ご自分のアプリケーション自体とその依存関係のみを含むアプリケーションが生成されます。 そのアプリケーションのユーザーは、.NET Core ランタイムを個別にインストールする必要があります。
 
@@ -132,7 +132,7 @@ dotnet publish -r linux-x64 --self-contained false
   > .NET Core の ["*グローバリゼーション インバリアント モード*"](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md) を使用することで、Linux システムでの展開のサイズを約 28 MB 小さくすることができます。 これにより、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType)のようなすべてのカルチャがアプリによって処理されるようになります。
 
 - **.NET Core バージョンを更新するのが困難**\
-.NET Core ランタイム (ご自分のアプリと共に配布される) は、ご自分のアプリの新しいバージョンをリリースすることによってのみアップグレードできます。 .NET Core ランタイムへのセキュリティ パッチとして、ご自分のアプリケーションの更新バージョンを提供する責任があります。 
+.NET Core ランタイム (ご自分のアプリと共に配布される) は、ご自分のアプリの新しいバージョンをリリースすることによってのみアップグレードできます。 .NET Core ランタイムへのセキュリティ パッチとして、ご自分のアプリケーションの更新バージョンを提供する責任があります。
 
 ### <a name="examples"></a>使用例
 

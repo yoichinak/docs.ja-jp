@@ -12,12 +12,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 968eaf2befb44eb893699d1114b315a4f5df3097
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921370"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156506"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -85,7 +85,7 @@ ms.locfileid: "76921370"
 アプリケーションでアセンブリを使用するには、アセンブリへの参照を追加する必要があります。 アセンブリが参照された後は、その名前空間のアクセス可能なすべての型、プロパティ、メソッド、およびその他のメンバーを、そのコードがご自分のソース ファイルの一部であるかのようにアプリケーションで使用することができます。
 
 > [!NOTE]
-> .NET クラス ライブラリのほとんどのアセンブリは自動的に参照されます。 システム アセンブリが自動的に参照されない場合、.NET Core では、アセンブリを含む NuGet パッケージへの参照を追加できます。 Visual Studio で NuGet パッケージ マネージャーを使用するか、またはアセンブリの [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) 要素を *.csproj* または *.vbproj* プロジェクトに追加します。 .NET Framework では、アセンブリへの参照を追加するには、Visual Studio の **[参照の追加]** ダイアログを使用するか、[C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) または [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) コンパイラに向けてコマンド ライン オプション `-reference` を使用します。
+> .NET クラス ライブラリのほとんどのアセンブリは自動的に参照されます。 システム アセンブリが自動的に参照されない場合、.NET Core では、アセンブリを含む NuGet パッケージへの参照を追加できます。 Visual Studio で NuGet パッケージ マネージャーを使用するか、またはアセンブリの [\<PackageReference>](../../core/tools/dependencies.md#the-packagereference-element) 要素を *.csproj* または *.vbproj* プロジェクトに追加します。 .NET Framework では、アセンブリへの参照を追加するには、Visual Studio の **[参照の追加]** ダイアログを使用するか、[C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) または [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) コンパイラに向けてコマンド ライン オプション `-reference` を使用します。
 
 C# では、1 つのアプリケーションで同じアセンブリの 2 つのバージョンを使用することができます。 詳細については、「[extern エイリアス](../../csharp/language-reference/keywords/extern-alias.md)」を参照してください。
 

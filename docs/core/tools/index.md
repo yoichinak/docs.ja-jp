@@ -3,12 +3,12 @@ title: .NET Core CLI
 titleSuffix: ''
 description: .NET Core CLI とその機能に関する概要です。
 ms.date: 02/13/2020
-ms.openlocfilehash: c491088f26a9aa1c065414e76fb0b80d554380b4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: d84f96889cabc3fb4521e39db25050aacdd11546
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625983"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156713"
 ---
 # <a name="net-core-cli-overview"></a>.NET Core CLI の概要
 
@@ -77,7 +77,7 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>ドライバー
 
-ドライバーは [dotnet](dotnet.md) という名前で、2 つの役割 ([フレームワークに依存するアプリ](../deploying/index.md)の実行と、コマンドの実行) があります。 
+ドライバーは [dotnet](dotnet.md) という名前で、2 つの役割 ([フレームワークに依存するアプリ](../deploying/index.md)の実行と、コマンドの実行) があります。
 
 フレームワークに依存するアプリを実行するには、`dotnet /path/to/my_app.dll` など、ドライバーの後にアプリを指定します。 アプリの DLL が存在するフォルダーからコマンドを実行する場合は、`dotnet my_app.dll` を実行するだけです。 .NET Core ランタイムの特定のバージョンを使用する場合は、`--fx-version <VERSION>` オプションを使用してください (「[dotnet コマンド](dotnet.md)」リファレンスを参照)。
 

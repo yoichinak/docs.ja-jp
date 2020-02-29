@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 9b868bd5ed77788cd9b44c11623ae38eba58153c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75711364"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160392"
 ---
 # <a name="collections-and-data-structures"></a>コレクションとデータ構造体
 多くの場合、類似するデータはコレクションとして格納および操作すると、より効率的に処理できます。 <xref:System.Array?displayProperty=nameWithType> クラスまたは <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent>、System.Collections.Immutable の各名前空間のクラスを使用して、コレクションの個々の要素または一定の範囲の要素を追加、削除、および変更することができます。  
@@ -24,7 +24,7 @@ ms.locfileid: "75711364"
   
  .NET Framework 4 より、<xref:System.Collections.Concurrent> 名前空間のコレクションによって、複数のスレッドからコレクション項目にアクセスするための効率的なスレッド セーフ操作が可能になります。 System.Collections.Immutable 名前空間の変更できないコレクション クラス ([NuGet パッケージ](https://www.nuget.org/packages/System.Collections.Immutable)) は、操作が元のコレクションのコピーで実行され、元のコレクションは変更不可能なため、本質的にスレッドセーフです。  
 
-<a name="BKMK_Commoncollectionfeatures"></a>   
+<a name="BKMK_Commoncollectionfeatures"></a>
 ## <a name="common-collection-features"></a>一般的なコレクションの機能  
  すべてのコレクションに、コレクション内の項目を追加、削除、または検索するためのメソッドが用意されています。 また、<xref:System.Collections.ICollection> インターフェイスまたは <xref:System.Collections.Generic.ICollection%601> インターフェイスを直接または間接的に実装するすべてのコレクションで、次の機能を共有しています。  
   
@@ -54,10 +54,10 @@ ms.locfileid: "75711364"
   
      <xref:System.Collections> 名前空間の非ジェネリック コレクション型では、同期によるスレッド セーフが提供され、通常、<xref:System.Collections.ICollection.SyncRoot%2A> メンバーと <xref:System.Collections.ICollection.IsSynchronized%2A> メンバーを介して公開されます。 既定では、これらのコレクションはスレッド セーフではありません。 拡張性が高く効率的な、コレクションへのマルチスレッド アクセスが必要な場合は、<xref:System.Collections.Concurrent> 名前空間のいずれかのクラスを使用するか、変更できないコレクションを使用することを検討します。 詳しくは、「[スレッド セーフなコレクション](../../../docs/standard/collections/thread-safe/index.md)」を参照してください。  
   
-<a name="BKMK_Choosingacollection"></a>   
+<a name="BKMK_Choosingacollection"></a>
 ## <a name="choosing-a-collection"></a>コレクションの選択  
  通常は、ジェネリック コレクションを使用します。 次の表では、一般的なコレクションのシナリオとこれらのシナリオに使用できるコレクション クラスについて説明します。 ジェネリック コレクションに対する知識がない場合、このテーブルは、タスクに最適なジェネリック コレクションを選択するのに役立ちます。  
- 
+
 |やりたいこと|ジェネリック コレクションのオプション|非ジェネリック コレクションのオプション|スレッド セーフまたは変更できないコレクションのオプション|  
 |-|-|-|-|  
 |キーによるクイック検索用のキー/値のペアとして項目を保存する|<xref:System.Collections.Generic.Dictionary%602>|<xref:System.Collections.Hashtable><br /><br /> (キーのハッシュ コードに基づいて編成された、キーと値のペアのコレクション。)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602><br /><br /> <xref:System.Collections.ObjectModel.ReadOnlyDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableDictionary%602>|  
@@ -69,7 +69,7 @@ ms.locfileid: "75711364"
 |並べ替えられたコレクション|<xref:System.Collections.Generic.SortedList%602>|<xref:System.Collections.SortedList>|<xref:System.Collections.Immutable.ImmutableSortedDictionary%602><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
 |数学関数のセット|<xref:System.Collections.Generic.HashSet%601><br /><br /> <xref:System.Collections.Generic.SortedSet%601>|推奨しません|<xref:System.Collections.Immutable.ImmutableHashSet%601><br /><br /> <xref:System.Collections.Immutable.ImmutableSortedSet%601>|  
   
-<a name="BKMK_RelatedTopics"></a>   
+<a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>関連トピック  
   
 |Title|説明|  
@@ -83,7 +83,7 @@ ms.locfileid: "75711364"
 |[スレッドセーフなコレクション](../../../docs/standard/collections/thread-safe/index.md)|複数のスレッドからの安全で効率的な同時アクセスをサポートする <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> や <xref:System.Collections.Concurrent.ConcurrentBag%601?displayProperty=nameWithType> などのコレクション型について説明します。|  
 |System.Collections.Immutable|変更できないコレクションを導入し、コレクション型へのリンクを提供します。|  
   
-<a name="BKMK_Reference"></a>   
+<a name="BKMK_Reference"></a>
 ## <a name="reference"></a>関連項目  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  

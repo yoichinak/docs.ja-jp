@@ -18,17 +18,17 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: 0038f4ba28c7ea3e7be4502a71026a2b3ad47829
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120987"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160145"
 ---
 # <a name="garbage-collection"></a>ガベージ コレクション
 .NET のガベージ コレクターは、アプリケーションのメモリの割り当てと解放を管理します。 新しいオブジェクトを生成するたびに、共通言語ランタイムは、マネージド ヒープからオブジェクトにメモリを割り当てます。 マネージド ヒープに使用可能なアドレス空間がある限り、ランタイムは新しいオブジェクト用に領域の割り当てを続けます。 しかし、メモリの大きさは無限ではありません。 最終的には、ガベージ コレクターが、一部のメモリを解放するためにガベージ コレクションを実行する必要があります。 コレクションの実行に最適な時期は、ガベージ コレクターの最適化エンジンが、割り当てられるオブジェクトの状況に応じて決定します。 コレクションを実行する場合、ガベージ コレクターは、アプリケーションによって使用されなくなったオブジェクトがマネージド ヒープにあるかどうかをチェックし、使われていないオブジェクトのメモリを再利用するために必要な操作を実行します。  
   
-<a name="related_topics"></a>   
+<a name="related_topics"></a>
 ## <a name="related-topics"></a>関連トピック  
   
 |Title|説明|  
@@ -42,7 +42,7 @@ ms.locfileid: "73120987"
 |[アプリケーション ドメインのリソース監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|アプリケーション ドメインによる CPU とメモリの使用状況を監視する方法について説明します。|  
 |[弱い参照](../../../docs/standard/garbage-collection/weak-references.md)|アプリケーションからオブジェクトへのアクセスを許容したまま、そのオブジェクトをガベージ コレクターが収集できるようにする機能について説明します。|  
   
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>関連項目  
  <xref:System.GC?displayProperty=nameWithType>  
   
  <xref:System.GCCollectionMode?displayProperty=nameWithType>  

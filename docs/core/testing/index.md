@@ -4,12 +4,12 @@ description: この記事では、.NET Core と .NET Standard プロジェクト
 author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
-ms.openlocfilehash: 41f4457e636ca495b78109803ca66680e72d007e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75899896"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157402"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core と .NET Standard の単体テスト
 
@@ -23,9 +23,9 @@ C#、F#、Visual Basic 向けに組み込まれている .NET Core 2.0 以降の
 
 ## <a name="what-are-unit-tests"></a>単体テストとは
 
-自動テストを備えることは、ソフトウェア アプリケーションを作成者の意図どおりに確実に動作させるための最良の方法です。 ソフトウェア アプリケーションには複数の種類のテストがあります。 統合テスト、Web テスト、ロード テストなどが含まれます。 **単体テスト**は、個々 のソフトウェア コンポーネントとメソッドをテストします。 単体テストでは、開発者のコントロール内のコードのみがテストされる必要があります。 インフラストラクチャの懸念事項をテストすべきではありません。 インフラストラクチャの懸念事項には、データベース、ファイル システム、ネットワーク リソースが含まれます。 
+自動テストを備えることは、ソフトウェア アプリケーションを作成者の意図どおりに確実に動作させるための最良の方法です。 ソフトウェア アプリケーションには複数の種類のテストがあります。 統合テスト、Web テスト、ロード テストなどが含まれます。 **単体テスト**は、個々 のソフトウェア コンポーネントとメソッドをテストします。 単体テストでは、開発者のコントロール内のコードのみがテストされる必要があります。 インフラストラクチャの懸念事項をテストすべきではありません。 インフラストラクチャの懸念事項には、データベース、ファイル システム、ネットワーク リソースが含まれます。
 
-テストを記述するためのベスト プラクティスもあります。 たとえば、[テスト駆動開発 (TDD)](https://deviq.com/test-driven-development/) では、チェックされるコードよりも前に単体テストが記述されます。 TDD は本を書く前にアウトラインを作成するのと似ています。 開発者が簡潔で読みやすく、効率的なコードを記述できるように支援します。 
+テストを記述するためのベスト プラクティスもあります。 たとえば、[テスト駆動開発 (TDD)](https://deviq.com/test-driven-development/) では、チェックされるコードよりも前に単体テストが記述されます。 TDD は本を書く前にアウトラインを作成するのと似ています。 開発者が簡潔で読みやすく、効率的なコードを記述できるように支援します。
 
 > [!NOTE]
 > ASP.NET チームは[この規則](https://github.com/dotnet/aspnetcore/wiki/Engineering-guidelines#unit-tests-and-functional-tests)に従って、開発者がテスト クラスとメソッドに適した名前を考えられるように支援します。
@@ -40,11 +40,11 @@ C#、F#、Visual Basic 向けに組み込まれている .NET Core 2.0 以降の
 
 - [C#](../../csharp/index.yml)
 - [F#](../../fsharp/index.yml)
-- [Visual Basic](../../visual-basic/index.yml) 
+- [Visual Basic](../../visual-basic/index.yml)
 
 また、次から選択することもできます。
 
-- [xUnit](https://xunit.github.io) 
+- [xUnit](https://xunit.github.io)
 - [NUnit](https://nunit.org)
 - [MSTest](https://github.com/Microsoft/testfx-docs)
 
