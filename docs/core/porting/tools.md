@@ -3,12 +3,12 @@ title: .NET Core に移植するためのツール
 description: .NET Core への移植に使用できるいくつかのツールに関する詳細情報
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 3b71c31b4f26b278b2bd1088adc8e9f64d28ab7b
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 98b3a29f2287414b2cd323f1cbf2225905592b26
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215194"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157519"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>.NET Core への移植で役立つツール
 
@@ -21,5 +21,5 @@ ms.locfileid: "77215194"
 
 さらに、[CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) ツールを使って、小規模なソリューションや個々のプロジェクトを .NET Core プロジェクトのファイル形式に移植してみることが可能です。
 
-> [!WARNING] 
+> [!WARNING]
 > CsprojToVs2017 はサードパーティ製のツールです。 すべてのプロジェクトに対してこれが動作する保証はありません。また、依存している動作に微妙な変更が生じる可能性があります。 CsprojToVs2017 は、自動化できる基本的なことを自動化するための "_開始点_" として使う必要があります。 これは、プロジェクトのファイル形式の移行に対する保証されたソリューションではありません。

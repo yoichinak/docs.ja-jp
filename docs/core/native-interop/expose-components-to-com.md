@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 8d9b8eb274777a0ed019a207c6e8610cc73ec390
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73973310"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157545"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM への .NET Core コンポーネントの公開
 
@@ -32,7 +32,7 @@ ms.locfileid: "73973310"
 最初の手順では、ライブラリを作成します。
 
 1. 新しいフォルダーを作成し、そのフォルダーで次のコマンドを実行します。
-    
+
     ```dotnetcli
     dotnet new classlib
     ```

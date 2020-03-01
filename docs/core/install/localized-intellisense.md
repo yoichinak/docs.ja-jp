@@ -2,12 +2,12 @@
 title: ローカライズされた IntelliSense ファイルをインストールする
 description: Visual Studio で .NET Core プロジェクトのローカライズされた IntelliSense ファイルを使用するように開発用マシンを設定する方法について説明します。
 ms.date: 01/23/2020
-ms.openlocfilehash: 58b462507edf953a6c28aadbb9e3239a5cbe05b2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733657"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157714"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>.NET Core のローカライズされた IntelliSense ファイルをインストールする方法
 
@@ -42,7 +42,7 @@ ms.locfileid: "76733657"
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Windows デスクトップ | *Microsoft.WindowsDesktop.App.Ref* |
       | .NET Standard   | *NETStandard.Library.Ref*          |
-   
+
    1. ローカライズされた IntelliSense をインストールするバージョンに移動します。 たとえば、*3.1.0* です。
    1. *ref* フォルダーを開きます。
    1. モニカー フォルダーを開きます。 たとえば、*netcoreapp3.1* です。
@@ -116,7 +116,7 @@ Visual Studio で IntelliSense に別の言語を使用するには、適切な�
 
 1. **[環境]** ノードで、 **[国際対応の設定]** を選択します。
 
-1. **[言語]** ドロップダウンで目的の言語を選択します。 **[OK]** をクリックします。 
+1. **[言語]** ドロップダウンで目的の言語を選択します。 **[OK]** をクリックします。
 
 1. 変更を有効にするために Visual Studio を再起動する必要があることを示すダイアログが表示されます。 **[OK]** をクリックします。
 

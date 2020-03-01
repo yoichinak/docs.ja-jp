@@ -2,12 +2,12 @@
 title: dotnet tool install コマンド
 description: dotnet tool install コマンドでは、お使いのコンピューター上に指定された .NET Core ツールをインストールします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 2705defe9b77009ca1411da28dd86d144ccc19e6
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543470"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156975"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -30,7 +30,7 @@ dotnet tool install <-h|--help>
 
 `dotnet tool install` コマンドでは、お使いのコンピューター上に .NET Core ツールをインストールする方法を提供します。 コマンドを使用するには、次のいずれかのインストール オプションを指定します。
 
-* 既定の場所にグローバル ツールをインストールするには、`--tool-path` オプションを使用します。
+* 既定の場所にグローバル ツールをインストールするには、`--global` オプションを使用します。
 * カスタムの場所にグローバル ツールをインストールするには、`--tool-path` オプションを使用します。
 * ローカル ツールをインストールするには、`--global` および `--tool-path` オプションを省略します。
 
@@ -73,7 +73,7 @@ dotnet new tool-manifest
 
 - **`-g|--global`**
 
-  ユーザー全体のインストールを指定します。 `--tool-path` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。 
+  ユーザー全体のインストールを指定します。 `--tool-path` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。
 
 - **`-h|--help`**
 
@@ -81,7 +81,7 @@ dotnet new tool-manifest
 
 - **`tool-path <PATH>`**
 
-  グローバル ツールをインストールする場所を指定します。 PATH は絶対パスでも相対パスでもかまいません。 PATH が存在しない場合、コマンドではパスの作成を試みます。 `--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。 
+  グローバル ツールをインストールする場所を指定します。 PATH は絶対パスでも相対パスでもかまいません。 PATH が存在しない場合、コマンドではパスの作成を試みます。 `--global` と `--tool-path` の両方を省略すると、ローカル ツールのインストールが指定されます。
 
 - **`-v|--verbosity <LEVEL>`**
 

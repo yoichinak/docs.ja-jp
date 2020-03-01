@@ -2,12 +2,12 @@
 title: dotnet tool uninstall コマンド
 description: dotnet tool uninstall コマンドでは、お使いのコンピューター上から指定された .NET Core ツールをアンインストールします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 82dad0206d9c3e2ef0f41c353f4a608f10e4f127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 7a15c169c73cf5a743e0fa6f47645d6bccedbde3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543444"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157046"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -46,7 +46,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`-g|--global`**
 
-  ツールがユーザー全体のインストールから削除されることを指定します。 `--tool-path` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、削除されるツールはローカル ツールであると指定されます。 
+  ツールがユーザー全体のインストールから削除されることを指定します。 `--tool-path` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、削除されるツールはローカル ツールであると指定されます。
 
 - **`-h|--help`**
 
@@ -54,7 +54,7 @@ dotnet tool uninstall <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  ツールをアンインストールする場所を指定します。 PATH は絶対パスでも相対パスでもかまいません。 `--global` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、削除されるツールはローカル ツールであると指定されます。 
+  ツールをアンインストールする場所を指定します。 PATH は絶対パスでも相対パスでもかまいません。 `--global` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、削除されるツールはローカル ツールであると指定されます。
 
 ## <a name="examples"></a>使用例
 

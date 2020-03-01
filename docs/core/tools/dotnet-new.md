@@ -2,12 +2,12 @@
 title: dotnet new コマンド
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
 ms.date: 02/13/2020
-ms.openlocfilehash: f11512acf5a1fdc4bde49b3d1212ccf6335dff8b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451331"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157220"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -20,7 +20,7 @@ ms.locfileid: "77451331"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name] 
+dotnet new <TEMPLATE> [--dry-run] [--force] [-i|--install] [-lang|--language] [-n|--name]
     [--nuget-source] [-o|--output] [-u|--uninstall] [--update-apply] [--update-check] [Template options]
 dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
@@ -174,7 +174,7 @@ dotnet new [-h|--help]
 
   既定の C# バージョンの一覧については、「[既定値](../../csharp/language-reference/configure-language-version.md#defaults)」をご覧ください。
 
-- **`--no-restore`** 
+- **`--no-restore`**
 
   指定した場合、プロジェクトの作成中には暗黙的な復元が実行されません。 .NET Core 2.2 SDK 以降で利用できます。
 
@@ -202,7 +202,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `netcoreapp3.1` です。 .NET Core 3.1 SDK 以降で利用できます。 
+  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `netcoreapp3.1` です。 .NET Core 3.1 SDK 以降で利用できます。
 
 - **`--langVersion <VERSION_NUMBER>`**
 
@@ -234,7 +234,7 @@ dotnet new [-h|--help]
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `netcoreapp3.1` です。 .NET Core 3.1 SDK 以降で利用できます。 
+  ターゲットにする[フレームワーク](../../standard/frameworks.md)が指定されます。 既定値は `netcoreapp3.1` です。 .NET Core 3.1 SDK 以降で利用できます。
 
 - **`--exclude-launch-settings`**
 
@@ -503,7 +503,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  使う認証の種類。 .NET Core 3.0 SDK 以降で使用できます。 
+  使う認証の種類。 .NET Core 3.0 SDK 以降で使用できます。
   
   次の値を指定できます。
 
@@ -512,7 +512,7 @@ dotnet new [-h|--help]
 
 - **`--exclude-launch-settings`**
 
-  生成されたテンプレートから *launchSettings.json* が除外されます。 
+  生成されたテンプレートから *launchSettings.json* が除外されます。
 
 - **`--no-restore`**
 
@@ -544,7 +544,7 @@ dotnet new [-h|--help]
 
 - **`--exclude-launch-settings`**
 
-  生成されたテンプレートから *launchSettings.json* が除外されます。 
+  生成されたテンプレートから *launchSettings.json* が除外されます。
 
 - **`-f|--framework <FRAMEWORK>`**
 

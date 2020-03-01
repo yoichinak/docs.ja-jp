@@ -4,12 +4,12 @@ description: .NET Core プロジェクトと .NET Standard プロジェクトの
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 387d66bfeaf48359a27a532247a799c319f38caa
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714291"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157389"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core と .NET Standard での単体テストのベスト プラクティス
 
@@ -169,7 +169,7 @@ Assert.True(mockOrder.Validated);
 
 マジック文字列は、テストを読む人に混乱をきたす可能性があります。 文字列が通常からかけ離れて見えれば、パラメーターや戻り値としてその特定の値がなぜ選択されたかが気になります。 そのような場合、テストに集中するのではなく、実装の詳細を調べようとします。
 
-> [!TIP] 
+> [!TIP]
 > テストの記述時には、その意図をできる限り表現することを目指す必要があります。 マジック文字列の場合の適切なアプローチとしては、これらの値を定数に割り当てます。
 
 #### <a name="bad"></a>不適切な例:
@@ -208,7 +208,7 @@ Assert.True(mockOrder.Validated);
 
 単体テスト フレームワークでは、テスト スイート内のすべての各単体テスト前に `Setup` が呼び出されます。 これは便利なツールとして見なされる場合もありますが、通常はテストが膨張して読みづらくなってしまいます。 各テストには、テストが稼働するためにさまざまな要件があります。 しかし、`Setup` は各テストに対してまったく同じ要件を使用することを強制します。
 
-> [!NOTE] 
+> [!NOTE]
 > xUnit では、バージョン 2.x の時点で SetUp と TearDown の両方が削除されています。
 
 #### <a name="bad"></a>不適切な例:
@@ -239,7 +239,7 @@ Assert.True(mockOrder.Validated);
 
 - 1 つのアサートに失敗した場合、後続のアサートは評価されません。
 - テストで複数のケースをアサートしないようにします。
-- テストが失敗した理由に関する全体像をとらえることができます。 
+- テストが失敗した理由に関する全体像をとらえることができます。
 
 テスト ケースに複数のアサートを導入した場合、すべてのアサートが実行されることは保証されません。 ほとんどの単体テスト フレームワークでは、単体テストでアサーションが失敗すると、続行中のテストは自動的に失敗と見なされます。 この際、実際には動作している機能が失敗として示されるので、混乱を招きます。
 
@@ -253,7 +253,7 @@ Assert.True(mockOrder.Validated);
 [!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>パブリック メソッドの単体テストを行うことでプライベート メソッドを検証する
-ほとんどの場合、プライベート メソッドをテストする必要はありません。 プライベート メソッドは実装の詳細です。 プライベート メソッドは独立して存在することはない、と考えることができます。 いずれかの時点で、実装の一部としてプライベート メソッドを呼び出す、パブリックに公開されたメソッドが存在することになります。 鍵となるのは、プライベート メソッドを呼び出すパブリック メソッドの最終結果です。 
+ほとんどの場合、プライベート メソッドをテストする必要はありません。 プライベート メソッドは実装の詳細です。 プライベート メソッドは独立して存在することはない、と考えることができます。 いずれかの時点で、実装の一部としてプライベート メソッドを呼び出す、パブリックに公開されたメソッドが存在することになります。 鍵となるのは、プライベート メソッドを呼び出すパブリック メソッドの最終結果です。
 
 次のケースを考えてみます。
 
@@ -270,9 +270,9 @@ private string TrimInput(string input)
 }
 ```
 
-メソッドが想定どおりに動作していることを確認する必要があるので、まずは、`TrimInput` に対してテストを記述しようと考えるかもしれません。 しかし、想定外の方法で `ParseLogLine` が `sanitizedInput` を操作し、`TrimInput` に対するテストが無効になる可能性があります。 
+メソッドが想定どおりに動作していることを確認する必要があるので、まずは、`TrimInput` に対してテストを記述しようと考えるかもしれません。 しかし、想定外の方法で `ParseLogLine` が `sanitizedInput` を操作し、`TrimInput` に対するテストが無効になる可能性があります。
 
-実際のテストは、パブリックに公開された `ParseLogLine` メソッドに対して行う必要があります。最終的にはこのメソッドが鍵となるためです。 
+実際のテストは、パブリックに公開された `ParseLogLine` メソッドに対して行う必要があります。最終的にはこのメソッドが鍵となるためです。
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -293,11 +293,11 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -326,7 +326,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-ただし、このテストにはいくつかの問題があることがすぐにわかります。 
+ただし、このテストにはいくつかの問題があることがすぐにわかります。
 
 - テスト スイートが火曜日に実行される場合、2 番目のテストには合格しますが、最初のテストには失敗します。
 - テスト スイートが他のいずれかの曜日に実行される場合、最初のテストには合格しますが、2 番目のテストには失敗します。
@@ -341,11 +341,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }

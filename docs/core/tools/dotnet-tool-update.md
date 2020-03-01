@@ -2,12 +2,12 @@
 title: dotnet tool update コマンド
 description: dotnet tool update コマンドでは、お使いのコンピューター上の指定された .NET Core ツールを更新します。
 ms.date: 02/14/2020
-ms.openlocfilehash: 50bb366fedfb0ea69b8b6007ff89e366b4f689de
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 80e807a0fc06ad762334f888e701f6d9c448369a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543418"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156947"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -58,7 +58,7 @@ dotnet tool update <-h|--help>
 
 - **`-g|--global`**
 
-  更新プログラムがユーザー全体のツール用であることを指定します。 `--tool-path` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、更新されるツールはローカル ツールであると指定されます。 
+  更新プログラムがユーザー全体のツール用であることを指定します。 `--tool-path` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、更新されるツールはローカル ツールであると指定されます。
 
 - **`-h|--help`**
 
@@ -66,7 +66,7 @@ dotnet tool update <-h|--help>
 
 - **`--tool-path <PATH>`**
 
-  グローバル ツールがインストールされている場所を指定します。 PATH は絶対パスでも相対パスでもかまいません。 `--global` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、更新されるツールはローカル ツールであると指定されます。 
+  グローバル ツールがインストールされている場所を指定します。 PATH は絶対パスでも相対パスでもかまいません。 `--global` オプションと組み合わせることはできません。 `--global` と `--tool-path` の両方を省略すると、更新されるツールはローカル ツールであると指定されます。
 
 - **`-v|--verbosity <LEVEL>`**
 

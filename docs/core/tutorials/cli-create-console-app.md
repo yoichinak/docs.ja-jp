@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: af1b374cd14d5070194c035024ce2328c9016646
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503544"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156661"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI を使用した .NET Core の概要
 
@@ -40,30 +40,30 @@ dotnet run
 01. `dotnet new console`
 
     [dotnet new](../tools/dotnet-new.md) で、コンソール アプリのビルドに必要な依存関係を含む最新の *Hello.csproj* プロジェクト ファイルが作成されます。 また、アプリケーションのエントリ ポイントを含む基本的なファイルである *Program.cs* も作成します。
-    
+
     *Hello.csproj*:
-    
+
     [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
-    
+
     プロジェクト ファイルでは、依存関係を復元し、プログラムをビルドするために必要なすべてのものを指定します。
-    
+
     - `<OutputType>` 要素で、実行可能ファイル (つまり、コンソール アプリケーション) をビルドすることが示されます。
     - `<TargetFramework>` 要素で、ターゲットの .NET 実装が指定されます。 高度なシナリオでは、複数の対象フレームワークを指定し、1 回の操作でそれらすべてにビルドすることができます。 このチュートリアルでは、.NET Core 3.1 の場合のビルドについてのみ説明します。
-    
+
     *Program.cs*:
-    
+
     [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
-    
+
     プログラムは `using System` で始まります。これは、"`System` 名前空間のすべてがこのファイルのスコープになる" こと意味します。 `System` 名前空間には、`Console` クラスが含まれています。
-    
+
     次に、`Hello` という名前空間を定義します。 これを必要なものに変更できます。 その名前空間に、`Program` という名前のクラスが、`args` という名前の文字列配列を使用する `Main` メソッドと共に定義されます。 この配列には、プログラムの実行時に渡される引数のリストが含まれます。 このままではこの配列は使用されず、プログラムは単に "Hello World!" というテキストを 記述するだけです。 後に、この引数を利用するようにコードを変更します。
-    
+
     `dotnet new` で、[dotnet restore](../tools/dotnet-restore.md) が暗黙的に呼び出されます。 `dotnet restore` は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を呼び出して依存関係ツリーを復元します。 NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードし (またはコンピューターのキャッシュから取得し)、サンプルをコンパイルして実行するために必要な *obj/project.assets.json* ファイルを記述します。
 
 02. `dotnet run`
 
     [dotnet run](../tools/dotnet-run.md) で [dotnet build](../tools/dotnet-build.md) が呼び出され、ビルド ターゲットがビルドされていることを確認した後、`dotnet <assembly.dll>` が呼び出されてターゲット アプリケーションが実行されます。
-    
+
     ```dotnetcli
     dotnet run
     ```
@@ -73,9 +73,9 @@ dotnet run
     ```console
     Hello World!
     ```
-    
+
     または、`dotnet build` を実行して、ビルド コンソール アプリケーションを実行しないでコードをコンパイルすることもできます。 これにより、プロジェクトの名前に基づいて、コンパイル済みのアプリケーションが DLL ファイルとして生成されます。 この場合、作成されるファイルの名前は *Hello.dll* になります。 このアプリを、Windows 上で `dotnet bin\Debug\netcoreapp3.1\Hello.dll` を使用して実行できます (Windows 以外のシステムでは `/` を使用します)。
-    
+
     ```dotnetcli
     dotnet bin\Debug\netcoreapp3.1\Hello.dll
     ```
@@ -85,7 +85,7 @@ dotnet run
     ```console
     Hello World!
     ```
-    
+
     アプリがコンパイルされると、オペレーティング システム固有の実行可能ファイルが `Hello.dll` と共に作成されます。 Windows では、これは `Hello.exe` になります。Linux または macOS では、これは `hello` になります。 上記の例では、ファイルの名前は `Hello.exe` または `Hello` になります。 その実行可能ファイルを直接実行できます。
 
     ```console

@@ -3,12 +3,12 @@ title: Visual Studio を使用して Hello World .NET Core アプリケーショ
 description: C# または Visual Basic で記述された Hello World アプリを、Visual Studio を使用してデバッグする方法についてご説明します。
 ms.date: 12/05/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: bc2736165ec827c1f2670605f23f549ceed4e83a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: b2ee1401fc89f990c5f930d80d1a510a117e63a0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714053"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156674"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio"></a>Visual Studio を使用して C# または Visual Basic .NET Core の Hello World アプリケーションをデバッグする
 
@@ -28,7 +28,7 @@ ms.locfileid: "75714053"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. `Console.WriteLine($"\nHello, {name}, on {date:d} at {date:t}!");` と表示されている行のコード ウィンドウの左側の余白をクリックして、その行に "*ブレークポイント*" を設定します。 また、コードの行にキャレットを置き、**F9** キーを押すか、メニューバーから **[デバッグ]**  >  **[ブレークポイントの設定/解除]** を選択してブレークポイントを設定することもできます。
 
@@ -64,12 +64,12 @@ ms.locfileid: "75714053"
 
 1. 任意のキーを押してアプリケーションを終了し、デバッグを停止します。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. `Console.WriteLine($"{vbCrLf}Hello, {name}, on {currentDate:d} at {currentDate:t}!")` と表示されている行のコード ウィンドウの左側の余白をクリックして、その行に "*ブレークポイント*" 設定します。 また、目的の行にキャレットを置き、メニューバーから **[デバッグ]**  >  **[ブレークポイントの設定/解除]** を選択してブレークポイントを設定することもできます。
 
    ブレークポイントが設定された行が実行される "*前*" に、アプリケーションの実行がブレークポイントにより一時的に中断されます。
-   
+
    次の図のとおり、Visual Studio ではブレークポイントを強調表示し、左端の余白に赤い円を表示することで、ブレークポイントがある行を示しています。
 
    ![ブレークポイントが設定された Visual Studio のプログラム ウィンドウ](./media/debugging-with-visual-studio/vb/set-breakpoint-in-editor.png)
@@ -104,7 +104,7 @@ ms.locfileid: "75714053"
 
 条件付きブレークポイントを設定して、ユーザーが文字列の入力に失敗したときに何が起こるかをテストするには、次の手順に従います。
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. ブレークポイントを表す赤丸を右クリックします。 コンテキスト メニューの **[条件]** を選んで、 **[ブレークポイント設定]** ダイアログを開きます。 **[条件]** のチェック ボックスをオンにします (まだ選択されていない場合)。
 
@@ -142,7 +142,7 @@ ms.locfileid: "75714053"
 
 1. コード ウィンドウの左端の余白にあるドットをクリックするか、コードの行を選択した状態で **[デバッグ] > [ブレークポイントの設定/解除]** を選んで、ブレークポイントをクリアします。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. ブレークポイントを表す赤丸を右クリックします。 コンテキスト メニューの **[条件]** を選んで、 **[ブレークポイント設定]** ダイアログを開きます。 **[条件]** チェック ボックスをオンにします。
 
@@ -185,7 +185,7 @@ ms.locfileid: "75714053"
 
 Visual Studio では、1 行ずつプログラムをステップ実行して、実行を監視することもできます。 通常は、ブレークポイントを設定してこの機能を使用し、プログラム コードのごく一部を通じてプログラム フローに従います。 プログラムが小さいため、次の手順に従ってプログラム全体をステップ実行できます。
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. メニュー バーで **[デバッグ]**  >  **[ステップ イン]** を選ぶか、**F11** キーを押します。 次に実行される行が強調表示されて、横に矢印が表示されます。
 
@@ -211,7 +211,7 @@ Visual Studio では、1 行ずつプログラムをステップ実行して、�
 
 1. 任意のキーを押してコンソール ウィンドウを閉じ、デバッグを停止します。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. メニュー バーで **[デバッグ]**  >  **[ステップ イン]** を選ぶか、**F11** キーを押します。 次に実行される行が強調表示されて、横に矢印が表示されます。
 

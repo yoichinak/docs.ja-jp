@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: a82934fd2ea9568681a3bec82c3b15513decc926
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741566"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156635"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Visual Studio での .NET Core Hello World アプリケーションの発行
 
@@ -25,15 +25,15 @@ ms.locfileid: "76741566"
 1. **HelloWorld** プロジェクト (HelloWorld ソリューションではなく) を右クリックし、メニューから **[発行]** を選びます。 (メイン メニューの **[ビルド]** から **[HelloWorld を発行]** を選択することもできます。)
 
    ![Visual Studio の [発行] コンテキスト メニュー](media/publishing-with-visual-studio/publish-context-menu.png)
-   
+
 1. **[発行先を選択]** ページで、 **[フォルダー]** を選択し、次に **[プロファイルの作成]** を選択します。
 
    ![Visual Studio で発行先を選択します](media/publishing-with-visual-studio/pick-publish-target.png)
-   
+
 1. **[発行]** ページで、 **[発行]** を選択します。
 
    ![Visual Studio の [発行] ウィンドウ](media/publishing-with-visual-studio/publish-page.png)
-   
+
 ## <a name="inspect-the-files"></a>ファイルを検査する
 
 発行プロセスでは、フレームワークに依存する配置が作成されます。これは、.NET Core がシステムにインストールされていれば、.NET Core によってサポートされる任意のプラットフォームで、発行されたアプリケーションが実行される配置の種類です。 ユーザーは、実行可能ファイルをダブルクリックするか、コマンドプロンプトから `dotnet HelloWorld.dll` コマンドを実行することで、発行されたアプリを実行できます。
@@ -59,7 +59,7 @@ ms.locfileid: "76741566"
          これは、[フレームワークに依存する展開](../deploying/deploy-with-cli.md#framework-dependent-deployment)バージョンのアプリケーションです。 このダイナミック リンク ライブラリを実行するには、コマンド プロンプトで`dotnet HelloWorld.dll` を入力します。
 
       * *HelloWorld.exe*
-      
+
          これは、[フレームワークに依存する実行可能ファイル](../deploying/deploy-with-cli.md#framework-dependent-executable) バージョンのアプリケーションです。 これを実行するには、コマンド プロンプトで `HelloWorld.exe` を入力します。
 
       * *HelloWorld.pdb* (配置は省略可能)
