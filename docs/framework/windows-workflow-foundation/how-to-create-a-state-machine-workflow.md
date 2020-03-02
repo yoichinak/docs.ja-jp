@@ -185,7 +185,7 @@ ms.locfileid: "70989811"
   
 1. Ctrl キーと Shift キーを押しながら B キーを押して、ソリューションをビルドします。  
   
-     ワークフローを実行する方法については、次のトピック「[方法」を参照してください。ワークフロー](how-to-run-a-workflow.md)を実行します。 [を既に完了している場合は、次の方法を実行します。異なるスタイルのワークフローを使用してワークフロー](how-to-run-a-workflow.md) ステップを実行し、この手順のステートマシンワークフローを使用して実行するには、[の「[アプリケーションをビルドして実行するに](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)は」に進んでください。ワークフロー](how-to-run-a-workflow.md)を実行します。  
+     ワークフローを実行する方法については、次のトピック「[方法」を参照してください。ワークフロー](how-to-run-a-workflow.md)を実行します。 [を既に完了している場合は、次の方法を実行します。異なるスタイルのワークフローを使用してワークフロー](how-to-run-a-workflow.md) ステップを実行し、この手順のステートマシンワークフローを使用して実行するには、の「[アプリケーションをビルドして実行するに](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)[は」に進んでください: ワークフローを実行します](how-to-run-a-workflow.md)。  
   
 ## <a name="see-also"></a>関連項目
 

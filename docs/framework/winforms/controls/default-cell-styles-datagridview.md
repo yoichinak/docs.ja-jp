@@ -22,7 +22,7 @@ ms.locfileid: "76731357"
 
 また、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A> プロパティを使用してスタイルを設定し、コントロールに追加されるすべての行に影響を与えることもできます。 行テンプレートの詳細については、「[方法:行テンプレートを使用して、Windows フォーム DataGridView コントロール](use-the-row-template-to-customize-rows-in-the-datagrid.md)の行をカスタマイズします。
 
-次の手順では、<xref:System.Windows.Forms.DataGridView> コントロールを含むフォームを含む**Windows アプリケーション**プロジェクトが必要です。 このようなプロジェクトの設定の詳細については、「[方法:Windows フォームアプリケーションプロジェクトを作成し、次の操作方法を [](/visualstudio/ide/step-1-create-a-windows-forms-application-project) ます。Windows フォーム](how-to-add-controls-to-windows-forms.md)にコントロールを追加します。
+次の手順では、<xref:System.Windows.Forms.DataGridView> コントロールを含むフォームを含む**Windows アプリケーション**プロジェクトが必要です。 このようなプロジェクトの設定の詳細については、「[方法:Windows フォームアプリケーションプロジェクトを作成し、次の操作方法を ](/visualstudio/ide/step-1-create-a-windows-forms-application-project) [ます。Windows フォーム](how-to-add-controls-to-windows-forms.md)にコントロールを追加します。
 
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>コントロール内のすべてのセルに既定のスタイルを設定するには
 
@@ -43,7 +43,7 @@ ms.locfileid: "76731357"
 
 2. **[選択された列]** ボックスの一覧から列を選択します。
 
-3. **[列のプロパティ]** グリッドで、<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> プロパティの横にある省略記号ボタン ([...]) をクリックします (Visual](./media/visual-studio-ellipsis-button.png)Studio のプロパティウィンドウの [...] を![)。 **[CellStyle ビルダー]** ダイアログボックスが表示されます。
+3. **[列のプロパティ]** グリッドで、<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A> プロパティの横にある省略記号ボタン ([...]) をクリックします (![Visual Studio のプロパティウィンドウの [...] ](./media/visual-studio-ellipsis-button.png)を)。 **[CellStyle ビルダー]** ダイアログボックスが表示されます。
 
 4. **プレビュー**ウィンドウを使用して選択内容を確認し、プロパティを設定してスタイルを定義します。
 
