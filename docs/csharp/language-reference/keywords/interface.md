@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
-ms.openlocfilehash: b315d1f04c9e74700afba8ee7871b23ab4b2fd28
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76744683"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625853"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# リファレンス)
 
-インターフェイスによりコントラクトが定義されます。 そのコントラクトを実装する [`class`](class.md) または [`struct`](struct.md) では、インターフェイスで定義されているメンバーを実装する必要があります。 C# 8.0 以降では、インターフェイスによってメンバーの既定の実装を定義できます。 共通の機能を 1 回で実装する目的で [`static`](static.md) メンバーも定義できます。
+インターフェイスによりコントラクトが定義されます。 そのコントラクトを実装する [`class`](class.md) または [`struct`](../builtin-types/struct.md) では、インターフェイスで定義されているメンバーを実装する必要があります。 C# 8.0 以降では、インターフェイスによってメンバーの既定の実装を定義できます。 共通の機能を 1 回で実装する目的で [`static`](static.md) メンバーも定義できます。
 
 次の例の `ImplementationClass` クラスは、`SampleMethod` を返す、パラメーターのない `void` メソッドを実装する必要があります。
 
@@ -78,6 +78,4 @@ public interface INamed
 - [インターフェイス](../../programming-guide/interfaces/index.md)
 - [プロパティの使用](../../programming-guide/classes-and-structs/using-properties.md)
 - [インデクサーの使用](../../programming-guide/indexers/using-indexers.md)
-- [class](class.md)
-- [struct](struct.md)
 - [インターフェイス](../../programming-guide/interfaces/index.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: e42f165bfedec3b1fa54615ee7e2a2028f40aadb
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960475"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160119"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET でのバッファーの使用
 
@@ -115,6 +115,8 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet5)]
 
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ##### <a name="process-text-data"></a>テキスト データの処理
 
 次のような例です。
@@ -146,7 +148,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 - 2 つの `SequencePosition` を比較できないため、次のことが困難になります。
   - ある位置が別の位置より大きいか小さいかを確認する。
   - いくつかの解析アルゴリズムを記述する。
-- `ReadOnlySequence<T>` はオブジェクト参照よりも大きいため、可能な場合は [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) または [ref](../../csharp/language-reference/keywords/ref.md) によって渡す必要があります。 `in` または `ref` によって `ReadOnlySequence<T>` を渡すことで、[struct](../../csharp/language-reference/keywords/struct.md) のコピーを減らすことができます。
+- `ReadOnlySequence<T>` はオブジェクト参照よりも大きいため、可能な場合は [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) または [ref](../../csharp/language-reference/keywords/ref.md) によって渡す必要があります。 `in` または `ref` によって `ReadOnlySequence<T>` を渡すことで、[struct](../../csharp/language-reference/builtin-types/struct.md) のコピーを減らすことができます。
 - 空のセグメントは:
   - `ReadOnlySequence<T>` 内で有効です。
   - `ReadOnlySequence<T>.TryGet` メソッドを使った反復処理中に発生する可能性があります。

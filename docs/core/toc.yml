@@ -12,6 +12,8 @@
       href: install/runtime.md
     - name: サポートされる OS と依存関係
       href: install/dependencies.md
+    - name: macOS の公証の問題
+      href: install/macos-notarization-issues.md
     - name: .NET Core のバージョンを確認する方法
       href: install/how-to-detect-installed-versions.md
     - name: Linux パッケージ マネージャー
@@ -109,6 +111,17 @@
           href: tutorials/cli-templates-create-project-template.md
         - name: 3 - テンプレート パックを作成する
           href: tutorials/cli-templates-create-template-pack.md
+    - name: CLI のツールを作成する
+      items:
+        - name: 1 - ツールを作成する
+          displayName: 'tools, tutorials'
+          href: tools/global-tools-how-to-create.md
+        - name: 2 - グローバル ツールを使用する
+          displayName: 'tools, tutorials'
+          href: tools/global-tools-how-to-use.md
+        - name: 3 - ローカル ツールを使用する
+          href: tools/local-tools-how-to-use.md
+          displayName: 'tools, tutorials'
 - name: プロジェクト SDK
   items:
     - name: 概要
@@ -121,163 +134,12 @@
           href: /aspnet/core/razor-pages/web-sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
         - name: Microsoft.NET.Sdk.Razor
           href: /aspnet/core/razor-pages/sdk?toc=/dotnet/core/toc.json&bc=/dotnet/breadcrumb/toc.json
-- name: ランタイム構成
-  items:
-    - name: 設定
-      href: run-time-config/index.md
-    - name: コンパイル設定
-      href: run-time-config/compilation.md
-    - name: 設定のデバッグとプロファイリング
-      href: run-time-config/debugging-profiling.md
-    - name: ガベージ コレクター設定
-      href: run-time-config/garbage-collector.md
-    - name: グローバリゼーションの設定
-      href: run-time-config/globalization.md
-    - name: ネットワークの設定
-      href: run-time-config/networking.md
-    - name: スレッドの設定
-      href: run-time-config/threading.md
-- name: ネイティブ相互運用性
-  items:
-    - name: COM への .NET Core コンポーネントの公開
-      href: native-interop/expose-components-to-com.md
-- name: パッケージ、メタパッケージ、フレームワーク
-  href: packages.md
-- name: 移行
-  items:
-    - name: .NET Core 2.0 から 2.1 へ
-      href: migration/20-21.md
-    - name: project.json からの移行
-      href: migration/index.md
-    - name: project.json と csproj 間のマッピング
-      href: tools/project-json-to-csproj.md
-    - name: CLI の変更概要
-      href: tools/cli-msbuild-architecture.md
-    - name: csproj 形式に追加されたもの
-      href: tools/csproj.md
-    - name: DNX からの移行
-      href: migration/from-dnx.md
-- name: アプリケーションの展開
-  items:
-    - name: 概要
-      href: deploying/index.md
-    - name: CLI を使用してアプリを発行する
-      href: deploying/deploy-with-cli.md
-    - name: Visual Studio を使用したアプリの展開
-      href: deploying/deploy-with-vs.md
-    - name: CLI を使用して NuGet パッケージを作成する
-      href: deploying/creating-nuget-packages.md
-    - name: 自己完結型展開ランタイムのロール フォワード
-      href: deploying/runtime-patch-selection.md
-    - name: ランタイム パッケージ ストア
-      href: deploying/runtime-store.md
-- name: Docker
-  items:
-    - name: .NET および Docker の概要
-      href: docker/introduction.md
-    - name: NET Core アプリのコンテナー化
-      href: docker/build-container.md
-    - name: Visual Studio のコンテナー ツール
-      href: /visualstudio/containers/overview
-- name: 診断ツール
-  items:
-    - name: 概要
-      href: diagnostics/index.md
-    - name: マネージド デバッガー
-      href: diagnostics/managed-debuggers.md
-    - name: ログとトレース
-      href: diagnostics/logging-tracing.md
-    - name: .NET Core CLI グローバル ツール
-      items:
-        - name: dotnet-カウンター
-          href: diagnostics/dotnet-counters.md
-        - name: dotnet-ダンプ
-          href: diagnostics/dotnet-dump.md
-        - name: dotnet-トレース
-          href: diagnostics/dotnet-trace.md
-    - name: .NET Core 診断チュートリアル
-      items:
-        - name: メモリ リークをデバッグする
-          href: diagnostics/debug-memory-leak.md
-- name: 単体テスト
-  href: testing/index.md
-  items:
-    - name: 概要
-      href: testing/index.md
-    - name: 単体テストのベスト プラクティス
-      href: testing/unit-testing-best-practices.md
-    - name: 'xUnit を使用した C# の単体テスト'
-      href: testing/unit-testing-with-dotnet-test.md
-    - name: 'NUnit を使用した C# の単体テスト'
-      href: testing/unit-testing-with-nunit.md
-    - name: 'MSTest を使用した C# の単体テスト'
-      href: testing/unit-testing-with-mstest.md
-    - name: 'xUnit を使用した F# の単体テスト'
-      href: testing/unit-testing-fsharp-with-dotnet-test.md
-    - name: 'NUnit を使用した F# の単体テスト'
-      href: testing/unit-testing-fsharp-with-nunit.md
-    - name: 'MSTest を使用した F# の単体テスト'
-      href: testing/unit-testing-fsharp-with-mstest.md
-    - name: xUnit を使用した VB の単体テスト
-      href: testing/unit-testing-visual-basic-with-dotnet-test.md
-    - name: NUnit を使用した VB の単体テスト
-      href: testing/unit-testing-visual-basic-with-nunit.md
-    - name: MSTest を使用した VB の単体テスト
-      href: testing/unit-testing-visual-basic-with-mstest.md
-    - name: 選択的単体テストの実行
-      href: testing/selective-unit-tests.md
-    - name: 発行された出力の単体テスト
-      href: testing/unit-testing-published-output.md
-    - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
-      href: /visualstudio/test/live-unit-testing-start
-- name: 継続的インテグレーション
-  href: tools/using-ci-with-cli.md
-- name: バージョン管理
-  items:
-    - name: 概要
-      href: versions/index.md
-    - name: .NET Core のバージョンの選択
-      href: versions/selection.md
-    - name: 期限切れのランタイムと SDK の削除
-      href: versions/remove-runtime-sdk-versions.md
-- name: ランタイム識別子 (RID) のカタログ
-  href: rid-catalog.md
 - name: .NET Core SDK の概要
   href: sdk.md
 - name: .NET Core CLI
   items:
     - name: 概要
       href: tools/index.md
-    - name: グローバル ツールとローカル ツール
-      expanded: true
-      items:
-        - name: ツールを管理する方法
-          href: tools/global-tools.md
-        - name: チュートリアル
-          items:
-            - name: ツールを作成する
-              displayName: tools
-              href: tools/global-tools-how-to-create.md
-            - name: グローバル ツールをインストールして使用する
-              displayName: tools
-              href: tools/global-tools-how-to-use.md
-            - name: ローカル ツールをインストールして使用する
-              displayName: tools
-              href: tools/local-tools-how-to-use.md
-        - name: ツールのトラブルシューティング
-          href: tools/troubleshoot-usage-issues.md
-    - name: 昇格されたアクセス権
-      href: tools/elevated-access.md
-    - name: 機能拡張モデル
-      href: tools/extensibility.md
-    - name: カスタム テンプレート
-      href: tools/custom-templates.md
-    - name: タブ補完を有効にする
-      href: tools/enable-tab-autocomplete.md
-    - name: 製品利用統計情報
-      href: tools/telemetry.md
-    - name: global.json の概要
-      href: tools/global-json.md
     - name: 関連項目
       items:
         - name: dotnet
@@ -352,6 +214,44 @@
               href: tools/dotnet-list-package.md
             - name: dotnet remove package
               href: tools/dotnet-remove-package.md
+    - name: グローバル ツールとローカル ツール
+      items:
+        - name: ツールを管理する
+          href: tools/global-tools.md
+        - name: ツールのトラブルシューティング
+          href: tools/troubleshoot-usage-issues.md
+    - name: global.json の概要
+      href: tools/global-json.md
+    - name: カスタム テンプレート
+      href: tools/custom-templates.md
+    - name: 製品利用統計情報
+      href: tools/telemetry.md
+    - name: 昇格されたアクセス権
+      href: tools/elevated-access.md
+    - name: タブ補完を有効にする
+      href: tools/enable-tab-autocomplete.md
+    - name: 機能拡張モデル
+      href: tools/extensibility.md
+- name: 診断ツール
+  items:
+    - name: 概要
+      href: diagnostics/index.md
+    - name: マネージド デバッガー
+      href: diagnostics/managed-debuggers.md
+    - name: ログとトレース
+      href: diagnostics/logging-tracing.md
+    - name: .NET Core CLI グローバル ツール
+      items:
+        - name: dotnet-カウンター
+          href: diagnostics/dotnet-counters.md
+        - name: dotnet-ダンプ
+          href: diagnostics/dotnet-dump.md
+        - name: dotnet-トレース
+          href: diagnostics/dotnet-trace.md
+    - name: .NET Core 診断チュートリアル
+      items:
+        - name: メモリ リークをデバッグする
+          href: diagnostics/debug-memory-leak.md
 - name: .NET Core の追加ツール
   items:
     - name: 概要
@@ -366,6 +266,58 @@
       href: additional-tools/dotnet-svcutil.xmlserializer-guide.md
     - name: XML シリアライザー ジェネレーター
       href: additional-tools/xml-serializer-generator.md
+- name: アプリケーションの展開
+  items:
+    - name: 概要
+      href: deploying/index.md
+    - name: CLI を使用してアプリを発行する
+      href: deploying/deploy-with-cli.md
+    - name: Visual Studio を使用したアプリの展開
+      href: deploying/deploy-with-vs.md
+    - name: CLI を使用して NuGet パッケージを作成する
+      href: deploying/creating-nuget-packages.md
+    - name: 自己完結型展開ランタイムのロール フォワード
+      href: deploying/runtime-patch-selection.md
+    - name: ランタイム パッケージ ストア
+      href: deploying/runtime-store.md
+- name: Docker
+  items:
+    - name: .NET および Docker の概要
+      href: docker/introduction.md
+    - name: NET Core アプリのコンテナー化
+      href: docker/build-container.md
+    - name: Visual Studio のコンテナー ツール
+      href: /visualstudio/containers/overview
+- name: ランタイム構成
+  items:
+    - name: 設定
+      href: run-time-config/index.md
+    - name: コンパイル設定
+      href: run-time-config/compilation.md
+    - name: 設定のデバッグとプロファイリング
+      href: run-time-config/debugging-profiling.md
+    - name: ガベージ コレクター設定
+      href: run-time-config/garbage-collector.md
+    - name: グローバリゼーションの設定
+      href: run-time-config/globalization.md
+    - name: ネットワークの設定
+      href: run-time-config/networking.md
+    - name: スレッドの設定
+      href: run-time-config/threading.md
+- name: 移行
+  items:
+    - name: .NET Core 2.0 から 2.1 へ
+      href: migration/20-21.md
+    - name: project.json からの移行
+      href: migration/index.md
+    - name: project.json と csproj 間のマッピング
+      href: tools/project-json-to-csproj.md
+    - name: CLI の変更概要
+      href: tools/cli-msbuild-architecture.md
+    - name: csproj 形式に追加されたもの
+      href: tools/csproj.md
+    - name: DNX からの移行
+      href: migration/from-dnx.md
 - name: .NET Framework から移植する
   items:
     - name: 概要
@@ -388,6 +340,47 @@
       href: porting/wpf.md
     - name: C++/CLI プロジェクトを移植する
       href: porting/cpp-cli.md
+- name: 単体テスト
+  href: testing/index.md
+  items:
+    - name: 概要
+      href: testing/index.md
+    - name: 単体テストのベスト プラクティス
+      href: testing/unit-testing-best-practices.md
+    - name: 'xUnit を使用した C# の単体テスト'
+      href: testing/unit-testing-with-dotnet-test.md
+    - name: 'NUnit を使用した C# の単体テスト'
+      href: testing/unit-testing-with-nunit.md
+    - name: 'MSTest を使用した C# の単体テスト'
+      href: testing/unit-testing-with-mstest.md
+    - name: 'xUnit を使用した F# の単体テスト'
+      href: testing/unit-testing-fsharp-with-dotnet-test.md
+    - name: 'NUnit を使用した F# の単体テスト'
+      href: testing/unit-testing-fsharp-with-nunit.md
+    - name: 'MSTest を使用した F# の単体テスト'
+      href: testing/unit-testing-fsharp-with-mstest.md
+    - name: xUnit を使用した VB の単体テスト
+      href: testing/unit-testing-visual-basic-with-dotnet-test.md
+    - name: NUnit を使用した VB の単体テスト
+      href: testing/unit-testing-visual-basic-with-nunit.md
+    - name: MSTest を使用した VB の単体テスト
+      href: testing/unit-testing-visual-basic-with-mstest.md
+    - name: 選択的単体テストの実行
+      href: testing/selective-unit-tests.md
+    - name: 発行された出力の単体テスト
+      href: testing/unit-testing-published-output.md
+    - name: Visual Studio での .NET Core プロジェクトのライブ単体テスト
+      href: /visualstudio/test/live-unit-testing-start
+- name: バージョン管理
+  items:
+    - name: 概要
+      href: versions/index.md
+    - name: .NET Core のバージョンの選択
+      href: versions/selection.md
+    - name: 期限切れのランタイムと SDK の削除
+      href: versions/remove-runtime-sdk-versions.md
+- name: ランタイム識別子 (RID) のカタログ
+  href: rid-catalog.md
 - name: 依存関係の管理と読み込み
   items:
     - name: 依存関係管理
@@ -414,3 +407,9 @@
           href: ../standard/assembly/unloadability-howto.md
 - name: .NET Core の配布パッケージ
   href: distribution-packaging.md
+- name: COM への .NET Core コンポーネントの公開
+  href: native-interop/expose-components-to-com.md
+- name: パッケージ、メタパッケージ、フレームワーク
+  href: packages.md
+- name: 継続的インテグレーション
+  href: tools/using-ci-with-cli.md

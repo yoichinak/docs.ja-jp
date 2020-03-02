@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: bf8a1c028b7b987cb9a7340597087d799dfd4321
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123171"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159365"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 非同期プログラミングでは、非同期操作で完了時に 2 番目の操作を呼び出してデータを渡すのが一般的です。 これまで、継続はコールバック メソッドを使用して行っていました。 タスク並列ライブラリでは、 *継続タスク*に同じ機能が用意されています。 継続タスク (単に "継続" とも呼ばれます) とは、別のタスク (" *継続元*" と呼ばれます) が終了したときにそのタスクによって呼び出される非同期タスクのことです。  
@@ -42,7 +42,7 @@ ms.locfileid: "73123171"
  継続はそれ自体が <xref:System.Threading.Tasks.Task> であり、継続が開始されたスレッドをブロックするわけではありません。 継続タスクが終了するまでブロックするには、 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> メソッドを呼び出します。  
   
 ## <a name="creating-a-continuation-for-a-single-antecedent"></a>1 つの継続元に対する継続の作成  
- <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドを呼び出して、継続元が完了した時点で実行される継続を作成します。 次の例は、基本的なパターンを示しています (わかりやすくするために、例外処理は省略されています)。 現在の曜日の名前を示す `taskA`オブジェクトを返す継続元タスク <xref:System.DayOfWeek> が実行されます。 継続元が完了すると、継続タスク `continuation` に継続元が渡され、その結果を示す文字列が表示されます。 
+ <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドを呼び出して、継続元が完了した時点で実行される継続を作成します。 次の例は、基本的なパターンを示しています (わかりやすくするために、例外処理は省略されています)。 現在の曜日の名前を示す `taskA`オブジェクトを返す継続元タスク <xref:System.DayOfWeek> が実行されます。 継続元が完了すると、継続タスク `continuation` に継続元が渡され、その結果を示す文字列が表示されます。
 
 > [!NOTE]
 > この記事の C# サンプルでは、`Main` メソッド上で `async` 修飾子が利用されています。 この機能は C# 7.1 以降で使用できます。 以前のバージョンでは、このサンプル コードをコンパイルすると、[`CS5001`](../../csharp/misc/cs5001.md) が生成されます。 言語バージョンを C# 7.1 以降に設定する必要があります。 言語バージョンの構成方法については、[言語バージョンの構成](../../csharp/language-reference/configure-language-version.md)に関する記事を参照してください。

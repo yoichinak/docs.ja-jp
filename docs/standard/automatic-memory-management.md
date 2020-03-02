@@ -12,12 +12,12 @@ helpviewer_keywords:
 - managed heap
 - runtime, automatic memory management
 ms.assetid: d4850de5-fa63-4936-a250-5678d118acba
-ms.openlocfilehash: d112bf6d145893bd7b0f99e2b233fc83e72fe227
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1038f16dca507e58005189c9558a9ec8dae4b34f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73140572"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159703"
 ---
 # <a name="automatic-memory-management"></a>Automatic Memory Management
 自動メモリ管理は、[マネージド実行](../../docs/standard/managed-execution-process.md)中に共通言語ランタイムが提供するサービスの 1 つです。 共通言語ランタイムのガベージ コレクターは、アプリケーションが使用するメモリの割り当ておよび解放を管理します。 したがって、開発者がマネージド アプリケーションを開発するときに、メモリ管理タスクを実行するためのコードを記述する必要はありません。 自動メモリ管理により、オブジェクトを解放し忘れたためにメモリ リークが発生する、既に解放されているオブジェクトのメモリにアクセスしようとするなどの一般的な問題を回避できます。 ここでは、ガベージ コレクターによるメモリの割り当て方法および解放方法について説明します。  
@@ -27,7 +27,7 @@ ms.locfileid: "73140572"
   
  マネージド ヒープからのメモリ割り当ては、アンマネージド メモリ割り当てよりも高速に処理されます。 ランタイムはポインターに値を加算することによってオブジェクトにメモリを割り当てるため、この方法によるメモリ割り当ては、スタックからのメモリ割り当てとほとんど同じ速度で行われます。 また、連続してメモリを割り当てられた複数の新規オブジェクトは、マネージド ヒープ内でも連続して格納されるため、アプリケーションからそれらのオブジェクトに高速でアクセスできます。  
   
-<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>   
+<a name="cpconautomaticmemorymanagementreleasingmemoryanchor1"></a>
 ## <a name="releasing-memory"></a>メモリの解放  
  ガベージ コレクターの最適化エンジンは、現在の割り当て状況に基づいて、ガベージ コレクションの実行に最適な時期を判断します。 ガベージ コレクターは、ガベージ コレクションを実行するときに、アプリケーションが使用しなくなったオブジェクトのメモリを解放します。 使用されなくなったオブジェクトを判断するために、アプリケーションのルートを調べます。 すべてのアプリケーションには、ルートのセットがあります。 各ルートは、マネージド ヒープ上のオブジェクトを参照しているか、または null に設定されています。 アプリケーションのルートには、静的フィールド、スレッドのスタック上のローカル変数とパラメーター、CPU レジスタなどが含まれています。 ガベージ コレクターは、[ジャスト イン タイム (JIT) コンパイラ](../../docs/standard/managed-execution-process.md)とランタイムが管理している、アクティブなルートのリストにアクセスします。 このリストを使用してアプリケーションのルートを調べ、ルートから到達できるすべてのオブジェクトを含むグラフを作成します。  
   

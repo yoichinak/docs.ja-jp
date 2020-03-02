@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: ecc1e234b03cb45075c40ff6698f71f8ce18d0de
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128975"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159391"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 
@@ -32,8 +32,8 @@ ms.locfileid: "73128975"
   
 |カテゴリ|グローバル フィールド|静的フィールド|静的メソッド|インスタンス フィールド|インスタンス メソッド|特定のコード ブロック|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
-|同期なし|いいえ|×|×|×|×|いいえ|  
-|同期されたコンテキスト|いいえ|×|×|[はい]|はい|いいえ|  
+|同期なし|いいえ|いいえ|いいえ|いいえ|いいえ|いいえ|  
+|同期されたコンテキスト|いいえ|いいえ|いいえ|はい|はい|いいえ|  
 |同期されたコード領域|いいえ|いいえ|マークされている場合にのみ|いいえ|マークされている場合にのみ|マークされている場合にのみ|  
 |手動での同期|手動|手動|手動|手動|手動|手動|  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73128975"
  両方とも、コード ブロックで例外がスローされると、**lock** または **SyncLock** によって取得されたロックは自動的に解放されます。 C# コンパイラおよび Visual Basic コンパイラは **try**/**finally** ブロックを生成します。tryブロックは先頭に **Monitor.Enter** を含み、**finally** ブロックは **Monitor.Exit** を含みます。 **lock** ブロックまたは **SyncLock** ブロック内部で例外がスローされると、**finally** ハンドラーが実行され、任意のクリーンアップ作業を行えるようになります。  
   
 ## <a name="synchronized-context"></a>同期されたコンテキスト  
- 
+
 .NET Framework と Xamarin のアプリケーションでのみ、任意の <xref:System.ContextBoundObject> で <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> を使用して、すべてのインスタンス メソッドとフィールドを同期できます。 同じコンテキスト ドメイン内のすべてのオブジェクトが同じロックを共有します。 複数のスレッドがメソッドやフィールドにアクセスできますが、これらのオブジェクトに一度にアクセスできるのは 1 つのスレッドだけです。  
   
 ## <a name="see-also"></a>関連項目

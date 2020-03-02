@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
-ms.openlocfilehash: 87436b7d9e2041afb14b146ae0c16201c8593154
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: b33366922677b26f8fe99454206cacd5bb124f32
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75348293"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159274"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時形式文字列
 
@@ -30,7 +30,7 @@ ms.locfileid: "75348293"
 
 カスタム日時書式指定文字列は、<xref:System.DateTime> 値で使用することも、<xref:System.DateTimeOffset> 値で使用することもできます。
 
-[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)] 
+[!INCLUDE[C# interactive-note](~/includes/csharp-interactive-with-utc-partial-note.md)]
 
 <a name="table"></a> 書式設定操作では、日時インスタンスの `ToString` メソッドまたは複合書式指定をサポートするメソッドで、カスタム日時書式指定文字列を使用できます。 両方の使用例を次に示します。
 
@@ -398,7 +398,7 @@ ms.locfileid: "75348293"
 [!code-csharp[Formatting.DateAndTime.Custom#11](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#11)]
 [!code-vb[Formatting.DateAndTime.Custom#11](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#11)]
 
-[表のトップへ](#table) 
+[表のトップへ](#table)
 
 ## <a name="MM_Specifier"></a> "MM" カスタム書式指定子
 

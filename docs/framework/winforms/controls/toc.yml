@@ -1181,7 +1181,7 @@
           href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
         - name: 'チュートリアル: コントロールから継承する'
           href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
-        - name: 'チュートリアル: スマート タグを使って一般的なタスクを実行する'
+        - name: 'チュートリアル: デザイン アクションを使って一般的なタスクを実行する'
           href: perform-common-tasks-design-actions.md
         - name: 'チュートリアル: 標準データ型のコレクションをシリアル化する'
           href: serializing-collections-designerserializationvisibilityattribute.md

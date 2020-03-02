@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, grouping
 - grouping constructs
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
-ms.openlocfilehash: 87cc3d53cf06457191d9c87020c4151e3f848c51
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 5b2ea110837d9d5b905f97ab706af52a594f1c43
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124326"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159222"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのコンストラクトのグループ化
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
@@ -48,7 +48,7 @@ ms.locfileid: "77124326"
   
  グループと正規表現オブジェクト モデルの詳細については、「 [グループ化構成体および正規表現オブジェクト](#Objects)」を参照してください。  
   
-<a name="matched_subexpression"></a>   
+<a name="matched_subexpression"></a>
 ## <a name="matched-subexpressions"></a>一致した部分式  
  次のグループ化構成体は、一致した部分式をキャプチャします。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "77124326"
 |`(\1)`|最初のキャプチャ グループの文字列と一致します。 これが 2 番目のキャプチャ グループです。 例では、これをキャプチャ グループに割り当てて、重複する単語の開始位置を `Match.Index` オブジェクトを使用する。|  
 |`\W`|空白や句読点などの単語文字以外の文字と一致します。 これにより、正規表現パターンが、最初のキャプチャ グループの単語で始まる単語と一致しなくなります。|  
   
-<a name="named_matched_subexpression"></a>   
+<a name="named_matched_subexpression"></a>
 ## <a name="named-matched-subexpressions"></a>一致した名前付き部分式  
  次のグループ化構成体は、一致した部分式をキャプチャし、その部分式に名前または番号でアクセスできるようにします。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "77124326"
 |`\D+`|1 個以上の 10 進数以外の文字と一致します。|  
 |`(?<digit>\d+)?`|1 つ以上の 10 進数の文字の 0 回または 1 回の出現と一致します。 一致を `digit` という名前のグループに割り当てます。|  
   
-<a name="balancing_group_definition"></a>   
+<a name="balancing_group_definition"></a>
 ## <a name="balancing-group-definitions"></a>グループ定義の均等化  
  グループ定義の均等化では、既に定義されていたグループの定義を削除し、既に定義されていたグループと現在のグループの間隔を現在のグループに格納します。 このグループ化構成体の形式は次のとおりです。  
   
@@ -234,7 +234,7 @@ ms.locfileid: "77124326"
 |23|`(?(Open)(?!))`|`Open` グループは定義されていないので、照合は試行されません。|  
 |24|`$`|入力文字列の末尾と一致します。|  
   
-<a name="noncapturing_group"></a>   
+<a name="noncapturing_group"></a>
 ## <a name="noncapturing-groups"></a>非キャプチャ グループ  
  次のグループ化構成体は、部分式と一致した部分文字列をキャプチャしません。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "77124326"
 |`(?:\b(?:\w+)\W*)+`|ワード境界から始まる 1 個以上の単語文字、および 0 個以上の単語文字に使用されない文字が 1 回以上続くパターンと一致します。 一致したテキストをキャプチャされたグループに代入しません。|  
 |`\.`|ピリオドと一致します。|  
   
-<a name="group_options"></a>   
+<a name="group_options"></a>
 ## <a name="group-options"></a>グループ オプション  
  次のグループ化構成体は、指定したオプションを部分式に適用または無効にします。  
   
@@ -284,7 +284,7 @@ ms.locfileid: "77124326"
  [!code-csharp[Conceptual.Regex.Language.Options#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/example1.cs#8)]
  [!code-vb[Conceptual.Regex.Language.Options#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/example1.vb#8)]  
   
-<a name="zerowidth_positive_lookahead_assertion"></a>   
+<a name="zerowidth_positive_lookahead_assertion"></a>
 ## <a name="zero-width-positive-lookahead-assertions"></a>ゼロ幅の肯定先読みアサーション  
  次のグループ化構成体は、ゼロ幅の肯定先読みアサーションを定義します。  
   
@@ -307,7 +307,7 @@ ms.locfileid: "77124326"
 |`\w+`|1 つ以上の単語文字に一致します。|  
 |`(?=\sis\b)`|単語文字に使用される文字の後に、空白文字とワード境界で終了する文字列 "is" が続くかどうかを確認します。 該当する場合は一致と見なされます。|  
   
-<a name="zerowidth_negative_lookahead_assertion"></a>   
+<a name="zerowidth_negative_lookahead_assertion"></a>
 ## <a name="zero-width-negative-lookahead-assertions"></a>ゼロ幅の否定先読みアサーション  
  次のグループ化構成体は、ゼロ幅の否定先読みアサーションを定義します。  
   
@@ -345,7 +345,7 @@ ms.locfileid: "77124326"
 |`\b`|ワード境界で照合を終了します。|  
 |`\p{P})`|次の文字が区切り記号 (ピリオドやコンマなど) ではない場合は一致と見なされます。|  
   
-<a name="zerowidth_positive_lookbehind_assertion"></a>   
+<a name="zerowidth_positive_lookbehind_assertion"></a>
 ## <a name="zero-width-positive-lookbehind-assertions"></a>ゼロ幅の正の後読みアサーション  
  次のグループ化構成体は、ゼロ幅の正の後読みアサーションを定義します。  
   
@@ -370,7 +370,7 @@ ms.locfileid: "77124326"
   
  ゼロ幅の正の後読みアサーションは、キャプチャされたグループの最後の文字がそのグループの正規表現パターンと一致する文字のサブセットになる必要がある場合に、バックトラッキングを制限するためにも使用されます。 たとえば、グループが連続するすべての単語文字をキャプチャする場合に、ゼロ幅の正の後読みアサーションを使用して、最後の文字がアルファベットになるように要求できます。  
   
-<a name="zerowidth_negative_lookbehind_assertion"></a>   
+<a name="zerowidth_negative_lookbehind_assertion"></a>
 ## <a name="zero-width-negative-lookbehind-assertions"></a>ゼロ幅の負の後読みアサーション  
  次のグループ化構成体は、ゼロ幅の負の後読みアサーションを定義します。  
   
@@ -395,7 +395,7 @@ ms.locfileid: "77124326"
 |`\d{4}\b`|4 桁の 10 進数と一致し、ワード境界で照合を終了します。|  
 |<code>(?<!(Saturday&#124;Sunday) )</code>|文字列 "Saturday" または "Sunday" の後に空白が続くパターン以外が一致の前にある場合は、一致と見なされます。|  
   
-<a name="atomic_groups"></a>   
+<a name="atomic_groups"></a>
 ## <a name="atomic-groups"></a>アトミック グループ  
  次のグループ化構成体は、アトミック グループを表します (他の正規表現エンジンでは、非バックトラッキング部分式、アトミック部分式、または 1 回のみの部分式として知られています)。
   
@@ -424,7 +424,7 @@ ms.locfileid: "77124326"
 |`\b`|ワード境界で照合を終了します。|  
 |`(?>(\w)\1+)`|重複する単語文字の 1 回以上の出現と一致しますが、バックトラックしてワード境界の最後の文字と一致することはありません。|  
   
-<a name="Objects"></a>   
+<a name="Objects"></a>
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>グループ化構成体および正規表現オブジェクト  
  正規表現キャプチャ グループと一致する部分文字列は、 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> オブジェクトで表されます。このオブジェクトは、 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトから取得できます。 <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトの値は次のように設定されます。  
   

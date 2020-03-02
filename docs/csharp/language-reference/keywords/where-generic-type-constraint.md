@@ -6,12 +6,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: 19bf7682916336173ed93619fb6f0ff1242a1b30
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d236420c5019f7529b729155b13df50807dc1dab
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712807"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626712"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ジェネリック型制約) (C# リファレンス)
 
@@ -32,7 +32,7 @@ ms.locfileid: "75712807"
 
 [!code-csharp[using the class and struct constraints](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#3)]
 
-`where` 句には、`notnull` 制約を含めることができます。 `notnull` 制約では、型パラメーターを null 非許容型に制限します。 その型には、[値型](struct.md)または null 非許容参照型を指定できます。 `notnull` 制約は、C# 8.0 以降の [`nullable enable` コンテキスト](../../nullable-references.md#nullable-contexts)でコンパイルされたコードで使用できます。 他の制約とは異なり、型引数が `notnull` 制約に違反すると、コンパイラによりエラーではなく警告が生成されます。 警告は、`nullable enable` コンテキストでのみ生成されます。 
+`where` 句には、`notnull` 制約を含めることができます。 `notnull` 制約では、型パラメーターを null 非許容型に制限します。 その型には、[値型](../builtin-types/value-types.md)または null 非許容参照型を指定できます。 `notnull` 制約は、C# 8.0 以降の [`nullable enable` コンテキスト](../../nullable-references.md#nullable-contexts)でコンパイルされたコードで使用できます。 他の制約とは異なり、型引数が `notnull` 制約に違反すると、コンパイラによりエラーではなく警告が生成されます。 警告は、`nullable enable` コンテキストでのみ生成されます。
 
 > [!IMPORTANT]
 > `notnull` 制約が含まれるジェネリック宣言は、null 許容が未指定のコンテキストで使用できますが、コンパイラではその制約は強制されません。

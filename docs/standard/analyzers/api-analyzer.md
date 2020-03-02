@@ -4,12 +4,12 @@ description: 非推奨の API およびプラットフォームの互換性の�
 author: oliag
 ms.date: 02/20/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: f6cf2d8109c564447972afd18c6d6d587711304b
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: e214c91f2beebc7f3b3324f4879deba9a5623f86
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542625"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156135"
 ---
 # <a name="net-api-analyzer"></a>.NET API アナライザー
 
@@ -47,7 +47,7 @@ API アナライザーは、DE (Deprecation Error の略) で始まる API 固�
    3. **[プレリリースを含める]** を選択します。
    4. **[Microsoft.DotNet.Analyzers.Compatibility]** を検索します。
    5. 一覧にある該当のパッケージを選択します。
-   6. **[インストール]** ボタンを選択します。 
+   6. **[インストール]** ボタンを選択します。
    7. **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 
 ### <a name="use-the-api-analyzer"></a>API アナライザーを使用する
@@ -56,13 +56,13 @@ API アナライザーは、DE (Deprecation Error の略) で始まる API 固�
 
 !["緑の波線が表示された WebClient API と左側の電球アイコンのスクリーンショット"](media/api-analyzer/green-squiggle.jpg)
 
-**[エラー一覧]** ウィンドウには、非推奨の API ごとに一意の ID を含む警告が表示されます。次に示すのは `DE004` の例です。 
+**[エラー一覧]** ウィンドウには、非推奨の API ごとに一意の ID を含む警告が表示されます。次に示すのは `DE004` の例です。
 
 !["警告の ID と説明が表示されている [エラー一覧] ウィンドウのスクリーンショット"](media/api-analyzer/warnings-id-and-descriptions.jpg "警告を含むエラー一覧ウィンドウ。")
 
 ID をクリックすると、API が非推奨になった理由に関する詳細情報と、使用できる代替 API に関する提案が表示される Web ページに移動します。
 
-強調表示されたメンバーを右クリックして **[\<診断 ID> の非表示]** を選ぶと、警告を抑制できます。 警告を抑制するには 2 つの方法があります。 
+強調表示されたメンバーを右クリックして **[\<診断 ID> の非表示]** を選ぶと、警告を抑制できます。 警告を抑制するには 2 つの方法があります。
 
 - [ローカル (ソース内)](#suppress-warnings-locally)
 - [グローバル (抑制ファイル内)](#suppress-warnings-globally) - 推奨

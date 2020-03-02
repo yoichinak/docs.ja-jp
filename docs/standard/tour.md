@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: 0154910b91df0b2f72daebe802e4c75bbca964bb
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337581"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160340"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -21,13 +21,13 @@ ms.locfileid: "75337581"
 
 ## <a name="how-to-run-the-code-samples"></a>コード サンプルの実行方法
 
-コード サンプルを実行できるように開発環境を設定する方法については、[はじめに](get-started.md)をご覧ください。 このページのコード サンプルをコピーして環境に貼り付けて実行します。 
+コード サンプルを実行できるように開発環境を設定する方法については、[はじめに](get-started.md)をご覧ください。 このページのコード サンプルをコピーして環境に貼り付けて実行します。
 
 ## <a name="programming-languages"></a>プログラミング言語
 
 .NET は複数のプログラミング言語をサポートしています。 .NET 実装では、[共通言語基盤 (CLI)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/) が実装されています。CLI では特に、言語に依存しないランタイムと言語の相互運用性が指定されています。 つまり、任意の .NET 言語を選んで、.NET でアプリとサービスを作成します。
 
-Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#、F#、Visual Basic の 3 つです。 
+Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#、F#、Visual Basic の 3 つです。
 
 * C# はシンプル、強力、タイプセーフ、そしてオブジェクト指向でありながらも、C スタイル言語の表現力と簡潔さが維持されています。 C や類似の言語を使い慣れている人であれば、ほとんど問題なく C# に適応できます。 C# について詳しくは、「[C# ガイド](../csharp/index.yml)」 (C# ガイド) をご覧ください。
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 09/13/2019
-ms.openlocfilehash: 48e429a6379b0a13cb81f8db6fae27aa31409840
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76794613"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160184"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>ローカライズされた例外メッセージを使用するユーザー定義の例外を作成する方法
 
@@ -30,7 +30,7 @@ ms.locfileid: "76794613"
     [Serializable]
     public class StudentNotFoundException : Exception { }
     ```
-    
+
     ```vb
     <Serializable>
     Public Class StudentNotFoundException
@@ -53,7 +53,7 @@ ms.locfileid: "76794613"
             : base(message, inner) { }
     }
     ```
-    
+
     ```vb
     <Serializable>
     Public Class StudentNotFoundException
@@ -139,7 +139,7 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
 ローカライズされた例外メッセージを作成するには:
 
 1. リソース ファイルを保持するために、*Resources* という名前の新しいフォルダーを作成します。
-1. そこに新しいリソース ファイルを追加します。 Visual Studio でこれを行うには、**ソリューション エクスプローラー**でフォルダーを右クリックし、**[追加]** > **[新しい項目]** > **[リソース ファイル]** を選択します。 ファイルに *ExceptionMessages.resx* という名前を付けます。 これは既定のリソース ファイルです。
+1. そこに新しいリソース ファイルを追加します。 Visual Studio でこれを行うには、**ソリューション エクスプローラー**でフォルダーを右クリックし、 **[追加]**  >  **[新しい項目]**  >  **[リソース ファイル]** を選択します。 ファイルに *ExceptionMessages.resx* という名前を付けます。 これは既定のリソース ファイルです。
 1. 次の図に示すように、例外メッセージの名前と値のペアを追加します。
 
    ![既定のカルチャにリソースを追加する](media/add-resources-to-default-culture.jpg)

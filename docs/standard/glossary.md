@@ -3,12 +3,12 @@ title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 822d6c9513d49dcc6bc57421003441d9bcc7c281
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921110"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160093"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -22,11 +22,11 @@ Ahead Of Time コンパイラ。
 
 「[CoreRT](#corert)」と「[.NET Native](#net-native)」を参照してください。
 
-## <a name="aspnet"></a>ASP.NET 
+## <a name="aspnet"></a>ASP.NET
 
 .NET Framework に付属している ASP.NET の元の実装。
 
-ASP.NET は、ASP.NET Core を含む ASP.NET の両方の実装を指す包括的な用語として使われることがあります。 どちらを意味するかはコンテキストによって決まります。 両方の実装を意味するために ASP.NET を使っているのではないことを明確にしたい場合は、ASP.NET 4.x を参照してください。 
+ASP.NET は、ASP.NET Core を含む ASP.NET の両方の実装を指す包括的な用語として使われることがあります。 どちらを意味するかはコンテキストによって決まります。 両方の実装を意味するために ASP.NET を使っているのではないことを明確にしたい場合は、ASP.NET 4.x を参照してください。
 
 [ASP.NET のドキュメント](/aspnet/#pivot=aspnet)をご覧ください。
 
@@ -78,7 +78,7 @@ Linux、Windows、iOS など、複数の異なるオペレーティング シス
 
 ".NET エコシステム" という用語は ".NET スタック" などの用語と似ていますが、サードパーティのアプリとライブラリを含む点が異なります。 文章での使用例を次に示します。
 
-- "[.NET Standard](#net-standard) の背後にある意図は、.NET エコシステムの高度な統一性を確立することです。" 
+- "[.NET Standard](#net-standard) の背後にある意図は、.NET エコシステムの高度な統一性を確立することです。"
 
 ## <a name="framework"></a>フレームワーク
 
@@ -96,7 +96,7 @@ Linux、Windows、iOS など、複数の異なるオペレーティング シス
 
 ガベージ コレクター (Garbage Collector)。
 
-ガベージ コレクターは、自動メモリ管理の実装です。  GC は、使われなくなったオブジェクトによって占有されているメモリを解放します。 
+ガベージ コレクターは、自動メモリ管理の実装です。  GC は、使われなくなったオブジェクトによって占有されているメモリを解放します。
 
 「[ガベージ コレクション](garbage-collection/index.md)」をご覧ください。
 
@@ -157,7 +157,7 @@ Mono について詳しくは、[Mono のドキュメント](https://www.mono-pr
 
 「[.NET ガイド](index.md)」をご覧ください。
 
-## <a name="net-core"></a>.NET Core 
+## <a name="net-core"></a>.NET Core
 
 .NET のクロスプラットフォームで高パフォーマンスなオープン ソースの実装。 Core 共通言語ランタイム (CoreCLR)、Core AOT ランタイム (CoreRT、開発中)、Core 基本クラス ライブラリ、Core SDK が含まれます。
 
@@ -217,7 +217,7 @@ NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同�
 
 文章での使用例を次に示します。
 
-- ".NET Core は、.NET のクロスプラットフォームの実装です。" 
+- ".NET Core は、.NET のクロスプラットフォームの実装です。"
 - "PCL プロファイルは Microsoft のプラットフォームを表し、.NET Standard はプラットフォームに依存しません。"
 
 .NET のドキュメントでは、.NET の実装またはすべての実装を含む .NET スタックの意味で ".NET プラットフォーム" が使われることがよくあります。 これらの使用法はどちらも本来の (OS/ハードウェア) の意味と紛らわしい場合があるので、ドキュメントから削除される予定です。
@@ -239,13 +239,13 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 - "複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。" (.NET Standard を指している場合)
 - "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。 … .NET ランタイムの各バージョンは、サポートしている .NET Standard の最高のバージョンをアドバタイズします …"
 
-このような一貫性のない使用法は除去される予定です。 
+このような一貫性のない使用法は除去される予定です。
 
 ## <a name="stack"></a>スタック
 
 全体としてアプリケーションの構築と実行に使われるプログラミング テクノロジのセット。
 
-".NET スタック" は、.NET Standard および .NET のすべての実装を指します。 ".NET スタック" という語句が .NET の 1 つの実装を示すこともあります。 
+".NET スタック" は、.NET Standard および .NET のすべての実装を指します。 ".NET スタック" という語句が .NET の 1 つの実装を示すこともあります。
 
 ## <a name="target-framework"></a>ターゲット フレームワーク
 

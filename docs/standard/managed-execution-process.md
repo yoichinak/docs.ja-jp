@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 0ce7182af33a795188d01ac457b9d45b8ad305dd
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74960386"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160223"
 ---
 # <a name="managed-execution-process"></a>マネージド実行プロセス
 <a name="introduction"></a> マネージド実行プロセスで実行される主な手順を次に示します。詳細については、後で説明します。  
@@ -36,7 +36,7 @@ ms.locfileid: "74960386"
   
      共通言語ランタイムは、実行を可能にするインフラストラクチャと実行時に使用できるサービスを提供します。  
   
-<a name="choosing_a_compiler"></a>   
+<a name="choosing_a_compiler"></a>
 ## <a name="choosing-a-compiler"></a>コンパイラを選択します  
  共通言語ランタイム (CLR: Common Language Runtime) によって提供される機能を活用するには、Visual Basic、C#、Visual C++、F# などのランタイムに対応した言語コンパイラか、Eiffel、Perl、COBOL などのサードパーティのコンパイラを使用する必要があります。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74960386"
   
  [ページのトップへ](#introduction)  
   
-<a name="compiling_to_msil"></a>   
+<a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>MSIL へのコンパイル  
  マネージド コードへのコンパイル時に、コンパイラはソース コードを MSIL (Microsoft Intermediate Language) に変換します。MSIL は CPU に依存しない一連の命令で、効率的にネイティブ コードに変換できます。 MSIL には、オブジェクトに対する読み込み、格納、初期化、および呼び出し用の命令の他に、算術演算と論理演算、制御フロー、DMA (Direct Memory Access)、例外処理、およびその他の操作のための命令も含まれています。 コードを実行する前に、MSIL を CPU 固有のコードに変換する必要があります。通常、この変換は [Just-In-Time (JIT) コンパイラ](#compiling_msil_to_native_code)によって行われます。 共通言語ランタイムはサポートするコンピューター アーキテクチャごとに JIT コンパイラを提供しているため、同じ MSIL セットを JIT コンパイルして、サポートされているすべてのアーキテクチャで実行できます。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "74960386"
   
  [ページのトップへ](#introduction)  
   
-<a name="compiling_msil_to_native_code"></a>   
+<a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>MSIL からネイティブ コードにコンパイルします  
  Microsoft Intermediate Language (MSIL) は、実行する前に、共通言語ランタイムに対して、対象コンピューターのアーキテクチャ用のネイティブ コードにコンパイルしておく必要があります。 .NET Framework には、この変換を実行する 2 つの方法が用意されています。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "74960386"
   
  [ページのトップへ](#introduction)  
   
-<a name="running_code"></a>   
+<a name="running_code"></a>
 ## <a name="running-code"></a>コードを実行します  
  共通言語ランタイムは、マネージド実行を可能にするインフラストラクチャと実行時に使用できるサービスを提供します。 メソッドは、実行する前にプロセッサ固有のコードにコンパイルされている必要があります。 対応する MSIL が生成されているメソッドは、初めて呼び出されたときに JIT コンパイルされてから実行されます。 次にこのメソッドが実行されるときには、JIT コンパイル済みの既存のネイティブ コードが実行されます。 JIT コンパイルからコード実行までのプロセスは、実行が完了するまで繰り返されます。  
   

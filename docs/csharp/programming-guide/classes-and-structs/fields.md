@@ -4,16 +4,16 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - fields [C#]
 ms.assetid: 3cbb2f61-75f8-4cce-b4ef-f5d1b3de0db7
-ms.openlocfilehash: 665c99302887c51c69b4d818619dd6bedd43b644
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 46d4f77a4a490b2acdb5da20b9a477f27c38d410
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714934"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628242"
 ---
 # <a name="fields-c-programming-guide"></a>フィールド (C# プログラミング ガイド)
 
-*フィールド*とは、[クラス](../../language-reference/keywords/class.md)または[構造体](../../language-reference/keywords/struct.md)で直接宣言される任意の型の変数です。 フィールドは、それを含んでいる型の*メンバー*です。
+*フィールド*とは、[クラス](../../language-reference/keywords/class.md)または[構造体](../../language-reference/builtin-types/struct.md)で直接宣言される任意の型の変数です。 フィールドは、それを含んでいる型の*メンバー*です。
 
 クラスまたは構造体には、インスタンス フィールドと静的フィールドのいずれか、またはその両方が含まれる場合があります。 インスタンス フィールドは、型のインスタンスに固有です。 たとえば、クラス T と、そのクラスのインスタンス フィールド F があるとします。型 T のオブジェクトを 2 つ作成した場合、他方のオブジェクトの値に影響を与えることなく、各オブジェクトの F の値を変更できます。 これとは対照的に、クラス自体に属する静的フィールドは、そのクラスのすべてのインスタンスで共有されます。 静的フィールドにアクセスするには、クラス名を使用する必要があります。 インスタンス名を使用して静的フィールドにアクセスすると、[CS0176](../../misc/cs0176.md) コンパイル時エラーが発生します。
 

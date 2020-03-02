@@ -4,12 +4,12 @@ description: .NET Standard、.NET 実装、.NET ランタイム、ツールな�
 author: cartermp
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: af28863ac98ff5ffb5a8133fb98f2f1e7036985d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eadcf05069edfa32a52c5e73045b4cebd1a9a6ac
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124391"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160379"
 ---
 # <a name="net-architectural-components"></a>.NET アーキテクチャ コンポーネント
 
@@ -70,7 +70,7 @@ UWP の詳細については、「[ユニバーサル Windows プラットフォ
 
 - .NET Framework 用共通言語ランタイム (CLR)
 - .NET Core 用共通言語ランタイム (CoreCLR)
-- ユニバーサル Windows プラットフォーム用 .NET Native 
+- ユニバーサル Windows プラットフォーム用 .NET Native
 - Xamarin.iOS、Xamarin.Android、Xamarin.Mac、Mono デスクトップ フレームワーク用ランタイム
 
 ## <a name="net-tooling-and-common-infrastructure"></a>.NET のツールと共通インフラストラクチャ
@@ -96,7 +96,7 @@ C# 言語および共通言語基盤 (CLI) の仕様は、[Ecma International®]
 - **The C# Language Standard (version 5.0)** (C# 言語標準 (バージョン 5.0)):[ECMA-334.pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf)
 - **The Common Language Infrastructure** (共通言語基盤):これは、[pdf](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.pdf) 形式と [zip](https://www.ecma-international.org/publications/files/ECMA-ST/ECMA-335.zip) 形式で入手できます。
 - **Information Derived from the Partition IV XML File** (Partition IV XML ファイルから派生した情報):これは、[pdf](https://www.ecma-international.org/publications/files/ECMA-TR/ECMA%20TR-084.pdf) および [zip](https://www.ecma-international.org/publications/files/ECMA-TR/TR-084.zip) 形式で入手できます。
- 
+
 公式の ISO/IEC ドキュメントは、ISO/IEC の「[Publicly Available Standards](https://standards.iso.org/ittf/PubliclyAvailableStandards/)」(公開されている標準) ページから入手できます。 そのページのリンクを次に示します。
 
 - **情報技術 - プログラミング言語 - C#** :[ISO/IEC 23270:2018](https://standards.iso.org/ittf/PubliclyAvailableStandards/c075178_ISO_IEC_23270_2018.zip)
