@@ -2,12 +2,12 @@
 title: 'チュートリアル: macOS での Visual Studio Code を使用した .NET Core ソリューションの作成'
 description: このドキュメントでは、Visual Studio Code を使用して .NET Core ソリューションを作成する手順とワークフローを説明します。
 ms.date: 12/19/2019
-ms.openlocfilehash: e3c210d4391c0e3c9c3455ecf23dd138abdb4363
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76741547"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156596"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>チュートリアル: macOS での Visual Studio Code を使用した .NET Core ソリューションの作成
 
@@ -155,7 +155,7 @@ namespace TestApp
 *golden* フォルダーから、次のコマンドを実行します。
 
 ```dotnetcli
-dotnet restore 
+dotnet restore
 dotnet test test-library/test-library.csproj
 ```
 

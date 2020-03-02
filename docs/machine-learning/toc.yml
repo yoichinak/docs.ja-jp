@@ -121,5 +121,7 @@
       href: resources/index.md
     - name: 用語集
       href: resources/glossary.md
+    - name: Azure トレーニング リソース
+      href: resources/azure-training-concepts-model-builder.md
     - name: CLI テレメトリ
       href: resources/ml-net-cli-telemetry.md

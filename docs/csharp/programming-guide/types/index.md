@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ade2cba857a1a32039f8fd07881f13f63f0dbe1a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: a094e6e8ab9094fb14ce9a2ca8a180cbf9b273cb
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628138"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673395"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -113,7 +113,7 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideObjects#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#1)]
 
-構造体の詳細については、「[Structs](../classes-and-structs/structs.md)」を参照してください。 値型の詳細については、[値型](../../language-reference/builtin-types/value-types.md)に関するページを参照してください。
+構造体の詳細については、[構造体型](../../language-reference/builtin-types/struct.md)に関する記事をご覧ください。 値型の詳細については、[値型](../../language-reference/builtin-types/value-types.md)に関するページを参照してください。
 
 別の種類の値型として、[列挙体](../../language-reference/builtin-types/enum.md)があります。 列挙体は、一連の名前付き整数定数を定義します。 たとえば、.NET クラス ライブラリの <xref:System.IO.FileMode?displayProperty=nameWithType> 列挙体には、ファイルを開く方法を指定する一連の名前付き整数定数が格納されています。 これは、次の例のように定義されます。
 
@@ -205,3 +205,4 @@ stringList.Add(4);
 - [C# プログラミング ガイド](../index.md)
 - [XML データ型の変換](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [整数型](../../language-reference/builtin-types/integral-numeric-types.md)
+ 
