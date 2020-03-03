@@ -2,14 +2,12 @@
 title: <TypeParameter> 要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b478f963156a2c8f189bbbdbc027927df8974dc2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c69b535f3a01c287d30189138130066fc10a77e2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263564"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128920"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter > 要素 (.NET ネイティブ)
 メソッドに渡される型引数により表される型にポリシーを適用します。  
@@ -51,15 +49,15 @@ ms.locfileid: "55263564"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*parameter_name*|<xref:System.Type> 型のパラメーターの名前。 たとえば、メソッド シグネチャ `Type.GetInterfaceMap(Type interfaceType)` の場合、`Name` 属性の値は "interfaceType" です。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
+|*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -68,10 +66,10 @@ ms.locfileid: "55263564"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
+|[\<Method>](method-element-net-native.md)|コンストラクターまたはメソッドにランタイム リフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
- `<TypeParameter>` 要素は [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md) 要素に似ていますが、<xref:System.Type> 型のパラメーターにのみ適用できる点が異なります。 これは、実行時に `Name` 属性により指定される型引数で表されるすべての型にポリシーを適用します。  
+ `<TypeParameter>` 要素は [\<Parameter>](parameter-element-net-native.md) 要素に似ていますが、<xref:System.Type> 型のパラメーターにのみ適用できる点が異なります。 これは、実行時に `Name` 属性により指定される型引数で表されるすべての型にポリシーを適用します。  
   
  たとえば、NewtonSoft の JSON シリアライザーには静的 `JsonConvert.DeserializeObject(String value, Type type)` メソッドが含まれています。 次のリフレクション ディレクティブは、  
   
@@ -95,7 +93,8 @@ Object obj = JsonConvert.DeserializeObject(data, t);
  リフレクション ディレクティブによって、`StockQuote` 型のメタデータが実行時に NewtonSoft の JSON シリアライザーで使用可能になります。  
   
 ## <a name="see-also"></a>関連項目
-- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
+
+- [\<Method> 要素](method-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)
+- [ランタイム ディレクティブ要素](runtime-directive-elements.md)

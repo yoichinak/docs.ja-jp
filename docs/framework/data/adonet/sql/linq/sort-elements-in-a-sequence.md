@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d59b93a9-50c8-4770-a114-d902f6a0ea76
-ms.openlocfilehash: 59384900226fbbcfc879650402b1a5df80b69cd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21fa2f9e1dc2f255fe94f2420ba90a809ab5b05e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596424"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792666"
 ---
 # <a name="sort-elements-in-a-sequence"></a>シーケンスの要素の並べ替え
 1 つ以上のキーに従ってシーケンスを並べ替えるには、<xref:System.Linq.Enumerable.OrderBy%2A> 演算子を使用します。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] などの単純なプリミティブ型による順序付けをサポートするように設計が`string`、`int`など。 匿名型のように複数の値を持つ複雑なクラスでの順序付けはサポートされていません。 また、`byte` データ型もサポートされていません。  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]は`string`、、 `int`など、単純なプリミティブ型による順序付けをサポートするように設計されています。 匿名型のように複数の値を持つ複雑なクラスでの順序付けはサポートされていません。 また、`byte` データ型もサポートされていません。  
   
 ## <a name="example"></a>例  
  次の例は、`Employees` を入社日の順に並べ替えます。  
@@ -43,7 +43,7 @@ ms.locfileid: "54596424"
  [!code-vb[DLinqQueryExamples#24](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#24)]  
   
 ## <a name="example"></a>例  
- 次の例は、`EmployeeID 1` からの注文を、最初に出荷先国の順に、次に運送料の高い順に並べ替えます。  
+ 次の例では`EmployeeID 1` `ShipCountry`、からの注文を並べ替え、次に最高から最低の運送料に並べ替えます。  
   
  [!code-csharp[DLinqQueryExamples#25](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#25)]
  [!code-vb[DLinqQueryExamples#25](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#25)]  
@@ -89,5 +89,6 @@ ms.locfileid: "54596424"
  `Carnarvon Tigers`  
   
 ## <a name="see-also"></a>関連項目
-- [クエリの例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
-- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+
+- [クエリの例](query-examples.md)
+- [サンプル データベースのダウンロード](downloading-sample-databases.md)

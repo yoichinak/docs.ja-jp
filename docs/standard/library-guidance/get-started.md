@@ -1,15 +1,13 @@
 ---
 title: 高品質な .NET ライブラリの作成の概要
 description: .NET ライブラリの構築を始めましょう。
-author: jamesnk
-ms.author: mairaw
 ms.date: 10/02/2018
-ms.openlocfilehash: e26c6632252257ab8cb5598f1b201559b760dc6b
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 10576219d8470a171ad0f1f347196999b2a2ee03
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204647"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75706492"
 ---
 # <a name="get-started"></a>作業開始
 

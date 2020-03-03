@@ -16,21 +16,19 @@ helpviewer_keywords:
 ms.assetid: a30102ff-c52e-48c9-b3a9-aa14286a42b2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 74cb2c7d1f79d23e1331cc7192ba2d6acfd9835c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d67bee3ea0e57080179b3fbb7e0b4193860c44d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423664"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103286"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 関数
 プロセスおよびランタイムの列挙のためにリモート ターゲットに接続するよう、トランスポート マネージャーを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT InitDbgTransportManager ();  
 ```  
   
@@ -44,11 +42,11 @@ HRESULT InitDbgTransportManager ();
  E_FAIL (またはその他の E_ リターン コード)  
  その他のエラーが発生しました。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **ライブラリ:** mscordbi_macx86  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

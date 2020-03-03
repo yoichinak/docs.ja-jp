@@ -2,14 +2,12 @@
 title: '軽減策: Icon オブジェクトの PNG フレーム'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d67b2fac0c1d55bfa5594e90998d9613de4ad271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a4ae0c069a4cd6d53bce77e64822ebf3fbb5361
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659788"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457871"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>軽減策: Icon オブジェクトの PNG フレーム
 .NET Framework 4.6 以降では、 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> メソッドで、PNG フレームを含んだアイコンを正常に <xref:System.Drawing.Bitmap> オブジェクトに変換できます。  
@@ -20,7 +18,7 @@ ms.locfileid: "54659788"
  この変更は、.NET Framework 4.6 を対象として再コンパイルされたアプリのうち、 <xref:System.ArgumentOutOfRangeException> オブジェクトに PNG フレームが含まれている場合は <xref:System.Drawing.Icon> をスローするように特別な処理が実装されているアプリに影響します。 .NET Framework 4.6 で実行している場合は、正常に変換が行われ、 <xref:System.ArgumentOutOfRangeException> がスローされることはないため、例外ハンドラーは呼び出されません。  
   
 ### <a name="mitigation"></a>軽減策  
- この動作に不都合がある場合は、次に示す要素を app.config ファイルの [\<runtime>](../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md) セクションに追加することで、以前の動作を維持できます。  
+ この動作に不都合がある場合は、次に示す要素を app.config ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに追加することで、以前の動作を維持できます。  
   
 ```xml  
 <AppContextSwitchOverrides   
@@ -35,4 +33,5 @@ ms.locfileid: "54659788"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [変更の再ターゲット](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+
+- [アプリケーションの互換性](application-compatibility.md)

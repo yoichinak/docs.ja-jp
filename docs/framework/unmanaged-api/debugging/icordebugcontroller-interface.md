@@ -1,5 +1,5 @@
 ---
-title: ICorDebugController Interface1
+title: ICorDebugController インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugController
@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: dbb1c4dc-269a-459b-ab1d-6c70788782ce
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c0651f8cd63f2ebdc6b81e92c0b55d94fe51316b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6c923f03309da3ad8092ea6119e7d850120ee2c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645302"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783804"
 ---
-# <a name="icordebugcontroller-interface1"></a>ICorDebugController Interface1
+# <a name="icordebugcontroller-interface"></a>ICorDebugController インターフェイス
+
 コードの実行コンテキストを制御できる <xref:System.Diagnostics.Process> または <xref:System.AppDomain> のスコープを表します。  
   
 ## <a name="methods"></a>メソッド  
@@ -32,23 +31,23 @@ ms.locfileid: "54645302"
 |------------|-----------------|  
 |`ICorDebugController::CanCommitChanges`|このメソッドは、互換性のために残されています。|  
 |`ICorDebugController::CommitChanges`|このメソッドは、互換性のために残されています。|  
-|[Continue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)|呼び出しの後にマネージ スレッドの実行を再開[icordebugcontroller::stop](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)します。|  
-|[Detach メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-detach-method.md)|プロセスまたはアプリケーション ドメインからデバッガーをデタッチします。|  
-|[EnumerateThreads メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-enumeratethreads-method.md)|プロセスのアクティブなマネージ スレッドの列挙子を取得します。|  
-|[HasQueuedCallbacks メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)|任意のマネージ コールバックが、指定されたスレッドの現在キューに登録するかどうかを示す値を取得します。|  
-|[IsRunning メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-isrunning-method.md)|プロセスのスレッドが自由に実行して現在かどうかを示す値を取得します。|  
-|[SetAllThreadsDebugState メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-setallthreadsdebugstate-method.md)|プロセス内のすべてのマネージ スレッドのデバッグ状態を設定します。|  
-|[Stop メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-stop-method.md)|プロセスでマネージ コードを実行しているすべてのスレッドを協調停止を実行します。|  
-|[Terminate メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-terminate-method.md)|指定した終了コードを使用して、プロセスを終了します。|  
+|[Continue メソッド](icordebugcontroller-continue-method.md)|次のように、[コントロール](icordebugcontroller-stop-method.md)スレッドの実行を再開します。|  
+|[Detach メソッド](icordebugcontroller-detach-method.md)|プロセスまたはアプリケーションドメインからデバッガーをデタッチします。|  
+|[EnumerateThreads メソッド](icordebugcontroller-enumeratethreads-method.md)|プロセス内のアクティブなマネージスレッドの列挙子を取得します。|  
+|[HasQueuedCallbacks メソッド](icordebugcontroller-hasqueuedcallbacks-method.md)|マネージコールバックが、指定されたスレッドに対して現在キューに登録されているかどうかを示す値を取得します。|  
+|[IsRunning メソッド](icordebugcontroller-isrunning-method.md)|プロセス内のスレッドが現在実行中であるかどうかを示す値を取得します。|  
+|[SetAllThreadsDebugState メソッド](icordebugcontroller-setallthreadsdebugstate-method.md)|プロセス内のすべてのマネージスレッドのデバッグ状態を設定します。|  
+|[Stop メソッド](icordebugcontroller-stop-method.md)|プロセスでマネージコードを実行しているすべてのスレッドで協調停止を実行します。|  
+|[Terminate メソッド](icordebugcontroller-terminate-method.md)|指定された終了コードを使用してプロセスを終了します。|  
   
-## <a name="remarks"></a>Remarks  
- 場合`ICorDebugController`はプロセスを制御するには、スコープには、プロセスのすべてのスレッドが含まれます。 場合`ICorDebugController`がアプリケーション ドメインを制御するには、スコープにはその特定のアプリケーション ドメインのスレッドのみが含まれます。  
+## <a name="remarks"></a>コメント  
+ `ICorDebugController` がプロセスを制御している場合、スコープにはプロセスのすべてのスレッドが含まれます。 `ICorDebugController` がアプリケーションドメインを制御している場合は、その特定のアプリケーションドメインのスレッドのみがスコープに含まれます。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -57,4 +56,5 @@ ms.locfileid: "54645302"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

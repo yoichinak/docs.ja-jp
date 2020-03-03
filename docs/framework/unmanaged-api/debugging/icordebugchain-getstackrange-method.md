@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 554284e7-3f6c-4d40-8da5-1c9317fbd484
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 226f8c431b90d53366aa5e504101e7de581ec570
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d9430c5a1f37a0507b383ea5437f7d7fed706c43
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402471"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123864"
 ---
 # <a name="icordebugchaingetstackrange-method"></a>ICorDebugChain::GetStackRange メソッド
-このチェーンのスタック セグメントのアドレス範囲を取得します。  
+このチェーンのスタックセグメントのアドレス範囲を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStackRange (  
     [out] CORDB_ADDRESS      *pStart,   
     [out] CORDB_ADDRESS      *pEnd  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pStart`  
- [out]ポインター、`CORDB_ADDRESS`は履歴のセグメントの開始アドレスを示す値。  
+ 入出力スタックセグメントの開始アドレスである `CORDB_ADDRESS` 値へのポインター。  
   
  `pEnd`  
- [out]ポインター、`CORDB_ADDRESS`は履歴のセグメントの終了アドレスを示す値。  
+ 入出力スタックセグメントの終了アドレスである `CORDB_ADDRESS` 値へのポインター。  
   
-## <a name="remarks"></a>コメント  
- 数値の範囲は、スタック フレームの場所の比較に対してのみ有効です。 実際には、スタックに格納されているデータに関するどのような想定をすることはできません。  
+## <a name="remarks"></a>Remarks  
+ 数値の範囲は、スタックフレームの位置を比較する場合にのみ意味があります。 実際にスタックに格納されている内容について、想定を行うことはできません。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: c1018789-4206-455d-aacc-2d876fc0d0bb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fc5d09ac12919b8c68b9fe4bf9f7dc0009b2d4b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af50c82974b779b901135795f37e3bd4c8b8c156
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705470"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440977"
 ---
 # <a name="inotifysink2-interface"></a>INotifySink2 インターフェイス
-シンク通知メソッドを宣言します。  
+シンク通知のメソッドを宣言します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[OnSyncCallEnter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|呼び出しを入力するときに呼び出されます。|  
-|[OnSyncCallExit メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|呼び出しが終了するときに呼び出されます。|  
-|[OnSyncCallOut メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|呼び出しがないときに呼び出されます。|  
-|[OnSyncCallReturn メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|呼び出しが戻るときに呼び出されます。|  
+|[OnSyncCallEnter メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md)|呼び出しを入力したときに呼び出されます。|  
+|[OnSyncCallExit メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md)|呼び出しを終了したときに呼び出されます。|  
+|[OnSyncCallOut メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md)|呼び出しがタイムアウトしたときに呼び出されます。|  
+|[OnSyncCallReturn メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md)|呼び出しから制御が戻ったときに呼び出されます。|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

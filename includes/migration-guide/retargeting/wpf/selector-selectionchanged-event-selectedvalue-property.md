@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a4054ee893ba8b8c290a447689d3aa58dcc84cbe
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859022"
+---
 ### <a name="selector-selectionchanged-event-and-selectedvalue-property"></a>セレクター SelectionChanged イベントおよび SelectedValue プロパティ
 
 |   |   |

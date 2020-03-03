@@ -1,67 +1,70 @@
 ---
-title: -ターゲット (Visual Basic)
+title: -target
 ms.date: 03/13/2018
 helpviewer_keywords:
 - target compiler options [Visual Basic]
 - -target compiler options [Visual Basic]
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
-ms.openlocfilehash: 5208d5a5291969b7060ef5a48e3f6c3ae42aa22a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d186670489ada51fced67ff9adeb73b14909b664
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671916"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716683"
 ---
-# <a name="-target-visual-basic"></a>-ターゲット (Visual Basic)
-コンパイラの出力形式を指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
--target:{exe | library | module | winexe | appcontainerexe | winmdobj}  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 次の表に、効果、`-target`オプション。  
-  
-|**Option**|**Behavior**|  
-|----------------|------------------|  
-|`-target:exe`|コンパイラ実行可能ファイルのコンソール アプリケーションを作成します。<br /><br /> ない場合、既定のオプションは、この`-target`オプションを指定します。 拡張子が .exe の実行可能ファイルが作成されます。<br /><br /> それ以外の場合を指定しない限り、`/out`オプション、出力ファイル名を含む入力ファイルの名前、`Sub Main`プロシージャ。<br /><br /> 1 つだけ`Sub Main`.exe ファイルにコンパイルされるソース コード ファイル内のプロシージャが必要です。 使用して、`-main`コンパイラ オプションを指定するクラスが含まれています、`Sub Main`プロシージャ。|  
-|`-target:library`|コンパイラがダイナミック リンク ライブラリ (DLL) を作成します。<br /><br /> ダイナミック リンク ライブラリ ファイルは、拡張子が .dll で作成されます。<br /><br /> それ以外の場合を指定しない限り、`-out`オプション、出力ファイル名は、最初の入力ファイルの名前を受け取ります。<br /><br /> DLL を作成するときに、`Sub Main`手順は必要ありません。|  
-|`-target:module`|コンパイラがアセンブリに追加できるモジュールを生成します。<br /><br /> .Netmodule の拡張子を持つ出力ファイルが作成されます。<br /><br /> .NET 共通言語ランタイムは、アセンブリがないファイルを読み込むことができません。 ただし、組み込むことができます、このようなファイル、アセンブリのアセンブリ マニフェストを使用して`-reference`します。<br /><br /> 使用して両方のモジュールをアセンブリ マニフェストに組み込む必要があります 1 つのモジュール内のコードでは、別のモジュールの内部型を参照するときに`-reference`します。<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。|  
-|`-target:winexe`|コンパイラ実行可能ファイルの Windows ベースのアプリケーションを作成します。<br /><br /> 拡張子が .exe の実行可能ファイルが作成されます。 Windows ベースのアプリケーションは、いずれかのいずれかからユーザー インターフェイスを提供する、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]クラス ライブラリまたは Win32 Api を使用します。<br /><br /> それ以外の場合を指定しない限り、`-out`オプション、出力ファイル名を含む入力ファイルの名前、`Sub Main`プロシージャ。<br /><br /> 1 つだけ`Sub Main`.exe ファイルにコンパイルされるソース コード ファイル内のプロシージャが必要です。 コードが 1 つ以上のクラスがある場合、`Sub Main`プロシージャを使用して、`-main`コンパイラ オプションを指定するクラスが含まれています、`Sub Main`プロシージャ|  
-|`-target:appcontainerexe`|コンパイラで、アプリケーション コンテナーで実行する必要がある実行可能な Windows ベース アプリケーションを作成します。 この設定が使用するように設計[!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]アプリケーション。<br /><br /> **Appcontainerexe**設定は、ビットの特性のフィールドを設定、[ポータブル実行可能ファイル](/windows/desktop/Debug/pe-format)ファイル。 このビットは、アプリケーション コンテナーでアプリを実行する必要があることを示します。 場合にエラーが発生したこのビットが設定されている場合、`CreateProcess`メソッドは、アプリ コンテナーの外部でアプリケーションを起動しようとしています。 このビットを設定するとは別 **-/target:appcontainerexe**と等価 **-/target:winexe**します。<br /><br /> 拡張子が .exe の実行可能ファイルが作成されます。<br /><br /> それ以外の場合を使用して指定しない限り、`-out`オプション、出力ファイル名を含む入力ファイルの名前、`Sub Main`プロシージャ。<br /><br /> 1 つだけ`Sub Main`.exe ファイルにコンパイルされるソース コード ファイル内のプロシージャが必要です。 コードを持つ 1 つ以上のクラスに含まれるかどうか、`Sub Main`プロシージャを使用して、`-main`コンパイラ オプションを指定するクラスが含まれています、`Sub Main`プロシージャ|  
-|`-target:winmdobj`|コンパイラが、Windows ランタイム バイナリ (.winmd) ファイルに変換できる中間ファイルを作成します。 .Winmd ファイルは、マネージ言語プログラムだけでなく、JavaScript および C++ プログラムで使用できます。<br /><br /> 拡張子が .winmdobj 中間ファイルが作成されます。<br /><br /> それ以外の場合を使用して指定しない限り、`-out`オプション、出力ファイル名は、最初の入力ファイルの名前を受け取ります。 A`Sub Main`手順は必要ありません。<br /><br /> .Winmdobj ファイルが入力として使用するように設計、 <xref:Microsoft.Build.Tasks.WinMDExp> Windows メタデータ (WinMD) ファイルを生成するためのツールをエクスポートします。 WinMD ファイルは、.winmd の拡張機能を備え、JavaScript、C++、および Windows ランタイム使用して、元のライブラリと WinMD 定義から、コード両方にはが含まれています。|  
-  
- 指定しない限り`-target:module`、`-target`により、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]出力ファイルに追加するアセンブリのマニフェスト。  
-  
- Vbc.exe の各インスタンスの生成は、最大で 1 つの出力ファイル。 コンパイラ オプションを指定する場合`-out`または`-target`1 つ以上の時間、最後の 1 つは、コンパイラが有効にします。 コンパイルですべてのファイルに関する情報は、マニフェストに追加されます。 すべての出力ファイルで作成されたものを除く`-target:module`マニフェストにアセンブリ メタデータが含まれます。 使用[Ildasm.exe (IL Disassembler)](../../../framework/tools/ildasm-exe-il-disassembler.md)が出力ファイルにメタデータを表示します。  
-  
- `-target` の省略形は `-t` です。  
-  
-### <a name="to-set--target-in-the-visual-studio-ide"></a>Visual Studio IDE をターゲットに設定するには  
-  
-1.  **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。   
-  
-2.  **[アプリケーション]** タブをクリックします。  
-  
-3.  値を変更、**アプリケーションの種類**ボックス。  
-  
-## <a name="example"></a>例  
- 次のコードのコンパイル`in.vb`作成、 `in.dll`:  
-  
+# <a name="-target-visual-basic"></a>-target (Visual Basic)
+
+コンパイラ出力の形式を指定します。
+
+## <a name="syntax"></a>構文
+
 ```console
-vbc -target:library in.vb  
-```  
-  
+-target:{exe | library | module | winexe | appcontainerexe | winmdobj}
+```
+
+## <a name="remarks"></a>Remarks
+
+次の表は、`-target` オプションの効果をまとめたものです。
+
+|**オプション**|**Behavior**|
+|----------------|------------------|
+|`-target:exe`|コンパイラによって実行可能なコンソールアプリケーションが作成されます。<br /><br /> これは、`-target` オプションが指定されていない場合の既定のオプションです。 実行可能ファイルは .exe 拡張子を使用して作成されます。<br /><br /> `-out` オプションで特に指定しない限り、出力ファイル名は、`Sub Main` プロシージャを含む入力ファイルの名前になります。<br /><br /> .Exe ファイルにコンパイルされるソースコードファイルには、1つの `Sub Main` プロシージャのみが必要です。 `-main` コンパイラオプションを使用して、`Sub Main` プロシージャを含むクラスを指定します。|
+|`-target:library`|コンパイラによってダイナミックリンクライブラリ (DLL) が作成されます。<br /><br /> ダイナミックリンクライブラリファイルは、.dll 拡張子を使用して作成されます。<br /><br /> `-out` オプションで特に指定しない限り、出力ファイル名は最初の入力ファイルの名前になります。<br /><br /> DLL をビルドする場合、`Sub Main` プロシージャは必要ありません。|
+|`-target:module`|アセンブリに追加できるモジュールをコンパイラによって生成します。<br /><br /> 出力ファイルは、.netmodule の拡張子を使用して作成されます。<br /><br /> .NET 共通言語ランタイムは、アセンブリのないファイルを読み込むことができません。 ただし、このようなファイルは、`-reference`を使用してアセンブリのアセンブリマニフェストに組み込むことができます。<br /><br /> あるモジュールのコードが別のモジュールの内部型を参照する場合は、`-reference`を使用して、両方のモジュールをアセンブリマニフェストに組み込む必要があります。<br /><br /> [-Addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)オプションは、モジュールからメタデータをインポートします。|
+|`-target:winexe`|コンパイラによって、実行可能な Windows ベースのアプリケーションが作成されます。<br /><br /> 実行可能ファイルは .exe 拡張子を使用して作成されます。 Windows ベースのアプリケーションは、.NET Framework クラスライブラリまたは Windows Api のいずれかからユーザーインターフェイスを提供するアプリケーションです。<br /><br /> `-out` オプションで特に指定しない限り、出力ファイル名は、`Sub Main` プロシージャを含む入力ファイルの名前になります。<br /><br /> .Exe ファイルにコンパイルされるソースコードファイルには、1つの `Sub Main` プロシージャのみが必要です。 コードに `Sub Main` プロシージャを持つクラスが複数ある場合は、`-main` コンパイラオプションを使用して、`Sub Main` プロシージャを含むクラスを指定します。|
+|`-target:appcontainerexe`|アプリコンテナーで実行する必要がある実行可能な Windows ベースのアプリケーションをコンパイラで作成します。 この設定は、Windows 8.x ストアアプリケーションで使用するように設計されています。<br /><br /> **Appcontainerexe**設定は、[移植可能な実行可能](/windows/desktop/Debug/pe-format)ファイルの特性フィールドにビットを設定します。 このビットは、アプリがアプリコンテナーで実行される必要があることを示します。 このビットが設定されている場合、`CreateProcess` メソッドがアプリコンテナーの外部でアプリケーションを起動しようとすると、エラーが発生します。 **-Target: appcontainerexe**は、このビット設定とは別に、 **-target: winexe**に相当します。<br /><br /> 実行可能ファイルは .exe 拡張子を使用して作成されます。<br /><br /> `-out` オプションを使用して指定しない限り、出力ファイル名には、`Sub Main` プロシージャを含む入力ファイルの名前が使用されます。<br /><br /> .Exe ファイルにコンパイルされるソースコードファイルには、1つの `Sub Main` プロシージャのみが必要です。 コードに `Sub Main` プロシージャを持つクラスが複数含まれている場合は、`-main` コンパイラオプションを使用して、`Sub Main` プロシージャを含むクラスを指定します。|
+|`-target:winmdobj`|コンパイラによって、Windows ランタイムバイナリ (winmd) ファイルに変換できる中間ファイルが作成されます。 Winmd ファイルは、マネージ言語プログラムに加えてC++ 、JavaScript とプログラムでも使用できます。<br /><br /> 中間ファイルは、winmdobj 拡張子を使用して作成されます。<br /><br /> `-out` オプションを使用して指定しない限り、出力ファイル名は最初の入力ファイルの名前になります。 `Sub Main` の手順は必要ありません。<br /><br /> Winmdobj ファイルは、Windows メタデータ (WinMD) ファイルを生成するために <xref:Microsoft.Build.Tasks.WinMDExp> エクスポートツールの入力として使用されるように設計されています。 WinMD ファイルには、winmd という拡張子が付いており、元のライブラリのコードと、JavaScript、 C++、および Windows ランタイムが使用する winmd の定義の両方が含まれています。|
+
+`-target:module`を指定しない限り、`-target` によって .NET Framework アセンブリマニフェストが出力ファイルに追加されます。
+
+Vbc.exe の各インスタンスは、最大で1つの出力ファイルを生成します。 `-out` または `-target` のようなコンパイラオプションを指定した場合、コンパイラが処理する最後のオプションは有効になります。 コンパイル内のすべてのファイルに関する情報がマニフェストに追加されます。 `-target:module` で作成されたものを除くすべての出力ファイルには、マニフェスト内のアセンブリメタデータが含まれます。 [Ildasm.exe (IL 逆アセンブラー)](../../../framework/tools/ildasm-exe-il-disassembler.md)を使用して、出力ファイル内のメタデータを表示します。
+
+`-target` の省略形は `-t` です。
+
+### <a name="to-set--target-in-the-visual-studio-ide"></a>Visual Studio IDE で-target を設定するには
+
+1. **ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
+
+2. **[アプリケーション]** タブをクリックします。
+
+3. **[アプリケーションの種類]** ボックスの値を変更します。
+
+## <a name="example"></a>使用例
+
+次のコードは `in.vb`をコンパイルし、`in.dll`を作成します。
+
+```console
+vbc -target:library in.vb
+```
+
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [-除外 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
-- [-参照 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
 - [-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)
-- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+- [.NET のアセンブリ](../../../standard/assembly/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

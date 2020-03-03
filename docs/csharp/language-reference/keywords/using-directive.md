@@ -1,16 +1,15 @@
 ---
 title: using ディレクティブ - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - using directive [C#]
 ms.assetid: b42b8e61-5e7e-439c-bb71-370094b44ae8
-ms.openlocfilehash: 3e8daf24929339e31cda81a726ec11fdcffc687a
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 4f7ddad8c3dc12391ef6bf345a73ebb384400b38
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029503"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093150"
 ---
 # <a name="using-directive-c-reference"></a>using ディレクティブ (C# リファレンス)
 
@@ -54,7 +53,7 @@ class Program
 }
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `using` ディレクティブのスコープは、このディレクティブが存在するファイルに限定されます。
 
@@ -69,14 +68,12 @@ class Program
 
 ```csharp
 using s = System.Text;
-using s.RegularExpressions;
+using s.RegularExpressions; // Generates a compiler error.
 ```
 
 `using` ディレクティブを作成すると、名前空間内の型を、名前空間を指定することなく使用できます。 `using` ディレクティブでは、指定した名前空間に入れ子になった別の名前空間へのアクセスは許可されません。
 
 名前空間は、ユーザー定義とシステム定義の 2 つのカテゴリに分類されます。 ユーザー定義の名前空間は、コードで定義された名前空間です。 システム定義の名前空間の一覧については、「[.NET API ブラウザー](../../../../api/index.md)」を参照してください。
-
-他のアセンブリのメソッドを参照する方法の例については、[コマンド ラインでアセンブリを作成し、使用する](../../programming-guide/concepts/assemblies-gac/how-to-create-and-use-assemblies-using-the-command-line.md)方法に関するページをご覧ください。
 
 ## <a name="example-1"></a>例 1
 
@@ -94,7 +91,7 @@ using エイリアス ディレクティブの右側には、オープン ジェ
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの [using ディレクティブ](~/_csharplang/spec/namespaces.md#using-directives)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関するページの [using ディレクティブ](~/_csharplang/spec/namespaces.md#using-directives)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 
@@ -102,6 +99,5 @@ using エイリアス ディレクティブの右側には、オープン ジェ
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [名前空間の使用](../../programming-guide/namespaces/using-namespaces.md)
 - [C# のキーワード](index.md)
-- [名前空間キーワード](namespace-keywords.md)
 - [名前空間](../../programming-guide/namespaces/index.md)
 - [using ステートメント](using-statement.md)

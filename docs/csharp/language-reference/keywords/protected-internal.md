@@ -1,14 +1,13 @@
 ---
 title: protected internal - C# リファレンス
-ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 09685e38e879de787b0f6bab8c189a8815433904
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 877df74b51fb859043171619f5687ecddb8409d1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238651"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713197"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# リファレンス)
 
@@ -30,7 +29,7 @@ class TestAccess
 {
     void Access()
     {
-        BaseClass baseObject = new BaseClass();
+        var baseObject = new BaseClass();
         baseObject.myValue = 5;
     }
 }
@@ -43,8 +42,8 @@ class DerivedClass : BaseClass
 {
     static void Main()
     {
-        BaseClass baseObject = new BaseClass();
-        DerivedClass derivedObject = new DerivedClass();
+        var baseObject = new BaseClass();
+        var derivedObject = new DerivedClass();
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.
@@ -55,6 +54,7 @@ class DerivedClass : BaseClass
     }
 }
 ```
+
 この例には、2 つのファイル (`Assembly1.cs` と `Assembly2.cs`) が含まれています。
 最初のファイルには public 基底クラスである `BaseClass` ともう 1 つのクラスである `TestAccess` が含まれています。 `BaseClass` は protected internal メンバーの `myValue` を持っています。これは `TestAccess` 型にアクセスされます。
 2 番目のファイルでは、`BaseClass` のインスタンス経由で `myValue` にアクセスしようとするとエラーが発生します。一方で、派生クラス `DerivedClass` のインスタンスからこのメンバーにアクセスすると成功します。
@@ -72,7 +72,7 @@ class DerivedClass : BaseClass
 - [C# のキーワード](index.md)
 - [アクセス修飾子](access-modifiers.md)
 - [アクセシビリティ レベル](accessibility-levels.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

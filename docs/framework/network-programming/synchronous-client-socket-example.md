@@ -9,12 +9,12 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 3d1e2c24cbbdcecd9daefab4312076099816ba70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 70c4f26e3b4fc1c3dcb4c34e8858525b7f1660c3
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596060"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047186"
 ---
 # <a name="synchronous-client-socket-example"></a>同期クライアント ソケットの例
 次のプログラム例では、サーバーに接続するクライアントを作成します。 このクライアントは同期ソケットで構築されます。そのため、クライアント アプリケーションの実行は、サーバーが応答を返すまで一時停止となります。 このアプリケーションは文字列をサーバーに送信し、サーバーが返した文字列をコンソールに表示します。  
@@ -136,6 +136,7 @@ public class SynchronousSocketClient {
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [同期サーバー ソケットの例](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [同期クライアント ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [ソケットのコード例](../../../docs/framework/network-programming/socket-code-examples.md)
+
+- [同期サーバー ソケットの例](synchronous-server-socket-example.md)
+- [同期クライアント ソケットの使用](using-a-synchronous-client-socket.md)
+- [ソケットのコード例](socket-code-examples.md)

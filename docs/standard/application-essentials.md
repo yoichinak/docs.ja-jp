@@ -5,14 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - .NET Framework development
 ms.assetid: 653da4ba-3752-4d1f-a08a-de017dc86ecc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f05f66af71b86ccaefe19c0ddce2bfe7572f1084
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 494f3305f225e0130df30433f3fa0d06ca218068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567576"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122546"
 ---
 # <a name="net-framework-application-essentials"></a>.NET Framework アプリケーションの基本事項
 .NET Framework ドキュメントのこのセクションでは、.NET Framework での基本的なアプリケーション開発タスクに関する情報を提供します。  
@@ -54,8 +52,7 @@ ms.locfileid: "33567576"
  [グローバライズとローカライズ](../../docs/standard/globalization-localization/index.md)  
  国際対応アプリケーションの設計および開発に役立つ情報を提供します。  
   
- ユーザー補助  
- Microsoft UI オートメーションについて説明します。Microsoft UI オートメーションは、ユーザー インターフェイス (UI) に関する情報をプログラムで使用できるようにすることにより、ユーザー補助技術製品および自動テスト フレームワークに対するニーズに応えるアクセシビリティ フレームワークです。  
+ [アセンブリ](../../docs/framework/ui-automation/index.md) Microsoft UI オートメーションについて説明します。これは、ユーザー インターフェイス (UI) に関する情報をプログラムで使用できるようにすることにより、ユーザー補助技術製品および自動テスト フレームワークに対するニーズに応えるアクセシビリティ フレームワークです。  
   
  [属性](../../docs/standard/attributes/index.md)  
  属性を使用してメタデータをカスタマイズする方法について説明します。  

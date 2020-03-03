@@ -15,23 +15,21 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0741e5773b946186a452e191cc3ae987e6067c44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1283abaf6b08af1d842d8fe4469f7f6c15e38ec5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606888"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136421"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 関数
 現在のプロセスで実行されている共通言語ランタイム (CLR) のバージョン番号を返します。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCORVersion (  
     [in] LPWSTR  pbuffer,  
     [in]  DWORD   cchBuffer,   
@@ -39,24 +37,25 @@ HRESULT GetCORVersion (
 );   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbuffer`  
- CLR がプロセスに現在読み込まれてはランタイムのバージョンを指定する文字列を返すバッファーへのポインター。 渡される文字列として返される文字列は同じ形式を取ります[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)、たとえば、"v1.0.1216"。 ランタイムがプロセスにまだ読み込まれていない場合は、コンピューターにインストールされているランタイムの最新バージョンの適切なディレクトリ情報を返します。  
+ 現在プロセスに読み込まれているランタイムのバージョンを指定する文字列を CLR が返すバッファーへのポインター。 返される文字列は、 [Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に渡される文字列と同じ形式になります (例、"v 1.0.1216")。 ランタイムがまだプロセスに読み込まれていない場合、関数はコンピューターにインストールされている最新バージョンのランタイムの適切なディレクトリ情報を返します。  
   
  `cchBuffer`  
- 文字数 (`WCHAR`秒) 内に保持することができますを`pbuffer`します。  
+ `pbuffer`に保持できる文字の数 (`WCHAR`s)。  
   
  `dwLength`  
- 実際に返される文字数へのポインター`pbuffer`します。 場合`pbuffer`が null ポインターの場合、ランタイムが E_POINTER を返します。 文字の数が大きい場合の長さ、`pbuffer`ランタイムは ERROR_INSUFFICIENT_BUFFER を返します。  
+ `pbuffer`に実際に返された文字数へのポインター。 `pbuffer` が null ポインターの場合、ランタイムは E_POINTER を返します。 文字数が `pbuffer` の長さより大きい場合、ランタイムは ERROR_INSUFFICIENT_BUFFER を返します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

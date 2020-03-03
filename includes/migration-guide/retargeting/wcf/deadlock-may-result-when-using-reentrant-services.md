@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2f960942bda54505690cbac3151ef74ec0ab5ebb
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68235488"
+---
 ### <a name="deadlock-may-result-when-using-reentrant-services"></a>再入可能なサービスを使用していると、デッドロックが発生する可能性がある
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.6.2|
 |型|再ターゲット中|
 |影響を受ける API|<ul><li><xref:System.ServiceModel.ServiceBehaviorAttribute?displayProperty=nameWithType></li><li><xref:System.ServiceModel.ConcurrencyMode.Reentrant?displayProperty=nameWithType></li></ul>|
-

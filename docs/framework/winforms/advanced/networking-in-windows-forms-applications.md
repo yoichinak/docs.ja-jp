@@ -1,36 +1,36 @@
 ---
-title: Windows フォーム アプリケーションにおけるネットワーク
+title: ネットワーク
 ms.date: 03/30/2017
 helpviewer_keywords:
 - networking [Windows Forms], Windows Forms
 - Windows Forms, networking
 ms.assetid: babf8af3-8000-46e2-8c68-a42127efabba
-ms.openlocfilehash: 23251116344af49509547055af824802c4878849
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a339792e716e9c23a0c178dc08410aa66988d7c6
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523385"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745008"
 ---
 # <a name="networking-in-windows-forms-applications"></a>Windows フォーム アプリケーションにおけるネットワーク
-.NET Framework では、Web ページの表示、Web コンテンツをダウンロードする、ファイル転送プロトコル (FTP) サイトと対話し、容易にネットワーク機能をアプリケーションに組み込む Web サービスの使用のためのクラスを提供します。 次のリソースを .NET Framework と Windows フォームに統合する方法のネットワー キング テクノロジから理解できます。  
+.NET Framework には、web ページを表示したり、Web コンテンツをダウンロードしたり、ファイル転送プロトコル (FTP) サイトと対話したり、Web サービスを使用したりするためのクラスが用意されており、アプリケーションにネットワーク機能を簡単に組み込むことができます。 次のリソースは、.NET Framework のネットワークテクノロジと、それらを Windows フォームに統合する方法を理解するのに役立ちます。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  <xref:System.Net>  
- .NET Framework がハンドルのネットワーク接続のクラスのルート名前空間。  
+ ネットワーク接続を処理する .NET Framework 内のクラスのルート名前空間。  
   
  <xref:System.Net.WebClient>  
- Web または HTTP ベースのコンテンツをプログラムで取得するための便利なクラスです。  
+ プログラムによって Web または HTTP ベースのコンテンツを取得するための便利なクラス。  
   
  <xref:System.Net.FtpWebRequest>  
- 取得して、FTP を使用してファイルを送信するためのクラス。  
+ FTP を使用してファイルを取得して送信するためのクラス。  
   
  <xref:System.Windows.Forms.WebBrowser>  
- マネージ ラッパー クラス、 `WebBrowser` Windows に含まれているコントロール。  
+ Windows に含まれる `WebBrowser` コントロールのマネージラッパークラス。  
   
 ## <a name="related-sections"></a>関連項目  
- [.NET Framework のネットワーク プログラミング](../../../../docs/framework/network-programming/index.md)  
- .NET Framework のネットワークの概要です。  
+ [.NET Framework のネットワーク プログラミング](../../network-programming/index.md)  
+ .NET Framework でのネットワークの概要。  
   
- [Windows フォームでのデータ バインディング](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- ローカル データ ストアまたはネットワーク上のデータベースから、アプリケーションでデータベースの内容を表示する方法について説明します。
+ [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)  
+ ローカルデータストアまたはネットワーク上にあるデータベースから、アプリケーションにデータベースの内容を表示する方法について説明します。

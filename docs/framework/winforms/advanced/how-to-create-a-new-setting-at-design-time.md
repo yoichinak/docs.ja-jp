@@ -1,37 +1,43 @@
 ---
-title: '方法: デザイン時に新しい設定を作成します。'
+title: '方法: 設計時に新しい設定を作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 160d4a9f560479b3a66b2cf4d7712b24551fabee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35a7cd8cc1daaf76a25977751ddc9ec0709e5947
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558703"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69037902"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>方法: デザイン時に新しい設定を作成します。
-設定デザイナーを使用して、デザイン時に新しい設定を作成できます。 設定デザイナーは、新しい設定を作成し、これらの設定のプロパティを指定できるようにするグリッド スタイルのインターフェイスです。 名前、値、型、および、新しい設定のスコープを指定する必要があります。 設定が作成されると、コードでアクセス可能な。  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-c"></a>デザイン時に新しい設定を作成するにはC#  
-  
-1.  **ソリューション エクスプ ローラー**、展開、**プロパティ**プロジェクトのノード。  
-  
-2.  新しい設定を追加する .settings ファイルをダブルクリックします。 このファイルの既定の名前は Settings.settings ですです。  
-  
-3.  設定デザイナーで、名前、値、型、および設定のスコープを設定します。 各行は、1 つの設定を表します。  
-  
-### <a name="to-create-a-new-setting-at-design-time-in-visual-basic"></a>Visual Basic でのデザイン時に新しい設定を作成するには  
-  
-1.  **ソリューション エクスプ ローラー**をプロジェクト ノードを右クリックして**プロパティ**します。  
-  
-2.  **プロパティ**] ページで、[、**設定**タブ。  
-  
-3.  設定デザイナーで、名前、値、型、および設定のスコープを設定します。 各行は、1 つの設定を表します。  
-  
+# <a name="how-to-create-a-new-setting-at-design-time"></a>方法: デザイン時に新しい設定を作成する
+
+Visual Studio の設定デザイナーを使用して、デザイン時に新しい設定を作成できます。 設定デザイナーは、新しい設定を作成し、それらの設定のプロパティを指定できるグリッド形式のインターフェイスです。 新しい設定の名前、値、種類、およびスコープを指定する必要があります。 設定が作成されると、コードでアクセスできるようになります。
+
+## <a name="create-a-new-setting-at-design-time-in-c"></a>C でデザイン時に新しい設定を作成する\#
+
+1. Visual Studio を開きます。
+
+2. **ソリューションエクスプローラー**で、プロジェクトの **[プロパティ]** ノードを展開します。
+
+3. 新しい設定を追加する設定ファイルをダブルクリックします。 このファイルの既定の名前は設定です。設定です。
+
+4. 設定デザイナーで、設定の **[名前]** 、 **[値]** 、 **[種類]** 、 **[スコープ]** を設定します。 各行は1つの設定を表します。
+
+## <a name="create-a-new-setting-at-design-time-in-visual-basic"></a>デザイン時に Visual Basic で新しい設定を作成する
+
+1. Visual Studio を開きます。
+
+2. **ソリューションエクスプローラー**で、プロジェクトノードを右クリックし、 **[プロパティ]** を選択します。
+
+3. **[プロパティ]** ページで、 **[設定]** タブを選択します。
+
+4. 設定デザイナーで、設定の **[名前]** 、 **[値]** 、 **[種類]** 、 **[スコープ]** を設定します。 各行は1つの設定を表します。
+
 ## <a name="see-also"></a>関連項目
-- [アプリケーション設定とユーザー設定の使用](../../../../docs/framework/winforms/advanced/using-application-settings-and-user-settings.md)
-- [アプリケーション設定の概要](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [方法: デザイン時に既存の設定の値を変更します。](../../../../docs/framework/winforms/advanced/how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+
+- [アプリケーション設定とユーザー設定の使用](using-application-settings-and-user-settings.md)
+- [アプリケーション設定の概要](application-settings-overview.md)
+- [方法: デザイン時に既存の設定の値を変更する](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

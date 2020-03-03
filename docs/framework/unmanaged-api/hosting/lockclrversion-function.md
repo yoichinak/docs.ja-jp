@@ -15,23 +15,21 @@ helpviewer_keywords:
 ms.assetid: 1318ee37-c43b-40eb-bbe8-88fc46453d74
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95f61170d401161dcf217f139dbe6e4c6d3a0e0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 216852f8f051440b2814619b843a1f25013e4042
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735040"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133771"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 関数
-により、ホストがプロセス内で、CLR を明示的に初期化する前に使用する共通言語ランタイム (CLR) のバージョンを決定します。  
+CLR を明示的に初期化する前に、プロセス内で使用される共通言語ランタイム (CLR) のバージョンをホストが判断できるようにします。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LockClrVersion (  
     [in] FLockClrVersionCallback   hostCallback,  
     [in] FLockClrVersionCallback  *pBeginHostSetup,  
@@ -39,59 +37,60 @@ HRESULT LockClrVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `hostCallback`  
- [in]初期化時に CLR によって呼び出される関数。  
+ から初期化時に CLR によって呼び出される関数。  
   
  `pBeginHostSetup`  
- [in]初期化の CLR に通知するためにホストによって呼び出される関数を開始しています。  
+ から初期化を開始することを CLR に通知するために、ホストによって呼び出される関数。  
   
  `pEndHostSetup`  
- [in]初期化の CLR に通知するためにホストによって呼び出される関数が完了しました。  
+ から初期化が完了したことを CLR に通知するために、ホストによって呼び出される関数。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の値だけでなく、WinError.h で定義されている標準の COM エラー コードを返します。  
+ このメソッドは、次の値に加えて、Winerror.h で定義されている標準の COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|1 つ以上の引数が null です。|  
+|E_INVALIDARG|1つ以上の引数が null です。|  
   
 ## <a name="remarks"></a>Remarks  
- ホスト呼び出し`LockClrVersion`CLR を初期化する前にします。 `LockClrVersion` すべてがコールバック型の 3 つのパラメーターを受け取る[FLockClrVersionCallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)します。 この種類の定義は次のとおりです。  
+ ホストは、CLR を初期化する前に `LockClrVersion` を呼び出します。 `LockClrVersion` は3つのパラメーターを受け取ります。これらはすべて[Flockclrversioncallback](../../../../docs/framework/unmanaged-api/hosting/flockclrversioncallback-function-pointer.md)型のコールバックです。 この型は次のように定義されています。  
   
-```  
+```cpp  
 typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();  
 ```  
   
- 次の手順は、ランタイムの初期化時に発生します。  
+ ランタイムの初期化時には、次の手順が実行されます。  
   
-1.  ホスト呼び出し[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)またはその他のランタイム初期化関数の 1 つ。 または、ホストは、COM オブジェクトのアクティベーションを使用してランタイムを初期化する可能性があります。  
+1. ホストは[Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)またはその他のランタイム初期化関数のいずれかを呼び出します。 また、ホストは COM オブジェクトアクティベーションを使用してランタイムを初期化することもできます。  
   
-2.  ランタイムがで指定された関数を呼び出す、`hostCallback`パラメーター。  
+2. ランタイムは、`hostCallback` パラメーターによって指定された関数を呼び出します。  
   
-3.  指定された関数`hostCallback`続いて、次の一連の呼び出し。  
+3. `hostCallback` によって指定された関数は、次の一連の呼び出しを行います。  
   
-    -   指定された関数、`pBeginHostSetup`パラメーター。  
+    - `pBeginHostSetup` パラメーターによって指定された関数。  
   
-    -   `CorBindToRuntimeEx` (または別のランタイム初期化関数)。  
+    - `CorBindToRuntimeEx` (または別のランタイム初期化関数)。  
   
-    -   [Iclrruntimehost::sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)します。  
+    - [ICLRRuntimeHost:: SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)。  
   
-    -   [Iclrruntimehost::start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)します。  
+    - [ICLRRuntimeHost:: Start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)。  
   
-    -   指定された関数、`pEndHostSetup`パラメーター。  
+    - `pEndHostSetup` パラメーターによって指定された関数。  
   
- すべての呼び出し`pBeginHostSetup`に`pEndHostSetup`1 つのスレッドまたはファイバーは、同じ論理スタックで発生する必要があります。 このスレッドは、対象スレッドと異なる場合が`hostCallback`が呼び出されます。  
+ `pBeginHostSetup` から `pEndHostSetup` へのすべての呼び出しは、同じ論理スタックを持つ1つのスレッドまたはファイバーに対して行われる必要があります。 このスレッドは、`hostCallback` が呼び出されたスレッドとは異なる場合があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

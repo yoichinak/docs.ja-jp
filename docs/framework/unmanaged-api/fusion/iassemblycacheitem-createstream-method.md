@@ -11,60 +11,62 @@ f1_keywords:
 - IAssemblyCacheItem::CreateStream
 helpviewer_keywords:
 - CreateStream method [.NET Framework fusion]
-- IAsssemblyCacheItem::CreateStream method [.NET Framework fusion]
+- IAssemblyCacheItem::CreateStream method [.NET Framework fusion]
 ms.assetid: 697ab0f4-470c-4baa-a415-4a975c42d0d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58fb8e3ae0f9485399aebe81b5f77ee61ee8f3ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0660621f465f2ba3610e06bd1df38baa1bc5c907
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641097"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134469"
 ---
 # <a name="iassemblycacheitemcreatestream-method"></a>IAssemblyCacheItem::CreateStream メソッド
-指定した名前と形式を使用するストリームを作成します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT CreateStream (  
-    [in]  DWORD dwFlags,  
-    [in]  LPCWSTR pszStreamName,  
-    [in]  DWORD dwFormat,  
-    [in]  DWORD dwFormatFlags,  
-    [out] IStream **ppIStream,  
-    [in, optional] ULARGE_INTEGER *puliMaxSize  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `dwFlags`  
- [in]ものがありますで定義されているフラグ。  
-  
- `pszStreamName`  
- [in]作成されるストリームの名前。  
-  
- `dwFormat`  
- [in]ストリーミングされるように、ファイルの形式です。  
-  
- `dwFormatFlags`  
- [in]形式固有のものがありますで定義されているフラグ。  
-  
- `ppIStream`  
- [out]返されるのアドレスへのポインター [IStream](/windows/desktop/api/objidl/nn-objidl-istream)インスタンス。  
-  
- `puliMaxSize`  
- [in、省略可能]によって参照されるストリームの最大サイズ`ppIStream`します。  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** Fusion.h  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
+
+指定された名前と形式を使用してストリームを作成します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT CreateStream (
+    [in]  DWORD dwFlags,
+    [in]  LPCWSTR pszStreamName,
+    [in]  DWORD dwFormat,
+    [in]  DWORD dwFormatFlags,
+    [out] IStream **ppIStream,
+    [in, optional] ULARGE_INTEGER *puliMaxSize
+);
+```
+
+## <a name="parameters"></a>パラメーター
+
+`dwFlags`\
+からFusion に定義されているフラグ。
+
+`pszStreamName`\
+から作成されるストリームの名前。
+
+`dwFormat`\
+からストリーム配信されるファイルの形式。
+
+`dwFormatFlags`\
+からFusion に定義されている形式固有のフラグ。
+
+`ppIStream`\
+入出力返された[IStream](/windows/desktop/api/objidl/nn-objidl-istream)インスタンスのアドレスへのポインター。
+
+`puliMaxSize`\
+[in、optional]`ppIStream`によって参照されるストリームの最大サイズ。
+
+## <a name="requirements"></a>［要件］
+
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+
+**ヘッダー:** Fusion. h
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
 ## <a name="see-also"></a>関連項目
-- [IAssemblyCacheItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+
+- [IAssemblyCacheItem インターフェイス](iassemblycacheitem-interface.md)

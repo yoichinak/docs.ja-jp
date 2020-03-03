@@ -15,35 +15,34 @@ helpviewer_keywords:
 ms.assetid: 0da1ef80-d242-4636-87d0-43e0470b342a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c30a666dcbac553d05cc5f54d5dbb326eb6a10e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1fe38419cda328c919f0840d51cf6336919aa60
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706697"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76864209"
 ---
 # <a name="icorprofilerinfoforcegc-method"></a>ICorProfilerInfo::ForceGC メソッド
-共通言語ランタイム (CLR) 内に発生する強制的にガベージ コレクション。  
+共通言語ランタイム (CLR) 内で強制的にガベージコレクションを実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ForceGC();  
 ```  
   
-## <a name="remarks"></a>Remarks  
- `ForceGC`メソッドは、マネージ コードを実行していないと、スタックに任意のプロファイラーのコールバックがないスレッドからのみ呼び出す必要があります。 呼び出すプロファイラー内で別のスレッドを作成する最も便利な実装は、`ForceGC`シグナルを受け取るとします。  
+## <a name="remarks"></a>コメント  
+ `ForceGC` メソッドを呼び出すことができるのは、マネージコードを実行しておらず、そのスタックにプロファイラーコールバックがないスレッドだけです。 最も便利な実装は、通知されたときに `ForceGC` を呼び出す、プロファイラー内に別のスレッドを作成することです。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

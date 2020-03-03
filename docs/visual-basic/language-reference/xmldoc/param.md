@@ -1,18 +1,18 @@
 ---
-title: <param> (Visual Basic)
+title: <param>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 476b3f4f6b85908897e15f73bc23d2b060e337c3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4405fdf2defbb27aa2146d20083fd406d1f07236
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283648"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352297"
 ---
-# <a name="param-visual-basic"></a>\<param > (Visual Basic)
+# <a name="param-visual-basic"></a>\<param> (Visual Basic)
 パラメーターの名前と説明を定義します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,28 +21,29 @@ ms.locfileid: "55283648"
 <param name="name">description</param>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `name`  
  メソッド パラメーターの名前です。 名前は二重引用符 (" ") で囲みます。  
   
  `description`  
  パラメーターの説明です。  
   
-## <a name="remarks"></a>Remarks  
- `<param>`タグは、メソッドのパラメーターのいずれかを説明するメソッド宣言のコメントで使用する必要があります。  
+## <a name="remarks"></a>コメント  
+ メソッド宣言のコメントには、メソッドのパラメーターの1つを記述するために `<param>` タグを使用する必要があります。  
   
- テキスト、`<param>`タグは、次の場所に表示されます。  
+ `<param>` タグのテキストは次の場所に表示されます。  
   
--   IntelliSense のパラメーター情報。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。  
+- IntelliSense のパラメーター情報。 詳細については、「[IntelliSense を使用する](/visualstudio/ide/using-intellisense)」を参照してください。  
   
--   オブジェクト ブラウザー。 詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
+- オブジェクト ブラウザー。 詳細については、「[コードの構造の表示](/visualstudio/ide/viewing-the-structure-of-code)」を参照してください。  
   
- コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<param>`を記述するタグ、`id`パラメーター。  
+ この例では、`<param>` タグを使用して、`id` パラメーターを記述します。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/param_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

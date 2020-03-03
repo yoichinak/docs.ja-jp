@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b7953aab434de3b081f22acc43cf6c4a00ac0742
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858564"
+---
 ### <a name="a-concurrentdictionary-serialized-in-net-framework-45-with-netdatacontractserializer-cannot-be-deserialized-by-net-framework-451-or-452"></a>NetDataContractSerializer を使用して .NET Framework 4.5 でシリアル化された ConcurrentDictionary は、.NET Framework 4.5.1 または 4.5.2 で逆シリアル化できない
 
 |   |   |

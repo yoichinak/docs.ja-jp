@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], simplifying by child timelines
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
-ms.openlocfilehash: b5af20ce791c442eada0774cd46f52205e5b93e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804014"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>方法: 子タイムラインを使用してアニメーションを簡素化する
 この例は、子を使用してアニメーションを簡素化する方法を示しています。<xref:System.Windows.Media.Animation.ParallelTimeline>オブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>の種類は、<xref:System.Windows.Media.Animation.Timeline>が含まれているタイムラインのターゲットの情報を提供します。 使用して、<xref:System.Windows.Media.Animation.Storyboard>をタイムラインのターゲット オブジェクトとプロパティの情報などの情報を提供します。  
@@ -23,8 +23,9 @@ ms.locfileid: "54648194"
  **パフォーマンスに注意してください。** 入れ子にすることが<xref:System.Windows.Media.Animation.Storyboard>、互いの内部でタイムライン<xref:System.Windows.Media.Animation.ParallelTimeline>はオーバーヘッドが少ないを必要なため、入れ子に適してします。 (、<xref:System.Windows.Media.Animation.Storyboard>クラスから継承、<xref:System.Windows.Media.Animation.ParallelTimeline>クラスです)。  
   
 ## <a name="example"></a>例  
- [!code-xaml[Timelines_snip#ParallelTimelineWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
+ [!code-xaml[Timelines_snip#ParallelTimelineWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Timelines_snip/CS/ParallelTimelineExample.xaml#paralleltimelinewholepage)]  
   
 ## <a name="see-also"></a>関連項目
-- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [ストーリーボード アニメーション間で HandoffBehavior を指定する](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)
+
+- [アニメーションの概要](animation-overview.md)
+- [ストーリーボード アニメーション間で HandoffBehavior を指定する](how-to-specify-handoffbehavior-between-storyboard-animations.md)

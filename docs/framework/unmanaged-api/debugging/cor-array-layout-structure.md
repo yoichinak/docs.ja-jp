@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: aa20ac3d-6f60-4aa2-91c5-f3a86f82eba8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e6fee91146e99ba1f63ecafcbbdaae9d42675848
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f37bf545553045b9737b7057feed78e1f06ace4d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731141"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099464"
 ---
-# <a name="corarraylayout-structure"></a>COR_ARRAY_LAYOUT 構造体
+# <a name="cor_array_layout-structure"></a>COR_ARRAY_LAYOUT 構造体
 メモリ内の配列オブジェクトのレイアウトに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct COR_ARRAY_LAYOUT {  
     COR_TYPEID componentID;  
     CorElementType componentType;  
@@ -45,22 +43,22 @@ typedef struct COR_ARRAY_LAYOUT {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`componentID`|配列が含まれているオブジェクトの種類の識別子。|  
-|`componentType`|コンポーネントがガベージ コレクションの参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
-|`firstElementOffset`|配列の最初の要素のオフセット。|  
+|`componentID`|配列に格納されているオブジェクトの型の識別子。|  
+|`componentType`|コンポーネントがガベージコレクション参照、値クラス、またはプリミティブであるかどうかを示す CorElementType 列挙値。|  
+|`firstElementOffset`|配列内の最初の要素へのオフセット。|  
 |`elementSize`|各要素のサイズ。|  
-|`countOffset`|配列内の要素の数にオフセットします。|  
-|`rankSize`|(バイト単位)、ランクのサイズ。|  
-|`numRanks`|配列のランクの数。|  
-|`rankOffset`|ランクの開始位置のオフセット。|  
+|`countOffset`|配列内の要素の数へのオフセット。|  
+|`rankSize`|ランクのサイズ (バイト単位)。|  
+|`numRanks`|配列内のランクの数。|  
+|`rankOffset`|ランクの開始位置を示すオフセット。|  
   
 ## <a name="remarks"></a>Remarks  
- `rankSize`フィールドは、多次元配列のランクのサイズを指定します。 1 次元の配列も正確になります。  
+ `rankSize` フィールドは、多次元配列内のランクのサイズを指定します。 これは、1次元配列に対しても正確です。  
   
- 値`numRanks`は 1 次元配列の 1 と`N`の多次元配列の`N`ディメンション。  
+ `numRanks` の値は、1次元配列の場合は1、`N` 次元の多次元配列の場合は `N` です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -69,5 +67,6 @@ typedef struct COR_ARRAY_LAYOUT {
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

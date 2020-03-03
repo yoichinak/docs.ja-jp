@@ -11,89 +11,87 @@ helpviewer_keywords:
 - DateTimeOffset structure, converting to DateTime
 - DateTimeOffset structure, instantiating
 ms.assetid: 9648375f-d368-4373-a976-3332ece00c0a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 11f62b8fe8a28d6fe6401d53dac4b9bc1c45b21d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b1178623258393eab28a7087eb04c47b55a9176
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554602"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122312"
 ---
 # <a name="instantiating-a-datetimeoffset-object"></a>DateTimeOffset オブジェクトのインスタンス化
 
-<xref:System.DateTimeOffset>構造は新しいを作成する方法のいくつかあります<xref:System.DateTimeOffset>値。 新しくインスタンス化するために使用可能なメソッドに直接対応してそれらの多く<xref:System.DateTime>が強化された日付と時刻の値には世界協定時刻 (UTC) からのオフセットを指定するための値。 具体的には、インスタンス化できる、<xref:System.DateTimeOffset>次の方法で値。
+<xref:System.DateTimeOffset> 構造体には、新しい <xref:System.DateTimeOffset> 値を作成するさまざまな方法が用意されています。 これらの多くは、新しい <xref:System.DateTime> 値をインスタンス化するために使用できるメソッドに直接対応しています。拡張機能を使用すると、世界協定時刻 (UTC) からの日付と時刻の値のオフセットを指定できます。 具体的には、次の方法で <xref:System.DateTimeOffset> 値をインスタンス化できます。
 
-* 日付と時刻のリテラルを使用します。
+- 日付と時刻のリテラルを使用する。
 
-* 呼び出すことによって、<xref:System.DateTimeOffset>コンス トラクター。
+- <xref:System.DateTimeOffset> コンストラクターを呼び出す。
 
-* 値を暗黙的に変換することで<xref:System.DateTimeOffset>値。
+- 値を <xref:System.DateTimeOffset> 値に暗黙的に変換する。
 
-* 日付と時刻の文字列形式を解析する。
+- 日付と時刻の文字列形式を解析する。
 
-このトピックでは新しいをインスタンス化したこれらのメソッドを示す詳細とコードの大きい例<xref:System.DateTimeOffset>値。
+このトピックでは、新しい <xref:System.DateTimeOffset> 値をインスタンス化するこれらの方法を示す、より詳細なコード例を示します。
 
 ## <a name="date-and-time-literals"></a>日付と時刻のリテラル
 
-インスタンス化する最も一般的な方法の 1 つをサポートする言語を<xref:System.DateTime>値は日付と時刻をハード コーディングされたリテラル値としてを提供します。 たとえば、次の Visual Basic コードの作成、<xref:System.DateTime>オブジェクトの値を持つは 2008 年 1 月 1 日午前 10時 00分です。
+それをサポートする言語の場合、<xref:System.DateTime> 値をインスタンス化する最も一般的な方法の1つは、ハードコーディングされたリテラル値として日付と時刻を指定することです。 たとえば、次の Visual Basic コードでは、10:00 AM で2008年1月1日の値を持つ <xref:System.DateTime> オブジェクトを作成します。
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#1)]
 
-<xref:System.DateTimeOffset> サポートする言語を使用する場合は、日付と時刻のリテラルを使用して値を初期化することも<xref:System.DateTime>リテラル。 たとえば、次の Visual Basic コードの作成、<xref:System.DateTimeOffset>オブジェクト。
+<xref:System.DateTimeOffset> 値は、<xref:System.DateTime> リテラルをサポートする言語を使用するときに、日付と時刻のリテラルを使用して初期化することもできます。 たとえば、次の Visual Basic コードでは、<xref:System.DateTimeOffset> オブジェクトを作成します。
 
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#2)]
 
-コンソール出力に示すよう、<xref:System.DateTimeOffset>この方法で作成された値には、ローカル タイム ゾーンのオフセットが割り当てられます。 つまり、<xref:System.DateTimeOffset>コードが別のコンピューターで実行された場合、リテラル文字を使用して割り当てられた値が 1 つの特定の時点を識別できません。
+コンソール出力に示すように、この方法で作成された <xref:System.DateTimeOffset> 値には、ローカルタイムゾーンのオフセットが割り当てられます。 つまり、コードが別のコンピューターで実行されている場合、文字リテラルを使用して割り当てられた <xref:System.DateTimeOffset> 値は、単一の時点を識別しません。
 
-## <a name="datetimeoffset-constructors"></a>DateTimeOffset コンス トラクター
+## <a name="datetimeoffset-constructors"></a>DateTimeOffset コンストラクター
 
-<xref:System.DateTimeOffset>型は、6 つのコンス トラクターを定義します。 直接対応しているうちの 4 つ<xref:System.DateTime>コンス トラクターの型のパラメーターを追加、<xref:System.TimeSpan>日付を定義して、時間を UTC からのオフセットします。 定義することはこれらを<xref:System.DateTimeOffset>値の個々 の日付と時刻のコンポーネントの値に基づいています。 次のコードはこれら 4 つのコンス トラクターを使用して、インスタンス化するなど、 <xref:System.DateTimeOffset> 2008 年 7 月 1 の同じ値を持つオブジェクト 12時 05分 AM +01: 00 です。
+<xref:System.DateTimeOffset> 型は、6つのコンストラクターを定義します。 これらの4つは <xref:System.DateTime> コンストラクターに直接対応しており、UTC からの日付と時刻のオフセットを定義する <xref:System.TimeSpan> 型の追加パラメーターがあります。 これにより、個々の日付と時刻のコンポーネントの値に基づいて、<xref:System.DateTimeOffset> 値を定義できます。 たとえば、次のコードでは、これらの4つのコンストラクターを使用して、7/1/2008 12:05 AM + 01:00 と同じ値を持つ <xref:System.DateTimeOffset> オブジェクトをインスタンス化しています。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#3)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#3)]
 
-なお、ときの値、<xref:System.DateTimeOffset>オブジェクトを使用してインスタンス化、<xref:System.Globalization.PersianCalendar>として、コンス トラクターに引数の 1 つのオブジェクトがコンソールに表示、ペルシャ暦ではなく、グレゴリオ暦の日付として表されます。 ペルシャ暦で日付を出力する例を参照してください、<xref:System.Globalization.PersianCalendar>トピック。
+コンストラクターへの引数の1つとして <xref:System.Globalization.PersianCalendar> オブジェクトを使用してインスタンス化された <xref:System.DateTimeOffset> オブジェクトの値がコンソールに表示される場合は、ペルシャ暦ではなく、グレゴリオ暦の日付として表されることに注意してください。 ペルシャ暦を使用して日付を出力するには、<xref:System.Globalization.PersianCalendar> のトピックの例を参照してください。
 
-その他の 2 つのコンス トラクターを作成、<xref:System.DateTimeOffset>オブジェクトから、<xref:System.DateTime>値。 最初の 1 つのパラメーターを持つ、<xref:System.DateTime>に変換する値を<xref:System.DateTimeOffset>値。 結果のオフセット<xref:System.DateTimeOffset>値によって異なります、<xref:System.DateTime.Kind%2A>コンス トラクターの 1 つのパラメーターのプロパティ。 値が場合<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>、オフセットと等しい設定<xref:System.TimeSpan.Zero?displayProperty=nameWithType>。 それ以外の場合、オフセットはローカル タイム ゾーンのオフセットと等しい値に設定されます。 次の例は、インスタンスを作成するこのコンス トラクターの使用を示します<xref:System.DateTimeOffset>UTC とローカル タイム ゾーンを表すオブジェクト。
+他の2つのコンストラクターは、<xref:System.DateTime> 値から <xref:System.DateTimeOffset> オブジェクトを作成します。 1つ目のパラメーターには、<xref:System.DateTimeOffset> 値に変換する1つのパラメーター、<xref:System.DateTime> 値があります。 結果の <xref:System.DateTimeOffset> 値のオフセットは、コンストラクターの単一のパラメーターの <xref:System.DateTime.Kind%2A> プロパティによって異なります。 値が <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>の場合、オフセットは <xref:System.TimeSpan.Zero?displayProperty=nameWithType>と同じに設定されます。 それ以外の場合、オフセットはローカル タイム ゾーンのオフセットと等しい値に設定されます。 次の例は、このコンストラクターを使用して、UTC とローカルタイムゾーンを表す <xref:System.DateTimeOffset> オブジェクトをインスタンス化する方法を示しています。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#4)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#4)]
 
 > [!NOTE]
-> オーバー ロードを呼び出し、<xref:System.DateTimeOffset>を 1 つを持つコンス トラクター<xref:System.DateTime>パラメーターの暗黙の変換を実行するのには、<xref:System.DateTime>値を<xref:System.DateTimeOffset>値。
+> 1つの <xref:System.DateTime> パラメーターを持つ <xref:System.DateTimeOffset> コンストラクターのオーバーロードを呼び出すことは、<xref:System.DateTime> 値から <xref:System.DateTimeOffset> 値への暗黙的な変換を実行することと同じです。
 
-作成する 2 つ目のコンス トラクター、<xref:System.DateTimeOffset>オブジェクトから、<xref:System.DateTime>値が 2 つのパラメーター:<xref:System.DateTime>変換対象の値と<xref:System.TimeSpan>日付と時刻を表す値を UTC からのオフセットします。 このオフセット値に対応する必要があります、<xref:System.DateTime.Kind%2A>コンス トラクターの最初のパラメーターのプロパティまたは<xref:System.ArgumentException>がスローされます。 場合、<xref:System.DateTime.Kind%2A>最初のパラメーターのプロパティが<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>、2 番目のパラメーターの値である必要があります<xref:System.TimeSpan.Zero?displayProperty=nameWithType>します。 場合、<xref:System.DateTime.Kind%2A>最初のパラメーターのプロパティが<xref:System.DateTimeKind.Local?displayProperty=nameWithType>、2 番目のパラメーターの値はローカル システムのタイム ゾーンのオフセットである必要があります。 場合、<xref:System.DateTime.Kind%2A>最初のパラメーターのプロパティが<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>オフセットが有効な値を指定できます。 次のコードはこのコンス トラクターの呼び出しに変換する<xref:System.DateTime>に<xref:System.DateTimeOffset>値。
+<xref:System.DateTime> 値から <xref:System.DateTimeOffset> オブジェクトを作成する2つ目のコンストラクターには、変換する <xref:System.DateTime> 値と UTC からの日付と時刻のオフセットを表す <xref:System.TimeSpan> 値の2つのパラメーターがあります。 このオフセット値は、コンストラクターの最初のパラメーターの <xref:System.DateTime.Kind%2A> プロパティに対応している必要があります。一致しない場合、<xref:System.ArgumentException> がスローされます。 最初のパラメーターの <xref:System.DateTime.Kind%2A> プロパティが <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>の場合は、2番目のパラメーターの値を <xref:System.TimeSpan.Zero?displayProperty=nameWithType>する必要があります。 最初のパラメーターの <xref:System.DateTime.Kind%2A> プロパティが <xref:System.DateTimeKind.Local?displayProperty=nameWithType>の場合、2番目のパラメーターの値は、ローカルシステムのタイムゾーンのオフセットである必要があります。 最初のパラメーターの <xref:System.DateTime.Kind%2A> プロパティが <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>の場合、オフセットには任意の有効な値を指定できます。 次のコードは、<xref:System.DateTime> を <xref:System.DateTimeOffset> 値に変換するこのコンストラクターの呼び出しを示しています。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#5)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#5)]
 
-## <a name="implicit-type-conversion"></a>暗黙的な型変換
+## <a name="implicit-type-conversion"></a>暗黙の型変換
 
-<xref:System.DateTimeOffset>型は、1 つの暗黙的な型変換をサポートしています: から、<xref:System.DateTime>値を<xref:System.DateTimeOffset>値。 (暗黙的な型変換とは、明示的なキャスト (C# の場合) または変換 (Visual Basic の場合) を必要とせず、情報を失わない 1 つの型から別の型への変換です)。 これにより、次のようなコードが可能となります。
+<xref:System.DateTimeOffset> 型は、<xref:System.DateTime> 値から <xref:System.DateTimeOffset> 値への暗黙的な型変換の1つをサポートします。 (暗黙的な型変換とは、明示的なキャスト (C# の場合) または変換 (Visual Basic の場合) を必要とせず、情報を失わない 1 つの型から別の型への変換です)。 これにより、次のようなコードが可能となります。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#6)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#6)]
 
-結果のオフセット<xref:System.DateTimeOffset>値によって異なります、<xref:System.DateTime.Kind%2A?displayProperty=nameWithType>プロパティの値。 値が場合<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>、オフセットと等しい設定<xref:System.TimeSpan.Zero?displayProperty=nameWithType>。 いずれかの値が場合<xref:System.DateTimeKind.Local?displayProperty=nameWithType>または<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>オフセットは、ローカル タイム ゾーンのと同じに設定されます。
+結果の <xref:System.DateTimeOffset> 値のオフセットは、<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティ値によって異なります。 値が <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>の場合、オフセットは <xref:System.TimeSpan.Zero?displayProperty=nameWithType>と同じに設定されます。 値が <xref:System.DateTimeKind.Local?displayProperty=nameWithType> または <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>の場合、オフセットはローカルタイムゾーンのオフセットと同じに設定されます。
 
 ## <a name="parsing-the-string-representation-of-a-date-and-time"></a>日付と時刻の文字列形式の解析
 
-<xref:System.DateTimeOffset>に日時、日付の文字列形式に変換するための 4 つのメソッドをサポートする型、<xref:System.DateTimeOffset>値。
+<xref:System.DateTimeOffset> 型では、日付と時刻の文字列形式を <xref:System.DateTimeOffset> の値に変換できる4つのメソッドがサポートされています。
 
-* <xref:System.DateTimeOffset.Parse%2A>、日付の文字列形式を変換する日時をしようとする、<xref:System.DateTimeOffset>値し、変換が失敗した場合に例外をスローします。
+- <xref:System.DateTimeOffset.Parse%2A>、日付と時刻の文字列形式を <xref:System.DateTimeOffset> 値に変換しようとし、変換に失敗した場合は例外をスローします。
 
-* <xref:System.DateTimeOffset.TryParse%2A>、日付の文字列形式を変換する日時をしようとする、<xref:System.DateTimeOffset>値を返します`false`変換が失敗した場合。
+- <xref:System.DateTimeOffset.TryParse%2A>、日付と時刻の文字列形式を <xref:System.DateTimeOffset> 値に変換しようとし、変換に失敗した場合は `false` を返します。
 
-* <xref:System.DateTimeOffset.ParseExact%2A>、日付と時刻を指定した形式の文字列形式に変換しようと試みます、<xref:System.DateTimeOffset>値。 変換が失敗すると、メソッドは例外をスローします。
+- <xref:System.DateTimeOffset.ParseExact%2A>、指定した形式の日付と時刻の文字列形式を <xref:System.DateTimeOffset> 値に変換しようとします。 変換が失敗すると、メソッドは例外をスローします。
 
-* <xref:System.DateTimeOffset.TryParseExact%2A>、日付と時刻を指定した形式の文字列形式に変換しようと試みます、<xref:System.DateTimeOffset>値。 変換が失敗すると、メソッドは `false` を返します。
+- <xref:System.DateTimeOffset.TryParseExact%2A>、指定した形式の日付と時刻の文字列形式を <xref:System.DateTimeOffset> 値に変換しようとします。 変換が失敗すると、メソッドは `false` を返します。
 
-次の例では、これらの 4 つの文字列変換メソッドの各インスタンス化への呼び出しを<xref:System.DateTimeOffset>値。
+次の例は、これらの4つの文字列変換メソッドを呼び出して、<xref:System.DateTimeOffset> 値をインスタンス化する方法を示しています。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/cs/Instantiate.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Instantiate#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Instantiate/vb/Instantiate.vb#7)]
 
 ## <a name="see-also"></a>関連項目
 
-- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [日付、時刻およびタイム ゾーン](../../../docs/standard/datetime/index.md)

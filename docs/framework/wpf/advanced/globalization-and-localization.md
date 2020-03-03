@@ -11,31 +11,31 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: b1931b17c0902eec590c3c998c52f6e9d84133dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80e0bf641c46eb1461769f5a85950982258c78f5
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543456"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559423"
 ---
 # <a name="globalization-and-localization"></a>グローバライズとローカライズ
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 国際対応アプリケーションの開発には、広範なサポートを提供します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、国際対応アプリケーションを開発するための広範なサポートを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [WPF のグローバリゼーションおよびローカリゼーションの概要](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [自動レイアウトの使用の概要](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [ローカリゼーション属性とコメント](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [WPF の双方向機能の概要](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [WPF のグローバリゼーションおよびローカリゼーションの概要](wpf-globalization-and-localization-overview.md)  
+ [WPF のグローバリゼーション](globalization-for-wpf.md)  
+ [自動レイアウトの使用の概要](use-automatic-layout-overview.md)  
+ [ローカリゼーション属性とコメント](localization-attributes-and-comments.md)  
+ [WPF の双方向機能の概要](bidirectional-features-in-wpf-overview.md)  
+ [方法のトピック](globalization-and-localization-how-to-topics.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>参照先  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML における xml:lang の処理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML における xml:lang の処理](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
-## <a name="related-sections"></a>関連項目
+## <a name="related-sections"></a>関連セクション

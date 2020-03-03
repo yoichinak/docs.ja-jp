@@ -15,65 +15,64 @@ helpviewer_keywords:
 ms.assetid: 6c3a08a9-5d65-48d4-8bbf-2a86ed7d356a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 276f83ff95d4f63f9a26807fe2601c68e3f6b063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77de550cd3fb614e03f8028707c3cbf914734910
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574912"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141095"
 ---
 # <a name="iclrgcmanager2setgcstartuplimitsex-method"></a>ICLRGCManager2::SetGCStartupLimitsEx メソッド
-ガベージ コレクション セグメントのサイズと、ガベージ コレクション システムのジェネレーション 0 の最大サイズを設定します。  
+ガベージコレクションセグメントのサイズとガベージコレクションシステムのジェネレーション0の最大サイズを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetGCStartupLimitsEx (  
     [in] SIZE_T SegmentSize,   
     [in] SIZE_T MaxGen0Size  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `SegmentSize`  
- [in]ガベージ コレクション セグメントの指定されたサイズ。  
+ からガベージコレクションセグメントの指定されたサイズ。  
   
- セグメントの最小サイズは、4 MB です。 セグメントには、1 MB 単位で増加以上を指定できます。  
+ セグメントの最小サイズは 4 MB です。 セグメントは、1 MB 以上の単位で増やすことができます。  
   
  `MaxGen0Size`  
- [in]ジェネレーション 0 の指定した最大サイズ。  
+ からジェネレーション0の指定された最大サイズ。  
   
- ジェネレーション 0 の最小サイズは、64 KB です。  
+ ジェネレーション0の最小サイズは 64 KB です。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`SetGCStartupLimitsEx` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`SetGCStartupLimitsEx` が正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返された、後に、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された後は、そのプロセス内で CLR を使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>Remarks  
- 値を`SetGCStartupLimitsEx`ホストを開始する前に、セットを指定することができます。 後で呼び出し`SetGCStartupLimitsEx`は無視されます。  
+ `SetGCStartupLimitsEx` 設定する値は、ホストを開始する前にのみ指定できます。 後で `SetGCStartupLimitsEx` への呼び出しは無視されます。  
   
- を他の影響を与えずにどちらかのパラメーターを設定するには、変更するパラメーターの 0 (ゼロ) を指定します。  
+ どちらか一方のパラメーターに影響を及ぼさずに設定するには、変更しないパラメーターに 0 (ゼロ) を指定します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [自動メモリ管理](../../../../docs/standard/automatic-memory-management.md)
-- [ガベージ コレクション](../../../../docs/standard/garbage-collection/index.md)
+
+- [自動メモリ管理](../../../standard/automatic-memory-management.md)
+- [ガベージ コレクション](../../../standard/garbage-collection/index.md)
 - [ICLRControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager2 インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-interface.md)

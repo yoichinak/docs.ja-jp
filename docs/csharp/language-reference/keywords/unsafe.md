@@ -1,6 +1,5 @@
 ---
 title: unsafe キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unsafe_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unsafe keyword [C#]
 ms.assetid: 7e818009-1c6e-4b9e-b769-3728a01586a0
-ms.openlocfilehash: 81a293a6922a71f7428167c50aed064d7387a099
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ef98809eae0329c028dfb318c4a437aae4736db1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236623"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712989"
 ---
 # <a name="unsafe-c-reference"></a>unsafe (C# リファレンス)
 
@@ -43,7 +42,7 @@ unsafe
 }
 ```
 
-unsafe コードをコンパイルするには、 [/unsafe](../compiler-options/unsafe-compiler-option.md) コンパイラ オプションを指定する必要があります。 unsafe コードは、共通言語ランタイムでは検証できません。
+アンセーフ コードをコンパイルするには、[`-unsafe`](../compiler-options/unsafe-compiler-option.md) コンパイラ オプションを指定する必要があります。 unsafe コードは、共通言語ランタイムでは検証できません。
 
 ## <a name="example"></a>例
 
@@ -51,7 +50,7 @@ unsafe コードをコンパイルするには、 [/unsafe](../compiler-options/
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語の仕様](../language-specification/index.md)」の[アンセーフ コード](~/_csharplang/spec/unsafe-code.md)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[アンセーフ コード](~/_csharplang/spec/unsafe-code.md)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 

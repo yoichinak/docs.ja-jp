@@ -1,5 +1,5 @@
 ---
-title: ICorDebugEnum Interface1
+title: ICorDebugEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugEnum
@@ -14,77 +14,76 @@ helpviewer_keywords:
 ms.assetid: 80be7efe-2c32-4b9f-8c52-40c6f6268219
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 97080f7d850e67d635f9a65ee85ad3ddddbb244d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc5598f9cbec4b97bb75f83fb18ccf8742904272
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732753"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783006"
 ---
-# <a name="icordebugenum-interface1"></a>ICorDebugEnum Interface1
-デバッグ アプリケーションで使用される列挙子の抽象基底インターフェイスとして機能します。  
+# <a name="icordebugenum-interface"></a>ICorDebugEnum インターフェイス
+
+デバッグアプリケーションで使用される列挙子の抽象基本インターフェイスとして機能します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Clone メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-clone-method.md)|このコピーを作成します`ICorDebugEnum`オブジェクト。|  
-|[GetCount メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-getcount-method.md)|列挙に含まれる項目の数を取得します。|  
-|[Reset メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-reset-method.md)|列挙体の先頭にカーソルを移動します。|  
-|[Skip メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugenum-skip-method.md)|指定数の項目では、列挙体にカーソルを移動します。|  
+|[Clone メソッド](icordebugenum-clone-method.md)|この `ICorDebugEnum` オブジェクトのコピーを作成します。|  
+|[GetCount メソッド](icordebugenum-getcount-method.md)|列挙に含まれる項目の数を取得します。|  
+|[Reset メソッド](icordebugenum-reset-method.md)|カーソルを列挙体の先頭に移動します。|  
+|[Skip メソッド](icordebugenum-skip-method.md)|指定した数の項目だけ、列挙内でカーソルを前方に移動します。|  
   
-## <a name="remarks"></a>Remarks  
- 次の列挙子から派生して`ICorDebugEnum`:  
+## <a name="remarks"></a>コメント  
+ 次の列挙子は `ICorDebugEnum`から派生します。  
   
--   "ICorDebugAppDomainEnum"  
+- ICorDebugAppDomainEnum  
   
--   "ICorDebugAssemblyEnum"  
+- ICorDebugAssemblyEnum  
   
--   [ICorDebugBlockingObjectEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-interface.md)  
+- [ICorDebugBlockingObjectEnum](icordebugblockingobjectenum-interface.md)  
   
--   "ICorDebugBreakpointEnum"  
+- ICorDebugBreakpointEnum  
   
--   "ICorDebugChainEnum"  
+- ICorDebugChainEnum  
   
--   "ICorDebugCodeEnum"  
+- ICorDebugCodeEnum  
   
--   "ICorDebugErrorInfoEnum"  
+- ICorDebugErrorInfoEnum  
   
--   [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)  
+- [ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)  
   
--   "ICorDebugFrameEnum"  
+- ICorDebugFrameEnum  
   
--   [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)  
+- [ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)  
   
--   [ICorDebugGuidToTypeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)  
+- [ICorDebugGuidToTypeEnum](icordebugguidtotypeenum-interface.md)  
   
--   [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md)  
+- [ICorDebugHeapEnum](icordebugheapenum-interface.md)  
   
--   [ICorDebugHeapSegmentEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)  
+- [ICorDebugHeapSegmentEnum](icordebugheapsegmentenum-interface.md)  
   
--   "ICorDebugModuleEnum"  
+- ICorDebugModuleEnum  
   
--   "ICorDebugObjectEnum"  
+- ICorDebugObjectEnum  
   
--   "ICorDebugProcessEnum"  
+- ICorDebugProcessEnum  
   
--   "ICorDebugStepperEnum"  
+- ICorDebugStepperEnum  
   
--   "ICorDebugThreadEnum"  
+- ICorDebugThreadEnum  
   
--   "ICorDebugTypeEnum"  
+- ICorDebugTypeEnum  
   
--   "ICorDebugValueEnum"  
+- ICorDebugValueEnum  
   
--   [ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)  
+- [ICorDebugVariableHomeEnum](icordebugvariablehomeenum-interface.md)  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -93,4 +92,5 @@ ms.locfileid: "54732753"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

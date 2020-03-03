@@ -7,24 +7,24 @@ dev_langs:
 helpviewer_keywords:
 - dialog boxes [WPF], returning results
 ms.assetid: 4c5cf286-746b-4052-934d-d80cbf8acba3
-ms.openlocfilehash: 8f754577a355a58060238bbbb487c36aea14658c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5e3670006762bcd09634b29314ecf2d05b1a44da
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545588"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968230"
 ---
 # <a name="how-to-return-a-dialog-box-result"></a>方法: ダイアログ ボックスの結果を返す
-この例は、呼び出すことによって開かれているウィンドウのダイアログの結果を取得する方法を示します<xref:System.Windows.Window.ShowDialog%2A>です。  
+この例では、を呼び出す<xref:System.Windows.Window.ShowDialog%2A>ことによって開かれたウィンドウのダイアログの結果を取得する方法を示します。  
   
 ## <a name="example"></a>例  
- ダイアログ ボックスを閉じる前にその<xref:System.Windows.Window.DialogResult%2A>でプロパティを設定する必要があります、 <xref:System.Nullable%601> <xref:System.Boolean>ユーザーがダイアログ ボックスを閉じる方法を示すです。 この値がによって返される<xref:System.Windows.Window.ShowDialog%2A> ダイアログ ボックスが閉じられました方法と、その結果、結果を処理する方法を決定するクライアント コードを許可します。  
+ ダイアログボックスを閉じる前に、 <xref:System.Windows.Window.DialogResult%2A>ユーザーがダイアログボックスを閉じ<xref:System.Nullable%601>た方法を示すを<xref:System.Boolean>使用して、プロパティを設定する必要があります。 この値は、に<xref:System.Windows.Window.ShowDialog%2A>よって返されます。これにより、クライアントコードは、ダイアログボックスの終了方法、および結果の処理方法を決定できます。  
   
 > [!NOTE]
->  <xref:System.Windows.Window.DialogResult%2A> 呼び出して、ウィンドウが開かれた場合にのみ設定できます<xref:System.Windows.Window.ShowDialog%2A>です。  
+> <xref:System.Windows.Window.DialogResult%2A>を呼び出す<xref:System.Windows.Window.ShowDialog%2A>ことによってウィンドウが開かれた場合にのみ設定できます。  
   
- [!code-csharp[HOWTOWindowManagementSnippets#GetDialogResultCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#getdialogresultcode)]
- [!code-vb[HOWTOWindowManagementSnippets#GetDialogResultCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#getdialogresultcode)]  
+ [!code-csharp[HOWTOWindowManagementSnippets#GetDialogResultCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/CSharp/MainWindow.xaml.cs#getdialogresultcode)]
+ [!code-vb[HOWTOWindowManagementSnippets#GetDialogResultCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOWindowManagementSnippets/visualbasic/mainwindow.xaml.vb#getdialogresultcode)]  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- 呼び出す<xref:System.Windows.Window.ShowDialog%2A>すべての windows とユーザー入力イベントを制限なく使用する権限が必要です。
+ を<xref:System.Windows.Window.ShowDialog%2A>呼び出すには、制限なしですべての windows およびユーザー入力イベントを使用するためのアクセス許可が必要です。

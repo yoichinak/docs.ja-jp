@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 83058790-160b-4703-a5eb-74b66acbdfa9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c9a1ee9ab1649a832b6daefc96049d68850f3bc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58d30e71929d314ee36adb9f83270858ff8a161b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555558"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442440"
 ---
 # <a name="corunmanagedcallingconvention-enumeration"></a>CorUnmanagedCallingConvention 列挙型
-アンマネージ コードの呼び出し規約を指定します。  
+アンマネージコードの呼び出し規約を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorUnmanagedCallingConvention {  
   
     IMAGE_CEE_UNMANAGED_CALLCONV_C         = 0x1,  
@@ -48,24 +46,25 @@ typedef enum CorUnmanagedCallingConvention {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C 言語の呼び出し規則。|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|標準呼び出し規則。|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This"呼び出し規約。|  
-|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|「高速」の呼び出し規約。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_C`|C 言語の呼び出し規約。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_STDCALL`|標準の呼び出し規約。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_THISCALL`|"This" 呼び出し規約。|  
+|`IMAGE_CEE_UNMANAGED_CALLCONV_FASTCALL`|"高速" 呼び出し規約。|  
 |`IMAGE_CEE_CS_CALLCONV_C`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_STDCALL`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_THISCALL`|使用しません。|  
 |`IMAGE_CEE_CS_CALLCONV_FASTCALL`|使用しません。|  
   
-## <a name="remarks"></a>Remarks  
- CLR は、.NET Framework version 1.0 での「高速」の呼び出し規約をサポートしていません。  
+## <a name="remarks"></a>コメント  
+ CLR では、.NET Framework バージョン1.0 での "高速" 呼び出し規約はサポートされていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -2,20 +2,21 @@
 title: <add> の <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 84ad745e7789fc2de8dcc23f3607b63702af05a1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: adf4cd7f02db6535c5950443d09476a9a5ff63fb
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263454"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850308"
 ---
-# <a name="add-of-transportconfigurationtype"></a>\<add> of \<transportConfigurationType>
+# <a name="add-of-transportconfigurationtype"></a>\<transportConfigurationType > の\<> の追加
 この要素は、特定のトランスポートの種類を識別するキーと値のペアです。  
   
- \<system.ServiceModel >  
-\<serviceHostingEnvironment >  
-\<transportConfigurationTypes>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceHostingEnvironment >** ](servicehostingenvironment.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<transportConfigurationTypes >** ](transportconfigurationtypes.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,7 +46,7 @@ ms.locfileid: "55263454"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<transportConfigurationTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/transportconfigurationtypes.md)|特定のトランスポートを実装する型のコレクション。|  
+|[\<transportConfigurationTypes>](transportconfigurationtypes.md)|特定のトランスポートを実装する型のコレクション。|  
   
 ## <a name="example"></a>例  
   
@@ -59,7 +60,8 @@ ms.locfileid: "55263454"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>
-- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [ホスティング](../../../wcf/feature-details/hosting.md)

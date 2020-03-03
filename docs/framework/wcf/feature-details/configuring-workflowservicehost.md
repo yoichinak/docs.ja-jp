@@ -2,12 +2,12 @@
 title: WorkflowServiceHost の構成
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
-ms.openlocfilehash: b5462efed32438c21be05a3ce78d6d36fd62ba89
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcfc22c1c0084761039a876eec7bf00cf78b51a2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857390"
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost の構成
 このセクションには一連の短い「する方法」のさまざまな機能を構成する方法を簡単に説明するトピック、<xref:System.ServiceModel.Activities.WorkflowServiceHost>構成内のクラス。 これらのトピックがワークフロー サービス固有の構成に対応、通常の WCF サービスと同じ方法で他のすべての構成が行われます。  
@@ -26,5 +26,6 @@ ms.locfileid: "54704983"
  <xref:System.ServiceModel.Activities.WorkflowServiceHost> を使用して、ワークフロー サービスの未処理の例外動作を構成する方法を説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ワークフロー サービス](../../../../docs/framework/wcf/feature-details/workflow-services.md)
 - [ワークフロー サービスのホストの概要](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)

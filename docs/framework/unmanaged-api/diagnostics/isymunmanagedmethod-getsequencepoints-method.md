@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: f909ac48-3d8f-49fb-a369-e3d9959151cd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: bf6528e8fe6a979db26ae44819bf34a36592ed6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75d477af7395a9b7d3328b2a5787f810733f3749
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623626"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448878"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints メソッド
-このメソッド内のすべてのシーケンス ポイントを取得します。  
+このメソッド内のすべてのシーケンスポイントを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSequencePoints(  
     [in]  ULONG32  cPoints,  
     [out] ULONG32  *pcPoints,  
@@ -41,36 +39,37 @@ HRESULT GetSequencePoints(
     [in, size_is(cPoints)] ULONG32  endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cPoints`  
- [in]A`ULONG32`のサイズを受け取る、 `offsets`、 `documents`、 `lines`、 `columns`、 `endLines`、および`endColumns`配列。  
+ から`offsets`、`documents`、`lines`、`columns`、`endLines`、および `endColumns` の各配列のサイズを受け取る `ULONG32`。  
   
  `pcPoints`  
- [out]ポインター、`ULONG32`シーケンス ポイントの格納に必要なバッファーの長さを受け取る。  
+ 入出力シーケンスポイントを格納するために必要なバッファーの長さを受け取る `ULONG32` へのポインター。  
   
  `offsets`  
- [in]シーケンス ポイントに対するメソッドの先頭から language (MSIL) オフセットを Microsoft 中間を格納する配列。  
+ からシーケンスポイントのメソッドの先頭からの MSIL (Microsoft 中間言語) オフセットを格納する配列。  
   
  `documents`  
- [in]シーケンス ポイントが配置されているドキュメントを格納する配列。  
+ からシーケンスポイントが配置されているドキュメントを格納する配列。  
   
  `lines`  
- [in]シーケンス ポイントが配置されているドキュメントの行を格納する配列。  
+ からシーケンスポイントが配置されているドキュメント内の行を格納する配列。  
   
  `columns`  
- [in]シーケンス ポイントが配置されているドキュメント内の列を格納する配列。  
+ からシーケンスポイントが配置されているドキュメント内の列を格納する配列。  
   
  `endLines`  
- [in]シーケンス ポイントが終了するドキュメント内の行の配列。  
+ からシーケンスポイントが終了するドキュメント内の行の配列。  
   
  `endColumns`  
- [in]シーケンス ポイントが終了するドキュメント内の列の配列。  
+ からシーケンスポイントが終了するドキュメント内の列の配列。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

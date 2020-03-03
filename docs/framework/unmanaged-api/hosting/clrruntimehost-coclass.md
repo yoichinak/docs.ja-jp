@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2ac9cbf5-8a2d-4e4f-8831-0dad8ef0a897
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e40f08a3dae6f17617e97e07a23b9d7eb611083
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1e595e1a4f1b462437f47207b998829a8bd774d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558632"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129460"
 ---
 # <a name="clrruntimehost-coclass"></a>CLRRuntimeHost コクラス
-ランタイムによってコードが実行を管理するためのインターフェイスを提供します。  
+ランタイムによるコード実行を管理するためのインターフェイスを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 coclass CLRRuntimeHost {  
     [default] interface  ICLRRuntimeHost;  
     interface            ICLRValidator;  
@@ -39,17 +37,18 @@ coclass CLRRuntimeHost {
   
 |Interface|説明|  
 |---------------|-----------------|  
-|[ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|ランタイムによってアプリケーションの実行を制御するためのメソッドを提供します。|  
-|[ICLRValidator インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|ポータブル実行可能イメージの検証し、検証エラーの詳細なレポートのメソッドを提供します。|  
+|[ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)|ランタイムによるアプリケーションの実行を制御するためのメソッドを提供します。|  
+|[ICLRValidator インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)|ポータブル実行可能イメージを検証し、検証エラーの詳細なレポートを作成するためのメソッドを提供します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.idl  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

@@ -16,21 +16,19 @@ helpviewer_keywords:
 ms.assetid: bd01c30f-b7a8-4179-9497-622b6599b1a6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 88fcc5959054f1cdf7c9543674584a4bde26d896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 92a814d427fcf2e40c7f79e9eb9192e0b7eed4b2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402071"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132141"
 ---
 # <a name="coreclrdebugruntimeinfo-structure"></a>CoreClrDebugRuntimeInfo 構造体
 リモート コンピューター上のプロセスに読み込まれる共通言語ランタイム (CLR) インスタンスを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct  CoreClrDebugRuntimeInfo {  
     DWORD m_dwInternalID;  
 };  
@@ -42,11 +40,11 @@ struct  CoreClrDebugRuntimeInfo {
 |------------|-----------------|  
 |`m_dwInternalID`|対象のコンピューターで実行されているリモート デバッグ プロキシによって割り当てられたランタイム識別子。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **ライブラリ:** mscordbi_macx86  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

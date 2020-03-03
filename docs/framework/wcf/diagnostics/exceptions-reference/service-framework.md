@@ -3,11 +3,11 @@ title: サービス フレームワーク
 ms.date: 03/30/2017
 ms.assetid: 75f60b87-f80e-4377-ba7c-8e6becaa2b28
 ms.openlocfilehash: 859e718a56ab63c8e012e1851c0730f53cb707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780758"
 ---
 # <a name="service-framework"></a>サービス フレームワーク
 ここでは、サービス フレームワーク データによって生成されるすべての例外を示します。  
@@ -25,7 +25,7 @@ ms.locfileid: "33474923"
 |BaseAddressCannotHaveUserInfo|ベース アドレスに URI ユーザー情報セクションを含めることはできません。|  
 |BaseAddressDuplicateScheme|このコレクションには、指定されたスキームを使用するアドレスが既に含まれています。 このコレクションでは、スキームごとに 1 つのアドレスしか許可されていません。|  
 |BaseAddressMustBeAbsolute|ベース アドレスとして使用できる絶対 URI は 1 つのみです。|  
-|BindingDoesnTSupportAnyChannelTypes1|指定されたバインディングは、どのチャネルの種類の作成もサポートしていません。 カスタム バインディング内のバインド要素が適切にスタックされていないか、スタックの順序が間違っています。 スタックの一番下にはトランスポートが必要です。 推奨されるバインド要素の順序は、TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport です。|  
+|BindingDoesnTSupportAnyChannelTypes1|指定されたバインディングは、どのチャネルの種類の作成もサポートしていません。 カスタム バインド内のバインド要素が適切にスタックされていないか、スタックの順序が間違っています。 スタックの一番下にはトランスポートが必要です。 バインド要素の推奨順序は次のとおりです。TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、次のように転送します。|  
 |BindingDoesnTSupportDuplexButContractRequires1|コントラクトには Duplex が必要です。 指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
 |BindingDoesnTSupportOneWayButContractRequires1|コントラクトには OneWay が必要です。 指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
 |BindingDoesnTSupportRequestReplyButContract1|コントラクトには Request/Reply が必要です。 指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
@@ -36,8 +36,8 @@ ms.locfileid: "33474923"
 |channelDoesNotHaveADuplexSession0|現在のチャネルは、出力セッションの終了をサポートしていません。 このチャネルは、ISessionChannel を実装していません\<IDuplexSession >。|  
 |ClientRuntimeRequiresFormatter0|SerializeRequest と DeserializeReply の両方が false ではないため、指定された ClientOperation にはフォーマッタが必要です。|  
 |CommunicationObjectAborted1|指定された通信オブジェクトは停止しているため、通信に使用できません。|  
-|CommunicationObjectAbortedStack2|指定された通信オブジェクトは、停止しているために、通信に使用できません。 {1}|  
-|CommunicationObjectBaseClassMethodNotCalled|指定された通信オブジェクトが、仮想関数をオーバーライド{1}しますが、基底クラスで定義されているバージョンを呼び出しません。|  
+|CommunicationObjectAbortedStack2|指定された通信オブジェクトは、停止しているため、通信に使用できません。 {1}|  
+|CommunicationObjectBaseClassMethodNotCalled|指定された通信オブジェクトが仮想関数をオーバーライド{1}しますが、基底クラスで定義されているバージョンを呼び出しません。|  
 |ContractIsNotSelfConsistentItHasOneOrMore2|指定されたコントラクトには、IsTerminating 操作または IsInitiating 以外の操作が 1 つ以上あります。 SessionMode.Required に設定された SessionMode プロパティがありません。 IsInitiating 属性と IsTerminating 属性は、セッションのコンテキストでのみ使用できます。|  
 |CouldnTCreateChannelForChannelType2|指定されたチャネルの種類が要求されましたが、指定されたバインディングはこれをサポートしていないか、サポートするように正しく構成されていません。|  
 |DispatchRuntimeRequiresFormatter0|DeserializeRequest と SerializeReply の両方が false ではないため、指定された DispatchOperation にはフォーマッタが必要です。|  
@@ -48,7 +48,7 @@ ms.locfileid: "33474923"
 |MultipleMebesInParameters|BindingContext の BindingParameter に複数の MessageEncodingBindingElement が見つかりました。 CustomBinding に複数の MessageEncodingBindingElement を含めることはできません。 これらの要素の 1 つ以外はすべて削除します。|  
 |MultipleStreamUpgradeProvidersInParameters|BindingContext の BindingParameter に複数の IStreamUpgradeProviderElement が見つかりました。 CustomBinding に複数の IStreamUpgradeProviderElement を含めることはできません。 これらの要素の 1 つ以外はすべて削除します。|  
 |NoChannelBuilderAvailable|バインディングに TransportBindingElement が含まれていないため、このバインディングを使用してチャネル ファクトリやチャネル リスナーを作成することはできません。 いずれのバインディングにも TransportBindingElement から派生するバインド要素を少なくとも 1 つ含んでいる必要があります。|  
-|NotAllBindingElementsBuilt|このバインディング内の一部のバインド要素は、チャネル ファクトリ/チャネル リスナーの構築時に使用されませんでした。 バインド要素の順序が正しくありません。 推奨されるバインド要素の順序は、TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、Transport です。  TransportBindingElement は最後である必要があります。 指定されたバインド要素は構築されませんでした。|  
+|NotAllBindingElementsBuilt|このバインディング内の一部のバインド要素は、チャネル ファクトリ/チャネル リスナーの構築時に使用されませんでした。 バインド要素の順序が正しくありません。 バインド要素の推奨順序は次のとおりです。TransactionFlow、ReliableSession、Security、CompositeDuplex、OneWay、StreamSecurity、MessageEncoding、次のように転送します。  TransportBindingElement は最後である必要があります。 指定されたバインド要素は構築されませんでした。|  
 |RuntimeRequiresInvoker0|ディスパッチ操作は呼び出しの起動者が必要です。|  
 |ServiceHasZeroAppEndpoints|指定されたサービスには、アプリケーション (インフラストラクチャ以外) エンドポイントがありません。 これは、アプリケーション用の構成ファイルが見つからなかったこと、サービス名と一致するサービス要素が構成ファイル内から見つからなかったこと、またはサービス要素内でエンドポイントが定義されていないことが原因である可能性があります。|  
 |SFxActionMismatch|動作が一致しないため、入力されたメッセージを作成できません。 指定されたアクションを予期していましたが、別のアクションが発生しました|  
@@ -122,7 +122,7 @@ ms.locfileid: "33474923"
 |SFxInvalidMessageContractSignature|指定された操作に、MessageContractAttribute が設定されたパラメーターまたは戻り値の型が含まれています。 メッセージ コントラクトを使用して要求メッセージを表現するには、この操作には MessageContractAttribute を持つ単一のパラメーターが含まれている必要があります。 メッセージ コントラクトを使用して応答メッセージを表現するには、この操作の戻り値は MessageContractAttribute を持つ型である必要があります。 この操作には 'out' パラメーターや 'ref' パラメーターを含めることはできません。|  
 |SFxInvalidReplyAction|操作の送信応答メッセージには指定された Action が含まれていますが、この操作のコントラクトは別の ReplyAction を指定しています。 メッセージで指定された Action がコントラクト内の ReplyAction と一致しているか、この操作のコントラクトが ReplyAction='*' を指定している必要があります。|  
 |SFxInvalidRequestAction|操作の送信要求メッセージには指定された Action が含まれていますが、この操作のコントラクトは別の RequestAction を指定しています。 メッセージで指定された Action がコントラクト内の RequestAction と一致しているか、操作コントラクトが RequestAction='*' を指定している必要があります。|  
-|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|指定されたコントラクトはコールバック コントラクトを定義しているため、このコントラクトでは静的な CreateChannel メソッドを使用できません。 静的な CreateChannel オーバー ロードのいずれかを使用して DuplexChannelFactory で\<TChannel >。|  
+|SFxInvalidStaticOverloadCalledForDuplexChannelFactory1|指定されたコントラクトはコールバック コントラクトを定義しているため、このコントラクトでは静的な CreateChannel メソッドを使用できません。 DuplexChannelFactory に静的な CreateChannel オーバー ロードのいずれかを使用して、\<TChannel >。|  
 |SFxInvalidStreamInRequest|指定された操作における要求をストリームにするには、この操作は Stream 型の単一のパラメーターを持つ必要があります。|  
 |SFxInvalidStreamInResponse|指定された操作における応答をストリームにするには、この操作が Stream 型の単一の out パラメーターまたは戻り値を持つ必要があります。|  
 |SFxInvalidStreamInTypedMessage|メッセージ コントラクト プログラミング モデルでストリームを使用するには、指定された型が Stream 型の単一の MessageBody メンバーを持つ必要があります。|  
@@ -145,7 +145,7 @@ ms.locfileid: "33474923"
 |SFxSchemaDoesNotContainType|指定されたターゲット名前空間を持つスキーマに、指定された名前を持つ型が含まれていません。|  
 |SfxServiceContractAttributeNotFound|指定されたコントラクト型には ServiceContractAttribute 属性が設定されていません。 有効なコントラクトを定義するには、指定された型に ServiceContractAttribute が設定されている必要があります。 コントラクト インターフェイスまたはサービス クラスを型として指定できます。|  
 |SFxServiceContractGeneratorConfigRequired|GenerateServiceEndpoint メソッドを使用して構成情報を生成するためには、有効な構成オブジェクトを使用して ServiceContractGenerator インスタンスが初期化されている必要があります。|  
-|SFxServiceHostBaseCannotAddEndpointAfterOpen|ServiceHost が次のいずれかの状態になった後に、エンドポイントを追加することはできません。<br /><br /> 開かれました。<br />-エラーが発生しました<br />終わる<br />閉じる|  
+|SFxServiceHostBaseCannotAddEndpointAfterOpen|ServiceHost が次のいずれかの状態になった後に、エンドポイントを追加することはできません。<br /><br /> 開かれました。<br />障害<br />終わる<br />クローズ|  
 |SFxServiceHostBaseCannotAddEndpointWithoutDescription|Description プロパティが初期化される前に、エンドポイントを追加することはできません。|  
 |SFxServiceMetadataBehaviorNoHttpBaseAddress|ServiceMetadataBehavior の HttpGetEnabled プロパティが True に設定され、HttpGetUrl プロパティが相対アドレスですが、HTTP ベース アドレスがありません。 HTTP ベース アドレスを指定するか、HttpGetUrl を絶対アドレスに設定してください。|  
 |SFxServiceMetadataBehaviorNoHttpsBaseAddress|ServiceMetadataBehavior の HttpsGetEnabled プロパティが True に設定され、HttpsGetUrl プロパティが相対アドレスですが、HTTPS ベース アドレスがありません。 HTTPS ベース アドレスを指定するか、HttpsGetUrl を絶対アドレスに設定してください。|  
@@ -159,6 +159,6 @@ ms.locfileid: "33474923"
 |SFxUserCodeThrewException|指定されたユーザー操作によって、ユーザー コードで未処理の例外がスローされました。 この問題が繰り返し発生する場合は、指定されたメソッドの実装にエラーが含まれている可能性があります。|  
 |SfxUseTypedMessageForCustomAttributes|指定されたパラメーターには追加属性が必要であるため、このパラメーターを操作パラメーターにマップすることはできません。|  
 |SFxVersionMismatchInOperationContextAndMessage2|OperationContext.Current の MessageVersion が、処理中のメッセージのヘッダー バージョンと一致しないため、送信ヘッダーをメッセージに追加できません。|  
-|SFxWellKnownNonSingleton0|サービス インスタンスを受け取る ServiceHost コンストラクターのいずれか 1 つを使用するには、サービスの InstanceContextMode が InstanceContextMode.Single に設定されている必要があります。 これは ServiceBehaviorAttribute を使用して構成できます。 または、Type 引数を受け取る ServiceHost コンストラクターを使用してください。|  
+|SFxWellKnownNonSingleton0|サービス インスタンスを受け取る ServiceHost コンストラクターのいずれか 1 つを使用するには、サービスの InstanceContextMode が InstanceContextMode.Single に設定されている必要があります。 これは ServiceBehaviorAttribute を使用して構成できます。 または、型引数を受け取る ServiceHost コンストラクターを使用してください。|  
 |SFxWrapperTypeHasMultipleNamespaces|指定されたメッセージのラッパー型は複数の名前空間を持つため、データ コントラクト型として投影できません。 XmlSerializer を使用してください。|  
 |UriMustBeAbsolute|URI は絶対 URI である必要があります。|

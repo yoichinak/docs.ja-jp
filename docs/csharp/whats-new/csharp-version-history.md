@@ -3,32 +3,32 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: f5bf9a7de7c8681fa2ebb49ba1cf6991b9b137c9
-ms.sourcegitcommit: 90775b20343b6ad831af6f5380f8ab7553abb16b
+ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54186229"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739104"
 ---
-# <a name="the-history-of-c"></a>C# の歴史 #
+# <a name="the-history-of-c"></a>C\# の歴史
 
 この記事では、C# 言語の各メジャー リリースの履歴について説明します。 C# チームは、引き続き新機能を刷新および追加していきます。 今後のリリースに向けて検討される機能を含め、言語機能ステータスについての詳細は GitHub の [dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)で見つけられます。
 
 > [!IMPORTANT]
-> C# 言語の一部の機能は、C# の仕様で定義されている "*標準ライブラリ*" の型とメソッドに依存しています。 .NET プラットフォームでは、さまざまなパッケージでそれらの型とメソッドが提供されています。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。 
+> C# 言語の一部の機能は、C# の仕様で定義されている "*標準ライブラリ*" の型とメソッドに依存しています。 .NET プラットフォームでは、さまざまなパッケージでそれらの型とメソッドが提供されています。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。
 
 C# のビルド ツールでは、言語の最新のメジャー リリースが言語の既定のバージョンと見なされます。 メジャー リリースの間には、このセクションの他の記事で詳しく説明するポイント リリースが存在することがあります。 ポイント リリースで最新の機能を使用するには、[コンパイラ言語バージョンを構成](../language-reference/configure-language-version.md)し、バージョンを選択する必要があります。 C# 7.0 以降、3 つのポイント リリースがありました。
 
-* [C# 7.3](csharp-7-3.md):
-  - C# 7.3 は現在 [Visual Studio 2017 バージョン 15.7](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.1 SDK 2.1.300 RC1](../../core/whats-new/index.md) で利用可能です。
-* [C# 7.2](csharp-7-2.md):
-  - C# 7.2 は現在 [Visual Studio 2017 バージョン 15.5](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.0 SDK](../../core/whats-new/index.md) で利用可能です。
-* [C# 7.1](csharp-7-1.md):
-  - これらの機能は、[Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/vs/whatsnew/) および [.NET Core 2.0 SDK](../../core/whats-new/index.md) に追加されています。
+- [C# 7.3](csharp-7-3.md):
+  - C# 7.3 は [Visual Studio 2017 バージョン 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md) 以降で利用可能です。
+- [C# 7.2](csharp-7-2.md):
+  - C# 7.2 は [Visual Studio 2017 バージョン 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 以降で利用可能です。
+- [C# 7.1](csharp-7-1.md):
+  - C# 7.1 は [Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) および [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md) 以降で利用可能です。
 
 ## <a name="c-version-10"></a>C# バージョン 1.0
 
-振り返ってみると、C# バージョン 1.0 は Java によく似ていました。 [ECMA で掲げられた設計目標の一環](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)として、C# は "シンプルかつモダンな汎用オブジェクト指向言語" を目指していました。  当時、Java に似ていることは、初期の設計目標を達成したことを意味していました。
+振り返ってみると、Visual Studio .NET 2002 でリリースされた C# バージョン 1.0 は Java に似ていました。 [ECMA で掲げられた設計目標の一環](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)として、C# は "シンプルかつモダンな汎用オブジェクト指向言語" を目指していました。  当時、Java に似ていることは、初期の設計目標を達成したことを意味していました。
 
 しかし、今 C# 1.0 を振り返ってみると、少し混乱するかもしれません。 現在では当たり前となっている組み込みの非同期機能や、ジェネリック関連の優れた機能の一部は備わっていませんでした。 実際、ジェネリック全体がなかったのです。  そして [LINQ](../linq/index.md) も、 まだ使用できませんでした。 このような追加機能が登場するまでにはまだ数年かかります。
 
@@ -45,11 +45,10 @@ C# 1.0 の主な機能:
 - [式](../programming-guide/statements-expressions-operators/expressions.md)
 - [ステートメント](../programming-guide/statements-expressions-operators/statements.md)
 - [属性](../programming-guide/concepts/attributes/index.md)
-- [リテラル](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# バージョン 1.2
 
-Visual Studio 2003 に付属の C# バージョン 1.2 言語に対する細かな機能強化がいくつか含まれています。 最も重要な点は、このバージョン以降、<xref:System.Collections.IEnumerator> によって <xref:System.IDisposable> が実装された場合、`foreach` ループ内で生成されたコードでは、その <xref:System.Collections.IEnumerator> 上で <xref:System.IDisposable.Dispose%2A> が呼び出されているということです。
+Visual Studio .NET 2003 に付属の C# バージョン 1.2。 言語に対する細かな機能強化がいくつか含まれています。 最も重要な点は、このバージョン以降、<xref:System.Collections.IEnumerator> によって <xref:System.IDisposable> が実装された場合、`foreach` ループ内で生成されたコードでは、その <xref:System.Collections.IEnumerator> 上で <xref:System.IDisposable.Dispose%2A> が呼び出されているということです。
 
 ## <a name="c-version-20"></a>C# バージョン 2.0
 
@@ -57,8 +56,8 @@ Visual Studio 2003 に付属の C# バージョン 1.2 言語に対する細か�
 
 - [ジェネリック](../programming-guide/generics/index.md)
 - [部分型](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [匿名メソッド](../programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [Null 許容型](../programming-guide/nullable-types/index.md)
+- [匿名メソッド](../language-reference/operators/delegate-operator.md)
+- [null 許容値型](../language-reference/builtin-types/nullable-value-types.md)
 - [反復子](../programming-guide/concepts/iterators.md)
 - [共変性と反変性](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -84,7 +83,7 @@ C# バージョン 3.0 は、Visual Studio 2008 と共に 2007 年後半に登�
 - [自動実装プロパティ](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名型](../programming-guide/classes-and-structs/anonymous-types.md)
 - [クエリ式](../linq/query-expression-basics.md)
-- [ラムダ式](../lambda-expressions.md)
+- [ラムダ式](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [式ツリー](../expression-trees.md)
 - [拡張メソッド](../programming-guide/classes-and-structs/extension-methods.md)
 - [暗黙的に型指定されるローカル変数](../language-reference/keywords/var.md)
@@ -101,11 +100,11 @@ C# バージョン 3.0 は、Visual Studio 2008 と共に 2007 年後半に登�
 
 ## <a name="c-version-40"></a>C# バージョン 4.0
 
-C# バージョン 4.0 は、バージョン 3.0 の革新的なステータスに応えるための困難な時期だったと言えるでしょう。 バージョン 3.0 で C# は Java の影から脱却して、主要な言語となったのです。 この言語は急速に洗練されました。
+Visual Studio 2010 でリリースされた C# バージョン 4.0 は、バージョン 3.0 の革新的なステータスに応えるための困難な時期だったと言えるでしょう。 バージョン 3.0 で C# は Java の影から脱却して、主要な言語となったのです。 この言語は急速に洗練されました。
 
 次のバージョンでは、いくつかの興味深い新機能が導入されました。
 
-- [動的バインディング](../language-reference/keywords/dynamic.md)
+- [動的バインディング](../language-reference/builtin-types/reference-types.md)
 - [名前付き/省略可能な引数](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [ジェネリックの共変と反変](../../standard/generics/covariance-and-contravariance.md)
 - [埋め込まれた相互運用機能型](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
@@ -118,14 +117,14 @@ C# バージョン 4.0 は、バージョン 3.0 の革新的なステータス�
 
 ## <a name="c-version-50"></a>C# バージョン 5.0
 
-C# バージョン 5.0 は、この言語の専心的なバージョンでした。 このバージョンに対するほぼすべての努力が、非同期プログラミングの `async` および `await` モデルというもう一つの革新的な言語の概念に注がれました。  主要な機能の一覧を次に示します。
+Visual Studio 2012 でリリースされた C# バージョン 5.0 は、この言語の専心的なバージョンでした。 このバージョンに対するほぼすべての努力が、非同期プログラミングの `async` および `await` モデルというもう一つの革新的な言語の概念に注がれました。  主要な機能の一覧を次に示します。
 
 - [非同期メンバー](../async.md)
 - [呼び出し元情報属性](../programming-guide/concepts/caller-information.md)
 
-### <a name="see-also"></a>「
+### <a name="see-also"></a>関連項目
 
-* [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [コード プロジェクト:C# 5.0 の呼び出し元情報属性](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 呼び出し元情報属性を使用すると、さまざまな定型リフレクション コードを使用しなくても、実行しているコンテキストに関する情報を簡単に取得できます。 診断とログ記録のタスクでは、さまざまな用途があります。
 
@@ -133,7 +132,7 @@ C# バージョン 5.0 は、この言語の専心的なバージョンでした
 
 ## <a name="c-version-60"></a>C# バージョン 6.0
 
-C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト指向言語に追加されました。 バージョン 6.0 では、主要な目玉機能を投入する代わりに、C# プログラミングをより生産的にする多くの小さな機能をリリースしました。 その一部を次に示します。
+C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト指向言語に追加されました。 Visual Studio 2015 と共にリリースされたバージョン 6.0 では、主要な目玉機能を投入する代わりに、C# プログラミングをより生産的にする多くの小さな機能をリリースしました。 その一部を次に示します。
 
 - [静的インポート](./csharp-6.md#using-static)
 - [例外フィルター](./csharp-6.md#exception-filters)
@@ -155,7 +154,7 @@ C# バージョン 3.0 と 5.0 では、主要な新機能がオブジェクト�
 
 ## <a name="c-version-70"></a>C# バージョン 7.0
 
-最新のメジャー バージョンが C# バージョン 7.0 です。 このバージョンには、C# 6.0 から続くいくつかの革新的で優れた機能がありますが、サービスとしてのコンパイラはありません。 新機能の一部を次に示します。
+Visual Studio 2017 でリリースされた最新のメジャー バージョンが C# バージョン 7.0 です。 このバージョンには、C# 6.0 から続くいくつかの革新的で優れた機能がありますが、サービスとしてのコンパイラはありません。 新機能の一部を次に示します。
 
 - [out 変数](./csharp-7.md#out-variables)
 - [タプルと分解](./csharp-7.md#tuples)

@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 5833740b-7d67-44b4-865c-b5bf45e291e3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7c81a39acee31986421c810e2814a4f7e6c4d970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 512009e053605e2018f1fcbafa422c1a36ddecc1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597529"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136904"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost コクラス
-共通言語ランタイムで実行されているアプリケーションを管理するためのインターフェイスを提供します。  
+共通言語ランタイムによって実行されるアプリケーションを管理するためのインターフェイスを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 coclass CorRuntimeHost {  
     [default] interface ICorRuntimeHost;  
     interface IGCHost;  
@@ -42,20 +40,21 @@ coclass CorRuntimeHost {
   
 |Interface|説明|  
 |---------------|-----------------|  
-|[ICorConfiguration インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|共通言語ランタイム (CLR) を構成するためのメソッドを提供します。|  
-|[ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|ホストが起動し、作成して既定のドメインにアクセスして、プロセスで実行されているすべてのドメインを列挙するために、アプリケーション ドメインを構成する共通言語ランタイムを明示的に停止できるようにするメソッドを提供します。|  
-|[IDebuggerInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|デバッグ サービスの状態に関する情報を取得するためのメソッドを提供します。|  
-|[IGCHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|ガベージ コレクション システムに関する情報を取得するため、ガベージ コレクションの一部の側面を制御するためのメソッドを提供します。|  
-|"IValidator"|ポータブル実行可能イメージの検証と検証エラーの詳細なレポートのメソッドを提供します。|  
+|[ICorConfiguration インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)|共通言語ランタイム (CLR: common language runtime) を構成するためのメソッドを提供します。|  
+|[ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)|ホストが共通言語ランタイムを明示的に開始または停止したり、アプリケーションドメインを作成および構成したり、既定のドメインにアクセスしたり、プロセスで実行されているすべてのドメインを列挙したりできるようにするメソッドを提供します。|  
+|[IDebuggerInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/idebuggerinfo-interface.md)|デバッグサービスの状態に関する情報を取得するためのメソッドを提供します。|  
+|[IGCHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)|ガベージコレクションシステムに関する情報を取得し、ガベージコレクションのいくつかの側面を制御するためのメソッドを提供します。|  
+|IValidator|ポータブル実行可能イメージを検証し、検証エラーの詳細なレポートを作成するためのメソッドを提供します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.idl  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

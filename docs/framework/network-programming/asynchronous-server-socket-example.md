@@ -9,12 +9,12 @@ helpviewer_keywords:
 - sockets, code examples
 - asynchronous server sockets
 ms.assetid: 13624cd3-f5c5-4950-8cda-31273b1fa6d1
-ms.openlocfilehash: b512a391833e726bee7cb21c43912994fe860697
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 555b0661bf68a7461f87bf2895e47284a03c41a6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589899"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048959"
 ---
 # <a name="asynchronous-server-socket-example"></a>非同期サーバー ソケットの例
 次のプログラム例では、クライアントからの接続要求を受け取るサーバーを作成します。 このサーバーは非同期ソケットで構築されます。そのため、クライアントからの接続を待機している間に、サーバー アプリケーションの実行が中断されることはありません。 このアプリケーションはクライアントから文字列を受信し、それをコンソールに表示してから、クライアントにエコーで返します。 クライアントからの文字列には、文字列 "\<EOF>" が含まれている必要があります。これは、メッセージの終わりを伝えるためのものです。  
@@ -290,6 +290,7 @@ public class AsynchronousSocketListener {
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [非同期クライアント ソケットの例](../../../docs/framework/network-programming/asynchronous-client-socket-example.md)
-- [非同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [ソケットのコード例](../../../docs/framework/network-programming/socket-code-examples.md)
+
+- [非同期クライアント ソケットの例](asynchronous-client-socket-example.md)
+- [非同期サーバー ソケットの使用](using-an-asynchronous-server-socket.md)
+- [ソケットのコード例](socket-code-examples.md)

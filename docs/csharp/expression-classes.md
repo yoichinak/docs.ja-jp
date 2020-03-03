@@ -2,13 +2,14 @@
 title: 式ツリーをサポートするフレームワークの型
 description: 式ツリーをサポートするフレームワークの型、式ツリーの作成、式ツリー API の操作テクニックについて説明します。
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: e9c85021-0d36-48af-91b7-aaaa66f22654
-ms.openlocfilehash: 687b521c52c1ca380a12e18469b5f66000049d3c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 157e97594f27345ac96fe91f7dd6f29907c2c7ac
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45972560"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73037616"
 ---
 # <a name="framework-types-supporting-expression-trees"></a>式ツリーをサポートするフレームワークの型
 
@@ -18,7 +19,7 @@ ms.locfileid: "45972560"
 クラスの全リストは <xref:System.Linq.Expressions> で確認できます。
 ここでは、リストのすべてを説明するのではなく、フレームワークのクラスがどう設計されているかを把握します。
 
-言語設計の観点から言えば、式は、評価して値を返すコードの本体です。 式はごく単純な場合があります。定数式 `1` は定数値 1 を返します。 式が複雑になる場合もあります。式 `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` は二次方程式の 1 つの解を返します (式に解がある場合)。  
+言語設計の観点から言えば、式は、評価して値を返すコードの本体です。 式はごく単純な場合があります。定数式 `1` は定数値 1 を返します。 これらはより複雑になる場合があります。式 `(-B + Math.Sqrt(B*B - 4 * A * C)) / (2 * A)` は二次方程式の 1 つの解を返します (式に解がある場合)。  
 
 ## <a name="it-all-starts-with-systemlinqexpression"></a>すべては System.Linq.Expression から始まる
 
@@ -58,6 +59,7 @@ var addition = Expression.Add(one, two);
 
 ## <a name="navigating-the-apis"></a>API の操作
 ほぼすべての C# 言語の構文要素に対してマップされる式ノード型がそれぞれ存在します。 各型には、その型の言語要素に特有のメソッドがあります。 一度に覚えておくべきことがたくさんあります。 ここではすべてを記憶しようとするのではなく、式ツリーを操作するときにふだん使うテクニックを紹介します。
+
 1. `ExpressionType` 列挙型のメンバーを調べて、検証するノードを特定します。 式ツリーをたどって理解するときに、この方法が実に役立ちます。
 2. `Expression` クラスの静的メンバーを調べて、式を作成します。 これらのメソッドでは、その子ノードから任意の式の型を作成できます。
 3. `ExpressionVisitor` クラスを調べて、変更された式ツリーを作成します。
@@ -65,4 +67,3 @@ var addition = Expression.Add(one, two);
 これら 3 つの部分をそれぞれ調べれば、さらに多くのことがわかります。 これら 3 つのステップのいずれかを実行すれば、必要なことが必ず見つかります。
  
  [次へ -- 式ツリーの実行](expression-trees-execution.md)
- 

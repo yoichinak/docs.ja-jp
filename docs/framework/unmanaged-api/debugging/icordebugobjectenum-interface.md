@@ -1,5 +1,5 @@
 ---
-title: ICorDebugObjectEnum Interface1
+title: ICorDebugObjectEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugObjectEnum
@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 9ffb4498-7719-49d3-8890-df2c22248a0c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a9f10301db488e4ca68ce5fdaf0ba767053d7d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0526c050bcf1316eccf2c756a404fbb971e6d7d0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547002"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792738"
 ---
-# <a name="icordebugobjectenum-interface1"></a>ICorDebugObjectEnum Interface1
-ICorDebugEnum のメソッドを実装し、相対仮想アドレス (Rva) でオブジェクトの配列を列挙します。  
+# <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum インターフェイス
+
+ICorDebugEnum メソッドを実装し、相対仮想アドレス (RVAs) によってオブジェクトの配列を列挙します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|列挙体の現在位置から指定した数のオブジェクトの Rva を取得します。|  
+|[Next メソッド](icordebugobjectenum-next-method.md)|現在の位置から開始して、指定した数のオブジェクトの RVAs を列挙から取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +46,5 @@ ICorDebugEnum のメソッドを実装し、相対仮想アドレス (Rva) で�
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

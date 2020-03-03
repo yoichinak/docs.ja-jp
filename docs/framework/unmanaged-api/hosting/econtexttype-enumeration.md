@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 92b926a9-b87e-408a-9036-df7b752c9492
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 635c232f2f6721e734f4fe6a74088fe9b82c6166
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e82f542bdc364a52fc558e582134a7d8d554ec3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639472"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131146"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType 列挙型
-現在実行中のスレッドのセキュリティ コンテキストをについて説明します。  
+現在実行中のスレッドのセキュリティコンテキストを記述します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     eCurrentContext    = 0x00,  
     eRestrictedContext = 0x01  
@@ -39,22 +37,23 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`eCurrentContext`|共通言語ランタイム (CLR) の呼び出し時に、現在のスレッドのコンテキストを示す、 [ihostsecuritymanager::getsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)メソッド、または CLR への呼び出しでは、によって要求されたコンテキスト、 [Ihostsecuritymanager::setsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)メソッド。|  
-|`eRestrictedContext`|どのホストには、ガベージ コレクターまたはクラスまたはモジュールのコンス トラクターなどの低い特権コンテキストを示します。|  
+|`eCurrentContext`|共通言語ランタイム (CLR) が[IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)メソッドを呼び出す時点での現在のスレッドのコンテキスト、または[IHostSecurityManager:: SetSecurityContext の呼び出しで CLR によって要求されたコンテキストを示します。](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-setsecuritycontext-method.md)メソッド。|  
+|`eRestrictedContext`|ホストが低い特権 (ガベージコレクター、クラスまたはモジュールコンストラクターなど) を持つコンテキストを示します。|  
   
 ## <a name="remarks"></a>Remarks  
- いずれかの CLR が用意されて、`EContextType`値への呼び出しでパラメーター値として、`IHostSecurityManager::GetSecurityContext`と`IHostSecurityManager::SetSecurityContext`メソッド。  
+ CLR は、`IHostSecurityManager::GetSecurityContext` メソッドと `IHostSecurityManager::SetSecurityContext` メソッドの呼び出しで、`EContextType` の値の1つをパラメーター値として提供します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IHostSecurityContext インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
 - [IHostSecurityManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
 - [ホスティングの列挙型](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

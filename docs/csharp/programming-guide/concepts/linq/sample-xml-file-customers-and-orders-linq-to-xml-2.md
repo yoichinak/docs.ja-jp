@@ -2,19 +2,19 @@
 title: サンプル XML ファイル:顧客と注文 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: d6d1c9ea-be74-4e6d-bfdd-d4bcc2d301cf
-ms.openlocfilehash: 74e9ba00b61dbed532c0309043c9a9c944ea6932
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01c1719bd67bbaf0d46dc6e3c23b5031afd271f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617032"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346491"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>サンプル XML ファイル:顧客と注文 (LINQ to XML)
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには顧客と注文が含まれています。  
   
- 「[サンプル XSD ファイル: 顧客と注文](../../../../csharp/programming-guide/concepts/linq/sample-xsd-file-customers-and-orders1.md)」のトピックには、このドキュメントの検証に使用できる XSD が含まれています。 この XSD は、XSD の `xs:key` 機能と `xs:keyref` 機能を使用して、`CustomerID` 要素の `Customer` 属性がキーであることを確立し、各 `CustomerID` 要素の `Order` 要素と各 `CustomerID` 要素の `Customer` 属性の間にリレーションシップを確立します。  
+ 「[サンプル XSD ファイル: 顧客と注文](./sample-xsd-file-customers-and-orders1.md)」のトピックには、このドキュメントの検証に使用できる XSD が含まれています。 この XSD は、XSD の `xs:key` 機能と `xs:keyref` 機能を使用して、`CustomerID` 要素の `Customer` 属性がキーであることを確立し、各 `CustomerID` 要素の `Order` 要素と各 `CustomerID` 要素の `Customer` 属性の間にリレーションシップを確立します。  
   
- `Join` 句を使用してこのリレーションシップを利用する LINQ クエリの作成例については、「[方法: 2 つのコレクションを結合する (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-two-collections-linq-to-xml.md)」を参照してください。  
+ `Join` 句を使用してこのリレーションシップを利用する LINQ クエリの作成例については、「[2 つのコレクションを結合する方法 (LINQ to XML) (C#)](./how-to-join-two-collections-linq-to-xml.md)」を参照してください。  
   
 ## <a name="customersordersxml"></a>CustomersOrders.xml  
   
@@ -433,7 +433,3 @@ ms.locfileid: "54617032"
   </Orders>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>関連項目
-
-- [サンプル XML ドキュメント (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

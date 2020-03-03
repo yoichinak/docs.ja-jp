@@ -2,27 +2,27 @@
 title: バルク コピー サンプルのセットアップ
 ms.date: 03/30/2017
 ms.assetid: d4dde6ac-b8b6-4593-965a-635c8fb2dadb
-ms.openlocfilehash: 42a0316351603575d33041c2a0fc783d9726f14c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28fa5cde1dcbaf9f38450116a56fc11d904edc1c
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538688"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040250"
 ---
 # <a name="bulk-copy-example-setup"></a>バルク コピー サンプルのセットアップ
-<xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、SQL Server のテーブルにのみデータを書き込むことができます。 このトピックで示すコード サンプルは、SQL Server サンプル データベースを使用して**AdventureWorks**します。 既存のテーブルの改変を防ぐため、コード サンプルでは、別途作成したテーブルにデータを書き込みます。このテーブルを最初に作成しておく必要があります。  
+<xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、SQL Server のテーブルにのみデータを書き込むことができます。 このトピックに示されているコードサンプルでは、SQL Server サンプルデータベース**AdventureWorks**を使用します。 既存のテーブルの改変を防ぐため、コード サンプルでは、別途作成したテーブルにデータを書き込みます。このテーブルを最初に作成しておく必要があります。  
   
- **BulkCopyDemoMatchingColumns**と**BulkCopyDemoDifferentColumns**テーブルは両方ともに基づいて、 **AdventureWorks** **Production.Products**テーブル。 これらのテーブルを使用するサンプル コードでデータを追加、 **Production.Products**にこれらのサンプル テーブルの 1 つのテーブル。 **BulkCopyDemoDifferentColumns**テーブルは、ソース データから変換先テーブルに列をマップする方法を説明するサンプルに使用します。**BulkCopyDemoMatchingColumns**は他のほとんどのサンプルの使用します。  
+ **BulkCopyDemoMatchingColumns**テーブルと**Bulkcopydemocolumns**テーブルはどちらも**AdventureWorks** **Production**テーブルに基づいています。 これらのテーブルを使用するコードサンプルでは、データが**Production**テーブルからこれらのサンプルテーブルのいずれかに追加されます。 このサンプルで**は、ソース**データの列を変換先テーブルにマップする方法を示しています。**BulkCopyDemoMatchingColumns**は、その他のほとんどのサンプルに使用されます。  
   
- <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用して複数のテーブルに書き込む方法を説明するコード サンプルもあります。 これらのサンプルについては、 **BulkCopyDemoOrderHeader**と**BulkCopyDemoOrderDetail**テーブル変換先テーブルとして使用されます。 これらのテーブルがに基づいて、 **Sales.SalesOrderHeader**と**Sales.SalesOrderDetail**テーブル**AdventureWorks**します。  
+ <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用して複数のテーブルに書き込む方法を説明するコード サンプルもあります。 これらのサンプルでは、 **Bulkcopydemoorderheader**テーブルと**Bulkcopydemoorderheader**テーブルをコピー先テーブルとして使用します。 これらのテーブルは、 **AdventureWorks**の**SalesOrderHeader**テーブルと**SalesOrderDetail**テーブルに基づいています。  
   
 > [!NOTE]
->  **SqlBulkCopy**を使用する構文を示すコード サンプルが提供**SqlBulkCopy**のみです。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL `INSERT … SELECT` ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
+> **SqlBulkCopy**コードサンプルは、 **SqlBulkCopy**のみを使用するための構文を示すために用意されています。 コピー元およびコピー先のテーブルが同一の SQL Server インスタンス内に存在する場合、Transact-SQL `INSERT … SELECT` ステートメントを使用すれば簡単かつ高速にデータをコピーすることができます。  
   
 ## <a name="table-setup"></a>テーブルのセットアップ  
  コード サンプルを正しく動作させるために必要なテーブルを作成するには、SQL Server データベースで次の Transact-SQL ステートメントを実行する必要があります。  
   
-```  
+```sql
 USE AdventureWorks  
   
 IF EXISTS (SELECT * FROM dbo.sysobjects   
@@ -82,5 +82,6 @@ CREATE TABLE [dbo].[BulkCopyDemoOrderDetail]([SalesOrderID] [int] NOT NULL,
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [SQL Server でのバルク コピー操作](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [SQL Server でのバルク コピー操作](bulk-copy-operations-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

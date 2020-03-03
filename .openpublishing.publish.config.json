@@ -2,8 +2,9 @@
   "need_generate_intellisense": false,
   "need_preview_pull_request": true,
   "need_pr_comments": false,
-  "need_generate_pdf_url_template": false,
+  "need_generate_pdf_url_template": true,
   "git_repository_branch_open_to_public_contributors": "live",
+  "need_generate_pdf": true,
   "continue_with_document_error": true,
   "contribution_branch_mappings": {
     "live-sxs": "live"
@@ -13,22 +14,11 @@
       "Publish",
       "Pdf"
     ],
-     "live-sxs": [
-      "Publish"
+    "live-sxs": [
+      "Publish",
+      "Pdf"
     ],
     "master": [
-      "Publish",
-      "Pdf"
-    ],
-    "serverless-ebook": [
-      "Publish",
-      "Pdf"
-    ],    
-    "ai-ebook": [
-      "Publish",
-      "Pdf"
-    ], 
-    "CITest": [
       "Publish",
       "Pdf"
     ]
@@ -44,70 +34,29 @@
       "build_source_folder": ".",
       "build_output_subfolder": ".",
       "locale": "ja-jp",
-      "xref_query_tags": ["/uwp/api"],
-      "monikers": [
-        "netframework-4.5.1",
-        "netframework-4.5.2",
-        "netframework-4.5",
-        "netframework-4.6",
-        "netframework-4.6.1",
-        "netframework-4.6.2",
-        "netframework-4.7",
-        "netframework-4.7.1",
-        "netcore-1.0",
-        "netcore-1.1",
-        "netcore-2.0",
-        "netstandard-1.0",
-        "netstandard-1.1",
-        "netstandard-1.2",
-        "netstandard-1.3",
-        "netstandard-1.4",
-        "netstandard-1.5",
-        "netstandard-1.6",
-        "netstandard-2.0",
-        "xamarinios-10.8",
-        "xamarinandroid-7.1",
-        "xamarinmac-3.0"
+      "xref_query_tags": [
+        "/uwp/api"
+      ],
+      "monikers": [],
+      "filemap_share_depots": [
+        "VS.dotnet-api-docs"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
+        "ZonePivotGroups": "Toc",
         "Conceptual": "Content",
         "ManagedReference": "Content",
         "RestApi": "Content",
         "Tutorial": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes",
-      "customized_template_paths": [
-        "_dependentPackages/memberpage.plugins/content"
-      ],
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/ECMA2Yaml/tools/Run.ps1",
-          "_dependentPackages/CommonPlugins/tools/SplitTOC.ps1",
-          "_dependentPackages/CommonPlugins/tools/DiffFolder.ps1"
-        ],
-        "docset_postbuild": [
-          "_dependentPackages/ECMA2Yaml/tools/PostBuild.ps1"
-        ]
-      },
-      "pdf_build_exclude_tocs": [],
-      "ECMA2Yaml": {
-        "SourceXmlFolder": "xml",
-        "SourceMetadataFolder": "add\\metadata",
-        "OutputYamlFolder": "api",
-        "Flatten": true
-      },
-      "SplitTOC": [
-        "api/toc.yml"
-      ],
-      "DiffFolder": [
-        "api"
-      ]
+      "template_folder": "_themes"
     }
   ],
   "notification_subscribers": [],
-  "branches_to_filter": ["live"],
+  "branches_to_filter": [
+    "live"
+  ],
   "skip_source_output_uploading": false,
   "dependent_repositories": [
     {
@@ -123,12 +72,14 @@
     {
       "path_to_root": "_csharplang",
       "url": "https://github.com/dotnet/csharplang.ja-jp",
-      "branch": "live-sxs"
+      "branch": "live-sxs",
+      "include_in_build": true
     },
     {
       "path_to_root": "_vblang",
       "url": "https://github.com/dotnet/vblang.ja-jp",
-      "branch": "live-sxs"
+      "branch": "live-sxs",
+      "include_in_build": true
     },
     {
       "path_to_root": "_repo.en-us",
@@ -146,29 +97,14 @@
       "branch_mapping": {
         "live": "live"
       }
+    },
+    {
+      "path_to_root": "machinelearning-samples",
+      "url": "https://github.com/dotnet/machinelearning-samples",
+      "branch": "master"
     }
   ],
-  "dependent_packages": [
-    {
-      "id": "Microsoft.DocAsCode.ECMA2Yaml",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/ECMA2Yaml",
-      "target_framework": "net45",
-      "version": "latest"
-    },
-    {
-      "id": "memberpage.plugins",
-      "nuget_feed": "https://www.myget.org/F/docfx/api/v2",
-      "path_to_root": "_dependentPackages/memberpage.plugins",
-      "target_framework": "net45",
-      "version": "latest"
-    },
-    {
-      "id": "Microsoft.OpenPublishing.CommonPlugins",
-      "nuget_feed": "https://www.myget.org/F/op/api/v2",
-      "path_to_root": "_dependentPackages/CommonPlugins",
-      "target_framework": "net45",
-      "version": "latest"
-    }
-  ]
+  "docs_build_engine": {
+    "name": "docfx_v3"
+  }
 }

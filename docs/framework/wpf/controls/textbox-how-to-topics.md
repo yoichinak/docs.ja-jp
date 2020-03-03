@@ -7,32 +7,32 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 1b3e0409c438fc5a6b69fea19cd55cbeb72d74b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589937"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124235"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox に関する「方法」トピック
-このセクションを使用して一般的なタスクを実行する方法を示す例を示します、<xref:System.Windows.Controls.TextBox>コントロール。  
+このセクションでは、<xref:System.Windows.Controls.TextBox> コントロールを使用して一般的なタスクを実行する方法を示す例を紹介します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [複数行の TextBox コントロールを作成する](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [TextBox のテキストがいつ変更されたかを検出する](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [TextBox コントロールでタブ文字を有効にする](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [TextBox から行のコレクションを取得する](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [TextBox コントロールを読み取り専用にする](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [TextBox コントロールのテキストの先頭または末尾にカーソルを配置する](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [テキスト選択を取得する](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [TextBox コントロールにフォーカスを設定する](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [TextBox コントロールのテキスト コンテンツを設定する](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [テキスト編集コントロールでスペル チェックを有効にする](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [TextBox でカスタム コンテキスト メニューを使用する](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [コンテキスト メニューでスペル チェックを使用する](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [TextBox へのウォーターマークの追加](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+ [複数行の TextBox コントロールを作成する](how-to-create-a-multiline-textbox-control.md)  
+ [TextBox のテキストがいつ変更されたかを検出する](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [TextBox コントロールでタブ文字を有効にする](how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [TextBox から行のコレクションを取得する](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [TextBox コントロールを読み取り専用にする](how-to-make-a-textbox-control-read-only.md)  
+ [TextBox コントロールのテキストの先頭または末尾にカーソルを配置する](position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [テキスト選択を取得する](how-to-retrieve-a-text-selection.md)  
+ [TextBox コントロールにフォーカスを設定する](how-to-set-focus-in-a-textbox-control.md)  
+ [TextBox コントロールのテキスト コンテンツを設定する](how-to-set-the-text-content-of-a-textbox-control.md)  
+ [テキスト編集コントロールでスペル チェックを有効にする](how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [TextBox でカスタム コンテキスト メニューを使用する](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [コンテキスト メニューでスペル チェックを使用する](how-to-use-spell-checking-with-a-context-menu.md)  
+ [TextBox へのウォーターマークの追加](how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -41,6 +41,7 @@ ms.locfileid: "54589937"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>関連項目
-- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [TextBox のスタイルとテンプレート](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a>参照
+
+- [WPF Controls Gallery Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
+- [TextBox のスタイルとテンプレート](textbox-styles-and-templates.md)

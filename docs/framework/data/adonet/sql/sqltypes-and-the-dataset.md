@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
-ms.openlocfilehash: af22f31a194edb4b556c4283e5edd8787df1023c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dea5a2017479443cb747d31e253c1c83585ddd09
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723512"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791493"
 ---
 # <a name="sqltypes-and-the-dataset"></a>SqlTypes と DataSet
 ADO.NET 2.0 では、`DataSet` 名前空間を介した <xref:System.Data.SqlTypes> の型のサポートが拡張されました。 <xref:System.Data.SqlTypes> の型は、SQL Server データベースのデータ型と同じセマンティクスと有効桁数を備えたデータ型を用意するように設計されています。 <xref:System.Data.SqlTypes> の個々のデータ型には、それに相当する SQL Server のデータ型があり、基本となるデータ表現はいずれも同じです。  
@@ -24,6 +24,7 @@ ADO.NET 2.0 では、`DataSet` 名前空間を介した <xref:System.Data.SqlTyp
  [!code-vb[DataWorks SqlTypes.GetTypeAW#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.GetTypeAW/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
-- [SQL Server データ型のマッピング](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
-- [パラメーターおよびパラメーター データ型の構成](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [SQL Server データ型のマッピング](../sql-server-data-type-mappings.md)
+- [パラメーターおよびパラメーター データ型の構成](../configuring-parameters-and-parameter-data-types.md)
+- [ADO.NET の概要](../ado-net-overview.md)

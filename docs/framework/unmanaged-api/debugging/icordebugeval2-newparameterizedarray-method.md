@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 45efb8ba-c4de-4109-945f-e734d376b43c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9476bcc9706e89fd3d7e0abc14031f70a0aa0ad0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413281"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084830"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray メソッド
-指定した要素の型および次元の新しい配列を割り当てます。  
+指定した要素の型と次元の新しい配列を割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NewParameterizedArray(  
     [in] ICorDebugType          *pElementType,  
     [in] ULONG32                rank,  
@@ -38,27 +36,27 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pElementType`  
- [in]配列に格納されている要素の型を表す ICorDebugType オブジェクトへのポインター。  
+ から配列に格納されている要素の型を表す、の型のオブジェクトへのポインター。  
   
  `rank`  
- [in]配列の次元の数。 .NET Framework version 2.0 では、この値は 1 にする必要があります。  
+ から配列の次元数。 .NET Framework バージョン2.0 では、この値は1である必要があります。  
   
  `dims`  
- [in]配列の各次元のバイト単位のサイズ。  
+ から配列の各次元のサイズ (バイト単位)。  
   
  `lowBounds`  
- [in] オプション。 配列の各次元の下限値です。 この値を省略すると、各次元の下限を 0 が使われます。  
+ [in] オプション。 配列の各次元の下限。 この値を省略すると、次元ごとに下限0が想定されます。  
   
-## <a name="remarks"></a>コメント  
- 配列の要素のジェネリック型のインスタンスがあります。 配列は常に、現在のスレッドが実行されているアプリケーション ドメインに作成します。 .NET Framework 2.0 の値で`rank`1 にする必要があります。  
+## <a name="remarks"></a>Remarks  
+ 配列の要素は、ジェネリック型のインスタンスである場合があります。 配列は常に、スレッドが現在実行されているアプリケーションドメインで作成されます。 .NET Framework 2.0 では、`rank` の値は1である必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

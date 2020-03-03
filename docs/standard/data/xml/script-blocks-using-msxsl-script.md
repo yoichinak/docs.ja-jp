@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b45b8ebe048a5917019349ea3a6a357b7e90a9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565645"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710194"
 ---
 # <a name="script-blocks-using-msxslscript"></a>msxsl:script を使用したスクリプト ブロック
 <xref:System.Xml.Xsl.XslCompiledTransform> クラスは、`msxsl:script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数は Code Document Object Model (CodeDOM) によって Microsoft intermediate language (MSIL) にコンパイルされ、実行時に実行されます。 埋め込みのスクリプト ブロックから生成されたアセンブリは、スタイル シートに対して生成されるアセンブリとは区別されます。  
@@ -22,7 +20,7 @@ ms.locfileid: "54565645"
  埋め込みスクリプトのサポートは、<xref:System.Xml.Xsl.XslCompiledTransform> クラスではオプションの XSLT 設定です。 スクリプトのサポートは既定で無効になっています。 スクリプトのサポートを有効にするには、<xref:System.Xml.Xsl.XsltSettings> プロパティを <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A> に設定して `true` オブジェクトを作成し、そのオブジェクトを <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> メソッドに渡します。  
   
 > [!NOTE]
->  XSLT スクリプトは、スクリプトのサポートが必要であり、完全に信頼された環境で作業している場合のみ有効にします。  
+> XSLT スクリプトは、スクリプトのサポートが必要であり、完全に信頼された環境で作業している場合のみ有効にします。  
   
 ## <a name="msxslscript-element-definition"></a>msxsl:script 要素の定義  
  `msxsl:script` 要素は XSLT 1.0 勧告に対するマイクロソフトの拡張機能であり、次のように定義されます。  
@@ -38,7 +36,7 @@ ms.locfileid: "54565645"
  `implements-prefix` 属性は必須です。 この属性は、名前空間を宣言し、それをスクリプト ブロックに関連付けるために使用されます。 この属性の値は、名前空間を表すプレフィックスです。 このプレフィックスは、スタイル シート内の任意の場所で定義できます。  
   
 > [!NOTE]
->  `msxsl:script` 要素を使用するときは、どの言語でも、スクリプトを CDATA セクション内に配置することをお勧めします。 スクリプトは、その言語で使用する演算子、識別子、または区切り記号を含むことがあり、CDATA セクション内に配置しないと、誤って XML として解釈される可能性があります。 次の XML は、コードを配置できる CDATA セクションのテンプレートです。  
+> `msxsl:script` 要素を使用するときは、どの言語でも、スクリプトを CDATA セクション内に配置することをお勧めします。 スクリプトは、その言語で使用する演算子、識別子、または区切り記号を含むことがあり、CDATA セクション内に配置しないと、誤って XML として解釈される可能性があります。 次の XML は、コードを配置できる CDATA セクションのテンプレートです。  
   
 ```xml  
 <msxsl:script implements-prefix='your-prefix' language='CSharp'>  
@@ -71,11 +69,11 @@ ms.locfileid: "54565645"
 #### <a name="assemblies"></a>アセンブリ  
  次の 2 つのアセンブリは既定で参照されます。  
   
--   System.dll  
+- System.dll  
   
--   System.Xml.dll  
+- System.Xml.dll  
   
--   Microsoft.VisualBasic.dll (スクリプト言語が VB の場合)  
+- Microsoft.VisualBasic.dll (スクリプト言語が VB の場合)  
   
  `msxsl:assembly` 要素を使用して、追加のアセンブリをインポートすることができます。 これには、スタイル シートがコンパイルされたときのアセンブリも含まれます。 `msxsl:assembly` 要素は、次のように定義されます。  
   
@@ -94,21 +92,21 @@ ms.locfileid: "54565645"
 #### <a name="namespaces"></a>名前空間  
  次の名前空間は既定で含まれます。  
   
--   システム  
+- System  
   
--   System.Collection  
+- System.Collection  
   
--   System.Text  
+- System.Text  
   
--   System.Text.RegularExpressions  
+- System.Text.RegularExpressions  
   
--   System.Xml  
+- System.Xml  
   
--   System.Xml.Xsl  
+- System.Xml.Xsl  
   
--   System.Xml.XPath  
+- System.Xml.XPath  
   
--   Microsoft.VisualBasic (スクリプト言語が VB の場合)  
+- Microsoft.VisualBasic (スクリプト言語が VB の場合)  
   
  `namespace` 属性を使用して、追加の名前空間のサポートを追加することができます。 属性値は名前空間の名前です。  
   
@@ -121,7 +119,7 @@ ms.locfileid: "54565645"
 </msxsl:script>  
 ```  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  埋め込みスクリプトを使用して、半径が指定された円の円周を算出する例を次に示します。  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]

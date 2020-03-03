@@ -2,22 +2,23 @@
 title: <security> の <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: dc41f6f7-cabc-4a64-9fa0-ceabf861b348
-ms.openlocfilehash: f2750036aa4d3fbe41062ad041e50ff3a4be32b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97c52fa4f062ed0c65d5b1a8ca47a1439ab04cf5
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283968"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736483"
 ---
-# <a name="security-of-nethttpbinding"></a>\<セキュリティ > の\<netHttpBinding >
+# <a name="security-of-nethttpbinding"></a>\<netHttpBinding > のセキュリティ > の \<
 
-セキュリティ機能を定義、 [ \<basicHttpBinding >](basichttpbinding.md)します。
+[\<netHttpBinding >](nethttpbinding.md)のセキュリティ機能を定義します。
 
-\<system.ServiceModel>\
-\<bindings>\
-\<netHttpBinding > \
-\<バインド > \
-\<セキュリティ >
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp; &nbsp;[ **\<system >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**バインド**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**セキュリティ >**  
 
 ## <a name="syntax"></a>構文
 
@@ -39,30 +40,30 @@ ms.locfileid: "55283968"
 
 |属性|説明|
 |---------------|-----------------|
-|モード|省略可能です。 使用されるセキュリティの種類を指定します。 既定値は、`None` です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|
+|モード|省略可能です。 使用されるセキュリティの種類を指定します。 既定値は、 `None`です。 この属性は <xref:System.ServiceModel.BasicHttpSecurityMode> 型です。|
 
 ## <a name="mode-attribute"></a>mode 属性
 
 |[値]|説明|
 |-----------|-----------------|
-|なし|メッセージの数は、転送中にセキュリティ保護されません。|
+|None|-メッセージは、転送中にセキュリティ保護されません。|
 |Transport|セキュリティは、HTTPS トランスポートを使用して提供されます。 SOAP メッセージは、HTTPS を使用したセキュリティで保護されます。 サービスは、サービスの X.509 証明書を使用してクライアントに認証されます。 クライアントは、提供される ClientCredentialType を使用して認証されます。|
-|メッセージ|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。 既定では、本文は暗号化および署名されます。 このバインディングの場合、サーバー証明書をクライアントの帯域外で提供するように要求されます。 このバインディングの唯一の有効な `ClientCredentialType` は、`Certificate` です。|
+|[メッセージ]|セキュリティは、SOAP メッセージ セキュリティを使用して確保されます。 既定では、本文は暗号化および署名されます。 このバインディングの場合、サーバー証明書をクライアントの帯域外で提供するように要求されます。 このバインディングの唯一の有効な `ClientCredentialType` は、`Certificate` です。|
 |TransportWithMessageCredential|整合性、機密性、およびサーバー認証は、トランスポート セキュリティによって提供されます。 クライアント認証は、SOAP メッセージ セキュリティで提供されます。 このモードは、ユーザーがユーザー名およびパスワードを使用して認証し、メッセージ転送をセキュリティで保護するために既存の HTTP が配置されている場合に関連します。|
-|TransportCredentialOnly|このモードは、メッセージの整合性と機密性を提供しません。 http ベースのクライアント認証を提供します。 このモードを使用するときは、十分に注意する必要があります。 これは、トランスポート セキュリティ (IPSec) などの他の方法で提供されるされ、クライアント認証だけが、WCF インフラストラクチャによって提供される環境で使用する必要があります。|
+|TransportCredentialOnly|このモードは、メッセージの整合性と機密性を提供しません。 http ベースのクライアント認証を提供します。 このモードを使用するときは、十分に注意する必要があります。 トランスポートセキュリティが他の方法 (IPSec など) によって提供され、WCF インフラストラクチャによってクライアント認証のみが提供される環境で使用する必要があります。|
 
 ### <a name="child-elements"></a>子要素
 
 |要素|説明|
 |-------------|-----------------|
-|[\<transport>](transport-of-nethttpbinding.md)|基本 HTTP サービスのトランスポート セキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.HttpTransportSecurity> に対応しています。|
-|[\<message>](message-of-nethttpbinding.md)|基本 HTTP サービスのメッセージ セキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.BasicHttpMessageSecurity> に対応しています。|
+|[\<transport >](transport-of-nethttpbinding.md)|基本 HTTP サービスのトランスポート セキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.HttpTransportSecurity> に対応しています。|
+|[\< メッセージ >](message-of-nethttpbinding.md)|基本 HTTP サービスのメッセージ セキュリティ設定を定義します。 この要素は、<xref:System.ServiceModel.BasicHttpMessageSecurity> に対応しています。|
 
 ### <a name="parent-elements"></a>親要素
 
 |要素|説明|
 |-------------|-----------------|
-|バインド|バインド要素、 [ \<basicHttpBinding >](basichttpbinding.md)します。|
+|バインド|[\<basicHttpBinding >](basichttpbinding.md)のバインド要素。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -77,4 +78,4 @@ ms.locfileid: "55283968"
 - [バインディング](../../../wcf/bindings.md)
 - [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
 - [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../misc/binding.md)
+- [\<binding >](bindings.md)

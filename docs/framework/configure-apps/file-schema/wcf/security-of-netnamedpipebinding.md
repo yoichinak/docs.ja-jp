@@ -2,21 +2,22 @@
 title: <security> の <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: bb3cb022-637e-49fd-92e8-6766038affa7
-ms.openlocfilehash: ee2c4161f70c01dc09ac36bbcf6a234f822682d0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 31ea31ce6880a770c966350cd931e487396c4d63
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265306"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736442"
 ---
-# <a name="security-of-netnamedpipebinding"></a>\<セキュリティ > の\<netNamedPipeBinding >
+# <a name="security-of-netnamedpipebinding"></a>\<netNamedPipeBinding > のセキュリティ > の \<
 バインディングのセキュリティ設定を定義します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<netNamedPipeBinding>  
-\<binding>  
-\<セキュリティ >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp; &nbsp;[ **\<system >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**バインド**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netNamedPipeBinding >** ](netnamedpipebinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**セキュリティ >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +38,7 @@ ms.locfileid: "55265306"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|このバインディングに適用されるセキュリティの種類を指定します。 以下の値が有効です。<br /><br /> -None。これには、セキュリティが無効にします。<br />-トランスポート。基になるトランスポート ベースのセキュリティを使用してセキュリティが提供されます。 このモードでの保護レベルを制御できます。<br />-既定値は、トランスポートです。 この属性は <xref:System.ServiceModel.NetNamedPipeSecurityMode> 型です。|  
+|モード|このバインディングに適用されるセキュリティの種類を指定します。 以下の値が有効です。<br /><br /> -None: セキュリティを無効にします。<br />-Transport: セキュリティは、基になるトランスポートベースのセキュリティを使用して提供されます。 このモードでの保護レベルを制御できます。<br />-既定値は Transport です。 この属性は <xref:System.ServiceModel.NetNamedPipeSecurityMode> 型です。|  
   
 ### <a name="child-elements"></a>子要素  
   
@@ -49,16 +50,17 @@ ms.locfileid: "55265306"
   
 |要素|説明|  
 |-------------|-----------------|  
-|バインド|バインド要素、 [ \<netNamedPipeBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netnamedpipebinding.md)します。|  
+|バインド|[\<netNamedPipeBinding >](netnamedpipebinding.md)のバインド要素。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.NetNamedPipeSecurity>
 - <xref:System.ServiceModel.NetNamedPipeBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetNamedPipeSecurityElement>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [資格情報の種類の選択](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [資格情報の種類の選択](../../../wcf/feature-details/selecting-a-credential-type.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding >](bindings.md)

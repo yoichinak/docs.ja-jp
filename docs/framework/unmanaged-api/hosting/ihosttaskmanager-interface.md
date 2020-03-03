@@ -14,54 +14,53 @@ helpviewer_keywords:
 ms.assetid: 4a0b05b9-3ef1-4607-b7c8-bd4dd43647a0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3d7b85a30a5abd9186f039aa21cbe7790325e4f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 470e2ac06f433dc12d66f6cac97337a6de1d8183
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545648"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133018"
 ---
 # <a name="ihosttaskmanager-interface"></a>IHostTaskManager インターフェイス
-共通言語ランタイム (CLR) 標準のオペレーティング システムのスレッドやファイバーの関数を使用する代わりに、ホストでタスクを処理できるようにするメソッドを提供します。  
+標準のオペレーティングシステムのスレッド処理やファイバー関数を使用する代わりに、共通言語ランタイム (CLR) がホストを通じてタスクを操作できるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[BeginDelayAbort メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|マネージ コードのホストが、現在のタスクを中止しない期間を入力することを通知します。|  
-|[BeginThreadAffinity メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|マネージ コードのホストが、現在のタスクを別のオペレーティング システム スレッドに移動できない期間を入力することを通知します。|  
-|[CallNeedsHostHook メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|共通言語ランタイムがアンマネージ関数に指定された呼び出しをインラインにできるかどうかを指定するホストを有効にします。|  
+|[BeginDelayAbort メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-begindelayabort-method.md)|マネージコードが、現在のタスクを中止できない期間を入力していることをホストに通知します。|  
+|[BeginThreadAffinity メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)|マネージコードが、現在のタスクを別のオペレーティングシステムのスレッドに移動できない期間を入力していることをホストに通知します。|  
+|[CallNeedsHostHook メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-callneedshosthook-method.md)|共通言語ランタイムがアンマネージ関数に対して指定された呼び出しをインライン展開できるかどうかを指定できるようにします。|  
 |[CreateTask メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-createtask-method.md)|ホストが新しいタスクを作成することを要求します。|  
-|[EndDelayAbort メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|マネージ コードのホストが終了する期間を現在のタスクを中止する必要がない、事前に呼び出した通知`BeginDelayAbort`します。|  
-|[EndThreadAffinity メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|マネージ コードのホストが終了する、現在のタスクを別のオペレーティング システム スレッドに移動できない期間以前の呼び出しに通知`BeginThreadAffinity`します。|  
-|[EnterRuntime メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|ホストに、非管理対象のメソッドの呼び出しなど、プラットフォーム呼び出しメソッドを返すこと実行制御、CLR に通知します。|  
-|[GetCurrentTask メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|この呼び出しが行われた元のオペレーティング システム スレッドで現在実行しているタスクには、インターフェイス ポインターを取得します。|  
-|[GetStackGuarantee メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|プロセスの終了前に、スタック操作の完了後に、使用することが保証されるスタック領域の量を取得します。|  
-|[LeaveRuntime メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|アンマネージ関数を呼び出すにマネージ コードをホストに通知します。|  
-|[ReverseEnterRuntime メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|アンマネージ コードから共通言語ランタイム (CLR) に呼び出しがされているホストに通知します。|  
-|[ReverseLeaveRuntime メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|コントロールが、CLR のままであり、さらに、マネージ コードから呼び出されたアンマネージ関数を入力することをホストに通知します。|  
-|[SetCLRTaskManager メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|により、ホストへのインターフェイス ポインターで、 [ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md) CLR で実装されているインスタンス。|  
-|[SetLocale メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|CLR の現在のタスクのロケールが変更されたことをホストに通知します。|  
+|[EndDelayAbort メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enddelayabort-method.md)|以前に `BeginDelayAbort`を呼び出した後に、マネージコードが現在のタスクを中止できない期間を終了することをホストに通知します。|  
+|[EndThreadAffinity メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)|以前に `BeginThreadAffinity`を呼び出した後に、マネージコードが、現在のタスクを別のオペレーティングシステムのスレッドに移動できない期間を終了していることをホストに通知します。|  
+|[EnterRuntime メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)|プラットフォーム呼び出しメソッドなどのアンマネージメソッドへの呼び出しが実行制御を CLR に返すことをホストに通知します。|  
+|[GetCurrentTask メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)|この呼び出しが行われたオペレーティングシステムスレッドで現在実行されているタスクへのインターフェイスポインターを取得します。|  
+|[GetStackGuarantee メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getstackguarantee-method.md)|スタック操作が完了した後、プロセスが終了する前に使用可能であることが保証されているスタック領域の量を取得します。|  
+|[LeaveRuntime メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)|マネージコードがアンマネージ関数の呼び出しを実行しようとしていることをホストに通知します。|  
+|[ReverseEnterRuntime メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)|アンマネージコードから共通言語ランタイム (CLR) への呼び出しが行われていることをホストに通知します。|  
+|[ReverseLeaveRuntime メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)|コントロールが CLR から出ていること、およびマネージコードから呼び出されたアンマネージ関数を入力したことをホストに通知します。|  
+|[SetCLRTaskManager メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setclrtaskmanager-method.md)|CLR によって実装された[ICLRTaskManager](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)インスタンスへのインターフェイスポインターをホストに提供します。|  
+|[SetLocale メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setlocale-method.md)|CLR によって現在のタスクのロケールが変更されたことをホストに通知します。|  
 |[SetStackGuarantee メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setstackguarantee-method.md)|内部使用専用に予約されています。|  
-|[SetUILocale メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|現在のタスクのユーザー インターフェイスのロケールが変更されたことをホストに通知します。|  
+|[SetUILocale メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-setuilocale-method.md)|現在のタスクでユーザーインターフェイスのロケールが変更されたことをホストに通知します。|  
 |[Sleep メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-sleep-method.md)|現在のタスクがスリープ状態になることをホストに通知します。|  
-|[SwitchToTask メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|現在のタスクを切り離すことをホストに通知します。|  
+|[SwitchToTask メソッド](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-switchtotask-method.md)|現在のタスクを切り替える必要があることをホストに通知します。|  
   
 ## <a name="remarks"></a>Remarks  
- `IHostTaskManager` 作成および管理タスク、CLR は、マネージとアンマネージ コードは、逆から制御が転送するときにアクションを実行して、特定のアクションを指定するためのフックを提供するホストことができ、コードが実行時に実行できません。  
+ `IHostTaskManager` を使用すると、CLR はタスクを作成および管理できます。また、制御がマネージコードからアンマネージコードに転送されるときにホストがアクションを実行できるようにしたり、コードの実行中にホストが実行できる特定のアクションを指定したりすることができます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

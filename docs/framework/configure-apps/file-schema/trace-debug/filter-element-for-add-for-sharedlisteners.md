@@ -1,5 +1,5 @@
 ---
-title: <filter> の <add> の <sharedListeners> 要素
+title: <sharedListeners> の <add> の <filter> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: 739acedcc83cd207a7ef4c10c220d27695dd713d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e04ecd773bd6aa7791858711edbd72128dc391ea
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269303"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088878"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<フィルター > 要素の\<追加 > の\<上 sharedListeners >
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedListeners> の \<add> の \<filter> 要素
 `sharedListeners` コレクションのリスナーにフィルターを追加します。  
-  
- \<configuration>  
-\<system.diagnostics>  
-\<上の sharedListeners > 要素  
-\<add>  
-\<フィルター >  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.diagnostics>** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sharedListeners>** ](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<filter>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -40,8 +40,8 @@ ms.locfileid: "55269303"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 型の完全な名前のみを使用することができます (の形式で、<xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティ)、アセンブリ情報を含む完全修飾型名を使用することも (の形式で、<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>プロパティ)。 完全修飾型名を作成する方法の詳細については、次を参照してください。[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
-|**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンス トラクターに渡された文字列。|  
+|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 (<xref:System.Type.FullName%2A?displayProperty=nameWithType> プロパティの形式で) 型の完全な名前のみを使用することも、アセンブリ情報を含む完全修飾型名 (<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> プロパティの形式) を使用することもできます。 完全修飾型名の作成の詳細については、「[完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。|  
+|**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンストラクターに渡される文字列。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -52,16 +52,16 @@ ms.locfileid: "55269303"
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
-|`sharedListeners`|任意のソースまたは trace 要素を参照できるリスナーのコレクション。|  
-|`add`|リスナーを追加、**上 sharedListeners**コレクション。|  
+|`sharedListeners`|任意のソースまたはトレース要素が参照できるリスナーのコレクション。|  
+|`add`|リスナーを**sharedListeners**コレクションに追加します。|  
   
 ## <a name="remarks"></a>Remarks  
- リスナーがで定義されている場合、`<add>`の要素、`<sharedListeners>`要素、リスナーのフィルターで定義する必要があります、`<filter>`要素の子である、`<add>`要素。  
+ リスナーが `<sharedListeners>` 要素の `<add>` 要素で定義されている場合は、そのリスナーのフィルターを `<add>` 要素の子である `<filter>` 要素で定義する必要があります。  
   
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<filter>`トレース リスナーにフィルターを追加する要素`console`で、`sharedListeners`コレクション。  
+ 次の例は、`<filter>` 要素を使用して、`sharedListeners` コレクション内のトレースリスナー `console` にフィルターを追加する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -86,7 +86,8 @@ ms.locfileid: "55269303"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.TraceFilter>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceSource>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

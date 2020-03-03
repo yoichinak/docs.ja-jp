@@ -1,25 +1,25 @@
 ---
-title: '方法: Office Open XML ドキュメント (Visual Basic) から段落を取得します。'
+title: '方法 : Office Open XML ドキュメントから段落を取得する'
 ms.date: 07/20/2015
 ms.assetid: 66053f21-9217-473c-a6f3-a0897be07756
-ms.openlocfilehash: ea577d114c4c736b074311bfb3c927268d18830d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8755dc40fe64d4ff37ed66006f757ec1b32334a1
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624248"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347056"
 ---
-# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>方法: Office Open XML ドキュメント (Visual Basic) から段落を取得します。
+# <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-visual-basic"></a>方法: Office Open XML ドキュメントから段落を取得する (Visual Basic)
 このトピックでは、Office Open XML ドキュメントを開き、そのドキュメント内のすべての段落のコレクションを取得する例について説明します。  
   
- Office Open XML の詳細については、次を参照してください。 [Eric White のブログ](http://www.ericwhite.com)します。  
+ Office Open XML の詳細については、「 [Eric ホワイトのブログ](http://www.ericwhite.com)」を参照してください。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  この例では、Office Open XML パッケージを開き、Open XML パッケージ内のリレーションシップを使用してドキュメントとスタイル パーツを検索します。 次に、ドキュメントに対してクエリを実行して、段落 <xref:System.Xml.Linq.XElement> ノード、各段落のスタイル名、および各段落のテキストを含む匿名型のコレクションを射影します。  
   
  この例では、例の中でも提供される `StringConcatenate` という名前の拡張メソッドを使用します。  
   
- この例の動作方法を説明する詳細なチュートリアルを参照してください。[純粋関数型の XML 変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)します。  
+ この例の動作について説明する詳細なチュートリアルについては、「 [XML の純粋関数型変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)」を参照してください。  
   
  この例では、WindowsBase アセンブリに含まれるクラスを使用します。 また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。  
   
@@ -71,7 +71,7 @@ Module Module1
         Return (e.<w:r>.<w:t>).StringConcatenate(Function(element) CStr(element))  
     End Function  
   
-    ' Following function is required because VB does not support short circuit evaluation  
+    ' Following function is required because Visual Basic does not support short circuit evaluation  
     Private Function GetStyleOfParagraph(ByVal styleNode As XElement, ByVal defaultStyle As String) _  
                 As String  
         If (styleNode Is Nothing) Then  
@@ -152,9 +152,9 @@ Module Module1
 End Module  
 ```  
   
- 説明されているサンプルの Open XML ドキュメントを実行と[ソース Office Open XML ドキュメント (Visual Basic) の作成](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)、この例で、次の出力を生成します。  
+ 「ソースとなる[Office OPEN Xml ドキュメントを作成する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」で説明されているサンプルの open xml ドキュメントを使用して実行すると、この例では次の出力が生成されます。  
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -173,4 +173,5 @@ StyleName:Code >Hello World<
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [詳細クエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
+
+- [高度なクエリ手法 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

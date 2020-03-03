@@ -3,25 +3,26 @@ title: <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ebea5e7c-ad58-43c5-8f2d-cca25ae1b721
-ms.openlocfilehash: 018ea20342475de40a8392a9272724e37902ecb9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1a7c839a5ff8fac9470aea71a4886d9000086e9e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257721"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398620"
 ---
-# <a name="states"></a>\<states>
+# <a name="states"></a>\<状態 >
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
   
- 追跡プロファイルのクエリの詳細については、次を参照してください[追跡プロファイル。](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 追跡プロファイルのクエリの詳細については、「[追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)」を参照してください。  
   
-\<system.serviceModel>  
-\<追跡 >  
-\<trackingProfile>  
-\<ワークフロー >  
-\<workflowInstanceQueries>  
-\<workflowInstanceQuery>  
-\<states>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.ServiceModel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<追跡 >** ](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<trackingProfile >** ](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ワークフロー >** ](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowInstanceQueries >** ](workflowinstancequeries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<workflowInstanceQuery >** ](workflowinstancequery.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<状態 >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,13 +52,13 @@ ms.locfileid: "55257721"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<state>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態。|  
+|[\<状態 >](states.md)|追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<workflowInstanceQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequery.md)|開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡するクエリ。|  
+|[\<workflowInstanceQuery>](workflowinstancequery.md)|開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡するクエリ。|  
   
 ## <a name="remarks"></a>Remarks  
  返されたレコードは、このコレクションの状態でフィルター処理されます。  
@@ -67,16 +68,16 @@ ms.locfileid: "55257721"
 |状態|説明|  
 |-----------|-----------------|  
 |Aborted|ワークフロー インスタンスは中止されました。|  
-|Completed|ワークフロー インスタンスは完了しました。|  
+|完了|ワークフロー インスタンスは完了しました。|  
 |Deleted|ワークフロー インスタンスは削除されました。|  
-|Idle|ワークフロー インスタンスはアイドル状態です。|  
+|アイドル|ワークフロー インスタンスはアイドル状態です。|  
 |Persisted|ワークフロー インスタンスは永続化されました。|  
 |Resumed|ワークフロー インスタンスが再開されました。|  
 |Started|ワークフロー インスタンスが開始されました。|  
 |UnhandledException|ワークフロー インスタンスで未処理の例外が発生しました。|  
-|アンロード|ワークフロー インスタンスはアンロードされました。|  
+|アンロードされました|ワークフロー インスタンスはアンロードされました。|  
 |Canceled|ワークフロー インスタンスは取り消されました。|  
-|Suspended|ワークフロー インスタンスが中断されています。|  
+|中断|ワークフロー インスタンスが中断されています。|  
 |Terminated|ワークフロー インスタンスは終了しました。|  
 |Unsuspended|ワークフロー インスタンスの中断が解除されました。|  
   
@@ -94,8 +95,9 @@ ms.locfileid: "55257721"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [ワークフローの追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [追跡プロファイル](../../../windows-workflow-foundation/tracking-profiles.md)

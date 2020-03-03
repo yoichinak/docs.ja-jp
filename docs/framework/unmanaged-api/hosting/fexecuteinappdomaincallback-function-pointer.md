@@ -14,42 +14,41 @@ helpviewer_keywords:
 ms.assetid: 2709f18f-3eee-497f-bc33-3ab7a485599b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3031ce0eb6f23fdf5e5366d33ff075ea7816b0b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 970468bc2f50144c62c6e3cbcf9c00c2027f7663
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649545"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138182"
 ---
 # <a name="fexecuteinappdomaincallback-function-pointer"></a>FExecuteInAppDomainCallback 関数ポインター
-マネージ コードを実行する共通言語ランタイム (CLR) によって呼び出される関数を指します。  
+マネージコードを実行するために共通言語ランタイム (CLR) によって呼び出される関数を指します。  
   
- この関数のポインターが非推奨とされた、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。  
+ この関数ポインターは .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef HRESULT (__stdcall *FExecuteInAppDomainCallback) (  
     [in] void  *cookie  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cookie`  
- [in]実行されるマネージ コードを含む非透過の呼び出し元が割り当てたメモリへのポインター。  
+ から実行されるマネージコードを含む、非透過的な呼び出し元割り当てメモリへのポインター。  
   
- 割り当てとメモリの有効期間は、呼び出し元の (つまり、CLR) によって制御されます。 これは、CLR のマネージ ヒープ メモリではありません。  
+ このメモリの割り当てと有効期間は、呼び出し元 (つまり CLR) によって制御されます。 これは CLR マネージヒープメモリではありません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorWks.dll  
+ **ライブラリ:** Mscorwks.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

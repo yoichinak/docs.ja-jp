@@ -10,14 +10,12 @@ helpviewer_keywords:
 - retrieving setup information
 - application domains, retrieving setup information
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0c5b43258b3ce501d1302c31a70f51341d3a84d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 4d06a8a3ccfa35af283323478ee44a7da63d896d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588039"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119745"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>アプリケーション ドメインからのセットアップ情報の取得
 アプリケーション ドメインの各インスタンスは、プロパティと <xref:System.AppDomainSetup> 情報の両方で構成されています。 <xref:System.AppDomain?displayProperty=nameWithType> クラスを使って、アプリケーション ドメインからセットアップ情報を取得できます。 このクラスでは、アプリケーション ドメインに関する構成情報を取得する複数のメンバーが提供されています。  
@@ -37,5 +35,6 @@ ms.locfileid: "54588039"
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [アプリケーション ドメインを使用したプログラミング](application-domains.md#programming-with-application-domains)
-- [アプリケーション ドメインの使用](../../../docs/framework/app-domains/use.md)
+- [アプリケーション ドメインの使用](use.md)

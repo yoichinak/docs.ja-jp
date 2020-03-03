@@ -1,30 +1,29 @@
 ---
-title: '方法: コピー コンストラクターを記述する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: コピー コンストラクターを記述する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - C# Language, copy constructor
 - copy constructor [C#]
 ms.assetid: fba899b5-fc41-428e-a745-3ebdbf37990a
-ms.openlocfilehash: 252e66229b75c545c85aa175267ea267c138a087
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa6feb1b07f491a90a78684e254910d387b9bccd
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573125"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714851"
 ---
-# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>方法: コピー コンストラクターを記述する (C# プログラミング ガイド)
+# <a name="how-to-write-a-copy-constructor-c-programming-guide"></a>コピー コンストラクターを記述する方法 (C# プログラミング ガイド)
 C# では、オブジェクトのコピー コンストラクターが提供されていませんが、独自に作成することができます。  
   
 ## <a name="example"></a>例  
- 次の例の `Person` [クラス](../../../csharp/language-reference/keywords/class.md)では、`Person` のインスタンスを引数として受け取るコピー コンストラクターが定義されています。 引数のプロパティの値は、`Person`の新しいインスタンスのプロパティに割り当てられています。 このコードには、コピーするインスタンスの `Name` プロパティと `Age` プロパティをクラスのインスタンス コンストラクターに渡す代替のコピー コンストラクターが含まれています。  
+ 次の例の `Person`[クラス](../../language-reference/keywords/class.md)では、`Person` のインスタンスを引数として受け取るコピー コンストラクターが定義されています。 引数のプロパティの値は、`Person`の新しいインスタンスのプロパティに割り当てられています。 このコードには、コピーするインスタンスの `Name` プロパティと `Age` プロパティをクラスのインスタンス コンストラクターに渡す代替のコピー コンストラクターが含まれています。  
   
- [!code-csharp[csProgGuideObjects#16](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/how-to-write-a-copy-constructor_1.cs)]  
+ [!code-csharp[csProgGuideObjects#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#16)]  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ICloneable>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)
-- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)
+- [C# プログラミング ガイド](../index.md)
+- [クラスと構造体](./index.md)
+- [コンストラクター](./constructors.md)
+- [ファイナライザー](./destructors.md)

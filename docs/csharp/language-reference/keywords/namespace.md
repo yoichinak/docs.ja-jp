@@ -1,6 +1,5 @@
 ---
 title: 名前空間キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b35f0a2a5cc0b2895b491d4ee24f89955f4b8fed
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242764"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625801"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# リファレンス)
 
@@ -22,7 +21,7 @@ ms.locfileid: "53242764"
 
 [!code-csharp[csrefKeywordsNamespace#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#1)]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 名前空間内では、以下の型を 0 個以上宣言できます。
 
@@ -32,11 +31,11 @@ ms.locfileid: "53242764"
 
 - [interface](interface.md)
 
-- [struct](struct.md)
+- [struct](../builtin-types/struct.md)
 
-- [enum](enum.md)
+- [enum](../builtin-types/enum.md)
 
-- [delegate](delegate.md)
+- [delegate](../builtin-types/reference-types.md#the-delegate-type)
 
 C# ソース ファイル内に名前空間を明示的に宣言しているかどうかに関係なく、コンパイラは既定の名前空間を追加します。 この無名の名前空間はグローバル名前空間とも呼ばれますが、すべてのファイルに存在します。 グローバル名前空間内にある識別子は、名前付き名前空間で利用できます。
 
@@ -52,24 +51,15 @@ C# ソース ファイル内に名前空間を明示的に宣言しているか�
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>関連資料
-
-名前空間の使用方法の詳細については、次のトピックを参照してください。
-
-- [名前空間](../../programming-guide/namespaces/index.md)
-
-- [名前空間の使用](../../programming-guide/namespaces/using-namespaces.md)
-
-- [方法: グローバル名前空間エイリアスを使用する](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関する記事の「[名前空間](~/_csharplang/spec/namespaces.md)」に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../language-reference/index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# のキーワード](index.md)
-- [名前空間キーワード](namespace-keywords.md)
-- [using](using.md)
+- [C# リファレンス](../index.md)
+- [C# キーワード](index.md)
+- [using](using-directive.md)
+- [using static](using-static.md)
+- [名前空間エイリアス修飾子 `::`](../operators/namespace-alias-qualifier.md)
+- [名前空間](../../programming-guide/namespaces/index.md)

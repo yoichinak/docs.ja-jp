@@ -14,50 +14,54 @@ helpviewer_keywords:
 ms.assetid: 313e71e4-1790-4d2f-b68b-5040ebd1c149
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3eace88e5034c61b7608a6d777608cc2544b8564
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d37f990241ae704abef55d863da0f40a31284837
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688481"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141587"
 ---
 # <a name="strongnamekeydelete-function"></a>StrongNameKeyDelete 関数
-指定したキー コンテナーが削除されます。  
-  
- この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnamekeydelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)メソッド代わりにします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-BOOLEAN StrongNameKeyDelete (  
-    [in]  LPCWSTR   wszKeyContainer  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `wszKeyContainer`  
- [in]削除するキー コンテナーの名前。  
-  
-## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
-  
-## <a name="remarks"></a>Remarks  
- 使用して、 [StrongNameKeyInstall](../../../../docs/framework/unmanaged-api/strong-naming/strongnamekeyinstall-function.md) importa に公開/秘密キー ペアをコンテナーに機能します。  
-  
- 場合、`StrongNameKeyDelete`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** StrongName.h  
-  
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
+
+指定したキー コンテナーが削除されます。
+
+この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameKeyDelete](../hosting/iclrstrongname-strongnamekeydelete-method.md)メソッドを使用してください。
+
+## <a name="syntax"></a>構文
+
+```cpp
+BOOLEAN StrongNameKeyDelete (
+    [in]  LPCWSTR   wszKeyContainer
+);
+```
+
+## <a name="parameters"></a>パラメーター
+
+`wszKeyContainer`\
+から削除するキーコンテナーの名前。
+
+## <a name="return-value"></a>戻り値
+
+正常に完了した場合は `true`。それ以外の場合は、`false`ます。
+
+## <a name="remarks"></a>Remarks
+
+公開/秘密キーのペアをコンテナーにインポートするには、 [StrongNameKeyInstall](strongnamekeyinstall-function.md)関数を使用します。
+
+`StrongNameKeyDelete` 関数が正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)関数を呼び出して、最後に生成されたエラーを取得します。
+
+## <a name="requirements"></a>［要件］
+
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+
+**ヘッダー:** StrongName
+
+**ライブラリ:** Mscoree.dll にリソースとして含まれています
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+
 ## <a name="see-also"></a>関連項目
-- [StrongNameKeyDelete メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [StrongNameKeyInstall メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeyinstall-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [StrongNameKeyDelete メソッド](../hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [StrongNameKeyInstall メソッド](../hosting/iclrstrongname-strongnamekeyinstall-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

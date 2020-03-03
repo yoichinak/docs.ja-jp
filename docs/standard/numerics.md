@@ -11,14 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7f180e459764d6e8e4484072218f01c8bab8a3b5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e5815058898cac165e7a47d761ee86bb9c4cb940
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191156"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73091589"
 ---
 # <a name="numerics-in-net"></a>.NET における数値
 
@@ -44,7 +42,7 @@ ms.locfileid: "50191156"
 <xref:System.BitConverter?displayProperty=nameWithType> クラスを使用して、整数値の個々 のビットを操作することもできます。  
 
 > [!NOTE]  
-> 符号なし整数型は CLS に準拠していません。 詳細については、「 [Language Independence and Language-Independent Components](language-independence-and-language-independent-components.md)」を参照してください。
+> 符号なし整数型は CLS に準拠していません。 詳細については、「 [言語への非依存性、および言語非依存コンポーネント](language-independence-and-language-independent-components.md)」を参照してください。
 
 ## <a name="biginteger"></a>BigInteger
 
@@ -98,4 +96,4 @@ SIMD 対応の型は、それが SIMD 非対応のハードウェアや JIT コ�
 ## <a name="see-also"></a>関連項目
 
 - [アプリケーションの基本事項](application-essentials.md)
-- [Standard Numeric Format Strings](base-types/standard-numeric-format-strings.md)
+- [標準の数値書式指定文字列](base-types/standard-numeric-format-strings.md)

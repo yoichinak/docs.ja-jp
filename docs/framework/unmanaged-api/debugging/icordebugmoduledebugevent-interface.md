@@ -2,32 +2,30 @@
 title: ICorDebugModuleDebugEvent インターフェイス
 ms.date: 03/30/2017
 ms.assetid: 41950c52-1ac8-4212-b814-c77e20879f91
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 399f27db0a2d18e3bcd90b87f4470a77cb50595d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2c7eaa8a2c811c1696024d9af4b715cc49e7caa
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646858"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792896"
 ---
 # <a name="icordebugmoduledebugevent-interface"></a>ICorDebugModuleDebugEvent インターフェイス
-拡張、 [ICorDebugDebugEvent](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-interface.md)モジュール レベルのイベントをサポートするインターフェイス。  
+モジュールレベルのイベントをサポートするように、のモジュールレベル[のイベントを](icordebugdebugevent-interface.md)拡張します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetModule メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmoduledebugevent-getmodule-method.md)|ロードまたはアンロードされたばかりのマージ モジュールを取得します。|  
+|[GetModule メソッド](icordebugmoduledebugevent-getmodule-method.md)|ロードまたはアンロードされたばかりのマージ モジュールを取得します。|  
   
-## <a name="remarks"></a>Remarks  
- [MODULE_LOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)と[MODULE_UNLOADED](../../../../docs/framework/unmanaged-api/debugging/cordebugdebugeventkind-enumeration.md)イベントの種類は、このインターフェイスを実装します。  
+## <a name="remarks"></a>コメント  
+ [MODULE_LOADED](cordebugdebugeventkind-enumeration.md)イベントと[MODULE_UNLOADED](cordebugdebugeventkind-enumeration.md)イベントの種類は、このインターフェイスを実装します。  
   
 > [!NOTE]
->  このインターフェイスは .NET ネイティブでのみ使用可能です。 インターフェイス ポインターを取得するために `QueryInterface` を呼び出そうとすると、.NET ネイティブ外の ICorDebug シナリオに対して `E_NOINTERFACE` が返されます。  
+> このインターフェイスは .NET ネイティブでのみ使用可能です。 インターフェイス ポインターを取得するために `QueryInterface` を呼び出そうとすると、.NET ネイティブ外の ICorDebug シナリオに対して `E_NOINTERFACE` が返されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -36,5 +34,6 @@ ms.locfileid: "54646858"
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

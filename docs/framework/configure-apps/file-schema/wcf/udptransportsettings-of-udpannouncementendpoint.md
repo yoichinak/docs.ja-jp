@@ -2,20 +2,22 @@
 title: <udpTransportSettings> の <udpAnnouncementEndpoint>
 ms.date: 03/30/2017
 ms.assetid: a7ddff1a-5eed-4bbc-8580-b95ef8890e1f
-ms.openlocfilehash: 349cf7bde8a0fbe76a1a4b22d3eddec93191a20b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b67bdf825948dffe18aabe91b0de236eb929bccc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262154"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854846"
 ---
-# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udpTransportSettings > の\<udpAnnouncementEndpoint >
-この構成要素の UDP トランスポート設定を公開する[ \<udpAnnoucementEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)します。  
+# <a name="udptransportsettings-of-udpannouncementendpoint"></a>\<udptransportsettings の\<udpannouncementendpoint > >
+この構成要素は、 [ \<udptransportsettings >](udpannouncementendpoint.md)の UDP トランスポート設定を公開します。  
   
-\<system.ServiceModel >  
-\<standardEndpoints>  
-\<udpAnnouncementEndpoint>  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<standardEndpoints >** ](standardendpoints.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Udptransportsettings >** ](udpannouncementendpoint.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<updTransportSettings >**  
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -62,7 +64,8 @@ ms.locfileid: "55262154"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<udpAnnoucementEndpoint>](../../../../../docs/framework/configure-apps/file-schema/wcf/udpannoucementendpoint.md)|固定アナウンス コントラクトと UDP トランスポート バインディングを持つ標準エンドポイント。|  
+|[\<Udptransportsettings >](udpannouncementendpoint.md)|固定アナウンス コントラクトと UDP トランスポート バインディングを持つ標準エンドポイント。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Discovery.UdpTransportSettings>

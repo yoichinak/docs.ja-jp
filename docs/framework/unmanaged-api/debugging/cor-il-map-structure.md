@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 534ebc17-963d-4b26-8375-8cd940281db3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c7452b76509d5eca592cc3b95df1f77703ec1111
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c37f039d9636854c464e7981693c573bd60deab9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561830"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132340"
 ---
-# <a name="corilmap-structure"></a>COR_IL_MAP 構造体
+# <a name="cor_il_map-structure"></a>COR_IL_MAP 構造体
 機能の相対オフセットでの変更を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _COR_IL_MAP {  
     ULONG32 oldOffset;   
     ULONG32 newOffset;   
@@ -40,56 +38,57 @@ typedef struct _COR_IL_MAP {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`oldOffset`|古い Microsoft intermediate language (MSIL) 関数の先頭からの相対オフセットします。|  
-|`newOffset`|関数の先頭を基準とした新しい MSIL オフセット。|  
-|`fAccurate`|`true` 正確であるマッピングがわかっている場合それ以外の場合、`false`します。|  
+|`oldOffset`|関数の先頭を基準とした、以前の Microsoft 中間言語 (MSIL) オフセット。|  
+|`newOffset`|関数の先頭を基準とする新しい MSIL オフセット。|  
+|`fAccurate`|マッピングが正確であることがわかっている場合は `true` します。それ以外の場合は、`false`ます。|  
   
 ## <a name="remarks"></a>Remarks  
- マップの形式は次のとおりです。デバッガーは仮定`oldOffset`、変更されていない元の MSIL コード内で MSIL オフセットを示します。 `newOffset`パラメーターは、新しい、インストルメント化されたコード内で、対応する MSIL のオフセットを表します。  
+ マップの形式は次のとおりです。デバッガーは、`oldOffset` が元の変更されていない MSIL コード内で MSIL オフセットを参照することを前提としています。 `newOffset` パラメーターは、新しいインストルメント化されたコード内で、対応する MSIL オフセットを参照します。  
   
- 適切に機能するステップの場合は、次の要件を満たす必要があります。  
+ ステップ実行を正常に行うには、次の要件を満たしている必要があります。  
   
--   マップは、昇順で並べ替えする必要があります。  
+- マップは昇順に並べ替える必要があります。  
   
--   インストルメント化された MSIL コードは並べ替えないでください。  
+- インストルメント化された MSIL コードを並べ替えることはできません。  
   
--   元の MSIL コードを削除しない必要があります。  
+- 元の MSIL コードは削除しないでください。  
   
--   マップには、プログラム データベース (PDB) ファイルからのすべてのシーケンス ポイントをマップするエントリを含める必要があります。  
+- マップには、プログラムデータベース (PDB) ファイルのすべてのシーケンスポイントをマップするためのエントリが含まれている必要があります。  
   
- マップに存在しないエントリが補間されません。 次の例では、マップとその結果を示します。  
+ マップでは、不足しているエントリは補間されません。 次の例は、マップとその結果を示しています。  
   
- マップ:  
+ 付け  
   
--   以前のオフセットは 0、0 の新しいオフセット  
+- 0個の古いオフセット、0個の新しいオフセット  
   
--   以前のオフセットが 5、10 の新しいオフセット  
+- 5個の古いオフセット、10個の新しいオフセット  
   
--   以前のオフセットを 9、20 の新しいオフセット  
+- 9個の古いオフセット、20個の新しいオフセット  
   
- 結果:  
+ 生じ  
   
--   0、1、2、3、または 4 の以前のオフセットは、新しいオフセットは 0 にマップされます。  
+- 0、1、2、3、または4の古いオフセットは、新しいオフセット0にマップされます。  
   
--   5、6、7、または 8 の以前のオフセットは、10 の新しいオフセットにマップされます。  
+- 古いオフセット5、6、7、または8は、新しいオフセット10にマップされます。  
   
--   9 以降の以前のオフセットは、20 の新しいオフセットにマップされます。  
+- 9以上の古いオフセットは、新しいオフセット20にマップされます。  
   
--   0、1、2、3、4、5、6、7、8、または 9 の新しいオフセットは、以前のオフセット 0 にマップされます。  
+- 新しいオフセット0、1、2、3、4、5、6、7、8、または9が古いオフセット0にマップされます。  
   
--   10、11、12、13、14、15、16、17、18 または 19 の新しいオフセットは、以前のオフセット 5 にマップされます。  
+- 新しいオフセット10、11、12、13、14、15、16、17、18、19は、古いオフセット5にマップされます。  
   
--   20 以上の新しいオフセットは、以前のオフセット 9 にマップされます。  
+- 20以上の新しいオフセットは、古いオフセット9にマップされます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug.idl, CorProf.idl  
+ **ヘッダー:** CorDebug .idl、Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

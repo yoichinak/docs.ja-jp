@@ -9,17 +9,15 @@ helpviewer_keywords:
 - MDAs (managed debugging assistants), overlapped structures
 - freeing overlapped structures
 ms.assetid: b6ab2d48-6eee-4bab-97a3-046b3b0a5470
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 675e2e4d5022f0260450f9f0b2025f215b3ead7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a0c72cf26ef8434719ff6661ef15a44f51c8740
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708287"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217257"
 ---
 # <a name="overlappedfreeerror-mda"></a>overlappedFreeError MDA
-オーバーラップされた操作が完了する前に <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> メソッドが呼び出されると、`overlappedFreeError` マネージド デバッグ アシスタント (MDA) がアクティブになります。  
+オーバーラップされた操作が完了する前に `overlappedFreeError` メソッドが呼び出されると、<xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29?displayProperty=nameWithType> マネージド デバッグ アシスタント (MDA) がアクティブになります。  
   
 ## <a name="symptoms"></a>現象  
  アクセス違反またはガベージ コレクションされたヒープの破損。  
@@ -29,7 +27,7 @@ ms.locfileid: "54708287"
   
  オーバーラップされた操作が正常に起動しなかった場合、この MDA はエラーを発生しないことがあります。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  <xref:System.Threading.Overlapped.Free%28System.Threading.NativeOverlapped%2A%29> メソッドを呼び出す前に、オーバーラップされた構造を使用している I/O 操作が必ず完了するようにします。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -50,7 +48,8 @@ ms.locfileid: "54708287"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

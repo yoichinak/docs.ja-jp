@@ -1,15 +1,15 @@
 ---
-title: '方法: (XPATH-LINQ to XML) の子要素の子孫を検索 (Visual Basic)'
+title: '方法 : 子要素の子孫を検索する (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: 5d5ccd46a595a7ec7477246dd9a9cd351614fdf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: beb949be521bfde70fbcdbcf18cebf49d7cc5a58
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520959"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344673"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>方法: (XPATH-LINQ to XML) の子要素の子孫を検索 (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>方法: 子要素の子孫を検索する (XPath LINQ to XML) (Visual Basic)
 このトピックでは、特定の名前を持つ子要素の子孫要素を取得する方法について説明します。  
   
  XPath 式を次に示します。  
@@ -34,7 +34,7 @@ Dim root As XElement = _
             </Annotation>  
         </Paragraph>  
         <Paragraph>  
-            <Text>  This is a second sentence.</Text>  
+            <Text>This is a second sentence.</Text>  
         </Paragraph>  
     </Root>  
   
@@ -64,10 +64,11 @@ Console.WriteLine(str2)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>参照
+
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

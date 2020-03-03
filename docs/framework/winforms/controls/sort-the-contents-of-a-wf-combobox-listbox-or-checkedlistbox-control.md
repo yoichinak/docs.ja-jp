@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows の内容を並べ替えるフォーム ComboBox、ListBox、または CheckedListBox コントロール'
+title: ComboBox、ListBox、または CheckedListBox コントロールの内容を並べ替える
 ms.date: 03/30/2017
 helpviewer_keywords:
 - CheckedListBox control [Windows Forms], sorting
@@ -8,29 +8,30 @@ helpviewer_keywords:
 - list boxes [Windows Forms], sorting contents
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
-ms.openlocfilehash: 97965dcef1541aec51ba57a7cf314730f892f141
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dee969d777edf76434622fe632f7e934987a1dc3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686323"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742953"
 ---
-# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: Windows の内容を並べ替えるフォーム ComboBox、ListBox、または CheckedListBox コントロール
-Windows フォーム コントロールでは、データ バインドされるときに並べ替えられません。 並べ替えられたデータを表示するには、並べ替えをサポートするデータ ソースを使用して、並べ替え、データ ソース。 並べ替えをサポートするデータ ソースはデータ ビュー、データのビュー マネージャー、および並べ替えられた配列。  
+# <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法 : Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える
+Windows フォームコントロールは、データバインドされている場合は並べ替えられません。 並べ替えられたデータを表示するには、並べ替えをサポートするデータソースを使用し、データソースの並べ替えを行います。 並べ替えをサポートするデータソースは、データビュー、データビューマネージャー、および並べ替えられた配列です。  
   
- コントロールがデータ バインドでない場合は、それを並べ替えることができます。  
+ コントロールがデータバインドされていない場合は、並べ替えることができます。  
   
-### <a name="to-sort-the-list"></a>一覧を並べ替える  
+### <a name="to-sort-the-list"></a>リストを並べ替えるには  
   
-1.  `Sorted` プロパティを `true`に設定します。  
+1. `Sorted` プロパティを `true` に設定します。  
   
-     この設定は、並べ替えられた順序ですべての既存のリスト アイテムを再配置します。  
+     この設定により、既存のすべてのリスト項目が並べ替えられた順序で再配置されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [Windows フォームでのデータ バインディング](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [方法: 追加および削除項目、Windows からフォーム ComboBox、ListBox、または CheckedListBox コントロール](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)
-- [ListBox の代わりに Windows フォーム ComboBox を使用する場合](../../../../docs/framework/winforms/controls/when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [オプションのリストを表示するための Windows フォーム コントロール](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
+- [方法: Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する](add-and-remove-items-from-a-wf-combobox.md)
+- [ListBox の代わりに Windows フォーム ComboBox を使用する場合](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

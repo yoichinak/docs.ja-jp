@@ -15,30 +15,26 @@ helpviewer_keywords:
 ms.assetid: f783ebc3-e952-46e6-9325-14dd2c666f21
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 55877f42d7def89cf29dc156ba7f7a4b6613c753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30fcf15ed5f612820fc2836995b1e0206f580763
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559724"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095768"
 ---
 # <a name="icordebugobjectvaluegetvirtualmethod-method"></a>ICorDebugObjectValue::GetVirtualMethod メソッド
-`GetVirtualMethod` このバージョンの .NET Framework で実装されていません。  
+`GetVirtualMethod` は、このバージョンの .NET Framework では実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetVirtualMethod (  
     [in]  mdMemberRef        memberRef,  
     [out] ICorDebugFunction  **ppFunction  
 );  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>［要件］  
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
 ## <a name="see-also"></a>関連項目
-
-

@@ -1,6 +1,5 @@
 ---
 title: break ステートメント - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - break
@@ -8,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 18be5171329dd43c419e977a1799e2e72c32404d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef276fd9e8da0ea25695c5afdf06a300bbd2a123
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727574"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713752"
 ---
 # <a name="break-c-reference"></a>break (C# リファレンス)
 
-`break` ステートメントは、これを囲むループまたは [switch](../../../csharp/language-reference/keywords/switch.md) ステートメントのうち、最も内側のものを終了させます。 終了したステートメントの次にステートメントがある場合は、そこに制御が移動します。
+`break` ステートメントは、これを囲むループまたは [switch](./switch.md) ステートメントのうち、最も内側のものを終了させます。 終了したステートメントの次にステートメントがある場合は、そこに制御が移動します。
 
 ## <a name="example"></a>例
 
@@ -27,13 +26,7 @@ ms.locfileid: "54727574"
 
 ## <a name="example"></a>例
 
-この例では、`break` ステートメントを使用して、入れ子になった内側のループから抜け出し、外側のループに制御を戻します。
-
-[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
-
-## <a name="example"></a>例
-
-次に示すのは、[switch](../../../csharp/language-reference/keywords/switch.md) ステートメントで `break` を使用する例です。
+次に示すのは、[switch](./switch.md) ステートメントで `break` を使用する例です。
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -44,15 +37,25 @@ Enter your selection (1, 2, or 3): 4
 Sorry, invalid selection.
 ```
 
+## <a name="example"></a>例
+
+この例では、`break` ステートメントを使用して、入れ子になった内側のループから抜け出し、外側のループに制御を戻します。 コントロールは、入れ子になったループの 1 つ上のレベルに_のみ_返されます。
+
+[!code-csharp[csrefKeywordsJump#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#7)]
+
+## <a name="example"></a>例
+
+この例で、`break` ステートメントは、ループの各繰り返し時に現在の分岐を抜けるためだけに使用されています。 ループ自体は、入れ子になった [switch](./switch.md) ステートメントに属する `break` のインスタンスの影響は受けません。
+
+[!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
+
 ## <a name="c-language-specification"></a>C# 言語仕様
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [switch](../../../csharp/language-reference/keywords/switch.md)
-- [ジャンプ ステートメント](../../../csharp/language-reference/keywords/jump-statements.md)
-- [繰り返しステートメント](../../../csharp/language-reference/keywords/iteration-statements.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](./index.md)
+- [switch](./switch.md)

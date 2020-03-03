@@ -1,23 +1,21 @@
 ---
 title: .NET Core CLI の拡張モデル
-description: コマンド ライン インターフェイス (CLI) ツールを拡張する方法について説明します。
-author: blackdwarf
+description: .NET Core CLI を拡張する方法について説明します。
 ms.date: 04/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: e93c9c85383d7c541b8ef55a74045307810cbb05
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 56a9cedc090ddca446c0ee1a60f2ca49590e7635
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093009"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451156"
 ---
-# <a name="net-core-cli-tools-extensibility-model"></a>.NET Core CLI ツールの拡張モデル
+# <a name="net-core-cli-extensibility-model"></a>.NET Core CLI の拡張モデル
 
-ここでは、.NET Core コマンド ライン インターフェイス (CLI) ツールを拡張する方法と、各方法を利用するシナリオについて説明します。
+この記事では、.NET Core CLI を拡張するためのさまざまな方法と、それぞれの方法を利用するシナリオについて説明します。
 ツールの使用方法だけでなく、さまざまなツールを構築する方法についても紹介します。
 
-## <a name="how-to-extend-cli-tools"></a>CLI ツールを拡張する方法
-CLI ツールは、主に次の 3 つの方法で拡張できます。
+## <a name="how-to-extend-the-cli"></a>CLI を拡張する方法
+CLI は、主に次の 3 つの方法で拡張できます。
 
 1. [プロジェクトごとに NuGet パッケージを使用](#per-project-based-extensibility)
 
@@ -34,7 +32,7 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 上記で概説されている 3 つの拡張メカニズムは排他的ではありません。 メカニズムの 1 つ、すべて、または組み合わせて使用することができます。 選択するメカニズムは、拡張機能で実現しようとしている目標によって大きく異なります。
 
 ## <a name="per-project-based-extensibility"></a>各プロジェクト ベースの拡張機能
-各プロジェクトのツールは、NuGet パッケージとして配布される[フレームワーク依存の展開](../deploying/index.md#framework-dependent-deployments-fdd)です。 ツールを参照するプロジェクトのコンテキスト内と、復元する対象にのみ、ツールを使用できます。 プロジェクトのコンテキスト以外で呼び出すと (たとえば、プロジェクトを含むディレクトリ以外)、コマンドが見つからないので失敗します。
+各プロジェクトのツールは、NuGet パッケージとして配布される[フレームワーク依存の展開](../deploying/index.md#publish-runtime-dependent)です。 ツールを参照するプロジェクトのコンテキスト内と、復元する対象にのみ、ツールを使用できます。 プロジェクトのコンテキスト以外で呼び出すと (たとえば、プロジェクトを含むディレクトリ以外)、コマンドが見つからないので失敗します。
 
 プロジェクト ファイルの外部は必要ないため、これらのツールはビルド サーバーに最適です。 ビルド処理では、ビルドを行うプロジェクトの復元が実行され、ツールが利用可能になります。 各プロジェクトは 1 つの特定の言語でのみ記述できるので、F# などの言語プロジェクトも、このカテゴリに入ります。
 
@@ -45,7 +43,7 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-実行するためにプロジェクトのビルド出力を読み込む必要があるツールの場合、通常、別の依存関係がプロジェクト ファイル内の標準の依存関係に一覧されています。 CLI では、ビルド エンジンとして MSBuild を使用するため、ツールのこれらの部分はカスタム MSBuild の[ターゲット](/visualstudio/msbuild/msbuild-targets)および[タスク](/visualstudio/msbuild/msbuild-tasks)として記述することを推奨します。これは、ビルド プロセス全体に参加できるようになるためです。 さらに、出力ファイルの場所、現在ビルドされている構成といった、ビルドによって生成されるすべてのデータを簡単に取得できます。この情報はすべて、どのターゲットからも読み取り可能な一連の MSBuild プロパティになります。 このドキュメントでは、後ほど NuGet を使用してカスタム ターゲットを追加する方法を説明します。
+実行するためにプロジェクトのビルド出力を読み込む必要があるツールの場合、通常、別の依存関係がプロジェクト ファイル内の標準の依存関係に一覧されています。 CLI では、ビルド エンジンとして MSBuild を使用するため、ツールのこれらの部分はカスタム MSBuild の[ターゲット](/visualstudio/msbuild/msbuild-targets)および[タスク](/visualstudio/msbuild/msbuild-tasks)として記述することを推奨します。これは、ビルド プロセス全体に参加できるようになるためです。 さらに、出力ファイルの場所、ビルドされている現在の構成といった、ビルドによって生成されるすべてのデータを簡単に取得できます。 この情報はすべて、どのターゲットからも読み取り可能な一連の MSBuild プロパティになります。 このドキュメントでは、後ほど NuGet を使用してカスタム ターゲットを追加する方法を説明します。
 
 単純なツールだけのツールを単純なプロジェクトに追加する例を確認してみましょう。 指定された API の NuGet パッケージを使用して検索できる `dotnet-api-search` というコマンドの例を仮定すると、そのツールを使用するコンソール アプリケーションのプロジェクト ファイルは、次のようになります。
 
@@ -70,7 +68,7 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 ビルドした後、[`dotnet pack`](dotnet-pack.md) コマンドを使用して、コード、その依存関係に関する情報などを含む NuGet パッケージ (.nupkg ファイル) を作成します。 パッケージには任意の名前を付けることができますが、アプリケーション内 (実際のツール バイナリ) は、`dotnet` から呼び出すことができるように、`dotnet-<command>` の規則に準拠している必要があります。
 
 > [!NOTE]
-> .NET Core コマンドライン ツールの RC3 以前のバージョンでは、`dotnet pack` コマンドにバグがあり、`runtime.config.json` をツールでパックできませんでした。 そのファイルがないことで、実行時にエラーが発生します。 この動作が見られる場合、最新のツールに更新し、`dotnet pack` をもう一度お試しください。
+> .NET Core コマンドライン ツールの RC3 以前のバージョンでは、`dotnet pack` コマンドにバグがあり、 *.runtimeconfig.json* をツールでパックできませんでした。 そのファイルがないことで、実行時にエラーが発生します。 この動作が見られる場合、最新のツールに更新し、`dotnet pack` をもう一度お試しください。
 
 ツールはポータブル アプリケーションであるため、ツールを利用しているユーザーは、ツールを実行するためにツールをビルドするバージョンの .NET Core ライブラリを所有している必要があります。 ツールを使用し、.NET Core ライブラリ内に含まれない任意のその他の依存関係は、NuGet キャッシュに復元および配置されます。 そのため、ツール全体が、.NET Core ライブラリからのアセンブリ、および NuGet キャッシュからのアセンブリを使用して実行されます。
 
@@ -80,7 +78,8 @@ CLI ツールは、主に次の 3 つの方法で拡張できます。
 また、同じリポジトリで[使用されたツールの実装](https://github.com/dotnet/cli/tree/release/2.1/TestAssets/TestPackages)を確認することもできます。
 
 ## <a name="custom-targets"></a>カスタム ターゲット
-NuGet には、[カスタム MSBuild ターゲット ファイルとプロパティ ファイルをパッケージ化](/nuget/create-packages/creating-a-package#including-msbuild-props-and-targets-in-a-package)する機能があります。 .NET Core CLI ツールが MSBuild を使用するようになり、同じ拡張機能のメカニズムが .NET Core プロジェクトに適用されています。 このような拡張機能は、ビルド プロセスの拡張が必要な場合、生成されたファイルなどのビルド プロセスの成果物にアクセスする必要がある場合、またはビルドが呼び出される構成を検査する場合などに使用します。
+
+NuGet には、[カスタム MSBuild ターゲット ファイルとプロパティ ファイルをパッケージ化](/nuget/create-packages/creating-a-package#include-msbuild-props-and-targets-in-a-package)する機能があります。 .NET Core で MSBuild が使用されるようになったため、同じ拡張機能のメカニズムが .NET Core プロジェクトに適用されるようになりました。 このような拡張機能は、ビルド プロセスの拡張が必要な場合や、生成されたファイルなどのビルド プロセスの成果物にアクセスする必要がある場合、またはビルドが呼び出される構成を検査する場合などに使用できます。
 
 次の例では、ターゲットのプロジェクト ファイルで `csproj` 構文を使用しています。 これは、[`dotnet pack`](dotnet-pack.md) コマンドにパッケージ対象を指示し、ターゲット ファイルだけでなくアセンブリをパッケージ内の *build* フォルダーに格納する例です。 `Label` プロパティが `dotnet pack instructions` に設定された `<ItemGroup>` 要素があり、その下に Target が定義されています。
 

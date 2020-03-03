@@ -1,18 +1,17 @@
 ---
 title: '#pragma warning - C# リファレンス'
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - '#pragma warning'
 helpviewer_keywords:
 - '#pragma warning [C#]'
 ms.assetid: 723493d5-9753-4cec-babb-54e2b8eb36b6
-ms.openlocfilehash: 7c664ee7d6e0e083eba958e6ee36a63009e13956
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5620ea9e5f31c22e26bee95a450335bb179ced25
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606609"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712469"
 ---
 # <a name="pragma-warning-c-reference"></a>#pragma warning (C# リファレンス)
 `#pragma warning` を使用すると、特定の警告を有効または無効にすることができます。  
@@ -24,14 +23,14 @@ ms.locfileid: "54606609"
 #pragma warning restore warning-list  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `warning-list`  
  警告番号のコンマ区切りのリスト。 "CS" というプレフィックスは省略可能です。  
   
  警告番号が指定されていないと、`disable` はすべての警告を無効にし、`restore` はすべての警告を有効にします。  
   
 > [!NOTE]
->  Visual Studio で警告番号を調べるには、プロジェクトをビルドし、**[出力]** ウィンドウで警告番号を探してください。  
+> Visual Studio で警告番号を調べるには、プロジェクトをビルドし、 **[出力]** ウィンドウで警告番号を探してください。  
   
 ## <a name="example"></a>例  
   
@@ -61,7 +60,7 @@ public class D
   
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# プリプロセッサ ディレクティブ](../../../csharp/language-reference/preprocessor-directives/index.md)
-- [C# コンパイラ エラー](../../../csharp/language-reference/compiler-messages/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プリプロセッサ ディレクティブ](./index.md)
+- [C# コンパイラ エラー](../compiler-messages/index.md)

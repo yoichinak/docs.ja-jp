@@ -1,5 +1,5 @@
 ---
-title: ICorDebugHeapValue2 Interface1
+title: ICorDebugHeapValue2 インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugHeapValue2
@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 87360a52-90b1-4ada-80c0-589a556116d8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 447fd8c7a6c52cdebc39ffd9c62cea5890c18c3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7126222bd23548ec7013ba234c3f3eebbc8e374
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499328"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788632"
 ---
-# <a name="icordebugheapvalue2-interface1"></a>ICorDebugHeapValue2 Interface1
-拡張機能を処理する共通言語ランタイム (CLR) のサポートを提供します。  
+# <a name="icordebugheapvalue2-interface"></a>ICorDebugHeapValue2 インターフェイス
+
+共通言語ランタイム (CLR) ハンドルのサポートを提供する、コンポーネントの拡張機能。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CreateHandle メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugheapvalue2-createhandle-method.md)|これは、指定した型のハンドルを作成`ICorDebugHeapValue2`オブジェクト。|  
+|[CreateHandle メソッド](icordebugheapvalue2-createhandle-method.md)|この `ICorDebugHeapValue2` オブジェクトに対して指定された型のハンドルを作成します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +46,5 @@ ms.locfileid: "54499328"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

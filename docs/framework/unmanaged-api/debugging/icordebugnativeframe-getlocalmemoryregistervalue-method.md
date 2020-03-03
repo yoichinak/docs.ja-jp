@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 33a19f6e-1029-4d53-af64-19591c6e58ee
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c36e9e38acf1d183bcc5af5284e194c994c16749
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788ce2d47769caa72518e0357a0affdff5862699
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706710"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137279"
 ---
 # <a name="icordebugnativeframegetlocalmemoryregistervalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryRegisterValue メソッド
-引数またはうち下位ワードと上位ワードそれぞれで格納されるメモリの場所と指定されたレジスタ、このネイティブ フレームに、ローカル変数の値を取得します。  
+引数またはローカル変数の値を取得します。この値は、このネイティブフレームについて、指定したレジスタとメモリ位置にそれぞれ、下位ワードと上位ワードが格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetLocalMemoryRegisterValue (  
     [in] CORDB_ADDRESS      highWordAddress,  
     [in] CorDebugRegister   lowWordRegister,  
@@ -39,24 +37,24 @@ HRESULT GetLocalMemoryRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `highWordAddress`  
- [in]A`CORDB_ADDRESS`値の上位ワードを格納しているメモリの場所を指定する値。  
+ から値の上位ワードを格納しているメモリ位置を指定する `CORDB_ADDRESS` 値。  
   
  `lowWordRegister`  
- [in]値の下位ワードを含むレジスタを指定する"CorDebugRegister"列挙型の値。  
+ から値の下位ワードを含むレジスタを指定する "CorDebugRegister" 列挙体の値。  
   
  `cbSigBlob`  
- [in]によって参照されているバイナリ メタデータ シグネチャのサイズを指定する整数、`pvSigBlob`パラメーター。  
+ から`pvSigBlob` パラメーターによって参照されるバイナリメタデータシグネチャのサイズを指定する整数。  
   
  `pvSigBlob`  
- [in]A`PCCOR_SIGNATURE`値の型のバイナリ メタデータ シグネチャを示す値。  
+ から値の型のバイナリメタデータシグネチャを指す `PCCOR_SIGNATURE` 値。  
   
  `ppValue`  
- [out]指定した登録とメモリの場所に格納されている取得した値を表す"ICorDebugValue"オブジェクトのアドレスへのポインター。  
+ 入出力指定されたレジスタおよびメモリ位置に格納されている取得値を表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -65,4 +63,3 @@ HRESULT GetLocalMemoryRegisterValue (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

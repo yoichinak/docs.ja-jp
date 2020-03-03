@@ -1,5 +1,5 @@
 ---
-title: PictureBox コントロールの概要 (Windows フォーム)
+title: PictureBox コントロールの概要
 ms.date: 03/30/2017
 f1_keywords:
 - PictureBox
@@ -8,22 +8,23 @@ helpviewer_keywords:
 - picture controls [Windows Forms], about picture controls
 - image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
-ms.openlocfilehash: d725192daeb9529b38c170184a17c927357f2175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c911e0190b5a1b063d84e589a7f39285358cbd22
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642858"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744244"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>PictureBox コントロールの概要 (Windows フォーム)
-Windows フォーム<xref:System.Windows.Forms.PictureBox>ビットマップ、GIF、JPEG、メタファイル、またはアイコンの形式でグラフィックスを表示するコントロールを使用します。  
+Windows フォーム <xref:System.Windows.Forms.PictureBox> コントロールは、ビットマップ、GIF、JPEG、メタファイル、またはアイコン形式でグラフィックスを表示するために使用されます。  
   
-## <a name="key-properties-and-methods"></a>キー プロパティとメソッド  
- 表示される画像はによって決定されます、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティで、実行時またはデザイン時に設定することができます。 設定して、イメージを指定できます、<xref:System.Windows.Forms.PictureBox.ImageLocation%2A>プロパティし、同期的を使用してイメージを読み込む、<xref:System.Windows.Forms.PictureBox.Load%2A>メソッドまたは非同期的を使用して、<xref:System.Windows.Forms.PictureBox.LoadAsync%2A>メソッド。 <xref:System.Windows.Forms.PictureBox.SizeMode%2A>プロパティは、画像とコントロールが互いに適合させる方法を制御します。 詳細については、「[方法 :実行時にサイズまたは画像の配置を変更](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)します。  
+## <a name="key-properties-and-methods"></a>キーのプロパティとメソッド  
+ 表示される画像は、<xref:System.Windows.Forms.PictureBox.Image%2A> プロパティによって決定されます。このプロパティは、実行時またはデザイン時に設定できます。 または、<xref:System.Windows.Forms.PictureBox.ImageLocation%2A> プロパティを設定してイメージを指定し、<xref:System.Windows.Forms.PictureBox.Load%2A> メソッドを使用して、または <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> メソッドを使用して非同期的にイメージを読み込むこともできます。 <xref:System.Windows.Forms.PictureBox.SizeMode%2A> プロパティは、イメージとコントロールが相互にどのように適合するかを制御します。 詳細については、「[方法: 実行時に画像のサイズまたは配置を変更する](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.PictureBox>
-- [方法: デザイナーを使用してピクチャを読み込む.](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [方法: 実行時にサイズまたは画像の配置を変更します。](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [方法: 実行時にピクチャを設定します。](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
-- [PictureBox コントロール](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [方法: デザイナーを使用してピクチャを読み込む](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [方法: 実行時にピクチャのサイズまたは配置を変更する](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [方法: 実行時にピクチャを設定する](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox コントロール](picturebox-control-windows-forms.md)

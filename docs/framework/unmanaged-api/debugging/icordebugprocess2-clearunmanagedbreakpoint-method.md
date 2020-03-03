@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 12ed0fff-7f0e-4d7a-bb70-b3376371f36c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bc34ab9c8dbfe10282f36a241a4e433debef7dd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e2aaf902afd71a4a81f7d64ef3fec046aacc91fc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420496"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792528"
 ---
 # <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a>ICorDebugProcess2::ClearUnmanagedBreakpoint メソッド
-削除前に設定した、指定されたアドレスのブレークポイント。  
+指定したアドレスに、以前に設定したブレークポイントを削除します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ClearUnmanagedBreakpoint (  
     [in] CORDB_ADDRESS   address  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `address`  
- [in]A`CORDB_ADDRESS`ブレークポイントが設定されたアドレスを指定する値。  
+ からブレークポイントが設定されたアドレスを示す `CORDB_ADDRESS` 値です。  
   
 ## <a name="remarks"></a>コメント  
- 指定されたブレークポイントが設定されている以前に以前の呼び出しによって[icordebugprocess 2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)です。  
+ 指定されたブレークポイントは、以前の[ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)の呼び出しによって以前に設定されていた可能性があります。  
   
- `ClearUnmanagedBreakpoint`デバッグ中のプロセスの実行中に、メソッドを呼び出すことができます。  
+ `ClearUnmanagedBreakpoint` メソッドは、デバッグ中のプロセスの実行中に呼び出すことができます。  
   
- `ClearUnmanagedBreakpoint`メソッドでは、マネージのみのモードで、デバッガーがアタッチされている場合、または指定したアドレスにブレークポイントが存在しない場合はエラー コードが返されます。  
+ デバッガーがマネージ専用モードでアタッチされている場合、または指定されたアドレスにブレークポイントが存在しない場合、`ClearUnmanagedBreakpoint` メソッドはエラーコードを返します。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

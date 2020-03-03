@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912523"
 ---
 # <a name="canvas-how-to-topics"></a>キャンバスに関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.Canvas>絶対に子要素を配置する要素。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.Canvas>要素を子要素を絶対的に配置します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Canvas のコンテンツを Border で囲む](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [Canvas の配置プロパティを取得または設定する](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [Canvas を作成および使用する](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Canvas の添付プロパティを使用して子要素を配置する](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [つまみを使用したキャンバスのサイズ変更](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Canvas のコンテンツを Border で囲む](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [Canvas の配置プロパティを取得または設定する](how-to-get-or-set-canvas-positioning-properties.md)  
+ [Canvas を作成および使用する](how-to-create-and-use-a-canvas.md)  
+ [Canvas の添付プロパティを使用して子要素を配置する](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [つまみを使用したキャンバスのサイズ変更](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ ms.locfileid: "33550954"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

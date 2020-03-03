@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 7a1411daf446cbf06cd57b4e002c2c3cd77166af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11cf4f8d9457ebff385a601786dc97334f274324
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662068"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>省略可能なパラメーター型として使用されるジェネリック パラメーターは、クラスの制約がある型でなければなりません。
 プロシージャは、参照型に固定されていない型パラメーターを使用して、オプションのパラメーターで宣言されます。  
@@ -25,9 +25,10 @@ ms.locfileid: "54507162"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   参照型のみを受け入れるように型パラメーターを制限または省略可能なパラメーターを使用しないでください。  
+- 参照型のみを受け入れるように型パラメーターを制限または省略可能なパラメーターを使用しないでください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
 - [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)

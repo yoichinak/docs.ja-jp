@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
 - legacyCorruptedStateExceptionsPolicy element
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a787315ff8b016beff8fb8457619a462e5f3180
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d1d29a37999a01f3e370897a1052f4f94435a218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264631"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116459"
 ---
 # <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 要素
-共通言語ランタイムがアクセス違反およびその他の破損状態例外をキャッチするマネージ コードをできるかどうかを指定します。  
+共通言語ランタイムで、マネージコードがアクセス違反とその他の破損状態例外をキャッチできるようにするかどうかを指定します。  
   
- \<configuration>  
-\<runtime>  
-\<legacyCorruptedStateExceptionsPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,14 +32,14 @@ ms.locfileid: "55264631"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> アプリケーションをキャッチすることを指定します。 アクセス違反などの例外エラーの状態が破損します。|  
+|`enabled`|必須の属性です。<br /><br /> アプリケーションがアクセス違反などの破損状態の例外エラーをキャッチすることを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|`false`|アプリケーションはキャッチできない破損状態例外のエラーへのアクセス違反など。 既定値です。|  
-|`true`|アプリケーションがキャッチ破損状態例外のエラーへのアクセス違反など。|  
+|`false`|アプリケーションでは、アクセス違反などの破損状態の例外エラーはキャッチされません。 既定値です。|  
+|`true`|アプリケーションは、アクセス違反などの破損状態の例外エラーをキャッチします。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -54,20 +52,20 @@ ms.locfileid: "55264631"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- .NET Framework 3.5 およびそれ以前のバージョンでは、共通言語ランタイムは、破損したプロセス状態で発生した例外をキャッチするマネージ コードを使用できます。 アクセス違反は、この種類の例外の例を示します。  
+ .NET Framework バージョン3.5 以前では、共通言語ランタイムは、破損したプロセス状態によって発生した例外をキャッチするために、マネージコードを許可しました。 この種類の例外の例として、アクセス違反があります。  
   
- 以降では、 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、マネージ コードではこれらの種類の例外のキャッチされなく`catch`ブロックします。 ただし、この変更を上書きし、2 つの方法で破損状態例外の処理を維持できます。  
+ .NET Framework 4 以降では、マネージコードは `catch` ブロックでこれらの種類の例外をキャッチしなくなりました。 ただし、次の2つの方法で、この変更をオーバーライドし、破損状態例外の処理を維持することができます。  
   
--   設定、`<legacyCorruptedStateExceptionsPolicy>`要素の`enabled`属性を`true`します。 この構成設定は適用されているプロセスであり、すべてのメソッドの影響します。  
+- `<legacyCorruptedStateExceptionsPolicy>` 要素の `enabled` 属性を `true`に設定します。 この構成設定は、プロセス全体に適用され、すべてのメソッドに影響します。  
   
- - または -  
+ -または-  
   
--   適用、<xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType>属性をメソッド、例外を含む`catch`ブロックします。  
+- 例外 `catch` ブロックを含むメソッドに <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 属性を適用します。  
   
- この構成要素はでのみ使用できますが、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]以降。  
+ この構成要素は、.NET Framework 4 以降でのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、アプリケーションが前に、の動作に戻る必要がありますを指定する方法を示します、 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]、およびすべての破損状態例外のエラーをキャッチします。  
+ 次の例では、アプリケーションが .NET Framework 4 より前の動作に戻し、すべての破損状態の例外エラーをキャッチするように指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -78,6 +76,7 @@ ms.locfileid: "55264631"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)

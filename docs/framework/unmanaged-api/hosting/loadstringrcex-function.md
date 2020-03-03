@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68332aee895f012bcf6ab6a72936c8dddc7f28a0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597945"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122047"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 関数
 HRESULT 値を、指定したカルチャの適切なエラー メッセージに変換します。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LoadStringRCEx (  
     [in]  LCID    lcid,   
     [in]  UINT    iResouceID,   
@@ -41,46 +39,47 @@ HRESULT LoadStringRCEx (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lcid`  
- [in]カルチャ識別子。 -1 を渡す`lcid`の既定のカルチャを使用します。  
+ からカルチャ識別子。 既定のカルチャを使用するには、`lcid` に-1 を渡します。  
   
  `iResourceID`  
- [in]HRESULT。  
+ からHRESULT。  
   
  `szBuffer`  
- [out]正常完了時にエラー メッセージを格納するバッファー。  
+ 入出力正常に完了したときのエラーメッセージを格納するバッファー。  
   
  `iMax`  
- [in]エラー メッセージのバッファーのサイズ。  
+ からエラーメッセージバッファーのサイズ。  
   
  `bQuiet`  
- [in]無視されます。  
+ から無効.  
   
  `pcwchUsed`  
- [out]エラー メッセージの長さへのポインター。  
+ 入出力エラーメッセージの長さへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の値だけでなく、WinError.h で定義されている標準の COM エラー コードを返します。  
+ このメソッドは、次の値に加えて、Winerror.h で定義されている標準の COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`szBuffer` null、または`iMax`はゼロ (0)。|  
+|E_INVALIDARG|`szBuffer` が null であるか、`iMax` がゼロ (0) です。|  
   
 ## <a name="remarks"></a>Remarks  
- メソッドが正常に完了しない場合`szBuffer`空の文字列が含まれています。  
+ メソッドが正常に完了しなかった場合、`szBuffer` には空の文字列が含まれます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
 - [LoadStringRC 関数](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

@@ -1,5 +1,5 @@
 ---
-title: ICorDebugGenericValue Interface1
+title: ICorDebugGenericValue インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugGenericValue
@@ -14,37 +14,36 @@ helpviewer_keywords:
 ms.assetid: bc14f408-b359-4c8c-ade2-888ccdf7261b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ce4c1b73ab806958627bb68bfdcfcae890bc5e67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e60d4b128bf03ff81863e0c95815b2c204807583
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709833"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794468"
 ---
-# <a name="icordebuggenericvalue-interface1"></a>ICorDebugGenericValue Interface1
-すべての値に適用される"ICorDebugValue"のサブクラスです。 このインターフェイスは、値に対して Get メソッドと Set メソッドを提供します。  
+# <a name="icordebuggenericvalue-interface"></a>ICorDebugGenericValue インターフェイス
+
+すべての値に適用される "ICorDebugValue" のサブクラス。 このインターフェイスは、値に対して Get メソッドと Set メソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-getvalue-method.md)|指定されたバッファーに値をコピーします。|  
-|[SetValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebuggenericvalue-setvalue-method.md)|指定したバッファーから新しい値をコピーします。|  
+|[GetValue メソッド](icordebuggenericvalue-getvalue-method.md)|指定したバッファーに値をコピーします。|  
+|[SetValue メソッド](icordebuggenericvalue-setvalue-method.md)|指定したバッファーから新しい値をコピーします。|  
   
-## <a name="remarks"></a>Remarks  
- `ICorDebugGenericValue` 不可能であるサブ インターフェイスです。  
+## <a name="remarks"></a>コメント  
+ `ICorDebugGenericValue` は、リモート処理が不可能なため、サブインターフェイスです。  
   
- 参照型、値は、参照の内容ではなく、参照です。  
+ 参照型の場合、値は参照の内容ではなく参照です。  
   
  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -54,4 +53,4 @@ ms.locfileid: "54709833"
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

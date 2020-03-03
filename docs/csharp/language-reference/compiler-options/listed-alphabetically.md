@@ -2,17 +2,17 @@
 title: アルファベット順の C# コンパイラ オプションの一覧
 ms.date: 05/15/2018
 helpviewer_keywords:
-- compiler options [C#], listed alpabetically
-- C# language, compiler options listed alphabitically
+- compiler options [C#], listed alphabetically
+- C# language, compiler options listed alphabetically
 - Visual C# compiler, options listed alphabetically
 - Visual C#, compiler options listed alphabetically
 ms.assetid: 43535ea0-ca47-4a15-b528-615087a86092
-ms.openlocfilehash: f2e9ed6ee23367e6ef3cd035ef5a485105da8a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6d471cd27f35de6325a130e6c909d13cb1dcc85
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653750"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972739"
 ---
 # <a name="c-compiler-options-listed-alphabetically"></a>アルファベット順の C# コンパイラ オプションの一覧
 
@@ -29,13 +29,17 @@ ms.locfileid: "54653750"
 |[-baseaddress](baseaddress-compiler-option.md)|ビルドするライブラリのベース アドレスを指定します。|
 |[-bugreport](bugreport-compiler-option.md)|"障害報告" ファイルを作成します。 -errorreport:prompt または -errorreport:send と組み合わせて使用した場合、このファイルがクラッシュ情報と共に送信されます。|
 |[/checked](checked-compiler-option.md)|オーバーフロー チェックを生成するようコンパイラに指示します。|
-|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。|
+|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA256 (既定) または SHA1 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。 |
 |[-codepage](codepage-compiler-option.md)|ソース ファイルを開くときに使用するコードページを指定します。|
 |[-debug](debug-compiler-option.md)|デバッグ情報を生成します。|
 |[-define](define-compiler-option.md)|条件付きコンパイル シンボルを定義します。|
 |[-delaysign](delaysign-compiler-option.md)|厳密名キーのパブリックな部分のみを使ってアセンブリに遅延署名します。|
 |[-deterministic](deterministic-compiler-option.md)|入力が同一である場合、バイナリ コンテンツがコンパイル全体で同一のアセンブリをコンパイラに出力させます。|
 |[-doc](doc-compiler-option.md)|生成する XML ドキュメント ファイルを指定します。|
+|-embed|すべてのソース ファイルを PDB に埋め込みます。|
+|-embed:\<file list>|特定のファイルを PDB に埋め込みます。|
+|-errorendlocation|各エラーの終了位置の出力行と出力列。|
+|-errorlog:\<file>|コンパイラとアナライザーのすべての診断情報を記録するファイルを指定します。|
 |[-errorreport](errorreport-compiler-option.md)|内部コンパイラ エラーの処理方法 (prompt、send、none) を指定します。 既定値は none です。|
 |[-filealign](filealign-compiler-option.md)|出力ファイルのセクションで使用する配置を指定します。|
 |[/fullpaths](fullpaths-compiler-option.md)|完全修飾パスを生成するようコンパイラに指示します。|
@@ -68,12 +72,14 @@ ms.locfileid: "54653750"
 |[-reference](reference-compiler-option.md)|指定されたアセンブリ ファイルからメタデータを参照します。|
 |[/refout](refout-compiler-option.md)|プライマリ アセンブリだけでなく、参照アセンブリを生成します。|
 |[/refonly](refonly-compiler-option.md)|プライマリ アセンブリの代わりに、参照アセンブリを生成します。|
+|-reportanalyzer|実行時間など、アナライザーの追加情報を報告します。|
 |[-resource](resource-compiler-option.md)|指定したリソースを埋め込みます。|
 |-ruleset:\<file>|特定の診断を無効にするルールセット ファイルを指定します。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|実行可能ファイルが使用できるサブシステムの最低限のバージョンを指定します。|
 |[-target](target-compiler-option.md)|6 つのオプション ([-target:appcontainerexe](target-appcontainerexe-compiler-option.md)、[-target:exe](target-exe-compiler-option.md)、[-target:library](target-library-compiler-option.md)、[-target:module](target-module-compiler-option.md)、[-target:winexe](target-winexe-compiler-option.md)、[-target:winmdobj](target-winmdobj-compiler-option.md)) のいずれかを使用して、出力ファイルの形式を指定します。|
-|[/unsafe](unsafe-compiler-option.md)|[アンセーフ](../../../csharp/language-reference/keywords/unsafe.md) コードを許可します。|
+|[/unsafe](unsafe-compiler-option.md)|[アンセーフ](../keywords/unsafe.md) コードを許可します。|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 エンコードでコンパイラのメッセージを出力します。|
+|-version|コンパイラのバージョン番号を表示して終了します。|
 |[/warn](warn-compiler-option.md)|警告レベル (0 ～ 4) を設定します。|
 |[-warnaserror](warnaserror-compiler-option.md)|特定の警告をエラーとして報告します。|
 |[-win32icon](win32icon-compiler-option.md)|出力に使用するアイコンを指定します。|
@@ -84,5 +90,5 @@ ms.locfileid: "54653750"
 
 - [C# コンパイラ オプション](index.md)
 - [カテゴリ別の C# コンパイラ オプションの一覧](listed-by-category.md)
-- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio のコマンドラインのための環境変数を設定する方法](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
 - [\<compiler> 要素](../../../framework/configure-apps/file-schema/compiler/compiler-element.md)

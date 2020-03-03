@@ -2,12 +2,12 @@
 title: CompositeDuplexBindingElement
 ms.date: 03/30/2017
 ms.assetid: 05e985aa-6462-431d-a831-0d601f3a3835
-ms.openlocfilehash: 76fe72ad1c13dfff2ea2b78e43153f55c29894b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db3081e5523dc96862a1706d6366a32a3693e88e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963905"
 ---
 # <a name="compositeduplexbindingelement"></a>CompositeDuplexBindingElement
 CompositeDuplexBindingElement  
@@ -38,7 +38,8 @@ class CompositeDuplexBindingElement : BindingElement
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>

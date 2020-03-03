@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30106
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
-ms.openlocfilehash: b113860366ccbe47fed8ef13abb90a540dc88b33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76cf0a997e9ad36ab4b5dfdc7c4bc29c57d309eb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710652"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665693"
 ---
 # <a name="number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array"></a>インデックス番号がインデックス付き配列の次元を超えています。
 配列要素にアクセスするために使用されるインデックスの数は、配列のランク、つまり配列に宣言した次元の数とまったく同じである必要があります。  
@@ -21,7 +21,7 @@ ms.locfileid: "54710652"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   添字の合計数には、配列のランクと同じになるまでは、配列参照からの添字を削除します。 例:  
+- 添字の合計数には、配列のランクと同じになるまでは、配列参照からの添字を削除します。 例えば:  
   
     ```vb  
     Dim gameBoard(3, 3) As String  
@@ -36,4 +36,5 @@ ms.locfileid: "54710652"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)

@@ -15,54 +15,57 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f60c4373410c46c5d1ea284b2cacd4b5c070ed9d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98d5dcf3b691f16f63390851e207f518bf26ab11
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682824"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866521"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed メソッド
 COM 相互運用機能の vtable が破棄されていることをプロファイラーに通知します。  
   
 > [!NOTE]
->  このコールバックは、シャット ダウンに近いに vtable の破壊が発生するので、発生することはありません。  
+> このコールバックは、vtable の破棄がシャットダウンに非常に近いために発生することはほとんどありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT COMClassicVTableDestroyed(  
     [in] ClassID wrappedClassId,  
     [in] REFGUID implementedIID,  
     [in] void    *pVTable);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `wrappedClasId`  
- [in]この vtable が作成されたクラスの ID。  
-  
- `implementedIID`  
- [in]クラスによって実装されるインターフェイスの ID。 インターフェイスが内部のみの場合、この値は NULL にすることがあります。  
-  
- `pVTable`  
- [in]Vtable の先頭へのポインター。  
-  
+## <a name="parameters"></a>パラメーター
+
+- `wrappedClassId`
+
+  \[] この vtable が作成されたクラスの ID。
+
+- `implementedIID`
+
+  \[] クラスによって実装されるインターフェイスの ID。 この値は、インターフェイスが内部でのみ使用されている場合は NULL になります。
+
+- `pVTable`
+
+  \[] には、vtable の先頭へのポインターが含まれています。
+
 ## <a name="remarks"></a>Remarks  
- プロファイラーでは、スタックはガベージ コレクションを許可する状態にできない可能性がありますので、このメソッドの実装でブロックしないでくださいし、そのため、プリエンプティブなガベージ コレクションを有効にできません。 ここで、プロファイラーをブロックする場合とは、ガベージ コレクションが試行されると、ランタイムがこのコールバックが戻るまでブロックされます。  
+ プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   
- このメソッドのプロファイラーの実装には、任意の方法で管理されているメモリの割り当てが発生またはマネージ コードを呼び出さないでください。  
+ プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [COMClassicVTableCreated メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-comclassicvtablecreated-method.md)
+
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [COMClassicVTableCreated メソッド](icorprofilercallback-comclassicvtablecreated-method.md)

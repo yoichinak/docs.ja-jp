@@ -2,16 +2,15 @@
 title: フレームワーク ライブラリ
 description: 多くの一般的な型、アプリ固有の型、アルゴリズム、ユーティリティの機能の実装を提供しているライブラリについて説明します。
 author: richlander
-ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: d4444b6d080afa92a4e7fd9f30c5f9358f02f0ef
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143377"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159235"
 ---
 # <a name="framework-libraries"></a>フレームワーク ライブラリ
 
@@ -27,37 +26,37 @@ BCL は最も基本的な型およびユーティリティの機能を提供し�
 
 .NET には、すべてのプログラムで (さまざまな程度で) 使用されるプリミティブ型のセットが含まれています。 これらの型には、数値、文字列、バイト、および任意のオブジェクトなどのデータが含まれています。 C# 言語には、これらの型のキーワードが含まれています。 これらの型のサンプル セットを、一致する C# キーワードとともに以下に示します。
 
-* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): CLR 型システムの最も基本の基底クラス。 型階層のルートです。
-* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)): 16 ビットの符号付き整数型。 符号なしの <xref:System.UInt16> も存在します。
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)): 32 ビットの符号付き整数型。 符号なしの [UInt32](../csharp/language-reference/keywords/uint.md) も存在します。
-* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)): 32 ビット浮動小数点型。
-* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)): 128 ビットの 10 進数型。
-* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)): メモリのバイトを表す符号なし 8 ビット整数。
-* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): `true` または `false` を表すブール型。
-* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): Unicode 文字を表す 16 ビットの数値型。
-* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): 一連の文字を表します。 `char[]` とは異なりますが、`string` で各 `char` にインデックスを付けることができます。
+* <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/builtin-types/reference-types.md#the-object-type)): CLR 型システムの最も基本の基底クラス。 型階層のルートです。
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)): 16 ビットの符号付き整数型。 符号なしの <xref:System.UInt16> も存在します。
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)): 32 ビットの符号付き整数型。 符号なしの [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) も存在します。
+* <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)): 32 ビット浮動小数点型。
+* <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/builtin-types/floating-point-numeric-types.md)): 128 ビットの 10 進数型。
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)): メモリのバイトを表す符号なし 8 ビット整数。
+* <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/builtin-types/bool.md)): `true` または `false` を表すブール型。
+* <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/builtin-types/char.md)): Unicode 文字を表す 16 ビットの数値型。
+* <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/builtin-types/reference-types.md#the-string-type)): 一連の文字を表します。 `char[]` とは異なりますが、`string` で各 `char` にインデックスを付けることができます。
 
 ## <a name="data-structures"></a>データ構造
 
 .NET には、ほとんどの .NET アプリの主力となるデータ構造体のセットが含まれています。 これらはほとんどがコレクションですが、その他の型も含まれています。
 
-*   <xref:System.Array>: インデックスを使用してアクセスできる、厳密に型指定されたオブジェクトの配列を表します。 その構造ごとの固定サイズがあります。
-*   <xref:System.Collections.Generic.List%601>: インデックスを使用してアクセスできる、厳密に型指定されたオブジェクトのリストを表します。 必要に応じてサイズを自動調整します。
-*   <xref:System.Collections.Generic.Dictionary%602>: キーによってインデックスが作成される値のコレクションを表します。 値は、キーを使用してアクセスできます。 必要に応じてサイズを自動調整します。
-*   <xref:System.Uri>: URI (Uniform Resource Identifier) のオブジェクト表現を可能にし、URI の一部へ簡単にアクセスできるようにします。
-*   <xref:System.DateTime>: 通常、日付や時刻として表現される瞬間を表します。
+* <xref:System.Array>: インデックスを使用してアクセスできる、厳密に型指定されたオブジェクトの配列を表します。 その構造ごとの固定サイズがあります。
+* <xref:System.Collections.Generic.List%601>: インデックスを使用してアクセスできる、厳密に型指定されたオブジェクトのリストを表します。 必要に応じてサイズを自動調整します。
+* <xref:System.Collections.Generic.Dictionary%602>: キーによってインデックスが作成される値のコレクションを表します。 値は、キーを使用してアクセスできます。 必要に応じてサイズを自動調整します。
+* <xref:System.Uri>: URI (Uniform Resource Identifier) のオブジェクト表現を可能にし、URI の一部へ簡単にアクセスできるようにします。
+* <xref:System.DateTime>: 通常、日付や時刻として表現される瞬間を表します。
 
 ## <a name="utility-apis"></a>ユーティリティ API
 
 .NET には多くの重要なタスクの機能を提供するユーティリティ API のセットが含まれています。
 
-*   <xref:System.Net.Http.HttpClient>: URI で識別されるリソースに HTTP 要求を送信し、そのリソースから HTTP 応答を受信するための基底クラスを提供する API です。
-*   <xref:System.Xml.Linq.XDocument>: LINQ を使用して XML ドキュメントのロードと照会をするための API です。
-*   <xref:System.IO.StreamReader>: ファイルを読み取るための API です。 
-*   <xref:System.IO.StreamWriter>: ファイルを書き込むための API です。
+* <xref:System.Net.Http.HttpClient>: URI で識別されるリソースに HTTP 要求を送信し、そのリソースから HTTP 応答を受信するための基底クラスを提供する API です。
+* <xref:System.Xml.Linq.XDocument>: LINQ を使用して XML ドキュメントのロードと照会をするための API です。
+* <xref:System.IO.StreamReader>: ファイルを読み取るための API です。
+* <xref:System.IO.StreamWriter>: ファイルを書き込むための API です。
 
 ## <a name="app-model-apis"></a>アプリ モデル API
 
 .NET で使用できる多くのアプリ モデルが、複数の企業から提供されています。
 
-*   [ASP.NET](https://www.asp.net): Web サイトとサービスを構築するための Web フレームワークを提供します。 Windows、Linux、macOS でサポートされます (ASP.NET のバージョンによって異なります)。
+* [ASP.NET](https://www.asp.net): Web サイトとサービスを構築するための Web フレームワークを提供します。 Windows、Linux、macOS でサポートされます (ASP.NET のバージョンによって異なります)。

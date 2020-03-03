@@ -15,50 +15,49 @@ helpviewer_keywords:
 ms.assetid: 210a2f02-2678-4555-bc4a-78a0408764c8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf8bc747f643819eb82448b4ad6b7fab696c9c91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e419ebb6ffd404368baf32e591e08c4a70645127
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572501"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121118"
 ---
 # <a name="icordebugcode2getcodechunks-method"></a>ICorDebugCode2::GetCodeChunks メソッド
-このコード オブジェクトを構成しているコード チャンクを取得します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT GetCodeChunks (  
-    [in]  ULONG32     cbufSize,  
-    [out] ULONG32     *pcnumChunks,  
-    [out, size_is(cbufSize), length_is(*pcnumChunks)]   
-        CodeChunkInfo chunks[]  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `cbufSize`  
- [in]サイズ、`chunks`配列。  
-  
- `pcnumChunks`  
- [out]返されるチャンクの数、`chunks`配列。  
-  
- `chunks`  
- [out]コードの 1 つのチャンクを表す"CodeChunkInfo"構造体の配列。 場合の値`cbufSize`が 0 の場合このパラメーターを null にすることができます。  
-  
-## <a name="remarks"></a>Remarks  
- コード チャンクが重複し、は、これが連結されたによって順序に従っている[icordebugcode::getcode](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getcode-method.md)します。 .NET Framework version 2.0 では、Microsoft intermediate language (MSIL) コード オブジェクトには、1 つのコード チャンクが構成されています。  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** CorDebug.idl、CorDebug.h  
-  
- **ライブラリ:** CorGuids.lib  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>関連項目
 
+このコード オブジェクトを構成しているコード チャンクを取得します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT GetCodeChunks (
+    [in]  ULONG32     cbufSize,
+    [out] ULONG32     *pcnumChunks,
+    [out, size_is(cbufSize), length_is(*pcnumChunks)]
+        CodeChunkInfo chunks[]
+);
+```
+
+## <a name="parameters"></a>パラメーター
+
+`cbufSize`  
+から`chunks` 配列のサイズ。
+
+`pcnumChunks`  
+入出力`chunks` 配列で返されるチャンクの数。
+
+`chunks`  
+入出力"CodeChunkInfo" 構造体の配列。それぞれが1つのコードチャンクを表します。 `cbufSize` の値が0の場合、このパラメーターには null を指定できます。
+
+## <a name="remarks"></a>Remarks
+
+コードチャンクは重複しません。コードチャンクは、「[コード:: GetCode](icordebugcode-getcode-method.md)」によって連結された順序に従います。 .NET Framework バージョン2.0 の Microsoft 中間言語 (MSIL) コードオブジェクトは、1つのコードチャンクを構成します。
+
+## <a name="requirements"></a>［要件］
+
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+
+**ヘッダー:** CorDebug.idl、CorDebug.h
+
+**ライブラリ:** CorGuids.lib
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

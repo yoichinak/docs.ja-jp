@@ -15,26 +15,24 @@ helpviewer_keywords:
 ms.assetid: 397a4d72-6a87-4f0b-8813-af31af91d68f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 859abdd713fb19bbb3698d0da72cbff33cfbc6fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cb2d6b03af6e7f0b05c595640710850fd446142f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411675"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73095136"
 ---
 # <a name="icordebugilframegetstackvalue-method"></a>ICorDebugILFrame::GetStackValue メソッド
 このメソッドは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStackValue (  
     [in] DWORD                  dwIndex,  
     [out] ICorDebugValue        **ppValue  
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>［要件］  
  **ヘッダー:** CorDebug.idl、CorDebug.h

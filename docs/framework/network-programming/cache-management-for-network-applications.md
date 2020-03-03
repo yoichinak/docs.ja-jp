@@ -6,12 +6,12 @@ helpviewer_keywords:
 - network resources, caching
 - Internet, caching
 ms.assetid: fc258a40-f370-434f-ae09-4a8cb11ddaeb
-ms.openlocfilehash: 265b4e451ebb76dbabe0d3e0df065504a3891f32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7e131963999db3e3d5e0e6f3fa110da36e6452a1
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199592"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048884"
 ---
 # <a name="cache-management-for-network-applications"></a>ネットワーク アプリケーションのキャッシュ管理
 このトピックと関連するサブトピックでは、<xref:System.Net.WebClient>、<xref:System.Net.WebRequest>、<xref:System.Net.HttpWebRequest>、および <xref:System.Net.FtpWebRequest> クラスを使用して取得したリソースのキャッシュ処理について説明します。  
@@ -23,18 +23,18 @@ ms.locfileid: "50199592"
  セキュリティの懸念事項があるため、中間層のシナリオにキャッシュを使用することは**推奨されません**。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [キャッシュ ポリシー](../../../docs/framework/network-programming/cache-policy.md)  
+ [キャッシュ ポリシー](cache-policy.md)  
  キャッシュ ポリシーの概要と定義方法について説明します。  
   
- [場所ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/location-based-cache-policies.md)  
+ [場所ベースのキャッシュ ポリシー](location-based-cache-policies.md)  
  ハイパーテキスト転送プロトコル (http と https) リソースに使用できる各種の場所ベースのキャッシュ ポリシーを定義します。  
   
- [時間ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/time-based-cache-policies.md)  
+ [時間ベースのキャッシュ ポリシー](time-based-cache-policies.md)  
  時間ベースのキャッシュ ポリシーのカスタマイズに使用できる条件について説明します。  
   
- [ネットワーク アプリケーションでのキャッシュの構成](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)  
+ [ネットワーク アプリケーションでのキャッシュの構成](configuring-caching-in-network-applications.md)  
  キャッシュ ポリシーとキャッシュを使用する要求をプログラムで作成する方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Net.Cache>  
  取得したリソースのキャッシュ ポリシーを <xref:System.Net.WebRequest>、<xref:System.Net.HttpWebRequest>、および <xref:System.Net.FtpWebRequest> クラスを使用して定義するために使用する型および列挙体を定義します。

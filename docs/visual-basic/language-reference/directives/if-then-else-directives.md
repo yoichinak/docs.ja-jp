@@ -1,5 +1,5 @@
 ---
-title: '#もし。。。Then... #Else ディレクティブ (Visual Basic)'
+title: '#If...Then...#Else ディレクティブ'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,72 +18,75 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: 8930e0e5c6bf9bd713b5601c91e6d1a5cbfd7a51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40e93b718241c9819e3c0fd84595e76eb0c86472
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568230"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343813"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else ディレクティブ
-選択した Visual Basic のコード ブロックを条件付きでコンパイルします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-#If expression Then  
-   statements  
-[ #ElseIf expression Then  
-   [ statements ]  
-...  
-#ElseIf expression Then  
-   [ statements ] ]  
-[ #Else  
-   [ statements ] ]  
-#End If  
-```  
-  
-## <a name="parts"></a>指定項目  
- `expression`  
- 必要な`#If`と`#ElseIf`ステートメントの省略可能な他の場所。 1 つまたは複数の条件付きコンパイラ定数、リテラル、および演算子に評価されるのみで構成される、任意の式`True`または`False`します。  
-  
- `statements`  
- 必要な`#If`ステートメント ブロック、省略可能な他の場所。 Visual Basic プログラムの行またはコンパイラ ディレクティブに関連付けられている式が評価された場合にコンパイルされる`True`します。  
-  
- `#End If`  
- 終了、`#If`ステートメント ブロックです。  
-  
-## <a name="remarks"></a>Remarks  
- 画面の動作で、`#If...Then...#Else`ディレクティブが同じのように見える、`If...Then...Else`ステートメント。 ただし、`#If...Then...#Else`ディレクティブ、コンパイラによってどのようなコンパイルは一方の評価、`If...Then...Else`ステートメントが実行時に条件を評価します。  
-  
- 条件付きコンパイルは通常、さまざまなプラットフォーム向けの同じプログラムのコンパイルに使用されます。 使用を防ぐために実行可能ファイルに表示されないコードをデバッグします。 条件付きコンパイル時に除外するコードは、サイズやパフォーマンスに影響を与えませんために完全に、最終的な実行可能ファイルから省略されます。  
-  
- 使用して、任意の評価の結果に関係なくすべての式が評価されます`Option Compare Binary`します。 `Option Compare`ステートメントでは式には影響しません`#If`と`#ElseIf`ステートメント。  
-  
-> [!NOTE]
->  単一行の形式、 `#If`、 `#Else`、 `#ElseIf`、および`#End If`ディレクティブが存在しません。 その他のコードは、ディレクティブのいずれかと同じ行に表示できません。 
 
-条件付きコンパイル ブロック内のステートメントは、完全な論理ステートメントである必要があります。 たとえば、関数の属性のみを条件付きでコンパイルすることはできませんが、条件付きでその属性と共に関数を宣言することができます。
+選択された Visual Basic コードのブロックを条件付きでコンパイルします。
+
+## <a name="syntax"></a>構文
 
 ```vb
-   #If DEBUG Then
-   <WebMethod()>
-   Public Function SomeFunction() As String
-   #Else
-   <WebMethod(CacheDuration:=86400)>
-   Public Function SomeFunction() As String
-   #End If
+#If expression Then
+   statements
+[ #ElseIf expression Then
+   [ statements ]
+...
+#ElseIf expression Then
+   [ statements ] ]
+[ #Else
+   [ statements ] ]
+#End If
+```
+
+## <a name="parts"></a>指定項目
+
+`expression`  
+`#If` および `#ElseIf` のステートメント、他の場所では省略可能です。 `True` または `False`に評価される1つ以上の条件付きコンパイラ定数、リテラル、および演算子で構成される任意の式。
+
+`statements`  
+`#If` ステートメントブロックに必要です。他の場所では省略可能です。 関連付けられた式が `True`に評価される場合にコンパイルされるプログラムラインまたはコンパイラディレクティブを Visual Basic します。
+
+`#End If`  
+`#If` ステートメントブロックを終了します。
+
+## <a name="remarks"></a>コメント
+
+サーフェイスでは、`#If...Then...#Else` ディレクティブの動作は、`If...Then...Else` ステートメントと同じになります。 ただし、`#If...Then...#Else` ディレクティブは、コンパイラによってコンパイルされた内容を評価します。一方、`If...Then...Else` ステートメントは、実行時に条件を評価します。
+
+通常、条件付きコンパイルは、異なるプラットフォームに対して同じプログラムをコンパイルするために使用されます。 また、デバッグコードが実行可能ファイルに表示されないようにするためにも使用されます。 条件付きコンパイル中に除外されたコードは、最終的な実行可能ファイルから完全に省略されるため、サイズやパフォーマンスには影響しません。
+
+評価の結果に関係なく、すべての式は `Option Compare Binary`を使用して評価されます。 `Option Compare` ステートメントは、`#If` および `#ElseIf` ステートメントの式には影響しません。
+
+> [!NOTE]
+> `#If`、`#Else`、`#ElseIf`、および `#End If` ディレクティブの単一行形式は存在しません。 ディレクティブと同じ行に他のコードを記述することはできません。
+
+条件付きコンパイルブロック内のステートメントは、完全な論理ステートメントである必要があります。 たとえば、条件付きで関数の属性のみをコンパイルすることはできませんが、その属性と共に関数を条件付きで宣言することはできます。
+
+```vb
+#If DEBUG Then
+<WebMethod()>
+Public Function SomeFunction() As String
+#Else
+<WebMethod(CacheDuration:=86400)>
+Public Function SomeFunction() As String
+#End If
 ```
 
 ## <a name="example"></a>例
- この例では、`#If...Then...#Else`コンストラクトを特定のステートメントをコンパイルするかどうかを判断します。  
-  
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
-  
+
+この例では、`#If...Then...#Else` コンストラクトを使用して、特定のステートメントをコンパイルするかどうかを判断します。
+
+[!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]
+
 ## <a name="see-also"></a>関連項目
+
 - [#Const ディレクティブ](../../../visual-basic/language-reference/directives/const-directive.md)
 - [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>
-
-

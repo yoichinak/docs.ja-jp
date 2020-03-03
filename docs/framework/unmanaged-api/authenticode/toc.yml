@@ -1,0 +1,21 @@
+- name: Authenticode
+  href: index.md
+  items:
+    - name: _AxlGetIssuerPublicKeyHash 関数
+      href: axlgetissuerpublickeyhash-function.md
+    - name: _AxlPublicKeyBlobToPublicKeyToken 関数
+      href: axlpublickeyblobtopublickeytoken-function.md
+    - name: _AxlRSAKeyValueToPublicKeyToken 関数
+      href: axlrsakeyvaluetopublickeytoken-function.md
+    - name: CertFreeAuthenticodeSignerInfo 関数
+      href: certfreeauthenticodesignerinfo-function.md
+    - name: CertFreeAuthenticodeTimestamperInfo 関数
+      href: certfreeauthenticodetimestamperinfo-function.md
+    - name: CertTimestampAuthenticodeLicense 関数
+      href: certtimestampauthenticodelicense-function.md
+    - name: CertVerifyAuthenticodeLicense 関数
+      href: certverifyauthenticodelicense-function.md
+    - name: AXL_AUTHENTICODE_SIGNER_INFO 構造体
+      href: axl-authenticode-signer-info-structure.md
+    - name: AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体
+      href: axl-authenticode-timestamper-info-structure.md

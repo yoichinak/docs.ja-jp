@@ -9,20 +9,20 @@ helpviewer_keywords:
 - trace sources
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
-ms.openlocfilehash: d7d92f91838a8d1914ffe574f018cc701477d767
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a903d009f2056e65414c1792494fbbd20e224413
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262505"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088814"
 ---
-# <a name="sources-element"></a>\<ソース > 要素
-トレース メッセージを開始するトレース ソースを指定します。  
-  
- \<configuration>  
-\<system.diagnostics>  
-\<ソース >  
-  
+# <a name="sources-element"></a>\<sources> 要素
+トレースメッセージを開始するトレースソースを指定します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.diagnostics>** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<sources>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -41,7 +41,7 @@ ms.locfileid: "55262505"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)|必須の要素です。<br /><br /> トレース メッセージを開始するトレース ソースを指定します。|  
+|[\<source>](source-element.md)|必須の要素です。<br /><br /> トレース メッセージを開始するトレース ソースを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -51,10 +51,10 @@ ms.locfileid: "55262505"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<sources>`トレース ソースを追加する要素`mySource`という名前のソース スイッチのレベルを設定して`sourceSwitch`します。 トレース情報をコンソールに出力する、コンソール トレース リスナーが追加されます。  
+ 次の例では、`<sources>` 要素を使用してトレースソース `mySource` を追加し、`sourceSwitch`という名前のソーススイッチのレベルを設定する方法を示します。 トレース情報をコンソールに書き込むコンソールトレースリスナーが追加されます。  
   
 ```xml  
 <configuration>  
@@ -80,11 +80,12 @@ ms.locfileid: "55262505"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
-- [\<source>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)
+- [\<source>](source-element.md)

@@ -15,25 +15,23 @@ helpviewer_keywords:
 ms.assetid: da6a1123-871d-4492-9d35-3bdb49f94c93
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 670c6af66802c8badc5dba9d414427a13a1b815c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad0c93dfcb4dc630793a6735ab00de9da6166e9a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411864"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130968"
 ---
 # <a name="icordebugilframegetstackdepth-method"></a>ICorDebugILFrame::GetStackDepth メソッド
 このメソッドは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStackDepth (  
     [out] ULONG32               *pDepth  
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>［要件］  
  **ヘッダー:** CorDebug.idl、CorDebug.h

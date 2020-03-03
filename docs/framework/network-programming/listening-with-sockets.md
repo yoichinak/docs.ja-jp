@@ -15,12 +15,12 @@ helpviewer_keywords:
 - listening with sockets
 - Internet, sockets
 ms.assetid: 40e426cc-13db-4371-95eb-f7388bd23ebf
-ms.openlocfilehash: 763d1106a289e4aa6530eb07971d6ffb7e6095b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8db8cc6157ef0b03c90d00804696c7e660f08a3
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527849"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736781"
 ---
 # <a name="listening-with-sockets"></a>リッスン (ソケットで)
 リスナーまたはサーバー ソケットは、ネットワーク上のポートを開き、クライアントがそのポートに接続するまで待機します。 他のネットワーク アドレス ファミリとプロトコルもありますが、この例では、TCP/IP ネットワーク用のリモート サービスを作成する方法を説明します。  
@@ -30,13 +30,13 @@ ms.locfileid: "54527849"
  次の例では、ホスト コンピューターの **Dns** から返される最初の IP アドレスと、登録されているポート番号範囲から選択されたポート番号を組み合わせて、サーバーの <xref:System.Net.IPEndPoint> を作成しています。  
   
 ```vb  
-Dim ipHostInfo As IPHostEntry = Dns.Resolve(Dns.GetHostName())  
+Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
 Dim ipAddress As IPAddress = ipHostInfo.AddressList(0)  
 Dim localEndPoint As New IPEndPoint(ipAddress, 11000)  
 ```  
   
 ```csharp  
-IPHostEntry ipHostInfo = Dns.Resolve(Dns.GetHostName());  
+IPHostEntry ipHostInfo = Dns.GetHostEntry(Dns.GetHostName());  
 IPAddress ipAddress = ipHostInfo.AddressList[0];  
 IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
 ```  
@@ -60,8 +60,9 @@ listener.Listen(100);
  **Listen** メソッドには、**Socket** に対する保留中の接続数の上限を指定する 1 つのパラメーターがあります。この上限を超えると、サーバー ビジー エラーが接続クライアントに返されます。 この例では、接続キューに格納できるクライアント数の上限は 100 個で、クライアント番号 101 にはサーバー ビジー応答が返されます。  
   
 ## <a name="see-also"></a>関連項目
-- [同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [非同期サーバー ソケットの使用](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)
-- [クライアント ソケットの使用](../../../docs/framework/network-programming/using-client-sockets.md)
-- [方法: ソケットを作成する](../../../docs/framework/network-programming/how-to-create-a-socket.md)
-- [ソケット](../../../docs/framework/network-programming/sockets.md)
+
+- [同期サーバー ソケットの使用](using-a-synchronous-server-socket.md)
+- [非同期サーバー ソケットの使用](using-an-asynchronous-server-socket.md)
+- [クライアント ソケットの使用](using-client-sockets.md)
+- [方法: ソケットを作成する](how-to-create-a-socket.md)
+- [ソケット](sockets.md)

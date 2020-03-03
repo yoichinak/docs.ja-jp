@@ -1,6 +1,5 @@
 ---
 title: into - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - into_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: b209062a2a3e563ea8e70cb7883d9bbfa3662231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0f5ff1e56a65e83385f814df2fadd957f53561e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631517"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713622"
 ---
 # <a name="into-c-reference"></a>into (C# リファレンス)
 
@@ -32,5 +31,5 @@ ms.locfileid: "54631517"
 ## <a name="see-also"></a>関連項目
 
 - [クエリ キーワード (LINQ)](query-keywords.md)
-- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# での LINQ](../../linq/index.md)
 - [group 句](group-clause.md)

@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420818"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137179"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint メソッド
-ネイティブ イメージを指定したオフセット位置には、アンマネージのブレークポイントを設定します。  
+指定したネイティブイメージオフセットにアンマネージブレークポイントを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
@@ -39,27 +37,27 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `address`  
- [in]A`CORDB_ADDRESS`ネイティブ イメージのオフセットを指定するオブジェクト。  
+ からネイティブイメージオフセットを指定する `CORDB_ADDRESS` オブジェクト。  
   
  `bufsize`  
- [in]サイズをバイト単位での`buffer`配列。  
+ から`buffer` 配列のサイズ (バイト単位)。  
   
  `buffer`  
- [out]ブレークポイントで置き換えられるオペコードを格納する配列。  
+ 入出力ブレークポイントによって置き換えられるオペコードを格納している配列。  
   
  `bufLen`  
- [out]返されるバイト数へのポインター、`buffer`配列。  
+ 入出力`buffer` 配列で返されたバイト数へのポインター。  
   
-## <a name="remarks"></a>コメント  
- ネイティブ イメージのオフセットが共通言語ランタイム (CLR) 内にある場合は、ブレークポイントは無視されます。 これにより、CLR がデバッガーでブレークポイントが設定されている場合、帯域外のブレークポイントのディスパッチを回避できます。  
+## <a name="remarks"></a>Remarks  
+ ネイティブイメージオフセットが共通言語ランタイム (CLR) 内にある場合、ブレークポイントは無視されます。 これにより、ブレークポイントがデバッガーによって設定されたときに、CLR は帯域外のブレークポイントのディスパッチを回避できます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

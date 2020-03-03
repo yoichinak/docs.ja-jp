@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4d821186-3ddf-405a-ac44-d79438a9f7f3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4049b0ed25d4c0fda00fe9b0dad5887fa4f6996
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 651b916a0e3ca178432094428611f9bcc8f0fd17
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506941"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132419"
 ---
-# <a name="clrdebuggingversion-structure"></a>CLR_DEBUGGING_VERSION 構造体
+# <a name="clr_debugging_version-structure"></a>CLR_DEBUGGING_VERSION 構造体
 デバッグのために共通言語ランタイム (CLR) の製品バージョンを定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _CLR_DEBUGGING_VERSION  
 {  
     WORD wStructVersion;
@@ -43,24 +41,25 @@ typedef struct _CLR_DEBUGGING_VERSION
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`wStructVersion`|構造のバージョン番号|  
+|`wStructVersion`|構造体のバージョン番号|  
 |`wMajor`|メジャー バージョン番号。|  
 |`wMinor`|マイナー バージョン番号。|  
 |`wBuild`|ビルド番号。|  
 |`wRevision`|リビジョン番号。|  
   
 ## <a name="remarks"></a>Remarks  
- `CLR_DEBUGGING_VERSION`構造がただし COR_VERSION 構造体と同じでは、`CLR_DEBUGGING_VERSION`構造は追加の構造のバージョン フィールドを提供します (`wStructVersion`)。 現時点では、このフィールドは 0 に設定する必要があります。  
+ `CLR_DEBUGGING_VERSION` 構造体は COR_VERSION 構造体と同じですが、`CLR_DEBUGGING_VERSION` 構造体には、追加の構造バージョンフィールド (`wStructVersion`) が用意されています。 現在、このフィールドは0に設定する必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug.idl  
+ **ヘッダー:** CorDebug .idl  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

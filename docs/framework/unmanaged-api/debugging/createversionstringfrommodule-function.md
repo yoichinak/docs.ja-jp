@@ -16,21 +16,19 @@ helpviewer_keywords:
 ms.assetid: 3d2fe9bd-75ef-4364-84a6-da1e1994ac1a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0988b2c4471cb5449f7c7fac82c6e94bcd537b7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 609d6e47c951aa104cb23084b65e98827a6851f1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33409281"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789177"
 ---
 # <a name="createversionstringfrommodule-function"></a>CreateVersionStringFromModule 関数
 対象プロセス内の共通言語ランタイム (CLR: Common Language Runtime) パスからバージョン文字列を作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateVersionStringFromModule (  
     [in]  DWORD      pidDebuggee,  
     [in]  LPCWSTR    szModuleName,  
@@ -41,7 +39,7 @@ HRESULT CreateVersionStringFromModule (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pidDebuggee`  
  [in] 対象 CLR が読み込まれているプロセスの識別子。  
   
@@ -74,15 +72,15 @@ HRESULT CreateVersionStringFromModule (
  `pidDebuggee` が有効なプロセスを参照していません。または、その他のエラーが発生しました。  
   
 ## <a name="remarks"></a>コメント  
- この関数は、`pidDebuggee` が識別した CLR プロセスと、`szModuleName` で指定された文字列パスを受け取ります。 バージョン文字列は、`pBuffer` が指すバッファーに返されます。 この文字列は関数のユーザーには不透明です。つまり、バージョン文字列自体に特別な意味はありません。 この関数のコンテキストでのみ使用されていると、 [CreateDebuggingInterfaceFromVersion 関数](../../../../docs/framework/unmanaged-api/debugging/createdebugginginterfacefromversion-function-for-silverlight.md)です。  
+ この関数は、`pidDebuggee` が識別した CLR プロセスと、`szModuleName` で指定された文字列パスを受け取ります。 バージョン文字列は、`pBuffer` が指すバッファーに返されます。 この文字列は関数のユーザーには不透明です。つまり、バージョン文字列自体に特別な意味はありません。 この関数と[CreateDebuggingInterfaceFromVersion 関数](createdebugginginterfacefromversion-function-for-silverlight.md)のコンテキストでのみ使用されます。  
   
  この関数は、2 回呼び出す必要があります。 1 回目の呼び出しでは、`pBuffer` と `cchBuffer` の両方に null を渡します。 これにより、`pBuffer` に必要なバッファーのサイズが `pdwLength` に返されます。 その後、2 回目の関数呼び出しを実行し、`pBuffer` にはバッファーを、`cchBuffer` にはバッファーのサイズを渡すことができます。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** dbgshim.h  
+ **ヘッダー:** dbgshim. h  
   
- **ライブラリ:** dbgshim.dll  
+ **ライブラリ:** dbgshim .dll  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

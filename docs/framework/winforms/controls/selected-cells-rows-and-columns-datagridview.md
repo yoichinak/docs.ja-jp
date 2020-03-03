@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム DataGridView コントロールで選択したセル、行、および列を取得します。'
+title: DataGridView コントロールで選択されたセル、行、および列を取得します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,57 +9,58 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], getting selection
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
-ms.openlocfilehash: 95229f1915b25962a700a7d6aced0a012bbe6657
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0079c590ee6e4732523fd50be157bd58ec1bfb1b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626915"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743073"
 ---
-# <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールで選択したセル、行、および列を取得します。
-選択したセル、行、または列から取得できます、<xref:System.Windows.Forms.DataGridView>対応するプロパティを使用してコントロール: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>、 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>、および<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>します。 次の手順では、選択したセルを取得しでその行と列のインデックスを表示、<xref:System.Windows.Forms.MessageBox>します。  
+# <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>方法 : Windows フォーム DataGridView コントロールの選択されたセル、行、および列を取得する
+選択したセル、行、または列は、対応するプロパティ (<xref:System.Windows.Forms.DataGridView.SelectedCells%2A>、<xref:System.Windows.Forms.DataGridView.SelectedRows%2A>、および <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>) を使用して、<xref:System.Windows.Forms.DataGridView> コントロールから取得できます。 次の手順では、選択したセルを取得し、そのセルの行インデックスと列インデックスを <xref:System.Windows.Forms.MessageBox>に表示します。  
   
-### <a name="to-get-the-selected-cells-in-a-datagridview-control"></a>DataGridView コントロールで選択したセルを取得するには  
+### <a name="to-get-the-selected-cells-in-a-datagridview-control"></a>DataGridView コントロール内の選択されたセルを取得するには  
   
--   <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> プロパティを使用します。  
+- <xref:System.Windows.Forms.DataGridView.SelectedCells%2A> プロパティを使用します。  
   
     > [!NOTE]
-    >  使用して、<xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>メソッド セル数が大きくなる可能性が表示されないようにします。  
+    > 多くのセルが表示されないようにするには、<xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A> メソッドを使用します。  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#10)]
-     [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#10)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#10)]
+     [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#10)]  
   
-### <a name="to-get-the-selected-rows-in-a-datagridview-control"></a>DataGridView コントロールで選択した行を取得するには  
+### <a name="to-get-the-selected-rows-in-a-datagridview-control"></a>DataGridView コントロールで選択された行を取得するには  
   
--   <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> プロパティを使用します。 行を選択するユーザーを有効に設定する必要があります、<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>プロパティを<xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect>または<xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>します。  
+- <xref:System.Windows.Forms.DataGridView.SelectedRows%2A> プロパティを使用します。 ユーザーが行を選択できるようにするには、<xref:System.Windows.Forms.DataGridView.SelectionMode%2A> プロパティを <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect> または <xref:System.Windows.Forms.DataGridViewSelectionMode.RowHeaderSelect>に設定する必要があります。  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#20)]
-     [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#20)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#20)]
+     [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#20)]  
   
-### <a name="to-get-the-selected-columns-in-a-datagridview-control"></a>DataGridView コントロールで選択した列を取得するには  
+### <a name="to-get-the-selected-columns-in-a-datagridview-control"></a>DataGridView コントロールで選択されている列を取得するには  
   
--   <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> プロパティを使用します。 列を選択するユーザーを有効に設定する必要があります、<xref:System.Windows.Forms.DataGridView.SelectionMode%2A>プロパティを<xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect>または<xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>します。  
+- <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A> プロパティを使用します。 ユーザーが列を選択できるようにするには、<xref:System.Windows.Forms.DataGridView.SelectionMode%2A> プロパティを <xref:System.Windows.Forms.DataGridViewSelectionMode.FullColumnSelect> または <xref:System.Windows.Forms.DataGridViewSelectionMode.ColumnHeaderSelect>に設定する必要があります。  
   
-     [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#30)]
-     [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#30)]  
+     [!code-csharp[System.Windows.Forms.DataGridViewSelectedCollections#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/CS/DataGridViewSelectedCollections.cs#30)]
+     [!code-vb[System.Windows.Forms.DataGridViewSelectedCollections#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSelectedCollections/VB/DataGridViewSelectedCollections.vb#30)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   <xref:System.Windows.Forms.Button> という名前のコントロール`selectedCellsButton`、 `selectedRowsButton`、および`selectedColumnsButton`、それぞれのハンドラーを持つ、<xref:System.Windows.Forms.Control.Click>添付イベント。  
+- `selectedCellsButton`、`selectedRowsButton`、および `selectedColumnsButton`という名前のコントロールを <xref:System.Windows.Forms.Button> します。各コントロールには、アタッチされている <xref:System.Windows.Forms.Control.Click> イベントのハンドラーがあります。  
   
--   `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- <xref:System.Windows.Forms.DataGridView> という名前の `dataGridView1` コントロール。  
   
--   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、および <xref:System.Text?displayProperty=nameWithType> の各アセンブリへの参照。  
+- <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、および <xref:System.Text?displayProperty=nameWithType> の各アセンブリへの参照。  
   
-## <a name="robust-programming"></a>信頼性の高いプログラミング  
- このトピックで説明されているコレクションは実行されません効率的に多数のセル、行、または列を選択した場合。 大量のデータでこれらのコレクションの使用に関する詳細については、次を参照してください。 [Windows フォーム DataGridView コントロールを拡張するためのベスト プラクティス](../../../../docs/framework/winforms/controls/best-practices-for-scaling-the-windows-forms-datagridview-control.md)します。  
+## <a name="robust-programming"></a>堅牢性の高いプログラミング  
+ このトピックで説明するコレクションは、多数のセル、行、または列が選択されている場合は、効率的には実行されません。 大量のデータでこれらのコレクションを使用する方法の詳細については、「 [Windows フォーム DataGridView コントロールのスケーリングに関するベストプラクティス](best-practices-for-scaling-the-windows-forms-datagridview-control.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.SelectionMode%2A>
 - <xref:System.Windows.Forms.DataGridView.AreAllCellsSelected%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>
 - <xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>
-- [Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用](../../../../docs/framework/winforms/controls/selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)

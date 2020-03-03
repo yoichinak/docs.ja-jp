@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: 3cb61a40e4522695b876d85f67dac1a109d3c3e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 030c9c2ffa97572298b23f05c23e3af0df7387b0
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595865"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913161"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>派生クラスで基本クラスのイベントを発生させることはできません。
 宣言されている宣言領域からのみイベントを発生させることができます。 そのため、クラスは、その他のクラスを派生元であるものも含めてからイベントを発生させることはできません。  
@@ -21,8 +21,9 @@ ms.locfileid: "54595865"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   移動、`Event`ステートメントまたは`RaiseEvent`ステートメント、同じクラスにされるためです。  
+- 移動、`Event`ステートメントまたは`RaiseEvent`ステートメント、同じクラスにされるためです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
 - [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

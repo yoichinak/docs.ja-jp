@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: decd4f46-f3b2-466f-9501-e74f2b86b846
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b31df454c49ddccc74a7e877c09efa4f45b69d9e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23d293a87112c62cb2127b435faeca258a7de226
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491795"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74444228"
 ---
 # <a name="assemblyrefflags-enumeration"></a>AssemblyRefFlags 列挙型
-アセンブリ参照の機能を記述する値が含まれています。  
+アセンブリ参照の機能を記述する値を格納します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     arfFullOriginator = 0x0001  
 } AssemblyRefFlags;  
@@ -38,16 +36,17 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`arfFullOriginator`|アセンブリ参照にはアセンブリの発行者に関する完全なハッシュされていない情報が含まれているを指定します。|  
+|`arfFullOriginator`|アセンブリ参照に、アセンブリの発行者に関する完全なハッシュされていない情報が含まれることを指定します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [DefineAssemblyRef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md)

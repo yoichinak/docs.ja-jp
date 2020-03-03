@@ -1,6 +1,5 @@
 ---
 title: コンテキスト キーワード yield - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - yield
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: cfeef1d84a443163f4bbeda863682335d9cd1fcd
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: e3c9e37e7b543eaddae837a85604c4ba91fbc744
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222625"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712781"
 ---
 # <a name="yield-c-reference"></a>yield (C# リファレンス)
 
@@ -26,11 +25,11 @@ yield return <expression>;
 yield break;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 各要素を 1 つずつ返すには、`yield return` ステートメントを使用します。
 
-[foreach](foreach-in.md) ステートメントまたは LINQ クエリを使用することにより、Iterator メソッドを処理します。 `foreach` ループの各イテレーションは、Iterator メソッドを呼び出します。 `yield return` ステートメントが Iterator メソッドに到達すると、`expression` が返され、コードの現在の位置が保持されます。 次回、Iterator 関数が呼び出されると、この位置から実行が再開されます。
+Iterator メソッドから返されるシーケンスを、[foreach](foreach-in.md) ステートメントまたは LINQ クエリを使って使用することができます。 `foreach` ループの各イテレーションは、Iterator メソッドを呼び出します。 `yield return` ステートメントが Iterator メソッドに到達すると、`expression` が返され、コードの現在の位置が保持されます。 次回、Iterator 関数が呼び出されると、この位置から実行が再開されます。
 
 `yield break` ステートメントを使用すると、反復を終了できます。
 
@@ -42,13 +41,13 @@ yield break;
 
 - 戻り値の型は、<xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator>、または <xref:System.Collections.Generic.IEnumerator%601> であることが必要です。
 
-- この宣言には、[in](in-parameter-modifier.md)、[ref](ref.md)、[out](out-parameter-modifier.md) パラメーターを含めることはできません。
+- この宣言には、[in](in-parameter-modifier.md)、[ref](ref.md)、または [out](out-parameter-modifier.md) パラメーターを含めることはできません。
 
 `yield` または <xref:System.Collections.IEnumerable> を返す反復子の <xref:System.Collections.IEnumerator> 型は `object` です。  反復子が <xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Collections.Generic.IEnumerator%601> を返す場合、`yield return` ステートメント内の式の型から、ジェネリック型パラメーターへの暗黙的な変換が存在する必要があります。
 
-次の特性を持つメソッドに `yield return` ステートメントまたは `yield break` ステートメントを含めることはできません。
+`yield return` または `yield break` ステートメントを以下に含めることはできません。
 
-- 匿名メソッド。 詳しくは、「[匿名メソッド](../../programming-guide/statements-expressions-operators/anonymous-methods.md)」をご覧ください。
+- [ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)および[匿名メソッド](../operators/delegate-operator.md)。
 
 - unsafe ブロックを含むメソッド。 詳しくは、「[unsafe](unsafe.md)」をご覧ください。
 

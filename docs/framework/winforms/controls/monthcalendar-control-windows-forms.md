@@ -1,5 +1,5 @@
 ---
-title: MonthCalendar コントロール (Windows フォーム)
+title: MonthCalendar コントロール
 ms.date: 03/30/2017
 helpviewer_keywords:
 - calendar controls
@@ -7,39 +7,39 @@ helpviewer_keywords:
 - dates [Windows Forms], controls
 - calendars
 ms.assetid: 051c6518-e0ca-426b-855c-f9bf70972970
-ms.openlocfilehash: b11a23121fe62cd99b5c48194846e836fb0dd9d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dcc7b48a8d8a51fb83edf7529cdef987f28724dd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537808"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742170"
 ---
 # <a name="monthcalendar-control-windows-forms"></a>MonthCalendar コントロール (Windows フォーム)
-Windows フォーム`MonthCalendar`コントロールがユーザーを表示し、日付情報を設定するための直感的なグラフィカル インターフェイスを表示します。 コントロールには、月、日、週の下にある列に配置の番号付きの日を含むグリッドが表示されます。 月のキャプションのどちらかの側にある矢印ボタンをクリックして、別の月を選択できます。 よく似ているとは異なり<xref:System.Windows.Forms.DateTimePicker>コントロール、; このコントロールを含む日付の範囲を選択するただし、<xref:System.Windows.Forms.DateTimePicker>コントロールでは、時間を設定することができますの日付とします。  
+Windows フォーム `MonthCalendar` コントロールは、ユーザーが日付情報を表示および設定するための直感的なグラフィカルインターフェイスを提供します。 このコントロールは、曜日の下の列に配置された、月の日付を含むグリッドを表示します。 月のキャプションの両側にある矢印ボタンをクリックすると、別の月を選択できます。 同様の <xref:System.Windows.Forms.DateTimePicker> コントロールとは異なり、このコントロールを使用して日付の範囲を選択できます。ただし、<xref:System.Windows.Forms.DateTimePicker> コントロールでは、時刻と日付を設定できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [MonthCalendar コントロールの概要](../../../../docs/framework/winforms/controls/monthcalendar-control-overview-windows-forms.md)  
- 一般的な概念が導入されています、`MonthCalendar`コントロールで、表示し、アプリケーションの日付情報を設定することができます。  
+ [MonthCalendar コントロールの概要](monthcalendar-control-overview-windows-forms.md)  
+ ユーザーがアプリケーションの日付情報を表示および設定できるようにする、`MonthCalendar` コントロールの一般的な概念について説明します。  
   
- [方法: Windows フォームの MonthCalendar コントロールの外観を変更する](../../../../docs/framework/winforms/controls/how-to-change-monthcalendar-control-appearance.md)  
- 外観をカスタマイズする方法について説明、`MonthCalendar`コントロール。  
+ [方法: Windows フォームの MonthCalendar コントロールの外観を変更する](how-to-change-monthcalendar-control-appearance.md)  
+ `MonthCalendar` コントロールの外観をカスタマイズする方法について説明します。  
   
- [方法: Windows フォームの MonthCalendar コントロールにおいて複数の月を表示する](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)  
- 構成する方法について説明します、`MonthCalendar`数か月を表示するコントロールを同時にします。  
+ [方法: Windows フォームの MonthCalendar コントロールにおいて複数の月を表示する](display-more-than-one-month-wf-monthcalendar-control.md)  
+ 複数の月を同時に表示するように `MonthCalendar` コントロールを構成する方法について説明します。  
   
- [方法: Windows フォームの MonthCalendar コントロールを使用して特定の日付を太字で表示する](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
- 特定の日付を太字で表示する方法について説明します。  
+ [方法: Windows フォームの MonthCalendar コントロールを使用して特定の日付を太字で表示する](display-specific-days-in-bold-with-wf-monthcalendar-control.md)  
+ 特定の日付を太字に設定する方法について説明します。  
   
- [方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択する](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
- プログラムからの日付の範囲を選択する方法について説明します、`MonthCalendar`コントロール。  
+ [方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択する](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)  
+ `MonthCalendar` コントロールから日付の範囲をプログラムによって選択する方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.MonthCalendar>  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
 ## <a name="related-sections"></a>関連項目  
- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
- [DateTimePicker コントロール](../../../../docs/framework/winforms/controls/datetimepicker-control-windows-forms.md)  
- ようなコントロールについて説明します<xref:System.Windows.Forms.MonthCalendar>もには、<xref:System.Windows.Forms.DateTimePicker>コントロールも時間を選択することができ、日付の範囲を選択することはできません。
+ [DateTimePicker コントロール](datetimepicker-control-windows-forms.md)  
+ <xref:System.Windows.Forms.MonthCalendar>に似たコントロールについて説明します。ただし、<xref:System.Windows.Forms.DateTimePicker> コントロールでは時間を選択することもできますが、日付の範囲を選択することはできません。

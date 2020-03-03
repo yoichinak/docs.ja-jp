@@ -1,5 +1,5 @@
 ---
-title: Is 演算子 (Visual Basic)
+title: Is 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.is
@@ -9,51 +9,52 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: a78189a6b82100665ac07b9d7c89590613ec1e1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52fbb39ab0a36c8b947b78f464fad26be05ce204
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745624"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349542"
 ---
 # <a name="is-operator-visual-basic"></a>Is 演算子 (Visual Basic)
-2 つのオブジェクト参照変数を比較します。  
+2つのオブジェクト参照変数を比較します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 result = object1 Is object2  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `result`  
- 必須。 すべて`Boolean`値。  
+ 必須。 任意の `Boolean` 値。  
   
  `object1`  
- 必須。 すべて`Object`名。  
+ 必須。 任意の `Object` 名。  
   
  `object2`  
- 必須。 すべて`Object`名。  
+ 必須。 任意の `Object` 名。  
   
-## <a name="remarks"></a>Remarks  
- `Is`演算子が 2 つのオブジェクト参照が同じオブジェクトを参照してかどうかを決定します。 ただし、値の比較は実行されません。 場合`object1`と`object2`両方には、まったく同じオブジェクト インスタンスを参照してください`result`は`True`; が存在しない場合、`result`は`False`します。  
+## <a name="remarks"></a>コメント  
+ `Is` 演算子は、2つのオブジェクト参照が同じオブジェクトを参照するかどうかを判断します。 ただし、値の比較は実行されません。 `object1` と `object2` 両方がまったく同じオブジェクトインスタンスを参照している場合、`result` は `True`です。そうでない場合は、`result` が `False`ます。  
   
- `Is` 使用することができますも、`TypeOf`キーワードを`TypeOf`.`Is`オブジェクト変数のデータ型と互換性があるかどうかをテストする式。  
+ また、`Is` を `TypeOf` キーワードと共に使用して `TypeOf`...`Is` 式を作成することもできます。これにより、オブジェクト変数がデータ型と互換性があるかどうかがテストされます。  
   
 > [!NOTE]
->  `Is`でキーワードを使用しても、[を選択しています.Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)します。  
+> `Is` キーワードは、 [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)。  
   
 ## <a name="example"></a>例  
- 次の例では、`Is`オブジェクト参照のペアを比較する演算子。 割り当てられている結果を`Boolean`2 つのオブジェクトが同一であるかどうかを表す値。  
+ 次の例では、`Is` 演算子を使用して、オブジェクト参照のペアを比較します。 結果は、2つのオブジェクトが同一かどうかを表す `Boolean` 値に割り当てられます。  
   
- [!code-vb[VbVbalrOperators#27](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/is-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#27)]  
   
- 使用することができます、前の例に示すよう、`Is`両方をテストする演算子が事前バインディングし、遅延バインドされたオブジェクト。  
+ 前の例で示したように、`Is` 演算子を使用して、事前バインディングオブジェクトと遅延バインディングオブジェクトの両方をテストできます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [TypeOf 演算子](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [Visual Basic における比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic の比較演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
 - [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

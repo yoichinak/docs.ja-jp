@@ -2,12 +2,12 @@
 title: DataContractSerializer と DataContractResolver を使用した NetDataContractSerializer 機能の提供
 ms.date: 03/30/2017
 ms.assetid: 1376658f-f695-45f7-a7e0-94664e9619ff
-ms.openlocfilehash: a204e4671c8885192e8d5329713bc60397db0ffd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a0f88310caf9865756d9c04011b709dd4c4c2eb
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690762"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716905"
 ---
 # <a name="using-datacontractserializer-and-datacontractresolver-to-provide-the-functionality-of-netdatacontractserializer"></a>DataContractSerializer と DataContractResolver を使用した NetDataContractSerializer 機能の提供
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractSerializer> を適切な <xref:System.Runtime.Serialization.DataContractResolver> と共に使用して、<xref:System.Runtime.Serialization.NetDataContractSerializer> と同じ機能を提供する方法を示します。 このサンプルで示すのは、<xref:System.Runtime.Serialization.DataContractResolver> を作成して <xref:System.Runtime.Serialization.DataContractSerializer> に追加する方法です。
@@ -33,10 +33,7 @@ class MyDataContractResolver : DataContractResolver
     public override Type ResolveName(string typeName, string typeNamespace, DataContractResolver knownTypeResolver)
     {
         Type type = knownTypeResolver.ResolveName(typeName, typeNamespace, null);
-        if (type == null)
-        {
-            type = Type.GetType(typeName + ", " + typeNamespace);
-        }
+        type ??= Type.GetType(typeName + ", " + typeNamespace);
         return type;
     }
 
@@ -57,29 +54,27 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1.  Visual Studio 2012 を使用して、DCRSample.sln ソリューション ファイルを開きます。
+1. Visual Studio 2012 を使用して、DCRSample .sln ソリューションファイルを開きます。
 
-2.  ソリューション ファイルを右クリックし **プロパティ**します。
+2. ソリューションファイルを右クリックし、 **[プロパティ]** を選択します。
 
-3.  **ソリューション プロパティ ページ**ダイアログで、**共通プロパティ**、**スタートアップ プロジェクト**を選択します**マルチ スタートアップ プロジェクト:** します。
+3. **[ソリューションプロパティページ]** ダイアログボックスの **[共通プロパティ**] の **[スタートアッププロジェクト]** で、 **[マルチスタートアッププロジェクト:]** を選択します。
 
-4.  次に、 **DCSwithDCR**プロジェクトで、**開始**から、**アクション**ドロップダウンします。
+4. **DCSwithDCR**プロジェクトの横にある **[アクション]** ドロップダウンから **[開始]** を選択します。
 
-5.  次に、 **NetDCS**プロジェクトで、**開始**から、**アクション**ドロップダウンします。
+5. **Netdcs**プロジェクトの横にある **[アクション]** ドロップダウンから **[開始]** を選択します。
 
-6.  クリックして**OK**ダイアログ ボックスを閉じます。
+6. **[OK]** をクリックしてダイアログを閉じます。
 
-7.  ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
+7. ソリューションをビルドするには、Ctrl キーと Shift キーを押しながら B キーを押します。
 
-8.  ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
+8. ソリューションを実行するには、Ctrl キーを押しながら F5 キーを押します。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  
-  
-## <a name="see-also"></a>関連項目
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\NetDcSasDcSwithDCR`  

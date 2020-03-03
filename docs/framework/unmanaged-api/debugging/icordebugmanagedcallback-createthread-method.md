@@ -15,39 +15,37 @@ helpviewer_keywords:
 ms.assetid: 6b961728-21c4-4e8d-ae81-197458be62f4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dd48fae74665f079100b128990656f3a6d002d43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dcd6b2efea0e96a341962315bb5c631acef8a10
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586528"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781955"
 ---
 # <a name="icordebugmanagedcallbackcreatethread-method"></a>ICorDebugManagedCallback::CreateThread メソッド
-スレッドのマネージ コードの実行が開始されたことをデバッガーに通知します。  
+スレッドがマネージコードの実行を開始したことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateThread (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread    *thread  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]スレッドがあるアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からスレッドを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `thread`  
- [in]スレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ からスレッドを表す、スレッドオブジェクトへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- スレッドは、実行されるマネージ コードの最初の命令に配置されます。  
+## <a name="remarks"></a>コメント  
+ スレッドは、実行される最初のマネージコード命令に配置されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -56,4 +54,5 @@ HRESULT CreateThread (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

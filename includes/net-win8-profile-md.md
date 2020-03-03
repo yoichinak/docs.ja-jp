@@ -1,1 +1,0 @@
-Windows 8.x ストア アプリ用 .NET

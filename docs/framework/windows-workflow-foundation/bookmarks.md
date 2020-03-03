@@ -1,13 +1,13 @@
 ---
-title: Bookmarks1
+title: ブックマーク-WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a15a28cc39a4227765c238a6f2b86c72197f1a39
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515569"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868925"
 ---
 # <a name="bookmarks"></a>ブックマーク
 ブックマークは、ワークフローのスレッド上に保持することなく、アクティビティが受動的に入力を待機できるようにする機構です。 アクティビティが働きかけを待機していることを示すときは、ブックマークを作成できます。 これは、現在実行中の (<xref:System.Activities.Bookmark> を作成した) メソッドから返された場合でも、アクティビティの実行が完了していると見なさないことをランタイムに対して示します。  

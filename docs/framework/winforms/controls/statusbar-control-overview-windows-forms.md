@@ -1,5 +1,5 @@
 ---
-title: StatusBar コントロールの概要 (Windows フォーム)
+title: StatusBar コントロールの概要
 ms.date: 03/30/2017
 f1_keywords:
 - StatusBar
@@ -7,25 +7,26 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: c3e52a91a31eb898d0176bc35a97cda7de9a8368
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0b97bc3cb0291871e1fd113d82d0b480b53cdba
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491351"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742866"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar コントロールの概要 (Windows フォーム)
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip>と<xref:System.Windows.Forms.ToolStripStatusLabel>コントロールの置換し、する機能を追加、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>を制御しますただし、、<xref:System.Windows.Forms.StatusBar>と<xref:System.Windows.Forms.StatusBarPanel>場合、下位互換性と将来の使用の両方のコントロールが保持されますします。選択します。  
+> <xref:System.Windows.Forms.StatusStrip> コントロールと <xref:System.Windows.Forms.ToolStripStatusLabel> コントロールは、<xref:System.Windows.Forms.StatusBar> および <xref:System.Windows.Forms.StatusBarPanel> コントロールに対して機能を置き換え、追加します。ただし、<xref:System.Windows.Forms.StatusBar> および <xref:System.Windows.Forms.StatusBarPanel> のコントロールは、下位互換性と将来の使用の両方のために保持されます (選択した場合)。  
   
- Windows フォーム[StatusBar コントロール](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)はフォームの領域で、通常、アプリケーションがさまざまな種類のステータス情報を表示できるウィンドウの下部に表示として使用します。 <xref:System.Windows.Forms.StatusBar> コントロールがテキストまたは状態、または一連のプロセスが動作してを示すアニメーションのアイコンを示すアイコンを表示してステータス バー パネルを持つことができます。たとえば、[!INCLUDE[ofprword](../../../../includes/ofprword-md.md)]ドキュメントが保存されていることを示します。  
+ Windows フォーム[StatusBar コントロール](statusbar-control-windows-forms.md)は、フォーム上で通常はウィンドウの下部に表示される領域として使用されます。この領域では、アプリケーションはさまざまな種類の状態情報を表示できます。 <xref:System.Windows.Forms.StatusBar> コントロールには、ステータスバーパネルを表示して、状態を示すテキストやアイコン、またはプロセスが動作していることを示す一連のアイコンをアニメーションに表示することができます。たとえば、Microsoft Word では、ドキュメントが保存されていることを示しています。  
   
-## <a name="using-the-statusbar-control"></a>ステータス バー コントロールを使用します。  
- Internet Explorer は、マウスを取り消さない限り、ハイパーリンクときに、ページの URL を示すためにステータス バーを使用します。[!INCLUDE[ofprword](../../../../includes/ofprword-md.md)]ページ、セクションの場所、および編集モードを上書きし、リビジョンの追跡や Visual Studio ドッキング可能ウィンドウを操作する方法を示すなどの状況に応じた情報に、ステータス バーを使用するなどの情報が提供されますドッキングまたはフローティングします。  
+## <a name="using-the-statusbar-control"></a>StatusBar コントロールの使用  
+ Internet Explorer は、ハイパーリンク上でマウスがロールオーバーしたときに、ステータスバーを使用してページの URL を示します。Microsoft Word では、ページの場所、セクションの場所、および上書きやリビジョンの追跡などの編集モードに関する情報が提供されます。また、Visual Studio はステータスバーを使用して、ドッキングされたウィンドウをドッキングまたはフローティングとして操作する方法を示すなど、状況に応じた情報を提供します。  
   
- ステータス バーに設定して、1 つのメッセージを表示することができます、<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティを`false`(既定値) と設定、<xref:System.Windows.Forms.StatusBar.Text%2A>ステータス バーに表示するテキストをステータス バーのプロパティ。 ステータス バーを設定して、情報の 1 つ以上の種類を表示するパネルに分割することができます、<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>プロパティを`true`を使用して、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A>メソッドの<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>します。  
+ ステータスバーに1つのメッセージを表示するには、[<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>] プロパティを `false` (既定値) に設定し、ステータスバーの [<xref:System.Windows.Forms.StatusBar.Text%2A>] プロパティをステータスバーに表示するテキストに設定します。 ステータスバーをパネルに分割して、複数の種類の情報を表示するには、<xref:System.Windows.Forms.StatusBar.ShowPanels%2A> プロパティを `true` に設定し、<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>の <xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A> メソッドを使用します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [方法: Windows フォームの StatusBar コントロールでクリックされたパネルを確認する](determine-which-panel-wf-statusbar-control-was-clicked.md)

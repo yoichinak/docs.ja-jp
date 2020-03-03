@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 5de13fc4da371220f46a107ca9b620e1313e75d4
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: b1d91306c9cc9788046d19cc5de9e4712cdaa7e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307527"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772548"
 ---
 # <a name="introducing-xml-serialization"></a>XML シリアル化の概要
 
@@ -38,7 +38,7 @@ ms.locfileid: "54307527"
 
  さらに、**XmlSerializer** クラスでは、オブジェクトをシリアル化し、エンコードされた SOAP XML ストリームを生成することができます。 このようにして生成される XML は、W3C のドキュメント『Simple Object Access Protocol (SOAP) 1.1』のセクション 5 に準拠します。 このプロセスの詳細については、次を参照してください。[方法。Serialize an Object as SOAP エンコード済み XML Stream](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)します。 生成される XML を制御する属性の一覧については、「[エンコード済み SOAP シリアル化を制御する属性](attributes-that-control-encoded-soap-serialization.md)」を参照してください。
 
- **XmlSerializer** クラスは、XML Web サービスによって作成され、XML Web サービスに渡される SOAP メッセージを生成します。 この SOAP メッセージを制御するには、XML Web サービス ファイル (.asmx) 内のクラス、戻り値、パラメーター、およびフィールドに属性を適用します。 XML Web サービスでは、リテラルまたはエンコード済みのいずれの SOAP スタイルも使用できるため、「XML シリアル化を制御する属性」と「エンコード済み SOAP シリアル化を制御する属性」の両方に示されている属性を使用できます。 XML Web サービスによって生成された XML を属性を使用して制御する方法については、「[XML Web サービスを使用した XML シリアル化](xml-serialization-with-xml-web-services.md)」を参照してください。 SOAP と XML Web サービスの詳細については、「[Customizing SOAP Messages](https://msdn.microsoft.com/subscriptions/index/dkwy2d72\(v=vs.71\).aspx)」 (SOAP メッセージのカスタマイズ) を参照してください。
+ **XmlSerializer** クラスは、XML Web サービスによって作成され、XML Web サービスに渡される SOAP メッセージを生成します。 この SOAP メッセージを制御するには、XML Web サービス ファイル (.asmx) 内のクラス、戻り値、パラメーター、およびフィールドに属性を適用します。 XML Web サービスでは、リテラルまたはエンコード済みのいずれの SOAP スタイルも使用できるため、「XML シリアル化を制御する属性」と「エンコード済み SOAP シリアル化を制御する属性」の両方に示されている属性を使用できます。 XML Web サービスによって生成された XML を属性を使用して制御する方法については、「[XML Web サービスを使用した XML シリアル化](xml-serialization-with-xml-web-services.md)」を参照してください。 SOAP と XML Web サービスの詳細については、次を参照してください。 [SOAP メッセージの書式設定をカスタマイズする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))します。
 
 ## <a name="security-considerations-for-xmlserializer-applications"></a>XmlSerializer アプリケーションのセキュリティに関する考慮事項
 
@@ -133,7 +133,7 @@ XML シリアル化のもう 1 つの利点は、生成される XML ストリ�
 
 - シリアル化できるのは、パブリック プロパティとパブリック フィールドのみです。 プロパティにパブリック アクセサー (get メソッドおよび set メソッド) が存在する必要があります。 非パブリック データをシリアル化する必要がある場合は、XML シリアル化ではなく <xref:System.Runtime.Serialization.DataContractSerializer> クラスを使用します。
 
-- クラスを **XmlSerializer** でシリアル化するには、そのクラスが既定のコンストラクターを持つ必要があります。
+- クラスにはシリアル化するパラメーターなしのコンス トラクターが必要**XmlSerializer**します。
 
 - メソッドはシリアル化できません。
 

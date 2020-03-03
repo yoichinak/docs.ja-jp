@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 2f82fb2c-a42e-48bf-af41-a15e40f636c6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 026aab33207544e21a21f6c2374925d1d7923e55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d3eafd9ca8df71a6644905e5abe6b15b7f180ed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583549"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793523"
 ---
 # <a name="icordebugeditandcontinueerrorinfogeterrorcode-method"></a>ICorDebugEditAndContinueErrorInfo::GetErrorCode メソッド
 `GetErrorCode` は互換性のために残されています。 このメソッドを呼び出さないでください。  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

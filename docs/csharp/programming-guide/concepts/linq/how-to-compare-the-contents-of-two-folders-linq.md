@@ -1,25 +1,25 @@
 ---
-title: '方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)'
+title: 2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d46303068f2284415ea50c0514d76c5b2b55780
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543043"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346537"
 ---
-# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)
+# <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>2 つのフォルダーの内容を比較する方法 (LINQ) (C#)
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。  
   
--   2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
+- 2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
   
--   両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法  
+- 両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法  
   
--   1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法  
+- 1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法  
   
     > [!NOTE]
-    >  ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。  
+    > ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。  
   
  ここに示す `FileComparer` クラスは、標準クエリ演算子と共に、カスタム比較演算子クラスを使用する方法を示します。 このクラスは、実際のシナリオで使用することは想定されていません。 各フォルダーの内容が同一であるかどうかを判断するために、各ファイルの名前と長さ (バイト) を使用するだけです。 実際のシナリオでは、この比較演算子を変更して、より厳密に等しいかどうかをチェックします。  
   
@@ -68,7 +68,7 @@ namespace QueryCompareTwoDirs
             // execute until the foreach statement.  
             var queryCommonFiles = list1.Intersect(list2, myFileCompare);  
   
-            if (queryCommonFiles.Count() > 0)  
+            if (queryCommonFiles.Any())  
             {  
                 Console.WriteLine("The following files are in both folders:");  
                 foreach (var v in queryCommonFiles)  
@@ -126,9 +126,9 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。  
+ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

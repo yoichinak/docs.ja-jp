@@ -2,12 +2,12 @@
 title: 要素操作 (C#)
 ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: ecffc140c3730043fa10099599ed64f0a28365ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9ec41793afffe60a7184622f91b5fc023e0958f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493769"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345159"
 ---
 # <a name="element-operations-c"></a>要素操作 (C#)
 
@@ -31,5 +31,5 @@ ms.locfileid: "54493769"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
+- [ディレクトリ ツリー内で最もサイズの大きいファイルを照会する方法 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

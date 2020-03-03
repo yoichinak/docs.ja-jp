@@ -1,25 +1,25 @@
 ---
 title: dotnet build-server コマンド
 description: dotnet build-server コマンドは、ビルドによって起動されたサーバーとやり取りします。
-ms.date: 12/04/2018
-ms.openlocfilehash: 7f78a0cae6e3297f3084754dc56b0da4eac38caf
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 02/14/2020
+ms.openlocfilehash: a6a9cd6de66371caef66d1101b3f844dffc771ef
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169660"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503781"
 ---
 # <a name="dotnet-build-server"></a>dotnet build-server
 
-[!INCLUDE [topic-appliesto-net-core-21plus](../../../includes/topic-appliesto-net-core-21plus.md)]
+**この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet build-server` - ビルドによって起動されたサーバーとやり取りします。
 
 ## <a name="synopsis"></a>構文
 
-```
+```dotnetcli
 dotnet build-server shutdown [--msbuild] [--razor] [--vbcscompiler]
 dotnet build-server shutdown [-h|--help]
 dotnet build-server [-h|--help]
@@ -27,24 +27,24 @@ dotnet build-server [-h|--help]
 
 ## <a name="commands"></a>コマンド
 
-* **`shutdown`**
+- **`shutdown`**
 
   dotnet から起動されるビルド サーバーをシャットダウンします。 既定では、すべてのサーバーがシャットダウンされます。
 
 ## <a name="options"></a>オプション
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   コマンドの短いヘルプを印刷します。
 
-* **`--msbuild`**
+- **`--msbuild`**
 
   MSBuild ビルド サーバーをシャットダウンします。
 
-* **`--razor`**
+- **`--razor`**
 
   Razor ビルド サーバーをシャットダウンします。
 
-* **`--vbcscompiler`**
+- **`--vbcscompiler`**
 
   VB/C# コンパイラ ビルド サーバーをシャットダウンします。

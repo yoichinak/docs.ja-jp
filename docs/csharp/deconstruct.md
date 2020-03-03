@@ -1,16 +1,15 @@
 ---
 title: タプルとその他の型の分解
 description: タプルとその他の型を分解する方法について説明します。
-author: rpetrusha
-ms.author: ronpet
+ms.technology: csharp-fundamentals
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 90c693790398509a810d93d8504e1eb748637bb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23d193faf9702628698fe558f6667aeb130e8916
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710256"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73100661"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>タプルとその他の型の分解
 
@@ -64,9 +63,9 @@ var (name, address, city, zip) = contact.GetAddressInfo();
 
 [!code-csharp[Tuple-discard](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 
-### <a name="deconstructing-user-defined-types"></a>ユーザー定義型の分解
+## <a name="deconstructing-user-defined-types"></a>ユーザー定義型の分解
 
-タプル以外の型では、組み込みで破棄がサポートされていません。 ただし、クラス、構造体、またはインターフェイスの作成者であれば、1 つまたは複数の `Deconstruct` メソッドを実装することで、型のインスタンスを分解することができます。 このメソッドからは void が返され、分解される各値はメソッド シグネチャの [out](language-reference/keywords/out-parameter-modifier.md) パラメーターで示されます。 たとえば、`Person` クラスの次の `Deconstruct` メソッドは、名、ミドル ネーム、姓を返します。
+C# には、非タプル型を分解するためのサポートが組み込まれていません。 ただし、クラス、構造体、またはインターフェイスの作成者であれば、1 つまたは複数の `Deconstruct` メソッドを実装することで、型のインスタンスを分解することができます。 このメソッドからは void が返され、分解される各値はメソッド シグネチャの [out](language-reference/keywords/out-parameter-modifier.md) パラメーターで示されます。 たとえば、`Person` クラスの次の `Deconstruct` メソッドは、名、ミドル ネーム、姓を返します。
 
 [!code-csharp[Class-deconstruct](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-class1.cs#1)]
 

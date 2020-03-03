@@ -1,23 +1,22 @@
 ---
-title: '方法: ディレクトリ ツリーを反復処理する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: ディレクトリ ツリーを反復処理する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 93084d0b3c0e930f90b06c3d6ee244deef8d8290
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613845"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712261"
 ---
-# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>方法: ディレクトリ ツリーを反復処理する (C# プログラミング ガイド)
+# <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>ディレクトリ ツリーを反復処理する方法 (C# プログラミング ガイド)
 "ディレクトリ ツリーを反復処理する" とは、指定したルート フォルダー以下の入れ子になっている各サブディレクトリ内の各ファイルにアクセスすることです。 必ずしもファイルを 1 つ 1 つ開く必要はありません。 ファイルまたはサブディレクトリの名前だけを `string` として取得することも、その他の情報を <xref:System.IO.FileInfo?displayProperty=nameWithType> または <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> オブジェクトの形式で取得することもできます。  
   
 > [!NOTE]
->  Windows では、"ディレクトリ" と "フォルダー" という用語は同義です。 多くのドキュメントおよびユーザー インターフェイスのテキストでは、"フォルダー" という用語が使用されていますが、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリでは、"ディレクトリ" という用語が使用されています。  
+> Windows では、"ディレクトリ" と "フォルダー" という用語は同義です。 多くのドキュメントおよびユーザー インターフェイスのテキストでは、"フォルダー" という用語が使用されていますが、.NET Framework クラス ライブラリでは、"ディレクトリ" という用語が使用されています。  
   
  最も容易なケース、つまり、指定したルート以下のすべてのディレクトリのアクセス許可があることが確実にわかっている場合は、`System.IO.SearchOption.AllDirectories` フラグを使用できます。 このフラグは、指定したパターンと一致する、入れ子にされたすべてのサブディレクトリを返します。 このフラグを使用する方法を次の例に示します。  
   
@@ -34,21 +33,21 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
  ファイルおよびフォルダーに対してさまざまな操作を実行する必要がある場合は、単一のデリゲートを使用して呼び出すことができる個別の関数に操作をリファクタリングすることで、これらの例をモジュール化できます。  
   
 > [!NOTE]
->  NTFS ファイル システムには、"*接合ポイント*"、"*シンボリック リンク*"、および "*ハード リンク*" の形式で "*リパース ポイント*" を含めることができます。 <xref:System.IO.DirectoryInfo.GetFiles%2A> や <xref:System.IO.DirectoryInfo.GetDirectories%2A> などの .NET Framework メソッドは、リパース ポイント以下のサブディレクトリを返しません。 この動作により、リパース ポイントが相互参照している場合に、無限ループに入るのが回避されます。 通常、ファイルを誤って変更または削除しないようにリパース ポイントを処理する場合は、十分な注意が必要です。 リパース ポイントを詳細に制御する必要がある場合は、プラットフォーム呼び出しまたはネイティブ コードを使用して、適切な Win32 ファイル システム メソッドを直接呼び出します。  
+> NTFS ファイル システムには、"*接合ポイント*"、"*シンボリック リンク*"、および "*ハード リンク*" の形式で "*リパース ポイント*" を含めることができます。 <xref:System.IO.DirectoryInfo.GetFiles%2A> や <xref:System.IO.DirectoryInfo.GetDirectories%2A> などの .NET Framework メソッドは、リパース ポイント以下のサブディレクトリを返しません。 この動作により、リパース ポイントが相互参照している場合に、無限ループに入るのが回避されます。 通常、ファイルを誤って変更または削除しないようにリパース ポイントを処理する場合は、十分な注意が必要です。 リパース ポイントを詳細に制御する必要がある場合は、プラットフォーム呼び出しまたはネイティブ コードを使用して、適切な Win32 ファイル システム メソッドを直接呼び出します。  
   
 ## <a name="example"></a>例  
  再帰を使用してディレクトリ ツリーを移動する方法を次の例に示します。 この再帰の方法は洗練されていますが、ディレクトリ ツリーが大きく、入れ子の階層が深いと、スタック オーバーフロー例外が発生する可能性があります。  
   
  ここで処理される例外や、各ファイルまたは各フォルダーに対して実行される操作は、あくまで例として用意したものです。 実際の要件を満たす際には、このコードを修正する必要があります。 詳細については、コード内のコメントを参照してください。  
   
- [!code-csharp[csFilesandFolders#1](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_1.cs)]  
+ [!code-csharp[csFilesandFolders#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#1)]  
   
 ## <a name="example"></a>例  
  再帰を使用せずにディレクトリ ツリー内のファイルおよびフォルダーを反復処理する方法を、次の例に示します。 この方法では、後入れ先出し (LIFO) スタックである、一般的な <xref:System.Collections.Generic.Stack%601> コレクション型を使用します。  
   
  ここで処理される例外や、各ファイルまたは各フォルダーに対して実行される操作は、あくまで例として用意したものです。 実際の要件を満たす際には、このコードを修正する必要があります。 詳細については、コード内のコメントを参照してください。  
   
- [!code-csharp[csFilesandFolders#2](../../../csharp/programming-guide/file-system/codesnippet/CSharp/how-to-iterate-through-a-directory-tree_2.cs)]  
+ [!code-csharp[csFilesandFolders#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csFilesAndFolders/CS/FileIteration.cs#2)]  
   
  通常、すべてのフォルダーをテストして、アプリケーションにフォルダーを開くアクセス許可があるかどうかを確認する作業には時間がかかります。 そのため、このコード例には、`try/catch` ブロック内の操作の該当部分のみが含まれています。 フォルダーへのアクセスが拒否されたときにアクセス許可を昇格して再びアクセスを試行するように、`catch` ブロックを修正できます。 原則として、アプリケーションが不明の状態にならずに処理できる例外のみをキャッチしてください。  
   
@@ -60,5 +59,5 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO>
-- [LINQ とファイル ディレクトリ](../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
-- [ファイル システムとレジストリ (C# プログラミング ガイド)](../../../csharp/programming-guide/file-system/index.md)
+- [LINQ とファイル ディレクトリ](../concepts/linq/linq-and-file-directories.md)
+- [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)

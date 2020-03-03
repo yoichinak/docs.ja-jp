@@ -1,21 +1,21 @@
 ---
 title: Override キーワードと New キーワードを使用する場合について - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - override keyword [C#]
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a209b9522202649765654013fdc3a468913c6b1
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496258"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714779"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードを使用する場合について (C# プログラミング ガイド)
-C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../../csharp/language-reference/keywords/new.md) および [override](../../../csharp/language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスのメソッドを "*拡張*" し、`new` 修飾子は "*隠ぺい*" します。 このトピックの例ではその違いを示します。  
+
+C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../language-reference/keywords/new-modifier.md) および [override](../../language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスの `virtual`メソッドを "*拡張*" し、`new` 修飾子はアクセス可能な基底クラスのメソッドを "*非表示*" にします。 このトピックの例ではその違いを示します。  
   
  コンソール アプリケーションで、次の 2 つのクラス `BaseClass` と `DerivedClass` を宣言します。 `DerivedClass` は `BaseClass`を継承します。  
   
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  `Main` メソッドで、変数 `bc`、`dc`、`bcdc` を宣言します。  
   
--   `bc` は `BaseClass` 型であり、その値は `BaseClass` です。  
+- `bc` は `BaseClass` 型であり、その値は `BaseClass` です。  
   
--   `dc` は `DerivedClass` 型であり、その値は `DerivedClass` です。  
+- `dc` は `DerivedClass` 型であり、その値は `DerivedClass` です。  
   
--   `bcdc` は `BaseClass` 型であり、その値は `DerivedClass` です。 この変数には注意する必要があります。  
+- `bcdc` は `BaseClass` 型であり、その値は `DerivedClass` です。 この変数には注意する必要があります。  
   
  `bc` と `bcdc` は `BaseClass` 型なので、キャストを使わない限り、直接アクセスできるのは `Method1` だけです。 変数 `dc` は、`Method1` と `Method2` の両方にアクセスできます。 これらの関係を次のコードに示します。  
   
@@ -114,7 +114,7 @@ public new void Method2()
 }  
 ```  
   
- もう一度プログラムを実行し、出力が変わらないことを確認します。 また、警告が表示されなくなったことを確認します。 `new` を使うことにより、それによって修飾されるメンバーが基底クラスから継承されたメンバーを隠ぺいすることを了解していることを明示します。 継承による名前の非表示について詳しくは、「[new 修飾子](../../../csharp/language-reference/keywords/new-modifier.md)」をご覧ください。  
+ もう一度プログラムを実行し、出力が変わらないことを確認します。 また、警告が表示されなくなったことを確認します。 `new` を使うことにより、それによって修飾されるメンバーが基底クラスから継承されたメンバーを隠ぺいすることを了解していることを明示します。 継承による名前の非表示について詳しくは、「[new 修飾子](../../language-reference/keywords/new-modifier.md)」をご覧ください。  
   
  この動作を `override` を使ったときの効果と比較するため、次のメソッドを `DerivedClass` に追加します。 `override` 修飾子を追加する位置は、`public` の前でも後でもかまいません。  
   
@@ -544,8 +544,8 @@ namespace OverrideAndNew2
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [クラスと構造体](../../../csharp/programming-guide/classes-and-structs/index.md)
-- [Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)
-- [base](../../../csharp/language-reference/keywords/base.md)
-- [abstract](../../../csharp/language-reference/keywords/abstract.md)
+- [C# プログラミング ガイド](../index.md)
+- [クラスと構造体](./index.md)
+- [Override キーワードと New キーワードによるバージョン管理](./versioning-with-the-override-and-new-keywords.md)
+- [base](../../language-reference/keywords/base.md)
+- [abstract](../../language-reference/keywords/abstract.md)

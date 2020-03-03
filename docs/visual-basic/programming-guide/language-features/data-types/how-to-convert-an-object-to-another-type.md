@@ -1,23 +1,23 @@
 ---
-title: '方法: オブジェクトを Visual Basic で別の型に変換します。'
+title: '方法: オブジェクトを別の型に変換する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 81ac65ad34ad6afdfb89a750fef39b121aabd644
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d16e0eafc3fa9233037abe0c92dcb1945ca8da9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611346"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75341580"
 ---
-# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>方法: オブジェクトを Visual Basic で別の型に変換します。
-変換する、`Object`変数などの変換キーワードを使用して、別のデータ型を[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)します。  
+# <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>方法: Visual Basic でオブジェクトを別の型に変換する
+`Object` 変数を別のデータ型に変換するには、 [CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)などの変換キーワードを使用します。  
   
-## <a name="example"></a>例  
- 次の例では、変換、`Object`変数を`Integer`と`String`します。  
+## <a name="example"></a>使用例  
+ 次の例では、`Object` 変数を `Integer` と `String`に変換します。  
   
-```  
+```vb  
 Public Sub objectConversion(ByVal anObject As Object)  
     Dim anInteger As Integer  
     Dim aString As String  
@@ -26,14 +26,15 @@ Public Sub objectConversion(ByVal anObject As Object)
 End Sub  
 ```  
   
- わかっている場合の内容、`Object`変数は、特定のデータ型が変数にそのデータ型に変換する方がよい。 引き続き使用する場合、`Object`いずれかが発生する、変数*ボックス化*と*ボックス化解除*(の値型) または*遅延バインディング*(の参照型)。 これらの操作はすべてにかかる実行時間を追加して、パフォーマンスが低下です。  
+ `Object` 変数の内容が特定のデータ型であることがわかっている場合は、変数をそのデータ型に変換することをお勧めします。 `Object` 変数を引き続き使用する場合は、*ボックス*化とボックス化*解除*(値型の場合) または*遅延バインディング*(参照型の場合) のいずれかが発生します。 これらの操作はすべて、追加の実行時間がかかり、パフォーマンスが低下します。  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
+## <a name="compile-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   <xref:System?displayProperty=nameWithType> 名前空間への参照  
+- <xref:System?displayProperty=nameWithType> 名前空間への参照  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Object>
 - [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: a7a4cfe952a32c859a113f0903696fec3681f800
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 19ebbfba477eeba253a7af0742953cc6a4d45a0e
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267623"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088528"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<追加 > connectionManagement (ネットワーク設定) の要素
+# <a name="add-element-for-connectionmanagement-network-settings"></a>connectionManagement の \<add> 要素 (ネットワーク設定)
 IP アドレスまたは DNS 名を接続管理リストに追加します。  
-  
- \<configuration>  
-\<system.net>  
-\<connectionManagement>  
-\<add>  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<connectionManagement>** ](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**add>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -51,7 +51,7 @@ IP アドレスまたは DNS 名を接続管理リストに追加します。
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|ネットワーク ホストへの接続の最大数を指定します。|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|ネットワーク ホストへの接続の最大数を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  `address` 属性の値は、すべての接続を示すアスタリスク、または形式が `<schema>://<idn_hostname>[:<port>]` の文字列である必要があります。  
@@ -62,7 +62,7 @@ IP アドレスまたは DNS 名を接続管理リストに追加します。
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、サーバーに 4 つの接続を使用するアプリケーションの構成で`www.contoso.com`とその他のすべてのサーバーに 2 つの接続。  
+ 次の例では、サーバー `www.contoso.com` への4つの接続と、他のすべてのサーバーへの2つの接続を使用するようにアプリケーションを構成します。  
   
 ```xml  
 <configuration>  
@@ -76,6 +76,7 @@ IP アドレスまたは DNS 名を接続管理リストに追加します。
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

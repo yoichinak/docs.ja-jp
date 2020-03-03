@@ -14,47 +14,46 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f40100be3ab05c0c8e8a55d48494569424e88371
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c6def32c63e3557a4de72baf7b1c3e67feb4891
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637269"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136526"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager 関数
-共通言語ランタイム (CLR) ユーザーの管理に使用するインターフェイスへのポインターを取得します。  
+共通言語ランタイム (CLR) が id を管理できるようにするインターフェイスへのポインターを取得します。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDAPI GetCLRIdentityManager(  
     [in]  REFIID      riid,  
     [out] IUnknown  **ppManager  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `riid`  
- [in]A `REFIID` (インターフェイス識別子) を取得するには、どのインターフェイスを指定します。 この値は、IID_ICLRAssemblyIdentityManager または IID_ICLRHostBindingPolicyManager のいずれかである必要があります。  
+ から取得するインターフェイスを指定する `REFIID` (インターフェイス識別子)。 この値は、IID_ICLRAssemblyIdentityManager または IID_ICLRHostBindingPolicyManager のいずれかである必要があります。  
   
  `ppManager`  
- [out]どちらのアドレスへのポインター、 [ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)または[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)オブジェクト。  
+ 入出力[ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)または[ICLRHostBindingPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)オブジェクトのいずれかのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出す、 [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)へのポインターを取得する関数、`GetCLRIdentityManager`関数。  
+ `GetCLRIdentityManager` 関数へのポインターを取得するには、 [GetRealProcAddress](../../../../docs/framework/unmanaged-api/hosting/getrealprocaddress-function.md)関数を呼び出します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorWks.dll  
+ **ライブラリ:** Mscorwks.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

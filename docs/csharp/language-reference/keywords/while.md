@@ -1,6 +1,5 @@
 ---
 title: while - C# リファレンス
-ms.custom: seodec18
 ms.date: 05/28/2018
 f1_keywords:
 - while_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 6e485bc80a213be6a5d0da8a00c8ca718f867efb
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: eb9aa2ea8d6b1c96e0be7d377f7c047194b598de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222937"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712794"
 ---
 # <a name="while-c-reference"></a>while (C# リファレンス)
 
@@ -33,12 +32,11 @@ ms.locfileid: "54222937"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](../language-specification/index.md)」の [while ステートメント](~/_csharplang/spec/statements.md#the-while-statement)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の [while ステートメント](~/_csharplang/spec/statements.md#the-while-statement)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [繰り返しステートメント](iteration-statements.md)
 - [do ステートメント](do.md)

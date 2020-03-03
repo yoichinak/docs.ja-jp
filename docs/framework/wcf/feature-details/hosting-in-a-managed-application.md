@@ -2,15 +2,15 @@
 title: マネージド アプリケーションのホスト
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: 0210f608be8ef7ff8b2af4b0cc36b308cd3ddbe8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1895f6622f7c528979badd741f5994970bbd1a8c
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617240"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169801"
 ---
 # <a name="hosting-in-a-managed-application"></a>マネージド アプリケーションのホスト
-Windows Communication Foundation (WCF) サービスは、いずれかでホストできる[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アプリケーション。 自己ホスト型サービスは、展開を要するインフラストラクチャが最も少ないので、最も柔軟なホスト オプションです。 しかしも、最も堅牢なホスティング オプションのマネージ アプリケーションでは、高度なホストとインターネット インフォメーション サービス (IIS) や Windows サービスなどの WCF では、ホストの他のオプションの管理機能が提供されないためです。  
+任意の .NET Framework アプリケーションでは、Windows Communication Foundation (WCF) サービスをホストすることができます。 自己ホスト型サービスは、展開を要するインフラストラクチャが最も少ないので、最も柔軟なホスト オプションです。 しかしも、最も堅牢なホスティング オプションのマネージ アプリケーションでは、高度なホストとインターネット インフォメーション サービス (IIS) や Windows サービスなどの WCF では、ホストの他のオプションの管理機能が提供されないためです。  
   
  自己ホスト型サービスを作成するには、メッセージをリッスンするサービスを開始する <xref:System.ServiceModel.ServiceHost>のインスタンスを作成して開きます。 詳細については、「[方法 :マネージ アプリケーションで WCF サービスをホスト](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)します。  
   
@@ -22,8 +22,9 @@ Windows Communication Foundation (WCF) サービスは、いずれかでホス�
  自己ホストできるようにするための一般的なシナリオは、コンソール アプリケーション内で実行されている WCF サービスです。 コンソール アプリケーション内部の WCF サービス ホストは、サービスの開発フェーズ中に一般的に便利です。 コンソール アプリケーションにより、アプリケーション内部で起こっている状況を見極めるための情報のデバッグやトレースが容易になり、新しい場所にアプリケーションをコピーして移動することも簡単に行うことができます。  
   
 ## <a name="rich-client-applications"></a>リッチ クライアント アプリケーション  
- 自己ホストできるようにするその他の一般的なシナリオは、Windows Presentation Foundation (WPF) または Windows フォーム (WinForms) に基づくものなどのリッチ クライアント アプリケーションです。 このホスト オプションを使用すると、 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] や WinForms アプリケーションなど、外部と通信を行うリッチ クライアント アプリケーションの作成も容易になります。 使用するピア ツー ピア コラボレーション クライアントなど[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]ユーザー インターフェイスにもその他のクライアントに接続して、情報を共有できるようにする WCF サービスをホストします。  
+ 自己ホストできるようにするその他の一般的なシナリオは、Windows Presentation Foundation (WPF) または Windows フォーム (WinForms) に基づくものなどのリッチ クライアント アプリケーションです。 このホスト オプションでは、外部と通信するために、WPF と WinForms アプリケーションなどのリッチ クライアント アプリケーションを簡単にします。 たとえば、WPF を使用して、ユーザー インターフェイスともその他のクライアントに接続して、情報を共有できるようにする WCF サービスをホストするピア ツー ピア コラボレーション クライアントです。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)
 - [チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)

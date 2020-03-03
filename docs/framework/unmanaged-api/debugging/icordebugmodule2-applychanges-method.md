@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 96fa3406-6a6f-41a1-88c6-d9bc5d1a16d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a406e945a67352bc7f126b40bd56f4a11dd693b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c324019e1e62701f4f2aaba1c00948b292ba6847
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419544"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127912"
 ---
 # <a name="icordebugmodule2applychanges-method"></a>ICorDebugModule2::ApplyChanges メソッド
-実行中のプロセスにメタデータの変更と Microsoft intermediate language (MSIL) コードの変更を適用します。  
+メタデータの変更と、Microsoft 中間言語 (MSIL) コードの変更を実行中のプロセスに適用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ApplyChanges (  
     [in] ULONG                       cbMetadata,  
     [in, size_is(cbMetadata)] BYTE   pbMetadata[],  
@@ -38,37 +36,37 @@ HRESULT ApplyChanges (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cbMetadata`  
- [in]デルタ メタデータのバイト単位のサイズ。  
+ からデルタメタデータのサイズ (バイト単位)。  
   
  `pbMetadata`  
- [in]デルタのメタデータを格納するバッファー。 バッファーのアドレスから返される、 [imetadataemit 2::savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)メソッドです。  
+ からデルタメタデータを格納しているバッファー。 バッファーのアドレスは、 [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)メソッドから返されます。  
   
- メタデータ内の相対仮想アドレス (Rva) は、MSIL コードの先頭からの相対にする必要があります。  
+ メタデータ内の相対仮想アドレス (RVAs) は、MSIL コードの先頭に対して相対的に指定する必要があります。  
   
  `cbIL`  
- [in]デルタ MSIL コードのバイト単位のサイズ。  
+ からデルタ MSIL コードのサイズ (バイト単位)。  
   
  `pbIL`  
- [in]更新された MSIL コードを格納するバッファー。  
+ から更新された MSIL コードを格納しているバッファー。  
   
-## <a name="remarks"></a>コメント  
- `pbMetadata`パラメーター形式では、特別なデルタ メタデータ (によって出力として[imetadataemit 2::savedeltatomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md))。 `pbMetadata` ベースとして前のメタデータを取得し、そのベースに適用する個々 の変更点について説明します。  
+## <a name="remarks"></a>Remarks  
+ `pbMetadata` パラメーターは、( [IMetaDataEmit2:: SaveDeltaToMemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-savedeltatomemory-method.md)によって出力される) 特別なデルタメタデータ形式です。 `pbMetadata` は、前のメタデータをベースとして受け取り、そのベースに適用する個々の変更について説明します。  
   
- これに対し、 `pbIL[`] パラメーターは、新しい、更新されたメソッドの MSIL が含まれており、そのメソッドの以前の MSIL を完全に置き換えることを意図しました。  
+ これに対して、`pbIL[`] パラメーターには、更新されたメソッドの新しい MSIL が含まれます。これは、そのメソッドの前の MSIL を完全に置き換えることを目的としています。  
   
- デバッガーのメモリ内で、デルタ MSIL とメタデータが作成されているときに、デバッガーが呼び出す`ApplyChanges`共通言語ランタイム (CLR) に変更を送信します。 ランタイムは、そのメタデータ テーブルを更新、新しい MSIL をプロセスに配置し、新しい MSIL の・ イン タイム (JIT) コンパイルを設定します。 変更が適用されて、デバッガーで呼び出す必要があります[imetadataemit 2::resetenclog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md) [次へ] の編集セッションの準備をします。 デバッガーは、プロセスを続行することもできます。  
+ デルタ MSIL とメタデータがデバッガーのメモリ内に作成されると、デバッガーは `ApplyChanges` を呼び出して、変更を共通言語ランタイム (CLR) に送信します。 ランタイムはそのメタデータテーブルを更新し、新しい MSIL をプロセスに配置して、新しい MSIL の just-in-time (JIT) コンパイルを設定します。 変更が適用されると、デバッガーは[IMetaDataEmit2:: ResetENCLog](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-resetenclog-method.md)を呼び出して、次の編集セッションの準備を行う必要があります。 デバッガーはプロセスを続行できます。  
   
- デバッガーが呼び出すたびに`ApplyChanges`デルタ メタデータが含まれているモジュールに呼び出す必要もあります[imetadataemit::applyeditandcontinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md)すべてのコピーを除くそのモジュールのメタデータのコピーを同じデルタ メタデータを持つ変更内容を出力するために使用します。 場合は、メタデータのコピーでは、非同期のしなくなると実際のメタデータとデバッガー常にそのコピーを破棄して新しいコピーを入手します。  
+ デバッガーは、デルタメタデータを持つモジュールで `ApplyChanges` を呼び出すたびに、変更を出力するために使用されるコピーを除き、そのモジュールのメタデータのすべてのコピーに対して同じデルタメタデータを使用して[IMetaDataEmit:: ApplyEditAndContinue](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-applyeditandcontinue-method.md)を呼び出す必要があります。 メタデータのコピーが実際のメタデータと同期しなくなる場合、デバッガーは常にそのコピーを破棄して新しいコピーを取得できます。  
   
- 場合、`ApplyChanges`メソッドが失敗した場合は、デバッグ セッションは無効な状態および再起動する必要があります。  
+ `ApplyChanges` メソッドが失敗した場合、デバッグセッションは無効な状態にあり、再起動する必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

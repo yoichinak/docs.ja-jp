@@ -1,24 +1,24 @@
 ---
-title: Function 式 (Visual Basic)
+title: Function 式
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Function expression [Visual Basic]
 - functions [Visual Basic], function expressions
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
-ms.openlocfilehash: b83bee06a3a001fd362a217907e783cb7ad293ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 454c4e3d926640934a8edc4fcb16e4308a89dd50
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648108"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75632338"
 ---
 # <a name="function-expression-visual-basic"></a>Function 式 (Visual Basic)
-パラメーターと、関数ラムダ式を定義するコードを宣言します。  
+関数ラムダ式を定義するパラメーターとコードを宣言します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Function ( [ parameterlist ] ) expression  
 - or -  
 Function ( [ parameterlist ] )  
@@ -26,53 +26,53 @@ Function ( [ parameterlist ] )
 End Function  
 ```  
   
-## <a name="parts"></a>指定項目  
+## <a name="parts"></a>のコンポーネント  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`parameterlist`|任意。 このプロシージャのパラメーターを表すローカル変数名の一覧。 かっこは、リストが空の場合にも存在である必要があります。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。|  
-|`expression`|必須。 1 つの式。 式の型は、関数の戻り値の型です。|  
-|`statements`|必須。 使用して値を返すステートメントの一覧、`Return`ステートメント。 (を参照してください[Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md))。返される値の型は、関数の戻り値の型です。|  
+|`parameterlist`|省略可。 このプロシージャのパラメーターを表すローカル変数名の一覧です。 リストが空の場合でも、かっこは存在する必要があります。 「[パラメーターリスト](../../../visual-basic/language-reference/statements/parameter-list.md)」を参照してください。|  
+|`expression`|必ず指定します。 1つの式。 式の型は、関数の戻り値の型です。|  
+|`statements`|必ず指定します。 `Return` ステートメントを使用して値を返すステートメントの一覧。 ( [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)を参照してください)。返される値の型は、関数の戻り値の型です。|  
   
-## <a name="remarks"></a>Remarks  
- A*ラムダ式*を計算し、値を返します名のない関数です。 ラムダ式を使用することができますを引数としてを除く、デリゲート型を使用する任意の場所`RemoveHandler`します。 デリゲート、およびデリゲートとラムダ式の使用に関する詳細については、次を参照してください。 [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)と[厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)します。  
+## <a name="remarks"></a>コメント  
+ *ラムダ式*は、値を計算して返す名前のない関数です。 ラムダ式は、デリゲート型を使用できる場所であればどこでも使用できます。ただし、`RemoveHandler`の引数として使用することはできません。 デリゲートの詳細と、デリゲートでのラムダ式の使用については、「[デリゲートステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)」および「厳密でない[デリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。  
   
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
- ラムダ式の構文では、標準的な関数に似ています。 相違点は次のとおりです。  
+ ラムダ式の構文は、標準関数の構文に似ています。 相違点は、次のとおりです。  
   
--   ラムダ式の名前ではありません。  
+- ラムダ式に名前がありません。  
   
--   ラムダ式などで、修飾子を含めることはできません`Overloads`または`Overrides`します。  
+- ラムダ式には、`Overloads` や `Overrides`などの修飾子を含めることはできません。  
   
--   ラムダ式は使用しないでください、`As`関数の戻り値の型を指定する句。 代わりに、型は、1 行のラムダ式の本体が評価される値または複数行のラムダ式の戻り値から推論されます。 たとえば、1 行のラムダ式の本体が`Where cust.City = "London"`、戻り値の型は`Boolean`します。  
+- ラムダ式では、関数の戻り値の型を指定するために `As` 句を使用しません。 代わりに、型は、単一行のラムダ式の結果が評価される値、または複数行ラムダ式の戻り値から推論されます。 たとえば、単一行のラムダ式の本体が `Where cust.City = "London"`場合、その戻り値の型は `Boolean`になります。  
   
--   単一行のラムダ式の本体は、ステートメントではなく、式である必要があります。 本文は、関数、プロシージャの呼び出しが sub プロシージャへの呼び出しではないので構成できます。  
+- 単一行のラムダ式の本体は、ステートメントではなく、式である必要があります。 本文は、関数プロシージャの呼び出しで構成できますが、サブプロシージャの呼び出しでは使用できません。  
   
--   すべてのパラメーターまたはすべてのデータ型を推論する必要があります指定する必要があります。  
+- すべてのパラメーターのデータ型が指定されているか、すべてのパラメーターが推論される必要があります。  
   
--   (省略可能) と Paramarray パラメーターは使用できません。  
+- 省略可能なおよび Paramarray パラメーターは使用できません。  
   
--   ジェネリック パラメーターを指定することはできません。  
+- ジェネリックパラメーターは使用できません。  
   
-## <a name="example"></a>例  
- 次の例では、単純なラムダ式を作成する 2 つの方法を示します。 最初の使用、`Dim`関数の名前を指定します。 関数を呼び出すには、パラメーターの値で送信します。  
+## <a name="example"></a>使用例  
+ 次の例は、単純なラムダ式を作成する2つの方法を示しています。 最初のは、`Dim` を使用して、関数の名前を指定します。 関数を呼び出すには、パラメーターの値を送信します。  
   
- [!code-vb[VbVbalrLambdas#1](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_1.vb)]  
+ [!code-vb[VbVbalrLambdas#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#1)]  
   
- [!code-vb[VbVbalrLambdas#2](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_2.vb)]  
+ [!code-vb[VbVbalrLambdas#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#2)]  
   
-## <a name="example"></a>例  
- またはを宣言し、同時に、関数を実行します。  
+## <a name="example"></a>使用例  
+ または、関数を同時に宣言して実行することもできます。  
   
- [!code-vb[VbVbalrLambdas#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_3.vb)]  
+ [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]  
   
-## <a name="example"></a>例  
- 引数をインクリメントし、値を返すラムダ式の例を次に示します。 この例では、単一行および複数行のラムダ式の両方の構文、関数を示します。 例については、次を参照してください。[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)します。  
+## <a name="example"></a>使用例  
+ 引数をインクリメントし、値を返すラムダ式の例を次に示します。 この例では、関数の単一行と複数行のラムダ式の構文を示します。 その他の例については、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」を参照してください。  
   
- [!code-vb[VbVbalrLambdas#14](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/function-expression_4.vb)]  
+ [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]  
   
-## <a name="example"></a>例  
- ラムダ式では、多くのクエリ演算子の基本となる[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]、メソッド ベースのクエリで明示的に使用できます。 次の例は、一般的な[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]メソッドの形式に、クエリの変換後にクエリします。  
+## <a name="example"></a>使用例  
+ ラムダ式は、統合言語クエリ (LINQ) のクエリ演算子の多くを基にしており、メソッドベースのクエリで明示的に使用することができます。 次の例では、一般的な LINQ クエリを示し、その後にクエリをメソッド形式に変換します。  
   
 ```vb  
 Dim londonCusts = From cust In db.Customers  
@@ -85,9 +85,10 @@ Dim londonCusts = db.Customers.
                   Select(Function(cust) cust)  
 ```  
   
- クエリ メソッドの詳細については、次を参照してください。[クエリ](../../../visual-basic/language-reference/queries/index.md)します。 標準クエリ演算子の詳細については、次を参照してください。[標準クエリ演算子の概要](../../programming-guide/concepts/linq/standard-query-operators-overview.md)します。  
+ クエリメソッドの詳細については、「[クエリ](../../../visual-basic/language-reference/queries/index.md)」を参照してください。 標準クエリ演算子の詳細については、「[標準クエリ演算子の概要](../../programming-guide/concepts/linq/standard-query-operators-overview.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
 - [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

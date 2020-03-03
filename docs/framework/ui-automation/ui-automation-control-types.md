@@ -7,63 +7,66 @@ helpviewer_keywords:
 - UI Automation, control types
 - control types, UI Automation
 ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 9eb9b7193a1800a9c73c925bd8f699633efb719d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cec090fa2a49993c229585d60cd1894c2fb7f9d4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615931"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448826"
 ---
 # <a name="ui-automation-control-types"></a>UI オートメーション コントロール型
-**注**このドキュメントでは、管理を使用する .NET Framework 開発者向け[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]クラスで定義されている、<xref:System.Windows.Automation>名前空間。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
-  
- このセクション内のコントロール型のサポートに関する情報を格納する[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [UI オートメーション コントロール型の概要](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)  
- [UI オートメーションによる Button コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-button-control-type.md)  
- [UI オートメーションによる Calendar コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-calendar-control-type.md)  
- [UI オートメーションによる CheckBox コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-checkbox-control-type.md)  
- [UI オートメーションによる ComboBox コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-combobox-control-type.md)  
- [UI オートメーションによる DataGrid コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-datagrid-control-type.md)  
- [UI オートメーションによる DataItem コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-dataitem-control-type.md)  
- [UI オートメーションによる Document コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-document-control-type.md)  
- [UI オートメーションによる Edit コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-edit-control-type.md)  
- [UI オートメーションによる Group コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-group-control-type.md)  
- [UI オートメーションによる Header コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-header-control-type.md)  
- [UI オートメーションによる HeaderItem コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-headeritem-control-type.md)  
- [UI オートメーションによる Hyperlink コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-hyperlink-control-type.md)  
- [UI オートメーションによる Image コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-image-control-type.md)  
- [UI オートメーションによる List コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-list-control-type.md)  
- [UI オートメーションによる ListItem コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-listitem-control-type.md)  
- [UI オートメーションによる Menu コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-menu-control-type.md)  
- [UI オートメーションによる MenuBar コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-menubar-control-type.md)  
- [UI オートメーションによる MenuItem コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-menuitem-control-type.md)  
- [UI オートメーションによる Pane コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-pane-control-type.md)  
- [UI オートメーションによる ProgressBar コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-progressbar-control-type.md)  
- [UI オートメーションによる RadioButton コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-radiobutton-control-type.md)  
- [UI オートメーションによる ScrollBar コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-scrollbar-control-type.md)  
- [UI オートメーションによる Separator コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-separator-control-type.md)  
- [UI オートメーションによる Slider コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-slider-control-type.md)  
- [UI オートメーションによる Spinner コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-spinner-control-type.md)  
- [UI オートメーションによる SplitButton コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-splitbutton-control-type.md)  
- [UI オートメーションによる StatusBar コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-statusbar-control-type.md)  
- [UI オートメーションによる Tab コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-tab-control-type.md)  
- [UI オートメーションでの TabItem コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-tabitem-control-type.md)  
- [UI オートメーションによる Table コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-table-control-type.md)  
- [UI オートメーションによる Text コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-text-control-type.md)  
- [UI オートメーションによる Thumb コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-thumb-control-type.md)  
- [UI オートメーションによる TitleBar コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-titlebar-control-type.md)  
- [UI オートメーションによる ToolBar コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-toolbar-control-type.md)  
- [UI オートメーションによる ToolTip コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-tooltip-control-type.md)  
- [UI オートメーションによる Tree コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-tree-control-type.md)  
- [UI オートメーションによる TreeItem コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-treeitem-control-type.md)  
- [UI オートメーションによる Window コントロール型のサポート](../../../docs/framework/ui-automation/ui-automation-support-for-the-window-control-type.md)  
-  
-## <a name="reference"></a>参照  
- <xref:System.Windows.Automation.ControlType>  
-  
-## <a name="see-also"></a>関連項目
-- [UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+
+> [!NOTE]
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+
+ここでは、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]でのコントロール型のサポートについて説明します。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+- [UI オートメーション コントロール型の概要](ui-automation-control-types-overview.md)
+- [UI オートメーションによる Button コントロール型のサポート](ui-automation-support-for-the-button-control-type.md)
+- [UI オートメーションによる Calendar コントロール型のサポート](ui-automation-support-for-the-calendar-control-type.md)
+- [UI オートメーションによる CheckBox コントロール型のサポート](ui-automation-support-for-the-checkbox-control-type.md)
+- [UI オートメーションによる ComboBox コントロール型のサポート](ui-automation-support-for-the-combobox-control-type.md)
+- [UI オートメーションによる DataGrid コントロール型のサポート](ui-automation-support-for-the-datagrid-control-type.md)
+- [UI オートメーションによる DataItem コントロール型のサポート](ui-automation-support-for-the-dataitem-control-type.md)
+- [UI オートメーションによる Document コントロール型のサポート](ui-automation-support-for-the-document-control-type.md)
+- [UI オートメーションによる Edit コントロール型のサポート](ui-automation-support-for-the-edit-control-type.md)
+- [UI オートメーションによる Group コントロール型のサポート](ui-automation-support-for-the-group-control-type.md)
+- [UI オートメーションによる Header コントロール型のサポート](ui-automation-support-for-the-header-control-type.md)
+- [UI オートメーションによる HeaderItem コントロール型のサポート](ui-automation-support-for-the-headeritem-control-type.md)
+- [UI オートメーションによる Hyperlink コントロール型のサポート](ui-automation-support-for-the-hyperlink-control-type.md)
+- [UI オートメーションによる Image コントロール型のサポート](ui-automation-support-for-the-image-control-type.md)
+- [UI オートメーションによる List コントロール型のサポート](ui-automation-support-for-the-list-control-type.md)
+- [UI オートメーションによる ListItem コントロール型のサポート](ui-automation-support-for-the-listitem-control-type.md)
+- [UI オートメーションによる Menu コントロール型のサポート](ui-automation-support-for-the-menu-control-type.md)
+- [UI オートメーションによる MenuBar コントロール型のサポート](ui-automation-support-for-the-menubar-control-type.md)
+- [UI オートメーションによる MenuItem コントロール型のサポート](ui-automation-support-for-the-menuitem-control-type.md)
+- [UI オートメーションによる Pane コントロール型のサポート](ui-automation-support-for-the-pane-control-type.md)
+- [UI オートメーションによる ProgressBar コントロール型のサポート](ui-automation-support-for-the-progressbar-control-type.md)
+- [UI オートメーションによる RadioButton コントロール型のサポート](ui-automation-support-for-the-radiobutton-control-type.md)
+- [UI オートメーションによる ScrollBar コントロール型のサポート](ui-automation-support-for-the-scrollbar-control-type.md)
+- [UI オートメーションによる Separator コントロール型のサポート](ui-automation-support-for-the-separator-control-type.md)
+- [UI オートメーションによる Slider コントロール型のサポート](ui-automation-support-for-the-slider-control-type.md)
+- [UI オートメーションによる Spinner コントロール型のサポート](ui-automation-support-for-the-spinner-control-type.md)
+- [UI オートメーションによる SplitButton コントロール型のサポート](ui-automation-support-for-the-splitbutton-control-type.md)
+- [UI オートメーションによる StatusBar コントロール型のサポート](ui-automation-support-for-the-statusbar-control-type.md)
+- [UI オートメーションによる Tab コントロール型のサポート](ui-automation-support-for-the-tab-control-type.md)
+- [UI オートメーションでの TabItem コントロール型のサポート](ui-automation-support-for-the-tabitem-control-type.md)
+- [UI オートメーションによる Table コントロール型のサポート](ui-automation-support-for-the-table-control-type.md)
+- [UI オートメーションによる Text コントロール型のサポート](ui-automation-support-for-the-text-control-type.md)
+- [UI オートメーションによる Thumb コントロール型のサポート](ui-automation-support-for-the-thumb-control-type.md)
+- [UI オートメーションによる TitleBar コントロール型のサポート](ui-automation-support-for-the-titlebar-control-type.md)
+- [UI オートメーションによる ToolBar コントロール型のサポート](ui-automation-support-for-the-toolbar-control-type.md)
+- [UI オートメーションによる ToolTip コントロール型のサポート](ui-automation-support-for-the-tooltip-control-type.md)
+- [UI オートメーションによる Tree コントロール型のサポート](ui-automation-support-for-the-tree-control-type.md)
+- [UI オートメーションによる TreeItem コントロール型のサポート](ui-automation-support-for-the-treeitem-control-type.md)
+- [UI オートメーションによる Window コントロール型のサポート](ui-automation-support-for-the-window-control-type.md)
+
+## <a name="reference"></a>参照
+
+<xref:System.Windows.Automation.ControlType>
+
+## <a name="see-also"></a>参照
+
+- [UI オートメーション コントロール パターン](ui-automation-control-patterns.md)

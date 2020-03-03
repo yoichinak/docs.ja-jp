@@ -15,28 +15,24 @@ helpviewer_keywords:
 ms.assetid: 8463a98a-de4a-418e-beb0-9611885ae6b0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: bea6b11437367d5ba14167d9800f6c43e117d548
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83801f7133df6ffb4bdf4a816142849f40baeb53
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533326"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125657"
 ---
 # <a name="icordebugcodegetencremapsequencepoints-method"></a>ICorDebugCode::GetEnCRemapSequencePoints メソッド
-.NET Framework の現在のバージョンでは、このメソッドは実装されていません。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT GetEnCRemapSequencePoints(  
-    [in] ULONG32 cMap,  
-    [out] ULONG32 *pcMap,  
-    [out, size_is(cMap), length_is(*pcMap)]  
-        ULONG32 offsets[]  
-);  
-```  
-  
-## <a name="see-also"></a>関連項目
 
+このメソッドは、.NET Framework の現在のバージョンでは実装されていません。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT GetEnCRemapSequencePoints(
+    [in] ULONG32 cMap,
+    [out] ULONG32 *pcMap,
+    [out, size_is(cMap), length_is(*pcMap)]
+        ULONG32 offsets[]
+);
+```

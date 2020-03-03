@@ -15,42 +15,44 @@ helpviewer_keywords:
 ms.assetid: ddf9085c-7161-44bd-9609-cd2732b9009f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 44a6596807b98e6c8b8624b5df18f78dbf8d0711
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0809a149a5a5a5e9adea059140d7b4b456337ef3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417779"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125307"
 ---
 # <a name="icordebugmodule2resolveassembly-method"></a>ICorDebugModule2::ResolveAssembly メソッド
-指定したメタデータ トークンによって参照されるアセンブリを解決します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT ResolveAssembly (  
-    [in]  mdToken             tkAssemblyRef,  
-    [out] ICorDebugAssembly   **ppAssembly  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `tkAsemblyRef`  
- [in]`mdToken`アセンブリが参照する値。  
-  
- `ppAssembly`  
- [out]アセンブリを表す ICorDebugAssembly オブジェクトのアドレスへのポインター。  
-  
-## <a name="remarks"></a>コメント  
- アセンブリは既に読み込まれていない場合場合`ResolveAssembly`が呼び出されると、HRESULT CORDBG_E_CANNOT_RESOLVE_ASSEMBLY の値が返されます。  
-  
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
-  
- **ヘッダー:** CorDebug.idl、CorDebug.h  
-  
- **ライブラリ:** CorGuids.lib  
-  
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+
+指定したメタデータトークンによって参照されるアセンブリを解決します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT ResolveAssembly (
+    [in]  mdToken             tkAssemblyRef,
+    [out] ICorDebugAssembly   **ppAssembly
+);
+```
+
+## <a name="parameters"></a>パラメーター
+
+`tkAssemblyRef`\
+からアセンブリを参照する `mdToken` 値。
+
+`ppAssembly`\
+入出力アセンブリを表す、オブジェクトのアドレスへのポインター。
+
+## <a name="remarks"></a>Remarks
+
+`ResolveAssembly` が呼び出されたときにアセンブリがまだ読み込まれていない場合は、HRESULT 値 CORDBG_E_CANNOT_RESOLVE_ASSEMBLY が返されます。
+
+## <a name="requirements"></a>［要件］
+
+**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
+
+**ヘッダー:** CorDebug.idl、CorDebug.h
+
+**ライブラリ:** CorGuids.lib
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

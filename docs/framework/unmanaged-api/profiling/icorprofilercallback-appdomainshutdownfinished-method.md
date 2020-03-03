@@ -15,46 +15,48 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c89a7671cde9e519d0fc66751ee8f95b34fe9039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0851ac33a2bac4fcf727cf09e5225f6b83481b50
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669667"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866677"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished メソッド
-アプリケーション ドメインが、プロセスからアンロードされたことをプロファイラーに通知します。  
+アプリケーションドメインがプロセスからアンロードされたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT AppDomainShutdownFinished(  
     [in] AppDomainID appDomainId,  
     [in] HRESULT     hrStatus);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `appDomainId`  
- [in]アプリケーションのアセンブリが格納されているドメインを識別します。  
+## <a name="parameters"></a>パラメーター
+
+- `appDomainId`
+
+  の \[] アプリケーションのアセンブリが格納されているドメインを識別します。
+
+- `hrStatus`
+
+  \[] アプリケーションドメインが正常にアンロードされたかどうかを示す HRESULT。
+
+## <a name="remarks"></a>コメント  
+ `appDomainId` の値は、 [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md)メソッドが返された後の情報要求に対して無効です。  
   
- `hrStatus`  
- [in]かどうか、アプリケーション ドメインがアンロードされた正常を示す HRESULT。  
+ アプリケーションドメインのアンロードの一部は、`AppDomainCreationFinished` コールバックの後も続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、アプリケーションドメインのアンロードの最初の部分が成功したことのみを示します。  
   
-## <a name="remarks"></a>Remarks  
- 値`appDomainId`は後の情報の要求は無効です、 [icorprofilercallback::appdomainshutdownstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md)メソッドを返します。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- アプリケーション ドメインのアンロードの一部が後に続ける可能性があります、`AppDomainCreationFinished`コールバック。 エラーの HRESULT で`hrStatus`失敗を示します。 ただし、成功 HRESULT で`hrStatus`のみにアプリケーション ドメインをアンロードの最初の部分が成功したことを示します。  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)

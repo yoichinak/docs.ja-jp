@@ -2,23 +2,24 @@
 title: MessageAuthenticationFailure
 ms.date: 03/30/2017
 ms.assetid: cde6beae-2d57-447e-8885-a1cfc66bbcbb
-ms.openlocfilehash: cc7118934a6bf1c5f4146e355ec4c908b16b17ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da150beedc98cfa1f8e4a4564906f5e11ef26c46
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592732"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797743"
 ---
 # <a name="messageauthenticationfailure"></a>MessageAuthenticationFailure
 Id:170  
   
- 重大度:Error  
+ 順Error  
   
- カテゴリ:SecurityAudit  
+ [カテゴリ]:SecurityAudit  
   
 ## <a name="description"></a>説明  
  このイベントは、メッセージの承認に失敗したことを示します。 イベントには、サービス、アクション、クライアント ID、およびアクティビティ ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
-- [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+
+- [イベント ログ](index.md)
+- [イベント一覧](events-general-reference.md)

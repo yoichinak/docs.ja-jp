@@ -1,15 +1,15 @@
 ---
-title: '方法: XmlSerializer を使用してシリアル化する (C#)'
+title: XmlSerializer を使用してシリアル化する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 9d722735f9a83f0d65fbc10b6c868525e8393a7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ec19e964471382c6f10f07d6d4bb25f88fd532f
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567764"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347393"
 ---
-# <a name="how-to-serialize-using-xmlserializer-c"></a>方法: XmlSerializer を使用してシリアル化する (C#)
+# <a name="how-to-serialize-using-xmlserializer-c"></a>XmlSerializer を使用してシリアル化する方法 (C#)
 このトピックでは、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。  
   
 ## <a name="example"></a>例  
@@ -80,7 +80,7 @@ class XLinqTest
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 Testing for type: System.Xml.Linq.XElement  
@@ -88,7 +88,3 @@ Testing for type: System.Xml.Linq.XElement
 Testing for type: XElementContainer  
   Deserialized type: XElementContainer  
 ```  
-  
-## <a name="see-also"></a>関連項目
-
-- [XElement オブジェクトを含むオブジェクト グラフのシリアル化 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

@@ -15,42 +15,41 @@ helpviewer_keywords:
 ms.assetid: 9c5566ab-4ec7-4b61-9753-839bb90ae78c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 832746b911e74790de246b00a364aaec4bda8f67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8e72745eff09c6707afe5a5f20a1ddf38b239ae
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739980"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448620"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument メソッド
-取得では、特定のドキュメントでメソッドの最大の終了行と行を最小を開始します。  
+特定のドキュメント内のメソッドの最小の開始行と最大の終了行を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSourceExtentInDocument(  
     [in]  ISymUnmanagedDocument *document,  
     [out] ULONG32* pstartLine,  
     [out] ULONG32* pendLine);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `document`  
- [in]ドキュメントへのポインター。  
+ からドキュメントへのポインター。  
   
  `pstartLine`  
- [out]ポインターを`ULONG32`開始行を受け取る。  
+ 入出力開始行を受け取る `ULONG32` へのポインター。  
   
  `pendLine`  
- [out]ポインター、`ULONG32`最終行を受け取る。  
+ 入出力終了行を受け取る `ULONG32` へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymENCUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

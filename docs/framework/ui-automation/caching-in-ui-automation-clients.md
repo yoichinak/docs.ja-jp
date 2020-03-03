@@ -5,24 +5,22 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: ba87ec766da31be15b2d7c2a7452f107bd799f80
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 5c0c92f40ae60785f780cb573bb7faa77a31f273
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220564"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741781"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI オートメーション クライアントにおけるキャッシュ
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
  このトピックでは、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] のプロパティとコントロール パターンのキャッシュについて説明します。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、キャッシュとはデータをプリフェッチすることを意味します。 そのデータには、さらにプロセス間通信を行わずにアクセスできます。 キャッシュは通常、UI オートメーション クライアント アプリケーションによって使用され、プロパティとコントロール パターンを一括で取得します。 それから、必要に応じて情報がキャッシュから取得されます。 アプリケーションはキャッシュを定期的に更新します。通常は、 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] で何かが変更されたことを示すイベントへの応答として更新を行います。  
   
- キャッシュの利点は、Windows Presentation Foundation (WPF) コントロールとサーバー側 UI オートメーション プロバイダーのカスタム コントロールで最も顕著です。 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] コントロールの既定のプロバイダーなど、クライアント側プロバイダーにアクセスするときは、メリットは小さくなります。  
+ キャッシュの利点は、Windows Presentation Foundation (WPF) コントロールと、サーバー側の UI オートメーションプロバイダーを持つカスタムコントロールで最も顕著になります。 Win32 コントロールの既定のプロバイダーなど、クライアント側プロバイダーにアクセスする場合の利点はあまりありません。  
   
  キャッシュはアプリケーションが <xref:System.Windows.Automation.CacheRequest> をアクティブにしたときに発生し、 <xref:System.Windows.Automation.AutomationElement>や <xref:System.Windows.Automation.AutomationElement.FindFirst%2A>など、 <xref:System.Windows.Automation.AutomationElement.FindAll%2A>を返すメソッドやプロパティを使用します。 <xref:System.Windows.Automation.TreeWalker> クラスのメソッドは例外で、 <xref:System.Windows.Automation.CacheRequest> がパラメーターとして指定された場合 (たとえば、 <xref:System.Windows.Automation.TreeWalker.GetFirstChild%28System.Windows.Automation.AutomationElement%2CSystem.Windows.Automation.CacheRequest%29?displayProperty=nameWithType>) にのみ、キャッシュが行われます。  
   
@@ -58,7 +56,7 @@ ms.locfileid: "56220564"
 ## <a name="activating-the-cacherequest"></a>CacheRequest のアクティブ化  
  <xref:System.Windows.Automation.AutomationElement> が現在のスレッドに対してアクティブである間に <xref:System.Windows.Automation.CacheRequest> オブジェクトが取得された場合にのみ、キャッシュが実行されます。 <xref:System.Windows.Automation.CacheRequest>をアクティブ化するには、2 つの方法があります。  
   
- 通常の方法では、 <xref:System.Windows.Automation.CacheRequest.Activate%2A>を呼び出します。 このメソッドは、 <xref:System.IDisposable>を実装するオブジェクトを返します。 要求は、 <xref:System.IDisposable> オブジェクトが存在する限りアクティブなままです。 オブジェクトの有効期間を制御する最も簡単な方法が内に呼び出しを埋め込むには、 `using` (c#) または`Using`(Visual Basic の場合) ブロックします。 これにより、例外が発生した場合でも、スタックから要求がポップされます。  
+ 通常の方法では、 <xref:System.Windows.Automation.CacheRequest.Activate%2A>を呼び出します。 このメソッドは、 <xref:System.IDisposable>を実装するオブジェクトを返します。 要求は、 <xref:System.IDisposable> オブジェクトが存在する限りアクティブなままです。 オブジェクトの有効期間を制御する最も簡単な方法は、呼び出しを `using` (C#) または `Using` (Visual Basic) ブロック内で囲むことです。 これにより、例外が発生した場合でも、スタックから要求がポップされます。  
   
  キャッシュ要求を入れ子にする場合に有用な別の方法は、 <xref:System.Windows.Automation.CacheRequest.Push%2A>を呼び出すことです。 この方法では、スタック上に要求が配置され、アクティブ化されます。 <xref:System.Windows.Automation.CacheRequest.Pop%2A>によってスタックから削除されるまで、要求はアクティブなままです。 別の要求がスタックにプッシュされた場合、要求は一時的に非アクティブになります。スタックの最上位の要求のみがアクティブになります。  
   
@@ -66,9 +64,9 @@ ms.locfileid: "56220564"
 ## <a name="retrieving-cached-properties"></a>キャッシュされたプロパティの取得  
  要素のキャッシュされたプロパティを取得するには、次のメソッドとプロパティを使用します。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  要求されたプロパティがキャッシュ内にない場合、例外が発生します。  
   
@@ -78,9 +76,9 @@ ms.locfileid: "56220564"
 ## <a name="retrieving-cached-control-patterns"></a>キャッシュされたコントロール パターンの取得  
  要素のキャッシュされたコントロール パターンを取得するには、次のメソッドを使用します。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  パターンがキャッシュ内にない場合、 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> で例外が発生し、 <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> が `false`を返します。  
   
@@ -93,7 +91,7 @@ ms.locfileid: "56220564"
  <xref:System.Windows.Automation.TreeScope.Element> がキャッシュ要求のスコープに含まれていた場合には、要求のルート要素は、その後、任意の子要素の <xref:System.Windows.Automation.AutomationElement.CachedParent%2A> プロパティから利用できます。  
   
 > [!NOTE]
->  要求のルート要素の親または先祖をキャッシュすることはできません。  
+> 要求のルート要素の親または先祖をキャッシュすることはできません。  
   
 <a name="Updating_the_Cache"></a>   
 ## <a name="updating-the-cache"></a>キャッシュの更新  
@@ -104,6 +102,7 @@ ms.locfileid: "56220564"
  キャッシュを更新しても、既存の <xref:System.Windows.Automation.AutomationElement> の参照のプロパティはいずれも変更されません。  
   
 ## <a name="see-also"></a>関連項目
-- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+
+- [クライアントの UI オートメーション イベント](ui-automation-events-for-clients.md)
+- [UI オートメーションにおけるキャッシュの使用](use-caching-in-ui-automation.md)
 - [FetchTimer サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

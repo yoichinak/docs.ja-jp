@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab28021-4d15-4d9c-bf2e-6ccc0daa7d1a
-ms.openlocfilehash: 7a772de27583f35b18a4fa5854e61768443e5ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 515a8477b3a9c72934e0ad11d7b1bf599e8b16a2
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652561"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793505"
 ---
 # <a name="how-to-represent-columns-as-class-members"></a>方法: クラス メンバーとして列を表す
-使用して、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute>フィールドまたはプロパティをデータベース列に関連付ける属性。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 属性を使用して、フィールドまたはプロパティをデータベース<xref:System.Data.Linq.Mapping.ColumnAttribute>列に関連付けます。  
   
 ### <a name="to-map-a-field-or-property-to-a-database-column"></a>フィールドまたはプロパティをデータベース列に対応付けるには  
   
--   プロパティまたはフィールドの宣言に <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性を追加します。  
+- プロパティまたはフィールドの宣言に <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性を追加します。  
   
 ## <a name="example"></a>例  
  次の例では、`CustomerID` クラス内の `Customer` フィールドを `CustomerID` データベース テーブル内の `Customers` 列に対応付けます。  
@@ -28,5 +28,6 @@ ms.locfileid: "54652561"
  名前が推論できる場合は、<xref:System.Data.Linq.Mapping.DataAttribute.Name%2A> プロパティを指定する必要はありません。 名前を指定しない場合は、プロパティまたはフィールドと同じ名前であると見なされます。  
   
 ## <a name="see-also"></a>関連項目
-- [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [方法: コード エディターを使用してエンティティ クラスをカスタマイズします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+
+- [LINQ to SQL オブジェクト モデル](the-linq-to-sql-object-model.md)
+- [方法: コードエディターを使用してエンティティクラスをカスタマイズする](how-to-customize-entity-classes-by-using-the-code-editor.md)

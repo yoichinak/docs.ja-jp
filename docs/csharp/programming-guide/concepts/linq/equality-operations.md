@@ -2,12 +2,12 @@
 title: 等値演算 (C#)
 ms.date: 07/20/2015
 ms.assetid: 9d9a5bf2-f211-4865-bd19-c59ffa004615
-ms.openlocfilehash: 643efacc3b5830d7427d4c5dfb4f7abdc1781f2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 306129c1fe0c3f0003f8be579d987edcaeb63709
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692338"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141497"
 ---
 # <a name="equality-operations-c"></a>等値演算 (C#)
 2 つのシーケンスの対応する要素が等しく、要素数も同じである場合、これらのシーケンスは等しいと見なされます。  
@@ -21,5 +21,5 @@ ms.locfileid: "54692338"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compare-the-contents-of-two-folders-linq.md)
+- [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
+- [2 つのフォルダーの内容を比較する方法 (LINQ) (C#)](./how-to-compare-the-contents-of-two-folders-linq.md)

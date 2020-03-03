@@ -1,5 +1,5 @@
 ---
-title: '方法 : イベントを発生させる/処理する'
+title: '方法: イベントを発生させる/処理する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,16 +11,14 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa933e0fc589d0dbfec741e9db7fb11222cfdf38
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44193225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131594"
 ---
-# <a name="how-to-raise-and-consume-events"></a>方法 : イベントを発生させる/処理する
+# <a name="how-to-raise-and-consume-events"></a>方法: イベントを発生させる/処理する
 このトピックの例では、イベントを使用する方法を示します。 ここでは、<xref:System.EventHandler> デリゲートと <xref:System.EventHandler%601> デリゲート、およびカスタム デリゲートの例を使用して、データを持つイベントと持たないイベントを示します。  
   
  この例では、「[イベント](../../../docs/standard/events/index.md)」で説明されている概念を使用します。  

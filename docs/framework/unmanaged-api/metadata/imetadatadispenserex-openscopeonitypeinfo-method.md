@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3480bbdb-c442-44a0-b7c6-333354503c52
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7ba8cb8cdf89fc07238a9d5f788c76b0cb7f7153
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8deefe026e32a56d853e173e6a8fa3be942ccd9c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681340"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431129"
 ---
 # <a name="imetadatadispenserexopenscopeonitypeinfo-method"></a>IMetaDataDispenserEx::OpenScopeOnITypeInfo メソッド
-このメソッドは実装されていません。 呼び出された場合、E_NOTIMPL を返します。  
+このメソッドは実装されていません。 呼び出された場合は E_NOTIMPL を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT OpenScopeOnITypeInfo (  
     [in]  ITypeInfo   *pITI,  
     [in]  DWORD       dwOpenFlags,  
@@ -38,28 +36,29 @@ HRESULT OpenScopeOnITypeInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pITI`  
- [in]ポインター、 [ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)を開くスコープ型情報を提供するインターフェイスです。  
+ からスコープを開く対象の型情報を提供する[ITypeInfo](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)インターフェイスへのポインター。  
   
  `dwOpenFlags`  
- [in]Open モード フラグ。  
+ からOpen モードフラグ。  
   
  `riid`  
- [in]必要なインターフェイスです。  
+ から目的のインターフェイス。  
   
  `ppIUnk`  
- [out]返されるインターフェイスへのポインターへのポインター。  
+ 入出力返されたインターフェイスへのポインターへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

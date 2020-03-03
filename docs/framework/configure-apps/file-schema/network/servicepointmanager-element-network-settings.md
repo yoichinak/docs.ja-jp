@@ -8,21 +8,21 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 3a18f9eb3d38ef272b7a4df58d8588b622662184
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b7333016fea2d46285d3c98181c0ca4904c376f8
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277551"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089125"
 ---
-# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 要素 (ネットワーク設定)
-ネットワーク リソースへの接続を構成します。  
-  
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<servicePointManager>  
-  
+# <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager> 要素 (ネットワーク設定)
+ネットワークリソースへの接続を構成します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<settings>** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<servicePointManager>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -44,13 +44,13 @@ ms.locfileid: "55277551"
   
 |**属性**|**説明**|  
 |-------------------|---------------------|  
-|`checkCertificateName`|システムが証明書の名前、証明書を使用する前にサーバーのホスト名が一致することを確認する必要があるかどうかを指定します。 既定値は `true` です。|  
-|`checkCertificateRevocationList`|システムが、証明書を使用する前に、証明書を失効するかどうかをチェックする必要があるかどうかを指定します。 既定値は `false` です。|  
-|`dnsRefreshTimeout`|(ミリ秒単位)、DNS ラウンド ロビン オプションと共に、どのくらいの時間ドメイン ネーム サービス (DNS) 解決策はキャッシュを指定します。 既定値は 120,000 ミリ秒 (2 分) です。|  
-|`enableDnsRoundRobin`|すべてのアドレス、または最初の 1 つだけホストの DNS 解決の戻り値の複数のインターネット プロトコル (IP) アドレスを持つ名前かどうかを指定します。 既定値は `false` です。|  
-|`encryptionPolicy`|SSL や TLS セッションに適用する暗号化ポリシーを指定します、<xref:System.Net.ServicePointManager>インスタンス。 使用可能な値がの値に等しい、<xref:System.Net.Security.EncryptionPolicy>列挙体。 使用<xref:System.Security.Authentication.CipherAlgorithmType.Null>暗号化ポリシーが設定されている場合は、必要な`NoEncryption`します。 既定値は `RequireEncryption` です。|  
-|`expect100Continue`|POST メソッドが受信することが予想されるかどうかを指定します、`100-continue`サーバーからの応答。 既定値は `true` です。|  
-|`useNagleAlgorithm`|サービス ポイントのマネージャーによって制御される接続で Nagle アルゴリズムを使用するかどうかを指定します。 既定値は `true` です。|  
+|`checkCertificateName`|証明書を使用する前に、証明書の名前がサーバーホスト名と一致するかどうかをシステムが確認する必要があるかどうかを指定します。 既定値は `true`です。|  
+|`checkCertificateRevocationList`|証明書を使用する前に証明書が失効しているかどうかをシステムが確認するかどうかを指定します。 既定値は `false`です。|  
+|`dnsRefreshTimeout`|DNS ラウンドロビンオプションと共に、ドメインネームサービス (DNS) の解決時間をミリ秒単位でキャッシュする期間を指定します。 既定値は 120,000 ミリ秒 (2 分) です。|  
+|`enableDnsRoundRobin`|複数のインターネットプロトコル (IP) アドレスを持つホスト名の DNS 解決が、すべてのアドレスを返すのか、それとも1つだけを返すのかを指定します。 既定値は `false`です。|  
+|`encryptionPolicy`|<xref:System.Net.ServicePointManager> インスタンスの SSL/TLS セッションに適用される暗号化ポリシーを指定します。 指定できる値は、<xref:System.Net.Security.EncryptionPolicy> 列挙型の値と同じです。 暗号化ポリシーが `NoEncryption`に設定されている場合は、<xref:System.Security.Authentication.CipherAlgorithmType.Null> を使用する必要があります。 既定値は `RequireEncryption`です。|  
+|`expect100Continue`|POST メソッドがサーバーから `100-continue` 応答を受け取ることを期待するかどうかを指定します。 既定値は `true`です。|  
+|`useNagleAlgorithm`|サービスポイントマネージャーによって制御される接続が Nagle アルゴリズムを使用するかどうかを指定します。 既定値は `true`です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -59,7 +59,7 @@ ms.locfileid: "55277551"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[Settings](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -67,6 +67,7 @@ ms.locfileid: "55277551"
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

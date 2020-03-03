@@ -1,5 +1,5 @@
 ---
-title: ICorDebugStepperEnum Interface1
+title: ICorDebugStepperEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugStepperEnum
@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 988718c1-1a4a-40f2-a04c-7d67e5cfe1e2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4d9585fc3d10f7f58c7949eaef517e545d51010e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa0ff0ff7c8fe32f181fb86ee5b778ea618df3b2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572137"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791700"
 ---
-# <a name="icordebugstepperenum-interface1"></a>ICorDebugStepperEnum Interface1
-ICorDebugEnum のメソッドを実装し、ICorDebugStepper 配列を列挙します。  
+# <a name="icordebugstepperenum-interface"></a>ICorDebugStepperEnum インターフェイス
+ICorDebugEnum メソッドを実装し、ICorDebugStepper 配列を列挙します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugstepperenum-next-method.md)|指定した数を取得`ICorDebugStepper`列挙体の現在位置からのインスタンス。|  
+|[Next メソッド](icordebugstepperenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugStepper` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +45,5 @@ ICorDebugEnum のメソッドを実装し、ICorDebugStepper 配列を列挙し�
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

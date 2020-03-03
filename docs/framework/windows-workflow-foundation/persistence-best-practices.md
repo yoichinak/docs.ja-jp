@@ -2,12 +2,12 @@
 title: 永続化のベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 6974c5a4-1af8-4732-ab53-7d694608a3a0
-ms.openlocfilehash: fdbf61e559efbd978df1c5a46fcbbbbc528ec98a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8ffbb3ebfa8f85e2b0052a9df9ada30766accd8e
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800652"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74802519"
 ---
 # <a name="persistence-best-practices"></a>永続化のベスト プラクティス
 このドキュメントでは、ワークフローの永続化に関するワークフローのデザインと構成のベスト プラクティスについて説明します。  
@@ -21,27 +21,27 @@ ms.locfileid: "43800652"
   
  ワークフローが長時間ビジー状態になっている場合は、ビジー期間中、定期的にワークフロー インスタンスを永続化することをお勧めします。 永続化するには、ワークフロー インスタンスをビジー状態にする一連のアクティビティに <xref:System.Activities.Statements.Persist> アクティビティを追加します。 こうすると、アプリケーション ドメインのリサイクル、ホストの障害、またはコンピューターの障害が原因でシステムがビジー期間の始めにロールバックするのを避けることができます。 <xref:System.Activities.Statements.Persist> アクティビティをワークフローに追加すると、パフォーマンスが低下する場合があることに注意してください。  
   
- Windows Server App Fabric を使用すると、永続化の構成と使用を大幅に簡潔化できます。 詳細については、次を参照してください[Windows Server App Fabric の永続化。](https://go.microsoft.com/fwlink/?LinkID=201200&clcid=0x409)  
+ Windows Server App Fabric を使用すると、永続化の構成と使用を大幅に簡潔化できます。 詳細については、「 [Windows Server App Fabric の永続](https://docs.microsoft.com/previous-versions/appfabric/ee677272(v=azure.10))化」を参照してください。  
   
 ## <a name="configuration-of-scalability-parameters"></a>スケーラビリティ パラメーターの構成  
  スケーラビリティとパフォーマンスの要件により、次のパラメーターの設定が決定されます。  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
+- <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A>  
   
--   <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
+- <xref:System.ServiceModel.Activities.Description.SqlWorkflowInstanceStoreBehavior.InstanceLockedExceptionAction%2A>  
   
  これらのパラメーターは、現在のシナリオに応じて次のように設定してください。  
   
 ### <a name="scenario-a-small-number-of-workflow-instances-that-require-optimal-response-time"></a>シナリオ: 最適な応答時間が要求される少数のワークフロー インスタンスが存在する場合  
  このシナリオでは、ワークフロー インスタンスがアイドル状態になったときに、これらのインスタンスすべてを読み込んだ状態のまま保持する必要があります。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> を大きな値に設定します。 この設定を使用すると、ワークフロー インスタンスがコンピューター間で移動するのを回避できます。 この設定は、次の 1 つ以上の条件が真である場合にのみ使用してください。  
   
--   ワークフロー インスタンスが有効期間中に 1 つのメッセージを受信する。  
+- ワークフロー インスタンスが有効期間中に 1 つのメッセージを受信する。  
   
--   すべてのワークフロー インスタンスが 1 台のコンピューター上で実行される。  
+- すべてのワークフロー インスタンスが 1 台のコンピューター上で実行される。  
   
--   ワークフロー インスタンスがすべてのメッセージを同じコンピューターで受信する。  
+- ワークフロー インスタンスがすべてのメッセージを同じコンピューターで受信する。  
   
  <xref:System.Activities.Statements.Persist> アクティビティを使用するか、<xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> を 0 に設定し、サービス ホストまたはコンピューターに障害が発生した場合にワークフロー インスタンスを回復できるようにします。  
   

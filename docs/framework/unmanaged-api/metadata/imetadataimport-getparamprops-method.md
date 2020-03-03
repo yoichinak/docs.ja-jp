@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4d5e5f00-bcab-4f41-b191-176511a186a7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c4e4b163cc783ccd01bc406789f5bf92448c697c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb73ccdd9eee4b5a655a56b5d6757e0c6003fbc9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685530"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74437125"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps メソッド
 指定した ParamDef トークンによって参照されるパラメーターのメタデータ値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetParamProps (  
    [in]  mdParamDef      tk,  
    [out] mdMethodDef     *pmd,  
@@ -44,46 +42,51 @@ HRESULT GetParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]メタデータを返すパラメーターを表す ParamDef トークンです。  
+ からメタデータを返すパラメーターを表す ParamDef トークン。  
   
  `pmd`  
- [out]パラメーターを受け取るメソッドを表す MethodDef トークンへのポインター。  
+ 入出力パラメーターを受け取るメソッドを表す MethodDef トークンへのポインター。  
   
  `pulSequence`  
- [out]メソッドの引数リストで、パラメーターの序数の位置。  
+ 入出力メソッド引数リスト内のパラメーターの序数位置。  
   
  `szName`  
- [out]パラメーターの名前を保持するバッファー。  
+ 入出力パラメーターの名前を保持するバッファー。  
   
  `cchName`  
- [in]要求されたサイズのワイド文字単位`szName`します。  
+ から`szName`のワイド文字で要求されたサイズ。  
   
  `pchName`  
- [out]ワイド文字で返されるサイズ`szName`します。  
+ 入出力`szName`のワイド文字で返されたサイズ。  
   
  `pdwAttr`  
- [out]パラメーターに関連付けられているすべての属性フラグへのポインター。  
+ 入出力パラメーターに関連付けられているすべての属性フラグへのポインター。 これは `CorParamAttr` 値のビットマスクです。  
   
  `pdwCPlusTypeFlag`  
- [out]パラメーターを指定するフラグへのポインター、<xref:System.ValueType>します。  
+ 入出力パラメーターが <xref:System.ValueType>であることを示すフラグへのポインター。  
   
  `ppValue`  
- [out]パラメーターによって返される定数文字列へのポインター。  
+ 入出力パラメーターによって返される定数文字列へのポインター。  
   
  `pcchValue`  
- [out]サイズ`ppValue`ワイド文字、または場合は 0 で`ppValue`文字列を保持しません。  
+ 入出力ワイド文字の `ppValue` のサイズ。 `ppValue` が文字列を保持していない場合は0。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="remarks"></a>コメント
+
+`pulSequence` のシーケンス値は、パラメーターに対して1から始まります。 戻り値のシーケンス番号は0です。
+
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

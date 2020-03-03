@@ -3,24 +3,24 @@ title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 9a910ccd6265011fc0e5540b461ba089dbd3e7ba
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b80225cf1614a7c25ac9011acd39e74032465ca3
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261272"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834148"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
 このチュートリアルでは、C# 言語の概要と <xref:System.Collections.Generic.List%601> クラスの基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="a-basic-list-example"></a>基本のリストの例
 
-**list-tutorial** という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console` を実行します。
+*list-tutorial* という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console` を実行します。
 
-好みのエディターで **Program.cs** を開き、既存のコードを次のコードで置き換えます。
+好みのエディターで *Program.cs* を開き、既存のコードを次のコードで置き換えます。
 
 ```csharp
 using System;
@@ -42,7 +42,7 @@ namespace list_tutorial
 }
 ```
 
-`<name>` をユーザー名で置き換えます。 **Program.cs** を保存します。 コンソール ウィンドウに「`dotnet run`」と入力して試します。
+`<name>` をユーザー名で置き換えます。 *Program.cs* を保存します。 コンソール ウィンドウに「`dotnet run`」と入力して試します。
 
 文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。
 
@@ -93,7 +93,8 @@ var index = names.IndexOf("Felipe");
 if (index == -1)
 {
     Console.WriteLine($"When an item is not found, IndexOf returns {index}");
-} else
+}
+else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
 }
@@ -102,7 +103,8 @@ index = names.IndexOf("Not Found");
 if (index == -1)
 {
     Console.WriteLine($"When an item is not found, IndexOf returns {index}");
-} else
+}
+else
 {
     Console.WriteLine($"The name {names[index]} is at index {index}");
 
@@ -192,7 +194,7 @@ var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
 
 fibonacciNumbers.Add(previous + previous2);
 
-foreach(var item in fibonacciNumbers)
+foreach (var item in fibonacciNumbers)
     Console.WriteLine(item);
 ```
 
@@ -207,7 +209,7 @@ foreach(var item in fibonacciNumbers)
 
 ## <a name="complete-challenge"></a>課題完了
 
-[GitHub にある完成したサンプル コード](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)で、ソリューションの例を確認できます。
+[GitHub にある完成したサンプル コードを表示すること](https://github.com/dotnet/samples/tree/master/csharp/list-quickstart/Program.cs#L13-L23)で、ソリューションの例を確認できます。
 
 ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
 

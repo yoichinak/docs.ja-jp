@@ -2,12 +2,12 @@
 title: 概念モデルに対するクエリ
 ms.date: 03/30/2017
 ms.assetid: d59a4ae7-a651-403c-82e2-6d710645a867
-ms.openlocfilehash: 11772f89e1b444878ea6ef6c8c7747bb18986421
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 377876f7ada933629394376192e3ac147f9bc65a
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43499849"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450402"
 ---
 # <a name="querying-a-conceptual-model"></a>概念モデルに対するクエリ
-[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]概念モデルのクエリを実行することができます。 Entity Framework の最新バージョンを使用して概念モデルを照会するを参照してください。[データのクエリ](https://go.microsoft.com/fwlink/?LinkId=235282)します。
+ADO.NET Entity Framework を使用すると、概念モデルに対してクエリを実行できます。 最新バージョンの Entity Framework を使用して概念モデルに対してクエリを実行するには、「[データ](/ef/ef6/querying/index)のクエリ」を参照してください。

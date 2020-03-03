@@ -1,1 +1,0 @@
-統合言語クエリ (LINQ: Language-Integrated Query)

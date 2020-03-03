@@ -2,22 +2,23 @@
 title: <transport> の <netPeerTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: c44d86d2-1160-44d7-9c7a-297b12eccc7f
-ms.openlocfilehash: f5feca232265cbcad7feff78c0c66e3606c8567e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 49b31a889d192d190125214e89ba09305114eb7f
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270373"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73735978"
 ---
-# <a name="transport-of-netpeertcpbinding"></a>\<トランスポート > の\<netPeerTcpBinding >
-使用する場合は、トランスポート レベルのセキュリティの設定を指定、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)します。  
+# <a name="transport-of-netpeertcpbinding"></a>\<netPeerTcpBinding の \<トランスポート > >
+[\<netPeerTcpBinding >](netpeertcpbinding.md)を使用する場合のトランスポートレベルのセキュリティ設定を指定します。  
   
- \<system.ServiceModel >  
-\<bindings>  
-\<netPeerTcpBinding>  
-\<binding>  
-\<セキュリティ >  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp; &nbsp;[ **\<system >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**バインド**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**netPeerTcpBinding\<** ](netpeertcpbinding.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**セキュリティ >** ](security-of-netpeerbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**トランスポート >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,27 +43,28 @@ ms.locfileid: "55270373"
   
 ## <a name="credentialtype-attribute"></a>credentialType 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |証明書|ピア チャネル トランスポートの認証には X 509 証明書が必要です。|  
-|[Password]|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
+|パスワード|ピア チャネル トランスポートの認証には正しいパスワードが必要です。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netpeerbinding.md)|セキュリティ設定を定義、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)します。|  
+|[\< セキュリティ >](security-of-netpeerbinding.md)|[\<netPeerTcpBinding >](netpeertcpbinding.md)のセキュリティ設定を定義します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding >](bindings.md)

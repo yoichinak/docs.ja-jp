@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <cryptoNameMapping> element
 - cryptoNameMapping element
 ms.assetid: c59c9494-149b-4ce6-b38d-371f896ae85c
-ms.openlocfilehash: ff3300f57fd4681875e2791610cc5a0d0dcba31b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4b3495d17e07ca611a384bf958ee06e928eb2506
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281477"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088013"
 ---
 # <a name="cryptonamemapping-element"></a>\<cryptoNameMapping > 要素
 表示名へのクラスのマッピングを含みます。  
-  
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings >  
-\<cryptoNameMapping>  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings**](cryptographysettings-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**cryptoNameMapping >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -50,10 +50,10 @@ ms.locfileid: "55281477"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
 |`cryptoNameMapping`|表示名へのクラスのマッピングを含みます。|  
-|`mscorlib`|含まれています、 \<cryptographySettings > 要素。|  
+|`mscorlib`|\<cryptographySettings > 要素を格納します。|  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、  **\<cryptoNameMapping >** 暗号化クラスを参照して、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
+ 次の例は、 **\<cryptoNameMapping >** 要素を使用して、暗号化クラスを参照し、ランタイムを構成する方法を示しています。 その後、文字列 "RSA" を <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> メソッドに渡し、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> メソッドを使用して `MyCryptoRSAClass` オブジェクトを返すことができます。  
   
 ```xml  
 <configuration>  
@@ -75,7 +75,8 @@ ms.locfileid: "55281477"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+
+- [構成ファイル スキーマ](../index.md)
+- [暗号化設定スキーマ](index.md)
+- [暗号サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)

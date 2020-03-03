@@ -15,28 +15,26 @@ helpviewer_keywords:
 ms.assetid: 54d31e7b-b1e2-4f2b-8a4f-867b8759fe41
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fac87410d4e9b23fd532582b9ce1500e2c08a301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 41f1ec39c8916d15eec6af92cee391a8581426d8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412322"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138427"
 ---
 # <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a>ICorDebugHeapValue::CreateRelocBreakpoint メソッド
-.NET Framework の現在のバージョンでは、このメソッドが実装されていません。  
+このメソッドは、.NET Framework の現在のバージョンでは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateRelocBreakpoint (  
     [out] ICorDebugValueBreakpoint **ppBreakpoint  
 );  
 ```  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

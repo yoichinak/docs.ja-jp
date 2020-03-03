@@ -2,17 +2,21 @@
 title: <add> の <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
-ms.openlocfilehash: 6edf0bc2d532deb01f24450b9868bbc240bab413
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 02654b8ab198a2b161b3044c1f3aa452761a6a4c
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259620"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398386"
 ---
-# <a name="add-of-allowaccounts"></a>\<add> of \<allowAccounts>
-WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセス用のユーザー アカウントを指定します。  
+# <a name="add-of-allowaccounts"></a>\<allowaccounts の\<> を追加 >
+WCF サービスをホストし、共有サービスへの接続アクセスが許可されているプロセスのユーザーアカウントを指定します。  
   
- \<system.serviceModel.activation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel. activation >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<net.pipe >** ](net-pipe.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<allowAccounts >** ](allowaccounts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> の追加**  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +42,7 @@ WCF サービスをホストし、共有サービスへの接続アクセスが�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<allowAccounts>](../../../../../docs/framework/configure-apps/file-schema/wcf/allowaccounts.md)|格納する構成要素のコレクションを`securityIdentifier`属性を WCF サービスをホストし、共有サービスへの接続アクセスが許可されるプロセスのユーザー アカウントを指定します。|  
+|[\<allowAccounts>](allowaccounts.md)|WCF サービスをホストするプロセスのユーザー `securityIdentifier`アカウントを指定する属性を含む構成要素のコレクション。共有サービスへの接続アクセス権が付与されます。|  
   
 ## <a name="example"></a>例  
  次の構成例は、このコレクションにユーザー アカウントの 5 つの既定の識別子を追加します。  
@@ -59,6 +63,7 @@ WCF サービスをホストし、共有サービスへの接続アクセスが�
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
 - <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>

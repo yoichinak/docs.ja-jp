@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: a7b50175-2bf1-40be-8f65-64aec7aa1247
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c9ed79eb799971dfcbc9fd787cd0290795f79d96
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 66d544bbc0511ea76565376c8f10294f1758026b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417974"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792570"
 ---
 # <a name="icordebugprocesssetthreadcontext-method"></a>ICorDebugProcess::SetThreadContext メソッド
-このプロセスで特定のスレッドのコンテキストを設定します。  
+このプロセス内の指定されたスレッドのコンテキストを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetThreadContext(  
     [in] DWORD threadID,  
     [in] ULONG32 contextSize,  
@@ -37,30 +35,30 @@ HRESULT SetThreadContext(
     BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `threadID`  
- [in]コンテキストを設定する対象のスレッドの ID。  
+ からコンテキストを設定するスレッドの ID。  
   
  `contextSize`  
  [in] `context` 配列のサイズ。  
   
  `context`  
- [in]スレッドのコンテキストを表すバイト配列。  
+ からスレッドのコンテキストを記述するバイト配列。  
   
- コンテキストでは、スレッドが実行されているプロセッサのアーキテクチャを指定します。  
+ コンテキストは、スレッドが実行されているプロセッサのアーキテクチャを指定します。  
   
 ## <a name="remarks"></a>コメント  
- デバッガーは、Win32 ではなく、このメソッドを呼び出す必要があります`SetThreadContext`をそのコンテキストが一時的に変更されて、「乗っ取ら」の状態になる実際には、スレッドのために機能します。 ネイティブ コードでスレッドがある場合にのみ、このメソッドを使用する必要があります。 使用して[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)マネージ コード内のスレッドにします。 帯域外の (OOB) デバッグ イベントの発生時に、スレッドのコンテキストを変更する必要はありません。  
+ デバッガーは、Win32 `SetThreadContext` 関数ではなく、このメソッドを呼び出す必要があります。これは、スレッドが実際には "ハイジャック" 状態にあり、そのコンテキストが一時的に変更されている可能性があるためです。 このメソッドは、スレッドがネイティブコード内にある場合にのみ使用してください。 マネージコード内のスレッドには、コード[を使用し](icordebugregisterset-interface.md)ます。 アウトオブバンド (OOB) デバッグイベント中は、スレッドのコンテキストを変更する必要はありません。  
   
- 渡されたデータは、現在のプラットフォームの context 構造体にする必要があります。  
+ 渡されるデータは、現在のプラットフォームのコンテキスト構造である必要があります。  
   
- このメソッドを誤って使用するとランタイムが破損していることができます。  
+ 不適切に使用された場合、このメソッドはランタイムを破損する可能性があります。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

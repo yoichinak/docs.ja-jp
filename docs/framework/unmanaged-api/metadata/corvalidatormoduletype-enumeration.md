@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 748f1ab2-fbcb-4f55-89ec-8d23d81ebc80
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee1cfe52caa9d727a132d7adc23b03575293db65
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8dc09ee9f0f0fd79060bb86c599ab40a285153b
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716779"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448763"
 ---
 # <a name="corvalidatormoduletype-enumeration"></a>CorValidatorModuleType 列挙型
 モジュールの種類を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum  
 {  
     ValidatorModuleTypeInvalid  = 0x0,  
@@ -45,22 +43,23 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ValidatorModuleTypeInvalid`|モジュールは、型が無効です。|  
-|`ValidatorModuleTypeMin`|最小値、`CorValidatorModuleType`列挙型。|  
-|`ValidatorModuleTypePE`|モジュールは、ポータブル実行可能 (PE) ファイルです。|  
-|`ValidatorModuleTypeObj`|モジュールは、.obj ファイルです。|  
-|`ValidatorModuleTypeEnc`|モジュールでは、デバッガーのエディット コンティニュ セッションです。|  
-|`ValidatorModuleTypeIncr`|モジュールは、いずれかの段階的に構築されています。|  
-|`ValidatorModuleTypeMax`|最大値、`CorValidatorModuleType`列挙型。|  
+|`ValidatorModuleTypeInvalid`|モジュールの型が無効です。|  
+|`ValidatorModuleTypeMin`|`CorValidatorModuleType` 列挙型の最小値。|  
+|`ValidatorModuleTypePE`|モジュールは、移植可能な実行可能 (PE) ファイルです。|  
+|`ValidatorModuleTypeObj`|モジュールは .obj ファイルです。|  
+|`ValidatorModuleTypeEnc`|モジュールは、エディットコンティニュのデバッガーセッションです。|  
+|`ValidatorModuleTypeIncr`|モジュールは、インクリメンタルビルドされたモジュールです。|  
+|`ValidatorModuleTypeMax`|`CorValidatorModuleType` 列挙型の最大値。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

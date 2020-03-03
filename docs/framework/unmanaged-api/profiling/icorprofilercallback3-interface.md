@@ -14,39 +14,38 @@ helpviewer_keywords:
 ms.assetid: be83af41-3dec-4c77-8529-9dd6b8042af6
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 567f124b0a0066f355d057406291e6b3a7f9428d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad9c5445cbef0be7919570db64b027556d923752
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727925"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865572"
 ---
 # <a name="icorprofilercallback3-interface"></a>ICorProfilerCallback3 インターフェイス
-共通言語ランタイム (CLR) が通信するために使用するコールバック メソッド アタッチし、デタッチのプロファイラーに状態情報を提供します。  
+共通言語ランタイム (CLR) が、プロファイラーにアタッチおよびデタッチ状態情報を伝達するために使用するコールバックメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[InitializeForAttach メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)|プロファイラーのアタッチ操作後の状態を初期化する機会を提供する、CLR によって呼び出されます。|  
-|[ProfilerAttachComplete メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerattachcomplete-method.md)|プロファイラーがキャッチアップ メソッドを呼び出すことができますようになりましたことを示すために CLR によって呼び出されます。|  
-|[ProfilerDetachSucceeded メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-profilerdetachsucceeded-method.md)|共通言語ランタイム (CLR: Common Language Runtime) がプロファイラー DLL をアンロードしようとしていることをプロファイラーに通知します。|  
+|[InitializeForAttach メソッド](icorprofilercallback3-initializeforattach-method.md)|アタッチ操作後にその状態を初期化する機会をプロファイラーに与えるために、CLR によって呼び出されます。|  
+|[ProfilerAttachComplete メソッド](icorprofilercallback3-profilerattachcomplete-method.md)|プロファイラーがキャッチアップメソッドを呼び出せるようになったことを示すために、CLR によって呼び出されます。|  
+|[ProfilerDetachSucceeded メソッド](icorprofilercallback3-profilerdetachsucceeded-method.md)|共通言語ランタイム (CLR: Common Language Runtime) がプロファイラー DLL をアンロードしようとしていることをプロファイラーに通知します。|  
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerCallback2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
-- [ICorProfilerCallback4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)
+- [ICorProfilerCallback2 インターフェイス](icorprofilercallback2-interface.md)
+- [ICorProfilerCallback4 インターフェイス](icorprofilercallback4-interface.md)

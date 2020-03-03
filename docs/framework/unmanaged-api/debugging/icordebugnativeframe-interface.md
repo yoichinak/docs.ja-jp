@@ -1,5 +1,5 @@
 ---
-title: ICorDebugNativeFrame Interface1
+title: ICorDebugNativeFrame インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugNativeFrame
@@ -14,39 +14,38 @@ helpviewer_keywords:
 ms.assetid: 04819c58-7246-4b32-befb-680cf1dbc436
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c923b54f791cd8ff794538d4687ca0329e62c87e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41ac0b29ade2f78b893df72e8a17624373f6dd78
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547028"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792787"
 ---
-# <a name="icordebugnativeframe-interface1"></a>ICorDebugNativeFrame Interface1
-ネイティブ フレームで使用される ICorDebugFrame の特殊な実装です。  
+# <a name="icordebugnativeframe-interface"></a>ICorDebugNativeFrame インターフェイス
+
+ネイティブフレームに使用される、特殊な実装のテキストフレーム。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CanSetIP メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-cansetip-method.md)|命令ポインターをネイティブ コードで指定されたオフセット位置に設定しても安全であるかどうかを示す値を取得します。|  
-|[GetIP メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getip-method.md)|ネイティブ コードには、スタック フレームのオフセットを取得します。|  
-|[GetLocalDoubleRegisterValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocaldoubleregistervalue-method.md)|引数またはネイティブ フレームの 2 つのメモリ レジスタに格納されているローカル変数の値を表す ICorDebugValue へのポインターを取得します。|  
-|[GetLocalMemoryRegisterValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalmemoryregistervalue-method.md)|ポインターを取得、`ICorDebugValue`うち下位ビットが指定されたレジスタに格納されている、上位ビットが指定されたメモリ アドレスに格納されている、ローカル変数の値を表します。|  
-|[GetLocalMemoryValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalmemoryvalue-method.md)|ポインターを取得、`ICorDebugValue`を表す、指定されたメモリ アドレスに格納されているローカル変数の値。|  
-|[GetLocalRegisterMemoryValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalregistermemoryvalue-method.md)|ポインターを取得、`ICorDebugValue`うち上位ビットが指定されたレジスタに格納されているし、指定されたメモリ アドレスの下位ビットが格納されている、ローカル変数の値を表す|  
-|[GetLocalRegisterValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getlocalregistervalue-method.md)|ポインターを取得、`ICorDebugValue`引数または指定されたネイティブ レジスタに格納されているローカル変数の値を表します。|  
-|[GetRegisterSet メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-getregisterset-method.md)|ポインターを取得、 [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)これのレジスタ セットを表す`ICorDebugNativeFrame`します。|  
-|[SetIP メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)|命令ポインターをネイティブ コードで指定されたオフセット位置に設定します。|  
+|[CanSetIP メソッド](icordebugnativeframe-cansetip-method.md)|命令ポインターをネイティブコード内の指定したオフセット位置に安全に設定できるかどうかを示す値を取得します。|  
+|[GetIP メソッド](icordebugnativeframe-getip-method.md)|ネイティブコードへのスタックフレームのオフセットを取得します。|  
+|[GetLocalDoubleRegisterValue メソッド](icordebugnativeframe-getlocaldoubleregistervalue-method.md)|ネイティブフレームの2つのメモリレジスタに格納されている引数またはローカル変数の値を表す ICorDebugValue へのポインターを取得します。|  
+|[GetLocalMemoryRegisterValue メソッド](icordebugnativeframe-getlocalmemoryregistervalue-method.md)|指定したレジスタに下位ビットが格納されているローカル変数の値を表す `ICorDebugValue` へのポインターを取得します。上位ビットは、指定したメモリアドレスに格納されます。|  
+|[GetLocalMemoryValue メソッド](icordebugnativeframe-getlocalmemoryvalue-method.md)|指定したメモリアドレスに格納されているローカル変数の値を表す `ICorDebugValue` へのポインターを取得します。|  
+|[GetLocalRegisterMemoryValue メソッド](icordebugnativeframe-getlocalregistermemoryvalue-method.md)|指定したレジスタに上位ビットが格納され、指定したメモリアドレスに下位ビットが格納されているローカル変数の値を表す `ICorDebugValue` へのポインターを取得します。|  
+|[GetLocalRegisterValue メソッド](icordebugnativeframe-getlocalregistervalue-method.md)|引数の値または指定したネイティブレジスタに格納されているローカル変数を表す `ICorDebugValue` へのポインターを取得します。|  
+|[GetRegisterSet メソッド](icordebugnativeframe-getregisterset-method.md)|この `ICorDebugNativeFrame`のレジスタセットを表す、[ツールセットへ](icordebugregisterset-interface.md)のポインターを取得します。|  
+|[SetIP メソッド](icordebugnativeframe-setip-method.md)|命令ポインターをネイティブコード内の指定されたオフセット位置に設定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -55,4 +54,5 @@ ms.locfileid: "54547028"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

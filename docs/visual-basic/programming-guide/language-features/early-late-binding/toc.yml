@@ -1,0 +1,9 @@
+- name: 事前バインディングと遅延バインディング
+  href: index.md
+  items:
+    - name: オブジェクトの型の決定
+      href: determining-object-type.md
+    - name: 文字列名によるプロパティまたはメソッドの呼び出し
+      href: calling-a-property-or-method-using-a-string-name.md
+    - name: 動的オブジェクトの使用
+      href: working-with-dynamic-objects.md

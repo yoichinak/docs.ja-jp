@@ -1,39 +1,48 @@
 ---
 title: dotnet コマンド
-description: dotnet コマンド (.NET Core CLI ツールの一般的なドライバー) とその使用法について説明します。
-ms.date: 06/04/2018
-ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+description: dotnet コマンド (.NET Core CLI の汎用ドライバー) とその使用方法について説明します。
+ms.date: 02/13/2020
+ms.openlocfilehash: 364978465b63401907b46ead64dbceb2f15c8169
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066442"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451169"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet` - .NET のソース コードとバイナリを管理するためのツール。
 
 ## <a name="synopsis"></a>構文
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+<!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
+
+```dotnetcli
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
+
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
+
+```dotnetcli
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
+    [--runtimeconfig] [-v|--verbosity] [--version]
 ```
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```dotnetcli
+dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
-```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [-v|--verbosity] [--version]
-```
+
 ---
 
 ## <a name="description"></a>説明
@@ -44,15 +53,21 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="options"></a>オプション
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `--additional-deps <PATH>`
 
-追加の *deps.json* ファイルへのパスです。
+追加の *.deps.json* ファイルへのパス。
 
 `--additionalprobingpath <PATH>`
 
 プローブ ポリシーとプローブするアセンブリを含むパスです。
+
+`--depsfile`
+
+*deps.json* ファイルへのパス。
+
+*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
 `-d|--diagnostics`
 
@@ -81,11 +96,18 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--roll-forward-on-no-candidate-fx <N>`
 
 必要な共有フレームワークが利用できない場合の動作を定義します。 `N` には以下があります。
- * `0` - マイナー バージョンのロールフォワードでも無効にします。
- * `1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。 これが既定の動作です。
- * `2` - マイナー バージョンとメジャー バージョンをロール フォワードします。
+
+- `0` - マイナー バージョンのロールフォワードでも無効にします。
+- `1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。 これが既定の動作です。
+- `2` - マイナー バージョンとメジャー バージョンをロール フォワードします。
 
  詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
+
+`--runtimeconfig`
+
+*runtimeconfig.json* ファイルへのパス。
+
+*runtimeconfig.json* ファイルは、ランタイム設定を含む構成ファイルです。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
 
 `-v|--verbosity <LEVEL>`
 
@@ -95,15 +117,21 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 使用中の .NET Core SDK のバージョンを印刷します。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `--additional-deps <PATH>`
 
-追加の *deps.json* ファイルへのパスです。
+追加の *.deps.json* ファイルへのパス。
 
 `--additionalprobingpath <PATH>`
 
 プローブ ポリシーとプローブするアセンブリを含むパスです。
+
+`--depsfile`
+
+*deps.json* ファイルへのパス。
+
+*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
 `-d|--diagnostics`
 
@@ -125,6 +153,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
  `0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
+`--runtimeconfig`
+
+*runtimeconfig.json* ファイルへのパス。
+
+*runtimeconfig.json* ファイルは、ランタイム設定を含む構成ファイルです。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
+
 `-v|--verbosity <LEVEL>`
 
 コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。
@@ -133,11 +167,17 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 使用中の .NET Core SDK のバージョンを印刷します。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `--additionalprobingpath <PATH>`
 
 プローブ ポリシーとプローブするアセンブリを含むパスです。
+
+`--depsfile`
+
+*deps.json* ファイルへのパス。
+
+*deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 このファイルの詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
 `-d|--diagnostics`
 
@@ -155,6 +195,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 現在のオペレーティング システムや .NET Core バージョンのコミット SHA など、.NET Core インストールとコンピューター環境に関する詳細を出力します。
 
+`--runtimeconfig`
+
+*runtimeconfig.json* ファイルへのパス。
+
+*runtimeconfig.json* ファイルは、ランタイム設定を含む構成ファイルです。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
+
 `-v|--verbosity <LEVEL>`
 
 コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 一部のコマンドではサポートされていません。このオプションが使用可能かどうかを判断するには、対象のコマンドのページを参照してください。
@@ -169,7 +215,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ### <a name="general"></a>全般
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 | コマンド                                       | 関数                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
@@ -188,7 +234,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [dotnet store](dotnet-store.md)               | ランタイム パッケージ ストアにアセンブリを格納します。                     |
 | [dotnet test](dotnet-test.md)                 | テスト ランナーを使用してテストを実行します。                                     |
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 | コマンド                             | 関数                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -206,7 +252,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [dotnet store](dotnet-store.md)     | ランタイム パッケージ ストアにアセンブリを格納します。                     |
 | [dotnet test](dotnet-test.md)       | テスト ランナーを使用してテストを実行します。                                     |
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 | コマンド                             | 関数                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
@@ -247,16 +293,16 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 [dotnet nuget locals](dotnet-nuget-locals.md) | HTTP 要求キャッシュ、一時的なキャッシュ、コンピューター全体のグローバル パッケージ フォルダーなどのローカルの NuGet リソースをクリアまたは一覧表示します。
 [dotnet nuget push](dotnet-nuget-push.md) | パッケージをサーバーにプッシュして発行します。
 
-### <a name="global-tools-commands"></a>グローバル ツール コマンド
+### <a name="global-tool-path-and-local-tools-commands"></a>グローバル、ツールパス、およびローカル ツールのコマンド
 
-[.NET Core グローバル ツール](global-tools.md)は .NET Core SDK 2.1.300 以降で使用できます。
+ツールは、NuGet パッケージからインストールされ、コマンド プロンプトから呼び出されるコンソール アプリケーションです。 ツールは自分で作成することも、サードパーティによって作成されたツールをインストールすることもできます。 ツールは、グローバル ツール、ツールパス ツール、およびローカル ツールとも呼ばれます。 詳細については、[.NET Core ツールの概要](global-tools.md)に関するページを参照してください。 グローバル ツールとツールパス ツールは、.NET Core SDK 2.1 以降使用できます。 ローカル ツールは、.NET Core SDK 3.0 以降使用できます。
 
 コマンド | 関数
 --- | ---
-[dotnet tool install](dotnet-tool-install.md) | グローバル ツールをマシンにインストールします。
-[dotnet tool list](dotnet-tool-list.md) | マシン上の既定のディレクトリまたは指定したパスに現在インストールされているすべてのグローバル ツールを一覧表示します。
-[dotnet tool uninstall](dotnet-tool-uninstall.md) | グローバル ツールをマシンからアンインストールします。
-[dotnet tool update](dotnet-tool-update.md) | マシン上のグローバル ツールを更新します。
+[dotnet tool install](dotnet-tool-install.md) | ツールをお使いのコンピューターにインストールします。
+[dotnet tool list](dotnet-tool-list.md) | コンピューターに現在インストールされているグローバル、ツールパス、またはローカル ツールをすべて一覧表示します。
+[dotnet tool uninstall](dotnet-tool-uninstall.md) | ツールをお使いのコンピューターからアンインストールします。
+[dotnet tool update](dotnet-tool-update.md) | コンピューターにインストールされているツールを更新します。
 
 ### <a name="additional-tools"></a>その他のツール
 
@@ -294,11 +340,11 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="environment-variables"></a>環境変数
 
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+# <a name="net-core-21"></a>[.NET Core 2.1](#tab/netcore21)
 
 `DOTNET_PACKAGES`
 
-プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%HOME%\NuGet\Packages` (Windows の場合) になります。
+グローバル パッケージ フォルダー。 設定されていない場合は、既定で `~/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。
 
 `DOTNET_SERVICING`
 
@@ -316,11 +362,11 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+# <a name="net-core-20"></a>[.NET Core 2.0](#tab/netcore20)
 
 `DOTNET_PACKAGES`
 
-プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%HOME%\NuGet\Packages` (Windows の場合) になります。
+プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。
 
 `DOTNET_SERVICING`
 
@@ -334,11 +380,11 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 .NET Core ランタイム、共有フレームワーク、または SDK がグローバルな場所から解決されるかどうかを指定します。 設定されていない場合は、既定で `true` になります。 `false` に設定すると、グローバルな場所から解決されず、.NET Core インストールが分離されます (値 `0` または `false` が受け入れられます)。 複数レベルのルックアップの詳細については、「[Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)」 (複数レベルの SharedFX ルックアップ) を参照してください。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 `DOTNET_PACKAGES`
 
-プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%HOME%\NuGet\Packages` (Windows の場合) になります。
+プライマリ パッケージのキャッシュです。 設定されていない場合は、既定で `$HOME/.nuget/packages` (Unix の場合) または `%userprofile%\.nuget\packages` (Windows の場合) になります。
 
 `DOTNET_SERVICING`
 
@@ -349,3 +395,8 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 .NET Core ツールの使用に関するデータを収集し、Microsoft に送信するかどうかを指定します。 `true` に設定するとテレメトリ機能が無効になります (指定できる値は `true`、`1`、または `yes` です)。 それ以外の場合は `false` に設定します。この場合、テレメトリ機能が有効になります (指定できる値は `false`、`0`、または `no` です)。 設定されていない場合、既定で `false` になり、テレメトリ機能はアクティブになります。
 
 ---
+
+## <a name="see-also"></a>関連項目
+
+- [ランタイム構成ファイル](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)
+- [.NET Core ランタイム構成設定](../run-time-config/index.md)

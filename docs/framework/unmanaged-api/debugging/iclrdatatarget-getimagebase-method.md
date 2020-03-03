@@ -15,45 +15,44 @@ helpviewer_keywords:
 ms.assetid: 091c5f32-c160-49e3-a75f-4692e084c8e4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ef46c066512caac93f5f0cb189152d2cac6dada
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcf0ab73c79a5fa116a89cdfcc2e73b17d9eabfc
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633844"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785491"
 ---
 # <a name="iclrdatatargetgetimagebase-method"></a>ICLRDataTarget::GetImageBase メソッド
-指定したイメージのメモリのベース アドレスを取得します。  
+指定したイメージのベースメモリアドレスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetImageBase (  
     [in, string] LPCWSTR    imagePath,  
     [out] CLRDATA_ADDRESS   *baseAddress  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `imagePath`  
- [in]そのパスを含む、イメージのファイル名。  
+ からパスを含む、イメージのファイル名。  
   
  `baseAddress`  
- [out]イメージのベース アドレスを格納する CLRDATA_ADDRESS へのポインター。  
+ 入出力イメージのベースアドレスを格納する CLRDATA_ADDRESS へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- イメージのファイル名では、可能性がありますか、パスがない可能性があります。 照合はパス全体で行われますパスが指定されている場合それ以外の場合、照合はファイル名でのみ行われます。  
+## <a name="remarks"></a>コメント  
+ イメージファイル名には、パスを指定することも、パスを指定することもできません。 パスが指定されている場合、パス全体で一致が行われます。それ以外の場合、一致はファイル名でのみ実行されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

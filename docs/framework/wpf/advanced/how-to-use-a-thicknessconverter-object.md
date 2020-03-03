@@ -8,12 +8,12 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 22215a155f4a204e3edeebc464413d5718290bb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebfb8642a01f6d602f4e5ffa58fde6a8ee0b4e1f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001482"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>方法: ThicknessConverter オブジェクトを使用する
 ## <a name="example"></a>例  
@@ -23,13 +23,14 @@ ms.locfileid: "54577072"
   
  この例は実行できません。  
   
- [!code-csharp[ThicknessConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ThicknessConverter#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[ThicknessConverter#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ThicknessConverter#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Thickness>
 - <xref:System.Windows.ThicknessConverter>
 - <xref:System.Windows.Controls.Border>
-- [方法: Margin プロパティを変更します。](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)
-- [方法: ListBoxItem を新しいデータ型に変換します。](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)
-- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)
+- [方法: Margin プロパティを変更します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
+- [方法: ListBoxItem を新しいデータ型に変換します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
+- [パネルの概要](../controls/panels-overview.md)

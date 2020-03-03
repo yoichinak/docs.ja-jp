@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 885bf5e8-00b7-4cd7-9d8d-e720d47918c4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0dfe2bb234631a733248066e8475c135de288e63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 522ac2fd448abaaba48d4d5c20551e8029b35fd4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737599"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793230"
 ---
 # <a name="icordebugmdagetname-method"></a>ICorDebugMDA::GetName メソッド
-によって表されるマネージ デバッグ アシスタント (MDA) の名前を含む文字列を取得[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)します。  
+によって表されるマネージデバッグアシスタント (MDA) の名前を含む文字列を[取得します](icordebugmda-interface.md)。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in] ULONG32   cchName,  
     [out] ULONG32  *pcchName,  
@@ -38,21 +36,21 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cchName`  
  [in] `szName` 配列のサイズ。  
   
  `pcchName`  
- [out]名前の長さへのポインター。  
+ 入出力名前の長さへのポインター。  
   
  `szName`  
- [out]名前を格納する配列。  
+ 入出力名前を格納する配列。  
   
-## <a name="remarks"></a>Remarks  
- MDA 名は、一意の値です。 `GetName`メソッドは、便利なパフォーマンスの代替 XML ストリームを取得し、スキーマに基づいて、ストリームから名前を抽出します。  
+## <a name="remarks"></a>コメント  
+ MDA 名は一意の値です。 `GetName` メソッドは、XML ストリームを取得し、スキーマに基づいてストリームから名前を抽出する場合に、便利なパフォーマンスの代替手段です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -61,5 +59,6 @@ HRESULT GetName (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugMDA インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+
+- [ICorDebugMDA インターフェイス](icordebugmda-interface.md)
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

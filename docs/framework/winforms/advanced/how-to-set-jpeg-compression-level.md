@@ -1,5 +1,5 @@
 ---
-title: '方法: JPEG 圧縮レベルの設定します。'
+title: '方法: JPEG 圧縮レベルの設定'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - images [Windows Forms], changing encoder parameters
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
-ms.openlocfilehash: aae7be0b610ba90b5915267cd9bc257be9b56362
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b325c0cb8fe9da4b198d19164c73af9b1609973
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628114"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626134"
 ---
-# <a name="how-to-set-jpeg-compression-level"></a>方法: JPEG 圧縮レベルの設定します。
+# <a name="how-to-set-jpeg-compression-level"></a>方法: JPEG 圧縮レベルの設定
 イメージをディスクに保存するときに、ファイル サイズを最小化したり品質を向上させるために、イメージのパラメーターを修正したりする必要がある場合があります。 圧縮レベルを修正して、JPEG イメージの品質を調整することができます。 JPEG イメージを保存するときに、圧縮レベルを指定するに作成する必要があります、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトに渡すと、<xref:System.Drawing.Image.Save%2A>のメソッド、<xref:System.Drawing.Image>クラス。 初期化、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトのいずれかで構成される配列を持つこと、<xref:System.Drawing.Imaging.EncoderParameter>します。 作成するときに、 <xref:System.Drawing.Imaging.EncoderParameter>、指定、<xref:System.Drawing.Imaging.Encoder.Quality>エンコーダー、および、必要な圧縮レベル。  
   
 ## <a name="example"></a>例  
@@ -123,13 +123,14 @@ End Function
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   Windows フォーム アプリケーション  
+- Windows フォーム アプリケーション  
   
--   A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
+- A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
--   `TestPhoto.jpg` という名前のイメージ ファイル。保存場所は **c:\\** です。  
+- `TestPhoto.jpg` という名前のイメージ ファイル。保存場所は **c:\\** です。  
   
 ## <a name="see-also"></a>関連項目
-- [方法: エンコーダーがサポートするパラメーターを確認します。](../../../../docs/framework/winforms/advanced/how-to-determine-the-parameters-supported-by-an-encoder.md)
-- [ビットマップの種類](../../../../docs/framework/winforms/advanced/types-of-bitmaps.md)
-- [マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用](../../../../docs/framework/winforms/advanced/using-image-encoders-and-decoders-in-managed-gdi.md)
+
+- [方法: エンコーダーがサポートするパラメーターを確認します。](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [ビットマップの種類](types-of-bitmaps.md)
+- [マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用](using-image-encoders-and-decoders-in-managed-gdi.md)

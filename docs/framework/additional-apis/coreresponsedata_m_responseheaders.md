@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData.m_ResponseHeaders フィールド
+title: M_ResponseHeaders CoreResponseData フィールド
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: ea93b70ae8e1a710b4208050d7ec823a28b218b7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753665"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75741009"
 ---
-# <a name="coreresponsedatamresponseheaders-field"></a>CoreResponseData.m\_ResponseHeaders フィールド
+# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData\_ResponseHeaders フィールド
 
-`CoreResponseData.m_ResponseHeaders` <xref:System.Net.WebHeaderCollection>のサーバーの応答に関連付けられたヘッダー。
+`CoreResponseData.m_ResponseHeaders` は、サーバーの応答に関連付けられているヘッダーの <xref:System.Net.WebHeaderCollection> です。
 
 ## <a name="syntax"></a>構文
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> この API は、コード内で直接使用するものではありません。 代わりに、使用する必要があります、<xref:System.Diagnostics.DiagnosticSource>ネットワーク用のコードをフックします。 参照してください[DiagnosticSource ユーザーズ ガイド 』](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)です。
+> この API は、コード内で直接使用するためのものではありません。 代わりに、<xref:System.Diagnostics.DiagnosticSource> を使用してネットワークコードをフックする必要があります。 「 [DiagnosticSource User'S Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)」を参照してください。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのクラスの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
 
 ## <a name="requirements"></a>要件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:** システム (.dll 内)
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

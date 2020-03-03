@@ -1,15 +1,15 @@
 ---
-title: '方法: DataContractSerializer の使用 (Visual Basic) をシリアル化します。'
+title: '方法 : DataContractSerializer を使用してシリアル化する'
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
-ms.openlocfilehash: cde857e1883d822b442b51c2931fd2fb92c24247
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4142673cc374fbc6202e5806d1e9016cc81893
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714322"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352371"
 ---
-# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>方法: DataContractSerializer の使用 (Visual Basic) をシリアル化します。
+# <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>方法: DataContractSerializer を使用してシリアル化する (Visual Basic)
 このトピックでは、<xref:System.Runtime.Serialization.DataContractSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。  
   
 ## <a name="example"></a>例  
@@ -74,7 +74,7 @@ End Class
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Testing for type: System.Xml.Linq.XElement  
   Deserialized type: System.Xml.Linq.XElement  
 Testing for type: XElementContainer  
@@ -83,5 +83,6 @@ Testing for type: XElementNullContainer
   Deserialized type: XElementNullContainer  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [XElement オブジェクト (Visual Basic) を含むオブジェクト グラフをシリアル化します。](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)
+## <a name="see-also"></a>参照
+
+- [XElement オブジェクトを含むオブジェクトグラフのシリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

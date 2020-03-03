@@ -1,6 +1,6 @@
 ---
-title: '方法: によって表示されるイメージの設定を Windows フォーム コントロール'
-ms.date: 03/30/2017
+title: コントロールによって表示されるイメージを設定する
+ms.date: 08/20/2019
 dev_langs:
 - csharp
 - vb
@@ -12,51 +12,56 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 93bc7970ce7c287273f8bd7ff50b07c6658e2a08
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5df0068c8462bbaab0cb0135de1dd1b91ababe06
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644925"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76746870"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>方法: によって表示されるイメージの設定を Windows フォーム コントロール
-いくつかの Windows フォーム コントロールは、イメージを表示できます。 これらのイメージには、ボタン上のフロッピー ディスク アイコンなど、コントロールの目的を明確にするアイコンがあります、**保存**コマンド。 また、アイコンには、外観と動作を制御するための背景イメージもあります。  
-  
-### <a name="to-set-the-image-displayed-by-a-control"></a>コントロールによって表示されるイメージを設定するには  
-  
-1.  コントロールの設定`Image`または`BackgroundImage`プロパティ型のオブジェクトを<xref:System.Drawing.Image>します。 一般に、するはから読み込まれるイメージ ファイルを使用して、<xref:System.Drawing.Image.FromFile%2A>メソッド。  
-  
-     イメージの場所は次のコード例で、パスが設定、**マイ ピクチャ**フォルダー。 Windows オペレーティング システムを実行しているほとんどのコンピューターでは、このディレクトリが含まれます。 これにより、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行がもできます。 次のコード例では、既に使用して、フォームが必要です、<xref:System.Windows.Forms.PictureBox>コントロールを追加します。  
-  
-    ```vb  
-    ' Replace the image named below  
-    ' with an icon of your own choosing.  
-    PictureBox1.Image = Image.FromFile _  
-       (System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.MyPictures) _  
-       & "\Image.gif")  
-    ```  
-  
-    ```csharp  
-    // Replace the image named below  
-    // with an icon of your own choosing.  
-    // Note the escape character used (@) when specifying the path.  
-    pictureBox1.Image = Image.FromFile  
-       (System.Environment.GetFolderPath  
-       (System.Environment.SpecialFolder.MyPictures)  
-       + @"\Image.gif");  
-    ```  
-  
-    ```cpp  
-    // Replace the image named below  
-    // with an icon of your own choosing.  
-    pictureBox1->Image = Image::FromFile(String::Concat  
-       (System::Environment::GetFolderPath  
-       (System::Environment::SpecialFolder::MyPictures),  
-       "\\Image.gif"));  
-    ```  
-  
-## <a name="see-also"></a>関連項目
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>方法: Windows フォームコントロールによって表示されるイメージを設定する
+
+いくつかの Windows フォームコントロールでイメージを表示できます。 これらのイメージは、[保存] コマンドを示すボタン上のフロッピーディスクアイコンなど、コントロールの目的を明確にするアイコンにすることができます。 または、アイコンに背景画像を使用して、コントロールの外観と動作を指定することもできます。
+
+## <a name="programmatic"></a>プログラムによる
+
+コントロールの `Image` または `BackgroundImage` プロパティを <xref:System.Drawing.Image>型のオブジェクトに設定します。 通常は、<xref:System.Drawing.Image.FromFile%2A> メソッドを使用して、ファイルからイメージを読み込みます。
+
+次のコード例では、イメージの場所に設定されているパスが **[マイピクチャ**] フォルダーです。 Windows オペレーティングシステムを実行しているほとんどのコンピューターには、このディレクトリが含まれています。 これにより、最小限のシステムアクセスレベルを持つユーザーも、アプリケーションを安全に実行できます。 次のコード例では、<xref:System.Windows.Forms.PictureBox> コントロールが追加されたフォームが既に存在している必要があります。
+
+```vb
+' Replace the image named below with your own icon.
+PictureBox1.Image = Image.FromFile _
+   (System.Environment.GetFolderPath _
+   (System.Environment.SpecialFolder.MyPictures) _
+   & "\Image.gif")
+```
+
+```csharp
+// Replace the image named below with your own icon.
+// Note the escape character used (@) when specifying the path.
+pictureBox1.Image = Image.FromFile
+   (System.Environment.GetFolderPath
+   (System.Environment.SpecialFolder.MyPictures)
+   + @"\Image.gif");
+```
+
+```cpp
+// Replace the image named below with your own icon.
+pictureBox1->Image = Image::FromFile(String::Concat
+   (System::Environment::GetFolderPath
+   (System::Environment::SpecialFolder::MyPictures),
+   "\\Image.gif"));
+```
+
+## <a name="designer"></a>デザイナー
+
+1. Visual Studio の **[プロパティ]** ウィンドウで、コントロールの**Image**または**BackgroundImage**プロパティを選択し、省略記号![(visual studio](./media/visual-studio-ellipsis-button.png)の省略記号ボタン) を選択して **[リソースの選択]** ダイアログボックスを表示します。
+
+2. 表示するイメージを選択します。
+
+## <a name="see-also"></a>参照
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>

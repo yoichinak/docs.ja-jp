@@ -2,21 +2,22 @@
 title: <callbackDebug>
 ms.date: 03/30/2017
 ms.assetid: 4073feda-1857-4be4-9947-227afb847ced
-ms.openlocfilehash: 62ce1bc179c7215d4988e4c6bda08025c3d3e5de
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92a8fa83b5cf5f429278ac8edc8439b627839aad
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286313"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400566"
 ---
-# <a name="callbackdebug"></a>\<callbackDebug>
-Windows Communication Foundation (WCF) コールバック オブジェクトのサービス デバッグを指定します。  
+# <a name="callbackdebug"></a>\<> のデバッグ
+Windows Communication Foundation (WCF) コールバックオブジェクトのサービスデバッグを指定します。  
   
- \<system.ServiceModel >  
-\<<behaviors>  
-\<endpointBehaviors>  
-\<behavior>  
-\<callbackDebug>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> のデバッグ**  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,8 +44,9 @@ Windows Communication Foundation (WCF) コールバック オブジェクトの�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.CallbackDebugElement>
 - <xref:System.ServiceModel.Description.CallbackDebugBehavior>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544706"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606200"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C# コンパイラ オプション)
 **-win32res** オプションは、Win32 リソースを出力ファイルに挿入します。  
@@ -29,20 +29,20 @@ ms.locfileid: "54544706"
  `filename`  
  出力ファイルに追加するリソース ファイル。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Win32 リソース ファイルは、[リソース コンパイラ](../../language-reference/compiler-options/resource-compiler-option.md)を使用して作成できます。 リソース コンパイラは、Visual C++ プログラムをコンパイルするときに呼び出されます。 .res ファイルは .rc ファイルから作成されます。  
   
  Win32 リソースは、バージョンまたはビットマップ (アイコン) 情報を格納できます。エクスプローラーでアプリケーションを識別するのに役立ちます。 **-win32res** を指定しない場合、コンパイラはアセンブリ バージョンに基づいてバージョン情報を生成します。  
   
- .NET Framework リソース ファイルの [-linkresource](../../../csharp/language-reference/compiler-options/linkresource-compiler-option.md) (参照) または [-resource](../../../csharp/language-reference/compiler-options/resource-compiler-option.md) (アタッチ) をご覧ください。  
+ .NET Framework リソース ファイルの [-linkresource](./linkresource-compiler-option.md) (参照) または [-resource](./resource-compiler-option.md) (アタッチ) をご覧ください。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[アプリケーション]** プロパティ ページをクリックします。  
+2. **[アプリケーション]** プロパティ ページをクリックします。  
   
-3.  **[リソース ファイル]** ボタンをクリックし、コンボ ボックスを利用してファイルを選択します。  
+3. **[リソース ファイル]** ボタンをクリックし、コンボ ボックスを利用してファイルを選択します。  
   
 ## <a name="example"></a>例  
  `in.cs` をコンパイルし、Win32 リソース ファイル `rf.res` をアタッチし、`in.exe` を作成します。  
@@ -53,5 +53,5 @@ csc -win32res:rf.res in.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

@@ -7,23 +7,24 @@ f1_keywords:
 helpviewer_keywords:
 - BC30722
 ms.assetid: 6f452da8-6ef8-41fd-9ab8-6f681cf7d433
-ms.openlocfilehash: 91273b0812d1ca40cea76a8608a6c8e839ded840
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d0600c7acdb138e363dcbece392bf4b8122cb250
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672319"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73191924"
 ---
 # <a name="evaluation-of-expression-or-statement-timed-out"></a>式またはステートメントの評価がタイムアウトしました。
-適切なタイミングで、式の評価が完了しませんでした。  
+式の評価が時間内に完了しませんでした。  
   
  **エラー ID:** BC30722  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  入力されたコードが正しいことを確認します。  
+1. 入力したコードが正しいことを確認します。  
   
-2.  実行時間を短くなるように、式を簡略化します。  
+2. 実行時間が短くなるように式を単純化します。  
   
 ## <a name="see-also"></a>関連項目
-- [Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)
+
+- [Visual Studio でのデバッグ](/visualstudio/debugger/debugger-feature-tour)

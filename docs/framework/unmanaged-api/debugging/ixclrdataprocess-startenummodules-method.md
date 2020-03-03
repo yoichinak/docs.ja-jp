@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 4a086157b27b7426cb6d5f17f13426c0f26d2b2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79c4e0ed99a068d7d806d5c25580dc477aac6475
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658222"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752628"
 ---
 # <a name="ixclrdataprocessstartenummodules-method"></a>IXCLRDataProcess::StartEnumModules メソッド
 
@@ -30,15 +30,16 @@ ms.locfileid: "54658222"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT StartEnumModules(
     [out] CLRDATA_ENUM *handle
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`handle` [out]モジュールを列挙するためのハンドル。
+`handle`\
+[out]モジュールを列挙するためのハンドル。
 
 ## <a name="remarks"></a>Remarks
 
@@ -46,13 +47,13 @@ HRESULT StartEnumModules(
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [CLRDataSourceType 列挙型](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 列挙型](clrdatasourcetype-enumeration.md)
+- [デバッグ](index.md)
+- [IXCLRDataProcess インターフェイス](ixclrdataprocess-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法: 特定の要素の名前 (Visual Basic) を持つ子孫を検索します。'
+title: '方法 : 特定の要素名を持つ子孫を検索する'
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 4311eb0a4062c01b2c8e1c19355c5284298e39dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a8aa07a79d05e62e0d5517c1675bc715e87de42
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557160"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344404"
 ---
-# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>方法: 特定の要素の名前 (Visual Basic) を持つ子孫を検索します。
+# <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>方法: 特定の要素名を持つ子孫を検索する (Visual Basic)
 特定の名前を持つ子孫をすべて検索しなければならない場合があります。 すべての子孫を反復処理するコードを記述することもできますが、<xref:System.Xml.Linq.XContainer.Descendants%2A> 軸を使用する方が簡単です。  
   
 ## <a name="example"></a>例  
@@ -49,12 +49,12 @@ Console.WriteLine(str)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要」 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)を参照してください。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -96,10 +96,11 @@ End Module
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Some text that is broken up into multiple segments.  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - [基本的なクエリ (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

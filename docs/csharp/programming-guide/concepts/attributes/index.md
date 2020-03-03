@@ -1,6 +1,12 @@
 ---
-title: '属性 (C#)'
+title: 属性 (C#)
 ms.date: 04/26/2018
+ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141567"
 ---
 # <a name="attributes-c"></a>属性 (C#)
 
@@ -19,7 +25,7 @@ ms.date: 04/26/2018
 
 この例では、<xref:System.SerializableAttribute> 属性を使用してクラスに特性を適用します。
 
-[!code-csharp[Using the serializable attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
+[!code-csharp[Using the serializable attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#1)]
 
 属性 <xref:System.Runtime.InteropServices.DllImportAttribute> を持つメソッドは次の例のように宣言されます。
 
@@ -27,12 +33,12 @@ ms.date: 04/26/2018
 
 次の例のように、宣言には、複数の属性を配置できます。
 
-[!code-csharp[Including the interop namespace](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
-[!code-csharp[Declaring two way marshaling for arguments](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
+[!code-csharp[Including the interop namespace](~/samples/snippets/csharp/attributes/AttributesOverview.cs#3)]
+[!code-csharp[Declaring two way marshaling for arguments](~/samples/snippets/csharp/attributes/AttributesOverview.cs#4)]
 
 特定のエンティティで複数回指定できる属性もあります。 このような複数回指定できる属性の例として <xref:System.Diagnostics.ConditionalAttribute> があります。
 
-[!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
+[!code-csharp[Using the conditional attribute](~/samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
 > 慣例により、属性名はすべて "Attribute" という単語で終わります。これは、.NET ライブラリの他の項目と区別するためです。 ただし、コード内で属性を使用する場合は、attribute サフィックスを指定する必要はありません。 たとえば、`[DllImport]` は `[DllImportAttribute]` と同等ですが、.NET Framework クラス ライブラリでは `DllImportAttribute` は属性の実際の名前を表します。
@@ -51,7 +57,7 @@ ms.date: 04/26/2018
 
 ### <a name="attribute-targets"></a>属性の対象
 
-属性の*対象*は、属性が適用されるエンティティです。 たとえば、属性は、クラス、特定のメソッド、またはアセンブリ全体に適用できます。 既定では、属性は後に続く要素に適用されます。 ただし、明示的に指定すれば、メソッド、属性のパラメーター、属性の戻り値などにも適用できます。
+属性の*対象*は、属性が適用されるエンティティです。 たとえば、属性は、クラス、特定のメソッド、またはアセンブリ全体に適用できます。 既定では、属性はその後に続く要素に適用されます。 ただし、明示的に指定すれば、メソッド、属性のパラメーター、属性の戻り値などにも適用できます。
 
 属性の対象を明示的に識別するには、次の構文を使用します。
 
@@ -95,8 +101,8 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 
 次の表に、コードでの属性の一般的な使用法をいくつか示します。
 
-- Web サービスの `WebMethod` 属性を使用してメソッドをマークして、メソッドが SOAP プロトコルを介して呼び出されるようにします。 詳細については、「<xref:System.Web.Services.WebMethodAttribute>」を参照してください。
-- ネイティブ コードと相互運用するときにメソッドのパラメーターをマーシャリングする方法を記述します。 詳細については、「<xref:System.Runtime.InteropServices.MarshalAsAttribute>」を参照してください。
+- Web サービスの `WebMethod` 属性を使用してメソッドをマークして、メソッドが SOAP プロトコルを介して呼び出されるようにします。 詳細については、<xref:System.Web.Services.WebMethodAttribute> を参照してください。
+- ネイティブ コードと相互運用するときにメソッドのパラメーターをマーシャリングする方法を記述します。 詳細については、<xref:System.Runtime.InteropServices.MarshalAsAttribute> を参照してください。
 - クラス、メソッド、およびインターフェイスの COM プロパティを記述します。
 - <xref:System.Runtime.InteropServices.DllImportAttribute> クラスを使用してアンマネージ コードを呼び出します。
 - タイトル、バージョン、説明、または商標についてのアセンブリを記述します。
@@ -113,7 +119,7 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 
 - [カスタム属性の作成 (C#)](creating-custom-attributes.md)  
 - [リフレクションを使用した属性へのアクセス (C#)](accessing-attributes-by-using-reflection.md)  
-- [方法: 属性を使用して C/C++ の共用体を作成する (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
+- [属性を使用して C/C++ の共用体を作成する方法 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [共通属性 (C#)](common-attributes.md)  
 - [呼び出し元情報 (C#)](../caller-information.md)  
 

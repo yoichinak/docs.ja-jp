@@ -1,19 +1,17 @@
 ---
-title: Windows システムの大きなオブジェクト ヒープ
+title: Windows の LOH - .NET
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: df8559dc5a09b65eb388808363bb0352bc8ed398
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 5125b76dd26ffa4fb363ecf8449f65b490f57b93
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066429"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74283621"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows システムの大きなオブジェクト ヒープ
 
@@ -47,21 +45,21 @@ SOH の場合、GC で残ったオブジェクトは次の世代に昇格され�
 
 図 1 に示したシナリオでは、GC は世代 0 の GC で `Obj1` と `Obj3` が終了した後に世代 1 を形成し、世代 1 の GC で `Obj2` と `Obj5` が終了した後に世代 2 を形成しています。 この図と次の図は単に例を示すためのものであることに注意してください。ヒープで何が起こっているかをわかりやすくするために、図にはごくわずかなオブジェクトしか含まれていません。 実際には、通常、GC にはより多くのオブジェクトが含まれます。
 
-![図 1: 世代 0 の GC および世代 1 の GC](media/loh/loh-figure-1.jpg)  
+![図 1: 世代 0 の GC および世代 1 の GC](media/loh/loh-figure-1.jpg)\
 図 1: 世代 0 および世代 1 の GC。
 
 図 2 では、`Obj1` と `Obj2` を終了させた世代 2 の GC の後、GC は、`Obj1` と `Obj2` が占有していたメモリから隣接する空き領域を形成し、`Obj4` に対する割り当て要求を満たすためにその空き領域を使用しています。 最後のオブジェクト `Obj3` からセグメントの末尾までの領域は、割り当て要求を満たすために使用することもできます。
 
-![図 2: 世代 2 の GC の後](media/loh/loh-figure-2.jpg)  
+![図 2: 世代 2 の GC の後](media/loh/loh-figure-2.jpg)\
 図 2: 世代 2 の GC の後
 
 大きなオブジェクトの割り当て要求に応じるだけの十分な空き領域がない場合、GC はまず、OS からさらにセグメントを取得することを試みます。 それが失敗した場合、多少の領域を解放できることを期待して、世代 2 の GC をトリガーします。
 
 世代 1 または世代 2 の GC 中に、ガベージ コレクターは、ライブ オブジェクトが存在しないセグメントを、[VirtualFree 関数](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)を呼び出して解放し、OS に戻します。 最後の有効なオブジェクトからセグメントの末尾までの領域はデコミットされます (ただし、世代 0/世代 1 が有効な短期セグメントの場合を除きます。この場合、アプリケーションですぐに割り当てられるため、ガベージ コレクターは一部をコミットしたままにします)。 また、空き領域は引き続きコミットされていますが、リセットされます。つまり、OS はその領域のデータをディスクに書き戻す必要がありません。
 
-LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメントを解放できるのはその GC 中のみとなります。 図 3 に示したシナリオでは、ガベージ コレクターは 1 つのセグメント (セグメント 2) を解放して OS に戻し、残りのセグメントでより多くの領域をデコミットしています。 大きなオブジェクトの割り当て要求を満たすために、セグメント末尾のデコミットされた領域を使用する必要がある場合は、メモリを再度コミットします  (コミット/デコミットの詳細については、[VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) に関するドキュメントを参照してください)。
+LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメントを解放できるのはその GC 中のみとなります。 図 3 に示したシナリオでは、ガベージ コレクターは 1 つのセグメント (セグメント 2) を解放して OS に戻し、残りのセグメントでより多くの領域をデコミットしています。 大きなオブジェクトの割り当て要求を満たすために、セグメント末尾のデコミットされた領域を使用する必要がある場合は、メモリを再度コミットします (コミット/デコミットの詳細については、[VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) に関するドキュメントを参照してください)。
 
-![図 3:世代 2 の GC の後の LOH](media/loh/loh-figure-3.jpg)  
+![図 3:世代 2 の GC の後の LOH](media/loh/loh-figure-3.jpg)\
 図 3:世代 2 の GC 後の LOH
 
 ## <a name="when-is-a-large-object-collected"></a>大きなオブジェクトが収集されるタイミング
@@ -132,7 +130,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 2. 既知の他の領域を調べつくしたが、確認されたパフォーマンス上の問題を説明できる原因が見つからなかった。
 
-メモリと CPU の基礎の詳細については、ブログの「[Understand the problem before you try to find a solution](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/)」 (解決策を見つける前に問題を理解する) を参照してください。
+メモリと CPU の基礎の詳細については、ブログの「[Understand the problem before you try to find a solution](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/)」 (解決策を見つける前に問題を理解する) を参照してください。
 
 次のツールを使用して、LOH のパフォーマンスに関するデータを収集することができます。
 
@@ -156,7 +154,7 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 パフォーマンス カウンターを見る一般的な方法は、パフォーマンス モニター (perfmon.exe) で表示することです。 対象のプロセスに対して表示するカウンターを追加するには、[カウンターの追加] を使用します。 図 4 に示すように、パフォーマンス カウンターのデータは、ログ ファイルに保存できます。
 
-![図 4: パフォーマンス カウンターの追加。](media/loh/perfcounter.png)  
+![パフォーマンス カウンターの追加を示したスクリーンショット。](media/large-object-heap/add-performance-counter.png)
 図 4: 世代 2 の GC 後の LOH
 
 また、パフォーマンス カウンターに対してプログラムでクエリを実行することもできます。 多くのユーザーは、日常的なテスト プロセスの一部として、そのような方法でカウンターのデータを収集しています。 カウンターに通常範囲外の値を見つけたときは、他の手段を使用して、調査に役立つ詳細なデータを取得します。
@@ -168,13 +166,13 @@ LOH は世代 2 の GC 中にのみ収集されるため、LOH セグメント�
 
 ガベージ コレクターは、ヒープで行われる内容とその理由を理解するのに役立つ、豊富な ETW イベントのセットを提供します。 次のブログ記事には、ETW を使用して GC イベントを収集および理解する方法が示されています。
 
-- [GC ETW イベント - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [GC ETW イベント - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [GC ETW イベント - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [GC ETW イベント - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [GC ETW イベント - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [GC ETW イベント - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [GC ETW イベント - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [GC ETW イベント - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 一時 LOH の割り当てによる過度の世代 2 の GC を特定するには、GC のトリガー理由の列を確認します。 大きな一時オブジェクトのみを割り当てる簡単なテストの場合は、次の [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) コマンド ラインを使用して、ETW イベントに関する情報を収集できます。
 
@@ -184,7 +182,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 結果は次のようになります。
 
-![図 5:PerfView を使用した ETW イベントの確認](media/loh/perfview.png)  
+![PerfView での ETW イベントを示したスクリーンショット。](media/large-object-heap/event-tracing-windows-perfview.png)
 図 5:PerfView を使用して表示された ETW イベント
 
 ご覧のとおり、すべての GC は世代 2 の GC であり、AllocLarge によってすべてトリガーされます。これは、大きなオブジェクトの割り当てにより、この GC がトリガーされたことを意味します。 **LOH Survival Rate %** 列に 1% と示されているため、これらの割り当ては一時的なものであることがわかります。
@@ -197,7 +195,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 この場合、AllocationTick イベントが収集されます。このイベントは、約 100 K 相当の割り当てごとに発生します。 つまり、イベントは、大きなオブジェクトが割り当てられるたびに発生します。 次に、大きなオブジェクトを割り当てた呼び出し履歴を示す、GC ヒープ割り当てビューのいずれかを確認できます。
 
-![図 6:GC ヒープ割り当てビュー](media/loh/perfview2.png)  
+![ガベージ コレクターのヒープ ビューを示したスクリーンショット。](media/large-object-heap/garbage-collector-heap.png)
 図 6:GC ヒープ割り当てビュー
 
 ご覧のとおり、これは、`Main` メソッドから大きなオブジェクトを割り当てるだけの非常に簡単なテストです。
@@ -211,7 +209,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 LOH の分析からのサンプル出力を次に示します。
 
-```
+```console
 0:003> .loadby sos mscorwks
 0:003> !eeheap -gc
 Number of GC Heaps: 1
@@ -252,7 +250,7 @@ LOH は最適化されないため、LOH が断片化の元であると考えら
 
    次の例は、VM 領域内の断片化を示しています。
 
-   ```
+   ```console
    0:000> !address
    00000000 : 00000000 - 00010000
    Type     00000000
@@ -310,7 +308,7 @@ bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 
 このコマンドはデバッガーを中断し、[VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) が 8 MB (0x800000) より大きい割り当てサイズで呼び出された場合にのみ、呼び出し履歴を表示します。
 
-CLR 2.0 では *VM Hoarding* という機能が追加されました。これは、セグメント (大きなオブジェクト ヒープと小さなオブジェクト ヒープを含む) が頻繁に取得され、解放されるシナリオで役立つ場合があります。 VM Hoarding を指定するには、ホスティング API で、`STARTUP_HOARD_GC_VM` というスタートアップ フラグを指定します。 空のセグメントを解放して OS に戻す代わりに、CLR はこれらのセグメント上のメモリをデコミットして、スタンバイ リストに含めます  (大きすぎるセグメントの場合、CLR はこれを行わないことに注意してください)。CLR は、新しいセグメント要求を満たすために、後でこれらのセグメントを使用します。 次にアプリで新しいセグメントが必要になったときに、CLR は、このスタンバイ リストに十分に大きなセグメントがあれば、それを使用します。
+CLR 2.0 では *VM Hoarding* という機能が追加されました。これは、セグメント (大きなオブジェクト ヒープと小さなオブジェクト ヒープを含む) が頻繁に取得され、解放されるシナリオで役立つ場合があります。 VM Hoarding を指定するには、ホスティング API で、`STARTUP_HOARD_GC_VM` というスタートアップ フラグを指定します。 空のセグメントを解放して OS に戻す代わりに、CLR はこれらのセグメント上のメモリをデコミットして、スタンバイ リストに含めます (大きすぎるセグメントの場合、CLR はこれを行わないことに注意してください)。CLR は、新しいセグメント要求を満たすために、後でこれらのセグメントを使用します。 次にアプリで新しいセグメントが必要になったときに、CLR は、このスタンバイ リストに十分に大きなセグメントがあれば、それを使用します。
 
 VM Hoarding は、メモリ不足の例外を回避するために、システム上で実行されている優先度の高いアプリである一部のサーバー アプリなど、既に取得されているセグメントに保持する必要があるアプリケーションでも役立ちます。
 

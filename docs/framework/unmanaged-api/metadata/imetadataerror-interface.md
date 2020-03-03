@@ -14,20 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0020b62c-ea88-40c7-a9ee-16b064f81624
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fe2f683ae46d1ee6205f97536976a358e86fc53d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44ecb73375f8a408fb0a38c3a2e2913f92ec4ca4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720380"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441620"
 ---
 # <a name="imetadataerror-interface"></a>IMetaDataError インターフェイス
-メタデータのマージ中にエラーを報告するためのコールバック機構を提供します。  
+メタデータのマージ中にエラーを報告するためのコールバックメカニズムを提供します。  
   
 > [!NOTE]
->  `IMetaDataError`クライアントによってインターフェイスを実装する必要があります。  
+> `IMetaDataError` インターフェイスは、クライアントによって実装される必要があります。  
   
 ## <a name="methods"></a>メソッド  
   
@@ -35,14 +33,15 @@ ms.locfileid: "54720380"
 |------------|-----------------|  
 |[OnError メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-onerror-method.md)|メタデータのマージ中に発生したエラーの通知を提供します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

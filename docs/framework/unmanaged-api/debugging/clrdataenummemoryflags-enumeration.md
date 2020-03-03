@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: e249f9fc-e24a-4506-903c-92781f6eab7c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6cd385c1176bea41b41a981e743c6104227d8acd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 769e63ac6e23ae0264b79a1cd8d6e3cc1ac5a744
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708195"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132404"
 ---
 # <a name="clrdataenummemoryflags-enumeration"></a>CLRDataEnumMemoryFlags 列挙型
-メモリ領域への呼び出しを示す、 [iclrdataenummemoryregions::enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)メソッドを含める必要があります。  
+[ICLRDataEnumMemoryRegions:: EnumMemoryRegions](iclrdataenummemoryregions-enummemoryregions-method.md)メソッドへの呼び出しに含まれるメモリ領域を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CLRDataEnumMemoryFlags {  
     CLRDATA_ENUM_MEM_DEFAULT  = 0x0,  
     CLRDATA_ENUM_MEM_MINI     = CLRDATA_ENUM_MEM_DEFAULT,  
@@ -40,17 +38,18 @@ typedef enum CLRDataEnumMemoryFlags {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|ミニダンプの場合、スパースのメモリ ダンプは、します。|  
-|`CLRDATA_ENUM_MEM_HEAP`|完全なヒープ ダンプします。|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|ミニダンプ (スパースメモリダンプ)。|  
+|`CLRDATA_ENUM_MEM_HEAP`|完全なヒープダンプ。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [列挙型のデバッグ](debugging-enumerations.md)

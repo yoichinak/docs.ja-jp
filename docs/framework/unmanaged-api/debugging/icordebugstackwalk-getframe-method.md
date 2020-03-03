@@ -15,46 +15,44 @@ helpviewer_keywords:
 ms.assetid: 4083b505-5b59-44fb-8c5d-129db6a96c10
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 09a5d44e2f09c0a9ad87d590bb6d7330241143ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89576e2b3d5fb4df0cccfdd28c80a5cb67331597
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666244"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791899"
 ---
 # <a name="icordebugstackwalkgetframe-method"></a>ICorDebugStackWalk::GetFrame メソッド
-内の現在のフレームを取得、 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)オブジェクト。  
+テキスト[オブジェクトの現在のフレーム](icordebugstackwalk-interface.md)を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFrame([out] ICorDebugFrame ** pFrame);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pFrame`  
- [in]現在のスタック フレームを表すフレームを作成したオブジェクトのアドレスへのポインター。  
+ からスタック内の現在のフレームを表す、作成されたフレームオブジェクトのアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|ランタイムには、現在のフレームが正常に返されます。|  
+|S_OK|ランタイムは、現在のフレームを正常に返しました。|  
 |E_FAIL|現在のフレームは返されませんでした。|  
-|S_FALSE|現在のフレームは、ネイティブ スタック フレームです。|  
+|S_FALSE|現在のフレームはネイティブスタックフレームです。|  
 |E_INVALIDARG|`pFrame` が null です。|  
-|CORDBG_E_PAST_END_OF_STACK|フレーム ポインターがスタックの末尾に達してそのため、追加のフレームにはアクセスできません。|  
+|CORDBG_E_PAST_END_OF_STACK|フレームポインターは既にスタックの末尾にあります。そのため、追加のフレームにアクセスすることはできません。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>Remarks  
- `ICorDebugStackWalk` 実際のスタック フレームのみを返します。 使用して、 [icordebugthread 3::getactiveinternalframes](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-getactiveinternalframes-method.md)内部フレームを返すメソッド。 (内部フレームとは、一時データを格納する、ランタイムによってスタックにプッシュするデータ構造のことです)。  
+## <a name="remarks"></a>コメント  
+ `ICorDebugStackWalk` は実際のスタックフレームだけを返します。 内部フレームを返すには、 [ICorDebugThread3:: GetActiveInternalFrames](icordebugthread3-getactiveinternalframes-method.md)メソッドを使用します。 内部フレームは、一時データを格納するためにランタイムによってスタックにプッシュされるデータ構造です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -63,6 +61,7 @@ HRESULT GetFrame([out] ICorDebugFrame ** pFrame);
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugStackWalk インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [ICorDebugStackWalk インターフェイス](icordebugstackwalk-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

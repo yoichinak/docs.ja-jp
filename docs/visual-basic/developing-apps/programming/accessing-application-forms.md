@@ -1,5 +1,5 @@
 ---
-title: アプリケーション フォームへのアクセス (Visual Basic)
+title: アプリケーション フォームへのアクセス
 ms.date: 07/20/2015
 helpviewer_keywords:
 - forms [Visual Basic], communicating between
@@ -8,17 +8,19 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 44942827c4bfbaeffb3e424d8339ac6d001722ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566926"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349239"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>アプリケーション フォームへのアクセス (Visual Basic)
+
 `My.Forms` オブジェクトは、アプリケーションのプロジェクトで宣言された各 Windows フォームのインスタンスに簡単にアクセスする方法を提供します。 `My.Application` オブジェクトのプロパティを利用し、アプリケーションのスプラッシュ スクリーンとメイン フォームにアクセスし、アプリケーションのオープン フォームの一覧を取得することもできます。  
   
-## <a name="tasks"></a>[タスク]  
+## <a name="tasks"></a>タスク  
+
  次の表に示すのは、アプリケーションのフォームにアクセスする方法を示す例です。  
   
 |終了|参照トピック|  
@@ -28,6 +30,7 @@ ms.locfileid: "54566926"
 |アプリケーションの起動時に状態情報でスプラッシュ スクリーンを更新します。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
 - [My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)

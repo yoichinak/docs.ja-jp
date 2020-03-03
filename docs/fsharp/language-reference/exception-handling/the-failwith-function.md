@@ -2,12 +2,12 @@
 title: 例外:failwith 関数
 description: "'Failwith' 関数は F# の例外を生成する方法について説明します。"
 ms.date: 05/16/2016
-ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: f2c86362d5bdde7bab55751f019965a5f4ca6236
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610113"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630324"
 ---
 # <a name="exceptions-the-failwith-function"></a>例外:failwith 関数
 
@@ -21,16 +21,16 @@ failwith error-message-string
 
 ## <a name="remarks"></a>Remarks
 
-*エラー メッセージの文字列*リテラル文字列または型の値は、前の構文で`string`します。 `Message`例外のプロパティ。
+前の構文の*エラーメッセージ文字列*は、リテラル文字列または型`string`の値です。 これは、 `Message`例外のプロパティになります。
 
-によって生成される例外`failwith`は、`System.Exception`例外があり、名前を持つ参照`Failure`F# コードにします。 次のコードの使用を示します`failwith`例外をスローします。
+によって生成される例外`failwith`は、`System.Exception`例外があり、名前を持つ参照`Failure`F# コードにします。 次の`failwith`コードは、を使用して例外をスローする方法を示しています。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6001.fs)]
 
 ## <a name="see-also"></a>関連項目
 
 - [例外処理](index.md)
 - [例外の種類](exception-types.md)
-- [例外処理:`try...with`式](the-try-with-expression.md)
-- [例外処理:`try...finally`式](the-try-finally-expression.md)
+- [例外: `try...with`式](the-try-with-expression.md)
+- [例外: `try...finally`式](the-try-finally-expression.md)
 - [例外: `raise` 関数](the-raise-function.md)

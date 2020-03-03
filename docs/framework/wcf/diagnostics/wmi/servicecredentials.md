@@ -2,12 +2,12 @@
 title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-ms.openlocfilehash: 18100ac36b5116c2373171ff795fc23b75bbd6f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9563bd3bfe067ad83bfa03e7c6375a9db933f14
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956982"
 ---
 # <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  
@@ -86,7 +86,8 @@ class ServiceCredentials : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.ServiceCredentials>

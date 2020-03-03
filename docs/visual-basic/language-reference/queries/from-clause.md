@@ -1,5 +1,5 @@
 ---
-title: From 句 (Visual Basic)
+title: From 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.QueryFrom
@@ -10,66 +10,67 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: fd11d00ebfa42eda272db39965d25b905bd5c841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a63fb41fc2b0ad885acf76ad5d56e446922f5b90
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678786"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343778"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
-1 つまたは複数の範囲変数とクエリのコレクションを指定します。  
+1つ以上の範囲変数と、クエリを実行するコレクションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 From element [ As type ] In collection [ _ ]  
   [, element2 [ As type2 ] In collection2 [, ... ] ]  
 ```  
   
 ## <a name="parts"></a>指定項目  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`element`|必須。 A*範囲変数*コレクションの要素を反復処理するために使用します。 各メンバーを参照する範囲変数が使用される、`collection`を反復処理、クエリと、`collection`します。 列挙可能な型である必要があります。|  
-|`type`|任意。 `element` の型。 ない場合は`type`を指定の種類`element`から推論されます`collection`します。|  
-|`collection`|必須。 クエリを実行するコレクションを参照します。 列挙可能な型である必要があります。|  
+|`element`|必須。 コレクションの要素を反復処理するために使用する*範囲変数*。 範囲変数は、クエリが `collection`を反復処理するときに、`collection` の各メンバーを参照するために使用されます。 列挙可能な型である必要があります。|  
+|`type`|省略可。 `element` の型。 `type` が指定されていない場合、`element` の種類は `collection`から推論されます。|  
+|`collection`|必須。 クエリ対象のコレクションを参照します。 列挙可能な型である必要があります。|  
   
-## <a name="remarks"></a>Remarks  
- `From`句をクエリし、ソース コレクションから要素を指すために使用されている変数のソース データを識別するために使用します。 これらの変数と呼ばれます*範囲変数*します。 `From`句が必要な場合を除き、クエリ、`Aggregate`句を返しますが、結果の集計をのみこと、クエリを識別するために使用します。 詳細については、次を参照してください。 [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)します。  
+## <a name="remarks"></a>コメント  
+ `From` 句は、クエリのソースデータと、ソースコレクションの要素を参照するために使用される変数を識別するために使用されます。 これらの変数は*範囲変数*と呼ばれます。 `Aggregate` 句を使用して集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「[Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
   
- 複数を指定する`From`参加する複数のコレクションを識別するために、クエリ内の句。 複数のコレクションを指定すると、これらは別々 に反復処理、または関連している場合に参加することができます。 使用してコレクションに暗黙的に参加することができます、`Select`句、またはを使用して明示的に、`Join`または`Group Join`句。 代わりに、指定できます複数の範囲変数およびコレクション 1 つの`From`句は、各関連の範囲変数と、他のユーザーから、コンマで区切られたコレクションを使用します。 次のコード例は、両方の構文のオプションを示しています、`From`句。  
+ クエリで複数の `From` 句を指定すると、結合する複数のコレクションを識別できます。 複数のコレクションが指定されている場合は、個別に反復処理されるか、または関連付けられている場合は結合できます。 `Select` 句を使用して暗黙的にコレクションを結合することも、`Join` または `Group Join` 句を使用して明示的に結合することもできます。 別の方法として、1つの `From` 句で複数の範囲変数とコレクションを指定し、関連する範囲変数とコレクションをコンマで区切って指定することもできます。 次のコード例は、`From` 句の両方の構文オプションを示しています。  
   
- [!code-vb[VbSimpleQuerySamples#21](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_1.vb)]  
+ [!code-vb[VbSimpleQuerySamples#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#21)]  
   
- `From`句のスコープに似ていますが、クエリのスコープを定義する、`For`ループします。 そのため、各`element`のクエリ スコープの範囲変数は、一意の名前をいる必要があります。 複数を指定するため、 `From` 、クエリは、後続の句`From`句で範囲変数を参照できます、`From`句、または、以前の範囲変数に参照できます`From`句。 たとえば、次の例では、表示、入れ子になった`From`2 つ目の句では、コレクションは、最初の句の範囲変数のプロパティをに基づいて句。  
+ `From` 句は、クエリのスコープを定義します。これは、`For` ループのスコープに似ています。 したがって、クエリのスコープ内の各 `element` 範囲変数には、一意の名前を付ける必要があります。 クエリに対して複数の `From` 句を指定できるので、後続の `From` 句は `From` 句の範囲変数を参照できます。また、前の `From` 句の範囲変数を参照することもできます。 たとえば、次の例は入れ子になった `From` 句を示しています。2番目の句のコレクションは、最初の句の範囲変数のプロパティに基づいています。  
   
- [!code-vb[VbSimpleQuerySamples#22](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_2.vb)]  
+ [!code-vb[VbSimpleQuerySamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#22)]  
   
- 各`From`句の後に、クエリを絞り込むの追加のクエリ句の任意の組み合わせをできます。 次の方法でクエリを絞り込むことができます。  
+ 各 `From` 句の後に、追加のクエリ句の任意の組み合わせを使用して、クエリを絞り込むことができます。 クエリは、次の方法で絞り込むことができます。  
   
--   使用して暗黙的に複数のコレクションを組み合わせる、`From`と`Select`句、またはを使用して明示的に、`Join`または`Group Join`句。  
+- `From` と `Select` の句を使用して、または明示的に `Join` または `Group Join` 句を使用して、複数のコレクションを暗黙的に結合します。  
   
--   使用して、`Where`句をクエリの結果をフィルター処理します。  
+- クエリ結果をフィルター処理するには、`Where` 句を使用します。  
   
--   使用して、結果を並べ替える、`Order By`句。  
+- `Order By` 句を使用して結果を並べ替えます。  
   
--   使用して同様の結果をグループ化、`Group By`句。  
+- `Group By` 句を使用して、類似した結果をまとめてグループ化します。  
   
--   使用して、`Aggregate`句全体のクエリの結果を評価する集計関数を識別します。  
+- `Aggregate` 句を使用して、クエリ結果全体に対して評価する集計関数を識別します。  
   
--   使用して、`Let`句を反復変数の値は、コレクションではなく式によって決定されます。  
+- `Let` 句を使用して、コレクションではなく式によって値が決定される反復変数を導入します。  
   
--   使用して、`Distinct`重複するクエリの結果を無視する句。  
+- `Distinct` 句を使用して、重複するクエリ結果を無視します。  
   
--   使用して返される結果の部分を特定、 `Skip`、 `Take`、 `Skip While`、および`Take While`句。  
+- `Skip`、`Take`、`Skip While`、および `Take While` 句を使用して返される結果の部分を識別します。  
   
 ## <a name="example"></a>例  
- 次のクエリ式は、`From`範囲変数を宣言する句`cust`各`Customer`オブジェクト、`customers`コレクション。 `Where`句では、範囲変数を使用して、指定されたリージョンからお客様に、出力を制限します。 `For Each`ループは、クエリ結果の各顧客の会社名を表示します。  
+ 次のクエリ式では、`From` 句を使用して、`customers` コレクション内の各 `Customer` オブジェクトに対して `cust` 範囲変数を宣言します。 `Where` 句では、範囲変数を使用して、指定された地域の顧客に出力を制限します。 `For Each` ループでは、クエリ結果に各顧客の会社名が表示されます。  
   
- [!code-vb[VbSimpleQuerySamples#23](../../../visual-basic/language-reference/queries/codesnippet/VisualBasic/from-clause_3.vb)]  
+ [!code-vb[VbSimpleQuerySamples#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#23)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [クエリ](../../../visual-basic/language-reference/queries/index.md)
 - [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

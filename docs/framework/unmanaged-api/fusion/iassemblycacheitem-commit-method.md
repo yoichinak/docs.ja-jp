@@ -15,40 +15,39 @@ helpviewer_keywords:
 ms.assetid: c2321f17-f46f-4815-ae41-b28678753613
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9b39cdec6d5cc10256c2911c98f94b7565295408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5de522c00da76e7c01369c706cb7f9e2bdad4b3b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537999"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134517"
 ---
 # <a name="iassemblycacheitemcommit-method"></a>IAssemblyCacheItem::Commit メソッド
-メモリにキャッシュされたアセンブリ参照をコミットします。  
+キャッシュされたアセンブリ参照をメモリにコミットします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Commit (  
     [in] DWORD dwFlags,   
     [out, optional] ULONG *pulDisposition  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwFlags`  
- [in]ものがありますで定義されているフラグ。  
+ からFusion に定義されているフラグ。  
   
  `pulDisposition`  
- [out] 省略可能操作の結果を示す値。  
+ [out、省略可能]操作の結果を示す値です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAssemblyCacheItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
+
+- [IAssemblyCacheItem インターフェイス](iassemblycacheitem-interface.md)

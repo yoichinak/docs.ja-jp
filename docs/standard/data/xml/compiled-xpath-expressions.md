@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 1716488f6e072b09469dfbe5cc8fb4965e5db44c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605245"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75711104"
 ---
 # <a name="compiled-xpath-expressions"></a>コンパイルされた XPath 式
 <xref:System.Xml.XPath.XPathExpression> オブジェクトは、<xref:System.Xml.XPath.XPathExpression.Compile%2A> クラスの静的 <xref:System.Xml.XPath.XPathExpression> メソッドまたは <xref:System.Xml.XPath.XPathNavigator.Compile%2A> クラスの <xref:System.Xml.XPath.XPathNavigator> メソッドから返されるコンパイル済み XPath クエリを表します。  
@@ -25,46 +23,46 @@ ms.locfileid: "54605245"
   
  いったんコンパイルされると、<xref:System.Xml.XPath.XPathExpression> オブジェクトは、XPath クエリから返される型に応じて、次の <xref:System.Xml.XPath.XPathNavigator> クラス メソッドの入力として使用することができます。  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  次の表では、W3C XPath の戻り型、それに等価の Microsoft .NET Framework 型、および戻り型に応じて <xref:System.Xml.XPath.XPathExpression> オブジェクトで使用できるメソッドについて説明します。  
   
 |W3C XPath の戻り値の型|.NET Framework の等価の型|説明|メソッド|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|重複がなく順序付けされていない、ドキュメント順に作成されたノードのコレクション。|<xref:System.Xml.XPath.XPathNavigator.Select%2A> または <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`Boolean`|<xref:System.Boolean>|`true` または `false` の値。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> または<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
+|`Boolean`|<xref:System.Boolean>|`true` または `false` の値。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A><br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
 |`Number`|<xref:System.Double>|浮動小数点数。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`String`|<xref:System.String>|UCS 文字のシーケンス。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> メソッドは、XPath 式をパラメーターとして受け取ります。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> メソッドは W3C XPath の戻り型の 1 つではなく、1 つの <xref:System.Xml.XPath.XPathNavigator> オブジェクトを返します。  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> メソッドは、XPath 式をパラメーターとして受け取ります。 <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> メソッドは W3C XPath の戻り型の 1 つではなく、1 つの <xref:System.Xml.XPath.XPathNavigator> オブジェクトを返します。  
   
 ### <a name="the-returntype-property"></a>戻り型のプロパティ  
  XPath クエリが <xref:System.Xml.XPath.XPathExpression> オブジェクトにコンパイルされた後、<xref:System.Xml.XPath.XPathExpression.ReturnType%2A> オブジェクトの <xref:System.Xml.XPath.XPathExpression> プロパティを使用して、XPath クエリで何が返されるかを知ることができます。  
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> プロパティは、W3C XPath 戻り値を表す、次の <xref:System.Xml.XPath.XPathResultType> 列挙値の 1 つを返します。  
   
--   <xref:System.Xml.XPath.XPathResultType.Any>  
+- <xref:System.Xml.XPath.XPathResultType.Any>  
   
--   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+- <xref:System.Xml.XPath.XPathResultType.Boolean>  
   
--   <xref:System.Xml.XPath.XPathResultType.Error>  
+- <xref:System.Xml.XPath.XPathResultType.Error>  
   
--   <xref:System.Xml.XPath.XPathResultType.Navigator>  
+- <xref:System.Xml.XPath.XPathResultType.Navigator>  
   
--   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+- <xref:System.Xml.XPath.XPathResultType.NodeSet>  
   
--   <xref:System.Xml.XPath.XPathResultType.Number>  
+- <xref:System.Xml.XPath.XPathResultType.Number>  
   
--   <xref:System.Xml.XPath.XPathResultType.String>  
+- <xref:System.Xml.XPath.XPathResultType.String>  
   
  次の例は、<xref:System.Xml.XPath.XPathExpression> オブジェクトを使用して、`books.xml` ファイルから 1 つの数値とノード セットを返します。 各 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> オブジェクトの <xref:System.Xml.XPath.XPathExpression> プロパティと共に、<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> および <xref:System.Xml.XPath.XPathNavigator.Select%2A> メソッドからの結果がコンソールに出力されます。  
   

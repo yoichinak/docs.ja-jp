@@ -1,24 +1,25 @@
 ---
-title: <remove> の <namedCaches> 要素
+title: <namedCaches> の <remove> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 22d06ab1df0d5ed74073772302421a680f1665ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 991ad0eb9c04c27ded4d566115107ac7b47a71e1
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257020"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252337"
 ---
-# <a name="remove-element-for-namedcaches"></a>\<削除 > 要素の\<namedCaches >
+# <a name="remove-element-for-namedcaches"></a>\<namedCaches> の \<remove> 要素
 名前付きキャッシュ エントリを、メモリ キャッシュの `namedCaches` コレクションから削除します。  
   
- \<system.runtime.caching>  
-\<memoryCache>  
-\<namedCaches>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<> のキャッシュ**](system-runtime-caching-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<memoryCache >** ](memorycache-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namedCaches >** ](namedcaches-element-cache-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> の削除**  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,10 +46,11 @@ ms.locfileid: "55257020"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<namedCaches>](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)|名前付きの構成設定のコレクションを含む<xref:System.Runtime.Caching.MemoryCache>インスタンス。|  
+|[\<namedCaches>](namedcaches-element-cache-settings.md)|名前付き<xref:System.Runtime.Caching.MemoryCache>インスタンスの構成設定のコレクションを格納します。|  
   
 ## <a name="remarks"></a>Remarks  
- `remove`要素は、削除、`namedCache`メモリ キャッシュの名前付きキャッシュのコレクションからエントリ。  
+ 要素`remove`は、メモリ`namedCache`キャッシュの名前付きキャッシュコレクションからエントリを削除します。  
   
 ## <a name="see-also"></a>関連項目
-- [\<namedCaches > 要素 (キャッシュ設定)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+
+- [\<namedCaches > 要素 (キャッシュ設定)](namedcaches-element-cache-settings.md)

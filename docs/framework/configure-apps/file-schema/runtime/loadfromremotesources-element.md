@@ -5,24 +5,22 @@ helpviewer_keywords:
 - loadFromRemoteSources element
 - <loadFromRemoteSources> element
 ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 454314bf1002a9648f669cc708c8ac42461fccaf
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675310"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452267"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 要素
-リモート ソースから読み込まれたアセンブリに対して、.NET Framework 4 以降の完全な信頼を付与するかどうかを指定します。
+リモートソースから読み込まれたアセンブリに .NET Framework 4 以降で完全信頼を付与するかどうかを指定します。
   
 > [!NOTE]
->  場合は、Visual Studio プロジェクトのエラー一覧またはビルド エラーのエラー メッセージのため、この記事にダイレクトされたを参照してください。[方法。Visual Studio で Web からアセンブリを使用して](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))します。  
+> Visual Studio プロジェクトのエラー一覧またはビルドエラーのエラーメッセージが原因でこの記事にリダイレクトされた場合は、「[方法: Visual studio で Web からアセンブリを使用する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ee890038(v=vs.100))」を参照してください。  
   
- \<configuration>  
-\<runtime>  
-\<loadFromRemoteSources>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<loadFromRemoteSources>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,23 +30,23 @@ ms.locfileid: "55675310"
 ```  
   
 ## <a name="attributes-and-elements"></a>属性と要素
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+ 次のセクションでは、属性、子要素、親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> リモート ソースから読み込まれたアセンブリに対して、完全な信頼を付与する必要があるかどうかを指定します。|  
+|`enabled`|必須の属性です。<br /><br /> リモートソースから読み込まれたアセンブリに完全信頼を付与するかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|リモート ソースからアプリケーションに完全な信頼を付与しないでください。 既定値です。|  
-|`true`|リモート ソースからアプリケーションへの完全な信頼を付与します。|  
+|`false`|リモートソースからアプリケーションへの完全な信頼を付与しないでください。 これは既定値です。|  
+|`true`|リモートソースからアプリケーションへの完全な信頼を付与します。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし]。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -57,11 +55,11 @@ ms.locfileid: "55675310"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-.NET Framework 3.5 以前のバージョンで、リモートの場所からアセンブリを読み込む場合に、アセンブリ内のコードを読み込み元のゾーンに依存している許可セットで部分信頼で実行されます。 たとえば、web サイトからアセンブリをロードする場合インターネット ゾーンに読み込まれ、インターネット アクセス許可のセットを許可は。 つまり、インターネットのサンド ボックス内で実行します。
+.NET Framework 3.5 以前のバージョンでは、リモートの場所からアセンブリを読み込む場合、アセンブリ内のコードは、読み込み元のゾーンに依存する許可セットを使用して部分信頼で実行されます。 たとえば、web サイトからアセンブリを読み込むと、インターネットゾーンに読み込まれ、インターネットのアクセス許可セットが付与されます。 つまり、インターネットサンドボックスで実行されます。
 
-以降、.NET Framework 4 では、コード アクセス セキュリティ (CAS) ポリシーが無効になり、アセンブリが完全信頼で読み込まれます。 読み込まれたアセンブリに完全な信頼を付与これは通常、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>サンド ボックス化された以前されていたメソッド。 これを防ぐためには、リモート ソースから読み込まれるアセンブリでコードを実行する機能は既定で無効になります。 リモートのアセンブリを読み込もうとした場合、既定で、<xref:System.IO.FileLoadException>次がスローされるように、例外メッセージ。
+.NET Framework 4 以降では、コードアクセスセキュリティ (CAS) ポリシーが無効になり、アセンブリが完全信頼で読み込まれます。 通常、これは、以前にサンドボックス化された <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドで読み込まれたアセンブリに対して完全な信頼を付与します。 これを回避するために、リモートソースから読み込まれたアセンブリ内のコードを実行する機能は、既定では無効になっています。 既定では、リモートアセンブリを読み込もうとすると、次のような例外メッセージを含む <xref:System.IO.FileLoadException> がスローされます。
 
 ```text
 System.IO.FileNotFoundException: Could not load file or assembly 'file:assem.dll' or one of its dependencies. Operation is not supported. 
@@ -72,40 +70,40 @@ to be sandboxed in previous versions of the .NET Framework. This release of the 
 so this load may be dangerous. If this load is not intended to sandbox the assembly, please enable the loadFromRemoteSources switch. 
 ```
 
-アセンブリを読み込むし、そのコードを実行、する必要がありますか。
+アセンブリを読み込んでコードを実行するには、次のいずれかを行う必要があります。
 
-- アセンブリのサンド ボックスを明示的に作成 (を参照してください[方法。サンド ボックスで部分信頼コードを実行](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md))。
+- アセンブリのサンドボックスを明示的に作成します (「[方法: サンドボックスで部分信頼コードを実行する](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」を参照してください)。
 
-- 完全信頼でアセンブリのコードを実行します。 構成することで、これを行う、`<loadFromRemoteSources>`要素。 .NET Framework の以前のバージョンで部分信頼で実行するアセンブリが .NET Framework 4 およびそれ以降のバージョンで完全な信頼で実行されるように指定できます。
+- アセンブリのコードを完全信頼で実行します。 これを行うには、`<loadFromRemoteSources>` 要素を構成します。 以前のバージョンの .NET Framework で部分信頼で実行されるアセンブリが、.NET Framework 4 以降のバージョンで完全信頼で実行されるように指定できます。
 
 > [!IMPORTANT]
-> アセンブリが完全信頼で実行されない場合は、この構成要素を設定しないでください。 代わりに、作成、セキュリティで保護された<xref:System.AppDomain>アセンブリの読み込み先となります。
+> アセンブリを完全信頼で実行しない場合は、この構成要素を設定しないでください。 代わりに、アセンブリを読み込むための、サンドボックス化された <xref:System.AppDomain> を作成します。
 
-`enabled`属性、`<loadFromRemoteSources>`要素は、コード アクセス セキュリティ (CAS) を無効にした場合にのみ有効です。 既定では、.NET Framework 4 およびそれ以降のバージョンの CAS ポリシーが無効になります。 設定した場合`enabled`に`true`、リモートのアセンブリに完全な信頼が与えられます。
+`<loadFromRemoteSources>` 要素の `enabled` 属性は、コードアクセスセキュリティ (CAS) が無効になっている場合にのみ有効です。 既定では、CAS ポリシーは .NET Framework 4 以降のバージョンで無効になっています。 `enabled` を `true`に設定すると、リモートアセンブリに完全な信頼が付与されます。
 
-場合`enabled`に設定されていない`true`、<xref:System.IO.FileLoadException>次の条件のいずれかでスローされます。
+`enabled` が `true`に設定されていない場合は、次のいずれかの条件で <xref:System.IO.FileLoadException> がスローされます。
 
-- 現在のドメインのサンド ボックス化動作は、.NET Framework 3.5 では、その動作からは異なります。 これは、CAS ポリシーを無効にして、現在のドメインがサンド ボックス化が必要です。
+- 現在のドメインのサンドボックスの動作は、.NET Framework 3.5 の動作とは異なります。 これには、CAS ポリシーを無効にし、現在のドメインをサンドボックス化しないようにする必要があります。
 
-- 読み込まれるアセンブリでない、`MyComputer`ゾーン。
+- 読み込まれているアセンブリが `MyComputer` ゾーンからのものではありません。
 
-設定、`<loadFromRemoteSources>`要素`true`によりこの例外がスローされます。 これにより、ことをせず、サンド ボックスに、共通言語ランタイムのセキュリティを読み込まれたアセンブリを指定してで実行を許可することができます完全な信頼。
+`<loadFromRemoteSources>` 要素を `true` に設定すると、この例外がスローされるのを防ぐことができます。 これにより、共通言語ランタイムに依存しないように指定して、読み込まれたアセンブリのセキュリティをサンドボックス化することができます。また、完全信頼での実行を許可することもできます。
 
-## <a name="notes"></a>メモ
+## <a name="notes"></a>説明
 
-- .NET Framework 4.5 以降のバージョンで、アセンブリをローカル ネットワーク共有に完全信頼で実行既定では有効にする必要はありません、`<loadFromRemoteSources>`要素。
+- .NET Framework 4.5 以降のバージョンでは、ローカルネットワーク共有上のアセンブリは既定で完全信頼で実行されます。`<loadFromRemoteSources>` 要素を有効にする必要はありません。
 
-- アプリケーションが web サイトからコピーされた場合としてマークされている Windows で web アプリケーションでは、ローカル コンピューター上にある場合でもです。 その指定を変更するには、ファイルのプロパティを変更することで、または使用することができます、`<loadFromRemoteSources>`完全信頼のアセンブリに与える要素。 代わりに、使用することができます、<xref:System.Reflection.Assembly.UnsafeLoadFrom%2A>オペレーティング システムは、web から読み込まれたものとしてフラグが設定されるローカル アセンブリを読み込みます。
+- アプリケーションが web からコピーされた場合、ローカルコンピューターに存在する場合でも、web アプリケーションとして Windows によってフラグが設定されます。 この指定は、ファイルのプロパティを変更することで変更できます。または、`<loadFromRemoteSources>` 要素を使用して、アセンブリに完全信頼を付与することもできます。 または、<xref:System.Reflection.Assembly.UnsafeLoadFrom%2A> メソッドを使用して、オペレーティングシステムによって web から読み込まれたとしてフラグが設定されているローカルアセンブリを読み込むことができます。
 
-- 取得することがあります、 <xref:System.IO.FileLoadException> Windows Virtual PC アプリケーションで実行されているアプリケーションでします。 これは、ホスト コンピュータ上のリンクされたフォルダーからファイルをロードしようとするときに発生します。 経由でリンクされているフォルダーからファイルをロードしようとするときに起こる可能性も[Remote Desktop Services](https://go.microsoft.com/fwlink/?LinkId=182775) (Terminal Services)。 例外を避けるためには、次のように設定します。`enabled`に`true`します。
+- Windows 仮想 PC アプリケーションで実行されているアプリケーションで <xref:System.IO.FileLoadException> を取得できます。 これは、ホストコンピューター上のリンクフォルダーからファイルを読み込もうとした場合に発生する可能性があります。 また、[リモートデスクトップサービス](/windows/win32/termserv/terminal-services-portal)(ターミナルサービス) にリンクされているフォルダーからファイルを読み込もうとした場合にも発生することがあります。 この例外を回避するには、`enabled` を `true`に設定します。
 
-## <a name="configuration-file"></a>構成ファイル
+## <a name="configuration-file"></a>［構成ファイル］
 
-この要素では、通常は、アプリケーション構成ファイルで使用しますが、コンテキストに応じて他の構成ファイルで使用できます。 詳細については、この記事を参照してください。[詳細暗黙的な使用の CAS ポリシー: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839) .NET セキュリティ ブログにします。  
+この要素は通常、アプリケーション構成ファイルで使用されますが、コンテキストに応じて他の構成ファイルで使用することもできます。 詳細については、.NET セキュリティブログの「 [CAS Policy: loadFromRemoteSources の暗黙的な使用方法](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)」を参照してください。  
 
 ## <a name="example"></a>例
 
-次の例では、リモート ソースから読み込まれたアセンブリに完全な信頼を付与する方法を示します。
+次の例は、リモートソースから読み込まれたアセンブリに完全信頼を付与する方法を示しています。
 
 ```xml
 <configuration>  
@@ -115,10 +113,10 @@ so this load may be dangerous. If this load is not intended to sandbox the assem
 </configuration>  
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [CAS ポリシーの暗黙的な複数の使用: loadFromRemoteSources](https://go.microsoft.com/fwlink/p/?LinkId=266839)
-- [方法: サンドボックスで部分信頼コードを実行する](../../../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+- [CAS ポリシーの暗黙的な使用方法: loadFromRemoteSources](https://docs.microsoft.com/archive/blogs/shawnfa/more-implicit-uses-of-cas-policy-loadfromremotesources)
+- [方法 : サンドボックスで部分信頼コードを実行する](../../../misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
 - <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>

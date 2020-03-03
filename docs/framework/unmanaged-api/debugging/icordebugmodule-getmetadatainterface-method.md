@@ -15,39 +15,37 @@ helpviewer_keywords:
 ms.assetid: 30d906f2-cf35-4fa9-9d4c-0c31b58c9f3a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3a324dc07d450a7ca8992ab3a16f064233692581
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb96949e22b4edfc0e64780a54bb38da44eb8369
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711630"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129545"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface メソッド
-モジュールのメタデータの検査に使用できるメタデータ インターフェイス オブジェクトを取得します。  
+モジュールのメタデータを調べるために使用できるメタデータインターフェイスオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMetaDataInterface (  
     [in] REFIID      riid,  
     [out] IUnknown **ppObj  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `riid`  
- [in]メタデータ インターフェイスを指定する参照の ID です。  
+ からメタデータインターフェイスを指定する参照 ID。  
   
  `ppObj`  
- [out]アドレスへのポインター、`T:IUnknown`のいずれかであるオブジェクトを[メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)します。  
+ 入出力[メタデータインターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)の1つである `T:IUnknown` オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- デバッガーを使用できる、 `GetMetaDataInterface` 、モジュールのモジュールを編集するにはこれを行う必要がありますが、元のメタデータのコピーを作成するメソッド。 デバッガーの呼び出し`GetMetaDataInterface`を取得する、 [IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)インターフェイス オブジェクト、モジュールの呼び出し、 [imetadataemit::savetomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)モジュールのメタデータのコピーをメモリに保存します。  
+ デバッガーでは、`GetMetaDataInterface` メソッドを使用して、モジュールの元のメタデータのコピーを作成できます。モジュールは、モジュールを編集するために実行する必要があります。 デバッガーは `GetMetaDataInterface` を呼び出してモジュールの[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)インターフェイスオブジェクトを取得し、 [IMetaDataEmit:: savetomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)を呼び出してモジュールのメタデータのコピーをメモリに保存します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -56,4 +54,5 @@ HRESULT GetMetaDataInterface (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ](../../../../docs/framework/unmanaged-api/metadata/index.md)

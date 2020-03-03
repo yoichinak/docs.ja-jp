@@ -1,6 +1,7 @@
 ---
-title: '方法: インストールされている .NET Framework バージョンを確認する'
-ms.date: 04/10/2018
+title: インストールされている .NET Framework バージョンを確認する
+description: コード、regedit.exe、または PowerShell を使用して、Windows レジストリに対してクエリを実行することで、コンピューターにインストールされている .NET Framework のバージョンを検出します。
+ms.date: 02/03/2020
 dev_langs:
 - csharp
 - vb
@@ -9,227 +10,207 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 31200b72cb551c91791e2e14332aacab8e7f0519
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8469f977c6ed9691c81a2a8354935557b5c27171
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672007"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77093833"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
-ユーザーはコンピューターに複数のバージョンの .NET Framework をインストールして実行できます。 アプリを開発または配置する場合、どのバージョンの .NET Framework がユーザーのコンピューターにインストールされているかを確認しなければならない場合があります。 .NET Framework は、個別にバージョン管理される 2 つの主要コンポーネントで構成されています。  
-  
--   アプリに機能を提供する型やリソースのコレクションである一連のアセンブリ。 .NET Framework とアセンブリは同じバージョン番号を共有します。  
-  
--   アプリのコードを管理および実行する共通言語ランタイム (CLR)。 CLR は独自のバージョン番号で識別されます (「[バージョンおよび依存関係](~/docs/framework/migration-guide/versions-and-dependencies.md)」を参照してください)。  
-  
- コンピューターにインストールされている .NET Framework バージョンの正確な一覧を取得するには、レジストリを表示するか、コードでレジストリを照会することができます。  
-  
- [レジストリの表示 (バージョン 1 ～ 4)](#net_a)  
- [レジストリの表示 (バージョン 4.5 以降)](#net_b)  
- [コードによるレジストリの照会 (バージョン 1 ～ 4)](#net_c)  
- [コードによるレジストリの照会 (バージョン 4.5 以降)](#net_d)  
- [PowerShell を使用したレジストリの照会 (バージョン 4.5 以降)](#ps_a)  
-  
- CLR のバージョンを検索するには、ツールまたはコードを使用できます。  
-  
- [Clrver ツールの使用](#clr_a)  
- [コードによる System.Environment クラスの照会](#clr_b)  
-  
- .NET Framework の各バージョン用にインストールされている更新プログラムの検出については、「[方法:インストールされている .NET Framework の更新プログラムを確認する](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。 .NET Framework のインストールの詳細については、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」を参照してください。  
-  
-<a name="net_a"></a>   
-## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-1-4"></a>レジストリを表示して .NET Framework のバージョンを検索するには (.NET Framework 1 ～ 4)  
-  
-1.  **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** をクリックします。  
-  
-2.  **[開く]** ボックスに「**regedit.exe**」と入力します。  
-  
-     regedit.exe を実行するには、管理特権が必要です。  
-  
-3.  レジストリ エディターで、次のサブキーを開きます。  
-  
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP`  
-  
-     インストールされているバージョンは NDP のサブキーの下に一覧表示されています。 バージョン番号は、**Version** エントリに格納されています。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、**Version** エントリは、Client サブキーまたは Full サブキー (NDP の下)、または両方のサブキーの下にあります。  
-  
+ユーザーはコンピューターに複数のバージョンの .NET Framework を[インストール](../install/index.md)して実行できます。 アプリを開発または配置する場合、どのバージョンの .NET Framework がユーザーのコンピューターにインストールされているかを確認しなければならない場合があります。 レジストリには、コンピューターにインストールされている .NET Framework のバージョンの一覧が含まれています。
 
-    > [!NOTE]
-    > レジストリの ".NET Framework セットアップ" フォルダーの先頭はピリオドではありません。
+.NET Framework は、個別にバージョン管理される 2 つの主要コンポーネントで構成されています。
 
-<a name="net_b"></a> 
-## <a name="to-find-net-framework-versions-by-viewing-the-registry-net-framework-45-and-later"></a>レジストリを表示して .NET Framework のバージョンを検索するには (.NET Framework 4.5 以降)
+- アプリに機能を提供する型やリソースのコレクションである一連のアセンブリ。 .NET Framework とアセンブリは同じバージョン番号を共有します。 たとえば、.NET Framework のバージョンには、4.5、4.6.1、および 4.7.2 が含まれます。
 
-1. **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** をクリックします。
+- アプリのコードを管理および実行する共通言語ランタイム (CLR)。 1 つの CLR バージョンは、通常複数の NET Framework バージョンをサポートしています。 たとえば、CLR バージョン 4.0.30319.*xxxxx* で *xxxxx* が 42000 未満の場合、.NET Framework バージョン 4 から 4.5.2 がサポートされます。 4\.0.30319.42000 以上の CLR バージョンでは、.NET Framework 4.6 以降の .NET Framework バージョンがサポートされます。
 
-2. **[開く]** ボックスに「**regedit.exe**」と入力します。
+コミュニティで管理されているツールを使用して、インストールされている .NET Framework バージョンを検出できます。
 
-     regedit.exe を実行するには、管理特権が必要です。
+- [https://github.com/jmalarcon/DotNetVersions](https://github.com/jmalarcon/DotNetVersions)
 
-3. レジストリ エディターで、次のサブキーを開きます。
+  .NET 2.0 コマンド ライン ツール。
 
-     `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full`
+- [https://github.com/EliteLoser/DotNetVersionLister](https://github.com/EliteLoser/DotNetVersionLister)
 
-     `Full` サブキーへのパスに `.NET Framework` ではなく `Net Framework` サブキーが含まれていることに注意してください。
+  PowerShell 2.0 モジュール。
 
-    > [!NOTE]
-    > `Full` サブキーが存在しない場合は、.NET Framework 4.5 以降がインストールされていません。
+.NET Framework の各バージョン用にインストールされている更新プログラムの検出については、「[方法:インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。
 
-     `Release` という名前の DWORD 値を確認します。 `Release` DWORD がある場合は、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降がコンピューターにインストールされていることを示します。
+## <a name="detect-net-framework-45-and-later-versions"></a>.NET Framework 4.5 以降のバージョンを検出する
 
-     ![.NET Framework 4.5 のレジストリ エントリ。](../../../docs/framework/migration-guide/media/clr-installdir.png "CLR_InstallDir")
+コンピューターにインストールされている .NET Framework (4.5 以降) のバージョンは、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full** のレジストリに一覧されています。 **Full** サブキーが見つからない場合、.NET Framework 4.5 以降はインストールされていません。
 
-     `Release` の値は、インストールされている .NET Framework のバージョンを示します。
+> [!NOTE]
+> レジストリ パスの **NET Framework Setup** サブキーの先頭は、ピリオドでは "*ありません*"。
 
-    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+レジストリの **Release** REG_DWORD の値は、インストールされている .NET Framework のバージョンを表します。
 
-    |Release DWORD の値|Version|
-    |--------------------------------|-------------|
-    |378389|.NET Framework 4.5|
-    |378675|Windows 8.1 または Windows Server 2012 R2 でインストールされた .NET Framework 4.5.1|
-    |378758|Windows 8、Windows 7 SP1、または Windows Vista SP2 上でインストールされた .NET Framework 4.5.1|
-    |379893|.NET Framework 4.5.2|
-    |Windows 10 システムのみ:393295<br /><br /> その他のすべての OS バージョン:393297|[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|
-    |Windows 10 の 11 月更新版のシステムのみ:394254<br /><br /> その他のすべての OS バージョン:394271|[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|
-    |Windows 10 Anniversary Update および Windows Server 2016 の場合:394802<br /><br /> その他のすべての OS バージョン:394806|[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]| 
-    |Windows 10 Creators Update のみ:460798<br/><br/> その他のすべての OS バージョン:460805 | .NET Framework 4.7 |
-    |Windows 10 Fall Creators Update のみ:461308<br/><br/> その他のすべての OS バージョン:461310 | .NET Framework 4.7.1 |
-    |Windows 10 April 2018 Update のみ:461808<br/><br/> Windows 10 October 2018 Update を含むその他すべての OS バージョン:461814| .NET Framework 4.7.2 |
-    
-<a name="net_c"></a> 
-## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-1-4"></a>コードでレジストリを照会して .NET Framework のバージョンを検索するには (.NET Framework 1 ～ 4)
+<a name="version_table"></a>
 
-- <xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> クラスを使用して、Windows レジストリの HKEY_LOCAL_MACHINE の下にある Software\Microsoft\NET Framework Setup\NDP\ サブキーにアクセスします。
+| .NET Framework のバージョン | **Release** の値 |
+| ---------------------- | -------------------------- |
+| .NET Framework 4.5     | すべての Windows オペレーティング システム:378389 |
+| .NET Framework 4.5.1   | Windows 8.1 および Windows Server 2012 R2:378675<br />他のすべての Windows オペレーティング システム:378758 |
+| .NET Framework 4.5.2   | すべての Windows オペレーティング システム:379893 |
+| .NET Framework 4.6     | Windows 10:393295<br />他のすべての Windows オペレーティング システム:393297 |
+| .NET Framework 4.6.1   | Windows 10 November Update システム:394254<br />他のすべての Windows オペレーティング システム (Windows 10 を含む):394271 |
+| .NET Framework 4.6.2   | Windows 10 Anniversary Update および Windows Server 2016 の場合:394802<br />他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):394806 |
+| .NET Framework 4.7     | Windows 10 Creators Update:460798<br />他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):460805 |
+| .NET Framework 4.7.1   | Windows 10 Fall Creators Update および Windows Server バージョン 1709:461308<br/>他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):461310 |
+| .NET Framework 4.7.2   | Windows 10 April 2018 Update および Windows Server バージョン 1803:461808<br/>Windows 10 April 2018 Update および Windows Server バージョン 1803 以外のすべての Windows オペレーティング システム:461814 |
+| .NET Framework 4.8     | Windows 10 May 2019 Update および Windows 10 November 2019 Update:528040<br/>Windows 10 および Windows Server、バージョン 1909: 528209<br/>他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):528049 |
 
-     このクエリの例を次のコードに示します。
+### <a name="minimum-version"></a>最小バージョン
 
-    > [!NOTE]
-    > このコードは [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降を検出する方法を示すコードではありません。 前のセクションで説明したように、これらのバージョンを検出するには、`Release` DWORD を確認してください。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降のバージョンを検出するコードについては、この記事の次のセクションを参照してください。
+.NET Framework の "*最小*" バージョンが存在するかどうかを判断するには、前の表から、そのバージョンの最小の **Release** REG_DWORD の値を使用します。
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+たとえば、アプリケーションが .NET Framework 4.8 以降のバージョンで実行されている場合、**Release** REG_DWORD の値が 528040 "*以上*" であることを確認します。
 
-     この例では次のような出力が生成されます。
+| .NET Framework のバージョン | 最小値 |
+| ---------------------- | ------------- |
+| .NET Framework 4.5     | 378389 |
+| .NET Framework 4.5.1   | 378675 |
+| .NET Framework 4.5.2   | 379893 |
+| .NET Framework 4.6     | 393295 |
+| .NET Framework 4.6.1   | 394254 |
+| .NET Framework 4.6.2   | 394802 |
+| .NET Framework 4.7     | 460798 |
+| .NET Framework 4.7.1   | 461308 |
+| .NET Framework 4.7.2   | 461808 |
+| .NET Framework 4.8     | 528040 |
 
-    ```
-    v2.0.50727  2.0.50727.4016  SP2
-    v3.0  3.0.30729.4037  SP2
-    v3.5  3.5.30729.01  SP1
-    v4
-      Client  4.0.30319
-      Full  4.0.30319
-    ```
+### <a name="use-registry-editor"></a>レジストリ エディターを使用する
 
-<a name="net_d"></a> 
-## <a name="to-find-net-framework-versions-by-querying-the-registry-in-code-net-framework-45-and-later"></a>コードでレジストリを照会して .NET Framework のバージョンを検索するには (.NET Framework 4.5 以降)
+01. **スタート** メニューの **[ファイル名を指定して実行]** を選択し、「*regedit*」と入力し、 **[OK]** を選択します。
 
-1. `Release` DWORD がある場合は、.NET Framework 4.5 以降がコンピューターにインストールされています。 キーワードの値はインストールされているバージョンを示します。 このキーワードを確認するには、<xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> クラスの <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A> メソッドと <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A> メソッドを使って、Windows レジストリの HKEY_LOCAL_MACHINE の下にある Software\Microsoft\NET Framework Setup\NDP\v4\Full サブキーにアクセスします。
+    regedit を実行するには、管理特権が必要です。
 
-2. `Release` キーワードの値を確認して、インストールされているバージョンを決定します。 上位互換性を確認するには、テーブルに示されている値以上の値があるかを確認します。 .NET Framework のバージョンと関連付けられた `Release` キーワードを次に示します。
+01. レジストリ エディターで、次のサブキーを開きます。**HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**。 **Full** サブキーが存在しない場合は、.NET Framework 4.5 以降はインストールされていません。
 
-    [!INCLUDE[Release key values note](~/includes/version-keys-note.md)]
+01. **Release** という REG_DWORD のエントリを確認します。 それがある場合、.NET Framework 4.5 以降がインストールされています。 その値は、.NET Framework の特定のバージョンに対応しています。 たとえば、次の図では、**Release** エントリの値は 528040 で、これは .NET Framework 4.8 のリリース キーです。
 
-    |Version|Release DWORD の値|
-    |-------------|--------------------------------|
-    |.NET Framework 4.5|378389|
-    |Windows 8.1 でインストールされた .NET Framework 4.5.1|378675|
-    |Windows 8、Windows 7 SP1、または Windows Vista SP2 上でインストールされた .NET Framework 4.5.1|378758|
-    |.NET Framework 4.5.2|379893|
-    |Windows 10 でインストールされた .NET Framework 4.6|393295|
-    |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.6|393297|
-    |Windows 10 にインストールされた .NET Framework 4.6.1|394254|
-    |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.6.1|394271|
-    |Windows 10 Anniversary Update および Windows Server 2016 にインストールされた .NET Framework 4.6.2|394802|
-    |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.6.2|394806|
-    |Windows 10 Creators Update にインストールされた .NET Framework 4.7|460798|
-    |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.7|460805|
-    |Windows 10 Fall Creators Update にインストールされた .NET Framework 4.7.1|461308|
-    |その他のすべての Windows OS バージョンにインストールされた .NET Framework 4.7.1|461310|
-    |Windows 10 October 2018 Update にインストールされた .NET Framework 4.7.2|461814|
-    |Windows 10 April 2018 Update にインストールされた .NET Framework 4.7.2|461808|
-    |Windows 10 Fall Creators Update 以前の OS バージョンにインストールされた .NET Framework 4.7.2|461814|
-    
-     レジストリの `Release` 値を確認して [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降のバージョンの .NET Framework がインストールされているかどうかを判断する例を次に示します。
+    ![.NET Framework 4.5 のレジストリ エントリ](./media/clr-installdir.png ".NET Framework 4.5 のレジストリ エントリ。")
 
-     [!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
-     [!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
+### <a name="use-powershell-to-check-for-a-minimum-version"></a>PowerShell を使用して最小バージョンを確認する
 
-     この例では、バージョンのチェックで推奨されている方法に従います。
+PowerShell コマンドを使用し、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full** サブキーの **Release** エントリの値を確認します。
 
-    - `Release` エントリの値が既知のリリース キー値*以上*かどうかをチェックします。
+次の例では、**Release** エントリの値を確認して、.NET Framework 4.6.2 以降がインストールされているかどうかを判断しています。 このコードでは、インストールされていない場合は、`True` が返され、されている場合は `False` が返されます。
 
-    - 最新バージョンから最も古いバージョンの順にチェックします。
+```PowerShell
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
+```
 
-<a name="ps_a"></a> 
-## <a name="to-check-for-a-minimum-required-net-framework-version-by-querying-the-registry-in-powershell-net-framework-45-and-later"></a>PowerShell でレジストリを照会して .NET Framework の最低限必要なバージョンを確認するには(.NET Framework 4.5 以降)
+### <a name="query-the-registry-using-code"></a>コードを使用してレジストリのクエリを実行する
 
-- 次の例では、`Release` キーワードの値を確認して、Windows オペレーティング システムのバージョンに関係なく、.NET Framework 4.6.2 以降がインストールされているかどうかを判断します (インストールされている場合は `True` を返し、それ以外の場合は `False`を返します)。
-
-    ```PowerShell
-    # PowerShell 5
-    Get-ChildItem 'HKLM:\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full\' | Get-ItemPropertyValue -Name Release | Foreach-Object { $_ -ge 394802 } 
-    ```
-
-    ```PowerShell
-    # PowerShell 4
-    (Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
-    ```
-
-    前の例で、`394802` を次の表の別の値に置き換えて、別の最低限必要な .NET Framework バージョンを確認することができます。
-  
-    |Version|Release DWORD の最小値|
-    |-------------|--------------------------------|
-    |.NET Framework 4.5|378389|
-    |.NET Framework 4.5.1|378675|
-    |.NET Framework 4.5.2|379893|
-    |[!INCLUDE[net_v46](../../../includes/net-v46-md.md)]|393295|
-    |[!INCLUDE[net_v461](../../../includes/net-v461-md.md)]|394254|
-    |[!INCLUDE[net_v462](../../../includes/net-v462-md.md)]|394802|
-    |.NET Framework 4.7|460798|
-    |.NET Framework 4.7.1|461308|
-    |.NET Framework 4.7.2|461808|
-
-<a name="clr_a"></a> 
-## <a name="to-find-the-current-runtime-version-by-using-the-clrver-tool"></a>Clrver ツールを使用して現在のランタイムのバージョンを確認する方法
-
-- CLR バージョン ツール (Clrver.exe) を使用して、コンピューターにインストールされている共通言語ランタイムのバージョンを確認します。
-
-     Visual Studio 用開発者コマンド プロンプトで「`clrver`」と入力します。 次のような出力が表示されます。
-
-    ```
-    Versions installed on the machine:
-    v2.0.50727
-    v4.0.30319
-    ```
-
-     このツールの使用については、「[Clrver.exe (CLR Version Tool)](~/docs/framework/tools/clrver-exe-clr-version-tool.md)」を参照してください。
-
-<a name="clr_b"></a> 
-## <a name="to-find-the-current-runtime-version-by-querying-the-environment-class-in-code"></a>コードで Environment クラスを照会して現在のランタイム バージョンを確認するには
-
-- <xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティを照会して <xref:System.Version> オブジェクトを取得し、現在コードを実行しているランタイムのバージョンを識別します。 メジャー リリースの識別子 (バージョン 4.0 の "4" など) を取得するには <xref:System.Version.Major%2A?displayProperty=nameWithType> プロパティを、マイナー リリースの識別子 (バージョン 4.0 の "0" など) を取得するには <xref:System.Version.Minor%2A?displayProperty=nameWithType> プロパティを、バージョン文字列全体 (次のコードに示すような "4.0.30319.18010" など) を取得するには <xref:System.Object.ToString%2A?displayProperty=nameWithType> メソッドを使用できます。 このプロパティは、現在コードを実行しているランタイムのバージョンを表す単一の値を返しますが、アセンブリのバージョンやコンピューターにインストールされている可能性があるランタイムの他のバージョンは返しません。
-
-     .NET Framework バージョン 4、4.5、4.5.1、および 4.5.2 の場合は、<xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティから返される <xref:System.Version> オブジェクトの文字列表現が `4.0.30319.xxxxx` という形式になっています。 .NET Framework 4.6 以降の場合は、`4.0.30319.42000` という形式です。
+01. <xref:Microsoft.Win32.RegistryKey.OpenBaseKey%2A?displayProperty=nameWithType> メソッドと <xref:Microsoft.Win32.RegistryKey.OpenSubKey%2A?displayProperty=nameWithType> メソッドを使用し、Windows レジストリの **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full** サブキーにアクセスします。
 
     > [!IMPORTANT]
-    > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降の場合、ランタイムのバージョンの検出に <xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティを使用することは推奨されません。 代わりに、この記事で前述した「[コードでレジストリを照会して .NET Framework のバージョンを検索するには (.NET Framework 4.5 以降)](#net_d)」に従って、レジストリを紹介することをお勧めします。
+    > 実行しているアプリが 32 ビットで、64 ビットの Windows で実行されている場合、レジストリ パスは前に示したものとは異なります。 64 ビットのレジストリは、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** サブキーで入手できます。 たとえば、.NET Framework 4.5 のレジストリ サブキーは、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full** になります。
 
-     次に、<xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティを照会してランタイム バージョン情報を取得する例を示します。
+01. **Release** REG_DWORD の値を確認して、インストールされているバージョンを判断します。 上位互換性があるかを確認するには、[.NET Framework のバージョンの表](#version_table)で示されている値以上の値があることを確認します。
 
-     [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
-     [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
+次の例では、レジストリから **Release** の値を確認し、インストールされている .NET Framework 4.5 以降のバージョンを探しています。
 
-     この例では次のような出力が生成されます。
+[!code-csharp[ListVersions#5](../../../samples/snippets/csharp/framework/migration-guide/versions-installed3.cs)]
+[!code-vb[ListVersions#5](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed3.vb)]
 
-    ```
-    Version: 4.0.30319.18010
-    ```
+この例では、バージョンのチェックで推奨されている方法に従います。
+
+- **Release** エントリの値が、既知のリリース キー値*以上*かどうかを確認しています。
+- 最新バージョンから最も古いバージョンの順にチェックします。
+
+## <a name="detect-net-framework-10-through-40"></a>.NET Framework 1.0 から 4.0 を検出する
+
+.NET Framework 1.1 から 4.0 の各バージョンは、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP** のサブキーとして一覧されています。 次の表には、各 .NET Framework バージョンへのパスが一覧されています。 ほとんどのバージョンでは、`1` の **Install** REG_DWORD の値があり、このバージョンがインストールされていることを示します。 これらのサブキーには、バージョン文字列を含む **Version** REG_SZ の値もあります。
+
+> [!NOTE]
+> レジストリ パスの **NET Framework Setup** サブキーの先頭は、ピリオドでは "*ありません*"。
+
+| Framework のバージョン  | レジストリ サブキー | [値] |
+| ------------------ | --------------- | ----- |
+| 1                | **HKLM\\Software\\Microsoft\\.NETFramework\\Policy\\v1.0\\3705**     | **Install** REG_SZ は `1` と等しい |
+| 1.1                | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v1.1.4322**   | **Install** REG_DWORD は `1` と等しい |
+| 2.0                | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v2.0.50727**  | **Install** REG_DWORD は `1` と等しい |
+| 3.0                | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v3.0\\Setup** | **InstallSuccess** REG_DWORD は `1` と等しい |
+| 3.5                | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v3.5**        | **Install** REG_DWORD は `1` と等しい |
+| 4.0 Client Profile | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Client**  | **Install** REG_DWORD は `1` と等しい |
+| 4.0 Full Profile   | **HKLM\\Software\\Microsoft\\NET Framework Setup\\NDP\\v4\\Full**    | **Install** REG_DWORD は `1` と等しい |
+
+> [!IMPORTANT]
+> 実行しているアプリが 32 ビットで、64 ビットの Windows で実行されている場合、レジストリ パスは前に示したものとは異なります。 64 ビットのレジストリは、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** サブキーで入手できます。 たとえば、.NET Framework 3.5 のレジストリ サブキーは、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v3.5** になります。
+
+.NET Framework 1.0 サブキーへのレジストリ パスは、他のものとは異なるので注意してください。
+
+### <a name="use-registry-editor-older-framework-versions"></a>レジストリ エディターを使用する (古いバージョンのフレームワーク)
+
+01. **スタート** メニューの **[ファイル名を指定して実行]** を選択し、「*regedit*」と入力し、 **[OK]** を選択します。
+
+    regedit を実行するには、管理特権が必要です。
+
+01. 確認するバージョンと一致するサブキーを開きます。 「[.NET Framework 1.0 から 4.0 を検出する](#detect-net-framework-10-through-40)」セクションの表を使用します。
+
+    次の図では、.NET Framework 3.5 のサブキーとその **Version** の値を示しています。
+
+    ![.NET Framework 3.5 のレジストリ エントリ。](./media/net-4-and-earlier.png ".NET Framework 3.5 以前のバージョン")
+
+### <a name="query-the-registry-using-code-older-framework-versions"></a>コードを使用してレジストリのクエリを実行する (以前のバージョンのフレームワーク)
+
+<xref:Microsoft.Win32.RegistryKey?displayProperty=nameWithType> クラスを使用して、Windows レジストリの **HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\NET Framework Setup\\NDP** サブキーにアクセスします。
+
+> [!IMPORTANT]
+> 実行しているアプリが 32 ビットで、64 ビットの Windows で実行されている場合、レジストリ パスは前に示したものとは異なります。 64 ビットのレジストリは、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\** サブキーで入手できます。 たとえば、.NET Framework 3.5 のレジストリ サブキーは、**HKEY_LOCAL_MACHINE\\SOFTWARE\\Wow6432Node\\Microsoft\\NET Framework Setup\\NDP\\v3.5** になります。
+
+次の例では、インストールされている .NET Framework のバージョン 1 から 4 が検索されています。
+
+[!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
+[!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
+
+## <a name="find-clr-versions"></a>CLR のバージョンを探す
+
+.NET Framework と共にインストールされる .NET Framework CLR は、個別にバージョン管理されます。 .NET Framework CLR のバージョンを検出するには、2 つの方法があります。
+
+- **Clrver.exe ツール**
+
+  [CLR バージョン ツール (Clrver.exe)](../tools/clrver-exe-clr-version-tool.md) を使用して、コンピューターにインストールされている CLR のバージョンを判断します。 [Visual Studio の開発者コマンド プロンプト](../tools/developer-command-prompt-for-vs.md)を開いて、「`clrver`」と入力します。
+
+  出力例
+
+  ```console
+  Versions installed on the machine:
+  v2.0.50727
+  v4.0.30319
+  ```
+
+- **`Environment` クラス**
+
+  > [!IMPORTANT]
+  > .NET Framework 4.5 以降のバージョンでは、CLR のバージョンの検出に <xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティを使用しないでください。 代わりに、「[.NET Framework 4.5 以降のバージョンを検出する](#detect-net-framework-45-and-later-versions)」で説明するように、レジストリのクエリを実行します。
+  
+  01. <xref:System.Environment.Version?displayProperty=nameWithType> プロパティを照会し、<xref:System.Version> オブジェクトを取得します。
+  
+      返された `System.Version` オブジェクトは、現在コードを実行しているランタイムのバージョンを示しています。 コンピューターにインストールされている可能性のある、アセンブリのバージョンやランタイムのその他のバージョンは返されません。
+  
+      .NET Framework バージョン 4、4.5、4.5.1、4.5.2 の場合は、返される <xref:System.Version> オブジェクトの文字列表現は 4.0.30319.*xxxxx* という形式です。この *xxxxx* は 42000 未満になります。 .NET Framework 4.6 以降のバージョンの場合は、4.0.30319.42000 という形式です。
+  
+  01. **Version** オブジェクトを取得したら、次のようにクエリを実行します。
+  
+      - メジャー リリース識別子 (たとえば、バージョン 4.0 の場合の *4*) には、<xref:System.Version.Major%2A?displayProperty=nameWithType> プロパティを使用します。
+  
+      - マイナー リリース識別子 (たとえば、バージョン 4.0 の場合の *0*) には、<xref:System.Version.Minor%2A?displayProperty=nameWithType> プロパティを使用します。
+  
+      - バージョンの完全な文字列 (たとえば、*4.0.30319.18010*) には、<xref:System.Version.ToString%2A?displayProperty=nameWithType> メソッドを使用します。 このメソッドでは、コードを実行しているランタイムのバージョンを示す値が 1 つ返されます。 コンピューターにインストールされている可能性のあるアセンブリ バージョンやその他のランタイム バージョンは返されません。
+
+  次の例では、<xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティを使用して CLR バージョンの情報を取得しています。
+  
+  [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed2.cs)]
+  [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed2.vb)]
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: インストールされている .NET Framework の更新プログラムを確認する](~/docs/framework/migration-guide/how-to-determine-which-net-framework-updates-are-installed.md)
-- [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)
-- [バージョンおよび依存関係](~/docs/framework/migration-guide/versions-and-dependencies.md)
+- [方法: インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)
+- [開発者向けの .NET Framework のインストール](../install/guide-for-developers.md)
+- [.NET Framework のバージョンおよび依存関係](versions-and-dependencies.md)

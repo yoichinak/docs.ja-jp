@@ -1,5 +1,0 @@
-# [Null 許容型](index.md)
-## [Null 許容型の使用](using-nullable-types.md)
-## [Null 許容型のボックス化](boxing-nullable-types.md)
-## [方法: Null 許容型を識別する](how-to-identify-a-nullable-type.md)
-## [方法: bool? から bool に安全にキャストする](how-to-safely-cast-from-bool-to-bool.md)

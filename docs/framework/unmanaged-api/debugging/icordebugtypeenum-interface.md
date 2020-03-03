@@ -1,5 +1,5 @@
 ---
-title: ICorDebugTypeEnum Interface1
+title: ICorDebugTypeEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugTypeEnum
@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 159ccfcf-b37c-4ad9-8e0d-a9a443262472
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d8196267d1b7bd6ac2fb66fe8e099330e531b722
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed7bceec9bf6ea0cf69cbb57fff83a91093ba6c4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513188"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791211"
 ---
-# <a name="icordebugtypeenum-interface1"></a>ICorDebugTypeEnum Interface1
-"ICorDebugEnum"メソッドを実装し、"ICorDebugType"配列を列挙します。  
+# <a name="icordebugtypeenum-interface"></a>ICorDebugTypeEnum インターフェイス
+"ICorDebugEnum" メソッドを実装し、"" 配列を列挙します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugtypeenum-next-method.md)|指定した数を取得`ICorDebugType`列挙体の現在位置からのインスタンス。|  
+|[Next メソッド](icordebugtypeenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugType` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +45,5 @@ ms.locfileid: "54513188"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

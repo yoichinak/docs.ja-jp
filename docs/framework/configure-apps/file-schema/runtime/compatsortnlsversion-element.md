@@ -8,21 +8,19 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f670bd2030e914cc4431c3325215428570ad46cf
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256613"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969254"
 ---
 # <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 要素
 文字列比較の実行時に、ランタイムがレガシ並べ替え順序を使用するように指定します。  
   
- \<configuration>  
-\<runtime>  
-\<CompatSortNLSVersion > 要素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,9 +40,9 @@ ms.locfileid: "55256613"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|4096|代替の並べ替え順序を表すロケール ID。 この場合、4096 は、[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] およびそれ以前のバージョンの並べ替え順序を表します。|  
+|4096|代替の並べ替え順序を表すロケール ID。 この場合、4096は .NET Framework 3.5 以前のバージョンの並べ替え順序を表します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -57,10 +55,10 @@ ms.locfileid: "55256613"
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
 ## <a name="remarks"></a>Remarks  
- によって文字列比較、並べ替え、および大文字と小文字の操作が実行されるため、<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>クラス、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]などの文字列比較メソッドの結果、Unicode 5.1 を標準に準拠している<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>と<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>異なる場合があります.NET Framework の以前のバージョン。 アプリケーションがレガシ動作に依存している場合は、[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] 要素をアプリケーションの構成ファイルに含めることで、`<CompatSortNLSVersion>` およびそれ以前のバージョンで使用されていた文字列の比較および並べ替えの規則を復元できます。  
+ .NET Framework 4 の <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> クラスによって実行される文字列比較、並べ替え、および大文字と小文字の区別の操作は、Unicode 5.1 標準に準拠しているため、<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> や <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> などの文字列比較メソッドの結果は、以前のバージョンの .NET Framework とは異なる場合があります。 アプリケーションが従来の動作に依存している場合は、アプリケーションの構成ファイルに `<CompatSortNLSVersion>` 要素を含めることによって、.NET Framework 3.5 以前のバージョンで使用されている文字列比較規則および並べ替え規則を復元できます。  
   
 > [!IMPORTANT]
->  文字列の比較および並べ替えのレガシ規則を復元する場合は、ローカル システムで sort00001000.dll ダイナミック リンク ライブラリも使用できるようにする必要があります。  
+> 文字列の比較および並べ替えのレガシ規則を復元する場合は、ローカル システムで sort00001000.dll ダイナミック リンク ライブラリも使用できるようにする必要があります。  
   
  アプリケーション ドメインを作成するときに、文字列 "NetFx40_Legacy20SortingBehavior" を <xref:System.AppDomainSetup.SetCompatibilitySwitches%2A> メソッドに渡すことで、文字列の比較および並べ替えのレガシ規則を特定のアプリケーション ドメインで使用することもできます。  
   
@@ -70,19 +68,19 @@ ms.locfileid: "55256613"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] で例を実行すると、次のように出力されます。  
+ .NET Framework 4 でこの例を実行すると、次の出力が表示されます。
   
-```  
+```console
 sta follows a in the sort order.  
 ```  
   
- これは、[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] で例を実行したときに表示される出力とはまったく異なります。  
+ これは、.NET Framework 3.5 で例を実行したときに表示される出力とはまったく異なります。
   
-```  
+```console
 sta equals a in the sort order.  
 ```  
   
- ただし、例のディレクトリに次の構成ファイルを追加し、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] で例を実行すると、[!INCLUDE[net_v35_short](../../../../../includes/net-v35-short-md.md)] で例を実行した場合と同じ出力が生成されます。  
+ ただし、次の構成ファイルを例のディレクトリに追加し、.NET Framework 4 でこの例を実行すると、出力は、.NET Framework 3.5 で実行された場合に例で生成されたものと同じになります。  
   
 ```xml  
 <?xml version ="1.0"?>  
@@ -94,5 +92,6 @@ sta equals a in the sort order.
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)

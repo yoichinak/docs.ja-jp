@@ -5,6 +5,7 @@ api_name:
 - CoInitializeCor
 api_location:
 - mscoree.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -14,31 +15,30 @@ helpviewer_keywords:
 ms.assetid: 9b9079fb-579e-4141-b3f0-791072dd40dc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 438f2f58a4ce61d1757238fc46674611e4d677dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d65e739504e01a7d11b37d1b34d7313b13a5e1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508536"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138332"
 ---
 # <a name="coinitializecor-function"></a>CoInitializeCor 関数
 `CoInitializeCor` は互換性のために残されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 STDAPI CoInitializeCor (  
     DWORD fFlags  
 );  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 共通言語ランタイムを初期化するためにいずれかの操作を使用して[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)または[CorBindToCurrentRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)します。  
+ 共通言語ランタイムを初期化するには、 [Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)または[Corbindtoの entruntime](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)を使用します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** Cor.h  
+## <a name="requirements"></a>［要件］  
+ **ヘッダー:** Cor  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

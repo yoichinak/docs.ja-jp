@@ -6,30 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 481e2eeaa24c4e8bc2b6199d2bb4ab2c3c51e221
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1a3e3565917d1e2461277dbbc1524947afef5edd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231009"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441378"
 ---
 # <a name="ui-automation-fundamentals"></a>UI オートメーションの基礎
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- このセクションには概要が含まれています、 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]します。  
+ このセクションには、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API の概要が記載されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [UI オートメーションの概要](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [UI オートメーションと Microsoft Active Accessibility](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI オートメーション プロパティの概要](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [UI オートメーション イベントの概要](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [UI オートメーションのセキュリティの概要](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [UI オートメーションによる自動テスト](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+ [UI オートメーションの概要](ui-automation-overview.md)  
+ [UI オートメーションと Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
+ [UI Automation ツリーの概要](ui-automation-tree-overview.md)  
+ [UI Automation コントロール パターンの概要](ui-automation-control-patterns-overview.md)  
+ [UI オートメーション プロパティの概要](ui-automation-properties-overview.md)  
+ [UI オートメーション イベントの概要](ui-automation-events-overview.md)  
+ [UI オートメーションのセキュリティの概要](ui-automation-security-overview.md)  
+ [UI オートメーションによる自動テスト](using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Automation>  

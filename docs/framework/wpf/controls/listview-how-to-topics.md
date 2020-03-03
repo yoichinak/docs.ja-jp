@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], how-to topics
 ms.assetid: aafce40c-9bfe-45ec-86a3-599616a11276
-ms.openlocfilehash: 0e99793a1c8ec179ee01744f8618ff6463766704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2665fc60e1366f30fb7f3621bb0669db1ea3db0a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932250"
 ---
 # <a name="listview-how-to-topics"></a>ListView に関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.ListView>コントロールにデータ項目のセットを表示します。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.ListView>データ項目のセットを表示するコントロール。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ヘッダーがクリックされたときに GridView 列を並べ替える](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [ListView のカスタム表示モードを作成する](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [テンプレートを使用して、GridView を使用する ListView のスタイルを設定する](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [ドラッグされた GridView 列ヘッダーのスタイルを作成する](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [GridView を使用して ListView コンテンツを表示する](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [トリガーを使用して、ListView で選択された項目のスタイルを設定する](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [CheckBox を持つ ListViewItem を作成する](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [GridViewRowPresenter を使用してデータを表示する](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [GridView を実装する ListView の項目をグループ化する](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [GridView を実装する ListView で行のスタイルを設定する](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [ListView の列の水平方向の配置を変更する](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [ListView の各項目の MouseDoubleClick イベントを処理する](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+ [ヘッダーがクリックされたときに GridView 列を並べ替える](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [ListView のカスタム表示モードを作成する](how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [テンプレートを使用して、GridView を使用する ListView のスタイルを設定する](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [ドラッグされた GridView 列ヘッダーのスタイルを作成する](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [GridView を使用して ListView コンテンツを表示する](how-to-display-listview-contents-by-using-a-gridview.md)  
+ [トリガーを使用して、ListView で選択された項目のスタイルを設定する](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [CheckBox を持つ ListViewItem を作成する](how-to-create-listviewitems-with-a-checkbox.md)  
+ [GridViewRowPresenter を使用してデータを表示する](how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [GridView を実装する ListView の項目をグループ化する](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [GridView を実装する ListView で行のスタイルを設定する](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [ListView の列の水平方向の配置を変更する](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [ListView の各項目の MouseDoubleClick イベントを処理する](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ListView>  
@@ -39,4 +39,4 @@ ms.locfileid: "33555803"
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>関連項目  
- [ListView の概要](../../../../docs/framework/wpf/controls/listview-overview.md)
+ [ListView の概要](listview-overview.md)

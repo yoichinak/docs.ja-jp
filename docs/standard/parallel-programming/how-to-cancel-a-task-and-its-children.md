@@ -8,25 +8,23 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to cancel
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e0e783a4dfe3bf3a55795d7baef461369d7405a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642832"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134204"
 ---
 # <a name="how-to-cancel-a-task-and-its-children"></a>方法: タスクとその子を取り消す
 以下の例では、次のタスクを実行する方法を説明します。  
   
-1.  取り消すことができるタスクを作成し、開始します。  
+1. 取り消すことができるタスクを作成し、開始します。  
   
-2.  キャンセル トークンをユーザー デリゲートに渡し、必要に応じてタスク インスタンスにも渡します。  
+2. キャンセル トークンをユーザー デリゲートに渡し、必要に応じてタスク インスタンスにも渡します。  
   
-3.  ユーザー デリゲート内のキャンセル要求を確認し、これに応答します。  
+3. ユーザー デリゲート内のキャンセル要求を確認し、これに応答します。  
   
-4.  必要に応じて、タスクが取り消された呼び出し元のスレッドを確認します。  
+4. 必要に応じて、タスクが取り消された呼び出し元のスレッドを確認します。  
   
  呼び出し元のスレッドは、タスクを強制終了せず、キャンセルが要求されたことを通知するだけです。 タスクが既に実行中である場合、ユーザー デリゲートが要求を確認して適切に応答します。 タスクを実行する前にキャンセルが要求された場合、ユーザー デリゲートは実行されず、タスク オブジェクトは Canceled 状態に遷移します。  
   

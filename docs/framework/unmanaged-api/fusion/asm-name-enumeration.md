@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: c8b65b19-d777-428f-bc0c-0d84c78a37bc
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 20bfe7794e1ac6259e5b70c2670801e4c7244520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 355f9da29a435a02d929cc01f28e95c4e04cdfcc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675342"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109149"
 ---
-# <a name="asmname-enumeration"></a>ASM_NAME 列挙型
-バージョン、ビルド、カルチャ、署名、およびプロパティを取得または設定は、アセンブリのことを示します[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)メソッド。  
+# <a name="asm_name-enumeration"></a>ASM_NAME 列挙型
+[IAssemblyName](iassemblyname-interface.md)メソッドによって取得または設定されるプロパティを持つアセンブリのバージョン、ビルド、カルチャ、署名などを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
   
     ASM_NAME_PUBLIC_KEY = 0,  
@@ -64,15 +62,16 @@ typedef enum {
 } ASM_NAME;  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [Fusion 列挙型](fusion-enumerations.md)

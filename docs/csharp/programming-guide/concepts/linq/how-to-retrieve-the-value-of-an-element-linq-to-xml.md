@@ -1,15 +1,15 @@
 ---
-title: '方法: 要素の値を取得する (LINQ to XML) (C#)'
+title: 要素の値を取得する方法 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 2cf7390dde2d0dc1ea37d2dd28f753e5d7580cd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 775e7282408910cc06b7d660d84cb6f80ef47949
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642608"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347424"
 ---
-# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>方法: 要素の値を取得する (LINQ to XML) (C#)
+# <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>要素の値を取得する方法 (LINQ to XML) (C#)
 このトピックでは、要素の値を取得する方法について説明します。 これには主に 2 つの方法があります。 1 つは <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> を目的の型にキャストする方法です。 その後、明示的な変換演算子によって、要素または属性のコンテンツが指定した型に変換され、変数に代入されます。 もう 1 つは、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> プロパティを使用する方法です。  
   
  ただし C# では、通常、キャストがより適切な方法です。 要素または属性を NULL 値が許容される型にキャストすると、存在が不明確な要素 (または属性) の値を取得する場合にコードをより簡単に記述できます。 このトピックの最後の例では、この動作について説明します。 ただし、<xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> プロパティの場合とは異なり、キャストを通じて要素のコンテンツを設定することはできません。  
@@ -25,7 +25,7 @@ Console.WriteLine("Value of e:" + (string)e);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -41,7 +41,7 @@ Console.WriteLine("Value of e:" + (int)e);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 <Age>44</Age>  
 Value of e:44  
 ```  
@@ -61,13 +61,13 @@ Console.WriteLine("Value of e:" + e.Value);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
 ## <a name="example"></a>例  
- 存在しているかどうかが明確でない要素の値の取得を試行する場合があります。 この場合、NULL 値が許容される型 (`string` または [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] での NULL 値が許容される型のいずれか) に、キャストされた要素を代入すると、要素が存在しない場合に、代入された変数が `null` に設定されます。 要素が存在するかどうかわからないときは、<xref:System.Xml.Linq.XElement.Value%2A> プロパティよりもキャストを使用した方が簡単であることを、次のコードは示しています。  
+ 存在しているかどうかが明確でない要素の値の取得を試行する場合があります。 この場合、NULL 値が許容される型 (`string` または .NET Framework での NULL 値が許容される型のいずれか) に、キャストされた要素を代入すると、要素が存在しない場合に、代入された変数が `null` に設定されます。 要素が存在するかどうかわからないときは、<xref:System.Xml.Linq.XElement.Value%2A> プロパティよりもキャストを使用した方が簡単であることを、次のコードは示しています。  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -131,7 +131,7 @@ Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString(
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 c1:child 1 content  
 c2:2  
 c3:element does not exist  
@@ -147,4 +147,4 @@ v4:element does not exist
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 軸 (C#)](./linq-to-xml-axes-overview.md)

@@ -1,21 +1,21 @@
 ---
-title: サービス:1 秒あたりの失敗した呼び出し
+title: 'サービス : 1 秒あたりの失敗した呼び出し'
 ms.date: 03/30/2017
 ms.assetid: 5a2c7939-107d-4f0c-b43c-e02e079e8a9d
-ms.openlocfilehash: a043cf30fa67707aca3edf50cf23372ade5e5a42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e165348a71101b21fa66bd4907c43335b1e476e4
+ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559893"
+ms.lasthandoff: 01/17/2020
+ms.locfileid: "76163983"
 ---
-# <a name="service-calls-failed-per-second"></a>サービス:1 秒あたりの失敗した呼び出し
-カウンター名:1 秒あたりの呼び出しに失敗しました。  
+# <a name="service-calls-failed-per-second"></a>サービス : 1 秒あたりの失敗した呼び出し
+カウンター名 : 1 秒あたりの失敗した呼び出し。  
   
 ## <a name="description"></a>説明  
  このサービスが 1 秒間に受信した未処理の例外を含む呼び出しの回数。  
   
- このカウンターは、パフォーマンス カウンター型[PERF_COUNTER_COUNTER](https://go.microsoft.com/fwlink/?LinkID=94649)、次の数式を使用して、その値が計算されます。  
+ このカウンターは、次の式を使用して計算された値を持つ、パフォーマンスカウンターの種類[PERF_COUNTER_COUNTER](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc740048(v=ws.10))です。  
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   
@@ -26,4 +26,5 @@ ms.locfileid: "54559893"
  このカウンターは、このサービスで未処理の例外が発生するたびにインクリメントされます。  
   
 ## <a name="see-also"></a>関連項目
-- [コントラクトおよびサービスのエラーの指定と処理](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+
+- [コントラクトおよびサービスのエラーの指定と処理](../../specifying-and-handling-faults-in-contracts-and-services.md)

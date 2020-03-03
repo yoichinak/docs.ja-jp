@@ -3,24 +3,30 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153775"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73739130"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
 このチュートリアルでは、変数を調べ、その変数に基づいて実行パスを変更するコードを記述する方法について説明します。 C# コードを記述し、コードをコンパイルおよび実行して結果を確認します。 チュートリアルには、C# における分岐構造とループ構造を確認する一連のレッスンが含まれています。 これらのレッスンでは、C# 言語の基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` ステートメントを使用した条件判定
 
-「**branches-tutorial**」という名前のディレクトリを作成します。 それを現在のディレクトリとし、`dotnet new console -n BranchesAndLoops -o .` を実行します。 このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
+「*branches-tutorial*」という名前のディレクトリを作成します。 それを現在のディレクトリにして、次のコマンドを実行します。
 
-お好みのエディターで **Program.cs** を開き、`Console.Writeline("Hello World!");` の行を次のコードで置き換えます。
+```dotnetcli
+dotnet new console -n BranchesAndLoops -o .
+```
+
+このコマンドによって、現在のディレクトリに新しい .NET Core コンソール アプリケーションが作成されます。
+
+お好みのエディターで *Program.cs* を開き、`Console.WriteLine("Hello World!");` の行を次のコードで置き換えます。
 
 ```csharp
 int a = 5;
@@ -31,7 +37,7 @@ if (a + b > 10)
 
 コンソール ウィンドウで「`dotnet run`」と入力し、このコードを試します。 "答えは 10 を超えています" というメッセージが コンソールに出力されるはずです。
 
-合計が 10 未満になるように `b` の宣言を変更します。 
+合計が 10 未満になるように `b` の宣言を変更します。
 
 ```csharp
 int b = 3;
@@ -63,7 +69,8 @@ else
 
 > [!IMPORTANT]
 > `if` と `else` のステートメント内にあるインデントは、人が読みやすいようにするためのものです。
-> C# 言語はインデントや空白文字を重要なものとして扱いません。 `if` や `else` のキーワードに続くステートメントは、条件に基づいて実行されます。 このチュートリアルのすべてのサンプルでは、一般的な記述方法に従い、ステートメントの制御フローに基づいて行にインデントを挿入しています。
+> C# 言語はインデントや空白文字を重要なものとして扱いません。
+> `if` や `else` のキーワードに続くステートメントは、条件に基づいて実行されます。 このチュートリアルのすべてのサンプルでは、一般的な記述方法に従い、ステートメントの制御フローに基づいて行にインデントを挿入しています。
 
 インデントは重要ではないため、条件に基づいて実行するブロック内に 1 つ以上のステートメントがある場合には、`{` と `}` を使用して示します。 通常、C# プログラマーは `if` と `else` の句にはこの中かっこを使用します。 次の例は、さきほど作成したものと同じ内容です。 上のコードを、次のコードに一致するように変更します。
 
@@ -87,34 +94,38 @@ else
 
 ```csharp
 int c = 4;
-if ((a + b + c > 10) && (a > b))
+if ((a + b + c > 10) && (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("And the first number is greater than the second");
+    Console.WriteLine("And the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("Or the first number is not greater than the second");
+    Console.WriteLine("Or the first number is not equal to the second");
 }
 ```
+
+`==` シンボルは、"*同等性*" をテストします。 `==` を使用すると、同等性のテストが `a = 5` で確認した割り当てと区別されます。
 
 `&&` は "and" (および) を表します。 これは、true 分岐でステートメントを実行するには、両方の条件が true になる必要があることを意味しています。  また、これらの例では、ステートメントが `{` と `}` で囲まれていれば、各条件分岐に複数のステートメントを持つことができることを示しています。
 
 `||` を使用して "or" (または) を表すこともできます。 これまでに記述したコードの下に、次のコードを追加します。
 
 ```csharp
-if ((a + b + c > 10) || (a > b))
+if ((a + b + c > 10) || (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("Or the first number is greater than the second");
+    Console.WriteLine("Or the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("And the first number is not greater than the second");
+    Console.WriteLine("And the first number is not equal to the second");
 }
 ```
+
+`a`、`b`、および `c`の値を変更し、探索する `&&` と `||` を切り替えます。 `&&` 演算子と `||` 演算子がどのように機能するかをより深く理解できます。
 
 最初の手順が完了しました。 次のセクションを開始する前に、現在のコードを別のメソッドに移動してみましょう。 移動しておくと、新しい例で作業を開始するときに楽になります。 `Main` メソッドの名前を `ExploreIf` に変更し、`ExploreIf` を呼び出す新しい `Main` メソッドを記述します。 完成したコードは次のようになります。
 
@@ -138,6 +149,7 @@ namespace BranchesAndLoops
                 Console.WriteLine("The answer is not greater than 10");
             }
 
+            int c = 4;
             if ((a + b + c > 10) && (a > b))
             {
                 Console.WriteLine("The answer is greater than 10");
@@ -158,7 +170,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -200,7 +212,7 @@ while (counter < 10)
 `while` ループは、条件を判定してから `while` に続くコードを実行します。 `do` ... `while` ループは、最初にコードを実行してからその条件を確認します。 do while ループを次のコードで示します。
 
 ```csharp
-counter = 0;
+int counter = 0;
 do
 {
     Console.WriteLine($"Hello World! The counter is {counter}");
@@ -215,10 +227,10 @@ do
 C# では **for** ループがよく使用されます。 Main() メソッドで次のコードを試してみてください。
 
 ```csharp
-for(int index = 0; index < 10; index++)
+for (int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 このループは、既に使用した `while` ループや `do` ループと同じ機能を持っています。 `for` ステートメントは 3 つの部分に分かれてその機能を制御します。
@@ -248,11 +260,11 @@ C# 言語における `if` ステートメントとループ構造を見てき�
 
 これで "分岐とループ" に関するチュートリアルは終了です。
 
-[文字列補間](interpolated-strings-local.md)のチュートリアルを、ご自身の開発環境でも使い続けることができます。
+続けて独自の開発環境で[配列とコレクション](arrays-and-collections.md)のチュートリアルに進むことができます。
 
 次のトピックでこれらの概念の詳細を学習できます。
 
-[if と else ステートメント](../../language-reference/keywords/if-else.md)  
-[while ステートメント](../../language-reference/keywords/while.md)  
-[do ステートメント](../../language-reference/keywords/do.md)  
-[for ステートメント](../../language-reference/keywords/for.md)  
+- [if と else ステートメント](../../language-reference/keywords/if-else.md)
+- [while ステートメント](../../language-reference/keywords/while.md)
+- [do ステートメント](../../language-reference/keywords/do.md)
+- [for ステートメント](../../language-reference/keywords/for.md)

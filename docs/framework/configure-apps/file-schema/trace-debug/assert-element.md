@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <assert> element
 - assert element
 ms.assetid: ef4c3229-b151-4d85-8091-e6456af9b935
-ms.openlocfilehash: aa5682c1cb2d662e1352c1d6c78e1a4a7e41f760
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f3c1a1670139a8262dea449bfff99c7c1c19f088
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259518"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088949"
 ---
-# <a name="assert-element"></a>\<アサート > 要素
+# <a name="assert-element"></a>\<assert > 要素
 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。  
-  
- \<configuration>  
-\<system.diagnostics>  
-\<assert>  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.diagnostics>** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<assert>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -35,15 +35,15 @@ ms.locfileid: "55259518"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`assertuienabled`|省略可能な属性です。<br /><br /> かどうかを表示する際にメッセージ ボックスを指定します、 **Debug.Assert**メソッドを評価する**false**します。|  
-|`logfilename`|省略可能な属性です。<br /><br /> 場合に、メッセージを書き込むファイルの名前を示す**Debug.Assert**に評価される**false**します。|  
+|`assertuienabled`|省略可能な属性です。<br /><br /> **デバッグの Assert**メソッドが**false**と評価されたときにメッセージボックスを表示するかどうかを指定します。|  
+|`logfilename`|省略可能な属性です。<br /><br /> **デバッグ**が**false**と評価された場合にメッセージを書き込むファイルの名前を指定します。|  
   
 ## <a name="assertuienabled-attribute"></a>assertuienabled 属性  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|`true`|メッセージ ボックスが表示されます。 既定値です。|  
-|`false`|メッセージ ボックスは表示されません。|  
+|`true`|メッセージボックスを表示します。 既定値です。|  
+|`false`|では、メッセージボックスは表示されません。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -56,10 +56,10 @@ ms.locfileid: "55259518"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 両方の属性で、 **\<アサート >** 要素は省略可能です。 メッセージ ボックスに、メッセージを書き込むファイルを指定せず無効にできますか、メッセージ ボックスが有効のままにしてメッセージを記述するファイルを指定することができます。  
+ **\<assert >** 要素の両方の属性は省略可能です。 メッセージを書き込むファイルを指定せずにメッセージボックスを無効にすることも、メッセージを有効にしたままメッセージを書き込むファイルを指定することもできます。  
   
 ## <a name="example"></a>例  
- 次の例は、呼び出すときに表示するメッセージ ボックスを無効にする方法を示しています。 **Debug.Assert**にメッセージを書き込むと`c:\log.txt`します。  
+ 次の例は、 **Assert**を呼び出し、メッセージを `c:\log.txt`に書き込むときに、メッセージボックスの表示を無効にする方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -70,5 +70,6 @@ ms.locfileid: "55259518"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.Debug>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

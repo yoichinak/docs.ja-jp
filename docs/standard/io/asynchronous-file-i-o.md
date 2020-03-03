@@ -17,22 +17,20 @@ helpviewer_keywords:
 - multiple I/O requests
 - data streams, synchronous streams
 ms.assetid: dbdd55e7-d6b9-4f9e-8abb-ab0edd4457f7
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7bfa35b8361f154fcbaa2ea7d7f8ddff5321003d
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 66e7d01f37a1119b9d2076a9131aa40f26d15625
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610435"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708192"
 ---
 # <a name="asynchronous-file-io"></a>非同期ファイル I/O
 
-非同期操作では、メイン スレッドをブロックすることなくリソース使用量の多い I/O 操作を実行できます。 このパフォーマンスに関する考慮事項は、時間のかかるストリーム操作によって UI スレッドがブロックされ、アプリが動作していないと見なされる可能性がある [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリまたは [!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] アプリで特に重要です。
+非同期操作では、メイン スレッドをブロックすることなくリソース使用量の多い I/O 操作を実行できます。 このパフォーマンスに関する考慮事項は、時間のかかるストリーム操作によって UI スレッドがブロックされ、アプリが動作していないと見なされる可能性がある Windows 8.x Store アプリまたはデスクトップ アプリで特に重要です。
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降の I/O 型には非同期操作を単純化する非同期メソッドが含まれています。 非同期のメソッドの名前には `Async` が含まれます ( <xref:System.IO.Stream.ReadAsync%2A>、 <xref:System.IO.Stream.WriteAsync%2A>、 <xref:System.IO.Stream.CopyToAsync%2A>、 <xref:System.IO.Stream.FlushAsync%2A>、 <xref:System.IO.TextReader.ReadLineAsync%2A>、 <xref:System.IO.TextReader.ReadToEndAsync%2A>など)。 これらの非同期のメソッドは、 <xref:System.IO.Stream>、 <xref:System.IO.FileStream>、 <xref:System.IO.MemoryStream>などのストリーム クラスと、 <xref:System.IO.TextReader> 、 <xref:System.IO.TextWriter>などのストリームとの間の読み取り/書き込みに使用されるクラスに実装されます。
+.NET Framework 4.5 以降の I/O 型には非同期操作を単純化する非同期メソッドが含まれています。 非同期のメソッドの名前には `Async` が含まれます ( <xref:System.IO.Stream.ReadAsync%2A>、 <xref:System.IO.Stream.WriteAsync%2A>、 <xref:System.IO.Stream.CopyToAsync%2A>、 <xref:System.IO.Stream.FlushAsync%2A>、 <xref:System.IO.TextReader.ReadLineAsync%2A>、 <xref:System.IO.TextReader.ReadToEndAsync%2A>など)。 これらの非同期のメソッドは、 <xref:System.IO.Stream>、 <xref:System.IO.FileStream>、 <xref:System.IO.MemoryStream>などのストリーム クラスと、 <xref:System.IO.TextReader> 、 <xref:System.IO.TextWriter>などのストリームとの間の読み取り/書き込みに使用されるクラスに実装されます。
 
-.NET Framework 4 およびそれ以前のバージョンで非同期 I/O 操作を実装するには、 <xref:System.IO.Stream.BeginRead%2A> 、 <xref:System.IO.Stream.EndRead%2A> などのメソッドを使用する必要があります。 これらのメソッドは、レガシ コードをサポートするために [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] でも使用できますが、非同期 I/O 操作は非同期のメソッドを使用して実装する方が簡単です。
+.NET Framework 4 およびそれ以前のバージョンで非同期 I/O 操作を実装するには、 <xref:System.IO.Stream.BeginRead%2A> 、 <xref:System.IO.Stream.EndRead%2A> などのメソッドを使用する必要があります。 これらのメソッドは、レガシ コードをサポートするために .NET Framework 4.5 でも使用できますが、非同期 I/O 操作は非同期のメソッドを使用して実装する方が簡単です。
 
 C# と Visual Basic には、非同期プログラミング用のキーワードがそれぞれ 2 つあります。
 
@@ -52,7 +50,7 @@ C# と Visual Basic には、非同期プログラミング用のキーワード
 [!code-csharp[Asynchronous_File_IO_async#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Asynchronous_File_IO_async/cs/example2.cs#2)]
 [!code-vb[Asynchronous_File_IO_async#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Asynchronous_File_IO_async/vb/example2.vb#2)]
 
-次の例では、分離コード ファイルと XAML ファイルを使用して <xref:System.IO.Stream> アプリでファイルを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] として開き、 <xref:System.IO.StreamReader> クラスのインスタンスを使用してその内容を読み取る方法を示します。 ここでは、非同期のメソッドを使用して、ファイルをストリームとして開き、ファイルの内容を読み取ります。
+次の例では、分離コード ファイルと XAML ファイルを使用して Windows 8.x Store アプリでファイルを <xref:System.IO.Stream> として開き、<xref:System.IO.StreamReader> クラスのインスタンスを使用してその内容を読み取る方法を示します。 ここでは、非同期のメソッドを使用して、ファイルをストリームとして開き、ファイルの内容を読み取ります。
 
 [!code-csharp[System.IO.WindowsRuntimeStorageExtensions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/cs/blankpage.xaml.cs#2)]
 [!code-vb[System.IO.WindowsRuntimeStorageExtensions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.windowsruntimestorageextensions/vb/blankpage.xaml.vb#2)]

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], features
 - managed threading
 ms.assetid: 239b2e8d-581b-4ca3-992b-0e8525b9321c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f25609bc3c4dd829c66a1a4514b7f1121f9c0909
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: dd9b7b8cb194353d0a1c285af10d54dc7366896e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759029"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128968"
 ---
 # <a name="threading-objects-and-features"></a>スレッド処理オブジェクトと機能
 
@@ -40,6 +38,6 @@ ms.locfileid: "55759029"
 - <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>
 - <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
 - [スレッドの使用とスレッド処理](using-threads-and-threading.md)
-- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [非同期ファイル I/O](../io/asynchronous-file-i-o.md)
 - [並列プログラミング](../parallel-programming/index.md)
 - [タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)

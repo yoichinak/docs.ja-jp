@@ -5,40 +5,40 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: a2b8f4f49afb987243ed96c29a09d7f0ec842945
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f3166b8f1e59a100f54574ab548f5dae88eb5cd
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744584"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742637"
 ---
 # <a name="trusted-subsystem"></a>信頼できるサブシステム
 クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。 Web サービスは、追加のリソース (データベースや他の Web サービスなど) に対するアクセスが、Web サービスのビジネス ロジック内にカプセル化されるように設計されています。 これらのリソースは、非承認のアクセスに対して保護する必要があります。 信頼できるサブシステムの処理を次の図に示します。  
   
- ![サブシステムを信頼された](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![信頼されたサブシステム](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  上図に示した信頼できるサブシステムの処理について、以下の手順で説明します。  
   
-1.  クライアントが、信頼できるサブシステムに、資格情報と共に要求を送信します。  
+1. クライアントが、信頼できるサブシステムに、資格情報と共に要求を送信します。  
   
-2.  信頼できるサブシステムが、ユーザーの認証と承認を行います。  
+2. 信頼できるサブシステムが、ユーザーの認証と承認を行います。  
   
-3.  信頼できるサブシステムは、リモート リソースに要求メッセージを送信します。 この要求には、信頼できるサブシステムの資格情報 (または信頼できるサブシステムの処理を実行しているサービス アカウント) が付属しています。  
+3. 信頼できるサブシステムは、リモート リソースに要求メッセージを送信します。 この要求には、信頼できるサブシステムの資格情報 (または信頼できるサブシステムの処理を実行しているサービス アカウント) が付属しています。  
   
-4.  バックエンド リソースが、信頼できるサブシステムの認証と承認を行います。 次にバックエンド リソースは要求を処理し、信頼できるサブシステムへの応答を発行します。  
+4. バックエンド リソースが、信頼できるサブシステムの認証と承認を行います。 次にバックエンド リソースは要求を処理し、信頼できるサブシステムへの応答を発行します。  
   
-5.  信頼できるサブシステムはこの応答を処理し、自身の応答をクライアントに発行します。  
+5. 信頼できるサブシステムはこの応答を処理し、自身の応答をクライアントに発行します。  
   
-|特徴|説明|  
+|特徴|[説明]|  
 |--------------------|-----------------|  
-|セキュリティ モード|メッセージ|  
-|相互運用性|Windows Communication Foundation (WCF) のみです。|  
+|セキュリティ モード|Message|  
+|相互運用性|Windows Communication Foundation (WCF) のみ。|  
 |認証 (サービス)|セキュリティ トークン サービスはクライアントの認証と承認を行います。|  
 |認証 (クライアント)|信頼できるサブシステムがクライアントを認証し、リソースが信頼できるサブシステム サービスを認証します。|  
 |整合性|はい|  
-|機密性|はい|  
-|Transport|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
-|バインド|<xref:System.ServiceModel.WSHttpBinding> <xref:System.ServiceModel.NetTcpBinding> [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|機密情報|はい|  
+|トランスポート|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding> と <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>リソース (バックエンド サービス)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "54744584"
  [!code-vb[TrustedSubSystems#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/trustedsubsystems/vb/source.vb#2)]  
   
 ### <a name="configuration"></a>構成  
- 次の構成では、構成を使用して同一のエンドポイントをセットアップします。 2 つのバインディングに注意してください。1 つに、信頼できるサブシステムでホストされるサービスがセキュリティで保護し、信頼できるサブシステムとバックエンド サービス間通信、他の。  
+ 次の構成では、構成を使用して同一のエンドポイントをセットアップします。 2 つのバインディングがあることに注意してください。1 つは、信頼できるサブシステムでホストされるサービスをセキュリティで保護するバインディングで、もう 1 つは、信頼できるサブシステムとバックエンド サービスの間の通信のためのバインディングです。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
@@ -163,7 +163,7 @@ ms.locfileid: "54744584"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>コード  
  次のコードでは、HTTP プロトコル上のメッセージ セキュリティで認証にユーザー名とパスワードを使用することで、信頼できるサブシステムと通信を行うクライアントを作成する方法を示します。  
@@ -210,6 +210,7 @@ ms.locfileid: "54744584"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -1,18 +1,17 @@
 ---
 title: remove コンテキスト キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - remove_CSharpKeyword
 helpviewer_keywords:
 - remove event accessor [C#]
 ms.assetid: c8223426-c17b-4fe2-8406-01564cf1dd2b
-ms.openlocfilehash: fc6f310e17841349d476f35214ac17100e81d76f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8ea3ea1910e28c03b2a894c64415cb2ccff942d0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236727"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713145"
 ---
 # <a name="remove-c-reference"></a>remove (C# リファレンス)
 
@@ -20,7 +19,7 @@ ms.locfileid: "53236727"
 
 ## <a name="example"></a>例
 
-次の例は、カスタムの [add](add.md) アクセサーと `remove` アクセサーが指定されているイベントを示しています。 完全な例については、「[方法: インターフェイス イベントを実装する](../../programming-guide/events/how-to-implement-interface-events.md)」をご覧ください。
+次の例は、カスタムの [add](add.md) アクセサーと `remove` アクセサーが指定されているイベントを示しています。 サンプル全体については、「[インターフェイス イベントを実装する方法](../../programming-guide/events/how-to-implement-interface-events.md)」を参照してください。
 
  [!code-csharp[csrefKeywordsContextual#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#15)]
 

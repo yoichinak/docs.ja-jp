@@ -1,5 +1,5 @@
 ---
-title: Windows フォームでのヘルプの統合
+title: ユーザーヘルプの統合
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Help [Windows Forms], Windows Forms (using designer)
@@ -9,37 +9,37 @@ helpviewer_keywords:
 - forms. Help (using designer)
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
-ms.openlocfilehash: b16ba14eea68083cd7bdfc91c88375406137f450
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c402615d68c75327613d21bd35f1587b10f1dbf3
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527224"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731567"
 ---
-# <a name="integrating-user-help-in-windows-forms"></a>Windows フォームでのヘルプの統合
-これは、ユーザーが混乱したときにアシスタンスを有効に、よく見過ごされますに関して重要 Windows ベースのアプリケーションの構築のヘルプ システムです。 Windows フォームでは、次の 2 つの異なる種類のヘルプをサポート、それぞれによって提供される、 [HelpProvider コンポーネント](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)です。 1 つ目は、HTML または HTML ヘルプ 1 のいずれかのヘルプ ファイルをユーザーを指す必要があります。*x*または大きい値の形式です。 2 番目できますを表示する簡単な"新機能"-個別のコントロールのヘルプを入力これは、ダイアログ ボックスで特に便利です。 ヘルプの両方の種類は、同じフォームで使用できます。  
+# <a name="integrating-user-help-in-windows-forms"></a>Windows フォームでのユーザー ヘルプの統合
+Windows ベースのアプリケーションの構築については、重要なものの、見過ごされることが多いので、ユーザーが混乱を招くことがあります。 Windows フォームは、 [HelpProvider コンポーネント](../controls/helpprovider-component-windows-forms.md)によって提供される2種類のヘルプをサポートしています。 最初の方法では、HTML または HTML ヘルプ1のヘルプファイルにユーザーをポイントします。*x*以上の形式。 2番目の方法では、個々のコントロールについて簡単な「何ができるか」と入力します。これは、ダイアログボックスで特に便利です。 どちらの種類のヘルプも同じ形式で使用できます。  
   
- さらに、 [ToolTip コンポーネント](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)Windows フォームでコントロールの個々 のヘルプを提供するために使用できます。  
+ また、[ツールヒントコンポーネント](../controls/tooltip-component-windows-forms.md)を使用して、Windows フォームのコントロールに個別のヘルプを提供することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: Windows アプリケーションにヘルプを提供する](../../../../docs/framework/winforms/advanced/how-to-provide-help-in-a-windows-application.md)  
- 使用する方法について説明します、`HelpProvider`ヘルプ システムのファイルへのコントロールをリンクするコンポーネントです。  
+ [方法: Windows アプリケーションにヘルプを提供する](how-to-provide-help-in-a-windows-application.md)  
+ `HelpProvider` コンポーネントを使用して、ヘルプシステム内のファイルにコントロールをリンクする方法について説明します。  
   
- [方法: ポップアップ ヘルプを表示する](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)  
- 使用する方法について説明します、`HelpProvider`コンポーネントを Windows フォームでポップアップ ヘルプを表示します。  
+ [方法: ポップアップ ヘルプを表示する](how-to-display-pop-up-help.md)  
+ `HelpProvider` コンポーネントを使用して Windows フォームのポップアップヘルプを表示する方法について説明します。  
   
- [ツールヒントを使用したコントロールのヘルプ](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)  
- 使用方法について説明、`ToolTip`コントロールに固有のヘルプを表示するコンポーネントです。  
+ [ツールヒントを使用したコントロールのヘルプ](control-help-using-tooltips.md)  
+ `ToolTip` コンポーネントを使用してコントロール固有のヘルプを表示する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [HelpProvider コンポーネント](../../../../docs/framework/winforms/controls/helpprovider-component-windows-forms.md)  
- 基本について説明します、`HelpProvider`コンポーネントです。  
+ [HelpProvider コンポーネント](../controls/helpprovider-component-windows-forms.md)  
+ `HelpProvider` コンポーネントの基本について説明します。  
   
- [ToolTip コンポーネント](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)  
- 基本について説明します、`ToolTip`コンポーネントです。  
+ [ToolTip コンポーネント](../controls/tooltip-component-windows-forms.md)  
+ `ToolTip` コンポーネントの基本について説明します。  
   
- [Windows フォームの概要](../../../../docs/framework/winforms/windows-forms-overview.md)  
+ [Windows フォームの概要](../windows-forms-overview.md)  
  Windows フォームの基本について説明します。  
   
- [Windows フォーム](../../../../docs/framework/winforms/index.md)  
- Windows フォームの概要を示します。
+ [Windows フォーム](../index.md)  
+ Windows フォームの概要について説明します。

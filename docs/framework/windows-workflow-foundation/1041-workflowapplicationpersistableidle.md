@@ -3,11 +3,11 @@ title: 1041 - WorkflowApplicationPersistableIdle
 ms.date: 03/30/2017
 ms.assetid: 966adf2f-e21d-44df-a3ec-a8e285e0a316
 ms.openlocfilehash: 07be0ae603443a1ef06cb539bba7b227d7b3e325
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33509668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924190"
 ---
 # <a name="1041---workflowapplicationpersistableidle"></a>1041 - WorkflowApplicationPersistableIdle
 ## <a name="properties"></a>プロパティ  
@@ -23,7 +23,7 @@ ms.locfileid: "33509668"
  ワークフロー アプリケーションがアイドル状態のままであることを示します。 ワークフロー アプリケーションはアイドル状態または永続化されます。  
   
 ## <a name="message"></a>メッセージ  
- WorkflowApplication Id: '%1' には、アイドル状態のままです。  次の操作が実行されます: %n%n 2 です。  
+ WorkflowApplication Id: '%1' には、アイドル状態と永続化ができます。  次の動作が行われます。 % 2。  
   
 ## <a name="details"></a>説明  
   

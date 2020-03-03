@@ -15,45 +15,43 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5b8c3f102405c9b9fa9af2597658b728e618cabb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a1653055a3834ce1bed0e7de7877b255bea0c38
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559373"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792426"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles メソッド
-プロセスでオブジェクト ハンドルの列挙子を取得します。  
+プロセス内のオブジェクトハンドルの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateHandles(     [in] CorGCReferenceType types,  
     [out] ICorDebugGCReferenceEnum **ppEnum);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `types`  
- [in]ビットごとの組み合わせ[CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)コレクションに含めるへのハンドルの種類を指定する値。  
+ からコレクションに含めるハンドルの種類を指定する[Corgcreの](corgcreferencetype-enumeration.md)値のビットごとの組み合わせ。  
   
  `ppENum`  
- [out]アドレスへのポインター、 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)ガベージ コレクトされる列挙子は、オブジェクト。  
+ 入出力ガベージコレクションの対象となるオブジェクトの列挙子[である、](icordebuggcreferenceenum-interface.md)ツールのアドレスへのポインターです。  
   
-## <a name="remarks"></a>Remarks  
- `EnumerateHandles` ハンドル テーブルの検査をサポートするヘルパー関数です。 似ています、 [icordebugprocess 5::enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)点を除いて、メソッドの設定ではなく、 [ICorDebugGCReferenceEnum](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-interface.md)ガベージ コレクトされるすべてのオブジェクトを使用して、コレクション、ハンドル テーブルからのハンドルを持つオブジェクトのみが含まれます。  
+## <a name="remarks"></a>コメント  
+ `EnumerateHandles` は、ハンドルテーブルの検査をサポートするヘルパー関数です。 これは[ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md)メソッドに似ていますが、すべてのオブジェクトがガベージコレクトされるよう[に、すべて](icordebuggcreferenceenum-interface.md)のオブジェクトを使用してすべてのオブジェクトを作成するのではなく、handle テーブルからハンドルを持つオブジェクトのみが含まれる点が異なります。  
   
- `types`パラメーターがコレクションに含めるハンドルの型を指定します。 `types` 次の 3 つのメンバーのいずれか、 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)列挙体。  
+ `types` パラメーターは、コレクションに含めるハンドルの種類を指定します。 `types`、次の3つのメンバーのいずれかを[Corgcreの型](corgcreferencetype-enumeration.md)の列挙体にすることができます。  
   
--   `CorHandleStrongOnly` (ハンドルを強力な参照のみ)。  
+- `CorHandleStrongOnly` (厳密な参照へのハンドルのみ)。  
   
--   `CorHandleWeakOnly` (弱い参照のみへのハンドル)。  
+- `CorHandleWeakOnly` (弱参照のみを処理します)。  
   
--   `CorHandleAll` (すべてのハンドル)。  
+- `CorHandleAll` (すべてのハンドル)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -62,5 +60,6 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

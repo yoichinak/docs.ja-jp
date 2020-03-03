@@ -2,22 +2,23 @@
 title: <issuedTokenAuthentication> の <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: c195791250831897b8bc9d09782d17609272e146
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6d468a27ee05fb4dd8cf087d10e5d170783d3454
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260286"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400355"
 ---
-# <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication > の\<serviceCredentials >
+# <a name="issuedtokenauthentication-of-servicecredentials"></a>\<serviceCredentials の\<issuedTokenAuthentication > >
 サービス資格情報として発行されるカスタム トークンを指定します。  
   
- \<system.ServiceModel >  
-\<<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
-\<serviceCredentials>  
-\<issuedTokenAuthentication>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceCredentials >** ](servicecredentials.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuedTokenAuthentication >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,7 +52,7 @@ ms.locfileid: "55260286"
 |`allowedAudienceUris`|<xref:System.IdentityModel.Tokens.SamlSecurityToken> インスタンスにより有効と見なされるように、<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> セキュリティ トークンのターゲットとなる URI のセットを取得します。 この属性の使い方の詳細については、「<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>」を参照してください。|  
 |`allowUntrustedRsaIssuers`|信頼できない RSA 証明書の発行者を許可するかどうかを指定するブール値。<br /><br /> 証明書は、信頼性を検証する証明機関 (CA) によって署名されます。 信頼できない発行者とは、証明書の署名が信頼できると指定されていない CA です。|  
 |`audienceUriMode`|<xref:System.IdentityModel.Tokens.SamlSecurityToken> セキュリティ トークンの <xref:System.IdentityModel.Tokens.SamlAudienceRestrictionCondition> を検証するかどうかを指定する値を取得します。 この値は、<xref:System.IdentityModel.Selectors.AudienceUriMode> 型です。 この属性の使い方の詳細については、「<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>」を参照してください。|  
-|`certificateValidationMode`|証明書検証モードを設定します。 <xref:System.ServiceModel.Security.X509CertificateValidationMode> の有効な値のいずれかです。 `Custom` に設定されている場合、`customCertificateValidator` も指定する必要があります。 既定値は、`ChainTrust` です。|  
+|`certificateValidationMode`|証明書検証モードを設定します。 <xref:System.ServiceModel.Security.X509CertificateValidationMode> の有効な値のいずれかです。 `Custom` に設定されている場合、`customCertificateValidator` も指定する必要があります。 既定値は `ChainTrust` です。|  
 |`customCertificateValidatorType`|省略可能な文字列。 カスタム型の検証に使用される型およびアセンブリです。 `certificateValidationMode` が `Custom` に設定されている場合は、この属性を設定する必要があります。|  
 |`revocationMode`|失効状態の検証を行うかどうかに加え、検証をオンラインで実行するか、オフラインで実行するかを指定する失効モードを設定します。 この属性は <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 型です。|  
 |`samlSerializer`|サービス資格情報に使用される SamlSerializer の型を指定する省略可能な文字列属性。 既定値は空の文字列です。|  
@@ -67,12 +68,12 @@ ms.locfileid: "55260286"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<serviceCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)|サービスの認証に使用される資格情報と、クライアントの資格情報検証関連の設定を指定します。|  
+|[\<serviceCredentials>](servicecredentials.md)|サービスの認証に使用される資格情報と、クライアントの資格情報検証関連の設定を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階でのサービスにアクセスしようとしています。 クライアントが参照される、*セキュア トークン サービス*します。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
+ 発行されるトークンのシナリオには、3 つの段階があります。 最初の段階では、サービスにアクセスしようとしているクライアントは、*セキュリティで保護されたトークンサービス*と呼ばれます。 次に、セキュリティ トークン サービスがクライアントを認証し、その後、クライアントにトークン (通常は、SAML (Security Assertions Markup Language) トークン) を発行します。 最後に、クライアントがトークンを持ってサービスに戻ります。 サービスはトークンを調べ、トークンを認証することでクライアントの認証を可能にするデータを確認します。 トークンを認証するには、セキュリティ トークン サービスで使用される証明書がサービスによって認識されている必要があります。  
   
- この要素は、このようなセキュリティ トークン サービス証明書のリポジトリです。 証明書を追加するには、使用、 [ \<knownCertificates >](../../../../../docs/framework/configure-apps/file-schema/wcf/knowncertificates.md)します。 挿入、 [\<追加 >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-knowncertificates.md)各証明書、次の例に示すようにします。  
+ この要素は、このようなセキュリティ トークン サービス証明書のリポジトリです。 証明書を追加するには[ \<、> knowncertificates](knowncertificates.md)を使用します。 次の例に示すように、各証明書の[ add>を挿入します。\<](add-of-knowncertificates.md)  
   
 ```xml  
 <issuedTokenAuthentication>
@@ -87,9 +88,10 @@ ms.locfileid: "55260286"
   
  既定では、証明書はセキュリティ トークン サービスから取得する必要があります。 このような "既知" の証明書により、正当なクライアントのみがサービスにアクセスできるようになります。  
   
- この構成要素の使用に関する詳細については、次を参照してください。[方法。フェデレーション サービスで資格情報を構成](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
+ この構成要素の使用方法の詳細につい[ては、「方法:フェデレーションサービス](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)で資格情報を構成します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
@@ -97,5 +99,5 @@ ms.locfileid: "55260286"
 - <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
-- [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [方法: フェデレーション サービスで資格情報を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [サービスおよびクライアントのセキュリティ保護](../../../wcf/feature-details/securing-services-and-clients.md)
+- [方法: フェデレーションサービスで資格情報を構成する](../../../wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

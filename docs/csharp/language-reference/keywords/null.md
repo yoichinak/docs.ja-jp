@@ -1,6 +1,5 @@
 ---
 title: null キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - "null"
@@ -8,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - null keyword [C#]
 ms.assetid: fecb1c60-6232-4efe-87f7-9a86ba2e9119
-ms.openlocfilehash: 9c3aeb3066542080bbd5514fe536d4d125dc8ecc
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 17e7386571e8c74d411204ade0d56ffe8a710ee8
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243947"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741996"
 ---
 # <a name="null-c-reference"></a>null (C# リファレンス)
 
-`null` キーワードは、いかなるオブジェクトも参照していない null 参照を表すリテラルです。 `null` は参照型変数の既定値です。 通常の値の型を null にすることはできません。 ただし、C# 2.0 では null 許容値型が導入されました。 「[Null 許容型](../../programming-guide/nullable-types/index.md)」をご覧ください。
+`null` キーワードは、いかなるオブジェクトも参照していない null 参照を表すリテラルです。 `null` は参照型変数の既定値です。 [null 許容値型](../builtin-types/nullable-value-types.md)を除き、通常の値の型を null にすることはできません。
 
-次の例では、null キーワードの一部の動作を示します。
+次の例では、`null` キーワードの一部の動作を示します。
 
 [!code-csharp[csrefKeywordsLiteral#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsLiteral/CS/csrefKeywordsLiteral.cs#1)]
 
@@ -29,9 +28,7 @@ ms.locfileid: "53243947"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../language-reference/index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# のキーワード](index.md)
-- [リテラル キーワード](literal-keywords.md)
-- [既定値の一覧表](default-values-table.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [C# リファレンス](../index.md)
+- [C# キーワード](index.md)
+- [C# 型の既定値](../builtin-types/default-values.md)
+- [Nothing (Visual Basic)](../../../visual-basic/language-reference/nothing.md)

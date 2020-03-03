@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 46a0d450-b516-4bef-8b71-8d3bf265cbed
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3ef92fbe5ba99d93eaf06aacc7efd943136e9785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fcf8bc861b2ef0b8ea9f5a5e46585564cc26615
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543199"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127703"
 ---
 # <a name="icorruntimehoststop-method"></a>ICorRuntimeHost::Stop メソッド
-現在のプロセスの実行時にコードの実行を停止します。  
+現在のプロセスのランタイムでコードの実行を停止します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Stop ();  
 ```  
   
@@ -37,25 +35,26 @@ HRESULT Stop ();
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|操作が正常に完了しました。|  
+|S_OK|操作は成功しました。|  
 |S_FALSE|操作を完了できませんでした。|  
-|E_FAIL|未知の致命的なエラーが発生しました。 場合は、メソッドは、E_FAIL を返します、共通言語ランタイム (CLR) はプロセスで使用可能ではなくなりました。 Api をホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|E_FAIL|不明な重大なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセスでは共通言語ランタイム (CLR) は使用できなくなります。 後続のホスト Api への呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
   
 ## <a name="remarks"></a>Remarks  
- 通常を呼び出す必要はありません、`Stop`メソッド、コードは、プロセスの終了時に実行が停止されるためです。  
+ 通常、`Stop` メソッドを呼び出す必要はありません。これは、プロセスが終了したときにコードが実行を停止するためです。  
   
 > [!NOTE]
->  呼び出しの後に`Stop`CLR は、同じプロセスに再初期化することはできません。  
+> `Stop`を呼び出した後、CLR を同じプロセスに再初期化することはできません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET framework のバージョン:** 1.0, 1.1  
+ **.NET Framework のバージョン:** 1.0、1.1  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

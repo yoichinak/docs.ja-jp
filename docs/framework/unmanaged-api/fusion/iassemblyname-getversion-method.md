@@ -15,40 +15,39 @@ helpviewer_keywords:
 ms.assetid: 42230928-2c33-41fd-9519-d96efef6c7af
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ad71e0f19d4019f8fc919008b9a5c46f6586f9f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0a43dc1640bdaa0ae104832eb4d1f8eb15b0392
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134330"
 ---
 # <a name="iassemblynamegetversion-method"></a>IAssemblyName::GetVersion メソッド
-これによって参照されるアセンブリのバージョン情報を取得[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト。  
+この[IAssemblyName](iassemblyname-interface.md)オブジェクトによって参照されるアセンブリのバージョン情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetVersion (  
     [out] LPDWORD pdwVersionHi,  
     [out] LPDWORD pdwVersionLow  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pdwVersionHi`  
- [out]バージョンの上位 32 ビット。  
+ 入出力バージョンの上位32ビット。  
   
  `pdwVersionLow`  
- [out]バージョンの下位 32 ビット。  
+ 入出力バージョンの下位32ビット。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)

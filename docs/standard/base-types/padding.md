@@ -13,14 +13,12 @@ helpviewer_keywords:
 - PadLeft method
 - padding strings
 ms.assetid: 84a9f142-3244-4c90-ba02-21af9bbaff71
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3f58e1c3a9e42f48ecc219a2db1649051f9ca20b
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 2cf114296005456f354d286aa2804fa8a95160dc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43890728"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127622"
 ---
 # <a name="padding-strings-in-net"></a>.NET での文字列の埋め込み
 

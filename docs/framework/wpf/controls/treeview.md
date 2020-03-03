@@ -8,28 +8,28 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - hierarchical structure [WPF], TreeView control
 ms.assetid: 805c235c-0a0e-4e34-8d96-9dc3865cf2df
-ms.openlocfilehash: 392e59ca7bfa4c0fe8eb85b085a27b7c03df1c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb8d77bd3df848e6e9ed186cc621c02d36842175
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556254"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73458292"
 ---
 # <a name="treeview"></a>TreeView
-<xref:System.Windows.Controls.TreeView>コントロールは、折りたたみ可能なノードを使用して、階層構造で情報を表示します。  
+<xref:System.Windows.Controls.TreeView> コントロールは、折りたたみ可能なノードを使用して階層構造で情報を表示します。  
   
- 次の図の例に示します、<xref:System.Windows.Controls.TreeView>に入れ子になったコントロール<xref:System.Windows.Controls.TreeViewItem>コントロール。  
+ 次の図は、入れ子になった <xref:System.Windows.Controls.TreeViewItem> コントロールを持つ <xref:System.Windows.Controls.TreeView> コントロールの例です。  
   
- ![TreeView の図](../../../../docs/framework/wpf/controls/media/treeviewillustration.JPG "TreeViewIllustration")  
+ ![入れ子になった TreeViewItem コントロールを示す図。](./media/treeview/nested-treeviewitem-controls.jpg)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [TreeView の概要](../../../../docs/framework/wpf/controls/treeview-overview.md)  
- [方法トピック](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)  
+ [TreeView の概要](treeview-overview.md)  
+ [方法トピック](treeview-how-to-topics.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>辞書／辞典／その他  
  <xref:System.Windows.Controls.TreeView>  
   <xref:System.Windows.Controls.TreeViewItem>  
   
 ## <a name="related-sections"></a>関連項目  
- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)  
-  [データ テンプレートの概要](../../../../docs/framework/wpf/data/data-templating-overview.md)
+ [データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)  
+  [データ テンプレートの概要](../data/data-templating-overview.md)

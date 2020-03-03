@@ -1,22 +1,22 @@
 ---
-title: '方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)'
+title: CSV テキスト ファイルの列値を計算する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 3a4bd410bc0d01e835132f7752970417be66941b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a48850e8f6229b80ebd9207bb1b7353f8b0c9e02
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585839"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141371"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>CSV テキスト ファイルの列値を計算する方法 (LINQ) (C#)
 この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。 ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。  
   
-### <a name="to-create-the-source-file"></a>ソース ファイルを作成するには  
+## <a name="to-create-the-source-file"></a>ソース ファイルを作成するには  
   
-1.  次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 最初の列は学生 ID、それに続く列は 4 つの試験の点数を表していると仮定します。  
+1. 次の行を scores.csv という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 最初の列は学生 ID、それに続く列は 4 つの試験の点数を表していると仮定します。  
   
-    ```  
+    ```csv
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -159,9 +159,9 @@ class SumColumns
  このクエリでは、<xref:System.String.Split%2A> メソッドを使用してテキストの各行が配列に変換されます。 各配列要素が列を表します。 最終的に、各列のテキストが数値表記に変換されます。 ファイルがタブ区切りファイルの場合、`Split` メソッドの引数を `\t` に変更します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。  
+ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

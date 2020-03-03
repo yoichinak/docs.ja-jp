@@ -15,37 +15,36 @@ helpviewer_keywords:
 ms.assetid: 9f968dad-0d09-47fb-bebc-94c39a0d16ad
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c45da047d384e56440ca5f883a4cfd755a7d0299
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22a6af61251942f068676daaee2bdfa868e32a97
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719714"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134550"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority 関数
-ポインターを取得、 [IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)アプリケーション id と参照のキーを管理するインスタンス。  
+アプリケーション id と参照のキーを管理する[Iappidauthority](iappidauthority-interface.md)インスタンスへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetAppIdAuthority (  
     [out] IAppIdAuthority **ppIAppIdAuthority  
  );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppIAppIdAuthority`  
- [out]返された`IAppIdAuthority`ポインター。  
+ 入出力返された `IAppIdAuthority` ポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** 分離 .h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAppIdAuthority インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+
+- [IAppIdAuthority インターフェイス](iappidauthority-interface.md)
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

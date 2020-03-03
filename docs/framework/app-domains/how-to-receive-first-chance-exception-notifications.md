@@ -8,14 +8,12 @@ helpviewer_keywords:
 - first-chance exception notifications
 - exceptions, first chance notifications
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed8aaa12e91654dcf0b688b14d7d2f38bc9096ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: da60dfca424f7c10e810b5e083ff7fa63a688218
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677749"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119875"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>方法: 初回例外通知を受け取る
 <xref:System.AppDomain> クラスの <xref:System.AppDomain.FirstChanceException>イベントを使用すると、共通言語ランタイムが例外ハンドラーの検索を開始する前に、例外がスローされたことを知らせる通知を受け取ることができます。
@@ -31,17 +29,17 @@ ms.locfileid: "54677749"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-default-application-domain"></a>既定のアプリケーション ドメインで初回例外通知の動作を確認するには
 
-1.  ラムダ関数を使用して <xref:System.AppDomain.FirstChanceException> イベントのイベント ハンドラーを定義し、それをイベントにアタッチします。 この例では、イベント ハンドラーによって、イベントが処理されたアプリケーション ドメインの名前と、例外の <xref:System.Exception.Message%2A> プロパティを出力します。
+1. ラムダ関数を使用して <xref:System.AppDomain.FirstChanceException> イベントのイベント ハンドラーを定義し、それをイベントにアタッチします。 この例では、イベント ハンドラーによって、イベントが処理されたアプリケーション ドメインの名前と、例外の <xref:System.Exception.Message%2A> プロパティを出力します。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#2)]
 
-2.  例外をスローし、それをキャッチします。 ランタイムが例外ハンドラーを見つける前に、<xref:System.AppDomain.FirstChanceException> イベントが発生し、メッセージが表示されます。 このメッセージの後に、例外ハンドラーによるメッセージが表示されます。
+2. 例外をスローし、それをキャッチします。 ランタイムが例外ハンドラーを見つける前に、<xref:System.AppDomain.FirstChanceException> イベントが発生し、メッセージが表示されます。 このメッセージの後に、例外ハンドラーによるメッセージが表示されます。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#3)]
 
-3.  例外をスローしますが、それをキャッチしません。 ランタイムが例外ハンドラーを検索する前に、<xref:System.AppDomain.FirstChanceException> イベントが発生し、メッセージが表示されます。 例外ハンドラーがないため、アプリケーションは終了します。
+3. 例外をスローしますが、それをキャッチしません。 ランタイムが例外ハンドラーを検索する前に、<xref:System.AppDomain.FirstChanceException> イベントが発生し、メッセージが表示されます。 例外ハンドラーがないため、アプリケーションは終了します。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto_simple#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto_simple/vb/example.vb#4)]
@@ -56,12 +54,12 @@ ms.locfileid: "54677749"
 
 #### <a name="to-receive-first-chance-exception-notifications-in-an-application-domain-that-you-create"></a>作成したアプリケーション ドメインで初回例外通知を受け取るには
 
-1.  <xref:System.AppDomain.FirstChanceException> イベントのイベント ハンドラーを定義します。 この例では、`static` メソッド (Visual Basic では `Shared` メソッド) を使用して、イベントが処理されたアプリケーション ドメインの名前と、例外の <xref:System.Exception.Message%2A> プロパティを出力します。
+1. <xref:System.AppDomain.FirstChanceException> イベントのイベント ハンドラーを定義します。 この例では、`static` メソッド (Visual Basic では `Shared` メソッド) を使用して、イベントが処理されたアプリケーション ドメインの名前と、例外の <xref:System.Exception.Message%2A> プロパティを出力します。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#3)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#3)]
 
-2.  アプリケーション ドメインを作成し、そのアプリケーション ドメインの <xref:System.AppDomain.FirstChanceException> イベントにイベント ハンドラーを追加します。 この例では、アプリケーション ドメインの名前は `AD1` です。
+2. アプリケーション ドメインを作成し、そのアプリケーション ドメインの <xref:System.AppDomain.FirstChanceException> イベントにイベント ハンドラーを追加します。 この例では、アプリケーション ドメインの名前は `AD1` です。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#2)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#2)]
@@ -70,17 +68,17 @@ ms.locfileid: "54677749"
 
 #### <a name="to-demonstrate-first-chance-exception-notifications-in-the-application-domain"></a>アプリケーション ドメインで初回例外通知の動作を確認するには
 
-1.  前のプロシージャで作成したアプリケーション ドメインに `Worker` オブジェクトを作成します。 `Worker` クラスは、パブリックで、<xref:System.MarshalByRefObject> から派生する必要があります。この記事の最後にある完全な例を参照してください。
+1. 前のプロシージャで作成したアプリケーション ドメインに `Worker` オブジェクトを作成します。 `Worker` クラスは、パブリックで、<xref:System.MarshalByRefObject> から派生する必要があります。この記事の最後にある完全な例を参照してください。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#4)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#4)]
 
-2.  例外をスローする `Worker` オブジェクトのメソッドを呼び出します。 この例では、`Thrower` メソッドが 2 回呼び出されます。 1 回目のメソッド引数は `true` であるため、メソッドは自身の例外をキャッチします。 2 回目の引数は `false` です。この場合、`Main()` メソッドが既定のアプリケーション ドメインで例外をキャッチします。
+2. 例外をスローする `Worker` オブジェクトのメソッドを呼び出します。 この例では、`Thrower` メソッドが 2 回呼び出されます。 1 回目のメソッド引数は `true` であるため、メソッドは自身の例外をキャッチします。 2 回目の引数は `false` です。この場合、`Main()` メソッドが既定のアプリケーション ドメインで例外をキャッチします。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#6)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#6)]
 
-3.  `Thrower` メソッドにコードを追加して、メソッドが自身の例外をハンドルするかどうかを制御します。
+3. `Thrower` メソッドにコードを追加して、メソッドが自身の例外をハンドルするかどうかを制御します。
 
      [!code-csharp[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#5)]
      [!code-vb[System.AppDomain.FirstChanceException_howto#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#5)]
@@ -91,16 +89,13 @@ ms.locfileid: "54677749"
  `Thrower` メソッドが `AD1` で例外をスローするたびに、`AD1` で <xref:System.AppDomain.FirstChanceException> イベントが発生し、イベント ハンドラーによりメッセージが表示されます。 次に、ランタイムによって例外ハンドラーが検索されます。 最初のケースでは、例外ハンドラーは `AD1` で見つかります。 2 番目のケースでは、例外は `AD1` でハンドルされず、代わりに既定のアプリケーション ドメインでキャッチされます。
 
 > [!NOTE]
->  既定のアプリケーション ドメインの名前は、実行可能ファイルの名前と同じです。
+> 既定のアプリケーション ドメインの名前は、実行可能ファイルの名前と同じです。
 
  既定のアプリケーション ドメインに <xref:System.AppDomain.FirstChanceException> イベントのハンドラーを追加すると、既定のアプリケーション ドメインが例外をハンドルする前に、イベントが発生して処理されます。 これを確認するには、`Main()` の先頭に C# コード `AppDomain.CurrentDomain.FirstChanceException += FirstChanceException;` (Visual Basic では `AddHandler AppDomain.CurrentDomain.FirstChanceException, FirstChanceException`) を追加します。
 
  [!code-csharp[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/cs/example.cs#1)]
  [!code-vb[System.AppDomain.FirstChanceException_howto#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.firstchanceexception_howto/vb/example.vb#1)]
 
-## <a name="compiling-the-code"></a>コードのコンパイル
-
--   この例はコマンド ライン アプリケーションです。 Visual Studio でこのコードをコンパイルして実行するには、出力結果を確認する前にコマンド ウィンドウが閉じないように、`Main()` の最後に C# コード `Console.ReadLine();` (Visual Basic では `Console.ReadLine()`) を追加します。
-
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.AppDomain.FirstChanceException>

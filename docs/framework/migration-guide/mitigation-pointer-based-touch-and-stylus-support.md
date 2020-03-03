@@ -7,18 +7,16 @@ helpviewer_keywords:
 - WPF retargeting changes
 - WPF pointer-based touch and stylus stack
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d750087cc000ad31a24d91411c0885a75d59e74f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 023c38f66611bd0022699d3f62d90c3923585012
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501947"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094476"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>軽減策:ポインター ベースのタッチおよびスタイラスのサポート
 
-.NET Framework 4.7 を対象とし、Windows 10 Creators Update 以降の Windows システムで実行されている WPF アプリケーションは、オプションの `WM_POINTER` ベースの WPF タッチ/スタイラス スタックを有効にすることができます。
+.NET Framework 4.7 を対象とし、Windows 10 Creators Update 以降の Windows システムで実行されている WPF アプリケーションは、オプションの `WM_POINTER` ベースの WPF タッチまたはスタイラスのスタックを有効にすることができます。
 
 ## <a name="impact"></a>影響
 
@@ -34,15 +32,15 @@ ms.locfileid: "54501947"
 
   - 操作の動作が異なる場合があります。
 
-  - ドラッグ/ドロップでは、タッチ入力の適切なフィードバックが表示されません  (これはスタイラス入力には影響しません)。
+  - ドラッグ/ドロップでは、タッチ入力の適切なフィードバックが表示されません (これはスタイラス入力には影響しません)。
 
   - ドラッグ/ドロップは、タッチ/スタイラス イベントで開始できなくなりました。
 
-      そのため、マウス入力が検出されるまで、アプリケーションがハングする可能性があります。 代わりに、開発者はマウス イベントからドラッグ アンド ドロップを開始する必要があります。
+      そのため、マウス入力が検出されるまで、アプリケーションが応答しなくなる可能性があります。 代わりに、開発者はマウス イベントからドラッグ アンド ドロップを開始する必要があります。
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>WM_POINTER ベースのタッチ/スタイラス サポートの有効化
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>WM_POINTER ベースのタッチ/スタイラス サポートの有効化
 
-このスタックを有効にする開発者は、アプリケーションの app.config ファイルに次の行を追加できます。
+このスタックを有効にする開発者は、アプリケーションの *app.config* ファイルに以下を追加できます。
 
 ```xml
 <configuration>
@@ -56,4 +54,4 @@ ms.locfileid: "54501947"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework 4.7 における再ターゲットの変更点](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [アプリケーションの互換性](application-compatibility.md)

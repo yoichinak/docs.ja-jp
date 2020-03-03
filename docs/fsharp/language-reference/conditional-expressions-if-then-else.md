@@ -1,17 +1,17 @@
 ---
-title: '条件式: if... then... else'
-description: 条件式を記述する方法について説明しますF#コードの別の分岐を実行します。
+title: '条件式: if...そうしたら。。。さも'
+description: でF#条件式を記述して、異なるコードの分岐を実行する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: eade8c20c1b62a2e9a54700550d832798308f368
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: d9763f37cd9170c42e968282b54a3ce925e92591
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614059"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083034"
 ---
-# <a name="conditional-expressions-ifthenelse"></a>条件式: `if...then...else`
+# <a name="conditional-expressions-ifthenelse"></a>条件式:`if...then...else`
 
-`if...then...else`式は、コードの別の分岐を実行し、指定されたブール式に応じて異なる値に評価されます。
+式`if...then...else`は、コードの異なる分岐を実行し、指定されたブール式に応じて別の値に評価されます。
 
 ## <a name="syntax"></a>構文
 
@@ -21,17 +21,17 @@ if boolean-expression then expression1 [ else expression2 ]
 
 ## <a name="remarks"></a>Remarks
 
-前の構文で*expression1*ブール式を評価するときに実行される`true`、それ以外の*expression2*を実行します。
+前の構文では 、ブール式がに`true`評価されると、expression1 が実行されます。それ以外の場合は、 *expression2*が実行されます。
 
-異なり、他の言語で、`if...then...else`コンストラクトは式、ステートメントではありません。 つまり、実行する分岐の最後の式の値では、値が生成されます。 各分岐で生成された値の型が一致する必要があります。 明示的ながある場合`else`ブランチ、その型は、`unit`します。 そのため場合の種類、`then`分岐以外の任意の型は、 `unit`、必要があります、`else`ブランチと同じ戻り値の型。 チェーンと`if...then...else`キーワードを使用することができます、併せて式`elif`の代わりに`else if`; が等しい。
+他の言語`if...then...else`とは異なり、コンストラクトはステートメントではなく、式です。 つまり、値が生成されます。これは、が実行される分岐の最後の式の値です。 各分岐で生成される値の型が一致している必要があります。 明示的`else`な分岐がない場合、その型`unit`はになります。 したがって、 `then`分岐の型が以外`unit`の型である場合は、同じ戻り値`else`の型を持つ分岐が存在する必要があります。 式を連結する場合は、の`else if`代わりに`elif`キーワードを使用できます。これらは等価です。 `if...then...else`
 
 ## <a name="example"></a>例
 
-次の例を使用する方法を示しています、`if...then...else`式。
+次の例は、式の`if...then...else`使用方法を示しています。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet4501.fs)]
 
-```
+```console
 10 is less than 20
 What is your name? John
 How old are you? 9

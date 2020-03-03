@@ -3,13 +3,12 @@ title: project.json と csproj の比較
 description: 「project.json 要素と csproj 要素の間のマッピング」を参照してください。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.custom: seodec18
-ms.openlocfilehash: dc78a6fc43eeb2a9e556bc5a4d8e27db9067ce94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682853"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451106"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -39,7 +38,7 @@ ms.locfileid: "54682853"
 }
 ```
 
-サポート対象から除外されました。 csproj では、これは、ディレクトリ名により定義される、プロジェクト ファイル名により決定されます。 たとえば、`MyProjectName.csproj` のようにします。
+サポート対象から除外されました。 csproj では、これはプロジェクト ファイル名により決定され、通常はディレクトリ名と一致します。 たとえば、`MyProjectName.csproj` のようにします。
 
 既定では、プロジェクト ファイル名により、`<AssemblyName>` プロパティと `<PackageId>` プロパティの値も指定されます。
 
@@ -338,9 +337,9 @@ MSBuild では、ビルド中、すべてのプロジェクトが*移植可能*�
 
 `dotnet publish --framework netcoreapp1.0 --runtime osx.10.11-x64`
 
-詳細については、「[自己完結型の展開 (SCD)](../deploying/index.md#self-contained-deployments-scd)」を参照してください。
+詳細については、「[自己完結型の展開 (SCD)](../deploying/index.md#publish-self-contained)」を参照してください。
 
-## <a name="tools"></a>ツール
+## <a name="tools"></a>tools
 
 ```json
 {
@@ -570,7 +569,7 @@ MSBuild でこれに相当するものは[ターゲット](/visualstudio/msbuild
 }
 ```
 
-csproj ではサポートされていません。 代わりに、*.nuspec* ファイルにコンテンツ ファイルを追加する必要があります。
+csproj ではサポートされていません。 代わりに、 *.nuspec* ファイルにコンテンツ ファイルを追加する必要があります。
 詳細については、「[Including content files](/nuget/schema/nuspec#including-content-files)」 (コンテンツ ファイルを追加する) を参照してください。
 
 ## <a name="files"></a>ファイル

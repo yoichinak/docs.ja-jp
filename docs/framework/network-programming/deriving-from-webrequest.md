@@ -10,12 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bee864f8d24076d16f226c29d61801e856739d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717455"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048610"
 ---
 # <a name="deriving-from-webrequest"></a>WebRequest からの派生
 <xref:System.Net.WebRequest> クラスは、.NET Framework プラグ可能なプロトコル モデルに適合するプロトコル固有の要求ハンドラーを作成するための基本メソッドとプロパティを提供する抽象基底クラスです。 **WebRequest** クラスを使用するアプリケーションは、使用されるプロトコルを指定することなく、サポートされている任意のプロトコルを使用してデータを要求できます。  
@@ -89,8 +89,9 @@ ms.locfileid: "54717455"
  **GetResponse** メソッドは、受信した応答を含めるための適切な **WebResponse** の子孫を作成します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>
-- [プラグ可能なプロトコルのプログラミング](../../../docs/framework/network-programming/programming-pluggable-protocols.md)
-- [WebResponse からの派生](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+- [プラグ可能なプロトコルのプログラミング](programming-pluggable-protocols.md)
+- [WebResponse からの派生](deriving-from-webresponse.md)

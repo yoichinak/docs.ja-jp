@@ -1,14 +1,14 @@
 ---
-title: Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
-description: 確率論的プログラミングと Infer.NET を使用して、TrueSkill の簡易バージョンに基づいたゲーム対戦リスト アプリについて紹介します。
-ms.date: 10/04/2018
+title: Infer.NET ゲーム対戦アプリ - 確率論的プログラミング
+description: 確率論的プログラミングと Infer.NET を使用して、TrueSkill の簡易バージョンに基づいたゲーム対戦リスト アプリを作成する方法を探索します。
+ms.date: 01/30/2020
 ms.custom: mvc,how-to
-ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8e489d61c5e6cca53ba12b13fddd0b73c7f85ef9
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152470"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77092604"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
 
@@ -16,19 +16,19 @@ ms.locfileid: "53152470"
 
 ## <a name="what-is-probabilistic-programming"></a>確率論的プログラミングとは
 
-確率論的プログラミングを使用すると、現実世界のプロセスの統計モデルを作成することができます。 
+確率論的プログラミングを使用すると、現実世界のプロセスの統計モデルを作成することができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 - ローカルの開発環境の設定
 
-  このハウツー ガイドでは、開発用に使用できるマシンがあることを想定しています。 Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するチュートリアルに記載されています。
+  このハウツー ガイドでは、開発用に使用できるマシンがあることを想定しています。 macOS、Windows、または Linux 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。
 
 ## <a name="create-your-app"></a>アプリを作成する
 
 1. コマンド プロンプトを開き、次のコマンドを実行します。
 
-```console
+```dotnetcli
 dotnet new console -o myApp
 cd myApp
 ```
@@ -39,13 +39,13 @@ cd myApp
 
 Infer.NET を使用するには、`Microsoft.ML.Probabilistic.Compiler` パッケージをインストールする必要があります。 コマンド プロンプトで次のコマンドを実行します。
 
-```console
+```dotnetcli
 dotnet add package Microsoft.ML.Probabilistic.Compiler
 ```
 
 ## <a name="design-your-model"></a>モデルを設計する
 
-このサンプルでは、オフィス内でプレイされる卓球またはフーズボールの試合を使用します。 参加者と各試合の結果があります。  このデータからプレーヤーのスキルを推論します。 各プレーヤーには正規分布の潜在的なスキルがあり、各試合の成績はこのスキルにノイズを加えたバージョンと仮定します。 このデータによって、勝者の成績が敗者の成績よりも高くなるように制限します。 これは、一般的な [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) モデルの簡易バージョンです。TrueSkill モデルは、チーム、引き分けなどの拡張機能もサポートしています。 このモデルの[高度なバージョン](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)は、ベストセラーのゲーム タイトルである Halo と Gears of War のマッチメイキングに使用されています。
+このサンプルでは、オフィス内でプレイされる卓球またはフーズボールの試合を使用します。 参加者と各試合の結果があります。  このデータからプレーヤーのスキルを推論します。 各プレーヤーには正規分布の潜在的なスキルがあり、各試合の成績はこのスキルにノイズを加えたバージョンと仮定します。 このデータによって、勝者の成績が敗者の成績よりも高くなるように制限します。 これは、一般的な [TrueSkill](https://www.microsoft.com/research/project/trueskill-ranking-system/) モデルの簡易バージョンです。TrueSkill モデルは、チーム、引き分けなどの拡張機能もサポートしています。 このモデルの[高度なバージョン](https://www.microsoft.com/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)は、ベストセラーのゲーム タイトルである Halo と Gears of War のマッチメイキングに使用されています。
 
 推定されたプレーヤーのスキルをその分散 (そのスキルの不確実性の尺度) と共に列挙する必要があります。
 
@@ -85,7 +85,7 @@ namespace myApp
             var winnerData = new[] { 0, 0, 0, 1, 3, 4 };
             var loserData = new[] { 1, 3, 4, 2, 1, 2 };
 
-            // Define the statistical model as a probabilistic program 
+            // Define the statistical model as a probabilistic program
             var game = new Range(winnerData.Length);
             var player = new Range(winnerData.Concat(loserData).Max() + 1);
             var playerSkills = Variable.Array<double>(player);
@@ -130,7 +130,7 @@ namespace myApp
 
 コマンド プロンプトで次のコマンドを実行します。
 
-```console
+```dotnetcli
 dotnet run
 ```
 
@@ -138,7 +138,7 @@ dotnet run
 
 結果は以下のようになるはずです。
 
-```
+```console
 Compiling model...done.
 Iterating:
 .........|.........|.........|.........|.........| 50
@@ -149,7 +149,7 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-この結果では、モデルに従ってプレーヤー 3 がプレーヤー 4 よりわずかにランクが高い点に注目してください。 これは、プレーヤー 3 がプレーヤー 1 に勝ったことが、プレーヤー 4 がプレーヤー 2 に勝ったことよりも重要であるためです (プレーヤー 1 がプレーヤー 2 に勝つことに注意してください)。 プレーヤー 0 が全体のチャンピオンです。  
+この結果では、モデルに従ってプレーヤー 3 がプレーヤー 4 よりわずかにランクが高い点に注目してください。 これは、プレーヤー 3 がプレーヤー 1 に勝ったことが、プレーヤー 4 がプレーヤー 2 に勝ったことよりも重要であるためです (プレーヤー 1 がプレーヤー 2 に勝つことに注意してください)。 プレーヤー 0 が全体のチャンピオンです。
 
 ## <a name="keep-learning"></a>学習の継続
 

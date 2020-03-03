@@ -10,21 +10,21 @@ helpviewer_keywords:
 - text [WPF], drawing to visuals
 - drawing [WPF], text to visuals
 ms.assetid: fee4003c-e8a6-46ec-babd-2c7f4231a101
-ms.openlocfilehash: bc7a4f989137ec2b021d27a6e112ff1aebd99d07
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 654bfadb42f053b6dcf353d4423bddf281d69478
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523244"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77094554"
 ---
 # <a name="how-to-draw-text-to-a-visual"></a>方法 : ビジュアルにテキストを描画する
-次の例では、テキストを描画する方法を示しています、<xref:System.Windows.Media.DrawingVisual>を使用して、<xref:System.Windows.Media.DrawingContext>オブジェクト。 描画コンテキストが呼び出しによって返される、<xref:System.Windows.Media.DrawingVisual.RenderOpen%2A>のメソッドを<xref:System.Windows.Media.DrawingVisual>オブジェクト。 グラフィックスとテキストを描画コンテキストに描画できます。  
+次の例は、<xref:System.Windows.Media.DrawingContext> オブジェクトを使用して <xref:System.Windows.Media.DrawingVisual> にテキストを描画する方法を示しています。 描画コンテキストは、<xref:System.Windows.Media.DrawingVisual> オブジェクトの <xref:System.Windows.Media.DrawingVisual.RenderOpen%2A> メソッドを呼び出すことによって返されます。 描画コンテキストにグラフィックスやテキストを描画できます。  
   
- 描画コンテキストにテキストを描画するために使用して、<xref:System.Windows.Media.DrawingContext.DrawText%2A>のメソッドを<xref:System.Windows.Media.DrawingContext>オブジェクト。 コンテンツを描画コンテキストに描画が完了したら、呼び出し、<xref:System.Windows.Media.DrawingContext.Close%2A>メソッドを描画コンテキストを閉じるし、内容を保持します。  
+ 描画コンテキストにテキストを描画するには、<xref:System.Windows.Media.DrawingContext> オブジェクトの <xref:System.Windows.Media.DrawingContext.DrawText%2A> メソッドを使用します。 描画コンテキストへのコンテンツの描画が完了したら、<xref:System.Windows.Media.DrawingContext.Close%2A> メソッドを呼び出して描画コンテキストを閉じ、コンテンツを永続化します。  
   
 ## <a name="example"></a>例  
- [!code-csharp[DrawingVisualSample#110](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#110)]
- [!code-vb[DrawingVisualSample#110](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#110)]  
+ [!code-csharp[DrawingVisualSample#110](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingVisualSample/CSharp/Window1.xaml.cs#110)]
+ [!code-vb[DrawingVisualSample#110](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DrawingVisualSample/visualbasic/window1.xaml.vb#110)]  
   
 > [!NOTE]
->  上記のコードの抽出元となった完全なコード サンプルについては、「[DrawingVisual を使用したヒット テストのサンプル](https://go.microsoft.com/fwlink/?LinkID=159994)」を参照してください。
+> 上記のコードの抽出元となった完全なコード サンプルについては、「[DrawingVisual を使用したヒット テストのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Visual%20Layer/DrawingVisual)」を参照してください。

@@ -1,6 +1,6 @@
 ---
 title: GetDemultiplexedStub 関数 (アンマネージ API リファレンス)
-description: GetDemultiplexedStub 関数は、クライアントを Windows の管理から非同期呼び出しの受信を支援するために、オブジェクト転送シンクを作成します。
+description: GetDemultiplexedStub 関数は、Windows Management からの非同期呼び出しをクライアントが受信するのを支援するオブジェクトフォワーダーシンクを作成します。
 ms.date: 11/06/2017
 api_name:
 - GetDemultiplexedStub
@@ -14,14 +14,12 @@ helpviewer_keywords:
 - GetDemultiplexedStub function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db41a11a3fb6c772a3e6fbb164435daa9e032ea5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cc028b3300b43f8a0fb3e29f8b5ac6e1817b8c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516942"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127472"
 ---
 # <a name="getdemultiplexedstub-function"></a>GetDemultiplexedStub 関数
 Windows 管理から非同期呼び出しを受信する際にクライアントを支援するオブジェクト転送シンクが作成されます。
@@ -30,7 +28,7 @@ Windows 管理から非同期呼び出しを受信する際にクライアント
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetDemultiplexedStub (
    [in] IUnknown*    pObject, 
    [in] boolean      isLocal, 
@@ -41,26 +39,27 @@ HRESULT GetDemultiplexedStub (
 ## <a name="parameters"></a>パラメーター
 
 `pObject`  
-[in]クライアントのインプロセス実装へのポインター [IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)します。
+から[IWbemObjectSink](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemobjectsink)のクライアントのインプロセス実装へのポインター。
 
 `isLocal`  
-[in]イベントがローカルかどうかを示すフラグ (`true`)、それ以外の`false`します。
+からイベントがローカルである (`true`) かどうかを示すフラグです。それ以外の場合は、`false`ます。
 
 `ppObject`  
-[out]Windows の管理から非同期呼び出しの受信をクライアントを支援するためにオブジェクトのフォワーダー シンク。
+入出力Windows Management からの非同期呼び出しをクライアントが受信するのを支援するオブジェクトフォワーダーシンク。
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合、戻り値は`S_OK`(0)。
+関数が成功した場合、戻り値は `S_OK` (0) になります。
 
-関数が失敗した場合、戻り値が 0 以外のエラー コードにします。 拡張エラー情報を取得する、 [GetErrorInfo](geterrorinfo.md)関数。
+関数が失敗した場合、戻り値は0以外のエラーコードです。 拡張されたエラー情報を取得するには、 [GetErrorInfo](geterrorinfo.md)関数を呼び出します。
     
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

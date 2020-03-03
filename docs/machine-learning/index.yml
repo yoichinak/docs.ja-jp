@@ -1,0 +1,93 @@
+### YamlMime:Landing
+title: ML.NET のドキュメント
+summary: オープンソースの ML.NET を使用してカスタムの機械学習モデルを構築し、それらをアプリに統合する方法について説明します。 チュートリアルやコード例などを紹介します。
+metadata:
+  title: ML.NET のドキュメント - チュートリアル、API リファレンス
+  description: オープンソースの ML.NET を使用してカスタムの機械学習モデルを構築し、それらをアプリに統合する方法について説明します。 チュートリアルやコード例などを紹介します。
+  ms.prod: dotnet-ml
+  ms.topic: landing-page
+  ms.collection: collection
+  author: natke
+  ms.author: nakersha
+  ms.date: 10/30/2019
+  ms.openlocfilehash: 05d357af2088321524841bfc05f94f816f1bc306
+  ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 11/01/2019
+  ms.locfileid: "73423940"
+landingContent:
+- title: ML.NET の基礎
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ML.NET とは
+      url: how-does-mldotnet-work.md
+  - linkListType: video
+    links:
+    - text: Machine Learning の基本
+      url: https://channel9.msdn.com/Series/MLNET/MLNET-Machine-Learning-Introduction-1-of-8
+  - linkListType: concept
+    links:
+    - text: 機械学習タスクとアルゴリズム
+      url: resources/tasks.md
+    - text: アルゴリズムの選択方法
+      url: how-to-choose-an-ml-net-algorithm.md
+- title: 10 分で開始する
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Visual Studio でモデル ビルダーを設定する
+      url: how-to-guides/install-model-builder.md
+    - text: ML.NET API の概要
+      url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
+    - text: Mac OS、Windows、または Linux に CLI をインストールする
+      url: how-to-guides/install-ml-net-cli.md
+- title: チュートリアル
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: Web サイト コメントのセンチメントを分析する (モデル ビルダー)
+      url: tutorials/sentiment-analysis-model-builder.md
+    - text: 価格を予測する (モデル ビルダー)
+      url: tutorials/predict-prices-with-model-builder.md
+    - text: 正常性違反の分類 (モデル ビルダー & SQL Server)
+      url: tutorials/health-violation-classification-model-builder.md
+    - text: サポートの問題を分類する (API)
+      url: tutorials/github-issue-classification.md
+    - text: 画像分類 API を使用して画像を分類する (API)
+      url: tutorials/image-classification-api-transfer-learning.md
+    - text: モデル構成を使用して画像を分類する (API)
+      url: tutorials/image-classification.md
+    - text: 画像内のオブジェクトを検出する (API)
+      url: tutorials/object-detection-onnx.md
+    - text: 製品売上の異常を検出する (API)
+      url: tutorials/sales-anomaly-detection.md
+    - text: 自転車レンタル需要の予測 (API & SQL Server)
+      url: tutorials/time-series-demand-forecasting.md
+    - text: 映画の推奨機能を構築する (API)
+      url: tutorials/movie-recommendation.md
+- title: 使い方ガイド
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: さまざまなソースからデータを読み込む
+      url: how-to-guides/load-data-ml-net.md
+    - text: モデル構築用のデータを準備する
+      url: how-to-guides/prepare-data-ml-net.md
+    - text: モデルのトレーニングと評価
+      url: how-to-guides/train-machine-learning-model-ml-net.md
+    - text: トレーニング済みモデルを使用して予測する
+      url: how-to-guides/machine-learning-model-predictions-ml-net.md
+    - text: トレーニング済みのモデルの保存と読み込み
+      url: how-to-guides/save-load-machine-learning-models-ml-net.md
+    - text: モデルを再トレーニングする
+      url: how-to-guides/retrain-model-ml-net.md
+- title: 関連項目
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ML.NET API リファレンス
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - text: ML.NET サンプル
+      url: https://github.com/dotnet/machinelearning-samples

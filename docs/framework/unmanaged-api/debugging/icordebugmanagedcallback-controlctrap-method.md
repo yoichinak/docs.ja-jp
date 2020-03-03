@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 0500854e-2121-43d9-a028-64312da35258
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63f7bf8c09480b9ce2cfb8eb8dc66e4a6133ef8f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603899"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777483"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap メソッド
-CTRL + C が、デバッグ対象プロセスでトラップされたことをデバッガーに通知します。  
+デバッグ対象のプロセスで CTRL + C がトラップされることをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ControlCTrap (  
     [in] ICorDebugProcess *pProcess  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pProcess`  
- [in]CTRL + C をトラップするプロセスを表す ICorDebugProcess オブジェクトへのポインター。  
+ からCTRL + C キーがトラップされるプロセスを表す、のオブジェクトへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|デバッガーでは、CTRL + C トラップを処理します。|  
-|S_FALSE|デバッガーでは、CTRL + C トラップは処理されません。|  
+|S_OK|デバッガーは CTRL + C トラップを処理します。|  
+|S_FALSE|デバッガーは CTRL + C トラップを処理しません。|  
   
-## <a name="remarks"></a>Remarks  
- このコールバックは、プロセス内のすべてのアプリケーション ドメインが停止しました。  
+## <a name="remarks"></a>コメント  
+ プロセス内のすべてのアプリケーションドメインがこのコールバックに対して停止されています。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -59,4 +57,5 @@ HRESULT ControlCTrap (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

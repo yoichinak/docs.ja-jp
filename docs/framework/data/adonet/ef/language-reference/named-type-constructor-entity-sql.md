@@ -2,25 +2,25 @@
 title: 名前付きの型コンストラクター (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: f6577b49c299e1497da2692daef6d22cba1473b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f40adce1a9e031ed0b7cd5d03d9c63db255aa610
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626702"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319574"
 ---
 # <a name="named-type-constructor-entity-sql"></a>名前付きの型コンストラクター (Entity SQL)
 エンティティ型や複合型など、概念モデル標準型のインスタンスの作成に使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 [{identifier. }] identifier( [expression [{, expression }]] )  
 ```  
   
 ## <a name="arguments"></a>引数  
  `identifier`  
- 単純な識別子および引用符で囲まれた識別子の値。 詳細については、「[識別子](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
+ 単純な識別子および引用符で囲まれた識別子の値。 詳細については、「[識別子](identifiers-entity-sql.md)」を参照してください。  
   
  `expression`  
  型の宣言に表示される順序と同じ順序であると見なされる型の属性。  
@@ -52,12 +52,13 @@ ms.locfileid: "54626702"
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、名前付きの型コンストラクターを使用して、概念モデル型のインスタンスを作成します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 「 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
+ [!code-sql[DP EntityServices Concepts#NAMED_TYPE_CONSTRUCTOR](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#named_type_constructor)]  
   
 ## <a name="see-also"></a>関連項目
-- [コンストラクター](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [コンストラクター](constructing-types-entity-sql.md)
+- [Entity SQL リファレンス](entity-sql-reference.md)

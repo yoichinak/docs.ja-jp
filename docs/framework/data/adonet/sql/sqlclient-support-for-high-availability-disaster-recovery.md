@@ -2,73 +2,73 @@
 title: 高可用性障害復旧のための SqlClient サポート
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609123"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791615"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性障害復旧のための SqlClient サポート
-このトピックでは、高可用性、ディザスター リカバリーのための SqlClient サポート ([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] に追加) である AlwaysOn 可用性グループについて説明します。  AlwaysOn 可用性グループ機能は、SQL Server 2012 に追加されました。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  
+このトピックでは、高可用性、ディザスターリカバリー、AlwaysOn 可用性グループのための SqlClient サポート (.NET Framework 4.5 で追加) について説明します。  AlwaysOn 可用性グループ機能が SQL Server 2012 に追加されました。 AlwaysOn 可用性グループの詳細については、「SQL Server オンラインブック」を参照してください。  
   
- 可用性グループ リスナーを指定できるようになりました (高可用性と災害復旧) 可用性グループ (AG) または接続プロパティで SQL Server 2012 フェールオーバー クラスター インスタンス。 フェールオーバーが発生した AlwaysOn データベースに SqlClient アプリケーションが接続される場合、元の接続が途切れるため、アプリケーションがフェールオーバーの後に処理を続行するには、新しい接続を開く必要があります。  
+ 接続プロパティで、(高可用性、ディザスターリカバリー) 可用性グループ (AG)、または SQL Server 2012 フェールオーバークラスターインスタンスの可用性グループリスナーを指定できるようになりました。 フェールオーバーが発生した AlwaysOn データベースに SqlClient アプリケーションが接続される場合、元の接続が途切れるため、アプリケーションがフェールオーバーの後に処理を続行するには、新しい接続を開く必要があります。  
   
- 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続していないと、複数の IP アドレスが、ホスト名に関連付けられている場合は、SqlClient は、反復順番に DNS エントリに関連付けられているすべての IP アドレス。 これは、DNS サーバーによって返された最初の IP アドレスがネットワーク インターフェイス カード (NIC) にバインドされていない場合、時間がかかります。 SqlClient が並列ですべての IP アドレスへの接続を確立しようとしたに可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続するときに、接続試行が成功すると、ドライバーは、保留中の接続が破棄されます。しようとします。  
+ 可用性グループリスナーまたは SQL Server 2012 フェールオーバークラスターインスタンスに接続しておらず、複数の IP アドレスがホスト名に関連付けられている場合、SqlClient は DNS エントリに関連付けられているすべての IP アドレスを順番に反復処理します。 これは、DNS サーバーによって返された最初の IP アドレスがネットワーク インターフェイス カード (NIC) にバインドされていない場合、時間がかかります。 可用性グループリスナーまたは SQL Server 2012 フェールオーバークラスターインスタンスに接続しようとすると、SqlClient はすべての IP アドレスへの接続を並行して確立しようとします。接続試行が成功すると、ドライバーは保留中の接続をすべて破棄しますログオン.  
   
 > [!NOTE]
->  接続タイムアウトの増加および接続の再試行ロジックの実装により、アプリケーションが可用性グループに接続する可能性は向上します。 また、接続がフェールオーバーによって失敗する可能性があるので、接続の再試行ロジックの実装は、失敗した接続が再接続するまで試行されるようにする必要があります。  
+> 接続タイムアウトの増加および接続の再試行ロジックの実装により、アプリケーションが可用性グループに接続する可能性は向上します。 また、接続がフェールオーバーによって失敗する可能性があるので、接続の再試行ロジックの実装は、失敗した接続が再接続するまで試行されるようにする必要があります。  
   
- 次の接続プロパティが、[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] の SqlClient に追加されました。  
+ .NET Framework 4.5 の SqlClient に次の接続プロパティが追加されました:  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  プログラムによって、これらの接続文字列キーワードを次のとおりに変更できます。  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  設定`MultiSubnetFailover`に`true`が必要でない[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]以降のバージョン。
+> .NET Framework `MultiSubnetFailover` 4.6.1 `true`以降のバージョンでは、をに設定する必要はありません。
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続  
- 常に指定`MultiSubnetFailover=True`SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続するとき。 `MultiSubnetFailover` 単一サブネットおよびマルチ サブネットの AlwaysOn トポロジにおけるフェールオーバー時間を大幅に短縮され、SQL Server 2012 フェールオーバー クラスター インスタンスからすべての可用性グループをやは、高速フェールオーバーを有効にします。 複数のサブネットのフェールオーバーでは、クライアントは並列接続を試みます。 サブネットのフェールオーバー中に、積極的に TCP 接続を再試行します。  
+ SQL Server 2012 `MultiSubnetFailover=True`可用性グループリスナーまたは SQL Server 2012 フェールオーバークラスターインスタンスに接続する場合は、必ずを指定します。 `MultiSubnetFailover`SQL Server 2012 のすべての可用性グループとフェールオーバークラスターインスタンスの高速フェールオーバーを有効にします。これにより、単一およびマルチサブネットの AlwaysOn トポロジのフェールオーバー時間が大幅に短縮されます。 複数のサブネットのフェールオーバーでは、クライアントは並列接続を試みます。 サブネットのフェールオーバー中に、積極的に TCP 接続を再試行します。  
   
- `MultiSubnetFailover`接続プロパティは、可用性グループまたは SQL Server 2012 フェールオーバー クラスター インスタンスで、アプリケーションが配置されていることと、SqlClient はしようとして、プライマリ SQL Server インスタンス上のデータベースに接続しようとしていることを示します。すべての IP アドレスに接続します。 `MultiSubnetFailover=True` を接続に指定すると、クライアントは、オペレーティング システムの既定の TCP 再転送間隔よりも高速に接続試行を再試行します。 これは、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後のより高速な再接続を可能にし、単一および複数のサブネットの可用性グループおよびフェールオーバー クラスター インスタンスの両方に適用可能です。  
+ `MultiSubnetFailover`接続プロパティは、アプリケーションが可用性グループまたは2012フェールオーバークラスターインスタンス SQL Server に配置されていて、SqlClient がプライマリ SQL Server インスタンスのデータベースへの接続を試行することを示します。すべての IP アドレスに接続します。 `MultiSubnetFailover=True` を接続に指定すると、クライアントは、オペレーティング システムの既定の TCP 再転送間隔よりも高速に接続試行を再試行します。 これは、AlwaysOn 可用性グループまたは AlwaysOn フェールオーバー クラスター インスタンスのフェールオーバー後のより高速な再接続を可能にし、単一および複数のサブネットの可用性グループおよびフェールオーバー クラスター インスタンスの両方に適用可能です。  
   
  SqlClient の接続文字列キーワードの詳細については、<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> を参照してください。  
   
- 指定する`MultiSubnetFailover=True`ときに可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンス以外の何かに接続と可能性がある、負の値のパフォーマンスに影響はサポートされていません。  
+ 可用性`MultiSubnetFailover=True`グループリスナーまたは SQL Server 2012 フェールオーバークラスターインスタンス以外に接続するときにを指定すると、パフォーマンスに悪影響が生じる可能性があり、サポートされていません。  
   
- 可用性グループ内のサーバーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続するには、次のガイドラインを使用します。  
+ 次のガイドラインを使用して、可用性グループまたは SQL Server 2012 フェールオーバークラスターインスタンスのサーバーに接続します。  
   
--   単一のサブネットまたは複数のサブネットへの接続時には、`MultiSubnetFailover` 接続プロパティを使用します。これにより、両方の場合でパフォーマンスが向上します。  
+- 単一のサブネットまたは複数のサブネットへの接続時には、`MultiSubnetFailover` 接続プロパティを使用します。これにより、両方の場合でパフォーマンスが向上します。  
   
--   可用性グループに接続するには、使用する接続文字列でサーバーとして可用性グループの可用性グループ リスナーを指定します。  
+- 可用性グループに接続するには、使用する接続文字列でサーバーとして可用性グループの可用性グループ リスナーを指定します。  
   
--   SQL Server に接続する 64 を超える IP アドレスで構成されているインスタンスの接続エラーが発生します。  
+- 64を超える IP アドレスで構成された SQL Server インスタンスに接続すると、接続エラーが発生します。  
   
--   使用するアプリケーションの動作、`MultiSubnetFailover`接続プロパティが認証の種類に基づく影響を受けません。SQL Server 認証、Kerberos 認証、または Windows 認証。  
+- `MultiSubnetFailover`接続プロパティを使用するアプリケーションの動作は、認証の種類によっては影響を受けません。認証、Kerberos 認証、または Windows 認証を SQL Server します。  
   
--   フェールオーバー時に対応し、アプリケーションの接続の再試行を減らすには、`Connect Timeout` の値を増やします。  
+- フェールオーバー時に対応し、アプリケーションの接続の再試行を減らすには、`Connect Timeout` の値を増やします。  
   
--   分散トランザクションはサポートされていません。  
+- 分散トランザクションはサポートされていません。  
   
  読み取り専用のルーティングが有効でない場合は、セカンダリ レプリカの場所への接続は、次の場合に失敗します。  
   
-1.  セカンダリ レプリカの場所が接続を受け入れないように構成されている場合。  
+1. セカンダリ レプリカの場所が接続を受け入れないように構成されている場合。  
   
-2.  アプリケーションが `ApplicationIntent=ReadWrite` (後で説明) を使用している場合、セカンダリ レプリカの場所は読み取り専用アクセスとして構成されます。  
+2. アプリケーションが `ApplicationIntent=ReadWrite` (後で説明) を使用している場合、セカンダリ レプリカの場所は読み取り専用アクセスとして構成されます。  
   
  <xref:System.Data.SqlClient.SqlDependency> は、読み取り専用のセカンダリ レプリカではサポートされていません。  
   
  プライマリ レプリカが読み取り専用のワークロードを拒否するように設定され、接続文字列が  `ApplicationIntent=ReadOnly` を含んでいる場合、接続は失敗します。  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>データベース ミラーリングから複数のサブネット クラスターを使用するためのアップグレード  
- 接続エラー (<xref:System.ArgumentException>) は、`MultiSubnetFailover` および `Failover Partner` 接続のキーワードが接続文字列内に存在する場合や、`MultiSubnetFailover=True` および TCP 以外のプロトコルが使用された場合に発生します。 エラー (<xref:System.Data.SqlClient.SqlException>) 場合にも発生`MultiSubnetFailover`使用し、SQL Server は、データベース ミラーリング ペアの一部であることを示すフェールオーバー パートナー応答を返します。  
+ 接続エラー (<xref:System.ArgumentException>) は、`MultiSubnetFailover` および `Failover Partner` 接続のキーワードが接続文字列内に存在する場合や、`MultiSubnetFailover=True` および TCP 以外のプロトコルが使用された場合に発生します。 また、が<xref:System.Data.SqlClient.SqlException>使用され、SQL Server `MultiSubnetFailover`がデータベースミラーリングペアの一部であることを示すフェールオーバーパートナー応答を返す場合にも、エラー () が発生します。  
   
  現在データベース ミラーリングを使用している SqlClient アプリケーションを複数のサブネットのシナリオへとアップグレードする場合、`Failover Partner` 接続プロパティを削除し、`MultiSubnetFailover` に設定した `True` で置き換え、接続文字列のサーバー名を可用性グループ リスナーと置き換える必要があります。 接続文字列が `Failover Partner` および `MultiSubnetFailover=True` を使用していると、ドライバーがエラーを生成します。 ただし、接続文字列が `Failover Partner` および `MultiSubnetFailover=False` (または  `ApplicationIntent=ReadWrite`) を使用している場合、アプリケーションはデータベース ミラーリングを使用します。  
   
@@ -79,23 +79,24 @@ ms.locfileid: "54609123"
   
  `ApplicationIntent` キーワードは従来の読み取り専用のデータベースでは機能しません。  
   
- データベースは、対象となる AlwaysOn データベースのワークロードの読み取りを許可または拒否できます。 (これは `ALLOW_CONNECTIONS` の `PRIMARY_ROLE` 句および `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] ステートメントを使用して行います。)  
+ データベースは、対象となる AlwaysOn データベースのワークロードの読み取りを許可または拒否できます。 (これは、 `ALLOW_CONNECTIONS` `PRIMARY_ROLE`および`SECONDARY_ROLE`transact-sql ステートメントの句を使用して行います)。  
   
  `ApplicationIntent` キーワードは、読み取り専用のルーティングを有効にするために使用されます。  
   
 ## <a name="read-only-routing"></a>読み取り専用ルーティング  
  読み取り専用のルーティングはデータベースの読み取り専用のレプリカの可用性を確保できる機能です。 読み取り専用のルーティングを有効にするには次のことが必要です。  
   
-1.  AlwaysOn 可用性グループの可用性グループ リスナーに接続する必要があります。  
+1. AlwaysOn 可用性グループの可用性グループ リスナーに接続する必要があります。  
   
-2.  `ApplicationIntent` 接続文字列キーワードを `ReadOnly` に設定する必要があります。  
+2. `ApplicationIntent` 接続文字列キーワードを `ReadOnly` に設定する必要があります。  
   
-3.  可用性グループは、データベース管理者によって、読み取り専用のルーティングを有効にするように構成される必要があります。  
+3. 可用性グループは、データベース管理者によって、読み取り専用のルーティングを有効にするように構成される必要があります。  
   
  読み取り専用のルーティングを使用する複数の接続のすべてが、同じ読み取り専用のレプリカに接続しないようにすることができます。 データベースの同期変更またはサーバーのルーティング構成の変更は、異なる読み取り専用のレプリカに対するクライアントの接続につながることがあります。 すべての読み取り専用の要求が、確実に同じ読み取り専用のレプリカに接続するようにするには、`Data Source` 接続文字列キーワードに可用性グループ リスナーを渡さないでください。 代わりに、読み取り専用のインスタンスの名前を指定します。  
   
  読み取り専用のルーティングでは、最初にプライマリに接続し、最適な可用性の読み取り可能なセカンダリを検索するため、プライマリに接続するよりも時間がかかる場合があります。 そのため、ログインのタイムアウトを増やす必要があります。  
   
 ## <a name="see-also"></a>関連項目
-- [SQL Server の機能と ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [SQL Server の機能と ADO.NET](sql-server-features-and-adonet.md)
+- [ADO.NET の概要](../ado-net-overview.md)

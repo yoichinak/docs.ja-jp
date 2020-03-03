@@ -2,21 +2,19 @@
 title: ICorDebugSymbolProvider::GetObjectSize メソッド
 ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99714a50d0b3966476cea2f7ed02f04a2ebf6cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fce7410b5ae9571af0c8a5963596e2af41737798
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512412"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791563"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize メソッド
 typespec シグネチャに基づいてオブジェクトのオブジェクト サイズを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetObjectSize(  
    [in] ULONG32 cbSignature,  
    [in, size_is(cbSignature)]  BYTE typeSig[],  
@@ -24,7 +22,7 @@ HRESULT GetObjectSize(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cbSignature`  
  [in] typespec シグネチャのバイト数。  
   
@@ -34,13 +32,13 @@ HRESULT GetObjectSize(
  `pObjectSize`  
  [out] オブジェクトのサイズへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -49,5 +47,6 @@ HRESULT GetObjectSize(
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

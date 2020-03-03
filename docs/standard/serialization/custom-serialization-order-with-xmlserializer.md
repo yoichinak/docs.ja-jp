@@ -2,12 +2,12 @@
 title: XmlSerializer によるカスタム シリアル化順序
 ms.date: 03/30/2017
 ms.assetid: 975abd20-2a1d-42db-aed3-e898025ccce7
-ms.openlocfilehash: 159e8e278d7212e5f798f559dc1b51f71f74b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5934fd0cab03f754784c8515094ff4ec5e78ba4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718950"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490923"
 ---
 # <a name="custom-serialization-order-with-xmlserializer"></a>XmlSerializer によるカスタム シリアル化順序
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/CustomOrder.zip.exe)  
@@ -18,19 +18,19 @@ ms.locfileid: "54718950"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>コマンド プロンプトを使用してサンプルをビルドするには  
   
-1.  コマンド プロンプト ウィンドウを開き、サンプルの使用言語に対応するサブディレクトリに移動します。  
+1. コマンド プロンプト ウィンドウを開き、サンプルの使用言語に対応するサブディレクトリに移動します。  
   
-2.  コマンド ラインで「**msbuild CustomOrder.sln**」と入力します。  
+2. コマンド ラインで「**msbuild CustomOrder.sln**」と入力します。  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio を使用してサンプルをビルドするには  
   
-1.  [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、サンプルが格納されている、言語固有のサブディレクトリのいずれかに移動します。  
+1. ファイル エクスプ ローラーを開き、サンプルの言語固有のサブディレクトリのいずれかに移動します。  
   
-2.  CustomOrder.sln のアイコンをダブルクリックして、このファイルを Visual Studio で開きます。  
+2. CustomOrder.sln ファイルのアイコンをダブルクリックして、このファイルを Visual Studio で開きます。  
   
-3.  **[ビルド]** メニューで、**[ソリューションのビルド]** を選択します。  
+3. **[ビルド]** メニューで、 **[ソリューションのビルド]** を選択します。  
   
-4.  サンプル アプリケーションは、既定の \bin ディレクトリまたは \bin\Debug ディレクトリにビルドされます。  
+4. サンプル アプリケーションは、既定の \bin ディレクトリまたは \bin\Debug ディレクトリにビルドされます。  
   
 ## <a name="see-also"></a>関連項目
 

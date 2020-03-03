@@ -2,19 +2,19 @@
 title: + (追加)
 ms.date: 03/30/2017
 ms.assetid: 51769b02-a8f7-4177-9e99-bbd10e77092c
-ms.openlocfilehash: f095703646d5280947e67a6640d49234a4da3622
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 62bb4782f135309eed8efa7e182fd8b75f92e126
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826747"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73040292"
 ---
 # <a name="-add"></a>+ (加算)
 2 つの値を加算します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```csharp  
 expression + expression  
 ```  
   
@@ -23,7 +23,7 @@ expression + expression
  任意の数値データ型の有効な式。  
   
 ## <a name="result-types"></a>戻り値の型  
- 2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙的な型の上位変換の詳細については、次を参照してください。[型システム](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)します。  
+ 2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙の型の昇格の詳細については、「[型システム](type-system-entity-sql.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks  
  EDM.String 型の場合は、値が連結されます。  
@@ -31,12 +31,13 @@ expression + expression
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、+ 算術演算子を使用して 2 つの数値を加算します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 「 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
  [!code-csharp[DP EntityServices Concepts 2#ADD](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#add)]  
   
 ## <a name="see-also"></a>関連項目
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Entity SQL リファレンス](entity-sql-reference.md)
 - [概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)

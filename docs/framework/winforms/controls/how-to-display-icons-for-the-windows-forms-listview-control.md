@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム ListView コントロールのアイコンを表示します。'
+title: ListView コントロールのアイコンを表示する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,35 +11,36 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], with ListView control
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
-ms.openlocfilehash: 3c3df1fb38c9fbcf672e9ffcd8c0aa3c881be00b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fc54c448dae95cab50cdafa8403769fb421dffa
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510625"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744507"
 ---
-# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールのアイコンを表示します。
-Windows フォーム<xref:System.Windows.Forms.ListView>コントロールは、次の 3 つのイメージ リストのアイコンを表示できます。 リスト、詳細、および SmallIcon ビューが指定されているイメージの一覧からイメージを表示、<xref:System.Windows.Forms.ListView.SmallImageList%2A>プロパティ。 LargeIcon ビューが指定されているイメージの一覧の画像を表示、<xref:System.Windows.Forms.ListView.LargeImageList%2A>プロパティ。 リスト ビューは、追加で設定アイコンのセットを表示できます、<xref:System.Windows.Forms.ListView.StateImageList%2A>大きいアイコンまたは小さいアイコンの横にあるプロパティ。 イメージ リストの詳細については、次を参照してください。 [ImageList コンポーネント](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)と[方法。追加または削除のイメージで、Windows フォームの ImageList コンポーネント](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)します。  
+# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>方法 : Windows フォーム ListView コントロールのアイコンを表示する
+Windows フォーム <xref:System.Windows.Forms.ListView> コントロールは、3つのイメージリストのアイコンを表示できます。 List、Details、および SmallIcon の各ビューには、[<xref:System.Windows.Forms.ListView.SmallImageList%2A>] プロパティで指定したイメージリストの画像が表示されます。 LargeIcon ビューには、<xref:System.Windows.Forms.ListView.LargeImageList%2A> プロパティで指定されたイメージリストのイメージが表示されます。 リストビューには、大きいアイコンまたは小さいアイコンの横にある [<xref:System.Windows.Forms.ListView.StateImageList%2A>] プロパティで設定された追加のアイコンのセットを表示することもできます。 イメージリストの詳細については、「 [Imagelist コンポーネント](imagelist-component-windows-forms.md)」および「[方法: Windows フォーム imagelist コンポーネントを使用してイメージを追加または削除する](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)」を参照してください。  
   
-### <a name="to-display-images-in-a-list-view"></a>リスト ビューでイメージを表示するには  
+### <a name="to-display-images-in-a-list-view"></a>リストビューに画像を表示するには  
   
-1.  適切なプロパティを設定 —<xref:System.Windows.Forms.ListView.SmallImageList%2A>、 <xref:System.Windows.Forms.ListView.LargeImageList%2A>、または<xref:System.Windows.Forms.ListView.StateImageList%2A>— 既存<xref:System.Windows.Forms.ImageList>コンポーネントを使用します。  
+1. 適切なプロパティ (<xref:System.Windows.Forms.ListView.SmallImageList%2A>、<xref:System.Windows.Forms.ListView.LargeImageList%2A>、または <xref:System.Windows.Forms.ListView.StateImageList%2A>) を、使用する既存の <xref:System.Windows.Forms.ImageList> コンポーネントに設定します。  
   
-     デザイナーの [プロパティ] ウィンドウまたはコードでは、これらのプロパティを設定できます。  
+     これらのプロパティは、デザイナーでプロパティウィンドウまたはコードで設定できます。  
   
-     [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#41)]
-     [!code-vb[System.Windows.Forms.ListViewLegacyTopics#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#41)]  
+     [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#41)]
+     [!code-vb[System.Windows.Forms.ListViewLegacyTopics#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#41)]  
   
-2.  設定、<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>または<xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A>アイコンが関連付けられている各リスト項目のプロパティ。  
+2. アイコンが関連付けられている各リスト項目の <xref:System.Windows.Forms.ListViewItem.ImageIndex%2A> または <xref:System.Windows.Forms.ListViewItem.StateImageIndex%2A> プロパティを設定します。  
   
-     コードでは、または、これらのプロパティを設定できる、 **ListViewItem コレクション エディター**します。 開くには、 **ListViewItem コレクション エディター**、省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton"))、の横にある<xref:System.Windows.Forms.ListView.Items%2A>プロパティを**プロパティ**ウィンドウ。  
+     これらのプロパティは、コードで設定することも、 **ListViewItem Collection エディター**内で設定することもできます。 **ListViewItem Collection エディター**を開くには、省略記号ボタン ( **[プロパティ]** ウィンドウの [<xref:System.Windows.Forms.ListView.Items%2A>] プロパティの横に](./media/visual-studio-ellipsis-button.png)プロパティウィンドウある省略記号ボタン ([...]) をクリックします (![)。  
   
-     [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#42)]
-     [!code-vb[System.Windows.Forms.ListViewLegacyTopics#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#42)]  
+     [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#42)]
+     [!code-vb[System.Windows.Forms.ListViewLegacyTopics#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#42)]  
   
-## <a name="see-also"></a>関連項目
-- [ListView コントロールの概要](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
-- [方法: Windows フォーム ListView コントロールで項目追加および削除](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [方法: Windows フォーム ListView コントロールに列を追加します。](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加します。](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [ImageList コンポーネント](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+## <a name="see-also"></a>参照
+
+- [ListView コントロールの概要](listview-control-overview-windows-forms.md)
+- [方法: Windows フォーム ListView コントロールで項目を追加および削除する](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールに列を追加する](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [ImageList コンポーネント](imagelist-component-windows-forms.md)

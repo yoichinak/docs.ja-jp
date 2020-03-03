@@ -15,32 +15,30 @@ helpviewer_keywords:
 ms.assetid: 9929817e-acc9-40b7-960c-598664e04b60
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dd58d38e92f492522008745384459045e007c3ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90474a61b16d65565889bd69ef75616804d8bc60
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646842"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140885"
 ---
 # <a name="iclrmetahostquerylegacyv2runtimebinding-method"></a>ICLRMetaHost::QueryLegacyV2RuntimeBinding メソッド
-レガシ アクティブ化ポリシーが関連付けられてなどを使用してランタイムを表すインターフェイスを返します、`useLegacyV2RuntimeActivationPolicy`属性を[ \<startup > 要素](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)ダイレクトを使用して、構成ファイルのエントリレガシ アクティブ化 Api、または呼び出すことによって、 [iclrruntimeinfo::bindaslegacyv2runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)メソッド。  
+レガシアクティブ化ポリシーがバインドされているランタイムを表すインターフェイスを返します。たとえば、 [\<スタートアップ > 要素](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)構成ファイルのエントリの `useLegacyV2RuntimeActivationPolicy` 属性を使用して、従来のアクティベーション api を直接使用したり、[ICLRRuntimeInfo:: BindAsLegacyV2Runtime](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-bindaslegacyv2runtime-method.md)メソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT QueryLegacyV2RuntimeBinding (  
     [in] REFIID riid,  
     [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `riid`  
- [in]このパラメーターの唯一の有効な値は Required.Currently`IID_ICLRRuntimeInfo`します。  
+ から必須。現時点では、このパラメーターの有効な値は `IID_ICLRRuntimeInfo`のみです。  
   
  `ppUnk`  
- [out] 必須。 このメソッドから制御が戻るときにへのポインターを格納、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)レガシ アクティブ化ポリシーにバインドされているランタイムを表すインターフェイスです。  
+ [out] 必須。 このメソッドから制御が戻るときに、レガシアクティブ化ポリシーにバインドされているランタイムを表す[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイスへのポインターを格納します。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -53,15 +51,16 @@ HRESULT QueryLegacyV2RuntimeBinding (
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRMetaHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
 - [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

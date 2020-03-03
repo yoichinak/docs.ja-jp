@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 32d54a5b-8ad3-405b-a1b9-0936a3b49d1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cd04e6d8bed86039b6f43985a8fb712b4612f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 11acf997b2efd74bc8394d830f36d3acbd1eef56
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418351"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137206"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID メソッド
-指定した識別子を持つタスクが実行されているスレッドを取得します。  
+指定した id を持つタスクが実行されているスレッドを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetThreadForTaskID (  
     [in]  TASKID            taskid,  
     [out] ICorDebugThread2  **ppThread  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `taskid`  
- [in]タスクの識別子。  
+ からタスクの識別子です。  
   
  `ppThread`  
- [out]ICorDebugThread2 を表すオブジェクトを取得するスレッドのアドレスへのポインター。  
+ 入出力取得するスレッドを表す ICorDebugThread2 オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- ホストを使用してタスクの識別子を設定することができます、 [iclrtask::settaskidentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)メソッドです。  
+## <a name="remarks"></a>Remarks  
+ ホストは、 [ICLRTask:: SetTaskIdentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)メソッドを使用してタスク識別子を設定できます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

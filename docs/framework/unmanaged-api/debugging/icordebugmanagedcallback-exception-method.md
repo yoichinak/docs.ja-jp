@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: ab18a509-dff3-4930-b585-bd15e0414176
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db4f0bbef1ce0e6e4a2a0e904bfe8ebb997d5f4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 328c10c1895f65b43dc365b1be6b4ec5ef01e720
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586593"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777358"
 ---
 # <a name="icordebugmanagedcallbackexception-method"></a>ICorDebugManagedCallback::Exception メソッド
-マネージ コードから例外がスローされたことをデバッガーに通知します。  
+マネージコードから例外がスローされたことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Exception (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread    *pThread,  
@@ -37,21 +35,21 @@ HRESULT Exception (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]例外がスローされたアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ から例外がスローされたアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]例外がスローされたスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ から例外がスローされたスレッドを表す、スレッドオブジェクトへのポインター。  
   
  `unhandled`  
- [in]この値が場合`false`例外が、まだそれ以外のアプリケーションによって処理されると、例外が処理されないとプロセスが終了します。  
+ からこの値が `false`場合は、アプリケーションによって例外がまだ処理されていません。それ以外の場合、例外はハンドルされないため、プロセスを終了します。  
   
-## <a name="remarks"></a>Remarks  
- 特定の例外は、スレッド オブジェクトから取得できます。  
+## <a name="remarks"></a>コメント  
+ スレッドオブジェクトから特定の例外を取得できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -60,4 +58,5 @@ HRESULT Exception (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

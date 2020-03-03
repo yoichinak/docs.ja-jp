@@ -1,4 +1,12 @@
-### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>Contract.Invariant または Contract.Requires<TException> が String.IsNullOrEmpty の純粋性を考慮しない
+---
+ms.openlocfilehash: 204fe32ec8b7fbaab89e37d7e761469212091728
+ms.sourcegitcommit: 4d8efe00f2e5ab42e598aff298d13b8c052d9593
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68237919"
+---
+### <a name="contractinvariant-or-contractrequirestexception-do-not-consider-stringisnullorempty-to-be-pure"></a>Contract.Invariant または Contract.Requires\<TException> が String.IsNullOrEmpty の純粋性を考慮しない
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |Version|4.6.1|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Diagnostics.Contracts.Contract.Invariant(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.Contracts.Contract.Requires(System.Boolean)?displayProperty=nameWithType></li></ul>|
-

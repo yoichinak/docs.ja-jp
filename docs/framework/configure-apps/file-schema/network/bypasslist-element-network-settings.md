@@ -8,21 +8,21 @@ helpviewer_keywords:
 - bypasslist element
 - <bypasslist> element
 ms.assetid: 124446b7-abb1-4e5e-a492-b64398f268f1
-ms.openlocfilehash: db975d44db96f605767d7320737ff3c162bbc8a5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7a6c1282c9ca8381d2dbb21ffdc82f95732c42b3
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282959"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087520"
 ---
 # <a name="bypasslist-element-network-settings"></a>\<bypasslist > 要素 (ネットワーク設定)
-一連のプロキシを使用しないアドレスを記述する正規表現を提供します。  
-  
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
-  
+プロキシを使用しないアドレスを記述する一連の正規表現を提供します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**bypasslist >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -40,28 +40,28 @@ ms.locfileid: "55282959"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-bypasslist-network-settings.md)|プロキシ バイ パスの一覧には、IP アドレスまたは DNS 名を追加します。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-bypasslist-network-settings.md)|バイパス リストをクリアします。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-bypasslist-network-settings.md)|プロキシ バイ パスの一覧から IP アドレスまたは DNS 名を削除します。|  
+|[add](add-element-for-bypasslist-network-settings.md)|プロキシバイパス一覧に IP アドレスまたは DNS 名を追加します。|  
+|[clear](clear-element-for-bypasslist-network-settings.md)|バイパスリストをクリアします。|  
+|[remove](remove-element-for-bypasslist-network-settings.md)|プロキシバイパスリストから IP アドレスまたは DNS 名を削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[defaultProxy](../../../../../docs/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
+|[defaultProxy](defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
- バイパス リストには、Uri を記述する正規表現が含まれています。 を<xref:System.Net.WebRequest>インスタンスがプロキシ サーバーではなく直接アクセスします。  
+ バイパスリストには、プロキシサーバーを介してではなく、インスタンス <xref:System.Net.WebRequest> 直接にアクセスする Uri を記述する正規表現が含まれています。  
   
- この要素の正規表現を指定するときに注意を使用する必要があります。 正規表現"[a ~ z] +\\.contoso\\.com"contoso.com.cpandl.com ドメイン内の任意のホストと一致させる任意のホストが、contoso.com ドメインに一致します。 Contoso.com ドメイン内のホストのみが一致するアンカー (「$」) を使用します:"[a ~ z] +\\.contoso\\.com$"です。  
+ この要素に正規表現を指定する場合は、注意が必要です。 正規表現 "[a-z] +\\. contoso\\.com" は、contoso.com ドメイン内の任意のホストと一致しますが、contoso.com.cpandl.com ドメイン内の任意のホストとも一致します。 Contoso.com ドメイン内のホストのみを一致させるには、アンカー ("$"): "[a-z] +\\. contoso\\$" を使用します。  
   
- 正規表現の詳細についてを参照してください。[.NET framework の正規表現](../../../../../docs/standard/base-types/regular-expressions.md)します。  
+ 正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../standard/base-types/regular-expressions.md)します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、2 つのアドレスをバイパス リストに追加します。 1 つ目は、contoso.com ドメイン内のすべてのサーバーでプロキシをバイパスします。2 つ目は、192.168 で開始の IP アドレスを持つすべてのサーバーでプロキシをバイパスします。  
+ 次の例では、バイパスリストに2つのアドレスを追加します。 最初のは、contoso.com ドメイン内のすべてのサーバーのプロキシをバイパスします。2つ目は、IP アドレスが192.168 で始まるすべてのサーバーのプロキシをバイパスします。  
   
 ```xml  
 <configuration>  
@@ -77,5 +77,6 @@ ms.locfileid: "55282959"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

@@ -2,12 +2,12 @@
 title: 実行時における DynamicActivity を使用したアクティビティの作成
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de67fdd71f28bc0f4b16017d253682ca2615f854
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733208"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989738"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>実行時における DynamicActivity を使用したアクティビティの作成
 <xref:System.Activities.DynamicActivity> は、パブリック コンストラクターを持つ、具体的なシール クラスです。 <xref:System.Activities.DynamicActivity> は、実行時にアクティビティ DOM を使用してアクティビティの機能を構築するために使用できます。  
@@ -21,19 +21,19 @@ ms.locfileid: "54733208"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>命令型コードを使用して実行時にアクティビティを作成するには  
   
-1.  OpenVisual Studio 2010。  
+1. OpenVisual Studio 2010。  
   
-2.  選択**ファイル**、**新しい**、**プロジェクト**します。 選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。 選択**シーケンシャル ワークフロー コンソール アプリケーション**で、**テンプレート**ウィンドウ。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
+2. **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** を選択します。 **[プロジェクトの種類]** ウィンドウの **[ビジュアルC# ]** で **[ワークフロー 4.0]** を選択し、 **[v2010]** ノードを選択します。 **[テンプレート]** ウィンドウで **[シーケンシャルワークフローコンソールアプリケーション]** を選択します。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
   
-3.  HelloActivity プロジェクトの Workflow1.xaml を右クリックして**削除**します。  
+3. HelloActivity プロジェクトで Workflow1.xaml を右クリックし、 **[削除]** を選択します。  
   
-4.  Program.cs を開きます。 次のディレクティブをファイルの先頭に追加します。  
+4. Program.cs を開きます。 次のディレクティブをファイルの先頭に追加します。  
   
-    ```  
+    ```csharp  
     using System.Collections.Generic;  
     ```  
   
-5.  1 つの `Main` アクティビティを含む <xref:System.Activities.Statements.Sequence> アクティビティを作成する次のコードで <xref:System.Activities.Statements.WriteLine> メソッドの内容を置き換え、新しい動的アクティビティの <xref:System.Activities.DynamicActivity.Implementation%2A> プロパティに割り当てます。  
+5. 1 つの `Main` アクティビティを含む <xref:System.Activities.Statements.Sequence> アクティビティを作成する次のコードで <xref:System.Activities.Statements.WriteLine> メソッドの内容を置き換え、新しい動的アクティビティの <xref:System.Activities.DynamicActivity.Implementation%2A> プロパティに割り当てます。  
   
     ```csharp  
     //Define the input argument for the activity  
@@ -66,36 +66,36 @@ ms.locfileid: "54733208"
                 Console.ReadLine();  
     ```  
   
-6.  アプリケーションを実行します。 コンソール ウィンドウにテキスト"Hello World!" 表示されます。  
+6. アプリケーションを実行します。 "Hello World!" というテキストが表示されたコンソールウィンドウ ヲ.  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>XAML を使用して実行時にアクティビティを作成するには  
   
-1.  Visual Studio 2010 を開きます。  
+1. Visual Studio 2010 を開きます。  
   
-2.  選択**ファイル**、**新しい**、**プロジェクト**します。 選択**Workflow 4.0**  **Visual c#** で、**プロジェクトの種類**ウィンドウ、および選択、 **v2010**ノード。 選択**ワークフロー コンソール アプリケーション**で、**テンプレート**ウィンドウ。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
+2. **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** を選択します。 **[プロジェクトの種類]** ウィンドウの **[ビジュアルC# ]** で **[ワークフロー 4.0]** を選択し、 **[v2010]** ノードを選択します。 **[テンプレート]** ウィンドウで **[ワークフローコンソールアプリケーション]** を選択します。 新しいプロジェクトに DynamicActivitySample という名前を付けます。  
   
-3.  HelloActivity プロジェクトの Workflow1.xaml を開きます。 をクリックして、**引数**デザイナーの下部にあるオプション。 `String` 型の `TextToWrite` という新しい `In` 引数を作成します。  
+3. HelloActivity プロジェクトの Workflow1.xaml を開きます。 デザイナーの下部にある **[引数]** オプションをクリックします。 `String` 型の `TextToWrite` という新しい `In` 引数を作成します。  
   
-4.  ドラッグ、 **WriteLine**からのアクティビティ、**プリミティブ**デザイナー画面には、ツールボックスのセクション。 値を割り当てる`TextToWrite`を**テキスト**アクティビティのプロパティ。  
+4. ツールボックスの **[プリミティブ]** セクションから、 **WriteLine**アクティビティをデザイナー画面にドラッグします。 アクティビティの`TextToWrite` **Text**プロパティに値を割り当てます。  
   
-5.  Program.cs を開きます。 次のディレクティブをファイルの先頭に追加します。  
+5. Program.cs を開きます。 次のディレクティブをファイルの先頭に追加します。  
   
-    ```  
+    ```csharp  
     using System.Activities.XamlIntegration;  
     ```  
   
-6.  `Main` メソッドの内容を次のコードに置き換えます。  
+6. `Main` メソッドの内容を次のコードに置き換えます。  
   
-    ```  
+    ```csharp  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
                     results = WorkflowInvoker.Invoke(act2, new Dictionary<string, object> { { "TextToWrite", "HelloWorld!" } });  
     Console.ReadLine();  
     ```  
   
-7.  アプリケーションを実行します。 コンソール ウィンドウにテキスト"Hello World!" 表示されます。  
+7. アプリケーションを実行します。 "Hello World!" というテキストが表示されたコンソールウィンドウ が.  
   
-8.  Workflow1.xaml ファイルを右クリックし、**ソリューション エクスプ ローラー**選択**コードの表示**します。 アクティビティ クラスが `x:Class` を使用して作成され、プロパティが `x:Property` を使用して作成されています。  
+8. **ソリューションエクスプローラー**で workflow1.xaml ファイルを右クリックし、 **[コードの表示]** を選択します。 アクティビティ クラスが `x:Class` を使用して作成され、プロパティが `x:Property` を使用して作成されています。  
   
 ## <a name="see-also"></a>関連項目
 
-- [命令型コードを使用してワークフロー、アクティビティ、および式を作成する方法](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [命令型コードを使用してワークフロー、アクティビティ、および式を作成する方法](authoring-workflows-activities-and-expressions-using-imperative-code.md)

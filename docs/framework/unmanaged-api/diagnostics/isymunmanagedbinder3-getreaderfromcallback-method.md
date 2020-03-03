@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 4ef83bd2-3d8e-499e-8a12-d9d6fd6ced30
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5767b60fa992b49fdc2a60feb243a26c0e2ea1ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a0cccc0adfc666cc8e373bc1f89c8f6f97068fde
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534551"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74449303"
 ---
 # <a name="isymunmanagedbinder3getreaderfromcallback-method"></a>ISymUnmanagedBinder3::GetReaderFromCallback メソッド
-実装またはコールバックを使用していずれかを指定できます、`IID_IDiaReadExeAtRVACallback`または`IID_IDiaReadExeAtOffsetCallback`をメモリからデバッグ ディレクトリ情報を取得します。  
+メモリからデバッグディレクトリ情報を取得するために、ユーザーが `IID_IDiaReadExeAtRVACallback` または `IID_IDiaReadExeAtOffsetCallback` のいずれかを使用して実装または提供できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetReaderFromCallback(  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *fileName,  
@@ -39,30 +37,31 @@ HRESULT GetReaderFromCallback(
     [out,retval] ISymUnmanagedReader  **pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `importer`  
- [in]メタデータ インポート インターフェイスへのポインター。  
+ からメタデータインポートインターフェイスへのポインター。  
   
  `fileName`  
- [in]ファイル名へのポインター。  
+ からファイル名へのポインター。  
   
  `searchPath`  
- [in]検索パスへのポインター。  
+ から検索パスへのポインター。  
   
  `searchPolicy`  
- [in]値、 [CorSymSearchPolicyAttributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)シンボル リーダーの検索を行うときに使用されるポリシーを指定する列挙体。  
+ からシンボルリーダーの検索を実行するときに使用するポリシーを指定する[Corsymsearchpolicyattributes](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)列挙体の値。  
   
  `callback`  
- [in]コールバック関数へのポインター。  
+ からコールバック関数へのポインター。  
   
  `pRetVal`  
- [out]設定されているポインターに返された[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)インターフェイス。  
+ 入出力返された[ISymUnmanagedReader](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)インターフェイスに設定されたポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedBinder3 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)

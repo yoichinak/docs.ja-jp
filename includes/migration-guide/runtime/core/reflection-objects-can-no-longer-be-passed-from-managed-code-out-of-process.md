@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d00f86c492a7d32344b1067a48c8e53aa2a43426
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858400"
+---
 ### <a name="reflection-objects-can-no-longer-be-passed-from-managed-code-to-out-of-process-dcom-clients"></a>リフレクション オブジェクトが、マネージド コードからアウト プロセス DCOM クライアントに渡されなくなった
 
 |   |   |

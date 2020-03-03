@@ -2,12 +2,12 @@
 title: ピア名と PNRP ID
 ms.date: 03/30/2017
 ms.assetid: afa538e8-948f-4a98-aa9f-305134004115
-ms.openlocfilehash: 3f82d472e1f8913e2f518abbefa2bb6407d6f54c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15b74317507f69d2339a2e5e49b54ae72cda1a7b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690790"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047500"
 ---
 # <a name="peer-names-and-pnrp-ids"></a>ピア名と PNRP ID
 ピア名は通信のエンドポイントを表します。ピア名には、コンピューター、ユーザー、グループ、サービスのほか、ピアに関連付けられていて IPv6 アドレスに変換できるすべてのものを指定できます。 ピア名解決プロトコル (PNRP) は、クラウド メンバーの識別に使用される PNRP ID を作成するために、統計的に一意なピア名を取得します。  
@@ -20,16 +20,17 @@ ms.locfileid: "54690790"
  セキュリティで保護されたピア名は、所有者によってのみ登録され、公開キー暗号化によって保護されます。 セキュリティで保護されたピア名の所有者は、対応する秘密キーを持つピア エンティティであると想定されます。 秘密キーを使用して署名された、認定済みピア アドレス (CPA) によって、所有権を証明できます。 悪意のあるユーザーは、対応する秘密キーのないピア名の所有権を偽造できません。  
   
 ## <a name="pnrp-ids"></a>PNRP ID  
- ![PNRP ID](../../../docs/framework/network-programming/media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
+ ![PNRP ID](./media/fdc9e8a0-4a1c-488d-a019-bc3a1973220c.gif "fdc9e8a0-4a1c-488d-a019-bc3a1973220c")  
   
  PNRP ID は次の部分で構成されています。  
   
--   上位 128 ビット (ピアツーピア (P2P) ID として知られる) は、エンドポイントに割り当てられたピア名のハッシュです。 ピア名は、*Authority.Classifier* の形式で指定されます。 セキュリティで保護された名前の場合、*Authority* は、ピア名の公開キーのセキュア ハッシュ アルゴリズム 1 (SHA1) ハッシュ (16 進数の数字で出力される) です。 セキュリティで保護されていない名前の場合、*Authority* は "0" です (単一文字)。 *Classifier* は、アプリケーションを識別する文字列です。 ピア名の分類子は、`null` ターミネータを含めて 149 文字より長くすることができます。  
+- 上位 128 ビット (ピアツーピア (P2P) ID として知られる) は、エンドポイントに割り当てられたピア名のハッシュです。 ピア名は、*Authority.Classifier* の形式で指定されます。 セキュリティで保護された名前の場合、*Authority* は、ピア名の公開キーのセキュア ハッシュ アルゴリズム 1 (SHA1) ハッシュ (16 進数の数字で出力される) です。 セキュリティで保護されていない名前の場合、*Authority* は "0" です (単一文字)。 *Classifier* は、アプリケーションを識別する文字列です。 ピア名の分類子は、`null` ターミネータを含めて 149 文字より長くすることができます。  
   
--   下位 128 ビットは、サービスの場所に割り当てられています。同じクラウド内の同じ P2P ID を持つ異なるインスタンスを識別するために生成された数字です。  
+- 下位 128 ビットは、サービスの場所に割り当てられています。同じクラウド内の同じ P2P ID を持つ異なるインスタンスを識別するために生成された数字です。  
   
  P2P ID とサービスの場所の組み合わせを使用すると、1 台のコンピューターから複数の PNRP ID を登録できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.PeerToPeer.PeerName>
 - <xref:System.Net.PeerToPeer>

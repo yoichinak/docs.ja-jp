@@ -1,5 +1,5 @@
 ---
-title: ユーザー データへのアクセス (Visual Basic)
+title: ユーザー データへのアクセス
 ms.date: 07/20/2015
 helpviewer_keywords:
 - domain names [Visual Basic], retrieving
@@ -11,19 +11,20 @@ helpviewer_keywords:
 - login names [Visual Basic]
 - examples [Visual Basic], accessing user data
 ms.assetid: 32492a15-ee59-4a63-a1f1-9b24cc13140a
-ms.openlocfilehash: 5ff071aadb189cec839b9cb41d510764a9187363
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 463d3bc77237482d4cd568b9558bb72cd19e7216
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605490"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349218"
 ---
 # <a name="accessing-user-data-visual-basic"></a>ユーザー データへのアクセス (Visual Basic)
+
 このセクションには、`My.User` オブジェクトとそれで実行できるタスクに関するトピックが含まれています。  
   
  `My.User` オブジェクトを利用すれば、<xref:System.Security.Principal.IPrincipal> インターフェイスを実装するオブジェクトを返すことで、ログオン ユーザーに関する情報にアクセスできます。  
   
-## <a name="tasks"></a>[タスク]  
+## <a name="tasks"></a>タスク  
   
 |終了|解決方法については、|  
 |--------|---------|  
@@ -32,4 +33,5 @@ ms.locfileid: "54605490"
 |ユーザーの役割を判断する|<xref:Microsoft.VisualBasic.ApplicationServices.User.IsInRole%2A>|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.User>

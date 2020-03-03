@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: 9fb144d2-07e0-4a0e-8e05-907bbb6c9e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9baf207f46082a4bb1ece4dba39c98cdd125d073
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c12ca20deee06fcaca68365644fd9dff95379ff
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702107"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121156"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 関数
 メモリに既にマップされているアセンブリが、関連付けられている公開キーに対して有効であるかどうかが確認されます。  
   
- この関数は非推奨とされました。 使用して、 [ICLRStrongName::StrongNameVerificationFromImage](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameVerificationFromImage](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerificationFromImage (  
     [in]  BYTE    *pbBase,  
     [in]  DWORD   dwLength,  
@@ -39,48 +37,49 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbBase`  
- [in]マップされているアセンブリ マニフェストの相対仮想アドレス。  
+ からマップされたアセンブリマニフェストの相対仮想アドレス。  
   
  `dwLength`  
- [in]マップされたイメージのバイト単位のサイズ。  
+ からマップされたイメージのサイズ (バイト単位)。  
   
  `dwInFlags`  
- [in]検証の動作に影響するフラグ。 次の値がサポートされています。  
+ から検証の動作に影響を与えるフラグ。 次の値がサポートされています。  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001) - レジストリ設定を上書きする必要がある場合でも、強制的に検証します。  
+- `SN_INFLAG_FORCE_VER` (0x00000001)-レジストリ設定を上書きする必要がある場合でも、検証を強制的に実行します。  
   
--   `SN_INFLAG_INSTALL` (0x00000002) - これはこのイメージ上で実行される最初の認証であることを指定します。  
+- `SN_INFLAG_INSTALL` (0x00000002)-これがこのイメージで実行される最初の検証であることを指定します。  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004) のキャッシュで管理者特権を持つユーザーにのみアクセスを許可することを指定します。  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-キャッシュが管理者特権を持つユーザーにのみアクセスを許可することを指定します。  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008) のアセンブリが現在のユーザーのみがアクセスできることを指定します。  
+- `SN_INFLAG_USER_ACCESS` (0x00000008)-現在のユーザーのみがアセンブリにアクセスできるように指定します。  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010) - キャッシュはしないことを指定のアクセス制限を保証します。  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010)-キャッシュがアクセス制限の保証を提供しないことを指定します。  
   
--   `SN_INFLAG_RUNTIME` (0x80000000) - 内部デバッグのために予約されています。  
+- `SN_INFLAG_RUNTIME` (0x80000000)-内部デバッグ用に予約されています。  
   
  `pdwOutFlags`  
- [out]追加の出力情報用のフラグです。 次の値がサポートされています。  
+ 入出力追加の出力情報のフラグ。 次の値がサポートされています。  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - この値に設定が`false`レジストリ設定のために、検証が成功したことを指定します。  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-この値は `false` に設定され、レジストリ設定によって検証が成功したことを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
+ 正常に完了した場合は `true`。それ以外の場合は、`false`ます。  
   
 ## <a name="remarks"></a>Remarks  
- 場合、`StrongNameSignatureVerificationFromImage`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
+ `StrongNameSignatureVerificationFromImage` 関数が正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)関数を呼び出して、最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [StrongNameSignatureVerificationFromImage メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [StrongNameSignatureVerificationFromImage メソッド](../hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

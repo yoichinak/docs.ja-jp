@@ -1,18 +1,15 @@
 ---
 title: using static ディレクティブ - C# リファレンス
-ms.custom: seodec18
 ms.date: 03/10/2017
 helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29610a77eadf587162731b5bddbcc4bbe7fa0714
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610529"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712950"
 ---
 # <a name="using-static-directive-c-reference"></a>using static ディレクティブ (C# リファレンス)
 
@@ -28,7 +25,7 @@ using static <fully-qualified-type-name>;
 
 `using static` ディレクティブは、C# 6 で導入されました。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 通常は、静的メンバーを呼び出すときに、型名とメンバー名を指定します。 同じ型名を繰り返し入力してその型のメンバーを呼び出すと、コードが冗長でわかりにくくなる可能性があります。 たとえば、次の `Circle` クラスの定義は、<xref:System.Math> クラスのメンバー数を参照します。
 
@@ -58,5 +55,4 @@ using static <fully-qualified-type-name>;
 - [C# リファレンス](../index.md)
 - [C# のキーワード](index.md)
 - [名前空間の使用](../../programming-guide/namespaces/using-namespaces.md)
-- [名前空間キーワード](namespace-keywords.md)
 - [名前空間](../../programming-guide/namespaces/index.md)

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8c7719a-322b-4133-8566-4c27218dc104
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e583569e43ea58b37f33729bfa19eef1929fae3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bb25d060853abb20316a344bae3755b2f8b4dc7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517241"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791335"
 ---
 # <a name="icordebugthread4-interface"></a>ICorDebugThread4 インターフェイス
 スレッドのブロック情報を提供します。  
@@ -30,18 +28,18 @@ ms.locfileid: "54517241"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetBlockingObjects メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getblockingobjects-method.md)|順序付けされた列挙体を提供[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)スレッドにブロックしている情報を提供する構造体。|  
-|[HadUnhandledException メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-hadunhandledexception-method.md)|スレッドが未処理の例外をしたかどうかを示します。|  
-|[GetCurrentCustomDebuggerNotification メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-getcurrentcustomdebuggernotification-method.md)|現在の取得[icordebugmanagedcallback 3::customnotification](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback3-customnotification-method.md)現在のスレッド上のオブジェクト。|  
+|[GetBlockingObjects メソッド](icordebugthread4-getblockingobjects-method.md)|スレッドブロック情報を提供する[CorDebugBlockingObject](cordebugblockingobject-structure.md)構造体の順序付けられた列挙体を提供します。|  
+|[HadUnhandledException メソッド](icordebugthread4-hadunhandledexception-method.md)|スレッドで未処理の例外が発生したかどうかを示します。|  
+|[GetCurrentCustomDebuggerNotification メソッド](icordebugthread4-getcurrentcustomdebuggernotification-method.md)|現在のスレッドの現在の[ICorDebugManagedCallback3:: CustomNotification](icordebugmanagedcallback3-customnotification-method.md)オブジェクトを取得します。|  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスは ICorDebugThread、ICorDebugThread2 の論理拡張機能と[ICorDebugThread3](../../../../docs/framework/unmanaged-api/debugging/icordebugthread3-interface.md)インターフェイス。  
+## <a name="remarks"></a>コメント  
+ このインターフェイスは、ICorDebugThread2、 [ICorDebugThread3](icordebugthread3-interface.md)の各インターフェイスの論理的な拡張機能です。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -50,5 +48,6 @@ ms.locfileid: "54517241"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

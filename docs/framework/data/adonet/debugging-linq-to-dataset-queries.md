@@ -2,31 +2,32 @@
 title: LINQ to DataSet クエリのデバッグ
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a82fd3e99a556daf40e5c65a16cf20278f38ea26
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825512"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785214"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet クエリのデバッグ
 
-Visual Studio のデバッグをサポートしている[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]コード。 ただし、デバッグのいくつか違いがある[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]コードと非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]マネージ コード。 ほとんどのデバッグ機能を使用[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントをステップ実行、ブレークポイントの設定、デバッガー ウィンドウに表示される結果を表示するなど。 ただし、クエリの実行がデバッグ中に考慮すべきいくつかの副作用を遅延[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]コードし、はエディット コンティニュを使用するには、いくつか制限があります。 このトピックに固有のデバッグの側面を説明します。[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]と比較して非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]マネージ コード。  
+Visual Studio では LINQ to DataSet コードのデバッグがサポートされています。 ただし、LINQ to DataSet コードと非 LINQ to DataSet マネージコードのデバッグにはいくつかの違いがあります。 ほとんどのデバッグ機能は、ステップ実行、ブレークポイントの設定、デバッガーウィンドウに表示される結果の表示など、LINQ to DataSet のステートメントで機能します。 ただし、でのクエリの遅延実行には、LINQ to DataSet コードのデバッグ中に考慮する必要がある副作用がいくつかあります。また、エディットコンティニュの使用にはいくつかの制限があります。 このトピックでは、LINQ to DataSet 以外のマネージコードと比較して LINQ to DataSet に固有のデバッグの側面について説明します。  
   
 ## <a name="viewing-results"></a>結果の表示  
- 結果を表示することができます、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]データヒント、ウォッチ ウィンドウで、[クイック ウォッチ] ダイアログ ボックスを使用してステートメントです。 ソース ウィンドウで特定のクエリにポインターを置くと、データヒントが表示されます。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] の変数をコピーし、それを [ウォッチ] ウィンドウまたは [クイック ウォッチ] ダイアログ ボックスに貼り付けることができます。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] では、クエリが評価されるのは、実際にそのクエリが実行されたときです。作成または宣言した時点では評価されません。 これは呼び出されます*遅延実行*します。 したがって、それが評価されるまでは、クエリ変数に値は割り当てられません。 詳細については、次を参照してください。[で LINQ to DataSet クエリ](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)します。  
+ LINQ to DataSet ステートメントの結果を表示するには、DataTips、ウォッチウィンドウ、および [クイックウォッチ] ダイアログボックスを使用します。 ソース ウィンドウで特定のクエリにポインターを置くと、データヒントが表示されます。 LINQ to DataSet 変数をコピーして、ウォッチウィンドウまたは [クイックウォッチ] ダイアログボックスに貼り付けることができます。 LINQ to DataSet では、クエリは、クエリが実行されたときにのみ、作成または宣言されたときには評価されません。 これを*遅延実行*と呼びます。 したがって、それが評価されるまでは、クエリ変数に値は割り当てられません。 詳細については、「 [LINQ to DataSet のクエリ](queries-in-linq-to-dataset.md)」を参照してください。  
   
- デバッガーは、クエリの結果を表示するために、そのクエリを評価する必要があります。 この暗黙的な評価は、表示するときに発生します。、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]デバッガーでのクエリの結果がいくつかの効果を検討してください。 クエリの評価には時間がかかります。 結果ノードを展開するときにも時間を要します。 クエリによっては繰り返し評価が実行され、パフォーマンスが著しく低下する場合があります。 さらに、データの値またはプログラムの状態が変わるという副作用が伴う場合もあります。 すべてのクエリに副作用があるわけではありません。 副作用を伴うことなく安全にクエリを評価できるかどうかを判断するには、クエリが実装されているコードを十分に理解する必要があります。 詳細については、次を参照してください。[副作用と式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120))します。  
+ デバッガーは、クエリの結果を表示するために、そのクエリを評価する必要があります。 この暗黙的な評価は、デバッガーで LINQ to DataSet クエリの結果を表示するときに発生し、考慮する必要があるいくつかの効果があります。 クエリの評価には時間がかかります。 結果ノードを展開するときにも時間を要します。 クエリによっては繰り返し評価が実行され、パフォーマンスが著しく低下する場合があります。 さらに、データの値またはプログラムの状態が変わるという副作用が伴う場合もあります。 すべてのクエリに副作用があるわけではありません。 副作用を伴うことなく安全にクエリを評価できるかどうかを判断するには、クエリが実装されているコードを十分に理解する必要があります。 詳細については、「[副作用と式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120))」を参照してください。  
   
 ## <a name="edit-and-continue"></a>エディット コンティニュ  
- エディット コンティニュに変更をサポートしません[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 追加、削除、または変更する場合、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントではデバッグ セッション中に、ダイアログ ボックスが表示、変更がエディット コンティニュでサポートされていないを指示します。 このとき、変更を元に戻すか、デバッグ セッションを中止して編集済みのコードで新たなセッションを開始するかを選択できます。  
+ エディットコンティニュは、LINQ to DataSet クエリへの変更をサポートしていません。 デバッグセッション中に LINQ to DataSet ステートメントを追加、削除、または変更した場合、エディットコンティニュでは変更がサポートされていないことを示すダイアログボックスが表示されます。 このとき、変更を元に戻すか、デバッグ セッションを中止して編集済みのコードで新たなセッションを開始するかを選択できます。  
   
- さらに、編集し、続行が型やで使用されている変数の値の変更をサポートしていません、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメント。 この場合も、変更を元に戻すか、デバッグ セッションを中止して新たなセッションを開始するかを選択できます。  
+ また、エディットコンティニュでは、LINQ to DataSet ステートメントで使用される変数の型または値の変更はサポートされていません。 この場合も、変更を元に戻すか、デバッグ セッションを中止して新たなセッションを開始するかを選択できます。  
   
- Visual c# で Visual Studio で、使うことはできませんエディット コンティニュを含むメソッドのコードに対して、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。  
+ Visual Studio C#の visual Studio では、LINQ to DataSet クエリを含むメソッドのコードに対してエディットコンティニュを使用することはできません。  
   
- Visual Studio で Visual basic で使えるエディット コンティニュで[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]を含むメソッドであっても、コード、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 追加または前にコードを削除することができます、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントでは、行番号が変わる場合でも、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 デバッグのエクスペリエンス、Visual Basic 以外[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]前と同じコードまま[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]が導入されました。 変更、追加、または削除することはできません、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]変更を適用するデバッグを停止する場合を除き、ただし、クエリします。  
+ Visual Studio の Visual Basic では、LINQ to DataSet クエリを含むメソッドであっても、非 LINQ to DataSet コードでエディットコンティニュを使用できます。 変更が LINQ to DataSet クエリの行番号に影響する場合でも、LINQ to DataSet ステートメントの前にコードを追加または削除できます。 非 LINQ to DataSet コードの Visual Basic デバッグエクスペリエンスは、LINQ to DataSet が導入される前と同じままです。 ただし、変更を適用するためにデバッグを停止しない限り、LINQ to DataSet クエリを変更、追加、または削除することはできません。  
   
 ## <a name="see-also"></a>関連項目
+
 - [マネージド コードをデバッグする](/visualstudio/debugger/debugging-managed-code)
-- [プログラミング ガイド](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)
+- [プログラミング ガイド](programming-guide-linq-to-dataset.md)

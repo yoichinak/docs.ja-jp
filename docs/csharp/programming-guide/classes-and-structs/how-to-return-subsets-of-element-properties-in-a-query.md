@@ -1,38 +1,37 @@
 ---
-title: '方法: クエリで要素のプロパティのサブセットを返す - C# プログラミング ガイド'
-ms.custom: seodec18
+title: クエリで要素のプロパティのサブセットを返す方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [C#], for subsets of element properties
 ms.assetid: fabdf349-f443-4e3f-8368-6c471be1dd7b
-ms.openlocfilehash: 36e910328651cc4f91acdfb2d40edea56cde2a9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27a2626fc46307a7195040adf746d8d8757d2f82
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676485"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714854"
 ---
-# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>方法: クエリで要素のプロパティのサブセットを返す (C# プログラミング ガイド)
+# <a name="how-to-return-subsets-of-element-properties-in-a-query-c-programming-guide"></a>クエリで要素のプロパティのサブセットを返す方法 (C# プログラミング ガイド)
 次の両方の条件に当てはまる場合は、クエリ式に匿名型を使用します。  
   
--   各ソース要素のプロパティの一部のみを返したい。  
+- 各ソース要素のプロパティの一部のみを返したい。  
   
--   クエリを実行したメソッドのスコープ外のクエリ結果を保存する必要がない。  
+- クエリを実行したメソッドのスコープ外のクエリ結果を保存する必要がない。  
   
  各ソース要素の 1 つのプロパティまたはフィールドのみを返す場合は、`select` 句でドット演算子 (.) を使用します。 たとえば、各 `student` の `ID` のみを返すには、次のように `select` 句を記述します。  
   
-```  
+```csharp  
 select student.ID;  
 ```  
   
 ## <a name="example"></a>例  
  次に、匿名型を使用して、各ソース要素のプロパティのうち、指定した条件に一致するプロパティのみを返す例を示します。  
   
- [!code-csharp[csProgGuideLINQ#31](../../../csharp/programming-guide/arrays/codesnippet/CSharp/how-to-return-subsets-of-element-properties-in-a-query_1.cs)]  
+ [!code-csharp[csProgGuideLINQ#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#31)]  
   
  名前を指定しない場合、匿名型にはプロパティのソース要素名が使用されます。 匿名型のプロパティに新しい名前を付けるには、次のように `select` ステートメントを記述します。  
   
-```  
+```csharp  
 select new { First = student.FirstName, Last = student.LastName };  
 ```  
   
@@ -44,10 +43,10 @@ Console.WriteLine(student.First + " " + student.Last);
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   このコードを実行するには、クラスをコピーし、Visual Studio で作成した Visual C# コンソール アプリケーション プロジェクトに貼り付けます。 既定で、このプロジェクトは [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] バージョン 3.5 をターゲットにしており、System.Core.dll および System.Linq の `using` ディレクティブの参照が含まれます。 これらの要件のうち 1 つまたは複数を満たしていないプロジェクトの場合は、手動で追加することができます。   
+このコードを実行するには、クラスをコピーし、System.Linq に `using` ディレクティブを使用した C# コンソール アプリケーションに貼り付けます。
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [匿名型](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
-- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
+- [C# プログラミング ガイド](../index.md)
+- [匿名型](./anonymous-types.md)
+- [C# での LINQ](../../linq/index.md)

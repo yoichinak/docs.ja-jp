@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 84f895e749fc8f2520dbce3caf9e6c11fda78a7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405770"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73110309"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName メソッド
-アプリケーション ドメインの名前を取得します。  
+アプリケーションドメインの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
@@ -38,24 +36,24 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cchName`  
- [in] `szName` 配列のサイズ。 この値をクエリ モードでこのメソッドを格納する 0 に設定します。  
+ [in] `szName` 配列のサイズ。 このメソッドをクエリモードにするには、この値を0に設定します。  
   
  `pcchName`  
- [out]名前またはで実際に返される文字数のサイズへのポインター`szName`です。 クエリ モードでこの値により、バッファーのサイズを呼び出し元に名前を割り当てられません。  
+ 入出力名前のサイズまたは実際に `szName`に返された文字数を指すポインター。 クエリモードでは、この値によって、呼び出し元は、名前に割り当てるバッファーの大きさを知ることができます。  
   
  `szName`  
- [out]アプリケーション ドメインの名前を格納する配列。  
+ 入出力アプリケーションドメインの名前を格納する配列。  
   
-## <a name="remarks"></a>コメント  
- デバッガーは、`GetName`メソッドを 1 回、名前に必要なバッファーのサイズを取得します。 デバッガーはバッファーを割り当てたし、メソッドを呼び出して、再度バッファーが満杯にします。 最初の呼び出しで、名前のサイズを取得すると呼びます*クエリ モード*です。  
+## <a name="remarks"></a>Remarks  
+ デバッガーは、`GetName` メソッドを1回呼び出して、名前に必要なバッファーのサイズを取得します。 デバッガーによってバッファーが割り当てられ、メソッドが2回目に呼び出されてバッファーに格納されます。 名前のサイズを取得するための最初の呼び出しは、*クエリモード*と呼ばれます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

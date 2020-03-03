@@ -1,16 +1,16 @@
 ---
-title: LINQ to XML のセキュリティ (Visual Basic)
+title: LINQ to XML のセキュリティ
 ms.date: 07/20/2015
 ms.assetid: d99b4af2-d447-4a3b-991b-6da0231a8637
-ms.openlocfilehash: 5d15c6f88f0fb511e401a0896f92c894e3742061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01b03dc5792981d41d16cc7b551892bd6fe2bcde
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505824"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331736"
 ---
-# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML のセキュリティ (Visual Basic)
-ここでは、LINQ to XML に関連するセキュリティの問題について説明し、 セキュリティ上の脆弱性を緩和するためのガイドラインを紹介します。  
+# <a name="linq-to-xml-security-visual-basic"></a>LINQ to XML セキュリティ (Visual Basic)
+ここでは、LINQ to XML に関連するセキュリティの問題について説明し、 さらに、セキュリティ リスクを軽減するためのいくつかのガイダンスを提供します。  
   
 ## <a name="linq-to-xml-security-overview"></a>LINQ to XML のセキュリティの概要  
  LINQ to XML は、厳密なセキュリティ要件が必要なサーバー側アプリケーション向けというよりも、プログラミングの利便性に重点を置いて設計されています。 ほとんどの XML のシナリオでは、サーバーにアップロードされる信頼できない XML ドキュメントではなく、信頼できる XML ドキュメントが処理されます。 LINQ to XML は、こうした一般的なシナリオに最適化されています。  
@@ -26,28 +26,28 @@ ms.locfileid: "54505824"
   
  運用環境の安全性が高くない場合は、XML や <xref:System.Xml?displayProperty=nameWithType>、<xref:System.Xml.Schema?displayProperty=nameWithType>、<xref:System.Xml.XPath?displayProperty=nameWithType>、および <xref:System.Xml.Xsl?displayProperty=nameWithType> の各クラスの使用に関連するセキュリティの問題が発生する可能性が高いといえます。 そのような問題の一部を次に示します。  
   
--   XSD、XPath、および XSLT は文字列に基づく言語であり、時間やメモリを大量に消費する操作を指定することができます。 信頼されていないソースの XSD、XPath、または XSLT の文字列を受け取る場合、アプリケーション プログラマは、その文字列が悪意のあるものでないかどうかを検証する必要があります。また、その文字列の評価によってシステム リソースが過剰に消費されないように監視し、過剰に消費された場合はその状況を緩和する必要があります。  
+- XSD、XPath、および XSLT は文字列に基づく言語であり、時間やメモリを大量に消費する操作を指定することができます。 信頼されていないソースの XSD、XPath、または XSLT の文字列を受け取る場合、アプリケーション プログラマは、その文字列が悪意のあるものでないかどうかを検証する必要があります。また、その文字列の評価によってシステム リソースが過剰に消費されないように監視し、過剰に消費された場合はその状況を緩和する必要があります。  
   
--   XSD スキーマ (インライン スキーマを含む) は、サービス拒否攻撃に対して本質的に脆弱です。信頼できないソースのスキーマは受け入れないようにしてください。  
+- XSD スキーマ (インライン スキーマを含む) は、サービス拒否攻撃に対して本質的に脆弱です。信頼できないソースのスキーマは受け入れないようにしてください。  
   
--   XSD や XSLT には他のファイルへの参照が含まれている場合があり、それらの参照が原因で、ゾーンやドメインを越えた攻撃を受ける可能性があります。  
+- XSD や XSLT には他のファイルへの参照が含まれている場合があり、それらの参照が原因で、ゾーンやドメインを越えた攻撃を受ける可能性があります。  
   
--   DTD 内の外部エンティティが原因で、ゾーンやドメインを越えた攻撃を受ける可能性があります。  
+- DTD 内の外部エンティティが原因で、ゾーンやドメインを越えた攻撃を受ける可能性があります。  
   
--   DTD はサービス拒否攻撃に対して脆弱です。  
+- DTD はサービス拒否攻撃に対して脆弱です。  
   
--   極端に階層の深い XML ドキュメントが原因で、サービス拒否攻撃を受ける可能性があります。XML ドキュメントの階層を制限することをお勧めします。  
+- 極端に階層の深い XML ドキュメントが原因で、サービス拒否攻撃を受ける可能性があります。XML ドキュメントの階層を制限することをお勧めします。  
   
--   信頼できないアセンブリからの <xref:System.Xml.NameTable>、<xref:System.Xml.XmlNamespaceManager>、および <xref:System.Xml.XmlResolver> オブジェクトなどのサポート コンポーネントは受け入れないようにします。  
+- 信頼できないアセンブリからの <xref:System.Xml.NameTable>、<xref:System.Xml.XmlNamespaceManager>、および <xref:System.Xml.XmlResolver> オブジェクトなどのサポート コンポーネントは受け入れないようにします。  
   
--   サイズの大きなドキュメントによる攻撃を緩和するためにデータをチャンク単位で読み取ります。  
+- サイズの大きなドキュメントによる攻撃を緩和するためにデータをチャンク単位で読み取ります。  
   
--   XSLT スタイル シート内のスクリプト ブロックが原因で、多くの攻撃を受ける場合があります。  
+- XSLT スタイル シート内のスクリプト ブロックが原因で、多くの攻撃を受ける場合があります。  
   
--   動的な XPath 式を作成する場合は事前に慎重に検証します。  
+- 動的な XPath 式を作成する場合は事前に慎重に検証します。  
   
 ## <a name="linq-to-xml-security-issues"></a>LINQ to XML のセキュリティの問題  
- ここに示されているセキュリティの問題には、特に優先順位はありません。 すべての問題が重要であり、それぞれに適切に対処する必要があります。  
+ このトピックで示されているセキュリティの問題の順序に特別な意味はありません。 すべての問題が重要であり、それぞれに適切に対処する必要があります。  
   
  権限の昇格攻撃が成功すると、悪意のあるアセンブリがその環境をより自由に制御できるようになります。 その結果、データの公開攻撃やサービス拒否攻撃などを受ける可能性があります。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "54505824"
  DTD の使用時に発生するサービス拒否攻撃の 1 つに、エンティティを過剰に展開するドキュメントによる攻撃があります。 これを防ぐには、<xref:System.Xml.XmlReaderSettings.MaxCharactersFromEntities%2A?displayProperty=nameWithType> プロパティを設定して、エンティティの展開により生成される文字数が制限されたリーダーを作成します。 その後、そのリーダーを使用して XML ツリーを作成します。  
   
 ### <a name="limit-the-depth-of-the-xml-hierarchy"></a>XML 階層の深さを制限する  
- サービス拒否攻撃は、極端に深い階層を持つドキュメントが送信された場合にも発生します。 これを防ぐには、要素の深さをカウントする独自のクラスで <xref:System.Xml.XmlReader> をラップします。 これにより、要素の深さが事前に設定したレベルを超えている場合に、その悪意のあるドキュメントの処理を終了できます。  
+ サービス拒否攻撃の可能性がある状況の 1 つが、非常に階層の深いドキュメントが送信された場合です。 これを防ぐには、要素の深さをカウントする独自のクラスで <xref:System.Xml.XmlReader> をラップします。 これにより、要素の深さが事前に設定したレベルを超えている場合に、その悪意のあるドキュメントの処理を終了できます。  
   
 ### <a name="protect-against-untrusted-xmlreader-or-xmlwriter-implementations"></a>信頼されていない XmlReader や XmlWriter の実装から保護する  
  管理者は、外部から提供された <xref:System.Xml.XmlReader> や <xref:System.Xml.XmlWriter> の実装について、厳密な名前が使用されているかどうか、コンピューターの構成に登録されているかどうかを確認する必要があります。 これにより、リーダーやライターを装った悪意のあるコードが読み込まれるのを防ぐことができます。  
@@ -99,5 +99,6 @@ ms.locfileid: "54505824"
   
  ある程度のセキュリティが共通言語ランタイム (CLR) によって提供されます。 たとえば、プライベート クラスを含まないコンポーネントは、そのクラスによってキー指定された注釈にはアクセスできません。 ただし、注釈を読み取れないコンポーネントでも、注釈を削除することはできます。 このことが、改ざん攻撃に利用される可能性があります。  
   
-## <a name="see-also"></a>関連項目
-- [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [プログラミングガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

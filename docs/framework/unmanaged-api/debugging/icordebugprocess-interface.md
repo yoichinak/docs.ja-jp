@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess Interface1
+title: ICorDebugProcess インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess
@@ -14,47 +14,45 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ae3f64b466e0d356b540cc9d6f3db881e27ac4aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2429052173a187297b67c756213e5d27a79298b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709820"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792601"
 ---
-# <a name="icordebugprocess-interface1"></a>ICorDebugProcess Interface1
-マネージド コードを実行しているプロセスを表します。 このインターフェイスは、ICorDebugController のサブクラスです。  
+# <a name="icordebugprocess-interface"></a>ICorDebugProcess インターフェイス
+マネージド コードを実行しているプロセスを表します。 このインターフェイスは、というコントロールのサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ClearCurrentException メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-clearcurrentexception-method.md)|特定のスレッドで現在管理されていない例外をクリアします。|  
-|[EnableLogMessages メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enablelogmessages-method.md)|有効にし、デバッガーへのログ メッセージの送信を無効にします。|  
-|[EnumerateAppDomains メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateappdomains-method.md)|すべてのプロセスのアプリケーション ドメインを列挙します。|  
-|[EnumerateObjects メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-enumerateobjects-method.md)|実装されていません。|  
-|[GetHandle メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethandle-method.md)|プロセスを識別するハンドルを取得します。|  
-|[GetHelperThreadID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-gethelperthreadid-method.md)|デバッガーの内部ヘルパーのスレッドのオペレーティング システム (OS) のスレッド ID を取得します。|  
-|[GetID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getid-method.md)|プロセスのオペレーティング システム (OS) の ID を取得します。|  
-|[GetObject メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getobject-method.md)|実装されていません。|  
-|[GetThread メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthread-method.md)|取得しますが、指定された OS スレッドをある ICorDebugThread インスタンスの id。|  
-|[GetThreadContext メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-getthreadcontext-method.md)|特定のスレッドのコンテキストを取得します。|  
-|[IsOSSuspended メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-isossuspended-method.md)|デバッガーがプロセスを停止したため、スレッドが中断されたかどうかを判断します。|  
-|[IsTransitionStub メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-istransitionstub-method.md)|マネージ コードへの遷移を発生させるスタブ内にアドレスがあるかどうかを判断します。|  
-|[ModifyLogSwitch メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-modifylogswitch-method.md)|指定したログ スイッチの重大度レベルを設定します。|  
-|[ReadMemory メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-readmemory-method.md)|プロセスからメモリを読み取ります。|  
-|[SetThreadContext メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-setthreadcontext-method.md)|特定のスレッドのコンテキストを設定します。|  
-|[ThreadForFiberCookie メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-threadforfibercookie-method.md)|非推奨。|  
-|[WriteMemory メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess-writememory-method.md)|プロセスのメモリの領域にデータを書き込みます。|  
+|[ClearCurrentException メソッド](icordebugprocess-clearcurrentexception-method.md)|指定されたスレッドで現在のアンマネージ例外をクリアします。|  
+|[EnableLogMessages メソッド](icordebugprocess-enablelogmessages-method.md)|デバッガーへのログメッセージの送信を有効または無効にします。|  
+|[EnumerateAppDomains メソッド](icordebugprocess-enumerateappdomains-method.md)|プロセス内のすべてのアプリケーションドメインを列挙します。|  
+|[EnumerateObjects メソッド](icordebugprocess-enumerateobjects-method.md)|実装されていません。|  
+|[GetHandle メソッド](icordebugprocess-gethandle-method.md)|プロセスを処理するハンドルを取得します。|  
+|[GetHelperThreadID メソッド](icordebugprocess-gethelperthreadid-method.md)|デバッガーの内部ヘルパースレッドのオペレーティングシステム (OS) スレッド ID を取得します。|  
+|[GetID メソッド](icordebugprocess-getid-method.md)|プロセスのオペレーティングシステム (OS) ID を取得します。|  
+|[GetObject メソッド](icordebugprocess-getobject-method.md)|実装されていません。|  
+|[GetThread メソッド](icordebugprocess-getthread-method.md)|指定された OS スレッド ID を持つコードスレッドインスタンスを取得します。|  
+|[GetThreadContext メソッド](icordebugprocess-getthreadcontext-method.md)|指定されたスレッドのコンテキストを取得します。|  
+|[IsOSSuspended メソッド](icordebugprocess-isossuspended-method.md)|デバッガーがプロセスを停止した結果としてスレッドが中断されたかどうかを判断します。|  
+|[IsTransitionStub メソッド](icordebugprocess-istransitionstub-method.md)|マネージコードへの遷移を発生させるスタブ内にアドレスがあるかどうかを判断します。|  
+|[ModifyLogSwitch メソッド](icordebugprocess-modifylogswitch-method.md)|指定されたログスイッチの重大度レベルを設定します。|  
+|[ReadMemory メソッド](icordebugprocess-readmemory-method.md)|プロセスからメモリを読み取ります。|  
+|[SetThreadContext メソッド](icordebugprocess-setthreadcontext-method.md)|指定されたスレッドのコンテキストを設定します。|  
+|[ThreadForFiberCookie メソッド](icordebugprocess-threadforfibercookie-method.md)|非推奨。|  
+|[WriteMemory メソッド](icordebugprocess-writememory-method.md)|プロセスのメモリ領域にデータを書き込みます。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -63,5 +61,6 @@ ms.locfileid: "54709820"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebug インターフェイス](icordebug-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

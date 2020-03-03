@@ -8,12 +8,12 @@ helpviewer_keywords:
 - main compiler option [C#]
 - /main compiler option [C#]
 ms.assetid: 975cf4d5-36ac-4530-826c-4aad0c7f2049
-ms.openlocfilehash: 36e5f10a61711e3245fa4b69dc583f4bb78e55e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c842abc1423e7ee0d98b71392e02410c6cf9172
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558584"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602726"
 ---
 # <a name="-main-c-compiler-options"></a>-main (C# コンパイラ オプション)
 このオプションは、**Main** メソッドを含むクラスが複数ある場合に、プログラムへのエントリ ポイントを含むクラスを指定します。  
@@ -29,18 +29,18 @@ ms.locfileid: "54558584"
  **Main** メソッドを含む型です。  
  指定するクラス名は完全に修飾する必要があります。クラスを含む完全な名前空間を指定し、そのあとにクラス名を続ける必要があります。 たとえば、`Main` メソッドが、`MyApplication.Core` 名前空間の `Program` クラス内に置かれている場合、コンパイラ オプションは `-main:MyApplication.Core.Program` とする必要があります。
   
-## <a name="remarks"></a>コメント  
- [Main](../../../csharp/programming-guide/main-and-command-args/index.md) メソッドを使用した型がコンパイル対象に 2 つ以上含まれている場合には、プログラムへのエントリ ポイントとして使用する **Main** メソッドがどの型に含まれているかを指定できます。  
+## <a name="remarks"></a>解説  
+ [Main](../../programming-guide/main-and-command-args/index.md) メソッドを使用した型がコンパイル対象に 2 つ以上含まれている場合には、プログラムへのエントリ ポイントとして使用する **Main** メソッドがどの型に含まれているかを指定できます。  
   
  このオプションは、.exe ファイルをコンパイルする際に使用されます。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。  
+1. プロジェクトの **[プロパティ]** ページを開きます。  
   
-2.  **[アプリケーション]** プロパティ ページをクリックします。  
+2. **[アプリケーション]** プロパティ ページをクリックします。  
   
-3.  **[スタートアップ オブジェクト]** プロパティを変更します。  
+3. **[スタートアップ オブジェクト]** プロパティを変更します。  
   
      このコンパイラ オプションをプログラムによって設定するには、「<xref:VSLangProj80.ProjectProperties3.StartupObject%2A>」を参照してください。  
   
@@ -53,5 +53,5 @@ csc t2.cs t3.cs -main:Test2
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

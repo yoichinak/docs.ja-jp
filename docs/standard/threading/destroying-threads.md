@@ -9,20 +9,19 @@ helpviewer_keywords:
 - destroying threads
 - threading [.NET Framework], destroying threads
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 93832a296f9b80a5374bc729c04e19d1f178e99f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 842ca4ff17f9cbab3a1518d2dea37436c9b23f9d
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502547"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78155933"
 ---
 # <a name="destroying-threads"></a>スレッドの破棄
-マネージド スレッドを完全に停止するには、<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用します。 <xref:System.Threading.Thread.Abort%2A> を呼び出すと、共通言語ランタイムが対象スレッドで <xref:System.Threading.ThreadAbortException> をスローし、対象スレッドはそれをキャッチできます。 詳細については、「<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>」を参照してください。  
-  
+
+スレッドの実行を終了するには、通常、[協調的なキャンセル モデル](cancellation-in-managed-threads.md)を使用します。 協調的なキャンセルを行うように設計されていないサード パーティのコードがスレッドで実行されているために、スレッドを協調的に停止できない場合があります。 .NET Framework の <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドを使用すると、マネージド スレッドを強制的に終了できます。 <xref:System.Threading.Thread.Abort%2A> を呼び出すと、共通言語ランタイムにより対象スレッド内で <xref:System.Threading.ThreadAbortException> がスローされます。対象スレッドはこれをキャッチできます。 詳細については、「<xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>」を参照してください。 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> メソッドは、.NET Core ではサポートされていません。 .NET Core でサード パーティのコードの実行を強制的に終了する必要がある場合は、それを別のプロセスで実行し、<xref:System.Diagnostics.Process.Kill%2A?displayProperty=nameWithType> を使用します。
+
 > [!NOTE]
->  スレッドが <xref:System.Threading.Thread.Abort%2A> メソッドの呼び出し時にアンマネージ コードを実行する場合、ランタイムはそれを <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType> としてマークします。 スレッドがマネージド コードに戻ると、例外がスローされます。  
+> スレッドが <xref:System.Threading.Thread.Abort%2A> メソッドの呼び出し時にアンマネージ コードを実行する場合、ランタイムはそれを <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType> としてマークします。 スレッドがマネージド コードに戻ると、例外がスローされます。  
   
  スレッドが中止されると、再起動することはできません。  
   
@@ -39,26 +38,26 @@ Try
 Catch ex As ThreadAbortException  
     ' Clean-up code can go here.  
     ' If there is no Finally clause, ThreadAbortException is  
-    ' re-thrown by the system at the end of the Catch clause.   
+    ' re-thrown by the system at the end of the Catch clause.
 Finally  
     ' Clean-up code can go here.  
 End Try  
-' Do not put clean-up code here, because the exception   
+' Do not put clean-up code here, because the exception
 ' is rethrown at the end of the Finally clause.  
 ```  
   
 ```csharp  
-try   
+try
 {  
     // Code that is executing when the thread is aborted.  
-}   
-catch (ThreadAbortException ex)   
+}
+catch (ThreadAbortException ex)
 {  
     // Clean-up code can go here.  
     // If there is no Finally clause, ThreadAbortException is  
-    // re-thrown by the system at the end of the Catch clause.   
+    // re-thrown by the system at the end of the Catch clause.
 }  
-// Do not put clean-up code here, because the exception   
+// Do not put clean-up code here, because the exception
 // is rethrown at the end of the Finally clause.  
 ```  
   

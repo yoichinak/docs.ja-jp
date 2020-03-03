@@ -1,21 +1,21 @@
 ---
-title: Into 句 (Visual Basic)
+title: Into 句
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
-ms.openlocfilehash: 865ec7ce60d731d4d2eced694260f19bcd858d25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 038cf9b812d3fbdb54afaca072694bbde4bfb600
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569090"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348038"
 ---
 # <a name="into-clause-visual-basic"></a>Into 句 (Visual Basic)
-集計関数またはコレクションに適用するグループを識別します。  
+コレクションに適用する集計関数またはグループ化を識別します。  
   
-## <a name="remarks"></a>Remarks  
- `Each`キーワードは、次のコンテキストで使用します。  
+## <a name="remarks"></a>コメント  
+ `Each` キーワードは、次のコンテキストで使用されます。  
   
  [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)  
   
@@ -23,5 +23,6 @@ ms.locfileid: "54569090"
   
  [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

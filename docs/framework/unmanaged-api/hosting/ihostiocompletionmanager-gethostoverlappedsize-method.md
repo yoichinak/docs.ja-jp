@@ -15,64 +15,63 @@ helpviewer_keywords:
 ms.assetid: 2902578b-d5e2-4f8d-a103-0c7b6dceda9e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0f21e25c077ae6ca837a41d3e2227d12dd517d95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c662021894acbb8eb448fa2166498254158caa4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555506"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133858"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize メソッド
-ホストが I/O 要求に追加するカスタム データのサイズを取得します。  
+ホストが i/o 要求に追加しようとしているカスタムデータのサイズを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHostOverlappedSize (  
     [out] DWORD *pcbSize  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pcbSize`  
- [out]共通言語ランタイム (CLR) は、Win32 のサイズだけでなく割り当てる必要がありますバイト数へのポインター`OVERLAPPED`オブジェクト。  
+ 入出力Win32 `OVERLAPPED` オブジェクトのサイズに加えて、共通言語ランタイム (CLR: common language runtime) によって割り当てられるバイト数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`GetHostOverlappedSize` 正常に返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
+|S_OK|`GetHostOverlappedSize` が正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|イベントがキャンセルされましたブロックされたスレッドまたはファイバーが待機しています。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドには、E_FAIL が返される、ときに、CLR は、プロセス内で使用可能ではなくなりました。 メソッドをホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>Remarks  
- Windows プラットフォーム Api に対するすべての非同期 I/O 呼び出しを Win32`OVERLAPPED`オブジェクトで、ファイル ポインターの位置などの情報を提供します。 状態を維持するには、通常非同期 I/O 呼び出しを実行するアプリケーションは、構造にカスタム データを追加します。 `GetHostOverlappedSize` [ihostiocompletionmanager::initializehostoverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md)ホストをこのようなカスタム データを含む機会を提供します。  
+ Windows プラットフォーム Api に対するすべての非同期 i/o 呼び出しでは、Win32 `OVERLAPPED` オブジェクトが使用されます。このオブジェクトは、ファイルポインターの位置などの情報を提供します。 状態を維持するために、非同期 i/o 呼び出しを行うアプリケーションは、通常、カスタムデータを構造に追加します。 `GetHostOverlappedSize` と[Iho/O補完 manager:: InitializeHostOverlapped](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-initializehostoverlapped-method.md)は、このようなカスタムデータをホストに含める機会を提供します。  
   
- CLR の呼び出し、`GetHostOverlappedSize`ホストによって追加されるカスタム データのサイズを決定するメソッド、`OVERLAPPED`オブジェクト。  
+ CLR は、`GetHostOverlappedSize` メソッドを呼び出して、ホストが `OVERLAPPED` オブジェクトに追加するカスタムデータのサイズを決定します。  
   
 > [!NOTE]
->  `GetHostOverlappedSize` 1 回だけ呼び出されます。 ホストのカスタム データは、すべての I/O 要求のサイズと同じである必要があります。  
+> `GetHostOverlappedSize` は1回だけ呼び出されます。 ホストのカスタムデータは、すべての i/o 要求に対して同じサイズである必要があります。  
   
 > [!IMPORTANT]
->  サイズ、`OVERLAPPED`オブジェクト自体がの値に含まれていない`pcbSize`します。  
+> `OVERLAPPED` オブジェクト自体のサイズは、`pcbSize`の値には含まれません。  
   
- 詳細については、`OVERLAPPED`構造体を Windows プラットフォームのドキュメントを参照してください。  
+ `OVERLAPPED` 構造の詳細については、Windows プラットフォームのドキュメントを参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Threading.NativeOverlapped>
 - [ICLRIoCompletionManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
 - [IHostIoCompletionManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)

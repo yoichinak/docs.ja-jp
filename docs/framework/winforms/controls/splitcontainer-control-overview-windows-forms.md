@@ -1,55 +1,56 @@
 ---
-title: SplitContainer コントロールの概要 (Windows フォーム)
+title: SplitContainer コントロールの概要
 ms.date: 03/30/2017
 f1_keywords:
 - SplitContainer
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 78fc56a49c92d17e6e4638573169bf43c3b77ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cb5240ed4ebe3e27c20844681068711c222e9a9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497287"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742922"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer コントロールの概要 (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロールは複合と考えることができ、移動可能なバーで区切られた 2 つのパネルです。 マウス ポインターがバーの上に移動すると、ポインターの形が変わり、バーが移動可能であることを示します。  
   
 > [!IMPORTANT]
->  **ツールボックス**、<xref:System.Windows.Forms.SplitContainer>置換を制御、 <xref:System.Windows.Forms.Splitter> Visual Studio の以前のバージョンであるコントロール。 <xref:System.Windows.Forms.SplitContainer> コントロールは <xref:System.Windows.Forms.Splitter> コントロールより優先されます。 <xref:System.Windows.Forms.Splitter>クラスも含める、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]既存のアプリケーションとの互換性のために使用するぜひが、<xref:System.Windows.Forms.SplitContainer>新しいプロジェクトのコントロール。  
+> **ツールボックス**では、以前のバージョンの Visual Studio に含まれていた <xref:System.Windows.Forms.Splitter> コントロールが <xref:System.Windows.Forms.SplitContainer> コントロールに置き換えられます。 <xref:System.Windows.Forms.SplitContainer> コントロールは <xref:System.Windows.Forms.Splitter> コントロールより優先されます。 <xref:System.Windows.Forms.Splitter> クラスは、既存のアプリケーションの互換性のために .NET Framework に含まれていますが、新しいプロジェクトでは <xref:System.Windows.Forms.SplitContainer> コントロールを使用することを強くお勧めします。  
   
- <xref:System.Windows.Forms.SplitContainer>コントロール、複雑なユーザー インターフェイスを作成することができます。 多くの場合、1 つのパネルで選択範囲を決定、その他のパネルに表示されるオブジェクト。 この配置は、情報の表示と参照に対して非常に効果的です。 2 つのパネルで地域では、情報を集計して、バー、または「分割」により、パネルのサイズを変更するユーザーに簡単です。  
+ <xref:System.Windows.Forms.SplitContainer> コントロールを使用すると、複雑なユーザーインターフェイスを作成できます。多くの場合、1つのパネルで選択すると、他のパネルに表示されるオブジェクトが決まります。 この配置は、情報の表示と参照に対して非常に効果的です。 2つのパネルを使用すると、領域内の情報を集計できます。また、バーまたは "スプリッター" を使用すると、ユーザーがパネルのサイズを簡単に変更できるようになります。  
   
- 1 つ以上<xref:System.Windows.Forms.SplitContainer>コントロール ネストすることも、2 つ目<xref:System.Windows.Forms.SplitContainer>上部と下部のパネルを作成する、水平方向に制御します。  
+ 複数の <xref:System.Windows.Forms.SplitContainer> コントロールを入れ子にすることもできます。2番目の <xref:System.Windows.Forms.SplitContainer> コントロールを水平方向に配置して、上と下のパネルを作成します。  
   
- 注意してくださいを<xref:System.Windows.Forms.SplitContainer>コントロールは既定では、キーボードからアクセスは、ユーザーは、分割線を移動する方向キーを押すことができます、<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>プロパティに設定されて`false`します。  
+ <xref:System.Windows.Forms.SplitContainer> コントロールは、既定ではキーボードからアクセスできることに注意してください。<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> プロパティが `false`に設定されている場合、ユーザーは方向キーを押してスプリッターを移動できます。  
   
- <xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>コントロール、コントロール自体のない、スプリッターの方向を決定します。 そのため、このプロパティ設定されている場合<xref:System.Windows.Forms.Orientation.Vertical>、分割線を上から下、左および右のパネルを作成する実行します。  
+ <xref:System.Windows.Forms.SplitContainer> コントロールの <xref:System.Windows.Forms.SplitContainer.Orientation%2A> プロパティは、コントロール自体ではなく、スプリッターの方向を決定します。 このため、このプロパティが <xref:System.Windows.Forms.Orientation.Vertical>に設定されている場合、スプリッターは上から下に実行され、左右のパネルが作成されます。  
   
- さらに、注意の値、<xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>プロパティの値によって異なります、<xref:System.Windows.Forms.SplitContainer.Orientation%2A>プロパティ。 詳細については、次を参照してください。<xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A>プロパティ。  
+ また、<xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> プロパティの値は、<xref:System.Windows.Forms.SplitContainer.Orientation%2A> プロパティの値によって異なることに注意してください。 詳細については、「<xref:System.Windows.Forms.SplitContainer.SplitterRectangle%2A> プロパティ」を参照してください。  
   
- 移動とサイズを制限することも、<xref:System.Windows.Forms.SplitContainer>コントロール。 <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A>プロパティは、パネルは残ります後に同じサイズを決定します。、<xref:System.Windows.Forms.SplitContainer>コントロールがサイズ変更、および<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>プロパティの場合、スプリッターは、キーボードまたはマウスを移動することが決定します。  
+ <xref:System.Windows.Forms.SplitContainer> コントロールのサイズと移動を制限することもできます。 <xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> プロパティによって、<xref:System.Windows.Forms.SplitContainer> コントロールのサイズが変更された後もどのパネルが同じサイズであるかが決まります。また、<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> プロパティによって、分割線をキーボードまたはマウスで移動できるかどうかが決まります。  
   
 > [!NOTE]
->  場合でも、<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A>プロパティに設定されて`true`、分割ウィンドウも移動を許可するなど、プログラムでを使用して、<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A>プロパティ。  
+> <xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> プロパティが `true`に設定されている場合でも、スプリッターはプログラムによって移動される可能性があります。たとえば、<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> プロパティを使用します。  
   
- 最後に、各パネル、<xref:System.Windows.Forms.SplitContainer>コントロールの個々 のサイズを決定するプロパティがあります。  
+ 最後に、<xref:System.Windows.Forms.SplitContainer> コントロールの各パネルには、個々のサイズを決定するプロパティがあります。  
   
 ## <a name="commonly-used-properties-methods-and-events"></a>一般的に使用されるプロパティ、メソッド、およびイベント  
   
-|名前|説明|  
+|Name|[説明]|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> プロパティ|同じパネルを決定後サイズ、<xref:System.Windows.Forms.SplitContainer>コントロールのサイズを変更します。|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> プロパティ|キーボードまたはマウスで分割線を移動できるかどうかを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> プロパティ|垂直方向または水平方向に分割が配置されているかどうかを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> プロパティ|移動可能な分割バーを左端または上端からのピクセル単位で距離を決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> プロパティ|最小距離 (ピクセル単位)、スプリッターをユーザーが移動できることを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> プロパティ|分割線のピクセル単位での太さを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> イベント|分割線を移動するときに発生します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> イベント|分割線が移動されたときに発生します。|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> プロパティ|<xref:System.Windows.Forms.SplitContainer> コントロールのサイズを変更した後、どのパネルが同じサイズになるかを指定します。|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> プロパティ|キーボードまたはマウスを使用してスプリッターを移動できるかどうかを決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> プロパティ|分割線を垂直方向または水平方向のどちらに配置するかを決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> プロパティ|左端または上端から移動可能スプリッターバーまでの距離をピクセル単位で決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> プロパティ|ユーザーがスプリッターを移動できる最小距離をピクセル単位で指定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> プロパティ|分割線の太さ (ピクセル単位) を決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> イベント|スプリッターの移動中に発生します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> イベント|スプリッターが移動したときに発生します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
-- [SplitContainer コントロールのサンプル](https://msdn.microsoft.com/library/9015fad0-7108-4d85-a83a-a72d038c4f65)
+- [SplitContainer コントロール](splitcontainer-control-windows-forms.md)
+- [SplitContainer コントロールのサンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

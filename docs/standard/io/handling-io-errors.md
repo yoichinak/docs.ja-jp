@@ -8,17 +8,15 @@ dev_langs:
 helpviewer_keywords:
 - I/O, exception handling
 - I/O, errors
-author: rpetrusha
-ms.author: ronpet
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: d2ff4e69596e721f485d107317f261231615c5a6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126876"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120742"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET での I/O エラーの処理
 
@@ -26,14 +24,14 @@ ms.locfileid: "53126876"
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>。すべての <xref:System.IO> 例外の種類の基底クラス。 これは、オペレーティング システムからのリターン コードが他の例外の種類に直接マップされないエラーに対してスローされます。
 - <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>。
-- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>。
-- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>。
-- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>。
-- <xref:System.OperationCanceledException?displayProperty=nameWithType>。
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
 - <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>。
 - <xref:System.ArgumentException?displayProperty=nameWithType>、.NET Framework と .NET Core 2.0 以前のバージョンで、無効なパス文字に対してスローされます。
 - <xref:System.NotSupportedException?displayProperty=nameWithType>、.NET Framework で無効なコロンに対してスローされます。
-- <xref:System.Security.SecurityException?displayProperty=nameWithType>、.NET Framework で必要な権限が欠けている限定的な信頼で実行されているアプリケーションに対してスローされます  (完全な信頼は .NET Framework の既定の設定です)。
+- <xref:System.Security.SecurityException?displayProperty=nameWithType>、.NET Framework で必要な権限が欠けている限定的な信頼で実行されているアプリケーションに対してスローされます (完全な信頼は .NET Framework の既定の設定です)。
 
 ## <a name="mapping-error-codes-to-exceptions"></a>エラー コードの例外へのマッピング
 
@@ -49,13 +47,13 @@ ms.locfileid: "53126876"
 
 | 例外の種類 | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | [はい] | [はい] |
-| <xref:System.IO.FileNotFoundException> | [はい] | [はい] |
-| <xref:System.IO.DirectoryNotFoundException> | [はい] | [はい] |
-| <xref:System.IO.DriveNotFoundException?> | [はい] | [はい] |
-| <xref:System.IO.PathTooLongException> | [はい] | [はい] |
-| <xref:System.OperationCanceledException> | [はい] | [はい] |
-| <xref:System.UnauthorizedAccessException> | [はい] | [はい] |
+| <xref:System.IO.IOException> | [はい] | はい |
+| <xref:System.IO.FileNotFoundException> | はい | はい |
+| <xref:System.IO.DirectoryNotFoundException> | はい | はい |
+| <xref:System.IO.DriveNotFoundException?> | はい | はい |
+| <xref:System.IO.PathTooLongException> | はい | はい |
+| <xref:System.OperationCanceledException> | はい | はい |
+| <xref:System.UnauthorizedAccessException> | はい | [はい] |
 | <xref:System.ArgumentException> | .NET Core 2.0 以前| はい |
 | <xref:System.NotSupportedException> | × | はい |
 | <xref:System.Security.SecurityException> | × | 限定的な信頼のみ |

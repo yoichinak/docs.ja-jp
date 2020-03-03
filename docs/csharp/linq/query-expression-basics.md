@@ -3,12 +3,12 @@ title: クエリ式の基本 (C# での LINQ)
 description: クエリ式に関連する概念について説明します
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5ebe2163df47c60c677d7ac911ce0f65529835eb
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709118"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635861"
 ---
 # <a name="query-expression-basics"></a>クエリ式の基本
 
@@ -170,7 +170,7 @@ LINQ では、クエリの*結果*ではなく、*クエリ*を格納する変�
 
 [!code-csharp[csrefQueryExpBasics#63](~/samples/snippets/csharp/concepts/linq/query-expression-basics_19.cs)]
 
-詳しくは、「[方法: グループ化操作でサブクエリを実行する](perform-a-subquery-on-a-grouping-operation.md)」をご覧ください。
+詳細については、「[グループ化操作でのサブクエリの実行](perform-a-subquery-on-a-grouping-operation.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

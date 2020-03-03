@@ -6,20 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f3abaa8115d2e52a98f0b42588860dece6361df5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: HT
+ms.openlocfilehash: 01e11ed62b0855b9027dfd7999f8b787c075028a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267301"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709674"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script> を使用した XSLT スタイルシートのスクリプト
 <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
+> .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
   
  <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数がクラス定義でラップされることによって Microsoft Intermediate Language (MSIL) にコンパイルされるため、パフォーマンスが低下しません。  
   
@@ -31,7 +29,7 @@ ms.locfileid: "55267301"
   
  `msxsl` は、名前空間 `urn:schemas-microsoft-com:xslt` に関連付けられたプレフィックスです。  
   
- `language` 属性は必須ではありませんが、指定する場合は、値をC#、VB、JScript、JavaScript、VisualBasic、または CSharp のいずれかにする必要があります。 language 属性を指定しない場合、既定の言語は JScript です。 `language-name` では大文字小文字が区別されないため、"JavaScript" と "javascript" は同じものと見なされます。  
+ `language` 属性は必須ではありませんが、指定した場合、その値は、`C#`、`VB`、`JScript`、`JavaScript`、`VisualBasic`、`CSharp`のいずれかである必要があります。 language 属性を指定しない場合、既定の言語は JScript です。 `language-name` では大文字小文字が区別されないため、"JavaScript" と "javascript" は同じものと見なされます。  
   
  `implements-prefix` 属性は必須です。 この属性は、名前空間を宣言し、それをスクリプト ブロックに関連付けるために使用されます。 この属性の値は、名前空間を表すプレフィックスです。 この名前空間は、スタイル シート内の任意の場所で定義できます。  
   
@@ -45,13 +43,13 @@ ms.locfileid: "55267301"
   
  アセンブリから証拠を取得するには、`this.GetType().Assembly.Evidence` を使用します。 URI (Uniform Resource Identifier) から証拠を取得するには、`Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)` を使用します。  
   
- <xref:System.Xml.Xsl.XslTransform.Load%2A> を受け取り、<xref:System.Xml.XmlResolver> を受け取らない `Evidence` メソッドを使う場合、アセンブリのセキュリティ ゾーンは既定で Full Trust に設定されます。 詳しくは、「<xref:System.Security.SecurityZone>」および「[名前付き権限セット](https://msdn.microsoft.com/library/08250d67-c99d-4ab0-8d2b-b0e12019f6e3)」をご覧ください。  
+ <xref:System.Xml.Xsl.XslTransform.Load%2A> を受け取り、<xref:System.Xml.XmlResolver> を受け取らない `Evidence` メソッドを使う場合、アセンブリのセキュリティ ゾーンは既定で Full Trust に設定されます。 詳しくは、「<xref:System.Security.SecurityZone>」および「[名前付き権限セット](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4652tyx7(v=vs.100))」をご覧ください。  
   
  関数は、`msxsl:script` 要素内で宣言できます。 既定でサポートされる名前空間を次の表に示します。 表に示す名前空間の外側でもクラスを使用できます。 ただし、これらのクラスには、完全修飾名が指定されている必要があります。  
   
 |既定の名前空間|説明|  
 |------------------------|-----------------|  
-|システム|システム クラス|  
+|System|システム クラス|  
 |System.Collection|コレクション クラス|  
 |System.Text|テキスト クラス|  
 |System.Text.RegularExpressions|正規表現クラス|  
@@ -64,15 +62,15 @@ ms.locfileid: "55267301"
   
  スクリプト関数で定義されている引数および戻り値は、W3C (World Wide Web Consortium) XPath 型または XSLT 型のいずれかである必要があります。 対応する W3C 型、それと同等の .NET Framework のクラス (型)、および W3C 型が XPath 型または XSLT 型のどちらかを次の表に示します。  
   
-|型|対応する .NET Framework クラス (型)|XPath 型または XSLT 型|  
+|の型|対応する .NET Framework クラス (型)|XPath 型または XSLT 型|  
 |----------|----------------------------------------------|-----------------------------|  
-|String|System.String|XPath|  
-|ブール型|System.Boolean|XPath|  
-|数値|System.Double|XPath|  
+|文字列型|System.String|XPath|  
+|Boolean|System.Boolean|XPath|  
+|Number|System.Double|XPath|  
 |Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
- スクリプト関数が数値型Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、または Decimal を使用する場合、これらの数値型は、W3C XPath 数値型に対応する Double に強制的に変換されます。 その他の型はすべて、`ToString` メソッドを呼び出して強制的に文字列に変換されます。  
+ スクリプト関数が数値型 Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、または Decimal を使用する場合、これらの数値型は、W3C XPath 数値型に対応する Double に強制的に変換されます。 その他の型はすべて、`ToString` メソッドを呼び出して強制的に文字列に変換されます。  
   
  スクリプト関数が上記以外の型を使用したり、スタイル シートが <xref:System.Xml.Xsl.XslTransform> オブジェクトに読み込まれるときにスクリプト関数がコンパイルを実行しなかったりすると、例外がスローされます。  
   
@@ -100,7 +98,7 @@ ms.locfileid: "55267301"
   
  この例では、アンパサンドがエスケープされないため、結果として例外がスローされます。 このドキュメントは XML として読み込まれ、`msxsl:script` 要素タグ間にあるテキストに対して特別な処理は適用されません。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
  埋め込みスクリプトを使用して、半径が指定された円の円周を算出する例を次に示します。  
   
 ```vb  
@@ -167,7 +165,7 @@ public class Sample
 }  
 ```  
   
-## <a name="input"></a>入力  
+## <a name="input"></a>[入力]  
  number.xml  
   
 ```xml  

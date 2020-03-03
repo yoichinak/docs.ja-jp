@@ -15,44 +15,43 @@ helpviewer_keywords:
 ms.assetid: 7cc22562-128c-440a-9147-55ff20f173d7
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d8d6a0ebecb4fbb9ba277844710c775d80648e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e81ef33f4fb684cce29aa9afb756451b1e5db896
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716818"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426161"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString メソッド
-指定された相対仮想アドレスに格納されている文字列を取得します。  
+指定した相対仮想アドレスに格納されている文字列を取得します。  
   
- このメソッドは廃止され、使用する必要があります。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetString (  
     [in]  ULONG      RVA,   
     [out] LPWSTR     *lpString  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `RVA`  
- [in]返される文字列の相対仮想アドレス。  
+ から返される文字列の相対仮想アドレス。  
   
  `lpString`  
- [out]返される文字列。  
+ 入出力返された文字列。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

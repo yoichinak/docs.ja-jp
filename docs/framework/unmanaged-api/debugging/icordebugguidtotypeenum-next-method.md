@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: c9937666-8e18-484d-9fe0-b9ac95199530
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4b6e129b4ea5e6042a4ce41ed20b76f4a0e75fd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76cab0b8b5f16f24c62e31be2707c95c7e557034
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676732"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777637"
 ---
 # <a name="icordebugguidtotypeenumnext-method"></a>ICorDebugGuidToTypeEnum::Next メソッド
-指定した数を取得[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)インスタンス情報を入力する Guid にマップします。  
+Guid を型情報にマップする、指定された数の[Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md)インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next(  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched] CorDebugGuidToTypeMapping values[  ],  
@@ -37,20 +35,20 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]取得する GUID 型への対応付けオブジェクトの数。  
+ から取得する GUID から型へのマッピングオブジェクトの数。  
   
  `values`  
- [out]それぞれが指すポインターの配列を[CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)マップするオブジェクト、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を対応する ICorDebugType オブジェクトの GUID。  
+ 入出力ポインターの配列。それぞれのポインターが[Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md)オブジェクトを指します。これは、Windows ランタイム GUID を対応するテキストオブジェクトにマップします。  
   
  `pceltFetched`  
- [out]数へのポインター [CorDebugGuidToTypeMapping](../../../../docs/framework/unmanaged-api/debugging/cordebugguidtotypemapping-structure.md)で実際に返されるオブジェクト`values`します。  
+ 入出力実際に `values`で返された[Cordebugguidtotypemapping](cordebugguidtotypemapping-structure.md)オブジェクトの数へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** Windows ランタイム  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -59,5 +57,6 @@ HRESULT Next(
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugGuidToTypeEnum インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugguidtotypeenum-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugGuidToTypeEnum インターフェイス](icordebugguidtotypeenum-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

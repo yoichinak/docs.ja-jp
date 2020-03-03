@@ -18,38 +18,35 @@ helpviewer_keywords:
 ms.assetid: e91bf8c3-7c26-4732-938e-2e5b04abfc99
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b3d7555ec5b87957ff1c8e085a4c3ac44c660b0c
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: dd83fc6a7f553b54cc2acd5e9a93d8d58747d75a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260817"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73141704"
 ---
 # <a name="strongnameerrorinfo-function"></a>StrongNameErrorInfo 関数
 厳密な名前の関数のいずれかに基づいて最後に発生したエラー コードが取得されます。  
   
- この関数は非推奨とされました。  
+ この関数は非推奨とされます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT StrongNameErrorInfo ();   
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 最終 COM エラー コードの厳密な名前の関数のいずれかによって設定します。  
+ 厳密な名前関数のいずれかによって設定された最後の COM エラーコード。  
   
 ## <a name="remarks"></a>Remarks  
- 厳密な名前のメソッドのほとんどは、単純なを返す`true`または`false`が正常に完了を示す値。 使用して、`StrongNameErrorInfo`厳密な名前の関数によって生成された最後のエラーを示す HRESULT を取得します。  
+ 厳密な名前のメソッドのほとんどは、単純な `true`、または正常に完了したことを示す `false` を返します。 `StrongNameErrorInfo` 関数を使用すると、厳密な名前関数によって生成された最後のエラーを指定する HRESULT を取得できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  

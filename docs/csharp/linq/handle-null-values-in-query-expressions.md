@@ -3,12 +3,12 @@ title: クエリ式の null 値の処理 (C# での LINQ)
 description: C# の LINQ クエリ式で null 値を処理する方法について説明します。
 ms.date: 12/01/2016
 ms.assetid: ac63ae8b-724d-4251-9334-528f4e884ae7
-ms.openlocfilehash: 14609aee2bbd1fbb487589bb41683a1f3cad1362
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: c9a3aaec05fa029a8db66826bdcb4a1d106176e3
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857568"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736858"
 ---
 # <a name="handle-null-values-in-query-expressions"></a>クエリ式の null 値の処理
 
@@ -32,4 +32,4 @@ join 句で、比較キーの一方だけが null 許容値型である場合、
 
 - <xref:System.Nullable%601>
 - [統合言語クエリ (LINQ)](index.md)
-- [Null 許容型](../programming-guide/nullable-types/index.md)
+- [null 許容値型](../language-reference/builtin-types/nullable-value-types.md)

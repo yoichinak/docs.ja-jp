@@ -2,19 +2,19 @@
 title: 集計処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6fc035e5-7639-48b8-bc7f-b093dd31b039
-ms.openlocfilehash: fd526a971e3d894a1219d06ee66127fddff07025
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea32becbb7ad0d3944eaea7b1b5448342ed438a5
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692217"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347547"
 ---
 # <a name="aggregation-operations-c"></a>集計処理 (C#)
 集計の操作では、値の集合体から単一の値が計算されます。 たとえば、1 か月分の毎日の気温値から 1 日あたりの平均の気温値を計算することが集計操作です。  
   
  次の図は、数値のシーケンスに対する 2 つの集計処理の結果を示しています。 最初の処理で数値が合計されます。 2 つ目の処理でシーケンスの最大値が返されます。  
   
- ![LINQ の集計処理](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")  
+ ![LINQ 集計操作を示す図。](./media/aggregation-operations/linq-aggregation-operations.png)  
   
  次のセクションでは、集計処理を実行する標準クエリ演算子メソッドの一覧を示します。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "54692217"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)
-- [方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
-- [方法: 一連のフォルダーの合計バイト数を照会する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)
+- [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
+- [CSV テキスト ファイルの列値を計算する方法 (LINQ) (C#)](./how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [ディレクトリ ツリー内で最もサイズの大きいファイルを照会する方法 (LINQ) (C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- [一連のフォルダーの合計バイト数を照会する方法 (LINQ) (C#)](./how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md)

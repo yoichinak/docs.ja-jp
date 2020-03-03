@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: bfdc946b-8238-4eb9-8a85-884049fb0fd4
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2452f4be0acde300676bf56011416e0a9ef16464
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 843399b7e3de522e2c4574963897430aa60a5a50
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411717"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114795"
 ---
 # <a name="icordebugframegetcaller-method"></a>ICorDebugFrame::GetCaller メソッド
-現在のこのフレームを呼び出したチェーン内 ICorDebugFrame オブジェクトへのポインターを取得します。  
+このフレームを呼び出した現在のチェーン内のテキストボックスオブジェクトへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCaller (  
     [out] ICorDebugFrame     **ppFrame  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppFrame`  
- [out]アドレスへのポインター、`ICorDebugFrame`を呼び出し元のフレームを表すオブジェクト。 この値は、呼び出されたフレームが現在のチェーン内の最も外側のフレームが場合は null です。  
+ 入出力呼び出し元のフレームを表す `ICorDebugFrame` オブジェクトのアドレスへのポインター。 呼び出されたフレームが現在のチェーンの最も外側のフレームである場合、この値は null になります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

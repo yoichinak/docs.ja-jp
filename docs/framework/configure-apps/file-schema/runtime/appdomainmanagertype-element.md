@@ -5,21 +5,19 @@ helpviewer_keywords:
 - appDomainManagerType element
 - <appDomainManagerType> element
 ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 25a3bf60986b571b473561d4258a76624bbfc982
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: bae4aa39f9c43480ac2ef984f78834b68646742d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262479"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118239"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 要素
 既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーの役割を果たす種類を指定します。  
   
- \<configuration>  
-\<runtime>  
-\<appDomainManagerType>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainManagerType >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +33,7 @@ ms.locfileid: "55262479"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`value`|必須の属性です。 プロセスの既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーとして機能する名前空間を含む、型の名前を指定します。|  
+|`value`|必須の属性です。 プロセス内の既定のアプリケーションドメインのアプリケーションドメインマネージャーとして機能する、名前空間を含む型の名前を指定します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -48,20 +46,20 @@ ms.locfileid: "55262479"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- アプリケーション ドメイン マネージャーの種類を指定するには、この両方の要素を指定する必要があります、 [ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)要素。 これらの要素のいずれかが指定されていない場合、その他は無視されます。  
+ アプリケーションドメインマネージャーの種類を指定するには、この要素と[\<appDomainManagerAssembly >](appdomainmanagerassembly-element.md)要素の両方を指定する必要があります。 これらの要素のいずれかが指定されていない場合、もう一方は無視されます。  
   
- 既定のアプリケーション ドメインが読み込まれるときに<xref:System.TypeLoadException>で指定されたアセンブリでは、指定した型が存在しない場合にスローされる、 [ \<appDomainManagerAssembly >](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)要素; とプロセスが失敗する起動します。  
+ 既定のアプリケーションドメインが読み込まれると、 [\<appDomainManagerAssembly >](appdomainmanagerassembly-element.md)要素によって指定されたアセンブリ内に指定された型が存在しない場合に <xref:System.TypeLoadException> がスローされます。また、プロセスを開始できません。  
   
- 既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーの種類を指定すると、既定のアプリケーション ドメインから作成されたその他のアプリケーション ドメインは、アプリケーション ドメイン マネージャーの型を継承します。 使用して、<xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>と<xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>プロパティを新しいアプリケーション ドメインの別のアプリケーション ドメイン マネージャーの種類を指定します。  
+ 既定のアプリケーションドメインに対してアプリケーションドメインマネージャーの種類を指定すると、既定のアプリケーションドメインから作成された他のアプリケーションドメインは、アプリケーションドメインマネージャーの種類を継承します。 <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType> と <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType> のプロパティを使用して、新しいアプリケーションドメインに別のアプリケーションドメインマネージャーの種類を指定します。  
   
- アプリケーション ドメイン マネージャーの種類を指定するには、完全な信頼のアプリケーションが必要です。 (たとえば、デスクトップで実行されているアプリケーションは完全な信頼があります。)アプリケーションには、完全な信頼がない場合、<xref:System.TypeLoadException>がスローされます。  
+ アプリケーションドメインマネージャーの種類を指定するには、アプリケーションが完全に信頼されている必要があります。 (たとえば、デスクトップで実行されているアプリケーションには完全な信頼があります)。アプリケーションが完全に信頼されていない場合は、<xref:System.TypeLoadException> がスローされます。  
   
- 型および名前空間の形式が使用されるのと同じ形式、<xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティ。  
+ 型と名前空間の形式は、<xref:System.Type.FullName%2A?displayProperty=nameWithType> プロパティで使用される形式と同じです。  
   
- この構成要素はでのみ使用できますが、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]以降。  
+ この構成要素は、.NET Framework 4 以降でのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、プロセスの既定のアプリケーション ドメインのアプリケーション ドメイン マネージャーを指定する方法を示しています、`MyMgr`で入力、`AdMgrExample`アセンブリ。  
+ 次の例では、プロセスの既定のアプリケーションドメインのアプリケーションドメインマネージャーが `AdMgrExample` アセンブリの `MyMgr` の種類であることを指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -74,9 +72,10 @@ ms.locfileid: "55262479"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.AppDomainSetup.AppDomainManagerType%2A?displayProperty=nameWithType>
 - <xref:System.AppDomainSetup.AppDomainManagerAssembly%2A?displayProperty=nameWithType>
-- [\<appDomainManagerAssembly > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/appdomainmanagerassembly-element.md)
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [SetAppDomainManagerType メソッド](../../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)
+- [\<appDomainManagerAssembly > 要素](appdomainmanagerassembly-element.md)
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [SetAppDomainManagerType メソッド](../../../unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)

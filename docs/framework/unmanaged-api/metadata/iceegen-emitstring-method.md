@@ -15,44 +15,43 @@ helpviewer_keywords:
 ms.assetid: ad2710a7-edb8-4493-8619-3fce235e3334
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f51ce9a4b45bd674f53cf7b4c4d6cedb8d46858d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8433ff6e0ec550d6b0558bfb9c7698c49e98278c
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586424"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436383"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString メソッド
-コード ベースに、指定した文字列を出力します。  
+指定した文字列をコードベースに出力します。  
   
- このメソッドは廃止され、使用する必要があります。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EmitString (  
     [in]  LPWSTR    lpString,  
     [out] ULONG     *RVA  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lpString`  
- [in]出力する文字列。  
+ から出力する文字列。  
   
  `RVA`  
- [out]生成された文字列の相対仮想アドレス。  
+ 入出力出力された文字列の相対仮想アドレス。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

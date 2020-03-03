@@ -1,5 +1,5 @@
 ---
-title: WriteOnly (Visual Basic)
+title: WriteOnly
 ms.date: 07/20/2015
 f1_keywords:
 - WriteOnly
@@ -11,44 +11,45 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: b6c8a05a4575c5d1ec01aa1b2badf2129c54bc2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 847617ea6534089857a759fbea3bb16a3a5a36a1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522779"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344189"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
-プロパティの記述が読み取らないことを指定します。  
+プロパティを書き込むことができても読み取ることができないことを指定します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 ## <a name="rules"></a>ルール  
- **宣言コンテキスト。** `WriteOnly` は、モジュール レベルでのみ使用できます。 これは、意味の宣言のコンテキストを`WriteOnly`プロパティは、クラス、構造体、またはモジュールにある必要があるあり、ソース ファイル、名前空間、またはプロシージャにすることはできません。  
+ **宣言コンテキスト。** `WriteOnly` は、モジュール レベルでのみ使用できます。 つまり、`WriteOnly` プロパティの宣言コンテキストは、クラス、構造体、またはモジュールである必要があり、ソースファイル、名前空間、またはプロシージャにすることはできません。  
   
- としてプロパティを宣言する`WriteOnly`が変数ではありません。  
+ プロパティは、変数ではなく `WriteOnly`として宣言できます。  
   
 ## <a name="when-to-use-writeonly"></a>WriteOnly を使用する場合  
- 値の設定ができないことができる、使用側コードたい場合があります。 たとえば、ソーシャル登録番号やパスワードなどの機密データを設定していない任意のコンポーネントによるアクセスから保護する必要があります。 このような場合は、使用することができます、`WriteOnly`プロパティ値を設定します。  
+ 場合によっては、コンシューマー側のコードで値を設定できても、それが何であるかを検出できないようにする必要があります。 たとえば、ソーシャル登録番号やパスワードなどの機密データは、設定されていないコンポーネントによるアクセスから保護する必要があります。 このような場合は、`WriteOnly` プロパティを使用して値を設定できます。  
   
 > [!IMPORTANT]
->  定義して使用するときに、`WriteOnly`プロパティ、次の追加の保護対策を検討してください。  
+> `WriteOnly` プロパティを定義して使用する場合は、次の追加の保護対策を検討してください。  
   
--   **オーバーライドします。** プロパティがクラスのメンバーである場合は、許可する既定の[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)を宣言していないと`Overridable`または`MustOverride`します。 これは派生クラスが上書きすることによって、不要なアクセスを作成することを防ぎます。  
+- **オーバーライド.** プロパティがクラスのメンバーである場合は、既定の[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)にすることを許可し、`Overridable` または `MustOverride`を宣言しません。 これにより、派生クラスがオーバーライドを通じて望ましくないアクセスを行うのを防ぐことができます。  
   
--   **アクセス レベルです。** 1 つまたは複数の変数で、プロパティの機密データを保持する場合では、宣言[プライベート](../../../visual-basic/language-reference/modifiers/private.md)できるように、その他のコードはアクセスできません。  
+- **アクセスレベル。** プロパティの機微なデータを 1 つ以上の変数に保持している場合は、他のコードがアクセスできないように [Private](../../../visual-basic/language-reference/modifiers/private.md)変数を宣言します。
   
--   **暗号化。** プレーン テキストではなく、暗号化された形式では、すべての機密データを格納します。 何らかの方法で、悪意のあるコードのメモリの領域にアクセスできる場合より少なく、データを使用します。 暗号化も機密データをシリアル化する必要がある場合に役立ちます。  
+- **暗号化。** すべての機密データをプレーンテキストではなく暗号化された形式で保存します。 悪意のあるコードが何らかの方法でメモリ領域にアクセスできた場合は、データを使用するのが難しくなります。 暗号化は、機密データをシリアル化する必要がある場合にも役立ちます。  
   
--   **リセットしています。** クラス、構造体、またはプロパティを定義するモジュールが終了するときに既定値または他の意味のない値に機微なデータをリセットします。 これにより、一般的なアクセスにそのメモリ領域が解放されるとき、保護を強化できます。  
+- **リセット。** プロパティを定義するクラス、構造体、またはモジュールが終了しているときに、機微なデータを既定値またはその他の意味のない値にリセットします。 これにより、メモリの領域が一般アクセス用に解放されるときに、追加の保護が提供されます。  
   
--   **永続化します。** 回避する場合、ディスクなどに、機密データは保持されません。 クリップボードには、機密データは書き込みませんも。  
+- **永続性。** 機密データを回避できる場合は、ディスクなどに保存しないでください。 また、機微なデータをクリップボードに書き込まないでください。
   
- `WriteOnly`修飾子は、このコンテキストで使用できます。  
+ このコンテキストでは、`WriteOnly` 修飾子を使用できます。  
   
  [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

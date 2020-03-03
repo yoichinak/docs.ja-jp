@@ -1,45 +1,46 @@
 ---
-title: -nostdlib (Visual Basic)
+title: -nostdlib
 ms.date: 03/13/2018
 helpviewer_keywords:
 - nostdlib compiler option [Visual Basic]
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 32a5b0531851e9f8b4280e8d2908bfe2d011bf90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db6b047f521d8ef44d2bd1b70b654a4233ebb1a7
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547724"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347914"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
-コンパイラが自動的に標準のライブラリを参照します。  
+コンパイラが標準ライブラリを自動的に参照しないようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -nostdlib  
 ```  
   
-## <a name="remarks"></a>Remarks  
- `-nostdlib`オプションは、System.dll アセンブリへの自動参照を削除し、コンパイラが Vbc.rsp ファイルを読み取ることを防ぎます。 Vbc.exe のファイルと同じディレクトリにある、Vbc.rsp ファイルを一般的に使用される参照[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリとインポート、`System`と`Microsoft.VisualBasic`名前空間。  
+## <a name="remarks"></a>コメント  
+ `-nostdlib` オプションを指定すると、System .dll アセンブリへの自動参照が削除され、コンパイラによって Vbc.exe ファイルが読み取られなくなります。 Vbc.exe ファイルと同じディレクトリにある Vbc.exe ファイルは、一般的に使用される .NET Framework アセンブリを参照し、`System` と `Microsoft.VisualBasic` 名前空間をインポートします。  
   
 > [!NOTE]
->  Mscorlib.dll および Microsoft.VisualBasic.dll のアセンブリは、常に参照されます。  
+> Mscorlib.dll および Microsoft の .dll アセンブリは常に参照されます。  
   
 > [!NOTE]
->  `-nostdlib`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルする場合にのみ使用可能なです。  
+> `-nostdlib` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`T2.vb`標準ライブラリを参照することがなく。 設定する必要があります、`_MYTYPE`条件付きコンパイル定数文字列を削除するには、「空」に、`My`オブジェクト。  
+ 次のコードは、標準ライブラリを参照せずに `T2.vb` をコンパイルします。 `My` オブジェクトを削除するには、`_MYTYPE` 条件付きコンパイル定数を文字列 "Empty" に設定する必要があります。  
   
 ```console
 vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb  
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
 - [My で利用可能なオブジェクトのカスタマイズ](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

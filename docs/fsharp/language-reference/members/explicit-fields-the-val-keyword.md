@@ -1,17 +1,17 @@
 ---
-title: 明示的なフィールド:Val キーワード
-description: については、 F# 'val' キーワードは、型を初期化せず、クラスまたは構造体の型に値を格納する場所を宣言するために使用します。
+title: '明示的なフィールド: Val キーワード'
+description: F# ' Val ' キーワードについて説明します。これは、型を初期化せずに、クラスまたは構造体の型に値を格納する場所を宣言するために使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 2703d9a2734cfda1614a401ec24c6630ec31b2f1
+ms.sourcegitcommit: 878ca7550b653114c3968ef8906da2b3e60e3c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773628"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71736830"
 ---
-# <a name="explicit-fields-the-val-keyword"></a>明示的なフィールド:Val キーワード
+# <a name="explicit-fields-the-val-keyword"></a>明示的なフィールド: Val キーワード
 
-`val` キーワードを使用すると、クラス型または構造体型の値を格納する場所を初期化せずに宣言することができます。 この方法で宣言されている記憶域の場所が呼び出される*明示的なフィールド*します。 `val` キーワードの別の用途として、`member` キーワードと組み合わせて自動実装プロパティを宣言する方法があります。 自動実装プロパティの詳細については、次を参照してください。[プロパティ](properties.md)します。
+`val` キーワードを使用すると、クラス型または構造体型の値を格納する場所を初期化せずに宣言することができます。 この方法で宣言されたストレージの場所は、*明示的なフィールド*と呼ばれます。 `val` キーワードの別の用途として、`member` キーワードと組み合わせて自動実装プロパティを宣言する方法があります。 自動実装プロパティの詳細については、「[プロパティ](properties.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -25,49 +25,46 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 
 明示的なフィールドは静的にも非静的にもできます。 *アクセス修飾子*できる`public`、 `private`、または`internal`します。 既定では、明示的なフィールドは public です。 常に private であるクラスの `let` バインドとは、この点が異なります。
 
-[DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58)をプライマリ コンス トラクターを持つクラス型の明示的なフィールドに属性が必要です。 この属性は、フィールドが 0 に初期化されることを示します。 フィールドの型ではゼロ初期化をサポートしている必要があります。 型が次のいずれかである場合は、ゼロ初期化がサポートされています。
+Primary コンストラクターを持つクラス型の明示的なフィールドには、 [DefaultValue](https://msdn.microsoft.com/library/a3a3307b-8c05-441e-b109-245511614d58)属性が必要です。 この属性は、フィールドが 0 に初期化されることを示します。 フィールドの型ではゼロ初期化をサポートしている必要があります。 型が次のいずれかである場合は、ゼロ初期化がサポートされています。
 
 - 値が 0 のプリミティブ型。
-
 - 標準値、外れ値、または値の表現として null 値をサポートする型。 これには、クラス、タプル、レコード、関数、インターフェイス、.NET 参照型、`unit` 型、判別された共用体型が含まれます。
-
 - .NET 値型。
-
 - すべてのフィールドで既定値 0 がサポートされている構造体。
 
 たとえば、`someField` と呼ばれる変更できないフィールドには、.NET によるコンパイル済み表現を使用した、`someField@` という名前のバッキング フィールドが含まれており、ユーザーは `someField` という名前のプロパティを使用して、格納されている値にアクセスします。
 
 変更可能なフィールドの場合、.NET によるコンパイル済み表現は .NET フィールドになります。
 
->[!WARNING]
-`Note` .NET Framework 名前空間`System.ComponentModel`同じ名前を持つ属性が含まれています。 この属性の詳細については、「`System.ComponentModel.DefaultValueAttribute`」を参照してください。
+> [!WARNING]
+> .NET Framework 名前空間`System.ComponentModel`には、同じ名前を持つ属性が含まれています。 この属性の詳細については、「<xref:System.ComponentModel.DefaultValueAttribute>」を参照してください。
 
 次のコードは、明示的なフィールドの使用方法を示しています。また、比較のために、プライマリ コンストラクターを持つクラスの `let` バインディングも示しています。 `let` バインディングのフィールド `myInt1` が private であることに注意してください。 `let` バインディングのフィールド `myInt1` をメンバー メソッドから参照する際は、自己識別子 `this` は必要ありません。 ただし、明示的なフィールド `myInt2` と `myString` を参照する際は、自己識別子が必要です。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6701.fs)]
 
 出力は次のとおりです。
 
-```
+```console
 11 12 abc
 30 def
 ```
 
 次のコードは、プライマリ コンストラクターを持たないクラスでの明示的なフィールドの使用方法を示しています。 この場合、`DefaultValue` 属性は必要ありませんが、その型用に定義されているコンストラクターですべてのフィールドが初期化される必要があります。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6702.fs)]
 
 出力は `35 22`になります。
 
-次のコードは、構造体での明示的なフィールドの使用方法を示しています。 構造体は値型であるため、フィールドの値を 0 に設定する既定のコンストラクターが自動的に含まれます。 そのため、`DefaultValue` 属性は必要ありません。
+次のコードは、構造体での明示的なフィールドの使用方法を示しています。 構造体は値型であるため、フィールドの値を0に設定するパラメーターなしのコンストラクターが自動的に設定されます。 そのため、`DefaultValue` 属性は必要ありません。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6703.fs)]
 
 出力は `11 xyz`になります。
 
-**注意してください**、構造体を初期化しようとする場合は、`mutable`せずフィールド`mutable`の割り当てはキーワード、割り当ての直後に破棄される構造のコピーで動作します。 そのため、構造は変更されません。
+キーワードを使用しない`mutable`フィールドで`mutable`構造体を初期化する場合、割り当ては、割り当ての直後に破棄される構造体のコピーで機能します。 そのため、構造は変更されません。
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet6704.fs)]
 
 明示的なフィールドは日常的に使用するためのものではありません。 通常、可能な場合は、明示的なフィールドでなく、クラスで `let` バインドを使用してください 明示的なフィールドは、特定の相互運用のシナリオ (ネイティブ API に対するプラットフォーム呼び出しで使用される構造体を定義する必要がある場合など) や COM 相互運用のシナリオで役立ちます。 詳細については、次を参照してください。[外部関数](../functions/external-functions.md)します。 また、プライマリ コンストラクターを持たないクラスを生成する F# コード ジェネレーターを使用している場合にも、明示的なフィールドが必要になることがあります。 明示的なフィールドは、thread-static 変数や同様のコンストラクターでも役立ちます。 詳細については、「 `System.ThreadStaticAttribute` 」を参照してください。
 

@@ -6,19 +6,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
-ms.translationtype: HT
+ms.openlocfilehash: ecbed7e57628b4e140e0f4dbcd600643617b075a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204891"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710896"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs による XML ドキュメントのイベント処理
 イベント処理のために **XmlDocument** オブジェクトに登録されたイベント ハンドラーでは、渡された引数が **XmlNodeChangedEventArgs** によってカプセル化されます。 各イベントとその発生するタイミングを次の表に示します。  
   
-|event|発生するタイミング|  
+|Event|発生するタイミング|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|現在のドキュメントに属するノードが別のノードに挿入されるとき。|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|現在のドキュメントに属するノードが別のノードに挿入されたとき。|  
@@ -28,7 +26,7 @@ ms.locfileid: "44204891"
 |<xref:System.Xml.XmlDocument.NodeChanged>|ノードの値が変更されたとき。|  
   
 > [!NOTE]
->  **XmlDataDocument** のメモリの用途が **DataSet** ストレージの利用に完全に最適化されている場合は、基になる **DataSet** が変更された場合でも、**XmlDataDocument** では上に示したどのイベントも発生しない場合があります。 これらのイベントが必要な場合は、**XmlDocument** 全体を 1 回走査して、メモリ使用の最適化が完全でない状態にします。  
+> **XmlDataDocument** のメモリの用途が **DataSet** ストレージの利用に完全に最適化されている場合は、基になる **DataSet** が変更された場合でも、**XmlDataDocument** では上に示したどのイベントも発生しない場合があります。 これらのイベントが必要な場合は、**XmlDocument** 全体を 1 回走査して、メモリ使用の最適化が完全でない状態にします。  
   
  イベント ハンドラーを定義する方法、およびイベント ハンドラーをイベントに追加する方法を次のコード サンプルに示します。  
   
@@ -206,7 +204,7 @@ public class Sample
 } // End class   
 ```  
   
- 詳細については、<xref:System.Xml.XmlNodeChangedEventArgs> および <xref:System.Xml.XmlNodeChangedEventHandler> を参照してください。  
+ 詳細については、「<xref:System.Xml.XmlNodeChangedEventArgs>」および「<xref:System.Xml.XmlNodeChangedEventHandler>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

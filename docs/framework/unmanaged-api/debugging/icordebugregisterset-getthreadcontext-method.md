@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0f63400b-dc1c-48d6-b51a-75c3f7f28e03
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 668b3849af9be24e019dc472a0b80067f0e1e0c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8137d5477b75b864e223852cf524ac8c5b6c0f2b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612737"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792088"
 ---
 # <a name="icordebugregistersetgetthreadcontext-method"></a>ICorDebugRegisterSet::GetThreadContext メソッド
 現在のスレッドのコンテキストを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
     [in] ULONG32 contextSize,  
     [in, out, length_is(contextSize),  
@@ -37,20 +35,20 @@ HRESULT GetThreadContext(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `contextSize`  
- [in]サイズ (バイト単位) の`context`配列。  
+ から`context` 配列のサイズ (バイト単位)。  
   
  `context`  
- [入力、出力]Win32 を構成するバイトの配列`CONTEXT`現在のプラットフォームの構造体。  
+ [入力、出力]現在のプラットフォームの Win32 `CONTEXT` 構造体を構成するバイト配列。  
   
-## <a name="remarks"></a>Remarks  
- デバッガーは、Win32 ではなく、この関数を呼び出す必要があります`GetThreadContext`関数は、スレッドのコンテキストに一時的に変更がされている「ハイジャック」の状態になるためです。 返されるデータは、Win32`CONTEXT`現在のプラットフォームの構造体。  
+## <a name="remarks"></a>コメント  
+ スレッドが一時的に変更されている "ハイジャック" 状態である可能性があるため、デバッガーは Win32 `GetThreadContext` 関数の代わりにこの関数を呼び出す必要があります。 返されるデータは、現在のプラットフォームの Win32 `CONTEXT` 構造体です。  
   
- 使用してレジスタが有効なリーフ以外のフレームのクライアントを確認する必要があります[icordebugregisterset::getregistersavailable](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregistersavailable-method.md)します。  
+ 非リーフフレームの場合、クライアントは、テキストボックス[:: GetRegistersAvailable](icordebugregisterset-getregistersavailable-method.md)を使用して、どのレジスタが有効であるかを確認する必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -59,5 +57,6 @@ HRESULT GetThreadContext(
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugRegisterSet インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [ICorDebugRegisterSet2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+
+- [ICorDebugRegisterSet インターフェイス](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 インターフェイス](icordebugregisterset2-interface.md)

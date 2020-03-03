@@ -3,34 +3,48 @@ title: プラグインがある .NET Core アプリケーションを作成す�
 description: プラグインをサポートする .NET Core アプリケーションを作成する方法について説明します。
 author: jkoritzinsky
 ms.author: jekoritz
-ms.date: 01/28/2019
-ms.openlocfilehash: f2997c778b87ecd88c0fd2fadf491763066a4950
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.date: 10/16/2019
+ms.openlocfilehash: 4c03c70edcdba52c4e6029402b92d5478a0d312c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739595"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156648"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>プラグインがある .NET Core アプリケーションを作成する
 
-このチュートリアルでは、次の方法を紹介します。
+このチュートリアルでは、カスタムの <xref:System.Runtime.Loader.AssemblyLoadContext> を作成してプラグインを読み込む方法を説明します。 プラグインの依存関係を解決するために <xref:System.Runtime.Loader.AssemblyDependencyResolver> が使用されます。 このチュートリアルでは、ホスト アプリケーションからプラグインの依存関係を正しく分離します。 以下の方法について説明します。
 
 - プロジェクトを構造化してプラグインをサポートする。
 - カスタム <xref:System.Runtime.Loader.AssemblyLoadContext> を作成して各プラグインを読み込む。
-- `System.Runtime.Loader.AssemblyDependencyResolver` 型を使用して、プラグインが依存関係を持てるようにする。
+- <xref:System.Runtime.Loader.AssemblyDependencyResolver?displayProperty=fullName> 型を使用して、プラグインが依存関係を持てるようにする。
 - ビルド成果物をコピーするだけで簡単にデプロイできるプラグインを作成する。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [.NET Core 3.0 Preview 2 SDK](https://www.microsoft.com/net/core)以降のバージョンがインストールされていること。
+- [NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 以降のバージョンをインストールします。
 
 ## <a name="create-the-application"></a>アプリケーションを作成する
 
 最初にアプリケーションを作成します。
 
-1. 新しいフォルダーを作成し、そのフォルダーで `dotnet new console -o AppWithPlugin` を実行します。 
-2. プロジェクトのビルドをより容易にするため、Visual Studio のソリューション ファイルを作成します。 同じフォルダーで `dotnet new sln` を実行します。 
-3. `dotnet sln add AppWithPlugin/AppWithPlugin.csproj` を実行して、アプリ プロジェクトをソリューションに追加します。
+1. 新しいフォルダーを作成し、そのフォルダーで次のコマンドを実行します。
+
+    ```dotnetcli
+    dotnet new console -o AppWithPlugin
+    ```
+
+2. プロジェクトのビルドをより容易にするため、同じフォルダー内に Visual Studio のソリューション ファイルを作成します。 次のコマンドを実行します。
+
+    ```dotnetcli
+    dotnet new sln
+    ```
+
+3. 次のコマンドを実行して、アプリ プロジェクトをソリューションに追加します。
+
+    ```dotnetcli
+    dotnet sln add AppWithPlugin/AppWithPlugin.csproj
+    ```
 
 これで、アプリケーションのスケルトンに入力できます。 *AppWithPlugin/Program.cs* ファイル内のコードを次のコードに置き換えます。
 
@@ -112,8 +126,6 @@ IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
 }).ToList();
 ```
 
-
-
 次に、`// Output the loaded commands` コメントを次のコード スニペットに置き換えます。
 
 ```csharp
@@ -177,7 +189,7 @@ static IEnumerable<ICommand> CreateCommands(Assembly assembly)
 
 [!code-csharp[loading-plugins](~/samples/core/extensions/AppWithPlugin/AppWithPlugin/PluginLoadContext.cs)]
 
-`PluginLoadContext` 型は <xref:System.Runtime.Loader.AssemblyLoadContext> から派生します。 `AssemblyLoadContext` 型は、アセンブリのバージョンが競合しないように、開発者が読み込んだアセンブリを別のグループに隔離できるようにするランタイムの特殊な型です。 さらに、カスタム `AssemblyLoadContext` は、アセンブリを読み込むためにさまざまなパスから選択して、既定の動作をオーバーライドすることができます。 `PluginLoadContext` は、.NET Core 3.0 で導入された `AssemblyDependencyResolver` 型のインスタンスを使用して、アセンブリ名をパスに解決します。 `AssemblyDependencyResolver` オブジェクトは、.NET クラス ライブラリへのパスを使用して構築されます。 これは、パスが `AssemblyDependencyResolver` コンストラクターに渡されたクラス ライブラリの *deps.json* ファイルに基づいて、アセンブリとネイティブ ライブラリをその相対パスに解決します。 カスタム `AssemblyLoadContext` は、プラグインが独自の依存関係を持てるようにし、`AssemblyDependencyResolver` は依存関係を正しく読み込むことを容易にします。
+`PluginLoadContext` 型は <xref:System.Runtime.Loader.AssemblyLoadContext> から派生します。 `AssemblyLoadContext` 型は、アセンブリのバージョンが競合しないように、開発者が読み込んだアセンブリを別のグループに隔離できるようにするランタイムの特殊な型です。 さらに、カスタム `AssemblyLoadContext` は、アセンブリを読み込むためにさまざまなパスから選択して、既定の動作をオーバーライドすることができます。 `PluginLoadContext` は、.NET Core 3.0 で導入された `AssemblyDependencyResolver` 型のインスタンスを使用して、アセンブリ名をパスに解決します。 `AssemblyDependencyResolver` オブジェクトは、.NET クラス ライブラリへのパスを使用して構築されます。 これは、パスが `AssemblyDependencyResolver` コンストラクターに渡されたクラス ライブラリの *.deps.json* ファイルに基づいて、アセンブリとネイティブ ライブラリをその相対パスに解決します。 カスタム `AssemblyLoadContext` は、プラグインが独自の依存関係を持てるようにし、`AssemblyDependencyResolver` は依存関係を正しく読み込むことを容易にします。
 
 これで、`AppWithPlugin` プロジェクトに `PluginLoadContext` 型が追加されたので、次の本文を使用して `Program.LoadPlugin`メソッドを更新します。
 
@@ -201,12 +213,22 @@ static Assembly LoadPlugin(string relativePath)
 
 プラグインごとに異なる `PluginLoadContext` インスタンスを使用することで、プラグインは異なる依存関係、または競合する依存関係であっても問題なく持つことができます。
 
-## <a name="create-a-simple-plugin-with-no-dependencies"></a>依存関係のない単純なプラグインを作成する
+## <a name="simple-plugin-with-no-dependencies"></a>依存関係のない単純なプラグイン
 
 ルート フォルダーに戻り、次の手順を実行します。
 
-1. `dotnet new classlib -o HelloPlugin` を実行して、`HelloPlugin` という名前の新しいクラス ライブラリ プロジェクトを作成します。
-2. `dotnet sln add HelloPlugin/HelloPlugin.csproj` を実行して、そのプロジェクトを `AppWithPlugin` ソリューションに追加します。 
+1. 次のコマンドを実行して、`HelloPlugin` という名前の新しいクラス ライブラリ プロジェクトを作成します。
+
+    ```dotnetcli
+    dotnet new classlib -o HelloPlugin
+    ```
+
+2. 次のコマンドを実行して、そのプロジェクトを `AppWithPlugin` ソリューションに追加します。
+
+    ```dotnetcli
+    dotnet sln add HelloPlugin/HelloPlugin.csproj
+    ```
+
 3. *HelloPlugin/Class1.cs* ファイルを、次のコンテンツを持つ *HelloCommand.cs* という名前のファイルに置き換えます。
 
 [!code-csharp[the-hello-plugin](~/samples/core/extensions/AppWithPlugin/HelloPlugin/HelloCommand.cs)]
@@ -228,25 +250,28 @@ static Assembly LoadPlugin(string relativePath)
 
 ```xml
 <ItemGroup>
-<ProjectReference Include="..\PluginBase\PluginBase.csproj">
-    <Private>false</Private>
-</ProjectReference>
+    <ProjectReference Include="..\PluginBase\PluginBase.csproj">
+        <Private>false</Private>
+        <ExcludeAssets>runtime</ExcludeAssets>
+    </ProjectReference>
 </ItemGroup>
 ```
 
-`<Private>false</Private>` 要素は非常に重要です。 これは MSBuild に *PluginBase.dll* を HelloPlugin の出力ディレクトリにコピーしないように指示します。 *PluginBase.dll* アセンブリが出力ディレクトリに存在すると、`PluginLoadContext` はそこでアセンブリを検索し、*HelloPlugin.dll* アセンブリを読み込むときにそのアセンブリを読み込みます。 この時点で、`HelloPlugin.HelloCommand` 型は、既定の読み込みコンテキストに読み込まれる `ICommand` インターフェイスではなく、`HelloPlugin` プロジェクトの出力ディレクトリ内の *PluginBase.dll* から `ICommand` インターフェイスを実装します。 ランタイムでは、これらの 2 つの型は別のアセンブリからの異なる型として認識されるため、`AppWithPlugin.Program.CreateCommands` メソッドでコマンドが見つからなくなります。 結果として、プラグイン インターフェイスを含むアセンブリへの参照に `<Private>false</Private>`メタデータが必要になります。
+`<Private>false</Private>` 要素は重要です。 これは MSBuild に *PluginBase.dll* を HelloPlugin の出力ディレクトリにコピーしないように指示します。 *PluginBase.dll* アセンブリが出力ディレクトリに存在すると、`PluginLoadContext` はそこでアセンブリを検索し、*HelloPlugin.dll* アセンブリを読み込むときにそのアセンブリを読み込みます。 この時点で、`HelloPlugin.HelloCommand` 型は、既定の読み込みコンテキストに読み込まれる `ICommand` インターフェイスではなく、`HelloPlugin` プロジェクトの出力ディレクトリ内の *PluginBase.dll* から `ICommand` インターフェイスを実装します。 ランタイムでは、これらの 2 つの型は別のアセンブリからの異なる型として認識されるため、`AppWithPlugin.Program.CreateCommands` メソッドではコマンドが見つかりません。 結果として、プラグイン インターフェイスを含むアセンブリへの参照に `<Private>false</Private>`メタデータが必要になります。
 
-これで `HelloPlugin` プロジェクトが完了したので、`AppWithPlugin` プロジェクトが `HelloPlugin` プラグインがある場所を認識できるように更新する必要があります。 `// Paths to plugins to load` コメントの後に、`pluginPaths` 配列の要素として `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` を追加します。
+同様に、`PluginBase` が他のパッケージを参照している場合は、`<ExcludeAssets>runtime</ExcludeAssets>` 要素も重要になります。 この設定は `<Private>false</Private>` と同じ効果を持ちますが、`PluginBase` プロジェクトまたはその依存関係のいずれかに含まれている場合があるパッケージ参照に対して機能します。
 
-## <a name="create-a-plugin-with-library-dependencies"></a>ライブラリ依存関係を持つプラグインを作成する
+これで `HelloPlugin` プロジェクトが完了したので、`AppWithPlugin` プロジェクトを更新して、`HelloPlugin` プラグインが配置されている場所を認識できるようにする必要があります。 `// Paths to plugins to load` コメントの後に、`pluginPaths` 配列の要素として `@"HelloPlugin\bin\Debug\netcoreapp3.0\HelloPlugin.dll"` を追加します。
+
+## <a name="plugin-with-library-dependencies"></a>ライブラリ依存関係を持つプラグイン
 
 ほぼすべてのプラグインは単純な "Hello World" よりも複雑で、多くのプラグインには他のライブラリへの依存関係があります。 サンプルの `JsonPlugin` および `OldJson` のプラグイン プロジェクトでは、`Newtonsoft.Json` への NuGet パッケージの依存関係を持つプラグインの 2 つの例が示されています。 プロジェクト ファイル自体には、プロジェクト参照のための特別な情報は含まれていません。また、(`pluginPaths` 配列へのプラグインのパスを追加した後) プラグインは AppWithPlugin アプリの同じ実行で実行する場合でも、完璧に実行されます。 ただし、これらのプロジェクトでは参照されるアセンブリが出力ディレクトリにコピーされないため、プラグインが機能するためには、アセンブリがユーザーのコンピューター上に存在する必要があります。 この問題を回避する方法は 2 つあります。 1 つ目の方法は、`dotnet publish` コマンドを使用してクラス ライブラリを発行することです。 または、プラグインに `dotnet build` の出力を使用できるようにしたい場合は、プラグインのプロジェクト ファイルで `<PropertyGroup>` タグの間に `<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>`プロパティを追加することができます。 例については、`XcopyablePlugin` プラグイン プロジェクトを参照してください。
 
-## <a name="other-plugin-examples-in-the-sample"></a>サンプル内のその他のプラグインの例
+## <a name="other-examples-in-the-sample"></a>サンプル内のその他の例
 
-`AssemblyDependencyResolver` オブジェクトも NuGet パッケージおよびローカライズされたサテライト アセンブリに含まれるネイティブ ライブラリを解決できます。 `UVPlugin` および `FrenchPlugin` は、これらのシナリオをそれぞれ示しています。
+このチュートリアルの完全なソース コードは [dotnet/samples リポジトリ](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)で確認できます。 完全なサンプルには、他のいくつかの `AssemblyDependencyResolver` の動作例が含まれています。 たとえば、`AssemblyDependencyResolver` オブジェクトも、NuGet パッケージに含まれているローカライズされたサテライト アセンブリと同じようにネイティブ ライブラリを解決できます。 サンプル リポジトリの `UVPlugin` と `FrenchPlugin` で、これらのシナリオが示されています。
 
-## <a name="how-to-reference-a-plugin-interface-assembly-defined-in-a-nuget-package"></a>NuGet パッケージで定義されているプラグイン インターフェイス アセンブリを参照する方法
+## <a name="reference-a-plugin-interface-from-a-nuget-package"></a>NuGet パッケージからプラグイン インターフェイスを参照する
 
 `A.PluginBase` という名前の NuGet パッケージで定義されているプラグイン インターフェイスを持つアプリ A があるとします。 プラグイン プロジェクト内のパッケージを正しく参照するにはどうすればよいでしょうか。 プロジェクト参照の場合、dll が出力にコピーされるのを防止する `<Private>false</Private>` メタデータをプロジェクト ファイル内の `ProjectReference` 要素で使用します。
 
@@ -262,4 +287,8 @@ static Assembly LoadPlugin(string relativePath)
 
 ## <a name="plugin-target-framework-recommendations"></a>プラグインのターゲット フレームワークの推奨事項
 
-プラグインの依存関係の読み込みでは *deps.json* ファイルが使用されるため、プラグインのターゲット フレームワークに関連する課題があります。 具体的には、プラグインでは .NET Standard のバージョンではなく、.NET Core 3.0 などのランタイムをターゲットとする必要があります。 プロジェクトがターゲットとするフレームワークに基づいて `deps.json` ファイルが生成されます。また、多くの .NET Standard と互換性のあるパッケージでは .NET Standard に対してビルドするための参照アセンブリと、特定のランタイムのための実装アセンブリが同梱されているため、`deps.json` が実装アセンブリを正しく認識できない場合や、想定していた .NET Core バージョンではなく、アセンブリの .NET Standard バージョンが取得される場合があります。
+プラグインの依存関係の読み込みでは *.deps.json* ファイルが使用されるため、プラグインのターゲット フレームワークに関連する課題があります。 具体的には、プラグインでは .NET Standard のバージョンではなく、.NET Core 3.0 などのランタイムをターゲットとする必要があります。 プロジェクトがターゲットとするフレームワークに基づいて *.deps.json* ファイルが生成されます。また、多くの .NET Standard と互換性のあるパッケージでは .NET Standard に対してビルドするための参照アセンブリと、特定のランタイムのための実装アセンブリが同梱されているため、 *.deps.json* が実装アセンブリを正しく認識できない場合や、想定していた .NET Core バージョンではなく、アセンブリの .NET Standard バージョンが取得される場合があります。
+
+## <a name="plugin-framework-references"></a>プラグイン フレームワークの参照
+
+現時点では、プラグインで新しいフレームワークをプロセスに導入することはできません。 たとえば、ルート `Microsoft.NETCore.App` フレームワークのみを使用するアプリケーションに、`Microsoft.AspNetCore.App` フレームワークを使用するプラグインを読み込むことはできません。 ホスト アプリケーションは、プラグインで必要なすべてのフレームワークへの参照を宣言する必要があります。

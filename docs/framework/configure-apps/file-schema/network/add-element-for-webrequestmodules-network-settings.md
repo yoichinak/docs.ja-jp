@@ -10,21 +10,21 @@ helpviewer_keywords:
 - add element, webRequestModules
 - <add> element, webRequestModules
 ms.assetid: 47ec4adc-f39f-4bcd-8680-1ec21fd26890
-ms.openlocfilehash: ff564571f3f606ac526c5b9efdb904d237348ffe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 76dad0c0b75d20627e9f57fd1bb467bf17c9294c
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287132"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088513"
 ---
-# <a name="add-element-for-webrequestmodules-network-settings"></a>\<追加 > webRequestModules (ネットワーク設定) の要素
-カスタムの Web 要求モジュールをアプリケーションに追加します。  
-  
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<add>  
-  
+# <a name="add-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<add> 要素 (ネットワーク設定)
+アプリケーションにカスタム Web 要求モジュールを追加します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules>** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<追加>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -42,7 +42,7 @@ ms.locfileid: "55287132"
 |**属性**|**説明**|  
 |-------------------|---------------------|  
 |`prefix`|この Web 要求モジュールによって処理される要求の URI プレフィックス。|  
-|`type`|完全修飾型名 (によって示される、<xref:System.Type.FullName%2A>プロパティ) とアセンブリ名 (によって示される、<xref:System.Reflection.Assembly.FullName%2A>プロパティ)、この Web 要求モジュールを実装する、コンマで区切られました。|  
+|`type`|この Web 要求モジュールを実装する完全修飾型名 (<xref:System.Type.FullName%2A> プロパティによって示されます) とアセンブリ名 (<xref:System.Reflection.Assembly.FullName%2A> プロパティによって示されます) をコンマで区切って指定します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -51,22 +51,22 @@ ms.locfileid: "55287132"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|使用してネットワークのホストから情報を要求するモジュールを指定します。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|ネットワークホストから情報を要求するために使用するモジュールを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `prefix`属性が指定された Web 要求モジュールを使用する URI プレフィックスを定義します。 Web 要求モジュールは通常、HTTP、FTP などの特定のプロトコルを処理するために登録しますが、特定のサーバーまたはサーバー上のパスへの要求を処理するために登録することができます。  
+ `prefix` 属性は、指定された Web 要求モジュールを使用する URI プレフィックスを定義します。 通常、Web 要求モジュールは、HTTP や FTP などの特定のプロトコルを処理するように登録されますが、サーバー上の特定のサーバーまたはパスへの要求を処理するように登録できます。  
   
- 一致する URI のプレフィックスが渡されるときに、Web 要求モジュールが作成された、<xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType>メソッド。  
+ Web 要求モジュールは、URI 照合プレフィックスが <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> メソッドに渡されると作成されます。  
   
- 値、`prefix`属性が有効な URI の先頭の文字にする必要があります。 たとえば、`http` または `http://www.contoso.com` のようにします。
+ `prefix` 属性の値は、有効な URI の先頭の文字である必要があります。 たとえば、`http` または `http://www.contoso.com` のようにします。
   
- 値、`type`属性が有効な型名と対応するアセンブリ名、コンマで区切られたにする必要があります。
+ `type` 属性の値には、有効な型名と、対応するアセンブリ名をコンマで区切って指定する必要があります。
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、HTTP の場合、カスタムの Web 要求モジュールを登録します。 指定したモジュールの正しい値で、バージョンおよび PublicKeyToken の値を置き換える必要があります。  
+ 次の例では、HTTP 用のカスタム Web 要求モジュールを登録します。 Version および PublicKeyToken の値は、指定されたモジュールの正しい値に置き換える必要があります。  
   
 ```xml  
 <configuration>  
@@ -82,5 +82,6 @@ ms.locfileid: "55287132"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebRequest>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

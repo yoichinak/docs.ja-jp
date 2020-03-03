@@ -1,6 +1,5 @@
 ---
 title: var - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - var
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - var keyword [C#]
 ms.assetid: 0777850a-2691-4e3e-927f-0c850f5efe15
-ms.openlocfilehash: 79a3fe331107a902957158a9631f607cb431be32
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: ff8348a725f43fa8789c73fa58549da26126369c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610646"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712885"
 ---
 # <a name="var-c-reference"></a>var (C# リファレンス)
 

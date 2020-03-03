@@ -1,21 +1,23 @@
 ---
-title: Visual Basic でのアプリケーションの開発
+title: アプリケーションの開発
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic, developing applications
 - applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
-ms.openlocfilehash: ecb2c0a09ce92a11a021b45576b5499900b25356
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f8eed001ed1daccdfb861b1bcc13337122133ab0
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45625621"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349248"
 ---
 # <a name="developing-applications-with-visual-basic"></a>Visual Basic でのアプリケーションの開発
+
 このセクションでは、Visual Basic 言語の概念に関するドキュメントについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
+
  [Visual Basic でのプログラミング](../../visual-basic/developing-apps/programming/index.md)  
  プログラミングのさまざまな情報について説明します。  
   
@@ -28,9 +30,6 @@ ms.locfileid: "45625621"
  [Visual Basic でのコンポーネントの作成および使用](../../visual-basic/developing-apps/creating-and-using-components.md)  
  用語*コンポーネント*を定義し、コンポーネントを作成する方法とタイミングについて定義します。  
   
- [印刷とレポート](../../visual-basic/developing-apps/printing/index.md)  
- 印刷とレポートに関連するドキュメントへの概要とリンクを提供します。  
-  
  [Windows フォーム アプリケーションの基礎](../../visual-basic/developing-apps/windows-forms/index.md)  
  Visual Studio を使用した Windows フォームのアプリケーションの作成についての情報を提供します。  
   
@@ -38,6 +37,7 @@ ms.locfileid: "45625621"
  プロジェクト テンプレートをカスタマイズして追加の `My` オブジェクトを提供する方法について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
+
  [Visual Basic プログラミング ガイド](../../visual-basic/programming-guide/index.md)  
  Visual Basic でのプログラミングの重要な要素について確認します。  
   

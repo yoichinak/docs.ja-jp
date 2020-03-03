@@ -2,21 +2,21 @@
 title: schemeSettings の <clear> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 5bb97fbe04cbd3bba85113200abe6495639bab87
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 90035c1c9ccdb8ac888aec84e506ccde41748c9f
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287106"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087440"
 ---
-# <a name="clear-element-for-schemesettings-uri-settings"></a>\<クリア > schemeSettings (Uri 設定) の要素
-既存のすべての構成設定をクリアします。  
-  
- \<configuration>  
-\<uri>  
-\<schemeSettings>  
-\<clear>  
-  
+# <a name="clear-element-for-schemesettings-uri-settings"></a>schemeSettings の \<clear > 要素 (Uri 設定)
+既存のスキーム設定をすべてクリアします。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**クリア >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -36,28 +36,28 @@ ms.locfileid: "55287106"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<schemeSettings> 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<xref:System.Uri> が特定のスキームに解析される方法を指定します。|  
+|[\<schemeSettings> 要素 (Uri 設定)](schemesettings-element-uri-settings.md)|<xref:System.Uri> が特定のスキームに解析される方法を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 既定で、<xref:System.Uri?displayProperty=nameWithType>クラスのエスケープを解除パーセントは、パスの圧縮を実行する前にパスの区切り文字をエンコードします。 これは、次のような攻撃に対するセキュリティ メカニズムとして実装されていました。  
+ 既定では、<xref:System.Uri?displayProperty=nameWithType> クラスは、パスの圧縮を実行する前に、エンコードされたパス区切り記号のエスケープを解除します。 これは、次のような攻撃に対するセキュリティメカニズムとして実装されています。  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- この URI が渡される場合は、モジュール % を処理しないエンコードした文字を正しく、サーバーで実行されている次のコマンドになる可能性があります。  
+ % Encoded 文字を正しく処理しないモジュールにこの URI が渡された場合、サーバーによって次のコマンドが実行される可能性があります。  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- このため、<xref:System.Uri?displayProperty=nameWithType>クラスの最初のエスケープを解除パス区切り記号とし、パスの圧縮を適用します。 上への悪意のある URL を渡すことの結果<xref:System.Uri?displayProperty=nameWithType>クラスに次の URI のコンス トラクターの結果。  
+ このため、<xref:System.Uri?displayProperty=nameWithType> クラスはまずパスの区切り記号をエスケープ解除し、次にパスの圧縮を適用します。 上の悪意のある URL を <xref:System.Uri?displayProperty=nameWithType> クラスコンストラクターに渡すと、次の URI になります。  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- SchemeSettings の構成オプションを使用して、特定のスキームのないのエスケープを解除のパーセントでエンコードされたパス区切りには、この既定の動作を変更できます。  
+ この既定の動作は、特定のスキームの schemeSettings 構成オプションを使用して、パーセントエンコードされたパス区切り記号のエスケープを解除しないように変更できます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例で使用する構成を示しています、<xref:System.Uri>スキームの設定をすべて消去し、http スキームのパスをパーセントでエンコードされた区切り記号をエスケープしないサポートを追加するクラス。  
+ 次の例では、<xref:System.Uri> クラスによって使用される構成を示しています。この構成では、すべてのスキーム設定をクリアし、http スキームに対してパーセントでエンコードされたパス区切り記号をエスケープしないようにします。  
   
 ```xml  
 <configuration>  
@@ -71,10 +71,11 @@ ms.locfileid: "55287106"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

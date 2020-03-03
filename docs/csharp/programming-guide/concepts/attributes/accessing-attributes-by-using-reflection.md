@@ -2,15 +2,15 @@
 title: リフレクションを使用した属性へのアクセス (C#)
 ms.date: 07/20/2015
 ms.assetid: dce3a696-4ceb-489a-b5e4-322a83052f18
-ms.openlocfilehash: f7c7b89be13022471f4e17bcb6ed9a90bcbc1c54
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 990b6487e50bfb2d123c3871e5f85da063711d9e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660412"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595497"
 ---
 # <a name="accessing-attributes-by-using-reflection-c"></a>リフレクションを使用した属性へのアクセス (C#)
-カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「<xref:System.Attribute>」を参照してください。  
+カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、<xref:System.Attribute> を参照してください。  
   
  次のような属性指定は、  
   
@@ -117,8 +117,8 @@ class TestAuthorAttribute
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)
+- [C# プログラミング ガイド](../../index.md)
 - [属性に格納されている情報の取得](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [リフレクション (C#)](../../../../csharp/programming-guide/concepts/reflection.md)
-- [属性 (C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)
-- [カスタム属性の作成 (C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [リフレクション (C#)](../reflection.md)
+- [属性 (C#)](./index.md)
+- [カスタム属性の作成 (C#)](./creating-custom-attributes.md)

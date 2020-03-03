@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 702aa8ccefcdddee1ffc5a7519a4f955b1dc5dfb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1db0ba3b0a213de1175e6e0cee347753d2a413b7
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265663"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699609"
 ---
-# <a name="add-element-for-bypasslist-network-settings"></a>\<追加 > bypasslist (ネットワーク設定) の要素
-プロキシ バイ パスの一覧には、IP アドレスまたは DNS 名を追加します。  
+# <a name="add-element-for-bypasslist-network-settings"></a>の \<add> 要素 (ネットワーク設定)
+プロキシバイパス一覧に IP アドレスまたは DNS 名を追加します。  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultProxy>** ](defaultproxy-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist>** ](bypasslist-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ ms.locfileid: "55265663"
   
 ### <a name="attributes"></a>属性  
   
-|**属性**|**説明**|  
+|**属性**|**[説明]**|  
 |-------------------|---------------------|  
 |**address**|IP アドレスまたは DNS 名を記述する正規表現。|  
   
@@ -48,24 +48,24 @@ ms.locfileid: "55265663"
   
 ### <a name="parent-elements"></a>親要素  
   
-|**要素**|**説明**|  
+|**要素**|**[説明]**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|一連のプロキシを使用しないアドレスを記述する正規表現を提供します。|  
+|[bypasslist](bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|  
   
-## <a name="remarks"></a>Remarks  
- `add`要素は IP アドレスまたはプロキシ サーバーをバイパスするアドレスのリストに DNS サーバー名を記述する正規表現を挿入します。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 要素は、IP アドレスまたは DNS サーバー名を記述する正規表現を、プロキシサーバーをバイパスするアドレスの一覧に挿入します。  
   
- 値、`address`属性は、一連の IP アドレスまたはホスト名を記述する正規表現をする必要があります。  
+ @No__t-0 属性の値は、一連の IP アドレスまたはホスト名を表す正規表現である必要があります。  
   
- この要素の正規表現を指定するときに注意を使用する必要があります。 正規表現"[a ~ z] +\\.contoso\\.com"contoso.com.cpandl.com ドメイン内の任意のホストと一致させる任意のホストが、contoso.com ドメインに一致します。 Contoso.com ドメイン内のホストのみが一致するアンカー (「$」) を使用します:"[a ~ z] +\\.contoso\\.com$"です。  
+ この要素に正規表現を指定する場合は、注意が必要です。 正規表現 "[a-z] + \\.contoso\\.com" は、contoso.com ドメイン内の任意のホストと一致しますが、contoso.com.cpandl.com ドメイン内の任意のホストとも一致します。 Contoso.com ドメイン内のホストのみを一致させるには、アンカー ("$"): "[a-z] + \\.contoso\\.com $" を使用します。  
   
- 正規表現の詳細についてを参照してください。[.NET framework の正規表現](../../../../../docs/standard/base-types/regular-expressions.md)します。  
+ 正規表現の詳細については、「」を参照してください。[正規表現を .NET Framework](../../../../standard/base-types/regular-expressions.md)します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、2 つのアドレスをバイパス リストに追加します。 1 つ目は、contoso.com ドメイン内のすべてのサーバーでプロキシをバイパスします。2 つ目は、192.168 で IP アドレスが始まるすべてのサーバーでプロキシをバイパスします。  
+ 次の例では、バイパスリストに2つのアドレスを追加します。 最初のは、contoso.com ドメイン内のすべてのサーバーのプロキシをバイパスします。2つ目は、IP アドレスが192.168 で始まるすべてのサーバーのプロキシをバイパスします。  
   
 ```xml  
 <configuration>  
@@ -81,5 +81,6 @@ ms.locfileid: "55265663"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

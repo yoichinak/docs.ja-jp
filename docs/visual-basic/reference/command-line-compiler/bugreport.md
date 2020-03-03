@@ -6,63 +6,67 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e2a6b4893229115ed1bc1329d5e81939b92eab2e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 02d84bceb0242988c70889ddd5d3dc7530f6e808
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738943"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793546"
 ---
 # <a name="-bugreport"></a>-bugreport
-バグ報告を提出するときに使用できるファイルを作成します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
--bugreport:file  
-```  
-  
-## <a name="arguments"></a>引数  
-  
-|用語|定義|  
-|---|---|  
-|`file`|必須。 バグ レポートを格納するファイルの名前。 ファイル名を引用符で囲みます ("")、名前にスペースが含まれている場合。|  
-  
-## <a name="remarks"></a>Remarks  
- 次の情報に追加されます`file`:  
-  
--   コンパイルですべてのソース コード ファイルのコピー。  
-  
--   コンパイルで使用されるコンパイラ オプションの一覧。  
-  
--   コンパイラ、共通言語ランタイム、およびオペレーティング システムのバージョン情報。  
-  
--   コンパイラの出力 (指定されている場合)。  
-  
--   求められることが、問題の説明です。  
-  
--   求められることが問題をどのように考えるの説明を修正する必要があります。  
-  
- 内のすべてのソース コード ファイルのコピーが含まれているため`file`、できるだけ小さなプログラムで (疑わしい) コード障害を再現したい場合があります。  
-  
+
+バグレポートをファイルするときに使用できるファイルを作成します。
+
+## <a name="syntax"></a>構文
+
+```console
+-bugreport:file
+```
+
+## <a name="arguments"></a>引数
+
+|用語|Definition|
+|---|---|
+|`file`|必ず指定します。 バグレポートを格納するファイルの名前。 名前にスペースが含まれている場合は、ファイル名を引用符 ("") で囲みます。|
+
+## <a name="remarks"></a>コメント
+
+`file`に次の情報が追加されます。
+
+- コンパイル内のすべてのソースコードファイルのコピー。
+
+- コンパイルで使用されるコンパイラオプションの一覧。
+
+- コンパイラ、共通言語ランタイム、およびオペレーティングシステムに関するバージョン情報。
+
+- コンパイラの出力 (指定されている場合)。
+
+- 問題の説明。メッセージが表示されます。
+
+- 問題の解決方法についての説明。確認を求めるメッセージが表示されます。
+
+すべてのソースコードファイルのコピーが `file`に含まれているため、可能な限り短いプログラムで (疑わしい) コードの欠陥を再現することが必要になる場合があります。
+
 > [!IMPORTANT]
->  `-bugreport`オプションは、機密性の高い情報を含むファイルを生成します。 これにより、コンパイラのバージョン、現在の時刻が含まれます。[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]バージョン、OS のバージョン、ユーザー名、、のコマンドライン引数をコンパイラが実行されたすべてのソース コードと参照アセンブリのいずれかのバイナリ形式です。 このオプションは、Web.config ファイルのサーバー側のコンパイルでのコマンド ライン オプションを指定することでアクセスできる、[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]アプリケーション。 これを回避するには、サーバーでのコンパイルからユーザーを禁止する Machine.config ファイルを変更します。  
-  
- このオプションを使用した場合`-errorreport:prompt`、 `-errorreport:queue`、または`-errorreport:send`、アプリケーションでの情報は、内部コンパイラ エラーが発生して`file`Microsoft Corporation に送信されます。 この情報は、Microsoft のエンジニアが、エラーの原因の特定に役立つし、Visual Basic の次期リリースの改善に役立てます。 既定では、Microsoft に情報は送信されません。 ただしを使用してアプリケーションをコンパイルするときに`-errorreport:queue`アプリケーションは、エラー レポートを収集、既定で有効になっています。 次に、コンピューターの管理者がログインすると、エラー レポート システムにログオン以降に発生したエラー レポートをマイクロソフトに送信できるようにするポップアップ ウィンドウが表示されます。  
-  
+> `-bugreport` オプションを指定すると、機密情報が含まれる可能性のあるファイルが生成されます。 これには、現在の時刻、コンパイラのバージョン、.NET Framework バージョン、OS バージョン、ユーザー名、コンパイラが実行されたコマンドライン引数、すべてのソースコード、および参照アセンブリのバイナリ形式が含まれます。 このオプションにアクセスするには、web.config ファイルで ASP.NET アプリケーションのサーバー側コンパイルのコマンドラインオプションを指定します。 これを回避するには、machine.config ファイルを変更して、ユーザーがサーバーでコンパイルできないようにします。
+
+このオプションを `-errorreport:prompt`、`-errorreport:queue`、または `-errorreport:send`と共に使用し、アプリケーションで内部コンパイラエラーが発生した場合、`file` 内の情報が Microsoft Corporation に送信されます。 この情報は、Microsoft のエンジニアがエラーの原因を特定するのに役立ちます。また、Visual Basic の次のリリースの向上に役立つ場合があります。 既定では、情報は Microsoft に送信されません。 ただし、既定で有効になっている `-errorreport:queue`を使用してアプリケーションをコンパイルすると、アプリケーションはそのエラーレポートを収集します。 その後、コンピューターの管理者がログインすると、エラー報告システムにポップアップウィンドウが表示され、ログオン後に発生したエラーレポートを管理者が Microsoft に転送できるようになります。
+
 > [!NOTE]
->  `/bugreport`オプションは、Visual Studio 開発環境内からは使用できません。 コマンドラインからコンパイルするときにのみ、は使用できます。  
-  
-## <a name="example"></a>例  
- 次の例をコンパイル`T2.vb`バグ レポートのすべての情報をファイルに格納`Problem.txt`します。  
-  
-```  
-vbc -bugreport:problem.txt t2.vb  
-```  
-  
+> `-bugreport` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。
+
+## <a name="example"></a>使用例
+
+次の例では、 *T2*をコンパイルし、すべてのバグ報告情報をファイルの*問題 .txt*に配置します。
+
+```console
+vbc -bugreport:problem.txt t2.vb
+```
+
 ## <a name="see-also"></a>関連項目
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-デバッグ (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
-- [-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [(ASP.NET 設定スキーマ) securityPolicy の trustLevel 要素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))
+
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-debug (Visual Basic)](debug.md)
+- [-errorreport](errorreport.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
+- [Ws-securitypolicy の trustLevel 要素 (ASP.NET Settings スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as399f0x(v=vs.100))

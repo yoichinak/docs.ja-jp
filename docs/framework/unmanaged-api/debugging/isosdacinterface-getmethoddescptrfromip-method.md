@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: 74853733b1fb7f023d9f192d3e862dbf6875ecda
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: cd256250021436e611142de11c3625a21aeec814
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828656"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764741"
 ---
 # <a name="isosdacinterfacegetmethoddescptrfromip-method"></a>ISOSDacInterface::GetMethodDescPtrFromIP メソッド
 
@@ -30,18 +30,20 @@ ms.locfileid: "55828656"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT GetMethodDescPtrFromIP(
     CLRDATA_ADDRESS ip,
     CLRDATA_ADDRESS * ppMD
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`ip` [in]実行時に、メソッド内のアドレス。
+`ip`\
+[in]実行時に、メソッド内のアドレス。
 
-`ppMD` [out]アドレス、`MethodDesc`の特定のメソッド。
+`ppMD`\
+[out]アドレス、`MethodDesc`の特定のメソッド。
 
 ## <a name="remarks"></a>Remarks
 
@@ -49,12 +51,12 @@ HRESULT GetMethodDescPtrFromIP(
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface インターフェイス](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [デバッグ](index.md)
+- [ISOSDacInterface インターフェイス](isosdacinterface-interface.md)

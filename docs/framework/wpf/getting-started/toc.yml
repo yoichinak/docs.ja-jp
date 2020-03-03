@@ -1,0 +1,13 @@
+- name: 作業の開始
+  href: index.md
+  items:
+    - name: Visual Studio での WPF の概要
+      href: introduction-to-wpf-in-vs.md
+    - name: WPF Version 4.5 の新機能
+      href: whats-new.md
+    - name: 'チュートリアル: 初めての WPF デスクトップ アプリケーション'
+      href: walkthrough-my-first-wpf-desktop-application.md
+    - name: WPF のチュートリアル
+      href: wpf-walkthroughs.md
+    - name: WPF コミュニティのフィードバック
+      href: community-feedback.md

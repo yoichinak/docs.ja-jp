@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: de40d16dbb5e7a7a49ae0988342b3eb75bc078c5
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804572"
+---
 ### <a name="currentculture-and-currentuiculture-flow-across-tasks"></a>タスク全体の CurrentCulture と CurrentUICulture のフロー
 
 |   |   |

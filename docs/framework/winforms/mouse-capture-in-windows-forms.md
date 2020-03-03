@@ -1,25 +1,26 @@
 ---
-title: Windows フォームにおけるマウスのキャプチャ
+title: マウス キャプチャ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - mouse [Windows Forms], capture
 ms.assetid: 8911d4b0-a4f8-4f93-8246-371aebd27d0c
-ms.openlocfilehash: ca16d2fa2339f8d9110bb748a687f90e093598fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10583f074831b16dce3c713b4ac9a76c7005c9f5
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690329"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741023"
 ---
 # <a name="mouse-capture-in-windows-forms"></a>Windows フォームにおけるマウスのキャプチャ
-*マウスのキャプチャ*コントロールのすべてのマウス入力コマンドの実行時を参照します。 コントロールは、マウスをキャプチャしたら、マウス ポインターが境界内にあるかどうかを示すマウス入力を受け取ります。  
+*マウスキャプチャ*は、コントロールがすべてのマウス入力のコマンドを受け取るときに参照します。 コントロールは、マウスをキャプチャしたときに、ポインターが境界内にあるかどうかにかかわらず、マウス入力を受け取ります。  
   
-## <a name="setting-mouse-capture"></a>マウスのキャプチャの設定  
- Windows フォームで、ユーザーがコントロールのマウス ボタンを押すし、ユーザーがマウス ボタンを離したときに、マウスがコントロールによってリリースされたときに、マウスはコントロールによってキャプチャされます。  
+## <a name="setting-mouse-capture"></a>マウスキャプチャの設定  
+ Windows フォーム、ユーザーがコントロール上でマウスボタンを押したときにコントロールによってマウスがキャプチャされ、ユーザーがマウスボタンを離したときにコントロールによってマウスが解放されます。  
   
- <xref:System.Windows.Forms.Control.Capture%2A>のプロパティ、<xref:System.Windows.Forms.Control>クラスは、コントロールがマウスをキャプチャしたかどうかを指定します。 コントロールがマウス キャプチャを失ったときにするには、処理、<xref:System.Windows.Forms.Control.MouseCaptureChanged>イベント。  
+ <xref:System.Windows.Forms.Control> クラスの <xref:System.Windows.Forms.Control.Capture%2A> プロパティは、コントロールがマウスをキャプチャしたかどうかを指定します。 コントロールがマウスキャプチャを失ったタイミングを判断するには、<xref:System.Windows.Forms.Control.MouseCaptureChanged> イベントを処理します。  
   
- 前面のウィンドウには、マウスをキャプチャできます。 背景ウィンドウがマウスをキャプチャしようとすると、ウィンドウは、ウィンドウの表示部分内にマウス ポインターがときに発生するマウス イベントにのみメッセージを受信します。 また、前面のウィンドウがマウスをキャプチャした場合でも、ユーザー クリックできます別のウィンドウへの前景色。 マウスをキャプチャしたら、ショートカット キーは機能しません。  
+ 前面のウィンドウだけがマウスをキャプチャできます。 バックグラウンドウィンドウがマウスをキャプチャしようとすると、ウィンドウは、マウスポインターがウィンドウの表示部分内にあるときに発生するマウスイベントに対してのみメッセージを受信します。 また、前景ウィンドウがマウスをキャプチャした場合でも、ユーザーは別のウィンドウをクリックして、前面に表示することができます。 マウスがキャプチャされると、ショートカットキーは機能しません。  
   
-## <a name="see-also"></a>関連項目
-- [Windows フォーム アプリケーションにおけるマウス入力](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
+## <a name="see-also"></a>参照
+
+- [Windows フォーム アプリケーションにおけるマウス入力](mouse-input-in-a-windows-forms-application.md)

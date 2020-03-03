@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 13740920e8db5d44b71cd3c324742945c64b3e59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec33e55f840fe735091364ebc35cb7b7c165c10a
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498961"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867187"
 ---
-# <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON 列挙型
+# <a name="cor_prf_gc_reason-enumeration"></a>COR_PRF_GC_REASON 列挙型
 ガベージ コレクションが発生している理由を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_GC_INDUCED = 1,  
     COR_PRF_GC_OTHER = 0  
@@ -39,17 +37,18 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|ガベージ コレクションが発生しました。 によって、<xref:System.GC.Collect%2A>メソッド。|  
-|`COR_PRF_GC_OTHER`|理由は、指定されていません。|  
+|`COR_PRF_GC_INDUCED`|ガベージコレクションは、<xref:System.GC.Collect%2A> メソッドによって発生しました。|  
+|`COR_PRF_GC_OTHER`|理由が指定されていません。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [列挙型のプロファイリング](profiling-enumerations.md)

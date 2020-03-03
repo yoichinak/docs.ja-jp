@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b7f31060fd845f7618479fd064350b3cb5532fd3
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804499"
+---
 ### <a name="xmlwriter-throws-on-invalid-surrogate-pairs"></a>XmlWriter が無効なサロゲート ペアに対してスローされる
 
 |   |   |

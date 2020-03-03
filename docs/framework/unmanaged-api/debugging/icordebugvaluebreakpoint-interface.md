@@ -1,5 +1,5 @@
 ---
-title: ICorDebugValueBreakpoint Interface1
+title: ICorDebugValueBreakpoint インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugValueBreakpoint
@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: c02338fe-da6c-467f-9567-70ebb387e901
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 58e6807b0546eadc4baacc276fa1ba7bda4e3aba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1bb5a6fd0550f7c25d46fa31ca11a10cec54986
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557761"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791078"
 ---
-# <a name="icordebugvaluebreakpoint-interface1"></a>ICorDebugValueBreakpoint Interface1
-特定の値へのアクセスを提供する ICorDebugBreakpoint インターフェイスを拡張します。  
+# <a name="icordebugvaluebreakpoint-interface"></a>ICorDebugValueBreakpoint インターフェイス
+ICorDebugBreakpoint インターフェイスを拡張して、特定の値にアクセスできるようにします。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvaluebreakpoint-getvalue-method.md)|ブレークポイントが設定されているオブジェクトの値を表す ICorDebugValue オブジェクトへのインターフェイス ポインターを取得します。|  
+|[GetValue メソッド](icordebugvaluebreakpoint-getvalue-method.md)|ブレークポイントが設定されたオブジェクトの値を表す、ICorDebugValue オブジェクトへのインターフェイスポインターを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +45,5 @@ ms.locfileid: "54557761"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

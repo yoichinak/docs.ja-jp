@@ -8,23 +8,23 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: 161c9212600a417a97fa5a4e0edeac02db0f17a1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4872fbd6fa043902e8c69f158bee5d0c915ec83a
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287535"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088656"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass > 要素
-[\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスを含みます。  
-  
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings >  
-\<cryptoNameMapping>  
-\<cryptoClasses >  
-\<cryptoClass >  
-  
+[\<nameEntry>](nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスを含みます。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings**](cryptographysettings-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptoNameMapping >** ](cryptonamemapping-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**cryptoClasses >** ](cryptoclasses-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**cryptoClass >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -38,7 +38,7 @@ ms.locfileid: "55287535"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`customClassName`|必須の属性です。<br /><br /> 暗号化クラスの情報が含まれています。 この属性を使用して、クラスの短い名前を指定します。 指定された条件に一致する文字列を指定する必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
+|`customClassName`|必須の属性です。<br /><br /> 暗号化クラスの情報を格納します。 この属性を使用して、クラスの短い名前を指定します。 [「完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」で指定した要件を満たす文字列を指定する必要があります。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -48,13 +48,13 @@ ms.locfileid: "55287535"
 |要素|説明|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
-|`cryptoClasses`|[\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスのリストを含みます。|  
+|`cryptoClasses`|[\<nameEntry>](nameentry-element.md) 要素内の表示名へのマッピングを持つ暗号化クラスのリストを含みます。|  
 |`cryptographySettings`|暗号設定を含みます。|  
 |`cryptoNameMapping`|表示名へのクラスのマッピングを含みます。|  
-|`mscorlib`|[ \<cryptographySettings >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)要素を含みます。|  
+|`mscorlib`|[ \<cryptographySettings >](cryptographysettings-element.md)要素を含みます。|  
   
 ## <a name="example"></a>例  
- 次の例では、  **\<cryptoClass >** 暗号化クラスを参照して、ランタイムを構成する要素。 文字列"RSA"を渡すことができますし、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッドを使用して、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A>を返すメソッドを`MyCryptoRSAClass`オブジェクト。  
+ 次の例は、\<の**cryptoclass >** 要素を使用して、暗号化クラスを参照し、ランタイムを構成する方法を示しています。 その後、文字列 "RSA" を <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> メソッドに渡し、<xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> メソッドを使用して `MyCryptoRSAClass` オブジェクトを返すことができます。  
   
 ```xml  
 <configuration>  
@@ -76,7 +76,8 @@ ms.locfileid: "55287535"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+
+- [構成ファイル スキーマ](../index.md)
+- [暗号化設定スキーマ](index.md)
+- [暗号サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)

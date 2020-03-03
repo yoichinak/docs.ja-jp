@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0ddd554aa114395085a9f8ff41a99ca9a6096a51
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804443"
+---
 ### <a name="certificate-eku-oid-validation"></a>証明書 EKU OID の検証
 
 |   |   |

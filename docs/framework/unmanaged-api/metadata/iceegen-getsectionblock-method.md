@@ -15,23 +15,21 @@ helpviewer_keywords:
 ms.assetid: 05c78aaf-5bbd-497e-9ae2-55f4fae0c5fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: eb1268d9fd892a4400491aca7966d81a3e23f9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0731053fb37c775d25052a5fd99a479a44ff5862
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515353"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434883"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock メソッド
-コード ベースのセクションのブロックを取得します。  
+コードベースのセクションブロックを取得します。  
   
- このメソッドは廃止され、使用する必要があります。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSectionBlock (  
     [in]  HCEESECTION    section,     
     [in]  ULONG          len,  
@@ -40,30 +38,31 @@ HRESULT GetSectionBlock (
 );   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `section`  
- [in]コード ベースのブロックの取得元となるセクション。  
+ からコードベースのブロックを取得する対象となるセクション。  
   
  `len`  
- [in]取得するブロックの長さ。  
+ から取得するブロックの長さ。  
   
  `align`  
- [in]ブロックの最初のバイトを揃えるセクションの先頭からの相対バイト。 これは、セクション内のブロックの位置です。  
+ からブロックの最初のバイトを揃えるために使用する、セクションの先頭を基準とするバイト。 これは、セクション内のブロックの位置です。  
   
  `ppBytes`  
- [out]取得されたブロックのアドレスを受け取る場所へのポインター。  
+ 入出力取得されたブロックのアドレスを受け取る場所へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- 呼び出す`GetSectionBlock`別の方法で処理されない特別なセクションの要件がある場合にのみです。  
+## <a name="remarks"></a>コメント  
+ 他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、`GetSectionBlock` を呼び出します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

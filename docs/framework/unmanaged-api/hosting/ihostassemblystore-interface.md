@@ -14,46 +14,45 @@ helpviewer_keywords:
 ms.assetid: cccb650f-abe0-41e2-9fd1-b383788eb1f6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d3714f31d0ab58584a8671055cf4c607f04a832c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7475e2423d4dc6f57e8928514d7991169eef232
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611060"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124502"
 ---
 # <a name="ihostassemblystore-interface"></a>IHostAssemblyStore インターフェイス
-アセンブリおよび共通言語ランタイム (CLR) とは無関係にモジュールの読み込みにホストできるようにするメソッドを提供します。  
+共通言語ランタイム (CLR) とは独立して、ホストがアセンブリとモジュールを読み込むことができるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ProvideAssembly メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)|によって参照されているアセンブリへの参照を取得、 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)への呼び出しから返された[ihostassemblymanager::getnonhoststoreassemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)します。|  
-|[ProvideModule メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|アセンブリまたはリンク (組み込まれていない) リソース ファイル内のモジュールを解決します。|  
+|[ProvideAssembly メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)|[IHostAssemblyManager:: GetNonHostStoreAssemblies](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-getnonhoststoreassemblies-method.md)の呼び出しから返された[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)によって参照されていないアセンブリへの参照を取得します。|  
+|[ProvideModule メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)|アセンブリ内のモジュール、またはリンクされた (埋め込まれていない) リソースファイル内のモジュールを解決します。|  
   
 ## <a name="remarks"></a>Remarks  
- `IHostAssemblyStore` ホストがアセンブリ id に基づいた効率的にアセンブリを読み込む方法を提供します。 ホストでは、アセンブリを読み込んで返すことによって`IStream`バイトを直接ポイントするインスタンス。  
+ `IHostAssemblyStore` を使用すると、ホストはアセンブリ id に基づいてアセンブリを効率的に読み込むことができます。 ホストは、バイトを直接指す `IStream` インスタンスを返すことによって、アセンブリを読み込みます。  
   
- CLR は、ホストが実装されているかどうかを決定します。`IHostAssemblyStore`呼び出して`IHostAssemblyManager::GetNonHostAssemblyStores`の初期化時にします。 これにより、ホスト、たとえば、.NET Framework アセンブリへのバインドをランタイムに依存するが、ユーザーのアセンブリへのバインディングを制御します。  
-  
-> [!NOTE]
->  実装を提供するために`IHostAssemblyStore`、ホストによって参照されていないすべてのアセンブリを解決するのにはその目的を指定します、`ICLRAssemblyReferenceList`から返された`IHostAssemblyManager::GetNonHostStoreAssemblies`します。  
+ CLR は、初期化時に `IHostAssemblyManager::GetNonHostAssemblyStores` を呼び出すことによって、ホストが `IHostAssemblyStore` 実装されているかどうかを判断します。 これにより、ホストは、たとえば、ユーザーアセンブリへのバインドを制御できますが、ランタイムに依存して .NET Framework アセンブリにバインドすることができます。  
   
 > [!NOTE]
->  によって提供される、.NET Framework version 2.0 が、ホスト、アセンブリのネイティブ イメージを読み込むための手段を提供しない、[ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)ユーティリティ。  
+> `IHostAssemblyStore`の実装を提供する場合、ホストは `IHostAssemblyManager::GetNonHostStoreAssemblies`から返された `ICLRAssemblyReferenceList` によって参照されていないすべてのアセンブリを解決するための目的を指定します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+> [!NOTE]
+> .NET Framework バージョン2.0 では、[ネイティブイメージジェネレーター (ngen.exe)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)ユーティリティによって提供されるアセンブリのネイティブイメージをホストが読み込む方法は提供されていません。  
   
- **ヘッダー:** MSCorEE.h  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ヘッダー:** Mscoree.dll  
+  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRAssemblyReferenceList インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)
 - [IHostAssemblyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostassemblymanager-interface.md)
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

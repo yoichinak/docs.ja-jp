@@ -7,19 +7,20 @@ helpviewer_keywords:
 - TabControl control [WPF]
 - controls [WPF], TabControl
 ms.assetid: 3d26404b-431e-432d-a82b-ef026feb3fff
-ms.openlocfilehash: dba156139bb8a3bb68b3ef1434177b8d9b839cfb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 33eb4943d2c867b7843952e5c961eb7e66072890
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790934"
 ---
 # <a name="tabcontrol"></a>TabControl
-<xref:System.Windows.Controls.TabControl> 要素は、適切なタブをクリックしてアクセスされる個別のページのコンテンツを表示します。各タブには、<xref:System.Windows.Controls.TabItem>です。  
+<xref:System.Windows.Controls.TabControl> 要素は、適切なタブを選択してアクセスされる個別のページのコンテンツを表示します。各タブには、<xref:System.Windows.Controls.TabItem>します。  
   
- 次の図は、<xref:System.Windows.Controls.TabControl>です。  
+ 次の図は、<xref:System.Windows.Controls.TabControl>します。  
   
- ![タブ コントロール](../../../../docs/framework/wpf/controls/media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")  
-一般的な TabControl  
+ ![タブ コントロール](./media/ss-ctl-tabcontrol.gif "SS_CTL_tabcontrol")  
+典型的なタブ コントロール  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.TabControl>  

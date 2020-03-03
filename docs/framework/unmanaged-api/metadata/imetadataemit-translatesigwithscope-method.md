@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 47915d33-b7bf-409e-b484-4ee1df15de22
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8e03572a4eaa0251866e8bfc6ae2d01d955d7b8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cea84f47a5289df4bc9c50381e18d7077b3b8dad
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516188"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440479"
 ---
 # <a name="imetadataemittranslatesigwithscope-method"></a>IMetaDataEmit::TranslateSigWithScope メソッド
-現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータ シグネチャを取得します。  
+現在のスコープにアセンブリをインポートし、マージされたスコープの新しいメタデータシグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT TranslateSigWithScope (   
     [in]  IMetaDataAssemblyImport   *pAssemImport,   
     [in]  const void                *pbHashValue,   
@@ -45,50 +43,51 @@ HRESULT TranslateSigWithScope (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAssemImport`  
- [in] \(署名が定義されている\) インポート アセンブリのインターフェイスです。  
+ [in] (署名が定義されている) インポート アセンブリのインターフェイスです。  
   
  `pbHashValue`  
- [in]アセンブリのハッシュ blob。  
+ からアセンブリのハッシュ blob。  
   
  `cbHashValue`  
- [in]内のバイト数`pbHashValue`します。  
+ から`pbHashValue`内のバイト数。  
   
  `import`  
- [in]インポートのメタデータ スコープのインターフェイスです。  
+ からインポートメタデータスコープのインターフェイス。  
   
  `pbSigBlob`  
- [in]インポートする署名します。  
+ からインポートされる署名。  
   
  `cbSigBlob`  
- [in]サイズ (バイト単位) の`pbSigBlob`します。  
+ から`pbSigBlob`のサイズ (バイト単位)。  
   
  `pAssemEmit`  
- [in]エクスポートのアセンブリのインターフェイスです。  
+ からエクスポートアセンブリのインターフェイス。  
   
  `emit`  
- [in]エクスポートのメタデータ スコープのインターフェイスです。  
+ からエクスポートメタデータスコープのインターフェイス。  
   
  `pvTranslatedSig`  
- [out]翻訳されたシグネチャ blob を保持するバッファー。  
+ 入出力変換された署名 blob を保持するバッファー。  
   
  `cbTranslatedSigMax`  
- [in] (バイト単位) の容量の`pvTranslatedSig`します。  
+ から`pvTranslatedSig`の容量 (バイト単位)。  
   
  `pcbTranslatedSig`  
- [out]翻訳されたシグネチャでの実際のバイト数。  
+ 入出力変換されたシグネチャの実際のバイト数。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

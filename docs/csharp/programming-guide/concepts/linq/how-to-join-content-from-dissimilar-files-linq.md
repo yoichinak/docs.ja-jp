@@ -1,23 +1,23 @@
 ---
-title: '方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)'
+title: 異種ファイルのコンテンツを結合する方法 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 5fb954bee6433d28ffb47f789b41492349f7ab42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698415"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345882"
 ---
-# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)
+# <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>異種ファイルのコンテンツを結合する方法 (LINQ) (C#)
 
 この例では、一致するキーとして共通の値を使用する 2 つのコンマ区切りファイルのデータを結合する方法を示します。 この方法は、2 つのスプレッドシートのデータ、またはスプレッドシートのデータと別の形式のファイルのデータを、新しいファイルに結合する必要がある場合に役立ちます。 この例は、変更を加えることで、あらゆる構造化テキスト ファイルに応用できます。  
   
 ## <a name="to-create-the-data-files"></a>データ ファイルを作成するには
   
-1.  次の行を *scores.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、スプレッドシートのデータを表しています。 列 1 は学生の ID、列 2 ～ 5 はテストの得点です。  
+1. 次の行を *scores.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、スプレッドシートのデータを表しています。 列 1 は学生の ID、列 2 ～ 5 はテストの得点です。  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -32,9 +32,9 @@ ms.locfileid: "54698415"
     122, 94, 92, 91, 91  
     ```  
   
-2.  次の行を *names.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。  
+2. 次の行を *names.csv* という名前のファイルにコピーし、プロジェクト フォルダーに保存します。 このファイルは、学生の姓、名、および学生 ID が含まれるスプレッドシートを表しています。  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  
@@ -124,15 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>コードのコンパイル
-
-次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。
-
-- System.Core.dll の参照を含む .NET Framework バージョン 3.5。
-- .NET Framework バージョン 4.0 以降
-- .NET Core バージョン 1.0 以降。
-  
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

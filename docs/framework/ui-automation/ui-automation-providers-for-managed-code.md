@@ -8,23 +8,21 @@ helpviewer_keywords:
 - UI Automation, custom user interface (UI) elements
 - providers, UI Automation
 ms.assetid: 5f82f731-f1b5-4c8b-b47c-d11279a02574
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: f6531f8a3a8086c51e65834de23120d040553018
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: ea0d7a3f5912cc8a30d9e8eced91770ad9c9255e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112388"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441487"
 ---
 # <a name="ui-automation-providers-for-managed-code"></a>マネージド コードの UI オートメーション プロバイダー
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- このセクションには、概要と記述する方法を説明する方法に関するトピックが含まれています[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]カスタム プロバイダー[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]要素。  
+ ここでは、カスタム [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 要素の [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーを作成する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [UI オートメーション プロバイダーの概要](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)  
- [クライアント側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/client-side-ui-automation-provider-implementation.md)  
- [方法トピック](../../../docs/framework/ui-automation/ui-automation-providers-for-managed-code-how-to-topics.md)
+ [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)  
+ [UI オートメーション プロバイダーの概要](ui-automation-providers-overview.md)  
+ [クライアント側 UI オートメーション プロバイダーの実装](client-side-ui-automation-provider-implementation.md)  
+ [方法のトピック](ui-automation-providers-for-managed-code-how-to-topics.md)

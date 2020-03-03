@@ -2,40 +2,40 @@
 title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 6273b6b0f84887f031539581fbf664b9dbf50300
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb02b5d01b3f95ef741aa689cc66616fd598577b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579460"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741956"
 ---
 # <a name="configuration-sample"></a>構成サンプル
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  
   
 > [!NOTE]
->  このサンプルでは、探索を構成ファイルで実装しています。 探索をコードで実装するサンプルについては、次を参照してください。[基本的な](../../../../docs/framework/wcf/samples/basic-sample.md)します。  
+> このサンプルでは、探索を構成ファイルで実装しています。 コードに検出を実装するサンプルについては、「 [Basic](../../../../docs/framework/wcf/samples/basic-sample.md)」を参照してください。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
 ## <a name="service-configuration"></a>サービス構成  
  このサンプルの構成ファイルでは、次の 2 つの機能を示します。  
   
--   標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。  
+- 標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。  
   
--   サービスのアプリケーション エンドポイントに対する探索関連の情報を調整し、標準エンドポイントに対する探索関連の設定を調整します。  
+- サービスのアプリケーション エンドポイントに対する探索関連の情報を調整し、標準エンドポイントに対する探索関連の設定を調整します。  
   
  探索を有効にするには、サービスのアプリケーション構成ファイルで次の変更を行う必要があります。  
   
--   探索エンドポイントを `<service>` 要素に追加する必要があります。 これは標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントです。 このエンドポイントが、ランタイムによって探索サービスに関連付けられるシステム エンドポイントになります。 探索サービスは、このエンドポイント上でメッセージをリッスンします。  
+- 探索エンドポイントを `<service>` 要素に追加する必要があります。 これは標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントです。 このエンドポイントが、ランタイムによって探索サービスに関連付けられるシステム エンドポイントになります。 探索サービスは、このエンドポイント上でメッセージをリッスンします。  
   
--   `<serviceDiscovery>` 動作を `<serviceBehaviors>` セクションに追加します。 これにより、サービスが実行時に探索されるようになり、前述の探索エンドポイントを使用して探索の `Probe` メッセージおよび `Resolve` メッセージをリッスンするようになります。 この 2 つの追加により、指定した探索エンドポイントでサービスが探索可能になります。  
+- `<serviceDiscovery>` 動作を `<serviceBehaviors>` セクションに追加します。 これにより、サービスが実行時に探索されるようになり、前述の探索エンドポイントを使用して探索の `Probe` メッセージおよび `Resolve` メッセージをリッスンするようになります。 この 2 つの追加により、指定した探索エンドポイントでサービスが探索可能になります。  
   
  次の構成スニペットでは、アプリケーション エンドポイントのサービスと定義された探索エンドポイントが示されています。  
   
@@ -67,9 +67,7 @@ ms.locfileid: "54579460"
   
  この構成ファイルは、さらに動作を変更することによって、より高度な機能を提供できます。 特定のエンドポイントを使用することで、探索関連の情報を制御できます。 つまり、ユーザーは、エンドポイントを探索できるかどうかを制御できるだけでなく、そのエンドポイントを <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior.Scopes%2A> およびカスタム XML メタデータでマークすることもできます。 これを行うには、`behaviorConfiguration` プロパティをアプリケーション エンドポイントに追加する必要があります。 この場合、次のプロパティをアプリケーション エンドポイントに追加します。  
   
-```  
-behaviorConfiguration="endpointBehaviorConfiguration"  
-```  
+`behaviorConfiguration="endpointBehaviorConfiguration"`  
   
  これで、この動作構成要素を通じて、探索関連の属性を制御できます。 この場合、2 つのスコープがアプリケーション エンドポイントに追加されます。  
   
@@ -87,7 +85,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
         </endpointBehaviors>  
 ```  
   
- スコープの詳細については、次を参照してください。[探索検索と FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)します。  
+ スコープの詳細については、「[検出検索と FindCriteria](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)」を参照してください。  
   
  探索エンドポイントに固有の詳細を制御することもできます。 この制御には <xref:System.ServiceModel.Configuration.StandardEndpointsSection> を使用します。 このサンプルでは、次のコード例に示すように、使用するプロトコルのバージョンを変更し、`maxResponseDelay` 属性を追加します。  
   
@@ -156,7 +154,7 @@ behaviorConfiguration="endpointBehaviorConfiguration"
 </configuration>  
 ```  
   
-## <a name="client-configuration"></a>クライアント構成  
+## <a name="client-configuration"></a>クライアントの構成  
  クライアントのアプリケーション構成ファイルでは、`standardEndpoint` 型の `dynamicEndpoint` を使用して次の構成スニペットに示すように探索を利用します。  
   
 ```xml  
@@ -261,12 +259,10 @@ behaviorConfiguration="endpointBehaviorConfiguration"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1.  このサンプルは、HTTP エンドポイントを使用して、このサンプルで、適切な URL Acl を実行する必要があります追加を参照してください[構成の HTTP および HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)詳細についてはします。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. このサンプルでは HTTP エンドポイントを使用します。このサンプルを実行するには、適切な URL ACL を追加する必要があります。 詳細については、「 [HTTP および HTTPS の構成](../feature-details/configuring-http-and-https.md)」を参照してください。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  ソリューションをビルドします。  
+2. ソリューションをビルドします。  
   
-3.  ビルド ディレクトリからサービス実行可能ファイルを実行します。  
+3. ビルド ディレクトリからサービス実行可能ファイルを実行します。  
   
-4.  クライアント実行可能ファイルを実行します。 クライアントでサービスを検索できることに注意してください。  
-  
-## <a name="see-also"></a>関連項目
+4. クライアント実行可能ファイルを実行します。 クライアントでサービスを検索できることに注意してください。  

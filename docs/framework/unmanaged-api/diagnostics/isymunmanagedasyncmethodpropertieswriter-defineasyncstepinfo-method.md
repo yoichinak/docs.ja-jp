@@ -2,19 +2,17 @@
 title: ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo メソッド
 ms.date: 03/30/2017
 ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b165501b3e090cf309f3b4053649644b87b47f22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59e3a95a4d2573263600da60b4f852caa361138e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555571"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129194"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo メソッド
-非同期のグループを定義、現在のメソッドでの操作を待機します。  
+現在のメソッドで非同期 await 操作のグループを定義します。  
   
- 各 yield オフセットでは、潜在的な yield を識別する、await の戻り命令と一致します。 各`breakpointMethod` / `breakpointOffset`ペアによる、非同期操作が再開、(別の方法でをする可能性があります。  
+ 各 yield オフセットは await の戻り命令に一致し、潜在的な yield を識別します。 各 `breakpointMethod`/`breakpointOffset` のペアによって、非同期操作が再開される場所がわかります。これは、別の方法で実行される可能性があります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -22,7 +20,7 @@ ms.locfileid: "54555571"
 HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULONG32 yieldOffsets[],    [in, size_is(count)] ULONG32 breakpointOffset[],     [in, size_is(count)] mdToken breakpointMethod[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
@@ -32,10 +30,11 @@ HRESULT DefineAsyncStepInfo(    [in] ULONG32 count,    [in, size_is(count)] ULON
 |`breakpointMethod`||  
   
 ## <a name="return-value"></a>戻り値  
- `HRESULT` を返します。  
+ `HRESULT`を返します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)

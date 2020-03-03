@@ -1,128 +1,127 @@
 ---
-title: WPF アプリケーションの配置 (WPF)
+title: アプリのデプロイ
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF applications [WPF], deployment
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
-ms.openlocfilehash: 2079d4b4f6bedcc30c4826f8798729c5c9263751
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d4b7dd0464960441410d8ff2a196f0912354e5f
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648097"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76741947"
 ---
-# <a name="deploying-a-wpf-application-wpf"></a>WPF アプリケーションの配置 (WPF)
-Windows Presentation Foundation (WPF) アプリケーションを構築した後、展開する必要があります。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] .NET Framework にはいくつかの展開テクノロジが含まれます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの種類の配置要件に関連して説明します。  
-  
-   
+# <a name="deploy-a-wpf-application"></a>WPF アプリケーションの配置
+
+Windows Presentation Foundation (WPF) アプリケーションを構築した後は、アプリケーションを配置する必要があります。 Windows と .NET Framework には、いくつかの展開テクノロジが含まれています。 WPF アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって異なります。 このトピックでは、各配置テクノロジの概要と、各 WPF アプリケーションの種類の配置要件と組み合わせて使用する方法について説明します。
+
 <a name="Deployment_Technologies"></a>   
 ## <a name="deployment-technologies"></a>配置テクノロジ  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] .NET Framework など、いくつかの展開テクノロジのとおりです。  
+ Windows と .NET Framework には、次のようないくつかの展開テクノロジが含まれています。  
   
--   XCopy による配置。  
+- XCopy による配置。  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] による配置。  
+- Windows インストーラーの展開。  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] による配置。  
+- ClickOnce 配置。  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy による配置  
  XCopy による配置とは、XCopy コマンド ライン プログラムを使用して、ある場所から別の場所へファイルをコピーすることです。 XCopy による配置は、次のような状況に適しています。  
   
--   アプリケーションは自己完結型である。 実行するためにクライアントを更新する必要がない。  
+- アプリケーションは自己完結型である。 実行するためにクライアントを更新する必要がない。  
   
--   アプリケーション ファイルをある場所から別の場所へ、たとえば、ビルド場所 (ローカル ディスク、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] ファイル共有など) から公開場所 (Web サイト、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] ファイル共有など) へ移動する必要がある。  
+- アプリケーションファイルを別の場所に移動する必要があります。たとえば、ビルドの場所 (ローカルディスク、UNC ファイル共有など) から発行場所 (Web サイト、UNC ファイル共有など) に移動します。  
   
--   アプリケーションはシェル統合 ([スタート] メニューのショートカット、デスクトップ アイコンなど) を必要としない。  
+- アプリケーションはシェル統合 ([スタート] メニューのショートカット、デスクトップ アイコンなど) を必要としない。  
   
  XCopy は、単純な配置シナリオには適していますが、複雑な配置機能が必要なシナリオには十分に対応できません。 特に、配置を堅牢な方法で管理する場合、XCopy を使用すると、スクリプトの作成、実行、および維持というオーバーヘッドが生じます。 さらに、XCopy は、バージョン管理、アンインストール、およびロールバックをサポートしません。  
   
 <a name="Windows_Installer"></a>   
-### <a name="windows-installer"></a>Windows インストーラー  
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] を使用すると、アプリケーションを自己完結型の実行可能ファイルとしてパッケージ化でき、容易にクライアントに配布して、実行できます。 さらに、[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] は [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] と共にインストールされるため、デスクトップ、[スタート] メニュー、および [プログラム] コントロール パネルとの統合が可能です。  
+### <a name="windows-installer"></a>Windows インストーラー●windowsいんすとーら○  
+ Windows インストーラーを使用すると、アプリケーションをクライアントに簡単に配布して実行できる、自己完結型の実行可能ファイルとしてパッケージ化できます。 さらに、Windows インストーラーは Windows と共にインストールされ、デスクトップ、[スタート] メニュー、および [プログラム] コントロールパネルとの統合を可能にします。  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] は、アプリケーションのインストールとアンインストールを単純化しますが、インストールされたアプリケーションをバージョン管理の観点から最新に保つ機能を提供しません。  
+ Windows インストーラーを使用すると、アプリケーションのインストールとアンインストールを簡単に行うことができますが、インストールされているアプリケーションをバージョン管理の観点から最新の状態に保つための機能は提供されません。  
   
- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] の詳細については、「[Windows インストーラー配置](https://msdn.microsoft.com/library/121be21b-b916-43e2-8f10-8b080516d2a0)」を参照してください。  
+ Windows インストーラーの詳細については、「 [Windows インストーラーの展開](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)」を参照してください。
   
 <a name="ClickOnce_Deployment"></a>   
 ### <a name="clickonce-deployment"></a>ClickOnce 配置  
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] を使用すると、非 Web アプリケーションを Web スタイル アプリケーションと同じように配置できます。 アプリケーションは、Web サーバーまたはファイル サーバーに公開され、これらのサーバーから配置されます。 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] は、[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] によってインストールされるアプリケーションがサポートするような広い範囲のクライアント機能をサポートするわけではありませんが、次のような機能をサポートします。  
+ ClickOnce を使用すると、Web 以外のアプリケーションに対して Web スタイルのアプリケーションを配置できます。 アプリケーションは、Web サーバーまたはファイル サーバーに公開され、これらのサーバーから配置されます。 ClickOnce は、Windows インストーラーインストールされているアプリケーションが実行するクライアント機能のすべてをサポートしているわけではありませんが、次のようなサブセットをサポートしています。  
   
--   [スタート] メニューおよび [プログラム] コントロール パネルとの統合。  
+- [スタート] メニューおよび [プログラム] コントロール パネルとの統合。  
   
--   バージョン管理、ロールバック、およびアンインストール。  
+- バージョン管理、ロールバック、およびアンインストール。  
   
--   アプリケーションを常に配置場所から起動するオンライン インストール モード。  
+- アプリケーションを常に配置場所から起動するオンライン インストール モード。  
   
--   新しいバージョンがリリースされたときの自動更新。  
+- 新しいバージョンがリリースされたときの自動更新。  
   
--   ファイル拡張子の登録。  
+- ファイル拡張子の登録。  
   
- [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] の詳細については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
+ ClickOnce の詳細については、「 [clickonce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
   
 <a name="Deploying_WPF_Applications"></a>   
 ## <a name="deploying-wpf-applications"></a>WPF アプリケーションの配置  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置オプションは、アプリケーションの種類によって決まります。 配置の観点から見ると、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には次の 3 種類のアプリケーションがあります。  
+ WPF アプリケーションの配置オプションは、アプリケーションの種類によって異なります。 配置の観点から見ると、WPF には次の3つの重要なアプリケーションの種類があります。  
   
--   スタンドアロン アプリケーション。  
+- スタンドアロン アプリケーション。  
   
--   マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーション。  
+- マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーション。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。  
+- XAML ブラウザーアプリケーション (Xbap)。  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>スタンドアロン アプリケーションの配置  
- スタンドアロン アプリケーションは、[!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] または [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] を使用して配置されます。 いずれの場合も、スタンドアロン アプリケーションを実行するには、アプリケーションが完全に信頼されている必要があります。 [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] を使用して配置されたスタンドアロン アプリケーションには、完全な信頼が自動的に付与されます。 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] を使用して配置されたスタンドアロン アプリケーションには、完全な信頼は自動的に付与されません。 代わりに、スタンドアロン アプリケーションをインストールする前に、[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] は [セキュリティ警告] ダイアログを表示し、ユーザーがそれを受け入れる必要があります。 受け入れた場合、スタンドアロン アプリケーションがインストールされ、完全な信頼が付与されます。 受け入れなかった場合、スタンドアロン アプリケーションはインストールされません。  
+ スタンドアロンアプリケーションは、ClickOnce または Windows インストーラーを使用してデプロイされます。 いずれの場合も、スタンドアロン アプリケーションを実行するには、アプリケーションが完全に信頼されている必要があります。 完全信頼は、Windows インストーラーを使用して展開されたスタンドアロンアプリケーションに自動的に付与されます。 ClickOnce を使用して配置されるスタンドアロンアプリケーションには、完全な信頼が自動的に付与されるわけではありません。 代わりに、ClickOnce によって、スタンドアロンアプリケーションをインストールする前にユーザーが受け入れる必要があるセキュリティ警告ダイアログが表示されます。 受け入れた場合、スタンドアロン アプリケーションがインストールされ、完全な信頼が付与されます。 受け入れなかった場合、スタンドアロン アプリケーションはインストールされません。  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>   
 ### <a name="deploying-markup-only-xaml-applications"></a>マークアップのみの XAML アプリケーションの配置  
- マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、通常、[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] ページと同様に Web サーバーに公開され、[!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] を使用して表示できます。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、部分信頼セキュリティ サンドボックス内で実行され、インターネット ゾーン アクセス許可セットによって定義された制約が適用されます。 これにより、[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)] ベースの Web アプリケーションと同等のセキュリティ サンドボックスが提供されます。  
+ マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、通常、HTML ページなどの Web サーバーに発行され、Internet Explorer を使用して表示できます。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、部分信頼セキュリティ サンドボックス内で実行され、インターネット ゾーン アクセス許可セットによって定義された制約が適用されます。 これにより、HTML ベースの Web アプリケーションに対する同等のセキュリティサンドボックスが提供されます。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションのセキュリティの詳細については、「[セキュリティ](../../../../docs/framework/wpf/security-wpf.md)」を参照してください。  
+ WPF アプリケーションのセキュリティの詳細については、「[セキュリティ](../security-wpf.md)」を参照してください。  
   
- マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、XCopy または [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] を使用してローカル ファイル システムにインストールできます。 使用してこれらのページを表示できる[!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)]または Windows エクスプ ローラー。  
+ マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、XCopy または Windows インストーラーのいずれかを使用してローカルファイルシステムにインストールできます。 これらのページは、Internet Explorer またはエクスプローラーを使用して表示できます。  
   
- XAML の詳細については、「[XAML の概要 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)」を参照してください。  
+ XAML の詳細については、「[XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)」を参照してください。  
   
 <a name="Deploying_XAML_Browser_Applications"></a>   
 ### <a name="deploying-xaml-browser-applications"></a>XAML ブラウザー アプリケーションの配置  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、次の 3 つのファイルを配置する必要があるコンパイル済みのアプリケーションです。  
+ Xbap は、次の3つのファイルを配置する必要があるコンパイル済みアプリケーションです。  
   
--   *ApplicationName*.exe:実行可能アセンブリのアプリケーション ファイル。  
+- *ApplicationName*.exe: 実行可能アセンブリのアプリケーション ファイル。  
   
--   *ApplicationName*.xbap:配置マニフェスト。  
+- *ApplicationName*.xbap: 配置マニフェスト。  
   
--   *ApplicationName*exe.manifest:。アプリケーション マニフェスト。  
+- *ApplicationName*.exe.manifest: アプリケーション マニフェスト。  
   
 > [!NOTE]
->  配置マニフェストおよびアプリケーション マニフェストの詳細については、「[WPF アプリケーションのビルド](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)」を参照してください。  
+> 配置マニフェストおよびアプリケーション マニフェストの詳細については、「[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  
   
- これらのファイルは、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] がビルドされるときに生成されます。 詳細については、「[方法 :新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)します。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページと同様に、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、通常、Web サーバーに更改され、[!INCLUDE[TLA2#tla_iegeneric](../../../../includes/tla2sharptla-iegeneric-md.md)] を使用して表示されます。  
+ これらのファイルは、XBAP がビルドされるときに生成されます。 詳細については、「[方法: 新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))」を参照してください。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページと同様に、Xbap は通常、Web サーバーに発行され、Internet Explorer を使用して表示されます。  
   
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、任意の配置技術を使用してクライアントに配置できます。 ただし、次の機能を備えている [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] をお勧めします。  
+ Xbap は、配置手法のいずれかを使用してクライアントに配置できます。 ただし、次の機能が用意されているため、ClickOnce を使用することをお勧めします。  
   
-1.  新しいバージョンが公開されたときの自動更新。  
+1. 新しいバージョンが公開されたときの自動更新。  
   
-2.  完全な信頼で実行する [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] の特権の昇格。  
+2. 完全信頼で実行されている XBAP の昇格権限。  
   
  既定では、ClickOnce は、.deploy 拡張子を持つアプリケーション ファイルを公開します。 これは問題になる可能性がありますが、無効にできます。 詳細については、「[ClickOnce 配置でのサーバーおよびクライアント構成の問題](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments)」を参照してください。  
   
- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] の配置の詳細については、「[WPF XAML ブラウザー アプリケーションの概要](../../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)」を参照してください。  
+ XAML ブラウザーアプリケーション (Xbap) の配置の詳細については、「 [WPF Xaml ブラウザーアプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
   
 <a name="Installing__NET_Framework_3_0"></a>   
 ## <a name="installing-the-net-framework"></a>.NET Framework のインストール  
- 実行する、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションでは、クライアントに Microsoft .NET Framework をインストールする必要があります。 [!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)] .NET Framework と共にクライアントをインストールするかどうかを自動的に検出と[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ブラウザー ホスト アプリケーションが表示されます。 .NET Framework がインストールされていない場合[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]ユーザーがインストールを求められます。  
+ WPF アプリケーションを実行するには、クライアントに Microsoft .NET Framework がインストールされている必要があります。 Internet Explorer は、WPF ブラウザーでホストされるアプリケーションを表示するときに、クライアントが .NET Framework と共にインストールされるかどうかを自動的に検出します。 .NET Framework がインストールされていない場合、Internet Explorer はユーザーにインストールを促すメッセージを表示します。  
   
- .NET Framework がインストールされているかどうかを検出するために[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]フォールバックとして登録されているブートス トラップ アプリケーションが含まれて[!INCLUDE[TLA#tla_mime](../../../../includes/tlasharptla-mime-md.md)]次の拡張機能を持つコンテンツ ファイルのハンドラー: .xaml、.xps、.xbap、および .application です。 この種類のファイルに移動するクライアントに .NET Framework がインストールされていない場合は、ブートス トラップ アプリケーションはインストールの許可を要求します。 アクセス許可が指定されていない場合は、.NET Framework でも、アプリケーションがインストールされます。  
+ .NET Framework がインストールされているかどうかを検出するために、Internet Explorer には、次の拡張子を持つコンテンツファイルのフォールバック Multipurpose Internet Mail Extensions (MIME) ハンドラーとして登録されたブートストラップアプリケーションが含まれています。 .xaml、.xps、xbap、、および. アプリケーション。 これらのファイルの種類に移動したときに、.NET Framework がクライアントにインストールされていない場合、ブートストラップアプリケーションは、インストールするためのアクセス許可を要求します。 アクセス許可が指定されていない場合は、.NET Framework もアプリケーションもインストールされません。  
   
- アクセス許可が与えられた場合[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]をダウンロードしてインストールを使用して、.NET Framework、[!INCLUDE[TLA#tla_bits](../../../../includes/tlasharptla-bits-md.md)]します。 .NET Framework のインストールの成功後は、最初に要求されたファイルを新しいブラウザー ウィンドウで開きます。  
+ アクセス許可が付与されている場合、Internet Explorer は Microsoft バックグラウンドインテリジェント転送サービス (BITS) を使用して .NET Framework をダウンロードしてインストールします。 .NET Framework が正常にインストールされると、最初に要求されたファイルが新しいブラウザーウィンドウで開かれます。  
   
- .NET framework の自動検出は[!INCLUDE[TLA#tla_longhorn](../../../../includes/tlasharptla-longhorn-md.md)]、 [!INCLUDE[TLA#tla_winxpsp2](../../../../includes/tlasharptla-winxpsp2-md.md)]、および[!INCLUDE[TLA#tla_winnetsvrfamsp1](../../../../includes/tlasharptla-winnetsvrfamsp1-md.md)]を持つクライアント[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]以降をインストールします。  
+ 詳細については、「[.NET Framework およびアプリケーションの配置](../../deployment/index.md)」を参照してください。  
   
- 詳細については、「[.NET Framework およびアプリケーションの配置](../../../../docs/framework/deployment/index.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目
-- [WPF アプリケーションのビルド](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)
-- [セキュリティ](../../../../docs/framework/wpf/security-wpf.md)
+## <a name="see-also"></a>参照
+
+- [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)
+- [セキュリティ](../security-wpf.md)

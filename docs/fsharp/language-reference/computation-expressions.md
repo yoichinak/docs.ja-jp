@@ -1,42 +1,42 @@
 ---
 title: コンピュテーション式
-description: 計算を作成するための便利な構文を作成する方法についてF#、制御できることがシーケンス処理されたと結合を使用してフローの作成とバインドします。
-ms.date: 07/27/2018
-ms.openlocfilehash: 7524a42f8efb951be255ca6cc285740ef1fa12c3
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+description: 制御フローの構造とバインディングを使用してF#シーケンス処理および結合できる、で計算を記述するための便利な構文を作成する方法について説明します。
+ms.date: 11/04/2019
+ms.openlocfilehash: 55406cc12d9e6e890fe69d712f79486d23b84452
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093516"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794547"
 ---
 # <a name="computation-expressions"></a>コンピュテーション式
 
-コンピュテーション式でF#シーケンス処理できるし、制御フローの作成とバインドを使用して結合する計算を作成するための便利な構文を提供します。 コンピュテーション式の種類、に応じてには、モナド、monoids、monad トランスフォーマー、および適用したファンクターを表現する手段として、考えるができます。 その他の言語とは異なり、(など*do 表記*Haskell で)、単一の抽象化に関連付けられていない、マクロやその他の形式に依存しないメタプログラミングを便利で状況依存の構文を実現します。
+のF#コンピュテーション式は、制御フローの構造とバインディングを使用して、シーケンス処理および結合できる計算を作成するための便利な構文を提供します。 計算式の種類によっては、monads、モノ id、monads トランスフォーマー、およびアプリケーションを表現する方法と考えることができます。 ただし、Haskell*のような*他の言語とは異なり、それらは1つの抽象化に関連付けられておらず、マクロやその他の形式のメタプログラミングに依存せず、便利で状況依存の構文を実現できません。
 
-## <a name="overview"></a>概要
+## <a name="overview"></a>の概要
 
-計算には、多くの形式を取ります。 計算の最も一般的な形式は、シングル スレッド実行は簡単に理解して変更できます。 ただし、すべての形態の計算はシングル スレッド実行するように単純です。 次に、それらの例の一部を示します。
+計算には多くの形式が必要です。 最も一般的な計算形式は、簡単に理解して変更できるシングルスレッド実行です。 ただし、すべての形式の計算は、シングルスレッド実行と単純なものではありません。 たとえば、次のものがあります。
 
-* 非決定論的な計算
-* 非同期計算
-* Effectful 計算
-* 当初の計算
+- 非決定的な計算
+- 非同期計算
+- Effectful の計算
+- 注釈の計算
 
-一般的には、ある*状況に応じた*計算アプリケーションの特定の部分で実行する必要があります。 状況依存のコードの記述はそうことを防止するための抽象化せず、特定のコンテキストの外部で「リーク」計算を簡単に難しいことができます。 これらの抽象化は、自分が F# には、実行する一般的な方法と呼ばれるものを記述する多くの場合、時間がかかります**コンピュテーション式**します。
+一般に、アプリケーションの特定の部分で実行する必要がある*状況依存*の計算があります。 コンテキストに依存するコードを記述することは困難な場合があります。これは、特定のコンテキストの外では、抽象化を行わずに "リーク" の計算を簡単に行うことができるためです。 多くの場合、これらの抽象化は自分で記述することF#が困難です。そのため、**コンピュテーション式**と呼ばれる汎用的な方法があります。
 
-コンピュテーション式では、状況依存の計算をエンコードするための統一された構文と抽象化モデルを提供します。
+コンピュテーション式は、文脈に依存した計算をエンコードするための統一された構文と抽象化モデルを提供します。
 
-すべての計算式を支え、*ビルダー*型。 ビルダーの型は、そのコンピュテーション式で利用可能な操作を定義します。 参照してください[コンピュテーション式の新しい型を作成する](computation-expressions.md#creating-a-new-type-of-computation-expression)、カスタム計算式を作成する方法します。
+すべての計算式は、*ビルダー*型によってサポートされます。 ビルダーの型は、コンピュテーション式で使用できる操作を定義します。 「[コンピュテーション式の新しい型の作成](computation-expressions.md#creating-a-new-type-of-computation-expression)」を参照してください。これは、カスタム計算式の作成方法を示しています。
 
 ### <a name="syntax-overview"></a>構文の概要
 
-すべての計算式では、次の形式があります。
+すべての計算式の形式は次のとおりです。
 
-```
+```fsharp
 builder-expr { cexper }
 ```
 
-場所`builder-expr`そのコンピュテーション式を定義するビルダー型の名前を指定および`cexper`コンピュテーション式の式の本文です。 たとえば、`async`式のコードを計算できるようになります。
+ここで `builder-expr` はコンピュテーション式を定義するビルダー型の名前、`cexper` はコンピュテーション式の式の本体です。 たとえば、`async` コンピュテーション式のコードは次のようになります。
 
 ```fsharp
 let fetchAndDownload url =
@@ -49,7 +49,7 @@ let fetchAndDownload url =
     }
 ```
 
-その他の特別な構文、コンピュテーション式内で使用可能な前の例で示すように。 次の式のフォームがコンピュテーション式と考えられます。
+前の例で示したように、コンピュテーション式内で使用できる特殊な追加の構文があります。 コンピュテーション式では、次の式の形式を使用できます。
 
 ```fsharp
 expr { let! ... }
@@ -61,13 +61,13 @@ expr { return! ... }
 expr { match! ... }
 ```
 
-これらのキーワードおよびその他の標準の F# キーワードの各はバッキング ビルダー型で定義されている場合のみコンピュテーション式で使用できます。 唯一の例外は`match!`、糖衣構文の使用は`let!`結果で、パターン一致の後にします。
+これらのキーワードおよびその他の標準F#のキーワードは、バッキングビルダーの型で定義されている場合にのみ、コンピュテーション式で使用できます。 唯一の例外は `match!`です。これは、`let!` を使用するための構文砂糖であり、その後に結果のパターンマッチが続きます。
 
-ビルダーの型はコンピュテーション式のフラグメントを結合する方法を制御する特殊なメソッドを定義するオブジェクトです。つまり、そのメソッドは、コンピュテーション式の動作方法を制御します。 ビルダー クラスを記述する別の方法は、多く F# の構成要素、ループやバインドなどの操作をカスタマイズできるには。
+ビルダーの型は、コンピュテーション式のフラグメントの結合方法を制御する特殊なメソッドを定義するオブジェクトです。つまり、そのメソッドは、コンピュテーション式の動作を制御します。 ビルダークラスを記述するもう1つの方法は、ループやバインドなど、さまざまF#な構造の操作をカスタマイズできるということです。
 
 ### `let!`
 
-`let!`キーワード名に別のコンピュテーション式の呼び出しの結果をバインドします。
+`let!` キーワードは、別のコンピュテーション式への呼び出しの結果を名前にバインドします。
 
 ```fsharp
 let doThingsAsync url =
@@ -77,13 +77,13 @@ let doThingsAsync url =
     }
 ```
 
-コンピュテーション式での呼び出しをバインドするかどうかは`let`コンピュテーション式の結果は表示されません。 代わりにバインドしてからの値、*実現されていない*そのコンピュテーション式を呼び出します。 使用`let!`結果にバインドします。
+`let`でコンピュテーション式への呼び出しをバインドすると、コンピュテーション式の結果は得られません。 代わりに、そのコンピュテーション式に対して、*実現*されていない呼び出しの値をバインドします。 `let!` を使用して、結果にバインドします。
 
-`let!` `Bind(x, f)`ビルダー型のメンバー。
+`let!` は、ビルダー型の `Bind(x, f)` メンバーによって定義されます。
 
 ### `do!`
 
-`do!`キーワードはコンピュテーション式の呼び出しを返します、 `unit`-などの型 (によって定義された、`Zero`ビルダーでのメンバー)。
+`do!` キーワードは、`unit`に似た型 (ビルダーの `Zero` メンバーによって定義) を返すコンピュテーション式を呼び出すためのものです。
 
 ```fsharp
 let doThingsAsync data url =
@@ -93,13 +93,13 @@ let doThingsAsync data url =
     }
 ```
 
-[非同期ワークフロー](asynchronous-workflows.md)、この型は`Async<unit>`します。 その他のコンピュテーション式の型がある可能性があります`CExpType<unit>`します。
+[非同期ワークフロー](asynchronous-workflows.md)の場合、この型は `Async<unit>`です。 その他の計算式では、型が `CExpType<unit>`される可能性があります。
 
-`do!` によって定義されます、`Bind(x, f)`ビルダーの型のメンバー、`f`生成、`unit`します。
+`do!` は、`f` が `unit`を生成するビルダー型の `Bind(x, f)` メンバーによって定義されます。
 
 ### `yield`
 
-`yield`として利用できるように、コンピュテーション式から値を返すためのキーワードは、 <xref:System.Collections.Generic.IEnumerable%601>:
+`yield` キーワードは、<xref:System.Collections.Generic.IEnumerable%601>として使用できるように、コンピュテーション式から値を返すためのものです。
 
 ```fsharp
 let squares =
@@ -112,13 +112,41 @@ for sq in squares do
     printfn "%d" sq
 ```
 
-同様、 [yield キーワード (C#)](../../csharp/language-reference/keywords/yield.md)、それが反復処理にそのコンピュテーション式内の各要素が返されます。
+ほとんどの場合、呼び出し元は省略できます。 `yield` を省略する最も一般的な方法は、`->` 演算子を使用することです。
 
-`yield` によって定義されます、`Yield(x)`ビルダーの型のメンバー、`x`はバックアップを生成する項目です。
+```fsharp
+let squares =
+    seq {
+        for i in 1..10 -> i * i
+    }
+
+for sq in squares do
+    printfn "%d" sq
+```
+
+多くの異なる値を生成する可能性がある複雑な式の場合、場合によってはキーワードを省略するだけで、次のことが可能です。
+
+```fsharp
+let weekdays includeWeekend =
+    seq {
+        "Monday"
+        "Tuesday"
+        "Wednesday"
+        "Thursday"
+        "Friday"
+        if includeWeekend then
+            "Saturday"
+            "Sunday"
+    }
+```
+
+[ C#で yield キーワード](../../csharp/language-reference/keywords/yield.md)を使用する場合と同様に、コンピュテーション式の各要素は反復処理されるときに返されます。
+
+`yield` は、ビルダー型の `Yield(x)` メンバーによって定義されます。 `x` は、返される項目です。
 
 ### `yield!`
 
-`yield!`キーワードがコンピュテーション式から値のコレクションをフラット化するためには。
+`yield!` キーワードは、コンピュテーション式から値のコレクションをフラット化するためのものです。
 
 ```fsharp
 let squares =
@@ -140,13 +168,15 @@ let squaresAndCubes =
 printfn "%A" squaresAndCubes // Prints - 1; 4; 9; 1; 8; 27
 ```
 
-そのコンピュテーション式と呼ばれる評価されると、`yield!`がその項目になり、戻る 1 つずつ、結果をフラット化します。
+評価された場合、`yield!` によって呼び出されるコンピュテーション式の項目は1つずつ返され、結果がフラット化されます。
 
-`yield!` によって定義されます、`YieldFrom(x)`ビルダーの型のメンバー、`x`値のコレクションです。
+`yield!` は、ビルダー型の `YieldFrom(x)` メンバーによって定義されます。 `x` は値のコレクションです。
+
+`yield`とは異なり、`yield!` は明示的に指定する必要があります。 計算式では、その動作は暗黙的ではありません。
 
 ### `return`
 
-`return`キーワード コンピュテーション式に対応する型の値をラップします。 使用して計算式とは別に`yield`コンピュテーション式を「完了」に使用されます。
+`return` キーワードは、コンピュテーション式に対応する型の値をラップします。 `yield`を使用した計算式とは別に、計算式を "完了" するために使用されます。
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -159,11 +189,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return` によって定義されます、`Return(x)`ビルダーの型のメンバー、`x`をラップする項目。
+`return` は、ビルダーの型の `Return(x)` メンバーによって定義されます。 `x` は、ラップする項目です。
 
 ### `return!`
 
-`return!`キーワード コンピュテーション式の値を認識およびコンピュテーション式に対応する型でその結果をラップします。
+`return!` キーワードは、コンピュテーション式の値を認識し、その結果をコンピュテーション式に対応する型にラップします。
 
 ```fsharp
 let req = // 'req' is of type is 'Async<data>'
@@ -175,11 +205,11 @@ let req = // 'req' is of type is 'Async<data>'
 let result = Async.RunSynchronously req
 ```
 
-`return!` によって定義されます、`ReturnFrom(x)`ビルダーの型のメンバー、`x`別の計算式です。
+`return!` は、ビルダーの型の `ReturnFrom(x)` メンバーによって定義されます。 `x` は別のコンピュテーション式です。
 
 ### `match!`
 
-以降でF#、4.5、`match!`キーワードを使用するインラインを別の計算式とパターン一致の結果への呼び出し。
+`match!` キーワードを使用すると、別のコンピュテーション式への呼び出しをインライン化し、結果にパターン一致を行うことができます。
 
 ```fsharp
 let doThingsAsync url =
@@ -190,72 +220,72 @@ let doThingsAsync url =
     }
 ```
 
-計算式を呼び出すときに`match!`のような呼び出しの結果を実現は`let!`します。 これは、多くの場合、使用結果がコンピュテーション式を呼び出すときに、[省略可能な](options.md)します。
+`match!`でコンピュテーション式を呼び出すと、`let!`のような呼び出しの結果が認識されます。 これは、通常、結果が[省略可能](options.md)であるコンピュテーション式を呼び出すときに使用されます。
 
 ## <a name="built-in-computation-expressions"></a>組み込みのコンピュテーション式
 
-F#コア ライブラリが 3 つの組み込みのコンピュテーション式を定義します。[シーケンス式](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[クエリ式](query-expressions.md)します。
+コアF#ライブラリでは、[シーケンス式](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、[クエリ式](query-expressions.md)という3つの組み込みのコンピュテーション式が定義されています。
 
-## <a name="creating-a-new-type-of-computation-expression"></a>コンピュテーション式の新しい型を作成します。
+## <a name="creating-a-new-type-of-computation-expression"></a>新しい種類のコンピュテーション式の作成
 
-ビルダー クラスを作成し、クラスの特定の特殊なメソッドを定義することは、独自のコンピュテーション式の特性を定義できます。 必要に応じて、ビルダー クラスは、次の表に記載されている、メソッドを定義します。
+ビルダークラスを作成し、クラスに特定の特別なメソッドを定義することで、独自のコンピュテーション式の特性を定義できます。 ビルダークラスでは、次の表に示すように、必要に応じてメソッドを定義できます。
 
-次の表では、ワークフロー ビルダー クラスで使用できるメソッドについて説明します。
+次の表では、ワークフロービルダークラスで使用できるメソッドについて説明します。
 
-|**メソッド**|**通常のシグネチャ**|**説明**|
+|**メソッド**|**一般的な署名**|**説明**|
 |----|----|----|
-|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|に対して呼び出されて`let!`と`do!`コンピュテーション式で。|
-|`Delay`|`(unit -> M<'T>) -> M<'T>`|コンピュテーション式として関数をラップします。|
-|`Return`|`'T -> M<'T>`|に対して呼び出されて`return`コンピュテーション式で。|
-|`ReturnFrom`|`M<'T> -> M<'T>`|に対して呼び出されて`return!`コンピュテーション式で。|
-|`Run`|`M<'T> -> M<'T>` または<br /><br />`M<'T> -> 'T`|コンピュテーション式を実行します。|
-|`Combine`|`M<'T> * M<'T> -> M<'T>` または<br /><br />`M<unit> * M<'T> -> M<'T>`|コンピュテーション式でシーケンス処理と呼ばれます。|
-|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>` または<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|に対して呼び出されて`for...do`コンピュテーション式内の式。|
-|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|に対して呼び出されて`try...finally`コンピュテーション式内の式。|
-|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|に対して呼び出されて`try...with`コンピュテーション式内の式。|
-|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'U :> IDisposable`|に対して呼び出されて`use`コンピュテーション式でバインドします。|
-|`While`|`(unit -> bool) * M<'T> -> M<'T>`|に対して呼び出されて`while...do`コンピュテーション式内の式。|
-|`Yield`|`'T -> M<'T>`|に対して呼び出されて`yield`コンピュテーション式内の式。|
-|`YieldFrom`|`M<'T> -> M<'T>`|に対して呼び出されて`yield!`コンピュテーション式内の式。|
-|`Zero`|`unit -> M<'T>`|空のという`else`の分岐`if...then`コンピュテーション式内の式。|
-|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|コンピュテーション式に渡されることを示します、`Run`引用符としてメンバー。 見積に計算のすべてのインスタンスを変換します。|
+|`Bind`|`M<'T> * ('T -> M<'U>) -> M<'U>`|コンピュテーション式で `let!` および `do!` に対して呼び出されます。|
+|`Delay`|`(unit -> M<'T>) -> M<'T>`|計算式を関数としてラップします。|
+|`Return`|`'T -> M<'T>`|コンピュテーション式の `return` に対して呼び出されます。|
+|`ReturnFrom`|`M<'T> -> M<'T>`|コンピュテーション式の `return!` に対して呼び出されます。|
+|`Run`|`M<'T> -> M<'T>`<br /><br />`M<'T> -> 'T`|コンピュテーション式を実行します。|
+|`Combine`|`M<'T> * M<'T> -> M<'T>`<br /><br />`M<unit> * M<'T> -> M<'T>`|コンピュテーション式でシーケンス処理を行うために呼び出されます。|
+|`For`|`seq<'T> * ('T -> M<'U>) -> M<'U>`<br /><br />`seq<'T> * ('T -> M<'U>) -> seq<M<'U>>`|コンピュテーション式の `for...do` 式に対して呼び出されます。|
+|`TryFinally`|`M<'T> * (unit -> unit) -> M<'T>`|コンピュテーション式の `try...finally` 式に対して呼び出されます。|
+|`TryWith`|`M<'T> * (exn -> M<'T>) -> M<'T>`|コンピュテーション式の `try...with` 式に対して呼び出されます。|
+|`Using`|`'T * ('T -> M<'U>) -> M<'U> when 'T :> IDisposable`|コンピュテーション式の `use` バインドに対して呼び出されます。|
+|`While`|`(unit -> bool) * M<'T> -> M<'T>`|コンピュテーション式の `while...do` 式に対して呼び出されます。|
+|`Yield`|`'T -> M<'T>`|コンピュテーション式の `yield` 式に対して呼び出されます。|
+|`YieldFrom`|`M<'T> -> M<'T>`|コンピュテーション式の `yield!` 式に対して呼び出されます。|
+|`Zero`|`unit -> M<'T>`|コンピュテーション式の `if...then` 式の空の `else` 分岐に対して呼び出されます。|
+|`Quote`|`Quotations.Expr<'T> -> Quotations.Expr<'T>`|コンピュテーション式が `Run` メンバーに引用符として渡されることを示します。 計算のすべてのインスタンスを引用符に変換します。|
 
-ビルダー クラスのメソッドの多くを使用し、返す、`M<'T>`コンス トラクターは、たとえば、結合している計算の種類の特性を設定するとは別に定義されている型は通常、`Async<'T>`ための非同期ワークフローと`Seq<'T>`ワークフローのシーケンス。 これらのメソッドのシグネチャは、1 つの構築から返されるワークフロー オブジェクトは、次に渡すことができるようにそれらを結合し、相互に入れ子に有効にします。 計算式を解析するとき、コンパイラは、上記の表に、メソッドとそのコンピュテーション式のコードを使用して、一連の入れ子になった関数呼び出しに式を変換します。
+ビルダークラスのメソッドの多くは、`M<'T>` コンストラクトを使用して返します。通常、これは、結合する計算の種類を特徴とする個別に定義された型です。たとえば、非同期ワークフローの場合は `Async<'T>`、シーケンスワークフローの場合は `Seq<'T>` です。 これらのメソッドのシグネチャを使用すると、1つのコンストラクトから返されるワークフローオブジェクトを次の構造体に渡すことができるように、それらを組み合わせて入れ子にすることができます。 コンパイラは、コンピュテーション式を解析するときに、前の表のメソッドとコンピュテーション式のコードを使用して、一連の入れ子になった関数呼び出しに式を変換します。
 
-入れ子になった式は、次の形式では。
+入れ子になった式の形式は次のとおりです。
 
 ```fsharp
 builder.Run(builder.Delay(fun () -> {| cexpr |}))
 ```
 
-上記のコードへの呼び出しで`Run`と`Delay`計算式ビルダー クラスで定義されていない場合は省略します。 としてここで示される、計算式の本体`{| cexpr |}`は、次の表で説明されている翻訳によってビルダー クラスのメソッドに関連する呼び出しに変換されます。 コンピュテーション式`{| cexpr |}`に従ってこれらの変換を再帰的に定義されているは、 `expr` F# の式と`cexpr`計算式です。
+上記のコードでは、コンピュテーション式ビルダークラスで定義されていない場合、`Run` と `Delay` への呼び出しは省略されます。 ここでは `{| cexpr |}`として示されているコンピュテーション式の本体は、次の表に示す翻訳によって、ビルダークラスのメソッドを含む呼び出しに変換されます。 コンピュテーション式 `{| cexpr |}` は、これらの変換に従って、`expr` がF#式で、`cexpr` がコンピュテーション式である場合に、再帰的に定義されます。
 
-|正規表現|変換|
+|[式]|変換|
 |----------|-----------|
-|<code>{&#124; let binding in cexpr &#124;}</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
-|<code>{&#124; let! pattern = expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; do! expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun () -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; yield expr &#124;}</code>|`builder.Yield(expr)`|
-|<code>{&#124; yield! expr &#124;}</code>|`builder.YieldFrom(expr)`|
-|<code>{&#124; return expr &#124;}</code>|`builder.Return(expr)`|
-|<code>{&#124; return! expr &#124;}</code>|`builder.ReturnFrom(expr)`|
-|<code>{&#124; use pattern = expr in cexpr &#124;}</code>|<code>builder.Using(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; use! value = expr in cexpr &#124;}</code>|<code>builder.Bind(expr, (fun value -> builder.Using(value, (fun value -> {&#124; cexpr &#124;}))))</code>|
-|<code>{&#124; if expr then cexpr0 &#124;}</code>|<code>if expr then {&#124; cexpr0 &#124;} else binder.Zero()</code>|
-|<code>{&#124; if expr then cexpr0 else cexpr1 &#124;}</code>|<code>if expr then {&#124; cexpr0 &#124;} else {&#124; cexpr1 &#124;}</code>|
-|<code>{&#124; match expr with &#124; pattern_i -> cexpr_i &#124;}</code>|<code>match expr with &#124; pattern_i -> {&#124; cexpr_i &#124;}</code>|
-|<code>{&#124; for pattern in expr do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun pattern -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; for identifier = expr1 to expr2 do cexpr &#124;}</code>|<code>builder.For(enumeration, (fun identifier -> {&#124; cexpr &#124;}))</code>|
-|<code>{&#124; while expr do cexpr &#124;}</code>|<code>builder.While(fun () -> expr), builder.Delay({&#124;cexpr &#124;})</code>|
-|<code>{&#124; try cexpr with &#124; pattern_i -> expr_i &#124;}</code>|<code>builder.TryWith(builder.Delay({&#124; cexpr &#124;}), (fun value -> match value with &#124; pattern_i -> expr_i &#124; exn -> reraise exn)))</code>|
-|<code>{&#124; try cexpr finally expr &#124;}</code>|<code>builder.TryFinally(builder.Delay( {&#124; cexpr &#124;}), (fun () -> expr))</code>|
-|<code>{&#124; cexpr1; cexpr2 &#124;}</code>|<code>builder.Combine({&#124;cexpr1 &#124;}, {&#124; cexpr2 &#124;})</code>|
-|<code>{&#124; other-expr; cexpr &#124;}</code>|<code>expr; {&#124; cexpr &#124;}</code>|
-|<code>{&#124; other-expr &#124;}</code>|`expr; builder.Zero()`|
+|<code>{ let binding in cexpr }</code>|<code>let binding in {&#124; cexpr &#124;}</code>|
+|<code>{ let! pattern = expr in cexpr }</code>|<code>builder.Bind(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
+|<code>{ do! expr in cexpr }</code>|<code>builder.Bind(expr, (fun () -> {&#124; cexpr &#124;}))</code>|
+|<code>{ yield expr }</code>|`builder.Yield(expr)`|
+|<code>{ yield! expr }</code>|`builder.YieldFrom(expr)`|
+|<code>{ return expr }</code>|`builder.Return(expr)`|
+|<code>{ return! expr }</code>|`builder.ReturnFrom(expr)`|
+|<code>{ use pattern = expr in cexpr }</code>|<code>builder.Using(expr, (fun pattern -> {&#124; cexpr &#124;}))</code>|
+|<code>{ use! value = expr in cexpr }</code>|<code>builder.Bind(expr, (fun value -> builder.Using(value, (fun value -> { cexpr }))))</code>|
+|<code>{ if expr then cexpr0 &#124;}</code>|<code>if expr then { cexpr0 } else builder.Zero()</code>|
+|<code>{ if expr then cexpr0 else cexpr1 &#124;}</code>|<code>if expr then { cexpr0 } else { cexpr1 }</code>|
+|<code>{ match expr with &#124; pattern_i -> cexpr_i }</code>|<code>match expr with &#124; pattern_i -> { cexpr_i }</code>|
+|<code>{ for pattern in expr do cexpr }</code>|<code>builder.For(enumeration, (fun pattern -> { cexpr }))</code>|
+|<code>{ for identifier = expr1 to expr2 do cexpr }</code>|<code>builder.For(enumeration, (fun identifier -> { cexpr }))</code>|
+|<code>{ while expr do cexpr }</code>|<code>builder.While(fun () -> expr, builder.Delay({ cexpr }))</code>|
+|<code>{ try cexpr with &#124; pattern_i -> expr_i }</code>|<code>builder.TryWith(builder.Delay({ cexpr }), (fun value -> match value with &#124; pattern_i -> expr_i &#124; exn -> reraise exn)))</code>|
+|<code>{ try cexpr finally expr }</code>|<code>builder.TryFinally(builder.Delay( { cexpr }), (fun () -> expr))</code>|
+|<code>{ cexpr1; cexpr2 }</code>|<code>builder.Combine({ cexpr1 }, { cexpr2 })</code>|
+|<code>{ other-expr; cexpr }</code>|<code>expr; { cexpr }</code>|
+|<code>{ other-expr }</code>|`expr; builder.Zero()`|
 
-前の表に`other-expr`それ以外の場合、表に一覧表示されない式について説明します。 ビルダー クラスは、すべてのメソッドを実装し、前の表に、翻訳のすべてをサポートする必要はありません。 実装されていないこれらのコンストラクトでは、その型のコンピュテーション式で使用できません。 例では、サポートしない場合、 `use` 、コンピュテーション式、キーワードの定義を省略できます`Use`ビルダー クラスにします。
+前の表では、`other-expr` テーブルに記載されていない式について説明しています。 ビルダークラスは、すべてのメソッドを実装する必要はなく、前の表に一覧表示されているすべての変換をサポートします。 実装されていない構造体は、その型のコンピュテーション式では使用できません。 たとえば、コンピュテーション式で `use` キーワードをサポートしない場合は、ビルダークラスの `Use` の定義を省略できます。
 
-次のコード例では、一連のことができる手順を一度に 1 つのステップを評価すると、計算をカプセル化する計算式を示します。 A 判別共用体型、 `OkOrException`、これまでに評価された式のエラー状態をエンコードします。 このコードは、ビルダー メソッドのいくつかの定型実装など、コンピュテーション式で使用できるいくつかの一般的なパターンを示しています。
+次のコード例は、一度に1ステップずつ評価できる一連のステップとして計算をカプセル化するコンピュテーション式を示しています。 判別共用体型 `OkOrException`は、これまでに評価された式のエラー状態をエンコードします。 このコードは、いくつかのビルダーメソッドの定型的な実装など、計算式で使用できる一般的なパターンを示しています。
 
 ```fsharp
 // Computations that can be run step by step
@@ -304,7 +334,7 @@ module Eventually =
     // This is boilerplate in terms of "result", "catch", and "bind".
     let tryFinally expr compensation =
         catch (expr)
-        |> bind (fun res -> 
+        |> bind (fun res ->
             compensation();
             match res with
             | Ok value -> result value
@@ -335,9 +365,9 @@ module Eventually =
     // This is boilerplate in terms of "catch", "result", and "bind".
     let forLoop (collection:seq<_>) func =
         let ie = collection.GetEnumerator()
-        tryFinally 
-            (whileLoop 
-                (fun () -> ie.MoveNext()) 
+        tryFinally
+            (whileLoop
+                (fun () -> ie.MoveNext())
                 (delay (fun () -> let value = ie.Current in func value)))
             (fun () -> ie.Dispose())
 
@@ -375,26 +405,26 @@ comp |> step |> step
 // prints "x = 1"
 // prints "x = 2"
 // returns "Done 7"
-comp |> step |> step |> step |> step 
+comp |> step |> step |> step |> step
 ```
 
-コンピュテーション式には、式から返される、基になる型があります。 計算の結果または遅延の計算を実行できる、基になる型を表すことがあります。 または何らかの種類のコレクションを反復処理する方法を提供できます。 前の例では、基になる型が**最終的に**します。 シーケンス式では、基になる型は<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>します。 クエリ式では、基になる型は<xref:System.Linq.IQueryable?displayProperty=nameWithType>します。 非同期ワークフローでは、基になる型は[ `Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)します。 `Async`オブジェクトは、結果を計算するために実行する作業を表します。 たとえば、呼び出す[ `Async.RunSynchronously` ](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)計算を実行し、結果が返されます。
+コンピュテーション式には基になる型があり、この式はを返します。 基になる型は、計算された結果または実行可能な遅延計算を表すことができます。また、一部の型のコレクションを反復処理する方法を提供する場合もあります。 前の例では、基になる型は**最終的**にでした。 シーケンス式の場合、基になる型は <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType>です。 クエリ式の場合、基になる型は <xref:System.Linq.IQueryable?displayProperty=nameWithType>です。 非同期ワークフローの場合、基になる型は[`Async`](https://msdn.microsoft.com/library/03eb4d12-a01a-4565-a077-5e83f17cf6f7)です。 `Async` オブジェクトは、結果を計算するために実行する作業を表します。 たとえば、 [`Async.RunSynchronously`](https://msdn.microsoft.com/library/0a6663a9-50f2-4d38-8bf3-cefd1a51fd6b)を呼び出して計算を実行し、その結果を返します。
 
 ## <a name="custom-operations"></a>カスタム操作
 
-コンピュテーション式のカスタム処理を定義し、オペレーターはコンピュテーション式でカスタム操作を使用できます。 たとえば、クエリ式でクエリ演算子を含めることができます。 カスタム操作を定義するときに、Yield を定義する必要がありますとコンピュテーション式内のメソッド。 カスタム操作を定義するには、そのコンピュテーション式のビルダー クラスに配置し、適用、 [ `CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)します。 この属性は、カスタム操作で使用する名前を引数として文字列を受け取ります。 この名前は、そのコンピュテーション式の中かっこの開始時のスコープに渡されます。 そのため、このブロックでカスタム操作と同じ名前を指定する識別子を使用しないでください。 たとえばなどの識別子の使用を避ける`all`または`last`クエリ式で。
+コンピュテーション式でカスタム操作を定義し、コンピュテーション式で演算子としてカスタム操作を使用することができます。 たとえば、クエリ式にクエリ演算子を含めることができます。 カスタム操作を定義する場合は、コンピュテーション式の Yield メソッドと For メソッドを定義する必要があります。 カスタム操作を定義するには、それをコンピュテーション式のビルダークラスに配置し、 [`CustomOperationAttribute`](https://msdn.microsoft.com/library/199f3927-79df-484b-ba66-85f58cc49b19)を適用します。 この属性は、引数として文字列を受け取ります。これはカスタム操作で使用される名前です。 この名前は、コンピュテーション式の左中かっこの先頭にあるスコープに含まれます。 したがって、このブロック内のカスタム操作と同じ名前を持つ識別子は使用しないでください。 たとえば、クエリ式で `all` や `last` などの識別子を使用しないようにします。
 
-### <a name="extending-existing-builders-with-new-custom-operations"></a>新しいカスタム操作で既存のビルダーを拡張します。
+### <a name="extending-existing-builders-with-new-custom-operations"></a>新しいカスタム操作を使用した既存のビルダーの拡張
 
-ビルダー クラスは、既にある場合は、このビルダー クラスの外部からのカスタム操作が拡張できます。 拡張機能は、モジュール内で宣言する必要があります。 名前空間には、同じファイルで、型が定義されている同じ名前空間宣言のグループを除く拡張メンバーを含めることはできません。
+既にビルダークラスがある場合は、そのカスタム操作をこのビルダークラスの外部から拡張できます。 拡張機能はモジュール内で宣言する必要があります。 名前空間には、同じファイルと、型が定義されている同じ名前空間宣言グループ以外の拡張メンバーを含めることはできません。
 
-次の例は、既存の拡張機能`Microsoft.FSharp.Linq.QueryBuilder`クラス。
+次の例は、既存の `Microsoft.FSharp.Linq.QueryBuilder` クラスの拡張を示しています。
 
 ```fsharp
 type Microsoft.FSharp.Linq.QueryBuilder with
 
     [<CustomOperation("existsNot")>]
-    member __.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
+    member _.ExistsNot (source: QuerySource<'T, 'Q>, predicate) =
         Enumerable.Any (source.Source, Func<_,_>(predicate)) |> not
 ```
 

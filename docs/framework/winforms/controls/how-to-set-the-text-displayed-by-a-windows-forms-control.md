@@ -1,6 +1,6 @@
 ---
-title: '方法: によって表示されるテキストを設定、Windows フォーム コントロール'
-ms.date: 03/30/2017
+title: コントロールによって表示されるテキストを設定する
+ms.date: 08/20/2019
 dev_langs:
 - csharp
 - vb
@@ -21,57 +21,69 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: 30cf71aa2a87ff99ccb965844b620ef08a20b69c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb02cbc3b335b0d5856f786b21d1d202cf444211
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636448"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76738421"
 ---
-# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>方法: によって表示されるテキストを設定、Windows フォーム コントロール
-Windows フォーム コントロールは、通常、コントロールの主な機能に関連するいくつかのテキストを表示します。 たとえば、<xref:System.Windows.Forms.Button> コントロールは、通常、ボタンがクリックされたときにどのようなアクションを実行するかを示すキャプションを表示します。 すべてのコントロールに対して、<xref:System.Windows.Forms.Control.Text%2A> プロパティを使用してテキストを設定または返すことができます。 <xref:System.Windows.Forms.Control.Font%2A> プロパティを使用して、フォントを変更することができます。 また、デザイナーを使用してテキストを設定することもできます。  参照してください[方法。Windows フォーム デザイナーを使用してコントロールのアクセス キーを作成](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)、[方法。によって表示されるテキストを設定、Windows フォーム デザイナーを使用してコントロール](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)、[方法。によって表示されるイメージの設定を Windows フォーム デザイナーを使用してコントロール](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)します。  
-  
-### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>コントロールによって表示されるテキストをプログラムで設定するには  
-  
-1.  <xref:System.Windows.Forms.Control.Text%2A> プロパティを文字列に設定します。  
-  
-     下線付きのアクセス キーを作成するには、アクセス キーにする文字の前にアンパサンド (&) を含めます。  
-  
-2.  <xref:System.Windows.Forms.Control.Font%2A> プロパティを型 <xref:System.Drawing.Font> のオブジェクトに設定します。  
-  
-    ```vb  
-    Button1.Text = "Click here to save changes"  
-    Button1.Font = New Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point)  
-    ```  
-  
-    ```csharp  
-    button1.Text = "Click here to save changes";  
-    button1.Font = new Font("Arial", 10, FontStyle.Bold,  
-       GraphicsUnit.Point);  
-    ```  
-  
-    ```cpp  
-    button1->Text = "Click here to save changes";  
-    button1->Font = new System::Drawing::Font("Arial",  
-       10, FontStyle::Bold, GraphicsUnit::Point);  
-    ```  
-  
+# <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>方法: Windows フォームコントロールによって表示されるテキストを設定する
+
+Windows フォームコントロールには、通常、コントロールの主な機能に関連するテキストが表示されます。 たとえば、<xref:System.Windows.Forms.Button> コントロールには、通常、ボタンがクリックされた場合に実行されるアクションを示すキャプションが表示されます。 すべてのコントロールに対して、<xref:System.Windows.Forms.Control.Text%2A> プロパティを使用してテキストを設定または返すことができます。 <xref:System.Windows.Forms.Control.Font%2A> プロパティを使用して、フォントを変更することができます。
+
+[デザイナー](#designer)を使用してテキストを設定することもできます。
+
+## <a name="programmatic"></a>プログラムによる
+
+1. <xref:System.Windows.Forms.Control.Text%2A> プロパティを文字列に設定します。
+
+   下線付きのアクセスキーを作成するには、アクセスキーにする文字の前にアンパサンド (&) を含めます。
+
+2. <xref:System.Windows.Forms.Control.Font%2A> プロパティを型 <xref:System.Drawing.Font> のオブジェクトに設定します。
+
+    ```vb
+    Button1.Text = "Click here to save changes"
+    Button1.Font = New Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point)
+    ```
+
+    ```csharp
+    button1.Text = "Click here to save changes";
+    button1.Font = new Font("Arial", 10, FontStyle.Bold, GraphicsUnit.Point);
+    ```
+
+    ```cpp
+    button1->Text = "Click here to save changes";
+    button1->Font = new System::Drawing::Font("Arial", 10, FontStyle::Bold, GraphicsUnit::Point);
+    ```
+
     > [!NOTE]
-    >  エスケープ文字を使用すると、メニュー項目など、通常は別の解釈がなされるユーザー インターフェイス要素の特殊文字を表示できます。 たとえば、次のコード行は、メニュー項目のテキストが "& Now For Something Completely Different" と読めるように設定します。  
-  
-    ```vb  
-    MPMenuItem.Text = "&& Now For Something Completely Different"  
-    ```  
-  
-    ```csharp  
-    mpMenuItem.Text = "&& Now For Something Completely Different";  
-    ```  
-  
-    ```cpp  
-    mpMenuItem->Text = "&& Now For Something Completely Different";  
-    ```  
-  
-## <a name="see-also"></a>関連項目
+    > エスケープ文字を使用すると、メニュー項目など、通常は別の解釈がなされるユーザー インターフェイス要素の特殊文字を表示できます。 たとえば、次のコード行では、メニュー項目のテキストが "& Now For all" というテキストに設定されています。
+
+    ```vb
+    MPMenuItem.Text = "&& Now For Something Completely Different"
+    ```
+
+    ```csharp
+    mpMenuItem.Text = "&& Now For Something Completely Different";
+    ```
+
+    ```cpp
+    mpMenuItem->Text = "&& Now For Something Completely Different";
+    ```
+
+## <a name="designer"></a>デザイナー
+
+1. Visual Studio の **[プロパティ]** ウィンドウで、コントロールの**Text**プロパティを適切な文字列に設定します。
+
+   下線付きのショートカットキーを作成するには、ショートカットキーにする文字の前にアンパサンド (&) を含めます。
+
+2. **[プロパティ]** ウィンドウで、 **[フォント]** プロパティの横にある省略記号ボタン (![参照ボタン ([...]) を選択します (Visual Studio のプロパティウィンドウの](./media/visual-studio-ellipsis-button.png))。
+
+   [標準フォント] ダイアログボックスで、フォント、フォントスタイル、サイズ、効果 (取り消し線、下線など)、および必要なスクリプトを選択します。
+
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.Control.Text%2A?displayProperty=nameWithType>
-- [方法: Windows フォーム コントロールのアクセス キーを作成します。](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)
-- [方法: Windows フォームのボタン クリックに応答するには](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: Windows フォーム コントロールのアクセス キーを作成する](how-to-create-access-keys-for-windows-forms-controls.md)
+- [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)

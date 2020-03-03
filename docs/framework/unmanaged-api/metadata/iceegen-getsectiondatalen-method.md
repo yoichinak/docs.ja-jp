@@ -15,47 +15,46 @@ helpviewer_keywords:
 ms.assetid: e2a06ee4-b8ee-49c7-935a-c1031a29eef2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aec97ef36b73b1b789c819c4bca516d13ecf1051
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 277e2584049fae397cf91281a65d05b0b49d9454
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631205"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448082"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen メソッド
-指定されたセクションの長さを取得します。  
+指定したセクションの長さを取得します。  
   
- このメソッドは廃止され、使用する必要があります。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSectionDataLen (  
     [in]  HCEESECTION  section,  
     [out] ULONG        *dataLen  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `section`  
- [in]データ セクションは、長さが取得されます。  
+ から長さを取得するデータセクション。  
   
  `dataLen`  
- [out]返される、指定されたセクションの長さ。  
+ 入出力指定したセクションの返された長さ。  
   
-## <a name="remarks"></a>Remarks  
- 呼び出す`GetSectionDataLen`別の方法で処理されない特別なセクションの要件がある場合にのみです。  
+## <a name="remarks"></a>コメント  
+ 他のメソッドによって処理されない特殊なセクション要件がある場合にのみ、`GetSectionDataLen` を呼び出します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

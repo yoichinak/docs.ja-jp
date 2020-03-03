@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4611ee6f-0f05-4d84-91e1-e83d5e7dd7e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f4ce8fb8d9d941544982c8da852260b8018788a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0210aca5698cd9c86979c13afd1e622b50d194df
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680745"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867186"
 ---
-# <a name="corprfgcrootflags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 列挙型
-ガベージ コレクションのルートのプロパティを示します。  
+# <a name="cor_prf_gc_root_flags-enumeration"></a>COR_PRF_GC_ROOT_FLAGS 列挙型
+ガベージコレクションのルートのプロパティを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_GC_ROOT_PINNING = 0x1,  
     COR_PRF_GC_ROOT_WEAKREF = 0x2,  
@@ -41,22 +39,23 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_GC_ROOT_PINNING`|ルートでは、ガベージ コレクション オブジェクトを移動できないようにします。|  
-|`COR_PRF_GC_ROOT_WEAKREF`|ルートは、ガベージ コレクションを妨げません。|  
+|`COR_PRF_GC_ROOT_PINNING`|ルートは、ガベージコレクションがオブジェクトを移動できないようにします。|  
+|`COR_PRF_GC_ROOT_WEAKREF`|ルートによってガベージコレクションが妨げられることはありません。|  
 |`COR_PRF_GC_ROOT_INTERIOR`|ルートは、オブジェクト自体ではなく、オブジェクトのフィールドを参照します。|  
-|`COR_PRF_GC_ROOT_REFCOUNTED`|ルートでは、オブジェクトの参照カウントが特定の値の場合、ガベージ コレクションができないようにします。|  
+|`COR_PRF_GC_ROOT_REFCOUNTED`|オブジェクトの参照カウントが特定の値の場合、ルートはガベージコレクションを防止します。|  
   
-## <a name="remarks"></a>Remarks  
- `COR_PRF_GC_ROOT_FLAGS` 特殊なルートに関する追加情報を提供するビットマスク。 ただし、すべてのルートは特別です。 たとえば、一部のルートを内部ポインター、固定、または参照カウントの弱い参照にすることはできません。 このようなルートを伝達するためのフラグはありません。 など、この列挙体を使用するメソッド、そのため、 [icorprofilercallback 2::rootreferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)メソッドでは、送信 0 すべてフラグを設定するかを示す、フラグ ビットがオフになっています。  
+## <a name="remarks"></a>コメント  
+ `COR_PRF_GC_ROOT_FLAGS` は、特殊なルートに関する追加情報を提供するビットマスクです。 ただし、すべてのルートが特別であるとは限りません。 たとえば、一部のルートは、弱い参照、内部ポインター、ピン留め、または参照カウントされていません。 このようなルートの場合、伝えるフラグはありません。 したがって、 [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md)メソッドなど、この列挙を使用するメソッドは、フラグのビットマスクとして0を送信し、すべてのフラグがオフになっていることを示します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [列挙型のプロファイリング](profiling-enumerations.md)

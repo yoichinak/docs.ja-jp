@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 26abe7ee-e578-4228-affa-01bed0dfce1b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0fd80cb16466d95f443b098fe20f2d407ba2aed8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cdf7f269217390d59e6731ac75cf56b44c77ae9a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401730"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196314"
 ---
 # <a name="icordebugchaingetcontext-method"></a>ICorDebugChain::GetContext メソッド
-.NET Framework の現在のバージョンでは、このメソッドが実装されていません。  
+このメソッドは、.NET Framework の現在のバージョンでは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetContext (  
     [out] ICorDebugContext   **ppContext  
 );  

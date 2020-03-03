@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: c404acb3-4c59-4100-9a4c-483cbdb1d736
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7b0b5c6e70afffd12d3f0cdbbb92b20ac3a949e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e91d990a8f23335248043c59eb210e8c4155e3a
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635010"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445633"
 ---
 # <a name="linkresource-method"></a>LinkResource メソッド
-リソースにリンクします。  
+リソース内のリンク。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LinkResource(  
     mdAssembly  AssemblyID,  
     LPCWSTR     pszFileName,  
@@ -38,7 +36,7 @@ HRESULT LinkResource(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
  アセンブリの ID。  
   
@@ -46,21 +44,22 @@ HRESULT LinkResource(
  ファイルの名前。  
   
  `pszNewLocation`  
- 省略可能な新しいファイル名。 NULL 以外の場合`pszFileName`pszNewLocation にコピーされます。  
+ 省略可能な新しいファイル名。 NULL 以外の場合、`pszFileName` は pszNewLocation にコピーされます。  
   
  `pszResourceName`  
  リソースの名前。  
   
  `dwFlags`  
- ユーザー補助フラグなど`mrPublic`と`mrPrivate`します。 このパラメーターに渡される[DefineManifestResource メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definemanifestresource-method.md)します。  
+ `mrPublic` や `mrPrivate`などのアクセシビリティフラグ。 このパラメーターは、 [DefineManifestResource メソッド](../metadata/imetadataassemblyemit-definemanifestresource-method.md)に渡すことができます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>参照
+
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

@@ -14,47 +14,46 @@ helpviewer_keywords:
 ms.assetid: 1fec4aef-0a06-4df0-bae7-d31a9ef9603d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1d36ae3ef63c1324f77786ad55674bbdc257d984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db6a20dee21b6c8bbd55fa9b52a159a00fe310d5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607135"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73092030"
 ---
 # <a name="waitortimercallback-function-pointer"></a>WAITORTIMERCALLBACK 関数ポインター
-待機を処理するホストに通知する関数を指します (<xref:System.Threading.WaitHandle>) がされたシグナルまたはタイムアウトします。  
+待機ハンドル (<xref:System.Threading.WaitHandle>) が通知されたか、タイムアウトしたことをホストに通知する関数を指します。  
   
- この関数のポインターが非推奨とされた、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。  
+ この関数ポインターは .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef VOID (__stdcall *WAITORTIMERCALLBACK) (  
     [in] PVOID lpParameter,  
     [in] BOOL  TimerOrWaitFired  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lpParameter`  
- [in]ホストによって定義された情報を格納しているオブジェクトへのポインター。  
+ からホストによって定義された情報を格納しているオブジェクトへのポインター。  
   
  `TimerOrWaitFired`  
- [in]`true`待機ハンドルがタイムアウトした場合または`false`シグナル通知された場合。  
+ [in] 待機ハンドルがタイムアウトした場合は `true`、シグナルを送信した場合は `false` します。  
   
 ## <a name="remarks"></a>Remarks  
- 関数`WAITORTIMERCALLBACK`ポイントはコールバック関数であり、ホスト アプリケーションの作成者によって実装する必要があります。  
+ `WAITORTIMERCALLBACK` ポイントする関数はコールバック関数であり、ホストアプリケーションのライターによって実装される必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorWks.dll  
+ **ライブラリ:** Mscorwks.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

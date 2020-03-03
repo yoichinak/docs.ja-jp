@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c1b57ccdaa9e04c837ecf7572bc164683a934b2d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803884"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>'Custom' 修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です。
 非カスタム イベントとは異なり、`Custom Event`宣言が必要です、`As`句は次のイベント名を明示的にイベントのデリゲート型を指定します。  
@@ -23,24 +23,25 @@ ms.locfileid: "55273518"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  カスタム イベントと同じパラメーター リストを持つデリゲートを定義します。  
+1. カスタム イベントと同じパラメーター リストを持つデリゲートを定義します。  
   
      たとえば場合、`Custom Event`で定義された`Custom Event Test(ByVal sender As Object, ByVal i As Integer)`、対応するデリゲートは、次になります。  
   
-     [!code-vb[VbVbalrEventError#18](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_1.vb)]  
+     [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2.  カスタム イベントのパラメーターのリストを置き換える、`As`デリゲート型を指定する句。  
+2. カスタム イベントのパラメーターのリストを置き換える、`As`デリゲート型を指定する句。  
   
      先ほどの例では、`Custom Event`宣言を次のように書き換えることができます。  
   
-     [!code-vb[VbVbalrEventError#19](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_2.vb)]  
+     [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
 ## <a name="example"></a>例  
  この例で宣言、`Custom Event`し、必要なを指定します`As`デリゲート型を含む句。  
   
- [!code-vb[VbVbalrEventError#2](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types_3.vb)]  
+ [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)

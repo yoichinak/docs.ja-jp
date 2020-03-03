@@ -1,15 +1,15 @@
 ---
-title: ステートメント (Visual Basic)
+title: ステートメント
 ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [Visual Basic]
 ms.assetid: 1cbd7703-8d3b-48fd-831e-14c9cc85675a
-ms.openlocfilehash: 6c77a0e921038aca6cd9d2ed28cc34e588d9079f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78a1bac0eea8aa3f9596077b311ccc1b4e58da79
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33602789"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838274"
 ---
 # <a name="statements-visual-basic"></a>ステートメント (Visual Basic)
 このセクションのトピックには、Visual Basic の宣言および実行可能ステートメントと、多くのステートメントに適用される重要なリストのテーブルが含まれます。  
@@ -31,7 +31,6 @@ ms.locfileid: "33602789"
   
  [型リスト](../../../visual-basic/language-reference/statements/type-list.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
   
- [Visual Basic](../../../visual-basic/index.md)

@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: d5c07d86-045d-4391-893b-0bcd2959f90e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6da4c282c7f969a406a657d1e30dd6120a32b4e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb3e0ccb57cf3b056bd25e643706e49b8bc75531
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420909"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792538"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory メソッド
-このプロセスでメモリの領域にデータを書き込みます。  
+このプロセスのメモリ領域にデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT WriteMemory(  
     [in]  CORDB_ADDRESS address,  
     [in]  DWORD size,  
@@ -37,29 +35,29 @@ HRESULT WriteMemory(
     [out] SIZE_T *written);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `address`  
- [in]A`CORDB_ADDRESS`のどのデータをメモリ領域のベース アドレスは、値が書き込まれます。 データ転送が発生すると、前に、システムは、ベース アドレスで始まる、指定したサイズのメモリ領域に書き込みアクセスできることを確認します。 アクセスできない場合、メソッドが失敗します。  
+ からデータが書き込まれるメモリ領域のベースアドレスである `CORDB_ADDRESS` 値。 データ転送が行われる前に、システムは、ベースアドレスを開始位置として、指定したサイズのメモリ領域が書き込み可能であることを確認します。 アクセスできない場合、メソッドは失敗します。  
   
  `size`  
- [in]メモリ領域に書き込まれるバイト数。  
+ からメモリ領域に書き込まれるバイト数。  
   
  `buffer`  
- [in]書き込むデータを格納するバッファー。  
+ から書き込むデータを格納するバッファー。  
   
  `written`  
- [out]このプロセスのメモリ領域に書き込まれたバイト数を受け取る変数へのポインター。 場合`written`が NULL の場合、このパラメーターは無視されます。  
+ 入出力このプロセスのメモリ領域に書き込まれたバイト数を受け取る変数へのポインター。 `written` が NULL の場合、このパラメーターは無視されます。  
   
 ## <a name="remarks"></a>コメント  
- データは、ブレークポイントの背後に自動的に書き込まれます。 .NET Framework version 2.0 でネイティブ デバッガーは、命令ストリームにブレークポイントを挿入するのにこのメソッドを使用する必要があります。 使用して[icordebugprocess 2::setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)代わりにします。  
+ データは、ブレークポイントの背後に自動的に書き込まれます。 .NET Framework バージョン2.0 では、ネイティブデバッガーは、このメソッドを使用して命令ストリームにブレークポイントを挿入することはできません。 代わりに[ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)を使用してください。  
   
- `WriteMemory`メソッドは、マネージ コード外にのみ使用する必要があります。 このメソッドを誤って使用するとランタイムが破損していることができます。  
+ `WriteMemory` メソッドは、マネージコードの外部でのみ使用する必要があります。 不適切に使用された場合、このメソッドはランタイムを破損する可能性があります。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

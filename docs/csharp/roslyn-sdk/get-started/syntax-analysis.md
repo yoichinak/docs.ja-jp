@@ -3,12 +3,12 @@ title: 構文解析の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: e377fe10e094e958627c3503fc39b7e2d02b3d7a
-ms.sourcegitcommit: e614e0f3b031293e4107f37f752be43652f3f253
+ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2018
-ms.locfileid: "42931760"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346998"
 ---
 # <a name="get-started-with-syntax-analysis"></a>構文解析の概要
 
@@ -35,7 +35,7 @@ namespace HelloWorld
 
 上のプログラムのテキストを見てください。 使い慣れた要素であることがわかります。 テキスト全体は単一のソース ファイル (**コンパイル ユニット**) を表しています。 そのソース ファイルの最初の 3 行は **using ディレクティブ**です。 残りのソースは**名前空間宣言**に含まれています。 名前空間宣言には子**クラス宣言**が含まれています。 クラス宣言には 1 つの**メソッド宣言**が含まれています。
 
-Syntax API では、コンパイル ユニットを表すルートを含むツリー構造が作成されます。 ツリー内のノードは、using ディレクティブ、名前空間宣言およびプログラムの他のすべての要素を表しています。 ツリー構造は最下位レベルまで続きます。文字列 "Hello World!"  は、**引数**の子孫である**文字列リテラル トークン**です。 Syntax API では、プログラムの構造体へのアクセスが提供されます。 特定のコード プラクティスに対してクエリを実行し、ツリー全体をウォークしてコードを理解し、既存のツリーを変更して新しいツリーを作成することができます。
+Syntax API では、コンパイル ユニットを表すルートを含むツリー構造が作成されます。 ツリー内のノードは、using ディレクティブ、名前空間宣言およびプログラムの他のすべての要素を表しています。 ツリー構造は最下位レベルまで続きます。文字列 "Hello World!" は、**引数**の子孫である**文字列リテラル トークン**です。 Syntax API では、プログラムの構造体へのアクセスが提供されます。 特定のコード プラクティスに対してクエリを実行し、ツリー全体をウォークしてコードを理解し、既存のツリーを変更して新しいツリーを作成することができます。
 
 その簡単な説明では、Syntax API を使用してアクセスできる情報の種類の概要を示します。 Syntax API は、C# の使い慣れたコード コンストラクトを記述する正式な API にすぎません。 完全な機能には、改行、空白、インデントを含め、コードの書式設定方法に関する情報が含まれます。 この情報を使用して、人間のプログラマまたはコンパイラによって書き込まれ、読み取られるコードを完全に表すことができます。 この構造を使用することで、深い意味のあるレベルのソース コードと対話することができます。 テキスト文字列はもう存在しませんが、C# プログラムの構造を表すデータはあります。
 
@@ -47,16 +47,16 @@ Syntax API では、コンパイル ユニットを表すルートを含むツ�
 
 C# コードの構造の分析には Syntax API を使用します。 **Syntax API** では、パーサー、構文ツリー、および構文ツリーを分析して構築するためのユーティリティを公開します。 これを使用して、特定の構文要素のコードの検索またはプログラムのコードの読み取りを行います。
 
-構文ツリーは、C# および Visual Basic プログラムを理解するために C# および Visual Basic コンパイラで使用されるデータ構造です。 構文ツリーは、プロジェクトのビルド時、または開発者が F5 キーを押したときに実行されるのと同じパーサーによって生成されます。 構文ツリーは言語に対して完全に忠実であり、コード ファイル内のすべての情報はツリーで表されます。 構文ツリーをテキストに書き込むことで、解析された元の正確なテキストが再現されます。 構文ツリーは**不変**でもあります。構文ツリーを作成した後で変更することはできません。 ツリーのコンシューマーは、データが変更されないことを認識したうえで、ロックやその他の同時実行手段を使用せずに、複数のスレッドでツリーを分析できます。 API を使用して、新しいツリーを作成することができます。その場合、既存のツリーを変更します。
+構文ツリーは、C# および Visual Basic プログラムを理解するために C# および Visual Basic コンパイラで使用されるデータ構造です。 構文ツリーは、プロジェクトのビルド時、または開発者が F5 キーを押したときに実行されるのと同じパーサーによって生成されます。 構文ツリーは言語に対して完全に忠実であり、コード ファイル内のすべての情報はツリーで表されます。 構文ツリーをテキストに書き込むことで、解析された元の正確なテキストが再現されます。 構文ツリーは**不変**でもあります。構文ツリーを作成した後で変更することはできません。 ツリーのコンシューマーは、データが変更されないことを認識したうえで、ロックやその他のコンカレンシー手段を使用せずに、複数のスレッドでツリーを分析できます。 API を使用して、新しいツリーを作成することができます。その場合、既存のツリーを変更します。
 
 構文ツリーの 4 つの基本的な構成要素は次のとおりです。
 
-* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> クラス。インスタンスで解析ツリー全体を表します。 <xref:Microsoft.CodeAnalysis.SyntaxTree> は、言語固有の派生物を持つ抽象クラスです。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (または <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) クラスの解析メソッドを使用して、C# または VB のテキストを解析します。
+* <xref:Microsoft.CodeAnalysis.SyntaxTree?displayProperty=nameWithType> クラス。インスタンスで解析ツリー全体を表します。 <xref:Microsoft.CodeAnalysis.SyntaxTree> は、言語固有の派生物を持つ抽象クラスです。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxTree?displayProperty=nameWithType> (または <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicSyntaxTree?displayProperty=nameWithType>) クラスの解析メソッドを使用して、C# または Visual Basic のテキストを解析します。
 * <xref:Microsoft.CodeAnalysis.SyntaxNode?displayProperty=nameWithType> クラス。インスタンスで、宣言、ステートメント、句、および式などの構文構造を表します。
 * <xref:Microsoft.CodeAnalysis.SyntaxToken?displayProperty=nameWithType> 構造。個々のキーワード、ID、演算子、または句読点を表します。
 * 最後は <xref:Microsoft.CodeAnalysis.SyntaxTrivia?displayProperty=nameWithType> 構造です。これは、トークン、プリプロセス ディレクティブ、およびコメントの間の空白など、重要でない情報を構文的に表します。
 
-トリビア、トークン、およびノードは、Visual Basic または C# コードのフラグメント内のすべてを完全に表すツリーを形成するために階層的に構成されます。 この構造は、**Syntax Visualizer** ウィンドウを使用して確認することができます。 Visual Studio で、**[ビュー]** > **[その他のウィンドウ]** > **[Syntax Visualizer]\(Syntax Visualizer\)** の順に選択します。 たとえば、**Syntax Visualizer** を使用して調べた上記の C# ソース ファイルは、次の図のようになります。
+トリビア、トークン、およびノードは、Visual Basic または C# コードのフラグメント内のすべてを完全に表すツリーを形成するために階層的に構成されます。 この構造は、**Syntax Visualizer** ウィンドウを使用して確認することができます。 Visual Studio で、 **[ビュー]**  >  **[その他のウィンドウ]**  >  **[Syntax Visualizer]\(Syntax Visualizer\)** の順に選択します。 たとえば、**Syntax Visualizer** を使用して調べた上記の C# ソース ファイルは、次の図のようになります。
 
 **SyntaxNode**: 青 | **SyntaxToken**: 緑 | **SyntaxTrivia**: 赤 ![C# コード ファイル](media/walkthrough-csharp-syntax-figure1.png)
 
@@ -77,8 +77,8 @@ Syntax API を使用してコード ファイルで何でも見つけること�
 
 次のようにして、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。
 
-* Visual Studio で、**[ファイル]**、**[新規]**、**[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
-* **[Visual C#]** > **[機能拡張]** で、**[Stand-Alone Code Analysis Tool]** を選択します。
+* Visual Studio で、 **[ファイル]** 、 **[新規]** 、 **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
+* **[Visual C#]**  >  **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。
 * プロジェクトに "**SyntaxTreeManualTraversal**" という名前を付けて、[OK] をクリックします。
 
 前述の基本的な "Hello World!" プログラムを 分析します。
@@ -172,7 +172,7 @@ The body text of the Main method follows:
 
 [!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
-次は、新しいクラスを作成します。 Visual Studio で、**[プロジェクト]** > **[新しい項目の追加]** の順に選択します。 **[新しい項目の追加]** ダイアログで、ファイル名として「*UsingCollector.cs*」と入力します。
+次は、新しいクラスを作成します。 Visual Studio で、 **[プロジェクト]**  >  **[新しい項目の追加]** の順に選択します。 **[新しい項目の追加]** ダイアログで、ファイル名として「*UsingCollector.cs*」と入力します。
 
 `UsingCollector` クラスで `using` ビジター機能を実装します。 まず、<xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> から `UsingCollector` クラスを派生させます。
 
@@ -220,4 +220,4 @@ Microsoft.CSharp
 Press any key to continue . . .
 ```
 
-おめでとうございます!  **Syntax API** を使用して、C# ソース コードで特定の種類の C# ステートメントと宣言を検索しました。
+おめでとうございます! **Syntax API** を使用して、C# ソース コードで特定の種類の C# ステートメントと宣言を検索しました。

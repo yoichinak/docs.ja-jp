@@ -1,16 +1,16 @@
 ---
-title: リファレンス (Visual Basic)
+title: 参照
 ms.date: 07/20/2015
 helpviewer_keywords:
 - language reference
 - Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
-ms.openlocfilehash: 615421afe522770bfcff38ffdb23917d7925150d
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 705875677519c387c46301bc825d347b969a46e3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083909"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352874"
 ---
 # <a name="reference-visual-basic"></a>リファレンス (Visual Basic)
 このセクションでは、Visual Basic プログラミングのさまざまな側面に関するリファレンス情報へのリンクを提供します。  
@@ -23,24 +23,17 @@ ms.locfileid: "44083909"
  コマンド ライン コンパイラに関する情報へのリンクを示します。コマンド ライン コンパイラは、Visual Studio IDE を使用せずにプログラムをコンパイルするためのツールです。  
   
  [.NET Framework リファレンス情報](../../visual-basic/reference/net-framework-reference-information.md)  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリの使用方法に関する情報へのリンクを示します。  
+ .NET Framework クラスライブラリの操作に関する情報へのリンクを示します。  
   
  [Visual Basic 言語仕様](../../visual-basic/reference/language-specification/index.md)  
- 言語のあらゆる側面に詳細な情報を含む完全な Visual Basic 言語仕様へのリンクを提供します。  
+ 言語のすべての側面に関する詳細情報を含む、完全な Visual Basic 言語仕様へのリンクを示します。  
   
-## <a name="reference"></a>参照  
- <xref:Microsoft.VisualBasic.PowerPacks?displayProperty=nameWithType>  
- この名前空間には、Visual Basic Power Packs コントロールのクラスが含まれています。 Visual Basic Power Packs コントロールは、追加の Windows フォーム コントロールです。  
-  
- <xref:Microsoft.VisualBasic.PowerPacks.Printing?displayProperty=nameWithType>  
- この名前空間は、画面に表示されているとおりにフォームの複製を印刷できるようにするコンポーネントを提供します。  
-  
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [一般的なユーザー インターフェイス要素 (Visual Studio)](/visualstudio/ide/reference/general-user-interface-elements-visual-studio)  
- ダイアログ ボックスおよびウィンドウが Visual Studio での使用に関するトピックが含まれています。  
+ Visual Studio で使用されるダイアログボックスとウィンドウに関するトピックが含まれています。  
   
  [Visual Studio の XML ツール](/visualstudio/xml-tools/xml-tools-in-visual-studio)  
- Visual Studio で使用可能な各種の XML ツールでは、トピックへのリンクを提供します。  
+ Visual Studio で使用できるさまざまな XML ツールに関するトピックへのリンクを示します。  
   
- [オートメーションと機能拡張のリファレンス](/visualstudio/extensibility/extensibility-in-visual-studio)  
- Automation と Visual Studio での共有と言語固有コンポーネントの機能拡張に関するトピックへのリンクを提供します。
+ [オートメーションと機能拡張のリファレンス](/visualstudio/extensibility/extensibility-in-visual-studio?view=vs-2015)  
+ 共有コンポーネントと言語固有コンポーネントの両方について、Visual Studio のオートメーションと機能拡張に関するトピックへのリンクを示します。

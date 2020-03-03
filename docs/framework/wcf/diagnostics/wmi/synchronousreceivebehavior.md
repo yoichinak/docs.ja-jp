@@ -2,12 +2,12 @@
 title: SynchronousReceiveBehavior
 ms.date: 03/30/2017
 ms.assetid: b31a26a9-ae96-4df0-8406-e07d6f59087c
-ms.openlocfilehash: d9faf2c988f952bde38bab97a980e87f9453524e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ad7387789d1616802cfa8854f1e3454c771934b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956664"
 ---
 # <a name="synchronousreceivebehavior"></a>SynchronousReceiveBehavior
 SynchronousReceiveBehavior  
@@ -27,7 +27,8 @@ class SynchronousReceiveBehavior : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

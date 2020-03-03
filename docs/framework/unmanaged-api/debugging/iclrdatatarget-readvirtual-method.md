@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5484f8bd5515d3a4a3cd08110cc5d48c4356a9f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83e2d1231b85086c2e65813cf427df3de36405b7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590147"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76785311"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual メソッド
-指定されたバッファーに指定された仮想メモリ アドレスからのデータを読み取ります。  
+指定された仮想メモリアドレスから指定されたバッファーにデータを読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ReadVirtual (  
     [in] CLRDATA_ADDRESS    address,  
     [out, size_is(bytesRequested), length_is(*bytesRead)]   
@@ -39,27 +37,28 @@ HRESULT ReadVirtual (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `address`  
- [in]仮想メモリ アドレスを格納する CLRDATA_ADDRESS します。  
+ から仮想メモリアドレスを格納する CLRDATA_ADDRESS。  
   
  `buffer`  
- [out]データを受け取るバッファーへのポインター。  
+ 入出力データを受け取るバッファーへのポインター。  
   
  `bytesRequested`  
- [in]バッファーの長さ。  
+ からバッファーの長さ。  
   
  `bytesRead`  
- [out]返されるバイト数へのポインター。  
+ 入出力返されたバイト数へのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICLRDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+
+- [ICLRDataTarget インターフェイス](iclrdatatarget-interface.md)

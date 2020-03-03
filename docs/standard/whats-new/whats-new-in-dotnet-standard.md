@@ -4,14 +4,12 @@ description: この記事では、.NET Standard の新しいバージョンご�
 ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56f75e282e1b28f09eacd19f2da6293fd4e3ab7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628202"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76921057"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard の新機能
 
@@ -61,13 +59,15 @@ ms.locfileid: "54628202"
 
 ### <a name="support-for-visual-basic"></a>Visual Basic のサポート
 
-Visual Basic で .NET Standard ライブラリを開発できるようになりました。 .NET Core ワークロードがインストールされた Visual Studio 2017 Version 15.3 以降を使用している Visual Basic 開発者向けに、Visual Studio には .NET Standard Class Library テンプレートが追加されました。 他の開発ツールと環境を使用している Visual Basic 開発者の場合、[dotnet new](../../core/tools/dotnet-new.md) コマンドを使用して .NET Standard ライブラリ プロジェクトを作成できます。 詳細については、「[.NET Standard ライブラリのツールのサポート](#tooling-support-for-net-standard-libraries)」を参照してください。
+Visual Basic で .NET Standard ライブラリを開発できるようになりました。 .NET Core ワークロードがインストールされた Visual Studio 2017 Version 15.3 以降を使用している Visual Basic 開発者向けに、Visual Studio には .NET Standard Class Library テンプレートが含まれるようになりました。 他の開発ツールと環境を使用している Visual Basic 開発者の場合、[dotnet new](../../core/tools/dotnet-new.md) コマンドを使用して .NET Standard ライブラリ プロジェクトを作成できます。 詳細については、「[.NET Standard ライブラリのツールのサポート](#tooling-support-for-net-standard-libraries)」を参照してください。
 
 ### <a name="tooling-support-for-net-standard-libraries"></a>.NET Standard ライブラリのツールのサポート
 
-.NET Core 2.0 と .NET Standard 2.0 がリリースされ、Visual Studio 2017 と [.NET Core Command Line Interface (CLI)](../../core/tools/index.md) には .NET Standard ライブラリの作成をサポートするツールが追加されました。
+.NET Core 2.0 と .NET Standard 2.0 がリリースされ、Visual Studio 2017 と [.NET Core CLI](../../core/tools/index.md) の両方に .NET Standard ライブラリの作成をサポートするツールが追加されました。
 
 **.NET Core クロスプラットフォーム開発**ワークロードを使用して Visual Studio をインストールする場合は、次の図に示すように、プロジェクト テンプレートを使用して .NET Standard 2.0 ライブラリ プロジェクトを作成できます。
+
+<!-- markdownlint-disable MD025 -->
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 
@@ -75,7 +75,7 @@ Visual Basic で .NET Standard ライブラリを開発できるようになり�
 
 .NET Core CLI を使用している場合、次の [dotnet new](../../core/tools/dotnet-new.md) コマンドを実行すると、.NET Standard 2.0 をターゲットとするクラス ライブラリ プロジェクトが作成されます。
 
-```
+```dotnetcli
 dotnet new classlib
 ```
 
@@ -85,7 +85,7 @@ dotnet new classlib
 
 .NET Core CLI を使用している場合、次の [dotnet new](../../core/tools/dotnet-new.md) コマンドを実行すると、.NET Standard 2.0 をターゲットとするクラス ライブラリ プロジェクトが作成されます。
 
-```
+```dotnetcli
 dotnet new classlib -lang vb
 ```
 
@@ -94,4 +94,4 @@ dotnet new classlib -lang vb
 ## <a name="see-also"></a>関連項目
 
 - [.NET Standard](../net-standard.md)
-- [.NET Standard の概要](https://blogs.msdn.microsoft.com/dotnet/2016/09/26/introducing-net-standard/)
+- [.NET Standard の概要](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

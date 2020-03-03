@@ -15,32 +15,30 @@ helpviewer_keywords:
 ms.assetid: 1590febe-96c2-4046-97db-d81d81d67e01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4a188963273555e8b93b68c168260fd619136c00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cb95fb7cf70dbf7616e9bc59ebf44de090de883
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544537"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133429"
 ---
 # <a name="icordebugthreadgetobject-method"></a>ICorDebugThread::GetObject メソッド
-共通言語ランタイム (CLR) スレッドにインターフェイス ポインターを取得します。  
+共通言語ランタイム (CLR) スレッドへのインターフェイスポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetObject (  
     [out] ICorDebugValue   **ppObject  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppObject`  
- [out]CLR スレッドを表す ICorDebugValue インターフェイス オブジェクトのアドレスへのポインター。  
+ 入出力CLR スレッドを表す ICorDebugValue インターフェイスオブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -49,4 +47,5 @@ HRESULT GetObject (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Threading.Thread>

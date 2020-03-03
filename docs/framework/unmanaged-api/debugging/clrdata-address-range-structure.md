@@ -15,22 +15,22 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 484ca79483fc4a5d8f0d1cf2cd5a961c297249e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8eb841b4c4f06a3932805ae6222bdd693def5ea0
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654803"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274310"
 ---
-# <a name="clrdataaddressrange-structure"></a>CLRDATA_ADDRESS_RANGE 構造体
+# <a name="clrdata_address_range-structure"></a>CLRDATA_ADDRESS_RANGE 構造体
 
-アドレスの範囲を定義します。
+アドレス範囲を定義します。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 typedef struct
 {
     CLRDATA_ADDRESS startAddress;
@@ -45,18 +45,18 @@ typedef struct
 | `startAddress` | 範囲の開始アドレス。 |
 | `endAddress`   | 範囲の終了アドレス。   |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-この構造は、ランタイム内に収めるし、任意のヘッダーまたはライブラリ ファイルでは公開されません。 これを使用する構造を定義、上で指定した場所`CLRDATA_ADDRESS`は 64 ビット符号なし整数。
+この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するに`CLRDATA_ADDRESS`は、上で指定したように構造体を定義します。は、64ビットの符号なし整数です。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**・** [システム要件](../../get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
-**ライブラリ:** なし  
+**ライブラリ**なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [デバッグ](index.md)
+- [デバッグ構造体](debugging-structures.md)

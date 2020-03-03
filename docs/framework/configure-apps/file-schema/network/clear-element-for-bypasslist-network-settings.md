@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: b3a1d8a0801168283f83160242c4e9d7e151f847
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2ad6b16370f600299439d2e810dfefa1b5fa3c06
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276342"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087538"
 ---
-# <a name="clear-element-for-bypasslist-network-settings"></a>\<クリア > bypasslist (ネットワーク設定) の要素
-プロキシ バイ パスの一覧をクリアします。  
+# <a name="clear-element-for-bypasslist-network-settings"></a>bypasslist の \<clear> 要素 (ネットワーク設定)
+プロキシバイパスリストをクリアします。  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
-\<bypasslist>  
-\<clear>  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**defaultProxy >** ](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<bypasslist >** ](bypasslist-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**clear>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -45,16 +45,16 @@ ms.locfileid: "55276342"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|一連のプロキシを使用しないアドレスを記述する正規表現を提供します。|  
+|[bypasslist](bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|  
   
 ## <a name="remarks"></a>Remarks  
- `clear`要素がバイパス リストからすべてのエントリをクリアします。  
+ `clear` 要素は、バイパスリストからすべてのエントリを削除します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、バイパス一覧をクリアし、バイパス リストに 2 つのアドレスを追加します。 1 つ目は、contoso.com ドメイン内のすべてのサーバーでプロキシをバイパスします。2 つ目は、192.168 で IP アドレスが始まるすべてのサーバーでプロキシをバイパスします。  
+ 次の例では、バイパスリストをクリアし、2つのアドレスをバイパスリストに追加します。 最初のは、contoso.com ドメイン内のすべてのサーバーのプロキシをバイパスします。2つ目は、IP アドレスが192.168 で始まるすべてのサーバーのプロキシをバイパスします。  
   
 ```xml  
 <configuration>  
@@ -71,5 +71,6 @@ ms.locfileid: "55276342"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

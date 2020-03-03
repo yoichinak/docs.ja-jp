@@ -8,28 +8,26 @@ api_location:
 api_type:
 - DLLExport
 ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ac147596794f748d3160cdbd34b9f306dfdb379
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33b8f47813a3bf43bd69741c9febb150fa3a92e3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604419"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73099907"
 ---
-# <a name="axlpublickeyblobtopublickeytoken-function"></a>_AxlPublicKeyBlobToPublicKeyToken 関数
+# <a name="_axlpublickeyblobtopublickeytoken-function"></a>\_AxlPublicKeyBlobToPublicKeyToken 関数
 CSP PUBLICKEYBLOB 形式から厳密な名前の公開キー トークンを算出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT _AxlPublicKeyBlobToPublicKeyToken (  
     [in]  PCCERT_CHAIN_CONTEXT   pCspPublicKeyBlob,  
     [out] LPWSTR                 *ppwszPublicKeyToken  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pCspPublicKeyBlob`  
  [in] CSP 公開キー BLOB。  
   
@@ -40,4 +38,5 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
  関数が成功した場合は `S_OK`、それ以外の場合は `S_FALSE`。  
   
 ## <a name="see-also"></a>関連項目
-- [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)
+
+- [Authenticode](index.md)

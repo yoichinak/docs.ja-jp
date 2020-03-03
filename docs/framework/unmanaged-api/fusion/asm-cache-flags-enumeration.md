@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 82e9a7da-321b-48b8-b239-52eaffda6be8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 29388f7a83182fe3149a9df364a0f4721232012d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 85ac976daec8fd76ee21012a30611235609f4b34
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585329"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109486"
 ---
-# <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 列挙型
-表されるアセンブリのソースを示す[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)グローバル アセンブリ キャッシュにします。  
+# <a name="asm_cache_flags-enumeration"></a>ASM_CACHE_FLAGS 列挙型
+グローバルアセンブリキャッシュ内の[Iassemblycacheitem](iassemblycacheitem-interface.md)によって表されるアセンブリのソースを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     ASM_CACHE_ZAP       = 0x01,  
     ASM_CACHE_GAC       = 0x02,  
@@ -43,21 +41,22 @@ typedef enum {
 |メンバー|説明|  
 |------------|-----------------|  
 |`ASM_CACHE_ZAP`|Ngen.exe を使用して、プリコンパイル済みアセンブリのキャッシュを列挙します。|  
-|`ASM_CACHE_GAC`|グローバル アセンブリ キャッシュを列挙します。|  
-|`ASM_CACHE_DOWNLOAD`|オンデマンドでダウンロードされたまたはシャドウ コピーされているが、アセンブリを列挙します。|  
-|`ASM_CACHE_ROOT`|示します、 [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)関数は、共通言語ランタイム (CLR) バージョン 2.0 のグローバル アセンブリ キャッシュにパスを返す必要があります。 呼び出しのコンテキストでのみ意味のある[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)します。|  
-|`ASM_CACHE_ROOT_EX`|示します、 [GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)関数は、グローバル アセンブリ キャッシュにパスを CLR version 4 に返す必要があります。 呼び出しのコンテキストでのみ意味のある[GetCachePath](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)します。|  
+|`ASM_CACHE_GAC`|グローバルアセンブリキャッシュを列挙します。|  
+|`ASM_CACHE_DOWNLOAD`|要求時にダウンロードされた、またはシャドウコピーされたアセンブリを列挙します。|  
+|`ASM_CACHE_ROOT`|[Getcachepath](getcachepath-function.md)関数が、共通言語ランタイム (CLR) バージョン2.0 のグローバルアセンブリキャッシュへのパスを返す必要があることを示します。 [Getcachepath](getcachepath-function.md)への呼び出しのコンテキストでのみ意味があります。|  
+|`ASM_CACHE_ROOT_EX`|[Getcachepath](getcachepath-function.md)関数が CLR version 4 のグローバルアセンブリキャッシュへのパスを返す必要があることを示します。 [Getcachepath](getcachepath-function.md)への呼び出しのコンテキストでのみ意味があります。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [GetCachePath 関数](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
-- [IAssemblyCacheItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+
+- [GetCachePath 関数](getcachepath-function.md)
+- [IAssemblyCacheItem インターフェイス](iassemblycacheitem-interface.md)
+- [Fusion 列挙型](fusion-enumerations.md)

@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 27967230-144f-40d3-9e23-961d0241abd9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 184e578efb549a1dc2e9ec1e30a29ff289b68719
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 887d207aea3de9296107c041816606b2f5947406
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411704"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124031"
 ---
 # <a name="icordebugfunctiongetclass-method"></a>ICorDebugFunction::GetClass メソッド
-この関数のメンバーであるクラスを表す ICorDebugClass オブジェクトを取得します。  
+この関数がメンバーとなっているクラスを表す、のオブジェクトを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetClass (  
     [out] ICorDebugClass **ppClass  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppClass`  
- [out]アドレスへのポインター、`ICorDebugClass`を表すオブジェクト、クラス、または null の場合、この関数は、クラスのメンバーではない場合。  
+ 入出力クラスを表す `ICorDebugClass` オブジェクトのアドレスへのポインター。この関数がクラスのメンバーでない場合は null。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

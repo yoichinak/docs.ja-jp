@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
-ms.openlocfilehash: df9628fab80faf6431290bbc4176a6e0d148dc8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926465"
 ---
 # <a name="base-elements-how-to-topics"></a>基本要素に関する「方法」トピック
-このセクションのトピックを 4 つの WPF ベースの要素を使用する方法について説明します。 <xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、および<xref:System.Windows.FrameworkContentElement>です。  
+このセクションのトピックでは、次の 4 つの WPF 基本要素を使用する方法をについて説明します。 <xref:System.Windows.UIElement>、 <xref:System.Windows.ContentElement>、 <xref:System.Windows.FrameworkElement>、および<xref:System.Windows.FrameworkContentElement>します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [UIElement を透明または半透明にする](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [FrameworkElement のサイズをアニメーション化する](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [Freezable が固定されているかどうかを判別する](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [読み込まれたイベントを処理する](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [要素およびコントロールのマージンを設定する](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [Freezable を読み取り専用にする](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [読み取り専用の Freezable の書き込み可能なコピーを取得する](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [UIElement を左右または上下に反転させる](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [ThicknessConverter オブジェクトを使用する](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [ContextMenuOpening イベントを処理する](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+ [UIElement を透明または半透明にする](how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [FrameworkElement のサイズをアニメーション化する](how-to-animate-the-size-of-a-frameworkelement.md)  
+ [Freezable が固定されているかどうかを判別する](how-to-determine-whether-a-freezable-is-frozen.md)  
+ [読み込まれたイベントを処理する](how-to-handle-a-loaded-event.md)  
+ [要素およびコントロールのマージンを設定する](how-to-set-margins-of-elements-and-controls.md)  
+ [Freezable を読み取り専用にする](how-to-make-a-freezable-read-only.md)  
+ [読み取り専用の Freezable の書き込み可能なコピーを取得する](how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [UIElement を左右または上下に反転させる](how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [ThicknessConverter オブジェクトを使用する](how-to-use-a-thicknessconverter-object.md)  
+ [ContextMenuOpening イベントを処理する](how-to-handle-the-contextmenuopening-event.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.UIElement>  
@@ -38,4 +38,4 @@ ms.locfileid: "33540463"
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>関連項目  
- [基本要素](../../../../docs/framework/wpf/advanced/base-elements.md)
+ [基本要素](base-elements.md)

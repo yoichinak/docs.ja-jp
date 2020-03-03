@@ -1,0 +1,60 @@
+### YamlMime:Landing
+title: .NET for Apache Spark のドキュメント
+summary: .NET for Apache Spark を使用して、.NET コードを記述するすべての場所で、Apache Spark を使用して、大量のデータ、リアルタイムのストリーム、機械学習、アドホック クエリなどを処理する方法について説明します。
+metadata:
+  title: .NET for Apache Spark のドキュメント
+  description: .NET for Apache Spark を使用して、.NET コードを記述するすべての場所で、Apache Spark を使用して、大量のデータ、リアルタイムのストリーム、機械学習、アドホック クエリなどを処理する方法について説明します。
+  services: service
+  ms.prod: dotnet-spark
+  ms.topic: landing-page
+  ms.collection: collection
+  author: mamccrea
+  ms.author: mamccrea
+  ms.date: 09/11/2019
+  ms.openlocfilehash: b75740fa84fd7c6fa383129075a082c4ea2ccdcc
+  ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+  ms.translationtype: HT
+  ms.contentlocale: ja-JP
+  ms.lasthandoff: 02/21/2020
+  ms.locfileid: "77542807"
+landingContent:
+- title: .NET for Apache Spark について
+  linkLists:
+  - linkListType: whats-new
+    links:
+    - text: .NET の新機能に関するドキュメント
+      url: /dotnet/whats-new/index
+  - linkListType: overview
+    links:
+    - text: .NET for Apache Spark とは
+      url: what-is-apache-spark-dotnet.md
+  - linkListType: reference
+    links:
+    - text: API リファレンス
+      url: /dotnet/api/?view=spark-dotnet
+    - text: GitHub
+      url: https://github.com/dotnet/spark
+- title: 作業開始
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: .NET for Apache Spark の概要
+      url: tutorials/get-started.md
+  - linkListType: learn
+    links:
+    - text: Windows または Linux で 10 分で開始する
+      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
+- title: .NET for Apache Spark アプリケーションをデプロイする
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Azure HDInsight にデプロイする
+      url: tutorials/hdinsight-deployment.md
+    - text: AWS EMR の Spark のデプロイする
+      url: tutorials/amazon-emr-spark-deployment.md
+    - text: Databricks のデプロイする
+      url: tutorials/databricks-deployment.md
+  - linkListType: how-to-guide
+    links:
+    - text: アプリケーションをデバッグする
+      url: how-to-guides/debug.md

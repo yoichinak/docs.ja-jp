@@ -2,17 +2,15 @@
 title: リフレクションに依存する API
 ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 26a198db13e5855d9473cf7780dade9ce95e9298
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7329ac339912042fc5d2fb335faa3bf74ed03b8d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610847"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128538"
 ---
 # <a name="apis-that-rely-on-reflection"></a>リフレクションに依存する API
-コード内でのリフレクションの使用は明確ではない場合があるため、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンでは、実行時に必要なメタデータを保存しません。 このトピックでは、リフレクション API の一部であるとは見なされないが、正常に実行するためにリフレクションを必要とする、一般的な API と一般的なプログラミング パターンについて説明します。 これらをソース コードで使用している場合、これらに関する情報をランタイム ディレクティブ (.rd.xml) ファイルに追加して、これらの API を呼び出しても [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外やその他の例外が実行時にスローされないようにできます。  
+場合によっては、コードでのリフレクションの使用は明確ではないため、.NET ネイティブツールチェーンは実行時に必要なメタデータを保持しません。 このトピックでは、リフレクション API の一部であるとは見なされないが、正常に実行するためにリフレクションを必要とする、一般的な API と一般的なプログラミング パターンについて説明します。 これらをソース コードで使用している場合、これらに関する情報をランタイム ディレクティブ (.rd.xml) ファイルに追加して、これらの API を呼び出しても [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外やその他の例外が実行時にスローされないようにできます。  
   
 ## <a name="typemakegenerictype-method"></a>Type.MakeGenericType メソッド  
  ジェネリック型 `AppClass<T>` を動的にインスタンス化するには、次のようなコードを使用して <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> メソッドを呼び出します。  
@@ -27,13 +25,11 @@ ms.locfileid: "54610847"
   
  これにより、<xref:System.Type.GetType%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> メソッド呼び出しが成功し、有効な <xref:System.Type> オブジェクトが返されます。  
   
- ただし、インスタンス化されていないジェネリック型のメタデータを追加した場合でも、<xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> メソッドを呼び出すと、次のような [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外がスローされます。  
+ ただし、インスタンス化されていないジェネリック型のメタデータを追加した場合でも、<xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> メソッドを呼び出すと、次のような [MissingMetadataException](missingmetadataexception-class-net-native.md) 例外がスローされます。  
   
-```  
-This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
+パフォーマンス上の理由から、次の種類のメタデータが削除されたため、この操作を実行できません:  
   
-App1.AppClass`1<System.Int32>.  
-```  
+`App1.AppClass`1 < system.string > ' です。  
   
  次のランタイム ディレクティブをランタイム ディレクティブ ファイルに追加すると、`Activate` の `AppClass<T>` に対する特定のインスタンス化の <xref:System.Int32?displayProperty=nameWithType> メタデータを追加できます。  
   
@@ -51,13 +47,13 @@ App1.AppClass`1<System.Int32>.
   
  このコードを正常に実行するには、次のようないくつかのメタデータ項目が必要です。  
   
--   呼び出すメソッドを持つ型の `Browse` メタデータ。  
+- 呼び出すメソッドを持つ型の `Browse` メタデータ。  
   
--   呼び出すメソッドの `Browse` メタデータ。  パブリック メソッドの場合、それを含む型のパブリック `Browse` メタデータを追加しても、メソッドが含められます。  
+- 呼び出すメソッドの `Browse` メタデータ。  パブリック メソッドの場合、それを含む型のパブリック `Browse` メタデータを追加しても、メソッドが含められます。  
   
--   呼び出すメソッドの動的メタデータ。これにより、リフレクション呼び出しデリゲートが [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンにより削除されなくなります。 メソッドの動的メタデータが欠落している場合、<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> メソッドを呼び出すと、次の例外がスローされます。  
+- リフレクション呼び出しデリゲートが .NET ネイティブツールチェーンによって削除されないようにするために、呼び出すメソッドの動的メタデータ。 メソッドの動的メタデータが欠落している場合、<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> メソッドを呼び出すと、次の例外がスローされます。  
   
-    ```  
+    ```output
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  
     ```  
   
@@ -78,7 +74,7 @@ App1.AppClass`1<System.Int32>.
   
  配列メタデータが存在しない場合、次のエラーが発生します。  
   
-```  
+```output
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:  
   
 App1.Class1[]  
@@ -93,5 +89,6 @@ Unfortunately, no further information is available.
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
+
+- [はじめに](getting-started-with-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)

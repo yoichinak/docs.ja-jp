@@ -1,5 +1,5 @@
 ---
-title: '方法: ステータス バー パネルのサイズを設定します。'
+title: '方法: ステータス バー パネルのサイズを設定する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - status bars [Windows Forms], setting panel size
 - panels [Windows Forms], setting size in status bars
 ms.assetid: a01bee43-d9eb-4954-84e6-45a93532d08d
-ms.openlocfilehash: be1f216af61c1e7b77e84c584dc9d965a97c56b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ba0f7f02b548a5d9ea1a99605a668f449b3e4a9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539660"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923622"
 ---
-# <a name="how-to-set-the-size-of-status-bar-panels"></a>方法: ステータス バー パネルのサイズを設定します。
+# <a name="how-to-set-the-size-of-status-bar-panels"></a>方法: ステータス バー パネルのサイズを設定する
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStripStatusLabel> コントロールは、<xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+> <xref:System.Windows.Forms.ToolStripStatusLabel> コントロールは、<xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
- 各インスタンス、<xref:System.Windows.Forms.StatusBarPanel>クラス内で、 [StatusBar コントロール](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)コントロールにさまざまな動的プロパティは、幅を特定し、実行時の動作のサイズを変更します。  
+ [StatusBar コントロール](statusbar-control-windows-forms.md)コントロール内<xref:System.Windows.Forms.StatusBarPanel>のクラスの各インスタンスには、実行時の幅とサイズ変更動作を決定する動的プロパティが多数あります。  
   
 ### <a name="to-set-the-size-of-a-panel"></a>パネルのサイズを設定するには  
   
-1.  プロシージャでは、次のように設定します。、 <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A>、 <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>、と<xref:System.Windows.Forms.StatusBarPanel.Width%2A>プロパティ (または任意のサブセット内) のインデックスを使用するパネルが通過ステータス バーの、<xref:System.Windows.Forms.StatusBar.Panels%2A>のプロパティ、<xref:System.Windows.Forms.StatusBarPanel>コレクション。  
+1. プロシージャでは、 <xref:System.Windows.Forms.StatusBarPanel.AutoSize%2A> <xref:System.Windows.Forms.StatusBarPanel.Width%2A> <xref:System.Windows.Forms.StatusBar.Panels%2A> <xref:System.Windows.Forms.StatusBarPanel.MinWidth%2A>コレクション<xref:System.Windows.Forms.StatusBarPanel>のプロパティを通じて渡されたインデックスを使用して、ステータスバーパネルの、、およびの各プロパティ (またはすべてのサブセット) を設定します。  
   
     ```vb  
     Public Sub SetStatusBarPanelSize()  
@@ -66,8 +66,9 @@ ms.locfileid: "54539660"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [チュートリアル: 実行時にステータス バー情報の更新](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar コントロールの概要](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [チュートリアル: 実行時のステータスバー情報の更新](walkthrough-updating-status-bar-information-at-run-time.md)
+- [方法: Windows フォーム StatusBar コントロールでクリックされたパネルを確認する](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar コントロールの概要](statusbar-control-overview-windows-forms.md)

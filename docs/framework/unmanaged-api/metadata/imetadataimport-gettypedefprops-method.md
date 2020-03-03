@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 00061a25-ba05-47a7-b984-fd916b06b149
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9ac624e17223def206e86fd92ee4fd2de7f6082
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718612"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436752"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps メソッド
-メタデータ情報を返します、<xref:System.Type>指定した TypeDef トークンによって表されます。  
+指定した TypeDef トークンによって表される <xref:System.Type> のメタデータ情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetTypeDefProps (  
    [in]  mdTypeDef   td,  
    [out] LPWSTR      szTypeDef,  
@@ -40,34 +38,35 @@ HRESULT GetTypeDefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
- [in]メタデータを返す型を表す TypeDef トークンです。  
+ からメタデータを返す型を表す TypeDef トークン。  
   
  `szTypeDef`  
- [out]型名を含むバッファー。  
+ 入出力型名を格納しているバッファー。  
   
  `cchTypeDef`  
- [in]ワイド文字単位サイズ`szTypeDef`します。  
+ から`szTypeDef`のワイド文字単位のサイズ。  
   
  `pchTypeDef`  
- [out]返されるワイド文字数`szTypeDef`します。  
+ 入出力`szTypeDef`に返されるワイド文字数。  
   
  `pdwTypeDefFlags`  
- [out]型定義を変更する任意のフラグへのポインター。 この値はビットマスクから、 [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列挙体。  
+ 入出力型定義を変更するすべてのフラグへのポインター。 この値は、 [Cortypeattr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)列挙子のビットマスクです。  
   
  `ptkExtends`  
- [out]要求された型の基本型を表す TypeDef または TypeRef メタデータ トークン。  
+ 入出力要求された型の基本型を表す TypeDef または TypeRef メタデータトークン。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法: 属性のコレクションを取得する (LINQ to XML) (C#)'
+title: 属性のコレクションを取得する方法 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: a49ee7a3-b2c2-4d49-9b5c-b7c6c41f4f13
-ms.openlocfilehash: d535f56507812855f08b31417124b4408dfea017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02871b38c3b1a1ed64fa6ca808e193811cd7f721
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599817"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347643"
 ---
-# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>方法: 属性のコレクションを取得する (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-collection-of-attributes-linq-to-xml-c"></a>属性のコレクションを取得する方法 (LINQ to XML) (C#)
 このトピックでは、<xref:System.Xml.Linq.XElement.Attributes%2A> メソッドについて説明します。 このメソッドは、要素の属性を取得します。  
   
 ## <a name="example"></a>例  
@@ -30,7 +30,7 @@ foreach (XAttribute a in listOfAttributes)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 ID="1243"  
 Type="int"  
 ConvertableTo="double"  
@@ -38,4 +38,4 @@ ConvertableTo="double"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 軸 (C#)](./linq-to-xml-axes-overview.md)

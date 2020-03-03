@@ -18,22 +18,22 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 21a858c1-3c99-4904-86ee-0d17b49804fa
-ms.openlocfilehash: 8d2825ff738ffc50ba9a438024db27aff5686a0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50aa36d2caf774638ad20323813f0de3703aab2f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661387"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950719"
 ---
 # <a name="how-to-implement-a-client-of-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンのクライアントを実装する
 次のコード例では、[イベント ベースの非同期パターンの概要](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)ページに記載されている方法でコンポーネントを使用しています。 この例のフォームで使用されている `PrimeNumberCalculator` コンポーネントの説明については、「[方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」を参照してください。  
   
- この例を使用するプロジェクトを実行すると、"Prime Number Calculator" とグリッドと共に、**[Start New Task]\(新しいタスクの開始\)** と **[キャンセル]** という 2 つのボタンが表示されます。 **[Start New Task]\(新しいタスクの開始\)** ボタンは数回連続でクリックできます。クリックのたびに、非同期操作は計算を開始し、無作為に生成されたテスト用の数字が素数かどうかを判断します。 フォームには進捗と増分が定期的に表示されます。 各操作には一意のタスク ID が割り当てられます。 計算結果は **[結果]** 列に表示されます。テスト用の数字が素数ではない場合、**Composite** というラベルが付き、その最初の除数が表示されます。  
+ この例を使用するプロジェクトを実行すると、"Prime Number Calculator" とグリッドと共に、 **[Start New Task]\(新しいタスクの開始\)** と **[キャンセル]** という 2 つのボタンが表示されます。 **[Start New Task]\(新しいタスクの開始\)** ボタンは数回連続でクリックできます。クリックのたびに、非同期操作は計算を開始し、無作為に生成されたテスト用の数字が素数かどうかを判断します。 フォームには進捗と増分が定期的に表示されます。 各操作には一意のタスク ID が割り当てられます。 計算結果は **[結果]** 列に表示されます。テスト用の数字が素数ではない場合、**Composite** というラベルが付き、その最初の除数が表示されます。  
   
  保留中の操作は **[キャンセル]** ボタンでキャンセルできます。 複数選択が可能です。  
   
 > [!NOTE]
->  ほとんどの数値は素数になりません。 操作を数回完了しても素数が出てこない場合、さらに多くのタスクを開始してください。いずれは素数が見つかります。  
+> ほとんどの数値は素数になりません。 操作を数回完了しても素数が出てこない場合、さらに多くのタスクを開始してください。いずれは素数が見つかります。  
   
 ## <a name="example"></a>例  
  [!code-csharp[System.ComponentModel.AsyncOperationManager#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#10)]

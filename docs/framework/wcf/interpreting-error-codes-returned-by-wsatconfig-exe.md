@@ -2,12 +2,12 @@
 title: wsatConfig.exe によって返されたエラー コードの解釈
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a65bea68f595e5e28c05a142ecdd9589f12bed5
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510027"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72321048"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>wsatConfig.exe によって返されたエラー コードの解釈
 ここでは、WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe) によって生成されるすべてのエラー コードと、実行する必要のある推奨アクションを示します。  
@@ -16,7 +16,7 @@ ms.locfileid: "54510027"
   
 |エラー コード|説明|実行する必要のある推奨アクション|  
 |----------------|-----------------|------------------------------------|  
-|0|操作は成功しました。|なし|  
+|0|操作は成功しました。|None|  
 |1|予期しないエラーが発生しました。|マイクロソフトにお問い合わせください。|  
 |2|MSDTC に問い合わせて、セキュリティ設定を取得しようとしたときに、予期しないエラーが発生しました。|MSDTC サービスが無効になっていないことを確認し、返された例外に示されているすべての問題を解決します。|  
 |3|WsatConfig.exe が実行されていたアカウントに、ネットワーク セキュリティ設定を読み取るために必要なアクセス許可がありませんでした。|管理者ユーザー アカウントで WsatConfig.exe を実行します。|  
@@ -35,16 +35,16 @@ ms.locfileid: "54510027"
 |17|http.sys の構成に失敗しました。 以前のポートから SSL 証明書をバインド解除できません。|エラー メッセージで返されたエラー コードを使用して、適切なシステム エラーにマップします。 必要に応じて、httpcfg.exe または netsh.exe を使用して、誤ったポートの予約を解除します。|  
 |18|http.sys の構成に失敗しました。 以前の SSL バインディングが既に存在するため、指定した証明書をポートにバインドできません。|別のアプリケーションが既に特定のポートを所有しています。 別のポートへの変更、アンインストール、または現在のアプリケーションの再構成を行います。|  
 |19|MSDTC の再起動に失敗しました。|必要に応じて、MSDTC を手動で再起動します。 問題が解決されない場合は、マイクロソフトにお問い合わせください。|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] がリモート コンピューターにインストールされていないか、または正しくインストールされていません。|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] をコンピューターにインストールします。|  
+|20|WinFX がリモートコンピューターにインストールされていないか、正しくインストールされていません。|コンピューターに WinFX をインストールします。|  
 |21|操作タイムアウトにより、リモート構成が失敗しました。|リモート コンピューターの WS-AT を構成するための呼び出しにかかる時間は、90 秒を超えます。|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] がリモート コンピューターにインストールされていないか、または正しくインストールされていません。|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] をコンピューターにインストールします。|  
+|22|WinFX がリモートコンピューターにインストールされていないか、正しくインストールされていません。|コンピューターに WinFX をインストールします。|  
 |23|リモート コンピューターでの例外により、リモート構成が失敗しました。|エラー メッセージを調べて、アクション可能な項目を見つけます。|  
 |26|WsatConfig.exe に渡された引数が無効です。|コマンド ラインを調べてエラーを見つけます。|  
 |27|`-accounts` コマンド ライン オプションが無効です。|-`accounts` コマンド ライン オプションを修正して、ユーザー アカウントを正しく指定します。|  
 |28|`-network` コマンド ライン オプションが無効です。|`-network` コマンド ライン オプションを修正して、"enable" または "disable" を正しく指定します。|  
 |29|`-maxTimeout` コマンド ライン オプションが無効です。|`-maxTimeout` コマンド ライン オプションを指示のとおり修正します。|  
 |30|`-timeout` コマンド ライン オプションが無効です。|`-timeout` コマンド ライン オプションを指示のとおり修正します。|  
-|31|`-traceLevel` コマンド ライン オプションが無効です。|`-traceLevel` コマンド ライン オプションを修正して、以下から有効な値を指定します。<br /><br /> オフ<br />-エラー<br />-   Critical<br />-警告<br />-情報<br />-Verbose<br />-すべて|  
+|31|`-traceLevel` コマンド ライン オプションが無効です。|`-traceLevel` コマンド ライン オプションを修正して、以下から有効な値を指定します。<br /><br /> -Off<br />-エラー<br />-   Critical<br />-警告<br />-情報<br />-Verbose<br />-すべて|  
 |32|`-traceActivity` コマンド ライン オプションが無効です。|"enable" または "disable" を指定して、`-traceActivity` コマンド ライン オプションを修正します。|  
 |33|`-traceProp` コマンド ライン オプションが無効です。|"enable" または "disable" を指定して、`-traceProp` コマンド ライン オプションを修正します。|  
 |34|`-tracePII` コマンド ライン オプションが無効です。|"enable" または "disable" を指定して、`-tracePII` コマンド ライン オプションを修正します。|  
@@ -52,10 +52,10 @@ ms.locfileid: "54510027"
 |38|プロセスまたはユーザーに、ファイアウォール構成を変更するために必要なアクセス許可がありません。|管理者ユーザー アカウントで WsatConfig.exe を実行します。|  
 |39|ファイアウォール構成の更新中に、WsatConfig.exe でエラーが発生しました。|エラー メッセージを調べて、アクション可能な項目を見つけます。|  
 |40|WsatConfig.exe が、MSDTC に、証明書の秘密キー ファイルの読み取りアクセス許可を付与できません。|管理者ユーザー アカウントで WsatConfig.exe を実行します。|  
-|41|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] のインストールが見つからないか、見つかったバージョンが、ツールで構成できるバージョンと一致しません。|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] が正しくインストールされていて、そのバージョンの [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] に付属の WsatConfig.exe ツールのみを使用して WS-AT を構成していることを確認します。|  
+|41|WinFX のインストールが見つからなかったか、または検出されたバージョンがツールで構成できるものと一致しません。|WinFX が正しくインストールされていることを確認し、そのバージョンの WinFX に付属している WsatConfig .exe ツールのみを使用して WS-AT を構成します。|  
 |42|引数がコマンド ラインで複数回指定されました。|WsatConfig.exe を実行する際は、各引数は一度だけ指定します。|  
 |43|WS-AT が有効になっていない場合、WsatConfig.exe は WS-AT 設定を更新できません。|追加のコマンド ライン引数として `-network:enable` を指定します。|  
-|44|必要な修正プログラムが見つかりません。修正プログラムがインストールされるまで、WS-AT を構成できません。|必要な修正プログラムをインストールするための手順については、[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] のリリース ノートを参照してください。|  
+|44|必要な修正プログラムが見つかりません。修正プログラムがインストールされるまで、WS-AT を構成できません。|必要な修正プログラムをインストールする方法については、WinFX のリリースノートを参照してください。|  
 |45|`-virtualServer` コマンド ライン オプションが無効です。|構成するクラスター リソースのネットワーク名を指定して、`-virtualServer` コマンド ライン オプションを修正します。|  
 |46|ETW トレース セッションを開始しようとしたときに、予期しないエラーが発生しました。|返されたエラー コードを使用して、適切なシステム エラーにマップします。|  
 |47|プロセスまたはユーザーに、ETW トレース セッションを有効にするために必要なアクセス許可がありません。|管理者ユーザー アカウントで WsatConfig.exe を実行します。|  
@@ -68,4 +68,5 @@ ms.locfileid: "54510027"
 |56|ETW トレース セッションの開始中に、予期しないエラーが発生しました。|マイクロソフトにお問い合わせください。|  
   
 ## <a name="see-also"></a>関連項目
-- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+
+- [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

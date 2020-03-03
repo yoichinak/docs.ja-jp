@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: d218554a-bf42-4d88-833d-ede30de67a53
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 61a8d3e4a343818918e140727d3770ba3e82aac8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4306c4ae44b0ae1ade2bf374981492fa1a4df76f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574691"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788367"
 ---
 # <a name="icordebugmanagedcallbacklogmessage-method"></a>ICorDebugManagedCallback::LogMessage メソッド
-共通言語ランタイム (CLR) によって管理されるスレッドがメソッドを呼び出すことをデバッガーに通知、<xref:System.Diagnostics.EventLog>クラスをイベント ログに記録します。  
+共通言語ランタイム (CLR) マネージスレッドが、イベントを記録するために <xref:System.Diagnostics.EventLog> クラスのメソッドを呼び出したことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LogMessage (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugThread     *pThread,  
@@ -39,24 +37,24 @@ HRESULT LogMessage (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]イベントを記録したマネージ スレッドを格納しているアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からイベントを記録したマネージスレッドを含むアプリケーションドメインを表す、コードのオブジェクトへのポインター。  
   
  `pThread`  
- [in]マネージ スレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ からマネージスレッドを表す、コードスレッドオブジェクトへのポインター。  
   
  `lLevel`  
- [in]値、 [LoggingLevelEnum](../../../../docs/framework/unmanaged-api/debugging/logginglevelenum-enumeration.md)イベント ログに書き込まれた内容を示すメッセージの重大度レベルを示す列挙体。  
+ からイベントログに書き込まれた説明メッセージの重大度レベルを示す、ログ記録[Levelenum](logginglevelenum-enumeration.md)列挙体の値。  
   
  `pLogSwitchName`  
- [in]トレース スイッチの名前へのポインター。  
+ からトレーススイッチの名前へのポインター。  
   
  `pMessage`  
- [in]イベント ログに書き込まれたメッセージへのポインター。  
+ からイベントログに書き込まれたメッセージへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -65,4 +63,5 @@ HRESULT LogMessage (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

@@ -7,23 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: 40dc767d830b3834eedf3581d544aa53d40fae50
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017931"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox>コントロール オプションの一覧をユーザーに対して表示します。 一覧が表示され、コントロールの展開および折りたたみと非表示になります。 既定の状態で一覧が折りたたまれている、のみ 1 つの選択肢を表示します。 ユーザーがオプションの完全な一覧を表示するボタンをクリックします。  
   
  次の図は、<xref:System.Windows.Controls.ComboBox>さまざまな状態にします。  
   
- ![コンボ ボックスの既定のと、押された状態](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+ ![コンボ ボックスの既定のと、押された状態](./media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 展開し、折りたたみ  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [方法: 取得、や ComboBoxItem](https://msdn.microsoft.com/library/8a0d2622-64b6-41fc-bf80-9669a1eacb53)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ComboBox>

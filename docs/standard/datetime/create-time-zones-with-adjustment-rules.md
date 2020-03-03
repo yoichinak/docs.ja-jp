@@ -1,5 +1,5 @@
 ---
-title: '方法: タイム ゾーン調整規則を作成します。'
+title: '方法: 調整規則のあるタイムゾーンを作成する'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,74 +10,72 @@ helpviewer_keywords:
 - time zones [.NET Framework], and adjustment rules
 - adjustment rule [.NET Framework]
 ms.assetid: c52ef192-13a9-435f-8015-3b12eae8c47c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 83905c97f37a0e49f6219da47e2f640ecfb8edfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ef3d93746c5688dc15fc7e45d9be054dcfba4c8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721176"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132553"
 ---
-# <a name="how-to-create-time-zones-with-adjustment-rules"></a>方法: タイム ゾーン調整規則を作成します。
+# <a name="how-to-create-time-zones-with-adjustment-rules"></a>方法: 調整規則のあるタイムゾーンを作成する
 
-アプリケーションで必要とされる正確なタイム ゾーン情報は、いくつかの理由で特定のシステムに存在しない場合があります。
+アプリケーションで必要とされる正確なタイムゾーン情報は、次のような理由で特定のシステムに存在しない場合があります。
 
-* タイム ゾーンがローカル システムのレジストリで定義されていません。
+- タイムゾーンがローカルシステムのレジストリに定義されていません。
 
-* タイム ゾーンに関するデータが変更されたか、レジストリから削除します。
+- タイムゾーンに関するデータは、レジストリから変更または削除されています。
 
-* タイム ゾーンには、過去の特定の期間のタイム ゾーンの調整に関する正確な情報はありません。
+- タイムゾーンには、特定の履歴期間のタイムゾーン調整に関する正確な情報がありません。
 
-このような場合を呼び出すことができます、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>アプリケーションに必要なタイム ゾーンを定義するメソッド。 このメソッドのオーバー ロードを使用すると、調整規則の有無、タイム ゾーンを作成します。 タイム ゾーンが夏時間をサポートする場合は、いずれかの固定長または浮動調整規則の調整を定義できます。 (これらの用語の定義は、「タイム ゾーンの用語」のセクションを参照してください[タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)。)。
+このような場合は、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> メソッドを呼び出して、アプリケーションで必要とされるタイムゾーンを定義できます。 このメソッドのオーバーロードを使用して、調整規則の有無に関係なくタイムゾーンを作成できます。 タイムゾーンで夏時間がサポートされている場合は、固定調整規則または浮動調整規則のいずれかを使用して調整を定義できます。 (これらの用語の定義については、「タイムゾーンの[概要](../../../docs/standard/datetime/time-zone-overview.md)」の「タイムゾーンの用語」セクションを参照してください)。
 
 > [!IMPORTANT]
-> 呼び出すことによって作成されたカスタムのタイム ゾーン、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッドは、レジストリに追加されません。 代わりに、によって返されるオブジェクトの参照を介してのみアクセスすることができます、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッドの呼び出し。
+> <xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> メソッドを呼び出すことによって作成されたカスタムタイムゾーンは、レジストリには追加されません。 代わりに、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A> メソッド呼び出しによって返されるオブジェクト参照を使用してのみアクセスできます。
 
-このトピックでは、調整規則のあるタイム ゾーンを作成する方法を示します。 夏時間調整規則がサポートされていないタイム ゾーンを作成するを参照してください。[方法。調整規則のないタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)です。
+このトピックでは、調整規則を使用してタイムゾーンを作成する方法について説明します。 夏時間調整規則をサポートしていないタイムゾーンを作成するには、「[方法: 調整規則のないタイムゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)する」を参照してください。
 
-### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>浮動調整規則のあるタイム ゾーンを作成するには
+### <a name="to-create-a-time-zone-with-floating-adjustment-rules"></a>浮動調整規則を使用してタイムゾーンを作成するには
 
-1. 調整 (つまりは、各遷移から離れると標準時に、特定の時間間隔の間) ごとに、次の操作を行います。
+1. それぞれの調整について (つまり、特定の期間にわたって標準時間外に移行するたびに)、次の手順を実行します。
 
-    1. タイム ゾーン調整の切り替えの開始時刻を定義します。
+    1. タイムゾーン調整の開始遷移時間を定義します。
 
-       呼び出す必要があります、<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType>メソッドを渡して、 <xref:System.DateTime> 、遷移、遷移の月を定義する整数値、遷移が発生する曜日を定義する整数値の時刻を定義する値と<xref:System.DayOfWeek>遷移が発生する曜日を定義する値。 このメソッドの呼び出しをインスタンス化、<xref:System.TimeZoneInfo.TransitionTime>オブジェクト。
+       <xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> メソッドを呼び出して、移行の時間を定義する <xref:System.DateTime> 値、遷移の月を定義する整数値、遷移が発生する曜日を定義する整数値、およびを定義する <xref:System.DayOfWeek> 値を渡す必要があります。移行が発生する曜日。 このメソッド呼び出しは、<xref:System.TimeZoneInfo.TransitionTime> オブジェクトをインスタンス化します。
 
-    2. タイム ゾーン調整の切り替えの終了時刻を定義します。 別の呼び出しを必要があります、<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType>メソッド。 このメソッドを呼び出す 2 つ目のインスタンスを作成<xref:System.TimeZoneInfo.TransitionTime>オブジェクト。
+    2. タイムゾーン調整の終了遷移時間を定義します。 これには、<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A?displayProperty=nameWithType> メソッドの別の呼び出しが必要です。 このメソッド呼び出しは、2つ目の <xref:System.TimeZoneInfo.TransitionTime> オブジェクトをインスタンス化します。
 
-    3. 呼び出す、<xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A>メソッドを渡して、有効な開始と終了日、調整の<xref:System.TimeSpan>遷移、および 2 つの時間を定義するオブジェクト<xref:System.TimeZoneInfo.TransitionTime>タイミングを定義するオブジェクトと夏時間の間の遷移時間が発生します。 このメソッドの呼び出しをインスタンス化、<xref:System.TimeZoneInfo.AdjustmentRule>オブジェクト。
+    3. <xref:System.TimeZoneInfo.AdjustmentRule.CreateAdjustmentRule%2A> メソッドを呼び出し、調整の有効な開始日と終了日、遷移の時間を定義する <xref:System.TimeSpan> オブジェクト、および夏時間との間の切り替えが発生するタイミングを定義する2つの <xref:System.TimeZoneInfo.TransitionTime> オブジェクトを渡します。 このメソッド呼び出しは、<xref:System.TimeZoneInfo.AdjustmentRule> オブジェクトをインスタンス化します。
 
-    4. 割り当てる、<xref:System.TimeZoneInfo.AdjustmentRule>オブジェクトの配列を<xref:System.TimeZoneInfo.AdjustmentRule>オブジェクト。
+    4. <xref:System.TimeZoneInfo.AdjustmentRule> オブジェクトを <xref:System.TimeZoneInfo.AdjustmentRule> オブジェクトの配列に割り当てます。
 
-2. タイム ゾーンの表示名を定義します。 表示名を世界協定時刻 (UTC) からのタイム ゾーンのオフセットがかっこで囲まれているし、タイム ゾーンを 1 つまたは複数のタイム ゾーン、または 1 つの都市または、cou の詳細を識別する文字列の後に、ごく標準的な形式に依存します。ntries またはタイム ゾーン内の領域。
+2. タイムゾーンの表示名を定義します。 表示名は、標準の形式に準拠しています。この形式では、世界協定時刻 (UTC) からのタイムゾーンのオフセットがかっこで囲まれ、その後にタイムゾーンを識別する文字列、タイムゾーン内の1つ以上の都市、または1つ以上の cou が続きます。タイムゾーンの ntries またはリージョン。
 
-3. タイム ゾーンの標準時刻の名前を定義します。 通常、この文字列は、タイム ゾーンの識別子としても使用します。
+3. タイムゾーンの標準時刻の名前を定義します。 通常、この文字列はタイムゾーンの識別子としても使用されます。
 
-4. タイム ゾーンの夏時間の名前を定義します。
+4. タイムゾーンの夏時間の名前を定義します。
 
-5. タイム ゾーンの標準の名前とは異なる id を使用する場合は、タイム ゾーン id を定義します。
+5. タイムゾーンの標準名とは異なる識別子を使用する場合は、タイムゾーン識別子を定義します。
 
-6. インスタンスを作成、 <xref:System.TimeSpan> UTC からのタイム ゾーンのオフセットを定義するオブジェクト。 UTC より後の時刻のタイム ゾーン オフセットを正の値があります。 時刻は UTC よりも前のタイム ゾーンでは、負のオフセットがあります。
+6. タイムゾーンの UTC からのオフセットを定義する <xref:System.TimeSpan> オブジェクトをインスタンス化します。 時刻が UTC より遅いタイムゾーンには、正のオフセットがあります。 時刻が UTC より前のタイムゾーンでは、負のオフセットが使用されます。
 
-7. 呼び出す、<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType>新しいタイム ゾーンをインスタンス化するメソッド。
+7. <xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> メソッドを呼び出して、新しいタイムゾーンをインスタンス化します。
 
 ## <a name="example"></a>例
 
-次の例では、さまざまな 1918年から現在までの時間間隔の調整規則を含む米国の中部標準時ゾーンを定義します。
+次の例では、1918から現在のまでのさまざまな時間間隔の調整規則を含む米国の中部標準時のタイムゾーンを定義します。
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#5)]
 [!code-vb[System.TimeZone2.CreateTimeZone#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#5)]
 
-この例で作成したタイム ゾーンでは、複数の調整規則があります。 有効な開始と終了日の任意の調整規則は別の調整規則の日付で重複していないことを確認する注意する必要があります。 、重複がある場合、<xref:System.InvalidTimeZoneException>がスローされます。
+この例で作成したタイムゾーンには、複数の調整規則があります。 調整規則の有効な開始日と終了日が、別の調整規則の日付と重複しないように注意する必要があります。 重複がある場合は、<xref:System.InvalidTimeZoneException> がスローされます。
 
-渡される 5 の値の浮動調整規則を`week`のパラメーター、<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A>メソッドを特定の月の最終週の遷移が発生することを示します。
+浮動調整規則の場合、<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> メソッドの `week` パラメーターに値5が渡され、特定の月の最後の週に移行が行われることを示します。
 
-配列を作成することで<xref:System.TimeZoneInfo.AdjustmentRule>で使用するオブジェクト、<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType>メソッドの呼び出し、コードは、初期化、調整の数とタイム ゾーンの作成に必要なサイズの配列。 このコード例では、代わりに、<xref:System.Collections.Generic.List%601.Add%2A>ジェネリックに各調整規則を追加するメソッド<xref:System.Collections.Generic.List%601>のコレクション<xref:System.TimeZoneInfo.AdjustmentRule>オブジェクト。 コードを呼び出して、<xref:System.Collections.Generic.List%601.CopyTo%2A>メソッドをこのコレクションのメンバーを配列にコピーします。
+<xref:System.TimeZoneInfo.CreateCustomTimeZone%28System.String%2CSystem.TimeSpan%2CSystem.String%2CSystem.String%2CSystem.String%2CSystem.TimeZoneInfo.AdjustmentRule%5B%5D%29?displayProperty=nameWithType> メソッドの呼び出しで使用する <xref:System.TimeZoneInfo.AdjustmentRule> オブジェクトの配列を作成する場合、コードは、タイムゾーンに対して作成される調整の数に必要なサイズに配列を初期化できます。 代わりに、このコード例では、<xref:System.Collections.Generic.List%601.Add%2A> メソッドを呼び出して、各調整規則を <xref:System.TimeZoneInfo.AdjustmentRule> オブジェクトのジェネリック <xref:System.Collections.Generic.List%601> コレクションに追加します。 次に、このコードは <xref:System.Collections.Generic.List%601.CopyTo%2A> メソッドを呼び出して、このコレクションのメンバーを配列にコピーします。
 
-また、例では、<xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A>固定日付の調整を定義するメソッド。 これは、呼び出しに似ています、<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A>ことは、時間、月、および遷移パラメーターの 1 日のみが必要です。 ただし、メソッド。
+また、この例では、<xref:System.TimeZoneInfo.TransitionTime.CreateFixedDateRule%2A> メソッドを使用して、固定日付調整を定義します。 これは、<xref:System.TimeZoneInfo.TransitionTime.CreateFloatingDateRule%2A> メソッドの呼び出しと似ていますが、移行パラメーターの時刻、月、および日のみが必要である点が異なります。
 
-例は、次のコードを使用してテストできます。
+この例は、次のようなコードを使用してテストできます。
 
 [!code-csharp[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#7)]
 [!code-vb[System.TimeZone2.CreateTimeZone#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#7)]
@@ -86,15 +84,13 @@ ms.locfileid: "54721176"
 
 この例で必要な要素は次のとおりです。
 
-* System.Core.dll への参照をプロジェクトに追加します。
-
-* 次の名前空間は、インポートします。
+- 次の名前空間がインポートされます。
 
   [!code-csharp[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/cs/System.TimeZone2.CreateTimeZone.cs#6)]
   [!code-vb[System.TimeZone2.CreateTimeZone#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.CreateTimeZone/vb/System.TimeZone2.CreateTimeZone.vb#6)]
 
 ## <a name="see-also"></a>関連項目
 
-- [日付、時刻、およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [日付、時刻およびタイム ゾーン](../../../docs/standard/datetime/index.md)
 - [タイム ゾーンの概要](../../../docs/standard/datetime/time-zone-overview.md)
-- [方法: 調整規則のないタイム ゾーンを作成します。](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)
+- [方法: 調整規則のないタイム ゾーンを作成する](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)

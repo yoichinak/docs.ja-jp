@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 50367358ba5bcf335f8cc2ca3222f6cf7ea2ff70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86cac53508665c3c97caaa415d8d3c38660928bb
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670136"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448551"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 列挙体
 変数がコンパイラによって生成されたかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorSymVarFlag   
 {  
     VAR_IS_COMP_GEN = 1  
@@ -39,10 +37,11 @@ typedef enum CorSymVarFlag
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|指定された変数がコンパイラによって生成されたことを示します。|  
+|`VAR_IS_COMP_GEN`|指定された変数がコンパイラによって生成されることを示します。|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

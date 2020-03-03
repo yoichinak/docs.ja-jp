@@ -2,12 +2,12 @@
 title: クライアント
 ms.date: 03/30/2017
 ms.assetid: cce50025-0318-4a5e-9ce8-c67feab83b06
-ms.openlocfilehash: aa9762e93e9cde2f33992757a6d40c9ac08b93a6
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aa6d415c0908845bedf7c95ed66281bc0f17eb2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781460"
 ---
 # <a name="clients"></a>クライアント
 このセクションのトピックでは方法、クライアント アーキテクチャをカバーにアクセスする Windows Communication Foundation (WCF) サービス、WCF クライアントと WCF クライアントのセキュリティに関する考慮事項を構成する方法。  
@@ -26,4 +26,5 @@ ms.locfileid: "56261688"
  WCF クライアントのセキュリティに関する考慮事項をについて説明します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [クライアントのサンプル](../samples/client.md)

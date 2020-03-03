@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cf1a8169351e29c18d85303fb32d4394877448f4
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804434"
+---
 ### <a name="log-file-name-created-by-the-objectcontextcreatedatabase-method-has-changed-to-match-sql-server-specifications"></a>ObjectContext.CreateDatabase メソッドによって作成されたログ ファイル名が、SQL Server の仕様に一致するように変更された
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li></ul>|
-

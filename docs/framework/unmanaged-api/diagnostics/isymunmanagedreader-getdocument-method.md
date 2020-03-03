@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: bb203853-6a6d-4027-b9e9-603a7f28b9d3
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ecd11b57d1901c4618ee0d27442753559b85c509
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1fcb885b6e19457065c2ca9971f068b42f97147d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738106"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448347"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument メソッド
-ドキュメントを検索します。 ドキュメントの言語、ベンダー、および種類は省略可能です。  
+ドキュメントを検索します。 ドキュメントの言語、ベンダ、および種類はオプションです。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetDocument (  
     [in]  WCHAR  *url,  
     [in]  GUID   language,  
@@ -38,27 +36,28 @@ HRESULT GetDocument (
     [out, retval] ISymUnmanagedDocument** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `url`  
- [in]ドキュメントを識別する URL です。  
+ からドキュメントを識別する URL。  
   
  `language`  
- [in]ドキュメントの言語。 このパラメーターは省略できます。  
+ からドキュメントの言語。 このパラメーターはオプションです。  
   
  `languageVendor`  
- [in]ドキュメントの言語のベンダーの id。 このパラメーターは省略できます。  
+ からドキュメント言語のベンダの id。 このパラメーターはオプションです。  
   
  `documentType`  
- [in]ドキュメントの種類。 このパラメーターは省略できます。  
+ からドキュメントの種類。 このパラメーターはオプションです。  
   
  `pRetVal`  
- [out]返されたインターフェイスへのポインター。  
+ 入出力返されたインターフェイスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

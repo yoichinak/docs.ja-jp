@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b5f12e648a82ebaba7d09b546e8aa2fc7cd82a37
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67803160"
+---
 ### <a name="calling-datagridcommitedit-from-a-celleditending-handler-drops-focus"></a>CellEditEnding ハンドラーから DataGrid.CommitEdit を呼び出すと、フォーカスが削除される
 
 |   |   |

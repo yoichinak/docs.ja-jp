@@ -2,12 +2,12 @@
 title: トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559932"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050728"
 ---
 # <a name="transport-security"></a>トランスポート セキュリティ
 Windows Communication Foundation (WCF) でのトランスポート セキュリティは、選択したバインドに依存します。 バインディングが実装するトランスポートによって実際のセキュリティ機構が決まります。 このセクションの各トピックでは、実装される機構とそのオプションについて説明します。  
@@ -39,4 +39,5 @@ Windows Communication Foundation (WCF) でのトランスポート セキュリ�
  [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

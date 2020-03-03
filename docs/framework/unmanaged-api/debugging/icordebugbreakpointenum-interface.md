@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBreakpointEnum Interface1
+title: ICorDebugBreakpointEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBreakpointEnum
@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 4c6f4f6e-52cc-402e-881b-7b8526544c90
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 508cb9b4b2ff13a58f1313b958acd7b043741848
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22ae1d24040a8ee5000e0ff2fbeb2b45e08050df
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642936"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784354"
 ---
-# <a name="icordebugbreakpointenum-interface1"></a>ICorDebugBreakpointEnum Interface1
-ICorDebugEnum のメソッドを実装し、ICorDebugBreakpoint 配列を列挙します。  
+# <a name="icordebugbreakpointenum-interface"></a>ICorDebugBreakpointEnum インターフェイス
+
+ICorDebugEnum メソッドを実装し、ICorDebugBreakpoint 配列を列挙します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugbreakpointenum-next-method.md)|指定した数を取得`ICorDebugBreakpoint`列挙体の現在位置からのインスタンス。|  
+|[Next メソッド](icordebugbreakpointenum-next-method.md)|現在の位置から開始して、指定した数の `ICorDebugBreakpoint` インスタンスを列挙から取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +46,5 @@ ICorDebugEnum のメソッドを実装し、ICorDebugBreakpoint 配列を列挙�
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

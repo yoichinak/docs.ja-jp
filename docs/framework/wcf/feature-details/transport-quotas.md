@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a40fa9beec1eabeb02c6ccc4e2ab8179aa49288c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542770"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585774"
 ---
 # <a name="transport-quotas"></a>トランスポート クォータ
 トランスポート クォータは、接続がリソースを過剰に消費している時期を特定するポリシー機構です。 クォータとは、クォータ値を超えた場合に、それ以上のリソースの使用を禁止する確実な制限です。 トランスポート クォータは、悪質な、または意図的でないサービス拒否攻撃を防ぎます。  
@@ -19,11 +19,11 @@ ms.locfileid: "54542770"
 ## <a name="types-of-transport-quotas"></a>トランスポート クォータの種類  
  WCF トランスポートでは、次の 3 つの種類のクォータがあります。  
   
--   *タイムアウト*拒否一定の時間のリソースを停滞に依存するサービス拒否攻撃の緩和します。  
+- *タイムアウト*拒否一定の時間のリソースを停滞に依存するサービス拒否攻撃の緩和します。  
   
--   *メモリ割り当て制限*システム メモリの枯渇し、他の接続にサービスを拒否する 1 つの接続を防止します。  
+- *メモリ割り当て制限*システム メモリの枯渇し、他の接続にサービスを拒否する 1 つの接続を防止します。  
   
--   *コレクション サイズの制限*間接的にメモリを割り当てまたは供給に制限されているリソースの消費量をバインドします。  
+- *コレクション サイズの制限*間接的にメモリを割り当てまたは供給に制限されているリソースの消費量をバインドします。  
   
 ## <a name="transport-quota-descriptions"></a>トランスポート クォータの説明  
  このセクションには、標準の WCF トランスポートの使用可能なトランスポート クォータがについて説明します。HTTP (S)、TCP/IP、および名前付きパイプします。 カスタム トランスポートでは、このリストに含まれない独自の構成可能なクォータを公開できます。 カスタム トランスポートのクォータについては、ドキュメントを参照してください。  
@@ -61,19 +61,19 @@ ms.locfileid: "54542770"
   
 |名前|HTTP|TCP/IP|名前付きパイプ|  
 |----------|----------|-------------|----------------|  
-|`ChannelInitializationTimeout`||x|x|  
+|`ChannelInitializationTimeout`||x|X|  
 |`CloseTimeout`||||  
-|`ConnectionBufferSize`||x|x|  
-|`IdleTimeout`||x|x|  
-|`LeaseTimeout`||x||  
-|`ListenBacklog`||x||  
-|`MaxBufferPoolSize`|x|x|x|  
-|`MaxBufferSize`|x|x|x|  
-|`MaxOutboundConnectionsPerEndpoint`||x|x|  
-|`MaxOutputDelay`||x|x|  
-|`MaxPendingAccepts`||x|x|  
-|`MaxPendingConnections`||x|x|  
-|`MaxReceivedMessageSize`|x|x|x|  
+|`ConnectionBufferSize`||X|X|  
+|`IdleTimeout`||X|X|  
+|`LeaseTimeout`||X||  
+|`ListenBacklog`||X||  
+|`MaxBufferPoolSize`|X|X|X|  
+|`MaxBufferSize`|X|X|X|  
+|`MaxOutboundConnectionsPerEndpoint`||X|X|  
+|`MaxOutputDelay`||X|X|  
+|`MaxPendingAccepts`||X|X|  
+|`MaxPendingConnections`||X|X|  
+|`MaxReceivedMessageSize`|X|X|x|  
 |`OpenTimeout`||||  
 |`ReceiveTimeout`||||  
 |`SendTimeout`||||  
@@ -84,30 +84,31 @@ ms.locfileid: "54542770"
 |名前|HTTP|TCP/IP|名前付きパイプ|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
-|`CloseTimeout`|x|x|x|  
+|`CloseTimeout`|x|X|X|  
 |`ConnectionBufferSize`||||  
 |`IdleTimeout`||||  
 |`LeaseTimeout`||||  
-|`ListenBacklog`||x||  
-|`MaxBufferPoolSize`|x|x|x|  
+|`ListenBacklog`||X||  
+|`MaxBufferPoolSize`|X|X|x|  
 |`MaxBufferSize`|1|x|x|  
 |`MaxOutboundConnectionsPerEndpoint`||2|2|  
 |`MaxOutputDelay`||||  
 |`MaxPendingAccepts`||||  
 |`MaxPendingConnections`||2|2|  
-|`MaxReceivedMessageSize`|x|x|x|  
-|`OpenTimeout`|x|x|x|  
-|`ReceiveTimeout`|x|x|x|  
-|`SendTimeout`|x|x|x|  
+|`MaxReceivedMessageSize`|x|X|X|  
+|`OpenTimeout`|X|X|X|  
+|`ReceiveTimeout`|X|X|X|  
+|`SendTimeout`|X|X|x|  
   
-1.  `MaxBufferSize` トランスポート クォータは、`BasicHttp` バインディングでのみ使用可能です。 `WSHttp` バインディングは、ストリーミング トランスポート モードがサポートされないシナリオに対応します。  
+1. `MaxBufferSize` トランスポート クォータは、`BasicHttp` バインディングでのみ使用可能です。 `WSHttp` バインディングは、ストリーミング トランスポート モードがサポートされないシナリオに対応します。  
   
-2.  トランスポート クォータ `MaxPendingConnections` および `MaxOutboundConnectionsPerEndpoint` は、`MaxConnections` トランスポート クォータと呼ばれる単一のクォータに結合されます。  
+2. トランスポート クォータ `MaxPendingConnections` および `MaxOutboundConnectionsPerEndpoint` は、`MaxConnections` トランスポート クォータと呼ばれる単一のクォータに結合されます。  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>構成によるトランスポート クォータの制御  
  アプリケーション構成からバインディング上のプロパティに直接アクセスして、同じトランスポート クォータを設定できます。 構成ファイルでは、トランスポート クォータの名前は必ず小文字で始めます。 たとえば、バインディングの `CloseTimeout` プロパティは構成では `closeTimeout` 設定に対応し、バインディングの `MaxConnections` プロパティは構成では `maxConnections` 設定に対応します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

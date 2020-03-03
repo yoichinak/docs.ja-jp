@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540563"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960120"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID モデルを使用したクレームと承認の管理
 承認は、コンピューター リソースを変更または表示したり、コンピューター リソースにアクセスしたりする権限を持つエンティティを特定するプロセスです。 たとえば、ある業務で、管理者だけが従業員のファイルへのアクセスを許可される場合があります。 Windows Communication Foundation (WCF) には、承認処理を実行するための 2 つのメカニズムがサポートしています。 1 つ目の機構では、既存の共通言語ランタイム (CLR: Common Language Runtime) 構造を使用して承認を制御できます。 2 つ目は、クレーム ベースのモデルと呼ばれる、 *Id モデル*します。 WCF は、Id モデルを使用して着信メッセージからクレームを作成するにはId モデル クラスは、カスタム承認スキームの場合、新しいクレームの種類をサポートするために拡張できます。 このトピックでは、ID モデル機能のプログラミングの主要概念について概説し、この機能で使用する最も重要なクラスの一覧を示します。  
@@ -69,7 +69,7 @@ ms.locfileid: "54540563"
  権限  
  リソースに対する使用能力。 ID モデル API によって定義された権限は、<xref:System.IdentityModel.Claims.Rights> クラスのプロパティです。 システムが提供する権限には、<xref:System.IdentityModel.Claims.Rights.Identity%2A> や <xref:System.IdentityModel.Claims.Rights.PossessProperty%2A> などがあります。  
   
- [値]  
+ 値  
  権限がクレームされる対象。  
   
 ## <a name="claims"></a>クレーム  
@@ -90,11 +90,11 @@ ms.locfileid: "54540563"
   
  次の図は、3 つのクレーム セットの一例を示しています。この例では、1 つ目のクレーム セットの発行者は 2 つ目のクレーム セットであり、さらにこの 2 つ目のクレーム セットの発行者は System クレーム セットです。 このように、クレーム セットは任意の深さの階層を形成します。  
   
- ![クレームと承認を管理する](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![階層内のクレームのセットです。](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- 次の図に示すように、複数のクレーム セットが同じクレーム セットから発行されている場合もあります。  
+ 同じ発行要求セット、次の図に示すように複数のクレーム セットがあります。
   
- ![クレームと承認を管理する](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![複数の同じ発行とクレーム セットはクレーム セットです。](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  クレーム セットがそれ自体の発行者である場合を除き、ID モデルではクレーム セットによるループの形成を一切サポートしていません。 したがって、クレーム セット A がクレーム セット B によって発行された場合に、クレーム セット B 自体がクレーム セット A によって発行されたという状況はありえません。 また、ID モデルでは、クレーム セットが複数の発行者を持つことはできません。 ある特定のクレーム セットを複数の発行者が発行する必要がある場合は、同じクレームを含み、発行者がそれぞれ異なる複数のクレーム セットを使用する必要があります。  
   
@@ -160,6 +160,7 @@ ms.locfileid: "54540563"
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|サービスに指定されたカスタム承認ポリシーのコレクション。 受信メッセージの資格情報に関連するポリシーに加え、これらのポリシーも評価されます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Policy.EvaluationContext>

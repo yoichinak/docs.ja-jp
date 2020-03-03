@@ -1,6 +1,5 @@
 ---
 title: base キーワード - C# リファレンス
-ms.custom: seodec18
 description: C# で派生クラス内から基底クラスのメンバーにアクセスするために使用する base キーワードについて説明します。
 ms.date: 07/20/2015
 f1_keywords:
@@ -10,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: ef7995c9f7737d29d7e9479c3b84a25b13943be3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4686fc5d4245a50de5d77dc0e71c231772f40ef
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681756"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713768"
 ---
 # <a name="base-c-reference"></a>base (C# リファレンス)
 
@@ -37,7 +36,7 @@ ms.locfileid: "54681756"
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-その他の例については、「[new](../../../csharp/language-reference/keywords/new.md)」、「[virtual](../../../csharp/language-reference/keywords/virtual.md)」、「[override](../../../csharp/language-reference/keywords/override.md)」をご覧ください。
+その他の例については、「[new](new-modifier.md)」、「[virtual](virtual.md)」、「[override](override.md)」をご覧ください。
 
 ## <a name="example"></a>例
 
@@ -51,7 +50,7 @@ ms.locfileid: "54681756"
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [this](../../../csharp/language-reference/keywords/this.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](./index.md)
+- [this](./this.md)

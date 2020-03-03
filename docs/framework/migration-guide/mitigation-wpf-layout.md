@@ -2,14 +2,12 @@
 title: '軽減策: WPF レイアウト'
 ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d75911c2087370cb9313c6694ce2630b80e635a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a074698fd203d0c5f9b799bfee8a6a9cb40800e
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686037"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73457786"
 ---
 # <a name="mitigation-wpf-layout"></a>軽減策: WPF レイアウト
 WPF コントロールのレイアウトが若干変化する可能性があります。  
@@ -17,11 +15,11 @@ WPF コントロールのレイアウトが若干変化する可能性があり�
 ## <a name="impact"></a>影響  
  この変更の結果、以下のようになります。  
   
--   要素の幅または高さが最大で 1 ピクセル拡大または縮小することがあります。  
+- 要素の幅または高さが最大で 1 ピクセル拡大または縮小することがあります。  
   
--   オブジェクトの配置が最大で 1 ピクセル移動することがあります。  
+- オブジェクトの配置が最大で 1 ピクセル移動することがあります。  
   
--   中央揃えの要素が中央から最大で 1 ピクセル垂直まは水平方向にずれることがあります。  
+- 中央揃えの要素が中央から最大で 1 ピクセル垂直まは水平方向にずれることがあります。  
   
  既定では、この新しいレイアウトは .NET Framework の 4.6 を対象とするアプリに対してのみ有効となります。  
   
@@ -39,4 +37,5 @@ WPF コントロールのレイアウトが若干変化する可能性があり�
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [変更の再ターゲット](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+
+- [アプリケーションの互換性](application-compatibility.md)

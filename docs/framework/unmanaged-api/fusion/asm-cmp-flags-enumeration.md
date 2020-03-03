@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 4d1e6700-d4be-4fbd-8796-bfb4c07abbc8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e9aad9568169e6b8feb05fbf0418dbe3dfbbe017
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aae122b6cf94e1205671dc7bbc0231c7d265b932
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744025"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109326"
 ---
-# <a name="asmcmpflags-enumeration"></a>ASM_CMP_FLAGS 列挙型
-バージョン、ビルド、カルチャ、署名、および比較する 2 つのアセンブリのことを示します、 [iassemblyname::isequal](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-isequal-method.md)メソッド。  
+# <a name="asm_cmp_flags-enumeration"></a>ASM_CMP_FLAGS 列挙型
+[IAssemblyName:: IsEqual](iassemblyname-isequal-method.md)メソッドによって比較される2つのアセンブリのバージョン、ビルド、カルチャ、署名などを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
   
     ASM_CMPF_NAME                   = 0x1,  
@@ -67,15 +65,16 @@ typedef enum {
 } ASM_CMP_FLAGS;  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [Fusion 列挙型](fusion-enumerations.md)

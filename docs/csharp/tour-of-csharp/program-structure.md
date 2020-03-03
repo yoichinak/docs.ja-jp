@@ -3,12 +3,12 @@ title: C# プログラムの構造 - C# 言語のツアー
 description: C# プログラムの基本的な構造について説明します
 ms.date: 08/10/2016
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: de10cd000b4028a66ce6dd6f21e39c013e38ecd2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 5e095e71549ed3eec6c73e6a134fdb5a64fb63c0
+ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53131028"
+ms.lasthandoff: 12/06/2019
+ms.locfileid: "74884385"
 ---
 # <a name="program-structure"></a>プログラムの構造
 
@@ -20,14 +20,14 @@ C# における主要な組織的概念は、***プログラム***、***名前�
 
 このクラスの完全修飾名は `Acme.Collections.Stack` です。 このクラスには複数のメンバーが含まれています: `top` という名前のフィールドが 1 つ、`Push` と `Pop` という名前のメソッドが合わせて 2 つ、そして `Entry` という名前の入れ子になったクラスです。 `Entry` クラスにはさらに、3 つのメンバーが含まれています: `next` という名前のフィールド、`data` という名前のフィールド、およびコンストラクターです。 例のソース コードが `acme.cs` のファイルに保存されていることを前提に、次のコマンド ラインをご覧ください。
 
-```
+```console
 csc /t:library acme.cs
 ```
 
 このコマンド ラインは例をライブラリ (`Main` エントリ ポイントがないコード) としてコンパイルし、`acme.dll` という名前のアセンブリを生成します。
 
 > [!IMPORTANT]
-> 上記の例では `csc` をコマンド ライン C# コンパイラとして使用します。 このコンパイラは Windows で実行可能です。 C# を他のプラットフォームでも使用するには、.NET Core のツールを使用する必要があります。 .NET Core エコシステムでは、`dotnet` CLI を使用してコマンド ラインのビルドを管理します。 これには、依存関係の管理、および C# コンパイラの呼び出しが含まれます。 .NET Core でサポートされているプラットフォームでのこれらのツールに関する完全な説明については、[こちらのチュートリアル](../../core/tutorials/using-with-xplat-cli.md)を参照してください。
+> 上記の例では `csc` をコマンド ライン C# コンパイラとして使用します。 このコンパイラは Windows で実行可能です。 C# を他のプラットフォームでも使用するには、.NET Core のツールを使用する必要があります。 .NET Core エコシステムでは、`dotnet` CLI を使用してコマンド ラインのビルドを管理します。 これには、依存関係の管理、および C# コンパイラの呼び出しが含まれます。 .NET Core でサポートされているプラットフォームでのこれらのツールに関する完全な説明については、[こちらのチュートリアル](../../core/tutorials/cli-create-console-app.md)を参照してください。
 
 アセンブリには実行可能なコードが中間言語 (IL) の形式で含まれていて、シンボル情報がメタデータの形式で含まれています。 アセンブリの IL コードは実行前に、.NET 共通言語ランタイムの Just-In-Time (JIT) コンパイラによって、プロセッサ固有のコードに自動的に変換されます。
 
@@ -37,13 +37,13 @@ csc /t:library acme.cs
 
 プログラムが `example.cs` のファイルに格納されている場合、`example.cs` がコンパイルされると、acme.dll アセンブリはコンパイラの /r オプションを使用して参照できるようになります。
 
-```
+```console
 csc /r:acme.dll example.cs
 ```
 
 これにより `example.exe` という名前の実行可能なアセンブリが作成され、これが実行された場合に、次の出力が生成されます。
 
-```
+```console
 100
 10
 1

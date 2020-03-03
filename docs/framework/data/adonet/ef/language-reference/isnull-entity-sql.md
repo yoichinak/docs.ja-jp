@@ -2,19 +2,19 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 1b728e170968e2fbeb67eef3f8f940c64816ff0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9066f9fb68ce2c50e9523881cfa0dd930cd0b52e
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528733"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319730"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 クエリ式が NULL かどうかを調べます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 expression IS [ NOT ] NULL  
 ```  
   
@@ -31,7 +31,7 @@ expression IS [ NOT ] NULL
 ## <a name="remarks"></a>Remarks  
  外部結合の要素が NULL かどうかを確認するには、`IS NULL` を使用します。  
   
-```  
+```sql  
 select c   
       from LOB.Customers as c left outer join LOB.Orders as o   
                               on c.ID = o.CustomerID    
@@ -40,7 +40,7 @@ select c
   
  メンバーに実際の値が含まれているかどうかを確認するには、`IS NULL` を使用します。  
   
-```  
+```sql  
 select c from LOB.Customer as c where c.DOB is not null  
 ```  
   
@@ -48,22 +48,23 @@ select c from LOB.Customer as c where c.DOB is not null
   
 |パターン|動作|  
 |-------------|--------------|  
-|null IS NULL|`true` を返します。|  
-|TREAT (null AS EntityType) IS NULL|`true` を返します。|  
+|null IS NULL|`true`を返します。|  
+|TREAT (null AS EntityType) IS NULL|`true`を返します。|  
 |TREAT (null AS ComplexType) IS NULL|エラーをスローします。|  
 |TREAT (null AS RowType) IS NULL|エラーをスローします。|  
-|EntityType IS NULL|`true` または `false` を返します。|  
+|EntityType IS NULL|`true` または `false`を返します。|  
 |ComplexType IS NULL|エラーをスローします。|  
 |RowType IS NULL|エラーをスローします。|  
   
 ## <a name="example"></a>例  
- 次[!INCLUDE[esql](../../../../../../includes/esql-md.md)]クエリでは、IS NOT NULL 演算子を使用して、クエリ式が null でないかどうかを判断します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
+ 次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のクエリでは、IS NOT NULL 演算子を使用して、クエリ式が null でないかどうかを判断します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 「 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
+ [!code-sql[DP EntityServices Concepts#ISNULL](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#isnull)]  
   
 ## <a name="see-also"></a>関連項目
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Entity SQL リファレンス](entity-sql-reference.md)

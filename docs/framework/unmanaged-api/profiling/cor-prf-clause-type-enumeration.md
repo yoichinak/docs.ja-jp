@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: f64c325a-ed3a-4aaf-b847-a88edbc4fefc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: db3b0f59884b2ec20ea3a2bd9779dbffd0fc8e1b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edf5d61baae28a82aff0d0bd32d1d900085ac375
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583757"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867322"
 ---
-# <a name="corprfclausetype-enumeration"></a>COR_PRF_CLAUSE_TYPE 列挙型
+# <a name="cor_prf_clause_type-enumeration"></a>COR_PRF_CLAUSE_TYPE 列挙型
 コードが入った、または出た例外句のタイプを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_CLAUSE_NONE = 0,  
     COR_PRF_CLAUSE_FILTER = 1,  
@@ -41,19 +39,20 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_CLAUSE_NONE`|例外の句が無効です。|  
-|`COR_PRF_CLAUSE_FILTER`|例外の句は、フィルター式です。|  
-|`COR_PRF_CLAUSE_CATCH`|例外の句は、`catch`ステートメント。|  
-|`COR_PRF_CLAUSE_FINALLY`|例外の句は、`finally`ステートメント。|  
+|`COR_PRF_CLAUSE_NONE`|Exception 句が有効ではありません。|  
+|`COR_PRF_CLAUSE_FILTER`|Exception 句はフィルター式です。|  
+|`COR_PRF_CLAUSE_CATCH`|Exception 句は `catch` ステートメントです。|  
+|`COR_PRF_CLAUSE_FINALLY`|Exception 句は `finally` ステートメントです。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [列挙型のプロファイリング](profiling-enumerations.md)

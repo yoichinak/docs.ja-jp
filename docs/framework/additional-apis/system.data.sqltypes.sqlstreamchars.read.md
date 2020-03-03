@@ -1,10 +1,9 @@
 ---
-title: SqlStreamChars.Read (Char、Int32, Int32) メソッド (System.Data.SqlTypes)
+title: SqlStreamChars. Read (Char [], Int32, Int32) メソッド (SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -13,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: da891ac1fcff0247a690770665ef1f3e487497b8
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 9c8a1526e75fdc304022e74a7cc52506762489ea
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825369"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395751"
 ---
-# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars.Read (Char、Int32, Int32) メソッド
+# <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars. Read (Char [], Int32, Int32) メソッド
 
-派生クラスでオーバーライドされると、入力ストリームから次の文字セットを読み取ります。 このメソッドを含むアセンブリには、SQLAccess.dll で友人関係があります。 SQL Server で使用するものでは。 その他のデータベースには、そのデータベースによって提供されるホスティング メカニズムを使用します。
+派生クラスでオーバーライドされると、入力ストリームから次の文字セットを読み取ります。 このメソッドを含むアセンブリには、SQLAccess .dll とのフレンド関係があります。 SQL Server での使用を目的としています。 他のデータベースの場合は、そのデータベースによって提供されるホスティングメカニズムを使用します。
 
 ```csharp
 public abstract int Read (char[] buffer, int offset, int count);
@@ -31,13 +30,13 @@ public abstract int Read (char[] buffer, int offset, int count);
 ## <a name="parameters"></a>パラメーター
 
 `buffer`\
-読み取る文字の配列。
+読み取る文字配列。
 
 `offset`\
-原点からのオフセット。
+Origin を基準とするオフセット。
 
 `count`\
-現在のストリームから読み取る文字の数。
+現在のストリームから読み取る文字数。
 
 ## <a name="returns"></a>戻り値
 
@@ -47,14 +46,14 @@ public abstract int Read (char[] buffer, int offset, int count);
 ## <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `SqlStreamChars.Read`メソッドはプライベートであり、コード内で直接使用するものではありません。
+> @No__t-0 メソッドはプライベートであり、コード内で直接使用するためのものではありません。
 >
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでこの方法を使用することはサポートしていません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **名前空間:** <xref:System.Data.SqlTypes>
 
-**アセンブリ:** System.Data (system.data.dll 内)
+**アセンブリ:** System.string (System. Data. .dll)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

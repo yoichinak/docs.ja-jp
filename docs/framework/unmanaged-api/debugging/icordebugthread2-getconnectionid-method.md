@@ -15,40 +15,38 @@ helpviewer_keywords:
 ms.assetid: 9c76b587-f941-4fa1-8b86-f3494fb10c8e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1c0e76b179854a380e66ac9daedffa8ccf4aa4ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a81842132769934a6f5f34e6dc462bba77b3854a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422715"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138685"
 ---
 # <a name="icordebugthread2getconnectionid-method"></a>ICorDebugThread2::GetConnectionID メソッド
 この ICorDebugThread2 オブジェクトの接続識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetConnectionID (  
     [out] CONNID *pdwConnectionId  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pdwConnectionId`  
- [out]A`CONNID`接続識別子を表すです。  
+ 入出力接続識別子を表す `CONNID`。  
   
-## <a name="remarks"></a>コメント  
- `GetConnectionID`にゼロが返される、`pdwConnectionId`パラメーターでは、このスレッドは、接続の一部ではありません。  
+## <a name="remarks"></a>Remarks  
+ このスレッドが接続の一部でない場合、`GetConnectionID` メソッドは、`pdwConnectionId` パラメーターで0を返します。  
   
- このスレッドがの Microsoft SQL Server 2005 Analysis Services (SSAS)、インスタンスに接続されている場合、`CONNID`サーバー プロセス識別子 (SPID) にマップします。  
+ このスレッドが Microsoft SQL Server 2005 Analysis Services (SSAS) のインスタンスに接続されている場合、`CONNID` はサーバープロセス識別子 (SPID) にマップされます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

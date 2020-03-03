@@ -7,32 +7,30 @@ helpviewer_keywords:
 - LoadFrom context
 - LoadFromContext MDA
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 43fe2c3bd7d4e1c90fc52997a123d5dbbb297a02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28ef6e12c82cf5ca56962756b9ea964d0ae9baaa
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591342"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216171"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
-アセンブリが `LoadFrom` コンテキストに読み込まれると、`loadFromContext` マネージド デバッグ アシスタント (MDA) がアクティブになります。 このような状況は、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> または他の同様のメソッドを呼び出した結果として発生する可能性があります。  
+アセンブリが `loadFromContext` コンテキストに読み込まれると、`LoadFrom` マネージド デバッグ アシスタント (MDA) がアクティブになります。 このような状況は、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> または他の同様のメソッドを呼び出した結果として発生する可能性があります。  
   
 ## <a name="symptoms"></a>現象  
  一部のローダー メソッドは、使用すると、`LoadFrom` コンテキストでアセンブリが呼び出される結果になる可能性があります。 このコンテキストを使用すると、シリアル化、キャスティング、依存関係の解決について予期しない結果になる可能性があります。 一般的に、このような問題を回避するために、アセンブリを `Load` コンテキストに読み込むことをお勧めします。 この MDA を使用せずに、アセンブリが読み込まれたコンテキストを判断することは困難です。  
   
 ## <a name="cause"></a>原因  
- 一般的に、アセンブリは `Load` コンテキスト以外のパス (グローバル アセンブリ キャッシュや <xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> プロパティなど) から読み込まれた場合、`LoadFrom` コンテキストに読み込まれていました。  
+ 一般的に、アセンブリは `LoadFrom` コンテキスト以外のパス (グローバル アセンブリ キャッシュや `Load` プロパティなど) から読み込まれた場合、<xref:System.AppDomainSetup.ApplicationBase%2A?displayProperty=nameWithType> コンテキストに読み込まれていました。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  <xref:System.Reflection.Assembly.LoadFrom%2A> の呼び出しが不要になるようにアプリケーションを構成します。 そのためには、次の手法を使用できます。  
   
--   グローバル アセンブリ キャッシュにアセンブリをインストールします。  
+- グローバル アセンブリ キャッシュにアセンブリをインストールします。  
   
--   アセンブリを <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> ディレクトリに配置します。 既定のドメインの場合、<xref:System.AppDomainSetup.ApplicationBase%2A> ディレクトリは、プロセスを開始した実行可能ファイルを含むディレクトリです。 また、アセンブリを移動したくない場合は、必要に応じて新しい <xref:System.AppDomain> を作成します。  
+- アセンブリを <xref:System.AppDomainSetup.ApplicationBase%2A> の <xref:System.AppDomain> ディレクトリに配置します。 既定のドメインの場合、<xref:System.AppDomainSetup.ApplicationBase%2A> ディレクトリは、プロセスを開始した実行可能ファイルを含むディレクトリです。 また、アセンブリを移動したくない場合は、必要に応じて新しい <xref:System.AppDomain> を作成します。  
   
--   依存するアセンブリが、実行可能ファイルの相対的な子ディレクトリ内にある場合、アプリケーション構成 (.config) ファイルまたはセカンダリ アプリケーション ドメインのプローブ パスを追加します。  
+- 依存するアセンブリが、実行可能ファイルの相対的な子ディレクトリ内にある場合、アプリケーション構成 (.config) ファイルまたはセカンダリ アプリケーション ドメインのプローブ パスを追加します。  
   
  いずれの場合でも、<xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> メソッドを使用するようにコードを変更できます。  
   
@@ -72,5 +70,6 @@ namespace ConsoleApplication1
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>参照
+
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

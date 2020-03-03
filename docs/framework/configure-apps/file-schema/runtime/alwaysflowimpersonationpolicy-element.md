@@ -8,21 +8,19 @@ helpviewer_keywords:
 - alwaysFlowImpersonationPolicy element
 - <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 60c61e5b7c176f88e8f2c2e717e60ae40f43fbf6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 06e91ea6989dcdf0b2a179e7d6ce79b8d9aaff03
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255262"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73118339"
 ---
 # <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 要素
 偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。  
   
- \<configuration>  
-\<runtime>  
-\<alwaysFlowImpersonationPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy >** \  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,10 +40,10 @@ ms.locfileid: "55255262"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|`false`|管理されているメソッドをなどで、権限の借用を実行しない限り、id が、非同期ポイント間でフローしない Windows<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>します。 既定値です。|  
-|`true`|Windows id は、偽装の実行方法に関係なく、非同期ポイント間で常にフローします。|  
+|`false`|<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>などのマネージメソッドを使用して偽装を実行しない限り、Windows id は非同期ポイント間ではフローしません。 既定値です。|  
+|`true`|Windows id は、偽装がどのように実行されたかに関係なく、常に非同期のポイント間でフローします。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -58,24 +56,24 @@ ms.locfileid: "55255262"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- .NET Framework バージョン 1.0 および 1.1 では、Windows id が非同期ポイント間をフローしません。 .NET Framework version 2.0 では、<xref:System.Threading.ExecutionContext>オブジェクトを現在実行中のスレッドに関する情報を含み、アプリケーション ドメイン内での非同期ポイント間でフローします。 <xref:System.Security.Principal.WindowsIdentity>またメソッドの管理を使用して、権限の借用が行われた指定された、非同期ポイント間をフロー情報の一部としてフローなど<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>platform などの他の方法ではなくネイティブ メソッドを呼び出すとします。 この要素を使用して、Windows id は、権限借用の実現方法に関係なく、非同期ポイント間でフローことを指定します。  
+ .NET Framework バージョン1.0 および1.1 では、Windows id は非同期ポイント間ではフローしません。 .NET Framework バージョン2.0 には、現在実行中のスレッドに関する情報を含む <xref:System.Threading.ExecutionContext> オブジェクトがあり、アプリケーションドメイン内の非同期ポイント間でフローします。 <xref:System.Security.Principal.WindowsIdentity> は、<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> などのマネージメソッドを使用して偽装が行われた場合に、ネイティブメソッドへのプラットフォーム呼び出しなどの他の方法を使用して行われなかった場合に、非同期ポイント間を流れる情報の一部としてもフローします。 この要素は、偽装がどのように実現されたかに関係なく、Windows id が非同期ポイント間でフローすることを指定するために使用されます。  
   
- 他の 2 つの方法でこの既定の動作を変更することができます。  
+ この既定の動作は、次の2つの方法で変更できます。  
   
-1.  スレッドごとにマネージ コードは。  
+1. マネージコード内で、スレッド単位で。  
   
-     スレッドごとのフローを抑制するには変更することによって、<xref:System.Threading.ExecutionContext>と<xref:System.Security.SecurityContext>設定を使用して、 <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、 <xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>、または<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>メソッド。  
+     <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>、または <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Threading.ExecutionContext> と <xref:System.Security.SecurityContext> の設定を変更することで、スレッド単位でフローを抑制できます。  
   
-2.  で、共通言語ランタイム (CLR) を読み込むアンマネージ ホスト インターフェイスへの呼び出し。  
+2. アンマネージホストインターフェイスを呼び出して、共通言語ランタイム (CLR) を読み込みます。  
   
-     呼び出しで特別なフラグを指定するには、CLR を読み込めません (単純なマネージ実行可能ファイル) ではなく、アンマネージ ホスト インターフェイスを使用する場合、 [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数。 プロセス全体の互換モードを有効にするには設定、`flags`パラメーター [CorBindToRuntimeEx 関数](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に`STARTUP_ALWAYSFLOW_IMPERSONATION`します。  
+     アンマネージホストインターフェイス (単純なマネージ実行可能ファイルではなく) を使用して CLR を読み込む場合は、 [Corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)関数の呼び出しで特別なフラグを指定できます。 プロセス全体で互換モードを有効にするには、 [Corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)の `flags` パラメーターを `STARTUP_ALWAYSFLOW_IMPERSONATION`に設定します。  
   
 ## <a name="configuration-file"></a>構成ファイル  
- .NET Framework アプリケーションでは、この要素は、アプリケーション構成ファイルでのみ使用できます。  
+ .NET Framework アプリケーションでは、この要素はアプリケーション構成ファイルでのみ使用できます。  
   
- 見つかった aspnet.config ファイルで、ASP.NET アプリケーションの権限借用のフローを構成できます、 \<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリ。  
+ ASP.NET アプリケーションの場合、偽装フローは、\<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリにある aspnet. .config ファイルで構成できます。  
   
- 既定では ASP.NET では、次の構成設定を使用して、aspnet.config ファイルで権限借用のフローを無効にします。  
+ ASP.NET は、既定では、次の構成設定を使用して、aspnet ファイル内の偽装フローを無効にします。  
   
 ```xml
 <configuration>  
@@ -86,7 +84,7 @@ ms.locfileid: "55255262"
 </configuration>  
 ```  
   
- ASP.NET では、代わりに、権限借用のフローを許可する場合は、する必要があります明示的に使用する次の構成設定。  
+ ASP.NET で、代わりに偽装のフローを許可する場合は、次の構成設定を明示的に使用する必要があります。  
   
 ```xml  
 <configuration>  
@@ -98,7 +96,7 @@ ms.locfileid: "55255262"
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、Windows id を権限の借用は、マネージ メソッド以外の方法によって実現している場合でも、非同期ポイント間でフローするかを指定する方法を示します。  
+ 次の例では、マネージメソッド以外の方法で権限借用が行われた場合でも、Windows id を非同期ポイント間でフローするように指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -109,6 +107,7 @@ ms.locfileid: "55255262"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<legacyImpersonationPolicy > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [\<legacyImpersonationPolicy > 要素](legacyimpersonationpolicy-element.md)

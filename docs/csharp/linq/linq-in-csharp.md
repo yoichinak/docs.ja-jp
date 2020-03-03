@@ -3,14 +3,14 @@ title: LINQ (C#)
 description: C# での LINQ について詳しく説明したトピックへのリンクを紹介しています。
 ms.date: 11/30/2016
 ms.assetid: 8eb3284f-0ab9-4cad-9216-2da58d9761a5
-ms.openlocfilehash: 2defe82f93c8961eddd2a69e78ea446e2e996c7e
-ms.sourcegitcommit: 4c158beee818c408d45a9609bfc06f209a523e22
+ms.openlocfilehash: 0b9301074996528cd1fbcfebde3a0a57b15e2f15
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2018
-ms.locfileid: "37404045"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73421763"
 ---
-# <a name="linq-in-c"></a>LINQ (C#) #
+# <a name="linq-in-c"></a>C\# での LINQ
 
 このセクションでは、LINQ について詳しく説明したトピックへのリンクを紹介しています。
 
@@ -36,7 +36,7 @@ LINQ をサポートする C# の言語構造について説明します。
 
 ## <a name="related-sections"></a>関連項目
 
-[LINQ クエリ式](../programming-guide/linq-query-expressions/index.md)  
+[LINQ クエリ式](index.md)  
 LINQ でのクエリの概要を説明し、他のリソースへのリンクを示します。
 
 [標準クエリ演算子の概要](../programming-guide/concepts/linq/standard-query-operators-overview.md)  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
-ms.openlocfilehash: b867380661e3545db9ac64cb67ad4e3a5a1a6b1e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918347"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >' があいまい、名前空間または型からインポートされた\<name2 >'
 あいまいな名前を指定したため、別の名前と競合しています。 Visual Basic コンパイラには、競合の解決ルールはありません。名前は、自分で明確する必要があります。  
@@ -21,11 +21,12 @@ ms.locfileid: "55254744"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  名前、名前空間のインポートを削除することによってあいまいさを解消します。  
+1. 名前、名前空間のインポートを削除することによってあいまいさを解消します。  
   
-2.  名前を完全修飾します。  
+2. 名前を完全修飾します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Namespace ステートメント](../../../visual-basic/language-reference/statements/namespace-statement.md)

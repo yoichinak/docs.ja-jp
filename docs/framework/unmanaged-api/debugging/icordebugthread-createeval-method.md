@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: 36605067-33d3-4579-9c72-fb0e551ab0f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5e2d99d85a6e6b09558e5941d08a7f522aaf66cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0c622e0eba27f501446d2b7d9d264ee0834e869c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421818"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133613"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval メソッド
-収集し、この ICorDebugThread の機能を公開する ICorDebugEval オブジェクトを作成します。  
+このスレッドの機能を収集して公開する、表示されるオブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateEval (  
     [out] ICorDebugEval   **ppEval  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppEval`  
- [out]アドレスへのポインター、`ICorDebugEval`を収集し、このスレッドの機能を公開するオブジェクト。  
+ 入出力このスレッドの機能を収集して公開する `ICorDebugEval` オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- 評価オブジェクトは、計算を実行する前に、スレッドで新しいチェーンにプッシュされます。 これにより、現在実行中のスレッドで評価が完了するまで計算が中断します。  
+## <a name="remarks"></a>Remarks  
+ 評価オブジェクトは、計算を実行する前に、スレッドに新しいチェーンをプッシュします。 これにより、評価が完了するまで、スレッドで現在実行されている計算が中断されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

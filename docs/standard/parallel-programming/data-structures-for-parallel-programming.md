@@ -1,20 +1,18 @@
 ---
-title: 並列プログラミングのデータ構造
+title: 並列プログラミング向けのデータ構造
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - data structures, multi-threading
 ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7eb79aaf1f207d8d5ec175f32dc9a47170d604f8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: a2271feae78100940b4ecac3c42c9bfefa7e1769
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479699"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123147"
 ---
-# <a name="data-structures-for-parallel-programming"></a>並列プログラミングのデータ構造
+# <a name="data-structures-for-parallel-programming"></a>並列プログラミング向けのデータ構造
 .NET Framework バージョン 4 では、同時実行コレクション クラスのセット、軽量な同期プリミティブ、遅延初期化用の型など、並列プログラミングに役立つ複数の新しい型が導入されています。 これらの型は、タスク並列ライブラリや PLINQ などの任意のマルチスレッド アプリケーション コードで使うことができます。  
   
 ## <a name="concurrent-collection-classes"></a>同時実行コレクション クラス  
@@ -48,9 +46,9 @@ ms.locfileid: "55479699"
   
  詳細については次を参照してください:  
   
--   [方法: 下位レベルの同期に SpinLock を使用する](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
+- [方法: 下位レベルの同期に SpinLock を使用する](../../../docs/standard/threading/how-to-use-spinlock-for-low-level-synchronization.md)  
   
--   [方法: バリアを使用して同時実行操作を同期する](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
+- [方法: バリアを使用して同時実行操作を同期する](../../../docs/standard/threading/how-to-synchronize-concurrent-operations-with-a-barrier.md)。  
   
 ## <a name="lazy-initialization-classes"></a>遅延初期化クラス  
  遅延初期化では、オブジェクトのメモリは必要になるまで割り当てられません。 遅延初期化を使うと、オブジェクトの割り当てがプログラムの有効期間全体に均等に分散されるので、パフォーマンスが向上します。 <xref:System.Lazy%601> 型をラッピングすることにより、任意のカスタム型で遅延初期化を有効にできます。  

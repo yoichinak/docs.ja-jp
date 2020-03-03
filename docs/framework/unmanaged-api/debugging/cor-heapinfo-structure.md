@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: bfb2cd39-3e0b-4d51-ba0c-f009755c1456
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ffca8e076fe6fe966a9a07ed915a7e76ea06f37c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6fd3682290c9752125aed7b9663c6704ade25de
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518073"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132331"
 ---
-# <a name="corheapinfo-structure"></a>COR_HEAPINFO 構造体
+# <a name="cor_heapinfo-structure"></a>COR_HEAPINFO 構造体
 列挙可能かどうかなど、ガベージ コレクション ヒープに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _COR_HEAPINFO {  
     BOOL areGCStructuresValid;   
     DWORD pointerSize;   
@@ -42,19 +40,19 @@ typedef struct _COR_HEAPINFO {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`areGCStructuresValid`|`true` ガベージ コレクションの構造体が有効な場合に、ヒープを列挙することができます。それ以外の場合、`false`します。|  
-|`pointerSize`|ターゲット アーキテクチャ上のポインターのバイト単位のサイズ。|  
-|`numHeaps`|プロセスのヒープの論理のガベージ コレクションの数。|  
-|`concurrent`|`TRUE` 同時実行の場合 (背景) のガベージ コレクションが有効になっているとします。それ以外の場合、`FALSE`します。|  
-|`gcType`|メンバー、 [CorDebugGCType](../../../../docs/framework/unmanaged-api/debugging/cordebuggctype-enumeration.md)ガベージ コレクターがワークステーションまたはサーバーで実行されているかどうかを示す列挙体。|  
+|`areGCStructuresValid`|ガベージコレクション構造が有効で、ヒープを列挙できるかどうかを `true` します。それ以外の場合は、`false`ます。|  
+|`pointerSize`|ターゲットアーキテクチャのポインターのサイズ (バイト単位)。|  
+|`numHeaps`|プロセス内の論理ガベージコレクションヒープの数。|  
+|`concurrent`|同時実行 (バックグラウンド) ガベージコレクションが有効になっている場合に `TRUE` します。それ以外の場合は、`FALSE`ます。|  
+|`gcType`|ガベージコレクターがワークステーションまたはサーバーのどちらで実行されているかを示す[CorDebugGCType](cordebuggctype-enumeration.md)列挙体のメンバー。|  
   
 ## <a name="remarks"></a>Remarks  
- インスタンス、`COR_HEAPINFO`構造体が呼び出しによって返される、 [icordebugprocess 5::getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)メソッド。  
+ [ICorDebugProcess5:: Getg](icordebugprocess5-getgcheapinformation-method.md)メソッドを呼び出すことによって、`COR_HEAPINFO` 構造体のインスタンスが返されます。  
   
- ガベージ コレクション ヒープ上のオブジェクトを列挙するには、前に常にオンにしてください、`areGCStructuresValid`フィールドをヒープが列挙可能な状態であることを確認します。 詳細については、次を参照してください。、 [icordebugprocess 5::getgcheapinformation](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getgcheapinformation-method.md)メソッド。  
+ ガベージコレクションヒープのオブジェクトを列挙する前に、必ず `areGCStructuresValid` フィールドをチェックして、ヒープが列挙可能な状態であることを確認する必要があります。 詳細については、「 [ICorDebugProcess5:: Getg](icordebugprocess5-getgcheapinformation-method.md) 」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -63,5 +61,6 @@ typedef struct _COR_HEAPINFO {
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

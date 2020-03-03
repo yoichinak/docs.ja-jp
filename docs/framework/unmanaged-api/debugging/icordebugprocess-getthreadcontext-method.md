@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 5b132ef1-8d4b-4525-89b3-54123596c194
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ea977b1ccecf9de5a04e1f1127658ca6c15043a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 41c5116d23655730f3586dc656aa69c8ae817b6c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416541"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792621"
 ---
 # <a name="icordebugprocessgetthreadcontext-method"></a>ICorDebugProcess::GetThreadContext メソッド
-このプロセスで特定のスレッドのコンテキストを取得します。  
+このプロセス内の指定されたスレッドのコンテキストを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetThreadContext(  
     [in] DWORD threadID,  
     [in] ULONG32 contextSize,  
@@ -37,28 +35,28 @@ HRESULT GetThreadContext(
     BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `threadID`  
- [in]コンテキストを取得する対象のスレッドの ID。  
+ からコンテキストを取得するスレッドの ID。  
   
  `contextSize`  
  [in] `context` 配列のサイズ。  
   
  `context`  
- [入力、出力].スレッドのコンテキストを表すバイト配列。  
+ [入力、出力]スレッドのコンテキストを記述するバイト配列。  
   
- コンテキストでは、スレッドが実行されているプロセッサのアーキテクチャを指定します。  
+ コンテキストは、スレッドが実行されているプロセッサのアーキテクチャを指定します。  
   
 ## <a name="remarks"></a>コメント  
- デバッガーは、Win32 ではなく、このメソッドを呼び出す必要があります`GetThreadContext`メソッドをそのコンテキストが一時的に変更されて、「乗っ取ら」の状態になる実際には、スレッドのためです。 ネイティブ コードでスレッドがある場合にのみ、このメソッドを使用する必要があります。 使用して[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)マネージ コード内のスレッドにします。  
+ デバッガーは、Win32 `GetThreadContext` メソッドではなく、このメソッドを呼び出す必要があります。これは、スレッドが実際には "ハイジャック" 状態にあり、そのコンテキストが一時的に変更されている可能性があるためです。 このメソッドは、スレッドがネイティブコード内にある場合にのみ使用してください。 マネージコード内のスレッドには、コード[を使用し](icordebugregisterset-interface.md)ます。  
   
- 返されるデータは、現在のプラットフォームのコンテキスト構造です。 Win32 と同様に、`GetThreadContext`メソッドを呼び出し元を初期化する必要があります、`context`このメソッドを呼び出す前にパラメーター。  
+ 返されるデータは、現在のプラットフォームのコンテキスト構造です。 Win32 `GetThreadContext` メソッドと同様に、呼び出し元は、このメソッドを呼び出す前に `context` パラメーターを初期化する必要があります。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

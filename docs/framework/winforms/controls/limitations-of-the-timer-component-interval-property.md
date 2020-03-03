@@ -1,5 +1,5 @@
 ---
-title: Windows フォームの Timer コンポーネントの Interval プロパティの制限
+title: Timer Component Interval プロパティの制限事項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - timers [Windows Forms], event intervals
@@ -7,28 +7,29 @@ helpviewer_keywords:
 - timers [Windows Forms], Windows-based
 - Timer component [Windows Forms], limitations of Interval property
 ms.assetid: 7e5fb513-77e7-4046-a8e8-aab94e61ca0f
-ms.openlocfilehash: 2d8e25d9d27c0908f2d794a0c3c9646024984764
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 15626a53f0541ff79e2098377d9dfdb4626ac155
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269675"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745233"
 ---
 # <a name="limitations-of-the-windows-forms-timer-components-interval-property"></a>Windows フォームの Timer コンポーネントの Interval プロパティの制限
-Windows フォーム<xref:System.Windows.Forms.Timer>コンポーネントには、<xref:System.Windows.Forms.Timer.Interval%2A>と次の 1 つのタイマー イベントの間の経過時間をミリ秒数を指定するプロパティ。 タイマーは引き続き受信コンポーネントが無効にしない限り、<xref:System.Windows.Forms.Timer.Tick>ほぼ一定の時間間隔でイベント。  
+Windows フォーム <xref:System.Windows.Forms.Timer> コンポーネントには、1つのタイマーイベントから次のタイマーイベントまでの経過時間をミリ秒単位で指定する <xref:System.Windows.Forms.Timer.Interval%2A> プロパティがあります。 コンポーネントが無効になっていない限り、タイマーはほぼ同じ間隔で <xref:System.Windows.Forms.Timer.Tick> イベントを受信し続けます。  
   
- このコンポーネントは、Windows フォームの環境用に設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](https://msdn.microsoft.com/library/adc0bc0a-a519-4812-bafc-fb9d1a5801fc)」を参照してください。  
+ このコンポーネントは、Windows フォームの環境用に設計されています。 サーバー環境に適したタイマーが必要な場合は、「[サーバー ベースのタイマーの概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))」を参照してください。  
   
-## <a name="the-interval-property"></a>間隔のプロパティ  
- <xref:System.Windows.Forms.Timer.Interval%2A>プロパティがプログラミングしているときに考慮すべきいくつかの制限、<xref:System.Windows.Forms.Timer>コンポーネント。  
+## <a name="the-interval-property"></a>Interval プロパティ  
+ <xref:System.Windows.Forms.Timer.Interval%2A> プロパティには、<xref:System.Windows.Forms.Timer> コンポーネントをプログラミングする際に考慮すべきいくつかの制限があります。  
   
--   アプリケーションまたは別のアプリケーションで、システムで重い負荷が早い場合、長いループや複雑な計算、またはドライブ、ネットワーク、またはポートへのアクセスなど-アプリケーションとしてのタイマー イベントを頻繁に利用できない、<xref:System.Windows.Forms.Timer.Interval%2A>プロパティを指定します。  
+- アプリケーションまたは他のアプリケーションがシステムに対して大量の要求 (長いループ、大量の計算、ドライブ、ネットワーク、ポートアクセスなど) を実行している場合、<xref:System.Windows.Forms.Timer.Interval%2A> プロパティで指定されているようにタイマーイベントを取得できないことがあります。  
   
--   間隔は、正確に時間の経過時間は保証されません。 精度を保証するには、タイマーする必要があります、必要に応じて、システム クロックのチェックではなく保持の累積時間を内部的にしようとしています。  
+- この間隔は、時間の経過と共に正確には保証されません。 正確さを確保するために、タイマーは、蓄積された時間を内部で追跡するのではなく、必要に応じてシステムクロックをチェックする必要があります。  
   
--   有効桁数、<xref:System.Windows.Forms.Timer.Interval%2A>プロパティの単位はミリ秒です。 一部のコンピューターでは、ミリ秒よりも高い解像度が高分解能カウンターを提供します。 このようなカウンターの可用性は、コンピューターのプロセッサ ハードウェアに依存します。
+- <xref:System.Windows.Forms.Timer.Interval%2A> プロパティの有効桁数はミリ秒単位です。 コンピューターによっては、ミリ秒よりも高い解像度の高解像度カウンターが提供される場合があります。 このようなカウンターの可用性は、コンピューターのプロセッサハードウェアによって異なります。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.Timer>
-- [Timer コンポーネント](../../../../docs/framework/winforms/controls/timer-component-windows-forms.md)
-- [Timer コンポーネントの概要](../../../../docs/framework/winforms/controls/timer-component-overview-windows-forms.md)
+- [Timer コンポーネント](timer-component-windows-forms.md)
+- [Timer コンポーネントの概要](timer-component-overview-windows-forms.md)

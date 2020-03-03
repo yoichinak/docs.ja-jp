@@ -2,23 +2,24 @@
 title: FailedToInitializeTraceSource
 ms.date: 03/30/2017
 ms.assetid: ce6fea55-292c-4fb9-908e-3713fcd4cf8f
-ms.openlocfilehash: 847d3ca501c88d6b34448ef5752c29eb127a645f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bda061bb77b8bde44592c61c44bcfa6bef320dfa
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565723"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797938"
 ---
 # <a name="failedtoinitializetracesource"></a>FailedToInitializeTraceSource
 Id:101  
   
- 重大度:Error  
+ 順Error  
   
- カテゴリ:トレース  
+ [カテゴリ]:トレース  
   
 ## <a name="description"></a>説明  
  トレース ソースは初期化されませんでした。 トレースは無効になります。 イベントには、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
-- [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+
+- [イベント ログ](index.md)
+- [イベント一覧](events-general-reference.md)

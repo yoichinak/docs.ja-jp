@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: 9e00337f-b307-4602-9bc3-965a8dbf02cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: defa18bde8e5ce0f1cc7ff040aaa4fa0e95fd7e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc241324f5844610d7b86b7cb9668f84d4525395
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619219"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140667"
 ---
 # <a name="gethashfromhandle-function"></a>GetHashFromHandle 関数
 指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルの内容に対してハッシュが作成されます。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::gethashfromhandle](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: GetHashFromHandle](../hosting/iclrstrongname-gethashfromhandle-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHashFromHandle (  
     [in]  HANDLE   hFile,  
     [in, out] unsigned int   *piHashAlg,  
@@ -40,31 +38,32 @@ HRESULT GetHashFromHandle (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `hFile`  
- [in]ハッシュされるファイルのハンドル。  
+ からハッシュされるファイルのハンドル。  
   
  `piHashAlg`  
- [入力、出力]ハッシュ アルゴリズムを指定する定数。 既定のアルゴリズムに 0 を使用します。  
+ [入力、出力]ハッシュアルゴリズムを指定する定数。 既定のアルゴリズムには0を使用します。  
   
  `pbHash`  
- [out]返されたハッシュ バッファー。  
+ 入出力返されたハッシュバッファー。  
   
  `cchHash`  
- [in]要求の最大サイズの`pbHash`します。  
+ から要求された `pbHash`の最大サイズ。  
   
  `pchHash`  
- [out]サイズ (バイト単位)、返された`pbHash`します。  
+ 入出力返された `pbHash`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [GetHashFromHandle メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromhandle-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [GetHashFromHandle メソッド](../hosting/iclrstrongname-gethashfromhandle-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

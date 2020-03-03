@@ -1,17 +1,16 @@
 ---
 title: クエリ キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: e5010c7e9f3550c79c86c6cab4579a0fb15eef10
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3c08c2b6ecdaa4b875f118531e7e77f7164dd784
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239486"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713158"
 ---
 # <a name="query-keywords-c-reference"></a>クエリ キーワード (C# リファレンス)
 
@@ -40,5 +39,5 @@ ms.locfileid: "53239486"
 
 - [C# のキーワード](index.md)
 - [統合言語クエリ (LINQ)](../../programming-guide/concepts/linq/index.md)
-- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [C# の LINQ の概要](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# での LINQ](../../linq/index.md)
+- [C# の LINQ の概要](/dotnet/csharp/programming-guide/concepts/linq/)

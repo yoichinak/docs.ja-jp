@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 480cbdecd681408a7e1d6fa366e3f1a4b131ab42
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857535"
+---
 ### <a name="unicode-standard-version-80-categories-now-supported"></a>Unicode 標準バージョン 8.0 のカテゴリのサポート開始
 
 |   |   |

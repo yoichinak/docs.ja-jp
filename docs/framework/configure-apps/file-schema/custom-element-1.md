@@ -6,21 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: guardrex
-ms.author: mairaw
-ms.openlocfilehash: 232ad7527e65fd38fa471cccc917752aef766a88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d0431085a04d3fb817dfe0883779acc4d693084
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628839"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214787"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler のカスタム要素
 
-定義されているカスタム構成セクションの設定を定義します。 <section> 使用して要素、<xref:System.Configuration.SingleTagSectionHandler>クラス。
+\<セクション > 要素で定義され、<xref:System.Configuration.SingleTagSectionHandler> クラスを使用するカスタム構成セクションの設定を定義します。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName>*
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp; *\<sectionName >*
 
 ## <a name="syntax"></a>構文
 
@@ -30,25 +28,25 @@ ms.locfileid: "54628839"
 
 ## <a name="attributes"></a>属性
 
-属性および属性値は、ユーザー定義です。
+属性と属性値はユーザーが定義します。
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
+| [ **\<configuration>** ](configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
 
 ## <a name="child-elements"></a>子要素
 
 なし
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
- **\<SectionName >** 要素がによって定義されるカスタム要素、 [ **\<セクション >** ](~/docs/framework/configure-apps/file-schema/section-element.md)にタグを付ける、 [ **\<configSections >** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)要素。 構成システムから返される、<xref:System.Collections.IDictionary>オブジェクトを呼び出すと<xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>します。
+**\<sectionName >** 要素は、 [ **\<configsections >** ](configsections-element-for-configuration.md)要素の[ **\<セクション >** ](section-element.md)タグで定義されたカスタム要素です。 <xref:System.Configuration.Configuration.GetSection(System.String)?displayProperty=nameWithType>を呼び出すと、構成システムによって <xref:System.Collections.IDictionary> オブジェクトが返されます。
 
 ## <a name="example"></a>例
 
-次の例と呼ばれるカスタム要素の宣言 **\<sampleSection >** によって読み取られた設定を格納する、<xref:System.Configuration.SingleTagSectionHandler>クラス。
+次の例では、<xref:System.Configuration.SingleTagSectionHandler> クラスによって読み取られる設定を含む **\<sampleSection >** という名前のカスタム要素を宣言します。
 
 ```xml
 <configuration>
@@ -62,10 +60,10 @@ ms.locfileid: "54628839"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>構成ファイル
+## <a name="configuration-file"></a>［構成ファイル］
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。
+この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

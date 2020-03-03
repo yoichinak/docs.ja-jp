@@ -2,21 +2,19 @@
 title: ICorDebugSymbolProvider::GetMethodProps メソッド
 ms.date: 03/30/2017
 ms.assetid: 8f836b80-b7a5-460b-bf76-5f0e45652aea
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 487b376b2c8e4738ac4bc4d3c21b07eed62036a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58642d0a9b1cfe1fd969f39fa7e5ab22a8dbfa05
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635989"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791580"
 ---
 # <a name="icordebugsymbolprovidergetmethodprops-method"></a>ICorDebugSymbolProvider::GetMethodProps メソッド
 メソッドの指定の相対仮想アドレス (RVA) で、そのメソッドのプロパティに関する情報 (メソッドのメタデータ トークンなど) と、そのジェネリック パラメーターに関する情報を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMethodProps(  
    [in]  ULONG32 codeRva,  
    [out] mdToken *pMethodToken,  
@@ -27,7 +25,7 @@ HRESULT GetMethodProps(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `codeRVA`  
  [in]情報を取得するメソッドでの相対仮想アドレス。  
   
@@ -46,14 +44,14 @@ HRESULT GetMethodProps(
  `signature`  
  [out] すべてのジェネリック パラメーターの typespec シグネチャを保持するバッファー。  
   
-## <a name="remarks"></a>Remarks  
- メソッドに必要なサイズを取得する`signature`配列は、設定、`cbSignature`引数を 0 にし、`signature`に**null**します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
+## <a name="remarks"></a>コメント  
+ メソッドの `signature` 配列の必要なサイズを取得するには、`cbSignature` 引数を0に設定し `signature` を**null**に設定します。 このメソッドから制御が戻ると、`pcbSignature` には `signature` 配列の必要なバイト数が格納されます。  
   
 > [!NOTE]
->  このメソッドは .NET ネイティブでのみ使用できます。  
+> このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -62,6 +60,7 @@ HRESULT GetMethodProps(
  **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [GetTypeProps メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-gettypeprops-method.md)
-- [ICorDebugSymbolProvider インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [GetTypeProps メソッド](icordebugsymbolprovider-gettypeprops-method.md)
+- [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

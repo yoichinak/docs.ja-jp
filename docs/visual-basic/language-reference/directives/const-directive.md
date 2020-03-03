@@ -1,5 +1,5 @@
 ---
-title: '#Const ディレクティブ (Visual Basic)'
+title: '#Const ディレクティブ'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.#Const
@@ -15,41 +15,46 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 7e855f76a0fa8e6c06fd557a944c518641415f09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710600"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343845"
 ---
 # <a name="const-directive"></a>#Const ディレクティブ
-Visual basic の条件付きコンパイラ定数を定義します。  
+
+Visual Basic の条件付きコンパイラ定数を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 #Const constname = expression  
 ```  
   
 ## <a name="parts"></a>指定項目  
+
  `constname`  
  必須。 定義されている定数の名前。  
   
  `expression`  
- 必須。 リテラルやその他の条件付きコンパイラ定数、またはすべての算術演算子または論理演算子を除く任意の組み合わせ`Is`します。  
+ 必須。 リテラル、その他の条件付きコンパイラ定数、または `Is`を除く任意またはすべての算術演算子または論理演算子を含む任意の組み合わせ。  
   
-## <a name="remarks"></a>Remarks  
- 条件付きコンパイラ定数は、表示されるファイルにプライベートでは常にです。 使用してパブリック コンパイラ定数を作成することはできません、`#Const`ディレクティブです。 または、ユーザー インターフェイスでのみ作成できます、`/define`コンパイラ オプション。  
+## <a name="remarks"></a>コメント  
+
+ 条件付きコンパイラ定数は、それらが表示されるファイルに対して常にプライベートです。 `#Const` ディレクティブを使用して、パブリックコンパイラ定数を作成することはできません。これらは、ユーザーインターフェイスまたは `/define` コンパイラオプションでのみ作成できます。  
   
- 使用できるは、条件付きコンパイラ定数とリテラルのみ`expression`します。 定義されている標準の定数を使用して`Const`エラーが発生します。 逆で定義されている定数を使用することができます、`#Const`条件付きコンパイルのみのキーワード。 定数できますもが定義されていないの値がある場合`Nothing`します。  
+ `expression`では、条件付きコンパイラ定数とリテラルのみを使用できます。 `Const` で定義された標準定数を使用すると、エラーが発生します。 逆に、`#Const` キーワードで定義された定数は、条件付きコンパイルに対してのみ使用できます。 定数を未定義にすることもできます。その場合、値は `Nothing`になります。  
   
 ## <a name="example"></a>例  
+
  `#Const` ディレクティブの使用例を次に示します。  
   
- [!code-vb[VbVbalrConditionalComp#3](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/const-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
-- [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
+
+- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
 - [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
 - [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)

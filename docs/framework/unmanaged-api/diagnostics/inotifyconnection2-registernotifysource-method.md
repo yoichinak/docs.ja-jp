@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 2632da80-6e4b-4429-8dee-b382745a5f81
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5895dc3cb64b72380dead1e048c012b586c4f48e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76514cfbd2e533f04c5139dbaef4429c12463106
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550722"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445477"
 ---
 # <a name="inotifyconnection2registernotifysource-method"></a>INotifyConnection2::RegisterNotifySource メソッド
-指定された通知のソースをインストールします。  
+指定された通知ソースをインストールします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RegisterNotifySource  
 (  
     [in]  INotifySource2*  in_pNotifySource,  
@@ -37,20 +35,21 @@ HRESULT RegisterNotifySource
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `in_pNotifySource`  
- [in]通知のソースとして使用するオブジェクトを指定します。  
+ から通知ソースとして使用するオブジェクトを指定します。  
   
  `out_ppNotifySink`  
- [out]通知シンクとして使用するオブジェクトを受け取ります。  
+ 入出力通知シンクとして使用されるオブジェクトを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。  
+ メソッドが成功した場合は S_OK します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
+
 - [INotifyConnection2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
 - [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)

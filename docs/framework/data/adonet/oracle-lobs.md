@@ -2,28 +2,28 @@
 title: Oracle LOB
 ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
-ms.openlocfilehash: 70928cdd1ff82e54fd8e45563bb14df6340e4a95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a52203ad62e8761897f7b2bef90f1915db9433f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748000"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783335"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
-.NET Framework Data Provider for Oracle が含まれています、 <xref:System.Data.OracleClient.OracleLob> Oracle を操作するために使用するクラスを**LOB**データ型。  
+Oracle の .NET Framework Data Provider には、 <xref:System.Data.OracleClient.OracleLob> oracle **LOB**データ型を操作するために使用されるクラスが含まれています。  
   
- **OracleLob**これらのいずれか<xref:System.Data.OracleClient.OracleType>データ型。  
+ **OracleLob**は、次<xref:System.Data.OracleClient.OracleType>のいずれかのデータ型である可能性があります。  
   
 |データの種類|説明|  
 |---------------|-----------------|  
-|**Blob**|Oracle **BLOB** 4 ギガバイトの最大サイズのバイナリ データを含むデータ型。 これにマップする**配列**型の**バイト**。|  
-|**Clob**|Oracle **CLOB**に基づいて既定の文字、文字データを含むデータ型がサーバーで 4 ギガバイトの最大サイズを設定します。 これにマップ**文字列**します。|  
-|**NClob**|Oracle **NCLOB**各国語の文字の最大サイズが 4 ギガバイトのサーバー セットに基づいて、文字データを含むデータ型。 これにマップ**文字列**します。|  
+|**Blob**|最大サイズが 4 gb のバイナリデータを含む Oracle **BLOB**データ型。 これは**Byte**型の**配列**にマップされます。|  
+|**Clob**|サーバー上の既定の文字セットに基づく文字データを格納する Oracle **CLOB**データ型。最大サイズは 4 gb です。 これは**文字列**にマップされます。|  
+|**NClob**|最大サイズが 4 gb のサーバー上の各国語文字セットに基づいて、文字データを格納する Oracle **NCLOB**データ型。 これは**文字列**にマップされます。|  
   
- **OracleLob**とは異なります、<xref:System.Data.OracleClient.OracleBFile>の代わりに、オペレーティング システムで物理ファイル内のサーバーで、データが格納されていることにします。 異なり、読み取り/書き込みオブジェクトにも、 **OracleBFile**、これは読み取り専用で常にします。  
+ **OracleLob**は、データが<xref:System.Data.OracleClient.OracleBFile>オペレーティングシステムの物理ファイルではなくサーバーに格納されるという点で、とは異なります。 また、読み取り/書き込み可能なオブジェクトである場合もあります。これは、常に読み取り専用である**OracleBFile**とは異なります。  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>LOB の作成、取得、および書き込み  
- C# の例を次に示す方法、Oracle テーブルに Lob を作成し、取得し、形式で書き込む**OracleLob**オブジェクト。 この例で、<xref:System.Data.OracleClient.OracleDataReader>オブジェクトと**OracleLob** **読み取り**と**書き込み**メソッド。 例では、Oracle を使用して**BLOB**、 **CLOB**、および**NCLOB**データ型。  
+ 次C#の例では、Oracle テーブルに lob を作成し、 **OracleLob**オブジェクトの形式で取得および書き込みを行う方法を示します。 この例では、 <xref:System.Data.OracleClient.OracleDataReader>オブジェクトと**OracleLob**の**読み取り**メソッドと**書き込み**メソッドの使用方法を示します。 この例では、Oracle の**BLOB**、 **CLOB**、および**NCLOB**データ型を使用します。  
   
 ```csharp  
 using System;  
@@ -90,10 +90,10 @@ public class LobExample
          // Note: You can read character data as raw Unicode bytes   
          // (using OracleLob.Read as in the above example).  
          // However, because the OracleLob object inherits directly   
-         // from the .Net stream object,   
+         // from the .NET stream object,   
          // all the existing classes that manipluate streams can   
          // also be used. For example, the   
-         // .Net StreamReader makes it easier to convert the raw bytes   
+         // .NET StreamReader makes it easier to convert the raw bytes   
          // into actual characters.  
          StreamReader streamreader =   
            new StreamReader(clob, Encoding.Unicode);  
@@ -248,5 +248,6 @@ tx.Commit();
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Oracle および ADO.NET](oracle-and-adonet.md)
+- [ADO.NET の概要](ado-net-overview.md)

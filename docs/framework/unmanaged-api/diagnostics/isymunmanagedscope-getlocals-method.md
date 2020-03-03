@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 17c45f15-8c44-44da-b070-f902077b36e4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8d0e1b764691fd2582e1225cb90003e2a644061f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf932b63973f93c56883f099ddaadd9d1519f337
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643690"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446331"
 ---
 # <a name="isymunmanagedscopegetlocals-method"></a>ISymUnmanagedScope::GetLocals メソッド
 このスコープ内で定義されているローカル変数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetLocals(  
     [in]  ULONG32  cLocals,  
     [out] ULONG32  *pcLocals,  
@@ -37,21 +35,22 @@ HRESULT GetLocals(
         length_is(*pcLocals)] ISymUnmanagedVariable* locals[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cLocals`  
- [in]A`ULONG32`のサイズを示す、`locals`配列。  
+ から`locals` 配列のサイズを示す `ULONG32`。  
   
  `pcLocals`  
- [out]ポインター、`ULONG32`ローカル変数の格納に必要なバッファーのサイズを受け取る。  
+ 入出力ローカル変数を格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。  
   
  `locals`  
- [out]ローカル変数を受け取る配列。  
+ 入出力ローカル変数を受け取る配列。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedScope インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

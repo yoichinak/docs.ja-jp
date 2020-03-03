@@ -7,30 +7,30 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: 14ec1bb9ca6e6d6702818cf316e100e5bbe97e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98368a54fad095337038236d7bfdc2123edb6be2
+ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544473"
+ms.lasthandoff: 12/31/2019
+ms.locfileid: "75559410"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>グローバリゼーションおよびローカリゼーションに関する「方法」トピック
 このセクションのトピックでは、国際対応アプリケーションを開発する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [アプリケーションをローカライズする](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [自動レイアウトを使用してボタンを作成する](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [自動レイアウト用のグリッドを使用する](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [ResourceDictionary を使用してローカライズ可能な文字列リソースを管理する](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [ローカライズ可能アプリケーションでリソースを使用する](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+ [アプリケーションをローカライズする](how-to-localize-an-application.md)  
+ [自動レイアウトを使用してボタンを作成する](how-to-use-automatic-layout-to-create-a-button.md)  
+ [自動レイアウト用のグリッドを使用する](how-to-use-a-grid-for-automatic-layout.md)  
+ [ResourceDictionary を使用してローカライズ可能な文字列リソースを管理する](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [ローカライズ可能アプリケーションでリソースを使用する](how-to-use-resources-in-localizable-applications.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>参照先  
  <xref:System.Globalization>  
   
  <xref:System.Windows.FrameworkElement.FlowDirection%2A>  
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML における xml:lang の処理](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML における xml:lang の処理](../../../desktop-wpf/xaml-services/xml-language-handling.md)  
   
-## <a name="related-sections"></a>関連項目
+## <a name="related-sections"></a>関連セクション

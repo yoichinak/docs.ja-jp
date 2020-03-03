@@ -1,5 +1,5 @@
 ---
-title: '方法: ListView の各項目の MouseDoubleClick イベントを処理する'
+title: '方法 : ListView の各項目の MouseDoubleClick イベントを処理する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,34 +7,35 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], MouseDoubleClick event
 ms.assetid: 81b39369-655a-4585-ac58-4640e5bb8fed
-ms.openlocfilehash: 2a201eefba6e2623cfd7f733b85e271ce1c4e177
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25308ee87fb387787e20c8a8887ae8e4e60742b9
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576058"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73460223"
 ---
-# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>方法: ListView の各項目の MouseDoubleClick イベントを処理する
-内の項目のイベントを処理するために、 <xref:System.Windows.Controls.ListView>、それぞれにイベント ハンドラーを追加する必要がある<xref:System.Windows.Controls.ListViewItem>します。 ときに、<xref:System.Windows.Controls.ListView>がバインドされているデータ ソースに明示的に作成しない、 <xref:System.Windows.Controls.ListViewItem>、追加することで各項目のイベントを処理することができますが、<xref:System.Windows.EventSetter>のスタイルを<xref:System.Windows.Controls.ListViewItem>します。  
+# <a name="how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview"></a>方法 : ListView の各項目の MouseDoubleClick イベントを処理する
+<xref:System.Windows.Controls.ListView>内の項目のイベントを処理するには、各 <xref:System.Windows.Controls.ListViewItem>にイベントハンドラーを追加する必要があります。 <xref:System.Windows.Controls.ListView> がデータソースにバインドされている場合は、明示的に <xref:System.Windows.Controls.ListViewItem>を作成する必要はありませんが、<xref:System.Windows.Controls.ListViewItem>のスタイルに <xref:System.Windows.EventSetter> を追加することで、各項目のイベントを処理できます。  
   
 ## <a name="example"></a>例  
- 次の例は、データ バインドを作成します。<xref:System.Windows.Controls.ListView>を作成し、<xref:System.Windows.Style>各にイベント ハンドラーを追加する<xref:System.Windows.Controls.ListViewItem>します。  
+ 次の例では、データバインド <xref:System.Windows.Controls.ListView> を作成し、<xref:System.Windows.Style> を作成して、各 <xref:System.Windows.Controls.ListViewItem>にイベントハンドラーを追加します。  
   
- [!code-xaml[ListViewHowTos#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
-[!code-xaml[ListViewHowTos#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
-[!code-xaml[ListViewHowTos#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
+ [!code-xaml[ListViewHowTos#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#1)]  
+[!code-xaml[ListViewHowTos#5](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#5)]  
+[!code-xaml[ListViewHowTos#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#2)]  
   
- 次の例のハンドル、<xref:System.Windows.Controls.Control.MouseDoubleClick>イベント。  
+ 次の例では、<xref:System.Windows.Controls.Control.MouseDoubleClick> イベントを処理します。  
   
- [!code-csharp[ListViewHowTos#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
- [!code-vb[ListViewHowTos#6](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
+ [!code-csharp[ListViewHowTos#6](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml.cs#6)]
+ [!code-vb[ListViewHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewHowTos/VisualBasic/Window1.xaml.vb#6)]  
   
 > [!NOTE]
->  バインドする最も一般的な<xref:System.Windows.Controls.ListView>各にイベント ハンドラーを追加するスタイルを使用するデータ ソースに<xref:System.Windows.Controls.ListViewItem>、非データ バインドで<xref:System.Windows.Controls.ListView>明示的に作成するかどうかに関係なく、<xref:System.Windows.Controls.ListViewItem>します。  明示的および暗黙的が作成の詳細については<xref:System.Windows.Controls.ListViewItem>コントロールを参照してください<xref:System.Windows.Controls.ItemsControl>します。  
+> <xref:System.Windows.Controls.ListView> をデータソースにバインドするのが最も一般的ですが、<xref:System.Windows.Controls.ListViewItem>を明示的に作成するかどうかにかかわらず、データバインドされていない <xref:System.Windows.Controls.ListView> の各 <xref:System.Windows.Controls.ListViewItem> にイベントハンドラーを追加するには、スタイルを使用します。  明示的かつ暗黙的に作成された <xref:System.Windows.Controls.ListViewItem> コントロールの詳細については、「<xref:System.Windows.Controls.ItemsControl>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Xml.XmlElement>
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [スタイルとテンプレート](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [XMLDataProvider と XPath クエリを使用して XML データにバインドする](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
-- [ListView の概要](../../../../docs/framework/wpf/controls/listview-overview.md)
+- [データ バインディングの概要](../data/data-binding-overview.md)
+- [スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)
+- [XMLDataProvider と XPath クエリを使用して XML データにバインドする](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)
+- [ListView の概要](listview-overview.md)

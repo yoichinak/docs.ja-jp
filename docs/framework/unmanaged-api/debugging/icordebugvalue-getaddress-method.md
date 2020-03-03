@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: a247c792-45e1-4538-9e1f-b46acca4a463
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b88c49ba93ff3c4cc3f5c7a656dfa5da6e82109e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 906ca2540e421953b3ce39300aa7b2376f789929
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559843"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137097"
 ---
 # <a name="icordebugvaluegetaddress-method"></a>ICorDebugValue::GetAddress メソッド
-デバッグ対象プロセスでは、この"ICorDebugValue"オブジェクトのアドレスを取得します。  
+この "ICorDebugValue" オブジェクトのアドレスを取得します。このオブジェクトはデバッグ中です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetAddress (  
     [out] CORDB_ADDRESS   *pAddress  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAddress`  
- [out]ポインターを`CORDB_ADDRESS`値オブジェクトのアドレスを指定するオブジェクト。  
+ 入出力この値オブジェクトのアドレスを指定する `CORDB_ADDRESS` オブジェクトへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- 値が使用できない場合は、0 (ゼロ) が返されます。 これは、値は、レジスタで少なくとも一部場合に発生する可能性がありますまたはガベージ コレクター ハンドルに格納されている (`GCHandle`)。  
+ 値が使用できない場合は、0 (ゼロ) が返されます。 これは、値がレジスタの少なくとも一部であるか、ガベージコレクターハンドル (`GCHandle`) に格納されている場合に発生する可能性があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -52,4 +50,3 @@ HRESULT GetAddress (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

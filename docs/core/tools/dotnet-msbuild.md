@@ -1,19 +1,19 @@
 ---
 title: dotnet msbuild コマンド
 description: dotnet msbuild コマンドは、MSBuild コマンド ラインへのアクセスを提供します。
-ms.date: 12/03/2018
-ms.openlocfilehash: f025b5b92e57c7b804b9bdd59c8b4a4a806796da
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 02/14/2020
+ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169080"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503669"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet msbuild` - プロジェクトとそのすべての依存関係をビルドします。
 
@@ -27,30 +27,30 @@ ms.locfileid: "53169080"
 
 このコマンドには、SDK スタイルのプロジェクトに対してのみ、既存の MSBuild コマンド ライン クライアントとまったく同じ機能があります。 オプションはすべて同じです。 使用可能なオプションの詳細については、「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。
 
-[dotnet build](dotnet-build.md) コマンドは、`dotnet msbuild -restore -target:Build` に相当します。 プロジェクトの構築では `dotnet build` のほうが一般的に使用されますが、`dotnet msbuild` のほうが細かい制御を実行できます。 たとえば、実行したい特定のターゲットがあるが、ビルドしたターゲットを実行したくない場合は、`dotnet msbuild` を使用できます。
+[dotnet build](dotnet-build.md) コマンドは、`dotnet msbuild -restore -target:Build` に相当します。 [dotnet ビルド](dotnet-build.md)は、プロジェクトのビルドによく使用されますが、ビルド ターゲットを常に実行するため、プロジェクトをビルドしなくてもよい場合は `dotnet msbuild` を使用できます。 たとえば、プロジェクトをビルドせずに実行したい特定のターゲットがある場合は、`dotnet msbuild` を使用してターゲットを指定します。
 
 ## <a name="examples"></a>使用例
 
-* プロジェクトとその依存関係をビルドします。
+- プロジェクトとその依存関係をビルドします。
 
-  ```console
+  ```dotnetcli
   dotnet msbuild
   ```
 
-* リリース構成を使用して、プロジェクトとその依存関係をビルドします。
+- リリース構成を使用して、プロジェクトとその依存関係をビルドします。
 
-  ```console
-  dotnet msbuild -p:Configuration=Release
+  ```dotnetcli
+  dotnet msbuild -property:Configuration=Release
   ```
 
-* 発行先を実行して、RID `osx.10.11-x64` に発行します。
+- 発行先を実行して、RID `osx.10.11-x64` に発行します。
 
-  ```console
-  dotnet msbuild -t:Publish -p:RuntimeIdentifiers=osx.10.11-x64
+  ```dotnetcli
+  dotnet msbuild -target:Publish -property:RuntimeIdentifiers=osx.10.11-x64
   ```
 
-* プロジェクト全体と SDK に付属するすべてのターゲットをご覧ください。
+- プロジェクト全体と SDK に付属するすべてのターゲットをご覧ください。
 
-  ```console
-  dotnet msbuild -pp
+  ```dotnetcli
+  dotnet msbuild -preprocess
   ```

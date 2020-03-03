@@ -15,24 +15,22 @@ helpviewer_keywords:
 ms.assetid: 8f0dd2fe-7df7-464e-91f4-5518c586bb5f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ee68533e95deb4b6efaa9226c047599f233b3954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca34d1d84d6f9960d021c35566f8412df321464d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494757"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74429740"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize メソッド
-このリーダーが、モジュールのファイル名と共に使用すると、関連付けられるメタデータ インポーターのインターフェイスで、シンボル リーダーを初期化します。  
+このリーダーが関連付けられるメタデータインポーターインターフェイスと、モジュールのファイル名を使用して、シンボルリーダーを初期化します。  
   
 > [!NOTE]
->  このメソッドは、1 回だけ呼び出すことができ、その他のリーダー メソッドの前に呼び出す必要があります。  
+> このメソッドを呼び出すことができるのは1回だけです。他のリーダーメソッドの前に呼び出す必要があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Initialize (  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *filename,  
@@ -40,27 +38,28 @@ HRESULT Initialize (
     [in]  IStream      *pIStream);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `importer`  
- [in]このリーダーが関連付けられるメタデータ インポーターのインターフェイス。  
+ からこのリーダーが関連付けられるメタデータインポーターインターフェイス。  
   
  `filename`  
- [in]モジュールのファイル名。 使用することができます、`pIStream`パラメーター代わりにします。  
+ からモジュールのファイル名。 代わりに、`pIStream` パラメーターを使用できます。  
   
  `searchPath`  
- [in]検索するパス。 このパラメーターは省略できます。  
+ から検索するパス。 このパラメーターはオプションです。  
   
  `pIStream`  
- [in]ファイル ストリームは、filename パラメーターの代替として使用します。  
+ からファイルストリーム。 filename パラメーターの代わりに使用されます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="remarks"></a>Remarks  
- 1 つだけ指定する必要がある、`filename`または`pIStream`両方のパラメーター。 `searchPath` パラメーターは省略可能です。  
+## <a name="remarks"></a>コメント  
+ 両方ではなく、`filename` または `pIStream` のパラメーターのいずれか1つだけを指定する必要があります。 `searchPath` パラメーターは省略可能です。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

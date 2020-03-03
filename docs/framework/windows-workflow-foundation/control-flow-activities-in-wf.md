@@ -3,14 +3,14 @@ title: WF 内の制御フロー アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 6892885b-f7c5-4aea-8f5e-28863fb4ae75
 ms.openlocfilehash: bcbb12210af2d0172977dca6f81355031baa043a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945913"
 ---
 # <a name="control-flow-activities-in-wf"></a>WF 内の制御フロー アクティビティ
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、ワークフロー内の実行フローを制御するアクティビティがいくつか用意されています。 これらのアクティビティの一部 (など`Switch`と`If`) Visual c# などの他の環境、プログラミングのようなフロー制御構造を実装する (など`Pick`) 新しいプログラミング構造をモデル化します。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、ワークフロー内の実行フローを制御するアクティビティがいくつか用意されています。 これらのアクティビティの一部 (など`Switch`と`If`) Visual C# などの他の環境、プログラミングのようなフロー制御構造を実装する (など`Pick`) 新しいプログラミング構造をモデル化します。  
   
  `Parallel` や `ParallelForEach` などのアクティビティは、同時実行のために複数の子アクティビティをスケジュールできますが、シングル スレッドのみがワークフローに使用されます。 これらのアクティビティのそれぞれの子アクティビティは連続して実行され、連続するアクティビティは前のアクティビティが完了するかアイドルになるまで実行されません。 その結果、これらのアクティビティは、ブロック処理の可能性がある複数のアクティビティがインターリーブ形式で実行されるアプリケーションの場合に最も有効です。 これらのアクティビティにアイドルになる子アクティビティがない場合、`Parallel` アクティビティは `Sequence` アクティビティとまったく同様に実行され、`ParallelForEach` アクティビティは `ForEach` アクティビティとまったく同様に実行されます。 しかし、非同期アクティビティ (<xref:System.Activities.AsyncCodeActivity> から派生するアクティビティなど) またはメッセージング アクティビティが使用されると、子アクティビティがそのメッセージ受信を待っていても、または非同期作業を完了する必要があっても、コントロールは次の分岐にパスします。  
   

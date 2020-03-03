@@ -1,5 +1,0 @@
-# [ジェネリック](index.md)
-## [ .NET の汎用コレクション](collections.md)
-## [配列とリストの操作に使用する汎用デリゲート](delegates-for-manipulating-arrays-and-lists.md)
-## [ジェネリック インターフェイス](interfaces.md)
-## [共変性と反変性](covariance-and-contravariance.md)

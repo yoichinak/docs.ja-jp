@@ -15,40 +15,38 @@ helpviewer_keywords:
 ms.assetid: 36887017-670b-4f21-b406-8fab956f84a3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03cb1556ee971124ed4c591f38d9f892fc7df7b0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402800"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192153"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame メソッド
-アクティブなを取得 (つまり、最新) のフレーム チェーンをします。  
+チェーンのアクティブな (つまり、最新の) フレームを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetActiveFrame (  
     [out] ICorDebugFrame   **ppFrame  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppFrame`  
- [out]アクティブなを表す ICorDebugFrame オブジェクトのアドレスへのポインター (つまり、最新) のフレーム チェーンをします。  
+ 入出力チェーン上のアクティブな (つまり、最新の) フレームを表す、の各フレームオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- マネージ スタック フレームが使用できない場合`ppFrame`設定を null にします。  
+## <a name="remarks"></a>Remarks  
+ 使用できるマネージスタックフレームがない場合、`ppFrame` は null に設定されます。  
   
- アクティブなフレームが使用できない場合、呼び出しが成功し、`ppFrame`は null になります。 アクティブなフレームはチェーン CHAIN_ENTER_UNMANAGED、により開始されるのと CHAIN_CLASS_INIT により開始されるいくつかのチェーンを利用できません。 CorDebugChainReason 列挙型を参照してください。  
+ アクティブなフレームが使用できない場合、呼び出しは成功し、`ppFrame` は null になります。 CHAIN_ENTER_UNMANAGED によって開始されるチェーンや、CHAIN_CLASS_INIT によって開始されるチェーンに対して、アクティブなフレームは使用できません。 CorDebugChainReason 列挙体を参照してください。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

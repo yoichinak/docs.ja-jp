@@ -6,29 +6,28 @@ helpviewer_keywords:
 - debugging [.NET Framework], using the unmanaged API
 - native API reference [.NET Framework], debugging
 ms.assetid: f0bf70be-42ef-4c46-8709-1694b5f99018
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 86be3e7edb7149ed42dd053156de0f649f1480b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.openlocfilehash: 2fc2e3aceae81f3ba976f03bee06993dc98d3b8d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790462"
 ---
 # <a name="debugging-unmanaged-api-reference"></a>デバッグ (アンマネージ API リファレンス)
 デバッグ API により、デバッガーは共通言語ランタイム (CLR) 環境で実行するコードをデバッグできます。 CLR がサポートするすべての種類のコードをデバッグできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [デバッグ コクラス](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)  
+ [デバッグ コクラス](debugging-coclasses.md)  
  デバッグ API が使用するアンマネージ コクラスについて説明します。  
   
- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
+ [デバッグ インターフェイス](debugging-interfaces.md)  
  CLR で実行するプログラムをデバッグできるようにするアンマネージ インターフェイスについて説明します。  
   
- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)  
+ [デバッグ グローバル静的関数](debugging-global-static-functions.md)  
  デバッグ API で使用されるアンマネージ グローバル静的関数について説明します。  
   
- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)  
+ [列挙型のデバッグ](debugging-enumerations.md)  
  デバッグ API が使用するアンマネージ列挙体について説明します。  
   
- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
+ [デバッグ構造体](debugging-structures.md)  
  デバッグ API が使用するアンマネージ構造体について説明します。

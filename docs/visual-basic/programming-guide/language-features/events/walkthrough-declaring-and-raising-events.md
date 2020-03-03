@@ -1,5 +1,5 @@
 ---
-title: 宣言と発生イベント (Visual Basic)
+title: イベントの宣言と発生
 ms.date: 07/20/2015
 helpviewer_keywords:
 - declarations [Visual Basic], events
@@ -9,30 +9,30 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: f792109f1d1117b5b112e06da1510938e4b8a5ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f4c303604f9cf55b4ecd500636e0d2772b6234c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580496"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345087"
 ---
-# <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>チュートリアル: 宣言と発生イベント (Visual Basic)
-このチュートリアルを宣言してという名前のクラスのイベントを発生させる方法について説明`Widget`します。 手順を完了した後可能性がある、関連トピック[チュートリアル。イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)からのイベントを使用する方法を示す`Widget`アプリケーションで状態情報を提供するオブジェクト。  
+# <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>チュートリアル: イベントの宣言と発生 (Visual Basic)
+このチュートリアルでは、`Widget`という名前のクラスのイベントを宣言して発生させる方法について説明します。 手順を完了したら、「[チュートリアル: イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)」の関連トピックを参照することをお勧めします。これは、`Widget` オブジェクトからのイベントを使用してアプリケーションにステータス情報を提供する方法を示しています。  
   
-## <a name="the-widget-class"></a>ウィジェット クラス  
- 今のところ必要のある想定を`Widget`クラス。 `Widget`クラスにメソッドを実行するには長い時間がかかることがあり、ある種の完了のインジケーターを配置できるアプリケーションをします。  
+## <a name="the-widget-class"></a>ウィジェットクラス  
+ `Widget` クラスがあることを前提としています。 `Widget` クラスには、実行に時間がかかる可能性があり、アプリケーションで何らかの完了インジケーターを設定できるようにするためのメソッドが用意されています。  
   
- もちろん、行うことができます、`Widget`オブジェクト % 完了ダイアログ ボックスの表示が、すべてのプロジェクトを使用した場合は、そのダイアログ ボックスで、そのしするスタックは、`Widget`クラス。 オブジェクトの設計の原則は、ユーザー インターフェイス オブジェクト ハンドルを使用するアプリケーション、オブジェクトの全体的な目的は、フォームまたはダイアログ ボックスを管理する場合を除き、します。  
+ もちろん、`Widget` オブジェクトにパーセント (パーセント) のダイアログボックスを表示させることもできますが、その場合は、`Widget` クラスを使用したすべてのプロジェクトでそのダイアログボックスがスタックします。 オブジェクトの設計では、オブジェクトを使用するアプリケーションで、フォームまたはダイアログボックスを管理するだけではなく、ユーザーインターフェイスを処理することをお勧めします。  
   
- 目的は、`Widget`を追加することが、他のタスクを実行するには、`PercentDone`イベントと let プロシージャを呼び出す`Widget`メソッド処理 's イベントと表示状態を更新します。 `PercentDone`イベントは、タスクをキャンセルするためのメカニズムも提供できます。  
+ `Widget` の目的は、他のタスクを実行することです。そのため、`PercentDone` イベントを追加し、`Widget`のメソッドを呼び出すプロシージャでそのイベントを処理し、ステータスの更新を表示することをお勧めします。 `PercentDone` イベントには、タスクを取り消すためのメカニズムも用意されています。  
   
 #### <a name="to-build-the-code-example-for-this-topic"></a>このトピックのコード例をビルドするには  
   
-1.  新しい Visual Basic Windows アプリケーション プロジェクトを開き、という名前のフォームを作成する`Form1`します。  
+1. 新しい Visual Basic Windows アプリケーションプロジェクトを開き、`Form1`という名前のフォームを作成します。  
   
-2.  2 つのボタンとラベルを追加`Form1`します。  
+2. `Form1`に2つのボタンとラベルを追加します。  
   
-3.  次の表のように、各オブジェクトに名前を付けます。  
+3. 次の表のように、各オブジェクトに名前を付けます。  
   
     |オブジェクト|プロパティ|設定|  
     |------------|--------------|-------------|  
@@ -40,41 +40,42 @@ ms.locfileid: "54580496"
     |`Button2`|`Text`|キャンセル|  
     |`Label`|`(Name)`, `Text`|lblPercentDone, 0|  
   
-4.  **プロジェクト**] メニューの [選択**クラスの追加**という名前のクラスを追加する`Widget.vb`をプロジェクトにします。  
+4. **[プロジェクト]** メニューの **[クラスの追加]** をクリックして、`Widget.vb` という名前のクラスをプロジェクトに追加します。  
   
-#### <a name="to-declare-an-event-for-the-widget-class"></a>ウィジェットのクラスのイベントを宣言するには  
+#### <a name="to-declare-an-event-for-the-widget-class"></a>ウィジェットクラスのイベントを宣言するには  
   
--   使用して、`Event`でイベントを宣言するキーワード、`Widget`クラス。 イベントことがあります`ByVal`と`ByRef`、引数として`Widget`の`PercentDone`イベントを示します。  
+- `Widget` クラスでイベントを宣言するには、`Event` キーワードを使用します。 イベントは `Widget`の `PercentDone` イベントが示すように、`ByVal` 引数と `ByRef` 引数を持つことができます。  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_1.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   
- 呼び出し元のオブジェクトを受信すると、 `PercentDone` 、イベント、`Percent`引数には、タスクが完了の割合が含まれています。 `Cancel`に引数を設定することができます`True`イベントを発生させたメソッドをキャンセルします。  
+ 呼び出し元のオブジェクトが `PercentDone` イベントを受け取ると、`Percent` 引数には、完了したタスクの割合が含まれます。 `Cancel` 引数を `True` に設定して、イベントを発生させたメソッドを取り消すことができます。  
   
 > [!NOTE]
->  例外を次のプロシージャの引数と同様に、イベント引数を宣言できます。イベントを使用できない`Optional`または`ParamArray`引数、およびイベントに戻り値がありません。  
+> イベント引数は、プロシージャの引数と同じように宣言できます。ただし、イベントに `Optional` または `ParamArray` 引数を指定することはできません。また、イベントには戻り値がありません。  
   
- `PercentDone`イベントは、`LongTask`のメソッド、`Widget`クラス。 `LongTask` 2 つの引数: 時間の長さメソッドが行う作業、および前に最小の時間間隔を装う`LongTask`させる一時停止、`PercentDone`イベント。  
+ `PercentDone` イベントは、`Widget` クラスの `LongTask` メソッドによって発生します。 `LongTask` は2つの引数を取ります。これは、メソッドが処理を実行している時間の長さと、`LongTask` が一時停止して `PercentDone` イベントが発生するまでの最小時間間隔です。  
   
-#### <a name="to-raise-the-percentdone-event"></a>ですイベントを発生させる  
+#### <a name="to-raise-the-percentdone-event"></a>PercentDone イベントを発生させるには  
   
-1.  アクセスを簡略化する、 `Timer` 、このクラスによって使用されるプロパティの追加、`Imports`クラスのモジュールの宣言セクションの先頭にステートメントの上、`Class Widget`ステートメント。  
+1. このクラスで使用される `Timer` プロパティへのアクセスを簡略化するには、クラスモジュールの宣言セクションの先頭に `Class Widget` ステートメントの上に `Imports` ステートメントを追加します。  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_2.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#2)]  
   
-2.  `Widget` クラスに次のコードを追加します。  
+2. `Widget` クラスに次のコードを追加します。  
   
-     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](../../../../visual-basic/programming-guide/language-features/events/codesnippet/VisualBasic/walkthrough-declaring-and-raising-events_3.vb)]  
+     [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#3)]  
   
- アプリケーションを呼び出すと、`LongTask`メソッド、`Widget`クラスが生成、`PercentDone`イベントすべて`MinimumInterval`秒。 イベントが返されるときに`LongTask`かどうかをチェック、`Cancel`引数に設定された`True`します。  
+ アプリケーションが `LongTask` メソッドを呼び出すと、`Widget` クラスは `MinimumInterval` 秒ごとに `PercentDone` イベントを発生させます。 イベントが返されると、`LongTask` `Cancel` 引数が `True`に設定されているかどうかを確認します。  
   
- 免責事項をいくつかは、ここで必要です。 わかりやすくするため、`LongTask`プロシージャでは、事前にわかってタスクがどれくらいの時間を前提としています。 これは、ケースではほとんどありません。 何かが発生していることを示す値を取得するまでに経過する時間数では単には、多くの場合、最も重要なユーザーに、タスクを均等なサイズのチャンクに分割することは困難であり、できます。  
+ ここでは、いくつかの免責事項が必要です。 わかりやすくするために、`LongTask` の手順では、タスクの実行時間が事前にわかっていることを前提としています。 これはほとんどの場合、そうではありません。 タスクを均等なサイズのチャンクに分割することは困難です。多くの場合、ユーザーにとって最も重要なのは、何かが発生したことを示す前にが経過した時間だけです。  
   
- このサンプルでは別の欠陥を発見することがあります。 `Timer`プロパティは、午前 0 時から経過した秒数を返します。 直前の午前 0 時に開始されている場合、アプリケーションとして行き詰まってそのため、します。 時間の計測をより慎重なアプローチはこのなどの境界条件を考慮に入れるに入れるかなどのプロパティを使用して`Now`します。  
+ このサンプルの別の欠陥が発見された可能性があります。 `Timer` プロパティは、深夜0時以降に経過した秒数を返します。そのため、深夜の直前にアプリケーションが起動された場合は、アプリケーションが停止します。 時間を測定するためのより慎重なアプローチは、このような境界条件を考慮に入れるか、`Now`などのプロパティを使用して完全に回避することです。  
   
- これで、`Widget`クラスは、イベントを発生させることができます、次のように次のチュートリアルに進むことができます。 [チュートリアル: イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)を使用する方法を示します`WithEvents`でイベント ハンドラーを関連付ける、`PercentDone`イベント。  
+ `Widget` クラスでイベントを発生させることができるようになったので、次のチュートリアルに進むことができます。 [チュートリアル:](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)イベントの処理では、`WithEvents` を使用してイベントハンドラーを `PercentDone` イベントに関連付ける方法を示します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
-- [チュートリアル: イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
+- [チュートリアル : イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
 - [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)

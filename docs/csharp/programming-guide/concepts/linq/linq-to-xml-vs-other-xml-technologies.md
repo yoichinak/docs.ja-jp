@@ -2,17 +2,17 @@
 title: LINQ to XML およびその他の XML テクノロジ3
 ms.date: 07/20/2015
 ms.assetid: 01b8e746-12d3-471d-b811-7539e4547784
-ms.openlocfilehash: 8e2a6b11e450890373de449c0a55839460b97566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4cade6ecbee95ee288db34246986858609697731
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648655"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635679"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML およびその他の XML テクノロジ
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を他の XML テクノロジ (<xref:System.Xml.XmlReader>、XSLT、MSXML、および XmlLite) と比較します。 使用するテクノロジを決定するときに、ここで説明する情報を参照してください。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とドキュメント オブジェクト モデル (DOM) の比較については、「[LINQ to XML およびDOM (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)」を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とドキュメント オブジェクト モデル (DOM) の比較については、「[LINQ to XML およびDOM (C#)](./linq-to-xml-vs-dom.md)」を参照してください。  
   
 ## <a name="linq-to-xml-vs-xmlreader"></a>LINQ to XML およびXmlReader  
  <xref:System.Xml.XmlReader> は、高速、前方参照専用、非キャッシュのパーサーです。  
@@ -50,8 +50,8 @@ ms.locfileid: "54648655"
   
  XmlLite の最大の利点は、ほとんどのシナリオで、軽量かつ高速で安全な XML パーサーとして利用できることです。 XmlLite は脅威の対象となる要素がほとんどないため、 信頼されていないドキュメントを解析し、サービス拒否攻撃やデータ漏洩攻撃などからの保護が必要な場合は、優れた方法となります。  
   
- XmlLite は、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] と統合されていません。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] の利用動機となるプログラミングの生産性の向上はもたらされません。  
+ XmlLite は、統合言語クエリ (LINQ) と統合されていません。 LINQ の利用動機となるプログラミングの生産性の向上はもたらされません。  
   
 ## <a name="see-also"></a>関連項目
 
-- [はじめに (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [はじめに (LINQ to XML)](./linq-to-xml-overview.md)

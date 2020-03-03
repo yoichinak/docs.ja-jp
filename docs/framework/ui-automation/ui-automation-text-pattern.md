@@ -8,29 +8,28 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: b51206f2-1281-4ad0-9820-ea39d88ae577
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 0fd0bfbb36c3b33ee328cd409b20f7d076321bcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd19d02ade7c7826f6c0b26d894bcd48827e7ccb
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604376"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800847"
 ---
 # <a name="ui-automation-text-pattern"></a>UI オートメーション テキスト パターン
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- このトピックでは、概要を説明し、内のテキスト要素のプログラミングに役立つ方法に関するトピックを開始する[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]します。  
+ このトピックには、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)]でのテキスト要素のプログラミングを開始する際に役立つ概要と操作方法に関するトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [UI オートメーション TextPattern の概要](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)  
- [TextPattern および埋め込みオブジェクトの概要](../../../docs/framework/ui-automation/textpattern-and-embedded-objects-overview.md)  
- [方法トピック](../../../docs/framework/ui-automation/ui-automation-text-pattern-how-to-topics.md)  
+ [UI オートメーション TextPattern の概要](ui-automation-textpattern-overview.md)  
+ [TextPattern および埋め込みオブジェクトの概要](textpattern-and-embedded-objects-overview.md)  
+ [方法トピック](ui-automation-text-pattern-how-to-topics.md)  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>辞書／辞典／その他  
  <xref:System.Windows.Automation.Text>  
   
-## <a name="see-also"></a>関連項目
-- [UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
-- [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
+## <a name="see-also"></a>参照
+
+- [UI オートメーション コントロール パターン](ui-automation-control-patterns.md)
+- [クライアントの UI オートメーション コントロール パターン](ui-automation-control-patterns-for-clients.md)

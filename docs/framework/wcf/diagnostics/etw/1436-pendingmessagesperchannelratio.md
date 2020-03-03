@@ -3,11 +3,11 @@ title: 1436 - PendingMessagesPerChannelRatio
 ms.date: 03/30/2017
 ms.assetid: 1f5b779b-1ca1-4653-b79b-db31df8fbb8b
 ms.openlocfilehash: 742922e2b6a6538363864e91fd0db1c293294f92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33455839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782110"
 ---
 # <a name="1436---pendingmessagesperchannelratio"></a>1436 - PendingMessagesPerChannelRatio
 ## <a name="properties"></a>プロパティ  
@@ -25,4 +25,4 @@ ms.locfileid: "33455839"
 ## <a name="message"></a>メッセージ  
  チャネルごとの保留メッセージの比率: %1/%2  
   
-## <a name="details"></a>詳細
+## <a name="details"></a>説明

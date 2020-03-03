@@ -1,5 +1,5 @@
 ---
-title: '方法 : ユーザー定義の例外を作成する'
+title: '方法: ユーザー定義の例外を作成する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,12 @@ helpviewer_keywords:
 - exceptions, examples
 - exceptions, user-defined
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6de00490a17fff005dd50a7acc5247089c073f68
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192237"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708876"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>ユーザー定義の例外を作成する方法
 

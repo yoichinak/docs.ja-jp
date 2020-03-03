@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 6b791351-bcc5-4ddd-9cab-eff2f7dd5142
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cd4f27b958aa4b25c2662d8a5e9da6bcdc73d5d3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3c11a0547ad5acc5613324d7e9d7439d44549dbc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404457"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125812"
 ---
 # <a name="icordebugchainenumnext-method"></a>ICorDebugChainEnum::Next メソッド
-列挙体の現在位置から ICorDebugChain インスタンスの指定した数を取得します。  
+現在の位置から開始して、指定された数の値を列挙から取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -38,21 +36,21 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]数`ICorDebugChain`を取得するインスタンス。  
+ から取得する `ICorDebugChain` インスタンスの数。  
   
  `chains`  
- [out]それぞれが指すポインターの配列、`ICorDebugChain`チェーンを表すオブジェクト。  
+ 入出力ポインターの配列。各ポインターは、チェーンを表す `ICorDebugChain` オブジェクトを指します。  
   
  `pceltFetched`  
- [out]数へのポインター`ICorDebugChain`実際に返されるインスタンス。 この値を null にすることがある場合`celt`は 1 つです。  
+ 入出力実際に返された `ICorDebugChain` インスタンスの数へのポインター。 `celt` が1の場合、この値は null になります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

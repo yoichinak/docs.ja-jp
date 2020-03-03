@@ -1,82 +1,82 @@
 ---
-title: 'チュートリアル: データの操作 (Visual Basic)'
+title: 'チュートリアル : データの操作 (Visual Basic)'
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0eab5fe5c9455badb7f538307cb827391b254a95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7acce3f8483fab3c2978de7cbd1b9d875900f1d3
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626928"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003398"
 ---
-# <a name="walkthrough-manipulating-data-visual-basic"></a>チュートリアル: データの操作 (Visual Basic)
+# <a name="walkthrough-manipulating-data-visual-basic"></a>チュートリアル : データの操作 (Visual Basic)
 このチュートリアルでは、データベースに対してデータの追加、変更、および削除を行う、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 顧客の追加、顧客名の変更、および注文の削除を行うため、サンプルの Northwind データベースのコピーを使用します。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
   
  このチュートリアルは、Visual Basic 開発設定を使用して記述されています。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルの前提条件は次のとおりです。  
   
--   このチュートリアルでは、専用フォルダー ("c:\linqtest2") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
+- このチュートリアルでは、専用フォルダー ("c:\linqtest2") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
   
--   Northwind サンプル データベース。  
+- Northwind サンプル データベース。  
   
-     開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest2 フォルダーにコピーします。  
+     開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、「[サンプルデータベースのダウンロード](downloading-sample-databases.md)」を参照してください。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest2 フォルダーにコピーします。  
   
--   Northwind データベースから生成された Visual Basic コード ファイル。  
+- Northwind データベースから生成された Visual Basic コード ファイル。  
   
-     このファイルを生成するには、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]または SQLMetal ツールを使用します。 このチュートリアルは、SQLMetal ツールを使用して次のコマンド ラインで作成されています。  
+     このファイルを生成するには、オブジェクトリレーショナルデザイナーまたは SQLMetal ツールを使用します。 このチュートリアルは、SQLMetal ツールを使用して次のコマンド ラインで作成されています。  
   
      **sqlmetal /code:"c:\linqtest2\northwind.vb" /language:vb "C:\linqtest2\northwnd.mdf" /pluralize**  
   
-     詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
+     詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="overview"></a>概要  
- このチュートリアルは、主に次の 6 つのタスクで構成されています。  
+ このチュートリアルは、主に次の 6 つの手順で構成されています。  
   
--   作成、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
+- Visual Studio で [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ソリューションを作成する。  
   
--   プロジェクトにデータベース コード ファイルを追加します。  
+- プロジェクトにデータベース コード ファイルを追加します。  
   
--   新しい顧客オブジェクトを作成します。  
+- 新しい顧客オブジェクトを作成します。  
   
--   顧客の連絡先名を変更します。  
+- 顧客の連絡先名を変更します。  
   
--   注文を削除します。  
+- 注文を削除します。  
   
--   これらの変更を Northwind データベースに送信します。  
+- これらの変更を Northwind データベースに送信します。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
- この最初のタスクでは、ビルドおよび実行するために必要な参照を含む Visual Studio ソリューションを作成、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト。  
+ この最初のタスクでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] プロジェクトをビルドして実行するために必要な参照を含む Visual Studio ソリューションを作成します。  
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成するには  
   
-1.  Visual Studio で **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
+1. Visual Studio で **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
-2.  **プロジェクトの種類**ペインで、**新しいプロジェクト**ダイアログ ボックスで、をクリックして**Visual Basic**します。  
+2. **[新しいプロジェクト]** ダイアログボックスの **[プロジェクトの種類]** ペインで、 **[Visual Basic]** をクリックします。  
   
-3.  **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
+3. **[テンプレート]** ウィンドウで **[コンソール アプリケーション]** をクリックします。  
   
-4.  **名前**ボックスに「 **LinqDataManipulationApp**します。  
+4. **[名前]** ボックスに「 **LinqDataManipulationApp**」と入力します。  
   
-5.  **[OK]** をクリックします。  
+5. **[OK]** をクリックします。  
   
 ## <a name="adding-linq-references-and-directives"></a>LINQ の参照とディレクティブを追加する  
- このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 場合`System.Data.Linq`がプロジェクトの参照として表示されない (をクリックして**すべてのファイル**で**ソリューション エクスプ ローラー**を展開し、**参照**ノード) で説明したように、それを追加次の手順。  
+ このチュートリアルで使用するアセンブリは、既定ではプロジェクトにインストールされていない場合があります。 `System.Data.Linq` がプロジェクトに参照として表示されていない場合 (**ソリューションエクスプローラー**で **[すべてのファイルを表示]** をクリックし、 **[参照]** ノードを展開)、次の手順で説明するように追加します。  
   
 #### <a name="to-add-systemdatalinq"></a>System.Data.Linq を追加するには  
   
-1.  **ソリューション エクスプ ローラー**を右クリックして**参照**、 をクリックし、**参照の追加**します。  
+1. **ソリューションエクスプローラー**で、 **[参照]** を右クリックし、 **[参照の追加]** をクリックします。  
   
-2.  **参照の追加**ダイアログ ボックスで、をクリックして **.NET**、System.Data.Linq アセンブリをクリックし、順にクリックして、 **[ok]** します。  
+2. **[参照の追加]** ダイアログボックスで **[.net]** をクリックし、system.string アセンブリをクリックして、 **[OK]** をクリックします。  
   
      アセンブリがプロジェクトに追加されます。  
   
-3.  コード エディターで上記の次のディレクティブを追加**Module1**:  
+3. コードエディターで、 **Module1**の上に次のディレクティブを追加します。  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "54626928"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>プロジェクトに Northwind コード ファイルを追加するには  
   
-1.  **プロジェクト** メニューのをクリックして**既存項目の追加**します。  
+1. **[プロジェクト]** メニューの **[既存項目の追加]** をクリックします。  
   
-2.  **既存項目の追加**ダイアログ ボックスは c:\linqtest2\northwind.vb に移動し、をクリックし、**追加**します。  
+2. **[既存項目の追加]** ダイアログボックスで、c:\linqtest2\northwind.vb に移動し、 **[追加]** をクリックします。  
   
      プロジェクトに northwind.vb ファイルが追加されます。  
   
@@ -96,15 +96,15 @@ ms.locfileid: "54626928"
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>データベース接続を設定してテストするには  
   
-1.  `Sub Main` に次のコードを入力するか、貼り付けます。  
+1. `Sub Main` に次のコードを入力するか、貼り付けます。  
   
      [!code-vb[DLinqWalk3VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#2)]  
   
-2.  この時点でアプリケーションをテストするには、F5 キーを押します。  
+2. この時点でアプリケーションをテストするには、F5 キーを押します。  
   
-     A**コンソール**ウィンドウが開きます。  
+     **コンソール**ウィンドウが開きます。  
   
-     Enter キーを押してアプリケーションを閉じて、**コンソール**ウィンドウで、またはをクリックして**デバッグの停止** Visual Studio で**デバッグ**メニュー。  
+     **コンソール**ウィンドウで enter キーを押すか、Visual Studio の **[デバッグ]** メニューの **[デバッグの停止]** をクリックして、アプリケーションを終了します。  
   
 ## <a name="creating-a-new-entity"></a>新しいエンティティの作成  
  新しいエンティティを作成する手順は簡単です。 `Customer` キーワードを使用してオブジェクト (`New` など) を作成できます。  
@@ -113,11 +113,11 @@ ms.locfileid: "54626928"
   
 #### <a name="to-add-a-new-customer-entity-object"></a>新しい Customer エンティティ オブジェクトを追加するには  
   
-1.  次のコードを `Customer` 内の `Console.ReadLine` の前に追加することで、新しい `Sub Main` を作成します。  
+1. 次のコードを `Customer` 内の `Console.ReadLine` の前に追加することで、新しい `Sub Main` を作成します。  
   
      [!code-vb[DLinqWalk3VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#3)]  
   
-2.  F5 キーを押してソリューションをデバッグします。  
+2. F5 キーを押してソリューションをデバッグします。  
   
      結果は、以下のようにコンソール ウィンドウに表示されます。  
   
@@ -129,14 +129,14 @@ ms.locfileid: "54626928"
   
      新しい行は結果に表示されません。 新しいデータは、まだデータベースに送信されていません。  
   
-3.  Enter キーを押して、**コンソール**デバッグを停止するウィンドウ。  
+3. **コンソール**ウィンドウで enter キーを押して、デバッグを停止します。  
   
 ## <a name="updating-an-entity"></a>エンティティの更新  
  以降の手順では、`Customer` オブジェクトを取得し、そのプロパティの 1 つを変更します。  
   
 #### <a name="to-change-the-name-of-a-customer"></a>顧客の名前を変更するには  
   
--   `Console.ReadLine()` の前に次のコードを追加します。  
+- `Console.ReadLine()` の前に次のコードを追加します。  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
@@ -147,7 +147,7 @@ ms.locfileid: "54626928"
   
 #### <a name="to-delete-a-row"></a>行を削除するには  
   
--   `Console.ReadLine()` の直前に次のコードを追加します。  
+- `Console.ReadLine()` の直前に次のコードを追加します。  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   
@@ -156,19 +156,19 @@ ms.locfileid: "54626928"
   
 #### <a name="to-submit-changes-to-the-database"></a>データベースに変更内容を送信するには  
   
-1.  `Console.ReadLine` の直前に次のコードを挿入します。  
+1. `Console.ReadLine` の直前に次のコードを挿入します。  
   
      [!code-vb[DLinqWalk3VB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#6)]  
   
-2.  変更内容の送信前と送信後の変化を示すために、次のコードを (`SubmitChanges` の後に) 挿入します。  
+2. 変更内容の送信前と送信後の変化を示すために、次のコードを (`SubmitChanges` の後に) 挿入します。  
   
      [!code-vb[DLinqWalk3VB#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#7)]  
   
-3.  F5 キーを押してソリューションをデバッグします。  
+3. F5 キーを押してソリューションをデバッグします。  
   
      次のようにコンソール ウィンドウが表示されます。  
   
-    ```  
+    ```console
     Customers matching CA before update:  
     Customer ID: CACTU  
     Customer ID: RICAR  
@@ -181,10 +181,11 @@ ms.locfileid: "54626928"
     Customer ID: RICAR  
     ```  
   
-4.  Enter キーを押して、**コンソール**デバッグを停止するウィンドウ。  
+4. **コンソール**ウィンドウで enter キーを押して、デバッグを停止します。  
   
 > [!NOTE]
->  変更内容を送信して新しい顧客を追加した後で、このソリューションを再度実行することはできません。同じ顧客を再度追加できないためです。 ソリューションを再度実行するには、追加する顧客 ID の値を変更します。  
+> 変更内容を送信して新しい顧客を追加した後で、このソリューションを再度実行することはできません。同じ顧客を再度追加できないためです。 ソリューションを再度実行するには、追加する顧客 ID の値を変更します。  
   
-## <a name="see-also"></a>関連項目
-- [チュートリアルによる学習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
+## <a name="see-also"></a>参照
+
+- [チュートリアルによる学習](learning-by-walkthroughs.md)

@@ -13,17 +13,15 @@ helpviewer_keywords:
 - strings [.NET Framework], creating
 - Insert method
 ms.assetid: 06fdf123-2fac-4459-8904-eb48ab908a30
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 94ac21dfdf58e8aa1b629604792ad2f0f57c60d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef65c50111d6ba91ab70d0b9c8cb90c606f9366c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659492"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73103827"
 ---
 # <a name="creating-new-strings-in-net"></a>.NET で新しい文字列を作成する
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、単純な割り当てを使用した文字列の作成をサポートしています。また、多数の異なるパラメーターを使用した文字列の作成をサポートするために、クラス コンストラクターをオーバーロードします。 また、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、複数の文字列、文字列の配列、またはオブジェクトを組み合わせて新しい文字列オブジェクトを作成する、<xref:System.String?displayProperty=nameWithType> クラスの複数のメソッドを提供します。  
+.NET Framework では、単純な割り当てを使用した文字列の作成をサポートしています。また、多数の異なるパラメーターを使用した文字列の作成をサポートするために、クラス コンストラクターをオーバーロードします。 また、.NET Framework では、複数の文字列、文字列の配列、またはオブジェクトを組み合わせて新しい文字列オブジェクトを作成する、<xref:System.String?displayProperty=nameWithType> クラスのいくつかのメソッドも提供しています。  
   
 ## <a name="creating-strings-using-assignment"></a>割り当てを使用した文字列の作成  
  新しい <xref:System.String> オブジェクトを作成する最も簡単な方法としては、単に文字列リテラルを <xref:System.String> オブジェクトに割り当てます。  

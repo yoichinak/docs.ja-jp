@@ -2,16 +2,16 @@
 title: 数値演算正規関数
 ms.date: 03/30/2017
 ms.assetid: 6f6cddc6-b561-4ebe-84b6-841ef5b4113b
-ms.openlocfilehash: 3e8122806e31fc72b3d390e5e8671fada7f3a47d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9417ff9836912017c9d88bb24a18849aaac2836a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492704"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250310"
 ---
 # <a name="math-canonical-functions"></a>数値演算正規関数
 
-Entity SQL では、次の数値演算正規関数が含まれます。
+Entity SQL には、次の数値演算正規関数が含まれています。
   
 ## <a name="absvalue"></a>Abs(value)
 
@@ -19,7 +19,7 @@ Entity SQL では、次の数値演算正規関数が含まれます。
 
 **引数**
 
-`Int16`、 `Int32`、 `Int64`、 `Byte`、 `Single`、 `Double`、および`Decimal`します。
+`Int16` 、`Int32`、 、`Byte`、、 、および`Decimal`。 `Int64` `Single` `Double`
 
 **戻り値**
 
@@ -35,7 +35,7 @@ Entity SQL では、次の数値演算正規関数が含まれます。
 
 **引数**
 
-A `Single`、 `Double`、および`Decimal`します。
+、、および`Decimal`。 `Single` `Double`
 
 **戻り値**
 
@@ -52,7 +52,7 @@ A `Single`、 `Double`、および`Decimal`します。
 
 **引数**
 
-A `Single`、 `Double`、および`Decimal`します。
+、、および`Decimal`。 `Single` `Double`
 
 **戻り値**
 
@@ -71,8 +71,8 @@ A `Single`、 `Double`、および`Decimal`します。
 
 |  |  |
 |--|--|
-|`value` | `Int32, Int64, Double`、または`Decimal`します。 |
-|`exponent` | `Int64`、 `Double`、または`Decimal`します。 |
+|`value` | 、、また`Decimal`は。 `Int32, Int64, Double` |
+|`exponent` | 、、または`Decimal`。 `Double` `Int64` |
 
 **戻り値**
 
@@ -88,7 +88,7 @@ A `Single`、 `Double`、および`Decimal`します。
 
 **引数**
 
-A `Single`、 `Double`、および`Decimal`します。
+、、および`Decimal`。 `Single` `Double`
 
 **戻り値**
 
@@ -138,7 +138,8 @@ A `Single`、 `Double`、および`Decimal`します。
   
  `null` が入力された場合、これらの関数は `null` を返します。  
   
- 同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、次を参照してください。 [Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)します。  
+ 同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、「 [SqlClient for Entity Framework Functions](../sqlclient-for-ef-functions.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-- [正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+
+- [正規関数](canonical-functions.md)

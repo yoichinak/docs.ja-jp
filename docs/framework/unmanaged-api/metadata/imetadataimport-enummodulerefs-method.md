@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 53441f3a-68d2-477c-906e-37c55dfcfb4d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e84581a0642fe5bee3b88b6774ab2155fd2736a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66186d25e8fee0d6b25c0a2069d46ff9a104c625
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490785"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74450039"
 ---
 # <a name="imetadataimportenummodulerefs-method"></a>IMetaDataImport::EnumModuleRefs メソッド
 インポートされたモジュールを表す ModuleRef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumModuleRefs (  
    [in, out] HCORENUM     *phEnum,  
    [out]     mdModuleRef  rModuleRefs[],  
@@ -38,35 +36,36 @@ HRESULT EnumModuleRefs (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しで NULL があります。  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `rModuleRefs`  
- [out]ModuleRef トークンを格納するために使用する配列。  
+ 入出力ModuleRef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rModuleRefs` 配列の最大サイズ。  
   
  `pcModuleRefs`  
- [out]返される ModuleRef トークン数`rModuleRefs`します。  
+ 入出力`rModuleRefs`で返された ModuleRef トークンの数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumModuleRefs` 正常に返されます。|  
-|`S_FALSE`|トークンを列挙することはありません。 その場合は、`pcModuleRefs`は 0 です。|  
+|`S_OK`|`EnumModuleRefs` が正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、`pcModuleRefs` は0になります。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

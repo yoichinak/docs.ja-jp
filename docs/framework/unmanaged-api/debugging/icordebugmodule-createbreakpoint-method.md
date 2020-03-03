@@ -15,25 +15,23 @@ helpviewer_keywords:
 ms.assetid: c2541c30-fa6e-43b6-9682-77d8898f33e1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 313d3d74356a378351270916e1043a1cc4d799ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a65f9f117ff013a1f6dc7403a5bc0c7b3dbb2c3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414243"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136590"
 ---
 # <a name="icordebugmodulecreatebreakpoint-method"></a>ICorDebugModule::CreateBreakpoint メソッド
-このメソッドは .NET Framework の現在のバージョンで実装されていません。  
+このメソッドは、現在のバージョンの .NET Framework では実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateBreakpoint(  
     [out] ICorDebugModuleBreakpoint **ppBreakpoint  
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>［要件］  
  **ヘッダー:** CorDebug.idl、CorDebug.h

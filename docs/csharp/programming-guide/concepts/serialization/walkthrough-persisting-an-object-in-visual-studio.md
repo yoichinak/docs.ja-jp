@@ -1,14 +1,14 @@
 ---
 title: 'チュートリアル: C# を使用してオブジェクトを永続化する'
 ms.date: 04/26/2018
-ms.openlocfilehash: 61e7496b39bcbc42b0ebb2642fcb1ad1d32696af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e3a327ca0a257c45de361e0b3734e0b127f9869
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512451"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851048"
 ---
-# <a name="walkthrough-persisting-an-object-using-c"></a>チュートリアル: C# を使用してオブジェクトを永続化する #
+# <a name="walkthrough-persisting-an-object-using-c"></a>チュートリアル: C\# を使用してオブジェクトを永続化する
 
 シリアル化によってインスタンス間でオブジェクトのデータを永続化すると、値を保存しておき、次にそのオブジェクトをインスタンス化するときに、その値を取得することができます。
 
@@ -22,14 +22,14 @@ ms.locfileid: "54512451"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* ビルドして実行するには、[.NET Core SDK](https://www.microsoft.com/net/core) をインストールします。
+- ビルドして実行するには、[.NET Core SDK](https://dotnet.microsoft.com/download) をインストールします。
 
-* コード エディターをまだインストールしていなければ、お気に入りのエディターをインストールしてください。
+- コード エディターをまだインストールしていなければ、お気に入りのエディターをインストールしてください。
 
 > [!TIP]
 > コード エディターをインストールする必要がありますか。 [Visual Studio](https://visualstudio.com/downloads) をお試しください。
 
-* この例では C# 7.3 が必要です。 「[C# 言語のバージョンの選択](../../../language-reference/configure-language-version.md)」を参照してください 
+- この例では C# 7.3 が必要です。 「[C# 言語のバージョンの選択](../../../language-reference/configure-language-version.md)」を参照してください 
 
 オンラインで [.NET サンプルの GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/csharp/serialization)にアクセスしてサンプル コードを確認することができます。
 

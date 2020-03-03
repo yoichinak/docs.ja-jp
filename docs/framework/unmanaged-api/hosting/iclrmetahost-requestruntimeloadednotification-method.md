@@ -15,28 +15,26 @@ helpviewer_keywords:
 ms.assetid: 0d5ccc4d-0193-41f5-af54-45d7b70d5321
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0f3ac053f12cb4bc37ab0bd16036fb561f8f176c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23f868bba2dc058d99f1c5c09e9b311b1ff3634a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519126"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140892"
 ---
 # <a name="iclrmetahostrequestruntimeloadednotification-method"></a>ICLRMetaHost::RequestRuntimeLoadedNotification メソッド
-共通言語ランタイム (CLR) バージョンが初めて読み込まれるが、開始していないときに呼び出されることが保証されるコールバック関数を提供します。 このメソッドは、 [LockClrVersion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数。  
+共通言語ランタイム (CLR) のバージョンが最初に読み込まれたが、まだ開始されていないときに呼び出されることが保証されているコールバック関数を提供します。 このメソッドは、 [Lockclrversion](../../../../docs/framework/unmanaged-api/hosting/lockclrversion-function.md)関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RequestRuntimeLoadedNotification (  
     [in] RuntimeLoadedCallbackFnPtr pCallbackFunction);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pCallbackFunction`  
- [in]新しいランタイムが読み込まれたときに呼び出されるコールバック関数。  
+ から新しいランタイムが読み込まれたときに呼び出されるコールバック関数。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -47,17 +45,17 @@ HRESULT RequestRuntimeLoadedNotification (
 |E_POINTER|`pCallbackFunction` が null です。|  
   
 ## <a name="remarks"></a>Remarks  
- コールバックは、次のように動作します。  
+ コールバックは、次のように機能します。  
   
--   最初に、ランタイムが読み込まれる場合にのみ、コールバックが呼び出されます。  
+- コールバックは、ランタイムが初めて読み込まれるときにのみ呼び出されます。  
   
--   同じランタイムの再入可能な負荷、コールバックは呼び出されません。  
+- 同じランタイムの再入可能な読み込みに対してコールバックが呼び出されません。  
   
--   再入不可能なランタイムの読み込み、コールバック関数の呼び出しがシリアル化します。  
+- 再入可能でないランタイムの読み込みでは、コールバック関数の呼び出しがシリアル化されます。  
   
- コールバック関数では、次のプロトタイプを持ちます。  
+ コールバック関数のプロトタイプは次のとおりです。  
   
-```  
+```cpp  
 typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(  
                      ICLRRuntimeInfo *pRuntimeInfo,  
                      CallbackThreadSetFnPtr pfnCallbackThreadSet,  
@@ -66,38 +64,39 @@ typedef void (__stdcall *RuntimeLoadedCallbackFnPtr)(
   
  コールバック関数のプロトタイプは次のとおりです。  
   
--   `pfnCallbackThreadSet`:  
+- `pfnCallbackThreadSet`:  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadSetFnPtr)();  
     ```  
   
--   `pfnCallbackThreadUnset`:  
+- `pfnCallbackThreadUnset`:  
   
-    ```  
+    ```cpp  
     typedef HRESULT (__stdcall *CallbackThreadUnsetFnPtr)();  
     ```  
   
- ホストが読み込みまたは再入可能の方法で読み込まれる別のランタイムが発生する場合、`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`コールバック内で次のように関数を使用する必要がありますに用意されているパラメーター。  
+ ホストの読み込みまたは再入によって別のランタイムの読み込みが必要になった場合は、コールバック関数で指定された `pfnCallbackThreadSet` パラメーターと `pfnCallbackThreadUnset` パラメーターを次のように使用する必要があります。  
   
--   `pfnCallbackThreadSet` このような負荷が試みられる前に、実行時の負荷を引き起こす可能性のあるスレッドから呼び出す必要があります。  
+- このような負荷が試行される前に、ランタイムの読み込みを発生させる可能性のあるスレッドによって `pfnCallbackThreadSet` を呼び出す必要があります。  
   
--   `pfnCallbackThreadUnset` スレッドは実行時の負荷が発生しない場合 (および初期コールバックから戻る前に) 呼び出す必要があります。  
+- スレッドがこのようなランタイム読み込みを行わなくなる (および最初のコールバックから戻る前に) 場合は、`pfnCallbackThreadUnset` を呼び出す必要があります。  
   
--   `pfnCallbackThreadSet` `pfnCallbackThreadUnset`はどちらも再入不可能な。  
+- `pfnCallbackThreadSet` と `pfnCallbackThreadUnset` は両方とも再入可能ではありません。  
   
 > [!NOTE]
->  ホスト アプリケーションを呼び出してはならない`pfnCallbackThreadSet`と`pfnCallbackThreadUnset`の範囲外の`pCallbackFunction`パラメーター。  
+> ホストアプリケーションは、`pCallbackFunction` パラメーターのスコープ外で `pfnCallbackThreadSet` および `pfnCallbackThreadUnset` を呼び出すことはできません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRMetaHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
 - [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

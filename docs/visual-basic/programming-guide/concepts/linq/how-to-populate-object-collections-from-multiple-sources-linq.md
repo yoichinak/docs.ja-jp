@@ -1,15 +1,15 @@
 ---
-title: '方法: 複数のソース (LINQ) (Visual Basic) からオブジェクト コレクションを設定します。'
+title: '方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ)'
 ms.date: 06/22/2018
 ms.assetid: 63062a22-e6a9-42c0-b357-c7c965f58f33
-ms.openlocfilehash: 0228d152539abe3bf0db5a8e5bf4581eaf957b31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74a2a0f71e575136f1758f72f9a8db72549a9489
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638822"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346980"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>方法: 複数のソース (LINQ) (Visual Basic) からオブジェクト コレクションを設定します。
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-visual-basic"></a>方法: 複数のソースからオブジェクトコレクションにデータを設定する (LINQ) (Visual Basic)
 
 この例では、さまざまなソースから一連の新しい型にデータをマージする方法を示します。
 
@@ -18,7 +18,7 @@ ms.locfileid: "54638822"
 
 ## <a name="to-create-the-data-file"></a>データ ファイルを作成するには
 
-- 説明に従って、names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピー[方法。異種ファイル (LINQ) (Visual Basic) からコンテンツを結合する](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)します。
+- 「[方法: 異種ファイルのコンテンツを結合する (LINQ)」 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)の説明に従って、.csv ファイルとスコア .csv ファイルをプロジェクトフォルダーにコピーします。
 
 ## <a name="example"></a>例
 
@@ -65,7 +65,7 @@ Class PopulateCollection
                           Let splitScoreLine = scoreLine.Split(New Char() {","})
                           Where Convert.ToInt32(splitName(2)) = Convert.ToInt32(splitScoreLine(0))
                           Select New Student() With {
-                               .FirstName = splitName(0), .LastName = splitName(1), .ID = splitName(2),
+                               .FirstName = splitName(1), .LastName = splitName(0), .ID = splitName(2),
                                .ExamScores = (From scoreAsText In splitScoreLine Skip 1
                                              Select Convert.ToInt32(scoreAsText)).ToList()}
 
@@ -86,21 +86,21 @@ Class PopulateCollection
 End Class
 
 ' Output:
-' The average score of Omelchenko Svetlana is 82.5
-' The average score of O'Donnell Claire is 72.25
-' The average score of Mortensen Sven is 84.5
-' The average score of Garcia Cesar is 88.25
-' The average score of Garcia Debra is 67
-' The average score of Fakhouri Fadi is 92.25
-' The average score of Feng Hanying is 88
-' The average score of Garcia Hugo is 85.75
-' The average score of Tucker Lance is 81.75
-' The average score of Adams Terry is 85.25
-' The average score of Zabokritski Eugene is 83
-' The average score of Tucker Michael is 92
+' The average score of Svetlana Omelchenko is 82.5
+' The average score of Claire O'Donnell is 72.25
+' The average score of Sven Mortensen is 84.5
+' The average score of Cesar Garcia is 88.25
+' The average score of Debra Garcia is 67
+' The average score of Fadi Fakhouri is 92.25
+' The average score of Hanying Feng is 88
+' The average score of Hugo Garcia is 85.75
+' The average score of Lance Tucker is 81.75
+' The average score of Terry Adams is 85.25
+' The average score of Eugene Zabokritski is 83
+' The average score of Michael Tucker is 92
 ```
 
-[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)句では、オブジェクト初期化子はそれぞれの新しいインスタンスを作成するために使用`Student`2 つのソースからデータを使用してオブジェクト。
+[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)の句では、オブジェクト初期化子を使用して、2つのソースのデータを使用して新しい `Student` オブジェクトをインスタンス化します。
 
 クエリの結果を格納する必要がない場合は、名前付きの型よりも匿名型の方が便利です。 クエリが実行されたメソッドの外部にクエリ結果を渡す場合は、名前付きの型が必要になります。 次の例では、前の例と同じタスクを実行しますが、名前付きの型ではなく匿名型が使用します。
 
@@ -128,14 +128,6 @@ For Each s In queryNamesScores2
 Next
 ```
 
-## <a name="compiling-the-code"></a>コードのコンパイル
-
-次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。
-
-- System.Core.dll の参照を含む .NET Framework バージョン 3.5。
-- .NET Framework バージョン 4.0 以降
-- .NET Core バージョン 1.0 以降。
-
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

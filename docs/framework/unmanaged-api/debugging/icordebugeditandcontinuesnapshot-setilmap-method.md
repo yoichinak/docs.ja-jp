@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 26c1bf4b-75ff-4c32-872c-3078ccdde04f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cfe71abfa97a3773c8ff50c0f908d48681ebdc8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 279c69bd38b5492d00b43e371ebec27997882857
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680349"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788790"
 ---
 # <a name="icordebugeditandcontinuesnapshotsetilmap-method"></a>ICorDebugEditAndContinueSnapshot::SetILMap メソッド
 `SetILMap` は互換性のために残されています。 このメソッドを呼び出さないでください。  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

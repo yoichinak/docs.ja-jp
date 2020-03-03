@@ -2,12 +2,12 @@
 title: <claimTypeRequirements> の <message>
 ms.date: 03/30/2017
 ms.assetid: f95c5ecd-abb6-4b77-a6d7-a38727f4a142
-ms.openlocfilehash: 9cf77f6c026df5f78cc8ae6e6783e91f1c86e282
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: db6717022bf3af0c4922818668595dd3937e9c71
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704408"
 ---
 # <a name="claimtyperequirements-for-message"></a>\<claimTypeRequirements> for \<message>
 必須のクレームの種類のコレクションを指定します。  
@@ -17,6 +17,7 @@ ms.locfileid: "55256609"
  フェデレーション クライアント上では、このコレクションには、発行されたトークンに対するクライアントの要求の中でセキュリティ トークン サービスに送信される、必須クレームとオプション クレームのリストが含まれます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
 - <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>

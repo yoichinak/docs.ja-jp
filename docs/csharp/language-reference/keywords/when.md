@@ -1,6 +1,5 @@
 ---
 title: コンテキスト キーワード when - C# リファレンス
-ms.custom: seodec18
 ms.date: 03/07/2017
 f1_keywords:
 - when_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - when keyword [C#]
 ms.assetid: dd543335-ae37-48ac-9560-bd5f047b9aea
-ms.openlocfilehash: a8f64da0ab603830972035f1c2cd3a0b1eaadaff
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 6a61c42ba2d01e84ffae376bf95c99877437be85
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221857"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712833"
 ---
 # <a name="when-c-reference"></a>when (C# リファレンス)
 

@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム DataGrid コントロールでの実行時に表示されるデータの変更'
+title: 実行時に DataGrid コントロールに表示されるデータを変更する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,27 +10,27 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: fc0fe47d728a196de81f7bf099e3a25ac2bb9211
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f91e2ea01ef4a52dd649efed70319017efb8368a
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605566"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76740597"
 ---
-# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールでの実行時に表示されるデータの変更
+# <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>方法 : Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+> <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
- Windows フォームを作成した後<xref:System.Windows.Forms.DataGrid>デザイン時機能を使用することも考えの要素を動的に変更する、<xref:System.Data.DataSet>実行時にグリッドのオブジェクト。 これは、テーブルのいずれかの個別の値の変更を含めることができますかにバインドされているデータ ソースを変更する、<xref:System.Windows.Forms.DataGrid>コントロール。 個々 の値への変更が完了したら、<xref:System.Data.DataSet>オブジェクトは、<xref:System.Windows.Forms.DataGrid>コントロール。  
+ デザイン時の機能を使用して Windows フォーム <xref:System.Windows.Forms.DataGrid> を作成した後、実行時にグリッドの <xref:System.Data.DataSet> オブジェクトの要素を動的に変更することもできます。 これには、テーブルの個別の値の変更や、<xref:System.Windows.Forms.DataGrid> コントロールにバインドされるデータソースの変更が含まれます。 個々の値への変更は、<xref:System.Windows.Forms.DataGrid> コントロールではなく、<xref:System.Data.DataSet> オブジェクトを介して行われます。  
   
-### <a name="to-change-data-programmatically"></a>プログラムでデータを変更するには  
+### <a name="to-change-data-programmatically"></a>プログラムによってデータを変更するには  
   
-1.  目的のテーブルの指定、<xref:System.Data.DataSet>オブジェクトおよび必要な行しテーブルのフィールドし、セルを新しい値に設定します。  
+1. <xref:System.Data.DataSet> オブジェクトから目的のテーブルを指定し、テーブルから目的の行とフィールドを指定して、セルを新しい値に設定します。  
   
     > [!NOTE]
-    >  最初のテーブルを指定する、<xref:System.Data.DataSet>か、テーブルの最初の行は 0 を使用します。  
+    > <xref:System.Data.DataSet> の最初のテーブルまたはテーブルの最初の行を指定するには、0を使用します。  
   
-     次の例をクリックして、データセットの最初のテーブルの最初の行の 2 番目のエントリを変更する方法を示しています。`Button1`します。 <xref:System.Data.DataSet> (`ds`) とテーブル (`0`と`1`) 以前に作成されました。  
+     次の例では、[`Button1`] をクリックして、データセットの最初のテーブルの最初の行の2番目のエントリを変更する方法を示します。 <xref:System.Data.DataSet> (`ds`) とテーブル (`0` および `1`) が以前に作成されています。  
   
     ```vb  
     Protected Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -53,7 +53,7 @@ ms.locfileid: "54605566"
        }  
     ```  
   
-     (Visual c#、 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)])、イベント ハンドラーを登録するフォームのコンス トラクターで、次のコードを配置します。  
+     (ビジュアルC#、ビジュアルC++)フォームのコンストラクターに次のコードを配置して、イベントハンドラーを登録します。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  
@@ -64,13 +64,13 @@ ms.locfileid: "54605566"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     実行時に使用することができます、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>にバインドするメソッド、<xref:System.Windows.Forms.DataGrid>別のデータ ソースを制御します。 たとえば、いくつかする必要があります[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]データ コントロールでは、それぞれ別のデータベースに接続します。  
+     実行時に、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> メソッドを使用して、<xref:System.Windows.Forms.DataGrid> コントロールを別のデータソースにバインドできます。 たとえば、複数の ADO.NET データコントロールがあり、それぞれが別のデータベースに接続されている場合があります。  
   
-### <a name="to-change-the-datasource-programmatically"></a>データ ソースをプログラムで変更するには  
+### <a name="to-change-the-datasource-programmatically"></a>プログラムによってデータソースを変更するには  
   
-1.  設定、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドをデータ ソースにバインドするテーブルの名前。  
+1. <xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> メソッドに、バインド先のデータソースおよびテーブルの名前を設定します。  
   
-     次の例は、日付を使用してソースを変更する方法を示します、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドを[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]Pubs データベースの Authors テーブルに接続されているデータ コントロール (adoPubsAuthors)。  
+     次の例では、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A> メソッドを使用して日付ソースを変更し、Pubs データベースの Authors テーブルに接続されている ADO.NET data control (adoPubsAuthors) に変換する方法を示します。  
   
     ```vb  
     Private Sub ResetSource()  
@@ -93,8 +93,9 @@ ms.locfileid: "54605566"
        }  
     ```  
   
-## <a name="see-also"></a>関連項目
-- [ADO.NET データセット](../../../../docs/framework/data/adonet/ado-net-datasets.md)
-- [方法: 削除、または Windows フォームの DataGrid コントロール内の列を非表示にします。](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [方法: Windows フォームの DataGrid コントロールにテーブルと列を追加します。](../../../../docs/framework/winforms/controls/how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
-- [方法: Windows フォームの DataGrid コントロールをデータ ソースにバインドします。](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+## <a name="see-also"></a>参照
+
+- [ADO.NET データセット](../../data/adonet/ado-net-datasets.md)
+- [方法 : Windows フォーム DataGrid コントロールの列を削除するまたは非表示にする](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [方法: Windows フォーム DataGrid コントロールにテーブルと列を追加する](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [方法: データ ソースに Windows フォーム DataGrid コントロールをバインドする](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)

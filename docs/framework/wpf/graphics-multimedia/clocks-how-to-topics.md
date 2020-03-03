@@ -9,20 +9,20 @@ helpviewer_keywords:
 - clocks [WPF], animation
 - animation [WPF], clocks
 ms.assetid: c687b2a5-b151-41e2-9ade-df2fc1a16b04
-ms.openlocfilehash: f2888f28ad7723b7390d0e2339c2117e64e84ecd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bb625c116b1c58071ec0f51729df07f43600f36f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970964"
 ---
 # <a name="clocks-how-to-topics"></a>クロックに関する「方法」トピック
-次のトピックを使用する方法について説明、<xref:System.Windows.Media.Animation.Clock>のタイミング状態情報を維持するためにオブジェクト、<xref:System.Windows.Media.Animation.Timeline>です。  
+次のトピックを使用する方法について説明する<xref:System.Windows.Media.Animation.Clock>のタイミング状態情報を保持するオブジェクト、<xref:System.Windows.Media.Animation.Timeline>します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [AnimationClock を使用してプロパティをアニメーション化する](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-an-animationclock.md)  
- [クロックを対話的に制御する](../../../../docs/framework/wpf/graphics-multimedia/how-to-interactively-control-a-clock.md)  
- [クロックを同期的にシークする](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-clock-synchronously.md)  
+ [AnimationClock を使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-an-animationclock.md)  
+ [クロックを対話的に制御する](how-to-interactively-control-a-clock.md)  
+ [クロックを同期的にシークする](how-to-seek-a-clock-synchronously.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Media.Animation.Clock>  
@@ -34,6 +34,6 @@ ms.locfileid: "33554808"
  <xref:System.Windows.Media.Animation.Timeline>  
   
 ## <a name="related-sections"></a>関連項目  
- [アニメーションの概要](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
+ [アニメーションの概要](animation-overview.md)  
   
- [ストーリーボードの概要](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+ [ストーリーボードの概要](storyboards-overview.md)

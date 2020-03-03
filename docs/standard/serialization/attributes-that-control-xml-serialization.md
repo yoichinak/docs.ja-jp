@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
 ms.openlocfilehash: 0d1aee4650ea29083348af482e445011289e9581
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794967"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML シリアル化を制御する属性
 次の表に示す属性をクラスおよびクラス メンバーに適用すると、<xref:System.Xml.Serialization.XmlSerializer> がそのクラスのインスタンスをシリアル化または逆シリアル化する方法を制御できます。 これらの属性で XML シリアル化を制御する方法については、「[属性を使用した XML シリアル化の制御](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)」を参照してください。  
@@ -41,7 +41,7 @@ ms.locfileid: "54580682"
   
  <xref:System.Xml.Serialization> 名前空間にあるこれらの属性の他に、<xref:System.ComponentModel.DefaultValueAttribute> 属性もフィールドに適用できます。 **DefaultValueAttribute** は、メンバーの値が指定されていない場合に、メンバーに自動的に割り当てられる値を設定します。  
   
- エンコード済みの SOAP XML シリアル化を制御する場合は、「[Attributes That Control Encoded SOAP Serialization](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」(エンコード済み SOAP シリアル化を制御する属性) を参照してください。  
+ エンコード済みの SOAP XML シリアル化を制御する場合は、「[エンコード済み SOAP シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

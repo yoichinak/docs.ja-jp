@@ -1,5 +1,5 @@
 ---
-title: ICorDebugBoxValue Interface1
+title: ICorDebugBoxValue インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugBoxValue
@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 3d3ae7e2-97d4-46de-a2c3-cb78f3490f9d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 549f3f782d544c967838206804640b577da2f877
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ec54f4fe36aaf38d7c0ce0586733729bd2fddea
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699013"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784466"
 ---
-# <a name="icordebugboxvalue-interface1"></a>ICorDebugBoxValue Interface1
-ボックス化された値クラスのオブジェクトを表す"ICorDebugHeapValue"のサブクラスです。  
+# <a name="icordebugboxvalue-interface"></a>ICorDebugBoxValue インターフェイス
+
+ボックス化された値クラスオブジェクトを表す "" "のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetObject メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugboxvalue-getobject-method.md)|ボックス化された"ICorDebugObjectValue"インスタンスにインターフェイス ポインターを取得します。|  
+|[GetObject メソッド](icordebugboxvalue-getobject-method.md)|ボックス化された "の" のインスタンスへのインターフェイスポインターを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +46,5 @@ ms.locfileid: "54699013"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

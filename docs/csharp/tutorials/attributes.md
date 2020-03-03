@@ -1,17 +1,18 @@
 ---
-title: 属性 - C#
+title: 'チュートリアル: 属性を使用する - C#'
 description: C# での属性の機能について説明します。
 author: mgroves
+ms.technology: csharp-fundamentals
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: 254c408e854bdf6e923d64a4e8cca42b7a3b11cc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 24cb7d35a89fda78511dc4ba725b69c5d601a008
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826825"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937470"
 ---
-# <a name="using-attributes-in-c"></a>C# での属性の使用 #
+# <a name="use-attributes-in-c"></a>C\# で属性を使用する
 
 属性は、情報をコードに宣言的に関連付けるための手段を提供します。 また、さまざまなターゲットに適用できる再利用可能な要素も提供します。
 
@@ -20,8 +21,9 @@ ms.locfileid: "55826825"
 このチュートリアルでは、コードに属性を追加する方法、独自の属性を作成して使用する方法、.NET Core に組み込まれているいくつかの属性を使用する方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core](https://www.microsoft.com/net/core) のページを参照してください。
-このアプリケーションは、Windows、Ubuntu Linux、macOS または Docker コンテナーで実行できます。 お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。 インストールの手順については、[.NET Core のダウンロード](https://dotnet.microsoft.com/download) ページを参照してください。
+このアプリケーションは、Windows、Ubuntu Linux、macOS または Docker コンテナーで実行できます。
+お好みのコード エディターをインストールしてください。 次の説明では、オープン ソースのクロス プラットフォーム エディターである [Visual Studio Code](https://code.visualstudio.com/) を使用しています。 しかし、他の使い慣れたツールを使用しても構いません。
 
 ## <a name="create-the-application"></a>アプリケーションを作成する
 
@@ -40,7 +42,7 @@ ms.locfileid: "55826825"
 C# では、属性は `Attribute` 基底クラスを継承するクラスです。 `Attribute` クラスから継承したクラスは、コードの他の部分で一種の "タグ" として使用できます。
 たとえば `ObsoleteAttribute` という名前の属性があります。 これは、そのコードが古いので現在は使用できないことを警告するために使用されます。 この属性を、角かっこを使用して、たとえばクラスに適用することができます。
 
-[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]  
+[!code-csharp[Obsolete attribute example](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ObsoleteExample1)]
 
 この属性の名前は `ObsoleteAttribute` ですが、コードでは `[Obsolete]` と記述するだけで使用できます。 これは C# が準拠している規則によります。
 完全な名前 `[ObsoleteAttribute]` も使用できます。
@@ -110,7 +112,7 @@ C# の既定では、属性クラスを作成した場合、その属性は可�
 
 属性を見つけて操作するには、通常、[Reflection](../programming-guide/concepts/reflection.md) が必要になります。 このチュートリアルでは Reflection について詳しく説明しませんが、基本的な考えとしては、Reflection を使用すると C# で他のコードを調べるコードを記述できます。
 
-たとえば、Reflection を使用して次のクラスに関する情報を取得できます (コードの先頭に `using System.Reflection;` を追加する)。 
+たとえば、Reflection を使用して次のクラスに関する情報を取得できます (コードの先頭に `using System.Reflection;` を追加する)。
 
 [!code-csharp[Getting type information with Reflection](../../../samples/snippets/csharp/tutorials/attributes/Program.cs#ReflectionExample1)]
 
@@ -147,4 +149,4 @@ C# の既定では、属性クラスを作成した場合、その属性は可�
 
 ## <a name="summary"></a>まとめ
 
-属性は、C# に宣言的な機能を提供します。 ただし、コードのメタデータの一種であり、それ自体では処理を実行しません。
+属性によって C# に宣言機能が追加されますが、それらはメタデータ形式のコードであり、単独では機能しません。

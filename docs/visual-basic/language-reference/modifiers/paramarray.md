@@ -1,5 +1,5 @@
 ---
-title: ParamArray (Visual Basic)
+title: ParamArray
 ms.date: 07/20/2015
 f1_keywords:
 - vb.ParamArray
@@ -8,27 +8,27 @@ helpviewer_keywords:
 - ParamArray keyword [Visual Basic]
 - ParamArray keyword [Visual Basic], syntax
 ms.assetid: a5f18789-92bd-488f-9c7e-cf3719963635
-ms.openlocfilehash: 16a69e547d14c619d427aa8860e9bf4002b6db04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbc87bffebc265e6062512e96fc29a64334b3c65
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703602"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351371"
 ---
 # <a name="paramarray-visual-basic"></a>ParamArray (Visual Basic)
-プロシージャのパラメーターが指定した型の要素の省略可能な配列を受け取ることを指定します。 `ParamArray` パラメーター リストの最後のパラメーターでのみ使用できます。  
+プロシージャパラメーターが、指定された型の要素のオプションの配列を受け取ることを指定します。 `ParamArray` は、パラメーターリストの最後のパラメーターでのみ使用できます。  
   
-## <a name="remarks"></a>Remarks  
- `ParamArray` プロシージャに任意の数の引数を渡すことができます。 A`ParamArray`を使用してパラメーターが常に宣言[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)します。  
+## <a name="remarks"></a>コメント  
+ `ParamArray` を使用すると、任意の数の引数をプロシージャに渡すことができます。 `ParamArray` パラメーターは常に[ByVal](../../../visual-basic/language-reference/modifiers/byval.md)を使用して宣言されます。  
   
- 1 つまたは複数の引数を指定できます、`ParamArray`適切なデータの配列を渡すことによってパラメーターの型、値、または何ものコンマ区切りの一覧にします。 詳細については、"呼び出しを ParamArray"を参照してください[パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)します。  
+ 適切なデータ型の配列、コンマ区切りの値のリスト、または nothing を渡すことによって、`ParamArray` パラメーターに1つ以上の引数を指定できます。 詳細については、「[パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)」の「ParamArray の呼び出し」を参照してください。  
   
 > [!IMPORTANT]
->  無限に増大することができる配列を処理するたびに、アプリケーションの内部の容量を超過してしまう可能性があります。 呼び出し元のコードからパラメーターの配列を受け取る場合その長さをテスト、アプリケーションが大きすぎる場合は、適切な手順を実行してください。  
+> 無限に大きくなる可能性がある配列を処理する場合、アプリケーションの内部容量がオーバーランするリスクがあります。 呼び出し元のコードからパラメーター配列を受け取る場合は、その長さをテストし、アプリケーションにとって大きすぎる場合は適切な手順を実行する必要があります。  
   
  `ParamArray` 修飾子は、次のコンテキストで使用できます。  
   
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
  [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
   
@@ -36,6 +36,7 @@ ms.locfileid: "54703602"
   
  [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)

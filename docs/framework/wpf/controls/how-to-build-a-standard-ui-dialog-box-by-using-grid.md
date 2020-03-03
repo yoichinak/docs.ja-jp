@@ -8,32 +8,33 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 893b3f7fda3314b158f7c67392a0913e30a92c09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68c9653e616388374aad2ad33ac7dab68446241d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650523"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69923416"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>方法: グリッドを使用して標準 UI ダイアログ ボックスをビルドする
-この例は、標準を作成する方法を示します[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] ダイアログ ボックスを使用して、<xref:System.Windows.Controls.Grid>要素。  
+この例では、 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] <xref:System.Windows.Controls.Grid>要素を使用して標準のダイアログボックスを作成する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例のようなダイアログ ボックスの作成、**実行** ダイアログ ボックスで、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]オペレーティング システム。  
+ 次の例では、Windows オペレーティングシステムの **[実行]** ダイアログボックスなどのダイアログボックスを作成します。  
   
- 例は、作成、<xref:System.Windows.Controls.Grid>を使用して、<xref:System.Windows.Controls.ColumnDefinition>と<xref:System.Windows.Controls.RowDefinition>5 つの列と 4 つの行を定義するクラス。  
+ この例では<xref:System.Windows.Controls.Grid> 、を作成<xref:System.Windows.Controls.ColumnDefinition>し<xref:System.Windows.Controls.RowDefinition> 、クラスとクラスを使用して、5つの列と4つの行を定義します。  
   
- 例は、追加し、配置、 <xref:System.Windows.Controls.Image>、 `RunIcon.png`、ダイアログ ボックスにある画像を表します。 最初の列との行で、イメージが格納される、 <xref:System.Windows.Controls.Grid> (左上隅)。  
+ 次に、この例では<xref:System.Windows.Controls.Image>、 `RunIcon.png`ダイアログボックスに表示されるイメージを表す、、を追加して配置します。 イメージは、 <xref:System.Windows.Controls.Grid>の最初の列と行 (左上隅) に配置されます。  
   
- 次に、例、<xref:System.Windows.Controls.TextBlock>最初の列は、最初の行の残りの列にまたがる要素。 追加別<xref:System.Windows.Controls.TextBlock>要素を表す、最初の列の 2 つ目の行に、**オープン**テキスト ボックス。 A<xref:System.Windows.Controls.TextBlock>フォローで、データ エントリの領域を表します。  
+ 次に、最初の行<xref:System.Windows.Controls.TextBlock>の残りの列にまたがる要素を最初の列に追加します。 最初の列<xref:System.Windows.Controls.TextBlock>の2行目に、**開い**ているテキストボックスを表す別の要素が追加されます。 データ入力領域を表すを次に示します。<xref:System.Windows.Controls.TextBlock>  
   
- 最後に、3 つ追加例では、<xref:System.Windows.Controls.Button>を表す要素の最後の行を**OK**、**キャンセル**、および**参照**イベント。  
+ 最後に、最後の行<xref:System.Windows.Controls.Button>に3つの要素を追加します。これは**OK**、 **Cancel**、および**Browse**イベントを表します。  
   
- [!code-csharp[GridRunDialog#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
- [!code-vb[GridRunDialog#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
+ [!code-csharp[GridRunDialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/GridRunDialog/CSharp/window1.xaml.cs#1)]
+ [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
-- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)
+- [パネルの概要](panels-overview.md)
+- [方法トピック](grid-how-to-topics.md)

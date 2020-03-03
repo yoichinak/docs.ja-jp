@@ -1,6 +1,5 @@
 ---
 title: params キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: dd9699eb50f7dffc7c2f4976a79afbf689ba2470
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 90d224080f607cbac96514aaf5ac6d67affef9e0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235843"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713236"
 ---
 # <a name="params-c-reference"></a>params (C# リファレンス)
 

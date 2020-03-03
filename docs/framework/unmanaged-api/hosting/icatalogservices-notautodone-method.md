@@ -15,23 +15,22 @@ helpviewer_keywords:
 ms.assetid: 86a09871-33e4-412c-aeb8-4d18f924595b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc9633f7518aee233634bb7fbfac74c24b306eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2644a36e9a2901ef1007ebf3180b9fc55b5ca67a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515603"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127196"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>ICatalogServices::NotAutodone メソッド
 このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NotAutodone ( );  
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

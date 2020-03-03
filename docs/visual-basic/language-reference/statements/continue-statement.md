@@ -1,5 +1,5 @@
 ---
-title: Continue ステートメント (Visual Basic)
+title: Continue ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.continue
@@ -7,39 +7,40 @@ helpviewer_keywords:
 - Continue statement [Visual Basic]
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
-ms.openlocfilehash: 23bb57ec022e62cd586c533d4ed4c792789a0b38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20140cafb68c7e5518bf3d5fa80e56ca1c1de2c6
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627006"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74354110"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue ステートメント (Visual Basic)
-ループの次の反復処理に直ちに制御を転送します。  
+ループの次の反復処理に制御を直ちに転送します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Continue { Do | For | While }  
 ```  
   
-## <a name="remarks"></a>Remarks  
- 転送できます内で、 `Do`、 `For`、または`While`ループの次のイテレーションをループします。 パスに転送するのと同じですが、ループ条件テストをすぐに制御、`For`または`While`ステートメント、または、`Do`または`Loop`ステートメントを含む、`Until`または`While`句。  
+## <a name="remarks"></a>コメント  
+ `Do`、`For`、または `While` ループ内から、ループの次の反復処理に転送できます。 制御はすぐにループ条件テストに渡されます。これは、`For` または `While` ステートメントに転送するのと同じです。また、`Until` または `While` 句が含まれている `Do` または `Loop` ステートメントに渡すこともできます。  
   
- 使用することができます`Continue`転送を許可するループ内で任意の位置。 コントロールの転送を許可する規則と同じ、 [GoTo ステートメント](../../../visual-basic/language-reference/statements/goto-statement.md)します。  
+ `Continue` は、転送を許可するループ内の任意の場所で使用できます。 制御の転送を許可する規則は、 [GoTo ステートメント](../../../visual-basic/language-reference/statements/goto-statement.md)と同じです。  
   
- たとえば、ループ処理が完全に含まれて、`Try`ブロック、`Catch`ブロック、または`Finally`ブロックを使用することができます`Continue`ループの外に転送します。 場合、その一方で、 `Try`.`End Try`ループ内で構造体が含まれている、使用することはできません`Continue`の制御を転送する、`Finally`ブロックとすることができます、転送に使用のうち、`Try`または`Catch`ブロックの完全に転送する場合にのみ、`Try`...`End Try`構造体。  
+ たとえば、ループが `Try` ブロック、`Catch` ブロック、または `Finally` ブロック内に完全に含まれている場合は、`Continue` を使用してループから転送できます。 一方、`Try`...`End Try` 構造がループ内に含まれている場合、`Continue` を使用して `Finally` ブロックから制御を移すことはできません。また、`Try` 構造から完全に転送した場合にのみ、`Catch` または `Try`ブロックから転送することもできます。`End Try`  
   
- たとえば、同じ型の入れ子になったループがあるかどうか、`Do`内に別のループ`Do`ループ、`Continue Do`最も内側の次の反復処理するステートメントをスキップします`Do`それを含んでいるループ。 使用することはできません`Continue`同じ種類の外側のループの次の反復処理をスキップします。  
+ 同じ種類のループが入れ子になっている場合 (たとえば、別の `Do` ループ内の `Do` ループ)、`Continue Do` ステートメントは、それを含む最も内側の `Do` ループの次の反復処理にスキップします。 `Continue` を使用して、同じ型の含まれているループの次の反復処理にスキップすることはできません。  
   
- たとえば、さまざまな種類の入れ子になったループがあるかどうか、`Do`内でループを`For`ループに進んで、ループの次のイテレーションを使用して`Continue Do`または`Continue For`。  
+ さまざまな種類のループが入れ子になっている場合 (`For` ループ内の `Do` ループなど)、`Continue Do` または `Continue For`を使用して、いずれかのループの次の反復処理に進むことができます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Continue While`除数がゼロの場合は、配列の次の列をスキップするステートメント。 `Continue While`内では、`For`ループします。 転送先、`While col < lastcol`ステートメントでは、最も内側の次のイテレーションである`While`ループが含まれている`For`ループします。  
+ 次のコード例では、除数が0の場合に、`Continue While` ステートメントを使用して、配列の次の列にスキップします。 `Continue While` が `For` ループ内にあります。 `While col < lastcol` ステートメントに転送されます。これは、`For` ループを含む最も内側の `While` ループの次の反復です。  
   
- [!code-vb[VbVbalrStatements#14](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/continue-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#14)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)

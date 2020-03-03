@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 7ebc86ad9c1f84156e7e228c1ddf3fe7b86b7e60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06894f238f9fda3111d5484bb1b2add183a5abb2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576266"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448063"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge メソッド
-指定されたインポートされたスコープをマージするスコープの一覧に追加します。  
+マージするスコープの一覧に、指定したインポートされたスコープを追加します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Merge (   
     [in]  IMetaDataImport  *pImport,   
     [in]  IMapToken        *pHostMapToken,   
@@ -37,28 +35,29 @@ HRESULT Merge (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pImport`  
- [in]ポインター、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)マージするインポートされたスコープを識別するオブジェクト。  
+ からマージするインポートされたスコープを識別する[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)オブジェクトへのポインター。  
   
  `pIMap`  
- [in]ポインター、 [IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)トークンの再マップを指定するオブジェクト。  
+ からトークンの再マップを指定する[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)オブジェクトへのポインター。  
   
- `pHandleer`  
- [in]ポインター、 [IUnknown](/cpp/atl/iunknown)エラーを指定するオブジェクト。  
+ `pHandler`  
+ からエラーを指定する[IUnknown](/cpp/atl/iunknown)オブジェクトへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- 呼び出す[imetadataemit::mergeend](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)を 1 つのスコープにメタデータの合併をトリガーします。  
+## <a name="remarks"></a>コメント  
+ [IMetaDataEmit:: MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)を呼び出して、メタデータの1つのスコープへのマージをトリガーします。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

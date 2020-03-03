@@ -16,33 +16,31 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 12898f75d2575e539b018ea367bc870a3dc738a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d190c5b558c7c523be09267e59eab7c5611563a
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406332"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793860"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 関数
-デバッガー インターフェイスを作成します ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md))、リモート プロセスでマネージ デバッグ セッションをインスタンス化するための機能を提供します。  
+リモートプロセスでマネージデバッグセッションをインスタンス化する機能を提供するデバッガーインターフェイス ([ICorDebug](icordebug-interface.md)) を作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CordbCreateObject (  
        [in]  int         iDebuggerVersion,   
        [out] IUnknown**  ppCordb  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `iDebuggerVersion`  
  [in] ターゲット プロセスのデバッガー バージョン。 リモート デバッグの場合、このパラメーターは CorDebugVersion_2_0 である必要があります。  
   
  `ppCordb`  
- [out]キャストするオブジェクトへのポインターへのポインター、 [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)インターフェイスし、が返されます。  
+ 入出力[ICorDebug](icordebug-interface.md)インターフェイスにキャストされて返されるオブジェクトへのポインターへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
@@ -58,13 +56,13 @@ HRESULT CordbCreateObject (
  その他のエラーが発生しました。  
   
 ## <a name="remarks"></a>コメント  
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)で返されるインターフェイス`ppCordb`はすべてのマネージ デバッグ サービスの最上位レベルのデバッグ インターフェイスです。  
+ `ppCordb` で返される[ICorDebug](icordebug-interface.md)インターフェイスは、すべてのマネージデバッグサービスの最上位レベルのデバッグインターフェイスです。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86 .dll  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

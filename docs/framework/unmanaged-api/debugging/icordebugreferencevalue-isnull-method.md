@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 99e8c8d7-a1c0-47c8-9dbd-03e0b2bcb4d5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2c82c72350931bf3aed8ec6699cd0af834798e92
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d5047b1d44f836d10b659f18cf885eba3b0e973
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33417216"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139833"
 ---
 # <a name="icordebugreferencevalueisnull-method"></a>ICorDebugReferenceValue::IsNull メソッド
-この ICorDebugReferenceValue いる場合、null 値は、かどうかを示す値を取得、`ICorDebugReferenceValue`がオブジェクトを指していません。  
+この値が null 値であるかどうかを示す値を取得します。この値を指定した場合、`ICorDebugReferenceValue` はオブジェクトをポイントしません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsNull (  
     [out] BOOL   *pbNull  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbNull`  
- [out]ブール値へのポインター`true`場合は、この`ICorDebugReferenceValue`オブジェクトは null。 それ以外の場合、`pbNull`は`false`します。  
+ 入出力この `ICorDebugReferenceValue` オブジェクトが null の場合に `true` されるブール値を指すポインターです。それ以外の場合、`pbNull` は `false`です。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

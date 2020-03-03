@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help, Visual Basic Web sites
 - Visual Basic, videos
 ms.assetid: 9bfb42e9-327f-439b-935e-8884f6aca80c
-ms.openlocfilehash: 25d18b4e362481dfde8fb440911bac67f27eab40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e55910573b3aa3aecf9082f1b77659a45f883a1
+ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636236"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73196986"
 ---
 # <a name="additional-resources"></a>その他の技術情報
 
@@ -23,40 +23,39 @@ ms.locfileid: "54636236"
 
 ### <a name="on-the-web"></a>Web 上
 
-|用語|定義|
+|URL|説明|
 |----------|----------------|
 |[Visual Basic .NET 言語設計](https://github.com/dotnet/vblang)|Visual Basic .NET 言語設計に関する GitHub の公式リポジトリ。|
-|[Microsoft Visual Basic チーム ブログ](https://blogs.msdn.microsoft.com/vbteam/)|Visual Basic チームのブログにアクセスする手段を提供します。|
+|[Microsoft Visual Basic チーム ブログ](https://devblogs.microsoft.com/vbteam/)|Visual Basic チームのブログにアクセスする手段を提供します。|
 
 ### <a name="code-samples"></a>コード サンプル
 
-|用語|定義|
+|URL|説明|
 |----------|----------------|
-|[コード ギャラリー](https://code.msdn.microsoft.com/site/search?f%5B0%5D.Type=ProgrammingLanguage&f%5B0%5D.Value=VB&f%5B0%5D.Text=VB.NET)|サンプル アプリケーションやその他のリソースをダウンロードしたり、開発者コミュニティと共有できます。|
 |[Visual Basic ドキュメントのサンプル](https://github.com/dotnet/samples/tree/master/snippets/visualbasic)|Visual Basic および .NET のドキュメント全体で使用されるサンプルが含まれています。|
 
 ### <a name="forums"></a>フォーラム
 
-|用語|定義|
+|URL|説明|
 |----------|----------------|
-|[Visual Basic フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)|一般的な Visual Basic の問題についてディスカッションを行います。|
+|[Visual Basic フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)|一般的な Visual Basic の問題についてディスカッションを行います。|
 
 ### <a name="videos-and-webcasts"></a>ビデオと Web キャスト
 
-|用語|定義|
+|URL|説明|
 |----------|----------------|
 |[Channel9](https://channel9.msdn.com/)|ビデオ、Wiki、およびフォーラムを通じて継続的なコミュニティを提供します。|
 
 ### <a name="support"></a>サポート
 
-|用語|定義|
+|URL|説明|
 |----------|----------------|
 |[Microsoft サポート](https://support.microsoft.com)|サポート技術情報 (KB: Knowledge Base) の文書、ダウンロード ファイルや更新プログラム、サポート ウェブキャスト、およびその他のサービスへのアクセスを提供します。|
-|[Visual Studio に関する質問](https://developercommunity.visualstudio.com)|.NET および Visual Studio に関するバグを報告したり、提案を Microsoft に送信したりできます。 Visual Studio で **[ヘルプ]** > **[フィードバックの送信]** > **[問題の報告]** の順に選択して、バグを報告することもできます。|
+|[Visual Studio に関する質問](https://developercommunity.visualstudio.com)|.NET および Visual Studio に関するバグを報告したり、提案を Microsoft に送信したりできます。 Visual Studio で **[ヘルプ]**  >  **[フィードバックの送信]**  >  **[問題の報告]** の順に選択して、バグを報告することもできます。|
 
 ## <a name="third-party-resources"></a>サードパーティのリソース
 
-|用語|定義|
+|URL|説明|
 |----------|----------------|
 |[VBForums](http://www.vbforums.com/)|Visual Basic や .NET などについてディスカッションを行うフォーラムを提供します。|
 |[vbCity](http://vbcity.com/)|Visual Basic や .NET について学び、質問するためのユーザー向けコミュニティ サイトです。|
@@ -65,4 +64,4 @@ ms.locfileid: "54636236"
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic 入門](../../visual-basic/getting-started/index.md)
-- [ご意見](/visualstudio/ide/talk-to-us)
+- [ご意見](/visualstudio/ide/feedback-options)

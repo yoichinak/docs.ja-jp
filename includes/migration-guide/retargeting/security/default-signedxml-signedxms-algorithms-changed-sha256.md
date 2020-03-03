@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 12ba683655319e42368f9f2a6cf7bf70e1dbd77d
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859009"
+---
 ### <a name="default-signedxml-and-signedxms-algorithms-changed-to-sha256"></a>既定の SignedXML アルゴリズムと SignedXMS アルゴリズムが SHA256 に変更
 
 |   |   |

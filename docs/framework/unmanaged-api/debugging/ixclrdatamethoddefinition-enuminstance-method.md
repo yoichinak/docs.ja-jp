@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataMethodDefinition::EnumInstance メソッド
+title: 'IXCLRDataMethodDefinition:: EnumInstance メソッド'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataMethodDefinition::EnumInstance Method
@@ -15,48 +15,50 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 0fbb246f8c4bf791dd705aedf8eab6ef8bfeae56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6393d7fa4853c230203521e665bbe89d7b228e2
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680267"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790441"
 ---
-# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition::EnumInstance メソッド
+# <a name="ixclrdatamethoddefinitionenuminstance-method"></a>IXCLRDataMethodDefinition:: EnumInstance メソッド
 
-このメソッドの定義のインスタンスを列挙します。
+このメソッド定義のインスタンスを列挙します。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT EnumInstance(
     [in, out] CLRDATA_ENUM         *handle,
     [out] IXCLRDataMethodInstance **instance
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`handle` [入力、出力]インスタンスを列挙するためのハンドル。
+`handle`\
+[入力、出力]インスタンスを列挙するハンドル。
 
-`instance` [out]列挙型のインスタンス。
+`instance`\
+入出力列挙されたインスタンス。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-指定されたメソッドは、`IXCLRDataMethodDefinition`インターフェイスし、仮想メソッド テーブルの 4 番目のスロットに対応しています。
+指定されたメソッドは `IXCLRDataMethodDefinition` インターフェイスの一部であり、仮想メソッドテーブルの4番目のスロットに対応します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-**ヘッダー:** なし  
-**ライブラリ:** なし  
+**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+**ヘッダー:** 存在  
+**ライブラリ:** 存在  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [CLRDataSourceType 列挙型](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodDefinition インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethoddefinition-interface.md)
-- [IXCLRDataMethodInstance インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [CLRDataSourceType 列挙型](clrdatasourcetype-enumeration.md)
+- [デバッグ](index.md)
+- [IXCLRDataMethodDefinition インターフェイス](ixclrdatamethoddefinition-interface.md)
+- [IXCLRDataMethodInstance インターフェイス](ixclrdatamethodinstance-interface.md)

@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 8b280627-cc74-4789-95da-1fefc966de05
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f0301506d591a3738ea403393236c2574d48a7cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 279e34689169d31ad89772e90155e7f50bdbac08
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593967"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74426220"
 ---
 # <a name="imetadatatables2getmetadatastreaminfo-method"></a>IMetaDataTables2::GetMetaDataStreamInfo メソッド
-名前、サイズ、および指定したインデックス位置にあるメタデータのストリームの内容を取得します。  
+指定したインデックス位置にあるメタデータストリームの名前、サイズ、および内容を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMetaDataStreamInfo (  
    [in]  ULONG        ix,  
    [out] const char   **ppchName,  
@@ -38,28 +36,29 @@ HRESULT GetMetaDataStreamInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ix`  
- [in]要求されたメタデータのストリームのインデックス。  
+ から要求されたメタデータストリームのインデックス。  
   
  `ppchName`  
- [out]ストリームの名前へのポインター。  
+ 入出力ストリームの名前へのポインター。  
   
  `ppv`  
- [out]メタデータ ストリームへのポインター。  
+ 入出力メタデータストリームへのポインター。  
   
  `pcb`  
- [out]サイズ (バイト単位) の`ppv`します。  
+ 入出力`ppv`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
 - [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)

@@ -1,40 +1,36 @@
 ---
-title: '方法: デザイナーを使用して Windows フォーム ListView コントロールの並べて表示ビューを有効にします。'
+title: デザイナーを使用して ListView コントロールのタイルビューを有効にする
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 0acd235fe015b3f93364482b83008b388c1b86d9
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: a0429efaab14995ab1e3f3b0dfd91db61de72fbf
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303973"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76745802"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム ListView コントロールの並べて表示ビューを有効にします。
-並べて表示ビュー機能、<xref:System.Windows.Forms.ListView>コントロールでは、グラフィカルとテキストの情報をバランスを提供することができます。 並べて表示ビューの項目で表示されるテキスト情報は、詳細ビュー用に定義されている列情報と同じ情報です。 グループ化またはカーソルのいずれかと組み合わせて、並べて表示ビューはマークの機能、<xref:System.Windows.Forms.ListView>コントロール。  
-  
- 並べて表示ビューでは、次の図のように、32 x 32 アイコンと数行のテキストを使用します。  
-  
- ![ListView コントロール内のタイル ビュー](../../../../docs/framework/winforms/controls/media/listviewtile.gif "ListViewTile")  
-  
- 並べて表示ビューのプロパティとメソッドを使用すると、各項目を表示して、まとめてサイズとタイル ビュー ウィンドウ内のすべての項目の外観を制御する列フィールドを指定します。 わかりやすくするために、タイル内のテキストの最初の行は常に、項目の名前です。変更することはできません。  
-  
- 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.ListView>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
-  
-> [!NOTE]
->  並べて表示ビューを [!INCLUDE[WinXpFamily](../../../../includes/winxpfamily-md.md)] で使用できるのは、アプリケーションから <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> メソッドを呼び出した場合だけです。 旧バージョンのオペレーティング システムでは、並べて表示ビューに関するコードがすべて無効になり、<xref:System.Windows.Forms.ListView> コントロールは大きなアイコンのビューで表示されます。 詳細については、「 <xref:System.Windows.Forms.ListView.View%2A?displayProperty=nameWithType> 」を参照してください。  
->   
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-set-tile-view-in-the-designer"></a>並べて表示ビューをデザイナーで設定するには  
-  
-1.  選択、<xref:System.Windows.Forms.ListView>フォーム上のコントロール。  
-  
-2.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.ListView.View%2A>プロパティ選択**タイル**します。  
-  
-## <a name="see-also"></a>関連項目
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>方法 : デザイナーを使って Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする
+<xref:System.Windows.Forms.ListView> コントロールのタイルビュー機能を使用すると、グラフィカルな情報とテキスト情報の間で視覚的なバランスを取ることができます。 並べて表示ビューの項目で表示されるテキスト情報は、詳細ビュー用に定義されている列情報と同じ情報です。 タイルビューは、<xref:System.Windows.Forms.ListView> コントロールのグループ化機能または挿入マーク機能と組み合わせて機能します。
+
+ タイルビューでは、次の図に示すように、32 x 32 アイコンと数行のテキストが使用されます。
+
+ ![ListView コントロール内の並べて表示ビュー](./media/enable-tile-view-in-a-wf-listview-control-using-the-designer/tile-view-in-listview-control.gif "並べて表示ビューのアイコンとテキスト")
+
+ タイルビューのプロパティとメソッドを使用すると、各項目に対して表示する列フィールドを指定したり、タイルビューウィンドウ内のすべての項目のサイズと外観をまとめて制御したりすることができます。 わかりやすくするために、タイルのテキストの最初の行は常に項目の名前です。変更することはできません。
+
+ 次の手順では、<xref:System.Windows.Forms.ListView> コントロールを含むフォームを含む**Windows アプリケーション**プロジェクトが必要です。 このようなプロジェクトの設定の詳細については、「[方法: Windows フォームアプリケーションプロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)する」および「[方法: Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)する」を参照してください。
+
+## <a name="to-set-tile-view-in-the-designer"></a>デザイナーでタイルビューを設定するには
+
+1. Visual Studio で、フォームの [<xref:System.Windows.Forms.ListView>] コントロールを選択します。
+
+2. **[プロパティ]** ウィンドウで、[<xref:System.Windows.Forms.ListView.View%2A>] プロパティを選択し、 **[タイル]** を選択します。
+
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
-- [ListView コントロールの概要](../../../../docs/framework/winforms/controls/listview-control-overview-windows-forms.md)
+- [ListView コントロールの概要](listview-control-overview-windows-forms.md)

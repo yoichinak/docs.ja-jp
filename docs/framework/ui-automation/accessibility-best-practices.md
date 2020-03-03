@@ -5,20 +5,18 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b71434fdc1b3b0b1f15928fe45edc02ee03da1ba
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e4478e0136d16623a9176691cbddc4215cc1b877
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221213"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447295"
 ---
 # <a name="accessibility-best-practices"></a>ユーザー補助のベスト プラクティス
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- コントロールやアプリケーションで以下のベスト プラクティスを実行すると、 [!INCLUDE[TLA#tla_at](../../../includes/tlasharptla-at-md.md)] デバイスを使用するユーザーのアクセシビリティ が向上します。 これらのベスト プラクティスの多くは [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] に適した設計を中心としています。 各ベスト プラクティスには、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] コントロールまたはアプリケーションの実装の情報が含まれています。 多くの場合、これらのベスト プラクティスに対応する作業は既に [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールに含まれています。  
+ コントロールまたはアプリケーションに次のベストプラクティスを実装すると、支援技術デバイスを使用するユーザーのアクセシビリティが向上します。 これらのベスト プラクティスの多くは [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] に適した設計を中心としています。 各ベスト プラクティスには、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] コントロールまたはアプリケーションの実装の情報が含まれています。 多くの場合、これらのベスト プラクティスに対応する作業は既に [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールに含まれています。  
   
 <a name="Programmatic_Access"></a>   
 ## <a name="programmatic-access"></a>プログラムによるアクセス  
@@ -26,19 +24,19 @@ ms.locfileid: "56221213"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>すべての UI 要素とテキストでのプログラムによるアクセスの有効化  
- [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] 要素では、プログラムによるアクセスを有効にする必要があります。 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] が標準的な [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールである場合、プログラムによるアクセスのサポートがコントロールに含まれます。 コントロールがカスタム コントロール (コモン コントロールのサブクラスに指定されているコントロール、またはコントロールからサブクラスに指定されたコントロール) である場合、変更が必要な領域に対する <xref:System.Windows.Automation.Peers.AutomationPeer> の実装を確認する必要があります。  
+ ユーザーインターフェイス (UI) 要素では、プログラムによるアクセスを有効にする必要があります。 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] が標準的な [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] コントロールである場合、プログラムによるアクセスのサポートがコントロールに含まれます。 コントロールがカスタム コントロール (コモン コントロールのサブクラスに指定されているコントロール、またはコントロールからサブクラスに指定されたコントロール) である場合、変更が必要な領域に対する <xref:System.Windows.Automation.Peers.AutomationPeer> の実装を確認する必要があります。  
   
- このベスト プラクティスに従うことで [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] ベンダーは、製品の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の要素を特定および操作することができます。  
+ このベストプラクティスに従うことで、支援技術ベンダーは、製品の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の要素を特定および操作できるようになります。  
   
 <a name="Place_Names__Titles_and_Descriptions_on_UI_Objects_"></a>   
 ### <a name="place-names-titles-and-descriptions-on-ui-objects-frames-and-pages"></a>UI オブジェクト、フレーム、およびページにおける、場所の名前、タイトル、説明  
- スクリーン リーダーなどの支援のテクノロジでは、ナビゲーション スキーム内のフレーム、オブジェクト、またはページの場所を理解するためにタイトルを使用します。 そのため、タイトルは非常にわかりやすくする必要があります。 たとえば、「Microsoft Web ページ」といった Web ページのタイトルでは、ユーザーはいくつかの特定の領域に深く入っていった場合に役に立ちません。 わかりやすいタイトルは、スクリーン リーダーに依存する視覚障がい者にとって重要です。 同様に、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] コントロールでも、 <xref:System.Windows.Automation.AutomationProperties.NameProperty> と <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> は [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] デバイスにとって重要です。  
+ スクリーン リーダーなどの支援のテクノロジでは、ナビゲーション スキーム内のフレーム、オブジェクト、またはページの場所を理解するためにタイトルを使用します。 そのため、タイトルは非常にわかりやすくする必要があります。 たとえば、「Microsoft Web ページ」といった Web ページのタイトルでは、ユーザーはいくつかの特定の領域に深く入っていった場合に役に立ちません。 わかりやすいタイトルは、スクリーン リーダーに依存する視覚障がい者にとって重要です。 同様に、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] コントロールについては、支援技術デバイスで <xref:System.Windows.Automation.AutomationProperties.NameProperty> と <xref:System.Windows.Automation.AutomationProperties.HelpTextProperty> が重要です。  
   
- このベスト プラクティスに従うことにより、 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)]はサンプル コントロールとアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] を特定および操作できるようになります。  
+ このベストプラクティスに従うことで、technologys がサンプルコントロールおよびアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] を識別して操作できるようになります。  
   
 <a name="Ensure_Programmatic_Events_are_Triggered_by_all_UI"></a>   
 ### <a name="ensure-programmatic-events-are-triggered-by-all-ui-activities"></a>プログラムによるイベントが、すべての UI 操作によってトリガーされることを確認する  
- このベスト プラクティスに従うことにより、 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)]は [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の変化をリッスンし、変化についてユーザーに通知できるようになります。  
+ このベストプラクティスに従うことで、支援 technologys は [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の変更をリッスンし、これらの変更についてユーザーに通知することができます。  
   
 <a name="User_Settings"></a>   
 ## <a name="user-settings"></a>ユーザー設定  
@@ -52,7 +50,7 @@ ms.locfileid: "56221213"
   
 <a name="Visual_UI_Design"></a>   
 ## <a name="visual-ui-design"></a>UI のビジュアル デザイン  
- このセクションのベスト プラクティスでは、コントロールまたはアプリケーションが色と画像を効果的に使用するとともに、 [!INCLUDE[TLA2#tla_at#plural](../../../includes/tla2sharptla-atsharpplural-md.md)]によって使用できるようにします。  
+ このセクションのベストプラクティスでは、コントロールまたはアプリケーションが色とイメージを効果的に使用し、支援技術によって使用できることを確認します。  
   
 <a name="Don_t_Hard_Code_Colors"></a>   
 ### <a name="dont-hard-code-colors"></a>色をハードコーディングしない  
@@ -68,7 +66,7 @@ ms.locfileid: "56221213"
   
 <a name="Ensure_all_UI_Correctly_Scales_by_any_DPI_Setting"></a>   
 ### <a name="ensure-all-ui-correctly-scales-by-any-dpi-setting"></a>すべての DPI 設定によってすべての UI を正しく拡大/縮小する  
- すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 設定によってすべての [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] が正しく拡大/縮小されていることを確認します。 また、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素が  1024 x 768、120 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]の画面に合っていることを確認します。  
+ すべての [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] がドット/インチ (dpi) の設定によって正しくスケーリングできることを確認します。 また、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の要素が 1024 x 768 の画面に収まり、120ドット/インチ (dpi) であることを確認します。  
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>ナビゲーション  
@@ -80,9 +78,9 @@ ms.locfileid: "56221213"
   
  アプリケーションは、次のキーボード インターフェイスを備えている必要があります。  
   
--   ボタン、リンク、またはリスト ボックスなど、ユーザーが操作できるすべてのコントロールのタブ ストップ  
+- ボタン、リンク、またはリスト ボックスなど、ユーザーが操作できるすべてのコントロールのタブ ストップ  
   
--   論理的なタブの順序  
+- 論理的なタブの順序  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>キーボード フォーカスの表示  
@@ -92,11 +90,11 @@ ms.locfileid: "56221213"
   
  アプリケーションは、キーボード フォーカスで以下を行う必要があります。  
   
--   1 つの項目が常にキーボード フォーカスされている必要がある  
+- 1 つの項目が常にキーボード フォーカスされている必要がある  
   
--   キーボード フォーカスは明確に表示されている必要がある  
+- キーボード フォーカスは明確に表示されている必要がある  
   
--   選択項目またはフォーカスされた項目は視覚的に強調表示されている必要がある  
+- 選択項目またはフォーカスされた項目は視覚的に強調表示されている必要がある  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>ナビゲーションの標準と強力なナビゲーション スキームをサポートする  
@@ -104,11 +102,11 @@ ms.locfileid: "56221213"
   
  アプリケーションは、次のキーボード インターフェイスを備えている必要があります。  
   
--   すべてのコマンド、メニュー、およびコントロール用のショートカット キーと下線付きのアクセス キー  
+- すべてのコマンド、メニュー、およびコントロール用のショートカット キーと下線付きのアクセス キー  
   
--   重要なリンクへのキーボード ショートカット  
+- 重要なリンクへのキーボード ショートカット  
   
--   すべてのメニュー項目にアクセス キーがあり、すべてのボタンにアクセラレータ キーがあり、すべてのコマンドにアクセラレータ キーがある  
+- すべてのメニュー項目にアクセス キーがあり、すべてのボタンにアクセラレータ キーがあり、すべてのコマンドにアクセラレータ キーがある  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>マウスの位置がキーボード ナビゲーションと干渉しないようにする  
@@ -130,9 +128,10 @@ ms.locfileid: "56221213"
   
 <a name="Use_Standard_Input_APIs_with_Devices_Independent"></a>   
 ### <a name="use-standard-input-apis-with-device-independent-calls"></a>デバイスに依存しない呼び出しで標準の入力 API を使用する  
- デバイスに依存しない呼び出しは、キーボードとマウスの機能が同等であることを保証する一方、 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] に関する必要な情報を [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に提供します。  
+ デバイスに依存しない呼び出しでは、キーボードとマウスの機能が等価であると同時に、[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]に関する必要な情報を補助テクノロジに提供します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Automation.Peers>
-- [NumericUpDown Custom Control with Theme and UI Automation Support Sample](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
+- [テーマと UI オートメーションサポートのサンプルを使用した NumericUpDown カスタムコントロール](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [キーボード ユーザー インターフェイス設計のガイドライン](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

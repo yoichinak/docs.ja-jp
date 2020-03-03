@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの RichTextBox コントロールでのファイルを保存します。'
+title: RichTextBox コントロールを使用してファイルを保存する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,80 +15,82 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 739cc33df873ef2c8ec7a2f5eaf867abadb8da75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a87b93a53347aeba54f944b0f4c455aa272ea243
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539780"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744822"
 ---
-# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールでのファイルを保存します。
-Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールがいくつかの形式のいずれかで表示される情報を書き込むことができます。  
-  
--   プレーンテキスト  
-  
--   Unicode のプレーン テキスト  
-  
--   リッチ テキスト形 (式 RTF)  
-  
--   OLE オブジェクトの代わりにスペースを含む RTF  
-  
--   プレーン テキストの OLE オブジェクトのテキスト表現を使用  
-  
- ファイルを保存する、<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>メソッド。 使用することも、 **SaveFile**をストリームにデータを保存するメソッド。 詳細については、「 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29> 」を参照してください。  
-  
-### <a name="to-save-the-contents-of-the-control-to-a-file"></a>コントロールの内容をファイルに保存するには  
-  
-1.  保存するファイルのパスを決定します。  
-  
-     実際のアプリケーションでは、通常使用する、<xref:System.Windows.Forms.SaveFileDialog>コンポーネント。 概要については、次を参照してください。 [SaveFileDialog コンポーネントの概要](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)します。  
-  
-2.  呼び出す、<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>のメソッド、<xref:System.Windows.Forms.RichTextBox>コントロール、ファイルを保存して、必要に応じてファイルの種類を指定します。 唯一の引数としてファイル名を持つメソッドを呼び出す場合、ファイルは RTF として保存されます。 別の種類のファイルを指定するには、2 番目の引数として <xref:System.Windows.Forms.RichTextBoxStreamType> 列挙型の値を指定します。  
-  
-     リッチ テキスト ファイルの場所は次の例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行もできます。 次の例でフォームを前提としています、<xref:System.Windows.Forms.RichTextBox>コントロールが既に追加されています。  
-  
-    ```vb  
-    Public Sub SaveFile()  
-       ' You should replace the bold file name in the   
-       ' sample below with a file name of your own choosing.  
-       RichTextBox1.SaveFile(System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.Personal) _  
-       & "\Testdoc.rtf", _  
-          RichTextBoxStreamType.RichNoOleObjs)  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    public void SaveFile()  
-    {  
-       // You should replace the bold file name in the   
-       // sample below with a file name of your own choosing.  
-       // Note the escape character used (@) when specifying the path.  
-       richTextBox1.SaveFile(System.Environment.GetFolderPath  
-       (System.Environment.SpecialFolder.Personal)  
-       + @"\Testdoc.rtf",  
-          RichTextBoxStreamType.RichNoOleObjs);  
-    }  
-    ```  
-  
-    ```cpp  
-    public:  
-       void SaveFile()  
-       {  
-          // You should replace the bold file name in the   
-          // sample below with a file name of your own choosing.  
-          richTextBox1->SaveFile(String::Concat  
-             (System::Environment::GetFolderPath  
-             (System::Environment::SpecialFolder::Personal),  
-             "\\Testdoc.rtf"), RichTextBoxStreamType::RichNoOleObjs);  
-       }  
-    ```  
-  
+# <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>方法 : Windows フォームの RichTextBox コントロールを使用してファイルを保存する
+
+Windows フォーム <xref:System.Windows.Forms.RichTextBox> コントロールは、次のいずれかの形式で表示される情報を書き込むことができます。
+
+- プレーンテキスト ファイル
+
+- Unicode プレーンテキスト
+
+- リッチテキスト形式 (RTF)
+
+- OLE オブジェクトの代わりにスペースを含む RTF
+
+- OLE オブジェクトのテキスト表現を含むプレーンテキスト
+
+ファイルを保存するには、<xref:System.Windows.Forms.RichTextBox.SaveFile%2A> メソッドを呼び出します。 **SaveFile**メソッドを使用して、データをストリームに保存することもできます。 詳細については、<xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29> を参照してください。
+
+### <a name="to-save-the-contents-of-the-control-to-a-file"></a>コントロールの内容をファイルに保存するには
+
+1. 保存するファイルのパスを決定します。
+
+    実際のアプリケーションでこれを行うには、通常、<xref:System.Windows.Forms.SaveFileDialog> コンポーネントを使用します。 概要については、「 [Savefiledialog コンポーネントの概要](savefiledialog-component-overview-windows-forms.md)」を参照してください。
+
+2. <xref:System.Windows.Forms.RichTextBox> コントロールの <xref:System.Windows.Forms.RichTextBox.SaveFile%2A> メソッドを呼び出して、保存するファイルと、必要に応じてファイルの種類を指定します。 ファイル名を唯一の引数としてメソッドを呼び出すと、ファイルは RTF として保存されます。 別の種類のファイルを指定するには、2 番目の引数として <xref:System.Windows.Forms.RichTextBoxStreamType> 列挙型の値を指定します。
+
+    次の例では、リッチテキストファイルの場所に設定されているパスが **[マイドキュメント**] フォルダーです。 この場所は、Windows オペレーティングシステムを実行しているほとんどのコンピューターにこのフォルダーを含めることを前提としているために使用されます。 また、この場所を選択すると、最小限のシステムアクセスレベルのユーザーがアプリケーションを安全に実行できるようになります。 次の例では、フォームに <xref:System.Windows.Forms.RichTextBox> コントロールが既に追加されていることを前提としています。
+
+    ```vb
+    Public Sub SaveFile()
+       ' You should replace the bold file name in the
+       ' sample below with a file name of your own choosing.
+       RichTextBox1.SaveFile(System.Environment.GetFolderPath _
+       (System.Environment.SpecialFolder.Personal) _
+       & "\Testdoc.rtf", _
+          RichTextBoxStreamType.RichNoOleObjs)
+    End Sub
+    ```
+
+    ```csharp
+    public void SaveFile()
+    {
+       // You should replace the bold file name in the
+       // sample below with a file name of your own choosing.
+       // Note the escape character used (@) when specifying the path.
+       richTextBox1.SaveFile(System.Environment.GetFolderPath
+       (System.Environment.SpecialFolder.Personal)
+       + @"\Testdoc.rtf",
+          RichTextBoxStreamType.RichNoOleObjs);
+    }
+    ```
+
+    ```cpp
+    public:
+       void SaveFile()
+       {
+          // You should replace the bold file name in the
+          // sample below with a file name of your own choosing.
+          richTextBox1->SaveFile(String::Concat
+             (System::Environment::GetFolderPath
+             (System::Environment::SpecialFolder::Personal),
+             "\\Testdoc.rtf"), RichTextBoxStreamType::RichNoOleObjs);
+       }
+    ```
+
     > [!IMPORTANT]
-    >  次のコード例では、ファイルが存在しない場合は新規にファイルを作成します。 アプリケーション ファイルを作成する場合は、そのアプリケーションの フォルダーの作成アクセス必要があります。 アクセス許可は、アクセス制御リストを使って設定します。 ファイルが既に存在する場合、アプリケーションには、書き込みアクセスだけより低い権限が必要があります。 可能であれば、デプロイ時に、ファイルを作成し、のみ 1 つのファイルに対する読み取りアクセス権を付与ではなくフォルダーの作成アクセスする方が安全です。 また、ルート フォルダーや Program Files フォルダーにデータを書き込むよりも、ユーザー フォルダーに書き込む方が安全です。  
-  
-## <a name="see-also"></a>関連項目
+    > 次のコード例では、ファイルが存在しない場合は新規にファイルを作成します。 アプリケーションでファイルを作成する必要がある場合、そのアプリケーションにはフォルダーの作成アクセスが必要です。 アクセス許可は、アクセス制御リストを使って設定します。 ファイルが既に存在する場合、アプリケーションに必要なのは、より低い特権である書き込みアクセスだけです。 可能な場合は、配置時にファイルを作成し、フォルダーのアクセスを作成するのではなく、1つのファイルに対する読み取りアクセスのみを許可する方が安全です。 また、ルート フォルダーや Program Files フォルダーにデータを書き込むよりも、ユーザー フォルダーに書き込む方が安全です。
+
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox コントロール](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [Windows フォームで使用するコントロール](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox コントロール](richtextbox-control-windows-forms.md)
+- [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

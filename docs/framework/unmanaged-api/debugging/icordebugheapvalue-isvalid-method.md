@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 68e20e62-203d-46d8-bb91-8d3c61cfacc3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 95532d6721467b482b1d79d611f8055b606bb4a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7685d1b6d5458a4405fc5a4abdb2f3134618f01c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413509"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794399"
 ---
 # <a name="icordebugheapvalueisvalid-method"></a>ICorDebugHeapValue::IsValid メソッド
-この ICorDebugHeapValue によって表されるオブジェクトが有効かどうかを示す値を取得します。  
+この値によって表されるオブジェクトが有効かどうかを示す値を取得します。  
   
- .NET Framework version 2.0 では、このメソッドは廃止されました。  
+ このメソッドは .NET Framework バージョン2.0 では非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsValid (  
     [out] BOOL    *pbValid  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbValid`  
- [out]ヒープでは、この値が有効かどうかを示すブール値へのポインター。  
+ 入出力ヒープ上のこの値が有効かどうかを示すブール値へのポインター。  
   
 ## <a name="remarks"></a>コメント  
- 値は、ガベージ コレクターが解放された場合に有効ではありません。  
+ 値は、ガベージコレクターによって回収されている場合は無効です。  
   
- このメソッドの使用は非推奨とされました。 .NET Framework 2.0 ではすべての値は有効期限[icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)に時間値は、検証が呼び出されます。  
+ このメソッドの使用は非推奨とされました。 .NET Framework 2.0 では、すべての値は、"の値は無効になります。 [" が呼び出されるまで、](icordebugcontroller-continue-method.md)すべての値が有効になります。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

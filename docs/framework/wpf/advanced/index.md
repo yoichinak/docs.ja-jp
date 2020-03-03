@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 3c933e7062e270a9f4d03772ffbece2500ef9482
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544110"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710209"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>詳細設定 (Windows Presentation Foundation)
 このセクションでは、WPF の高度な領域について説明します。  
   
-## <a name="in-this-section"></a>このセクションの内容  
- [WPF アーキテクチャ](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [基本要素](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [要素のツリーおよびシリアル化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [ドラッグ アンド ドロップ](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [ドキュメント](../../../../docs/framework/wpf/advanced/documents.md)  
- [グローバライズとローカライズ](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [移行と相互運用性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [パフォーマンス](../../../../docs/framework/wpf/advanced/performance.md)  
- [スレッド モデル](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [WPF のアドインの概要](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
- [WPF のアンマネージ API リファレンス](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>関連項目
+## <a name="in-this-section"></a>このセクションの内容
+
+[WPF アーキテクチャ](wpf-architecture.md)  
+[WPF の XAML](xaml-in-wpf.md)  
+[基本要素クラス](base-elements.md)  
+[要素のツリーおよびシリアル化](element-tree-and-serialization.md)  
+[WPF プロパティシステム](properties-wpf.md)  
+[WPF のイベント](events-wpf.md)  
+[入力](input-wpf.md)  
+[ドラッグ アンド ドロップ](drag-and-drop.md)  
+[リソース](resources-wpf.md)  
+[ドキュメント](documents.md)  
+[グローバライズとローカライズ](globalization-and-localization.md)  
+[レイアウト](layout.md)  
+[移行と相互運用性](migration-and-interoperability.md)  
+[パフォーマンス](performance.md)  
+[スレッド モデル](threading-model.md)  
+[WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)  

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: fd7c5765665345906597963f8a4b2dbf7fcc7227
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288848"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697461"
 ---
-# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules > 要素 (ネットワーク設定)
-使用してネットワークのホストから情報を要求するモジュールを指定します。  
+# <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules> 要素 (ネットワーク設定)
+ネットワークホストから情報を要求するために使用するモジュールを指定します。  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-4webRequestModules >  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,32 +33,32 @@ ms.locfileid: "55288848"
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし。  
+ [なし] :  
   
 ### <a name="child-elements"></a>子要素  
   
-|**要素**|**説明**|  
+|**要素**|**[説明]**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-webrequestmodules-network-settings.md)|カスタムの Web 要求モジュールをアプリケーションに追加します。|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-webrequestmodules-network-settings.md)|アプリケーションから登録済みのすべての Web 要求モジュールを削除します。|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-webrequestmodules-network-settings.md)|アプリケーションからカスタム Web 要求モジュールを削除します。|  
+|[add](add-element-for-webrequestmodules-network-settings.md)|アプリケーションにカスタム Web 要求モジュールを追加します。|  
+|[clear](clear-element-for-webrequestmodules-network-settings.md)|アプリケーションから、登録されているすべての Web 要求モジュールを削除します。|  
+|[remove](remove-element-for-webrequestmodules-network-settings.md)|アプリケーションからカスタム Web 要求モジュールを削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|**要素**|**説明**|  
+|**要素**|**[説明]**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
-## <a name="remarks"></a>Remarks  
- `webRequestModules`要素の子孫を登録する、<xref:System.Net.WebRequest>ネットワーク ホストへの情報要求を処理するクラス。 Web 要求モジュールを実装する必要があります、<xref:System.Net.IWebRequestCreate>インターフェイス。  
+## <a name="remarks"></a>コメント  
+ @No__t-0 要素は、ネットワークホストへの情報要求を処理するために、<xref:System.Net.WebRequest> クラスの子孫を登録します。 Web 要求モジュールは @no__t 0 インターフェイスを実装する必要があります。  
   
- .NET Framework には、Web 要求モジュールにはで始まる uri が含まれています`http://`、 `https://`、および`file://`します。 既定のモジュールは、構成ファイルでカスタム モジュールを登録することによってのみオーバーライドできます。  
+ .NET Framework には、`http://`、`https://`、および `file://` で始まる Uri の Web 要求モジュールが含まれています。 既定のモジュールをオーバーライドするには、構成ファイルにカスタムモジュールを登録する必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、既定の HTTP モジュールを登録します。 指定したモジュールの正しい値で、バージョンおよび PublicKeyToken の値を置き換える必要があります。  
+ 次の例では、既定の HTTP モジュールを登録します。 Version および PublicKeyToken の値は、指定されたモジュールの正しい値に置き換える必要があります。  
   
 ```xml  
 <configuration>  
@@ -74,6 +74,7 @@ ms.locfileid: "55288848"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.IWebRequestCreate>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

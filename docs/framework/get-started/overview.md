@@ -7,14 +7,12 @@ helpviewer_keywords:
 - common language runtime, about
 - common language runtime, overview
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 397a78514dc5878e83708882ceeb4d92160d9a78
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093685"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73975657"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework の概要
 
@@ -33,7 +31,7 @@ ms.locfileid: "56093685"
 - .NET Framework に基づいたコードを他の任意のコードと統合できるように、すべての通信を業界標準に準拠して構築すること。
 
 > [!NOTE]
-> ユーザーと開発者のための .NET Framework の概要については、「[.NET Framework の概要](../../../docs/framework/get-started/index.md)」を参照してください。
+> ユーザーと開発者のための .NET Framework の概要については、「[.NET Framework の概要](index.md)」を参照してください。
 
 .NET Framework は、共通言語ランタイム (CLR) と .NET Framework クラス ライブラリから構成されます。 共通言語ランタイムは、.NET Framework の基礎となるコンポーネントです。 このランタイムは、実行時のコード管理を行うエージェントのようなものであり、メモリ管理、スレッド管理、リモート処理などの重要なサービスを提供したり、セキュリティや保全性を促進するために厳密なタイプ セーフやその他のコード整合性を強制的に適用したりします。 実際、コード管理の概念はこのランタイムの基本原理です。 このランタイムを使用して実行するように作成されたコードはマネージド コードと呼ばれ、そうでないコードはアンマネージド コードと呼ばれます。 クラス ライブラリは、従来のコマンド ラインやグラフィカル ユーザー インターフェイス (GUI) を使用したアプリケーションから、ASP.NET がもたらした最新の機構に基づく Web フォームや XML Web サービスなどのアプリケーションに至るまでのアプリケーション開発に使用できる、再利用可能な型の包括的なオブジェクト指向コレクションです。
 
@@ -45,7 +43,7 @@ ms.locfileid: "56093685"
 
 共通言語ランタイムおよびクラス ライブラリの、アプリケーションおよびシステム全体に対する関係を次の図に示します。 この図には、比較的大規模なアーキテクチャの内部でマネージ コードが動作する方法も示されています。
 
-![大規模アーキテクチャのマネージ コードの](../../../docs/framework/get-started/media/circle.gif "円グラフ") コンテキスト内の .NET Framework
+![比較的大規模なアーキテクチャの内部でマネージド コードが動作する方法を示すスクリーンショット。](./media/overview/language-runtime-class-library-relationship.gif)
 
 .NET Framework の主要な機能を以降のセクションでより詳細に説明します。
 
@@ -75,17 +73,17 @@ ms.locfileid: "56093685"
 
 他のオブジェクト指向クラス ライブラリの場合と同様に、.NET Framework の型を使用することで、文字列の管理、データ コレクション、データベース接続、ファイル アクセスなどを含む、共通性のあるさまざまなプログラミング作業を行うことができます。 これらの共通の作業の他に、クラス ライブラリにはさまざまな特別の開発シナリオをサポートする型も含まれています。 次のような種類のアプリケーションやサービスを開発する場合に .NET Framework を使用してください。
 
-- コンソール アプリ。 「[コンソール アプリケーションの構築](../../../docs/standard/building-console-apps.md)」を参照してください。
+- コンソール アプリ。 「[コンソール アプリケーションの構築](../../standard/building-console-apps.md)」を参照してください。
 
-- Windows GUI アプリケーション (Windows フォーム)。 「[Windows フォーム](../../../docs/framework/winforms/index.md)」を参照してください。
+- Windows GUI アプリケーション (Windows フォーム)。 「[Windows フォーム](../winforms/index.md)」を参照してください。
 
-- Windows Presentation Foundation (WPF) アプリケーション。 「[Windows Presentation Foundation](../../../docs/framework/wpf/index.md)」を参照してください。
+- Windows Presentation Foundation (WPF) アプリケーション。 「[Windows Presentation Foundation](../wpf/index.md)」を参照してください。
 
-- ASP.NET アプリケーション。 「[ASP.NET を使用した Web アプリケーション](../../../docs/framework/develop-web-apps-with-aspnet.md)」を参照してください。
+- ASP.NET アプリケーション。 「[ASP.NET を使用した Web アプリケーション](../develop-web-apps-with-aspnet.md)」を参照してください。
 
-- Windows サービス 「[Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)」を参照してください。
+- Windows サービス 「[Windows サービス アプリケーションの概要](../windows-services/introduction-to-windows-service-applications.md)」を参照してください。
 
-- Windows Communication Foundation (WCF) を使用するサービス指向アプリケーション。 「[WCF を使用したサービス指向アプリケーション](../../../docs/framework/wcf/index.md)」を参照してください。
+- Windows Communication Foundation (WCF) を使用するサービス指向アプリケーション。 「[WCF を使用したサービス指向アプリケーション](../wcf/index.md)」を参照してください。
 
 - Windows Workflow Foundation (WF) を使用するワークフロー対応アプリケーション。 「[Windows Workflow Foundation](../windows-workflow-foundation/index.md)」を参照してください。
 
@@ -93,9 +91,9 @@ Windows フォーム クラスは、Windows GUI の開発を非常に簡単に�
 
 ## <a name="see-also"></a>関連項目
 
-- [システム要件](../../../docs/framework/get-started/system-requirements.md)
-- [インストール ガイド](../../../docs/framework/install/index.md)
-- [開発ガイド](../../../docs/framework/development-guide.md)
-- [ツール](../../../docs/framework/tools/index.md)
+- [システム要件](system-requirements.md)
+- [インストール ガイド](../install/index.md)
+- [開発ガイド](../development-guide.md)
+- [ツール](../tools/index.md)
 - [.NET サンプルおよびチュートリアル](../../samples-and-tutorials/index.md)
-- [.NET Framework クラス ライブラリ](https://go.microsoft.com/fwlink/?LinkID=227195)
+- [.NET API ブラウザー](../../../api/index.md)

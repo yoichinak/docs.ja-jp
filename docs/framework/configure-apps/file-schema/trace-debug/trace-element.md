@@ -10,19 +10,19 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: d930e1fe9a9a4012e363bbbffe83e1ea7cc1c595
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 02fd794eb7b7b7f46f7f7bc4e43036cb4a4758ed
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257799"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699184"
 ---
-# <a name="trace-element"></a>\<トレース > 要素
+# <a name="trace-element"></a>\<trace> 要素
 トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。  
   
- \<configuration>  
-\<system.diagnostics>  
-\<トレース >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[ **\<system.diagnostics>** ](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<trace>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,29 +39,29 @@ ms.locfileid: "55257799"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`autoflush`|省略可能な属性です。<br /><br /> トレース リスナーが、すべての書き込み操作の後に、出力バッファーを自動的にフラッシュするかどうかを指定します。|  
-|`indentsize`|省略可能な属性です。<br /><br /> インデントを設定する空白の数を指定します。|  
-|`useGlobalLock`|省略可能な属性です。<br /><br /> グローバル ロックを使用するかどうかを示します。|  
+|`autoflush`|省略可能な属性です。<br /><br /> 書き込み操作が行われるたびに、トレースリスナーが出力バッファーを自動的にフラッシュするかどうかを指定します。|  
+|`indentsize`|省略可能な属性です。<br /><br /> インデントするスペースの数を指定します。|  
+|`useGlobalLock`|省略可能な属性です。<br /><br /> グローバルロックを使用する必要があるかどうかを示します。|  
   
 ## <a name="autoflush-attribute"></a>autoflush 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|出力バッファーを自動的にフラッシュしません。 既定値です。|  
-|`true`|自動的に出力バッファーをフラッシュします。|  
+|`false`|では、出力バッファーは自動的にはフラッシュされません。 既定値です。|  
+|`true`|出力バッファーを自動的にフラッシュします。|  
   
 ## <a name="usegloballock-attribute"></a>useGlobalLock 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|`false`|リスナーがスレッド セーフである場合は、グローバル ロックを使用しませんそれ以外の場合、グローバル ロックを使用します。|  
-|`true`|リスナーは、スレッド セーフであるかどうかに関係なく、グローバル ロックを使用します。 既定値です。|  
+|`false`|リスナーがスレッドセーフである場合、はグローバルロックを使用しません。それ以外の場合、はグローバルロックを使用します。|  
+|`true`|は、リスナーがスレッドセーフかどうかに関係なく、グローバルロックを使用します。 既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-trace.md)|収集、するリスナーをストアを指定し、メッセージをルーティングします。|  
+|[\<listeners>](listeners-element-for-trace.md)|メッセージを収集、格納、およびルーティングするリスナーを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -71,7 +71,7 @@ ms.locfileid: "55257799"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<trace>`リスナーを追加する要素`MyListener`を`Listeners`コレクション。 `MyListener` という名前のファイルを作成します。`MyListener.log`し、ファイルに出力を書き込みます。 `useGlobalLock`属性に設定されて`false`、それが原因で、グローバル ロック トレース リスナーがスレッド セーフである場合に使用することはできません。 `autoflush`属性に設定されて`true`、それが原因かどうかにかかわらず、ファイルに書き込むトレース リスナー、<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>メソッドが呼び出されます。 `indentsize`属性が 0 個のスペースのインデントを設定するリスナーと、0 (ゼロ) に設定と、<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>メソッドが呼び出されます。  
+ 次の例は、`<trace>` 要素を使用して、リスナー `MyListener` を `Listeners` コレクションに追加する方法を示しています。 `MyListener` `MyListener.log` という名前のファイルを作成し、出力をファイルに書き込みます。 @No__t-0 属性が `false` に設定されています。これにより、トレースリスナーがスレッドセーフである場合は、グローバルロックが使用されません。 @No__t-0 属性が `true` に設定されています。これにより、<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> メソッドが呼び出されているかどうかに関係なく、トレースリスナーがファイルに書き込みます。 @No__t-0 属性が 0 (ゼロ) に設定されています。これにより、<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> メソッドが呼び出されたときにリスナーが0個のスペースにインデントを設定します。  
   
 ```xml  
 <configuration>  
@@ -86,8 +86,9 @@ ms.locfileid: "55257799"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.DefaultTraceListener>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.EventLogTraceListener>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

@@ -14,48 +14,47 @@ helpviewer_keywords:
 ms.assetid: 66a89acf-8c32-44c0-8787-960c99c7b3ec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8beb5e64b05f50ba61ced72fcdb7700d4b9f30e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80979f0424469bb1d4771ad6507bb8c9d5364ab4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505043"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73108605"
 ---
 # <a name="createhistoryreader-function"></a>CreateHistoryReader 関数
-指定したファイルの履歴のリーダーを作成します。  
+指定されたファイルの履歴リーダーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateHistoryReader (  
     [in]  LPCWSTR        wzFilePath,  
     [out] IHistoryReader **ppHistoryReader  
  );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wzFilePath`  
- [in]ファイル パス。  
+ からファイルパス。  
   
  `ppHistoryReader`  
- [out]正常に完了には、履歴リーダーへのポインターが含まれています。  
+ 入出力正常に完了した場合は、履歴リーダーへのポインターが含まれます。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の表で説明されている値だけでなく、WinError.h で定義されている標準の COM エラー コードを返します。  
+ このメソッドは、次の表で説明する値に加えて、Winerror.h で定義されている標準 COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドが正常に完了したことを示します。|  
-|E_INVALIDARG|示します`wzFilePath`または`ppHistoryReader`の参照を null に設定されます。|  
+|E_INVALIDARG|`wzFilePath` または `ppHistoryReader` が null 参照に設定されていることを示します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ライブラリ:** Fusion.dll  
+ **ライブラリ:** Fusion .dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

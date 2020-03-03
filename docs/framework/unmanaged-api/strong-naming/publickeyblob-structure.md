@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: b9240712-829c-4c8d-9a09-a6e7aa63f63a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a5e18c0cf65ee8f336b74a2d8e44fcf5af0cfef
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 6c58a0726e0869178838999c6b000e0ad975f145
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261779"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140604"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 構造体
-公開/秘密キーのペアの公開キーをバイナリ形式で表します。  
+公開キーと秘密キーのペアの公開キーをバイナリ形式で表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct {  
     unsigned int SigAlgId;  
     unsigned int HashAlgId;  
@@ -41,23 +39,24 @@ typedef struct {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`SigAlgId`|署名アルゴリズムの識別子 (型の`ALG_ID`WinCrypt.h で定義されている、) の公開キー。|  
-|`HashAlgId`|ハッシュ アルゴリズムの識別子 (型の`ALG_ID`WinCrypt.h で定義されている、) の公開キー。|  
-|`cbPublicKey`|(バイト単位)、キーの長さ。|  
-|`PublicKey`|CryptoAPI によって返される形式でキーの値を含む可変長バイト配列を指定します。|  
+|`SigAlgId`|公開キーの署名アルゴリズムの識別子 (`ALG_ID`型)。この識別子は、WinCrypt. h で定義されています。|  
+|`HashAlgId`|公開キーのハッシュアルゴリズムの識別子 (`ALG_ID`型の、WinCrypt .h で定義されている)。|  
+|`cbPublicKey`|キーの長さ (バイト単位)。|  
+|`PublicKey`|CryptoAPI によって返される形式のキー値を格納する可変長バイト配列。|  
   
 ## <a name="remarks"></a>Remarks  
- `PublicKeyBlob`構造が使用者[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)、 [StrongNameSignatureGeneration](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)、および他の厳密な名前の関数を公開/秘密キーのペアの公開キーを表します。  
+ `PublicKeyBlob` 構造体は、公開キーと秘密キーのペアの公開キーを表すために、 [StrongNameGetPublicKey](strongnamegetpublickey-function.md)、 [StrongNameSignatureGeneration](strongnamesignaturegeneration-function.md)、およびその他の厳密な名前関数によって使用されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [StrongNameGetPublicKey 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
-- [StrongNameSignatureGeneration 関数](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)
+
+- [StrongNameGetPublicKey 関数](strongnamegetpublickey-function.md)
+- [StrongNameSignatureGeneration 関数](strongnamesignaturegeneration-function.md)

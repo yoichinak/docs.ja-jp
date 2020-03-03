@@ -2,12 +2,12 @@
 title: XDocument のクエリと XElement のクエリ (C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 125b0811296695a0909f804931e0caca81f63df6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736881"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253140"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>XDocument のクエリと XElement のクエリ (C#)
 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> によってドキュメントを読み込む場合、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> によって読み込む場合とは少し異なるクエリを記述する必要があることがわかります。  
@@ -37,7 +37,7 @@ foreach (XElement e in childList)
   
  この例では、次の出力が生成されることが想定されます。  
   
-```  
+```output  
 Querying tree loaded with XElement.Load  
 ----  
 <Child1>1</Child1>  
@@ -67,7 +67,7 @@ foreach (XElement e in childList)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Querying tree loaded with XDocument.Load  
 ----  
 <Root>  
@@ -101,7 +101,7 @@ foreach (XElement e in childList)
   
  このクエリは、<xref:System.Xml.Linq.XElement> をルートとするツリーのクエリと同じように動作します。 この例では次の出力が生成されます。  
   
-```  
+```output  
 Querying tree loaded with XDocument.Load  
 ----  
 <Child1>1</Child1>  
@@ -109,6 +109,3 @@ Querying tree loaded with XDocument.Load
 <Child3>3</Child3>  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [基本的なクエリ (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

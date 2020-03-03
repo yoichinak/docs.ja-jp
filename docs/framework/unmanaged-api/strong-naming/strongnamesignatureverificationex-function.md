@@ -15,23 +15,21 @@ helpviewer_keywords:
 ms.assetid: cfe4b634-18bf-44b8-9773-d94fb7e8a480
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a9887a05236b213fb439e334cdf1455f8f445e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca428d680df1710d8e74441d9945d4c3545b0482
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671929"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73121142"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 関数
 指定したパスにあるアセンブリ マニフェストに厳密な名前の署名が含まれるかどうかを示す値が取得されます。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameSignatureVerificationEx](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerificationEx (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  BOOLEAN   fForceVerification,  
@@ -39,32 +37,33 @@ BOOLEAN StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
- [in]検証するアセンブリのポータブル実行可能 (.exe または .dll) ファイルへのパス。  
+ から検証するアセンブリの移植可能な実行可能ファイル (.exe または .dll) のパス。  
   
  `fForceVerification`  
- [in]`true` 。 それ以外のレジストリ設定を上書きする必要がある場合でも、検証を実行する`false`します。  
+ [入力] レジストリ設定を上書きする必要がある場合でも、検証を実行する `true` ます。それ以外の場合は、`false`ます。  
   
  `pfWasVerified`  
- [out]`true` 、厳密な名前の署名が確認済み。 それ以外の場合`false`します。 `pfWasVerified` 設定されても`false`検証がレジストリ設定により成功した場合。  
+ [out] 厳密な名前の署名が検証された場合は `true`。それ以外の場合は、`false`ます。 レジストリ設定によって検証が成功した場合は、`pfWasVerified` も `false` に設定されます。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 検証が成功した場合それ以外の場合、`false`します。  
+ 検証が成功した場合は `true` します。それ以外の場合は、`false`ます。  
   
 ## <a name="remarks"></a>Remarks  
- `StrongNameSignatureVerificationEx` ような機能を提供します、 [StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)関数。 2 番目の入力パラメーターと出力パラメーター、`StrongNameSignatureVerificationEx`型`BOOLEAN`の代わりに`DWORD`します。  
+ `StrongNameSignatureVerificationEx` には、 [StrongNameSignatureVerification](strongnamesignatureverification-function.md)関数と同様の機能が用意されています。 ただし、2番目の入力パラメーターと `StrongNameSignatureVerificationEx` の出力パラメーターは `DWORD`ではなく `BOOLEAN` 型です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [StrongNameSignatureVerificationEx メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [StrongNameSignatureVerification メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [StrongNameSignatureVerificationEx メソッド](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [StrongNameSignatureVerification メソッド](../hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

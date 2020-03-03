@@ -1,5 +1,5 @@
 ---
-title: '方法: 変数 (Visual Basic) と同じ名前の変数を非表示にします。'
+title: '方法 : 自分で宣言した変数と同じ名前の変数を隠す'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - qualification [Visual Basic], of element names
@@ -12,103 +12,106 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a770167bca0dc3538c828bfcc8a8de4ef86e80c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0915adbbabb778b1bdd3b6b30e56725a7e74867c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602417"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74345368"
 ---
-# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>方法: 変数 (Visual Basic) と同じ名前の変数を非表示にします。
-変数を非表示にすることができます*シャドウ*は、これによって、同じ名前の変数で再定義します。 2 つの方法で非表示に変数をシャドウすることができます。  
-  
--   **スコープによるシャドウします。** その操作は、非表示に変数を格納しているリージョンのサブ領域内で再宣言することによってスコープによるシャドウできます。  
-  
--   **継承によるシャドウします。** クラス レベルで非表示にする、変数が定義されている場合、することができます、継承によるシャドウを再度宣言することによって、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)派生クラスでのキーワード。  
-  
-## <a name="two-ways-to-hide-a-variable"></a>2 つの変数を非表示にする方法  
-  
-#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>スコープによるシャドウすることによって、変数を非表示にするには  
-  
-1.  を非表示にする変数を定義するリージョンを特定し、で、変数を使用してを再定義するサブ領域を決定します。  
-  
-    |変数の領域|再定義が使用可能なサブ地域|  
-    |-----------------------|-------------------------------------------|  
-    |Module|モジュール内のクラス|  
-    |クラス|クラス内のサブクラス<br /><br /> クラス内のプロシージャ|  
-  
-     再定義できませんそのプロシージャ内のブロックでプロシージャの変数などの、 `If`.。`End If`構築または`For`ループします。  
-  
-2.  存在しない場合は、サブ領域を作成します。  
-  
-3.  、地区内では、書き込み、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)シャドウの変数を宣言します。  
-  
-     サブ領域内のコードは、変数名が参照されているとき、コンパイラは変数のシャドウへの参照を解決します。  
-  
-     次の例では、シャドウの参照と同様に、スコープによるシャドウを示します。  
-  
-    ```  
-    Module shadowByScope  
-        ' The following statement declares num as a module-level variable.  
-        Public num As Integer  
-        Sub show()  
-            ' The following statement declares num as a local variable.  
-            Dim num As Integer  
-            ' The following statement sets the value of the local variable.  
-            num = 2  
-            ' The following statement displays the module-level variable.  
-            MsgBox(CStr(shadowByScope.num))  
-        End Sub  
-        Sub useModuleLevelNum()  
-            ' The following statement sets the value of the module-level variable.  
-            num = 1  
-            show()  
-        End Sub  
-    End Module  
-    ```  
-  
-     前の例は、変数を宣言して`num`モジュール レベルとプロシージャ レベルの両方 (の手順で`show`)。 ローカル変数`num`モジュール レベル変数をシャドウ`num`内`show`ので、ローカル変数が 2 に設定します。 ただし、シャドウをローカル変数がない`num`で、`useModuleLevelNum`プロシージャ。 そのため、`useModuleLevelNum`モジュール レベル変数の値を 1 に設定します。  
-  
-     `MsgBox`内で呼び出す`show`修飾することにより、シャドウ機構をバイパスする`num`モジュールの名前。 そのため、ローカル変数の代わりに、モジュール レベル変数を表示します。  
-  
-#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>継承によるシャドウすることによって、変数を非表示にするには  
-  
-1.  必ず、クラスでは、および (プロシージャ) の外側のクラス レベルで非表示にする、変数が宣言されてください。 それ以外の場合継承によるシャドウすることはできません。  
-  
-2.  既に存在しない場合、変数のクラスから派生したクラスを定義します。  
-  
-3.  派生クラス内では、書き込み、`Dim`ステートメント、変数を宣言します。 含める、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)キーワードで宣言します。  
-  
-     派生クラスのコードは、変数名が参照されていると、コンパイラは、変数への参照を解決します。  
-  
-     次の例では、継承によるシャドウを示します。 2 つの参照変数のシャドウにアクセスする、シャドウになります。  
-  
-    ```  
-    Public Class shadowBaseClass  
-        Public shadowString As String = "This is the base class string."  
-    End Class  
-    Public Class shadowDerivedClass  
-        Inherits shadowBaseClass  
-        Public Shadows shadowString As String = "This is the derived class string."  
-        Public Sub showStrings()  
-            Dim s As String = "Unqualified shadowString: " & shadowString &  
-                 vbCrLf & "MyBase.shadowString: " & MyBase.shadowString  
-            MsgBox(s)  
-        End Sub  
-    End Class  
-    ```  
-  
-     前の例は、変数を宣言します`shadowString`基底クラスとその派生クラスでシャドウします。 プロシージャ`showStrings`派生クラスでは、シャドウのバージョンの文字列を表示します。 ときに、名前`shadowString`は修飾されません。 シャドウされたバージョンを次に、表示と`shadowString`で修飾されて、`MyBase`キーワード。  
-  
-## <a name="robust-programming"></a>信頼性の高いプログラミング  
- シャドウ処理には、1 つ以上のバージョンの同じ名前の変数が導入されています。 コード ステートメントは、変数名が参照されているときに、コンパイラの参照が解決されるバージョンは、コード ステートメントの場所と該当する文字列の存在などの要因によって異なります。 これにより、意図しないシャドウされた変数のバージョンを参照するリスクが増加することができます。 このリスクを低くには、シャドウされた変数へのすべての参照を完全に修飾します。  
-  
-## <a name="see-also"></a>関連項目
+# <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>方法: 自分で宣言した変数と同じ名前の変数を隠す (Visual Basic)
+
+変数を非表示にするには、その変数を同じ名前の変数で再定義することによって、その変数を*シャドウ*することができます。 非表示にする変数は、次の2つの方法でシャドウすることができます。
+
+- **スコープによるシャドウ処理。** スコープを通じてシャドウするには、非表示にする変数が含まれている領域のサブ領域内で再宣言します。
+
+- **継承によるシャドウ処理。** 非表示にする変数がクラスレベルで定義されている場合は、派生クラスで[Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)キーワードを使用して再宣言することで、継承によってシャドウできます。
+
+## <a name="two-ways-to-hide-a-variable"></a>変数を非表示にする2つの方法
+
+#### <a name="to-hide-a-variable-by-shadowing-it-through-scope"></a>スコープを使用して変数をシャドウすることによって変数を非表示にするには
+
+1. 非表示にする変数を定義するリージョンを決定し、変数で再定義するサブ領域を決定します。
+
+    |変数の領域|再定義に使用できるサブ領域|
+    |-----------------------|-------------------------------------------|
+    |モジュール|モジュール内のクラス|
+    |クラス|クラス内のサブクラスです。<br /><br /> クラス内のプロシージャ|
+
+    このプロシージャ内のブロックでプロシージャ変数を再定義することはできません。たとえば、`If`...`End If` コンストラクションや `For` ループなどです。
+
+2. サブ領域がまだ存在しない場合は作成します。
+
+3. サブ領域内で、シャドウする変数を宣言する[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を記述します。
+
+    サブ領域内のコードが変数名を参照すると、コンパイラはシャドウしている変数への参照を解決します。
+
+    次の例は、スコープを使用したシャドウ処理と、シャドウをバイパスする参照を示しています。
+
+    ```vb
+    Module shadowByScope
+        ' The following statement declares num as a module-level variable.
+        Public num As Integer
+        Sub show()
+            ' The following statement declares num as a local variable.
+            Dim num As Integer
+            ' The following statement sets the value of the local variable.
+            num = 2
+            ' The following statement displays the module-level variable.
+            MsgBox(CStr(shadowByScope.num))
+        End Sub
+        Sub useModuleLevelNum()
+            ' The following statement sets the value of the module-level variable.
+            num = 1
+            show()
+        End Sub
+    End Module
+    ```
+
+    前の例では、モジュールレベルとプロシージャレベル (プロシージャ `show`) の両方で変数 `num` 宣言しています。 ローカル変数 `num`、`show`内のモジュールレベル変数 `num` をシャドウするため、ローカル変数は2に設定されます。 ただし、`useModuleLevelNum` の手順では、シャドウ `num` するローカル変数はありません。 したがって、`useModuleLevelNum`、モジュールレベル変数の値を1に設定します。
+
+    `show` 内で `MsgBox` を呼び出すと、モジュール名を使用して `num` を修飾することにより、シャドウ機構がバイパスされます。 そのため、ローカル変数の代わりにモジュールレベルの変数が表示されます。
+
+#### <a name="to-hide-a-variable-by-shadowing-it-through-inheritance"></a>継承によって変数をシャドウして非表示にするには
+
+1. 非表示にする変数がクラスで宣言されていること、およびクラスレベル (プロシージャの外側) で宣言されていることを確認してください。 それ以外の場合、継承によってシャドウを行うことはできません。
+
+2. 変数がまだ存在しない場合は、そのクラスから派生したクラスを定義します。
+
+3. 派生クラス内で、変数を宣言する `Dim` ステートメントを記述します。 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)キーワードを宣言に含めます。
+
+    派生クラスのコードが変数名を参照すると、コンパイラは変数への参照を解決します。
+
+    次の例は、継承によるシャドウ処理を示しています。 2つの参照が作成されます。1つはシャドウを行う変数にアクセスし、もう1つはシャドウ処理をバイパスします。
+
+    ```vb
+    Public Class shadowBaseClass
+        Public shadowString As String = "This is the base class string."
+    End Class
+    Public Class shadowDerivedClass
+        Inherits shadowBaseClass
+        Public Shadows shadowString As String = "This is the derived class string."
+        Public Sub showStrings()
+            Dim s As String = "Unqualified shadowString: " & shadowString &
+                 vbCrLf & "MyBase.shadowString: " & MyBase.shadowString
+            MsgBox(s)
+        End Sub
+    End Class
+    ```
+
+    前の例では、基底クラスで `shadowString` 変数を宣言し、派生クラスでそれをシャドウしています。 派生クラスのプロシージャ `showStrings` は、名前 `shadowString` が修飾されていない場合に、文字列のシャドウバージョンを表示します。 `shadowString` が `MyBase` キーワードで修飾されている場合は、シャドウされたバージョンが表示されます。
+
+## <a name="robust-programming"></a>堅牢性の高いプログラミング
+
+シャドウでは、同じ名前の変数の複数のバージョンが導入されます。 コードステートメントが変数名を参照する場合、コンパイラが参照を解決するバージョンは、コードステートメントの場所や修飾文字列の存在などの要因によって異なります。 これにより、シャドウされた変数の意図しないバージョンを参照するリスクが増加する可能性があります。 シャドウされた変数へのすべての参照を完全に修飾することで、そのリスクを軽減することができます。
+
+## <a name="see-also"></a>参照
+
 - [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Visual Basic でのシャドウ処理](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [シャドウとオーバーライドの違い](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [方法: 継承された変数を非表示にします。](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [方法: 派生クラスによって非表示に変数にアクセスします。](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
+- [方法: 継承された変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
+- [方法: 派生クラスによって非表示になっている変数にアクセスする](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-access-a-variable-hidden-by-a-derived-class.md)
 - [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
 - [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [継承の基本](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

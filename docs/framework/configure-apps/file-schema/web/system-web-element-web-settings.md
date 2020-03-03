@@ -1,5 +1,5 @@
 ---
-title: < System.web > 要素 (Web 設定)
+title: <system.web> 要素 (Web 設定)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web.config configuration file [ASP.NET]
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: a8d0905dc64ae3e3c4977639ccf881a677de73a9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c5c857d4494b6d78b819e56bae4213abc5e2035
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272813"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699091"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web > 要素 (Web 設定)
-ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方法についてを説明します。  
+ASP.NET ホスティングレイヤーがプロセス全体の動作をどのように管理するかについて説明します。  
   
- \<configuration>  
-\<system.web > 要素 (Web 設定)  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp; **\<system.web >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,29 +28,33 @@ ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方�
 </system.web>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+## <a name="attributes-and-elements"></a>属性と要素  
+
+次のセクションでは、属性、子要素、親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし。  
+
+[なし]。  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|Aspnet.config ファイルには、IIS アプリケーション プールの構成設定を指定します。|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Aspnet ファイル内の IIS アプリケーションプールの構成設定を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration>](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|[\<configuration>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素を指定します。|  
   
-## <a name="remarks"></a>Remarks  
- `system.web`要素とその子`applicationPool`に要素が追加された、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]の[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]します。 実行すると[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]も以降のバージョンの統合モードでは、この要素を組み合わせて、ASP.NET スレッドを管理する方法と、ASP.NET が IIS アプリケーション プールでホストされている場合に要求をキューにする方法を構成できます。 実行する場合[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン、クラシックまたは ISAPI のモードでこれらの設定は無視されます。  
+## <a name="remarks"></a>コメント  
+
+`system.web` 要素とその子 `applicationPool` 要素が .NET Framework 3.5 SP1 の .NET Framework に追加されました。 IIS 7.0 以降のバージョンを統合モードで実行すると、この要素の組み合わせによって、ASP.NET がどのようにスレッドを管理し、ASP.NET が IIS アプリケーションプールでホストされている場合の要求をキューに配置するかを構成できます。 IIS 7.0 以降のバージョンをクラシックモードまたは ISAPI モードで実行した場合、これらの設定は無視されます。  
   
 ## <a name="example"></a>例  
- 次の例では、ASP.NET が IIS アプリケーション プールでホストされている場合は、aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。 この例では統合で IIS が実行されているモードと、アプリケーションを使用している、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]以降のバージョン。 バージョンでこの動作は発生しません、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]よりも前、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]します。 値の例では、既定値です。  
+
+次の例は、ASP.NET が IIS アプリケーションプールでホストされている場合に、ASP.NET ファイルでプロセス全体の動作を構成する方法を示しています。 この例では、IIS が統合モードで実行されており、アプリケーションが .NET Framework 3.5 SP1 以降のバージョンを使用していることを前提としています。 この動作は、.NET Framework 3.5 SP1 より前のバージョンの .NET Framework では発生しません。 この例の値は既定値です。  
   
 ```xml  
 <configuration>  
@@ -67,10 +71,11 @@ ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方�
   
 |||  
 |-|-|  
-|名前空間||  
+|Namespace||  
 |スキーマ名||  
 |検証ファイル||  
-|空にすることができます。||  
+|空にすることができます||  
   
-## <a name="see-also"></a>関連項目
-- [\<applicationPool> 要素 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+## <a name="see-also"></a>参照
+
+- [\<applicationPool> 要素 (Web 設定)](applicationpool-element-web-settings.md)

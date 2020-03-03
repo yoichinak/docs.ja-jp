@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8ecbb854-295c-4dd4-b9fc-01ebeac46e06
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f03b25f7206df2bde3e1cc0b58efb57a40c1a7a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a147aee1ebba57b86dbbf8a7648456b8d7494936
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685426"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793197"
 ---
 # <a name="icordebugmda-interface"></a>ICorDebugMDA インターフェイス
 マネージド デバッグ アシスタント (MDA) メッセージを表します。  
@@ -30,19 +28,19 @@ ms.locfileid: "54685426"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetDescription メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getdescription-method.md)|この MDA の説明を含む文字列を取得します。|  
-|[GetFlags メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getflags-method.md)|この MDA に関連付けられているフラグを取得します。|  
-|[GetName メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getname-method.md)|この MDA の名前を含む文字列を取得します。|  
-|[GetOSThreadId メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getosthreadid-method.md)|この MDA を実行するオペレーティング システムのスレッド識別子を取得します。|  
-|[GetXML メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-getxml-method.md)|この MDA に関連付けられている完全な XML ストリームを取得します。|  
+|[GetDescription メソッド](icordebugmda-getdescription-method.md)|この MDA の説明を格納している文字列を取得します。|  
+|[GetFlags メソッド](icordebugmda-getflags-method.md)|この MDA に関連付けられているフラグを取得します。|  
+|[GetName メソッド](icordebugmda-getname-method.md)|この MDA の名前を格納している文字列を取得します。|  
+|[GetOSThreadId メソッド](icordebugmda-getosthreadid-method.md)|この MDA が実行されているオペレーティングシステムのスレッド id を取得します。|  
+|[GetXML メソッド](icordebugmda-getxml-method.md)|この MDA に関連付けられている XML の完全ストリームを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -51,5 +49,6 @@ ms.locfileid: "54685426"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)
 - [マネージド デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

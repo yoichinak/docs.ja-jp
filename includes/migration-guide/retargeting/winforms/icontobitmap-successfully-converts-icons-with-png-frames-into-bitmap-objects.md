@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9c2a8eca3f4498906cf703ff3b8ffb7336ff7a1b
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804606"
+---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>PNG フレームを含んだアイコンが Icon.ToBitmap によって、Bitmap オブジェクトに正常に変換されます
 
 |   |   |

@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0adbbd35-5e8d-4fec-8268-dc70a07c5975
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e4241f2057ce77713f91e969eda7765739613333
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d45a369def193b9c8d8f9a3aa954ede600a87dd
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732844"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74434738"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport インターフェイス
 ポータブル実行可能 (PE) ファイルまたはその他のソース (タイプ ライブラリ、スタンドアロンのランタイム メタデータ バイナリなど) から既存のメタデータをインポートおよび操作するメソッドを提供します。  
@@ -63,7 +61,7 @@ ms.locfileid: "54732844"
 |[GetClassLayout メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)|指定した TypeDef トークンによって参照されるクラスのレイアウト情報を取得します。|  
 |[GetCustomAttributeByName メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributebyname-method.md)|指定した名前のカスタム属性の値を取得します。|  
 |[GetCustomAttributeProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getcustomattributeprops-method.md)|指定したメタデータ トークンのカスタム属性の値を取得します。|  
-|[GetEventProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。この情報には、宣言する型、デリゲートの add メソッドおよび remove メソッド、任意のフラグとその他の関連付けられているデータなどがあります。|  
+|[GetEventProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-geteventprops-method.md)|指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。この情報には、宣言型、デリゲートの add メソッドおよび remove メソッド、任意のフラグとその他の関連付けられているデータなどがあります。|  
 |[GetFieldMarshal メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldmarshal-method.md)|指定した Field メタデータ トークンによって表されるフィールドのネイティブなアンマネージ型へのポインターを取得します。|  
 |[GetFieldProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getfieldprops-method.md)|指定した FieldDef トークンによって参照されるフィールドに関連付けられているメタデータを取得します。|  
 |[GetInterfaceImplProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getinterfaceimplprops-method.md)|指定したメソッドを実装する型、およびそのメソッドを宣言するインターフェイスのメタデータ トークンへのポインターを取得します。|  
@@ -74,7 +72,7 @@ ms.locfileid: "54732844"
 |[GetModuleFromScope メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getmodulefromscope-method.md)|現在のメタデータ スコープ内で参照されるモジュールのメタデータ トークンへのポインターを取得します。|  
 |[GetModuleRefProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getmodulerefprops-method.md)|指定したメタデータ トークンによって参照されるモジュールの名前を取得します。|  
 |[GetNameFromToken メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnamefromtoken-method.md)|指定したメタデータ トークンによって参照されるオブジェクトの UTF-8 名を取得します。|  
-|[GetNativeCallConvFromSig メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnativecallconvfromsig-method.md)|指定したシグネチャ ポインターで表されるメソッドのネイティブな呼び出し規則を取得します。|  
+|[GetNativeCallConvFromSig メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnativecallconvfromsig-method.md)|指定したシグネチャ ポインターで表されるメソッドのネイティブな呼び出し規約を取得します。|  
 |[GetNestedClassProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getnestedclassprops-method.md)|入れ子にされた型を指定して、それを囲んでいる親の型の TypeDef トークンを取得します。|  
 |[GetParamForMethodIndex メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getparamformethodindex-method.md)|指定した MethodDef トークンが表すメソッドの一連のメソッド パラメーターにおいて、指定した序数位置にあるパラメーターを表すトークンへのポインターを取得します。|  
 |[GetParamProps メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getparamprops-method.md)|指定した ParamDef トークンによって参照されるパラメーターのメタデータ値を取得します。|  
@@ -93,26 +91,27 @@ ms.locfileid: "54732844"
 |[ResetEnum メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resetenum-method.md)|指定した列挙子を指定した位置にリセットします。|  
 |[ResolveTypeRef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-resolvetyperef-method.md)|指定した TypeRef トークンによって参照される型の型情報を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `IMetaDataImport` インターフェイスは、型情報のインポート (開発ツールなど)、または配置されたコンポーネントの管理 (解決サービス、アクティブ化サービスなど) を行うツールとサービスで使用することを主な目的としてデザインされています。 `IMetaDataImport` のメソッドは、次のタスク カテゴリに分類されます。  
   
--   メタデータ スコープ内の項目のコレクションの列挙。  
+- メタデータ スコープ内の項目のコレクションの列挙。  
   
--   特定の特性セットを持つ項目の検索。  
+- 特定の特性セットを持つ項目の検索。  
   
--   指定した項目のプロパティの取得。  
+- 指定した項目のプロパティの取得。  
   
--   Get メソッドは、メタデータ項目の単一値のプロパティを返すように特別にデザインされています。 プロパティが別の項目への参照である場合、その項目のトークンが返されます。 特定の値が要求されていないことを示すために、ポインター入力型を NULL に設定できます。 基本的にコレクション オブジェクトであるプロパティ (クラスが実装するインターフェイスのコレクションなど) を取得するには、列挙メソッドを使用します。  
+- Get メソッドは、メタデータ項目の単一値のプロパティを返すように特別にデザインされています。 プロパティが別の項目への参照である場合、その項目のトークンが返されます。 特定の値が要求されていないことを示すために、ポインター入力型を NULL に設定できます。 基本的にコレクション オブジェクトであるプロパティ (クラスが実装するインターフェイスのコレクションなど) を取得するには、列挙メソッドを使用します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ インターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

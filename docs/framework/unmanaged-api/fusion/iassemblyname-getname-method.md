@@ -15,40 +15,39 @@ helpviewer_keywords:
 ms.assetid: 1dee9781-1cf3-48a9-a376-d18ea1f73280
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f758d76d779cff7db119e69dc1cf3342071f1c1
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640876"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134348"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName メソッド
-これによって参照されるアセンブリの単純な暗号化されていない名前を取得[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト。  
+この[IAssemblyName](iassemblyname-interface.md)オブジェクトによって参照されるアセンブリの単純な、暗号化されていない名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in, out] LPDWORD lpcwBuffer,  
     [out]     WCHAR *pwzName  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `lpcwBuffer`  
- [入力、出力]サイズ`pwzName`ワイド文字、終端の null 文字を含むです。  
+ [入力、出力]ワイド文字の `pwzName` のサイズ (null 終端文字を含む)。  
   
  `pwzName`  
- [out]参照アセンブリの名前を保持するバッファー。  
+ 入出力参照されたアセンブリの名前を保持するバッファー。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
+
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)

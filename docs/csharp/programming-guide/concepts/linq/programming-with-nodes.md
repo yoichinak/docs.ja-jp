@@ -2,12 +2,12 @@
 title: ノードでのプログラミング (C#)
 ms.date: 07/20/2015
 ms.assetid: c38df0f2-c805-431a-93ff-9103a4284c2f
-ms.openlocfilehash: 0924d7b1d25a33635cc5140ca32622658b10fa0e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c4c858cbc1fad4041c2e5ce62ca8a01dd1cfb2c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730179"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253149"
 ---
 # <a name="programming-with-nodes-c"></a>ノードでのプログラミング (C#)
 XML エディター、変換システム、レポート作成プログラムなどのプログラムを作成する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の開発者は、要素や属性よりも細かい粒度レベルで動作するプログラムを作成しなければならないことがよくあります。 また場合によっては、ノード レベルで、テキスト ノード、処理命令、およびコメントを操作する必要があります。 このトピックでは、ノード レベルでのプログラミングについて詳しく説明します。  
@@ -28,7 +28,7 @@ Console.WriteLine(doc.Root.Parent == null);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 True  
 True  
 ```  
@@ -54,7 +54,7 @@ Console.WriteLine(xmlTree.Nodes().OfType<XText>().Count());
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 1  
 1  
 2  
@@ -76,7 +76,7 @@ Console.WriteLine(">>{0}<<", textNode2);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 >><<  
 ```  
   
@@ -116,7 +116,7 @@ foreach (XAttribute att in root.Attributes())
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 xmlns="http://www.adventure-works.com"  IsNamespaceDeclaration:True  
 xmlns:fc="www.fourthcoffee.com"  IsNamespaceDeclaration:True  
 AnAttribute="abc"  IsNamespaceDeclaration:False  
@@ -144,7 +144,7 @@ Console.WriteLine(((IEnumerable)root.XPathEvaluate("text()")).OfType<XText>().Co
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 3  
 0  
 ```  
@@ -166,12 +166,9 @@ Console.WriteLine(doc.Nodes().Count());
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <Root />  
 1  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [高度な LINQ to XML プログラミング (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

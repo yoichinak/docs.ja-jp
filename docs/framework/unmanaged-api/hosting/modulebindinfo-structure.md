@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 632d4adc-dbc9-4ce8-9397-abc3285c1c69
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2bc1e788f6a55fa6441592141d3a2236a7a0e2d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae40d8adaae70ccff6e8058858a506267d58873f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701769"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133745"
 ---
 # <a name="modulebindinfo-structure"></a>ModuleBindInfo 構造体
-参照されるモジュールとそれを含んでいるアセンブリに関する詳細情報を提供します。  
+参照されるモジュールとそれを含むアセンブリに関する詳細情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _ModuleBindInfo {  
     DWORD    dwAppDomainId;  
     LPCWSTR  lpAssemblyIdentity;  
@@ -40,23 +38,24 @@ typedef struct _ModuleBindInfo {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`dwAppDomainId`|一意の識別子、`IStream`への呼び出しによって返される、 [ihostassemblystore::providemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)参照されるモジュールの読み込み元のメソッド。|  
-|`lpAssemblyIdentity`|参照されるモジュールを含むアセンブリの一意の識別子。|  
-|`lpModuleName`|参照されるモジュールの名前。|  
+|`dwAppDomainId`|参照先のモジュールを読み込む[IHostAssemblyStore::P rovidemodule](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-providemodule-method.md)メソッドの呼び出しによって返される `IStream` の一意の識別子。|  
+|`lpAssemblyIdentity`|参照されたモジュールを含むアセンブリの一意の識別子。|  
+|`lpModuleName`|参照されているモジュールの名前。|  
   
 ## <a name="remarks"></a>Remarks  
- `ModuleBindInfo` パラメーターとして渡される`IHostAssemblyStore::ProvideModule`します。 ホスト提供の一意識別子`dwAppDomainId`共通言語ランタイム (CLR) にします。 呼び出しの後に、 [ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)ランタイム識別子を使用して判断するメソッドが返されるかどうかの内容、`IStream`マップされています。 そうである場合、ランタイムは、ストリームを再マップするのではなく、既存のコピーを読み込みます。 ランタイムは、呼び出しから返されるストリームのルックアップ キーとしてこの識別子を使用することも、`IHostAssemblyStore::ProvideAssembly`メソッド。 そのため、識別子は、アセンブリの要求とモジュールの要求も一意である必要があります。  
+ `ModuleBindInfo` は、`IHostAssemblyStore::ProvideModule`にパラメーターとして渡されます。 ホストは、共通言語ランタイム (CLR) に `dwAppDomainId` 一意の識別子を提供します。 [IHostAssemblyStore::P rovideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)メソッドの呼び出しが返されると、ランタイムは識別子を使用して、`IStream` の内容がマップされているかどうかを判断します。 その場合、ランタイムはストリームを再マップするのではなく、既存のコピーを読み込みます。 また、ランタイムは、`IHostAssemblyStore::ProvideAssembly` メソッドへの呼び出しから返されるストリームの参照キーとして、この識別子を使用します。 このため、識別子は、モジュール要求とアセンブリ要求に対して一意である必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.idl  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [AssemblyBindInfo 構造体](../../../../docs/framework/unmanaged-api/hosting/assemblybindinfo-structure.md)
 - [ICLRAssemblyIdentityManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)

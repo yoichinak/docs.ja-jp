@@ -5,21 +5,19 @@ helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
 - PreferComInsteadOfManagedRemoting element
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f143429c1f579ae98a03fd69a8cf3dcdd26ad2c2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1376df4efd56734f2b8da9bd76033afcce8a285b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260362"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452254"
 ---
 # <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 要素
-かどうか、ランタイムが使用 COM 相互運用機能のリモート処理ではなくすべての呼び出しに対してアプリケーション ドメイン境界を越えてを指定します。  
+アプリケーションドメインの境界を越えたすべての呼び出しに対して、ランタイムがリモート処理の代わりに COM 相互運用を使用するかどうかを指定します。  
   
- \<configuration>  
-\<runtime>  
-\<PreferComInsteadOfManagedRemoting >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -27,24 +25,24 @@ ms.locfileid: "55260362"
 <PreferComInsteadOfManagedRemoting enabled="true|false"/>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性および要素  
- 以降のセクションでは、属性、子要素、および親要素について説明します。  
+## <a name="attributes-and-elements"></a>属性と要素  
+ 次のセクションでは、属性、子要素、親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> ランタイムがアプリケーション ドメイン境界を越えて、リモート処理ではなく COM 相互運用機能を使用するかどうかを示します。|  
+|`enabled`|必須の属性です。<br /><br /> アプリケーションドメインの境界を越えて、ランタイムがリモート処理ではなく COM 相互運用を使用するかどうかを示します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|`false`|ランタイムは、アプリケーション ドメイン境界を越えて、リモート処理を使用します。 既定値です。|  
-|`true`|ランタイムは、アプリケーション ドメイン境界を越えて、COM 相互運用機能を使用します。|  
+|`false`|ランタイムは、アプリケーションドメインの境界を越えてリモート処理を使用します。 これは既定値です。|  
+|`true`|ランタイムは、アプリケーションドメインの境界を越えて COM 相互運用を使用します。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし]。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -53,17 +51,17 @@ ms.locfileid: "55260362"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>Remarks  
- 設定すると、`enabled`属性を`true`、次のように、ランタイム。  
+## <a name="remarks"></a>コメント  
+ `enabled` 属性を `true`に設定すると、ランタイムは次のように動作します。  
   
--   ランタイムは呼び出しません[iunknown::queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867)の[IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)インターフェイスの場合に、 [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003)インターフェイスが COM インターフェイスを使用してドメインを入力します。 代わりに、構築、[ランタイム呼び出し可能ラッパー](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) オブジェクト。  
+- [Iunknown](/windows/win32/api/unknwn/nn-unknwn-iunknown)インターフェイスが COM インターフェイス経由でドメインに入るとき、ランタイムは[Imanagedobject](../../../unmanaged-api/hosting/imanagedobject-interface.md)インターフェイスに対して[iunknown:: QueryInterface](/windows/win32/api/unknwn/nf-unknwn-iunknown-queryinterface(q))を呼び出しません。 代わりに、オブジェクトをラップする[ランタイム呼び出し可能ラッパー](../../../../standard/native-interop/runtime-callable-wrapper.md) (RCW) を構築します。  
   
--   受信すると、ランタイムは E_NOINTERFACE を返します、`QueryInterface`を呼び出し、 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md)のいずれかのインターフェイス[COM 呼び出し可能ラッパー](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW) このドメインで作成されています。  
+- ランタイムは、このドメインで作成されたすべての[COM 呼び出し可能ラッパー](../../../../standard/native-interop/com-callable-wrapper.md) (CCW) に対して[Imanagedobject](../../../unmanaged-api/hosting/imanagedobject-interface.md)インターフェイスの `QueryInterface` 呼び出しを受け取ったときに、E_NOINTERFACE を返します。  
   
- これら 2 つの動作では、アプリケーション ドメインの境界の使用 COM を越えてマネージ オブジェクトとリモート処理ではなく COM 相互運用機能の間のインターフェイスを COM 経由ですべての呼び出しを確認してください。  
+ これらの2つの動作により、アプリケーションドメインの境界を越えたマネージオブジェクト間の COM インターフェイス経由のすべての呼び出しで、リモート処理ではなく COM と COM の相互運用が使用されるようになります。  
   
 ## <a name="example"></a>例  
- 次の例では、分離境界を越えて相互運用機能、ランタイムで COM を使用することを指定する方法を示します。  
+ 次の例では、ランタイムが分離の境界を越えて COM 相互運用機能を使用するように指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -73,6 +71,7 @@ ms.locfileid: "55260362"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>参照
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)

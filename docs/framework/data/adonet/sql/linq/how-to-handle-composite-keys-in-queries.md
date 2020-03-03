@@ -1,18 +1,18 @@
 ---
-title: '方法: クエリで複合キーを処理します。'
+title: '方法: クエリで複合キーを処理する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ce2f14fd-1038-458a-91e3-a078c61f0d10
-ms.openlocfilehash: 0ee0bda8c3ee46cb6e08ee415def68a4a9832617
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6c6e7d1c1d29a049b50f4ea9d70ef5cd9e89a44
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523482"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793571"
 ---
-# <a name="how-to-handle-composite-keys-in-queries"></a>方法: クエリで複合キーを処理します。
+# <a name="how-to-handle-composite-keys-in-queries"></a>方法: クエリで複合キーを処理する
 演算子によっては、引数を 1 つしか受け取らないものがあります。 1 つの演算子にデータベースの複数の列を含めるには、その組み合わせを表す匿名型を作成する必要があります。  
   
 ## <a name="example"></a>例  
@@ -28,4 +28,5 @@ ms.locfileid: "54523482"
  [!code-vb[DLinqCompositeKeys#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCompositeKeys/vb/Module1.vb#2)]  
   
 ## <a name="see-also"></a>関連項目
-- [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
+
+- [クエリの概念](query-concepts.md)

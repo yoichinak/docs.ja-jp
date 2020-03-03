@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - metadata [WCF], overview
 ms.assetid: 1d37645e-086d-4d68-a358-f3c5b6e8205e
-ms.openlocfilehash: 38a0eec31c4a0910048a0ed674e997d685747862
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f9c903dd520f1aa85fc0577264288ecbc8c62a7f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046563"
 ---
 # <a name="metadata-architecture-overview"></a>メタデータ アーキテクチャの概要
 Windows Communication Foundation (WCF) は、エクスポート、公開、取得、およびサービスのメタデータをインポートするためのさまざまなインフラストラクチャを提供します。 WCF サービスでは、メタデータを使用して、Svcutil.exe などのツールが、サービスにアクセスするためのクライアント コードを自動的に生成されるように、サービスのエンドポイントと対話する方法について説明します。  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) は、エクスポート、公開、取�
  エンドポイントのバインドが変化するイベントでサービス エンドポイントへのチャネルを作成する、または、同じコントラクトを使用しているがバインドが異なるエンドポイントへのチャネルを作成するために使用するバインドを動的に更新することができます。 <xref:System.ServiceModel.Description.MetadataResolver> 静的クラスを使用して、特定のコントラクトを実装しているサービス エンドポイントのメタデータを、実行時に取得またはインポートできます。 その後、インポートした <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> オブジェクトを使用して、必要なエンドポイントに対するクライアントまたはチャネル ファクトリを作成できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description>
 - [メタデータ形式](../../../../docs/framework/wcf/feature-details/metadata-formats.md)
 - [メタデータのエクスポートとインポート](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

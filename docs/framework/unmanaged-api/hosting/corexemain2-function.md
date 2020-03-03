@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 72ea68b4-689f-4733-9416-9664b75e8892
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc5324683daa9a02a6a89b2a3fb57ee9fd5dbe72
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625147"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136962"
 ---
-# <a name="corexemain2-function"></a>_CorExeMain2 関数
+# <a name="_corexemain2-function"></a>_CorExeMain2 関数
 指定されたメモリ マップト コードのエントリ ポイントを実行します。 この関数は、オペレーティング システム ローダーによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
    [in] PBYTE           pUnmappedPE,  
    [in] DWORD           cUnmappedPE,  
@@ -38,30 +36,31 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pUnmappedPE`  
- [in]メモリ マップト コードへのポインター。  
+ からメモリマップトコードへのポインター。  
   
  `cUnmappedPE`  
- [in]要素の数`pUnmappedPE`を保持できます。  
+ から`pUnmappedPE` 保持できる要素の数。  
   
  `pImageNameIn`  
- [in]実行可能イメージの名前へのポインター。  
+ から実行可能イメージの名前へのポインター。  
   
  `pLoadersFileName`  
- [in]ローダーのファイルの名前。  
+ からローダーファイルの名前。  
   
  `pCmdLine`  
- [in]コマンド ライン パラメーター、存在する場合。  
+ からコマンドラインパラメーター (存在する場合)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ グローバル静的関数](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

@@ -15,43 +15,41 @@ helpviewer_keywords:
 ms.assetid: 83406cb2-5797-4402-872d-89c9516aefec
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2b65a621541f2b4a800f6b3708a6b257374c5866
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 21da69d4bff0f17eb607dda45fb7dbafea8c59f7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419820"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128767"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended メソッド
-デバッガーがこのプロセスを停止したため、指定したスレッドが中断されたかどうかを示す値を取得します。  
+デバッガーがこのプロセスを停止した結果として、指定されたスレッドが中断されたかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsOSSuspended(  
     [in]  DWORD threadID,  
     [out] BOOL  *pbSuspended);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `threadID`  
- [in]対象のスレッドの ID。  
+ から対象のスレッドの ID。  
   
  `pbSuspended`  
- [out]ブール値へのポインター`true`中断です。 それ以外の場合、指定されたスレッドがあった場合 *`pbSuspended`は`false`します。  
+ 入出力指定したスレッドが中断された場合に `true` されるブール値へのポインター。それ以外の場合、*`pbSuspended` は `false`です。  
   
-## <a name="remarks"></a>コメント  
- デバッガーがこのプロセスを停止したため、指定されたスレッドが中断されたときに、指定されたスレッドの Win32 の中断カウントが 1 ずつインクリメントされます。 デバッガー ユーザー インターフェイス (UI) がオペレーティング システムを表示する場合に、アカウントには、この情報を取得することがあります (OS) がユーザーに、スレッドの数を中断します。  
+## <a name="remarks"></a>Remarks  
+ デバッガーがこのプロセスを停止した結果として、指定されたスレッドが中断された場合、指定されたスレッドの Win32 中断カウントは1だけインクリメントされます。 デバッガーのユーザーインターフェイス (UI) では、ユーザーに対してスレッドのオペレーティングシステム (OS) の中断カウントを表示すると、この情報を考慮に入れることができます。  
   
- `IsOSSuspended`メソッドは、アンマネージ デバッグのコンテキストでのみ意味します。 マネージ デバッグ中には、スレッドは、協調的な中断ではなく OS 中断がします。  
+ `IsOSSuspended` メソッドは、アンマネージデバッグのコンテキストでのみ意味があります。 マネージデバッグ中に、スレッドは、OS が中断するのではなく協調的に中断されます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

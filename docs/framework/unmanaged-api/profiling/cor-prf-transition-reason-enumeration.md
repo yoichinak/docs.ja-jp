@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: da941118-01b7-4197-ae5b-9f2f8adcd623
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 2556196b7c8f81709e6880962e8ff36e126dd8b0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1c3c311fd431b6c0b18af3d6516973b2471cfabd
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450064"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867056"
 ---
-# <a name="corprftransitionreason-enumeration"></a>COR_PRF_TRANSITION_REASON 列挙型
-マネージ コードからアンマネージ コードへ、またはその逆の遷移の理由を示します。  
+# <a name="cor_prf_transition_reason-enumeration"></a>COR_PRF_TRANSITION_REASON 列挙型
+マネージド コードからアンマネージド コードへ、またはその逆の遷移の理由を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_TRANSITION_CALL,  
     COR_PRF_TRANSITION_RETURN  
@@ -39,17 +37,17 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_TRANSITION_CALL`|移行では、関数を呼び出すのためです。|  
-|`COR_PRF_TRANSITION_RETURN`|移行では、関数から返されるのためです。|  
+|`COR_PRF_TRANSITION_CALL`|遷移は、関数の呼び出しによるものです。|  
+|`COR_PRF_TRANSITION_RETURN`|遷移は、関数からの戻り値によるものです。|  
   
 ## <a name="remarks"></a>コメント  
- プロファイラーを受け取る遷移が発生すると、 [icorprofilercallback::managedtounmanagedtransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-managedtounmanagedtransition-method.md)または[icorprofilercallback::unmanagedtomanagedtransition](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-unmanagedtomanagedtransition-method.md)コールバック、うちいずれか値を提供、`COR_PRF_TRANSITION_REASON`遷移の理由を示す列挙体です。  
+ 遷移が発生すると、プロファイラーは[ICorProfilerCallback:: ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md)または[ICorProfilerCallback:: UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md)コールバックを受け取ります。いずれの場合も、遷移の理由を示すために `COR_PRF_TRANSITION_REASON` 列挙値を提供します。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

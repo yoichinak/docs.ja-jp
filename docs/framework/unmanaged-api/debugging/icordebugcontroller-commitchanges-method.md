@@ -15,17 +15,13 @@ helpviewer_keywords:
 ms.assetid: f8e38bf6-0312-4517-bed5-42031ed86331
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1af7bfa321313ee8d3e7e72ffd5703a8ced561e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57481c858c876fd9c60425bced7a13297086f0d6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744766"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125447"
 ---
 # <a name="icordebugcontrollercommitchanges-method"></a>ICorDebugController::CommitChanges メソッド
-`CommitChanges` は互換性のために残されています。 このメソッドを呼び出さないでください。  
-  
-## <a name="see-also"></a>関連項目
 
+`CommitChanges` は互換性のために残されています。 このメソッドを呼び出さないでください。

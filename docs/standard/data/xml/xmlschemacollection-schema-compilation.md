@@ -6,23 +6,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76f28770-7126-428f-9ed5-7b5ae8bad5ee
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3d47fa4d4ef7a55182dd27aa6f64542fec1fa99c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 1f300bab01f94af8c70c8b67a69a73fbc5ba5bac
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704317"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709830"
 ---
 # <a name="xmlschemacollection-schema-compilation"></a>XmlSchemaCollection スキーマのコンパイル
 **XmlSchemaCollection** は、XDR (XML-Data Reduced) スキーマや XML スキーマ定義言語 (XSD) スキーマを格納および検証できるキャッシュ (ライブラリ) です。 **XmlSchemaCollection** は、ファイルや URL からスキーマにアクセスしなくて済むようにスキーマをメモリにキャッシュすることによって、パフォーマンスの向上を図ります。  
   
 > [!NOTE]
->  **XmlSchemaCollection** クラスには XDR スキーマと XML スキーマの両方が格納されますが、**XmlSchema** オブジェクトを受け取ったり返したりするメソッドおよびプロパティは XML スキーマのみをサポートします。  
+> **XmlSchemaCollection** クラスには XDR スキーマと XML スキーマの両方が格納されますが、**XmlSchema** オブジェクトを受け取ったり返したりするメソッドおよびプロパティは XML スキーマのみをサポートします。  
   
 > [!IMPORTANT]
->  <xref:System.Xml.Schema.XmlSchemaCollection> クラスは廃止されており、<xref:System.Xml.Schema.XmlSchemaSet> クラスに置き換えられています。 <xref:System.Xml.Schema.XmlSchemaSet> クラスの詳細については、「[スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)」を参照してください。  
+> <xref:System.Xml.Schema.XmlSchemaCollection> クラスは廃止されており、<xref:System.Xml.Schema.XmlSchemaSet> クラスに置き換えられています。 <xref:System.Xml.Schema.XmlSchemaSet> クラスの詳細については、「[スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)」を参照してください。  
   
 ## <a name="add-schemas-to-the-collection"></a>コレクションへのスキーマの追加  
  スキーマを **XmlSchemaCollection** に読み込むには、そのコレクションの **Add** メソッドを使用します。読み込み時に、スキーマは名前空間 URI に関連付けられます。 XML スキーマの場合、通常、この名前空間 URI がスキーマのターゲット名前空間になります。 また、XDR スキーマの場合は、この名前空間 URI は、スキーマがコレクションに追加されたときに指定された名前空間です。  

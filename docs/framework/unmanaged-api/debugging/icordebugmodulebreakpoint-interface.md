@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleBreakpoint Interface1
+title: ICorDebugModuleBreakpoint インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleBreakpoint
@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 34667162-f314-475f-ae1b-ce9cb0fcbb83
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c5ead45c6747cd69a76585c81b1ff6a4801cbb34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: df3ad3fa4ef4eeee7e23ca1629da7a8b8ce09711
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631994"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792925"
 ---
-# <a name="icordebugmodulebreakpoint-interface1"></a>ICorDebugModuleBreakpoint Interface1
+# <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint インターフェイス
+
 特定のモジュールへのアクセスを提供します。 このインターフェイスは、ICorDebugBreakpoint インターフェイスのサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetModule メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|このブレークポイントが設定されているモジュールを参照する、ICorDebugModule にインターフェイス ポインターを取得します。|  
+|[GetModule メソッド](icordebugmodulebreakpoint-getmodule-method.md)|このブレークポイントが設定されているモジュールを参照するモジュールへのインターフェイスポインターを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +46,5 @@ ms.locfileid: "54631994"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

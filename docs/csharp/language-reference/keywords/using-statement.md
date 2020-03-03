@@ -1,16 +1,15 @@
 ---
 title: using ステートメント - C# リファレンス
-ms.custom: seodec18
-ms.date: 07/20/2015
+ms.date: 10/15/2019
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: df116a200795fd20405381fd71e82d1d6fe662bc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 52cde99fd029ce50f159b2a87fbfbf47fc79dccc
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614390"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712963"
 ---
 # <a name="using-statement-c-reference"></a>using ステートメント (C# リファレンス)
 
@@ -22,7 +21,11 @@ ms.locfileid: "53614390"
 
 [!code-csharp[csrefKeywordsNamespace#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#4)]
 
-## <a name="remarks"></a>コメント
+C# 8.0 以降では、中かっこを必要としない `using` ステートメントに次の代替構文を使用できます。
+
+[!code-csharp[csrefKeywordsNamespace#New](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#ModernUsing)]
+
+## <a name="remarks"></a>Remarks
 
 <xref:System.IO.File> と <xref:System.Drawing.Font> は、アンマネージド リソース (この場合はファイル ハンドルとデバイス コンテキスト) にアクセスするマネージド型の例です。 アンマネージ リソースや、それをカプセル化するクラス ライブラリ型は他にもたくさんあります。 このような型はすべて、<xref:System.IDisposable> インターフェイスを実装する必要があります。
 
@@ -32,11 +35,17 @@ ms.locfileid: "53614390"
 
 [!code-csharp[csrefKeywordsNamespace#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#5)]
 
+新しい `using` ステートメントの構文は、非常に似たコードに変換されます。 変数が宣言されている場所で `try` ブロックが開きます。 `finally` ブロックは、囲んでいるブロックの終わり、通常はメソッドの最後に追加されます。
+
 `try`-`finally` ステートメントの詳細については、「[try-finally](try-finally.md)」のトピックを参照してください。
 
 次の例のように、`using` ステートメントでは型の複数のインスタンスを宣言できます。
 
 [!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#6)]
+
+C# 8 で導入された新しい構文を使用して、同じ型の複数の宣言を結合することもできます。 以下の例を参照してください。
+
+[!code-csharp[csrefKeywordsNamespace#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#MultipleUsing)]
 
 リソース オブジェクトをインスタンス化してから、変数を `using` ステートメントに渡すことはできますが、これはベスト プラクティスではありません。 この場合、アンマネージド リソースへのアクセスがなくなっている可能性が高いのにもかかわらず、制御が `using` ブロックを離れた後もオブジェクトはスコープ内に残ります。 つまり、完全に初期化されることはなくなります。 `using` ブロックの外側でオブジェクトを使用しようとすると、例外がスローされる可能性があります。 このため、通常は、オブジェクトを `using` ステートメントでインスタンス化して、そのスコープを `using` ブロックに制限することをお勧めします。
 
@@ -46,7 +55,7 @@ ms.locfileid: "53614390"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの [using ステートメント](~/_csharplang/spec/statements.md#the-using-statement)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関するページの [using ステートメント](~/_csharplang/spec/statements.md#the-using-statement)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 
@@ -57,3 +66,4 @@ ms.locfileid: "53614390"
 - [ガベージ コレクション](../../../standard/garbage-collection/index.md)
 - [IDisposable を実装するオブジェクトの使用](../../../standard/garbage-collection/using-objects.md)
 - [IDisposable インターフェイス](xref:System.IDisposable)
+- [C# 8.0 の using ステートメント](~/_csharplang/proposals/csharp-8.0/using.md)

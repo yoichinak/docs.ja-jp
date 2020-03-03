@@ -10,14 +10,12 @@ api_type:
 ms.assetid: 1d4424ab-5143-4e50-a84a-ceeb4ddf3bba
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 05a29022d3ebad37322aef9826f10689d2b5b06b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 239e3a82df0e6010278669f9f429bfad0d163319
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221135"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133717"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange 列挙体
 
@@ -25,7 +23,7 @@ ms.locfileid: "56221135"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 typedef enum CorDebugStateChange
 {
     PROCESS_RUNNING = 0x0000001,
@@ -42,11 +40,11 @@ typedef enum CorDebugStateChange
 
 ## <a name="remarks"></a>Remarks
 
- メンバー、`CorDebugStateChange`デバッガーを呼び出すと、列挙型が、引数として指定された、`ProcessStateChanged`メソッドで[ICorDebugProcess4::ProcessStateChanged](icordebugprocess4-processstatechanged-method.md)または[ICorDebugProcess6:。ProcessStateChanged](icordebugprocess6-processstatechanged-method.md)
+ `CorDebugStateChange` 列挙体のメンバーは、デバッガーが[ICorDebugProcess4::P rocessstatechanged](icordebugprocess4-processstatechanged-method.md)または[ICorDebugProcess6::P rocessstatechanged](icordebugprocess6-processstatechanged-method.md)で `ProcessStateChanged` メソッドを呼び出すと、引数として指定されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
 
  **ヘッダー:** CorDebug.idl、CorDebug.h
 

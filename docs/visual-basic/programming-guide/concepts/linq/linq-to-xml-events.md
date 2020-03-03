@@ -1,13 +1,13 @@
 ---
-title: LINQ to XML イベント (Visual Basic)
+title: LINQ to XML イベント
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 5860a83c6475eb8cf150bb1c439bdd8499b6a2c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06191fb94f808d9a3ece8de000dec1c5de769dde
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637798"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351934"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML イベント (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] イベントを使うと、XML ツリーが変更されるときに通知を受けることができます。  
@@ -26,7 +26,7 @@ ms.locfileid: "54637798"
   
  XML ツリーを変更するときに次のイベントが発生します。  
   
-|Event|説明|  
+|イベント|説明|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|<xref:System.Xml.Linq.XObject> またはその子孫のいずれかが変更される直前に発生します。|  
 |<xref:System.Xml.Linq.XObject.Changed>|<xref:System.Xml.Linq.XObject> またはその子孫のいずれかが変更されたときに発生します。|  
@@ -95,7 +95,7 @@ End Module
 ### <a name="comments"></a>コメント  
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```console  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XText Remove  
@@ -114,5 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

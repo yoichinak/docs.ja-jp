@@ -9,25 +9,23 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c35bbc8d4223e9404371665e7666715fa357154
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 004da94bc7345bdc294562f0e1bedf6f1735adec
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865840"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159716"
 ---
 # <a name="memory-mapped-files"></a>メモリ マップト ファイル
-メモリ マップト ファイルには、仮想メモリ内のファイルの内容が含まれています。 ファイルとメモリ空間の間のこのマッピングによって、複数のプロセスを含むアプリケーションは、メモリを直接読み書きすることでファイルを変更できます。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、「[Managing Memory-Mapped Files](https://msdn.microsoft.com/library/ms810613.aspx)」 (メモリマップ ファイルの管理) で説明されているように、マネージド コードを使用して、ネイティブ Windows 関数がメモリ マップ済みファイルにアクセスする場合と同じ方法でメモリ マップ済みファイルにアクセスできます。  
+メモリ マップト ファイルには、仮想メモリ内のファイルの内容が含まれています。 ファイルとメモリ空間の間のこのマッピングによって、複数のプロセスを含むアプリケーションは、メモリを直接読み書きすることでファイルを変更できます。 .NET Framework 4 以降では、「[Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))」 (メモリ マップ ファイルの管理) で説明されているように、マネージド コードを使用して、ネイティブ Windows 関数がメモリ マップ ファイルにアクセスする場合と同じ方法でメモリ マップ ファイルにアクセスできます。  
   
  メモリ マップト ファイルには次の 2 種類があります。  
   
--   永続化メモリ マップト ファイル  
+- 永続化メモリ マップト ファイル  
   
      永続化ファイルは、ディスク上のソース ファイルに関連付けられているメモリ マップト ファイルです。 最後のプロセスがファイルの操作を終了すると、データがディスク上のソース ファイルに保存されます。 これらのメモリ マップト ファイルは、きわめて大きなソース ファイルの操作に適しています。  
   
--   非永続化メモリ マップト ファイル  
+- 非永続化メモリ マップト ファイル  
   
      非永続化ファイルは、ディスク上のファイルに関連付けられていないメモリ マップト ファイルです。 最後のプロセスがファイルの操作を終了すると、データが失われ、ガベージ コレクションによってファイルが解放されます。 これらのファイルは、プロセス間通信 (IPC) 用の共有メモリの作成に適しています。  
   
@@ -42,10 +40,11 @@ ms.locfileid: "43865840"
   
  メモリ マップト ファイルへは、オペレーティング システムのメモリ マネージャーを通じてアクセスするため、ファイルは複数のページに自動的に分割され、必要に応じてアクセスされます。 メモリ管理を自分で行う必要はありません。  
   
- 次の図に、複数のプロセスがどのように同じメモリ マップト ファイルへの複数の重なるビューを同時に持つことができるかを示します。  
+ 次の図に、複数のプロセスがどのように同じメモリ マップト ファイルへの複数の重なるビューを同時に持つことができるかを示します。
+
+ 次の画像では、メモリ マップト ファイルへの複数の重なるビューを確認できます。  
   
- ![メモリ マップト ファイルへのビューの表示。](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-メモリ マップト ファイルへの複数の重なるビュー  
+ ![メモリ マップト ファイルへのビューへのビューを示すスクリーンショット。](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>メモリ マップト ファイルのプログラミング  
  メモリ マップト ファイル オブジェクトとそのメンバーを使用するための手引きを次の表に示します。  
@@ -63,11 +62,11 @@ ms.locfileid: "43865840"
 ### <a name="security"></a>セキュリティ  
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFileAccess> 列挙体をパラメーターとして受け取る次のメソッドを使用して、メモリ マップト ファイルの作成時にアクセス権を適用できます。  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateFromFile%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateNew%2A?displayProperty=nameWithType>  
   
--   <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
+- <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.CreateOrOpen%2A?displayProperty=nameWithType>  
   
  <xref:System.IO.MemoryMappedFiles.MemoryMappedFile.OpenExisting%2A> をパラメーターとして受け取る <xref:System.IO.MemoryMappedFiles.MemoryMappedFileRights> メソッドを使用して、既存のメモリ マップト ファイルを開く操作に対するアクセス権を指定できます。  
   
@@ -84,7 +83,9 @@ ms.locfileid: "43865840"
   
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/cs/program.cs#1)]
  [!code-vb[MemoryMappedFiles.MemoryMappedFile.CreateFromFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.createfromfile/vb/program.vb#1)]  
-  
+
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
  別のプロセスに対して同じメモリ マップト ファイルを開く例を、次に示します。  
   
  [!code-csharp[MemoryMappedFiles.MemoryMappedFile.OpenExisting#1](../../../samples/snippets/csharp/VS_Snippets_CLR/memorymappedfiles.memorymappedfile.openexisting/cs/program.cs#1)]
@@ -95,33 +96,33 @@ ms.locfileid: "43865840"
   
  次の例は、メモリ マップト ファイルにブール値を書き込む、3 つの独立したプロセス (コンソール アプリケーション) で構成されます。 次の順序で処理が実行されます。  
   
-1.  `Process A` がメモリ マップト ファイルを作成し、値を書き込みます。  
+1. `Process A` がメモリ マップト ファイルを作成し、値を書き込みます。  
   
-2.  `Process B` がメモリ マップト ファイルを開き、値を書き込みます。  
+2. `Process B` がメモリ マップト ファイルを開き、値を書き込みます。  
   
-3.  `Process C` がメモリ マップト ファイルを開き、値を書き込みます。  
+3. `Process C` がメモリ マップト ファイルを開き、値を書き込みます。  
   
-4.  `Process A` がメモリ マップト ファイルの値を読み込み、表示します。  
+4. `Process A` がメモリ マップト ファイルの値を読み込み、表示します。  
   
-5.  `Process A` がメモリ マップト ファイルの処理を終了すると、ガベージ コレクションによってファイルが直ちにクリアされます。  
+5. `Process A` がメモリ マップト ファイルの処理を終了すると、ガベージ コレクションによってファイルが直ちにクリアされます。  
   
  この例を実行するには、次の手順に従います。  
   
-1.  アプリケーションをコンパイルし、3 つのコマンド プロンプト ウィンドウを開きます。  
+1. アプリケーションをコンパイルし、3 つのコマンド プロンプト ウィンドウを開きます。  
   
-2.  最初のコマンド プロンプト ウィンドウで、`Process A` を実行します。  
+2. 最初のコマンド プロンプト ウィンドウで、`Process A` を実行します。  
   
-3.  2 つ目のコマンド プロンプト ウィンドウで、`Process B` を実行します。  
+3. 2 つ目のコマンド プロンプト ウィンドウで、`Process B` を実行します。  
   
-4.  `Process A` に戻り、Enter キーを押します。  
+4. `Process A` に戻り、Enter キーを押します。  
   
-5.  3 つ目のコマンド プロンプト ウィンドウで、`Process C` を実行します。  
+5. 3 つ目のコマンド プロンプト ウィンドウで、`Process C` を実行します。  
   
-6.  `Process A` に戻り、Enter キーを押します。  
+6. `Process A` に戻り、Enter キーを押します。  
   
  `Process A` の出力は次のとおりです。  
   
-```  
+```console  
 Start Process B and press ENTER to continue.  
 Start Process C and press ENTER to continue.  
 Process A says: True  

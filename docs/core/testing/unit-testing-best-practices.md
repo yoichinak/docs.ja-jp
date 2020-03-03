@@ -4,13 +4,12 @@ description: .NET Core プロジェクトと .NET Standard プロジェクトの
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.custom: seodec18
-ms.openlocfilehash: 79c8e216126353bdf5fca34baf432496aacb93ce
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: a65cf3fbfb6562dbd9aaf815e1bfe469585c0fc0
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151528"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157389"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core と .NET Standard での単体テストのベスト プラクティス
 
@@ -18,7 +17,7 @@ ms.locfileid: "54151528"
 
 このガイドでは、テストの回復性とわかりやすさを維持するよう単体テストを記述する際のいくつかのベスト プラクティスについて説明します。
 
-著者: [John Reese](https://reesespieces.io)、協力者: [Roy Osherove](http://osherove.com/)
+著者: [John Reese](https://reese.dev)、協力者: [Roy Osherove](https://osherove.com/)
 
 ## <a name="why-unit-test"></a>単体テストを記述する理由
 
@@ -43,6 +42,7 @@ ms.locfileid: "54151528"
 したがって、コードに対するテストを記述する際には、必然的にコードを分離します。そうしないと、テストが困難になるからです。
 
 ## <a name="characteristics-of-a-good-unit-test"></a>適切な単体テストの特性
+
 - **高速**。 完成度の高いプロジェクトに数千もの単体テストが含まれることは、珍しくありません。 単体テストの実行にかかる時間はごくわずかで、 数ミリ秒です。
 - **独立性**。 単体テストはスタンドアロンであり、独立して実行でき、ファイル システムやデータベースなどの外部要因に対する依存関係がありません。
 - **反復可能**。 単体テストの実行では、その結果に一貫性がある必要があります。つまり、実行と実行の間で何も変更しない場合、常に同じ結果を返す必要があります。
@@ -106,11 +106,13 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="naming-your-tests"></a>テストの名前付け
 テストの名前は、次の 3 つの部分で構成される必要があります。
+
 - テスト対象のメソッドの名前。
 - それがテストされるシナリオ。
 - シナリオが呼び出されたときに想定される動作。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - 名前付け規則は、テストの目的を明示的に表すので重要です。
 
 テストは、コードが機能することを確認するだけでなく、ドキュメントも提供します。 単体テストのスイートを見るだけで、コード自体を見なくても、コードの動作を推測できます。 さらに、テストが失敗した際には、どのシナリオが想定を満たしていないかを正確に判断できます。
@@ -123,11 +125,13 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="arranging-your-tests"></a>テストの配置
 **Arrange、Act、Assert** は、単体テスト時に共通するパターンです。 名前が示すように、これは次の 3 つの主なアクションで構成されます。
+
 - オブジェクトを*配置 (Arrange)* し、必要に応じて作成および設定します。
 - オブジェクトを*操作 (Act)* します。
 - 何かが想定どおりであることを*アサート (Assert)* します。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - *配置*と*アサート*の手順で、テストする対象を明確に区別します。
 - "Act" コードにより、アサーションが混合される可能性が低くなります。
 
@@ -143,6 +147,7 @@ Assert.True(mockOrder.Validated);
 単体テストで使用する入力は、現在テストしている動作を検証するために、できる限り単純である必要があります。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - コードベースでの今後の変更に対して、テストの回復力が高くなります。
 - 実装よりもテストの動作に的が絞られます。
 
@@ -158,12 +163,13 @@ Assert.True(mockOrder.Validated);
 単体テストにおける変数の名前付けは、より重要というわけではなくとも、運用コードにおける変数の名前付けと同等に重要です。 単体テストにマジック文字列を含めることはできません。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - 特殊な値となっている原因を特定するために、テストを読む人が運用コードを調べる必要がなくなります。
 - *実現*しようとしている内容ではなく*証明*しようとしている内容が明示的に示されます。
 
 マジック文字列は、テストを読む人に混乱をきたす可能性があります。 文字列が通常からかけ離れて見えれば、パラメーターや戻り値としてその特定の値がなぜ選択されたかが気になります。 そのような場合、テストに集中するのではなく、実装の詳細を調べようとします。
 
-> [!TIP] 
+> [!TIP]
 > テストの記述時には、その意図をできる限り表現することを目指す必要があります。 マジック文字列の場合の適切なアプローチとしては、これらの値を定数に割り当てます。
 
 #### <a name="bad"></a>不適切な例:
@@ -176,6 +182,7 @@ Assert.True(mockOrder.Validated);
 単体テストの記述時には、手動による文字列の連結、および `if`、`while`、`for`、`switch` などの論理条件を回避します。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - テスト内にバグが発生する可能性が低くなります。
 - 実装の詳細ではなく、最終的な結果に的が絞られます。
 
@@ -194,13 +201,14 @@ Assert.True(mockOrder.Validated);
 テストに同様のオブジェクトまたは状態が必要な場合は、設定属性と破棄属性を利用する (存在する場合) よりもヘルパー メソッドを優先します。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - 各テスト内からコード全体を見ることができるので、テストを読むときに混乱が少なくなります。
 - 特定のテストに対する設定が多すぎたり少なすぎたりする可能性が低くなります。
 - テスト間で状態を共有して、テスト間に不要な依存関係が生じる可能性が低くなります。
 
 単体テスト フレームワークでは、テスト スイート内のすべての各単体テスト前に `Setup` が呼び出されます。 これは便利なツールとして見なされる場合もありますが、通常はテストが膨張して読みづらくなってしまいます。 各テストには、テストが稼働するためにさまざまな要件があります。 しかし、`Setup` は各テストに対してまったく同じ要件を使用することを強制します。
 
-> [!NOTE] 
+> [!NOTE]
 > xUnit では、バージョン 2.x の時点で SetUp と TearDown の両方が削除されています。
 
 #### <a name="bad"></a>不適切な例:
@@ -223,13 +231,15 @@ Assert.True(mockOrder.Validated);
 
 ### <a name="avoid-multiple-asserts"></a>複数のアサートを回避する
 テストを記述する際には、テストごとにアサートを 1 つだけ含めるようにしてください。 アサートを 1 つだけ使用する一般的なアプローチには、次のものがあります。
+
 - アサートごとに別々のテストを作成します。
 - パラメーター化されたテストを使用します。
 
 #### <a name="why"></a>なぜでしょうか。
+
 - 1 つのアサートに失敗した場合、後続のアサートは評価されません。
 - テストで複数のケースをアサートしないようにします。
-- テストが失敗した理由に関する全体像をとらえることができます。 
+- テストが失敗した理由に関する全体像をとらえることができます。
 
 テスト ケースに複数のアサートを導入した場合、すべてのアサートが実行されることは保証されません。 ほとんどの単体テスト フレームワークでは、単体テストでアサーションが失敗すると、続行中のテストは自動的に失敗と見なされます。 この際、実際には動作している機能が失敗として示されるので、混乱を招きます。
 
@@ -243,26 +253,26 @@ Assert.True(mockOrder.Validated);
 [!code-csharp[AfterMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/after/StringCalculatorTests.cs#AfterMultipleAsserts)]
 
 ### <a name="validate-private-methods-by-unit-testing-public-methods"></a>パブリック メソッドの単体テストを行うことでプライベート メソッドを検証する
-ほとんどの場合、プライベート メソッドをテストする必要はありません。 プライベート メソッドは実装の詳細です。 プライベート メソッドは独立して存在することはない、と考えることができます。 いずれかの時点で、実装の一部としてプライベート メソッドを呼び出す、パブリックに公開されたメソッドが存在することになります。 鍵となるのは、プライベート メソッドを呼び出すパブリック メソッドの最終結果です。 
+ほとんどの場合、プライベート メソッドをテストする必要はありません。 プライベート メソッドは実装の詳細です。 プライベート メソッドは独立して存在することはない、と考えることができます。 いずれかの時点で、実装の一部としてプライベート メソッドを呼び出す、パブリックに公開されたメソッドが存在することになります。 鍵となるのは、プライベート メソッドを呼び出すパブリック メソッドの最終結果です。
 
 次のケースを考えてみます。
 
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-メソッドが想定どおりに動作していることを確認する必要があるので、まずは、`trimInput` に対してテストを記述しようと考えるかもしれません。 しかし、想定外の方法で `ParseLogLine` が `sanitizedInput` を操作し、`trimInput` に対するテストが無効になる可能性があります。 
+メソッドが想定どおりに動作していることを確認する必要があるので、まずは、`TrimInput` に対してテストを記述しようと考えるかもしれません。 しかし、想定外の方法で `ParseLogLine` が `sanitizedInput` を操作し、`TrimInput` に対するテストが無効になる可能性があります。
 
-実際のテストは、パブリックに公開された `ParseLogLine` メソッドに対して行う必要があります。最終的にはこのメソッドが鍵となるためです。 
+実際のテストは、パブリックに公開された `ParseLogLine` メソッドに対して行う必要があります。最終的にはこのメソッドが鍵となるためです。
 
 ```csharp
 public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
@@ -283,11 +293,11 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }
@@ -316,7 +326,7 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 }
 ```
 
-ただし、このテストにはいくつかの問題があることがすぐにわかります。 
+ただし、このテストにはいくつかの問題があることがすぐにわかります。
 
 - テスト スイートが火曜日に実行される場合、2 番目のテストには合格しますが、最初のテストには失敗します。
 - テスト スイートが他のいずれかの曜日に実行される場合、最初のテストには合格しますが、2 番目のテストには失敗します。
@@ -331,11 +341,11 @@ public interface IDateTimeProvider
 
 public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
-    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
+    if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday)
     {
         return price / 2;
     }
-    else 
+    else
     {
         return price;
     }

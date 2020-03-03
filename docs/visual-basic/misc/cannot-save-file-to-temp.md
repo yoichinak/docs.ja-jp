@@ -4,21 +4,22 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID735
 ms.assetid: 1055fc15-9641-43b2-a40c-a0a9fbbb34b2
-ms.openlocfilehash: 593dacaa85d8d242e0904675b8ceab9e4108baff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b78c2c23e155317642f3fc0aae95f72fb05bb63f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769994"
 ---
 # <a name="cannot-save-file-to-temp"></a>ファイルを TEMP に保存できません
 コンポーネントが TEMP という名前のディレクトリを見つけられないか、または TEMP ディレクトリが含まれているドライブまたはパーティションには情報を保存するための十分な領域が不足しています。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  "TEMP" という名前のディレクトリを作成し、そのパスに等しい TEMP 環境変数を設定します。  
+1. "TEMP" という名前のディレクトリを作成し、そのパスに等しい TEMP 環境変数を設定します。  
   
-2.  不要なファイルを消去してドライブに領域を確保するか、または別のパーティションに TEMP ディレクトリを作成し、そのパスに等しい TEMP 環境変数を設定します。  
+2. 不要なファイルを消去してドライブに領域を確保するか、または別のパーティションに TEMP ディレクトリを作成し、そのパスに等しい TEMP 環境変数を設定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [エラーの種類](../../visual-basic/programming-guide/language-features/error-types.md)

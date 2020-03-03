@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 2f83b8ac71bfc53791f7de42d127badbda0d3881
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855141"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>方法: Access services と双方向コントラクト
 
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) の機能の 1 つは、双方向メッ�
           Console.WriteLine("Result ({0})", result)
        End Sub
         Public Sub Equation(ByVal equation As String)
-            Console.Writeline("Equation({0})", equation)
+            Console.WriteLine("Equation({0})", equation)
         End Sub
     End Class
     ```

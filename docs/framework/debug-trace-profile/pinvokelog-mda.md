@@ -9,14 +9,12 @@ helpviewer_keywords:
 - PInvokeLog MDA
 - managed debugging assistants (MDAs), platform invoke
 ms.assetid: b830444a-5003-49fe-b89b-b8bee22f7b1a
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: fe1d783017369a78074e5abf278ac2facf6ee32b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12d7f60bcaedc5a97a7718610f40188547f87050
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734066"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216137"
 ---
 # <a name="pinvokelog-mda"></a>pInvokeLog MDA
 `pInvokeLog` マネージド デバッグ アシスタント (MDA) は、実行中に使用される一意のプラットフォーム呼び出しシグネチャごとにアクティブになります。  
@@ -43,6 +41,7 @@ ms.locfileid: "54734066"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [アンマネージ DLL 関数の処理](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
+## <a name="see-also"></a>参照
+
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [アンマネージ DLL 関数の処理](../interop/consuming-unmanaged-dll-functions.md)

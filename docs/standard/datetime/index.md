@@ -9,14 +9,12 @@ helpviewer_keywords:
 - times [.NET Framework], time zones
 - time [.NET Framework], time zones
 ms.assetid: 295c16e0-641b-4771-94b3-39c1ffa98c13
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5355666b95d75fc18d0188c978c186690ee9ccca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d46b3cdbddeb1b4e28b7108e7925bd3f086498d0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33575428"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73122295"
 ---
 # <a name="dates-times-and-time-zones"></a>日付、時刻、およびタイム ゾーン
 
@@ -24,7 +22,7 @@ ms.locfileid: "33575428"
 
 * <xref:System.TimeZone>
 
-  システムのローカル タイム ゾーンおよび世界協定時刻 (UTC) ゾーンで作業を行うには、このクラスを使用します。<xref:System.TimeZone> クラスの機能は、<xref:System.TimeZoneInfo> クラスによって大幅に置き換えられます。
+  システムのローカル タイム ゾーンおよび世界協定時刻 (UTC) ゾーンでの作業を行うには、このクラスを使用します。 <xref:System.TimeZone> クラスの機能は、主に <xref:System.TimeZoneInfo> クラスによって置き換えられています。
 
 * <xref:System.TimeZoneInfo>
 
@@ -74,6 +72,6 @@ ms.locfileid: "33575428"
 
 [方法: ユーザーがあいまいな時刻を解決できるようにする](../../../docs/standard/datetime/let-users-resolve-ambiguous-times.md) ユーザーがあいまいな現地時刻と世界協定時刻の対応を決定できるようにする方法について説明します。
 
-## <a name="reference"></a>参照
+## <a name="reference"></a>辞書／辞典／その他
 
 <xref:System.TimeZoneInfo?displayProperty=nameWithType>

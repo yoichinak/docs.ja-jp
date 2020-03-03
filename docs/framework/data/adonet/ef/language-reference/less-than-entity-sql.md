@@ -2,19 +2,19 @@
 title: < (より小さい) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
-ms.openlocfilehash: a7762696405bbd9aa4637b4e3d91414ad38723e1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fb3f4a1c6bc0df6af3c27836f7b53b2701776366
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284779"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319693"
 ---
 # <a name="-less-than-entity-sql"></a>\< (より小さい) (Entity SQL)
 2 つの式を比較して、左の式の値が右の式の値よりも小さいかどうかを判別します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 expression < expression  
 ```  
   
@@ -28,11 +28,12 @@ expression < expression
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、「<」比較演算子を使用して 2 つの式を比較し、左の式の値が右の式の値よりも小さいかどうかを判別します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 「 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
+ [!code-sql[DP EntityServices Concepts#LESS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#less)]  
   
 ## <a name="see-also"></a>関連項目
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+
+- [Entity SQL リファレンス](entity-sql-reference.md)

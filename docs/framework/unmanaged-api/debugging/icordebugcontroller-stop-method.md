@@ -15,40 +15,38 @@ helpviewer_keywords:
 ms.assetid: c34e79be-a7fb-479e-8dec-d126a4c330e5
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4cb5b091aadbdd503dd7988f713f40a00876a2dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a107176e48a88a0a04534f7044c1e416caf4091
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608322"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788891"
 ---
 # <a name="icordebugcontrollerstop-method"></a>ICorDebugController::Stop メソッド
-プロセスでマネージ コードを実行しているすべてのスレッドを協調停止を実行します。  
+プロセスでマネージコードを実行しているすべてのスレッドで協調停止を実行します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Stop (  
     [in] DWORD dwTimeoutIgnored  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwTimeoutIgnored`  
  使用しません。  
   
-## <a name="remarks"></a>Remarks  
- `Stop` プロセスの管理を実行しているすべてのスレッドの協調停止コードを実行します。 マネージドのみのデバッグ セッション中に、アンマネージ スレッドが実行を続行できます (ただし、マネージ コードを呼び出すしようとするときはブロックされます)。 相互運用機能デバッグ セッション、中には、アンマネージ スレッドも停止されます。 `dwTimeoutIgnored`現在値が無視され、無限 (-1) として扱われます。 協調停止は、デッドロックのため失敗した場合、すべてのスレッドが中断され、E_TIMEOUT が返されます。  
+## <a name="remarks"></a>コメント  
+ `Stop` は、プロセスでマネージコードを実行しているすべてのスレッドで協調停止を実行します。 マネージ専用のデバッグセッションでは、アンマネージスレッドは引き続き実行できます (ただし、マネージコードを呼び出そうとするとブロックされます)。 相互運用機能デバッグセッションでは、アンマネージスレッドも停止します。 現在、`dwTimeoutIgnored` の値は無視され、無限 (-1) として扱われます。 デッドロックが原因で協調停止が失敗した場合、すべてのスレッドが中断され、E_TIMEOUT が返されます。  
   
 > [!NOTE]
->  `Stop` デバッグ API でのみ同期メソッドです。 ときに`Stop`場合は s_ok、プロセスが停止します。 停止のリスナーに通知するコールバックが指定されていません。 デバッガーを呼び出す必要があります[icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)を再開するプロセスが可能にします。  
+> `Stop` は、デバッグ API で唯一の同期メソッドです。 `Stop` が S_OK を返すと、プロセスは停止されます。 リスナーに停止を通知するためのコールバックが付与されていません。 デバッガーは、このプロセスを再開できるようにするために、を[実行](icordebugcontroller-continue-method.md)する必要があります。  
   
- デバッガーでは、停止カウンターを保持します。 カウンターがゼロに時に、コント ローラーが再開されます。 呼び出しごとに`Stop`またはディスパッチされた各コールバックは、カウンターをインクリメントします。 呼び出しごとに`ICorDebugController::Continue`デクリメント カウンター。  
+ デバッガーは停止カウンターを保持します。 カウンターが0になると、コントローラーが再開されます。 `Stop` またはディスパッチされた各コールバックの各呼び出しは、カウンターをインクリメントします。 `ICorDebugController::Continue` を呼び出すたびに、カウンターがデクリメントされます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -57,4 +55,3 @@ HRESULT Stop (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

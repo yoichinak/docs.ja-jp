@@ -16,21 +16,19 @@ helpviewer_keywords:
 ms.assetid: f8d50cb3-ec4f-4529-8fe3-bd61fd28e13c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 56f7f36baa71a3e58dfa3314ebe06a018cfd3468
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cdf88ef193df71a638fff43add1a9648d8631731
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408230"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789122"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 関数
 プロセスで CLR を列挙するメカニズムを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateCLRs (  
     [in]  DWORD      debuggeePID,  
     [out] HANDLE**   ppHandleArrayOut,  
@@ -39,7 +37,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `debuggeePID`  
  [in] 読み込まれている CLR を列挙するプロセスのプロセス識別子。  
   
@@ -68,17 +66,17 @@ HRESULT EnumerateCLRs (
 ## <a name="remarks"></a>コメント  
  この関数は、`debuggeePID` で指定された対象プロセスについて、プロセスに読み込まれている CLR のパスの配列 (`ppStringArrayOut`)、同じインデックスにある CLR の継続スタートアップ イベントを含むイベント ハンドルの配列 (`ppHandleArrayOut`)、および読み込まれている CLR の数を示す配列のサイズ (`pdwArrayLengthOut`) を返します。  
   
- Windows オペレーティング システムでは、`debuggeePID` が OS プロセス識別子に対応づけられます。  
+ Windows オペレーティング システムでは、`debuggeePID` がプロセス識別子に対応づけられます。  
   
- `ppHandleArrayOut` および `ppStringArrayOut` のメモリはこの関数によって割り当てられます。 呼び出す必要があります、割り当てられたメモリを解放して[CloseCLREnumeration 関数](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)です。  
+ `ppHandleArrayOut` および `ppStringArrayOut` のメモリはこの関数によって割り当てられます。 割り当てられたメモリを解放するには、 [CloseCLREnumeration 関数](closeclrenumeration-function.md)を呼び出す必要があります。  
   
  両方の配列パラメーターを null に設定してこの関数を呼び出すことで、対象プロセス内の CLR の数を取得できます。 この数から、呼び出し元は、作成されるバッファーのサイズを推論できます (`(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`)。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** dbgshim.h  
+ **ヘッダー:** dbgshim. h  
   
- **ライブラリ:** dbgshim.dll  
+ **ライブラリ:** dbgshim .dll  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

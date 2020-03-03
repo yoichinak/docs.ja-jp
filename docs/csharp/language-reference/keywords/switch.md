@@ -1,6 +1,6 @@
 ---
 title: C# switch ステートメント
-ms.date: 08/14/2018
+ms.date: 04/09/2019
 f1_keywords:
 - switch_CSharpKeyword
 - switch
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 371b6e232e9d97df3ce34d69bcb10155c1242e1e
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084720"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345387"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)
 
@@ -41,13 +41,13 @@ match 式は、`case` ラベルのパターンと照合する値を指定しま�
    switch (expr)
 ```
 
-C# 6 では、match 式は、次の型の値を返す必要があります。
+C# 6 以前では、match 式は、次の型の値を返す必要があります。
 
-- [char](char.md)。
-- [string](string.md)。
-- [bool](bool.md)。
-- 整数値。[int](int.md)、[long](long.md) など。
-- [enum](enum.md)値。
+- [char](../builtin-types/char.md)。
+- [string](../builtin-types/reference-types.md)。
+- [bool](../builtin-types/bool.md)。
+- [integral](../builtin-types/integral-numeric-types.md) 値。`int` や `long` など。
+- [enum](../builtin-types/enum.md)値。
 
 C# 7.0 以降は、match 式は NULL 以外の式にできます。
 
@@ -57,9 +57,9 @@ C# 7.0 以降は、match 式は NULL 以外の式にできます。
 
 `switch` ステートメントには、任意の数の switch セクションを含めることができます。また、次の例に示すように、各セクションに 1 つ以上の case ラベルを含めることができます。 ただし、複数の case ラベルで同じ式を使用することはできません。
 
-[!code-csharp[switch#2](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
+[!code-csharp[switch#2](~/samples/snippets/csharp/language-reference/keywords/switch/switch2.cs#1)]
 
-1 つの switch ステートメントでは、1 つの switch セクションのみが実行されます。 C# では 1 つの switch セクションから次のセクションへ実行が連続することが許可されません。 このため、次のコードでは、コンパイラ エラー CS0163:"コントロールは 1 つの case ラベルから別のラベル (<case label>) へ流れ落ちることはできません。" が生成されます。
+1 つの switch ステートメントでは、1 つの switch セクションのみが実行されます。 C# では 1 つの switch セクションから次のセクションへ実行が連続することが許可されません。 このため、次のコードでは、コンパイラ エラー CS0163:"コントロールは 1 つの case ラベル (\<case label>) から別の case ラベルへフォールスルーすることはできません。"
 
 ```csharp
 switch (caseSwitch)
@@ -76,7 +76,7 @@ switch (caseSwitch)
 
 この要件は、通常、[break](break.md) ステートメント、[goto](goto.md) ステートメント、または [return](return.md) ステートメントを使用して、switch セクションを明示的に終了することによって満たされます。 ただし、次のコードも有効です。このコードでは、プログラムの制御が `default` switch セクションにフォール スルー (流れ落ちる、case ラベルを超えてコードを実行することが) できないためです。
 
-[!code-csharp[switch#4](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
+[!code-csharp[switch#4](~/samples/snippets/csharp/language-reference/keywords/switch/switch4.cs#1)]
 
 match 式に一致する case ラベルが含まれた switch セクションにおけるステートメント リストの実行は、ステートメント リストに沿って最初のステートメントから順に開始され、通常は、`break`、`goto case`、`goto label`、`return`、または`throw` などのジャンプ ステートメントに達するまで続きます。 この時点で、制御は `switch` ステートメントの外側、または他の case ラベルに移動します。 `goto` ステートメントを使用する場合は、制御を constant ラベルに転送する必要があります。 この制約が必要になるのは、非 constant ラベルに制御を転送しようとすると望ましくない副作用 (コード内の意図しない場所に制御を転送してしまったり、無限ループを作成してしまったりなど) が生じる可能性があるためです。
 
@@ -92,7 +92,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 
 次の例は、相互に排他的でない各種パターンを使用する `switch` ステートメントを示しています。 `case 0:` switch セクションを移動し、そのセクションが `switch` ステートメントの最初のセクションでなくなると、C# によってコンパイラ エラーが生成されます。値がゼロの整数は、整数すべてのサブセットであるためです。これは、`case int val` ステートメントで定義されているパターンです。
 
-[!code-csharp[switch#5](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
+[!code-csharp[switch#5](~/samples/snippets/csharp/language-reference/keywords/switch/switch5.cs#1)]
 
 この問題を修正し、コンパイラの警告が表示されないようにするには、次の 2 つのいずれかの方法を使用します。
 
@@ -120,12 +120,12 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 
 ここで *constant* はテスト対象の値です。 *constant* には、次のいずれかの定数式を指定できます。
 
-- [bool](bool.md) リテラル。`true` または `false`。
-- 任意の整数定数。[int](int.md)、[long](long.md)、[byte](byte.md) など。
+- [bool](../builtin-types/bool.md) リテラル。`true` または `false`。
+- 任意の [integral](../builtin-types/integral-numeric-types.md) 定数。`int`、`long`、`byte` など。
 - 宣言された `const` 変数の名前。
 - 列挙定数。
-- [char](char.md) リテラル。
-- [string](string.md) リテラル。
+- [char](../builtin-types/char.md) リテラル。
+- [string](../builtin-types/reference-types.md) リテラル。
 
 定数式は以下のように評価されます。
 
@@ -135,11 +135,11 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 
 次の例では、定数パターンを使用して、特定の日付が、週末か、週の開始日または最終日か、週の途中かを判断します。 つまり、現在の日付の <xref:System.DateTime.DayOfWeek?displayProperty=nameWithType> プロパティを、<xref:System.DayOfWeek> 列挙のメンバーと照合します。
 
-[!code-csharp[switch#7](../../../../samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
+[!code-csharp[switch#7](~/samples/snippets/csharp/language-reference/keywords/switch/const-pattern.cs#1)]
 
 次の例では、定数パターンを使用して、自動コーヒー メーカーをシミュレートするコンソール アプリケーションのユーザー入力を処理します。
 
-[!code-csharp[switch#6](../../../../samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
+[!code-csharp[switch#6](~/samples/snippets/csharp/language-reference/keywords/switch/switch6.cs)]
 
 ### <a name="type-pattern"></a>型パターン
 
@@ -149,7 +149,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
    case type varname
 ```
 
-ここで *type* は、*expr* の結果が変換される型の名前、*varname* は、一致した場合に *expr* の結果が変換されるオブジェクトを表しています。
+ここで *type* は、*expr* の結果が変換される型の名前、*varname* は、一致した場合に *expr* の結果が変換されるオブジェクトを表しています。 コンパイル時の型 *expr* は、C# 7.1 以降では、ジェネリック型パラメーターにすることができます。
 
 以下のいずれかの条件が true である場合に `case` 式は `true` となります。
 
@@ -163,7 +163,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 
 case 式が true の場合は、*varname* が確実に割り当てられ、switch セクションにのみローカル スコープが含まれます。
 
-`null` は型とは一致しません。 `null` を一致させるには、次の `case` ラベルを使用します。
+`null` は型と一致しないことに注意してください。 `null` を一致させるには、次の `case` ラベルを使用します。
 
 ```csharp
 case null:
@@ -173,11 +173,17 @@ case null:
 
 [!code-csharp[type-pattern#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern.cs#1)]
 
+次のコードに示すように、`object` の代わりに、コレクションの型を型パラメーターとして使用して、ジェネリック メソッドを作成することができます。
+
+[!code-csharp[type-pattern#3](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern3.cs#1)]
+
+ジェネリック バージョンは、2 つの点で最初のサンプルと異なります。 まず、`null` の case を使用できません。 コンパイラは任意の型 `T` を `object` 以外の型に変換できないため、定数の case は使用できません。 `default` の case だったものは、null 以外の `object` をテストするようになりました。 つまり、`default` の case は `null` のみをテストします。
+
 パターン マッチングを使用しない場合、このコードは次のように記述できます。 型パターン マッチングを使用することにより、変換結果が `null` であるかどうかをテストしたり、キャストを繰り返したりする必要がなくなるため、コードがよりコンパクトで読みやすくなります。
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" /> `case`ステートメントおよび `when` 句
+## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />`case`ステートメントおよび `when` 句
 
 C# 7.0 以降では、case ステートメントは相互に排他的である必要がないため、`when` 句を追加して、case ステートメントを true に評価するために満たされなければならない条件を指定できます。 `when` 句には、ブール値を返す任意の式を指定できます。
 
@@ -185,11 +191,11 @@ C# 7.0 以降では、case ステートメントは相互に排他的である�
 
 [!code-csharp[when-clause#1](~/samples/snippets/csharp/language-reference/keywords/switch/when-clause.cs#1)]
 
-この例で、`Shape`オブジェクトが `null` かどうかをテストしようとする `when` 句は実行されません。 `null` をテストするための正しい型パターンは `case null:` です。
+この例で、`Shape` オブジェクトが `null` かどうかをテストしようとする `when` 句は実行されません。 `null` をテストするための正しい型パターンは `case null:` です。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](../language-specification/index.md)に関するページの「[switch ステートメント](~/_csharplang/spec/statements.md#the-switch-statement)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関するページの「[switch ステートメント](~/_csharplang/spec/statements.md#the-switch-statement)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 

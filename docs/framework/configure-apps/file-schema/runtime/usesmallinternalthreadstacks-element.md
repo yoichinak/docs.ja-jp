@@ -5,21 +5,19 @@ helpviewer_keywords:
 - UseSmallInternalThreadStacks element
 - <UseSmallInternalThreadStacks> element
 ms.assetid: 1e3f6ec0-1cac-4e1c-9c81-17d948ae5874
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d78d03956db3f50b4d01f06c9a6438afd62fac5d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2fd776ce8605e6dcf288dcb3852ded16638a1873
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289797"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73114918"
 ---
 # <a name="usesmallinternalthreadstacks-element"></a>\<UseSmallInternalThreadStacks > 要素
-要求の共通言語ランタイム (CLR) がメモリを減らすことは、内部的には、これらのスレッドの既定のスタック サイズを使用する代わりに使用する特定のスレッドの作成時に、明示的なスタック サイズを指定することによって使用されます。  
+共通言語ランタイム (CLR) が、内部で使用する特定のスレッドを作成するときに明示的なスタックサイズを指定することによって、メモリの使用量を削減するように要求します。これらのスレッドの既定のスタックサイズは使用されません。  
   
- \<configuration > 要素  
-\<ランタイム > 要素  
-\<UseSmallInternalThreadStacks > 要素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<UseSmallInternalThreadStacks>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,14 +32,14 @@ ms.locfileid: "55289797"
   
 |属性|説明|  
 |---------------|-----------------|  
-|enabled|必須の属性です。<br /><br /> 内部的に使用する特定のスレッドを作成するときを要求するかどうかに既定のスタック サイズではなく、CLR の使用の明示的なスタック サイズを指定します。 明示的なスタック サイズは 1 MB の既定のスタック サイズより小さいです。|  
+|enabled|必須の属性です。<br /><br /> 内部で使用する特定のスレッドを作成するときに、CLR が既定のスタックサイズではなく明示的なスタックサイズを使用するように要求するかどうかを指定します。 明示的なスタックサイズは、既定のスタックサイズの 1 MB よりも小さくなっています。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|true|明示的なスタック サイズを要求します。|  
-|False|既定のスタック サイズを使用します。 これは、既定値は、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]します。|  
+|true|明示的なスタックサイズを要求します。|  
+|False|既定のスタックサイズを使用します。 これは .NET Framework 4 の既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -54,15 +52,15 @@ ms.locfileid: "55289797"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- この構成要素は、CLR は、その内部のスレッドの場合は、要求が受け入れられます、明示的なスレッドのサイズが既定のサイズより小さいために、プロセスより少ない仮想メモリの使用を要求に使用されます。  
+ この構成要素は、プロセスでの仮想メモリの使用量の削減を要求するために使用されます。これは、CLR が内部スレッドに使用する明示的なスレッドサイズ (要求が受け入れられた場合) が既定のサイズよりも小さいためです。  
   
 > [!IMPORTANT]
->  この構成要素は、絶対要件ではなく、CLR に要求です。 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]X86 にのみ、要求が受け入れられますアーキテクチャ。 この要素は、CLR の将来のバージョンでは完全に無視されます。 または選択した内部スレッドに常に使用される明示的なスタック サイズを指定して置換可能性があります。  
+> この構成要素は、絶対的な要件ではなく、CLR への要求です。 .NET Framework 4 では、要求は x86 アーキテクチャに対してのみ受け入れられます。 この要素は、CLR の将来のバージョンでは完全に無視される場合もあれば、選択した内部スレッドで常に使用される明示的なスタックサイズに置き換えられる場合もあります。  
   
- この構成要素、信頼性が低下より小さい仮想メモリの使用を要求が受け入れられる場合スタック サイズが小さくなる可能性があるため可能性のあるスタックを指定することは、多くの場合オーバーフローします。  
+ この構成要素を指定すると、CLR が要求を受け入れた場合に、より小さなスタックサイズによってスタックオーバーフローが発生する可能性があるため、仮想メモリの使用量が少なくなります。  
   
 ## <a name="example"></a>例  
- 次の例では、CLR の使用の明示的なスタックのサイズが内部的に使用するスレッドを特定のことを要求する方法を示します。  
+ 次の例は、CLR が内部で使用する特定のスレッドに対して明示的なスタックサイズを使用するように要求する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -73,5 +71,6 @@ ms.locfileid: "55289797"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)

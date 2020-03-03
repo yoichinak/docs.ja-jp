@@ -1,4 +1,12 @@
-### <a name="clickonce-supports-sha-256-on-40-targeted-apps"></a>4.0 を対象とするアプリの ClickOnce が SHA-256 に対応
+---
+ms.openlocfilehash: 9bf6972812bdf4a385b99fe34d2cd3cd8a91c8cf
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804581"
+---
+### <a name="clickonce-supports-sha-256-on-40-targeted-apps"></a>4\.0 を対象とするアプリの ClickOnce が SHA-256 に対応
 
 |   |   |
 |---|---|

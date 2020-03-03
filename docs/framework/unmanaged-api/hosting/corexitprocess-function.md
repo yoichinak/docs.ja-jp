@@ -8,6 +8,7 @@ api_location:
 - clr.dll
 - mscorwks.dll
 - mscoreei.dll
+- mscorsvr.dll
 api_type:
 - DLLExport
 f1_keywords:
@@ -17,45 +18,44 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 17143a6cac750e20c1e6ebb7874e10fb64e37edc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe61503cdf46b6b2cf568deb78b96f8fa885c203
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587490"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136932"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 関数
 現在のアンマネージ プロセスを終了します。  
   
- この関数は、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] では非推奨とされました。 使用して、 [iclrmetahost::exitprocess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)メソッド代わりにします。  
+ この関数は .NET Framework 4 で非推奨とされました。 代わりに[ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void STDMETHODCALLTYPE CorExitProcess (   
   int  exitCode  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `exitCode`  
- プロセス終了コードを指定する整数。  
+ プロセス終了コードを指定する整数です。  
   
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  以降では、 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]、`CorExitProcess`従来の Api がバインドされているランタイムだけでなく、プロセスの開始ごとランタイムが終了します。  
+> .NET Framework 4 以降では、レガシ Api がバインドされているランタイムだけでなく、プロセスで開始されたすべてのランタイムを終了 `CorExitProcess` ます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

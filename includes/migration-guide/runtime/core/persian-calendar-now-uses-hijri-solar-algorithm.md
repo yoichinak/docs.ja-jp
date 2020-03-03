@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 130c26b7d135db232eb40a2c466aa3bdb2481ace
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858422"
+---
 ### <a name="persian-calendar-now-uses-the-hijri-solar-algorithm"></a>ペルシャ暦でイスラム暦の太陽アルゴリズムが使用されるようになった
 
 |   |   |

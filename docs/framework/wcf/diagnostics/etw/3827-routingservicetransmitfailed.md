@@ -3,11 +3,11 @@ title: 3827 - RoutingServiceTransmitFailed
 ms.date: 03/30/2017
 ms.assetid: 92e94472-e91e-4c9c-81b1-b5bb11655c04
 ms.openlocfilehash: 267ffe7d8fad92025c53081427876ab607a18d32
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33464980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778431"
 ---
 # <a name="3827---routingservicetransmitfailed"></a>3827 - RoutingServiceTransmitFailed
 ## <a name="properties"></a>プロパティ  
@@ -25,4 +25,4 @@ ms.locfileid: "33464980"
 ## <a name="message"></a>メッセージ  
  '%1' への送信中にルーティング サービスでエラーが発生しました。  
   
-## <a name="details"></a>詳細
+## <a name="details"></a>説明

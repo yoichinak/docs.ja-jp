@@ -15,40 +15,38 @@ helpviewer_keywords:
 ms.assetid: 172ef8c4-2ead-4cfc-bd2e-dee4fb7191cd
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 358597edc9fbc5203e5c00a5fb4d04019281060d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 33219d9a67379244e23da49c13617a4c4a2fa66d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418273"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73133467"
 ---
 # <a name="icordebugthreadgethandle-method"></a>ICorDebugThread::GetHandle メソッド
-この ICorDebugThread のアクティブな部分の現在のハンドルを取得します。  
+このスレッドのアクティブな部分の現在のハンドルを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHandle (  
     [out] HTHREAD *phThreadHandle  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `phThreadHandle`  
- [out]このスレッドのアクティブな部分のハンドルである HTHREAD へのポインター。  
+ 入出力このスレッドのアクティブな部分のハンドルである HTHREAD へのポインター。  
   
-## <a name="remarks"></a>コメント  
- ハンドルは、プロセスを実行すると、スレッドのさまざまな部分は異なる場合がありますを変更できます。  
+## <a name="remarks"></a>Remarks  
+ ハンドルは、プロセスが実行されると変化する場合があり、スレッドのさまざまな部分で異なる場合があります。  
   
- このハンドルは、デバッグ API が所有します。 デバッガーを使用する前に複製する必要があります。  
+ このハンドルは、デバッグ API によって所有されています。 使用する前に、デバッガーがそれを複製する必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォームの ComboBox または ListBox コントロールをデータにバインドします。'
+title: ComboBox または ListBox コントロールをデータにバインドする
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,25 +15,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 4220e3e7d750e0d0caf0adbcbd2e1d96131e7c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99d9b53b32d6faae888b134d4ed486980c05a75b
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698376"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742033"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>方法: Windows フォームの ComboBox または ListBox コントロールをデータにバインドします。
-バインドすることができます、<xref:System.Windows.Forms.ComboBox>と<xref:System.Windows.Forms.ListBox>データベース内のデータの参照などのタスクを実行するデータに新しいデータの入力または既存のデータを編集します。  
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>方法 : Windows フォームの ComboBox または ListBox コントロールをデータにバインドする
+<xref:System.Windows.Forms.ComboBox> と <xref:System.Windows.Forms.ListBox> をデータにバインドして、データベース内のデータの参照、新しいデータの入力、既存のデータの編集などのタスクを実行できます。  
   
-### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox または ListBox コントロールにバインドするには  
+### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox または ListBox コントロールをバインドするには  
   
-1.  設定、`DataSource`プロパティをデータ ソース オブジェクト。 データ ソースには、<xref:System.Windows.Forms.BindingSource>データ、データ テーブル、データ ビュー、データセットにバインドするデータ マネージャー、配列、または表示を実装するクラス、<xref:System.Collections.IList>インターフェイス。 詳細については、次を参照してください。 [Data Sources Supported by Windows Forms](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)します。  
+1. `DataSource` プロパティをデータソースオブジェクトに設定します。 データソースとしては、データ、データテーブル、データビュー、データセット、データビューマネージャー、配列、または <xref:System.Collections.IList> インターフェイスを実装する任意のクラスにバインドされた <xref:System.Windows.Forms.BindingSource> があります。 詳細については、「 [Windows フォームでサポートされるデータソース](../data-sources-supported-by-windows-forms.md)」を参照してください。  
   
-2.  テーブルにバインドする場合は、設定、`DisplayMember`プロパティをデータ ソース内の列の名前にします。  
+2. テーブルにバインドする場合は、`DisplayMember` プロパティをデータソース内の列の名前に設定します。  
   
-     \- または -  
+     \- - または -  
   
-     バインドしている場合、 <xref:System.Collections.IList>、画面メンバー リスト内の型のパブリック プロパティを設定します。  
+     <xref:System.Collections.IList>にバインドする場合は、表示メンバーをリスト内の型のパブリックプロパティに設定します。  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,11 +51,12 @@ ms.locfileid: "54698376"
     ```  
   
     > [!NOTE]
-    >  実装されていないデータ ソースにバインドするかどうか、<xref:System.ComponentModel.IBindingList>インターフェイスなど、 <xref:System.Collections.ArrayList>、データ ソースが更新されたときに、バインドされたコントロールのデータは更新されません。 などがある場合、コンボ ボックスにバインドする<xref:System.Collections.ArrayList>にデータを追加し、 <xref:System.Collections.ArrayList>、コンボ ボックスではこれらの新しい項目は表示されません。 ただし、呼び出すことで更新するコンボ ボックスを強制することができます、<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>と<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>のインスタンスでメソッド、<xref:System.Windows.Forms.BindingContext>コントロールがバインドされるクラスします。  
+    > <xref:System.Collections.ArrayList>などの <xref:System.ComponentModel.IBindingList> インターフェイスを実装していないデータソースにバインドされている場合、データソースの更新時にバインドされたコントロールのデータは更新されません。 たとえば、<xref:System.Collections.ArrayList> にバインドされたコンボボックスがあり、データが <xref:System.Collections.ArrayList>に追加されている場合、これらの新しい項目はコンボボックスに表示されません。 ただし、コントロールがバインドされている <xref:System.Windows.Forms.BindingContext> クラスのインスタンスで <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> および <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> メソッドを呼び出すことによって、コンボボックスを強制的に更新できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Windows フォームでのデータ バインディング](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [データ連結と Windows フォーム](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [オプションのリストを表示するための Windows フォーム コントロール](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
+- [データ連結と Windows フォーム](../data-binding-and-windows-forms.md)
+- [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

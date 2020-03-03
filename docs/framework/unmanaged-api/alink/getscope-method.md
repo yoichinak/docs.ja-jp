@@ -1,5 +1,5 @@
 ---
-title: GetScope Method1
+title: GetScope メソッド
 ms.date: 03/30/2017
 api_name:
 - IALink.GetScope
@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: e1555328-2c71-4ece-b357-9eb6d3a8efc4
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 782697536f5e01fa29830a64e47d960a47fe4eae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 078168ae8860f18ff6f811dcc972e3eb3c857e1d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663142"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74447197"
 ---
-# <a name="getscope-method1"></a>GetScope Method1
-インポート スコープを取得します。  
+# <a name="getscope-method"></a>GetScope メソッド
+インポートスコープを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetScope(  
     mdAssembly AssemblyID,  
     mdToken FileToken,  
@@ -37,26 +35,27 @@ HRESULT GetScope(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
  インポート先のアセンブリの一意の ID。  
   
  `FileToken`  
- インポートするファイルの一意の ID。  
+ インポート元のファイルの一意の ID。  
   
  `dwScope`  
- インポートする 0 から始まるスコープです。  
+ インポートする0から始まるスコープ。  
   
  `ppImportScope`  
- 受信[IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)スコープのインターフェイス。  
+ スコープの[IMetaDataImport インターフェイス](../metadata/imetadataimport-interface.md)インターフェイスを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

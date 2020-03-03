@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: a1c4d165-9bdc-4ca8-940e-292d4ffcc338
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dbd7cd2d5ec515c529905ad524cedf257155b7e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f05eb2e6ef31cf1993a623c38bb177f7e3c297e
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569363"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75935647"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 関数
-調べることで指定したタイプ ライブラリに関する情報を返します、 [TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)構造体。  
+指定したタイプライブラリに関する情報を返します。そのためには、その[Tlibattr](/windows/win32/api/oaidl/ns-oaidl-tlibattr)構造体を調べます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetTypeLibInfo(  
     [in]   LPWSTR     szFile,  
     [out]  GUID      *pTypeLibID,  
@@ -39,39 +37,40 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szFile`  
- [in]タイプ ライブラリのファイル名。  
+ からタイプライブラリのファイル名。  
   
  `pTypeLibID`  
- [out]タイプ ライブラリの GUID です。  
+ 入出力タイプライブラリの GUID。  
   
  `pTypeLibLCID`  
- [out]タイプ ライブラリのローカリゼーション ID。  
+ 入出力タイプライブラリのローカライズ ID。  
   
  `pTypeLibPlatform`  
- [out]A [SYSKIND](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ne-oaidl-tagsyskind)タイプ ライブラリの対象のオペレーティング システムを識別するフラグ。 一般的な値は SYS_WIN32 および SYS_WIN64 です。  
+ 入出力タイプライブラリのターゲットオペレーティングシステムを識別する[SYSKIND](/windows/win32/api/oaidl/ne-oaidl-syskind)フラグ。 共通値は SYS_WIN32 と SYS_WIN64 です。  
   
  `pTypeLibMajorVer`  
- [out]タイプ ライブラリのメジャー バージョン番号。 たとえば、バージョン*x.y*、メジャー バージョン番号は*x*します。  
+ 入出力タイプライブラリのメジャーバージョン番号。 たとえば、バージョン*x.y*の場合、メジャーバージョン番号は*x*になります。  
   
  `pTypeLibMinorVer`  
- [out]タイプ ライブラリのマイナー バージョン番号。 たとえば、バージョン*x.y*、マイナー バージョン番号は*y*します。  
+ 入出力タイプライブラリのマイナーバージョン番号。 たとえば、バージョン*x.y*の場合、マイナーバージョン番号は*y*になります。  
   
 ## <a name="remarks"></a>Remarks  
- `GetTypeLibInfo`関数を呼び出して、 [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)します。 このツールは、共通言語ランタイム (CLR) アセンブリで型を記述するタイプ ライブラリを生成します。  
+ `GetTypeLibInfo` 関数は、 [tlbexp.exe (タイプライブラリエクスポーター)](../../tools/tlbexp-exe-type-library-exporter.md)によって呼び出されます。 このツールは、共通言語ランタイム (CLR) アセンブリ内の型を記述するタイプライブラリを生成します。  
   
- 任意のパラメーターが null 関数を返します、`HRESULT`の`E_POINTER`します。 返しますそれ以外の場合、`S_OK`します。  
+ いずれかのパラメーターが null の場合、関数は `E_POINTER`の `HRESULT` を返します。 それ以外の場合は、 `S_OK`を返します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** TlbRef.h  
+ **ヘッダー:** Tlf .h  
   
- **ライブラリ:** TlbRef.lib  
+ **ライブラリ:** Tlf .lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [Tlbexp ヘルパー関数](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
+
+- [Tlbexp ヘルパー関数](index.md)
 - [LoadTypeLibEx 関数](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

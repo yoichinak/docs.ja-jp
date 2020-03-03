@@ -15,40 +15,38 @@ helpviewer_keywords:
 ms.assetid: d0b8ab4b-d7d2-4fa0-945f-3d2b87e7e991
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a0b5d702e9718ce6ac537beae67fc190b152b9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5a07550d44857526e8ab4ded9f1827ef12e3bba4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405144"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192130"
 ---
 # <a name="icordebugchaingetcaller-method"></a>ICorDebugChain::GetCaller メソッド
-このチェーンと呼ばれる、チェーンを取得します。  
+このチェーンを呼び出したチェーンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCaller (  
     [out] ICorDebugChain      **ppChain  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppChain`  
- [out]呼び出しチェーンを表す ICorDebugChain オブジェクトのアドレスへのポインター。  
+ 入出力呼び出し元チェーンを表す、のオブジェクトのアドレスへのポインター。  
   
- このチェーンが自発的に呼び出された場合 (このチェーンまたはデバッガーに呼び出し履歴が初期化される場合、ケースになります) として、`ppChain`は null になります。  
+ このチェーンが自発的に呼び出された場合 (このチェーンまたはデバッガーが呼び出し履歴を初期化した場合のように)、`ppChain` は null になります。  
   
-## <a name="remarks"></a>コメント  
- 呼び出しは、スレッド間でマーシャ リングされた場合、別のスレッドで呼び出しチェーンがあります。  
+## <a name="remarks"></a>Remarks  
+ 呼び出しがスレッド間でマーシャリングされている場合は、呼び出し元のチェーンが別のスレッドに存在する可能性があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

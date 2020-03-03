@@ -3,11 +3,11 @@ title: 1143 - FlowchartNextNull
 ms.date: 03/30/2017
 ms.assetid: d0ee0829-da83-4086-aa2c-a74a4144b4a2
 ms.openlocfilehash: 0144d1931c6c1b577e8af5c803c38bef06e4afa7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923917"
 ---
 # <a name="1143---flowchartnextnull"></a>1143 - FlowchartNextNull
 ## <a name="properties"></a>プロパティ  
@@ -25,7 +25,7 @@ ms.locfileid: "33510725"
 ## <a name="message"></a>メッセージ  
  フローチャート '%1'/FlowStep - 次のノードは null です。 フローチャートの実行は終了します。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
   
 |データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  

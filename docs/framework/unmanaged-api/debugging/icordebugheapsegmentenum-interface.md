@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 20fc1b9d-e228-4107-bd76-53934c1724b9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6e5c29952fd300da1d7fb6b87a3287b34e76f863
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98e3351c9c86961d11b0985117259d0ff3b609ae
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716249"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76794419"
 ---
 # <a name="icordebugheapsegmentenum-interface"></a>ICorDebugHeapSegmentEnum インターフェイス
 マネージド ヒープのメモリ領域の列挙子を提供します。 このインターフェイスは、ICorDebugEnum インターフェイスのサブクラスです。  
@@ -30,17 +28,17 @@ ms.locfileid: "54716249"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md)|指定した数を取得[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)マネージ ヒープの領域に関する情報が含まれているインスタンス。|  
+|[Next メソッド](icordebugheapsegmentenum-next-method.md)|マネージヒープの領域に関する情報を格納している、指定した数の[COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを取得します。|  
   
-## <a name="remarks"></a>Remarks  
- `ICorDebugHeapSegmentEnum` ICorDebugEnum インターフェイスを実装するインターフェイス。  
+## <a name="remarks"></a>コメント  
+ `ICorDebugHeapSegmentEnum` インターフェイスは、ICorDebugEnum インターフェイスを実装します。  
   
- `ICorDebugHeapSegmentEnum`インスタンスには、 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)インスタンスを呼び出すことによって、 [icordebugprocess 5::enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)メソッド。 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)呼び出すことによって、コレクション内のオブジェクトを列挙することができます、 [icordebugheapsegmentenum::next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-next-method.md)メソッド。  
+ `ICorDebugHeapSegmentEnum` インスタンスには、 [ICorDebugProcess5:: EnumerateHeapRegions](icordebugprocess5-enumerateheapregions-method.md)メソッドを呼び出すことによって、 [COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスが設定されます。 コレクション内の[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトは、 [ICorDebugHeapSegmentEnum:: Next](icordebugheapsegmentenum-next-method.md)メソッドを呼び出すことによって列挙できます。  
   
- `ICorDebugHeapSegmentEnum`コレクション オブジェクトがマネージ オブジェクトを含む可能性のあるすべてのメモリ領域を列挙しますが、管理対象のオブジェクトが実際にそれらのリージョン内にあることは保証されません。 これには、空または予約済みのメモリ領域に関する情報が含まれます。  
+ `ICorDebugHeapSegmentEnum` collection オブジェクトは、マネージオブジェクトが含まれている可能性があるすべてのメモリ領域を列挙しますが、それらの領域にマネージオブジェクトが実際に存在することは保証しません。 これには、空または予約済みのメモリ領域に関する情報が含まれる場合があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -49,4 +47,5 @@ ms.locfileid: "54716249"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

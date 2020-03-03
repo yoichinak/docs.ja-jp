@@ -9,12 +9,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: d83033b0-a4cb-4d40-835e-5c1a176cde5b
-ms.openlocfilehash: d72b14e5ae878ff40e62b58e1b3663e896367778
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a01f77ea6fab7bab94f79bd8a059b133db9200e0
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679462"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69945744"
 ---
 # <a name="microsoftvisualstudioactivitiesasrclientactivitybuilderbuild"></a>Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder.Build
 ワークフロー アクティビティにデータを提供する <xref:System.Activities.ActivityBuilder> オブジェクトを作成および構成します。  
@@ -29,4 +29,5 @@ public ActivityBuilder Build();
  <xref:System.Activities.ActivityBuilder> オブジェクトを返します。  
   
 ## <a name="see-also"></a>関連項目
-- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/microsoft-visualstudio-activities-asr-clientactivitybuilder.md)
+
+- [Microsoft.VisualStudio.Activities.Asr.ClientActivityBuilder](microsoft-visualstudio-activities-asr-clientactivitybuilder.md)

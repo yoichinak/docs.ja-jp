@@ -1,5 +1,5 @@
 ---
-title: ICorDebugContext Interface1
+title: ICorDebugContext インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugContext
@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: b9907b98-4253-4cb6-a296-37ae9977c81a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0605ce4f33bda70325f166e128b1e1dabfde1ca9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 514a94cf2be03ea767752acbd986cb598467dff0
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526016"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783935"
 ---
-# <a name="icordebugcontext-interface1"></a>ICorDebugContext Interface1
+# <a name="icordebugcontext-interface"></a>ICorDebugContext インターフェイス
+
 コンテキストのオブジェクトを表します。 このインターフェイスはまだ実装されていません。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -41,4 +40,5 @@ ms.locfileid: "54526016"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

@@ -2,19 +2,22 @@
 title: <webSocketSettings>
 ms.date: 03/30/2017
 ms.assetid: bbf97e02-8dd1-4922-acac-3cd33397b249
-ms.openlocfilehash: 298bf27b171772bb039b11b5e5de70e7d45b061d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa87a1b0961425d6a9bc84769bef6e87cbc2ce96
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258448"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73732561"
 ---
 # <a name="websocketsettings"></a>\<webSocketSettings >
 Web ソケット設定を指定するために使用される構成要素。  
   
-\<system.ServiceModel >  
-\<bindings>  
-\<netHttpBinding>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp; &nbsp;[ **\<system >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**バインド**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<netHttpBinding >** ](nethttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**webSocketSettings >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -51,23 +54,23 @@ Web ソケット設定を指定するために使用される構成要素。
   
 ## <a name="transportusage-attribute"></a>transportUsage 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |WhenDuplex|コントラクトが双方向の場合に、Web ソケット プロトコルを使用します。|  
 |Always|コントラクトにかかわらず、常にWeb ソケット プロトコルを使用します。|  
 |Never|Web ソケット プロトコルを使用しません。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|\<netHttpBinding>|NetHttpBinding を指定します。|  
+|\<netHttpBinding >|NetHttpBinding を指定します。|  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、 \<webSocketSettings > 要素。  
+ 次の例は、\<webSocketSettings > 要素の使用方法を示しています。  
   
 ```xml  
 <netHttpBinding>
@@ -85,11 +88,12 @@ Web ソケット設定を指定するために使用される構成要素。
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [システムが提供するバインディングの構成](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [サービスとクライアントを構成するためのバインディングの使用](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
-- [\<binding>](../../../../../docs/framework/misc/binding.md)
+- [バインディング](../../../wcf/bindings.md)
+- [システムが提供するバインディングの構成](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [サービスとクライアントを構成するためのバインディングの使用](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding >](bindings.md)

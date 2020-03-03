@@ -1,52 +1,53 @@
 ---
-title: .NET Framework から .NET Core にコードを移植する
+title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
-ms.date: 12/07/2018
-ms.custom: seodec18
-ms.openlocfilehash: 870320c8467237e87a2675ec5cfb57647026d8ec
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.date: 10/22/2019
+ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
+ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903561"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75937313"
 ---
-# <a name="port-your-code-from-net-framework-to-net-core"></a>.NET Framework から .NET Core にコードを移植する
+# <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
 
-.NET Framework 上で実行されるコードがある場合は、.NET Core 上でコードを実行することにも関心があるかもしれません。 ここでは、移植プロセスの概要と、コードを .NET Core に移植するときに役立つツールの一覧を示します。
+現在 .NET Framework で実行しているコードの .NET Core への移植を検討する場合があります。 この記事では、次について説明します。
+
+* 移植プロセスの概要。
+* コードを .NET Core に移植するときに役立つ場合があるツールの一覧。
 
 ## <a name="overview-of-the-porting-process"></a>移植プロセスの概要
 
-プロジェクトを .NET Core に移植する場合、次のプロセスを実行することをお勧めします。 プロセスの各手順については、他の記事で詳しく説明します。
+プロジェクトを .NET Core に移植する場合は、次の手順を使用することをお勧めします。
 
-1. サードパーティの依存関係を識別し、理解します。
-
-   この手順では、サードパーティの依存関係がどのようなものか、それらにどのように依存しているか、それらが .NET Core でも実行されるかどうかを確認する方法、および実行されない場合に従う手順について理解します。 またここでは、.NET Core で使われる [PackageReference](/nuget/consume-packages/package-references-in-project-files) 形式に依存関係を移行する方法についても説明しています。
-
-2. 移植するすべてのプロジェクトを、.NET Framework 4.7.2 以降をターゲットとするように再ターゲットします。
+1. 移植するすべてのプロジェクトを、.NET Framework 4.7.2 以降をターゲットとするように再ターゲットします。
 
    この手順により、.NET Core で特定の API がサポートされない場合に、.NET Framework 固有のターゲットに対して API の代替を確実に使用できます。
 
-3. [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)使用して、アセンブリを分析し、その結果に基づいて移植を行う計画を作成します。
+2. [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) を使ってアセンブリを分析し、それらが .NET Core に移植可能かどうかを確認します。
 
-   API Portability Analyzer ツールは、コンパイル済みアセンブリを分析し、レポートを生成します。これには、移植性に関する大まかな概要と、使用中の API のうちで .NET Core では利用できないものそれぞれについての内訳が記載されています。 このレポートをコードベースの分析と共に使用して、コードを移植する方法の計画を作成します。
+   API Portability Analyzer ツールによって、コンパイル済みのアセンブリが分析され、レポートが生成されます。 このレポートには、移植性に関する大まかな概要と、使用している API のうち NET Core では利用できないものそれぞれについての内訳が表示されます。
 
-4. テスト コードを移植します。
+3. [.NET API アナライザー](../../standard/analyzers/api-analyzer.md)をプロジェクトにインストールして、一部のプラットフォームで <xref:System.PlatformNotSupportedException> をスローする API と、発生する可能性のあるその他の互換性の問題を識別します。
 
-   .NET Core への移植はコードベースにとって大きな変更となるため、コードの移植時にテストを実行できるように、テストを移植することを強くお勧めします。 MSTest、xUnit、NUnit はすべて .NET Core をサポートしています。
+   このツールは移植性アナライザーに似ていますが、.NET Core 上にコードをビルドできるかどうかが分析されるのではなく、実行時に <xref:System.PlatformNotSupportedException> をスローするような方法で API を使っているかどうかが分析されます。 .NET Framework 4.7.2 以上から移行する場合、これは一般的ではありませんが、確認することをお勧めします。 .NET Core で例外をスローする API の詳細については、「[.NET Core で常に例外をスローする API](../compatibility/unsupported-apis.md)」を参照してください。
 
-5. 移植の計画を実行します。
+4. [Visual Studio の変換ツール](/nuget/consume-packages/migrate-packages-config-to-package-reference)を使用して、すべての `packages.config` の依存関係を [PackageReference](/nuget/consume-packages/package-references-in-project-files) 形式に変換します。
 
-移植プロセス中に使うと役立つツールを、次の一覧に示します。
+   この手順では、依存関係を従来の `packages.config` 形式から変換します。 `packages.config` は .NET Core では機能しないため、パッケージの依存関係がある場合は、この変換が必須です。
 
-* .NET Portability Analyzer - [コマンドライン ツール](https://github.com/Microsoft/dotnet-apiport/releases)または [Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)。アセンブリごとの問題の内訳を含む、.NET Framework と .NET Core の間のコードの移植性に関するレポートを生成できるツール チェーンです。 詳細については、[.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) に関するページをご覧ください。
-* .NET API アナライザー - さまざまなプラットフォームでの C# API の互換性リスクの可能性と、非推奨の API の呼び出しを検出する Roslyn アナライザーです。 詳細については、「[.NET API アナライザー](../../standard/analyzers/api-analyzer.md)」をご覧ください。
-* Reverse Package Search - 型を検索し、その型を含むパッケージを検索するための[便利な Web サービス](https://packagesearch.azurewebsites.net)。
+5. .NET Core 用の新しいプロジェクトを作成してソース ファイルをコピーするか、ツールを使って既存のプロジェクト ファイルの変換を試みます。
 
-さらに、[CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) ツールを使って、小規模なソリューションや個々のプロジェクトを .NET Core プロジェクトのファイル形式に移植してみることが可能です。
+   .NET Core では、.NET Framework よりも簡素化された (異なる) [プロジェクト ファイル形式](../tools/csproj.md)が使用されます。 続行するには、プロジェクト ファイルをこの形式に変換する必要があります。
 
-> [!WARNING] 
-> CsprojToVs2017 はサードパーティ製のツールです。 すべてのプロジェクトに対してこれが動作する保証はありません。また、依存している動作に微妙な変更が生じる可能性があります。 CsprojToVs2017 は、自動化できる基本的なことを自動化するための "_開始点_" として使う必要があります。 これは、プロジェクトのファイル形式の移行に対する保証されたソリューションではありません。
+6. テスト コードを移植します。
 
->[!div class="step-by-step"]
->[次へ](net-framework-tech-unavailable.md)
+   .NET Core への移植はコードベースにとって大きな変更となるため、テスト プロジェクトを移植して、ご自分のコードの移植時にテストを実行できるようにすることを強くお勧めします。 MSTest、xUnit、NUnit はすべて .NET Core で動作します。
+
+さらに、[dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使って、より小規模なソリューションや個人のプロジェクトを、1 つの操作で .NET Core プロジェクトのファイル形式に移植してみることが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、これが原因となって、依存していた動作に微妙な変更が生じる可能性があります。 これは、自動化できる基本的なことを自動化するための "_開始点_" としてお使いください。 これは、プロジェクトの移行に対する保証されたソリューションではありません。
+
+## <a name="next-steps"></a>次の手順
+
+>[!div class="nextstepaction"]
+>[依存関係の分析](third-party-deps.md)

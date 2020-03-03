@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 79005f19ac31ba32e7e468ef61eb867a052eff40
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858951"
+---
 ### <a name="improved-accessibility-for-some-net-sdk-tools"></a>一部の .NET SDK ツールのアクセシビリティが強化されました
 
 |   |   |

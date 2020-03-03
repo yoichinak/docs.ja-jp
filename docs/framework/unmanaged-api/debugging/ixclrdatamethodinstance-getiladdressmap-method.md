@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8442d1373ede241d262ab41928fd5d9924ec9c80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66e4768acff7ab735c6ac9e8f8f51a9511f7e371
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567192"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744689"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap メソッド
 
@@ -30,7 +30,7 @@ ms.locfileid: "54567192"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT GetILAddressMap(
     [in] ULONG32                                   mapLen,
     [out] ULONG32                                 *mapNeeded,
@@ -38,13 +38,16 @@ HRESULT GetILAddressMap(
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`mapLen` [in]マップの指定された配列の長さ。
+`mapLen`\
+[in]マップの指定された配列の長さ。
 
-`mapNeeded` [out]メソッドが必要なマップ エントリの数。
+`mapNeeded`\
+[out]メソッドが必要なマップ エントリの数。
 
-`maps` [out, size_is(mapLen)]マップ エントリを格納する配列。
+`maps`\
+[out, size_is(mapLen)]マップ エントリを格納する配列。
 
 ## <a name="remarks"></a>Remarks
 
@@ -52,12 +55,12 @@ HRESULT GetILAddressMap(
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataMethodInstance インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-interface.md)
+- [デバッグ](index.md)
+- [IXCLRDataMethodInstance インターフェイス](ixclrdatamethodinstance-interface.md)

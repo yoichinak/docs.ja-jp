@@ -1,19 +1,18 @@
 ---
-title: '方法: XML ドキュメント機能を使用する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: XML ドキュメント機能を使用する方法 - C# プログラミング ガイド
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 893dc726f7b4ee2d2afa69f63d13d1f11a4692db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491637"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789769"
 ---
-# <a name="how-to-use-the-xml-documentation-features"></a>方法: XML ドキュメント機能を使用する
+# <a name="how-to-use-the-xml-documentation-features"></a>XML ドキュメント機能を使用する方法
 
 次の例では、ドキュメント化された型の基本的な概要について説明します。
 
@@ -21,7 +20,7 @@ ms.locfileid: "54491637"
 
 [!code-csharp[csProgGuideDocComments#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#15)]
 
-この例では、次の内容の .xml ファイルが生成されます。
+この例では、次の内容を含む *.xml* ファイルが生成されます。
 
 ```xml
 <?xml version="1.0"?>
@@ -121,7 +120,7 @@ XML ドキュメントは、/// で始まります。 新しいプロジェク�
 
 - ドキュメントは整形式の XML である必要があります。 XML が整形式ではない場合は、警告が生成され、エラーが発生したことを示すコメントがドキュメント ファイルに追加されます。
 
-- 開発者は、独自のタグ セットを自由に作成できます。 推奨されるタグのセットがあります (「[ドキュメント コメントとして推奨されるタグ](recommended-tags-for-documentation-comments.md)」を参照)。 推奨されるタグの一部には特別な意味があります。
+- 開発者は、独自のタグ セットを自由に作成できます。 [推奨されるタグのセット](recommended-tags-for-documentation-comments.md)があります。 推奨されるタグの一部には特別な意味があります。
 
   - \<param> タグは、パラメーターの記述に使われます。 このタグがあると、コンパイラは、パラメーターが存在すること、およびすべてのパラメーターがドキュメントで記述されていることを確認します。 検証で問題がある場合、コンパイラは警告を生成します。
 
@@ -134,6 +133,8 @@ XML ドキュメントは、/// で始まります。 新しいプロジェク�
 
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [/doc (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [C# プログラミング ガイド](../index.md)
+- [-doc (C# コンパイラ オプション)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML ドキュメント コメント](./index.md)
+- [DocFX ドキュメント プロセッサ](https://dotnet.github.io/docfx/)
+- [Sandcastle ドキュメント プロセッサ](https://github.com/EWSoftware/SHFB)

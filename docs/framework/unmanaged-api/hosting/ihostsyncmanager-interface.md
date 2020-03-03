@@ -14,44 +14,43 @@ helpviewer_keywords:
 ms.assetid: 2e081a37-6a28-4c93-b7ab-1c96a464637c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fc58e5b7902195860505399b8222afc068fbfc23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02a59b8ef63f7e866e419db4e3232da7eec19558
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713263"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132630"
 ---
 # <a name="ihostsyncmanager-interface"></a>IHostSyncManager インターフェイス
-共通言語ランタイム (CLR) に同期の Win32 関数を使用する代わりに、ホストを呼び出すことによって同期プリミティブを作成できるようにするメソッドを提供します。  
+Win32 同期関数を使用する代わりに、共通言語ランタイム (CLR) がホストを呼び出して同期プリミティブを作成できるようにするメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[CreateAutoEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createautoevent-method.md)|自動リセット イベント オブジェクトを作成します。|  
-|[CreateCrst メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createcrst-method.md)|同期のためのクリティカル セクション オブジェクトを作成します。|  
-|[CreateCrstWithSpinCount メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createcrstwithspincount-method.md)|同期のためのスピン カウントとクリティカル セクション オブジェクトを作成します。|  
-|[CreateManualEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmanualevent-method.md)|手動リセット イベント オブジェクトを作成します。|  
-|[CreateMonitorEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)|監視対象の自動リセット イベント オブジェクトを作成します。|  
-|[CreateRWLockReaderEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createrwlockreaderevent-method.md)|リーダー ロックの実装のための手動リセット イベント オブジェクトを作成します。|  
-|[CreateRWLockWriterEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createrwlockwriterevent-method.md)|ライター ロックの実装の自動リセット イベント オブジェクトを作成します。|  
-|[CreateSemaphore メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createsemaphore-method.md)|作成、 [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)待機イベントのセマフォとして使用する clr オブジェクト。|  
-|[SetCLRSyncManager メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-setclrsyncmanager-method.md)|セット、 [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)インスタンスに現在関連付ける`IHostSyncManager`インスタンス。|  
+|[CreateAutoEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createautoevent-method.md)|自動リセットイベントオブジェクトを作成します。|  
+|[CreateCrst メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createcrst-method.md)|同期のための重要なセクションオブジェクトを作成します。|  
+|[CreateCrstWithSpinCount メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createcrstwithspincount-method.md)|同期のためにスピンカウントを持つクリティカルセクションオブジェクトを作成します。|  
+|[CreateManualEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmanualevent-method.md)|手動リセットイベントオブジェクトを作成します。|  
+|[CreateMonitorEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createmonitorevent-method.md)|監視対象の自動リセットイベントオブジェクトを作成します。|  
+|[CreateRWLockReaderEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createrwlockreaderevent-method.md)|リーダーロックの実装のための手動リセットイベントオブジェクトを作成します。|  
+|[CreateRWLockWriterEvent メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createrwlockwriterevent-method.md)|ライターロックの実装用の自動リセットイベントオブジェクトを作成します。|  
+|[CreateSemaphore メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-createsemaphore-method.md)|CLR が待機イベントのセマフォとして使用する[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)オブジェクトを作成します。|  
+|[SetCLRSyncManager メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-setclrsyncmanager-method.md)|現在の `IHostSyncManager` インスタンスに関連付ける[ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)インスタンスを設定します。|  
   
 ## <a name="remarks"></a>Remarks  
- CLR のホストの実装を検出する`IHostSyncManager`呼び出すことによって、 [ihostcontrol::gethostmanager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-gethostmanager-method.md)メソッドを`IID`IID_IHostSyncManager の。  
+ CLR は、IID_IHostSyncManager の `IID` を使用して[IHostControl:: GetHostManager](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-gethostmanager-method.md)メソッドを呼び出すことによって、ホストの `IHostSyncManager` の実装を検出します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

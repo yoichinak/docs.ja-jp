@@ -1,14 +1,14 @@
 ---
-title: .NET Core で dotnet-svcutil.xmlserializer を使用する
+title: dotnet-svcutil.xmlserializer の使用
 description: .NET Core プロジェクト用にシリアル化アセンブリを事前に生成する `dotnet-svcutil.xmlserializer` NuGet パッケージの使用方法について説明します。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: f5ffed47079a3ee122c7784d0c61c4d40461ba26
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235541"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344900"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core で dotnet-svcutil.xmlserializer を使用する
 
@@ -16,7 +16,7 @@ ms.locfileid: "53235541"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降
+* [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降
 * 任意のコード エディター
 
 コマンド `dotnet --info` を使用して、既にインストールされている .NET Core SDK およびランタイムのバージョンを確認することができます。
@@ -39,7 +39,7 @@ ms.locfileid: "53235541"
 
 2. .NET Core 2.1 以降のバージョンを対象とする WCF クライアント アプリケーションとして .NET Core コンソール アプリケーションを作成します。 たとえば、次のコマンドを使用して、'MyWCFClient' という名前のアプリを作成します。
 
-    ```console
+    ```dotnetcli
     dotnet new console --name MyWCFClient
     ```
 
@@ -51,7 +51,7 @@ ms.locfileid: "53235541"
 
 3. 次のコマンドを実行して、`System.ServiceModel.Http` へのパッケージ参照を追加します。
 
-    ```console
+    ```dotnetcli
     dotnet add package System.ServiceModel.Http
     ```
 
@@ -84,7 +84,7 @@ ms.locfileid: "53235541"
 
 5. 次のコマンドを実行して `dotnet-svcutil.xmlserializer` パッケージへの参照を追加します。
   
-    ```console
+    ```dotnetcli
     dotnet add package dotnet-svcutil.xmlserializer
     ```
 

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Border
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
-ms.openlocfilehash: 0ee7ae6598feacee282cc283b82e20390418b4c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912471"
 ---
 # <a name="border"></a>境界線
 次の例では、プロパティを動的に変更する方法、<xref:System.Windows.Controls.Border>要素。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [BorderThickness 値をアニメーション化する](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+ [BorderThickness 値をアニメーション化する](how-to-animate-a-borderthickness-value.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Decorator>  
@@ -27,6 +27,6 @@ ms.locfileid: "33551068"
  <xref:System.Windows.Controls.Border>  
   
 ## <a name="related-sections"></a>関連項目  
- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [パネルの概要](panels-overview.md)  
   
- [配置、余白、パディングの概要](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [配置、余白、パディングの概要](../advanced/alignment-margins-and-padding-overview.md)

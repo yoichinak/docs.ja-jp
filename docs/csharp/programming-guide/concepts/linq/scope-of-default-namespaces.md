@@ -1,15 +1,15 @@
 ---
-title: C# での既定の名前空間のスコープ 1
+title: C# での既定の名前空間のスコープ
 ms.date: 07/20/2015
 ms.assetid: fe826236-830f-457a-9027-7ad62c909fae
-ms.openlocfilehash: 77345bfb2a4814c8cd38405c4481bea86fa84823
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7615351f6e5f8b18bd6466a83d54aa65a6c99b50
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613858"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253046"
 ---
-# <a name="scope-of-default-namespaces-in-c"></a>C# での既定の名前空間のスコープ
+# <a name="scope-of-default-namespaces-in-c"></a>C\# での既定の名前空間のスコープ
 XML ツリーで表される既定の名前空間は、クエリのスコープ内にありません。 既定の名前空間に含まれる XML が存在する場合は、<xref:System.Xml.Linq.XNamespace> 変数を宣言し、この変数をローカル名と組み合わせて作成した修飾名をクエリで使用する必要があります。  
   
  XML ツリーのクエリにおける最も一般的な問題の 1 つは、XML ツリーに既定の名前空間がある場合に、XML が名前空間に含まれていないものとして開発者がクエリを記述してしまうことです。  
@@ -45,7 +45,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>コメント  
  この例を実行すると、次の結果が得られます。  
   
-```  
+```output  
 Result set follows:  
 End of result set  
 ```  
@@ -53,7 +53,7 @@ End of result set
 ## <a name="example"></a>例  
  この例では、名前空間内にある XML の作成と、適切に記述されたクエリを示します。  
   
- 上記の不適切に記述された例に対して、C# を使用する場合は、<xref:System.Xml.Linq.XNamespace> オブジェクトを宣言して初期化し、そのオブジェクトを <xref:System.Xml.Linq.XName> オブジェクトの指定時に使用するのが正しい方法です。 この場合、<xref:System.Xml.Linq.XElement.Elements%2A> メソッドの引数は <xref:System.Xml.Linq.XName> オブジェクトです。  
+ 上記の不適切に記述された例に対して、C# を使用する場合は、<xref:System.Xml.Linq.XNamespace> オブジェクトを宣言して初期化し、そのオブジェクトを <xref:System.Xml.Linq.XName> オブジェクトの指定時に使用するのが正しい方法です。 この場合、<xref:System.Xml.Linq.XContainer.Elements%2A> メソッドの引数は <xref:System.Xml.Linq.XName> オブジェクトです。  
   
 ### <a name="code"></a>コード  
   
@@ -80,7 +80,7 @@ Console.WriteLine("End of result set");
 ### <a name="comments"></a>コメント  
  この例を実行すると、次の結果が得られます。  
   
-```  
+```output  
 Result set follows:  
 1  
 2  
@@ -90,4 +90,4 @@ End of result set
   
 ## <a name="see-also"></a>関連項目
 
-- [XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)

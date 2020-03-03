@@ -15,28 +15,26 @@ helpviewer_keywords:
 ms.assetid: d383f5cc-1144-4b6d-b57a-db34d9134ab2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a4d15d9ae63e63f98ab73e250df558dfa16002a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d5b24ee02a682b38dcf0cb3449f0dff197e91bf9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411789"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137831"
 ---
 # <a name="icordebugfunction2enumeratenativecode-method"></a>ICorDebugFunction2::EnumerateNativeCode メソッド
-ICorDebugFunction2 オブジェクトによって参照された関数のネイティブ コードのステートメントを含む ICorDebugCodeEnum オブジェクトへのインターフェイス ポインターを取得します。  
+この ICorDebugFunction2 オブジェクトによって参照される関数内のネイティブコードステートメントを格納している、コードのオブジェクトへのインターフェイスポインターを取得します。  
   
 > [!NOTE]
->  `EnumerateNativeCode` .NET Framework の現在のバージョンで実装されていません。  
+> `EnumerateNativeCode` は、.NET Framework の現在のバージョンでは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateNativeCode (  
     [out] ICorDebugCodeEnum   **ppCodeEnum  
 );  
 ```  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>［要件］  
  **ヘッダー:** CorDebug.idl、CorDebug.h

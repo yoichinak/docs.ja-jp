@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d6c658f306dd4792e3cb5dbdc9471043ca95a071
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859179"
+---
 ### <a name="httpruntimeappdomainapppath-throws-a-nullreferenceexception"></a>HttpRuntime.AppDomainAppPath で NullReferenceException がスローされる
 
 |   |   |

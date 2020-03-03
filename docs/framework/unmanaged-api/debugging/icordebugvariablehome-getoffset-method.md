@@ -1,5 +1,5 @@
 ---
-title: ICorDebugVariableHome::GetOffset メソッド
+title: 'いい変数 Home:: GetOffset メソッド'
 ms.date: 03/30/2017
 api_name:
 - ICorDebugVariableHome.GetOffset
@@ -15,40 +15,38 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 687c3bb441c2a12529c873b4fa5f9283b9326a40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6f93ec3c7ffe415c41dcf094dbde2f0a08969f6
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659070"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790997"
 ---
-# <a name="icordebugvariablehomegetoffset-method"></a>ICorDebugVariableHome::GetOffset メソッド
-変数のベース レジスタからのオフセットを取得します。  
+# <a name="icordebugvariablehomegetoffset-method"></a>いい変数 Home:: GetOffset メソッド
+変数の基本レジスタからのオフセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetOffset(  
     [out] LONG *pOffset  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pOffset`  
- [out]ベース レジスタからのオフセット。  
+ 入出力基本レジスタからのオフセット。  
   
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の値を返します。  
   
-|[値]|説明|  
+|Value|説明|  
 |-----------|-----------------|  
-|`S_OK`|変数は、レジスタの相対メモリの場所には。|  
-|`E_FAIL`|変数は、レジスタの相対メモリの場所ではありません。|  
+|`S_OK`|変数は、レジスタ相対メモリの場所にあります。|  
+|`E_FAIL`|変数がレジスタ相対メモリ位置にありません。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -57,4 +55,5 @@ HRESULT GetOffset(
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugVariableHome インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+
+- [ICorDebugVariableHome インターフェイス](icordebugvariablehome-interface.md)

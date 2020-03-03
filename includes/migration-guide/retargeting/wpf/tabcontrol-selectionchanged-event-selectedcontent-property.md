@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e80748c183a10cac4ef66c96ab48458cd9baa806
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858973"
+---
 ### <a name="tabcontrol-selectionchanged-event-and-selectedcontent-property"></a>TabControl SelectionChanged イベントおよび SelectedContent プロパティ
 
 |   |   |

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3cfbc1439be457987c058ee6d0298e93aa37f5d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716014"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216673"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 `dangerousThreadingAPI` マネージド デバッグ アシスタント (MDA) は、現在のスレッド以外のスレッドで <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> メソッドが呼び出されるとアクティブになります。  
@@ -32,7 +30,7 @@ ms.locfileid: "54716014"
   
  同期プリミティブがターゲット スレッドによって保持されている場合は、中断の間も保持されたままになります。 これにより、<xref:System.Threading.Thread.Suspend%2A> を実行するスレッドなど、別のスレッドがプリミティブのロックを取得しようとすると、デッドロックが発生することがあります。 この場合、問題自体がデッドロックとして現れます。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  <xref:System.Threading.Thread.Suspend%2A> および <xref:System.Threading.Thread.Resume%2A> を使用する必要のある設計を避けます。 スレッド間の協調では、<xref:System.Threading.Monitor>、<xref:System.Threading.ReaderWriterLock>、<xref:System.Threading.Mutex> などの同期プリミティブや、C# の `lock` ステートメントを使用します。 これらのメソッドを使用する必要がある場合は、時間を短くし、スレッドが中断状態にある間に実行されるコードの量を最小限に留めます。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -52,7 +50,7 @@ ms.locfileid: "54716014"
 ```  
   
 ## <a name="example"></a>例  
- `dangerousThreadingAPI` のアクティブ化の原因となる <xref:System.Threading.Thread.Suspend%2A> メソッド呼び出しのコード例を次に示します。  
+ <xref:System.Threading.Thread.Suspend%2A> のアクティブ化の原因となる `dangerousThreadingAPI` メソッド呼び出しのコード例を次に示します。  
   
 ```csharp
 using System.Threading;  
@@ -67,7 +65,8 @@ Thread t = new Thread(delegate() { Thread.Sleep(1000); });
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Threading.Thread>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [lock ステートメント](~/docs/csharp/language-reference/keywords/lock-statement.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [lock ステートメント](../../csharp/language-reference/keywords/lock-statement.md)

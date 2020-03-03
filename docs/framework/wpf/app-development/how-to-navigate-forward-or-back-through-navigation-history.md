@@ -1,5 +1,5 @@
 ---
-title: '方法: 移動履歴を前後へ移動する'
+title: '方法: 移動履歴の前後への移動'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,36 +8,36 @@ helpviewer_keywords:
 - history [WPF], navigating forward
 - navigation [WPF], through navigation history (forward)
 ms.assetid: 5939d574-5f53-469e-85f5-1f2b13607caa
-ms.openlocfilehash: ac3b8b71b6adf04d71cf35edbb042b82c57d8e1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76a78debdce14123cc465ac9abf4db906fe0a2df
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546267"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961352"
 ---
-# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>方法: 移動履歴を前後へ移動する
-この例では、ナビゲーション履歴のエントリに前後を移動する方法を示します。  
+# <a name="how-to-navigate-forward-or-back-through-navigation-history"></a>方法: 移動履歴の前後への移動
+この例では、ナビゲーション履歴のエントリに前方または後方に移動する方法を示します。  
   
 ## <a name="example"></a>例  
- 次のホストのコンテンツから実行されるコードは、ナビゲーション履歴、一度に 1 つのエントリを前後に移動できます。  
+ 次のホストのコンテンツから実行されるコードは、一度に1つずつ、ナビゲーション履歴を前方または後方に移動できます。  
   
--   <xref:System.Windows.Navigation.NavigationWindow> 使用します。 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Navigation.NavigationWindow>従っ<xref:System.Windows.Navigation.NavigationService>  
   
--   <xref:System.Windows.Controls.Frame> 使用します。 <xref:System.Windows.Navigation.NavigationService>  
+- <xref:System.Windows.Controls.Frame>従っ<xref:System.Windows.Navigation.NavigationService>  
   
--   [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]  
+- Internet Explorer  
   
- 前方の 1 つのエントリを移動することができます、前にする必要があります最初ことを確認エントリ"進む"ナビゲーション履歴を調べることによって、 **CanGoForward**プロパティです。 転送の 1 つのエントリを移動するを呼び出す、 **GoForward**メソッドです。 これは、次の例に示します。  
+ 1つ前のエントリに移動する前に、まず、 **CanGoForward**プロパティを調べることによって、"進む" ナビゲーション履歴にエントリがあることを確認する必要があります。 1つ前のエントリに移動するには、 **Goforward**メソッドを呼び出します。 これを次の例に示します。  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
+ [!code-csharp[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigateforwardcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateForwardCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigateforwardcode)]  
   
- 移動する前に 1 つのエントリには、する必要がありますまずことを確認エントリ ナビゲーション履歴を調べることによって、 **CanGoBack**プロパティです。 バックアップ 1 つのエントリを移動するを呼び出す、 **GoBack**メソッドです。 これは、次の例に示します。  
+ 1つ前のエントリに移動するには、まず、 **CanGoBack**プロパティを調べて、[戻る] ナビゲーション履歴にエントリがあることを確認する必要があります。 1つ前のエントリに移動するには、 **GoBack**メソッドを呼び出します。 これを次の例に示します。  
   
- [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
- [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
+ [!code-csharp[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationSnippets/CSharp/HomePage.xaml.cs#navigatebackcode)]
+ [!code-vb[HOWTONavigationSnippets#NavigateBackCODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTONavigationSnippets/visualbasic/homepage.xaml.vb#navigatebackcode)]  
   
- **CanGoForward**、 **GoForward**、 **CanGoBack**、および**GoBack**によって実装される<xref:System.Windows.Navigation.NavigationWindow>、 <xref:System.Windows.Controls.Frame>、および<xref:System.Windows.Navigation.NavigationService>です。  
+ **CanGoForward**、 **goforward**、 **CanGoBack**、および**GoBack**は、、 <xref:System.Windows.Navigation.NavigationWindow> <xref:System.Windows.Controls.Frame>、および<xref:System.Windows.Navigation.NavigationService>によって実装されます。  
   
 > [!NOTE]
->  呼び出す場合**GoForward**、ナビゲーション履歴にエントリがないとを呼び出す場合、または**GoBack**、ナビゲーション履歴にエントリがないと、<xref:System.InvalidOperationException>がスローされます。
+> **Goforward**を呼び出し、"進む" ナビゲーション履歴にエントリがない場合、または**GoBack**を呼び出し、[戻る] ナビゲーション<xref:System.InvalidOperationException>履歴にエントリがない場合は、がスローされます。

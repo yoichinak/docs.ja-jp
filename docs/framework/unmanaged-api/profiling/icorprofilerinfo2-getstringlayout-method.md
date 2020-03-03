@@ -15,60 +15,59 @@ helpviewer_keywords:
 ms.assetid: 43189651-a535-4803-a1d1-f1c427ace2ca
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b87444165f0504964b6489beb562ca2e8bd4697e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 537840ac03b4136682b78cb964950ab5670a7d7e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524287"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868617"
 ---
 # <a name="icorprofilerinfo2getstringlayout-method"></a>ICorProfilerInfo2::GetStringLayout メソッド
-文字列オブジェクトのレイアウトに関する情報を取得します。 このメソッドは非推奨、 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]、優先されると、 [icorprofilerinfo 3::getstringlayout2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getstringlayout2-method.md)メソッド。  
+文字列オブジェクトのレイアウトに関する情報を取得します。 このメソッドは .NET Framework 4 では非推奨とされており、 [ICorProfilerInfo3:: GetStringLayout2](icorprofilerinfo3-getstringlayout2-method.md)メソッドに置き換えられています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStringLayout(  
     [out] ULONG *pBufferLengthOffset,  
     [out] ULONG *pStringLengthOffset,  
     [out] ULONG *pBufferOffset);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pBufferLengthOffset`  
- [out]相対の場所のオフセットへのポインター、`ObjectID`ポインターは、文字列の長さを格納します。 長さが格納されている、`DWORD`します。  
+ 入出力文字列の長さを格納する、`ObjectID` ポインターを基準とした位置のオフセットを指すポインター。 長さは `DWORD`として格納されます。  
   
 > [!NOTE]
->  このパラメーターは、バッファーの長さではなく、文字列、自体の長さを返します。 バッファーの長さは使用できなくします。  
+> このパラメーターは、バッファーの長さではなく、文字列自体の長さを返します。 バッファーの長さは使用できなくなりました。  
   
  `PStringLengthOffset`  
- [out]相対の場所のオフセットへのポインター、`ObjectID`文字列自体の長さを格納するポインター。 長さが格納されている、`DWORD`します。  
+ 入出力文字列自体の長さを格納する、`ObjectID` ポインターを基準とした位置のオフセットを指すポインター。 長さは `DWORD`として格納されます。  
   
  `pBufferOffset`  
- [out]バッファーの相対オフセットへのポインター、 `ObjectID` 、ワイド文字の文字列を格納するポインター。  
+ 入出力ワイド文字の文字列を格納する、`ObjectID` ポインターを基準としたバッファーのオフセットへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- `GetStringLayout`メソッドに関連する、オフセットを取得する、`ObjectID`ポインターは、次が格納されている場所の。  
+## <a name="remarks"></a>コメント  
+ `GetStringLayout` メソッドは、次のが格納されている場所のオフセットを `ObjectID` ポインターを基準として取得します。  
   
--   文字列のバッファーの長さ。  
+- 文字列のバッファーの長さ。  
   
--   文字列自体の長さ。  
+- 文字列自体の長さ。  
   
--   ワイド文字の実際の文字列を格納するバッファー。  
+- ワイド文字の実際の文字列を格納するバッファー。  
   
- 文字列には、null で終わる可能性があります。  
+ 文字列は null で終わる可能性があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [ICorProfilerInfo2 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 インターフェイス](icorprofilerinfo2-interface.md)

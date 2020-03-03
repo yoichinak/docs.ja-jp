@@ -2,12 +2,12 @@
 title: 異なる構造の XML の射影 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1377df1ce7f54bc9a0f58836d7df5e5b7b54a69a
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723785"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591538"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>異なる構造の XML の射影 (C#)
 このトピックでは、ソース XML とは異なる構造の XML を射影する例について説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "54723785"
 ## <a name="example"></a>例  
  この例では、WordprocessingML ドキュメントを処理して、WordprocessingML ドキュメントから段落ノードを取得します。 それぞれの段落のスタイルおよびテキストも特定します。 最後に、別の構造を持った XML を射影します。 この例は、このチュートリアルのこれまでの例に基づいています。 射影を行う新しいステートメントについては、以下のコード内にあるコメントで説明が示されています。  
   
- この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)」を参照してください。  
+ この例のソース ドキュメントを作成する方法の詳細については、「[ソースとなる Office Open XML ドキュメントの作成 (C#)](./creating-the-source-office-open-xml-document.md)」を参照してください。  
   
  この例では、WindowsBase アセンブリのクラスを使用します。 また、<xref:System.IO.Packaging?displayProperty=nameWithType> 名前空間内の型を使用します。  
   
@@ -233,8 +233,5 @@ class Program
 ## <a name="next-steps"></a>次の手順  
  次の例では、クエリを実行して Word 文書内のテキストをすべて検索します。  
   
--   [Word 文書内のテキストの検索 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word 文書内のテキストの検索 (C#)](./finding-text-in-word-documents.md)  
   
-## <a name="see-also"></a>関連項目
-
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)

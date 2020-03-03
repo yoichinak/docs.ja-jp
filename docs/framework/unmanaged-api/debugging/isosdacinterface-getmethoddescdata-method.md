@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ea54fdd83b9470db4a08daceaa695e450f5ca1af
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825954"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764827"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData メソッド
 
@@ -30,7 +30,7 @@ ms.locfileid: "55825954"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT GetMethodDescData(
     CLRDATA_ADDRESS            methodDesc,
     CLRDATA_ADDRESS            ip,
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`methodDesc` [in]MethodDesc アドレス。
+`methodDesc`\
+[in]MethodDesc アドレス。
 
-`ip` [in]メソッドの IP アドレス。
+`ip`\
+[in]メソッドの IP アドレス。
 
-`data` [out]関連付けられている、MethodDesc 内部 Api から返されるデータ。
+`data`\
+[out]関連付けられている、MethodDesc 内部 Api から返されるデータ。
 
-`cRevertedRejitVersions` [out]元に戻された rejit バージョンの数。
+`cRevertedRejitVersions`\
+[out]元に戻された rejit バージョンの数。
 
-`rgRevertedRejitData` [out]内部 Api から返されるように、元に戻された rejit バージョンに関連付けられたデータ。
+`rgRevertedRejitData`\
+[out]内部 Api から返されるように、元に戻された rejit バージョンに関連付けられたデータ。
 
-`pcNeededRevertedRejitData` [out]元に戻された ReJit バージョンに関連付けられたデータを格納するために必要なバイト数。
+`pcNeededRevertedRejitData`\
+[out]元に戻された ReJit バージョンに関連付けられたデータを格納するために必要なバイト数。
 
 ## <a name="remarks"></a>Remarks
 
@@ -61,12 +67,12 @@ HRESULT GetMethodDescData(
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface インターフェイス](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [デバッグ](index.md)
+- [ISOSDacInterface インターフェイス](isosdacinterface-interface.md)

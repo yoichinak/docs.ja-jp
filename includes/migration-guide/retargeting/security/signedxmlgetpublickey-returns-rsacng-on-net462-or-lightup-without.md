@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 52693beada7b301e62414e38cef523226ee9c044
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67858931"
+---
 ### <a name="signedxmlgetpublickey-returns-rsacng-on-net462-or-lightup-without-retargeting-change"></a>変更の対象を変更せず、SignedXml.GetPublicKey が net462 (または Light-Up) で RSACng を返す
 
 |   |   |

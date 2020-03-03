@@ -1,14 +1,13 @@
 ---
 title: private protected - C# リファレンス
-ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: b0b89580b6ff88aafb56d206dd4ee0848507a40b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a73d61712075cf24d2b94c505104df1fade629e9
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240568"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713210"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# リファレンス)
 
@@ -33,7 +32,7 @@ public class DerivedClass1 : BaseClass
 {
     void Access()
     {
-        BaseClass baseObject = new BaseClass();
+        var baseObject = new BaseClass();
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.
@@ -76,7 +75,7 @@ class DerivedClass2 : BaseClass
 - [C# のキーワード](index.md)
 - [アクセス修飾子](access-modifiers.md)
 - [アクセシビリティ レベル](accessibility-levels.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)

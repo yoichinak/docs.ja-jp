@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: dbade6c9-9d26-4a79-9fd2-46108edd12d7
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0871a06c6e27089d9e8fea6726d1d7b37fb75120
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a34648bece3b14d6175168f45916ca04aeeef71d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561752"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109244"
 ---
-# <a name="asmdisplayflags-enumeration"></a>ASM_DISPLAY_FLAGS 列挙型
-バージョン、ビルド、カルチャ、署名、および表示名を持つはによって取得するアセンブリのことを示します、 [iassemblyname::getdisplayname](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-getdisplayname-method.md)メソッド。  
+# <a name="asm_display_flags-enumeration"></a>ASM_DISPLAY_FLAGS 列挙型
+[IAssemblyName:: GetDisplayName](iassemblyname-getdisplayname-method.md)メソッドによって表示名が取得されるアセンブリのバージョン、ビルド、カルチャ、署名などを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
   
     ASM_DISPLAYF_VERSION                 = 0x01,  
@@ -52,17 +50,18 @@ typedef enum {
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `ASM_DISPLAYF_FULL` バージョンに加えられた変更の反映、 [IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)オブジェクト。 返された値が変更可能なことを前提としてはいません。  
+ `ASM_DISPLAYF_FULL` は、 [IAssemblyName](iassemblyname-interface.md)オブジェクトのバージョンに加えられた変更を反映します。 戻り値が不変であると想定しないでください。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAssemblyName インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)
-- [Fusion 列挙型](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+
+- [IAssemblyName インターフェイス](iassemblyname-interface.md)
+- [Fusion 列挙型](fusion-enumerations.md)

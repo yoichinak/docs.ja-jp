@@ -13,21 +13,19 @@ helpviewer_keywords:
 - SetAppDomainManagerType method, ICLRDomainManager interface [.NET Framework hosting]
 - ICLRDomainManager::SetAppDomainManagerType method [.NET Framework hosting]
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 47545d590682236d7a19813b15a144731b64c9e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c61e2e1208cec0bda1492964a8d02bd71f5a1c6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555084"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129332"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType メソッド
-派生した、型を指定します、<xref:System.AppDomainManager?displayProperty=nameWithType>の既定のアプリケーション ドメインを初期化するために使用されるアプリケーション ドメイン マネージャーのクラス。  
+既定のアプリケーションドメインを初期化するために使用されるアプリケーションドメインマネージャーの <xref:System.AppDomainManager?displayProperty=nameWithType> クラスから派生した型を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetAppDomainManagerType(  
     [in] LPCWSTR wszAppDomainManagerAssembly,  
     [in] LPCWSTR wszAppDomainManagerType,  
@@ -35,15 +33,15 @@ HRESULT SetAppDomainManagerType(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszAppDomainManagerAssembly`  
- [in]アプリケーション ドメイン マネージャーの種類; を含むアセンブリの表示名例えば："AdMgrExample、バージョン 1.0.0.0、Culture = neutral, PublicKeyToken = = 6856bccf150f00b3"。  
+ からアプリケーションドメインマネージャーの種類を含むアセンブリの表示名です。たとえば、"使用しているバージョン = 1.0.0.0, Culture = ニュートラル, PublicKeyToken = 6856bccf150f00b3" のようになります。  
   
  `wszAppDomainManagerType`  
- [in]名前空間を含む、アプリケーション ドメイン マネージャーの型名。  
+ から名前空間を含む、アプリケーションドメインマネージャーの型名。  
   
  `dwInitializeDomainFlags`  
- [in]組み合わせた[EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)アプリケーション ドメイン マネージャーに関する情報を提供する列挙値。  
+ からアプリケーションドメインマネージャーに関する情報を提供する[EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)列挙値の組み合わせ。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -51,26 +49,27 @@ HRESULT SetAppDomainManagerType(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
   
 ## <a name="remarks"></a>Remarks  
- 現時点では、のみ定義されている値の`dwInitializeDomainFlags`は`eInitializeNewDomainFlags_NoSecurityChanges`、共通言語ランタイム (CLR) を指示すると、アプリケーション ドメイン マネージャーが実行中のセキュリティ設定を変更しないこと、<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>メソッド。 これにより、条件付きのアセンブリの読み込みを最適化するために CLR <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 属性。 これは、結果、この一連のアセンブリの推移閉包が大きい場合に、起動時間が大幅に向上。  
+ 現時点では、`dwInitializeDomainFlags` に対して定義されている唯一の値は `eInitializeNewDomainFlags_NoSecurityChanges`であり、<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType> メソッドの実行中にアプリケーションドメインマネージャーがセキュリティ設定を変更しないことを共通言語ランタイム (CLR) に通知します。 これにより、CLR は条件付き <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA) 属性を持つアセンブリの読み込みを最適化できます。 これにより、このアセンブリセットの推移的なクロージャが大きい場合に、起動時間が大幅に向上する可能性があります。  
   
 > [!IMPORTANT]
->  ホストが指定されている場合`eInitializeNewDomainFlags_NoSecurityChanges`のアプリケーション ドメイン マネージャーに、<xref:System.InvalidOperationException>が、アプリケーション ドメインのセキュリティを変更する試行が行われた場合にスローされます。  
+> ホストでアプリケーションドメインマネージャーの `eInitializeNewDomainFlags_NoSecurityChanges` が指定されている場合、アプリケーションドメインのセキュリティを変更しようとすると、<xref:System.InvalidOperationException> がスローされます。  
   
- 呼び出す、 [iclrcontrol::setappdomainmanagertype](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)メソッドを呼び出すことは`ICLRDomainManager::SetAppDomainManagerType`で`eInitializeNewDomainFlags_None`します。  
+ [ICLRControl:: SetAppDomainManagerType](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-setappdomainmanagertype-method.md)メソッドを呼び出すことは、`eInitializeNewDomainFlags_None`で `ICLRDomainManager::SetAppDomainManagerType` を呼び出すことと同じです。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRDomainManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrdomainmanager-interface.md)
 - [EInitializeNewDomainFlags 列挙型](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)

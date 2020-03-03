@@ -1,0 +1,49 @@
+- name: アプリケーション ドメインとアセンブリ
+  href: index.md
+  items:
+    - name: アセンブリの配置
+      href: assembly-placement.md
+    - name: グローバル アセンブリ キャッシュ
+      href: gac.md
+    - name: アセンブリとグローバル アセンブリ キャッシュの使用
+      href: working-with-assemblies-and-the-gac.md
+      items:
+        - name: '方法: グローバル アセンブリ キャッシュの内容を表示する'
+          href: how-to-view-the-contents-of-the-gac.md
+        - name: '方法: アセンブリをグローバル アセンブリ キャッシュにインストールする'
+          href: install-assembly-into-gac.md
+        - name: '方法: グローバル アセンブリ キャッシュからアセンブリを削除する'
+          href: how-to-remove-an-assembly-from-the-gac.md
+        - name: サービス コンポーネントとグローバル アセンブリ キャッシュの使用
+          href: use-serviced-components-with-the-gac.md
+    - name: アプリケーション ドメイン
+      href: application-domains.md
+    - name: アプリケーション ドメインとアセンブリに関する方法のトピック
+      href: application-domains-and-assemblies-how-to-topics.md
+    - name: '方法: シングルファイル アセンブリをビルドする'
+      href: build-single-file-assembly.md
+    - name: マルチファイル アセンブリ
+      href: multifile-assemblies.md
+    - name: '方法: マルチファイル アセンブリをビルドする'
+      href: build-multifile-assembly.md
+    - name: '方法: アセンブリを他のアプリケーションと共有する'
+      href: how-to-share-an-assembly-with-other-applications.md
+    - name: アプリケーション ドメインの使用
+      href: use.md
+      items:
+        - name: '方法: アプリケーション ドメインを作成する'
+          href: how-to-create-an-application-domain.md
+        - name: '方法: アプリケーション ドメインをアンロードする'
+          href: how-to-unload-an-application-domain.md
+        - name: '方法: アプリケーション ドメインを構成する'
+          href: how-to-configure-an-application-domain.md
+        - name: アプリケーション ドメインからのセットアップ情報の取得
+          href: retrieve-setup-information.md
+        - name: '方法: アプリケーション ドメインにアセンブリを読み込む'
+          href: how-to-load-assemblies-into-an-application-domain.md
+        - name: アセンブリのシャドウ コピー
+          href: shadow-copy-assemblies.md
+        - name: '方法: 初回例外通知を受け取る'
+          href: how-to-receive-first-chance-exception-notifications.md
+    - name: イントラネット アプリケーションの完全信頼での実行
+      href: running-intranet-applications-in-full-trust.md

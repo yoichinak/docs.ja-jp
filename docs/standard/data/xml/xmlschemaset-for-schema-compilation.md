@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 55347de81c65b7390584415dd29044f4ca4ba02a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579590"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75709817"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>スキーマをコンパイルするための XmlSchemaSet
 XML スキーマ定義言語 (XSD) スキーマの格納と検証が可能なキャッシュである <xref:System.Xml.Schema.XmlSchemaSet> について説明します。  
@@ -37,9 +35,9 @@ XML スキーマ定義言語 (XSD) スキーマの格納と検証が可能なキ
 ## <a name="migrating-to-the-xmlschemaset"></a>XmlSchemaSet への移行  
  次のサンプル コードでは、廃止された <xref:System.Xml.Schema.XmlSchemaSet> クラスから新しい <xref:System.Xml.Schema.XmlSchemaCollection> クラスへの移行のガイドを提供します。 このコード サンプルは、次に挙げるこれら 2 つのクラスの主な相違点を説明するものです。  
   
--   <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> クラスの <xref:System.Xml.Schema.XmlSchemaCollection> メソッドとは異なり、スキーマは <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッド呼び出し時にはコンパイルされません。 サンプル コード内では、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドが明示的に呼び出されます。  
+- <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> クラスの <xref:System.Xml.Schema.XmlSchemaCollection> メソッドとは異なり、スキーマは <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッド呼び出し時にはコンパイルされません。 サンプル コード内では、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドが明示的に呼び出されます。  
   
--   <xref:System.Xml.Schema.XmlSchemaSet> を繰り返すには、<xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> の <xref:System.Xml.Schema.XmlSchemaSet> プロパティを使用する必要があります。  
+- <xref:System.Xml.Schema.XmlSchemaSet> を繰り返すには、<xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> の <xref:System.Xml.Schema.XmlSchemaSet> プロパティを使用する必要があります。  
   
  廃止された <xref:System.Xml.Schema.XmlSchemaCollection> のコード サンプルを次に示します。  
   
@@ -133,12 +131,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  <xref:System.Xml.Schema.XmlSchemaSet> 内のスキーマは、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドによって、1 つの論理スキーマにコンパイルされます。  
   
 > [!NOTE]
->  廃止された <xref:System.Xml.Schema.XmlSchemaCollection> クラスとは異なり、スキーマは <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> メソッドの呼び出し時にはコンパイルされません。  
+> 廃止された <xref:System.Xml.Schema.XmlSchemaCollection> クラスとは異なり、スキーマは <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> メソッドの呼び出し時にはコンパイルされません。  
   
  <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドの実行が成功した場合、<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> の <xref:System.Xml.Schema.XmlSchemaSet> プロパティは `true` に設定されます。  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> プロパティは、スキーマが <xref:System.Xml.Schema.XmlSchemaSet> 内にあるときに編集されても、影響を受けません。 <xref:System.Xml.Schema.XmlSchemaSet> 内の個別のスキーマの更新は追跡されません。 その結果、<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> プロパティは、`true` のスキーマが追加または削除されない限り、<xref:System.Xml.Schema.XmlSchemaSet> に含まれるスキーマの 1 つが変更されていても、<xref:System.Xml.Schema.XmlSchemaSet> になる可能性があります。  
+> <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> プロパティは、スキーマが <xref:System.Xml.Schema.XmlSchemaSet> 内にあるときに編集されても、影響を受けません。 <xref:System.Xml.Schema.XmlSchemaSet> 内の個別のスキーマの更新は追跡されません。 その結果、<xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> プロパティは、`true` のスキーマが追加または削除されない限り、<xref:System.Xml.Schema.XmlSchemaSet> に含まれるスキーマの 1 つが変更されていても、<xref:System.Xml.Schema.XmlSchemaSet> になる可能性があります。  
   
  次の例では、`books.xsd` ファイルを <xref:System.Xml.Schema.XmlSchemaSet> に追加した後、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> メソッドを呼び出します。  
   

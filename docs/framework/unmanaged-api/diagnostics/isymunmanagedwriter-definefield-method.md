@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: c6a1f797-dbf4-40f5-ab99-d9b4bfb26148
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 03c0a9d7315f5158948701d4322887104f0844c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eea63cae27c08260177dfc7746046b975434611
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603665"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74428037"
 ---
 # <a name="isymunmanagedwriterdefinefield-method"></a>ISymUnmanagedWriter::DefineField メソッド
-メソッド内ではない 1 つの変数を定義します。 このメソッドは、使用のクラス内の特定のフィールド、ビット フィールド、および具合です。  
+メソッド内にない単一の変数を定義します。 このメソッドは、クラス、ビットフィールドなどの特定のフィールドに対して使用されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineField(  
     [in] mdTypeDef    parent,  
     [in] const WCHAR  *name,  
@@ -42,39 +40,40 @@ HRESULT DefineField(
     [in] ULONG32      addr3);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `parent`  
- [in]メタデータ型またはメソッド トークン。  
+ からメタデータ型またはメソッドトークン。  
   
  `name`  
- [in]フィールド名です。  
+ からフィールド名。  
   
  `attributes`  
- [in]フィールドの属性。  
+ からフィールド属性。  
   
  `cSig`  
- [in]A`ULONG32`文字のフィールドのシグネチャを格納するために必要なバッファーのサイズはします。  
+ からフィールドシグネチャを格納するために必要なバッファーのサイズ (文字数) を表す `ULONG32`。  
   
  `signature`  
- [in]フィールドの署名の配列。  
+ からフィールドシグネチャの配列。  
   
  `addrKind`  
- [in]アドレスの種類。  
+ からアドレスの種類。  
   
  `addr1`  
- [in]フィールド指定の最初のアドレス。  
+ からフィールド指定の最初のアドレス。  
   
  `addr2`  
- [in]フィールド指定の 2 番目のアドレス。  
+ からフィールド指定の2番目のアドレス。  
   
  `addr3`  
- [in]フィールド指定の 3 番目のアドレス。  
+ からフィールド指定の3番目のアドレス。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

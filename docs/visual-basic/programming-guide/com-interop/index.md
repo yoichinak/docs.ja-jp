@@ -1,19 +1,19 @@
 ---
-title: COM 相互運用 (Visual Basic)
+title: COM 相互運用
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, COM interop
 - COM interop [Visual Basic], in Visual Basic
 ms.assetid: 3ffd1bdf-1b8d-47f5-87eb-75b659f64294
-ms.openlocfilehash: dfd256fa7ccd8f089fab6eb1d42579deb2c4a64d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: dcfdb5f3661292dda2e084eca22afab9bbec15d3
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44183172"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348000"
 ---
 # <a name="com-interop-visual-basic"></a>COM 相互運用 (Visual Basic)
-コンポーネント オブジェクト モデル (COM) では、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストすることを許可します。 今日のソフトウェアのほとんどに、COM オブジェクトが含まれています。 .NET アセンブリは新しいアプリケーションに最適ですが、時には COM オブジェクトを使用する必要があります。 このセクションでは、いくつかの作成と Visual Basic で COM オブジェクトの使用に関連する問題について説明します。  
+コンポーネント オブジェクト モデル (COM) では、オブジェクトがその機能を他のコンポーネントに公開し、アプリケーションをホストすることを許可します。 今日のソフトウェアのほとんどに、COM オブジェクトが含まれています。 .NET アセンブリは新しいアプリケーションに最適ですが、時には COM オブジェクトを使用する必要があります。 このセクションでは、Visual Basic での COM オブジェクトの作成と使用に関連するいくつかの問題について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [COM 相互運用の概要](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "44183172"
  [チュートリアル : COM オブジェクトによる継承の実装](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)  
  新しいオブジェクトの基本として既存の COM オブジェクトを使用する方法を説明します。  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [アンマネージ コードとの相互運用](../../../framework/interop/index.md)  
  共通言語ランタイムが提供する相互運用サービスについて説明します。  
   
@@ -56,5 +56,5 @@ ms.locfileid: "44183172"
  [COM への .NET Framework コンポーネントの公開](../../../framework/interop/exposing-dotnet-components-to-com.md)  
  COM からのマネージド型の準備と使用方法について説明します。  
   
- [相互運用固有の属性の適用](../../../framework/interop/applying-interop-attributes.md)  
+ [相互運用固有の属性の適用](../../../standard/native-interop/apply-interop-attributes.md)  
  アンマネージ コードを操作するときに使用できる属性について説明します。

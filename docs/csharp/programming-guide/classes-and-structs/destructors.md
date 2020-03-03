@@ -1,37 +1,36 @@
 ---
 title: ファイナライザー - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 10/08/2018
 helpviewer_keywords:
 - ~ [C#], in finalizers
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: e70bc27606e51d3685d4f92484f632c8fa2eba76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9c00f14da9d79418e4fb204bac30e539b234197f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652164"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715013"
 ---
 # <a name="finalizers-c-programming-guide"></a>ファイナライザー (C# プログラミング ガイド)
 ガベージ コレクターによってクラス インスタンスが収集されている場合は、ファイナライザー (**デストラクター**とも呼ばれます) を使用して、最終的に必要なすべてのクリーンアップが実行されます。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
--   ファイナライザーは、構造体には定義できません。 クラスでだけ使用します。  
+- ファイナライザーは、構造体には定義できません。 クラスでだけ使用します。  
   
--   クラスで使用できるファイナライザーは 1 つだけです。  
+- クラスで使用できるファイナライザーは 1 つだけです。  
   
--   ファイナライザーを継承またはオーバーロードすることはできません。  
+- ファイナライザーを継承またはオーバーロードすることはできません。  
   
--   ファイナライザーを呼び出すことはできません。 デストラクターは自動的に起動されます。  
+- ファイナライザーを呼び出すことはできません。 デストラクターは自動的に起動されます。  
   
--   ファイナライザーは修飾子を取らず、パラメーターはありません。  
+- ファイナライザーは修飾子を取らず、パラメーターはありません。  
   
  たとえば、次はクラス `Car` に対するファイナライザーの宣言です。
   
- [!code-csharp[csProgGuideObjects#86](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_1.cs)]  
+ [!code-csharp[csProgGuideObjects#86](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#86)]  
 
 ファイナライザーは、式本体の定義として実行することもできます。次に例を示します。
 
@@ -56,7 +55,7 @@ protected override void Finalize()
  つまり、派生が最も多いクラスから派生が最も少ないクラスまで、継承チェーンのすべてのインスタンスに対して、`Finalize` メソッドが再帰的に呼び出されます。  
   
 > [!NOTE]
->  空のファイナライザーは使用しないでください。 ファイナライザーがクラスに存在するときは、エントリが `Finalize` キューで作成されます。 ファイナライザーを呼び出すと、ガベージ コレクターが呼び出され、このキューを処理します。 ファイナライザーが空の場合、パフォーマンスを不必要に低下させるだけです。  
+> 空のファイナライザーは使用しないでください。 ファイナライザーがクラスに存在するときは、エントリが `Finalize` キューで作成されます。 ファイナライザーを呼び出すと、ガベージ コレクターが呼び出され、このキューを処理します。 ファイナライザーが空の場合、パフォーマンスを不必要に低下させるだけです。  
   
  ファイナライザーがいつ呼び出されるかはガベージ コレクターによって決定されるため、プログラマは制御できません。 ガベージ コレクターは、アプリケーションが使用していないオブジェクトをチェックします。 終了処理が可能なオブジェクトと考えられる場合、ファイナライザー (存在する場合) を呼び出し、オブジェクトの格納に使用されているメモリを解放します。 
  
@@ -72,24 +71,24 @@ protected override void Finalize()
   
  リソースのクリーンアップの詳細については、次のトピックを参照してください。  
   
--   [アンマネージ リソースのクリーンアップ](../../../standard/garbage-collection/unmanaged.md)  
+- [アンマネージ リソースのクリーンアップ](../../../standard/garbage-collection/unmanaged.md)  
   
--   [Dispose メソッドの実装](../../../standard/garbage-collection/implementing-dispose.md)  
+- [Dispose メソッドの実装](../../../standard/garbage-collection/implementing-dispose.md)  
   
--   [using ステートメント](../../../csharp/language-reference/keywords/using-statement.md)  
+- [using ステートメント](../../language-reference/keywords/using-statement.md)  
   
 ## <a name="example"></a>例  
  次の例では、継承チェーンを形成する 3 つのクラスを作成します。 `First` が基底クラスであり、`Second` は `First` から派生し、`Third` は `Second` から派生します。 3 つのクラスのいずれにもファイナライザーがあります。 `Main` では、派生が最も多いクラスのインスタンスが作成されます。 プログラムを実行すると、3 つのクラスのファイナライザーが派生が最も多いクラスから派生が最も少ないクラスの順に自動的に呼び出されます。  
   
- [!code-csharp[csProgGuideObjects#85](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/destructors_2.cs)]  
+ [!code-csharp[csProgGuideObjects#85](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#85)]  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](../../language-reference/language-specification/index.md)」の [デストラクタ―](~/_csharplang/spec/classes.md#destructors)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の [デストラクタ―](~/_csharplang/spec/classes.md#destructors)に関するセクションを参照してください。
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IDisposable>
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)
+- [C# プログラミング ガイド](../index.md)
+- [コンストラクター](./constructors.md)
 - [ガベージ コレクション](../../../standard/garbage-collection/index.md)

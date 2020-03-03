@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7848b9a15c34e40c33495c31bd942e93c522cbdb
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859291"
+---
 ### <a name="calls-to-claimsidentity-constructors"></a>ClaimsIdentity コンストラクターを呼び出す
 
 |   |   |

@@ -16,36 +16,36 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
-ms.openlocfilehash: 3f3c7e96f1c372bb05aba9bef81192aec47b3cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678292"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78160068"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>イベントベースの非同期パターンの概要
 多数のタスクを同時に実行しながら、ユーザーの操作にも応答するアプリケーションには、通常、複数のスレッドを使用するデザインが必要です。 <xref:System.Threading> 名前空間は、高性能なマルチスレッド アプリケーションを作成するのに必要なすべてのツールを提供します。ただし、これらのツールを効果的に使用するには、マルチスレッド ソフトウェア エンジニアリングの豊富な経験が必要です。 比較的単純なマルチスレッド アプリケーションの場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが簡単なソリューションを提供します。 より高度な非同期アプリケーションの場合は、イベント ベースの非同期パターンに準拠したクラスの実装を検討してください。  
   
  イベント ベースの非同期パターンを使用すると、マルチスレッド デザイン固有の多くの複雑な問題を気にせずに、マルチスレッド アプリケーションの利点を活用できます。 このパターンをサポートするクラスを使用すると、次のことが可能になります。  
   
--   ダウンロードやデータベース操作などの時間がかかるタスクを、アプリケーションを中断せずに、"バックグラウンド" で行うことができます。  
+- ダウンロードやデータベース操作などの時間がかかるタスクを、アプリケーションを中断せずに、"バックグラウンド" で行うことができます。  
   
--   複数の操作を同時に実行し、それぞれの操作が完了するたびに通知を受け取ることができます。  
+- 複数の操作を同時に実行し、それぞれの操作が完了するたびに通知を受け取ることができます。  
   
--   アプリケーションを停止 ("ハングアップ") せずに、リソースが使用可能な状態になるまで待機できます。  
+- アプリケーションを停止 ("ブロック") せずに、リソースが使用可能な状態になるまで待機できます。  
   
--   使い慣れたイベントおよびデリゲートのモデルを使用して、保留中の非同期操作と通信できます。 イベント ハンドラーおよびデリゲートの使い方の詳細については、[イベント](../../../docs/standard/events/index.md)に関するページを参照してください。  
+- 使い慣れたイベントおよびデリゲートのモデルを使用して、保留中の非同期操作と通信できます。 イベント ハンドラーおよびデリゲートの使い方の詳細については、[イベント](../../../docs/standard/events/index.md)に関するページを参照してください。  
   
  イベント ベースの非同期パターンをサポートするクラスには、1 つまたは複数の _MethodName_**Async** という名前のメソッドが含まれます。 これらのメソッドは、同期バージョンに対応するもので、現在のスレッドで同じ操作を行います。 クラスには、_MethodName_**Completed** イベントや _MethodName_**AsyncCancel** (または単に **CancelAsync**) メソッドが含まれる場合もあります。  
   
- <xref:System.Windows.Forms.PictureBox> は、イベント ベースの非同期パターンをサポートする一般的なコンポーネントです。 イメージを同期的にダウンロードするには、その <xref:System.Windows.Forms.PictureBox.Load%2A>メソッドを呼び出します。ただし、イメージのサイズが大きい場合や、ネットワークの接続速度が遅い場合は、ダウンロード操作が完了して <xref:System.Windows.Forms.PictureBox.Load%2A> の呼び出しから戻るまで、アプリケーションが停止 ("ハングアップ") します。  
+ <xref:System.Windows.Forms.PictureBox> は、イベント ベースの非同期パターンをサポートする一般的なコンポーネントです。 イメージを同期的にダウンロードするには、その <xref:System.Windows.Forms.PictureBox.Load%2A>メソッドを呼び出します。ただし、イメージのサイズが大きい場合や、ネットワークの接続速度が遅い場合は、ダウンロード操作が完了して <xref:System.Windows.Forms.PictureBox.Load%2A> の呼び出しが返されるまで、アプリケーションが応答を停止します。  
   
  イメージの読み込み中にもアプリケーションを実行し続けるには、<xref:System.Windows.Forms.PictureBox.LoadAsync%2A> メソッドを呼び出して、他のイベントを処理する場合と同様に、<xref:System.Windows.Forms.PictureBox.LoadCompleted> イベントを処理します。 <xref:System.Windows.Forms.PictureBox.LoadAsync%2A> メソッドを呼び出すと、ダウンロードを別のスレッドで ("バックグラウンド" で) 続行しながら、アプリケーションを実行し続けることができます。 イメージの読み込み操作が完了すると、イベント ハンドラーが呼び出されます。イベント ハンドラーは、<xref:System.ComponentModel.AsyncCompletedEventArgs> パラメーターを調べて、ダウンロードが正常に完了したかどうかを確認できます。  
   
  イベント ベースの非同期パターンでは、非同期操作をキャンセルできる必要があります。<xref:System.Windows.Forms.PictureBox> コントロールでは、その <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> メソッドでこの要件をサポートしています。 <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> を呼び出すと、保留中のダウンロードを停止する要求が送信されます。タスクがキャンセルされると、<xref:System.Windows.Forms.PictureBox.LoadCompleted> イベントが発生します。  
   
 > [!CAUTION]
->  <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求が作成されると同時に、ダウンロードが終了する可能性もあります。このような場合、<xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> にはキャンセルの要求が反映されません。 これは*競合状態*と呼ばれる、マルチスレッド プログラミングの一般的な問題です。 マルチスレッド プログラミングの問題の詳細については、「[Managed Threading Best Practices](../../../docs/standard/threading/managed-threading-best-practices.md)」 (管理されたスレッドのベスト プラクティス) を参照してください。  
+> <xref:System.Windows.Forms.PictureBox.CancelAsync%2A> 要求が作成されると同時に、ダウンロードが終了する可能性もあります。このような場合、<xref:System.ComponentModel.AsyncCompletedEventArgs.Cancelled%2A> にはキャンセルの要求が反映されません。 これは*競合状態*と呼ばれる、マルチスレッド プログラミングの一般的な問題です。 マルチスレッド プログラミングの問題の詳細については、「[マネージド スレッド処理のベスト プラクティス](../../../docs/standard/threading/managed-threading-best-practices.md)」 (管理されたスレッドのベスト プラクティス) を参照してください。  
   
 ## <a name="characteristics-of-the-event-based-asynchronous-pattern"></a>イベント ベースの非同期パターンの特性  
  イベント ベースの非同期パターンには、特定のクラスでサポートされている操作の複雑さに応じて、複数の形式があります。 最もシンプルなクラスには、単一の _MethodName_**Async** メソッドと、このメソッドに対応する _MethodName_**Completed** イベントが含まれる場合があります。 より複雑なクラスには、複数の _MethodName_**Async** メソッドと、それぞれに対応する _MethodName_**Completed** イベント、およびこれらのメソッドの同期バージョンが含まれる場合があります。 クラスでは、各非同期メソッドの、キャンセル、進行状況のレポート、およびインクリメンタル結果をオプションでサポートできます。  
@@ -60,19 +60,19 @@ ms.locfileid: "54678292"
 ```vb  
 Public Class AsyncExample  
     ' Synchronous methods.  
-    Public Function Method1(ByVal param As String) As Integer   
-    Public Sub Method2(ByVal param As Double)   
+    Public Function Method1(ByVal param As String) As Integer
+    Public Sub Method2(ByVal param As Double)
   
     ' Asynchronous methods.  
-    Overloads Public Sub Method1Async(ByVal param As String)   
-    Overloads Public Sub Method1Async(ByVal param As String, ByVal userState As Object)   
+    Overloads Public Sub Method1Async(ByVal param As String)
+    Overloads Public Sub Method1Async(ByVal param As String, ByVal userState As Object)
     Public Event Method1Completed As Method1CompletedEventHandler  
   
-    Overloads Public Sub Method2Async(ByVal param As Double)   
-    Overloads Public Sub Method2Async(ByVal param As Double, ByVal userState As Object)   
+    Overloads Public Sub Method2Async(ByVal param As Double)
+    Overloads Public Sub Method2Async(ByVal param As Double, ByVal userState As Object)
     Public Event Method2Completed As Method2CompletedEventHandler  
   
-    Public Sub CancelAsync(ByVal userState As Object)   
+    Public Sub CancelAsync(ByVal userState As Object)
   
     Public ReadOnly Property IsBusy () As Boolean  
   
@@ -115,7 +115,7 @@ public class AsyncExample
  複数呼び出しのオーバーロードを使用する場合は、保留中のタスクの `userState` オブジェクト (タスク ID) を追跡する必要があります。 `Method1Async(string param, object userState)` の呼び出しごとに、通常は新しい一意な `userState` オブジェクトを生成し、それをコレクションに追加します。 この `userState` オブジェクトに対応するタスクが完了イベントを発生させると、完了メソッドの実装は <xref:System.ComponentModel.AsyncCompletedEventArgs.UserState%2A?displayProperty=nameWithType> を調べて、それをコレクションから削除します。 このように使用すると、`userState` パラメーターはタスク ID の役割を果たします。  
   
 > [!NOTE]
->  複数呼び出しのオーバーロードの呼び出しでは、`userState` に一意な値を指定するように注意が必要です。 タスク ID が一意でないと、非同期クラスが <xref:System.ArgumentException> をスローします。  
+> 複数呼び出しのオーバーロードの呼び出しでは、`userState` に一意な値を指定するように注意が必要です。 タスク ID が一意でないと、非同期クラスが <xref:System.ArgumentException> をスローします。  
   
 ### <a name="canceling-pending-operations"></a>保留中の操作のキャンセル  
  非同期操作を完了前にいつでもキャンセルできることは重要です。 イベント ベースの非同期パターンを実装するクラスには、`CancelAsync` メソッド (非同期メソッドが 1 つだけの場合) または _MethodName_**AsyncCancel** メソッド (複数の非同期メソッドがある場合) が含まれます。  

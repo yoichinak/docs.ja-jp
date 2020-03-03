@@ -2,15 +2,13 @@
 title: Windows 8.1 への .NET Framework のインストール
 ms.custom: updateeachrelease
 description: Windows 8.1 に .NET Framework をインストールする方法について説明します
-author: rlander
-ms.author: mairaw
-ms.date: 10/22/2017
-ms.openlocfilehash: 114ff758be59afd08b0c4727378df3a95ebc8220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.date: 04/18/2019
+ms.openlocfilehash: a13f31641be8a9289abbbac17bc4866b8f2dc4ee
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737807"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716764"
 ---
 # <a name="install-the-net-framework-on-windows-81-and-windows-server-2012-r2"></a>Windows 8.1 と Windows Server 2012 R2 に .NET Framework をインストールする
 
@@ -18,14 +16,14 @@ ms.locfileid: "54737807"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) が最新バージョンです。 これは Windows 8.1 と Windows Server 2012 R2 でサポートされており、[Windows 10 October 2018 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) と [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10) に付属します。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) が最新バージョンです。 これは Windows 8.1 と Windows Server 2012 R2 でサポートされており、[Windows 10 May 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update) に付属します。
 
-## <a name="net-framework-472"></a>.NET Framework 4.7.2
+## <a name="net-framework-48"></a>.NET Framework 4.8
 
 > [!div class="button"]
-> [.NET Framework 4.7.2 のダウンロード](https://www.microsoft.com/net/download/thank-you/net472?utm_source=ms-docs&utm_medium=referral)
+> [.NET Framework 4.8 のダウンロード](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-[.NET Framework 4.7.2](https://go.microsoft.com/fwlink/?LinkID=863255) は、.NET Framework 4.0 以降用に構築されたアプリケーションを実行するために使用できます。
+[.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) は、.NET Framework 4.0 以降用に構築されたアプリケーションを実行するために使用できます。
 
 ## <a name="net-framework-35"></a>.NET Framework 3.5
 
@@ -39,6 +37,6 @@ ms.locfileid: "54737807"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework のダウンロード](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [.NET Framework のダウンロード](https://dotnet.microsoft.com/download)
 - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)
 - [開発者向けの .NET Framework のインストール](guide-for-developers.md)

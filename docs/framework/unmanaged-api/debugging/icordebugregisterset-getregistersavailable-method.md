@@ -15,37 +15,35 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f57e4a72828cdf744d5acd5483024de7d303f4a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b137b956e06a2b2954918e4024860f9b234e7583
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743349"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792106"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable メソッド
-これで登録することを示す取得がビット マスク[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)現在利用します。  
+[このは、この](icordebugregisterset-interface.md)"この" のどのレジスタが現在使用可能であるかを示すビットマスクを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRegistersAvailable (  
     [out] ULONG64   *pAvailable  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAvailable`  
- [out]どのレジスタが現在の使用を示すビット マスクです。  
+ 入出力現在使用できるレジスタを示すビットマスク。  
   
-## <a name="remarks"></a>Remarks  
- レジスタは、その値は、特定の状況を特定できない場合に使用できない可能性があります。  
+## <a name="remarks"></a>コメント  
+ 特定の状況でその値を特定できない場合は、レジスタを使用できない可能性があります。  
   
- 返されたマスクには、各レジスタのビットが含まれています (1 << レジスタのインデックス)。 登録がある場合は、ビット値が 1 または 0 が使用できない場合。  
+ 返されたマスクには、レジスタごとにビットが含まれています (1 < レジスタインデックス <)。 レジスタが使用可能な場合、ビット値は1です。使用できない場合は0です。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -54,5 +52,6 @@ HRESULT GetRegistersAvailable (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugRegisterSet インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [ICorDebugRegisterSet2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+
+- [ICorDebugRegisterSet インターフェイス](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 インターフェイス](icordebugregisterset2-interface.md)

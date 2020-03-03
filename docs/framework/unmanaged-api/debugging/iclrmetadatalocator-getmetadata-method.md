@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7758e61635bf6611cf83d2d66d0b62a28fac97d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66b3934d000b4f000c368acb1f57c8fc82a5c453
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647687"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793624"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata メソッド
-イメージのメタデータを取得する共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  
+イメージのメタデータを取得するために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMetadata(  
     [in]  LPCWSTR         imagePath,  
     [in]  ULONG32         imageTimestamp,  
@@ -44,45 +42,46 @@ HRESULT GetMetadata(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `imagePath`  
- [in]イメージ ファイルのパスを指定する文字列。  
+ からイメージファイルのパスを指定する文字列。  
   
  `imageTimestamp`  
- [in]イメージ ファイルのタイムスタンプ。  
+ からイメージファイルのタイムスタンプ。  
   
  `imageSize`  
- [in]イメージ ファイルのサイズ。  
+ からイメージファイルのサイズ。  
   
  `mvid`  
- [in]イメージのグローバルに一意の識別子。  
+ からイメージのグローバル一意識別子。  
   
  `mdRva`  
- [in]メタデータの相対仮想アドレス (RVA)。 アドレスは、イメージのベース アドレスに対して相対的です。  
+ からメタデータの相対仮想アドレス (RVA)。 アドレスは、イメージのベースアドレスを基準としています。  
   
  `flags`  
- [in]将来使用するために予約されています。  
+ から将来使用するために予約されています。  
   
  `bufferSize`  
- [in]メタデータの配置先となるバッファーのサイズ。  
+ からメタデータを格納するバッファーのサイズ。  
   
  `buffer`  
- [out]メタデータの配置先となるバッファー。  
+ 入出力メタデータを格納するバッファー。  
   
  `dataSize`  
- [out]返されるメタデータのサイズ。  
+ 入出力返されるメタデータのサイズ。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData.idl、ClrData.h  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICLRMetadataLocator インターフェイス](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)
+
+- [ICLRMetadataLocator インターフェイス](iclrmetadatalocator-interface.md)

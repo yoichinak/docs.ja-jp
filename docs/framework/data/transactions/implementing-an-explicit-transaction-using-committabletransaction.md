@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19b62c24d00903d1494a755dbeabb460935cdacd
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713137"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205942"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction を使用した明示的なトランザクションの実装
 <xref:System.Transactions.CommittableTransaction> クラスは、<xref:System.Transactions.TransactionScope> クラスが暗黙的に使用されるのと対照的に、アプリケーションがトランザクションを明示的に使用する方法を提供します。 これは、複数の関数呼び出しまたは複数のスレッド呼び出しで同じトランザクションを使用するアプリケーションで役立ちます。 <xref:System.Transactions.TransactionScope> クラスとは異なり、アプリケーション作成者はトランザクションをコミットまたは中止するために、具体的に <xref:System.Transactions.CommittableTransaction.Commit%2A> メソッドまたは <xref:System.Transactions.Transaction.Rollback%2A> メソッドを呼び出す必要があります。  
@@ -22,9 +22,9 @@ ms.locfileid: "54713137"
   
  <xref:System.Transactions.CommittableTransaction> クラスを使用する場合には、次のことに注意する必要があります。  
   
--   <xref:System.Transactions.CommittableTransaction> トランザクションを作成しても、アンビエント トランザクションは設定されません。 リソース マネージャーが必要に応じて正しいトランザクション コンテキストで動作することを保証するには、アンビエント トランザクションを具体的に設定およびリセットする必要があります。 現在のアンビエント トランザクションを設定するには、グローバルな <xref:System.Transactions.Transaction.Current%2A> オブジェクトの静的な <xref:System.Transactions.Transaction> プロパティを設定します。  
+- <xref:System.Transactions.CommittableTransaction> トランザクションを作成しても、アンビエント トランザクションは設定されません。 リソース マネージャーが必要に応じて正しいトランザクション コンテキストで動作することを保証するには、アンビエント トランザクションを具体的に設定およびリセットする必要があります。 現在のアンビエント トランザクションを設定するには、グローバルな <xref:System.Transactions.Transaction.Current%2A> オブジェクトの静的な <xref:System.Transactions.Transaction> プロパティを設定します。  
   
--   <xref:System.Transactions.CommittableTransaction> オブジェクトは再利用できません。 <xref:System.Transactions.CommittableTransaction> オブジェクトがコミットまたはロールバックされると、トランザクションで再び使用することはできません。 つまり、現在のアンビエント トランザクション コンテキストとして設定することはできません。  
+- <xref:System.Transactions.CommittableTransaction> オブジェクトは再利用できません。 <xref:System.Transactions.CommittableTransaction> オブジェクトがコミットまたはロールバックされると、トランザクションで再び使用することはできません。 つまり、現在のアンビエント トランザクション コンテキストとして設定することはできません。  
   
 ## <a name="creating-a-committabletransaction"></a>CommittableTransaction の作成  
  新しい <xref:System.Transactions.CommittableTransaction> を作成してコミットする例を次に示します。  
@@ -43,7 +43,7 @@ ms.locfileid: "54713137"
   
  <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> を呼び出すことで、スレッド プールからのスレッドにコミット ホールドアップをディスパッチできます。 また、<xref:System.Transactions.CommittableTransaction.EndCommit%2A> を呼び出して、トランザクションが実際にコミットされたかどうかを判断することもできます。 なんらかの理由でトランザクションがコミットされなかった場合、<xref:System.Transactions.CommittableTransaction.EndCommit%2A> はトランザクションの例外を発生させます。 <xref:System.Transactions.CommittableTransaction.EndCommit%2A> が呼び出された時点でトランザクションがまだコミットされていない場合、トランザクションがコミットまたは中止されるまで、呼び出し元がブロックされます。  
   
- 非同期のコミットを行う最も簡単な方法は、コミットの完了時に呼び出されるコールバック メソッドを提供することです。 ただし、呼び出しを実行するために使用する元の <xref:System.Transactions.CommittableTransaction.EndCommit%2A> オブジェクトに対して <xref:System.Transactions.CommittableTransaction> メソッドを呼び出す必要があります。 オブジェクトを取得するにはダウン キャスト、 *IAsyncResult*パラメーター、コールバック メソッドのため、<xref:System.Transactions.CommittableTransaction>クラスが実装する<xref:System.IAsyncResult>クラス。  
+ 非同期のコミットを行う最も簡単な方法は、コミットの完了時に呼び出されるコールバック メソッドを提供することです。 ただし、呼び出しを実行するために使用する元の <xref:System.Transactions.CommittableTransaction.EndCommit%2A> オブジェクトに対して <xref:System.Transactions.CommittableTransaction> メソッドを呼び出す必要があります。 このオブジェクトを取得するには、クラスが<xref:System.Transactions.CommittableTransaction>クラスを実装<xref:System.IAsyncResult>しているため、コールバックメソッドの IAsyncResult パラメーターをダウンキャストできます。  
   
  次の例は、非同期コミットの実行方法を示しています。  
   
@@ -86,5 +86,6 @@ void OnCommitted(IAsyncResult asyncResult)
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [トランザクション スコープを使用した暗黙的なトランザクションの実装](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
-- [トランザクション処理](../../../../docs/framework/data/transactions/index.md)
+
+- [トランザクション スコープを使用した暗黙的なトランザクションの実装](implementing-an-implicit-transaction-using-transaction-scope.md)
+- [トランザクション処理](index.md)

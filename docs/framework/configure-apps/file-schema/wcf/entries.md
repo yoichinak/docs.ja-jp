@@ -2,21 +2,22 @@
 title: <entries>
 ms.date: 03/30/2017
 ms.assetid: 202e430c-c1b9-4343-abe2-ac78c181a3b7
-ms.openlocfilehash: 9c4c7fa4f778642d549deebce6e7476f4da13a0d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffe2538fa2c3cb680285cfaa68c975c0f9d4b1bd
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283687"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855282"
 ---
-# <a name="entries"></a>\<entries>
+# <a name="entries"></a>\<エントリ >
 ルーティング フィルターとターゲット エンドポイントとのマッピングを格納するルーティング エントリ。フィルターが一致したときにメッセージを送信するために使用されます。  
   
- \<system.serviceModel>  
-\<ルーティング >  
-\<routingTables>  
-\<table>  
-\<entries>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ルーティング >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<filterTables >** ](filtertables.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<filterTable >** ](filtertable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<エントリ >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -45,14 +46,15 @@ ms.locfileid: "55283687"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<filters>](../../../../../docs/framework/configure-apps/file-schema/wcf/filters-of-routing.md)|以前に定義されたクライアント エンドポイントにフィルターをマップします。 このフィルターに一致するメッセージは、この宛先に送信されます。|  
+|[\<filters>](filters-of-routing.md)|以前に定義されたクライアント エンドポイントにフィルターをマップします。 このフィルターに一致するメッセージは、この宛先に送信されます。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|ルーティング テーブルを含む構成セクション。|  
+|[\<ルーティング >](routing.md)|ルーティング テーブルを含む構成セクション。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

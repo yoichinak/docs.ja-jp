@@ -8,21 +8,21 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: a48fa5e4a5768f97d3aeabebe4d594ec9f498ca2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5029a7d1e53c28d0abb232efdc3e0bd2c9658d4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260672"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088418"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > 要素 (ネットワーク設定)
-HTTP キャッシュがアクティブでかどうかし、既定のキャッシュ ポリシーの記述について説明します。  
-  
- \<configuration>  
-\<system.net>  
-\<requestCaching>  
-\<defaultHttpCachePolicy>  
-  
+HTTP キャッシュがアクティブかどうか、および既定のキャッシュポリシーについて説明します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<requestcaching >** ](requestcaching-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**defaultHttpCachePolicy >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -41,30 +41,30 @@ HTTP キャッシュがアクティブでかどうかし、既定のキャッシ
   
 |属性|説明|  
 |---------------|-----------------|  
-|`maximumAge`|キャッシュされたオブジェクトが期限切れとしてマークされている前に、最大時間間隔を指定します。|  
-|`maximumStale`|過去の鮮度の計算時間前に、キャッシュされたオブジェクトが期限切れとしてマークされている最大の時間を指定します。|  
-|`minimumFresh`|フレッシュと見なすには、キャッシュされたオブジェクトの時間の最小値を指定します。|  
-|`policyLevel`|キャッシュ ポリシーは自動にするかどうか、またはキャッシュをバイパスするかどうかを指定します。 既定値は `BypassCache` です。|  
+|`maximumAge`|キャッシュされたオブジェクトを期限切れとしてマークするまでの最大時間間隔を指定します。|  
+|`maximumStale`|キャッシュされたオブジェクトを期限切れとしてマークするまでの、計算された鮮度時間を超える最大時間を指定します。|  
+|`minimumFresh`|キャッシュされたオブジェクトが最新であると見なされるための最小時間を指定します。|  
+|`policyLevel`|キャッシュポリシーが自動であるかどうか、またはキャッシュをバイパスするかどうかを指定します。 既定値は `BypassCache`です。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[requestCaching](../../../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュ メカニズムを制御します。|  
+|[Requestcaching>](requestcaching-element-network-settings.md)|ネットワーク要求のキャッシュメカニズムを制御します。|  
   
 ## <a name="remarks"></a>Remarks  
- 値、`policyLevel`属性があるか、`BypassCache`または`Default`します。  
+ `policyLevel` 属性の値は、`BypassCache` または `Default`です。  
   
- 値を`maximumAge`、 `maximumStale`、および`minimumFresh`要素の形式のいずれか、明示的な時間間隔は、 *d*.*hh*:*mm*:*ss* (日、時間、分、および秒)、または定数`minValue`または`maxValue`必要に応じて、します。  
+ `maximumAge`、`maximumStale`、および `minimumFresh` 要素の値は、明示的な時間間隔であり、形式は*d*です。*hh*:*mm*:*ss* (日数、時間、分、秒)、または必要に応じて `minValue` または `maxValue`定数。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、6 時間、2 日間の最大の有効期間と 4 時間の最大の古い時刻の最小の新しい時刻を指定する方法を示します。  
+ 次の例では、6時間、最長有効期間、および最大4時間の最長時間を指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -81,7 +81,8 @@ HTTP キャッシュがアクティブでかどうかし、既定のキャッシ
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

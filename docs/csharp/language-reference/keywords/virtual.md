@@ -1,6 +1,5 @@
 ---
 title: virtual - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - virtual_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - virtual keyword [C#]
 ms.assetid: 5da9abae-bc1e-434f-8bea-3601b8dcb3b2
-ms.openlocfilehash: eede3359b195661ff89a387e9b226bc970c27942
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 47b77792fd3a2b2700ec0734851fdec534361596
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612577"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712872"
 ---
 # <a name="virtual-c-reference"></a>virtual (C# リファレンス)
 
@@ -28,7 +27,7 @@ public virtual double Area()
 
 仮想メンバーの実装は、派生クラスの[オーバーライド メンバー](override.md)によって変更できます。 `virtual` キーワードの使い方について詳しくは、「[Override キーワードと New キーワードによるバージョン管理](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)」および「[Override キーワードと New キーワードを使用する場合について](../../programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 仮想メソッドが呼び出されると、オブジェクトの実行時の型が、オーバーライドするメンバーに対してチェックされます。 いずれの派生クラスもメンバーをオーバーライドしなかった場合は、最派生クラスのオーバーライド メンバー (元のメンバーである可能性があります) が呼び出されます。
 
@@ -38,7 +37,7 @@ public virtual double Area()
 
 [!code-csharp[csrefKeywordsModifiers#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#26)]
 
-仮想プロパティは、宣言と呼び出しの構文の違いを除けば、抽象メソッドと似た働きを持ちます。
+仮想プロパティは、宣言と呼び出しの構文の違いを除けば、仮想メソッドと似た働きを持ちます。
 
 - `virtual` 修飾子を静的プロパティに対して使うのは誤りです。
 
@@ -64,11 +63,7 @@ public Cylinder(double r, double h): base(r, h) {}
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [修飾子](modifiers.md)
-- [C# のキーワード](index.md)
 - [ポリモーフィズム](../../programming-guide/classes-and-structs/polymorphism.md)
 - [abstract](abstract.md)
 - [override](override.md)
-- [new](new.md)
+- [new (修飾子)](new-modifier.md)

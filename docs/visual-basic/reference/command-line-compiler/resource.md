@@ -1,5 +1,5 @@
 ---
-title: -リソース (Visual Basic)
+title: -resource
 ms.date: 03/13/2018
 helpviewer_keywords:
 - /resource compiler option [Visual Basic]
@@ -9,51 +9,55 @@ helpviewer_keywords:
 - -res compiler option [Visual Basic]
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
-ms.openlocfilehash: 46122eaa7ca54679c9a52b939f9100c9a0747e7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a781d543dd32ffb3d0ac0b11c544dbfd8cd5d806
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550358"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74348568"
 ---
-# <a name="-resource-visual-basic"></a>-リソース (Visual Basic)
+# <a name="-resource-visual-basic"></a>-resource (Visual Basic)
 マネージド リソースをアセンブリに埋め込みます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -resource:filename[,identifier[,public|private]]  
-' -or-  
+```
+
+または  
+
+```console
 -res:filename[,identifier[,public|private]]  
 ```  
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`filename`|必須。 出力ファイルに埋め込むリソース ファイルの名前。 既定では、`filename`アセンブリ内でパブリックです。 ファイル名を引用符で囲みます ("")、スペースが含まれている場合。|  
-|`identifier`|任意。 リソースの論理名ファイルを読み込むための名前。 既定値は、ファイルの名前です。 必要に応じて、次のようには、パブリックまたはプライベート アセンブリ マニフェストでにリソースかどうかを指定できます。 `-res:filename.res, myname.res, public`|  
+|`filename`|必須。 出力ファイルに埋め込むリソースファイルの名前。 既定では、`filename` はアセンブリで公開されています。 ファイル名にスペースが含まれている場合は、ファイル名を引用符 ("") で囲みます。|  
+|`identifier`|省略可。 リソースの論理名。読み込みに使用される名前。 既定値は、ファイルの名前です。 必要に応じて、次のように、アセンブリマニフェストでリソースがパブリックであるかプライベートであるかを指定できます。 `-res:filename.res, myname.res, public`|  
   
-## <a name="remarks"></a>Remarks  
- 使用`-linkresource`出力ファイルにリソース ファイルを配置することがなく、アセンブリにリソースをリンクします。  
+## <a name="remarks"></a>コメント  
+ リソースファイルを出力ファイルに配置せずに、リソースをアセンブリにリンクするには、`-linkresource` を使用します。  
   
- 場合`filename`は、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]リソース ファイルの作成例については、によって、 [Resgen.exe (リソース ファイル ジェネレーター)](../../../framework/tools/resgen-exe-resource-file-generator.md)または開発環境でアクセスできるメンバー間で、 <xref:System.Resources> (参照名前空間<xref:System.Resources.ResourceManager>詳細については)。 実行時にその他のすべてのリソースにアクセスするには、次のいずれかを使用: <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>、 <xref:System.Reflection.Assembly.GetManifestResourceNames%2A>、または<xref:System.Reflection.Assembly.GetManifestResourceStream%2A>します。  
+ たとえば、 [resgen.exe (リソースファイルジェネレーター)](../../../framework/tools/resgen-exe-resource-file-generator.md)や開発環境などによって作成された .NET Framework のリソースファイル `filename` 場合は、<xref:System.Resources> 名前空間のメンバーを使用してアクセスできます (詳細については、「<xref:System.Resources.ResourceManager>」を参照してください)。 実行時に他のすべてのリソースにアクセスするには、次のいずれかの方法を使用します。 <xref:System.Reflection.Assembly.GetManifestResourceInfo%2A>、<xref:System.Reflection.Assembly.GetManifestResourceNames%2A>、または <xref:System.Reflection.Assembly.GetManifestResourceStream%2A>。  
   
  `-resource` の省略形は `-res` です。  
   
- 設定する方法については`-resource`、Visual Studio IDE で、次を参照してください。[アプリケーション リソースの管理 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)します。  
+ Visual Studio IDE で `-resource` を設定する方法の詳細については、「[アプリケーションリソースの管理 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`In.vb`とリソース ファイルのアタッチ`Rf.resource`します。  
+ 次のコードでは、`In.vb` をコンパイルし、リソースファイル `Rf.resource`をアタッチします。  
   
 ```console
 vbc -res:rf.resource in.vb  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)
 - [-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)
-- [-ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

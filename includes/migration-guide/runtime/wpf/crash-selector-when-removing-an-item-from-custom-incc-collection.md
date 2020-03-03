@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8f4ee44e8432bae3537c6f064f564b9f044a7c33
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802469"
+---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>カスタム INCC コレクションから項目を削除すると、セレクターでクラッシュが発生する
 
 |   |   |

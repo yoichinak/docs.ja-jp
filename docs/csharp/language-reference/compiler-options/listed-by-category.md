@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 7403b42a48413d28808b49542727c2f07d0ad026
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546989"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73972714"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>カテゴリ別の C# コンパイラ オプションの一覧
 
@@ -54,7 +54,8 @@ ms.locfileid: "54546989"
 |[-reference](reference-compiler-option.md)|アセンブリが格納されているファイルからメタデータをインポートします。|
 |-analyzer|このアセンブリからアナライザーを実行します (短縮形: /a)。|
 |-additionalfile|コードの生成に直接影響はないが、エラーまたは警告を生成するためにアナライザーが使用できる追加のファイルを指定します。|
-
+|-embed|すべてのソース ファイルを PDB に埋め込みます。|
+|-embed:\<file list>|特定のファイルを PDB に埋め込みます。|
 ## <a name="debuggingerror-checking"></a>デバッグ/エラー チェック
 
 |オプション|目的|
@@ -101,10 +102,10 @@ ms.locfileid: "54546989"
 |[-nologo](nologo-compiler-option.md)|コンパイラの著作権情報が表示されないようにします。|
 |[-recurse](recurse-compiler-option.md)|コンパイルするソース ファイルをサブディレクトリで検索します。|
 |[-subsystemversion](subsystemversion-compiler-option.md)|実行可能ファイルが使用できるサブシステムの最低限のバージョンを指定します。|
-|[/unsafe](unsafe-compiler-option.md)|[unsafe](../../../csharp/language-reference/keywords/unsafe.md) キーワードを使用するコードのコンパイルを有効にします。|
+|[/unsafe](unsafe-compiler-option.md)|[unsafe](../keywords/unsafe.md) キーワードを使用するコードのコンパイルを有効にします。|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 エンコードを使用してコンパイラ出力を表示します。|
 |-parallel[+&#124;-]|同時実行ビルドを使用する (+) かどうかを指定します。|
-|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。|
+|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|
 
 ## <a name="obsolete-options"></a>廃止されたオプション
 
@@ -116,4 +117,4 @@ ms.locfileid: "54546989"
 
 - [C# コンパイラ オプション](index.md)
 - [アルファベット順の C# コンパイラ オプションの一覧](listed-alphabetically.md)
-- [方法: Visual Studio のコマンドラインのための環境変数を設定する](how-to-set-environment-variables-for-the-visual-studio-command-line.md)
+- [Visual Studio のコマンドラインのための環境変数を設定する方法](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

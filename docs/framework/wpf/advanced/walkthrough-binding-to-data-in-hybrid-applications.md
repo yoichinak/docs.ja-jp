@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル: ハイブリッド アプリケーションでのデータへのバインド'
+title: 'チュートリアル : ハイブリッド アプリケーションでのデータへのバインディング'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,175 +8,184 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: ba0d508881d6500d53e9e9781c3cce7185ed845d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d1e66a1277e6a04d2f49ac91691160f70fb56e4
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724344"
+ms.lasthandoff: 02/09/2020
+ms.locfileid: "77095074"
 ---
-# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>チュートリアル: ハイブリッド アプリケーションでのデータへのバインド
-使用しているかどうかをコントロールにデータ ソースのバインドは、基になるデータへのアクセス権を持つユーザーに提供するために不可欠な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 このチュートリアルでは、両方を含むハイブリッド アプリケーションでデータ バインディングを使用するどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。  
-  
- このチュートリアルでは、以下のタスクを行います。  
-  
--   プロジェクトの作成。  
-  
--   データ テンプレートを定義します。  
-  
--   フォームのレイアウトを指定します。  
-  
--   データ バインディングを指定します。  
-  
--   相互運用を使用してデータを表示しています。  
-  
--   プロジェクトへのデータ ソースを追加します。  
-  
--   データ ソースにバインドします。  
-  
- このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。[ハイブリッド アプリケーションのサンプルでのデータ バインディング](https://go.microsoft.com/fwlink/?LinkID=159983)します。  
-  
- 完了したら、ハイブリッド アプリケーションでデータ バインド機能について理解があります。  
-  
-## <a name="prerequisites"></a>必須コンポーネント  
- このチュートリアルを実行するには、次のコンポーネントが必要です。  
-  
--   Visual Studio  
-  
--   Microsoft SQL Server で実行されている Northwind サンプル データベースにアクセスします。  
-  
-## <a name="creating-the-project"></a>プロジェクトの作成  
-  
-#### <a name="to-create-and-set-up-the-project"></a>プロジェクトを作成し、設定するには  
-  
-1.  という名前の WPF アプリケーション プロジェクトを作成する`WPFWithWFAndDatabinding`します。  
-  
-2.  ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。  
-  
-    -   WindowsFormsIntegration  
-  
-    -   System.Windows.Forms  
-  
-3.  MainWindow.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。  
-  
-4.  <xref:System.Windows.Window>要素では、次の追加[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]名前空間のマッピング。  
-  
-    ```xaml  
-    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
-    ```  
-  
-5.  既定の名前を付けます<xref:System.Windows.Controls.Grid>要素`mainGrid`を割り当てることによって、<xref:System.Windows.FrameworkElement.Name%2A>プロパティ。  
-  
-     [!code-xaml[WPFWithWFAndDatabinding#8](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
-  
-## <a name="defining-the-data-template"></a>データ テンプレートを定義します。  
- 顧客のマスター一覧に表示されます、<xref:System.Windows.Controls.ListBox>コントロール。 次のコード例を定義、<xref:System.Windows.DataTemplate>という名前のオブジェクト`ListItemsTemplate`のビジュアル ツリーを制御する、<xref:System.Windows.Controls.ListBox>コントロール。 これは、<xref:System.Windows.DataTemplate>に割り当てられている、<xref:System.Windows.Controls.ListBox>コントロールの<xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>プロパティ。  
-  
-#### <a name="to-define-the-data-template"></a>データ テンプレートを定義するには  
-  
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
-  
-     [!code-xaml[WPFWithWFAndDatabinding#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
-  
-## <a name="specifying-the-form-layout"></a>フォームのレイアウトを指定します。  
- フォームのレイアウトは、次の 3 つの行と 3 つの列を持つグリッドによって定義されます。 <xref:System.Windows.Controls.Label> コントロールは、Customers テーブル内の各列を識別するために提供されます。  
-  
-#### <a name="to-set-up-the-grid-layout"></a>グリッド レイアウトを設定するには  
-  
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
-  
-     [!code-xaml[WPFWithWFAndDatabinding#4](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
-  
-#### <a name="to-set-up-the-label-controls"></a>ラベル コントロールを設定するには  
-  
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
-  
-     [!code-xaml[WPFWithWFAndDatabinding#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
-  
-## <a name="specifying-data-bindings"></a>データ バインドを指定します。  
- 顧客のマスター一覧に表示されます、<xref:System.Windows.Controls.ListBox>コントロール。 関連付けられている`ListItemsTemplate`バインド、<xref:System.Windows.Controls.TextBlock>への制御、`ContactName`データベースからフィールド。  
-  
- 複数の顧客の各レコードの詳細が表示されます<xref:System.Windows.Controls.TextBox>コントロール。  
-  
-#### <a name="to-specify-data-bindings"></a>データ バインディングを指定するには  
-  
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
-  
-     <xref:System.Windows.Data.Binding>クラス バインド、<xref:System.Windows.Controls.TextBox>コントロールをデータベースに適切なフィールド。  
-  
-     [!code-xaml[WPFWithWFAndDatabinding#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]  
-  
-## <a name="displaying-data-by-using-interoperation"></a>相互運用を使用してデータを表示します。  
- 選択した顧客に対応する注文が表示されます、<xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType>という名前のコントロール`dataGridView1`します。 `dataGridView1`コントロールが分離コード ファイル内のデータ ソースにバインドされています。 A<xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールは、この親[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロール。  
-  
-#### <a name="to-display-data-in-the-datagridview-control"></a>DataGridView コントロールでデータを表示するには  
-  
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
-  
-     [!code-xaml[WPFWithWFAndDatabinding#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
-  
-## <a name="adding-the-data-source-to-the-project"></a>データ ソースをプロジェクトに追加します。  
- Visual Studio を使用して、プロジェクトにデータ ソースを簡単に追加できます。 この手順では、厳密に型指定されたデータ セットをプロジェクトに追加します。 その他のサポート、複数のクラスなど、選択したテーブルの各テーブルのアダプターも追加されます。  
-  
-#### <a name="to-add-the-data-source"></a>データ ソースを追加するには  
-  
-1.  **データ**メニューの **新しいデータ ソースの追加**します。  
-  
-2.  **データ ソース構成ウィザード**データセットを使用して、Northwind データベースへの接続を作成します。 詳細については、「[方法 :データをデータベースに接続する](https://msdn.microsoft.com/library/6c56e54e-8834-4297-85aa-cc1a443ba556)します。  
-  
-3.  によってメッセージが表示されたら、**データ ソース構成ウィザード**、接続文字列として保存`NorthwindConnectionString`します。  
-  
-4.  データベース オブジェクトの選択を求められたら、選択、`Customers`と`Orders`テーブル、および生成されたデータ セットの名前`NorthwindDataSet`します。  
-  
-## <a name="binding-to-the-data-source"></a>データ ソースにバインドします。  
- <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>コンポーネントは、アプリケーションのデータ ソースの統一インターフェイスを提供します。 データ ソースへのバインドは、分離コード ファイルに実装されます。  
-  
-#### <a name="to-bind-to-the-data-source"></a>データ ソースにバインドするには  
-  
-1.  MainWindow.xaml.vb または MainWindow.xaml.cs の名前は分離コード ファイルを開きます。  
-  
-2.  次のコードをコピー、`MainWindow`クラスの定義。  
-  
-     このコードで宣言、<xref:System.Windows.Forms.BindingSource>コンポーネントと、データベースに接続する関連ヘルパー クラス。  
-  
-     [!code-csharp[WPFWithWFAndDatabinding#11](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
-     [!code-vb[WPFWithWFAndDatabinding#11](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
+# <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>チュートリアル : ハイブリッド アプリケーションでのデータへのバインディング
 
-3.  コンス トラクターに次のコードをコピーします。
+データソースをコントロールにバインドすることは、Windows フォームと [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のどちらを使用しているかにかかわらず、ユーザーが基になるデータにアクセスできるようにするために不可欠です。 このチュートリアルでは、Windows フォームと [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の両方のコントロールを含むハイブリッドアプリケーションでデータバインディングを使用する方法について説明します。
 
-     このコードは、作成し、初期化、<xref:System.Windows.Forms.BindingSource>コンポーネント。
+このチュートリアルでは、以下のタスクを行います。
 
-     [!code-csharp[WPFWithWFAndDatabinding#12](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
-     [!code-vb[WPFWithWFAndDatabinding#12](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
+- プロジェクトの作成。
 
-4.  MainWindow.xaml を開きます。
+- データテンプレートを定義しています。
 
-5.  デザイン ビューまたは XAML ビューで、選択、<xref:System.Windows.Window>要素。
+- フォームレイアウトを指定します。
 
-6.  [プロパティ] ウィンドウ、**イベント**タブ。
+- データバインディングを指定します。
 
-7.  ダブルクリックして、<xref:System.Windows.FrameworkElement.Loaded>イベント。
+- 相互運用を使用してデータを表示する。
 
-8.  次のコードをコピー、<xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラー。
+- プロジェクトにデータソースを追加しています。
 
-     このコードに割り当てます、<xref:System.Windows.Forms.BindingSource>データ コンテキストとしてコンポーネント設定と、`Customers`と`Orders`アダプター オブジェクト。
+- データソースにバインドしています。
 
-     [!code-csharp[WPFWithWFAndDatabinding#13](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
-     [!code-vb[WPFWithWFAndDatabinding#13](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
+このチュートリアルで示すタスクの完全なコード一覧については、「[ハイブリッドアプリケーションでのデータバインディングのサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)」を参照してください。
 
-9. 次のコードをコピー、`MainWindow`クラスの定義。
+完了すると、ハイブリッドアプリケーションのデータバインディング機能について理解できるようになります。
 
-     このメソッドは処理、<xref:System.Windows.Data.CollectionView.CurrentChanged>イベントとデータ バインディングの現在の項目を更新します。
+## <a name="prerequisites"></a>前提条件
 
-     [!code-csharp[WPFWithWFAndDatabinding#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
-     [!code-vb[WPFWithWFAndDatabinding#14](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]  
-  
-10. F5 キーを押してアプリケーションをビルドし、実行します。  
-  
-## <a name="see-also"></a>関連項目
+このチュートリアルを実行するには、次のコンポーネントが必要です。
+
+- 見ることができます。
+
+- Microsoft SQL Server で実行されている Northwind サンプルデータベースへのアクセス。
+
+## <a name="creating-the-project"></a>プロジェクトの作成
+
+### <a name="to-create-and-set-up-the-project"></a>プロジェクトを作成し、設定するには
+
+1. `WPFWithWFAndDatabinding`という名前の WPF アプリケーションプロジェクトを作成します。
+
+2. ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。
+
+    - WindowsFormsIntegration
+
+    - System.Windows.Forms
+
+3. WPF デザイナーで Mainwindow.xaml を開きます。
+
+4. <xref:System.Windows.Window> 要素に、次の Windows フォーム名前空間マッピングを追加します。
+
+    ```xaml
+    xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    ```
+
+5. <xref:System.Windows.FrameworkElement.Name%2A> プロパティを割り当てることによって、既定の <xref:System.Windows.Controls.Grid> 要素 `mainGrid` に名前を指定します。
+
+     [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]
+
+## <a name="defining-the-data-template"></a>データテンプレートの定義
+
+顧客のマスターリストが <xref:System.Windows.Controls.ListBox> コントロールに表示されます。 次のコード例では、<xref:System.Windows.Controls.ListBox> コントロールのビジュアルツリーを制御する `ListItemsTemplate` という名前の <xref:System.Windows.DataTemplate> オブジェクトを定義します。 この <xref:System.Windows.DataTemplate> は、<xref:System.Windows.Controls.ListBox> コントロールの <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A> プロパティに割り当てられます。
+
+### <a name="to-define-the-data-template"></a>データテンプレートを定義するには
+
+- 次の XAML を <xref:System.Windows.Controls.Grid> 要素の宣言にコピーします。
+
+     [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]
+
+## <a name="specifying-the-form-layout"></a>フォームレイアウトの指定
+
+フォームのレイアウトは、3つの行と3つの列を持つグリッドによって定義されます。 Customers テーブルの各列を識別するために、<xref:System.Windows.Controls.Label> コントロールが用意されています。
+
+### <a name="to-set-up-the-grid-layout"></a>グリッドレイアウトを設定するには
+
+- 次の XAML を <xref:System.Windows.Controls.Grid> 要素の宣言にコピーします。
+
+     [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]
+
+### <a name="to-set-up-the-label-controls"></a>ラベルコントロールを設定するには
+
+- 次の XAML を <xref:System.Windows.Controls.Grid> 要素の宣言にコピーします。
+
+     [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]
+
+## <a name="specifying-data-bindings"></a>データバインディングの指定
+
+顧客のマスターリストが <xref:System.Windows.Controls.ListBox> コントロールに表示されます。 アタッチされた `ListItemsTemplate` は、<xref:System.Windows.Controls.TextBlock> コントロールをデータベースの `ContactName` フィールドにバインドします。
+
+各顧客レコードの詳細が、いくつかの <xref:System.Windows.Controls.TextBox> コントロールに表示されます。
+
+### <a name="to-specify-data-bindings"></a>データバインディングを指定するには
+
+- 次の XAML を <xref:System.Windows.Controls.Grid> 要素の宣言にコピーします。
+
+     <xref:System.Windows.Data.Binding> クラスは、<xref:System.Windows.Controls.TextBox> コントロールをデータベース内の適切なフィールドにバインドします。
+
+     [!code-xaml[WPFWithWFAndDatabinding#6](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#6)]
+
+## <a name="displaying-data-by-using-interoperation"></a>相互運用を使用したデータの表示
+
+選択した顧客に対応する注文が `dataGridView1`という名前の <xref:System.Windows.Forms.DataGridView?displayProperty=nameWithType> コントロールに表示されます。 `dataGridView1` コントロールは、分離コードファイル内のデータソースにバインドされます。 <xref:System.Windows.Forms.Integration.WindowsFormsHost> コントロールは、この Windows フォームコントロールの親です。
+
+### <a name="to-display-data-in-the-datagridview-control"></a>DataGridView コントロールにデータを表示するには
+
+- 次の XAML を <xref:System.Windows.Controls.Grid> 要素の宣言にコピーします。
+
+     [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]
+
+## <a name="adding-the-data-source-to-the-project"></a>プロジェクトへのデータソースの追加
+
+Visual Studio を使用すると、データソースを簡単にプロジェクトに追加できます。 この手順では、厳密に型指定されたデータセットをプロジェクトに追加します。 選択した各テーブルのテーブルアダプターなど、他のいくつかのサポートクラスも追加されています。
+
+### <a name="to-add-the-data-source"></a>データ ソースを追加するには
+
+1. **[データ]** メニューの **[新しいデータソースの追加]** をクリックします。
+
+2. **データソース構成ウィザード**で、データセットを使用して Northwind データベースへの接続を作成します。 詳細については、「 [How to: Connect to Data in a Database](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))」を参照してください。
+
+3. **データソース構成ウィザード**によってメッセージが表示されたら、`NorthwindConnectionString`として接続文字列を保存します。
+
+4. データベースオブジェクトの選択を求めるメッセージが表示されたら、`Customers` テーブルと `Orders` テーブルを選択し、生成されたデータセットに `NorthwindDataSet`という名前を指定します。
+
+## <a name="binding-to-the-data-source"></a>データソースへのバインド
+
+<xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType> コンポーネントは、アプリケーションのデータソースに対して統一されたインターフェイスを提供します。 データソースへのバインドは、分離コードファイルに実装されています。
+
+### <a name="to-bind-to-the-data-source"></a>データソースにバインドするには
+
+1. Mainwindow.xaml または MainWindow.xaml.cs という名前の分離コードファイルを開きます。
+
+2. 次のコードを `MainWindow` クラス定義にコピーします。
+
+     このコードは、データベースに接続する <xref:System.Windows.Forms.BindingSource> コンポーネントと関連付けられたヘルパークラスを宣言します。
+
+     [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
+     [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
+
+3. 次のコードをコンストラクターにコピーします。
+
+     このコードでは、<xref:System.Windows.Forms.BindingSource> コンポーネントを作成して初期化します。
+
+     [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
+     [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
+
+4. MainWindow.xaml を開きます。
+
+5. デザインビューまたは XAML ビューで、<xref:System.Windows.Window> 要素を選択します。
+
+6. プロパティウィンドウで、 **[イベント]** タブをクリックします。
+
+7. <xref:System.Windows.FrameworkElement.Loaded> イベントをダブルクリックします。
+
+8. 次のコードを <xref:System.Windows.FrameworkElement.Loaded> イベントハンドラーにコピーします。
+
+     このコードでは、<xref:System.Windows.Forms.BindingSource> コンポーネントをデータコンテキストとして割り当て、`Customers` および `Orders` アダプターオブジェクトを設定します。
+
+     [!code-csharp[WPFWithWFAndDatabinding#13](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#13)]
+     [!code-vb[WPFWithWFAndDatabinding#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#13)]
+
+9. 次のコードを `MainWindow` クラス定義にコピーします。
+
+     このメソッドは、<xref:System.Windows.Data.CollectionView.CurrentChanged> イベントを処理し、データバインディングの現在の項目を更新します。
+
+     [!code-csharp[WPFWithWFAndDatabinding#14](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#14)]
+     [!code-vb[WPFWithWFAndDatabinding#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#14)]
+
+10. F5 キーを押して、アプリケーションをビルドして実行します。
+
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [ハイブリッド アプリケーションのサンプルでのデータ バインディング](https://go.microsoft.com/fwlink/?LinkID=159983)
-- [チュートリアル: WPF で Windows フォーム複合コントロールのホスト](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [チュートリアル: Windows フォームでの WPF 複合コントロールをホストしています。](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [Visual Studio で XAML をデザインする](/visualstudio/xaml-tools/designing-xaml-in-visual-studio)
+- [ハイブリッドアプリケーションでのデータバインディングのサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFWithWFAndDatabinding)
+- [チュートリアル: WPF での Windows フォーム複合コントロールのホスト](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [チュートリアル: Windows フォームでの WPF 複合コントロールのホスト](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

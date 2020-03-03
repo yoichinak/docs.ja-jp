@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 09313cb5-06f6-43bd-94f4-1055c6b0c99a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e1c3d20b1b9470c744f6dca9ef638555b9322c1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e975db68252e866a0bf7898f1c9d3cbe67bbe24f
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658118"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134579"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo メソッド
-指定したアセンブリについて、要求されたデータを取得します。  
+指定したアセンブリに関する要求されたデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT QueryAssemblyInfo (  
     [in] DWORD dwFlags,  
     [in] LPCWSTR pszAssemblyName,  
@@ -37,26 +35,27 @@ HRESULT QueryAssemblyInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwFlags`  
- [in]ものがありますで定義されているフラグ。 次の値がサポートされています。  
+ からFusion に定義されているフラグ。 次の値がサポートされています。  
   
--   QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
+- QUERYASMINFO_FLAG_VALIDATE (0x00000001)  
   
--   QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
+- QUERYASMINFO_FLAG_GETSIZE (0x00000002)  
   
  `pszAssemblyName`  
- [in]データの取得対象のアセンブリの名前。  
+ からデータの取得対象となるアセンブリの名前。  
   
  `pAsmInfo`  
- [入力、出力][ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)アセンブリについてのデータを含む構造体。  
+ [入力、出力]アセンブリに関するデータを格納する[ASSEMBLY_INFO](assembly-info-structure.md)構造体。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+
+- [IAssemblyCache インターフェイス](iassemblycache-interface.md)

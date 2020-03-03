@@ -7,14 +7,12 @@ helpviewer_keywords:
 - DllMain function
 - MDAs (managed debugging assistants), DllMain returns false
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c513ba06ac79eb3da229605120c4f59ab8d32665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0b413521e0a2dc06c2ff0be642f080eaf541202f
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554544"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216440"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
 `dllMainReturnsFalse` マネージド デバッグ アシスタント (MDA) は、DLL_PROCESS_ATTACH が原因で呼び出されたユーザー アセンブリのマネージド `DllMain` 関数が FALSE を返す場合にアクティブになります。  
@@ -25,7 +23,7 @@ ms.locfileid: "54554544"
 ## <a name="cause"></a>原因  
  `DllMain` 関数は、ロード時の DLL 初期化の DLL_PROCESS_ATTACH が原因で呼び出されます。 FALSE が返された場合は、その DLL 初期化が失敗したことを意味します。  
   
-## <a name="resolution"></a>解像度  
+## <a name="resolution"></a>解決策  
  失敗した DLL の `DllMain` 関数のコードを分析し、初期化エラーの原因を特定します。  
   
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
@@ -44,5 +42,6 @@ ms.locfileid: "54554544"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>参照
+
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

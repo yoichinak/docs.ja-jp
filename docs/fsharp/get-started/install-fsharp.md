@@ -1,67 +1,48 @@
 ---
-title: F# のインストールします。
-description: お客様の環境に基づいて、F# をインストールする方法について説明します。
-ms.date: 08/28/2018
-ms.openlocfilehash: d53ecdcba5411db62208cb683a0fad795711b77c
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+title: F# をインストールする
+description: さまざまな方法でF#をインストールする方法について説明します。
+ms.date: 12/20/2019
+ms.openlocfilehash: 302e04f7cf3271516dff88d9d5f18f620b6ede80
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "50193904"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346561"
 ---
-# <a name="install-f"></a>F# のインストールします。 #
+# <a name="install-f"></a>F\# のインストール
 
-複数の方法で F# をインストールと、環境に応じてことができます。
+環境に応じて、複数の方法で F# をインストールできます。
 
-## <a name="install-f-with-visual-studio"></a>Visual Studio を使用した F# のインストールします。
+## <a name="install-f-with-visual-studio"></a>Visual Studio で F# をインストールする
 
-ダウンロードしている場合[Visual Studio](https://visualstudio.microsoft.com/)最初に、これは最初にインストール、Visual Studio インストーラー。 インストーラーから、適切な SKU の Visual Studio をインストールします。 既にインストールされていること、クリックして**変更**します。
+1. [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)を初めてダウンロードする場合は、最初に Visual Studio インストーラーをインストールします。 インストーラーから適切なエディションの Visual Studio をインストールします。
 
-次のワークロードの一覧を確認します。 選択**ASP.NET および web 開発**F# サポートおよび ASP.NET Core プロジェクトの .NET Core のサポートがインストールされます。
+   Visual Studio が既にインストールされている場合は、追加F#先のエディションの横にある [変更] を選択します。
 
-次に、クリックして**変更**下部右側にあります。  これは、選択したすべてのものにインストールされます。 クリックして、F# 言語サポートと Visual Studio 2017 を開くことができますし、**起動**します。
+2. [ワークロード] ページで、 **ASP.NET および web 開発**ワークロードを選択F#します。これには、ASP.NET Core プロジェクトの .net Core サポートが含まれています。
 
-## <a name="install-f-with-visual-studio-for-mac"></a>F# で Visual Studio for Mac をインストールします。
+3. 右下隅にある **[変更]** を選択して、選択したすべてのものをインストールします。
 
-既定で F# がインストールされている[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)、選択した構成に関係なく。
+   次に、[Visual Studio インストーラーでF# **起動**] を選択して、Visual Studio を開くことができます。
 
-インストールが完了した後は、"Visual Studio を起動する"を選択します。 起動してもかまいませんが Finder を macOS でします。
+## <a name="install-f-with-visual-studio-code"></a>Visual Studio Code F#と共にインストールする
 
-## <a name="install-f-with-visual-studio-code"></a>Visual Studio Code で F# のインストールします。
+1. [Git](https://git-scm.com/download)がインストールされ、パスに使用できることを確認します。 コマンドプロンプトで `git --version` を入力し、 **enter**キーを押すと、正しくインストールされていることを確認できます。
 
-必要があります[git がインストールされている](https://git-scm.com/download)を PATH にで使用可能なプロジェクト テンプレートの使用します。 」と入力して正しくインストールされていることを確認する`git --version`キーを押して、コマンド プロンプトで**Enter**します。
+2. [.NET Core SDK](https://dotnet.microsoft.com/download)と[Visual Studio Code](https://code.visualstudio.com)をインストールします。
 
-### <a name="macostabmacos"></a>[macOS](#tab/macos)
+3. 拡張機能のアイコンを選択し、"Ionide" を検索します。
 
-[Mono](https://www.mono-project.com)使用[F# Interactive](../tutorials/fsharp-interactive/index.md)をサポートします。 MacOS で Mono をインストールする最も簡単な方法は、Homebrew を使用してです。 単に、ターミナルに、次を入力します。
+   Visual Studio Code でのサポートにF#必要なプラグインは、 [Ionide fsharp.core](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)だけです。 ただし、Ionide をインストールして、[偽](https://fake.build/)[の](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE)サポートと[Ionide](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket)を取得し、[パケット](https://fsprojects.github.io/Paket/)のサポートを取得することもできます。 フェイクとパケットは、 F#プロジェクトをビルドし、依存関係を管理するための追加のコミュニティツールです。
 
-```console
-brew install mono
-```
+## <a name="install-f-with-visual-studio-for-mac"></a>Visual Studio for Macで F# をインストールする
 
-インストールことも、 [.NET Core SDK](https://www.microsoft.com/net/download)します。
+F# は、選択した構成に関係なく、[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)にデフォルトでインストールされます。
 
-### <a name="linuxtablinux"></a>[Linux](#tab/linux)
+インストールが完了したら、 **[Visual Studio の開始]** を選択します。 MacOS で Finder を使用して Visual Studio を開くこともできます。
 
-[Mono](https://www.mono-project.com)使用[F# Interactive](../tutorials/fsharp-interactive/index.md)をサポートします。 Debian または Ubuntu の場合は、次を使用できます。
+## <a name="install-f-on-a-build-server"></a>ビルドF#サーバーへのインストール
 
-```console
-sudo apt-get update
-sudo apt-get install mono-complete fsharp
-```
+.Net Core または .net SDK を使用して .NET Framework を使用している場合は、単に .NET SDK をビルドサーバーにインストールする必要があります。 必要なものはすべて揃っています。
 
-インストールことも、 [.NET Core SDK](https://www.microsoft.com/net/download)します。
-
-### <a name="windowstabwindows"></a>[Windows](#tab/windows)
-
-インストール[F# のサポートを使用した Visual Studio](#install-f-with-visual-studio)します。 これにより、書き込み、コンパイル、および F# コードの実行に必要なすべてのコンポーネントがインストールされます。
-
-インストールことも、 [.NET Core SDK](https://www.microsoft.com/net/download/)します。
-
----
-
-その後[Visual Studio Code](https://code.visualstudio.com)をインストールします。
-
-次に、「ionide の概要」の検索と拡張機能アイコンをクリックします。
-
-Visual Studio Code での F# サポートが必要な唯一のプラグイン[ionide-fsharp](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)します。 ただし、インストールすることも[Ionide フェイク](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-FAKE)を取得する[フェイク](https://fsharp.github.io/FAKE/)サポートと[Ionide パケット](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-Paket)を取得する[パケットを作成](https://fsprojects.github.io/Paket/)をサポートします。 偽の追加 F# コミュニティのツールをプロジェクトのビルドとの依存関係をそれぞれ管理は、パケットを作成します。
+.NET Framework を使用していて、.NET SDK を使用して**いない**場合は、 [Visual Studio Build Tools SKU](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=16)を Windows Server にインストールする必要があります。 インストーラーで、 **[.net デスクトップビルドツール]** を選択し、インストーラーメニューの右側にある **F#コンパイラ**コンポーネントを選択します。

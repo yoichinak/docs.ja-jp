@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c998d70fa5dd41ab4c1656f129bb77767a8ab97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a93bbe0d7a9d9e6ff7505bbc215efa79176ad1f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574626"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74440438"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps メソッド
-指定したトークンによって参照されているジェネリック パラメーターの定義のプロパティ値を設定します。  
+指定したトークンによって参照されるジェネリックパラメーター定義のプロパティ値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetGenericParamProps (  
     [in] mdGenericParam   gp,   
     [in] DWORD            dwParamFlags,   
@@ -39,12 +37,12 @@ HRESULT SetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `gp`  
- [in]値を設定するジェネリック パラメーターの定義のトークンです。  
+ から値を設定するジェネリックパラメーター定義のトークン。  
   
  `dwParamFlags`  
- [in]値、 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)ジェネリック パラメーターの型を表す列挙体。  
+ からジェネリックパラメーターの型を記述する[Corgenericparamattr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列挙体の値。  
   
  `szName`  
  [in] オプション。 値を設定するパラメーターの名前。  
@@ -53,17 +51,18 @@ HRESULT SetGenericParamProps (
  [入力] 将来の機能拡張に備えて予約されています。  
   
  `rtkConstraints`  
- [in] オプション。 型の制約の 0 で終わる配列。 配列のメンバーである必要があります、 `mdTypeDef`、 `mdTypeRef`、または`mdTypeSpec`メタデータ トークン。  
+ [in] オプション。 型制約の0から終わる配列。 配列メンバーは、`mdTypeDef`、`mdTypeRef`、または `mdTypeSpec` メタデータトークンである必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

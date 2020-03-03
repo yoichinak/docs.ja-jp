@@ -1,18 +1,18 @@
 ---
-title: '方法: LINQ to SQL コマンドの表示'
+title: '方法: LINQ to SQL コマンドを表示する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: a70f1e0dd471e86afe2e744c157d4aed2a217deb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec5010a42980e2d7a1a03c31d396cac6b6934a58
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630828"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002938"
 ---
-# <a name="how-to-display-linq-to-sql-commands"></a>方法: LINQ to SQL コマンドの表示
+# <a name="how-to-display-linq-to-sql-commands"></a>方法: LINQ to SQL コマンドを表示する
 SQL コマンドとその他の情報を表示するには、<xref:System.Data.Linq.DataContext.GetCommand%2A> を使用します。  
   
 ## <a name="example"></a>例  
@@ -23,7 +23,7 @@ SQL コマンドとその他の情報を表示するには、<xref:System.Data.L
   
  次のような出力が表示されます。  
   
-```  
+```console  
 Customers from London:  
     Thomas Hardy  
     Victoria Ashworth  
@@ -35,7 +35,7 @@ Customers from London:
     Dominique Perrier  
 ```  
   
-```  
+```console  
 Command Text:  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
 itle], [t0].[Address], [t0].[City], [t0].[Region], [t0].[PostalCode], [t0].[Coun  
@@ -49,4 +49,5 @@ Connection: System.Data.SqlClient.SqlConnection
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグのサポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+
+- [デバッグのサポート](debugging-support.md)

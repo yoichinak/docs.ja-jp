@@ -1,5 +1,5 @@
 ---
-title: Error ステートメント (Visual Basic)
+title: Error ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.error
@@ -10,59 +10,60 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], codes
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
-ms.openlocfilehash: e819ba043dec2d5e8e792fdf57dc0c273a24e881
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 668ffbc7b8db73a706c5771bb0734a77f8fc0206
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654816"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351245"
 ---
 # <a name="error-statement"></a>Error ステートメント
 エラーの発生をシミュレートします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Error errornumber  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `errornumber`  
- 必須。 有効なエラー番号を指定できます。  
+ 必須。 任意の有効なエラー番号を指定できます。  
   
-## <a name="remarks"></a>Remarks  
- `Error`ステートメントは、旧バージョンとの互換性をサポートします。 オブジェクトを作成するときに特に新しいコードを使用して、`Err`オブジェクトの`Raise`実行時エラーを生成します。  
+## <a name="remarks"></a>コメント  
+ `Error` ステートメントは、旧バージョンとの互換性のためにサポートされています。 新しいコードでは、特にオブジェクトを作成する場合は、`Err` オブジェクトの `Raise` メソッドを使用して、実行時エラーを生成します。  
   
- 場合`errornumber`が定義されている、`Error`ステートメントのプロパティの後のエラー ハンドラーの呼び出し、`Err`オブジェクトには、次の既定値が割り当てられます。  
+ `errornumber` が定義されている場合、`Err` オブジェクトのプロパティに次の既定値が割り当てられると、`Error` ステートメントによってエラーハンドラーが呼び出されます。  
   
-|プロパティ|[値]|  
+|プロパティ|値|  
 |--------------|-----------|  
-|`Number`|引数として指定された値`Error`ステートメント。 有効なエラー番号を指定できます。|  
-|`Source`|現在の Visual Basic プロジェクトの名前です。|  
-|`Description`|文字列式の戻り値に対応する、 `Error` 、指定された関数`Number`、この文字列が存在する場合。 文字列が存在しない場合`Description`長さ 0 の文字列が含まれています ("")。|  
-|`HelpFile`|完全修飾のドライブ、パス、および適切な Visual Basic ヘルプ ファイルの名前。|  
-|`HelpContext`|対応するエラーのコンテキスト ID を適切な Visual Basic ヘルプ ファイル、`Number`プロパティ。|  
-|`LastDLLError`|0 を返します。|  
+|`Number`|`Error` ステートメントの引数として指定された値。 任意の有効なエラー番号を指定できます。|  
+|`Source`|現在の Visual Basic プロジェクトの名前。|  
+|`Description`|この文字列が存在する場合は、指定された `Number`の `Error` 関数の戻り値に対応する文字列式。 文字列が存在しない場合、`Description` には長さ0の文字列 ("") が含まれます。|  
+|`HelpFile`|適切な Visual Basic ヘルプファイルの完全修飾ドライブ、パス、およびファイル名。|  
+|`HelpContext`|`Number` プロパティに対応するエラーの Visual Basic ヘルプファイルコンテキスト ID。|  
+|`LastDLLError`|ゼロ。|  
   
- エラー ハンドラーが存在しないか、有効でない場合、エラー メッセージが作成されから表示される場合、`Err`オブジェクトのプロパティ。  
+ エラーハンドラーが存在しない場合、または何も有効になっていない場合は、エラーメッセージが作成され、`Err` オブジェクトのプロパティから表示されます。  
   
 > [!NOTE]
->  Visual Basic のホスト アプリケーションによっては、オブジェクトを作成できません。 クラスとオブジェクトのどちらを作成できるかどうかを判断する、ホスト アプリケーションのマニュアルを参照してください。  
+> Visual Basic ホストアプリケーションによっては、オブジェクトを作成できない場合があります。 クラスとオブジェクトを作成できるかどうかを判断するには、ホストアプリケーションのドキュメントを参照してください。  
   
 ## <a name="example"></a>例  
- この例では、 `Error` 11 のエラー番号を生成するステートメント。  
+ この例では、`Error` ステートメントを使用して、エラー番号11を生成します。  
   
-```  
+```vb  
 On Error Resume Next   ' Defer error handling.  
 Error 11   ' Simulate the "Division by zero" error.  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>要件  
+ **名前空間:** [Microsoft. visual basic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:Microsoft.VisualBasic.ErrObject.Clear%2A>
 - <xref:Microsoft.VisualBasic.Information.Err%2A>
 - <xref:Microsoft.VisualBasic.ErrObject.Raise%2A>

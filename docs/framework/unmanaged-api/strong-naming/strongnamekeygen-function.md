@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: 883e413a-ad2f-4f7f-b1b9-aeb8fe5b65f8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 30610311d2c48f15ebd85910557892784c0cfe85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79b2235e3645c89c2cd9ebcce079d5eb7efdd162
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542497"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128739"
 ---
 # <a name="strongnamekeygen-function"></a>StrongNameKeyGen 関数
 厳密な名前を使用するために新しい公開/秘密キーの組が作成されます。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnamekeygen](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameKeyGen](../hosting/iclrstrongname-strongnamekeygen-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameKeyGen (  
     [in]  LPCWSTR   wszKeyContainer,  
     [in]  DWORD     dwFlags,  
@@ -39,41 +37,42 @@ BOOLEAN StrongNameKeyGen (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszKeyContainer`  
- [in]要求されたキー コンテナーの名前。 `wszKeyContainer` 空でない文字列であるか、一時テーブル名を生成する場合は null が必要です。  
+ から要求されたキーコンテナー名。 `wszKeyContainer` は、空でない文字列であるか、または一時名を生成するために null である必要があります。  
   
  `dwFlags`  
- [in]登録されているキーのままにするかどうかを指定します。 次の値がサポートされています。  
+ からキーを登録したままにするかどうかを指定します。 次の値がサポートされています。  
   
--   0x00000000 の際に使用される`wszKeyContainer`一時的なキー コンテナーの名前を生成する場合は null です。  
+- 0x00000000-一時キーコンテナー名を生成するために `wszKeyContainer` が null の場合に使用します。  
   
--   0x00000001 (`SN_LEAVE_KEY`) のキーを左に登録する必要がありますを指定します。  
+- 0x00000001 (`SN_LEAVE_KEY`)-キーを登録したままにすることを指定します。  
   
  `ppbKeyBlob`  
- [out]返された公開/秘密キー ペア。  
+ 入出力返された公開/秘密キーのペア。  
   
  `pcbKeyBlob`  
- [out]サイズ (バイト単位) の`ppbKeyBlob`します。  
+ 入出力`ppbKeyBlob`のサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
+ 正常に完了した場合は `true`。それ以外の場合は、`false`ます。  
   
 ## <a name="remarks"></a>Remarks  
- `StrongNameKeyGen`関数は、1024 ビットのキーを作成します。 呼び出す必要があります、キーが取得された後、 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)割り当てられたメモリを解放する関数。  
+ `StrongNameKeyGen` 関数は、1024ビットのキーを作成します。 キーが取得されたら、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md)関数を呼び出して、割り当てられたメモリを解放する必要があります。  
   
- 場合、`StrongNameKeyGen`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
+ `StrongNameKeyGen` 関数が正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)関数を呼び出して、最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [StrongNameKeyGen メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygen-method.md)
-- [StrongNameKeyGenEx メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeygenex-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [StrongNameKeyGen メソッド](../hosting/iclrstrongname-strongnamekeygen-method.md)
+- [StrongNameKeyGenEx メソッド](../hosting/iclrstrongname-strongnamekeygenex-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

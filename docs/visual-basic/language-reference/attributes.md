@@ -1,25 +1,27 @@
 ---
-title: 属性 (Visual Basic)
+title: 属性
 ms.date: 07/20/2015
 helpviewer_keywords:
 - attributes [Visual Basic]
 ms.assetid: 5deb2b8a-1afd-4dbd-8ee8-f093d74ad0eb
-ms.openlocfilehash: 2040cee33d41ca1dfcce068c84be0589c958a707
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226187fc183b12055e9a67a8fdef0178edb317d8
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579339"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347855"
 ---
 # <a name="attributes-visual-basic"></a>属性 (Visual Basic)
-Visual Basic では、オブジェクトが、アンマネージ コードと相互運用できるようにするいくつかの属性とモジュール メンバーに、モジュール名のないアクセスを使用できる 1 つの属性を提供します。 次の表は、Visual Basic で使用される属性を一覧表示します。  
+
+Visual Basic には、オブジェクトがアンマネージコードと相互運用できるようにするいくつかの属性と、モジュール名を使用せずにモジュールメンバーにアクセスできるようにする1つの属性が用意されています。 次の表に、Visual Basic によって使用される属性の一覧を示します。  
   
 |||  
 |---|---|  
-|<xref:Microsoft.VisualBasic.ComClassAttribute>|クラスが COM オブジェクトとして公開できるようにするメタデータの追加をコンパイラに指示します。|  
-|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|モジュール メンバーに、モジュールに必要な修飾だけを使用してアクセスを許可します。|  
-|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|構造体または非ローカル変数で配列を固定長の配列として扱うことを示します。|  
-|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|固定長かのように文字列を扱う必要があることを示します。|  
+|<xref:Microsoft.VisualBasic.ComClassAttribute>|クラスを COM オブジェクトとして公開できるようにするメタデータを追加するようにコンパイラに指示します。|
+|<xref:Microsoft.VisualBasic.HideModuleNameAttribute>|モジュールに必要な修飾だけを使用してモジュールメンバーにアクセスできるようにします。|
+|<xref:Microsoft.VisualBasic.VBFixedArrayAttribute>|構造体または非ローカル変数の配列を固定長配列として扱うことを示します。|
+|<xref:Microsoft.VisualBasic.VBFixedStringAttribute>|文字列を固定長であるかのように処理する必要があることを示します。|
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [属性の概要](../../visual-basic/programming-guide/concepts/attributes/index.md)

@@ -14,23 +14,21 @@ helpviewer_keywords:
 - QualifierSet_Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 357182d6157b63f1bccf47cb43f0c78dec5875cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc09cd30c43647fa00cccc1dc00da4f8de367e84
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625940"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127271"
 ---
-# <a name="qualifiersetget-function"></a>QualifierSet_Get 関数
+# <a name="qualifierset_get-function"></a>QualifierSet_Get 関数
 指定した名前付き修飾子が取得されます。  
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT QualifierSet_Get (
    [in] int                  vFunc, 
    [in] IWbemQualifierSet*   ptr, 
@@ -44,43 +42,44 @@ HRESULT QualifierSet_Get (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`   
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`   
-[in]ポインター、 [IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンス。
+から[IWbemQualifierSet](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemqualifierset)インスタンスへのポインター。
 
 `wszName`   
-[in]値が要求された修飾子の名前。
+から値を要求する修飾子の名前。
 
 `lFlags`   
-[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターには0を指定する必要があります。
 
 `pVal`   
-[out]成功した場合、正しい型および修飾子の値。 関数が失敗した場合、`VARIANT`によって示される`pVal`は変更されません。 このパラメーターが場合`null`パラメーターは無視されます。
+入出力成功した場合は、修飾子の正しい型と値。 関数が失敗した場合、`pVal` が指す `VARIANT` は変更されません。 このパラメーターが `null`場合、パラメーターは無視されます。
 
 `plFlavor`   
-[out]要求された修飾子の修飾子のフレーバー ビットを受け取る LONG へのポインター。 このパラメーターを指定できますフレーバー情報が望ましくない場合`null`します。 
+入出力要求された修飾子の修飾子フレーバービットを受け取る LONG へのポインター。 フレーバー情報が必要でない場合は、このパラメーターを `null`できます。 
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定した修飾子が存在しません。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定された修飾子は存在しません。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemQualifierSet::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)メソッド。
+この関数は、 [IWbemQualifierSet:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemqualifierset-get)メソッドの呼び出しをラップします。
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

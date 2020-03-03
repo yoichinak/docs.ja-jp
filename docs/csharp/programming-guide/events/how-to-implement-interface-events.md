@@ -1,20 +1,19 @@
 ---
-title: '方法: インターフェイス イベントを実装する - C# プログラミング ガイド'
-ms.custom: seodec18
+title: インターフェイス イベントを実装する方法 - C# プログラミング ガイド
 ms.date: 07/20/2015
 helpviewer_keywords:
 - interfaces [C#], event implementation in classes
 - events [C#], in interfaces
 ms.assetid: 63527447-9535-4880-8e95-35e2075827df
-ms.openlocfilehash: 47bd7184e26a643aa8ff17b3e0a0507ab7978216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b84b96245310bce557bcd3865e41cf152e7ae9df
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540283"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712339"
 ---
-# <a name="how-to-implement-interface-events-c-programming-guide"></a>方法: インターフェイス イベントを実装する (C# プログラミング ガイド)
-[インターフェイス](../../../csharp/language-reference/keywords/interface.md)では[イベント](../../../csharp/language-reference/keywords/event.md)を宣言できます。 次の例では、クラス内にインターフェイス イベントを実装する方法について説明します。 基本的な原則は、インターフェイスのメソッドやプロパティを実装する場合と同じです。  
+# <a name="how-to-implement-interface-events-c-programming-guide"></a>インターフェイス イベントを実装する方法 (C# プログラミング ガイド)
+[インターフェイス](../../language-reference/keywords/interface.md)では[イベント](../../language-reference/keywords/event.md)を宣言できます。 次の例では、クラス内にインターフェイス イベントを実装する方法について説明します。 基本的な原則は、インターフェイスのメソッドやプロパティを実装する場合と同じです。  
   
 ## <a name="to-implement-interface-events-in-a-class"></a>クラス内でインターフェイス イベントを実装するには  
   
@@ -56,12 +55,12 @@ namespace ImplementInterfaceEvents
   
 独自のアクセサーを指定することで、2 つのイベントがクラス内の同一イベントと別々のイベントのどちらによって表されるかを指定できます。 たとえば、インターフェイスの仕様上、イベントを複数回発生させる必要がある場合は、各イベントをクラス内の別々の実装に関連付けます。 次の例では、サブスクライバーで `IShape` または `IDrawingObject` のいずれかに図形参照をキャストして、どちらの `OnDraw` イベントを受信するかを決定しています。  
   
- [!code-csharp[WrapTwoInterfaceEvents](../../../csharp/programming-guide/events/codesnippet/CSharp/how-to-implement-interface-events_1.cs#everything)]
+ [!code-csharp[csProgGuideEvents#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEvents/CS/Events.cs#10)]
   
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [イベント](../../../csharp/programming-guide/events/index.md)
-- [デリゲート](../../../csharp/programming-guide/delegates/index.md)
-- [明示的なインターフェイスの実装](../../../csharp/programming-guide/interfaces/explicit-interface-implementation.md)
-- [方法: 派生クラスから基本クラス イベントを発生させる](../../../csharp/programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md)
+- [C# プログラミング ガイド](../index.md)
+- [イベント](./index.md)
+- [デリゲート](../delegates/index.md)
+- [明示的なインターフェイスの実装](../interfaces/explicit-interface-implementation.md)
+- [派生クラスから基本クラス イベントを発生させる方法](./how-to-raise-base-class-events-in-derived-classes.md)

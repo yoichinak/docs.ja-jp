@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: ca2af325-eb9d-4a91-90e4-267e45b98611
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: f888c39160e52e550d07f58b9c5bcd11fd625658
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bab215a8221696a0e43e228278085fcef52a40e9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564082"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442817"
 ---
 # <a name="cormethodsemanticsattr-enumeration"></a>CorMethodSemanticsAttr 列挙型
 メソッドとそれに関連付けられているプロパティまたはイベントとの関係を記述する値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorMethodSemanticsAttr {  
   
     msSetter    =   0x0001,  
@@ -45,19 +43,20 @@ typedef enum CorMethodSemanticsAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`msSetter`|メソッドを指定します、`set`プロパティのアクセサー。|  
-|`msGetter`|メソッドを指定します、`get`プロパティのアクセサー。|  
-|`msOther`|メソッドに、プロパティまたはここで定義されているもの以外のイベントへのリレーションシップを指定します。|  
-|`msAddOn`|メソッドがイベント ハンドラー メソッドを追加指定します。|  
-|`msRemoveOn`|メソッドがイベント ハンドラー メソッドを削除するを指定します。|  
+|`msSetter`|メソッドがプロパティの `set` アクセサーであることを指定します。|  
+|`msGetter`|メソッドがプロパティの `get` アクセサーであることを指定します。|  
+|`msOther`|メソッドが、ここで定義されたプロパティ以外のプロパティまたはイベントへのリレーションシップを持つことを指定します。|  
+|`msAddOn`|メソッドがイベントのハンドラーメソッドを追加することを指定します。|  
+|`msRemoveOn`|メソッドがイベントのハンドラーメソッドを削除することを指定します。|  
 |`msFire`|メソッドがイベントを発生させることを指定します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

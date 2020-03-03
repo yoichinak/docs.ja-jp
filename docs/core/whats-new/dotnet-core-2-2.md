@@ -4,15 +4,13 @@ description: .NET Core 2.2 の新機能について。
 dev_langs:
 - csharp
 - vb
-author: rpetrusha
-ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679778"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156583"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 の新機能
 
@@ -20,7 +18,7 @@ ms.locfileid: "54679778"
 
 ## <a name="new-deployment-mode"></a>新しい配置モード
 
-.NET Core 2.2 以降、[フレームワークに依存する実行可能ファイル](../deploying/index.md#framework-dependent-executables-fde)を配置できます。これは **.dll** ファイルではなく **.exe** ファイルとなります。 機能的にはフレームワーク依存の配置と似ていますが、フレームワークに依存する実行可能ファイル (FDE) は引き続き .NET Core のシステム全体の共有バージョンに依存して実行されます。 アプリに含まれるものは、ご自身のコードとサードパーティの依存関係のみです。 フレームワーク依存の配置とは異なり、FDE はプラットフォーム固有です。
+.NET Core 2.2 以降、[フレームワークに依存する実行可能ファイル](../deploying/index.md#publish-runtime-dependent)を配置できます。これは **.dll** ファイルではなく **.exe** ファイルとなります。 機能的にはフレームワーク依存の配置と似ていますが、フレームワークに依存する実行可能ファイル (FDE) は引き続き .NET Core のシステム全体の共有バージョンに依存して実行されます。 アプリに含まれるものは、ご自身のコードとサードパーティの依存関係のみです。 フレームワーク依存の配置とは異なり、FDE はプラットフォーム固有です。
 
 この新しい配置モードの際立った利点は、ライブラリの代わりに実行可能ファイルをビルドすることです。これは、最初に `dotnet` を呼び出すことなく、直接アプリを実行できることを意味します。
 
@@ -28,9 +26,9 @@ ms.locfileid: "54679778"
 
 **ランタイム サービスでのイベントの処理**
 
-GC、JIT、ThreadPool などのランタイム サービスがどのようにアプリケーションで使われているのか監視して、それがアプリケーションに与えている影響を把握したい場合がよくあります。 Windows システムでは、これは通常、現在のプロセスの ETW イベントを監視することによって行われます。 これは引き続き正常に動作しますが、権限の低い環境内、または Linux や macOS 上で実行している場合は、常に ETW を使えるとは限りません。  
+GC、JIT、ThreadPool などのランタイム サービスがどのようにアプリケーションで使われているのか監視して、それがアプリケーションに与えている影響を把握したい場合がよくあります。 Windows システムでは、これは通常、現在のプロセスの ETW イベントを監視することによって行われます。 これは引き続き正常に動作しますが、権限の低い環境内、または Linux や macOS 上で実行している場合は、常に ETW を使えるとは限りません。
 
-.NET Core 2.2 以降では、<xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype> クラスを使って CoreCLR イベントを使えるようになりました。 これらのイベントでは、GC、JIT、ThreadPool、および相互運用などのランタイム サービスの動作が説明されます。 これらは、CoreCLR ETW プロバイダーの一部と同じイベントです。  このため、アプリケーションでは、これらのイベントを使うかトランスポート機構を使って、それらをテレメトリ集計サービスに送信できます。 次のコード サンプルでイベントをサブスクライブする方法を確認できます。
+.NET Core 2.2 以降では、<xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> クラスを使って CoreCLR イベントを使えるようになりました。 これらのイベントでは、GC、JIT、ThreadPool、および相互運用などのランタイム サービスの動作が説明されます。 これらは、CoreCLR ETW プロバイダーの一部として公開されるものと同じイベントです。  このため、アプリケーションでは、これらのイベントを使うかトランスポート機構を使って、それらをテレメトリ集計サービスに送信できます。 次のコード サンプルでイベントをサブスクライブする方法を確認できます。
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -82,7 +80,7 @@ internal sealed class SimpleEventListener : EventListener
 
 - **第 2 階層**: 頻繁に実行されるメソッドに対して、最適化されたコードを生成します。 コンパイルの第 2 階層は、パフォーマンスの向上と並行して実行されます。
 
-階層型コンパイルによって得られるパフォーマンスの向上について詳しくは、「[Announcing .NET Core 2.2 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/)」(.NET Core 2.2 Preview 2 の発表) をご覧ください。 
+階層型コンパイルによって得られるパフォーマンスの向上について詳しくは、「[Announcing .NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/)」(.NET Core 2.2 Preview 2 の発表) をご覧ください。
 
 .NET Core 2.2 Preview 2 では、階層型コンパイルが既定で有効になっていました。 しかし、階層型コンパイルを既定で有効にする準備はまだ整っていないと判断されました。 このため .NET Core 2.2 では、階層型コンパイルはオプトイン機能のままとなります。 階層型コンパイルに対するオプトインについて詳しくは、「[.NET Core 2.1 の新機能](dotnet-core-2-1.md)」の「[JIT コンパイラの機能強化](dotnet-core-2-1.md#jit-compiler-improvements)」をご覧ください。
 

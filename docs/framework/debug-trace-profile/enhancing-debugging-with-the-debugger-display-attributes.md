@@ -13,18 +13,16 @@ helpviewer_keywords:
 - display attributes for debugger
 - DebuggerBrowsableAttribute attribute
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: aff2dd26db4abb892b2fc775052b6e833aa25267
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca118bffb045a0e7e3a5084916a0ff8020ebda90
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684594"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77216492"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>デバッガー表示属性によるデバッグ機能の拡張
 
-デバッガー表示属性は、型を指定し、その型の実行時の動作を最もよく理解している型の開発者が、デバッガーで表示されたときに、その型がどのように見えるかも指定できるようにします。 さらに、`Target` プロパティを提供するデバッガー表示属性は、ソース コードの知識がなくても、ユーザーがアセンブリ レベルで適用することができます。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性は、デバッガーの変数ウィンドウで型やメンバーを表示する方法を制御します。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性は、デバッガーの変数ウィンドウにフィールドまたはプロパティを表示するかどうか、および表示方法を決定します。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性は、型に対して代理の型 (プロキシ) を指定し、その型をデバッガー ウィンドウで表示する方法を変更します。 プロキシ、または代替の型を持つ変数を表示するときに、プロキシの略、デバッガーの表示ウィンドウで、元の型です。 デバッガーの変数ウィンドウには、プロキシ型のパブリック メンバーのみが表示されます。 プライベート メンバーは表示されません。  
+デバッガー表示属性は、型を指定し、その型の実行時の動作を最もよく理解している型の開発者が、デバッガーで表示されたときに、その型がどのように見えるかも指定できるようにします。 さらに、`Target` プロパティを提供するデバッガー表示属性は、ソース コードの知識がなくても、ユーザーがアセンブリ レベルで適用することができます。 <xref:System.Diagnostics.DebuggerDisplayAttribute> 属性は、デバッガーの変数ウィンドウで型やメンバーを表示する方法を制御します。 <xref:System.Diagnostics.DebuggerBrowsableAttribute> 属性は、デバッガーの変数ウィンドウにフィールドまたはプロパティを表示するかどうか、および表示方法を決定します。 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性は、型に対して代理の型 (プロキシ) を指定し、その型をデバッガー ウィンドウで表示する方法を変更します。 プロキシまたは代替の種類を持つ変数を表示すると、プロキシは、デバッガーの表示ウィンドウで元の型を表します。 デバッガーの変数ウィンドウには、プロキシ型のパブリック メンバーのみが表示されます。 プライベート メンバーは表示されません。  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>DebuggerDisplayAttribute の使用  
 
@@ -45,14 +43,14 @@ class MyHashtable
 ## <a name="using-the-debuggerbrowsableattribute"></a>DebuggerBrowsableAttribute の使用
  <xref:System.Diagnostics.DebuggerBrowsableAttribute> をフィールドまたはプロパティに適用して、デバッガー ウィンドウにフィールドまたはプロパティを表示する方法を指定します。 この属性のコンストラクターは、次の状態のいずれかを指定する <xref:System.Diagnostics.DebuggerBrowsableState> 列挙値を 1 つ取得します。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never> は、データ ウィンドウにメンバーが表示されないことを示します。  たとえば、この値をフィールドで <xref:System.Diagnostics.DebuggerBrowsableAttribute> に使用すると、そのフィールドが階層から削除され、型のインスタンスのプラス記号 (+) をクリックして囲む型を展開したときに、そのフィールドが表示されなくなります。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never> は、データ ウィンドウにメンバーが表示されないことを示します。  たとえば、この値をフィールドで <xref:System.Diagnostics.DebuggerBrowsableAttribute> に使用すると、そのフィールドが階層から削除され、型のインスタンスのプラス記号 (+) をクリックして囲む型を展開したときに、そのフィールドが表示されなくなります。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> は、メンバーが表示されますが、既定で展開されていないことを示します。  これが既定の動作です。
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed> は、メンバーが表示されますが、既定で展開されていないことを示します。  これは既定の動作です。
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> は、メンバー自体は表示されませんが、メンバーが配列またはコレクションである場合は、その構成オブジェクトが表示されることを示します。
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden> は、メンバー自体は表示されませんが、メンバーが配列またはコレクションである場合は、その構成オブジェクトが表示されることを示します。
 
 > [!NOTE]
->  .NET Framework version 2.0 では、<xref:System.Diagnostics.DebuggerBrowsableAttribute> は Visual Basic でサポートされません。
+> .NET Framework version 2.0 では、<xref:System.Diagnostics.DebuggerBrowsableAttribute> は Visual Basic でサポートされません。
 
 次のコード例は、<xref:System.Diagnostics.DebuggerBrowsableAttribute> を使用して、それに続くプロパティがクラスのデバッグ ウィンドウに表示されないようにします。
 
@@ -97,7 +95,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>説明
 
-次のコード例は、適用した結果を表示する Visual Studio で表示できる、 <xref:System.Diagnostics.DebuggerDisplayAttribute>、 <xref:System.Diagnostics.DebuggerBrowsableAttribute>、および<xref:System.Diagnostics.DebuggerTypeProxyAttribute>属性。
+次のコード例を Visual Studio で表示すると、<xref:System.Diagnostics.DebuggerDisplayAttribute>、<xref:System.Diagnostics.DebuggerBrowsableAttribute>、および <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 属性を適用した結果を確認できます。
 
 ### <a name="code"></a>コード
 
@@ -105,7 +103,7 @@ class MyHashtable : Hashtable
 [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)]
 [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Diagnostics.DebuggerDisplayAttribute>
 - <xref:System.Diagnostics.DebuggerBrowsableAttribute>

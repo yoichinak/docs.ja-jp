@@ -2,19 +2,19 @@
 title: 実行方法による標準クエリ演算子の分類 (C#)
 ms.date: 07/20/2015
 ms.assetid: b9435ce5-a7cf-4182-9f01-f3468a5533dc
-ms.openlocfilehash: eaf0be4faee01e94b508b31bf878a537471750a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccf8fced5c92ceaaf84f9240e235da0e2b56ac1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711773"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924289"
 ---
 # <a name="classification-of-standard-query-operators-by-manner-of-execution-c"></a>実行方法による標準クエリ演算子の分類 (C#)
 標準クエリ演算子メソッドの LINQ to Objects 実装は、主に 2 とおりの方法 (即時と遅延) で実行されます。 遅延実行を使用するクエリ演算子は、さらに 2 つのカテゴリ (ストリーミングと非ストリーミング) に分けることができます。 それぞれのクエリ演算子がどのように動作するかを把握しておくと、指定したクエリの結果を理解するうえで役立ちます。 これは、データ ソースが変更される場合や、別のクエリに基づいてさらにクエリを作成する場合に特に便利です。 このトピックでは、標準クエリ演算子を、その実行方法に基づいて分類します。  
   
 ## <a name="manners-of-execution"></a>実行方法  
   
-### <a name="immediate"></a>イミディエイト  
+### <a name="immediate"></a>即時  
  即時実行とは、クエリが宣言されたコード内の位置で、データ ソースが読み取られ、演算が実行されることを意味します。 列挙できない単一の結果を返す標準クエリ演算子は、すべて即時に実行されます。  
   
 ### <a name="deferred"></a>遅延  
@@ -32,7 +32,7 @@ ms.locfileid: "54711773"
  次の表では、各標準クエリ演算子メソッドを、その実行方法に基づいて分類しています。  
   
 > [!NOTE]
->  2 つの列にマークが付けられている演算子では、2 つの入力シーケンスが演算に使用され、各シーケンスの評価は異なります。 この場合、遅延実行のストリーミングで評価されるのは、常にパラメーター リストの最初のシーケンスになります。  
+> 2 つの列にマークが付けられている演算子では、2 つの入力シーケンスが演算に使用され、各シーケンスの評価は異なります。 この場合、遅延実行のストリーミングで評価されるのは、常にパラメーター リストの最初のシーケンスになります。  
   
 |標準クエリ演算子|戻り値の型|即時実行|遅延実行 (ストリーミング)|遅延実行 (非ストリーミング)|  
 |-----------------------------|-----------------|-------------------------|----------------------------------|---------------------------------------|  
@@ -90,6 +90,6 @@ ms.locfileid: "54711773"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.Enumerable>
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [標準クエリ演算子のクエリ式構文 (C#)](../../../../csharp/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
+- [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
+- [標準クエリ演算子のクエリ式構文 (C#)](./query-expression-syntax-for-standard-query-operators.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法: 単一の属性を取得する (LINQ to XML) (C#)'
+title: 単一の属性を取得する方法 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 1b6b07b9-933f-47e9-874e-e790cab49dc5
-ms.openlocfilehash: 2bf42333d7a0b3e34cc0a636b68659b8c45d1d83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31b34bddc9e748b473641235402847991d444c39
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738184"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347503"
 ---
-# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>方法: 単一の属性を取得する (LINQ to XML) (C#)
+# <a name="how-to-retrieve-a-single-attribute-linq-to-xml-c"></a>単一の属性を取得する方法 (LINQ to XML) (C#)
 このトピックでは、属性名を指定して要素の単一の属性を取得する方法について説明します。 これは、特定の属性を持つ要素を検索するクエリ式を記述する場合に便利です。  
   
  <xref:System.Xml.Linq.XElement.Attribute%2A> クラスの <xref:System.Xml.Linq.XElement> メソッドは、指定された名前を持つ <xref:System.Xml.Linq.XAttribute> を返します。  
@@ -37,7 +37,7 @@ foreach (XElement el in elList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -63,7 +63,7 @@ foreach (XElement el in elList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 home  
 work  
 ```  
@@ -71,7 +71,7 @@ work
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、`string`、`bool`、`bool?`、`int`、`int?`、`uint`、`uint?`、`long`、`long?`、`ulong`、`ulong?`、`float`、`float?`、`double`、`double?`、`decimal`、`decimal?`、`DateTime`、`DateTime?`、`TimeSpan`、`TimeSpan?`、`GUID`、および `GUID?` に対する <xref:System.Xml.Linq.XAttribute> クラスのための明示的なキャスト演算子が用意されています。  
   
 ## <a name="example"></a>例  
- 上記と同じコードを使用して、名前空間内の属性を取得する例を次に示します。 詳細については、「[XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)」を参照してください。  
+ 上記と同じコードを使用して、名前空間内の属性を取得する例を次に示します。 詳細については、「[名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)」を参照してください。  
   
 ```csharp  
 XNamespace aw = "http://www.adventure-works.com";  
@@ -92,11 +92,11 @@ foreach (XElement el in elList)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 home  
 work  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 軸 (C#)](./linq-to-xml-axes-overview.md)

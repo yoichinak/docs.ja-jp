@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: fdd9108417068204b6d7ec2e4cc9ae54a160d7fa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0736f94b1fe1a91b20ee76da673e0bc139aa802a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616349"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959551"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>バージョン トレラントなシリアル化コールバック
 データ コントラクトのプログラミング モデルでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> クラスと <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> クラスがサポートする、複数のバージョンに対応するシリアル化コールバック メソッドが完全にサポートされます。  
@@ -42,9 +42,10 @@ ms.locfileid: "54616349"
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.Serialization.OnSerializingAttribute>
 - <xref:System.Runtime.Serialization.OnSerializedAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializingAttribute>
 - <xref:System.Runtime.Serialization.OnDeserializedAttribute>
 - <xref:System.Runtime.Serialization.StreamingContext>
-- [バージョン トレラントなシリアル化](../../../../docs/standard/serialization/version-tolerant-serialization.md)
+- [バージョン トレラントなシリアル化](../../../standard/serialization/version-tolerant-serialization.md)

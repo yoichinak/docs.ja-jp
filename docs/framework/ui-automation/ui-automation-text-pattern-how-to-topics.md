@@ -8,25 +8,23 @@ helpviewer_keywords:
 - TextPattern class
 - classes, TextPattern
 ms.assetid: ca6ac045-7b21-4487-9379-59aa20909670
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: bbd4cf3fe085d7afc7773ec793a74bb52b17ea35
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 7675a75f5390701b5f023b0c360a4e7a5169767b
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47192707"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74800943"
 ---
 # <a name="ui-automation-text-pattern-how-to-topics"></a>UI オートメーション テキスト パターンに関する「方法」トピック
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]に関する最新情報については[Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746)をご覧ください。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI Automation (Windows のオートメーション API: UI オートメーション)](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
- このセクションには、UI オートメーション テキスト パターンを使用する方法を説明するトピックが含まれています。  
+ このセクションには、UI オートメーションテキストパターンの使用方法について説明するトピックが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)  
- [UI オートメーションを使用した、テキストの検索と強調表示](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)  
- [UI オートメーションを使用してテキスト属性を取得する](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)  
- [UI オートメーションを使用して混合テキスト属性の詳細を取得する](../../../docs/framework/ui-automation/obtain-mixed-text-attribute-details-using-ui-automation.md)  
- [UI オートメーションを使用したテキストのスキャン](../../../docs/framework/ui-automation/traverse-text-using-ui-automation.md)  
- [UI オートメーションを使用した、埋め込みオブジェクトへのアクセス](../../../docs/framework/ui-automation/access-embedded-objects-using-ui-automation.md)
+ [UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加](add-content-to-a-text-box-using-ui-automation.md)  
+ [UI オートメーションを使用した、テキストの検索と強調表示](find-and-highlight-text-using-ui-automation.md)  
+ [UI オートメーションを使用してテキスト属性を取得する](obtain-text-attributes-using-ui-automation.md)  
+ [UI オートメーションを使用して混合テキスト属性の詳細を取得する](obtain-mixed-text-attribute-details-using-ui-automation.md)  
+ [UI オートメーションを使用したテキストのスキャン](traverse-text-using-ui-automation.md)  
+ [UI オートメーションを使用した、埋め込みオブジェクトへのアクセス](access-embedded-objects-using-ui-automation.md)

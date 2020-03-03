@@ -1,5 +1,5 @@
 ---
-title: <filter> の <add> の <listeners> の <source> 要素
+title: <source> の <listeners> の <add> の <filter> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -9,24 +9,24 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <source>
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
-ms.openlocfilehash: 7207e72c537e8338f8c646750016c9b6c810bf9a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 766088b8a26ce3218031df74b193658ba8024280
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260581"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088902"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<フィルター > 要素の\<追加 > の\<リスナー > の\<ソース >
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<ソース > の \<リスナー > の > を追加 \<の \<フィルター > 要素
 トレース ソースの `Listeners` コレクション内のリスナーにフィルターを追加します。  
-  
- \<configuration>  
-\<system.diagnostics>  
-\<ソース >  
-\<ソース >  
-\<listeners>  
-\<add>  
-\<フィルター >  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**ソース**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**ソース >** ](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**リスナー >** ](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**追加**](add-element-for-listeners-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**フィルター >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -42,8 +42,8 @@ ms.locfileid: "55260581"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`type`|必須の属性です。<br /><br /> 継承する必要がありますフィルターの種類を指定します、<xref:System.Diagnostics.TraceFilter>クラス。 型の対応する型の名前空間修飾名を使用する<xref:System.Type.FullName%2A>プロパティに対応するアセンブリの情報を含む完全修飾型名を使用できます、<xref:System.Type.AssemblyQualifiedName%2A>プロパティ。 完全修飾型名については、次を参照してください。[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|  
-|`initializeData`|省略可能な属性です。<br /><br /> 指定したフィルター クラスのコンス トラクターに渡された文字列。|  
+|`type`|必須の属性です。<br /><br /> フィルターの種類を指定します。この型は <xref:System.Diagnostics.TraceFilter> クラスから継承する必要があります。 型の名前空間で修飾された名前 (型の <xref:System.Type.FullName%2A> プロパティに対応する) を使用することも、<xref:System.Type.AssemblyQualifiedName%2A> プロパティに対応するアセンブリ情報を含む完全修飾型名を使用することもできます。 完全修飾型名の詳細については、「[完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。|  
+|`initializeData`|省略可能な属性です。<br /><br /> 指定されたフィルタークラスのコンストラクターに渡される文字列。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -56,16 +56,16 @@ ms.locfileid: "55260581"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
 |`source`|トレース メッセージを開始するトレース ソースを指定します。|  
-|`listeners`|収集、格納、およびメッセージをルーティングするリスナーが含まれています。 リスナーでは、適切なターゲットのトレースを出力します。|  
+|`listeners`|メッセージを収集、格納、およびルーティングするリスナーを格納します。 リスナーは、適切なターゲットにトレース出力を送信します。|  
 |`add`|トレース ソースの `Listeners` コレクションにリスナーを追加します。|  
   
 ## <a name="remarks"></a>Remarks  
- `<filter>`で要素を含める必要があります、`<add>`リスナーの種類を指定するトレース ソースのリスナーの要素で定義されているリスナーの名前だけでなく、 [\<上 sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)します。 リスナーが定義されている場合、 [\<上 sharedListeners >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/sharedlisteners-element.md)、リスナーのフィルターは、その要素で定義する必要があります。  
+ `<filter>` 要素は、 [\<sharedListeners >](sharedlisteners-element.md)で定義されているリスナーの名前だけでなく、リスナーの種類を指定するトレースソースリスナーの `<add>` 要素に含まれている必要があります。 リスナーが[\<sharedListeners >](sharedlisteners-element.md)で定義されている場合は、そのリスナーのフィルターをその要素で定義する必要があります。  
   
- この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<filter>`リスナーにフィルターを追加する要素`console`で、`Listeners`トレース ソースのコレクション`myTraceSource`、としてフィルター イベント レベルを指定して`Error`します。  
+ 次の例は、`<filter>` 要素を使用して、トレースソース `myTraceSource`の `Listeners` コレクション内のリスナー `console` にフィルターを追加する方法を示しています。これには、フィルターイベントレベルを `Error`として指定します。  
   
 ```xml  
 <configuration>  
@@ -91,8 +91,9 @@ ms.locfileid: "55260581"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - <xref:System.Diagnostics.TraceListener.Filter%2A?displayProperty=nameWithType>
 - <xref:System.Diagnostics.TraceFilter>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

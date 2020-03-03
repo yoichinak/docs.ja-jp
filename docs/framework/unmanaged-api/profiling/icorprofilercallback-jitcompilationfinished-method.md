@@ -15,48 +15,51 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4d2e75d357b1f56df676163744015a1a3f77c17b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1cfef464569b577923fbb16624c99358998d29c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530753"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76866248"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished メソッド
-ジャストイン タイム (JIT) コンパイラが関数のコンパイルを完了したことをプロファイラーに通知します。  
+Just-in-time (JIT) コンパイラが関数のコンパイルを完了したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT JITCompilationFinished(  
     [in] FunctionID functionId,  
     [in] HRESULT    hrStatus,  
     [in] BOOL       fIsSafeToBlock);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
- `functionId`  
- [in]コンパイルされた関数の ID。  
+## <a name="parameters"></a>パラメーター
+
+- `functionId`
+
+  \[] コンパイルされた関数の ID。
+
+- `hrStatus`
+
+  \[] コンパイルが成功したかどうかを示す値。
+
+- `fIsSafeToBlock`
+
+  \[] ブロッキングがランタイムの操作に影響を与えるかどうかをプロファイラーに示す値。 この値は、ブロックによって、呼び出し元のスレッドがこのコールバックから戻るまでランタイムが待機する場合に `true` ます。それ以外の場合は、`false`ます。
+
+  `true` の値はランタイムに害を及ぼすことはありませんが、プロファイルの結果をスキューできます。
+
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- `hrStatus`  
- [in]コンパイルが成功したかどうかを示す値。  
-  
- `fIsSafeToBlock`  
- [in]プロファイラーをブロックしているかどうかを示す値は、ランタイムの操作に影響されます。 値が`true`ブロックにより、ランタイムでこのコールバックから返される呼び出し元のスレッドを待機する場合は、それ以外の場合、`false`します。  
-  
- 値が`true`ランタイムは害を及ぼしません、プロファイリングの結果の傾斜を実行できます。  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [JITCompilationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [JITCompilationStarted メソッド](icorprofilercallback-jitcompilationstarted-method.md)

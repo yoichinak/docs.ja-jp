@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType2
 ms.assetid: ce400fe1-5edd-4aee-94d8-530be03cfd9a
-ms.openlocfilehash: c3a6ac206082c6adaf35659db93e6535a433c6bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 676632f55eb0dcc88eaa6d3b50167bb9e6c2b30e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008112"
 ---
 # <a name="cannot-convert-start-value-of-type-type1-and-step-value-of-type-type2-to-a-common-type"></a>型の開始値に変換できません '\<type1 >' 型のステップ値と'\<type2 >' は共通型に
 指定された `For...Next` コントロールの値は、異なる型であるため、共通の型に変換できないので無効です。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  すべての値を共通の型に変換できるように、1 つ以上の値の型を変更します。  
+1. すべての値を共通の型に変換できるように、1 つ以上の値の型を変更します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [デバッガーでのコード間の移動](/visualstudio/debugger/navigating-through-code-with-the-debugger)
-- [Visual Basic .NET での変更のデバッグ](https://msdn.microsoft.com/library/0e82bb0d-8bb2-4fe8-87d1-75f24c7cfd75)
 - [For...Next ステートメント](../../visual-basic/language-reference/statements/for-next-statement.md)

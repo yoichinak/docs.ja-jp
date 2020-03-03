@@ -1,6 +1,5 @@
 ---
 title: sealed 修飾子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - sealed
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: babad3b07c5faea1381e6af13d3c713122de2332
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 686afd5d9d0394bb1a802551b65083732599f384
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235177"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713106"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# リファレンス)
 
@@ -56,17 +55,17 @@ sealed class B : A {}
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="c-language-specification"></a>C# 言語仕様
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 クラス、メソッド、またはプロパティをシールするかどうかを判断するには、通常、次の 2 つの点を検討する必要があります。
 
 - クラスをカスタマイズすることで、派生クラスにもたらされる可能性があるメリット。
 
 - 派生クラスがクラスを変更することで、そのクラスが正常に、または期待どおりに機能しなくなる可能性。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
@@ -76,6 +75,6 @@ sealed class B : A {}
 - [静的クラスと静的クラス メンバー](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
 - [抽象クラスとシール クラス、およびクラス メンバー](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [アクセス修飾子](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [override](override.md)
 - [virtual](virtual.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - JPEG decoding [WPF]
 - JPEG encoding [WPF]
 ms.assetid: b8cfde37-9f68-4911-a05e-51d8d7bdec7b
-ms.openlocfilehash: db42411f71e2934f3e5f86a06f434da220f1882e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f64ef8537f22ea996cbcf274885de1f3968267a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947512"
 ---
 # <a name="how-to-encode-and-decode-a-jpeg-image"></a>方法: エンコードおよびデコードの JPEG 画像
 
@@ -42,4 +42,4 @@ ms.locfileid: "54603509"
   
 ## <a name="see-also"></a>関連項目
 
-- [イメージングの概要](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+- [イメージングの概要](imaging-overview.md)

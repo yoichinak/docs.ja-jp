@@ -3,11 +3,11 @@ title: Web
 ms.date: 03/30/2017
 ms.assetid: 88794df1-8e2d-431e-b377-2fd3dc7942ab
 ms.openlocfilehash: 7a3863f1abf1ba926c0dacdb017dca9540246c0c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949644"
 ---
 # <a name="web"></a>Web
 このセクションには、Web ホストのサンプルが含まれています。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queues [WCF], best practices
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
-ms.openlocfilehash: 03b2366f531c0a7f8fd296ee2a685c38fd62ca82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2f64faab6df678182fb39174c8a558b298a8748
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719821"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584989"
 ---
 # <a name="best-practices-for-queued-communication"></a>キューに置かれた通信のベスト プラクティス
 このトピックでは、キューに置かれた通信では、Windows Communication Foundation (WCF) の推奨されるベスト プラクティスを提供します。 以下の各セクションでは、シナリオの観点から推奨されるベスト プラクティスについて説明します。  
@@ -48,11 +48,11 @@ ms.locfileid: "54719821"
 ## <a name="achieving-high-throughput"></a>高スループットの実現  
  単一のエンドポイントで高スループットを実現するには、以下を使用します。  
   
--   トランザクション バッチ。 トランザクション バッチでは、1 回のトランザクションで多くのメッセージを読み取ることができます。 これにより、トランザクションのコミットが最適化され、全体的なパフォーマンスが向上します。 バッチ処理の難点は、バッチ内の 1 つのメッセージでエラーが発生した場合に、バッチ全体をロールバックし、再び安全にバッチ処理できるようになるまで、メッセージを 1 つずつ処理する必要があることです。 ほとんどの場合、有害メッセージはまれであるため、特にトランザクションに他のリソース マネージャーが参加している場合は、バッチ処理がシステム パフォーマンスを向上させる方法として推奨されます。 詳細については、次を参照してください。[メッセージをバッチ処理をトランザクションで](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)します。  
+- トランザクション バッチ。 トランザクション バッチでは、1 回のトランザクションで多くのメッセージを読み取ることができます。 これにより、トランザクションのコミットが最適化され、全体的なパフォーマンスが向上します。 バッチ処理の難点は、バッチ内の 1 つのメッセージでエラーが発生した場合に、バッチ全体をロールバックし、再び安全にバッチ処理できるようになるまで、メッセージを 1 つずつ処理する必要があることです。 ほとんどの場合、有害メッセージはまれであるため、特にトランザクションに他のリソース マネージャーが参加している場合は、バッチ処理がシステム パフォーマンスを向上させる方法として推奨されます。 詳細については、次を参照してください。[メッセージをバッチ処理をトランザクションで](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)します。  
   
--   コンカレンシー。 コンカレンシーによりスループットが向上します。ただし、コンカレンシーは共有リソースの競合に影響します。 詳細については、次を参照してください。[同時実行](../../../../docs/framework/wcf/samples/concurrency.md)します。  
+- コンカレンシー。 コンカレンシーによりスループットが向上します。ただし、コンカレンシーは共有リソースの競合に影響します。 詳細については、次を参照してください。[同時実行](../../../../docs/framework/wcf/samples/concurrency.md)します。  
   
--   調整。 最適なパフォーマンスを実現するために、ディスパッチャー パイプラインのメッセージの数を調整します。 これを行う方法の例は、次を参照してください。[スロットル](../../../../docs/framework/wcf/samples/throttling.md)します。  
+- 調整。 最適なパフォーマンスを実現するために、ディスパッチャー パイプラインのメッセージの数を調整します。 これを行う方法の例は、次を参照してください。[スロットル](../../../../docs/framework/wcf/samples/throttling.md)します。  
   
  バッチ処理を使用する場合は、コンカレンシーと調整はコンカレント バッチに変換されることに気をつけてください。  
   
@@ -75,13 +75,14 @@ ms.locfileid: "54719821"
   
  `MsmqIntegrationBinding` を使用するときは、以下の点に注意してください。  
   
--   WCF メッセージ本文は、MSMQ メッセージ本文と同じではできません。 キューに置かれたバインディングを使用して WCF メッセージを送信するときに、WCF メッセージ本文は MSMQ メッセージの内部に配置されます。 MSMQ インフラストラクチャは、この追加情報を認識しません。認識するのは、MSMQ メッセージだけです。  
+- WCF メッセージ本文は、MSMQ メッセージ本文と同じではできません。 キューに置かれたバインディングを使用して WCF メッセージを送信するときに、WCF メッセージ本文は MSMQ メッセージの内部に配置されます。 MSMQ インフラストラクチャは、この追加情報を認識しません。認識するのは、MSMQ メッセージだけです。  
   
--   `MsmqIntegrationBinding` では、よく使用されるシリアル化型をサポートしています。 ジェネリック メッセージである <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> の本文の型は、シリアル化型に基づいてさまざまな型パラメーターを受け取ります。 たとえば、<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> には `MsmqMessage\<byte[]>` が必要であり、<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> には `MsmqMessage<Stream>` が必要です。  
+- `MsmqIntegrationBinding` では、よく使用されるシリアル化型をサポートしています。 ジェネリック メッセージである <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> の本文の型は、シリアル化型に基づいてさまざまな型パラメーターを受け取ります。 たとえば、<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> には `MsmqMessage\<byte[]>` が必要であり、<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> には `MsmqMessage<Stream>` が必要です。  
   
--   XML シリアル化を使用して、既知の型を指定できます、`KnownTypes`属性を[\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素、XML メッセージを逆シリアル化する方法を決定するために使用されます。  
+- XML シリアル化を使用して、既知の型を指定できます、`KnownTypes`属性を[\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素、XML メッセージを逆シリアル化する方法を決定するために使用されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF でのキュー](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [方法: WCF エンドポイントとキューに置かれたメッセージを交換します。](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [方法: WCF エンドポイントとメッセージ キュー アプリケーションでメッセージを交換](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)

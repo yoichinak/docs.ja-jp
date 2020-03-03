@@ -1,5 +1,5 @@
 ---
-title: ICorDebugFunctionBreakpoint Interface1
+title: ICorDebugFunctionBreakpoint インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugFunctionBreakpoint
@@ -14,32 +14,31 @@ helpviewer_keywords:
 ms.assetid: 9c149303-14b1-4138-83d7-e8c3e0fcd332
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b8403873fb7bc15e3109821bf738d7b68e20f878
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e3804335bacefad61c4f521ea1ef1444b7b1fed
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662687"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76777707"
 ---
-# <a name="icordebugfunctionbreakpoint-interface1"></a>ICorDebugFunctionBreakpoint Interface1
-関数内のブレークポイントをサポートするために ICorDebugBreakpoint インターフェイスを拡張します。  
+# <a name="icordebugfunctionbreakpoint-interface"></a>ICorDebugFunctionBreakpoint インターフェイス
+
+ICorDebugBreakpoint インターフェイスを拡張して、関数内のブレークポイントをサポートします。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetFunction メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getfunction-method.md)|ブレークポイントが設定されている関数を参照する、ICorDebugFunction にインターフェイス ポインターを取得します。|  
-|[GetOffset メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugfunctionbreakpoint-getoffset-method.md)|関数内でのブレークポイントのオフセットを取得します。|  
+|[GetFunction メソッド](icordebugfunctionbreakpoint-getfunction-method.md)|ブレークポイントが設定されている関数を参照する、のオブジェクトへのインターフェイスポインターを取得します。|  
+|[GetOffset メソッド](icordebugfunctionbreakpoint-getoffset-method.md)|関数内のブレークポイントのオフセットを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -48,4 +47,5 @@ ms.locfileid: "54662687"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

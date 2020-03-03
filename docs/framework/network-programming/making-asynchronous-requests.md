@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 1023d7213c665619f5417eb1016aa50c73def2c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3668975c31e9086ee15250dae939b75587f5c0c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669134"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047661"
 ---
 # <a name="making-asynchronous-requests"></a>非同期要求を行う
 <xref:System.Net> クラスは、インターネット リソースへの非同期アクセスに .NET Framework の標準非同期プログラミング モデルを使用します。 <xref:System.Net.WebRequest> クラスの <xref:System.Net.WebRequest.BeginGetResponse%2A> および <xref:System.Net.WebRequest.EndGetResponse%2A> メソッドは、インターネット リソースの非同期要求の開始と完了を行います。  
   
 > [!NOTE]
->  非同期コールバック メソッドで同期呼び出しを使用すると、パフォーマンスが大幅に低下する可能性があります。 **WebRequest** とその子孫を使用して作成されたインターネット要求で、<xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> メソッドで返されたストリームを読み取るには、<xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> を使用する必要があります。  
+> 非同期コールバック メソッドで同期呼び出しを使用すると、パフォーマンスが大幅に低下する可能性があります。 **WebRequest** とその子孫を使用して作成されたインターネット要求で、<xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> メソッドで返されたストリームを読み取るには、<xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType> を使用する必要があります。  
   
  次のサンプル コードは、**WebRequest** クラスで非同期呼び出しを使用する方法の例です。 このサンプルは、コマンド ラインから URI を取得し、その URI のリソースを要求し、インターネットから受信したデータをコンソールに出力するコンソール プログラムです。  
   
@@ -32,18 +32,18 @@ ms.locfileid: "54669134"
   
  **ClientGetAsync** クラスは、インターネット リソースに対する非同期要求を実装し、結果の応答をコンソールに出力します。 次の一覧で説明するメソッドとプロパティがあります。  
   
--   `allDone` プロパティには、要求の完了を通知する <xref:System.Threading.ManualResetEvent> クラスのインスタンスが含まれています。  
+- `allDone` プロパティには、要求の完了を通知する <xref:System.Threading.ManualResetEvent> クラスのインスタンスが含まれています。  
   
--   `Main()` メソッドは、コマンド ラインを読み取り、指定されたインターネット リソースの要求を開始します。 **WebRequest** `wreq` および **RequestState** `rs` を作成し、**BeginGetResponse** を呼び出して要求の処理を開始し、`allDone.WaitOne()` メソッドを呼び出して、コールバックが完了するまでアプリケーションが終了しないようにします。 インターネット リソースから応答を読み取ると、`Main()` はその応答をコンソールに出力し、アプリケーションは終了します。  
+- `Main()` メソッドは、コマンド ラインを読み取り、指定されたインターネット リソースの要求を開始します。 **WebRequest** `wreq` および **RequestState** `rs` を作成し、**BeginGetResponse** を呼び出して要求の処理を開始し、`allDone.WaitOne()` メソッドを呼び出して、コールバックが完了するまでアプリケーションが終了しないようにします。 インターネット リソースから応答を読み取ると、`Main()` はその応答をコンソールに出力し、アプリケーションは終了します。  
   
--   `showusage()` メソッドは、コンソールにコマンド ライン例を出力します。 これは、コマンド ラインに URI が指定されていない場合に `Main()` から呼び出されます。  
+- `showusage()` メソッドは、コンソールにコマンド ライン例を出力します。 これは、コマンド ラインに URI が指定されていない場合に `Main()` から呼び出されます。  
   
--   `RespCallBack()` メソッドは、インターネット要求の非同期コールバック メソッドを実装します。 インターネット リソースからの応答を含む **WebResponse** インスタンスを作成し、応答ストリームを取得し、非同期にストリームからデータの読み取りを開始します。  
+- `RespCallBack()` メソッドは、インターネット要求の非同期コールバック メソッドを実装します。 インターネット リソースからの応答を含む **WebResponse** インスタンスを作成し、応答ストリームを取得し、非同期にストリームからデータの読み取りを開始します。  
   
--   `ReadCallBack()` メソッドは、応答ストリームを読み取るための非同期コールバック メソッドを実装します。 インターネット リソースから受信したデータを **RequestState** インスタンスの **ResponseData** プロパティに転送し、データが返されなくなるまで、応答ストリームの非同期読み取りを再び開始します。 すべてのデータが読み取られたら、`ReadCallBack()` は応答ストリームを終了し、`allDone.Set()` メソッドを呼び出して、応答全体が **ResponseData** 内にあることを示します。  
+- `ReadCallBack()` メソッドは、応答ストリームを読み取るための非同期コールバック メソッドを実装します。 インターネット リソースから受信したデータを **RequestState** インスタンスの **ResponseData** プロパティに転送し、データが返されなくなるまで、応答ストリームの非同期読み取りを再び開始します。 すべてのデータが読み取られたら、`ReadCallBack()` は応答ストリームを終了し、`allDone.Set()` メソッドを呼び出して、応答全体が **ResponseData** 内にあることを示します。  
   
     > [!NOTE]
-    >  すべてのネットワーク ストリームが終了していることが重要です。 各要求と応答ストリームが終了していない場合、アプリケーションからサーバーへの接続が不足し、追加の要求を処理できなくなります。  
+    > すべてのネットワーク ストリームが終了していることが重要です。 各要求と応答ストリームが終了していない場合、アプリケーションからサーバーへの接続が不足し、追加の要求を処理できなくなります。  
   
 ```csharp  
 using System;  
@@ -272,7 +272,7 @@ Class ClientGetAsync
        Dim resp As HttpWebResponse = _  
            CType(req.EndGetResponse(ar), HttpWebResponse)  
   
-       ' Start reading data from the respons stream.  
+       ' Start reading data from the response stream.  
        Dim ResponseStream As Stream = resp.GetResponseStream()  
   
        ' Store the reponse stream in RequestState to read  
@@ -335,4 +335,5 @@ End Class
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [データの要求](../../../docs/framework/network-programming/requesting-data.md)
+
+- [データの要求](requesting-data.md)

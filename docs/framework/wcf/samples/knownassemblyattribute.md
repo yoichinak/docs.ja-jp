@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: cbbb06089508538353465a35e24aa68573da7ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e3708fb386760ae067de0e86e4315114c85113c
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613536"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714903"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。 このサンプルで示すのは、シリアル化および逆シリアル化時に既知の型を動的に追加する方法です。  
@@ -346,29 +346,27 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>サンプルを設定、実行、およびビルドするには  
   
-1.  ソリューションを右クリックして**KnownAssemblyAttribute**選択**プロパティ**します。  
+1. ソリューションの**Knownassemblyattribute**を右クリックし、 **[プロパティ]** を選択します。  
   
-2.  **共通プロパティ**を選択します**スタートアップ プロジェクト**、 をクリックし、**マルチ スタートアップ プロジェクト**します。  
+2. **[共通プロパティ]** で、 **[スタートアッププロジェクト]** を選択し、 **[マルチスタートアッププロジェクト]** をクリックします。  
   
-3.  追加、**開始**アクションを**サービス**と**クライアント**プロジェクト。  
+3. **サービス**プロジェクトと**クライアント**プロジェクトに**開始**アクションを追加します。  
   
-4.  をクリックして**OK**、キーを押します**F5**サンプルを実行します。  
+4. **[OK]** をクリックし、 **F5**キーを押してサンプルを実行します。  
   
-5.  アプリケーションが正しく動作しない場合は、次の手順に従って環境設定が適切であることを確認してください。  
+5. アプリケーションが正しく動作しない場合は、次の手順に従って環境設定が適切であることを確認してください。  
   
-6.  実行したことを確認、 [1 回限りのセットアップの手順、Windows Communication Foundation サンプル](https://go.microsoft.com/fwlink/?LinkId=150774)します。  
+6. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](https://go.microsoft.com/fwlink/?LinkId=150774)を実行したことを確認します。  
   
-7.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](https://go.microsoft.com/fwlink/?LinkId=150775)します。  
+7. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](https://go.microsoft.com/fwlink/?LinkId=150775)」の手順に従います。  
   
-8.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](https://go.microsoft.com/fwlink/?LinkId=150776)します。  
+8. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](https://go.microsoft.com/fwlink/?LinkId=150776)」の手順に従います。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  
-  
-## <a name="see-also"></a>関連項目
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\KnownAssemblyAttribute`  

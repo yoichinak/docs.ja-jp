@@ -1,5 +1,5 @@
 ---
-title: <add>appSettings&gt;の<appSettings>add&gt;要素
+title: <add> の <appSettings> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -7,22 +7,20 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: guardrex
-ms.author: mairaw
-ms.openlocfilehash: dde773dc722cf75da9d922ccf28af4bf4a09636c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5c7de79ec626966e71d461dd3865b294a8979db2
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277473"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214804"
 ---
-# <a name="add-element-for-appsettings"></a>\<appSettings>の\<add>要素
+# <a name="add-element-for-appsettings"></a>\<appSettings > の > 要素を追加 \<には
 
-カスタム アプリケーション設定を追加します。
+カスタムアプリケーション設定を追加します。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<追加 >**
 
 ## <a name="syntax"></a>構文
 
@@ -43,7 +41,7 @@ ms.locfileid: "55277473"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。 |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | ファイル パス、XML Web サービス URL、またはアプリケーションのその他のカスタム構成情報など、カスタム アプリケーションの設定が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -51,7 +49,7 @@ ms.locfileid: "55277473"
 
 ## <a name="example"></a>例
 
-次の例では、アプリケーションの名前のカスタム構成設定を追加する方法を示します。
+次の例は、アプリケーション名のカスタム構成設定を追加する方法を示しています。
 
 ```xml
 <appSettings>
@@ -59,7 +57,7 @@ ms.locfileid: "55277473"
 </appSettings>
 ```
 
-次の例では、 `<add>` ASP.NET アプリケーションで 2 つの互換性設定を定義する要素。
+次の例では、`<add>` 要素を使用して、ASP.NET アプリケーションで2つの互換性設定を定義します。
 
 ```xml
 <appSettings>
@@ -68,6 +66,6 @@ ms.locfileid: "55277473"
 </appSettings>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](../index.md)

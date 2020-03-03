@@ -10,23 +10,21 @@ helpviewer_keywords:
 - container tags, <publisherPolicy> element
 - <publisherPolicy> element
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be87c91b798256f3913779bdbe36f3548066018b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 89fa8a991cc7d0352eb0a13cdfd3a6063ea468e7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253939"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115843"
 ---
-# <a name="publisherpolicy-element"></a>\<publisherPolicy > 要素
+# <a name="publisherpolicy-element"></a>\<Publisherpolicy apply > 要素
 ランタイムが発行元ポリシーを適用するかどうかを指定します。  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<dependentAssembly>  
-\<publisherPolicy>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp; &nbsp; &nbsp; &nbsp;[ **\<assemblyBinding**](assemblybinding-element-for-runtime.md) > \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<dependentAssembly >** ](dependentassembly-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**publisherpolicy apply >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,32 +41,35 @@ ms.locfileid: "55253939"
 |---------------|-----------------|  
 |`apply`|発行者ポリシーを適用するかどうかを指定します。|  
   
-## <a name="apply-attribute"></a>属性を適用します。  
+## <a name="apply-attribute"></a>属性の適用  
   
 |[値]|説明|  
 |-----------|-----------------|  
 |`yes`|発行者ポリシーを適用します。 これは、既定の設定です。|  
-|`no`|発行元ポリシーは適用されません。|  
+|`no`|発行者ポリシーは適用されません。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+
+なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
+|`assemblyBinding`|アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|`dependentAssembly`|各アセンブリのバインディング ポリシーとアセンブリの場所をカプセル化します。 アセンブリごとに1つの `<dependentAssembly>` 要素を使用します。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- コンポーネント ベンダーは、アセンブリの新しいバージョンをリリースするとき、ベンダーは、古いバージョンを今すぐ使用するアプリケーションが新しいバージョンを使用するように発行者ポリシーを含めることができます。 特定のアセンブリに発行者ポリシーを適用するかどうかを指定するには、配置、  **\<publisherPolicy >** 内の要素、  **\<dependentAssembly >** 要素。  
+ コンポーネントベンダーがアセンブリの新しいバージョンをリリースする場合、ベンダーには発行者ポリシーを含めることができるため、以前のバージョンを使用するアプリケーションでは新しいバージョンが使用されるようになりました。 特定のアセンブリに対して発行者ポリシーを適用するかどうかを指定するには、 **\<publisherpolicy apply >** 要素を **\<dependentAssembly >** 要素に配置します。  
   
- 既定の設定、**適用**属性が**はい**します。 設定、**適用**属性を**ありません**上書き前**はい**アセンブリの設定。  
+ **適用**属性の既定の設定は **[はい]** です。 **適用**属性を [**いいえ** **]** に設定すると、アセンブリの以前のすべての設定がオーバーライドされます。  
   
- アクセス許可が明示的にポリシーを使用してパブリッシャーを無視するアプリケーションに必要な[ \<publisherPolicy 適用 ="no"/>](../../../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md)アプリケーション構成ファイル内の要素。 許可を設定して、<xref:System.Security.Permissions.SecurityPermissionFlag>にフラグ、<xref:System.Security.Permissions.SecurityPermission>します。 詳細については、次を参照してください。[アセンブリ バインド リダイレクトのセキュリティ権限](../../../../../docs/framework/configure-apps/assembly-binding-redirection-security-permission.md)します。  
+ アプリケーションがアプリケーション構成ファイルの[\<publisherpolicy apply apply = "no"/>](publisherpolicy-element.md)要素を使用して発行者ポリシーを明示的に無視するためのアクセス許可が必要です。 このアクセス許可は、<xref:System.Security.Permissions.SecurityPermission>に <xref:System.Security.Permissions.SecurityPermissionFlag> フラグを設定することによって付与されます。 詳細については、「[アセンブリバインディングリダイレクトのセキュリティアクセス許可](../../assembly-binding-redirection-security-permission.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例が、アセンブリの発行者ポリシーをオフに`myAssembly`します。  
+ 次の例では、アセンブリの発行者ポリシーをオフにし、`myAssembly`します。  
   
 ```xml  
 <configuration>  
@@ -86,7 +87,8 @@ ms.locfileid: "55253939"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
-- [アセンブリ バージョンのリダイレクト](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md)
+- [アセンブリ バージョンのリダイレクト](../../redirect-assembly-versions.md)

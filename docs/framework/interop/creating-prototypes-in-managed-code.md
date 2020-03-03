@@ -17,64 +17,70 @@ helpviewer_keywords:
 - DLL functions
 - object fields in platform invoke
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ad93144dcb56d60f9aa688400918218ef8171df
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: HT
+ms.openlocfilehash: 712040c3482b51c4dafe0ee87fdda8cd848fb7fc
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123613"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>マネージド コードでのプロトタイプの作成
-このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
+このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォームの起動で使用する NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
   
  マネージド コードからアンマネージド DLL 関数にアクセスする前に、関数の名前とエクスポートする DLL の名前を知っている必要があります。 この情報を使用すると、マネージド DLL に実装されているアンマネージド 関数の定義の作成を開始できます。 さらに、プラットフォーム呼び出しが関数を作成し、関数間でデータをマーシャリングする方法を調整できます。  
   
 > [!NOTE]
->  文字列を割り当てる Win32 API 関数を使用して、`LocalFree` などのメソッドを使用して文字列を解放できます。 プラットフォーム呼び出しは、このようなパラメーターを異なる方法で処理します。 プラットフォーム呼び出しでは、パラメーターを `String` 型の代わりに `IntPtr` 型にします。 
-  <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> クラスにより提供されるメソッドを使用して、型を手動で文字列に変換し、手動で解放します。  
+> 文字列を割り当てる Windows API 関数を使用して、`LocalFree` などのメソッドを使用して文字列を解放できます。 プラットフォーム呼び出しは、このようなパラメーターを異なる方法で処理します。 プラットフォーム呼び出しでは、パラメーターを `String` 型の代わりに `IntPtr` 型にします。 <xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType> クラスにより提供されるメソッドを使用して、型を手動で文字列に変換し、手動で解放します。  
   
 ## <a name="declaration-basics"></a>宣言の基本  
  アンマネージド 関数に対するマネージド定義は、次の例で確認できるように、言語に依存します。 完全なコード例については、「[プラットフォーム呼び出しの例](platform-invoke-examples.md)」を参照してください。  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-    Declare Auto Function MessageBox Lib "user32.dll" _  
-       (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-End Class  
-```  
+```vb
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+End Class
+```
   
- 
-  <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>、<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>、<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>、<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>、<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>、または <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> の各フィールドを [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 宣言に適用するには、`Declare` ステートメントの代わりに <xref:System.Runtime.InteropServices.DllImportAttribute> 属性を使用する必要があります。  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithType>、<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithType>、<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithType>、<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithType>、<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithType>、または <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithType> の各フィールドを Visual Basic の宣言に適用するには、`Declare` ステートメントではなく <xref:System.Runtime.InteropServices.DllImportAttribute> 属性を使用する必要があります。  
   
-```vb  
-Imports System.Runtime.InteropServices  
-Public Class Win32  
-   <DllImport ("user32.dll", CharSet := CharSet.Auto)> _  
-   Public Shared Function MessageBox (ByVal hWnd As Integer, _  
-        ByVal txt As String, ByVal caption As String, _  
-        ByVal Typ As Integer) As IntPtr  
-   End Function  
-End Class  
-```  
+```vb
+Imports System.Runtime.InteropServices
+
+Friend Class NativeMethods
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Friend Shared Function MessageBox(
+        ByVal hWnd As IntPtr,
+        ByVal lpText As String,
+        ByVal lpCaption As String,
+        ByVal uType As UInteger) As Integer
+    End Function
+End Class
+```
   
-```csharp  
-using System.Runtime.InteropServices;  
-[DllImport("user32.dll")]  
-    public static extern IntPtr MessageBox(int hWnd, String text,   
-                                       String caption, uint type);  
-```  
+```csharp
+using System;
+using System.Runtime.InteropServices;
+
+internal static class NativeMethods
+{
+    [DllImport("user32.dll")]
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);
+}
+```
   
-```cpp  
-using namespace System::Runtime::InteropServices;  
-[DllImport("user32.dll")]  
-    extern "C" IntPtr MessageBox(int hWnd, String* pText,  
-    String* pCaption unsigned int uType);  
-```  
+```cpp
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+[DllImport("user32.dll")]
+extern "C" int MessageBox(
+    IntPtr hWnd, String* lpText, String* lpCaption, unsigned int uType);
+```
   
 ## <a name="adjusting-the-definition"></a>定義の調整  
  明示的に設定するかどうかに関係なく、属性フィールドは作業はマネージド コードの動作を動作中に定義します。 プラットフォーム呼び出しは、アセンブリ内のメタデータとして存在するさまざまなフィールドで設定された既定値どおりに動作します。 1 つまたは複数のフィールドの値を調整することによって、この既定の動作を変更することができます。 多くの場合、<xref:System.Runtime.InteropServices.DllImportAttribute> を使用して値を設定します。  
@@ -85,7 +91,7 @@ using namespace System::Runtime::InteropServices;
 |-----------|-----------------|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>|最適なマッピングを有効または無効にします。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>|メソッドの引数を渡すときに使用する呼び出し規則を指定します。 既定値は `WinAPI` で、32 ビットの Intel ベース プラットフォームの `__stdcall` に対応します。|  
-|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|名前修飾および文字列の引数を関数にマーシャリングする方法を管理します。 既定値は、`CharSet.Ansi` です。|  
+|<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>|名前修飾および文字列の引数を関数にマーシャリングする方法を管理します。 既定値は、 `CharSet.Ansi`です。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>|呼び出される DLL エントリ ポイントを指定します。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>|文字セットに対応するエントリ ポイントを変更する必要があるかどうかを制御します。 既定値は、プログラミング言語によって異なります。|  
 |<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>|マネージド メソッドのシグネチャが、HRESULT を返すアンマネージド シグネチャに変換され、戻り値の追加の [out, retval] 引数を持つかどうかを制御します。<br /><br /> 既定値は `true` です (シグネチャは変換されません)。|  
@@ -102,7 +108,7 @@ using namespace System::Runtime::InteropServices;
   
  次のコード例では、<xref:System.Security.Permissions.SecurityAction>`Assert`、`Deny`、および `PermitOnly` 修飾子は無視されます。  
   
-```  
+```csharp  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Assert, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionAssert();  
@@ -118,7 +124,7 @@ using namespace System::Runtime::InteropServices;
   
  ただし、次の例の `Demand` 修飾子は受け入れられます。  
   
-```  
+```csharp
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionDeny();  
@@ -181,7 +187,7 @@ class PInvokeScenario
   
  次の COM 相互運用機能のインターフェイスの宣言は、前のセクションのプラットフォーム呼び出しの例と同様に、`Assert`、`Deny`、および `PermitOnly` の修飾子を無視します。  
   
-```  
+```csharp
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IAssertStubsItf  
 {  
@@ -212,7 +218,7 @@ interface IAssertStubsItf
   
  さらに、次の例に示すように、`Demand` 修飾子は COM 相互運用機能のインターフェイスの宣言のシナリオでは許可されません。  
   
-```  
+```csharp  
 [ComImport, Guid("12345678-43E6-43c9-9A13-47F40B338DE0")]  
 interface IDemandStubsItf  
 {  
@@ -224,6 +230,7 @@ interface IDemandStubsItf
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [アンマネージ DLL 関数の処理](consuming-unmanaged-dll-functions.md)
 - [エントリ ポイントの指定](specifying-an-entry-point.md)
 - [文字セットの指定](specifying-a-character-set.md)

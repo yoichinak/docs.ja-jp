@@ -1,5 +1,5 @@
 ---
-title: CoreResponseData.m_StatusCode フィールド
+title: M_StatusCode CoreResponseData フィールド
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: 53338c75d31cef3ab89879632710dba3e52091ad
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 8abe619a57cc61fc3502807f60deccbbd578f382
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751910"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75740993"
 ---
-# <a name="coreresponsedatamstatuscode-field"></a>CoreResponseData.m\_StatusCode フィールド
+# <a name="coreresponsedatam_statuscode-field"></a>CoreResponseData\_StatusCode フィールド
 
-`CoreResponseData.m_StatusCode` <xref:System.Net.HttpStatusCode>応答のステータスを含むです。
+`CoreResponseData.m_StatusCode` は、応答の状態を含む <xref:System.Net.HttpStatusCode> です。
 
 ## <a name="syntax"></a>構文
   
@@ -28,14 +28,14 @@ public HttpStatusCode m_StatusCode
 ```
 
 > [!WARNING]
-> この API は、コード内で直接使用するものではありません。 代わりに、使用する必要があります、<xref:System.Diagnostics.DiagnosticSource>ネットワーク用のコードをフックします。 参照してください[DiagnosticSource ユーザーズ ガイド 』](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)です。
+> この API は、コード内で直接使用するためのものではありません。 代わりに、<xref:System.Diagnostics.DiagnosticSource> を使用してネットワークコードをフックする必要があります。 「 [DiagnosticSource User'S Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)」を参照してください。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのクラスの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
 
 ## <a name="requirements"></a>要件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:** システム (.dll 内)
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

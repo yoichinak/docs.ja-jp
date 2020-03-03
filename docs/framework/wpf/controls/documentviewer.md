@@ -7,15 +7,15 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: 19e3d70e378e1357f4a3b299ddfb504f5b85fd0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f27b07b77fc05c548b724aaf2c905c6a9f5d420
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682970"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378267"
 ---
 # <a name="documentviewer"></a>DocumentViewer
-<xref:System.Windows.Controls.DocumentViewer>コントロールを使用する表示<xref:System.Windows.Documents.FixedDocument>コンテンツ (など[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]ドキュメント)、改ページ調整された形式でします。  
+<xref:System.Windows.Controls.DocumentViewer>コントロールを使用する表示<xref:System.Windows.Documents.FixedDocument>改ページ調整された形式 (XML Paper Specification (XPS) ドキュメント) などのコンテンツ。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.DocumentViewer>  
@@ -23,6 +23,7 @@ ms.locfileid: "54682970"
  <xref:System.Windows.Documents.FixedDocument>  
   
 ## <a name="see-also"></a>関連項目
-- [ドキュメント](../../../../docs/framework/wpf/advanced/documents.md)
-- [ドキュメントのシリアル化および保存](../../../../docs/framework/wpf/advanced/document-serialization-and-storage.md)
-- [印刷の概要](../../../../docs/framework/wpf/advanced/printing-overview.md)
+
+- [ドキュメント](../advanced/documents.md)
+- [ドキュメントのシリアル化および保存](../advanced/document-serialization-and-storage.md)
+- [印刷の概要](../advanced/printing-overview.md)

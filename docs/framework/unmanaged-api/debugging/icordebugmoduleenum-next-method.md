@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9ff3fcd6-38fe-41f8-bfd3-f0ab6c7d77ca
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f71901acf8227d018bf288b6cd0265f053e6a3a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4262c18e4efcbbca1b3e2a327fec7d4b609a31
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510833"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096926"
 ---
 # <a name="icordebugmoduleenumnext-method"></a>ICorDebugModuleEnum::Next メソッド
-指定された"ICorDebugModule"インスタンスの数を取得`celt`列挙体の現在位置から。  
+現在の位置から開始して、`celt` によって指定された、列挙からの "" のインスタンスの数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next (  
     [in]  ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -38,18 +36,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
- [in]数`ICorDebugModule`インスタンスを取得します。  
+ から取得する `ICorDebugModule` インスタンスの数。  
   
  `modules`  
- [out]それぞれが指すポインターの配列、`ICorDebugModule`オブジェクト。  
+ 入出力ポインターの配列。それぞれが `ICorDebugModule` オブジェクトを指します。  
   
  `pceltFetched`  
- [out]数へのポインター`ICorDebugModule`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
+ 入出力実際に返された `ICorDebugModule` インスタンスの数へのポインター。 `celt` が1の場合、この値は null になります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -58,4 +56,3 @@ HRESULT Next (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

@@ -2,29 +2,30 @@
 title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
-ms.openlocfilehash: dd6cf74560694e7e16103c624b33a4c590ce5d50
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 26537980a6be5c0fe12661d93a6ba5fe862ceb4e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266924"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398157"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
-カスタム バインドのチャネル プール設定を指定します。  
+カスタム バインディングのチャネル プール設定を指定します。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<binding>  
-\<oneWay>  
-\<channelPoolSettings>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<バインド >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<oneWay >** ](oneway.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<channelPoolSettings >**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
 <channelPoolSettings idleTimeout="TimeSpan"
                      leaseTimeout="TimeSpan"
-                     maxOutboundConnectionsPerEndpopint="Integer" />
+                     maxOutboundConnectionsPerEndpoint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
@@ -45,27 +46,28 @@ ms.locfileid: "55266924"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)|カスタム バインドでパケット ルーティングを有効にします。|  
+|[\<oneWay>](oneway.md)|カスタム バインドでパケット ルーティングを有効にします。|  
   
 ## <a name="remarks"></a>Remarks  
  クォータは、リソースの過剰な消費を防ぐためのポリシー メカニズムとして使用されます。 クォータは、悪質な、または意図的でないサービス拒否 (DOS) 攻撃を防ぎます。 カスタム チャネルにチャネル クォータを設定するには、この要素を使用します。  
   
  `ChannelPoolSettings` では、次の 3 つのクォータを指定します。  
   
--   `idleTimeout` クォータは、サーバーでは、長時間リソースを停滞させることによるサービス拒否 (DOS) 攻撃を軽減するために使用されます。 クライアントでは、適切な値を設定することで、サービスとの接続の信頼性を高めることができます。 既定値では、リソースが控えめに割り当てられています。 開発環境、および小規模のインストール シナリオに適しています。 インストールでリソースが不足している場合、または追加リソースが使用可能であるにもかかわらず接続が制限されている場合、サービス管理者は値を確認する必要があります。  
+- `idleTimeout` クォータは、サーバーでは、長時間リソースを停滞させることによるサービス拒否 (DOS) 攻撃を軽減するために使用されます。 クライアントでは、適切な値を設定することで、サービスとの接続の信頼性を高めることができます。 既定値では、リソースが控えめに割り当てられています。 開発環境、および小規模のインストール シナリオに適しています。 インストールでリソースが不足している場合、または追加リソースが使用可能であるにもかかわらず接続が制限されている場合、サービス管理者は値を確認する必要があります。  
   
--   `leaseTimeout` クォータは、負荷分散機能との統合、および信頼性の向上のために使用されます。 既定値では、リソースが控えめに割り当てられています。 開発環境、および小規模のインストール シナリオに適しています。 インストールでリソースが不足している場合、または追加リソースが使用可能であるにもかかわらず接続が制限されている場合、サービス管理者は値を確認する必要があります。  
+- `leaseTimeout` クォータは、負荷分散機能との統合、および信頼性の向上のために使用されます。 既定値では、リソースが控えめに割り当てられています。 開発環境、および小規模のインストール シナリオに適しています。 インストールでリソースが不足している場合、または追加リソースが使用可能であるにもかかわらず接続が制限されている場合、サービス管理者は値を確認する必要があります。  
   
--   `maxOutboundChannelsPerEndpoint` クォータは、サーバーとクライアントの両方に対するキャッシュ制限を設定し、信頼性向上のために使用されます。 既定値ではリソースが控えめに割り当てられており、開発環境および小規模なインストール シナリオに適しています。 インストールでリソースが不足している場合、または追加リソースが使用可能であるにもかかわらず接続が制限されている場合、サービス管理者は値をレビューする必要があります。  
+- `maxOutboundChannelsPerEndpoint` クォータは、サーバーとクライアントの両方に対するキャッシュ制限を設定し、信頼性向上のために使用されます。 既定値ではリソースが控えめに割り当てられており、開発環境および小規模なインストール シナリオに適しています。 インストールでリソースが不足している場合、または追加リソースが使用可能であるにもかかわらず接続が制限されている場合、サービス管理者は値を確認する必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.OneWayBindingElement.ChannelPoolSettings%2A>
 - <xref:System.ServiceModel.Channels.ChannelPoolSettings>
 - <xref:System.ServiceModel.Configuration.OneWayElement.ChannelPoolSettings%2A>
 - <xref:System.ServiceModel.Configuration.ChannelPoolSettingsElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [\<oneWay>](../../../../../docs/framework/configure-apps/file-schema/wcf/oneway.md)
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [\<oneWay>](oneway.md)
+- [バインディング](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

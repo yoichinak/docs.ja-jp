@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: c915da51-50b2-41df-841a-2b971f4d0975
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 621ae6dae32e79a26d81441841b4c6a274d86f83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f53e3e938f62e714bf421ee7ba0cbf0a47b9f8e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497596"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132278"
 ---
 # <a name="cordebugchainreason-enumeration"></a>CorDebugChainReason 列挙型
 呼び出しチェーンが開始する理由を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugChainReason {  
     CHAIN_NONE              = 0x000,  
     CHAIN_CLASS_INIT        = 0x001,  
@@ -65,10 +63,10 @@ typedef enum CorDebugChainReason {
 |`CHAIN_FUNC_EVAL`|関数の評価によって、チェーンが開始されました。|  
   
 ## <a name="remarks"></a>Remarks  
- 使用して、 [icordebugchain::getreason](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-getreason-method.md)メソッドを呼び出しチェーンが開始する理由を確認します。  
+ 呼び出しチェーンが開始された理由を確認するには、と[いう方法を使用します](icordebugchain-getreason-method.md)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -77,4 +75,5 @@ typedef enum CorDebugChainReason {
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [列挙型のデバッグ](debugging-enumerations.md)

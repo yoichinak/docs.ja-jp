@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread2 Interface1
+title: ICorDebugThread2 インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread2
@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 678f89f9-cce7-46d1-af87-5e989abaa93c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3826bfd16d3cf7534a6e920c516987908547b419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fdaad46b739721ff95b712d4b6461a793ae0a480
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716147"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791430"
 ---
-# <a name="icordebugthread2-interface1"></a>ICorDebugThread2 Interface1
-ICorDebugThread インターフェイスを論理的に拡張として機能します。  
+# <a name="icordebugthread2-interface"></a>ICorDebugThread2 インターフェイス
+は、"、" スレッドインターフェイスの論理的な拡張として機能します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetActiveFunctions メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)|スレッドのフレーム内のアクティブな関数についてのデータを含む COR_ACTIVE_FUNCTION インスタンスの配列を取得します。|  
-|[GetConnectionID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getconnectionid-method.md)|この接続識別子を取得します。`ICorDebugThread2`します。|  
-|[GetTaskID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-gettaskid-method.md)|このタスクの識別子を取得`ICorDebugThread2`します。|  
-|[GetVolatileOSThreadID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getvolatileosthreadid-method.md)|このオペレーティング システムのスレッド識別子を取得します。`ICorDebugThread2`します。|  
-|[InterceptCurrentException メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md)|スレッドで現在の例外をインターセプトするデバッガーを使用します。|  
+|[GetActiveFunctions メソッド](icordebugthread2-getactivefunctions-method.md)|スレッドのフレーム内のアクティブな関数に関するデータを格納している COR_ACTIVE_FUNCTION インスタンスの配列を取得します。|  
+|[GetConnectionID メソッド](icordebugthread2-getconnectionid-method.md)|この `ICorDebugThread2`の接続識別子を取得します。|  
+|[GetTaskID メソッド](icordebugthread2-gettaskid-method.md)|この `ICorDebugThread2`のタスク識別子を取得します。|  
+|[GetVolatileOSThreadID メソッド](icordebugthread2-getvolatileosthreadid-method.md)|この `ICorDebugThread2`のオペレーティングシステムスレッド識別子を取得します。|  
+|[InterceptCurrentException メソッド](icordebugthread2-interceptcurrentexception-method.md)|デバッガーがスレッドの現在の例外をインターセプトできるようにします。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -51,4 +49,5 @@ ICorDebugThread インターフェイスを論理的に拡張として機能し�
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

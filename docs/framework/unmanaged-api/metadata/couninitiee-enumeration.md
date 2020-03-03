@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: c42baa79-f469-4330-95a2-baf7f021c2fc
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 475ae98d2bf7ea5132c9ec4555070f8bb2999cde
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57054bdb7e3b991bc81985c02ec72a4110f31d60
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744012"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436436"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 列挙型
-使用される定数を指定します[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)共通言語ランタイムを初期化するときにします。  
+共通言語ランタイムを初期化するときに[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)によって使用される定数を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum tagCOUNINITEE  
 {  
     COUNINITEE_DEFAULT  = 0x0,   
@@ -40,17 +38,18 @@ typedef enum tagCOUNINITEE
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COUNINITEE_DEFAULT`|既定の初期化解除モードを示します。|  
-|`COUNINITEE_DLL`|アセンブリをアンロードするための初期化解除モードを示します。|  
+|`COUNINITEE_DEFAULT`|既定の初期化解除中モードを示します。|  
+|`COUNINITEE_DLL`|アセンブリをアンロードするための初期化解除中モードを示します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

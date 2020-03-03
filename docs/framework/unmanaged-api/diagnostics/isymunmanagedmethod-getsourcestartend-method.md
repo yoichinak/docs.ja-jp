@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 2a420900-01f1-4461-8777-3a34a6dc1426
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01ab69b73a7bc4929e2ebd49b3847f8d7c4646a2
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561869"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448867"
 ---
 # <a name="isymunmanagedmethodgetsourcestartend-method"></a>ISymUnmanagedMethod::GetSourceStartEnd メソッド
-このメソッドのソースの先頭と末尾のドキュメントの位置を取得します。 配列の最初の位置が、開始であり 2 番目の配列の位置は終わりです。  
+このメソッドのソースのドキュメントの開始位置と終了位置を取得します。 最初の配列の位置は start で、2番目の配列の位置は末尾です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSourceStartEnd(  
     [in]  ISymUnmanagedDocument  *docs[2],  
     [in]  ULONG32                lines[2],  
@@ -37,24 +35,25 @@ HRESULT GetSourceStartEnd(
     [out] BOOL                   *pRetVal);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `docs`  
- [in]最初と最後のソース ドキュメント。  
+ から開始と終了のソースドキュメント。  
   
  `lines`  
- [in]ソース ドキュメントの開始と、対応する行を終了します。  
+ から対応するソースドキュメントの開始行と終了行。  
   
  `columns`  
- [in]ソース ドキュメントの開始と、対応する列を終了します。  
+ から対応するソースドキュメント内の開始列と終了列。  
   
  `pRetVal`  
- [out]`true`位置が定義されている。 それ以外の場合`false`します。  
+ [out] 位置が定義されている場合は `true`。それ以外の場合は、`false`ます。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: 8b35e7a9-b40e-40a9-8d8e-b82e823fc575
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dcb276e6fba6a1b46b6be630804dc6f07c211b86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 703f454f7ed1d2a959b761726f433db22cb73b01
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420509"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791775"
 ---
 # <a name="icordebugstepperisactive-method"></a>ICorDebugStepper::IsActive メソッド
-この ICorDebugStepper が現在の手順を実行中かどうかを示す値を取得します。  
+この ICorDebugStepper が現在ステップを実行しているかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsActive (  
     [out] BOOL   *pbActive  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pbActive`  
- [out]返します`true`ステッパは、ステップ; を現在実行中の場合、それを返します`false`です。  
+ 入出力ステッパが現在ステップを実行している場合は `true` を返します。それ以外の場合は `false`を返します。  
   
 ## <a name="remarks"></a>コメント  
- デバッガーが受信するまで、ステップのアクションがアクティブなまま、 [icordebugmanagedcallback::stepcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)を呼び出すと、自動的に非アクティブ化するステッパです。 ステッパ可能性がありますも非アクティブ化処理の途中で呼び出すことによって[icordebugstepper::deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)状態に達すると、コールバックの前にします。  
+ すべてのステップアクションは、デバッガーが完了していない場合は、次のように[実行](icordebugmanagedcallback-stepcomplete-method.md)されます。この呼び出しは、ステッパを自動的に非アクティブ化します。 [ICorDebugStepper::D eactivate](icordebugstepper-deactivate-method.md)を呼び出してコールバック条件に到達する前に、ステッパを途中で非アクティブにすることもできます。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

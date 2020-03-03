@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 87029cc4-e5e1-42d5-8b98-655bb7ece520
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c52795251b5cacebe749b1eedf918f8b20497796
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 94f2d20816bfc28118877f52c04237c41b3859e3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402898"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125786"
 ---
 # <a name="icordebugclassgetmodule-method"></a>ICorDebugClass::GetModule メソッド
 このクラスを定義するモジュールを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetModule (  
     [out] ICorDebugModule    **pModule  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pModule`  
- [out]このクラスが定義されているモジュールを表す ICorDebugModule オブジェクトのアドレスへのポインター。  
+ 入出力このクラスが定義されているモジュールを表す、モジュールオブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

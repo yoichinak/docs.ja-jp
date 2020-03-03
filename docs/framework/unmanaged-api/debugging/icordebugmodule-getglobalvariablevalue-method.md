@@ -15,39 +15,37 @@ helpviewer_keywords:
 ms.assetid: bbc0881c-6a59-41a0-b5ee-2f3d1b71684c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa558bf58f3033cc39a2b52d99e3a5329d9e99bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3afefdc3d704044184ea20d061eb9449458b5060
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413034"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129575"
 ---
 # <a name="icordebugmodulegetglobalvariablevalue-method"></a>ICorDebugModule::GetGlobalVariableValue メソッド
-指定のグローバル変数の値を取得します。  
+指定したグローバル変数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetGlobalVariableValue(  
     [in]  mdFieldDef      fieldDef,  
     [out] ICorDebugValue  **ppValue  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `fieldDef`  
- [in]`mdFieldDef`グローバル変数を記述するメタデータを参照するトークン。  
+ からグローバル変数を記述するメタデータを参照する `mdFieldDef` トークン。  
   
  `ppValue`  
- [out]指定のグローバル変数の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
+ 入出力指定されたグローバル変数の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -1,6 +1,5 @@
 ---
 title: public キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - public
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 15b86920736f1220553b462d103841ac98d88b7c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 19906d7fd0f7d41ef9e4cdaf951c77825e0bbead
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239304"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713171"
 ---
 # <a name="public-c-reference"></a>public (C# リファレンス)
 
@@ -40,7 +39,7 @@ class SampleClass
 
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](../language-specification/index.md)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[宣言されたアクセシビリティ](~/_csharplang/spec/basic-concepts.md#declared-accessibility)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>関連項目
 
@@ -50,7 +49,7 @@ class SampleClass
 - [C# のキーワード](index.md)
 - [アクセス修飾子](access-modifiers.md)
 - [アクセシビリティ レベル](accessibility-levels.md)
-- [修飾子](modifiers.md)
+- [修飾子](index.md)
 - [private](private.md)
 - [protected](protected.md)
 - [internal](internal.md)

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Slider
 - Slider control [WPF]
 ms.assetid: fb037e2a-0002-458b-9e6b-321623fe72a7
-ms.openlocfilehash: 7c50ae717bc8ae4016883965f83a34047ffad271
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d8836bc91283f83c95e63a8b948eed46fc94bca
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023859"
 ---
 # <a name="slider"></a>スライダー
-<xref:System.Windows.Controls.Slider>移動することによって、値の範囲から選択できます、<xref:System.Windows.Controls.Primitives.Thumb>に沿って、<xref:System.Windows.Controls.Primitives.Track>です。  
+<xref:System.Windows.Controls.Slider>により、移動して値の範囲から選択する、<xref:System.Windows.Controls.Primitives.Thumb>に沿って、<xref:System.Windows.Controls.Primitives.Track>します。  
   
  次の図は、水平方向の例を示します<xref:System.Windows.Controls.Slider>コントロール。  
   
- ![目盛り付きの水平スライダー](../../../../docs/framework/wpf/controls/media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
+ ![目盛り付きの水平スライダー](./media/ss-ctl-hslider-ticks.png "SS_CTL_hslider_ticks")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [スライダーの目盛りをカスタマイズする](../../../../docs/framework/wpf/controls/how-to-customize-the-ticks-on-a-slider.md)  
+ [スライダーの目盛りをカスタマイズする](how-to-customize-the-ticks-on-a-slider.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Slider>  

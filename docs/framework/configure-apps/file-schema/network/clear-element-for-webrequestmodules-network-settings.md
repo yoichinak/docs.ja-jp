@@ -10,21 +10,21 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 0096c7b3426645b90e2e1609fb2427334345fd87
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5832d120824df75d374fc94cb0aa4e08189cb965
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284155"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088501"
 ---
-# <a name="clear-element-for-webrequestmodules-network-settings"></a>\<クリア > webRequestModules (ネットワーク設定) の要素
-アプリケーションから登録済みのすべての Web 要求モジュールを削除します。  
-  
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<clear>  
-  
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<clear> 要素 (ネットワーク設定)
+アプリケーションから、登録されているすべての Web 要求モジュールを削除します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webRequestModules>** ](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**clear>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -44,16 +44,16 @@ ms.locfileid: "55284155"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|使用してネットワークのホストから情報を要求するモジュールを指定します。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|ネットワークホストから情報を要求するために使用するモジュールを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `clear`要素は、構成ファイルで、または構成階層のより高いレベルで既に定義されているすべての登録済みの Web 要求モジュールを削除します。  
+ `clear` 要素は、構成ファイルで既に定義されている、または構成階層内の上位レベルのすべての登録済み Web 要求モジュールを削除します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、すべての Web 要求モジュールを削除し、http Web 要求モジュールを登録します。  
+ 次の例では、すべての Web 要求モジュールをクリアし、Web 要求モジュールを HTTP に登録します。  
   
 ```xml  
 <configuration>  
@@ -70,5 +70,6 @@ ms.locfileid: "55284155"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebRequest>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

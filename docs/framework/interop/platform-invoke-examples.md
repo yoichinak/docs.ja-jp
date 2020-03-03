@@ -13,14 +13,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, platform invoke
 - DLL functions
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 612cd108e37d6f072bafed919c14532498352e4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: da157a40819ada3914cf1791c8ca3f7b30e8c837
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628930"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73124757"
 ---
 # <a name="platform-invoke-examples"></a>プラットフォーム呼び出しの例
 User32.dll で **MessageBox** 関数を定義し、引数として単純な文字列を渡して呼び出す例を次に示します。 この例では、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> フィールドは **Auto** に設定されているため、ターゲット プラットフォームで文字の幅と文字列のマーシャリングを決定できます。  
@@ -29,9 +27,10 @@ User32.dll で **MessageBox** 関数を定義し、引数として単純な文�
  [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)] 
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- その他の例については、「[Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)」(プラットフォーム呼び出しによるデータのマーシャリング) を参照してください。  
+ その他の例については、「[Marshaling Data with Platform Invoke](marshaling-data-with-platform-invoke.md)」(プラットフォーム呼び出しによるデータのマーシャリング) を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [マネージド コードでのプロトタイプの作成](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [文字セットの指定](../../../docs/framework/interop/specifying-a-character-set.md)
+- [マネージド コードでのプロトタイプの作成](creating-prototypes-in-managed-code.md)
+- [文字セットの指定](specifying-a-character-set.md)

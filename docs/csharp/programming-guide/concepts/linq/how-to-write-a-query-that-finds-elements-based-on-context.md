@@ -1,15 +1,15 @@
 ---
-title: '方法: コンテキストに基づいて要素を検索するクエリを記述する (C#)'
+title: コンテキストに基づいて要素を検索するクエリを記述する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: 93bfd77ce6bb7be1d305f20f56da67e8fb9c22f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fc131fdeb8dbf8871bfa455bc54eab0eeca7022
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667951"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75348366"
 ---
-# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>方法: コンテキストに基づいて要素を検索するクエリを記述する (C#)
+# <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>コンテキストに基づいて要素を検索するクエリを記述する方法 (C#)
 コンテキストに基づいて要素を選択するクエリの記述が必要になる場合があります。 つまり、前の兄弟要素や次の兄弟要素に基づいてフィルターしたり、 子要素や祖先要素に基づいてフィルターすることが必要になる場合が考えられます。  
   
  これを実現するには、クエリを記述し、そのクエリの結果を `where` 句で使用します。 最初に NULL に対してテストし、次に値をテストする必要がある場合は、`let` 句でクエリを実行し、次にその結果を `where` 句で使用する方が便利です。  
@@ -49,14 +49,14 @@ foreach (XElement e in items)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  
 ```  
   
 ## <a name="example"></a>例  
- 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)」を参照してください。  
+ 次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、「[名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)」を参照してください。  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -92,7 +92,7 @@ foreach (XElement e in items)
   
  このコードを実行すると、次の出力が生成されます。  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  
@@ -104,4 +104,3 @@ id = 6
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
 - <xref:System.Linq.Enumerable.FirstOrDefault%2A>
-- [基本的なクエリ (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

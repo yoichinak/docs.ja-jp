@@ -1,0 +1,9 @@
+- name: デリゲート
+  href: index.md
+  items:
+    - name: '方法: デリゲート メソッドを呼び出す'
+      href: how-to-invoke-a-delegate-method.md
+    - name: '方法: プロシージャを別のプロシージャに渡す'
+      href: how-to-pass-procedures-to-another-procedure.md
+    - name: 厳密でないデリゲート変換
+      href: relaxed-delegate-conversion.md

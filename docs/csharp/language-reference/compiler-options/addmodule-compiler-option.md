@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -addmodule compiler option [C#]
 - addmodule compiler option [C#]
 ms.assetid: ed604546-0dc2-4bd4-9a3e-610a8d973e58
-ms.openlocfilehash: f45afd277818d7e1658751f2aae0b2153c940eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 148a63c37cfbc4c60448adccde10947e91e22bb9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617513"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970186"
 ---
 # <a name="-addmodule-c-compiler-options"></a>-addmodule (C# コンパイラ オプション)
 このオプションを使用すると、スイッチで作成されたモジュールが現在のコンパイルに追加されます。  
@@ -28,12 +28,12 @@ ms.locfileid: "54617513"
  `file`、 `file2`  
  メタデータを含む出力ファイル。 このファイルには、アセンブリ マニフェストを含めることができません。 複数のファイルをインポートするには、コンマかセミコロンでファイル名を区切ります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **-addmodule** で追加したモジュールはすべて、実行時に出力ファイルと同じディレクトリに置かれている必要があります。 つまり、コンパイル時にはあるゆるディレクトリのモジュールを指定できますが、そのモジュールは実行時にアプリケーション ディレクトリに置かれている必要があります。 実行時にモジュールがアプリケーション ディレクトリにない場合、<xref:System.TypeLoadException> が生成されます。  
   
- `file` には、アセンブリを含めることができません。 たとえば、出力ファイルが [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) で作成された場合、そのメタデータは **-addmodule** でインポートできます。  
+ `file` には、アセンブリを含めることができません。 たとえば、出力ファイルが [-target:module](./target-module-compiler-option.md) で作成された場合、そのメタデータは **-addmodule** でインポートできます。  
   
- 出力ファイルが **-target:module** ではなく **-target** オプションで作成された場合、そのメタデータは **-addmodule** ではインポートできませんが、[-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) でインポートできます。  
+ 出力ファイルが **-target:module** ではなく **-target** オプションで作成された場合、そのメタデータは **-addmodule** ではインポートできませんが、[-reference](./reference-compiler-option.md) でインポートできます。  
   
  このコンパイラ オプションは Visual Studio では利用できません。プロジェクトはモジュールを参照できません。 また、このコンパイラ オプションをプログラムで変更することはできません。  
   
@@ -46,7 +46,7 @@ csc -addmodule:metad1.netmodule;metad2.netmodule -out:out.exe input.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](./index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
 - [マルチファイル アセンブリ](../../../framework/app-domains/multifile-assemblies.md)
-- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
+- [方法: マルチファイル アセンブリをビルドする](../../../framework/app-domains/build-multifile-assembly.md)

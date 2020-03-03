@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9dcc8b3d-33ee-4c7c-8d6f-322c57b94a0f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a60d3bfc734480733f621c71a0141bb58a0eb71e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99f529a151a42cf4a9ee1f74bd3a76a5b6b1b35f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745309"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445264"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl メソッド
-インターフェイスから継承されたメソッドの実装の定義を作成し、そのメソッドの実装定義にトークンを返します。  
+インターフェイスから継承されたメソッドの実装の定義を作成し、そのメソッド実装定義にトークンを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineMethodImpl (   
     [in]  mdTypeDef         td,   
     [in]  mdToken           tkBody,   
@@ -37,25 +35,26 @@ HRESULT DefineMethodImpl (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `td`  
- [in]`mdTypedef`実装するクラスのトークン。  
+ から実装するクラスの `mdTypedef` トークン。  
   
  `tkBody`  
- [in]`mdMethodDef`または`mdMethodRef`コード本体のトークン。  
+ からコード本体の `mdMethodDef` または `mdMemberRef` トークン。  
   
  `tkDecl`  
- [in]`mdMethodDef`または`mdMethodRef`に実装されているインターフェイス メソッドのトークン。  
+ から実装されているインターフェイスメソッドの `mdMethodDef` または `mdMemberRef` トークン。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

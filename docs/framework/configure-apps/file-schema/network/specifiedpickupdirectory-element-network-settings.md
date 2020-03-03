@@ -8,21 +8,21 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 6abee1b01e690633dabfd225b30fcb9b8b408dad
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1acc724bb14c3610f14d06452c30b3d5dac42e13
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270824"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089075"
 ---
-# <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > 要素 (ネットワーク設定)
+# <a name="specifiedpickupdirectory-element-network-settings"></a>\<には、> 要素 (ネットワーク設定) を設定します。
 SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。  
   
- \<configuration>  
-\<system.net>  
-\<mailSettings>  
-\<smtp>  
-\<specifiedPickupDirectory>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<mailSettings >** ](mailsettings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**smtp\<** ](smtp-element-network-settings.md) >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<に**よって、>  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +39,7 @@ SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレ�
   
 |属性|説明|  
 |---------------|-----------------|  
-|`pickupDirectoryLocation`|アプリケーションが後で、SMTP サーバーで処理するための電子メールを保存するディレクトリ。|  
+|`pickupDirectoryLocation`|アプリケーションが SMTP サーバーによって後で処理するために電子メールを保存するディレクトリ。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -48,13 +48,13 @@ SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレ�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<smtp> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル (SMTP) 電子メールの送信オプションを構成します。|  
+|[\<smtp > 要素 (ネットワーク設定)](smtp-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) メール送信オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
- `specifiedPickupDirectory`属性はアプリケーションが SMTP サーバーによって処理されるメッセージを保存するディレクトリを設定します。  
+ `specifiedPickupDirectory` 属性は、アプリケーションが SMTP サーバーによって処理されるメールメッセージを保存するディレクトリを設定します。  
   
 ## <a name="example"></a>例  
- 次の例では、メール ピックアップ ディレクトリとして c:\maildrop を指定します。  
+ 次の例では、電子メールのピックアップディレクトリとして c:\ maildrop を指定します。  
   
 ```xml  
 <configuration>  
@@ -71,7 +71,8 @@ SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレ�
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.Mail.SmtpClient?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSection?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SmtpSpecifiedPickupDirectoryElement?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

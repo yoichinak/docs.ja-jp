@@ -1,16 +1,15 @@
 ---
 title: アクセシビリティ レベルの使用に関する制限事項 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: ef1c0a93da2a53f1e199627fb7f83894d01e714a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 90c76e68ca526106f3a8be6e3db2640edbb2bc80
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239330"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715156"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>アクセシビリティ レベルの使用に関する制限事項 (C# リファレンス)
 
@@ -23,7 +22,7 @@ public class MyClass: BaseClass {...} // Error
 
 宣言されたアクセシビリティ レベルの制限を次の表にまとめます。
 
-|コンテキスト|コメント|
+|コンテキスト|Remarks|
 |-------------|-------------|
 |[クラス](../../programming-guide/classes-and-structs/classes.md)|クラスの型の直接基底クラスは、少なくとも、クラスの型自体と同程度にアクセス可能である必要があります。|
 |[インターフェイス](../../programming-guide/interfaces/index.md)|インターフェイスの型の明示的な基本インターフェイスは、少なくとも、インターフェイスの型自体と同程度にアクセス可能である必要があります。|
@@ -34,7 +33,7 @@ public class MyClass: BaseClass {...} // Error
 |[プロパティ](../../programming-guide/classes-and-structs/properties.md)|プロパティの型は、少なくともプロパティ自体と同程度にアクセス可能である必要があります。|
 |[イベント](../../programming-guide/events/index.md)|イベントの型は、少なくともイベント自体と同程度にアクセス可能である必要があります。|
 |[インデクサー](../../programming-guide/indexers/index.md)|インデクサーの型とパラメーターの型は、少なくとも、インデクサー自体と同程度にアクセス可能である必要があります。|
-|[演算子](../../programming-guide/statements-expressions-operators/operators.md)|演算子の戻り値の型とパラメーターの型は、少なくとも、演算子自体と同程度にアクセス可能である必要があります。|
+|[演算子](../operators/index.md)|演算子の戻り値の型とパラメーターの型は、少なくとも、演算子自体と同程度にアクセス可能である必要があります。|
 |[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)|コンストラクターのパラメーターの型は、少なくとも、コンストラクター自体と同程度にアクセス可能である必要があります。|
 
 ## <a name="example"></a>例

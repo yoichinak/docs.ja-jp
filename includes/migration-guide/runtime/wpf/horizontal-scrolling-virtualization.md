@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 0825233c0dae131fa9d00565348fac6fdf0be063
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857541"
+---
 ### <a name="horizontal-scrolling-and-virtualization"></a>水平方向スクロールと仮想化
 
 |   |   |

@@ -1,26 +1,27 @@
 ---
 title: dotnet clean コマンド
 description: dotnet clean コマンドは現在のディレクトリを消去します。
-ms.date: 12/04/2018
-ms.openlocfilehash: a25b7930794795e3dff5051a8ca1dd1b9c261dfd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 02/14/2020
+ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169860"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503752"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet clean` - プロジェクトの出力を消去します。
 
 ## <a name="synopsis"></a>構文
 
-```
-dotnet clean [<PROJECT>] [-c|--configuration] [-f|--framework] [-o|--output] [-r|--runtime] [-v|--verbosity]
+```dotnetcli
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive]
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -30,15 +31,15 @@ dotnet clean [-h|--help]
 
 ## <a name="arguments"></a>引数
 
-`PROJECT`
+`PROJECT | SOLUTION`
 
-消去する MSBuild プロジェクトです。 プロジェクト ファイルを指定しない場合、MSBuild は、現在の作業ディレクトリから *proj* で終わるファイル名拡張子を検索し、そのファイルを使います。
+クリーンにする MSBuild プロジェクトまたはソリューション。 プロジェクトまたはソリューションのファイルを指定しない場合、MSBuild は、現在の作業ディレクトリから *proj* または *sln* のどちらかで終わるファイル拡張子を持つファイルを検索して、そのファイルを使います。
 
 ## <a name="options"></a>オプション
 
-* **`-c|--configuration {Debug|Release}`**
+* **`-c|--configuration <CONFIGURATION>`**
 
-  ビルド構成を定義します。 既定値は `Debug` です。 このオプションは、ビルド時に指定した場合にのみ、消去時にも必要です。
+  ビルド構成を定義します。 ほとんどのプロジェクトの既定値は `Debug` ですが、プロジェクトでビルド構成設定をオーバーライドできます。 このオプションは、ビルド時に指定した場合にのみ、消去時にも必要です。
 
 * **`-f|--framework <FRAMEWORK>`**
 
@@ -48,28 +49,36 @@ dotnet clean [-h|--help]
 
   コマンドの短いヘルプを印刷します。
 
+* **`--interactive`**
+
+  コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
+
+* **`--nologo`**
+
+  著作権情報を表示しません。 .NET Core 3.0 SDK 以降で使用できます。
+
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  ビルド出力が配置されたディレクトリです。 プロジェクトのビルド時にフレームワークを指定した場合、出力ディレクトリ スイッチと共に `-f|--framework <FRAMEWORK>` スイッチを指定します。
+  クリーンにするビルド成果物を含むディレクトリ。 プロジェクトのビルド時にフレームワークを指定した場合、出力ディレクトリ スイッチと共に `-f|--framework <FRAMEWORK>` スイッチを指定します。
 
 * **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
-  指定したランタイムの出力フォルダーをクリーンアップします。 これは、[自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)が作成された場合に使用されます。 .NET Core 2.0 SDK 以降、使用できるオプションです。
+  指定したランタイムの出力フォルダーをクリーンアップします。 これは、[自己完結型の展開](../deploying/index.md#publish-self-contained)が作成された場合に使用されます。
 
 * **`-v|--verbosity <LEVEL>`**
 
-  コマンドの詳細レベルを設定します。 指定できるレベルは、q[uiet]、m[inimal]、n[ormal]、d[etailed]、diag[nostic] です。
+  MSBuild の詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 既定値は、`normal` です。
 
 ## <a name="examples"></a>使用例
 
 * プロジェクトの既定のビルドを消去します。
 
-  ```console
+  ```dotnetcli
   dotnet clean
   ```
 
 * リリース構成を使用してビルドされたプロジェクトを消去します。
 
-  ```console
+  ```dotnetcli
   dotnet clean --configuration Release
   ```

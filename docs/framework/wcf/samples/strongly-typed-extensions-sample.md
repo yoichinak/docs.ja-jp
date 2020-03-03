@@ -2,12 +2,12 @@
 title: 厳密に型指定された拡張のサンプル
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: c5b135fb46d13ff5599e75cbd1489c0f6affbd78
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ad0a8e10ecbcb5e3ddf9106dbbaa55356314020
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691399"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74716619"
 ---
 # <a name="strongly-typed-extensions-sample"></a>厳密に型指定された拡張のサンプル
 このサンプルでは、例を示す目的で <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを使用します。 ただし、このサンプルで示すパターンは、拡張データをサポートするすべての配信クラスで使用できます。  
@@ -40,12 +40,12 @@ ms.locfileid: "54691399"
 </entry>  
 ```  
   
- `<in-reply-to>`要素が必要な 3 つの属性を指定します (`ref`、`type`と`href`) 追加の拡張属性と拡張機能の要素が存在することもできます。  
+ `<in-reply-to>` 要素は、3つの必須属性 (`ref`、`type`、および `href`) を指定しますが、追加の拡張属性と拡張要素も存在できます。  
   
 ## <a name="modeling-the-in-reply-to-element"></a>In-Reply-To 要素のモデル化  
  このサンプルでは、`<in-reply-to>` 要素は <xref:System.Xml.Serialization.IXmlSerializable> を実装する CLR としてモデル化されており、<xref:System.Runtime.Serialization.DataContractSerializer> と共に使用できます。 さらに、次のサンプル コードに示すように、要素のデータにアクセスするメソッドおよびプロパティも実装しています。  
   
-```  
+```csharp  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
 public class InReplyToElement : IXmlSerializable  
 {  
@@ -90,7 +90,7 @@ public class InReplyToElement : IXmlSerializable
   
  `InReplyToElement` クラスは、<xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装します。このインターフェイスは、オブジェクト インスタンスを XML から読み取る、または書き込む方法の直接制御を可能にします。 `ReadXml` メソッドは、渡された `Ref` から `HRef`、`Source`、`MediaType`、および <xref:System.Xml.XmlReader> の各プロパティを最初に読み取ります。 不明な属性は<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> コレクションに格納されます。 すべての属性が読み取られると、<xref:System.Xml.XmlReader.ReadStartElement> が呼び出されて、リーダーが次の要素に進みます。 次のコードに示すように、このクラスによりモデル化された要素には必須の子がないので、子要素は `XElement` インスタンスにバッファされ、<xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> コレクションに格納されます。  
   
-```  
+```csharp
 public void ReadXml(System.Xml.XmlReader reader)  
 {  
     bool isEmpty = reader.IsEmptyElement;  
@@ -146,7 +146,7 @@ public void ReadXml(System.Xml.XmlReader reader)
   
  `WriteXml` では、`InReplyToElement` メソッドは最初に `Ref`、`HRef`、`Source`、および `MediaType` の各プロパティの値を XML 属性として書き込みます (`WriteXml` は、実際の外側の要素自体は書き込みません。`WriteXml` により行われるためです)。 また、次のコードに示すように、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> および <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> の内容をライタに書き込みます。  
   
-```  
+```csharp
 public void WriteXml(System.Xml.XmlWriter writer)  
 {  
     if (this.Ref != null)  
@@ -189,7 +189,7 @@ public void WriteXml(System.Xml.XmlWriter writer)
   
  `ThreadedFeed` クラスは、`SyndicationFeed` から継承され、`OnCreateItem` をオーバーライドして `ThreadedItem` を返します。 また、次のコードに示すように、`Items` コレクションにアクセスするメソッドを `ThreadedItems` として実装します。  
   
-```  
+```csharp
 public class ThreadedFeed : SyndicationFeed  
 {  
     public ThreadedFeed()  
@@ -213,7 +213,7 @@ public class ThreadedFeed : SyndicationFeed
   
  `ThreadedItem` クラスは `SyndicationItem` から継承され、`InReplyToElement` を厳密に型指定されたプロパティとします。 これにより、`InReplyTo` 拡張データにプログラムによって簡単にアクセスできます。 また、次のコードに示すように、その拡張データの読み取り/書き込みを行う `TryParseElement` および `WriteElementExtensions` も実装します。  
   
-```  
+```csharp
 public class ThreadedItem : SyndicationItem  
 {  
     private InReplyToElement inReplyTo;  
@@ -272,19 +272,17 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  
-  
-## <a name="see-also"></a>関連項目
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

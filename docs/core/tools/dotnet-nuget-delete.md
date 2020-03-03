@@ -2,37 +2,33 @@
 title: dotnet nuget delete コマンド
 description: dotnet-nuget-delete コマンドは、サーバーからパッケージを削除または一覧から削除します。
 author: karann-msft
-ms.date: 12/04/2018
-ms.openlocfilehash: 827d295d7a52b6c9c82adbcf3d25281bd1cc98fd
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 06/26/2019
+ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168313"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76733122"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**この記事の対象:** ✔️ .NET Core 1.x SDK 以降のバージョン
 
-## <a name="name"></a>name
+<!-- todo: uncomment when all CLI commands are reviewed
+[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+-->
+
+## <a name="name"></a>名前
 
 `dotnet nuget delete` - サーバーからパッケージを削除または一覧から削除します。
 
 ## <a name="synopsis"></a>構文
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-```
+```dotnetcli
 dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
     [--non-interactive] [-s|--source]
 dotnet nuget delete [-h|--help]
 ```
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [-k|--api-key] [--non-interactive]
-    [-s|--source]
-dotnet nuget delete [-h|--help]
-```
----
 
 ## <a name="description"></a>説明
 
@@ -49,8 +45,6 @@ dotnet nuget delete [-h|--help]
   削除するパッケージのバージョンです。
 
 ## <a name="options"></a>オプション
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 * **`--force-english-output`**
 
@@ -80,40 +74,16 @@ dotnet nuget delete [-h|--help]
 
   サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-* **`--force-english-output`**
-
-  インバリアントの英語ベースのカルチャを使用して、アプリケーションの実行を強制します。
-
-* **`-h|--help`**
-
-  コマンドの短いヘルプを印刷します。
-
-* **`-k|--api-key <API_KEY>`**
-
-  サーバーの API キーです。
-
-* **`--non-interactive`**
-
-  ユーザーに入力や確認のメッセージ画面を表示しません。
-
-* **`-s|--source <SOURCE>`**
-
-  サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
-
----
-
 ## <a name="examples"></a>使用例
 
 * `Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
 
-  ```console
+  ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0
   ```
 
 * ユーザーに資格情報やその他の入力を求めずに、`Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
 
-  ```console
+  ```dotnetcli
   dotnet nuget delete Microsoft.AspNetCore.Mvc 1.0 --non-interactive
   ```

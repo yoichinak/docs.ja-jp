@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1371b86f30324908a639b3b1bbae0ae007ba590a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c0cf56f108396226b7c7399f6da75e5f47d36f3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708091"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744668"
 ---
 # <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule::GetMethodDefinitionByToken メソッド
 
@@ -30,18 +30,20 @@ ms.locfileid: "54708091"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT GetMethodDefinitionByToken(
     [in] mdMethodDef token,
     [out] IXCLRDataMethodDefinition** methodDefinition
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`token` [in]メソッド トークンです。
+`token`\
+[in]メソッド トークンです。
 
-`methodDefinition` [out]メソッドの定義。
+`methodDefinition`\
+[out]メソッドの定義。
 
 ## <a name="remarks"></a>Remarks
 
@@ -49,12 +51,12 @@ HRESULT GetMethodDefinitionByToken(
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
  
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [デバッグ](index.md)
+- [IXCLRDataModule インターフェイス](ixclrdatamodule-interface.md)

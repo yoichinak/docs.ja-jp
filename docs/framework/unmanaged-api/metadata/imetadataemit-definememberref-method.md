@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 578f79136f6ccc8a6b7eac644b2a5084d30d2ba0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722830"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431821"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef メソッド
-現在のスコープ外にあるモジュールのメンバーへの参照を定義し、その参照定義トークンを取得します。  
+現在のスコープ外のモジュールのメンバーへの参照を定義し、その参照定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineMemberRef (   
     [in]  mdToken           tkImport,   
     [in]  LPCWSTR           szName,   
@@ -39,31 +37,32 @@ HRESULT DefineMemberRef (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tkImport`  
- [in]メンバーはグローバルです。 ない場合、ターゲット メンバーのクラスまたはインターフェイスのトークンメンバーが、グローバルな場合は、`mdModuleRef`その他のファイルのトークン。  
+ からメンバーがグローバルでない場合は、ターゲットメンバーのクラスまたはインターフェイスのトークン。メンバーがグローバルの場合は、その他のファイルの `mdModuleRef` トークンです。  
   
  `szName`  
- [in]対象メンバーの名前。  
+ からターゲットメンバーの名前。  
   
  `pvSigBlob`  
- [in]対象メンバーのシグネチャ。  
+ からターゲットメンバーのシグネチャ。  
   
  `cbSigBlob`  
- [in]内のバイト数`pvSigBlob`します。  
+ から`pvSigBlob`内のバイト数。  
   
  `pmr`  
- [out]`mdMemberRef`に割り当てられたトークン。  
+ 入出力割り当てられた `mdMemberRef` トークン。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

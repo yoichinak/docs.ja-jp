@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: 2b5bea779888342062c6ff2ab3d258ee84cb97b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971016"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer に関する「方法」トピック
 このセクションのトピックでは、使用する方法を示します、<xref:System.Windows.Controls.ScrollViewer>アプリケーションでのスクロール可能な領域を作成する要素。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [ScrollChanged イベントの処理](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
- [IScrollInfo インターフェイスを使用してコンテンツをスクロールする](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [ScrollViewer のコンテンツ スクロール メソッドを使用する](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+ [ScrollChanged イベントの処理](how-to-handle-the-scrollchanged-event.md)  
+ [IScrollInfo インターフェイスを使用してコンテンツをスクロールする](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [ScrollViewer のコンテンツ スクロール メソッドを使用する](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
@@ -28,5 +28,6 @@ ms.locfileid: "54672099"
  <xref:System.Windows.Controls.ScrollViewer>  
   
 ## <a name="see-also"></a>関連項目
-- [パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)
-- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
+
+- [パネルの概要](panels-overview.md)
+- [レイアウト](../advanced/layout.md)

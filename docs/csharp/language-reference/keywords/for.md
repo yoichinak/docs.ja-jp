@@ -1,5 +1,5 @@
 ---
-title: C# の for ステートメント
+title: for ステートメント - C# リファレンス
 ms.date: 06/13/2018
 f1_keywords:
 - for
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: 6584889f527e1459090bea322720f0cd8d9694f6
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fc6a23cabd93323cacc33dfc4388116881c1fc84
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149238"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552261"
 ---
 # <a name="for-c-reference"></a>for (C# リファレンス)
 
@@ -47,13 +47,13 @@ for (initializer; condition; iterator)
 
   - メソッドの呼び出し
 
-  - 前置または後置の[インクリメント](../operators/increment-operator.md)式 (`++i`、`i++` など)
+  - 前置または後置の[インクリメント](../operators/arithmetic-operators.md#increment-operator-)式 (`++i`、`i++` など)
 
-  - 前置または後置の[デクリメント](../operators/decrement-operator.md)式 (`--i`、`i--` など)
+  - 前置または後置の[デクリメント](../operators/arithmetic-operators.md#decrement-operator---)式 (`--i`、`i--` など)
 
-  - [new](new-operator.md) キーワードを使用したオブジェクト作成
+  - [new](../operators/new-operator.md) 演算子を使用したオブジェクト作成
 
-  - [await](await.md) 式
+  - [await](../operators/await.md) 式
 
 上記の例の *initializer* セクションは、ローカル ループ変数 `i` を宣言して初期化します。
 
@@ -79,13 +79,13 @@ i < 5
 
 - メソッドの呼び出し
 
-- 前置または後置の[インクリメント](../operators/increment-operator.md)式 (`++i`、`i++` など)
+- 前置または後置の[インクリメント](../operators/arithmetic-operators.md#increment-operator-)式 (`++i`、`i++` など)
 
-- 前置または後置の[デクリメント](../operators/decrement-operator.md)式 (`--i`、`i--` など)
+- 前置または後置の[デクリメント](../operators/arithmetic-operators.md#decrement-operator---)式 (`--i`、`i--` など)
 
-- [new](new-operator.md) キーワードを使用したオブジェクト作成
+- [new](../operators/new-operator.md) 演算子を使用したオブジェクト作成
 
-- [await](await.md) 式
+- [await](../operators/await.md) 式
 
 上記の例の *iterator* セクションでは、ローカルのループ変数をインクリメントします。
 
@@ -105,12 +105,11 @@ i++
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](../language-specification/index.md)」の [for ステートメント](~/_csharplang/spec/statements.md#the-for-statement)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の [for ステートメント](~/_csharplang/spec/statements.md#the-for-statement)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [繰り返しステートメント](iteration-statements.md)
 - [foreach、in](foreach-in.md)

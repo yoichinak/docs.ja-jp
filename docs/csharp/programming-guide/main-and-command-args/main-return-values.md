@@ -1,36 +1,35 @@
 ---
 title: Main() の戻り値 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: bd2111953bbc31799b3472f62e704667195e2532
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738483"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504001"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
 `Main` メソッドは `void` を返すことができます。
 
-[!code-csharp[csProgGuideMain#12](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_1.cs)]
+ [!code-csharp[csProgGuideMain#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#12)]
 
 `int` を返すこともできます。
 
-[!code-csharp[csProgGuideMain#13](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_2.cs)]
+ [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-`Main` からの戻り値を使用しない場合は、`void` を返すと少し簡単なコードにすることができます。 ただし、整数値を返すことによって、プログラムが状態の情報を、実行可能ファイルを呼び出す他のプログラムまたはスクリプトに伝達することができます。 `Main` からの戻り値は、プロセスの終了コードとして扱われます。 次の例では、`Main` からの戻り値にアクセスする方法を示します。
+`Main` からの戻り値を使用しない場合は、`void` を返すと少し簡単なコードにすることができます。 ただし、整数値を返すことによって、プログラムが状態の情報を、実行可能ファイルを呼び出す他のプログラムまたはスクリプトに伝達することができます。 `Main` からの戻り値は、プロセスの終了コードとして扱われます。 `void` が `Main` から返された場合、終了コードは暗黙的に `0` になります。 次の例では、`Main` からの戻り値にアクセスする方法を示します。
 
 ## <a name="example"></a>例
 
-この例では、[.NET Core](../../../core/index.md) コマンド ライン ツールを使用します。 .NET Core コマンド ライン ツールに慣れていない場合は、この[概要のトピック](../../../core/tutorials/using-with-xplat-cli.md)を参照してください。
+この例では、[.NET Core](../../../core/index.md) コマンド ライン ツールを使用します。 .NET Core コマンド ライン ツールに慣れていない場合は、この[概要のトピック](../../../core/tutorials/cli-create-console-app.md)を参照してください。
 
 *program.cs* の `Main` メソッドを次のように変更します。
 
-[!code-csharp[csProgGuideMain#14](../../../csharp/programming-guide/inside-a-program/codesnippet/CSharp/main-return-values_3.cs)]
+ [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
 プログラムを Windows で実行する場合、`Main` 関数からの戻り値はすべて 1 つの環境変数に格納されます。 この環境変数を取得するには、バッチ ファイルから `ERRORLEVEL` を使用するか、PowerShell から `$LastExitCode` を使用します。
 
@@ -40,8 +39,11 @@ ms.locfileid: "54738483"
 
 コードがゼロを返すため、バッチ ファイルで成功が報告されます。 ただし、MainReturnValTest.cs が 0 以外の値を返すように変更して、プログラムを再コンパイルする場合、PowerShell スクリプトの後続の実行では失敗が報告されます。
 
-```powershell
+```dotnetcli
 dotnet run
+```
+
+```powershell
 if ($LastExitCode -eq 0) {
     Write-Host "Execution succeeded"
 } else
@@ -94,8 +96,8 @@ private static async Task<int> AsyncConsoleWork()
 >この例の `Main` メソッドで `async` 修飾子を使用した場合、同じコードが生成されます。
 
 ## <a name="see-also"></a>関連項目
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+
+- [C# プログラミング ガイド](../index.md)
 - [C# リファレンス](../index.md)
 - [Main() とコマンドライン引数](index.md)
-- [方法: コマンド ライン引数を表示する](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [方法: foreach を使用してコマンド ライン引数にアクセスする](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)
+- [コマンド ライン引数を表示する方法](./how-to-display-command-line-arguments.md)

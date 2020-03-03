@@ -2,15 +2,16 @@
 title: 式ツリーの変換
 description: 式ツリーの各ノードにアクセスし、その式ツリーに変更を加えたコピーを構築する方法について説明します。
 ms.date: 06/20/2016
+ms.technology: csharp-advanced-concepts
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 6fe35983119bba443ed9132ff0c52361e1f07da8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f60c447d5c89aa83f85073e642e621608131ed8d
+ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200536"
+ms.lasthandoff: 01/16/2020
+ms.locfileid: "76115773"
 ---
-# <a name="translating-expression-trees"></a>式ツリーの変換
+# <a name="translate-expression-trees"></a>式ツリーを変換する
 
 [前回 -- 式の構築](expression-trees-building.md)
 
@@ -75,7 +76,7 @@ var addition = Expression.Add(one, two);
 var add2 = Expression.Add(three, four);
 var sum = Expression.Add(addition, add2);
 
-// Declare the delegate, so we can call it 
+// Declare the delegate, so we can call it
 // from itself recursively:
 Func<Expression, int> aggregate = null;
 // Aggregate, return constants, or the sum of the left and right operand.
@@ -124,7 +125,7 @@ private static int Aggregate(Expression exp)
 
 同じ式に対して実行すると、次の出力が生成されます。
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +162,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 この式の実行の出力を次に示します。
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1
@@ -191,7 +192,7 @@ Computed sum: 10
 
 ## <a name="learning-more"></a>詳細情報
 
-このサンプルは、式ツリーで表されるアルゴリズムを走査し、解釈するために構築するコードのごく一部です。 式ツリーを別の言語に変換する汎用的なライブラリを構築するために必要なすべての作業の説明については、Matt Warren の[このシリーズ](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx)を参照してください。 式ツリーに含まれる任意のコードを変換する方法について、詳しく説明されています。
+このサンプルは、式ツリーで表されるアルゴリズムを走査し、解釈するために構築するコードのごく一部です。 式ツリーを別の言語に変換する汎用的なライブラリを構築するために必要なすべての作業の説明については、Matt Warren の[このシリーズ](https://docs.microsoft.com/archive/blogs/mattwar/linq-building-an-iqueryable-provider-series)を参照してください。 式ツリーに含まれる任意のコードを変換する方法について、詳しく説明されています。
 
 式ツリーの真の力がおわかりいただけたでしょうか。
 コードのセットを確認し、そのコードに必要な変更を加え、変更されたバージョンを実行することができます。 式ツリーは不変なので、既存のツリーのコンポーネントを使用して新しいツリーを作成できます。 その結果、変更した式ツリーの作成に必要なメモリ量が最小限に抑えられます。

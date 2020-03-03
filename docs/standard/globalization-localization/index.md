@@ -3,20 +3,24 @@ title: .NET アプリケーションのグローバライズとローカライ�
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - 'international applications [.NET]'
-  - 'globalization [.NET], encoding'
-  - global applications
-  - internationalization
-  - world-ready applications
-  - 'application development [.NET], globalization'
-  - multilingual application development
+- international applications [.NET]
+- globalization [.NET], encoding
+- global applications
+- internationalization
+- world-ready applications
+- application development [.NET], globalization
+- multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-author: rpetrusha
-ms.author: ronpet
+ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120882"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET アプリケーションのグローバライズとローカライズ
 
-1 つ以上の言語にローカライズされるアプリケーションなど、[国際対応アプリケーション](https://msdn.microsoft.com/goglobal/bb978433.aspx)を開発するには、グローバリゼーション、ローカライズ対象の確認、およびローカリゼーションの 3 つの手順が必要です。
+1 つ以上の言語にローカライズされるアプリケーションなど、国際対応アプリケーションを開発するには、グローバリゼーション、ローカライズ対象の確認、およびローカリゼーションの 3 つの手順が必要です。
 
 [グローバリゼーション](globalization.md)
 
@@ -32,9 +36,9 @@ ms.author: ronpet
 
 この 3 つの手順に従うことにより、次の 2 つの利点があります。
 
--   米国英語などのような 1 つのカルチャだけをサポートするアプリケーションを、他のカルチャもサポートするように変更する作業を行う必要がなくなります。
+- 米国英語などのような 1 つのカルチャだけをサポートするアプリケーションを、他のカルチャもサポートするように変更する作業を行う必要がなくなります。
 
--   ローカライズされたアプリケーションが、より安定してバグがより少ないものになります。
+- ローカライズされたアプリケーションが、より安定してバグがより少ないものになります。
 
 .NET には、国際対応アプリケーションやローカライズされたアプリケーションの開発の拡張サポートが備わっています。 特に、.NET クラス ライブラリの多くの型メンバーは、現在のユーザーのカルチャまたは特定のカルチャの規則を表す値を返すことができ、グローバリゼーションに役立ちます。 また、.NET はサテライト アセンブリをサポートし、アプリケーションのローカライズ プロセスを容易にします。
 
@@ -62,7 +66,7 @@ ms.author: ronpet
 
 国際対応 ASP.NET アプリケーションのグローバリゼーション、ローカリゼーション、および開発の推奨手順について説明します。
 
-## <a name="reference"></a>参照
+## <a name="reference"></a>辞書／辞典／その他
 
 - <xref:System.Globalization?displayProperty=nameWithType> 名前空間
 

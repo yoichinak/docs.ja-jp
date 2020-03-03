@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3afe7252-5f28-48d9-a74d-1927566c404c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5b35abe6a11b96a88bdd610a4018469bf747fe90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d974b7368dd01062d2d310d076dce05e102eb81
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550709"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74442284"
 ---
 # <a name="imetadatadispenserexfindassembly-method"></a>IMetaDataDispenserEx::FindAssembly メソッド
-このメソッドは実装されていません。 呼び出された場合、E_NOTIMPL を返します。  
+このメソッドは実装されていません。 呼び出された場合は E_NOTIMPL を返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT FindAssembly(  
     [in]  LPCWSTR  szAppBase,  
     [in]  LPCWSTR  szPrivateBin,  
@@ -41,37 +39,38 @@ HRESULT FindAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szAppBase`  
- [in]使用されません。  
+ から使用しません。  
   
  `szPrivateBin`  
- [in]使用されません。  
+ から使用しません。  
   
  `szGlobalBin`  
- [in]使用されません。  
+ から使用しません。  
   
  `szAssemblyName`  
- [in]検索するアセンブリ。  
+ から検索するアセンブリ。  
   
  `szName`  
- [out]アセンブリの簡易名。  
+ 入出力アセンブリの簡易名。  
   
  `cchName`  
- [in]サイズ (バイト単位) の`szName`します。  
+ から`szName`のサイズ (バイト単位)。  
   
  `pcName`  
- [out]実際に返される文字数`szName`します。  
+ 入出力`szName`に実際に返された文字数。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

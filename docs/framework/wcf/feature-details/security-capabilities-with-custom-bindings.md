@@ -2,12 +2,12 @@
 title: カスタム バインドを使用したセキュリティ機能
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
-ms.openlocfilehash: 51359dd555db44891b4c8fe7bca9b62cab5f8d29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25d203fa706eeb0d0ccf1eaf4367ffa5bd7b83aa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990926"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>カスタム バインドを使用したセキュリティ機能
 一般的なセキュリティ タスクのほとんどは、システム指定のバインディングのいずれかを使用して実行できます。 ただし、より高度な制御が必要な場合は、以下のトピックで説明するように、<xref:System.ServiceModel.Channels.SecurityBindingElement> を使用してカスタム バインドを作成できます。 カスタム バインドの詳細については、次を参照してください。[カスタム バインド](../../../../docs/framework/wcf/extending/custom-bindings.md)します。  
@@ -51,6 +51,7 @@ ms.locfileid: "54708520"
  [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [バインディングとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)

@@ -14,24 +14,22 @@ helpviewer_keywords:
 ms.assetid: 03abde84-930a-49d3-bac3-23abb34a0184
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5ed868febb5eb82cf73cfc5b0633d86bf4e1315c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fd31e6b752e13a5c43198760e9a4d62a8f77d10
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561622"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448563"
 ---
 # <a name="corsymsearchpolicyattributes-enumeration"></a>CorSymSearchPolicyAttributes 列挙体
-シンボル リーダーの検索を行うときに使用されるポリシーを指定します。 これらの定数を使って、 [isymunmanagedbinder 2::getreaderforfile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)と[isymunmanagedbinder 3::getreaderfromcallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)メソッド。  
+シンボルリーダーの検索を実行するときに使用するポリシーを指定します。 これらの定数は、 [ISymUnmanagedBinder2:: GetReaderForFile2](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)メソッドと[ISymUnmanagedBinder3:: GetReaderFromCallback](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-getreaderfromcallback-method.md)メソッドによって使用されます。  
   
 > [!IMPORTANT]
->  信頼できないソースからプログラム データベース (PDB) ファイルをセキュリティ リスクになります。  
+> 信頼されていないソースからプログラムデータベース (PDB) ファイルを開くと、セキュリティ上の危険があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorSymSearchPolicyAttributes  
 {  
     AllowRegistryAccess      = 0x1,       
@@ -45,13 +43,14 @@ typedef enum CorSymSearchPolicyAttributes
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`AllowRegistryAccess`|シンボルの検索パスのレジストリを照会します。|  
-|`AllowSymbolServerAccess`|シンボル サーバーにアクセスします。|  
-|`AllowOriginalPathAccess`|デバッグ ディレクトリで指定されたパスを検索します。|  
-|`AllowReferencePathAccess`|.Exe ファイルのある場所に PDB を検索します。|  
+|`AllowRegistryAccess`|シンボル検索パスのレジストリを照会します。|  
+|`AllowSymbolServerAccess`|シンボルサーバーにアクセスします。|  
+|`AllowOriginalPathAccess`|デバッグディレクトリに指定されているパスを検索します。|  
+|`AllowReferencePathAccess`|.Exe ファイルがある場所で PDB を検索します。|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
+
 - [シンボル ストア診断列挙型](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

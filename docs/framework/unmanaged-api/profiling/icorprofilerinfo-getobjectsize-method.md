@@ -15,54 +15,53 @@ helpviewer_keywords:
 ms.assetid: 9f02e763-73f7-42cb-a41c-f78499d9482c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e03a618144ca322d51337e84486a8f5051a3d2a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b860cf6eb07c3f063e3e51514f8492cf4af9e8ed
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568882"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76869673"
 ---
 # <a name="icorprofilerinfogetobjectsize-method"></a>ICorProfilerInfo::GetObjectSize メソッド
 指定したオブジェクトのサイズを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetObjectSize(  
     [in]  ObjectID objectId,  
     [out] ULONG  *pcSize);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `objectId`  
- [in]オブジェクトの ID。  
+ からオブジェクトの ID です。  
   
  `pcSize`  
- [out]オブジェクトのサイズ (バイト) へのポインター。  
+ 入出力オブジェクトのサイズへのポインター (バイト単位)。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!IMPORTANT]
->  このメソッドは、互換性のために残されています。 返されます COR_E_OVERFLOW オブジェクト 4 GB より大きい 64 ビット プラットフォームで。 使用して、 [icorprofilerinfo 4::getobjectsize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)メソッド代わりにします。  
+> このメソッドは、互換性のために残されています。 64ビットプラットフォームで 4 GB を超えるオブジェクトの COR_E_OVERFLOW を返します。 代わりに[ICorProfilerInfo4:: GetObjectSize2](icorprofilerinfo4-getobjectsize2-method.md)メソッドを使用してください。  
   
- 多くの場合、同じ種類の異なるオブジェクトと同じサイズである場合します。 ただし、配列や文字列など、一部の種類には、オブジェクトごとに別のサイズがあります。  
+ 多くの場合、同じ種類の異なるオブジェクトのサイズは同じです。 ただし、配列や文字列など、一部の型では、オブジェクトごとにサイズが異なる場合があります。  
   
- によって返されるサイズ、`GetObjectSize`メソッドにオブジェクトがガベージ コレクション ヒープに後に表示される配置の埋め込みは含まれません。 使用する場合、`GetObjectSize`オブジェクトからオブジェクトをガベージ コレクション ヒープで切り替わるようにメソッドが配置を手動で、必要に応じてパディングを追加します。  
+ `GetObjectSize` メソッドによって返されるサイズには、オブジェクトがガベージコレクションヒープに配置された後に表示されるアラインメントの埋め込みは含まれません。 `GetObjectSize` メソッドを使用してオブジェクトからガベージコレクションヒープ上のオブジェクトに進む場合は、必要に応じて、手動でアラインメントのパディングを追加します。  
   
--   32 ビットの Windows では、COR_PRF_GC_GEN_0、COR_PRF_GC_GEN_1、および COR_PRF_GC_GEN_2 4 バイトのアラインメントを使用して、COR_PRF_GC_LARGE_OBJECT_HEAP が 8 バイト アラインメントを使用します。  
+- 32ビットの Windows では、COR_PRF_GC_GEN_0、COR_PRF_GC_GEN_1、および COR_PRF_GC_GEN_2 は4バイトの配置を使用し、COR_PRF_GC_LARGE_OBJECT_HEAP は8バイトの配置を使用します。  
   
--   64 ビットの Windows では、配置と、8 バイトでは常にします。  
+- 64ビットの Windows では、アラインメントは常に8バイトです。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

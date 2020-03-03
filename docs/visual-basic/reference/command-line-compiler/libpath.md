@@ -6,57 +6,58 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 6285deb97b05659283071b8940fe8730890b98e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609864"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716636"
 ---
 # <a name="-libpath"></a>-libpath
-参照先アセンブリの場所を指定します。  
+参照アセンブリの場所を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -libpath:dirList  
 ```  
   
 ## <a name="arguments"></a>引数  
   
-|用語|定義|  
+|用語|Definition|  
 |---|---|  
-|`dirList`|必須。 場合に参照アセンブリを検索するコンパイラ用のディレクトリのセミコロン区切りのリストに含まれていないか、現在の作業ディレクトリ (コンパイラの起動元のディレクトリ) または共通言語ランタイムのシステム ディレクトリ。 ディレクトリ名にスペースが含まれている場合は、名前を引用符で囲みます ("")。|  
+|`dirList`|必ず指定します。 現在の作業ディレクトリ (コンパイラの呼び出し元のディレクトリ) または共通言語ランタイムのシステムディレクトリのいずれかで参照されているアセンブリが見つからない場合に、コンパイラが検索するディレクトリのセミコロン区切りのリスト。 ディレクトリ名にスペースが含まれている場合は、名前を引用符 ("") で囲みます。|  
   
 ## <a name="remarks"></a>Remarks  
- `-libpath`オプションによって参照されるアセンブリの場所を指定する、 [-参照](../../../visual-basic/reference/command-line-compiler/reference.md)オプション。  
+ `-libpath` オプションは、 [-reference](../../../visual-basic/reference/command-line-compiler/reference.md)オプションによって参照されるアセンブリの場所を指定します。  
   
  コンパイラは、完全に修飾されていないアセンブリ参照を次の順序で検索します。  
   
-1.  現在の作業ディレクトリ。 これは、コンパイラを起動したディレクトリです。  
+1. 現在の作業ディレクトリ。 これは、コンパイラを起動したディレクトリです。  
   
-2.  共通言語ランタイムのシステム ディレクトリ。  
+2. 共通言語ランタイムのシステム ディレクトリ。  
   
-3.  によって指定されたディレクトリ`/libpath`します。  
+3. `-libpath`によって指定されたディレクトリ。  
   
-4.  LIB 環境変数によって指定されているディレクトリ。  
+4. LIB 環境変数によって指定されているディレクトリ。  
   
- `-libpath`オプションが指定するには複数を指定すると、前の値に 1 回追加します。  
+ `-libpath` オプションは加法です。これを複数回指定すると、前の値が追加されます。  
   
- 使用`-reference`アセンブリ参照を指定します。  
+ アセンブリ参照を指定するには、`-reference` を使用します。  
   
-|Visual Studio で/libpath を設定するのには、統合開発環境|  
+|Visual Studio 統合開発環境で libpath を設定するには|  
 |---|  
-|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2.**[参照]** タブをクリックします。<br />3.をクリックして、**パスを参照しています.** ボタンをクリックします。<br />4.**参照パス** ダイアログ ボックスで、ディレクトリ名を入力、**フォルダー:** ボックス。<br />5.クリックして**フォルダーの追加**します。|  
+|1.**ソリューションエクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[参照]** タブをクリックします。<br />3. **[参照パス...]** ボタンをクリックします。<br />4. **[参照パス]** ダイアログボックスの **[フォルダー:]** ボックスにディレクトリ名を入力します。<br />5. **[フォルダーの追加]** をクリックします。|  
   
-## <a name="example"></a>例  
- 次のコードのコンパイル`T2.vb`.exe ファイルを作成します。 コンパイラは、アセンブリ参照の作業ディレクトリ、c: ドライブのルート ディレクトリおよび c: ドライブの新しいアセンブリのディレクトリを検索します。  
+## <a name="example"></a>使用例  
+ 次のコードでは、`T2.vb` をコンパイルして .exe ファイルを作成します。 コンパイラは、作業ディレクトリ、C: ドライブのルートディレクトリ、およびアセンブリ参照の C: ドライブの新しい Assemblies ディレクトリ内を検索します。  
   
 ```console  
 vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb  
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [アセンブリとグローバル アセンブリ キャッシュ](../../../visual-basic/programming-guide/concepts/assemblies-gac/index.md)
+
+- [.NET のアセンブリ](../../../standard/assembly/index.md)
 - [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 - [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

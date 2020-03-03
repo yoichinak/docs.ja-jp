@@ -8,17 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF]
 ms.assetid: fdb390e9-1bba-4b5f-87fe-c3bc246fa7e9
-ms.openlocfilehash: 41b1315f03c55c290959e8871df2630802882a75
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b3e1c942308aa90887b6370ed402a1a87364415
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052197"
 ---
 # <a name="canvas"></a>Canvas
-<xref:System.Windows.Controls.Canvas> 子要素の絶対配置できるようにするレイアウト コントロールです。  
+<xref:System.Windows.Controls.Canvas> レイアウト コントロールの子要素の絶対位置を設定できますです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法トピック](../../../../docs/framework/wpf/controls/canvas-how-to-topics.md)  
+ [方法トピック](canvas-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -36,8 +37,8 @@ ms.lasthandoff: 05/04/2018
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

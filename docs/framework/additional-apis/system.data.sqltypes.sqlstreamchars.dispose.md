@@ -1,10 +1,9 @@
 ---
-title: SqlStreamChars.Dispose(Boolean) メソッド (System.Data.SqlTypes)
+title: SqlStreamChars. Dispose (Boolean) メソッド (SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/20/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -13,16 +12,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 4e6cfd6d4c04b1a2835b6e34b82c95b564dea588
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 44dc97835b8a7141064e8de4d2d5325c40be5a34
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826864"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395767"
 ---
-# <a name="sqlstreamcharsdisposeboolean-method"></a>SqlStreamChars.Dispose(Boolean) メソッド
+# <a name="sqlstreamcharsdisposeboolean-method"></a>SqlStreamChars. Dispose (Boolean) メソッド
 
-派生クラスでオーバーライドされると、ストリームで使用されるリソースを解放します。 このメソッドを含むアセンブリには、SQLAccess.dll で友人関係があります。 SQL Server で使用するものでは。 その他のデータベースには、そのデータベースによって提供されるホスティング メカニズムを使用します。
+派生クラスでオーバーライドされると、ストリームによって使用されるリソースを解放します。 このメソッドを含むアセンブリには、SQLAccess .dll とのフレンド関係があります。 SQL Server での使用を目的としています。 他のデータベースの場合は、そのデータベースによって提供されるホスティングメカニズムを使用します。
 
 ```csharp
 protected virtual void Dispose (bool disposing);
@@ -31,19 +30,19 @@ protected virtual void Dispose (bool disposing);
 ## <a name="parameters"></a>パラメーター
 
 `disposing`\
-マネージ リソースとアンマネージ リソースの両方を解放する場合は `true`。アンマネージ リソースだけを解放する場合は `false`。
+マネージド リソースとアンマネージド リソースの両方を解放する場合は `true`。アンマネージド リソースだけを解放する場合は `false`。
 
 ## <a name="remarks"></a>Remarks
 
 > [!WARNING]
-> `SqlStreamChars.Dispose`メソッドはプライベートであり、コード内で直接使用するものではありません。
+> @No__t-0 メソッドはプライベートであり、コード内で直接使用するためのものではありません。
 >
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでこの方法を使用することはサポートしていません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>［要件］
 
 **名前空間:** <xref:System.Data.SqlTypes>
 
-**アセンブリ:** System.Data (system.data.dll 内)
+**アセンブリ:** System.string (System. Data. .dll)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

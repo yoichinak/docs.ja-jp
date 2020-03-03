@@ -1,5 +1,5 @@
 ---
-title: '方法: デザイナー (Windows フォーム) を使用してピクチャを読み込む.'
+title: '方法 : デザイナーを使用してピクチャを読み込む'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - picture formats
@@ -8,44 +8,43 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 6142474c2009e0998852dc28d346e73f4abbf1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12b90d561a18fcffaafb9c45b7fa6be6dd060215
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539091"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76736330"
 ---
-# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>方法: デザイナー (Windows フォーム) を使用してピクチャを読み込む.
-Windows フォームで<xref:System.Windows.Forms.PictureBox>コントロール、読み込みし、設定して、デザイン時にフォームに画像を表示できます、<xref:System.Windows.Forms.PictureBox.Image%2A>に有効な画像のプロパティ。 次の表では、許容されるファイルの種類を示します。  
-  
-|型|ファイル名の拡張子|  
-|----------|-------------------------|  
-|ビットマップ|.bmp|  
-|アイコン|.ico|  
-|GIF|.gif|  
-|メタファイル|.wmf|  
-|JPEG|.jpg|  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-display-a-picture-at-design-time"></a>デザイン時に画像を表示するには  
-  
-1.  描画を<xref:System.Windows.Forms.PictureBox>フォーム上のコントロール。  
-  
-2.  プロパティ ウィンドウで、選択、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティ、省略記号を表示するボタンをクリックし、**オープン** ダイアログ ボックス。  
-  
-3.  特定のファイルの種類 (たとえば、.gif ファイル) を探している場合にそれを選択します。、**ファイルの種類**ボックス。  
-  
-4.  表示するファイルを選択します。  
-  
-### <a name="to-clear-the-picture-at-design-time"></a>デザイン時に、画像を消去するには  
-  
-1.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティと、イメージ オブジェクトの名前の左側に表示される小さなのサムネイル画像を右クリックします。 選択**リセット**します。  
-  
-## <a name="see-also"></a>関連項目
+# <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>方法 : デザイナーを使用してピクチャを読み込む (Windows フォーム)
+
+Windows フォーム <xref:System.Windows.Forms.PictureBox> コントロールを使用すると、<xref:System.Windows.Forms.PictureBox.Image%2A> プロパティを有効な画像に設定することによって、デザイン時にフォームの画像を読み込んで表示することができます。 次の表に、許容されるファイルの種類を示します。
+
+|種類|ファイル名拡張子|
+|---|---|
+|Bitmap|.bmp|
+|アイコン|.ico|
+|GIF|.gif|
+|Metafile|.wmf|
+|JPEG|.jpg|
+
+## <a name="to-display-a-picture-at-design-time"></a>デザイン時に画像を表示するには
+
+1. フォームに <xref:System.Windows.Forms.PictureBox> コントロールを描画します。
+
+2. **[プロパティ]** ウィンドウで、[<xref:System.Windows.Forms.PictureBox.Image%2A>] プロパティを選択し、省略記号ボタンを選択して **[開く]** ダイアログボックスを表示します。
+
+3. 特定のファイルの種類 (.gif ファイルなど) を探している場合は、 **[ファイルの種類]** ボックスでそれを選択します。
+
+4. 表示するファイルを選択します。
+
+## <a name="to-clear-the-picture-at-design-time"></a>デザイン時に画像をクリアするには
+
+1. **[プロパティ]** ウィンドウで、[<xref:System.Windows.Forms.PictureBox.Image%2A>] プロパティを選択します。 イメージオブジェクトの名前の左側に表示される小さいサムネイル画像を右クリックし、 **[リセット]** を選択します。
+
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.PictureBox>
-- [PictureBox コントロールの概要](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [方法: 実行時にサイズまたは画像の配置を変更します。](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [方法: 実行時にピクチャを設定します。](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
-- [PictureBox コントロール](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [PictureBox コントロールの概要](picturebox-control-overview-windows-forms.md)
+- [方法: 実行時にピクチャのサイズまたは配置を変更する](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [方法: 実行時にピクチャを設定する](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox コントロール](picturebox-control-windows-forms.md)

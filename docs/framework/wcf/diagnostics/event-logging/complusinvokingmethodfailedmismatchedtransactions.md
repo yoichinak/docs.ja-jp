@@ -2,23 +2,24 @@
 title: ComPlusInvokingMethodFailedMismatchedTransactions
 ms.date: 03/30/2017
 ms.assetid: d13f1978-ff42-443a-939f-75c8c8d50286
-ms.openlocfilehash: 87692b06403d8630217a1bf92160fe286be2187a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31f7e577d34337435fa56d57dba46b979b63a2f8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615300"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798020"
 ---
 # <a name="complusinvokingmethodfailedmismatchedtransactions"></a>ComPlusInvokingMethodFailedMismatchedTransactions
 Id:135  
   
- 重大度:Error  
+ 順Error  
   
- カテゴリ:ServiceModel  
+ [カテゴリ]:ServiceModel  
   
 ## <a name="description"></a>説明  
- ComPlus:メソッド呼び出しのトランザクションが一致しません。  
+ ComPlusメソッド呼び出しのトランザクションが一致しません。  
   
 ## <a name="see-also"></a>関連項目
-- [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+
+- [イベント ログ](index.md)
+- [イベント一覧](events-general-reference.md)

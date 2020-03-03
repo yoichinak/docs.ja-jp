@@ -1,21 +1,21 @@
 ---
-title: '方法: ファイルから XML を読み込む (C#)'
+title: ファイルから XML を読み込む方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3ed38487-8028-4209-9872-c8dce0ed4dfe
-ms.openlocfilehash: f97e99a3d5fb2dd5628e1dc00909b6608255a967
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57d7a8375d04d1d7eda6d09aef81f42dd3e4b51
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688133"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345840"
 ---
-# <a name="how-to-load-xml-from-a-file-c"></a>方法: ファイルから XML を読み込む (C#)
+# <a name="how-to-load-xml-from-a-file-c"></a>ファイルから XML を読み込む方法 (C#)
 このトピックでは、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> メソッドを使用して URI から XML を読み込む方法について説明します。  
   
 ## <a name="example"></a>例  
  次の例では、ファイルから XML ドキュメントを読み込む方法を示します。 この例では、books.xml を読み込んで、XML ツリーをコンソールに出力します。  
   
- この例では、XML ドキュメント、[サンプル XML ファイル: 書籍 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md) を使用します。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:書籍 (LINQ to XML)](./sample-xml-file-books-linq-to-xml.md) を使用します。  
   
 ```csharp  
 XElement booksFromFile = XElement.Load(@"books.xml");  
@@ -48,6 +48,3 @@ Console.WriteLine(booksFromFile);
 </Catalog>  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [XML の解析 (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

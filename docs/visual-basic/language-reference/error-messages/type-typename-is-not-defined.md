@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 80a3d31a8a46ce616be2dd2ab27faf0af04876f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 1f66b86a61fb0344a449bf0aa46b7655813c7c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275077"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664254"
 ---
 # <a name="type-typename-is-not-defined"></a>型 '\<typename >' が定義されていません
 ステートメントは定義されていない型への参照をされています。 などの宣言ステートメントで型を定義できる`Enum`、 `Structure`、 `Class`、または`Interface`します。  
@@ -21,17 +21,18 @@ ms.locfileid: "55275077"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   型の定義とその参照の両方で同じスペル チェックを使用していることを確認します。  
+- 型の定義とその参照の両方で同じスペル チェックを使用していることを確認します。  
   
--   型定義が参照にアクセスできることを確認します。 たとえば、種類別のモジュールし、は宣言されています`Private`、型定義を参照しているモジュールに移動または宣言`Public`します。  
+- 型定義が参照にアクセスできることを確認します。 たとえば、種類別のモジュールし、は宣言されています`Private`、型定義を参照しているモジュールに移動または宣言`Public`します。  
   
--   型の名前空間がプロジェクト内で再定義されていないことを確認します。 場合を使用して、`Global`完全型名を修飾するキーワード。 たとえば、プロジェクトに名前空間が定義されている場合`System`、<xref:System.Object?displayProperty=nameWithType>で完全修飾である場合を除き、型にアクセスできません、`Global`キーワード:`Global.System.Object`します。  
+- 型の名前空間がプロジェクト内で再定義されていないことを確認します。 場合を使用して、`Global`完全型名を修飾するキーワード。 たとえば、プロジェクトに名前空間が定義されている場合`System`、<xref:System.Object?displayProperty=nameWithType>で完全修飾である場合を除き、型にアクセスできません、`Global`キーワード:`Global.System.Object`します。  
   
--   型が定義されている場合、オブジェクト ライブラリまたはタイプ ライブラリが定義されているが、Visual Basic、クリックに登録されていない場合**参照の追加**上、**プロジェクト**メニューのおよび適切なオブジェクトを選択ライブラリまたはタイプ ライブラリ。  
+- 型が定義されている場合、オブジェクト ライブラリまたはタイプ ライブラリが定義されているが、Visual Basic、クリックに登録されていない場合**参照の追加**上、**プロジェクト**メニューのおよび適切なオブジェクトを選択ライブラリまたはタイプ ライブラリ。  
   
--   型が対象となる .NET Framework プロファイルの一部であるアセンブリであることを確認します。 詳細については、「[.NET Framework を対象とするエラーのトラブルシューティング](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)」を参照してください。  
+- 型が対象となる .NET Framework プロファイルの一部であるアセンブリであることを確認します。 詳細については、「[.NET Framework を対象とするエラーのトラブルシューティング](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)

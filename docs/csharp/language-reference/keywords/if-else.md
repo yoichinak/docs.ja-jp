@@ -1,6 +1,5 @@
 ---
 title: if-else - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - if_CSharpKeyword
@@ -11,12 +10,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: a205ee04d1b0b68666ca50109001e71288d7f434
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98c1a8dceec3e5a47627841988e2d722c56fc36c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517839"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715260"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# リファレンス)
 
@@ -82,7 +81,7 @@ if (condition)
 
 [!code-csharp[csrefKeywordsSelection#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsSelection/CS/csrefKeywordsSelection.cs#6)]
 
-else ブロックまたは then ブロック内のステートメントを任意の有効なステートメントにできるように、条件には任意の有効なブール式を使用できます。 [&&](../operators/conditional-and-operator.md)、[&](../operators/and-operator.md)、[&#124;&#124;](../operators/conditional-or-operator.md)、[&#124;](../operators/or-operator.md)、[!](../operators/logical-negation-operator.md) などの論理演算子を使用して複合条件を作成できます。 次のコードに例を示します。
+else ブロックまたは then ブロック内のステートメントを任意の有効なステートメントにできるように、条件には任意の有効なブール式を使用できます。 `!`、`&&`、`||`、`&`、`|`、`^` などの[論理演算子](../operators/boolean-logical-operators.md)を使用して複合条件を作成できます。 次のコードに例を示します。
 
 ```csharp
 // NOT

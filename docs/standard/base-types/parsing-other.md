@@ -13,14 +13,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603626"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127569"
 ---
 # <a name="parsing-other-strings-in-net"></a>.NET でのその他の文字列の解析
 数値および <xref:System.DateTime> 文字列だけでなく、<xref:System.Char>、<xref:System.Boolean>、<xref:System.Enum> 型を表す文字列をデータ型に解析することもできます。  

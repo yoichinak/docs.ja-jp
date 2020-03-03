@@ -5,21 +5,19 @@ helpviewer_keywords:
 - forcePerformanceCounterUniqueSharedMemoryReads element
 - <forcePerformanceCounterUniqueSharedMemoryReads> element
 ms.assetid: 91149858-4810-4f65-9b48-468488172c9b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ba70e7cc94f90fa4fd44a12ffb6ffb2dba1ccc7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: efa6dce1035f7d2cf63b74c6a03d911b5dede722
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275900"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116954"
 ---
 # <a name="forceperformancecounteruniquesharedmemoryreads-element"></a>\<forcePerformanceCounterUniqueSharedMemoryReads > 要素
 PerfCounter.dll が、.NET Framework バージョン 1.1 のアプリケーションの CategoryOptions レジストリ設定を使用してするかどうかを指定して、カテゴリ別の共有メモリとグローバル メモリのどちらからパフォーマンス カウンター データを読み込むかを決定します。  
   
- \<configuration>  
-\<runtime>  
-\<forcePerformanceCounterUniqueSharedMemoryReads>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<forcePerformanceCounterUniqueSharedMemoryReads >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,14 +33,14 @@ enabled="true|false"/>
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> どちらがカテゴリ別の共有メモリとグローバル メモリからパフォーマンス カウンター データを読み込むかどうかを判断する CategoryOptions レジストリ設定を使用するかどうかを示します。|  
+|`enabled`|必須の属性です。<br /><br /> PerfCounter .dll が category Options レジストリ設定を使用して、カテゴリ固有の共有メモリまたはグローバルメモリからパフォーマンスカウンターデータを読み込むかどうかを決定するかどうかを示します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|`false`|どちらを使用しません、CategoryOptions レジストリ設定ではこれが既定値。|  
-|`true`|どちらでは、CategoryOptions レジストリ設定を使用します。|  
+|`false`|PerfCounter .dll は、カテゴリオプションのレジストリ設定を使用しません。これが既定値です。|  
+|`true`|PerfCounter .dll は、カテゴリオプションのレジストリ設定を使用します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -55,21 +53,21 @@ enabled="true|false"/>
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 前に .NET Framework のバージョンでは、 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、読み込まれているどちらのバージョンは、プロセスに読み込まれたランタイムに対応します。 かどうか、コンピューターが両方の .NET Framework version 1.1 と[!INCLUDE[dnprdnlong](../../../../../includes/dnprdnlong-md.md)]、インストールされている .NET Framework 1.1 アプリケーションはどちらの .NET Framework 1.1 バージョンを読み込まれます。 以降では、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]どちらのインストールされている最新のバージョンが読み込まれます。 つまり、.NET Framework 1.1 アプリケーションが読み込むこと、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]バージョンどちらの場合、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]がコンピューターにインストールされています。  
+ .NET Framework 4 より前の .NET Framework のバージョンでは、これに読み込まれたバージョンの PerfCounter が、プロセスに読み込まれたランタイムに読み込まれていました。 コンピューターに .NET Framework バージョン1.1 と .NET Framework 2.0 の両方がインストールされている場合、.NET Framework 1.1 アプリケーションは .NET Framework 1.1 バージョンの PerfCounter を読み込みます。 .NET Framework 4 以降では、インストールされている最新バージョンの PerfCounter が読み込まれます。 これは、.NET Framework 4 がコンピューターにインストールされている場合、.NET Framework 1.1 アプリケーションが .NET Framework 4 バージョンの PerfCounter を読み込むことを意味します。  
   
- 以降では、 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]、パフォーマンス カウンターを使用するときにどちらがカテゴリ別の共有メモリまたはグローバル共有メモリから読み取る必要があります、かどうかを確認するには、各プロバイダーの CategoryOptions レジストリ エントリを確認します。 カテゴリに固有の共有メモリの対応でないため、.NET Framework 1.1 のどちらがレジストリのエントリを読み取れませんグローバル共有メモリから常に読み込みます。  
+ .NET Framework 4 以降では、パフォーマンスカウンターを使用するときに、PerfCounter によって各プロバイダーのカテゴリオプションのレジストリエントリがチェックされ、カテゴリ固有の共有メモリとグローバル共有メモリのどちらから読み取る必要があるかが判断されます。 .NET Framework 1.1 PerfCounter は、カテゴリ固有の共有メモリを認識しないため、そのレジストリエントリを読み取りません。常に、グローバルな共有メモリから読み取ります。  
   
- 旧バージョンとの互換性のため、 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] .NET Framework 1.1 アプリケーションの実行時にどちらが CategoryOptions レジストリ エントリを確認できません。 単に、.NET Framework 1.1 のどちらの場合と同様のグローバル共有メモリを使用します。 ただし、指示すること、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]どちらを有効にすると、レジストリ設定を確認する、`<forcePerformanceCounterUniqueSharedMemoryReads>`要素。  
+ 旧バージョンとの互換性のために、.NET Framework 4 PerfCounter .dll は、.NET Framework 1.1 アプリケーションで実行されているときに、カテゴリオプションのレジストリエントリをチェックしません。 .NET Framework 1.1 と同様に、グローバルな共有メモリを使用します。 ただし、`<forcePerformanceCounterUniqueSharedMemoryReads>` 要素を有効にすることで、レジストリ設定をチェックするように .NET Framework 4 PerfCounter .dll に指示できます。  
   
 > [!NOTE]
->  有効にすると、`<forcePerformanceCounterUniqueSharedMemoryReads>`要素がカテゴリ別の共有メモリが使用されることを保証していません。 設定を有効になっている`true`CategoryOptions レジストリ設定を参照するどちらでのみ発生します。 CategoryOptions の既定の設定は、カテゴリ固有の共有メモリを使用することです。ただし、グローバル共有メモリを使用することを示す CategoryOptions を変更できます。  
+> `<forcePerformanceCounterUniqueSharedMemoryReads>` 要素を有効にしても、カテゴリ固有の共有メモリが使用されることは保証されません。 を `true` に設定すると、PerfCounter .dll がカテゴリオプションのレジストリ設定を参照することになります。 カテゴリのオプションの既定の設定では、カテゴリ固有の共有メモリを使用します。ただし、カテゴリのオプションを変更して、グローバルな共有メモリを使用する必要があることを示すことができます。  
   
- CategoryOptions 設定を格納するレジストリ キーは hkey_local_machine \system\currentcontrolset\services\\< categoryName\>\Performance します。 既定では、CategoryOptions は設定を 3 にどちら カテゴリ固有の共有メモリを使用します。 CategoryOptions が 0 に設定されている場合、どちらはグローバル共有メモリを使用します。 作成中のインスタンスの名前は再利用されるインスタンスと同じ場合にのみ、インスタンス データを再利用されます。 すべてのバージョンは、カテゴリに書き込みを可能になります。 CategoryOptions が 1 に設定されている場合は、グローバル共有メモリが使用されますが、カテゴリ名が再利用されるカテゴリと同じ長さである場合は、インスタンス データを再利用されることができます。  
+ カテゴリオプションの設定を含むレジストリキーは、HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\\< の区分名\>-パフォーマンスです。 既定では、カテゴリのオプションは3に設定されています。これにより、PerfCounter は、カテゴリ固有の共有メモリを使用するように指示します。 [カテゴリ] オプションが0に設定されている場合、PerfCounter .dll はグローバル共有メモリを使用します。 インスタンスデータが再利用されるのは、作成されるインスタンスの名前が再利用されるインスタンスと同一である場合だけです。 すべてのバージョンがカテゴリに書き込むことができます。 Category オプションが1に設定されている場合、グローバル共有メモリが使用されますが、カテゴリ名が再利用されるカテゴリと同じ長さの場合は、インスタンスデータを再利用できます。  
   
- 0 と 1 の設定は、メモリ リークおよびパフォーマンス カウンターのメモリの不足につながります。  
+ 設定0および1を使用すると、メモリリークが発生し、パフォーマンスカウンターのメモリがいっぱいになる可能性があります。  
   
 ## <a name="example"></a>例  
- 次の例では、どちらがカテゴリ別の共有メモリを使用するかどうかを判断する CategoryOptions レジストリ エントリを参照する必要がありますを指定する方法を示します。  
+ 次の例では、PerfCounter .dll が category Options レジストリエントリを参照して、カテゴリ固有の共有メモリを使用するかどうかを判断するように指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -80,5 +78,6 @@ enabled="true|false"/>
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)

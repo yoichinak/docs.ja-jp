@@ -11,20 +11,20 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: fdaa34ace1f5322c9296d2520d275fdf3f176048
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f349981125097af4a3ca8a1950b820a0334bd11
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515733"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621480"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel コントロールにおける AutoSize 動作
 ## <a name="distinct-autosize-behaviors"></a>個別の AutoSize 動作  
  <xref:System.Windows.Forms.TableLayoutPanel>コントロールは、次の方法での自動サイズ変更動作をサポートしています。  
   
--   を通じて、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティです。  
+- を通じて、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティです。  
   
--   を通じて、<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.TableLayoutPanel>コントロールの列と行のスタイル。  
+- を通じて、<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.TableLayoutPanel>コントロールの列と行のスタイル。  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>行および列のスタイルと AutoSize プロパティ  
  次の表に、間の相互作用、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティおよび<xref:System.Windows.Forms.TableLayoutPanel>コントロールの列と行のスタイル。  
@@ -35,5 +35,6 @@ ms.locfileid: "54515733"
 |`true`|例外と、前の対話のようなを<xref:System.Windows.Forms.SizeType.Percent>列または行の自動サイズ変更アスペクトを取得します。<br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>コントロールは、十分な空き領域を作成する行または列を拡張できるようにない列または行を<xref:System.Windows.Forms.SizeType.Percent>スタイルは、その内容をクリップします。 <xref:System.Windows.Forms.TableLayoutPanel>コントロールが比例的による新しい領域を割り当て、<xref:System.Windows.Forms.ColumnStyle.Width%2A>または<xref:System.Windows.Forms.RowStyle.Height%2A>プロパティ。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [TableLayoutPanel コントロールの概要](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-overview.md)
+- [TableLayoutPanel コントロールの概要](tablelayoutpanel-control-overview.md)

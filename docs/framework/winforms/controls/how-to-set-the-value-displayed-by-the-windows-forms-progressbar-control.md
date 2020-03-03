@@ -1,5 +1,5 @@
 ---
-title: '方法: Windows フォーム ProgressBar コントロールによって表示される値を設定します。'
+title: ProgressBar コントロールによって表示される値を設定する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,37 +8,37 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], setting value displayed
 - progress controls [Windows Forms], setting value displayed
 ms.assetid: 0e5010ad-1e9a-4271-895e-5a3d24d37a26
-ms.openlocfilehash: d1be2bb2c909b8074f1092d4ce138feff5c9607f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79ce1e576652d00b323d31dfc6551e168ea0a9a0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496037"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76743805"
 ---
-# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>方法: Windows フォーム ProgressBar コントロールによって表示される値を設定します。
+# <a name="how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control"></a>方法 : Windows フォーム ProgressBar コントロールによって表示される値を設定する
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+> <xref:System.Windows.Forms.ToolStripProgressBar> コントロールは、<xref:System.Windows.Forms.ProgressBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ProgressBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]内で指定された値を表示するいくつかの方法を提供する、<xref:System.Windows.Forms.ProgressBar>コントロール。 どのアプローチを選択するは、手元のタスクまたは当面の問題によって異なります。 選択することができます、方法を次の表に示します。  
+ .NET Framework には、<xref:System.Windows.Forms.ProgressBar> コントロール内に特定の値を表示するためのさまざまな方法が用意されています。 どの方法を選択するかは、当面のタスクや、解決する問題によって異なります。 次の表に、選択できる方法を示します。  
   
-|方法|説明|  
+|アプローチ|[説明]|  
 |--------------|-----------------|  
-|値を設定、<xref:System.Windows.Forms.ProgressBar>直接制御します。|この方法は、データ ソースからレコードの読み取りなど、関連する測定する項目の合計がわかっている場合のタスクに役立ちます。 さらに、値を 1 ~ 2 回設定する必要がある場合、簡単にこれを行う方法になります。 最後に、進行状況バーに表示される値を小さく必要がある場合は、このプロセスを使用します。|  
-|増やす、<xref:System.Windows.Forms.ProgressBar>固定値を表示します。|この方法は、最小値と最大値、または既知の全体の中から処理されたファイルの数の経過時間などの単純なカウントを表示しているときに便利です。|  
-|増やす、<xref:System.Windows.Forms.ProgressBar>が変化する値を表示します。|このアプローチは、表示されている値をそれぞれ異なる量の回数を変更する必要がある場合に便利です。 たとえば、一連のファイルをディスクに書き込み中に使用しているハード_ディスク領域の量を表示する場合します。|  
+|<xref:System.Windows.Forms.ProgressBar> コントロールの値を直接設定します。|この方法は、データソースからのレコードの読み取りなど、関連する項目の合計がわかっているタスクに役立ちます。 また、値を1回または2回だけ設定する必要がある場合は、これを簡単に行うことができます。 最後に、進行状況バーに表示される値を小さくする必要がある場合に、このプロセスを使用します。|  
+|固定値によって表示 <xref:System.Windows.Forms.ProgressBar> を増やします。|この方法は、最小値と最大値の間に単純なカウント (経過時間、または既知の合計から処理されたファイルの数など) を表示する場合に便利です。|  
+|変化する値で表示 <xref:System.Windows.Forms.ProgressBar> を増やします。|この方法は、表示された値をさまざまな量の回数だけ変更する必要がある場合に便利です。 たとえば、一連のファイルをディスクに書き込んでいる間に消費されているハードディスク領域の量を示します。|  
   
- 進行状況バーに表示される値を設定する最も直接的な方法は、設定して、<xref:System.Windows.Forms.ProgressBar.Value%2A>プロパティ。 これは、デザイン時または実行時に行うことができます。  
+ プログレスバーに表示される値を設定する最も直接的な方法は、<xref:System.Windows.Forms.ProgressBar.Value%2A> プロパティを設定することです。 これは、デザイン時または実行時に行うことができます。  
   
-### <a name="to-set-the-progressbar-value-directly"></a>プログレス バーの値を直接設定するには  
+### <a name="to-set-the-progressbar-value-directly"></a>ProgressBar 値を直接設定するには  
   
-1.  設定、<xref:System.Windows.Forms.ProgressBar>コントロールの<xref:System.Windows.Forms.ProgressBar.Minimum%2A>と<xref:System.Windows.Forms.ProgressBar.Maximum%2A>値。  
+1. <xref:System.Windows.Forms.ProgressBar> コントロールの <xref:System.Windows.Forms.ProgressBar.Minimum%2A> と <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 値を設定します。  
   
-2.  コードでは、設定、コントロールの<xref:System.Windows.Forms.ProgressBar.Value%2A>プロパティを設定した最小値と最大値までの整数値。  
+2. コードで、コントロールの <xref:System.Windows.Forms.ProgressBar.Value%2A> プロパティを、確立した最小値と最大値の間の整数値に設定します。  
   
     > [!NOTE]
-    >  設定した場合、<xref:System.Windows.Forms.ProgressBar.Value%2A>プロパティを確立する境界の外側、<xref:System.Windows.Forms.ProgressBar.Minimum%2A>と<xref:System.Windows.Forms.ProgressBar.Maximum%2A>プロパティ、コントロールがスローされます、<xref:System.ArgumentException>例外。  
+    > <xref:System.Windows.Forms.ProgressBar.Minimum%2A> プロパティと <xref:System.Windows.Forms.ProgressBar.Maximum%2A> プロパティによって確立された境界の外側で <xref:System.Windows.Forms.ProgressBar.Value%2A> プロパティを設定した場合、コントロールは <xref:System.ArgumentException> 例外をスローします。  
   
-     次のコード例を設定する方法を示しています、<xref:System.Windows.Forms.ProgressBar>直接値します。 コードでは、データ ソースからレコードを読み取りし、データ レコードが読み取られるたびに、進行状況バーとラベルを更新します。 この例は、フォームに、<xref:System.Windows.Forms.Label>コントロール、<xref:System.Windows.Forms.ProgressBar>制御、およびと呼ばれる行のデータ テーブル`CustomerRow`で`FirstName`と`LastName`フィールド。  
+     次のコード例は、<xref:System.Windows.Forms.ProgressBar> 値を直接設定する方法を示しています。 このコードは、データソースからレコードを読み取り、データレコードが読み取られるたびに進行状況バーとラベルを更新します。 この例では、フォームに <xref:System.Windows.Forms.Label> コントロール、<xref:System.Windows.Forms.ProgressBar> コントロール、および `FirstName` と `LastName` フィールドを持つ `CustomerRow` という行を含むデータテーブルが必要です。  
   
     ```vb  
     Public Sub CreateNewRecords()  
@@ -83,19 +83,19 @@ ms.locfileid: "54496037"
     }  
     ```  
   
-     固定間隔での進行状況を表示する場合は、値の設定し、を増加させるメソッドを呼び出して、<xref:System.Windows.Forms.ProgressBar>その間隔でのコントロールの値。 これは、タイマーおよびを測定していない進行状況全体に占める割合として他のシナリオに便利です。  
+     一定の間隔で進行状況を表示している場合は、値を設定し、その間隔で <xref:System.Windows.Forms.ProgressBar> コントロールの値を増やすメソッドを呼び出すことができます。 これは、タイマーや、進行状況を全体に対する割合として測定しないその他のシナリオに役立ちます。  
   
-### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>進行状況バーを固定値を増やします  
+### <a name="to-increase-the-progress-bar-by-a-fixed-value"></a>プログレスバーを固定値で増やすには  
   
-1.  設定、<xref:System.Windows.Forms.ProgressBar>コントロールの<xref:System.Windows.Forms.ProgressBar.Minimum%2A>と<xref:System.Windows.Forms.ProgressBar.Maximum%2A>値。  
+1. <xref:System.Windows.Forms.ProgressBar> コントロールの <xref:System.Windows.Forms.ProgressBar.Minimum%2A> と <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 値を設定します。  
   
-2.  コントロールの設定<xref:System.Windows.Forms.ProgressBar.Step%2A>に進行状況バーの量を表す整数のプロパティに値が表示されます。  
+2. コントロールの <xref:System.Windows.Forms.ProgressBar.Step%2A> プロパティを、その量を表す整数に設定して、進行状況バーの表示値を増やします。  
   
-3.  呼び出す、<xref:System.Windows.Forms.ProgressBar.PerformStep%2A>に設定した値に表示される値を変更するメソッドを<xref:System.Windows.Forms.ProgressBar.Step%2A>プロパティ。  
+3. <xref:System.Windows.Forms.ProgressBar.PerformStep%2A> メソッドを呼び出して、<xref:System.Windows.Forms.ProgressBar.Step%2A> プロパティで設定された量によって表示される値を変更します。  
   
-     次のコード例では、進行状況バーが、コピー操作でファイルの数を維持する方法を示しています。  
+     次のコード例は、進行状況バーがコピー操作でファイルの数を保持する方法を示しています。  
   
-     次の例では、各ファイルは、メモリに読み込み、進行状況バーとラベルは反映する更新ファイルの合計数を読み取る。 この例は、フォームに、<xref:System.Windows.Forms.Label>コントロールと<xref:System.Windows.Forms.ProgressBar>コントロール。  
+     次の例では、各ファイルがメモリに読み込まれると、進行状況バーとラベルが更新され、読み取られたファイルの合計が反映されます。 この例では、フォームに <xref:System.Windows.Forms.Label> コントロールと <xref:System.Windows.Forms.ProgressBar> コントロールが必要です。  
   
     ```vb  
     Public Sub LoadFiles()  
@@ -149,17 +149,17 @@ ms.locfileid: "54496037"
     }  
     ```  
   
-     最後に、それぞれの増加が異なる量ように進行状況バーに表示される値を増やすことができます。 これは、機能は、一連のハード _ ディスクの場合は、さまざまなサイズのファイルの書き込みや、全体に占める割合として進行状況を測定するなどの一意の操作の追跡を維持することがときに便利です。  
+     最後に、各増加が一意の値になるように、進行状況バーによって表示される値を増やすことができます。 これは、さまざまなサイズのファイルをハードディスクに書き込む場合や、進行状況を全体の割合として測定する場合など、一連の一意の操作を追跡する場合に便利です。  
   
-### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>動的な値で進行状況バーを向上させる  
+### <a name="to-increase-the-progress-bar-by-a-dynamic-value"></a>動的な値で進行状況バーを拡大するには  
   
-1.  設定、<xref:System.Windows.Forms.ProgressBar>コントロールの<xref:System.Windows.Forms.ProgressBar.Minimum%2A>と<xref:System.Windows.Forms.ProgressBar.Maximum%2A>値。  
+1. <xref:System.Windows.Forms.ProgressBar> コントロールの <xref:System.Windows.Forms.ProgressBar.Minimum%2A> と <xref:System.Windows.Forms.ProgressBar.Maximum%2A> 値を設定します。  
   
-2.  呼び出す、<xref:System.Windows.Forms.ProgressBar.Increment%2A>メソッドを指定する整数値に表示される値を変更します。  
+2. <xref:System.Windows.Forms.ProgressBar.Increment%2A> メソッドを呼び出して、指定した整数によって表示される値を変更します。  
   
-     次のコード例では、どのように、コピー操作中にディスク領域が使用されている進行状況バーが計算を示しています。  
+     次のコード例は、コピー操作中にどの程度のディスク領域が使用されたかを、進行状況バーで計算する方法を示しています。  
   
-     次の例では、各ファイルが、ハード ディスクに書き込まれると、進行状況バーとラベル更新されます使用可能なハード_ディスク領域の量を反映するように。 この例は、フォームに、<xref:System.Windows.Forms.Label>コントロールと<xref:System.Windows.Forms.ProgressBar>コントロール。  
+     次の例では、各ファイルがハードディスクに書き込まれると、進行状況バーとラベルが更新され、使用可能なハードディスク領域の容量が反映されます。 この例では、フォームに <xref:System.Windows.Forms.Label> コントロールと <xref:System.Windows.Forms.ProgressBar> コントロールが必要です。  
   
     ```vb  
     Public Sub ReadFiles()  
@@ -224,8 +224,9 @@ ms.locfileid: "54496037"
     }  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.ProgressBar>
 - <xref:System.Windows.Forms.ToolStripProgressBar>
-- [ProgressBar コントロールの概要](../../../../docs/framework/winforms/controls/progressbar-control-overview-windows-forms.md)
-- [ProgressBar コントロール](../../../../docs/framework/winforms/controls/progressbar-control-windows-forms.md)
+- [ProgressBar コントロールの概要](progressbar-control-overview-windows-forms.md)
+- [ProgressBar コントロール](progressbar-control-windows-forms.md)

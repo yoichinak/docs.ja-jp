@@ -3,12 +3,12 @@ title: デリゲートの一般的なパターン
 description: コンポーネント間の密接な結合を避けるための、コードでのデリゲートの一般的な使用パターンについて説明します。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 174ae4129464c9d2e787048793cec764121ca4aa
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827021"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73454084"
 ---
 # <a name="common-patterns-for-delegates"></a>デリゲートの一般的なパターン
 
@@ -58,7 +58,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 上の静的クラスは、ごく簡単なコードですが、きちんと機能します。 メッセージをコンソールに出力するメソッドの機能を 1 つ実装する必要があります。 
 
-[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/Program.cs#LogToConsole "A Console logger.")]
+[!code-csharp[LogToConsole](../../samples/csharp/delegates-and-events/LoggingMethods.cs#LogToConsole "A Console logger.")]
 
 最後にそのメソッドを、Logger に宣言されている WriteMessage デリゲートにアタッチして接続する必要があります。
 
@@ -70,7 +70,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 ユーザーは、Core Framework に定義されているデリゲート型を使うことで、さらに簡単にデリゲートを扱うことができます。 皆さんが新しい型を定義する必要はなく、皆さんのライブラリを利用する開発者も、特別な目的を持ったデリゲート型を新たに覚える必要がありません。
 
-使用されているインターフェイスはごくわずかでありながら、最大限の柔軟性が得られるようになっています。つまり新しい出力ロガーを作成するために皆さんがすべきことは、メソッドを 1 つ作成することです。 そのメソッドは静的メソッドでも、インスタンス メソッドでもかまいません。 またアクセス指定も任意です。
+使用されているインターフェイスはごくわずかでありながら、最大限の柔軟性が得られるようになっています。新しい出力ロガーを作成するには、メソッドを 1 つ作成する必要があります。 そのメソッドは静的メソッドでも、インスタンス メソッドでもかまいません。 またアクセス指定も任意です。
 
 ## <a name="formatting-output"></a>出力の初期設定
 
@@ -99,7 +99,6 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
 
-
 このクラスを作成した後、インスタンス化すれば、その LogMessage メソッドを Logger コンポーネントにアタッチすることができます。
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/Program.cs#FileLogger "Log to files")]
@@ -108,13 +107,13 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 ```csharp
 var fileOutput = new FileLogger("log.txt");
-Logger.WriteMessage += LogToConsole;
+Logger.WriteMessage += LoggingMethods.LogToConsole; // LoggingMethods is the static class we utilized earlier
 ```
 
 後で同じアプリケーションで、片方のデリゲートを削除しても、システムに問題が生じることはありません。
 
 ```csharp
-Logger.WriteMessage -= LogToConsole;
+Logger.WriteMessage -= LoggingMethods.LogToConsole;
 ```
 
 ## <a name="practices"></a>実践

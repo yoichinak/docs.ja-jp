@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261244"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621201"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>型の値 '\<typename1 >' に変換できません'\<typename2 >'。
 型の値 '\<typename1 >' に変換できません。'\<typename2 >'。 型の不一致は、ファイル参照とアセンブリへの参照をプロジェクトの混合によって生じた可能性があります '\<assemblyname >'。 ファイル参照を置き換えてください '\<filepath >' プロジェクトで'\<projectname1 >' への参照をプロジェクトに '\<projectname2 >'。  
@@ -57,9 +57,9 @@ ms.locfileid: "55261244"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   ファイル参照をプロジェクト参照を変更します。  
+- ファイル参照をプロジェクト参照を変更します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic における型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)
-

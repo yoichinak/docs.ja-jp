@@ -1,5 +1,5 @@
 ---
-title: ICorDebugInternalFrame Interface1
+title: ICorDebugInternalFrame インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugInternalFrame
@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: bb4772ca-0d54-4185-b738-7a6ffe9ea85a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1fab8221bd160a74bb44c3ed0721ad4620e93419
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6bc24450cdda2e3ed324256b53b2d137d1eb90e4
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692796"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788483"
 ---
-# <a name="icordebuginternalframe-interface1"></a>ICorDebugInternalFrame Interface1
-ランタイム内部スタックにフレームを表します。 このインターフェイスは、ICorDebugFrame インターフェイスのサブクラスです。  
+# <a name="icordebuginternalframe-interface"></a>ICorDebugInternalFrame インターフェイス
+
+スタック上のランタイム内部フレームを表します。 このインターフェイスは、テキストボックスのインターフェイスのサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetFrameType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)|この内部フレームの種類を取得します。|  
+|[GetFrameType メソッド](icordebuginternalframe-getframetype-method.md)|この内部フレームの型を取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,4 +46,5 @@ ms.locfileid: "54692796"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

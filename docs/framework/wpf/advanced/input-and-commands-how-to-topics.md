@@ -7,28 +7,28 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
-ms.openlocfilehash: 2fb3472456e709c0f9f395789fd42ed38a3d2ed7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942780"
 ---
 # <a name="input-and-commands-how-to-topics"></a>入力およびコマンドに関する「方法」トピック
-このセクションのトピックでは、Windows Presentation Foundation (WPF) の入力およびコマンド実行のインフラストラクチャを使用する方法について説明します。  
+このセクションのトピックでは、Windows Presentation Foundation (WPF) で、入力とコマンド実行のインフラストラクチャを使用する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [コマンドを有効にする](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [カーソルの種類を変更する](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [フォーカス イベントを使用して要素の色を変更する](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [FocusVisualStyle をコントロールに適用する](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [Enter キーが押されたことを検出する](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [イベントを使用してロールオーバー効果を作成する](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [オブジェクトをマウス ポインターに追従させる](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [RoutedCommand を作成する](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [ICommandSource を実装する](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [コマンドをサポートしないコントロールにコマンドをフックする](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [コマンドをサポートするコントロールにコマンドをフックする](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+ [コマンドを有効にする](how-to-enable-a-command.md)  
+ [カーソルの種類を変更する](how-to-change-the-cursor-type.md)  
+ [フォーカス イベントを使用して要素の色を変更する](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [FocusVisualStyle をコントロールに適用する](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [Enter キーが押されたことを検出する](how-to-detect-when-the-enter-key-pressed.md)  
+ [イベントを使用してロールオーバー効果を作成する](how-to-create-a-rollover-effect-using-events.md)  
+ [オブジェクトをマウス ポインターに追従させる](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [RoutedCommand を作成する](how-to-create-a-routedcommand.md)  
+ [ICommandSource を実装する](how-to-implement-icommandsource.md)  
+ [コマンドをサポートしないコントロールにコマンドをフックする](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [コマンドをサポートするコントロールにコマンドをフックする](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.UIElement>  

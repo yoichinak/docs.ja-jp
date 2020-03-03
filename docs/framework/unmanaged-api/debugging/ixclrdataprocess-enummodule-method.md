@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1648e53df5f36f7615831b425d2b5d764731c5c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 40ab90a3218d4309cda709004a191e9440fe505d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738132"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769576"
 ---
 # <a name="ixclrdataprocessenummodule-method"></a>IXCLRDataProcess::EnumModule メソッド
 
@@ -30,18 +30,20 @@ ms.locfileid: "54738132"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT EnumModule(
     [in, out] CLRDATA_ENUM  *handle,
     [out] IXCLRDataModule  **mod
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`handle` [入力、出力]モジュールを列挙するためのハンドル。
+`handle`\
+[入力、出力]モジュールを列挙するためのハンドル。
 
-`mod` [out]列挙されたモジュール。
+`mod`\
+[out]列挙されたモジュール。
 
 ## <a name="remarks"></a>Remarks
 
@@ -49,14 +51,14 @@ HRESULT EnumModule(
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [CLRDataSourceType 列挙型](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
-- [IXCLRDataProcess インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 列挙型](clrdatasourcetype-enumeration.md)
+- [デバッグ](index.md)
+- [IXCLRDataModule インターフェイス](ixclrdatamodule-interface.md)
+- [IXCLRDataProcess インターフェイス](ixclrdataprocess-interface.md)

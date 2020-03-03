@@ -1,15 +1,15 @@
 ---
-title: '方法: 特定の属性 (XPATH-LINQ to XML) を持つ要素を検索 (Visual Basic)'
+title: '方法 : 特定の属性を持つ要素を検索する (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 4bb38d2c-bc7c-4196-8909-aaf41fb86b28
-ms.openlocfilehash: 0efc0d6cebce760d90213d5149ca729a7b04663e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef8dd26d40f15d3d5a27f0ca5d62f7337f2054ca
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654426"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74343684"
 ---
-# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>方法: 特定の属性 (XPATH-LINQ to XML) を持つ要素を検索 (Visual Basic)
+# <a name="how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml-visual-basic"></a>方法: 特定の属性を持つ要素を検索する (XPath LINQ to XML) (Visual Basic)
 特定の属性を持つすべての要素を検索しなければならない場合があります。 属性の内容は問わず、 属性の存在に基づいて選択を行うような場合です。  
   
  XPath 式を次に示します。  
@@ -53,11 +53,12 @@ Next
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console
 Results are identical  
 <Child2 Select="true">2</Child2>  
 <Child4 Select="true">4</Child4>  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>参照
+
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

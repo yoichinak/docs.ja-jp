@@ -17,21 +17,19 @@ helpviewer_keywords:
 ms.assetid: 316df866-442d-40cc-b049-45e8adcb65d1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b55ac1d895bfecbe74be447bd06f4aa22b9d04f
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684329"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790791"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes メソッド
 リモート コンピューターで実行されている指定のプロセスの共通言語ランタイム (CLR: Common Language Runtime) を列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumRuntimes (  
       [in] DWORD       dwInternalProcessID,  
       [out] DWORD*     pcRuntimes,  
@@ -39,15 +37,15 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwInternalProcessID`  
- [in] ランタイムを列挙するプロセスの内部プロセス ID。 これになります`m_dwInternalID`から、対応する[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)します。  
+ [in] ランタイムを列挙するプロセスの内部プロセス ID。 これは、対応する[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)から `m_dwInternalID` されます。  
   
  `pcRuntimes`  
  [out] `ppRuntimes` に返されるランタイム数。 この値は 0 (ゼロ) になる可能性もあります。  
   
  `ppRuntimes`  
- [out]配列の[CoreClrDebugRuntimeInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugruntimeinfo-structure.md)ランタイムを表す構造体は、リモート ターゲット プロセスに読み込まれます。  
+ 入出力リモートターゲットプロセスに読み込まれたランタイムを表す[CoreClrDebugRuntimeInfo](coreclrdebugruntimeinfo-structure.md)構造体の配列。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
@@ -62,17 +60,18 @@ HRESULT EnumRuntimes (
  E_FAIL (またはその他の E_ リターン コード)  
  その他のエラーが発生しました。  
   
-## <a name="remarks"></a>Remarks  
- このメソッドによって割り当てられたメモリを解放する呼び出し、 [icoreclrdebugtarget::freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)メソッド。  
+## <a name="remarks"></a>コメント  
+ このメソッドによって割り当てられたメモリを解放するには、 [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md)メソッドを呼び出します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86 .dll  
   
- **.NET framework のバージョン:** 3.5 SP1  
+ **.NET Framework のバージョン:** 3.5 SP1  
   
 ## <a name="see-also"></a>関連項目
-- [ICoreClrDebugTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+
+- [ICoreClrDebugTarget インターフェイス](icoreclrdebugtarget-interface.md)

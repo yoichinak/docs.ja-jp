@@ -1,10 +1,9 @@
 ---
-title: SqlStreamChars.IsNull プロパティ (System.Data.SqlTypes)
+title: SqlStreamChars. IsNull プロパティ (SqlTypes)
 author: stevestein
 ms.author: sstein
 ms.date: 12/19/2018
-ms.technology:
-- dotnet-data
+ms.technology: dotnet-data
 topic_type:
 - apiref
 api_name:
@@ -14,16 +13,16 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 7d2a2cf66ce2a375b1e5989b2fb6ddc9e3d94411
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d80f653724b3ef0a1cadb69a5f72b1d9455597d6
+ms.sourcegitcommit: 2e95559d957a1a942e490c5fd916df04b39d73a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825447"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72395736"
 ---
-# <a name="sqlstreamcharsisnull-property"></a>SqlStreamChars.IsNull プロパティ
+# <a name="sqlstreamcharsisnull-property"></a>SqlStreamChars. IsNull プロパティ
 
-派生クラスでオーバーライドされると、ストリームがあるかどうかを示す値を取得します。`null`します。 このプロパティが含まれるアセンブリには、SQLAccess.dll で友人関係があります。 SQL Server で使用するものでは。 その他のデータベースには、そのデータベースによって提供されるホスティング メカニズムを使用します。
+派生クラスでオーバーライドされた場合、ストリームが `null`かどうかを示す値を取得します。 このプロパティを含むアセンブリには、SQLAccess .dll とのフレンド関係があります。 SQL Server での使用を目的としています。 他のデータベースの場合は、そのデータベースによって提供されるホスティングメカニズムを使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,22 +30,22 @@ ms.locfileid: "55825447"
 public abstract bool IsNull { get; }
 ```
 
-## <a name="property-value"></a>プロパティの値
+## <a name="property-value"></a>［プロパティ値］
 
 <xref:System.Boolean>\
-`true` ストリームの場合`null`、それ以外の`false`します。
+ストリームが `null`場合は `true`。それ以外の場合は、`false`ます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
 > [!WARNING]
-> `SqlStreamChars.IsNull`プロパティはプライベートであり、コード内で直接使用するものではありません。
+> `SqlStreamChars.IsNull` プロパティはプライベートであり、コードで直接使用するためのものではありません。
 >
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのプロパティの使用はサポートしていません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **名前空間:** <xref:System.Data.SqlTypes>
 
-**アセンブリ:** System.Data (system.data.dll 内)
+**アセンブリ:** System.string (System. Data. .dll)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

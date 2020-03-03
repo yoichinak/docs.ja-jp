@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM+ [WCF]
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
-ms.openlocfilehash: 08e9b6b1320b1d44281b573af6afd29e9710383c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046932"
 ---
 # <a name="integrating-with-com-applications"></a>COM+ アプリケーションとの統合
 Windows Communication Foundation (WCF) は、分散アプリケーションを作成するための豊富な環境を提供します。 COM + でホストされるコンポーネント ベースのアプリケーション ロジックにかなりの投資をした場合は、既存のロジックを修正することがなく拡張する WCF を使用できます。 このセクションのトピックでは、WCF と COM + を使用する方法について説明します。  
@@ -36,4 +36,5 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>関連項目
+
 - [COM アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)

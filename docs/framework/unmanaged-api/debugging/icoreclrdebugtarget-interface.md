@@ -16,21 +16,19 @@ helpviewer_keywords:
 ms.assetid: 7cfaee76-e284-4a66-a431-8e33f0f60038
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4576d8ea7d601e1b37d0cb6f54802f93bc128622
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 190671b4f690f8c2cad43cf446a1196985ec5a42
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593785"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790750"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget インターフェイス
-参照カウントを制御し、プロセスを列挙し、リモート Macintosh Silverlight ターゲットにアタッチされたデバッガーに関連付けられているメモリを解放するメソッドを提供します。  
+参照カウントを制御し、プロセスを列挙し、リモートの Macintosh Silverlight ターゲットにアタッチされているデバッガーに関連付けられているメモリを解放するメソッドを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 class ICoreClrDebugTarget {  
       HRESULT EnumProcesses (  
           [out] DWORD*                    pcProcs,  
@@ -53,24 +51,25 @@ class ICoreClrDebugTarget {
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ICoreClrDebugTarget::EnumProcesses メソッド](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)|リモート コンピューターで実行されているプロセスを列挙します。|  
-|[ICoreClrDebugTarget::EnumRuntimes メソッド](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)|リモート コンピューター上の指定されたプロセスでは、共通言語ランタイム (Clr) を列挙します。|  
-|[ICoreClrDebugTarget::FreeMemory メソッド](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md)|このクラスの列挙メソッドによって割り当てられたメモリを解放します。|  
+|[ICoreClrDebugTarget::EnumProcesses メソッド](icoreclrdebugtarget-enumprocesses-method.md)|リモート コンピューターで実行されているプロセスを列挙します。|  
+|[ICoreClrDebugTarget::EnumRuntimes メソッド](icoreclrdebugtarget-enumruntimes-method.md)|リモートコンピューター上の指定されたプロセスの共通言語ランタイム (CLRs) を列挙します。|  
+|[ICoreClrDebugTarget::FreeMemory メソッド](icoreclrdebugtarget-freememory-method.md)|このクラスの列挙メソッドによって割り当てられたメモリを解放します。|  
   
-## <a name="remarks"></a>Remarks  
- 現時点では、Macintosh コンピューターをリモートで実行されている Silverlight ベースのアプリケーションのターゲットのデバッグにのみ、この機能がサポートされています。  
+## <a name="remarks"></a>コメント  
+ 現在、この機能は、リモートの Macintosh コンピューターで実行されている Silverlight ベースのアプリケーションターゲットをデバッグする場合にのみサポートされます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86 .dll  
   
- **.NET framework のバージョン:** 3.5 SP1  
+ **.NET Framework のバージョン:** 3.5 SP1  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugRemoteTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [ICorDebugRemoteTarget インターフェイス](icordebugremotetarget-interface.md)
+- [ICorDebug インターフェイス](icordebug-interface.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

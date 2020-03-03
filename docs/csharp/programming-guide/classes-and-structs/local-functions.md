@@ -1,17 +1,14 @@
 ---
 title: ローカル関数 - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e91069c25ebe6c2a22927391734e5030a908e4ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2036e576a44aa3e1e7829e2091e5a9243d6b6010
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663928"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75705523"
 ---
 # <a name="local-functions-c-programming-guide"></a>ローカル関数 (C# プログラミング ガイド)
 
@@ -37,7 +34,7 @@ C# 7.0 以降、C# では*ローカル関数*がサポートされています�
 
 ローカル関数は、親メンバーの内側に、入れ子になったメソッドとして定義されます。 その定義の構文は次のとおりです。
 
-```txt
+```csharp
 <modifiers: async | unsafe> <return-type> <method-name> <parameter-list>
 ```
 
@@ -45,17 +42,16 @@ C# 7.0 以降、C# では*ローカル関数*がサポートされています�
 
 メソッドのパラメーターを含め、親メンバーに定義されたすべてのローカル変数は、ローカル関数からアクセス可能です。 
 
-メソッド定義とは異なり、ローカル関数は次の要素を含むことはできません。
+メソッド定義とは異なり、ローカル関数の定義にメンバー アクセス修飾子を含めることはできません。 すべてのローカル関数はプライベートであるため、`private` キーワードなどのアクセス修飾子が含まれていると、コンパイラ エラー CS0106 "修飾子 'private' がこの項目に対して有効ではありません" が生成されます。
 
-- メンバー アクセス修飾子。 すべてのローカル関数はプライベートであるため、`private` キーワードなどのアクセス修飾子が含まれていると、コンパイラ エラー CS0106 "修飾子 'private' がこの項目に対して有効ではありません" が生成されます。
- 
-- [static](../../language-reference/keywords/static.md) キーワード。 `static` キーワードが含まれていると、コンパイラ エラー CS0106 "修飾子 'static' がこの項目に対して有効ではありません" が生成されます。
+> [!NOTE]
+> C# 8.0 より前では、ローカル関数に `static` 修飾子を含めることはできません。 `static` キーワードが含まれていると、コンパイラ エラー CS0106 "修飾子 'static' がこの項目に対して有効ではありません" が生成されます。
 
 さらに、ローカル関数またはローカル関数のパラメーターと型パラメーターには属性を適用できません。 
  
 次の例は、`GetText` というメソッドに対してプライベートな `AppendPathSeparator` というローカル関数を定義しています。
    
-[!code-csharp[LocalFunctionExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
+[!code-csharp[LocalFunctionExample](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions1.cs)]  
    
 ## <a name="local-functions-and-exceptions"></a>ローカル関数と例外
 
@@ -63,21 +59,21 @@ C# 7.0 以降、C# では*ローカル関数*がサポートされています�
 
 次の例は、指定した範囲にある奇数を列挙する `OddSequence` メソッドを定義しています。 100 より大きい数値を `OddSequence` 列挙子メソッドに渡しているため、メソッドは <xref:System.ArgumentOutOfRangeException> をスローします。 この例の出力が示すように、例外は列挙子を取得したときではなく、数値を反復処理した時点でのみ検出されます。
 
-[!code-csharp[LocalFunctionIterator1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
+[!code-csharp[LocalFunctionIterator1](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator1.cs)] 
 
 これに対して、次の例に示すようにローカル関数から列挙子を返すことによって、列挙子を取得する前の検証を実行する時点で例外をスローできます。
 
-[!code-csharp[LocalFunctionIterator2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
+[!code-csharp[LocalFunctionIterator2](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-iterator2.cs)]
 
 ローカル関数は、非同期操作の外部で例外を処理するために同様の方法で使用できます。 通常、非同期メソッドでスローされた例外では <xref:System.AggregateException> の内部例外を確認する必要があります。 ローカル関数を使用すると、コードを迅速に失敗させ (Fail Fast)、例外のスローと検出の両方を同時に行うことができます。
 
 次の例は、`GetMultipleAsync` という非同期メソッドを使用して、指定した秒数だけ一時停止した後、その秒数のランダムな倍数である値を返します。 遅延の最大値は 5 秒です。値が 5 より大きい場合は <xref:System.ArgumentOutOfRangeException> が発生します。 次の例に示すように、`GetMultipleAsync` メソッドに渡された値が 6 の場合にスローされる例外は、`GetMultipleAsync` メソッドの実行開始後、<xref:System.AggregateException> にラップされます。
 
-[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
+[!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async1.cs)] 
 
 メソッド反復子と同様、非同期メソッドを呼び出す前に検証を実行するように、この例のコードをリファクターすることができます。 次の例の出力に示されているように、<xref:System.ArgumentOutOfRangeException> は <xref:System.AggregateException> にラップされていません。
 
-[!code-csharp[LocalFunctionAsync`](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
+[!code-csharp[LocalFunctionAsync](~/samples/snippets/csharp/programming-guide/classes-and-structs/local-functions-async2.cs)] 
 
 ## <a name="see-also"></a>関連項目
 

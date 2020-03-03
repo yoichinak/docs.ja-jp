@@ -2,21 +2,22 @@
 title: <clientVia>
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: 063dbee71a91e098e26026ea78c74642115c7955
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1c2ee68fb039e24e1462148cb52daf1bb57f8ed
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266664"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398109"
 ---
-# <a name="clientvia"></a>\<clientVia>
+# <a name="clientvia"></a>\<clientVia >
 トランスポート チャネルの作成対象となる URI を指定します。 詳細については、「 <xref:System.ServiceModel.Description.ClientViaBehavior> 」を参照してください。  
   
- \<system.ServiceModel >  
-\<<behaviors>  
-\<endpointBehaviors>  
-\<behavior>  
-\<clientVia>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clientVia >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,8 +41,9 @@ ms.locfileid: "55266664"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|エンドポイントの動作を指定します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.ClientViaElement>
 - <xref:System.ServiceModel.Description.ClientViaBehavior>

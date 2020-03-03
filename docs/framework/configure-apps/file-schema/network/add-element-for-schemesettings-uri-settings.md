@@ -2,21 +2,21 @@
 title: schemeSettings の <add> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 672d279f35db64bec7f5b26bd1930d7048c406f1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ed40098e8d4c2d1298771e67a618b8d04f59c912
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279586"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087714"
 ---
-# <a name="add-element-for-schemesettings-uri-settings"></a>\<追加 > schemeSettings (Uri 設定) の要素
-スキーム名の設定の設定を追加します。  
-  
- \<configuration>  
-\<uri>  
-\<schemeSettings>  
-\<add>  
-  
+# <a name="add-element-for-schemesettings-uri-settings"></a>schemeSettings の > 要素を追加 \<(Uri 設定)
+スキーム名のスキーム設定を追加します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<uri >** ](uri-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**追加 >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -33,43 +33,43 @@ ms.locfileid: "55279586"
   
 |属性|説明|  
 |---------------|-----------------|  
-|name|スキーム名は、この設定が適用されます。 だけでサポートされる値は名前 ="http"と名前 ="https"。|  
+|name|この設定を適用するスキーム名。 サポートされている値は、name = "http" と name = "https" だけです。|  
   
-## <a name="attribute-name-attribute"></a>{Name} 属性属性  
+## <a name="attribute-name-attribute"></a>{属性名}属性  
   
 |[値]|説明|  
 |-----------|-----------------|  
-|genericUriParserOptions|このスキームのパーサー オプション。 のみサポートされている値が genericUriParserOptions ="DontUnescapePathDotsAndSlashes"。|  
+|genericUriParserOptions|このスキームのパーサーオプション。 サポートされている値は、genericUriParserOptions = "DontUnescapePathDotsAndSlashes" だけです。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<schemeSettings> 要素 (Uri 設定)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|<xref:System.Uri> が特定のスキームに解析される方法を指定します。|  
+|[\<schemeSettings> 要素 (Uri 設定)](schemesettings-element-uri-settings.md)|<xref:System.Uri> が特定のスキームに解析される方法を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 既定で、<xref:System.Uri?displayProperty=nameWithType>クラスのエスケープを解除パーセントは、パスの圧縮を実行する前にパスの区切り文字をエンコードします。 これは、次のような攻撃に対するセキュリティ メカニズムとして実装されていました。  
+ 既定では、<xref:System.Uri?displayProperty=nameWithType> クラスは、パスの圧縮を実行する前に、エンコードされたパス区切り記号のエスケープを解除します。 これは、次のような攻撃に対するセキュリティメカニズムとして実装されています。  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- この URI が渡される場合は、モジュール % を処理しないエンコードした文字を正しく、サーバーで実行されている次のコマンドになる可能性があります。  
+ % Encoded 文字を正しく処理しないモジュールにこの URI が渡された場合、サーバーによって次のコマンドが実行される可能性があります。  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- このため、<xref:System.Uri?displayProperty=nameWithType>クラスの最初のエスケープを解除パス区切り記号とし、パスの圧縮を適用します。 上への悪意のある URL を渡すことの結果<xref:System.Uri?displayProperty=nameWithType>クラスに次の URI のコンス トラクターの結果。  
+ このため、<xref:System.Uri?displayProperty=nameWithType> クラスはまずパスの区切り記号をエスケープ解除し、次にパスの圧縮を適用します。 上の悪意のある URL を <xref:System.Uri?displayProperty=nameWithType> クラスコンストラクターに渡すと、次の URI になります。  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- SchemeSettings の構成オプションを使用して、特定のスキームのないのエスケープを解除のパーセントでエンコードされたパス区切りには、この既定の動作を変更できます。  
+ この既定の動作は、特定のスキームの schemeSettings 構成オプションを使用して、パーセントエンコードされたパス区切り記号のエスケープを解除しないように変更できます。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例で使用する構成を示しています、 <xref:System.Uri> http スキームのパスをパーセントでエンコードされた区切り記号をエスケープしないをサポートするクラス。  
+ 次の例は、http スキームに対してパーセントでエンコードされたパス区切り記号をエスケープしないようにするために <xref:System.Uri> クラスによって使用される構成を示しています。  
   
 ```xml  
 <configuration>  
@@ -82,10 +82,11 @@ ms.locfileid: "55279586"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

@@ -1,15 +1,15 @@
 ---
-title: '方法: 子要素の子孫を検索する (XPath-LINQ to XML) (C#)'
+title: 子要素の子孫を検索する方法 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: ac5be4acc7d90dcbae3596f6fd253025ae4577b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb3e20ce21c1f6d2a71f2f71b8acec7cecf0f3ed
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708456"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141094"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>方法: 子要素の子孫を検索する (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>子要素の子孫を検索する方法 (XPath-LINQ to XML) (C#)
 このトピックでは、特定の名前を持つ子要素の子孫要素を取得する方法について説明します。  
   
  XPath 式を次に示します。  
@@ -70,11 +70,8 @@ Console.WriteLine(str2);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -7,62 +7,57 @@ helpviewer_keywords:
 - ETW, CLR keywords
 - ETW, CLR levels
 ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d45a8bdebb296a33862f018308a7ef876e0cd64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 929ed00c44b52dd94fc9d15e564cce7eeff1619e
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572358"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716187"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW キーワードおよびレベル
-<a name="top"></a> Windows (ETW) イベントのイベント トレースは、カテゴリとレベルによってフィルター処理できます。 イベントの [CLR ETW キーワード](#keywords) は、イベントをカテゴリ別にフィルタ処理できます。これらはランタイム プロバイダーとランダウン プロバイダー用に組み合わせて使用します。 [イベント レベル](#levels) は、フラグによって識別されます。  
+Windows (ETW) イベントのイベント トレースは、カテゴリとレベルによってフィルター処理できます。 イベントの [CLR ETW キーワード](#clr-etw-keywords) は、イベントをカテゴリ別にフィルタ処理できます。これらはランタイム プロバイダーとランダウン プロバイダー用に組み合わせて使用します。 [イベント レベル](#etw-event-levels) は、フラグによって識別されます。  
   
-<a name="keywords"></a>   
 ## <a name="clr-etw-keywords"></a>CLR ETW キーワード  
  キーワードは、組み合わせて値を生成できるフラグです。 実際には、コマンド ライン ユーティリティを呼び出す際に、キーワード名ではなくキーワードの 16 進数の値を使用します。  
   
  これらのキーワードの説明を次の表に示します。  
   
--   [CLR ETW ランタイム キーワード](#runtime)  
+- [CLR ETW ランタイム キーワード](#runtime)  
   
--   [CLR ETW ランダウン キーワード](#rundown)  
+- [CLR ETW ランダウン キーワード](#rundown)  
   
--   [ランタイム プロバイダーのシンボル解決のキーワードの組み合わせ](#runtime_combo)  
+- [ランタイム プロバイダーのシンボル解決のキーワードの組み合わせ](#runtime_combo)  
   
--   [ランダウン プロバイダーのシンボル解決のキーワードの組み合わせ](#rundown_combo)  
+- [ランダウン プロバイダーのシンボル解決のキーワードの組み合わせ](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW ランタイム キーワード  
  CLR ETW のランタイム キーワード、その値、およびその用途を次の表に示します。  
   
-|ランタイム キーワード名|[値]|目的|  
+|ランタイム キーワード名|Value|目的|  
 |--------------------------|-----------|-------------|  
-|`GCKeyword`|0x00000001|[ガベージ コレクション イベント](../../../docs/framework/performance/garbage-collection-etw-events.md)のコレクションを有効にします。|  
-|`LoaderKeyword`|0x00000008|[ローダー イベント](../../../docs/framework/performance/loader-etw-events.md)のコレクションを有効にします。|  
-|`JITKeyword`|0x00000010|[Just-In-Time (JIT) イベント](../../../docs/framework/performance/jit-tracing-etw-events.md)のコレクションを可能にします。|  
+|`GCKeyword`|0x00000001|[ガベージ コレクション イベント](garbage-collection-etw-events.md)のコレクションを有効にします。|  
+|`LoaderKeyword`|0x00000008|[ローダー イベント](loader-etw-events.md)のコレクションを有効にします。|  
+|`JITKeyword`|0x00000010|[Just-In-Time (JIT) イベント](jit-tracing-etw-events.md)のコレクションを可能にします。|  
 |`NGenKeyword`|0x00000020|ネイティブ イメージ メソッド (ネイティブ イメージ ジェネレーター、Ngen.exe によって処理されるメソッド) のイベントの収集を可能にします。 `StartEnumerationKeyword` と `EndEnumerationKeyword`で使用します。 このキーワードには高いオーバーヘッドが設定されています。 読み込まれたすべての NGen モジュールの中すべてのメソッドに対してイベントを生成します。 可能であれば、このキーワードを使用する代わりに、プロファイリング ツールによって生成されたプログラム データベース (PDB) を使用して、NGen モジュールからメソッドに関する情報を取得することをお勧めします。 この表で後述する `OverrideAndSuppressNGenEventsKeyword` も参照してください。|  
 |`StartEnumerationKeyword`|0x00000040|ランタイム内のすべてのメソッドの列挙を有効にします。 `NGenKeyword`と組み合わせて使用します。|  
 |`EndEnumerationKeyword`|0x00000080|ランタイム内の破棄されたすべてのメソッドの列挙を有効にします。 `JITKeyword` と `NGenKeyword`を組み合わせて使用します。|  
-|`SecurityKeyword`|0x00000400|[セキュリティ イベント](../../../docs/framework/performance/security-etw-events.md)のコレクションを有効にします。|  
+|`SecurityKeyword`|0x00000400|[セキュリティ イベント](security-etw-events.md)のコレクションを有効にします。|  
 |`AppDomainResourceManagementKeyword`|0x00000800|アプリケーション ドメイン レベルでのリソース監視イベントのコレクションを有効にします。|  
-|`JITTracingKeyword`|0x00001000|[JIT トレース イベント](../../../docs/framework/performance/jit-tracing-etw-events.md)のコレクションを有効にします。|  
-|`InteropKeyword`|0x00002000|[相互運用イベント](../../../docs/framework/performance/interop-etw-events.md)のコレクションを有効にします。|  
-|`ContentionKeyword`|0x00004000|[競合イベント](../../../docs/framework/performance/contention-etw-events.md)のコレクションを有効にします。|  
-|`ExceptionKeyword`|0x00008000|[例外イベント](../../../docs/framework/performance/exception-thrown-v1-etw-event.md)のコレクションを有効にします。|  
-|`ThreadingKeyword`|0x00010000|[スレッド プール イベント](../../../docs/framework/performance/thread-pool-etw-events.md)のコレクションを有効にします。|  
-|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|([!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降で使用可能。)高いオーバーヘッドの `NGenKeyword` キーワードを非表示にし、NGen モジュール内にあるメソッドのイベントが生成されないようにします。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降、プロファイル ツールは `OverrideAndSuppressNGenEventsKeyword` と `NGenKeyword` を一緒に使用して、NGen モジュール内のメソッドのイベントの生成を抑制します。 これにより、プロファイル ツールはより効率的な NGen PDB を使用して NGen モジュール内のメソッドに関する情報を取得できます。 .NET Framework 4 以前のバージョンの CLR では、NGen PDB の作成はサポートされていません。 これらのバージョンにおいて、CLR は `OverrideAndSuppressNGenEventsKeyword` を認識せず、 `NGenKeyword` を処理して NGen モジュール内のメソッドのイベントを生成します。|  
+|`JITTracingKeyword`|0x00001000|[JIT トレース イベント](jit-tracing-etw-events.md)のコレクションを有効にします。|  
+|`InteropKeyword`|0x00002000|[相互運用イベント](interop-etw-events.md)のコレクションを有効にします。|  
+|`ContentionKeyword`|0x00004000|[競合イベント](contention-etw-events.md)のコレクションを有効にします。|  
+|`ExceptionKeyword`|0x00008000|[例外イベント](exception-thrown-v1-etw-event.md)のコレクションを有効にします。|  
+|`ThreadingKeyword`|0x00010000|[スレッド プール イベント](thread-pool-etw-events.md)のコレクションを有効にします。|  
+|`OverrideAndSuppressNGenEventsKeyword`|0x00040000|(.NET Framework 4.5 以降で使用できます)。高いオーバーヘッドの `NGenKeyword` キーワードを抑制し、NGen モジュール内のメソッドに対してイベントが生成されないようにします。 .NET Framework 4.5 以降では、プロファイリングツールは `OverrideAndSuppressNGenEventsKeyword` と `NGenKeyword` を一緒に使用して、NGen モジュール内のメソッドのイベントの生成を抑制する必要があります。 これにより、プロファイル ツールはより効率的な NGen PDB を使用して NGen モジュール内のメソッドに関する情報を取得できます。 .NET Framework 4 以前のバージョンの CLR では、NGen PDB の作成はサポートされていません。 これらのバージョンにおいて、CLR は `OverrideAndSuppressNGenEventsKeyword` を認識せず、 `NGenKeyword` を処理して NGen モジュール内のメソッドのイベントを生成します。|  
 |`PerfTrackKeyWord`|0x2000000|`ModuleLoad` イベントおよび `ModuleRange` イベントのコレクションを有効にします。|  
-|`StackKeyword`|0x40000000|CLR [スタック トレース イベント](../../../docs/framework/performance/stack-etw-event.md)のコレクションを有効にします。|  
-  
- [ページのトップへ](#top)  
+|`StackKeyword`|0x40000000|CLR [スタック トレース イベント](stack-etw-event.md)のコレクションを有効にします。|  
   
 <a name="rundown"></a>   
 ### <a name="clr-etw-rundown-keywords"></a>CLR ETW ランダウン キーワード  
  CLR ETW ランダウン キーワード、その値、およびその用途を次の表に示します。  
   
-|ランダウン キーワード名|[値]|目的|  
+|ランダウン キーワード名|Value|目的|  
 |--------------------------|-----------|-------------|  
 |`LoaderRundownKeyword`|0x00000008|`StartRundownKeyword` および `EndRundownKeyword`と一緒に使用する場合のローダー イベントのコレクションを有効にします。|  
 |`JitRundownKeyword`|0x00000010|`DCStart` および `DCEnd` と一緒に使用する場合の、メソッド `StartRundownKeyword` と JIT コンパイルされたメソッドの `EndRundownKeyword`イベントのコレクションを有効にします。|  
@@ -71,40 +66,33 @@ ms.locfileid: "54572358"
 |`EndRundownKeyword`|0x00000100|終了ランダウン中のシステム状態の列挙を有効にします。|  
 |`AppDomainResourceManagementRundownKeyword`|0x00000800|<xref:System.AppDomain> または `StartRundownKeyword` と一緒に使用した場合の、 `EndRundownKeyword`レベルでのリソース監視のイベントのコレクションを有効にします。|  
 |`ThreadingKeyword`|0x00010000|スレッド プール イベントのコレクションを有効にします。|  
-|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|([!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降で使用可能。)高いオーバーヘッドの `NGenRundownKeyword` キーワードを非表示にし、NGen モジュール内にあるメソッドのイベントが生成されないようにします。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降、プロファイル ツールは `OverrideAndSuppressNGenEventsRundownKeyword` と `NGenRundownKeyword` を一緒に使用して、NGen モジュール内のメソッドのイベントの生成を抑制します。 これにより、プロファイル ツールはより効率的な NGen PDB を使用して NGen モジュール内のメソッドに関する情報を取得できます。 .NET Framework 4 以前のバージョンの CLR では、NGen PDB の作成はサポートされていません。 これらのバージョンにおいて、CLR は `OverrideAndSuppressNGenEventsRundownKeyword` を認識せず、 `NGenRundownKeyword` を処理して NGen モジュール内のメソッドのイベントを生成します。|  
-|`PerfTrackKeyWord`|0x2000000|`ModuleDCStart`、 `ModuleDCEnd`、 `ModuleRangeDCStart`、および `ModuleRangeDCEnd` の各イベントのコレクションを有効にします。|  
-  
- [ページのトップへ](#top)  
+|`OverrideAndSuppressNGenEventsRundownKeyword`|0x00040000|(.NET Framework 4.5 以降で使用できます)。高いオーバーヘッドの `NGenRundownKeyword` キーワードを抑制し、NGen モジュール内のメソッドに対してイベントが生成されないようにします。 .NET Framework 4.5 以降では、プロファイリングツールは `OverrideAndSuppressNGenEventsRundownKeyword` と `NGenRundownKeyword` を一緒に使用して、NGen モジュール内のメソッドのイベントの生成を抑制する必要があります。 これにより、プロファイル ツールはより効率的な NGen PDB を使用して NGen モジュール内のメソッドに関する情報を取得できます。 .NET Framework 4 以前のバージョンの CLR では、NGen PDB の作成はサポートされていません。 これらのバージョンにおいて、CLR は `OverrideAndSuppressNGenEventsRundownKeyword` を認識せず、 `NGenRundownKeyword` を処理して NGen モジュール内のメソッドのイベントを生成します。|  
+|`PerfTrackKeyWord`|0x2000000|`ModuleDCStart`、 `ModuleDCEnd`、 `ModuleRangeDCStart`、および `ModuleRangeDCEnd` の各イベントのコレクションを有効にします。|   
   
 <a name="runtime_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-runtime-provider"></a>ランタイム プロバイダーのシンボル解決のキーワードの組み合わせ  
   
 |キーワードとフラグ|アプリケーション ドメイン、アセンブリ、モジュールのロード/アンロード イベント|メソッドのロード/アンロード イベント (動的イベントを除く)|動的メソッドのロード/破棄イベント|  
 |------------------------|--------------------------------------------------------------|----------------------------------------------------------|-----------------------------------------|  
-|`LoaderKeyword`|イベントをロードおよびアンロードします。|なし。|なし。|  
-|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` は何も追加しません)|なし。|イベントをロードします。|イベントをロードおよびアンロードします。|  
-|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|なし。|イベントをロードおよびアンロードします。|イベントをロードおよびアンロードします。|  
-|`NGenKeyword`|なし。|なし。|該当なし。|  
-|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|なし。|イベントをロードします。|該当なし。|  
-|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|なし。|イベントをアンロードします。|該当なし。|  
-  
- [ページのトップへ](#top)  
+|`LoaderKeyword`|イベントをロードおよびアンロードします。|ありません。|ありません。|  
+|`JITKeyword`<br /><br /> (+ `StartEnumerationKeyword` は何も追加しません)|ありません。|イベントをロードします。|イベントをロードおよびアンロードします。|  
+|`JITKeyword` +<br /><br /> `EndEnumerationKeyword`|ありません。|イベントをロードおよびアンロードします。|イベントをロードおよびアンロードします。|  
+|`NGenKeyword`|ありません。|ありません。|該当なし。|  
+|`NGenKeyword` +<br /><br /> `StartEnumerationKeyword`|ありません。|イベントをロードします。|該当なし。|  
+|`NGenKeyword` +<br /><br /> `EndEnumerationKeyword`|ありません。|イベントをアンロードします。|該当なし。|  
   
 <a name="rundown_combo"></a>   
 ### <a name="keyword-combinations-for-symbol-resolution-for-the-rundown-provider"></a>ランダウン プロバイダーのシンボル解決のキーワードの組み合わせ  
   
 |キーワードとフラグ|アプリケーション ドメイン、アセンブリ、モジュールの DCStart/DCEnd イベント|メソッドの DCStart/DCEnd イベント (イベントの動的メソッドを含む)|  
 |------------------------|----------------------------------------------------------------|----------------------------------------------------------------------|  
-|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` イベント。|なし。|  
-|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` イベント。|なし。|  
-|`JITKeyword` +<br /><br /> `StartRundownKeyword`|なし。|`DCStart` イベント。|  
-|`JITKeyword` +<br /><br /> `EndRundownKeyword`|なし。|`DCEnd` イベント。|  
-|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|なし。|`DCStart` イベント。|  
-|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|なし。|`DCEnd` イベント。|  
-  
- [ページのトップへ](#top)  
-  
-<a name="levels"></a>   
+|`LoaderRundownKeyword` +<br /><br /> `StartRundownKeyword`|`DCStart` イベント。|ありません。|  
+|`LoaderRundownKeyword` +<br /><br /> `EndRundownKeyword`|`DCEnd` イベント。|ありません。|  
+|`JITKeyword` +<br /><br /> `StartRundownKeyword`|ありません。|`DCStart` イベント。|  
+|`JITKeyword` +<br /><br /> `EndRundownKeyword`|ありません。|`DCEnd` イベント。|  
+|`NGenKeyword` +<br /><br /> `StartRundownKeyword`|ありません。|`DCStart` イベント。|  
+|`NGenKeyword` +<br /><br /> `EndRundownKeyword`|ありません。|`DCEnd` イベント。|  
+
 ## <a name="etw-event-levels"></a>ETW イベントのレベル  
  ETW イベントはレベルでフィルター処理することもできます。 レベルが 0x5 に設定されている場合 0x5 以下を含むすべてのレベルのイベント (キーワードによって有効になったカテゴリに属するイベント) が発生します。 レベルが 0x2 に設定されている場合、レベル 0x2 以下に属するイベントのみが発生します。  
   
@@ -123,6 +111,7 @@ ms.locfileid: "54572358"
  0x0 - LogAlways  
   
 ## <a name="see-also"></a>関連項目
-- [CLR ETW プロバイダー](../../../docs/framework/performance/clr-etw-providers.md)
-- [CLR ETW イベント](../../../docs/framework/performance/clr-etw-events.md)
-- [共通言語ランタイムの ETW イベント](../../../docs/framework/performance/etw-events-in-the-common-language-runtime.md)
+
+- [CLR ETW プロバイダー](clr-etw-providers.md)
+- [CLR ETW イベント](clr-etw-events.md)
+- [共通言語ランタイムの ETW イベント](etw-events-in-the-common-language-runtime.md)

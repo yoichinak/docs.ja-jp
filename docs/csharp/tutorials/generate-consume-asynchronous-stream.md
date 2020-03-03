@@ -2,13 +2,14 @@
 title: 非同期ストリームの生成と使用
 description: この高度なチュートリアルでは、非同期ストリームの生成と使用により、非同期で生成できるデータ シーケンスをより自然な方法で操作するシナリオを示します。
 ms.date: 02/10/2019
+ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 412e5de5d9d73846fe2af36e3def383364389c75
+ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56306003"
+ms.lasthandoff: 10/29/2019
+ms.locfileid: "73039223"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>チュートリアル: C#8.0 および .NET Core 3.0 を使用して非同期ストリームを生成および使用する
 
@@ -17,13 +18,14 @@ C#8.0 では、データ ストリーム内の要素を非同期で取得また�
 このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
-> * データ要素のシーケンスを非同期で生成するデータ ソースを作成します。
-> * そのデータ ソースを非同期で使用します。
-> * 新しいインターフェイスとデータ ソースが以前の同期データ シーケンスより優先される場合を認識します。
+>
+> - データ要素のシーケンスを非同期で生成するデータ ソースを作成します。
+> - そのデータ ソースを非同期で使用します。
+> - 新しいインターフェイスとデータ ソースが以前の同期データ シーケンスより優先される場合を認識します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラーも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019 Preview 1](https://visualstudio.microsoft.com/vs/preview/) または [.NET Core 3.0 Preview 1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 以降で利用できます。 非同期ストリームは .NET Core 3.0 Preview 1 で初めて利用可能になります。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 コンパイラも実行されるようにします。 C# 8 コンパイラは [Visual Studio 2019 バージョン 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download) 以降で使用できます。
 
 [GitHub アクセス トークン](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token)を作成して、GitHub GraphQL エンドポイントにアクセスできるようにする必要があります。 GitHub アクセス トークンに対して次のアクセス許可を選択します。
 
@@ -134,7 +136,7 @@ namespace System
 
 ## <a name="run-the-finished-application"></a>完成したアプリケーションを実行する
 
-アプリケーションをもう一度実行します。 その動作を初期アプリケーションの動作と比較します。 結果の最初のページは、使用可能になるとすぐに列挙されます。 新しい各ページが要求され、取得されるときに観測可能な一時停止があり、次のページの結果がすぐに列挙されます。 `try` / `catch` ブロックではキャンセルを処理する必要はありません。呼び出し元がコレクションの列挙を停止できます。 各ページがダウンロードされるときに非同期ストリームによって結果が生成されるので、進行状況が明確にレポートされます。
+アプリケーションをもう一度実行します。 その動作を初期アプリケーションの動作と比較します。 結果の最初のページは、使用可能になるとすぐに列挙されます。 新しい各ページが要求され、取得されるときに観測可能な一時停止があり、次のページの結果がすぐに列挙されます。 `try` / `catch` ブロックではキャンセルを処理する必要はありません。呼び出し元がコレクションの列挙を停止できます。 各ページがダウンロードされるときに非同期ストリームによって結果が生成されるので、進行状況が明確にレポートされます。 返される各問題の状態は、`await foreach` ループにシームレスに含まれます。 進行状況を追跡するためにコールバック オブジェクトは必要ありません。
 
 コードを調べることで、メモリの改善を確認できます。 すべての結果が列挙される前にそれらを格納するコレクションを割り当てる必要がなくなります。 呼び出し元では、結果を使用する方法、および記憶域のコレクションが必要かどうかを判断できます。
 

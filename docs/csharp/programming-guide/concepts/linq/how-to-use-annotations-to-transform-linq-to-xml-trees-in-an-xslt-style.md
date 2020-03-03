@@ -1,15 +1,15 @@
 ---
-title: '方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する (C#)'
+title: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 12a95902-a6b7-4a1e-ad52-04a518db226f
-ms.openlocfilehash: 64287abbf8a411d8c231ceaf3311c51738d7ea96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 109e1a49530f34e7197f8c975de8c04245b11734
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733962"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347294"
 ---
-# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する (C#)
+# <a name="how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style-c"></a>注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する方法 (C#)
 注釈を使用することで、XML ツリーの変換が容易になります。  
   
  XML ドキュメントには、"ドキュメント中心で混合コンテンツを含んでいる" ものがあります。 このようなドキュメントでは、必ずしも要素の子ノードの構造を把握する必要はありません。 たとえば、テキストを含んでいるノードは次のようになります。  
@@ -24,21 +24,21 @@ ms.locfileid: "54733962"
   
  この方法の概要は次のとおりです。  
   
--   最初に、ツリー内の要素に置換要素を使用して注釈を付けます。  
+- 最初に、ツリー内の要素に置換要素を使用して注釈を付けます。  
   
--   2 番目に、ツリー全体を反復処理して、各要素をその注釈で置換する新しいツリーを作成します。 ここで示す例では、`XForm` という関数で新しいツリーの反復処理と作成を実装しています。  
+- 2 番目に、ツリー全体を反復処理して、各要素をその注釈で置換する新しいツリーを作成します。 ここで示す例では、`XForm` という関数で新しいツリーの反復処理と作成を実装しています。  
   
  この方法の詳細な構成は次のとおりです。  
   
--   構造を変換する一連の要素を返す 1 つ以上の LINQ to XML クエリを実行します。 クエリ内の要素ごとに、新しい <xref:System.Xml.Linq.XElement> オブジェクトをその要素に対する注釈として追加します。 変換後の新しいツリーでは、注釈付きの要素がこの新しい要素で置き換えられます。 例で示すように、このコードは簡単に記述できます。  
+- 構造を変換する一連の要素を返す 1 つ以上の LINQ to XML クエリを実行します。 クエリ内の要素ごとに、新しい <xref:System.Xml.Linq.XElement> オブジェクトをその要素に対する注釈として追加します。 変換後の新しいツリーでは、注釈付きの要素がこの新しい要素で置き換えられます。 例で示すように、このコードは簡単に記述できます。  
   
--   注釈として追加される新しい要素に新しい子ノードを含めることで、目的の構造を持つサブツリーを形成できます。  
+- 注釈として追加される新しい要素に新しい子ノードを含めることで、目的の構造を持つサブツリーを形成できます。  
   
--   特別な規則として、この目的で作成された別の名前空間 (この例では `http://www.microsoft.com/LinqToXmlTransform/2007` という名前空間) に新しい要素の子ノードが含まれている場合、その子ノードは新しいツリーにコピーされません。 代わりに、名前空間が上記の特別な名前空間で、かつ要素のローカル名が `ApplyTransforms` である場合は、ソース ツリー内の要素の子ノードが反復処理され、新しいツリーにコピーされます (例外として、注釈付きの子要素自体はここで示す規則に従って変換されます)。  
+- 特別な規則として、この目的で作成された別の名前空間 (この例では `http://www.microsoft.com/LinqToXmlTransform/2007` という名前空間) に新しい要素の子ノードが含まれている場合、その子ノードは新しいツリーにコピーされません。 代わりに、名前空間が上記の特別な名前空間で、かつ要素のローカル名が `ApplyTransforms` である場合は、ソース ツリー内の要素の子ノードが反復処理され、新しいツリーにコピーされます (例外として、注釈付きの子要素自体はここで示す規則に従って変換されます)。  
   
--   これは、XSL での変換の仕様にある程度似ています。 一連のノードを選択するクエリは、テンプレートの XPath 式に似ています。 注釈として保存される新しい <xref:System.Xml.Linq.XElement> を作成するコードは、XSL のシーケンス コンストラクターに似ています。また、`ApplyTransforms` 要素は、XSL の `xsl:apply-templates` 要素と機能的に似ています。  
+- これは、XSL での変換の仕様にある程度似ています。 一連のノードを選択するクエリは、テンプレートの XPath 式に似ています。 注釈として保存される新しい <xref:System.Xml.Linq.XElement> を作成するコードは、XSL のシーケンス コンストラクターに似ています。また、`ApplyTransforms` 要素は、XSL の `xsl:apply-templates` 要素と機能的に似ています。  
   
--   この方法の利点の 1 つは、クエリを作成するときに、常に未変更のソース ツリーに対してクエリを記述する点です。 ツリーに対する変更が記述中のクエリに与える影響を考慮する必要はありません。  
+- この方法の利点の 1 つは、クエリを作成するときに、常に未変更のソース ツリーに対してクエリを記述する点です。 ツリーに対する変更が記述中のクエリに与える影響を考慮する必要はありません。  
   
 ## <a name="transforming-a-tree"></a>ツリーの変換  
  最初の例では、`Paragraph` ノードの名前をすべて `para` に変更します。  
@@ -122,7 +122,7 @@ Console.WriteLine(newData);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root>  
@@ -145,9 +145,9 @@ After Transform
 ## <a name="effecting-the-transform"></a>変換の実施  
  小さな関数 `XForm` によって、元の注釈付きツリーから変換された新しいツリーが作成されます。  
   
--   この関数の擬似コードはかなり単純です。  
+- この関数の擬似コードはかなり単純です。  
   
-```  
+```text  
 The function takes an XElement as an argument and returns an XElement.   
 If an element has an XElement annotation, then  
     Return a new XElement  
@@ -393,7 +393,7 @@ class Program
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Before Transform  
 ----------------  
 <Root Att1="123">  
@@ -425,6 +425,3 @@ After Transform
 </Root>  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [高度な LINQ to XML プログラミング (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

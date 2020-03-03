@@ -2,27 +2,25 @@
 title: '方法: マネージ コード DCOM を WCF に移行する'
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a417c94106988e07e2b2ab2766c691f081ca7006
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 4d814d9c2e62af9aa5cc2a8d1f84738b69e36ad1
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734517"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217176"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>方法: マネージ コード DCOM を WCF に移行する
 Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。 この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。  
   
--   リモート サービスからクライアントに値渡しでオブジェクトを返す  
+- リモート サービスからクライアントに値渡しでオブジェクトを返す  
   
--   クライアントからリモート サービスに値渡しでオブジェクトを送信する  
+- クライアントからリモート サービスに値渡しでオブジェクトを送信する  
   
--   リモート サービスからクライアントに参照渡しでオブジェクトを返す  
+- リモート サービスからクライアントに参照渡しでオブジェクトを返す  
   
- セキュリティ上の理由で、WCF では、クライアントからサービスに参照渡しでオブジェクトを送信することはできません。 クライアントとサーバーの間で対話を必要とするシナリオは、WCF で双方向サービスを使用することによって実現できます。  双方向サービスの詳細については、「[双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)」を参照してください。  
+ セキュリティ上の理由で、WCF では、クライアントからサービスに参照渡しでオブジェクトを送信することはできません。 クライアントとサーバーの間で対話を必要とするシナリオは、WCF で双方向サービスを使用することによって実現できます。  双方向サービスの詳細については、「[双方向サービス](../wcf/feature-details/duplex-services.md)」を参照してください。  
   
- WCF サービスの作成方法、およびそれらのサービスのクライアントの作成方法について詳しくは、「[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)」、「[サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)」および「[クライアントを構築する](../../../docs/framework/wcf/building-clients.md)」を参照してください。  
+ WCF サービスの作成方法、およびそれらのサービスのクライアントの作成方法について詳しくは、「[基本的な WCF プログラミング](../wcf/basic-wcf-programming.md)」、「[サービスの設計と実装](../wcf/designing-and-implementing-services.md)」および「[クライアントを構築する](../wcf/building-clients.md)」を参照してください。  
   
 ## <a name="dcom-example-code"></a>DCOM コード例  
  これらのシナリオでは、WCF を使用して示されている DCOM インターフェイスに、以下の構造があります。  
@@ -82,7 +80,7 @@ public interface ICustomerManager
 ### <a name="step-2-define-the-data-contract"></a>手順 2: データ コントラクトを定義する  
  次に、サービスとクライアントの間でデータが交換される方法を説明する、サービスのデータ コントラクトを作成する必要があります。  データ コントラクトで説明されたクラスは、[<xref:System.Runtime.Serialization.DataContractAttribute>] 属性でマークする必要があります。 クライアントとサーバーの両方に対して表示する個々のプロパティやフィールドは、[<xref:System.Runtime.Serialization.DataMemberAttribute>] 属性でマークする必要があります。 データ コントラクト内のクラスから派生した型を許可するには、[<xref:System.Runtime.Serialization.KnownTypeAttribute>] 属性でそれらを区別する必要があります。 WCF は、サービス インターフェイス内の型と既知の型として識別される型だけを、シリアル化または逆シリアル化します。 既知の型ではない型を使用しようとすると、例外が発生します。  
   
- データ コントラクトの詳細については、「[データ コントラクト](../../../docs/framework/wcf/samples/data-contracts.md)」を参照してください。  
+ データ コントラクトの詳細については、「[データ コントラクト](../wcf/samples/data-contracts.md)」を参照してください。  
   
 ```csharp  
 [DataContract]  
@@ -165,12 +163,13 @@ public class CustomerService: ICustomerManager
                 address="http://localhost:8083/CustomerManager"   
                 binding="basicHttpBinding"   
                 contract="Shared.ICustomerManager"/>  
+    </client>  
   </system.serviceModel>  
 </configuration>  
 ```  
   
 ### <a name="step-5-run-the-service"></a>手順 5: サービスを実行する  
- 最後に、サービス アプリに次の行を追加して、アプリを起動することにより、コンソール アプリケーション内で自己ホストすることができます。 WCF サービス アプリケーションをホストするその他の方法について詳しくは、「[ホスティング サービス](../../../docs/framework/wcf/hosting-services.md)」を参照してください。  
+ 最後に、サービス アプリに次の行を追加して、アプリを起動することにより、コンソール アプリケーション内で自己ホストすることができます。 WCF サービス アプリケーションをホストするその他の方法について詳しくは、「[ホスティング サービス](../wcf/hosting-services.md)」を参照してください。  
   
 ```csharp  
 ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -302,7 +301,7 @@ public interface ISessionBoundObject
     }  
 ```  
   
- このサービスの実装を次に示します。 この実装では、セッションフル オブジェクトを作成するためにシングルトン チャネル ファクトリを保持しています。  チャネル ファクトリは、`GetInstanceAddress` が呼び出されるとチャネルを作成し、このチャネルに関連付けられているリモート アドレスをポイントする <xref:System.ServiceModel.EndpointAddress10> オブジェクトを作成します。   <xref:System.ServiceModel.EndpointAddress10> は、値渡しでクライアントに返すことのできるデータ型です。  
+ このサービスの実装を次に示します。 この実装では、セッションフル オブジェクトを作成するためにシングルトン チャネル ファクトリを保持しています。  チャネル ファクトリは、`GetInstanceAddress` が呼び出されるとチャネルを作成し、このチャネルに関連付けられているリモート アドレスをポイントする <xref:System.ServiceModel.EndpointAddress10> オブジェクトを作成します。   <xref:System.ServiceModel.EndpointAddress10> は、値渡しでクライアントに返すことのできるデータ型です。
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
@@ -325,11 +324,11 @@ public class SessionBoundFactory : ISessionBoundFactory
 ### <a name="step-3-configure-and-start-the-wcf-services"></a>手順 3: WCF サービスを構成して開始する  
  これらのサービスをホストするには、サーバーの構成ファイル (web.config) に以下を追加する必要があります。  
   
-1.  セッションフル オブジェクトのエンドポイントを示す `<client>` セクションを追加します。  このシナリオでは、サーバーもクライアントとして機能するので、それが有効となるように構成する必要があります。  
+1. セッションフル オブジェクトのエンドポイントを示す `<client>` セクションを追加します。  このシナリオでは、サーバーもクライアントとして機能するので、それが有効となるように構成する必要があります。  
   
-2.  `<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。  これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。  
+2. `<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。  これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。  
   
- これらの設定のある構成ファイルの例を次に示します。  
+ これらの設定を含む構成ファイルの例を次に示します。  
   
 ```xml  
 <configuration>  
@@ -390,13 +389,13 @@ sessionBoundServiceHost.Open();
   
  サービスを呼び出すには、クライアントにコードを追加して、以下を実行するようにします。  
   
-1.  `ISessionBoundFactory` サービスへのチャネルを作成します。  
+1. `ISessionBoundFactory` サービスへのチャネルを作成します。  
   
-2.  チャネルを使用して `ISessionBoundFactory` サービスを呼び出し、<xref:System.ServiceModel.EndpointAddress10> オブジェクトを取得します。  
+2. チャネルを使用して `ISessionBoundFactory` サービスを呼び出し、<xref:System.ServiceModel.EndpointAddress10> オブジェクトを取得します。  
   
-3.  <xref:System.ServiceModel.EndpointAddress10> を使用してチャネルを作成し、セッションフル オブジェクトを取得します。  
+3. <xref:System.ServiceModel.EndpointAddress10> を使用してチャネルを作成し、セッションフル オブジェクトを取得します。  
   
-4.  `SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。  
+4. `SetCurrentValue` および `GetCurrentValue` メソッドを呼び出して、複数の呼び出しの間で同じオブジェクト インスタンスが使用されることを示します。  
   
 ```csharp  
 ChannelFactory<ISessionBoundFactory> factory =  
@@ -421,8 +420,9 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
-- [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [クライアントを構築する](../../../docs/framework/wcf/building-clients.md)
-- [双方向サービス](../../../docs/framework/wcf/feature-details/duplex-services.md)
+## <a name="see-also"></a>参照
+
+- [基本的な WCF プログラミング](../wcf/basic-wcf-programming.md)
+- [サービスの設計と実装](../wcf/designing-and-implementing-services.md)
+- [クライアントを構築する](../wcf/building-clients.md)
+- [双方向サービス](../wcf/feature-details/duplex-services.md)

@@ -1,0 +1,11 @@
+- name: Accessing Application Settings
+  href: index.md
+  items:
+    - name: '方法: ユーザー設定のためのプロパティ グリッドを作成する'
+      href: how-to-create-property-grids-for-user-settings.md
+    - name: '方法: ユーザー設定を永続化する'
+      href: how-to-persist-user-settings.md
+    - name: '方法: ユーザー設定を変更する'
+      href: how-to-change-user-settings.md
+    - name: '方法: アプリケーション設定を読み取る'
+      href: how-to-read-application-settings.md

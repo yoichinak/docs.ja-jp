@@ -2,19 +2,19 @@
 title: TREAT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b77f156-55de-4cb4-8154-87f707d4c635
-ms.openlocfilehash: 1a65c73b8c6013c2b78343224c5bbb925101f9f3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 38099fa83ed78b40d46faeb5e617157f7aa7c1a1
+ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903777"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72319264"
 ---
 # <a name="treat-entity-sql"></a>TREAT (Entity SQL)
 特定の基本データ型のオブジェクトを指定の派生型のオブジェクトとして処理します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 TREAT ( expression as type)  
 ```  
   
@@ -23,13 +23,13 @@ TREAT ( expression as type)
  エンティティを返す任意の有効なクエリ式。  
   
 > [!NOTE]
->  指定の式の型は、特定のデータ型のサブタイプである必要があります。または、データ型は式の型のサブタイプである必要があります。  
+> 指定の式の型は、特定のデータ型のサブタイプである必要があります。または、データ型は式の型のサブタイプである必要があります。  
   
  `type`  
  エンティティ型。 型は名前空間で修飾する必要があります。  
   
 > [!NOTE]
->  指定の式は、特定のデータ型のサブタイプである必要があります。または、データ型は式のサブタイプである必要があります。  
+> 指定の式は、特定のデータ型のサブタイプである必要があります。または、データ型は式のサブタイプである必要があります。  
   
 ## <a name="return-value"></a>戻り値  
  指定されたデータ型の値。  
@@ -39,7 +39,7 @@ TREAT ( expression as type)
   
  TREAT は、次のようにクエリを実行できる継承シナリオで使用されます。  
   
-```  
+```sql  
 SELECT TREAT(p AS NamespaceName.Employee)  
 FROM ContainerName.Person AS p  
 WHERE p IS OF (NamespaceName.Employee)   
@@ -48,7 +48,7 @@ WHERE p IS OF (NamespaceName.Employee)
  このクエリは、 `Person` エンティティを `Employee` 型にキャストします。 p の値が実際には `Employee`型でない場合、この式は `null`値を返します。  
   
 > [!NOTE]
->  指定された式`Employee`指定したデータ型のサブタイプである必要があります`Person`データ型の式のサブタイプである必要があります。 そうでない場合は、コンパイル時にエラーが発生します。  
+> 指定された式 `Employee` は、指定されたデータ型のサブタイプである必要があります `Person`、またはデータ型が式のサブタイプである必要があります。 そうでない場合は、コンパイル時にエラーが発生します。  
   
  次の表に、いくつかの通常パターンと一般的でないパターンにおける TREAT の動作を示します。 すべての例外はクライアント側にスローされてから、プロバイダーが呼び出されます。  
   
@@ -64,8 +64,9 @@ WHERE p IS OF (NamespaceName.Employee)
 ## <a name="example"></a>例  
  次の [!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリでは、TREAT 演算子を使用して、Course 型のオブジェクトを OnsiteCourse 型のオブジェクトのコレクションに変換します。 このクエリは、 [School モデル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))に基づいています。  
   
- [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
+ [!code-sql[DP EntityServices Concepts#TREAT_ISOF](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#treat_isof)]  
   
 ## <a name="see-also"></a>関連項目
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [NULL 値が許容される構造化型](../../../../../../docs/framework/data/adonet/ef/language-reference/nullable-structured-types-entity-sql.md)
+
+- [Entity SQL リファレンス](entity-sql-reference.md)
+- [NULL 値が許容される構造化型](nullable-structured-types-entity-sql.md)

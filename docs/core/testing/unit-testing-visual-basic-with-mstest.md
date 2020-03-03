@@ -4,19 +4,18 @@ description: MSTest を使用した Visual Basic ソリューションのサン�
 author: billwagner
 ms.author: wiwagn
 ms.date: 09/01/2017
-dev_langs:
-- vb
-ms.custom: seodec18
-ms.openlocfilehash: cc4f84551d28ad531713e31a27df723a78b338cb
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 14c145ffc227078378897feeb75db0df8da4be6f
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242465"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714249"
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet テストと MStest を使用した .NET Core ライブラリでの単体テスト Visual Basic
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet テストと MSTest を使用した .NET Core ライブラリでの単体テスト Visual Basic
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>ソース プロジェクトの作成
 
@@ -24,17 +23,15 @@ ms.locfileid: "53242465"
 この新しいディレクトリ内で [`dotnet new sln`](../tools/dotnet-new.md) を実行して、ソリューションを新たに作成します。 こうすることで、クラス ライブラリと単体テスト プロジェクトの両方を管理しやすくなります。
 ソリューションのディレクトリ内で、*PrimeService* ディレクトリを作成します。 現時点のディレクトリとファイルの構造は次のようになっています。
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService
 ```
 
-*PrimeService* を現在のディレクトリにし、[`dotnet new classlib -lang VB`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。 *Class1.VB* の名前を *PrimeService.VB* に変更します。 テスト駆動開発 (TDD) を行うには、`PrimeService` クラスのエラーが発生する実装を作成します。
+*PrimeService* を現在のディレクトリにし、[`dotnet new classlib -lang VB`](../tools/dotnet-new.md) を実行してソース プロジェクトを作成します。 *Class1.VB* の名前を *PrimeService.VB* に変更します。 `PrimeService` クラスのエラーが発生する実装を作成します。
 
 ```vb
-Imports System
-
 Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean
@@ -44,13 +41,13 @@ Namespace Prime.Services
 End Namespace
 ```
 
-*unit-testing-vb-using-stest* ディレクトリに戻ります。 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) を実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
+*unit-testing-vb-using-mstest* ディレクトリに戻ります。 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) を実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
 
 ## <a name="creating-the-test-project"></a>テスト プロジェクトの作成
 
 次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService
@@ -71,7 +68,7 @@ End Namespace
 
 テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` によって、MSTest と MSTest ランナーが追加されています。 ここで、プロジェクトに別の依存関係として `PrimeService` クラス ライブラリを追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -79,7 +76,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 ソリューションの最終的なレイアウトは次のようになります。
 
-```
+```console
 /unit-testing-vb-mstest
     unit-testing-vb-mstest.sln
     /PrimeService
@@ -94,7 +91,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 
-TDD のアプローチでは、失敗するテストを 1 つ記述することを要求し、それを渡して、プロセスを繰り返します。 *PrimeService.Tests* ディレクトリから *UnitTest1.vb* を削除し、*PrimeService_IsPrimeShould.VB* という名前の新しい Visual Basic ファイルを作成します。 次のコードを追加します。
+失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *PrimeService.Tests* ディレクトリから *UnitTest1.vb* を削除し、*PrimeService_IsPrimeShould.VB* という名前の新しい Visual Basic ファイルを作成します。 次のコードを追加します。
 
 ```vb
 Imports Microsoft.VisualStudio.TestTools.UnitTesting
@@ -105,10 +102,10 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <TestMethod>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
-            Assert.False(result, "1 should not be prime")
+            Assert.IsFalse(result, "1 should not be prime")
         End Sub
 
     End Class
@@ -117,14 +114,14 @@ End Namespace
 
 `<TestClass>` 属性は、テストを含むクラスを表します。 `<TestMethod>` 属性は、テスト ランナーによって実行されるメソッドを表します。 *unit-testing-vb-mstest* で [`dotnet test`](../tools/dotnet-test.md) を実行してテストとクラス ライブラリをビルドし、それからテストを実行します。 MSTest テスト ランナーには、テストを実行するためのプログラムのエントリ ポイントが含まれています。 `dotnet test` を実行すると、作成した単体テスト プロジェクトを使用してテスト ランナーが開始されます。
 
-テストが失敗します。 実装はまだ作成していません。 最も単純な動作のコードを `PrimeService` クラスに記述して、このテストを作成します。
+テストが失敗します。 実装はまだ作成していません。 最も単純な動作のコードを `PrimeService` クラスに記述して、このテストが成功するようにします。
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 

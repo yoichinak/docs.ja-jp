@@ -3,34 +3,35 @@ title: NUnit と .NET Core による単体テスト C#
 description: dotnet テストおよび NUnit を使用したサンプル ソリューションを段階的に構築していく対話型エクスペリエンスを通じて、C# および .NET Core の単体テストの概念について説明します。
 author: rprouse
 ms.date: 08/31/2018
-ms.custom: seodec18
-ms.openlocfilehash: 00be8c2fdef88861cc1119b1593155e027a3ade5
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 8c099695b48e96ac47e41794082cd8dccaa0457a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307215"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157272"
 ---
 # <a name="unit-testing-c-with-nunit-and-net-core"></a>NUnit と .NET Core による単体テスト C#
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-nunit/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
+
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降のバージョン。
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="creating-the-source-project"></a>ソース プロジェクトの作成
 
 シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-using-nunit* というディレクトリを作成します。 この新しいディレクトリ内で、次のコマンドを実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。
 
-```console
+```dotnetcli
 dotnet new sln
 ```
- 
+
 次に、*PrimeService* ディレクトリを作成します。 これまでのところ、ディレクトリとファイルの構造は次のアウトラインのようになっています。
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -38,11 +39,11 @@ dotnet new sln
 
 *PrimeService* を現在のディレクトリとし、次のコマンドを実行してソース プロジェクトを作成します。
 
-```console
+```dotnetcli
 dotnet new classlib
 ```
 
-*Class1.cs* の名前を *PrimeService.cs* に変更します。 テスト駆動開発 (TDD) を行うには、`PrimeService` クラスのエラーが発生する実装を作成します。
+*Class1.cs* の名前を *PrimeService.cs* に変更します。 `PrimeService` クラスのエラーが発生する実装を作成します。
 
 ```csharp
 using System;
@@ -53,7 +54,7 @@ namespace Prime.Services
     {
         public bool IsPrime(int candidate)
         {
-            throw new NotImplementedException("Please create a test first");
+            throw new NotImplementedException("Please create a test first.");
         }
     }
 }
@@ -61,7 +62,7 @@ namespace Prime.Services
 
 *unit-testing-using-nunit* ディレクトリに戻ります。 次のコマンドを実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
 
-```console
+```dotnetcli
 dotnet sln add PrimeService/PrimeService.csproj
 ```
 
@@ -69,7 +70,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -80,7 +81,7 @@ dotnet sln add PrimeService/PrimeService.csproj
 
 *PrimeService.Tests* ディレクトリを現在のディレクトリとし、次のコマンドを使用して新しいプロジェクトを作成します。
 
-```console
+```dotnetcli
 dotnet new nunit
 ```
 
@@ -90,7 +91,7 @@ dotnet new nunit
 
 テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` では Microsoft テスト SDK、NUnit テスト フレームワーク、NUnit テスト アダプターを追加しました。 ここで、プロジェクトに別の依存関係として `PrimeService` クラス ライブラリを追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -98,7 +99,7 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 ソリューションの最終的なレイアウトは次のアウトラインのようになります。
 
-```
+```console
 /unit-testing-using-nunit
     unit-testing-using-nunit.sln
     /PrimeService
@@ -111,13 +112,13 @@ dotnet add reference ../PrimeService/PrimeService.csproj
 
 *unit-testing-vb-nunit* ディレクトリ内で次のコマンドを実行します。
 
-```console
+```dotnetcli
 dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 
-TDD のアプローチでは、失敗するテストを 1 つ記述することを要求し、それを渡して、プロセスを繰り返します。 *PrimeService.Tests*ディレクトリ内で、*UnitTest1.cs*ファイルの名前を *PrimeService_IsPrimeShould.cs* に変更し、その内容全体を次のコードに置き換えます。
+失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *PrimeService.Tests*ディレクトリ内で、*UnitTest1.cs*ファイルの名前を *PrimeService_IsPrimeShould.cs* に変更し、その内容全体を次のコードに置き換えます。
 
 ```csharp
 using NUnit.Framework;
@@ -128,19 +129,22 @@ namespace Prime.UnitTests.Services
     [TestFixture]
     public class PrimeService_IsPrimeShould
     {
-        private readonly PrimeService _primeService;
-
-        public PrimeService_IsPrimeShould()
-        {
-            _primeService = new PrimeService();
-        }
-
         [Test]
-        public void ReturnFalseGivenValueOf1()
+        public void IsPrime_InputIs1_ReturnFalse()
         {
-            var result = _primeService.IsPrime(1);
+            PrimeService primeService = CreatePrimeService();
+            var result = primeService.IsPrime(1);
 
             Assert.IsFalse(result, "1 should not be prime");
+        }
+
+        /*
+        More tests
+        */
+
+        private PrimeService CreatePrimeService()
+        {
+             return new PrimeService();
         }
     }
 }
@@ -159,7 +163,7 @@ public bool IsPrime(int candidate)
     {
         return false;
     }
-    throw new NotImplementedException("Please create a test first");
+    throw new NotImplementedException("Please create a test first.");
 }
 ```
 

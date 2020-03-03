@@ -14,15 +14,12 @@ helpviewer_keywords:
 - uppercase
 - lowercase
 ms.assetid: 6805f81b-e9ad-4387-9f4c-b9bdb21b87c0
-author: rpetrusha
-ms.author: ronpet
-ms.custom: seodec18
-ms.openlocfilehash: ce495ce01c970fb46cc7e7e374994fd34a7730a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 135cfa815c10d1a9dd9056604a4601678da9d5c4
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648973"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159352"
 ---
 # <a name="changing-case-in-net"></a>.NET の大文字と小文字の変更
 ユーザーからの入力を受け付けるアプリケーションを記述する場合、ユーザーがデータ入力に使用するケースを正確に予測することはできません。 多くの場合、特にユーザー インターフェイスにそれを表示する場合には、文字列に一貫性のあるケースを使用することが求められます。 次の表は、3 つのケース変更方式を示しています。 最初の 2 つの方式は、カルチャを受け入れるオーバーロードを提供します。  
@@ -34,9 +31,9 @@ ms.locfileid: "54648973"
 |<xref:System.Globalization.TextInfo.ToTitleCase%2A?displayProperty=nameWithType>|文字列をタイトル ケースに変換します。|  
   
 > [!WARNING]
->  <xref:System.String.ToUpper%2A?displayProperty=nameWithType> と <xref:System.String.ToLower%2A?displayProperty=nameWithType> の方式を使用して、文字列を比較したり等しいかどうかをテストしたりする目的で、それらの文字列を変換するべきではないことに注意してください。 詳細については、「[大小混合文字の文字列を比較する](#Comparing)」セクションを参照してください。  
+> <xref:System.String.ToUpper%2A?displayProperty=nameWithType> と <xref:System.String.ToLower%2A?displayProperty=nameWithType> の方式を使用して、文字列を比較したり等しいかどうかをテストしたりする目的で、それらの文字列を変換するべきではないことに注意してください。 詳細については、「[大小混合文字の文字列を比較する](#Comparing)」セクションを参照してください。  
   
-<a name="Comparing"></a>   
+<a name="Comparing"></a>
 ## <a name="comparing-strings-of-mixed-case"></a>大小混合文字の文字列を比較する  
  大小混合文字の文字列を比較してそれらの順序を判別するには、`comparisonType` パラメーターのある <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドのいずれかのオーバーロードを呼び出して、`comparisonType` 引数に <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType>、<xref:System.StringComparison.InvariantCultureIgnoreCase?displayProperty=nameWithType>、または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> の値を指定します。 現在のカルチャ以外の特定のカルチャを使用して比較する場合、`culture` と `options` の両方のパラメーターのある <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドのオーバーロードを呼び出して、`options` 引数に <xref:System.Globalization.CompareOptions.IgnoreCase?displayProperty=nameWithType> の値を指定します。  
   

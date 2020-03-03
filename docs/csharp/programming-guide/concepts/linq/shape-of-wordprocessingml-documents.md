@@ -2,12 +2,12 @@
 title: WordprocessingML ドキュメントの構造 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3791b5e0-c502-469b-bb75-a7bf6fdd0a94
-ms.openlocfilehash: 4c034950006b7ce09ad03e4579cc298f0b2dd218
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58c028fed465f45fdcf8f63f2119eb8e8b201e32
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739246"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76732674"
 ---
 # <a name="shape-of-wordprocessingml-documents-c"></a>WordprocessingML ドキュメントの構造 (C#)
 このトピックでは、WordprocessingML ドキュメントの XML 構造について説明します。  
@@ -87,13 +87,13 @@ using (Package wdPackage = Package.Open("SampleDoc.docx", FileMode.Open, FileAcc
 }  
 ```  
   
-## <a name="external-resources"></a>外部リソース  
- [Office (2007) Open XML ファイル形式の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)  
- [WordprocessingML の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)  
- [WordProcessingML ファイルの構造](http://officeopenxml.com/anatomyofOOXML.php)  
- [WordprocessingML の概要](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)  
- [Office 2003:XML リファレンス スキーマのダウンロード ページ](https://www.microsoft.com/en-us/download/details.aspx?id=101)  
-  
+## <a name="external-resources"></a>外部リソース
+
+- [Office (2007) Open XML ファイル形式の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2007/aa338205%28v=office.12%29)
+- [WordprocessingML の概要](https://docs.microsoft.com/previous-versions/office/developer/office-2003/aa212812%28v=office.11%29)
+- [WordProcessingML ファイルの構造](http://officeopenxml.com/anatomyofOOXML.php)
+- [WordprocessingML の概要](https://ericwhite.com/blog/introduction-to-wordprocessingml-series/)
+
 ## <a name="see-also"></a>関連項目
 
-- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作 (C#)](./shape-of-wordprocessingml-documents.md)

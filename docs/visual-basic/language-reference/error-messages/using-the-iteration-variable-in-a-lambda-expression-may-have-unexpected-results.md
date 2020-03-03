@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 358c7a988ae95c2326a26bc048f5436e11acb340
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3335da503b6fb9c33e44266997cc945214a3a365
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641591"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913088"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>ラムダ式内で繰り返し変数を使用すると、予期しない結果が発生する可能性があります。
 ラムダ式で繰り返し変数を使用する必要があります予期しない結果。 代わりに、ループ内でローカル変数を作成し、反復変数の値を割り当てます。  
@@ -57,13 +57,13 @@ End Module
   
  `5`  
   
- 既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」をご覧ください。  
+ 既定では、このメッセージは警告です。 警告を表示しない方法や、警告をエラーとして扱う方法の詳細については、「[Visual Basic での警告の構成](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   
  **エラー ID:** BC42324  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   反復変数の値をローカル変数に割り当てるし、ローカル変数をラムダ式で使用します。  
+- 反復変数の値をローカル変数に割り当てるし、ローカル変数をラムダ式で使用します。  
   
 ```vb  
 Module Module1  
@@ -84,4 +84,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

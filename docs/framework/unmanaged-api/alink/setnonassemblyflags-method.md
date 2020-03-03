@@ -14,37 +14,36 @@ helpviewer_keywords:
 ms.assetid: f8ba6fc8-f5aa-4066-ac96-56332758f5ec
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 78a7dab69e716e1662a277a69c008474d97f9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dcb363a2a84b3c2e0438e45663b96d9a0f83f61
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619650"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445554"
 ---
 # <a name="setnonassemblyflags-method"></a>SetNonAssemblyFlags メソッド
-アセンブリに固有でないフラグを設定します。  
+アセンブリ固有ではないフラグを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetNonAssemblyFlags(  
     AssemblyFlags afFlags  
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `afFlags`  
  ALink フラグ。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

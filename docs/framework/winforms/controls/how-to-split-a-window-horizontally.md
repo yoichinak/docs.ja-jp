@@ -1,5 +1,5 @@
 ---
-title: '方法: ウィンドウを水平方向に分割します。'
+title: '方法: ウィンドウを水平方向に分割する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 651e265b337b106779aeefdfa49decd3725f1a53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ef3fe1210ae42c52a4fd7f23633d6566bc102a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701457"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956057"
 ---
-# <a name="how-to-split-a-window-horizontally"></a>方法: ウィンドウを水平方向に分割します。
-次のコード例は、分割するスプリッター、<xref:System.Windows.Forms.SplitContainer>コントロールの水平方向。  
+# <a name="how-to-split-a-window-horizontally"></a>方法: ウィンドウを水平方向に分割する
+次のコード例では、コントロールを<xref:System.Windows.Forms.SplitContainer>水平方向に分割する分割線を使用します。  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>コントロール、コントロール自体のない、スプリッターの方向を決定します。  
+> <xref:System.Windows.Forms.SplitContainer.Orientation%2A> コントロール<xref:System.Windows.Forms.SplitContainer>のプロパティは、コントロール自体ではなく、スプリッターの方向を決定します。  
   
 ### <a name="to-split-a-window-horizontally"></a>ウィンドウを水平方向に分割するには  
   
-1.  プロシージャ内で、設定、<xref:System.Windows.Forms.SplitContainer.Orientation%2A>のプロパティ、<xref:System.Windows.Forms.SplitContainer>に制御を<xref:System.Windows.Forms.Orientation.Horizontal>。  
+1. プロシージャ内で、 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> <xref:System.Windows.Forms.SplitContainer>コントロールのプロパティをに<xref:System.Windows.Forms.Orientation.Horizontal>設定します。  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -56,5 +56,6 @@ ms.locfileid: "54701457"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer コントロール](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer コントロール](splitcontainer-control-windows-forms.md)

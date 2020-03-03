@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 9544b711-e669-4eaf-8630-ee862e5e4489
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 69af794d5405894d24f0d7545613a0e85ca3ec6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6b5b3b3b5a3613668f4470f48083ae010cc9d336
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574015"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445254"
 ---
 # <a name="imetadataimport2getmethodspecprops-method"></a>IMetaDataImport2::GetMethodSpecProps メソッド
-指定した MethodSpec によって参照されるメソッドのメタデータ署名のトークンを取得します。  
+指定した MethodSpec トークンによって参照されるメソッドのメタデータシグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMethodSpecProps (  
    [in]  mdMethodSpec     mi,  
    [out] mdToken          *tkParent,  
@@ -38,28 +36,29 @@ HRESULT GetMethodSpecProps (
 );   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mi`  
- [in]メソッドのインスタンス化を表す MethodSpec トークンです。  
+ からメソッドのインスタンス化を表す MethodSpec トークン。  
   
  `tkParent`  
- [out]メソッド定義を表す MethodDef または新しいトークンへのポインター。  
+ 入出力メソッド定義を表す MethodDef または MethodRef トークンへのポインター。  
   
  `ppvSigBlob`  
- [out]メソッドのバイナリ メタデータ シグネチャへのポインター。  
+ 入出力メソッドのバイナリメタデータシグネチャへのポインター。  
   
  `pcbSigBlob`  
- [out]サイズ (バイト単位) の`ppvSigBlob`します。  
+ 入出力`ppvSigBlob`のサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

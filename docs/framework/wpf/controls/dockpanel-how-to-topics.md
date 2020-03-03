@@ -7,20 +7,20 @@ helpviewer_keywords:
 - DockPanel control [WPF], how-to topics
 - controls [WPF], DockPanel
 ms.assetid: 62544800-db6a-4124-8cb0-ed9bc4a90901
-ms.openlocfilehash: f5cac5055ed3d60f37955b20de923fe1735c3900
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ff2f23a0515f8a086d3082c6bf3000c49ed91dfd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911860"
 ---
 # <a name="dockpanel-how-to-topics"></a>DockPanel に関する「方法」トピック
-このセクションのトピックを使用する方法について説明、<xref:System.Windows.Controls.DockPanel>レイアウト コンテナーの端にある子要素を配置する要素。  
+このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.DockPanel>要素をレイアウト コンテナーの端に沿って子要素を配置します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Dock の値を取得または設定する](../../../../docs/framework/wpf/controls/how-to-get-or-set-a-dock-value.md)  
- [DockPanel を作成する](../../../../docs/framework/wpf/controls/how-to-create-a-dockpanel.md)  
- [DockPanel 要素を使用して領域を分割する](../../../../docs/framework/wpf/controls/how-to-partition-space-by-using-the-dockpanel-element.md)  
+ [Dock の値を取得または設定する](how-to-get-or-set-a-dock-value.md)  
+ [DockPanel を作成する](how-to-create-a-dockpanel.md)  
+ [DockPanel 要素を使用して領域を分割する](how-to-partition-space-by-using-the-dockpanel-element.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ ms.locfileid: "33550655"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

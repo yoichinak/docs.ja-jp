@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], about SoundPlayer class
 - sounds [Windows Forms], playing
 ms.assetid: fcebb938-62b9-4677-9cbe-6465bc863e22
-ms.openlocfilehash: 041e7d0170bc98797278e209fd86cff0f82db9fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff23cbfa78b803d4526e7a7c389fd5d458a967c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972004"
 ---
 # <a name="soundplayer-class-overview"></a>SoundPlayer クラスの概要
 <xref:System.Media.SoundPlayer> クラスを使用すると、アプリケーションにサウンドを簡単に組み込むことができます。  
@@ -35,5 +35,6 @@ ms.locfileid: "54690687"
 |<xref:System.Media.SoundPlayer.LoadCompleted> イベント|サウンドの読み込みが試みられた後に発生します。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Media.SoundPlayer>
 - <xref:System.Media.SystemSounds>

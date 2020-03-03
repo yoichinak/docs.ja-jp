@@ -1,15 +1,15 @@
 ---
-title: '方法: 式ツリーを使用して動的クエリをビルドする (C#)'
+title: 式ツリーを使用して動的クエリをビルドする方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
-ms.openlocfilehash: dec9d84f7fa37f859e307f2a653464608684bc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499552"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75635900"
 ---
-# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>方法: 式ツリーを使用して動的クエリをビルドする (C#)
+# <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>式ツリーを使用して動的クエリをビルドする方法 (C#)
 LINQ では、<xref:System.Linq.IQueryable%601> を実装するデータ ソースをターゲットとする構造化されたクエリを表すために、式ツリーが使われます。 たとえば、LINQ プロバイダーは、リレーショナル データ ストアのクエリを行うために、<xref:System.Linq.IQueryable%601> インターフェイスを実装します。 C# コンパイラは、このようなデータ ソースをターゲットとするクエリをコンパイルして、実行時に式ツリーを作成するコードを生成します。 クエリ プロバイダーは式ツリー データ構造を走査して、データ ソースに適したクエリ言語に変換できます。  
   
  LINQ では、<xref:System.Linq.Expressions.Expression%601> 型の変数に代入されるラムダ式を表すためにも、式ツリーが使われます。  
@@ -19,7 +19,10 @@ LINQ では、<xref:System.Linq.IQueryable%601> を実装するデータ ソー�
 ## <a name="example"></a>例  
  次の例では、式ツリーを使って `IQueryable` データ ソースに対するクエリを作成して実行する方法を示します。 このコードは、次のクエリを表す式ツリーを作成します。  
   
- `companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16)).OrderBy(company => company)`  
+ ```csharp
+ companies.Where(company => (company.ToLower() == "coho winery" || company.Length > 16))
+          .OrderBy(company => company)
+ ```
   
  クエリ全体を構成する式を表す式ツリーの作成には、<xref:System.Linq.Expressions> 名前空間のファクトリ メソッドが使われます。 標準クエリ演算子メソッドの呼び出しを表す式は、これらのメソッドの <xref:System.Linq.Queryable> の実装を参照します。 最終的な式ツリーが、`IQueryable` データ ソースのプロバイダーの <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 実装に渡されて、`IQueryable` 型の実行可能なクエリが作成されます。 結果は、そのクエリ変数を列挙することにより取得されます。  
   
@@ -100,16 +103,10 @@ foreach (string company in results)
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   新しい**コンソール アプリケーション** プロジェクトを作成します。  
-  
--   System.Core.dll がまだ参照されていない場合は、参照を追加します。  
-  
--   System.Linq.Expressions 名前空間をインクルードします。  
-  
--   例のコードをコピーして、`Main` メソッドに貼り付けます。  
+- System.Linq.Expressions 名前空間をインクルードします。  
   
 ## <a name="see-also"></a>関連項目
 
-- [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
-- [方法: 式ツリーを実行する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
-- [方法: 実行時に述語フィルターを動的に指定する](../../../../csharp/programming-guide/linq-query-expressions/how-to-dynamically-specify-predicate-filters-at-runtime.md)
+- [式ツリー (C#)](./index.md)
+- [式ツリーを実行する方法 (C#)](./how-to-execute-expression-trees.md)
+- [実行時における述語フィルターの動的指定](../../../linq/dynamically-specify-predicate-filters-at-runtime.md)

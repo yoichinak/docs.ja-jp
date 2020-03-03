@@ -1,13 +1,13 @@
 ---
-title: XDocument クラスの概要 (Visual Basic)
+title: XDocument クラスの概要
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
-ms.openlocfilehash: 99a219087afdc097b62822ff290f61b96fb12b22
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbc1ccca53978da07f31c0ba7e54eca9f06b0e72
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653724"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74349290"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>XDocument クラスの概要 (Visual Basic)
 このトピックでは、<xref:System.Xml.Linq.XDocument> クラスについて説明します。  
@@ -22,15 +22,15 @@ ms.locfileid: "54653724"
 ## <a name="components-of-xdocument"></a>XDocument のコンポーネント  
  <xref:System.Xml.Linq.XDocument> には、次の要素を含めることができます。  
   
--   1 つの <xref:System.Xml.Linq.XDeclaration> オブジェクト。 <xref:System.Xml.Linq.XDeclaration> では、XML 宣言の関連部分である XML バージョン、ドキュメントのエンコード、および XML ドキュメントがスタンドアロンかどうかを指定できます。  
+- 1 つの <xref:System.Xml.Linq.XDeclaration> オブジェクト。 <xref:System.Xml.Linq.XDeclaration> では、XML 宣言の関連部分である XML バージョン、ドキュメントのエンコード、および XML ドキュメントがスタンドアロンかどうかを指定できます。  
   
--   1 つの <xref:System.Xml.Linq.XElement> オブジェクト。 これは XML ドキュメントのルート ノードです。  
+- 1 つの <xref:System.Xml.Linq.XElement> オブジェクト。 これは XML ドキュメントのルート ノードです。  
   
--   任意の数の <xref:System.Xml.Linq.XProcessingInstruction> オブジェクト。 処理命令は、XML を処理するアプリケーションに情報を伝達します。  
+- 任意の数の <xref:System.Xml.Linq.XProcessingInstruction> オブジェクト。 処理命令は、XML を処理するアプリケーションに情報を伝達します。  
   
--   任意の数の <xref:System.Xml.Linq.XComment> オブジェクト。 コメントは、ルート要素の兄弟になります。 XML ドキュメントをコメントで始めることは無効であるため、<xref:System.Xml.Linq.XComment> オブジェクトをリストの最初の引数にすることはできません。  
+- 任意の数の <xref:System.Xml.Linq.XComment> オブジェクト。 コメントは、ルート要素の兄弟になります。 XML ドキュメントをコメントで始めることは無効であるため、<xref:System.Xml.Linq.XComment> オブジェクトをリストの最初の引数にすることはできません。  
   
--   DTD 用の 1 つの <xref:System.Xml.Linq.XDocumentType>。  
+- DTD 用の 1 つの <xref:System.Xml.Linq.XDocumentType>。  
   
  <xref:System.Xml.Linq.XDocument> をシリアル化すると、`XDocument.Declaration` が `null` である場合でも、作成者が `Writer.Settings.OmitXmlDeclaration` を `false` (既定値) に設定していれば、出力には XML 宣言が含まれます。  
   
@@ -81,5 +81,6 @@ doc.Save("test.xml")
 <!--This is another comment.-->  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)

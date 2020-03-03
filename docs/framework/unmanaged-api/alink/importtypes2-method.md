@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 32f3ba58-9695-41e9-ba58-fd19e45ed396
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 60f2057330f1a06cdd3e6ff5560f8ca7aeefe857
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dae903ab76ab83ac0818c4bc4a76e81094bdf65
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725728"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445669"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 メソッド
-型のインポートを開始します。 使用してインポートする各スコープから種類のインポートを開始するには、このメソッドを呼び出す[ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)します。  
+型のインポートを開始します。 [Importfile メソッド](importfile-method.md)を使用してインポートされた各スコープから型のインポートを開始するには、このメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ImportTypes2(  
     mdAssembly AssemblyID,  
     mdToken FileToken,  
@@ -39,32 +37,33 @@ HRESULT ImportTypes2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- インポートするアセンブリの ID。  
+ インポート先のアセンブリの ID。  
   
  `FileToken`  
  インポート元のファイルの ID。  
   
  `dwScope`  
- インポート元の 0 から始まるスコープです。  
+ インポート元の0から始まるスコープ。  
   
  `phEnum`  
- 指定されたスコープで、型の列挙子のハンドルを受け取ります。  
+ 指定されたスコープ内の型の列挙子ハンドルを受け取ります。  
   
  `ppImportScope`  
- 必要に応じて受信[IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)インターフェイス。  
+ 必要に応じて、 [IMetaDataImport2 インターフェイス](../metadata/imetadataimport2-interface.md)インターフェイスを受け取ります。  
   
  `pdwCountOfTypes`  
- 必要に応じて、指定したスコープの種類の数を受け取ります。  
+ 必要に応じて、指定されたスコープ内の型の数を受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [IALink インターフェイス](ialink-interface.md)
+- [ALink API](index.md)

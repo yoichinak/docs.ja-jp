@@ -2,18 +2,18 @@
 title: C# 6 の新機能 - C# ガイド
 description: C# バージョン 6 の新機能について説明します
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: da40b4c9d4af0094fdd907c542e971ba55086e0f
+ms.sourcegitcommit: a97ecb94437362b21fffc5eb3c38b6c0b4368999
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084681"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68971383"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 の新機能
 
 C# の 6.0 リリースには、開発者の生産性を向上させる多くの機能が含まれています。 これらの機能がもたらす全体的な効果として、より読みやすく簡潔なコードを記述できるようになりました。 一般的なベスト プラクティスを多数反映することで、構文に使用される形式的な記述が減っています。 形式的な記述が減ったことで、設計の意図が理解しやすくなっています。 これらの機能を十分に学習すると、生産性が向上し、より読みやすいコードを記述できるようになります。 言語のコンストラクトよりも機能により集中することができます。
 
-この記事の残りの部分では、これらの各機能の概要と、各機能をより詳しく学習するためのリンクを提供します。 チュートリアル セクションの [C# 6 の対話形式チュートリアル](../tutorials/exploration/csharp-6.yml)で、機能を探究することもできます。
+この記事の残りの部分では、これらの各機能の概要と、各機能をより詳しく学習するためのリンクを提供します。 チュートリアル セクションの [C# 6 の対話型探索](../tutorials/exploration/csharp-6.yml)で、機能を探究することもできます。
 
 ## <a name="read-only-auto-properties"></a>読み取り専用の自動プロパティ
 
@@ -21,7 +21,7 @@ C# の 6.0 リリースには、開発者の生産性を向上させる多くの
 
 [!code-csharp[ReadOnlyAutoProperty](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoProperty)]
 
-`FirstName` プロパティと `LastName` プロパティは、コンス トラクターの本体でのみ設定できます。
+`FirstName` プロパティと `LastName` プロパティは、同じクラスのコンストラクターの本体内でのみ設定できます。
 
 [!code-csharp[ReadOnlyAutoPropertyConstructor](../../../samples/snippets/csharp/new-in-6/newcode.cs#ReadOnlyAutoPropertyConstructor)]
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-文字列補間を開始するには、[C# における文字列補間](../tutorials/intro-to-csharp/interpolated-strings.yml)の対話型チュートリアル、[文字列補間](../language-reference/tokens/interpolated.md)に関する記事、および「[C# における文字列補間](../tutorials/string-interpolation.md)」のチュートリアルを参照してください。
+文字列補間を開始するには、[C# における文字列補間](../tutorials/exploration/interpolated-strings.yml)の対話型チュートリアル、[文字列補間](../language-reference/tokens/interpolated.md)に関する記事、および「[C# における文字列補間](../tutorials/string-interpolation.md)」のチュートリアルを参照してください。
 
 ## <a name="exception-filters"></a>例外フィルター
 
@@ -137,7 +137,7 @@ var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 
 ## <a name="the-nameof-expression"></a>`nameof` 式
 
-`nameof` 式はシンボルの名前を評価します。 この式は、変数、プロパティ、またはメンバー フィールドの名前が必要なときに便利です。 `nameof` の用途として特に一般的なものの 1 つは、例外の原因となったシンボルの名前を取得することです。
+[nameof](../language-reference/operators/nameof.md) 式では、シンボルの名前が評価されます。 この式は、変数、プロパティ、またはメンバー フィールドの名前が必要なときに便利です。 `nameof` の用途として特に一般的なものの 1 つは、例外の原因となったシンボルの名前を取得することです。
 
 [!code-csharp[nameof](../../../samples/snippets/csharp/new-in-6/NewCode.cs#UsingStaticString)]
 

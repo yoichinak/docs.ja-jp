@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 3b93bcff-62a4-47b2-babc-6bcf4216119a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dfa4db00662ed3abffbfd01e6e36005cd272a271
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182424632e4f81dfdf86e87dc6bb2c75c2780fce
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664591"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793771"
 ---
-# <a name="efngetmanagedobjectfieldinfo-function"></a>_EFN_GetManagedObjectFieldInfo 関数
+# <a name="_efn_getmanagedobjectfieldinfo-function"></a>\_EFN\_GetManagedObjectFieldInfo 関数
 指定したオブジェクト ポインターとフィールド名を使用して、オブジェクトの先頭からフィールドまでのオフセットとフィールドの値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT _EFN_GetManagedObjectFieldInfo(  
     [in]  PDEBUG_CLIENT Client,  
     [in]  ULONG64       objAddr,  
@@ -38,33 +36,34 @@ HRESULT _EFN_GetManagedObjectFieldInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `Client`  
- [in]デバッグ クライアントへのポインター。  
+ からデバッグクライアントへのポインター。  
   
  `objAddr`  
- [in]マネージ オブジェクトのポインター。  
+ からマネージオブジェクトポインター。  
   
  szFieldName  
- [in]フィールド名にマネージ オブジェクトのポインター。  
+ からフィールド名へのマネージオブジェクトポインター。  
   
  `pValue`  
- [out]フィールドの値。 このパラメーターには、null を指定できます。  
+ 入出力フィールド値。 このパラメーターは、null でもかまいません。  
   
  `pOffset`  
- [out]オフセット`objAddr`フィールドにします。 このパラメーターには、null を指定できます。  
+ 入出力`objAddr` からフィールドへのオフセット。 このパラメーターは、null でもかまいません。  
   
-## <a name="remarks"></a>Remarks  
- オフセットが 0 の場合は、オフセットは書き込まれません。  
+## <a name="remarks"></a>コメント  
+ オフセットが0の場合、オフセットは書き込まれません。  
   
- ないマネージ コードのスレッドで現在のコンテキストの場合、関数は、0xa0 の施設の値と 0x1000 のエラー コードをマネージを返します。  
+ 現在コンテキスト内にあるスレッドにマネージコードがない場合、関数は、ファシリティ値が0xa0 でエラーコードが0x1000 の HRESULT SOS_E_NOMANAGEDCODE を返します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** SOS_Stacktrace.h  
+ **ヘッダー:** SOS_Stacktrace  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ グローバル静的関数](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+
+- [デバッグ グローバル静的関数](debugging-global-static-functions.md)

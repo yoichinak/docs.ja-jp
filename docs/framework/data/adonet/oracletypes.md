@@ -2,24 +2,24 @@
 title: OracleTypes
 ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
-ms.openlocfilehash: e849de365fa9922a9c1552f2d25b613d1df01d2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9caf30111fc8f856af69571d507c243efa549343
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529441"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783268"
 ---
 # <a name="oracletypes"></a>OracleTypes
 .NET Framework Data Provider for Oracle には、Oracle データ型で使用されるいくつかの構造体が含まれています。 その中には、<xref:System.Data.OracleClient.OracleNumber> や <xref:System.Data.OracleClient.OracleString> があります。  
   
 > [!NOTE]
->  これらの構造体に関する詳細な一覧については、「<xref:System.Data.OracleClient>」を参照してください。  
+> これらの構造体に関する詳細な一覧については、「<xref:System.Data.OracleClient>」を参照してください。  
   
  C# の例を以下に示します。  
   
--   Oracle テーブルを作成し、データを読み込みます。  
+- Oracle テーブルを作成し、データを読み込みます。  
   
--   <xref:System.Data.OracleClient.OracleDataReader> を使用してデータにアクセスし、いくつかの <xref:System.Data.OracleClient.OracleType> 構造体を使用してデータを表示します。  
+- <xref:System.Data.OracleClient.OracleDataReader> を使用してデータにアクセスし、いくつかの <xref:System.Data.OracleClient.OracleType> 構造体を使用してデータを表示します。  
   
 ## <a name="creating-an-oracle-table"></a>Oracle テーブルの作成  
  この例では、Oracle テーブルを作成し、データを読み込みます。 次の例を実行する前に、この例を実行する必要があります。  
@@ -52,7 +52,7 @@ public void Setup(string connectionString)
 ```  
   
 ## <a name="retrieving-data-from-the-oracle-table"></a>Oracle テーブルからのデータの取得  
- この例では、 **OracleDataReader**データにアクセスするいくつかを使用して**OracleType**構造データを表示します。  
+ この例では、 **OracleDataReader**を使用してデータにアクセスし、いくつかの**OracleType**構造を使用してデータを表示します。  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  
@@ -116,5 +116,6 @@ public void ReadOracleTypesExample(string connectionString)
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [Oracle および ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Oracle および ADO.NET](oracle-and-adonet.md)
+- [ADO.NET の概要](ado-net-overview.md)

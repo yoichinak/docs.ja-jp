@@ -3044,26 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: 5eb00854f27a195ac3121aea16e2889897e6ef3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87d7ce07523af87ae4d2746201ed7af576b3e3a8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667662"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053312"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>申し訳ありませんが、Visual Basic エラーに関する特定の情報はありません
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に尋ねることができます。  
   
- [Visual Basic 言語](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
+ [Visual Basic 言語](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
  質問の Visual Basic 言語の構文やコンパイラや議論のフォーラムを提供します。  
   
- [Visual Basic の相互運用とアップグレード](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
+ [Visual Basic の相互運用とアップグレード](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
  に関する質問フォーラムを提供し、Visual Basic にアップグレードして、相互運用機能の操作を発行します。  
   
- [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
  Visual Studio 環境で作業する方法に関する質問のためのフォーラムを提供します。  
   
- [Visual Basic 全般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
+ [Visual Basic 全般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
  に関する質問フォーラムを提供し、その他のフォーラムで議論されていない Visual Basic を使用して発行します。  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
@@ -3073,5 +3073,6 @@ ms.locfileid: "54667662"
  [Visual Basic プログラマのための追加リソース](../../visual-basic/getting-started/additional-resources.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [Visual Basic プログラミング ガイド](../../visual-basic/programming-guide/index.md)
 - [Visual Basic リファレンス](../../visual-basic/reference/index.md)

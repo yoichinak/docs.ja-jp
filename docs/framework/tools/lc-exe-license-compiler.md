@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17ab7317ff1147dc79fae4ef3068cd9bc2143907
+ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601697"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72774206"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (ライセンス コンパイラ)
 ライセンス コンパイラは、ライセンス情報を含むテキスト ファイルを読み込んで、バイナリ ファイルを生成します。このバイナリ ファイルは、リソースとして共通言語ランタイムの実行可能ファイルに埋め込むことができます。  
@@ -26,15 +26,15 @@ ms.locfileid: "54601697"
   
  プロジェクトをビルドするときにライセンス コンパイラを使用した場合は、32 ビットと 64 ビットの間のクロス コンパイルはサポートされません。 これは、ライセンス コンパイラはアセンブリを読み込む必要があり、32 ビット アプリケーションからの 64 ビット アセンブリの読み込みおよびその逆は、許可されないためです。 この場合は、コマンド ラインからライセンス コンパイラを使用して手動でライセンスをコンパイルし、対応するアーキテクチャを指定します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console
       lc /target:  
-      targetPE /complist:filename [/outdir:path]  
+targetPE /complist:filename [-outdir:path]  
 /i:modules [/nologo] [/v]  
 ```  
   
@@ -52,34 +52,34 @@ ms.locfileid: "54601697"
   
 ## <a name="example"></a>例  
   
-1.  `HostApp.exe` という名前のアプリケーション内の `Samples.DLL` に格納されているライセンス付きコントロール `MyCompany.Samples.LicControl1` を使用すると *、* 次の内容を含む `HostAppLic.txt` を作成できます。  
+1. `HostApp.exe` という名前のアプリケーション内の `Samples.DLL` に格納されているライセンス付きコントロール `MyCompany.Samples.LicControl1` を使用すると *、* 次の内容を含む `HostAppLic.txt` を作成できます。  
   
-    ```  
+    ```text
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  `HostApp.exe.licenses` という名前の .licenses ファイルを次のコマンドで作成します。  
+2. `HostApp.exe.licenses` という名前の .licenses ファイルを次のコマンドで作成します。  
   
-    ```  
+    ```console  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  この .licenses ファイルをリソースとして含む  `HostApp.exe` を作成します。 C# アプリケーションを作成していた場合は、次のコマンドを使用してアプリケーションを作成します。  
+3. この .licenses ファイルをリソースとして含む  `HostApp.exe` を作成します。 C# アプリケーションを作成していた場合は、次のコマンドを使用してアプリケーションを作成します。  
   
-    ```  
+    ```console
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
     ```  
   
  `myApp.licenses`、`hostapplic.txt`、および `hostapplic2.txt` で指定されるライセンス付きコンポーネントの一覧から `hostapplic3.txt` をコンパイルするコマンドを次に示します。 引数 `modulesList` によって、ライセンス付きコンポーネントを含むモジュールを指定します。  
   
-```  
+```console  
 lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: hostapplic3.txt /i:modulesList  
 ```  
   
 ## <a name="response-file-example"></a>応答ファイルの例  
  次のリストは、`response.rsp` 応答ファイルの例を示しています。 応答ファイルの詳細については、「[応答ファイル](/visualstudio/msbuild/msbuild-response-files)」をご覧ください。  
   
-```  
+```text  
 /target:hostapp.exe  
 /complist:hostapplic.txt   
 /i:WFCPrj.dll   
@@ -88,11 +88,12 @@ lc /target:myApp /complist:hostapplic.txt /complist:hostapplic2.txt /complist: h
   
  次のコマンドラインで、この `response.rsp` ファイルを使用します。  
   
-```  
+```console  
 lc @response.rsp  
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ツール](../../../docs/framework/tools/index.md)
-- [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)
-- [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+
+- [ツール](index.md)
+- [Al.exe (アセンブリ リンカー)](al-exe-assembly-linker.md)
+- [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

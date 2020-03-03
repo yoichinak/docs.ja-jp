@@ -1,5 +1,5 @@
 ---
-title: As 句 (Visual Basic)
+title: As 句
 ms.date: 07/20/2015
 f1_keywords:
 - vb.as
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 893df117ce6ead444ef1da262782cc271102f4d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf1acbfeee150f1ea353ce134a4e94dab9928e8a
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672267"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350171"
 ---
 # <a name="as-clause-visual-basic"></a>As 句 (Visual Basic)
-導入されています、`As`句は、宣言ステートメントまたはジェネリック型パラメーターの制約リスト内のデータ型を識別します。  
+では、宣言ステートメントまたはジェネリック型パラメーターの制約リストのデータ型を識別する `As` 句が導入されています。  
   
 ## <a name="remarks"></a>コメント  
  キーワード `As` は次のコンテキストで使用できます。  
@@ -59,8 +59,9 @@ ms.locfileid: "54672267"
   
  [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
-## <a name="see-also"></a>関連項目
-- [方法: 新しい変数を作成します。](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
+## <a name="see-also"></a>参照
+
+- [方法 : 新しい変数を作成する](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [データの種類](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [型リスト](../../../visual-basic/language-reference/statements/type-list.md)

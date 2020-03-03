@@ -1,5 +1,5 @@
 ---
-title: <add> の <switches> 要素
+title: <switches> の <add> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -7,21 +7,21 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: 88cd8c9ba7244256ca9ddd3b2957f86d9485933c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: db2de681227dfdb7420808963219b9f52381f8fe
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273294"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088956"
 ---
-# <a name="add-element-for-switches"></a>\<追加 > 要素の\<スイッチ >
+# <a name="add-element-for-switches"></a>\<スイッチの > 要素を追加 \<
 トレース スイッチを設定するレベルを指定します。  
-  
- \<configuration>  
-\<system.diagnostics>  
-\<switches>  
-\<add>  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<** ](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**スイッチ**](switches-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**追加 >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -36,7 +36,7 @@ ms.locfileid: "55273294"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**name**|必須の属性です。<br /><br /> スイッチの名前を指定します。 この属性の値に対応、 *displayName*切り替えるコンス トラクターに渡されるパラメーター。|  
+|**name**|必須の属性です。<br /><br /> スイッチの名前を指定します。 この属性の値は、スイッチコンストラクターに渡される*displayName*パラメーターに対応します。|  
 |**value**|必須の属性です。<br /><br /> スイッチのレベルを指定します。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -51,10 +51,10 @@ ms.locfileid: "55273294"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- 構成ファイル内に配置して、トレース スイッチのレベルを変更できます。 スイッチの場合、 <xref:System.Diagnostics.BooleanSwitch>、オンとオフにすることができます。 スイッチの場合、<xref:System.Diagnostics.TraceSwitch>デバッグ メッセージをアプリケーションの出力やトレースの種類を指定するためにさまざまなレベルを割り当てることができます。  
+ トレーススイッチのレベルは、構成ファイルに配置することによって変更できます。 スイッチが <xref:System.Diagnostics.BooleanSwitch>の場合は、オンまたはオフにすることができます。 スイッチが <xref:System.Diagnostics.TraceSwitch>の場合は、別のレベルを割り当てて、アプリケーションが出力するトレースメッセージまたはデバッグメッセージの種類を指定できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、 **\<追加 >** を設定する要素、`General`トレース スイッチを<xref:System.Diagnostics.TraceLevel>レベル、および有効にする、`Data`ブール トレース スイッチ。  
+ 次の例では、 **\<add >** 要素を使用して `General` トレーススイッチを <xref:System.Diagnostics.TraceLevel> レベルに設定し、`Data` ブール型のトレーススイッチを有効にする方法を示します。  
   
 ```xml  
 <configuration>  
@@ -68,7 +68,8 @@ ms.locfileid: "55273294"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>
-- [トレースおよびデバッグ設定のスキーマ](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
+- [トレースおよびデバッグ設定のスキーマ](index.md)

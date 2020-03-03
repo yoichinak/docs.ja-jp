@@ -3,11 +3,11 @@ title: 標準エンドポイント
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
 ms.openlocfilehash: 395d910ddabc553cca47dcdd038f44b1470b3455
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747772"
 ---
 # <a name="standard-endpoints"></a>標準エンドポイント
 エンドポイントは、アドレス、バインディング、およびコントラクトを指定して定義します。 エンドポイントに設定できるその他のパラメーターには、動作構成、ヘッダー、リッスン URI などがあります。  特定の種類のエンドポイントでは、これらの値が変化しません。 たとえば、メタデータ交換エンドポイントでは、常に <xref:System.ServiceModel.Description.IMetadataExchange> コントラクトを使用します。 <xref:System.ServiceModel.Description.WebHttpEndpoint> などのその他のエンドポイントでは、指定されたエンドポイント動作が必要です。 一般的に使用されるエンドポイント プロパティの既定の値を設定することによって、エンドポイントの操作性を向上させることができます。 開発者は、標準エンドポイントを使用して、既定値を持つエンドポイント、またはエンドポイントの 1 つ以上のプロパティが変化しないエンドポイントを定義できます。  これらのエンドポイントによって、静的な性質の情報を指定する必要がないエンドポイントの使用が可能になります。 標準エンドポイントは、インフラストラクチャ エンドポイントおよびアプリケーション エンドポイントに使用できます。  
@@ -103,7 +103,7 @@ public class CustomEndpointElement : StandardEndpointElement
 }
 ```  
   
- <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>バッキング型コレクションの提供、下に表示される、<`standardEndpoints`> 標準エンドポイントの構成」セクション。  次の例は、このクラスを実装する方法を示しています。  
+ <xref:System.ServiceModel.Configuration.StandardEndpointCollectionElement%602>下に表示されるコレクションのバッキング型を提供します <`standardEndpoints`> 標準エンドポイントの構成セクション。  次の例は、このクラスを実装する方法を示しています。  
   
 ```csharp
 public class CustomEndpointCollectionElement : StandardEndpointCollectionElement<CustomEndpoint, CustomEndpointElement>
@@ -130,7 +130,7 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
 serviceHost.AddServiceEndpoint(new CustomEndpoint());  
 ```  
   
- 構成では、標準エンドポイントを追加するには、追加、<`endpoint`> 要素を <`service`> 要素との必要な構成設定で、<`standardEndpoints`> 要素。 次の例は、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を追加する方法を示しています。これは、[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] に付属する標準エンドポイントの 1 つです。  
+ 構成では、標準エンドポイントを追加するには、追加、<`endpoint`> 要素を <`service`> 要素およびの構成設定を必要に応じて、<`standardEndpoints`> 要素。 次の例は、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を追加する方法を示しています。これは、[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] に付属する標準エンドポイントの 1 つです。  
   
 ```xml  
 <services>  
@@ -145,7 +145,7 @@ serviceHost.AddServiceEndpoint(new CustomEndpoint());
 </standardEndpoints>
 ```  
   
- 種類の属性を使用する標準エンドポイントの種類が指定されて、<`endpoint`> 要素。 内でエンドポイントが構成されている、<`standardEndpoints`> 要素。 前の例では、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントが追加され、構成されます。 <`udpDiscoveryEndpoint`> 要素が含まれています、<`standardEndpoint`> が設定された、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A>のプロパティ、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>です。  
+ 種類の属性を使用する標準エンドポイントの種類が指定されて、<`endpoint`> 要素。 内でエンドポイントが構成されている、<`standardEndpoints`> 要素。 前の例では、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントが追加され、構成されます。 <`udpDiscoveryEndpoint`> 要素が含まれています、<`standardEndpoint`> が設定された、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint.MulticastAddress%2A>のプロパティ、<xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>します。  
   
 ## <a name="standard-endpoints-shipped-with-the-net-framework"></a>.NET Framework に付属する標準エンドポイント  
  次の表は、[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] に付属する標準エンドポイントを示しています。  

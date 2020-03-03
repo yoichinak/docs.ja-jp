@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, task
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 51292d977f2be87cec7c3481f5004fe5fe756224
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268029"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204537"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 
@@ -44,7 +42,7 @@ ms.locfileid: "55268029"
 > [!NOTE]
 > <xref:System.Threading.Tasks.Task> によって背後で作成される <xref:System.Threading.Tasks.Parallel.Invoke%2A> インスタンスの数は、指定するデリゲートの数と等しくなくてもかまいません。 TPL では、特に多数のデリゲートによるさまざまな最適化方法を採用しています。
 
-詳細については、「[方法 :Parallel.Invoke を使用して並列操作を実行する](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)」を参照してください。
+詳細については、[Parallel.Invoke を使用して並列操作を実行する](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)」を参照してください。
 
 タスクの実行をさらに制御する場合、またはタスクから値を返す場合、<xref:System.Threading.Tasks.Task> オブジェクトをより明示的に操作する必要があります。
 
@@ -72,7 +70,7 @@ ms.locfileid: "55268029"
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
 
-詳細については、「[方法 :タスクから値を返す](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)」を参照してください。
+詳細については、[タスクから値を返す](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)」を参照してください。
 
 ラムダ式を使用してデリゲートを作成すると、ソース コード内の該当ポイントで参照できるすべての変数にアクセスできます。 ただし、特にループ内では、ラムダによって変数が予想どおりにキャプチャされない場合があります。 ラムダでは、反復処理が実行されるたびに変更された値をキャプチャするのではなく、最終値だけがキャプチャされます。 この問題を説明する例を次に示します。 これは `CustomData` オブジェクトをインスタンス化するラムダ式にループ カウンターを渡し、オブジェクトの識別子としてループ カウンターを使用します。 この例の出力結果が示すように、`CustomData` の各オブジェクトは同じ識別子を持ちます。
 
@@ -113,21 +111,21 @@ ms.locfileid: "55268029"
 
 ## <a name="tasks-threads-and-culture"></a>タスク、スレッド、およびカルチャ
 
-各スレッドにはカルチャと UI カルチャが関連付けられています。それぞれのカルチャは <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> プロパティにより定義されています。 スレッドのカルチャは、書式設定、解析、並べ替え、文字列比較などの操作で使用されます。 スレッドの UI カルチャはリソースの検索で使用されます。 通常、<xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用してアプリケーション ドメイン内のすべてのスレッドの既定のカルチャを指定していない限り、スレッドの既定のカルチャと既定の UI カルチャはシステム カルチャによって定義されます。 スレッドのカルチャを明示的に設定して新しいスレッドを開始すると、新しいスレッドは呼び出し元スレッドのカルチャを継承せず、既定のシステム カルチャがそのカルチャとして使用されます。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以前のバージョンの .NET Framework を対象とするアプリのタスク ベース プログラミング モデルは、この方針に準拠します。
+各スレッドにはカルチャと UI カルチャが関連付けられています。それぞれのカルチャは <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> プロパティにより定義されています。 スレッドのカルチャは、書式設定、解析、並べ替え、文字列比較などの操作で使用されます。 スレッドの UI カルチャはリソースの検索で使用されます。 通常、<xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用してアプリケーション ドメイン内のすべてのスレッドの既定のカルチャを指定していない限り、スレッドの既定のカルチャと既定の UI カルチャはシステム カルチャによって定義されます。 スレッドのカルチャを明示的に設定して新しいスレッドを開始すると、新しいスレッドは呼び出し元スレッドのカルチャを継承せず、既定のシステム カルチャがそのカルチャとして使用されます。 .NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリのタスク ベース プログラミング モデルは、この方針に準拠します。
 
 > [!IMPORTANT]
-> 呼び出し元スレッドのカルチャは、タスクのコンテキストの一部として、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] *で実行される*アプリではなく、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] を*対象とした*アプリに適用されます。 Visual Studio 内部でプロジェクトを作成する場合、**[新しいプロジェクト]** ダイアログ ボックスの上部にあるドロップダウン リストから特定バージョンの .NET Framework を選択すると、そのバージョンを対象にできます。また、Visual Studio 外部では <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用できます。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以前のバージョンの .NET Framework を対象とするアプリ、または特定のバージョンの .NET Framework を対象としないアプリでは、引き続きタスクのカルチャは、タスクが実行されているスレッドのカルチャによって決まります。
+> 呼び出し元スレッドのカルチャは、タスクのコンテキストの一部として、.NET Framework 4.6 で*実行される*アプリではなく、.NET Framework 4.6 を*対象*としたアプリに適用されます。 Visual Studio 内部でプロジェクトを作成する場合、 **[新しいプロジェクト]** ダイアログ ボックスの上部にあるドロップダウン リストから特定バージョンの .NET Framework を選択すると、そのバージョンを対象にできます。また、Visual Studio 外部では <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用できます。 .NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリ、または特定のバージョンの .NET Framework を対象としないアプリでは、タスクのカルチャは継続的に、それが実行されているスレッドのカルチャによって決まります。
 
-[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以降を対象とするアプリでは、タスクがスレッド プールのスレッドで非同期に実行されている場合でも、呼び出し元スレッドのカルチャが各タスクに継承されます。
+.NET Framework 4.6 以降を対象とするアプリでは、タスクがスレッド プールのスレッドで非同期に実行されている場合でも、呼び出し元スレッドのカルチャが各タスクに継承されます。
 
-簡単な例を次に示します。 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用して [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] を対象とし、アプリの現在のカルチャをフランス語 (フランス)、またはフランス語 (フランス) が現在のカルチャである場合は英語 (米国) に変更します。 次に、変更後のカルチャの通貨値として書式設定された数値を返す `formatDelegate` という名前のデリゲートを呼び出します。 デリゲートは、同期タスクまたは非同期タスクのいずれの場合でも、予期される結果を返すことに注意してください。これは、非同期タスクは呼び出し元スレッドのカルチャを継承するためです。
+簡単な例を次に示します。 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用して .NET Framework 4.6 を対象とし、アプリの現在のカルチャをフランス語 (フランス)、またはフランス語 (フランス) が現在のカルチャである場合は英語 (米国) に変更します。 次に、変更後のカルチャの通貨値として書式設定された数値を返す `formatDelegate` という名前のデリゲートを呼び出します。 デリゲートは、同期タスクまたは非同期タスクのいずれの場合でも、予期される結果を返すことに注意してください。これは、非同期タスクは呼び出し元スレッドのカルチャを継承するためです。
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
 Visual Studio を使用している場合、プロジェクトを **[新しいプロジェクト]** ダイアログで作成する際に、<xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を省略して、代わりに .NET Framework 4.6 を対象として選択できます。
 
-[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以前のバージョンの .NET Framework を対象とするアプリの動作が出力に反映されるようにするため、ソース コードから <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を削除します。 出力には、呼び出し元スレッドのカルチャではなく、既定のシステム カルチャの書式指定規則が反映されます。
+.NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリの動作が出力に反映されるようにするため、ソース コードから <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を削除します。 出力には、呼び出し元スレッドのカルチャではなく、既定のシステム カルチャの書式指定規則が反映されます。
 
 非同期タスクとカルチャの詳細については、「<xref:System.Globalization.CultureInfo>」トピックの「カルチャおよび非同期タスク ベースの操作」を参照してください。
 
@@ -135,7 +133,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Task%601.ContinueWith%2A?displayProperty=nameWithType> メソッドで、"*継続元タスク*" が終了したときに開始されるタスクを指定できます。 継続タスクのデリゲートは継続元タスクへの参照を渡し、継続元タスクのステータスを調査できるようにし、また <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> プロパティの値を取得して、継続元の出力を継続への入力として使用できるようにします。
 
-次の例では、`getData` タスクは <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> メソッドの呼び出しによって開始されます。 `processData` タスクは `getData` が終了したときに自動的に開始され、`displayData` は `processData` が終了したときに開始されます。 `getData` は、`processData` タスクの `getData` プロパティを使用して <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクがアクセス可能な、整数の配列を生成します。 `processData` はその配列を処理し、<xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> メソッドに渡されるラムダ式の戻り値の型から推論される型を持つ結果を返します。 `displayData` タスクは、`processData` が終了したときに自動的に実行され、<xref:System.Tuple%603> ラムダ式が返した `processData` オブジェクトは、`displayData` タスクの `processData` プロパティを使用して、<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクからアクセス可能です。 `displayData` タスクは `processData` タスクから結果を受け取り、同様の方法を使用して (プログラムで使用できるようになったと) 推論される型を持つ結果を <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティで生成します。
+次の例では、`getData` タスクは <xref:System.Threading.Tasks.TaskFactory.StartNew%60%601%28System.Func%7B%60%600%7D%29?displayProperty=nameWithType> メソッドの呼び出しによって開始されます。 `processData` タスクは `getData` が終了したときに自動的に開始され、`displayData` は `processData` が終了したときに開始されます。 `getData` は、`processData` タスクの `getData` プロパティを使用して <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクがアクセス可能な、整数の配列を生成します。 `processData` タスクはその配列を処理し、<xref:System.Threading.Tasks.Task%601.ContinueWith%60%601%28System.Func%7BSystem.Threading.Tasks.Task%7B%600%7D%2C%60%600%7D%29?displayProperty=nameWithType> メソッドに渡されるラムダ式の戻り値の型から推論される型を持つ結果を返します。 `displayData` タスクは、`processData` が終了したときに自動的に実行され、<xref:System.Tuple%603> ラムダ式が返した `processData` オブジェクトは、`displayData` タスクの `processData` プロパティを使用して、<xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> タスクからアクセス可能です。 `displayData` タスクは `processData` タスクから結果を受け取り、同様の方法を使用して (プログラムで使用できるようになったと) 推論される型を持つ結果を <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティで生成します。
 
 [!code-csharp[TPL_TaskIntro#5](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/continuations1.cs#5)]
 [!code-vb[TPL_TaskIntro#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/continuations1.vb#5)]
@@ -236,7 +234,7 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 ## <a name="canceling-tasks"></a>タスクの取り消し
 
-`Task` クラスは他の処理と連携したキャンセル処理をサポートしており、.NET Framework 4 で導入された <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> クラスおよび <xref:System.Threading.CancellationToken?displayProperty=nameWithType> クラスと完全に統合されています。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスの多くのコンストラクターは、<xref:System.Threading.CancellationToken> オブジェクトを入力パラメーターとして受け取ります。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> および <xref:System.Threading.Tasks.Task.Run%2A> オーバーロードの多くも、<xref:System.Threading.CancellationToken> パラメーターを含みます。
+<xref:System.Threading.Tasks.Task> クラスは他の処理と連携したキャンセル処理をサポートしており、.NET Framework 4 で導入された <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> クラスおよび <xref:System.Threading.CancellationToken?displayProperty=nameWithType> クラスと完全に統合されています。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスの多くのコンストラクターは、<xref:System.Threading.CancellationToken> オブジェクトを入力パラメーターとして受け取ります。 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> および <xref:System.Threading.Tasks.Task.Run%2A> オーバーロードの多くも、<xref:System.Threading.CancellationToken> パラメーターを含みます。
 
 <xref:System.Threading.CancellationTokenSource> クラスを使用すると、トークンを作成し、後でキャンセル要求を発行できます。 このトークンを <xref:System.Threading.Tasks.Task> に引数として渡し、同じトークンをキャンセル要求に応答するユーザー デリゲートで参照します。
 
@@ -250,27 +248,27 @@ Visual Studio を使用している場合、プロジェクトを **[新しい�
 
 - 複数の継続元から継続タスクを作成する場合は、<xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> メソッドまたは <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> メソッドを使用するか、<xref:System.Threading.Tasks.Task%601> クラスの同等のメソッドを使用します。 詳細については、「[継続タスクを使用したタスクの連結](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)」を参照してください。
 
-- `BeginX` インスタンスまたは `EndX` インスタンスで非同期プログラミング モデルの <xref:System.Threading.Tasks.Task> メソッドおよび <xref:System.Threading.Tasks.Task%601> メソッドをカプセル化するには、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドを使用します。 詳細については、「[TPL and Traditional .NET Framework Asynchronous Programming](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」(TPL と従来の .NET Framework 非同期プログラミング) を参照してください。
+- `BeginX` インスタンスまたは `EndX` インスタンスで非同期プログラミング モデルの <xref:System.Threading.Tasks.Task> メソッドおよび <xref:System.Threading.Tasks.Task%601> メソッドをカプセル化するには、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドを使用します。 詳細については、「[TPL と従来の .NET Framework 非同期プログラミング](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」を参照してください。
 
 既定の <xref:System.Threading.Tasks.TaskFactory> へは、<xref:System.Threading.Tasks.Task> クラスまたは <xref:System.Threading.Tasks.Task%601> クラス上の静的なプロパティとしてアクセスできます。 <xref:System.Threading.Tasks.TaskFactory> を直接インスタンス化し、さまざまなオプションを指定することもできます。たとえば、<xref:System.Threading.CancellationToken>、<xref:System.Threading.Tasks.TaskCreationOptions> オプション、<xref:System.Threading.Tasks.TaskContinuationOptions> オプション、<xref:System.Threading.Tasks.TaskScheduler> などです。 タスク ファクトリを作成するときに指定されるオプションは、タスク ファクトリで作成したすべてのタスクに適用されます。ただし、<xref:System.Threading.Tasks.Task> が <xref:System.Threading.Tasks.TaskCreationOptions> 列挙型を使用して作成された場合は例外で、タスクのオプションによってタスク ファクトリのオプションがオーバーライドされます。
 
 ## <a name="tasks-without-delegates"></a>デリゲートなしのタスク
 
-<xref:System.Threading.Tasks.Task> を使用して、固有のユーザー デリゲートではなく外部コンポーネントによって実行される非同期操作をカプセル化する場合があります。 操作が非同期プログラミング モデルの Begin/End パターンに基づいている場合、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドを使用できます。 そうでない場合は、<xref:System.Threading.Tasks.TaskCompletionSource%601> オブジェクトを使用して、タスク内の操作をラップして、<xref:System.Threading.Tasks.Task> を外部からプログラミング可能にする利点を活用できます。たとえば、例外の反映および継続のサポートです。 詳細については、「<xref:System.Threading.Tasks.TaskCompletionSource%601>」を参照してください。
+<xref:System.Threading.Tasks.Task> を使用して、固有のユーザー デリゲートではなく外部コンポーネントによって実行される非同期操作をカプセル化する場合があります。 操作が非同期プログラミング モデルの Begin/End パターンに基づいている場合、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドを使用できます。 そうでない場合は、<xref:System.Threading.Tasks.TaskCompletionSource%601> オブジェクトを使用して、タスク内の操作をラップして、<xref:System.Threading.Tasks.Task> を外部からプログラミング可能にする利点を活用できます。たとえば、例外の反映および継続のサポートです。 詳細については、<xref:System.Threading.Tasks.TaskCompletionSource%601> を参照してください。
 
 ## <a name="custom-schedulers"></a>カスタム スケジューラ
 
-アプリケーションまたはライブラリのほとんどの開発者は、タスクを実行するプロセッサ、他のタスクと動作を同期する方法、<xref:System.Threading.ThreadPool?displayProperty=nameWithType> でスケジュールする方法などについては気にしません。 気にするのは、ホスト コンピューター上でできるだけ効率的に実行することだけです。 スケジュールの詳細についてより詳細に制御する必要がある場合、タスク並列ライブラリでは、既定のタスク スケジューラの設定を構成でき、さらにカスタム スケジューラを利用することもできます。 詳細については、「<xref:System.Threading.Tasks.TaskScheduler>」を参照してください。
+アプリケーションまたはライブラリのほとんどの開発者は、タスクを実行するプロセッサ、他のタスクと動作を同期する方法、<xref:System.Threading.ThreadPool?displayProperty=nameWithType> でスケジュールする方法などについては気にしません。 気にするのは、ホスト コンピューター上でできるだけ効率的に実行することだけです。 スケジュールの詳細についてより詳細に制御する必要がある場合、タスク並列ライブラリでは、既定のタスク スケジューラの設定を構成でき、さらにカスタム スケジューラを利用することもできます。 詳細については、<xref:System.Threading.Tasks.TaskScheduler> を参照してください。
 
 ## <a name="related-data-structures"></a>関連のデータ構造
 
-TPL には、並列のシナリオおよび順次的なシナリオの両方に役立つ複数の新しいパブリック型があります。 これらの型には、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間における、スレッド セーフで、高速、スケーラブルなコレクション クラス、および新しい同期の型が含まれます。たとえば、<xref:System.Threading.Semaphore?displayProperty=nameWithType> および <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> は、特定の種類の作業負荷に関しては、先行タスクより効率的です。 その他の .NET Framework 4 の新しい型には、<xref:System.Threading.Barrier?displayProperty=nameWithType> と <xref:System.Threading.SpinLock?displayProperty=nameWithType> があり、以前のリリースでは利用できなかった機能が用意されています。 詳細については、「[Data Structures for Parallel Programming](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)」を参照してください。
+TPL には、並列のシナリオおよび順次的なシナリオの両方に役立つ複数の新しいパブリック型があります。 これらの型には、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間における、スレッド セーフで、高速、スケーラブルなコレクション クラス、および新しい同期の型が含まれます。たとえば、<xref:System.Threading.Semaphore?displayProperty=nameWithType> および <xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> は、特定の種類の作業負荷に関しては、先行タスクより効率的です。 その他の .NET Framework 4 の新しい型には、<xref:System.Threading.Barrier?displayProperty=nameWithType> と <xref:System.Threading.SpinLock?displayProperty=nameWithType> があり、以前のリリースでは利用できなかった機能が用意されています。 詳細については、「[並列プログラミング向けのデータ構造](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)」を参照してください。
 
 ## <a name="custom-task-types"></a>カスタムのタスクの型
 
-<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> または <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> から継承しないことをお勧めします。 代わりに、<xref:System.Threading.Tasks.Task.AsyncState%2A> プロパティを使用して、追加のデータまたは状態を <xref:System.Threading.Tasks.Task> オブジェクトまたは <xref:System.Threading.Tasks.Task%601> オブジェクトに関連付けることをおすすめします。 拡張メソッドを使用して、<xref:System.Threading.Tasks.Task> クラスおよび <xref:System.Threading.Tasks.Task%601> クラスの機能を拡張することもできます。 拡張メソッドの詳細については、[拡張メソッド (C# プログラミングガイド)](~/docs/csharp/programming-guide/classes-and-structs/extension-methods.md) と[拡張メソッド (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/procedures/extension-methods.md) に関する記事を参照してください。
+<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> または <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> から継承しないことをお勧めします。 代わりに、<xref:System.Threading.Tasks.Task.AsyncState%2A> プロパティを使用して、追加のデータまたは状態を <xref:System.Threading.Tasks.Task> オブジェクトまたは <xref:System.Threading.Tasks.Task%601> オブジェクトに関連付けることをおすすめします。 拡張メソッドを使用して、<xref:System.Threading.Tasks.Task> クラスおよび <xref:System.Threading.Tasks.Task%601> クラスの機能を拡張することもできます。 拡張メソッドの詳細については、[拡張メソッド (C# プログラミングガイド)](../../csharp/programming-guide/classes-and-structs/extension-methods.md) と[拡張メソッド (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/extension-methods.md) に関する記事を参照してください。
 
-<xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> から継承する必要がある場合、<xref:System.Threading.Tasks.Task.Run%2A>、<xref:System.Threading.Tasks.Task.Run%2A>、または <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>, <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>、または <xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> の各クラスを使用して、カスタムのタスクの型のインスタンスを作成することはできません。これらのクラスで作成されるのは、<xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> オブジェクトだけであるためです。 また、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory>、および <xref:System.Threading.Tasks.TaskFactory%601> で提供されるタスク継続機構でも、<xref:System.Threading.Tasks.Task> オブジェクトと <xref:System.Threading.Tasks.Task%601> オブジェクトしか作成されないため、これらの機構を使用してカスタムのタスクの型のインスタンスを作成することはできません。
+<xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> から継承する必要がある場合、<xref:System.Threading.Tasks.Task.Run%2A>、<xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType>、<xref:System.Threading.Tasks.TaskCompletionSource%601?displayProperty=nameWithType> の各クラスを使用して、カスタムのタスクの型のインスタンスを作成することはできません。これらのクラスで作成されるのは、<xref:System.Threading.Tasks.Task> および <xref:System.Threading.Tasks.Task%601> オブジェクトだけであるためです。 また、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.TaskFactory>、および <xref:System.Threading.Tasks.TaskFactory%601> で提供されるタスク継続機構でも、<xref:System.Threading.Tasks.Task> オブジェクトと <xref:System.Threading.Tasks.Task%601> オブジェクトしか作成されないため、これらの機構を使用してカスタムのタスクの型のインスタンスを作成することはできません。
 
 ## <a name="related-topics"></a>関連トピック
 

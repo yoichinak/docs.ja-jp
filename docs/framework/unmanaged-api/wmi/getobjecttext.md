@@ -1,6 +1,6 @@
 ---
 title: GetObjectText 関数 (アンマネージ API リファレンス)
-description: GetObjectText 関数は、MOF 構文では、オブジェクトのテキストのレンダリングを返します。
+description: GetObjectText 関数は、MOF 構文でオブジェクトのテキスト形式のレンダリングを返します。
 ms.date: 11/06/2017
 api_name:
 - GetObjectText
@@ -14,23 +14,21 @@ helpviewer_keywords:
 - GetObjectText function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e3a7d606f64dfe1a1abfd3da930fd00957da90a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 412e1ad503fa0e0b4f813298c0ac96ae80098c06
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583585"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73102451"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 関数
-管理オブジェクト フォーマット (MOF) 構文では、オブジェクトのテキストのレンダリングを返します。
+管理オブジェクトフォーマット (MOF) 構文におけるオブジェクトのテキスト形式のレンダリングを返します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
     
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetObjectText (
    [in] int                vFunc, 
    [in] IWbemClassObject*   ptr, 
@@ -42,47 +40,48 @@ HRESULT GetObjectText (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+から[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスへのポインター。
 
 `lFlags`  
-[in]通常は 0。 場合`WBEM_FLAG_NO_FLAVORS`(または 0x1) 修飾子は、伝達またはフレーバーの情報も指定します。
+から通常は0です。 `WBEM_FLAG_NO_FLAVORS` (または 0x1) が指定されている場合、修飾子は伝達またはフレーバー情報なしに含まれます。
 
 `pstrObjectText`   
-[out]ポインターを`null`エントリ。 戻り時に、新しく割り当てられた`BSTR`がオブジェクトの MOF 構文のレンダリングを格納しています。  
+入出力エントリの `null` へのポインター。 返されると、オブジェクトの MOF 構文レンダリングを含む、新しく割り当てられた `BSTR`。  
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するために必要なメモリが不足しています。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemClassObject::GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext)メソッド。
+この関数は、 [IWbemClassObject:: GetObjectText](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-getobjecttext)メソッドの呼び出しをラップします。
 
-オブジェクトに関するすべての情報が、元のオブジェクトを再作成できる MOF コンパイラのための十分な情報のみ、返される MOF テキストは含まれません。 たとえば、伝達された修飾子または親クラスのプロパティは含まれません。
+返される MOF テキストには、オブジェクトに関する情報がすべて含まれているわけではありませんが、MOF コンパイラが元のオブジェクトを再作成するのに十分な情報のみが含まれています。 たとえば、伝達された修飾子や親クラスのプロパティは含まれません。
 
-メソッドのパラメーターのテキストを再構築には、次のアルゴリズムが使用します。
+次のアルゴリズムは、メソッドのパラメーターのテキストを再構築するために使用されます。
 
-1. パラメーターは、その識別子の値の順序 resequenced されます。
-1. パラメーターとして指定されている`[in]`と`[out]`パラメーターを 1 つに結合されます。
+1. パラメーターは、識別子の値の順序で再シーケンスされます。
+1. `[in]` と `[out]` として指定されたパラメーターは、1つのパラメーターに結合されます。
  
-`pstrObjectText` ポインターである必要があります、`null`ポインターが解放されないため、メソッド呼び出しの前に有効な文字列をポイントする必要がありますいない、関数が呼び出されると;。
+関数が呼び出された場合、`pstrObjectText` は `null` へのポインターである必要があります。ポインターが割り当て解除されないため、メソッドの呼び出しより前に有効な文字列をポイントすることはできません。
 
-## <a name="requirements"></a>必要条件  
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

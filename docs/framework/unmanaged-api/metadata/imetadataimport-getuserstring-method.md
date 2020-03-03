@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 0fd3bb47-58b5-4083-b241-b9719df7a285
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e806bae1911ea6ffc5bb6e9af76d99524636d39e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 690abec6104f6eed1ad5a0eae9a6b6bb18d35b0d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491150"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436690"
 ---
 # <a name="imetadataimportgetuserstring-method"></a>IMetaDataImport::GetUserString メソッド
 指定したメタデータ トークンで表されるリテラル文字列を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetUserString (  
    [in]   mdString    stk,  
    [out]  LPWSTR      szString,  
@@ -38,28 +36,29 @@ HRESULT GetUserString (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `stk`  
- [in]関連付けられている文字列を返す文字列トークンです。  
+ から関連付けられている文字列を返す文字列トークン。  
   
  `szString`  
- [out]要求された文字列のコピー。  
+ 入出力要求された文字列のコピー。  
   
  `cchString`  
- [in]要求されたワイド文字の最大サイズ`szString`します。  
+ から要求された `szString`のワイド文字単位の最大サイズ。  
   
  `pchString`  
- [out]返されるワイド文字のサイズ`szString`します。  
+ 入出力返される `szString`のワイド文字単位のサイズ。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -2,48 +2,48 @@
 title: プログラミング ガイド (LINQ to DataSet)
 ms.date: 03/30/2017
 ms.assetid: 977aedd7-0084-46a0-b56f-345787a55da1
-ms.openlocfilehash: 6f6ab1634769a54bd8dbafe8c9d41b11ff787d50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc13af06cf6c439d739d76904f206ebc50ba3187
+ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636483"
+ms.lasthandoff: 01/03/2020
+ms.locfileid: "75634808"
 ---
 # <a name="programming-guide-linq-to-dataset"></a>プログラミング ガイド (LINQ to DataSet)
-ここでは、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を使用したプログラミングに関する概要情報と例を提供します。  
+このセクションでは、LINQ to DataSet を使用したプログラミングの概念と例について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [LINQ to DataSet でのクエリ](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] クエリの作成方法に関する情報を提供します。  
+ [LINQ to DataSet でのクエリ](queries-in-linq-to-dataset.md)  
+ LINQ to DataSet クエリの記述方法について説明します。  
   
- [DataSet のクエリ](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)  
+ [DataSet のクエリ](querying-datasets-linq-to-dataset.md)  
  <xref:System.Data.DataSet> オブジェクトに対してクエリを実行する方法について説明します。  
   
- [DataRow の比較](../../../../docs/framework/data/adonet/comparing-datarows-linq-to-dataset.md)  
+ [DataRow の比較](comparing-datarows-linq-to-dataset.md)  
  <xref:System.Data.DataRowComparer> オブジェクトを使用してデータ行を比較する方法について説明します。  
   
- [クエリによる DataTable の作成](../../../../docs/framework/data/adonet/creating-a-datatable-from-a-query-linq-to-dataset.md)  
- 作成する方法について説明します、<xref:System.Data.DataTable>から、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリを使用して、<xref:System.Data.DataTableExtensions.CopyToDataTable%2A>メソッド。  
+ [クエリによる DataTable の作成](creating-a-datatable-from-a-query-linq-to-dataset.md)  
+ <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドを使用して LINQ to DataSet クエリから <xref:System.Data.DataTable> を作成する方法について説明します。  
   
- [方法: 実装 CopyToDataTable\<T > ジェネリック型 T が DataRow ではありません](../../../../docs/framework/data/adonet/implement-copytodatatable-where-type-not-a-datarow.md)  
+ [方法: CopyToDataTable\<T > 実装する (ジェネリック型 T が DataRow ではない場合)](implement-copytodatatable-where-type-not-a-datarow.md)  
  `CopyToDataTable<T>` 型以外のジェネリック パラメーター T を持つカスタム <xref:System.Data.DataRow> メソッドの実装方法について説明します。  
   
- [ジェネリック メソッド Field および SetField](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)  
+ [ジェネリック メソッド Field および SetField](generic-field-and-setfield-methods-linq-to-dataset.md)  
  ジェネリック メソッド <xref:System.Data.DataRowExtensions.Field%2A> および <xref:System.Data.DataRowExtensions.SetField%2A> に関する情報を提供します。  
   
- [データ バインディングと LINQ to DataSet](../../../../docs/framework/data/adonet/data-binding-and-linq-to-dataset.md)  
+ [データ バインディングと LINQ to DataSet](data-binding-and-linq-to-dataset.md)  
  <xref:System.Data.DataView> オブジェクトを使ったデータ バインドについて説明します。  
   
- [LINQ to DataSet クエリのデバッグ](../../../../docs/framework/data/adonet/debugging-linq-to-dataset-queries.md)  
- デバッグとトラブルシューティングに関する情報を提供[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。  
+ [LINQ to DataSet クエリのデバッグ](debugging-linq-to-dataset-queries.md)  
+ LINQ to DataSet クエリのデバッグとトラブルシューティングについて説明します。  
   
- [セキュリティ](../../../../docs/framework/data/adonet/security-linq-to-dataset.md)  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] におけるセキュリティの問題について説明します。  
+ [Security](security-linq-to-dataset.md)  
+ LINQ to DataSet のセキュリティの問題について説明します。  
   
- [LINQ to DataSet の例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)  
- [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 演算子を使ったクエリの例を紹介します。  
+ [LINQ to DataSet の例](linq-to-dataset-examples.md)  
+ LINQ 演算子を使ったクエリの例を紹介します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>参照先  
  <xref:System.Data.DataRowComparer>  
   
  <xref:System.Data.DataRowExtensions>  

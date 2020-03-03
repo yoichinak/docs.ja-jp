@@ -15,38 +15,37 @@ helpviewer_keywords:
 ms.assetid: d6f9ac84-302a-4f5e-b990-e76f4269fceb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 45aaceb2c39703cb1369941ce801c9cff1935ad6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcaf748413321f684336543e60f735af69894b51
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555844"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436013"
 ---
 # <a name="isymunmanagedreadergetmethodversion-method"></a>ISymUnmanagedReader::GetMethodVersion メソッド
-メソッドのバージョンを取得します。 メソッドのバージョンでは、1 から開始し、メソッドが再コンパイルされるたびに増分されます。 再コンパイルは、メソッドに変更することがなく発生します。  
+メソッドのバージョンを取得します。 メソッドのバージョンは1から始まり、メソッドが再コンパイルされるたびにインクリメントされます。 再コンパイルは、メソッドを変更せずに発生する可能性があります。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMethodVersion (  
     [in]  ISymUnmanagedMethod* pMethod,  
     [out] int* version);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pMethod`  
- [in]バージョンを取得する方法です。  
+ からバージョンを取得するメソッド。  
   
  `version`  
- [out]メソッドのバージョンを受信する変数へのポインター。  
+ 入出力メソッドのバージョンを受け取る変数へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedReader インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

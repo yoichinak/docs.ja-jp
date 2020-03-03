@@ -2,19 +2,19 @@
 title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: e6668fa2f978ddb785c4dac950c32d3caa2979af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44f128a292b013fd3a3a80efdd2d10a63e3cfb07
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552542"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833836"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
 コレクションが空かどうかを調べます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```sql  
 [NOT] EXISTS ( expression )  
 ```  
   
@@ -26,19 +26,20 @@ ms.locfileid: "54552542"
  EXISTS の結果を否定することを指定します。  
   
 ## <a name="return-value"></a>戻り値  
- コレクションが空でない場合は `true`、それ以外の場合は `false` です。  
+ コレクションが空でない場合は `true` します。それ以外の場合は、`false`ます。  
   
-## <a name="remarks"></a>Remarks  
- EXISTS は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の集合演算子の 1 つです。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のすべての集合演算子は左から右に評価されます。 優先順位は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]集合演算子を参照してください[EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)します。  
+## <a name="remarks"></a>コメント  
+ EXISTS は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の集合演算子の 1 つです。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] のすべての集合演算子は左から右に評価されます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集合演算子の優先順位情報については、「 [EXCEPT](except-entity-sql.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、EXISTS 演算子を使用して、コレクションが空かどうかを調べます。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1.  」の手順に従って[方法。StructuralType 結果を返すクエリを実行](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)します。  
+1. 「 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
-2.  次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
+2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   
- [!code-csharp[DP EntityServices Concepts 2#EXISTS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#exists)]  
+ [!code-sql[DP EntityServices Concepts#EXISTS](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#exists)]  
   
-## <a name="see-also"></a>関連項目
-- [Entity SQL リファレンス](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>参照
+
+- [Entity SQL リファレンス](entity-sql-reference.md)

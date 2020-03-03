@@ -1,13 +1,13 @@
 ---
-title: 修飾子 (Visual Basic)
+title: 修飾子
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 5e4a37a53d04174c53fdbdc30139d61ecd9998cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2056cdc69c7d89b78e9b269fc919a0e0f6b76bf4
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600634"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74838287"
 ---
 # <a name="modifiers-visual-basic"></a>修飾子 (Visual Basic)
 このセクションのトピックでは、Visual Basic ランタイム修飾子を示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "33600634"
   
  [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)  
   
- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
+ [New](../../../visual-basic/language-reference/modifiers/mustoverride.md)  
   
  [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)  
   
@@ -63,7 +63,11 @@ ms.locfileid: "33600634"
   
  [Private](../../../visual-basic/language-reference/modifiers/private.md)  
   
+ [Private Protected](../../../visual-basic/language-reference/modifiers/private-protected.md)  
+  
  [Protected](../../../visual-basic/language-reference/modifiers/protected.md)  
+
+ [Protected Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
  [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
@@ -79,11 +83,9 @@ ms.locfileid: "33600634"
   
  [Widening](../../../visual-basic/language-reference/modifiers/widening.md)  
   
- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)  
+ [ReadOnly](../../../visual-basic/language-reference/modifiers/withevents.md)  
   
  [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)  
   
-## <a name="related-sections"></a>関連項目  
+## <a name="related-sections"></a>関連セクション  
  [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)  
-  
- [Visual Basic](../../../visual-basic/index.md)

@@ -1,25 +1,26 @@
 ---
-title: '方法: プライベート ストレージ フィールドを指定します。'
+title: '方法: プライベート ストレージ フィールドを指定する'
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: d127de889fdaa2eb2d03a96dae5aa3d856efe32a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6e6a4e28fbfb327f25874844f28bcbafa6d2805
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549598"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793209"
 ---
-# <a name="how-to-specify-private-storage-fields"></a>方法: プライベート ストレージ フィールドを指定します。
-使用して、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>プロパティを<xref:System.Data.Linq.Mapping.DataAttribute>属性を基になるストレージ フィールドの名前を指定します。  
+# <a name="how-to-specify-private-storage-fields"></a>方法: プライベート ストレージ フィールドを指定する
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 属性のプロパティを使用して、基になるストレージフィールドの名前<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>を指定します<xref:System.Data.Linq.Mapping.DataAttribute> 。  
   
  コード例については、「<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>」を参照してください。  
   
 ### <a name="to-specify-the-name-of-an-underlying-storage-field"></a>基になるストレージ フィールドの名前を指定するには  
   
-1.  <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 属性に <xref:System.Data.Linq.Mapping.ColumnAttribute> プロパティを追加します。  
+1. <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 属性に <xref:System.Data.Linq.Mapping.ColumnAttribute> プロパティを追加します。  
   
-2.  フィールドの名前を <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> プロパティの値として代入します。  
+2. フィールドの名前を <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> プロパティの値として代入します。  
   
 ## <a name="see-also"></a>関連項目
-- [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [方法: コード エディターを使用してエンティティ クラスをカスタマイズします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+
+- [LINQ to SQL オブジェクト モデル](the-linq-to-sql-object-model.md)
+- [方法: コードエディターを使用してエンティティクラスをカスタマイズする](how-to-customize-entity-classes-by-using-the-code-editor.md)

@@ -1,19 +1,19 @@
 ---
 title: dotnet help コマンド
 description: dotnet help コマンドでは、指定したコマンドについてより詳細なドキュメントがオンラインで表示されます。
-ms.date: 12/04/2018
-ms.openlocfilehash: 44274b698ed83bd3cdb58787f433eeb5c555bc6d
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.date: 02/14/2020
+ms.openlocfilehash: f5d9221ae18653451a3bf97dc82fae396ae4e288
+ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168957"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77503731"
 ---
-# <a name="dotnet-help-reference"></a>dotnet help reference
+# <a name="dotnet-help-reference"></a>dotnet help リファレンス
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-2plus.md)]
+**この記事の対象:** ✔️ .NET Core 2.0 SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet help` - 指定したコマンドについて、より詳細なドキュメントがオンラインで表示されます。
 
@@ -27,20 +27,20 @@ ms.locfileid: "53168957"
 
 ## <a name="arguments"></a>引数
 
-* **`COMMAND_NAME`**
+- **`COMMAND_NAME`**
 
   .NET Core CLI コマンドの名前です。 有効な CLI コマンドの一覧については、[CLI コマンド](index.md#cli-commands)を参照してください。
 
 ## <a name="options"></a>オプション
 
-* **`-h|--help`**
+- **`-h|--help`**
 
   コマンドの短いヘルプを印刷します。
 
 ## <a name="examples"></a>使用例
 
-* ドキュメントの [dotnet new](dotnet-new.md) コマンドに関するページを開きます。
+- ドキュメントの [dotnet new](dotnet-new.md) コマンドに関するページを開きます。
 
-  ```console
+  ```dotnetcli
   dotnet help new
   ```

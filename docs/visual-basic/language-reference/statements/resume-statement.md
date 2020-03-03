@@ -1,5 +1,5 @@
 ---
-title: Resume ステートメント (Visual Basic)
+title: Resume ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Resume
@@ -15,54 +15,55 @@ helpviewer_keywords:
 - execution
 - Resume statement [Visual Basic]
 ms.assetid: e24d058b-1a5c-4274-acb9-7d295d3ea537
-ms.openlocfilehash: ef6a2e22c1394065ba6127aa3dd388b47238dea8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95137a9f6a4a4a18655b51b95300bfaf93cca193
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624796"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74333029"
 ---
 # <a name="resume-statement"></a>Resume ステートメント
-エラー処理ルーチンを完了した後は、実行を再開します。  
+エラー処理ルーチンが終了した後、実行を再開します。  
   
- 非構造化例外処理を使用するのではなく、可能であれば、コード内の構造化例外処理を使用することをお勧め、`On Error`と`Resume`ステートメント。 詳細については、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。  
+ 構造化例外処理は、構造化されていない例外処理、`On Error` および `Resume` ステートメントを使用するのではなく、可能な限りコードで使用することをお勧めします。 詳しくは、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 Resume [ Next | line ]  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `Resume`  
- 必須。 エラー ハンドラーと同じ手順でエラーが発生した場合、エラーの原因となったステートメントを使用して実行を再開します。 呼び出されたプロシージャでエラーが発生した場合は、最後に、エラー処理ルーチンを含むプロシージャから呼び出されたステートメントの実行が再開されます。  
+ 必須。 エラーがエラーハンドラーと同じ手順で発生した場合は、エラーの原因となったステートメントを使用して実行が再開されます。 呼び出されたプロシージャでエラーが発生した場合、エラー処理ルーチンを含むプロシージャから最後に呼び出されたステートメントで実行が再開されます。  
   
  `Next`  
- 任意。 エラー ハンドラーと同じ手順でエラーが発生した場合、エラーの原因となったステートメントの直後のステートメントの実行が再開されます。 最後に、エラー処理ルーチンを含むプロシージャから呼び出されたステートメントの直後のステートメントの実行が再開される呼び出されたプロシージャでエラーが発生した場合 (または`On Error Resume Next`ステートメント)。  
+ 省略可。 エラーハンドラーと同じプロシージャでエラーが発生した場合は、エラーの原因となったステートメントの直後のステートメントを使用して実行が再開されます。 呼び出されたプロシージャでエラーが発生した場合、エラー処理ルーチン (または `On Error Resume Next` ステートメント) を含むプロシージャから最後に呼び出されたステートメントの直後にあるステートメントを使用して、実行が再開されます。  
   
  `line`  
- 任意。 要求で指定した行で実行が再開される`line`引数。 `line`引数を行ラベルまたは行番号、エラー ハンドラーと同じ手順である必要があります。  
+ 省略可。 実行は、必要な `line` 引数で指定した行で再開されます。 `line` 引数は、行ラベルまたは行番号であり、エラーハンドラーと同じプロシージャ内にある必要があります。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  非構造化例外処理を使用するのではなく、可能であれば、コード内の構造化例外処理を使用することをお勧め、`On Error`と`Resume`ステートメント。 詳細については、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)を参照してください。  
+> 構造化例外処理は、構造化されていない例外処理、`On Error` および `Resume` ステートメントを使用するのではなく、可能な限りコードで使用することをお勧めします。 詳しくは、「[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」をご覧ください。  
   
- 使用する場合、`Resume`ステートメント任意の場所以外のエラー処理ルーチンで、エラーが発生します。  
+ エラー処理ルーチン以外の場所で `Resume` ステートメントを使用すると、エラーが発生します。  
   
- `Resume`を含むすべてのプロシージャでは、ステートメントを使用できません、`Try...Catch...Finally`ステートメント。  
+ `Resume` ステートメントは、`Try...Catch...Finally` ステートメントを含むプロシージャ内では使用できません。  
   
 ## <a name="example"></a>例  
- この例では、`Resume`ステートメントをプロシージャのエラー処理を終了し、エラーの原因となったステートメントの実行を再開します。 使用方法を説明するエラー番号 55 が生成された、`Resume`ステートメント。  
+ この例では、`Resume` ステートメントを使用してプロシージャのエラー処理を終了し、エラーの原因となったステートメントを使用して実行を再開します。 `Resume` ステートメントの使用方法を示すために、エラー番号55が生成されます。  
   
- [!code-vb[VbVbalrErrorHandling#16](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/resume-statement_1.vb)]  
+ [!code-vb[VbVbalrErrorHandling#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrErrorHandling/VB/Class1.vb#16)]  
   
-## <a name="requirements"></a>必要条件  
- **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+## <a name="requirements"></a>要件  
+ **名前空間:** [Microsoft. visual basic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
- **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [Error ステートメント](../../../visual-basic/language-reference/statements/error-statement.md)
 - [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)

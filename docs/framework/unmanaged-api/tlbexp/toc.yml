@@ -1,0 +1,12 @@
+- name: Tlbexp ヘルパー関数
+  href: index.md
+  items:
+    - name: GetTypeLibInfo 関数
+      href: gettypelibinfo-function.md
+    - name: LoadTypeLibWithResolver 関数
+      href: loadtypelibwithresolver-function.md
+    - name: ITypeLibResolver インターフェイス
+      href: itypelibresolver-interface.md
+      items:
+        - name: ResolveTypeLib メソッド
+          href: resolvetypelib-method.md

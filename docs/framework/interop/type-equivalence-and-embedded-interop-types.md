@@ -7,18 +7,16 @@ helpviewer_keywords:
 - primary interop assemblies,not necessary in CLR version 4
 - NoPIA
 ms.assetid: 78892eba-2a58-4165-b4b1-0250ee2f41dc
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b9ec21a21ce3c81c2d29d2edf353a098489c9026
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: HT
+ms.openlocfilehash: ee9d2d94d62f262ef61edc66ce915e1227532d67
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219751"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126391"
 ---
 # <a name="type-equivalence-and-embedded-interop-types"></a>型の等価性と埋め込まれた相互運用機能型
 
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降、共通言語ランタイムでは、マネージド アセンブリに COM 型の型情報を直接埋め込めるようになりました。マネージド アセンブリで相互運用アセンブリから COM 型の型情報を取得する必要がありません。 埋め込まれる型情報にはマネージド アセンブリに実際に使用される型とメンバーのみが含まれるため、2 つのマネージド アセンブリで同じ COM 型の表示が非常に異なることが考えられます。 マネージド アセンブリごとに、COM 型の表示を表す異なる <xref:System.Type> オブジェクトが与えられます。 共通言語ランタイムでは、インターフェイス、構造、列挙、委任といった異なる表示間で型の等価性が与えられます。
+.NET Framework 4 以降、共通言語ランタイムでは、マネージド アセンブリに COM 型の型情報を直接埋め込めるようになりました。マネージド アセンブリで相互運用アセンブリから COM 型の型情報を取得する必要がありません。 埋め込まれる型情報にはマネージド アセンブリに実際に使用される型とメンバーのみが含まれるため、2 つのマネージド アセンブリで同じ COM 型の表示が非常に異なることが考えられます。 マネージド アセンブリごとに、COM 型の表示を表す異なる <xref:System.Type> オブジェクトが与えられます。 共通言語ランタイムでは、インターフェイス、構造、列挙、委任といった異なる表示間で型の等価性が与えられます。
 
 型の等価性とは、マネージド アセンブリ間で渡される COM オブジェクトを受け取り側のアセンブリで適切なマネージド型に変換できることを意味します。
 

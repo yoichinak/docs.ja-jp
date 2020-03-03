@@ -3,36 +3,35 @@ title: dotnet テストと NUnit を使用した .NET Core での単体テスト
 description: NUnit を使用した Visual Basic ソリューションのサンプルを段階的に構築していく対話型エクスペリエンスを通じて、.NET Core の単体テストの概念について説明します。
 author: rprouse
 ms.date: 10/04/2018
-dev_langs:
-- vb
-ms.custom: seodec18
-ms.openlocfilehash: 84f4b828bd1418f511b2bd82ef959002bc11ad0f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 8f05d25a0add76f5c552f5b9ac1eb310c3d6407a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239155"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715408"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した Visual Basic .NET Core ライブラリでの単体テスト
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-nunit/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
+
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [.NET Core 2.1 SDK](https://www.microsoft.com/net/download) 以降のバージョン。
+- [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="creating-the-source-project"></a>ソース プロジェクトの作成
 
 シェル ウィンドウを開きます。 ソリューションを保存するための *unit-testing-vb-nunit* というディレクトリを作成します。 この新しいディレクトリ内で、次のコマンドを実行して、クラス ライブラリとテスト プロジェクト用の新しいソリューション ファイルを作成します。
 
-```console
+```dotnetcli
 dotnet new sln
 ```
 
 次に、*PrimeService* ディレクトリを作成します。 これまでのところ、ファイルの構造は次のアウトラインのようになっています。
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -40,27 +39,25 @@ dotnet new sln
 
 *PrimeService* を現在のディレクトリとし、次のコマンドを実行してソース プロジェクトを作成します。
 
-```console
+```dotnetcli
 dotnet new classlib -lang VB
 ```
 
-*Class1.VB* の名前を *PrimeService.VB* に変更します。 テスト駆動開発 (TDD) を行うには、`PrimeService` クラスのエラーが発生する実装を作成します。
+*Class1.VB* の名前を *PrimeService.VB* に変更します。 `PrimeService` クラスのエラーが発生する実装を作成します。
 
 ```vb
-Imports System
-
 Namespace Prime.Services
     Public Class PrimeService
         Public Function IsPrime(candidate As Integer) As Boolean
-            Throw New NotImplementedException("Please create a test first")
+            Throw New NotImplementedException("Please create a test first.")
         End Function
     End Class
 End Namespace
 ```
 
-*unit-testing-vb-using-stest* ディレクトリに戻ります。 次のコマンドを実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
+*unit-testing-vb-using-mstest* ディレクトリに戻ります。 次のコマンドを実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
 
-```console
+```dotnetcli
 dotnet sln add .\PrimeService\PrimeService.vbproj
 ```
 
@@ -68,7 +65,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 次に、*PrimeService.Tests* ディレクトリを作成します。 次の一覧はディレクトリ構造を示したものです。
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -79,7 +76,7 @@ dotnet sln add .\PrimeService\PrimeService.vbproj
 
 *PrimeService.Tests* ディレクトリを現在のディレクトリとし、次のコマンドを使用して新しいプロジェクトを作成します。
 
-```console
+```dotnetcli
 dotnet new nunit -lang VB
 ```
 
@@ -89,7 +86,7 @@ dotnet new nunit -lang VB
 
 テスト プロジェクトには、単体テストを作成して実行するための、他のパッケージが必要です。 前の手順の `dotnet new` では、NUnit と NUnit のテスト アダプターを追加しました。 ここで、プロジェクトに別の依存関係として `PrimeService` クラス ライブラリを追加します。 次の [`dotnet add reference`](../tools/dotnet-add-reference.md) コマンドを使用します。
 
-```console
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.vbproj
 ```
 
@@ -97,7 +94,7 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 ソリューションの最終的なレイアウトは次のようになります。
 
-```
+```console
 /unit-testing-vb-nunit
     unit-testing-vb-nunit.sln
     /PrimeService
@@ -110,13 +107,13 @@ dotnet add reference ../PrimeService/PrimeService.vbproj
 
 *unit-testing-vb-nunit* ディレクトリ内で次のコマンドを実行します。
 
-```console
+```dotnetcli
 dotnet sln add .\PrimeService.Tests\PrimeService.Tests.vbproj
 ```
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 
-TDD のアプローチでは、失敗するテストを 1 つ記述することを要求し、それを渡して、プロセスを繰り返します。 *PrimeService.Tests* ディレクトリ内で、*UnitTest1.vb* ファイルの名前を *PrimeService_IsPrimeShould.VB* に変更し、その内容全体を次のコードに置き換えます。
+失敗するテストを 1 つ作成してそれを合格させる、というプロセスを繰り返します。 *PrimeService.Tests* ディレクトリ内で、*UnitTest1.vb* ファイルの名前を *PrimeService_IsPrimeShould.VB* に変更し、その内容全体を次のコードに置き換えます。
 
 ```vb
 Imports NUnit.Framework
@@ -127,7 +124,7 @@ Namespace PrimeService.Tests
         Private _primeService As Prime.Services.PrimeService = New Prime.Services.PrimeService()
 
         <Test>
-        Sub ReturnFalseGivenValueOf1()
+        Sub IsPrime_InputIs1_ReturnFalse()
             Dim result As Boolean = _primeService.IsPrime(1)
 
             Assert.False(result, "1 should not be prime")
@@ -139,14 +136,14 @@ End Namespace
 
 `<TestFixture>` 属性は、テストを含むクラスを表します。 `<Test>` 属性は、テスト ランナーによって実行されるメソッドを表します。 *unit-testing-vb-nunit* で [`dotnet test`](../tools/dotnet-test.md) を実行してテストとクラス ライブラリをビルドし、それからテストを実行します。 NUnit テスト ランナーには、テストを実行するためのプログラムのエントリ ポイントが含まれています。 `dotnet test` を実行すると、作成した単体テスト プロジェクトを使用してテスト ランナーが開始されます。
 
-テストが失敗します。 実装はまだ作成していません。 最も単純な動作のコードを `PrimeService` クラスに記述して、このテストを作成します。
+テストが失敗します。 実装はまだ作成していません。 最も単純な動作のコードを `PrimeService` クラスに記述して、このテストが成功するようにします。
 
 ```vb
 Public Function IsPrime(candidate As Integer) As Boolean
     If candidate = 1 Then
         Return False
     End If
-    Throw New NotImplementedException("Please create a test first")
+    Throw New NotImplementedException("Please create a test first.")
 End Function
 ```
 

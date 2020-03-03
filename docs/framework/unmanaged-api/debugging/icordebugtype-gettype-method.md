@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: d6e64534-4d47-4ad0-a340-7590e07e2b4a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d881a1fe3965b6e1d89e6172c887061434cd52ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 25ffbf73fbefbb3c584450283c3080dfc11ee598
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418719"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791240"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType メソッド
-共通言語ランタイム (CLR) のネイティブ型を記述する CorElementType 値を取得<xref:System.Type>この ICorDebugType によって表されます。  
+このテキスト型で表される共通言語ランタイム (CLR) <xref:System.Type> のネイティブ型を記述する CorElementType 値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetType (  
     [out] CorElementType   *ty  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ty`  
- [out]値へのポインター、`CorElementType`を CLR を示す列挙体<xref:System.Type>この`ICorDebugType`を表します。  
+ 入出力この `ICorDebugType` が表す CLR <xref:System.Type> を示す `CorElementType` 列挙値へのポインター。  
   
 ## <a name="remarks"></a>コメント  
- 場合の値`ty`ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE のいずれかが、 [icordebugtype::getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)メソッドを呼び出すことが、ジェネリック型のインスタンス化されていない型を取得します。 それ以外の場合、呼び出す必要はありません`ICorDebugType::GetClass`です。  
+ `ty` の値が ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE の場合、ジェネリック型のインスタンス型を取得するために、の型[:: GetClass](icordebugtype-getclass-method.md)メソッドを呼び出すことができます。それ以外の場合は、`ICorDebugType::GetClass`を呼び出さないでください。  
   
 ## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

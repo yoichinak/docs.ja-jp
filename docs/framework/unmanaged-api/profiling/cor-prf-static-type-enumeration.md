@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 441d7809-5b65-41a5-ba64-2910a8008315
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 34a2ca5b505c504115af47402c3d92a05ec0676f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 880c9bd186d6cb2acb277e9cc55d3063fb8d51d8
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737634"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76867037"
 ---
-# <a name="corprfstatictype-enumeration"></a>COR_PRF_STATIC_TYPE 列挙型
-フィールドが静的であるかどうかを示し、静的な場合は、フィールドに適用される静的なクオリティを示します。 フィールドを複数持つことを示すビットごとの OR 演算を使用してこれらの値を結合できる別の静的品質。  
+# <a name="cor_prf_static_type-enumeration"></a>COR_PRF_STATIC_TYPE 列挙型
+フィールドが静的であるかどうかを示し、静的な場合は、フィールドに適用される静的なクオリティを示します。 これらの値は、ビットごとの OR 演算を使用して組み合わせて、フィールドに複数の異なる静的品質があることを示すことができます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_FIELD_NOT_A_STATIC = 0x0,  
     COR_PRF_FIELD_APP_DOMAIN_STATIC = 0x1,  
@@ -42,20 +40,21 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_FIELD_NOT_A_STATIC`|フィールドは静的でありません。|  
-|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|フィールドには、アプリケーション ドメインの静的です。|  
-|`COR_PRF_FIELD_THREAD_STATIC`|フィールドでは、スレッドの静的です。|  
-|`COR_PRF_FIELD_CONTEXT_STATIC`|フィールドでは、コンテキストの静的です。|  
-|`COR_PRF_FIELD_RVA_STATIC`|フィールドが相対仮想アドレス (RVA)-静的です。|  
+|`COR_PRF_FIELD_NOT_A_STATIC`|フィールドは静的ではありません。|  
+|`COR_PRF_FIELD_APP_DOMAIN_STATIC`|フィールドは [アプリケーションドメイン-静的] です。|  
+|`COR_PRF_FIELD_THREAD_STATIC`|フィールドはスレッド静的です。|  
+|`COR_PRF_FIELD_CONTEXT_STATIC`|フィールドは、コンテキスト静的です。|  
+|`COR_PRF_FIELD_RVA_STATIC`|フィールドは、相対仮想アドレス (RVA)-static です。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のプロファイリング](../../../../docs/framework/unmanaged-api/profiling/profiling-enumerations.md)
+
+- [列挙型のプロファイリング](profiling-enumerations.md)

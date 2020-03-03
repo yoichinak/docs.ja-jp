@@ -2,24 +2,22 @@
 title: MissingRuntimeArtifactException クラス (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: d5b3d13e-689f-4584-8ba6-44f5167a8590
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e4dd7ef41cb935bf2b9808f730c288c29198720b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58c18fa2d83422e757511d9d2a93606b0a360086
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687272"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73128300"
 ---
 # <a name="missingruntimeartifactexception-class-net-native"></a>MissingRuntimeArtifactException クラス (.NET ネイティブ)
-**Windows 10 の Windows アプリ用 .NET ([!INCLUDE[net_native](../../../includes/net-native-md.md)]のみ)**  
+**Windows アプリ用 .NET (Windows 10 用)、.NET ネイティブのみ**  
   
  この例外は、型または型のメンバーのメタデータは使用可能だが、その実装が削除されている場合にスローされます。  
   
  **名前空間:** System.Reflection  
   
 > [!IMPORTANT]
->  `MissingRuntimeArtifactException` クラスは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
+> `MissingRuntimeArtifactException` クラスは、.NET ネイティブツールチェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。  
   
 ## <a name="syntax"></a>構文  
  [!code-csharp[ProjectN#22](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/missingruntimeartifactexception_syntax1.cs#22)]  
@@ -32,12 +30,12 @@ ms.locfileid: "54687272"
   
 |コンストラクター|説明|  
 |-----------------|-----------------|  
-|`public MissingRuntimeArtifactException()`|エラーを説明するシステム提供のメッセージを使用して、`MissingRuntimeArtifactException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用専用です。|  
-|`public MissingRuntimeArtifactException(String message)`|指定したエラー メッセージを使用して、`MissingRuntimeArtifactException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用専用です。|  
+|`public MissingRuntimeArtifactException()`|エラーを説明するシステム提供のメッセージを使用して、`MissingRuntimeArtifactException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|  
+|`public MissingRuntimeArtifactException(String message)`|指定したエラー メッセージを使用して、`MissingRuntimeArtifactException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは、.NET ネイティブツールチェーンのみによって内部で使用されます。|  
   
 ## <a name="properties"></a>プロパティ  
   
-|プロパティ|説明|  
+|property|説明|  
 |--------------|-----------------|  
 |`public IDictionary Data { get; }`|例外に関する追加のユーザー定義情報を提供する、キー/値ペアのコレクションを取得します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
 |`public string HelpLink { get; set; }`|この例外に関連付けられているヘルプ ファイルへのリンクを取得または設定します。 (<xref:System.Exception?displayProperty=nameWithType> から継承。)|  
@@ -70,10 +68,10 @@ ms.locfileid: "54687272"
 ## <a name="usage-details"></a>使用方法の詳細  
  `MissingRuntimeArtifactException` 例外は、型のインスタンス化または型のメンバーの呼び出しが試行され、その型またはメンバーのメタデータは存在するが、実装が削除されている場合にスローされます。  
   
- ランタイム ディレクティブ (XML 構成) ファイルで、によって定義されるかどうかメタデータと、実装コード メソッドを動的に実行するのには、アプリに対して使用できる実行時に\*。 (rd.xml)。 アプリからこの例外がスローされないようにするには、\*.rd.xml を変更して、型または型のメンバーが必要とするメタデータが実行時に確実に存在するようにする必要があります。 \*.rd.xml ファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
+ メソッドを動的に実行するためのメタデータと実装コードを実行時にアプリで使用できるようにするかどうかは、ランタイムディレクティブ (XML 構成) ファイルの \*によって定義されます。 アプリからこの例外がスローされないようにするには、\*.rd.xml を変更して、型または型のメンバーが必要とするメタデータが実行時に確実に存在するようにする必要があります。 \*.rd.xml ファイルの形式の詳細については、「[Runtime Directives (rd.xml) Configuration File Reference](runtime-directives-rd-xml-configuration-file-reference.md)」(ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス) を参照してください。  
   
 > [!IMPORTANT]
->  この例外はアプリケーションで必要な実装コードを実行時に使用できないことを示しているため、この例外を `try`/`catch` ブロックで処理しないでください。 代わりに、ランタイム ディレクティブ ファイルを使用して、例外の原因を診断して排除する必要があります。 通常、適切なを指定することによってこの例外を排除`Activate`または`Dynamic`、ランタイム ディレクティブ ファイル内のプログラム要素のポリシー (\*.rd.xml ファイル)。 例外を除去するためにランタイム ディレクティブ ファイルに追加できるエントリを取得するには、次の 2 つのトラブルシューティング ツールのいずれかを使用できます。  
+> この例外はアプリケーションで必要な実装コードを実行時に使用できないことを示しているため、この例外を `try`/`catch` ブロックで処理しないでください。 代わりに、ランタイム ディレクティブ ファイルを使用して、例外の原因を診断して排除する必要があります。 通常、この例外を回避するには、ランタイムディレクティブファイル (\*の .xml ファイル) でプログラム要素に適切な `Activate` または `Dynamic` ポリシーを指定します。 例外を除去するためにランタイム ディレクティブ ファイルに追加できるエントリを取得するには、次の 2 つのトラブルシューティング ツールのいずれかを使用できます。  
 >   
 > - [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/type.html) (型の場合)。  
 > - [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/method.html) (メソッドの場合)。  
@@ -81,5 +79,6 @@ ms.locfileid: "54687272"
  `MissingRuntimeArtifactException` クラスには一意のメンバーは含まれていません。メンバーはすべて基底クラスの <xref:System.MemberAccessException> から継承されます。  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)

@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 091a18bd-e901-46f6-b999-74d71c8a7c41
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: e5698e5555e82fd8f64fd029f78cda361a367ca7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c68f43ce2f79ee6e4ec44ce4b2f0dbfb1c1185fa
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585225"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74433876"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash メソッド
-指定されたアセンブリ ハッシュ blob を取得します。  
+指定されたアセンブリのハッシュ blob を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetAssemblyRefHash(  
     mdToken FileToken,  
     const void** ppvHash,  
@@ -36,23 +34,24 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `FileToken`  
  ハッシュが参照するアセンブリの ID。  
   
  `ppvHash`  
- 結果として得られるハッシュ blob を受け取ります。  
+ 結果のハッシュ blob を受け取ります。  
   
  `pcbHash`  
- ハッシュ blob のバイト単位のサイズを受け取ります。  
+ ハッシュ blob のサイズをバイト単位で受信します。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
 ## <a name="see-also"></a>関連項目
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

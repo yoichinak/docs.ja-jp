@@ -1,50 +1,51 @@
 ---
-title: -langversion (Visual Basic)
+title: -langversion
 ms.date: 03/10/2018
 helpviewer_keywords:
 - /langversion compiler option [Visual Basic]
 - langversion compiler option [Visual Basic]
 - -langversion compiler option [Visual Basic]
 ms.assetid: 59b7b0c8-2dde-4e9b-94e7-0237f7e0bafb
-ms.openlocfilehash: 6fffe264377474bba14f6f086b521ccf9bd04adf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72a5638a5c5364381ffd68604b0d44830d53f365
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534460"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74344212"
 ---
 # <a name="-langversion-visual-basic"></a>-langversion (Visual Basic)
-コンパイラで指定された Visual Basic 言語のバージョンに含まれている構文のみを受け入れるようにします。  
+指定された Visual Basic 言語バージョンに含まれている構文のみをコンパイラが受け入れるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```console  
 -langversion:version  
 ```  
   
 ## <a name="arguments"></a>引数  
  `version`  
- 必須。 コンパイル時に使用する言語バージョン。 許容値は`9`、 `10`、 `11`、 `12`、 `14`、 `15`、 `15.3`、 `15.5`、`default`と`latest`します。
+ 必須。 コンパイル中に使用される言語バージョン。 許容される値は、`9`、`10`、`11`、`12`、`14`、`15`、`15.3`、`15.5`、`default`、および `latest`です。
 
- 整数のいずれかを指定するとを使用して`.0`マイナー バージョンとして`11.0`します。
+ `.0` をマイナーバージョン (`11.0`など) として使用して、整数値を指定することもできます。
 
- 指定することで、使用可能なすべての値の一覧を表示できます`-langversion:?`コマンド行にします。  
+ 使用可能なすべての値の一覧を表示するには、コマンドラインで `-langversion:?` を指定します。  
   
-## <a name="remarks"></a>Remarks  
- `-langversion`オプションは、コンパイラはどのような構文を指定します。 たとえば、言語バージョンが 9.0 であることを指定する場合、コンパイラは、バージョン 10.0 でのみ有効であり、以降は、構文エラーを生成します。  
+## <a name="remarks"></a>コメント  
+ `-langversion` オプションは、コンパイラが受け入れる構文を指定します。 たとえば、言語バージョンが9.0 であることを指定した場合、コンパイラはバージョン10.0 以降でのみ有効な構文に対してエラーを生成します。  
   
- .NET Framework の異なるバージョンを対象アプリケーションを開発する際に、このオプションを使用することができます。 たとえば、.NET Framework 3.5 をターゲットにする場合は、言語バージョン 10.0 から構文を使用しないようにする、このオプションを使用できます。  
+ このオプションは、異なるバージョンの .NET Framework を対象とするアプリケーションを開発する場合に使用できます。 たとえば、.NET Framework 3.5 を対象としている場合は、このオプションを使用して、言語バージョン10.0 の構文を使用しないようにすることができます。  
   
- 設定できる`-langversion`直接、コマンドラインを使用してのみです。 詳細については、「[対象となる特定の .NET Framework のバージョンの指定](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)」を参照してください。  
+ `-langversion` を直接設定するには、コマンドラインを使用する必要があります。 詳細については、「[対象となる特定の .NET Framework のバージョンの指定](/visualstudio/ide/visual-studio-multi-targeting-overview)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコードのコンパイル`sample.vb`Visual Basic 9.0 の。  
+ 次のコードは、Visual Basic 9.0 の `sample.vb` をコンパイルします。  
   
 ```console  
 vbc -langversion:9.0 sample.vb  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [対象となる特定の .NET Framework バージョンの指定](/visualstudio/ide/targeting-a-specific-dotnet-framework-version)
+## <a name="see-also"></a>参照
+
+- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [対象となる特定の .NET Framework バージョンの指定](/visualstudio/ide/visual-studio-multi-targeting-overview)

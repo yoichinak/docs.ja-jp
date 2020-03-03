@@ -2,19 +2,19 @@
 title: データの並べ替え (C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: dfa0a4a030cab8ec33c90d8edaef0d6070755034
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8db5ab2ead0e59b8d41d83704ff237d4493155c3
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721995"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346454"
 ---
 # <a name="sorting-data-c"></a>データの並べ替え (C#)
 並べ替え操作では、1 つ以上の属性に基づいてシーケンスの要素を並べ替えます。 並べ替えの第 1 条件で、要素に対して一回目の並べ替えが実行されます。 第 2 条件を指定すると、第 1 条件で並べ替えられた各グループ内の要素を並べ替えることができます。  
   
- 次の図は、文字のシーケンスに対してアルファベット順の並べ替え操作を実行した結果を示しています。  
+ 次の図は、文字のシーケンスに対してアルファベット順の並べ替え操作を実行した結果を示しています。 
   
- ![LINQ 並べ替え操作](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![アルファベット順の並べ替え操作を示している図。](./media/sorting-data/alphabetical-sort-operation.png)  
   
  次のセクションでは、データの並べ替えを実行する標準クエリ演算子のメソッドの一覧を示します。  
   
@@ -129,7 +129,7 @@ foreach (string str in query)
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [orderby 句](../../../../csharp/language-reference/keywords/orderby-clause.md)
-- [方法: Join 句の結果の順序指定](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
-- [方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)
+- [orderby 句](../../../language-reference/keywords/orderby-clause.md)
+- [join 句の結果の順序指定](../../../linq/order-the-results-of-a-join-clause.md)
+- [任意のワードまたはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する方法 (LINQ) (C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

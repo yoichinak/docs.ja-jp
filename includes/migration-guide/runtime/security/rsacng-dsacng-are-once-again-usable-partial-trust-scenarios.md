@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 242a9952cb47d170aceffa1aa392071eb40cc6ab
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857231"
+---
 ### <a name="rsacng-and-dsacng-are-once-again-usable-in-partial-trust-scenarios"></a>部分信頼のシナリオで RSACng と DSACng が再び使用可能に
 
 |   |   |

@@ -1,21 +1,20 @@
 ---
 title: .NET Standard
 description: .NET Standard、そのバージョン、.NET Standard をサポートする .NET 実装について説明します。
-author: mairaw
-ms.author: mairaw
-ms.date: 07/19/2018
+ms.date: 02/13/2020
 ms.technology: dotnet-standard
+ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: d759ab8fe436ad68ca67943b7a4330cea093ae52
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535919"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452592"
 ---
 # <a name="net-standard"></a>.NET Standard
 
-[.NET Standard](https://github.com/dotnet/standard) は、すべての .NET 実装で使用できるようにすることを目的とした .NET API の正式な仕様です。 .NET Standard の背後にある意図は、.NET エコシステムの高度な統一性を確立することです。 [ECMA 335](https://github.com/dotnet/coreclr/blob/master/Documentation/project-docs/dotnet-standards.md) は引き続き .NET 実装の動作の統一性を確立しますが、.NET ライブラリの実装用の .NET 基底クラス ライブラリ (BCL) に同様の仕様はありません。
+[.NET Standard](https://github.com/dotnet/standard) は、すべての .NET 実装で使用できるようにすることを目的とした .NET API の正式な仕様です。 .NET Standard の背後にある意図は、.NET エコシステムの高度な統一性を確立することです。 [ECMA 335](https://github.com/dotnet/runtime/blob/master/docs/project/dotnet-standards.md) では引き続き .NET 実装の動作に対する統一性が確立されます。ECMA 335 では標準ライブラリの小さなセットが指定されていますが、.NET Standard 仕様には幅広い .NET API が含まれています。
 
 .NET Standard により、次の主なシナリオが可能になります。
 
@@ -27,9 +26,9 @@ ms.locfileid: "54535919"
 
 ## <a name="net-implementation-support"></a>.NET 実装のサポート
 
-次の表は、.NET Standard の各バージョンをサポートするプラットフォームの最小バージョンを一覧表示します。
+次の表は、.NET Standard の各バージョンをサポートするプラットフォームの**最小**バージョンを一覧表示します。 つまり、一覧に示されたプラットフォームの以降のバージョンでは、対応する .NET Standard バージョンもサポートされます。 たとえば、.NET Core 2.2 では、.NET Standard 2.0 以前がサポートされます。
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 対象にすることができる最高バージョンの .NET Standard を確認するには、次の手順を実行します。
 
@@ -83,7 +82,7 @@ ms.locfileid: "54535919"
 
 .NET Standard 参照アセンブリの主要な配布手段は [NuGet パッケージ](../core/packages.md)です。 実装は、各 .NET 実装に適切なさまざまな方法で配布されます。
 
-NuGet パッケージは 1 つまたは複数の[フレームワーク](frameworks.md)を対象にしています。 .NET Standard パッケージは、".NET Standard" フレームワークを対象にしています。 `netstandard` [compact TFM](frameworks.md) (`netstandard1.4` など) を使用して、.NET Standard フレームワークを対象にすることができます。 複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。 広範なセットの API の場合、.NET Standard 1.6 から 2.0 の間に使用できる API の数は 2 倍以上になったため、`netstandard2.0` を対象としてください。
+NuGet パッケージは 1 つまたは複数の[フレームワーク](frameworks.md)を対象にしています。 .NET Standard パッケージは、".NET Standard" フレームワークを対象にしています。 `netstandard` [コンパクト TFM](frameworks.md) (`netstandard1.4` など) を使用して、.NET Standard フレームワークを対象にすることができます。 複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。 広範なセットの API の場合、.NET Standard 1.6 から 2.0 の間に使用できる API の数は 2 倍以上になったため、`netstandard2.0` を対象としてください。
 
 [`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) メタパッケージは .NET Standard を定義する NuGet パッケージの完全なセットを参照しています。  `netstandard` を対象とする最も一般的な方法は、このメタパッケージを参照することです。 それは、.NET Standard を定義する約 40 の .NET ライブラリと関連する API について説明しており、それらにアクセスできるようにしています。 `netstandard` を対象とする追加のパッケージを参照して、追加の API にアクセスできます。
 
@@ -93,7 +92,7 @@ NuGet パッケージは 1 つまたは複数の[フレームワーク](framewor
 
 .NET Standard は、1 つの .NET 実装に固有ではなく、それらの実装のいずれかのバージョン管理スキームに一致することもありません。
 
-いずれかの実装 (.NET Framework、.NET Core、Mono など) に追加された API は、本質的に基本的であると考えられる場合に、仕様に追加される候補とみなされる可能性があります。 新しい[.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md) は、.NET 実装のリリースに基づいて作成されるので、.NET Standard PCL から新しい API を対象にすることができます。 バージョン管理メカニズムの詳細は、「[.NET Core Versioning](../core/versions/index.md)」(.NET Core のバージョン管理) で説明されています。
+いずれかの実装 (.NET Framework、.NET Core、Mono など) に追加された API は、本質的に基本的であると考えられる場合に、仕様に追加される候補とみなされる可能性があります。 新しい[.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md) は、.NET 実装のリリースに基づいて作成されるので、.NET Standard PCL から新しい API を対象にすることができます。 バージョン管理メカニズムの詳細は、「[.NET Core のバージョン管理](../core/versions/index.md)」に関するページで説明されています。
 
 .NET Standard のバージョン管理は、使用する場合に重要です。 .NET Standard のバージョンが指定されている場合、それと同じか以下のバージョンを対象とするライブラリを使用できます。 次の方法では、.NET Standard の対象設定に固有の、.NET Standard PCL の使用のワークフローを説明します。
 
@@ -113,7 +112,7 @@ NuGet パッケージは 1 つまたは複数の[フレームワーク](framewor
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard ライブラリと Visual Studio
 
-Visual Studio で .NET Standard ライブラリを作成するには、Windows の場合 [Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 以降、macOS の場合 [Visual Studio for Mac バージョン 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) 以降がインストールされている必要があります。
+Visual Studio で .NET Standard ライブラリを作成するには、Windows の場合 [Visual Studio 2017 バージョン 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 以降、macOS の場合 [Visual Studio for Mac バージョン 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 以降がインストールされている必要があります。
 
 プロジェクトで .NET Standard 2.0 ライブラリを使用するだけである場合は、Visual Studio 2015 でこれを行うこともできます。 ただし、NuGet クライアント 3.6 以降がインストールされている必要があります。 Visual Studio 2015 用の NuGet クライアントは、[NuGet のダウンロード](https://www.nuget.org/downloads)のページからダウンロードできます。
 
@@ -163,3 +162,5 @@ Visual Studio で .NET Standard ライブラリを作成するには、Windows �
 ## <a name="see-also"></a>関連項目
 
 - [.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md)
+- [.NET Standard ライブラリを構築する](../core/tutorials/library-with-visual-studio.md)
+- [クロス プラットフォーム ターゲット](./library-guidance/cross-platform-targeting.md)

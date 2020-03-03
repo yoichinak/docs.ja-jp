@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cce19d6c9afa5f5ce9bb17b5b5d92f2060a08414
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804513"
+---
 ### <a name="currentculture-is-not-preserved-across-wpf-dispatcher-operations"></a>CurrentCulture が、複数の WPF ディスパッチャー操作にわたって維持されない
 
 |   |   |

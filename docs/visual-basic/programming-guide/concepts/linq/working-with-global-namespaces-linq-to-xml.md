@@ -1,22 +1,22 @@
 ---
-title: グローバル名前空間の使用 (Visual Basic) (LINQ to XML)
+title: グローバル名前空間の使用 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: 0922c6973baeb3e0ca51d984b332fd7a3e0b13f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80510e370e0a9c7ab27cb5177d9b547ead82715c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733910"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350996"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>グローバル名前空間の使用 (Visual Basic) (LINQ to XML)
-使用して XML 名前空間を宣言する機能は、Visual Basic で XML リテラルの主な機能の 1 つ、`Imports`ステートメント。 この機能を使用することで、プレフィックスを使用する XML 名前空間または既定の XML 名前空間を宣言できます。  
+Visual Basic の XML リテラルの主な機能の1つに、`Imports` ステートメントを使用して XML 名前空間を宣言する機能があります。 この機能を使用することで、プレフィックスを使用する XML 名前空間または既定の XML 名前空間を宣言できます。  
   
  この機能は 2 つの状況で役立ちます。 1 つは、XML リテラルで宣言された名前空間が組み込み式に引き継がれない場合です。 グローバル名前空間を宣言すると、名前空間を伴う組み込み式を使用する必要がある場合の作業が軽減されます。 もう 1 つは、名前空間と XML プロパティを併用するためにグローバル名前空間を宣言する必要がある場合です。  
   
  グローバル名前空間はプロジェクト レベルで宣言できます。 また、モジュール レベルでもグローバル名前空間を宣言できます。その場合、プロジェクト レベルのグローバル名前空間はオーバーライドされます。 最終的に、グローバル名前空間は XML リテラルでオーバーライドできます。  
   
- グローバルに宣言された名前空間に含まれる XML リテラルまたは XML プロパティを使用する場合は、Visual Studio で XML リテラルまたはプロパティにカーソルを合わせることで、それらの展開名が表示されます。 展開名はツールヒントに表示されます。  
+ グローバルに宣言された名前空間に含まれる XML リテラルまたは XML プロパティを使用する場合は、Visual Studio で XML リテラルまたはプロパティにカーソルを合わせることで、それらの展開名が表示されます。 拡張名はツールヒントに表示されます。  
   
  グローバル名前空間に対応する <xref:System.Xml.Linq.XNamespace> オブジェクトを取得するには、`GetXmlNamespace` メソッドを使用します。  
   
@@ -134,7 +134,7 @@ Console.WriteLine(root.<Child>.Count())
   
  この例は `Child` 要素が存在しないことを示しています。 生成される出力は次のとおりです。  
   
-```  
+```console  
 0  
 ```  
   
@@ -156,7 +156,7 @@ End Module
   
  この例は、`Child` 要素が 1 つ存在することを示しています。 生成される出力は次のとおりです。  
   
-```  
+```console  
 1  
 ```  
   
@@ -193,9 +193,10 @@ End Module
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console  
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>参照
+
+- [名前空間の概要 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

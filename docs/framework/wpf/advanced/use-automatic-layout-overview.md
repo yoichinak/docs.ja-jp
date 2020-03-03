@@ -5,109 +5,120 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 4cb351b0db83bd83c17aa4aca004b310dc957437
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fe473da3eeabef3852e3003e61b3b9604332855
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609604"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291270"
 ---
 # <a name="use-automatic-layout-overview"></a>自動レイアウトの使用の概要
-このトピックで作成する方法に関する開発者向けのガイドラインは[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ローカライズ可能なアプリケーション[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]します。 以前は、UI のローカライズは時間のかかるプロセスでした。 各言語 UI が変更するには、ピクセル単位で調整が必要です。 今日は、適切な設計とコーディング標準、[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]ローカライザーがあるサイズ変更や、実行する位置を変更できるように構築できます。 簡単にサイズ変更や位置が変更された可能性のあるアプリケーションを作成する方法は、自動レイアウトをという名前を使用して実現できます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションの設計。  
 
-<a name="advantages_of_autolayout"></a>   
-## <a name="advantages-of-using-automatic-layout"></a>自動レイアウトを使用する利点  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プレゼンテーション システムは強力で柔軟なさまざまな言語の要件に合わせて調整できるアプリケーションの要素をレイアウトする機能を提供します。 次の一覧は、自動レイアウトの利点の一部を示しています。  
+このトピックでは、ローカライズ可能なユーザーインターフェイス (Ui) を使用して [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを記述する方法について、開発者向けのガイドラインを紹介します。 以前は、UI のローカライズは時間のかかるプロセスでした。 UI が調整された各言語では、ピクセル単位の調整が必要でした。 現在、適切な設計と適切なコーディング標準を使用して、Ui を構築して、ローカライザーのサイズ変更や位置変更を減らすことができます。 サイズ変更や位置変更が簡単になるアプリケーションの作成方法は、自動レイアウトと呼ばれ、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの設計を使用して実現できます。
 
--   任意の言語で UI を表示します。  
+<a name="advantages_of_autolayout"></a>
 
--   テキストの翻訳後のコントロールの位置とサイズを再調整する必要性が軽減されます。  
-  
--   ウィンドウのサイズを再調整する必要性を軽減します。  
+## <a name="advantages-of-using-automatic-layout"></a>自動レイアウトを使用する利点
 
--   UI のレイアウトは、任意の言語で正しく表示します。  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプレゼンテーションシステムは強力で柔軟性があるため、さまざまな言語の要件に合わせて調整できるアプリケーションの要素をレイアウトする機能が用意されています。 次の一覧は、自動レイアウトの利点の一部を示しています。
 
--   ローカリゼーションは、文字列の翻訳より若干高であるポイントに削減できます。  
-  
-<a name="autolayout_controls"></a>   
-## <a name="automatic-layout-and-controls"></a>自動レイアウトとコントロール  
- 自動レイアウトには、コントロールのサイズを自動的に調整するアプリケーションができるようにします。 たとえば、文字列の長さに合わせてコントロールを変更できます。 この機能により、ローカライザーに文字列を変換するには不要になった、翻訳されたテキストに合わせてコントロールのサイズを変更する必要があります。 次の例では、英語コンテンツをボタンを作成します。  
-  
- [!code-xaml[LocalizationBtn_snip#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]  
-  
- 例をスペイン語のボタンのために実行する必要がある、テキストを変更します。 例えば以下のようにします。  
-  
- [!code-xaml[LocalizationBtn#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
-  
- 次の図は、コード サンプルの出力を示しています。  
-  
- ![テキストの言語が異なる同じボタン](../../../../docs/framework/wpf/advanced/media/globalizationbutton.png "GlobalizationButton")  
-自動サイズ変更可能なボタン  
-  
-<a name="autolayout_coding"></a>   
-## <a name="automatic-layout-and-coding-standards"></a>自動レイアウトとコーディング標準  
- 自動レイアウトのアプローチを使用するには、一連のコーディングし設計標準と完全にローカライズ可能な UI を生成するために規則が必要です。 次のガイドライン、自動レイアウトのコーディングが容易になります。  
+- UI は任意の言語で表示されます。
 
-**絶対位置を使用しないでください。**
+- テキストを変換した後に、コントロールの位置とサイズを再調整する必要がなくなります。
 
-- 使用しない<xref:System.Windows.Controls.Canvas>のため、絶対に要素を配置します。
+- ウィンドウサイズを再調整する必要が少なくなります。
 
-- 使用<xref:System.Windows.Controls.DockPanel>、 <xref:System.Windows.Controls.StackPanel>、および<xref:System.Windows.Controls.Grid>コントロールを配置します。
+- UI レイアウトは任意の言語で正しくレンダリングされます。
 
-パネルのさまざまな種類の詳細については、次を参照してください。[パネルの概要](../../../../docs/framework/wpf/controls/panels-overview.md)します。
+- ローカライズは、文字列変換よりも少ないポイントに縮小することができます。
 
-**ウィンドウの固定サイズを設定しないでください。**
+<a name="autolayout_controls"></a>
 
-- <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType> を使用してください。 例:
+## <a name="automatic-layout-and-controls"></a>自動レイアウトとコントロール
 
-   [!code-xaml[LocalizationGrid#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+自動レイアウトを使用すると、アプリケーションでコントロールのサイズを自動的に調整できます。 たとえば、文字列の長さに合わせてコントロールを変更できます。 この機能により、ローカライザーは文字列を変換できます。翻訳されたテキストに合わせてコントロールのサイズを変更する必要がなくなりました。 次の例では、英語のコンテンツを含むボタンを作成します。
 
-**追加します。 <xref:System.Windows.FrameworkElement.FlowDirection%2A>**
+[!code-xaml[LocalizationBtn_snip#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn_snip/CS/Pane1.xaml#1)]
 
-- 追加、<xref:System.Windows.FrameworkElement.FlowDirection%2A>アプリケーションのルート要素にします。
+この例では、スペイン語のボタンを作成するために必要なのは、テキストを変更することだけです。 次に例を示します。
 
-   WPF には、水平方向をサポートする便利な方法、双方向、および垂直方向のレイアウトが用意されています。 プレゼンテーションのフレームワークで、<xref:System.Windows.FrameworkElement.FlowDirection%2A>レイアウトを定義するプロパティを使用できます。 フロー方向パターンは次のとおりです。
-   
-     - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb)-ラテン語や東アジア言語などのための横書きレイアウト。
-     
-     - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb)-アラビア語やヘブライ語などの双方向。
+[!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]
 
-**物理フォントではなく複合フォントを使用します。**
+次の図は、コードサンプルの出力を示しています。
 
-- 複合のフォントを含む、<xref:System.Windows.Controls.Control.FontFamily%2A>プロパティはローカライズする必要はありません。
+![テキストの言語が異なる同じボタン](./media/use-automatic-layout-overview/auto-resizable-button.png)
 
-- 開発者では、次のフォントのいずれかを使用したり、独自に作成することができます。
+<a name="autolayout_coding"></a>
 
-   - グローバル ユーザー インターフェイス
-   - グローバル San Serif
-   - グローバル Serif
+## <a name="automatic-layout-and-coding-standards"></a>自動レイアウトとコーディング標準
 
-**Xml:lang を追加します。**
+自動レイアウトアプローチを使用するには、完全にローカライズ可能な UI を生成するために、一連のコーディングと設計標準および規則が必要です。 次のガイドラインは、自動レイアウトコーディングを支援するものです。
 
-- 追加、`xml:lang`など、UI のルート要素に属性`xml:lang="en-US"`英語版のアプリケーション。
+**絶対位置を使用しない**
 
-- 複合フォントを使用しているため`xml:lang`を使用するフォントを確認するには、多言語シナリオをサポートするには、このプロパティを設定します。
+- 要素が絶対に配置されるため、<xref:System.Windows.Controls.Canvas> は使用しないでください。
 
-<a name="autolay_grids"></a>   
-## <a name="automatic-layout-and-grids"></a>自動レイアウトとグリッド  
- <xref:System.Windows.Controls.Grid>要素は、開発者が要素を配置するため、自動レイアウト用に便利です。 A<xref:System.Windows.Controls.Grid>コントロールの列と行の並べ替え方法を使用して、その子要素間で使用可能な領域を配布します。 UI 要素が複数のセルにまたがることができます、グリッド内にグリッドを作成できます。 グリッドを作成し、複雑な UI を配置することができるため便利です。 次の例では、グリッドを使用したいくつかのボタンとテキストの位置を示します。 セルの幅と高さに設定されている通知<xref:System.Windows.GridUnitType.Auto>。 したがって、イメージ付きのボタンを含むセルを画像に合わせて調整します。  
+- コントロールを配置するには、<xref:System.Windows.Controls.DockPanel>、<xref:System.Windows.Controls.StackPanel>、および <xref:System.Windows.Controls.Grid> を使用します。
 
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
-  
- 次の図は、前のコードによって生成されるグリッドを示します。  
-  
- ![グリッドの例](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
-グリッド  
-  
-<a name="autolay_grids_issharedsizescope"></a>   
-## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>自動レイアウトと IsSharedSizeScope プロパティを使用してグリッド  
- A<xref:System.Windows.Controls.Grid>要素がコンテンツに合わせて調整されるコントロールを作成する、ローカライズ可能なアプリケーションで役に立ちます。 ただし、たい場コンテンツに関係なく特定のサイズを維持するコントロール。 たとえば、"OK"があれば、「キャンセル」と「参照」おそらくたくないボタンのサイズをコンテンツに合わせてボタン。 この場合、<xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType>添付プロパティは複数の grid 要素間で同じサイズの変更を共有するために便利です。 次の例は、列と行の複数の間でデータをサイズ変更を共有する方法を示します<xref:System.Windows.Controls.Grid>要素。  
-  
- [!code-xaml[gridIssharedsizescopeProp#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]  
-  
- **注**完全なコード サンプルでは、次を参照してください[共有サイズ設定プロパティの間でグリッド。](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
-  
-## <a name="see-also"></a>関連項目
-- [WPF のグローバリゼーション](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
-- [自動レイアウトを使用してボタンを作成する](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
-- [自動レイアウト用のグリッドを使用する](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)
+さまざまな種類のパネルの詳細については、「[パネルの概要](../controls/panels-overview.md)」を参照してください。
+
+**ウィンドウに固定サイズを設定しない**
+
+- <xref:System.Windows.Window.SizeToContent%2A?displayProperty=nameWithType> を使用してください。 例 :
+
+  [!code-xaml[LocalizationGrid#2](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#2)]
+
+**<xref:System.Windows.FrameworkElement.FlowDirection%2A> の追加**
+
+- アプリケーションのルート要素に <xref:System.Windows.FrameworkElement.FlowDirection%2A> を追加します。
+
+  WPF は、水平方向、双方向、および垂直方向のレイアウトをサポートするための便利な方法を提供します。 プレゼンテーションフレームワークでは、<xref:System.Windows.FrameworkElement.FlowDirection%2A> プロパティを使用してレイアウトを定義できます。 フロー方向のパターンは次のとおりです。
+
+  - <xref:System.Windows.FlowDirection.LeftToRight?displayProperty=nameWithType> (LrTb) —ラテン、東アジア言語などの横レイアウト。
+
+  - <xref:System.Windows.FlowDirection.RightToLeft?displayProperty=nameWithType> (RlTb) —アラビア語、ヘブライ語などの双方向。
+
+**物理フォントの代わりに複合フォントを使用する**
+
+- 複合フォントでは、<xref:System.Windows.Controls.Control.FontFamily%2A> プロパティをローカライズする必要はありません。
+
+- 開発者は、次のいずれかのフォントを使用することも、独自に作成することもできます。
+
+  - グローバルユーザーインターフェイス
+  - グローバル San Serif
+  - グローバル Serif
+
+**Xml の追加: lang**
+
+- English アプリケーションの `xml:lang="en-US"` など、UI のルート要素に `xml:lang` 属性を追加します。
+
+- 複合フォントでは、使用するフォントを決定するために `xml:lang` が使用されるため、このプロパティを設定すると、多言語のシナリオがサポートされます。
+
+<a name="autolay_grids"></a>
+
+## <a name="automatic-layout-and-grids"></a>自動レイアウトとグリッド
+
+<xref:System.Windows.Controls.Grid> 要素は、開発者が要素を配置できるようにするため、自動レイアウトに便利です。 <xref:System.Windows.Controls.Grid> コントロールは、列と行の配置を使用して、子要素間で使用可能な領域を分散できます。 UI 要素は複数のセルにまたがることができ、グリッド内にグリッドを含めることができます。 グリッドを使用すると、複雑な UI を作成して配置することができます。 次の例では、グリッドを使用していくつかのボタンとテキストを配置する方法を示します。 セルの高さと幅が <xref:System.Windows.GridUnitType.Auto>に設定されていることに注意してください。そのため、イメージを含むボタンを含むセルは、イメージに合わせて調整されます。
+
+[!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]
+
+次の図は、前のコードで生成されたグリッドを示しています。
+
+グリッドの(./media/glob-grid.png "glob_grid")グリッドの![例]
+
+<a name="autolay_grids_issharedsizescope"></a>
+
+## <a name="automatic-layout-and-grids-using-the-issharedsizescope-property"></a>System.windows.controls.grid.issharedsizescope プロパティを使用した自動レイアウトとグリッド
+
+<xref:System.Windows.Controls.Grid> 要素は、ローカライズ可能なアプリケーションで、コンテンツに合わせて調整するコントロールを作成する場合に便利です。 ただし、コンテンツに関係なく、特定のサイズを維持する必要がある場合もあります。 たとえば、"OK"、"キャンセル"、および "参照" ボタンがある場合は、コンテンツに合わせてボタンのサイズを変更しないことをお勧めします。 この場合、<xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A?displayProperty=nameWithType> 添付プロパティは、複数の grid 要素間で同じサイズ設定を共有する場合に便利です。 次の例では、複数の <xref:System.Windows.Controls.Grid> 要素の間で、列と行のサイズ変更データを共有する方法を示します。
+
+[!code-xaml[gridIssharedsizescopeProp#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridIssharedsizescopeProp/CSharp/Window1.xaml#2)]
+
+> [!NOTE]
+> 完全なコードサンプルについては、「[グリッド間でサイズ変更プロパティを共有](../controls/how-to-share-sizing-properties-between-grids.md)する」を参照してください。
+
+## <a name="see-also"></a>参照
+
+- [WPF のグローバリゼーション](globalization-for-wpf.md)
+- [自動レイアウトを使用してボタンを作成する](how-to-use-automatic-layout-to-create-a-button.md)
+- [自動レイアウト用のグリッドを使用する](how-to-use-a-grid-for-automatic-layout.md)

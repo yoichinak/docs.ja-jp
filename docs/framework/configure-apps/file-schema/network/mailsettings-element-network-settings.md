@@ -8,20 +8,20 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: 0e71284e914dac2d28448f3d8bd4bdc7a9f6b325
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4e8bf23ce39edadf80f019315c690b597b3d7361
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277616"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089229"
 ---
 # <a name="mailsettings-element-network-settings"></a>\<mailSettings > 要素 (ネットワーク設定)
 電子メールの送信オプションを設定します。  
 
-\<configuration>  
-\<system.net>  
-\<mailSettings>  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<mailSettings >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -40,16 +40,16 @@ ms.locfileid: "55277616"
   
 |属性|説明|  
 |---------------|-----------------|  
-|[\<smtp> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/smtp-element-network-settings.md)|簡易メール転送プロトコル オプションを構成します。|  
+|[\<smtp > 要素 (ネットワーク設定)](smtp-element-network-settings.md)|簡易メール転送プロトコルのオプションを構成します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[\<system.Net> 要素 (ネットワーク設定)](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
+|[\<system.Net> 要素 (ネットワーク設定)](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
 ## <a name="example"></a>例  
- 次の例では、既定のネットワーク資格情報を使用して電子メールを送信する適切な SMTP パラメーターを指定します。  
+ 次の例では、既定のネットワーク資格情報を使用して電子メールを送信するための適切な SMTP パラメーターを指定しています。  
   
 ```xml  
 <configuration>  
@@ -68,5 +68,6 @@ ms.locfileid: "55277616"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.Mail.SmtpClient>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

@@ -1,18 +1,18 @@
 ---
-title: <returns> (Visual Basic)
+title: <returns>
 ms.date: 07/20/2015
 helpviewer_keywords:
 - returns XML tag
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
-ms.openlocfilehash: 0463d1b489fdad5e6af2d8eb20a1e68c77f57b4d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 62f70ae7f40fa3cde9492563b7bd14dfa5940a5f
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254965"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352242"
 ---
-# <a name="returns-visual-basic"></a>\<返します > (Visual Basic)
+# <a name="returns-visual-basic"></a>\<returns> (Visual Basic)
 プロパティまたは関数の戻り値を指定します。  
   
 ## <a name="syntax"></a>構文  
@@ -21,19 +21,20 @@ ms.locfileid: "55254965"
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `description`  
  戻り値の説明。  
   
-## <a name="remarks"></a>Remarks  
- 使用して、`<returns>`戻り値を記述するメソッド宣言のコメント内のタグ。  
+## <a name="remarks"></a>コメント  
+ メソッド宣言のコメントにある `<returns>` タグを使用して、戻り値を記述します。  
   
- コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、`<returns>`何かを説明するタグ、`DoesRecordExist`関数が返される。  
+ この例では、`<returns>` タグを使用して、`DoesRecordExist` 関数が返す内容を説明します。  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/returns_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

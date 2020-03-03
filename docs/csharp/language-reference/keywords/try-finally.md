@@ -1,6 +1,5 @@
 ---
 title: try-finally - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - finally
@@ -9,12 +8,12 @@ helpviewer_keywords:
 - finally keyword [C#]
 - try-finally statement [C#]
 ms.assetid: c27623fb-7261-4464-862c-7a369d3c8f0a
-ms.openlocfilehash: 15111a185f73f60e77139d3a7faef7f32f4bf613
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2c4c69b1e104aed968bc24bac690de83026643a0
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677668"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713015"
 ---
 # <a name="try-finally-c-reference"></a>try-finally (C# リファレンス)
 
@@ -40,7 +39,7 @@ C# には、<xref:System.IDisposable> オブジェクトに対して同様の機
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[try ステートメント](~/_csharplang/spec/statements.md#the-try-statement)」セクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -48,7 +47,6 @@ C# には、<xref:System.IDisposable> オブジェクトに対して同様の機
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [try、throw、catch ステートメント (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [例外処理ステートメント](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-catch](try-catch.md)
 - [方法: 例外を明示的にスローする](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

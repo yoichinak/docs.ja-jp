@@ -20,23 +20,21 @@ helpviewer_keywords:
 - code generators
 - CodeDOM, graphs
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 73810330c1ec44aa3a5edf47b3062bc2df267008
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: HT
+ms.openlocfilehash: c4cab79976acae236de5a8eaad5a42cdba7d04f9
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219595"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130006"
 ---
 # <a name="using-the-codedom"></a>CodeDOM の使用方法
 CodeDOM には一般的なさまざま種類のソース コード要素を表す型が用意されています。 オブジェクト グラフをアセンブルする CodeDOM 要素を使用すると、ソース コード モデルを構築するプログラムをデザインできます。 このオブジェクト グラフは、サポートされているプログラミング言語用の CodeDOM コード ジェネレーターを使用して、ソース コードとしてレンダリングできます。 また、CodeDOM を使用して、ソース コードをバイナリ アセンブリにコンパイルすることもできます。  
   
  CodeDOM の一般的な使用方法の例は次のとおりです。  
   
--   テンプレートを使ったコード生成。ASP.NET、XML Web サービス クライアント プロキシ、コード ウィザード、デザイナー、またはその他のコード出力機構のためのコードを生成します。  
+- テンプレートを使ったコード生成。ASP.NET、XML Web サービス クライアント プロキシ、コード ウィザード、デザイナー、またはその他のコード出力機構のためのコードを生成します。  
   
--   動的コンパイル。1 つ以上の言語でのコードのコンパイルをサポートします。  
+- 動的コンパイル。1 つ以上の言語でのコードのコンパイルをサポートします。  
   
 ## <a name="building-a-codedom-graph"></a>CodeDOM グラフの構築  
  <xref:System.CodeDom> 名前空間には、言語の構文に依存しない、ソース コードの論理構造を表すクラスが用意されています。  
@@ -120,7 +118,7 @@ CodeDOM には一般的なさまざま種類のソース コード要素を表�
  [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
  [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
- これで、<xref:System.CodeDom.CodeCompileUnit> という名前の `compileUnit` に、簡単な Hello World プログラムの CodeDOM グラフが追加されました。 CodeDOM グラフからのコードの生成およびコンパイルについては、「[CodeDOM グラフからのソース コードの生成およびプログラムのコンパイル](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)」を参照してください。  
+ これで、<xref:System.CodeDom.CodeCompileUnit> という名前の `compileUnit` に、簡単な Hello World プログラムの CodeDOM グラフが追加されました。 CodeDOM グラフからのコードの生成およびコンパイルについては、「[CodeDOM グラフからのソース コードの生成およびプログラムのコンパイル](generating-and-compiling-source-code-from-a-codedom-graph.md)」を参照してください。  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>CodeDOM グラフの構築に関する詳細  
  CodeDOM では、共通言語ランタイムをサポートするプログラミング言語の一般的なさまざまな種類のコード要素をサポートします。 CodeDOM は、プログラミング言語のすべての機能を表す要素を提供するようにはデザインされていません。 CodeDOM 要素で簡単に表すことができないコードは、<xref:System.CodeDom.CodeSnippetExpression>、<xref:System.CodeDom.CodeSnippetStatement>、<xref:System.CodeDom.CodeSnippetTypeMember>、または <xref:System.CodeDom.CodeSnippetCompileUnit> にカプセル化できます。 ただし、CodeDOM ではコードを自動的に他の言語に変換することはできません。  

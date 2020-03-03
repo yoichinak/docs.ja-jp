@@ -8,22 +8,22 @@ helpviewer_keywords:
 - providerOptions
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
-ms.openlocfilehash: bb29ba8721c3aa13fad4410208b1276bdfa761c1
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: a6718173e84ecffc4ba0641f6e865e777aa6b1a4
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675271"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74088671"
 ---
 # <a name="provideroption-element"></a>\<providerOption > 要素
-言語プロバイダーのコンパイラ バージョン属性を指定します。  
-  
- \<configuration >要素  
-\<system.codedom>要素  
-\<compilers >要素  
-\<compiler> 要素  
-\<providerOption > 要素  
-  
+言語プロバイダーのコンパイラバージョン属性を指定します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<コンパイラ**](compilers-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**コンパイラ >** ](compiler-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**providerOption >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -40,8 +40,8 @@ ms.locfileid: "55675271"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|必須の属性です。<br /><br /> オプション; の名前を指定しますたとえば、"CompilerVersion"です。|  
-|`value`|必須の属性です。<br /><br /> オプションの値を指定しますたとえば、"v3.5"とします。|  
+|`name`|必須の属性です。<br /><br /> オプションの名前を指定します。たとえば、"CompilerVersion" のようになります。|  
+|`value`|必須の属性です。<br /><br /> オプションの値を指定します。たとえば、"v 3.5" のようになります。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -50,22 +50,22 @@ ms.locfileid: "55675271"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
-|[\<system.codedom > 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|  
-|[\<compilers> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|コンパイラ構成要素のコンテナー0 個以上含む`<compiler>`要素。|  
-|[\<compiler> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)|言語プロバイダーのコンパイラ構成属性を指定します。|  
+|[\<configuration> 要素](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|[\<システムの codedom > 要素](system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|  
+|[\<コンパイラ > 要素](compilers-element.md)|コンパイラ構成要素のコンテナー。0個以上の `<compiler>` 要素が含まれています。|  
+|[\<compiler> 要素](compiler-element.md)|言語プロバイダーのコンパイラ構成属性を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- .NET framework version 3.5 では、Code Document Object Model (CodeDOM) コード プロバイダーを使用してプロバイダーに固有のオプションをサポートできる、`<providerOption>`要素。  
+ .NET Framework バージョン3.5 では、Code Document Object Model (CodeDOM) コードプロバイダーは `<providerOption>` 要素を使用してプロバイダー固有のオプションをサポートできます。  
   
- .NET Framework 3.5 では、更新された .NET Framework 2.0 アセンブリが含まれていて、新しい型を含む新しいバージョン 3.5 アセンブリを提供します。 Microsoft c# と Visual Basic コード プロバイダーは、.NET Framework 2.0 アセンブリに含まれるが、version 3.5 のコンパイラをサポートするが更新されました。 既定では、更新されたコード プロバイダーは、バージョン 2.0 コンパイラ用のコードを生成します。 使用することができます、 `<providerOption>` 3.5 をターゲット コンパイラのバージョンを変更する要素。 これを行うには、"CompilerVersion"を指定の`name`属性と"v3.5"用、`value`属性。 小文字の"v"のバージョン番号の前にする必要があります。  
+ .NET Framework 3.5 には、更新された .NET Framework 2.0 アセンブリが含まれており、新しい型を含む新しいバージョンの3.5 アセンブリが用意されています。 Microsoft C#および Visual Basic コードプロバイダーは .NET Framework 2.0 アセンブリに含まれていますが、バージョン3.5 コンパイラをサポートするように更新されています。 既定では、更新されたコードプロバイダーはバージョン2.0 コンパイラのコードを生成します。 `<providerOption>` 要素を使用して、ターゲットコンパイラのバージョンを3.5 に変更できます。 これを行うには、`name` 属性に "CompilerVersion" を指定し、`value` 属性に「v 3.5」を指定します。 バージョン番号の前には、小文字の "v" を使用する必要があります。  
   
- 行うことができます、バージョン指定グローバルを追加して、`<providerOption>`を .NET Framework 2.0 Machine.config または Web.config ファイルのルート要素。 Machine.config ファイルで 3.5 に既定のコンパイラ バージョンを更新した場合ことができますに変更する戻るアプリケーションごとに 2.0 を使用して、`<providerOption>`アプリケーション構成ファイル内の要素。  
+ .NET Framework 2.0 machine.config またはルートの web.config ファイルに `<providerOption>` 要素を追加することで、バージョン指定をグローバルにすることができます。 Machine.config ファイルで既定のコンパイラのバージョンを3.5 に更新した場合は、アプリケーション構成ファイルの `<providerOption>` 要素を使用して、アプリケーションごとに2.0 に戻すことができます。  
   
- CodeDOM コード プロバイダーの実装を受け取るコンス トラクターを提供することによってカスタム オプションを処理できる、`providerOptions`型のパラメーター<xref:System.Collections.Generic.IDictionary%602>します。  
+ CodeDOM コードプロバイダーの実装者は、<xref:System.Collections.Generic.IDictionary%602>型の `providerOptions` パラメーターを受け取るコンストラクターを指定することによって、カスタムオプションを処理できます。  
   
 ## <a name="example"></a>例  
- 次の例では、c# コード プロバイダーのバージョン 3.5 を使用する必要がありますを指定する方法を示します。  
+ 次の例は、 C#コードプロバイダーのバージョン3.5 を使用するように指定する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -90,9 +90,10 @@ ms.locfileid: "55675271"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [\<compilers> 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)
-- [完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)
-- [(ASP.NET 設定スキーマ) compilation の compilers の compiler 要素](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))
+- [構成ファイル スキーマ](../index.md)
+- [\<コンパイラ > 要素](compilers-element.md)
+- [完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)
+- [コンパイル用コンパイラのコンパイラ要素 (ASP.NET Settings スキーマ)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a15ebt6c(v=vs.100))

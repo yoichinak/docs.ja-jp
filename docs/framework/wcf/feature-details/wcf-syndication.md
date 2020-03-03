@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - syndication [WCF]
 ms.assetid: ebf80384-0fc9-4919-a1e8-23ca2a13e300
-ms.openlocfilehash: c7fefb49cf70b9f3c55937e7be06eca212af364d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 198b664ff52b42b7f393eec3e8162f3a12037d9d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935526"
 ---
 # <a name="wcf-syndication"></a>WCF 配信
 Windows Communication Foundation (WCF) は、Atom、RSS、または他のカスタム形式で配信フィードを簡単に操作を使用すると、読み取りと作成だけでなく、サービス エンドポイントで公開するサポートを提供します。 このセクションのトピックでは、配信用のこのプログラミング モデルについて詳細に説明します。  
@@ -41,5 +41,6 @@ Windows Communication Foundation (WCF) は、Atom、RSS、または他のカス�
 ## <a name="related-sections"></a>関連項目  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [部分信頼](../../../../docs/framework/wcf/feature-details/partial-trust.md)

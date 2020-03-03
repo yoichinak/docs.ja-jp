@@ -14,26 +14,24 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f833c19da1199528dceee3a4f34dea7180380023
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6914437b9b238c1d82cf4cc8a480a15dd8dda7ad
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576435"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126803"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen クラス
-ネイティブ ポータブル実行可能 (PE) ファイルを作成するための機能を提供します。 インターフェイスは、実行可能ファイルのコンパイル済み出力を生成するコンパイラで通常使用されます。  
+ネイティブのポータブル実行可能 (PE) ファイルを作成するための機能を提供します。 インターフェイスは、通常、コンパイルされた出力実行可能ファイルを生成するためにコンパイラによって使用されます。  
   
 > [!NOTE]
->  `ICeeFileGen` .NET Framework インフラストラクチャをサポートし、コードから直接使用するものではありません。  
+> `ICeeFileGen` は .NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
- このインターフェイスは非推奨とされましたを将来のリリースで削除されます。  
+ このインターフェイスは非推奨とされており、今後のリリースでは削除される予定です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  
@@ -236,12 +234,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ICeeFileGen.h  
+ **ヘッダー:** ICeeFileGen  
   
- **.NET framework のバージョン:** 1  
+ **.NET Framework のバージョン:** 1.0  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

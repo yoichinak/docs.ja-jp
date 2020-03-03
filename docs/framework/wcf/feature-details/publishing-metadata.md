@@ -2,14 +2,14 @@
 title: メタデータの公開
 ms.date: 03/30/2017
 helpviewer_keywords:
-- meatadata [WCF], publishing
+- metadata [WCF], publishing
 ms.assetid: 3a56831a-cabc-45c0-bd02-12e2e9bd7313
-ms.openlocfilehash: 1f216fe045dff9eca98c821724372e4426620f47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54ab05f32320f3084fc609d8107f2892ffe6efbd
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548808"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424577"
 ---
 # <a name="publishing-metadata"></a>メタデータの公開
 Windows Communication Foundation (WCF) サービスは、1 つまたは複数のメタデータ エンドポイントを発行することによって、メタデータを公開します。 サービス メタデータを公開すると、そのメタデータで WS-MetadataExchange (MEX) や HTTP/GET 要求などの標準化プロトコルを使用できるようになります。 メタデータのエンドポイントはアドレス、バインディング、コントラクトを持つ他のサービス エンドポイントに類似し、それらは構成か命令コードを使用してサービス ホストに追加することができます。  
@@ -44,4 +44,5 @@ Windows Communication Foundation (WCF) サービスは、1 つまたは複数の
  <xref:System.ServiceModel.Description.MetadataExchangeBindings>  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータのエクスポートとインポート](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

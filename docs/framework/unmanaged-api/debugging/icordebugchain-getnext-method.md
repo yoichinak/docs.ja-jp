@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 8d9744a5-e08b-4ab2-9855-5c22711cc1e6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 839052b72d908e48a4b6f88dab05ec3c3d575d65
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 132734dfb6ba9d70836638ab67564fc215e9bc40
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405412"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73192119"
 ---
 # <a name="icordebugchaingetnext-method"></a>ICorDebugChain::GetNext メソッド
-スレッドの次のフレーム チェーンを取得します。  
+スレッドの次のフレームのチェーンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetNext (  
     [out] ICorDebugChain     **ppChain  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppChain`  
- [out]次のスレッドのフレーム チェーンを表す ICorDebugChain オブジェクトのアドレスへのポインター。 このチェーンの最後のチェーン場合`ppChain`が null です。  
+ 入出力スレッドの次のフレームのチェーンを表す、テキストチェーンオブジェクトのアドレスへのポインター。 このチェーンが最後のチェーンの場合、`ppChain` は null になります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

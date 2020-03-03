@@ -15,41 +15,36 @@ helpviewer_keywords:
 ms.assetid: c568b737-fdb2-4816-accd-051f5ab760f1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: dd544619f9e5fb85a0b08b91ead8231ea25743cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 217ca0a850926e5f697340cece264c6ed442a9bb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651230"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125643"
 ---
 # <a name="icordebugcodegetfunction-method"></a>ICorDebugCode::GetFunction メソッド
-この"ICorDebugCode"に関連付けられている"ICorDebugFunction"を取得します。  
+この "コード" に関連付けられている "コード" を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFunction (  
     [out] ICorDebugFunction **ppFunction  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppFunction`  
- [out]関数のアドレスへのポインター。  
+ 入出力関数のアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- `ICorDebugCode` `ICorDebugFunction`一対一の関係を維持します。  
+ `ICorDebugCode` と `ICorDebugFunction` は一対一のリレーションシップを維持します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>関連項目
-
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

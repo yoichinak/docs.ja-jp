@@ -9,17 +9,15 @@ helpviewer_keywords:
 - secure coding, exception handling
 - exception handling, security
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e0465f2eb6be61e161f5e6b8cadf629a53f11906
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679384"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215786"
 ---
 # <a name="securing-exception-handling"></a>例外処理の保護
-Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**最後に**ステートメント。 **キャッチ**に関連付けられているブロックの後にそのフィルターが実行される、**最後に**ステートメント。 詳細については、次を参照してください。[ユーザー フィルター例外](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)します。 このセクションでは、この注文のセキュリティへの影響を調べます。 フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**最後に**ステートメントを実行します。  
+ビジュアルC++と Visual Basic では、スタックのさらに上にあるフィルター式は、 **finally**ステートメントの前に実行されます。 このフィルターに関連付けられている**catch**ブロックは、 **finally**ステートメントの後に実行されます。 詳細については、「[ユーザーフィルター例外の使用](../../standard/exceptions/using-user-filtered-exception-handlers.md)」を参照してください。 このセクションでは、この順序のセキュリティへの影響について説明します。 次の擬似コード例は、フィルターステートメントと**finally**ステートメントの実行順序を示しています。  
   
 ```cpp  
 void Main()   
@@ -53,14 +51,14 @@ void Sub()
   
  このコードは、次を出力します。  
   
-```  
+```output
 Throw  
 Filter  
 Finally  
 Catch  
 ```  
   
- フィルターを実行する前に、**最後に**ステートメントでは、セキュリティの問題は状態を他のコードの実行が活用かかる場合がありますを変更することによってもたらされるようにします。 例:  
+ このフィルターは、 **finally**ステートメントの前に実行されるので、他のコードの実行によって発生する可能性がある状態変更を行うすべてのものによって、セキュリティの問題が発生する可能性があります。 例 :  
   
 ```cpp  
 try   
@@ -79,7 +77,7 @@ finally
 }  
 ```  
   
- この擬似コードは、任意のコードを実行するスタックの上位フィルターを使用できます。 他の同様の効果を必要とされる操作の例がいくつかのセキュリティ チェックをバイパスする内部フラグを設定、別の id の一時的な権限の借用またはスレッドに関連付けられているカルチャを変更します。 スレッドの状態に呼び出し元のフィルターのブロックから、コードの変更を分離する例外ハンドラーを導入することをお勧めします。 ただし、例外ハンドラーを正しく導入することが重要か、この問題は解消されません。 次の例では、スイッチ、UI カルチャが、任意の種類のスレッド状態の変更を同様に公開される可能性があります。  
+ この擬似コードを使用すると、スタックの上位にあるフィルターで任意のコードを実行できます。 その他の操作の例としては、別の id の一時的な偽装、セキュリティチェックをバイパスする内部フラグの設定、またはスレッドに関連付けられているカルチャの変更などがあります。 推奨される解決方法は、コードの変更を呼び出し元のフィルターブロックからスレッド状態に分離する例外ハンドラーを導入することです。 ただし、例外ハンドラーが正しく導入されていること、またはこの問題が解決されないことが重要です。 次の例では、UI カルチャを切り替えますが、あらゆる種類のスレッド状態変更が同様に公開される可能性があります。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -116,7 +114,7 @@ Thread.CurrentThread.CurrentUICulture)
 End Class  
 ```  
   
- 修正プログラムがここでは、既存をラップする**お試しください**/**最後に**ブロックを**お試しください**/**キャッチ**ブロックです。 簡単に把握、 **catch、throw**既存句**お試しください**/**最後に**の次の例に示すように、ブロックで、問題が解決しません。  
+ この場合の適切な修正は、 **try**/**catch**ブロックで既存の**try**/**finally**ブロックをラップすることです。 次の例に示すように、 **catch throw**句を既存の**try**/**finally**ブロックに導入するだけでは問題は解決されません。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -136,9 +134,9 @@ YourObject.YourMethod()
 }  
 ```  
   
- 問題が解決しない、**最後に**する前にステートメントが実行されていない、`FilterFunc`コントロールを取得します。  
+ `FilterFunc` が制御を取得する前に**finally**ステートメントが実行されていないため、問題は解決されません。  
   
- 次の例は、ことを確認して問題を修正、**最後に**句が呼び出し元の例外フィルター ブロックの例外を提供する前に実行します。  
+ 次の例では、呼び出し元の例外フィルターブロックを例外として使用する前に**finally**句が実行されていることを確認して、問題を修正します。  
   
 ```cpp  
 YourObject.YourMethod()  
@@ -160,5 +158,6 @@ YourObject.YourMethod()
 }  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>参照
+
+- [安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)

@@ -15,32 +15,30 @@ helpviewer_keywords:
 ms.assetid: 02468edf-d32b-4cb3-aaa8-3dd2abfc8b25
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0aabff090634f1ecdeec5636336ad1fb77b8b81c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a486935d5d53a6fc7d862160ed1186c5774814c7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412579"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73084795"
 ---
 # <a name="icordebugeval2rudeabort-method"></a>ICorDebugEval2::RudeAbort メソッド
-計算の中止この`ICorDebugEval2`は現在を実行します。  
+この `ICorDebugEval2` が現在実行している計算を中止します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RudeAbort ();  
 ```  
   
-## <a name="remarks"></a>コメント  
- `RudeAbort` 安全でない状態のまま、デバッグ セッションにそのため、エバリュエーターを保持しているすべてのロックは解放されません。 十分注意してこのメソッドを呼び出します。  
+## <a name="remarks"></a>Remarks  
+ `RudeAbort` は、エバリュエーターに保持されているロックを解放しません。そのため、デバッグセッションは安全ではない状態のままになります。 このメソッドは細心の注意を払って呼び出してください。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

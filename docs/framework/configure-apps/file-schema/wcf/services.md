@@ -2,17 +2,19 @@
 title: <services>
 ms.date: 03/30/2017
 ms.assetid: 80d76ba9-2058-48ad-9b91-5e4be7e5c113
-ms.openlocfilehash: 4dc425fa97eaf99664f0d9bbbbc851c462cbf373
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 02d1d530f37f5082153c9aa6b9993fc4009917f5
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55274964"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854978"
 ---
 # <a name="services"></a>\<services>
 サービスは、設定ファイルの `services` セクションで定義されます。 各サービスには、独自の `service` 設定セクションがあります。  
   
- \<system.ServiceModel >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<サービス >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,13 +37,14 @@ ms.locfileid: "55274964"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<service>](../../../../../docs/framework/configure-apps/file-schema/wcf/service.md)|サービス コントラクト、動作、および特定のサービスのエンドポイントを定義します。|  
+|[\<service>](service.md)|サービス コントラクト、動作、および特定のサービスのエンドポイントを定義します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|すべての Windows Communication Foundation (WCF) 構成要素のルート要素です。|  
+|[\<system.serviceModel>](system-servicemodel.md)|すべての Windows Communication Foundation (WCF) 構成要素のルート要素です。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.ServicesSection>

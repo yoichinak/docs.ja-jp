@@ -2,21 +2,22 @@
 title: <routing> の <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
-ms.openlocfilehash: 3f23cbb45aa72b1aae18c845e68b426a4214d499
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0998f4fc61de7099879ba6e122eed1e64588baec
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261777"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397730"
 ---
-# <a name="routing-of-servicebehavior"></a>\<ルーティング > の\<serviceBehavior >
+# <a name="routing-of-servicebehavior"></a>\<serviceBehavior > の\<ルーティング >
 ルーティング構成の動的な変更を可能にするルーティング サービスへの実行時アクセスを提供します。  
   
- \<system.ServiceModel >  
-\<<behaviors>  
-\<serviceBehaviors>  
-\<behavior>  
-\<ルーティング >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<動作 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<ルーティング >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,7 +40,7 @@ ms.locfileid: "55261777"
   
 |属性|説明|  
 |---------------|-----------------|  
-|filterTable|ルーティング サービスによって評価されるフィルターを含むルーティング テーブルの名前を指定する文字列。 この値に一致する必要があります、`name`の属性を[ \<filterTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertable.md)内の要素、 [ \<filterTables >](../../../../../docs/framework/configure-apps/file-schema/wcf/filtertables.md)セクション。|  
+|filterTable|ルーティング サービスによって評価されるフィルターを含むルーティング テーブルの名前を指定する文字列。 この値は、 `name` [filtertables > セクションの filterTable > 要素の属性と一致している必要があります。 \<](filtertables.md) [ \<](filtertable.md)|  
 |routeOnHeaderOnly|フィルターがメッセージの本文とヘッダーの両方を調べるか、ヘッダーのみを調べるかを指定するブール値。 既定値は `true` です。|  
 |soapProcessingEnabled|SOAP 処理を実行するかどうかを指定するブール値。|  
   
@@ -50,10 +51,9 @@ ms.locfileid: "55261777"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<behavior>](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|動作の要素を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  サービスの動作構成に追加すると、この構成要素により、サービスのルーティングが有効になります。 この要素には、サービスで使用される実際のルーティング テーブルを指定できます。  
   
  この構成セクションを使用すると、配置パターンの変更時にルーティング設定を変更できます。 実行時には、新しいルーティング設定を使用した独自のルーティング拡張を登録できます。ルーティング サービスは (開始時に適用されていた規則に関係なく) 更新済みの構成情報を使用して新たなメッセージとセッションにサービスを提供します。ただし、インフライトのメッセージやセッションには以前の規則が適用されます。  このようにして、実行時において、セッション セーフでリサイクルの程度を抑えた状態でのルーティング サービスの再構成が可能となります。  
-  

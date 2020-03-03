@@ -1,8 +1,0 @@
-# [イベント](index.md)
-## [方法: イベントを発生させる/処理する](how-to-raise-and-consume-events.md)
-## [方法: イベント プロパティを使用して複数のイベントを処理する](how-to-handle-multiple-events-using-event-properties.md)
-## [方法: Web フォーム アプリケーションでイベントを利用する](how-to-consume-events-in-a-web-forms-application.md)
-## [オブサーバー デザイン パターン](observer-design-pattern.md)
-### [オブザーバー デザイン パターンのベスト プラクティス](observer-design-pattern-best-practices.md)
-### [方法: プロバイダーを実装する](how-to-implement-a-provider.md)
-### [方法: オブザーバーを実装する](how-to-implement-an-observer.md)

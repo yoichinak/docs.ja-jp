@@ -1,6 +1,5 @@
 ---
 title: where 句 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - whereclause_CSharpKeyword
@@ -8,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 182de6ebf9d22da644f1d19566e8cab0052e8521
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 42932809d58c739afc165676c0b90c5a23f568de
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54221688"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75712820"
 ---
 # <a name="where-clause-c-reference"></a>where 句 (C# リファレンス)
 
@@ -27,7 +26,7 @@ ms.locfileid: "54221688"
 
 ## <a name="example"></a>例
 
-単一の `where` 句内には、[&&](../operators/conditional-and-operator.md) および [&#124;&#124;](../operators/conditional-or-operator.md) 演算子を使用して、必要な数の述語を指定できます。 次の例のクエリでは、5 未満の偶数のみを選択するために 2 つの述語を指定します。
+単一の `where` 句内には、[&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) および [&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) 演算子を使用して、必要な数の述語を指定できます。 次の例のクエリでは、5 未満の偶数のみを選択するために 2 つの述語を指定します。
 
 [!code-csharp[cscsrefQueryKeywords#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#6)]  
 
@@ -37,11 +36,11 @@ ms.locfileid: "54221688"
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `where` 句はフィルター メカニズムです。 クエリ式のほぼどこにでも指定できますが、最初の句や最後の句にすることはできません。 `where` 句は、ソース要素のフィルター処理をグループ化の前に行うか後に行うかによって、[group](group-clause.md) 句の前または後に指定できます。
 
-指定した述語がデータ ソース内の要素に対して有効でない場合は、コンパイル時エラーが発生します。 これは、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] で提供される厳密な型チェックの 1 つの利点です。
+指定した述語がデータ ソース内の要素に対して有効でない場合は、コンパイル時エラーが発生します。 これは、LINQ で提供される厳密な型チェックの 1 つの利点です。
 
 コンパイル時に、`where` キーワードは <xref:System.Linq.Enumerable.Where%2A> 標準クエリ演算子メソッドの呼び出しに変換されます。
 
@@ -51,5 +50,5 @@ ms.locfileid: "54221688"
 - [from 句](from-clause.md)
 - [select 句](select-clause.md)
 - [データのフィルター処理](../../programming-guide/concepts/linq/filtering-data.md)
-- [LINQ クエリ式](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [C# の LINQ の概要](../../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [C# での LINQ](../../linq/index.md)
+- [C# の LINQ の概要](/dotnet/csharp/programming-guide/concepts/linq/)

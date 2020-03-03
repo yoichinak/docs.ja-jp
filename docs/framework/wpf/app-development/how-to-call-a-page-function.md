@@ -1,5 +1,5 @@
 ---
-title: '方法: ページ関数を呼び出す'
+title: '方法 : ページ関数を呼び出す'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,29 @@ helpviewer_keywords:
 - page functions [WPF], calling
 - functions [WPF], calling
 ms.assetid: a4808397-c6d5-406a-83e0-0091f0c15ae4
-ms.openlocfilehash: 4cd839cc959c1e3730418d2feab80b9aef642161
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f170977860a73d339f2d83bc43992e6e2bc4053f
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542822"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582045"
 ---
-# <a name="how-to-call-a-page-function"></a>方法: ページ関数を呼び出す
-この例は、ページ関数から呼び出す方法を示しています、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ページ。  
+# <a name="how-to-call-a-page-function"></a>方法 : ページ関数を呼び出す
+この例では、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ページからページ関数を呼び出す方法を示します。  
   
 ## <a name="example"></a>例  
- 使用してページ関数に移動することができます、[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]をページに移動する場合と同様、します。 これを次の例に示します。  
+ ページに移動する場合と同じように、URI (uniform resource identifier) を使用してページ関数に移動できます。 これを次の例に示します。  
   
- [!code-csharp[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#navigatetoapagefunctionlikeapagecodebehind)]
- [!code-vb[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#navigatetoapagefunctionlikeapagecodebehind)]  
+ [!code-csharp[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#navigatetoapagefunctionlikeapagecodebehind)]
+ [!code-vb[HOWTOPageFunctionSnippets#NavigateToAPageFunctionLikeAPageCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#navigatetoapagefunctionlikeapagecodebehind)]  
   
- ページ関数にデータを渡す必要がある場合は、インスタンスを作成し、プロパティを設定することによってデータを渡すことができます。 または、次の例に示すように、既定以外のコンス トラクターを使用してデータを渡すことができます。  
+ ページ関数にデータを渡す必要がある場合は、インスタンスを作成し、プロパティを設定することによってデータを渡すことができます。 または、次の例に示すように、パラメーターなしのコンストラクターを使用してデータを渡すことができます。  
   
- [!code-xaml[HOWTOPageFunctionSnippets#CallAPageFunctionXAML](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml#callapagefunctionxaml)]  
+ [!code-xaml[HOWTOPageFunctionSnippets#CallAPageFunctionXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml#callapagefunctionxaml)]  
   
- [!code-csharp[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](../../../../samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#callapagefunctioncodebehind)]
- [!code-vb[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#callapagefunctioncodebehind)]  
+ [!code-csharp[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/CSharp/CallingPage.xaml.cs#callapagefunctioncodebehind)]
+ [!code-vb[HOWTOPageFunctionSnippets#CallAPageFunctionCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HOWTOPageFunctionSnippets/VisualBasic/CallingPage.xaml.vb#callapagefunctioncodebehind)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Navigation.PageFunction%601>

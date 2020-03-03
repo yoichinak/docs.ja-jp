@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6e5e90a4cfb862b3bfd74ac5a3715e97a736f598
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802514"
+---
 ### <a name="workflow-now-throws-original-exception-instead-of-nullreferenceexception-in-some-cases"></a>場合によって、ワークフローで NullReferenceException ではなく、元の例外がスローされるようになった
 
 |   |   |

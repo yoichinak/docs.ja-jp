@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8049bf01bc10c5913fa11b25e49afd1b1317eecc
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802965"
+---
 ### <a name="wpf-spell-checking-fails-in-unexpected-ways"></a>WPF スペル チェックが予期しない方法で失敗する
 
 |   |   |

@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: cdeda721-b214-4503-a291-c70b68b5f36b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: fe587f6356eec861c39c9eb0aa0b6476e0b9a232
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e3619d12b9377a8482254703d3d97d0348a013b
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407520"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127168"
 ---
 # <a name="icordebugassemblygetname-method"></a>ICorDebugAssembly::GetName メソッド
-アセンブリの名前を取得この`ICorDebugAssembly`インスタンスが表すです。  
+この `ICorDebugAssembly` インスタンスが表すアセンブリの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetName (  
     [in] ULONG32  cchName,  
     [out] ULONG32 *pcchName,  
@@ -37,24 +35,24 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cchName`  
  [in] `szName` 配列のサイズ。  
   
  `pcchName`  
- [out]名前の実際の長さを指定する整数へのポインター。  
+ 入出力名前の実際の長さを指定する整数へのポインター。  
   
  `szName`  
- [out]名前を格納する配列。  
+ 入出力名前を格納する配列。  
   
-## <a name="remarks"></a>コメント  
- `GetName`メソッド、アセンブリの完全パスとファイル名を返します。  
+## <a name="remarks"></a>Remarks  
+ `GetName` メソッドは、アセンブリの完全なパスとファイル名を返します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

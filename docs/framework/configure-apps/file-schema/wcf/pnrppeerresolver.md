@@ -2,21 +2,22 @@
 title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f98c358cc9891e9d7223d280fc8e50c19aad9759
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d3e88d7f2dd991091d3d7abdc715e125ddc9ac56
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260653"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73738777"
 ---
-# <a name="pnrppeerresolver"></a>\<pnrpPeerResolver>
+# <a name="pnrppeerresolver"></a>\<の >
 リゾルバーとして PNRP (Peer Name Resolution Protocol) リゾルバーを使用することを指定します。 PNRP は既定のリゾルバーであるため、この要素は省略可能です。  
   
- \<system.serviceModel>  
-\<bindings>  
-\<customBinding>  
-\<binding>  
-\<pnrpResolver >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp; &nbsp;[ **\<system >** ](system-servicemodel.md) \
+&nbsp;&nbsp;&nbsp;&nbsp;\<[**バインド**](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<[**customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**バインド >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**pnrpResolver >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,13 +35,13 @@ ms.locfileid: "55260653"
 |resolverType|使用されるリゾルバーを指定する文字列。 この属性は省略できます。 設定されていない場合、または空の文字列に設定されている場合は、PNRP が使用されます。|  
   
 ### <a name="child-elements"></a>子要素  
- なし  
+ None  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|カスタム バインドのすべてのバインド機能を定義します。|  
+|[\<binding >](bindings.md)|カスタム バインドのすべてのバインド機能を定義します。|  
   
 ## <a name="example"></a>例  
   
@@ -49,11 +50,12 @@ ms.locfileid: "55260653"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>
 - <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [バインディング](../../../../../docs/framework/wcf/bindings.md)
-- [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [ピア リゾルバー](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+- [バインディング](../../../wcf/bindings.md)
+- [バインディングの拡張](../../../wcf/extending/extending-bindings.md)
+- [カスタム バインディング](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding >](custombinding.md)
+- [ピア リゾルバー](../../../wcf/feature-details/peer-resolvers.md)

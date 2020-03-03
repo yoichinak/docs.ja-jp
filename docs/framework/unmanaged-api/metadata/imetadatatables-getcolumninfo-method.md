@@ -1,6 +1,6 @@
 ---
 title: IMetaDataTables::GetColumnInfo メソッド
-ms.date: 03/30/2017
+ms.date: 10/10/2019
 api_name:
 - IMetaDataTables.GetColumnInfo
 api_location:
@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 68c160ea-ae7d-4750-985d-a038b2c8e7d9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 245933b23028e2baf8a09ca07595f394b65c0ec3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 854d3ad28cc00c03e903b9e1d2ce3863e3ceef17
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698298"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436097"
 ---
 # <a name="imetadatatablesgetcolumninfo-method"></a>IMetaDataTables::GetColumnInfo メソッド
-指定されたテーブルで指定された列に関するデータを取得します。  
+指定されたテーブル内の指定された列に関するデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetColumnInfo (   
     [in]  ULONG        ixTbl,  
     [in]  ULONG        ixCol,  
@@ -40,34 +38,63 @@ HRESULT GetColumnInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター
+=======
+
  `ixTbl`  
- [in]目的のテーブルのインデックス。  
+ から目的のテーブルのインデックス。  
   
  `ixCol`  
- [in]必要な列のインデックス。  
+ から目的の列のインデックス。  
   
  `poCol`  
- [out]行内の列のオフセットへのポインター。  
+ 入出力行内の列のオフセットへのポインター。  
   
  `pcbCol`  
- [out]列のバイト単位のサイズへのポインター。  
+ 入出力列のサイズ (バイト単位) へのポインター。  
   
  `pType`  
- [out]列の値の型へのポインター。  
+ 入出力列内の値の型へのポインター。  
   
  `ppName`  
- [out]列の名前へのポインターへのポインター。  
+ 入出力列名へのポインターへのポインター。  
+ 
+## <a name="remarks"></a>コメント
+
+返される列の型は、値の範囲内にあります。
+
+| pType                    | 説明   | ヘルパー関数                   |
+|--------------------------|---------------|-----------------------------------|
+| `0`..`iRidMax`<br>(0.. 63)   | Rid           | **IsRidType**<br>**IsRidOrToken** |
+| `iCodedToken`..`iCodedTokenMax`<br>(64.. 95) | コード化されたトークン | **IsCodedTokenType** <br>**IsRidOrToken** |
+| `iSHORT` (96)            | Int16         | **IsFixedType**                   |
+| `iUSHORT` (97)           | UInt16        | **IsFixedType**                   |
+| `iLONG` (98)             | Int32         | **IsFixedType**                   |
+| `iULONG` (99)            | UInt32        | **IsFixedType**                   |
+| `iBYTE` (100)            | バイト          | **IsFixedType**                   |
+| `iSTRING` (101)          | String        | **IsHeapType**                    |
+| `iGUID` (102)            | Guid          | **IsHeapType**                    |
+| `iBLOB` (103)            | BLOB          | **IsHeapType**                    |
+
+*ヒープ*に格納されている値 (つまり `IsHeapType == true`) は、次の方法で読み取ることができます。
+
+- `iSTRING`: **Imetadatatables**
+- `iGUID`: **Imetadatatables 実行できます。 GetGUID**
+- `iBLOB`: **Imetadatatables 実行できます。 GetBlob**
+
+> [!IMPORTANT]
+> 上の表で定義されている定数を使用するには、 *cor*ヘッダーファイルによって提供されるディレクティブ `#define _DEFINE_META_DATA_META_CONSTANTS` を含めます。
+
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **ヘッダー:** Cor  
   
- **ヘッダー:** Cor.h  
-  
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

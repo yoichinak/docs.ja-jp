@@ -1,5 +1,5 @@
 ---
-title: Throw ステートメント (Visual Basic)
+title: Throw ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Throw
@@ -14,45 +14,43 @@ helpviewer_keywords:
 - exception handling, unstructured
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
-ms.openlocfilehash: 9af1436af950346eef572c34b9d42da3e8c8cf24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 147345990b625e034e651e69b322bc098d0bd8de
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671162"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352793"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw ステートメント (Visual Basic)
-プロシージャ内で例外をスローします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-Throw [ expression ]  
-```  
-  
-## <a name="part"></a>パーツ  
- `expression`  
- スローされる例外に関する情報を提供します。 内に存在するときに省略可能な`Catch`ステートメントでは、それ以外の場合に必要です。  
-  
-## <a name="remarks"></a>Remarks  
- `Throw`ステートメントは、構造化例外処理コードで処理できる例外をスローします (`Try`.`Catch`...`Finally`) または非構造化例外処理コード (`On Error GoTo`)。 使用することができます、 `Throw` Visual Basic は、適切な例外処理コードが見つかるまで呼び出し履歴を移動するために、コード内のエラーをトラップするステートメント。  
-  
- A`Throw`式ステートメントでのみ使用できます、`Catch`ステートメントでは、case ステートメントが現在処理中の例外を再スロー、`Catch`ステートメント。  
-  
- `Throw`ステートメントの呼び出し履歴をリセットする、`expression`例外。 場合`expression`が指定されていない、コール スタックは変更されません。 例外の呼び出し履歴にアクセスすることができます、<xref:System.Exception.StackTrace%2A>プロパティ。  
-  
-## <a name="example"></a>例  
- 次のコードでは、`Throw`例外をスローするステートメント。  
-  
- [!code-vb[VbVbalrStatements#84](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/throw-statement_1.vb)]  
-  
-## <a name="requirements"></a>必要条件  
- **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
-  
- **モジュール:** `Interaction`  
-  
- **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
-  
-## <a name="see-also"></a>関連項目
+
+プロシージャ内で例外をスローします。
+
+## <a name="syntax"></a>構文
+
+```vb
+Throw [ expression ]
+```
+
+## <a name="part"></a>要素
+
+`expression`\
+スローされる例外に関する情報を提供します。 `Catch` ステートメント内に存在する場合は省略可能です。それ以外の場合は必須です。
+
+## <a name="remarks"></a>コメント
+
+`Throw` ステートメントは、構造化例外処理コード (`Try`...`Catch`...`Finally`) または非構造化例外処理コード (`On Error GoTo`) で処理できる例外をスローします。 `Throw` ステートメントを使用してコード内のエラーをトラップすることができます。これは、Visual Basic によって、適切な例外処理コードが見つかるまで呼び出し履歴が上に移動されるためです。
+
+式が指定されていない `Throw` ステートメントは、`Catch` ステートメントでのみ使用できます。この場合、ステートメントは、現在 `Catch` ステートメントによって処理されている例外を再スローします。
+
+`Throw` ステートメントは、`expression` 例外の呼び出し履歴をリセットします。 `expression` が指定されていない場合、呼び出し履歴は変更されません。 <xref:System.Exception.StackTrace%2A> プロパティを使用して、例外の呼び出し履歴にアクセスできます。
+
+## <a name="example"></a>例
+
+次のコードでは、`Throw` ステートメントを使用して例外をスローします。
+
+[!code-vb[VbVbalrStatements#84](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#84)]
+
+## <a name="see-also"></a>参照
+
 - [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [On Error ステートメント](../../../visual-basic/language-reference/statements/on-error-statement.md)

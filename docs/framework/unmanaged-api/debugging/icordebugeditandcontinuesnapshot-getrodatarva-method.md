@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: efc32294-292b-419a-9d6e-24251322a85a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a0fcd03fde49622a8c388bb821549cec2cf3a154
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e88a0ffbc167dfefb8efe39f6b5787548bc9460c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531016"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783165"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a>ICorDebugEditAndContinueSnapshot::GetRoDataRVA メソッド
 `GetRoDataRVA` は互換性のために残されています。 このメソッドを呼び出さないでください。  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

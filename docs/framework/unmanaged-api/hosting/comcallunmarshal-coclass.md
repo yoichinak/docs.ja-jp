@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2adb5827-2268-4914-a1c6-f62b61880a45
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a404448c45a37d50794ceae9a9bf8ff6af08eeb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38f3140a181deae1a86569bfc2eb7cf3cd7d1991
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574574"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131926"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal コクラス
-インターフェイス ポインターのマーシャ リングを管理するためのインターフェイスを提供します。  
+インターフェイスポインターのマーシャリングを管理するためのインターフェイスを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 coclass ComCallUnmarshal {  
     [default] interface IMarshal;  
 };  
@@ -38,16 +36,17 @@ coclass ComCallUnmarshal {
   
 |Interface|説明|  
 |---------------|-----------------|  
-|`IMarshal`|メソッドは、作成、初期化、およびクライアント プロセスでのプロキシの管理を提供します。|  
+|`IMarshal`|クライアントプロセスでプロキシを作成、初期化、および管理するためのメソッドを提供します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.idl  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ホスト コクラス](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

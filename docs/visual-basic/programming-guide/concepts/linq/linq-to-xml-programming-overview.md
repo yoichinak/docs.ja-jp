@@ -1,13 +1,13 @@
 ---
-title: LINQ to XML プログラミングの概要 (Visual Basic)
+title: LINQ to XML プログラミングの概要
 ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
-ms.openlocfilehash: ba13482df74f3e371f4b79899464cb31144ae0cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a369f811fcfd17826087b275fdee8f44715781c
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693345"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74352169"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML プログラミングの概要 (Visual Basic)
 以下のトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クラスに関する概要情報と、最も重要な 3 つのクラスに関する詳細情報について説明します。  
@@ -21,7 +21,8 @@ ms.locfileid: "54693345"
 |[XElement クラスの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)|XML 要素を表す <xref:System.Xml.Linq.XElement> クラスについて説明します。 <xref:System.Xml.Linq.XElement> は、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クラス階層の基礎クラスの 1 つです。|  
 |[XAttribute クラスの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md)|XML 属性を表す <xref:System.Xml.Linq.XAttribute> クラスについて説明します。|  
 |[XDocument クラスの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)|XML ドキュメントを表す <xref:System.Xml.Linq.XDocument> クラスについて説明します。|  
-|[方法: Linq TO XML の例 (Visual Basic) をビルドします。](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|含まれています、 `Imports` linq TO XML の例をビルドするために必要なステートメント。|  
+|[方法: LINQ to XML の例をビルドする (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|LINQ to XML の例をビルドするために必要な `Imports` ステートメントが含まれています。|  
   
-## <a name="see-also"></a>関連項目
-- [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>参照
+
+- [プログラミングガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

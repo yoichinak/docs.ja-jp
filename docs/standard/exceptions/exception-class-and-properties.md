@@ -6,25 +6,21 @@ helpviewer_keywords:
 - exceptions, Exception class
 - Exception class
 ms.assetid: e2e1f8c4-e7b4-467d-9a66-13c90861221d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 283b3b1aa0d56b50b6f9e67b66de3e0b68ae2331
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: df05150a5bdd5d24766be252f5cec9a436720d8c
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44216543"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75708946"
 ---
 # <a name="exception-class-and-properties"></a>Exception クラスとプロパティ
 
 <xref:System.Exception> クラスは、例外の継承元となる基底クラスです。 たとえば、<xref:System.InvalidCastException> クラスの階層は次のようになります。
 
-```
-Object
-  Exception
-    SystemException
-       InvalidCastException
-```
+<xref:System.Object>\
+&nbsp;&nbsp;<xref:System.Exception>\
+&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.SystemException>\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<xref:System.InvalidCastException>
 
 <xref:System.Exception> クラスには、簡単に例外を理解することに役立つ次のプロパティがあります。
 

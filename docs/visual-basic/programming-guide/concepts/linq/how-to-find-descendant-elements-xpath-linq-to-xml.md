@@ -1,15 +1,15 @@
 ---
-title: '方法: 子孫の要素 (XPATH-LINQ to XML) を検索 (Visual Basic)'
+title: '方法 : 子孫要素を検索する (XPath-LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: e7e2dc9e-bda9-420d-a5b1-4fabf1cca46b
-ms.openlocfilehash: ea92a224ee5cc976b9bd93f8ac8792a67d360fae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 080afdb782bd6f1acaf2819814bb97a6e5ad0c77
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578680"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74346808"
 ---
-# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子孫の要素 (XPATH-LINQ to XML) を検索 (Visual Basic)
+# <a name="how-to-find-descendant-elements-xpath-linq-to-xml-visual-basic"></a>方法: 子孫要素を検索する (XPath LINQ to XML) (Visual Basic)
 このトピックでは、特定の名前を指定して子孫要素を取得する方法について説明します。  
   
  XPath 式は `//Name` です。  
@@ -17,7 +17,7 @@ ms.locfileid: "54578680"
 ## <a name="example"></a>例  
  この例では、`Name` という名前の子孫要素をすべて検索します。  
   
- この例では、次の XML ドキュメントを使用します。[サンプル XML ファイル:複数の発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)します。  
+ この例では、「[サンプル XML ファイル: 複数の購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)」の XML ドキュメントを使用します。  
   
 ```vb  
       Dim po As XDocument = XDocument.Load("PurchaseOrders.xml")  
@@ -41,7 +41,7 @@ Next
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```console
 Results are identical  
 <Name>Ellen Adams</Name>  
 <Name>Tai Yee</Name>  
@@ -51,5 +51,6 @@ Results are identical
 <Name>Jessica Arnold</Name>  
 ```  
   
-## <a name="see-also"></a>関連項目
-- [LINQ to XML XPath ユーザー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>参照
+
+- [XPath ユーザーの LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

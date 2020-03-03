@@ -8,33 +8,34 @@ helpviewer_keywords:
 - routed events [WPF], creating
 - events [WPF], routing
 ms.assetid: b79f459a-1c3f-4045-b2d4-1659cc8eaa3c
-ms.openlocfilehash: f6d043dc2975770fe9111c6266096eefb3fe15b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbfb88af4e35e3f090248982bb14d6b7a3a03cef
+ms.sourcegitcommit: 24a4a8eb6d8cfe7b8549fb6d823076d7c697e0c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671695"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68401471"
 ---
 # <a name="how-to-create-a-custom-routed-event"></a>方法: カスタム ルーティング イベントを作成する
-イベントのルーティングをサポートするために、カスタム イベントを登録する必要があります、<xref:System.Windows.RoutedEvent>を使用して、<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>メソッド。 この例では、カスタム ルーティング イベント作成の基本を紹介します。  
+カスタムイベントでイベントルーティングをサポートするには、 <xref:System.Windows.RoutedEvent> <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>メソッドを使用してを登録する必要があります。 この例では、カスタム ルーティング イベント作成の基本を紹介します。  
   
 ## <a name="example"></a>例  
- まず登録次の例に示すように、<xref:System.Windows.RoutedEvent>を使用して、<xref:System.Windows.EventManager.RegisterRoutedEvent%2A>メソッド。 慣例により、<xref:System.Windows.RoutedEvent>静的フィールドの名前サフィックスを末尾***イベント***します。 この例では、イベントの名前は`Tap`イベントのルーティング方法で、<xref:System.Windows.RoutingStrategy.Bubble>します。 登録呼び出し後、イベントの add-and-remove [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] イベント アクセサーを提供できます。  
+ 次の例に示すように、最初に<xref:System.Windows.RoutedEvent> <xref:System.Windows.EventManager.RegisterRoutedEvent%2A>メソッドを使用してを登録します。 慣例により、 <xref:System.Windows.RoutedEvent>静的なフィールド名はサフィックス***イベント***で終わる必要があります。 この例では`Tap` 、イベントの名前はで、イベントのルーティング方法は<xref:System.Windows.RoutingStrategy.Bubble>です。 登録呼び出しの後に、イベントの追加と削除の共通言語ランタイム (CLR) イベントアクセサーを提供できます。  
   
  この特別な例では `OnTap` 仮想メソッド経由でイベントが発生していますが、イベントの発生や変更に対するイベントの反応の仕方はニーズによって変わります。  
   
- この例は、のサブクラス全体を基本的には実装にも注意してください<xref:System.Windows.Controls.Button>; サブクラスであるが、別のアセンブリとしてビルドし、は別にカスタム クラスとしてインスタンス化し、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ページ。 これはサブクラス化されたコントロールを他のコントロールで構成されたツリーに挿入できるという概念を示すものです。この状況では、このようなコントロールのカスタム イベントには、あらゆるネイティブ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 要素とまったく同じイベント ルーティング機能が与えられます。  
+ また、この例では、基本的にのサブ<xref:System.Windows.Controls.Button>クラス全体が実装されていることに注意してください。そのサブクラスは[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]個別のアセンブリとして構築され、別のページでカスタムクラスとしてインスタンス化されます。 これはサブクラス化されたコントロールを他のコントロールで構成されたツリーに挿入できるという概念を示すものです。この状況では、このようなコントロールのカスタム イベントには、あらゆるネイティブ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 要素とまったく同じイベント ルーティング機能が与えられます。  
   
- [!code-csharp[RoutedEventCustom#CustomClass](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
- [!code-vb[RoutedEventCustom#CustomClass](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
+ [!code-csharp[RoutedEventCustom#CustomClass](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/SDKSampleLibrary/class1.cs#customclass)]
+ [!code-vb[RoutedEventCustom#CustomClass](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventCustom/VB/SDKSampleLibrary/Class1.vb#customclass)]  
   
- [!code-xaml[RoutedEventCustom#Page](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
+ [!code-xaml[RoutedEventCustom#Page](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventCustom/CSharp/RoutedEventCustomApp/default.xaml#page)]  
   
- トンネリング イベントが作成された同じ方法ですが、<xref:System.Windows.RoutedEvent.RoutingStrategy%2A>設定<xref:System.Windows.RoutingStrategy.Tunnel>登録呼び出しで。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のトンネル イベントには接頭辞として "Preview" という単語が付く決まりになっています。  
+ トンネリングイベントは同じように作成されます<xref:System.Windows.RoutedEvent.RoutingStrategy%2A>が、 <xref:System.Windows.RoutingStrategy.Tunnel>が登録呼び出しでに設定されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のトンネル イベントには接頭辞として "Preview" という単語が付く決まりになっています。  
   
- バブリング イベントの動作例については、「[ルーティング イベントを処理する](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)」を参照してください。  
+ バブリング イベントの動作例については、「[ルーティング イベントを処理する](how-to-handle-a-routed-event.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-- [ルーティング イベントの概要](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [入力の概要](../../../../docs/framework/wpf/advanced/input-overview.md)
-- [コントロールの作成の概要](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+
+- [ルーティング イベントの概要](routed-events-overview.md)
+- [入力の概要](input-overview.md)
+- [コントロールの作成の概要](../controls/control-authoring-overview.md)

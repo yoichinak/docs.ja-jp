@@ -14,36 +14,35 @@ helpviewer_keywords:
 ms.assetid: 300c2661-b7d1-4c39-b080-9ebdef0fd523
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eb09422872a0d9565be286c25ca1b28d1c45e08f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8eba189d6dfca3781c28631a72a9af3c037efeda
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501699"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73136793"
 ---
 # <a name="ihostmanualevent-interface"></a>IHostManualEvent インターフェイス
-手動リセット イベントの表現のホストの実装を提供します。  
+手動リセットイベントの表現のホストの実装を提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Reset メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|現在のリセット`IHostManualEvent`インスタンスを非シグナル状態にします。|  
-|[Set メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|現在の設定`IHostManualEvent`インスタンスがシグナル状態にします。|  
-|[Wait メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|現在`IHostManualEvent`、所有者になるまで待機するインスタンスまたは一定の時間が経過するとします。|  
+|[Reset メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-reset-method.md)|現在の `IHostManualEvent` インスタンスを非シグナル状態にリセットします。|  
+|[Set メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-set-method.md)|現在の `IHostManualEvent` インスタンスをシグナル状態に設定します。|  
+|[Wait メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-wait-method.md)|現在の `IHostManualEvent` インスタンスが所有されるか、指定された時間が経過するまで待機するようにします。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRSyncManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
 - [IHostAutoEvent インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
 - [IHostSemaphore インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)

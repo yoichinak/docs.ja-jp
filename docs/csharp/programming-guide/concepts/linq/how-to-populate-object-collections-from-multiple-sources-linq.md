@@ -1,15 +1,15 @@
 ---
-title: '方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)'
+title: 複数のソースからオブジェクト コレクションにデータを設定する方法 (LINQ) (C#)
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: a40ff5ddcf606b0de8a1f41d96523526dc849462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d841e5ca25afde94674af0fedc9a824c382be5b
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571338"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345755"
 ---
-# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ) (C#)
+# <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>複数のソースからオブジェクト コレクションにデータを設定する方法 (LINQ) (C#)
 
 この例では、さまざまなソースから一連の新しい型にデータをマージする方法を示します。
 
@@ -18,7 +18,7 @@ ms.locfileid: "54571338"
 
 ## <a name="to-create-the-data-file"></a>データ ファイルを作成するには
 
-names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピーします。このとき、「[方法:異種ファイルのコンテンツを結合する (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)」の説明に従います。
+「[異種ファイルのコンテンツを結合する方法 (LINQ) (C#)](./how-to-join-content-from-dissimilar-files-linq.md)」の説明に従って、names.csv ファイルと scores.csv ファイルをプロジェクト フォルダーにコピーします。
 
 ## <a name="example"></a>例
 
@@ -41,8 +41,8 @@ class PopulateCollection
 {
     static void Main()
     {
-        // These data files are defined in How to: Join Content from
-        // Dissimilar Files (LINQ).
+        // These data files are defined in How to join content from
+        // dissimilar files (LINQ).
 
         // Each line of names.csv consists of a last name, a first name, and an
         // ID number, separated by commas. For example, Omelchenko,Svetlana,111
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-[select](../../../../csharp/language-reference/keywords/select-clause.md) 句では、オブジェクト初期化子を使用し、2 つのソースのデータを使用して新しい `Student` オブジェクトそれぞれをインスタンス化しています。
+[select](../../../language-reference/keywords/select-clause.md) 句では、オブジェクト初期化子を使用し、2 つのソースのデータを使用して新しい `Student` オブジェクトそれぞれをインスタンス化しています。
 
 クエリの結果を格納する必要がない場合は、名前付きの型よりも匿名型の方が便利です。 クエリが実行されたメソッドの外部にクエリ結果を渡す場合は、名前付きの型が必要になります。 次の例では、前の例と同じタスクを実行しますが、名前付きの型ではなく匿名型が使用します。
 
@@ -139,16 +139,8 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="compiling-the-code"></a>コードのコンパイル
-
-次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。
-
-- System.Core.dll の参照を含む .NET Framework バージョン 3.5。
-- .NET Framework バージョン 4.0 以降
-- .NET Core バージョン 1.0 以降。
-
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)
-- [匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [オブジェクト初期化子とコレクション初期化子](../../classes-and-structs/object-and-collection-initializers.md)
+- [匿名型](../../classes-and-structs/anonymous-types.md)

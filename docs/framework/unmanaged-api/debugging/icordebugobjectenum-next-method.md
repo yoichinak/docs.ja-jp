@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 10093e3d-26b6-4ad7-8ef3-bbf66243fc02
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5a5f21855ce83f5c1fb68637e3eeb6d3c831bce2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: adcfbf1207ad7895ab55f7e5cf9581905cb826bf
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745155"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73096110"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next メソッド
-列挙体の現在位置から指定した数のオブジェクトの相対仮想アドレス (Rva) を取得します。  
+列挙から、指定した数のオブジェクトの相対仮想アドレス (RVAs) を取得します。この値は、現在の位置から開始されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG celt,  
     [out, size_is(celt), length_is(*pceltFetched)]    
@@ -38,18 +36,18 @@ HRESULT Next (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `celt`  
  [in] 取得するオブジェクトの数。  
   
  `objects`  
- [out]CORDB_ADDRESS オブジェクトを指す各ポインターの配列。  
+ 入出力ポインターの配列。それぞれが CORDB_ADDRESS オブジェクトを指します。  
   
  `pceltFetched`  
- [out]実際に返されるオブジェクトの数へのポインター。 この値は null になる場合`celt`は 1 つです。  
+ 入出力実際に返されたオブジェクトの数へのポインター。 `celt` が1の場合、この値は null になります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -58,4 +56,3 @@ HRESULT Next (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

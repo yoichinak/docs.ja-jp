@@ -1,15 +1,13 @@
 ---
 title: .NET Core 2.0 の新機能
 description: .NET Core の新機能について。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 5d21d2e07342d52dc438b67f9738f43fca47469a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115b3adc72b6798c6a7bac9cc18044a8822808a6
+ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679894"
+ms.lasthandoff: 12/04/2019
+ms.locfileid: "74801894"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0 の新機能
 
@@ -132,19 +130,19 @@ Visual Studio 2017 バージョン 15.3 (場合によって Visual Studio for Ma
 
 .NET Core 2.0 SDK がインストールされていれば、.NET Core 1.x プロジェクトを .NET Core 2.0 に、.NET Standard 1.x ライブラリを .NET Standard 2.0 に再ターゲットすることができます。
 
-Visual Studio のプロジェクトを再ターゲットするには、そのプロジェクトのプロパティ ダイアログの **[アプリケーション]** タブを開き、**[ターゲット フレームワーク]** の値を「**.NET Core 2.0**」または「**.NET Standard 2.0**」に変更します。 プロジェクトを右クリックして**編集\*.csproj ファイル** オプションを選択することで、変更することもできます。 詳細については、前述の「[ツール](#tooling)」セクションをご覧ください。
+Visual Studio のプロジェクトを再ターゲットするには、そのプロジェクトのプロパティ ダイアログの **[アプリケーション]** タブを開き、 **[ターゲット フレームワーク]** の値を「 **.NET Core 2.0**」または「 **.NET Standard 2.0**」に変更します。 プロジェクトを右クリックして**編集\*.csproj ファイル** オプションを選択することで、変更することもできます。 詳細については、前述の「[ツール](#tooling)」セクションをご覧ください。
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core のライブ単体テスト対応
 
 コードを変更すると常に、Live Unit Testing は影響を受ける単体テストをバックグラウンドで自動的に実行して、テスト結果とコード カバレッジをライブで Visual Studio 環境に表示します。 .NET core 2.0 では現在、Live Unit Testing がサポートされています。 以前は、.NET Framework アプリケーションでのみ Live Unit Testing が使用できました。
 
-詳細については、「[Visual Studio 2017 での Live Unit Testing](/visualstudio/test/live-unit-testing)」と「[Live Unit Testing についてよく寄せられる質問](/visualstudio/test/live-unit-testing-faq)」をご覧ください。
+詳細については、「[Visual Studio での Live Unit Testing](/visualstudio/test/live-unit-testing)」と「[Live Unit Testing に関する FAQ](/visualstudio/test/live-unit-testing-faq)」をご覧ください。
 
 ### <a name="better-support-for-multiple-target-frameworks"></a>複数のターゲット フレームワークのサポートを向上
 
 複数のターゲット フレームワークのプロジェクトをビルドする場合は、トップレベルのメニューからターゲット プラットフォームを選択できます。 次の図では、SCD1 という名前のプロジェクトが 64 ビット macOS X 10.11 (`osx.10.11-x64`) と 64 ビット Windows 10/Windows Server 2016 (`win10-x64`) をターゲットにしています。 プロジェクト ボタンを選択する前にターゲット フレームワークを選択できます。今回はデバッグ ビルドを実行するために選択します。
 
-![プロジェクト作成時のターゲット フレームワークの選択](media/multitarget.png)
+![プロジェクトをビルドするときのターゲット フレームワークの選択を示すスクリーンショット。](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>.NET Core SDK の side-by-side サポート
 
@@ -154,10 +152,10 @@ Visual Studio のプロジェクトを再ターゲットするには、そのプ
 
 ### <a name="net-application-architecture"></a>.NET アプリケーション アーキテクチャ
 
-.NET を使用して次のものをビルドする際は、[.NET アプリケーション アーキテクチャ](https://www.microsoft.com/net/learn/architecture)にある、ガイダンス、ベスト プラクティス、サンプル アプリケーションを掲載した電子ブックをご覧ください。
+.NET を使用して次のものをビルドする際は、[.NET アプリケーション アーキテクチャ](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)にある、ガイダンス、ベスト プラクティス、サンプル アプリケーションを掲載した電子ブックをご覧ください。
 
-- [マイクロサービスと Docker コンテナー](../../standard/microservices-architecture/index.md)
-- [ASP.NET を使用した Web アプリケーション](../../standard/modern-web-apps-azure-architecture/index.md)
+- [マイクロサービスと Docker コンテナー](../../architecture/microservices/index.md)
+- [ASP.NET を使用した Web アプリケーション](../../architecture/modern-web-apps-azure/index.md)
 - [Xamarin を使用したモバイル アプリケーション](/xamarin/xamarin-forms/enterprise-application-patterns/index)
 - [Azure Cloud にデプロイされたアプリケーション](/azure/architecture/reference-architectures/index)
 

@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Clone method [WPF]
 ms.assetid: 2a6a1900-aa55-45fa-9382-241d569a2dc4
-ms.openlocfilehash: da089e5342e641ffebe22ca6a4a593f97faeb89c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cd634b4d4a88d83d425b787ed8493f9aa2504988
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545345"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053417"
 ---
 # <a name="ienumrawinputdevicclone"></a>IEnumRAWINPUTDEVIC:Clone
 同じリストを反復処理するため、現在の列挙子と同じ状態の別の未加工入力デバイスの列挙子を作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Clone( [out] IEnumRAWINPUTDEVICE **ppenum);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppenum`  
   
- [out]受け取る出力変数のアドレス、 [IEnumRAWINPUTDEVICE](../../../../docs/framework/wpf/app-development/ienumrawinputdevice.md)インターフェイス ポインター。 メソッドが成功した場合は、この output 変数の値は定義されません。  
+ 入出力[IEnumRAWINPUTDEVICE](ienumrawinputdevice.md)インターフェイスポインターを受け取る出力変数のアドレス。 メソッドが失敗した場合、この出力変数の値は未定義になります。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
- HRESULT: このメソッドは、E_INVALIDARG、E_UNEXPECTED、E_OUTOFMEMORY は、標準の戻り値をサポートします。  
+ HRESULT:このメソッドは、標準の戻り値 E_INVALIDARG、E_OUTOFMEMORY、および E_UNEXPECTED をサポートしています。  
   
-## <a name="remarks"></a>コメント  
- このメソッドでは、後でそのポイントを返すために、列挙のシーケンスで、ポイントを録音することです。 呼び出し元は、最初の列挙子から個別に新しいこの列挙子を解放する必要があります。
+## <a name="remarks"></a>Remarks  
+ このメソッドを使用すると、後でその点に戻るために、列挙シーケンス内のポイントを記録できます。 呼び出し元は、最初の列挙子とは別に、この新しい列挙子を解放する必要があります。

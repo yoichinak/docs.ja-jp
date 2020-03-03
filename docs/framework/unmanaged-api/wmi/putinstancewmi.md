@@ -1,6 +1,6 @@
 ---
 title: PutInstanceWmi 関数 (アンマネージ API リファレンス)
-description: PutInstanceWmi 関数を作成または既存のクラスのインスタンスを更新します。
+description: PutInstanceWmi 関数は、既存のクラスのインスタンスを作成または更新します。
 ms.date: 11/06/2017
 api_name:
 - PutInstanceWmi
@@ -14,93 +14,94 @@ helpviewer_keywords:
 - PutInstanceWmi function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5f2288e02c01a40877abbd6a5ce5b2696c0944ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b33f31d69c64ce520580c29f1014c058c78d0953
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719977"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127352"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 関数
-既存のクラスのインスタンスが作成または更新されます。 インスタンスは、WMI リポジトリに書き込まれます。 
+
+既存のクラスのインスタンスが作成または更新されます。 インスタンスは、WMI リポジトリに書き込まれます。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>構文  
-  
-```  
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT PutInstanceWmi (
    [in] IWbemClassObject*    pInst,
    [in] long                 lFlags,
    [in] IWbemContext*        pCtx,
    [out] IWbemCallResult**   ppCallResult
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`pInst`    
-[in]書き込まれるインスタンスへのポインター。
+`pInst`\
+から書き込むインスタンスへのポインター。
 
-`lFlags`   
-[in]この関数の動作に影響するフラグの組み合わせ。 次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。 
+`lFlags`\
+からこの関数の動作に影響を与えるフラグの組み合わせ。 次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | かどうか設定、WMI は保存されませんで任意の修飾子、 **Amended**フレーバー。 </br> このオブジェクトがローカライズされていないことと、すべての修飾子は storedwith こと前提は、セットされていない場合はこのインスタンス。 |
-| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | 存在したり、既に存在する場合は、上書きしない場合は、インスタンスを作成します。 |
-| `WBEM_FLAG_UPDATE_ONLY` | 1 | インスタンスを更新します。 呼び出しが成功するは、インスタンスが存在する必要があります。 |
-| `WBEM_FLAG_CREATE_ONLY` | 2 | インスタンスを作成します。 インスタンスが既に存在する場合、呼び出しが失敗します。 |
-| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | フラグには、半同期的メソッドの呼び出しが行わします。 |
+| `WBEM_FLAG_USE_AMENDED_QUALIFIERS` | 0x20000 | 設定した場合、WMI は、**修正**されたフレーバーを持つ修飾子を格納しません。 <br> 設定されていない場合は、このオブジェクトがローカライズされていないと見なされ、すべての修飾子がこのインスタンスと共に格納されます。 |
+| `WBEM_FLAG_CREATE_OR_UPDATE` | 0 | インスタンスが存在しない場合は作成し、既に存在する場合は上書きします。 |
+| `WBEM_FLAG_UPDATE_ONLY` | 1 | インスタンスを更新します。 呼び出しを成功させるには、インスタンスが存在している必要があります。 |
+| `WBEM_FLAG_CREATE_ONLY` | 2 | インスタンスを作成します。 インスタンスが既に存在する場合、呼び出しは失敗します。 |
+| `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | このフラグにより、半同期呼び出しが発生します。 |
 
-`pCtx`  
-[in]この値は、通常、`null`します。 ポインターは、それ以外の場合、 [IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスを要求されたクラスを提供しているプロバイダーによって使用されることができます。 
+`pCtx`\
+から通常、この値は `null`です。 それ以外の場合は、要求されたクラスを提供しているプロバイダーが使用できる[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)インスタンスへのポインターです。
 
-`ppCallResult`  
-[out]場合`null`、このパラメーターは使用されません。 場合`lFlags`を含む`WBEM_FLAG_RETURN_IMMEDIATELY`、関数を直ちに返します`WBEM_S_NO_ERROR`します。 `ppCallResult`パラメーターは、新しいへのポインターを受け取ります[IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult)オブジェクト。
+`ppCallResult`\
+入出力`null`した場合、このパラメーターは使用されません。 `lFlags` に `WBEM_FLAG_RETURN_IMMEDIATELY`が含まれている場合、関数はすぐに `WBEM_S_NO_ERROR`を返します。 `ppCallResult` パラメーターは、新しい[IWbemCallResult](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcallresult)オブジェクトへのポインターを受け取ります。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-| `WBEM_E_ACCESS_DENIED` | 0x80041003 | ユーザーには、指定したクラスのインスタンスを更新するアクセス許可がありません。 |
-| `WBEM_E_FAILED` | 0x80041001 | 不明なエラーが発生しました。 |
+| `WBEM_E_ACCESS_DENIED` | 0x80041003 | 指定されたクラスのインスタンスを更新するためのアクセス許可がユーザーにありません。 |
+| `WBEM_E_FAILED` | 0x80041001 | 特定できないエラーが発生しました。 |
 | `WBEM_E_INVALID_CLASS` | 0x80041010 | このインスタンスをサポートしているクラスが無効です。 |
-| `WBEM_E_ILLEGAL_NULL` | 0x80041028 | `null`できないプロパティが指定されました`null`、いずれかでマークされているなど、**インデックス**または**not_** 修飾子。 |
-| `WBEM_E_INVALID_OBJECT` | 0x8004100f | 指定したインスタンスが無効です。 (たとえば、呼び出し`PutInstanceWmi`クラスには、この値を返します)。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
-| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY`フラグが指定されましたが、インスタンスが既に存在します。 |
-| `WBEM_E_NOT_FOUND` | 0x80041002 | `WBEM_FLAG_UPDATE_ONLY` 指定された`lFlags`が、インスタンスが存在しません。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI は、おそらく停止および再起動されました。 呼び出す[ConnectServerWmi](connectserverwmi.md)もう一度です。 |
-| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI のリモート プロシージャ コール (RPC) リンクに失敗しました。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。 |
-  
+| `WBEM_E_ILLEGAL_NULL` | 0x80048 | **インデックス付き**または**Not_Null**修飾子でマークされているプロパティなど、`null`できないプロパティに `null` が指定されました。 |
+| `WBEM_E_INVALID_OBJECT` | 0x8004100f | 指定されたインスタンスは無効です。 (たとえば、クラスを使用して `PutInstanceWmi` を呼び出すと、この値が返されます)。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが有効ではありません。 |
+| `WBEM_E_ALREADY_EXISTS` | 0x80041019 | `WBEM_FLAG_CREATE_ONLY` フラグが指定されましたが、インスタンスは既に存在します。 |
+| `WBEM_E_NOT_FOUND` | 0x80041002 | `lFlags`に `WBEM_FLAG_UPDATE_ONLY` が指定されましたが、インスタンスが存在しません。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するために必要なメモリが不足しています。 |
+| `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI が停止し、再起動されたことがあります。 [Connectserverwmi](connectserverwmi.md)を再度呼び出します。 |
+| `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 現在のプロセスと WMI の間のリモートプロシージャコール (RPC) リンクが失敗しました。 |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。 |
+
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemServices::PutInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance)メソッド。
+この関数は、 [IWbemServices::P utInstance](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-putinstance)メソッドの呼び出しをラップします。
 
-`PutInstanceWmi`関数のインスタンスを作成して、既存クラスのインスタンスの更新をサポートします。  方法に応じて`pCtx`パラメーターが設定されていると、一部またはすべてのインスタンスのプロパティを更新します。 
+`PutInstanceWmi` 関数では、インスタンスの作成と、既存のクラスのインスタンスの更新のみがサポートされます。  `pCtx` パラメーターの設定方法によっては、インスタンスの一部またはすべてのプロパティが更新されます。
 
-ときに、インスタンスによって示される`pInst`サブクラスが派生するクラスを担当するすべてのプロバイダーの呼び出し、サブクラスでは、Windows の管理に属しています。 元のこれらのプロバイダーのすべてが成功する必要があります`PutInstanceWmi`の要求に成功します。 階層の最上位のクラスをサポートしているプロバイダーが呼び出されます。 呼び出しの順序が最上位のクラスのサブクラスを続行し、Windows 管理によって示されるインスタンスを所有しているクラスのプロバイダーに到達するまで、上から下に進みます`pInst`します。
-Windows の管理には、インスタンスの子クラスのいずれかのプロバイダーは呼び出されません。 
+`pInst` が指すインスタンスがサブクラスに属している場合、Windows Management は、サブクラスの派生元であるクラスを担当するすべてのプロバイダーを呼び出します。 元の `PutInstanceWmi` 要求を正常に完了するには、これらのすべてのプロバイダーを成功させる必要があります。 階層内の最上位のクラスをサポートするプロバイダーが最初に呼び出されます。 呼び出し順序は最上位クラスのサブクラスから続行され、Windows Management が `pInst`が指すインスタンスを所有するクラスのプロバイダーに到達するまで、上から下に進みます。
+Windows Management では、インスタンスのどの子クラスに対してもプロバイダーは呼び出されません。
 
-アプリケーションが、クラス階層に属しているインスタンスを更新する必要がありますと、`pInst`パラメーターは、変更するプロパティを含むインスタンスを指す必要があります。 つまり、ターゲット インスタンスが属しているを検討**ClassB**します。 **ClassB**から派生したインスタンス**ClassA**、および**ClassA**プロパティを定義**PropA**します。 アプリケーションがの値を変更するか**PropA**で、 **ClassB**設定する必要がありますのインスタンス、`pInst`のインスタンスではなく、そのインスタンスに**ClassA**.
+クラス階層に属しているインスタンスをアプリケーションで更新する必要がある場合、`pInst` パラメーターは、変更するプロパティを含むインスタンスを指す必要があります。 つまり、 **Classb**に属するターゲットインスタンスを考えてみましょう。 **Classb**インスタンスは**classb**から派生し、 **Classb**はプロパティ**propa**を定義します。 アプリケーションで**Classb**インスタンスの**propa**の値を変更する場合は、 **classb**のインスタンスではなく、そのインスタンスに `pInst` を設定する必要があります。
 
-呼び出す`PutInstanceWmi`抽象クラスのインスタンスでは許可されていません。
+抽象クラスのインスタンスで `PutInstanceWmi` を呼び出すことはできません。
 
-呼び出すことによって追加のエラー情報を取得するには、関数呼び出しに失敗した場合、 [GetErrorInfo](geterrorinfo.md)関数。
+関数呼び出しが失敗した場合は、 [GetErrorInfo](geterrorinfo.md)関数を呼び出して追加のエラー情報を取得できます。
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>［要件］
+
+**:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+
+**ヘッダー:** WMINet_Utils
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

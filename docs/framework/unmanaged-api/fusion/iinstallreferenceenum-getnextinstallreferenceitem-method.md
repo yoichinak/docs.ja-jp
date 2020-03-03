@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: ce969c9d-6538-4c34-8784-148ffd99fe7a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ba2abaccfc4a9ae2d1f07677a49a72c980acda24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dad50f1acac38f8cdc505026e88d42882deb580
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607502"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131717"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>IInstallReferenceEnum::GetNextInstallReferenceItem メソッド
-次のポインターを取得[IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)これに含まれるオブジェクト[IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)オブジェクト。  
+この[Iinstallreferenceitem](iinstallreferenceenum-interface.md)オブジェクトに格納されている次の[Iinstallreferenceitem](iinstallreferenceitem-interface.md)オブジェクトへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetNextInstallReferenceItem (  
     [out] IInstallReferenceItem **ppRefItem,  
     [in]  DWORD dwFlags,  
@@ -37,23 +35,24 @@ HRESULT GetNextInstallReferenceItem (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppRefItem`  
- [out]返された`IInstallReferenceItem`ポインター。  
+ 入出力返された `IInstallReferenceItem` ポインター。  
   
  `dwFlags`  
- [入力] 将来の機能拡張に備えて予約されています。 `dwFlags` 0 (ゼロ) である必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `dwFlags` は 0 (ゼロ) にする必要があります。  
   
  `pvReserved`  
- [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` null 参照である必要があります。  
+ [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` は null 参照である必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IInstallReferenceItem インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)
-- [IInstallReferenceEnum インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+
+- [IInstallReferenceItem インターフェイス](iinstallreferenceitem-interface.md)
+- [IInstallReferenceEnum インターフェイス](iinstallreferenceenum-interface.md)

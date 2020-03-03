@@ -11,14 +11,12 @@ helpviewer_keywords:
 - list of assemblies in global assembly cache
 - Global Assembly Cache tool
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0375c835dea8984db34d3d1e24b2876fb9af8337
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: HT
+ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181447"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73119831"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>方法: グローバル アセンブリ キャッシュの内容を表示する
 
@@ -32,14 +30,14 @@ ms.locfileid: "50181447"
 gacutil -l
 ```
 
-- または -
+-または-
 
 ```shell
 gacutil /l
 ```
 
 > [!NOTE]
-> 以前のバージョンの .NET Framework では、Windows のシェル拡張機能である [Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) により、エクスプローラーでグローバル アセンブリ キャッシュを表示することができました。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、Shfusion.dll は廃止されましたが、互換性のために残されています。
+> 以前のバージョンの .NET Framework では、Windows のシェル拡張機能である [Shfusion.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/34149zk3(v=vs.100)) により、エクスプローラーでグローバル アセンブリ キャッシュを表示することができました。 .NET Framework 4 以降、Shfusion.dll は廃止されましたが、互換性のために残されています。
 
 ## <a name="see-also"></a>関連項目
 

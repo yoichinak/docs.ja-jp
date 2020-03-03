@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: d4cef11f-a8ca-49bc-a1b8-6631f9e28f3e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c81a5787eb06971e3d52aff5d1c1154a72564daf
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698922"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76790330"
 ---
-# <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 構造体
+# <a name="stacktrace_simplecontext-structure"></a>StackTrace_SimpleContext 構造体
 完全な `CONTEXT` 構造の代わりに使用できる単純なコンテキストを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct StackTrace_SimpleContext  
 {  
     ULONG64 StackOffset;       // ESP on x86  
@@ -42,20 +40,21 @@ struct StackTrace_SimpleContext
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`StackOffset`|スタック ポインター、または x86 enter スタック ポインター (ESP) プラットフォーム。|  
-|`FrameOffset`|フレームのオフセット、または x86 EBP レジスタのプラットフォームです。|  
-|`InstructionOffset`|命令ポインター、または x86 enter 命令ポインター (EIP) プラットフォーム。|  
+|`StackOffset`|スタックポインター、または x86 プラットフォームの enter スタックポインター (ESP)。|  
+|`FrameOffset`|フレームオフセット、または x86 プラットフォームでの EBP レジスタ。|  
+|`InstructionOffset`|命令ポインター、または x86 プラットフォームの enter 命令ポインター (EIP)。|  
   
-## <a name="remarks"></a>Remarks  
- 使用できます必要に応じてスタック トレース関数は、通常、アドレス、フレームのオフセット、およびスタック アドレスのみを返す必要があります、ため、`SimpleContext`構造ではなく、大規模な`CONTEXT`構造体。  
+## <a name="remarks"></a>コメント  
+ 通常、スタックトレース関数はアドレス、フレームオフセット、およびスタックアドレスだけを返す必要があるため、必要に応じて、大きな `CONTEXT` 構造の代わりに `SimpleContext` 構造を使用できます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** SOS_Stacktrace.h  
+ **ヘッダー:** SOS_Stacktrace  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

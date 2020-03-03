@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: dec7df60-4d30-47c8-99db-72e0419e5f76
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fded6b95144d4088a2abc8dfcc4ef8eda331c34f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710340"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438424"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType メソッド
-エクスポート可能として入れ子にされた型を指定します。 [ExportType メソッド](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)入れ子になったエクスポートの種類をこともできますが、このメソッドが高速です。  
+入れ子にされた型をエクスポート可能として指定します。 [Exporttype メソッド](exporttype-method.md)も入れ子になった型をエクスポートできますが、このメソッドの方が高速です。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ExportNestedType(  
     mdAssembly      AssemblyID,  
     mdToken         FileToken,  
@@ -41,35 +39,36 @@ HRESULT ExportNestedType(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- エクスポートするアセンブリの ID。  
+ エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- ファイルのトークンまたはエクスポート可能にする型を定義するファイルのアセンブリ。  
+ エクスポート可能にする型を定義するファイルのトークンまたはアセンブリ。  
   
  `TypeToken`  
- エクスポート可能にする型のトークンを入力します。  
+ エクスポート可能にする型の型トークン。  
   
  `ParentType`  
- 親の種類のトークンです。  
+ 親の種類のトークン。  
   
  `pszTypename`  
  エクスポートする完全修飾型名。  
   
  `dwFlags`  
- `ComType` フラグなど`tdPublic`または`tdNested`します。 この値に渡される[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)します。  
+ `tdPublic` や `tdNested`などのフラグを `ComType` します。 この値は、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
  `pType`  
  エクスポートされた型のトークンを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>参照
+
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

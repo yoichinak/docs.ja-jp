@@ -7,61 +7,63 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f76163d58f3f11d3ca946525a1604abc3ebba68d
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270590"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72250368"
 ---
-# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Default プロパティ アクセスは継承インターフェイス メンバーの間であいまいな\<defaultpropertyname >' のインターフェイス '\<interfacename1 >' と'\<defaultpropertyname >' のインターフェイス '\<interfacename2 >'
-インターフェイスは、同じ名前の既定プロパティを宣言するそれぞれの 2 つのインターフェイスから継承します。 コンパイラは、この既定のプロパティを修飾なしに、アクセスを解決できません。 次に例を示します。  
-  
-```  
-Public Interface Iface1  
-    Default Property prop(ByVal arg As Integer) As Integer  
-End Interface  
-Public Interface Iface2  
-    Default Property prop(ByVal arg As Integer) As Integer  
-End Interface  
-Public Interface Iface3  
-    Inherits Iface1, Iface2  
-End Interface  
-Public Class testClass  
-    Public Sub accessDefaultProperty()  
-        Dim testObj As Iface3  
-        Dim testInt As Integer = testObj(1)  
-    End Sub  
-End Class  
-```  
-  
- 指定すると`testObj(1)`コンパイラは既定のプロパティに解決しようとしています。 ただし、2 つ可能な既定プロパティは、継承のインターフェイスにより、コンパイラは、このエラーを通知するためです。  
-  
- **エラー ID:** BC30686  
-  
-## <a name="to-correct-this-error"></a>このエラーを解決するには  
-  
--   同じ名前のメンバーを継承しないようにします。 前の例では場合、`testObj`のメンバーのいずれかの必要はありません、たとえば、 `Iface2`、次のように宣言します。  
-  
-    ```  
-    Dim testObj As Iface1  
-    ```  
-  
-     - または -  
-  
--   クラスで継承するインターフェイスを実装します。 これらの異なる名前を持つ継承されたプロパティを実装できます。 ただし、それらの 1 つだけでは、実装するクラスの既定のプロパティがあります。 次に例を示します。  
-  
-    ```  
-    Public Class useIface3  
-        Implements Iface3  
-        Default Public Property prop1(ByVal arg As Integer) As Integer Implements Iface1.prop  
-            ' Insert code to define Get and Set procedures for prop1.  
-        End Property  
-        Public Property prop2(ByVal arg As Integer) As Integer Implements Iface2.prop  
-            ' Insert code to define Get and Set procedures for prop2.  
-        End Property  
-    End Class  
-    ```  
-  
+# <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>既定のプロパティアクセスは、インターフェイス ' \<interfacename1 > ' の継承インターフェイスメンバー ' \<defaultpropertyname > ' と、インターフェイス ' \<interfacename2 > ' の ' \<defaultpropertyname > ' の間であいまいです
+
+インターフェイスは、2つのインターフェイスから継承し、それぞれが同じ名前の既定のプロパティを宣言します。 コンパイラは、この既定のプロパティへのアクセスを修飾なしで解決することはできません。 次に例を示します。
+
+```vb
+Public Interface Iface1
+    Default Property prop(ByVal arg As Integer) As Integer
+End Interface
+Public Interface Iface2
+    Default Property prop(ByVal arg As Integer) As Integer
+End Interface
+Public Interface Iface3
+    Inherits Iface1, Iface2
+End Interface
+Public Class testClass
+    Public Sub accessDefaultProperty()
+        Dim testObj As Iface3
+        Dim testInt As Integer = testObj(1)
+    End Sub
+End Class
+```
+
+@No__t-0 を指定すると、コンパイラはその値を既定のプロパティに解決しようとします。 ただし、継承されたインターフェイスにより、2つの既定のプロパティが考えられます。そのため、コンパイラはこのエラーを通知します。
+
+**エラー ID:** BC30686
+
+## <a name="to-correct-this-error"></a>このエラーを解決するには
+
+- 同じ名前のメンバーを継承しないようにしてください。 前の例では、`testObj` がのメンバー (たとえば、`Iface2`) を必要としない場合は、次のように宣言します。
+
+  ```vb
+  Dim testObj As Iface1
+  ```
+
+  \- または -
+
+- 継承インターフェイスをクラスに実装します。 その後、継承された各プロパティを異なる名前で実装できます。 ただし、そのうちの1つだけが、実装するクラスの既定のプロパティになることができます。 次に例を示します。
+
+  ```vb
+  Public Class useIface3
+      Implements Iface3
+      Default Public Property prop1(ByVal arg As Integer) As Integer Implements Iface1.prop
+          ' Insert code to define Get and Set procedures for prop1.
+      End Property
+      Public Property prop2(ByVal arg As Integer) As Integer Implements Iface2.prop
+          ' Insert code to define Get and Set procedures for prop2.
+      End Property
+  End Class
+  ```
+
 ## <a name="see-also"></a>関連項目
-- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+
+- [インターフェイス](../../programming-guide/language-features/interfaces/index.md)

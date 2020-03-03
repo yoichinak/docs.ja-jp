@@ -14,35 +14,33 @@ helpviewer_keywords:
 ms.assetid: 875ef5be-c1e7-4d95-97e9-d3a667aeaba0
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ade4c88f4431dd6db636ea2581bdb936ac8d8e5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aaccb37ec61ed1ba6a7e6e1f508704973117cca
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538012"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784886"
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3 インターフェイス
-マネージ表現に関する情報を取得するメソッドを提供[!INCLUDE[wrt](../../../../includes/wrt-md.md)]アプリケーション ドメインで現在読み込まれている型。 このインターフェイスは、ICorDebugAppDomain および ICorDebugAppDomain2 インターフェイスの拡張です。  
+アプリケーションドメインに現在読み込まれている Windows ランタイム型のマネージ表現に関する情報を取得するメソッドを提供します。 このインターフェイスは、"ICorDebugAppDomain2" というインターフェイスを拡張したものです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypes](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypes-method.md)|キャッシュされたすべての列挙子を取得します。[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型。|  
-|[ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomain3-getcachedwinrttypesforiids-method.md)|キャッシュされた列挙子を取得[!INCLUDE[wrt](../../../../includes/wrt-md.md)]アプリケーション ドメイン内の型、インターフェイスの id に基づいています。|  
+|[ICorDebugAppDomain3:: GetCachedWinRTTypes](icordebugappdomain3-getcachedwinrttypes-method.md)|キャッシュされているすべての Windows ランタイム型の列挙子を取得します。|  
+|[ICorDebugAppDomain3:: GetCachedWinRTTypesForIIDs](icordebugappdomain3-getcachedwinrttypesforiids-method.md)|インターフェイス識別子に基づいて、アプリケーションドメイン内のキャッシュされた Windows ランタイム型の列挙子を取得します。|  
   
-## <a name="remarks"></a>Remarks  
- このインターフェイスは、関数の評価の呼び出しと組み合わせて、デバッガーによって使用されるものでは`M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`します。 メソッドはによってサポートされるインターフェイスの識別子を取得すると、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]サーバー オブジェクトをデバッガーでこのインターフェイスで定義されているメソッドを使用してそれらのインターフェイスに対応するマネージ型に割り当てる可能性があります。  
+## <a name="remarks"></a>コメント  
+ このインターフェイスは、デバッガーが `M:System.Runtime.InteropServices.Marshal.GetInspectableIIDs(System.Object)`に対する関数評価呼び出しと共に使用することを意図しています。 メソッドが Windows ランタイムサーバーオブジェクトでサポートされているインターフェイス識別子を取得すると、デバッガーはこのインターフェイスで定義されているメソッドを使用して、これらのインターフェイスに対応するマネージ型にマップすることができます。  
   
- このインターフェイスのインスタンスを取得するには実行`QueryInterface`ICorDebugAppDomain または ICorDebugAppDomain2 インターフェイスのインスタンスにします。  
+ このインターフェイスのインスタンスを取得するには、のインスタンスに対して `QueryInterface` を実行します。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** Windows ランタイム  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -51,4 +49,5 @@ ms.locfileid: "54538012"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

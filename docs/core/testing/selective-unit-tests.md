@@ -3,17 +3,20 @@ title: 選択的単体テストの実行
 description: .NET Core において dotnet test コマンドでフィルター式を使用して、選択的単体テストを実行する方法。
 author: smadala
 ms.date: 03/22/2017
-ms.custom: seodec18
-ms.openlocfilehash: 2ec6dc770f33acc4acea79e60cf6f9c33f1077d8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239944"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543509"
 ---
 # <a name="running-selective-unit-tests"></a>選択的単体テストの実行
 
-.NET Core で `dotnet test` コマンドを使用することで、フィルター式を使用して、選択的テストを実行することができます。 この記事では、実行するテストをフィルター処理する方法を示します。 次の例では、`dotnet test` を使用します。 `vstest.console.exe` を使用している場合は、`--filter ` を `--testcasefilter:` に置き換えます。
+.NET Core で `dotnet test` コマンドを使用することで、フィルター式を使用して、選択的テストを実行することができます。 この記事では、実行するテストをフィルター処理する方法を示します。 次の例では、`dotnet test` を使用します。 `vstest.console.exe` を使用している場合は、`--filter` を `--testcasefilter:` に置き換えます。
+
+> [!NOTE]
+> `*nix` に感嘆符 (!) を含むフィルターを使用すると、`!` が予約されているために、エスケープが必要になります。 たとえば、名前空間に IntegrationTests: `dotnet test --filter FullyQualifiedName\!~IntegrationTests` が含まれている場合、このフィルターではすべてのテストがスキップされます。
+> 感嘆符の前にある円記号に注意してください。
 
 ## <a name="mstest"></a>MSTest
 
@@ -45,7 +48,7 @@ namespace MSTestNamespace
 | ---------- | ------ |
 | `dotnet test --filter Method` | `FullyQualifiedName` に `Method` が含まれるテストを実行します。 `vstest 15.1+` で使用できます。 |
 | `dotnet test --filter Name~TestMethod1` | 名前に `TestMethod1` が含まれるテストを実行します。 |
-| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | クラス `MSTestNamespace.UnitTest1` 内にあるテストを実行します。<br>**注:**`ClassName` 値には名前空間があるため、`ClassName=UnitTest1` は機能しません。 |
+| `dotnet test --filter ClassName=MSTestNamespace.UnitTest1` | クラス `MSTestNamespace.UnitTest1` 内にあるテストを実行します。<br>**注:** `ClassName` 値には名前空間があるため、`ClassName=UnitTest1` は機能しません。 |
 | `dotnet test --filter FullyQualifiedName!=MSTestNamespace.UnitTest1.TestMethod1` | `MSTestNamespace.UnitTest1.TestMethod1` 以外のテストをすべて実行します。 |
 | `dotnet test --filter TestCategory=CategoryA` | `[TestCategory("CategoryA")]` の注釈が付けられているテストを実行します。 |
 | `dotnet test --filter Priority=2` | `[Priority(2)]` の注釈が付けられているテストを実行します。<br>

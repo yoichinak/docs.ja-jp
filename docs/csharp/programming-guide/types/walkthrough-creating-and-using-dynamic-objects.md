@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: f02e2de2ce8e2d4d6c8032e826764fd0383b3b3d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: aa902ffaf93c8e1f273ed476dc7d413bcfce914c
+ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092645"
+ms.lasthandoff: 11/01/2019
+ms.locfileid: "73417576"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>チュートリアル: 動的オブジェクトの作成と使用 (C# および Visual Basic)
 
@@ -22,15 +22,15 @@ ms.locfileid: "56092645"
   
  動的オブジェクトを使用すると、IronPython や IronRuby などの動的言語にも簡単にアクセスできます。 動的オブジェクトを使用して、実行時に解釈される動的スクリプトを参照することもできます。  
   
- 動的オブジェクトを参照するには、遅延バインディングを使用します。 C# では、遅延バインディング オブジェクトの型は `dynamic` として指定します。 Visual Basic では、遅延バインディング オブジェクトの型は `Object` として指定します。 詳しくは、「[dynamic](../../../csharp/language-reference/keywords/dynamic.md)」および「[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)」をご覧ください。  
+ 動的オブジェクトを参照するには、遅延バインディングを使用します。 C# では、遅延バインディング オブジェクトの型は `dynamic` として指定します。 Visual Basic では、遅延バインディング オブジェクトの型は `Object` として指定します。 詳しくは、「[dynamic](../../language-reference/builtin-types/reference-types.md)」および「[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)」をご覧ください。  
   
  カスタムの動的オブジェクトは、<xref:System.Dynamic?displayProperty=nameWithType> 名前空間内のクラスを使用して作成できます。 たとえば、<xref:System.Dynamic.ExpandoObject> を作成し、実行時にそのオブジェクトのメンバーを指定することもできます。 また、<xref:System.Dynamic.DynamicObject> クラスを継承する、独自の型を作成することもできます。 その後、<xref:System.Dynamic.DynamicObject> クラスのメンバーをオーバーライドして、実行時の動的機能を提供することができます。  
   
  このチュートリアルでは、次のタスクを行います。  
   
--   テキスト ファイルの内容をオブジェクトのプロパティとして動的に公開する、カスタム オブジェクトを作成する。  
+- テキスト ファイルの内容をオブジェクトのプロパティとして動的に公開する、カスタム オブジェクトを作成する。  
   
--   `IronPython` ライブラリを使用するプロジェクトを作成する。  
+- `IronPython` ライブラリを使用するプロジェクトを作成する。  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
 
@@ -44,30 +44,30 @@ ms.locfileid: "56092645"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>カスタムの動的クラスを作成するには  
   
-1.  Visual Studio を起動します。  
+1. Visual Studio を起動します。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
+2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3.  **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、**[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに `DynamicSample` と入力して、**[OK]** をクリックします。 新しいプロジェクトが作成されます。  
+3. **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、 **[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに `DynamicSample` と入力して、 **[OK]** をクリックします。 新しいプロジェクトが作成されます。  
   
-4.  DynamicSample プロジェクトを右クリックし、**[追加]** をポイントした後、**[クラス]** をクリックします。 **[名前]** ボックスに `ReadOnlyFile` と入力して、**[OK]** をクリックします。 ReadOnlyFile クラスを含んだ新しいファイルが追加されます。  
+4. DynamicSample プロジェクトを右クリックし、 **[追加]** をポイントした後、 **[クラス]** をクリックします。 **[名前]** ボックスに `ReadOnlyFile` と入力して、 **[OK]** をクリックします。 ReadOnlyFile クラスを含んだ新しいファイルが追加されます。  
   
-5.  ReadOnlyFile.cs ファイルまたは ReadOnlyFile.vb ファイルの先頭に、次のコードを追加して <xref:System.IO?displayProperty=nameWithType> および <xref:System.Dynamic?displayProperty=nameWithType> 名前空間をインポートします。  
+5. ReadOnlyFile.cs ファイルまたは ReadOnlyFile.vb ファイルの先頭に、次のコードを追加して <xref:System.IO?displayProperty=nameWithType> および <xref:System.Dynamic?displayProperty=nameWithType> 名前空間をインポートします。  
 
     [!code-csharp[VbDynamicWalkthrough#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#1)]
     [!code-vb[VbDynamicWalkthrough#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#1)]  
 
-6.  カスタム動的オブジェクトでは、列挙型を使用して検索条件を決定します。 クラス ステートメントの前に、次の列挙定義を追加します。  
+6. カスタム動的オブジェクトでは、列挙型を使用して検索条件を決定します。 クラス ステートメントの前に、次の列挙定義を追加します。  
   
     [!code-csharp[VbDynamicWalkthrough#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#2)]
     [!code-vb[VbDynamicWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#2)]
   
-7.  次のコード例に示すように、クラス ステートメントを更新して `DynamicObject` クラスを継承します。  
+7. 次のコード例に示すように、クラス ステートメントを更新して `DynamicObject` クラスを継承します。  
   
     [!code-csharp[VbDynamicWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#3)]
     [!code-vb[VbDynamicWalkthrough#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#3)]
 
-8.  `ReadOnlyFile` クラスに次のコードを追加して、 ファイル パスのプライベート フィールドと、`ReadOnlyFile` クラスのコンス トラクターを定義します。  
+8. `ReadOnlyFile` クラスに次のコードを追加して、 ファイル パスのプライベート フィールドと、`ReadOnlyFile` クラスのコンス トラクターを定義します。  
   
     [!code-csharp[VbDynamicWalkthrough#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/readonlyfile.cs#4)]
     [!code-vb[VbDynamicWalkthrough#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/readonlyfile.vb#4)]
@@ -93,11 +93,11 @@ ms.locfileid: "56092645"
   
 #### <a name="to-create-a-sample-text-file"></a>サンプルのテキスト ファイルを作成するには  
   
-1.  DynamicSample プロジェクトを右クリックし、**[追加]** をポイントした後、**[新しい項目]** をクリックします。 **[インストールされたテンプレート]** ペインで **[全般]** をクリックし、**[テキスト ファイル]** テンプレートを選択します。 **[名前]** ボックスで、既定の名前である TextFile1.txt をそのままにし、**[追加]** をクリックします。 新しいテキスト ファイルがプロジェクトに追加されます。  
+1. DynamicSample プロジェクトを右クリックし、 **[追加]** をポイントした後、 **[新しい項目]** をクリックします。 **[インストールされたテンプレート]** ペインで **[全般]** をクリックし、 **[テキスト ファイル]** テンプレートを選択します。 **[名前]** ボックスで、既定の名前である TextFile1.txt をそのままにし、 **[追加]** をクリックします。 新しいテキスト ファイルがプロジェクトに追加されます。  
   
-2.  TextFile1.txt ファイルに次のテキストをコピーします。  
+2. TextFile1.txt ファイルに次のテキストをコピーします。  
   
-    ```  
+    ```text  
     List of customers and suppliers  
   
     Supplier: Lucerne Publishing (https://www.lucernepublishing.com/)  
@@ -112,18 +112,18 @@ ms.locfileid: "56092645"
     Customer: Koch, Paul  
     ```  
   
-3.  ファイルを保存して閉じます。  
+3. ファイルを保存して閉じます。  
   
 #### <a name="to-create-a-sample-application-that-uses-the-custom-dynamic-object"></a>カスタム動的オブジェクトを使用するサンプル アプリケーションを作成するには  
   
-1.  **ソリューション エクスプローラー**で、Visual Basic を使用している場合は Module1.vb ファイルを、Visual C# を使用している場合は Program.cs ファイルをダブルクリックします。  
+1. **ソリューション エクスプローラー**で、Visual Basic を使用している場合は Module1.vb ファイルを、Visual C# を使用している場合は Program.cs ファイルをダブルクリックします。  
   
-2.  Main プロシージャに次のコードを追加して、TextFile1.txt ファイルの `ReadOnlyFile` クラスのインスタンスを作成します。 このコードは、遅延バインディングを使用して動的メンバーを呼び出し、"Customer" という文字列を含んだテキスト行を取得します。  
+2. Main プロシージャに次のコードを追加して、TextFile1.txt ファイルの `ReadOnlyFile` クラスのインスタンスを作成します。 このコードは、遅延バインディングを使用して動的メンバーを呼び出し、"Customer" という文字列を含んだテキスト行を取得します。  
   
      [!code-csharp[VbDynamicWalkthrough#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthrough/cs/program.cs#8)]
      [!code-vb[VbDynamicWalkthrough#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthrough/vb/module1.vb#8)]
   
-3.  ファイルを保存し、Ctrl キーを押しながら F5 キーを押してアプリケーションをビルドし、実行します。  
+3. ファイルを保存し、Ctrl キーを押しながら F5 キーを押してアプリケーションをビルドし、実行します。  
   
 ## <a name="calling-a-dynamic-language-library"></a>動的言語ライブラリの呼び出し  
 
@@ -131,27 +131,27 @@ ms.locfileid: "56092645"
   
 ### <a name="to-create-a-custom-dynamic-class"></a>カスタムの動的クラスを作成するには
   
-1.  Visual Studio で、**[ファイル]** メニューの **[新規作成]** をポイントし、**[プロジェクト]** をクリックします。  
+1. Visual Studio で、 **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-2.  **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、**[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに `DynamicIronPythonSample` と入力して、**[OK]** をクリックします。 新しいプロジェクトが作成されます。  
+2. **[新しいプロジェクト]** ダイアログ ボックスの **[プロジェクトの種類]** ペインで、 **[Windows]** が選択されていることを確認します。 **[テンプレート]** ペインの **[コンソール アプリケーション]** を選択します。 **[名前]** ボックスに `DynamicIronPythonSample` と入力して、 **[OK]** をクリックします。 新しいプロジェクトが作成されます。  
   
-3.  Visual Basic を使用している場合は、DynamicIronPythonSample プロジェクトを右クリックし、**[プロパティ]** をクリックします。 **[参照]** タブをクリックします。**[追加]** ボタンをクリックします。 Visual C# を使用している場合は、**ソリューション エクスプローラー**で **[参照]** フォルダーを右クリックし、**[参照の追加]** をクリックします。  
+3. Visual Basic を使用している場合は、DynamicIronPythonSample プロジェクトを右クリックし、 **[プロパティ]** をクリックします。 **[参照]** タブをクリックします。 **[追加]** ボタンをクリックします。 Visual C# を使用している場合は、**ソリューション エクスプローラー**で **[参照]** フォルダーを右クリックし、 **[参照の追加]** をクリックします。  
   
-4.  **[参照]** タブで、IronPython ライブラリがインストールされているフォルダーを参照します。 たとえば、 C:\Program Files\IronPython 2.6 for .NET 4.0 です。 **IronPython.dll**、**IronPython.Modules.dll**、**Microsoft.Scripting.dll**、および **Microsoft.Dynamic.dll** ライブラリを選択します。 **[OK]** をクリックします。  
+4. **[参照]** タブで、IronPython ライブラリがインストールされているフォルダーを参照します。 たとえば、 C:\Program Files\IronPython 2.6 for .NET 4.0 です。 **IronPython.dll**、**IronPython.Modules.dll**、**Microsoft.Scripting.dll**、および **Microsoft.Dynamic.dll** ライブラリを選択します。 **[OK]** をクリックします。  
   
-5.  Visual Basic を使用している場合は、Module1.vb ファイルを編集します。 Visual C# を使用している場合は、Program.cs ファイルを編集します。  
+5. Visual Basic を使用している場合は、Module1.vb ファイルを編集します。 Visual C# を使用している場合は、Program.cs ファイルを編集します。  
   
-6.  ファイルの先頭に、IronPython ライブラリから `Microsoft.Scripting.Hosting` および `IronPython.Hosting` 名前空間をインポートするための次のコードを追加します。  
+6. ファイルの先頭に、IronPython ライブラリから `Microsoft.Scripting.Hosting` および `IronPython.Hosting` 名前空間をインポートするための次のコードを追加します。  
   
     [!code-csharp[VbDynamicWalkthroughIronPython#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#1)]
     [!code-vb[VbDynamicWalkthroughIronPython#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#1)]
   
-7.  Main メソッドで、IronPython ライブラリをホストする新しい `Microsoft.Scripting.Hosting.ScriptRuntime` オブジェクトを作成するための次のコードを追加します。 `ScriptRuntime` オブジェクトは、IronPython ライブラリ モジュール random.py を読み込みます。  
+7. Main メソッドで、IronPython ライブラリをホストする新しい `Microsoft.Scripting.Hosting.ScriptRuntime` オブジェクトを作成するための次のコードを追加します。 `ScriptRuntime` オブジェクトは、IronPython ライブラリ モジュール random.py を読み込みます。  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#2)]
      [!code-vb[VbDynamicWalkthroughIronPython#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#2)]
   
-8.  Random.py モジュールを読み込むコードの後に、整数の配列を作成する次のコードを追加します。 配列は random.py モジュールの `shuffle` メソッドに渡されます。このメソッドは、配列内の値をランダムに並べ替えします。  
+8. Random.py モジュールを読み込むコードの後に、整数の配列を作成する次のコードを追加します。 配列は random.py モジュールの `shuffle` メソッドに渡されます。このメソッドは、配列内の値をランダムに並べ替えします。  
   
      [!code-csharp[VbDynamicWalkthroughIronPython#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/cs/program.cs#3)]
      [!code-vb[VbDynamicWalkthroughIronPython#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbdynamicwalkthroughironpython/vb/module1.vb#3)]
@@ -162,7 +162,7 @@ ms.locfileid: "56092645"
 
 - <xref:System.Dynamic?displayProperty=nameWithType>
 - <xref:System.Dynamic.DynamicObject?displayProperty=nameWithType>
-- [dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)
+- [dynamic 型の使用](./using-type-dynamic.md)
 - [事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [dynamic](../../../csharp/language-reference/keywords/dynamic.md)
+- [dynamic](../../language-reference/builtin-types/reference-types.md)
 - [動的なインターフェイスの実装 (Microsoft TechNet からダウンロードできる PDF)](https://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

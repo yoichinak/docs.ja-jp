@@ -1,25 +1,25 @@
 ---
-title: '方法: 文字列を検索する (C# ガイド)'
+title: 文字列を検索する方法 (C# ガイド)
 ms.date: 02/21/2018
 helpviewer_keywords:
 - searching strings [C#]
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: 030d71f95947e98d9f269095908b0431c2192430
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
+ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623392"
+ms.lasthandoff: 12/10/2019
+ms.locfileid: "74959703"
 ---
-# <a name="how-to-search-strings"></a>方法: 文字列を検索する
+# <a name="how-to-search-strings"></a>文字列を検索する方法
 
 2 つの主な戦略を使用して、文字列のテキストを検索することができます。 <xref:System.String> クラスのメソッドは特定のテキストを検索します。 正規表現はテキストのパターンを検索します。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-[string](../language-reference/keywords/string.md) 型は、<xref:System.String?displayProperty=nameWithType> クラスのエイリアスであり、文字列の内容を検索するための多数の便利なメソッドを提供します。 その中に <xref:System.String.Contains%2A>、<xref:System.String.StartsWith%2A>、<xref:System.String.EndsWith%2A>、<xref:System.String.IndexOf%2A>、<xref:System.String.LastIndexOf%2A> が含まれています。 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> クラスでは、テキストのパターンを検索するための豊富なボキャブラリが提供されます。 この記事では、これらの手法と、ニーズに最適なメソッドを選択する方法について説明します。
+[string](../language-reference/builtin-types/reference-types.md#the-string-type) 型は、<xref:System.String?displayProperty=nameWithType> クラスのエイリアスであり、文字列の内容を検索するための多数の便利なメソッドを提供します。 その中に <xref:System.String.Contains%2A>、<xref:System.String.StartsWith%2A>、<xref:System.String.EndsWith%2A>、<xref:System.String.IndexOf%2A>、<xref:System.String.LastIndexOf%2A> が含まれています。 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> クラスでは、テキストのパターンを検索するための豊富なボキャブラリが提供されます。 この記事では、これらの手法と、ニーズに最適なメソッドを選択する方法について説明します。
 
 ## <a name="does-a-string-contain-text"></a>文字列にテキストが含まれていますか?
 
@@ -39,9 +39,9 @@ ms.locfileid: "54623392"
 
 文字列の検索には、<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> クラスを使用できます。 これらの検索の複雑さは、単純なテキスト パターンから複雑なテキスト パターンまでさまざまです。
 
-次のコード例では、文章内の "the" または "their" という単語を検索します (大文字と小文字の区別は無視されます)。 静的メソッドの <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> で検索を実行します。 検索対象の文字列と、検索パターンを指定します。 この例では、3 番目の引数で大文字と小文字を区別しない検索を指定します。 詳細については、「<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>」を参照してください。  
+次のコード例では、文章内の "the" または "their" という単語を検索します (大文字と小文字の区別は無視されます)。 静的メソッドの <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> で検索を実行します。 検索対象の文字列と、検索パターンを指定します。 この例では、3 番目の引数で大文字と小文字を区別しない検索を指定します。 詳細については、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> を参照してください。  
 
-検索パターンで検索対象のテキストを説明します。 次の表では、検索パターンの各要素について説明します  (以下の表では、C# 文字列で `\\` としてエスケープされる必要がある、単一の `\` を使用します)。
+検索パターンで検索対象のテキストを説明します。 次の表では、検索パターンの各要素について説明します (以下の表では、C# 文字列で `\\` としてエスケープされる必要がある、単一の `\` を使用します)。
 
 | pattern  | 説明     |
 | -------- |-------------|
@@ -52,7 +52,7 @@ ms.locfileid: "54623392"
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
   
 > [!TIP]
-> `string` メソッドは、通常、正確な文字列を検索するときに選択することをお勧めします。 正規表現は、ソース文字列でいくつかのパターンを検索する場合に適しています。
+> `string` メソッドは、通常、正確な文字列を検索するときに選択することをお勧めします。 正規表現は、ソース文字列で何らかのパターンを検索する場合に適しています。
 
 ## <a name="does-a-string-follow-a-pattern"></a>文字列はパターンに従っていますか?
 

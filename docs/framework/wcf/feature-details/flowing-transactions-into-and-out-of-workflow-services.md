@@ -2,42 +2,42 @@
 title: ワークフロー サービスへのトランザクションのフロー
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 4a5cde045c6c676c2efc694c67fd049b6eb611b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea14bc651258684fd31940aa6b88f9731348dcd1
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708637"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73978282"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>ワークフロー サービスへのトランザクションのフロー
 ワークフロー サービスとワークフロー クライアントはトランザクションに参加できます。  サービス操作をアンビエント トランザクションの一部にするには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの中に配置します。 <xref:System.ServiceModel.Activities.Send> 内の <xref:System.ServiceModel.Activities.SendReply> または <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティによる呼び出しが行われると、アンビエント トランザクション内でも呼び出しが行われます。 ワークフロー クライアント アプリケーションでは、<xref:System.Activities.Statements.TransactionScope> アクティビティを使用してアンビエント トランザクションを作成し、そのアンビエント トランザクションを使用してサービス操作を呼び出すことができます。 ここでは、トランザクションに参加するワークフロー サービスとワークフロー クライアントを作成する手順について説明します。  
   
 > [!WARNING]
->  ワークフロー サービス インスタンスがトランザクション内に読み込まれて、ワークフローに <xref:System.Activities.Statements.Persist> アクティビティが含まれている場合、ワークフロー インスタンスはトランザクションがタイムアウトするまでハングします。  
+> ワークフローサービスインスタンスがトランザクション内に読み込まれ、ワークフローに <xref:System.Activities.Statements.Persist> アクティビティが含まれている場合、ワークフローインスタンスは、トランザクションがタイムアウトするまでブロックします。  
   
 > [!IMPORTANT]
->  <xref:System.ServiceModel.Activities.TransactedReceiveScope> を使用する場合は、ワークフロー内のすべての受信を <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティに配置することをお勧めします。  
+> <xref:System.ServiceModel.Activities.TransactedReceiveScope> を使用する場合は、ワークフロー内のすべての受信を <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティに配置することをお勧めします。  
   
 > [!IMPORTANT]
->  <xref:System.ServiceModel.Activities.TransactedReceiveScope> を使用して、メッセージが不適切な順序で到着する場合、最初の順序を無視したメッセージを配信しようとするとワークフローは中止されます。 ワークフローがアイドル状態である場合、ワークフローは常に一致する停止ポイントにあるようにする必要があります。 これによって、ワークフローが中止された場合、前の永続性ポイントからワークフローを再開することができます。  
+> <xref:System.ServiceModel.Activities.TransactedReceiveScope> を使用して、メッセージが不適切な順序で到着する場合、最初の順序を無視したメッセージを配信しようとするとワークフローは中止されます。 ワークフローがアイドル状態である場合、ワークフローは常に一致する停止ポイントにあるようにする必要があります。 これによって、ワークフローが中止された場合、前の永続性ポイントからワークフローを再開することができます。  
   
 ### <a name="create-a-shared-library"></a>共有ライブラリの作成  
   
-1.  新しい空の Visual Studio ソリューションを作成します。  
+1. 新しい空の Visual Studio ソリューションを作成します。  
   
-2.  `Common` という新しいクラス ライブラリ プロジェクトを追加します。 次のアセンブリへの参照を追加します。  
+2. `Common` という新しいクラス ライブラリ プロジェクトを追加します。 次のアセンブリへの参照を追加します。  
   
-    -   System.Activities.dll  
+    - System.Activities.dll  
   
-    -   System.ServiceModel.dll  
+    - System.ServiceModel.dll  
   
-    -   System.ServiceModel.Activities.dll  
+    - System.ServiceModel.Activities.dll  
   
-    -   System.Transactions.dll  
+    - System.Transactions.dll  
   
-3.  `PrintTransactionInfo` という新しいクラスを `Common` プロジェクトに追加します。 このクラスは <xref:System.Activities.NativeActivity> の派生クラスで、<xref:System.Activities.NativeActivity.Execute%2A> メソッドをオーバーロードします。  
+3. `PrintTransactionInfo` という新しいクラスを `Common` プロジェクトに追加します。 このクラスは <xref:System.Activities.NativeActivity> の派生クラスで、<xref:System.Activities.NativeActivity.Execute%2A> メソッドをオーバーロードします。  
   
-    ```  
+    ```csharp
     using System;  
     using System;  
     using System.Activities;  
@@ -72,34 +72,34 @@ ms.locfileid: "54708637"
     }  
     ```  
   
-     これは、アンビエント トランザクションに関する情報を表示するネイティブ アクティビティで、ここで使用するサービス ワークフローとクライアント ワークフローの両方で使用されます。 このアクティビティで使用できるようにするソリューションをビルド、**共通**のセクション、**ツールボックス**します。  
+     これは、アンビエント トランザクションに関する情報を表示するネイティブ アクティビティで、ここで使用するサービス ワークフローとクライアント ワークフローの両方で使用されます。 ソリューションをビルドして、このアクティビティを**ツールボックス**の **[共通]** セクションで使用できるようにします。  
   
 ### <a name="implement-the-workflow-service"></a>ワークフロー サービスの実装  
   
-1.  呼ばれる新しい WCF ワークフロー サービスの追加`WorkflowService`を`Common`プロジェクト。 この右クリックを行う、`Common`プロジェクトで、**追加**、**新しい項目.** を選択します**ワークフロー** **インストールされたテンプレート**選択**WCF ワークフロー サービス**します。  
+1. `Common` プロジェクトに `WorkflowService` という新しい WCF ワークフローサービスを追加します。 これを行うには、`Common` プロジェクトを右クリックし、 **[追加]** 、 **[新しい項目]** の順に選択し、 **[インストールされたテンプレート]** で **[ワークフロー]** を選択して **[WCF ワークフローサービス]** を選択します。  
   
-     ![ワークフロー サービスの追加](../../../../docs/framework/wcf/feature-details/media/addwfservice.JPG "AddWFService")  
+     ![ワークフロー サービスの追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-workflow-service.jpg)  
   
-2.  既定の `ReceiveRequest` アクティビティと `SendResponse` アクティビティを削除します。  
+2. 既定の `ReceiveRequest` アクティビティと `SendResponse` アクティビティを削除します。  
   
-3.  <xref:System.Activities.Statements.WriteLine> アクティビティを `Sequential Service` アクティビティにドラッグ アンド ドロップします。 次の例に示すように、Text プロパティを `"Workflow Service starting ..."` に設定します。  
+3. <xref:System.Activities.Statements.WriteLine> アクティビティを `Sequential Service` アクティビティにドラッグ アンド ドロップします。 次の例に示すように、Text プロパティを `"Workflow Service starting ..."` に設定します。  
   
-     ![WriteLine アクティビティの追加](../../../../docs/framework/wcf/feature-details/media/addwriteline.JPG "AddWriteLine")  
+     ![シーケンシャルサービスアクティビティへの WriteLine アクティビティの追加 (./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-sequential-service.jpg)  
   
-4.  <xref:System.ServiceModel.Activities.TransactedReceiveScope> を <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティが記載されて、**メッセージング**のセクション、**ツールボックス**します。 <xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティが 2 つのセクションで構成される**要求**と**本文**します。 **要求**セクションが含まれています、<xref:System.ServiceModel.Activities.Receive>アクティビティ。 **本文**セクションには、メッセージが受信された後に、トランザクション内で実行する活動が含まれています。  
+4. <xref:System.ServiceModel.Activities.TransactedReceiveScope> を <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティは、**ツールボックス**の **[メッセージング]** セクションにあります。 <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティは、**要求**と**本文**の2つのセクションで構成されています。 **要求**セクションには、<xref:System.ServiceModel.Activities.Receive> アクティビティが含まれています。 **Body**セクションには、メッセージを受信した後にトランザクション内で実行されるアクティビティが含まれています。  
   
-     ![TransactedReceiveScope アクティビティの追加](../../../../docs/framework/wcf/feature-details/media/trs.JPG "TRS")  
+     ![TransactedReceiveScope アクティビティの追加](./media/flowing-transactions-into-and-out-of-workflow-services/transactedreceivescope-activity.jpg)  
   
-5.  選択、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティをクリックして、**変数**ボタンをクリックします。 次の変数を追加します。  
+5. <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティを選択し、 **[変数]** ボタンをクリックします。 次の変数を追加します。  
   
-     ![変数を追加する、TransactedReceiveScope](../../../../docs/framework/wcf/feature-details/media/trsvariables.JPG "TRSVariables")  
+     ![TransactedReceiveScope への変数の追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-transactedreceivescope-variables.jpg)  
   
     > [!NOTE]
-    >  既定で含まれているデータ変数は削除してかまいません。 既存のハンドル変数を使用することもできます。  
+    > 既定で含まれているデータ変数は削除してかまいません。 既存のハンドル変数を使用することもできます。  
   
-6.  ドラッグ アンド ドロップ、<xref:System.ServiceModel.Activities.Receive>内のアクティビティ、**要求**のセクション、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティ。 次のプロパティを設定します。  
+6. <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの**Request**セクション内に <xref:System.ServiceModel.Activities.Receive> アクティビティをドラッグアンドドロップします。 次のプロパティを設定します。  
   
-    |プロパティ|[値]|  
+    |property|[値]|  
     |--------------|-----------|  
     |CanCreateInstance|True (チェック ボックスをオンにする)|  
     |OperationName|StartSample|  
@@ -107,79 +107,79 @@ ms.locfileid: "54708637"
   
      ワークフローは次のようになります。  
   
-     ![Receive アクティビティの追加](../../../../docs/framework/wcf/feature-details/media/serviceaddreceive.JPG "ServiceAddReceive")  
+     ![Receive アクティビティの追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-receive-activity.jpg)  
   
-7.  をクリックして、**を定義しています.** のリンクを<xref:System.ServiceModel.Activities.Receive>活動し、次の設定を行います。  
+7. <xref:System.ServiceModel.Activities.Receive> アクティビティの **[定義...]** リンクをクリックし、次の設定を行います。  
   
-     ![Recieve アクティビティのメッセージ設定](../../../../docs/framework/wcf/feature-details/media/receivemessagesettings.JPG "ReceiveMessageSettings")  
+     ![Receive アクティビティのメッセージ設定を設定する](./media/flowing-transactions-into-and-out-of-workflow-services/receive-message-settings.jpg)  
   
-8.  <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> の Body セクションにドラッグ アンド ドロップします。 <xref:System.Activities.Statements.Sequence> アクティビティに 2 つの <xref:System.Activities.Statements.WriteLine> アクティビティをドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを次の表のとおりに設定します。  
+8. <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> の Body セクションにドラッグ アンド ドロップします。 <xref:System.Activities.Statements.Sequence> アクティビティに 2 つの <xref:System.Activities.Statements.WriteLine> アクティビティをドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを次の表のとおりに設定します。  
   
     |アクティビティ|[値]|  
     |--------------|-----------|  
-    |1 つ目の WriteLine|"Service:完了した受信"|  
-    |2 つ目の WriteLine|"Service:受信した ="+ requestMessage|  
+    |1 つ目の WriteLine|"サービス: 受信が完了しました"|  
+    |2 つ目の WriteLine|"Service: Received = " + requestMessage|  
   
      ワークフローは次のようになります。  
   
-     ![WriteLine アクティビティの追加](../../../../docs/framework/wcf/feature-details/media/afteraddingwritelines.JPG "AfterAddingWriteLines")  
+     ![WriteLine アクティビティを追加した後のシーケンス](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-writelines.jpg)  
   
-9. ドラッグ アンド ドロップ、`PrintTransactionInfo`後、2 つ目のアクティビティ<xref:System.Activities.Statements.WriteLine>内のアクティビティ、**本文**で、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティ。  
+9. `PrintTransactionInfo` アクティビティを、<xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの**本文**の2つ目の <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグアンドドロップします。  
   
-     ![PrintTransactionInfo の追加後](../../../../docs/framework/wcf/feature-details/media/afteraddingprinttransactioninfo.JPG "AfterAddingPrintTransactionInfo")  
+     ![PrintTransactionInfo を追加した後のシーケンス](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-printtransactioninfo.jpg )  
   
 10. <xref:System.Activities.Statements.Assign> アクティビティを `PrintTransactionInfo` アクティビティの後にドラッグ アンド ドロップし、次の表のとおりにプロパティを設定します。  
   
-    |プロパティ|[値]|  
+    |property|[値]|  
     |--------------|-----------|  
     |終了|replyMessage|  
-    |[値]|"Service:応答を送信します。"|  
+    |[値]|"Service: Sending reply."|  
   
-11. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、<xref:System.Activities.Statements.Assign>アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"サービス。応答を開始します。"  
+11. <xref:System.Activities.Statements.WriteLine> アクティビティを <xref:System.Activities.Statements.Assign> アクティビティの後にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Service: Begin reply" に設定します。  
   
      ワークフローは次のようになります。  
   
-     ![Assign および WriteLine の追加後](../../../../docs/framework/wcf/feature-details/media/afteraddingsbrwriteline.JPG "AfterAddingSBRWriteLine")  
+     ![Assign および WriteLine の追加後](./media/flowing-transactions-into-and-out-of-workflow-services/after-adding-sbr-writeline.jpg)  
   
-12. 右クリックして、<xref:System.ServiceModel.Activities.Receive>活動と選択**SendReply の作成**、最後の後に貼り付けます<xref:System.Activities.Statements.WriteLine>アクティビティ。 をクリックして、**を定義しています.** のリンクを`SendReplyToReceive`活動し、次の設定を行います。  
+12. <xref:System.ServiceModel.Activities.Receive> アクティビティを右クリックし、 **[SendReply の作成]** を選択して、最後の <xref:System.Activities.Statements.WriteLine> アクティビティの後に貼り付けます。 `SendReplyToReceive` アクティビティの **[定義...]** リンクをクリックし、次の設定を行います。  
   
-     ![メッセージの設定を返信](../../../../docs/framework/wcf/feature-details/media/replymessagesettings.JPG "ReplyMessageSettings")  
+     ![応答メッセージの設定](./media/flowing-transactions-into-and-out-of-workflow-services/reply-message-settings.jpg)  
   
-13. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、`SendReplyToReceive`アクティビティと設定が<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"Service:応答を送信します。"  
+13. <xref:System.Activities.Statements.WriteLine> アクティビティを `SendReplyToReceive` アクティビティの後にドラッグアンドドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Service: Reply sent" に設定します。  
   
-14. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>アクティビティ、ワークフローとセットの下部にあるその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"Service:ワークフローは終了、ENTER キーを押して終了する。"  
+14. <xref:System.Activities.Statements.WriteLine> アクティビティをワークフローの末尾にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Service: Workflow ends, press ENTER to exit" に設定します。  
   
      完成したサービス ワークフローは次のようになります。  
   
-     ![サービスのワークフローを完了](../../../../docs/framework/wcf/feature-details/media/servicecomplete.jpg "ServiceComplete")  
+     ![完全なサービス ワークフロー](./media/flowing-transactions-into-and-out-of-workflow-services/service-complete-workflow.jpg)  
   
 ### <a name="implement-the-workflow-client"></a>ワークフロー クライアントの実装  
   
-1.  `WorkflowClient` という新しい WCF ワークフロー アプリケーションを `Common` プロジェクトに追加します。 この右クリックを行う、`Common`プロジェクトで、**追加**、**新しい項目.** を選択します**ワークフロー** **インストールされたテンプレート**選択**アクティビティ**します。  
+1. `WorkflowClient` という新しい WCF ワークフロー アプリケーションを `Common` プロジェクトに追加します。 これを行うには、`Common` プロジェクトを右クリックし、 **[追加]** 、 **[新しい項目]** の順に選択し、 **[インストールさ]** れたテンプレート で **[ワークフロー]** を選択して **[アクティビティ]** を選択します。  
   
-     ![アクティビティ プロジェクトの追加](../../../../docs/framework/wcf/feature-details/media/addactivity.JPG "AddActivity")  
+     ![アクティビティ プロジェクトの追加](./media/flowing-transactions-into-and-out-of-workflow-services/add-activity-project.jpg)  
   
-2.  <xref:System.Activities.Statements.Sequence> アクティビティをデザイン画面にドラッグ アンド ドロップします。  
+2. <xref:System.Activities.Statements.Sequence> アクティビティをデザイン画面にドラッグ アンド ドロップします。  
   
-3.  <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティにドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを `"Client: Workflow starting"` に設定します。 ワークフローは次のようになります。  
+3. <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティにドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを `"Client: Workflow starting"` に設定します。 ワークフローは次のようになります。  
   
-     ![WriteLine アクティビティを追加](../../../../docs/framework/wcf/feature-details/media/clientaddwriteline.JPG "ClientAddWriteLine")  
+     ![WriteLine アクティビティを追加する](./media/flowing-transactions-into-and-out-of-workflow-services/add-writeline-activity.jpg)  
   
-4.  <xref:System.Activities.Statements.TransactionScope> アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。  <xref:System.Activities.Statements.TransactionScope> アクティビティを選択し、[変数] をクリックして次の変数を追加します。  
+4. <xref:System.Activities.Statements.TransactionScope> アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。  <xref:System.Activities.Statements.TransactionScope> アクティビティを選択し、[変数] をクリックして次の変数を追加します。  
   
-     ![TransactionScope に変数を追加](../../../../docs/framework/wcf/feature-details/media/tsvariables.JPG "TSVariables")  
+     ![TransactionScope への変数の追加](./media/flowing-transactions-into-and-out-of-workflow-services/transactionscope-variables.jpg)  
   
-5.  <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.Activities.Statements.TransactionScope> アクティビティの Body セクションにドラッグ アンド ドロップします。  
+5. <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.Activities.Statements.TransactionScope> アクティビティの Body セクションにドラッグ アンド ドロップします。  
   
-6.  `PrintTransactionInfo` アクティビティを <xref:System.Activities.Statements.Sequence> アクティビティにドラッグ アンド ドロップします。  
+6. `PrintTransactionInfo` アクティビティを <xref:System.Activities.Statements.Sequence> アクティビティにドラッグ アンド ドロップします。  
   
-7.  ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、`PrintTransactionInfo`アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"クライアント。"送信を開始します。 ワークフローは次のようになります。  
+7. <xref:System.Activities.Statements.WriteLine> アクティビティを `PrintTransactionInfo` アクティビティの後にドラッグアンドドロップし、その <xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Client: from Send" に設定します。 ワークフローは次のようになります。  
   
-     ![アクティビティの追加](../../../../docs/framework/wcf/feature-details/media/clientaddcbswriteline.JPG "ClientAddCBSWriteLine")  
+     ![クライアントを追加しています: 送信アクティビティを開始しています](./media/flowing-transactions-into-and-out-of-workflow-services/client-add-cbs-writeline.jpg)  
   
-8.  <xref:System.ServiceModel.Activities.Send> アクティビティを <xref:System.Activities.Statements.Assign> アクティビティの後にドラッグ アンド ドロップし、次のプロパティを設定します。  
+8. <xref:System.ServiceModel.Activities.Send> アクティビティを <xref:System.Activities.Statements.Assign> アクティビティの後にドラッグ アンド ドロップし、次のプロパティを設定します。  
   
-    |プロパティ|[値]|  
+    |property|[値]|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
     |OperationName|StartSample|  
@@ -187,44 +187,44 @@ ms.locfileid: "54708637"
   
      ワークフローは次のようになります。  
   
-     ![Send アクティビティのプロパティを設定](../../../../docs/framework/wcf/feature-details/media/clientsendsettings.JPG "ClientSendSettings")  
+     ![Send アクティビティのプロパティの設定](./media/flowing-transactions-into-and-out-of-workflow-services/client-send-activity-settings.jpg)  
   
-9. をクリックして、**を定義しています.** リンクし、次の設定を行います。  
+9. **[定義...]** リンクをクリックし、次の設定を行います。  
   
-     ![Send アクティビティ メッセージ設定](../../../../docs/framework/wcf/feature-details/media/sendmessagesettings.JPG "SendMessageSettings")  
+     ![Send アクティビティのメッセージの設定](./media/flowing-transactions-into-and-out-of-workflow-services/send-message-settings.jpg)  
   
-10. 右クリックして、<xref:System.ServiceModel.Activities.Send>活動と選択**ReceiveReply の作成**です。 <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティが <xref:System.ServiceModel.Activities.Send> アクティビティの後に自動的に配置されます。  
+10. <xref:System.ServiceModel.Activities.Send> アクティビティを右クリックし、 **[ReceiveReply の作成]** を選択します。 <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティが <xref:System.ServiceModel.Activities.Send> アクティビティの後に自動的に配置されます。  
   
 11. ReceiveReplyForSend アクティビティの [定義] リンクをクリックし、次の設定を行います。  
   
-     ![ReceiveForSend メッセージの設定を設定](../../../../docs/framework/wcf/feature-details/media/clientreplymessagesettings.JPG "ClientReplyMessageSettings")  
+     ![ReceiveForSend メッセージの設定](./media/flowing-transactions-into-and-out-of-workflow-services/client-reply-message-settings.jpg)  
   
-12. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>の間でアクティビティ、<xref:System.ServiceModel.Activities.Send>と<xref:System.ServiceModel.Activities.ReceiveReply>アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"クライアント。送信が完了しました。"  
+12. <xref:System.Activities.Statements.WriteLine> アクティビティを <xref:System.ServiceModel.Activities.Send> アクティビティと <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティの間にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Client: Send complete" に設定します。  
   
-13. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、<xref:System.ServiceModel.Activities.ReceiveReply>アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"クライアント側。受信した応答 ="+ replyMessage  
+13. <xref:System.Activities.Statements.WriteLine> アクティビティを <xref:System.ServiceModel.Activities.ReceiveReply> アクティビティの後にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Client side: Reply received = " + replyMessage に設定します。  
   
 14. `PrintTransactionInfo` アクティビティを <xref:System.Activities.Statements.WriteLine> アクティビティの後にドラッグ アンド ドロップします。  
   
 15. <xref:System.Activities.Statements.WriteLine> アクティビティをワークフローの末尾にドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを "Client workflow ends" に設定します。 完成したクライアント ワークフローは次の図のようになります。  
   
-     ![完成したクライアント ワークフロー](../../../../docs/framework/wcf/feature-details/media/clientcompleteworkflow.jpg "ClientCompleteWorkflow")  
+     ![完成したクライアントワークフロー](./media/flowing-transactions-into-and-out-of-workflow-services/client-complete-workflow.jpg)  
   
 16. ソリューションをビルドします。  
   
 ### <a name="create-the-service-application"></a>サービス アプリケーションの作成  
   
-1.  `Service` という新しいコンソール アプリケーション プロジェクトをソリューションに追加します。 次のアセンブリへの参照を追加します。  
+1. `Service` という新しいコンソール アプリケーション プロジェクトをソリューションに追加します。 次のアセンブリへの参照を追加します。  
   
-    1.  System.Activities.dll  
+    1. System.Activities.dll  
   
-    2.  System.ServiceModel.dll  
+    2. System.ServiceModel.dll  
   
-    3.  System.ServiceModel.Activities.dll  
+    3. System.ServiceModel.Activities.dll  
   
-2.  生成された Program.cs ファイルを開き、次のコードを追加します。  
+2. 生成された Program.cs ファイルを開き、次のコードを追加します。  
   
-    ```  
-    static void Main()  
+    ```csharp
+          static void Main()  
           {  
               Console.WriteLine("Building the server.");  
               using (WorkflowServiceHost host = new WorkflowServiceHost(new DeclarativeServiceWorkflow(), new Uri("net.tcp://localhost:8000/TransactedReceiveService/Declarative")))  
@@ -241,7 +241,7 @@ ms.locfileid: "54708637"
           }  
     ```  
   
-3.  次の app.config ファイルをプロジェクトに追加します。  
+3. 次の app.config ファイルをプロジェクトに追加します。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -259,57 +259,56 @@ ms.locfileid: "54708637"
   
 ### <a name="create-the-client-application"></a>クライアント アプリケーションの作成  
   
-1.  `Client` という新しいコンソール アプリケーション プロジェクトをソリューションに追加します。 System.Activities.dll への参照を追加します。  
+1. `Client` という新しいコンソール アプリケーション プロジェクトをソリューションに追加します。 System.Activities.dll への参照を追加します。  
   
-2.  program.cs ファイルを開き、次のコードを追加します。  
+2. program.cs ファイルを開き、次のコードを追加します。  
   
-    ```  
+    ```csharp
     class Program  
+    {  
+
+        private static AutoResetEvent syncEvent = new AutoResetEvent(false);  
+  
+        static void Main(string[] args)  
         {  
+            //Build client  
+            Console.WriteLine("Building the client.");  
+            WorkflowApplication client = new WorkflowApplication(new DeclarativeClientWorkflow());  
+            client.Completed = Program.Completed;  
+            client.Aborted = Program.Aborted;  
+            client.OnUnhandledException = Program.OnUnhandledException;  
+            //Wait for service to start  
+            Console.WriteLine("Press ENTER once service is started.");  
+            Console.ReadLine();  
   
-            private static AutoResetEvent syncEvent = new AutoResetEvent(false);  
+            //Start the client              
+            Console.WriteLine("Starting the client.");  
+            client.Run();  
+            syncEvent.WaitOne();  
   
-            static void Main(string[] args)  
-            {  
-                //Build client  
-                Console.WriteLine("Building the client.");  
-                WorkflowApplication client = new WorkflowApplication(new DeclarativeClientWorkflow());  
-                client.Completed = Program.Completed;  
-                client.Aborted = Program.Aborted;  
-                client.OnUnhandledException = Program.OnUnhandledException;  
-  
-                //Wait for service to start  
-                Console.WriteLine("Press ENTER once service is started.");  
-                Console.ReadLine();  
-  
-                //Start the client              
-                Console.WriteLine("Starting the client.");  
-                client.Run();  
-                syncEvent.WaitOne();  
-  
-                //Sample complete  
-                Console.WriteLine();  
-                Console.WriteLine("Client complete. Press ENTER to exit.");  
-                Console.ReadLine();  
-            }  
-  
-            private static void Completed(WorkflowApplicationCompletedEventArgs e)  
-            {  
-                Program.syncEvent.Set();  
-            }  
-  
-            private static void Aborted(WorkflowApplicationAbortedEventArgs e)  
-            {  
-                Console.WriteLine("Client Aborted: {0}", e.Reason);  
-                Program.syncEvent.Set();  
-            }  
-  
-            private static UnhandledExceptionAction OnUnhandledException(WorkflowApplicationUnhandledExceptionEventArgs e)  
-            {  
-                Console.WriteLine("Client had an unhandled exception: {0}", e.UnhandledException);  
-                return UnhandledExceptionAction.Cancel;  
-            }  
+            //Sample complete  
+            Console.WriteLine();  
+            Console.WriteLine("Client complete. Press ENTER to exit.");  
+            Console.ReadLine();  
         }  
+  
+        private static void Completed(WorkflowApplicationCompletedEventArgs e)  
+        {  
+            Program.syncEvent.Set();  
+        }  
+  
+        private static void Aborted(WorkflowApplicationAbortedEventArgs e)  
+        {  
+            Console.WriteLine("Client Aborted: {0}", e.Reason);  
+            Program.syncEvent.Set();  
+        }  
+  
+        private static UnhandledExceptionAction OnUnhandledException(WorkflowApplicationUnhandledExceptionEventArgs e)  
+        {  
+            Console.WriteLine("Client had an unhandled exception: {0}", e.UnhandledException);  
+            return UnhandledExceptionAction.Cancel;  
+        }  
+    }  
     ```  
   
 ## <a name="see-also"></a>関連項目

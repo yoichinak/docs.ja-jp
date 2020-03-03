@@ -8,14 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479569"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139229"
 ---
 # <a name="managed-threading-basics"></a>マネージド スレッド処理の基本
 
@@ -24,7 +22,7 @@ ms.locfileid: "55479569"
  このセクションの残りのトピックには、マネージド スレッド処理と Windows オペレーティング システムとの相互作用など、高度なトピックが含まれます。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、タスク並列ライブラリと PLINQ は、マルチスレッド プログラムでのタスクとデータの並列処理のための API を提供します。 詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。  
+> .NET Framework 4 では、タスク並列ライブラリと PLINQ によって、マルチスレッド プログラムでのタスクとデータの並列処理のための API が提供されます。 詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -43,16 +41,10 @@ ms.locfileid: "55479569"
  [Windows でのマネージド スレッド処理とアンマネージド スレッド処理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  マネージド スレッド処理とアンマネージド スレッド処理の関係について説明し、Windows のスレッド処理 API に相当するマネージド API をリストし、COM アパートメントとマネージド スレッドの相互作用について説明します。  
   
- [Thread.Suspend、ガベージ コレクション、およびセーフ ポイント](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- スレッドの中断とガベージ コレクションについて説明します。  
-  
  [スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  スレッド相対ストレージ メカニズムについて説明します。  
   
- [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- 取り消しトークンを使用して、非同期または長時間実行されている同期操作の取り消し方法について説明します。  
-  
-## <a name="reference"></a>参照
+## <a name="reference"></a>辞書／辞典／その他
 
  <xref:System.Threading.Thread>  
  **Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。  

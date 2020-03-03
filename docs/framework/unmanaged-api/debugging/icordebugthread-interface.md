@@ -1,5 +1,5 @@
 ---
-title: ICorDebugThread Interface1
+title: ICorDebugThread インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugThread
@@ -14,46 +14,44 @@ helpviewer_keywords:
 ms.assetid: 3930fd9b-2bc3-4b72-80a0-b6eeb94d60c6
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: be30e91e017390befd26ada37daa0fc902bdaee2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b227b374021136e78f7f061d235eb18eca5b9515
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617500"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791478"
 ---
-# <a name="icordebugthread-interface1"></a>ICorDebugThread Interface1
+# <a name="icordebugthread-interface"></a>ICorDebugThread インターフェイス
 プロセス内のスレッドを表します。 `ICorDebugThread` インスタンスの有効期間は、それが表しているスレッドの有効期間と同じです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ClearCurrentException メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-clearcurrentexception-method.md)|このメソッドは実装されていません。 使用しないでください。|  
-|[CreateEval メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-createeval-method.md)|これで動作する ICorDebugEval オブジェクトを作成`ICorDebugThread`です。|  
-|[CreateStepper メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-createstepper-method.md)|これで、アクティブなフレームをステップ実行できるようにする ICorDebugStepper オブジェクトを作成します。`ICorDebugThread`します。|  
-|[EnumerateChains メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-enumeratechains-method.md)|これですべてのスタック チェーンを含む ICorDebugChainEnum 列挙子へのインターフェイス ポインターを取得`ICorDebugThread`します。|  
-|[GetActiveChain メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getactivechain-method.md)|これで active ICorDebugChain へのインターフェイス ポインターを取得`ICorDebugThread`します。|  
-|[GetActiveFrame メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getactiveframe-method.md)|これで active ICorDebugFrame へのインターフェイス ポインターを取得`ICorDebugThread`します。|  
-|[GetAppDomain メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getappdomain-method.md)|このアプリケーション ドメインへのインターフェイス ポインターを取得`ICorDebugThread`現在実行しています。|  
-|[GetCurrentException メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md)|現在、マネージ コードによってスローされる例外を表す ICorDebugValue オブジェクトへのインターフェイス ポインターを取得します。|  
-|[GetDebugState メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getdebugstate-method.md)|この現在のデバッグ状態を説明する CorDebugThreadState 値を取得`ICorDebugThread`します。|  
-|[GetHandle メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-gethandle-method.md)|このアクティブな部分の現在のハンドルを取得`ICorDebugThread`します。|  
-|[GetID メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getid-method.md)|このアクティブな部分の現在のオペレーティング システムの識別子を取得`ICorDebugThread`します。|  
-|[GetObject メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getobject-method.md)|共通言語ランタイム (CLR) スレッドにインターフェイス ポインターを取得します。|  
-|[GetProcess メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getprocess-method.md)|このプロセスにインターフェイス ポインターを取得`ICorDebugThread`一部を形成します。|  
-|[GetRegisterSet メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getregisterset-method.md)|これに関連付けられている登録のセットにインターフェイス ポインターを取得`ICorDebugThread`します。|  
-|[GetUserState メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getuserstate-method.md)|この現在の状態を記述する CorDebugUserState 値のビットごとの組み合わせを取得`ICorDebugThread`します。|  
-|[SetDebugState メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-setdebugstate-method.md)|ビットごとの組み合わせを設定`CorDebugThreadState`このデバッグ状態を記述する値`ICorDebugThread`します。|  
+|[ClearCurrentException メソッド](icordebugthread-clearcurrentexception-method.md)|このメソッドは実装されていません。 使用しないでください。|  
+|[CreateEval メソッド](icordebugthread-createeval-method.md)|この `ICorDebugThread`を操作する、のオブジェクトを作成します。|  
+|[CreateStepper メソッド](icordebugthread-createstepper-method.md)|この `ICorDebugThread`内のアクティブなフレームをステップ実行できるようにする、ICorDebugStepper オブジェクトを作成します。|  
+|[EnumerateChains メソッド](icordebugthread-enumeratechains-method.md)|この `ICorDebugThread`内のすべてのスタックチェーンを格納している ICorDebugChainEnum 列挙子へのインターフェイスポインターを取得します。|  
+|[GetActiveChain メソッド](icordebugthread-getactivechain-method.md)|この `ICorDebugThread`上のアクティブなについてのオブジェクトチェーンへのインターフェイスポインターを取得します。|  
+|[GetActiveFrame メソッド](icordebugthread-getactiveframe-method.md)|この `ICorDebugThread`のアクティブなテキストフレームへのインターフェイスポインターを取得します。|  
+|[GetAppDomain メソッド](icordebugthread-getappdomain-method.md)|この `ICorDebugThread` が現在実行されているアプリケーションドメインへのインターフェイスポインターを取得します。|  
+|[GetCurrentException メソッド](icordebugthread-getcurrentexception-method.md)|現在マネージコードによってスローされている例外を表す、ICorDebugValue オブジェクトへのインターフェイスポインターを取得します。|  
+|[GetDebugState メソッド](icordebugthread-getdebugstate-method.md)|この `ICorDebugThread`の現在のデバッグ状態を示す CorDebugThreadState 値を取得します。|  
+|[GetHandle メソッド](icordebugthread-gethandle-method.md)|この `ICorDebugThread`のアクティブな部分の現在のハンドルを取得します。|  
+|[GetID メソッド](icordebugthread-getid-method.md)|この `ICorDebugThread`のアクティブな部分の現在のオペレーティングシステム識別子を取得します。|  
+|[GetObject メソッド](icordebugthread-getobject-method.md)|共通言語ランタイム (CLR) スレッドへのインターフェイスポインターを取得します。|  
+|[GetProcess メソッド](icordebugthread-getprocess-method.md)|この `ICorDebugThread` がパートを形成するプロセスへのインターフェイスポインターを取得します。|  
+|[GetRegisterSet メソッド](icordebugthread-getregisterset-method.md)|この `ICorDebugThread`に関連付けられているレジスタセットへのインターフェイスポインターを取得します。|  
+|[GetUserState メソッド](icordebugthread-getuserstate-method.md)|この `ICorDebugThread`の現在の状態を示す CorDebugUserState 値のビットごとの組み合わせを取得します。|  
+|[SetDebugState メソッド](icordebugthread-setdebugstate-method.md)|この `ICorDebugThread`のデバッグ状態を記述する `CorDebugThreadState` 値のビットごとの組み合わせを設定します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -62,4 +60,5 @@ ms.locfileid: "54617500"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

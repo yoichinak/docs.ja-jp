@@ -16,17 +16,15 @@ helpviewer_keywords:
 ms.assetid: 57dbccd9-b16d-4da3-ae25-7a2cf9adf679
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 49290a37ca7ea101e3c8b458a5daa4995cb3beee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b855a53c9e4303138d7605bdf108d37bb345b917
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610046"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76789337"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 構造体
-マップを[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を対応する ICorDebugType オブジェクトの GUID。  
+Windows ランタイム GUID を対応するテキストオブジェクトにマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,11 +39,11 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`iid`|キャッシュされた GUID[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型。|  
-|`pType`|キャッシュされている型に関する情報を提供する ICorDebugType オブジェクトへのポインター。|  
+|`iid`|キャッシュされた Windows ランタイムの種類の GUID。|  
+|`pType`|キャッシュされた型に関する情報を提供する、テキストオブジェクトへのポインター。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]します。  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** Windows ランタイム。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -54,5 +52,6 @@ typedef struct CorDebugGuidToTypeMapping {
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

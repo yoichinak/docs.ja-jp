@@ -3,28 +3,26 @@ title: 外部の XSLT スタイル シートとドキュメントの解決
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 91d4e5bf3846dc2859c519227c0dee2c9d36343c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 504519532d9a6988209cf04fd6b6196796f929f8
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609461"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710298"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>外部の XSLT スタイル シートとドキュメントの解決
 変換中には、外部リソースの解決が必要になるときがあります。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。  
+> .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。  
   
  変換中には、外部リソースの解決が必要になるときがあります。  
   
--   <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドの実行時における外部スタイル シートの検索。  
+- <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドの実行時における外部スタイル シートの検索。  
   
--   <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドの実行時におけるスタイル シート内の `<xsl:include>` 要素または `<xsl:import>` 要素の解決。  
+- <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドの実行時におけるスタイル シート内の `<xsl:include>` 要素または `<xsl:import>` 要素の解決。  
   
--   <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドの実行時におけるすべての `document()` 関数の解決。  
+- <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドの実行時におけるすべての `document()` 関数の解決。  
   
 ## <a name="using-the-xmlresolver-class"></a>XmlResolver クラスの使い方  
  ネットワーク リソースにアクセスするのに認証が必要な場合は、<xref:System.Xml.Xsl.XslTransform.Load%2A> パラメーターを持っている <xref:System.Xml.XmlResolver> メソッドを使用して、必要な資格情報プロパティが設定された <xref:System.Xml.XmlResolver> オブジェクトを渡します。  

@@ -1,15 +1,13 @@
 ---
 title: ランタイム パッケージ ストア
 description: .NET Core で使用されるランタイム パッケージ ストアとターゲット マニフェストの使用方法について説明します。
-author: bleroy
 ms.date: 08/12/2017
-ms.custom: seodec18
-ms.openlocfilehash: 2f37e0de4b6fcb1b2047470b0a9df3753fe87d71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697986"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77448959"
 ---
 # <a name="runtime-package-store"></a>ランタイム パッケージ ストア
 
@@ -64,13 +62,13 @@ NET Core 2.0 以降、ターゲット環境に存在する既知のパッケー�
 
 パッケージ ストア マニフェスト、ランタイム、フレームワークと共に `dotnet store` を実行して、ランタイム パッケージ ストアをプロビジョニングします。
 
-```console
+```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
 ```
 
 **例**
 
-```console
+```dotnetcli
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
@@ -94,13 +92,13 @@ dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcorea
 
 ディスクにターゲット マニフェスト ファイルがある場合、[`dotnet publish`](../tools/dotnet-publish.md) コマンドでアプリを発行するときに、ファイルへのパスを指定します。
 
-```console
+```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 ```
 
 **例**
 
-```console
+```dotnetcli
 dotnet publish --manifest manifest.xml
 ```
 
@@ -110,7 +108,7 @@ dotnet publish --manifest manifest.xml
 
 ## <a name="specifying-target-manifests-in-the-project-file"></a>プロジェクト ファイルでターゲット マニフェストを指定する
 
-[`dotnet publish`](../tools/dotnet-publish.md) コマンドでターゲット マニフェストを指定する代わりに、**\<TargetManifestFiles>** タグにセミコロンで区切られたパスのリストとして、プロジェクト ファイルに指定することができます。
+[`dotnet publish`](../tools/dotnet-publish.md) コマンドでターゲット マニフェストを指定する代わりに、 **\<TargetManifestFiles>** タグにセミコロンで区切られたパスのリストとして、プロジェクト ファイルに指定することができます。
 
 ```xml
 <PropertyGroup>
@@ -124,11 +122,11 @@ dotnet publish --manifest manifest.xml
 
 ASP.NET Core の暗黙的なストアは、ASP.NET Core 2.0 にのみ適用されます。 暗黙的なストアを使用**しない** ASP.NET Core 2.1 以降を、アプリケーションで使用することを強くお勧めします。 ASP.NET Core 2.1 以降では、共有フレームワークを使用します。
 
-このランタイム パッケージ ストア機能は、アプリが[フレームワークに依存する展開 (FDD)](index.md#framework-dependent-deployments-fdd) のアプリとして展開されるときに、ASP.NET Core アプリによって暗黙的に使用されます。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) のターゲットには、ターゲット システムの暗黙的なパッケージ ストアを参照しているマニフェストが含まれます。 さらに、`Microsoft.AspNetCore.All` パッケージによって異なる FDD アプリは、アプリとそのアセットのみを含み、`Microsoft.AspNetCore.All` メタパッケージに一覧されるパッケージは含まないアプリとして発行されます。 それらのパッケージは、ターゲット システムに存在すると想定されます。
+このランタイム パッケージ ストア機能は、アプリが[フレームワークに依存する展開 (FDD)](index.md#publish-runtime-dependent) のアプリとして展開されるときに、ASP.NET Core アプリによって暗黙的に使用されます。 [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk) のターゲットには、ターゲット システムの暗黙的なパッケージ ストアを参照しているマニフェストが含まれます。 さらに、`Microsoft.AspNetCore.All` パッケージによって異なる FDD アプリは、アプリとそのアセットのみを含み、`Microsoft.AspNetCore.All` メタパッケージに一覧されるパッケージは含まないアプリとして発行されます。 それらのパッケージは、ターゲット システムに存在すると想定されます。
 
 ランタイム パッケージ ストアは、.NET Core SDK がインストールされるときに、ホストにインストールされます。 その他のインストーラーでは、Zip/tarball インストールの .NET Core SDK、`apt-get`、Red Hat Yum、.NET Core Windows Server Hosting バンドル、および手動のランタイム パッケージ ストアのインストールなど、ランタイム パッケージ ストアを提供する場合があります。
 
-[フレームワークに依存する展開 (FDD)](index.md#framework-dependent-deployments-fdd) アプリを展開するときに、ターゲット環境に .NET Core SDK がインストールされていることを確認します。 アプリが ASP.NET Core を含まない環境に展開される場合、次の例のように、プロジェクト ファイルで **\<PublishWithAspNetCoreTargetManifest>** を `false` に指定して、暗黙的なストアを無効にできます。
+[フレームワークに依存する展開 (FDD)](index.md#publish-runtime-dependent) アプリを展開するときに、ターゲット環境に .NET Core SDK がインストールされていることを確認します。 アプリが ASP.NET Core を含まない環境に展開される場合、次の例のように、プロジェクト ファイルで **\<PublishWithAspNetCoreTargetManifest>** を `false` に指定して、暗黙的なストアを無効にできます。
 
 ```xml
 <PropertyGroup>
@@ -137,7 +135,7 @@ ASP.NET Core の暗黙的なストアは、ASP.NET Core 2.0 にのみ適用さ�
 ```
 
 > [!NOTE]
-> [自己完結型の展開 (SCD)](index.md#self-contained-deployments-scd) アプリの場合、ターゲット システムには必ずしも必要なマニフェスト パッケージを含んでいないと想定されます。 そのため、SCD アプリの場合、**\<PublishWithAspNetCoreTargetManifest>** を `true` に設定することはできません。
+> [自己完結型の展開 (SCD)](index.md#publish-self-contained) アプリの場合、ターゲット システムには必ずしも必要なマニフェスト パッケージを含んでいないと想定されます。 そのため、SCD アプリの場合、 **\<PublishWithAspNetCoreTargetManifest>** を `true` に設定することはできません。
 
 展開に存在するマニフェストの依存関係を持つアプリケーションを展開する場合は (アセンブリは *bin* フォルダーに存在します)、ランタイム パッケージ ストアはそのアセンブリ用のホスト上では*使用されません*。 ホスト上のランタイム パッケージ ストアに存在するかに関係なく、*bin* フォルダーのアセンブリが使用されます。
 

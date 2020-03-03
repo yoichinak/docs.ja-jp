@@ -3,11 +3,11 @@ title: 4813 - DuplicateDiscoveryMessage
 ms.date: 03/30/2017
 ms.assetid: c49417d1-1f21-4a85-88a5-cbfe108ac8a1
 ms.openlocfilehash: 1e02e03f5600b3a2bdef91959b42c53bf56768b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33467436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942962"
 ---
 # <a name="4813---duplicatediscoverymessage"></a>4813 - DuplicateDiscoveryMessage
 ## <a name="properties"></a>プロパティ  
@@ -25,4 +25,4 @@ ms.locfileid: "33467436"
 ## <a name="message"></a>メッセージ  
  messageId='%2' の %1 メッセージは、重複していたため、ドロップされました。  
   
-## <a name="details"></a>詳細
+## <a name="details"></a>説明

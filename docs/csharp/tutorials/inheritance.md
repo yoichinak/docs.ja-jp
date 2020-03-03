@@ -1,16 +1,15 @@
 ---
 title: C# での継承
 description: C# ライブラリやアプリケーションでの継承の使用について学習します。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 07/05/2018
+ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 6db3db3ebe3e1934a8e74212692f07158b88b1d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717520"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120129"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -18,14 +17,14 @@ ms.locfileid: "54717520"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-このチュートリアルでは、.NET Core がインストールされていることを前提としています。 インストール手順については、「[.NET Core installation guide (.NET Core インストール ガイド)](https://www.microsoft.com/net/core)」を参照してください。 コード エディターも必要です。 このチュートリアルでは [Visual Studio Code](https://code.visualstudio.com) を使用していますが、任意のコード エディターを使用して構いません。
+このチュートリアルでは、.NET Core SDK がインストールされていることを前提としています。 ダウンロードするには、[.NET Core ダウンロード](https://dotnet.microsoft.com/download) ページにアクセスしてください。 コード エディターも必要です。 このチュートリアルでは [Visual Studio Code](https://code.visualstudio.com) を使用していますが、任意のコード エディターを使用して構いません。
 
 ## <a name="running-the-examples"></a>例の実行
 
 このチュートリアル内の例を作成して実行するには、コマンド ラインの [dotnet](../../core/tools/dotnet.md) ユーティリティを使用します。 それぞれの例について、次の手順に従います。
 
 1. 例を格納するディレクトリを作成します。
-1. コマンド プロンプトで [dotnet new console](../../core/tools/dotnet-new.md) コマンドを入力し、新しい .NET Core プロジェクトを作成します。
+1. コマンド プロンプトで [dotnet new コンソール](../../core/tools/dotnet-new.md) コマンドを入力し、新しい .NET Core プロジェクトを作成します。
 1. 例にあるコードをコピーして、コード エディターに貼り付けます。
 1. コマンド ラインから [dotnet restore](../../core/tools/dotnet-restore.md) コマンドを入力し、プロジェクトの依存関係を読み込みまたは復元します。
 
@@ -61,7 +60,7 @@ C# と .NET は*単一継承*のみをサポートしています。 つまり�
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-派生クラスはまた、代替実装を行うことにより、継承されたメンバーを*オーバーライド*することができます。 メンバーをオーバーライドするためには、基底クラスのメンバーは [virtual](../language-reference/keywords/virtual.md) のキーワードでマークされている必要があります。 既定では基底クラスのメンバーは `virtual` としてマークされていないので、オーバーライドすることはできません。 次の例のように、非仮想メンバーをオーバーライドしようとすると、コンパイラ エラー CS0506 "<member> cannot override inherited member <member> because it is not marked virtual, abstract, or override." ("継承されたメンバー member が virtual、abstract、または override でマークされていないため、member でオーバーライドすることができません") が生成されます。
+派生クラスはまた、代替実装を行うことにより、継承されたメンバーを*オーバーライド*することができます。 メンバーをオーバーライドするためには、基底クラスのメンバーは [virtual](../language-reference/keywords/virtual.md) のキーワードでマークされている必要があります。 既定では基底クラスのメンバーは `virtual` としてマークされていないので、オーバーライドすることはできません。 次の例のように、非仮想メンバーをオーバーライドしようとすると、コンパイラ エラー CS0506 "\<member> cannot override inherited member \<member>" ("継承されたメンバー <member> が virtual、abstract、または override でマークされていないため、<member> でオーバーライドすることができません") が生成されます。
 
 ```csharp
 public class A
@@ -81,7 +80,7 @@ public class B : A
 }
 ```
 
-場合によっては、派生クラスは基底クラスの実装をオーバーライドする*必要があります*。 [abstract](../language-reference/keywords/abstract.md) キーワードでマークされた基底クラスのメンバーは、派生クラスによってオーバーライドされる必要があります。 次の例をコンパイルしようとすると、コンパイラ エラー CS0534 "<class> does not implement inherited abstract member <member>" ("class は継承抽象メンバー member を実装しません") が生成されます。これは、クラス `B` が `A.Method1` の実装を提供していないためです。
+場合によっては、派生クラスは基底クラスの実装をオーバーライドする*必要があります*。 [abstract](../language-reference/keywords/abstract.md) キーワードでマークされた基底クラスのメンバーは、派生クラスによってオーバーライドされる必要があります。 次の例をコンパイルしようとすると、コンパイラ エラー CS0534 (「&lt;クラス&gt; は継承抽象メンバー &lt;メンバー&gt; を実装しません。」) が生成されます。これは、クラス `B` が `A.Method1` の実装を提供していないためです。
 
 ```csharp
 public abstract class A
@@ -144,8 +143,8 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | ------------- | ----------------------------------------------------------------------------- |
 | class         | <xref:System.Object>                                                          |
 | struct        | <xref:System.ValueType>、 <xref:System.Object>                                 |
-| enum          | <xref:System.Enum>、 <xref:System.ValueType>、 <xref:System.Object>             |
-| delegate      | <xref:System.MulticastDelegate>、 <xref:System.Delegate>、 <xref:System.Object> |
+| enum          | <xref:System.Enum>、<xref:System.ValueType>、<xref:System.Object>             |
+| delegate      | <xref:System.MulticastDelegate>、<xref:System.Delegate>、<xref:System.Object> |
 
 ## <a name="inheritance-and-an-is-a-relationship"></a>継承と "is a" 関係
 
@@ -194,7 +193,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
  `Publication` クラスには `abstract` メソッドはありませんが、クラス自体が `abstract` になります。
 
-- 派生クラスが継承階層内の最後のクラスを表していて、それ自体が追加の派生クラスの基底クラスとして使用できないかどうか。 既定では、どのクラスも基底クラスとして使用できます。 [sealed](../language-reference/keywords/sealed.md) キーワードを適用すると、クラスが追加クラスの基底クラスとして使用できないことを示すことができます。 sealed クラスからの派生を試みると、コンパイラ エラー CS0509 "cannot derive from sealed type <typeName>" ("シール型 typeName から派生することができません") が生成されます。
+- 派生クラスが継承階層内の最後のクラスを表していて、それ自体が追加の派生クラスの基底クラスとして使用できないかどうか。 既定では、どのクラスも基底クラスとして使用できます。 [sealed](../language-reference/keywords/sealed.md) キーワードを適用すると、クラスが追加クラスの基底クラスとして使用できないことを示すことができます。 sealed クラスからの派生を試みると、コンパイラ エラー CS0509 "cannot derive from sealed type \<typeName>" ("シール型 typeName から派生することができません") が生成されます。
 
   この例では、派生クラスを `sealed` としてマークします。
 

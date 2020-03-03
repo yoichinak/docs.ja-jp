@@ -1,6 +1,6 @@
 ---
 title: SpawnDerivedClass 関数 (アンマネージ API リファレンス)
-description: SpawnDerivedClass 関数は、オブジェクトから派生した新しいオブジェクトを作成します。
+description: SpawnDerivedClass 関数は、オブジェクトから派生する新しいオブジェクトを作成します。
 ms.date: 11/06/2017
 api_name:
 - SpawnDerivedClass
@@ -14,14 +14,12 @@ helpviewer_keywords:
 - SpawnDerivedClass function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 99b996cf848de968d71cc1d325d3bbda7bd5386f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f72e6b1c356077a94b141e40d6efe485e77e7a9e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715554"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120176"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 関数
 指定したオブジェクトから新たに派生するクラス オブジェクトが作成されます。    
@@ -30,7 +28,7 @@ ms.locfileid: "54715554"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SpawnDerivedClass (
    [in] int                  vFunc, 
    [in] IWbemClassObject*    ptr, 
@@ -41,44 +39,45 @@ HRESULT SpawnDerivedClass (
 ## <a name="parameters"></a>パラメーター
 
 `vFunc`  
-[in]このパラメーターは使用されません。
+からこのパラメーターは使用されていません。
 
 `ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+から[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスへのポインター。
 
 `lFlags`  
-[in] 予約されています。 このパラメーターは、0 を指定する必要があります。
+[in] 予約されています。 このパラメーターには0を指定する必要があります。
 
 `ppNewClass`  
-[out]新しいクラス定義のオブジェクトへのポインターを受け取ります。 新しいオブジェクトでないエラーが発生する場合、返されると`ppNewClass`は左未変更の状態します。 その値にすることはできません`null`します。
+入出力新しいクラス定義オブジェクトへのポインターを受け取ります。 エラーが発生した場合、新しいオブジェクトは返されず、`ppNewClass` は変更されません。 値を `null`にすることはできません。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
 | `WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | インスタンスからのクラスの生成などの無効な操作が要求されました。 |
-| `WBEM_E_INCOMPLETE_CLASS` | ソース クラスが完全に定義されているか、Windows の管理を登録するため、新しい派生クラスは許可されていません。 |
-| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` は `null` です。 |
-| `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
+| `WBEM_E_INCOMPLETE_CLASS` | ソースクラスが完全に定義されていないか、Windows Management に登録されていないため、新しい派生クラスは許可されません。 |
+| `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するために必要なメモリが不足しています。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` が `null` です。 |
+| `WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemClassObject::SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)メソッド。
+この関数は、 [IWbemClassObject:: SpawnDerivedClass](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-clone)メソッドの呼び出しをラップします。
 
-`ptr` 生成されたオブジェクトの親クラスとなるクラス定義である必要があります。 返されるオブジェクトでは、現在のオブジェクトのサブクラスになります。
+`ptr` は、生成されたオブジェクトの親クラスになるクラス定義である必要があります。 返されたオブジェクトは、現在のオブジェクトのサブクラスになります。
 
-返される新しいオブジェクト`ppNewClass`自動的に現在のオブジェクトのサブクラスになります。 この動作を上書きすることはできません。 サブクラス (派生クラス) を作成できる他の方法はありません。
+`ppNewClass` に返された新しいオブジェクトは、自動的に現在のオブジェクトのサブクラスになります。 この動作をオーバーライドすることはできません。 サブクラス (派生クラス) を作成する方法は他にもありません。
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

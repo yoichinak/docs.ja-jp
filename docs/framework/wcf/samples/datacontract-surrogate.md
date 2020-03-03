@@ -2,22 +2,22 @@
 title: DataContract サロゲート
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 5729943f455d4669f047eb2d86fb7292824c0f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3246466f9268fc920fd58d4f1ba2c06c3627c88e
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645419"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715368"
 ---
 # <a name="datacontract-surrogate"></a>DataContract サロゲート
-このサンプルでは、シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。 このサンプルでは、クライアントとサーバーのシナリオは、データをシリアル化し、Windows Communication Foundation (WCF) クライアントとサービス間で送信する場所でサロゲートを使用する方法を示します。  
+このサンプルでは、シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。 このサンプルでは、クライアントとサーバーのシナリオでサロゲートを使用する方法を示します。このシナリオでは、データがシリアル化され、Windows Communication Foundation (WCF) クライアントとサービスの間で転送されます。  
   
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
  このサンプルでは、次のサービス コントラクトを使用します。  
   
-```  
+```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 [AllowNonSerializableTypes]  
 public interface IPersonnelDataService  
@@ -34,7 +34,7 @@ public interface IPersonnelDataService
   
  これらの操作では、次のデータ型を使用します。  
   
-```  
+```csharp
 [DataContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
 class Employee  
 {  
@@ -51,7 +51,7 @@ class Employee
   
  `Employee` 型では、`Person` クラス (次のサンプル コードを参照) は有効なデータ コントラクト クラスではないので、<xref:System.Runtime.Serialization.DataContractSerializer> によってシリアル化できません。  
   
-```  
+```csharp
 public class Person  
 {  
     public string firstName;  
@@ -64,13 +64,13 @@ public class Person
 }  
 ```  
   
- `DataContract` 属性は `Person` クラスに適用できますが、適用できない場合もあります。 たとえば、`Person` クラスは、ユーザーが制御できない別のアセンブリで定義することができます。  
+ <xref:System.Runtime.Serialization.DataContractAttribute> 属性は `Person` クラスに適用できますが、適用できない場合もあります。 たとえば、`Person` クラスは、ユーザーが制御できない別のアセンブリで定義することができます。  
   
- このような制限がある場合、`Person` クラスをシリアル化するには、このクラスを `DataContractAttribute` でマークされた別のクラスに置き換え、必要なデータをこの新しいクラスにコピーするという方法があります。 この目的は、`Person` クラスを DataContract として <xref:System.Runtime.Serialization.DataContractSerializer> に表示することです。 これは、データ コントラクト クラス以外のクラスをシリアル化する 1 つの方法です。  
+ このような制限がある場合、`Person` クラスをシリアル化するには、このクラスを <xref:System.Runtime.Serialization.DataContractAttribute> でマークされた別のクラスに置き換え、必要なデータをこの新しいクラスにコピーするという方法があります。 この目的は、`Person` クラスを DataContract として <xref:System.Runtime.Serialization.DataContractSerializer> に表示することです。 これは、データ コントラクト クラス以外のクラスをシリアル化する 1 つの方法です。  
   
  このサンプルでは、 `Person` クラスを `PersonSurrogated` という別のクラスに論理的に置き換えます。  
   
-```  
+```csharp
 [DataContract(Name="Person", Namespace = "http://Microsoft.ServiceModel.Samples")]  
 public class PersonSurrogated  
 {  
@@ -89,7 +89,7 @@ public class PersonSurrogated
   
  このインターフェイスの実装での最初のタスクは、`Person` から `PersonSurrogated` への型のマップを確立することです。 これは、シリアル化の時点およびスキーマをエクスポートする時点の両方で使用されます。 このマッピングは、<xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%28System.Type%29> メソッドを実装することによって実現されます。  
   
-```  
+```csharp
 public Type GetDataContractType(Type type)  
 {  
     if (typeof(Person).IsAssignableFrom(type))  
@@ -102,7 +102,7 @@ public Type GetDataContractType(Type type)
   
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> メソッドは、シリアル化中に `Person` インスタンスを `PersonSurrogated` インスタンスにマップします。次のサンプル コードを参照してください。  
   
-```  
+```csharp
 public object GetObjectToSerialize(object obj, Type targetType)  
 {  
     if (obj is Person)  
@@ -120,7 +120,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
   
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> メソッドは、逆シリアル化のための逆マップを実現します。次のサンプル コードを参照してください。  
   
-```  
+```csharp
 public object GetDeserializedObject(object obj,   
 Type targetType)  
 {  
@@ -139,7 +139,7 @@ Type targetType)
   
  スキーマのインポート中に `PersonSurrogated` データ コントラクトを既存の `Person` クラスにマップするため、このサンプルでは <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> メソッドを実装しています。次のサンプル コードを参照してください。  
   
-```  
+```csharp
 public Type GetReferencedTypeOnImport(string typeName,   
                string typeNamespace, object customData)  
 {  
@@ -158,7 +158,7 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
   
  <xref:System.Runtime.Serialization.IDataContractSurrogate> インターフェイスの実装を完了するサンプル コードを次に示します。  
   
-```  
+```csharp
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
           System.CodeDom.CodeTypeDeclaration typeDeclaration,   
           System.CodeDom.CodeCompileUnit compileUnit)  
@@ -190,7 +190,7 @@ public void GetKnownCustomDataTypes(
   
  `IContractBehavior` の実装は、操作に `DataContractSerializerOperationBehavior` が登録されているかどうかをチェックすることにより、DataContract を使用する操作を検索します。 登録されている場合は、その動作に `DataContractSurrogate` プロパティが設定されます。 この処理を行うサンプル コードを次に示します。 この操作にサロゲートが設定されると、シリアル化および逆シリアル化のために動作でサロゲートが有効化されます。  
   
-```  
+```csharp
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
 {  
     foreach (OperationDescription opDesc in description.Operations)  
@@ -220,9 +220,9 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  メタデータの生成中にサロゲートをプラグインとして使用するには、追加手順が必要です。 これを行うための機構として、このサンプルで示す `IWsdlExportExtension` が用意されています。 さらに、`WsdlExporter` を直接変更するという方法もあります。  
   
- `AllowNonSerializableTypesAttribute`実装属性`IWsdlExportExtension`と`IContractBehavior`します。 拡張機能には、いずれかを指定できる、`IContractBehavior`または`IEndpointBehavior`ここでします。 `IWsdlExportExtension.ExportContract` メソッドの実装は、DataContract のスキーマ生成中に使用される`XsdDataContractExporter` にサロゲートを追加することによって、サロゲートを有効にします。 これを行う方法を次のコード スニペットに示します。  
+ `AllowNonSerializableTypesAttribute` 属性は `IWsdlExportExtension` と `IContractBehavior`を実装します。 この場合、拡張機能には `IContractBehavior` または `IEndpointBehavior` のいずれかを指定できます。 `IWsdlExportExtension.ExportContract` メソッドの実装は、DataContract のスキーマ生成中に使用される`XsdDataContractExporter` にサロゲートを追加することによって、サロゲートを有効にします。 これを行う方法を次のコード スニペットに示します。  
   
-```  
+```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
 {  
     if (exporter == null)  
@@ -247,26 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- サンプルを実行すると、クライアントは AddEmployee の呼び出しに続いて、最初の呼び出しが正常に行われたかどうかをチェックする GetEmployee を呼び出します。 GetEmployee の操作要求の結果は、クライアント コンソール ウィンドウに表示されます。 GetEmployee 操作は、従業員の検索に成功し、"found"を印刷する必要があります。  
+ サンプルを実行すると、クライアントは AddEmployee の呼び出しに続いて、最初の呼び出しが正常に行われたかどうかをチェックする GetEmployee を呼び出します。 GetEmployee の操作要求の結果は、クライアント コンソール ウィンドウに表示されます。 GetEmployee 操作では、従業員の検索と "found" の印刷を成功させる必要があります。  
   
 > [!NOTE]
->  このサンプルでは、シリアル化、逆シリアル化、およびメタデータの生成で、サロゲートをプラグインとして使用する方法を示します。 メタデータからコードを生成するためにサロゲートをプラグインとして使用する方法を示すものではありません。 サロゲートを使用して、クライアント コードの生成にプラグインする方法のサンプルを表示するには、次を参照してください。、[カスタム WSDL パブリケーション](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)サンプル。  
+> このサンプルでは、シリアル化、逆シリアル化、およびメタデータの生成で、サロゲートをプラグインとして使用する方法を示します。 メタデータからコードを生成するためにサロゲートをプラグインとして使用する方法を示すものではありません。 サロゲートを使用してクライアントコード生成にプラグインする方法のサンプルについては、「[カスタム WSDL 発行](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)のサンプル」を参照してください。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2.  ソリューションの c# 版をビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
+2. ソリューションのC#エディションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
-  
-## <a name="see-also"></a>関連項目
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  

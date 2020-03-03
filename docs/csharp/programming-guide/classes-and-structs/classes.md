@@ -1,23 +1,22 @@
 ---
 title: クラス - C# プログラミング ガイド
-ms.custom: seodec18
 description: クラスの型と、クラスの型を作成する方法について説明します
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: 4cea68e76c17e5393ab7213f457c0875cdc5b53b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 832095e1d9712c85ad588836e8eba8f523719021
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596704"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75714973"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 
 ## <a name="reference-types"></a>参照型  
-[class](../../../csharp/language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../../csharp/language-reference/keywords/new.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../../csharp/language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
+[class](../../language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../language-reference/operators/new-operator.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -31,7 +30,7 @@ MyClass mc2 = mc;
   
 ## <a name="declaring-classes"></a>クラスの宣言
 
- クラスは、次の例に示すように、[class](../../../csharp/language-reference/keywords/class.md) キーワードと、その後に続ける一意の識別子を使用して宣言します。
+ クラスは、次の例に示すように、[class](../../language-reference/keywords/class.md) キーワードと、その後に続ける一意の識別子を使用して宣言します。
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -47,7 +46,7 @@ MyClass mc2 = mc;
 
 クラスとオブジェクトは、同義的に使用されることがありますが、これらは異なるものです。 クラスはオブジェクトの型を定義しますが、オブジェクト自体ではありません。 オブジェクトは、クラスに基づく具体的なエンティティであり、クラスのインスタンスと呼ばれることもあります。  
   
- オブジェクトを作成するには、次のように、[new](../../language-reference/keywords/new.md) キーワードの後にオブジェクトの基になるクラスの名前を指定します。  
+ オブジェクトを作成するには、次のように、[new](../../language-reference/operators/new-operator.md) キーワードの後にオブジェクトの基になるクラスの名前を指定します。  
 
  ```csharp
  Customer object1 = new Customer();
@@ -70,7 +69,7 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>クラスの継承  
 
-クラスは、オブジェクト指向プログラミングの基本的な特性である "*継承*" を完全にサポートします。 クラスを作成するときは、[sealed](../../../csharp/language-reference/keywords/sealed.md) として定義されているものを除く、他のすべてのインターフェイスまたはクラスから継承できます。また、作成したクラスから他のクラスを継承し、クラスの仮想メソッドをオーバーライドすることもできます。
+クラスは、オブジェクト指向プログラミングの基本的な特性である "*継承*" を完全にサポートします。 クラスを作成するときは、[sealed](../../language-reference/keywords/sealed.md) として定義されているものを除く、他のすべてのインターフェイスまたはクラスから継承できます。また、作成したクラスから他のクラスを継承し、クラスの仮想メソッドをオーバーライドすることもできます。
 
 継承は、*派生*を使用して行われます。派生とは、データの動作の継承元である*基底クラス*を使用してクラスを宣言することを意味します。 基底クラスは、派生クラス名の後に、コロンと基底クラス名を追加して指定します。次に例を示します。  
 

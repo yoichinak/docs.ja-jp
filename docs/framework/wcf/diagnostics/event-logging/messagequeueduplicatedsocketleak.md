@@ -2,23 +2,24 @@
 title: MessageQueueDuplicatedSocketLeak
 ms.date: 03/30/2017
 ms.assetid: 9721a463-15d1-43dc-8e3a-cae44448de91
-ms.openlocfilehash: 07712104a8dac002d46aee2ba6637bbbc9d850b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00658372e59030ca00c257b6699c24b9e8dc90a4
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532340"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797684"
 ---
 # <a name="messagequeueduplicatedsocketleak"></a>MessageQueueDuplicatedSocketLeak
 Id:165  
   
- 重大度:Error  
+ 順Error  
   
- カテゴリ:SMSvcHost  
+ [カテゴリ]:Smsvchost.exe  
   
 ## <a name="description"></a>説明  
  このイベントは、複製されたソケットのディスパッチ中にエラーが発生したことを示します。 このハンドルは現在プロセスでリークされています。 イベントには、ソース、例外、プロセス名、およびプロセス ID が表示されます。  
   
 ## <a name="see-also"></a>関連項目
-- [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+
+- [イベント ログ](index.md)
+- [イベント一覧](events-general-reference.md)

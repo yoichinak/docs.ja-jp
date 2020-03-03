@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 48adc154-9058-4fef-9c43-e9aad80e4dbf
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f6236d6b5349a9c2a528a85559c0cbc02c8da381
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 92e07d2f59a1f2fa063b81282aa0f014f373cd04
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401717"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73196363"
 ---
 # <a name="icordebugassemblygetcodebase-method"></a>ICorDebugAssembly::GetCodeBase メソッド
-.NET Framework の現在のバージョンでは、このメソッドが実装されていません。  
+このメソッドは、.NET Framework の現在のバージョンでは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCodeBase (  
     [in] ULONG32  cchName,  
     [out] ULONG32 *pcchName,  

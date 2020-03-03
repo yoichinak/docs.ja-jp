@@ -16,21 +16,19 @@ helpviewer_keywords:
 ms.assetid: 4ddc37da-5c94-4beb-b61c-b54071c0e749
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b9d4b27ca0bf454b42f15b849008e5a3019bb09a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e12882e53d1aa2120ab5c4b6793d7f2e34be76eb
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402192"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132157"
 ---
 # <a name="coreclrdebugprocinfo-structure"></a>CoreClrDebugProcInfo 構造体
 リモート コンピューターで実行されているプロセスを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 struct  CoreClrDebugProcInfo {  
     DWORD m_dwPID;  
     DWORD m_dwInternalID;  
@@ -46,11 +44,11 @@ struct  CoreClrDebugProcInfo {
 |`m_dwInternalID`|対象のコンピューターで実行されているリモート デバッグ プロキシによって割り当てられたプロセス識別子。 この識別子は OS 識別子よりも少ない頻度で再利用されます。|  
 |`m_wszName`|プロセスのコマンド ライン。 このメンバーは切り詰められる場合があります。|  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **ライブラリ:** mscordbi_macx86  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

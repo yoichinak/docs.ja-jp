@@ -1,13 +1,13 @@
 ---
-title: シリアル化 (Visual Basic)
+title: シリアル化
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
-ms.openlocfilehash: 710975170d256982ea1a7190358155769ed6e2a7
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 9ce97e541cb204b92663464e36d9e8f221ccc3f2
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "33653271"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351914"
 ---
 # <a name="serialization-visual-basic"></a>シリアル化 (Visual Basic)
 シリアル化は、オブジェクトを格納するか、メモリ、データベース、またはファイルに転送するためにバイト ストリームに変換するプロセスです。 その主な目的は、必要なときに再作成できるように、オブジェクトの状態を保存しておくことです。 逆のプロセスは、逆シリアル化と呼ばれます。  
@@ -15,7 +15,7 @@ ms.locfileid: "33653271"
 ## <a name="how-serialization-works"></a>シリアル化のしくみ  
  この図は、シリアル化の全体的なプロセスを示しています。  
   
- ![シリアル化グラフィック](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "シリアル化")  
+![シリアル化グラフィック](./media/index/serialization-process.gif)
   
  オブジェクトは、データだけでなく、バージョン、カルチャ、アセンブリ名などのオブジェクトの型に関する情報も伝達するストリームにシリアル化されます。 そのストリームから、オブジェクトをデータベース、ファイル、またはメモリに格納できます。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "33653271"
 ## <a name="designer-serialization"></a>デザイナーのシリアル化  
  デザイナーのシリアル化はシリアル化の特殊な形式であり、通常は開発ツールに関連付けられているオブジェクトの永続性の種類を含みます。 デザイナーのシリアル化は、後でオブジェクト グラフを復元できるように、オブジェクト グラフをソース ファイルに変換するプロセスです。 ソース ファイルには、コードとマークアップを含めることができますが、SQL テーブル情報を含めることもできます。  
   
-##  <a name="BKMK_RelatedTopics"></a> 関連トピックと例  
+## <a name="BKMK_RelatedTopics">関連トピックと例</a>  
  [チュートリアル: Visual Studio でのオブジェクトの永続化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  シリアル化によってインスタンス間でオブジェクトのデータを永続化して値を保存しておき、次にそのオブジェクトをインスタンス化するときにその値を取得する方法を示します。  
   

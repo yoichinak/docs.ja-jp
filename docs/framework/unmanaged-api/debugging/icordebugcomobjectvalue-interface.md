@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 505a7f6c-d92b-42b4-b539-433f5102ea9b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 4db005e1de043e60ffe958de732a5280fcccbea7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed5b39ed4b2a14c071bf23fb04efbad6834e8a9d
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529948"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783973"
 ---
 # <a name="icordebugcomobjectvalue-interface"></a>ICorDebugComObjectValue のインターフェイス
 ランタイム呼び出し可能ラッパー (RCW) に関連付けられている情報を取得するメソッドを提供します。  
@@ -30,14 +28,14 @@ ms.locfileid: "54529948"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetCachedInterfacePointers メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|現在、RCW でキャッシュされた生のインターフェイス ポインターを取得します。|  
-|[GetCachedInterfaceTypes メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|現在のオブジェクトに大文字と小文字を区別またはとして使用されることは、列挙子インターフェイス型を提供します。|  
+|[GetCachedInterfacePointers メソッド](icordebugcomobjectvalue-getcachedinterfacepointers-method.md)|現在の RCW でキャッシュされている生のインターフェイスポインターを取得します。|  
+|[GetCachedInterfaceTypes メソッド](icordebugcomobjectvalue-getcachedinterfacetypes-method.md)|現在のオブジェクトで使用または使用されているインターフェイス型の列挙子を提供します。|  
   
-## <a name="remarks"></a>Remarks  
- デバッガーには、"ICorDebugValue"インターフェイスのインスタンスが、RCW を表すかどうかを確認する`QueryInterface`上で"ICorDebugValue"`IID_ICorDebugComObjectValue`します。  
+## <a name="remarks"></a>コメント  
+ "ICorDebugValue" インターフェイスのインスタンスが RCW を表すかどうかを確認するには、デバッガーが `IID_ICorDebugComObjectValue`で "ICorDebugValue" に対して `QueryInterface` を呼び出します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -46,5 +44,6 @@ ms.locfileid: "54529948"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

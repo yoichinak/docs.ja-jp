@@ -1,5 +1,5 @@
 ---
-title: グラフィックスの概要 (Windows フォーム)
+title: グラフィックスの概要
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, graphics
@@ -8,41 +8,41 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: 197f9dfcc14260017911b37dd6e6b7ce49e44ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: cc99f0fda4625b278b2bea56e7d8642edb0a63d9
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521758"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76742270"
 ---
 # <a name="graphics-overview-windows-forms"></a>グラフィックスの概要 (Windows フォーム)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] グラフィックス デバイス インターフェイスにより、プログラマがデバイスに依存しないアプリケーションを作成するためです。 サービス[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]一連のマネージ クラスを介して公開されます。  
+GDI + は、プログラマがデバイスに依存しないアプリケーションを作成できるようにするグラフィックスデバイスインターフェイスです。 GDI + のサービスは、一連のマネージクラスを介して公開されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [グラフィックスについて](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
- 概要については、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]です。  
+ [グラフィックスについて](overview-of-graphics.md)  
+ GDI + の一般的な概要について説明します。  
   
- [グラフィックス サービスの 3 つのカテゴリ](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
- 使用したプログラミングを構成する 3 つのカテゴリについて説明します[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]です。  
+ [グラフィックス サービスの 3 つのカテゴリ](three-categories-of-graphics-services.md)  
+ GDI + を使用したプログラミングの構成を行う3つのカテゴリについて説明します。  
   
- [グラフィックス インターフェイスの構造体](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
- マネージ クラスのインターフェイスについて説明します[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]です。  
+ [グラフィックス インターフェイスの構造体](structure-of-the-graphics-interface.md)  
+ GDI + のマネージクラスインターフェイスについて説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>リファレンス  
  <xref:System.Drawing>  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] の基本的なグラフィックス機能を使用できるようにします。  
+ GDI + の基本的なグラフィックス機能へのアクセスを提供します。  
   
  <xref:System.Drawing.Drawing2D>  
  2 次元グラフィックスおよびベクター グラフィックス機能の詳細を提供します。  
   
  <xref:System.Drawing.Imaging>  
- 高度な [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] イメージング機能を提供します。  
+ 高度な GDI + イメージング機能を提供します。  
   
  <xref:System.Drawing.Text>  
- 高度な [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] タイポグラフィ機能を提供します。  
+ 高度な GDI + タイポグラフィ機能を提供します。  
   
  <xref:System.Drawing.Printing>  
  印刷関連のサービスを提供します。  
   
  <xref:System.Windows.Forms.TextRenderer>  
- 提供[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]テキストを描画し、機能を測定します。
+ GDI テキストの描画と測定機能を提供します。

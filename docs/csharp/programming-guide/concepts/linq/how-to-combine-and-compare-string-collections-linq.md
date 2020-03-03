@@ -1,22 +1,22 @@
 ---
-title: '方法: 文字列コレクションを結合および比較する (LINQ) (C#)'
+title: 文字列コレクションを結合および比較する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23089835e710a7905693f8e3e3b57173085d0694
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514778"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141422"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>方法: 文字列コレクションを結合および比較する (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>文字列コレクションを結合および比較する方法 (LINQ) (C#)
 この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。 具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>プロジェクトとテキスト ファイルを設定するには  
   
-1.  次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。  
+1. 次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -29,9 +29,9 @@ ms.locfileid: "54514778"
     Garcia, Debra  
     ```  
   
-2.  次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。 2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。  
+2. 次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。 2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  
@@ -169,9 +169,9 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。  
+ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ と文字列 (C#)](./linq-and-strings.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

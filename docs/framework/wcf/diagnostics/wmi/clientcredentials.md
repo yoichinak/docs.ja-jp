@@ -2,12 +2,12 @@
 title: ClientCredentials
 ms.date: 03/30/2017
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-ms.openlocfilehash: 410a133ae3041db00ecb7a17677afe6538ef1f4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3adc675bb6c1e9011459a88fd7dc8e8cf63a880
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963977"
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
@@ -94,7 +94,8 @@ class ClientCredentials : Behavior
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description.ClientCredentials>

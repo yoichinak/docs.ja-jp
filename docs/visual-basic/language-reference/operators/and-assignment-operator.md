@@ -1,5 +1,5 @@
 ---
-title: '&amp;= 演算子 (Visual Basic)'
+title: '&amp;= 演算子'
 ms.date: 07/20/2015
 f1_keywords:
 - vb.&=
@@ -10,41 +10,42 @@ helpviewer_keywords:
 - '&= operator [Visual Basic]'
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
-ms.openlocfilehash: dee30096f244adc34b83fdfdc6af0baabd372b4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8668bfcbf32bb34b422efe8116bbd12a2d80b1d4
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672410"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74350260"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 演算子 (Visual Basic)
-連結、`String`式を`String`変数またはプロパティし、結果を変数またはプロパティに代入します。  
+`String` 式を `String` 変数またはプロパティに連結し、その結果を変数またはプロパティに代入します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 variableorproperty &= expression  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須。 すべて`String`変数またはプロパティ。  
+ 必須。 任意の `String` 変数またはプロパティ。  
   
  `expression`  
  必須。 任意のブール型 ( `String` ) の式を指定します。  
   
-## <a name="remarks"></a>Remarks  
- 左側にある要素、`&=`演算子は、単純なスカラー変数、プロパティ、または配列の要素。 変数またはプロパティにすることはできません[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。 `&=`演算子の連結、 `String` 、右辺の式、`String`変数またはプロパティの左側にし、結果を代入する変数またはプロパティの左側にします。  
+## <a name="remarks"></a>コメント  
+ `&=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。 `&=` 演算子は、右側にある `String` 式を左側の `String` 変数またはプロパティに連結し、その結果を左側の変数またはプロパティに代入します。  
   
 ## <a name="overloading"></a>オーバーロード  
- [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)できる*オーバー ロードされた*、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型つまりします。 オーバー ロード、`&`演算子の動作に影響、`&=`演算子。 コードで使用する場合`&=`クラスまたは構造体をオーバー ロードで`&`、再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できます。 `&` 演算子のオーバーロードは、`&=` 演算子の動作に影響します。 コードで `&`をオーバーロードするクラスまたは構造体の `&=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`&=`を 2 つの連結演算子`String`変数と、その結果、最初の変数を割り当てます。  
+ 次の例では、`&=` 演算子を使用して2つの `String` 変数を連結し、その結果を最初の変数に代入します。  
   
- [!code-vb[VbVbalrOperators#3](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/and-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#3)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)
 - [+= 演算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)

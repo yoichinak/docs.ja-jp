@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: c5fee4a0-b132-4e5e-8730-e586ce314b9a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: a7761c2f15cd51bff798e1b12c3a5824930b344d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d7884e896d6a0463639e7ef08b47dced10a27f4
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617721"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431374"
 ---
 # <a name="imetadataimport2getgenericparamconstraintprops-method"></a>IMetaDataImport2::GetGenericParamConstraintProps メソッド
-指定した制約トークンによって表されるジェネリック パラメーターの制約に関連付けられているメタデータを取得します。  
+指定された制約トークンによって表されるジェネリックパラメーター制約に関連付けられているメタデータを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetGenericParamConstraintProps (  
    [in]  mdGenericParamConstraint  gpc,  
    [out] mdGenericParam            *ptGenericParam,  
@@ -37,25 +35,26 @@ HRESULT GetGenericParamConstraintProps (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `gpc`  
- [in]メタデータを返すジェネリック パラメーターの制約にトークンです。  
+ からメタデータを返す対象のジェネリックパラメーター制約へのトークン。  
   
  `ptGenericParam`  
- [out]制約されているジェネリック パラメーターを表すトークンへのポインター。  
+ 入出力制約されているジェネリックパラメーターを表すトークンへのポインター。  
   
  `ptkConstraintType`  
- [out]上の制約を表す TypeDef、TypeRef、または TypeSpec トークンへのポインター`ptGenericParam`します。  
+ 入出力`ptGenericParam`の制約を表す TypeDef、TypeRef、または TypeSpec トークンへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

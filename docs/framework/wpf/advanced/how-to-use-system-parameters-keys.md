@@ -5,25 +5,26 @@ helpviewer_keywords:
 - resource keys [WPF], SystemParameters class
 - classes [WPF], SystemParameters
 ms.assetid: 77571283-d16c-45bb-9f69-cafbbf72b21e
-ms.openlocfilehash: 13658b0bb97d842eecc8679ee64db68ae780a917
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edacb4b98ab01f081f668dc3374f6588492210d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69918367"
 ---
 # <a name="how-to-use-system-parameters-keys"></a>方法: システム パラメーター キーを使用する
-システム リソースは、開発者がシステム設定と一貫性のあるビジュアルを作成できるようにするために、多くのシステム メトリックをリソースとして公開します。 <xref:System.Windows.SystemParameters> システム パラメーターの値と値にバインドされるリソース キーの両方を含むクラスは、— たとえば、<xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A>と<xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>します。 システム パラメーター メトリックは、静的なリソースとしても、動的なリソースとしても使用できます。 アプリケーションの実行時にパラメーター メトリックを自動的に更新する場合は、動的リソースを使用します。それ以外の場合は、静的リソースを使用します。  
+システム リソースは、開発者がシステム設定と一貫性のあるビジュアルを作成できるようにするために、多くのシステム メトリックをリソースとして公開します。 <xref:System.Windows.SystemParameters>は、システムパラメーター値と、値にバインドされるリソースキー (や<xref:System.Windows.SystemParameters.FullPrimaryScreenHeight%2A> <xref:System.Windows.SystemParameters.FullPrimaryScreenHeightKey%2A>など) の両方を含むクラスです。 システム パラメーター メトリックは、静的なリソースとしても、動的なリソースとしても使用できます。 アプリケーションの実行時にパラメーター メトリックを自動的に更新する場合は、動的リソースを使用します。それ以外の場合は、静的リソースを使用します。  
   
 > [!NOTE]
->  動的リソースにキーワードを指定する*キー*プロパティ名に追加されます。  
+> 動的リソースには、プロパティ名にキーワード*Key*が付加されています。  
   
- 次の例では、ボタンのスタイル設定やカスタマイズを行うために、システム パラメーター動的リソースにアクセスして使用する方法を示します。 これは、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]例ボタンのサイズを割り当てることで<xref:System.Windows.SystemParameters>ボタンの幅と高さの値。  
+ 次の例では、ボタンのスタイル設定やカスタマイズを行うために、システム パラメーター動的リソースにアクセスして使用する方法を示します。 この[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]例では、ボタンの<xref:System.Windows.SystemParameters>幅と高さに値を代入して、ボタンのサイズを指定します。  
   
 ## <a name="example"></a>例  
- [!code-xaml[SystemRes_snip#ParameterDynamicResources](../../../../samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  
+ [!code-xaml[SystemRes_snip#ParameterDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#parameterdynamicresources)]  
   
 ## <a name="see-also"></a>関連項目
-- [システム ブラシで領域を塗りつぶす](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
-- [SystemFonts を使用する](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)
-- [SystemParameters を使用する](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)
+
+- [システム ブラシで領域を塗りつぶす](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
+- [SystemFonts を使用する](how-to-use-systemfonts.md)
+- [SystemParameters を使用する](how-to-use-systemparameters.md)

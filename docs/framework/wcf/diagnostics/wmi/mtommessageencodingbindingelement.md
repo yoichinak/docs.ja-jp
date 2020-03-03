@@ -2,12 +2,12 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: ad4f2cc3b03111854d10d6a1c1128f090a629a07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aed65311d2b36a5dc764511de04e34c4bfb69d7b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963248"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
@@ -58,11 +58,12 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
   
  リーダのクォータ。  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|  
+|名前空間|root\ServiceModel で定義|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

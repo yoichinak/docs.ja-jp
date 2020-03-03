@@ -1,32 +1,33 @@
 ---
-title: My.Computer.FileSystem.SpecialDirectories オブジェクト (Visual Basic)
+title: My.Computer.FileSystem.SpecialDirectories オブジェクト
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.SpecialDirectories object
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
-ms.openlocfilehash: 6ea3b5b77ee9ab4f8dfcf7054ae14096d72cc348
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c511457707092df33a51ae5bd5cb679f9f761350
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672813"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74347223"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories オブジェクト
 一般的に参照されるディレクトリにアクセスするためのプロパティを提供します。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  `My.Computer.FileSystem.SpecialDirectories` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>」をご覧ください。  
   
- 詳細については、「[方法 :内容を取得、My Documents ディレクトリ](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)します。  
+ 詳細については、「[方法: My Documents ディレクトリの内容を取得する](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **名前空間:** <xref:Microsoft.VisualBasic.MyServices>  
   
- **クラス:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (へのアクセスを提供します<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)。  
+ **クラス:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (<xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>へのアクセスを提供します)  
   
- **アセンブリ:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft... .dll)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [My.Computer.FileSystem オブジェクト](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
 - [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)

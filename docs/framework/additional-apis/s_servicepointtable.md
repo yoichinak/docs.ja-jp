@@ -1,5 +1,5 @@
 ---
-title: ServicePointManager.s_ServicePointTable フィールド
+title: ServicePointManager. s_ServicePointTable フィールド
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,18 +10,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
-author: guardrex
-ms.author: mairaw
-ms.openlocfilehash: ebcf5c3f13b3bd30a8e091be09ae546eee1eaffe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 272a0c113fd70d804c763ba0e7e6e9a4a4ee04ce
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147448"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214920"
 ---
-# <a name="servicepointmanagersservicepointtable-field"></a>ServicePointManager.s\_ServicePointTable フィールド
+# <a name="servicepointmanagers_servicepointtable-field"></a>ServicePointManager. s\_Servicepointmanager フィールド
 
-`ServicePointManager.s_ServicePointTable` <xref:System.Collections.Hashtable> HTTP のアクティブな接続の一覧を格納している (<xref:System.Net.ServicePoint>秒) で、<xref:System.AppDomain>します。
+`ServicePointManager.s_ServicePointTable` は、<xref:System.AppDomain>内のアクティブな HTTP 接続 (<xref:System.Net.ServicePoint>s) の一覧を含む <xref:System.Collections.Hashtable> です。
 
 ## <a name="syntax"></a>構文
   
@@ -30,14 +28,14 @@ private static Hashtable s_ServicePointTable
 ```
 
 > [!WARNING]
-> `ServicePointManager.s_ServicePointTable`フィールドはプライベートであり、コード内で直接使用するものではありません。
+> `ServicePointManager.s_ServicePointTable` フィールドはプライベートであり、コードで直接使用するためのものではありません。
 > 
-> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:**(System.dll) のシステム
+**アセンブリ:** システム (.dll 内)
 
-**.NET framework のバージョン:** 2.0 以降で使用可能です。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

@@ -15,41 +15,39 @@ helpviewer_keywords:
 ms.assetid: 4275af0c-b5a7-4e4c-97c9-7e41f36b2dd8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 362ae813846ab31f170ae49288735996eb1e9555
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 851a127c117b826c271dd021c41cfdb36045a1ff
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531760"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783756"
 ---
 # <a name="icordebugcontrollerterminate-method"></a>ICorDebugController::Terminate メソッド
-指定した終了コードを使用して、プロセスを終了します。  
+指定された終了コードを使用してプロセスを終了します。  
   
 > [!NOTE]
->  このメソッドは、win32 ラッパー`TerminateProcess`関数。 したがって、`Terminate`終了コードを使用して、同じ方法、Win32`TerminateProcess`関数では使用します。  
+> このメソッドは、Win32 `TerminateProcess` 関数のラッパーです。 このため、`Terminate` は、Win32 `TerminateProcess` 関数が使用するのと同じ方法で終了コードを使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Terminate (  
     [in] UINT exitCode  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `exitCode`  
- [in]終了コードを示す数値。 有効な数値の値は、Winbase.h で定義されます。  
+ から終了コードを表す数値。 有効な数値は、Winbase. h で定義されています。  
   
-## <a name="remarks"></a>Remarks  
- プロセスが停止している場合`Terminate`が呼び出されると、プロセスを続行するかを使用して、 [icordebugcontroller::continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md)メソッド、デバッガーを使用して、終了の確認を受信するように、 [Icordebugmanagedcallback::exitprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitprocess-method.md)または[icordebugmanagedcallback::exitappdomain](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-exitappdomain-method.md)コールバック。  
+## <a name="remarks"></a>コメント  
+ `Terminate` が呼び出されたときにプロセスが停止された場合は、次のようにする必要があり[ます。このメソッドを](icordebugcontroller-continue-method.md)使用すると、デバッガーは、" [ExitProcess](icordebugmanagedcallback-exitprocess-method.md) " または ": [Exitmanagedcallback:: exitappdomain](icordebugmanagedcallback-exitappdomain-method.md)コールバック" を使用して終了の確認を受け取ることができます。  
   
 > [!NOTE]
->  このメソッドは、アプリケーション ドメインによって実装されていません。 実装されていない、つまり、<xref:System.AppDomain>レベル。  
+> このメソッドは、アプリケーションドメインによって実装されていません。 つまり、<xref:System.AppDomain> レベルでは実装されていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -58,4 +56,3 @@ HRESULT Terminate (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-

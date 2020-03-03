@@ -14,31 +14,29 @@ helpviewer_keywords:
 ms.assetid: 3ff2ad2a-da5a-461b-8627-1a8eba49df9c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c4d4f5d85fb076748b3f8aae498f024804fb0b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6f20b0f7927d79ee56b5b6962137d668dc048d1
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492365"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76791111"
 ---
 # <a name="icordebugvalue2-interface"></a>ICorDebugValue2 インターフェイス
-"ICorDebugType"オブジェクトのサポートを提供する"ICorDebugValue"インターフェイスを拡張します。  
+"ICorDebugValue" インターフェイスを拡張して "テキスト" オブジェクトのサポートを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetExactType メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue2-getexacttype-method.md)|インターフェイス ポインターを取得、`ICorDebugType`を表すオブジェクトを<xref:System.Type>のこの値。|  
+|[GetExactType メソッド](icordebugvalue2-getexacttype-method.md)|この値の <xref:System.Type> を表す `ICorDebugType` オブジェクトへのインターフェイスポインターを取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,6 +45,7 @@ ms.locfileid: "54492365"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 
-- [ICorDebugValue3 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+
+- [ICorDebugValue3 インターフェイス](icordebugvalue3-interface.md)

@@ -1,67 +1,68 @@
 ---
-title: 実行中のワークフロー インスタンスの定義を更新する方法
+title: '方法: 実行中のワークフロー インスタンスの定義を更新する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 26dfac36-ae23-4909-9867-62495b55fb5e
-ms.openlocfilehash: da8b6adeede1fddf39c818568cfd884c3add317f
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: d3ff9d217d085e3afe5171cce9d80f8dbc32ff36
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969483"
 ---
-# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>実行中のワークフロー インスタンスの定義を更新する方法
-動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 必要な変更には、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 チュートリアルでは、この手順は、動的更新を使用して、永続化されたインスタンスを変更する方法を示します、`v1`で導入された新しい機能と一致する数値推測ワークフロー[方法: 複数のバージョンをワークフロー サイド バイ サイドのホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md).
+# <a name="how-to-update-the-definition-of-a-running-workflow-instance"></a>方法: 実行中のワークフロー インスタンスの定義を更新する
+
+動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 必要な変更には、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このチュートリアルでは、この手順は、の永続化されたインスタンスを変更する動的更新を使用する方法を示します、`v1`で導入された新しい機能と一致する数値推測ワークフロー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
 > [!NOTE]
->  完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
-  
-## <a name="in-this-topic"></a>このトピックの内容  
-  
--   [CreateUpdateMaps プロジェクトを作成するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)  
-  
--   [StateMachineNumberGuessWorkflow を更新するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)  
-  
--   [FlowchartNumberGuessWorkflow を更新するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)  
-  
--   [SequentialNumberGuessWorkflow を更新するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)  
-  
--   [ビルドおよび CreateUpdateMaps アプリケーションを実行するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)  
-  
--   [更新されたワークフロー アセンブリをビルドするには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)  
-  
--   [新しいバージョンで WorkflowVersionMap を更新するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)  
-  
--   [動的更新を適用するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)  
-  
--   [更新されたワークフローでアプリケーションを実行するには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)  
-  
--   [以前のバージョンのワークフローを開始できるようにするには](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)  
-  
-###  <a name="BKMK_CreateProject"></a> CreateUpdateMaps プロジェクトを作成するには  
-  
-1.  右クリックして**WF45GettingStartedTutorial**で**ソリューション エクスプ ローラー**選択**追加**、**新しいプロジェクト**します。  
-  
-2.  **インストール済み**ノードの  **Visual c#**、 **Windows** (または**Visual Basic**、 **Windows**)。  
-  
+> 完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。
+
+## <a name="in-this-topic"></a>このトピックの内容
+
+- [CreateUpdateMaps プロジェクトを作成するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateProject)
+
+- [StateMachineNumberGuessWorkflow を更新するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StateMachine)
+
+- [FlowchartNumberGuessWorkflow を更新するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Flowchart)
+
+- [SequentialNumberGuessWorkflow を更新するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_Sequential)
+
+- [ビルドおよび CreateUpdateMaps アプリケーションを実行するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_CreateUpdateMaps)
+
+- [更新されたワークフロー アセンブリをビルドするには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAssembly)
+
+- [新しいバージョンで WorkflowVersionMap を更新するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_UpdateWorkflowVersionMap)
+
+- [動的更新を適用するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_ApplyUpdate)
+
+- [更新されたワークフローでアプリケーションを実行するには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_BuildAndRun)
+
+- [以前のバージョンのワークフローを開始できるようにするには](how-to-update-the-definition-of-a-running-workflow-instance.md#BKMK_StartPreviousVersions)
+
+### <a name="BKMK_CreateProject"></a> CreateUpdateMaps プロジェクトを作成するには
+
+1. 右クリックして**WF45GettingStartedTutorial**で**ソリューション エクスプ ローラー**選択**追加**、**新しいプロジェクト**します。
+
+2. **インストール済み**ノードの  **Visual c#**、 **Windows** (または**Visual Basic**、 **Windows**)。
+
     > [!NOTE]
-    >  Visual Studio で第一言語として設定されているプログラミング言語に応じて、 **[インストール済み]** ノードの **[他の言語]** ノードの下に、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードが表示されます。
+    > Visual Studio で第一言語として設定されているプログラミング言語に応じて、 **[インストール済み]** ノードの **[他の言語]** ノードの下に、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードが表示されます。
 
      .NET Framework バージョンのドロップダウン リストで **[.NET Framework 4.5]** が選択されていることを確認します。 選択**コンソール アプリケーション**から、 **Windows**一覧。 型**CreateUpdateMaps**に、**名前**ボックスし、をクリックして**OK**します。
 
-3.  右クリックして**CreateUpdateMaps**で**ソリューション エクスプ ローラー**選択**参照の追加**します。
+3. 右クリックして**CreateUpdateMaps**で**ソリューション エクスプ ローラー**選択**参照の追加**します。
 
-4.  選択**Framework**から、**アセンブリ**内のノード、**参照の追加**一覧。 型**System.Activities**に、**アセンブリの検索**ボックスをアセンブリをフィルター処理し、目的の参照を簡単に選択します。
+4. 選択**Framework**から、**アセンブリ**内のノード、**参照の追加**一覧。 型**System.Activities**に、**アセンブリの検索**ボックスをアセンブリをフィルター処理し、目的の参照を簡単に選択します。
 
-5.  横にあるチェック ボックスをオン**System.Activities**から、**検索結果**一覧。
+5. 横にあるチェック ボックスをオン**System.Activities**から、**検索結果**一覧。
 
-6.  型**シリアル化**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Runtime.Serialization**から、**検索結果**一覧。
+6. 型**シリアル化**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Runtime.Serialization**から、**検索結果**一覧。
 
-7.  型**System.Xaml**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Xaml**から、**検索結果**一覧。
+7. 型**System.Xaml**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Xaml**から、**検索結果**一覧。
 
-8.  をクリックして**OK**を閉じます**参照マネージャー**参照を追加します。
+8. をクリックして**OK**を閉じます**参照マネージャー**参照を追加します。
 
 9. 次の `using` (または `Imports`) ステートメントを、他の `using` (または `Imports`) ステートメントを含むファイルの先頭に追加します。
 
@@ -107,7 +108,7 @@ ms.locfileid: "49123840"
     Private Function StartUpdate(name As String) As ActivityBuilder
         'Create the XamlXmlReaderSettings.
         Dim readerSettings As XamlReaderSettings = New XamlXmlReaderSettings()
-        'In the XAML the "local" namespace referes to artifacts that come from
+        'In the XAML the "local" namespace refers to artifacts that come from
         'the same project as the XAML. When loading XAML if the currently executing
         'assembly is not the same assembly that was referred to as "local" in the XAML
         'LocalAssembly must be set to the assembly containing the artifacts.
@@ -138,7 +139,7 @@ ms.locfileid: "49123840"
         // Create the XamlXmlReaderSettings.
         XamlXmlReaderSettings readerSettings = new XamlXmlReaderSettings()
         {
-            // In the XAML the "local" namespace referes to artifacts that come from
+            // In the XAML the "local" namespace refers to artifacts that come from
             // the same project as the XAML. When loading XAML if the currently executing
             // assembly is not the same assembly that was referred to as "local" in the XAML
             // LocalAssembly must be set to the assembly containing the artifacts.
@@ -224,9 +225,9 @@ ms.locfileid: "49123840"
     }
     ```
 
-###  <a name="BKMK_StateMachine"></a> StateMachineNumberGuessWorkflow を更新するには
+### <a name="BKMK_StateMachine"></a> StateMachineNumberGuessWorkflow を更新するには
 
-1.  `CreateStateMachineUpdateMap` クラス (または `Program`) に `Module1` を追加します。
+1. `CreateStateMachineUpdateMap` クラス (または `Program`) に `Module1` を追加します。
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -240,7 +241,7 @@ ms.locfileid: "49123840"
     }
     ```
 
-2.  `StartUpdate` を呼び出し、ワークフローのルート `StateMachine` アクティビティへの参照を取得します。
+2. `StartUpdate` を呼び出し、ワークフローのルート `StateMachine` アクティビティへの参照を取得します。
 
     ```vb
     Dim wf As ActivityBuilder = StartUpdate("StateMachineNumberGuessWorkflow.xaml")
@@ -256,7 +257,7 @@ ms.locfileid: "49123840"
     StateMachine sm = wf.Implementation as StateMachine;
     ```
 
-3.  2 つの式を次に、更新`WriteLine`に加えられた更新と一致するようにユーザーの推定値が大きすぎるか小さすぎるかどうかを表示するアクティビティ[方法: ホストをワークフロー サイド バイ サイドの複数のバージョン](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+3. 2 つの式を次に、更新`WriteLine`に加えられた更新と一致するようにユーザーの推定値が大きすぎるか小さすぎるかどうかを表示するアクティビティ[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
     ```vb
     'Update the Text of the two WriteLine activities that write the
@@ -288,7 +289,7 @@ ms.locfileid: "49123840"
     tooHigh.Text = new CSharpValue<string>("Guess.ToString() + \" is too high.\"");
     ```
 
-4.  終了メッセージを表示する新しい `WriteLine` アクティビティを追加します。
+4. 終了メッセージを表示する新しい `WriteLine` アクティビティを追加します。
 
     ```vb
     'Create the new WriteLine that displays the closing message.
@@ -317,7 +318,7 @@ ms.locfileid: "49123840"
     sm.States[1].Transitions[0].Action = wl;
     ```
 
-5.  ワークフローを更新したら、`CreateUpdateMaps` と `SaveUpdatedDefinition` を呼び出します。 `CreateUpdateMaps` は `DynamicUpdateMap` を作成して保存し、`SaveUpdatedDefinition` は更新されたワークフロー定義を保存します。
+5. ワークフローを更新したら、`CreateUpdateMaps` と `SaveUpdatedDefinition` を呼び出します。 `CreateUpdateMaps` は `DynamicUpdateMap` を作成して保存し、`SaveUpdatedDefinition` は更新されたワークフロー定義を保存します。
 
     ```vb
     'Create the update map.
@@ -335,7 +336,7 @@ ms.locfileid: "49123840"
     SaveUpdatedDefinition(wf, "StateMachineNumberGuessWorkflow_du.xaml");
     ```
 
-     完成した `CreateStateMachineUpdateMap` メソッドは次のようになります。
+    完成した `CreateStateMachineUpdateMap` メソッドは次のようになります。
 
     ```vb
     Private Sub CreateStateMachineUpdateMap()
@@ -417,9 +418,9 @@ ms.locfileid: "49123840"
     }
     ```
 
-###  <a name="BKMK_Flowchart"></a> FlowchartNumberGuessWorkflow を更新するには
+### <a name="BKMK_Flowchart"></a> FlowchartNumberGuessWorkflow を更新するには
 
-1.  `CreateFlowchartUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。 このメソッドは `CreateStateMachineUpdateMap` に似ています。 最初に `StartUpdate` を呼び出し、フローチャート ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。
+1. `CreateFlowchartUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。 このメソッドは `CreateStateMachineUpdateMap` に似ています。 最初に `StartUpdate` を呼び出し、フローチャート ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。
 
     ```vb
     Private Sub CreateFlowchartUpdateMap()
@@ -531,9 +532,9 @@ ms.locfileid: "49123840"
     }
     ```
 
-###  <a name="BKMK_Sequential"></a> SequentialNumberGuessWorkflow を更新するには
+### <a name="BKMK_Sequential"></a> SequentialNumberGuessWorkflow を更新するには
 
-1.  `CreateSequentialUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。 このメソッドは、他の 2 つのメソッドに似ています。 最初に `StartUpdate` を呼び出し、シーケンシャル ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。
+1. `CreateSequentialUpdateMethod` クラス (または `Program`) に次の `Module1` を追加します。 このメソッドは、他の 2 つのメソッドに似ています。 最初に `StartUpdate` を呼び出し、シーケンシャル ワークフロー定義を更新して、最後に更新マップおよび更新されたワークフロー定義を保存します。
 
     ```vb
     Private Sub CreateSequentialUpdateMap()
@@ -611,9 +612,9 @@ ms.locfileid: "49123840"
     }
     ```
 
-###  <a name="BKMK_CreateUpdateMaps"></a> ビルドおよび CreateUpdateMaps アプリケーションを実行するには
+### <a name="BKMK_CreateUpdateMaps"></a> ビルドおよび CreateUpdateMaps アプリケーションを実行するには
 
-1.  `Main` メソッドを更新し、次の 3 つのメソッド呼び出しを追加します。 これらのメソッドは次のセクションで追加されます。 各メソッドは、対応する数値推測ワークフローを更新し、更新内容を示す `DynamicUpdateMap` を作成します。
+1. `Main` メソッドを更新し、次の 3 つのメソッド呼び出しを追加します。 これらのメソッドは次のセクションで追加されます。 各メソッドは、対応する数値推測ワークフローを更新し、更新内容を示す `DynamicUpdateMap` を作成します。
 
     ```vb
     Sub Main()
@@ -636,37 +637,37 @@ ms.locfileid: "49123840"
     }
     ```
 
-2.  右クリックして**CreateUpdateMaps**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。
+2. 右クリックして**CreateUpdateMaps**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。
 
-3.  Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押して `CreateUpdateMaps` アプリケーションを実行します。
-
-    > [!NOTE]
-    >  `CreateUpdateMaps`アプリケーション確認する場合は、実行中にステータス情報は表示されませんが、 **NumberGuessWorkflowActivities_du**フォルダーと**PreviousVersions**フォルダーが表示されます更新されたワークフロー定義ファイルは、更新マップ。
-
-     更新マップが作成され、ワークフロー定義が更新されたら、次に、更新された定義を含む更新されたワークフロー アセンブリをビルドします。
-
-###  <a name="BKMK_BuildAssembly"></a> 更新されたワークフロー アセンブリをビルドするには
-
-1.  Visual Studio 2012 の 2 番目のインスタンスを開きます。
-
-2.  選択**オープン**、**プロジェクト/ソリューション**から、**ファイル**メニュー。
-
-3.  移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法: ホストをワークフロー サイド バイ サイドの複数のバージョン](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)を選択します**NumberGuessWorkflowActivities.csproj** (または**vbproj**)、をクリックして**オープン**します。
-
-4.  **ソリューション エクスプ ローラー**を右クリックして**SequentialNumberGuessWorkflow.xaml**選択**プロジェクトから除外**します。 同じ操作を行う**FlowchartNumberGuessWorkflow.xaml**と**StateMachineNumberGuessWorkflow.xaml**します。 この手順により、以前のバージョンのワークフロー定義がプロジェクトから削除されます。
-
-5.  選択**既存項目の追加**から、**プロジェクト**メニュー。
-
-6.  移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法: をワークフロー サイド バイ サイドの複数のバージョンをホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
-
-7.  選択**XAML ファイル (\*.xaml;\*します。xoml)** から、**ファイルの種類**ドロップダウン リスト。
-
-8.  選択**SequentialNumberGuessWorkflow_du.xaml**、 **FlowchartNumberGuessWorkflow_du.xaml**、および**StateMachineNumberGuessWorkflow_du.xaml** をクリックします。**追加**します。
+3. Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押して `CreateUpdateMaps` アプリケーションを実行します。
 
     > [!NOTE]
-    >  複数の項目を同時に選択するには、Ctrl を押しながら各項目をクリックします。
+    > `CreateUpdateMaps`アプリケーション確認する場合は、実行中にステータス情報は表示されませんが、 **NumberGuessWorkflowActivities_du**フォルダーと**PreviousVersions**フォルダーが表示されます更新されたワークフロー定義ファイルは、更新マップ。
 
-     この手順により、更新されたワークフロー定義がプロジェクトに追加されます。
+    更新マップが作成され、ワークフロー定義が更新されたら、次に、更新された定義を含む更新されたワークフロー アセンブリをビルドします。
+
+### <a name="BKMK_BuildAssembly"></a> 更新されたワークフロー アセンブリをビルドするには
+
+1. Visual Studio 2012 の 2 番目のインスタンスを開きます。
+
+2. 選択**オープン**、**プロジェクト/ソリューション**から、**ファイル**メニュー。
+
+3. 移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)を選択します**NumberGuessWorkflowActivities.csproj** (または**vbproj**)、をクリック**オープン**します。
+
+4. **ソリューション エクスプ ローラー**を右クリックして**SequentialNumberGuessWorkflow.xaml**選択**プロジェクトから除外**します。 同じ操作を行う**FlowchartNumberGuessWorkflow.xaml**と**StateMachineNumberGuessWorkflow.xaml**します。 この手順により、以前のバージョンのワークフロー定義がプロジェクトから削除されます。
+
+5. 選択**既存項目の追加**から、**プロジェクト**メニュー。
+
+6. 移動し、 **NumberGuessWorkflowActivities_du**で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
+
+7. 選択**XAML ファイル (\*.xaml;\*します。xoml)** から、**ファイルの種類**ドロップダウン リスト。
+
+8. 選択**SequentialNumberGuessWorkflow_du.xaml**、 **FlowchartNumberGuessWorkflow_du.xaml**、および**StateMachineNumberGuessWorkflow_du.xaml** をクリックします。**追加**します。
+
+    > [!NOTE]
+    > 複数の項目を同時に選択するには、Ctrl を押しながら各項目をクリックします。
+
+    この手順により、更新されたワークフロー定義がプロジェクトに追加されます。
 
 9. Ctrl キーと Shift キーを押しながら B キーを押して、プロジェクトをビルドします。
 
@@ -674,15 +675,15 @@ ms.locfileid: "49123840"
 
 11. Windows エクスプ ローラーを開きに移動し、 **numberguessworkflowactivities_du \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって)。
 
-12. 名前を変更**NumberGuessWorkflowActivities.dll**に**NumberGuessWorkflowActivities_v15.dll**、コピー、 **PreviousVersions** で作成したフォルダー[方法: 複数のバージョンをワークフロー サイド バイ サイドのホスト](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
+12. 名前を変更**NumberGuessWorkflowActivities.dll**に**NumberGuessWorkflowActivities_v15.dll**、コピー、 **PreviousVersions** で作成したフォルダー[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
-###  <a name="BKMK_UpdateWorkflowVersionMap"></a> 新しいバージョンで WorkflowVersionMap を更新するには
+### <a name="BKMK_UpdateWorkflowVersionMap"></a> 新しいバージョンで WorkflowVersionMap を更新するには
 
-1.  Visual Studio 2012 の最初のインスタンスに切り替えます。
+1. Visual Studio 2012 の最初のインスタンスに切り替えます。
 
-2.  ダブルクリック**WorkflowVersionMap.cs** (または**WorkflowVersionMap.vb**) の下、 **NumberGuessWorkflowHost**プロジェクトを開きます。
+2. ダブルクリック**WorkflowVersionMap.cs** (または**WorkflowVersionMap.vb**) の下、 **NumberGuessWorkflowHost**プロジェクトを開きます。
 
-3.  既存の 6 つのワークフロー ID 宣言の直後に、新しいワークフロー ID を 3 つ追加します。 このチュートリアルでは、`1.5.0.0` は動的更新 ID の `WorkflowIdentity.Version` として使用されます。 これらの新しい `v15` ワークフロー ID は、動的に更新される永続化されたワークフロー インスタンスに適切なワークフロー定義を指定するために使用されます。
+3. 既存の 6 つのワークフロー ID 宣言の直後に、新しいワークフロー ID を 3 つ追加します。 このチュートリアルでは、`1.5.0.0` は動的更新 ID の `WorkflowIdentity.Version` として使用されます。 これらの新しい `v15` ワークフロー ID は、動的に更新される永続化されたワークフロー インスタンスに適切なワークフロー定義を指定するために使用されます。
 
     ```vb
     'Current version identities.
@@ -695,7 +696,7 @@ ms.locfileid: "49123840"
     Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity
     Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity
 
-    'v1.5 (Dynamimc Update) identities.
+    'v1.5 (Dynamic Update) identities.
     Public StateMachineNumberGuessIdentity_v15 As WorkflowIdentity
     Public FlowchartNumberGuessIdentity_v15 As WorkflowIdentity
     Public SequentialNumberGuessIdentity_v15 As WorkflowIdentity
@@ -718,7 +719,7 @@ ms.locfileid: "49123840"
     static public WorkflowIdentity SequentialNumberGuessIdentity_v15;
     ```
 
-4.  コンストラクターの末尾に、次のコードを追加します。 このコードでは、動的更新ワークフロー ID を初期化し、対応するワークフロー定義を読み込み、これらをワークフロー バージョン ディクショナリに追加します。
+4. コンストラクターの末尾に、次のコードを追加します。 このコードでは、動的更新ワークフロー ID を初期化し、対応するワークフロー定義を読み込み、これらをワークフロー バージョン ディクショナリに追加します。
 
     ```vb
     'Initialize the dynamic update workflow identities.
@@ -812,7 +813,7 @@ ms.locfileid: "49123840"
         Public FlowchartNumberGuessIdentity_v1 As WorkflowIdentity
         Public SequentialNumberGuessIdentity_v1 As WorkflowIdentity
 
-        'v1.5 (Dynamimc Update) identities.
+        'v1.5 (Dynamic Update) identities.
         Public StateMachineNumberGuessIdentity_v15 As WorkflowIdentity
         Public FlowchartNumberGuessIdentity_v15 As WorkflowIdentity
         Public SequentialNumberGuessIdentity_v15 As WorkflowIdentity
@@ -1061,30 +1062,30 @@ ms.locfileid: "49123840"
     }
     ```
 
-5.  Ctrl キーと Shift キーを押しながら B キーを押して、プロジェクトをビルドします。
+5. Ctrl キーと Shift キーを押しながら B キーを押して、プロジェクトをビルドします。
 
-###  <a name="BKMK_ApplyUpdate"></a> 動的更新を適用するには
+### <a name="BKMK_ApplyUpdate"></a> 動的更新を適用するには
 
-1.  右クリックして**WF45GettingStartedTutorial**で**ソリューション エクスプ ローラー**選択**追加**、**新しいプロジェクト**します。
+1. 右クリックして**WF45GettingStartedTutorial**で**ソリューション エクスプ ローラー**選択**追加**、**新しいプロジェクト**します。
 
-2.  **インストール済み**ノードの  **Visual c#**、 **Windows** (または**Visual Basic**、 **Windows**)。
+2. **インストール済み**ノードの  **Visual c#**、 **Windows** (または**Visual Basic**、 **Windows**)。
 
     > [!NOTE]
-    >  Visual Studio で第一言語として設定されているプログラミング言語に応じて、 **[インストール済み]** ノードの **[他の言語]** ノードの下に、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードが表示されます。
+    > Visual Studio で第一言語として設定されているプログラミング言語に応じて、 **[インストール済み]** ノードの **[他の言語]** ノードの下に、 **[Visual C#]** ノードまたは **[Visual Basic]** ノードが表示されます。
 
-     .NET Framework バージョンのドロップダウン リストで **[.NET Framework 4.5]** が選択されていることを確認します。 選択**コンソール アプリケーション**から、 **Windows**一覧。 型**ApplyDynamicUpdate**に、**名前**ボックスし、をクリックして**OK**します。
+    .NET Framework バージョンのドロップダウン リストで **[.NET Framework 4.5]** が選択されていることを確認します。 選択**コンソール アプリケーション**から、 **Windows**一覧。 型**ApplyDynamicUpdate**に、**名前**ボックスし、をクリックして**OK**します。
 
-3.  右クリックして**ApplyDynamicUpdate**で**ソリューション エクスプ ローラー**選択**参照の追加**します。
+3. 右クリックして**ApplyDynamicUpdate**で**ソリューション エクスプ ローラー**選択**参照の追加**します。
 
-4.  クリックして**ソリューション**横にチェック ボックスをオンおよび**NumberGuessWorkflowHost**します。 この参照は、`ApplyDynamicUpdate` で `NumberGuessWorkflowHost.WorkflowVersionMap` クラスを使用できるようにするために必要です。
+4. クリックして**ソリューション**横にチェック ボックスをオンおよび**NumberGuessWorkflowHost**します。 この参照は、`ApplyDynamicUpdate` で `NumberGuessWorkflowHost.WorkflowVersionMap` クラスを使用できるようにするために必要です。
 
-5.  選択**Framework**から、**アセンブリ**内のノード、**参照の追加**一覧。 型**System.Activities**に、**アセンブリの検索**ボックス。 これにより、アセンブリがフィルター処理され、目的の参照が選択しやすくなります。
+5. 選択**Framework**から、**アセンブリ**内のノード、**参照の追加**一覧。 型**System.Activities**に、**アセンブリの検索**ボックス。 これにより、アセンブリがフィルター処理され、目的の参照が選択しやすくなります。
 
-6.  横にあるチェック ボックスをオン**System.Activities**から、**検索結果**一覧。
+6. 横にあるチェック ボックスをオン**System.Activities**から、**検索結果**一覧。
 
-7.  型**シリアル化**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Runtime.Serialization**から、**検索結果**一覧。
+7. 型**シリアル化**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Runtime.Serialization**から、**検索結果**一覧。
 
-8.  型**DurableInstancing**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Activities.DurableInstancing**と**System.Runtime.DurableInstancing**から、**検索結果**一覧。
+8. 型**DurableInstancing**に、**アセンブリの検索**ボックスし、チェック ボックスの横にある**System.Activities.DurableInstancing**と**System.Runtime.DurableInstancing**から、**検索結果**一覧。
 
 9. をクリックして**OK**を閉じます**参照マネージャー**参照を追加します。
 
@@ -1155,7 +1156,7 @@ ms.locfileid: "49123840"
     ```
 
     > [!NOTE]
-    >  使用している SQL Server のエディションによって、接続文字列のサーバー名は異なる可能性があります。
+    > 使用している SQL Server のエディションによって、接続文字列のサーバー名は異なる可能性があります。
 
 16. `GetIDs` クラス (または `Program`) に次の `Module1` メソッドを追加します。 このメソッドは、永続化されたワークフロー インスタンス ID の一覧を返します。
 
@@ -1412,75 +1413,76 @@ ms.locfileid: "49123840"
 
 21. Ctrl キーと Shift キーを押しながら B キーを押してソリューションをビルドし、Ctrl キーを押しながら F5 キーを押して `ApplyDynamicUpdate` アプリケーションを実行して、永続化されたワークフロー インスタンスを更新します。 表示される出力は、次のようになります。 バージョン 1.0.0.0 のワークフローはバージョン 1.5.0.0 に更新されますが、バージョン 2.0.0.0 のワークフローは更新されません。
 
- **StateMachineNumberGuessWorkflow の検査: です。バージョン 1.0.0.0 を =**
-**されました: StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: SequentialNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: StateMachineNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**
-**されました: FlowchartNumberGuessWorkflow;バージョン 1.5.0.0 =**
-**の検査: StateMachineNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: StateMachineNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: FlowchartNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**の検査: SequentialNumberGuessWorkflow;バージョン 2.0.0.0 を =**
-**任意のキーを押して続行しています.**
+    **検査するには。StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。StateMachineNumberGuessWorkflow; Version=1.5.0.0**\
+    **検査するには。StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。StateMachineNumberGuessWorkflow; Version=1.5.0.0**\
+    **検査するには。FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。FlowchartNumberGuessWorkflow; Version=1.5.0.0**\
+    **検査するには。FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。FlowchartNumberGuessWorkflow; Version=1.5.0.0**\
+    **検査するには。SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。SequentialNumberGuessWorkflow;バージョン 1.5.0.0 を =**\
+    **検査するには。SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。SequentialNumberGuessWorkflow;バージョン 1.5.0.0 を =**\
+    **検査するには。SequentialNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。SequentialNumberGuessWorkflow;バージョン 1.5.0.0 を =**\
+    **検査するには。StateMachineNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。StateMachineNumberGuessWorkflow; Version=1.5.0.0**\
+    **検査するには。FlowchartNumberGuessWorkflow;バージョン 1.0.0.0 を =**\
+    **更新されます。FlowchartNumberGuessWorkflow; Version=1.5.0.0**\
+    **検査するには。StateMachineNumberGuessWorkflow; Version=2.0.0.0**\
+    **検査するには。StateMachineNumberGuessWorkflow; Version=2.0.0.0**\
+    **検査するには。FlowchartNumberGuessWorkflow; Version=2.0.0.0**\
+    **検査するには。FlowchartNumberGuessWorkflow; Version=2.0.0.0**\
+    **検査するには。SequentialNumberGuessWorkflow; Version=2.0.0.0**\
+    **検査するには。SequentialNumberGuessWorkflow; Version=2.0.0.0**\
+    **続行する任意のキーを押してください.**
 
-###  <a name="BKMK_BuildAndRun"></a> 更新されたワークフローでアプリケーションを実行するには
+### <a name="BKMK_BuildAndRun"></a> 更新されたワークフローでアプリケーションを実行するには
 
-1.  右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。
+1. 右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**スタートアップ プロジェクトとして設定**します。
 
-2.  Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。
+2. Ctrl キーを押しながら F5 キーを押してアプリケーションを実行します。
 
-3.  クリックして**新しいゲーム**を新しいワークフローを開始し、ワークフローを示すステータス ウィンドウが次のバージョン情報に注意してください、`v2`ワークフロー。
+3. クリックして**新しいゲーム**を新しいワークフローを開始し、ワークフローを示すステータス ウィンドウが次のバージョン情報に注意してください、`v2`ワークフロー。
 
-4.  いずれかを選択、`v1`の先頭で開始されたワークフロー、[方法: ホストをワークフロー サイド バイ サイドの複数のバージョン](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)トピック。 ステータス ウィンドウの下のバージョン情報がワークフローにバージョンがあることを示すことに注意してください**1.5.0.0**ワークフロー。 前の推定値については、その値が大きすぎるか小さすぎるかという点以外の情報はありません。
+4. いずれかの選択、`v1`の先頭で開始されたワークフロー、[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)トピック。 ステータス ウィンドウの下のバージョン情報がワークフローにバージョンがあることを示すことに注意してください**1.5.0.0**ワークフロー。 前の推定値については、その値が大きすぎるか小さすぎるかという点以外の情報はありません。
 
- **1 から 10 までの数値を入力してください**
-**推定値が小さすぎます。**
+    **1 から 10 までの数値を入力してください。**\
+    **推定値が小さすぎます。**
 
-5.  `InstanceId` を書き留めておき、ワークフローが完了するまで推定値を入力します。 ステータス ウィンドウには、`WriteLine` アクティビティが動的更新によって更新されたため、推測の内容に関する情報が表示されます。
+5. `InstanceId` を書き留めておき、ワークフローが完了するまで推定値を入力します。 ステータス ウィンドウには、`WriteLine` アクティビティが動的更新によって更新されたため、推測の内容に関する情報が表示されます。
 
- **1 から 10 までの数値を入力してください**
-**推定値が小さすぎます**。
- **1 から 10 までの数値を入力してください**
-**5 が小さすぎます**。
- **1 から 10 までの数値を入力してください**
-**7 が多すぎます**。
- **1 から 10 までの数値を入力してください**
-**おめでとうございますご推察のとおり、番号で 4 になります。**
+    **1 から 10 までの数値を入力してください。**\
+    **推定値が小さすぎます。**\
+    **1 から 10 までの数値を入力してください。**\
+    **5 は低いままです。**\
+    **1 から 10 までの数値を入力してください。**\
+    **7 が多すぎます。**\
+    **1 から 10 までの数値を入力してください。**\
+    **これで、4 つの交替で数を推測します。**
 
-6.  Windows エクスプ ローラーを開きに移動、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって) と、対応するメモ帳を使用して追跡ファイルを開く完了したワークフロー。 メモして行っていない場合、`InstanceId`を使用して正しい追跡ファイルを識別できる場合があります、**に変更された日付**Windows エクスプ ローラーの情報。 追跡情報の最後の行には、新しく追加した `WriteLine` アクティビティの出力が含まれます。
+6. Windows エクスプ ローラーを開きに移動、 **numberguessworkflowhost \bin\debug**フォルダー (または**bin \release**プロジェクトの設定によって) と、対応するメモ帳を使用して追跡ファイルを開く完了したワークフロー。 メモして行っていない場合、`InstanceId`を使用して正しい追跡ファイルを識別できる場合があります、**に変更された日付**Windows エクスプ ローラーの情報。 追跡情報の最後の行には、新しく追加した `WriteLine` アクティビティの出力が含まれます。
 
- **1 から 10 までの数値を入力してください**
-**推定値が小さすぎます**。
- **1 から 10 までの数値を入力してください**
-**5 が小さすぎます**。
- **1 から 10 までの数値を入力してください**
-**7 が多すぎます**。
- **1 から 10 までの数値を入力してください**
-**6 が正しい。察しのように 4 になります。**
+    **1 から 10 までの数値を入力してください。**\
+    **推定値が小さすぎます。**\
+    **1 から 10 までの数値を入力してください。**\
+    **5 は低いままです。**\
+    **1 から 10 までの数値を入力してください。**\
+    **7 が多すぎます。**\
+    **1 から 10 までの数値を入力してください。**\
+    **6 は正しいです。察しのように 4 になります。**
 
-###  <a name="BKMK_StartPreviousVersions"></a> 以前のバージョンのワークフローを開始できるようにするには
- 更新するワークフローがなくなったら、ワークフローの以前のバージョンを開始できるように `NumberGuessWorkflowHost` アプリケーションを変更できます。
+### <a name="BKMK_StartPreviousVersions"></a> 以前のバージョンのワークフローを開始できるようにするには
 
-1.  ダブルクリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**を選択し、 **WorkflowType**コンボ ボックス。
+更新するワークフローがなくなったら、ワークフローの以前のバージョンを開始できるように `NumberGuessWorkflowHost` アプリケーションを変更できます。
 
-2.  **プロパティ**ウィンドウで、**項目**プロパティおよび編集する、省略記号のボタンをクリックし、**項目**コレクション。
+1. ダブルクリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**を選択し、 **WorkflowType**コンボ ボックス。
 
-3.  コレクションに次の 3 つの項目を追加します。
+2. **プロパティ**ウィンドウで、**項目**プロパティおよび編集する、省略記号のボタンをクリックし、**項目**コレクション。
+
+3. コレクションに次の 3 つの項目を追加します。
 
     ```
     StateMachineNumberGuessWorkflow v1
@@ -1488,7 +1490,7 @@ ms.locfileid: "49123840"
     SequentialNumberGuessWorkflow v1
     ```
 
-     完成した `Items` コレクションには 6 個の項目があります。
+    完成した `Items` コレクションには 6 個の項目があります。
 
     ```
     StateMachineNumberGuessWorkflow
@@ -1499,9 +1501,9 @@ ms.locfileid: "49123840"
     SequentialNumberGuessWorkflow v1
     ```
 
-4.  ダブルクリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**を選択し、**コードの表示**します。
+4. ダブルクリック**WorkflowHostForm**で**ソリューション エクスプ ローラー**を選択し、**コードの表示**します。
 
-5.  次の 3 つの新しいケースを追加、 `switch` (または`Select Case`) 内のステートメント、`NewGame_Click`ハンドラーの新しい項目をマップする、 **WorkflowType**コンボ ボックスに一致するワークフローの id。
+5. 次の 3 つの新しいケースを追加、 `switch` (または`Select Case`) 内のステートメント、`NewGame_Click`ハンドラーの新しい項目をマップする、 **WorkflowType**コンボ ボックスに一致するワークフローの id。
 
     ```vb
     Case "SequentialNumberGuessWorkflow v1"
@@ -1528,7 +1530,7 @@ ms.locfileid: "49123840"
         break;
     ```
 
-     完成した `switch` (または `Select Case`) ステートメントを次の例に示します。
+    完成した `switch` (または `Select Case`) ステートメントを次の例に示します。
 
     ```vb
     Select Case WorkflowType.SelectedItem.ToString()
@@ -1581,4 +1583,4 @@ ms.locfileid: "49123840"
     };
     ```
 
-6.  Ctrl キーを押しながら F5 キーを押してアプリケーションをビルドし、実行します。 これで、ワークフローの現在のバージョンに加え、`v1` バージョンを開始できるようになりました。 これらの新しいインスタンスを動的に更新するには、実行、 **ApplyDynamicUpdate**アプリケーション。
+6. Ctrl キーを押しながら F5 キーを押してアプリケーションをビルドし、実行します。 これで、ワークフローの現在のバージョンに加え、`v1` バージョンを開始できるようになりました。 これらの新しいインスタンスを動的に更新するには、実行、 **ApplyDynamicUpdate**アプリケーション。

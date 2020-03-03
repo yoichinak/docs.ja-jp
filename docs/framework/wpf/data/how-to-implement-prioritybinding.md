@@ -1,5 +1,5 @@
 ---
-title: '方法: PriorityBinding を実装する'
+title: '方法 : PriorityBinding を実装する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,44 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: c239cb3005d2748f9cba55a5bb0b5d564828f51b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 343b0aca4736905f3a0cbff5a0f76b170da0c920
+ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717903"
+ms.lasthandoff: 11/03/2019
+ms.locfileid: "73459785"
 ---
-# <a name="how-to-implement-prioritybinding"></a>方法: PriorityBinding を実装する
-<xref:System.Windows.Data.PriorityBinding> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]のバインディングの一覧を指定することによって動作します。 バインディングのリストの順序は、最も高い優先度から最も低い優先順位。 最高の優先度のバインドは、値を返す場合が正常に処理されるときはありますありません、リスト内の他のバインディングを処理する必要が。 最高の優先度のバインドを評価する時間がかかる場合がある可能性がありますの優先順位の高いバインドが正常に値を返すまで正常に値を返す次の最も高い優先順位が使用されます。  
+# <a name="how-to-implement-prioritybinding"></a>方法 : PriorityBinding を実装する
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の <xref:System.Windows.Data.PriorityBinding> は、バインドの一覧を指定することによって機能します。 バインドの一覧は、優先順位が最も高い順に並べ替えられます。 最も優先順位の高いバインドが処理時に値を正常に返す場合、リスト内の他のバインドを処理する必要はありません。 最も優先度の高いバインドが評価されるまでに長い時間がかかる場合もありますが、高い優先順位のバインドによって値が正常に返されるまで、値が正常に返される次に高い優先順位が使用されます。  
   
 ## <a name="example"></a>例  
- 示すためにどの<xref:System.Windows.Data.PriorityBinding>、動作、`AsyncDataSource`プロパティは、次の 3 つのオブジェクトが作成された: `FastDP`、`SlowerDP`と`SlowestDP`。  
+ <xref:System.Windows.Data.PriorityBinding> のしくみを示すために、`AsyncDataSource` オブジェクトは、`FastDP`、`SlowerDP`、および `SlowestDP`の3つのプロパティを使用して作成されています。  
   
- Get アクセサー`FastDP`の値を返します、`_fastDP`データ メンバー。  
+ `FastDP` の get アクセサーは、`_fastDP` データメンバーの値を返します。  
   
- Get アクセサー`SlowerDP`までの値を返す前に 3 秒間待機、`_slowerDP`データ メンバー。  
+ `SlowerDP` の get アクセサーは、`_slowerDP` データメンバーの値を返す前に3秒間待機します。  
   
- Get アクセサー`SlowestDP`までの値を返す前に 5 秒間待機、`_slowestDP`データ メンバー。  
+ `SlowestDP` の get アクセサーは、5秒間待機してから `_slowestDP` データメンバーの値を返します。  
   
 > [!NOTE]
->  この例は、デモンストレーション目的のみで提供されます。 [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]桁違いのフィールド セットをよりも、プロパティ定義のガイドラインをお勧めします。 詳細については、次を参照してください[NIB:。プロパティとメソッドの使い分け](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)します。  
+> この例は、デモンストレーション目的のみで提供されます。 .NET ガイドラインでは、フィールドセットよりも速度が低いプロパティを定義することをお勧めします。 詳細については、「[プロパティとメソッドの選択](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))」を参照してください。  
   
- [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
- [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
+ [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
- <xref:System.Windows.Controls.TextBlock.Text%2A>プロパティが上記にバインド`AsyncDS`を使用して<xref:System.Windows.Data.PriorityBinding>:  
+ <xref:System.Windows.Controls.TextBlock.Text%2A> プロパティは <xref:System.Windows.Data.PriorityBinding>を使用して上記の `AsyncDS` にバインドされます。  
   
- [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
- バインディング エンジンが処理するときに、<xref:System.Windows.Data.Binding>オブジェクトの場合、最初の開始<xref:System.Windows.Data.Binding>がバインドされている、`SlowestDP`プロパティ。 ときにこの<xref:System.Windows.Data.Binding>は、処理は返されません値が正常にためがスリープ状態を 5 秒間、そのため、[次へ]<xref:System.Windows.Data.Binding>要素が処理されます。 次<xref:System.Windows.Data.Binding>は正常に完了しなかった値が 3 秒間スリープ状態にあるためです。 バインディング エンジンは、次に、移動<xref:System.Windows.Data.Binding>にバインドする要素を`FastDP`プロパティ。 これは、 <xref:System.Windows.Data.Binding> "高速 Value"の値を返します。 <xref:System.Windows.Controls.TextBlock> "高速 Value"の値が表示されます。  
+ バインドエンジンは、<xref:System.Windows.Data.Binding> オブジェクトを処理するときに、最初の <xref:System.Windows.Data.Binding>から開始します。これは `SlowestDP` プロパティにバインドされています。 この <xref:System.Windows.Data.Binding> が処理されると、5秒間スリープ状態になっているため、値は正常に返されません。そのため、次の <xref:System.Windows.Data.Binding> 要素が処理されます。 次の <xref:System.Windows.Data.Binding> では、3秒間スリープ状態になるため、値は正常に返されません。 バインドエンジンは、次の <xref:System.Windows.Data.Binding> 要素に移動します。この要素は、`FastDP` プロパティにバインドされます。 この <xref:System.Windows.Data.Binding> は、値 "Fast Value" を返します。 <xref:System.Windows.Controls.TextBlock> に "Fast Value" という値が表示されるようになりました。  
   
- 3 秒が経過した後、 `SlowerDP` "低速 Value"の値を返します。 <xref:System.Windows.Controls.TextBlock> "低速 Value"の値が表示されます。  
+ 3秒が経過すると、`SlowerDP` プロパティは値 "低速値" を返します。 <xref:System.Windows.Controls.TextBlock> に、値 "低速値" が表示されます。  
   
- 5 秒が経過した後、 `SlowestDP` 「最も低速な値」の値を返します。 そのバインディングは、最初に表示されているために、最高の優先順位が。 <xref:System.Windows.Controls.TextBlock>に「最も低速な値」の値が表示されます。  
+ 5秒が経過すると、`SlowestDP` プロパティによって "低速値" という値が返されます。 最初にリストされているので、そのバインディングの優先順位は最も高くなります。 <xref:System.Windows.Controls.TextBlock> に "低速値" という値が表示されるようになりました。  
   
- 参照してください<xref:System.Windows.Data.PriorityBinding>については、バインドからの成功した戻り値と見なされます。  
+ バインドから成功した戻り値と見なされる内容については、「<xref:System.Windows.Data.PriorityBinding>」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
-- [データ バインディングの概要](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [方法トピック](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [データ バインディングの概要](../../../desktop-wpf/data/data-binding-overview.md)
+- [方法トピック](data-binding-how-to-topics.md)

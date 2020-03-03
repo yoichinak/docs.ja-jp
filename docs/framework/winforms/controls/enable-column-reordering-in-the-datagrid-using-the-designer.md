@@ -1,5 +1,5 @@
 ---
-title: '方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列の並べ替えを有効にします。'
+title: デザイナーを使用して DataGridView コントロールの列の並べ替えを有効にする
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
@@ -7,28 +7,26 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
-ms.openlocfilehash: 088cb6c25dbddad49e534506495c1f0f228d625c
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 14dc1081a8608c6e6add67f641c4b55825d2fc81
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332885"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77626972"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列の並べ替えを有効にします。
-Windows フォームに表示されるデータを表示するときに<xref:System.Windows.Forms.DataGridView>コントロール、ユーザーことがありますする特定の列の値を比較します。 これは、できますしない列は、コントロールでは、広く区切られている場合に便利な特にで関心のあるすべての列を表示するには、ユーザーが前後へ水平方向にスクロールする必要があります。 列の順序を変更できるので、列の値を容易に比較を行うことができます。 列の並べ替えを有効にすると、ユーザーは、マウスで列ヘッダーをドラッグして列を新しい位置に移動できます。  
-  
- 次の手順が必要です、 **Windows アプリケーション**プロジェクトが含まれているフォームを<xref:System.Windows.Forms.DataGridView>コントロール。 このようなプロジェクトの設定の詳細については、次を参照してください。[方法。Windows フォーム アプリケーション プロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)と[方法。Windows フォームにコントロールを追加](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)します。  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-enable-column-reordering"></a>列の並べ替えを有効にするには  
-  
--   スマート タグ グリフをクリックします (![スマート タグ グリフ](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、 <xref:System.Windows.Forms.DataGridView> 、制御し、**列の並べ替えを有効にする**.  
-  
-## <a name="see-also"></a>関連項目
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法 : デザイナーを使用して Windows フォーム DataGridView コントロールの列の並べ替えを有効にする
+Windows フォーム <xref:System.Windows.Forms.DataGridView> コントロールに表示されるデータを表示する場合、ユーザーは特定の列の値を比較することが必要になることがあります。 これは、列がコントロール内で広く使用されている場合には不便です。特に、ユーザーが関心のあるすべての列を表示するために水平方向にスクロールする必要がある場合に便利です。 ユーザーが列の順序を変更できるようにすることで、列の値を簡単に比較できるようになります。 列の並べ替えを有効にすると、ユーザーは列ヘッダーをマウスでドラッグすることで、列を新しい位置に移動できます。
+
+ 次の手順では、<xref:System.Windows.Forms.DataGridView> コントロールを含むフォームを含む**Windows アプリケーション**プロジェクトが必要です。 このようなプロジェクトの設定の詳細については、「[方法: Windows フォームアプリケーションプロジェクトを作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)する」および「[方法: Windows フォームにコントロールを追加](how-to-add-controls-to-windows-forms.md)する」を参照してください。
+
+## <a name="to-enable-column-reordering"></a>列の並べ替えを有効にするには
+
+- <xref:System.Windows.Forms.DataGridView> コントロールの右上隅にある [デザイナーアクション] グリフ (![小さい黒い矢印](./media/designer-actions-glyph.gif)) をクリックし、[列の**並べ替えを有効にする**] を選択します。
+
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールで列を固定します。](../../../../docs/framework/winforms/controls/freeze-columns-in-the-datagrid-using-the-designer.md)
-- [方法: Windows フォーム アプリケーション プロジェクトの作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法: Windows フォームにコントロールを追加します。](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を固定する](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [方法: Windows フォームアプリケーションプロジェクトを作成する](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)

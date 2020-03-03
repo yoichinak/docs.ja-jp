@@ -15,41 +15,40 @@ helpviewer_keywords:
 ms.assetid: 1f1e3239-438e-4be9-a3bb-7d0722d3a76d
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ca33c8eb5e214cdaaa49905c311fd62042285d4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5d6cfa3826667514eb70f9bb0df118d9ba0d07c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569289"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127815"
 ---
 # <a name="icorconfigurationadddebuggerspecialthread-method"></a>ICorConfiguration::AddDebuggerSpecialThread メソッド
-デバッグ サービスを特定のスレッドがデバッガーがマネージまたはアンマネージ デバッグ シナリオ中に停止したアプリケーションの実行を続行できることを示します。  
+デバッグサービスに対して、マネージまたはアンマネージのデバッグシナリオでデバッガーがアプリケーションを停止している間に、特定のスレッドの実行を継続できるようにする必要があることを示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT AddDebuggerSpecialThread (  
     [in] DWORD dwSpecialThreadId  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwSpecialThreadId`  
- [in]実行の継続を許可するかのスレッドの ID。  
+ から実行を継続することが許可されているスレッドの ID。  
   
 ## <a name="remarks"></a>Remarks  
- 指定したスレッドをマネージ コードを実行したり任意の方法でランタイムに許可されていません。 このようなスレッドの例は、従来のスクリプト デバッガーをサポートするために、プロセスのスレッドになります。  
+ 指定されたスレッドはマネージコードの実行を許可されないか、または任意の方法でランタイムに入ることができません。 このようなスレッドの例として、レガシスクリプトデバッガーをサポートするインプロセススレッドがあります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorConfiguration インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorconfiguration-interface.md)

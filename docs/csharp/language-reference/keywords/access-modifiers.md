@@ -1,24 +1,23 @@
 ---
 title: アクセス修飾子 - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#]
 ms.assetid: 61c3fa51-c00f-48cb-9b49-c805dedd62d7
-ms.openlocfilehash: b70a4ac99b90e5112c64d25ab517ae6ba819542f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 754949e42771de30cc2dce7e4e610f70ada6dfd4
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709758"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713842"
 ---
 # <a name="access-modifiers-c-reference"></a>アクセス修飾子 (C# リファレンス)
 アクセス修飾子は、メンバーまたは型の宣言されたアクセシビリティを指定するときに使用されるキーワードです。 ここでは、4 つのアクセス修飾子について説明します。  
   
--   `public`
--   `protected`
--   `internal`
--   `private`
+- `public`
+- `protected`
+- `internal`
+- `private`
   
  アクセス修飾子を使用して、次の 6 つのアクセシビリティ レベルを指定できます。  
   
@@ -36,16 +35,17 @@ ms.locfileid: "54709758"
   
  このセクションでは、以下についても説明します。  
   
--   [アクセシビリティ レベル](../../../csharp/language-reference/keywords/accessibility-levels.md): 4 つのアクセス修飾子を使用して、6 つのアクセシビリティ レベルを宣言します。  
+- [アクセシビリティ レベル](./accessibility-levels.md): 4 つのアクセス修飾子を使用して、6 つのアクセシビリティ レベルを宣言します。  
   
--   [アクセシビリティ ドメイン](../../../csharp/language-reference/keywords/accessibility-domain.md): プログラムのセクション内で、メンバーを参照できる位置を指定します。  
+- [アクセシビリティ ドメイン](./accessibility-domain.md): プログラムのセクション内で、メンバーを参照できる位置を指定します。  
   
--   [アクセシビリティ レベルの使用に関する制限事項](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md): 宣言されたアクセシビリティ レベルの使用に関する制限事項をまとめたものです。  
+- [アクセシビリティ レベルの使用に関する制限事項](./restrictions-on-using-accessibility-levels.md): 宣言されたアクセシビリティ レベルの使用に関する制限事項をまとめたものです。  
   
 ## <a name="see-also"></a>関連項目
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
-- [アクセス キーワード](../../../csharp/language-reference/keywords/access-keywords.md)
-- [修飾子](../../../csharp/language-reference/keywords/modifiers.md)
+
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](./index.md)
+- [アクセス修飾子](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [アクセス キーワード](base.md)
+- [修飾子](index.md)

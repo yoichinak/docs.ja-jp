@@ -2,64 +2,68 @@
 title: SQL Server でのストアド プロシージャの署名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: da7b21d725d301006288245c940e4367c3ce8568
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0131655d06a6ef543ea460d04739401538cac04b
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606823"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77452358"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server でのストアド プロシージャの署名
- デジタル署名は、署名者の秘密キーで暗号化されたデータ ダイジェストです。 秘密キーにより、デジタル署名がその保持者または所有者に固有であることが保証されます。 ストアド プロシージャ、関数 (インライン テーブル値関数) を除く、トリガー、およびアセンブリに署名することができます。  
-  
- 証明書や非対称キーを使用してストアド プロシージャに署名することができます。 この機能は、動的 SQL などのように、組み合わせ所有権によって権限を継承できない場合や、組み合わせ所有権が壊れている場合を想定して用意されています。 作成、証明書にマップされたユーザー証明書にアクセスする必要があるストアド プロシージャ オブジェクトに対するユーザー アクセス許可を付与します。  
 
- 同じ証明書にマップされるログインを作成し、そのログインに必要なサーバー レベル権限が付与したり 1 つまたは複数の固定サーバー ロールにログインを追加できます。 これは有効にしないように設計されています、`TRUSTWORTHY`データベースより高いレベルのアクセス許可が必要なシナリオを設定します。  
-  
- ストアド プロシージャを実行すると、SQL Server は、呼び出し元の証明書ユーザーやログインのアクセス許可を結合します。 異なり、`EXECUTE AS`句では、プロシージャの実行コンテキストは変更されません。 ログイン名とユーザー名を返す組み込み関数を実行すると、証明書ユーザーの名前ではなく、呼び出し元の名前が返されます。  
-  
-## <a name="creating-certificates"></a>証明書の作成  
- 証明書または非対称キー、execute と共に、ストアド プロシージャのコードの暗号化されたハッシュで構成されるデータのダイジェストでストアド プロシージャに署名するときに、ユーザーが作成された秘密キーを使用します。 実行時に、このデータ ダイジェストが公開キーを使用して復号化され、ストアド プロシージャのハッシュ値と比較されます。 Execute を変更するのと、ユーザーは、デジタル署名が不要になったと一致するように、ハッシュ値を無効になります。 ストアド プロシージャに変更を削除します署名全体からストアド プロシージャのコードを変更する秘密キーへのアクセスを持たない誰かができなくなります。 いずれの場合も、する必要があります再署名する手順、コードまたは execute を変更するたびにユーザーとして。  
-  
- モジュールへの署名では、2 つの必要な手順があります。  
-  
-1.  Transact-SQL ステートメント `CREATE CERTIFICATE [certificateName]` を使用して、証明書を作成します。 このステートメントには、開始日、終了日、パスワードを設定するためのオプションがあります。 既定の有効期限の日付は、1 年間です。  
-  
-1.  Transact-SQL ステートメント `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` を使用して、証明書によってプロシージャに署名します。  
+デジタル署名は、署名者の秘密キーで暗号化されたデータ ダイジェストです。 秘密キーにより、デジタル署名がその保持者または所有者に固有であることが保証されます。 ストアドプロシージャ、関数 (インラインテーブル値関数を除く)、トリガー、およびアセンブリに署名できます。
 
-モジュールが署名されていると、1 つまたは複数のプリンシパルは証明書に関連付ける必要のある追加のアクセス許可を保持するために作成する必要があります。  
+証明書や非対称キーを使用してストアド プロシージャに署名することができます。 この機能は、動的 SQL などのように、組み合わせ所有権によって権限を継承できない場合や、組み合わせ所有権が壊れている場合を想定して用意されています。 その後、証明書にマップされたユーザーを作成し、ストアドプロシージャがアクセスする必要があるオブジェクトに対する権限をユーザーに付与することができます。
 
-モジュールには、その他のデータベース レベルのアクセス許可が必要がある場合。  
-  
-1.  Transact-SQL ステートメント `CREATE USER [userName] FROM CERTIFICATE [certificateName]` を使用して、証明書に関連付けられたデータベース ユーザーを作成します。 このユーザーは、データベースのみに存在し、その同じ証明書からログインが作成されてもいない限り、ログインに関連付けられていません。  
-  
-1.  証明書ユーザーに必要なデータベース レベルのアクセス許可を付与します。  
-  
-モジュールには、追加のサーバー レベルのアクセス許可が必要がある場合。  
-  
-1.  証明書のコピー、`master`データベース。  
- 
-1.  TRANSACT-SQL を使用してその証明書に関連付けられているログインを作成`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`ステートメント。  
-  
-1.  証明書のログインに必要なサーバー レベルのアクセス許可を付与します。  
-  
-> [!NOTE]  
->  証明書では、DENY ステートメントを使用して権限が取り消されているユーザーに権限を与えることはできません。 DENY は常に GRANT よりも優先されるため、証明書ユーザーに許可された権限を呼び出し元が継承することはできません。  
-  
-## <a name="external-resources"></a>外部リソース  
- 詳細については、次のリソースを参照してください。  
-  
-|リソース|説明|  
-|--------------|-----------------|  
-|[モジュール署名](https://go.microsoft.com/fwlink/?LinkId=98590)で SQL Server オンライン ブック|モジュールの署名について説明し、サンプル シナリオと、関連する Transact-SQL のトピックへのリンクを示します。|  
-|[証明書を使用したストアド プロシージャを署名](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)で SQL Server オンライン ブック|証明書を使用したストアド プロシージャの署名のチュートリアルです。|  
-  
-## <a name="see-also"></a>関連項目
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server セキュリティの概要](../../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)
-- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](../../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)
-- [SQL Server での安全な動的 SQL の作成](../../../../../docs/framework/data/adonet/sql/writing-secure-dynamic-sql-in-sql-server.md)
-- [SQL Server での借用を使用したアクセス許可のカスタマイズ](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)
-- [ストアド プロシージャでのデータの変更](../../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+同じ証明書にマップされたログインを作成し、そのログインに必要なサーバーレベルの権限を付与したり、1つ以上の固定サーバーロールにログインを追加したりすることもできます。 これは、高いレベルのアクセス許可が必要なシナリオに対して `TRUSTWORTHY` データベース設定を有効にしないように設計されています。
+
+ストアドプロシージャを実行すると、SQL Server は、証明書ユーザーの権限またはログインを呼び出し元の権限と結合します。 `EXECUTE AS` 句とは異なり、プロシージャの実行コンテキストは変更されません。 ログイン名とユーザー名を返す組み込み関数を実行すると、証明書ユーザーの名前ではなく、呼び出し元の名前が返されます。
+
+## <a name="creating-certificates"></a>証明書の作成
+
+証明書または非対称キーを使用してストアドプロシージャに署名すると、ストアドプロシージャコードの暗号化されたハッシュで構成されるデータダイジェストが、execute as ユーザーと共に、秘密キーを使用して作成されます。 実行時に、このデータ ダイジェストが公開キーを使用して復号化され、ストアド プロシージャのハッシュ値と比較されます。 実行ユーザーを変更すると、デジタル署名が一致しなくなるようにハッシュ値が無効になります。 ストアドプロシージャを変更すると、署名が完全に削除されます。これにより、秘密キーへのアクセス権を持たないユーザーは、ストアドプロシージャコードを変更できなくなります。 どちらの場合も、コードまたは実行ユーザーを変更するたびに、プロシージャに再署名する必要があります。
+
+モジュールに署名するには、次の2つの手順を実行する必要があります。
+
+1. Transact-SQL ステートメント `CREATE CERTIFICATE [certificateName]` を使用して、証明書を作成します。 このステートメントには、開始日、終了日、パスワードを設定するためのオプションがあります。 既定の有効期限は1年です。
+
+1. Transact-SQL ステートメント `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` を使用して、証明書によってプロシージャに署名します。
+
+モジュールに署名したら、証明書に関連付けられている追加のアクセス許可を保持するために、1つまたは複数のプリンシパルを作成する必要があります。
+
+モジュールにデータベースレベルの権限を追加する必要がある場合は、次のようにします。
+
+1. Transact-SQL ステートメント `CREATE USER [userName] FROM CERTIFICATE [certificateName]` を使用して、証明書に関連付けられたデータベース ユーザーを作成します。 このユーザーはデータベースにのみ存在し、ログインに関連付けられていません。ただし、同じ証明書からログインを作成した場合を除きます。
+
+1. 証明書ユーザーに必要なデータベースレベルのアクセス許可を付与します。
+
+モジュールに追加のサーバーレベルのアクセス許可が必要な場合は、次のようにします。
+
+1. 証明書を `master` データベースにコピーします。
+
+1. Transact-sql `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` ステートメントを使用して、その証明書に関連付けられたログインを作成します。
+
+1. 証明書のログインに必要なサーバーレベルの権限を付与します。
+
+> [!NOTE]
+> 証明書では、DENY ステートメントを使用して権限が取り消されているユーザーに権限を与えることはできません。 DENY は常に GRANT よりも優先されるため、証明書ユーザーに許可された権限を呼び出し元が継承することはできません。
+
+## <a name="external-resources"></a>外部資料
+
+詳細については、次のリソースを参照してください。
+
+|リソース|説明|
+|--------------|-----------------|
+|[モジュール署名](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms345102(v=sql.100))|モジュール署名について説明します。サンプルシナリオと、関連する Transact-sql 記事へのリンクを提供します。|
+|[証明書を使用したストアド プロシージャへの署名](/sql/relational-databases/tutorial-signing-stored-procedures-with-a-certificate)|証明書を使用したストアド プロシージャの署名のチュートリアルです。|
+
+## <a name="see-also"></a>参照
+
+- [ADO.NET アプリケーションのセキュリティ保護](../securing-ado-net-applications.md)
+- [SQL Server セキュリティの概要](overview-of-sql-server-security.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](application-security-scenarios-in-sql-server.md)
+- [SQL Server でのストアド プロシージャを使用したアクセス許可の管理](managing-permissions-with-stored-procedures-in-sql-server.md)
+- [SQL Server での安全な動的 SQL の作成](writing-secure-dynamic-sql-in-sql-server.md)
+- [SQL Server での借用を使用したアクセス許可のカスタマイズ](customizing-permissions-with-impersonation-in-sql-server.md)
+- [ストアド プロシージャでのデータの変更](../modifying-data-with-stored-procedures.md)
+- [ADO.NET の概要](../ado-net-overview.md)

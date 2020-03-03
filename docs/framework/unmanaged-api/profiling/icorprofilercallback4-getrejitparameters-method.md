@@ -15,48 +15,47 @@ helpviewer_keywords:
 ms.assetid: 0e9bfe07-9f20-498c-b568-9017c8f6056c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 14c0da3192bb5488c71527a70ed47b03933c0ae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 858d65783515a89a434cf719ef9d5a999643094c
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721218"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76865312"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters メソッド
-新しい再コンパイルされたメソッド本体の代替コード生成フラグを設定するコード プロファイラーを使用できます。  
+再コンパイルされた新しいメソッド本体の代替コード生成フラグをコードプロファイラーで設定できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef methodId,     [in] ICorProfilerFunctionControl *pFunctionControl);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `moduleID`  
- [in]このモジュールは、CLR で JIT 再コンパイル パラメーターを必要なメソッドが含まれています。  
+ からCLR が JIT 再コンパイルパラメーターを必要とするメソッドを含むモジュール。  
   
  `methodId`  
- [in]`MethodDef`のメソッドの CLR が JIT 再コンパイル パラメーターを必要があります。  
+ からCLR が JIT 再コンパイルパラメーターを必要とするメソッドの `MethodDef`。  
   
  `pFunctionControl`  
- [in]ポインター、 [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)プロファイラーを使用して再コンパイルされるメソッドの JIT 再コンパイルの情報を提供するインターフェイス。  
+ から再コンパイルされるメソッドの JIT 再コンパイル情報を提供するためにプロファイラーが使用できる[ICorProfilerFunctionControl](icorprofilerfunctioncontrol-interface.md)インターフェイスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- CLR の問題、`GetReJITParameters`コールバック、プロファイラーは、特定のメソッドを再コンパイルのパラメーターを指定できるようにします。 `GetReJITParameters`関数ごとのコールバックは、1 回だけ発行されます。 プロファイラーによって指定されたパラメーターは、その関数のすべてのインスタンスに適用されます。  
+ CLR は、指定されたメソッドを再コンパイルするためのパラメーターをプロファイラーが指定できるように、`GetReJITParameters` コールバックを発行します。 `GetReJITParameters` コールバックは、関数ごとに1回のみ発行されます。プロファイラーによって提供されるパラメーターは、その関数のすべてのインスタンスに適用されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerCallback インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [ICorProfilerCallback4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [JITCompilationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [ReJITCompilationStarted メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+
+- [ICorProfilerCallback インターフェイス](icorprofilercallback-interface.md)
+- [ICorProfilerCallback4 インターフェイス](icorprofilercallback4-interface.md)
+- [JITCompilationStarted メソッド](icorprofilercallback-jitcompilationstarted-method.md)
+- [ReJITCompilationStarted メソッド](icorprofilercallback4-rejitcompilationstarted-method.md)

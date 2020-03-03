@@ -14,18 +14,24 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF]
 - WPF [WPF]
 ms.assetid: f667bd15-2134-41e9-b4af-5ced6fafab5d
-ms.openlocfilehash: 35a936cbc34bf10219099090e1af8c145d7fb23d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 69cdae86a295793c8da6b7f663b22846ae2c32b2
+ms.sourcegitcommit: 82f94a44ad5c64a399df2a03fa842db308185a76
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561723"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72919365"
 ---
 # <a name="windows-presentation-foundation"></a>Windows Presentation Foundation
-Visual Studio で Windows Presentation Foundation (WPF) は、Windows 上の基幹業務デスクトップ アプリケーションを構築するための統一されたプログラミング モデルを開発者を提供します。  
-  
- [Windows Presentation Foundation でデスクトップ アプリケーションを作成します。](/visualstudio/designers/create-modern-desktop-applications-with-windows-presentation-foundation)  
 
- [Visual Studio および Blend for Visual Studio での XAML の設計](/visualstudio/designers/designing-xaml-in-visual-studio)  
-  
- [Visual Studio の入手](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+Windows Presentation Foundation (WPF) は、Windows で基幹業務デスクトップアプリケーションを構築するための統一されたプログラミングモデルを開発者に提供します。
+
+- [WPF の概要](introduction-to-wpf.md)
+- [はじめに](getting-started/index.md)
+- [アプリケーションの開発](app-development/index.md)
+- [詳細設定](advanced/index.md)
+- [コントロール](controls/index.md)
+- [データ](data/index.md)
+- [グラフィックスとマルチメディア](graphics-multimedia/index.md)
+- [Security](security-wpf.md)
+- [WPF のサンプル](wpf-samples.md)
+- [クラス ライブラリ](class-library-wpf.md)

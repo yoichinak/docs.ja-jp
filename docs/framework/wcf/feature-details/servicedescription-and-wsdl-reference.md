@@ -2,12 +2,12 @@
 title: ServiceDescription と WSDL 参照
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748164"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription と WSDL 参照
 このトピックとの間に、Windows Communication Foundation (WCF) が Web サービス記述言語 (WSDL) ドキュメントをマップする方法について説明します<xref:System.ServiceModel.Description.ServiceDescription>インスタンス。  
@@ -20,7 +20,7 @@ ms.locfileid: "54544329"
  WCF では、によってエクスポートされた WSDL ドキュメントでは、外部の XML スキーマ ドキュメントから使用する XML スキーマ定義をインポートします。 データ型がサービスで使用するターゲット名前空間ごとに、個別の XML スキーマ ドキュメントがエクスポートされます。 同様に、サービス コントラクトが使用するターゲット名前空間ごとに、個別の WSDL ドキュメントがエクスポートされます。  
   
 ### <a name="servicedescription"></a>ServiceDescription  
- <xref:System.ServiceModel.Description.ServiceDescription> インスタンスは `wsdl:service` 要素にマップされます。 <xref:System.ServiceModel.Description.ServiceDescription> インスタンスは、それぞれが個別の <xref:System.ServiceModel.Description.ServiceEndpoint> 要素にマップされる `wsdl:port` インスタンスのコレクションを格納します。  
+ <xref:System.ServiceModel.Description.ServiceDescription> インスタンスは `wsdl:service` 要素にマップされます。 <xref:System.ServiceModel.Description.ServiceDescription> インスタンスは、それぞれが個別の `wsdl:port` 要素にマップされる <xref:System.ServiceModel.Description.ServiceEndpoint> インスタンスのコレクションを格納します。  
   
 |プロパティ|WSDL マッピング|  
 |----------------|------------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "54544329"
 |`SessionMode`|`wsdl:portType` /@msc:usingSessionコントラクトの値。 この属性は、WSDL 1.1 用の WCF 拡張機能です。|  
 |`Operations`|コントラクトの `wsdl:operation` 定義|  
   
-### <a name="operations"></a>オペレーション  
+### <a name="operations"></a>操作  
  <xref:System.ServiceModel.Description.OperationDescription>インスタンスにマップする`wsdl:portType` /`wsdl:operation`します。 `OperationDescription` は、操作のメッセージを記述する `MessageDescription` インスタンスのコレクションを格納します。  
   
  主に、2 つの操作動作 `OperationDescription` および `DataContractSerializerOperationBehavior` が、`XmlSerializerOperationBehavior` を WSDL ドキュメントにマップする方法に関与しています。  
@@ -109,7 +109,7 @@ ms.locfileid: "54544329"
 |プロパティ|WSDL マッピング|  
 |----------------|------------------|  
 |`Action`|メッセージの SOAP アクションまたは WS-Addressing アクション。<br /><br /> Action 文字列 "*" を使用する操作は、WSDL では表示されません。|  
-|`Direction`|`MessageDirection.Input` は `wsdl:input` にマップされます。<br /><br /> `MessageDirection.Output` は `wsdl:output` にマップされます。|  
+|`Direction`|`MessageDirection.Input` マップ`wsdl:input`します。<br /><br /> `MessageDirection.Output` マップ`wsdl:output`します。|  
 |`ProtectionLevel`|このメッセージの `wsdl:message` 定義に関連付けられたセキュリティ ポリシーの保護アサーション|  
 |`Body`|メッセージのメッセージ本文|  
 |`Headers`|メッセージのヘッダー|  
@@ -152,4 +152,5 @@ ms.locfileid: "54544329"
 |`Name, ContractDescription.Name, OperationDescription.Name,`|派生に使用される、 `wsdl:message` /@nameエラー メッセージの値。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Description>

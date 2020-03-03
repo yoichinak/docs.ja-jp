@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 57163b0d-c8a7-44af-9078-e7a895d29f9a
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e64bc173717c3121d6c2b101f734ee325a0ced53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a7d9465a454175b58bb7b9566d31f3c65420610
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413762"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73085054"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread メソッド
-この評価が実行またはが実行スレッドを取得します。  
+この評価が実行されている、または実行されるスレッドを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetThread (  
     [out] ICorDebugThread   **ppThread  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `ppThread`  
- [out]スレッドを表す ICorDebugThread オブジェクトのアドレスへのポインター。  
+ 入出力スレッドを表す、スレッドオブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

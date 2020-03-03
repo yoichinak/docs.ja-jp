@@ -12,19 +12,17 @@ helpviewer_keywords:
 - copying directories
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671071"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159456"
 ---
 # <a name="how-to-copy-directories"></a>方法: ディレクトリをコピーする
-このトピックでは、I/O クラスを使用して、別の場所にディレクトリの内容を同期的にコピーする方法について説明します。 
+このトピックでは、I/O クラスを使用して、別の場所にディレクトリの内容を同期的にコピーする方法について説明します。
 
-ファイルを非同期的にコピーする例については、「[非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)」を参照してください。 
+ファイルを非同期的にコピーする例については、「[非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)」を参照してください。
 
 この例では、`DirectoryCopy` メソッドの `copySubDirs` を `true` に設定することでサブディレクトリをコピーします。 `DirectoryCopy` メソッドは各サブディレクトリでそれ自体を呼び出すことで、コピーするサブディレクトリがなくなるまでサブディレクトリを再帰的にコピーします。  
   
@@ -32,6 +30,8 @@ ms.locfileid: "54671071"
  [!code-csharp[System.IO.Directory_Copy#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.IO.Directory_Copy/cs/program.cs#1)]
  [!code-vb[System.IO.Directory_Copy#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.IO.Directory_Copy/vb/Program.vb#1)]  
   
+[!INCLUDE [localized code comments](../../../includes/code-comments-loc.md)]
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.FileInfo>

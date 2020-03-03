@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-ms.openlocfilehash: d726965a921a11be1ff9c11d4fb348068b2ec0a3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f055d6e665f68586191ab760fb5658eeb5c2cb2
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262518"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087991"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 要素
-クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。  
-  
- \<configuration>  
-\<mscorlib>  
-\<cryptographySettings >  
-\<oidMap>  
-  
+クラスに対する asn.1 オブジェクト識別子 (OID) マッピングが含まれています。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<cryptographySettings**](cryptographysettings-element.md) >\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**oidMap >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -40,7 +40,7 @@ ms.locfileid: "55262518"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<oidEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|ASN.1 OID をフレンドリ名にマップします。|  
+|[\<oidEntry >](oidentry-element.md)|Asn.1 OID をフレンドリ名にマップします。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -48,10 +48,10 @@ ms.locfileid: "55262518"
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`cryptographySettings`|暗号設定を含みます。|  
-|`mscorlib`|`cryptographySettings`要素を含んでいます。|  
+|`mscorlib`|`cryptographySettings` 要素を格納します。|  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、  **\<oidMap >** 要素にそのハッシュ アルゴリズムの実装に ripemd-160 のハッシュ アルゴリズムの OID のマッピングが含まれます。  
+ 次の例は、 **\<oidMap >** 要素を使用して、RIPEMD-160 ハッシュアルゴリズムの OID とそのハッシュアルゴリズムの実装とのマッピングを格納する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -74,8 +74,9 @@ ms.locfileid: "55262518"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
-- [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
-- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+
+- [構成ファイル スキーマ](../index.md)
+- [暗号化設定スキーマ](index.md)
+- [暗号サービス](../../../../standard/security/cryptographic-services.md)
+- [暗号化クラスの設定](../../configure-cryptography-classes.md)
+- [暗号化アルゴリズムへのオブジェクト ID の割り当て](../../map-object-identifiers-to-cryptography-algorithms.md)

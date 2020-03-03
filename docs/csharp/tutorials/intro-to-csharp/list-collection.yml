@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 0de2cc0434087797b9411075a98cc11dd598ed81
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
+  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54029490"
+  ms.lasthandoff: 11/12/2019
+  ms.locfileid: "73969384"
 items:
 - durationInMinutes: 1
   content: >
@@ -22,7 +22,7 @@ items:
 - title: リストを作成する
   durationInMinutes: 2
   content: >
-    対話型ウィンドウで次のコードを実行します。 そのためには、対話型ウィンドウで次のコード ブロックを入力し (`<name>` を自分の名前に置き換えて)、**[実行]** をクリックします。
+    対話型ウィンドウで次のコードを実行します。 **[Enter focus mode]\(フォーカス モードを入力する\)** ボタンを選択します。 次に、対話型ウィンドウで次のコード ブロックを入力し (`<name>` を自分の名前に置き換えて)、**[実行]** を選択します。
 
 
     ```csharp
@@ -36,6 +36,9 @@ items:
     }
 
     ```
+
+
+    環境でこれを実行している場合は、代わりに[ローカル バージョン](arrays-and-collections.md)に関する指示に従ってください。
 
 
     文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。
@@ -56,7 +59,7 @@ items:
     作成したコレクションは <xref:System.Collections.Generic.List%601> 型を使用します。 この型は、要素のシーケンスを格納します。 要素の型を山かっこの内側で指定します。
 
 
-    この <xref:System.Collections.Generic.List%601> 型の重要な点は増減が可能で、要素を追加したり削除したりできることです。 既に記述したコードの下に、次のコードを追加します。
+    この <xref:System.Collections.Generic.List%601> 型の重要な点は増減が可能で、要素を追加したり削除したりできることです。 その内容を表示した後で内容を変更することにより、結果を確認できます。 既に記述したコードの下に、次のコードを追加します (内容を出力するループの下)。
 
 
     ```csharp
@@ -78,7 +81,7 @@ items:
     ```
 
 
-    さらに 2 つの名前をリストの末尾に追加しました。 また、1 つを削除しました。
+    さらに 2 つの名前をリストの末尾に追加しました。 また、1 つを削除しました。 このコード ブロックからの出力では、初期の内容が示された後、空白行と新しい内容が出力されます。
 
 
     <xref:System.Collections.Generic.List%601> を使用すると、**インデックス**でも個々の項目を参照できます。 `[` と `]` のトークンを使用して項目にアクセスします。 既に記述したコードの下に、次のコードを追加して試してみます。
@@ -103,7 +106,7 @@ items:
     ```
 
 
-    もう一度 **[実行]** をクリックして結果を確認します。 C# ではインデックスは 0 から始まるため、有効なインデックスの最大値はリスト内の項目の数より 1 小さくなります。
+    もう一度 **[実行]** を選択して結果を確認します。 C# ではインデックスは 0 から始まるため、有効なインデックスの最大値はリスト内の項目の数より 1 小さくなります。
 
 
     > [!NOTE]
@@ -112,7 +115,7 @@ items:
 - title: リストを検索して並び替える
   durationInMinutes: 5
   content: >
-    サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。 そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。 <xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。 これを試して動作を確認してください。  これまでに記述したコードの下に、次のコードを追加します。
+    サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。 そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。 <xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。 それを試して動作を確認してください。  これまでに記述したコードの下に、次のコードを追加します。
 
 
     ```csharp
@@ -162,7 +165,7 @@ items:
     ```
 
 
-    これにより整数のリストが作成され、最初の 2 つの整数が値 1 に設定されます。 これらは、数列の 1 つである*フィボナッチ数列*の最初の 2 つの値です。 次のフィボナッチ数はそれぞれ、その直前の 2 つの数値の合計を取得することによって得られます。 このコードを追加します。
+    これにより整数のリストが作成され、最初の 2 つの整数が値 1 に設定されます。 "*フィボナッチ数列*" (一連の数値) は、2 つの 1 から始まります。 次のフィボナッチ数はそれぞれ、その直前の 2 つの数値の合計を取得することによって得られます。 このコードを追加します。
 
 
     ```csharp
@@ -197,12 +200,40 @@ items:
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 課題完了
   durationInMinutes: 3
-  content: "コードは次のようになりましたか? \n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。\n\n> [!NOTE]\n> このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。\n"
+  content: >
+    コードは次のようになりましたか?
+
+
+    ```csharp
+
+    var fibonacciNumbers = new List<int> {1, 1};
+
+
+    while (fibonacciNumbers.Count < 20)
+
+    {
+        var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
+        var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
+
+        fibonacciNumbers.Add(previous + previous2);
+    }
+
+    foreach(var item in fibonacciNumbers)
+        Console.WriteLine(item);
+    ```
+
+
+    ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
+
+
+    > [!NOTE]
+
+    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - content: >-
-    これで、対話型チュートリアルは終了です。 これは、C# の対話型チュートリアルの最後の概要です。 [.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。 "学習の継続" 手順で、お使いのコンピューター上にプロジェクトを構築するチュートリアルに戻ってきます。
+    これで、対話型チュートリアルは終了です。 これは、C# の対話型チュートリアルの最後の概要です。 [.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 
 
-    [.NET コレクション](../../../standard/collections/index.md)の詳細については、次のトピックで学習できます。
+    [.NET コレクション](../../../standard/collections/index.md)の詳細については、次の記事で学習できます。
 
     - [コレクション型の選択](../../../standard/collections/selecting-a-collection-class.md)
 

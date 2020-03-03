@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c800b3fcc1eff5d7a669611cb0697aa8c87a37a4
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67804638"
+---
 ### <a name="dataobjectgetdata-now-retrieves-data-as-utf-8"></a>DataObject.GetData は、データを UTF-8 として取得するようになりました
 
 |   |   |

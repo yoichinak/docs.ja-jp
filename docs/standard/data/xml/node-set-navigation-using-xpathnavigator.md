@@ -3,14 +3,12 @@ title: XPathNavigator を使用するノード セットのナビゲーション
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 1a954b41-7173-40bc-8544-d430f209b1e5
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 58adf0251fdc7427f493e8bf9947c081bfccd2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 91115af03b635d7660721fac5ce8bd749953e4ff
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618122"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710571"
 ---
 # <a name="node-set-navigation-using-xpathnavigator"></a>XPathNavigator を使用するノード セットのナビゲーション
 <xref:System.Xml.XPath.XPathDocument> クラスのノード セット ナビゲーション メソッドを使用して、<xref:System.Xml.XmlDocument> または <xref:System.Xml.XPath.XPathNavigator> オブジェクト内のノード間を移動できます。 すべてのノード間の移動、または <xref:System.Xml.XPath.XPathNavigator> クラスの選択メソッドによって返される選択されたノード セット間を移動できます。  
@@ -36,21 +34,21 @@ ms.locfileid: "54618122"
 ## <a name="comments-and-processing-instruction-node-navigation"></a>コメントおよび処理命令ノードのナビゲーション  
  次の <xref:System.Xml.XPath.XPathNavigator> クラスのメソッドは XML ドキュメント内の他のノードからコメントまたは処理命令に移動するのに有効です。  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveTo%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNext%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToPrevious%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirst%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToParent%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToId%2A>  
   
 ## <a name="see-also"></a>関連項目
 

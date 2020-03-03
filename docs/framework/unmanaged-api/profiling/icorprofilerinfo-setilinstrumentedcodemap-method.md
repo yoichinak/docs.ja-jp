@@ -15,81 +15,86 @@ helpviewer_keywords:
 ms.assetid: bce1dcf8-b4ec-4e73-a917-f2df1ad49c8a
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d4780242dc34f31ecd0ff0dc2c339cdaa30278a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99e473268fd0d5bb8ce120b97576277949b86508
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721163"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868998"
 ---
 # <a name="icorprofilerinfosetilinstrumentedcodemap-method"></a>ICorProfilerInfo::SetILInstrumentedCodeMap メソッド
-指定された Microsoft intermediate language (MSIL) のマップ エントリを使用して、指定された関数のコード マップを設定します。  
-  
+
+指定された MSIL (Microsoft 中間言語) マップエントリを使用して、指定された関数のコードマップを設定します。
+
 > [!NOTE]
->  呼び出す .NET Framework version 2.0 で`SetILInstrumentedCodeMap`で、`FunctionID`ジェネリック関数の特定のアプリケーション ドメインで表すには、アプリケーション ドメインでは、その関数のすべてのインスタンスに影響します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-HRESULT SetILInstrumentedCodeMap(  
-    [in]  FunctionID functionId,  
-    [in]  BOOL       fStartJit,  
-    [in]  ULONG      cILMapEntries,  
-    [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `functionId`  
- [in]コード マップを設定する対象の関数の ID。  
-  
- `fStartJit`  
- [in]示すブール値かどうかを呼び出し、`SetILInstrumentedCodeMap`メソッドは、特定の 1 つ目`FunctionID`します。 設定`fStartJit`に`true`最初の呼び出しで`SetILInstrumentedCodeMap`の指定された`FunctionID`、および`false`以降。  
-  
- `cILMapEntries`  
- [in]要素の数、`cILMapEntries`配列。  
-  
- `rgILMapEntries`  
- [in]COR_IL_MAP 構造体の MSIL オフセットを指定の配列。  
-  
-## <a name="remarks"></a>Remarks  
- プロファイラーは、(たとえば、指定されたソース行に達したときに通知する場合など) には、そのメソッドをインストルメント化するために多くの場合、メソッドのソース コード内のステートメントを挿入します。 `SetILInstrumentedCodeMap` 元の MSIL 命令を新しい場所にマップするプロファイラーを有効にします。 プロファイラーを使用できる、 [icorprofilerinfo::getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)特定のネイティブ オフセットの元の MSIL オフセットを取得します。  
-  
- デバッガーには、古い各オフセットが、変更されていない元の MSIL コード内のオフセット、MSIL を指すことと、新しい各オフセットがインストルメント化された新しいコード内の MSIL オフセットを指すことが前提としています。 マップは、昇順で並べ替え 必要があります。 適切に機能するステップの場合これらのガイドラインに従います。  
-  
--   インストルメント化された MSIL コードの順序を変更しません。  
-  
--   元の MSIL コードを削除しないでください。  
-  
--   マップでは、プログラム データベース (PDB) ファイルからのすべてのシーケンス ポイントのエントリを含めます。 マップに存在しないエントリが補間されません。 そのため、次のマップを考えてみます。  
-  
-     (新しい 0、0)  
-  
-     (新しい 5、10)  
-  
-     (新しい 9、20)  
-  
-    -   0、1、2、3、または 4 の以前のオフセットは、新しいオフセット 0 にマップされます。  
-  
-    -   5、6、7、または 8 の以前のオフセットは、10 の新しいオフセットにマップされます。  
-  
-    -   9 以降の以前のオフセットは、20 の新しいオフセットにマップされます。  
-  
-    -   0、1、2、3、4、5、6、7、8、または 9 の新しいオフセットは、以前のオフセット 0 にマップされます。  
-  
-    -   10、11、12、13、14、15、16、17、18 または 19 の新しいオフセットは、以前のオフセット 5 にマップされます。  
-  
-    -   20 以上の新しいオフセットは、以前のオフセット 9 にマップされます。  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** CorProf.idl、CorProf.h  
-  
- **ライブラリ:** CorGuids.lib  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
-  
+> .NET Framework バージョン2.0 では、特定のアプリケーションドメインのジェネリック関数を表す `FunctionID` で `SetILInstrumentedCodeMap` を呼び出すと、アプリケーションドメイン内のその関数のすべてのインスタンスに影響します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+HRESULT SetILInstrumentedCodeMap(
+    [in]  FunctionID functionId,
+    [in]  BOOL       fStartJit,
+    [in]  ULONG      cILMapEntries,
+    [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);
+```
+
+## <a name="parameters"></a>パラメーター
+
+`functionId`\
+からコードマップを設定する関数の ID。
+
+`fStartJit`\
+から`SetILInstrumentedCodeMap` メソッドの呼び出しが特定の `FunctionID`の最初のものかどうかを示すブール値。 指定した `FunctionID`の `SetILInstrumentedCodeMap` の最初の呼び出しで `true` に `fStartJit` を設定し、それ以降は `false` を設定します。
+
+`cILMapEntries`\
+から`cILMapEntries` 配列内の要素の数。
+
+`rgILMapEntries`\
+からCOR_IL_MAP 構造体の配列。それぞれが MSIL オフセットを指定します。
+
+## <a name="remarks"></a>コメント
+
+多くの場合、プロファイラーは、メソッドのソースコード内にステートメントを挿入して、そのメソッドをインストルメント化します (たとえば、特定のソース行に到達したときに通知します)。 `SetILInstrumentedCodeMap` を使用すると、プロファイラーは元の MSIL 命令を新しい場所にマップできます。 プロファイラーは、 [ICorProfilerInfo:: GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)メソッドを使用して、指定されたネイティブオフセットの元の MSIL オフセットを取得できます。
+
+デバッガーは、古い各オフセットが元の変更されていない MSIL コード内の MSIL オフセットを参照し、新しい各オフセットが新しいインストルメント化されたコード内の MSIL オフセットを参照することを想定します。 マップは昇順に並べ替える必要があります。 ステップ実行を正常に行うには、次のガイドラインに従ってください。
+
+- インストルメント化された MSIL コードの順序を変更しません。
+
+- 元の MSIL コードは削除しないでください。
+
+- マップ内のプログラムデータベース (PDB) ファイルからのすべてのシーケンスポイントのエントリを含めます。 マップでは、不足しているエントリは補間されません。 そのため、次のマップを指定します。
+
+  (古い0、新規 0)
+
+  (5 歳、10新規)
+
+  (9 歳、20新規)
+
+  - 古いオフセット0、1、2、3、または4が新しいオフセット0にマップされます。
+
+  - 古いオフセット5、6、7、または8は、新しいオフセット10にマップされます。
+
+  - 9以上の古いオフセットは、新しいオフセット20にマップされます。
+
+  - 新しいオフセット0、1、2、3、4、5、6、7、8、または9が古いオフセット0にマップされます。
+
+  - 新しいオフセット10、11、12、13、14、15、16、17、18、19は、古いオフセット5にマップされます。
+
+  - 20以上の新しいオフセットは、古いオフセット9にマップされます。
+
+.NET Framework 3.5 およびそれ以前のバージョンでは、 [CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)メソッドを呼び出すことによって `rgILMapEntries` 配列を割り当てます。 ランタイムはこのメモリの所有権を取得するため、プロファイラーは解放を試みることはできません。
+
+## <a name="requirements"></a>要件
+
+**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
+
+**ヘッダー** : CorProf.idl、CorProf.h
+
+**ライブラリ:** CorGuids.lib
+
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]
+
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

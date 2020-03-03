@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COM [WCF]
 - WCF, COM integration
 ms.assetid: c98bda3e-6779-419e-8e6d-9aa94053026d
-ms.openlocfilehash: 8fa802ce20bfde3579258a5d34bc5d7f68aaaea3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51626da6e97e346f43cfe606a5164024580a2ac7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046997"
 ---
 # <a name="integrating-with-com-applications"></a>COM アプリケーションとの統合
 Windows Communication Foundation (WCF) サービスは、WCF サービス モニカーを使用して、既存のコードに直接統合できます。 サービス モニカーは Office VBA、Visual Basic 6.0、または Visual C++ 6.0 などの幅広い COM ベースの開発環境で使用可能です。  
@@ -42,4 +42,5 @@ Windows Communication Foundation (WCF) サービスは、WCF サービス モニ
  <xref:System.ServiceModel>  
   
 ## <a name="see-also"></a>関連項目
+
 - [COM+ アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)

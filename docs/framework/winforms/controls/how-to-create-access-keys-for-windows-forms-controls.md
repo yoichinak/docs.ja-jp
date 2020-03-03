@@ -1,6 +1,6 @@
 ---
-title: '方法: Windows フォーム コントロールのアクセス キーを作成します。'
-ms.date: 03/30/2017
+title: コントロールのアクセスキーを作成する
+ms.date: 08/20/2019
 dev_langs:
 - csharp
 - vb
@@ -20,40 +20,48 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 1bfbd2c6cd8aae410dfed506437bc85fbcb1d311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f6b0a5838cacfc1189fba819a54b3423d567ea0
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597854"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76731173"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>方法: Windows フォーム コントロールのアクセス キーを作成します。
-*アクセス キー*がメニューやメニュー項目では、ボタンなどのコントロールのラベルのテキストに下線付きの文字。 アクセス キーでは、ユーザーことができます「ボタンをクリック」を組み合わせて定義済みのアクセス キーを持つ、ALT キーを押してします。 たとえば、フォームを印刷する手順を実行するボタンとその`Text`プロパティが「印刷」に設定されて、文字"P"により、文字"P"を実行時に、ボタンのテキストに下線が引かあります前にアンパサンドを追加します。 ユーザーには、ALT キーを押しながら P キーを押して、ボタンに関連付けられているコマンドを実行できます。 フォーカスを受け取ることはできませんが、コントロールのアクセス キーを持つことはできません。  
-  
-### <a name="to-create-an-access-key-for-a-control"></a>コントロールのアクセス キーを作成するには  
-  
-1.  設定、`Text`プロパティ ショートカットとなる文字の前にアンパサンドを含む文字列 (&)。  
-  
-    ```vb  
-    ' Set the letter "P" as an access key.  
-    Button1.Text = "&Print"  
-    ```  
-  
-    ```csharp  
-    // Set the letter "P" as an access key.  
-    button1.Text = "&Print";  
-    ```  
-  
-    ```cpp  
-    // Set the letter "P" as an access key.  
-    button1->Text = "&Print";  
-    ```  
-  
-    > [!NOTE]
-    >  アクセス キーを作成することがなく、キャプションにアンパサンドを含める、2 つのアンパサンドを含める (& &)。 単一のアンパサンドがキャプションに表示され、文字に下線を付けるありません。  
-  
-## <a name="see-also"></a>関連項目
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a>方法: Windows フォームコントロールのアクセスキーを作成する
+
+*アクセスキー*は、メニュー、メニュー項目、またはボタンなどのコントロールのラベルのテキスト内の下線付きの文字です。 ユーザーは、アクセスキーを使用して、Alt キーを定義済みのアクセスキーと組み合わせて押すことで、ボタンを "クリック" できます。 たとえば、ボタンがフォームを印刷するためのプロシージャを実行していて、その `Text` プロパティが "Print" に設定されている場合、文字 "P" の前にアンパサンドを追加すると、実行時にボタンのテキストに文字 "P" が下線付きで表示されます。 ユーザーは、Alt + P キーを押して、ボタンに関連付けられているコマンドを実行できます。
+
+フォーカスを受け取ることができないコントロールは、アクセスキーを持つことができません。
+
+## <a name="programmatic"></a>プログラムによる
+
+`Text` プロパティを、ショートカットにする文字の前にアンパサンド (&) を含む文字列に設定します。
+
+```vb
+' Set the letter "P" as an access key.
+Button1.Text = "&Print"
+```
+
+```csharp
+// Set the letter "P" as an access key.
+button1.Text = "&Print";
+```
+
+```cpp
+// Set the letter "P" as an access key.
+button1->Text = "&Print";
+```
+
+> [!NOTE]
+> アクセスキーを作成せずにキャプションにアンパサンドを使用するには、2つのアンパサンド (& &) を含めます。 キャプションにはアンパサンドが1つ表示され、下線付きの文字はありません。
+
+## <a name="designer"></a>デザイナー
+
+Visual Studio の **[プロパティ]** ウィンドウで、 **[Text]** プロパティを、アクセスキーにする文字の前にアンパサンド (' & ') を含む文字列に設定します。 たとえば、文字 "P" をアクセスキーとして設定するには、「 **& Print**」と入力します。
+
+## <a name="see-also"></a>参照
+
 - <xref:System.Windows.Forms.Button>
-- [方法: Windows フォームのボタン クリックに応答するには](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [方法: によって表示されるテキストを設定、Windows フォーム コントロール](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [各 Windows フォーム コントロールのラベル設定とショートカットの作成](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [各 Windows フォーム コントロールのラベル設定とショートカットの作成](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

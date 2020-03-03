@@ -1,6 +1,5 @@
 ---
 title: unchecked キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - unchecked_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
-ms.openlocfilehash: 44301333f7a36e6b0baa6ea9e089d930bb485a45
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238456"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713002"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# リファレンス)
 
@@ -41,8 +40,8 @@ unchecked コンテキストでは、式が変換先の型の範囲外の値を�
 
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [Checked と Unchecked](checked-and-unchecked.md)
 - [checked](checked.md)

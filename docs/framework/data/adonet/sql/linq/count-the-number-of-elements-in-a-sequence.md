@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ccbe5d54-c9eb-4b14-b0ab-f628483c5f99
-ms.openlocfilehash: 546417cc0b4aed7fa092ddb25fe37fa8d95d0e91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74e24aeb64b0097cba3975e76475034e6bb9544d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510483"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247700"
 ---
 # <a name="count-the-number-of-elements-in-a-sequence"></a>シーケンス内の要素数のカウント
 <xref:System.Linq.Enumerable.Count%2A> 演算子を使用すると、シーケンス内の要素数をカウントできます。  
@@ -32,5 +32,6 @@ ms.locfileid: "54510483"
  [!code-vb[DLinqQueryExamples#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>関連項目
-- [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+
+- [集計クエリ](aggregate-queries.md)
+- [サンプル データベースのダウンロード](downloading-sample-databases.md)

@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
-ms.openlocfilehash: 7619dbfcdb0a3a219c9245d30518ffec8b586360
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a2723a445c71dd883492907587f8cbe7b89666a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613217"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 配信オブジェクト モデルを Atom や RSS に割り当てる方法
 Windows Communication Foundation (WCF) 配信サービスを開発する場合は、フィードと、次のクラスを使用して項目を作成します。  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.TextSyndicationContent>  
+- <xref:System.ServiceModel.Syndication.TextSyndicationContent>  
   
--   <xref:System.ServiceModel.Syndication.UrlSyndicationContent>  
+- <xref:System.ServiceModel.Syndication.UrlSyndicationContent>  
   
--   <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
+- <xref:System.ServiceModel.Syndication.XmlSyndicationContent>  
   
  <xref:System.ServiceModel.Syndication.SyndicationFeed> はフォーマッタが定義されている任意の配信フォーマットにシリアル化できます。 WCF は、2 つのフォーマッタが付属しています:<xref:System.ServiceModel.Syndication.Atom10FeedFormatter>と<xref:System.ServiceModel.Syndication.Rss20FeedFormatter>します。  
   
@@ -398,6 +398,7 @@ Windows Communication Foundation (WCF) 配信サービスを開発する場合�
  `</content>`  
   
 ## <a name="see-also"></a>関連項目
+
 - [WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
 - [配信のアーキテクチャ](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
 - [方法: 基本的な RSS フィードを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)

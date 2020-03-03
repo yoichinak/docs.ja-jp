@@ -10,14 +10,12 @@ helpviewer_keywords:
 - for loop, parallel construction in .NET
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f2070562ba0910b5cac951e925bd9c5f0e7f68fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139657"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>方法: 単純な Parallel.For ループを記述する
 
@@ -46,7 +44,7 @@ ms.locfileid: "54574925"
 
 ## <a name="the-delegate"></a>デリゲート
 
-この <xref:System.Threading.Tasks.Parallel.For%2A> のオーバーロードの 3 番目のパラメーターは、`Action<int>` 型 (C#) または`Action(Of Integer)` 型 (Visual Basic) のデリゲートです。 `Action` デリゲートは、0 種類、1 種類、または 16 種類のパラメーターのいずれがあっても常に void を返します。 Visual Basic では、`Action` の動作は `Sub` で定義されます。 例では、ラムダ式を使用してデリゲートを作成していますが、他の方法でも同様にデリゲートを作成することができます。 詳細については、「[PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
+この <xref:System.Threading.Tasks.Parallel.For%2A> のオーバーロードの 3 番目のパラメーターは、`Action<int>` 型 (C#) または`Action(Of Integer)` 型 (Visual Basic) のデリゲートです。 `Action` デリゲートは、0、1、または 16 の型パラメーターのいずれがあっても常に void を返します。 Visual Basic では、`Action` の動作は `Sub` で定義されます。 例では、ラムダ式を使用してデリゲートを作成していますが、他の方法でも同様にデリゲートを作成することができます。 詳細については、「[PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
 
 ## <a name="the-iteration-value"></a>イテレーション値
 

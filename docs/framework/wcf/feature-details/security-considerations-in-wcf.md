@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 6cc19f7719b9cdbcd3852c99f450c1d728dc833b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000767"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF でのセキュリティの考慮事項
 このセクションのトピックでは、Windows Communication Foundation (WCF) アプリケーションを設計するときに考慮すべきさまざまなセキュリティ関連の項目を一覧表示します。  
@@ -51,4 +51,5 @@ ms.locfileid: "54745982"
  [セキュリティ ガイドラインとベスト プラクティス](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)

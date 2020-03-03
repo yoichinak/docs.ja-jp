@@ -15,42 +15,41 @@ helpviewer_keywords:
 ms.assetid: f4984a8c-4c0e-4460-9aa1-d022b3621228
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: db1572c035242a4a143ee435957409e5d16fca1f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccff575974093de0bf00b257cba78c509f9cbd92
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607174"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134774"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit メソッド
-仮想メモリの制限を変更するホストを要求します。  
+仮想メモリの制限を変更するようにホストに要求します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RequestVirtualMemLimit (  
     [in] SIZE_T       sztMaxVirtualMemMB,  
     [in, out] SIZE_T* psztNewMaxVirtualMemMB  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `sztMaxVirtualMemMB`  
- [in]メモリ割り当ての要求されたサイズ。  
+ から割り当てられるメモリの要求サイズ。  
   
  `psztNewMaxVirtualMemMB`  
  [入力、出力]割り当てられたメモリの実際のサイズへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IGCHostControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)

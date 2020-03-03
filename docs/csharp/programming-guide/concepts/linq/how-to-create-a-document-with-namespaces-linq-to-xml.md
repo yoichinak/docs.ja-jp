@@ -1,15 +1,15 @@
 ---
-title: '方法: 名前空間を持つドキュメントを作成する (C#) (LINQ to XML)'
+title: 名前空間を持つドキュメントを作成する方法 (C#) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 37e63c57-f86d-47ac-88a7-2c2d107def30
-ms.openlocfilehash: 9277253e885ac27ccb7d98221366d404ce0902e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 429b0b0b41f2201b983f931e469b25ff406b91ac
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618530"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141324"
 ---
-# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>方法: 名前空間を持つドキュメントを作成する (C#) (LINQ to XML)
+# <a name="how-to-create-a-document-with-namespaces-c-linq-to-xml"></a>名前空間を持つドキュメントを作成する方法 (C#) (LINQ to XML)
 このトピックでは、名前空間を持つドキュメントを作成する方法について説明します。  
   
 ## <a name="example"></a>例  
@@ -123,7 +123,7 @@ Console.WriteLine(root);
   
  ただし、この方法はパフォーマンスに影響を与えます。 拡張名が含まれた文字列を [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] に渡すたびに、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は名前を解析して、アトミック化された名前空間を検索し、アトミック化された名前を見つける必要があります。 この処理は CPU 時間を消費します。 パフォーマンスが重要な場合には、<xref:System.Xml.Linq.XNamespace> オブジェクトを明示的に宣言して使用することをお勧めします。  
   
- パフォーマンスが重要な場合、詳細については、「[XName オブジェクトの事前アトミック化 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/pre-atomization-of-xname-objects-linq-to-xml.md)」を参照してください  
+ パフォーマンスが重要な場合、詳細については、「[XName オブジェクトの事前アトミック化 (LINQ to XML) (C#)](./pre-atomization-of-xname-objects-linq-to-xml.md)」を参照してください  
   
 ```csharp  
 // Create an XML tree in a namespace, with a specified prefix  
@@ -144,4 +144,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>関連項目
 
-- [XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)

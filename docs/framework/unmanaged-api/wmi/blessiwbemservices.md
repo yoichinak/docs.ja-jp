@@ -1,6 +1,6 @@
 ---
 title: BlessIWbemServices 関数 (アンマネージ API リファレンス)
-description: BlessIWbemServices 関数では、ユーザーの資格情報が、IWbemServices クラスへのアクセスを許可するかどうかを示します。
+description: BlessIWbemServices 関数は、ユーザー資格情報が IWbemServices クラスへのアクセスを許可しているかどうかを示します。
 ms.date: 11/06/2017
 api_name:
 - BlessIWbemServices
@@ -14,23 +14,21 @@ helpviewer_keywords:
 - BlessIWbemServices function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: b127c48a300af01c8e7b32d422e42fbc4796420d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 946d29892052ea69c2a8a3bf11e7be7a1b2d7068
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716079"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73138777"
 ---
 # <a name="blessiwbemservices-function"></a>BlessIWbemServices 関数
-ユーザーの資格情報が指定したへのアクセスを許可するかどうかを示す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)クラス。   
+ユーザー資格情報が、指定された[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)クラスへのアクセスを許可するかどうかを示します。   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT BlessIWbemServices (
    [in] IWbemServices* pIWbemServices,
    [in] BSTR strUser, 
@@ -43,39 +41,44 @@ HRESULT BlessIWbemServices (
 
 ## <a name="parameters"></a>パラメーター
 
-`pIWbemServices`  
-[in]ポインター、 [IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクトの権限が必要です。
+`pIWbemServices`\
+から権限が必要な[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクトへのポインター。
 
-`strUser`  
-[in]ユーザー名。
+`strUser`\
+からユーザー名。
 
-`strPassword`  
-[in]関連付けられているパスワード`strUser`します。
+`strPassword`\
+から`strUser`に関連付けられているパスワード。
 
-`strAuthority` [in]ユーザーのドメイン名。 参照してください、 [ConnectServerWmi](connectserverwmi.md)関数の詳細についてはします。
+`strAuthority`\
+からユーザーのドメイン名。 詳細については、「 [Connectserverwmi](connectserverwmi.md)関数」を参照してください。
 
-`impLevel` [in]偽装レベル。
+`impLevel`\
+から偽装レベル。
 
-`authnLevel` [in]承認レベル。
+`authnLevel`\
+から承認レベル。
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WinError.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *winerror.h*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-| `E_INVALIDARG` | 0x80070057 | 1 つまたは複数の引数が無効です。 |
-| `E_POINTER` | 0x80004003 | `pIWbemServices` は `null` です。 | 
-| `E_FAIL` | 0x80000008 | 不明なエラーが発生しました。 |
-| `E_OUTOFMEMORY` | 0x80000002 | メモリ不足のためでは、操作を実行します。 | 
-| `S_OK` | 0 | 関数呼び出しに成功しました。 | 
+| `E_INVALIDARG` | 0x80070057 | 1つ以上の引数が無効です。 |
+| `E_POINTER` | 0x80004003 | `pIWbemServices` が `null` です。 | 
+| `E_FAIL` | 0x80000008 | 特定できないエラーが発生しました。 |
+| `E_OUTOFMEMORY` | 0x80000002 | 操作を実行するのに十分なメモリがありません。 | 
+| `S_OK` | 0 | 関数の呼び出しに成功しました。 | 
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** WMINet_Utils.idl  
+ **ヘッダー:** WMINet_Utils  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: db499637-7ba9-421e-b8b1-35856995e80b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2ae9bc5925634f8bba71731a0c51eb19cf9eec04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b27e7a2cdcbfc3a88a734230118d99c2dd5c700e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663954"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73129538"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName メソッド
 モジュールのファイル名を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT GetName(  
     [in] ULONG32 cchName,  
     [out] ULONG32 *pcchName,  
@@ -37,21 +35,21 @@ HRESULT GetName(
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `cchname`  
  [in] `szName` 配列のサイズ。  
   
  `pcchName`  
- [in]返される名前の長さへのポインター。  
+ から返された名前の長さへのポインター。  
   
  `szName`  
- [out]返される名前を格納する配列。  
+ 入出力返された名前を格納する配列。  
   
 ## <a name="remarks"></a>Remarks  
- `GetName`モジュールのファイル名がディスク上の名前と一致する場合、メソッドが S_OK HRESULT を返します。 `GetName` 名が動的またはメモリ内モジュールなどの作成された場合は、HRESULT を S_FALSE を返します。  
+ モジュールのファイル名がディスク上の名前と一致する場合、`GetName` メソッドは S_OK HRESULT を返します。 動的またはメモリ内モジュールのような名前の場合、`GetName` は S_FALSE HRESULT を返します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -60,5 +58,3 @@ HRESULT GetName(
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-
-

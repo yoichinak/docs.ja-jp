@@ -1,18 +1,18 @@
 ---
-title: '方法: 指定した属性または名前 (Visual Basic) のファイルをクエリ'
+title: '方法: 指定された属性または名前のファイルを照会する'
 ms.date: 07/20/2015
 ms.assetid: b26026a3-3f43-448f-a582-259997af6be0
-ms.openlocfilehash: 5ad3ec0c18d142e8db3eddce8902b023ff00ca4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 970fb862b843016425e3a0f0c2bcf00e6fcba3a6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733153"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75342137"
 ---
-# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>方法: 指定した属性または名前 (Visual Basic) のファイルをクエリ
+# <a name="how-to-query-for-files-with-a-specified-attribute-or-name-visual-basic"></a>方法: 指定された属性または名前のファイルを照会する (Visual Basic)
 この例では、指定されたディレクトリ ツリーで、指定されたファイル名拡張子 (".txt" など) を持つすべてのファイルを検索する方法を示します。 また、ファイルの作成日時に基づいて、ツリー内の最も新しいファイルまたは最も古いファイルを返す方法も示します。  
   
-## <a name="example"></a>例  
+## <a name="example"></a>使用例  
   
 ```vb  
 Module FindFileByExtension  
@@ -60,9 +60,10 @@ Module FindFileByExtension
 End Module  
 ```  
   
-## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework version 3.5 以降では、System.Core.dll への参照を対象とするプロジェクトを作成し、 `Imports` System.Linq 名前空間のステートメント。  
+## <a name="compile-the-code"></a>コードのコンパイル  
+System. Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソールアプリケーションプロジェクトを作成します。
   
 ## <a name="see-also"></a>関連項目
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
 - [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

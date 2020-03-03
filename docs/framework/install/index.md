@@ -1,9 +1,13 @@
 ---
 title: .NET framework のインストール ガイド
 description: Windows に .NET Framework をインストールする方法について説明します。
-author: rlander
-ms.author: mairaw
 ms.date: 08/03/2017
+ms.openlocfilehash: b14be7a429138069545ede835025dff33b4f3919
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75716361"
 ---
 # <a name="installation-guide"></a>インストール ガイド
 
@@ -23,7 +27,7 @@ ms.date: 08/03/2017
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework のダウンロード](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)
+- [.NET Framework のダウンロード](https://dotnet.microsoft.com/download)
 - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)
 - [開発者向けの .NET Framework のインストール](guide-for-developers.md)
 - [開発者向けの .NET Framework の展開](../deployment/deployment-guide-for-developers.md)

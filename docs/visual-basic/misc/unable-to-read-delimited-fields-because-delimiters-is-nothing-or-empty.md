@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_DelimitersNothing
 ms.assetid: 94f64c48-8e17-449d-b92a-0426efec879c
-ms.openlocfilehash: a431c8df582a3d02c8bfc9ac259725087aacb05e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83e5c460f4395f2effe190e7d83299f9f7ab986d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663194"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619940"
 ---
 # <a name="unable-to-read-delimited-fields-because-delimiters-is-nothing-or-empty"></a>区切り記号がないか、または空であるため、区切り記号で分けられたフィールドを読み取れません
 `TextFieldParser` プロパティが `Delimiters` に設定されているか、または空であるため、 `Nothing` をファイルから読み取ることができません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   `Delimiters`に対して有効な値を指定します。  
+- `Delimiters`に対して有効な値を指定します。  
   
 ## <a name="see-also"></a>関連項目
 

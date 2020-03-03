@@ -11,14 +11,12 @@ helpviewer_keywords:
 - culture, custom case mappings
 - culture-insensitive string operations, method overloads
 ms.assetid: 579ef891-1f83-4c63-9ebd-2f40406b5b91
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 77269cd9cdb922c1f9576afa93d6599ec7a834e4
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 183078b1f7a3eb3530fea8af06dbb59055d7d25d
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562123"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120798"
 ---
 # <a name="performing-culture-insensitive-string-operations"></a>カルチャを認識しない文字列操作の実行
 カルチャを認識する文字列操作を既定で実行するほとんどの .NET Framework メソッドには、<xref:System.Globalization.CultureInfo> パラメーターを渡すことによって使用するカルチャを明示的に指定できるメソッド オーバーロードが用意されています。 これらのオーバーロードによって、大文字小文字のマップおよび並べ替え規則のカルチャによる違いを排除し、カルチャを認識しない結果を確保できます。  
@@ -44,5 +42,5 @@ ms.locfileid: "46562123"
 
 ## <a name="see-also"></a>関連項目
 
-- [並べ替え重みテーブル (Windows システム上の .NET 用)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [並べ替え重みテーブル (Windows システム上の .NET 用)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [デフォルト Unicode 照合基本テーブル (Linux と macOS 上の .NET Core 用)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

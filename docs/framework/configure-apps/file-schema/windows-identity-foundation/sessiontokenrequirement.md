@@ -3,21 +3,22 @@ title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 0c575e02862884e8f7ecf062138c36fe731f8e19
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 968c48df9e92a1dfbfb6e248b06cf4f97cece8b4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271903"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251826"
 ---
-# <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
-構成を提供、<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>クラスまたは派生クラス。  
+# <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement >
+<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>クラスまたは派生クラスの構成を提供します。  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<add>  
-\<sessionTokenRequirement>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> の追加**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sessionTokenRequirement >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,7 +42,7 @@ ms.locfileid: "55271903"
   
 |属性|説明|  
 |---------------|-----------------|  
-|有効期間|セッション トークンの有効期間を指定します。|  
+|有効期間|セッショントークンの有効期間を指定します。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -50,7 +51,7 @@ ms.locfileid: "55271903"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|トークン ハンドラー コレクションには、指定したセキュリティ トークン ハンドラーを追加します。|  
+|[\<add>](add.md)|指定されたセキュリティトークンハンドラーをトークンハンドラーコレクションに追加します。|  
   
 ## <a name="example"></a>例  
   

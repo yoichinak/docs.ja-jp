@@ -9,12 +9,12 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: c5dd567fa9f5db69c52072a1cc67b5c574f8e1f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a18cc364d625cc98f77e63b0f361980ef574e8a5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623873"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611891"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>パフォーマンスの最適化:レイアウトとデザイン
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの設計によっては、レイアウトの計算やオブジェクト参照の検証で不要なオーバーヘッドが発生して、パフォーマンスに影響が及ぶことがあります。 オブジェクトの作成 (特に実行時の作成) はアプリケーションのパフォーマンス特性に影響する可能性があります。  
@@ -26,30 +26,30 @@ ms.locfileid: "54623873"
   
  レイアウト システムは、コレクションの子メンバーごとに、測定パスと配置パスという 2 つのパスを実行します。 各子オブジェクトのオーバーライドされた実装を提供する、<xref:System.Windows.UIElement.Measure%2A>と<xref:System.Windows.UIElement.Arrange%2A>メソッドは独自の特定のレイアウト動作を提供するためにします。 簡単に言うと、レイアウトは、要素のサイズ測定、配置、画面上への描画を繰り返す再帰的なシステムです。  
   
--   子<xref:System.Windows.UIElement>オブジェクトは最初そのコア プロパティを測定することで、レイアウト プロセスを開始します。  
+- 子<xref:System.Windows.UIElement>オブジェクトは最初そのコア プロパティを測定することで、レイアウト プロセスを開始します。  
   
--   オブジェクトの<xref:System.Windows.FrameworkElement>など、サイズに関連したプロパティ<xref:System.Windows.FrameworkElement.Width%2A>、 <xref:System.Windows.FrameworkElement.Height%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>、評価されます。  
+- オブジェクトの<xref:System.Windows.FrameworkElement>など、サイズに関連したプロパティ<xref:System.Windows.FrameworkElement.Width%2A>、 <xref:System.Windows.FrameworkElement.Height%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>、評価されます。  
   
--   <xref:System.Windows.Controls.Panel>-など特定のロジックが適用される、<xref:System.Windows.Controls.DockPanel.Dock%2A>のプロパティ、 <xref:System.Windows.Controls.DockPanel>、または<xref:System.Windows.Controls.StackPanel.Orientation%2A>のプロパティ、<xref:System.Windows.Controls.StackPanel>します。  
+- <xref:System.Windows.Controls.Panel>-など特定のロジックが適用される、<xref:System.Windows.Controls.DockPanel.Dock%2A>のプロパティ、 <xref:System.Windows.Controls.DockPanel>、または<xref:System.Windows.Controls.StackPanel.Orientation%2A>のプロパティ、<xref:System.Windows.Controls.StackPanel>します。  
   
--   すべての子オブジェクトが測定された後、コンテンツが配置されます。  
+- すべての子オブジェクトが測定された後、コンテンツが配置されます。  
   
--   子オブジェクトのコレクションが画面に描画されます。  
+- 子オブジェクトのコレクションが画面に描画されます。  
   
  以下のアクションが発生すると、再びレイアウト パス プロセスが呼び出されます。  
   
--   子オブジェクトがコレクションに追加された場合。  
+- 子オブジェクトがコレクションに追加された場合。  
   
--   A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>子オブジェクトに適用されます。  
+- A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>子オブジェクトに適用されます。  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A>子オブジェクトのメソッドが呼び出されます。  
+- <xref:System.Windows.UIElement.UpdateLayout%2A>子オブジェクトのメソッドが呼び出されます。  
   
--   測定パスや配置パスに影響を与えるものとしてメタデータでマークされている依存関係プロパティの値が変更された場合。  
+- 測定パスや配置パスに影響を与えるものとしてメタデータでマークされている依存関係プロパティの値が変更された場合。  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>可能な場合は最も効率的なパネルを使用する  
  レイアウト動作に直接基づくレイアウト プロセスの複雑さ、 <xref:System.Windows.Controls.Panel>-派生を使用する要素。 たとえば、<xref:System.Windows.Controls.Grid>または<xref:System.Windows.Controls.StackPanel>コントロールよりも多くの機能を提供する、<xref:System.Windows.Controls.Canvas>コントロール。 はるかに多くの機能が用意されていますが、その代償として、パフォーマンスへの負荷も高くなります。 ただし、機能が必要としない場合、<xref:System.Windows.Controls.Grid>コントロールが提供するなどの低コストの代替手段を使用する必要があります、<xref:System.Windows.Controls.Canvas>やカスタム パネル。  
   
- 詳細については、「[Panels Overview](../../../../docs/framework/wpf/controls/panels-overview.md)」を参照してください。  
+ 詳細については、「[パネルの概要](../controls/panels-overview.md)」を参照してください。  
   
 ### <a name="update-rather-than-replace-a-rendertransform"></a>RenderTransform は置き換えずに更新する  
  更新することができます、<xref:System.Windows.Media.Transform>の値に置換することではなく、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティ。 アニメーションを含むシナリオでは特にこれが当てはまります。 既存の更新によって<xref:System.Windows.Media.Transform>、不要なレイアウト計算を開始することを回避します。  
@@ -64,19 +64,20 @@ ms.locfileid: "54623873"
   
  ツリーをトップダウンで作成する方法を次のコード例に示します。  
   
- [!code-csharp[Performance#PerformanceSnippet1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
- [!code-vb[Performance#PerformanceSnippet1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
+ [!code-csharp[Performance#PerformanceSnippet1](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/Window1.xaml.cs#performancesnippet1)]
+ [!code-vb[Performance#PerformanceSnippet1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Performance/visualbasic/window1.xaml.vb#performancesnippet1)]  
   
- 論理ツリーについて詳しくは、「[WPF のツリー](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)」をご覧ください。  
+ 論理ツリーについて詳しくは、「[WPF のツリー](trees-in-wpf.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
-- [WPF アプリケーションのパフォーマンスの最適化](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
-- [アプリケーション パフォーマンスの計画](../../../../docs/framework/wpf/advanced/planning-for-application-performance.md)
-- [ハードウェアの活用](../../../../docs/framework/wpf/advanced/optimizing-performance-taking-advantage-of-hardware.md)
-- [2D グラフィックスとイメージング](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [オブジェクトの動作](../../../../docs/framework/wpf/advanced/optimizing-performance-object-behavior.md)
-- [アプリケーション リソース](../../../../docs/framework/wpf/advanced/optimizing-performance-application-resources.md)
-- [Text](../../../../docs/framework/wpf/advanced/optimizing-performance-text.md)
-- [データ バインディング](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
-- [パフォーマンスに関するその他の推奨事項](../../../../docs/framework/wpf/advanced/optimizing-performance-other-recommendations.md)
-- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)
+
+- [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)
+- [アプリケーション パフォーマンスの計画](planning-for-application-performance.md)
+- [ハードウェアの活用](optimizing-performance-taking-advantage-of-hardware.md)
+- [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
+- [オブジェクトの動作](optimizing-performance-object-behavior.md)
+- [アプリケーション リソース](optimizing-performance-application-resources.md)
+- [Text](optimizing-performance-text.md)
+- [データ バインディング](optimizing-performance-data-binding.md)
+- [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)
+- [レイアウト](layout.md)

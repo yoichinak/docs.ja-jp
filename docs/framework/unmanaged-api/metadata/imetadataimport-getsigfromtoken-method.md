@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: ab894dc4-f7b6-4afc-bfcb-582a4b7e53a2
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b25eb71d78797b5f764cfe4de7abd45f0143fde4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 205f48fb417365565695c72095187d349127e536
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717637"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74436851"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken メソッド
 指定したトークンに関連付けられているバイナリ メタデータ シグネチャを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSigFromToken (   
    [in]   mdSignature        mdSig,   
    [out]  PCCOR_SIGNATURE    *ppvSig,   
@@ -37,25 +35,26 @@ HRESULT GetSigFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `mdSig`  
- [in]バイナリ メタデータ シグネチャを返すトークンです。  
+ からバイナリメタデータシグネチャを返すトークン。  
   
  `ppvSig`  
- [out]返されたメタデータ署名へのポインター。  
+ 入出力返されたメタデータシグネチャへのポインター。  
   
  `pcbSig`  
- [out]バイナリ メタデータ シグネチャのバイト単位のサイズ。  
+ 入出力バイナリメタデータシグネチャのサイズ (バイト単位)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

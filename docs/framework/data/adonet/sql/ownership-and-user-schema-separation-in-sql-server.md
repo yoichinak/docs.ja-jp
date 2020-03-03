@@ -2,22 +2,22 @@
 title: SQL Server における所有権とユーザーとスキーマの分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 5ad3d927bcf3534e134db2c98b79842b0e6148f3
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092606"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70894425"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server における所有権とユーザーとスキーマの分離
 オブジェクトの所有者は、それを管理するための取り消し不可能な権限を持ちます。これは SQL Server のセキュリティの核となる概念です。 オブジェクトの所有者から権限を削除することはできません。また、特定のユーザーがデータベース内のオブジェクトを所有しているときに、そのユーザーをデータベースから削除することもできません。  
   
 ## <a name="user-schema-separation"></a>ユーザーとスキーマの分離  
- ユーザーとスキーマの分離により、データベース オブジェクトの権限をより柔軟に管理できるようになりました。 A*スキーマ*は個別の名前空間をグループ オブジェクトにできるデータベース オブジェクトの名前付きコンテナーです。 たとえば、AdventureWorks サンプル データベースには、Production、Sales、および HumanResources というスキーマが格納されています。  
+ ユーザーとスキーマの分離により、データベース オブジェクトの権限をより柔軟に管理できるようになりました。 *スキーマ*は、データベースオブジェクトの名前付きコンテナーであり、オブジェクトを個別の名前空間にグループ化することができます。 たとえば、AdventureWorks サンプル データベースには、Production、Sales、および HumanResources というスキーマが格納されています。  
   
  オブジェクトを参照する 4 つの部分から成る命名構文では、スキーマ名が指定されます。  
   
-```  
+```text
 Server.Database.DatabaseSchema.DatabaseObject  
 ```  
   
@@ -29,18 +29,18 @@ Server.Database.DatabaseSchema.DatabaseObject
 ### <a name="built-in-schemas"></a>組み込みスキーマ  
  SQL Server には、組み込みのデータベース ユーザーおよびロールと同じ名前を持った 10 個の定義済みスキーマが付属しています。 これらは主に下位互換性を確保するために存在します。 固定データベース ロールと同じ名前のスキーマは、不要であれば削除してもかまいません。 次のスキーマを削除することはできません。  
   
--   `dbo`  
+- `dbo`  
   
--   `guest`  
+- `guest`  
   
--   `sys`  
+- `sys`  
   
--   `INFORMATION_SCHEMA`  
+- `INFORMATION_SCHEMA`  
   
  これらを model データベースから削除した場合、新しいデータベースにはこれらのスキーマが存在しなくなります。  
   
 > [!NOTE]
->  `sys` スキーマおよび `INFORMATION_SCHEMA` スキーマは、システム オブジェクト用に予約されています。 これらのスキーマにオブジェクトを作成することはできません。また、これらのスキーマを削除することもできません。  
+> `sys` スキーマおよび `INFORMATION_SCHEMA` スキーマは、システム オブジェクト用に予約されています。 これらのスキーマにオブジェクトを作成することはできません。また、これらのスキーマを削除することもできません。  
   
 #### <a name="the-dbo-schema"></a>dbo スキーマ  
  `dbo` スキーマは、新しく作成されたデータベースに使用される既定のスキーマです。 `dbo` スキーマは、`dbo` ユーザー アカウントによって所有されます。 既定では、Transact-SQL コマンド CREATE USER で作成されたユーザーには、`dbo` が既定のスキーマとして割り当てられます。  
@@ -48,7 +48,7 @@ Server.Database.DatabaseSchema.DatabaseObject
  `dbo` スキーマが割り当てられたユーザーは、`dbo` ユーザー アカウントの権限を継承しません。 スキーマの権限はユーザーによって継承されるのではなく、そのスキーマに含まれたデータベース オブジェクトによって継承されます。  
   
 > [!NOTE]
->  1 部構成の名前を使用してデータベース オブジェクトを参照すると、まずユーザーの既定のスキーマが検索されます。 そこで目的のオブジェクトが見つからなかった場合は、`dbo` スキーマ内が検索されます。 `dbo` スキーマ内にオブジェクトが見つからなかった場合は、エラーが返されます。  
+> 1 部構成の名前を使用してデータベース オブジェクトを参照すると、まずユーザーの既定のスキーマが検索されます。 そこで目的のオブジェクトが見つからなかった場合は、`dbo` スキーマ内が検索されます。 `dbo` スキーマ内にオブジェクトが見つからなかった場合は、エラーが返されます。  
   
 ## <a name="external-resources"></a>外部リソース  
  オブジェクトの所有権とスキーマの詳細については、次のリソースを参照してください。  
@@ -58,9 +58,10 @@ Server.Database.DatabaseSchema.DatabaseObject
 |[ユーザーとスキーマの分離](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|ユーザーとスキーマの分離によって導入された変更について説明します。 新しい動作とそれが所有権、カタログ ビュー、および権限に与える影響を取り上げています。|  
   
 ## <a name="see-also"></a>関連項目
-- [ADO.NET アプリケーションのセキュリティ保護](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [SQL Server におけるアプリケーション セキュリティのシナリオ](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
-- [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
-- [SQL Server のサーバー ロールとデータベース ロール](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
-- [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET アプリケーションのセキュリティ保護](../securing-ado-net-applications.md)
+- [SQL Server におけるアプリケーション セキュリティのシナリオ](application-security-scenarios-in-sql-server.md)
+- [SQL Server での認証](authentication-in-sql-server.md)
+- [SQL Server のサーバー ロールとデータベース ロール](server-and-database-roles-in-sql-server.md)
+- [SQL Server の承認とアクセス許可](authorization-and-permissions-in-sql-server.md)
+- [ADO.NET の概要](../ado-net-overview.md)

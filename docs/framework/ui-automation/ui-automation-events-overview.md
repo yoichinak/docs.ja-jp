@@ -9,18 +9,16 @@ helpviewer_keywords:
 - providers, UI Automation
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: f6c4fd2e3d89645a7fff8c70f373e7ad7d70ad39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f9362814eb671a6d7a111cadb96be6d06f5cb3d
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543735"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74441496"
 ---
 # <a name="ui-automation-events-overview"></a>UI オートメーション イベントの概要
 > [!NOTE]
->  このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 に関する最新情報については[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を参照してください[Windows Automation API:UI オートメーション](https://go.microsoft.com/fwlink/?LinkID=156746)します。  
+> このドキュメントは、[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 名前空間で定義されているマネージド <xref:System.Windows.Automation> クラスを使用する .NET Framework 開発者を対象としています。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]の最新情報については、「 [Windows Automation API: UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。  
   
  [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] イベント通知は、スクリーン リーダーやスクリーン拡大鏡などの支援技術にとっての重要な機能です。 これらの UI オートメーション クライアントは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] で何かが発生したときに UI オートメーション プロバイダーが発生させるイベントを追跡し、その情報を使用してエンド ユーザーに通知します。  
   
@@ -30,7 +28,7 @@ ms.locfileid: "54543735"
 ## <a name="types-of-events"></a>イベントの種類  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントは次のカテゴリに分けられます。  
   
-|event|説明|  
+|イベント|説明|  
 |-----------|-----------------|  
 |プロパティの変更|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素のプロパティまたはコントロール パターンが変更された場合に発生します。 たとえば、クライアントがアプリケーションのチェック ボックス コントロールの監視を必要とする場合に、 <xref:System.Windows.Automation.TogglePattern.TogglePatternInformation.ToggleState%2A> プロパティ上のプロパティの変更イベントをリッスンするよう登録できます。 チェック ボックス コントロールがオンまたはオフになったときに、プロバイダーがイベントを発生させ、クライアントが必要なアクションを実行できます。|  
 |要素のアクション|[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の変更がエンド ユーザーまたはプログラムによるアクティビティに起因する場合に発生します。たとえば、ボタンがクリックされたり、 <xref:System.Windows.Automation.InvokePattern>を通じて呼び出される場合です。|  
@@ -41,13 +39,13 @@ ms.locfileid: "54543735"
   
  次のイベントは、UI の状態が変更されていない場合でも発生する可能性があります。  
   
--   `AutomationPropertyChangedEvent` (変更されたプロパティによって変わります)  
+- `AutomationPropertyChangedEvent` (変更されたプロパティによって変わります)  
   
--   `ElementSelectedEvent`  
+- `ElementSelectedEvent`  
   
--   `InvalidatedEvent`  
+- `InvalidatedEvent`  
   
--   `TextChangedEvent`  
+- `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>UI オートメーション イベント識別子  
@@ -81,9 +79,10 @@ ms.locfileid: "54543735"
   
  イベントを識別するために使用する <xref:System.Windows.Automation.AutomationEvent> オブジェクトは、 <xref:System.Windows.Automation.AutomationElementIdentifiers> およびコントロール パターン識別子クラス ( <xref:System.Windows.Automation.DockPatternIdentifiers>など) のフィールドからプロバイダーによって取得されます。 等価のフィールドが、 <xref:System.Windows.Automation.AutomationElement> およびコントロール パターン クラス ( <xref:System.Windows.Automation.DockPattern>など) のフィールドからクライアント アプリケーションによって取得されます。  
   
- イベント識別子の一覧については、「 [UI Automation Events for Clients](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)」を参照してください。  
+ イベント識別子の一覧については、「 [UI Automation Events for Clients](ui-automation-events-for-clients.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
-- [クライアントの UI オートメーション イベント](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [サーバー側 UI オートメーション プロバイダーの実装](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)
-- [UI オートメーション イベントのサブスクライブ](../../../docs/framework/ui-automation/subscribe-to-ui-automation-events.md)
+## <a name="see-also"></a>参照
+
+- [UI Automation Events for Clients](ui-automation-events-for-clients.md)
+- [サーバー側 UI オートメーション プロバイダーの実装](server-side-ui-automation-provider-implementation.md)
+- [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)

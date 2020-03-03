@@ -1,15 +1,15 @@
 ---
-title: '方法: 関連要素を検索する (XPath-LINQ to XML) (C#)'
+title: 関連要素を検索する方法 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdc281d0b08ee7b7f93ac28b14e82fa113a3379d
+ms.sourcegitcommit: fbb8a593a511ce667992502a3ce6d8f65c594edf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617409"
+ms.lasthandoff: 11/16/2019
+ms.locfileid: "74141035"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>方法: 関連要素を検索する (XPath-LINQ to XML) (C#)
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>関連要素を検索する方法 (XPath-LINQ to XML) (C#)
 このトピックでは、別の要素の値によって参照される属性に基づいて要素を取得する方法について説明します。  
   
  XPath 式を次に示します。  
@@ -19,9 +19,9 @@ ms.locfileid: "54617409"
 ## <a name="example"></a>例  
  この例では、12 番目の `Order` 要素を検索し、その注文に対応する顧客を検索します。  
   
- .Net のリストのインデックスは '0' から始まることに注意してください。 XPath 述語のノード コレクションのインデックスは '1' から始まります。 両者の違いを次の例で示します。  
+ .NET でのリストのインデックスは '0' から始まることに注意してください。 XPath 述語のノード コレクションのインデックスは '1' から始まります。 両者の違いを次の例で示します。  
   
- この例では、XML ドキュメント、[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md) を使用します。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
   
 ```csharp  
 XDocument co = XDocument.Load("CustomersOrders.xml");  
@@ -66,7 +66,7 @@ Console.WriteLine(customer1);
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Results are identical  
 <Customer CustomerID="HUNGC">  
   <CompanyName>Hungry Coyote Import Store</CompanyName>  
@@ -83,7 +83,4 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
-  
-## <a name="see-also"></a>関連項目
-
-- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ 

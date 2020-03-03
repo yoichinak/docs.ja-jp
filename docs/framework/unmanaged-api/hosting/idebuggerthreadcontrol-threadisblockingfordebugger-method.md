@@ -15,37 +15,36 @@ helpviewer_keywords:
 ms.assetid: d4d7cb2d-69da-48b3-879a-1a8a68c9bfa8
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: aa72c136e98f80df6d2868c447e1c535ae61af06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 067d4e844055206543e5c7fb409296b0d0a7a549
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739629"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134937"
 ---
 # <a name="idebuggerthreadcontrolthreadisblockingfordebugger-method"></a>IDebuggerThreadControl::ThreadIsBlockingForDebugger メソッド
-このコールバックを送信しているスレッドは、ホストに通知デバッグ サービス内でブロックします。  
+このコールバックを送信しているスレッドがデバッグサービス内でブロックされようとしていることをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ThreadIsBlockingForDebugger ( );  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `ThreadIsBlockingForDebugger`メソッドはランタイムのスレッドで常に呼び出されます。  
+ `ThreadIsBlockingForDebugger` メソッドは常にランタイムスレッドで呼び出されます。  
   
- `ThreadIsBlockingForDebugger`メソッドに、ホスト、スレッドがブロックの中に別の操作を実行する機会が与えられます。  
+ `ThreadIsBlockingForDebugger` メソッドは、スレッドがブロックされている間に、ホストに別のアクションを実行する機会を与えます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.Net Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IDebuggerThreadControl インターフェイス](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

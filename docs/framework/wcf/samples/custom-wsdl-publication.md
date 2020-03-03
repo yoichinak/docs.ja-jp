@@ -2,31 +2,31 @@
 title: カスタム WSDL パブリケーション
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: e09e79725b0a9e4ee34e4062c1434415cfc25d03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 173deaf280c052b76e6937b2cec44ebdeafc57f9
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572926"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74714913"
 ---
 # <a name="custom-wsdl-publication"></a>カスタム WSDL パブリケーション
 このサンプルでは、次の方法を示します。  
   
--   カスタム <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性に <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装し、属性プロパティを WSDL 注釈としてエクスポートします。  
+- カスタム <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性に <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装し、属性プロパティを WSDL 注釈としてエクスポートします。  
   
--   <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> を実装し、カスタム WSDL 注釈をインポートします。  
+- <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> を実装し、カスタム WSDL 注釈をインポートします。  
   
--   カスタム コントラクトの動作とカスタム操作の動作に、それぞれ <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> と <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> を実装し、インポートされたコントラクトと操作の CodeDOM に、インポートされた注釈をコメントとして書き込みます。  
+- カスタム コントラクトの動作とカスタム操作の動作に、それぞれ <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> と <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> を実装し、インポートされたコントラクトと操作の CodeDOM に、インポートされた注釈をコメントとして書き込みます。  
   
--   使用、 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 、WSDL をダウンロードする、<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>カスタムの WSDL インポーターを使用して WSDL をインポートして<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>///として WSDL 注釈を使用した Windows Communication Foundation (WCF) クライアント コードを生成して '' c# および Visual 内のコメント基本的な。  
+- <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> を使用して、wsdl をダウンロードし、カスタム WSDL インポーターを使用して WSDL をインポートするための <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> を使用します。また、<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> を使用して Windows Communication Foundation (WCF) クライアントコードを生成C#します。これは、および Visual Basic のコメント///および ' ' ' です。  
   
 > [!NOTE]
->  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
 ## <a name="service"></a>サービス  
  このサンプルのサービスは、2 つのカスタム属性でマークされています。 1 つ目の属性は `WsdlDocumentationAttribute` で、この属性を使用するとコントラクタ内で文字列を使用でき、用途を説明する文字列をコントラクト インターフェイスまたは操作に提供するために適用できます。 2 つ目は `WsdlParamOrReturnDocumentationAttribute` で、この属性は、操作内で値またはその値を表すパラメータを返すために適用できます。 これらの属性を使用して表されたサービス コントラクト `ICalculator` を、次の例に示します。  
   
-```  
+```csharp  
 // Define a service contract.      
 [ServiceContract(Namespace="http://Microsoft.ServiceModel.Samples")]  
 // Document it.  
@@ -71,43 +71,46 @@ public interface ICalculator
   
  このサンプルでは、次のコードに示すように、エクスポート コンテキスト オブジェクトに <xref:System.ServiceModel.Description.ContractDescription> または <xref:System.ServiceModel.Description.OperationDescription> のどちらが含まれているかに応じて、そのテキスト プロパティを使用して属性からコメントが抽出され、WSDL 注釈の要素に追加されます。  
   
-```  
-public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
-{  
-    if (contractDescription != null)  
-    {  
-        // Inside this block it is the contract-level comment attribute.  
-        // This.Text returns the string for the contract attribute.  
-        // Set the doc element; if this isn't done first, there is no XmlElement in the   
-        // DocumentElement property.  
-        context.WsdlPortType.Documentation = string.Empty;  
-        // Contract comments.  
-        XmlDocument owner = context.WsdlPortType.DocumentationElement.OwnerDocument;  
-        XmlElement summaryElement = owner.CreateElement("summary");  
-        summaryElement.InnerText = this.Text;  
-        context.WsdlPortType.DocumentationElement.AppendChild(summaryElement);  
-    }  
-    else  
-    {  
-        Operation operation = context.GetOperation(operationDescription);  
-        if (operation != null)  
-        {  
-            // We are dealing strictly with the operation here.  
-            // This.Text returns the string for the operation-level attributes.  
-            // Set the doc element; if this isn't done first, there is no XmlElement in the   
-            // DocumentElement property.  
-            operation.Documentation = String.Empty;  
-  
-            // Operation C# triple comments.  
-            XmlDocument owner = operation.DocumentationElement.OwnerDocument;  
-            XmlElement newSummaryElement = owner.CreateElement("summary");  
-            newSummaryElement.InnerText = this.Text;  
-            operation.DocumentationElement.AppendChild(newSummaryElement);  
+```csharp
+public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)
+{
+    if (contractDescription != null)
+    {
+        // Inside this block it is the contract-level comment attribute.
+        // This.Text returns the string for the contract attribute.
+        // Set the doc element; if this isn't done first, there is no XmlElement in the
+        // DocumentElement property.
+        context.WsdlPortType.Documentation = string.Empty;
+        // Contract comments.
+        XmlDocument owner = context.WsdlPortType.DocumentationElement.OwnerDocument;
+        XmlElement summaryElement = owner.CreateElement("summary");
+        summaryElement.InnerText = this.Text;
+        context.WsdlPortType.DocumentationElement.AppendChild(summaryElement);
+    }
+    else
+    {
+        Operation operation = context.GetOperation(operationDescription);
+        if (operation != null)
+        {
+            // We are dealing strictly with the operation here.
+            // This.Text returns the string for the operation-level attributes.
+            // Set the doc element; if this isn't done first, there is no XmlElement in the
+            // DocumentElement property.
+            operation.Documentation = String.Empty;
+
+            // Operation C# triple comments.
+            XmlDocument owner = operation.DocumentationElement.OwnerDocument;
+            XmlElement newSummaryElement = owner.CreateElement("summary");
+            newSummaryElement.InnerText = this.Text;
+            operation.DocumentationElement.AppendChild(newSummaryElement);
+        }
+    }
+}
 ```  
   
  操作がエクスポートされる場合、このサンプルでは次に示すように、リフレクションを使用してパラメータの `WsdlParamOrReturnDocumentationAttribute` 値を取得して返し、次にそれらの値を操作の WSDL 注釈の要素に追加します。  
   
-```  
+```csharp
 // Get returns information  
 ParameterInfo returnValue = operationDescription.SyncMethod.ReturnParameter;  
 object[] returnAttrs = returnValue.GetCustomAttributes(typeof(WsdlParamOrReturnDocumentationAttribute), false);  
@@ -174,7 +177,7 @@ for (int i = 0; i < args.Length; i++)
   
  サンプルでは、最初に <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> メソッドで、WSDL 注釈がコントラクト レベルまたは操作レベルのどちらにあるかを判断し、適切なスコープで WDSL 注釈自体を動作として追加します。その際、インポートされた注釈テキストをコンストラクタに渡します。  
   
-```  
+```csharp
 public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
 {  
     // Contract Documentation  
@@ -201,7 +204,7 @@ public void ImportContract(WsdlImporter importer, WsdlContractConversionContext 
   
  その後、コードが生成される際に、システムは <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> メソッドと <xref:System.ServiceModel.Description.IOperationContractGenerationExtension.GenerateOperation%28System.ServiceModel.Description.OperationContractGenerationContext%29> メソッドを呼び出し、適切なコンテキスト情報を渡します。 サンプルでは、カスタム WSDL 注釈の書式を設定し、コメントとして CodeDom に挿入します。  
   
-```  
+```csharp
 public void GenerateContract(ServiceContractGenerationContext context)  
 {  
     Debug.WriteLine("In generate contract.");  
@@ -231,9 +234,9 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- カスタム インポーターを指定すると、WCF メタデータのシステムがいずれかにカスタム インポータを読み込みます<xref:System.ServiceModel.Description.WsdlImporter>目的のために作成します。 このサンプルでは、<xref:System.ServiceModel.Description.MetadataExchangeClient> を使用してメタデータをダウンロードし、適切に構成された <xref:System.ServiceModel.Description.WsdlImporter> を使用してサンプルで作成されたカスタム インポータによってメタデータをインポートします。さらに、<xref:System.ServiceModel.Description.ServiceContractGenerator> を使用して、変更されたコントラクト情報を Visual Basic および C# のクライアント コードにコンパイルします。このコードは Intellisense をサポートする Visual Studio で使用するか、または XML ドキュメントにコンパイルできます。  
+ カスタムインポーターを指定すると、WCF メタデータシステムによって、その目的のために作成された任意の <xref:System.ServiceModel.Description.WsdlImporter> にカスタムインポーターが読み込まれます。 このサンプルでは、<xref:System.ServiceModel.Description.MetadataExchangeClient> を使用してメタデータをダウンロードし、適切に構成された <xref:System.ServiceModel.Description.WsdlImporter> を使用してサンプルで作成されたカスタム インポータによってメタデータをインポートします。さらに、<xref:System.ServiceModel.Description.ServiceContractGenerator> を使用して、変更されたコントラクト情報を Visual Basic および C# のクライアント コードにコンパイルします。このコードは Intellisense をサポートする Visual Studio で使用するか、または XML ドキュメントにコンパイルできます。  
   
-```  
+```csharp
 /// From WSDL Documentation:  
 ///   
 /// <summary>The ICalculator contract performs basic calculation   
@@ -289,19 +292,17 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2.  ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3.  1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  
-  
-## <a name="see-also"></a>関連項目
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

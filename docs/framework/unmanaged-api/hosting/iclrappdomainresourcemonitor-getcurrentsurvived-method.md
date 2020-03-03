@@ -15,36 +15,34 @@ helpviewer_keywords:
 ms.assetid: 392e9009-40ef-40e3-ad4d-7ce93a989e78
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 648a2c044920b7524ad96ff656e83268ffd55652
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62fcdb60b83c88738ebe2e39455b8eae60fb705e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612217"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73126777"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived メソッド
-最後の完全なブロッキング ガベージ コレクション後に残っていると、現在のアプリケーション ドメインによって参照されるバイト数を取得します。  
+最後の完全なブロッキングガベージコレクションの後に残った、現在のアプリケーションドメインによって参照されているバイト数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT STDMETHODCALLTYPE GetCurrentSurvived(  
              [in]  DWORD dwAppDomainId,  
              [out] ULONGLONG *pAppDomainBytesSurvived,  
              [out] ULONGLONG *pTotalBytesSurvived);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwAppDomainId`  
- [in]要求されたアプリケーション ドメインの ID。  
+ から要求されたアプリケーションドメインの ID。  
   
  `pAppDomainBytesSurvived`  
- [out]このアプリケーション ドメインによって保持されている最後のガベージ コレクションの後に残ったバイト数へのポインター。 完全なコレクションの後は、この番号は正確で完全なは。 短期コレクションの後にこの数は完全な可能性があります。 このパラメーターは、`null` に設定できます。  
+ 入出力このアプリケーションドメインによって保持されている最後のガベージコレクションの後に残ったバイト数へのポインター。 完全なコレクションの後、この数値は正確で完全になります。 短期コレクションの後、この数値は不完全になる可能性があります。 このパラメーターは、`null` に設定できます。  
   
  `pRuntimeBytesSurvived`  
- [out]最後のガベージ コレクションの後に残っているバイトの総数へのポインター。 完全なコレクションの後は、この数は、マネージ ヒープに保持されているバイト数を表します。 短期コレクションの後は、この数は、短期のジェネレーションにライブで保持されているバイト数を表します。 このパラメーターは、`null` に設定できます。  
+ 入出力最後のガベージコレクションから残された合計バイト数へのポインター。 完全なコレクションの後、この数値はマネージヒープに保持されているバイト数を表します。 短期コレクションの後、この数は短期のジェネレーションでライブに保持されているバイト数を表します。 このパラメーターは、`null` に設定できます。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -52,24 +50,25 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|COR_E_APPDOMAINUNLOADED|アプリケーション ドメインがアンロードされたか、存在しません。|  
+|COR_E_APPDOMAINUNLOADED|アプリケーションドメインがアンロードされているか、または存在しません。|  
   
 ## <a name="remarks"></a>Remarks  
- 統計がフル ブロッキング ガベージ コレクション後にのみ更新されます。つまり、コレクションの中に、アプリケーションが停止するを含むすべてのジェネレーションのコレクションが発生します。 たとえば、<xref:System.GC.Collect?displayProperty=nameWithType>メソッドのオーバー ロードは、完全なブロッキング コレクションを実行します。 同時実行ガベージ コレクションでは、バック グラウンドで行われ、アプリケーションはブロックされません。  
+ 統計は、完全なブロッキングガベージコレクションの後にのみ更新されます。つまり、コレクションの実行中にアプリケーションを停止する、すべてのジェネレーションを含むコレクションです。 たとえば、<xref:System.GC.Collect?displayProperty=nameWithType> メソッドのオーバーロードは、完全なブロッキングコレクションを実行します。 同時実行ガベージコレクションはバックグラウンドで発生し、アプリケーションをブロックしません。  
   
- `GetCurrentSurvived`メソッドはアンマネージと同等のマネージ<xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType>プロパティ。  
+ `GetCurrentSurvived` メソッドは、マネージ <xref:System.AppDomain.MonitoringSurvivedMemorySize%2A?displayProperty=nameWithType> プロパティと同等のアンマネージドです。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRAppDomainResourceMonitor インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)
-- [アプリケーション ドメインのリソース監視](../../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)
+- [アプリケーション ドメインのリソース監視](../../../standard/garbage-collection/app-domain-resource-monitoring.md)
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

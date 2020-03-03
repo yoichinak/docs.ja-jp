@@ -1,15 +1,15 @@
 ---
-title: オブジェクトの使用
+title: オブジェクトの操作
 ms.date: 03/30/2017
 ms.assetid: 338d8a55-05cc-46b0-bbb8-1379d77068e9
-ms.openlocfilehash: ad6288b3b6ceabb419d88da9ff81abec177f55d2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bebc94bc424dcfdfd04d75033e592eab85da8d32
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529841"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77450376"
 ---
-# <a name="working-with-objects"></a>オブジェクトの使用
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、エンティティ型のインスタンスである型指定された共通言語ランタイム (CLR) オブジェクトとして表現されたデータに対してクエリ、挿入、更新、削除を実行できます。 エンティティ型とは、概念モデルで定義されたエンティティのことです。 概念モデルで定義されたエンティティとリレーションシップが、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によってデータ ソースにマップされます。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]以下を実行する機能を提供します。 オブジェクトとしてデータ ソースから返されるデータが具体化; オブジェクトに加えられた変更の追跡; の同時実行処理; オブジェクトの変更をデータ ソースに反映されるまでとオブジェクトをコントロールにバインドします。  
+# <a name="working-with-objects"></a>オブジェクトの操作
+Entity Framework を使用すると、エンティティ型のインスタンスである型指定された共通言語ランタイム (CLR) オブジェクトとして表されるデータのクエリ、挿入、更新、および削除を行うことができます。 エンティティ型とは、概念モデルで定義されたエンティティのことです。 Entity Framework は、概念モデルで定義されているエンティティとリレーションシップをデータソースにマップします。 Entity Framework には、データソースから返されたデータをオブジェクトとして具体化する機能が用意されています。オブジェクトに加えられた変更を追跡します。同時実行を処理します。オブジェクトの変更をデータソースに反映します。オブジェクトをコントロールにバインドします。  
   
- Entity Framework は、「の最新バージョンでオブジェクトの操作の詳細については[オブジェクトの操作](https://go.microsoft.com/fwlink/?LinkId=235289)します。
+ の最新バージョンでのオブジェクトの操作の詳細については Entity Framework 「[オブジェクトの操作](https://docs.microsoft.com/previous-versions/gg696163(v=vs.103))」を参照してください。

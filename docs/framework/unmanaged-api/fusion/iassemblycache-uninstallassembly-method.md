@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 973b2c44-8dfc-40c1-9035-10f4846627e9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ece5173ce2a80ceb46d535eb8cbc6eb18e18fd1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 539a8edf6d7248235a6e672edc9464679a2eab82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621881"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134499"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly メソッド
-指定したアセンブリをグローバル アセンブリ キャッシュからアンインストールします。  
+指定したアセンブリをグローバルアセンブリキャッシュからアンインストールします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT UninstallAssembly (  
     [in] DWORD dwFlags,  
     [in] LPCWSTR pszAssemblyName,  
@@ -38,37 +36,38 @@ HRESULT UninstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwFlags`  
- [in]ものがありますで定義されているフラグ。  
+ からFusion に定義されているフラグ。  
   
  `pszAssemblyName`  
- [in]アンインストールするアセンブリの名前。  
+ からアンインストールするアセンブリの名前。  
   
  `pRefData`  
- [in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)アセンブリのインストール データを含む構造体。  
+ からアセンブリのインストールデータを格納する[FUSION_INSTALL_REFERENCE](fusion-install-reference-structure.md)構造体。  
   
  `pulDisposition`  
- [out] 省略可能ものがありますで定義されている配置の値の 1 つ。 使用可能な値を以下に示します。  
+ [out、省略可能]Fusion で定義されている配置値の1つ。 使用できる値は次のとおりです。  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_UNINSTALLED (1)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_STILL_IN_USE (2)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_ALREADY_UNINSTALLED (3)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_DELETE_PENDING (4)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_HAS_INSTALL_REFERENCES (5)  
   
--   IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
+- IASSEMBLYCACHE_UNINSTALL_DISPOSITION_REFERENCE_NOT_FOUND (6)  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Fusion.h  
+ **ヘッダー:** Fusion. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [IAssemblyCache インターフェイス](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+
+- [IAssemblyCache インターフェイス](iassemblycache-interface.md)

@@ -15,37 +15,36 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 028787ef0b93811f42f6c5b28e10665ea12aa334
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57eb284bfe39ce92b2d6c03a2aeb4ae84d6aba91
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727847"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788675"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack メソッド
-呼び出し履歴を例外オブジェクトに埋め込まれている列挙子を取得します。  
+例外オブジェクトに埋め込まれている呼び出し履歴に対する列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateExceptionCallStack(  
     [out] ICorDebugExceptionObjectCallStackEnum **ppCallStackEnum  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  ppCallStackEnum  
- [out]アドレスへのポインター、 [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)インターフェイス オブジェクトはマネージ例外オブジェクトのスタック トレースの列挙子です。  
+ 入出力マネージ例外オブジェクトの[スタックトレース](icordebugexceptionobjectcallstackenum-interface.md)列挙子である、というコードのアドレスへのポインターを示します。
   
-## <a name="remarks"></a>Remarks  
- 呼び出し履歴情報がないかどうか、メソッドを返します`S_OK`、および[ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)は長さ 0 の有効な列挙子です。 メソッドは、スタック トレース情報を取得できませんが場合、戻り値は`E_FAIL`列挙子は返されません。  
   
- [ICorDebugExceptionObjectCallStackEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectcallstackenum-interface.md)オブジェクトはスタック トレース データをデコードの処理、`_stackTrace`例外オブジェクトのフィールド。  
+## <a name="remarks"></a>コメント  
+ 呼び出し履歴情報が使用できない場合、メソッドは `S_OK`を返します。また、は、値が0の有効な列挙[子です。](icordebugexceptionobjectcallstackenum-interface.md) メソッドがスタックトレース情報を取得できない場合、戻り値は `E_FAIL`、列挙子は返されません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ は、例外オブジェクトの `_stackTrace` フィールドからスタックトレースデータをデコードするために、のオブジェクトを[使用します](icordebugexceptionobjectcallstackenum-interface.md)。  
+  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -54,5 +53,6 @@ HRESULT EnumerateExceptionCallStack(
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugExceptionObjectValue インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugexceptionobjectvalue-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebugExceptionObjectValue インターフェイス](icordebugexceptionobjectvalue-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

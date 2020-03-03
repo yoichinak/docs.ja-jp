@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 60b279b0-a726-46d2-8c53-76986a007ebb
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a1df57e82309d42092c38dfcdd8b65ccc2797f9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac91a9c662a82c5ab870d01cb4b5d87c7af6b6ba
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743284"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76782074"
 ---
 # <a name="icordebugmanagedcallbackbreakpoint-method"></a>ICorDebugManagedCallback::Breakpoint メソッド
-ブレークポイントが発生した場合に、デバッガーに通知します。  
+ブレークポイントが検出されたときにデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Breakpoint (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugThread     *pThread,  
@@ -37,18 +35,18 @@ HRESULT Breakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]ブレークポイントを含むアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ からブレークポイントを含むアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]ブレークポイントを含むスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ からブレークポイントを含むスレッドを表す、スレッドオブジェクトへのポインター。  
   
  `pBreakpoint`  
- [in]ブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。  
+ からブレークポイントを表す ICorDebugBreakpoint オブジェクトへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -57,4 +55,5 @@ HRESULT Breakpoint (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

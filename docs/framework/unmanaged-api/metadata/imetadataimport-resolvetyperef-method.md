@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 556bccfb-61bc-4761-b1d5-de4b1c18a38f
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 3c69c67c5c9d996bd746d82ea86caf4a396c0b10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 800b15bb75e74898cee9d838900ea14b60620940
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625238"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431475"
 ---
 # <a name="imetadataimportresolvetyperef-method"></a>IMetaDataImport::ResolveTypeRef メソッド
-解決、<xref:System.Type>の参照を指定した TypeRef トークンによって表されます。  
+指定した TypeRef トークンによって表される <xref:System.Type> 参照を解決します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ResolveTypeRef (  
    [in]  mdTypeRef       tr,  
    [in]  REFIID          riid,  
@@ -38,37 +36,38 @@ HRESULT ResolveTypeRef (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tr`  
- [in]参照先の型情報を返す TypeRef メタデータ トークンです。  
+ から参照される型情報を返す TypeRef メタデータトークン。  
   
  `riid`  
- [in]返すインターフェイスの IID`ppIScope`します。 通常、IID_IMetaDataImport になります。  
+ から`ppIScope`で返すインターフェイスの IID。 通常、これは IID_IMetaDataImport になります。  
   
  `ppIScope`  
- [out]参照先の型が定義されているモジュールのスコープへのインターフェイス。  
+ 入出力参照される型が定義されているモジュールスコープへのインターフェイス。  
   
  `ptd`  
- [out]参照先の型を表す TypeDef トークンへのポインター。  
+ 入出力参照された型を表す TypeDef トークンへのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!IMPORTANT]
->  複数のアプリケーション ドメインが読み込まれている場合は、このメソッドを使用しないでください。 メソッドは、アプリケーション ドメインの境界を優先しません。 複数のバージョンのアセンブリが読み込まれると、同じ名前空間を持つ同じ型が含まれている場合は、最初に見つけた型のモジュールのスコープを返します。  
+> 複数のアプリケーションドメインが読み込まれる場合は、この方法を使用しないでください。 メソッドは、アプリケーションドメインの境界を尊重しません。 アセンブリの複数のバージョンが読み込まれ、同じ名前空間を持つ同じ型が含まれている場合、メソッドは最初に見つかった型のモジュールスコープを返します。  
   
- `ResolveTypeRef`メソッドの他のモジュールの種類の定義を検索します。 型定義が見つかった場合`ResolveTypeRef`型の TypeDef トークンとそのモジュールのスコープのインターフェイスを返します。  
+ `ResolveTypeRef` メソッドは、他のモジュールで型定義を検索します。 型定義が見つかった場合、`ResolveTypeRef` はそのモジュールスコープへのインターフェイスと、その型の TypeDef トークンを返します。  
   
- 型参照を解決する AssemblyRef の解決スコープがある場合、`ResolveTypeRef`メソッドのいずれかへの呼び出しで既に開かれているメタデータのスコープでのみ一致を検索、 [imetadatadispenser::openscope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)メソッドまたは[imetadatadispenser::openscopeonmemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)メソッド。 これは、ため`ResolveTypeRef`AssemblyRef スコープのみがディスク上またはグローバル アセンブリ キャッシュにアセンブリが格納される場所を判別することはできません。  
+ 解決する型参照の解決スコープが AssemblyRef の場合、`ResolveTypeRef` メソッドは、 [IMetaDataDispenser:: OpenScope](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscope-method.md)メソッドまたは[IMetaDataDispenser:: OpenScopeOnMemory](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-openscopeonmemory-method.md)メソッドの呼び出しで既に開かれているメタデータスコープ内でのみ一致を検索します。 これは、`ResolveTypeRef` が、ディスク上またはグローバルアセンブリキャッシュ内の、アセンブリが格納されている AssemblyRef スコープだけからは判断できないためです。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

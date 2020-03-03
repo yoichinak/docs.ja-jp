@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 91a7ce63-f5b8-4f16-b2c4-e1d0baa88944
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5ce6478f0331c590a2384a4e7e9b5621c050715d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84c41e467c57afd2562e7aa8dd72ce4796249667
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623639"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74438571"
 ---
 # <a name="exporttype-method"></a>ExportType メソッド
-型がエクスポート可能であるを指定します。  
+型がエクスポート可能であることを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ExportType(  
     mdAssembly      AssemblyID,  
     mdToken         FileToken,  
@@ -39,32 +37,33 @@ HRESULT ExportType(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `AssemblyID`  
- エクスポートするアセンブリの ID。  
+ エクスポート元のアセンブリの ID。  
   
  `FileToken`  
- ファイルのエクスポート可能な型を定義するファイルのトークンまたはアセンブリの ID。  
+ エクスポート可能な型を定義するファイルのファイルトークンまたはアセンブリ ID。  
   
  `TypeToken`  
- エクスポート可能にする型のトークンです。  
+ エクスポート可能にする型のトークン。  
   
  `pszTypename`  
  エクスポート可能にする完全修飾型名。  
   
  `dwFlags`  
- `ComType` フラグなど`tdPublic`または`tdNested`します。 このパラメーターに渡される[DefineExportedType メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)します。  
+ `tdPublic` や `tdNested`などのフラグを `ComType` します。 このパラメーターは、この[メソッド](../metadata/imetadataassemblyemit-defineexportedtype-method.md)に渡すことができます。  
   
  `pType`  
  エクスポートされた型のトークンを受け取ります。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は、S_OK を返します。  
+ メソッドが成功した場合は S_OK を返します。  
   
-## <a name="requirements"></a>必要条件  
- Alink.h が必要です。  
+## <a name="requirements"></a>要件  
+ Alink. h が必要です。  
   
-## <a name="see-also"></a>関連項目
-- [IALink インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [IALink2 インターフェイス](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>参照
+
+- [IALink インターフェイス](ialink-interface.md)
+- [IALink2 インターフェイス](ialink2-interface.md)
+- [ALink API](index.md)

@@ -6,14 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: ced76a0bb28a91824676f496b28143a921b987de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: 41b6959843e866b89da46a9cedfb54a2f5ed001a
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559499"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75710883"
 ---
 # <a name="extending-the-dom"></a>DOM の拡張
 
@@ -122,12 +120,11 @@ class LineInfoElement : XmlElement, IXmlLineInfo {
 } // End LineInfoElement class.
 ```
 
-### <a name="example"></a>例
+### <a name="example"></a>使用例
 
 XML ドキュメントの要素数を数える例を次に示します。
 
 ```vb
-Imports System
 Imports System.Xml
 Imports System.IO
 
@@ -223,7 +220,7 @@ public class Test {
 }
 ```
 
-#### <a name="input"></a>入力
+#### <a name="input"></a>[入力]
 
 book.xml
 

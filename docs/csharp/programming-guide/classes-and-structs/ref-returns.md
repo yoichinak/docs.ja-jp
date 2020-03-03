@@ -1,15 +1,13 @@
 ---
 title: ref 戻り値と ref ローカル変数 (C# ガイド)
 description: ref 戻り値と ref ローカル変数を定義して使用する方法について説明します。
-author: rpetrusha
-ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ade422b5b3805ef2e1f487252a98fb85cdfe70c
+ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514416"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73736821"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 戻り値と ref ローカル変数
 
@@ -27,12 +25,12 @@ C# 7.0 以降の C# は参照戻り値 (ref 戻り値) に対応しています�
 
 - 戻り値はリテラル `null` にすることができません。 `null` を返すと、コンパイラ エラー CS8156 "参照渡しで返すことができないため、このコンテキストで使用できない式があります" が生成されます。
 
-   ref 戻りを含むメソッドは、現在の値が null (インスタンス化されていない) 値か、値の型が [null 許容型](../nullable-types/index.md)の変数にエイリアスを返すことができます。
- 
+   ref 戻り値があるメソッドは、現在の値が null (インスタンス化されていない) 値か、値の型が [null 許容値型](../../language-reference/builtin-types/nullable-value-types.md)の変数にエイリアスを返すことができます。
+
 - 戻り値は、定数、列挙型のメンバー、プロパティの値渡し戻り値、`class` または `struct` のメソッドにすることができません。 この規則に違反すると、コンパイラ エラー CS8156 "参照渡しで返すことができないため、このコンテキストで使用できない式があります" が生成されます。
 
 さらに、参照戻り値は非同期メソッドでは許可されません。 非同期メソッドは実行が終了する前に戻る可能性があり、戻り値はまだ不明です。
- 
+
 ## <a name="defining-a-ref-return-value"></a>ref 戻り値の定義
 
 "*参照戻り値*" を返すメソッドは、次の 2 つの条件を満たす必要があります。
@@ -59,7 +57,6 @@ ref 戻り値は、呼び出されるメソッドの範囲で、別の変数の�
 - "*参照渡し*" で値を返す場合、その同じ変数の別名を返すことになります。
 - "*参照渡し*" で別のメソッドに値を渡す場合、それが別名を与える変数への参照を渡すことになります。
 - [ref ローカル](#ref-locals)をエイリアスにすると、同じ変数に新しいエイリアスが作られます。
-
 
 ## <a name="ref-locals"></a>ref ローカル変数
 

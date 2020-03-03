@@ -1,15 +1,15 @@
 ---
-title: '方法: エンコードされたドキュメントを読み書きする (C#)'
+title: エンコードされたドキュメントを読み書きする方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fdf3e05c705ca9caea32306616c79ade0aeb9be3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa28c26845a0c6019943e0532ea0692a6dffd5a9
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615456"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75347663"
 ---
-# <a name="how-to-read-and-write-an-encoded-document-c"></a>方法: エンコードされたドキュメントを読み書きする (C#)
+# <a name="how-to-read-and-write-an-encoded-document-c"></a>エンコードされたドキュメントを読み書きする方法 (C#)
 エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。  
   
  <xref:System.Text.Encoding.WebName%2A> から返される値はすべて有効な値です。  
@@ -56,7 +56,7 @@ Console.WriteLine("Encoding of loaded document is:{0}", newDoc16.Declaration.Enc
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 Creating a document with utf-8 encoding  
 Encoding is:utf-8  
   
@@ -79,4 +79,3 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [高度な LINQ to XML プログラミング (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

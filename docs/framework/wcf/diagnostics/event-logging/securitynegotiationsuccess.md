@@ -2,23 +2,24 @@
 title: SecurityNegotiationSuccess
 ms.date: 03/30/2017
 ms.assetid: 884dc3ae-c2ff-4793-b60c-d01d44712687
-ms.openlocfilehash: 69de56a659ef156756d351a9a8bf39c44161bc88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be8fab53ead27090cb5a8a3dcaf5a4e4cdcaa642
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587347"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797576"
 ---
 # <a name="securitynegotiationsuccess"></a>SecurityNegotiationSuccess
 Id:171  
   
- 重大度:情報  
+ 順情報  
   
- カテゴリ:SecurityAudit  
+ [カテゴリ]:SecurityAudit  
   
 ## <a name="description"></a>説明  
  このイベントは、セキュリティ ネゴシエーションが成功したことを示し、サービスの名前、アクション、クライアント ID、アクティビティ ID、およびネゴシエーションを表示します。  
   
 ## <a name="see-also"></a>関連項目
-- [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+
+- [イベント ログ](index.md)
+- [イベント一覧](events-general-reference.md)

@@ -2,20 +2,20 @@
 title: C# でのコレクションの反復処理
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720799"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594968"
 ---
 # <a name="iterators-c"></a>反復子 (C#)
 
 *反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。
 
-iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子メソッドは、[yield return](../../../csharp/language-reference/keywords/yield.md) ステートメントを使用して、各要素を 1 回に 1 つ返します。 `yield return` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。
+iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子メソッドは、[yield return](../../language-reference/keywords/yield.md) ステートメントを使用して、各要素を 1 回に 1 つ返します。 `yield return` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。
 
-[foreach](../../../csharp/language-reference/keywords/foreach-in.md) ステートメントまたは LINQ クエリを使用して、クライアント コードから反復子を呼び出します。
+[foreach](../../language-reference/keywords/foreach-in.md) ステートメントまたは LINQ クエリを使用して、クライアント コードから反復子を呼び出します。
 
 次の例では、`foreach` ループの最初の反復子により、最初の `yield return` ステートメントに達するまで `SomeNumbers` iterator メソッドで実行が続行されます。 このイテレーションは 3 の値を返し、iterator メソッドの現在の場所が保持されます。 ループの次のイテレーションでは、iterator メソッドの実行が中断した場所から続行し、`yield return` ステートメントに達したときに再度停止します。 このイテレーションは 5 の値を返し、ここでも iterator メソッドの現在の場所が保持されます。 iterator メソッドの最後に達すると、ループが完了します。
 
@@ -43,11 +43,11 @@ Iterator メソッドまたは `get` アクセサーの戻り値の型は、<xre
 `yield break` ステートメントを使用すると、反復を終了できます。
 
 > [!NOTE]
-> このトピックの単純な反復子の例を除くすべての例には、`System.Collections` および `System.Collections.Generic` 名前空間の [using](../../../csharp/language-reference/keywords/using-directive.md) ディレクティブが含まれています。
+> このトピックの単純な反復子の例を除くすべての例には、`System.Collections` および `System.Collections.Generic` 名前空間の [using](../../language-reference/keywords/using-directive.md) ディレクティブが含まれています。
 
 ## <a name="simple-iterator"></a>単純な反復子
 
-次の例では、[for](../../../csharp/language-reference/keywords/for.md) ループ内に 1 つの `yield return` ステートメントが含まれます。 `Main` では、`foreach` ステートメント本文の各イテレーションで iterator 関数が呼び出され、これが次の `yield return` ステートメントに続行されます。
+次の例では、[for](../../language-reference/keywords/for.md) ループ内に 1 つの `yield return` ステートメントが含まれます。 `Main` では、`foreach` ステートメント本文の各イテレーションで iterator 関数が呼び出され、これが次の `yield return` ステートメントに続行されます。
 
 ```csharp
 static void Main()
@@ -324,7 +324,7 @@ public class Stack<T> : IEnumerable<T>
 
 反復子は、メソッドまたは `get` アクセサーとして指定できます。 反復子を、イベント、インスタンス コンストラクター、静的コンストラクター、静的ファイナライザーで指定することはできません。
 
-`yield return` ステートメント内の式の型から、反復子によって返される IEnumerable<T> 用の型引数への暗黙的な変換が存在する必要があります。
+`yield return` ステートメント内の式の型から、反復子によって返される IEnumerable\<T> 用の型引数への暗黙的な変換が存在する必要があります。
 
 C# の場合、反復子メソッドで `in`、`ref`、`out` パラメーターを指定することはできません。
 
@@ -336,7 +336,7 @@ C# の場合、"yield" は予約語ではなく、`return` または `break` キ
 
 コンパイラの動作を確認するには、Ildasm.exe ツールを使用して、iterator メソッドに対して生成される Microsoft 中間言語コードを表示します。
 
-[クラス](../../../csharp/language-reference/keywords/class.md)または[構造体](../../../csharp/language-reference/keywords/struct.md)用の反復子を作成する場合、<xref:System.Collections.IEnumerator> インターフェイス全体を実装する必要はありません。 コンパイラは、反復子を検出すると、<xref:System.Collections.IEnumerator> または <xref:System.Collections.Generic.IEnumerator%601> インターフェイスの `Current`、`MoveNext`、および `Dispose` メソッドを自動的に生成します。
+[クラス](../../language-reference/keywords/class.md)または[構造体](../../language-reference/keywords/struct.md)用の反復子を作成する場合、<xref:System.Collections.IEnumerator> インターフェイス全体を実装する必要はありません。 コンパイラは、反復子を検出すると、<xref:System.Collections.IEnumerator> または <xref:System.Collections.Generic.IEnumerator%601> インターフェイスの `Current`、`MoveNext`、および `Dispose` メソッドを自動的に生成します。
 
 `foreach` ループの連続する反復ごとに (または `IEnumerator.MoveNext` を直接呼び出すと)、前の `yield return` ステートメントの後で次の反復子コード本体が再開されます。 その後、反復子本体の最後に到達するか、`yield break` ステートメントが検出されるまで、次の `yield return` ステートメントに続行されます。
 
@@ -358,7 +358,7 @@ C# の場合、"yield" は予約語ではなく、`return` または `break` キ
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [foreach、in](../../../csharp/language-reference/keywords/foreach-in.md)
-- [yield](../../../csharp/language-reference/keywords/yield.md)
-- [配列での foreach の使用](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)
-- [ジェネリック](../../../csharp/programming-guide/generics/index.md)
+- [foreach、in](../../language-reference/keywords/foreach-in.md)
+- [yield](../../language-reference/keywords/yield.md)
+- [配列での foreach の使用](../arrays/using-foreach-with-arrays.md)
+- [ジェネリック](../generics/index.md)

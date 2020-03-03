@@ -12,22 +12,20 @@ helpviewer_keywords:
 - message pumping
 - context switching deadlocks
 ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3fc4a2cb35cdcc713ba0ef362071083af08a27b
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643144"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77217553"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
 `contextSwitchDeadlock` マネージド デバッグ アシスタント (MDA) は、COM コンテキストの遷移の試行中にデッドロックが検出されるとアクティブ化されます。
 
-## <a name="symptoms"></a>症状
+## <a name="symptoms"></a>現象
 
-最も一般的な症状は、マネージ コードから実行されたアンマネージ COM コンポーネントの呼び出しから戻らないことです。  別の症状として、メモリの使用量が時間と共に増加する場合もあります。
+最も一般的な症状は、マネージド コードから実行されたアンマネージド COM コンポーネントの呼び出しから戻らないことです。  別の症状として、メモリの使用量が時間と共に増加する場合もあります。
 
 ## <a name="cause"></a>原因
 
@@ -39,18 +37,18 @@ ms.locfileid: "54643144"
 
 次のすべての条件が満たされる場合、この MDA が誤ってアクティブ化される可能性があります。
 
--   アプリケーションがライブラリを通じて直接または間接的に STA スレッドから COM コンポーネントを作成する。
+- アプリケーションがライブラリを通じて直接または間接的に STA スレッドから COM コンポーネントを作成する。
 
--   デバッガーでアプリケーションが中断され、ユーザーがアプリケーションを続行したか、またはステップ操作を実行した。
+- デバッガーでアプリケーションが中断され、ユーザーがアプリケーションを続行したか、またはステップ操作を実行した。
 
--   アンマネージ デバッグが有効になっていない。
+- アンマネージ デバッグが有効になっていない。
 
 MDA が誤ってアクティブ化されたかどうかを判断するには、すべてのブレークポイントを無効にし、アプリケーションを再び実行して、中断なしで実行させます。 MDA がアクティブ化されない場合は、最初のアクティブ化は誤りだった可能性があります。 その場合は、MDA を無効にして、デバッグ セッションとの干渉を防ぎます。
 
 > [!NOTE]
-> この MDA は、既定の Visual Studio のセットです。 Mda を無効にする方法については、次を参照してください。[マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)します。
+> この MDA は、Visual Studio の既定のセットに含まれています。 Mda を無効にする方法の詳細については、「[マネージデバッグアシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)」を参照してください。
 
-## <a name="resolution"></a>解像度
+## <a name="resolution"></a>解決策
 
 STA メッセージ ポンプに関する COM 規則に従います。
 
@@ -72,8 +70,8 @@ STA メッセージ ポンプに関する COM 規則に従います。
 </mdaConfig>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [マネージド デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [相互運用マーシャリング](../../../docs/framework/interop/interop-marshaling.md)
+- [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)
+- [相互運用マーシャリング](../interop/interop-marshaling.md)

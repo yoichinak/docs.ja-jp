@@ -14,45 +14,44 @@ helpviewer_keywords:
 ms.assetid: ec354fa1-1efd-41b0-bc43-b90597b6e253
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c803169f87c4033d7e231e8b0243f502b9246f70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 004e4f70e3385e7a71c356cce38e64d0253dcfa4
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493925"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127130"
 ---
 # <a name="iappidauthority-interface"></a>IAppIdAuthority インターフェイス
-アプリケーション id と参照キーの比較を生成するメソッドを提供します。  
+アプリケーション id と参照のキーを生成して比較するメソッドを提供します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|`IAppIdAuthority::AreDefinitionsEqual`|2 つ指定されているかどうかを示す値を取得します[IDefinitionAppId](../../../../docs/framework/unmanaged-api/fusion/idefinitionappid-interface.md)インスタンスが等しい。 それらのそれぞれのバージョン情報を無視する IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION フラグの値を渡すことができます。|  
-|`IAppIdAuthority::AreReferencesEqual`|2 つ指定されているかどうかを示す値を取得します[IReferenceAppId](../../../../docs/framework/unmanaged-api/fusion/ireferenceappid-interface.md)インスタンスが等しい。 それらのそれぞれのバージョン情報を無視する IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION フラグの値を渡すことができます。|  
-|`IAppIdAuthority::AreTextualDefinitionsEqual`|2 つの指定した文字列の定義が等しいかどうかを示す値を取得します。 それらのそれぞれのバージョン情報を無視する IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION フラグの値を渡すことができます。|  
-|`IAppIdAuthority::AreTextualReferencesEqual`|指定した文字列の 2 つの参照が等しいかどうかを示す値を取得します。 それらのそれぞれのバージョン情報を無視する IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION フラグの値を渡すことができます。|  
-|`IAppIdAuthority::CreateDefinition`|新しく生成されたインターフェイス ポインターを取得`IDefinitionAppId`を現在のスコープ内のアセンブリを表すインスタンス。|  
-|`IAppIdAuthority::CreateReference`|新しく作成されたインターフェイス ポインターを取得`IReferenceAppId`を現在のスコープ内のアセンブリを表します。|  
-|`IAppIdAuthority::DefinitionToText`|指定した文字列形式を取得`IDefinitionAppId`、指定したフラグの値を使用します。|  
-|`IAppIdAuthority::DoesDefinitionMatchReference`|示す値を取得するかどうか、指定した`IDefinitionAppId`と`IReferenceAppId`同じアセンブリを表します。|  
-|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|指定した定義の文字列と参照文字列が同じアセンブリを表すかどうかを示す値を取得します。|  
-|`IAppIdAuthority::GenerateDefinitionKey`|表す、指定した文字列のキーを取得します。`IDefinitionAppId`インスタンス。|  
-|`IAppIdAuthority::GenerateReferenceKey`|表す、指定した文字列のキーを取得します。`IReferenceAppId`インスタンス。|  
-|`IAppIdAuthority::HashDefinition`|指定したハッシュ キーの取得`IDefinitionAppId`インスタンス。|  
-|`IAppIdAuthority::HashReference`|指定したハッシュ キーの取得`IReferenceAppId`インスタンス。|  
-|`IAppIdAuthority::ReferenceToText`|指定した文字列形式を取得`IReferenceAppId`、指定したフラグの値を使用します。|  
-|`IAppIdAuthority::TextToDefinition`|インターフェイス ポインターを取得、`IDefinitionAppId`文字列の指定したキーによって参照されるアセンブリを表すインスタンス。|  
-|`IAppIdAuthority::TextToReference`|インターフェイス ポインターを取得、`IReferenceAppId`文字列の指定したキーによって参照されるアセンブリを表すインスタンス。|  
+|`IAppIdAuthority::AreDefinitionsEqual`|指定した2つの[IDefinitionAppId](idefinitionappid-interface.md)インスタンスが等しいかどうかを示す値を取得します。 フラグ値 IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION を渡して、それぞれのバージョン情報を無視することができます。|  
+|`IAppIdAuthority::AreReferencesEqual`|指定した2つの[IReferenceAppId](ireferenceappid-interface.md)インスタンスが等しいかどうかを示す値を取得します。 フラグ値 IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION を渡して、それぞれのバージョン情報を無視することができます。|  
+|`IAppIdAuthority::AreTextualDefinitionsEqual`|指定した2つの文字列定義が等しいかどうかを示す値を取得します。 フラグ値 IAPPIDAUTHORITY_ARE_DEFINITIONS_EQUAL_FLAG_IGNORE_VERSION を渡して、それぞれのバージョン情報を無視することができます。|  
+|`IAppIdAuthority::AreTextualReferencesEqual`|指定した2つの文字列参照が等しいかどうかを示す値を取得します。 フラグ値 IAPPIDAUTHORITY_ARE_REFERENCES_EQUAL_FLAG_IGNORE_VERSION を渡して、それぞれのバージョン情報を無視することができます。|  
+|`IAppIdAuthority::CreateDefinition`|現在のスコープ内のアセンブリを表す、新しく生成された `IDefinitionAppId` インスタンスへのインターフェイスポインターを取得します。|  
+|`IAppIdAuthority::CreateReference`|現在のスコープ内のアセンブリを表す、新しく作成された `IReferenceAppId` へのインターフェイスポインターを取得します。|  
+|`IAppIdAuthority::DefinitionToText`|指定したフラグ値を使用して、指定した `IDefinitionAppId`の文字列バージョンを取得します。|  
+|`IAppIdAuthority::DoesDefinitionMatchReference`|指定した `IDefinitionAppId` と `IReferenceAppId` が同じアセンブリを表しているかどうかを示す値を取得します。|  
+|`IAppIdAuthority::DoesTextualDefinitionMatchTextualReference`|指定した定義文字列と参照文字列が同じアセンブリを表しているかどうかを示す値を取得します。|  
+|`IAppIdAuthority::GenerateDefinitionKey`|指定された `IDefinitionAppId` インスタンスを表す文字列キーを取得します。|  
+|`IAppIdAuthority::GenerateReferenceKey`|指定された `IReferenceAppId` インスタンスを表す文字列キーを取得します。|  
+|`IAppIdAuthority::HashDefinition`|指定された `IDefinitionAppId` インスタンスのハッシュキーを取得します。|  
+|`IAppIdAuthority::HashReference`|指定された `IReferenceAppId` インスタンスのハッシュキーを取得します。|  
+|`IAppIdAuthority::ReferenceToText`|指定したフラグ値を使用して、指定した `IReferenceAppId`の文字列バージョンを取得します。|  
+|`IAppIdAuthority::TextToDefinition`|指定した文字列キーによって参照されるアセンブリを表す `IDefinitionAppId` インスタンスへのインターフェイスポインターを取得します。|  
+|`IAppIdAuthority::TextToReference`|指定した文字列キーによって参照されるアセンブリを表す `IReferenceAppId` インスタンスへのインターフェイスポインターを取得します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Isolation.h  
+ **ヘッダー:** 分離 .h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [Fusion インターフェイス](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
+
+- [Fusion インターフェイス](fusion-interfaces.md)

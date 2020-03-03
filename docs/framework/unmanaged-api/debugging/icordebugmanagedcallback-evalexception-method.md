@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: d6036345-18a3-45c1-a302-b1c6f2dced9b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1705b9d77d0d91196201d713cceb0ccf0f8635a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ae93081bd201f745fa47bc01a9c6fcbf6e9f63c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728016"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76781870"
 ---
 # <a name="icordebugmanagedcallbackevalexception-method"></a>ICorDebugManagedCallback::EvalException メソッド
-ハンドルされない例外で、評価が終了したことをデバッガーに通知します。  
+ハンドルされない例外で評価が終了したことをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EvalException (  
     [in] ICorDebugAppDomain *pAppDomain,  
     [in] ICorDebugThread    *pThread,  
@@ -37,18 +35,18 @@ HRESULT EvalException (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pAppDomain`  
- [in]評価が終了したアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
+ から評価が終了したアプリケーションドメインを表す、のオブジェクトへのポインター。  
   
  `pThread`  
- [in]評価が終了したスレッドを表す ICorDebugThread オブジェクトへのポインター。  
+ から評価が終了したスレッドを表す、のスレッドオブジェクトへのポインター。  
   
  `pEval`  
- [in]評価を実行するコードを表す ICorDebugEval オブジェクトへのポインター。  
+ から評価を実行したコードを表す、のオブジェクトへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -57,4 +55,5 @@ HRESULT EvalException (
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugManagedCallback インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+
+- [ICorDebugManagedCallback インターフェイス](icordebugmanagedcallback-interface.md)

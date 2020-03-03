@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: f92558798267760eb6cfd1bfc6365451cdcc1c62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8aee43f13ec92f649b4df20505ac56c336fe07a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529995"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793836"
 ---
 # <a name="find-the-minimum-value-in-a-numeric-sequence"></a>一連の数値の中の最小値の検出
 一連の数値の中から最小値を返すには、<xref:System.Linq.Enumerable.Min%2A> 演算子を使用します。  
@@ -72,5 +72,6 @@ ms.locfileid: "54529995"
  `Konbu`  
   
 ## <a name="see-also"></a>関連項目
-- [集計クエリ](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+
+- [集計クエリ](aggregate-queries.md)
+- [サンプル データベースのダウンロード](downloading-sample-databases.md)

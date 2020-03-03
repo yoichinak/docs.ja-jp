@@ -2,17 +2,15 @@
 title: ISymUnmanagedAsyncMethod::GetKickoffMethod メソッド
 ms.date: 03/30/2017
 ms.assetid: ba084444-9e68-4cde-9388-54b950670987
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f20039318d6e1230ccc0fbd203fc44686806bb2e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58daec30b4cbae9cfaab27d4ce76521ba839cf83
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604471"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139848"
 ---
 # <a name="isymunmanagedasyncmethodgetkickoffmethod-method"></a>ISymUnmanagedAsyncMethod::GetKickoffMethod メソッド
-参照してください[DefineKickoffMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)します。  
+「 [DefineKickoffMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -20,17 +18,18 @@ ms.locfileid: "54604471"
 HRESULT GetKickoffMethod(    [out, retval] mdToken* kickoffMethod);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
   
 |パラメーター|説明|  
 |---------------|-----------------|  
 |`kickoffMethod`||  
   
 ## <a name="return-value"></a>戻り値  
- `HRESULT` を返します。  
+ `HRESULT`を返します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>［要件］  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
+
 - [ISymUnmanagedAsyncMethod インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

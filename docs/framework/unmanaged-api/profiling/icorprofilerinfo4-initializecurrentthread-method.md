@@ -15,40 +15,39 @@ helpviewer_keywords:
 ms.assetid: 18a3335c-8c75-476c-b6de-72c0bfedae5d
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 990ae316a780af9be96f6b91900f33cbb2db4f36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b52a0e7f993629c1005883723c734996d75300a7
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727977"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76868435"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread メソッド
-後続のプロファイラー API は、デッドロックを回避するため、同じスレッドで呼び出しの前に、現在のスレッドを初期化します。  
+デッドロックを回避できるように、同じスレッドで、後続のプロファイラー API 呼び出しの前に現在のスレッドを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT InitializeCurrentThread ();  
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出すことをお勧めします。 `InitializeCurrentThread` API はありますが、プロファイラーを呼び出す任意のスレッドでスレッドが中断されます。 このメソッドは通常を呼び出す独自のスレッドの作成サンプリング プロファイラーで使用、 [icorprofilerinfo 2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)対象スレッドが中断されている間、スタックを実行する方法について説明します。 呼び出して`InitializeCurrentThread`プロファイラーが CLR をそれ以外の場合、最初の呼び出し中に実行するスレッドごとの遅延初期化のことを確認できる場合、プロファイラーでは、まずサンプリング スレッドを作成した後`DoStackSnapshot`他のスレッドがない場合に安全に発生することができますようになりました中断されています。  
+ 中断されたスレッドがあるときにプロファイラー API を呼び出すスレッドで `InitializeCurrentThread` を呼び出すことをお勧めします。 このメソッドは、通常、 [ICorProfilerInfo2::D ostacksnapshot](icorprofilerinfo2-dostacksnapshot-method.md)メソッドを呼び出して、ターゲットスレッドが中断されている間にスタックウォークを実行する独自のスレッドを作成する、サンプリングプロファイラーによって使用されます。 プロファイラーでは、最初にサンプリングスレッドを作成するときに `InitializeCurrentThread` を呼び出すことによって、他のスレッドが中断されていないときに、CLR が `DoStackSnapshot` の最初の呼び出し時に実行する遅延時間の遅延を保証できます。  
   
 > [!NOTE]
->  `InitializeCurrentThread` ロック、およびデッドロックが発生するタスクを完了するには、事前に初期化します。 呼び出す`InitializeCurrentThread`中断されたスレッドがない場合にのみです。  
+> `InitializeCurrentThread` は、ロックを受け取るタスクを完了するために事前に初期化を行い、デッドロックが発生する可能性があります。 中断されたスレッドが存在しない場合にのみ `InitializeCurrentThread` を呼び出します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerInfo4 インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [プロファイリングのインターフェイス](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [プロファイル](../../../../docs/framework/unmanaged-api/profiling/index.md)
+
+- [ICorProfilerInfo4 インターフェイス](icorprofilerinfo4-interface.md)
+- [プロファイリングのインターフェイス](profiling-interfaces.md)
+- [プロファイル](index.md)

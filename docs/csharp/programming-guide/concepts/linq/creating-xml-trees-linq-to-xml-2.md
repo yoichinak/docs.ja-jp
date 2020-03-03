@@ -2,17 +2,17 @@
 title: C# での XML ツリーの作成 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503171"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594629"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# での XML ツリーの作成 (LINQ to XML)
 ここでは、C# での XML ツリーの作成について説明します。  
   
- LINQ クエリの結果を <xref:System.Xml.Linq.XElement> のコンテンツとして使用する方法については、「[関数型構築 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)」を参照してください。  
+ LINQ クエリの結果を <xref:System.Xml.Linq.XElement> のコンテンツとして使用する方法については、「[関数型構築 (LINQ to XML)](./functional-construction-linq-to-xml.md)」を参照してください。  
   
 ## <a name="constructing-elements"></a>要素の構築
  <xref:System.Xml.Linq.XElement> コンストラクターと <xref:System.Xml.Linq.XAttribute> コンストラクターのシグネチャを使用すると、要素または属性のコンテンツを引数としてコンストラクターに渡すことができます。 いずれかのコンストラクターは任意の数の引数を受け取るため、任意の数の子要素を渡すことができます。 もちろん、それらの子要素のそれぞれに、さらに子要素を含めることもできます。 いずれの要素にも、任意の数の属性を追加できます。  
@@ -42,7 +42,7 @@ XElement contacts =
 ## <a name="xelement-constructors"></a>XElement コンストラクター  
  <xref:System.Xml.Linq.XElement> クラスは、関数型構築で次のコンストラクターを使用します。 <xref:System.Xml.Linq.XElement> のコンストラクターはこれ以外にも存在しますが、関数型構築に使用されないものはこの一覧に示していません。  
   
-|コンストラクター|説明|  
+|Constructor|説明|  
 |-----------------|-----------------|  
 |`XElement(XName name, object content)`|<xref:System.Xml.Linq.XElement> を作成します。 `name` パラメーターには要素の名前を指定し、`content` には要素のコンテンツを指定します。|  
 |`XElement(XName name)`|指定した名前で <xref:System.Xml.Linq.XElement> を初期化して、<xref:System.Xml.Linq.XName> を作成します。|  
@@ -50,17 +50,17 @@ XElement contacts =
   
  `content` パラメーターは非常に柔軟です。 <xref:System.Xml.Linq.XElement> の有効な子オブジェクトの型すべてがサポートされています。 このパラメーターで渡されるさまざまな型のオブジェクトには、次の規則が適用されます。  
   
--   文字列はテキスト コンテンツとして追加されます。  
+- 文字列はテキスト コンテンツとして追加されます。  
   
--   <xref:System.Xml.Linq.XElement> は子要素として追加されます。  
+- <xref:System.Xml.Linq.XElement> は子要素として追加されます。  
   
--   <xref:System.Xml.Linq.XAttribute> は属性として追加されます。  
+- <xref:System.Xml.Linq.XAttribute> は属性として追加されます。  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>、<xref:System.Xml.Linq.XComment>、または <xref:System.Xml.Linq.XText> は、子コンテンツとして追加されます。  
+- <xref:System.Xml.Linq.XProcessingInstruction>、<xref:System.Xml.Linq.XComment>、または <xref:System.Xml.Linq.XText> は、子コンテンツとして追加されます。  
   
--   <xref:System.Collections.IEnumerable> は列挙され、その結果にこれらの規則が再帰的に適用されます。  
+- <xref:System.Collections.IEnumerable> は列挙され、その結果にこれらの規則が再帰的に適用されます。  
   
--   その他の型に対しては `ToString` メソッドが呼び出され、その結果がテキスト コンテンツとして追加されます。  
+- その他の型に対しては `ToString` メソッドが呼び出され、その結果がテキスト コンテンツとして追加されます。  
   
 ### <a name="creating-an-xelement-with-content"></a>コンテンツを持つ XElement の作成  
  単純コンテンツが含まれる <xref:System.Xml.Linq.XElement> は、1 回のメソッド呼び出しで作成できます。 そのためには、次のように、コンテンツを 2 番目のパラメーターとして指定します。  
@@ -236,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ツリーの作成 (C#)](./linq-to-xml-overview.md)

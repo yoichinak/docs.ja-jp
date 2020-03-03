@@ -1,5 +1,5 @@
 ---
-title: ICorDebugAppDomainEnum Interface1
+title: ICorDebugAppDomainEnum インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugAppDomainEnum
@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: e9226e6e-ca2c-428e-bb38-0c099210f507
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3759be77cd6e6265eb8328669c88225067b99bfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fb849c78636d5e29f58a70f59aa4cb3cd22df40
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509715"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76784734"
 ---
-# <a name="icordebugappdomainenum-interface1"></a>ICorDebugAppDomainEnum Interface1
-提供、 `Next` 、指定した数を返すメソッド`ICorDebugAppDomainEnum`列挙体の次の場所から始まる値。 このインターフェイスは、"ICorDebugEnum"のサブクラスです。  
+# <a name="icordebugappdomainenum-interface"></a>ICorDebugAppDomainEnum インターフェイス
+
+`Next` メソッドを提供します。このメソッドは、列挙体の次の位置から始まる指定された数の `ICorDebugAppDomainEnum` 値を返します。 このインターフェイスは、"ICorDebugEnum" のサブクラスです。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugappdomainenum-next-method.md)|現在のカーソル位置から、コレクションから指定されたアプリケーション ドメイン数を取得します。|  
+|[Next メソッド](icordebugappdomainenum-next-method.md)|現在のカーソル位置から開始して、指定した数のアプリケーションドメインをコレクションから取得します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -47,5 +46,6 @@ ms.locfileid: "54509715"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebug インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [ICorDebug インターフェイス](icordebug-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

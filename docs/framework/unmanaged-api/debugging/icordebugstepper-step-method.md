@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: 38c1940b-ada1-40ba-8295-4c0833744e1e
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: c2d282e27ec5068fa6fe7f58ba95458fdc219972
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 43f86e704e4a52a702b8f563e3c613806eb061b5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137525"
 ---
 # <a name="icordebugstepperstep-method"></a>ICorDebugStepper::Step メソッド
-Icordebugstepper にその格納スレッドおよび必要に応じて、1 ステップに、スレッド内で呼び出される関数をシングル ステップ実行を続行します。  
+この ICorDebugStepper は、含まれるスレッドを1ステップずつ実行します。また、必要に応じて、スレッド内で呼び出される関数を使用したシングルステップ実行を継続します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Step (  
     [in] BOOL   bStepIn  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `bStepIn`  
- [in]設定`true`スレッド内で呼び出される関数にステップ インします。 設定`false`をステップ オーバー関数。  
+ から`true` に設定すると、スレッド内で呼び出される関数にステップインします。 関数をステップオーバーするには、`false` に設定します。  
   
-## <a name="remarks"></a>コメント  
- 共通言語ランタイムがこのステッパのフレームで次のマネージ命令を実行するときに、手順を完了します。 場合`Step`は、ステッパで呼び出されると、マネージ コードのではない、スレッドがマネージ コードの次の命令を実行するとステップが完了します。  
+## <a name="remarks"></a>Remarks  
+ 共通言語ランタイムがこのステッパのフレームで次のマネージ命令を実行すると、手順が完了します。 マネージコードに含まれていないステッパで `Step` が呼び出された場合、次のマネージコード命令がスレッドによって実行されると、手順が完了します。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

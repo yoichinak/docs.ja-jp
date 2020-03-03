@@ -7,28 +7,29 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: c5dd7c6889a3fb5344142ee9914f98e8922d748b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c387b0225375f4675042bef593b23a084305b4fd
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264436"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591592"
 ---
-# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<typename >' を実装する必要があります '\<methodname >' のインターフェイス'\<interfacename >'
-クラスまたは構造体がインターフェイスを実装するために要求しているインターフェイスによって定義されたプロシージャを実装していません。 インターフェイスのすべてのメンバーを実装する必要があります。  
+# <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 > '\<typename > ' は、インターフェイス '\<interfacename > ' に '\<methodname > ' を実装しなければなりません
+インターフェイスを実装するクラスまたは構造体が要求しますが、インターフェイスによって定義されたプロシージャは実装しません。 インターフェイスのすべてのメンバーを実装する必要があります。  
   
  **エラー ID:** BC30149  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1.  同じ名前と、インターフェイスで定義されたシグネチャを持つプロシージャを宣言します。 必ず含めて、少なくとも`End Function`または`End Sub`ステートメント。  
+1. インターフェイスで定義されているものと同じ名前およびシグネチャを持つプロシージャを宣言します。 少なくとも `End Function` または `End Sub` ステートメントを含めてください。  
   
-2.  追加、`Implements`句の末尾に、`Function`または`Sub`ステートメント。 例:  
+2. `Function` または `Sub` ステートメントの末尾に `Implements` 句を追加します。 例 :  
   
-    ```  
+    ```vb  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  
     ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, exceptions
 ms.assetid: beb51e50-9061-4d3d-908c-56a4f7c2e8c1
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a89ce5786754a73f41747d13498038e081feead4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 12777a5f34b8aadcc80977b8796fc2cd53c626a8
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255225"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73134251"
 ---
 # <a name="exception-handling-task-parallel-library"></a>例外処理 (タスク並列ライブラリ)
 

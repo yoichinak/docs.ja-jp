@@ -14,14 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5f3c91c9-c035-454f-96cc-011cab1ea06b
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2d228e548255cd70f34f6609aff613789f94fe5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f01c27376191c3a2dddf56dae4b26c8b5193c73e
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507526"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788642"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum インターフェイス
 ガベージ コレクトされるオブジェクトの列挙子を提供します。  
@@ -30,23 +28,23 @@ ms.locfileid: "54507526"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Next メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)|指定した数を取得[COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)ガベージ コレクトされるオブジェクトに関する情報が含まれているインスタンス。|  
+|[Next メソッド](icordebuggcreferenceenum-next-method.md)|ガベージコレクトされるオブジェクトに関する情報を格納している、指定した数の[COR_GC_REFERENCE](cor-gc-reference-structure.md)インスタンスを取得します。|  
   
-## <a name="remarks"></a>Remarks  
- `ICorDebugGCReferenceEnum` "ICorDebugEnum"インターフェイスを実装するインターフェイス。  
+## <a name="remarks"></a>コメント  
+ `ICorDebugGCReferenceEnum` インターフェイスは、"ICorDebugEnum" インターフェイスを実装します。  
   
- `ICorDebugGCReferenceEnum`インスタンスには、 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)インスタンスを呼び出すことによって、 [icordebugprocess 5::enumerategcreferences](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerategcreferences-method.md)メソッド。 [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)オブジェクトを呼び出すことによって列挙できる、 [ICorDebugGCReference::Next](../../../../docs/framework/unmanaged-api/debugging/icordebuggcreferenceenum-next-method.md)メソッド。  
+ `ICorDebugGCReferenceEnum` インスタンスには、 [ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md)メソッドを呼び出すことによって、 [COR_GC_REFERENCE](cor-gc-reference-structure.md)インスタンスが設定されます。 [COR_GC_REFERENCE](cor-gc-reference-structure.md)オブジェクトは、 [ICorDebugGCReference:: Next](icordebuggcreferenceenum-next-method.md)メソッドを呼び出すことによって列挙できます。  
   
- [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)このメソッドによって設定されます。 コレクション内のオブジェクトは、3 種類のオブジェクトを表します。  
+ このメソッドによって設定されるコレクション内の[COR_GC_REFERENCE](cor-gc-reference-structure.md)オブジェクトは、次の3種類のオブジェクトを表します。  
   
--   すべてのマネージ スタックからオブジェクト。 これには、マネージ コードだけではなく、共通言語ランタイムによって作成されたオブジェクトでのライブ参照が含まれます。  
+- すべてのマネージスタックからのオブジェクト。 これには、マネージコードのライブ参照や、共通言語ランタイムによって作成されたオブジェクトが含まれます。  
   
--   オブジェクト ハンドル テーブルをします。 強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。  
+- ハンドルテーブルのオブジェクト。 これには、厳密な参照 (`HNDTYPE_STRONG` と `HNDTYPE_REFCOUNT`) と、モジュール内の静的変数が含まれます。  
   
--   ファイナライザー キューからのオブジェクト。 ファイナライザー キューでは、ファイナライザーが実行されるまでオブジェクトがルートします。  
+- ファイナライザーキューからのオブジェクト。 ファイナライザーが実行されるまで、ファイナライザーはオブジェクトをキューに置いています。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -55,4 +53,5 @@ ms.locfileid: "54507526"
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

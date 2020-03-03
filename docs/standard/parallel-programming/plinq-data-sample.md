@@ -8,14 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, sample data
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: b13a2608df486f1de42514d4f8eaac49f04d345e
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867934"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73140017"
 ---
 # <a name="plinq-data-sample"></a>PLINQ データのサンプル
 このサンプルには、.csv 形式のデータ例と、データを顧客、製品、注文、その他の詳細のメモリ内コレクションに変換するメソッドが含まれています。 PLINQ でさらに試す場合は、他の特定のトピックのコード例をこのトピックのコードに貼り付けて、`Main` メソッドから呼び出すことができます。 また、独自の PLINQ クエリでこのデータを使用することもできます。  
@@ -23,19 +21,19 @@ ms.locfileid: "43867934"
  データは、Northwind データベースのサブセットを表します。 50 の顧客レコードが含まれていますが、すべてのフィールドが含まれているわけではありません。 すべての顧客の注文および対応する Order_Detail データからの行のサブセットが含まれます。 製品はすべて含まれます。  
   
 > [!NOTE]
->  データ セットは、PLINQ が基本的な `where` 句と `select` 句のみを含むクエリの LINQ to Objects よりも高速であることを示すには十分な大きさではありません。 このような小さいデータ セットでの速度向上を確認するには、データ セットのすべての要素に対して負荷の大きい操作を含むクエリを使用します。  
+> データ セットは、PLINQ が基本的な `where` 句と `select` 句のみを含むクエリの LINQ to Objects よりも高速であることを示すには十分な大きさではありません。 このような小さいデータ セットでの速度向上を確認するには、データ セットのすべての要素に対して負荷の大きい操作を含むクエリを使用します。  
   
 ### <a name="to-set-up-this-sample"></a>このサンプルをセットアップするには  
   
-1.  Visual Basic または Visual C# コンソール アプリケーション プロジェクトを作成します。  
+1. Visual Basic または Visual C# コンソール アプリケーション プロジェクトを作成します。  
   
-2.  これらの手順の次に示すコードを使用して、Module1.vb または Program.cs のコンテンツを置き換えます。  
+2. これらの手順の次に示すコードを使用して、Module1.vb または Program.cs のコンテンツを置き換えます。  
   
-3.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[テキスト ファイル]** を選択してから **[OK]** をクリックします。 このトピックのデータをコピーし、新しいテキスト ファイルに貼り付けます。 **[ファイル]** メニューで **[保存]** をクリックし、ファイルに Plinqdata.csv という名前を付けてから、ソース コード ファイルを含むフォルダーに保存します。  
+3. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[テキスト ファイル]** を選択してから **[OK]** をクリックします。 このトピックのデータをコピーし、新しいテキスト ファイルに貼り付けます。 **[ファイル]** メニューで **[保存]** をクリックし、ファイルに Plinqdata.csv という名前を付けてから、ソース コード ファイルを含むフォルダーに保存します。  
   
-4.  F5 キーを押し、プロジェクトが正常にビルドされ、実行されることを確認します。 次の出力がコンソール ウィンドウに表示されます。  
+4. F5 キーを押し、プロジェクトが正常にビルドされ、実行されることを確認します。 次の出力がコンソール ウィンドウに表示されます。  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -48,7 +46,7 @@ ms.locfileid: "43867934"
   
 ## <a name="data"></a>データ  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  

@@ -7,18 +7,19 @@ helpviewer_keywords:
 - controls [WPF], StatusBar
 - StatusBar control [WPF]
 ms.assetid: aba45aed-7953-4b2c-bc29-315a9be6c440
-ms.openlocfilehash: 5b61255d19340152cd17d12eb60224dc90231607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8998eba8a713cada62c8defc8d7500bf3bc036a3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791051"
 ---
 # <a name="statusbar"></a>StatusBar
-A<xref:System.Windows.Controls.Primitives.StatusBar>アプリケーションがステータス情報を表示できるウィンドウの下部にある水平方向の領域です。  
+A<xref:System.Windows.Controls.Primitives.StatusBar>は、アプリケーションが状態情報を表示できるウィンドウの下部にある水平方向の領域です。  
   
- 次の図の例を示します、<xref:System.Windows.Controls.Primitives.StatusBar>です。  
+ 次の図の例を示します、<xref:System.Windows.Controls.Primitives.StatusBar>します。  
   
- ![ステータス バー](../../../../docs/framework/wpf/controls/media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")  
+ ![ステータス バー](./media/ss-ctl-statusbar.GIF "SS_CTL_statusbar")  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

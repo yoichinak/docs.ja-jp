@@ -2,28 +2,28 @@
 title: フェデレーション サンプル
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 8b884c416960b15da988bde2cc770895857cb06f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c143ad9315df94a2d836a2c2c742ffa9a7728511
+ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625576"
+ms.lasthandoff: 12/05/2019
+ms.locfileid: "74837884"
 ---
 # <a name="federation-sample"></a>フェデレーション サンプル
 このサンプルではフェデレーション セキュリティを示します。  
   
 ## <a name="sample-details"></a>サンプルの詳細  
- Windows Communication Foundation (WCF) が使用して、フェデレーション セキュリティ アーキテクチャをデプロイするためのサポートを提供、`wsFederationHttpBinding`します。 `wsFederationHttpBinding` は、セキュリティで保護された、信頼できる、相互運用が可能なバインディングを提供します。このバインディングでは、要求/応答の通信のための基になるトランスポート機構として HTTP を使用でき、エンコーディングのためのワイヤ形式として Text/XML を使用できます。 WCF でのフェデレーションの詳細については、次を参照してください。[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)します。  
+ Windows Communication Foundation (WCF) では、`wsFederationHttpBinding`を使用したフェデレーションセキュリティアーキテクチャの展開がサポートされています。 `wsFederationHttpBinding` は、セキュリティで保護された、信頼できる、相互運用が可能なバインディングを提供します。このバインディングでは、要求/応答の通信のための基になるトランスポート機構として HTTP を使用でき、エンコーディングのためのワイヤ形式として Text/XML を使用できます。 WCF でのフェデレーションの詳細については、「[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)」を参照してください。  
   
  シナリオは、次の 4 つの部分から構成されます。  
   
--   BookStore サービス  
+- BookStore サービス  
   
--   BookStore STS  
+- BookStore STS  
   
--   HomeRealm STS  
+- HomeRealm STS  
   
--   BookStore クライアント  
+- BookStore クライアント  
   
  BookStore サービスは、`BrowseBooks` と `BuyBook` の 2 つの操作をサポートします。 サービスでは、`BrowseBooks` 操作には匿名アクセスできますが、`BuyBooks` 操作にアクセスするには認証済みのアクセス権限が必要です。 認証は、BookStore STS によって発行されたトークンの形式を取ります。 BookStore サービス用の構成ファイルは、次のように `wsFederationHttpBinding` を使用して、クライアントを BookStore STS にポイントします。  
   
@@ -67,54 +67,52 @@ ms.locfileid: "54625576"
   
  `BuyBook` 操作にアクセスするときに発生するイベントの順序は、次のとおりです。  
   
-1.  クライアントは、Windows 資格情報を使用して HomeRealm STS に対する認証を行います。  
+1. クライアントは、Windows 資格情報を使用して HomeRealm STS に対する認証を行います。  
   
-2.  HomeRealm STS は、BookStore STS に対する認証に使用できるトークンを発行します。  
+2. HomeRealm STS は、BookStore STS に対する認証に使用できるトークンを発行します。  
   
-3.  クライアントは、HomeRealm STS によって発行されたトークンを使用して BookStore STS に対する認証を行います。  
+3. クライアントは、HomeRealm STS によって発行されたトークンを使用して BookStore STS に対する認証を行います。  
   
-4.  BookStore STS は、BookStore サービスに対する認証に使用できるトークンを発行します。  
+4. BookStore STS は、BookStore サービスに対する認証に使用できるトークンを発行します。  
   
-5.  クライアントは、BookStore STS によって発行されたトークンを使用して BookStore サービスに対する認証を行います。  
+5. クライアントは、BookStore STS によって発行されたトークンを使用して BookStore サービスに対する認証を行います。  
   
-6.  クライアントは `BuyBook` 操作にアクセスします。  
+6. クライアントは `BuyBook` 操作にアクセスします。  
   
  このサンプルの設定および実行方法については、次の手順を参照してください。  
   
 > [!NOTE]
->  書き込みアクセス許可が必要、 **wwwroot**ディレクトリをこのサンプルを実行します。  
+> このサンプルを実行するには、 **wwwroot**ディレクトリに対する書き込みアクセス許可が必要です。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1.  SDK コマンド ウィンドウを開きます。 Setup.bat をサンプルのパスで実行します。 これにより、サンプルに必要な仮想ディレクトリが作成され、必要な証明書が適切な権限を付与されてインストールされます。  
+1. SDK コマンド ウィンドウを開きます。 Setup.bat をサンプルのパスで実行します。 これにより、サンプルに必要な仮想ディレクトリが作成され、必要な証明書が適切な権限を付与されてインストールされます。  
   
     > [!NOTE]
-    >  Setup.bat バッチ ファイルは、Windows SDK コマンド プロンプトから実行します。 MSSDK 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Windows SDK コマンド プロンプトで自動設定されます。 セットアップで IIS 管理者スクリプトが使用されるため、[!INCLUDE[wv](../../../../includes/wv-md.md)] で IIS 6.0 管理互換がインストールされていることを確認する必要があります。 [!INCLUDE[wv](../../../../includes/wv-md.md)] でセットアップ スクリプトを実行するには、管理者権限が必要です。  
+    > Setup.bat バッチ ファイルは、Windows SDK コマンド プロンプトから実行します。 MSSDK 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Windows SDK コマンド プロンプトで自動設定されます。 Windows Vista では、セットアップで IIS 管理者スクリプトが使用されるため、IIS 6.0 管理互換がインストールされていることを確認する必要があります。 Windows Vista でセットアップスクリプトを実行するには、管理者特権が必要です。  
   
-2.  Visual Studio で FederationSample.sln を開き、**ソリューションのビルド**から、**ビルド**メニュー。 これによって共通のプロジェクト ファイル、Bookstore サービス、Bookstore STS、および HomeRealm STS が作成され、IIS に展開されます。 さらに Bookstore クライアント アプリケーションがビルドされ、FederationSample\BookStoreClient\bin\Debug フォルダに実行可能ファイル BookStoreClient.exe が配置されます。  
+2. Visual Studio で FederationSample を開き、 **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。 これによって共通のプロジェクト ファイル、Bookstore サービス、Bookstore STS、および HomeRealm STS が作成され、IIS に展開されます。 さらに Bookstore クライアント アプリケーションがビルドされ、FederationSample\BookStoreClient\bin\Debug フォルダーに実行可能ファイル BookStoreClient.exe が配置されます。  
   
-3.  BookStoreClient.exe をダブルクリックします。 BookStoreClient ウィンドウが表示されます。  
+3. BookStoreClient.exe をダブルクリックします。 BookStoreClient ウィンドウが表示されます。  
   
-4.  クリックして、この書店で利用可能なブックを参照できます**Browse Books**します。  
+4. 書店で利用可能な書籍を参照するには、 **[参照]** をクリックします。  
   
-5.  特定の本を購入する一覧で本を選択し、をクリックして**Buy Book**します。 アプリケーションが起動し、HomeRealm セキュリティ トークン サービスを使用した Windows 認証によって認証を行います。  
+5. 特定の本を購入するには、一覧で本を選択し、 **[Book book]** をクリックします。 アプリケーションが起動し、HomeRealm セキュリティ トークン サービスを使用した Windows 認証によって認証を行います。  
   
      サンプルは、ユーザーが 15 ドル以下の本を購入できるように構成されています。 15 ドルを超える本を購入しようとすると、クライアントは、BookStore サービスからアクセス拒否のメッセージを受け取ります。  
   
     > [!NOTE]
-    >  サンプルでは、購入後にユーザーの与信限度額を更新しません。 ユーザーは、(固定の) 与信限度額以内なら何度でも本を購入できます。  
+    > サンプルでは、購入後にユーザーの与信限度額を更新しません。 ユーザーは、(固定の) 与信限度額以内なら何度でも本を購入できます。  
   
 #### <a name="to-clean-up"></a>クリーンアップするには  
   
-1.  Cleanup.bat を実行します。 これによって、設定中に作成された仮想ディレクトリが削除されます。同時に、設定中にインストールされた証明書も削除されます。  
+1. Cleanup.bat を実行します。 これによって、設定中に作成された仮想ディレクトリが削除されます。同時に、設定中にインストールされた証明書も削除されます。  
   
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  
-  
-## <a name="see-also"></a>関連項目
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

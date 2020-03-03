@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d3c6818861f8b0261a9a71a4654029143d928d08
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67856936"
+---
 ### <a name="allow-unicode-in-uris-that-resemble-unc-shares"></a>UNC 共有に似た URI での Unicode の許可
 
 |   |   |

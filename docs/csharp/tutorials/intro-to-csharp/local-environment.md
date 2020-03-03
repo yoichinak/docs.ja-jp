@@ -2,19 +2,19 @@
 title: C# の概要 - 開発ツールに対する理解を深める
 description: この記事では、コンピューターで C# アプリケーションと .NET アプリケーションを開発するためのツールの基礎を提供します。
 ms.date: 10/23/2018
-ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: b18c71c54e4450902f576a1074058abcd5e8aa91
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129988"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834087"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>.NET 開発ツールに対する理解を深める
 
 コンピューターでチュートリアルを実行する最初の手順は、開発環境を設定することです。
-Mac、PC、または Linux 上でローカルの開発環境を設定する手順については、.NET の [10 分でわかる概要](https://www.microsoft.com/net/core)に関するトピックに記載されています。
+Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。
 
-または、[.NET Core SDK](https://www.microsoft.com/net/download) と [Visual Studio Code](https://code.visualstudio.com/) をインストールすることもできます。
+または、[.NET Core SDK](https://dotnet.microsoft.com/download) と [Visual Studio Code](https://code.visualstudio.com/) をインストールすることもできます。
 
 ## <a name="basic-application-development-flow"></a>アプリケーション開発の基本フロー
 
@@ -37,12 +37,6 @@ Mac、PC、または Linux 上でローカルの開発環境を設定する手�
 [分岐とループ](branches-and-loops-local.md) チュートリアルでは、変数に格納されている値に基づき、コード実行のさまざまなパスを選択することの基本を説明します。 プログラムが決定して異なる操作を選択する上で基本となる、制御フローの基礎を学習します。
 
 このチュートリアルでは、[Hello world](hello-world.yml) レッスンと [C# における数値](numbers-in-csharp-local.md)レッスンを修了していることが前提条件となります。
-
-## <a name="string-interpolationinterpolated-strings-localmd"></a>[文字列補間](interpolated-strings-local.md)
-
-[文字列補間](interpolated-strings-local.md)チュートリアルでは、文字列に値を挿入する方法について説明します。 C# の埋め込み式を使用して挿入文字列を作成する方法と、結果文字列の書式設定を制御する方法について学習します。
-
-このチュートリアルでは、「[Hello World](hello-world.yml)」、「[C# における数値](numbers-in-csharp-local.md)」、「[分岐とループ](branches-and-loops-local.md)」の各レッスンを完了していることを前提としています。
 
 ## <a name="list-collectionarrays-and-collectionsmd"></a>[リスト コレクション](arrays-and-collections.md)
 

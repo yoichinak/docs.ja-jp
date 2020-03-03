@@ -3,23 +3,23 @@ title: タブ補完を有効にする
 description: この記事では、PowerShell、Bash、および zsh 向けの .NET Core CLI のタブ補完を有効にする方法を説明します。
 author: thraka
 ms.author: adegeo
-ms.date: 12/17/2018
-ms.openlocfilehash: 783868fb8300dd4a25c62a108c1c0f7a485721df
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.date: 11/03/2019
+ms.openlocfilehash: 649b723c2abfa74443a16914594284a77e0eafc0
+ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54029607"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76920533"
 ---
-# <a name="how-to-enable-tab-completion-for-net-core-cli"></a>.NET Core CLI のタブ補完を有効にする方法
+# <a name="how-to-enable-tab-completion-for-the-net-core-cli"></a>.NET Core CLI のタブ補完を有効にする方法
 
 .NET Core 2.0 SDK 以降では、.NET Core CLI はタブ補完をサポートします。 この記事では、3 つのシェル、PowerShell、Bash、および zsh のタブ補完を構成する方法について説明します。 その他のシェルでは、オート コンプリートのサポートがある場合があります。 オート コンプリートの構成方法については、それぞれのドキュメントを参照してください。手順は、この記事で説明されている手順と同様です。
 
 [!INCLUDE [topic-appliesto-net-core-2plus](~/includes/topic-appliesto-net-core-2plus.md)]
 
-セットアップが完了したら、シェルに `dotnet ` コマンドを入力し、TAB キーを押すと、.NET Core CLI のタブ補完がトリガーされます。 現在のコマンド ラインが `dotnet complete` コマンドに送信され、結果がシェルによって処理されます。 何かを `dotnet complete` コマンドに直接送信することで、タブ補完を有効にせずに結果をテストすることができます。 次に例を示します。
+セットアップが完了したら、シェルに `dotnet` コマンドを入力した後、TAB キーを押すと、.NET Core CLI のタブ補完がトリガーされます。 現在のコマンド ラインが `dotnet complete` コマンドに送信され、結果がシェルによって処理されます。 何かを `dotnet complete` コマンドに直接送信することで、タブ補完を有効にせずに結果をテストすることができます。 次に例を示します。
 
-```
+```console
 > dotnet complete "dotnet a"
 add
 clean
@@ -44,7 +44,7 @@ pack
 
 ## <a name="powershell"></a>PowerShell
 
-.NET Core CLI の **PowerShell** にタブ補完を追加するには、変数 `$PROFILE` に格納されているプロファイルを作成または編集します。 詳細については、[プロファイルの作成方法](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#how-to-create-a-profile)と[プロファイルと実行ポリシー](/powershell/module/microsoft.powershell.core/about/about_profiles?view=powershell-6#profiles-and-execution-policy)のトピックを参照してください。 
+.NET Core CLI の **PowerShell** にタブ補完を追加するには、変数 `$PROFILE` に格納されているプロファイルを作成または編集します。 詳細については、[プロファイルの作成方法](/powershell/module/microsoft.powershell.core/about/about_profiles#how-to-create-a-profile)と[プロファイルと実行ポリシー](/powershell/module/microsoft.powershell.core/about/about_profiles#profiles-and-execution-policy)のトピックを参照してください。 
 
 自分のプロファイルに次のコードを追加します。
 
@@ -70,7 +70,10 @@ _dotnet_bash_complete()
   local word=${COMP_WORDS[COMP_CWORD]}
 
   local completions
-  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}")"
+  completions="$(dotnet complete --position "${COMP_POINT}" "${COMP_LINE}" 2>/dev/null)"
+  if [ $? -ne 0 ]; then
+    completions=""
+  fi
 
   COMPREPLY=( $(compgen -W "$completions" -- "$word") )
 }
@@ -78,7 +81,7 @@ _dotnet_bash_complete()
 complete -f -F _dotnet_bash_complete dotnet
 ```
 
-## <a name="zsh"></a>Zsh
+## <a name="zsh"></a>zsh
 
 .NET Core CLI の **zsh** シェルにタブ補完を追加するには、次のコードを `.zshrc` ファイルに追加します。
 

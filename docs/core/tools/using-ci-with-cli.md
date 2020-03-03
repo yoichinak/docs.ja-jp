@@ -1,15 +1,13 @@
 ---
-title: 継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
-description: .NET Core SDK とそのツールをビルド サーバーで使用する方法に関する情報。
-author: guardrex
+title: .NET Core SDK とツールを使用した継続的インテグレーション (CI)
+description: 継続的インテグレーションで .NET Core SDK とそのツールをビルド サーバー上で使用する方法について説明します。
 ms.date: 05/18/2017
-ms.custom: seodec18
-ms.openlocfilehash: c9fd9e359a22467cc8639109538522e4088df5ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e23a21dd36422a095e56519c9aa28ce2549f7b2
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704096"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77451039"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>継続的インテグレーション (CI) で .NET Core SDK とツールを使用する
 
@@ -34,7 +32,7 @@ macOS をご利用の場合、PKG インストーラーをお使いください�
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> インストーラー スクリプトの使用時、ネイティブ依存性は自動的にはインストールされません。 オペレーティング システムにネイティブ依存性がない場合、それをインストールする必要があります。 詳細については、「[Linux における .NET Core の前提条件](../linux-prerequisites.md)」を参照してください。
+> インストーラー スクリプトの使用時、ネイティブ依存性は自動的にはインストールされません。 オペレーティング システムにネイティブ依存性がない場合、それをインストールする必要があります。 詳細については、[.NET Core の依存関係と要件](../install/dependencies.md)に関する記事を参照してください。
 
 ## <a name="ci-setup-examples"></a>CI セットアップ例
 
@@ -153,7 +151,7 @@ install:
 
 Azure DevOps Services で手動セットアップ スクリプトを使用するには、新しいビルド定義を作成し、ビルド手順で実行するスクリプトを指定します。 これは Azure DevOps Services ユーザー インターフェイスを使用して実行できます。
 
-1. 最初に新しいビルド定義を作成します。 作成するビルドの種類を定義するためのオプションを指定する画面が表示されたら、**[空]** オプションを選択します。
+1. 最初に新しいビルド定義を作成します。 作成するビルドの種類を定義するためのオプションを指定する画面が表示されたら、 **[空]** オプションを選択します。
 
    ![ビルド定義で空を選択する](./media/using-ci-with-cli/select-empty-build-definition.png)
 
@@ -161,7 +159,7 @@ Azure DevOps Services で手動セットアップ スクリプトを使用する
 
    ![ビルド ステップの追加](./media/using-ci-with-cli/add-build-step.png)
 
-1. **[タスク カタログ]** が表示されます。 このカタログには、ビルドで使用するタスクが含まれています。 スクリプトがあるので、**PowerShell: Run a PowerShell スクリプト**の **[追加]** ボタンを選択します。
+1. **[タスク カタログ]** が表示されます。 このカタログには、ビルドで使用するタスクが含まれています。 スクリプトがあるので、 **[追加]** ボタンを **PowerShell:Run a PowerShell スクリプト**に選択します。
 
    ![PowerShell スクリプトの追加手順](./media/using-ci-with-cli/add-powershell-script.png)
 

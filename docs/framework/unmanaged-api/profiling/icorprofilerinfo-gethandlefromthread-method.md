@@ -15,44 +15,43 @@ helpviewer_keywords:
 ms.assetid: 36cdc9f5-7579-4cd2-aa36-fc05c741584c
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 8f1eb2354536a436bd6ae41cf70bf11549982d5e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 038f922eaaeb7d660cfbdcc0facb89677bdd154e
+ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612594"
+ms.lasthandoff: 01/29/2020
+ms.locfileid: "76863544"
 ---
 # <a name="icorprofilerinfogethandlefromthread-method"></a>ICorProfilerInfo::GetHandleFromThread メソッド
-Win32 スレッドのハンドル、スレッドの ID にマップします。  
+スレッドの ID を Win32 スレッドハンドルにマップします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHandleFromThread(  
     [in]  ThreadID threadId,  
     [out] HANDLE  *phThread);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in]マップされることをスレッド ID です。  
+ から割り当てられるスレッド ID。  
   
  `phThread`  
- [out]Win32 スレッドのハンドルへのポインター。  
+ 入出力Win32 スレッドハンドルへのポインター。  
   
-## <a name="remarks"></a>Remarks  
- プロファイラーは、Win32 を呼び出す必要があります`DuplicateHandle`関数を使用する前に、ハンドル。  
+## <a name="remarks"></a>コメント  
+ プロファイラーは、使用前にハンドルに対して Win32 `DuplicateHandle` 関数を呼び出す必要があります。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorProf.idl、CorProf.h  
+ **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorProfilerInfo インターフェイス](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+
+- [ICorProfilerInfo インターフェイス](icorprofilerinfo-interface.md)

@@ -1,23 +1,23 @@
 ---
-title: Option<keyword>ステートメント (Visual Basic)
+title: Option <keyword> ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 29b2602664387ee233574686440691d2f4da830b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6ac0116b56fac7a5bfdc6545c8570317376791a1
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279163"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74353777"
 ---
-# <a name="option-keyword-statement"></a>Option\<keyword> ステートメント
-ソース ファイル全体に適用されるコンパイラ オプションを指定するステートメントについて説明します。  
+# <a name="option-keyword-statement"></a>Option \<keyword > ステートメント
+ソースファイル全体に適用されるコンパイラオプションを指定するステートメントを導入します。  
   
-## <a name="remarks"></a>Remarks  
- コンパイラ オプションには、すべての変数を明示的に宣言する必要があるかどうか、型の縮小変換する必要がありますがかどうか、明示的なであるかテキストまたはバイナリ値の文字列の比較かどうかを制御できます。  
+## <a name="remarks"></a>コメント  
+ コンパイラオプションでは、すべての変数を明示的に宣言する必要があるかどうか、縮小型変換を明示的に行う必要があるかどうか、または文字列をテキストとして比較するか、バイナリ数量として比較するかを制御できます。  
   
  キーワード `Option` は次のコンテキストで使用できます。  
   
@@ -29,5 +29,6 @@ ms.locfileid: "55279163"
   
  [Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)

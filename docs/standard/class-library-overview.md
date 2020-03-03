@@ -37,14 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ab7d64a9c7f0b1a080fdf82ed2662c7256f16132
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555181"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132856"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -52,17 +50,17 @@ ms.locfileid: "54555181"
   
  .NET の型は、.NET アプリケーション、.NET コンポーネント、およびコントロールを構築するときの基礎となります。 .NET 実装には、次の機能を実行する型が含まれます。  
   
--   基本データ型と例外を表す。  
+- 基本データ型と例外を表す。  
   
--   データ構造をカプセル化する。  
+- データ構造をカプセル化する。  
   
--   入出力を実行する。  
+- 入出力を実行する。  
   
--   読み込まれた型についての情報にアクセスする。  
+- 読み込まれた型についての情報にアクセスする。  
   
--   .NET Framework セキュリティ チェックを呼び出す。  
+- .NET Framework セキュリティ チェックを呼び出す。  
   
--   データ アクセス、豊富なクライアント側 GUI、およびサーバー制御式のクライアント側 GUI を提供する。  
+- データ アクセス、豊富なクライアント側 GUI、およびサーバー制御式のクライアント側 GUI を提供する。  
   
  .NET には、豊富なインターフェイスのセットに加えて、抽象クラスと具象 (抽象ではない) クラスが用意されています。 具象クラスはそのまま使用できますが、多くの場合は、具象クラスから独自のクラスを派生させます。 インターフェイスの機能を使用するには、インターフェイスを実装するクラスを作成するか、またはインターフェイスを実装する .NET クラスの 1 つからクラスを派生させます。  
   
@@ -70,7 +68,7 @@ ms.locfileid: "54555181"
 
  .NET の型では、階層構造を伴うドット構文の名前付けスキームが使用されます。 この方法では、関連する型が名前空間にグループ化されるため、検索と参照を簡単に行うことができます。 フルネームのうち右端のドットまでの最初の部分は、名前空間の名前です。 名前の最後の部分は型名です。 たとえば、`System.Collections.Generic.List<T>` は `System.Collections.Generic` 名前空間に属する `List<T>` 型を表します。 <xref:System.Collections.Generic> の型は、ジェネリック コレクションの操作で使用できます。  
   
- この名前付け方法によって、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を拡張するライブラリ開発者は、型の階層構造のグループを簡単に作成し、一貫性のあるわかりやすい名前を付けることができます。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
+ この名前付け方法によって、.NET Framework を拡張するライブラリ開発者は、型の階層構造のグループを簡単に作成し、一貫性のあるわかりやすい名前を付けることができます。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
   
  *CompanyName*.*TechnologyName*  
   
@@ -78,7 +76,7 @@ ms.locfileid: "54555181"
   
  名前付けパターンを使用して関連する型を名前空間にグループ化する方法は、クラス ライブラリを構築および文書化するのに便利です。 ただし、この名前付け方法は、参照可能範囲、メンバー アクセス、継承、セキュリティ、バインディングには影響しません。 名前空間は複数のアセンブリにまたがって分割でき、また 1 つのアセンブリに複数の名前空間からの型を含めることができます。 アセンブリは、共通言語ランタイムにおけるバージョン管理、配置、セキュリティ、読み込み、および参照可能範囲のための構造を提供します。  
   
- 名前空間と型の名前の詳細については、「[Common Type System](../../docs/standard/base-types/common-type-system.md)」(共通型システム) を参照してください。  
+ 名前空間と型の名前の詳細については、「[共通型システム](../../docs/standard/base-types/common-type-system.md)」(共通型システム) を参照してください。  
   
 ## <a name="system-namespace"></a>System 名前空間
 
@@ -89,15 +87,15 @@ ms.locfileid: "54555181"
 |カテゴリ|クラス名|説明|Visual Basic のデータ型|C# のデータ型|C++/CLI のデータ型|F# のデータ型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整数型|<xref:System.Byte>|8 ビット符号なし整数。|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|8 ビット符号付き整数。<br /><br /> 非 CLS 準拠|**SByte**|**sbyte**|**char**<br /> - または -<br /> **signed** **char**|**sbyte**|  
+||<xref:System.SByte>|8 ビット符号付き整数。<br /><br /> 非 CLS 準拠|**SByte**|**sbyte**|**char**<br /> または<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|16 ビット符号付き整数。|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32 ビット符号付き整数。|**Integer**|**int**|**int**<br /><br /> - または -<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 ビット符号付き整数。|**Integer**|**int**|**int**<br /><br /> または<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 ビット符号付き整数。|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|32 ビット符号なし整数<br /><br /> 非 CLS 準拠|**UInteger**|**uint**|**unsigned int**<br /> - または -<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|32 ビット符号なし整数<br /><br /> 非 CLS 準拠|**UInteger**|**uint**|**unsigned int**<br /> または<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
-|浮動小数点数|<xref:System.Single>|単精度 (32 ビット) 浮動小数点数|**Single**|**float**|**float**|**float32**</br> または</br>**single**|  
-||<xref:System.Double>|倍精度 (64 ビット) 浮動小数点数|**Double**|**double**|**double**|**float**</br> または </br> **double**|  
+|浮動小数点数|<xref:System.Single>|単精度 (32 ビット) 浮動小数点数|**Single**|**float**|**float**|**float32**<br> or<br>**single**|  
+||<xref:System.Double>|倍精度 (64 ビット) 浮動小数点数|**Double**|**double**|**double**|**float**<br> or <br> **double**|  
 |論理|<xref:System.Boolean>|ブール値 (true または false)|**Boolean**|**bool**|**bool**|**bool**|  
 |その他|<xref:System.Char>|Unicode (16 ビット) 文字|**Char**|**char**|**wchar_t**|**char**|  
 ||<xref:System.Decimal>|十進数 (128 ビット) の値です。|**Decimal**|**decimal**|**Decimal**|**decimal**|  

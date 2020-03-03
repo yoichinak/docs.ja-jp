@@ -2,23 +2,24 @@
 title: ServiceAuthorizationSuccess
 ms.date: 03/30/2017
 ms.assetid: 4e379f38-23f3-498b-b3fd-28cedefbf878
-ms.openlocfilehash: 964e29c049b099dc431bfde6cf5a3ee7901c7244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48930ff07efee498ad73fbf90cca895ff023b508
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610618"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70797570"
 ---
 # <a name="serviceauthorizationsuccess"></a>ServiceAuthorizationSuccess
 Id:176  
   
- 重大度:情報  
+ 順情報  
   
- カテゴリ:SecurityAudit  
+ [カテゴリ]:SecurityAudit  
   
 ## <a name="description"></a>説明  
  このイベントは、サービスの承認に成功したことを示します。 イベントには、サービス、アクション、クライアント ID、承認コンテキスト、アクティビティ ID、および ServiceAuthorizationManager が表示されます。  
   
 ## <a name="see-also"></a>関連項目
-- [イベント ログ](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [イベント一覧](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+
+- [イベント ログ](index.md)
+- [イベント一覧](events-general-reference.md)

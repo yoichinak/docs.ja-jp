@@ -1,14 +1,14 @@
 ---
-title: 機械学習の用語集 - ML.NET
+title: 機械学習の用語集
 description: ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語の用語集。
-ms.custom: seodec18
-ms.date: 12/20/2018
-ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.topic: reference
+ms.date: 07/31/2019
+ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
+ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092437"
+ms.lasthandoff: 01/08/2020
+ms.locfileid: "75739881"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
@@ -20,11 +20,21 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 ## <a name="area-under-the-curve-auc"></a>曲線下面積 (AUC)
 
-[二項分類](#binary-classification)における評価メトリックであり、偽陽性率 (x 軸上) に対する真陽性率 (y 軸上) を描画する曲線下面積の値です。 0.5 (最低) ～ 1 (最高) の値になります。 ROC 曲線 (受信者操作特性曲線) 下面積とも呼ばれます。 詳しくは、Wikipedia の[受信者操作特性](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)の記事を参照してください。
+[二項分類](#binary-classification)における評価メトリックであり、偽陽性率 (x 軸上) に対する真陽性率 (y 軸上) を描画する曲線下面積の値です。 0\.5 (最低) ～ 1 (最高) の値になります。 ROC 曲線 (受信者操作特性曲線) 下面積とも呼ばれます。 詳しくは、Wikipedia の[受信者操作特性](https://en.wikipedia.org/wiki/Receiver_operating_characteristic)の記事を参照してください。
 
 ## <a name="binary-classification"></a>二項分類
 
 [ラベル](#label)が 2 つのクラスのうちの 1 つである[分類](#classification)です。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクションの「[二項分類](tasks.md#binary-classification)」を参照してください。
+
+## <a name="calibration"></a>調整
+
+調整は、二項分類と多クラス分類のために、生のスコアをクラスのメンバーシップにマップするプロセスです。 一部 ML.NET トレーナーには `NonCalibrated` サフィックスがあります。 これらのアルゴリズムからは、後でクラスの確率にマップする必要がある生のスコアが生成されます。
+
+## <a name="catalog"></a>Catalog
+
+ML.NET では、カタログは、共通の目的でグループ化された拡張機能のコレクションです。
+
+たとえば、各機械学習タスク (二項分類、回帰、ランキングなど) には、利用できる機械学習アルゴリズム (トレーナー) のカタログがあります。 二項分類トレーナー用のカタログは <xref:Microsoft.ML.BinaryClassificationCatalog.BinaryClassificationTrainers> です。
 
 ## <a name="classification"></a>分類
 
@@ -33,6 +43,26 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 ## <a name="coefficient-of-determination"></a>決定係数
 
 [回帰](#regression)における評価メトリックであり、データがモデルにどの程度適合するかを示します。 0 ～ 1 の値になります。 値 0 は、データがランダムであるか、モデルに適合できないことを意味します。 値 1 は、モデルがデータと完全に一致していることを意味します。 多くの場合、これは r<sup>2</sup>、R<sup>2</sup>、または r の 2 乗と呼ばれます。
+
+## <a name="data"></a>データ
+
+データはあらゆる機械学習アプリケーションの中心です。 ML.NET では、データは <xref:Microsoft.ML.IDataView> オブジェクトで表されます。 データ ビュー オブジェクト:
+
+- 列と行で構成されています
+- 遅延評価されます (つまり、操作によって要求されたときにのみデータが読み込まれます)
+- 各列の型、形式、長さを定義するスキーマが含まれます
+
+## <a name="estimator"></a>エスティメーター
+
+<xref:Microsoft.ML.IEstimator%601> インターフェイスを実装する ML.NET のクラス。
+
+エスティメーターは、変換 (データ準備変換と機械学習モデル トレーニング変換の両方) の仕様です。 エスティメーターを連結して、変換のパイプラインにすることができます。 エスティメーターまたはエスティメーターのパイプラインのパラメーターは、<xref:Microsoft.ML.IEstimator%601.Fit%2A> が呼び出されたときに学習されます。 <xref:Microsoft.ML.IEstimator%601.Fit%2A> の結果は[トランスフォーマー](#transformer)です。
+
+## <a name="extension-method"></a>拡張メソッド
+
+クラスの一部ですが、クラスの外部で定義されている .NET メソッドです。 拡張メソッドの最初のパラメーターは、その拡張メソッドが属するクラスへの静的な `this` 参照です。
+
+拡張メソッドは、ML.NET で[エスティメーター](#estimator)のインスタンスを構築するために幅広く使用されています。
 
 ## <a name="feature"></a>機能
 
@@ -58,6 +88,12 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [分類](#classification)における評価メトリックであり、分類子の正確度を示します。 対数損失が小さいほど、分類子の正確度が高くなります。
 
+## <a name="loss-function"></a>損失関数
+
+損失関数は、トレーニング ラベル値とモデルによって行われた予測との差です。 モデルのパラメーターは、損失関数を最小化することで推定されます。
+
+さまざまな損失関数を使用してさまざまなトレーナーを構成できます。
+
 ## <a name="mean-absolute-error-mae"></a>平均絶対誤差 (MAE)
 
 [回帰](#regression)における評価メトリックであり、すべてのモデルの誤差の平均です。モデルの誤差とは、予測された[ラベル](#label)値と正確なラベル値の間の距離です。
@@ -73,6 +109,10 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 ## <a name="n-gram"></a>N グラム
 
 テキスト データの特徴抽出スキームです。N 個の単語のシーケンスが[特徴](#feature)値になります。
+
+## <a name="normalization"></a>正規化
+
+正規化とは、浮動小数点データを 0 から 1 の間の値にスケーリングするプロセスです。 ML.NET で使用されるトレーニング アルゴリズムの多くで、入力機能データを正規化する必要があります。 ML.NET では、[正規化のために一連の変換](transforms.md#normalization-and-scaling)を提供します。
 
 ## <a name="numerical-feature-vector"></a>数値特徴ベクトル
 
@@ -90,6 +130,13 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [分類](#classification)におけるクラスの再現率は、そのクラスに属していると正確に予測された項目の数を、実際にクラスに属している項目の総数で割ったものです。
 
+## <a name="regularization"></a>正則化
+
+ 正則化は、複雑すぎるため、線形モデルには適していません。 正則化には 2 つの種類があります。
+
+- $L_1$ の正則化では、重要でない特徴の重みが 0 になります。 保存されるモデルのサイズは、この種類の正則化の後に小さくなる可能性があります。
+- $L_2$ の正則化では、重要でない特徴の重みの範囲を最小化します。 これは、より一般的なプロセスであり、外れ値の影響を受けにくくなります。
+
 ## <a name="regression"></a>回帰
 
 出力が実際の値 (たとえば、倍精度) である[教師あり機械学習](#supervised-machine-learning)タスクです。 例として、株価の予測などがあります。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクション「[回帰](tasks.md#regression)」を参照してください。
@@ -106,6 +153,10 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 [回帰](#regression)における評価メトリックであり、誤差を 2 乗した値の平均値の平方根です。
 
+## <a name="scoring"></a>スコアリング
+
+スコアリングは、トレーニング済みの機械学習モデルに新しいデータを適用し、予測を生成するプロセスです。 スコアリングは推論とも呼ばれます。 モデルの種類に応じて、スコアは場合によって、未処理の値、確率、またはカテゴリになります。
+
 ## <a name="supervised-machine-learning"></a>教師あり機械学習
 
 機械学習の 1 つの手法であり、目的となるモデルが未知のデータのラベルを予測します。 例として、分類、回帰、構造化予測などがあります。 詳しくは、Wikipedia の[教師あり学習](https://en.wikipedia.org/wiki/Supervised_learning)の記事を参照してください。
@@ -114,9 +165,11 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 特定のトレーニング データ セットの[モデル](#model)を識別するプロセスです。 線形モデルの場合、重みの検出を意味します。 ツリーの場合、分割ポイントの識別が含まれます。
 
-## <a name="transform"></a>変換
+## <a name="transformer"></a>トランスフォーマー
 
-データを変換する[パイプライン](#pipeline) コンポーネントです。 たとえば、数字のテキストからベクトルへの変換などです。
+<xref:Microsoft.ML.ITransformer> インターフェイスを実装する ML.NET クラス。
+
+トランスフォーマーでは、ある <xref:Microsoft.ML.IDataView> が別のものに変換されます。 トランスフォーマーを作成するには、[エスティメーター](#estimator)またはエスティメーター パイプラインをトレーニングします。
 
 ## <a name="unsupervised-machine-learning"></a>教師なし機械学習
 

@@ -6,21 +6,21 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 97d516e1c3ae99d639dea676f3f6798b6e7a849f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ae9c406e91bc947ec73bb2393bb05962ca41177
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679397"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73974354"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>ファイル ダイアログ ボックスのカスタム プレイス用既知のフォルダー GUID
-使用する、<xref:System.Guid>を指定する、[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]既知のフォルダーにフォルダーを追加すると、<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>コレクション。 既知のフォルダー Guid 小文字は区別されず、内の KnownFolders.h ファイルで定義されて、[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]します。  
+<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A> コレクションにフォルダーを追加するときに、<xref:System.Guid> を使用して Windows Vista の既知のフォルダーを指定します。 既知のフォルダー Guid は大文字と小文字が区別されず、Windows SDK の KnownFolders .h ファイルで定義されます。  
   
 > [!NOTE]
->  場合によっては、既知のフォルダーに追加、<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>に表示されないため、**お気に入りリンク**領域。 たとえば、指定した既知のフォルダーが、アプリケーションを実行しているコンピューターに存在しない場合は、既知のフォルダーは表示されません。  
+> 場合によっては、<xref:System.Windows.Forms.FileDialogCustomPlacesCollection> に追加された既知のフォルダーが **[お気に入りリンク]** 領域に表示されません。 たとえば、指定した既知のフォルダーがアプリケーションを実行しているコンピューター上に存在しない場合、既知のフォルダーは表示されません。  
   
-## <a name="list-of-guids"></a>Guid のリスト  
- 次の表[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]既知のフォルダーと関連付けられた<xref:System.Guid>します。  
+## <a name="list-of-guids"></a>Guid の一覧  
+ 次の表に、Windows Vista の既知のフォルダーとそれに関連付けられている <xref:System.Guid>を示します。  
   
  AddNewPrograms  
  DE61D971-5EBC-4F02-A3A9-6C82895E5C04  
@@ -35,7 +35,7 @@ ms.locfileid: "54679397"
  A305CE99-F527-492B-8B1A-7E76FA98D6E4  
   
  CDBurning  
- 9E52AB10-F80D-49DF-ACB8-4330F5687855  
+ 9E52AB10-F80D47 9DF-ACB8-4330F5687 855  
   
  ChangeRemovePrograms  
  DF7266AC-9274-4867-8D55-3BD661DE872D  
@@ -44,7 +44,7 @@ ms.locfileid: "54679397"
  D0384E7D-BAC3-4797-8F14-CBA229B392B5  
   
  CommonOEMLinks  
- C1BAE2D0-10DF-4334-BEDD-7AA20B227A9D  
+ C1BAE2D0-10DF-4334-7AA20B227A9D  
   
  CommonPrograms  
  0139D44E-6AFE-49F2-8690-3DAFCAE6FFB8  
@@ -61,16 +61,16 @@ ms.locfileid: "54679397"
  コンピューター  
  0AC0837C-BBF8-452A-850D-79D08E667CA7  
   
- 競合  
+ モジュール  
  4BFEFB45-347D-4006-A5BE-AC0CB0567192  
   
  接続  
  6F0CD92B-2E97-45D1-88FF-B0D186B8DEDD  
   
  連絡先  
- 56784854-C6CB-462B-8169-88E350ACB882  
+ 56784854-C6CB-462B-8169-88 E350ACB88 2  
   
- コントロール パネル  
+ コントロールパネル  
  82A74AEB-AEB4-465C-A014-D097EE346D63  
   
  クッキー  
@@ -83,7 +83,7 @@ ms.locfileid: "54679397"
  FDD39AD0-238F-46AF-ADB4-6C85480369C7  
   
  ダウンロード  
- 374DE290-123F-4565-9164-39C4925E467B  
+ 374DE290-123F4565-916439C4925E467B  
   
  お気に入り  
  1777F761-68AD-4D8A-87BD-30B759FA33DD  
@@ -94,10 +94,10 @@ ms.locfileid: "54679397"
  ゲーム  
  CAC52C1A-B53D-4EDC-92D7-6B2E8AC19434  
   
- GameTasks  
- 054FAE61-4DD8-4787-80B6-090220C4B700  
+ お持ちのタスク  
+ 054FAE61-4DD8-4787-80B608 00 0220C4B700  
   
- 履歴  
+ 歴史  
  D9DC8A3B-B784-432E-A781-5A1130A75963  
   
  インターネット  
@@ -118,7 +118,7 @@ ms.locfileid: "54679397"
  音楽  
  4BD8D571-6D19-48D3-BE97-422220080E43  
   
- ネットワーク コンピューター  
+ NetHood  
  C5ABBF53-E17F-4121-8900-86626FC2C973  
   
  ネットワーク  
@@ -130,13 +130,13 @@ ms.locfileid: "54679397"
  PhotoAlbums  
  69D2CF90-FC33-4FB7-9A0C-EBB0F0FCB43C  
   
- 画像  
- 33E28130-4E1E-4676-835A-98395C3BC3BB  
+ 写真  
+ 33E2813047 E1E47 676835A98395C3BC3BB  
   
  再生リスト  
  DE92C1C7-837F-4F69-A3BB-86E631204A23  
   
- プリンター  
+ 印刷  
  76FC4E2D-D6AD-4519-A663-37BD56068185  
   
  PrintHood  
@@ -146,7 +146,7 @@ ms.locfileid: "54679397"
  5E6C858F-0E22-4760-9AFE-EA3317B67173  
   
  ProgramData  
- 62AB5D82-FDC1-4DC3-A9DD-070D1D495D97  
+ 62AB5D82FDC1-4DC3-A9DD05-1D495D97  
   
  ProgramFiles  
  905E63B6-C1BF-494E-B29C-65B732D3D21A  
@@ -155,13 +155,13 @@ ms.locfileid: "54679397"
  F7F1ED05-9F6D-47A2-AAAE-29D317C6F066  
   
  ProgramFilesCommonX64  
- 6365D5A7-0F0D-45E5-87F6-0DA56B6A4F7D  
+ 6365D5A705 E5-87 F608、DA56B6A4F7D  
   
  ProgramFilesCommonX86  
  DE974D24-D9C6-4D3E-BF91-F4455120B917  
   
  ProgramFilesX64  
- 6D809377-6AF0-444B-8957-A3773F02200E  
+ 6D809377-6AF0-44 4B-8957-A3773F02200E  
   
  ProgramFilesX86  
  7C5A40EF-A0FB-4BFC-874A-C0F2E0B9FA8E  
@@ -181,7 +181,7 @@ ms.locfileid: "54679397"
  PublicDownloads  
  3D644C9B-1FB8-4F30-9B45-F670235F79C0  
   
- PublicGameTasks  
+ Publicのタスク  
  DEBF2536-E1A8-4C59-B6A2-414586476AEA  
   
  PublicMusic  
@@ -193,7 +193,7 @@ ms.locfileid: "54679397"
  PublicVideos  
  2400183A-6185-49FB-A2D8-4A392A602BA3  
   
- [クイック起動]  
+ クイック起動  
  52A4F021-7B75-48A9-9F6B-4B87A210BC8F  
   
  最近使用したファイル  
@@ -209,7 +209,7 @@ ms.locfileid: "54679397"
  8AD10C31-2ADB-4296-A8F7-E4701232C972  
   
  RoamingAppData  
- 3EB685DB-65F9-4CF6-A03A-E3EF65729F3D  
+ 3EB685DB65F947 CF6-A03E3EF65729F3D  
   
  SampleMusic  
  B250C668-F57D-4EE1-A63C-290EE7D1AA1F  
@@ -217,7 +217,7 @@ ms.locfileid: "54679397"
  SamplePictures  
  C4900540-2379-4C75-844B-64E6FAF8716B  
   
- SamplePlaylists  
+ SamplePlaylists リスト  
  15CA69B3-30EE-49C1-ACE1-6B5EC372AFB5  
   
  SampleVideos  
@@ -227,13 +227,13 @@ ms.locfileid: "54679397"
  4C5C32FF-BB9D-43B0-B5B4-2D72E54EAAA4  
   
  SavedSearches  
- 7D1D3A04-DEBB-4115-95CF-2F29DA2920DA  
+ 7D1D3A04DEBB47 11595/95 CF292015 20DA  
   
  SEARCH_CSC  
  EE32E446-31CA-4ABA-814F-A5EBD2FD6D5E  
   
  SEARCH_MAPI  
- 98EC0E18-2098-4D44-8644-66979315A281  
+ 98EC0E18, 20984-D44-864466919315A281  
   
  SearchHome  
  190337D1-B8CA-4121-A639-6D472D16972A  
@@ -247,17 +247,17 @@ ms.locfileid: "54679397"
  SidebarParts  
  A75D362E-50FC-4FB7-AC2C-A8BEAA314493  
   
- [スタート メニュー]  
+ スタートメニュー  
  625B53C3-AB48-4EC1-BA1F-A1EF4146FC19  
   
  スタートアップ  
  B97D20BB-F46A-4C97-BA10-5E3608430854  
   
  SyncManager  
- 43668BF8-C14E-49B2-97C9-747784D784B7  
+ 436-7BF8-C14E47 9B2-97C9 47 784 D784 B7  
   
  SyncResults  
- 289A9A43-BE44-4057-A41B-587A76D7E7F9  
+ 289A9A43-BE44-4057-A41B-587 A76D7E 9  
   
  SyncSetup  
  0F214138-B1D3-4A90-BBA9-27CBC0C5389A  
@@ -272,12 +272,12 @@ ms.locfileid: "54679397"
  A63293E8-664E-48DB-A079-DF759E0509F7  
   
  TreeProperties  
- 5B3749AD-B49F-49C1-83EB-15370FBD4882  
+ 5B3749AD49F47 9C1-83EB15 370FBD4882  
   
- ユーザー  
+ UserProfiles  
  0762D272-C50A-4BB0-A382-697DCD729B80  
   
- UsersFiles  
+ ファイルのファイル  
  F3CE0F7C-4901-4ACC-8648-D5D44B04EF8F  
   
  ビデオ  
@@ -287,5 +287,6 @@ ms.locfileid: "54679397"
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [方法: ファイル ダイアログ ボックスにカスタム プレースを追加します。](../../../../docs/framework/winforms/controls/how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [方法: よく使用する場所をファイル ダイアログ ボックスに追加する](how-to-add-a-custom-place-to-a-file-dialog-box.md)

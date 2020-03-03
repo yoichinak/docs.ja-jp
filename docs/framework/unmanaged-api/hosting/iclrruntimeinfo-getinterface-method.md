@@ -15,38 +15,36 @@ helpviewer_keywords:
 ms.assetid: cc7b0e5b-48c3-4509-8ebb-611ddb1f7ec2
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 770901d5461d2092ce5f2862624a038caf03e1f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 295deeec2e8eb42ccaa4d0cfb8b08b32438d047c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678663"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120251"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface メソッド
-現在のプロセスに CLR をロードし、ランタイム、インターフェイス ポインターをなど返します[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)、および[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)します。  
+現在のプロセスに CLR を読み込み、 [ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)、 [IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)などのランタイムインターフェイスポインターを返します。  
   
- このメソッドはすべて、 `CorBindTo`* 関数の[CLR ホスト関数の非推奨とされます](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)セクション。  
+ このメソッドは、[非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)セクション内のすべての `CorBindTo`* 関数を置き換えます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetInterface(  
 [in]  REFCLSID rclsid,  
 [in]  REFIID   riid,  
 [out, iid_is(riid), retval] LPVOID *ppUnk);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `rclsid`  
- [in]コクラスの CLSID のインターフェイスです。  
+ からコクラスの CLSID インターフェイス。  
   
  `riid`  
- [in]要求された IID`rclsid`インターフェイス。  
+ から要求された `rclsid` インターフェイスの IID。  
   
  `ppUnk`  
- [out]照会されたインターフェイスへのポインター。  
+ 入出力クエリされたインターフェイスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
@@ -55,13 +53,13 @@ HRESULT GetInterface(
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
 |E_POINTER|`ppUnk` が null です。|  
-|E_OUTOFMEMORY|メモリが不足は、要求を処理するために使用できます。|  
-|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|別のランタイムは、従来の CLR バージョン 2 のアクティブ化ポリシーに既にバインドされています。|  
+|E_OUTOFMEMORY|要求を処理するのに十分なメモリがありません。|  
+|CLR_E_SHIM_LEGACYRUNTIMEALREADYBOUND|以前の CLR バージョン2のアクティブ化ポリシーに、別のランタイムが既にバインドされています。|  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドにより、CLR が読み込まれますが、初期化されていません。  
+ このメソッドを使用すると、CLR が読み込まれますが、初期化されません。  
   
- 次の表は、サポートされている組み合わせ`rclsid`と`riid`します。  
+ 次の表は、`rclsid` と `riid`でサポートされている組み合わせを示しています。  
   
 |`rclsid`|`riid`|  
 |--------------|------------|  
@@ -74,16 +72,17 @@ HRESULT GetInterface(
 |||  
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MetaHost.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)

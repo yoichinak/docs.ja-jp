@@ -2,37 +2,37 @@
 title: ユーザー名パスワード検証
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 33df3a7a8d463a9c2cd2d2586f0aa812e25a16ff
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 5e128c8dde14d67a77eeb6f33a99723ddbdfbd9a
+ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305456"
+ms.lasthandoff: 12/03/2019
+ms.locfileid: "74715318"
 ---
 # <a name="user-name-password-validator"></a>ユーザー名パスワード検証
 このサンプルでは、カスタム UserNamePassword 検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの UserNamePassword 検証モードがない場合に便利です。たとえば、ユーザー名とパスワードの組み合わせがデータベースなどの外部ストアに保存されている場合などです。 このサンプルでは、2 つの特定のユーザー名とパスワードの組み合わせをチェックする、カスタム検証を備えたサービスを示します。 クライアントはそのようなユーザー名とパスワードの組み合わせを使用して、サービスに対する認証を行います。
 
 > [!IMPORTANT]
->  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
+> サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  このディレクトリが存在しない場合に移動[Windows Communication Foundation (WCF) と .NET Framework 4 向けの Windows Workflow Foundation (WF) サンプル](https://go.microsoft.com/fwlink/?LinkId=150780)すべて Windows Communication Foundation (WCF) をダウンロードして[!INCLUDE[wf1](../../../../includes/wf1-md.md)]サンプル。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\UserNamePasswordValidator`  
   
 > [!NOTE]
->  カスタム検証が許可するユーザー名とパスワードの組み合わせを使用する UserName 資格情報は、どのユーザーでも作成できるので、このサービスは、標準の UserNamePassword 検証によって提供される既定の動作よりも安全性が低くなります。 標準の UserNamePassword 検証は、指定されたユーザー名とパスワードの組み合わせを Windows アカウントにマップするよう試みます。マップできなかった場合は、認証が失敗します。 このサンプルのカスタム UserNamePassword 検証は、製品版のコードでは使用しないでください。このサンプルは、デモンストレーションのためだけに作成されています。
+> カスタム検証が許可するユーザー名とパスワードの組み合わせを使用する UserName 資格情報は、どのユーザーでも作成できるので、このサービスは、標準の UserNamePassword 検証によって提供される既定の動作よりも安全性が低くなります。 標準の UserNamePassword 検証は、指定されたユーザー名とパスワードの組み合わせを Windows アカウントにマップするよう試みます。マップできなかった場合は、認証が失敗します。 このサンプルのカスタム UserNamePassword 検証は、製品版のコードでは使用しないでください。このサンプルは、デモンストレーションのためだけに作成されています。
 
  このサンプルで示す処理の概要は次のとおりです。
 
--   クライアントはユーザー名トークンを使用して認証される。
+- クライアントはユーザー名トークンを使用して認証される。
 
--   サーバーはクライアント資格情報をカスタム UserNamePassword 検証と照合し、カスタム エラーをユーザー名とパスワードの検証ロジックからクライアントに伝達する。
+- サーバーはクライアント資格情報をカスタム UserNamePassword 検証と照合し、カスタム エラーをユーザー名とパスワードの検証ロジックからクライアントに伝達する。
 
--   サーバーがそのサーバーの X.509 証明書を使用して認証される。
+- サーバーがそのサーバーの X.509 証明書を使用して認証される。
 
- サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは構成ファイル (App.config) で定義します。エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 標準的なバインディングが構成されている`wsHttpBinding`WS Securityand ユーザー名認証を使用する既定値です。 サービス動作では、クライアントのユーザー名とパスワードの組み合わせを検証するための `Custom` モード、および検証クラスの型を指定します。 さらに、`serviceCertificate` 要素を使用しているサーバー証明書も指定します。 サーバー証明書が同じ値を格納するが、`SubjectName`として、`findValue`で、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)します。
+ サービスは、構成ファイルの App.config を使用して定義された、サービスと通信するための単一のエンドポイントを公開します。エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 バインディングは、既定で WS-SECURITY とユーザー名認証を使用する標準 `wsHttpBinding` で構成されます。 サービス動作では、クライアントのユーザー名とパスワードの組み合わせを検証するための `Custom` モード、および検証クラスの型を指定します。 さらに、`serviceCertificate` 要素を使用しているサーバー証明書も指定します。 サーバー証明書には、 [\<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)の `findValue` と同じ `SubjectName` の値が含まれている必要があります。
 
 ```xml
 <system.serviceModel>
@@ -139,7 +139,7 @@ address="http://localhost:8001/servicemodelsamples/service/username"
 
  クライアント実装では、ユーザー名とパスワードの入力がユーザーに対して求められます。
 
-```
+```csharp
 // Get the username and password
 Console.WriteLine("Username authentication required.");
 Console.WriteLine("Provide a username.");
@@ -199,7 +199,7 @@ try
 
  このサンプルではカスタム UserNamePassword 検証を使用して、ユーザー名とパスワードの組み合わせを検証します。 サンプルは、`CustomUserNamePasswordValidator` から派生する <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> を実装しています。 詳細については、<xref:System.IdentityModel.Selectors.UserNamePasswordValidator> のドキュメントを参照してください。 特定のカスタム検証を使用しているこのサンプルは、2 つの特定のユーザー名とパスワードの組み合わせを許可する `Validate` メソッドを実装しています。次のコードを参照してください。
 
-```
+```csharp
 public class CustomUserNameValidator : UserNamePasswordValidator
 {
  // This method validates users. It allows in two users,
@@ -224,7 +224,7 @@ public class CustomUserNameValidator : UserNamePasswordValidator
 
  サービス コードに検証を実装した場合、使用する検証インスタンスをサービス ホストに通知する必要があります。 これは次のコードで実行されます。
 
-```
+```csharp
 serviceHost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator = new CustomUserNamePasswordValidator();
 ```
@@ -254,11 +254,11 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
  次に、バッチ ファイルのセクションのうち、該当する構成で実行するために変更が必要となる部分を示します。
 
--   サーバー証明書の作成 :
+- サーバー証明書の作成 :
 
      Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。 %SERVER_NAME% 変数はサーバー名を指定します。 この変数を変更して、使用するサーバー名を指定します。 既定値は、localhost です。
 
-    ```
+    ```console
     echo ************
     echo Server cert setup starting
     echo %SERVER_NAME%
@@ -268,57 +268,55 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   サーバー証明書のクライアントの信頼された証明書ストアへのインストール。
+- サーバー証明書のクライアントの信頼された証明書ストアへのインストール。
 
      Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 
-    ```
+    ```console
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには
 
-1.  ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。
+1. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 
-2.  サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。
+2. サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには
 
-1.  Visual Studio 2012 のコマンド プロンプト内でサンプルのインストール フォルダーから Setup.bat を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. Visual Studio 2012 のコマンドプロンプトで、サンプルのインストールフォルダーから Setup.exe を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
-    >  Setup.bat バッチ ファイルは、Visual Studio 2012 コマンド プロンプトから実行する設計されています。 Visual Studio 2012 のコマンド プロンプト ポイント内で設定して、Setup.bat スクリプトで必要な実行可能ファイルを格納するディレクトリ パス環境変数。  
+    > セットアップの .bat バッチファイルは、Visual Studio 2012 のコマンドプロンプトから実行するように設計されています。 Visual Studio 2012 のコマンドプロンプト内で設定された PATH 環境変数は、セットアップの .bat スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。  
   
-2.  Service.exe を service\bin で起動します。  
+2. Service.exe を service\bin で起動します。  
   
-3.  Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
+3. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4.  クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 #### <a name="to-run-the-sample-across-machines"></a>サンプルを複数コンピューターで実行するには  
   
-1.  サービス コンピューターにサービス バイナリ用のディレクトリを作成します。  
+1. サービス コンピューターにサービス バイナリ用のディレクトリを作成します。  
   
-2.  サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
+2. サービス プログラム ファイルを、サービス コンピューターのサービス ディレクトリにコピーします。 Setup.bat ファイルと Cleanup.bat ファイルもサービス コンピューターにコピーします。  
   
-3.  コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、サーバーの構成ファイルを更新する必要があります。  
+3. コンピューターの完全修飾ドメイン名を含むサブジェクト名を持つサーバー証明書が必要です。 新しい証明書名を反映するには、サーバーの構成ファイルを更新する必要があります。  
   
-4.  サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 このようにする必要があるのは、サーバー証明書が信頼できる発行元から発行されていない場合のみです。  
+4. サーバー証明書をクライアントの CurrentUser-TrustedPeople ストアにコピーします。 このようにする必要があるのは、サーバー証明書が信頼できる発行元から発行されていない場合のみです。  
   
-5.  サービス コンピューターの App.config ファイルで、ベース アドレスの値を localhost から完全修飾コンピューター名に変更します。  
+5. サービス コンピューターの App.config ファイルで、ベース アドレスの値を localhost から完全修飾コンピューター名に変更します。  
   
-6.  サービス コンピューターで、コマンド プロンプト ウィンドウから Service.exe を起動します。  
+6. サービス コンピューターで、コマンド プロンプト ウィンドウから Service.exe を起動します。  
   
-7.  クライアント プログラム ファイルを、言語固有のフォルダーにある \client\bin\ フォルダーからクライアント コンピューターにコピーします。  
+7. クライアント プログラム ファイルを、言語固有のフォルダーにある \client\bin\ フォルダーからクライアント コンピューターにコピーします。  
   
-8.  クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
+8. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。  
   
 9. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。  
   
-10. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+10. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
-1.  サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。 これにより、証明書ストアからサーバー証明書が削除されます。  
-  
-## <a name="see-also"></a>関連項目
+1. サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。 これにより、証明書ストアからサーバー証明書が削除されます。  

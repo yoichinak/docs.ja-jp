@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 7580d546-a709-40c5-ad02-aa70d774fd0b
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 0d5702f5df1e2d31a4e01de6be7c70af03b54296
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4009f8988c90ed090c0cc3d86164af347055722f
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519685"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74446422"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap メソッド
-その名前に基づくカスタム属性を取得します。 メタデータのカスタム属性とは異なり、これらの属性は、シンボル ストアに保持されます。  
+名前に基づいてカスタム属性を取得します。 メタデータのカスタム属性とは異なり、これらの属性はシンボルストアに保持されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSymAttributePreRemap(  
     [in]  mdToken  parent,  
     [in]  WCHAR    *name,  
@@ -39,27 +37,28 @@ HRESULT GetSymAttributePreRemap(
         length_is(*pcBuffer)] BYTE buffer[]);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `parent`  
- [in]親のメタデータ トークンです。  
+ から親のメタデータトークン。  
   
  `name`  
- [in]ポインターを`WCHAR`名前を格納します。  
+ から名前を格納している `WCHAR` へのポインター。  
   
  `cBuffer`  
- [in]A`ULONG32`のサイズを示す、`buffer`配列。  
+ から`buffer` 配列のサイズを示す `ULONG32`。  
   
  `pcBuffer`  
- [out]ポインターを`ULONG32`属性データの格納に必要なバッファーのサイズを受け取る。  
+ 入出力属性バイトを格納するために必要なバッファーのサイズを受け取る `ULONG32` へのポインター。  
   
  `buffer`  
- [out]属性のバイトを受け取るバッファーへのポインター。  
+ 入出力属性バイトを受け取るバッファーへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合は s_ok を返します。それ以外の場合、E_FAIL またはその他のエラー コード。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** CorSym.idl, CorSym.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [ISymUnmanagedReader2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader2-interface.md)

@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: e709acce-6a17-4346-b38a-467dba567358
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 83cee30ed9831accb96de17768f63e7f401908f0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d28f6eab5390194a4089cbbaf1f586c3f53a7db5
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495953"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132252"
 ---
 # <a name="cordebugcreateprocessflags-enumeration"></a>CorDebugCreateProcessFlags 列挙型
-呼び出しで使用できる追加のデバッグ オプションの提供、 [icordebug::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)メソッド。  
+[ICorDebug:: CreateProcess](../../../../docs/framework/unmanaged-api/debugging/icordebug-createprocess-method.md)メソッドの呼び出しで使用できる追加のデバッグオプションを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugCreateProcessFlags {  
     DEBUG_NO_SPECIAL_OPTIONS    = 0x0000  
 } CorDebugCreateProcessFlags;  
@@ -38,10 +36,10 @@ typedef enum CorDebugCreateProcessFlags {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`DEBUG_NO_SPECIAL_OPTIONS`|特殊なオプションは設定されません。|  
+|`DEBUG_NO_SPECIAL_OPTIONS`|特別なオプションは設定されていません。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -50,4 +48,5 @@ typedef enum CorDebugCreateProcessFlags {
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

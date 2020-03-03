@@ -3,11 +3,11 @@ title: F#コンポーネントのデザイン ガイドライン
 description: 他の呼び出し元で消費するための F# コンポーネントを記述するためのガイドラインについて説明します。
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902162"
 ---
 # <a name="f-component-design-guidelines"></a>F#コンポーネントのデザイン ガイドライン
 
@@ -501,7 +501,7 @@ type Utilities =
 
 F#レコードの種類は、単純な .NET クラスをコンパイルします。 これらは Api のいくつか単純で安定した型に適しています。 使用を検討する必要があります、`[<NoEquality>]`と`[<NoComparison>]`インターフェイスの自動生成を抑制する属性。 また、パブリック フィールドとしてこれらの公開バニラ .NET Api の変更可能なレコードのフィールドを使用しないでください。 常にクラスが API の将来の進化をより柔軟なオプションを提供するかどうかを検討してください。
 
-たとえば、次の F# コードは、c# コンシューマーへのパブリック API を公開します。
+たとえば、次の F# コードは、C# コンシューマーへのパブリック API を公開します。
 
 F#: 
 
@@ -774,7 +774,7 @@ public class Point1
 
 * 引数名などのメタデータが保持されています。
 
-* 2 つの引数を取る F# メソッドでは、2 つの引数を取る c# メソッドになります。
+* 2 つの引数を取る F# メソッドでは、2 つの引数を取る C# メソッドになります。
 
 * 関数とリストは、対応する型が F# ライブラリへの参照になります。
 

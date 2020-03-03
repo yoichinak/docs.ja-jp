@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 62ba525a28960d96c5458aa1481e1f319d5bc875
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859371"
+---
 ### <a name="operationcontextcurrent-may-return-null-when-called-in-a-using-clause"></a>OperationContext.Current が using 句で呼びされたときに null を返す場合がある
 
 |   |   |

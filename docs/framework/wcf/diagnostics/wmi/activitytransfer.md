@@ -2,12 +2,12 @@
 title: ActivityTransfer
 ms.date: 03/30/2017
 ms.assetid: fc40ef17-2a92-4ce2-853c-6ba8e5d571f3
-ms.openlocfilehash: 936e870c1ec991e2e33acf8a08ccc93975989679
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 6237d65d6964a4ebca34af895158c83239641593
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50034429"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662823"
 ---
 # <a name="activitytransfer"></a>ActivityTransfer
 アクティビティ転送イベント  
@@ -30,20 +30,20 @@ class ActivityTransfer : WSAT_TraceEvent
   
 ### <a name="activityid"></a>ActivityID  
   
--   データ型: object  
-    アクセスの種類 : 読み取り専用  
+- データ型: object  
+    アクセスの種類:読み取り専用  
   
--   アクティビティ ID  
+- アクティビティ ID  
   
 ### <a name="relatedactivityid"></a>RelatedActivityID  
   
--   データ型: object  
-    アクセスの種類 : 読み取り専用  
+- データ型: object  
+    アクセスの種類:読み取り専用  
   
--   関連アクティビティ ID  
+- 関連アクティビティ ID  
   
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件  
   
 |MOF|Servicemodel.mof にて宣言済み。|  
 |---------|-----------------------------------|  
-|Namespace|root\ServiceModel で定義|
+|名前空間|root\ServiceModel で定義|

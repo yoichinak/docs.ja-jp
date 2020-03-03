@@ -1,1 +1,0 @@
-Microsoft Windows グラフィックス デバイス インターフェイス (GDI)

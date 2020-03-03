@@ -1,5 +1,5 @@
 ---
-title: ICorDebugReferenceValue Interface1
+title: ICorDebugReferenceValue インターフェイス
 ms.date: 03/30/2017
 api_name:
 - ICorDebugReferenceValue
@@ -14,38 +14,36 @@ helpviewer_keywords:
 ms.assetid: 2040e2be-119a-4cfb-ae52-b0b6f052665c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3dbe5388d7c18202f4b89269141d33463edb07a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2efba22b4ec372c5ddedd4982a29d66945d3511c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544274"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792126"
 ---
-# <a name="icordebugreferencevalue-interface1"></a>ICorDebugReferenceValue Interface1
-オブジェクトへの参照である値を管理するメソッドを提供します。 (つまり、このインターフェイスはポインターを管理するメソッドを提供します。)このインターフェイスは、"ICorDebugValue"を実装します。  
+# <a name="icordebugreferencevalue-interface"></a>ICorDebugReferenceValue インターフェイス
+オブジェクトへの参照である値を管理するメソッドを提供します。 (つまり、このインターフェイスには、ポインターを管理するメソッドが用意されています)。このインターフェイスは、"ICorDebugValue" を実装します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Dereference メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereference-method.md)|参照されているオブジェクトを取得します。|  
-|[DereferenceStrong メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-dereferencestrong-method.md)|実装されていません。 このメソッドを呼び出さないでください。|  
-|[GetValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-getvalue-method.md)|参照先オブジェクトの現在のメモリ アドレスを取得します。|  
-|[IsNull メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-isnull-method.md)|示す値を取得するかどうかこの`ICorDebugReferenceValue`、null 値の場合は、`ICorDebugReferenceValue`がオブジェクトを指していません。|  
-|[SetValue メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugreferencevalue-setvalue-method.md)|現在のメモリ アドレスを設定します。 つまり、このメソッドはこの設定`ICorDebugReferenceValue`オブジェクトを指すようにします。|  
+|[Dereference メソッド](icordebugreferencevalue-dereference-method.md)|参照されているオブジェクトを取得します。|  
+|[DereferenceStrong メソッド](icordebugreferencevalue-dereferencestrong-method.md)|実装されていません。 このメソッドを呼び出さないでください。|  
+|[GetValue メソッド](icordebugreferencevalue-getvalue-method.md)|参照先のオブジェクトの現在のメモリアドレスを取得します。|  
+|[IsNull メソッド](icordebugreferencevalue-isnull-method.md)|この `ICorDebugReferenceValue` が null 値であるかどうかを示す値を取得します。この場合、`ICorDebugReferenceValue` はオブジェクトを指していません。|  
+|[SetValue メソッド](icordebugreferencevalue-setvalue-method.md)|現在のメモリアドレスを設定します。 つまり、このメソッドは、オブジェクトを指すようにこの `ICorDebugReferenceValue` を設定します。|  
   
-## <a name="remarks"></a>Remarks  
- 共通言語ランタイム (CLR) は、デバッグ対象のプロセスが続行すると、オブジェクトのガベージ コレクションを行うことができます。 ガベージ コレクションは、メモリ内の周りオブジェクトを移動可能性があります。 `ICorDebugReferenceValue`はいずれかと連携してガベージ コレクション、ガベージ コレクション後にその情報が更新またはガベージ コレクションの前に暗黙的に無効にできるようにします。  
+## <a name="remarks"></a>コメント  
+ 共通言語ランタイム (CLR) は、デバッグされたプロセスが続行されると、オブジェクトのガベージコレクションを実行する場合があります。 ガベージコレクションでは、メモリ内でオブジェクトを移動できます。 `ICorDebugReferenceValue` はガベージコレクションと連携してガベージコレクションの後に情報が更新されるか、ガベージコレクションの前に暗黙的に無効になります。  
   
- `ICorDebugReferenceValue`デバッグ対象のプロセスが続行されるした後にオブジェクトが暗黙的に検証済みにすることがあります。 明示的に解放または公開されるまでは、派生"ICorDebugHandleValue"は無効化されません。  
+ デバッグされたプロセスが続行されると、`ICorDebugReferenceValue` オブジェクトが暗黙的に無効になる場合があります。 派生された "の値" は、明示的に解放または公開されるまで無効になりません。  
   
 > [!NOTE]
->  このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
+> このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -55,5 +53,4 @@ ms.locfileid: "54544274"
   
 ## <a name="see-also"></a>関連項目
 
-
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)

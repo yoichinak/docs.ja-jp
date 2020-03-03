@@ -15,46 +15,45 @@ helpviewer_keywords:
 ms.assetid: 7b72fa11-3866-402b-bdea-2b966b77cfe0
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: b05c9a75bf870dd3b2316d2df7c50932b26894f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0c390509a698fdc4682ba81182d4b407d8718c9
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702744"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74448257"
 ---
 # <a name="imetadataassemblyimportfindmanifestresourcebyname-method"></a>IMetaDataAssemblyImport::FindManifestResourceByName メソッド
-指定した名前、マニフェスト リソースへのポインターを取得します。  
+指定した名前のマニフェストリソースへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp
 HRESULT FindManifestResourceByName (  
     [in]  LPCWSTR                szName,   
     [out] mdManifestResource     *ptkManifestResource  
 );   
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `szName`  
- [in]リソースの名前。  
+ からリソースの名前。  
   
  `ptkManifestResource`  
- [out]配列の格納に使用される、`mdManifestResource`マニフェスト リソースを表すメタデータ トークン。  
+ 入出力`mdManifestResource` メタデータトークンを格納するために使用される配列。それぞれがマニフェストリソースを表します。  
   
-## <a name="remarks"></a>Remarks  
- `FindManifestResourceByName`メソッドは、参照を解決するための共通言語ランタイムによって使用されている標準の規則を使用します。  
+## <a name="remarks"></a>コメント  
+ `FindManifestResourceByName` メソッドは、参照を解決するために共通言語ランタイムによって採用されている標準の規則を使用します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [ランタイムがアセンブリを検索する方法](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

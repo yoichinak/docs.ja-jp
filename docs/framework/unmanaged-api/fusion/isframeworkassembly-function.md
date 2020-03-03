@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: b0c6f19b-d4fd-4971-88f0-12ffb5793da3
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3e231c4fa51e6e66cba6227233cf73dd1cd4ebbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e30b6f2d2254d2d107c4c82a2c5664850ce6ec23
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733923"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73123068"
 ---
 # <a name="isframeworkassembly-function"></a>IsFrameworkAssembly 関数
 指定したアセンブリが管理されているかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsFrameworkAssembly (  
     [in]  LPCWSTR pwzAssemblyReference,  
     [out] LPBOOL  pbIsFrameworkAssembly,  
@@ -37,28 +35,29 @@ HRESULT IsFrameworkAssembly (
  );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pwzAssemblyReference`  
- [in]チェック対象のアセンブリの名前。  
+ から確認するアセンブリの名前。  
   
  `pbIsFrameworkAssembly`  
- [out]アセンブリが管理されているかどうかを示すブール値。  
+ 入出力アセンブリが管理されているかどうかを示すブール値。  
   
  `pwzFrameworkAssemblyIdentity`  
- [in]アセンブリの一意の id を含む uncanonicalized 文字列。  
+ からアセンブリの一意の id を含む、正規化されていない文字列。  
   
  `pccSize`  
  [入力] `pwzFrameworkAssemblyIdentity` のサイズ。  
   
 ## <a name="remarks"></a>Remarks  
- `pwzAssemblyReference`パラメーターは、アセンブリの名前を含む文字列へのポインターです。  
+ `pwzAssemblyReference` パラメーターは、アセンブリの名前を含む文字列へのポインターです。  
   
- このアセンブリが、.NET Framework の一部である場合、`pbIsFrameworkAssembly`パラメーターはブール値を含む`true`します。  
+ このアセンブリが .NET Framework の一部である場合、`pbIsFrameworkAssembly` パラメーターには `true`のブール値が格納されます。  
   
- 名前付きのアセンブリ、.NET Framework の一部でない場合、または場合、`pwzAssemblyReference`パラメーターは、アセンブリを指定していない`pbIsFrameworkAssembly`のブール値を含む`false`します。  
+ 名前付きアセンブリが .NET Framework の一部でない場合、または `pwzAssemblyReference` パラメーターがアセンブリの名前を指定しない場合、`pbIsFrameworkAssembly` には `false`のブール値が格納されます。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
-- [Fusion グローバル静的関数](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+
+- [Fusion グローバル静的関数](fusion-global-static-functions.md)

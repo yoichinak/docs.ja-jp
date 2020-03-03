@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6d238e9c426b5ae7df0cde745b51eace1cae5d87
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276615"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913203"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' パラメーターの値をコピー '\<parametername >' 型から縮小変換、一致する引数に戻して'\<typename1 >' 型に '\<typename2 >'
 プロシージャは、対応するパラメーターの型を拡張する引数を指定して呼び出され、パラメーターから、引数への変換は縮小します。  
@@ -27,13 +27,14 @@ ms.locfileid: "55276615"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   可能であれば、Visual Basic は、変換を行う必要はありませんので、プロシージャのパラメーターとして、同じ種類の呼び出し元の引数を使用します。  
+- 可能であれば、Visual Basic は、変換を行う必要はありませんので、プロシージャのパラメーターとして、同じ種類の呼び出し元の引数を使用します。  
   
--   パラメーター型とは異なる引数型を使用してプロシージャを呼び出す必要があり、呼び出し元の引数に値を返す必要がない場合は、 [ByRef](../../../visual-basic/language-reference/modifiers/byval.md) ではなく `ByRef`になるようにパラメーターを定義します。  
+- パラメーター型とは異なる引数型を使用してプロシージャを呼び出す必要があり、呼び出し元の引数に値を返す必要がない場合は、 [ByRef](../../../visual-basic/language-reference/modifiers/byval.md) ではなく `ByRef`になるようにパラメーターを定義します。  
   
--   呼び出し元の引数に値を返す場合は、定義として逆の変換演算子[Widening](../../../visual-basic/language-reference/modifiers/widening.md)、可能な場合。  
+- 呼び出し元の引数に値を返す場合は、定義として逆の変換演算子[Widening](../../../visual-basic/language-reference/modifiers/widening.md)、可能な場合。  
   
 ## <a name="see-also"></a>関連項目
+
 - [プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [プロシージャのパラメーターと引数](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [引数の値渡しと参照渡し](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

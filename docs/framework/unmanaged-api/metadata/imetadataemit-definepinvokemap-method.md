@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 5f1d62c55df410d284fe050b805cf465718ab112
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d4ea16a212ac5f0120d63510f07eaee69af739e
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576152"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74431491"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap メソッド
-指定したトークンによって参照されるメソッドの PInvoke 署名の機能を設定します。  
+指定したトークンによって参照されるメソッドの PInvoke 署名の特徴を設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefinePinvokeMap (   
     [in]  mdToken            tk,   
     [in]  DWORD              dwMappingFlags,   
@@ -38,28 +36,29 @@ HRESULT DefinePinvokeMap (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]ターゲット メソッドのトークンです。  
+ からターゲットメソッドのトークン。  
   
  `dwMappingFlags`  
- [in]PInvoke によって、マッピングを行うために使用するフラグ。  
+ からマッピングを行うために PInvoke によって使用されるフラグ。  
   
  `szImportName`  
- [in]ターゲットの名前は、アンマネージ DLL 内のメソッドをエクスポートします。  
+ からアンマネージ DLL 内の対象のエクスポートメソッドの名前。  
   
  `mrImportDLL`  
- [in]ターゲットのトークン ネイティブ DLL。  
+ からターゲットのネイティブ DLL のトークン。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor.h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll にリソースとして使用  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - defaultProxy element
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
-ms.openlocfilehash: 9d9e96296cb764d3fbb3cdcd561e036f9ad6aa2b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0945629c1395917bc1cf825f2ba84d20afa99957
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257214"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698209"
 ---
-# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 要素 (ネットワーク設定)
+# <a name="defaultproxy-element-network-settings"></a>\<defaultProxy> 要素 (ネットワーク設定)
 ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp;&nbsp;[**system.net>** ](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultProxy>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,35 +39,35 @@ ms.locfileid: "55257214"
   
 ### <a name="attributes"></a>属性  
   
-|**要素**|**説明**|  
+|**要素**|**[説明]**|  
 |-----------------|---------------------|  
 |`enabled`|Web プロキシが使用されているかどうかを指定します。 既定値は `true` です。|  
 |`useDefaultCredentials`|このホストに対する既定の資格情報が Web プロキシにアクセスするために使用されるかどうかを指定します。 既定値は `false` です。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|**要素**|**説明**|  
+|**要素**|**[説明]**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|  
-|[module](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)|新しいプロキシ モジュールをアプリケーションに追加します。|  
-|[proxy](../../../../../docs/framework/configure-apps/file-schema/network/proxy-element-network-settings.md)|プロキシ サーバーを定義します。|  
+|[bypasslist](bypasslist-element-network-settings.md)|プロキシを使用しないアドレスを記述する一連の正規表現を提供します。|  
+|[module](module-element-network-settings.md)|新しいプロキシ モジュールをアプリケーションに追加します。|  
+|[proxy](proxy-element-network-settings.md)|プロキシ サーバーを定義します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|**要素**|**説明**|  
+|**要素**|**[説明]**|  
 |-----------------|---------------------|  
-|[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
+|[system.net](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  defaultProxy 要素が空の場合、Internet Explorer のプロキシ設定が使用されます。 この動作は、.NET Framework Version 1.1 とは異なります。  
   
- 場合、例外がスローされます、[モジュール](../../../../../docs/framework/configure-apps/file-schema/network/module-element-network-settings.md)要素がパブリックでない型を指定します、種類がから派生していない、<xref:System.Net.IWebProxy>クラスでは、このオブジェクトの既定のコンス トラクターから例外が発生しました、または例外が発生しました、システム指定の既定のプロキシを取得しています。 例外の <xref:System.Exception.InnerException%2A> プロパティに、このエラーの根本原因に関する詳細情報が含まれています。  
+ 例外がスローされるのは、 [module](module-element-network-settings.md)要素で非パブリック型が指定されている場合、 <xref:System.Net.IWebProxy>型がクラスから派生していない場合、このオブジェクトのパラメーターなしのコンストラクターの例外が発生した場合、またはを取得しているときに例外が発生した場合です。システム指定の既定のプロキシ。 例外の <xref:System.Exception.InnerException%2A> プロパティに、このエラーの根本原因に関する詳細情報が含まれています。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、既定値を Internet Explorer のプロキシを使用して、プロキシ アドレスを指定し、ローカル アクセスおよび contoso.com のプロキシをバイパスします。  
+ 次の例では、Internet Explorer プロキシの既定値を使用して、プロキシアドレスを指定し、ローカルアクセスと contoso.com に対してプロキシをバイパスします。  
   
 ```xml  
 <configuration>  
@@ -87,5 +87,6 @@ ms.locfileid: "55257214"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

@@ -10,14 +10,12 @@ helpviewer_keywords:
 - SemaphoreSlim class, about SemaphoreSlim class
 - threading [.NET Framework], Semaphore class
 ms.assetid: 7722a333-b974-47a2-a7c0-f09097fb644e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f20ae0b712a5db5cdfb6d5f6a3786af151820294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9f7c122ac8acf34f740aca5f0fafc162edcea82
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550488"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127585"
 ---
 # <a name="semaphore-and-semaphoreslim"></a>Semaphore と SemaphoreSlim
 <xref:System.Threading.Semaphore?displayProperty=nameWithType> クラスは、名前付きセマフォ (システム全体) またはローカル セマフォを表します。 これは、Win32 セマフォ オブジェクトの Thin ラッパーです。 Win32 セマフォは、リソースのプールへのアクセスの制御に使用できるカウント セマフォです。  
@@ -40,7 +38,7 @@ ms.locfileid: "54550488"
  名前を指定するコンストラクターのいずれかを使用して、名前付きシステム セマフォを表す <xref:System.Threading.Semaphore> オブジェクトを作成できます。  
   
 > [!NOTE]
->  名前付きセマフォはシステム全体でのセマフォであるため、同じ名前付きセマフォを表す複数の <xref:System.Threading.Semaphore> オブジェクトが存在する可能性があります。 コンストラクターまたは <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> メソッドを呼び出すたびに、新しい <xref:System.Threading.Semaphore> オブジェクトが作成されます。 同じ名前を繰り返し指定すると、同じ名前付きセマフォを表す複数のオブジェクトが作成されます。  
+> 名前付きセマフォはシステム全体でのセマフォであるため、同じ名前付きセマフォを表す複数の <xref:System.Threading.Semaphore> オブジェクトが存在する可能性があります。 コンストラクターまたは <xref:System.Threading.Semaphore.OpenExisting%2A?displayProperty=nameWithType> メソッドを呼び出すたびに、新しい <xref:System.Threading.Semaphore> オブジェクトが作成されます。 同じ名前を繰り返し指定すると、同じ名前付きセマフォを表す複数のオブジェクトが作成されます。  
   
  名前付きセマフォを使用する際には注意する必要があります。 システム全体でのセマフォであるため、同じ名前を使用する別のプロセスが予期せずセマフォに入る可能性があります。 同じコンピューター上で実行される悪意のあるコードが、これをサービス拒否攻撃の土台として使用する可能性があります。  
   

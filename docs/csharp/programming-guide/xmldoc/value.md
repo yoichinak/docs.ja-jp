@@ -1,6 +1,5 @@
 ---
 title: <value> - C# プログラミング ガイド
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - <value>
@@ -8,33 +7,38 @@ helpviewer_keywords:
 - <value> C# XML tag
 - value C# XML tag
 ms.assetid: 08dbadaf-9ab6-43d9-9493-98e43bed199a
-ms.openlocfilehash: 1a1a4beb4a3412fe7739a69ecd0fed650b332fb2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 120805346672738e614743ab8c98388b8dbac0f7
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263944"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76793346"
 ---
 # <a name="value-c-programming-guide"></a>\<value> (C# プログラミング ガイド)
-## <a name="syntax"></a>構文  
-  
-```xml  
-<value>property-description</value>  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `property-description`  
- プロパティの説明。  
-  
-## <a name="remarks"></a>コメント  
- \<value> タグを使用して、プロパティが表す値を記述することができます。 Visual Studio .NET 開発環境では、コード ウィザードを使用してプロパティを追加するときに、新しいプロパティの [\<summary>](../../../csharp/programming-guide/xmldoc/summary.md) タグが追加されることに注意してください。 その後、手動で \<value> タグを追加してプロパティが表す値を記述する必要があります。  
-  
- コンパイル時に [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。  
-  
-## <a name="example"></a>例  
- [!code-csharp[csProgGuideDocComments#14](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/value_1.cs)]  
-  
+
+## <a name="syntax"></a>構文
+
+```xml
+<value>property-description</value>
+```
+
+## <a name="parameters"></a>パラメーター
+
+- `property-description`
+
+  プロパティの説明。
+
+## <a name="remarks"></a>Remarks
+
+\<value> タグを使用して、プロパティが表す値を記述することができます。 Visual Studio .NET 開発環境では、コード ウィザードを使用してプロパティを追加するときに、新しいプロパティの [\<summary>](./summary.md) タグが追加されることに注意してください。 その後、手動で \<value> タグを追加してプロパティが表す値を記述する必要があります。
+
+コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
+
+## <a name="example"></a>例
+
+[!code-csharp[csProgGuideDocComments#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#14)]
+
 ## <a name="see-also"></a>関連項目
 
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# プログラミング ガイド](../index.md)
+- [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

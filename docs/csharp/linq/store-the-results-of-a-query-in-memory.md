@@ -3,12 +3,12 @@ title: クエリ結果をメモリに格納する
 description: 結果の格納方法。
 ms.date: 11/30/2016
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
-ms.openlocfilehash: 98a300b2c11eb037ed4ce34caea2673a4e0f8e6b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 66a7a95c74db4062e76c54d4339ccb7343f44067
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525231"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633563"
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>クエリ結果をメモリに格納する
 

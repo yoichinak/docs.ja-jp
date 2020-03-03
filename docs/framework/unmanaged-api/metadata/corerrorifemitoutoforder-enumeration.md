@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: 6d758aad-29a7-44fe-9481-bbff5b799a32
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 084f0bbab130cd4e7334184fe9baa322c0487942
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57460ba30a8ce974b5ca89f76796c4dcf49ffecf
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616772"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74443588"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder 列挙型
 メタデータの生成順序が不適切である場合にエラー メッセージが生成される条件を示すフラグ値が格納されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorErrorIfEmitOutOfOrder {  
   
     MDErrorOutOfOrderDefault    = 0x00000000,  
@@ -47,21 +45,22 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|エラー メッセージを生成しない既定の動作を示します。|  
-|`MDErrorOutOfOrderNone`|コンパイラがエラー メッセージを生成しないことを示します。|  
-|`MDErrorOutOfOrderAll`|フィールド、プロパティ、イベント、メソッド、ときに、コンパイラはエラー メッセージを生成する必要がありますか、パラメーターの生成が誤順序のことを示します。|  
-|`MDMethodOutOfOrder`|メソッドの生成が順不同の場合に、コンパイラがエラー メッセージを生成することを示します。|  
-|`MDFieldOutOfOrder`|フィールドの生成が順不同の場合に、コンパイラがエラー メッセージを生成することを示します。|  
-|`MDParamOutOfOrder`|パラメーターの生成が順不同の場合に、コンパイラがエラー メッセージを生成することを示します。|  
-|`MDPropertyOutOfOrder`|プロパティの生成が順不同の場合に、コンパイラがエラー メッセージを生成することを示します。|  
-|`MDEventOutOfOrder`|コンパイラが順不同のイベントの生成がエラー メッセージを生成することを示します。|  
+|`MDErrorOutOfOrderDefault`|エラーメッセージを生成しない既定の動作を示します。|  
+|`MDErrorOutOfOrderNone`|コンパイラがエラーメッセージを生成しないことを示します。|  
+|`MDErrorOutOfOrderAll`|フィールド、プロパティ、イベント、メソッド、またはパラメーターが順序どおりに生成されない場合に、コンパイラがエラーメッセージを生成することを示します。|  
+|`MDMethodOutOfOrder`|メソッドが順序どおりに出力されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
+|`MDFieldOutOfOrder`|フィールドが順序どおりに出力されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
+|`MDParamOutOfOrder`|パラメーターが順序どおりに出力されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
+|`MDPropertyOutOfOrder`|プロパティが順序どおりに出力されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
+|`MDEventOutOfOrder`|イベントが順序どおりに生成されない場合に、コンパイラがエラーメッセージを生成する必要があることを示します。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr.h  
+ **ヘッダー:** CorHdr. h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
+
 - [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

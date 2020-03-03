@@ -1,234 +1,97 @@
 ---
-title: C# 演算子
-ms.date: 04/04/2018
+title: C# 演算子 - C# リファレンス
+ms.date: 08/20/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
 - operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+- operator precedence [C#]
+- operator associativity [C#]
+- expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
+ms.sourcegitcommit: 93762e1a0dae1b5f64d82eebb7b705a6d566d839
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333409"
+ms.lasthandoff: 11/27/2019
+ms.locfileid: "74552473"
 ---
-# <a name="c-operators"></a>C# 演算子
+# <a name="c-operators-c-reference"></a>C# 演算子 (C# リファレンス)
 
-C# には、多くの演算子が用意されています。演算子とは、式で実行する演算 (数値演算、インデックス作成、関数呼び出しなど) を指定する記号のことです。 多くの演算子は、ユーザー定義型に適用する際に[オーバーロード](../../programming-guide/statements-expressions-operators/overloadable-operators.md)して、その意味を変更できます。
+C# では、組み込み型でサポートされた演算子が多数提供されています。 たとえば、[算術演算子](arithmetic-operators.md)は数値オペランドで算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../builtin-types/bool.md) オペランドで論理演算を実行します。 特定の演算子は[オーバーロード](operator-overloading.md)できます。 演算子のオーバーロードを利用すると、ユーザー定義型のオペランドに対して演算子の動作を指定できます。
 
-整数型に対する演算 (`==`、`!=`、`<`、`>`、`&`、`|`) は、通常、列挙型 (`enum`) で使用できます。
+[式](../../programming-guide/statements-expressions-operators/expressions.md)では、演算子の優先順位と結合規則によって、操作の実行順序が決まります。 かっこを使用すれば、演算子の優先順位と結合規則によって定められた評価の順序を変更することができます。
 
-ここでは、C# の演算子を優先順位の高い順に示します。 各セクションの演算子の優先順位は同じです。
+## <a name="operator-precedence"></a>演算子の優先順位
 
-## <a name="primary-operators"></a>主な演算子
+複数の演算子を含む式では、優先順位の高い方の演算子が優先順位の低い方の演算子よりも先に評価されます。 次の例では、乗算は加算より優先順位が高いため、最初に乗算が実行されます。
 
-優先順位が最も高い演算子です。
+```csharp-interactive
+var a = 2 + 2 * 2;
+Console.WriteLine(a); //  output: 6
+```
 
-[x.y](member-access-operator.md) – メンバー アクセス。
+演算子の優先順位によって定められた評価の順序を変更するには、かっこを使用します。
 
-[x?.y](null-conditional-operators.md) – null 条件付きのメンバー アクセス。 左側のオペランドが `null` に評価される場合に `null` を返します。
+```csharp-interactive
+var a = (2 + 2) * 2;
+Console.WriteLine(a); //  output: 8
+```
 
-[x?[y]](null-conditional-operators.md) - null 条件付きのインデックス アクセス。 左側のオペランドが `null` に評価される場合に `null` を返します。
+次の表は、C# の演算子を優先順位の高い順にまとめたものです。 各行内の演算子の優先順位は同じです。
 
-[f(x)](invocation-operator.md) – 関数の呼び出し。
+| 演算子 | カテゴリまたは名前 |
+| --------- | ---------------- |
+| [x.y](member-access-operators.md#member-access-operator-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-operator-)、[a&#91;i&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--) | 1 次式 |
+| [+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[\!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++x](arithmetic-operators.md#increment-operator-)、[--x](arithmetic-operators.md#decrement-operator---)、[^x](member-access-operators.md#index-from-end-operator-)、[(T)x](type-testing-and-cast.md#cast-operator-)、[await](await.md)、[&x](pointer-related-operators.md#address-of-operator-)、[*x](pointer-related-operators.md#pointer-indirection-operator-)、[true and false](true-false-operators.md) | 単項 |
+| [x..y](member-access-operators.md#range-operator-) | 範囲 |
+| [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乗法|
+| [x + y](arithmetic-operators.md#addition-operator-)、[x – y](arithmetic-operators.md#subtraction-operator--) | 加法 |
+| [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | シフト |
+| [x \< y](comparison-operators.md#less-than-operator-)、[x > y](comparison-operators.md#greater-than-operator-)、[x \<= y](comparison-operators.md#less-than-or-equal-operator-)、[x >= y](comparison-operators.md#greater-than-or-equal-operator-)、[is](type-testing-and-cast.md#is-operator)、[as](type-testing-and-cast.md#as-operator) | 関係式と型検査 |
+| [x == y](equality-operators.md#equality-operator-), [x != y](equality-operators.md#inequality-operator-) | 等価比較 |
+| `x & y` | [ブール演算の論理 AND](boolean-logical-operators.md#logical-and-operator-) または[ビット演算の論理 AND](bitwise-and-shift-operators.md#logical-and-operator-) |
+| `x ^ y` | [ブール演算の論理 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-) または[ビット演算の論理 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) |
+| <code>x &#124; y</code> | [ブール演算の論理 OR](boolean-logical-operators.md#logical-or-operator-) または[ビット演算の論理 OR](bitwise-and-shift-operators.md#logical-or-operator-) |
+| [x && y](boolean-logical-operators.md#conditional-logical-and-operator-) | 条件 AND |
+| [x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) | 条件 OR |
+| [x ?? y](null-coalescing-operator.md) | Null 合体演算子 |
+| [c ? t : f](conditional-operator.md) | 条件演算子 |
+| [x = y](assignment-operator.md)、[x += y](arithmetic-operators.md#compound-assignment)、[x -= y](arithmetic-operators.md#compound-assignment)、[x *= y](arithmetic-operators.md#compound-assignment)、[x /= y](arithmetic-operators.md#compound-assignment)、[x %= y](arithmetic-operators.md#compound-assignment)、[x &= y](boolean-logical-operators.md#compound-assignment)、[x &#124;= y](boolean-logical-operators.md#compound-assignment)、[x ^= y](boolean-logical-operators.md#compound-assignment)、[x <<= y](bitwise-and-shift-operators.md#compound-assignment)、[x >>= y](bitwise-and-shift-operators.md#compound-assignment)、[x ??= y](null-coalescing-operator.md)、[=>](lambda-operator.md) | 代入とラムダ宣言 |
 
-[a&#91;x&#93;](index-operator.md) – 集約オブジェクトのインデックス作成。
+## <a name="operator-associativity"></a>演算子の結合規則
 
-[x++](increment-operator.md) – 後置インクリメント。 x の値を返した後、1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新します。
+演算子の優先順位が同じ場合は、演算子の結合規則によって、操作の実行順序が決まります。
 
-[x--](decrement-operator.md) – 後置デクリメント。 x の値を返した後、1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新します。
+- *結合規則が左から右*の演算子は、左から右に順番に評価されます。 [代入演算子](assignment-operator.md)と [null 合体演算子](null-coalescing-operator.md)を除き、2 項演算子はすべて左からの結合です。 たとえば、`a + b - c` は `(a + b) - c` と評価されます。
+- *結合規則が右から左*の演算子は、右から左に評価されます。 代入演算子、null 合体演算子、および[条件演算子`?:`](conditional-operator.md)は、右からの結合です。 たとえば、`x = y = z` は `x = (y = z)` と評価されます。
 
-[new](../keywords/new-operator.md) – 型のインスタンス化。
+演算子の結合規則によって定められた評価の順序を変更するには、かっこを使用します。
 
-[typeof](../keywords/typeof.md) – オペランドを表す <xref:System.Type> オブジェクトを返します。
+```csharp-interactive
+int a = 13 / 5 / 2;
+int b = 13 / (5 / 2);
+Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
+```
 
-[checked](../keywords/checked.md) – 整数演算のオーバーフロー チェックを有効にします。
+## <a name="operand-evaluation"></a>オペランドの評価
 
-[unchecked](../keywords/unchecked.md) – 整数演算のオーバーフロー チェックを無効にします。 これがコンパイラの既定の動作です。
+式内のオペランドは、演算子の優先順位と結合規則に関係なく、左から右に評価されます。 次の例では、演算子とオペランドが評価される順序を示しています。
 
-[default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) – 型 T の既定の値を生成します。
+| 正規表現 | 評価の順序 |
+| ---------- | ------------------- |
+|`a + b`|a、b、+|
+|`a + b * c`|a、b、c、*、+|
+|`a / b + c * d`|a、b、/、c、d、*、+|
+|`a / (b + c) * d`|a、b、c、+、/、d、*|
 
-[Delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md) – delegate インスタンスを宣言して返します。
+通常、演算子のオペランドはすべて評価されます。 ただし、一部の演算子では、条件付きでオペランドが評価されます。 つまり、このような演算子では、左端のオペランドの値によって、他の (または、どの) オペランドを評価するかどうかが定義されます。 これらの演算子は、条件付き論理 [AND (`&&`)](boolean-logical-operators.md#conditional-logical-and-operator-) および [OR (`||`)](boolean-logical-operators.md#conditional-logical-or-operator-) 演算子、[null 合体演算子 `??` と `??=`](null-coalescing-operator.md)、[null 条件演算子 `?.` と `?[]`](member-access-operators.md#null-conditional-operators--and-)、および[条件演算子 `?:`](conditional-operator.md) です。 詳細については、演算子ごとの説明を参照してください。
 
-[sizeof](../keywords/sizeof.md) – 型オペランドのサイズをバイト単位で返します。
+## <a name="c-language-specification"></a>C# 言語仕様
 
-[->](dereference-operator.md) – メンバー アクセスと組み合わせてポインターを逆参照します。
-
-## <a name="unary-operators"></a>単項演算子
-
-これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[+x](addition-operator.md) – x の値を返します。
-
-[-x](subtraction-operator.md) – 数値の否定。
-
-[\!x](logical-negation-operator.md) – 論理否定。
-
-[~x](bitwise-complement-operator.md) – ビットごとの補数。
-
-[++x](increment-operator.md) – 前置インクリメント。 1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新した後に x の値を返します。
-
-[--x](decrement-operator.md) – 前置デクリメント。 1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新した後に x の値を返します。
-
-[(T)x](invocation-operator.md) – 型キャスト。
-
-[await](../keywords/await.md) – `Task` を待機します。
-
-[&x](and-operator.md) – アドレス。
-
-[*x](multiplication-operator.md) – 逆参照。
-
-## <a name="multiplicative-operators"></a>乗算演算子
-
-これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x * y](multiplication-operator.md) – 乗算。
-
-[x / y](division-operator.md) – 除算。 オペランドが整数の場合、結果は 0 に近い整数になるように切り捨てられます (例: `-7 / 2 is -3`)。
-
-[x % y](remainder-operator.md) – 剰余。 オペランドが整数の場合、x を y で除算した剰余を返します。  `q = x / y` で `r = x % y` の場合、`x = q * y + r` になります。
-
-## <a name="additive-operators"></a>加法演算子
-
-これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x + y](addition-operator.md) – 加算。
-
-[x – y](subtraction-operator.md) – 減算。
-
-## <a name="shift-operators"></a>シフト演算子
-
-これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x <\<  y](left-shift-operator.md) – ビットを左へシフトし、右側には 0 を格納します。
-
-[x >> y](right-shift-operator.md) – ビットを右へシフトします。 左側のオペランドが `int` または `long` の場合、左側のビットには符号ビットが格納されます。 左側のオペランドが `uint` または `ulong` の場合、左側のビットには 0 が格納されます。
-
-## <a name="relational-and-type-testing-operators"></a>関係演算子と型検査演算子
-
-これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x \< y](less-than-operator.md) – より小さい (x が y より小さい場合は true)。
-
-[x > y](greater-than-operator.md) – より大きい (x が y より大きい場合は true)。
-
-[x \<= y](less-than-equal-operator.md) – 以下。
-
-[x >= y](greater-than-equal-operator.md) – 以上。
-
-[is](../keywords/is.md) – 型の互換性。 評価される左側のオペランドを右側のオペランドで指定された型 (静的な型) にキャストできる場合は、true を返します。
-
-[as](../keywords/as.md) – 型変換。 左側のオペランドを右側のオペランドで指定された型 (静的な型) にキャストして返します。ただし、`(T)x` が例外をスローした場合、`as` は `null` を返します。
-
-## <a name="equality-operators"></a>等値演算子
-
-これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x == y](equality-comparison-operator.md) – 等価比較。 既定では、`string` 以外の参照型の場合、参照の等価性を返します (等価テスト)。 ただし、型は `==` をオーバーロードできるため、同一性のテストが目的の場合は `object` で `ReferenceEquals` メソッドを使用することをお勧めします。
-
-[x != y](not-equal-operator.md) – 等しくない。 `==` のコメントを参照してください。 型が `==` をオーバーロードする場合は、`!=` をオーバーロードする必要があります。
-
-## <a name="logical-and-operator"></a>論理 AND 演算子
-
-この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x & y](and-operator.md) – 論理またはビットごとの AND。 通常、整数型と `enum` 型で使用できます。
-
-## <a name="logical-xor-operator"></a>論理 XOR 演算子
-
-この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x ^ y](xor-operator.md) – 論理またはビットごとの XOR。 通常、整数型と `enum` 型で使用できます。
-
-## <a name="logical-or-operator"></a>論理演算子 OR
-
-この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x &#124; y](or-operator.md) – 論理またはビットごとの OR。 通常、整数型と `enum` 型で使用できます。
-
-## <a name="conditional-and-operator"></a>条件 AND 演算子
-
-この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x && y](conditional-and-operator.md) – 論理 AND。 最初のオペランドが false に評価される場合、C# では 2 番目のオペランドが評価されません。
-
-## <a name="conditional-or-operator"></a>条件 OR 演算子
-
-この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x &#124;&#124; y](conditional-or-operator.md) – 論理 OR。 最初のオペランドが true に評価される場合、C# では 2 番目のオペランドが評価されません。
-
-## <a name="null-coalescing-operator"></a>Null 合体演算子
-
-この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x ?? y](null-coalescing-operator.md) – `x` が `null` 以外の場合は x を返します。null の場合は `y` を返します。
-
-## <a name="conditional-operator"></a>条件演算子
-
-この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[t ? x : y](conditional-operator.md) – テスト `t` が true に評価される場合は `x` を評価して返します。それ以外の場合は `y` を評価して返します。
-
-## <a name="assignment-and-lambda-operators"></a>代入演算子とラムダ演算子
-
-これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
-
-[x = y](assignment-operator.md) – 代入。
-
-[x += y](addition-assignment-operator.md) – インクリメント。 `y` の値を `x` の値に加算した結果を `x` に格納し、新しい値を返します。 `x` が `event` を指定した場合、`y` は、C# によってイベント ハンドラーとして追加される適切な関数である必要があります。
-
-[x -= y](subtraction-assignment-operator.md) – デクリメント。 `y` の値を `x` の値から減算した結果を `x` に格納し、新しい値を返します。 `x` が `event` を指定した場合、`y` は、C# によってイベント ハンドラーとして削除される適切な関数である必要があります。
-
-[x *= y](multiplication-assignment-operator.md) – 乗算代入。 `y` の値を `x` の値に乗算した結果を `x` に格納し、新しい値を返します。
-
-[x /= y](division-assignment-operator.md) – 除算代入。 `x` の値を `y` の値で除算した結果を `x` に格納し、新しい値を返します。
-
-[x %= y](remainder-assignment-operator.md) – 剰余代入。 `x` の値を `y` の値で除算した剰余を `x` に格納し、新しい値を返します。
-
-[x &= y](and-assignment-operator.md) – AND 代入。 `y` の値と `x` の値の AND 演算を行った結果を `x` に格納し、新しい値を返します。
-
-[x &#124;= y](or-assignment-operator.md) – OR 代入。 `y` の値と `x` の値の OR 演算を行った結果を `x` に格納し、新しい値を返します。
-
-[x ^= y](xor-assignment-operator.md) – XOR 代入。 `y` の値と `x` の値の XOR 演算を行った結果を `x` に格納し、新しい値を返します。
-
-[x <<= y](left-shift-assignment-operator.md) – 左シフト代入。 `x` の値を `y` で指定した分だけ左へシフトした結果を `x` に格納し、新しい値を返します。
-
-[x >>= y](right-shift-assignment-operator.md) – 右シフト代入。 `x` の値を `y` で指定した分だけ右へシフトした結果を `x` に格納し、新しい値を返します。
-
-[=>](lambda-operator.md) – ラムダ宣言。
-
-## <a name="arithmetic-overflow"></a>算術オーバーフロー
-
-算術演算子 ([+](addition-operator.md)、[-](subtraction-operator.md)、[*](multiplication-operator.md)、[/](division-operator.md)) を実行すると、結果が数値型の有効な値の範囲を超えることがあります。 詳細については、各演算子に関するセクションを参照してください。概要は、以下のとおりです。
-
-- 整数の算術オーバーフローでは、<xref:System.OverflowException> がスローされるか、または結果の最上位ビットが破棄されます。 0 による整数除算では、常に <xref:System.DivideByZeroException> がスローされます。
-
-   整数のオーバーフローが発生したときの対処方法は、実行コンテキスト ([checked または unchecked](../keywords/checked-and-unchecked.md)) によって異なります。 checked コンテキストの場合は、<xref:System.OverflowException> がスローされます。 unchecked コンテキストの場合は、結果の最上位ビットが破棄され、実行が続行されます。 このように、C# ではオーバーフローを処理するのか、それとも無視するのかをユーザーが選択できます。 既定では、算術演算は *unchecked* コンテキストで発生します。
-
-   算術演算の場合だけでなく、整数型から整数型へのキャスト ([long](../keywords/long.md) から [int](../keywords/int.md) へのキャストなど) でもオーバーフローは発生し、その場合も実行が checked または unchecked のいずれかによって対処が異なります。 ただし、ビット処理演算子とシフト演算子ではオーバーフローは発生しません。
-
-- 浮動小数点数の算術オーバーフローまたは 0 による浮動小数点除算では、例外はスローされません。これは、浮動小数点型が IEEE 754 に基づいており、無限大および NaN (Not a Number) を表現できるためです。
-
-- [小数](../keywords/decimal.md)の算術オーバーフローでは、常に <xref:System.OverflowException> がスローされます。 0 による小数除算では、常に <xref:System.DivideByZeroException> がスローされます。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関するページの「[演算子](~/_csharplang/spec/expressions.md#operators)」セクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C#](../../index.md)
-- [オーバーロードされた演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [C# のキーワード](../keywords/index.md)
+- [式](../../programming-guide/statements-expressions-operators/expressions.md)

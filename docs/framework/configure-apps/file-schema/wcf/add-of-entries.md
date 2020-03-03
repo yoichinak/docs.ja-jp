@@ -2,22 +2,23 @@
 title: <add> の <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
-ms.openlocfilehash: 7267b8719987ecd25bcca78a7897a0d4172a42ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 23b0a825ea593f85ade870d5b93367571eaa3ec0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264571"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850510"
 ---
-# <a name="add-of-entries"></a>\<追加 > の\<エントリ >
+# <a name="add-of-entries"></a>\<エントリの > \<を追加 >
 以前に定義されたクライアント エンドポイントにフィルターをマップするルーティング エントリを表します。 このフィルターに一致するメッセージは、この宛先に送信されます。  
   
- \<system.serviceModel>  
-\<ルーティング >  
-\<filterTables>  
-\<filterTable>  
-\<entries>  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<ルーティング >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<filterTables >** ](filtertables.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<filterTable >** ](filtertable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<エントリ >** ](entries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> の追加**  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,9 +37,6 @@ ms.locfileid: "55264571"
 </routing>
 ```  
   
-```csharp  
-```  
-  
 ## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
@@ -49,7 +47,7 @@ ms.locfileid: "55264571"
 |backupList|エンドポイントのバックアップ リストへの参照を指定する文字列。|  
 |エンドポイント|`filterName` 属性で指定されたフィルターに一致するメッセージを受信するクライアント エンドポイントへの参照を指定する文字列。|  
 |filterName|フィルター要素への参照を指定する文字列。|  
-|priority|このエントリの優先順位を指定する整数。<br /><br /> ルーティング テーブルのエントリは、優先順位に基づいて評価されます。0 が最下位の優先順位です。 特定の優先順位について、すべてのエントリが同時に評価されます。現在の優先順位について一致するエントリが見つからない場合は、次の優先順位が評価されます。<br /><br /> この値はオプションです。|  
+|priority|このエントリの優先順位を指定する整数。<br /><br /> ルーティング テーブルのエントリは、優先順位に基づいて評価されます。0 が最下位の優先順位です。 特定の優先順位について、すべてのエントリが同時に評価されます。現在の優先順位について一致するエントリが見つからない場合は、次の優先順位が評価されます。<br /><br /> この値は省略可能です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -58,8 +56,9 @@ ms.locfileid: "55264571"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ルーティング >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|ルーティング マッピング エントリを含む構成セクション。|  
+|[\<ルーティング >](routing.md)|ルーティング マッピング エントリを含む構成セクション。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Routing.Configuration.RoutingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Routing.Configuration.FilterTableEntryElement?displayProperty=nameWithType>

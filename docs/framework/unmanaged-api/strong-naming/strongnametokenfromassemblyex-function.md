@@ -14,23 +14,21 @@ helpviewer_keywords:
 ms.assetid: 67a8a9f2-dee3-44b2-a1c0-f307a3bdf90f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: eae7831d9a6d7bdee2c632359f317515c810428b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b7866b92be3195b0a767a823a0d7fb1c0aa4918
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626785"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73104248"
 ---
 # <a name="strongnametokenfromassemblyex-function"></a>StrongNameTokenFromAssemblyEx 関数
-指定したアセンブリ ファイルから厳密な名前トークンを作成し、トークンが表す公開キーを返します。  
+指定したアセンブリファイルから厳密な名前トークンを作成し、トークンが表す公開キーを返します。  
   
- この関数は非推奨とされました。 使用して、 [iclrstrongname::strongnametokenfromassemblyex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)メソッド代わりにします。  
+ この関数は非推奨とされます。 代わりに[ICLRStrongName:: StrongNameTokenFromAssemblyEx](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)メソッドを使用してください。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameTokenFromAssemblyEx (  
     [in]  LPCWSTR   wszFilePath,  
     [out] BYTE      **ppbStrongNameToken,  
@@ -40,42 +38,43 @@ BOOLEAN StrongNameTokenFromAssemblyEx (
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `wszFilePath`  
- [in]アセンブリのポータブル実行可能 (PE) ファイルへのパス。  
+ からアセンブリのポータブル実行可能 (PE) ファイルへのパス。  
   
  `ppbStrongNameToken`  
- [out]厳密な名前が返されたトークンです。  
+ 入出力返された厳密な名前トークン。  
   
  `pcbStrongNameToken`  
- [out]厳密な名前トークンのバイト単位のサイズ。  
+ 入出力厳密な名前トークンのサイズ (バイト単位)。  
   
  `ppbPublicKeyBlob`  
- [out]返される公開キー。  
+ 入出力返された公開キー。  
   
  `pcbPublicKeyBlob`  
- [out]公開キーのバイト単位のサイズ。  
+ 入出力公開キーのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 正常に終了します。それ以外の場合、`false`します。  
+ 正常に完了した場合は `true`。それ以外の場合は、`false`ます。  
   
 ## <a name="remarks"></a>Remarks  
- 厳密な名前トークンは、公開キーの短縮形です。 トークンは、アセンブリの署名に使用する公開キーから作成される 64 ビット ハッシュです。 トークンは、アセンブリの厳密な名前の一部であるし、アセンブリのメタデータから読み取ることができます。  
+ 厳密な名前トークンは、公開キーの短縮形です。 トークンは、アセンブリの署名に使用される公開キーから作成された64ビットのハッシュです。 トークンはアセンブリの厳密な名前の一部であり、アセンブリメタデータから読み取ることができます。  
   
- 呼び出す必要があります、キーを取得し、トークンを作成、後に、 [StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/strong-naming/strongnamefreebuffer-function.md)割り当てられたメモリを解放する関数。  
+ キーを取得してトークンを作成したら、 [StrongNameFreeBuffer](strongnamefreebuffer-function.md)関数を呼び出して、割り当てられたメモリを解放する必要があります。  
   
- 場合、`StrongNameTokenFromAssemblyEx`関数が正常に完了、呼び出すしていない、 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md)最後に生成されたエラーを取得します。  
+ `StrongNameTokenFromAssemblyEx` 関数が正常に完了しない場合は、 [StrongNameErrorInfo](strongnameerrorinfo-function.md)関数を呼び出して、最後に生成されたエラーを取得します。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** StrongName.h  
+ **ヘッダー:** StrongName  
   
- **ライブラリ:** Mscoree.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [StrongNameTokenFromAssemblyEx メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
-- [StrongNameTokenFromAssembly メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfromassembly-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+
+- [StrongNameTokenFromAssemblyEx メソッド](../hosting/iclrstrongname-strongnametokenfromassemblyex-method.md)
+- [StrongNameTokenFromAssembly メソッド](../hosting/iclrstrongname-strongnametokenfromassembly-method.md)
+- [ICLRStrongName インターフェイス](../hosting/iclrstrongname-interface.md)

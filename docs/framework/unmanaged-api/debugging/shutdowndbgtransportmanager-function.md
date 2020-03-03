@@ -16,29 +16,27 @@ helpviewer_keywords:
 ms.assetid: 6325a782-6862-4346-8e20-d922ca246169
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 213ca658e7a84f03b15f97cf07aa1ed7cb39205b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5d9ae66b7c77a0d3482b7c68a824a8a148ba2595
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424103"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73139155"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>ShutdownDbgTransportManager 関数
-リモート ターゲット コンピューターへの接続用のトランスポート マネージャーをシャットダウンします。  
+リモート ターゲット コンピューターへの接続のためにトランスポート マネージャーをシャットダウンします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void InitDbgTransportManager ();  
 ```  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **ライブラリ:** mscordbi_macx86  
   
- **.NET framework のバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1

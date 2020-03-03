@@ -1,13 +1,13 @@
 ---
-title: WordprocessingML document2 などのスタイル パーツ
+title: WordprocessingML 文書パーツのスタイル部分
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 55ad04ba516482613d1abd86ce5feee007c0b98d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06800a138d33d8116ebdece8160e2705d294161c
+ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722791"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72582889"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML ドキュメントのスタイル パーツ
 このトピックでは、Office Open XML WordprocessingML ドキュメントのスタイル パーツの例について説明します。  
@@ -17,7 +17,7 @@ ms.locfileid: "54722791"
   
  既定の段落スタイルには、次の開始タグを持つ要素があります。  
   
-```  
+```xml  
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
@@ -141,4 +141,5 @@ ms.locfileid: "54722791"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [詳細の Office Open XML WordprocessingML ドキュメント (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+
+- [Office Open XML WordprocessingML ドキュメントの詳細 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: ed86185f-2152-459c-961f-10c06d62e83f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5adf43bd68db449e465ffe3517c9eb9d41a5c18a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbc272070e9eb6810b34ec1f3fdc9e944c624cd3
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502053"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132383"
 ---
-# <a name="coractivefunction-structure"></a>COR_ACTIVE_FUNCTION 構造体
-スレッドのフレームで現在アクティブな機能に関する情報が含まれます。 この構造が使用者、 [icordebugthread 2::getactivefunctions](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-getactivefunctions-method.md)メソッド。  
+# <a name="cor_active_function-structure"></a>COR_ACTIVE_FUNCTION 構造体
+スレッドのフレームで現在アクティブな機能に関する情報が含まれます。 この構造体は、 [ICorDebugThread2:: GetActiveFunctions](icordebugthread2-getactivefunctions-method.md)メソッドによって使用されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct  _COR_ACTIVE_FUNCTION {  
     ICorDebugAppDomain   *pAppDomain;  
     ICorDebugModule      *pModule;  
@@ -42,21 +40,22 @@ typedef struct  _COR_ACTIVE_FUNCTION {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pAppDomain`|アプリケーション ドメインの所有者へのポインター、`ilOffset`フィールド。|  
-|`pModule`|モジュールの所有者へのポインター、`ilOffset`フィールド。|  
-|`pFunction`|関数の所有者へのポインター、`ilOffset`フィールド。|  
-|`ilOffset`|フレームの Microsoft intermediate language (MSIL) オフセット。|  
-|`flags`|将来の機能拡張予約されています。|  
+|`pAppDomain`|`ilOffset` フィールドのアプリケーションドメイン所有者へのポインター。|  
+|`pModule`|`ilOffset` フィールドのモジュール所有者へのポインター。|  
+|`pFunction`|`ilOffset` フィールドの関数所有者へのポインター。|  
+|`ilOffset`|フレームの MSIL (Microsoft 中間言語) オフセット。|  
+|`flags`|将来の拡張のために予約されています。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorDebug.idl  
+ **ヘッダー:** CorDebug .idl  
   
  **ライブラリ:** CorGuids.lib  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

@@ -15,30 +15,26 @@ helpviewer_keywords:
 ms.assetid: f5a34517-2422-484f-be89-2ce0b4bce195
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ed9536280f64ae1400faff8d0029e5ccd51c90ee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6245942f0b5cedd478ba0704acc1fef7251b8211
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732441"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73109605"
 ---
 # <a name="icordebugmodulegetfunctionfromrva-method"></a>ICorDebugModule::GetFunctionFromRVA メソッド
-このメソッドは、.NET Framework の現在のバージョンで実装されていません。  
+このメソッドは、現在のバージョンの .NET Framework では実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFunctionFromRVA(  
     [in]  CORDB_ADDRESS      rva,  
     [out] ICorDebugFunction  **ppFunction  
 );  
 ```  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>［要件］  
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
 ## <a name="see-also"></a>関連項目
-
-

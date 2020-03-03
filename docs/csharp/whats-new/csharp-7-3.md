@@ -2,12 +2,12 @@
 title: C# 7.3 の新機能
 description: C# 7.3 の新機能の概要
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
+ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873801"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74204552"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 の新機能
 
@@ -34,7 +34,12 @@ C# 7.3 リリースには 2 つの主要なテーマがあります。 1 つ目�
 - `-publicsign`: オープン ソース ソフトウェア (OSS) のアセンブリの署名を可能にします。
 - `-pathmap`: ソース ディレクトリのマッピングを提供します。
 
-この記事の残りの部分では、それぞれの機能強化の詳細とリンクを示します。
+この記事の残りの部分では、それぞれの機能強化の詳細とリンクを示します。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
+
+1. [dotnet try](https://github.com/dotnet/try/blob/master/README.md#setup) グローバル ツールをインストールします。
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) リポジトリを複製します。
+1. 現在のディレクトリを、*try-samples* リポジトリの *csharp7* サブディレクトリに設定します。
+1. `dotnet try` を実行します。
 
 ## <a name="enabling-more-efficient-safe-code"></a>セーフ コードをより効率的にする
 
@@ -51,7 +56,7 @@ unsafe struct S
 }
 ```
 
-以前のバージョンの C# では、`myFixedField` の一部であるいずれかの整数にアクセスするために変数のピン留めが必要でした。 現在では、次のコードが安全なコンテキストでコンパイルされるようになりました。
+以前のバージョンの C# では、`myFixedField` の一部であるいずれかの整数にアクセスするために変数のピン留めが必要でした。 今では、次のコードは、変数 `p` を別の `fixed` ステートメントの内部にピン留めせずに、コンパイルされます。
 
 ```csharp
 class C
@@ -112,7 +117,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-詳しくは、言語リファレンスの [`stackalloc` ステートメント](../language-reference/keywords/stackalloc.md)に関する記事を参照してください。
+詳細については、「[`stackalloc` 演算子](../language-reference/operators/stackalloc.md)」の記事を参照してください。
 
 ### <a name="more-types-support-the-fixed-statement"></a>`fixed` ステートメントをサポートする型の増加
 
@@ -124,7 +129,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 型パラメーターの基底クラスの制約として、<xref:System.Enum?displayProperty=nameWithType> 型または <xref:System.Delegate?displayProperty=nameWithType> 型を指定できるようになりました。
 
-また、新しい `unmanaged` 制約を使用して、型パラメーターが**アンマネージ型**である必要があることを指定することもできます。 **アンマネージ型**は参照型ではない型であり、任意の入れ子のレベルに参照型を含みません。
+また、新しい `unmanaged` 制約を使用して、型パラメーターが null 非許容で[アンマネージ型](../language-reference/builtin-types/unmanaged-types.md)である必要があることを指定することもできます。
 
 詳しくは、[`where` ジェネリック制約](../language-reference/keywords/where-generic-type-constraint.md)および[型パラメーターの制約](../programming-guide/generics/constraints-on-type-parameters.md)に関する記事を参照してください。
 

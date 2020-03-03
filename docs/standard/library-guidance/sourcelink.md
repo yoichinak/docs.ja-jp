@@ -1,15 +1,13 @@
 ---
 title: ソース リンクと .NET ライブラリ
 description: ソース リンクを使用して .NET ライブラリのデバッグ機能を改善するためのベスト プラクティス推奨事項。
-author: jamesnk
-ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 10596f589af7abee6ff7833ef25c606294337196
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
+ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204757"
+ms.lasthandoff: 01/24/2020
+ms.locfileid: "76744540"
 ---
 # <a name="source-link"></a>ソース リンク
 
@@ -23,21 +21,22 @@ ms.locfileid: "55204757"
 
 ソース リンクの使用方法は、[dotnet/sourcelink](https://github.com/dotnet/sourcelink/blob/master/README.md) GitHub リポジトリにあります。
 
-[NuGet パッケージ エクスプローラー](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)を使用すれば、ソース リンク メタデータがパッケージに正常に埋め込まれたことを確認できます。 `Repository` メタデータがコメント ID と共に存在すること、各ターゲットの .dll と共に .pdb ファイルが見つかることを確認します。
+[NuGet パッケージ エクスプローラー](https://github.com/NuGetPackageExplorer/NuGetPackageExplorer)を使用すれば、ソース リンク メタデータがパッケージに正常に埋め込まれたことを確認できます。 `Repository` メタデータがコミット ID と共に存在すること、各ターゲットの .dll と共に .pdb ファイルが見つかることを確認します。
 
 ![NuGet パッケージ エクスプローラーのソース リンク](./media/sourcelink/nuget-package-explorer-sourcelink.png "NuGet パッケージ エクスプローラーのソース リンク")
 
-**✔️ 検討** ソース リンクを使用して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
+✔️ 検討 ソース リンクを使用して、お使いのアセンブリと NuGet パッケージにソース管理のメタデータを追加する。
 
 > [!TIP]
 > デバッガー属性を型に追加することで開発者のデバッグ機能をさらに強化できます。
+>
 > * <xref:System.Diagnostics.DebuggerDisplayAttribute> では、デバッガーの変数ウィンドウでクラスやフィールドを表示する方法をカスタマイズできます。
 > * <xref:System.Diagnostics.DebuggerStepThroughAttribute> では、デバッガーに対してコードのステップ インではなくステップ実行が指示されます。
 > * <xref:System.Diagnostics.DebuggerBrowsableAttribute> では、デバッガー変数ウィンドウにメンバーを表示するかどうかが制御されます。
 
-**✔️ 検討** シンボル ファイルを発行する (`*.pdb`)。
+✔️ 検討 シンボル ファイルを発行する (`*.pdb`)。
 
-> デバッグのエクスペリエンスを最善にするには、ライブラリでシンボル ファイルを発行してソース リンクを使用する必要があります。 シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
+> デバッグのエクスペリエンスを最善にするには、ライブラリ上でシンボル ファイルを発行してソース リンクを使用する必要があります。 シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](dependencies.md)

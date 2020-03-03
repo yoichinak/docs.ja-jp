@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
-ms.openlocfilehash: 088dc9507f073553f8a857bd11ecd016f0d94244
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0926e3c6513a698ae47b9983d0e6ad195394a4df
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730881"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780615"
 ---
 # <a name="updating-data-in-a-data-source"></a>データ ソースのデータの更新
-データを変更する SQL ステートメント (INSERT、UPDATE、DELETE など) は行を返しません。 同様に、多くのストアド プロシージャは、アクションを実行しても行を返しません。 行を返さないコマンドを実行するには、作成、**コマンド**適切な SQL コマンドを使用してオブジェクトと**接続**など必要な**パラメーター**します。 コマンドを実行、 **ExecuteNonQuery**のメソッド、**コマンド**オブジェクト。  
+データを変更する SQL ステートメント (INSERT、UPDATE、DELETE など) は行を返しません。 同様に、多くのストアド プロシージャは、アクションを実行しても行を返しません。 行を返さないコマンドを実行するには、適切な SQL コマンドと**接続**(必要な**パラメーター**を含む) を指定して**command**オブジェクトを作成します。 **Command オブジェクトの** **ExecuteNonQuery**メソッドを使用してコマンドを実行します。  
   
- **ExecuteNonQuery**ステートメントまたはが実行されたストアド プロシージャによって影響を受ける行の数を表す整数を返します。 複数のステートメントが実行された場合は、実行された各ステートメントの影響を受けたレコードの合計を示す値が返されます。  
+ **ExecuteNonQuery**メソッドは、実行されたステートメントまたはストアドプロシージャの影響を受ける行の数を表す整数を返します。 複数のステートメントが実行された場合は、実行された各ステートメントの影響を受けたレコードの合計を示す値が返されます。  
   
 ## <a name="example"></a>例  
- 次のコード例を使用してデータベースにレコードを挿入する INSERT ステートメントを実行する**ExecuteNonQuery**します。  
+ 次のコード例では、INSERT ステートメントを実行して、 **ExecuteNonQuery**を使用してデータベースにレコードを挿入します。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- 次のコード例のサンプル コードで作成したストアド プロシージャを実行する[カタログ操作の実行](../../../../docs/framework/data/adonet/performing-catalog-operations.md)します。 ストアド プロシージャによって行が返されないため、 **ExecuteNonQuery**メソッドを使用するが、ストアド プロシージャが受け取る入力パラメーターと出力パラメーターと戻り値を返します。  
+ 次のコード例では、[カタログ操作の実行](performing-catalog-operations.md)時にサンプルコードによって作成されたストアドプロシージャを実行します。 ストアドプロシージャによって返される行は存在しないため、 **ExecuteNonQuery**メソッドが使用されますが、ストアドプロシージャは入力パラメーターを受け取り、出力パラメーターと戻り値を返します。  
   
- <xref:System.Data.OleDb.OleDbCommand>オブジェクト、 **ReturnValue**にパラメーターを追加する必要があります、**パラメーター**コレクション最初。  
+ オブジェクトの場合は、最初に**パラメーター**コレクションに戻りパラメーターを追加する必要があります。 <xref:System.Data.OleDb.OleDbCommand>  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -92,7 +92,8 @@ Int32 rowCount = (Int32) command.Parameters["@RowCount"].Value;
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [コマンドを使用したデータ変更](../../../../docs/framework/data/adonet/using-commands-to-modify-data.md)
-- [DataAdapter によるデータ ソースの更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)
-- [コマンドおよびパラメーター](../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [コマンドを使用したデータ変更](using-commands-to-modify-data.md)
+- [DataAdapter によるデータ ソースの更新](updating-data-sources-with-dataadapters.md)
+- [コマンドおよびパラメーター](commands-and-parameters.md)
+- [ADO.NET の概要](ado-net-overview.md)

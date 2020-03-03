@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pausing Windows Service applications
 ms.assetid: e5d13760-4c83-4b0d-abef-39852677cd7a
 author: ghogen
-ms.openlocfilehash: 86c2414fd6ad9c32a37339c553ec80c98426f78a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: a10e05b0460608a9e67ee4527adf80be3d47438e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612711"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053638"
 ---
 # <a name="how-to-continue-a-windows-service-visual-basic"></a>方法: Windows サービスを続行する (Visual Basic)
 この例では、<xref:System.ServiceProcess.ServiceController> コンポーネントを使って、ローカル コンピューター上の IIS 管理サービスを続行します。  
@@ -29,9 +29,9 @@ ms.locfileid: "54612711"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   System.serviceprocess.dll へのプロジェクト参照が必要です。  
+- System.serviceprocess.dll へのプロジェクト参照が必要です。  
   
--   <xref:System.ServiceProcess> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
+- <xref:System.ServiceProcess> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  <xref:System.ServiceProcess.ServiceController> クラスの <xref:System.ServiceProcess.ServiceController.MachineName%2A> プロパティは、既定ではローカル コンピューターです。 別のコンピューター上の Windows サービスを参照するには、<xref:System.ServiceProcess.ServiceController.MachineName%2A> プロパティをそのコンピューターの名前に変更します。  
@@ -40,9 +40,9 @@ ms.locfileid: "54612711"
   
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   サービスを再開できません。 (<xref:System.InvalidOperationException>)  
+- サービスを再開できません。 (<xref:System.InvalidOperationException>)  
   
--   システム API にアクセス中にエラーが発生しました。 (<xref:System.ComponentModel.Win32Exception>)  
+- システム API にアクセス中にエラーが発生しました。 (<xref:System.ComponentModel.Win32Exception>)  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  コンピューター上のサービスの制御は、<xref:System.ServiceProcess.ServiceControllerPermissionAccess> 列挙型を使って <xref:System.ServiceProcess.ServiceControllerPermission> クラスのアクセス許可を設定することにより制限できます。  
@@ -50,6 +50,7 @@ ms.locfileid: "54612711"
  サービス情報へのアクセスは、<xref:System.Security.Permissions.PermissionState> 列挙型を使って <xref:System.Security.Permissions.SecurityPermission> クラスのアクセス許可を設定することにより制限できます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceProcess.ServiceController>
 - <xref:System.ServiceProcess.ServiceControllerStatus>
-- [方法: Windows サービスを一時中断する (Visual Basic)](../../../docs/framework/windows-services/how-to-pause-a-windows-service-visual-basic.md)
+- [方法: Windows サービスを一時中断する (Visual Basic)](how-to-pause-a-windows-service-visual-basic.md)

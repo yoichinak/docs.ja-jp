@@ -5,21 +5,19 @@ helpviewer_keywords:
 - generatePublisherEvidence element
 - <generatePublisherEvidence> element
 ms.assetid: 7d208f50-e8d5-4a42-bc1a-1cf3590706a8
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f029131f5b10cc487021ee15e72552a26c0b04e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b04ef53d6e9c3d954b0925ea8634b3d220b36af7
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275848"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73116572"
 ---
 # <a name="generatepublisherevidence-element"></a>\<generatePublisherEvidence > 要素
-ランタイムを作成するかどうかを指定します。<xref:System.Security.Policy.Publisher>コード アクセス セキュリティ (CAS) のための証拠。  
+ランタイムがコードアクセスセキュリティ (CAS) の <xref:System.Security.Policy.Publisher> 証拠を作成するかどうかを指定します。  
   
- \<configuration>  
-\<runtime>  
-\<generatePublisherEvidence>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<generatePublisherEvidence >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,14 +33,14 @@ ms.locfileid: "55275848"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> ランタイムを作成するかどうかを指定します。<xref:System.Security.Policy.Publisher>証拠。|  
+|`enabled`|必須の属性です。<br /><br /> ランタイムが <xref:System.Security.Policy.Publisher> 証拠を作成するかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|`false`|作成されません<xref:System.Security.Policy.Publisher>証拠。|  
-|`true`|作成<xref:System.Security.Policy.Publisher>証拠。 既定値です。|  
+|`false`|<xref:System.Security.Policy.Publisher> 証拠を作成しません。|  
+|`true`|<xref:System.Security.Policy.Publisher> 証拠を作成します。 既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -57,18 +55,18 @@ ms.locfileid: "55275848"
 ## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]なり、後でこの要素にはアセンブリの読み込み時間に効力はありません。 詳細については、「セキュリティ ポリシーの簡略化」のセクションを参照してください。[セキュリティ変更](../../../../../docs/framework/security/security-changes.md)します。  
+> .NET Framework 4 以降では、この要素はアセンブリの読み込み時間に影響しません。 詳細については、「セキュリティの[変更](../../../security/security-changes.md)」の「セキュリティポリシーの簡略化」を参照してください。  
   
- 共通言語ランタイム (CLR) を作成する読み込み時に Authenticode 署名を検証しようとする<xref:System.Security.Policy.Publisher>アセンブリの証拠。 ただし、既定では、ほとんどのアプリケーションは必要ありません<xref:System.Security.Policy.Publisher>証拠。 標準の CAS ポリシーに依存せず、<xref:System.Security.Policy.PublisherMembershipCondition>します。 アプリケーションがカスタムの CAS ポリシーを使用しているコンピューター上で実行しますかのニーズを満たすにしない限り、発行元の署名の検証に関連付けられている不要なスタートアップ コストを回避する必要があります<xref:System.Security.Permissions.PublisherIdentityPermission>部分信頼環境でします。 (Id アクセス許可の要求は常には、完全に信頼された環境で失敗した)。  
+ 共通言語ランタイム (CLR) は、読み込み時に Authenticode 署名を検証して、アセンブリの <xref:System.Security.Policy.Publisher> 証拠を作成しようとします。 ただし、既定では、ほとんどのアプリケーションは <xref:System.Security.Policy.Publisher> 証拠を必要としません。 Standard CAS ポリシーは、<xref:System.Security.Policy.PublisherMembershipCondition>に依存しません。 カスタム CAS ポリシーを使用しているコンピューターでアプリケーションを実行する場合や、部分信頼環境で <xref:System.Security.Permissions.PublisherIdentityPermission> の要求を満たす場合を除き、発行元の署名の検証に関連する不要な起動コストを回避する必要があります。 (Id 権限の要求は、完全に信頼された環境では常に成功します)。  
   
 > [!NOTE]
->  使用するサービスをお勧め、`<generatePublisherEvidence>`起動時のパフォーマンスを向上させるために要素。  この要素を使用しても、タイムアウトと、サービスのスタートアップのキャンセルを引き起こす可能性のある遅延を避けるためとことができます。  
+> サービスでは、起動時のパフォーマンスを向上させるために `<generatePublisherEvidence>` 要素を使用することをお勧めします。  また、この要素を使用すると、タイムアウトを発生させたり、サービスの開始をキャンセルしたりする可能性がある遅延を回避することもできます。  
   
 ## <a name="configuration-file"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルでのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します、`<generatePublisherEvidence>`チェック アプリケーションの CA の発行元ポリシーを無効にする要素。  
+ 次の例は、`<generatePublisherEvidence>` 要素を使用して、アプリケーションの CAS 発行者ポリシーのチェックを無効にする方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -79,5 +77,6 @@ ms.locfileid: "55275848"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)

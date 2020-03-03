@@ -4,34 +4,34 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
-ms.openlocfilehash: 57d9ef87a078655a89a5869a48a1bd16f21b000f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e3edd7f7080562d03453898dba7a9326561803b5
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500927"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124196"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
-アプリケーションをホストする[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]PresentationHost.exe でコンテンツがホストと PresentationHost.exe 間の統合のポイントを提供するには、このインターフェイスを実装します。  
+プレゼンテーションの cluster.exe を介して [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] コンテンツをホストするアプリケーションは、このインターフェイスを実装して、ホストとプレゼンテーションの cluster.exe の間の統合ポイントを提供します。  
   
-## <a name="remarks"></a>Remarks  
- [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] Web ブラウザーなどのアプリケーションをホストできます[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]コンテンツを含む[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]XAML が失われるとします。 ホストに[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]コンテンツ、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]アプリケーションのインスタンスを作成する、 [WebBrowser コントロール](https://go.microsoft.com/fwlink/?LinkId=97911)します。 ホストされる[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]PresentationHost.exe、提供、ホスト型のインスタンスを作成します[!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)]コンテンツ ホストに表示するために、 [WebBrowser コントロール](https://go.microsoft.com/fwlink/?LinkId=97911)します。  
+## <a name="remarks"></a>解説  
+ Web ブラウザーなどの Win32 アプリケーションは、XAML ブラウザーアプリケーション (Xbap) やルース XAML などの WPF コンテンツをホストできます。 WPF コンテンツをホストするために、Win32 アプリケーションは[WebBrowser コントロール](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752040(v=vs.85))のインスタンスを作成します。 ホストされるようにするために、WPF は、ホストされている WPF コンテンツをホストに提供し、 [WebBrowser コントロール](https://docs.microsoft.com/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752040(v=vs.85))に表示するための、プレゼンテーション用の cluster.exe インスタンスを作成します。  
   
- 有効になっている統合`IWpfHostSupport`PresentationHost.exe できます。  
+ `IWpfHostSupport` によって有効にされた統合によって、次のことを行うことができます。  
   
--   検出し、ホスト アプリケーションが関心を未加工入力デバイス (ヒューマン インターフェイス デバイス) を登録します。  
+- ホストアプリケーションが興味を持っている未加工の入力デバイス (ヒューマンインターフェイスデバイス) を検出し、登録します。  
   
--   未加工入力デバイスを登録し、適切なメッセージを転送から、ホスト アプリケーションへの入力メッセージを受信します。  
+- 登録されている未加工の入力デバイスから入力メッセージを受信し、適切なメッセージをホストアプリケーションに転送します。  
   
--   ホスト アプリケーションの進行状況とエラーのカスタム ユーザー インターフェイスをクエリします。  
+- ホストアプリケーションに対して、カスタムの進行状況とエラーユーザーインターフェイスを照会します。  
   
 > [!NOTE]
->  この API は、ローカル クライアント コンピューターでの使用のみを目的とし、サポートされています。  
+> この API は、ローカル クライアント コンピューターでの使用のみを目的とし、サポートされています。  
   
 ## <a name="members"></a>メンバー  
   
-|メンバー|説明|  
+|メンバー|[説明]|  
 |------------|-----------------|  
-|[GetRawInputDevices](../../../../docs/framework/wpf/app-development/getrawinputdevices.md)|PresentationHost.exe が、ホスト アプリケーションに必要な未加工入力デバイス (ヒューマン インターフェイス デバイス) を検出できるようにします。|  
-|[FilterInputMessage](../../../../docs/framework/wpf/app-development/filterinputmessage.md)|E_NOTIMPL が返されない限り、メッセージを受信するたびに PresentationHost.exe によって呼び出されます。|  
-|[GetCustomUI](../../../../docs/framework/wpf/app-development/getcustomui.md)|既定では、PresentationHost.exe は、独自のデプロイの進行状況と配置エラー WPF コンテンツが展開されているときに表示されるユーザー インターフェイス。|
+|[GetRawInputDevices](getrawinputdevices.md)|PresentationHost.exe が、ホスト アプリケーションに必要な未加工入力デバイス (ヒューマン インターフェイス デバイス) を検出できるようにします。|  
+|[FilterInputMessage](filterinputmessage.md)|E_NOTIMPL が返されない限り、メッセージを受信するたびに PresentationHost.exe によって呼び出されます。|  
+|[GetCustomUI](getcustomui.md)|既定では、プレゼンテーションの cluster.exe によって、WPF コンテンツが配置されるときに表示される、独自の配置の進行状況と配置エラーのユーザーインターフェイスが提供されます。|

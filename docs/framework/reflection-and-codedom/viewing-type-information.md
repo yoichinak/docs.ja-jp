@@ -11,14 +11,12 @@ helpviewer_keywords:
 - viewing type information
 - reflection, viewing type information
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 267102198731054bd2ce050299627eecbd37a4a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
+ms.openlocfilehash: bf119ff547df59cd369d688fd81ab058893614f2
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692212"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73130017"
 ---
 # <a name="viewing-type-information"></a>型情報の表示
 <xref:System.Type?displayProperty=nameWithType> クラスは、リフレクションの中心です。 共通言語ランタイムは、リフレクションの要求時に読み込まれる型の**型**を作成します。 **型**オブジェクトのメソッド、フィールド、プロパティ、および入れ子になったクラスから、その型に関することがすべてわかります。  
@@ -26,7 +24,7 @@ ms.locfileid: "54692212"
  <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> または <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> を使用して、読み込まれていないアセンブリから**型**オブジェクトを取得します。これは、目的の型の名前で渡されます。 既に読み込まれているアセンブリから**型**オブジェクトを取得するには、<xref:System.Type.GetType%2A?displayProperty=nameWithType> を使用します。 <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> および <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType> は、モジュール**型**オブジェクトを取得します。  
   
 > [!NOTE]
->  ジェネリック型およびメソッドをチェックして操作したい場合は、「[リフレクションとジェネリック型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)」および「[方法:リフレクションを使用してジェネリック型をチェックおよびインスタンス化する](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)」に記載された追加情報を参照してください。  
+> ジェネリック型およびメソッドをチェックして操作したい場合は、「[Reflection and Generic Types](reflection-and-generic-types.md)」(リフレクション型とジェネリック型) および「[How to: Examine and Instantiate Generic Types with Reflection](how-to-examine-and-instantiate-generic-types-with-reflection.md)」(方法: リフレクションを使用してジェネリック型をチェックおよびインスタンス化する) に記載された追加情報を参照してください。  
   
  次の例は、アセンブリの <xref:System.Reflection.Assembly> オブジェクトおよびモジュールの取得に必要な構文を示しています。  
   
@@ -75,6 +73,7 @@ ms.locfileid: "54692212"
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Reflection.BindingFlags>
 - <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>
@@ -89,4 +88,4 @@ ms.locfileid: "54692212"
 - <xref:System.Reflection.FieldInfo>
 - <xref:System.Reflection.EventInfo>
 - <xref:System.Reflection.ParameterInfo>
-- [リフレクションとジェネリック型](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+- [リフレクションとジェネリック型](reflection-and-generic-types.md)

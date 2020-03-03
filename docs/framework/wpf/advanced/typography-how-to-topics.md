@@ -6,28 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: 0f7fdea1aa399e6f967bdfad1cd19067a7f5761b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774908"
 ---
 # <a name="typography-how-to-topics"></a>文字体裁に関する「方法」トピック
 このセクションのトピックを使用する方法を説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション内のテキストのリッチ プレゼンテーションをサポートします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [文字の装飾を作成する](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [ハイパーリンクに下線を引くかどうかを指定する](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [テキストに変換を適用する](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [アニメーションをテキストに適用する](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [影付きテキストを作成する](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [中抜きの文字列を作成する](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [コントロールの背景にテキストを描画する](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [ビジュアルにテキストを描画する](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [XAML で特殊文字を使用する](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+ [文字の装飾を作成する](how-to-create-a-text-decoration.md)  
+ [ハイパーリンクに下線を引くかどうかを指定する](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [テキストに変換を適用する](how-to-apply-transforms-to-text.md)  
+ [アニメーションをテキストに適用する](how-to-apply-animations-to-text.md)  
+ [影付きテキストを作成する](how-to-create-text-with-a-shadow.md)  
+ [中抜きの文字列を作成する](how-to-create-outlined-text.md)  
+ [コントロールの背景にテキストを描画する](how-to-draw-text-to-a-control-background.md)  
+ [ビジュアルにテキストを描画する](how-to-draw-text-to-a-visual.md)  
+ [XAML で特殊文字を使用する](how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Windows.Documents.Typography>
-- [WPF のドキュメント](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
-- [OpenType フォントの機能](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+- [WPF のドキュメント](documents-in-wpf.md)
+- [OpenType フォントの機能](opentype-font-features.md)

@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 3e07b233-dd41-45ba-a4f9-662e4b006f1f
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: e84f2a5d8d57847ae7b4a8b06ce9fd296443ceba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fb19e10c3c1e7775d52496e7e7a9c07e0f2b33c
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563575"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76788802"
 ---
 # <a name="icordebugeditandcontinuesnapshotgetrwdatarva-method"></a>ICorDebugEditAndContinueSnapshot::GetRwDataRVA メソッド
 `GetRwDataRVA` は互換性のために残されています。 このメソッドを呼び出さないでください。  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+
+- [デバッグ インターフェイス](debugging-interfaces.md)

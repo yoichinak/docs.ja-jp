@@ -1,23 +1,21 @@
 ---
-title: ターゲット フレームワーク
+title: SDK スタイル プロジェクトでのターゲット フレームワーク - .NET
 description: .NET Core アプリとライブラリのターゲット フレームワークについて説明します。
-author: richlander
-ms.author: mairaw
-ms.date: 12/03/2018
+ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.technology: dotnet-standard
-ms.openlocfilehash: 2721266c90e183616a907803ff209258956a37b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33beb5606cbf857cc41b739f256482b0298f1fb1
+ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727405"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77124599"
 ---
-# <a name="target-frameworks"></a>ターゲット フレームワーク
+# <a name="target-frameworks-in-sdk-style-projects"></a>SDK スタイルのプロジェクトでのターゲット フレームワーク
 
 アプリまたはライブラリでフレームワークをターゲットに設定するときは、アプリまたはライブラリで使用できるようにする API のセットを指定します。 プロジェクト ファイルでターゲット フレームワークを指定するには、ターゲット フレームワーク モニカー (TFM) を使います。
 
-アプリまたはライブラリでは、[.NET Standard](~/docs/standard/net-standard.md) のバージョンをターゲットにできます。 .NET Standard のバージョンは、.NET のすべての実装で標準化された API のセットを表します。 たとえば、ライブラリは、.NET Standard 1.6 をターゲットにして、.NET Core と .NET Framework で機能する API に同じコードベースを使ってアクセスできます。
+アプリまたはライブラリでは、[.NET Standard](net-standard.md) のバージョンをターゲットにできます。 .NET Standard のバージョンは、.NET のすべての実装で標準化された API のセットを表します。 たとえば、ライブラリは、.NET Standard 1.6 をターゲットにして、.NET Core と .NET Framework で機能する API に同じコードベースを使ってアクセスできます。
 
 また、アプリまたはライブラリは、.NET の特定の実装をターゲットにして、実装固有の API にアクセスすることもできます。 たとえば、Xamarin.iOS (たとえば `Xamarin.iOS10`) をターゲットにするアプリは Xamarin が提供する iOS 10 用の iOS API ラッパーにアクセスでき、ユニバーサル Windows プラットフォーム (UWP、`uap10.0`) をターゲットにするアプリは Windows 10 を実行するデバイス用にコンパイルできる API にアクセスできます。
 
@@ -27,13 +25,13 @@ ms.locfileid: "54727405"
 
 ## <a name="latest-target-framework-versions"></a>最新のターゲット フレームワークのバージョン
 
-次の表では、最も一般的なターゲット フレームワーク、それらの参照方法、およびそれらが実装する [.NET Standard](~/docs/standard/net-standard.md) のバージョンを定義します。 これらのターゲット フレームワークのバージョンは、最新の安定したバージョンです。 プレリリース バージョンは記載されていません。 ターゲット フレームワーク モニカー (TFM) は、.NET アプリまたはライブラリのターゲット フレームワークを指定するための標準化されたトークン形式です。
+次の表では、最も一般的なターゲット フレームワーク、それらの参照方法、およびそれらが実装する [.NET Standard](net-standard.md) のバージョンを定義します。 これらのターゲット フレームワークのバージョンは、最新の安定したバージョンです。 プレリリース バージョンは記載されていません。 ターゲット フレームワーク モニカー (TFM) は、.NET アプリまたはライブラリのターゲット フレームワークを指定するための標準化されたトークン形式です。
 
 | [対象とする Framework]      | Latest <br/> 安定バージョン | ターゲット フレームワーク モニカー (TFM) | 実装済み <br/> .NET Standard バージョン |
 | :-------------------: | :-------------------------: | :----------------------------: | :-------------------------------------: |
-| .NET Standard         | 2.0                         | netstandard2.0                 | N/A                                     |
-| .NET Core             | 2.2                         | netcoreapp2.2                  | 2.0                                     |
-| .NET Framework        | 4.7.2                       | net472                         | 2.0                                     |
+| .NET Standard         | 2.1                         | netstandard2.1                 | N/A                                     |
+| .NET Core             | 3.1                         | netcoreapp3.1                  | 2.1                                     |
+| .NET Framework        | 4.8                         | net48                          | 2.0                                     |
 
 ## <a name="supported-target-framework-versions"></a>サポートされるターゲット フレームワークのバージョン
 
@@ -41,9 +39,9 @@ ms.locfileid: "54727405"
 
 | [対象とする Framework]           | TFM |
 | -------------------------- | --- |
-| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0 |
-| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2 |
-| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472 |
+| .NET Standard              | netstandard1.0<br>netstandard1.1<br>netstandard1.2<br>netstandard1.3<br>netstandard1.4<br>netstandard1.5<br>netstandard1.6<br>netstandard2.0<br>netstandard2.1 |
+| .NET Core                  | netcoreapp1.0<br>netcoreapp1.1<br>netcoreapp2.0<br>netcoreapp2.1<br>netcoreapp2.2<br>netcoreapp3.0<br>netcoreapp3.1 |
+| .NET Framework             | net11<br>net20<br>net35<br>net40<br>net403<br>net45<br>net451<br>net452<br>net46<br>net461<br>net462<br>net47<br>net471<br>net472<br>net48 |
 | Windows ストア              | netcore [netcore45]<br>netcore45 [win] [win8]<br>netcore451 [win81] |
 | .NET Micro Framework       | netmf |
 | Silverlight                | sl4<br>sl5 |
@@ -52,14 +50,14 @@ ms.locfileid: "54727405"
 
 ## <a name="how-to-specify-target-frameworks"></a>ターゲット フレームワークを指定する方法
 
-ターゲット フレームワークはプロジェクト ファイルで指定します。 単一のターゲット フレームワークを指定するときは、**TargetFramework** 要素を使います。 次のコンソール アプリのプロジェクト ファイルでは、.NET Core 2.2 をターゲットにする方法が示されています。
+ターゲット フレームワークはプロジェクト ファイルで指定します。 単一のターゲット フレームワークを指定するときは、**TargetFramework** 要素を使います。 次のコンソール アプリのプロジェクト ファイルでは、.NET Core 3.0 をターゲットにする方法が示されています。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
   </PropertyGroup>
 
 </Project>
@@ -108,11 +106,11 @@ public class MyClass
 }
 ```
 
-ビルド システムは、「[サポートされるターゲット フレームワークのバージョン](#supported-target-framework-versions)」の表で示されているターゲット フレームワークを表すプリプロセッサ シンボルを認識します。 .NET Standard または .NET Core の TFM を表すシンボルを使うときは、ドットをアンダースコアに置き換え、小文字を大文字に変更します (たとえば、`netstandard1.4` のシンボルは `NETSTANDARD1_4` です)。
+SDK スタイル プロジェクトを使用する場合、ビルド システムは、「[サポートされるターゲット フレームワークのバージョン](#supported-target-framework-versions)」の表で示されているターゲット フレームワークを表すプリプロセッサ シンボルを認識します。 .NET Standard または .NET Core の TFM を表すシンボルを使うときは、ドットをアンダースコアに置き換え、小文字を大文字に変更します (たとえば、`netstandard1.4` のシンボルは `NETSTANDARD1_4` です)。
 
 .NET Core ターゲット フレームワークのプリプロセッサ シンボルの完全な一覧を次に示します。
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../includes/preprocessor-symbols.md)]
 
 ## <a name="deprecated-target-frameworks"></a>非推奨のターゲット フレームワーク
 

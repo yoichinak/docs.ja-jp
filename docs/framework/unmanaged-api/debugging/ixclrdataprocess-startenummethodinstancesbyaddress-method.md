@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 9afbf0665b114169661a74b60c744203d160fed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7c395e68ad5d8042f9850f25757a5aa445e5c40
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662622"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752678"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress メソッド
 
@@ -30,7 +30,7 @@ ms.locfileid: "54662622"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT StartEnumMethodInstancesByAddress(
     [in] CLRDATA_ADDRESS     address,
     [in] IXCLRDataAppDomain *appDomain,
@@ -38,13 +38,16 @@ HRESULT StartEnumMethodInstancesByAddress(
 );
 ```
 
-### <a name="parameters"></a>パラメーター
+## <a name="parameters"></a>パラメーター
 
-`address` [in]メソッドの最初のインスタンスのアドレス。
+`address`\
+[in]メソッドの最初のインスタンスのアドレス。
 
-`appDomain` [in]メソッド インスタンスのアプリケーション ドメイン。
+`appDomain`\
+[in]メソッド インスタンスのアプリケーション ドメイン。
 
-`handle` [out]メソッド インスタンスを列挙するためのハンドル。
+`handle`\
+[out]メソッド インスタンスを列挙するためのハンドル。
 
 ## <a name="remarks"></a>Remarks
 
@@ -52,13 +55,13 @@ HRESULT StartEnumMethodInstancesByAddress(
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
-- [CLRDataSourceType 列挙型](../../../../docs/framework/unmanaged-api/debugging/clrdatasourcetype-enumeration.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess インターフェイス](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [CLRDataSourceType 列挙型](clrdatasourcetype-enumeration.md)
+- [デバッグ](index.md)
+- [IXCLRDataProcess インターフェイス](ixclrdataprocess-interface.md)

@@ -1,19 +1,18 @@
 ---
 title: ref キーワード - C# リファレンス
-ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726651"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75715185"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
@@ -22,12 +21,11 @@ ms.locfileid: "54726651"
 - メソッド シグネチャとメソッドの呼び出しで、参照によってメソッドに引数を渡します。 詳細については、「[参照渡しで引数を渡す](#passing-an-argument-by-reference)」を参照してください。
 - メソッド シグネチャで、参照渡しで呼び出し元に値を返します。 詳細については、[参照戻り値](#reference-return-values)に関するページを参照してください。
 - メンバーの本文で、参照戻り値が、呼び出し元によって変更される参照としてローカルに格納されること、または、通常はローカル変数が参照渡しによって別の値にアクセスすることを示します。 詳細については、「[ref ローカル変数](#ref-locals)」を参照してください。
-- `struct` の宣言で、`ref struct` または `ref readonly struct` を宣言します。 詳細については、「[ref 構造体型](#ref-struct-types)」を参照してください。
-
+- `struct` の宣言で、`ref struct` または `readonly ref struct` を宣言します。 詳細については、「[ref 構造体型](#ref-struct-types)」を参照してください。
 
 ## <a name="passing-an-argument-by-reference"></a>参照渡しで引数を渡す
 
-メソッドのパラメーター リストで使用した場合、`ref` キーワードは、引数を値ではなく、参照によって渡すことを示します。 参照渡しで渡すことにより、呼び出されたメソッドの引数に対する変更が、呼び出し元のメソッドに反映されます。 たとえば、呼び出し元がローカル変数の式、または配列要素のアクセス式を渡し、呼び出されたメソッドが ref パラメーターが参照するオブジェクトを置き換える場合、メソッドが戻ったときに呼び出し元のローカル変数または配列要素は新しいオブジェクトを参照します。
+メソッドのパラメーター リストで使用した場合、`ref` キーワードは、引数を値ではなく、参照によって渡すことを示します。 `ref` キーワードは、仮パラメーターを引数 (変数にする必要があります) の別名にします。 つまり、パラメーターに対するすべての操作は引数に対して行われます。 たとえば、呼び出し元がローカル変数の式、または配列要素のアクセス式を渡し、呼び出されたメソッドが ref パラメーターが参照するオブジェクトを置き換える場合、メソッドが戻ったときに呼び出し元のローカル変数または配列要素は新しいオブジェクトを参照します。
 
 > [!NOTE]
 > 参照渡しの概念と参照型の概念を混同しないでください。 2 つの概念は同じではありません。 メソッドのパラメーターは、値型か参照型かどうかに関係なく、`ref` によって変更できます。 参照渡しで渡される場合、値型はボックス化されません。  
@@ -139,7 +137,7 @@ ref readonly ローカルは、その署名に `ref readonly` があり、`retur
 
 - `ref struct` はボックス化できません。 `object` 型、`dynamic` 型、またはあらゆるインターフェイス型の変数には、`ref struct` 型を割り当てることができません。
 - `ref struct` 型では、インターフェイスを実装できません。
-- クラスまたは通常構造体のメンバーとして `ref struct` を宣言することはできません。
+- クラスまたは通常構造体のフィールド メンバーとして `ref struct` を宣言することはできません。 これには、コンパイラで生成されたバッキング フィールドを作成する、自動実装プロパティの宣言が含まれます。 
 - 非同期メソッドでは、`ref struct` 型のローカル変数を宣言できません。 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、`Task` のような型を返す同期メソッドで宣言できます。
 - 反復子で `ref struct` ローカル変数を宣言することはできません。
 - ラムダ式またはローカル関数で `ref struct` 変数をキャプチャすることはできません。

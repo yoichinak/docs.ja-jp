@@ -1,5 +1,5 @@
 ---
-title: <appSettings>の<clear>要素
+title: <clear> の <appSettings> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/clear
@@ -7,22 +7,20 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: 6d18c7be-27db-438b-8fb5-765d396b0b7b
-author: guardrex
-ms.author: mairaw
-ms.openlocfilehash: 0b6a48d1fdab3cbccf40aaa77731a658f533eeba
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 266d32ccb8b322f0472e0f552f9c0fc877c9a78e
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278579"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77214805"
 ---
-# <a name="clear-element-for-appsettings"></a>\<appSettings>の\<clear>要素
+# <a name="clear-element-for-appsettings"></a>\<appSettings > の \<クリア > 要素
 
-カスタム アプリケーションの設定をクリアします。
+カスタムアプリケーション設定をクリアします。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<クリア >**
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +38,7 @@ ms.locfileid: "55278579"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | ファイル パス、XML Web サービスの Url、またはその他のカスタム アプリケーションの構成情報など、カスタム アプリケーション設定が含まれています。 |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | ファイルパス、XML Web サービス Url、その他のカスタムアプリケーション構成情報などのカスタムアプリケーション設定が含まれます。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -48,7 +46,7 @@ ms.locfileid: "55278579"
 
 ## <a name="example"></a>例
 
-次の例では、カスタム構成設定をクリアする方法を示します。
+次の例は、カスタム構成設定をクリアする方法を示しています。
 
 ```xml
 <appSettings>
@@ -56,6 +54,6 @@ ms.locfileid: "55278579"
 </appSettings>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](../index.md)

@@ -2,27 +2,27 @@
 title: ファイル アクセスにおける非同期の使用 (C#)
 ms.date: 07/20/2015
 ms.assetid: bb018fea-5313-4c80-ab3f-7c24b2145bd9
-ms.openlocfilehash: 9fa96869e56357a5feb4b0ac0b5bc7514f6eb186
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6b0370049d9b9315de6a72d0e84c080aac12481
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657377"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595536"
 ---
 # <a name="using-async-for-file-access-c"></a>ファイル アクセスにおける非同期の使用 (C#)
 ファイルにアクセスする際に非同期機能を使用できます。 非同期機能を使用すると、コールバックの使用や複数のメソッドまたはラムダ式へのコードの分割を行わずに、非同期メソッドを呼び出すことができます。 同期コードを非同期コードにするには、同期メソッドの代わりに非同期メソッドを呼び出して、コードにいくつかのキーワードを追加するだけで済みます。  
   
  ファイル アクセスの呼び出しに非同期性を適用する利点には、次のようなものがあります。  
   
--   非同期性により、UI アプリケーションの応答性が向上します。非同期処理を開始した UI スレッドが他の処理を実行できるためです。 UI スレッドが、時間のかかるコード、たとえば 50 ミリ秒を超えるコードを実行する必要がある場合、I/O が完了して、UI スレッドがキーボードやマウス入力などのイベントを再度処理できるようになるまで、UI が停止することがあります。  
+- 非同期性により、UI アプリケーションの応答性が向上します。非同期処理を開始した UI スレッドが他の処理を実行できるためです。 UI スレッドが、時間のかかるコード、たとえば 50 ミリ秒を超えるコードを実行する必要がある場合、I/O が完了して、UI スレッドがキーボードやマウス入力などのイベントを再度処理できるようになるまで、UI が停止することがあります。  
   
--   非同期性を適用すると、スレッドの必要性が軽減され、ASP.NET などのサーバー ベースのアプリケーションのスケーラビリティが向上します。 アプリケーションが応答ごとに専用スレッドを使用している場合、1,000 個の要求を同時に処理するには、1,000 個のスレッドが必要です。 非同期処理では、待機中にスレッドを使用する必要がほとんどありません。 既存の I/O 完了スレッドが最後に少しだけ使用されます。  
+- 非同期性を適用すると、スレッドの必要性が軽減され、ASP.NET などのサーバー ベースのアプリケーションのスケーラビリティが向上します。 アプリケーションが応答ごとに専用スレッドを使用している場合、1,000 個の要求を同時に処理するには、1,000 個のスレッドが必要です。 非同期処理では、待機中にスレッドを使用する必要がほとんどありません。 既存の I/O 完了スレッドが最後に少しだけ使用されます。  
   
--   現状ではファイル アクセス操作の待機時間が非常に短くても、将来に大幅に長くなる可能性があります。 たとえば、地球の裏側にあるサーバーにファイルが移動される場合があります。  
+- 現状ではファイル アクセス操作の待機時間が非常に短くても、将来に大幅に長くなる可能性があります。 たとえば、地球の裏側にあるサーバーにファイルが移動される場合があります。  
   
--   非同期機能の使用に伴うオーバーヘッドはわずかです。  
+- 非同期機能の使用に伴うオーバーヘッドはわずかです。  
   
--   非同期タスクは簡単に並列実行できます。  
+- 非同期タスクは簡単に並列実行できます。  
   
 ## <a name="running-the-examples"></a>例の実行  
  このトピックの例を実行するには、**WPF アプリケーション**または **Windows フォーム アプリケーション**を作成し、**ボタン**を追加します。 ボタンの `Click` イベントに、それぞれの例で最初のメソッドの呼び出しを追加してください。  
@@ -47,7 +47,7 @@ using System.Threading.Tasks;
  次の例では、ファイルにテキストを書き込みます。 各 await ステートメントに達すると、メソッドは直ちに終了します。 ファイル I/O が完了すると、メソッドは await ステートメントの後のステートメントから再開します。 await ステートメントを使用するメソッドの定義に async 修飾子が含まれていることに注意してください。  
   
 ```csharp  
-public async void ProcessWrite()  
+public async Task ProcessWriteAsync()  
 {  
     string filePath = @"temp2.txt";  
     string text = "Hello World\r\n";  
@@ -75,13 +75,13 @@ Task theTask = sourceStream.WriteAsync(encodedText, 0, encodedText.Length);
 await theTask;  
 ```  
   
- 最初のステートメントはタスクを返し、ファイル処理を開始します。 await が含まれた 2 番目のステートメントによって、メソッドが直ちに終了し、別のタスクを返します。 ファイル処理が完了すると、await の後のステートメントに実行が戻ります。 詳細については、「[非同期プログラムにおける制御フロー (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)」を参照してください。  
+ 最初のステートメントはタスクを返し、ファイル処理を開始します。 await が含まれた 2 番目のステートメントによって、メソッドが直ちに終了し、別のタスクを返します。 ファイル処理が完了すると、await の後のステートメントに実行が戻ります。 詳細については、「[非同期プログラムにおける制御フロー (C#)](./control-flow-in-async-programs.md)」を参照してください。  
   
 ## <a name="reading-text"></a>テキストの読み取り  
- 次の例では、ファイルからテキストを読み取ります。 テキストはバッファーに格納されます。この例では <xref:System.Text.StringBuilder> に配置されます。 前の例と異なり、await の評価で値が生成されます。 <xref:System.IO.Stream.ReadAsync%2A> メソッドによって <xref:System.Threading.Tasks.Task>\<<xref:System.Int32> が返されます。処理の完了後、await の評価によって `Int32` 値 (`numRead`) が生成されます。 詳しくは、「[非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)」をご覧ください。  
+ 次の例では、ファイルからテキストを読み取ります。 テキストはバッファーに格納されます。この例では <xref:System.Text.StringBuilder> に配置されます。 前の例と異なり、await の評価で値が生成されます。 <xref:System.IO.Stream.ReadAsync%2A> メソッドによって <xref:System.Threading.Tasks.Task>\<<xref:System.Int32> が返されます。処理の完了後、await の評価によって `Int32` 値 (`numRead`) が生成されます。 詳しくは、「[非同期の戻り値の型 (C#)](./async-return-types.md)」をご覧ください。  
   
 ```csharp  
-public async void ProcessRead()  
+public async Task ProcessReadAsync()  
 {  
     string filePath = @"temp2.txt";  
   
@@ -132,7 +132,7 @@ private async Task<string> ReadTextAsync(string filePath)
  パフォーマンスの向上のほとんどが、非同期処理ではなく並列処理によって実現していることに注意してください。 非同期性の利点は、複数のスレッドやユーザー インターフェイス スレッドが拘束されなくなる点にあります。  
   
 ```csharp  
-public async void ProcessWriteMult()  
+public async Task ProcessWriteMultAsync()  
 {  
     string folder = @"tempfolder\";  
     List<Task> tasks = new List<Task>();  
@@ -172,10 +172,10 @@ public async void ProcessWriteMult()
 }  
 ```  
   
- <xref:System.IO.Stream.WriteAsync%2A> メソッドと <xref:System.IO.Stream.ReadAsync%2A> メソッドを使用すると、<xref:System.Threading.CancellationToken> を指定して、途中で処理をキャンセルすることができます。 詳細については、「[非同期アプリケーションの微調整 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)」および「[マネージド スレッドのキャンセル](../../../../standard/threading/cancellation-in-managed-threads.md)」を参照してください。  
+ <xref:System.IO.Stream.WriteAsync%2A> メソッドと <xref:System.IO.Stream.ReadAsync%2A> メソッドを使用すると、<xref:System.Threading.CancellationToken> を指定して、途中で処理をキャンセルすることができます。 詳細については、「[非同期アプリケーションの微調整 (C#)](./fine-tuning-your-async-application.md)」および「[マネージド スレッドのキャンセル](../../../../standard/threading/cancellation-in-managed-threads.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
-- [非同期プログラムにおける制御フロー (C#)](../../../../csharp/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [Async および Await を使用した非同期プログラミング (C#)](./index.md)
+- [非同期の戻り値の型 (C#)](./async-return-types.md)
+- [非同期プログラムにおける制御フロー (C#)](./control-flow-in-async-programs.md)

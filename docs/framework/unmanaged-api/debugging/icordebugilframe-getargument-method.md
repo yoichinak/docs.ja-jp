@@ -15,42 +15,40 @@ helpviewer_keywords:
 ms.assetid: 4e2fd423-f643-4c27-ba5f-41b5ebc3b416
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1653913ca7410728f0f90a546f613a9d8b88be7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 01c7cb2e4359a477c26f995602dbf29668e567c0
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414054"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73131019"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument メソッド
-この Microsoft intermediate language (MSIL) のスタック フレーム内には、指定された引数の値を取得します。  
+この MSIL (Microsoft 中間言語) スタックフレーム内の指定された引数の値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetArgument (  
     [in] DWORD                  dwIndex,  
     [out] ICorDebugValue        **ppValue  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `dwIndex`  
- [in]MSIL のこのスタック フレーム内の引数のインデックス。  
+ からこの MSIL スタックフレーム内の引数のインデックス。  
   
  `ppValue`  
- [out]取得した値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
+ 入出力取得した値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- `GetArgument` ・ イン タイム (JIT) コンパイル フレームまたは MSIL スタック フレームで、メソッドを使用できます。  
+## <a name="remarks"></a>Remarks  
+ `GetArgument` メソッドは、MSIL スタックフレーム内または just-in-time (JIT) コンパイルフレームで使用できます。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

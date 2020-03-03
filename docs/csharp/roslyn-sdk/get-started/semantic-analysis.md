@@ -3,12 +3,12 @@ title: セマンティック解析の概要
 description: このチュートリアルでは、.NET コンパイラ SDK を使用したセマンティック解析の概要を説明します。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7bf2f40ea0bc059d9c517780016ca5deb805ceb6
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484619"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75346978"
 ---
 # <a name="get-started-with-semantic-analysis"></a>セマンティック解析の概要
 
@@ -22,7 +22,7 @@ ms.locfileid: "43484619"
 
 ## <a name="understanding-compilations-and-symbols"></a>コンパイルとシンボルについて
 
-.NET コンパイラ SDK での作業が増えると、構文 API とセマンティック API の違いに詳しくなります。 **構文 API** では、プログラムの_構造_を見ることができます。 ただし、多くの場合、プログラムの意味論または_意味_に関する豊富な情報が必要になります。 VB または C# の緩いコード ファイルまたはスニペットは分離して構文的に解析できますが、孤立状態では、"この変数の型は何ですか" のような質問を問うことに意味がありません。 型名の意味は、アセンブリ参照、名前空間インポート、その他のコード ファイルに依存することがあります。 このような問いには、**セマンティック API** で、具体的には <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> クラスで答えられます。
+.NET コンパイラ SDK での作業が増えると、構文 API とセマンティック API の違いに詳しくなります。 **構文 API** では、プログラムの_構造_を見ることができます。 ただし、多くの場合、プログラムの意味論または_意味_に関する豊富な情報が必要になります。 Visual Basic または C# の緩いコード ファイルまたはスニペットは分離して構文的に解析できますが、孤立状態では、"この変数の型は何ですか" のような質問を問うことに意味がありません。 型名の意味は、アセンブリ参照、名前空間インポート、その他のコード ファイルに依存することがあります。 このような問いには、**セマンティック API** で、具体的には <xref:Microsoft.CodeAnalysis.Compilation?displayProperty=nameWithType> クラスで答えられます。
 
 <xref:Microsoft.CodeAnalysis.Compilation> のインスタンスはコンパイラで見られるように 1 つのプロジェクトに類似し、Visual Basic または C# のプログラムをコンパイルするために必要なすべてを表します。 **コンパイル**には、コンパイルするソース ファイルのセット、アセンブリ参照、コンパイラ オプションが含まれます。 この文脈のその他すべての情報を利用し、コードの意味を推論できます。 <xref:Microsoft.CodeAnalysis.Compilation> では、型、名前空間、メンバー、名前やその他の式が参照する変数などのエンティティである**シンボル**を見つけることができます。 名前や式を**シンボル**と関連付けるプロセスを**バインド**と呼んでいます。
 
@@ -39,8 +39,8 @@ ms.locfileid: "43484619"
 
 次のようにして、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。
 
-* Visual Studio で、**[ファイル]**、**[新規]**、**[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
-* **[Visual C#]**、**[機能拡張]** で、**[Stand-Alone Code Analysis Tool]** を選択します。
+* Visual Studio で、 **[ファイル]** 、 **[新規]** 、 **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
+* **[Visual C#]** 、 **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。
 * プロジェクトに "**SemanticQuickStart**" という名前を付け、[OK] をクリックします。
 
 前述の基本的な "Hello World!" プログラムを 分析します。
@@ -56,7 +56,7 @@ Hello World プログラムのテキストを `Program` クラスの定数とし
 
 [!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
-<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> メソッドはコンパイルに参照を追加します。 <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> メソッドは参照としてアセンブリを読み込みます。 
+<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> メソッドはコンパイルに参照を追加します。 <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> メソッドは参照としてアセンブリを読み込みます。
 
 ## <a name="querying-the-semantic-model"></a>セマンティック モデルにクエリを実行する
 
@@ -78,7 +78,7 @@ Hello World プログラムのテキストを `Program` クラスの定数とし
 
 プログラムを実行します。次の出力が表示されるはずです。
 
-```
+```output
 System.Collections
 System.Configuration
 System.Deployment
@@ -103,7 +103,7 @@ Press any key to continue . . .
 
 先のコードでは、名前にバインドしてシンボルを見つける方法を確認できます。 C# プログラムには、バウンドできて名前ではない式が他にあります。 この機能を見るために、単純な文字列リテラルのバインドにアクセスしましょう。
 
-"Hello World" プログラムに <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType> が含まれ、"Hello, World!"  文字列がコンソールに表示されます。
+"Hello World" プログラムに <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType> が含まれ、"Hello, World!" 文字列がコンソールに表示されます。
 
 プログラムの中で 1 つの文字列リテラルを見つけることで、 "Hello, World!" 文字列が見つかります。 構文ノードが見つかったら、セマンティック モデルからそのノードの型情報を取得します。 次のコードを `Main` メソッドに追加します。
 
@@ -117,7 +117,7 @@ Press any key to continue . . .
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-そのソース シーケンスには、プロパティやフィールドなど、すべてのメンバーが含まれています。そのため、<xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> メソッドでフィルター処理し、<xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType> オブジェクトである要素を見つけます。
+そのソース シーケンスには、プロパティやフィールドなど、すべてのメンバーが含まれています。そのため、<xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> メソッドでフィルター処理し、<xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> オブジェクトである要素を見つけます。
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 
@@ -135,7 +135,7 @@ LINQ クエリ構文で完全クエリをビルドし、コンソールにすべ
 
 プログラムをビルドして実行します。 次の出力が表示されます。
 
-```
+```output
 Join
 Substring
 Trim
@@ -159,4 +159,5 @@ Intern
 IsInterned
 Press any key to continue . . .
 ```
+
 セマンティック API を使用し、このプログラムの含まれるシンボルに関する情報を見つけ、表示しました。

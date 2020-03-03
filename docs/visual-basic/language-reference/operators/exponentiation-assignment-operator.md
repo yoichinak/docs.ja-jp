@@ -1,5 +1,5 @@
 ---
-title: ^= 演算子 (Visual Basic)
+title: ^= 演算子
 ms.date: 07/20/2015
 f1_keywords:
 - vb.^=
@@ -9,47 +9,48 @@ helpviewer_keywords:
 - ^= operator [Visual Basic]
 - compound assignment statements [Visual Basic]
 ms.assetid: 397da132-2d96-4a85-a7bc-f7c730a608c9
-ms.openlocfilehash: 73705df376284edd9d8f20baaf4306c41b1d3943
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe5e8fc2b64b9e7c33483612071d338a0ee22768
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699728"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74331294"
 ---
 # <a name="-operator-visual-basic"></a>^= 演算子 (Visual Basic)
-変数または式のプロパティの値を生成し、結果を変数またはプロパティに代入します。  
+変数またはプロパティの値を式のべき乗にし、結果を変数またはプロパティに代入します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 variableorproperty ^= expression  
 ```  
   
 ## <a name="parts"></a>指定項目  
  `variableorproperty`  
- 必須。 任意の数値型の変数またはプロパティ。  
+ 必須。 任意の数値変数またはプロパティ。  
   
  `expression`  
  必須。 任意の数式。  
   
-## <a name="remarks"></a>Remarks  
- 左側にある要素、`^=`演算子は、単純なスカラー変数、プロパティ、または配列の要素。 変数またはプロパティにすることはできません[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
+## <a name="remarks"></a>コメント  
+ `^=` 演算子の左側の要素は、単純なスカラー変数、プロパティ、または配列の要素にすることができます。 変数またはプロパティを[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)にすることはできません。  
   
- `^=`演算子は最初 (演算子の右側にある) の式の値の電源を変数または (演算子の左側にある) のプロパティの値を生成します。 演算子は、変数またはプロパティに、その操作の結果を割り当てます。  
+ `^=` 演算子は、まず、演算子の左辺の変数またはプロパティの値を、式の値 (演算子の右側) に対してべき乗します (演算子の左辺にある)。 次に、演算子は、その操作の結果を変数またはプロパティに戻します。  
   
- Visual Basic の指数演算を常に実行する、 [Double データ型](../../../visual-basic/language-reference/data-types/double-data-type.md)します。 さまざまな型のオペランドが変換されます`Double`、結果は常と`Double`します。  
+ Visual Basic は、常に[Double データ型](../../../visual-basic/language-reference/data-types/double-data-type.md)の指数演算を実行します。 異なる型のオペランドは `Double`に変換され、結果は常に `Double`になります。  
   
- 値`expression`、小数部は、負の値、またはその両方です。  
+ `expression` の値には、小数、負、またはその両方を指定できます。  
   
 ## <a name="overloading"></a>オーバーロード  
- [^ 演算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)できます*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 オーバー ロード、`^`演算子の動作に影響、`^=`演算子。 コードで使用する場合`^=`クラスまたは構造体をオーバー ロードで`^`、再定義された動作を確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [^ 演算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)は*オーバーロード*することができます。つまり、クラスまたは構造体がそのクラスまたは構造体の型を持つ場合に、クラスまたは構造体がその動作を再定義できることを意味します。 `^` 演算子のオーバーロードは、`^=` 演算子の動作に影響します。 コードで `^`をオーバーロードするクラスまたは構造体の `^=` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「[演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次の例では、`^=`いずれかの値を上げる演算子`Integer`2 番目の変数と割り当て、最初の変数に結果の変数。  
+ 次の例では、`^=` 演算子を使用して、1つの `Integer` 変数の値を2番目の変数のべき乗に上げ、その結果を最初の変数に代入します。  
   
- [!code-vb[VbVbalrOperators#21](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/exponentiation-assignment-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#21)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [^ 演算子](../../../visual-basic/language-reference/operators/exponentiation-operator.md)
 - [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

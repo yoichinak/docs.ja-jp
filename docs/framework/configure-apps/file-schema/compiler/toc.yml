@@ -1,0 +1,14 @@
+- name: コンパイラおよび言語プロバイダー設定のスキーマ
+  href: index.md
+  items:
+    - name: <system.codedom> 要素
+      href: system-codedom-element.md
+      items:
+        - name: <compilers> 要素
+          href: compilers-element.md
+          items:
+            - name: <compiler> 要素
+              href: compiler-element.md
+              items:
+                - name: <providerOption> 要素
+                  href: provideroption-element.md

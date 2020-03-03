@@ -1,21 +1,21 @@
 ---
-title: '方法: 式ツリーを実行する (C#)'
+title: 式ツリーを実行する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: bed37d8d96837062831f4a3017df8a3633446bf0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7d408ea154572dc8b45d2e67bca3f05837868d2
+ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583273"
+ms.lasthandoff: 11/12/2019
+ms.locfileid: "73969891"
 ---
-# <a name="how-to-execute-expression-trees-c"></a>方法: 式ツリーを実行する (C#)
+# <a name="how-to-execute-expression-trees-c"></a>式ツリーを実行する方法 (C#)
 このトピックでは、式ツリーを実行する方法について説明します。 式ツリーを実行すると値が返される場合がありますが、メソッドの呼び出しなどの処理が実行されるだけの場合もあります。  
   
  実行できるのは、ラムダ式を表す式ツリーのみです。 ラムダ式を表す式ツリーの型は、<xref:System.Linq.Expressions.LambdaExpression> または <xref:System.Linq.Expressions.Expression%601> です。 このような式ツリーを実行するには、<xref:System.Linq.Expressions.LambdaExpression.Compile%2A> メソッドを呼び出して実行可能なデリゲートを作成した後、そのデリゲートを呼び出します。  
   
 > [!NOTE]
->  デリゲートの型が不明な場合、つまり、ラムダ式が <xref:System.Linq.Expressions.LambdaExpression> 型であり <xref:System.Linq.Expressions.Expression%601> 型ではない場合には、デリゲートを直接呼び出さずに、デリゲートに対して <xref:System.Delegate.DynamicInvoke%2A> メソッドを呼び出す必要があります。  
+> デリゲートの型が不明な場合、つまり、ラムダ式が <xref:System.Linq.Expressions.LambdaExpression> 型であり <xref:System.Linq.Expressions.Expression%601> 型ではない場合には、デリゲートを直接呼び出さずに、デリゲートに対して <xref:System.Delegate.DynamicInvoke%2A> メソッドを呼び出す必要があります。  
   
  式ツリーがラムダ式を表さない場合、<xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> メソッドを呼び出すことで、元の式ツリーを本体に含む新しいラムダ式を作成できます。 その後、このセクションの説明のとおりにラムダ式を実行できます。  
   
@@ -44,11 +44,9 @@ Console.WriteLine(result);
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   System.Core.dll がまだ参照されていない場合は、System.Core.dll へのプロジェクト参照を追加します。  
-  
--   System.Linq.Expressions 名前空間をインクルードします。  
+- System.Linq.Expressions 名前空間をインクルードします。  
   
 ## <a name="see-also"></a>関連項目
 
-- [式ツリー (C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)
-- [方法: 式ツリーを変更する (C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [式ツリー (C#)](./index.md)
+- [式ツリーを変更する方法 (C#)](./how-to-modify-expression-trees.md)

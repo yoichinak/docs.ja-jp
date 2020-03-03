@@ -1,193 +1,211 @@
 ---
-title: .NET Core グローバル ツールの作成方法
-description: グローバル ツールを作成する方法について説明します。 グローバル ツールは、.NET Core CLI を介してインストールされるコンソール アプリケーションです。
-author: Thraka
-ms.author: adegeo
-ms.date: 08/22/2018
-ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+title: 'チュートリアル: .NET Core ツールを作成する'
+description: .NET Core ツールを作成する方法について説明します。 ツールは、.NET Core CLI を使用してインストールされるコンソール アプリケーションです。
+ms.date: 02/12/2020
+ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
+ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826422"
+ms.lasthandoff: 02/21/2020
+ms.locfileid: "77543405"
 ---
-# <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core グローバル ツールを作成する
+# <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使用して .NET Core ツールを作成する
 
-この記事では、.NET Core グローバル ツールを作成してパッケージ化する方法について説明します。 .NET Core CLI を使用すると、他のユーザーが簡単にインストールして実行できるコンソール アプリケーションをグローバル ツールとして作成できます。 .NET Core グローバル ツールは、.NET Core CLI からインストールされる NuGet パッケージです。 グローバル ツールの詳細については、「[.NET Core グローバル ツールの概要](global-tools.md)」を参照してください。
+**この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
-[!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
+このチュートリアルでは、.NET Core ツールを作成およびパッケージ化する方法について説明します。 .NET Core CLI を使ってコンソール アプリケーションをツールとして作成し、他のユーザーがインストールおよび実行できるようにすることができます。 .NET Core ツールは、.NET Core CLI からインストールされる NuGet パッケージです。 ツールの詳細については、[.NET Core ツールの概要](global-tools.md)に関する記事を参照してください。
+
+作成するツールは、メッセージを入力として受け取り、ロボットの画像を作成するテキスト行と共にメッセージを表示するコンソール アプリケーションです。
+
+これは、3 つのチュートリアル シリーズの第 1 回です。 このチュートリアルでは、ツールを作成してパッケージ化します。 次の 2 つのチュートリアルでは、[グローバル ツールとしてツールを使用する](global-tools-how-to-use.md)方法と、[ローカル ツールとしてツールを使用する](local-tools-how-to-use.md)方法を説明します。
+
+## <a name="prerequisites"></a>必須コンポーネント
+
+- [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 以降のバージョン。
+
+  このチュートリアルと次の[グローバル ツールのチュートリアル](global-tools-how-to-use.md)は、.NET Core SDK 2.1 以降のバージョンに適用されます。これは、そのバージョンからグローバル ツールを使用できるようになったためです。 ただし、このチュートリアルでは、[ローカル ツールのチュートリアル](local-tools-how-to-use.md)に進むことができるように、3.1 以降がインストールされていることを前提としています。 ローカル ツールは .NET Core SDK 3.0 以降で使用できます。 ツールを作成する手順は、グローバル ツールとローカル ツールのどちらとして使用する場合でも同じです。
+  
+- ユーザーが選んだテキスト エディターまたはコード エディター。
 
 ## <a name="create-a-project"></a>プロジェクトを作成する
 
-この記事では、プロジェクトの作成と管理に .NET Core CLI を使用します。
+1. コマンド プロンプトを開き、*repository* という名前のフォルダーを作成します。
 
-ここでの例のツールは、ASCII ボットを生成してメッセージを出力するコンソール アプリケーションです。 まず、新しい .NET Core コンソール アプリケーションを作成します。
+1. *repository* フォルダーに移動し、次のコマンドを入力します。`<name>` は一意の値に置き換えて、プロジェクト名を一意にしてください。 
 
-```console
-dotnet new console -o botsay
-```
+   ```dotnetcli
+   dotnet new console -n botsay-<name>
+   ```
 
-前のコマンドで作成した `botsay` ディレクトリに移動します。
+   たとえば、次のコマンドを実行できます。
+
+   ```dotnetcli
+   dotnet new console -n botsay-nancydavolio
+   ```
+
+   このコマンドを実行すると、*repository* フォルダー以下に *botsay-\<name>* という名前の新しいフォルダーが作成されます。
+
+1. *botsay-\<name>* フォルダーに移動します。
+
+   ```console
+   cd botsay-<name>
+   ```
 
 ## <a name="add-the-code"></a>コードの追加
 
-`vim` や [Visual Studio Code](https://code.visualstudio.com/) など、使い慣れたテキスト エディターで `Program.cs` ファイルを開きます。
+1. コード エディターを使用して `Program.cs` ファイルを開きます。
 
-次の `using` ディレクティブをファイルの先頭に追加すると、アプリケーションのバージョン情報を表示するコードを短くすることができます。
+1. 次の `using` ディレクティブをファイルの先頭に追加します。
 
-```csharp
-using System.Reflection;
-```
+   ```csharp
+   using System.Reflection;
+   ```
 
-次に、`Main` メソッドに移動します。 メソッドを次のコードに置き換えて、アプリケーションのコマンドライン引数を処理します。 引数が渡されなかった場合、短いヘルプ メッセージが表示されます。 それ以外の場合、それらの引数はすべて文字列に変換され、ボットで出力されます。
+1. `Main` メソッドを次のコードに置き換えて、アプリケーションのコマンドライン引数を処理します。
 
-```csharp
-static void Main(string[] args)
-{
-    if (args.Length == 0)
-    {
-        var versionString = Assembly.GetEntryAssembly()
-                                .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
-                                .InformationalVersion
-                                .ToString();
-                                
-        Console.WriteLine($"botsay v{versionString}");
-        Console.WriteLine("-------------");
-        Console.WriteLine("\nUsage:");
-        Console.WriteLine("  botsay <message>");
-        return;
-    }
+   ```csharp
+   static void Main(string[] args)
+   {
+       if (args.Length == 0)
+       {
+           var versionString = Assembly.GetEntryAssembly()
+                                   .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
+                                   .InformationalVersion
+                                   .ToString();
 
-    ShowBot(string.Join(' ', args));
-}
-```
+           Console.WriteLine($"botsay v{versionString}");
+           Console.WriteLine("-------------");
+           Console.WriteLine("\nUsage:");
+           Console.WriteLine("  botsay <message>");
+           return;
+       }
 
-### <a name="create-the-bot"></a>ボットを作成する
+       ShowBot(string.Join(' ', args));
+   }
+   ```
 
-次に、文字列パラメーターを受け取る `ShowBot` という新しいメソッドを追加します。 このメソッドは、メッセージと ASCII ボットを出力します。 ASCII ボットのコードは、[dotnetbot](https://github.com/dotnet/core/blob/master/samples/dotnetsay/Program.cs) サンプルの一部です。
+   引数が渡されなかった場合、短いヘルプ メッセージが表示されます。 それ以外の場合、次の手順で作成する `ShowBot` メソッドを呼び出すと、すべての引数が 1 つの文字列に連結され、出力されます。
 
-```csharp
-static void ShowBot(string message)
-{
-    string bot = $"\n        {message}";
-    bot += @"
-    __________________
-                      \
-                       \
-                          ....
-                          ....'
-                           ....
-                        ..........
-                    .............'..'..
-                 ................'..'.....
-               .......'..........'..'..'....
-              ........'..........'..'..'.....
-             .'....'..'..........'..'.......'.
-             .'..................'...   ......
-             .  ......'.........         .....
-             .    _            __        ......
-            ..    #            ##        ......
-           ....       .                 .......
-           ......  .......          ............
-            ................  ......................
-            ........................'................
-           ......................'..'......    .......
-        .........................'..'.....       .......
-     ........    ..'.............'..'....      ..........
-   ..'..'...      ...............'.......      ..........
-  ...'......     ...... ..........  ......         .......
- ...........   .......              ........        ......
-.......        '...'.'.              '.'.'.'         ....
-.......       .....'..               ..'.....
-   ..       ..........               ..'........
-          ............               ..............
-         .............               '..............
-        ...........'..              .'.'............
-       ...............              .'.'.............
-      .............'..               ..'..'...........
-      ...............                 .'..............
-       .........                        ..............
-        .....
-";
-    Console.WriteLine(bot);
-}
-```
+1. 文字列パラメーターを受け取る `ShowBot` という新しいメソッドを追加します。 このメソッドを実行すると、テキストの行を使用してメッセージとロボットの画像を出力されます。
 
-### <a name="test-the-tool"></a>ツールをテストする
+   ```csharp
+   static void ShowBot(string message)
+   {
+       string bot = $"\n        {message}";
+       bot += @"
+       __________________
+                         \
+                          \
+                             ....
+                             ....'
+                              ....
+                           ..........
+                       .............'..'..
+                    ................'..'.....
+                  .......'..........'..'..'....
+                 ........'..........'..'..'.....
+                .'....'..'..........'..'.......'.
+                .'..................'...   ......
+                .  ......'.........         .....
+                .    _            __        ......
+               ..    #            ##        ......
+              ....       .                 .......
+              ......  .......          ............
+               ................  ......................
+               ........................'................
+              ......................'..'......    .......
+           .........................'..'.....       .......
+        ........    ..'.............'..'....      ..........
+      ..'..'...      ...............'.......      ..........
+     ...'......     ...... ..........  ......         .......
+    ...........   .......              ........        ......
+   .......        '...'.'.              '.'.'.'         ....
+   .......       .....'..               ..'.....
+      ..       ..........               ..'........
+             ............               ..............
+            .............               '..............
+           ...........'..              .'.'............
+          ...............              .'.'.............
+         .............'..               ..'..'...........
+         ...............                 .'..............
+          .........                        ..............
+           .....
+   ";
+       Console.WriteLine(bot);
+   }
+   ```
 
-プロジェクトを実行して出力を確認します。 次のようにコマンドラインを変えて、異なる結果を表示してみてください。
+1. 変更内容を保存します。
 
-```csharp
+## <a name="test-the-application"></a>アプリケーションをテストする
+
+プロジェクトを実行して出力を確認します。 次のようにコマンド ラインを変えて、異なる結果を表示してみてください。
+
+```dotnetcli
 dotnet run
 dotnet run -- "Hello from the bot"
-dotnet run -- hello from the bot
+dotnet run -- Hello from the bot
 ```
 
 区切り記号 `--` の後の引数は、すべてアプリケーションに渡されます。
 
-## <a name="setup-the-global-tool"></a>グローバル ツールを設定する
+## <a name="package-the-tool"></a>ツールをパッケージ化する
 
-アプリケーションをパッケージ化してグローバル ツールとして配布する前に、プロジェクト ファイルを変更する必要があります。 `botsay.csproj` ファイルを開き、3 つの新しい XML ノードを `<Project><PropertyGroup>` ノードに追加します。
+アプリケーションをパッケージ化してツールとして配布する前に、プロジェクト ファイルを変更する必要があります。 
 
-- `<PackAsTool>`  
-[必須] アプリケーションがグローバル ツールとしてインストールされるようにパッケージ化されることを示します。
+1. *botsay-\<name>.csproj* ファイルを開き、3 つの新しい XML ノードを `<PropertyGroup>` ノードの最後に追加します。
 
-- `<ToolCommandName>`  
-[省略可能] ツールの代替名。指定しない場合、プロジェクト ファイル名に従ってツールのコマンド名が付けられます。 1 つのパッケージに複数のツールを含めることができます。一意のわかりやすい名前を選択すると、同じパッケージ内の他のツールと区別しやすくなります。
+   ```xml
+   <PackAsTool>true</PackAsTool>
+   <ToolCommandName>botsay</ToolCommandName>
+   <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```
 
-- `<PackageOutputPath>`  
-[省略可能] NuGet パッケージが生成される場所。 NuGet パッケージは、.NET Core CLI グローバル ツールがツールのインストールに使用するパッケージです。
+   `<ToolCommandName>` は、インストール後にツールを呼び出すコマンドを指定する省略可能な要素です。 この要素を指定しない場合、ツールのコマンド名は、 *.csproj* 拡張子のないプロジェクト ファイル名になります。
 
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
+   `<PackageOutputPath>` は、NuGet パッケージが生成される場所を決定する省略可能な要素です。 NuGet パッケージは、.NET Core CLI でツールのインストールに使用されるものです。
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+   プロジェクト ファイルは次の例のようになります。
 
-    <PackAsTool>true</PackAsTool>
-    <ToolCommandName>botsay</ToolCommandName>
-    <PackageOutputPath>./nupkg</PackageOutputPath>
+   ```xml
+   <Project Sdk="Microsoft.NET.Sdk">
+  
+     <PropertyGroup>
 
-  </PropertyGroup>
+       <OutputType>Exe</OutputType>
+       <TargetFramework>netcoreapp3.1</TargetFramework>
+  
+       <PackAsTool>true</PackAsTool>
+       <ToolCommandName>botsay</ToolCommandName>
+       <PackageOutputPath>./nupkg</PackageOutputPath>
+  
+     </PropertyGroup>
 
-</Project>
-```
+   </Project>
+   ```
 
-`<PackageOutputPath>` は省略可能ですが、この例では使用します。 必ず `<PackageOutputPath>./nupkg</PackageOutputPath>` を設定してください。
+1. [dotnet pack](dotnet-pack.md) コマンドを実行して、NuGet パッケージを作成します。
 
-次に、アプリケーション用の NuGet パッケージを作成します。
+   ```dotnetcli
+   dotnet pack
+   ```
 
-```console
-dotnet pack
-```
+   *botsay-\<name>.1.0.0.nupkg* ファイルは、*botsay-\<name>.csproj* の `<PackageOutputPath>` 値で識別されるフォルダーに作成されます。この例では *./nupkg* フォルダーです。
+  
+   ツールをリリースする場合は、`https://www.nuget.org` にアップロードすることができます。 NuGet 上でツールを使用できるようになると、開発者は [dotnet tool install](dotnet-tool-install.md) コマンドを使用してツールをインストールできます。 このチュートリアルでは、ローカルの *nupkg* フォルダーからパッケージを直接インストールするため、NuGet にパッケージをアップロードする必要はありません。
 
-`botsay.1.0.0.nupkg` ファイルは、`botsay.csproj` ファイルの `<PackageOutputPath>` XML 値で識別されるフォルダー (この例では `./nupkg` フォルダー) に作成されます。 これにより、インストールとテストが簡単になります。 ツールを公開する場合は、[https://www.nuget.org](https://www.nuget.org) にアップロードしてください。NuGet でツールを使用できるようになると、開発者は [dotnet tool install](dotnet-tool-install.md) コマンドの `--global` オプションを使用してツールのユーザー全体のインストールを実行できます。
+## <a name="troubleshoot"></a>トラブルシューティング
 
-パッケージを用意できたので、そのパッケージからツールをインストールします。 
+チュートリアルの実行中にエラー メッセージが表示された場合は、「[.NET Core ツールの使用に関する問題のトラブルシューティング](troubleshoot-usage-issues.md)」を参照してください。
 
-```console
-dotnet tool install --global --add-source ./nupkg botsay
-```
+## <a name="next-steps"></a>次の手順
 
-`--add-source` パラメーターで、NuGet パッケージの追加のソース フィードとして `./nupkg` フォルダー (ここでは `<PackageOutputPath>` フォルダー) を一時的に使用するように .NET CoreCLI に指示します。 グローバル ツールのインストールの詳細については、「[.NET Core グローバル ツールの概要](global-tools.md)」を参照してください。
+このチュートリアルでは、コンソール アプリケーションを作成し、ツールとしてパッケージ化しました。 このツールをグローバル ツールとして使用する方法については、次のチュートリアルに進んでください。
 
-インストールが成功すると、ツールの呼び出しに使用したコマンドとインストールされたバージョンを示す、次の例のようなメッセージが表示されます。
+> [!div class="nextstepaction"]
+> [グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
 
-```
-You can invoke the tool using the following command: botsay
-Tool 'botsay' (version '1.0.0') was successfully installed.
-```
+必要に応じて、グローバル ツール チュートリアルをスキップし、ローカル ツール チュートリアルに直接移動できます。
 
-これで、`botsay` を入力してツールから応答を取得できるようになりました。
-
-> [!NOTE]
-> インストールは成功しても `botsay` コマンドを使用できない場合は、新しい端末を開いて PATH を更新する必要があります。
-
-## <a name="remove-the-tool"></a>ツールを削除する
-
-ツールの実験を完了したら、次のコマンドでツールを削除することができます。
-
-```console
-dotnet tool uninstall -g botsay
-```
+> [!div class="nextstepaction"]
+> [ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

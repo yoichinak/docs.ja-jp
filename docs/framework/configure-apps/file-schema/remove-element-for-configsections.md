@@ -7,22 +7,20 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: guardrex
-ms.author: mairaw
-ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 99d67bd621390789993caa4862e5ce379135eb92
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279098"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215391"
 ---
-# <a name="remove-element-for-configsections"></a>\<削除 > 要素の\<configSections >
+# <a name="remove-element-for-configsections"></a>\<configSections の > 要素を削除 \<>
 
-定義済みのセクションまたはセクション グループを削除します。
+定義済みのセクション、またはセクション グループを削除します。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+[ **\<configuration>** ](configuration-element.md)\
+&nbsp;&nbsp;[ **\<configSections >** ](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<削除**>
 
 ## <a name="syntax"></a>構文
 
@@ -34,27 +32,27 @@ ms.locfileid: "55279098"
 
 |           | 説明 |
 | --------- | ----------- |
-| **name**  | 必須の属性です。<br><br>セクションまたは削除するセクション グループの名前を指定します。 |
+| **name**  | 必須の属性です。<br><br>削除するセクションまたはセクショングループの名前を指定します。 |
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configSections >** 要素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
+| [ **\<configSections >** Element](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
 なし
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>コメント
 
-使用することができます、 **\<削除 >** セクションおよびセクション グループを構成ファイル階層内の上位レベルで定義されているアプリケーションから削除する要素。
+**\<remove >** 要素を使用して、構成ファイル階層の上位レベルで定義されたセクションとセクショングループをアプリケーションから削除できます。
 
 ## <a name="example"></a>例
 
-次の例は、使用する方法を示します、 **\<削除 >** マシン構成ファイルで定義したセクションを削除するアプリケーション構成ファイル内の要素。
+次の例では、アプリケーション構成ファイルで **\<remove >** 要素を使用して、マシン構成ファイルで以前に定義したセクションを削除する方法を示します。
 
-マシン構成ファイルのコードは、次のセクションを宣言します **\<sampleSection >**:
+次のマシン構成ファイルのコードでは、セクション **\<sampleSection >** が宣言されています。
 
 ```xml
 <!-- Machine.config file -->
@@ -69,7 +67,7 @@ ms.locfileid: "55279098"
 </configuration>
 ```
 
-アプリケーション構成ファイルのコードは、次の削除、  **\<sampleSection >** セクション。 削除した後、アプリケーションが設定を取得できません **\<sampleSection >** します。
+次のアプリケーション構成ファイルのコードでは、 **\<sampleSection >** セクションが削除されます。 削除後、アプリケーションは **\<sampleSection >** の設定を取得できません。
 
 ```xml
 <!-- Application configuration file -->
@@ -80,10 +78,10 @@ ms.locfileid: "55279098"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>構成ファイル
+## <a name="configuration-file"></a>［構成ファイル］
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。
+この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

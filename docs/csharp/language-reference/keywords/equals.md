@@ -1,6 +1,5 @@
 ---
 title: equals コンテキスト キーワード - C# リファレンス
-ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - equals_CSharpKeyword
@@ -8,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - equals keyword [C#]
 ms.assetid: e981309a-e4bf-444c-8a2b-5c695e6114b1
-ms.openlocfilehash: a6026cbe606ff80f5ae1bc13435c67eaa3f57330
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: fc190433b37b027a92d8e8338a35b06d5d1e1824
+ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237832"
+ms.lasthandoff: 01/07/2020
+ms.locfileid: "75713579"
 ---
 # <a name="equals-c-reference"></a>equals (C# リファレンス)
 

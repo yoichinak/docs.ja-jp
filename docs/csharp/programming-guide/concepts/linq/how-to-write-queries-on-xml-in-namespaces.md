@@ -1,15 +1,15 @@
 ---
-title: '方法: 名前空間内の XML に対するクエリを記述する (C#)'
+title: 名前空間内の XML に対するクエリを記述する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8b8d55daaad1ae00e43fed897080ed7a62fafab
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722099"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75337372"
 ---
-# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>方法: 名前空間内の XML に対するクエリを記述する (C#)
+# <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>名前空間内の XML に対するクエリを記述する方法 (C#)
 名前空間内の XML に対するクエリを記述するには、正しい名前空間を持つ <xref:System.Xml.Linq.XName> オブジェクトを使用する必要があります。  
   
  C# での最も一般的な方法は、URI を含んだ文字列を使用して <xref:System.Xml.Linq.XNamespace> を初期化し、加算演算子オーバーロードを使用して名前空間をローカル名に連結することです。  
@@ -39,7 +39,7 @@ foreach (XElement el in c1)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 1  
 2  
 3  
@@ -70,7 +70,7 @@ foreach (XElement el in c1)
   
  この例を実行すると、次の出力が生成されます。  
   
-```  
+```output  
 1  
 2  
 3  
@@ -78,4 +78,4 @@ foreach (XElement el in c1)
   
 ## <a name="see-also"></a>関連項目
 
-- [XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)

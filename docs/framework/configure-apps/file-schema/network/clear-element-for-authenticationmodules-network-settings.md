@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <clear> element, authenticationModules
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
-ms.openlocfilehash: d6760d05a8c2368cd20cae416b0b4b428b6588db
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e3abd1b4c76ebda885703ccf961d58657b582f19
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279072"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74087509"
 ---
-# <a name="clear-element-for-authenticationmodules-network-settings"></a>\<クリア > authenticationModules (ネットワーク設定) の要素
-アプリケーションからのすべての認証モジュールを削除します。  
-  
- \<configuration>  
-\<system.net>  
-\<authenticationModules>  
-\<clear>  
-  
+# <a name="clear-element-for-authenticationmodules-network-settings"></a>authenticationModules の > 要素をクリア \<(ネットワーク設定)
+アプリケーションからすべての認証モジュールを削除します。  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system. net >** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<authenticationModules >** ](authenticationmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**クリア >**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -44,16 +44,16 @@ ms.locfileid: "55279072"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|ネットワーク要求の認証に使用されるモジュールを指定します。|  
+|[authenticationModules](authenticationmodules-element-network-settings.md)|ネットワーク要求を認証するために使用するモジュールを指定します。|  
   
 ## <a name="remarks"></a>Remarks  
- `clear`要素は、構成ファイルで、または構成階層のより高いレベルで既に定義されているすべての認証モジュールを削除します。  
+ `clear` 要素は、構成ファイルまたは構成階層の上位レベルで定義されたすべての認証モジュールを削除します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、すべての構成済み認証モジュールを削除します。  
+ 次の例では、構成されているすべての認証モジュールを削除します。  
   
 ```xml  
 <configuration>  
@@ -66,6 +66,7 @@ ms.locfileid: "55279072"
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [ネットワーク設定スキーマ](index.md)

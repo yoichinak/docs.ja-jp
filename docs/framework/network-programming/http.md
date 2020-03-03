@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: c0c8bcca55dc54b2dd89be2e45dade4d09a67362
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8c799a50e5d63bbf411c338eb9e93f85a942bb0
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574132"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048012"
 ---
 # <a name="http"></a>HTTP
 .NET Framework は、<xref:System.Net.HttpWebRequest> クラスと <xref:System.Net.HttpWebResponse> クラスを使用して、すべてのインターネット トラフィックの大部分を構成する HTTP プロトコルに対して包括的なサポートを提供します。 <xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> から派生したこれらのクラスは、静的メソッド <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> が "http" または "https" で始まる URI に遭遇するたびに既定で返されます。 ほとんどの場合、**WebRequest** クラスと **WebResponse** クラスは、要求を行うために必要なすべてを提供しますが、プロパティとして公開されている HTTP 固有の機能にアクセスする必要がある場合は、これらのクラスを **HttpWebRequest** または **HttpWebResponse** に型キャストすることができますです。  
@@ -32,6 +32,7 @@ ms.locfileid: "54574132"
  アプリケーションでは、<xref:System.Net.WebException.Status%2A> を <xref:System.Net.WebExceptionStatus> に設定し、<xref:System.Net.WebException> をキャッチすることによって HTTP プロトコル エラーを受信します。 <xref:System.Net.WebException.Response%2A> プロパティは、サーバーによって送信された **WebResponse** を含み、実際の HTTP エラーがに発生したことを示します。  
   
 ## <a name="see-also"></a>関連項目
-- [プロキシを介したインターネットへのアクセス](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
-- [アプリケーション プロトコルの使用](../../../docs/framework/network-programming/using-application-protocols.md)
-- [方法: HTTP 固有のプロパティにアクセスする](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+
+- [プロキシを介したインターネットへのアクセス](accessing-the-internet-through-a-proxy.md)
+- [アプリケーション プロトコルの使用](using-application-protocols.md)
+- [方法: HTTP 固有のプロパティにアクセスする](how-to-access-http-specific-properties.md)

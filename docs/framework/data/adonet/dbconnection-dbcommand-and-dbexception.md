@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
-ms.openlocfilehash: 31bd23d854afd10d0c292042ac3963978de5fd4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09526f111adeecb817ce4c4e587ca3713e0d8cde
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725247"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785193"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection、DbCommand、および DbException
 <xref:System.Data.Common.DbProviderFactory> および <xref:System.Data.Common.DbConnection> を作成すると、コマンドおよびデータ リーダーを使用してデータ ソースからデータを取得できます。  
@@ -64,7 +64,8 @@ finally
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
-- [DbProviderFactory の取得](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
-- [DbDataAdapter を使用したデータの変更](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [DbProviderFactories](dbproviderfactories.md)
+- [DbProviderFactory の取得](obtaining-a-dbproviderfactory.md)
+- [DbDataAdapter を使用したデータの変更](modifying-data-with-a-dbdataadapter.md)
+- [ADO.NET の概要](ado-net-overview.md)

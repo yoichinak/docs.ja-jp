@@ -3,11 +3,11 @@ title: 1002 - WorkflowApplicationTerminated
 ms.date: 03/30/2017
 ms.assetid: 4e8b111f-79dc-4898-bb4a-e9b36f69420f
 ms.openlocfilehash: 01c9aba6e863e07a1a999a28fccefbab95a34d5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008656"
 ---
 # <a name="1002---workflowapplicationterminated"></a>1002 - WorkflowApplicationTerminated
 ## <a name="properties"></a>プロパティ  
@@ -25,7 +25,7 @@ ms.locfileid: "33510080"
 ## <a name="message"></a>メッセージ  
  WorkflowApplication ID: %1 は中止されました。 例外により Faulted 状態で完了しました。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
   
 |データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  

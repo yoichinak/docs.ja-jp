@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: c0822423-a9df-4961-950d-50dcc152f863
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d570f9392bbd66f0d9031c776b139ee3b30541b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78e34d9d33d34047e3ebd2effb4894bc7b709585
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698220"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73132358"
 ---
-# <a name="corfield-structure"></a>COR_FIELD 構造体
+# <a name="cor_field-structure"></a>COR_FIELD 構造体
 オブジェクトのフィールドに関する情報が提供されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct COR_FIELD{  
     mdFieldDef token;  
     ULONG32 offset;  
@@ -41,15 +39,15 @@ typedef struct COR_FIELD{
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`token`|`mdFieldDef`フィールド情報を取得するために使用できるトークン。|  
-|`offset`|オブジェクトのフィールドのデータへのバイト オフセット。|  
-|`id`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md)をこのフィールドの型を識別する値。|  
-|`fieldType`|フィールドの種類を示す CorElementType 列挙値。|  
+|`token`|フィールド情報を取得するために使用できる `mdFieldDef` トークン。|  
+|`offset`|オブジェクト内のフィールドデータへのオフセット (バイト単位)。|  
+|`id`|このフィールドの型を識別する[COR_TYPEID](cor-typeid-structure.md)値。|  
+|`fieldType`|フィールドの型を示す CorElementType 列挙値。|  
   
 ## <a name="remarks"></a>Remarks  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -58,5 +56,6 @@ typedef struct COR_FIELD{
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [デバッグ構造体](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [デバッグ構造体](debugging-structures.md)
+- [デバッグ](index.md)

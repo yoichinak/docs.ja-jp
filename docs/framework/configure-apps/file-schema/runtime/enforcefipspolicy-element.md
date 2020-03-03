@@ -7,21 +7,19 @@ helpviewer_keywords:
 - <enforceFIPSPolicy> element
 - Federal Information Processing Standards (FIPS)
 ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 1a4e5ba5ac1a5a3c08c351531efc84291925ba4b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0d6dd291a24928487a040c0427f058dee80bf836
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267470"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73117386"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > 要素
 暗号化アルゴリズムが連邦情報処理規格 (FIPS: Federal Information Processing Standard) に準拠する必要があるコンピューターの構成要件を強制するかどうかを指定します。  
   
- \<configuration > 要素  
-\<ランタイム > 要素  
-\<enforceFIPSPolicy > 要素  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<enforceFIPSPolicy >**  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,14 +34,14 @@ ms.locfileid: "55267470"
   
 |属性|説明|  
 |---------------|-----------------|  
-|enabled|必須の属性です。<br /><br /> 暗号化アルゴリズムは FIPS 準拠でなければならないこと、コンピューターの構成要件の強制を有効にするかどうかを指定します。|  
+|enabled|必須の属性です。<br /><br /> 暗号化アルゴリズムが FIPS に準拠している必要があるコンピューター構成要件の適用を有効にするかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|`true`|FIPS に準拠する暗号アルゴリズムを要求するように、コンピューターを構成する場合は、その要件が適用されます。 クラスは、コンス トラクターは、FIPS 準拠アルゴリズムを実装している場合または`Create`そのコンピューターで実行された場合、そのクラスのメソッドが例外をスローします。 既定値です。|  
-|`false`|アプリケーションで使用される暗号化アルゴリズムは、コンピューターの構成に関係なく、FIPS に準拠する必要はありません。|  
+|`true`|暗号化アルゴリズムが FIPS に準拠するようにコンピューターが構成されている場合は、その要件が適用されます。 クラスが FIPS に準拠していないアルゴリズムを実装している場合、そのクラスのコンストラクターまたは `Create` メソッドは、そのコンピューターで実行されるときに例外をスローします。 既定値です。|  
+|`false`|アプリケーションで使用される暗号化アルゴリズムは、コンピューターの構成に関係なく、FIPS に準拠している必要はありません。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -56,12 +54,12 @@ ms.locfileid: "55267470"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 以降、.NET Framework 2.0 では、暗号アルゴリズムを実装するクラスの作成は、コンピューターの構成によって制御されます。 FIPS に準拠するアルゴリズムを要求するように、コンピューターが構成されているクラスは、FIPS 準拠アルゴリズムを実装する場合は、そのクラスのインスタンスを作成しようとするとは、例外をスローします。 コンス トラクターがスロー、<xref:System.InvalidOperationException>例外、および`Create`メソッドでスロー、<xref:System.Reflection.TargetInvocationException>と内部例外<xref:System.InvalidOperationException>例外。  
+ .NET Framework 2.0 以降では、暗号化アルゴリズムを実装するクラスの作成は、コンピューターの構成によって制御されます。 アルゴリズムが FIPS に準拠していることを必要とするようにコンピューターが構成されており、クラスが FIPS に準拠していないアルゴリズムを実装している場合、そのクラスのインスタンスを作成しようとすると、例外がスローされます。 コンストラクターは <xref:System.InvalidOperationException> 例外をスローし、`Create` メソッドは、内部 <xref:System.InvalidOperationException> 例外を使用して <xref:System.Reflection.TargetInvocationException> 例外をスローします。  
   
- 構成は、fips コンプライアンスを必要とするコンピューターでアプリケーションを実行し、アプリケーションでは fips 準拠アルゴリズムを使用することができます要素を使用してこの構成ファイルから共通言語ランタイム (CLR) を防ぐためにFIPS 準拠を適用します。 この要素で導入された、[!INCLUDE[net_v20SP1_long](../../../../../includes/net-v20sp1-long-md.md)]します。  
+ 構成が FIPS に準拠している必要があり、アプリケーションで fips に準拠していないアルゴリズムが使用されているコンピューターでアプリケーションを実行する場合は、構成ファイルでこの要素を使用して、共通言語ランタイム (CLR) がFIPS 準拠の強制。 この要素は、.NET Framework 2.0 Service Pack 1 で導入されました。  
   
 ## <a name="example"></a>例  
- 次の例では、CLR が FIPS 準拠を適用することを防止する方法を示します。  
+ 次の例は、CLR が FIPS 準拠を強制しないようにする方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -72,6 +70,7 @@ ms.locfileid: "55267470"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号モデル](../../../../../docs/standard/security/cryptography-model.md)
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [暗号モデル](../../../../standard/security/cryptography-model.md)

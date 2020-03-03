@@ -1,6 +1,6 @@
 ---
 title: Get 関数 (アンマネージ API リファレンス)
-description: Get 関数には、指定されたプロパティ値を取得します。
+description: Get 関数は、指定されたプロパティ値を取得します。
 ms.date: 11/06/2017
 api_name:
 - Get
@@ -14,23 +14,22 @@ helpviewer_keywords:
 - Get function [.NET WMI and performance counters]
 topic_type:
 - Reference
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: cd85ac8b98d8613924a4acd73ac74a69f3d9b41d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60f29b91000fd3c07efea88dcc319eb283a4af78
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535347"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73120319"
 ---
 # <a name="get-function"></a>Get 関数
-存在する場合は、指定されたプロパティ値を取得します。
+
+指定されたプロパティ値が存在する場合は、その値を取得します。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>構文  
-  
-```  
+
+## <a name="syntax"></a>構文
+
+```cpp
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -40,59 +39,65 @@ HRESULT Get (
    [out] CIMTYPE*         pvtType,
    [out] LONG*            plFlavor
 ); 
-```  
+```
 
 ## <a name="parameters"></a>パラメーター
 
-`vFunc`  
-[in]このパラメーターは使用されません。
+`vFunc`\
+からこのパラメーターは使用されていません。
 
-`ptr`  
-[in]ポインター、 [IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンス。
+`ptr`\
+から[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)インスタンスへのポインター。
 
-`wszName`  
-[in]プロパティの名前。
+`wszName`\
+からプロパティの名前。
 
-`lFlags` [in]予約されています。 このパラメーターは、0 を指定する必要があります。
+`lFlags`\
+[in] 予約されています。 このパラメーターには0を指定する必要があります。
 
-`pVal` [out]関数が正常に返された場合の値が含まれています、`wszName`プロパティ。 `pval`引数には、正しい型および修飾子の値が割り当てられています。
+`pVal`\
+入出力関数が正常に返された場合は、`wszName` プロパティの値を格納します。 `pval` 引数には、修飾子の正しい型と値が割り当てられます。
 
-`pvtType` [out]関数が正常に返された場合は、 [CIM 型の定数](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)プロパティの型を示します。 その値が指定できますも`null`します。 
+`pvtType`\
+入出力関数が正常に返された場合、はプロパティの型を示す[CIM 型の定数](/windows/win32/api/wbemcli/ne-wbemcli-cimtype_enumeration)を格納します。 この値は、`null`することもできます。 
 
-`plFlavor` [out]関数が正常に返された場合は、プロパティのパブリッシュ元に関する情報を受け取ります。 その値を指定できます`null`、またはいずれかで定義されている次の WBEM_FLAVOR_TYPE 定数、 *WbemCli.h*ヘッダー ファイル。 
+`plFlavor`\
+入出力関数が正常に返された場合、はプロパティの配信元に関する情報を受け取ります。 この値には `null`、または*WbemCli*ヘッダーファイルで定義されている次の WBEM_FLAVOR_TYPE 定数のいずれかを指定できます。 
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
-| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | プロパティは、標準のシステム プロパティです。 |
-| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラス。プロパティは、親クラスから継承されます。 </br> インスタンス。プロパティを親クラスから継承したときに変更されていないインスタンスがします。  |
-| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラス。プロパティは、派生クラスに属しています。 </br> インスタンス。インスタンスでプロパティを変更します。つまり、値が指定されましたまたは修飾子が追加または変更します。 |
+| `WBEM_FLAVOR_ORIGIN_SYSTEM` | 0x40 | プロパティは、標準のシステムプロパティです。 |
+| `WBEM_FLAVOR_ORIGIN_PROPAGATED` | 0x20 | クラスの場合: プロパティは親クラスから継承されます。 <br> インスタンスの場合: 親クラスから継承されたプロパティは、インスタンスによって変更されていません。  |
+| `WBEM_FLAVOR_ORIGIN_LOCAL` | 0 | クラスの場合: プロパティは派生クラスに属します。 <br> インスタンスの場合: プロパティは、インスタンスによって変更されます。つまり、値が指定されたか、または修飾子が追加または変更されたことを示します。 |
 
 ## <a name="return-value"></a>戻り値
 
-この関数によって返される次の値が定義されている、 *WbemCli.h*ヘッダー ファイル、またはすることができますに定数としてコードで定義します。
+この関数によって返される次の値は、 *WbemCli*ヘッダーファイルで定義されています。また、コード内で定数として定義することもできます。
 
-|定数  |値  |説明  |
+|定数  |[値]  |説明  |
 |---------|---------|---------|
 |`WBEM_E_FAILED` | 0x80041001 | 一般的なエラーが発生しました。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1 つまたは複数のパラメーターが無効です。 |
-|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定したプロパティが見つかりませんでした。 |
-|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-|`WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
-  
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 1つ以上のパラメーターが無効です。 |
+|`WBEM_E_NOT_FOUND` | 0x80041002 | 指定されたプロパティが見つかりませんでした。 |
+|`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するために必要なメモリが不足しています。 |
+|`WBEM_S_NO_ERROR` | 0 | 関数の呼び出しに成功しました。  |
+
 ## <a name="remarks"></a>Remarks
 
-この関数の呼び出しをラップする、 [IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)メソッド。
+この関数は、 [IWbemClassObject:: Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)メソッドの呼び出しをラップします。
 
-`Get`関数では、システムのプロパティを返すこともできます。
+`Get` 関数は、システムプロパティも返すことができます。
 
-`pVal`引数には、正しい型および修飾子と COM の値が割り当てられている[VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)関数
+`pVal` 引数には、修飾子と COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)関数の正しい型と値が割り当てられます。
 
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-  
- **ヘッダー:** WMINet_Utils.idl  
-  
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>［要件］
+
+ **:** 「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+
+ **ヘッダー:** WMINet_Utils
+
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>関連項目
-- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)
+
+- [WMI およびパフォーマンスカウンター (アンマネージ API リファレンス)](index.md)

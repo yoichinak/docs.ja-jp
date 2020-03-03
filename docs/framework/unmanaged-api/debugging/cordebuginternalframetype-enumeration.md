@@ -14,21 +14,19 @@ helpviewer_keywords:
 ms.assetid: e4412dc2-c338-4cfb-94d8-f682095dd2b1
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6cf4c0eb3f9bb36cb45aa93c576b4efddaa93482
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be827e12db765485ee889d6a4a19a982dad5d54
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736534"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76778369"
 ---
 # <a name="cordebuginternalframetype-enumeration"></a>CorDebugInternalFrameType 列挙型
-スタック フレームの型を示します。 この列挙体を使って、 [icordebuginternalframe::getframetype](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe-getframetype-method.md)メソッド。  
+スタック フレームの型を示します。 この列挙体は、 [GetFrameType](icordebuginternalframe-getframetype-method.md)メソッドによって使用されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum CorDebugInternalFrameType {  
   
     STUBFRAME_NONE                 = 0x00000000,  
@@ -49,20 +47,20 @@ typedef enum CorDebugInternalFrameType {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`STUBFRAME_NONE`|null 値。 `ICorDebugInternalFrame::GetFrameType`メソッドがこの値を返すことはありません。|  
-|`STUBFRAME_M2U`|マネージとアンマネージのスタブ フレーム。|  
-|`STUBFRAME_U2M`|スタブのアンマネージからマネージ フレームでは。|  
-|`STUBFRAME_APPDOMAIN_TRANSITION`|アプリケーション ドメイン間で遷移します。|  
-|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|軽量なメソッド呼び出し。|  
+|`STUBFRAME_NONE`|null 値。 `ICorDebugInternalFrame::GetFrameType` メソッドは、この値を返しません。|  
+|`STUBFRAME_M2U`|アンマネージスタブフレーム。|  
+|`STUBFRAME_U2M`|アンマネージスタブフレーム。|  
+|`STUBFRAME_APPDOMAIN_TRANSITION`|アプリケーションドメイン間の移行。|  
+|`STUBFRAME_LIGHTWEIGHT_FUNCTION`|ライトウェイトメソッド呼び出し。|  
 |`STUBFRAME_FUNC_EVAL`|関数の評価の開始。|  
-|`STUBFRAME_INTERNALCALL`|共通言語ランタイムの内部呼び出し。|  
+|`STUBFRAME_INTERNALCALL`|共通言語ランタイムへの内部呼び出し。|  
 |`STUBFRAME_CLASS_INIT`|クラスの初期化の開始。|  
 |`STUBFRAME_EXCEPTION`|スローされる例外。|  
-|`STUBFRAME_SECURITY`|コード アクセス セキュリティのために使用するフレーム。|  
-|`STUBFRAME_JIT_COMPILATION`|ランタイムは、メソッドを JIT コンパイルです。|  
+|`STUBFRAME_SECURITY`|コードアクセスセキュリティに使用されるフレーム。|  
+|`STUBFRAME_JIT_COMPILATION`|ランタイムは、メソッドを JIT コンパイルしています。|  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -71,4 +69,5 @@ typedef enum CorDebugInternalFrameType {
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [列挙型のデバッグ](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+
+- [列挙型のデバッグ](debugging-enumerations.md)

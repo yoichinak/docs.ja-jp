@@ -14,29 +14,28 @@ helpviewer_keywords:
 ms.assetid: 9868cfb3-dd51-4812-bca9-171d7829afe9
 topic_type:
 - apiref
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: 4c39797c720cdfcab58d64caf05e65c6b623325d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d116d2ce986dd163ee7abbdd14002da690893ea
+ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561154"
+ms.lasthandoff: 11/23/2019
+ms.locfileid: "74445482"
 ---
 # <a name="inotifyconnection2-interface"></a>INotifyConnection2 インターフェイス
-登録と接続の通知のソースを登録解除のためのメソッドを宣言します。  
+接続通知ソースを登録および登録解除するためのメソッドを宣言します。  
   
 ## <a name="methods"></a>メソッド  
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[RegisterNotifySource メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|指定された通知のソース オブジェクトをインストールします。|  
-|[UnregisterNotifySource メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|接続から、指定された通知のソース オブジェクトを削除します。|  
+|[RegisterNotifySource メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-registernotifysource-method.md)|指定された通知ソースオブジェクトをインストールします。|  
+|[UnregisterNotifySource メソッド](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-unregisternotifysource-method.md)|指定された通知ソースオブジェクトを接続から削除します。|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** ProtocolNotify2.idl  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** ProtocolNotify2  
   
 ## <a name="see-also"></a>関連項目
+
 - [INotifySink2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [INotifySource2 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
 - [シンボル ストア診断インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -1,5 +1,5 @@
 ---
-title: '方法: 作成し、トレース ソースの初期化'
+title: '方法: トレース ソースを作成し初期化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,26 @@ helpviewer_keywords:
 - initializing trace sources
 - configuration files [.NET Framework], trace sources
 ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
-author: mairaw
-ms.author: mairaw
-ms.openlocfilehash: d6b888e349159a51cc1d1d6bfac2791d413d015a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc2987499aa094960c08d220940fe1aed5440b2d
+ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570097"
+ms.lasthandoff: 02/19/2020
+ms.locfileid: "77449960"
 ---
-# <a name="how-to-create-and-initialize-trace-sources"></a>方法: 作成し、トレース ソースの初期化
+# <a name="how-to-create-and-initialize-trace-sources"></a>方法: トレース ソースを作成し初期化する
 <xref:System.Diagnostics.TraceSource> クラスをアプリケーションで使用すると、アプリケーションに関連付けることができるトレースを生成できます。 <xref:System.Diagnostics.TraceSource> は、イベントのトレース、データのトレース、および情報トレースの発行を簡単に実行できるトレース メソッドを提供します。 <xref:System.Diagnostics.TraceSource> からのトレース出力は、構成ファイルを使用してもしなくても作成および初期化できます。 このトピックでは、この両方の手順について説明しています。 ただし、実行時にトレース ソースによって作成されるトレースの再構成を容易にするために構成ファイルを使用することをお勧めします。  
   
 ### <a name="to-create-and-initialize-a-trace-source-using-a-configuration-file"></a>構成ファイルを使用してトレース ソースを作成し、初期化するには  
   
-1.  Visual Studio コンソール アプリケーション プロジェクトを作成し、提供されたコードを次のコードに置き換えます。 このコードは、エラーや警告を記録し、コンソールと、構成ファイルのエントリによって作成された myListener ファイルにその一部をそれぞれ出力します。  
+1. Visual Studio コンソールアプリケーションプロジェクト (.NET Framework) を作成し、指定したコードを次のコードに置き換えます。 このコードは、エラーや警告を記録し、コンソールと、構成ファイルのエントリによって作成された myListener ファイルにその一部をそれぞれ出力します。  
   
      [!code-csharp[TraceSourceExample1#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample1/cs/program.cs#1)]
      [!code-vb[TraceSourceExample1#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample1/vb/program.vb#1)]  
   
-2.  アプリケーション構成ファイルが存在しない場合は、アプリケーション構成ファイルをプロジェクトに追加して、手順 1. のコード例にある `TraceSourceApp` というトレース ソースを初期化します。  
+2. アプリケーション構成ファイルが存在しない場合は、アプリケーション構成ファイルをプロジェクトに追加して、手順 1. のコード例にある `TraceSourceApp` というトレース ソースを初期化します。  
   
-3.  既定の構成ファイルの内容を以下の設定に置き換えて、コンソール トレース リスナーと、手順 1. で作成されたトレース ソースのテキスト ライター トレース リスナーを初期化します。  
+3. 既定の構成ファイルの内容を以下の設定に置き換えて、コンソール トレース リスナーと、手順 1. で作成されたトレース ソースのテキスト ライター トレース リスナーを初期化します。  
   
     ```xml  
     <configuration>  
@@ -73,14 +71,15 @@ ms.locfileid: "54570097"
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>構成ファイルを使わずにトレース ソース、リスナー、およびフィルターを初期化するには  
   
--   次のプログラム例を使用すると、構成ファイルを使わずにトレース ソース全体のトレースが有効になります。 この方法はお勧めできませんが、構成ファイルに依存しないでトレース機能を確保する必要がある場合もあります。  
+- 次のプログラム例を使用すると、構成ファイルを使わずにトレース ソース全体のトレースが有効になります。 この方法はお勧めできませんが、構成ファイルに依存しないでトレース機能を確保する必要がある場合もあります。  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>
 - <xref:System.Diagnostics.ConsoleTraceListener>
 - <xref:System.Diagnostics.EventTypeFilter>
-- [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [アプリケーションのトレースとインストルメント](tracing-and-instrumenting-applications.md)

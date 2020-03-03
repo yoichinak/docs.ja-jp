@@ -9,22 +9,20 @@ helpviewer_keywords:
 - container tags, <probing> element
 - probing element
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: f66ba8307a33a0a0b80cd71dd027852f67c03f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e9e48ea97e1b70fef7fcc78a113e18c5fec23b7c
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257046"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73115860"
 ---
-# <a name="probing-element"></a>\<probing > 要素
-アプリケーション ベース、共通言語ランタイム アセンブリを読み込むときに検索するサブディレクトリを指定します。  
+# <a name="probing-element"></a>\<probing> 要素
+アセンブリの読み込み時に共通言語ランタイムが検索するアプリケーションの基本サブディレクトリを指定します。  
   
- \<configuration>  
-\<runtime>  
-\<assemblyBinding>  
-\<probing >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<assemblyBinding>** ](assemblybinding-element-for-runtime.md) > \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**probing>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,10 +37,11 @@ ms.locfileid: "55257046"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`privatePath`|必須の属性です。<br /><br /> アセンブリを含む可能性があるアプリケーションのベース ディレクトリのサブディレクトリを指定します。 各サブディレクトリをセミコロンで区切ります。|  
+|`privatePath`|必須の属性です。<br /><br /> アセンブリを含む可能性のあるアプリケーションのベースディレクトリのサブディレクトリを指定します。 各サブディレクトリをセミコロンで区切ります。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+
+なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -53,7 +52,7 @@ ms.locfileid: "55257046"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="example"></a>例  
- 次の例では、アプリケーションの基本サブディレクトリが、ランタイムがアセンブリを検索する必要がありますを指定する方法を示します。  
+ 次の例では、ランタイムがアセンブリを検索するアプリケーションベースのサブディレクトリを指定する方法を示します。  
   
 ```xml  
 <configuration>  
@@ -66,7 +65,8 @@ ms.locfileid: "55257046"
 ```  
   
 ## <a name="see-also"></a>関連項目
-- [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
-- [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [アセンブリの場所の指定](../../../../../docs/framework/configure-apps/specify-assembly-location.md)
-- [ランタイムがアセンブリを検索する方法](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
+
+- [ランタイム設定スキーマ](index.md)
+- [構成ファイル スキーマ](../index.md)
+- [アセンブリの場所を指定します](../../../../standard/assembly/location.md)
+- [ランタイムがアセンブリを検索する方法](../../../deployment/how-the-runtime-locates-assemblies.md)

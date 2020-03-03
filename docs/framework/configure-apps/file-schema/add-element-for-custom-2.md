@@ -1,5 +1,5 @@
 ---
-title: <add> NameValueSectionHandler および DictionarySectionHandler の要素
+title: NameValueSectionHandler および DictionarySectionHandler の <add> 要素
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -7,22 +7,20 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: guardrex
-ms.author: mairaw
-ms.openlocfilehash: 9b421b4bab32c1aae7a6ba7d69b9f4aea2ab99a5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 57722f3518fad12cb8e6e35d68f40bb8465bdd86
+ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278279"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77215435"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<追加 > NameValueSectionHandler および DictionarySectionHandler の要素
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler および DictionarySectionHandler の > 要素を追加 \<には
 
-カスタム アプリケーションの設定を追加します。 各**\<追加 >** タグにはキー/値ペアが含まれています。
+カスタムアプリケーション設定を追加します。 > タグの**追加\<** には、キーと値のペアが含まれています。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
+[ **\<configuration>** ](configuration-element.md)\
+&nbsp;&nbsp;[ **\<sectionName >** ](custom-element-2.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<追加 >**
 
 ## <a name="syntax"></a>構文
 
@@ -41,7 +39,7 @@ ms.locfileid: "55278279"
 
 | 要素 | 説明 |
 | ------- | ------------|
-| [**\<sectionName >** 要素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 使用して、カスタム構成セクションの設定を定義、<xref:System.Configuration.NameValueSectionHandler>と<xref:System.Configuration.DictionarySectionHandler>クラス。 |
+| [ **\<sectionName >** Element](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> クラスと <xref:System.Configuration.DictionarySectionHandler> クラスを使用するカスタム構成セクションの設定を定義します。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -49,7 +47,7 @@ ms.locfileid: "55278279"
 
 ## <a name="example"></a>例
 
-次の例では、カスタム構成セクションを定義して使用する方法を示しています、 **\<追加 >** セクションに設定を格納する要素。
+次の例は、カスタム構成セクションを定義し、 **\<add >** 要素を使用して設定をセクションに配置する方法を示しています。
 
 ```xml
 <configuration>
@@ -62,10 +60,10 @@ ms.locfileid: "55278279"
 </configuration>
 ```
 
-## <a name="configuration-file"></a>構成ファイル
+## <a name="configuration-file"></a>［構成ファイル］
 
-この要素は、アプリケーション構成ファイル、マシン構成ファイルで使用できます (*Machine.config*)、および*Web.config*アプリケーション ディレクトリ レベルではないファイル。
+この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [.NET Framework の構成ファイル スキーマ](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

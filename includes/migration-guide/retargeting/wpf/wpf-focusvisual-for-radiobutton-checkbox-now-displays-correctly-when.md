@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 4eac93d5cfea19cb83c66cd3fe35c1b0703c0cc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234037"
+---
 ### <a name="wpf-focusvisual-for-radiobutton-and-checkbox-now-displays-correctly-when-the-controls-have-no-content"></a>WPF で、コントロールに内容がないとき、RadioButton と CheckBox のフォーカス ビジュアルが正しく表示されるようになった
 
 |   |   |
@@ -7,4 +15,3 @@
 |スコープ|エッジ|
 |Version|4.7.2|
 |型|再ターゲット中|
-

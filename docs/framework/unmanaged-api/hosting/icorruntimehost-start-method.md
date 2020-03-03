@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: c66f3ac5-6489-484a-9bed-c31b711cee01
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 349f71691e166561d677e0ae792fa12fc5bb1fc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c450d83669a3bc548c15ed5800dc73438b9a84a6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624310"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73127691"
 ---
 # <a name="icorruntimehoststart-method"></a>ICorRuntimeHost::Start メソッド
 共通言語ランタイム (CLR) を開始します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Start ();  
 ```  
   
@@ -37,22 +35,23 @@ HRESULT Start ();
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|操作が正常に完了しました。|  
+|S_OK|操作は成功しました。|  
 |S_FALSE|操作を完了できませんでした。|  
-|E_FAIL|未知の致命的なエラーが発生しました。 メソッド E_FAIL が返された場合、CLR はプロセスで使用可能ではなくなりました。 Api をホストする後続の呼び出しには、HOST_E_CLRNOTAVAILABLE が返されます。|  
-|HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
+|E_FAIL|不明な重大なエラーが発生しました。 メソッドから E_FAIL が返された場合、このプロセスでは CLR を使用できなくなります。 後続のホスト Api への呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
   
 ## <a name="remarks"></a>Remarks  
- 呼び出す必要は通常、`Start`メソッド、ため、CLR はマネージ コードを実行する最初の要求時に自動的に起動します。  
+ 通常は、マネージコードを実行する最初の要求時に CLR が自動的に開始するため、`Start` メソッドを呼び出す必要はありません。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET framework のバージョン:** 1.0, 1.1  
+ **.NET Framework のバージョン:** 1.0、1.1  
   
 ## <a name="see-also"></a>関連項目
+
 - [ICorRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

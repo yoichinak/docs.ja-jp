@@ -8,21 +8,21 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e823d6065ea23f3a47dad6853a1b9e1237a616c9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dbad888cd0537f63c09840ac1053f924db9ea9bc
+ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257825"
+ms.lasthandoff: 11/14/2019
+ms.locfileid: "74089057"
 ---
-# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 要素 (ネットワーク設定)
+# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript> 要素 (ネットワーク設定)
 Web プロキシを検出するために使用するスクリプトの特性を構成します。  
-  
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<webProxyScript >  
-  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<settings>** ](settings-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<webProxyScript>**
+
 ## <a name="syntax"></a>構文  
   
 ```xml  
@@ -38,7 +38,7 @@ Web プロキシを検出するために使用するスクリプトの特性を�
   
 |属性|説明|  
 |---------------|-----------------|  
-|`downloadTimeout`|時間、分、および秒でスクリプトをダウンロードする最大時間を指定します。 既定値は、1 分です。|  
+|`downloadTimeout`|スクリプトをダウンロードする最長時間を、時間、分、および秒単位で指定します。 既定値は1分です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -47,7 +47,7 @@ Web プロキシを検出するために使用するスクリプトの特性を�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -55,4 +55,5 @@ Web プロキシを検出するために使用するスクリプトの特性を�
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="see-also"></a>関連項目
-- [ネットワーク設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+
+- [ネットワーク設定スキーマ](index.md)

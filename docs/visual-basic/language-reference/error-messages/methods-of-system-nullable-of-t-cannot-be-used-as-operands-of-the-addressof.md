@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32126
 ms.assetid: 2325668b-e2ad-40ee-a1ec-30450236c20d
-ms.openlocfilehash: 59e89b24eca6a034dc1df2216f6f0d68e8191a18
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e55e561fa20a3740d352537958681b0a66fc381e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278561"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592041"
 ---
 # <a name="methods-of-systemnullableof-t-cannot-be-used-as-operands-of-the-addressof-operator"></a>'System.Nullable(Of T)' のメソッドを 'AddressOf' 演算子のオペランドとして使用することはできません。
 ステートメントを使用して、`AddressOf`のプロシージャを表すオペランドと演算子、<xref:System.Nullable%601>構造体。  
@@ -21,9 +21,9 @@ ms.locfileid: "55278561"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   プロシージャ名に置き換えます、`AddressOf`句のメンバーでないオペランドとして<xref:System.Nullable%601>します。  
+- プロシージャ名に置き換えます、`AddressOf`句のメンバーでないオペランドとして<xref:System.Nullable%601>します。  
   
--   メソッドをラップするクラスを作成<xref:System.Nullable%601>を使用します。 次の例では、`NullableWrapper`クラスという名前の新しいメソッドを定義する`GetValueOrDefault`します。 この新しいメソッドのメンバーでないため、<xref:System.Nullable%601>に適用できる`nullInstance`、引数を形成する、null 許容型のインスタンス`AddressOf`します。  
+- メソッドをラップするクラスを作成<xref:System.Nullable%601>を使用します。 次の例では、`NullableWrapper`クラスという名前の新しいメソッドを定義する`GetValueOrDefault`します。 この新しいメソッドのメンバーでないため、<xref:System.Nullable%601>に適用できる`nullInstance`、引数を形成する、null 許容型のインスタンス`AddressOf`します。  
   
 ```vb  
 Module Module1  
@@ -62,6 +62,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Nullable%601>
 - [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)

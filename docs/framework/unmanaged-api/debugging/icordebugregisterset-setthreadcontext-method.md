@@ -15,24 +15,22 @@ helpviewer_keywords:
 ms.assetid: 73afa930-32cb-4c40-81f8-83e8e6fbe213
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6ee62c903da2f2568884b9be30b22bdcdc2d2c4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc2a41524d3fafe1cb45c9494d80aabe7dae0ed8
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686271"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76792037"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext メソッド
-`SetThreadContext` .NET Framework version 2.0 では実装されていません。 このメソッドを呼び出さないでください。  
+`SetThreadContext` は .NET Framework バージョン2.0 では実装されていません。 このメソッドを呼び出さないでください。  
   
 > [!NOTE]
->  高度な操作を使用して[icordebugnativeframe::setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)スレッドのコンテキストを設定します。  
+> スレッドのコンテキストを設定するには、高レベルの操作の[テキストフレーム:: SetIP](icordebugnativeframe-setip-method.md)を使用します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetThreadContext (  
     [in] ULONG32 contextSize,  
     [in, length_is(contextSize),  
@@ -40,15 +38,16 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** 1.1, 1.0  
+ **.NET Framework のバージョン:** 1.1、1.0  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugRegisterSet インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
-- [ICorDebugRegisterSet2 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+
+- [ICorDebugRegisterSet インターフェイス](icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 インターフェイス](icordebugregisterset2-interface.md)

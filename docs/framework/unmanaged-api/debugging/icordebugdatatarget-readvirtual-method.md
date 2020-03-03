@@ -15,21 +15,19 @@ helpviewer_keywords:
 ms.assetid: 55e57640-b3d2-413d-b4f4-fbc27fb8e37c
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 8bc807906af67350f309a4fc9439899cea328be8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20cea94961a250c3981d892910da1dcee20a060b
+ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575490"
+ms.lasthandoff: 01/28/2020
+ms.locfileid: "76783739"
 ---
 # <a name="icordebugdatatargetreadvirtual-method"></a>ICorDebugDataTarget::ReadVirtual メソッド
-指定したアドレスから始まる連続したメモリのブロックを取得し、指定されたバッファーで返します。  
+指定したアドレスを開始位置として連続したメモリのブロックを取得し、指定したバッファー内でそれを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ReadVirtual(  
     [in] CORDB_ADDRESS   address,  
     [out, size_is(bytesRequested), length_is(*pBytesRead)]  
@@ -38,24 +36,24 @@ HRESULT ReadVirtual(
     [out] ULONG32 *  pBytesRead);  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `address`  
- [in]要求されたメモリの開始アドレス。  
+ から要求されたメモリの開始アドレス。  
   
  `pbuffer`  
- [out]メモリを格納するバッファー。  
+ 入出力メモリが格納されるバッファー。  
   
  `bytesRequested`  
- [in]ターゲット アドレスから取得するバイト数。  
+ からターゲットアドレスから取得するバイト数。  
   
  `pBytesRead`  
- [out]ターゲット アドレスから実際に読み取られたバイト数。 これより少ない`bytesRequested`します。  
+ 入出力ターゲットアドレスから実際に読み取られたバイト数。 これは `bytesRequested`未満である可能性があります。  
   
-## <a name="remarks"></a>Remarks  
- (指定した開始アドレス) にある最初のバイトを読み取るには、呼び出しは成功した場合 (長さ、null で終わる文字列のような自己記述型のデータ構造体の効率的な読み取りをサポート) を返す必要があります。  
+## <a name="remarks"></a>コメント  
+ 最初のバイト (指定した開始アドレス) を読み取ることができる場合、呼び出しは成功を返します (null で終わる文字列など、自己記述型の長さを持つデータ構造の効率的な読み取りをサポートするため)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>要件  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -64,6 +62,7 @@ HRESULT ReadVirtual(
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
-- [ICorDebugDataTarget インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
-- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
+
+- [ICorDebugDataTarget インターフェイス](icordebugdatatarget-interface.md)
+- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグ](index.md)

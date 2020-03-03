@@ -2,12 +2,12 @@
 title: 呼び出し元情報 (C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 4a0e4d6ecad1863832a33ba91485d0c12675cd57
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50185275"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595341"
 ---
 # <a name="caller-information-c"></a>呼び出し元情報 (C#)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50185275"
 
 この情報を取得するには、省略可能なパラメーターに適用される属性を使用します。各パラメーターには既定値があります。 次の表は、<xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 名前空間で定義されている呼び出し元情報の属性の一覧です。
 
-|属性|説明|型|
+|Attribute|説明|Type|
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|呼び出し元を含むソース ファイルのフル パスです。 これは、コンパイル時のファイル パスです。|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|メソッドが呼び出されたソース ファイルの行番号。|`Integer`|
@@ -49,7 +49,7 @@ public void TraceMessage(string message,
 //  source line number: 31
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 省略可能な各パラメーターには、明示的な既定値を指定する必要があります。 省略可能と指定されていないパラメーターには、呼び出し元情報の属性を適用できません。
 
@@ -72,7 +72,7 @@ public void TraceMessage(string message,
 |呼び出しは、次のものの中で発生します。|メンバー名の結果|
 |-|-|
 |メソッド、プロパティ、またはイベント|呼び出しが発生したメソッド、プロパティ、またはイベントの名前。|
-|コンストラクター|文字列「.ctor」|
+|Constructor|文字列「.ctor」|
 |静的コンストラクター|文字列「.cctor」|
 |デストラクターです。|文字列「Finalize」|
 |ユーザー定義の演算子または変換|生成されたメンバー名 (「op_Addition」など)。|
@@ -81,7 +81,7 @@ public void TraceMessage(string message,
 
 ## <a name="see-also"></a>関連項目
 
-- [属性 (C#)](../../../csharp/programming-guide/concepts/attributes/index.md)
-- [共通属性 (C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)
-- [名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [プログラミングの概念 (C#)](../../../csharp/programming-guide/concepts/index.md)
+- [属性 (C#)](./attributes/index.md)
+- [共通属性 (C#)](./attributes/common-attributes.md)
+- [名前付き引数と省略可能な引数](../classes-and-structs/named-and-optional-arguments.md)
+- [プログラミングの概念 (C#)](./index.md)

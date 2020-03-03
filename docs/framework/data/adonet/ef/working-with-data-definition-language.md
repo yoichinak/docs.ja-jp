@@ -5,28 +5,28 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 9ca3732de5e4cfa07fe08dec78edc9de23a1a036
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 83d6fc1294f6aa37389db9e517b02866ef000b50
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904376"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854230"
 ---
 # <a name="working-with-data-definition-language"></a>データ定義言語の操作
-以降では、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]バージョン 4、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データ定義言語 (DDL) をサポートしています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
+.NET Framework version 4 以降では、Entity Framework はデータ定義言語 (DDL) をサポートしています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
   
  <xref:System.Data.Objects.ObjectContext> の次のメソッドでは、接続文字列と SSDL の内容を使用して、データベースの作成と削除、データベースが存在するかどうかの確認、生成された DDL スクリプトの表示を実行します。  
   
--   <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
+- <xref:System.Data.Objects.ObjectContext.CreateDatabase%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A>  
+- <xref:System.Data.Objects.ObjectContext.DeleteDatabase%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.DatabaseExists%2A>  
+- <xref:System.Data.Objects.ObjectContext.DatabaseExists%2A>  
   
--   <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
+- <xref:System.Data.Objects.ObjectContext.CreateDatabaseScript%2A>  
   
 > [!NOTE]
->  DDL コマンドを実行するには、十分なアクセス許可が必要です。  
+> DDL コマンドを実行するには、十分なアクセス許可が必要です。  
   
  上記に示したメソッドは、ほとんどの作業を基になる ADO.NET データ プロバイダーに委任します。 データベース オブジェクトの生成に使用される名前付け規則が、照会および更新に使用される規則と一致していることは、プロバイダーによって保証されています。  
   
@@ -34,21 +34,21 @@ ms.locfileid: "55904376"
   
 ## <a name="procedures"></a>手順  
   
-#### <a name="to-define-a-database-based-on-the-existing-model"></a>既存のモデルに基づいてデータベースを定義するには  
+### <a name="to-define-a-database-based-on-the-existing-model"></a>既存のモデルに基づいてデータベースを定義するには  
   
-1.  コンソール アプリケーションを作成します。  
+1. コンソール アプリケーションを作成します。  
   
-2.  既存のモデルをアプリケーションに追加します。  
+2. 既存のモデルをアプリケーションに追加します。  
   
-    1.  という名前の空のモデルを追加`SchoolModel`します。 空のモデルを作成するを参照してください。、[方法。新しい .edmx ファイルを作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))トピック。  
+    1. という名前`SchoolModel`の空のモデルを追加します。 空のモデルを作成する方法に[ついては、「方法:新しい .edmx ファイル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716703(v=vs.100))のトピックを作成します。  
   
      SchoolModel.edmx ファイルがプロジェクトに追加されます。  
   
-    1.  概念、ストレージをコピーしてから、School モデルのコンテンツのマッピング、 [School モデル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))トピック。  
+    1. School モデルの概念、ストレージ、およびマッピングの内容を[School モデル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))のトピックからコピーします。  
   
-    2.  SchoolModel.edmx ファイルを開き、`edmx:Runtime` タグ内にその内容を貼り付けます。  
+    2. SchoolModel.edmx ファイルを開き、`edmx:Runtime` タグ内にその内容を貼り付けます。  
   
-3.  main 関数に次のコードを追加します。 このコードでは、データベース サーバーへの接続文字列を初期化し、DDL スクリプトを表示して、データベースを作成します。さらに、コンテキストに新しいエンティティを追加して、データベースに変更内容を保存します。  
+3. main 関数に次のコードを追加します。 このコードでは、データベース サーバーへの接続文字列を初期化し、DDL スクリプトを表示して、データベースを作成します。さらに、コンテキストに新しいエンティティを追加して、データベースに変更内容を保存します。  
   
      [!code-csharp[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/csharp/VS_Snippets_Data/DP ObjectServices Concepts/CS/Source.cs#ddl)]
      [!code-vb[DP ObjectServices Concepts#DDL](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP ObjectServices Concepts/VB/Source.vb#ddl)]

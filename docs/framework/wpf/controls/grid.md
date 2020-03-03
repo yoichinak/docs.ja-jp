@@ -8,18 +8,18 @@ helpviewer_keywords:
 - content [WPF], Grid control
 - Grid control [WPF]
 ms.assetid: cf2cc94c-bbc2-4e54-a601-605038ab63fe
-ms.openlocfilehash: cffc1d078bffaa14326d279eb82f8ff040187145
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c0be95d84aa1b4b8b05e623f9012664de1a401a6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054888"
 ---
 # <a name="grid"></a>グリッド
-<xref:System.Windows.Controls.Grid>要素を使用して行および列の内容を正確に配置します。  
+<xref:System.Windows.Controls.Grid>要素を使用して、行と列の内容を正確に配置します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法トピック](../../../../docs/framework/wpf/controls/grid-how-to-topics.md)  
+ [方法トピック](grid-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ ms.locfileid: "33551029"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>関連項目  
- [レイアウト](../../../../docs/framework/wpf/advanced/layout.md)  
+ [レイアウト](../advanced/layout.md)  
   
- [チュートリアル: 初めての WPF デスクトップ アプリケーション](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer の概要](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer の概要](scrollviewer-overview.md)

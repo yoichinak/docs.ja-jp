@@ -15,47 +15,42 @@ helpviewer_keywords:
 ms.assetid: 46842618-0fe4-480b-871c-82fba82d23d9
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 20e718d425d0300aed8cc7ccf064126ee8384704
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b02fb0a18bfbc2e93ec204706ca1f17dde5d8c8a
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608298"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73125712"
 ---
 # <a name="icordebugcodecreatebreakpoint-method"></a>ICorDebugCode::CreateBreakpoint メソッド
-指定したオフセットには、このコード セグメントでは、ブレークポイントを作成します。  
+このコードセグメントの指定したオフセット位置にブレークポイントを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateBreakpoint (  
     [in] ULONG32     offset,  
     [out] ICorDebugFunctionBreakpoint **ppBreakpoint  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `offset`  
- [in]ブレークポイントを作成するオフセットです。  
+ からブレークポイントを作成する位置のオフセット。  
   
  `ppBreakpoint`  
- [out]ブレークポイントを表す"ICorDebugFunctionBreakpoint"オブジェクトのアドレスへのポインター。  
+ 入出力ブレークポイントを表す "いいね! ブレークポイント" オブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- 前に、ブレークポイントがアクティブでは、プロセス オブジェクトに追加する必要があります。  
+ ブレークポイントがアクティブになる前に、そのブレークポイントをプロセスオブジェクトに追加する必要があります。  
   
- このコードは、Microsoft intermediate language (MSIL) コードでは、およびの just-in-time (JIT) があるかどうか、コードの JIT コンパイルにも、ブレークポイント、コードのコンパイル済みのネイティブのバージョンが適用されます。 (同じは、コードが JIT コンパイルされた後では、true を返します。)  
+ このコードが Microsoft 中間言語 (MSIL) コードで、just-in-time (JIT) でコンパイルされたネイティブバージョンのコードがある場合、ブレークポイントは JIT コンパイルコードにも適用されます。 (コードが後で JIT コンパイルされる場合も同様です)。  
   
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
-  
-## <a name="see-also"></a>関連項目
-
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

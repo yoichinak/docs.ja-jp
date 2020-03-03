@@ -1,15 +1,15 @@
 ---
-title: '方法: 拡張子別にファイルをグループ化する (LINQ) (C#)'
+title: 拡張子別にファイルをグループ化する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 21a98320-a5a1-4981-82d8-6a637e7d9018
-ms.openlocfilehash: bad4df9009a40cede04438063b2d30916d0e68b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12b40c7dba7bd3e10f30ddfd394b25c36794428
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575150"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75345899"
 ---
-# <a name="how-to-group-files-by-extension-linq-c"></a>方法: 拡張子別にファイルをグループ化する (LINQ) (C#)
+# <a name="how-to-group-files-by-extension-linq-c"></a>拡張子別にファイルをグループ化する方法 (LINQ) (C#)
 この例では、LINQ を使用して、ファイルまたはフォルダーの一覧に対して、高度なグループ化および並べ替えを実行する方法を示します。 また、<xref:System.Linq.Enumerable.Skip%2A> メソッドと <xref:System.Linq.Enumerable.Take%2A> メソッドを使用して、出力をページごとにコンソール ウィンドウに表示する方法も示します。  
   
 ## <a name="example"></a>例  
@@ -105,9 +105,9 @@ class GroupByExtension
  このプログラムの出力は、ローカル ファイル システムの詳細と `startFolder` の設定内容に応じて長くなる可能性があります。 すべての結果を確認できるように、次の例では、結果をページごとに出力する方法を示します。 同じ手法を Windows アプリケーションや Web アプリケーションに適用できます。 このコードでは、グループ内の項目をページごとに処理するため、`foreach` ループを入れ子にする必要があります。 また、一覧内での現在位置を計算し、ユーザーがページングを停止してプログラムを終了できるようにするロジックも追加されています。 この場合、ページング クエリは、元のクエリからキャッシュされた結果に対して実行されます。 LINQ to SQL などの他のコンテキストでは、このようなキャッシュは必要ありません。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。  
+ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (C#)](./linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

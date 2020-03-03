@@ -1,5 +1,5 @@
 ---
-title: GoTo ステートメント (Visual Basic)
+title: GoTo ステートメント
 ms.date: 07/20/2015
 f1_keywords:
 - vb.GoTo
@@ -13,56 +13,56 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], GoTo statement
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
-ms.openlocfilehash: 729ff2a9cbeacaefdf0452a6c5868c229a8d05b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d5cdcd214c9679e245645505fe11cb5d521ce085
+ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582527"
+ms.lasthandoff: 11/22/2019
+ms.locfileid: "74351083"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
-プロシージャ内の指定した行に無条件に分岐します。  
+プロシージャ内の指定された行に無条件に分岐します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```vb  
 GoTo line  
 ```  
   
-## <a name="part"></a>パーツ  
+## <a name="part"></a>要素  
  `line`  
- 必須。 任意の行のラベル。  
+ 必須。 任意の行ラベル。  
   
-## <a name="remarks"></a>Remarks  
- `GoTo`のみが表示されるプロシージャ内の行にステートメントを分岐できます。 ラベルを 1 行が必要`GoTo`を参照できます。 詳細については、「[方法 :ステートメントにラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)します。  
+## <a name="remarks"></a>コメント  
+ `GoTo` ステートメントは、そのステートメントが出現するプロシージャ内の行にのみ分岐できます。 線には、`GoTo` が参照できる行ラベルが必要です。 詳細については、「 [How to: Label ステートメント](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)」を参照してください。  
   
 > [!NOTE]
->  `GoTo` ステートメントすると、コードが読み取りおよびメンテナンスを困難になります。 可能であれば、制御構造を使用します。 詳細については、次を参照してください。[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)します。  
+> `GoTo` ステートメントを使用すると、コードの読み取りと保守が困難になる場合があります。 可能な限り、代わりに制御構造を使用してください。 詳細については、「[制御フロー](../../../visual-basic/programming-guide/language-features/control-flow/index.md)」を参照してください。  
   
- 使用することはできません、`GoTo`外からの分岐にステートメントを`For`.`Next`, `For Each`...`Next`, `SyncLock`...`End SyncLock`, `Try`...`Catch`...`Finally`, `With`...`End With`、または`Using`.`End Using`内のラベルに構築します。  
+ `GoTo` ステートメントを使用して `For`の外部から分岐することはできません...`Next`、`For Each`...`Next`、`SyncLock`...`End SyncLock`、`Try`...`Catch`、`Finally`... `With`、`End With`の構造を内部のラベルにします。`Using``End Using`  
   
-## <a name="branching-and-try-constructions"></a>分岐と構築をお試しください  
- 内で、 `Try`.`Catch`...`Finally`で分岐に、構築、次の規則の適用、`GoTo`ステートメント。  
+## <a name="branching-and-try-constructions"></a>分岐と Try の構造  
+ `Try`...`Catch``Finally` 構築では、`GoTo` ステートメントを使用した分岐に次の規則が適用されます。  
   
-|ブロックまたは地域|外部からへの分岐|外部への分岐からの内部|  
+|ブロックまたはリージョン|外部からの分岐|内部からの分岐|  
 |---------------------|-------------------------------|-------------------------------|  
-|`Try` ブロック|のみ、`Catch`同じ構築ブロック<sup>1</sup>|のみ、全体の構造の外部|  
-|`Catch` ブロック|許可しません。|のみ、全体の構造の外部にまたは、`Try`同じ構築ブロック<sup>1</sup>|  
-|`Finally` ブロック|許可しません。|許可しません。|  
+|`Try` ブロック|同じ構築の `Catch` ブロックからのみ<sup>1</sup>|構築全体の外側にのみ|  
+|`Catch` ブロック|許可しない|構築全体の外側、または<sup>同じ構造体</sup>の `Try` ブロックにのみ|  
+|`Finally` ブロック|許可しない|許可しない|  
   
- <sup>1</sup>場合`Try`.`Catch`...`Finally`構築が、別の入れ子になった、`Catch`ブロックに分岐、`Try`ブロックの他にコピーせずに、独自の入れ子のレベルにある`Try`ブロックします。 入れ子になった`Try`.`Catch`...`Finally`構築を完全に含める必要があります、`Try`または`Catch`ブロックを入れ子になってを作成します。  
+ <sup>1</sup> `Try`...`Catch`...`Finally` 構築が別の構造体に入れ子になっている場合、`Catch` ブロックは独自の入れ子レベルで `Try` ブロックに分岐できますが、他の `Try` ブロックには分岐できません。 入れ子になった `Try`...`Catch``Finally` 構築は、入れ子になっている構築の `Try` または `Catch` ブロックに完全に含まれている必要があります。  
   
- 次の図では 1 つ`Try`別内で入れ子になった構築します。 2 つの構築ブロック間でさまざまな分岐は、有効または無効と表示されています。  
+ 次の図は、別の `Try` 構築を入れ子にしたものを示しています。 2つの構造のブロック間のさまざまな分岐は、有効または無効として示されます。  
   
- ![Try 構造内の分岐のグラフィック ダイアグラム](../../../visual-basic/language-reference/statements/media/trybranching.gif "TryBranching")  
-Try 構造内の有効および無効な分岐  
+ ![Try 構造内の分岐のグラフィック ダイアグラム](./media/goto-statement/try-construction-branching.gif)  
   
 ## <a name="example"></a>例  
- 次の例では、`GoTo`ステートメントをプロシージャ内の行ラベルに分岐します。  
+ 次の例では、`GoTo` ステートメントを使用して、プロシージャ内の行ラベルに分岐します。  
   
- [!code-vb[VbVbalrStatements#31](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/goto-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#31)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
+
 - [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
 - [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)

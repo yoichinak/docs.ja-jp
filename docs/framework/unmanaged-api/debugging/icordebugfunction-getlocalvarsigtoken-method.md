@@ -15,35 +15,33 @@ helpviewer_keywords:
 ms.assetid: 31e53494-bcc9-4981-91a4-f7e0f02cad48
 topic_type:
 - apiref
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9a09741ed778436f1cb35d094885bd3effa813a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c159a175ddd380015cc2dc21637c8b63fd3caea6
+ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411595"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73137889"
 ---
 # <a name="icordebugfunctiongetlocalvarsigtoken-method"></a>ICorDebugFunction::GetLocalVarSigToken メソッド
-この ICorDebugFunction インスタンスで表される関数の場合は、ローカル変数シグネチャのメタデータ トークンを取得します。  
+このによって表される関数の、ローカル変数シグネチャのメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetLocalVarSigToken (  
     [out] mdSignature *pmdSig  
 );  
 ```  
   
-#### <a name="parameters"></a>パラメーター  
+## <a name="parameters"></a>パラメーター  
  `pmdSig`  
- [out]ポインター、 `mdSignature` 、この関数の場合は、ローカル変数シグネチャのトークンまたは`mdSignatureNil`、この関数には、ローカル変数があるない場合。  
+ 入出力この関数のローカル変数シグネチャの `mdSignature` トークンへのポインター。または、この関数にローカル変数がない場合は `mdSignatureNil`。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>［要件］  
+ **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

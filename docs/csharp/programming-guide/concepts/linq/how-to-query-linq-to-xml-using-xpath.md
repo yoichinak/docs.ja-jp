@@ -1,15 +1,15 @@
 ---
-title: '方法: XPath を使用して LINQ to XML にクエリを実行する (C#)'
+title: XPath を使用して LINQ to XML にクエリを実行する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: a3e9cb29b9ba027cfc70eeb0cd163b24834dff83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61878febd9b4880872b7bc58e4de04b37cff96f8
+ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564108"
+ms.lasthandoff: 12/25/2019
+ms.locfileid: "75344803"
 ---
-# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>方法: XPath を使用して LINQ to XML にクエリを実行する (C#)
+# <a name="how-to-query-linq-to-xml-using-xpath-c"></a>XPath を使用して LINQ to XML にクエリを実行する方法 (C#)
 このトピックでは、XPath を使用して XML ツリーに対してクエリを実行できる拡張メソッドについて説明します。 これらの拡張メソッドの使用に関する詳細については、<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> を参照してください。  
   
  古いコードの広範な利用など、XPath を使用してクエリを実行する特別な理由がない限りは、XPath を LINQ to XML と共に使用することはお勧めできません。 XPath クエリは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリよりもパフォーマンスが低くなります。  
@@ -39,6 +39,3 @@ foreach (XElement el in list)
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [高度なクエリ手法 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)
