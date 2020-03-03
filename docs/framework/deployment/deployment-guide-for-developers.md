@@ -6,12 +6,12 @@ helpviewer_keywords:
 - developer's guide, deploying .NET Framework
 - deployment [.NET Framework], developer's guide
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
-ms.openlocfilehash: 597bfd2c16f6289a2bcb931c3896918dcb6d9a4d
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 26c168040b0fa5e975e64a7518b0d0bf250c4711
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094138"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628125"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -134,21 +134,7 @@ InstallAware は、Windows アプリ (APPX)、Windows インストーラー (MSI
 
 ### <a name="installshield-deployment"></a>InstallShield 配置
 
-Visual Studio で InstallShield 配置を選択し、.NET Framework の依存関係を追加するには:
-
-1. Visual Studio メニュー バーで、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順に選択します。
-
-2. **[新しいプロジェクト]** ダイアログ ボックスの左ペインで、 **[その他のプロジェクトの種類]** 、 **[セットアップと配置]** 、 **[InstallShield LE]** の順に選択します。
-
-3. **[名前]** ボックスにプロジェクト名を入力し、 **[OK]** をクリックします。
-
-4. 初めてセットアップと配置プロジェクトを作成する場合、 **[Go to InstallShield]\(InstallShield に移動\)** または **[InstallShield Limited Edition の有効化]** を選択し、ご使用の Microsoft Visual Studio のバージョンの InstallShield Limited Edition をダウンロードします。 Visual Studio を再起動します。
-
-5. **プロジェクト アシスタント** ウィザードに移動し、 **[アプリケーション ファイル]** をクリックしてプロジェクト出力を追加します。 このウィザードを使用して、他のプロジェクト属性を設定できます。
-
-6. **[インストール要件]** に移動し、オペレーティング システムと、インストールする .NET Framework のバージョンを選択します。
-
-7. セットアップ プロジェクトのショートカット メニューを開き、 **[ビルド]** を選択します。
+InstallShield では、Windows アプリ パッケージ (MSIX、APPX)、Windows インストーラー パッケージ (MSI) および Native Code (EXE) インストーラをビルドできます。 InstallShield では、Visual Studio の統合も可能です。 詳細については、[InstallShield](https://www.flexerasoftware.com/install/products/installshield.html) の Web サイトを参照してください。
 
 <a name="wix"></a>
 
