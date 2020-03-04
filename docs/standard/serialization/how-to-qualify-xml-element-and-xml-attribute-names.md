@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 383dc7687e67e183b86598857067801c950b0312
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: db0795dd83cc96aba49dd435c875e98a9a6c18cb
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545089"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159872"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>XML 要素と XML 属性の名前を修飾する方法
 
@@ -38,7 +38,7 @@ XML 名前空間を使用すると、XML ドキュメント内の XML 要素お�
 
 5. `XmlSerializerNamespaces` を `Serialize` の `XmlSerializer` メソッドに渡します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 `XmlSerializerNamespaces` を作成し、このオブジェクトにプレフィックスと名前空間のペアを 2 つ追加する例を次に示します。 このコードでは、`XmlSerializer` クラスのインスタンスをシリアル化するために使用される `Books` を作成します。 また、`Serialize` を使用して `XmlSerializerNamespaces` メソッドを呼び出し、XML にプレフィックス付き名前空間を含めることができるようにします。
 
@@ -111,7 +111,7 @@ public class Program
     {
         SerializeObject("XmlNamespaces.xml");
     }
-    
+
     public static void SerializeObject(string filename)
     {
         var mySerializer = new XmlSerializer(typeof(Books));
@@ -162,7 +162,7 @@ public class Price
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [XML スキーマ定義ツールと XML シリアル化](the-xml-schema-definition-tool-and-xml-serialization.md)

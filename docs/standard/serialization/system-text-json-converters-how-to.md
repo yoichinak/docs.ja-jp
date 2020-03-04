@@ -10,23 +10,23 @@ helpviewer_keywords:
 - serialization
 - objects, serializing
 - converters
-ms.openlocfilehash: f72d2d83d701b20648140900d65c9098a8abb721
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 310967f39c3aa7a46d79087bcbf0cb016f7d7284
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76164061"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159573"
 ---
 # <a name="how-to-write-custom-converters-for-json-serialization-marshalling-in-net"></a>.NET で JSON シリアル化 (マーシャリング) のカスタムコンバーターを記述する方法
 
-この記事では、<xref:System.Text.Json> 名前空間に用意されている JSON シリアル化クラスのカスタムコンバーターを作成する方法について説明します。 `System.Text.Json`の概要については、「 [.net で JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)」を参照してください。
+この記事では、<xref:[!OP.NO-LOC(System.Text.Json)]> 名前空間に用意されている JSON シリアル化クラスのカスタムコンバーターを作成する方法について説明します。 `[!OP.NO-LOC(System.Text.Json)]`の概要については、「 [.net で JSON をシリアル化および逆シリアル化する方法](system-text-json-how-to.md)」を参照してください。
 
-*コンバーター*は、オブジェクトまたは値を JSON との間で変換するクラスです。 `System.Text.Json` 名前空間には、JavaScript プリミティブにマップされるほとんどのプリミティブ型用の組み込みのコンバーターがあります。 カスタムコンバーターは、次のように記述できます。
+*コンバーター*は、オブジェクトまたは値を JSON との間で変換するクラスです。 `[!OP.NO-LOC(System.Text.Json)]` 名前空間には、JavaScript プリミティブにマップされるほとんどのプリミティブ型用の組み込みのコンバーターがあります。 カスタムコンバーターは、次のように記述できます。
 
 * 組み込みのコンバーターの既定の動作をオーバーライドする場合は。 たとえば、既定の ISO 8601-1:2019 形式ではなく、`DateTime` 値を mm/dd/yyyy 形式で表すようにすることができます。
 * カスタム値型をサポートする場合は。 たとえば、`PhoneNumber` 構造体などです。
 
-また、カスタムコンバーターを作成して、現在のリリースに含まれていない機能を使用して `System.Text.Json` をカスタマイズまたは拡張することもできます。 この記事の後半では、次のシナリオについて説明します。
+また、カスタムコンバーターを作成して、現在のリリースに含まれていない機能を使用して `[!OP.NO-LOC(System.Text.Json)]` をカスタマイズまたは拡張することもできます。 この記事の後半では、次のシナリオについて説明します。
 
 * 推論された[型をオブジェクトのプロパティに逆シリアル](#deserialize-inferred-types-to-object-properties)化します。
 * [文字列以外のキーを使用した辞書をサポート](#support-dictionary-with-non-string-key)します。
@@ -58,7 +58,7 @@ ms.locfileid: "76164061"
 
 ## <a name="sample-factory-pattern-converter"></a>サンプルファクトリパターンコンバーター
 
-次のコードは、`Dictionary<Enum,TValue>`で動作するカスタムコンバーターを示しています。 このコードは、最初のジェネリック型パラメーターが `Enum`、2番目のジェネリック型パラメーターが開いているため、ファクトリパターンに従います。 `CanConvert` メソッドは、2つのジェネリックパラメーターを持つ `Dictionary` に対してのみ `true` を返します。最初のパラメーターは `Enum` 型です。 内部コンバーターは、`TValue`に対して実行時に提供されるいずれかの型を処理する既存のコンバーターを取得します。 
+次のコードは、`Dictionary<Enum,TValue>`で動作するカスタムコンバーターを示しています。 このコードは、最初のジェネリック型パラメーターが `Enum`、2番目のジェネリック型パラメーターが開いているため、ファクトリパターンに従います。 `CanConvert` メソッドは、2つのジェネリックパラメーターを持つ `Dictionary` に対してのみ `true` を返します。最初のパラメーターは `Enum` 型です。 内部コンバーターは、`TValue`に対して実行時に提供されるいずれかの型を処理する既存のコンバーターを取得します。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/DictionaryTKeyEnumTValueConverter.cs)]
 
@@ -68,47 +68,47 @@ ms.locfileid: "76164061"
 
 次の手順では、基本的なパターンに従ってコンバーターを作成する方法について説明します。
 
-* `T` がシリアル化および逆シリアル化される型である <xref:System.Text.Json.Serialization.JsonConverter%601> から派生するクラスを作成します。
-* `Read` メソッドをオーバーライドして受信 JSON を逆シリアル化し、型 `T`に変換します。 メソッドに渡された <xref:System.Text.Json.Utf8JsonReader> を使用して、JSON を読み取ります。
-* `Write` メソッドをオーバーライドして、`T`型の受信オブジェクトをシリアル化します。 メソッドに渡された <xref:System.Text.Json.Utf8JsonWriter> を使用して JSON を記述します。
+* `T` がシリアル化および逆シリアル化される型である <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverter%601> から派生するクラスを作成します。
+* `Read` メソッドをオーバーライドして受信 JSON を逆シリアル化し、型 `T`に変換します。 メソッドに渡された <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonReader> を使用して、JSON を読み取ります。
+* `Write` メソッドをオーバーライドして、`T`型の受信オブジェクトをシリアル化します。 メソッドに渡された <xref:[!OP.NO-LOC(System.Text.Json)].Utf8JsonWriter> を使用して JSON を記述します。
 * `CanConvert` メソッドは、必要な場合にのみオーバーライドします。 変換する型が `T`型である場合、既定の実装は `true` を返します。 したがって、型 `T` だけをサポートするコンバーターは、このメソッドをオーバーライドする必要はありません。 このメソッドをオーバーライドする必要があるコンバーターの例については、この記事で後述する「[ポリモーフィックな逆シリアル化](#support-polymorphic-deserialization)」を参照してください。
 
-[組み込みのコンバーターソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters/)は、カスタムコンバーターを作成するための参照の実装として参照できます。
+[組み込みのコンバーターソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/[!OP.NO-LOC(System.Text.Json)]/src/[!OP.NO-LOC(System/Text/Json)]/Serialization/Converters/)は、カスタムコンバーターを作成するための参照の実装として参照できます。
 
 ## <a name="steps-to-follow-the-factory-pattern"></a>ファクトリパターンに従う手順
 
 次の手順では、ファクトリパターンに従ってコンバーターを作成する方法について説明します。
 
-* <xref:System.Text.Json.Serialization.JsonConverterFactory> から派生するクラスを作成します。
-* 変換する型が、コンバーターが処理できる型である場合に true を返すように `CanConvert` メソッドをオーバーライドします。 たとえば、コンバーターが `List<T>` 用の場合、`List<int>`、`List<string>`、および `List<DateTime>`だけを処理できます。 
+* <xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterFactory> から派生するクラスを作成します。
+* 変換する型が、コンバーターが処理できる型である場合に true を返すように `CanConvert` メソッドをオーバーライドします。 たとえば、コンバーターが `List<T>` 用の場合、`List<int>`、`List<string>`、および `List<DateTime>`だけを処理できます。
 * `CreateConverter` メソッドをオーバーライドして、実行時に提供される変換の種類を処理するコンバータークラスのインスタンスを返します。
-* `CreateConverter` メソッドによってインスタンス化されるコンバータークラスを作成します。 
+* `CreateConverter` メソッドによってインスタンス化されるコンバータークラスを作成します。
 
 オブジェクトを文字列との間で変換するコードはすべての型で同じではないため、オープンジェネリックにはファクトリパターンが必要です。 オープンジェネリック型 (`List<T>`など) のコンバーターは、背後にあるクローズジェネリック型 (`List<DateTime>`など) のコンバーターを作成する必要があります。 コードは、コンバーターが処理できる各閉じられたジェネリック型を処理するように記述する必要があります。
 
-`Enum` 型はオープンジェネリック型に似ています。 `Enum` のコンバーターは、シーンの背後にある特定の `Enum` (`WeekdaysEnum`など) のコンバーターを作成する必要があります。 
+`Enum` 型はオープンジェネリック型に似ています。 `Enum` のコンバーターは、シーンの背後にある特定の `Enum` (`WeekdaysEnum`など) のコンバーターを作成する必要があります。
 
 ## <a name="error-handling"></a>エラー処理
 
-エラー処理コードで例外をスローする必要がある場合は、メッセージを使用せずに <xref:System.Text.Json.JsonException> をスローすることを検討してください。 この例外の種類では、エラーの原因となった JSON の部分へのパスを含むメッセージが自動的に作成されます。 たとえば、ステートメント `throw new JsonException();` では、次の例のようなエラーメッセージが生成されます。
+エラー処理コードで例外をスローする必要がある場合は、メッセージを使用せずに <xref:[!OP.NO-LOC(System.Text.Json)].JsonException> をスローすることを検討してください。 この例外の種類では、エラーの原因となった JSON の部分へのパスを含むメッセージが自動的に作成されます。 たとえば、ステートメント `throw new JsonException();` では、次の例のようなエラーメッセージが生成されます。
 
 ```
-Unhandled exception. System.Text.Json.JsonException: 
-The JSON value could not be converted to System.Object. 
+Unhandled exception. [!OP.NO-LOC(System.Text.Json)].JsonException:
+The JSON value could not be converted to System.Object.
 Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 ```
 
-メッセージ (`throw new JsonException("Error occurred")`など) を指定した場合でも、例外は <xref:System.Text.Json.JsonException.Path> プロパティのパスを提供します。
+メッセージ (`throw new JsonException("Error occurred")`など) を指定した場合でも、例外は <xref:[!OP.NO-LOC(System.Text.Json)].JsonException.Path> プロパティのパスを提供します。
 
 ## <a name="register-a-custom-converter"></a>カスタムコンバーターを登録する
 
 カスタムコンバーターを*登録*して、`Serialize` および `Deserialize` メソッドで使用されるようにします。 次のいずれかの方法を選択します。
 
-* コンバータークラスのインスタンスを <xref:System.Text.Json.JsonSerializerOptions.Converters?displayProperty=nameWithType> コレクションに追加します。
-* カスタムコンバーターを必要とするプロパティに[[jsonconverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute)属性を適用します。
-* [[Jsonconverter]](xref:System.Text.Json.Serialization.JsonConverterAttribute)属性をカスタム値型を表すクラスまたは構造体に適用します。
+* コンバータークラスのインスタンスを <xref:[!OP.NO-LOC(System.Text.Json)].JsonSerializerOptions.Converters?displayProperty=nameWithType> コレクションに追加します。
+* カスタムコンバーターを必要とするプロパティに[[jsonconverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute)属性を適用します。
+* [[Jsonconverter]](xref:[!OP.NO-LOC(System.Text.Json)].Serialization.JsonConverterAttribute)属性をカスタム値型を表すクラスまたは構造体に適用します。
 
-## <a name="registration-sample---converters-collection"></a>登録サンプル-コンバーターコレクション 
+## <a name="registration-sample---converters-collection"></a>登録サンプル-コンバーターコレクション
 
 <xref:System.DateTimeOffset>型のプロパティの既定値 <xref:System.ComponentModel.DateTimeOffsetConverter> する例を次に示します。
 
@@ -296,11 +296,11 @@ Path: $.Date | LineNumber: 1 | BytePositionInLine: 37.
 * [逆シリアル化時に文字列と数値の両方を使用できる Int32 コンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Int32.cs)
 * [列挙型コンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Enum.cs)
 * [外部データを受け入れる\<T > コンバーターの一覧表示](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.List.cs)
-* [コンマで区切られた数値のリストを処理する Long [] コンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs) 
+* [コンマで区切られた数値のリストを処理する Long [] コンバーター](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/tests/Serialization/CustomConverterTests.Array.cs)
 
 既存の組み込みコンバーターの動作を変更するコンバーターを作成する必要がある場合は、[既存のコンバーターのソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)を取得して、カスタマイズの開始点として機能させることができます。
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 * [組み込みのコンバーターのソースコード](https://github.com/dotnet/runtime/tree/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/src/System/Text/Json/Serialization/Converters)
 * [System.Text.Json での DateTime と DateTimeOffset のサポート](../datetime/system-text-json-support.md)

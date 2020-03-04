@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 221d19ee6441614324d375b66e8b13a90f683890
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: e0a6912c10baa0be4a8ef9f6536948ae27f235c7
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921276"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159560"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft. Json から system.string に移行する方法
 
@@ -81,7 +81,7 @@ ms.locfileid: "76921276"
 
 <xref:System.Text.Json> は既定で厳密であり、決定的な動作を重視して、呼び出し元の代わりに推測や解釈を回避します。 ライブラリは、このようにして、パフォーマンスとセキュリティのために意図的に設計されています。 既定では、`Newtonsoft.Json` は柔軟です。 設計におけるこの基本的な違いは、既定の動作の次のような具体的な違いの多くによるものです。
 
-### <a name="case-insensitive-deserialization"></a>大文字と小文字を区別しない逆シリアル化 
+### <a name="case-insensitive-deserialization"></a>大文字と小文字を区別しない逆シリアル化
 
 逆シリアル化中に、`Newtonsoft.Json` は、既定では大文字と小文字を区別せずにプロパティ名が一致します。 <xref:System.Text.Json> の既定値では大文字と小文字が区別され、完全に一致するため、パフォーマンスが向上します。 大文字と小文字を区別しない照合を実行する方法については、「[大文字と小文字](system-text-json-how-to.md#case-insensitive-property-matching)を区別しないプロパティの一致
 
@@ -91,7 +91,7 @@ ASP.NET Core を使用して `System.Text.Json` 間接的に使用している�
 
 シリアル化時には、文字をエスケープせずに文字を使用することを、`Newtonsoft.Json` が比較的制限されています。 つまり、`xxxx` が文字のコードポイントである `\uxxxx` には置き換えられません。 エスケープされた場所では、文字の前に `\` を出力します (たとえば、`"` が `\"`になります)。 <xref:System.Text.Json> は、クロスサイトスクリプティング (XSS) 攻撃または情報漏えい攻撃に対する多層防御を提供するために、既定でより多くの文字をエスケープし、6文字のシーケンスを使用してこれを行います。 `System.Text.Json` は、既定では ASCII 以外の文字をすべてエスケープするため、`Newtonsoft.Json`で `StringEscapeHandling.EscapeNonAscii` を使用している場合は何もする必要はありません。 また `System.Text.Json` は、既定で HTML を区別する文字もエスケープします。 既定の `System.Text.Json` 動作をオーバーライドする方法については、「[文字エンコードをカスタマイズ](system-text-json-how-to.md#customize-character-encoding)する」を参照してください。
 
-### <a name="comments"></a>コメント
+### <a name="comments"></a>説明
 
 逆シリアル化中、`Newtonsoft.Json` は JSON 内のコメントを既定で無視します。 既定 <xref:System.Text.Json> は、 [RFC 8259](https://tools.ietf.org/html/rfc8259)仕様に含まれていないため、コメントの例外をスローします。 コメントを許可する方法の詳細については、「[コメントと末尾のコンマを許可](system-text-json-how-to.md#allow-comments-and-trailing-commas)する」を参照してください。
 
@@ -194,7 +194,7 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json` は、(引用符で囲まれた) JSON 文字列によって表される数値をシリアル化または逆シリアル化できます。 たとえば、`{"DegreesCelsius":23}`ではなく、`{"DegreesCelsius":"23"}` を受け入れることができます。 <xref:System.Text.Json>でこの動作を有効にするには、次の例のようなカスタムコンバーターを実装します。 コンバーターは、`long`として定義されたプロパティを処理します。
 
-* JSON 文字列としてシリアル化されます。 
+* JSON 文字列としてシリアル化されます。
 * このメソッドは、逆シリアル化中に、JSON の数値と数値を引用符で囲みます。
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/LongToStringConverter.cs)]
@@ -238,7 +238,7 @@ The JSON value could not be converted to System.String.
 
 `object` プロパティの型の推定を実装するには、「[カスタムコンバーターの記述方法](system-text-json-converters-how-to.md#deserialize-inferred-types-to-object-properties)」の例のようなコンバーターを作成します。
 
-### <a name="deserialize-null-to-non-nullable-type"></a>Null 非許容型に null を逆シリアル化する 
+### <a name="deserialize-null-to-non-nullable-type"></a>Null 非許容型に null を逆シリアル化する
 
 `Newtonsoft.Json` は、次のシナリオでは例外をスローしません。
 
@@ -291,7 +291,7 @@ The JSON value could not be converted to System.String.
 
 `Newtonsoft.Json` `[JsonConstructor]` 属性では、POCO に逆シリアル化するときに呼び出すコンストラクターを指定できます。 <xref:System.Text.Json> では、パラメーターなしのコンストラクターのみがサポートされます。 回避策として、カスタムコンバーターで必要なコンストラクターを呼び出すことができます。 変更できない[クラスと構造体への逆シリアル](#deserialize-to-immutable-classes-and-structs)化の例を参照してください。
 
-### <a name="required-properties"></a>必須のプロパティ
+### <a name="required-properties"></a>必須プロパティ
 
 `Newtonsoft.Json`では、`[JsonProperty]` 属性に `Required` を設定することによって、プロパティが必須であることを指定します。 必須とマークされたプロパティの JSON で値が受信されない場合、`Newtonsoft.Json` は例外をスローします。
 
@@ -326,7 +326,7 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 
 `Newtonsoft.Json` には、シリアル化または逆シリアル化のプロパティを条件付きで無視するいくつかの方法があります。
 
-* `DefaultContractResolver` を使用すると、任意の条件に基づいて追加または除外するプロパティを選択できます。 
+* `DefaultContractResolver` を使用すると、任意の条件に基づいて追加または除外するプロパティを選択できます。
 * `JsonSerializerSettings` の `NullValueHandling` と `DefaultValueHandling` の設定を使用すると、すべての null 値または既定値のプロパティを無視するように指定できます。
 * `[JsonProperty]` 属性の `NullValueHandling` と `DefaultValueHandling` の設定を使用すると、null または既定値に設定されている場合に無視する必要がある個々のプロパティを指定できます。
 
@@ -341,7 +341,7 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 * 型の既定値を持つすべてのプロパティを無視します。
 * 型の既定値を持つ選択されたプロパティを無視します。
 * 選択したプロパティの値が null の場合は無視します。
-* 実行時に評価された任意の条件に基づいて、選択したプロパティを無視します。 
+* 実行時に評価された任意の条件に基づいて、選択したプロパティを無視します。
 
 この機能については、カスタムコンバーターを作成できます。 このアプローチを示すサンプル POCO とカスタムコンバーターを次に示します。
 
@@ -349,7 +349,7 @@ JSON に `Date` プロパティがない場合に逆シリアル化が失敗す�
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecastRuntimeIgnoreConverter.cs)]
 
-コンバーターは、値が null、空の文字列、または "N/A" の場合、`Summary` プロパティをシリアル化から省略します。 
+コンバーターは、値が null、空の文字列、または "N/A" の場合、`Summary` プロパティをシリアル化から省略します。
 
 [クラスの属性を使用](system-text-json-converters-how-to.md#registration-sample---jsonconverter-on-a-type)するか、<xref:System.Text.Json.JsonSerializerOptions.Converters> コレクションにコンバーターを[追加](system-text-json-converters-how-to.md#registration-sample---converters-collection)して、このカスタムコンバーターを登録します。
 
@@ -446,7 +446,7 @@ JSON に対象の型に存在しないプロパティが含まれている場合
 
 ### <a name="jsondocument-is-idisposable"></a>JsonDocument が IDisposable です
 
-`JsonDocument` は、プールされたバッファーにデータのインメモリビューを構築します。 したがって、`JObject` または `Newtonsoft.Json`からの `JArray` とは異なり、`JsonDocument` 型は `IDisposable` を実装し、using ブロック内で使用する必要があります。 
+`JsonDocument` は、プールされたバッファーにデータのインメモリビューを構築します。 したがって、`JObject` または `Newtonsoft.Json`からの `JArray` とは異なり、`JsonDocument` 型は `IDisposable` を実装し、using ブロック内で使用する必要があります。
 
 有効期間の所有権を転送し、責任を呼び出し元に破棄する場合にのみ、API から `JsonDocument` を返します。 ほとんどのシナリオでは、これは必要ありません。 呼び出し元が JSON ドキュメント全体を処理する必要がある場合は、<xref:System.Text.Json.JsonDocument.RootElement%2A>の <xref:System.Text.Json.JsonElement.Clone%2A> を返します。これは <xref:System.Text.Json.JsonElement>です。 呼び出し元が JSON ドキュメント内の特定の要素を操作する必要がある場合は、その <xref:System.Text.Json.JsonElement>の <xref:System.Text.Json.JsonElement.Clone%2A> を返します。 `Clone`を作成せずに `RootElement` またはサブ要素を直接返した場合、呼び出し元は、それを所有する `JsonDocument` が破棄された後に、返された `JsonElement` にアクセスすることはできません。
 
@@ -456,7 +456,7 @@ JSON に対象の型に存在しないプロパティが含まれている場合
 public JsonElement LookAndLoad(JsonElement source)
 {
     string json = File.ReadAllText(source.GetProperty("fileName").GetString());
-   
+
     using (JsonDocument doc = JsonDocument.Parse(json))
     {
         return doc.RootElement.Clone();
@@ -464,9 +464,9 @@ public JsonElement LookAndLoad(JsonElement source)
 }
 ```
 
-前のコードでは、`fileName` プロパティを含む `JsonElement` が必要です。 JSON ファイルが開き、`JsonDocument`が作成されます。 メソッドは、呼び出し元がドキュメント全体を処理することを前提としているため、`RootElement`の `Clone` が返されます。 
+前のコードでは、`fileName` プロパティを含む `JsonElement` が必要です。 JSON ファイルが開き、`JsonDocument`が作成されます。 メソッドは、呼び出し元がドキュメント全体を処理することを前提としているため、`RootElement`の `Clone` が返されます。
 
-`JsonElement` を受け取り、サブ要素を返す場合は、サブ要素の `Clone` を返す必要はありません。 呼び出し元は、渡された `JsonElement` が属している `JsonDocument` を維持する役割を担います。 例:
+`JsonElement` を受け取り、サブ要素を返す場合は、サブ要素の `Clone` を返す必要はありません。 呼び出し元は、渡された `JsonElement` が属している `JsonDocument` を維持する役割を担います。 次に例を示します。
 
 ```csharp
 public JsonElement ReturnFileName(JsonElement source)
@@ -514,7 +514,7 @@ public JsonElement ReturnFileName(JsonElement source)
 
 `Utf8JsonReader` は、UTF-8 でエンコードされた[ReadOnlySpan\<バイト >](xref:System.ReadOnlySpan%601)または[ReadOnlySequence\<バイト >](xref:System.Buffers.ReadOnlySequence%601) (<xref:System.IO.Pipelines.PipeReader>からの読み取りの結果) からの読み取りをサポートします。
 
-同期読み取りの場合は、ストリームの末尾がバイト配列になるまで JSON ペイロードを読み取り、それをリーダーに渡すことができます。 (UTF-16 としてエンコードされた) 文字列から読み取るには、<xref:System.Text.Encoding.UTF8>を呼び出します。<xref:System.Text.Encoding.GetBytes%2A> まず、文字列を UTF-8 でエンコードされたバイト配列にトランスコードします。 その後、それを `Utf8JsonReader`に渡します。 
+同期読み取りの場合は、ストリームの末尾がバイト配列になるまで JSON ペイロードを読み取り、それをリーダーに渡すことができます。 (UTF-16 としてエンコードされた) 文字列から読み取るには、<xref:System.Text.Encoding.UTF8>を呼び出します。<xref:System.Text.Encoding.GetBytes%2A> まず、文字列を UTF-8 でエンコードされたバイト配列にトランスコードします。 その後、それを `Utf8JsonReader`に渡します。
 
 `Utf8JsonReader` は入力を JSON テキストと見なしているため、UTF-8 バイトオーダーマーク (BOM) は無効な JSON と見なされます。 呼び出し元は、データをリーダーに渡す前にフィルター処理する必要があります。
 
@@ -645,7 +645,7 @@ doc.WriteTo(writer);
 * [UnifiedJsonWriter.JsonTextWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.JsonTextWriter.cs)
 * [UnifiedJsonWriter.Utf8JsonWriter.cs](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/installer/managed/Microsoft.Extensions.DependencyModel/UnifiedJsonWriter.Utf8JsonWriter.cs)
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 <!-- * [System.Text.Json roadmap](https://github.com/dotnet/runtime/blob/81bf79fd9aa75305e55abe2f7e9ef3f60624a3a1/src/libraries/System.Text.Json/roadmap/README.md)[Restore this when the roadmap is updated.]-->
 * [System.Text.Json の概要](system-text-json-overview.md)

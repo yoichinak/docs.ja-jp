@@ -12,12 +12,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: d0b38523f054598ba6fb1f05a0183bc4ccff2120
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fbb59dbe364763209f44a4e2241d1d5275036c40
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132558"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156024"
 ---
 # <a name="converting-times-between-time-zones"></a>タイム ゾーン間での時刻の変換
 
@@ -57,7 +57,7 @@ ms.locfileid: "73132558"
 
 ## <a name="converting-utc-to-a-designated-time-zone"></a>UTC から指定したタイム ゾーンへの変換
 
-UTC を現地時刻に変換するには、後述の「UTC からローカル時刻への変換」を参照してください。 UTC を、指定した任意のタイムゾーンの時刻に変換するには、<xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> メソッドを呼び出します。 このメソッドは、次の 2 つのパラメーターを受け取ります。
+UTC を現地時刻に変換するには、後述の「UTC からローカル時刻への変換」を参照してください。 UTC を、指定した任意のタイムゾーンの時刻に変換するには、<xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A> メソッドを呼び出します。 メソッドには、
 
 - 変換対象の UTC。 <xref:System.DateTime.Kind%2A> プロパティが `Unspecified` または `Utc`に設定されている <xref:System.DateTime> 値を指定する必要があります。
 
@@ -109,7 +109,7 @@ UTC を現地時刻に変換するには、時刻を変換する <xref:System.Da
 たとえば、Web ページに対するユーザー要求の日時が既知であり、MM/dd/yyyy hh:mm:ss zzzz の形式で文字列としてシリアル化される場合、次の `ReturnTimeOnServer` メソッドは、この日時値を Web サーバー上の日時に変換します。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/TimeConversions.cs#1)]
-[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)] 
+[!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions.vb#1)]
 
 メソッドに "9/1/2007 5:32:07-05:00" という文字列が渡された場合、その日付と時刻は UTC より5時間前のタイムゾーンで表され、米国太平洋標準時ゾーンにあるサーバーでは 9/1/2007 3:32:07 AM-07:00 が返されます。
 
@@ -118,7 +118,7 @@ UTC を現地時刻に変換するには、時刻を変換する <xref:System.Da
 [!code-csharp[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/cs/timeconversions2.cs#2)]
 [!code-vb[System.DateTimeOffset.Conceptual.OffsetConversions#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.OffsetConversions/vb/TimeConversions2.vb#2)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.TimeZoneInfo>
 - [日付、時刻およびタイム ゾーン](../../../docs/standard/datetime/index.md)

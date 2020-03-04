@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: fdca8d957bb2453e90652af1dfe5ef99b33b1b2c
-ms.sourcegitcommit: 5d769956a04b6d68484dd717077fabc191c21da5
+ms.openlocfilehash: 8025f84f2425f5b91e08b28ddb24d105d8c4d1a3
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76163203"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159586"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリング解除) を行う方法
 
@@ -61,7 +61,7 @@ JSON を文字列またはファイルに書き込むには、<xref:System.Text.
 
 [!code-csharp[](~/samples/snippets/core/system-text-json/csharp/WeatherForecast.cs?name=SnippetWFWithPOCOs)]
 
-前の型のインスタンスをシリアル化した JSON 出力は、次の例のようになります。 既定では、JSON 出力が縮小されます。 
+前の型のインスタンスをシリアル化した JSON 出力は、次の例のようになります。 既定では、JSON 出力が縮小されます。
 
 ```json
 {"Date":"2019-08-01T00:00:00-07:00","TemperatureCelsius":25,"Summary":"Hot","DatesAvailable":["2019-08-01T00:00:00-07:00","2019-08-02T00:00:00-07:00"],"TemperatureRanges":{"Cold":{"High":20,"Low":-10},"Hot":{"High":60,"Low":20}},"SummaryWords":["Cool","Windy","Humid"]}
@@ -191,7 +191,7 @@ JSON 出力を整形するには、<xref:System.Text.Json.JsonSerializerOptions.
 * [すべてのプロパティ名を camel 形式に変換します](#use-camel-case-for-all-json-property-names)
 * [カスタムプロパティの名前付けポリシーを実装する](#use-a-custom-json-property-naming-policy)
 * [ディクショナリキーを camel 形式に変換する](#camel-case-dictionary-keys)
-* [列挙型を文字列および camel 形式に変換する](#enums-as-strings) 
+* [列挙型を文字列および camel 形式に変換する](#enums-as-strings)
 
 JSON プロパティの名前と値の特別な処理を必要とするその他のシナリオでは、[カスタムコンバーターを実装](system-text-json-converters-how-to.md)できます。
 
@@ -378,11 +378,11 @@ JSON プロパティの名前付けポリシー:
 
 シリアル化し、JSON 出力を行うオブジェクトの例を次に示します。
 
-|property |Value  |
+|プロパティ |値  |
 |---------|---------|
-| 日付    | 8/1/2019 12:00:00 AM-07:00|
+| Date    | 8/1/2019 12:00:00 AM-07:00|
 | TemperatureCelsius| 25 |
-| 要約| null|
+| まとめ| null|
 
 ```json
 {
@@ -507,7 +507,7 @@ JSON プロパティの名前付けポリシー:
 ```
 
 > [!IMPORTANT]
-> これらの方法では、ルートオブジェクトのプロパティではなく、シリアル化するルートオブジェクトに対してのみ、ポリモーフィックなシリアル化が提供されます。 
+> これらの方法では、ルートオブジェクトのプロパティではなく、シリアル化するルートオブジェクトに対してのみ、ポリモーフィックなシリアル化が提供されます。
 
 `object`型として定義すると、下位レベルのオブジェクトのポリモーフィックなシリアル化を取得できます。 たとえば、`WeatherForecast` クラスに `PreviousForecast` という名前のプロパティがあり、`WeatherForecast` または `object`型として定義できるとします。
 
@@ -566,7 +566,7 @@ JSON プロパティの名前付けポリシー:
 }
 ```
 
-ポリモーフィックな**シリアル化**の詳細と、**逆シリアル**化の詳細については、「 [Newtonsoft.Json から System.Text.Jsonに移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。
+ポリモーフィックな**シリアル化**の詳細、および**逆シリアル**化の詳細については、「 [newtonsoft. json から system.string に移行する方法](system-text-json-migrate-from-newtonsoft-how-to.md#polymorphic-serialization)」を参照してください。
 
 ## <a name="allow-comments-and-trailing-commas"></a>コメントと末尾のコンマを許可する
 
@@ -634,14 +634,14 @@ Camel 形式のプロパティ名を持つ JSON の例を次に示します。 P
 
 前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。
 
-|property |Value  |メモ  |
+|プロパティ |値  |メモ  |
 |---------|---------|---------|
-| 日付    | 8/1/2019 12:00:00 AM-07:00||
+| Date    | 8/1/2019 12:00:00 AM-07:00||
 | TemperatureCelsius| 0 | 大文字と小文字が区別されない (JSON で`temperatureCelsius`) ため、プロパティが設定されていません。 |
-| 要約 | 高 ||
+| まとめ | ホット ||
 | ExtensionData | temperatureCelsius:25 |大文字と小文字が一致しなかったため、この JSON プロパティは余分で、ディクショナリ内のキーと値のペアになります。|
 || 使用可能な日:<br>  8/1/2019 12:00:00 AM-07:00<br>8/2/2019 12:00:00 AM-07:00 |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
-| |概要語:<br>Cool<br>強風<br>Humid |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
+| |概要語:<br>クール<br>強風<br>Humid |JSON からの追加のプロパティはキーと値のペアになり、値オブジェクトとして配列が使用されます。|
 
 ターゲットオブジェクトがシリアル化されると、拡張データのキーと値のペアは、受信 JSON の場合と同様に JSON プロパティになります。
 
@@ -712,7 +712,7 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 上のコードでは以下の操作が行われます。
 
 * は、分析する JSON が `jsonString`という名前の文字列に含まれていると想定します。
-* `Grade` プロパティを持つ `Students` 配列内のオブジェクトの平均グレードを計算します。 
+* `Grade` プロパティを持つ `Students` 配列内のオブジェクトの平均グレードを計算します。
 * 学年のない学生に対して既定のグレード70を割り当てます。
 * 各イテレーションで `count` 変数をインクリメントして生徒をカウントします。 別の方法として、次の例に示すように <xref:System.Text.Json.JsonElement.GetArrayLength%2A>を呼び出すこともできます。
 
@@ -732,7 +732,7 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 
 * JSON ファイルを読み取り、データを `JsonDocument`に読み込み、書式設定された (非常に印刷された) JSON をファイルに書き込みます。
 * <xref:System.Text.Json.JsonDocumentOptions> を使用して、入力 JSON 内のコメントを許可しますが、無視することを指定します。
-* 完了すると、はライターで <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> を呼び出します。 別の方法として、破棄されたときにライターを autoflush することもできます。 
+* 完了すると、はライターで <xref:System.Text.Json.Utf8JsonWriter.Flush%2A> を呼び出します。 別の方法として、破棄されたときにライターを autoflush することもできます。
 
 コード例によって処理される JSON 入力の例を次に示します。
 
@@ -769,7 +769,7 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 * は、ファイルが UTF-16 としてエンコードされているものと想定し、UTF-8 にトランスコードします。 UTF-8 としてエンコードされたファイルは、次のコードを使用して、`ReadOnlySpan<byte>`に直接読み取ることができます。
 
   ```csharp
-  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName); 
+  ReadOnlySpan<byte> jsonReadOnlySpan = File.ReadAllBytes(fileName);
   ```
 
   ファイルに UTF-8 バイト順マーク (BOM) が含まれている場合は、リーダーがテキストを受け取るため、バイトを `Utf8JsonReader`に渡す前に削除します。 それ以外の場合、BOM は無効な JSON と見なされ、リーダーは例外をスローします。
@@ -778,7 +778,7 @@ JSON 内の Null 値は、有効な場合にのみ無視されます。 Null 非
 
 [!code-json[](~/samples/snippets/core/system-text-json/csharp/Universities.json)]
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 * [System.Text.Json の概要](system-text-json-overview.md)
 * [カスタムコンバーターを記述する方法](system-text-json-converters-how-to.md)

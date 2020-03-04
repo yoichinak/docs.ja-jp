@@ -9,12 +9,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], enumerating
 - enumerating time zones [.NET Framework]
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
-ms.openlocfilehash: 662e389f4fecc77244e378f1c0672935403fa456
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: aa8962c8aea208778983610041937dc3f75c1f1e
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129118"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159443"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>方法: コンピューター上に存在するタイムゾーンを列挙する
 
@@ -25,7 +25,7 @@ ms.locfileid: "73129118"
 
 ### <a name="to-enumerate-the-time-zones-present-on-the-local-system"></a>ローカル システムに存在するタイム ゾーンを列挙するには
 
-1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> メソッドを呼び出します。 メソッドは、<xref:System.TimeZoneInfo> オブジェクトのジェネリック <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> コレクションを返します。 コレクション内のエントリは、<xref:System.TimeZoneInfo.DisplayName%2A> プロパティによって並べ替えられます。 (例:
+1. <xref:System.TimeZoneInfo.GetSystemTimeZones%2A?displayProperty=nameWithType> メソッドを呼び出します。 メソッドは、<xref:System.TimeZoneInfo> オブジェクトのジェネリック <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> コレクションを返します。 コレクション内のエントリは、<xref:System.TimeZoneInfo.DisplayName%2A> プロパティによって並べ替えられます。 次に例を示します。
 
    [!code-csharp[System.TimeZone2.Concepts#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.TimeZone2.Concepts/CS/TimeZone2Concepts.cs#1)]
    [!code-vb[System.TimeZone2.Concepts#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.TimeZone2.Concepts/VB/TimeZone2Concepts.vb#1)]
@@ -55,7 +55,7 @@ ms.locfileid: "73129118"
 ほとんどのリストコントロール (<xref:System.Windows.Forms.ListBox?displayProperty=nameWithType> や <xref:System.Web.UI.WebControls.BulletedList?displayProperty=nameWithType> コントロールなど) を使用すると、そのコレクションが <xref:System.Collections.IEnumerable> インターフェイスを実装している限り、オブジェクト変数のコレクションを `DataSource` プロパティに割り当てることができます。 (ジェネリック <xref:System.Collections.ObjectModel.ReadOnlyCollection%601> クラスはこれを行います)。コレクション内の個々のオブジェクトを表示するために、コントロールはそのオブジェクトの `ToString` メソッドを呼び出して、オブジェクトを表すために使用される文字列を抽出します。 <xref:System.TimeZoneInfo> オブジェクトの場合、`ToString` メソッドは <xref:System.TimeZoneInfo> オブジェクトの表示名 (<xref:System.TimeZoneInfo.DisplayName%2A> プロパティの値) を返します。
 
 > [!NOTE]
-> リストコントロールはオブジェクトの `ToString` メソッドを呼び出すため、<xref:System.TimeZoneInfo> オブジェクトのコレクションをコントロールに割り当て、各オブジェクトに対してわかりやすい名前をコントロールに表示し、ユーザーが選択した <xref:System.TimeZoneInfo> オブジェクトを取得することができます。 これにより、コレクション内の各オブジェクトに対して文字列を抽出し、その文字列をコントロールの `DataSource` プロパティに割り当てられたコレクションに割り当て、ユーザーが選択した文字列を取得し、この文字列を使用してオブジェクトを抽出する必要がなくなります。ここで説明します。 
+> リストコントロールはオブジェクトの `ToString` メソッドを呼び出すため、<xref:System.TimeZoneInfo> オブジェクトのコレクションをコントロールに割り当て、各オブジェクトに対してわかりやすい名前をコントロールに表示し、ユーザーが選択した <xref:System.TimeZoneInfo> オブジェクトを取得することができます。 これにより、コレクション内の各オブジェクトに対して文字列を抽出し、その文字列をコントロールの `DataSource` プロパティに割り当てられたコレクションに割り当て、ユーザーが選択した文字列を取得して、この文字列を使用して記述されたオブジェクトを抽出する必要がなくなります。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
@@ -67,7 +67,7 @@ ms.locfileid: "73129118"
 
   <xref:System.Collections.ObjectModel>
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [日付、時刻およびタイム ゾーン](../../../docs/standard/datetime/index.md)
 - [方法: 埋め込みリソースにタイム ゾーンを保存する](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)

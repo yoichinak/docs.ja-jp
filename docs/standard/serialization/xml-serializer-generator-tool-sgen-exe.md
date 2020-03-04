@@ -2,12 +2,12 @@
 title: XML シリアライザー ジェネレーター ツール (Sgen.exe)
 ms.date: 03/30/2017
 ms.assetid: cc1d1f1c-fb26-4be9-885a-3fe84c81cec6
-ms.openlocfilehash: 492337973f71b10dc061353b7083f596b402ae29
-ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
+ms.openlocfilehash: d67ab634279c4f8e06d609950932e2422bc43395
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71392713"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78159521"
 ---
 # <a name="xml-serializer-generator-tool-sgenexe"></a>XML シリアライザー ジェネレーター ツール (Sgen.exe)
 XML シリアライザー ジェネレーターは、指定された型のオブジェクトをシリアル化または逆シリアル化するとき、<xref:System.Xml.Serialization.XmlSerializer> の起動パフォーマンスを向上させるために、指定されたアセンブリの型に対して XML シリアル化アセンブリを作成します。  
@@ -20,7 +20,7 @@ sgen [options]
   
 ## <a name="parameters"></a>パラメーター  
   
-|オプション|説明|  
+|オプション|Description|  
 |------------|-----------------|  
 |**/a\[アセンブリ:** _ファイル名_\]|アセンブリ、または *filename* によって指定される実行可能ファイルに含まれるすべての型に対して、シリアル化コードを生成します。 指定できるファイル名は 1 つのみです。 この引数を複数指定した場合は、最後のファイル名が使用されます。|  
 |**/c\[ンパイラ\]:** _オプション_|オプションを C# コンパイラに渡すように指定します。 csc.exe のすべてのオプションがサポートされ、コンパイラに渡されます。 このオプションを使用して、アセンブリに署名してキー ファイルを指定するように指定できます。|  
@@ -37,7 +37,7 @@ sgen [options]
 |**/v\[erbose\]**|デバッグに関する詳細出力を表示します。 <xref:System.Xml.Serialization.XmlSerializer> でシリアル化できない対象アセンブリの型を一覧表示します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  XML シリアライザー ジェネレーターを使用しない場合、<xref:System.Xml.Serialization.XmlSerializer> はアプリケーションを実行するたびに、各型に対してシリアル化コードとシリアル化アセンブリを生成します。 XML シリアル化の起動時のパフォーマンスを向上させるには、Sgen ツールを使用して、これらのアセンブリを事前に生成します。 生成したアセンブリは、アプリケーションで配置できます。  
   
  XML シリアライザー ジェネレーターは、サーバーとの通信に XML Web サービス プロキシを使用するクライアントのパフォーマンスも向上させますが、これは型が初めて読み込まれるとき、シリアル化プロセスによってパフォーマンスが低下しないためです。  
@@ -46,11 +46,11 @@ sgen [options]
   
  シリアル化する型を含むアセンブリの名前が MyType.dll の場合、関連するシリアル化アセンブリの名前は MyType.XmlSerializers.dll となります。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  次のコマンドは、Data.dll という名前のアセンブリに含まれるすべての型をシリアル化するために、Data.XmlSerializers.dll という名前のアセンブリを作成します。  
   
 ```console  
-sgen Data.dll   
+sgen Data.dll
 ```  
   
  Data.XmlSerializers.dll アセンブリは、Data.dll の型をシリアル化および逆シリアル化する必要のあるコードから参照できます。  

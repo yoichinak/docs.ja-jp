@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Date data type, converting
 - local time conversions
 ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
-ms.openlocfilehash: 428553f75db2cca6705ac72873e86e120e94d134
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5c19296f75e9e002e88263c5e5efa9917e185ebc
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132596"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156037"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime と DateTimeOffset 間の変換
 
@@ -99,7 +99,7 @@ UTC およびローカル <xref:System.DateTime> 値の場合、結果の <xref:
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#7)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#7)]
 
-また、<xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> プロパティを使用して、<xref:System.DateTimeOffset> 値をローカルの <xref:System.DateTime> 値に変換することもできます。 返された <xref:System.DateTime> 値の <xref:System.DateTime.Kind%2A> プロパティは <xref:System.DateTimeKind.Local>です。 次のコードでは、オフセットがローカルタイムゾーンのオフセットに対応する <xref:System.DateTimeOffset> 値を変換するときに、<xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> プロパティを使用しています。 
+また、<xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> プロパティを使用して、<xref:System.DateTimeOffset> 値をローカルの <xref:System.DateTime> 値に変換することもできます。 返された <xref:System.DateTime> 値の <xref:System.DateTime.Kind%2A> プロパティは <xref:System.DateTimeKind.Local>です。 次のコードでは、オフセットがローカルタイムゾーンのオフセットに対応する <xref:System.DateTimeOffset> 値を変換するときに、<xref:System.DateTimeOffset.LocalDateTime%2A?displayProperty=nameWithType> プロパティを使用しています。
 
 [!code-csharp[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/cs/Conversions.cs#10)]
 [!code-vb[System.DateTimeOffset.Conceptual.Conversions#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual.Conversions/vb/Conversions.vb#10)]
@@ -127,6 +127,6 @@ UTC およびローカル <xref:System.DateTime> 値の場合、結果の <xref:
 
 - オフセットがローカル タイム ゾーンのオフセットと等しい日時が、ローカル タイム ゾーンを表すことを前提とします。 日時値は元のタイム ゾーンとの関連付けが解除されているので、これは該当しない場合があります。日時は、同じオフセットを持つ別のタイム ゾーンに由来する可能性があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [日付、時刻およびタイム ゾーン](../../../docs/standard/datetime/index.md)
