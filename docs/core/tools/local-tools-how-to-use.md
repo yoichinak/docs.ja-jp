@@ -2,12 +2,12 @@
 title: 'チュートリアル: .NET Core ローカル ツールをインストールして使用する'
 description: .NET ツールをローカル ツールとしてインストールして使用する方法について説明します。
 ms.date: 02/12/2020
-ms.openlocfilehash: 6de620772cec1e9d1b1f57380b72c0163d68337c
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a4355886513040e2436bdbd87905e5baee2dd7a5
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543816"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156700"
 ---
 # <a name="tutorial-install-and-use-a-net-core-local-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する
 
@@ -24,9 +24,9 @@ ms.locfileid: "77543816"
 
 ## <a name="create-a-manifest-file"></a>マニフェスト ファイルの作成
 
-ローカル アクセス専用のツール (現在のディレクトリとサブディレクトリ用) をインストールするには、マニフェスト ファイルに追加する必要があります。 
+ローカル アクセス専用のツール (現在のディレクトリとサブディレクトリ用) をインストールするには、マニフェスト ファイルに追加する必要があります。
 
-*botsay-\<name>* フォルダーから、1 つ上のレベルの *repository* フォルダーへ移動します。
+*microsoft.botsay* フォルダーから、1 つ上のレベルである *repository* フォルダーに移動します。
 
 ```console
 cd ..
@@ -63,7 +63,7 @@ The template "Dotnet local tool manifest file" was created successfully.
 最初のチュートリアルで作成したパッケージからツールをインストールします。
 
 ```dotnetcli
-dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
+dotnet tool install --add-source ./microsoft.botsay/nupkg microsoft.botsay
 ```
 
 このコマンドでは、前の手順で作成したマニフェスト ファイルにツールを追加します。 コマンドの出力は、新しくインストールされたツールがどのマニフェスト ファイルに含まれているかを示しています。
@@ -71,7 +71,7 @@ dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
  ```console
  You can invoke the tool from this directory using the following command:
  'dotnet tool run botsay' or 'dotnet botsay'
- Tool 'botsay-<name>' (version '1.0.0') was successfully installed.
+ Tool 'microsoft.botsay' (version '1.0.0') was successfully installed.
  Entry is added to the manifest file /home/name/repository/.config/dotnet-tools.json
  ```
 
@@ -82,7 +82,7 @@ dotnet tool install --add-source ./botsay-<name>/nupkg botsay-<name>
   "version": 1,
   "isRoot": true,
   "tools": {
-    "botsay-<name>": {
+    "microsoft.botsay": {
       "version": "1.0.0",
       "commands": [
         "botsay"
@@ -111,7 +111,7 @@ dotnet tool run botsay hello from the bot
      "version": 1,
      "isRoot": true,
      "tools": {
-       "botsay-<name>": {
+       "microsoft.botsay": {
          "version": "1.0.0",
          "commands": [
            "botsay"
@@ -131,7 +131,7 @@ dotnet tool run botsay hello from the bot
 
 1. 変更内容を保存します。
 
-   この変更を行うことは、他のユーザーがプロジェクト ディレクトリに対してパッケージ `dotnetsay` をインストールした後に、リポジトリから最新バージョンを取得することと同じです。 
+   この変更を行うことは、他のユーザーがプロジェクト ディレクトリに対してパッケージ `dotnetsay` をインストールした後に、リポジトリから最新バージョンを取得することと同じです。
 
 1. `dotnet tool restore` コマンドを実行します。
 
@@ -142,7 +142,7 @@ dotnet tool run botsay hello from the bot
    コマンドによって、次の例のような出力が生成されます。
 
    ```console
-   Tool 'botsay-<name>' (version '1.0.0') was restored. Available commands: botsay
+   Tool 'microsoft.botsay' (version '1.0.0') was restored. Available commands: botsay
    Tool 'dotnetsay' (version '2.1.3') was restored. Available commands: dotnetsay
    Restore was successful.
    ```
@@ -157,9 +157,9 @@ dotnet tool run botsay hello from the bot
 
    ```console
    Package Id      Version      Commands       Manifest
-   -------------------------------------------------------------------------------------------
-   botsay-<name>   1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
-   dotnetsay       2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
+   --------------------------------------------------------------------------------------------
+   microsoft.botsay 1.0.0        botsay         /home/name/repository/.config/dotnet-tools.json
+   dotnetsay        2.1.3        dotnetsay      /home/name/repository/.config/dotnet-tools.json
    ```
 
 1. ツールをテストします。
@@ -191,7 +191,7 @@ update コマンドでは、パッケージ ID を含む最初のマニフェス
 [dotnet tool uninstall](dotnet-tool-uninstall.md) コマンドを実行して、インストールされたツールを削除します。
 
 ```dotnetcli
-dotnet tool uninstall botsay-<name>
+dotnet tool uninstall microsoft.botsay
 ```
 
 ```dotnetcli

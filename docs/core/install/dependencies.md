@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 4164ea5a04d80ab20109168a225b793b02ee616a
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448894"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157812"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core の依存関係と要件
 
@@ -294,6 +294,14 @@ Fedora ユーザー:ご使用の OpenSSL のバージョンが 1.1 以降の場�
 | 3.0               | High Sierra (10.13+)  | X64 | [詳細情報](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) |
 | 2.2               | Sierra (10.12+)       | X64 | [詳細情報](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md) |
 | 2.1               | Sierra (10.12+)       | X64 | [詳細情報](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md) |
+
+macOS Catalina (バージョン 10.15) 以降では、2019 年 6 月 1 日より後に作成され、Developer ID と共に配布されたすべてのソフトウェアは公証される必要があります。 この要件は、.NET Core ランタイム、.NET Core SDK、および .NET Core を使用して作成されたソフトウェアに適用されます。
+
+.NET Core (ランタイムと SDK の両方) バージョン 3.1、3.0、2.1 のインストーラーは、2020 年 2 月 18 日から公証されています。 それより前にリリースされたバージョンは、公証されていません。 公証されていないアプリを実行すると、次のイメージのようなエラーが表示されます。
+
+![macOS Catalina の公証に関するアラート](media/dependencies/macos-notarized-pkg-warning.png)
+
+公証の強制が .NET Core (および .NET Core アプリ) に与える影響の詳細については、[macOS Catalina の公証への対応](macos-notarization-issues.md)に関するページを参照してください。
 
 ## <a name="libgdiplus"></a>libgdiplus
 

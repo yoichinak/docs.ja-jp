@@ -3,13 +3,13 @@ title: Windows で .NET for Apache Spark アプリケーションをビルドす
 description: Windows で .NET for Apache Spark アプリケーションをビルドする方法について学習します。
 ms.date: 01/29/2020
 ms.topic: conceptual
-ms.custom: mvc,how-to
-ms.openlocfilehash: e6dec09f7d3e8d478cdcccf9df1c3e72d5f884eb
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.custom: how-to
+ms.openlocfilehash: 640459c8c80b6d798718b89d4965802cdacd6c63
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928062"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77628658"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-windows"></a>Windows で .NET for Apache Spark アプリケーションをビルドする方法を学習する
 
@@ -27,22 +27,22 @@ ms.locfileid: "76928062"
      * .NET Core クロスプラットフォームの開発
        * すべての必須コンポーネント
   3. **[Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)** をインストールする。 
-     - お使いのオペレーティング システムに適したバージョンを選択します (たとえば、Win x64 コンピューターの場合は jdk-8u201-windows-x64.exe)。
+     - ご使用のオペレーティング システムに適したバージョンを選択します。 たとえば、Windows x64 コンピューターには *jdk-8u201-windows-x64.exe* を選択します。
      - インストーラーを使ってインストールし、コマンド ラインから `java` を実行できることを確認します。
   4. **[Apache Maven 3.6.0 以降](https://maven.apache.org/download.cgi)** をインストールする。
-     - [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.zip) をダウンロードします。
-     - ローカル ディレクトリに抽出します (`C:\bin\apache-maven-3.6.0\` など)。
-     - [PATH 環境変数](https://www.java.com/en/download/help/path.xml)に Apache Maven を追加します (`C:\bin\apache-maven-3.6.0\bin` など)。
+     - [Apache Maven 3.6.0](http://mirror.metrocast.net/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip) をダウンロードします。
+     - ローカル ディレクトリに抽出します。 たとえば、*C:\bin\apache-maven-3.6.0\* です。
+     - Apache Maven をご自分の [PATH 環境変数](https://www.java.com/en/download/help/path.xml)に追加します。 たとえば、*C:\bin\apache-maven-3.6.0\bin* です。
      - コマンド ラインから `mvn` を実行できることを確認します。
   5. **[Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)** をインストールする。
-     - [Apache Spark 2.3 以降](https://spark.apache.org/downloads.html)をダウンロードし、[7-zip](https://www.7-zip.org/) を使用してローカル フォルダーに抽出します (`C:\bin\spark-2.3.2-bin-hadoop2.7\` など)。 (サポートされている Spark のバージョンは 2.3.*、2.4.0、2.4.1、2.4.3、および 2.4.4 です)
-     - [新しい環境変数](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` を追加します (`C:\bin\spark-2.3.2-bin-hadoop2.7\` など)。
+     - [Apache Spark 2.3+](https://spark.apache.org/downloads.html) をダウンロードし、[7-zip](https://www.7-zip.org/) を利用してローカル フォルダー (たとえば、*C:\bin\spark-2.3.2-bin-hadoop2.7\*) に抽出します。(サポートされている Spark のバージョンは 2.3.* 、2.4.0、2.4.1、2.4.3、2.4.4 です)
+     - [新しい環境変数](https://www.java.com/en/download/help/path.xml) `SPARK_HOME` を追加します。 たとえば、*C:\bin\spark-2.3.2-bin-hadoop2.7\* です。
 
        ```powershell
        set SPARK_HOME=C:\bin\spark-2.3.2-bin-hadoop2.7\       
        ```
 
-     - [PATH 環境変数](https://www.java.com/en/download/help/path.xml)に Apache Spark を追加します (`C:\bin\spark-2.3.2-bin-hadoop2.7\bin` など)。
+     - Apache Spark をご自分の [PATH 環境変数](https://www.java.com/en/download/help/path.xml)に追加します。 たとえば、*C:\bin\spark-2.3.2-bin-hadoop2.7\bin* です。
 
        ```powershell       
        set PATH=%SPARK_HOME%\bin;%PATH%
@@ -70,8 +70,8 @@ ms.locfileid: "76928062"
         </details>
 
   6. **[WinUtils](https://github.com/steveloughran/winutils)** をインストールする。
-     - [WinUtils リポジトリ](https://github.com/steveloughran/winutils)から `winutils.exe` バイナリをダウンロードします。 Spark ディストリビューションがコンパイルされた Hadoop のバージョンを選択する必要があります (たとえば、Spark 2.3.2 の場合は hadoop-2.7.1 を使います)。
-     - `winutils.exe` バイナリを任意のディレクトリに保存します (`C:\hadoop\bin` など)。
+     - [WinUtils リポジトリ](https://github.com/steveloughran/winutils)から `winutils.exe` バイナリをダウンロードします。 Spark ディストリビューションをコンパイルした Hadoop のバージョンを選択してください。 たとえば、Spark 2.3.2 には hadoop-2.7.1 を使用します。
+     - `winutils.exe` バイナリを任意のディレクトリに保存します。 たとえば、*C:\hadoop\bin* です。
      - winutils.exe があるディレクトリを示すように `HADOOP_HOME` を設定します (bin は含めない)。 たとえば、コマンド ラインで次を実行します。
 
        ```powershell
@@ -91,7 +91,7 @@ ms.locfileid: "76928062"
 
 ## <a name="build"></a>ビルド
 
-このガイドの残りの部分では、.NET for Apache Spark リポジトリをご自分のコンピューターにクローンしておく必要があります。 任意の場所にリポジトリをクローンすることができます (たとえば、`C:\github\dotnet-spark\`)。
+このガイドの残りの部分では、.NET for Apache Spark リポジトリをご自分のコンピューターにクローンしておく必要があります。 任意の場所にリポジトリをクローンすることができます。 たとえば、*C:\github\dotnet-spark\* です。
 
 ```bash
 git clone https://github.com/dotnet/spark.git C:\github\dotnet-spark
@@ -212,13 +212,13 @@ mvn clean package
 
 サンプルをビルドしたら、その実行には、.NET Framework、.NET Core のどちらを対象としているかにかかわらず `spark-submit` を使用します。 [必須コンポーネント](#prerequisites)のセクションに従っていることと、Apache Spark がインストール済みであることを確認してください。
 
-  1. `DOTNET_WORKER_DIR` または `PATH` 環境変数を設定して、`Microsoft.Spark.Worker` バイナリが生成されたパスが含まれるようにします (たとえば、.NET Framework の場合は `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461`、.NET Core の場合は `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish`)。
+  1. `DOTNET_WORKER_DIR` または `PATH` 環境変数を設定し、`Microsoft.Spark.Worker` バイナリが生成されているパスを含めます (たとえば、.NET Framework には *C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.Worker\Debug\net461* を、.NET Core には *C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish* を指定します)。
 
       ```powershell
       set DOTNET_WORKER_DIR=C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.Worker\Debug\netcoreapp2.1\win10-x64\publish
       ```
   
-  2. Powershell を開き、アプリのバイナリが生成されたディレクトリに移動します (たとえば、.NET Framework の場合は `C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461`、.NET Core の場合は `C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish`)。
+  2. PowerShell を起動し、アプリ バイナリが生成されているディレクトリに移動します (たとえば、.NET Framework の場合、*C:\github\dotnet\spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\net461* に、.NET Core の場合、*C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish* に移動します)。
 
       ```powershell
       cd C:\github\dotnet-spark\artifacts\bin\Microsoft.Spark.CSharp.Examples\Debug\netcoreapp2.1\win10-x64\publish

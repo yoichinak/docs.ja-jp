@@ -1,13 +1,13 @@
 ---
 title: dotnet-counters - .NET Core
 description: dotnet-counter コマンドライン ツールをインストールして使用する方法について説明します。
-ms.date: 10/14/2019
-ms.openlocfilehash: 399d5908e8ac52bcd4a20c1a819fc6c99f4de2f4
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.date: 02/26/2020
+ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76737705"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157883"
 ---
 # <a name="dotnet-counters"></a>dotnet-カウンター
 
@@ -45,8 +45,53 @@ dotnet-counters [-h|--help] [--version] <command>
 
 | コマンド                                             |
 | --------------------------------------------------- |
+| [dotnet-counters collect](#dotnet-counters-collect) |
 | [dotnet-counters list](#dotnet-counters-list)       |
 | [dotnet-counters monitor](#dotnet-counters-monitor) |
+| [dotnet-counters ps](#dotnet-counters-ps) |
+
+## <a name="dotnet-counters-collect"></a>dotnet-counters collect
+
+選択されたカウンター値を定期的に収集し、後処理用に指定されたファイル形式にエクスポートします。
+
+### <a name="synopsis"></a>構文
+
+```console
+dotnet-counters collect [-h|--help] [-p|--process-id] [--refreshInterval] [counter_list] [--format] [-o|--output]
+```
+
+### <a name="options"></a>オプション
+
+- **`-p|--process-id <PID>`**
+
+  監視するプロセスの ID。
+
+- **`--refresh-interval <SECONDS>`**
+
+  表示されているカウンターを更新するまでの遅延時間 (秒数)
+
+- **`counter_list <COUNTERS>`**
+
+  カウンターのスペース区切りリスト。 カウンターは `provider_name[:counter_name]` で指定できます。 `counter_name` を修飾せずに `provider_name` を使用すると、すべてのカウンターが表示されます。 プロバイダーとカウンターの名前を検出するには、[dotnet-counters list](#dotnet-counters-list) コマンドを使用します。
+
+- **`--format <csv|json>`**
+
+  エクスポートされる形式。 現在使用可能: csv、json。
+
+- **`-o|--output <output>`**
+
+  出力ファイルの名前。
+
+### <a name="examples"></a>使用例
+
+- すべてのカウンターを更新間隔 3 秒で収集し、csv を出力として生成します。
+
+  ```console
+  > dotnet-counters collect --process-id 1902 --refresh-interval 3 --format csv
+
+  counter_list is unspecified. Monitoring all counters by default.
+  Starting a counter session. Press Q to quit.
+  ```
 
 ## <a name="dotnet-counters-list"></a>dotnet-counters list
 
@@ -135,3 +180,22 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
   Press p to pause, r to resume, q to quit.
       request                                      100
   ```
+  
+## <a name="dotnet-counters-ps"></a>dotnet-counters ps 
+
+監視できる dotnet プロセスの一覧を表示します。
+
+### <a name="synopsis"></a>構文
+
+```console
+dotnet-counters ps [-h|--help]
+```
+
+### <a name="example"></a>例
+
+```console
+> dotnet-counters ps
+  
+  15683 WebApi     /home/suwhang/repos/WebApi/WebApi
+  16324 dotnet     /usr/local/share/dotnet/dotnet
+```

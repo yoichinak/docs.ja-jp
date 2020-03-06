@@ -8,16 +8,16 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 6b96d65f657f2af1af5c9a245e956640ee06260e
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748489"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625948"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
-C# 型の 2 つの主なカテゴリは、*値型*と[参照型](../keywords/reference-types.md)です。 値型の変数には、その型のインスタンスが含まれます。 これは、その型のインスタンスへの参照を含む参照型の変数とは異なります。 既定で[代入](../operators/assignment-operator.md)では、引数をメソッドに渡すか、メソッドの結果を返すと、変数の値がコピーされます。 値型の変数の場合、対応する型のインスタンスがコピーされます。 次の例は、その動作を示します。
+C# 型の 2 つの主なカテゴリは、*値型*と[参照型](../keywords/reference-types.md)です。 値型の変数には、その型のインスタンスが含まれます。 これは、その型のインスタンスへの参照を含む参照型の変数とは異なります。 既定では、[代入](../operators/assignment-operator.md)時、引数がメソッドに渡され、メソッドの結果が返され、変数値がコピーされます。 値型の変数の場合、対応する型のインスタンスがコピーされます。 次の例は、その動作を示します。
 
 [!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
 
@@ -34,7 +34,7 @@ C# 型の 2 つの主なカテゴリは、*値型*と[参照型](../keywords/ref
 
 値型には、次の 2 種類のいずれかを指定できます。
 
-- データと関連機能をカプセル化する[構造体の型](../keywords/struct.md)
+- データと関連機能をカプセル化する[構造体の型](struct.md)
 - 名前付き定数のセットによって定義され、選択肢または選択肢の組み合わせを表す、[列挙型](enum.md)
 
 [null 許容値型](nullable-value-types.md) `T?` は、基になる値型のすべての値 `T` と、追加の [null](../keywords/null.md) 値を表します。 値型の変数には、Null 許容値型でない限り `null` を割り当てることはできません。

@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ba50eb222d9eab6bffbb8ebfdf0ecf47951ce719
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: a41bbdf5419585f06773583dbe82ab0d84ebaa4c
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543522"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78157637"
 ---
 # <a name="install-the-net-core-runtime"></a>.NET Core ランタイムのインストール
 
@@ -36,11 +36,24 @@ macOS には、.NET Core 3.1 ランタイムのインストールに使用でき
 
 - [x64 (64 ビット) CPU](https://dotnet.microsoft.com/download/dotnet-core/3.1)
 
+## <a name="download-and-manually-install"></a>手動でダウンロードしてインストールする
+
+.NET Core 用 macOS インストーラーの代わりに、ランタイムをダウンロードして手動でインストールすることもできます。
+
+ランタイムをインストールし、.NET Core CLI コマンドをターミナルで使用できるようにするには、最初に .NET Core のバイナリ リリースを[ダウンロード](#all-net-core-downloads)します。 次に、ターミナルを開き、以下のコマンドを実行します。 ランタイムが `~/Downloads/dotnet-runtime.pkg` ファイルにダウンロードされることを前提としています。
+
+```bash
+mkdir -p $HOME/dotnet
+sudo installer -pkg ~/Downloads/dotnet-runtime.pkg -target $HOME/dotnet
+export DOTNET_ROOT=$HOME/dotnet
+export PATH=$PATH:$HOME/dotnet
+```
+
 ::: zone-end
 
 ::: zone pivot="os-linux"
 
-## <a name="install-with-a-package-manager"></a>パッケージ マネージャーを使用したインストール
+## <a name="install-with-a-package-manager"></a>パッケージ マネージャーを使用してインストールする
 
 多くの一般的な Linux パッケージ マネージャーを使用して .NET Core ランタイムをインストールできます。 詳細については、[Linux パッケージ マネージャー - .NET Core のインストール](linux-package-managers.md)に関するページを参照してください。
 
@@ -64,7 +77,7 @@ export PATH=$PATH:$HOME/dotnet
 > - **Bash シェル**: *~/.bash_profile*、 *~/.bashrc*
 > - **Korn シェル**: *~/.kshrc* または *.profile*
 > - **Z シェル**: *~/.zshrc* または *.zprofile*
-> 
+>
 > シェルの適切なソース ファイルを編集し、既存の `PATH` ステートメントの末尾に `:$HOME/dotnet` を追加します。 `PATH` ステートメントが含まれていない場合は、`export PATH=$PATH:$HOME/dotnet` を含む新しい行を追加します。
 >
 > また、ファイルの末尾に `export DOTNET_ROOT=$HOME/dotnet` を追加します。

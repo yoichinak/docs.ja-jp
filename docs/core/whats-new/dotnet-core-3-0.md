@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 60794c4f8a5f9aeb7a4b3cd58c0c9f00e03fa9e7
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450981"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156570"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -54,12 +54,40 @@ Visual Studio を使用している場合、Visual Studio 2017 では **.NET Sta
 
 ### <a name="default-executables"></a>既定の実行可能ファイル
 
-.NET Core では、既定で[フレームワーク依存の実行可能ファイル](../deploying/index.md#publish-runtime-dependent)が作成されるようになりました。 この動作は、グローバルにインストールされているバージョンの .NET Core を使用するアプリケーションの新機能です。 以前は、[自己完結型の配置](../deploying/index.md#publish-self-contained)でのみ実行可能ファイルが生成されました。
+.NET Core では、既定で[ランタイムに依存する実行可能ファイル](../deploying/index.md#publish-runtime-dependent)をビルドするようになりました。 この動作は、グローバルにインストールされているバージョンの .NET Core を使用するアプリケーションの新機能です。 以前は、[自己完結型の配置](../deploying/index.md#publish-self-contained)でのみ実行可能ファイルが生成されました。
 
-`dotnet build` または `dotnet publish` の実行中に、使用している SDK の環境およびプラットフォームと一致する実行可能ファイルが作成されます。 これらの実行可能ファイルでは、次のような他のネイティブ実行可能ファイルと同じことを期待できます。
+`dotnet build` または `dotnet publish` の間に、使用している SDK の環境とプラットフォームに合う実行可能ファイル (**appHost** と呼ばれます) が作成されます。 これらの実行可能ファイルでは、次のような他のネイティブ実行可能ファイルと同じことを期待できます。
 
 - 実行可能ファイルはダブルクリックすることができます。
 - Windows では `myapp.exe`、Linux と macOS では`./myapp` など、コマンド プロンプトからアプリケーションを直接起動できます。
+
+### <a name="macos-apphost-and-notarization"></a>macOS appHost と公証
+
+*macOS のみ*
+
+macOS の公証を受けた .NET Core SDK 3.0 以降では、既定の実行可能ファイル (appHost とも呼ばれます) を生成する設定が既定で無効になっています。 詳細については、「[macOS Catalina の公証と .NET Core のダウンロードとプロジェクトへの影響](../install/macos-notarization-issues.md)」を参照してください。
+
+appHost 設定が有効な場合、ビルド時または発行時に .NET Core によってネイティブの Mach-O 実行可能ファイルが生成されます。 `dotnet run` コマンドを使用してソース コードから実行するか、Mach-O 実行可能ファイルを直接起動すると、アプリは appHost のコンテキストで実行されます。
+
+appHost を使用しない場合、ユーザーが[ランタイムに依存する](../deploying/index.md#publish-runtime-dependent)アプリを起動できる唯一の方法は、`dotnet <filename.dll>` コマンドを使用することです。 [自己完結型](../deploying/index.md#publish-self-contained)のアプリを発行すると、常に appHost が作成されます。
+
+プロジェクト レベルで appHost を構成するか、`-p:UseAppHost` パラメーターを使用して特定の `dotnet` コマンドの appHost を切り替えることができます。
+
+- プロジェクト ファイル
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- コマンド ライン パラメーター
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+`UseAppHost` 設定の詳細については、[Microsoft.NET.Sdk の MSBuild プロパティ](../project-sdk/msbuild-props.md#useapphost)に関する記事を参照してください。
 
 ### <a name="single-file-executables"></a>単一ファイルの実行可能ファイル
 

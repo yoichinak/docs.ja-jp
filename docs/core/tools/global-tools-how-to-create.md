@@ -2,12 +2,12 @@
 title: 'チュートリアル: .NET Core ツールを作成する'
 description: .NET Core ツールを作成する方法について説明します。 ツールは、.NET Core CLI を使用してインストールされるコンソール アプリケーションです。
 ms.date: 02/12/2020
-ms.openlocfilehash: 558bf9e37efc8de68a61f1384fababe342ab7d66
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 88cc3be7b149834ace0c5f3ba8ac8c039199908f
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543405"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156726"
 ---
 # <a name="tutorial-create-a-net-core-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使用して .NET Core ツールを作成する
 
@@ -31,24 +31,18 @@ ms.locfileid: "77543405"
 
 1. コマンド プロンプトを開き、*repository* という名前のフォルダーを作成します。
 
-1. *repository* フォルダーに移動し、次のコマンドを入力します。`<name>` は一意の値に置き換えて、プロジェクト名を一意にしてください。 
+1. *repository* フォルダーに移動し、次のコマンドを入力します。
 
    ```dotnetcli
-   dotnet new console -n botsay-<name>
+   dotnet new console -n microsoft.botsay
    ```
 
-   たとえば、次のコマンドを実行できます。
+   このコマンドを実行すると、*repository* フォルダーの下に *microsoft.botsay* という名前の新しいフォルダーが作成されます。
 
-   ```dotnetcli
-   dotnet new console -n botsay-nancydavolio
-   ```
-
-   このコマンドを実行すると、*repository* フォルダー以下に *botsay-\<name>* という名前の新しいフォルダーが作成されます。
-
-1. *botsay-\<name>* フォルダーに移動します。
+1. *microsoft.botsay* フォルダーに移動します。
 
    ```console
-   cd botsay-<name>
+   cd microsoft.botsay
    ```
 
 ## <a name="add-the-code"></a>コードの追加
@@ -151,9 +145,9 @@ dotnet run -- Hello from the bot
 
 ## <a name="package-the-tool"></a>ツールをパッケージ化する
 
-アプリケーションをパッケージ化してツールとして配布する前に、プロジェクト ファイルを変更する必要があります。 
+アプリケーションをパッケージ化してツールとして配布する前に、プロジェクト ファイルを変更する必要があります。
 
-1. *botsay-\<name>.csproj* ファイルを開き、3 つの新しい XML ノードを `<PropertyGroup>` ノードの最後に追加します。
+1. *microsoft.botsay.csproj* ファイルを開き、3 つの新しい XML ノードを `<PropertyGroup>` ノードの最後に追加します。
 
    ```xml
    <PackAsTool>true</PackAsTool>
@@ -190,7 +184,7 @@ dotnet run -- Hello from the bot
    dotnet pack
    ```
 
-   *botsay-\<name>.1.0.0.nupkg* ファイルは、*botsay-\<name>.csproj* の `<PackageOutputPath>` 値で識別されるフォルダーに作成されます。この例では *./nupkg* フォルダーです。
+   *microsoft.botsay.1.0.0.nupkg* ファイルは、*microsoft.botsay.csproj* ファイルの `<PackageOutputPath>` 値で識別されるフォルダー (この例では、 *./nupkg* フォルダー) に作成されます。
   
    ツールをリリースする場合は、`https://www.nuget.org` にアップロードすることができます。 NuGet 上でツールを使用できるようになると、開発者は [dotnet tool install](dotnet-tool-install.md) コマンドを使用してツールをインストールできます。 このチュートリアルでは、ローカルの *nupkg* フォルダーからパッケージを直接インストールするため、NuGet にパッケージをアップロードする必要はありません。
 

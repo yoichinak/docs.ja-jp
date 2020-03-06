@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
-ms.openlocfilehash: 0905cbebb2d966570be4ac3aefb40f4377b97061
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
+ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742577"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78156557"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 の新機能
 
@@ -29,13 +29,41 @@ Visual Studio for Mac でも .NET Core 3.1 がサポートされており、Visu
 
 .NET Core 3.1 は、次の 3 年間にわたって Microsoft のサポートが提供される LTS リリースです。 アプリを .NET Core 3.1 に移行することを強くお勧めします。 他のメジャー リリースの現在のライフサイクルは次のとおりです。
 
-| 解放 | メモ |
+| リリース | メモ |
 | ------- | ---- |
 | .NET Core 3.0 | 2020 年 3 月 3 日にサポートが終了します。     |
 | .NET Core 2.2 | 2019 年 12 月 23 日にサポートが終了します。 |
 | .NET Core 2.1 | 2021 年 8 月 21 日にサポートが終了します。    |
 
 詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。
+
+## <a name="macos-apphost-and-notarization"></a>macOS appHost と公証
+
+*macOS のみ*
+
+macOS の公証を受けた .NET Core SDK 3.1 以降では、appHost の設定は既定で無効です。 詳細については、「[macOS Catalina の公証と .NET Core のダウンロードとプロジェクトへの影響](../install/macos-notarization-issues.md)」を参照してください。
+
+appHost 設定が有効な場合、ビルド時または発行時に .NET Core によってネイティブの Mach-O 実行可能ファイルが生成されます。 `dotnet run` コマンドを使用してソース コードから実行するか、Mach-O 実行可能ファイルを直接起動すると、アプリは appHost のコンテキストで実行されます。
+
+appHost を使用しない場合、ユーザーが[ランタイムに依存する](../deploying/index.md#publish-runtime-dependent)アプリを起動できる唯一の方法は、`dotnet <filename.dll>` コマンドを使用することです。 [自己完結型](../deploying/index.md#publish-self-contained)のアプリを発行すると、常に appHost が作成されます。
+
+プロジェクト レベルで appHost を構成するか、`-p:UseAppHost` パラメーターを使用して特定の `dotnet` コマンドの appHost を切り替えることができます。
+
+- プロジェクト ファイル
+
+  ```xml
+  <PropertyGroup>
+    <UseAppHost>true</UseAppHost>
+  </PropertyGroup>
+  ```
+
+- コマンド ライン パラメーター
+
+  ```dotnetcli
+  dotnet run -p:UseAppHost=true
+  ```
+
+`UseAppHost` 設定の詳細については、[Microsoft.NET.Sdk の MSBuild プロパティ](../project-sdk/msbuild-props.md#useapphost)に関する記事を参照してください。
 
 ## <a name="windows-forms"></a>Windows フォーム
 

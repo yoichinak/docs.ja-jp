@@ -3,12 +3,12 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 83934d9c8194d5109cea0e847d287c01c32a2955
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: 9114395a5c6cfd8df5da18024921c35828947e0b
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73739104"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673278"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
@@ -37,7 +37,7 @@ C# バージョン 1.0 は、現在のバージョンと比べると、機能が
 C# 1.0 の主な機能:
 
 - [クラス](../programming-guide/classes-and-structs/classes.md)
-- [構造体](../programming-guide/classes-and-structs/structs.md)
+- [構造体](../language-reference/builtin-types/struct.md)
 - [インターフェイス](../programming-guide/interfaces/index.md)
 - [イベント](../events-overview.md)
 - [プロパティ](../properties.md)

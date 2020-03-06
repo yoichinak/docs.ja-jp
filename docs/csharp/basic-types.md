@@ -4,12 +4,12 @@ description: すべての C# プログラムの中核となる型 (数値、文�
 ms.date: 10/10/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: ad496a9cbb0a654ec10ac38b374a76b042911302
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: bb2177026afb2eef2e14ece0c306bfd3ffe7af39
+ms.sourcegitcommit: c2d9718996402993cf31541f11e95531bc68bad0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093293"
+ms.lasthandoff: 02/27/2020
+ms.locfileid: "77673265"
 ---
 # <a name="types-variables-and-values"></a>型、変数、および値
 
@@ -82,9 +82,10 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
   
 - 継承の原則がサポートされています。 他の型から型を派生させることができます。派生元の型は "*基本型*" と呼ばれます。 派生した型は、基本型のメソッド、プロパティ、およびその他のメンバーを (若干の制限付きで) 継承します。 基本型もなんらかの他の型から派生できます。この場合、派生した型はその継承階層内の両方の基本型のメンバーを継承します。 <xref:System.Int32> (C# のキーワード: `int`) などの組み込み数値型を含むすべての型は、最終的に <xref:System.Object> (C# のキーワード: `object`) という単一の基本型から派生します。 この一元化された型階層は、[共通型システム](../standard/common-type-system.md) (CTS) と呼ばれます。 C# での継承の詳細については、「[継承](programming-guide/classes-and-structs/inheritance.md)」を参照してください。  
   
-- CTS の各型は、"*値型*" または "*参照型*" として定義されます。 これは、.NET Framework クラス ライブラリのすべてのカスタムの型や、ユーザーが独自に定義した型にも当てはまります。 [struct](language-reference/keywords/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型が **structs** です。 値型の詳細については、「[Structs](structs.md)」を参照してください。 [class](language-reference/keywords/class.md) キーワードを使用して定義した型は参照型です。 参照型の詳細については、「[Classes](programming-guide/classes-and-structs/classes.md)」を参照してください。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
+- CTS の各型は、"*値型*" または "*参照型*" として定義されます。 これは、.NET クラス ライブラリのすべてのカスタムの型や、ユーザーが独自に定義した型にも当てはまります。 `struct` または `enum` キーワードを使用して定義する型は値型です。 値型の詳細については、[値型](language-reference/builtin-types/value-types.md)に関するページを参照してください。 [class](language-reference/keywords/class.md) キーワードを使用して定義した型は、参照型です。 参照型の詳細については、「[Classes](programming-guide/classes-and-structs/classes.md)」を参照してください。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
 
 ## <a name="see-also"></a>関連項目
 
-- [構造体](structs.md)
+- [構造体型](language-reference/builtin-types/struct.md)
+- [列挙型](language-reference/builtin-types/enum.md)
 - [クラス](programming-guide/classes-and-structs/classes.md)

@@ -3,12 +3,12 @@ title: global.json の概要
 description: .NET Core CLI コマンドを実行するときに global.json ファイルを使用して .NET Core SDK のバージョンを設定する方法について説明します。
 ms.date: 01/14/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8582c495be58e38ca19320f14e20f8c511a9c821
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
+ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920509"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77625996"
 ---
 # <a name="globaljson-overview"></a>global.json の概要
 
@@ -54,7 +54,7 @@ ms.locfileid: "76920509"
 この値を明示的に設定しない場合、Visual Studio から実行しているかどうかによって既定値が決まります。
 
 - Visual Studio を使用して**いない**場合、既定値は `true` になります。
-- Visual Studio を使用している場合は、要求されたプレリリース状態が使用されます。 つまり、Visual Studio のプレビュー バージョンを使用している場合、または (**[ツール]** > **[オプション]** > **[環境]** > **[プレビュー機能]** で) **[.NET Core SDK のプレビューを使用する]** オプションを設定している場合、既定値は `true` で、それ以外の場合は、`false` です。
+- Visual Studio を使用している場合は、要求されたプレリリース状態が使用されます。 つまり、Visual Studio のプレビュー バージョンを使用している場合、または ( **[ツール]**  >  **[オプション]**  >  **[環境]**  >  **[プレビュー機能]** で) **[.NET Core SDK のプレビューを使用する]** オプションを設定している場合、既定値は `true` で、それ以外の場合は、`false` です。
 
 #### <a name="rollforward"></a>rollForward
 
@@ -153,7 +153,7 @@ dotnet new globaljson --sdk-version 3.0.100
 
 - *global.json* ファイルが見つからない場合、または *global.json* で SDK のバージョンまたは `allowPrerelease` 値が指定されていない場合は、インストールされている最新バージョンの SDK が使用されます (`rollForward` を `latestMajor` に設定するのと同じ)。 プレリリース SDK のバージョンを考慮するかどうかは、`dotnet` の呼び出し方法によって決まります。
   - Visual Studio を使用して**いない**場合は、プレリリース バージョンが考慮されます。
-  - Visual Studio を使用している場合は、要求されたプレリリース状態が使用されます。 つまり、Visual Studio のプレビュー バージョンを使用している場合、または (**[ツール]** > **[オプション]** > **[環境]** > **[プレビュー機能]** で) **[.NET Core SDK のプレビューを使用する]** オプションを設定している場合、プレリリース バージョンが考慮され、それ以外の場合は、リリース バージョンのみが考慮されます。
+  - Visual Studio を使用している場合は、要求されたプレリリース状態が使用されます。 つまり、Visual Studio のプレビュー バージョンを使用している場合、または ( **[ツール]**  >  **[オプション]**  >  **[環境]**  >  **[プレビュー機能]** で) **[.NET Core SDK のプレビューを使用する]** オプションを設定している場合、プレリリース バージョンが考慮され、それ以外の場合は、リリース バージョンのみが考慮されます。
 - SDK のバージョンは指定していないが `allowPrerelease` 値を指定している *global.json* ファイルが見つかった場合は、インストールされている最新の SDK バージョンが使用されます (`rollForward` を `latestMajor` に設定するのと同じ)。 最新の SDK バージョンをリリースまたはプレリリースにできるかどうかは、`allowPrerelease` の値によって決まります。 `true` は、プレリリースバージョンが考慮されることを示し、`false` は、リリース バージョンのみが考慮されることを示します。
 - *global.json* ファイルが見つかり、そこで SDK バージョンが指定されている場合は、次のようになります。
 
@@ -182,17 +182,19 @@ SDK バージョン 2.1.100 以降の番号の最後の部分 (`xyz`) の最初�
 
 ---
 
-## <a name="troubleshooting-build-warnings"></a>ビルドの警告のトラブルシューティング
+## <a name="troubleshoot-build-warnings"></a>ビルドの警告のトラブルシューティング
 
-> [!WARNING]
-> .NET Core SDK のプレビュー バージョンを使用しています。 現在のプロジェクトの global.json ファイルを使用して、SDK のバージョンを定義できます。 詳しくは <https://go.microsoft.com/fwlink/?linkid=869452>
+* 次の警告は、プロジェクトがプレリリース バージョンの .NET Core SDK を使用してコンパイルされたことを示しています。
 
-この警告は、プロジェクトがプレリリース バージョンの .NET Core SDK を使用してコンパイルされたことを示しています。 .NET Core SDK のバージョンには高品質の履歴とコミットメントがあります。 ただし、プレリリース バージョンを使用しない場合は、「[allowPrerelease](#allowprerelease)」セクションで、.NET Core 3.0 SDK 以降のバージョンで使用できるさまざまな方法を確認してください。 .NET Core 3.0 以降のランタイムまたは SDK がインストールされていないマシンの場合は、*global.json* ファイルを作成し、使用する正確なバージョンを指定する必要があります。
+  > .NET Core SDK のプレビュー バージョンを使用しています。 現在のプロジェクトの global.json ファイルを使用して、SDK のバージョンを定義できます。 詳しくは <https://go.microsoft.com/fwlink/?linkid=869452> を参照してください。
 
-> [!WARNING]
-> スタートアップ プロジェクト '{startupProject}' で、フレームワーク '.NETCoreApp' バージョン '{targetFrameworkVersion}' がターゲットになっています。このバージョンの Entity Framework Core .NET コマンド ライン ツールは、バージョン 2.0 以降のみをサポートします。 古いバージョンのツールの使用については、をご覧ください <https://go.microsoft.com/fwlink/?linkid=871254>
+  .NET Core SDK のバージョンには高品質の履歴とコミットメントがあります。 ただし、プレリリース バージョンを使用しない場合は、「[allowPrerelease](#allowprerelease)」セクションで、.NET Core 3.0 SDK 以降のバージョンで使用できるさまざまな方法を確認してください。 .NET Core 3.0 以降のランタイムまたは SDK がインストールされていないマシンの場合は、*global.json* ファイルを作成し、使用する正確なバージョンを指定する必要があります。
 
-.NET Core 2.1 SDK (バージョン 2.1.300) 以降で、`dotnet ef` コマンドは SDK に含まれています。 この警告は、プロジェクトのターゲットが EF Core 1.0 または 1.1 であり、.NET Core 2.1 SDK 以降のバージョンと互換性がないことを示します。 プロジェクトをコンパイルするには、.NET Core 2.0 SDK (バージョン 2.1.201) またはそれ以前のバージョンをご利用のコンピューター上にインストールし、*global.json* ファイルを使用して必要な SDK バージョンを定義します。 `dotnet ef` コマンドの詳細については、「[EF Core .NET コマンドライン ツール](/ef/core/miscellaneous/cli/dotnet)」を参照してください。
+* 次の警告は、プロジェクトのターゲットが EF Core 1.0 または 1.1 であり、.NET Core 2.1 SDK 以降のバージョンと互換性がないことを示します。
+
+  > スタートアップ プロジェクト '{startupProject}' で、フレームワーク '.NETCoreApp' バージョン '{targetFrameworkVersion}' がターゲットになっています。このバージョンの Entity Framework Core .NET コマンド ライン ツールは、バージョン 2.0 以降のみをサポートします。 古いバージョンのツールの使用については、<https://go.microsoft.com/fwlink/?linkid=871254> をご覧ください。
+
+  .NET Core 2.1 SDK (バージョン 2.1.300) 以降で、`dotnet ef` コマンドは SDK に含まれています。 プロジェクトをコンパイルするには、.NET Core 2.0 SDK (バージョン 2.1.201) またはそれ以前のバージョンをご利用のコンピューター上にインストールし、*global.json* ファイルを使用して必要な SDK バージョンを定義します。 `dotnet ef` コマンドの詳細については、「[EF Core .NET コマンドライン ツール](/ef/core/miscellaneous/cli/dotnet)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
