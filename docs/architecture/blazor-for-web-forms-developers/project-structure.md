@@ -5,11 +5,11 @@ author: danroth27
 ms.author: daroth
 ms.date: 09/11/2019
 ms.openlocfilehash: 2c383e86ff22f5a3460476998992b66e9417cc11
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841907"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675003"
 ---
 # <a name="project-structure-for-blazor-apps"></a>Blazor アプリのプロジェクト構造
 
@@ -137,7 +137,7 @@ Blazor プロジェクトのほとんどのファイルは、 *razor*ファイ�
 @using BlazorApp1.Shared
 ```
 
-## <a name="pages"></a>Pages
+## <a name="pages"></a>ページ
 
 Blazor アプリのページはどこにありますか。 Blazor では、ASP.NET Web フォームアプリの *.aspx*ファイルのように、アドレス指定可能なページに対して個別のファイル拡張子を定義していません。 代わりに、ページはコンポーネントにルートを割り当てることによって定義されます。 ルートは、通常、`@page` Razor ディレクティブを使用して割り当てられます。 たとえば、 *Pages/Counter. razor*ファイルで作成された `Counter` コンポーネントは、次のルートを定義します。
 
