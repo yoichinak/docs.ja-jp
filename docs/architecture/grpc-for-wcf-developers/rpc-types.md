@@ -3,11 +3,11 @@ title: WCF 開発者向けの RPC-gRPC の種類
 description: WCF でサポートされているリモートプロシージャコールの種類と gRPC で対応するリモートプロシージャコールのレビュー
 ms.date: 09/02/2019
 ms.openlocfilehash: 58f097bac61395e6810155e8ae9a6bbf2219ec5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503444"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78675156"
 ---
 # <a name="types-of-rpc"></a>RPC の種類
 
