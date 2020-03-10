@@ -68,7 +68,7 @@ public ActionResult API1 ()
 
 この例では、API1 を呼び出すために、ユーザーは次の条件を満たす必要があります。
 
-- Adminstrator "*または*" PowerUser ロールであり、"*かつ*"
+- Administrator "*または*" PowerUser ロールであり、"*かつ*"
 
 - RemoteEmployee ロールであり、*かつ*
 
