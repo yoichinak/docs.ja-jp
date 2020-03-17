@@ -35,7 +35,7 @@ new 演算子では、配列要素の初期値を、区切り記号 `{` およ�
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L39-L39)]
 
-配列の長さは、{ と } の間にある式の数から推論されます。 ローカル変数およびフィールド宣言をさらに短縮して、配列型を再起動する必要がないようにできます。
+配列の長さは、{ と } の間にある式の数から推論されます。 ローカル変数およびフィールド宣言をさらに短縮して、配列型の記述を省略することができます。
 
 [!code-csharp[ArrayInitialization](../../../samples/snippets/csharp/tour/arrays/Program.cs#L44-L44)]
 
