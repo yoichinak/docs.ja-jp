@@ -131,7 +131,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-この最初のバージョンでは、.NET Foundation にあるすべてのリポジトリのリストを読み取る Web 要求を作成します (.NET Foundation の gitHub ID は "dotnet" です)。 最初の数行では、この要求の <xref:System.Net.Http.HttpClient> を設定します。 最初は、GitHub の JSON 応答を受け入れるように構成されます。
+この最初のバージョンでは、.NET Foundation にあるすべてのリポジトリのリストを読み取る Web 要求を作成します (.NET Foundation の GitHub ID は "dotnet" です)。 最初の数行では、この要求の <xref:System.Net.Http.HttpClient> を設定します。 最初は、GitHub の JSON 応答を受け入れるように構成されます。
 この形式は単なる JSON です。 次の行では、このオブジェクトからのすべての要求にユーザー エージェント ヘッダーを追加します。 これらの 2 つのヘッダーは、GitHub サーバー コードによってチェックされ、GitHub から情報を取得するために必要です。
 
 <xref:System.Net.Http.HttpClient> を構成したら、Web 要求を作成して応答を取得します。 この最初のバージョンでは、<xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 簡易メソッドを使います。 この簡易メソッドは、Web 要求を作成するタスクを開始し、要求が返されると応答ストリームを読み取って、ストリームからコンテンツを抽出します。 応答の本文は <xref:System.String> として返されます。 この文字列は、タスクが完了すると使用できます。
