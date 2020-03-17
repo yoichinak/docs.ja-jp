@@ -21,7 +21,7 @@ Windows では、ツールは次のいずれかのインストーラーを使用
 - .NET Core SDK およびランタイム インストーラー。
 - Visual Studio 2019 バージョン 16.3 より前のバージョンの Visual Studio インストーラー。
 
-macOS では、このツールでアンインストールできのは */usr/local/share/dotnet* フォルダーにある SDK とランタイムのみです。
+macOS では、このツールでアンインストールできるのは */usr/local/share/dotnet* フォルダーにある SDK とランタイムのみです。
 
 これらの制限のため、このツールでは、コンピューター上の一部の .NET Core SDK とランタイムをアンインストールできない可能性があります。 `dotnet --info` コマンドを使用して、インストールされているすべての .NET Core SDK とランタイム (このツールで削除できない SDK やランタイムを含む) を検出できます。 `dotnet-core-uninstall list` コマンドを実行すると、このツールでアンインストールできる SDK が表示されます。
 
