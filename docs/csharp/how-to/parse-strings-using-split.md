@@ -40,7 +40,7 @@ ms.locfileid: "73973236"
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
-区切りの連続するインスタンスにより、出力配列で空の文字列が生成されます。
+連続する区切り文字により、出力配列で空の文字列が生成されます。
 
 [!code-csharp-interactive[split strings using multiple consecutive separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#4)]
 
