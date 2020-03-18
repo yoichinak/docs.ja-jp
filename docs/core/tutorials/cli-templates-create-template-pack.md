@@ -6,10 +6,10 @@ ms.date: 12/10/2019
 ms.topic: tutorial
 ms.author: adegeo
 ms.openlocfilehash: 5bc926861dd6a501d7c2d24bd5f7c4116cc78b2c
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503489"
 ---
 # <a name="tutorial-create-a-template-pack"></a>チュートリアル: テンプレート パックを作成する

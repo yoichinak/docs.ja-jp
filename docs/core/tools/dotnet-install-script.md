@@ -3,15 +3,15 @@ title: dotnet-install スクリプト
 description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
 ms.date: 01/23/2020
 ms.openlocfilehash: bf28f872be3ac2b4115b1d5e5c06e32afec0b49e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092864"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet-install.ps1` | `dotnet-install.sh` - .NET Core SDK と共有ランタイムをインストールするために使うスクリプトです。
 
@@ -33,7 +33,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
     [--runtime-id] [--skip-non-versioned-files] [--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet-install` スクリプトは、.NET Core CLI や共有ランタイムを含む .NET Core SDK の非管理者インストールを実行するために使用されます。
 
@@ -56,7 +56,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Channel|--channel <CHANNEL>`**
 
-  インストールのソース チャネルを指定します。 次の値を指定できます。
+  インストールのソース チャネルを指定します。 指定できる値は、
 
   - `Current` - 最新リリース。
   - `LTS` - 長期的なサポート チャネル (サポートされている最新リリース)。
@@ -67,7 +67,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Version|--version <VERSION>`**
 
-  特定のビルド バージョンを表します。 次の値を指定できます。
+  特定のビルド バージョンを表します。 指定できる値は、
 
   - `latest` - チャネルの最新ビルド (`-Channel` オプションで使用)。
   - `coherent` - チャネルの最新のコヒーレント ビルド。最新の安定版パッケージの組み合わせを使用します (ブランチ名の `-Channel` オプションで使用)。
@@ -96,7 +96,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
 - **`-Runtime|--runtime <RUNTIME>`**
 
-  SDK 全体ではなく共有ランタイムのみがインストールされます。 次の値を指定できます。
+  SDK 全体ではなく共有ランタイムのみがインストールされます。 指定できる値は、
 
   - `dotnet` - `Microsoft.NETCore.App` 共有ランタイム。
   - `aspnetcore` - `Microsoft.AspNetCore.App` 共有ランタイム。
@@ -150,7 +150,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
 
   スクリプトのヘルプを出力します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - 最新の長期サポート (LST) バージョンを既定の場所にインストールします。
 
@@ -216,7 +216,7 @@ dotnet-install.sh [--channel] [--version] [--jsonfile] [--install-dir] [--archit
   curl -sSL https://dot.net/v1/dotnet-install.sh | bash /dev/stdin <additional install-script args>
   ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Core のリリース](https://github.com/dotnet/core/releases)
 - [.NET Core ランタイムと SDK ダウンロード アーカイブ](https://github.com/dotnet/core/blob/master/release-notes/download-archive.md)

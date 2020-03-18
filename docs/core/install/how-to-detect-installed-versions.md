@@ -7,11 +7,11 @@ ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
 ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503839"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397981"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core が既にインストールされていることを確認する方法
 
@@ -170,7 +170,7 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 コマンド `dotnet --info` を使用すると、SDK バージョンとランタイム バージョンの両方を確認できます。 また、オペレーティング システムのバージョンやランタイム識別子 (RID) など、その他の環境に関連する情報も取得されます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [.NET Core ランタイムをインストール](runtime.md)します。
 - [.NET Core SDK をインストール](sdk.md)します。

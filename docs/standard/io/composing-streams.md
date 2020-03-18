@@ -14,10 +14,10 @@ helpviewer_keywords:
 - streams, backing stores
 ms.assetid: da761658-a535-4f26-a452-b30df47f73d5
 ms.openlocfilehash: 3f18712793254f4942c092c87a3e64c73b492ae0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160106"
 ---
 # <a name="compose-streams"></a>ストリームの作成

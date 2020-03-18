@@ -10,15 +10,15 @@ dev_langs:
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
 ms.openlocfilehash: eafd8f78c3d8de1ba064021111f869571d5a570f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160327"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (統合言語クエリ)
 
-## <a name="what-is-it"></a>LINQ とは
+## <a name="what-is-it"></a>紹介
 
 LINQ では、言語レベルのクエリ機能と、表現力豊かな宣言コードを記述する方法として C# および Visual Basic に[高階関数](https://en.wikipedia.org/wiki/Higher-order_function) API が提供されます。
 
@@ -354,7 +354,7 @@ End Function
 
 PLINQ (Parallel LINQ) は、LINQ 式の並列実行エンジンです。 つまり、LINQ の正規表現は、任意の数のスレッドで普通に並列化できます。 これは、式の前に `AsParallel()` を指定して呼び出すことで実行できます。
 
-次に例を示します。
+次の点を考慮します。
 
 ```csharp
 public static string GetAllFacebookUserLikesMessage(IEnumerable<FacebookUser> facebookUsers)

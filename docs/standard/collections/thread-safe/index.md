@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, overview
 ms.assetid: 2e7ca21f-786c-4367-96be-0cf3f3dcc6bd
 ms.openlocfilehash: 790543118b18b0422f41c3249512b62aae0cfb03
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75938106"
 ---
 # <a name="thread-safe-collections"></a>スレッド セーフなコレクション
@@ -32,7 +32,7 @@ ms.locfileid: "75938106"
   
  <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間に属するコレクション型を次の表に示します。  
   
-|種類|説明|  
+|[種類]|[説明]|  
 |----------|-----------------|  
 |<xref:System.Collections.Concurrent.BlockingCollection%601>|<xref:System.Collections.Concurrent.IProducerConsumerCollection%601> を実装する任意の型の境界ブロッキング機能を提供します。 詳細については、「[BlockingCollection の概要](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)」を参照してください。|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602>|キーと値のペアのディクショナリのスレッド セーフな実装。|  
@@ -43,7 +43,7 @@ ms.locfileid: "75938106"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|説明|  
+|タイトル|[説明]|  
 |-----------|-----------------|  
 |[BlockingCollection の概要](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)|<xref:System.Collections.Concurrent.BlockingCollection%601> 型で提供される機能について説明します。|  
 |[方法: ConcurrentDictionary の項目を追加および削除する](../../../../docs/standard/collections/thread-safe/how-to-add-and-remove-items.md)|<xref:System.Collections.Concurrent.ConcurrentDictionary%602> の要素を追加および削除する方法について説明します。|  
@@ -53,5 +53,5 @@ ms.locfileid: "75938106"
 |[方法: パイプラインでブロッキング コレクションの配列を使用する](../../../../docs/standard/collections/thread-safe/how-to-use-arrays-of-blockingcollections.md)|複数のブロッキング コレクションを同時に使用してパイプラインを実装する方法について説明します。|  
 |[方法: ConcurrentBag を使用してオブジェクト プールを作成する](../../../../docs/standard/collections/thread-safe/how-to-create-an-object-pool.md)|新しいオブジェクトを頻繁に作成する代わりにオブジェクトを再利用できるシナリオで、同時実行バッグを使用してパフォーマンスを向上させる方法について説明します。|  
   
-## <a name="reference"></a>関連項目  
+## <a name="reference"></a>リファレンス  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>

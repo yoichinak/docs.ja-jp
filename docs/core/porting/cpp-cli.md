@@ -4,10 +4,10 @@ description: C++/CLI プロジェクトの .NET Core への移植について説
 author: mjrousos
 ms.date: 01/10/2020
 ms.openlocfilehash: eb03f2a5ff42e8279fd3ebd6ee6fb6d955f6798d
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75964861"
 ---
 # <a name="how-to-port-a-ccli-project-to-net-core"></a>C++/CLI プロジェクトを .NET Core に移植する方法
@@ -65,7 +65,7 @@ Windows フォーム API と WPF API の両方を使用するには、次の参�
 
 MSBuild を使用せずに C++/CLI プロジェクトをビルドすることもできます。 次の手順に従って、*cl.exe* と *link.exe* を使用して、.NET Core 向けの C++/CLI プロジェクトを直接ビルドします。
 
-1. コンパイル時に、*cl.exe*に `-clr:netcore` を渡します。
+1. コンパイル時に、`-clr:netcore`cl.exe*に*  を渡します。
 2. 必要な .NET Core 参照アセンブリを参照します。
 3. リンクするときに、.NET Core アプリのホスト ディレクトリを `LibPath` として指定します (*ijwhost.lib* が検出されるようにします)。
 4. *ijwhost.dll* を (.NET Core アプリのホスト ディレクトリから) プロジェクトの出力ディレクトリにコピーします。

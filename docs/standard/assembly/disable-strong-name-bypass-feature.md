@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strong-named assemblies, loading into trusted application domains
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 ms.openlocfilehash: a4c4ae7ea61a659d3bede532da3c1bdaea448873
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141106"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>方法: 厳密な名前のバイパス機能を無効にする

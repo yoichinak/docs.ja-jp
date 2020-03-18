@@ -4,10 +4,10 @@ description: あらゆる種類の .NET プロジェクトまたはファイル�
 author: thraka
 ms.date: 06/14/2019
 ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73420876"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
@@ -22,7 +22,7 @@ NuGet の *.nupkg* ファイルを直接参照するか、テンプレートが�
 
 ### <a name="net-default-templates"></a>.NET の既定のテンプレート
 
-[.NET Core SDK](https://dotnet.microsoft.com/download) をインストールすると、コンソール アプリ、クラス ライブラリ、単体テスト プロジェクト、ASP.NET Core アプリ ([Angular](https://angular.io/) プロジェクトと [React](https://facebook.github.io/react/) プロジェクトを含む)、構成ファイルなど、プロジェクトやファイルを作成するための 12 個を超える組み込みテンプレートが与えられます。 組み込みテンプレートの一覧を表示するには、`-l|--list` オプションを指定して `dotnet new` コマンドを実行します。
+[.NET Core SDK](https://dotnet.microsoft.com/download) をインストールすると、コンソール アプリ、クラス ライブラリ、単体テスト プロジェクト、ASP.NET Core アプリ ([Angular](https://angular.io/) プロジェクトと [React](https://facebook.github.io/react/) プロジェクトを含む)、構成ファイルなど、プロジェクトやファイルを作成するための 12 個を超える組み込みテンプレートが与えられます。 組み込みテンプレートの一覧を表示するには、`dotnet new` オプションを指定して `-l|--list` コマンドを実行します。
 
 ```dotnetcli
 dotnet new --list
@@ -52,11 +52,11 @@ dotnet new --list
 
 *template.json* ファイルは、テンプレートのルート ディレクトリの *.template.config* フォルダーにあります。 このファイルは、テンプレート エンジンに構成情報を提供します。 最小構成には、次の表に示すメンバーが必要です。この最小構成があれば、実際に機能するテンプレートが作成されます。
 
-| メンバー            | 型          | 説明 |
+| メンバー            | [種類]          | [説明] |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* ファイルの JSON スキーマ。 エディターが JSON スキーマ対応であれば、スキーマの指定時、JSON 編集機能が有効になります。 たとえば、[Visual Studio Code](https://code.visualstudio.com/) の場合、IntelliSense を有効にするためにこのメンバーが必要になります。 値として `http://json.schemastore.org/template` を使用します。 |
 | `author`          | string        | テンプレートの作成者。 |
-| `classifications` | array(string) | テンプレートのゼロ以上の特性。ユーザーがこれを利用し、テンプレートを探すことがあります。 `dotnet new -l|--list` コマンドでテンプレートの一覧を生成したとき、*Tags* 列が表示される場合、この列にも分類が表示されます。 |
+| `classifications` | array(string) | テンプレートのゼロ以上の特性。ユーザーがこれを利用し、テンプレートを探すことがあります。 *コマンドでテンプレートの一覧を生成したとき、* Tags`dotnet new -l|--list` 列が表示される場合、この列にも分類が表示されます。 |
 | `identity`        | string        | このテンプレートの一意の名前。 |
 | `name`            | string        | ユーザーに対して表示されるテンプレートの名前。 |
 | `shortName`       | string        | テンプレートを選択するための既定の省略名。テンプレート名が GUI 経由で選択されるのではなく、ユーザーによって指定される環境に適用されます。 たとえば、CLI コマンドでコマンド プロンプトからテンプレートを利用するときに省略名が便利です。 |
@@ -93,9 +93,9 @@ dotnet new --list
 
 ## <a name="packing-a-template-into-a-nuget-package-nupkg-file"></a>テンプレートをパッケージ化し、NuGet パッケージ (nupkg ファイル) を作成する
 
-カスタム テンプレートは、[dotnet pack](dotnet-pack.md) コマンドと *.csproj* ファイルでパッケージ化されます。 または、[nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) コマンドと *.nuspec* ファイルで [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) を使うこともできます。 ただし、NuGet の場合、Windows では .NET Framework が、Linux と MacOS では [Mono](https://www.mono-project.com/) が必要です。
+カスタム テンプレートは、[dotnet pack](dotnet-pack.md) コマンドと *.csproj* ファイルでパッケージ化されます。 または、[nuget pack](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) コマンドと [.nuspec](https://docs.microsoft.com/nuget/tools/cli-ref-pack) ファイルで *NuGet* を使うこともできます。 ただし、NuGet の場合、Windows では .NET Framework が、Linux と MacOS では [Mono](https://www.mono-project.com/) が必要です。
 
-*.csproj* ファイルは、従来のコード プロジェクトの *.csproj* ファイルと若干異なります。 次の設定を確認してください。
+*.csproj* ファイルは、従来のコード プロジェクトの *.csproj* ファイルと若干異なります。 以下の設定に注意してください。
 
 01. 設定 `<PackageType>` が追加され、`Template` に設定されます。
 01. 設定 `<PackageVersion>` が追加され、有効な [NuGet のバージョン番号](/nuget/reference/package-versioning)に設定されます。
@@ -105,13 +105,13 @@ dotnet new --list
 
 *.nupkg* NuGet パッケージの形式のテンプレート パックでは、すべてのテンプレートをパッケージ内の *content* フォルダーに格納する必要があります。 生成された *.nupkg* をテンプレート パックとしてインストールできるようにするため、 *.csproj* ファイルに追加する設定がさらにいくつかあります。
 
-01. プロジェクトで**コンテンツ**として設定されるすべてのファイルを NuGet パッケージに含めるには、設定 `<IncludeContentInPack>` を `true` に設定します。
+01. プロジェクトで`<IncludeContentInPack>`コンテンツ`true`として設定されるすべてのファイルを NuGet パッケージに含めるには、設定 **を** に設定します。
 01. コンパイラによって生成されたすべてのバイナリを NuGet パッケージから除外するには、設定 `<IncludeBuildOutput>` を `false` に設定します。
 01. 設定 `<ContentTargetFolders>` を `content` に設定します。 これにより、**コンテンツ**として設定されたファイルは、NuGet パッケージ内の *content* フォルダーに格納されます。 NuGet パッケージのこのフォルダーは、dotnet テンプレート システムによって解析されます。
 
-すべてのコード ファイルをテンプレート プロジェクトによってコンパイルされないように除外する簡単な方法は、プロジェクト ファイルの `<ItemGroup>` 要素内で `<Compile Remove="**\*" />` 項目を使うことです。
+すべてのコード ファイルをテンプレート プロジェクトによってコンパイルされないように除外する簡単な方法は、プロジェクト ファイルの `<Compile Remove="**\*" />` 要素内で `<ItemGroup>` 項目を使うことです。
 
-テンプレート パックを構成する簡単な方法は、すべてのテンプレートを個別のフォルダーに格納した後、 *.csproj* ファイルと同じディレクトリにある *templates* フォルダーの内部に各テンプレート フォルダーを格納することです。 これにより、1 つのプロジェクト項目を使って、すべてのファイルとフォルダーを**コンテンツ**として *templates* に含めることができます。 `<ItemGroup>` 要素の内部に、`<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 項目を作成します。
+テンプレート パックを構成する簡単な方法は、すべてのテンプレートを個別のフォルダーに格納した後、 *.csproj* ファイルと同じディレクトリにある *templates* フォルダーの内部に各テンプレート フォルダーを格納することです。 これにより、1 つのプロジェクト項目を使って、すべてのファイルとフォルダーを*コンテンツ*として **templates** に含めることができます。 `<ItemGroup>` 要素の内部に、`<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 項目を作成します。
 
 上記のすべてのガイドラインに従う *.csproj* ファイルの例を次に示します。 *templates* 子フォルダーを *content* パッケージ フォルダーにパッケージ化し、すべてのコード ファイルをコンパイルから除外します。
 
@@ -248,7 +248,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [dotnet new のカスタム テンプレートを作成する (チュートリアル)](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)

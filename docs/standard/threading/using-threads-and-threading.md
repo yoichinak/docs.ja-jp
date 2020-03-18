@@ -7,10 +7,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
 ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75936840"
 ---
 # <a name="using-threads-and-threading"></a>スレッドの使用とスレッド処理
@@ -44,7 +44,7 @@ ms.locfileid: "75936840"
 
 <xref:System.Threading.Thread> プロパティの一部を次の表に示します。  
   
-|プロパティ|説明|  
+|property|[説明]|  
 |--------------|-----------|  
 |<xref:System.Threading.Thread.IsAlive%2A>|スレッドが起動していて、正常終了しておらず中止されてもいない場合は、`true` が返されます。|  
 |<xref:System.Threading.Thread.IsBackground%2A>|スレッドがバックグラウンド スレッドかどうかを示すブール値を取得または設定します。 バックグラウンド スレッドはフォアグラウンド スレッドに似ていますが、プロセスの停止を防ぐことはありません。 あるプロセスに属するフォアグラウンド スレッドがすべて停止すると、共通言語ランタイムは、アライブ状態のバックグラウンド スレッドで <xref:System.Threading.Thread.Abort%2A> メソッドを呼び出し、プロセスを終了します。 詳細については、「[フォアグラウンド スレッドとバックグラウンド スレッド](foreground-and-background-threads.md)」を参照してください。|  
@@ -52,7 +52,7 @@ ms.locfileid: "75936840"
 |<xref:System.Threading.Thread.Priority%2A>|オペレーティング システムがスレッド スケジュールに優先順位を設定するために使用する <xref:System.Threading.ThreadPriority> 値を取得または設定します。 詳細については、「[スレッドのスケジューリング](scheduling-threads.md)」と <xref:System.Threading.ThreadPriority> リファレンスを参照してください。|  
 |<xref:System.Threading.Thread.ThreadState%2A>|スレッドの現在の状態を示す <xref:System.Threading.ThreadState> 値を取得します。|  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Threading.Thread?displayProperty=nameWithType>
 - [スレッドおよびスレッド処理](threads-and-threading.md)

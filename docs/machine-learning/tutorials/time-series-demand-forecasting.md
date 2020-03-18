@@ -7,10 +7,10 @@ ms.custom: mvc
 ms.author: luquinta
 author: luisquintanilla
 ms.openlocfilehash: 026421d7b1b2a0e39118ae712780ca7fc8f6e444
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76921252"
 ---
 # <a name="tutorial-forecast-bike-rental-service-demand-with-time-series-analysis-and-mlnet"></a>チュートリアル: 時系列解析と ML.NET を使用して自転車レンタル サービスの需要を予測する
@@ -47,8 +47,8 @@ ML.NET を使用して SQL Server データベースに格納されているデ�
 
 1. "BikeDemandForecasting" という名前の新しい **C# .NET Core コンソール アプリケーション**を作成します。
 1. **Microsoft.ML** バージョン **1.4.0** NuGet パッケージをインストールします。
-    1. ソリューション エクスプローラーで、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。
-    1. [パッケージ ソース] として "nuget.org" を選択し、**[参照]** タブを選択し、"**Microsoft.ML**" を検索します。
+    1. ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。
+    1. [パッケージ ソース] として "nuget.org" を選択し、 **[参照]** タブを選択し、"**Microsoft.ML**" を検索します。
     1. **[プレリリースを含める]** チェックボックスをオンにします。
     1. **[インストール]** ボタンを選択します。
     1. **[変更のプレビュー]** ダイアログで **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、[ライセンスの同意] ダイアログの **[同意する]** を選択します。
@@ -280,7 +280,7 @@ CREATE TABLE [Rentals] (
 
 予測値は、レンタルの正確な数を予測するものではありませんが、より絞り込んだ値の範囲が提供されるため、リソースの使用を最適化した事業が可能になります。
 
-おめでとうございます!  これで、自転車のレンタル需要を予測するための時系列の機械学習モデルが正常に作成されました。
+おめでとうございます! これで、自転車のレンタル需要を予測するための時系列の機械学習モデルが正常に作成されました。
 
 このチュートリアルのソース コードは、[dotnet/machinelearning-samples](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/Forecasting_BikeSharingDemand) リポジトリにあります。
 

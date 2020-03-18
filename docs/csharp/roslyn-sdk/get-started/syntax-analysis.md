@@ -3,12 +3,12 @@ title: 構文解析の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 02/05/2018
 ms.custom: mvc
-ms.openlocfilehash: d4163e8aadf577a5a5cbed225b26a0ec8390277e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 22d1303c9daa2ae35cf130b0c857cd7a5efdbe76
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346998"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240520"
 ---
 # <a name="get-started-with-syntax-analysis"></a>構文解析の概要
 
@@ -77,42 +77,42 @@ Syntax API を使用してコード ファイルで何でも見つけること�
 
 次のようにして、新しい C# の **Stand-Alone Code Analysis Tool** プロジェクトを作成します。
 
-* Visual Studio で、 **[ファイル]** 、 **[新規]** 、 **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
+* Visual Studio で、 **[ファイル]**  >  **[新規]**  >  **[プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
 * **[Visual C#]**  >  **[機能拡張]** で、 **[Stand-Alone Code Analysis Tool]** を選択します。
 * プロジェクトに "**SyntaxTreeManualTraversal**" という名前を付けて、[OK] をクリックします。
 
 前述の基本的な "Hello World!" プログラムを 分析します。
 Hello World プログラムのテキストを `Program` クラスの定数として追加します。
 
-[!code-csharp[Declare the program text](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
+[!code-csharp[Declare the program text](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#1 "Declare a constant string for the program text to analyze")]
 
 次に、以下のコードを追加して、`programText` 定数のコード テキストの**構文ツリー**をビルドします。  次の行を `Main` メソッドに追加します。
 
-[!code-csharp[Create the tree](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
+[!code-csharp[Create the tree](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#2 "Create the syntax tree")]
 
 これら 2 行でツリーを作成し、そのツリーのルート ノードを取得します。 これでツリー内のノードを調べることができます。 以下の行を `Main` メソッドに追加して、ツリー内のルート ノードのプロパティをいくつか表示します。
 
-[!code-csharp[Examine the root node](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
+[!code-csharp[Examine the root node](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
 アプリケーションを実行して、このツリー内のルート ノードについて、コードで検出された内容を確認します。
 
 通常、コードについて学習する場合、ツリーを走査します。 この例では、使い慣れたコードを分析して、API を調べます。 次のコードを追加して、`root` ノードの最初のメンバーを調べます。
 
-[!code-csharp[Find the first member](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
+[!code-csharp[Find the first member](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#4 "Find the first member")]
 
 そのメンバーは <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NamespaceDeclarationSyntax?displayProperty=nameWithType> です。 `namespace HelloWorld` 宣言のスコープ内ですべてを表します。 次のコードを追加して、`HelloWorld` 名前空間内で宣言されているノードを調べます。
 
-[!code-csharp[Find the class declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
+[!code-csharp[Find the class declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#5 "Find the class declaration")]
 
 プログラムを実行して、学習した内容を確認します。
 
 宣言が <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ClassDeclarationSyntax?displayProperty=nameWithType> であることがわかったので、その型の新しい変数を宣言して、クラス宣言を調べます。 このクラスには 1 つのメンバー (`Main` メソッド) のみが含まれます。 次のコードを追加して `Main` メソッドを見つけ、それを <xref:Microsoft.CodeAnalysis.CSharp.Syntax.MethodDeclarationSyntax?displayProperty=nameWithType> にキャストします。
 
-[!code-csharp[Find the main declaration](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
+[!code-csharp[Find the main declaration](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#6 "Find the main declaration")]
 
 メソッド宣言ノードには、メソッドに関するすべての構文情報が含まれています。 次は、`Main` メソッドの戻り値の型、引数の数と型、およびメソッドの本文を表示します。 次のコードを追加します。
 
-[!code-csharp[Examine the syntax of the main method](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
+[!code-csharp[Examine the syntax of the main method](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#7 "Display information about the main method")]
 
 プログラムを実行して、このプログラムについて検出したすべての情報を表示します。
 
@@ -144,7 +144,7 @@ The body text of the Main method follows:
 
 これらのクエリ メソッドを使用すれば、ツリーを移動せずに、`Main` メソッドに対する引数を検索することができます。 次のコードを `Main` メソッドの下部に追加します。
 
-[!code-csharp[Query the tree for the arguments to Main](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
+[!code-csharp[Query the tree for the arguments to Main](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#8 "Query the tree for the arguments to Main")]
 
 最初のステートメントでは LINQ 式と <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A> メソッドを使用して、前の例と同じパラメーターを検索します。
 
@@ -164,33 +164,33 @@ The body text of the Main method follows:
 
 上記のサンプルと同様に、分析しようとしているプログラムのテキストを保持する文字列定数を定義できます。
 
-[!code-csharp[Define the code text to analyzer](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
+[!code-csharp[Define the code text to analyzer](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#1 "Define the program text to analyze")]
 
 このソース テキストには、4 つの異なる場所 (ファイル レベル、最上位の名前空間、2 つの入れ子になった名前空間) に分散されている `using` ディレクティブが含まれます。 この例では、コードに対してクエリを実行する <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> クラスを使用する主なシナリオに焦点を当てます。 using 宣言を検索するためにルート構文ツリー内のすべてのノードにアクセスするのは面倒です。 代わりに、派生クラスを作成し、ツリー内の現在のノードが using ディレクティブである場合にのみ、呼び出されるメソッドをオーバーライドします。 ビジターは他のノード型に対して何も行いません。 この単一のメソッドで各 `using` ステートメントを調べ、`System` 名前空間にはない名前空間のコレクションをビルドします。 すべての `using` ステートメント (`using` ステートメントのみ) を調べる <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> をビルドします。
 
 これでプログラム テキストを定義したので、`SyntaxTree` を作成して、そのツリーのルートを取得する必要があります。
 
-[!code-csharp[Create the Syntax tree and access the root](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
+[!code-csharp[Create the Syntax tree and access the root](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#2 "Create the Syntax tree and access the root node.")]
 
 次は、新しいクラスを作成します。 Visual Studio で、 **[プロジェクト]**  >  **[新しい項目の追加]** の順に選択します。 **[新しい項目の追加]** ダイアログで、ファイル名として「*UsingCollector.cs*」と入力します。
 
 `UsingCollector` クラスで `using` ビジター機能を実装します。 まず、<xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> から `UsingCollector` クラスを派生させます。
 
-[!code-csharp[Declare the base class for the using collector](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
+[!code-csharp[Declare the base class for the using collector](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
 収集する名前空間ノードを保持する記憶域が必要です。  `UsingCollector` クラスでパブリックの読み取り専用プロパティを宣言します。その場合、以下の変数を使用して、検索する <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> ノードを格納します。
 
-[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
+[!code-csharp[Declare storage for the using syntax nodes](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 
 基本クラスの <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxWalker> では、構文ツリー内の各ノードにアクセスするロジックを実装します。 派生クラスは、対象となる特定のノードに対して呼び出されたメソッドをオーバーライドします。 この例では、`using` ディレクティブが対象となります。 つまり、<xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> メソッドをオーバーライドする必要があります。 このメソッドへの 1 つの引数は <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> オブジェクトです。 これがビジターを使用する最も重要は利点です。特定のノード型に既にキャストされている引数を使用して、オーバーライドされたメソッドを呼び出します。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax?displayProperty=nameWithType> クラスには、インポートされる名前空間の名前を格納する <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax.Name> プロパティがあります。 それは <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> です。 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor.VisitUsingDirective(Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax)> オーバーライドで次のコードを追加します。
 
-[!code-csharp[Examine using nodes for the System namespace](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
+[!code-csharp[Examine using nodes for the System namespace](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#5 "Examine all using nodes for the System namespace.")]
 
 前の例と同様に、このメソッドを理解するのに役立つさまざまな `WriteLine` ステートメントを追加しました。 呼びされるタイミングと、毎回渡される引数を確認できます。
 
 最後に、2 行のコードを追加して `UsingCollector` を作成し、ルート ノードにアクセスするようにして、`using` ステートメントをすべて収集する必要があります。 次に、`foreach` ループを追加して、コレクターが検出した `using` ステートメントをすべて表示します。
 
-[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
+[!code-csharp[Create the UsingCollector and visit the root node.](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/Program.cs#6 "Create the UsingCollector and visit the root node.")]
 
 プログラムをコンパイルして実行します。 次の出力が表示されます。
 

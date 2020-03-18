@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.date: 09/13/2019
 ms.openlocfilehash: 5a02c71b16e2c8e5ade5128866af7dc46a03ba4a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160184"
 ---
 # <a name="how-to-create-user-defined-exceptions-with-localized-exception-messages"></a>ローカライズされた例外メッセージを使用するユーザー定義の例外を作成する方法
@@ -21,7 +21,7 @@ ms.locfileid: "78160184"
 
 .NET には、使用できるさまざまな例外があります。 ただし、いずれもニーズに合わない場合は、独自のカスタムの例外を作成できます。
 
-たとえば、`StudentName` プロパティを含む `StudentNotFoundException` を作成するとします。
+たとえば、`StudentNotFoundException` プロパティを含む `StudentName` を作成するとします。
 カスタムの例外を作成するには、次の手順を実行します。
 
 1. <xref:System.Exception> から継承されるシリアル化可能なクラスを作成します。 クラス名の末尾は "Exception" にするようにします。
@@ -165,7 +165,7 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
     > [!NOTE]
     > プロジェクト名が `TestProject` で、リソース ファイル *ExceptionMessages.resx* がプロジェクトの *Resources* フォルダー内にある場合、リソース ファイルの完全修飾名は `TestProject.Resources.ExceptionMessages` です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ユーザー定義の例外を作成する方法](how-to-create-user-defined-exceptions.md)
 - [デスクトップ アプリケーションに対するサテライト アセンブリの作成](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

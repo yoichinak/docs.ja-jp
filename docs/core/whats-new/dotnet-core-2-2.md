@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.date: 12/04/2018
 ms.openlocfilehash: e045c39240c99777d05ca86ee0a8cd1fa4309c4f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156583"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 の新機能

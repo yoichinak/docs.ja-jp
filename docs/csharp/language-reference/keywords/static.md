@@ -8,10 +8,10 @@ helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
 ms.openlocfilehash: e7671e9db488a7b50f4ed736864d6fa8d95eef1a
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76744663"
 ---
 # <a name="static-c-reference"></a>static (C# リファレンス)
@@ -36,7 +36,7 @@ Console.WriteLine(MyBaseC.MyStruct.x);
 
 クラスのインスタンスには、そのクラスのインスタンス フィールドすべてにそれぞれのコピーが含まれていますが、各 `static` フィールドのコピーは 1 つだけです。
 
-`static` メソッドまたはプロパティ アクセサーへの参照には、[`this`](this.md) は使用できません。
+[ メソッドまたはプロパティ アクセサーへの参照には、`this`](this.md)`static` は使用できません。
 
 `static` キーワードをクラスに適用する場合、そのクラスのすべてのメンバーが `static` でなければなりません。
 
@@ -63,10 +63,10 @@ Console.WriteLine(MyBaseC.MyStruct.x);
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [修飾子](index.md)
 - [静的クラスと静的クラス メンバー](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)

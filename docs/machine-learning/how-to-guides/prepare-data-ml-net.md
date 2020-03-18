@@ -6,10 +6,10 @@ ms.author: luquinta
 ms.date: 01/29/2020
 ms.custom: mvc, how-to, title-hack-0625
 ms.openlocfilehash: 12f933253af9ea519d711c20227fe075fed003de
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77452988"
 ---
 # <a name="prepare-data-for-building-a-model"></a>モデル構築用のデータを準備する

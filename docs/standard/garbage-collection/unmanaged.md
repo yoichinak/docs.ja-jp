@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
 ms.openlocfilehash: e05cfb949ee3f206f212ca7015f3ff4c22cd2a12
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73423037"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>アンマネージ リソースのクリーンアップ
@@ -27,11 +27,11 @@ ms.locfileid: "73423037"
 
 - [dispose パターン](implementing-dispose.md)を実装します。 これは、アンマネージ リソースの確定的解放を有効にするために <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の実装を提供する必要があります。 型のコンシューマーはオブジェクト (および使用するリソース) が不要になると <xref:System.IDisposable.Dispose%2A> を呼び出します。 <xref:System.IDisposable.Dispose%2A> メソッドはアンマネージ リソースを直ちに解放します。
 
-- 型のコンシューマーが <xref:System.IDisposable.Dispose%2A> の呼び出しを忘れた場合にアンマネージ リソースを解放します。 これには、2 つの方法があります。
+- 型のコンシューマーが <xref:System.IDisposable.Dispose%2A> の呼び出しを忘れた場合にアンマネージ リソースを解放します。 この作業を実行する 2 つの方法があります。
 
   - アンマネージ リソースをラップするセーフ ハンドルを使用します。 この手法を使用することをお勧めします。 セーフ ハンドルは <xref:System.Runtime.InteropServices.SafeHandle?displayProperty=nameWithType> クラスから派生し、堅牢な <xref:System.Object.Finalize%2A> メソッドを含みます。 セーフ ハンドルを使用するときは、単純に <xref:System.IDisposable> インターフェイスを実装し、<xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> の実装でセーフ ハンドルの <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> メソッドを呼び出します。 セーフ ハンドルのファイナライザーは、<xref:System.IDisposable.Dispose%2A> メソッドが呼び出されなかった場合、ガベージ コレクターによって自動的に呼び出されます。
 
-    または
+    — または —
 
   - <xref:System.Object.Finalize%2A?displayProperty=nameWithType> メソッドをオーバーライドします。 終了処理では、型のコンシューマーが <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> を呼び出してアンマネージ リソースを確定的に破棄しなかった場合に、リソースを非確定的に解放できます。 ただし、オブジェクトの終了処理は複雑でエラーが発生しやすい操作であるため、独自のファイナライザーを用意する代わりに、セーフ ハンドルを使用することをお勧めします。
 
@@ -43,7 +43,7 @@ ms.locfileid: "73423037"
 
 [IDisposable を実装するオブジェクトの使用](../../../docs/standard/garbage-collection/using-objects.md) 型のコンシューマーが <xref:System.IDisposable.Dispose%2A> の実装を確実に呼び出す方法について説明します。 このためには、C# の `using` ステートメントまたは Visual Basic の `Using` ステートメントを使用することをお勧めします。
 
-## <a name="reference"></a>辞書／辞典／その他
+## <a name="reference"></a>リファレンス
 
 <xref:System.IDisposable?displayProperty=nameWithType>\
 アンマネージ リソースの解放のための <xref:System.IDisposable.Dispose%2A> メソッドを定義します。

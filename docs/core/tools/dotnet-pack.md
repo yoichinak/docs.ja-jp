@@ -3,17 +3,17 @@ title: dotnet pack コマンド
 description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
 ms.date: 02/14/2020
 ms.openlocfilehash: 865262f1eb314f9b7e8ee713c573a965e89ded93
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503648"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet pack` - NuGet パッケージにコードをパックします。
 
@@ -26,7 +26,7 @@ dotnet pack [<PROJECT>|<SOLUTION>] [-c|--configuration] [--force] [--include-sou
 dotnet pack [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet pack` コマンドはプロジェクトをビルドし、NuGet パッケージを作成します。 このコマンドの結果が NuGet パッケージ (つまり、 *.nupkg* ファイル) です。
 
@@ -119,7 +119,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
   コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - 現在のディレクトリのプロジェクトをパックします。
 
@@ -145,13 +145,13 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
   dotnet pack --no-build --output nupkgs
   ```
 
-- *.csproj* ファイルで `<VersionSuffix>$(VersionSuffix)</VersionSuffix>` として構成されているプロジェクトのバージョン サフィックスで、現在のプロジェクトをパックし、結果のパッケージ バージョンを指定されたサフィックスで更新します。
+- `<VersionSuffix>$(VersionSuffix)</VersionSuffix>`.csproj*ファイルで* として構成されているプロジェクトのバージョン サフィックスで、現在のプロジェクトをパックし、結果のパッケージ バージョンを指定されたサフィックスで更新します。
 
   ```dotnetcli
   dotnet pack --version-suffix "ci-1234"
   ```
 
-- `PackageVersion` MSBuild プロパティで `2.1.0` にパッケージ バージョンを設定します。
+- `2.1.0` MSBuild プロパティで `PackageVersion` にパッケージ バージョンを設定します。
 
   ```dotnetcli
   dotnet pack -p:PackageVersion=2.1.0

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
 ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976488"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework における型変換
@@ -85,7 +85,7 @@ ms.locfileid: "73976488"
   
  たとえば、<xref:System.UInt32>、<xref:System.Int64>、および <xref:System.UInt64> の各データ型の範囲は、次の表に示すように、<xref:System.Int32> データ型より広くなっています。  
   
-|型|Int32 の範囲との比較|  
+|種類|Int32 の範囲との比較|  
 |----------|------------------------------------|  
 |<xref:System.Int64>|<xref:System.Int64.MaxValue?displayProperty=nameWithType> が <xref:System.Int32.MaxValue?displayProperty=nameWithType> より大きく、<xref:System.Int64.MinValue?displayProperty=nameWithType> が <xref:System.Int32.MinValue?displayProperty=nameWithType> より小さく (負の値の範囲が広く) なっています。|  
 |<xref:System.UInt32>|<xref:System.UInt32.MaxValue?displayProperty=nameWithType> が <xref:System.Int32.MaxValue?displayProperty=nameWithType> より大きくなっています。|  

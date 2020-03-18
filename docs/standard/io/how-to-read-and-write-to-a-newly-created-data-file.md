@@ -14,10 +14,10 @@ helpviewer_keywords:
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
 ms.openlocfilehash: 3772aeeb25d1251a13fde2a0e51a913e5e39eabc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155751"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>方法: 新しく作成されたデータ ファイルに対して読み書きする

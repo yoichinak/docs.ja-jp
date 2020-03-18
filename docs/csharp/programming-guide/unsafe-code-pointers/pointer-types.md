@@ -5,10 +5,10 @@ helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
 ms.openlocfilehash: dc03744559a87a2548c5bee9452c22cd20f337b8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627711"
 ---
 # <a name="pointer-types-c-programming-guide"></a>ポインター型 (C# プログラミング ガイド)
@@ -35,7 +35,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 型のポインター変数の値は、`myType` 型の変数のアドレスです。 ポインター型の宣言の例を次に示します。
 
-|例|説明|
+|例|[説明]|
 |-------------|-----------------|
 |`int* p`|`p` は、整数へのポインターです。|
 |`int** p`|`p` は、整数へのポインターのポインターです。|
@@ -63,7 +63,7 @@ int* myVariable;
 
 次の表は、unsafe コンテキストでポインターに使用できる演算子とステートメントの一覧を示しています。
 
-|演算子/ステートメント|使用|
+|演算子/ステートメント|用途|
 |-------------------------|---------|
 |`*`|ポインターの間接参照を実行します。|
 |`->`|ポインター経由で構造体のメンバーにアクセスします。|
@@ -79,11 +79,11 @@ int* myVariable;
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳しくは、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[ポインター型](~/_csharplang/spec/unsafe-code.md#pointer-types)」をご覧ください。
+詳しくは、「[C# 言語仕様](~/_csharplang/spec/unsafe-code.md#pointer-types)」の「[ポインター型](~/_csharplang/spec/introduction.md)」をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [アンセーフ コードとポインター](index.md)
 - [ポインター変換](pointer-conversions.md)
 - [参照型](../../language-reference/keywords/reference-types.md)

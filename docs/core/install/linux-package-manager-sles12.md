@@ -5,10 +5,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920730"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12 パッケージ マネージャー - .NET Core をインストールする

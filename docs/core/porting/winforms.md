@@ -5,10 +5,10 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/01/2019
 ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116030"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows フォーム デスクトップ アプリを .NET Core に移植する方法
@@ -17,14 +17,14 @@ ms.locfileid: "76116030"
 
 この記事では、さまざまな名前が使用して、移行で使用されるファイルの種類を識別しています。 実際のファイルの名前とは異なっているため、自分のプロジェクトを移行するときは、次の一覧の名前に置き換えて説明をお読みください。
 
-| ファイル | 説明 |
+| ファイル | [説明] |
 | ---- | ----------- |
 | **MyApps.sln** | ソリューション ファイルの名前。 |
 | **MyForms.csproj** | 移植する .NET Framework Windows Forms プロジェクトの名前。 |
 | **MyFormsCore.csproj** | 作成する新しい .NET Core プロジェクトの名前。 |
 | **MyAppCore.exe** | .NET Core Windows Forms アプリの実行可能ファイル。 |
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - 実行したいデザイナー作業用の [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
@@ -127,7 +127,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 - **RootNamespace**\
 プロジェクトで使用される既定の名前空間。 これは、.NET Framework プロジェクトの既定の名前空間と一致させる必要があります。
 
-これら 3 つの要素を、`MyFormsCore.csproj` ファイルの `<PropertyGroup>` ノードに追加します。
+これら 3 つの要素を、`<PropertyGroup>` ファイルの `MyFormsCore.csproj` ノードに追加します。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -160,7 +160,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 または、.NET Framework プロジェクトの各ファイルに対する `<Compile>` または `<EmbeddedResource>` エントリを作成できます。
 
-## <a name="add-nuget-packages"></a>NuGet パッケージを追加する
+## <a name="add-nuget-packages"></a>NuGet パッケージの追加
 
 .NET Framework プロジェクトによって参照される各 NuGet パッケージを.NET Core プロジェクトに追加します。
 
@@ -188,7 +188,7 @@ Windows Forms 制御ライブラリ プロジェクトを移植する場合の�
 
 前の手順の例を使用して、作業するプロジェクトとファイルを展開しましょう。
 
-| ファイル | 説明 |
+| ファイル | [説明] |
 | ---- | ----------- |
 | **MyApps.sln** | ソリューション ファイルの名前。 |
 | **MyControls.csproj** | 移植する .NET Framework Windows Forms 制御プロジェクトの名前。 |
@@ -297,7 +297,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 Visual Studio 2019 で Windows Forms デザイナーがサポートされるようになったら、.NET Core プロジェクト ファイルの内容を .NET Framework プロジェクト ファイルにコピーして貼り付けることができます。 その後、`<Source>` と `<EmbeddedResource>` 項目を使用して追加されたファイルの glob パターンを削除します。 アプリで使用されるすべてのプロジェクト参照のパスを修正します。 これにより、.NET Framework プロジェクトが .NET Core プロジェクトに効率的にアップグレードされます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - [.NET Framework から .NET Core への破壊的変更](../compatibility/fx-core.md)について学習する。
 - [Windows 互換機能パック][compat-pack]の詳細を確認する。

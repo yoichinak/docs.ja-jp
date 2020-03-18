@@ -12,10 +12,10 @@ metadata:
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: リスト コレクション
   ms.openlocfilehash: ab709b6b30b5a173e2faf08b577e4d7a3d9a9034
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969427"
 items:
 - durationInMinutes: 1
@@ -96,7 +96,7 @@ items:
     `while` ステートメントは、条件を確認して `while` に続くステートメントを実行します。 条件が false になるまで、条件の確認とステートメントの実行を繰り返します。
 
 
-    この例では、もう 1 つ新しい演算子が使用されています。 `counter` 変数のあとにある `++` は、**インクリメント**演算子です。 counter の値に 1 を追加し、その値を counter 変数に格納します。
+    この例では、もう 1 つ新しい演算子が使用されています。 `++` 変数のあとにある `counter` は、**インクリメント**演算子です。 counter の値に 1 を追加し、その値を counter 変数に格納します。
 
 
     > [!IMPORTANT]

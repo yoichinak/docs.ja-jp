@@ -6,17 +6,17 @@ helpviewer_keywords:
 - default [C#]
 - parameterless constructor [C#]
 ms.openlocfilehash: 93b6079b9a3bbf6d537094cab9dfb305ace7f6bf
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625866"
 ---
 # <a name="default-values-of-c-types-c-reference"></a>C# 型の既定値 (C# リファレンス)
 
 次の表では、C# の型の既定値を示します。
 
-|種類|既定値|
+|[種類]|既定値|
 |---------|------------------|
 |すべての参照型|`null`|
 |任意の[組み込み整数数値型](integral-numeric-types.md)|0 (ゼロ)|
@@ -55,7 +55,7 @@ Console.WriteLine(n);  // output: (0, 0)
 - [既定値](~/_csharplang/spec/variables.md#default-values)
 - [既定のコンストラクター](~/_csharplang/spec/types.md#default-constructors)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [コンストラクター](../../programming-guide/classes-and-structs/constructors.md)

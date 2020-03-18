@@ -5,10 +5,10 @@ helpviewer_keywords:
 - interfaces [C#], explicitly implementing
 ms.assetid: 514cde76-f981-474e-8b40-9493619f899c
 ms.openlocfilehash: dff094aca237ed6146bd9b52813c40549bc99b9b
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77627786"
 ---
 # <a name="how-to-explicitly-implement-interface-members-c-programming-guide"></a>インターフェイス メンバーを明示的に実装する方法 (C# プログラミング ガイド)
@@ -27,9 +27,9 @@ ms.locfileid: "77627786"
   
      [!code-csharp[csProgGuideInheritance#46](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#46)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [クラスと構造体](../classes-and-structs/index.md)
 - [インターフェイス](./index.md)
 - [2 つのインターフェイスのメンバーを明示的に実装する方法](./how-to-explicitly-implement-members-of-two-interfaces.md)

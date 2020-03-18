@@ -3,11 +3,11 @@ title: 破壊的変更と .NET ライブラリ
 description: .NET ライブラリを作成するとき、破壊的変更を進行させるためのベストプラクティス推奨事項。
 ms.date: 10/02/2018
 ms.openlocfilehash: 2cbd9e0a818b52aede6c9b1f60fdf52dcbd7b96f
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731467"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398509"
 ---
 # <a name="breaking-changes"></a>互換性に影響する変更
 
@@ -54,7 +54,7 @@ public class Task
 
 機能の追加や不適切動作の改善は良いことですが、慎重に行わない場合、既存ユーザーにとってアップグレードが非常に難しくなります。 動作の破壊的変更の前に "設定" を置くことが、変更に対処する開発者を助ける 1 つの方法です。 この "設定" で開発者はライブラリの最新版に更新し、同時に破壊的変更の採用を選択できます。 このような方法をとることで、開発者は最新の状態を維持しながら、時間をかけてコードを調整できます。
 
-たとえば、ASP.NET Core MVC には、`MvcOptions` で有効/無効になっている機能を変更する[互換性バージョン](/aspnet/core/mvc/compatibility-version)という概念があります。
+たとえば、ASP.NET Core MVC には、[ で有効/無効になっている機能を変更する](/aspnet/core/mvc/compatibility-version)互換性バージョン`MvcOptions`という概念があります。
 
 ✔️ 新しい機能が既存のユーザーに影響を与える場合は、新しい機能を既定でオフにし、開発者が設定によってその機能を選択できるようにすることを検討してください。
 
@@ -96,11 +96,11 @@ public class Document
 
 > API を削除することはバイナリの破壊的変更です。 保守管理コストが低く、ライブラリに与える技術的な負荷が大きくなければ、無効になった型とメソッドを保持することを検討してください。 型やメソッドを削除しなければ、前述の最悪なケースを回避できる可能性があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# 開発者向けのバージョンと更新に関する考慮事項](../../csharp/whats-new/version-update-considerations.md)
 - [API の決定版ガイド - .NET の破壊的変更](https://stackoverflow.com/questions/1456785/a-definitive-guide-to-api-breaking-changes-in-net)
 - [.NET 破壊的変更ルール](https://github.com/dotnet/runtime/blob/master/docs/coding-guidelines/breaking-change-rules.md)
 
 >[!div class="step-by-step"]
->[前へ](versioning.md)
+>[[戻る]](versioning.md)

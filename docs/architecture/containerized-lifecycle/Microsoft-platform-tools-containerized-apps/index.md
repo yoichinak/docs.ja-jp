@@ -3,10 +3,10 @@ title: コンテナー化アプリ用の Microsoft プラットフォームと�
 description: Docker アプリケーションのライフサイクルをサポートする Microsoft のサービスについて説明します。
 ms.date: 02/15/2019
 ms.openlocfilehash: 9c8c0f5688bf226351abfc7bf52d4ace05f8c6d8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/06/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73738093"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>コンテナー化アプリ用の Microsoft プラットフォームとツールの概要

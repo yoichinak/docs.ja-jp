@@ -17,10 +17,10 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 ms.custom: updateeachrelease
 ms.openlocfilehash: 6f9ad8aafc37039b55ae3bf6eb743e07ad8e2235
-ms.sourcegitcommit: 68a4b28242da50e1d25aab597c632767713a6f81
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74884411"
 ---
 # <a name="common-language-runtime-clr-overview"></a>共通言語ランタイム (CLR) の概要
@@ -66,7 +66,7 @@ ms.locfileid: "74884411"
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|[説明]|
 |-----------|-----------------|
 |[マネージド実行プロセス](managed-execution-process.md)|共通言語ランタイム利用するために必要な手順について説明します。|
 |[自動メモリ管理](automatic-memory-management.md)|ガベージ コレクターによるメモリの割り当て方法および解放方法について説明します。|

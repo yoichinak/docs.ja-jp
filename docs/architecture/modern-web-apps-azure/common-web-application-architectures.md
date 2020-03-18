@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: 7ec0d9cece40ba8a99e8ab5e028f7ac491ed6f4d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450183"
 ---
 # <a name="common-web-application-architectures"></a>一般的な Web アプリケーション アーキテクチャ
@@ -235,7 +235,7 @@ Docker コンテナーは、単純な Web アプリケーションのモノリ�
 
 `eShopOnWeb` プロジェクトは、.NET Core で実行されます。 そのため、Windows ベースまたは Linux ベースのコンテナーで実行できます。 Docker の展開の場合、SQL Server に同じホストの種類を使用する必要があります。 Linux ベースのコンテナーは、小さなフット プリントが可能なので優先されます。
 
-Visual Studio 2017 以降を使用すれば、Docker サポートを既存のアプリケーションに追加することができます。その場合、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[追加]** 、 **[Docker サポート]** の順に選択します。 これで、必要なファイルが追加され、そのファイルを使用するようにプロジェクトが変更されます。 現在の `eShopOnWeb` サンプルには既にこれらのファイルが用意されています。
+Visual Studio 2017 以降を使用すれば、Docker サポートを既存のアプリケーションに追加することができます。その場合、**ソリューション エクスプローラー**でプロジェクトを右クリックし、 **[追加]**  >  **[Docker サポート]** の順に選択します。 これで、必要なファイルが追加され、そのファイルを使用するようにプロジェクトが変更されます。 現在の `eShopOnWeb` サンプルには既にこれらのファイルが用意されています。
 
 ソリューション レベルの `docker-compose.yml` ファイルには、どのようなイメージをビルドしてどのようなコンテナーを起動するかに関する情報が含まれています。 このファイルでは、`docker-compose` コマンドを使用し、複数のアプリケーションを同時に起動できます。 この場合、Web プロジェクトのみが起動されます。 別のデータベース コンテナーなど、依存関係を構成する場合にも使用できます。
 

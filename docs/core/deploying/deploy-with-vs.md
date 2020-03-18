@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 11a322278ce3ff38964fe2fa389e0b4a58897ec4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449024"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
@@ -210,7 +210,7 @@ Visual Studio でアプリを発行するには、次の操作を行います。
 
 1. プロファイルに名前を付けます。
 
-   1. **[アクション]** 、 **[プロファイル名の変更]** の順に選択し、プロファイルに名前を付けます。
+   1. **[アクション]**  >  **[プロファイル名の変更]** の順に選択し、プロファイルに名前を付けます。
 
    2. ターゲット プラットフォームを識別する名前をプロファイルに割り当て、* *[保存]* を選択します。
 

@@ -6,10 +6,10 @@ ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
 ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157812"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core の依存関係と要件

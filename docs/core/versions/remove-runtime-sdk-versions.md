@@ -6,11 +6,11 @@ author: billwagner
 ms.author: wiwagn
 ms.custom: updateeachrelease
 ms.openlocfilehash: 71c11825981c6259a779e1ac8f947a41618e922d
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503469"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397849"
 ---
 # <a name="how-to-remove-the-net-core-runtime-and-sdk"></a>.NET Core ランタイムと SDK を削除する方法
 

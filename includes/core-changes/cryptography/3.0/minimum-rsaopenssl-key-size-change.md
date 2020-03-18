@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567965"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>RSAOpenSsl キー生成の最小サイズが増加しました
@@ -12,7 +12,7 @@ Linux で新しい RSA キーを生成する場合の最小サイズが、384 �
 
 #### <a name="change-description"></a>変更の説明
 
-.NET Core 3.0 以降では、Linux で <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>、<xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>、および <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType> から RSA インスタンス上の `LegalKeySizes` プロパティによって報告される最小の有効キー サイズが 384 から 512 に増えました。
+.NET Core 3.0 以降では、Linux で `LegalKeySizes`、<xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>、および <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType> から RSA インスタンス上の <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType> プロパティによって報告される最小の有効キー サイズが 384 から 512 に増えました。
 
 その結果、.NET Core 2.2 以前のバージョンでは、`RSA.Create(384)` などのメソッドの呼び出しが成功しています。 .NET Core 3.0 以降のバージョンでは、メソッドの呼び出し `RSA.Create(384)` によって、サイズが小さすぎることを示す例外がスローされます。
 
@@ -22,7 +22,7 @@ Linux で新しい RSA キーを生成する場合の最小サイズが、384 �
 
 3.0
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 影響を受ける API を呼び出す場合は、生成されるキーのサイズがプロバイダーの最小を下回らないようにしてください。
 

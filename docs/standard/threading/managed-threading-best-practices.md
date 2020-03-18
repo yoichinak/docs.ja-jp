@@ -11,10 +11,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: e51988e7-7f4b-4646-a06d-1416cee8d557
 ms.openlocfilehash: a76cc40f308ac2f636a650cd4a17da0e94e23a34
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160262"
 ---
 # <a name="managed-threading-best-practices"></a>マネージド スレッド処理のベスト プラクティス
@@ -172,7 +172,7 @@ else {
   
 - 静的状態を変更する静的メソッドは提供しないでください。 一般的なサーバーのシナリオでは、静的状態は要求間で共有されます。つまり、複数のスレッドがそのコードを同時に実行できます。 これにより、スレッド処理のバグが発生する可能性が高くなります。 要求間で共有されないインスタンスにデータをカプセル化するデザイン パターンの使用を検討してください。 加えて、静的なデータを同期する場合は、状態を変更する呼び出しが静的メソッド間にあると、デッドロックや冗長な同期が生じる可能性があり、パフォーマンスに悪影響を及ぼします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [スレッド化](../../../docs/standard/threading/index.md)
 - [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)

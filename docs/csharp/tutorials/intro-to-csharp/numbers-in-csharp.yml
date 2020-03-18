@@ -12,10 +12,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: 48268c6e839ae4f72aae0e872c837b153325b68b
-  ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/20/2020
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "77504014"
 items:
 - durationInMinutes: 1
@@ -192,7 +192,7 @@ items:
   content: >
     この最後のサンプルでは、整数の除算における結果の切り捨てについて確認します。
 
-    **remainder** 演算子 (`%` 文字) を使用して、**リマインダー**を得ることができます。
+    **remainder** 演算子 (** 文字) を使用して、** リマインダー`%`を得ることができます。
 
 
     ```csharp

@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
 ms.openlocfilehash: c1163a41cd2feb0e8785ae9d4c6a71dfbedf3f12
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092617"
 ---
 # <a name="interpret-model-predictions-using-permutation-feature-importance"></a>Permutation Feature Importance を使用してモデル予測を解釈する
@@ -26,7 +26,7 @@ Permutation Feature Importance (PFI) を使用して、ML.NET 機械学習モデ
 
 このサンプルに使用されているデータセットの特徴は、1 - 12 列目にあります。 目標は `Price` を予測することです。
 
-| Column | 機能 | 説明
+| 列 | 機能 | [説明]
 | --- | --- | --- |
 | 1 | CrimeRate | 1 人当たりの犯罪率
 | 2 | ResidentialZones | 町の住宅地区
@@ -137,7 +137,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-トレーニング データセットに対して [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) を使用した結果は、[`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) オブジェクトの [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) になります。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) は、`permutationCount` パラメーターに指定された順列の数と等しい [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)の複数の観測値について、平均や標準偏差などの概要の統計情報を提供します。
+トレーニング データセットに対して [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) を使用した結果は、[`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) オブジェクトの [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) になります。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) は、[ パラメーターに指定された順列の数と等しい `RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)`permutationCount`の複数の観測値について、平均や標準偏差などの概要の統計情報を提供します。
 
 重要度、このケースで言い換えると、[`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) によって計算される R-2 乗メトリックの絶対平均減少は、最も高い重要度から最も低い重要度の順に並べ替えることができます。
 

@@ -3,11 +3,11 @@ title: 機械学習のタスク
 description: ML.NET でサポートされる機械学習のさまざまなタスクと、それらに関連するタスクについて説明します。
 ms.date: 12/23/2019
 ms.openlocfilehash: 6cd41065e668375537b9816ef7a208a65e0a523b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745104"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397789"
 ---
 # <a name="machine-learning-tasks-in-mlnet"></a>ML.NET での機械学習のタスク
 
@@ -56,7 +56,7 @@ ms.locfileid: "76745104"
 
 これらのトレーナーから、以下の列が出力されます。
 
-| 出力列の名前 | 列の型 | 説明|
+| [出力列の名前] | 列の型 | [説明]|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | モデルによって計算された生のスコア|
 | `PredictedLabel` | <xref:System.Boolean> | スコアの符号に基づく予測ラベル。 負のスコアは `false` にマップされ、正のスコアは `true` にマップされます。|
@@ -94,7 +94,7 @@ ms.locfileid: "76745104"
 
 このトレーナーの出力は以下のとおりです。
 
-| 出力の名前 | 種類 | 説明|
+| 出力の名前 | [種類] | [説明]|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> のベクター | すべてのクラスのスコア。 値が大きいほど、関連するクラスに分類される可能性が高くなります。 i 番目の要素が最大値の場合、予測ラベル インデックスは i になります。 i はゼロベースのインデックスです。 |
 | `PredictedLabel` | [キー](xref:Microsoft.ML.Data.KeyDataViewType)型 | 予測ラベルのインデックス。 その値が i の場合、実際のラベルはキーと値の入力ラベルの型の i 番目のカテゴリになります。 |
@@ -127,7 +127,7 @@ ms.locfileid: "76745104"
 
 このタスクのトレーナーの出力は以下のとおりです。
 
-| 出力の名前 | 種類 | 説明|
+| 出力の名前 | [種類] | [説明]|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | モデルによって予測された生のスコア |
 
@@ -151,7 +151,7 @@ ms.locfileid: "76745104"
 
 このトレーナーの出力は以下のとおりです。
 
-| 出力の名前 | 種類 | 説明|
+| 出力の名前 | [種類] | [説明]|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> のベクター | 与えられたデータ ポイントからすべてのクラスターの重心までの距離 |
 | `PredictedLabel` | [キー](xref:Microsoft.ML.Data.KeyDataViewType)型 | モデルによって予測された最も近いクラスターのインデックス。 |
@@ -183,7 +183,7 @@ ms.locfileid: "76745104"
 
 このトレーナーの出力は以下のとおりです。
 
-| 出力の名前 | 種類 | 説明|
+| 出力の名前 | [種類] | [説明]|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 異常検出モデルによって計算された、負ではない無制限のスコア |
 | `PredictedLabel` | <xref:System.Boolean> | 入力が異常 (PredictedLabel = true) か異常でないか (PredictedLabel = false) を表す true/false 値 |
@@ -207,13 +207,13 @@ ms.locfileid: "76745104"
 
 このトレーナーの出力は以下のとおりです。
 
-| 出力の名前 | 種類 | 説明|
+| 出力の名前 | [種類] | [説明]|
 | -- | -- | -- |
 | `Score` | <xref:System.Single> | 予測を決定するためにモデルによって計算された無制限のスコア |
 
-## <a name="recommendation"></a>推奨事項
+## <a name="recommendation"></a>推奨
 
-レコメンデーション タスクによって、推奨される製品やサービスの一覧を作成できます。 ML.NET では、カタログ内に製品のレーティングの履歴データがある場合は、レコメンデーション用の[協調フィルタリング](https://en.wikipedia.org/wiki/Collaborative_filtering) アルゴリズムである[行列因子分解 (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29) が使用されます。 たとえば、ユーザーによる映画の採点の履歴データがあるときに、そのユーザーが次に見たいと思う映画を推薦できます。
+レコメンデーション タスクによって、推奨される製品やサービスの一覧を作成できます。 ML.NET では、カタログ内に製品のレーティングの履歴データがある場合は、レコメンデーション用の[協調フィルタリング](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29) アルゴリズムである[行列因子分解 (MF)](https://en.wikipedia.org/wiki/Collaborative_filtering) が使用されます。 たとえば、ユーザーによる映画の採点の履歴データがあるときに、そのユーザーが次に見たいと思う映画を推薦できます。
 
 ### <a name="recommendation-training-algorithms"></a>レコメンデーション トレーニング アルゴリズム
 

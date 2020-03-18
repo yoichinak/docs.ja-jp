@@ -4,10 +4,10 @@ description: .NET マイクロサービスと Web アプリケーションのセ
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: 1ef2246746b9165f1564fa7be64ff7eb28eb1d32
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501793"
 ---
 # <a name="store-application-secrets-safely-during-development"></a>開発時にアプリケーションのシークレットを安全に格納する
@@ -38,7 +38,7 @@ ms.locfileid: "77501793"
 
 ## <a name="store-secrets-with-the-aspnet-core-secret-manager"></a>ASP.NET Core Secret Manager を使用してシークレットを格納する
 
-**開発時に**ソース コードの外部にシークレットを保持する別の方法として、ASP.NET Core の [Secret Manager](/aspnet/core/security/app-secrets#secret-manager) ツールを使用するやり方があります。 Secret Manager ツールを使用するには、プロジェクト ファイルにパッケージ **Microsoft.Extensions.Configuration.SecretManager** を組み込みます。 その依存関係が存在し、それが復元されたら、`dotnet user-secrets` コマンドを使用して、コマンド ラインからシークレットの値を設定できます。 これらのシークレットは、ユーザーのプロファイル ディレクトリにある JSON ファイルに格納され (OS によって詳細は異なる)、ソース コードから離れた場所に置かれます。
+[開発時に](/aspnet/core/security/app-secrets#secret-manager)ソース コードの外部にシークレットを保持する別の方法として、ASP.NET Core の **Secret Manager** ツールを使用するやり方があります。 Secret Manager ツールを使用するには、プロジェクト ファイルにパッケージ **Microsoft.Extensions.Configuration.SecretManager** を組み込みます。 その依存関係が存在し、それが復元されたら、`dotnet user-secrets` コマンドを使用して、コマンド ラインからシークレットの値を設定できます。 これらのシークレットは、ユーザーのプロファイル ディレクトリにある JSON ファイルに格納され (OS によって詳細は異なる)、ソース コードから離れた場所に置かれます。
 
 Secret Manager ツールによって設定されたシークレットは、シークレットを使用するプロジェクトの `UserSecretsId` プロパティによって編成されます。 そのため、次のスニペットに示すように、プロジェクト ファイルに UserSecretsId プロパティを設定する必要があります。 既定値は Visual Studio によって割り当てられた GUID ですが、お使いのコンピューター内で一意である限り、実際の文字列は重要ではありません。
 
@@ -50,7 +50,7 @@ Secret Manager ツールによって設定されたシークレットは、シ�
 
 Secret Manager で格納されたシークレットをアプリケーションで使用するには、ConfigurationBuilder インスタンス上で `AddUserSecrets<T>` を呼び出して、アプリケーション用のシークレットをその構成に含めます。 ジェネリック パラメーター T は、UserSecretId が適用されたアセンブリからの型である必要があります。 通常は、`AddUserSecrets<Startup>` を使用しても問題ありません。
 
-*Program.cs* の `CreateDefaultBuilder` メソッドを使用する場合、`AddUserSecrets<Startup>()` は開発環境の既定のオプションに含まれています。
+`AddUserSecrets<Startup>()`Program.cs`CreateDefaultBuilder` の  *メソッドを使用する場合、* は開発環境の既定のオプションに含まれています。
 
 >[!div class="step-by-step"]
 >[前へ](authorization-net-microservices-web-applications.md)

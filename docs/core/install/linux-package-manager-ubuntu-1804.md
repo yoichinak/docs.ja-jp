@@ -5,10 +5,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: e36116d357b8fcd5ced328a574e12c558dd9e2f2
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920691"
 ---
 # <a name="ubuntu-1804-package-manager---install-net-core"></a>Ubuntu 18.04 パッケージ マネージャー - .NET Core のインストール

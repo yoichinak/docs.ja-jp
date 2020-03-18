@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
 ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74203999"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ のマージ オプション
@@ -23,7 +23,7 @@ ms.locfileid: "74203999"
  [!code-csharp[PLINQ#26](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqsamples.cs#26)]
  [!code-vb[PLINQ#26](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/plinq2_vb.vb#26)]  
   
- コード例全体については、「[方法:PLINQ のマージ オプションを指定する](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)」を参照してください。  
+ 完全な例については、「[方法: PLINQ のマージ オプションを指定する](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)」を参照してください。  
   
  特定のクエリで要求されたオプションをサポートできない場合は、オプションが無視されるだけです。 ほとんどの場合、PLINQ クエリのマージ オプションを指定する必要はありません。 ただし、場合によっては、テストや測定を行うことで、クエリが既定以外のモードで最適に実行されることがわかることもあります。 このオプションは、より応答性の高いユーザー インターフェイスを提供するために、チャンク マージ演算子で結果を強制的にストリーミングする場合に一般的に使用されます。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "74203999"
   
 - `Auto Buffered`  
   
-     <xref:System.Linq.ParallelMergeOptions.AutoBuffered> オプションを指定すると、クエリで要素がバッファーに収集され、定期的にバッファー コンテンツがすべて一度に消費スレッドに譲渡されます。 これは、`NotBuffered` の "ストリーミング" 動作を使用する代わりに、"チャンク" 単位でソース データを生成する動作に似ています。 消費スレッドで最初の要素が使用できるようになるまで、`NotBuffered` よりも `AutoBuffered` のほうが長くかかる場合があります。 バッファーのサイズと正確な生成動作を構成することはできず、これらはクエリに関するさまざまな要因によって異なる場合があります。  
+     <xref:System.Linq.ParallelMergeOptions.AutoBuffered> オプションを指定すると、クエリで要素がバッファーに収集され、定期的にバッファー コンテンツがすべて一度に消費スレッドに譲渡されます。 これは、`NotBuffered` の "ストリーミング" 動作を使用する代わりに、"チャンク" 単位でソース データを生成する動作に似ています。 消費スレッドで最初の要素が使用できるようになるまで、`AutoBuffered` よりも `NotBuffered` のほうが長くかかる場合があります。 バッファーのサイズと正確な生成動作を構成することはできず、これらはクエリに関するさまざまな要因によって異なる場合があります。  
   
 - `FullyBuffered`  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74203999"
 ## <a name="query-operators-that-support-merge-options"></a>マージ オプションをサポートするクエリ演算子  
  次の表に、指定された制約に従って、すべてのマージ オプション モードをサポートする演算子をリストします。  
   
-|演算子|制約|  
+|演算子|制限事項|  
 |--------------|------------------|  
 |<xref:System.Linq.ParallelEnumerable.AsEnumerable%2A>|なし|  
 |<xref:System.Linq.ParallelEnumerable.Cast%2A>|なし|  
@@ -59,11 +59,11 @@ ms.locfileid: "74203999"
 |<xref:System.Linq.ParallelEnumerable.Take%2A>|なし|  
 |<xref:System.Linq.ParallelEnumerable.Where%2A>|なし|  
   
- 他のすべての PLINQ クエリ演算子では、ユーザー指定のマージ オプションが無視される場合があります。 一部のクエリ演算子 (<xref:System.Linq.ParallelEnumerable.Reverse%2A> や <xref:System.Linq.ParallelEnumerable.OrderBy%2A> など) では、すべて生成されて並べ替えられるまで要素を譲渡できません。 したがって、<xref:System.Linq.ParallelEnumerable.Reverse%2A> などの演算子も含むクエリで <xref:System.Linq.ParallelMergeOptions> を使用すると、演算子でその結果が生成されるまでクエリではマージ動作が適用されません。  
+ 他のすべての PLINQ クエリ演算子では、ユーザー指定のマージ オプションが無視される場合があります。 一部のクエリ演算子 (<xref:System.Linq.ParallelEnumerable.Reverse%2A> や <xref:System.Linq.ParallelEnumerable.OrderBy%2A> など) では、すべて生成されて並べ替えられるまで要素を譲渡できません。 したがって、<xref:System.Linq.ParallelMergeOptions> などの演算子も含むクエリで <xref:System.Linq.ParallelEnumerable.Reverse%2A> を使用すると、演算子でその結果が生成されるまでクエリではマージ動作が適用されません。  
   
  マージ オプションを処理するいくつかの演算子の機能は、ソース シーケンスの種類と、<xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 演算子がクエリで既に使用されているかどうかによって異なります。 <xref:System.Linq.ParallelEnumerable.ForAll%2A> は常に <xref:System.Linq.ParallelMergeOptions.NotBuffered> であり、その要素をすぐに生成します。 <xref:System.Linq.ParallelEnumerable.OrderBy%2A> は常に<xref:System.Linq.ParallelMergeOptions.FullyBuffered> であり、生成の前にリスト全体を並べ替える必要があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
 - [方法: PLINQ のマージ オプションを指定する](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

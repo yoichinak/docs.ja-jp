@@ -3,11 +3,11 @@ title: Windows フォームに関する破壊的変更
 description: .NET Core 用の Windows フォームにおける破壊的変更の一覧を示します。
 ms.date: 01/08/2020
 ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77093020"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398011"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows フォームでの破壊的変更
 
@@ -95,6 +95,6 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 
 ***
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Windows フォーム アプリを .NET Core に移植する](../porting/winforms.md)

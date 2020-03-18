@@ -5,10 +5,10 @@ author: mamccrea
 ms.topic: overview
 ms.date: 10/15/2019
 ms.openlocfilehash: 12fccd478cedaccf455043feb3afa7b12221bf0e
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73458203"
 ---
 # <a name="what-is-net-for-apache-spark"></a>.NET for Apache Spark とは

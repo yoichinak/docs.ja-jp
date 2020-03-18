@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C# language, exceptions
 ms.assetid: 0001887f-4fa2-47e2-8034-2819477e2344
 ms.openlocfilehash: b883012cf8f72247ff4e0b47a46eee1854e2d534
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76735647"
 ---
 # <a name="exceptions-and-exception-handling-c-programming-guide"></a>例外と例外処理 (C# プログラミング ガイド)
@@ -31,7 +31,7 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 - 例外をスローする可能性のあるステートメントの周囲で `try` ブロックを使用します。
 - `try` ブロックで例外が発生すると、コントロールのフローが、呼び出し履歴内の関連付けられている最初の例外ハンドラーにジャンプします。 C# では、`catch` キーワードは例外ハンドラーの定義に使用されます。
 - 特定の例外の例外ハンドラーが存在しない場合、プログラムは実行を停止し、エラー メッセージを表示します。
-- 処理できない例外はキャッチしないようにして、アプリケーションを既知の状態に保ちます。 `System.Exception` をキャッチした場合は、`catch` ブロックの最後で `throw` キーワードを使用して、それを再スローします。
+- 処理できない例外はキャッチしないようにして、アプリケーションを既知の状態に保ちます。 `System.Exception` をキャッチした場合は、`throw` ブロックの最後で `catch` キーワードを使用して、それを再スローします。
 - `catch` ブロックで例外変数を定義した場合、それを使用して、発生した例外の種類に関する詳細を入手することができます。
 - 例外は、`throw` キーワードを使用してプログラムで明示的に生成することができます。
 - 例外オブジェクトには、呼び出し履歴の状態やエラーの説明など、エラーに関する詳細情報が含まれています。
@@ -52,12 +52,12 @@ C# 言語の例外処理機能は、プログラムの実行時に発生する�
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の「[例外](~/_csharplang/spec/exceptions.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](~/_csharplang/spec/exceptions.md)」の「[例外](/dotnet/csharp/language-reference/language-specification/introduction)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.SystemException>
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [C# のキーワード](../../language-reference/keywords/index.md)
 - [throw](../../language-reference/keywords/throw.md)
 - [try-catch](../../language-reference/keywords/try-catch.md)

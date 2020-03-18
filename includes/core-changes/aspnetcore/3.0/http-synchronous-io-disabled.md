@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 53d2c989120c92f4e2d18f50ce4b364bd4c9b604
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901886"
 ---
 ### <a name="http-synchronous-io-disabled-in-all-servers"></a>HTTP:すべてのサーバーで同期 IO が無効になっています

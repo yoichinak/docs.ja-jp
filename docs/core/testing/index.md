@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.openlocfilehash: 1263bfe337b9d6609c0ca7df70aa299a61a7f1a0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78157402"
 ---
 # <a name="unit-testing-in-net-core-and-net-standard"></a>.NET Core と .NET Standard の単体テスト
@@ -32,7 +32,7 @@ C#、F#、Visual Basic 向けに組み込まれている .NET Core 2.0 以降の
 
 単体テストを記述するときは、インフラストラクチャに対する依存関係を設けようとしないでください。 テストが低速で不安定になるため、これは統合テストで行います。 アプリケーションでこれらの依存関係を回避するには、[明示的な依存関係の原則](https://deviq.com/explicit-dependencies-principle/)に従い、[依存関係の挿入](/aspnet/core/fundamentals/dependency-injection)を使用します。 個別のプロジェクトの単体テストを統合テストと区別することもできます。 これにより、単体テスト プロジェクトとインフラストラクチャ パッケージの間に参照や依存関係がなくなります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 .NET Core プロジェクトでの単体テストの詳細については、次を参照してください。
 
@@ -63,5 +63,5 @@ C#、F#、Visual Basic 向けに組み込まれている .NET Core 2.0 以降の
 次の記事でさらに詳しく学習できます。
 
 - Visual Studio Enterprise は、.NET Core の優れたテスト ツールを提供します。 [Live Unit Testing](/visualstudio/test/live-unit-testing) または[コード カバレッジ](https://github.com/Microsoft/vstest-docs/blob/master/docs/analyze.md#working-with-code-coverage)をご確認ください。
-- 選択的単体テストの実行方法に関する詳細については、「[選択的単体テストの実行](selective-unit-tests.md)」、または [Visual Studio を使用したテストの組み込みと除外](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)に関するトピックをご覧ください。
+- 選択的単体テストの実行方法に関する詳細については、「[Running selective unit tests](selective-unit-tests.md)」(選択的単体テストの実行)、または [Visual Studio を使用したテストの組み込みと除外](/visualstudio/test/live-unit-testing#include-and-exclude-test-projects-and-test-methods)に関するトピックをご覧ください。
 - [.NET Core と Visual Studio で xUnit を使用する方法](https://xunit.github.io/docs/getting-started-dotnet-core.html)

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - installation [.NET Framework]
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 ms.openlocfilehash: 66643021ce4939505af24cf3a72ab194662a15f7
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965920"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398605"
 ---
 # <a name="install-the-net-framework-for-developers"></a>開発者向けの .NET Framework のインストール
 
@@ -26,7 +26,7 @@ ms.locfileid: "76965920"
 
 [!INCLUDE[net-framework-4-versions](../../../includes/net-framework-4x-versions.md)]
 
-.NET Framework の各バージョンの詳細と、コンピューターにどのバージョンがインストールされているかを判別する方法については、「[.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)」と「[方法:インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
+.NET Framework の各バージョンの詳細と、コンピューターにどのバージョンがインストールされているかを判別する方法については、「[.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)」と「[方法: インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 > [!NOTE]
 > .NET Framework 3.5 の詳細については、「[Windows 8、Windows 8.1、および Windows 10 への .NET Framework 3.5 のインストール](dotnet-35-windows-10.md)」を参照してください。
@@ -166,23 +166,23 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 サポートしている言語の一覧を次の表に示します。
 
-| 言語              | culture |
+| 言語              | カルチャ |
 | --------------------- | :-----: |
 | アラビア語                | ar      |
 | チェコ語                 | cs      |
 | デンマーク語                | da      |
-| オランダ語                 | nl      |
-| フィンランド語               | fi      |
-| 英語 (米国)         | en-US   |
+| Dutch                 | nl      |
+| Finnish               | fi      |
+| 英語 (米国)         | ja-JP   |
 | フランス語                | fr      |
-| ドイツ語                | de      |
+| German                | de      |
 | ギリシャ語                 | el      |
 | ヘブライ語                | he      |
-| ハンガリー語             | hu      |
+| Hungarian             | hu      |
 | イタリア語               | it      |
 | 日本語              | ja      |
 | 韓国語                | ko      |
-| ノルウェー語             | Ｘ      |
+| ノルウェー語             | no      |
 | ポーランド語                | pl      |
 | ポルトガル語 (ブラジル)   | pt-BR   |
 | ポルトガル語 (ポルトガル) | pt-PT   |
@@ -193,7 +193,7 @@ Web インストーラーとオフライン インストーラーはどちらも
 | 繁体字中国語   | zh-CHT  |
 | トルコ語               | tr      |
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - .NET Framework での経験がない場合は、[概要](../get-started/overview.md)を参照して、主な概念とコンポーネントの概要を確認してください。
 
@@ -205,9 +205,9 @@ Web インストーラーとオフライン インストーラーはどちらも
 
 - .NET Framework 4 から .NET Framework 4.5 以降のバージョンへのアプリの移行の詳細については、[移行ガイド](../migration-guide/index.md)を参照してください。
 
-- .NET Framework のソース コードをオンラインで参照するには、[.NET Framework の参照ソース](https://referencesource.microsoft.com/)に関するページを参照してください。 この参照ソースは、[GitHub](https://github.com/Microsoft/referencesource) から入手することもできます。 [リファレンス ソースをダウンロード](https://referencesource.microsoft.com/download.html)してオフラインで表示したり、デバッグ中にソース (パッチや更新を含む) をステップ実行したりできます。 詳細については、ブログ記事「[A new look for .NET Reference Source (.NET Reference Source の新しい外観)](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)」を参照してください。
+- .NET Framework のソース コードをオンラインで参照するには、[.NET Framework の参照ソース](https://referencesource.microsoft.com/)に関するページを参照してください。 この参照ソースは、[GitHub](https://github.com/Microsoft/referencesource) から入手することもできます。 [リファレンス ソースをダウンロード](https://referencesource.microsoft.com/download.html)してオフラインで表示したり、デバッグ中にソース (パッチや更新を含む) をステップ実行したりできます。 詳細については、ブログ記事「[A new look for .NET Reference Source](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)」 (.NET Reference Source の新しい外観) を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [配置ガイド (開発者向け)](../deployment/deployment-guide-for-developers.md)
 - [配置ガイド (管理者向け)](../deployment/guide-for-administrators.md)

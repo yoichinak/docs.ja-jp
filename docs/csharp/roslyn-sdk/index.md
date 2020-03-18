@@ -4,16 +4,16 @@ description: .NET Compiler Platform SDK (Roslyn API とも呼ばれます) を�
 ms.date: 10/10/2017
 ms.custom: mvc
 ms.openlocfilehash: a1ceb1d11cf846e67be2c6558978e01133e591da
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76742742"
 ---
 # <a name="the-net-compiler-platform-sdk"></a>.NET Compiler Platform SDK
 
 コンパイラでは、コードの構文とセマンティクスを検証するように、アプリケーション コードの詳細なモデルをビルドします。 このモデルを使用して、ソース コードから実行可能な出力をビルドします。 .NET Compiler Platform SDK では、このモデルへのアクセスが提供されます。 Microsoft では、生産性を向上させるために、IntelliSense、リファクタリング、インテリジェントな名前の変更、"すべての参照の検索"、"定義へ移動" などの統合開発環境 (IDE) 機能をますます使用するようになっています。 コードの品質を向上させるためにコード分析ツールを使用し、アプリケーションの構築に役立てるためにコード ジェネレーターを使用します。 これらのツールがスマートになったので、アプリケーション コードを処理するときに、コンパイラのみが作成するモデルにますますツールがアクセスする必要が生じます。 これが Roslyn API の主要な目的です。ブラック ボックスを開いて、ツールとエンド ユーザーが豊富な情報コンパイラを共有することを許可するためにこのコードがあります。
-コンパイラは Roslyn の使用により、ソース コード イン、オブジェクト コード アウトの曖昧なトランスレーターではなく、次のようなプラットフォームになります。ツールとアプリケーションのコード関連のタスクで使用できる API。
+あいまいなソース コード入力とオブジェクト コード出力の変換の代わりに、Roslyn によって、コンパイラがプラットフォームになります。これは、自分のツールとアプリケーション内でコードに関連するタスクに使用できる API です。
 
 ## <a name="net-compiler-platform-sdk-concepts"></a>.NET Compiler Platform SDK の概念
 
@@ -56,7 +56,7 @@ NuGet 上の自分のライブラリを使用して、アナライザーとコ�
 
 これらのアナライザーは、[Visual Studio Marketplace](https://marketplace.visualstudio.com/vs) にアップロードしたり、Visual Studio を使用して開発者がダウンロードしたりすることができます。 言語とプラットフォームの初心者の方は承認済みのプラクティスをすばやく学習し、.NET 体験で生産性を早く向上させることができます。 これらが広く使われるようになると、コミュニティがこれらのプラクティスを導入します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 .NET Compiler Platform SDK には、コードの生成、分析、リファクタリングを行うために、最新の言語オブジェクト モデルが含まれています。 このセクションでは、.NET Compiler Platform SDK の概念的な概要を示します。 詳細については、クイックスタート、サンプル、チュートリアルのセクションで確認できます。
 

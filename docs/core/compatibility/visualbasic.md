@@ -3,10 +3,10 @@ title: Visual Basic に関する破壊的変更
 description: .NET Core で使用される Visual Basic での破壊的変更の一覧を示します。
 ms.date: 09/20/2019
 ms.openlocfilehash: 00c88b4d6609f26ad6f2c3f90c8145e4d2eabaa9
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092955"
 ---
 # <a name="visual-basic-breaking-changes"></a>Visual Basic に関する破壊的変更

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - garbage collection, managed heap
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 ms.openlocfilehash: ea8aef03d2f5837f35ecb31209e57853c0c8257b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74330415"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398545"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 
@@ -180,7 +180,7 @@ CLR のメモリに関する重要な概念の概要を以下に示します。
 
 - ワークステーションのガベージ コレクション (GC) はクライアント アプリ向けに設計されています。 それはスタンドアロン アプリの既定の GC フレーバーです。 ホストされているアプリ (ASP.NET によってホストされるアプリなど) の場合、ホストにより既定の GC フレーバーが決定されます。
 
-  ワークステーションのガベージ コレクションは、同時実行または非同時実行のどちらかで実行できます。 同時実行ガベージ コレクションでは、ガベージ コレクションの実行中にマネージド スレッドの操作を続けることができます。 .NET Framework 4 以降では、[同時実行ガベージ コレクション](#concurrent-garbage-collection)は、[バックグラウンド ガベージ コレクション](#background-workstation-garbage-collection)に置き換えられています。
+  ワークステーションのガベージ コレクションは、同時実行または非同時実行のどちらかで実行できます。 同時実行ガベージ コレクションでは、ガベージ コレクションの実行中にマネージド スレッドの操作を続けることができます。 .NET Framework 4 以降では、[同時実行ガベージ コレクション](#background-workstation-garbage-collection)は、[バックグラウンド ガベージ コレクション](#concurrent-garbage-collection)に置き換えられています。
 
 - サーバーのガベージ コレクション。高いスループットとスケーラビリティが必要なサーバー アプリケーションを対象としたオプションです。
 
@@ -267,7 +267,7 @@ CLR のメモリに関する重要な概念の概要を以下に示します。
 
 ![同時実行ガベージ コレクションのスレッド](./media/gc-concurrent.png)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [GC の構成オプション](../../core/run-time-config/garbage-collector.md)
 - [ガベージ コレクション](index.md)

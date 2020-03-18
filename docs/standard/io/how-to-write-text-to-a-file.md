@@ -12,10 +12,10 @@ helpviewer_keywords:
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 ms.openlocfilehash: ba1c1815f0e49c02d1f0ee3c48ba01b7c2f5e727
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160249"
 ---
 # <a name="how-to-write-text-to-a-file"></a>方法: テキストのファイルへの書き込み

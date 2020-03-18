@@ -6,10 +6,10 @@ helpviewer_keywords:
 - command line [C#]
 ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 ms.openlocfilehash: f692e66672b1804a309c6ac04c158af948a1b1ab
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789871"
 ---
 # <a name="command-line-build-with-cscexe"></a>csc.exe を使用したコマンド ラインからのビルド
@@ -20,14 +20,14 @@ C# コンパイラは、その実行可能ファイルの名前 (*csc.exe*) を�
 
 標準のコマンド プロンプト ウィンドウを使用する場合は、コンピューター上の任意のサブディレクトリから *csc.exe* を呼び出すことができるようにパスを修正する必要があります。 また、*vsvars32.bat* を実行して、コマンド ライン ビルドをサポートするための適切な環境変数を設定する必要があります。 検索して実行する方法の手順など、*vsvars32.bat* の詳細については、「[Visual Studio のコマンドラインのための環境変数を設定する方法](./how-to-set-environment-variables-for-the-visual-studio-command-line.md)」を参照してください。
 
-Windows Software Development Kit (SDK) のみがインストールされているコンピューターでは、**SDK コマンド プロンプト** (**[Microsoft .NET Framework SDK]** メニュー オプションから開くことができます) で C# コンパイラを使用できます。
+Windows Software Development Kit (SDK) のみがインストールされているコンピューターでは、**SDK コマンド プロンプト** ( **[Microsoft .NET Framework SDK]** メニュー オプションから開くことができます) で C# コンパイラを使用できます。
 
 MSBuild を使用して、プログラムによって C# プログラムをビルドすることもできます。 詳細については、「[MSBuild](/visualstudio/msbuild/msbuild)」を参照してください。
 
-通常、実行可能ファイル *csc.exe* は、*Windows* ディレクトリの Microsoft.NET\Framework\\*\<バージョン>* フォルダーに格納されています。 ただし、この格納場所は、特定のコンピューターの構成によって異なる場合があります。 複数のバージョンの .NET Framework がコンピューターにインストールされている場合、このファイルのバージョンが複数見つかります。 このようなインストールの詳細については、「[方法: インストールされている .NET Framework バージョンを確認する](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
+通常、実行可能ファイル *csc.exe* は、\\Windows *ディレクトリの Microsoft.NET\Framework\<* *バージョン>* フォルダーに格納されています。 ただし、この格納場所は、特定のコンピューターの構成によって異なる場合があります。 複数のバージョンの .NET Framework がコンピューターにインストールされている場合、このファイルのバージョンが複数見つかります。 このようなインストールの詳細については、「[方法: インストールされている .NET Framework バージョンを確認する](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 > [!TIP]
-> Visual Studio IDE を使用してプロジェクトをビルドすると、**csc** コマンドとその関連するコンパイラ オプションが**出力**ウィンドウに表示されます。 この情報を表示するには、[方法:ビルド ログ ファイルの表示、保存、および構成に関するページ](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)の手順に従って、ログ データの詳細レベルを **[標準]** または **[詳細]** に変更します。 プロジェクトをリビルドした後、C# コンパイラの呼び出しを見つけるために**出力**ウィンドウで **csc** を検索します。
+> Visual Studio IDE を使用してプロジェクトをビルドすると、**csc** コマンドとその関連するコンパイラ オプションが**出力**ウィンドウに表示されます。 この情報を表示するには、「[方法: ビルド ログ ファイルを表示、保存、および構成する](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)」の手順に従って、ログ データの詳細レベルを **[標準]** または **[詳細]** に変更します。 プロジェクトをリビルドした後、C# コンパイラの呼び出しを見つけるために**出力**ウィンドウで **csc** を検索します。
 
  **このトピックの内容**
 
@@ -95,9 +95,9 @@ C# コンパイラは、オペレーティング システムのコマンド ラ
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>C# コンパイラと C++ コンパイラの出力の相違点
 
-C# コンパイラを起動してもオブジェクト (*.obj*) ファイルは作成されず、出力ファイルが直接作成されます。 このため、C# コンパイラにはリンカーが不要です。
+C# コンパイラを起動してもオブジェクト ( *.obj*) ファイルは作成されず、出力ファイルが直接作成されます。 このため、C# コンパイラにはリンカーが不要です。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# コンパイラ オプション](./index.md)
 - [アルファベット順の C# コンパイラ オプションの一覧](./listed-alphabetically.md)
