@@ -3,11 +3,11 @@ title: データ変換
 description: ML.NET でサポートされている機能エンジニアリングのコンポーネントについて検証します。
 ms.date: 04/02/2019
 ms.openlocfilehash: ca410b475c556db5ad4c3862fb79755b455d6830
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739589"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397753"
 ---
 # <a name="data-transformations"></a>データ変換
 
@@ -21,7 +21,7 @@ ms.locfileid: "75739589"
 
 一部のデータ変換には、そのパラメーターを計算するためにトレーニング データが必要です。 たとえば、<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> トランスフォーマーは、`Fit()` の操作中にトレーニング データの平均と分散を計算し、`Transform()` 操作でそのパラメーターを使用します。
 
-他のデータ変換はトレーニング データを必要としません。 たとえば、<xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> の変換は、`Fit()` の操作中にトレーニング データを確認せずに `Transform()` の操作を実行できます。
+他のデータ変換はトレーニング データを必要としません。 たとえば、<xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> の変換は、`Transform()` の操作中にトレーニング データを確認せずに `Fit()` の操作を実行できます。
 
 ## <a name="column-mapping-and-grouping"></a>列のマップとグループ化
 
@@ -102,14 +102,14 @@ ms.locfileid: "75739589"
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectSpikeBySsa%2A> | 単一のスペクトラム分析 (SSA) を使用して、時系列データのスパイクを検出します |
 | <xref:Microsoft.ML.TimeSeriesCatalog.DetectIidSpike%2A> | アダプティブ カーネル密度見積もりとマルチンゲール スコアを使用して、独立同分布 (IID) の時系列データのスパイクを検出します |
 
-## <a name="missing-values"></a>欠損値
+## <a name="missing-values"></a>不足している値
 
 | 変換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.ExtensionsCatalog.IndicateMissingValues%2A> | 新しいブール出力列を作成します。入力列の値が欠落している場合、その値は true です。 |
 | <xref:Microsoft.ML.ExtensionsCatalog.ReplaceMissingValues%2A> | 新しい出力列を作成します。値が入力列にない場合は値が既定値に設定され、それ以外の場合は入力値が設定されます |
 
-## <a name="feature-selection"></a>フィーチャーの選択
+## <a name="feature-selection"></a>特徴選択
 
 | 変換 | 定義 |
 | --- | --- |

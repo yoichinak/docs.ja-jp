@@ -6,18 +6,18 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 3ce68ecc1f0740fdb43ccf22b636dcd4bc05ea0a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 76cd00b9c84f128d2a181115293df910d8deb6cb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712235"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398407"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
 制約では、型引数に必要な機能をコンパイラに通知します。 制約のない型引数は、任意の型にすることができます。 コンパイラは、.NET 型の最終的な基底クラスになる、<xref:System.Object?displayProperty=nameWithType> のメンバーを見なすことができるだけです。 詳細については、「[制約を使用する理由](#why-use-constraints)」を参照してください。 クライアント コードで、この制限で許可されていない型を使用してクラスをインスタンス化しようとすると、コンパイル時エラーが発生します。 制約を指定するには、`where` コンテキスト キーワードを使用します。 次の表では、7 種類の制約を一覧しています。
 
-|制約|説明|
+|制約|[説明]|
 |----------------|-----------------|
 |`where T : struct`|この型引数は null 非許容値型である必要があります。 null 許容値型の詳細については、「[null 許容値型](../../language-reference/builtin-types/nullable-value-types.md)」を参照してください。 すべての値の型にはアクセス可能なパラメーターなしのコンストラクターがあるため、`struct` 制約は `new()` 制約を意味し、`new()` 制約と組み合わせることはできません。 また、`struct` 制約を `unmanaged` 制約と組み合わせることもできません。|
 |`where T : class`|この型引数は参照型である必要があります。 この制約は、任意のクラス、インターフェイス、デリゲート、または配列型にも適用されます。|
@@ -76,7 +76,7 @@ ms.locfileid: "75712235"
 
 ## <a name="notnull-constraint"></a>NotNull 制約
 
-C# 8.0 以降では、`notnull` 制約を使用して、型引数が null 非許容値型または null 非許容参照型である必要があることを指定できます。 `notnull` 制約は、`nullable enable` コンテキストでのみ使用できます。 null 許容が未指定のコンテキストに `notnull` 制約を追加すると、コンパイラにより警告が生成されます。 
+C# 8.0 以降では、`notnull` 制約を使用して、型引数が null 非許容値型または null 非許容参照型である必要があることを指定できます。 `notnull` 制約は、`nullable enable` コンテキストでのみ使用できます。 null 許容が未指定のコンテキストに `notnull` 制約を追加すると、コンパイラにより警告が生成されます。
 
 他の制約とは異なり、型引数が `notnull` 制約に違反すると、そのコードが `nullable enable` コンテキストでコンパイルされるときにコンパイラにより警告が生成されます。 null 許容が未指定のコンテキストでコードがコンパイルされた場合、コンパイラによって警告やエラーは生成されません。
 
@@ -86,7 +86,7 @@ C# 7.3 以降、`unmanaged` 制約を指定して、型パラメーターが nul
 
 [!code-csharp[using the unmanaged constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#15)]
 
-ビルトイン型ではない型で `sizeof` 演算子を使用するため、先行するメソッドは `unsafe` コンテキストでコンパイルされる必要があります。 `unmanaged` 制約なしで、`sizeof` 演算子を使用することはできません。
+ビルトイン型ではない型で `unsafe` 演算子を使用するため、先行するメソッドは `sizeof` コンテキストでコンパイルされる必要があります。 `unmanaged` 制約なしで、`sizeof` 演算子を使用することはできません。
 
 `unmanaged` 制約は `struct` 制約を意味するため、これと組み合わせることはできません。 `struct` 制約は `new()` 制約を意味するため、`unmanaged` 制約を `new()` 制約と組み合わせることもできません。
 
@@ -116,10 +116,10 @@ C# 7.3 以降、基底クラスの制約として <xref:System.Enum?displayPrope
 
 [!code-csharp[using the enum constrained method](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#20)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Collections.Generic>
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [ジェネリックの概要](./index.md)
 - [ジェネリック クラス](./generic-classes.md)
 - [new 制約](../../language-reference/keywords/new-constraint.md)

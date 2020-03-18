@@ -5,13 +5,13 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 90abbc9ffe5765880d18d0d29c8e13bc1330ddc3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc,mlnet-tooling
+ms.openlocfilehash: e94313277a025d482105a6d78b6608d4df442c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75341551"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185828"
 ---
 # <a name="tutorial-classify-the-severity-of-restaurant-health-violations-with-model-builder"></a>チュートリアル: モデル ビルダーを使用してレストランの保健衛生の重大度を分類する
 

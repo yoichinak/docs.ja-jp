@@ -5,14 +5,14 @@ author: mamccrea
 ms.author: mamccrea
 ms.date: 12/04/2019
 ms.topic: tutorial
-ms.openlocfilehash: 83d44af080d95ab6f9311ddd3ca4860806757436
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 125ef834da8e42c99c8080a3d5414a7927ce7636
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504043"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79186509"
 ---
-# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark を使用した構造化ストリーミング 
+# <a name="tutorial-structured-streaming-with-net-for-apache-spark"></a>チュートリアル: .NET for Apache Spark を使用した構造化ストリーミング
 
 このチュートリアルでは、.NET for Apache Spark を使用して Spark 構造化ストリーミングを呼び出す方法について説明します。 Spark 構造化ストリーミングは、リアルタイム データ ストリームを処理するための Apache Spark のサポートです。 ストリーム処理とは、ライブ データの生成中にそれを分析することを意味します。
 
@@ -47,7 +47,7 @@ ms.locfileid: "77504043"
 
 ## <a name="establish-and-connect-to-a-data-stream"></a>データ ストリームを確立して接続する
 
-ストリーム処理をテストする一般的な方法の 1 つとして、**netcat** を使用する方法があります。 netcat (*nc* とも呼ばれます) を使用すると、ネットワーク接続に対する読み取りと書き込みを行うことができます。 netcat とのネットワーク接続を確立するには、ターミナル ウィンドウを使用します。 
+ストリーム処理をテストする一般的な方法の 1 つとして、**netcat** を使用する方法があります。 netcat (*nc* とも呼ばれます) を使用すると、ネットワーク接続に対する読み取りと書き込みを行うことができます。 netcat とのネットワーク接続を確立するには、ターミナル ウィンドウを使用します。
 
 ### <a name="create-a-data-stream-with-netcat"></a>netcat を使用してデータ ストリームを作成する
 
@@ -108,14 +108,14 @@ DataFrame lines = spark
 
 Spark アプリケーションで UDF ("*ユーザー定義関数*") を使用して、データの計算と分析を実行できます。
 
-`udfArray` という名前の UDF を登録するために、次のコードを `Main` メソッドに追加します。 
+`udfArray` という名前の UDF を登録するために、次のコードを `Main` メソッドに追加します。
 
 ```csharp
 Func<Column, Column> udfArray =
     Udf<string, string[]>((str) => new string[] { str, $"{str} {str.Length}" });
 ```
 
-この UDF によって、netcat ターミナルから受け取った各文字列を処理して、元の文字列 (*str* に含まれています) と、その後ろに元の文字列の長さに連結された元の文字列が続く配列が生成されます。 
+この UDF によって、netcat ターミナルから受け取った各文字列を処理して、元の文字列 (*str* に含まれています) と、その後ろに元の文字列の長さに連結された元の文字列が続く配列が生成されます。
 
 たとえば、netcat ターミナルに *Hello world* と入力すると、次のような配列が生成されます。
 

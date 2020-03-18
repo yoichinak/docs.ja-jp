@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Ngen.exe
 - Ngen.exe, profilers and native images
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
-ms.openlocfilehash: b90971e072c0d075479523dc70187894cd0c8565
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 0052475697dae2c3ad891db18d300b5ec08a7e62
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715750"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180349"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
@@ -104,7 +104,7 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 - 既定では、Mpgo.exe は Visual Studio のビルド パス上にありません。 Visual Studio にこのパスを追加するか、Mpgo のコマンド ラインで完全パスを指定する必要があります。 Visual Studio でビルド後イベントに `–Scenario` または `–Import` パラメーターのいずれかを使用できます。 ただし、通常のプロセスでは、Visual Studio 用開発者コマンド プロンプトから `–Scenario` を一度使用し、その後 `–Import` を使用し、各ビルド後に最適化されたアセンブリを更新します (たとえば、`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`)。  
   
-<a name="samples"></a>   
+<a name="samples"></a>
 ## <a name="examples"></a>使用例  
  Visual Studio 用開発者コマンド プロンプトから次の Mpgo.exe コマンドにより税処理アプリケーションを最適化します。  
   

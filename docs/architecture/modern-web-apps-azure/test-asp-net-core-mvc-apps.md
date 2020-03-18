@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 164e820ffa6030b3dcb9180d56e57ce39bb03143
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 2b347442c4a9b7b6cf912ec461248f901dc45417
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503933"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147492"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリのテスト
 
@@ -40,7 +40,7 @@ ms.locfileid: "77503933"
 
 > "多くの場合、システムの開発は家の建築に例えられます。 この類推はまったく正しいというわけではありませんが、単体テストと機能テストの違いを理解する目的で拡大解釈できます。 単体テストは、建築調査官が家の建築現場を訪問する行為に似ています。 調査官は家のさまざまな内部システム、土台、骨組み、電気、配管を重点的に調べ、 家の各部分が正しく安全に機能すること、つまり、建築法規に準拠していることを確認 (テスト) します。 このシナリオにおける機能テストは、家主がこの同じ建築現場を訪問する行為に似ています。 家主は、内部システムが適切に動作し、建築調査官がその仕事を遂行しているものと想定し、 その家で生活することはどのような感じになるのかを重点的に確認します。 家はどのように見えるか、各部屋の大きさはちょうど良いか、家は家族の希望に合っているか、朝日を取り入れる場所に窓が取り付けられているかが重要となります。 家主は家に機能テストを実行します。 家主の視点はユーザーの視点です。 建築調査官は家に単体テストを実行します。 調査官の視点は開発者の視点です。"
 
-ソース:[Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (単体テストと機能テストの比較)
+出典: [Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (単体テストと機能テストの比較)
 
 "開発者は 2 通りの失敗をします。間違った方法で開発することと間違ったものを開発することです。" というのは私の好きな表現です。 単体テストでは、正しい方法で開発していることを確認します。機能テストでは、正しいものを開発していることを確認します。
 
@@ -202,7 +202,7 @@ namespace Microsoft.eShopWeb.FunctionalTests.Web
                     .AddEntityFrameworkInMemoryDatabase()
                     .BuildServiceProvider();
 
-                // Add a database context (ApplicationDbContext) using an in-memory 
+                // Add a database context (ApplicationDbContext) using an in-memory
                 // database for testing.
                 services.AddDbContext<CatalogContext>(options =>
                 {

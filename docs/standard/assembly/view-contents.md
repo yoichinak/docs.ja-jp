@@ -14,12 +14,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 72b02209d74b6b183af6c11d9bd037889ea08543
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347054"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187385"
 ---
 # <a name="how-to-view-assembly-contents"></a>方法: アセンブリの内容を表示する
 
@@ -118,7 +118,7 @@ End Class
 
 アセンブリ マニフェストは、アセンブリの内容に応じて、多くの異なるディレクティブを格納できます。 アセンブリ マニフェストに含まれる多様なディレクティブの一覧については、ECMA のドキュメント、特に「Partition II: Metadata Definition and Semantics」(パーティション II: メタデータの定義とセマンティクス) および「Partition III:CIL Instruction Set」(パーティション III: CIL 命令セット) を参照してください。
 
-- [ECMA の C# および共通言語基盤の標準](/dotnet/standard/components#applicable-standards)
+- [ECMA の C# および共通言語基盤の標準](../components.md#applicable-standards)
 - [Standard ECMA-335 - 共通言語基盤 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)
 
 ## <a name="see-also"></a>関連項目

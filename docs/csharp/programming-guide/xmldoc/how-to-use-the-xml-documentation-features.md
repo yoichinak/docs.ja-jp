@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 57034fb835d4c82b5bf658e61ec78ef226c2551e
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e279b13d9216120e25f454faa14dc71ad24c74ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789769"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157001"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>XML ドキュメント機能を使用する方法
 
@@ -62,7 +62,7 @@ ms.locfileid: "76789769"
             </summary>
             <param name="s"> Parameter description for s goes here.</param>
             <seealso cref="T:System.String">
-            You can use the cref attribute on any tag to reference a type or member 
+            You can use the cref attribute on any tag to reference a type or member
             and the compiler will check that the reference exists.
             </seealso>
         </member>
@@ -124,14 +124,14 @@ XML ドキュメントは、/// で始まります。 新しいプロジェク�
 
   - \<param> タグは、パラメーターの記述に使われます。 このタグがあると、コンパイラは、パラメーターが存在すること、およびすべてのパラメーターがドキュメントで記述されていることを確認します。 検証で問題がある場合、コンパイラは警告を生成します。
 
-  - `cref` 属性は任意のタグにアタッチでき、コード要素への参照を提供します。 コンパイラは、このコード要素が存在することを確認します。 検証で問題がある場合、コンパイラは警告を生成します。 コンパイラは、`cref` 属性で記述されている型を探すとき、`using` ステートメントに従います。
+  - `cref` 属性は任意のタグにアタッチでき、コード要素への参照を提供します。 コンパイラは、このコード要素が存在することを確認します。 検証で問題がある場合、コンパイラは警告を生成します。 コンパイラは、`using` 属性で記述されている型を探すとき、`cref` ステートメントに従います。
 
   - \<summary> タグは、型またはメンバーに関する追加情報を表示するために、Visual Studio の IntelliSense によって使われます。
 
     > [!NOTE]
     > XML ファイルでは、型とメンバーに関する完全な情報は提供されません (たとえば、型の情報は含まれません)。 型またはメンバーの完全な情報を取得するには、ドキュメント ファイルと併せて、実際の型またはメンバーでリフレクションを使う必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# プログラミング ガイド](../index.md)
 - [-doc (C# コンパイラ オプション)](../../language-reference/compiler-options/doc-compiler-option.md)

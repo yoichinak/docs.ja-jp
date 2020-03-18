@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implicit keyword [C#]
 - conversion operator [C#]
 - user-defined conversion [C#]
-ms.openlocfilehash: 379deb20243a13cc608cb7fe119b341065327c1e
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: b6061492cc1a4f756196fb8a9050b68651431e38
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450675"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847269"
 ---
 # <a name="user-defined-conversion-operators-c-reference"></a>ユーザー定義の変換演算子 (C# リファレンス)
 
@@ -29,7 +29,7 @@ ms.locfileid: "77450675"
 
 次の例は、暗黙的な変換と明示的な変換を定義する方法を示しています。
 
-[!code-csharp[implicit an explicit conversions](~/samples/csharp/language-reference/operators/UserDefinedConversions.cs)]
+[!code-csharp[implicit an explicit conversions](snippets/UserDefinedConversions.cs)]
 
 また、事前に定義された C# 演算子をオーバーロードするには `operator` キーワードも使用します。 詳細については、「[演算子のオーバーロード](operator-overloading.md)」を参照してください。
 
@@ -42,7 +42,7 @@ ms.locfileid: "77450675"
 - [暗黙的な変換](~/_csharplang/spec/conversions.md#implicit-conversions)
 - [明示的な変換](~/_csharplang/spec/conversions.md#explicit-conversions)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)

@@ -1,12 +1,12 @@
 ---
 title: シリアル化 (C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: 1d2bda9022b7e43744dd8a0286eff88914cf65a3
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635731"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79167596"
 ---
 # <a name="serialization-c"></a>シリアル化 (C#)
 
@@ -43,7 +43,7 @@ JSON シリアル化では、オブジェクトのパブリック プロパテ�
 
 <xref:System.Runtime.Serialization> 名前空間には、バイナリおよび XML シリアル化および逆シリアル化のためのクラスが含まれています。
 
-バイナリ シリアル化では、バイナリ エンコードを使用して、ストレージやソケット ベースのネットワーク ストリームなどのためのコンパクトなシリアル化を生成します。 バイナリ シリアル化では、読み取り専用メンバーも含め、すべてのメンバーがシリアル化され、パフォーマンスが向上します。 
+バイナリ シリアル化では、バイナリ エンコードを使用して、ストレージやソケット ベースのネットワーク ストリームなどのためのコンパクトなシリアル化を生成します。 バイナリ シリアル化では、読み取り専用メンバーも含め、すべてのメンバーがシリアル化され、パフォーマンスが向上します。
 
 XML シリアル化では、オブジェクトのパブリック フィールドやパブリック プロパティ、またはメソッドのパラメーターや戻り値を、特定の XML スキーマ定義言語 (XSD) ドキュメントに準拠する XML ストリームにシリアル化します。 XML シリアル化では、XML に変換されるパブリック プロパティとパブリック フィールドによって厳密に型指定されたクラスが生成されます。 <xref:System.Xml.Serialization> には、XML のシリアル化および逆シリアル化のためのクラスが含まれています。 属性をクラスおよびクラス メンバーに適用すると、<xref:System.Xml.Serialization.XmlSerializer> がそのクラスのインスタンスをシリアル化または逆シリアル化する方法を制御できます。
 
@@ -75,13 +75,14 @@ XML シリアル化では、オブジェクトのパブリック フィールド
 
 デザイナーのシリアル化はシリアル化の特殊な形式であり、開発ツールに関連付けられているオブジェクトの永続性の種類を含みます。 デザイナーのシリアル化は、後でオブジェクト グラフを復元できるように、オブジェクト グラフをソース ファイルに変換するプロセスです。 ソース ファイルには、コードとマークアップを含めることができますが、SQL テーブル情報を含めることもできます。
 
-## <a name="BKMK_RelatedTopics">関連トピックと例</a>  
+## <a name="BKMK_RelatedTopics"></a>関連トピックと例  
 
 [System.Text.Json の概要](../../../../standard/serialization/system-text-json-overview.md)。`System.Text.Json` ライブラリを取得する方法を示します。
 
-[.NET で JSON をシリアル化および逆シリアル化する方法](../../../../standard/serialization/system-text-json-how-to.md)。 <xref:System.Text.Json.JsonSerializer> クラスを使用して JSON との間でオブジェクト データの読み取りと書き込みを行う方法について説明します。
+[.NET で JSON をシリアル化および逆シリアル化する方法](../../../../standard/serialization/system-text-json-how-to.md)。
+<xref:System.Text.Json.JsonSerializer> クラスを使用して JSON との間でオブジェクト データの読み取りと書き込みを行う方法について説明します。
 
-[チュートリアル: オブジェクトの永続化 (Visual Studio (C#))](walkthrough-persisting-an-object-in-visual-studio.md)  
+[チュートリアル: オブジェクトの永続化 (Visual Studio) (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 シリアル化によってインスタンス間でオブジェクトのデータを永続化して値を保存しておき、次にそのオブジェクトをインスタンス化するときにその値を取得する方法を示します。
 
 [XML ファイルからオブジェクト データを読み取る方法 (C#)](how-to-read-object-data-from-an-xml-file.md)  

@@ -5,13 +5,13 @@ author: luisquintanilla
 ms.author: luquinta
 ms.date: 11/21/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: 254f3c4c05a2c18f6182fc5f18d93114e20ed953
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.custom: mvc, mlnet-tooling
+ms.openlocfilehash: c027fe57f571c791784b0bdb7ad9503fc49daa1c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344985"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187693"
 ---
 # <a name="tutorial-predict-prices-using-regression-with-model-builder"></a>チュートリアル: モデル ビルダーで回帰を使用して価格を予測する
 

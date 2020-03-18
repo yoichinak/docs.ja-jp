@@ -4,17 +4,17 @@ description: ML.NET でカスタム モデルをビルドする際に役立つ�
 ms.topic: reference
 ms.date: 07/31/2019
 ms.openlocfilehash: 32ccb6df1cb08db45ebd25a0d1c0ea4396a6c50b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739881"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397765"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
 ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語を次に示します。
 
-## <a name="accuracy"></a>正確度
+## <a name="accuracy"></a>精度
 
 [分類](#classification)における正確度は、正しく分類された項目の数をテスト セット内の項目の総数で割ったものです。 0 (正確度が最も低い) ～ 1 (正確度が最も高い) の値になります。 正確度は、モデル パフォーマンスの評価メトリックの 1 つです。 [精度](#precision)、[再現率](#recall)、および [F 値](#f-score)と併せて考慮してください。
 
@@ -24,9 +24,9 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 ## <a name="binary-classification"></a>二項分類
 
-[ラベル](#label)が 2 つのクラスのうちの 1 つである[分類](#classification)です。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクションの「[二項分類](tasks.md#binary-classification)」を参照してください。
+[ラベル](#classification)が 2 つのクラスのうちの 1 つである[分類](#label)です。 詳細については、トピック「[機械学習のタスク](tasks.md#binary-classification)」のセクションの「[二項分類](tasks.md)」を参照してください。
 
-## <a name="calibration"></a>調整
+## <a name="calibration"></a>較正
 
 調整は、二項分類と多クラス分類のために、生のスコアをクラスのメンバーシップにマップするプロセスです。 一部 ML.NET トレーナーには `NonCalibrated` サフィックスがあります。 これらのアルゴリズムからは、後でクラスの確率にマップする必要がある生のスコアが生成されます。
 
@@ -44,7 +44,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 [回帰](#regression)における評価メトリックであり、データがモデルにどの程度適合するかを示します。 0 ～ 1 の値になります。 値 0 は、データがランダムであるか、モデルに適合できないことを意味します。 値 1 は、モデルがデータと完全に一致していることを意味します。 多くの場合、これは r<sup>2</sup>、R<sup>2</sup>、または r の 2 乗と呼ばれます。
 
-## <a name="data"></a>データ
+## <a name="data"></a>Data
 
 データはあらゆる機械学習アプリケーションの中心です。 ML.NET では、データは <xref:Microsoft.ML.IDataView> オブジェクトで表されます。 データ ビュー オブジェクト:
 
@@ -80,7 +80,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 機械学習アルゴリズムのパラメーターです。 例として、デシジョン フォレストにおける学習するツリー数や勾配降下アルゴリズムにおけるステップ サイズなどがあります。 *ハイパーパラメーター*の値は、モデルのトレーニング前に設定され、予測関数のパラメーターを検出するプロセスを管理します。例として、デシジョン ツリーにおける比較ポイントや線形回帰モデルにおける重みなどがあります。 詳しくは、Wikipedia の[ハイパーパラメーター](https://en.wikipedia.org/wiki/Hyperparameter_(machine_learning))の記事を参照してください。
 
-## <a name="label"></a>group1
+## <a name="label"></a>Label
 
 機械学習モデルで予測される要素です。 たとえば、犬種や将来の株価などです。
 
@@ -104,7 +104,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 ## <a name="multiclass-classification"></a>多クラス分類
 
-[ラベル](#label)が 3 つ以上のクラスのうちの 1 つである[分類](#classification)です。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクション「[多クラス分類](tasks.md#multiclass-classification)」を参照してください。
+[ラベル](#classification)が 3 つ以上のクラスのうちの 1 つである[分類](#label)です。 詳細については、トピック「[機械学習のタスク](tasks.md#multiclass-classification)」のセクション「[多クラス分類](tasks.md)」を参照してください。
 
 ## <a name="n-gram"></a>N グラム
 
@@ -122,7 +122,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 モデルをデータ セットに適合させるために必要なすべての操作です。 パイプラインは、データのインポート、変換、特徴付け、および学習の各ステップで構成されます。 トレーニングが完了したパイプラインがモデルになります。
 
-## <a name="precision"></a>有効桁数
+## <a name="precision"></a>Precision
 
 [分類](#classification)におけるクラスの精度は、そのクラスに属していると正確に予測された項目の数を、クラスに属していると予測された項目の総数で割ったものです。
 
@@ -139,7 +139,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 ## <a name="regression"></a>回帰
 
-出力が実際の値 (たとえば、倍精度) である[教師あり機械学習](#supervised-machine-learning)タスクです。 例として、株価の予測などがあります。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクション「[回帰](tasks.md#regression)」を参照してください。
+出力が実際の値 (たとえば、倍精度) である[教師あり機械学習](#supervised-machine-learning)タスクです。 例として、株価の予測などがあります。 詳細については、トピック「[機械学習のタスク](tasks.md#regression)」のセクション「[回帰](tasks.md)」を参照してください。
 
 ## <a name="relative-absolute-error"></a>相対絶対誤差
 

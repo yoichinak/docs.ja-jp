@@ -7,10 +7,10 @@ helpviewer_keywords:
 - files [Visual Basic], parsing
 ms.assetid: fc31d6e6-af0c-403f-8a00-d556b2c57567
 ms.openlocfilehash: f3239184beb58312a8e3598545fc37423ff85287
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74333842"
 ---
 # <a name="parsing-text-files-with-the-textfieldparser-object-visual-basic"></a>TextFieldParser オブジェクトによるテキスト ファイルの解析 (Visual Basic)
@@ -33,9 +33,9 @@ ms.locfileid: "74333842"
   
 ## <a name="parsing-files-with-multiple-formats"></a>複数の書式を持つファイルの解析  
 
- `TextFieldParser` オブジェクトの `PeekChars` メソッドを使用すると、各フィールドを読み取る前にチェックできます。これにより、フィールドに対して複数の書式を定義して、適切に対応できます。 詳細については、[複数の書式を持つテキスト ファイルを読み取る](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)」を参照してください。  
+ `PeekChars` オブジェクトの `TextFieldParser` メソッドを使用すると、各フィールドを読み取る前にチェックできます。これにより、フィールドに対して複数の書式を定義して、適切に対応できます。 詳細については、「[方法: 複数の書式を持つテキスト ファイルを読み取る](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFieldParser%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser>

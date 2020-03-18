@@ -2,15 +2,15 @@
 title: LINQ を使用して ArrayList にクエリを実行する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2bfb471c-6e9a-4e60-bd83-4a1778abde11
-ms.openlocfilehash: b8edb90d33c92324d4f76c7e6977641fe4499d9d
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: fa185ba3793b628b0d65e1f513a70ec68f6f2425
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345703"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168935"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>LINQ を使用して ArrayList にクエリを実行する方法 (C#)
-LINQ を使用して <xref:System.Collections.ArrayList> などの非ジェネリックの <xref:System.Collections.IEnumerable> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 たとえば、`Student` オブジェクトの <xref:System.Collections.ArrayList> がある場合、[from 句](../../../language-reference/keywords/from-clause.md)は次のようになります。  
+LINQ を使用して <xref:System.Collections.IEnumerable> などの非ジェネリックの <xref:System.Collections.ArrayList> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 たとえば、<xref:System.Collections.ArrayList> オブジェクトの `Student` がある場合、[from 句](../../../language-reference/keywords/from-clause.md)は次のようになります。  
   
 ```csharp
 var query = from Student s in arrList  
@@ -77,12 +77,12 @@ namespace NonGenericLINQ
         }  
     }  
 }  
-/* Output:   
+/* Output:
     Omelchenko: 98  
     Garcia: 97  
 */  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to Objects (C#)](./linq-to-objects.md)

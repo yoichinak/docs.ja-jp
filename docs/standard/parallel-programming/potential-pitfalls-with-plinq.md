@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
 ms.openlocfilehash: 3ddc0c013335e6a7b4708a5dd8be0b2247b2f60c
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74716254"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ の非利便性
