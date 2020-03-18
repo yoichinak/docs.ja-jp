@@ -3,10 +3,10 @@ title: "\"このアプリケーションを開始できませんでした\" の�
 description: "\"このアプリケーションを開始できませんでした\" のダイアログ ボックスが表示された場合の対処方法を説明します。"
 ms.date: 09/05/2019
 ms.openlocfilehash: 864c6ea23e9a048f060eee39d904bd4377be5084
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965907"
 ---
 # <a name="troubleshooting-a-this-application-could-not-be-started-error-message"></a>"このアプリケーションを開始できませんでした" のエラー メッセージのトラブルシューティング
@@ -25,7 +25,7 @@ ms.locfileid: "76965907"
 
 1. [.NET Framework 修復ツール (NetFxRepairTool.exe)](https://www.microsoft.com/download/details.aspx?id=30135) をダウンロードします。 ダウンロードが完了すると、ツールが自動的に実行されます。
 
-1. .NET Framework 修復ツールで、次の図に示すような追加のアクションが推奨される場合は、**[次へ]** を選択します。
+1. .NET Framework 修復ツールで、次の図に示すような追加のアクションが推奨される場合は、 **[次へ]** を選択します。
 
    ![推奨される変更](media/application-not-started/repair-tool-recommended-changes.png)
 
@@ -33,7 +33,7 @@ ms.locfileid: "76965907"
 
    ![推奨される変更](media/application-not-started/repair-tool-changes-complete.png)
 
-1. アプリケーションが正常に実行された場合は、**[完了]** ボタンを選択します。 それ以外の場合は、**[次へ]** ボタンを選択します。
+1. アプリケーションが正常に実行された場合は、 **[完了]** ボタンを選択します。 それ以外の場合は、 **[次へ]** ボタンを選択します。
 
 1. **[次へ]** ボタンを選択した場合、.NET Framework 修復ツールでは次のようなダイアログ ボックスが表示されます。 **[完了]** ボタンを選択して、診断情報を Microsoft に送信します。
 
@@ -59,7 +59,7 @@ ms.locfileid: "76965907"
 
    ![問題を解決できない](media/application-not-started/install-3-5.png)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework のシステム要件](../get-started/system-requirements.md)
 - [.NET Framework のインストール ガイド](index.md)

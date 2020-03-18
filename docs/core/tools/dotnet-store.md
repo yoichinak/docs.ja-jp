@@ -3,17 +3,17 @@ title: dotnet store コマンド
 description: "'dotnet store' コマンドは、指定したアセンブリをランタイム パッケージ ストアに格納します。"
 ms.date: 02/14/2020
 ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503584"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet store` - 指定したアセンブリを[ランタイム パッケージ ストア](../deploying/runtime-store.md)に格納します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "77503584"
 dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet store` - 指定したアセンブリを[ランタイム パッケージ ストア](../deploying/runtime-store.md)に格納します。 既定では、アセンブリは、ターゲット ランタイムとフレームワークに合わせて最適化されます。 詳細については、[「ランタイム パッケージ ストア」](../deploying/runtime-store.md) を参照してください。
 
@@ -71,7 +71,7 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
 
   コマンドで使用される作業ディレクトリです。 指定しない場合、現在のディレクトリの *obj* サブディレクトリが使用されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - .NET Core 2.0.0 の *packages.csproj* プロジェクト ファイルで指定されたパッケージを格納します。
 
@@ -85,6 +85,6 @@ dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-
   dotnet store --manifest packages.csproj --skip-optimization
   ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ランタイム パッケージ ストア](../deploying/runtime-store.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 author: rick-anderson
 ms.author: riande
 ms.openlocfilehash: b18b2bf31787fa58e614cd4f057fba9037fe8ad8
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77627553"
 ---
 # <a name="systemiopipelines-in-net"></a>.NET の System.IO.Pipelines

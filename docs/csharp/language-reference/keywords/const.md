@@ -8,10 +8,10 @@ helpviewer_keywords:
 - const keyword [C#]
 ms.assetid: 79eb447c-117b-4418-933f-97c50aa472db
 ms.openlocfilehash: 812aeb331b6dd333075d19076a896246ecc5b374
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713675"
 ---
 # <a name="const-c-reference"></a>const (C# リファレンス)
@@ -24,7 +24,7 @@ public const double GravitationalConstant = 6.673e-11;
 private const string ProductName = "Visual C#";
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 定数宣言の型は、宣言で導入されるメンバーの型を指定します。 ローカル定数または定数フィールドの初期化子は、ターゲット型に暗黙に変換できる定数式であることが必要です。
 
@@ -62,10 +62,10 @@ public const int C2 = C1 + 100;
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](./index.md)
 - [修飾子](index.md)
 - [readonly](./readonly.md)

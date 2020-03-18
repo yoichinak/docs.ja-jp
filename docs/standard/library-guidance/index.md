@@ -3,10 +3,10 @@ title: オープン ソース .NET ライブラリのガイダンス
 description: 高品質の .NET ライブラリを作成するための開発者向けのベスト プラクティスとしての推奨事項。
 ms.date: 10/17/2018
 ms.openlocfilehash: 4c76dfae6ffc39df7f15381be64e33657067d79d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731427"
 ---
 # <a name="open-source-library-guidance"></a>オープン ソース ライブラリのガイダンス
@@ -28,7 +28,7 @@ ms.locfileid: "76731427"
 
 ## <a name="types-of-recommendations"></a>推奨事項の種類
 
-各記事で 4 種類のレコメンデーションが提示されます:**実施**、**検討**、**回避**、**実施しない**です。 推奨事項の種類によって、その推奨設定にどの程度厳密に従う必要があるかが示されます。
+各記事で 4 種類の推奨事項 (**実施**、**検討**、**回避**、**実施しない**) が提示されます。 推奨事項の種類によって、その推奨設定にどの程度厳密に従う必要があるかが示されます。
 
 **実施**の推奨事項にはほとんど常に従う必要があります。 次に例を示します。
 

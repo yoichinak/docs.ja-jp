@@ -11,10 +11,10 @@ helpviewer_keywords:
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
 ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159378"
 ---
 # <a name="how-to-compress-and-extract-files"></a>方法: ファイルを圧縮して抽出する

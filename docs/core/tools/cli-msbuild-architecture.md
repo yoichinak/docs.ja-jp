@@ -3,10 +3,10 @@ title: .NET Core コマンドライン ツールのアーキテクチャ
 description: .NET Core ツール レイヤーと最近のバージョンの変更内容について説明します。
 ms.date: 03/06/2017
 ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092916"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core ツールの変更の概要

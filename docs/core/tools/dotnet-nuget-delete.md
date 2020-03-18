@@ -4,10 +4,10 @@ description: dotnet-nuget-delete コマンドは、サーバーからパッケ�
 author: karann-msft
 ms.date: 06/26/2019
 ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76733122"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
@@ -18,7 +18,7 @@ ms.locfileid: "76733122"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet nuget delete` - サーバーからパッケージを削除または一覧から削除します。
 
@@ -30,7 +30,7 @@ dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] 
 dotnet nuget delete [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet nuget delete` コマンドは、サーバーからパッケージを削除または一覧から削除します。 [nuget.org](https://www.nuget.org/) の場合、この操作ではパッケージを一覧から削除します。
 
@@ -74,7 +74,7 @@ dotnet nuget delete [-h|--help]
 
   サーバー URL を指定します。 nuget.org でサポートされている URL には、`https://www.nuget.org`、`https://www.nuget.org/api/v3`、および `https://www.nuget.org/api/v2/package` が含まれます。 プライベート フィードの場合、ホスト名を置き換えます (`%hostname%/api/v3` など)。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 * `Microsoft.AspNetCore.Mvc` パッケージのバージョン 1.0 を削除します。
 

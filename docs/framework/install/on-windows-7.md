@@ -4,10 +4,10 @@ ms.custom: updateeachrelease
 description: Windows 7 SP1 に .NET Framework をインストールする方法について説明します。
 ms.date: 04/18/2019
 ms.openlocfilehash: 77177b8c4a40f68eb139f5d765bcb421a4d6bb49
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965855"
 ---
 # <a name="install-the-net-framework-on-windows-7-sp1-and-windows-server-2008-r2"></a>Windows 7 SP1 と Windows Server 2008 R2 に .NET Framework をインストールする
@@ -35,7 +35,7 @@ ms.locfileid: "76965855"
 
 インストールされている .NET Framework の正しいバージョンがわからない場合は、[Microsoft にお問い合わせください](mailto:dotnet-install-help@service.microsoft.com?subject=Install-Help)。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework のダウンロード](https://dotnet.microsoft.com/download)
 - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)

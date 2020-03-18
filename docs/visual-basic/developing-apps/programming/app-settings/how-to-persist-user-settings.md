@@ -7,10 +7,10 @@ helpviewer_keywords:
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
 ms.openlocfilehash: b1026e400015ff7807144dca8e9ce6d72fe3d18e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74329641"
 ---
 # <a name="how-to-persist-user-settings-in-visual-basic"></a>方法: Visual Basic でユーザー設定を永続化する

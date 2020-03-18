@@ -6,10 +6,10 @@ ms.author: adegeo
 ms.date: 12/03/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 0968d9db1dbfbdc8c586328ee8e02315f17950b9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714391"
 ---
 # <a name="get-started-with-net-core"></a>.NET Core の概要
@@ -43,7 +43,7 @@ Hello World!
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="windowstabwindows"></a>[Windows](#tab/windows)
+# <a name="windows"></a>[Windows](#tab/windows)
 
 - [Visual Studio 2019 で最初の .NET Core コンソール アプリケーションを作成する](./tutorials/with-visual-studio.md)
 - [Visual Studio で .NET Standard を使用してクラス ライブラリを構築する](./tutorials/library-with-visual-studio.md)
@@ -56,7 +56,7 @@ Hello World!
 
 サポートされている Windows バージョンの一覧については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-windows)に関する記事を参加してください。
 
-# <a name="linuxtablinux"></a>[Linux](#tab/linux)
+# <a name="linux"></a>[Linux](#tab/linux)
 
 次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始します。
 
@@ -68,7 +68,7 @@ Hello World!
 
 サポートされている Linux のディストリビューションとバージョンの一覧については、[.NET Core の依存関係と要件](install/dependencies.md?pivots=os-linux)に関する記事を参加してください。
 
-# <a name="macostabmacos"></a>[macOS](#tab/macos)
+# <a name="macos"></a>[macOS](#tab/macos)
 
 次のステップ バイ ステップのチュートリアルに従って、.NET Core アプリケーションの開発を開始します。
 

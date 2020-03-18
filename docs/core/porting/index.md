@@ -4,15 +4,15 @@ description: 移植プロセスを理解し、.NET Framework プロジェクト�
 author: cartermp
 ms.date: 10/22/2019
 ms.openlocfilehash: e483bb6e48dad6c3bf71bfa81e704a137fc02094
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75937313"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
 
-現在 .NET Framework で実行しているコードの .NET Core への移植を検討する場合があります。 この記事では、次について説明します。
+現在 .NET Framework で実行しているコードの .NET Core への移植を検討する場合があります。 この記事では、次の内容について説明します。
 
 * 移植プロセスの概要。
 * コードを .NET Core に移植するときに役立つ場合があるツールの一覧。
@@ -33,7 +33,7 @@ ms.locfileid: "75937313"
 
    このツールは移植性アナライザーに似ていますが、.NET Core 上にコードをビルドできるかどうかが分析されるのではなく、実行時に <xref:System.PlatformNotSupportedException> をスローするような方法で API を使っているかどうかが分析されます。 .NET Framework 4.7.2 以上から移行する場合、これは一般的ではありませんが、確認することをお勧めします。 .NET Core で例外をスローする API の詳細については、「[.NET Core で常に例外をスローする API](../compatibility/unsupported-apis.md)」を参照してください。
 
-4. [Visual Studio の変換ツール](/nuget/consume-packages/migrate-packages-config-to-package-reference)を使用して、すべての `packages.config` の依存関係を [PackageReference](/nuget/consume-packages/package-references-in-project-files) 形式に変換します。
+4. `packages.config`Visual Studio の変換ツール[を使用して、すべての ](/nuget/consume-packages/package-references-in-project-files) の依存関係を [PackageReference](/nuget/consume-packages/migrate-packages-config-to-package-reference) 形式に変換します。
 
    この手順では、依存関係を従来の `packages.config` 形式から変換します。 `packages.config` は .NET Core では機能しないため、パッケージの依存関係がある場合は、この変換が必須です。
 
@@ -47,7 +47,7 @@ ms.locfileid: "75937313"
 
 さらに、[dotnet try-convert](https://github.com/dotnet/try-convert) ツールを使って、より小規模なソリューションや個人のプロジェクトを、1 つの操作で .NET Core プロジェクトのファイル形式に移植してみることが可能です。 `dotnet try-convert` がすべてのプロジェクトに対して動作する保証はありません。また、これが原因となって、依存していた動作に微妙な変更が生じる可能性があります。 これは、自動化できる基本的なことを自動化するための "_開始点_" としてお使いください。 これは、プロジェクトの移行に対する保証されたソリューションではありません。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 >[!div class="nextstepaction"]
 >[依存関係の分析](third-party-deps.md)

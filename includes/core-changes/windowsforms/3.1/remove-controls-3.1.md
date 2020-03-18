@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 10811a90887624a731c58d557e1dd196ae2c9207
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/22/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76508555"
 ---
 ### <a name="removed-controls"></a>削除されたコントロール

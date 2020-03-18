@@ -4,10 +4,10 @@ description: ML.NET でモデルの解釈可能性のために一般化加法モ
 ms.date: 01/30/2020
 ms.custom: mvc,how-to
 ms.openlocfilehash: 6df19eff4fec98c5815a9f8f4d8e4e9a80cba6ed
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77092474"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-interpretability-in-mlnet"></a>ML.NET でモデルの解釈可能性のために一般化加法モデルと形状関数を使う

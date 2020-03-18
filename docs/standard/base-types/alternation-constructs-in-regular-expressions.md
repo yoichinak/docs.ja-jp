@@ -16,10 +16,10 @@ helpviewer_keywords:
 - .NET Framework regular expressions, alternation constructs
 ms.assetid: 071e22e9-fbb0-4ecf-add1-8d2424f9f2d1
 ms.openlocfilehash: 02664bd2812f89649ec933483161263bae530a75
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159690"
 ---
 # <a name="alternation-constructs-in-regular-expressions"></a>正規表現での代替コンストラクト

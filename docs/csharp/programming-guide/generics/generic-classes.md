@@ -6,10 +6,10 @@ helpviewer_keywords:
 - generics [C#], classes
 ms.assetid: 27d6f256-cd61-41e3-bc6e-b990a53b0224
 ms.openlocfilehash: 1fdfaa833ad32428d341b6f3a61cc7f638036183
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937506"
 ---
 # <a name="generic-classes-c-programming-guide"></a>ジェネリック クラス (C# プログラミング ガイド)
@@ -25,7 +25,7 @@ ms.locfileid: "75937506"
   
 - 型パラメーターに適用する制約 (制約がある場合) (「[型パラメーターの制約](./constraints-on-type-parameters.md)」を参照)。  
   
-     処理しなければならない型を処理できる範囲で最大の制約を適用することが推奨されます。 たとえば、ジェネリック クラスが参照型でのみ使用される場合、クラス制約を適用します。 それにより、意図しない、値型でのクラスの使用が回避され、`T` で `as` 演算子を使用したり、null 値を確認したりできます。  
+     処理しなければならない型を処理できる範囲で最大の制約を適用することが推奨されます。 たとえば、ジェネリック クラスが参照型でのみ使用される場合、クラス制約を適用します。 それにより、意図しない、値型でのクラスの使用が回避され、`as` で `T` 演算子を使用したり、null 値を確認したりできます。  
   
 - 基底クラスやサブクラスの要因としてジェネリック動作を考慮するかどうか。  
   
@@ -65,10 +65,10 @@ ms.locfileid: "75937506"
   
  ジェネリック クラスは変化しません。 言い換えると、入力パラメーターが `List<BaseClass>` を指定するとき、`List<DerivedClass>` を指定するとコンパイル時エラーが表示されます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Collections.Generic>
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [ジェネリック](./index.md)
 - [列挙子の状態を保存する](https://docs.microsoft.com/archive/blogs/wesdyer/saving-the-state-of-enumerators)
 - [継承パズル、パート 1](https://docs.microsoft.com/archive/blogs/ericlippert/an-inheritance-puzzle-part-one)

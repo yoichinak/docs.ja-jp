@@ -3,17 +3,17 @@ title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 02/14/2020
 ms.openlocfilehash: 9f9a78ec0a6a25c54c8a727c05081ce6835514ee
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503766"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet build` - プロジェクトとそのすべての依存関係をビルドします。
 
@@ -27,7 +27,7 @@ dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--for
 dotnet build [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet build` コマンドは、プロジェクトとその依存関係をバイナリ セットにビルドします。 バイナリには、拡張子が *.dll* である中間言語 (IL) ファイルのプロジェクトのコードが含まれます。  プロジェクトの種類と設定に応じて、次などのファイルを含めることもできます。
 
@@ -41,7 +41,7 @@ dotnet build [-h|--help]
 
 .NET Core 3.0 以降を対象とする実行可能なプロジェクトでは、ライブラリの依存関係は出力フォルダーにコピーされます。 つまり、(Web プロジェクトなどが持つ) 発行専用のロジックが他にない場合、ビルドの出力は展開できるはずです。
 
-ビルドには *project.assets.json* ファイルが必要です。このファイルには、アプリケーションの依存関係が一覧表示されています。 このファイルは、[`dotnet restore`](dotnet-restore.md) を実行すると作成されます。 アセット ファイルが配置されていないと、ツールは参照アセンブリを解決できないため、エラーになります。 .NET Core 1.x SDK の場合、`dotnet build` を実行する前に `dotnet restore` を明示的に実行する必要がありました。 .NET Core 2.0 SDK 以降では、`dotnet build` を実行すると、`dotnet restore` が暗黙的に実行されます。 ビルド コマンドの実行時に暗黙的な復元を無効にする場合は、`--no-restore` オプションを渡します。
+ビルドには *project.assets.json* ファイルが必要です。このファイルには、アプリケーションの依存関係が一覧表示されています。 このファイルは、[`dotnet restore`](dotnet-restore.md) を実行すると作成されます。 アセット ファイルが配置されていないと、ツールは参照アセンブリを解決できないため、エラーになります。 .NET Core 1.x SDK の場合、`dotnet restore` を実行する前に `dotnet build` を明示的に実行する必要がありました。 .NET Core 2.0 SDK 以降では、`dotnet restore` を実行すると、`dotnet build` が暗黙的に実行されます。 ビルド コマンドの実行時に暗黙的な復元を無効にする場合は、`--no-restore` オプションを渡します。
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -121,9 +121,9 @@ dotnet build [-h|--help]
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 
-  プロジェクトをビルドするときに使用する `$(VersionSuffix)` プロパティの値を設定します。 これは、`$(Version)` プロパティが設定されていない場合にのみ機能します。 次に、`$(Version)` には、ダッシュで区切り `$(VersionSuffix)` と組み合わせた `$(VersionPrefix)` が設定されます。
+  プロジェクトをビルドするときに使用する `$(VersionSuffix)` プロパティの値を設定します。 これは、`$(Version)` プロパティが設定されていない場合にのみ機能します。 次に、`$(Version)` には、ダッシュで区切り `$(VersionPrefix)` と組み合わせた `$(VersionSuffix)` が設定されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - プロジェクトとその依存関係をビルドします。
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
 ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139959"
 ---
 # <a name="task-parallel-library-tpl"></a>タスク並列ライブラリ (TPL)
@@ -21,7 +21,7 @@ ms.locfileid: "73139959"
   
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|説明|  
+|タイトル|[説明]|  
 |-|-|  
 |[データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)|並列の `for` ループおよび `foreach` ループ (Visual Basic では `For` および `For Each`) を作成する方法について説明します。|  
 |[タスク ベースの非同期プログラミング](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)|<xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType> を使用して暗黙的にタスクを作成および実行する方法、または <xref:System.Threading.Tasks.Task> オブジェクトを直接使用して明示的にタスクを作成および実行する方法について説明します。|  
@@ -31,6 +31,6 @@ ms.locfileid: "73139959"
 |[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|LINQ クエリでデータの並列化を達成する方法について説明します。|  
 |[並列プログラミング](../../../docs/standard/parallel-programming/index.md)|.NET 並列プログラミングのトップ レベル ノード。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework による並列プログラミングのサンプル](https://code.msdn.microsoft.com/Samples-for-Parallel-b4b76364)

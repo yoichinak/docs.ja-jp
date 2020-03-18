@@ -12,10 +12,10 @@ helpviewer_keywords:
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
 ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75741346"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET での例外の処理とスロー
@@ -46,7 +46,7 @@ ms.locfileid: "75741346"
 
 次の表は、一般的な例外とそれらの原因の例をいくつか示しています。
 
-| 例外の種類 | 説明 | 例 |
+| 例外の種類 | [説明] | 例 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | すべての例外の基底クラスです。 | なし (この例外の派生クラスを使用)。 |
 | <xref:System.IndexOutOfRangeException> | 配列のインデックスが誤っている場合にのみ、ランタイムによってスローされます。 | 次のように、配列に対して配列の有効範囲外のインデックスを付けた場合。 <br /> `arr[arr.Length+1]` |
@@ -56,7 +56,7 @@ ms.locfileid: "75741346"
 | <xref:System.ArgumentNullException> | null の引数を許可しないメソッドによってスローされます。 | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
 | <xref:System.ArgumentOutOfRangeException> | 引数が特定の範囲内にあることを検査するメソッドによってスローされます。 | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Exception クラスとプロパティ](exception-class-and-properties.md)
 - [方法: Try ブロックと Catch ブロックを使用して例外をキャッチする](how-to-use-the-try-catch-block-to-catch-exceptions.md)

@@ -4,17 +4,17 @@ description: dotnet nuget push コマンドでは、パッケージをサーバ�
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: d4ef8e58908fe488c712debff3b313ac0908b43e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503660"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet nuget push` - パッケージをサーバーにプッシュして発行します。
 
@@ -26,7 +26,7 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output] [--
 dotnet nuget push [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet nuget push` コマンドは、パッケージをサーバーにプッシュして発行します。 プッシュ コマンドでは、システムの NuGet 構成ファイル、または構成ファイルのチェーンで検出されたサーバーと資格情報の詳細を使用します。 構成ファイルの詳細については、「[Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)」 (NuGet 動作を構成する) をご覧ください。 NuGet の既定の構成は、 *%AppData%\NuGet\NuGet.config* (Windows) または *$HOME/.local/share* (Linux/macOS) を読み込み、次にドライブのルートから開始され、現在のディレクトリで終わる、任意の *nuget.config* または *.nuget\nuget.config* を読み込むことによって取得されます。
 
@@ -86,7 +86,7 @@ dotnet nuget push [-h|--help]
 
   秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
@@ -100,7 +100,7 @@ dotnet nuget push [-h|--help]
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * API キーを指定して、カスタム プッシュ ソース `https://customsource` に *foo.nupkg* をプッシュします。
+  * API キーを指定して、カスタム プッシュ ソース *に*foo.nupkg`https://customsource` をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/

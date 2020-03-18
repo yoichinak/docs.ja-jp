@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: eb3fa768a491f6c0ff4b15479beabd71b0670338
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937305"
 ---
 ### <a name="hosting-https-redirection-enabled-for-iis-out-of-process-apps"></a>ホスティング:IIS アウトプロセス アプリ用に HTTPS リダイレクトを有効化

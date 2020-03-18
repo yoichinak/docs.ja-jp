@@ -16,10 +16,10 @@ helpviewer_keywords:
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140066"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法: カスタム数値書式プロバイダーを定義して使用する

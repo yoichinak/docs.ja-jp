@@ -19,10 +19,10 @@ helpviewer_keywords:
 - double data type [C#]
 - decimal keyword [C#]
 ms.openlocfilehash: 95b7f266654bbbcdcd0f81e3aa11cfc94af9f0e5
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77215249"
 ---
 # <a name="floating-point-numeric-types-c-reference"></a>浮動小数点数値型 (C# リファレンス)
@@ -33,13 +33,13 @@ ms.locfileid: "77215249"
 
 C# では、次の定義済みの浮動小数点型がサポートされています。
   
-|C# 型/キーワード|おおよその範囲|有効桁数|サイズ|.NET 型|
+|C# 型/キーワード|おおよその範囲|Precision|Size|.NET の種類|
 |----------|-----------------------|---------------|--------------|--------------|
 |`float`|±1.5 x 10<sup>−45</sup> から ±3.4 x 10<sup>38</sup>|~6 ～9 桁|4 バイト|<xref:System.Single?displayProperty=nameWithType>|
 |`double`|±5.0 × 10<sup>−324</sup> - ±1.7 × 10<sup>308</sup>|~15-17 桁|8 バイト|<xref:System.Double?displayProperty=nameWithType>|
 |`decimal`|±1.0 x 10<sup>-28</sup> から ±7.9228 x 10<sup>28</sup>|28 から 29 桁の数字|16 バイト|<xref:System.Decimal?displayProperty=nameWithType>|
 
-上の表の左端の列にある各 C# 型/キーワードは、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では、同じ型の変数が宣言されています。
+上の表で、左端の列にある各 C# 型のキーワードは、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では同じ型の変数が宣言されています。
 
 ```csharp
 double a = 12.3;
@@ -90,7 +90,7 @@ decimal myMoney = 3_000.5m;
 myMoney = 400.75M;
 ```
 
-前述の例は、C# 7.0 以降でサポートされている "*桁区切り記号*" としての `_` の使用法も示しています。 数字区切り記号は、あらゆる種類の数値リテラルで使用できます。
+前述の例は、C# 7.0 以降でサポートされている "`_`桁区切り記号 *" としての*  の使用法も示しています。 数字区切り記号は、あらゆる種類の数値リテラルで使用できます。
 
 次の例に示すように、指数表記を使用して、実数リテラルの指数部を指定することもできます。
 
@@ -105,9 +105,9 @@ decimal m = 1.5E6m;
 Console.WriteLine(m);  // output: 1500000
 ```
 
-## <a name="conversions"></a>変換
+## <a name="conversions"></a>コンバージョン
 
-浮動小数点数値型の間には、`float` から `double` に対する暗黙的な変換が 1 つだけあります。 ただし、[明示的なキャスト](../operators/type-testing-and-cast.md#cast-operator-)を使用して、任意の浮動小数点型を他の浮動小数点型に変換することはできます。 詳細については、「[組み込みの数値変換](numeric-conversions.md)」に関するページを参照してください。
+浮動小数点数値型の間には、`float` から `double` に対する暗黙的な変換が 1 つだけあります。 ただし、[明示的なキャスト](../operators/type-testing-and-cast.md#cast-operator-)を使用して、任意の浮動小数点型を他の浮動小数点型に変換することはできます。 詳細については、「[Built-in numeric conversions](numeric-conversions.md)」(組み込みの数値変換) を参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -117,7 +117,7 @@ Console.WriteLine(m);  // output: 1500000
 - [decimal 型](~/_csharplang/spec/types.md#the-decimal-type)
 - [実数リテラル](~/_csharplang/spec/lexical-structure.md#real-literals)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [値型](value-types.md)

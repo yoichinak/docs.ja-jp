@@ -5,10 +5,10 @@ ms.custom: updateeachrelease
 ms.date: 04/12/2018
 ms.technology: dotnet-standard
 ms.openlocfilehash: a90df0360211c3b02f4f2d8697890180099c5807
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76921057"
 ---
 # <a name="whats-new-in-the-net-standard"></a>.NET Standard の新機能
@@ -69,7 +69,7 @@ Visual Basic で .NET Standard ライブラリを開発できるようになり�
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 ![新しい .NET Standard ライブラリ プロジェクトを追加する](./media/std-project-cs.png)
 
@@ -79,7 +79,7 @@ Visual Basic で .NET Standard ライブラリを開発できるようになり�
 dotnet new classlib
 ```
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 ![新しい .NET Standard ライブラリ プロジェクトを追加する](./media/std-project-vb.png)
 
@@ -91,7 +91,7 @@ dotnet new classlib -lang vb
 
 ---
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Standard](../net-standard.md)
 - [.NET Standard の概要](https://devblogs.microsoft.com/dotnet/introducing-net-standard/)

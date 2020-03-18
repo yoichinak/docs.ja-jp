@@ -3,17 +3,17 @@ title: dotnet remove package コマンド
 description: dotnet remove package コマンドは、プロジェクトへの NuGet パッケージ参照を削除する便利なオプションを提供します。
 ms.date: 02/14/2020
 ms.openlocfilehash: 8eaa311748c5627351ef149012dc4dddd2ab2793
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503639"
 ---
 # <a name="dotnet-remove-package"></a>dotnet remove package
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet remove package` - プロジェクト ファイルからパッケージ参照を削除します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "77503639"
 dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet remove package` コマンドは、NuGet パッケージ参照をプロジェクトから削除する便利なオプションを提供します。
 
@@ -43,7 +43,7 @@ dotnet remove [<PROJECT>] package <PACKAGE_NAME> [-h|--help]
 
   コマンドの短いヘルプを印刷します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - 現在のディレクトリにあるプロジェクトから `Newtonsoft.Json` NuGet パッケージを削除する:
 

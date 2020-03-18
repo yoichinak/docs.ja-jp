@@ -9,10 +9,10 @@ helpviewer_keywords:
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
 ms.openlocfilehash: 784d9effa589c962b8a2b982fd199f74309fb4dc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789711"
 ---
 # <a name="returns-c-programming-guide"></a>\<returns> (C# プログラミング ガイド)
@@ -29,7 +29,7 @@ ms.locfileid: "76789711"
 
   戻り値の説明。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 \<returns> タグは、戻り値を説明するためにメソッドの宣言のコメントで使用する必要があります。
 
@@ -39,7 +39,7 @@ ms.locfileid: "76789711"
 
 [!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 61cc3c3ab4f0b22c4040a9b8a025c81071f4d942
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 15c02e11610866f359e3e3a7e2751ded918154b7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712703"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846255"
 ---
 # <a name="-operator-c-reference"></a>=> 演算子 (C# リファレンス)
 
@@ -24,15 +24,15 @@ ms.locfileid: "75712703"
 
 次の例は、メソッド構文で [LINQ](../../programming-guide/concepts/linq/index.md) 機能を使用して、ラムダ式の使用法を示しています。
 
-[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](snippets/LambdaOperator.cs#InferredTypes)]
 
 ラムダ式の入力パラメーターは、コンパイル時に厳密に型指定されます。 前の例のように、コンパイラが入力パラメーターの型を推論できる場合は、型宣言を省略できます。 入力パラメーターの型を指定する必要がある場合は、次の例に示すように、パラメーターごとに指定する必要があります。
 
-[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](snippets/LambdaOperator.cs#ExplicitTypes)]
 
 次の例は、入力パラメーターを含まないラムダ式を定義する方法を示しています。
 
-[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](snippets/LambdaOperator.cs#WithoutInput)]
 
 詳細については、「[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。
 
@@ -71,9 +71,9 @@ public override string ToString()
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-ラムダ演算子の詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の[匿名関数の式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)に関するセクションを参照してください。
+ラムダ演算子の詳細については、「[C# 言語仕様](~/_csharplang/spec/expressions.md#anonymous-function-expressions)」の[匿名関数の式](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)

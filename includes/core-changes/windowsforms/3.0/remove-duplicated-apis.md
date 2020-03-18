@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e609b8006846cd202a6a7eeec2529cf1fbb09e7c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937005"
 ---
 ### <a name="duplicated-apis-removed-from-windows-forms"></a>Windows フォームからの重複する API の削除
@@ -12,7 +12,7 @@ ms.locfileid: "75937005"
 
 #### <a name="change-description"></a>変更の説明
 
-.NET Core 3.0 Preview 4 には、<xref:System.ComponentModel.Design?displayProperty=fullName> 名前空間に既にある <xref:System.Windows.Forms?displayProperty=fullName> 名前空間の複数の型が、誤って重複しています。 .NET Core 3.0 RC1 以降、重複するこれらの型はなくなります。 次の表に、元の型とその重複する型の一覧を示します。
+.NET Core 3.0 Preview 4 には、<xref:System.Windows.Forms?displayProperty=fullName> 名前空間に既にある <xref:System.ComponentModel.Design?displayProperty=fullName> 名前空間の複数の型が、誤って重複しています。 .NET Core 3.0 RC1 以降、重複するこれらの型はなくなります。 次の表に、元の型とその重複する型の一覧を示します。
 
 > [!div class="mx-tdCol2BreakAll"]
 > |元の型|重複する型|

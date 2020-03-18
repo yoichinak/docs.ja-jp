@@ -13,10 +13,10 @@ helpviewer_keywords:
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
 ms.openlocfilehash: 3e1dfe8373145286b03e503f038e267ff0d4c4f3
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091727"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正規表現におけるコンパイルと再利用

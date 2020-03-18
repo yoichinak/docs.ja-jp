@@ -4,10 +4,10 @@ description: Windows XP に .NET Framework をインストールする方法に�
 ms.custom: updateeachrelease
 ms.date: 04/18/2019
 ms.openlocfilehash: 8d05c8c9cf961d3902b1d1287be5b1c2c73d349e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716299"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP と Windows Server 2003 に .NET Framework をインストールする
@@ -35,7 +35,7 @@ Windows XP には [.NET Framework 3.5](https://dotnet.microsoft.com/download/dot
 
 .NET Framework 3.5 は、.NET Framework 1.0 から 3.5 用に構築されたアプリケーションを実行するために使用できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework のダウンロード](https://dotnet.microsoft.com/download)
 - [.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング](troubleshoot-blocked-installations-and-uninstallations.md)

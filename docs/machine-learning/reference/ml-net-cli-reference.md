@@ -1,13 +1,14 @@
 ---
 title: ML.NET CLI コマンド リファレンス
-description: ML.NET CLI ツールの auto-train コマンドの概要
+description: ML.NET CLI ツールの auto-train コマンドの概要、サンプル、およびリファレンス。
 ms.date: 12/18/2019
-ms.openlocfilehash: 537f8d361c170378f5fe8cf454320831d7c8cbf2
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.custom: mlnet-tooling
+ms.openlocfilehash: bb161c596a76134876ee2bf0a6229bc551e0dad2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449700"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848926"
 ---
 # <a name="the-mlnet-cli-command-reference"></a>ML.NET CLI コマンド リファレンス
 

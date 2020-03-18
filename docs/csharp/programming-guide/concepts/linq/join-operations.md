@@ -6,10 +6,10 @@ no-loc:
 - Join
 - GroupJoin
 ms.openlocfilehash: 6e2ec1a0c8120f6869b7c0a196b77d118762a8dd
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76868006"
 ---
 # <a name="join-operations-c"></a>結合操作 (C#)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unchecked keyword [C#]
 ms.assetid: 0c021f7c-923f-4b3d-a58f-55336f5ac27e
 ms.openlocfilehash: 6dad0dfd508fb390dd0a52d1b48d70b4c5725513
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713002"
 ---
 # <a name="unchecked-c-reference"></a>unchecked (C# リファレンス)
@@ -38,10 +38,10 @@ unchecked コンテキストでは、式が変換先の型の範囲外の値を�
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [Checked と Unchecked](checked-and-unchecked.md)
 - [checked](checked.md)

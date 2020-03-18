@@ -10,10 +10,10 @@ helpviewer_keywords:
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
 ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124352"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細

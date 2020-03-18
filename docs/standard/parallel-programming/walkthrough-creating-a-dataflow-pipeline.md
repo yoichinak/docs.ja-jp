@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TPL dataflow library, creating dataflow pipeline
 ms.assetid: 69308f82-aa22-4ac5-833d-e748533b58e8
 ms.openlocfilehash: 284be7789b6411055a6421fd07cc1b0605f6ea0c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139871"
 ---
 # <a name="walkthrough-creating-a-dataflow-pipeline"></a>チュートリアル: データフロー パイプラインの作成
@@ -34,7 +34,7 @@ ms.locfileid: "73139871"
   
 6. パイプラインのすべての作業が完了するまで待機します。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  このチュートリアルを開始する前に、「[Dataflow (データフロー)](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)」をお読みください。  
   
 ## <a name="creating-a-console-application"></a>コンソール アプリケーションの作成  
@@ -53,7 +53,7 @@ ms.locfileid: "73139871"
  [!code-csharp[TPLDataflow_Palindromes#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_palindromes/cs/dataflowpalindromes.cs#3)]
  [!code-vb[TPLDataflow_Palindromes#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_palindromes/vb/dataflowpalindromes.vb#3)]  
   
-|メンバー|型|説明|  
+|メンバー|[種類]|[説明]|  
 |------------|----------|-----------------|  
 |`downloadString`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|Web から書籍のテキストをダウンロードします。|  
 |`createWordList`|<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>|書籍のテキストを単語の配列に区切ります。|  
@@ -106,8 +106,8 @@ ms.locfileid: "73139871"
   
  データフロー パイプラインを使用して実現される並列処理は、*粒度の粗い並列処理*と呼ばれます。一般的に、少数の大きなタスクで構成されているためです。 *粒度の細かい並列処理*を使用する、つまりデータフロー パイプラインのタスクを小さく、実行時間を短くすることもできます。 この例では、パイプラインの `findReversedWords` メンバーが [PLINQ](parallel-linq-plinq.md) を使用して作業リストの複数のアイテムを並列処理します。 粒度の粗いパイプラインで粒度の細かい並列処理を行うと、全体のスループットが向上します。  
   
- また、1 つのソース データフロー ブロックを複数のターゲット ブロックに接続して*データフロー ネットワーク*を作成することもできます。 オーバー ロードされたバージョンの <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> メソッドは、ターゲット ブロックがその値に基づいて各メッセージを受け入れるかどうかを定義する <xref:System.Predicate%601> オブジェクトを受け取ります。 ソースとして動作するほとんどのデータフロー ブロック型では、接続されたすべてのターゲット ブロックにメッセージを提供します。これは、いずれかのブロックがそのメッセージを受け入れるまで、ターゲット ブロックが接続された順序で行われます。 このフィルター機構を使用すると、特定のデータはあるパスを通り、その他のデータは別のパスを通るように仕向ける、接続されたデータフロー ブロックの体系を作成することができます。 フィルター処理を使用してデータフロー ネットワークを作成する例については、「[チュートリアル:Windows フォーム アプリケーションでのデータフローの使用](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)」を参照してください。  
+ また、1 つのソース データフロー ブロックを複数のターゲット ブロックに接続して*データフロー ネットワーク*を作成することもできます。 オーバー ロードされたバージョンの <xref:System.Threading.Tasks.Dataflow.DataflowBlock.LinkTo%2A> メソッドは、ターゲット ブロックがその値に基づいて各メッセージを受け入れるかどうかを定義する <xref:System.Predicate%601> オブジェクトを受け取ります。 ソースとして動作するほとんどのデータフロー ブロック型では、接続されたすべてのターゲット ブロックにメッセージを提供します。これは、いずれかのブロックがそのメッセージを受け入れるまで、ターゲット ブロックが接続された順序で行われます。 このフィルター機構を使用すると、特定のデータはあるパスを通り、その他のデータは別のパスを通るように仕向ける、接続されたデータフロー ブロックの体系を作成することができます。 フィルター処理を使用してデータフロー ネットワークを作成する例については、「[チュートリアル: Windows フォーム アプリケーションでデータ フローを使用する](../../../docs/standard/parallel-programming/walkthrough-using-dataflow-in-a-windows-forms-application.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

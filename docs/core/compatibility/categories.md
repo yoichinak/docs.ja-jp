@@ -3,10 +3,10 @@ title: 破壊的変更のカテゴリ
 description: .NET Core での破壊的変更のカテゴリの分類方法について説明します。
 ms.date: 06/10/2019
 ms.openlocfilehash: b273ebbb82da803cde66ea34760aa1779c6c1ca5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093046"
 ---
 # <a name="breaking-change-categories"></a>破壊的変更のカテゴリ
@@ -52,6 +52,6 @@ ms.locfileid: "77093046"
 
 上位互換性の維持が .NET Core の目標ではないのです。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Core の破壊的変更を評価する](index.md)

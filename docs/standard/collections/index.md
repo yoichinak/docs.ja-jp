@@ -11,10 +11,10 @@ helpviewer_keywords:
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 ms.openlocfilehash: 3ca340e19d7340d7bea133fa62c6d8bbc3c0512a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160392"
 ---
 # <a name="collections-and-data-structures"></a>コレクションとデータ構造体
@@ -48,7 +48,7 @@ ms.locfileid: "78160392"
   
 - **一貫した下限**  
   
-     コレクションの下限とは、最初の要素のインデックスです。 <xref:System.Collections> 名前空間のすべてのインデックス付きコレクションの下限がゼロです。つまり、インデックスがゼロから始まります。 <xref:System.Array> の下限は既定でゼロですが、<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> を使用して **Array** クラスのインスタンスを作成する場合には、別の下限を定義できます。  
+     コレクションの下限とは、最初の要素のインデックスです。 <xref:System.Collections> 名前空間のすべてのインデックス付きコレクションの下限がゼロです。つまり、インデックスがゼロから始まります。 <xref:System.Array> の下限は既定でゼロですが、**を使用して**Array<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> クラスのインスタンスを作成する場合には、別の下限を定義できます。  
   
 - **複数のスレッドからのアクセスの同期** (<xref:System.Collections> クラスのみ)。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "78160392"
 <a name="BKMK_RelatedTopics"></a>
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|説明|  
+|タイトル|[説明]|  
 |-----------|-----------------|  
 |[コレクション クラスの選択](../../../docs/standard/collections/selecting-a-collection-class.md)|さまざまなコレクションについて説明し、いずれかのシナリオを選択できるよう支援します。|  
 |[ 一般的に使用されるコレクション型](../../../docs/standard/collections/commonly-used-collection-types.md)|<xref:System.Array?displayProperty=nameWithType>、<xref:System.Collections.Generic.List%601?displayProperty=nameWithType>、<xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> などの一般的に使用されるジェネリックと非ジェネリック コレクション型について説明します。|  
-|[ジェネリック コレクションを使用する状況](../../../docs/standard/collections/when-to-use-generic-collections.md)|ジェネリック コレクション型の使用について説明します。|  
+|[ジェネリック コレクションの使用に適した状況](../../../docs/standard/collections/when-to-use-generic-collections.md)|ジェネリック コレクション型の使用について説明します。|  
 |[コレクション内での比較と並べ替え](../../../docs/standard/collections/comparisons-and-sorts-within-collections.md)|コレクションでの等価比較と並べ替え比較の使用について説明します。|  
 |[Sorted コレクション型](../../../docs/standard/collections/sorted-collection-types.md)|並べ替えられたコレクションのパフォーマンスと特性について説明します|  
 |[Hashtable コレクション型と Dictionary コレクション型](../../../docs/standard/collections/hashtable-and-dictionary-collection-types.md)|ジェネリックと非ジェネリックのハッシュをベースにしたディクショナリ型の機能について説明します。|  
@@ -84,7 +84,7 @@ ms.locfileid: "78160392"
 |System.Collections.Immutable|変更できないコレクションを導入し、コレクション型へのリンクを提供します。|  
   
 <a name="BKMK_Reference"></a>
-## <a name="reference"></a>関連項目  
+## <a name="reference"></a>リファレンス  
  <xref:System.Array?displayProperty=nameWithType>  
  <xref:System.Collections?displayProperty=nameWithType>  
  <xref:System.Collections.Concurrent?displayProperty=nameWithType>  

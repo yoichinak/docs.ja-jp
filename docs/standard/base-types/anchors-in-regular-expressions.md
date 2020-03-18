@@ -17,10 +17,10 @@ helpviewer_keywords:
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
 ms.openlocfilehash: c4853a6854f5da1a3217c976a03ddbde3b528560
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159664"
 ---
 # <a name="anchors-in-regular-expressions"></a>正規表現のアンカー

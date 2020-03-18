@@ -6,10 +6,10 @@ ms.date: 06/25/2019
 ms.topic: tutorial
 ms.author: adegeo
 ms.openlocfilehash: 5f4038e863d9bb59df470d3516c08fd2ad29c078
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503561"
 ---
 # <a name="tutorial-create-an-item-template"></a>チュートリアル: 項目テンプレートを作成する

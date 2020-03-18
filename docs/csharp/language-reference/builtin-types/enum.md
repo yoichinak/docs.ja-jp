@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 4377d113a18d23c8a0f9a669e6112f1a8223cc79
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450870"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847711"
 ---
 # <a name="enumeration-types-c-reference"></a>列挙型 (C# リファレンス)
 
@@ -54,7 +54,7 @@ enum ErrorCode : ushort
 
 列挙型で選択肢の組み合わせを表したいときは、個々の選択肢がビット フィールドになるように、列挙型メンバーをそれらの選択肢に対して定義します。 つまり、これらの列挙型メンバーの関連する値は、2 の累乗である必要があります。 次に、[ビットごとの論理演算子 `|` または `&`](../operators/bitwise-and-shift-operators.md#enumeration-logical-operators) を使用し、選択肢を組み合わせたり、選択肢の組み合わせを交差させたりすることができます。 列挙型によってビット フィールドが宣言されていることを示すには、[フラグ](xref:System.FlagsAttribute)属性を適用します。 次の例に示すように、列挙型の定義に一般的な組み合わせをいくつか含めることもできます。
 
-[!code-csharp[enum flags](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Flags)]
+[!code-csharp[enum flags](snippets/EnumType.cs#Flags)]
 
 詳細と例については、<xref:System.FlagsAttribute?displayProperty=nameWithType> API リファレンス ページ、および <xref:System.Enum?displayProperty=nameWithType> API リファレンス ページの「[非排他的メンバーと Flags 属性](/dotnet/api/system.enum#non-exclusive-members-and-the-flags-attribute)」セクションを参照してください。
 
@@ -68,7 +68,7 @@ C# 7.3 以降、基底クラス制約 ([列挙の制約](../../programming-guide
 
 列挙型については、列挙型とその基になる整数型との間に明示的な変換が存在します。 列挙値をその基になる型に[キャスト](../operators/type-testing-and-cast.md#cast-operator-)すると、結果は列挙メンバーの関連する整数値になります。
 
-[!code-csharp[enum conversions](~/samples/csharp/language-reference/builtin-types/EnumType.cs#Conversions)]
+[!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 
 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> メソッドを使用して、列挙型に、関連する特定の値を持つ列挙型メンバーが含まれているかどうかを確認します。
 

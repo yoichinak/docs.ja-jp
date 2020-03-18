@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 12/10/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: bdd6e28713bdece2bd144e6763bd84d719e91449
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156635"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio"></a>Visual Studio での .NET Core Hello World アプリケーションの発行
@@ -30,7 +30,7 @@ ms.locfileid: "78156635"
 
    ![Visual Studio で発行先を選択します](media/publishing-with-visual-studio/pick-publish-target.png)
 
-1. **[発行]** ページで、 **[発行]** を選択します。
+1. **[発行]** ページで **[発行]** を選択します。
 
    ![Visual Studio の [発行] ウィンドウ](media/publishing-with-visual-studio/publish-page.png)
 
@@ -70,6 +70,6 @@ ms.locfileid: "78156635"
 
          これは、アプリケーションのランタイム構成ファイルです。 ビルドされたアプリケーションが実行時に基盤とする .NET Core のバージョンを識別します。 構成オプションを追加することもできます。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 - [.NET Core アプリケーションの展開](../deploying/index.md)

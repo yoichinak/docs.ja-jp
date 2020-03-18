@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8d3a8712528d2d35c706cc26b8c388b65d6ad506
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449221"
 ---
 ### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Pkcs8PrivateKeyInfo コンストラクターでの引数の検証の改善
@@ -12,7 +12,7 @@ ms.locfileid: "77449221"
 
 #### <a name="change-description"></a>変更の説明
 
-.NET Core 3.0 Preview 9 以前では、[`Pkcs8PrivateKeyInfo` コンストラクター](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))では、`algorithmParameters` 引数が検証されていませんでした。  この引数が不正な値を表した場合、コンストラクターは成功していましたが、引数が許容されないものであった場合 (`preEncodedValue`)、<xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>、<xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>、<xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A>、または <xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A> メソッドのいずれかの呼び出しに対し、<xref:System.ArgumentException> または <xref:System.Security.Cryptography.CryptographicException> のいずれかがスローされていました。
+.NET Core 3.0 Preview 9 以前では、[`Pkcs8PrivateKeyInfo` コンストラクター](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))では、`algorithmParameters` 引数が検証されていませんでした。  この引数が不正な値を表した場合、コンストラクターは成功していましたが、引数が許容されないものであった場合 (<xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode>)、<xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncode%2A>、<xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encrypt%2A>、<xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.TryEncrypt%2A>、または <xref:System.ArgumentException> メソッドのいずれかの呼び出しに対し、`preEncodedValue` または <xref:System.Security.Cryptography.CryptographicException> のいずれかがスローされていました。
 
 Preview 9 より前の .NET Core 3.0 で実行した場合、<xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.Encode> メソッドが呼び出された場合のみ、次のコードで例外がスローされます。
 

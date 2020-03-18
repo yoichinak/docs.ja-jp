@@ -7,10 +7,10 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework], profiling
 ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
 ms.openlocfilehash: 40c464a6070ad7fd4c21ad4ea366e907ca1e4a31
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76868162"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>プロファイル (アンマネージ API リファレンス)

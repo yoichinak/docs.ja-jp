@@ -4,17 +4,17 @@ description: .NET Core CLI を使用して .NET Core ライブラリを作成す
 author: cartermp
 ms.date: 05/01/2017
 ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503511"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI を使用したライブラリの開発
 
 この記事では、.NET Core CLI を使用して .NET 用ライブラリを作成する方法について説明します。 CLI は、サポートされる任意の OS で動作する効率的で低レベルのエクスペリエンスを提供します。 Visual Studio でライブラリを構築することもできます。Visual Studio で構築する場合は、[Visual Studio ガイドを参照](library-with-visual-studio.md)してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 [.NET Core SDK と CLI](https://dotnet.microsoft.com/download) がコンピューターにインストールされている必要があります。
 
@@ -96,7 +96,7 @@ ms.locfileid: "77503511"
 </Project>
 ```
 
-以上です。 これは .NET Framework 4 向けにのみコンパイルされていますが、新しいバージョンの .NET Framework のライブラリを使用できます。
+これで終了です。 これは .NET Framework 4 向けにのみコンパイルされていますが、新しいバージョンの .NET Framework のライブラリを使用できます。
 
 ## <a name="how-to-multitarget"></a>マルチターゲットを設定する方法
 
@@ -105,7 +105,7 @@ ms.locfileid: "77503511"
 
 プロジェクトが .NET Framework と .NET Core の両方をサポートしている場合、状況によっては古いバージョンの .NET Framework をターゲットにする必要があります。 このシナリオで、新しい API と新しいターゲット向けの言語構成を使用する場合、コードで `#if` ディレクティブを使用します。 また、必要に応じて、ターゲットにする各プラットフォームに応じて異なるパッケージと依存関係追加して、それぞれに異なる必要な API を含めます。
 
-たとえば、HTTP 上でネットワークキング操作を行うライブラリがあるとします。 .NET Standard と .NET Framework バージョン 4.5 以降の場合、`System.Net.Http` 名前空間の `HttpClient` クラスを使用できます。 ただし、それより前のバージョンの .NET Framework に `HttpClient` クラスはないので、代わりに `System.Net` 名前空間の `WebClient` クラスを使用できます。
+たとえば、HTTP 上でネットワークキング操作を行うライブラリがあるとします。 .NET Standard と .NET Framework バージョン 4.5 以降の場合、`HttpClient` 名前空間の `System.Net.Http` クラスを使用できます。 ただし、それより前のバージョンの .NET Framework に `HttpClient` クラスはないので、代わりに `WebClient` 名前空間の `System.Net` クラスを使用できます。
 
 プロジェクト ファイルは次のようになります。
 
@@ -131,8 +131,8 @@ ms.locfileid: "77503511"
 主な変更点が 3 つあります。
 
 1. `TargetFramework` ノードは `TargetFrameworks` で置き換えられ、3 つの TFM が内部に表現されています。
-1. 1 つの .NET Framework 参照を取り込む `net40` ターゲットの `<ItemGroup>` ノードがあります。
-1. .NET Framework の参照 2 に取り込む `net45` ターゲットの `<ItemGroup>` ノードがあります。
+1. 1 つの .NET Framework 参照を取り込む `<ItemGroup>` ターゲットの `net40` ノードがあります。
+1. .NET Framework の参照 2 に取り込む `<ItemGroup>` ターゲットの `net45` ノードがあります。
 
 ビルド システムは `#if` ディレクティブで使用される次のプリプロセッサ シンボルを認識します。
 
@@ -239,7 +239,7 @@ netstandard1.4/
    |__MyProject.Test/
    ```
 
-1. テスト プロジェクトのディレクトリに移動し、`MyProject` から `MyProject.Test` への参照を追加します。
+1. テスト プロジェクトのディレクトリに移動し、`MyProject.Test` から `MyProject` への参照を追加します。
 
    ```dotnetcli
    cd MyProject.Test
@@ -257,7 +257,7 @@ netstandard1.4/
 
 1. `dotnet test` コマンドを実行して、xUnit が実行されることを確認します。 MSTest を使用する場合は、MSTest コンソール実行ツールが実行されることを確認します。
 
-以上です。 コマンド ライン ツールを使用して、すべてのプラットフォームでライブラリをテストできるようになりました。 すべてをセットアップしてテストに進む場合、ライブラリのテストはとても単純です。
+これで終了です。 コマンド ライン ツールを使用して、すべてのプラットフォームでライブラリをテストできるようになりました。 すべてをセットアップしてテストに進む場合、ライブラリのテストはとても単純です。
 
 1. ライブラリに変更を加えます。
 1. コマンド ラインから、`dotnet test` コマンドを使用してテスト ディレクトリでテストを実行します。
@@ -324,7 +324,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
-**AwesomeLibrary.CSharp** と **AwesomeLibrary.FSharp** の両方のプロジェクト ファイルは、`ProjectReference` ターゲットとして **AwesomeLibrary.Core** を参照するようになります。  この参照を確認するには、プロジェクト ファイルに以下の行があることを確認します。
+**AwesomeLibrary.CSharp** と **AwesomeLibrary.FSharp** の両方のプロジェクト ファイルは、**ターゲットとして**AwesomeLibrary.Core`ProjectReference` を参照するようになります。  この参照を確認するには、プロジェクト ファイルに以下の行があることを確認します。
 
 ```xml
 <ItemGroup>

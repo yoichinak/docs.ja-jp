@@ -16,10 +16,10 @@ helpviewer_keywords:
 - culture parameter
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 ms.openlocfilehash: 7b2dee03619e24c5a2845699a06e88abab0c594b
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160132"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>カルチャを認識しない大文字と小文字の変更の実行
@@ -65,7 +65,7 @@ static object LookupKey(string key)
 ## <a name="using-the-chartoupper-and-chartolower-methods"></a>Char.ToUpper メソッドと Char.ToLower メソッドの使用  
  `Char.ToUpper` メソッドおよび `Char.ToLower` メソッドはそれぞれ `String.ToUpper` メソッドおよび `String.ToLower` メソッドと同じ特性を持っていますが、影響を受けるカルチャはトルコ語 (トルコ) およびアゼルバイジャン語 (ラテン、アゼルバイジャン) だけです。 単一の文字の大文字と小文字の区別が異なるのは、この 2 つのカルチャだけです。 この固有の大文字と小文字の対応の詳細については、<xref:System.String> クラスに関するトピックの「Casing (大文字と小文字の指定)」を参照してください。 コードをわかりやすくし、結果の一貫性を確保するために、`culture` パラメーターを明示的に指定できるこれらのメソッドのオーバーロードを常に使用することをお勧めします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.String.ToUpper%2A?displayProperty=nameWithType>
 - <xref:System.String.ToLower%2A?displayProperty=nameWithType>

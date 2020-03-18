@@ -10,10 +10,10 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
-  ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 11/12/2019
+  ms.lasthandoff: 03/14/2020
   ms.locfileid: "73969384"
 items:
 - durationInMinutes: 1
@@ -44,7 +44,7 @@ items:
     文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。
 
 
-    名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。 `string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。 実際の文字列は、生成する値でその C# コードを置き換えます。 この例では、<xref:System.String.ToUpper%2A?displayProperty=nameWithType> メソッドを呼び出したため、文字列は `{name.ToUpper()}` をそれぞれの名前に置き換え、文字を大文字に変換しています。
+    名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。 `string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。 実際の文字列は、生成する値でその C# コードを置き換えます。 この例では、`{name.ToUpper()}` メソッドを呼び出したため、文字列は <xref:System.String.ToUpper%2A?displayProperty=nameWithType> をそれぞれの名前に置き換え、文字を大文字に変換しています。
 
 
     続けて確認していきましょう。

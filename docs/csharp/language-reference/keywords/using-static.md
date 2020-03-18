@@ -5,10 +5,10 @@ helpviewer_keywords:
 - using static directive [C#]
 ms.assetid: 8b8f9e34-c75e-469b-ba85-6f2eb4090314
 ms.openlocfilehash: 55847aceb9fdf032ba533b82ee59be53761fa2c2
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712950"
 ---
 # <a name="using-static-directive-c-reference"></a>using static ディレクティブ (C# リファレンス)
@@ -19,13 +19,13 @@ ms.locfileid: "75712950"
 using static <fully-qualified-type-name>;
 ```
 
-*fully-qualified-type-name* は、型名を指定せずに参照できる静的メンバーおよび入れ子にされた型の名前です。 完全修飾型名 (完全な名前空間名と型名) を指定しないと、C# によってコンパイラ エラー [CS0246](../compiler-messages/cs0246.md): "型または名前空間の名前 'type/namespace' が見つかりませんでした (using ディレクティブまたはアセンブリ参照が指定されていることを確認してください)" が生成されます。
+*fully-qualified-type-name* は、型名を指定せずに参照できる静的メンバーおよび入れ子にされた型の名前です。 完全修飾型名 (完全な名前空間名と型名) を指定しないと、C# によってコンパイラ エラー [CS0246](../compiler-messages/cs0246.md) "型または名前空間名 'type/namespace' が見つかりませんでした。using ディレクティブまたはアセンブリ参照が不足しています" が生成されます。
 
 `using static` ディレクティブは、インスタンス メンバーがある場合でも、静的メンバーがあるすべての型 (または入れ子にされた型) に適用されます。 ただし、インスタンス メンバーは、型のインスタンスを通してのみ呼び出すことができます。
 
 `using static` ディレクティブは、C# 6 で導入されました。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 通常は、静的メンバーを呼び出すときに、型名とメンバー名を指定します。 同じ型名を繰り返し入力してその型のメンバーを呼び出すと、コードが冗長でわかりにくくなる可能性があります。 たとえば、次の `Circle` クラスの定義は、<xref:System.Math> クラスのメンバー数を参照します。
 
@@ -47,9 +47,9 @@ using static <fully-qualified-type-name>;
 
 [!code-csharp[using-static#3](~/samples/snippets/csharp/language-reference/keywords/using/using-static3.cs)]
 
-上の例では、`using static` ディレクティブを <xref:System.Double> 型に適用することもできます。 それにより、型名を指定せずに、<xref:System.Double.TryParse(System.String,System.Double@)> メソッドを呼び出せるようになります。 ただし、どの数値型の `TryParse` メソッドが呼び出されたかを判断するために `using static` ステートメントを確認する必要が出てくるため、コードが読みにくくなります。
+上の例では、`using static` ディレクティブを <xref:System.Double> 型に適用することもできます。 それにより、型名を指定せずに、<xref:System.Double.TryParse(System.String,System.Double@)> メソッドを呼び出せるようになります。 ただし、どの数値型の `using static` メソッドが呼び出されたかを判断するために `TryParse` ステートメントを確認する必要が出てくるため、コードが読みにくくなります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [using ディレクティブ](using-directive.md)
 - [C# リファレンス](../index.md)

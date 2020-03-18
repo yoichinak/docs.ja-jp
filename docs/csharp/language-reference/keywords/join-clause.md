@@ -9,10 +9,10 @@ helpviewer_keywords:
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
 ms.openlocfilehash: 8e52e9db241392b67818b7316767dd97bd38432a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713404"
 ---
 # <a name="join-clause-c-reference"></a>join 句 (C# リファレンス)
@@ -37,7 +37,7 @@ ms.locfileid: "75713404"
 
 ## <a name="group-join"></a>グループ結合
 
-`into` 式を使用した `join` 句はグループ結合と呼ばれます。
+`join` 式を使用した `into` 句はグループ結合と呼ばれます。
 
 [!code-csharp[cscsrefQueryKeywords#25](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#25)]
 
@@ -63,7 +63,7 @@ ms.locfileid: "75713404"
 
 ## <a name="the-equals-operator"></a>等値演算子
 
-`join` 句は等結合を実行します。 つまり、基準にできるのは 2 つのキーの等価性に関する照合のみです。 "～より大きい" や "等しくない" など、他の種類の比較はサポートされていません。 すべての結合が等結合であることを明確化するために、`join` 句では `==` 演算子ではなく `equals` キーワードを使用します。 `equals` キーワードは `join` 句でしか使用できず、また `==` 演算子とは 1 つの重要な点で異なります。 `equals` を指定すると、左側のキーでは外部のソース シーケンス、右側のキーでは内部のソースが使用されます。 外部のソースは `equals` の左側のスコープ内、内部のソース シーケンスは右側のスコープ内でのみ使用できます。
+`join` 句は等結合を実行します。 つまり、基準にできるのは 2 つのキーの等価性に関する照合のみです。 "～より大きい" や "等しくない" など、他の種類の比較はサポートされていません。 すべての結合が等結合であることを明確化するために、`join` 句では `equals` 演算子ではなく `==` キーワードを使用します。 `equals` キーワードは `join` 句でしか使用できず、また `==` 演算子とは 1 つの重要な点で異なります。 `equals` を指定すると、左側のキーでは外部のソース シーケンス、右側のキーでは内部のソースが使用されます。 外部のソースは `equals` の左側のスコープ内、内部のソース シーケンスは右側のスコープ内でのみ使用できます。
 
 ## <a name="non-equijoins"></a>非等結合
 
@@ -73,7 +73,7 @@ ms.locfileid: "75713404"
 
 LINQ クエリ式での結合操作は、オブジェクト コレクションに対して実行されます。 2 つのリレーショナル テーブルの "結合" とまったく同じ方法でオブジェクト コレクションを結合することはできません。 LINQ では、2 つのソース シーケンスがリレーションシップによって関連付けられていない場合にのみ明示的な `join` 句が必要になります。 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] を使用する場合、外部キー テーブルはオブジェクト モデル内でプライマリ テーブルのプロパティとして表されます。 たとえば Northwind データベースでは、Customer テーブルに Orders テーブルとの外部キー リレーションシップがあります。 テーブルをオブジェクト モデルに割り当てると、Customer クラスには、その Customer に関連付けられた Orders のコレクションを含む Orders プロパティが含まれます。 実質的には、既に結合が実行されていることになります。
 
-[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] のコンテキストにおける関連テーブル全体でのクエリについて詳しくは、「[方法: データベース リレーションシップを割り当てる](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)」をご覧ください。
+[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] を使用した関連テーブル間でのクエリの詳細については、「[方法: データベース リレーションシップを割り当てる](../../../framework/data/adonet/sql/linq/how-to-map-database-relationships.md)」を参照してください。
 
 ## <a name="composite-keys"></a>複合キー
 
@@ -85,11 +85,11 @@ LINQ クエリ式での結合操作は、オブジェクト コレクション�
 
 [!code-csharp[cscsrefQueryKeywords#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#23)]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `join` 句の後に `into` がない場合は、<xref:System.Linq.Enumerable.Join%2A> メソッド呼び出しに変換されます。 `join` 句の後に `into` がある場合は、<xref:System.Linq.Enumerable.GroupJoin%2A> メソッド呼び出しに変換されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [クエリ キーワード (LINQ)](query-keywords.md)
 - [統合言語クエリ (LINQ)](../../linq/index.md)

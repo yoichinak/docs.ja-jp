@@ -3,10 +3,10 @@ title: 互換性に影響する変更
 description: .NET Core の各バージョンの破壊的変更について説明します。
 ms.date: 11/27/2019
 ms.openlocfilehash: 664d83f5bfa455764de8823c4bbdb4a2018e1875
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093072"
 ---
 # <a name="breaking-change-selectors"></a>破壊的変更のセレクター
@@ -33,6 +33,6 @@ ms.locfileid: "77093072"
 - ASP.NET Core の場合は、[aspnet/Announcements](https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0) リポジトリ。
 - Entity Framework Core の場合は、[dotnet/efcore](https://github.com/dotnet/efcore/issues?q=is%3Aopen+is%3Aissue+label%3Abreaking-change) リポジトリ。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework から .NET Core に移行する](../porting/index.md)

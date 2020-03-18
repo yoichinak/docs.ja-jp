@@ -9,10 +9,10 @@ helpviewer_keywords:
 - /baseaddress compiler option [C#]
 ms.assetid: ce13c965-dfe4-4433-94f5-63b476e3a608
 ms.openlocfilehash: f138f445b8a335c7505e25b34f560c4da40ab2dd
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937208"
 ---
 # <a name="-baseaddress-c-compiler-options"></a>-baseaddress (C# コンパイラ オプション)
@@ -28,7 +28,7 @@ ms.locfileid: "75937208"
  `address`  
  DLL のベース アドレス。 このアドレスは、10 進数、16 進数、または 8 進数で指定できます。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  DLL の既定のベース アドレスは、.NET Framework 共通言語ランタイムにより設定されます。  
   
  このアドレスの下位ワードは丸められることに注意してください。 たとえば、0x11110001 と指定すると、丸められて 0x11110000 になります。  
@@ -47,7 +47,7 @@ ms.locfileid: "75937208"
   
      このコンパイラ オプションをプログラムによって設定するには、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.BaseAddress%2A>」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Diagnostics.ProcessModule.BaseAddress%2A?displayProperty=nameWithType>
 - [C# コンパイラ オプション](./index.md)

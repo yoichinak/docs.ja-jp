@@ -7,10 +7,10 @@ helpviewer_keywords:
 - files [C#]
 ms.assetid: 0f2511cf-2b02-4b41-b001-b1754677c38f
 ms.openlocfilehash: f160df456f1a3437e11de2d3660d158ae4d4bb67
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75900563"
 ---
 # <a name="file-system-and-the-registry-c-programming-guide"></a>ファイル システムとレジストリ (C# プログラミング ガイド)
@@ -19,7 +19,7 @@ ms.locfileid: "75900563"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-|**タイトル**|**説明**|
+|**Title**|**説明**|
 |---------------|---------------------|
 |[ディレクトリ ツリーを反復処理する方法](how-to-iterate-through-a-directory-tree.md)|ディレクトリ ツリーを手動で反復処理する方法を示します。|
 |[ファイル、フォルダー、およびドライブに関する情報を取得する方法](how-to-get-information-about-files-folders-and-drives.md)|作成時刻やサイズなど、ファイル、フォルダー、ドライブに関する情報を取得する方法を示します。|
@@ -35,5 +35,5 @@ ms.locfileid: "75900563"
 
 - [ファイルおよびストリーム入出力](../../../standard/io/index.md)
 - [ファイルおよびフォルダーのコピー、削除、および移動を行う方法 (C# プログラミング ガイド)](how-to-copy-delete-and-move-files-and-folders.md)
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - <xref:System.IO?displayProperty=nameWithType>

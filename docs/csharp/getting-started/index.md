@@ -6,10 +6,10 @@ helpviewer_keywords:
 - getting started, Visual C#
 ms.date: 04/05/2019
 ms.openlocfilehash: aff810aa7ba533682f9976fbb59ef4d7ec43ca58
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75713927"
 ---
 # <a name="get-started-with-c"></a>C\# 入門
@@ -40,7 +40,7 @@ ms.locfileid: "75713927"
 
 ## <a name="related-sections"></a>関連項目
 
-- [C# プログラミング ガイド](../programming-guide/index.md)
+- [C# プログラミングガイド](../programming-guide/index.md)
 
     C# プログラミングの概念に関する情報を提供し、C# でさまざまなタスクを実行する方法について説明します。
 
@@ -52,6 +52,6 @@ ms.locfileid: "75713927"
 
     C# を使用するプログラミングのチュートリアルと、各チュートリアルに関する簡単な説明へのリンクを示します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Studio を使用した C# 開発](/visualstudio/get-started/csharp/)

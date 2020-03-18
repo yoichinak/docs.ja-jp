@@ -6,10 +6,10 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: 1d66c0c166724f195a3cafd9bcbe3c7414c08ebb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159508"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly"></a>方法: ファイルがアセンブリであるかどうかを確認する

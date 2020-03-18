@@ -3,10 +3,10 @@ title: ランタイム パッケージ ストア
 description: .NET Core で使用されるランタイム パッケージ ストアとターゲット マニフェストの使用方法について説明します。
 ms.date: 08/12/2017
 ms.openlocfilehash: 7a833ed95147608c6fb403f8f0dec179d2a73833
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77448959"
 ---
 # <a name="runtime-package-store"></a>ランタイム パッケージ ストア
@@ -116,7 +116,7 @@ dotnet publish --manifest manifest.xml
 </PropertyGroup>
 ```
 
-アプリのターゲット環境が .Net Core プロジェクトのようによく知られている場合にのみ、プロジェクト ファイルにターゲット マニフェストを指定します。 これは、オープンソース プロジェクトには該当しません。 オープンソース プロジェクトのユーザーは通常、さまざまな運用環境にアプリを展開します。 一般的に、これらの運用環境には、さまざまなインストール済みのパッケージのセットがあります。 このような環境でターゲット マニフェストについて想定することができないため、[`dotnet publish`](../tools/dotnet-publish.md) の `--manifest` オプションを使用する必要があります。
+アプリのターゲット環境が .Net Core プロジェクトのようによく知られている場合にのみ、プロジェクト ファイルにターゲット マニフェストを指定します。 これは、オープンソース プロジェクトには該当しません。 オープンソース プロジェクトのユーザーは通常、さまざまな運用環境にアプリを展開します。 一般的に、これらの運用環境には、さまざまなインストール済みのパッケージのセットがあります。 このような環境でターゲット マニフェストについて想定することができないため、`--manifest`[`dotnet publish` の ](../tools/dotnet-publish.md) オプションを使用する必要があります。
 
 ## <a name="aspnet-core-implicit-store"></a>ASP.NET Core の暗黙的なストア
 
@@ -143,7 +143,7 @@ ASP.NET Core の暗黙的なストアは、ASP.NET Core 2.0 にのみ適用さ�
 
 展開が発行時に*トリミング*されると、指定した特定のバージョンのマニフェスト パッケージのみが、発行された出力から引かれます。 アプリを開始するには、指定されたバージョンのパッケージがホスト上に存在する必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [dotnet-publish](../tools/dotnet-publish.md)
 - [dotnet-store](../tools/dotnet-store.md)

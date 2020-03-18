@@ -3,10 +3,10 @@ title: C# 7.3 の新機能
 description: C# 7.3 の新機能の概要
 ms.date: 05/16/2018
 ms.openlocfilehash: ba4cea302d91b395e88940d087fcaed306920840
-ms.sourcegitcommit: 81ad1f09b93f3b3e6706a7f2e4ddf50ef229ea3d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74204552"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 の新機能
@@ -121,7 +121,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="more-types-support-the-fixed-statement"></a>`fixed` ステートメントをサポートする型の増加
 
-`fixed` ステートメントは、限られた一連の型をサポートしていました。 C# 7.3 以降では、`ref T` または `ref readonly T` を返す `GetPinnableReference()` メソッドを格納する型として `fixed` を使用できます。 この機能の追加により、`fixed` を <xref:System.Span%601?displayProperty=nameWithType> および関連する型と共に使用できます。
+`fixed` ステートメントは、限られた一連の型をサポートしていました。 C# 7.3 以降では、`GetPinnableReference()` または `ref T` を返す `ref readonly T` メソッドを格納する型として `fixed` を使用できます。 この機能の追加により、`fixed` を <xref:System.Span%601?displayProperty=nameWithType> および関連する型と共に使用できます。
 
 詳しくは、言語リファレンスの [`fixed` ステートメント](../language-reference/keywords/fixed-statement.md)に関する記事を参照してください。
 
@@ -141,7 +141,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 ### <a name="tuples-support--and-"></a>タプルによる `==` と `!=` のサポート
 
-C# のタプル型で `==` と `!=` がサポートされるようになりました。 詳細については、[タプル](../tuples.md)に関する記事の[等値](../tuples.md#equality-and-tuples)について説明したセクションを参照してください。
+C# のタプル型で `==` と `!=` がサポートされるようになりました。 詳細については、[タプル](../tuples.md#equality-and-tuples)に関する記事の[等値](../tuples.md)について説明したセクションを参照してください。
 
 ### <a name="attach-attributes-to-the-backing-fields-for-auto-implemented-properties"></a>自動実装プロパティのバッキング フィールドへの属性のアタッチ
 

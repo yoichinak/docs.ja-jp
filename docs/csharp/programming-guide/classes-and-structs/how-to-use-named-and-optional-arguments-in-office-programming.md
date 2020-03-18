@@ -7,10 +7,10 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 ms.openlocfilehash: 36b5c8b49404606c8240d24953c3677d5612d30e
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714871"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>Office プログラミングで名前付き引数と省略可能な引数を使用する方法 (C# プログラミング ガイド)
@@ -33,7 +33,7 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
 4. **[テンプレート]** ウィンドウの上部で、 **[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** が表示されていることを確認します。
 
-5. **[テンプレート]** ウィンドウで **[コンソール アプリケーション]** をクリックします。
+5. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。
 
 6. **[名前]** フィールドに、プロジェクトの名前を入力します。
 
@@ -59,7 +59,7 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
 ## <a name="to-display-text-in-a-word-document"></a>Word 文書にテキストを表示するには
 
-1. *Program.cs* の `Program` クラスに、Word アプリケーションと Word 文書を作成する次のメソッドを追加します。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) メソッドには、4 つの省略可能なパラメーターがあります。 この例では、それらの既定値を使います。 そのため、呼び出しステートメントに引数は必要ありません。
+1. `Program`Program.cs*の* クラスに、Word アプリケーションと Word 文書を作成する次のメソッドを追加します。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) メソッドには、4 つの省略可能なパラメーターがあります。 この例では、それらの既定値を使います。 そのため、呼び出しステートメントに引数は必要ありません。
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 
@@ -107,6 +107,6 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
  [!code-csharp[csProgGuideNamedAndOptional#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#12)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [名前付き引数と省略可能な引数](./named-and-optional-arguments.md)

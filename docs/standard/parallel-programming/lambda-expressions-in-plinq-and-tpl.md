@@ -11,10 +11,10 @@ helpviewer_keywords:
 - lambda expressions, with Action and Func
 ms.assetid: 645b2c17-29d0-4ffa-8684-430743cc2f2d
 ms.openlocfilehash: 4e5be295a52edc1a7f0a0a3aa98f55335ae3e31b
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77453001"
 ---
 # <a name="lambda-expressions-in-plinq-and-tpl"></a>PLINQ および TPL のラムダ式
@@ -39,6 +39,6 @@ ms.locfileid: "77453001"
 [!code-csharp[System.Threading.Tasks.Parallel#02](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.threading.tasks.parallel/cs/parallelforeach.cs#02)]
 [!code-vb[System.Threading.Tasks.Parallel#02](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.threading.tasks.parallel/vb/parallelforeach.vb#02)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [並列プログラミング](../../../docs/standard/parallel-programming/index.md)

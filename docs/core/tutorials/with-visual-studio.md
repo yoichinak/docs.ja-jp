@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: ba996e4add1cfe44681154b00a6530b1f3e70b37
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714007"
 ---
 # <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>チュートリアル: Visual Studio 2019 で最初の .NET Core コンソール アプリケーションを作成する
@@ -28,7 +28,7 @@ ms.locfileid: "75714007"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. Visual Studio 2019 を開きます。
 
@@ -53,7 +53,7 @@ ms.locfileid: "75714007"
 
    ![Visual Studio と新しい HelloWorld プロジェクト](./media/with-visual-studio/visual-studio-main-window.png)
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. Visual Studio 2019 を開きます。
 
@@ -96,7 +96,7 @@ ms.locfileid: "75714007"
 
 アプリケーションを拡張し、ユーザーに名前の入力を求め、日付と時刻と共にそれを表示するようにします。 次の手順では、アプリを変更してから再度実行します。
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. `Main` メソッド (現在は `Console.WriteLine` を呼び出す行のみ) の内容を以下のコードに置き換えます。
 
@@ -114,7 +114,7 @@ ms.locfileid: "75714007"
 
 1. 任意のキーを押して、コンソール ウィンドウを閉じます。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. `Main` メソッド (現在は `Console.WriteLine` を呼び出す行のみ) の内容を以下のコードに置き換えます。
 

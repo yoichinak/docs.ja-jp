@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f6fd75c5b49156f44d31c650ea452eb549f13b0e
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901614"
 ---
 ### <a name="mvc-jsonresult-moved-to-microsoftaspnetcoremvccore"></a>MVC:JsonResult は Microsoft.AspNetCore.Mvc.Core に移動されました

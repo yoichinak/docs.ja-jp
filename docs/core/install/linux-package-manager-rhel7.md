@@ -5,10 +5,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/03/2019
 ms.openlocfilehash: 4f85ed3da8a434fcd5b6ee88491daf623c3c8b31
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76980185"
 ---
 # <a name="rhel-7-package-manager---install-net-core"></a>RHEL 7 パッケージ マネージャー - .NET Core をインストールする
@@ -41,7 +41,7 @@ yum install rh-dotnet31-aspnetcore-runtime-3.1 -y
 scl enable rh-dotnet31 bash
 ```
 
-## <a name="install-the-net-core-runtime"></a>.NET Core ランタイムをインストールする
+## <a name="install-the-net-core-runtime"></a>.NET Core ランタイムのインストール
 
 Subscription Manager に登録すると、.NET Core ランタイムをインストールして有効にする準備が整います。 ご利用のターミナルで、次のコマンドを実行します。
 
@@ -51,6 +51,6 @@ yum install rh-dotnet31-dotnet-runtime-3.1 -y
 scl enable rh-dotnet31 bash
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Red Hat Enterprise Linux 7 での .NET Core 3.1 の使用](https://access.redhat.com/documentation/en-us/net_core/3.1/html/getting_started_guide/gs_install_dotnet)

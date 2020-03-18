@@ -9,10 +9,10 @@ helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
 ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713388"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
@@ -46,9 +46,9 @@ finally
 
 このコードでは [try...finally](try-finally.md) ブロックが使用されているため、`lock` ステートメントの本文内で例外がスローされた場合でもロックは解放されます。
 
-`lock` ステートメントの本文で [await](../operators/await.md) 演算子を使用することはできません。
+[ ステートメントの本文で ](../operators/await.md)await`lock` 演算子を使用することはできません。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に、以下をロック オブジェクトとして使用しないでください。
 
@@ -58,15 +58,15 @@ finally
 
 ## <a name="example"></a>例
 
-次の例では、専用 `balanceLock` インスタンスをロックすることでそのプライベート `balance` フィールドへのアクセスを同期する `Account` クラスが定義されます。 ロッキングに同じインスタンスを使用すると、2 つのスレッドが `Debit` または `Credit` メソッドを同時に呼び出すことによって `balance` フィールドを同時に更新することができなくなります。
+次の例では、専用 `Account` インスタンスをロックすることでそのプライベート `balance` フィールドへのアクセスを同期する `balanceLock` クラスが定義されます。 ロッキングに同じインスタンスを使用すると、2 つのスレッドが `balance` または `Debit` メソッドを同時に呼び出すことによって `Credit` フィールドを同時に更新することができなくなります。
 
 [!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の [lock ステートメント](~/_csharplang/spec/statements.md#the-lock-statement)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](~/_csharplang/spec/statements.md#the-lock-statement)」の [lock ステートメント](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>

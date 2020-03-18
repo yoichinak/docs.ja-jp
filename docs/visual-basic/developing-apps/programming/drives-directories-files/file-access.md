@@ -15,10 +15,10 @@ helpviewer_keywords:
 - sequential access
 ms.assetid: 231533bf-d049-4345-befa-3fb78fe6517d
 ms.openlocfilehash: 22bcd0f1f3acb0c0ad899b83ad2d879ead948f12
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348897"
 ---
 # <a name="file-access-with-visual-basic"></a>Visual Basic におけるファイル アクセス

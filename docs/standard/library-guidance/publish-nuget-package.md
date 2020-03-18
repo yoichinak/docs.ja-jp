@@ -3,10 +3,10 @@ title: NuGet パッケージの公開
 description: .NET ライブラリを NuGet に公開するためのベスト プラクティスの推奨事項。
 ms.date: 10/02/2018
 ms.openlocfilehash: 089c660bc51252c6295858b1462ae59bde968564
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76744562"
 ---
 # <a name="publishing-a-nuget-package"></a>NuGet パッケージの公開

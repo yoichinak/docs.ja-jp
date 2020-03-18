@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
 ms.openlocfilehash: eaa78c33613093bb0e108870669392d07d346a95
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77504001"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
@@ -27,7 +27,7 @@ ms.locfileid: "77504001"
 
 この例では、[.NET Core](../../../core/index.md) コマンド ライン ツールを使用します。 .NET Core コマンド ライン ツールに慣れていない場合は、この[概要のトピック](../../../core/tutorials/cli-create-console-app.md)を参照してください。
 
-*program.cs* の `Main` メソッドを次のように変更します。
+`Main`program.cs*の* メソッドを次のように変更します。
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
@@ -53,7 +53,7 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>出力例
+## <a name="sample-output"></a>サンプル出力
 
 ```txt
 Execution succeeded
@@ -93,11 +93,11 @@ private static async Task<int> AsyncConsoleWork()
 - `static Task<int> Main(string[])` の結果、`private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` と同等のコードが生成されます。
 
 > [!NOTE]
->この例の `Main` メソッドで `async` 修飾子を使用した場合、同じコードが生成されます。
+>この例の `async` メソッドで `Main` 修飾子を使用した場合、同じコードが生成されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [C# リファレンス](../index.md)
 - [Main() とコマンドライン引数](index.md)
 - [コマンド ライン引数を表示する方法](./how-to-display-command-line-arguments.md)

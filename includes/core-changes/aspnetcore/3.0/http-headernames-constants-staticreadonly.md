@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 31e7f84a787d255a474f4c2b1fa3068903dbed52
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901579"
 ---
 ### <a name="http-headernames-constants-changed-to-static-readonly"></a>HTTP:HeaderNames の定数を静的読み取り専用に変更

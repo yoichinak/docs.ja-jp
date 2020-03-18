@@ -2,12 +2,12 @@
 title: インフラストラクチャの永続レイヤーの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | インフラストラクチャの永続レイヤーの設計でリポジトリ パターンを調べる。
 ms.date: 10/08/2018
-ms.openlocfilehash: f1c5df1cc5672760374610a416ae22b45cd76c25
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.openlocfilehash: e10c8c1569089d5c8274df655ad7a12f2ebb7c22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73737944"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78846810"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>インフラストラクチャの永続レイヤーの設計
 
@@ -109,9 +109,6 @@ eShopOnContainers に実装されたリポジトリは、その変更追跡を�
 ## <a name="additional-resources"></a>その他の技術情報
 
 ### <a name="repository-pattern"></a>リポジトリ パターン
-
-- **リポジトリ パターン** \
-  <https://deviq.com/repository-pattern/>
 
 - **Edward Hieatt、Rob Mee。リポジトリ パターン。** \
   <https://martinfowler.com/eaaCatalog/repository.html>

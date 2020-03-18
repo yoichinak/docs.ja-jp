@@ -8,10 +8,10 @@ helpviewer_keywords:
 - garbage collection [.NET Framework profiling]
 ms.assetid: fd0462f7-57ad-4858-bf62-958378873602
 ms.openlocfilehash: e4b8d7fc0882e16643a7b46aafe3e00c70ca67ca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140286"
 ---
 # <a name="memory-management-and-garbage-collection-in-net"></a>.NET のメモリ管理とガベージ コレクション

@@ -4,10 +4,10 @@ description: C# における型の定義と変数の宣言について説明し�
 ms.date: 02/25/2020
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
 ms.openlocfilehash: b2a5255a243c12543a1cd59b5724b6c826306e04
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159092"
 ---
 # <a name="types-and-variables"></a>型と変数

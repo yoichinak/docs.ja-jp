@@ -4,10 +4,10 @@ description: ステートメントを使用して C# プログラムの処理を
 ms.date: 02/27/2020
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
 ms.openlocfilehash: ced13b1bfd17977acb98bf33c0a477161cf08a93
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159105"
 ---
 # <a name="statements"></a>ステートメント

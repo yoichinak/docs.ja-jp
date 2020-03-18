@@ -7,10 +7,10 @@ helpviewer_keywords:
 - dynamic Web applications [ASP.NET]
 ms.assetid: b7861df0-690a-4a58-bd12-f9d0123e40df
 ms.openlocfilehash: 9f939fa0f03aa00ea35405ce569d762486f4cb33
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73975643"
 ---
 # <a name="developing-web-apps-with-aspnet"></a>ASP.NET で Web アプリを開発する
@@ -39,6 +39,6 @@ ASP.NET Core](/aspnet/core) の詳細については、以下を参照してく�
 - [Web API の作成](/aspnet/core/tutorials/first-web-api)
 - [Azure に ASP.NET Core Web アプリを作成する](/azure/app-service/app-service-web-get-started-dotnet)
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [開発ガイド](development-guide.md)

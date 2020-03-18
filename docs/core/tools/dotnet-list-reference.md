@@ -3,17 +3,17 @@ title: dotnet list reference コマンド
 description: dotnet list 参照コマンドは、プロジェクト間参照を列挙する便利なオプションを提供します。
 ms.date: 02/14/2020
 ms.openlocfilehash: 43c4dbc94b33e717c6ba0a1c1c5317ac006f5bba
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503718"
 ---
 # <a name="dotnet-list-reference"></a>dotnet list reference
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet list reference` - プロジェクト間参照を列挙します。
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503718"
 
 `dotnet list [<PROJECT>|<SOLUTION>] reference [-h|--help]`
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet list reference` コマンドは、特定のプロジェクトまたはソリューションのプロジェクト参照を列挙する便利なオプションを提供します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "77503718"
 
   コマンドの短いヘルプを印刷します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 * 指定したプロジェクトのプロジェクト参照を列挙する:
 

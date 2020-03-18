@@ -3,10 +3,10 @@ title: ハイブリッド クラウド シナリオへの移行
 description: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | ハイブリッド クラウド シナリオへの移行
 ms.date: 04/30/2018
 ms.openlocfilehash: dcbb799a45609f8bb811866c4041951abf1fda8b
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75937360"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウド シナリオへの移行
@@ -41,9 +41,9 @@ Azure Stack 統合システムは、Microsoft とハードウェア パートナ
 
 ### <a name="azure-stack-development-kit"></a>Azure Stack Development Kit
 
-Microsoft Azure Stack Development Kit は、Azure Stack の単一ノードのデプロイです。これを使用して Azure Stack に関する評価と学習を行うことができます。 Azure Stack Development Kit は開発環境としても使用でき、Azure と一貫性のある API とツールを使用して開発できます。 Azure Stack Development Kit は、運用環境として使用するためのものではありません。
+Microsoft Azure Stack Development Kit は、Azure Stack の評価と学習に使用できる Azure Stack の単一ノード デプロイです。 Azure Stack Development Kit は開発環境としても使用でき、Azure と一貫性のある API とツールを使用して開発できます。 Azure Stack Development Kit は、運用環境での使用を想定していません。
 
-### <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他のリソース
 
 - **Azure ハイブリッド クラウド**
 

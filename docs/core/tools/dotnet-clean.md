@@ -3,17 +3,17 @@ title: dotnet clean コマンド
 description: dotnet clean コマンドは現在のディレクトリを消去します。
 ms.date: 02/14/2020
 ms.openlocfilehash: 186f1ea07718a8e178f88c3d079cf6e2f1f8660b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503752"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet clean` - プロジェクトの出力を消去します。
 
@@ -25,7 +25,7 @@ dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--int
 dotnet clean [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet clean` コマンドは、以前のビルドの出力を消去します。 [MSBuild ターゲット](/visualstudio/msbuild/msbuild-targets)として実装されます。そのため、コマンドの実行時にプロジェクトが評価されます。 ビルド中に作成された出力のみが消去されます。 中間 (*obj*) と最終出力 (*bin*) フォルダーの両方が消去されます。
 
@@ -69,7 +69,7 @@ dotnet clean [-h|--help]
 
   MSBuild の詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 既定値は、`normal` です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 * プロジェクトの既定のビルドを消去します。
 

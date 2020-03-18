@@ -8,10 +8,10 @@ helpviewer_keywords:
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715775"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
@@ -22,7 +22,7 @@ ms.locfileid: "75715775"
 
 アセンブリ キャッシュ ビューアー (*Shfusion.dll*) を除き、これらのツールはすべてコマンド ラインから実行できます。 エクスプローラーから *Shfusion.dll* にアクセスする必要があります。
   
-コマンド ライン ツールの最適な実行方法は、Visual Studio 用開発者コマンド プロンプトを使用することです。 これらのユーティリティを使用すると、インストール フォルダーに移動することなくツールを簡単に実行できます。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
+コマンド ライン ツールの最適な実行方法は、Visual Studio 用開発者コマンド プロンプトを使用することです。 これらのユーティリティを使用すると、インストール フォルダーに移動することなくツールを簡単に実行できます。 詳細については、「[コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 > [!NOTE]
 > ツールの中には、32 ビット コンピューターまたは 64 ビット コンピューターに固有のものもあります。 該当するコンピューターに適切なバージョンのツールを実行します。

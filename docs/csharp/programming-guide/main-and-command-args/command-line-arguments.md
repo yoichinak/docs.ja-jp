@@ -5,10 +5,10 @@ helpviewer_keywords:
 - command-line arguments [C#]
 ms.assetid: 0e597e0d-ea7a-41ba-a38a-0198122f3c26
 ms.openlocfilehash: d6775263e6f1afb227aa263b01d60f5181da74f3
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093511"
 ---
 # <a name="command-line-arguments-c-programming-guide"></a>コマンド ライン引数 (C# プログラミング ガイド)
@@ -20,7 +20,7 @@ ms.locfileid: "77093511"
 [!code-csharp[csProgGuideMain#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#3)]
 
 > [!NOTE]
-> Windows フォーム アプリケーションの `Main` メソッドでコマンド ライン引数を有効にするには、*program.cs* の `Main` のシグネチャを手動で変更する必要があります。 Windows フォーム デザイナーが生成するコードは、入力パラメーターなしの `Main` を作成します。 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> または <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> を使用して、コンソールまたは Windows アプリケーション内の任意の場所からコマンド ライン引数にアクセスすることもできます。
+> Windows フォーム アプリケーションの `Main` メソッドでコマンド ライン引数を有効にするには、`Main`program.cs*の* のシグネチャを手動で変更する必要があります。 Windows フォーム デザイナーが生成するコードは、入力パラメーターなしの `Main` を作成します。 <xref:System.Environment.CommandLine%2A?displayProperty=nameWithType> または <xref:System.Environment.GetCommandLineArgs%2A?displayProperty=nameWithType> を使用して、コンソールまたは Windows アプリケーション内の任意の場所からコマンド ライン引数にアクセスすることもできます。
 
 `Main` メソッドのパラメーターは <xref:System.String> の配列で、コマンド ライン引数を表しています。 通常は、`Length` プロパティを調べて引数があるかどうかを確認します。次はその例です。
 
@@ -44,7 +44,7 @@ long num = long.Parse(args[0]);
 long num = Convert.ToInt64(s);
 ```
 
-詳細については、次のトピックを参照してください。 <xref:System.Int64.Parse%2A> および <xref:System.Convert>
+詳細については、「 <xref:System.Int64.Parse%2A> および <xref:System.Convert>」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -73,10 +73,10 @@ long num = Convert.ToInt64(s);
 > [!NOTE]
 > Visual Studio でアプリケーションを実行する場合、「[[デバッグ] ページ (プロジェクト デザイナー)](/visualstudio/ide/reference/debug-page-project-designer)」のコマンド ライン引数を指定できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Environment?displayProperty=nameWithType>
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [Main() とコマンドライン引数](index.md)
 - [コマンド ライン引数を表示する方法](how-to-display-command-line-arguments.md)
 - [Main() の戻り値](main-return-values.md)

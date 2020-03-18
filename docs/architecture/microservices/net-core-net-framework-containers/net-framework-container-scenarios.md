@@ -3,10 +3,10 @@ title: Docker コンテナー用 .NET Framework を選択するタイミング
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Docker コンテナー用 .NET Framework を選択するタイミング'
 ms.date: 01/30/2020
 ms.openlocfilehash: dfb1e8883fc9c3d9235672bc2885858bfb64afa5
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501960"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker コンテナー用 .NET Framework を選択するタイミング
@@ -47,7 +47,7 @@ Microsoft とサードパーティ製のプラットフォームの中には、.
 
 この間、Azure のプラットフォームまたはサービスがクライアント API で .NET Core をまだサポートしていない場合は、Azure サービスまたはクライアント SDK の同等の REST API を .NET Framework で使用できます。
 
-### <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他のリソース
 
 - **.NET Core ガイド** \
   [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)

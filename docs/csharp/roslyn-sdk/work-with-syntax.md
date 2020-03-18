@@ -4,10 +4,10 @@ description: この概要は、構文ノードを理解して操作するため�
 ms.date: 10/15/2017
 ms.custom: mvc
 ms.openlocfilehash: fc1b1f5ae5ec985425c8d6aec49ef7f830ea9162
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740474"
 ---
 # <a name="work-with-syntax"></a>構文の使用
@@ -65,7 +65,7 @@ ms.locfileid: "75740474"
 
 ノード、トークン、またはトリビアはそれぞれ、ソース テキスト内の各自の位置と構成文字数を把握しています。 テキストの位置は、0 から始まる `char` インデックスの 32 ビット整数値として表されます。 <xref:Microsoft.CodeAnalysis.Text.TextSpan> オブジェクトは開始位置と文字数で、どちらも整数として表されます。 <xref:Microsoft.CodeAnalysis.Text.TextSpan> の長さが 0 の場合、2 つの文字の間の場所を参照します。
 
-各ノードには、<xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> という 2 つの <xref:Microsoft.CodeAnalysis.Text.TextSpan> プロパティが含まれます。
+各ノードには、<xref:Microsoft.CodeAnalysis.Text.TextSpan>、<xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> という 2 つの <xref:Microsoft.CodeAnalysis.SyntaxNode.FullSpan%2A> プロパティが含まれます。
 
 <xref:Microsoft.CodeAnalysis.SyntaxNode.Span%2A> プロパティは、ノードのサブツリー内の最初のトークンの先頭から最後のトークンの末尾までのテキスト範囲です。 この範囲には、先頭または末尾のトリビアはいずれも含まれません。
 
@@ -85,7 +85,7 @@ ms.locfileid: "75740474"
 
 ## <a name="kinds"></a>種類
 
-ノード、トークン、またはトリビアにはそれぞれ、表される正確な構文要素を識別する <xref:System.Int32?displayProperty=nameWithType> 型の <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> プロパティがあります。 この値は、言語固有の列挙型にキャストすることができます。 C# または Visual Basic の各言語には、文法で可能なすべてのノード、トークン、およびトリビア要素を一覧表示する、1 つの `SyntaxKind` 列挙型 (それぞれ <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> と <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) があります。 この変換は、<xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> または <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> の拡張メソッドにアクセスすることで自動的に行われます。
+ノード、トークン、またはトリビアにはそれぞれ、表される正確な構文要素を識別する <xref:Microsoft.CodeAnalysis.SyntaxNode.RawKind?displayProperty=nameWithType> 型の <xref:System.Int32?displayProperty=nameWithType> プロパティがあります。 この値は、言語固有の列挙型にキャストすることができます。 C# または Visual Basic の各言語には、文法で可能なすべてのノード、トークン、およびトリビア要素を一覧表示する、1 つの `SyntaxKind` 列挙型 (それぞれ <xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind?displayProperty=nameWithType> と <xref:Microsoft.CodeAnalysis.VisualBasic.SyntaxKind?displayProperty=nameWithType>) があります。 この変換は、<xref:Microsoft.CodeAnalysis.CSharp.CSharpExtensions.Kind%2A?displayProperty=nameWithType> または <xref:Microsoft.CodeAnalysis.VisualBasic.VisualBasicExtensions.Kind%2A?displayProperty=nameWithType> の拡張メソッドにアクセスすることで自動的に行われます。
 
 <xref:Microsoft.CodeAnalysis.SyntaxToken.RawKind> プロパティは、同じノード クラスを共有する構文ノード型の簡単なあいまいさ排除を可能にします。 トークンとトリビアでは、このプロパティは要素の型を区別するための唯一の方法です。
 

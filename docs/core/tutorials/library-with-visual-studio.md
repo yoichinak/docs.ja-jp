@@ -4,10 +4,10 @@ description: Visual Studio を使用して C# または Visual Basic で記述�
 ms.date: 12/09/2019
 ms.custom: vs-dotnet
 ms.openlocfilehash: 748a1499e0c3a4a41613a69b715dbcfbd585bfe3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714017"
 ---
 # <a name="build-a-net-standard-library-in-visual-studio"></a>Visual Studio で .NET Standard ライブラリを構築する
@@ -42,7 +42,7 @@ ms.locfileid: "75714017"
 
 <!-- markdownlint-disable MD025 -->
 
-# <a name="ctabcsharp"></a>[C#](#tab/csharp)
+# <a name="c"></a>[C#](#tab/csharp)
 
 1. "StringLibrary" という名前の新しい C# .NET Standard クラス ライブラリ プロジェクトをソリューションに追加します。
 
@@ -64,11 +64,11 @@ ms.locfileid: "75714017"
 
 1. メニュー バーで **[ビルド]**  >  **[ソリューションのビルド]** の順に選択します。
 
-# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
+# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
 1. "StringLibrary" という名前の新しい Visual Basic .NET Standard クラス ライブラリ プロジェクトをソリューションに追加します。
 
-   1. **ソリューション エクスプローラー**でソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
+   1. **ソリューション エクスプローラー**で、ソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
    1. **[新しいプロジェクトの追加]** ページで、検索ボックスに「**ライブラリ**」と入力します。 言語の一覧から **[Visual Basic]** を選択し、次に、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。 **[クラス ライブラリ (.NET Standard)]** テンプレートを選択し、 **[次へ]** を選択します。
 
@@ -92,7 +92,7 @@ ms.locfileid: "75714017"
 
    プロジェクトはエラーなしでコンパイルされます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ライブラリを正常に作成できました。 そのメソッドの呼び出しをまだ行っていないので、期待どおりに動作するかわかりません。 ライブラリの開発における次のステップでは、それをテストします。
 

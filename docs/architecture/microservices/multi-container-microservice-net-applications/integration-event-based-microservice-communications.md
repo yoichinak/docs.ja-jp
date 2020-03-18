@@ -3,10 +3,10 @@ title: マイクロサービス間でイベント ベースの通信を実装す
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービス間でイベント ベースの通信を実装する統合イベントを理解する
 ms.date: 10/02/2018
 ms.openlocfilehash: 6d4e324a05def91935a82df41c971a75cb75c3f8
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712404"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>マイクロサービス間でイベント ベースの通信を実装する (統合イベント)
@@ -127,7 +127,7 @@ public interface IEventBus
 
 `Subscribe` メソッド (引数に応じていくつかの実装を使えます) は、イベントを受信するマイクロサービスによって使われます。 このメソッドには、2 つの引数があります。 1 つ目は、サブスクライブする統合イベントです (`IntegrationEvent`)。 2 番目の引数は、受信側マイクロサービスが統合イベントのメッセージを取得すると実行される、統合イベントのハンドラー (またはコールバック メソッド) です (`IIntegrationEventHandler<T>`)。
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 実稼働可能なメッセージング ソリューションの一部:
 

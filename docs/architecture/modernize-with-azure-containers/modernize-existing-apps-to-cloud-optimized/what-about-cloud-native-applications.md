@@ -3,10 +3,10 @@ title: クラウド ネイティブなアプリケーションについて
 description: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | クラウド ネイティブ アプリケーションについて
 ms.date: 04/28/2018
 ms.openlocfilehash: d2a7f89e347d75ddbdae84c8eb57e32447b83297
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543548"
 ---
 # <a name="what-about-cloud-native-applications"></a>クラウド ネイティブなアプリケーションについて

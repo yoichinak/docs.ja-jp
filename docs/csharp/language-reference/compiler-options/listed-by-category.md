@@ -7,17 +7,17 @@ helpviewer_keywords:
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
 ms.openlocfilehash: 5cd5607c25dabd8f56ebb58366116666e8e649ea
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972714"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>カテゴリ別の C# コンパイラ オプションの一覧
 
 次のコンパイラ オプションは、カテゴリ別に並んでいます。 アルファベット順の一覧については、「[アルファベット順の C# コンパイラ オプションの一覧](listed-alphabetically.md)」を参照してください。
 
-## <a name="optimization"></a>最適化
+## <a name="optimization"></a>Optimization
 
 |オプション|目的|
 |------------|-------------|
@@ -96,7 +96,7 @@ ms.locfileid: "73972714"
 |[-codepage](codepage-compiler-option.md)|コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。|
 |[-help](help-compiler-option.md)|stdout にコンパイラ オプションの一覧を表示します。|
 |[-highentropyva](highentropyva-compiler-option.md)|実行可能ファイルが ASLR (Address Space Layout Randomization) をサポートするように指定します。|
-|[-langversion](langversion-compiler-option.md)|言語バージョンを指定します: 既定、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3、または最新。 |
+|[-langversion](langversion-compiler-option.md)|言語のバージョンを指定します: Default、ISO-1、ISO-2、3、4、5、6、7、7.1、7.2、7.3、Latest |
 |[-main](main-compiler-option.md)|**Main** メソッドの場所を指定します。|
 |[-noconfig](noconfig-compiler-option.md)|csc.rsp でコンパイルにしないようコンパイラに指示します。|
 |[-nologo](nologo-compiler-option.md)|コンパイラの著作権情報が表示されないようにします。|
@@ -105,7 +105,7 @@ ms.locfileid: "73972714"
 |[/unsafe](unsafe-compiler-option.md)|[unsafe](../keywords/unsafe.md) キーワードを使用するコードのコンパイルを有効にします。|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 エンコードを使用してコンパイラ出力を表示します。|
 |-parallel[+&#124;-]|同時実行ビルドを使用する (+) かどうかを指定します。|
-|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|
+|-checksumalgorithm:\<alg>|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は、SHA1 (既定値) または SHA256 です。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|
 
 ## <a name="obsolete-options"></a>廃止されたオプション
 
@@ -113,7 +113,7 @@ ms.locfileid: "73972714"
 |---|---|
 |-incremental|インクリメンタル コンパイルを有効にします。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# コンパイラ オプション](index.md)
 - [アルファベット順の C# コンパイラ オプションの一覧](listed-alphabetically.md)

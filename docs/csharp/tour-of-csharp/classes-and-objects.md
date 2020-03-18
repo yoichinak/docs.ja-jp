@@ -4,10 +4,10 @@ description: C# を始めてお使いの方のために、 クラス、オブジ
 ms.date: 02/27/2020
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
 ms.openlocfilehash: c178e11b5667905f75538555c8a309e2fdb4a9ef
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159183"
 ---
 # <a name="classes-and-objects"></a>クラスとオブジェクト
@@ -24,7 +24,7 @@ ms.locfileid: "78159183"
 
 [!code-csharp[PointExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
-オブジェクトで占有されたメモリは、そのオブジェクトに到達できなくなると自動的に解放されます。 C# では、オブジェクトの割り当てを明示的に解放する必要がなく、また解放することもできません。
+オブジェクトで占有されたメモリは、そのオブジェクトに到達できなくなると自動的に解放されます。 C# では、オブジェクトの割り当てを明示的に解除する必要がなく、また解除することもできません。
 
 ## <a name="members"></a>メンバー
 

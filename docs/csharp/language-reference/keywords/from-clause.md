@@ -9,10 +9,10 @@ helpviewer_keywords:
 - from keyword [C#]
 ms.assetid: 1aefd18c-1314-47f8-99ec-9bcefb09e699
 ms.openlocfilehash: 388b9c0245b112d619fc173f6019b3f7dbf59940
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75715288"
 ---
 # <a name="from-clause-c-reference"></a>from 句 (C# リファレンス)
@@ -31,7 +31,7 @@ ms.locfileid: "75715288"
 
 ## <a name="the-range-variable"></a>範囲変数
 
-データ ソースが <xref:System.Collections.Generic.IEnumerable%601> を実装するとき、コンパイラは範囲変数の型を推測します。 たとえば、ソースの型が `IEnumerable<Customer>` の場合、範囲変数は `Customer` ではないかと推測されます。 ソースが <xref:System.Collections.ArrayList> のような非ジェネリック `IEnumerable` 型のときにのみ、型を明示的に指定する必要があります。 詳細については、「[LINQ を使用して ArrayList にクエリを実行する方法](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)」を参照してください。
+データ ソースが <xref:System.Collections.Generic.IEnumerable%601> を実装するとき、コンパイラは範囲変数の型を推測します。 たとえば、ソースの型が `IEnumerable<Customer>` の場合、範囲変数は `Customer` ではないかと推測されます。 ソースが `IEnumerable` のような非ジェネリック <xref:System.Collections.ArrayList> 型のときにのみ、型を明示的に指定する必要があります。 詳細については、「[LINQ を使用して ArrayList にクエリを実行する方法](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)」を参照してください。
 
 前述の例では、`num` は型 `int` として推測されます。 範囲変数は厳密に型指定されるため、範囲変数の上でメソッドを呼び出したり、他の操作で範囲変数を使用したりできます。 たとえば、`select num` を記述する代わりに、`select num.ToString()` を記述し、クエリ式が整数ではなく文字列のシーケンスを返すようにできます。 あるいは、式でシーケンス 14、11、13、12、10 を返すように `select num + 10` を記述できます。 詳細については、「[select 句](select-clause.md)」をご覧ください。
 
@@ -53,7 +53,7 @@ ms.locfileid: "75715288"
 
 複数の `from` 句を使用する結合操作の詳細については、「[左外部結合の実行](../../linq/perform-left-outer-joins.md)」を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [クエリ キーワード (LINQ)](query-keywords.md)
 - [統合言語クエリ (LINQ)](../../linq/index.md)

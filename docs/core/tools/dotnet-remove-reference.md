@@ -3,17 +3,17 @@ title: dotnet remove reference コマンド
 description: dotnet remove reference コマンドは、プロジェクト間参照を削除する便利なオプションを提供します。
 ms.date: 02/14/2020
 ms.openlocfilehash: fcadf677faaf9281fb019c3c4bb16efc906b1aa1
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503621"
 ---
 # <a name="dotnet-remove-reference"></a>dotnet remove reference
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet remove reference` - プロジェクト間参照を削除します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "77503621"
 dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet remove reference` コマンドは、プロジェクトからプロジェクト参照を削除する便利なオプションを提供します。
 
@@ -47,7 +47,7 @@ dotnet remove [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--
 
   特定の[フレームワーク](../../standard/frameworks.md)を対象にしている場合にのみ、参照を削除します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - 指定したプロジェクトからプロジェクト参照を削除する:
 

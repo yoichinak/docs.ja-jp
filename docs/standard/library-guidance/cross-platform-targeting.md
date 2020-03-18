@@ -3,10 +3,10 @@ title: .NET ライブラリのクロス プラットフォーム ターゲット
 description: クロス プラットフォームの .NET ライブラリを作成する際のベスト プラクティスの推奨事項。
 ms.date: 08/12/2019
 ms.openlocfilehash: 61adff3759984554bb83531b4f9d8a49e29c929c
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76731450"
 ---
 # <a name="cross-platform-targeting"></a>クロス プラットフォーム ターゲット
@@ -35,7 +35,7 @@ ms.locfileid: "76731450"
 
 > .NET Standard 1.x は、NuGet の細かいパッケージ セットとして配布されます。大きなパッケージの依存関係グラフが作成されるため、開発者は構築時に多くのパッケージをダウンロードすることになります。 .NET Framework 4.6.1、UWP および Xamarin など、最新の .NET プラットフォームではすべて、.NET Standard 2.0 がサポートされます。 特に古いプラットフォームをターゲットにする必要がある場合は、.NET Standard 1.x のみをターゲットにしてください。
 
-✔️ `netstandard1.x` ターゲットを必要とする場合は、`netstandard2.0` ターゲットを含めてください。
+✔️ `netstandard2.0` ターゲットを必要とする場合は、`netstandard1.x` ターゲットを含めてください。
 
 > .NET Standard 2.0 をサポートするすべてのプラットフォームでは `netstandard2.0` ターゲットを使用し、より小さなパッケージ グラフを作成することで利点が得られますが、古いプラットフォームは引き続き動作し、`netstandard1.x` ターゲットを使用するようにフォールバックします。
 
@@ -92,11 +92,11 @@ public static class GpsLocation
 
 > .NET Standard アセンブリは、NuGet によって自動的に使用されます。 個々の .NET 実装をターゲットにすると、`*.nupkg` サイズが増えるだけで、利点はありません。
 
-✔️ `netstandard2.0` ターゲットを提供する場合、`net461` のターゲットを追加することを検討してください。
+✔️ `net461` ターゲットを提供する場合、`netstandard2.0` のターゲットを追加することを検討してください。
 
 > .NET Framework から .NET Standard 2.0 を使用する場合、いくつかの問題がありますが、.NET Framework 4.7.2 で対処されました。 .NET Framework 4.6.1 から 4.7.1 を引き続き使用している開発者に、.NET Framework 4.6.1 用にビルドされているバイナリを提供することで、その開発者のエクスペリエンスを向上させることができます。
 
-✔️ NuGet パッケージを使用してライブラリを配布してください。
+NuGet パッケージを使用してご利用のライブラリの配布を✔️ 実施してください。
 
 > NuGet では開発者にとって最適なターゲットが選択され、開発者が適切な実装を選ぶ必要はなくなります。
 
@@ -117,7 +117,7 @@ public static class GpsLocation
 
 .NET では、長い間サポート対象外になっている NET Framework のバージョンと、一般的には使用されなくなったプラットフォームをターゲットにすることができます。 できるだけ多くのターゲットでライブラリを動作させる価値はありますが、API の欠落を回避する必要がある場合、オーバーヘッドが大幅に増える可能性があります。 その範囲と制限事項を考えれば、特定のフレームワークをターゲットとする価値はなくなったと思われます。
 
-❌ ポータブル クラス ライブラリ (PCL) ターゲットを含めないでください。 たとえば、`portable-net45+win8+wpa81+wp8` のようにします。
+❌ ポータブル クラス ライブラリ (PCL) ターゲットを含めないでください。 たとえば、「 `portable-net45+win8+wpa81+wp8` 」のように入力します。
 
 > .NET Standard は、クロスプラットフォームの .NET ライブラリをサポートする最新の方法であり、PCL に代わるものです。
 
