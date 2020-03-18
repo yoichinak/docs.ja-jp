@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: c3db8f7791e510768608e834339526fb82771979
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451942"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398125"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# リファレンス)
 
 `readonly` キーワードは、次の 4 つのコンテキストで使用できる修飾子です。
 
-- [フィールドの宣言](#readonly-field-example)では、`readonly` は、フィールドへの割り当てが、宣言の一部として、または同じクラスのコンストラクター内でのみ可能であることを示します。 readonly フィールドは、フィールドの宣言とコンストラクターで複数回割り当ておよび再割り当てを行うことができます。 
+- [フィールドの宣言](#readonly-field-example)では、`readonly` は、フィールドへの割り当てが、宣言の一部として、または同じクラスのコンストラクター内でのみ可能であることを示します。 readonly フィールドは、フィールドの宣言とコンストラクターで複数回割り当ておよび再割り当てを行うことができます。
   
   `readonly` フィールドは、コンストラクターが終了した後で割り当てることはできません。 この規則は、値型と参照型では意味が異なります。
   
-  - 値型にはそのデータが直接含まれるため、`readonly` 値型のフィールドは変更できません。 
+  - 値型にはそのデータが直接含まれるため、`readonly` 値型のフィールドは変更できません。
   - 参照型にはそのデータへの参照が含まれるため、`readonly` 参照型のフィールドは、常に同じオブジェクトを参照する必要があります。 そのオブジェクトは不変ではありません。 `readonly` 修飾子があると、フィールドを参照型の別のインスタンスで置き換えることはできません。 ただし、フィールドのインスタンス データを読み取り専用フィールドで変更することは禁止されません。
 
   > [!WARNING]
@@ -135,7 +135,7 @@ public readonly int Index { get; }
 // Or:
 public int Number { readonly get; }
 public string Message { readonly get; set; }
-``` 
+```
 
 これらの場所に `readonly` 修飾子を追加できますが、有意義な効果はありません。 `readonly` 修飾子を自動実装プロパティのセッター、または読み取り/書き込み自動実装プロパティに追加することはできません。
 

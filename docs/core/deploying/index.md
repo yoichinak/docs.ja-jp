@@ -3,11 +3,11 @@ title: アプリケーションの発行
 description: .NET Core アプリケーションを発行する方法について説明します。 .NET Core では、プラットフォーム固有の、またはクロスプラットフォームのアプリを発行できます。 アプリは、自己完結型として、またはランタイム依存として発行できます。 各モードは、お客様のアプリをユーザーが実行する方法に影響を与えます。
 ms.date: 01/31/2020
 ms.openlocfilehash: 3b9c3b7f29af12477874b7a31ef0de4750719de0
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157936"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397588"
 ---
 # <a name="net-core-application-publishing-overview"></a>.NET Core アプリケーションの発行の概要
 
@@ -23,7 +23,7 @@ ms.locfileid: "78157936"
 
 次の表に、SDK のバージョンごとに、アプリをランタイム依存として、または自己完結型として発行するために使用するコマンドをまとめます。
 
-| 種類                                                                                 | SDK 2.1 | SDK 3.x | コマンド |
+| [種類]                                                                                 | SDK 2.1 | SDK 3.x | command |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
 | 現在のプラットフォーム用の[ランタイム依存の実行可能ファイル](#publish-runtime-dependent)。 |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | 特定のプラットフォーム用の[ランタイム依存の実行可能ファイル](#publish-runtime-dependent)。  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
@@ -38,7 +38,7 @@ ms.locfileid: "78157936"
 
 次のコマンドを実行すると、実行可能ファイルが生成されます。
 
-| 種類                                                                                 | SDK 2.1 | SDK 3.x | コマンド |
+| [種類]                                                                                 | SDK 2.1 | SDK 3.x | command |
 | ------------------------------------------------------------------------------------ | ------- | ------- | ------- |
 | 現在のプラットフォーム用の[ランタイム依存の実行可能ファイル](#publish-runtime-dependent)。 |         | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 | 特定のプラットフォーム用の[ランタイム依存の実行可能ファイル](#publish-runtime-dependent)。  |         | ✔️      | [`dotnet publish -r <RID> --self-contained false`](../tools/dotnet-publish.md) |
@@ -46,13 +46,13 @@ ms.locfileid: "78157936"
 
 ## <a name="produce-a-cross-platform-binary"></a>クロスプラットフォーム バイナリを生成する
 
-ご自分のアプリを *dll* ファイルの形式で [ランタイム依存](#publish-runtime-dependent)として発行すると、クロスプラットフォーム バイナリが作成されます。 *dll* ファイルには、プロジェクトに基づいて名前が付けられます。 たとえば、**word_reader** という名前のアプリがある場合、*word_reader.dll* という名前のファイルが作成されます。 この方法で発行されたアプリは、`dotnet <filename.dll>` コマンドを使用して実行され、任意のプラットフォームで実行できます。
+ご自分のアプリを [dll](#publish-runtime-dependent) ファイルの形式で *ランタイム依存*として発行すると、クロスプラットフォーム バイナリが作成されます。 *dll* ファイルには、プロジェクトに基づいて名前が付けられます。 たとえば、**word_reader** という名前のアプリがある場合、*word_reader.dll* という名前のファイルが作成されます。 この方法で発行されたアプリは、`dotnet <filename.dll>` コマンドを使用して実行され、任意のプラットフォームで実行できます。
 
 ターゲットとなる .NET Core ランタイムが既にインストールされていれば、クロスプラットフォーム バイナリを任意のオペレーティング システムで実行できます。 ターゲットとなる .NET Core ランタイムがインストールされていない場合、アプリがロール フォワードするように構成されていれば、より新しいランタイムを使用してアプリを実行することができます。 詳細については、[ランタイム依存のアプリのロールフォワード](../versions/selection.md#framework-dependent-apps-roll-forward)に関するページを参照してください。
 
 次のコマンドでは、クロスプラットフォーム バイナリが生成されます。
 
-| 種類                                                                                 | SDK 2.1 | SDK 3.x | コマンド |
+| [種類]                                                                                 | SDK 2.1 | SDK 3.x | command |
 | -----------------------------------------------------------------------------------  | ------- | ------- | ------- |
 | [ランタイム依存のクロスプラットフォーム バイナリ](#publish-runtime-dependent)。               | ✔️      | ✔️      | [`dotnet publish`](../tools/dotnet-publish.md) |
 
@@ -93,7 +93,7 @@ ms.locfileid: "78157936"
 - **`dotnet` コマンドを使用してアプリを起動する**\
 お客様のアプリを起動するために、ユーザーは `dotnet <filename.dll>` コマンドを実行する必要があります。 .NET Core 2.1 SDK では、アプリがランタイム依存として発行される場合、プラットフォーム固有の実行可能ファイルは生成されません。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 アプリをクロスプラットフォーム ランタイム依存として発行します。 現在ご利用のプラットフォームをターゲットとする実行可能ファイルが *dll* ファイルと共に作成されます。
 
@@ -111,7 +111,7 @@ dotnet publish -r linux-x64 --self-contained false
 
 自己完結型としてご自分のアプリを発行すると、プラットフォーム固有の実行可能ファイルが生成されます。 output publishing フォルダーには、.NET Core ライブラリやターゲット ランタイムなど、アプリのすべてのコンポーネントが格納されます。 このアプリは他の .NET Core アプリから分離されていて、ローカルにインストールされた共有ランタイムを使用しません。 お客様のアプリのユーザーは、.NET Core のダウンロードもインストールも行う必要がありません。
 
-指定したターゲット プラットフォームに対して実行可能バイナリが生成されます。 たとえば、**word_reader** という名前のアプリを持っていて、Windows 用に自己完結型の実行可能ファイルを発行する場合、*word_reader.exe* ファイルが作成されます。 Linux または macOS 用に発行する場合は、*word_reader* ファイルが作成されます。 ターゲットのプラットフォームおよびアーキテクチャは、[`dotnet publish`](../tools/dotnet-publish.md) コマンドの `-r <RID>` パラメーターを使用して指定します。 RID の詳細については、「[.NET Core の RID カタログ](../rid-catalog.md)」を参照してください。
+指定したターゲット プラットフォームに対して実行可能バイナリが生成されます。 たとえば、**word_reader** という名前のアプリを持っていて、Windows 用に自己完結型の実行可能ファイルを発行する場合、*word_reader.exe* ファイルが作成されます。 Linux または macOS 用に発行する場合は、*word_reader* ファイルが作成されます。 ターゲットのプラットフォームおよびアーキテクチャは、`-r <RID>`[`dotnet publish` コマンドの ](../tools/dotnet-publish.md) パラメーターを使用して指定します。 RID の詳細については、「[.NET Core の RID カタログ](../rid-catalog.md)」を参照してください。
 
 プラットフォーム固有の依存関係を含む NuGet パッケージなど、プラットフォーム固有の依存関係がアプリにある場合、それらはアプリと共に publish フォルダーにコピーされます。
 
@@ -134,7 +134,7 @@ dotnet publish -r linux-x64 --self-contained false
 - **.NET Core バージョンを更新するのが困難**\
 .NET Core ランタイム (ご自分のアプリと共に配布される) は、ご自分のアプリの新しいバージョンをリリースすることによってのみアップグレードできます。 .NET Core ランタイムへのセキュリティ パッチとして、ご自分のアプリケーションの更新バージョンを提供する責任があります。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 アプリを自己完結型として発行します。 macOS 64 ビット実行可能ファイルが作成されます。
 
@@ -148,7 +148,7 @@ dotnet publish -r osx-x64
 dotnet publish -r win-x64
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Core CLI を使用して .NET Core アプリを展開する](deploy-with-cli.md)
 - [Visual Studio を使用して .NET Core アプリを展開する](deploy-with-vs.md)

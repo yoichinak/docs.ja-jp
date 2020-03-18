@@ -2,12 +2,12 @@
 title: 式ツリー (C#)
 ms.date: 07/20/2015
 ms.assetid: 7d0ac21a-6d90-4e2e-8903-528cb78615b7
-ms.openlocfilehash: e1ba2ac9107b5c0ab4547bd8cc5f23ca84753951
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: f425ab38bf7bb54814fe777b7cb02180d022a8af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969843"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79169637"
 ---
 # <a name="expression-trees-c"></a>式ツリー (C#)
 式ツリーでは、コードがツリー状のデータ構造で表示されます。各ノードは 1 つの式に対応しています。たとえば、メソッドの呼び出しや `x < y` のような二項演算などです。  
@@ -38,7 +38,7 @@ Expression<Func<int, bool>> lambda = num => num < 5;
 // Add the following using directive to your code file:  
 // using System.Linq.Expressions;  
   
-// Manually build the expression tree for   
+// Manually build the expression tree for
 // the lambda expression num => num < 5.  
 ParameterExpression numParam = Expression.Parameter(typeof(int), "num");  
 ConstantExpression five = Expression.Constant(5, typeof(int));  
@@ -55,7 +55,7 @@ Expression<Func<int, bool>> lambda1 =
 // Creating a parameter expression.  
 ParameterExpression value = Expression.Parameter(typeof(int), "value");  
   
-// Creating an expression to hold a local variable.   
+// Creating an expression to hold a local variable.
 ParameterExpression result = Expression.Parameter(typeof(int), "result");  
   
 // Creating a label to jump to from a loop.  
@@ -147,7 +147,7 @@ Console.WriteLine(expr.Compile()(4));
   
  詳細については、「[式ツリーを実行する方法 (C#)](./how-to-execute-expression-trees.md)」を参照してください。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq.Expressions>
 - [式ツリーを実行する方法 (C#)](./how-to-execute-expression-trees.md)

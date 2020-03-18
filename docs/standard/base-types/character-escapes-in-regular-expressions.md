@@ -16,10 +16,10 @@ helpviewer_keywords:
 - constructs, character escapes
 ms.assetid: f49cc9cc-db7d-4058-8b8a-422bc08b29b0
 ms.openlocfilehash: 82e60b3cb5eb777d48219209550367642f78d8c3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711429"
 ---
 # <a name="character-escapes-in-regular-expressions"></a>正規表現での文字のエスケープ

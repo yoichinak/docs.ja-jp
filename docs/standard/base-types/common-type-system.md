@@ -17,11 +17,11 @@ helpviewer_keywords:
 - types, about types
 ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 ms.openlocfilehash: c574719da9b89b468b92b042e1f2b5b10fbe3c0d
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159326"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398521"
 ---
 # <a name="common-type-system"></a>共通型システム
 共通型システム (CTS: Common Type System) は、共通言語ランタイムにおける型の宣言、使用、および管理の方法を定義しており、ランタイムによる言語間統合のサポートにおいても重要な役割を果たします。 共通型システムには次のような機能があります。  

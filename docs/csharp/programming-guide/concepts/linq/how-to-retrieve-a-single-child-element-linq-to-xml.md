@@ -3,10 +3,10 @@ title: 単一の子要素を取得する方法 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: ce37db9e-76fa-46eb-b4cc-e8f32d22ad90
 ms.openlocfilehash: 0e10cf230a73e6419f2d9c663766f9a24a0930af
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347477"
 ---
 # <a name="how-to-retrieve-a-single-child-element-linq-to-xml-c"></a>単一の子要素を取得する方法 (LINQ to XML) (C#)
@@ -21,7 +21,7 @@ ms.locfileid: "75347477"
   
  Visual Basic の例では、配列インデクサー表記を使用して単一の要素を取得しています。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) を使用します。  
+ この例では、「[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)」の XML ドキュメントを使用します。  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrder.xml");  
@@ -38,7 +38,7 @@ Console.WriteLine(e);
 ## <a name="example"></a>例  
  上記と同じコードを使用して、名前空間内の XML から要素を取得する例を次に示します。 詳細については、「[名前空間の概要 (LINQ to XML)](namespaces-overview-linq-to-xml.md)」を参照してください。  
   
- この例では、次の XML ドキュメントを使用します: [サンプル XML ファイル: 名前空間内の一般的な購買発注書](./sample-xml-file-typical-purchase-order-in-a-namespace.md)を使用します。  
+ この例では、XML ドキュメントの「[サンプル XML ファイル : 名前空間内の一般的な購買発注書](./sample-xml-file-typical-purchase-order-in-a-namespace.md)」を使用します。  
   
 ```csharp  
 XElement po = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -53,6 +53,6 @@ Console.WriteLine(e);
 <aw:DeliveryNotes xmlns:aw="http://www.adventure-works.com">Please leave packages in shed by driveway.</aw:DeliveryNotes>  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to XML 軸 (C#)](./linq-to-xml-axes-overview.md)

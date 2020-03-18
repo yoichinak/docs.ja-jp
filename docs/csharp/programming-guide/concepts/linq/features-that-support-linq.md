@@ -5,10 +5,10 @@ helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
 ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635796"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ をサポートする C# の機能
@@ -42,11 +42,11 @@ var query = from str in stringArray
 
 `var` として宣言された変数は、明示的に型を指定した変数とまったく同じように厳密に型指定されます。 `var` を使用すると匿名型を作成できますが、ローカル変数にのみ使用できます。 また、暗黙的な型指定を使用して、配列を宣言することもできます。
 
-詳細については、「[暗黙的に型指定されるローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。
+詳細については、「[暗黙的に型指定されたローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。
 
 ## <a name="object-and-collection-initializers"></a>オブジェクト初期化子とコレクション初期化子
 
-オブジェクト初期化子とコレクション初期化子を使用すると、オブジェクトのコンストラクターを明示的に呼び出さなくても、オブジェクトを初期化できます。 通常、初期化子は、ソース データを新しいデータ型に投影するクエリ式で使用されます。 パブリックな `Name` プロパティと `Phone` プロパティを持つ `Customer` という名前のクラスがある場合、オブジェクト初期化子は次のコードのように使用できます。
+オブジェクト初期化子とコレクション初期化子を使用すると、オブジェクトのコンストラクターを明示的に呼び出さなくても、オブジェクトを初期化できます。 通常、初期化子は、ソース データを新しいデータ型に投影するクエリ式で使用されます。 パブリックな `Customer` プロパティと `Name` プロパティを持つ `Phone` という名前のクラスがある場合、オブジェクト初期化子は次のコードのように使用できます。
 
 ```csharp
 var cust = new Customer { Name = "Mike", Phone = "555-1212" };
@@ -60,7 +60,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
                             select new Customer { Name = o.Name, Phone = o.Phone };
 ```
 
-データ ソースには、`OrderSize` など、`Customer` クラス以外にもプロパティが存在する可能性がありますが、オブジェクト初期化を利用することで、クエリから返されるデータは目的のデータ型に形成されます。今回のクラスに関連するデータを選択します。 その結果、必要とする新しい `Customer` が `IEnumerable` に入力されました。 上記は次のような LINQ のメソッド構文でも記述できます。
+データ ソースには、`Customer` など、`OrderSize` クラス以外にもプロパティが存在する可能性がありますが、オブジェクト初期化を利用することで、クエリから返されるデータは目的のデータ型に形成されます。今回のクラスに関連するデータを選択します。 その結果、必要とする新しい `IEnumerable` が `Customer` に入力されました。 上記は次のような LINQ のメソッド構文でも記述できます。
 
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });
@@ -100,6 +100,6 @@ select new {name = cust.Name, phone = cust.Phone};
 
 - [式ツリー (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [統合言語クエリ (LINQ) (C#)](./index.md)

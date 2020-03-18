@@ -6,15 +6,15 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: a6af48cdacd836465d776a3fd4e1d17aa0298b77
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: e4a9ba2da2548991f442c2f5ab09d39243137875
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635341"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167516"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>テキスト ファイルを 1 行ずつ読み取る方法 (C# プログラミング ガイド)
-次の例では、`StreamReader` クラスの `ReadLine` メソッドを使用して、テキスト ファイルの内容を一度に 1 行ずつ文字列に読み込みます。 各テキスト行は文字列 `line` に格納され、画面に表示されます。  
+次の例では、`ReadLine` クラスの `StreamReader` メソッドを使用して、テキスト ファイルの内容を一度に 1 行ずつ文字列に読み込みます。 各テキスト行は文字列 `line` に格納され、画面に表示されます。  
   
 ## <a name="example"></a>例  
   
@@ -23,7 +23,7 @@ int counter = 0;
 string line;  
   
 // Read the file and display it line by line.  
-System.IO.StreamReader file =   
+System.IO.StreamReader file =
     new System.IO.StreamReader(@"c:\test.txt");  
 while((line = file.ReadLine()) != null)  
 {  
@@ -47,11 +47,11 @@ System.Console.ReadLine();
   
 - ファイルが存在しない。  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  ファイル名からファイルの内容を判断しないでください。 たとえば、`myFile.cs` ファイルが C# ソース ファイルとは限りません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)

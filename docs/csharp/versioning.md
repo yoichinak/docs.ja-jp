@@ -4,12 +4,12 @@ description: C# と .NET でのバージョン管理のしくみについて説�
 ms.date: 01/08/2017
 ms.technology: csharp-advanced-concepts
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 3fadbc1257ae758fc220685fa074a4fa68b20ba1
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 124cce51865f04a555bc121fb6ce18cc95591bdc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039656"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156468"
 ---
 # <a name="versioning-in-c"></a>C\# でのバージョン管理
 
@@ -35,7 +35,8 @@ SemVer に対する最も基本的なアプローチは、3 コンポーネン�
 ### <a name="backwards-compatibility"></a>下位互換性
 
 ライブラリの新バージョンをリリースする際、特に大きな懸念事項となるのが、旧バージョンとの互換性です。
-旧バージョンに依存するコードが再コンパイル後に新バージョンで機能する場合、ライブラリの新バージョンは旧バージョンに対してソース互換性があるということになります。 旧バージョンに依存するアプリケーションが再コンパイルを経ずに新バージョンで機能する場合、ライブラリの新バージョンはバイナリ互換性があるということになります。
+旧バージョンに依存するコードが再コンパイル後に新バージョンで機能する場合、ライブラリの新バージョンは旧バージョンに対してソース互換性があるということになります。
+旧バージョンに依存するアプリケーションが再コンパイルを経ずに新バージョンで機能する場合、ライブラリの新バージョンはバイナリ互換性があるということになります。
 
 次に示すのは、旧バージョンのライブラリとの下位互換性を維持するうえでの考慮事項です。
 
@@ -82,7 +83,7 @@ SemVer に対する最も基本的なアプローチは、3 コンポーネン�
 
 次の例を参照してください。
 
-[!code-csharp[Sample usage of the 'new' modifier](~/samples/csharp/versioning/new/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'new' modifier](~/samples/snippets/csharp/versioning/new/Program.cs#sample)]
 
 **出力**
 
@@ -100,7 +101,7 @@ A derived method
 
 `override` 修飾子を使用した場合、派生実装は基底クラス メンバーの実装を非表示にはせず、そのメンバーを拡張します。 基底クラスのメンバーには、`virtual` 修飾子が適用されている必要があります。
 
-[!code-csharp[Sample usage of the 'override' modifier](../../samples/csharp/versioning/override/Program.cs#sample)]
+[!code-csharp[Sample usage of the 'override' modifier](../../samples/snippets/csharp/versioning/override/Program.cs#sample)]
 
 **出力**
 

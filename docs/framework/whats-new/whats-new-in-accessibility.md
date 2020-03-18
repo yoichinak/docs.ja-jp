@@ -7,12 +7,12 @@ dev_langs:
 - vb
 helpviewer_keywords:
 - what's new [.NET Framework]
-ms.openlocfilehash: 6f17cb0fb6e5b0457af745ea0d089f3e51d4706c
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 4dbc2024aa2e956b23030ae6eab987e65e006d12
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938140"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398677"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -20,7 +20,7 @@ ms.locfileid: "75938140"
 
 ## <a name="accessibility-switches"></a>アクセシビリティのスイッチ
 
-アプリのターゲットが .NET Framework 4.7 である場合、またはそれより前のバージョンがターゲットであっても実行環境が .NET Framework 4.7.1 以降である場合は、ユーザー補助機能を使用するようにアプリを構成できます。 また、アプリのターゲットが 4.7.1 .NET Framework 以降である場合は、従来の機能を使用するように (そして、ユーザー補助機能を利用しないように) アプリを構成することもできます。 ユーザー補助機能が含まれる .NET Framework の各バージョンには、バージョン固有のアクセシビリティ スイッチがあります。これを、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素に追加します。 サポートされているスイッチは次のとおりです。
+アプリのターゲットが .NET Framework 4.7 である場合、またはそれより前のバージョンがターゲットであっても実行環境が .NET Framework 4.7.1 以降である場合は、ユーザー補助機能を使用するようにアプリを構成できます。 また、アプリのターゲットが 4.7.1 .NET Framework 以降である場合は、従来の機能を使用するように (そして、ユーザー補助機能を利用しないように) アプリを構成することもできます。 ユーザー補助機能が含まれる .NET Framework の各バージョンには、バージョン固有のアクセシビリティ スイッチがあります。これを、アプリケーションの構成ファイルの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) セクションの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 要素に追加します。 サポートされているスイッチは次のとおりです。
 
 |バージョン|Switch|
 |---|---|
@@ -30,7 +30,7 @@ ms.locfileid: "75938140"
 
 ### <a name="taking-advantage-of-accessibility-enhancements"></a>アクセシビリティ拡張機能の利用
 
-.NET Framework 4.7.1 以降をターゲット対象とするアプリケーションでは、この新しいユーザー補助機能が既定で有効になっています。 また、それより前のバージョンの .NET Framework がターゲットであっても、実行環境が .NET Framework 4.7.1 以降であるアプリケーションの場合は、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `false` に設定することで、古いアクセシビリティ動作を利用しないことを (そして、それにより向上したアクセシビリティ機能改善を利用することを) 選択できます。 .NET Framework 4.7.1 で導入されたアクセシビリティの機能強化を有効にする方法を次に示します。
+.NET Framework 4.7.1 以降をターゲット対象とするアプリケーションでは、この新しいユーザー補助機能が既定で有効になっています。 また、それより前のバージョンの .NET Framework がターゲットであっても、実行環境が .NET Framework 4.7.1 以降であるアプリケーションの場合は、アプリケーションの構成ファイルの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) セクションの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 要素にスイッチを追加し、値を `false` に設定することで、古いアクセシビリティ動作を利用しないことを (そして、それにより向上したアクセシビリティ機能改善を利用することを) 選択できます。 .NET Framework 4.7.1 で導入されたアクセシビリティの機能強化を有効にする方法を次に示します。
 
 ```xml
 <runtime>
@@ -59,7 +59,7 @@ ms.locfileid: "75938140"
 
 ### <a name="restoring-legacy-behavior"></a>従来の動作に戻す
 
-アプリケーションがバージョン 4.7.1 以降の .NET Framework をターゲットにしている場合、アプリケーションの構成ファイルの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) セクションの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) 要素にスイッチを追加し、値を `true` に設定することで、アクセシビリティ機能を無効にできます。 たとえば、次の構成は、.NET Framework 4.7.2 で導入されたユーザー補助機能を無効にします。
+アプリケーションがバージョン 4.7.1 以降の .NET Framework をターゲットにしている場合、アプリケーションの構成ファイルの [`<AppContextSwitchOverrides>`](../configure-apps/file-schema/runtime/appcontextswitchoverrides-element.md) セクションの [`<runtime>`](../configure-apps/file-schema/runtime/index.md) 要素にスイッチを追加し、値を `true` に設定することで、アクセシビリティ機能を無効にできます。 たとえば、次の構成は、.NET Framework 4.7.2 で導入されたユーザー補助機能を無効にします。
 
 ```xml
 <runtime>
@@ -88,7 +88,7 @@ ms.locfileid: "75938140"
 
 アプリケーション開発者は UIA LiveRegion を使用することで、ユーザーが作業しているところからは離れた場所にあるコントロールのテキスト変更をスクリーン リーダーに通知することができます。 これは、たとえば接続状態を示す <xref:System.Windows.Forms.StatusStrip> コントロールなどで便利です。 接続が切断されて状態が変わった場合に、開発者はスクリーン リーダーに通知することができます。
 
-.NET Framework 4.8 以降、Windows フォームでは <xref:System.Windows.Forms.Label> と <xref:System.Windows.Forms.StatusStrip> 両方のコントロールに対して UIA LiveRegion が実装されています。 たとえば、次のコードでは LiveRegion が `label1`という名前の <xref:System.Windows.Forms.Label> コントロールで使用されています。
+.NET Framework 4.8 以降、Windows フォームでは <xref:System.Windows.Forms.Label> と <xref:System.Windows.Forms.StatusStrip> 両方のコントロールに対して UIA LiveRegion が実装されています。 たとえば、次のコードでは LiveRegion が <xref:System.Windows.Forms.Label>という名前の `label1` コントロールで使用されています。
 
 ```csharp
 public Form1()
@@ -195,7 +195,7 @@ if (raiseMethod != null) {
 
 UIAutomation の `ControllerFor` プロパティは、このプロパティをサポートするオートメーション要素によって操作されるオートメーション要素の配列を返します。 このプロパティは通常、自動提案アクセシビリティで使用されます。 `ControllerFor`は、オートメーション要素がアプリケーション UI またはデスクトップの 1 つ以上のセグメントに影響する場合に使用されます。 それ以外の場合、コントロール操作の影響を UI 要素と関連付けることは困難です。 この機能により、コントロールで `ControllerFor`プロパティの値を指定できるようになります。
 
-.NET Framework 4.8 では、新しい仮想メソッド <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType> が追加されました。 `ControllerFor` プロパティの値を指定するには、単にこのメソッドをオーバーライドして、この <xref:System.Windows.Automation.Peers.AutomationPeer> で操作されているコントロールの `List<AutomationPeer>` を返します。
+.NET Framework 4.8 では、新しい仮想メソッド <xref:System.Windows.Automation.Peers.AutomationPeer.GetControlledPeersCore?displayProperty=nameWithType?displayProperty=nameWithType> が追加されました。 `ControllerFor` プロパティの値を指定するには、単にこのメソッドをオーバーライドして、この `List<AutomationPeer>` で操作されているコントロールの <xref:System.Windows.Automation.Peers.AutomationPeer> を返します。
 
 ```csharp
 public class AutoSuggestTextBox: TextBox
@@ -245,7 +245,7 @@ internal class AutoSuggestTextBoxAutomationPeer : TextBoxAutomationPeer
 一度有効にすると、ツールヒントを含むすべてのコントロールで、キーボード フォーカスをコントロールが受けるとツールヒントが表示されます。 ツールヒントは時間が経過したとき、またはキーボード フォーカスが変わったときに、消すことができます。 ユーザーは新しいキーボード ショートカット Ctrl + Shift + F10 を使用してツールヒントを手動で消すこともできます。 ツールヒントが消えたら、同じキーボード ショートカットを使用して再度表示することができます。
 
 > [!NOTE]
-> <xref:System.Windows.Controls.Ribbon.Ribbon> コントロール上の [リボンのツールヒント](xref:System.Windows.Controls.Ribbon.RibbonToolTip)は、キーボード フォーカスに表示されません。キーボード ショートカットでのみ表示されます。
+> [ コントロール上の ](xref:System.Windows.Controls.Ribbon.RibbonToolTip)リボンのツールヒント<xref:System.Windows.Controls.Ribbon.Ribbon>は、キーボード フォーカスに表示されません。キーボード ショートカットでのみ表示されます。
 
 **UIAutomation プロパティの SizeOfSet および PositionInSet のサポートを追加**
 
@@ -337,19 +337,19 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
 
 - <xref:System.Windows.Forms.ToolStripDropDownButton> コントロールのドロップダウン矢印。
 
-- <xref:System.Windows.Forms.ButtonBase.FlatStyle> が <xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType> または <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> に設定された、<xref:System.Windows.Forms.Button>、<xref:System.Windows.Forms.RadioButton>、および <xref:System.Windows.Forms.CheckBox> コントロール。 以前は、選択されたテキストと背景の色のコントラストが同じで、見分けるのが困難でした。
+- <xref:System.Windows.Forms.Button> が <xref:System.Windows.Forms.RadioButton> または <xref:System.Windows.Forms.CheckBox> に設定された、<xref:System.Windows.Forms.ButtonBase.FlatStyle>、<xref:System.Windows.Forms.FlatStyle.Flat?displayProperty=nameWithType>、および <xref:System.Windows.Forms.FlatStyle.Popup?displayProperty=nameWithType> コントロール。 以前は、選択されたテキストと背景の色のコントラストが同じで、見分けるのが困難でした。
 
-- <xref:System.Windows.Forms.Control.Enabled> プロパティが `false` に設定されている <xref:System.Windows.Forms.GroupBox> に含まれるコントロール。
+- <xref:System.Windows.Forms.GroupBox> プロパティが <xref:System.Windows.Forms.Control.Enabled> に設定されている `false` に含まれるコントロール。
 
 - <xref:System.Windows.Forms.ToolStripButton>、<xref:System.Windows.Forms.ToolStripComboBox>、<xref:System.Windows.Forms.ToolStripDropDownButton> コントロール。これらは、ハイ コントラスト モードでの明度コントラストの比率が高くなりました。
 
-- <xref:System.Windows.Forms.DataGridViewLinkCell> の <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> プロパティ。
+- <xref:System.Windows.Forms.DataGridViewLinkCell.LinkColor> の <xref:System.Windows.Forms.DataGridViewLinkCell> プロパティ。
 
 **ナレーターの機能強化**
 
 .NET Framework 4.7.2 以降では、ナレーターのサポートが次のように強化されました。
 
-- <xref:System.Windows.Forms.ToolStripMenuItem> のテキストを読み上げるときに、<xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> プロパティの値を読み上げます。
+- <xref:System.Windows.Forms.ToolStripMenuItem.ShortcutKeys?displayProperty=nameWithType> のテキストを読み上げるときに、<xref:System.Windows.Forms.ToolStripMenuItem> プロパティの値を読み上げます。
 
 - <xref:System.Windows.Forms.ToolStripMenuItem> の <xref:System.Windows.Forms.Control.Enabled> プロパティが `false` に設定されている場合、それを示します。
 
@@ -365,21 +365,21 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
 
 - <xref:System.Windows.Forms.DataGridView.SelectionMode?displayProperty=nameWithType> が <xref:System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect?displayProperty=nameWithType> に設定されていると、ユーザーが現在の行のセルを Tab で移動するとき、列ヘッダーの色が変わって現在の列を示します。
 
-- <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> の <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> プロパティは、正しい親コントロールを返します。
+- <xref:System.Windows.Forms.AccessibleObject.Parent?displayProperty=nameWithType> の <xref:System.Windows.Forms.DataGridViewLinkCell.DataGridViewLinkCellAccessibleObject?displayProperty=nameWithType> プロパティは、正しい親コントロールを返します。
 
 **視覚的な手掛かりの向上**
 
-- <xref:System.Windows.Forms.ButtonBase.Text> プロパティが空の <xref:System.Windows.Forms.RadioButton> および <xref:System.Windows.Forms.CheckBox> コントロールは、フォーカスを受け取るとフォーカス インジケーターを表示します。
+- <xref:System.Windows.Forms.RadioButton> プロパティが空の <xref:System.Windows.Forms.CheckBox> および <xref:System.Windows.Forms.ButtonBase.Text> コントロールは、フォーカスを受け取るとフォーカス インジケーターを表示します。
 
 **強化されたプロパティ グリッドのサポート**
 
-- <xref:System.Windows.Forms.PropertyGrid> コントロールの子要素は、PropertyGrid 要素が有効になっている場合にのみ、<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> プロパティに対して `true` を返すようになりました。
+- <xref:System.Windows.Forms.PropertyGrid> コントロールの子要素は、PropertyGrid 要素が有効になっている場合にのみ、`true` プロパティに対して <xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty> を返すようになりました。
 
-- <xref:System.Windows.Forms.PropertyGrid> コントロールの子要素は、PropertyGrid 要素をユーザーが変更できる場合にのみ、<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> プロパティに対して `false` を返します。
+- <xref:System.Windows.Forms.PropertyGrid> コントロールの子要素は、PropertyGrid 要素をユーザーが変更できる場合にのみ、`false` プロパティに対して <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty> を返します。
 
 **キーボード ナビゲーションの向上**
 
-- <xref:System.Windows.Forms.ToolStripButton> コントロールは、<xref:System.Windows.Forms.ToolStripPanel.TabStop> プロパティが `true` に設定された <xref:System.Windows.Forms.ToolStripPanel> 内に含まれているときにフォーカスできます
+- <xref:System.Windows.Forms.ToolStripButton> コントロールは、<xref:System.Windows.Forms.ToolStripPanel> プロパティが <xref:System.Windows.Forms.ToolStripPanel.TabStop> に設定された `true` 内に含まれているときにフォーカスできます
 
 <a name="wpf472"></a>
 
@@ -445,10 +445,10 @@ Windows 10 では 2 つの新しい UIAutomation プロパティである `SizeO
 
 - <xref:System.Windows.Automation.AutomationLiveSetting?displayProperty=nameWithType> 列挙。次の指定可能 **LiveSetting** 値を定義します。
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合でも、要素が通知を送信することはありません。
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素は非割り込み型の通知を送信します。
+  - [https://login.microsoftonline.com/consumers/](<xref:System.Windows.Automation.AutomationLiveSetting.Off?displayProperty=nameWithType>) ライブ領域の内容が変更された場合でも、要素が通知を送信することはありません。
+  - [https://login.microsoftonline.com/consumers/](<xref:System.Windows.Automation.AutomationLiveSetting.Polite?displayProperty=nameWithType>) ライブ領域の内容が変更された場合、要素は非割り込み型の通知を送信します。
 
-  - <xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>。 ライブ領域の内容が変更された場合、要素により割り込み通知が送信されます。
+  - [https://login.microsoftonline.com/consumers/](<xref:System.Windows.Automation.AutomationLiveSetting.Assertive?displayProperty=nameWithType>) ライブ領域の内容が変更された場合、要素により割り込み通知が送信されます。
 
 関心のある要素で **AutomationProperties.LiveSetting** プロパティを作成できます。次の例をご覧ください。
 
@@ -472,17 +472,17 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 **ハイ コントラスト**
 
-.NET Framework 4.7.1 以降、さまざまな WPF コントロールでハイ コントラストが強化されました。 <xref:System.Windows.SystemParameters.HighContrast%2A> テーマが設定されているときにこれを確認できます。 次の設定があります。
+.NET Framework 4.7.1 以降、さまざまな WPF コントロールでハイ コントラストが強化されました。 <xref:System.Windows.SystemParameters.HighContrast%2A> テーマが設定されているときにこれを確認できます。 チェックの内容は次のとおりです
 
 - <xref:System.Windows.Controls.Expander> コントロール
 
   フォーカスを合わせたとき、<xref:System.Windows.Controls.Expander> コントロールが見やすくなりました。 <xref:System.Windows.Controls.ComboBox>、<xref:System.Windows.Controls.ListBox>、<xref:System.Windows.Controls.RadioButton> コントロールのキーボードも見やすくなりました。 次に例を示します。
 
-  前: 
+  次の処理の前
 
   ![展開コントロールのスクリーンショット。フォーカスありとフォーカスなしのビジュアル。](./media/whats-new-in-accessibility/expander-control-before.png)
 
-  後: 
+  後:
 
   ![展開コントロールのスクリーンショット。コントロールのテキストが点線で囲まれています。](./media/whats-new-in-accessibility/expander-control-after.png)
 
@@ -490,11 +490,11 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   <xref:System.Windows.Controls.CheckBox> コントロールと <xref:System.Windows.Controls.RadioButton> コントロールのテキストは、ハイ コントラスト テーマで選択されているとき、見やすくなりました。 次に例を示します。
 
-  前: 
+  次の処理の前
 
   ![ラジオ ボタンとチェック ボタンのスクリーンショット。ハイ コントラストのテーマでテキストが読みにくくなっています。](./media/whats-new-in-accessibility/high-contrast-radio-button-before.png)
 
-  後: 
+  後:
 
   ![ラジオ ボタンとチェック ボタンのスクリーンショット。ハイ コントラストのテーマでテキストが読みやすくなっています。](./media/whats-new-in-accessibility/high-contrast-radio-button-after.png)
 
@@ -502,55 +502,55 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
   .NET Framework 4.7.1 以降、無効にした <xref:System.Windows.Controls.ComboBox> コントロールの枠線が無効にしたテキストと同じ色になります。 次に例を示します。
 
-  前: 
+  次の処理の前
 
   ![無効になっている ComboBox のスクリーンショット。さまざまな色の罫線とコントロール テキスト。](./media/whats-new-in-accessibility/combo-disabled-before.png)
 
-  後:   
+  後:
 
   ![無効になっている ComboBox のスクリーンショット。罫線とコントロール テキストが同じ色です。](./media/whats-new-in-accessibility/combo-disabled-after.png)
 
   また、無効にしているボタンにフォーカスを合わせたとき、正しいテーマ色が使用されます。
 
-  前:
+  次の処理の前
 
-  ![黒色ボタンのスクリーンショット。"Focus Me" というテキストが灰色です。](./media/whats-new-in-accessibility/button-theme-colors-before.png) 
+  ![黒色ボタンのスクリーンショット。"Focus Me" というテキストが灰色です。](./media/whats-new-in-accessibility/button-theme-colors-before.png)
 
-  後: 
+  後:
 
-  ![青色ボタンのスクリーンショット。"Focus Me" というテキストが黒色です。](./media/whats-new-in-accessibility/button-theme-colors-after.png) 
+  ![青色ボタンのスクリーンショット。"Focus Me" というテキストが黒色です。](./media/whats-new-in-accessibility/button-theme-colors-after.png)
 
   最後になりますが、.NET Framework 4.7 以前のバージョンでは、<xref:System.Windows.Controls.ComboBox> コントロールのスタイルを `Toolbar.ComboBoxStyleKey` に設定すると、ドロップダウンの矢印が見えなくなりました。 この問題は .NET Framework 4.7.1 以降で修正されています。 次に例を示します。
 
-  前: 
+  次の処理の前
 
-  ![ComboBox コントロールのスクリーンショット。ドロップダウンの矢印が見えません。](./media/whats-new-in-accessibility/combo-box-style-key-before.png) 
+  ![ComboBox コントロールのスクリーンショット。ドロップダウンの矢印が見えません。](./media/whats-new-in-accessibility/combo-box-style-key-before.png)
 
-  後: 
+  後:
 
-  ![ComboBox コントロールのスクリーンショット。ドロップダウンの矢印が見えます。](./media/whats-new-in-accessibility/combo-box-style-key-after.png) 
+  ![ComboBox コントロールのスクリーンショット。ドロップダウンの矢印が見えます。](./media/whats-new-in-accessibility/combo-box-style-key-after.png)
 
 - <xref:System.Windows.Controls.DataGrid> コントロール
 
   .NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> コントロールの並べ替えインジケーターで正しいテーマ色が使われるようになりました。 次に例を示します。
 
-  前: 
+  次の処理の前
 
-  ![並べ替えインジケーター矢印のスクリーンショット (機能改善前)](./media/whats-new-in-accessibility/sort-indicator-before.png) 
+  ![並べ替えインジケーター矢印のスクリーンショット (機能改善前)](./media/whats-new-in-accessibility/sort-indicator-before.png)
 
-  後:   
+  後:
 
-  ![並べ替えインジケーター矢印のスクリーンショット (機能改善後)](./media/whats-new-in-accessibility/sort-indicator-after.png) 
+  ![並べ替えインジケーター矢印のスクリーンショット (機能改善後)](./media/whats-new-in-accessibility/sort-indicator-after.png)
 
   また、.NET Framework 4.7 以前のバージョンでは、ハイ コントラスト モードでカーソルを合わせたとき、既定のリンク スタイルが正しくない色に変化しました。 これは .NET Framework 4.7.1 以降で修正されています。 同様に、.NET Framework 4.7.1 以降、<xref:System.Windows.Controls.DataGrid> チェックボックス列でキーボード フォーカス フィードバックに既定の色が使用されます。
 
-  前: 
+  次の処理の前
 
-  ![リンクのスクリーンショット。"Click Me!" という文字を 赤色で確認できます。](./media/whats-new-in-accessibility/default-link-style-before.png) 
+  ![リンクのスクリーンショット。"Click Me!" という文字を 赤色で確認できます。](./media/whats-new-in-accessibility/default-link-style-before.png)
 
-  後:    
+  後:
 
-  ![リンクのスクリーンショット。"Click Me!" という文字を 黄色で確認できます。](./media/whats-new-in-accessibility/default-link-style-after.png) 
+  ![リンクのスクリーンショット。"Click Me!" という文字を 黄色で確認できます。](./media/whats-new-in-accessibility/default-link-style-after.png)
 
 .NET Framework 4.7.1 での WPF アクセシビリティ機能改善の詳細については、「[WPF でのアクセシビリティの向上](../migration-guide/retargeting/4.7-4.7.1.md#accessibility-improvements-in-wpf)」を参照してください。
 
@@ -579,13 +579,13 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - 無効になっているテキストが読みやすくなりました。 次に例を示します。
 
-  前:
+  次の処理の前
 
-  ![ハイ コントラスト モードでさまざまなコントロールを使用するアプリのスクリーンショット (アクセシビリティ前)。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png) 
+  ![ハイ コントラスト モードでさまざまなコントロールを使用するアプリのスクリーンショット (アクセシビリティ前)。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-before.png)
 
   後:
 
-  ![ハイ コントラスト モードでさまざまなコントロールを使用するアプリのスクリーンショット (アクセシビリティ後)。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png) 
+  ![ハイ コントラスト モードでさまざまなコントロールを使用するアプリのスクリーンショット (アクセシビリティ後)。](./media/whats-new-in-accessibility/high-contrast-mode-menu-items-after.png)
 
 - スレッド例外ダイアログのハイ コントラストが改善されました。
 
@@ -707,6 +707,6 @@ peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)
 
 - ハイ コントラスト テーマを選ぶと、要素間のコントラスト比の向上や、フォーカス要素に使われる選択ボックスの認識性の向上など、ワークフロー デザイナーとそのコントロールの表示について多くの点が向上していることがわかります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework の新機能](index.md)

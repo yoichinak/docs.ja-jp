@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
 ms.date: 02/24/2020
-ms.openlocfilehash: cf41ee09244faad03feb8ccda19135b8c7780106
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157000"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146556"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,7 +20,7 @@ ms.locfileid: "78157000"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration] 
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
     [-f|--framework] [--force] [--interactive] [--manifest]
     [--no-build] [--no-dependencies] [--no-restore] [--nologo]
     [-o|--output] [-r|--runtime] [--self-contained]
@@ -48,7 +48,7 @@ dotnet publish [-h|--help]
   
   * `PROJECT` は、[C#](csproj.md)、F#、または Visual Basic のプロジェクト ファイルのパスおよびファイル名か、C#、F#、または Visual Basic のプロジェクト ファイルを含むディレクトリへのパスです。 ディレクトリが指定されていない場合は、既定で現在のディレクトリに設定されます。
 
-  * `SOLUTION` は、ソリューション ファイルのパスとファイル名 ( *.sln* 拡張子)、またはソリューション ファイルを含むディレクトリのパスです。 ディレクトリが指定されていない場合は、既定で現在のディレクトリに設定されます。 **.NET Core 3.0 SDK 以降で使用できます。** 
+  * `SOLUTION` は、ソリューション ファイルのパスとファイル名 ( *.sln* 拡張子)、またはソリューション ファイルを含むディレクトリのパスです。 ディレクトリが指定されていない場合は、既定で現在のディレクトリに設定されます。 .NET Core 3.0 SDK 以降で使用できます。
 
 ## <a name="options"></a>オプション
 
@@ -68,9 +68,9 @@ dotnet publish [-h|--help]
 
   コマンドの短いヘルプを印刷します。
 
-- **`--interactive`** **.NET Core 3.0 SDK 以降で使用できます。**
+- **`--interactive`**
 
-  コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 
+  コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
 
 - **`--manifest <PATH_TO_MANIFEST_FILE>`**
 
@@ -84,9 +84,9 @@ dotnet publish [-h|--help]
 
   プロジェクト間参照を無視し、ルート プロジェクトのみを復元します。
 
-- **`--nologo`** **.NET Core 3.0 SDK 以降で使用できます。**
+- **`--nologo`**
 
-  著作権情報を表示しません。 
+  著作権情報を表示しません。 .NET Core 3.0 SDK 以降で使用できます。
 
 - **`--no-restore`**
 
@@ -102,9 +102,9 @@ dotnet publish [-h|--help]
 
   アプリケーションと一緒に .NET Core ランタイムを発行します。これにより、ランタイムをターゲット コンピューターにインストールする必要がなくなります。 ランタイム識別子が指定されている場合、既定値は `true` です。 詳細については、[.NET Core アプリケーションの発行](../deploying/index.md)に関する記事と「[.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)」を参照してください。
 
-- **`--no-self-contained`** **.NET Core 3.0 SDK 以降で使用できます。**
+- **`--no-self-contained`**
 
-  これは、`--self-contained false` に相当します。
+  これは、`--self-contained false` に相当します。 .NET Core 3.0 SDK 以降で使用できます。
 
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -112,7 +112,7 @@ dotnet publish [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+  コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 既定値は `minimal`にする必要があります。
 
 - **`--version-suffix <VERSION_SUFFIX>`**
 

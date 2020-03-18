@@ -7,11 +7,11 @@ no-loc:
 - dotnet list package
 ms.date: 02/25/2020
 ms.openlocfilehash: 367be7eb04d58bffc0846de1d035a5801e8d9376
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157246"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398041"
 ---
 # <a name="manage-dependencies-in-net-core-applications"></a>.NET Core アプリケーションの依存関係を管理する
 

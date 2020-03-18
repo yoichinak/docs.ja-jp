@@ -2,12 +2,12 @@
 title: フォルダー内のテキスト ファイルの内容にクエリを実行する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: f5b4dce7-1a34-4eb4-9bf1-60d5bdda264c
-ms.openlocfilehash: 9487e00ac4cb69180ad3744183a3ef8467cbac28
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 998fddd3f59ee64df9adcee1acc720d82861c3d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347679"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168740"
 ---
 # <a name="how-to-query-the-contents-of-text-files-in-a-folder-linq-c"></a>フォルダー内のテキスト ファイルの内容にクエリを実行する方法 (LINQ) (C#)
 この例では、指定したディレクトリ ツリーに含まれるすべてのファイルを照会し、個々のファイルを開いて、その内容を調べています。 同様の手法を使えば、ディレクトリ ツリーの内容に対するインデックスや逆インデックスを作成することもできます。 この例で行っているのは単純な文字列検索です。 しかし正規表現を使うと、もっと複雑なパターン マッチングを行うことができます。 詳細については、「[LINQ クエリと正規表現を組み合わせる方法 (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)」を参照してください。  
@@ -59,7 +59,7 @@ class QueryContents
     {  
         string fileContents = String.Empty;  
   
-        // If the file has been deleted since we took   
+        // If the file has been deleted since we took
         // the snapshot, ignore it and return the empty string.  
         if (System.IO.File.Exists(name))  
         {  
@@ -73,7 +73,7 @@ class QueryContents
 ## <a name="compiling-the-code"></a>コードのコンパイル  
 System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)
 - [LINQ to Objects (C#)](./linq-to-objects.md)

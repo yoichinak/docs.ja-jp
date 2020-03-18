@@ -4,12 +4,12 @@ description: C# ライブラリやアプリケーションでの継承の使用�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b69da841c7c7a2e518191ad34f2ff5b368899728
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120129"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156754"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -36,7 +36,7 @@ ms.locfileid: "73120129"
 
 *継承*とは、オブジェクト指向プログラミングの基本的な属性の 1 つです。 親クラスの動作を再利用 (継承)、拡張、または変更する子クラスを定義することができます。 メンバーの継承元となるクラスを、*基底クラス*と呼びます。 基底クラスのメンバーを継承するクラスを、*派生クラス*と呼びます。
 
-C# と .NET は*単一継承*のみをサポートしています。 つまり、1 つのクラスは、1 つのクラスからしか継承できないことになります。 ただし継承は推移的であり、一連の型の継承階層を定義することができます。 たとえば、`D` 型は `C` 型から継承でき、この `C` 型は `B` 型から継承され、この `B` 型は基底クラスである `A` 型から継承されます。 継承が推移的であるため、`A` 型のメンバーは `D` 型で使用できます。
+C# と .NET は*単一継承*のみをサポートしています。 つまり、1 つのクラスは、1 つのクラスからしか継承できないことになります。 ただし継承は推移的であり、一連の型の継承階層を定義することができます。 たとえば、`D` 型は `C` 型から継承でき、この C 型は `B` 型から継承され、この B 型は基底クラスである `A` 型から継承されます。 継承が推移的であるため、`A` 型のメンバーは `D` 型で使用できます。
 
 基底クラスのすべてのメンバーが、派生クラスによって継承されるわけではありません。 以下のメンバーは継承されません。
 
@@ -142,7 +142,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 | 型のカテゴリ | 暗黙的な継承元                                                      |
 | ------------- | ----------------------------------------------------------------------------- |
 | class         | <xref:System.Object>                                                          |
-| struct        | <xref:System.ValueType>、 <xref:System.Object>                                 |
+| struct        | <xref:System.ValueType>、<xref:System.Object>                                 |
 | enum          | <xref:System.Enum>、<xref:System.ValueType>、<xref:System.Object>             |
 | delegate      | <xref:System.MulticastDelegate>、<xref:System.Delegate>、<xref:System.Object> |
 
@@ -291,7 +291,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
-次の例では、`Shape` から派生したオブジェクトを使用しています。 ここでは `Shape` から派生したオブジェクトの配列をインスタンス化して、`Shape` クラスの静的メソッドを呼び出します。これにより、返された `Shape` のプロパティ値がラップされます。 ランタイムは、派生型のオーバーライドされたプロパティから値を取得します。 この例ではまた、配列内の `Shape` オブジェクトをそれぞれの派生型にキャストし、キャストが成功すると、その特定の `Shape` サブクラスのプロパティを取得します。 
+次の例では、`Shape` から派生したオブジェクトを使用しています。 ここでは `Shape` から派生したオブジェクトの配列をインスタンス化して、`Shape` クラスの静的メソッドを呼び出します。これにより、返された `Shape` のプロパティ値がラップされます。 ランタイムは、派生型のオーバーライドされたプロパティから値を取得します。 この例ではまた、配列内の `Shape` オブジェクトをそれぞれの派生型にキャストし、キャストが成功すると、その特定の `Shape` サブクラスのプロパティを取得します。
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#3)]
 

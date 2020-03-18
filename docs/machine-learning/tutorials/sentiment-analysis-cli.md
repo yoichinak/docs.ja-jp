@@ -5,13 +5,13 @@ author: cesardl
 ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc
-ms.topic: tutorial
-ms.openlocfilehash: 38ca93f62a066bade988a89b704fca26368b0b2b
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.topic: tutorial,mlnet-tooling
+ms.openlocfilehash: d817e173239d2848fb16e94cca8ead563bc900a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77504151"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187620"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI を使用してセンチメントを分析する
 

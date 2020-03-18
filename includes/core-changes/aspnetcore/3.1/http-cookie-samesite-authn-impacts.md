@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 02602c70689a6d2729e03d3d7230cda5ae7a4994
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: 3cc07eef109b9096bc5a5fbcd1ea098a23b2155f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901678"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78968344"
 ---
 ### <a name="http-browser-samesite-changes-impact-authentication"></a>HTTP:ブラウザー SameSite の変更による認証への影響
 
@@ -83,35 +83,35 @@ Electron の複数のバージョンには、Chromium の古いバージョン�
 ```csharp
 private void CheckSameSite(HttpContext httpContext, CookieOptions options)
 {
-    if (options.SameSite == SameSiteMode.None) 
-    { 
+    if (options.SameSite == SameSiteMode.None)
+    {
         var userAgent = httpContext.Request.Headers["User-Agent"].ToString();
-        // TODO: Use your User Agent library of choice here. 
-        if (/* UserAgent doesn't support new behavior */) 
-        { 
+        // TODO: Use your User Agent library of choice here.
+        if (/* UserAgent doesn't support new behavior */)
+        {
             options.SameSite = SameSiteMode.Unspecified;
         }
     }
 }
 
-public void ConfigureServices(IServiceCollection services) 
-{ 
-    services.Configure<CookiePolicyOptions>(options => 
-    { 
+public void ConfigureServices(IServiceCollection services)
+{
+    services.Configure<CookiePolicyOptions>(options =>
+    {
         options.MinimumSameSitePolicy = SameSiteMode.Unspecified;
         options.OnAppendCookie = cookieContext =>
             CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
         options.OnDeleteCookie = cookieContext =>
             CheckSameSite(cookieContext.Context, cookieContext.CookieOptions);
-    }); 
-} 
+    });
+}
 
-public void Configure(IApplicationBuilder app) 
-{ 
+public void Configure(IApplicationBuilder app)
+{
     // Before UseAuthentication or anything else that writes cookies.
     app.UseCookiePolicy();
 
-    app.UseAuthentication(); 
+    app.UseAuthentication();
     // code omitted for brevity
 }
 ```
@@ -121,10 +121,10 @@ public void Configure(IApplicationBuilder app)
 `Microsoft.AspNetCore.SuppressSameSiteNone` 互換性スイッチを使用すると、新しい ASP.NET Core Cookie の動作を一時的にオプトアウトできます。 プロジェクトの *runtimeconfig.template.json* ファイルに次の JSON を追加します。
 
 ```json
-{ 
-  "configProperties": { 
-    "Microsoft.AspNetCore.SuppressSameSiteNone": "true" 
-  } 
+{
+  "configProperties": {
+    "Microsoft.AspNetCore.SuppressSameSiteNone": "true"
+  }
 }
 ```
 

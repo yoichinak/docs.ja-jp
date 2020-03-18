@@ -4,11 +4,11 @@ description: .NET のドキュメントで使われている用語からいく�
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
 ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160093"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398749"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -36,7 +36,7 @@ ASP.NET は、ASP.NET Core を含む ASP.NET の両方の実装を指す包括�
 
 [ASP.NET Core のドキュメント](/aspnet/#pivot=core)をご覧ください。
 
-## <a name="assembly"></a>アセンブリ
+## <a name="assembly"></a>アセンブリ (assembly)
 
 アプリケーションまたは他のアセンブリから呼び出すことができる API のコレクションを含む *.dll*/ *.exe* ファイル。
 
@@ -116,9 +116,9 @@ Just-In-Time コンパイラ。
 
 .NET の実装には次のものが含まれます。
 
-- 1 つまたは複数のランタイム。 次に例を示します。 CLR、CoreCLR、CoreRT。
+- 1 つまたは複数のランタイム。 たとえば、CLR、CoreCLR CoreRT などです。
 - .NET Standard の 1 つのバージョンを実装し、他の API を含むことができるクラス ライブラリ。 たとえば、.NET Framework 基本クラス ライブラリや .NET Core 基本クラス ライブラリなどです。
-- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework には ASP.NET、Windows フォーム、WPF が含まれます。
+- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 たとえば、.NET Framework には ASP.NET、Windows フォーム、WPF が含まれます。
 - 必要に応じて、開発ツール。 一部の開発ツールは、複数の実装間で共有されます。
 
 .NET の実装の例:
@@ -127,7 +127,7 @@ Just-In-Time コンパイラ。
 - [.NET Core](#net-core)
 - [ユニバーサル Windows プラットフォーム (UWP)](#uwp)
 
-## <a name="library"></a>ライブラリ
+## <a name="library"></a>library
 
 アプリまたは他のライブラリで呼び出すことができる API のコレクション。 .NET ライブラリは 1 つ以上の[アセンブリ](#assembly)で構成されます。
 
@@ -205,7 +205,7 @@ UWP は、.NET Native によってサポートされる最初のアプリケー�
 
 このテクノロジは、永続的な JIT コンパイラと考えることができます。 通常はコードが実行されるコンピューター上でコードをコンパイルしますが、一般にコンパイルはインストール時に行われます。
 
-## <a name="package"></a>package
+## <a name="package"></a>パッケージ
 
 NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同じ名前の 1 つまたは複数のアセンブリと、作成者名などの追加メタデータを含む、 *.zip* ファイルです。
 
@@ -237,7 +237,7 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 - "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。"
 - "複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。" (.NET Standard を指している場合)
-- "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。 … .NET ランタイムの各バージョンは、サポートしている .NET Standard の最高のバージョンをアドバタイズします …"
+- "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。 ... .NET ランタイムの各バージョンは、サポートしている .NET Standard の最高のバージョンをアドバタイズします …"
 
 このような一貫性のない使用法は除去される予定です。
 
@@ -247,7 +247,7 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 ".NET スタック" は、.NET Standard および .NET のすべての実装を指します。 ".NET スタック" という語句が .NET の 1 つの実装を示すこともあります。
 
-## <a name="target-framework"></a>ターゲット フレームワーク
+## <a name="target-framework"></a>対象フレーム
 
 .NET アプリまたはライブラリが依存する API のコレクション。
 
@@ -271,7 +271,7 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 モノのインターネット (IoT) のために最新のタッチ対応の Windows アプリケーションとソフトウェアを構築するために使われる .NET の実装。 PC、タブレット、ファブレット、携帯電話、Xbox など、ターゲットにする可能性があるさまざまな種類のデバイスを統一するように設計されています。 UWP は、一元的なアプリ ストア、実行環境 (AppContainer)、Win32 の代わりに使う Windows API のセット (WinRT) など、多くのサービスを提供します。 アプリは、C++、C#、Visual Basic、および JavaScript で記述することができます。 C# と Visual Basic を使うときは、.NET Core によって .NET API が提供されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET のガイド](index.md)
 - [.NET Framework ガイド](../framework/index.md)

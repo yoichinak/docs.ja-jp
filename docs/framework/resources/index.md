@@ -12,10 +12,10 @@ helpviewer_keywords:
 - localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 ms.openlocfilehash: f7db871c6643973ab18a5bb6bbfac7ab85a11a76
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75346747"
 ---
 # <a name="resources-in-net-apps"></a>.NET アプリのリソース

@@ -8,18 +8,18 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: 6113912f176d2d7b68c77ff2e78a361b373ca31a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77634639"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847730"
 ---
 # <a name="structure-types-c-reference"></a>構造体型 (C# リファレンス)
 
 "*構造体型*" (または "*構造体型*") とは、データおよび関連する機能をカプセル化できる[値の型](value-types.md)です。 構造体型を定義するには、`struct` キーワードを使用します。
 
-[!code-csharp[struct example](~/samples/csharp/language-reference/builtin-types/StructType.cs#StructExample)]
+[!code-csharp[struct example](snippets/StructType.cs#StructExample)]
 
 構造体型には、"*値のセマンティクス*" があります。 つまり、構造体型の変数には、型のインスタンスが含まれます。 既定では、変数値が代入時にコピーされ、引数がメソッドに渡され、メソッドの結果が返されます。 構造体型の変数の場合は、型のインスタンスがコピーされます。 詳細については、[値の型](value-types.md)に関するページを参照してください。
 
@@ -47,7 +47,7 @@ C# では、宣言された変数を使用するには、事前にこれを初�
 
 構造体型のすべてのインスタンス フィールドにアクセスできる場合は、それを `new` 演算子なしでインスタンス化することもできます。 その場合は、インスタンスを初めて使用する前に、すべてのインスタンス フィールドを初期化する必要があります。 その方法を次の例に示します。
 
-[!code-csharp[without new](~/samples/csharp/language-reference/builtin-types/StructType.cs#WithoutNew)]
+[!code-csharp[without new](snippets/StructType.cs#WithoutNew)]
 
 [組み込みの値型](value-types.md#built-in-value-types)の場合は、対応するリテラルを使用して型の値を指定します。
 
