@@ -4,10 +4,10 @@ description: .NET ファミリのテクノロジの概要です。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
 ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124222"
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
@@ -46,7 +46,7 @@ ms.locfileid: "77124222"
 - [.NET Core のガイド](core/index.md)
 - [.NET Framework ガイド](framework/index.md)
 - [C# のガイド](csharp/index.yml)
-- [F# のガイド](fsharp/index.yml)
+- [F# Guide (F# ガイド)](fsharp/index.yml)
 - [Visual Basic のガイド](visual-basic/index.yml)
 - [ML.NET ガイド](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)

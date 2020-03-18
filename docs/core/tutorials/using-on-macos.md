@@ -3,10 +3,10 @@ title: 'チュートリアル: macOS での Visual Studio Code を使用した .
 description: このドキュメントでは、Visual Studio Code を使用して .NET Core ソリューションを作成する手順とワークフローを説明します。
 ms.date: 12/19/2019
 ms.openlocfilehash: f5da16d413ddc25587ff35550fe9f308dc87f4bb
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156596"
 ---
 # <a name="tutorial-create-a-net-core-solution-in-macos-using-visual-studio-code"></a>チュートリアル: macOS での Visual Studio Code を使用した .NET Core ソリューションの作成
@@ -28,7 +28,7 @@ Visual Studio Code C# 拡張機能をインストールするには、Visual Stu
 
 このチュートリアルでは 3 つのプロジェクト (ライブラリ プロジェクト、そのライブラリ プロジェクトのテスト、およびライブラリを使用するコンソール アプリケーション) を作成します。 GitHub の dotnet/samples レポジトリで、この記事の[ソースを表示またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)することができます。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
-Visual Studio Code を開始します。 <kbd>Ctrl</kbd><kbd>\`</kbd> (バッククォートまたはアクサン グラーブ) キーを押すか、メニューから **[表示]** 、 **[ターミナル]** の順に選択し、Visual Studio Code で埋め込みターミナルを開きます。 Visual Studio Code の外部で作業を行う場合は、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (macOS または Linux の場合は **[ターミナルで開く]** ) を使用して外部シェルを開くこともできます。
+Visual Studio Code を開始します。 <kbd>Ctrl</kbd><kbd>\`</kbd> (バッククォートまたはアクサン グラーブ) キーを押すか、メニューから **[表示]**  >  **[ターミナル]** の順に選択し、Visual Studio Code で埋め込みターミナルを開きます。 Visual Studio Code の外部で作業を行う場合は、エクスプローラーの **[コマンド プロンプトで開く]** コマンド (macOS または Linux の場合は **[ターミナルで開く]** ) を使用して外部シェルを開くこともできます。
 
 1 つ以上の .NET Core プロジェクトのコンテナーとして機能する、ソリューション ファイルの作成を開始します。 ターミナル内で、[`dotnet new`](../tools/dotnet-new.md) コマンドを実行し、*golden* という名前の新しいフォルダー内に、新しいソリューション *golden.sln* を作成します。
 
@@ -212,7 +212,7 @@ dotnet run -p app/app.csproj
 
 `Main` メソッドの `WriteLine` ステートメントにブレークポイントを設定します。 そのためには、カーソルが `WriteLine` 行にある状態で <kbd>Fn</kbd>+<kbd>F9</kbd> キーを押すか、ブレークポイントを設定する行の左余白でマウスをクリックします。 コード行の横の余白に赤い丸が表示されます。 ブレークポイントに達した場合、ブレークポイント行が実行される*前*にコードの実行が停止します。
 
-Visual Studio Code ツール バーでデバッグ アイコンを選択するか、メニュー バーから **[表示]** 、 **[デバッグ]** の順に選択するか、あるいはキーボード ショートカットの <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd> を使用して、デバッガー タブを開きます。
+Visual Studio Code ツール バーでデバッグ アイコンを選択するか、メニュー バーから **[表示]**  >  **[デバッグ]** の順に選択するか、あるいはキーボード ショートカットの <kbd>&#8679;</kbd><kbd>&#8984;</kbd><kbd>D</kbd> を使用して、デバッガー タブを開きます。
 
 ![Visual Studio Code デバッガー](./media/using-on-macos/visual-studio-code-debugger.png)
 

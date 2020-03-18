@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 51b3c1b3e3d61b23a0511ca807afef0269ac9ee4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77466121"
 ---
 
@@ -30,7 +30,7 @@ SDK またはランタイムを選択します。 有効なオプションは次
 
   ダウンロードしようとしている SDK/ランタイムが Linux ディストリビューションで使用できない可能性があります。 サポートされているディストリビューションの一覧については、「[.NET Core の依存関係と要件](../dependencies.md?pivots=os-linux)」を参照してください。
 
-### <a name="examples"></a>使用例
+### <a name="examples"></a>例
 
 - ASP.NET Core 3.1 ランタイムをインストールする: `aspnetcore-runtime-3.1`
 - .NET Core 2.1 ランタイムをインストールする: `dotnet-runtime-2.1`

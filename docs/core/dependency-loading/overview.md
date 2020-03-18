@@ -6,10 +6,10 @@ author: sdmaclea
 ms.author: stmaclea
 ms.topic: overview
 ms.openlocfilehash: f6b5fc1f92171b61dcab162b782ca7212c602d76
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73416679"
 ---
 # <a name="dependency-loading-in-net-core"></a>.NET Core での依存関係の読み込み

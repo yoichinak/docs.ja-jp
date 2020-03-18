@@ -11,10 +11,10 @@ helpviewer_keywords:
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160223"
 ---
 # <a name="managed-execution-process"></a>マネージド実行プロセス
@@ -40,9 +40,9 @@ ms.locfileid: "78160223"
 ## <a name="choosing-a-compiler"></a>コンパイラを選択します  
  共通言語ランタイム (CLR: Common Language Runtime) によって提供される機能を活用するには、Visual Basic、C#、Visual C++、F# などのランタイムに対応した言語コンパイラか、Eiffel、Perl、COBOL などのサードパーティのコンパイラを使用する必要があります。  
   
- 共通言語ランタイムは多言語実行環境であるため、さまざまなデータ型と言語機能をサポートしています。 使用する言語コンパイラによって、利用できる共通言語ランタイムの機能が決まり、その機能を使用してコードをデザインすることになります。 記述するコードの構文を決定するのは、共通言語ランタイムではなく、使用するコンパイラです。 作成したコンポーネントを他の言語で記述されたコンポーネントでも完全に使用できるようにするためには、そのコンポーネントからエクスポートされた型が、 [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) に規定されている言語機能だけを公開するようにする必要があります。 <xref:System.CLSCompliantAttribute> 属性を使用することにより、コードを確実に CLS に準拠させることができます。 詳細については、「 [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)」を参照してください。  
+ 共通言語ランタイムは多言語実行環境であるため、さまざまなデータ型と言語機能をサポートしています。 使用する言語コンパイラによって、利用できる共通言語ランタイムの機能が決まり、その機能を使用してコードをデザインすることになります。 記述するコードの構文を決定するのは、共通言語ランタイムではなく、使用するコンパイラです。 作成したコンポーネントを他の言語で記述されたコンポーネントでも完全に使用できるようにするためには、そのコンポーネントからエクスポートされた型が、 [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) に規定されている言語機能だけを公開するようにする必要があります。 <xref:System.CLSCompliantAttribute> 属性を使用することにより、コードを確実に CLS に準拠させることができます。 詳しくは、「[言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)」を参照してください。  
   
- [ページのトップへ](#introduction)  
+ [先頭に戻る](#introduction)  
   
 <a name="compiling_to_msil"></a>
 ## <a name="compiling-to-msil"></a>MSIL へのコンパイル  
@@ -50,7 +50,7 @@ ms.locfileid: "78160223"
   
  コンパイラは、MSIL を生成するときにメタデータも生成します。 メタデータには、コード内の型について、それぞれの型の定義、型のメンバーのシグネチャ、コードが参照するメンバー、共通言語ランタイムが実行時に使用するその他のデータなどが記述されています。 MSIL とメタデータは、実行可能ファイルのファイル形式として使用されてきた従来の Microsoft PE と COFF (Common Object File Format) に基づき、それらを拡張した移植可能な実行可能 (PE: Portable Executable) ファイルに格納されます。 MSIL、ネイティブ コード、およびメタデータを保存できるこのファイル形式を使用すると、オペレーティング システムが共通言語ランタイムのイメージを認識できるようになります。 MSIL と共にメタデータがこのファイルに格納されるため、コードは自己記述型になります。つまり、タイプ ライブラリまたはインターフェイス定義言語 (IDL: Interface Definition Language) は必要ありません。 共通言語ランタイムは、実行時にこのファイルから必要に応じてメタデータを検出および抽出します。  
   
- [ページのトップへ](#introduction)  
+ [先頭に戻る](#introduction)  
   
 <a name="compiling_msil_to_native_code"></a>
 ## <a name="compiling-msil-to-native-code"></a>MSIL からネイティブ コードにコンパイルします  
@@ -87,7 +87,7 @@ ms.locfileid: "78160223"
   
  検証プロセスでは、MSIL コードが調べられ、適切に定義された型だけを使用してメモリ位置にアクセスしたりメソッドを呼び出したりするかどうかが確認されます。 たとえば、オブジェクトのフィールドにアクセスするときにメモリ位置をオーバーランできるようなコードは許可されません。 また、不正な MSIL があるとタイプ セーフ規則に違反する可能性があるため、MSIL が正しく生成されているかどうかも調べられます。 検証プロセスは適切に定義されたタイプ セーフ コードのセットを許可します。許可されるコードはタイプ セーフなコードだけです。 ただし、タイプ セーフなコードの中にも、検証プロセスの制約事項のために検証を通過しないコードがあります。また、言語によっては、デザイン上、検証可能なタイプ セーフ コードが生成されない場合もあります。 セキュリティ ポリシーがタイプ セーフなコードを必要とするにもかかわらず、コードが検証を通過しない場合には、そのコードの実行時に例外がスローされます。  
   
- [ページのトップへ](#introduction)  
+ [先頭に戻る](#introduction)  
   
 <a name="running_code"></a>
 ## <a name="running-code"></a>コードを実行します  
@@ -103,9 +103,9 @@ ms.locfileid: "78160223"
   
  64 ビット Windows では、 `_CorValidateImage` は、メモリ内のイメージを PE32 から PE32+ 形式に変換することによって変更します。  
   
- [ページのトップへ](#introduction)  
+ [先頭に戻る](#introduction)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [概要](../../docs/framework/get-started/overview.md)
 - [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)
@@ -113,6 +113,6 @@ ms.locfileid: "78160223"
 - [Ilasm.exe (IL アセンブラー)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
 - [セキュリティ](../../docs/standard/security/index.md)
 - [アンマネージ コードとの相互運用](../../docs/framework/interop/index.md)
-- [配置](../../docs/framework/deployment/net-framework-applications.md)
+- [展開](../../docs/framework/deployment/net-framework-applications.md)
 - [.NET のアセンブリ](assembly/index.md)
 - [アプリケーション ドメイン](../../docs/framework/app-domains/application-domains.md)

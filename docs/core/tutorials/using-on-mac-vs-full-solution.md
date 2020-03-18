@@ -2,12 +2,12 @@
 title: Visual Studio for Mac を使用した完全な .NET Core ソリューションの構築
 description: この記事では、再利用可能なライブラリと単体テストを含む .NET Core ソリューションの構築方法を示します。
 ms.date: 12/19/2019
-ms.openlocfilehash: dea23da33912de849f0dcbe1e2f6fa3edb3a5e24
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 8c9fcca404a3875b6bb7f9cf20551a017ff553c5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215199"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78239964"
 ---
 # <a name="build-a-complete-net-core-solution-on-macos-using-visual-studio-for-mac"></a>Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築
 
@@ -42,7 +42,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
 1. **[ソリューション]** パッドで、`TextUtils` ノードを展開し、テンプレートで提供される *Class1.cs* というクラス ファイルを表示します。 Ctrl キーを押しながらそのファイルをクリックし、コンテキスト メニューから **[名前の変更]** を選択して、ファイル名を *WordCount.cs* に変更します。 ファイルを開き、内容を次のコードに置き換えます。
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/TextUtils/WordCount.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/TextUtils/WordCount.cs)]
 
 1. ファイルを保存します。その場合、3 つの異なる方法 (キーボード ショートカット <kbd>&#8984;</kbd>+<kbd>s</kbd> を使用する、メニューから **[ファイル]**  >  **[保存]** の順に選択する、Ctrl キーを押しながらファイルのタブをクリックしてコンテキスト メニューから **[保存]** を選択する) のいずれかを使用します。 次のイメージは IDE ウィンドウを示しています。
 
@@ -175,7 +175,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
 1. *Program.cs* ファイルを開きます。 このコードを次のコードに置き換えます。
 
-   [!code-csharp[Main](../../../samples/core/tutorials/using-on-mac-vs-full-solution/WordCounter/WordCounterApp/Program.cs)]
+   [!code-csharp[Main](../../../samples/snippets/core/tutorials/using-on-mac-vs-full-solution/csharp/WordCounterApp/Program.cs)]
 
 1. Ctrl キーを押しながら `WordCounterApp` プロジェクトをクリックし、コンテキスト メニューから **[プロジェクトの実行]** を選択します。 アプリを実行する際に、コンソール ウィンドウで入力を求めるメッセージが表示されたら、検索語と入力文字列の値を入力します。 アプリには、文字列での検索語の表示回数が示されます。
 

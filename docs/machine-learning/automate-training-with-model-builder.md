@@ -2,13 +2,13 @@
 title: モデル ビルダーの概要としくみ
 description: ML.NET モデル ビルダーを使用し、機械学習モデルを自動的にトレーニングする方法
 ms.date: 01/07/2020
-ms.custom: overview
-ms.openlocfilehash: ac704b7961a8442a9174cdef5a4cd2a619236a4e
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.custom: overview, mlnet-tooling
+ms.openlocfilehash: cff4601843ec9ca7201ea7dbdbfbcfa18f50e46e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75777403"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397807"
 ---
 # <a name="what-is-model-builder-and-how-does-it-work"></a>モデル ビルダーの概要としくみ
 
@@ -159,7 +159,7 @@ ML.NET モデル ビルダーは、直観的なグラフィックスでカスタ
 
 評価は、モデルがどのくらい適切かを測定するプロセスです。 モデル ビルダーは、トレーニングしたモデルを使用して新しいテスト データで予測し、予測の精度を測定します。
 
-モデル ビルダーでは、トレーニング セットとテスト セットにトレーニング データが分割されます。 トレーニング データ (80%) はモデルのトレーニングに使用されます。テスト データ (20%) はモデルの評価のための控えとなります。 
+モデル ビルダーでは、トレーニング セットとテスト セットにトレーニング データが分割されます。 トレーニング データ (80%) はモデルのトレーニングに使用されます。テスト データ (20%) はモデルの評価のための控えとなります。
 
 ### <a name="how-do-i-understand-my-model-performance"></a>モデルのパフォーマンスを把握するには
 

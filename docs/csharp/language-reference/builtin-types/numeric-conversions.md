@@ -9,11 +9,11 @@ helpviewer_keywords:
 - conversions [C#], implicit numeric
 - conversions [C#], explicit numeric
 ms.openlocfilehash: 5380e8480c39d1940df13b2ecb50a0f394367388
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72776019"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398287"
 ---
 # <a name="built-in-numeric-conversions-c-reference"></a>組み込みの数値変換 (C# リファレンス)
 
@@ -23,7 +23,7 @@ C# では、[整数](integral-numeric-types.md)数値型と[浮動小数点](flo
 
 組み込みの数値型間の定義済みの暗黙的な変換を次の表に示します。
 
-|From|終了|
+|ソース|ターゲット|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`short`、`int`、`long`、`float`、`double`、または `decimal`|
 |[byte](integral-numeric-types.md)|`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|
@@ -31,8 +31,8 @@ C# では、[整数](integral-numeric-types.md)数値型と[浮動小数点](flo
 |[ushort](integral-numeric-types.md)|`int`、`uint`、`long`、`ulong`、`float`、`double`、または `decimal`|
 |[int](integral-numeric-types.md)|`long`、`float`、`double`、または `decimal`|
 |[uint](integral-numeric-types.md)|`long`、`ulong`、`float`、`double`、または `decimal`|
-|[long](integral-numeric-types.md)|`float`、 `double`、または `decimal`|
-|[ulong](integral-numeric-types.md)|`float`、 `double`、または `decimal`|
+|[long](integral-numeric-types.md)|`float`、`double`、または `decimal`|
+|[ulong](integral-numeric-types.md)|`float`、`double`、または `decimal`|
 |[float](floating-point-numeric-types.md)|`double`|
 
 > [!NOTE]
@@ -59,12 +59,12 @@ C# では、[整数](integral-numeric-types.md)数値型と[浮動小数点](flo
 
 次の表では、[暗黙的な変換](#implicit-numeric-conversions)がない組み込みの数値型間で事前定義されている明示的変換を示しています。
 
-|From|終了|
+|ソース|ターゲット|
 |----------|--------|
 |[sbyte](integral-numeric-types.md)|`byte`、`ushort`、`uint`、または `ulong`|
 |[byte](integral-numeric-types.md)|`sbyte`|
 |[short](integral-numeric-types.md)|`sbyte`、`byte`、`ushort`、`uint`、または `ulong`|
-|[ushort](integral-numeric-types.md)|`sbyte`、 `byte`、または `short`|
+|[ushort](integral-numeric-types.md)|`sbyte`、`byte`、または `short`|
 |[int](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、または `ulong`|
 |[uint](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、または `int`|
 |[long](integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、または `ulong`|
@@ -88,7 +88,7 @@ C# では、[整数](integral-numeric-types.md)数値型と[浮動小数点](flo
 
 - `decimal` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になった場合、<xref:System.OverflowException> がスローされます。
 
-- `double` または `float` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になる場合、結果はオーバーフロー [チェック コンテキスト](../keywords/checked-and-unchecked.md)によって変わります。 チェック済みコンテキストの場合、<xref:System.OverflowException> がスローされます。未チェック コンテキストの場合、結果は変換先の型の不特定な値になります。
+- `double` または `float` 値を整数型に変換するとき、この値は 0 方向に最も近い整数値に丸められます。 結果的に生成される整数値が変換先の型の範囲外になる場合、結果はオーバーフロー [チェック コンテキスト](../keywords/checked-and-unchecked.md)によって変わります。 チェック済みコンテキストの場合、<xref:System.OverflowException> がスローされます。未チェック コンテキストの場合、結果は変換先の型の未指定値になります。
 
 - `double` を `float` に変換すると、`double` 値は最も近い `float` 値に丸められます。 `double` 値が小さすぎるか、大きすぎて `float` 型に合わない場合、結果は 0 か無限になります。
 
@@ -107,7 +107,7 @@ C# では、[整数](integral-numeric-types.md)数値型と[浮動小数点](flo
 - [暗黙の数値変換](~/_csharplang/spec/conversions.md#implicit-numeric-conversions)
 - [明示的な数値変換](~/_csharplang/spec/conversions.md#explicit-numeric-conversions)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)

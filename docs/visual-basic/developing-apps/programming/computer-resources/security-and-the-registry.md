@@ -6,10 +6,10 @@ helpviewer_keywords:
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
 ms.openlocfilehash: 454180207d6432e80d87941d1f329f2a4ea7a801
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345481"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>セキュリティとレジストリ (Visual Basic)
@@ -26,13 +26,13 @@ ms.locfileid: "74345481"
   
  レジストリ アクセス許可のアクセス値は <xref:System.Security.Permissions.RegistryPermissionAccess> 列挙型により定義されます。 次の表はそのメンバーの詳細です。  
   
-|[値]|レジストリ変数へのアクセス|  
+|値|レジストリ変数へのアクセス|  
 |-----------|----------------------------------|  
 |`AllAccess`|作成、読み取り、書き込み|  
 |`Create`|作成|  
-|`NoAccess`|アクセス不可|  
-|`Read`|読み取り|  
-|`Write`|書き込み|  
+|`NoAccess`|アクセス権なし|  
+|`Read`|Read|  
+|`Write`|Write|  
   
 ## <a name="checking-values-in-registry-keys"></a>レジストリ キーの値のチェック  
 
@@ -41,7 +41,7 @@ ms.locfileid: "74345481"
 > [!IMPORTANT]
 > Web アプリケーションからレジストリを読み取るとき、現在のユーザーの ID は Web アプリケーションに実装されている認証と偽装によって決まります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
 - [レジストリからの読み取りとレジストリへの書き込み](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

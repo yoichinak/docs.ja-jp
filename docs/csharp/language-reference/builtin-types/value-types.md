@@ -8,24 +8,24 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 76f4a3ed929e3ac8e3e6cc74158e75af7a6c8cf2
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 406e5b8bbe0802146a65bb4b9a053e753a7827ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77625948"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398269"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
 C# 型の 2 つの主なカテゴリは、*値型*と[参照型](../keywords/reference-types.md)です。 値型の変数には、その型のインスタンスが含まれます。 これは、その型のインスタンスへの参照を含む参照型の変数とは異なります。 既定では、[代入](../operators/assignment-operator.md)時、引数がメソッドに渡され、メソッドの結果が返され、変数値がコピーされます。 値型の変数の場合、対応する型のインスタンスがコピーされます。 次の例は、その動作を示します。
 
-[!code-csharp[copy of values](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ValueTypeCopied)]
+[!code-csharp[copy of values](snippets/ValueTypes.cs#ValueTypeCopied)]
 
 前の例のとおり、値型変数に対する操作は、その変数に格納されている値型のインスタンスのみに影響します。
 
 値型に参照型のデータ メンバーが含まれている場合は、値型のインスタンスがコピーされるとき、その参照型のインスタンスへの参照のみがコピーされます。 コピーと元の値型のインスタンスの両方が、同じ参照型のインスタンスにアクセスできます。 次の例は、その動作を示します。
 
-[!code-csharp[shallow copy](~/samples/csharp/language-reference/builtin-types/ValueTypes.cs#ShallowCopy)]
+[!code-csharp[shallow copy](snippets/ValueTypes.cs#ShallowCopy)]
 
 > [!NOTE]
 > ご自分のコードをエラーがより発生しにくく、より堅牢にするには、変更できない値型を定義して使用します。 この記事では、デモンストレーションの目的でのみ、変更可能な値型を使用します。

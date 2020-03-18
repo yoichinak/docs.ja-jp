@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 95a4c807f5c1077cf52f54b196e904ebc98c32f8
-ms.sourcegitcommit: ed3f926b6cdd372037bbcc214dc8f08a70366390
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76116378"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine は古い
@@ -22,7 +22,7 @@ ms.locfileid: "76116378"
 
 #### <a name="recommended-action"></a>推奨アクション
 
-<xref:Microsoft.VisualBasic.Constants.vbNewLine> に対する[廃止](xref:System.ObsoleteAttribute)属性メッセージには、次の推奨事項が含まれています。
+[ に対する](xref:System.ObsoleteAttribute)廃止<xref:Microsoft.VisualBasic.Constants.vbNewLine>属性メッセージには、次の推奨事項が含まれています。
 
 キャリッジ リターンとライン フィードの場合は、<xref:Microsoft.VisualBasic.Constants.vbCrLf> を使用します。 現在のプラットフォームの改行の場合は、<xref:System.Environment.NewLine?displayProperty=nameWithType> を使用します。
 

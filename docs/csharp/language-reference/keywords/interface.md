@@ -7,10 +7,10 @@ helpviewer_keywords:
 - interface keyword [C#]
 ms.assetid: 7da38e81-4f99-4bc5-b07d-c986b687eeba
 ms.openlocfilehash: 473f5f8e226f0a144746ac943afcffdccd4777c7
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77625853"
 ---
 # <a name="no-loc-textinterface-c-reference"></a>:::no-loc text="interface"::: (C# リファレンス)
@@ -28,14 +28,14 @@ ms.locfileid: "77625853"
 インターフェイスには、名前空間またはクラスのメンバーを指定できます。 インターフェイス宣言には、次のメンバーの宣言を含めることができます (実装なしのシグネチャ)。
 
 - [メソッド](../../programming-guide/classes-and-structs/methods.md)
-- [プロパティ](../../programming-guide/classes-and-structs/using-properties.md)
+- [Properties](../../programming-guide/classes-and-structs/using-properties.md)
 - [インデクサー](../../programming-guide/indexers/using-indexers.md)
 - [イベント](event.md)
 
 これらのメンバー宣言には通常、本文が含まれません。 C# 8.0 以降では、インターフェイス メンバーで本文を宣言できます。 これは*既定の実装*と呼ばれています。 本文のあるメンバーでは、実装がオーバーライドされないクラスおよび構造体に "既定の" 実装を与えることがインターフェイスに許可されます。 また、C# 8.0 以降、インターフェイスには次を含めることができます。
 
 - [定数](const.md)
-- [演算子](../operators/operator-overloading.md)
+- [オペレーター](../operators/operator-overloading.md)
 - [静的コンストラクター](../../programming-guide/classes-and-structs/constructors.md#static-constructors)。
 - [入れ子にされた型](../../programming-guide/classes-and-structs/nested-types.md)
 - [静的フィールド、メソッド、プロパティ、インデクサー、イベント](static.md)
@@ -67,12 +67,12 @@ public interface INamed
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[インターフェイス](~/_csharplang/spec/interfaces.md)」セクションと [C# 8.0 の既定のインターフェイス メンバー](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)に関するページを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/interfaces.md)の「[インターフェイス](~/_csharplang/spec/introduction.md)」セクションと [C# 8.0 の既定のインターフェイス メンバー](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)に関するページを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [参照型](reference-types.md)
 - [インターフェイス](../../programming-guide/interfaces/index.md)

@@ -11,10 +11,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 49ebaeabee7a346fb84f09e5a9e34590d1ea9811
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348198"
 ---
 # <a name="how-to-find-an-assemblys-fully-qualified-name"></a>方法: アセンブリの完全修飾名を検索する

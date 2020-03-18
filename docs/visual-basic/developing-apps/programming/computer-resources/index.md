@@ -7,10 +7,10 @@ helpviewer_keywords:
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
 ms.openlocfilehash: 27310a50289b9b2c315f52ad471da1f32ef0721a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74345529"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>コンピューター リソースへのアクセス (Visual Basic)

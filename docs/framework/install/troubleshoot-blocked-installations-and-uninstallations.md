@@ -7,10 +7,10 @@ helpviewer_keywords:
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 ms.openlocfilehash: edc471ad2c389a37a2ffbf739a74d4d5d0e9696f
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "76965985"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング
@@ -31,8 +31,8 @@ Windows 8 以降では、.NET Framework はオペレーティング システム
 |Microsoft .NET Framework をアンインストールすると、一部のアプリケーションが機能しなくなる可能性があります。|一般に、コンピューターにインストールされている .NET Framework のバージョンはアンインストールしないでください。使用するアプリケーションが .NET Framework の特定のバージョンに依存している可能性があるからです。 詳しくは、*概要*ガイドの「[ユーザーにとっての .NET Framework](../get-started/index.md#ForUsers)」をご覧ください。|  
 |このコンピューターには、.4.5.x/4.6.x/4.7.x (ENU) 以降のバージョンが既にインストールされています。|アクションは必要ありません。<br /><br /> システムにインストールされている .NET Framework のバージョンを確認する方法については、「[方法:インストールされている .NET Framework バージョンを確認する](../migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 (<*言語*>) には、.NET Framework 4.5.x/4.6.x/4.7.x/4.8 が必要です。 ダウンロード センターから .NET Framework 4.5.x/4.6.x/4.7.x/4.8 をインストールして、セットアップを再実行してください。|言語パックをインストールする前に、指定された .NET Framework リリースの英語バージョンをインストールする必要があります。 詳細については、インストール ガイドの「[言語パックのインストール](guide-for-developers.md#to-install-language-packs)」を参照してください。|  
-|.NET Framework 4.5.x/4.6.x/4.7.x/4.8 をインストールできません。 このプログラムと互換性がないアプリケーションがコンピューター上に存在します。<br /><br /> - または -<br /><br /> このプログラムと互換性がないアプリケーションがコンピューター上に存在します。|このメッセージは、通常 .NET Framework のプレビューまたは RC バージョンがインストールされているために表示されます。 プレビューまたは RC バージョンをアンインストールし、セットアップを再実行します。|  
-|このパッケージを使用して .NET Framework 4.5.x/4.6.x/4.7.x/4.8 をアンインストールすることはできません。 コンピューターから .NET Framework 4.5.x/4.6.x/4.7.x/4.8 をアンインストールするには、**コントロール パネル**で **[プログラムと機能]**、**[インストールされた更新プログラムを表示]** を選択し、[Microsoft Windows (KB2828152) の更新プログラム] を選択して、**[アンインストール]** を選択します。|インストール中のパッケージでは、.NET Framework のプレビューまたは RC リリースをアンインストールできません。<br /><br /> コントロール パネルからプレビューまたは RC リリースをアンインストールします。|  
+|.NET Framework 4.5.x/4.6.x/4.7.x/4.8 をインストールできません。 このプログラムと互換性がないアプリケーションがコンピューター上に存在します。<br /><br /> \- または -<br /><br /> このプログラムと互換性がないアプリケーションがコンピューター上に存在します。|このメッセージは、通常 .NET Framework のプレビューまたは RC バージョンがインストールされているために表示されます。 プレビューまたは RC バージョンをアンインストールし、セットアップを再実行します。|  
+|このパッケージを使用して .NET Framework 4.5.x/4.6.x/4.7.x/4.8 をアンインストールすることはできません。 コンピューターから .NET Framework 4.5.x/4.6.x/4.7.x/4.8 をアンインストールするには、**コントロール パネル**で **[プログラムと機能]** 、 **[インストールされた更新プログラムを表示]** を選択し、[Microsoft Windows (KB2828152) の更新プログラム] を選択して、 **[アンインストール]** を選択します。|インストール中のパッケージでは、.NET Framework のプレビューまたは RC リリースをアンインストールできません。<br /><br /> コントロール パネルからプレビューまたは RC リリースをアンインストールします。|  
 |.NET Framework 4.5.x/4.6.x/4.7.x/4.8 をアンインストールできません。 このプログラムに依存するアプリケーションがコンピューター上に存在します。|一般に、コンピューターから .NET Framework のバージョンをアンインストールしないでください。使用するアプリケーションが .NET Framework の特定のバージョンに依存している可能性があるからです。 詳しくは、*概要*ガイドの「[ユーザーにとっての .NET Framework](../get-started/index.md#ForUsers)」をご覧ください。|  
 |再頒布可能な .NET Framework 4.5.x/4.6.x/4.7.x/4.8 は、このオペレーティング システムには適用されません。 .NET Framework ダウンロード ページから、ご使用のオペレーティング システムに対応した .NET Framework 4.5.x/4.6.x/4.7.x/4.8 をダウンロードしてください。|サポートされていないプラットフォームに .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2、4.8 をインストールしようとしている可能性があります。または、サポートされているすべてのオペレーティング システム用のコンポーネントが含まれていないインストール パッケージを選択しました。 オフライン インストーラー ([4.5.1 用](https://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2 用](https://dotnet.microsoft.com/download/dotnet-framework/net452)、[4.6 用](https://dotnet.microsoft.com/download/dotnet-framework/net46)、[4.6.1 用](https://dotnet.microsoft.com/download/dotnet-framework/net461)、[4.6.2 用](https://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7 用](https://go.microsoft.com/fwlink/p/?LinkId=825306)、[4.7.1 用](https://go.microsoft.com/fwlink/p/?LinkId=852090)、[4.7.2 用](https://dotnet.microsoft.com/download/dotnet-framework/net472)、[4.8 用](https://dotnet.microsoft.com/download/dotnet-framework/net48)) を使用してインストールを再実行します。 サポートされているオペレーティング システムの詳細については、[インストール ガイド](guide-for-developers.md)に関するページおよび[システム要件](../get-started/system-requirements.md)に関するページを参照してください。|  
 |この製品をインストールする前に、KB\<*番号*> に対応する更新プログラムがインストールされている必要があります。|.NET Framework のインストールでは、.NET Framework をインストールする前に KB の更新プログラムをインストールする必要があります。 更新プログラムをインストールしてから、.NET Framework のインストールをもう一度開始します。<br /><br /> たとえば、Windows 8.1、Windows RT 8.1、Windows Server 2012 R2 に .NET Framework の最新バージョンをインストールするには、[KB2919355](https://support.microsoft.com/kb/2919355) に対応する更新プログラムをインストールする必要があります。|  
@@ -59,9 +59,9 @@ Windows 8 以降では、.NET Framework はオペレーティング システム
 
 プログラム互換性モードでは .NET Framework インストーラーを実行できません。 このブロッキング問題を解決するには、レジストリ エディターを使用し、システム全体での互換性モードの設定が無効になるようにする必要があります。
 
-1. **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** を選択します。
+1. **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** を選択します。
 
-1. **[ファイル名を指定して実行]** ダイアログ ボックスで、「regedit」と入力し、**[OK]** をクリックします。
+1. **[ファイル名を指定して実行]** ダイアログ ボックスで、「regedit」と入力し、 **[OK]** をクリックします。
 
 1. レジストリ エディターで、次のサブキーを参照します。
 

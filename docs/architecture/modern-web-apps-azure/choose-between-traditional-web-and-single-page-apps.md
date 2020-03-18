@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
 ms.openlocfilehash: d4ed76455001c1a0b8e2e2f1bb90ce8715dd0052
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450109"
 ---
 # <a name="choose-between-traditional-web-apps-and-single-page-apps-spas"></a>従来の Web アプリケーションかシングル ページ アプリケーション (SPA) を選択する
@@ -113,8 +113,8 @@ JavaScript ベースの SPA と同様に、Blazor アプリケーションでは
 
 | **要素**                                           | **従来の Web アプリケーション** | **シングル ページ アプリケーション** | **Blazor アプリ**  |
 | ---------------------------------------------------- | ----------------------- | --------------------------- | --------------- |
-| チームに必要な JavaScript/TypeScript の精通度 | **最小限**             | **必須**                | **最小限**     |
-| スクリプトを作成せずにブラウザーをサポート                   | **サポート状況**           | **サポートされない**           | **サポート状況**   |
+| チームに必要な JavaScript/TypeScript の精通度 | **最小**             | **必須**                | **最小**     |
+| スクリプトを作成せずにブラウザーをサポート                   | **サポートされています**           | **サポートされていません**           | **サポートされています**   |
 | 最小限のクライアント側アプリケーションの動作             | **適している**         | **過剰**                | **実行可能**      |
 | 高度で複雑なユーザー インターフェイス要件            | **制限がある**             | **適している**             | **適している** |
 

@@ -4,12 +4,12 @@ description: dotnet テストおよび xUnit を使用したサンプル ソリ�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 226db54047747fbd065c64f5e4812094921c7f62
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714230"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240897"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した .NET Core での単体テスト C#
 
@@ -97,7 +97,7 @@ ms.locfileid: "75714230"
   dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
   ```
 
-* *PrimeService.Tests* プロジェクトへの依存関係として `PrimeService` クラス ライブラリを追加します。
+* `PrimeService`PrimeService.Tests*プロジェクトへの依存関係として* クラス ライブラリを追加します。
 
   ```dotnetcli
   dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeService/PrimeService.csproj  
@@ -124,7 +124,7 @@ dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 
 前のセクションの「*PrimeService.cs* 内のコードを次のコードに置き換える」の指示に従います。
 
-## <a name="create-a-test"></a>テストの作成
+## <a name="create-a-test"></a>テストを作成する
 
 テスト駆動開発 (TDD) の一般的なアプローチは、ターゲット コードを実装する前にテストを記述することです。 このチュートリアルでは、この TDD アプローチを使用します。 `IsPrime` メソッドは呼び出し可能ですが、実装されていません。 `IsPrime` のテスト呼び出しは失敗します。 TDD では、失敗することがわかっているテストを記述します。 テストに合格するように、ターゲット コードを更新します。 このアプローチを繰り返して、失敗するテストを記述した後、テストに合格するようにターゲット コードを更新します。
 
@@ -175,7 +175,7 @@ public bool IsPrime(int candidate)
 }
 ```
 
-`dotnet test` を実行します。 テストに合格します。
+`dotnet test` を実行します。 テストは成功します。
 
 ### <a name="add-more-tests"></a>さらにテストを追加する
 
@@ -205,9 +205,9 @@ public void IsPrime_InputIs1_ReturnFalse()
 }
 ```
 
-次のコードに置き換えます。
+を、以下のコードに置き換えます。
 
-[!code-csharp[Sample_TestCode](../../../samples/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
+[!code-csharp[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-using-dotnet-test/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
 上記のコードでは、`[Theory]` と `[InlineData]` によって、2 未満のいくつかの値をテストできます。 2 は最小の素数です。
 
@@ -228,7 +228,7 @@ TDD アプローチに従って、失敗するテストをさらに追加した�
 
 完成した `IsPrime` メソッドは、素数性をテストするための効率的なアルゴリズムではありません。
 
-### <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他のリソース
 
 - [xUnit.net の公式サイト](https://xunit.github.io)
 - [ASP.NET Core のコントローラー ロジックをテストする](/aspnet/core/mvc/controllers/testing)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
 ms.openlocfilehash: 5d60d0089d042c0be343c741c26de0b4b7778d6d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348945"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework のファイル I/O とファイル システムの基礎 (Visual Basic)
@@ -55,18 +55,18 @@ ms.locfileid: "74348945"
 
 - <xref:System.IO.MemoryStream>
 
-- <xref:System.Net.Sockets.NetworkStream>。
+- [https://login.microsoftonline.com/consumers/](<xref:System.Net.Sockets.NetworkStream>)
 
 次の表は、ストリームで一般的に実行するタスクの一覧です。
 
-|終了|解決方法については、|
+|ターゲット|参照先|
 |---|---|
 |データ ファイルに対する読み取りと書き込み|[方法: 新しく作成されたデータ ファイルに対して読み書きする](../../../../standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)|
-|ファイルのテキストの読み取り|[方法: ファイルからのテキストの読み取り](../../../../standard/io/how-to-read-text-from-a-file.md)|
-|テキストのファイルへの書き込み|[方法: テキストのファイルへの書き込み](../../../../standard/io/how-to-write-text-to-a-file.md)|
-|文字列からの文字の読み取り|[方法: 文字列からの文字の読み取り](../../../../standard/io/how-to-read-characters-from-a-string.md)|
-|文字列への文字の書き込み|[方法: 文字列への文字の書き込み](../../../../standard/io/how-to-write-characters-to-a-string.md)|
-|データの暗号化|[データの暗号化](../../../../standard/security/encrypting-data.md)|
+|ファイルのテキストの読み取り|[方法: ファイルからテキストを読み取る](../../../../standard/io/how-to-read-text-from-a-file.md)|
+|テキストのファイルへの書き込み|[方法: ファイルにテキストを書き込む](../../../../standard/io/how-to-write-text-to-a-file.md)|
+|文字列からの文字の読み取り|[方法: 文字列から文字を読み取る](../../../../standard/io/how-to-read-characters-from-a-string.md)|
+|文字列への文字の書き込み|[方法: 文字列に文字を書き込む](../../../../standard/io/how-to-write-characters-to-a-string.md)|
+|データを暗号化する|[データの暗号化](../../../../standard/security/encrypting-data.md)|
 |データの復号化|[データの復号化](../../../../standard/security/decrypting-data.md)|
 
 ## <a name="file-access-and-attributes"></a>ファイル アクセスと属性
@@ -77,7 +77,7 @@ ms.locfileid: "74348945"
 
 次の表は、ファイル アクセスとファイル属性に関連するタスクの一覧です。
 
-|終了|解決方法については、|
+|ターゲット|参照先|
 |---|---|
 |ログ ファイルのオープンとテキストの追加|[方法: ログ ファイルを開いて情報を追加する](../../../../standard/io/how-to-open-and-append-to-a-log-file.md)|
 |ファイルの属性の判断|<xref:System.IO.FileAttributes>|
@@ -92,13 +92,13 @@ ms.locfileid: "74348945"
 
 次の表は、分離ファイル ストレージに一般に関連するタスクの一覧です。
 
-|終了|解決方法については、|
+|ターゲット|参照先|
 |---|---|
 |分離ストアの作成|[方法: 分離ストレージでストアを取得する](../../../../standard/io/how-to-obtain-stores-for-isolated-storage.md)|
 |分離ストアの列挙|[方法: 分離ストレージでストアを列挙する](../../../../standard/io/how-to-enumerate-stores-for-isolated-storage.md)|
 |分離ストアの削除|[方法: 分離ストレージでストアを削除する](../../../../standard/io/how-to-delete-stores-in-isolated-storage.md)|
 |分離ストレージのファイルまたはディレクトリの作成|[方法: 分離ストレージでファイルおよびディレクトリを作成する](../../../../standard/io/how-to-create-files-and-directories-in-isolated-storage.md)|
-|分離ストレージのファイルの検索|[方法: 分離ストレージ内で既存のファイルおよびディレクトリを検索する](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
+|分離ストレージのファイルの検索|[方法: 分離ストレージ内でファイルおよびディレクトリを検索する](../../../../standard/io/how-to-find-existing-files-and-directories-in-isolated-storage.md)|
 |分離ストレージのファイルに対する読み取りと書き込み|[方法: 分離ストレージ内でファイルの読み取りと書き込みを行う](../../../../standard/io/how-to-read-and-write-to-files-in-isolated-storage.md)|
 |分離ストレージのファイルまたはディレクトリの削除|[方法: 分離ストレージでファイルおよびディレクトリを削除する](../../../../standard/io/how-to-delete-files-and-directories-in-isolated-storage.md)|
 
@@ -106,7 +106,7 @@ ms.locfileid: "74348945"
 
 <xref:System.IO.FileSystemWatcher> コンポーネントを使用すると、自システム上のファイルとディレクトリ、またはネットワークでアクセスできる任意のコンピューター上のファイルとディレクトリの変更を監視できます。 たとえば、ファイルが変更されたときに、その旨をユーザーに警告することが必要な場合があります。 変更が行われると、1 つまたは複数のイベントが発生し、バッファーに格納され、<xref:System.IO.FileSystemWatcher> コンポーネントに渡されて処理されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ストリームの構成](../../../../standard/io/composing-streams.md)
 - [ファイルおよびストリーム入出力](../../../../standard/io/index.md)
