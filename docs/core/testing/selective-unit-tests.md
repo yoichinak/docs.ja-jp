@@ -4,10 +4,10 @@ description: .NET Core において dotnet test コマンドでフィルター�
 author: smadala
 ms.date: 03/22/2017
 ms.openlocfilehash: b9156300587215e68c01c609e298dbc1a2c53d11
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543509"
 ---
 # <a name="running-selective-unit-tests"></a>選択的単体テストの実行
@@ -57,9 +57,9 @@ namespace MSTestNamespace
 
 | 正規表現 | 結果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName` に `UnitTest1` がある、**または** `TestCategory` が `CategoryA` のテストを実行します。 |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `FullyQualifiedName` に `UnitTest1` がある、**および** `TestCategory` が `CategoryA` のテストを実行します。 |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTest1` を含む `FullyQualifiedName` **および** `TestCategory` が `CategoryA`、**または** `Priority` が 1 かのいずれかのテストを実行します。 |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `UnitTest1` に `FullyQualifiedName` がある、**または** `TestCategory` が `CategoryA` のテストを実行します。 |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `UnitTest1` に `FullyQualifiedName` がある、**および** `TestCategory` が `CategoryA` のテストを実行します。 |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName` を含む `UnitTest1` **および** `TestCategory` が `CategoryA`、**または** `Priority` が 1 かのいずれかのテストを実行します。 |
 
 ## <a name="xunit"></a>xUnit
 
@@ -103,9 +103,9 @@ namespace XUnitNamespace
 
 | 正規表現 | 結果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | `FullyQualifiedName` に `TestClass1` がある、**または** `Category` が `CategoryA` のテストを実行します。 |
-| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | `FullyQualifiedName` に `TestClass1` がある、**および** `Category` が `CategoryA` のテストを実行します。 |
-| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | `TestClass1` を含む `FullyQualifiedName` **および** `Category` が `CategoryA`、**または** `Priority` が 1 かのいずれかのテストを実行します。 |
+| <code>dotnet test --filter "FullyQualifiedName~TestClass1&#124;Category=CategoryA"</code> | `TestClass1` に `FullyQualifiedName` がある、**または** `Category` が `CategoryA` のテストを実行します。 |
+| `dotnet test --filter "FullyQualifiedName~TestClass1&Category=CategoryA"` | `TestClass1` に `FullyQualifiedName` がある、**および** `Category` が `CategoryA` のテストを実行します。 |
+| <code>dotnet test --filter "(FullyQualifiedName~TestClass1&Category=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName` を含む `TestClass1` **および** `Category` が `CategoryA`、**または** `Priority` が 1 かのいずれかのテストを実行します。 |
 
 ## <a name="nunit"></a>NUnit
 
@@ -145,6 +145,6 @@ namespace NUnitNamespace
 
 | 正規表現 | 結果 |
 | ---------- | ------ |
-| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `FullyQualifiedName` に `UnitTest1` がある、**または** `TestCategory` が `CategoryA` のテストを実行します。 |
-| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `FullyQualifiedName` に `UnitTest1` がある、**および** `TestCategory` が `CategoryA` のテストを実行します。 |
-| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `UnitTest1` を含む `FullyQualifiedName` **および** `TestCategory` が `CategoryA`、**または** `Priority` が 1 かのいずれかのテストを実行します。 |
+| <code>dotnet test --filter "FullyQualifiedName~UnitTest1&#124;TestCategory=CategoryA"</code> | `UnitTest1` に `FullyQualifiedName` がある、**または** `TestCategory` が `CategoryA` のテストを実行します。 |
+| `dotnet test --filter "FullyQualifiedName~UnitTest1&TestCategory=CategoryA"` | `UnitTest1` に `FullyQualifiedName` がある、**および** `TestCategory` が `CategoryA` のテストを実行します。 |
+| <code>dotnet test --filter "(FullyQualifiedName~UnitTest1&TestCategory=CategoryA)&#124;Priority=1"</code> | `FullyQualifiedName` を含む `UnitTest1` **および** `TestCategory` が `CategoryA`、**または** `Priority` が 1 かのいずれかのテストを実行します。 |

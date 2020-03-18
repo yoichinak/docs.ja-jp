@@ -4,10 +4,10 @@ ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
 ms.openlocfilehash: ecedd9a9027aa925c753f8e187d611b19d3db991
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77543262"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\# で文字列の内容を変更する方法
@@ -72,7 +72,7 @@ ms.locfileid: "77543262"
 
 [GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework 正規表現](../../standard/base-types/regular-expressions.md)
 - [正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)

@@ -4,10 +4,10 @@ description: .NET Core プロジェクトの作成に使用するライブラリ
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
 ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157467"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK の概要
@@ -31,7 +31,7 @@ ms.locfileid: "78157467"
 
 既定では、SDK は "side-by-side" (SxS) 方式でインストールされます。つまり、複数のバージョンを 1 台のコンピューター上にいつでも共存させることができます。 CLI コマンドを実行したときにバージョンが選択される方法について詳しくは、「[使用する .NET Core のバージョンを選択する](versions/selection.md)」記事をご覧ください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Core CLI の概要](tools/index.md)
 - [.NET Core のバージョン管理の概要](versions/index.md)

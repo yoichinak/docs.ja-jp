@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, methods
 ms.assetid: cc738f07-e8cd-4683-9585-9f40c0667c37
 ms.openlocfilehash: 114fa2973c50be9a4199db9729e3cd9ea6122866
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626530"
 ---
 # <a name="methods-c-programming-guide"></a>メソッド (C# プログラミング ガイド)
@@ -132,7 +132,7 @@ public static void FillMatrix(int[,] matrix)
 
 [!code-csharp[csAsyncMethod#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csasyncmethod/cs/mainwindow.xaml.cs#2)]
 
-非同期メソッドで [ref](../../language-reference/keywords/ref.md) パラメーターまたは [out](../../language-reference/keywords/out-parameter-modifier.md) パラメーターを宣言することはできませんが、これらのパラメーターを持つメソッドを呼び出すことはできます。
+非同期メソッドで [ref](../../language-reference/keywords/ref.md) パラメーターまたは [out](../../language-reference/keywords/out-parameter-modifier.md) パラメーターを宣言することはできませんが、これらのパラメーターが含まれたメソッドを呼び出すことはできます。
 
 非同期メソッドの詳細については、「[Async および Await を使用した非同期プログラミング](../concepts/async/index.md)」、「[非同期プログラムにおける制御フロー](../concepts/async/control-flow-in-async-programs.md)」、「[非同期の戻り値の型](../concepts/async/async-return-types.md)」を参照してください。
 
@@ -151,9 +151,9 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 メソッドが `void` を返すか、非同期メソッドである場合は、メソッドの本文を (ラムダの場合と同様に) ステートメント式にする必要があります。 プロパティとインデクサーは読み取り専用にする必要があるため、 `get` アクセサー キーワードは使用しないでください。
 
-## <a name="iterators"></a>Iterators
+## <a name="iterators"></a>反復子
 
-反復子は、リストや配列など、コレクションに対するカスタム イテレーションを実行します。 反復子は、 [yield return](../../language-reference/keywords/yield.md) ステートメントを使用して、各要素を 1 回に1 つ返します。 [yield return](../../language-reference/keywords/yield.md) ステートメントに達すると、コードの現在の場所が記憶されます。 反復子が次回呼び出されたとき、この場所から実行が再開されます。
+反復子は、リストや配列など、コレクションに対するカスタム イテレーションを実行します。 反復子は、[yield return](../../language-reference/keywords/yield.md) ステートメントを使用して、各要素を 1 回に 1 つ返します。 [yield return](../../language-reference/keywords/yield.md) ステートメントに達すると、コードの現在の場所が記憶されます。 反復子が次回呼び出されたとき、この場所から実行が再開されます。
 
 [foreach](../../language-reference/keywords/foreach-in.md) ステートメントを使用して、クライアント コードから反復子を呼び出します。
 
@@ -165,9 +165,9 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [クラスと構造体](index.md)
 - [アクセス修飾子](access-modifiers.md)
 - [静的クラスと静的クラス メンバー](static-classes-and-static-class-members.md)

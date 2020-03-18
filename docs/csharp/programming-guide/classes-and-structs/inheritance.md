@@ -10,10 +10,10 @@ helpviewer_keywords:
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
 ms.openlocfilehash: 448b1695a4afc50f4afa20383e5fda280b9f12e9
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77626660"
 ---
 # <a name="inheritance-c-programming-guide"></a>継承 (C# プログラミング ガイド)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - manipulating strings
 ms.assetid: d4568ff3-9f83-4549-acd8-47aec2194ac0
 ms.openlocfilehash: 5188c4f1099aad486e921dfba0c6c4216613ba4e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73135228"
 ---
 # <a name="manipulating-strings-in-net"></a>.NET における文字列の操作

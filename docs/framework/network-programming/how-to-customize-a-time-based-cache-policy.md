@@ -10,10 +10,10 @@ helpviewer_keywords:
 - cache [.NET Framework], time-based policies
 ms.assetid: 8d84f936-2376-4356-9264-03162e0f9279
 ms.openlocfilehash: 1a2ba404e333eeec2a23758c834876d0df5aba81
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73040634"
 ---
 # <a name="how-to-customize-a-time-based-cache-policy"></a>方法: 時間ベースのキャッシュ ポリシーをカスタマイズする
@@ -22,7 +22,7 @@ ms.locfileid: "73040634"
 
 ## <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>キャッシュ同期日付を使用する時間ベースのキャッシュ ポリシーを作成するには
 
-<xref:System.Net.Cache.HttpRequestCachePolicy> コンストラクターに <xref:System.DateTime> オブジェクトを渡して、キャッシュ同期日付を使用する時間ベースのキャッシュ ポリシーを作成します。
+<xref:System.DateTime> コンストラクターに <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトを渡して、キャッシュ同期日付を使用する時間ベースのキャッシュ ポリシーを作成します。
 
 ```csharp
 public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)
@@ -52,7 +52,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
 
 ## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>最小鮮度に基づく時間ベースのキャッシュ ポリシーを作成するには
 
-`cacheAgeControl` パラメーター値として <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> を指定し、<xref:System.Net.Cache.HttpRequestCachePolicy> コンストラクターに <xref:System.TimeSpan> オブジェクトを渡して、最小鮮度に基づく時間ベースのキャッシュ ポリシーを作成します。
+<xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> パラメーター値として `cacheAgeControl` を指定し、<xref:System.TimeSpan> コンストラクターに <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトを渡して、最小鮮度に基づく時間ベースのキャッシュ ポリシーを作成します。
 
 ```csharp
 public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)
@@ -85,7 +85,7 @@ Level:Default MinFresh:3600
 
 ## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>最小鮮度と最大有効期間に基づく時間ベースのキャッシュ ポリシーを作成するには
 
-`cacheAgeControl` パラメーター値として <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> を指定し、<xref:System.Net.Cache.HttpRequestCachePolicy> コンストラクターに 2 つの <xref:System.TimeSpan> オブジェクト (1 つはリソースの最大有効期間を指定し、もう 1 つはキャッシュから返されたオブジェクトで許可される最小鮮度を指定する) を渡して、最小鮮度と最大有効期間に基づく時間ベースのキャッシュ ポリシーを作成します。
+<xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> パラメーター値として `cacheAgeControl` を指定し、<xref:System.TimeSpan> コンストラクターに 2 つの <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクト (1 つはリソースの最大有効期間を指定し、もう 1 つはキャッシュから返されたオブジェクトで許可される最小鮮度を指定する) を渡して、最小鮮度と最大有効期間に基づく時間ベースのキャッシュ ポリシーを作成します。
 
 ```csharp
 public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)
@@ -116,7 +116,7 @@ CreateFreshAndAgePolicy(new TimeSpan(5,0,0), new TimeSpan(10,0,0));
 Level:Default MaxAge:36000 MinFresh:18000  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ネットワーク アプリケーションのキャッシュ管理](cache-management-for-network-applications.md)
 - [キャッシュ ポリシー](cache-policy.md)

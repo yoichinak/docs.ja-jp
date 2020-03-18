@@ -3,10 +3,10 @@ title: コンテナーとして実行するデータベース サーバーの使
 description: コンテナーとして実行されているデータベース サーバーの使用は開発時に限定することの重要性を理解します。 運用環境向けではありません。
 ms.date: 01/30/2020
 ms.openlocfilehash: 0cbc933003aac10970814378c27e88b5cb0ddbe5
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77628528"
 ---
 # <a name="use-a-database-server-running-as-a-container"></a>コンテナーとして実行するデータベース サーバーの使用
@@ -15,7 +15,7 @@ ms.locfileid: "77628528"
 
 ## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>マイクロサービスに関連するデータベースを含むコンテナーとして実行している SQL Server
 
-eShopOnContainers には、[docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) ファイルに定義される `sqldata` という名前のコンテナーがあり、これによって Linux インスタンス用の SQL サーバーとすべてのマイクロサービスに必要な SQL データベースが実行されます。
+eShopOnContainers には、`sqldata`docker-compose.yml[ ファイルに定義される ](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) という名前のコンテナーがあり、これによって Linux インスタンス用の SQL サーバーとすべてのマイクロサービスに必要な SQL データベースが実行されます。
 
 マイクロサービスの重要な点は、各マイクロサービスで関連データが所有されるため、専用のデータベースを用意する必要があることです。 ただし、データベースは任意の場所に置くことができます。 ここでは、Docker のメモリ要件をできるだけ低く保つために、これらはすべて同じコンテナー内にあります。 これは開発にとって (おそらくテストにとっても) 十分なソリューションですが、運用環境には適していないことに留意してください。
 
@@ -45,7 +45,7 @@ eShopOnContainers アプリケーションは、次のセクションで説明�
 
 SQL Server のコンテナーとしての実行は、SQL Server のインスタンスにアクセスできない場合があるデモに役に立つだけではありません。 説明したように、新しいサンプル データをシードすることによってクリーンな SQL Server イメージと既知のデータから統合テストを簡単に実行できるので開発やテストの環境にも有効です。
 
-### <a name="additional-resources"></a>その他の技術情報
+### <a name="additional-resources"></a>その他のリソース
 
 - **Linux、Mac、Windows で SQL Server Docker イメージを実行する** \
   <https://docs.microsoft.com/sql/linux/sql-server-linux-setup-docker>
@@ -55,7 +55,7 @@ SQL Server のコンテナーとしての実行は、SQL Server のインスタ�
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>Web アプリケーションの起動時のテスト データのシード処理
 
-アプリケーションの起動時にデータベースにデータを追加するには、Web API プロジェクトの `Program` クラス内の `Main` メソッドに次のようなコードを追加できます。
+アプリケーションの起動時にデータベースにデータを追加するには、Web API プロジェクトの `Main` クラス内の `Program` メソッドに次のようなコードを追加できます。
 
 ```csharp
 public static int Main(string[] args)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, SpinWait
 ms.assetid: 36012f42-34e5-4f86-adf4-973f433ed6c6
 ms.openlocfilehash: 91588fc6e9c3c8e85de6a315c0743efb0137ecd5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73128983"
 ---
 # <a name="spinwait"></a>SpinWait
@@ -27,7 +27,7 @@ ms.locfileid: "73128983"
  [!code-csharp[CDS_SpinWait#05](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinwait/cs/spinwait.cs#05)]
  [!code-vb[CDS_SpinWait#05](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinwait/vb/cds_spinwait1.vb#05)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Threading.Thread.SpinWait%2A>
 - [スレッド処理オブジェクトと機能](../../../docs/standard/threading/threading-objects-and-features.md)

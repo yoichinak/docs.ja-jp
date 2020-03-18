@@ -9,10 +9,10 @@ helpviewer_keywords:
 - managed threading
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 ms.openlocfilehash: bec769043ab630b37609bed12302ceff5b90474a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139229"
 ---
 # <a name="managed-threading-basics"></a>マネージド スレッド処理の基本
@@ -22,7 +22,7 @@ ms.locfileid: "73139229"
  このセクションの残りのトピックには、マネージド スレッド処理と Windows オペレーティング システムとの相互作用など、高度なトピックが含まれます。  
   
 > [!NOTE]
-> .NET Framework 4 では、タスク並列ライブラリと PLINQ によって、マルチスレッド プログラムでのタスクとデータの並列処理のための API が提供されます。 詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。  
+> .NET Framework 4 では、タスク並列ライブラリと PLINQ によって、マルチスレッド プログラムでのタスクとデータの並列処理のための API が提供されます。 詳細については、「[並列プログラミング](../../../docs/standard/parallel-programming/index.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -41,10 +41,10 @@ ms.locfileid: "73139229"
  [Windows でのマネージド スレッド処理とアンマネージド スレッド処理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  マネージド スレッド処理とアンマネージド スレッド処理の関係について説明し、Windows のスレッド処理 API に相当するマネージド API をリストし、COM アパートメントとマネージド スレッドの相互作用について説明します。  
   
- [スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
+ [スレッド ローカル ストレージ: スレッド相対静的フィールドとデータ スロット](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  スレッド相対ストレージ メカニズムについて説明します。  
   
-## <a name="reference"></a>辞書／辞典／その他
+## <a name="reference"></a>リファレンス
 
  <xref:System.Threading.Thread>  
  **Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。  

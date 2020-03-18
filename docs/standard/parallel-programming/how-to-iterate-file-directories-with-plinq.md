@@ -6,10 +6,10 @@ helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
 ms.openlocfilehash: 90afc767e422515c6122b8a6ef0e63ffc07caf3a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73091369"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>方法: PLINQ を使用してファイル ディレクトリを反復処理する
@@ -34,6 +34,6 @@ ms.locfileid: "73091369"
   
  ネットワーク経由のファイル I/O などで I/O の待機時間が問題となる場合は、「[TPL と従来の .NET 非同期プログラミング](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」およびこの[ブログの投稿](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)で説明する非同期 I/O の手法のいずれかを使用することを検討してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

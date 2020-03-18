@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TPL dataflow library, receiving data
 ms.assetid: fc2585dc-965e-4632-ace7-73dd02684ed3
 ms.openlocfilehash: 89ab2bb18e5fe00a4d1b79d911bb0f7524b83104
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73124208"
 ---
 # <a name="how-to-perform-action-when-a-dataflow-block-receives-data"></a>方法: データフロー ブロックでデータを受信したときにアクションを実行する
@@ -32,7 +32,7 @@ ms.locfileid: "73124208"
  [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)に関するドキュメントの「デリゲート型の概要」セクションには、<xref:System.Threading.Tasks.Dataflow.ActionBlock%601>、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602>、<xref:System.Threading.Tasks.Dataflow.TransformManyBlock%602> オブジェクトに提供できるデリゲート型がまとめられています。 表では、デリゲート型が同期的または非同期的に動作するかどうかについても示しています。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- この例では、データフロー ブロックのタスクを同期的に実行するために、<xref:System.Threading.Tasks.Dataflow.TransformBlock%602> オブジェクトに <xref:System.Func%602> 型のデリゲートを提供しています。 データフロー ブロックが非同期的に動作できるようにするには、型 <xref:System.Func%601> のデリゲートをデータフロー ブロックに提供します。 データフロー ブロックが非同期的に動作している場合、返された <xref:System.Threading.Tasks.Task%601> オブジェクトが完了したときのみ、データフロー ブロックのタスクが完了します。 次の例では、`CountBytes` メソッドを変更して、[async](../../csharp/language-reference/keywords/async.md) 演算子と [await](../../csharp/language-reference/operators/await.md) 演算子 (Visual Basic では [Async](../../visual-basic/language-reference/modifiers/async.md) と [Await](../../visual-basic/language-reference/operators/await-operator.md)) を使用して、提供されたファイル内のゼロ バイトの件数の合計を非同期的に計算します。 <xref:System.IO.FileStream.ReadAsync%2A> メソッドは、ファイルの読み取り操作を非同期的に実行します。  
+ この例では、データフロー ブロックのタスクを同期的に実行するために、<xref:System.Func%602> オブジェクトに <xref:System.Threading.Tasks.Dataflow.TransformBlock%602> 型のデリゲートを提供しています。 データフロー ブロックが非同期的に動作できるようにするには、型 <xref:System.Func%601> のデリゲートをデータフロー ブロックに提供します。 データフロー ブロックが非同期的に動作している場合、返された <xref:System.Threading.Tasks.Task%601> オブジェクトが完了したときのみ、データフロー ブロックのタスクが完了します。 次の例では、`CountBytes` メソッドを変更して、[async](../../csharp/language-reference/keywords/async.md) 演算子と [await](../../csharp/language-reference/operators/await.md) 演算子 (Visual Basic では [Async](../../visual-basic/language-reference/modifiers/async.md) と [Await](../../visual-basic/language-reference/operators/await-operator.md)) を使用して、提供されたファイル内のゼロ バイトの件数の合計を非同期的に計算します。 <xref:System.IO.FileStream.ReadAsync%2A> メソッドは、ファイルの読み取り操作を非同期的に実行します。  
   
  [!code-csharp[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#2)]
  [!code-vb[TPLDataflow_ExecutionBlocks#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#2)]  
@@ -42,6 +42,6 @@ ms.locfileid: "73124208"
  [!code-csharp[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_executionblocks/cs/dataflowexecutionblocks.cs#3)]
  [!code-vb[TPLDataflow_ExecutionBlocks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_executionblocks/vb/dataflowexecutionblocks.vb#3)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

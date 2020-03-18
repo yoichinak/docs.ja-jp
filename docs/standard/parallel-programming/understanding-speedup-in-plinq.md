@@ -9,10 +9,10 @@ helpviewer_keywords:
 - PLINQ queries, performance tuning
 ms.assetid: 53706c7e-397d-467a-98cd-c0d1fd63ba5e
 ms.openlocfilehash: 07b5027d560a4caccc6c0a516c3f70c11df6be83
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139909"
 ---
 # <a name="understanding-speedup-in-plinq"></a>PLINQ での高速化について
@@ -68,7 +68,7 @@ PLINQ の主な目的は、マルチコア コンピューターでクエリ デ
 ## <a name="when-plinq-chooses-sequential-mode"></a>PLINQ で順次モードが選択されるタイミング  
  PLINQ は常に、少なくともクエリが順次実行される同じ速度でクエリを実行しようとします。 PLINQ では、ユーザー デリゲートの計算コストがどれくらい高いかや、入力ソースがどれくらい大きいかは確認されませんが、特定のクエリの "形状" は検索されます。 具体的には、通常、並列モードでのクエリの実行により時間がかかるクエリ演算子または演算子の組み合わせが検索されます。 このような形状が検出されると、PLINQ は既定でシーケンシャル モードに戻ります。  
   
- ただし、特定のクエリのパフォーマンスを測定した後に、実際には並列モードではより高速に実行されることがわかる場合があります。 このような場合は、<xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> メソッドで <xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> フラグを使用して、クエリを並列化するように PLINQ に指示できます。 詳細については、[PLINQ の実行モードを指定する](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)」をご覧ください。  
+ ただし、特定のクエリのパフォーマンスを測定した後に、実際には並列モードではより高速に実行されることがわかる場合があります。 このような場合は、<xref:System.Linq.ParallelExecutionMode.ForceParallelism?displayProperty=nameWithType> メソッドで <xref:System.Linq.ParallelEnumerable.WithExecutionMode%2A> フラグを使用して、クエリを並列化するように PLINQ に指示できます。 詳細については、「[How to: Specify the Execution Mode in PLINQ (方法: PLINQ の実行モードを指定する)](../../../docs/standard/parallel-programming/how-to-specify-the-execution-mode-in-plinq.md)」を参照してください。  
   
  次のリストでは、既定で PLINQ がシーケンシャル モードで実行するクエリの形状について説明します。  
   
@@ -82,6 +82,6 @@ PLINQ の主な目的は、マルチコア コンピューターでクエリ デ
   
 - インデックス可能なデータ ソースに適用されている場合を除き、Reverse を含むクエリ。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

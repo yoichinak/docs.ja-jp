@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f202b39f1a45f740625827be25e72df0e403d605
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901721"
 ---
 ### <a name="signalr-javascript-client-package-name-changed"></a>SignalR:JavaScript クライアント パッケージ名が変更されました

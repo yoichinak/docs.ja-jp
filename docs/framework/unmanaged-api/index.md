@@ -8,10 +8,10 @@ helpviewer_keywords:
 - unmanaged API reference [.NET Framework]
 ms.assetid: 9aa000ee-c04c-492c-ae4f-83ecdf4fdbbe
 ms.openlocfilehash: f7dd78b889129998dee31a22f5dd23325613b8ea
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73092025"
 ---
 # <a name="unmanaged-api-reference"></a>アンマネージ API リファレンス

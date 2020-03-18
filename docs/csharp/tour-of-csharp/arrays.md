@@ -4,10 +4,10 @@ description: 配列は、C# 言語において最も基本的なコレクショ�
 ms.date: 02/27/2020
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
 ms.openlocfilehash: 3e045c0933a21beab6958c7851546ba6e0b55ef9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78159196"
 ---
 # <a name="arrays"></a>配列

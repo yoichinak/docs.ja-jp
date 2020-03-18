@@ -2,12 +2,12 @@
 title: 回復力の高い Entity Framework Core SQL 接続を実装する
 description: 回復力の高い Entity Framework Core SQL 接続を実装する方法について説明します。 この手法は、クラウドで Azure SQL Database を使用する場合に特に重要です。
 ms.date: 10/16/2018
-ms.openlocfilehash: 0ded30469bb4985fed7b60938756046531c8feea
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7a047edca21d63a451e90f407b23f3358d461330
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777058"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78241066"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>回復力の高い Entity Framework Core SQL 接続を実装する
 
@@ -154,4 +154,4 @@ public class ResilientTransaction
 
 >[!div class="step-by-step"]
 >[前へ](implement-retries-exponential-backoff.md)
->[次へ](explore-custom-http-call-retries-exponential-backoff.md)
+>[次へ](use-httpclientfactory-to-implement-resilient-http-requests.md)

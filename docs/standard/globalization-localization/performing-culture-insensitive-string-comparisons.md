@@ -14,10 +14,10 @@ helpviewer_keywords:
 - culture parameter
 ms.assetid: abae50ef-32f7-4a50-a540-fd256fd1aed0
 ms.openlocfilehash: 85ba91b63ab0edbccc768e2d1ad4aaef31fd2f21
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73120831"
 ---
 # <a name="performing-culture-insensitive-string-comparisons"></a>カルチャを認識しない文字列比較の実行
@@ -26,7 +26,7 @@ ms.locfileid: "73120831"
 > [!NOTE]
 > <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドの両方のオーバーロードでは、カルチャに依存した比較と大文字と小文字を区別する比較を実行します。このメソッドを使用してカルチャに依存しない比較を実行することはできません。 コードをわかりやすくするために、<xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドを代わりに使用することをお勧めします。  
   
- カルチャに依存する操作の場合は、<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> パラメーターとして <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> 列挙値または `comparisonType` 列挙値を指定します。 現在のカルチャ以外の指定されたカルチャを使用して、カルチャに依存した比較を実行する場合は、`culture` パラメーターとして、そのカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトを指定します。  
+ カルチャに依存する操作の場合は、<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> パラメーターとして <xref:System.StringComparison.CurrentCultureIgnoreCase?displayProperty=nameWithType> 列挙値または `comparisonType` 列挙値を指定します。 現在のカルチャ以外の指定されたカルチャを使用して、カルチャに依存した比較を実行する場合は、<xref:System.Globalization.CultureInfo> パラメーターとして、そのカルチャを表す `culture` オブジェクトを指定します。  
   
  <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドでサポートされている、カルチャに依存しない文字列比較は、言語的な比較 (インバリアント カルチャの並べ替え規則に基づきます) または非言語的な比較 (文字列内の文字の序数値に基づきます) です。 カルチャに依存しないほとんどの文字列比較は非言語的な比較です。 このような比較の場合は、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> パラメーターとして <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 列挙値または `comparisonType` 列挙値を指定します。 たとえば、セキュリティに関する決定 (ユーザー名やパスワードの比較など) が文字列比較の結果に基づいて行われる場合は、この操作をカルチャに依存しない非言語的な比較に指定して、操作の結果が特定のカルチャまたは言語の規則に影響されないようにする必要があります  
   
@@ -39,7 +39,7 @@ ms.locfileid: "73120831"
 
 Windows オペレーティング システムの並べ替え操作と比較操作で使用される文字の重みに関する情報を含む一連のテキスト ファイルである[並べ替え重みテーブル](https://www.microsoft.com/download/details.aspx?id=10921) と、Linux と macOS 用の並べ替え重みテーブルである [デフォルト Unicode 照合基本テーブル](https://www.unicode.org/Public/UCA/latest/allkeys.txt)をダウンロードできます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.String.Compare%2A?displayProperty=nameWithType>
 - <xref:System.String.CompareTo%2A?displayProperty=nameWithType>

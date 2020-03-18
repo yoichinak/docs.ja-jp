@@ -12,10 +12,10 @@ metadata:
   ms.author: mamccrea
   ms.date: 09/11/2019
   ms.openlocfilehash: b75740fa84fd7c6fa383129075a082c4ea2ccdcc
-  ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/21/2020
+  ms.lasthandoff: 03/15/2020
   ms.locfileid: "77542807"
 landingContent:
 - title: .NET for Apache Spark について
@@ -34,7 +34,7 @@ landingContent:
       url: /dotnet/api/?view=spark-dotnet
     - text: GitHub
       url: https://github.com/dotnet/spark
-- title: 作業開始
+- title: はじめに
   linkLists:
   - linkListType: tutorial
     links:

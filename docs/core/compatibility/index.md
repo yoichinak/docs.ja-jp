@@ -3,10 +3,10 @@ title: 破壊的変更の種類
 description: .NET Core が .NET のバージョン間で開発者向けの互換性をどのように維持しようとしているか、およびどのような変更が重大な変更と見なされるかについて説明します。
 ms.date: 06/10/2019
 ms.openlocfilehash: bf0cc35d69e6bb501640455604a99a1f48962c4a
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628593"
 ---
 # <a name="changes-that-affect-compatibility"></a>互換性に影響を与える変更点

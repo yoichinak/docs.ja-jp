@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parallel programming
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 ms.openlocfilehash: ae129ef0cb2b331c1eb0220282f21fec6f6fb77d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73134145"
 ---
 # <a name="parallel-programming-in-net"></a>.NET での並列プログラミング
@@ -24,7 +24,7 @@ ms.locfileid: "73134145"
 
 ## <a name="related-topics"></a>関連トピック
 
-|テクノロジ|説明|
+|テクノロジ|[説明]|
 |----------------|-----------------|
 |[タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)|並列バージョンの <xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> ループおよび `For` ループを含む `ForEach` クラスに関するドキュメントと、非同期操作の推奨される表現方法を表す <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラスに関するドキュメントが用意されています。|
 |[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|さまざまなシナリオでパフォーマンスを大幅に向上させる、LINQ to Objects の並列実装です。|
@@ -35,7 +35,7 @@ ms.locfileid: "73134145"
 |[PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|C# および Visual Basic のラムダ式について簡単に説明し、PLINQ およびタスク並列ライブラリでラムダ式を使用する方法を示します。|
 |[関連項目](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|.NET での並列プログラミングに関する追加の情報とサンプル リソースへのリンクを示します。|
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [非同期の概要](../async.md)
 - [マネージド スレッド処理](../threading/index.md)

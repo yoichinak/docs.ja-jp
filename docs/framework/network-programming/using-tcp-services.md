@@ -17,10 +17,10 @@ helpviewer_keywords:
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
 ms.openlocfilehash: 3678586647dcf9c47b4494197fbf56cab865b3d3
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73039487"
 ---
 # <a name="using-tcp-services"></a>TCP サービスの使用

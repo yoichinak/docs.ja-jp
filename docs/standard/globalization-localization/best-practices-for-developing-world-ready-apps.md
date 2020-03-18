@@ -9,10 +9,10 @@ helpviewer_keywords:
 - international applications [.NET Framework], best practices
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 ms.openlocfilehash: a2cd1039f95a763002922fc2fa24eff77838de80
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141307"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>推奨される国際対応アプリケーション開発手順
@@ -49,7 +49,7 @@ ms.locfileid: "73141307"
 
 9. 国際対応オペレーティング システムで、国際対応データを使用してアプリケーションの機能をテストします。
 
-10. 文字列比較操作または大文字と小文字の変更操作の結果に基づいてセキュリティ上の決定を行う場合は、カルチャに依存しない文字列操作を使用してください。 こうすることで、`CultureInfo.CurrentCulture` の値が結果に影響を及ぼすことがなくなります。 カルチャに依存した文字列比較により矛盾した結果がどのように生成されるかを示す例については、「[文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)」の「[現在のカルチャを使用する文字列比較](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)」を参照してください。
+10. 文字列比較操作または大文字と小文字の変更操作の結果に基づいてセキュリティ上の決定を行う場合は、カルチャに依存しない文字列操作を使用してください。 こうすることで、`CultureInfo.CurrentCulture` の値が結果に影響を及ぼすことがなくなります。 カルチャに依存した文字列比較により矛盾した結果がどのように生成されるかを示す例については、「[文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)」の「[現在のカルチャを使用する文字列比較](../../../docs/standard/base-types/best-practices-strings.md)」を参照してください。
 
 ## <a name="localization-best-practices"></a>推奨されるローカリゼーション手順
 
@@ -99,7 +99,7 @@ ms.locfileid: "73141307"
 
 5. uiCulture 値には、ブラウザー受け入れ言語を設定できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
 - [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)

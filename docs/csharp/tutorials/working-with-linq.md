@@ -4,12 +4,12 @@ description: このチュートリアルでは、LINQ を使用してシーケ�
 ms.date: 10/29/2018
 ms.technology: csharp-linq
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 8984fdf0ff26726b6d05e8bee8a9e8ae1c350ea7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: ece001e82c0aa44a91999bea78d2fd695ff9362b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345607"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240016"
 ---
 # <a name="work-with-language-integrated-query-linq"></a>統合言語クエリ (LINQ) を使用する
 
@@ -179,7 +179,7 @@ public static IEnumerable<T> InterleaveSequenceWith<T> (this IEnumerable<T> firs
 
 そのメソッドの実装を以下に示します。
 
-[!CODE-csharp[InterleaveSequenceWith](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
+[!CODE-csharp[InterleaveSequenceWith](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet1)]
 
 このメソッドが作成できたので、`Main` メソッドに戻り、デッキを 1 回シャッフルします。
 
@@ -213,7 +213,7 @@ public static void Main(string[] args)
 
 2 つのシーケンスが等しいかどうかを判断するメソッドの記述は簡単です。 デッキのシャッフル用に記述したメソッドと似た構造です。 今回に限り、各要素を `yield return` するのではなく、各シーケンスの一致する要素を比較します。 シーケンス全体が列挙されている場合、各要素が一致すれば、シーケンスは同じです。
 
-[!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
+[!CODE-csharp[SequenceEquals](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
 これは 2 つ目の LINQ の表現形式であるターミナル メソッドを示しています。 これらは、シーケンスを入力として受け取り (この場合 2 つのシーケンス)、単一のスカラー値を返します。 ターミナル メソッドを使用した場合、それらは常に LINQ クエリ用のメソッド チェーンの最後のメソッドになります。そのため、名前が "ターミナル" (終点) になっています。
 
@@ -267,7 +267,7 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 `Extensions.cs` ファイルに、次のメソッドを入力するかコピーします。 この拡張メソッドによって、プロジェクト ディレクトリ内に `debug.log` と呼ばれる新しいファイルが作成され、このログ ファイルに現在どのようなクエリが実行されているかが記録されます。 この拡張メソッドはどんなクエリにも追加でき、そのクエリが実行されたことをマークできます。
 
-[!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
+[!CODE-csharp[LogQuery](../../../samples/snippets/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
 `File` の下に、存在しないことを意味する赤い波線が表示されます。 コンパイラがどのような `File` かを把握できないため、これはコンパイルされません。 この問題を解決するには、`Extensions.cs` の最初の行の下に次のコード行を追加してください。
 
@@ -329,7 +329,7 @@ public static void Main(string[] args)
 
 ここでコードのパフォーマンスを向上させて、実行回数を減らすことができます。 実行できる単純な修正は、カード デッキを構築する元の LINQ クエリの結果を "*キャッシュ*" することです。 現時点では、do-while loop が繰り返されるたびに、何度もクエリが実行され、カード デッキが再構築され、シャッフルが毎回実行されています。 カード デッキをキャッシュするには、LINQ メソッドの <xref:System.Linq.Enumerable.ToArray%2A> と <xref:System.Linq.Enumerable.ToList%2A> を活用できます。それらをクエリに追加すると、実行するように指示したのと同じアクションが実行されますが、今回は、呼び出すように選択したメソッドに応じて、結果が配列または一覧内に格納されます。 LINQ メソッド <xref:System.Linq.Enumerable.ToArray%2A> を両方のクエリに追加し、もう一度プログラムを実行します。
 
-[!CODE-csharp[Main](../../../samples/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
+[!CODE-csharp[Main](../../../samples/snippets/csharp/getting-started/console-linq/Program.cs?name=snippet1)]
 
 これで、アウト シャッフルのクエリが 30 回に減少します。 イン シャッフルで再実行しても、同様の改善がみられます。今回は 162 回のクエリが実行されます。
 

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - side-by-side execution, multiple component versions
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 ms.openlocfilehash: 42d0e2d85517d4a8fb443db9b63e6b893267caca
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121580"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>side-by-side 実行用のコンポーネントを作成するためのガイドライン
@@ -60,7 +60,7 @@ side-by-side 実行用にデザインしたマネージド アプリケーショ
   
  [グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../tools/gacutil-exe-gac-tool.md) では、ファイルのバージョン番号が新しい場合にのみ、アセンブリを置換できます。 一般的に、インストーラーは、アセンブリのバージョン番号が大きくない限り、アセンブリを上書きでインストールしません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [side-by-side 実行](side-by-side-execution.md)
 - [方法: 自動バインディング リダイレクトを有効/無効にする](../configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

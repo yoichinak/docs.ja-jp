@@ -10,10 +10,10 @@ helpviewer_keywords:
 - long paths
 - path formats, Windows
 ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77628047"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
@@ -30,7 +30,7 @@ ms.locfileid: "77628047"
 
 3 つのコンポーネントがすべて存在する場合、パスは絶対パスになります。 ボリュームまたはドライブ文字が指定されておらず、ディレクトリ名が[ディレクトリ区切り文字](<xref:System.IO.Path.DirectorySeparatorChar>)で始まる場合、パスは現在のドライブのルートからの相対パスとなります。 それ以外の場合、パスは現在のディレクトリに相対となります。 次の表では、想定されるディレクトリとファイル パスをいくつかまとめています。
 
-|パス  |説明  |
+|Path  |[説明]  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | ドライブ C: のルートからの絶対ファイル パス。 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 現在のドライブのルートからの絶対パス。 |
@@ -62,7 +62,7 @@ UNC (汎用命名規則) パスはネットワーク リソースへのアクセ
 
 UNC パスの例を次に示します。
 
-|パス  |説明  |
+|Path  |[説明]  |
 | -- | -- |
 | `\\system07\C$\` | `system07` の C: のルート ディレクトリ。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share ボリュームの Test ディレクトリの Foo.txt ファイル。|
@@ -104,7 +104,7 @@ DOS デバイス パスは次の要素から構成されます。
 
 DOS デバイス パスは定義によって完全修飾されます。 相対ディレクトリ セグメント (`.` や `..`) は許可されません。 現在のディレクトリが使用されることはありません。
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>例:同じファイルを参照する方法
+## <a name="example-ways-to-refer-to-the-same-file"></a>例: 同じファイルを参照する方法
 
 次の例では、<xref:System.IO> 名前空間で API を使用するとき、あるファイルを参照する方法をいくつか示しています。 この例では <xref:System.IO.FileInfo> オブジェクトをインスタンス化し、その <xref:System.IO.FileInfo.Name> プロパティと <xref:System.IO.FileInfo.Length> プロパティを使用してファイルの名前と長さを表示します。
 
@@ -202,7 +202,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 
 `\\?\` で始まるパスは、[GetFullPathName 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)に明示的に渡す場合、正規化されます。
 
-`MAX_PATH` 文字を超えるパスは `\\?\` なしで [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) に渡すことができます。 Windows で処理できる最大文字列サイズまで、任意の長さのパスがサポートされます。
+`MAX_PATH` 文字を超えるパスは [ なしで ](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)GetFullPathName`\\?\` に渡すことができます。 Windows で処理できる最大文字列サイズまで、任意の長さのパスがサポートされます。
 
 ## <a name="case-and-the-windows-file-system"></a>大文字/小文字の区別と Windows ファイル システム
 

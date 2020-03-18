@@ -9,10 +9,10 @@ helpviewer_keywords:
 - background threads
 ms.assetid: cfe0d632-dd35-47e0-91ad-f742a444005e
 ms.openlocfilehash: 9e93f07b3b84264373db0317919b6ee519c8127c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138051"
 ---
 # <a name="foreground-and-background-threads"></a>フォアグラウンド スレッドとバックグラウンド スレッド
@@ -30,7 +30,7 @@ ms.locfileid: "73138051"
   
  スレッドを使用して、ソケット接続などのアクティビティを監視する場合は、その <xref:System.Threading.Thread.IsBackground%2A> プロパティを `true` に設定して、スレッドがプロセスの終了を回避しないようにします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Threading.Thread.IsBackground%2A?displayProperty=nameWithType>
 - <xref:System.Threading.Thread>

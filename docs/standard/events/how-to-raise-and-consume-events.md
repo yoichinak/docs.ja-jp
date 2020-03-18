@@ -1,5 +1,5 @@
 ---
-title: '方法: イベントを発生させる/処理する'
+title: '方法 : イベントを発生させる/処理する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
 ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73131594"
 ---
-# <a name="how-to-raise-and-consume-events"></a>方法: イベントを発生させる/処理する
+# <a name="how-to-raise-and-consume-events"></a>方法 : イベントを発生させる/処理する
 このトピックの例では、イベントを使用する方法を示します。 ここでは、<xref:System.EventHandler> デリゲートと <xref:System.EventHandler%601> デリゲート、およびカスタム デリゲートの例を使用して、データを持つイベントと持たないイベントを示します。  
   
  この例では、「[イベント](../../../docs/standard/events/index.md)」で説明されている概念を使用します。  
@@ -42,6 +42,6 @@ ms.locfileid: "73131594"
  [!code-csharp[EventsOverview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/eventsoverview/cs/programwithdelegate.cs#7)]
  [!code-vb[EventsOverview#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/eventsoverview/vb/module1withdelegate.vb#7)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [イベント](../../../docs/standard/events/index.md)

@@ -14,10 +14,10 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
 ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73084188"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>正規表現の例: 日付形式の変更
@@ -35,7 +35,7 @@ ms.locfileid: "73084188"
 ## <a name="comments"></a>コメント  
  この正規表現パターン `\b(?<month>\d{1,2})/(?<day>\d{1,2})/(?<year>\d{2,4})\b` の解釈を次の表に示します。  
   
-|パターン|説明|  
+|パターン|[説明]|  
 |-------------|-----------------|  
 |`\b`|ワード境界から照合を開始します。|  
 |`(?<month>\d{1,2})`|1 桁または 2 桁の 10 進数と一致します。 これは、`month` キャプチャ グループです。|  
@@ -47,7 +47,7 @@ ms.locfileid: "73084188"
   
  パターン `${day}-${month}-${year}` は、次の表に示すように置換文字列を定義します。  
   
-|パターン|説明|  
+|パターン|[説明]|  
 |-------------|-----------------|  
 |`$(day)`|`day` キャプチャ グループによってキャプチャされた文字列を追加します。|  
 |`-`|ハイフンを追加します。|  
@@ -55,6 +55,6 @@ ms.locfileid: "73084188"
 |`-`|ハイフンを追加します。|  
 |`$(year)`|`year` キャプチャ グループによってキャプチャされた文字列を追加します。|  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)

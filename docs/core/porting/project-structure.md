@@ -4,10 +4,10 @@ description: プロジェクト所有者が横並びの .NET Framework と .NET 
 author: conniey
 ms.date: 12/07/2018
 ms.openlocfilehash: d71cc3102846c08f4e35831921b8cc4ca82f9e1b
-ms.sourcegitcommit: cbdc0f4fd39172b5191a35200c33d5030774463c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75777330"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework と .NET Core の両方をサポートするようにプロジェクトを整理する
@@ -63,6 +63,6 @@ ms.locfileid: "75777330"
 
 .NET Core と既存のプロジェクトを別々のフォルダーに保存します。 プロジェクトを別々のフォルダーに保存すれば、Visual Studio 2017 以降のバージョンを所有する必要がありません。 古いプロジェクトだけを開く別個のソリューションを作成できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Core の移植に関するドキュメント](index.md)

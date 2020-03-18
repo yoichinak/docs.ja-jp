@@ -7,10 +7,10 @@ helpviewer_keywords:
 - best practices [.NET Framework], observer design pattern
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 ms.openlocfilehash: 2da29e0baf429142707d0ddd39b1a11c13a17a90
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141536"
 ---
 # <a name="observer-design-pattern-best-practices"></a>オブサーバー デザイン パターンのベスト プラクティス
@@ -51,7 +51,7 @@ ms.locfileid: "73141536"
   
  1 つのオブザーバーを複数のプロバイダーにアタッチすることは可能ですが、推奨パターンは、<xref:System.IObserver%601> インスタンスを 1 つの <xref:System.IObservable%601> インスタンスにのみアタッチすることです。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)
 - [方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)

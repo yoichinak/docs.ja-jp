@@ -9,10 +9,10 @@ helpviewer_keywords:
 - synchronization primitives, CountdownEvent
 ms.assetid: eec3812a-e20f-4ecd-bfef-6921d508b708
 ms.openlocfilehash: 628d6a96606117d447c61d01595d13dd4a957ce4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73138108"
 ---
 # <a name="countdownevent"></a>CountdownEvent
@@ -27,9 +27,9 @@ ms.locfileid: "73138108"
   
 - インスタンスの作成後に、シグナル数をインクリメントできます。  
   
-- <xref:System.Threading.CountdownEvent.Reset%2A> メソッドを呼び出すことで <xref:System.Threading.CountdownEvent.Wait%2A> が返された後、インスタンスを再利用できます。  
+- <xref:System.Threading.CountdownEvent.Wait%2A> メソッドを呼び出すことで <xref:System.Threading.CountdownEvent.Reset%2A> が返された後、インスタンスを再利用できます。  
   
-- インスタンスは、<xref:System.Threading.WaitHandle.WaitAll%2A> などの他の .NET Framework の同期 API との統合のために <xref:System.Threading.WaitHandle> を公開します。  
+- インスタンスは、<xref:System.Threading.WaitHandle> などの他の .NET Framework の同期 API との統合のために <xref:System.Threading.WaitHandle.WaitAll%2A> を公開します。  
   
 ## <a name="basic-usage"></a>基本的な使用方法  
  <xref:System.Threading.CountdownEvent> と <xref:System.Threading.ThreadPool> 作業項目を使用する方法を次の例に示します。  
@@ -45,6 +45,6 @@ ms.locfileid: "73138108"
   
  待機操作では、それをシグナル化するスレッドが取り消されないことに注意してください。 通常、取り消しは論理操作に適用され、待機が同期中のすべての作業項目だけでなく、イベントでの待機を含めることができます。 この例では、各作業項目には同じ取り消しトークンのコピーが渡されるため、取り消し要求に応答することができます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Threading.Semaphore?displayProperty=nameWithType>

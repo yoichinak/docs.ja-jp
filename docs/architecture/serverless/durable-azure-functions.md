@@ -5,10 +5,10 @@ author: cecilphillip
 ms.author: cephilli
 ms.date: 06/26/2018
 ms.openlocfilehash: 2c0ad086640409ac187c3aa882add4d6b39b6ff9
-ms.sourcegitcommit: 22be09204266253d45ece46f51cc6f080f2b3fd6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/08/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72522855"
 ---
 # <a name="durable-azure-functions"></a>永続的な Azure Functions
@@ -69,15 +69,15 @@ public static async Task<string> PlaceOrder([OrchestrationTrigger] DurableOrches
 }
 ```
 
-オーケストレーションの複数のインスタンスを同時に開始して実行できます。 `DurableOrchestrationClient` で `StartNewAsync` メソッドを呼び出すと、オーケストレーションの新しいインスタンスが起動されます。 そのメソッドからは、オーケストレーションが開始されたときに完了する `Task<string>` が返されます。 オーケストレーションが 30 秒以内に開始されなかった場合は、`TimeoutException` 型の例外がスローされます。
+オーケストレーションの複数のインスタンスを同時に開始して実行できます。 `StartNewAsync` で `DurableOrchestrationClient` メソッドを呼び出すと、オーケストレーションの新しいインスタンスが起動されます。 そのメソッドからは、オーケストレーションが開始されたときに完了する `Task<string>` が返されます。 オーケストレーションが 30 秒以内に開始されなかった場合は、`TimeoutException` 型の例外がスローされます。
 
-`StartNewAsync` から完了した `Task<string>` には、オーケストレーション インスタンスの一意の ID が含まれているはずです。 このインスタンス ID を使用して、その特定のオーケストレーションに対する操作を呼び出すことができます。 オーケストレーションに状態を照会したり、イベント通知を送信したりすることができます。
+`Task<string>` から完了した `StartNewAsync` には、オーケストレーション インスタンスの一意の ID が含まれているはずです。 このインスタンス ID を使用して、その特定のオーケストレーションに対する操作を呼び出すことができます。 オーケストレーションに状態を照会したり、イベント通知を送信したりすることができます。
 
 ### <a name="the-activity-functions"></a>アクティビティ関数
 
 アクティビティ関数は、ワークフローを作成するためにオーケストレーション関数内にまとめて構成される個別の操作です。 実際の作業のほとんどがここで行われます。 ビジネス ロジック、長時間実行されるプロセス、大規模なソリューションに対するパズルのピースを表します。
 
-`ActivityTriggerAttribute` は、`DurableActivityContext` 型の関数パラメーターに注釈を付けるために使用されます。 注釈を使用すると、アクティビティ関数としての使用を意図した関数であることを、ランタイムに通知できます。 アクティビティ関数への入力値は、`DurableActivityContext` パラメーターの `GetInput<T>` メソッドを使用して取得されます。
+`ActivityTriggerAttribute` は、`DurableActivityContext` 型の関数パラメーターに注釈を付けるために使用されます。 注釈を使用すると、アクティビティ関数としての使用を意図した関数であることを、ランタイムに通知できます。 アクティビティ関数への入力値は、`GetInput<T>` パラメーターの `DurableActivityContext` メソッドを使用して取得されます。
 
 オーケストレーション関数と同様に、アクティビティ関数の戻り値の型は、void、タスク、または JSON のシリアル化可能な値のいずれかである必要があります。
 

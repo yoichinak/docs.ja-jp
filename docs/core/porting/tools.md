@@ -4,10 +4,10 @@ description: .NET Core への移植に使用できるいくつかのツールに
 author: cartermp
 ms.date: 12/07/2018
 ms.openlocfilehash: 98b3a29f2287414b2cd323f1cbf2225905592b26
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157519"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>.NET Core への移植で役立つツール

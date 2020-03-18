@@ -3,10 +3,10 @@ title: ローカライズされた IntelliSense ファイルをインストー�
 description: Visual Studio で .NET Core プロジェクトのローカライズされた IntelliSense ファイルを使用するように開発用マシンを設定する方法について説明します。
 ms.date: 01/23/2020
 ms.openlocfilehash: e45e225e58865ca2b529000ada0984fbeca850f3
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157714"
 ---
 # <a name="how-to-install-localized-intellisense-files-for-net-core"></a>.NET Core のローカライズされた IntelliSense ファイルをインストールする方法
@@ -16,7 +16,7 @@ ms.locfileid: "78157714"
 - ローカライズ版のファイルをインストールする方法。
 - 別の言語を使用するように Visual Studio のインストールを変更する方法。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - [.NET Core 3.0 SDK](https://dotnet.microsoft.com/download/dotnet-core) 以降のバージョン。
 - [Visual Studio 2019 バージョン 16.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) 以降のバージョン。
@@ -37,7 +37,7 @@ ms.locfileid: "78157714"
    1. .NET Core のインストール フォルダーに移動します。 既定では *%ProgramFiles%\dotnet\packs* の下にあります。
    1. IntelliSense をインストールする SDK を選択し、関連付けられているパスに移動します。 次のオプションがあります。
 
-      | SDK の種類        | パス                               |
+      | SDK の種類        | Path                               |
       | --------------- | ---------------------------------- |
       | .NET Core       | *Microsoft.NETCore.App.Ref*        |
       | Windows デスクトップ | *Microsoft.WindowsDesktop.App.Ref* |
@@ -51,13 +51,13 @@ ms.locfileid: "78157714"
 
 1. 開いたばかりのモニカー フォルダー内にサブフォルダーを作成します。 フォルダーの名前は、使用する言語を示します。 次の表に、さまざまなオプションを示します。
 
-   | 言語              | フォルダー名 |
+   | 言語              | [フォルダー名] |
    | --------------------- | ----------- |
    | ポルトガル語 (ブラジル)  | *pt-br*     |
    | 簡体中国語  | *zh-hans*   |
    | 繁体中国語 | *zh-hant*   |
    | フランス語                | *fr*        |
-   | ドイツ語                | *de*        |
+   | German                | *de*        |
    | イタリア語               | *it*        |
    | 日本語              | *ja*        |
    | 韓国語                | *ko*        |
@@ -124,6 +124,6 @@ Visual Studio で IntelliSense に別の言語を使用するには、適切な�
 
 その後、インストールした IntelliSense ファイルのバージョンを対象とする .NET Core プロジェクトを開くと、IntelliSense が期待どおりに動作するようになります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Studio での IntelliSense](/visualstudio/ide/using-intellisense)

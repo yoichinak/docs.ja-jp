@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: 1a691ad0c1f8dbfadd642360d7f9629a136ff3ab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156661"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78240858"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI を使用した .NET Core の概要
 
@@ -19,7 +19,7 @@ ms.locfileid: "78156661"
 
 .NET Core CLI に慣れていない場合は、「[.NET Core CLI の概要](../tools/index.md)」をご覧ください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - [.NET Core SDK 3.1](https://dotnet.microsoft.com/download) 以降のバージョン。
 - ユーザーが選んだテキスト エディターまたはコード エディター。
@@ -43,20 +43,20 @@ dotnet run
 
     *Hello.csproj*:
 
-    [!code-xml[Hello.csproj](~/samples/core/console-apps/HelloMsBuild/Hello.csproj)]
+    [!code-xml[Hello.csproj](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Hello.csproj)]
 
     プロジェクト ファイルでは、依存関係を復元し、プログラムをビルドするために必要なすべてのものを指定します。
 
     - `<OutputType>` 要素で、実行可能ファイル (つまり、コンソール アプリケーション) をビルドすることが示されます。
     - `<TargetFramework>` 要素で、ターゲットの .NET 実装が指定されます。 高度なシナリオでは、複数の対象フレームワークを指定し、1 回の操作でそれらすべてにビルドすることができます。 このチュートリアルでは、.NET Core 3.1 の場合のビルドについてのみ説明します。
 
-    *Program.cs*:
+    *Program.cs*
 
-    [!code-csharp[Program.cs](~/samples/core/console-apps/HelloMsBuild/Program.cs)]
+    [!code-csharp[Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/HelloMsBuild/csharp/Program.cs)]
 
     プログラムは `using System` で始まります。これは、"`System` 名前空間のすべてがこのファイルのスコープになる" こと意味します。 `System` 名前空間には、`Console` クラスが含まれています。
 
-    次に、`Hello` という名前空間を定義します。 これを必要なものに変更できます。 その名前空間に、`Program` という名前のクラスが、`args` という名前の文字列配列を使用する `Main` メソッドと共に定義されます。 この配列には、プログラムの実行時に渡される引数のリストが含まれます。 このままではこの配列は使用されず、プログラムは単に "Hello World!" というテキストを 記述するだけです。 後に、この引数を利用するようにコードを変更します。
+    次に、`Hello` という名前空間を定義します。 これを必要なものに変更できます。 その名前空間に、`Program` という名前のクラスが、`Main` という名前の文字列配列を使用する `args` メソッドと共に定義されます。 この配列には、プログラムの実行時に渡される引数のリストが含まれます。 このままではこの配列は使用されず、プログラムは単に "Hello World!" というテキストを を表示する非常に簡単なアプリケーションのコード例を次に示します。 後に、この引数を利用するようにコードを変更します。
 
     `dotnet new` で、[dotnet restore](../tools/dotnet-restore.md) が暗黙的に呼び出されます。 `dotnet restore` は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を呼び出して依存関係ツリーを復元します。 NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードし (またはコンピューターのキャッシュから取得し)、サンプルをコンパイルして実行するために必要な *obj/project.assets.json* ファイルを記述します。
 
@@ -100,7 +100,7 @@ dotnet run
 
 01. *Program.cs* ファイルの内容を次のコードで置き換えます。
 
-    [!code-csharp[Fibonacci](~/samples/core/console-apps/fibonacci-msbuild/Program.cs)]
+    [!code-csharp[Fibonacci](~/samples/snippets/core/tutorials/cli-create-console-app/fibonacci-msbuild/csharp/Program.cs)]
 
 02. [dotnet build](../tools/dotnet-build.md) を実行して、変更をコンパイルします。
 
@@ -132,7 +132,7 @@ dotnet run
     15: 377
     ```
 
-以上です。 *Program.cs* を自由に拡張できます。
+これで終了です。 *Program.cs* を自由に拡張できます。
 
 ## <a name="working-with-multiple-files"></a>複数のファイルの操作
 
@@ -140,11 +140,11 @@ dotnet run
 
 01. 次のコードを利用し、*FibonacciGenerator.cs* という名前の *Hello* ディレクトリ内に新しいファイルを追加します。
 
-    [!code-csharp[Fibonacci Generator](~/samples/core/console-apps/FibonacciBetterMsBuild/FibonacciGenerator.cs)]
+    [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
-02. *Program.cs* ファイルの `Main` メソッドを変更し、次の例のように新しいクラスをインスタンス化し、そのメソッドを呼び出します。
+02. `Main`Program.cs*ファイルの* メソッドを変更し、次の例のように新しいクラスをインスタンス化し、そのメソッドを呼び出します。
 
-    [!code-csharp[New Program.cs](~/samples/core/console-apps/FibonacciBetterMsBuild/Program.cs)]
+    [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
 03. [dotnet build](../tools/dotnet-build.md) を実行して、変更をコンパイルします。
 
@@ -176,7 +176,7 @@ dotnet run
 
 ## <a name="publish-your-app"></a>アプリケーションの発行
 
-アプリを配布する準備ができたら、[dotnet publish](../tools/dotnet-publish.md) コマンドを使用して、_bin\\debug\\netcoreapp3.1\\publish\\_ に _publish_ フォルダーを生成します (Windows 以外のシステムの場合は `/` を使用します)。 dotnet ランタイムが既にインストールされている他のプラットフォームには、_publish_ フォルダーの内容を配布できます。
+アプリを配布する準備ができたら、[dotnet publish](../tools/dotnet-publish.md) コマンドを使用して、_bin_debug_netcoreapp3.1\\publish\\\\ に \\publish_ フォルダーを生成します (Windows 以外のシステムの場合は `/` を使用します)。 dotnet ランタイムが既にインストールされている他のプラットフォームには、_publish_ フォルダーの内容を配布できます。
 
 ```dotnetcli
 dotnet publish
@@ -217,9 +217,9 @@ Hello World!
 
 ## <a name="conclusion"></a>まとめ
 
-以上です。 これで、ここで学習した基本的な概念を利用し、自分だけのプログラムを作成できます。
+これで終了です。 これで、ここで学習した基本的な概念を利用し、自分だけのプログラムを作成できます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Core CLI を使用したプロジェクトの整理およびテスト](testing-with-cli.md)
 - [.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)

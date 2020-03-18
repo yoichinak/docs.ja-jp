@@ -6,10 +6,10 @@ helpviewer_keywords:
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
 ms.openlocfilehash: be3931a23e7a88affcf4d0abf617ec00bd35297a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712261"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>ディレクトリ ツリーを反復処理する方法 (C# プログラミング ガイド)
@@ -56,7 +56,7 @@ root.GetDirectories("*.*", System.IO.SearchOption.AllDirectories);
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  堅牢性の高いファイル反復処理コードでは、ファイル システムの数多くの複雑な部分を考慮する必要があります。 Windows ファイル システムの詳細については、「[NTFS の概要」](/windows-server/storage/file-server/ntfs-overview)を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.IO>
 - [LINQ とファイル ディレクトリ](../concepts/linq/linq-and-file-directories.md)

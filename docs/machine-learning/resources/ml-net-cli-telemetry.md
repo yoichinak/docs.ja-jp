@@ -3,13 +3,13 @@ title: ML.NET CLI によるテレメトリ収集
 description: 分析のために使用状況の情報を収集する ML.NET CLI テレメトリ機能、収集されるデータ、機能を無効にする方法について説明します。 また、.NET の使用許諾契約と Microsoft GDPR 準拠に関する情報のリンクも紹介します。
 ms.topic: conceptual
 ms.date: 09/03/2019
-ms.custom: ''
-ms.openlocfilehash: edd74b6f3d3c50d5eff012629f0b1db6b62d9021
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.custom: mlnet-tooling
+ms.openlocfilehash: 99e11acba343cc689c3219ca9316144fc62cd618
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977265"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78849745"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI によるテレメトリ収集
 

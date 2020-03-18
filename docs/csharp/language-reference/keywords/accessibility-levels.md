@@ -6,17 +6,17 @@ helpviewer_keywords:
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
 ms.openlocfilehash: 26fbc2a6d86aead537465c304146630f8bcd3ad4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713825"
 ---
 # <a name="accessibility-levels-c-reference"></a>アクセシビリティ レベル (C# リファレンス)
 
 以下に示したのは、メンバーに適用されるアクセシビリティ レベルの宣言です。`public`、`protected`、`internal`、`private` の各アクセス修飾子を使用して指定します。  
   
-|アクセシビリティの宣言|説明|  
+|アクセシビリティの宣言|意味|  
 |----------------------------|-------------|  
 |[`public`](public.md)|アクセスは無制限です。|  
 |[`protected`](protected.md)|コンテナーであるクラスまたはそこから派生した型にアクセスが限定されます。|  
@@ -37,9 +37,9 @@ ms.locfileid: "75713825"
   
 |コンテナー|メンバーの既定のアクセシビリティ|メンバーに対して宣言できるアクセシビリティ|  
 |----------------|----------------------------------|--------------------------------------------------|  
-|`enum`|`public`|None|  
+|`enum`|`public`|なし|  
 |`class`|`private`|`public`<br /><br /> `protected`<br /><br /> `internal`<br /><br /> `private`<br /><br /> `protected internal` <br /><br />`private protected`|  
-|`interface`|`public`|None|  
+|`interface`|`public`|なし|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
  入れ子にされた型のアクセシビリティは、その型の[アクセシビリティ ドメイン](./accessibility-domain.md)によって決まります。このアクセシビリティ ドメインは、そのメンバーに対して宣言されているアクセシビリティと、そのメンバーの直接のコンテナーである型のアクセシビリティ ドメインの両方によって決定されます。 ただし、入れ子にされた型のアクセシビリティ ドメインが、その型を含んでいる型のアクセシビリティ ドメインを上回ることはできません。  
@@ -47,10 +47,10 @@ ms.locfileid: "75713825"
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](./index.md)
 - [アクセス修飾子](./access-modifiers.md)
 - [アクセシビリティ ドメイン](./accessibility-domain.md)

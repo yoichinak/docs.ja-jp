@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <remarks> C# XML tag
 ms.assetid: f8641391-31f3-4735-af7a-c502a5b6a251
 ms.openlocfilehash: e37dac9cb9fed1df6ca027f09f2c95dbbc8ea66d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76793372"
 ---
 # <a name="remarks-c-programming-guide"></a>\<remarks> (C# プログラミング ガイド)
@@ -29,7 +29,7 @@ ms.locfileid: "76793372"
 
   メンバーの説明。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 \<remarks> タグを使用して、型の情報を追加し、[\<summary>](./summary.md) で指定された情報を補足します。 この情報はオブジェクト ブラウザー ウィンドウに表示されます。
 
@@ -39,7 +39,7 @@ ms.locfileid: "76793372"
 
 [!code-csharp[csProgGuideDocComments#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#9)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

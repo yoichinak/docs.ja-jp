@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new modifier keyword [C#]
 ms.assetid: a2e20856-33b9-4620-b535-a60dbce8349b
 ms.openlocfilehash: 6c4fedd469efb79f91780dff26da89b586de2d1c
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713342"
 ---
 # <a name="new-modifier-c-reference"></a>new 修飾子 (C# リファレンス)
@@ -25,7 +25,7 @@ ms.locfileid: "75713342"
 
 継承による名前の隠ぺいは、次のいずれかの形式で行われます。
 
-- 一般的に、定数、フィールド、プロパティ、型をクラスまたは構造体で使用すると、同じ名前を共有するすべての基底クラス メンバーが隠ぺいされます。 次のような特殊な状況があります。 たとえば、呼び出し可能ではない型を持つ `N` という名前の新しいフィールドを宣言し、基本型が `N` をメソッドとして宣言する場合は、新しいフィールドが呼び出し構文内で基本型の宣言を隠ぺいすることはありません。 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[メンバー ルックアップ](~/_csharplang/spec/expressions.md#member-lookup)」セクションを参照してください。
+- 一般的に、定数、フィールド、プロパティ、型をクラスまたは構造体で使用すると、同じ名前を共有するすべての基底クラス メンバーが隠ぺいされます。 次のような特殊な状況があります。 たとえば、呼び出し可能ではない型を持つ `N` という名前の新しいフィールドを宣言し、基本型が `N` をメソッドとして宣言する場合は、新しいフィールドが呼び出し構文内で基本型の宣言を隠ぺいすることはありません。 詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md#member-lookup)の「[メンバー ルックアップ](~/_csharplang/spec/introduction.md)」セクションを参照してください。
 
 - メソッドをクラスまたは構造体で使用すると、基底クラスで同じ名前を共有するプロパティ、フィールド、型が隠ぺいされます。 また、同じシグネチャを持つすべての基底クラス メソッドも隠ぺいされます。
 
@@ -55,12 +55,12 @@ The keyword new is required on 'MyDerivedC.x' because it hides inherited member 
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[new 修飾子](~/_csharplang/spec/classes.md#the-new-modifier)」セクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/classes.md#the-new-modifier)の「[new 修飾子](~/_csharplang/spec/introduction.md)」セクションを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../../language-reference/index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [修飾子](index.md)
 - [Override キーワードと New キーワードによるバージョン管理](../../programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)

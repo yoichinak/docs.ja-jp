@@ -6,10 +6,10 @@ helpviewer_keywords:
 - PLINQ, overview
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 ms.openlocfilehash: 1ea880c6403a5fc8b26ba67fe21dfce79c4683db
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140040"
 ---
 # <a name="parallel-linq-plinq"></a>Parallel LINQ (PLINQ)
@@ -48,7 +48,7 @@ Parallel LINQ (PLINQ) は、LINQ to Objects の並列実装です。 PLINQ は�
   
  [PLINQ データのサンプル](../../../docs/standard/parallel-programming/plinq-data-sample.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq.ParallelEnumerable>
 - [並列プログラミング](../../../docs/standard/parallel-programming/index.md)

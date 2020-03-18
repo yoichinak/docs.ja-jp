@@ -2,12 +2,12 @@
 title: 回復性があるアプリケーションを実装する
 description: マイクロサービスのアーキテクチャで中核となる概念である、回復性について説明します。 一時的な障害が発生したときのために、それらを適切に処理する方法を知っておく必要があります。
 ms.date: 01/30/2020
-ms.openlocfilehash: ccdb2470c727ad4bd89c4e0634da8564b8010e63
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.openlocfilehash: 46276a6b9b36a494bfae657275692ca9d5554d86
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77502654"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78847233"
 ---
 # <a name="implement-resilient-applications"></a>回復性があるアプリケーションを実装する
 

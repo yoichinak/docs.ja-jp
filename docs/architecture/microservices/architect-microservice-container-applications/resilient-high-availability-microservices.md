@@ -3,10 +3,10 @@ title: マイクロサービスの回復性と高可用性
 description: マイクロサービスの高可用性を実現するには、一時的なネットワークや依存関係のエラーに耐えるような設計が必要であり、回復性も求められます。
 ms.date: 09/20/2018
 ms.openlocfilehash: 1c0f75a8c68d1f84ba24c550e854edc5372cf7f6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73094211"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性

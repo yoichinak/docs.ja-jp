@@ -5,10 +5,10 @@ helpviewer_keywords:
 - delegates [C#], declaring and instantiating
 ms.assetid: 61c4895f-f785-48f8-8bfe-db73b411c4ae
 ms.openlocfilehash: 7ac1d736e19c4dcf1c8408db944505c399762778
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712365"
 ---
 # <a name="how-to-declare-instantiate-and-use-a-delegate-c-programming-guide"></a>デリゲートを宣言し、インスタンス化して使用する方法 (C# プログラミング ガイド)
@@ -30,7 +30,7 @@ C# 1.0 以降では、次の例に示すようにデリゲートを宣言でき�
   
  [!code-csharp[csProgGuideDelegates#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#31)]  
   
- 詳細については、「[ラムダ式](../statements-expressions-operators/lambda-expressions.md)」を参照してください。  
+ 詳しくは、「[ラムダ式](../statements-expressions-operators/lambda-expressions.md)」をご覧ください。  
   
  次の例で、デリゲートの宣言、インスタンス化、および使用の方法について説明します。 `BookDB` クラスにより、書籍のデータベースを保持する書店データベースをカプセル化します。 これは、データベース内にあるすべてのペーパーバックを検索し、各ペーパーバックに対してデリゲートを呼び出す `ProcessPaperbackBooks` メソッドを公開します。 使用する `delegate` 型には `ProcessBookDelegate` という名前を付けます。 `Test` クラスでは、このクラスを使用してペーパーバックのタイトルと平均価格を出力します。  
   
@@ -55,7 +55,7 @@ C# 1.0 以降では、次の例に示すようにデリゲートを宣言でき�
   
      [!code-csharp[csProgGuideDelegates#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#17)]  
   
-     これにより、[静的](../../language-reference/keywords/static.md) メソッド `Test.PrintTitle` に関連付けられた新しいデリゲート オブジェクトが作成されます。 同様に、次の例で示すようにオブジェクト `totaller` の非静的メソッド `AddBookToTotal` も渡しています。  
+     これにより、[静的](../../language-reference/keywords/static.md) メソッド `Test.PrintTitle` に関連付けられた新しいデリゲート オブジェクトが作成されます。 同様に、次の例で示すようにオブジェクト `AddBookToTotal` の非静的メソッド `totaller` も渡しています。  
   
      [!code-csharp[csProgGuideDelegates#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#18)]  
   
@@ -71,8 +71,8 @@ C# 1.0 以降では、次の例に示すようにデリゲートを宣言でき�
   
      デリゲートは、この例に示すように同期的に呼び出すことも、`BeginInvoke` メソッドおよび `EndInvoke` メソッドを使用して非同期的に呼び出すこともできます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [イベント](../events/index.md)
 - [デリゲート](./index.md)

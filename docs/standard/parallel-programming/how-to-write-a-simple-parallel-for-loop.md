@@ -11,10 +11,10 @@ helpviewer_keywords:
 - parallel for loops, how to use
 ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 ms.openlocfilehash: 78f07a4f0118c6bce7a043f111988281ddd6add0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73139657"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>方法: 単純な Parallel.For ループを記述する
@@ -22,7 +22,7 @@ ms.locfileid: "73139657"
 このトピックでは、<xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドを示す 2 つの例を示しています。 最初の例では <xref:System.Threading.Tasks.Parallel.For%28System.Int64%2CSystem.Int64%2CSystem.Action%7BSystem.Int64%7D%29?displayProperty=nameWithType> メソッドのオーバー ロードを使用し、2 番目の例では <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Action%7BSystem.Int32%7D%29?displayProperty=nameWithType> のオーバー ロードを使用しています。これらは <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドの 2 つの最も単純なオーバーロードです。 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> メソッドのこれらの 2 つのオーバー ロードは、ループをキャンセルする必要がない場合、ループのイテレーションから抜ける場合、またはいずれかのスレッドローカル状態を維持する場合に使用します。
 
 > [!NOTE]
-> ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式についての情報が必要な場合は、「[Lambda Expressions in PLINQ and TPL (PLINQ および TPL のラムダ式)](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
+> ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式についての情報が必要な場合は、「[PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
 
 最初の例では、1 つのディレクトリ内のファイルのサイズを計算します。 2 つ目の例では、2 つの行列の積を計算します。
 
@@ -50,7 +50,7 @@ ms.locfileid: "73139657"
 
 デリゲートは、値が現在のイテレーションである 1 つの入力パラメーターを受け取ります。 このイテレーション値はランタイムによって提供され、その開始値は、現在のスレッドで処理されているソースのセグメント (パーティション) の最初の要素のインデックスです。
 
-コンカレンシー レベルをより細かく制御する必要がある場合は、<xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType> などの <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> 入力パラメーターを受け取るいずれかのオーバーロードを使用します。
+コンカレンシー レベルをより細かく制御する必要がある場合は、<xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> などの <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType> 入力パラメーターを受け取るいずれかのオーバーロードを使用します。
 
 ## <a name="return-value-and-exception-handling"></a>戻り値と例外処理
 
@@ -68,7 +68,7 @@ ms.locfileid: "73139657"
 
 このコードをコピーして、Visual Studio プロジェクトに貼り付けます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Threading.Tasks.Parallel.For%2A>
 - <xref:System.Threading.Tasks.Parallel.ForEach%2A>
