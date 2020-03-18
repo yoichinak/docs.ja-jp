@@ -13,10 +13,10 @@ helpviewer_keywords:
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
 ms.openlocfilehash: 41853e6858fae9e8d449aeed95a6a84f343d5874
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635614"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ クエリ操作での型の関係 (C#)

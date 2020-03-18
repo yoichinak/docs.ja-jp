@@ -6,10 +6,10 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348178"
 ---
 # <a name="friend-assemblies"></a>フレンド アセンブリ
@@ -20,7 +20,7 @@ ms.locfileid: "74348178"
 
 - クラス ライブラリの開発中、そのライブラリへの追加機能が別のアセンブリにある状況で、C# では `internal`、または Visual Basic では `Friend` としてマークされる、既存アセンブリ内のメンバーにアクセスしなければならないとき。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性を利用し、特定のアセンブリの 1 つまたは複数のフレンド アセンブリを特定できます。 次の例では、*Assembly A* において <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 属性が使用され、フレンド アセンブリとしてアセンブリ *AssemblyB* が指定されています。 これにより、アセンブリ *AssemblyB* では、*Assembly A* の中で `internal` (C#) または `Friend` (Visual Basic) としてマークされているすべての型とメンバーにアクセスすることができます。
 

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
 ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345387"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)

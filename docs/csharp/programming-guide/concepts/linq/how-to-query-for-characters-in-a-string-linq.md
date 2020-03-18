@@ -3,10 +3,10 @@ title: 文字列内の文字を照会する方法 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
 ms.openlocfilehash: d85e488a38a6167505732103b4c540cade6ea9bc
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345679"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>文字列内の文字を照会する方法 (LINQ) (C#)
@@ -57,7 +57,7 @@ class QueryAString
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ と文字列 (C#)](./linq-and-strings.md)
 - [LINQ クエリと正規表現を組み合わせる方法 (C#)](./how-to-combine-linq-queries-with-regular-expressions.md)
