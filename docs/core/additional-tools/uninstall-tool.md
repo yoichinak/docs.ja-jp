@@ -55,7 +55,7 @@ dotnet-core-uninstall list [options]
 
 #### <a name="options"></a>オプション
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--aspnet-runtime`**
 
@@ -85,7 +85,7 @@ dotnet-core-uninstall list [options]
 
   このツールでアンインストールできるすべての x86 .NET Core SDK とランタイムを一覧表示します。
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--runtime`**
 
@@ -148,7 +148,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 #### <a name="options"></a>オプション
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -218,7 +218,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 2. `--all`、`--all-below`、`--all-but`、`--all-but-latest`、`--all-lower-patches`、`--all-previews`、`--all-previews-but-latest`、`--major-minor`、および `[<VERSION>...]` は排他的です。
 3. `--x64` または `--x86` が指定されていない場合は、x64 と x86 の両方が削除されます。
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -328,7 +328,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 #### <a name="options"></a>オプション
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 * **`--all`**
 
@@ -400,7 +400,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 2. `--all`、`--all-below`、`--all-but`、`--all-but-latest`、`--all-lower-patches`、`--all-previews`、`--all-previews-but-latest`、`--major-minor`、および `[<VERSION>...]` は排他的です。
 3. `--x64` または `--x86` が指定されていない場合は、x64 と x86 の両方が削除されます。
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 * **`--all`**
 
@@ -511,13 +511,13 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ## <a name="uninstall-the-tool"></a>ツールをアンインストールする
 
-## <a name="windowstabwindows"></a>[Windows](#tab/windows)
+## <a name="windows"></a>[Windows](#tab/windows)
 
 1. **[プログラムの追加と削除]** を開きます。
 2. `Microsoft .NET Core SDK Uninstall Tool` を検索します。
 3. **[アンインストール]** を選択します。
 
-## <a name="macostabmacos"></a>[macOS](#tab/macos)
+## <a name="macos"></a>[macOS](#tab/macos)
 
 ダウンロードした *dotnet-core-uninstall.tar.gz* ファイルをインストールしたディレクトリから削除します。 このファイルの内容を別のディレクトリに解凍した場合は、必ずその内容も削除してください。
 

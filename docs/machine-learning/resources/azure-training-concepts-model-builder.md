@@ -5,12 +5,12 @@ ms.topic: reference
 ms.date: 02/27/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: 866fd5a90d13f85f2f8a1aa45ff0e1efb0096642
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a19e13955d0eaea344109eb817f3a3959c3dd883
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159300"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185822"
 ---
 # <a name="model-builder-azure-training-resources"></a>モデル ビルダーの Azure トレーニング リソース
 
@@ -28,7 +28,7 @@ Azure Machine Learning の実験とは、Azure でモデル ビルダーのト�
 
 Azure Machine Learning ワークスペースの作成には、次が必要です。
 
-- 名前:3 から 33 文字のお使いのワークスペースの名前。 名前には、英数字とハイフンのみを使用できます。 
+- 名前:3 から 33 文字のお使いのワークスペースの名前。 名前には、英数字とハイフンのみを使用できます。
 - リージョン:お使いのワークスペースとリソースがデプロイされているデータ センターの地理的な場所。 ご自分またはお客様に近い場所を選択することをお勧めします。
 - リソース グループ: Azure ソリューションの関連するリソースをすべて保持するコンテナー。
 

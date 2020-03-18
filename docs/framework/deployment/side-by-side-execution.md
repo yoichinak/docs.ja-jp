@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - side-by-side execution
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
-ms.openlocfilehash: 5202e4c26220bc9ea08d6d941ee5a7821cbbdefd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e965702943149d3ed34be39bb2923ad52dcf90ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122234"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181646"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework での side-by-side 実行
 
@@ -28,7 +28,7 @@ side-by-side 実行は、アプリケーションまたはコンポーネント�
 side-by-side 実行により、アプリケーションがバインドするコンポーネントのバージョンやアプリケーションが使用するランタイムのバージョンをより詳細に制御できます。  
   
 ## <a name="benefits-of-side-by-side-execution"></a>side-by-side 実行の利点  
- 
+
 Windows XP および .NET Framework 以前では、アプリケーションは同じコードの非互換バージョンを識別できないため、DLL の競合が発生することがありました。 DLL に含まれる型情報は、ファイル名だけに関連付けられていました。 アプリケーションは、DLL に含まれている型とアプリケーションの作成に使用された型が同じであるかどうかを判断できませんでした。 この結果、新しいバージョンのコンポーネントが古いバージョンを書き変え、アプリケーションが壊れてしまうことがありました。  
   
 side-by-side 実行と .NET Framework によって、DLL の競合を防ぐ次の機能が得られます。  
@@ -102,13 +102,13 @@ COM アプリケーションおよび COM+ アプリケーションを含むア�
  `myAssembly` というアセンブリを完全に修飾する、アプリケーション構成ファイルのエントリの例を次に示します。  
   
 ```xml  
-<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">   
-<qualifyAssembly partialName="myAssembly"   
+<assemblyBinding xmlns="urn:schemas-microsoft-com:asm.v1">
+<qualifyAssembly partialName="myAssembly"
 fullName="myAssembly,  
-      version=1.0.0.0,   
-publicKeyToken=...,   
-      culture=neutral"/>   
-</assemblyBinding>   
+      version=1.0.0.0,
+publicKeyToken=...,
+      culture=neutral"/>
+</assemblyBinding>
 ```  
   
  アセンブリの読み込みステートメントが `myAssembly` を参照するたびに、構成ファイルのこれらの設定により、ランタイムは部分修飾された `myAssembly` 参照を完全限定参照に自動的に変換します。 たとえば、Assembly.Load("myAssembly") は Assembly.Load("myAssembly, version=1.0.0.0, publicKeyToken=..., culture=neutral") に変換されます。  

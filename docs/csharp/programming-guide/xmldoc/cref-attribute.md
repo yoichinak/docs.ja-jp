@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 2a9b9966a28b62c41ac6091268ae172bae3a40d7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b06d0c9d447124dec7d8cf3c0cbbfd0daca78fe3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793440"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157014"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 属性 (C# プログラミング ガイド)
 
@@ -17,11 +17,11 @@ XML ドキュメント タグの `cref` 属性は "コード参照" を意味し
 
 ## <a name="example"></a>例
 
-次の例は、[\<see>](./see.md) タグで使用される `cref` 属性のものです。
+次の例は、`cref`[see>\< タグで使用される ](./see.md) 属性のものです。
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
-コンパイルすると、このプログラムの XML 出力は次のようになります。 たとえば、`GetZero` メソッドの `cref` 属性がコンパイラにより `"M:TestNamespace.TestClass.GetZero"` に変換されていることに注意してください。 "M:" プレフィックスは "method" という意味であり、DocFX や Sandcastle のようなドキュメント ツールで認識される規約です。 プレフィックスの完全一覧については、「[XML ファイルの処理](./processing-the-xml-file.md)」を参照してください。
+コンパイルすると、このプログラムの XML 出力は次のようになります。 たとえば、`cref` メソッドの `GetZero` 属性がコンパイラにより `"M:TestNamespace.TestClass.GetZero"` に変換されていることに注意してください。 "M:" プレフィックスは "method" という意味であり、DocFX や Sandcastle のようなドキュメント ツールで認識される規約です。 プレフィックスの完全一覧については、「[XML ファイルの処理](./processing-the-xml-file.md)」を参照してください。
 
 ```xml  
 <?xml version="1.0"?>
@@ -49,12 +49,12 @@ XML ドキュメント タグの `cref` 属性は "コード参照" を意味し
             <summary>
             The GetZero method.
             </summary>
-            <example> 
+            <example>
             This sample shows how to call the <see cref="M:TestNamespace.TestClass.GetZero"/> method.
             <code>
-            class TestClass 
+            class TestClass
             {
-                static int Main() 
+                static int Main()
                 {
                     return GetZero();
                 }
@@ -66,7 +66,7 @@ XML ドキュメント タグの `cref` 属性は "コード参照" を意味し
             <summary>
             The GetGenericValue method.
             </summary>
-            <remarks> 
+            <remarks>
             This sample shows how to specify the <see cref="M:TestNamespace.TestClass.GetGenericValue``1(``0)"/> method as a cref attribute.
             </remarks>
         </member>
@@ -74,7 +74,7 @@ XML ドキュメント タグの `cref` 属性は "コード参照" を意味し
             <summary>
             GenericClass.
             </summary>
-            <remarks> 
+            <remarks>
             This example shows how to specify the <see cref="T:TestNamespace.GenericClass`1"/> type as a cref attribute.
             </remarks>
         </member>
@@ -82,7 +82,7 @@ XML ドキュメント タグの `cref` 属性は "コード参照" を意味し
 </doc>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [XML ドキュメント コメント](./index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

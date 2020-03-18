@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 1e3722cbed02775d0ad4f392840ea10275c96be1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 22d87559766c04e53141e843ee8768c8aab89a85
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793425"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79156975"
 ---
 # <a name="include-c-programming-guide"></a>\<include> (C# プログラミング ガイド)
 
@@ -31,7 +31,7 @@ ms.locfileid: "76793425"
 
 - `tagpath`
 
-  タグ `name` につながる `filename` 内のタグのパス。 パスを単一引用符 (' ') で囲みます。
+  タグ `filename` につながる `name` 内のタグのパス。 パスを単一引用符 (' ') で囲みます。
 
 - `name`
 
@@ -41,7 +41,7 @@ ms.locfileid: "76793425"
 
 コメントの前に配置するタグの ID。 ID は二重引用符 (" ") で囲みます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 \<include> タグを使用して、ソース コード内の型とメンバーを記述する別のファイル内のコメントを参照することができます。 これは文書化のコメントをソース コード ファイル内に直接配置する方法の代替です。 別のファイルにドキュメントを配置することで、ソース コードから分離して、ソースの制御をドキュメントに適用できます。 1 人のユーザーがソース コード ファイルをチェックアウトし、他のユーザーがドキュメント ファイルをチェックアウトすることができます。
 
@@ -75,7 +75,7 @@ The summary for this other type.
 
 ## <a name="program-output"></a>プログラムの出力
 
-Test および Test2 クラスをコンパイルするときにコマンド ライン `-doc:DocFileName.xml.` を使うと、以下の出力が生成されます。Visual Studio では、プロジェクト デザイナーの [ビルド] ウィンドウで、XML ドキュメント コメントのオプションを指定します。 C# コンパイラが \<include> タグを認識すると、現在のソース ファイルではなく xml_include_tag.doc でドキュメントのコメントを検索します。 コンパイラは次に、DocFileName.xml を生成します。これは、最終的なドキュメントを生成するために、[DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://github.com/EWSoftware/SHFB) などのドキュメント ツールによって利用されます。  
+コマンド ライン `-doc:DocFileName.xml.` で Test および Test2 クラスをコンパイルするときに、次の出力が生成されます。Visual Studio では、プロジェクト デザイナーの [ビルド] ウィンドウで、XML ドキュメント コメントのオプションを指定します。 C# コンパイラが \<include> タグを認識すると、現在のソース ファイルではなく xml_include_tag.doc でドキュメントのコメントを検索します。 コンパイラは次に、DocFileName.xml を生成します。これは、最終的なドキュメントを生成するために、[DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://github.com/EWSoftware/SHFB) などのドキュメント ツールによって利用されます。  
   
 ```xml
 <?xml version="1.0"?>
@@ -86,19 +86,19 @@ Test および Test2 クラスをコンパイルするときにコマンド ラ�
     <members>
         <member name="T:Test">
             <summary>
-The summary for this type.   
-</summary>   
-        </member>   
-        <member name="T:Test2">   
-            <summary>   
-The summary for this other type.   
-</summary>   
-        </member>   
-    </members>   
-</doc>   
+The summary for this type.
+</summary>
+        </member>
+        <member name="T:Test2">
+            <summary>
+The summary for this other type.
+</summary>
+        </member>
+    </members>
+</doc>
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [ドキュメント コメントとして推奨されるタグ](./recommended-tags-for-documentation-comments.md)

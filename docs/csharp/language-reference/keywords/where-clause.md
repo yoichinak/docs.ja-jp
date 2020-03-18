@@ -7,12 +7,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 42932809d58c739afc165676c0b90c5a23f568de
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 33616e4eacb484b9c6eda3862cd86fdd1e6df165
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75712820"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79173485"
 ---
 # <a name="where-clause-c-reference"></a>where 句 (C# リファレンス)
 
@@ -36,7 +36,7 @@ ms.locfileid: "75712820"
 
 [!code-csharp[cscsrefQueryKeywords#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Where.cs#7)]
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `where` 句はフィルター メカニズムです。 クエリ式のほぼどこにでも指定できますが、最初の句や最後の句にすることはできません。 `where` 句は、ソース要素のフィルター処理をグループ化の前に行うか後に行うかによって、[group](group-clause.md) 句の前または後に指定できます。
 
@@ -44,11 +44,11 @@ ms.locfileid: "75712820"
 
 コンパイル時に、`where` キーワードは <xref:System.Linq.Enumerable.Where%2A> 標準クエリ演算子メソッドの呼び出しに変換されます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [クエリ キーワード (LINQ)](query-keywords.md)
 - [from 句](from-clause.md)
 - [select 句](select-clause.md)
 - [データのフィルター処理](../../programming-guide/concepts/linq/filtering-data.md)
 - [C# での LINQ](../../linq/index.md)
-- [C# の LINQ の概要](/dotnet/csharp/programming-guide/concepts/linq/)
+- [統合言語クエリ (LINQ)](../../programming-guide/concepts/linq/index.md)

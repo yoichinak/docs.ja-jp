@@ -4,12 +4,12 @@ description: .NET for Apache Spark ワーカーとユーザー定義関数のバ
 ms.date: 01/21/2019
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: f9197ca3cf8066f0849ebbe70d7757c9035d02f6
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f373ccee398149adcadeac91f02d9896214706b0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76748543"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187597"
 ---
 # <a name="deploy-net-for-apache-spark-worker-and-user-defined-function-binaries"></a>.NET for Apache Spark ワーカーとユーザー定義関数のバイナリを展開する
 
@@ -19,19 +19,19 @@ ms.locfileid: "76748543"
 構成では、.NET for Apache Spark ワーカーおよびユーザー定義関数のバイナリを展開する場合の一般的な環境変数とパラメーター設定について説明します。
 
 ### <a name="environment-variables"></a>環境変数
-ワーカーを展開して UDF を記述する場合、次のようないくつかの環境変数を設定する必要があります。 
+ワーカーを展開して UDF を記述する場合、次のようないくつかの環境変数を設定する必要があります。
 
 | 環境変数         | 説明
-| :--------------------------- | :---------- 
+| :--------------------------- | :----------
 | DOTNET_WORKER_DIR            | <code>Microsoft.Spark.Worker</code> バイナリが生成されるパス。</br>これは Spark ドライバーによって使用され、Spark Executor に渡されます。 この変数を設定しないと、Spark Executor は <code>PATH</code> 環境変数から指定したパスを検索します。</br>_例:"C:\bin\Microsoft.Spark.Worker"_
 | DOTNET_ASSEMBLY_SEARCH_PATHS | <code>Microsoft.Spark.Worker</code> がアセンブリを読み込むコンマ区切りのパス。</br>パスが "." で始まる場合、作業ディレクトリが先頭に追加されます。 **yarn モード**の場合、"." はコンテナーの作業ディレクトリを表します。</br>_例:"C:\Users\\&lt;ユーザー名&gt;\\&lt;mysparkapp&gt;\bin\Debug\\&lt;dotnet バージョン&gt;"_
 | DOTNET_WORKER_DEBUG          | <a href="https://github.com/dotnet/spark/blob/master/docs/developer-guide.md#debugging-user-defined-function-udf">UDF をデバッグしたい</a>場合、<code>spark-submit</code> の実行前にこの環境変数を <code>1</code> に設定します。
 
 ### <a name="parameter-options"></a>パラメーター オプション
-一度[バンドル](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies)した Spark アプリケーションは、`spark-submit` を使用して起動できます。 一般的に使用されるオプションは、次の表のとおりです。 
+一度[バンドル](https://spark.apache.org/docs/latest/submitting-applications.html#bundling-your-applications-dependencies)した Spark アプリケーションは、`spark-submit` を使用して起動できます。 一般的に使用されるオプションは、次の表のとおりです。
 
 | パラメーター名        | 説明
-| :---------------------| :---------- 
+| :---------------------| :----------
 | --class               | お使いのアプリケーションのエントリ ポイント。</br>_例: org.apache.spark.deploy.dotnet.DotnetRunner_
 | --master              | クラスターの<a href="https://spark.apache.org/docs/latest/submitting-applications.html#master-urls">マスター URL</a>。</br>_例: yarn_
 | --deploy-mode         | ご自分のドライバーをワーカー ノードに展開 (<code>cluster</code>) するか、外部クライアントとしてローカルに展開 (<code>client</code>) するか。</br>既定値: <code>client</code>

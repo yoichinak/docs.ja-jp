@@ -3,10 +3,10 @@ title: テキストから XML へのストリーミング変換を実行する�
 ms.date: 07/20/2015
 ms.assetid: 9b3bd941-d0ff-4f2d-ae41-7c3b81d8fae6
 ms.openlocfilehash: 496535b7f868095a62be2b72b1eea2b082e00a44
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345797"
 ---
 # <a name="how-to-perform-streaming-transformations-of-text-to-xml-c"></a>テキストから XML へのストリーミング変換を実行する方法 (C#)
@@ -88,6 +88,6 @@ class Program
 </Root>
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Xml.Linq.XStreamingElement>

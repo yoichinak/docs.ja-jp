@@ -7,10 +7,10 @@ helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
 ms.openlocfilehash: d047b88f202341a795834809d0b601706c30fcb4
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75899851"
 ---
 # <a name="if-c-reference"></a>#if (C# リファレンス)
@@ -25,7 +25,7 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 
 演算子 [==](../operators/equality-operators.md#equality-operator-) (等式) および [!=](../operators/equality-operators.md#inequality-operator-) (不等式) は、[bool](../builtin-types/bool.md) 値 `true` または `false` をテストするためにのみ使用できます。 `true` は、シンボルが定義されていることを意味します。 ステートメント `#if DEBUG` と `#if (DEBUG == true)` の意味は同じです。 [&& (かつ)](../operators/boolean-logical-operators.md#conditional-logical-and-operator-)、[&#124;&#124; (または)](../operators/boolean-logical-operators.md#conditional-logical-or-operator-)、[! (not)](../operators/boolean-logical-operators.md#logical-negation-operator-) の各演算子を使用すると、複数のシンボルが定義されているかどうかを評価できます。 シンボルと演算子は、かっこを使用してグループ化できます。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 `#if` と [#else](preprocessor-else.md)、[#elif](preprocessor-elif.md)、[#endif](preprocessor-endif.md)、[#define](preprocessor-define.md)、[#undef](preprocessor-undef.md) の各ディレクティブを組み合わせると、1 つ以上のシンボルが存在するかどうかに応じてコードを含めたり除外したりできます。 これは、デバッグ ビルドのコードをコンパイルする場合や、特定の構成でコンパイルを行う場合に役立ちます。
 
@@ -48,7 +48,7 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 
 他の定義済みシンボルとしては、DEBUG 定数と TRACE 定数があります。 `#define` を使用して、プロジェクトに設定された値をオーバーライドできます。 たとえば、DEBUG シンボルは、ビルド構成プロパティ ("デバッグ" モードまたは "リリース" モード) に応じて自動的に設定されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例は、ファイルで MYTEST シンボルを定義し、MYTEST シンボルと DEBUG シンボルの値をテストする方法を示しています。 この例の出力は、プロジェクトをデバッグとリリースのどちらの構成モードでビルドするかによって異なります。
 
@@ -89,9 +89,9 @@ public class MyClass
 }
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# プリプロセッサ ディレクティブ](index.md)
-- [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)

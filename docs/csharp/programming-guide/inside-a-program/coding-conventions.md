@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C# language, coding conventions
 ms.assetid: f4f60de9-d49b-4fb6-bab1-20e19ea24710
 ms.openlocfilehash: 77b173a420f26834855e0bdca3c8d04406ac65d4
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452007"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398377"
 ---
 # <a name="c-coding-conventions-c-programming-guide"></a>C# のコーディング規則 (C# プログラミング ガイド)
 
@@ -39,13 +39,13 @@ ms.locfileid: "77452007"
 
 コードの構造を強調する書式が使用され、コードが読みやすくなっているのが、優れたレイアウトです。 マイクロソフトの例とサンプルは、次の規則に準拠しています。  
   
-- コード エディターの既定の設定 (スマート インデント、4 文字インデント、タブを空白として保存) を使用します。 詳細については、「[[オプション]、[テキスト エディター]、[C#]、[書式設定]](/visualstudio/ide/reference/options-text-editor-csharp-formatting)」を参照してください。  
+- コード エディターの既定の設定 (スマートインデント、4 文字インデント、タブを空白として保存) を使用します。 詳細については、「[[オプション]、[テキスト エディター]、[C#]、[書式設定]](/visualstudio/ide/reference/options-text-editor-csharp-formatting)」を参照してください。  
   
 - 1 つの行には 1 つのステートメントのみを記述します。  
   
 - 1 つの行には 1 つの宣言のみを記述します。  
   
-- 継続行にインデントが自動的に設定されない場合は、1 タブ ストップ (4 つの空白) 分のインデントを設定します。  
+- 継続行にインデントが自動的に設定されない場合は、1 タブストップ (4 つの空白) 分のインデントを設定します。  
   
 - メソッド定義とプロパティ定義の間に少なくとも 1 行の空白行を追加します。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "77452007"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- [dynamic](../../language-reference/builtin-types/reference-types.md) の代わりに `var` を使用しないようにしてください。  
+- `var`dynamic[ の代わりに ](../../language-reference/builtin-types/reference-types.md) を使用しないようにしてください。  
   
 - [for](../../language-reference/keywords/for.md) ループでループ変数の型を決定するときは、暗黙の型指定が使用されます。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "77452007"
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > 反復可能コレクションの要素の型を誤って変更しないように注意してください。 たとえば、`foreach` ステートメントで <xref:System.Linq.IQueryable?displayProperty=nameWithType> から <xref:System.Collections.IEnumerable?displayProperty=nameWithType> に切り替えるのは簡単ですが、これを行うとクエリの結果が変更されます。
+     > 反復可能コレクションの要素の型を誤って変更しないように注意してください。 たとえば、<xref:System.Linq.IQueryable?displayProperty=nameWithType> ステートメントで <xref:System.Collections.IEnumerable?displayProperty=nameWithType> から `foreach` に切り替えるのは簡単ですが、これを行うとクエリの結果が変更されます。
 
 ### <a name="unsigned-data-type"></a>Unsigned データ型  
   
@@ -142,7 +142,7 @@ ms.locfileid: "77452007"
   
 ### <a name="-and-124124-operators"></a>&& 演算子および &#124;&#124; 演算子  
   
-例外を回避し、不要な比較をスキップしてパフォーマンスを向上させるには、比較を実行する場合、次の例に示すように [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) の代わりに [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) を、[&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) の代わりに [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) を使用します。  
+例外を回避し、不要な比較をスキップしてパフォーマンスを向上させるには、比較を実行する場合、次の例に示すように [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) の代わりに [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) を、[&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) の代わりに [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) を使用します。  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -170,7 +170,7 @@ ms.locfileid: "77452007"
   
 ### <a name="static-members"></a>静的メンバー  
   
-[静的](../../language-reference/keywords/static.md)メンバーは、クラス名 *ClassName.StaticMember* を使用して呼び出します。 こうすることで、静的アクセスが明確になり、コードがよりわかりやすくなります。  派生クラスの名前を持つ基本クラスに定義された静的メンバーを指定しないでください。  このコードをコンパイルすると、コードが読みやすくなくなり、派生クラスに同じ名前の静的メンバーを追加すると、将来的にコードが中断する場合があります。  
+[静的](../../language-reference/keywords/static.md)メンバーは、クラス名 (*ClassName.StaticMember*) を使用して呼び出します。 こうすることで、静的アクセスが明確になり、コードがよりわかりやすくなります。  派生クラスの名前を持つ基本クラスに定義された静的メンバーを指定しないでください。  このコードをコンパイルすると、コードが読みやすくなくなり、派生クラスに同じ名前の静的メンバーを追加すると、将来的にコードが中断する場合があります。  
   
 ### <a name="linq-queries"></a>LINQ クエリ  
   
@@ -196,15 +196,15 @@ ms.locfileid: "77452007"
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- 内部コレクションにアクセスするには、[join](../../language-reference/keywords/join-clause.md) 句ではなく複数の `from` 句を使用します。 たとえば、`Student` オブジェクトのコレクションがあり、各オブジェクトに試験の点数のコレクションが含まれているとします。 次のクエリを実行すると、90 点より高い点数とその点数を取った学生の姓が返されます。  
+- 内部コレクションにアクセスするには、`from`join[ 句ではなく複数の ](../../language-reference/keywords/join-clause.md) 句を使用します。 たとえば、`Student` オブジェクトのコレクションがあり、各オブジェクトに試験の点数のコレクションが含まれているとします。 次のクエリを実行すると、90 点より高い点数とその点数を取った学生の姓が返されます。  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   
-## <a name="security"></a>セキュリティ  
+## <a name="security"></a>Security  
 
 「[安全なコーディングのガイドライン](../../../standard/security/secure-coding-guidelines.md)」のガイドラインに従ってください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic のコーディング規則](../../../visual-basic/programming-guide/program-structure/coding-conventions.md)
 - [安全なコーディングのガイドライン](../../../standard/security/secure-coding-guidelines.md)

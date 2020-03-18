@@ -2,12 +2,12 @@
 title: LINQ to XML およびDOM (C#)
 ms.date: 07/20/2015
 ms.assetid: 51c0e3d2-c047-4e6a-a423-d61a882400b7
-ms.openlocfilehash: f6a89bba1ff2753f04406a060beb37bf2bf6552c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 92d0da494829d57517d52fe93a3cbcf1398fdbe4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344793"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168390"
 ---
 # <a name="linq-to-xml-vs-dom-c"></a>LINQ to XML およびDOM (C#)
 このセクションでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] と、現在主流の XML プログラミング API である W3C ドキュメント オブジェクト モデル (DOM) との主な違いについて説明します。  
@@ -23,11 +23,11 @@ XmlElement name = doc.CreateElement("Name");
 name.InnerText = "Patrick Hines";  
 XmlElement phone1 = doc.CreateElement("Phone");  
 phone1.SetAttribute("Type", "Home");  
-phone1.InnerText = "206-555-0144";          
+phone1.InnerText = "206-555-0144";
 XmlElement phone2 = doc.CreateElement("Phone");  
 phone2.SetAttribute("Type", "Work");  
-phone2.InnerText = "425-555-0145";          
-XmlElement street1 = doc.CreateElement("Street1");          
+phone2.InnerText = "425-555-0145";
+XmlElement street1 = doc.CreateElement("Street1");
 street1.InnerText = "123 Main St";  
 XmlElement city = doc.CreateElement("City");  
 city.InnerText = "Mercer Island";  
@@ -59,7 +59,7 @@ XElement contacts =
     new XElement("Contacts",  
         new XElement("Contact",  
             new XElement("Name", "Patrick Hines"),  
-            new XElement("Phone", "206-555-0144",   
+            new XElement("Phone", "206-555-0144",
                 new XAttribute("Type", "Home")),  
             new XElement("phone", "425-555-0145",  
                 new XAttribute("Type", "Work")),  

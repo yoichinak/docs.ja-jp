@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f4cd2e47da236d276a42b972265ffd1a2fe27310
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 61d4792b1f1b92dd59442ee38810da96c6cf63bd
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160340"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78241144"
 ---
 # <a name="tour-of-net"></a>.NET のツアー
 
@@ -41,7 +41,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 以下の 2 つの行はどちらもメモリを割り当てています。
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
 ガベージ コレクターがスケジュールされた実行によってメモリを解放する際に割り当て解除が自動的に行われるため、メモリの割り当てを解除するための類似したキーワードはありません。
 
@@ -49,7 +49,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 次の例では、メモリの安全性を確保するため、ランタイムにより <xref:System.IndexOutOfRangeException> 例外がスローされます。
 
-[!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
+[!code-csharp[MemoryManagement](../../samples/snippets/csharp/snippets/tour/MemoryManagement.csx#L4-L5)]
 
 ## <a name="working-with-unmanaged-resources"></a>アンマネージ リソースの操作
 
@@ -57,7 +57,7 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 .NET では、アンマネージ リソースを参照するオブジェクトは <xref:System.IDisposable> インターフェイスを実装します。 オブジェクトの使用が終わったら、すべてのアンマネージ リソースを解放する、オブジェクトの <xref:System.IDisposable.Dispose> メソッドを呼び出します。 そのようなオブジェクトに対し、.NET 言語では次の例に示すように便利な [`using` ステートメント](../csharp/language-reference/keywords/using.md)が提供されています。
 
-[!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
+[!code-csharp[UnmanagedResources](../../samples/snippets/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
 `using` ブロックが完了すると、.NET ランタイムがファイル ハンドルを開放する `stream` オブジェクトの <xref:System.IDisposable.Dispose> メソッドを自動的に呼び出します。 これは、例外によってコントロールがブロックを離れた場合にも行われます。
 
@@ -73,15 +73,15 @@ Microsoft が開発とサポートに力を注いでいる .NET 言語は、C#�
 
 .NET 言語は、オブジェクト指向で、基本クラスと派生クラスの階層を含みます。 .NET ランタイムではオブジェクトの階層に応じたオブジェクトのキャストと呼び出しのみが許可されます。 .NET 言語で定義されているすべての型が、基本の <xref:System.Object> 型から派生していることを覚えておいてください。
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L19-L23)]
 
 タイプ セーフは、アクセサー キーワードの忠実性を保証することで、カプセル化の支援を行うためにも使用されます。 アクセサー キーワードは、指定した型のメンバーへのアクセスを他のコードによって制御する成果物です。 これらは通常、その動作を管理するために使用される型に含まれる、さまざまな種類のデータに使用されます。
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L3-L3)]
 
 C#、Visual Basic、F# は、ローカルな*型推論*をサポートします。 型推論は、コンパイラが右側にある式から左側にある式の型を推論するという意味です。 タイプ セーフの破損、または回避を意味するわけではありません。 結果の型には、推論されるすべてを含む厳密な型が含まれます。 前の例の `dog` を書き換えて型の推論を導入し、残りの部分はそのままとします。
 
-[!code-csharp[TypeSafety](../../samples/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
+[!code-csharp[TypeSafety](../../samples/snippets/csharp/snippets/tour/TypeSafety.csx#L28-L34)]
 
 F# は、C# や Visual Basic のメソッド ローカルな型推論よりさらに進んだ型推論機能を備えています。 詳しくは、「[型の推定](../fsharp/language-reference/type-inference.md)」 (型推論) をご覧ください。
 
@@ -101,7 +101,7 @@ F# は、C# や Visual Basic のメソッド ローカルな型推論よりさ�
 
 以下のサンプルに、<xref:System.Collections.Generic.List%601> 型のインスタンスを使用して実行される基本的なプログラムを示します。
 
-[!code-csharp[GenericsShort](../../samples/csharp/snippets/tour/GenericsShort.csx)]
+[!code-csharp[GenericsShort](../../samples/snippets/csharp/snippets/tour/GenericsShort.csx)]
 
 詳細については、トピック「[ジェネリック型 (ジェネリック) の概要](generics.md)」を参照してください。
 
@@ -133,7 +133,7 @@ Java および Objective-C に対する Mono (つまり Xamarin) の相互運用
 
 `StringBuilder` クラスから `ToString()` メソッドを変更した例を次に示します。 次のように `unsafe` コードを使用してメモリのチャンクを直接移動して、アルゴリズムを効率的に実装する方法を示しています。
 
-[!code-csharp[Unsafe](../../samples/csharp/snippets/tour/Unsafe.csx)]
+[!code-csharp[Unsafe](../../samples/snippets/csharp/snippets/tour/Unsafe.csx)]
 
 ## <a name="next-steps"></a>次の手順
 

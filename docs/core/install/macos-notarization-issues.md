@@ -4,12 +4,12 @@ description: macOS で、.NET Core ランタイム、SDK、および .Net Core �
 author: thraka
 ms.author: adegeo
 ms.date: 02/14/2020
-ms.openlocfilehash: b16ef4074f829246df0aedebf7ffe4df75faed51
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: be39c1ea56699f84736a2b37bc958507b16e826b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78165351"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146750"
 ---
 # <a name="macos-catalina-notarization-and-the-impact-on-net-core-downloads-and-projects"></a>macOS Catalina の公証と、.NET Core のダウンロードおよびプロジェクトへの影響
 
@@ -78,7 +78,7 @@ ASP.NET Core 証明書の問題をトラブルシューティングする方法�
 ## <a name="default-entitlements"></a>既定の権利
 
 .NET Core の既定のホスト (`dotnet` コマンド) には、一連の既定の権利があります。 .NET Core が適切に動作するには、これらの権利が必要です。 アプリケーションでは追加の権利が必要になることがあり、その場合は、[appHost](#apphost-is-disabled-by-default) を生成して使用し、必要な権利をローカルに追加する必要があります。
- 
+
 .NET Core の既定の権利セット:
 
 - `com.apple.security.cs.allow-jit`

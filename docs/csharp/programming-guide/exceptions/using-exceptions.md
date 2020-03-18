@@ -6,10 +6,10 @@ helpviewer_keywords:
 - exceptions [C#], about exceptions
 ms.assetid: 71472c62-320a-470a-97d2-67995180389d
 ms.openlocfilehash: 4012027dc1a9bd2543d0a4195360e5f7e0586fe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705263"
 ---
 # <a name="using-exceptions-c-programming-guide"></a>例外の使用 (C# プログラミング ガイド)
@@ -19,7 +19,7 @@ C# では、例外と呼ばれるメカニズムを使用して、プログラ�
   
  [!code-csharp[csProgGuideExceptions#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#1)]  
   
- 例外がスローされると、ランタイムは、現在のステートメントが `try` ブロック内に存在するかどうかを確認します。 存在する場合は、`try` ブロックに関連付けられている `catch` ブロックをチェックして、例外をキャッチできるかどうかを確認します。 通常は、この `Catch` ブロックによって例外の型が指定されます。`catch` ブロックの型が、例外または例外の基底クラスの型と一致する場合、`catch` ブロックはメソッドを処理できます。 次に例を示します。  
+ 例外がスローされると、ランタイムは、現在のステートメントが `try` ブロック内に存在するかどうかを確認します。 存在する場合は、`catch` ブロックに関連付けられている `try` ブロックをチェックして、例外をキャッチできるかどうかを確認します。 通常は、この `Catch` ブロックによって例外の型が指定されます。`catch` ブロックの型が、例外または例外の基底クラスの型と一致する場合、`catch` ブロックはメソッドを処理できます。 次に例を示します。  
   
  [!code-csharp[csProgGuideExceptions#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#2)]  
   
@@ -33,7 +33,7 @@ C# では、例外と呼ばれるメカニズムを使用して、プログラ�
   
  [!code-csharp[csProgGuideExceptions#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExceptions/CS/Exceptions.cs#4)]  
   
- `WriteByte()` が例外をスローした場合は、`file.Close()` を呼び出さないと、ファイルを再度開こうとする 2 番目の `try` ブロックのコードが失敗し、ファイルはロックされたままになります。 例外がスローされても `finally` ブロックは実行されるため、上の例の `finally` ブロックではファイルを適切に閉じて、エラーを回避できます。  
+ `WriteByte()` が例外をスローした場合は、`try` を呼び出さないと、ファイルを再度開こうとする 2 番目の `file.Close()` ブロックのコードが失敗し、ファイルはロックされたままになります。 例外がスローされても `finally` ブロックは実行されるため、上の例の `finally` ブロックではファイルを適切に閉じて、エラーを回避できます。  
   
  例外がスローされた後、対応する `catch` ブロックが呼び出し履歴に見つからない場合は、次のいずれかが発生します。  
   
@@ -43,7 +43,7 @@ C# では、例外と呼ばれるメカニズムを使用して、プログラ�
   
 - スレッドの開始位置に到達すると、スレッドは終了します。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [例外と例外処理](./index.md)

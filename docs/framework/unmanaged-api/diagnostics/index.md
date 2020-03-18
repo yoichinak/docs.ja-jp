@@ -7,10 +7,10 @@ helpviewer_keywords:
 - native API reference [.NET Framework], diagnostics symbol store
 ms.assetid: ee1fbb7a-b0f9-482f-8cd0-6df37e6586a2
 ms.openlocfilehash: 2bf393f1a2f44d265038282713265fefc80bc66f
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74445504"
 ---
 # <a name="diagnostics-symbol-store-unmanaged-api-reference"></a>シンボル ストア診断 (アンマネージ API リファレンス)

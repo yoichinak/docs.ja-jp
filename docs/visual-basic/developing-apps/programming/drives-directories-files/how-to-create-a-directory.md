@@ -1,26 +1,26 @@
 ---
-title: '方法: ディレクトリを作成する'
+title: ディレクトリを作成する方法
 ms.date: 07/20/2015
 helpviewer_keywords:
 - directories [Visual Basic], creating
 - folders [Visual Basic], creating
 ms.assetid: 0351a2ca-24d8-43b5-bb39-9b99e6401cff
 ms.openlocfilehash: 3d838352a0a3dd69a1555dc34b8acba3afba278b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348808"
 ---
-# <a name="how-to-create-a-directory-in-visual-basic"></a>方法: Visual Basic でディレクトリを作成する
+# <a name="how-to-create-a-directory-in-visual-basic"></a>方法 : Visual Basic でディレクトリを作成する
 
-ディレクトリを作成するには、`My.Computer.FileSystem` オブジェクトの `CreateDirectory` メソッドを使用します。  
+ディレクトリを作成するには、`CreateDirectory` オブジェクトの `My.Computer.FileSystem` メソッドを使用します。  
   
  ディレクトリが既にある場合、例外はスローされません。  
   
 ### <a name="to-create-a-directory"></a>ディレクトリを作成するには  
   
-- ディレクトリを作成する場所を完全にパスに指定して、`CreateDirectory` メソッドを使用します。 この例では、`C:\Documents and Settings\All Users\Documents` に `NewDirectory` ディレクトリを作成します。  
+- ディレクトリを作成する場所を完全にパスに指定して、`CreateDirectory` メソッドを使用します。 この例では、`NewDirectory` に `C:\Documents and Settings\All Users\Documents` ディレクトリを作成します。  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74348808"
   
 - 部分的に信頼されている状況でユーザーにアクセス許可がない場合 (<xref:System.Security.SecurityException>)。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CreateDirectory%2A>
 - [ファイルおよびディレクトリの作成、削除、および移動](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

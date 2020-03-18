@@ -4,17 +4,17 @@ description: ライブラリ プロジェクトを .NET Framework から .NET Co
 author: cartermp
 ms.date: 12/07/2018
 ms.openlocfilehash: 68fe36e543d949dc76bdb0c19ef3482936ad9e79
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157532"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397909"
 ---
 # <a name="port-net-framework-libraries-to-net-core"></a>.NET Framework ライブラリを .NET Core に移植する
 
 .NET Framework ライブラリ コードを .NET Core に移植し、そこでクロスプラットフォームを実行して、それを使用するアプリの範囲を広げる方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 この記事では、以下を前提とします。
 
@@ -111,10 +111,10 @@ ms.locfileid: "78157532"
 コードを移植したときにすべての機能が動作することを確認するには、コードを .NET Core に移植してテストすることをお勧めします。 このテストを行うには、.NET Core 用のテストを構築して実行するためのテスト フレームワークを使用する必要があります。 現在のところ、次の 3 つの選択肢があります。
 
 - [xUnit](https://xunit.github.io/)
-  - [はじめに](https://xunit.github.io/docs/getting-started-dotnet-core.html)
+  - [作業の開始](https://xunit.github.io/docs/getting-started-dotnet-core.html)
   - [MSTest プロジェクトを xUnit に変換するツール](https://github.com/dotnet/codeformatter/tree/master/src/XUnitConverter)
 - [NUnit](https://nunit.org/)
-  - [はじめに](https://github.com/nunit/docs/wiki/Installation)
+  - [作業の開始](https://github.com/nunit/docs/wiki/Installation)
   - [MSTest から NUnit への移行に関するブログ投稿](https://www.florian-rappl.de/News/Page/275/convert-mstest-to-nunit)
 - [MSTest](/visualstudio/test/unit-test-basics)
 
@@ -130,7 +130,7 @@ ms.locfileid: "78157532"
 
 ライブラリのベースから開始してベースから外側に向かい、必要に応じて各レイヤーをテストする場合、移植は、問題が一度でコードの 1 レイヤーに分離される体系的なプロセスになります。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 >[!div class="nextstepaction"]
 >[.NET Core のプロジェクトを整理する](project-structure.md)

@@ -5,11 +5,11 @@ author: thraka
 ms.author: adegeo
 ms.date: 06/26/2019
 ms.openlocfilehash: 55f04ce81f63753831fca8fa2e44811c44049733
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451000"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397837"
 ---
 # <a name="select-the-net-core-version-to-use"></a>使用する .NET Core のバージョンを選択する
 

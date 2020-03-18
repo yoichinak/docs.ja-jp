@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 5bbbf9075683b0f124e126b661b4ab85011e6c2e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643929"
 ---
 ### <a name="change-of-access-for-accessibleobjectruntimeidfirstitem"></a>AccessibleObject.RuntimeIDFirstItem のアクセスに対する変更
@@ -18,7 +18,7 @@ ms.locfileid: "74643929"
 
 3.0 RC1
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 この変更は、開発した .NET Core アプリが、<xref:System.Windows.Forms.AccessibleObject> から派生し、`RuntimeIDFirstItem` フィールドにアクセスする型を使用している場合に影響がある可能性があります。 この場合、次のようにローカル定数を定義してください。
 

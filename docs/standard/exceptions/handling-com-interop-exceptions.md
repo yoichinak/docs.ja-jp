@@ -10,10 +10,10 @@ helpviewer_keywords:
 - COM interop, exceptions
 ms.assetid: e6104aa8-8e5f-4069-b864-def85579c96c
 ms.openlocfilehash: 17cd739ac40b43bdd4a93b83a4ab9d0d92400e2d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75708933"
 ---
 # <a name="handling-com-interop-exceptions"></a>COM 相互運用の例外の処理
@@ -28,6 +28,6 @@ ms.locfileid: "75708933"
   
  アンマネージド コードでメソッドが失敗した場合、例外をマネージド コードのセグメントに渡すことができます。 「[HRESULT と例外](../../../docs/framework/interop/how-to-map-hresults-and-exceptions.md)」のトピックには、HRESULT がランタイム例外オブジェクトにマップする方法を示す表が含まれています。  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [例外](index.md)

@@ -3,11 +3,11 @@ title: マイクロサービス アーキテクチャでの通信
 description: 同期および非同期の方法による、マイクロサービス間のさまざまな通信方法について説明します。
 ms.date: 01/30/2020
 ms.openlocfilehash: f2d6e78966bb7d5f481de6db0ab1dcfe2812a1b5
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
-ms.locfileid: "77503313"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401521"
 ---
 # <a name="communication-in-a-microservice-architecture"></a>マイクロサービス アーキテクチャでの通信
 

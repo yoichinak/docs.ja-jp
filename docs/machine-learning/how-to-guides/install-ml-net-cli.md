@@ -2,12 +2,13 @@
 title: ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
 description: ML.NET コマンド ライン インターフェイス (CLI) ツールをインストール、アップグレード、ダウングレード、およびアンインストールする方法を説明します。
 ms.date: 12/18/2019
-ms.openlocfilehash: 350122f2d2d2f03484ab6e272b482adf2094495c
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.custom: mlnet-tooling
+ms.openlocfilehash: 9f678c7117d32bf817139951db7eef2c3d0f5eb2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75739969"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78848640"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
 

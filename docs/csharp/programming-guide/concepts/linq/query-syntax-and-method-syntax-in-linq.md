@@ -6,10 +6,10 @@ helpviewer_keywords:
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
 ms.openlocfilehash: 17280daaf98010245bbd019652a2a46d7f66ab59
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635497"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ でのクエリ構文とメソッド構文 (C#)
@@ -35,9 +35,9 @@ ms.locfileid: "75635497"
  拡張メソッドについて詳しくは、「[拡張メソッド](../../classes-and-structs/extension-methods.md)」をご覧ください。 標準クエリ演算子について詳しくは、「[標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)」をご覧ください。 一部の LINQ プロバイダー ([!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] や [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] など) では、<xref:System.Collections.Generic.IEnumerable%601> 以外の型に対応するため、独自の標準クエリ演算子と追加の拡張メソッドを実装しています。  
   
 ## <a name="lambda-expressions"></a>ラムダ式  
- 上記の例では、条件式 (`num % 2 == 0`) がインライン引数として `Where` メソッドに渡されています:`Where(num => num % 2 == 0).` このインライン式は、ラムダ式と呼ばれます。 これを使用すると、本来であれば、匿名メソッド、ジェネリック デリゲート、式ツリーなど、より複雑な形式で記述しなければならないコードを、簡単に記述できます。 C# では、`=>` がラムダ演算子で、"goes to" という読み方をします。 演算子の左側にある `num` は、クエリ式の `num` に対応する入力変数です。 コンパイラは、`numbers` がジェネリック <xref:System.Collections.Generic.IEnumerable%601> 型であることがわかっているため、`num` の型を推論できます。 ラムダの本体は、クエリ構文や、C# のその他の式やステートメントの式と同じです。これには、メソッド呼び出しやその他の複雑なロジックを含めることができます。 "戻り値" は、式の結果だけです。  
+ 上記の例では、条件式 (`num % 2 == 0`) がインライン引数として `Where` メソッドに渡さています: `Where(num => num % 2 == 0).` このインライン式は、ラムダ式と呼ばれます。 これを使用すると、本来であれば、匿名メソッド、ジェネリック デリゲート、式ツリーなど、より複雑な形式で記述しなければならないコードを、簡単に記述できます。 C# では、`=>` がラムダ演算子で、"goes to" という読み方をします。 演算子の左側にある `num` は、クエリ式の `num` に対応する入力変数です。 コンパイラは、`num` がジェネリック `numbers` 型であることがわかっているため、<xref:System.Collections.Generic.IEnumerable%601> の型を推論できます。 ラムダの本体は、クエリ構文や、C# のその他の式やステートメントの式と同じです。これには、メソッド呼び出しやその他の複雑なロジックを含めることができます。 "戻り値" は、式の結果だけです。  
   
- LINQ の初心者の場合、ラムダを広範に使用する必要はありません。 ただし、一部のクエリはメソッド構文でしか表現できず、ラムダ式が必須となるものもあります。 ラムダに慣れてきたら、これが LINQ のツールボックスで使用できる強力で柔軟なツールであることがおわかりいただけるでしょう。 詳細については、「[ラムダ式](../../statements-expressions-operators/lambda-expressions.md)」を参照してください。  
+ LINQ の初心者の場合、ラムダを広範に使用する必要はありません。 ただし、一部のクエリはメソッド構文でしか表現できず、ラムダ式が必須となるものもあります。 ラムダに慣れてきたら、これが LINQ のツールボックスで使用できる強力で柔軟なツールであることがおわかりいただけるでしょう。 詳しくは、「[ラムダ式](../../statements-expressions-operators/lambda-expressions.md)」をご覧ください。  
   
 ## <a name="composability-of-queries"></a>クエリの構成可能性  
  上記の例で、`OrderBy` メソッドは `Where` への呼び出しでドット演算子を使用して起動されています。 `Where` は、フィルター処理されたシーケンスを生成し、その後 `Orderby` は、そのシーケンスをソートして操作しています。 クエリが `IEnumerable` を返すので、開発者は、メソッド呼び出しをつないでいきながら、メソッド構文でそれらを編成します。 これが、クエリ構文を使ってクエリを記述する際に、コンパイラがバック グラウンドで行っていることなのです。 また、クエリ変数にはクエリの結果が格納されないので、開発者はそれが実行された後でも、それを随時変更したり、新しいクエリのベースとして使用することができます。  

@@ -4,10 +4,10 @@ description: project.json ベースのライブラリ作成時にパッケージ
 author: cartermp
 ms.date: 06/20/2016
 ms.openlocfilehash: 48ba3ef578388fd98fe7cb830df313512d359483
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75740827"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>project.json によるパッケージ依存関係の縮小
@@ -20,11 +20,11 @@ ms.locfileid: "75740827"
 
 しかしながら、お使いのライブラリではすべてのパッケージが使用されるとは限りません。  ライブラリを作成し、NuGet 経由で配信するときは、実際に使用するパッケージにのみ依存関係を "減らす" ことが推奨されます。  結果的に、NuGet パッケージの全体的フットプリントが少なくなります。
 
-## <a name="how-to-do-it"></a>その方法
+## <a name="how-to-do-it"></a>方法
 
 現在のところ、パッケージ参照を減らす正式な `dotnet` コマンドはありません。  代わりに、手動で行う必要があります。  一般的なプロセスは次のようになります。
 
-1. お使いの `project.json` の `dependencies` セクションにある `NETStandard.Library` バージョン `1.6.0` を参照します。
+1. お使いの `NETStandard.Library` の `1.6.0` セクションにある `dependencies` バージョン `project.json` を参照します。
 2. コマンド ラインから `dotnet restore` でパッケージを復元します ([注記参照](#dotnet-restore-note))。
 3. `project.lock.json` ファイルを調べ、`NETStandard.Library` というセクションを探します。  ファイルの始まりの近くにあります。
 4. `dependencies` の下にあるパッケージをすべてコピーします。
@@ -56,7 +56,7 @@ ms.locfileid: "75740827"
 
 次に、`dotnet restore` でパッケージを復元し ([注記参照](#dotnet-restore-note))、`project.lock.json` ファイルを調べ、`NETStandard.Library` に対して復元されたすべてのパッケージを探します。
 
-`netstandard1.0` をターゲットにするとき、`project.lock.json` ファイルの関連セクションは次のようになります。
+`project.lock.json` をターゲットにするとき、`netstandard1.0` ファイルの関連セクションは次のようになります。
 
 ```json
 "NETStandard.Library/1.6.0":{
@@ -89,7 +89,7 @@ ms.locfileid: "75740827"
 }
 ```
 
-次に、ライブラリの `project.json` ファイルの `dependencies` セクションにパッケージ参照をコピーします。`NETStandard.Library` 参照を置き換えます。
+次に、ライブラリの `dependencies` ファイルの `project.json` セクションにパッケージ参照をコピーします。`NETStandard.Library` 参照を置き換えます。
 
 ```json
 {

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 276268d31670b5e7dcd0ae9c0b7a61c3c38ca663
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 16ee73bfc0ab33b04ea3e2fa6d0eec521a9b8634
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77451892"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78968182"
 ---
 ### <a name="resource-manifest-file-names"></a>リソース マニフェストのファイル名
 
@@ -63,7 +63,7 @@ ms.locfileid: "77451892"
   *MyTypes.cs* ファイル、*MyTypes.resx* ファイル、*MyTypes.fr-FR.resx* ファイルが同じフォルダーに存在します。
   
   **生成されるリソース マニフェストのファイル名**:*Namespace.Classname.resources* または *Namespace.Classname.fr-FR.resources* (この `Namespace.Classname` が *MyTypes.cs* 内の最初のクラスの名前です)。
-    
+
 - 上記の規則のいずれも当てはまらない場合、生成されるリソース マニフェストのファイル名は *RootNamespace.RelativePathWithDotsForSlashes.\[Culture.]resources* になります。 相対パスは、`EmbeddedResource` 要素の `Link` 属性が設定されていれば、その値になります。 それ以外の場合、相対パスは、`EmbeddedResource` 要素の `Identity` 属性の値になります。 Visual Studio では、これはプロジェクト ルートからソリューション エクスプローラー内のファイルへのパスです。
 
 #### <a name="recommended-action"></a>推奨アクション

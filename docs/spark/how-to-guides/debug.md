@@ -4,12 +4,12 @@ description: Windows で .NET for Apache Spark アプリケーションをデバ
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 25f5291c47dc1cdf2668cb077fae7439e330cc1c
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: dac6aed1f7faba7f07b722a6dac0da930ab9ec66
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919934"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185805"
 ---
 # <a name="debug-a-net-for-apache-spark-application"></a>.NET for Apache Spark アプリケーションをデバッグする
 
@@ -63,7 +63,7 @@ if (EnvironmentUtils.GetEnvironmentVariableAsBool("DOTNET_WORKER_DEBUG"))
 
 `F5` キーを押してアプリケーションを続行すれば、最終的にこのブレークポイントはヒットするようになります。
 
-> [!NOTE] 
+> [!NOTE]
 > [Just-In-Time デバッガーを選択する] ウィンドウは、タスクごとにポップアップ表示されます。 過剰なポップアップを回避するには、Executor の数を小さい数に設定します。 たとえば、spark-submit に対して **--master local[1]** オプションを指定し、タスク数を 1 に設定できます。これにより、1 つのデバッガー インスタンスが起動されます。
 
 ## <a name="debug-scala-code"></a>Scala コードをデバッグする
@@ -81,7 +81,7 @@ spark-submit \
 
 コマンドを実行した後、[Intellij](https://www.jetbrains.com/help/idea/attaching-to-local-process.html) を使用して実行中のプロセスにデバッガーを追加します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 * [.NET for Apache Spark の概要](../tutorials/get-started.md)
 * [.NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする](../tutorials/hdinsight-deployment.md)

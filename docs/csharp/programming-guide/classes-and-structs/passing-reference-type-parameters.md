@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameters [C#], reference
 ms.assetid: 9e6eb65c-942e-48ab-920a-b7ba9df4ea20
 ms.openlocfilehash: 6fa0e60fafabaa9fb04cdc5d5bf3f9e29490e84f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714713"
 ---
 # <a name="passing-reference-type-parameters-c-programming-guide"></a>参照型パラメーターの引き渡し (C# プログラミング ガイド)
@@ -20,7 +20,7 @@ ms.locfileid: "75714713"
   
  [!code-csharp[csProgGuideParameters#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#7)]  
   
- 前の例では、`ref` パラメーターなしで参照型の配列 `arr` がメソッドに渡されています。 このような場合は、`arr` を指す参照のコピーがメソッドに渡されます。 出力は、メソッドが配列要素のコンテンツを変更できることを示しています。この場合は `1` から `888` に変更します。 ただし、`Change` メソッド内で [new](../../language-reference/operators/new-operator.md) 演算子を使用して新しいメモリ領域を割り当てると、変数 `pArray` が新しい配列を参照します。 このため、この後のすべての変更が、`Main` の内部で作成される元の配列 `arr` に影響しません。 実際、この例では、2 つの配列が作成されます。1 つは `Main` の内部で、もう 1 つは `Change` メソッド内で作成されます。  
+ 前の例では、`arr` パラメーターなしで参照型の配列 `ref` がメソッドに渡されています。 このような場合は、`arr` を指す参照のコピーがメソッドに渡されます。 出力は、メソッドが配列要素のコンテンツを変更できることを示しています。この場合は `1` から `888` に変更します。 ただし、[ メソッド内で ](../../language-reference/operators/new-operator.md)new`Change` 演算子を使用して新しいメモリ領域を割り当てると、変数 `pArray` が新しい配列を参照します。 このため、この後のすべての変更が、`arr` の内部で作成される元の配列 `Main` に影響しません。 実際、この例では、2 つの配列が作成されます。1 つは `Main` の内部で、もう 1 つは `Change` メソッド内で作成されます。  
   
 ## <a name="passing-reference-types-by-reference"></a>参照渡しによる参照型の引き渡し  
  次の例は、前の例と同じですが、`ref` キーワードがメソッド ヘッダーと呼び出しに追加されている点が異なります。 メソッドで行われるすべての変更が、呼び出し元のプログラム内の元の変数に影響します。  
@@ -30,7 +30,7 @@ ms.locfileid: "75714713"
  メソッド内で行われるすべての変更は、`Main` の元の配列に影響します。 実際、元の配列は `new` 演算子を使用して再割り当てされます。 したがって、`Change` メソッドを呼び出した後、`arr` へのすべての参照が、`Change` メソッドで作成された 5 つの要素を持つ配列を指します。  
   
 ## <a name="swapping-two-strings"></a>2 つの文字列のスワップ  
- 文字列のスワップは、参照渡しで参照型パラメーターを渡す良い例です。 例では、2 つの文字列 `str1` と `str2` が `Main` で初期化され、`ref` キーワードで変更されたパラメーターとして `SwapStrings` メソッドに渡されます。 2 つの文字列は、メソッド内と `Main` 内でスワップされます。  
+ 文字列のスワップは、参照渡しで参照型パラメーターを渡す良い例です。 例では、2 つの文字列 `str1` と `str2` が `Main` で初期化され、`SwapStrings` キーワードで変更されたパラメーターとして `ref` メソッドに渡されます。 2 つの文字列は、メソッド内と `Main` 内でスワップされます。  
   
  [!code-csharp[csProgGuideParameters#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#9)]  
   
@@ -38,9 +38,9 @@ ms.locfileid: "75714713"
   
  文字列の詳細については、「[文字列](../../language-reference/builtin-types/reference-types.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [パラメーターの引き渡し](./passing-parameters.md)
 - [ref](../../language-reference/keywords/ref.md)
 - [in](../../language-reference/keywords/in-parameter-modifier.md)

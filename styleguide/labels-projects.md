@@ -1,14 +1,14 @@
 ---
-ms.openlocfilehash: 394ed636cece766d61b1a10403b98c73f1d3cb93
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 99153bb9cf3287951a1e52e716c799ee64eb82ad
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73041261"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78950988"
 ---
 # <a name="labels-and-projects-roadmap"></a>ラベルとプロジェクトのロードマップ
 
-.NET docs チームは、[GitHub ラベル](https://github.com/dotnet/docs/labels) を広範に使用して、作業を整理します。 ラベルの組み合わせに基づいてフィルター処理することで、[.NET docs Web サイト](https://docs.microsoft.com/dotnet)上の目的のセクションにすばやく焦点を合わせることができます。 
+.NET docs チームは、[GitHub ラベル](https://github.com/dotnet/docs/labels) を広範に使用して、作業を整理します。 ラベルの組み合わせに基づいてフィルター処理することで、[.NET docs Web サイト](https://docs.microsoft.com/dotnet)上の目的のセクションにすばやく焦点を合わせることができます。
 
 また、[GitHub プロジェクト](https://github.com/dotnet/docs/projects)を使用して、スプリントやその他の目標志向のエピックを整理します。
 
@@ -28,7 +28,7 @@ ms.locfileid: "73041261"
 
 ### <a name="find-a-single-net-guide"></a>単一の .NET ガイドを検索する
 
-アーキテクチャ電子書籍ごとに、および .NET ガイドごとにラベルを使用します。 
+アーキテクチャ電子書籍ごとに、および .NET ガイドごとにラベルを使用します。
 
 ![:book: guide、明るい緑色の背景](./images/guide.png "アーキテクチャ ガイド ラベルのプレフィックス")
 
@@ -97,7 +97,7 @@ ms.locfileid: "73041261"
 
 ![:checkered_flag:Release:、濃い黄色](./images/release.png "リリース ラベルのプレフィックス")
 
-特定のリリースにタグが付けられたイシューには、`:checkered_flag: Release:` プレフィックスが付いていて、背景は濃い黄色になっています。 
+特定のリリースにタグが付けられたイシューには、`:checkered_flag: Release:` プレフィックスが付いていて、背景は濃い黄色になっています。
 
 - .NET Core 2.2
 - .NET Core 3.0
@@ -116,7 +116,7 @@ ms.locfileid: "73041261"
 
 ## <a name="projects"></a>プロジェクト
 
-共同作成者は、[.NET コミュニティ コラボレーター用のプロジェクト](https://github.com/dotnet/docs/projects/35)を確認する必要があります。 メンテナンス、ドキュメントの更新、および新しいコンテンツ タスク用のさまざまな列が作成されています。 これにより、目的のタスクを検索することができます (プロジェクト ビューは、前述のラベルを使用してフィルター処理できます)。 
+共同作成者は、[.NET コミュニティ コラボレーター用のプロジェクト](https://github.com/dotnet/docs/projects/35)を確認する必要があります。 メンテナンス、ドキュメントの更新、および新しいコンテンツ タスク用のさまざまな列が作成されています。 これにより、目的のタスクを検索することができます (プロジェクト ビューは、前述のラベルを使用してフィルター処理できます)。
 
 また、プロジェクトは、他に次の 2 つの方法でも使用されます。
 

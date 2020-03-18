@@ -6,16 +6,16 @@ helpviewer_keywords:
 - CLR Version tool
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 ms.openlocfilehash: bfc612ef5455e1b4a03d15fd99a8a1873d2c7c08
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75715795"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR バージョン ツール)
 CLR バージョン ツール (Clrver.exe) は、コンピューターにインストールされている共通言語ランタイム (CLR: Common Language Runtime) のすべてのバージョンを報告します。  
   
- このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
+ このツールは、Visual Studio と共に自動的にインストールされます。 このツールを実行するには、Visual Studio 用開発者コマンド プロンプト (または Windows 7 の Visual Studio コマンド プロンプト) を使用します。 詳細については、「[コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。  
   
  コマンド プロンプトに次のように入力します。  
   
@@ -27,13 +27,13 @@ clrver [option]
   
 ## <a name="options"></a>オプション  
   
-|オプション|説明|  
+|オプション|[説明]|  
 |------------|-----------------|  
 |`-all`|CLR を使用しているコンピューター上のすべてのプロセスを表示します。|  
 |*pid*|指定したプロセス ID (PID) のプロセスで使用されている CLR のバージョンを表示します。|  
 |`-?`|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  オプションを指定せずに Clrver.exe を呼び出した場合、インストールされている CLR のすべてのバージョンが表示されます。 別のユーザーの PID を指定する場合、バージョン情報を取得するには、管理アクセス許可が必要です。  
   
 > [!NOTE]
@@ -41,7 +41,7 @@ clrver [option]
   
  SYSTEM、LOCAL SERVICE、および NETWORK SERVICE の各プロセスの CLR バージョンを確認しようとすると、PID が存在しないことを示すメッセージが表示されます。  
   
-## <a name="examples"></a>使用例  
+## <a name="examples"></a>例  
  コンピューターにインストールされている CLR のすべてのバージョンを表示するコマンドを次に示します。  
   
  `clrver`  
@@ -54,7 +54,7 @@ clrver [option]
   
  `Clrver -all`  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [ツール](index.md)
 - [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

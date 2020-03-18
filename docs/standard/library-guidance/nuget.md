@@ -3,11 +3,11 @@ title: NuGet および .NET ライブラリ
 description: .NET ライブラリ対応の NuGet によるパッケージ化のベスト プラクティスの推奨事項
 ms.date: 01/15/2019
 ms.openlocfilehash: f1e8d39fe2988f11ce7fd351a4d6bee6d322f2b5
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76731373"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398533"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -44,7 +44,7 @@ NuGet パッケージの依存関係については、「[Dependencies](./depend
 
 NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/reference/nuspec)をサポートしています。 次の表に、NuGet.org 上のすべてのパッケージで指定する必要があるコア メタデータを示します。
 
-| MSBuild プロパティの名前              | Nuspec の名前              | 説明  |
+| MSBuild プロパティの名前              | Nuspec の名前              | [説明]  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | パッケージ ID。 [条件](/nuget/reference/id-prefix-reservation)を満たしている場合、ID のプレフィックスは予約できます。 |
 | `PackageVersion`                   | `version`                  | NuGet パッケージ バージョン。 詳細については、「[NuGet package version](./versioning.md#nuget-package-version)」(NuGet package version パッケージ バージョン) をご覧ください。             |
@@ -54,7 +54,7 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 | `PackageTags`                      | `tags`                     | パッケージを説明するタグとキーワードのスペース区切りの一覧。 タグは、パッケージを検索するときに使用されます。             |
 | `PackageIconUrl`                   | `iconUrl`                  | パッケージのアイコンとして使用するイメージの URL。 URL は HTTPS にする必要があり、イメージは 64 x 64 で透明な背景になっている必要があります。             |
 | `PackageProjectUrl`                | `projectUrl`               | プロジェクトのホーム ページまたはソース リポジトリの URL。             |
-| `PackageLicenseExpression`         | `license`                  | プロジェクト ライセンスの [SPDX 識別子](https://spdx.org/licenses/)。 OSI と FSF によって承認されたライセンスのみが識別子を使用できます。 その他のライセンスでは、`PackageLicenseFile` を使用する必要があります。 `license` メタデータの詳細については、[こちら](/nuget/reference/nuspec#license)をご覧ください。 |
+| `PackageLicenseExpression`         | `license`                  | プロジェクト ライセンスの [SPDX 識別子](https://spdx.org/licenses/)。 OSI と FSF によって承認されたライセンスのみが識別子を使用できます。 その他のライセンスでは、`PackageLicenseFile` を使用する必要があります。 [ メタデータの詳細については、`license`こちら](/nuget/reference/nuspec#license)をご覧ください。 |
 
 > [!IMPORTANT]
 > ライセンスのないプロジェクトは、[排他的な著作権](https://choosealicense.com/no-permission/)を侵害しているため、他のユーザーが合法的に使用できなくなります。
@@ -92,7 +92,7 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 
 シンボル ファイル (`*.pdb`) は、アセンブリと共に .NET コンパイラによって生成されます。 デバッガ―を使用して実行しながらソース コード全体をステップ実行できるように、シンボル ファイルは、実行場所を元のソース コードにマップします。 NuGet では、.NET アセンブリを含む主要なパッケージと共に、シンボル ファイルを格納している[別個のシンボル パッケージ (`*.snupkg`) の生成](/nuget/create-packages/symbol-packages-snupkg)をサポートしています。 シンボル サーバー上でホストされ、Visual Studio などのツールによってオンデマンドでしかダウンロードできないのが、シンボル パッケージの考え方です。
 
-NuGet.org は独自の[シンボル サーバー リポジトリ](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)をホストしています。 開発者は [Visual Studio でシンボル ソース](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)に `https://symbols.nuget.org/download/symbols` を追加することで NuGet.org シンボル サーバーに公開されたシンボルを使用できます。
+NuGet.org は独自の[シンボル サーバー リポジトリ](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)をホストしています。 開発者は `https://symbols.nuget.org/download/symbols`Visual Studio でシンボル ソース[に ](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger) を追加することで NuGet.org シンボル サーバーに公開されたシンボルを使用できます。
 
 > [!IMPORTANT]
 > NuGet.org シンボル サーバーでは、SDK スタイルのプロジェクトで作成された新しい[ポータブル シンボル ファイル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) のみがサポートされます。

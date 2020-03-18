@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0c88d40e34d2d6458bb463a09d716dea42b711fe
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75901799"
 ---
 ### <a name="authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters"></a>承認:IAllowAnonymous が AuthorizationFilterContext.Filters から削除されました

@@ -4,24 +4,24 @@ description: Ubuntu で .NET for Apache Spark アプリケーションをビル�
 ms.date: 01/29/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: a12c861d0f231910f715a13fd41d1f3f0d6748a7
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 6dd6f60bb89a51c47fe17182fc47de818cd00b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76928068"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187569"
 ---
 # <a name="learn-how-to-build-your-net-for-apache-spark-application-on-ubuntu"></a>Ubuntu で .NET for Apache Spark アプリケーションをビルドする方法を学習する
 
 この記事では、Ubuntu で .NET for Apache Spark アプリケーションをビルドする方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 以下の必須コンポーネントがすべて揃っている場合は、「[ビルド](#build)」の手順に進んでください。
 
 1. **[.NET Core 2.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/2.1)** または **[.NET Core 3.1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.1)** をダウンロードしてインストールする - SDK をインストールすると、`dotnet` ツールチェーンがパスに追加されます。  .NET Core 2.1、2.2、および 3.1 がサポートされています。
 
-2. **[OpenJDK 8](https://openjdk.java.net/install/)** をインストールする。 
+2. **[OpenJDK 8](https://openjdk.java.net/install/)** をインストールする。
 
    - 次のコマンドを使用できます。
 
@@ -29,10 +29,10 @@ ms.locfileid: "76928068"
    sudo apt install openjdk-8-jdk
    ```
 
-   * コマンド ラインから `java` を実行できることを確認します。       
+   * コマンド ラインから `java` を実行できることを確認します。
 
       java -version の出力サンプル:
-          
+
       ```bash
       openjdk version "1.8.0_191"
       OpenJDK Runtime Environment (build 1.8.0_191-8u191-b12-2ubuntu0.18.04.1-b12)
@@ -59,13 +59,13 @@ ms.locfileid: "76928068"
       export PATH=${M2_HOME}/bin:${PATH}
       source ~/.bashrc
       ```
-       
-       これらの環境変数は、ターミナルを閉じると失われることに注意してください。 変更を永続させたい場合は、`~/.bashrc` ファイルに `export` の行を追加します。
 
-   * コマンド ラインから `mvn` を実行できることを確認します       
+       これらの環境変数は、ターミナルを閉じると失われることに注意してください。 変更を永続させたい場合は、`export` ファイルに `~/.bashrc` の行を追加します。
+
+   * コマンド ラインから `mvn` を実行できることを確認します
 
        mvn -version の出力サンプル:
-       
+
        ```
        Apache Maven 3.6.0 (97c98ec64a1fdfee7767ce5ffb20918da4f719f3; 2018-10-24T18:41:47Z)
        Maven home: ~/bin/apache-maven-3.6.0
@@ -88,13 +88,13 @@ ms.locfileid: "76928068"
       export PATH="$SPARK_HOME/bin:$PATH"
       source ~/.bashrc
       ```
-       
-      これらの環境変数は、ターミナルを閉じると失われることに注意してください。 変更を永続させたい場合は、`~/.bashrc` ファイルに `export` の行を追加します。
+
+      これらの環境変数は、ターミナルを閉じると失われることに注意してください。 変更を永続させたい場合は、`export` ファイルに `~/.bashrc` の行を追加します。
 
    * コマンド ラインから `spark-shell` を実行できることを確認します。
 
       コンソール出力の例:
-      
+
       ```
       Welcome to
             ____              __
@@ -109,11 +109,11 @@ ms.locfileid: "76928068"
 
       scala> sc
       res0: org.apache.spark.SparkContext = org.apache.spark.SparkContext@6eaa6b0c
-      ```                      
+      ```
 
 次のセクションに進む前に、コマンド ラインから `dotnet`、`java`、`mvn`、`spark-shell` を実行できることを確認してください。 もっと良い方法があると思いますか。 [イシューを作成](https://github.com/dotnet/spark/issues)して、お気軽にご投稿ください。
 
-## <a name="build"></a>ビルド
+## <a name="build"></a>Build
 
 このガイドの残りの部分では、.NET for Apache Spark リポジトリをご自分のコンピューターにクローンしておく必要があります (`~/dotnet.spark/` など)。
 
@@ -129,7 +129,7 @@ git clone https://github.com/dotnet/spark.git ~/dotnet.spark
 
 ```bash
 cd src/scala
-mvn clean package 
+mvn clean package
 ```
 
 サポートされている Spark バージョンに対して作成された JAR を確認する必要があります。
@@ -147,14 +147,14 @@ mvn clean package
    cd ~/dotnet.spark/src/csharp/Microsoft.Spark.Worker/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    コンソール出力の例:
 
    ```bash
    user@machine:/home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker$ dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    Microsoft (R) Build Engine version 16.0.462+g62fb89029d for .NET Core
    Copyright (C) Microsoft Corporation. All rights reserved.
-      
+
       Restore completed in 36.03 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark.Worker/Microsoft.Spark.Worker.csproj.
       Restore completed in 35.94 ms for /home/user/dotnet.spark/src/csharp/Microsoft.Spark/Microsoft.Spark.csproj.
       Microsoft.Spark -> /home/user/dotnet.spark/artifacts/bin/Microsoft.Spark/Debug/netstandard2.0/Microsoft.Spark.dll
@@ -168,7 +168,7 @@ mvn clean package
    cd ~/dotnet.spark/examples/Microsoft.Spark.CSharp.Examples/
    dotnet publish -f netcoreapp2.1 -r ubuntu.18.04-x64
    ```
-      
+
    コンソール出力の例:
 
    ```bash

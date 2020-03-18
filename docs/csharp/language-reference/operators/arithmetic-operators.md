@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 8701991542f1e950914d5b4275ae8dcd68ad83a1
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: f03084fa611c35c5504190b28fab79563d560d03
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345365"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398065"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -51,15 +51,15 @@ ms.locfileid: "75345365"
 
 ### <a name="postfix-increment-operator"></a>後置インクリメント演算子
 
-次の例に示すように、`x++` の結果は、演算子の "*前の*" `x` 値です。
+次の例に示すように、`x++` の結果は、演算子の "`x`前の *"*  値です。
 
-[!code-csharp-interactive[postfix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixIncrement)]
+[!code-csharp-interactive[postfix increment](snippets/ArithmeticOperators.cs#PostfixIncrement)]
 
 ### <a name="prefix-increment-operator"></a>前置インクリメント演算子
 
-次の例に示すように、`++x` の結果は、演算子の "*後ろの*" `x` 値です。
+次の例に示すように、`++x` の結果は、演算子の "`x`後ろの *"*  値です。
 
-[!code-csharp-interactive[prefix increment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixIncrement)]
+[!code-csharp-interactive[prefix increment](snippets/ArithmeticOperators.cs#PrefixIncrement)]
 
 ## <a name="decrement-operator---"></a>デクリメント演算子 --
 
@@ -69,21 +69,21 @@ ms.locfileid: "75345365"
 
 ### <a name="postfix-decrement-operator"></a>後置デクリメント演算子
 
-次の例に示すように、`x--` の結果は、演算子の "*前の*" `x` 値です。
+次の例に示すように、`x--` の結果は、演算子の "`x`前の *"*  値です。
 
-[!code-csharp-interactive[postfix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PostfixDecrement)]
+[!code-csharp-interactive[postfix decrement](snippets/ArithmeticOperators.cs#PostfixDecrement)]
 
 ### <a name="prefix-decrement-operator"></a>前置デクリメント演算子
 
-次の例に示すように、`--x` の結果は、演算子の "*後ろの*" `x` 値です。
+次の例に示すように、`--x` の結果は、演算子の "`x`後ろの *"*  値です。
 
-[!code-csharp-interactive[prefix decrement](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrefixDecrement)]
+[!code-csharp-interactive[prefix decrement](snippets/ArithmeticOperators.cs#PrefixDecrement)]
 
 ## <a name="unary-plus-and-minus-operators"></a>単項プラス演算子と単項マイナス演算子
 
 単項 `+` 演算子によって、そのオペランドの値が返されます。 単項 `-` 演算子は、そのオペランドの数値の否定を計算します。
 
-[!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
+[!code-csharp-interactive[unary plus and minus](snippets/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
 [ulong](../builtin-types/integral-numeric-types.md) 型は、単項 `-` 演算子をサポートしません。
 
@@ -91,7 +91,7 @@ ms.locfileid: "75345365"
 
 乗算演算子 (`*`) は、そのオペランドの積を計算します。
 
-[!code-csharp-interactive[multiplication operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
+[!code-csharp-interactive[multiplication operator](snippets/ArithmeticOperators.cs#Multiplication)]
 
 単項 `*` 演算子は、[ポインター間接参照演算子](pointer-related-operators.md#pointer-indirection-operator-)です。
 
@@ -103,17 +103,17 @@ ms.locfileid: "75345365"
 
 整数型のオペランドに対する `/` 演算子の結果は、整数型で、2 つのオペランドの商を 0 方向に丸めたものと等しくなります。
 
-[!code-csharp-interactive[integer division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerDivision)]
+[!code-csharp-interactive[integer division](snippets/ArithmeticOperators.cs#IntegerDivision)]
 
 2 つのオペランドの商を浮動小数点数として取得するには、`float`、`double`、または `decimal` 型を使います。
 
-[!code-csharp-interactive[integer as floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
+[!code-csharp-interactive[integer as floating-point division](snippets/ArithmeticOperators.cs#IntegerAsFloatingPointDivision)]
 
 ### <a name="floating-point-division"></a>浮動小数点の除算
 
 `float`、`double`、`decimal` 型に対する `/` 演算子の結果は、2 つのオペランドの商となります。
 
-[!code-csharp-interactive[floating-point division](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointDivision)]
+[!code-csharp-interactive[floating-point division](snippets/ArithmeticOperators.cs#FloatingPointDivision)]
 
 オペランドの 1 つが `decimal` であった場合、もう 1 つのオペランドを `float` や `double` にすることはできません。`float` と `double` は暗黙的に `decimal` に変換できないためです。 `float` または `double` オペランドは明示的に `decimal` 型に変換する必要があります。 数値型間の変換について詳しくは、[組み込みの数値変換](../builtin-types/numeric-conversions.md)に関するページをご覧ください。
 
@@ -125,13 +125,13 @@ ms.locfileid: "75345365"
 
 整数型のオペランドの場合、`a % b` の結果は `a - (a / b) * b` で生成される値になります。 0 以外の剰余の符号は、次の例で示されるように、左側のオペランドの符号と同じになります。
 
-[!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
+[!code-csharp-interactive[integer remainder](snippets/ArithmeticOperators.cs#IntegerRemainder)]
 
 <xref:System.Math.DivRem%2A?displayProperty=nameWithType> メソッドを使用して、整数除算と剰余の結果の両方を計算します。
 
 ### <a name="floating-point-remainder"></a>浮動小数点の剰余
 
-`float` オペランドと `double` オペランドの場合、有限の `x` と `y` の `x % y` の結果は、次のような値 `z` となります。
+`float` オペランドと `double` オペランドの場合、有限の `x % y` と `x` の `y` の結果は、次のような値 `z` となります。
 
 - `z` の符号は、0 以外の場合、`x` の符号と同じになります。
 - `z` の絶対値は、`|x| - n * |y|` で生成される値となります。`n` は、`|x| / |y|` 以下で最も大きい整数であり、`|x|` と `|y|` はそれぞれ、`x` と `y` の絶対値です。
@@ -139,19 +139,19 @@ ms.locfileid: "75345365"
 > [!NOTE]
 > 剰余を計算するこの手法は、整数オペランドに使用される手法に類似していますが、IEEE 754 の仕様とは異なります。 IEEE 754 の仕様に準拠する剰余演算が必要な場合、<xref:System.Math.IEEERemainder%2A?displayProperty=nameWithType> メソッドを使用してください。
 
-無限オペランドがある `%` 演算子の動作については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関するページの「[剰余演算](~/_csharplang/spec/expressions.md#remainder-operator)」セクションを参照してください。
+無限オペランドがある `%` 演算子の動作については、[C# 言語仕様](~/_csharplang/spec/expressions.md#remainder-operator)に関するページの「[剰余演算](~/_csharplang/spec/introduction.md)」セクションを参照してください。
 
-`decimal` オペランドの場合、剰余演算子 `%` は <xref:System.Decimal?displayProperty=nameWithType> 型の[剰余演算子](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)に等しくなります。
+`decimal` オペランドの場合、剰余演算子 `%` は [ 型の](<xref:System.Decimal.op_Modulus(System.Decimal,System.Decimal)>)剰余演算子<xref:System.Decimal?displayProperty=nameWithType>に等しくなります。
 
 次の例では、浮動小数点オペランドを使用した剰余演算子の動作を示しています。
 
-[!code-csharp-interactive[floating-point remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointRemainder)]
+[!code-csharp-interactive[floating-point remainder](snippets/ArithmeticOperators.cs#FloatingPointRemainder)]
 
 ## <a name="addition-operator-"></a>加算演算子 +
 
 加算演算子 `+` は、そのオペランドの合計を計算します。
 
-[!code-csharp-interactive[addition operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Addition)]
+[!code-csharp-interactive[addition operator](snippets/ArithmeticOperators.cs#Addition)]
 
 文字列連結とデリゲートの組み合わせにも、`+` 演算子が使用できます。 詳細については、「[`+` および `+=` 演算子](addition-operator.md)」の記事を参照してください。
 
@@ -159,7 +159,7 @@ ms.locfileid: "75345365"
 
 減算演算子 `-` は、その左側のオペランドから右側のオペランドを減算します。
 
-[!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
+[!code-csharp-interactive[subtraction operator](snippets/ArithmeticOperators.cs#Subtraction)]
 
 デリゲートの削除には、`-` 演算子を使用することもできます。 詳細については、「[`-` および `-=` 演算子](subtraction-operator.md)」の記事を参照してください。
 
@@ -181,13 +181,13 @@ x = x op y
 
 次の例は、算術演算子を使用した複合代入の使用方法を示しています。
 
-[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](snippets/ArithmeticOperators.cs#CompoundAssignment)]
 
-[数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)のため、`op` 演算の結果は、`x` の型 `T` に暗黙的に変換できない可能性があります。 そのような場合、`op` が定義済みの演算子であり、演算の結果が `x` の型 `T` に明示的に変換できる場合、`x op= y` の形式の複合代入式は、`x` が 1 回だけ評価される点を除き、`x = (T)(x op y)` と等価です。 次の例は、その動作を示します。
+[数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)のため、`op` 演算の結果は、`T` の型 `x` に暗黙的に変換できない可能性があります。 そのような場合、`op` が定義済みの演算子であり、演算の結果が `T` の型 `x` に明示的に変換できる場合、`x op= y` の形式の複合代入式は、`x = (T)(x op y)` が 1 回だけ評価される点を除き、`x` と等価です。 次の例は、その動作を示します。
 
-[!code-csharp-interactive[compound assignment with cast](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+[!code-csharp-interactive[compound assignment with cast](snippets/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
 
-[イベント](../keywords/event.md)のサブスクリプションとサブスクリプションの解除には、`+=` 演算子と `-=` 演算子もそれぞれ使用できます。 詳細については、「[イベントのサブスクリプションとサブスクリプション解除を行う方法](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
+`+=`イベント`-=`のサブスクリプションとサブスクリプションの解除には、[ 演算子と ](../keywords/event.md) 演算子もそれぞれ使用できます。 詳細については、「[イベントのサブスクリプションとサブスクリプション解除を行う方法](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
 
 ## <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
 
@@ -202,9 +202,9 @@ x = x op y
 
 演算子の優先順位と結合規則によって定められた評価の順序を変更するには、かっこ `()` を使用します。
 
-[!code-csharp-interactive[precedence and associativity](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+[!code-csharp-interactive[precedence and associativity](snippets/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
 
-優先度順に並べられた C# 演算子の完全な一覧については、[C# 演算子](index.md)に関する記事の「[演算子の優先順位](index.md#operator-precedence)」セクションを参照してください。
+優先度順に並べられた C# 演算子の完全な一覧については、「[C# 演算子](index.md#operator-precedence)」の記事の「[演算子の優先順位](index.md)」のセクションを参照してください。
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>算術オーバーフローと 0 による除算
 
@@ -221,7 +221,7 @@ x = x op y
 
 [checked と unchecked](../keywords/checked-and-unchecked.md) のステートメントとともに、`checked` 演算子と `unchecked` 演算子を使用して、式が評価されるオーバーフロー チェック コンテキストを制御することができます。
 
-[!code-csharp-interactive[checked and unchecked](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#CheckedUnchecked)]
+[!code-csharp-interactive[checked and unchecked](snippets/ArithmeticOperators.cs#CheckedUnchecked)]
 
 既定では、算術演算は *unchecked* コンテキストで発生します。
 
@@ -229,7 +229,7 @@ x = x op y
 
 `float` 型と`double` 型を使用した算術演算では、例外はスローされません。 これらの型を使用した算術演算の結果は、無限および数値ではないことを表す特殊な値のいずれかになる可能性があります。
 
-[!code-csharp-interactive[double non-finite values](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#FloatingPointOverflow)]
+[!code-csharp-interactive[double non-finite values](snippets/ArithmeticOperators.cs#FloatingPointOverflow)]
 
 `decimal` 型のオペランドの場合、算術オーバーフローは常に <xref:System.OverflowException> をスローし、0 による除算は常に <xref:System.DivideByZeroException> をスローします。
 
@@ -237,13 +237,13 @@ x = x op y
 
 実数の浮動小数点表記と浮動小数点演算の一般的な制限事項により、浮動小数点型を使った計算で丸め誤差が生じる可能性があります。 つまり、式の生成された結果が、予期した数学的結果と異なる場合があります。 次の例は、こうしたいくつかのケースを示しています。
 
-[!code-csharp-interactive[round-off errors](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#RoundOffErrors)]
+[!code-csharp-interactive[round-off errors](snippets/ArithmeticOperators.cs#RoundOffErrors)]
 
 詳細については、[System.Double](/dotnet/api/system.double#remarks)、[System.Single](/dotnet/api/system.single#remarks)、または [System.Decimal](/dotnet/api/system.decimal#remarks) の参照ページの解説を参照してください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型は、単項算術演算子 (`++`、`--`、`+`、`-`) と 2 項算術演算子 (`*`、`/`、`%`、`+`、`-`) を[オーバーロード](operator-overloading.md)できます。 2 項演算子をオーバーロードすると、対応する複合代入演算子も暗黙的にオーバーロードされます。 ユーザー定義型は、複合代入演算子を明示的にオーバーロードすることはできません。
+ユーザー定義型は、単項算術演算子 ([、](operator-overloading.md)、`++`、`--`) と 2 項算術演算子 (`+`、`-`、`*`、`/`、`%`) を`+`オーバーロード`-`できます。 2 項演算子をオーバーロードすると、対応する複合代入演算子も暗黙的にオーバーロードされます。 ユーザー定義型は、複合代入演算子を明示的にオーバーロードすることはできません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -262,7 +262,7 @@ x = x op y
 - [checked 演算子と unchecked 演算子](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
 - [数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)

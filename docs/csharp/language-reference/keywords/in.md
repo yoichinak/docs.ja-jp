@@ -7,10 +7,10 @@ f1_keywords:
 helpviewer_keywords:
 - in keyword [C#]
 ms.openlocfilehash: 251a330ec327366ce458dd8066061365ab0e1dad
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713453"
 ---
 # <a name="in-c-reference"></a>in (C# リファレンス)
@@ -23,7 +23,7 @@ ms.locfileid: "75713453"
 - LINQ クエリ式内の [from 句](from-clause.md)。
 - LINQ クエリ式内の [join 句](join-clause.md)。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# のキーワード](index.md)
 - [C# リファレンス](../index.md)

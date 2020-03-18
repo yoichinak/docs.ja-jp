@@ -2,12 +2,12 @@
 title: dotnet-counters - .NET Core
 description: dotnet-counter コマンドライン ツールをインストールして使用する方法について説明します。
 ms.date: 02/26/2020
-ms.openlocfilehash: 88f701a60d0ee03dd0236ae54c57679943e14939
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: dc95297478784ca06fe442a939f8489a40b29da7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157883"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79147179"
 ---
 # <a name="dotnet-counters"></a>dotnet-カウンター
 
@@ -181,7 +181,7 @@ dotnet-counters monitor [-h|--help] [-p|--process-id] [--refreshInterval] [count
       request                                      100
   ```
   
-## <a name="dotnet-counters-ps"></a>dotnet-counters ps 
+## <a name="dotnet-counters-ps"></a>dotnet-counters ps
 
 監視できる dotnet プロセスの一覧を表示します。
 

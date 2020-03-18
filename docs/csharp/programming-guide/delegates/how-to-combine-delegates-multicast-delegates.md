@@ -6,10 +6,10 @@ helpviewer_keywords:
 - multicast delegates [C#]
 ms.assetid: 4e689450-6d0c-46de-acfd-f961018ae5dd
 ms.openlocfilehash: 7b5b9ba5c9bf70983fac9f869836b4c8c5449eca
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705380"
 ---
 # <a name="how-to-combine-delegates-multicast-delegates-c-programming-guide"></a>デリゲートを結合する方法 (マルチキャスト デリゲート) (C# プログラミング ガイド)
@@ -20,8 +20,8 @@ ms.locfileid: "75705380"
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideDelegates#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#11)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.MulticastDelegate>
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [イベント](../events/index.md)

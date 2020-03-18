@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: fe99a2ac81b54ae6aa3cb64af9b5995a548c0c2b
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 1e84a0c3636f36794ca7795ac54d192d3cb44217
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727876"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141095"
 ---
 # <a name="net-docs"></a>.NET ドキュメント
 
@@ -18,7 +18,7 @@ API リファレンス リポジトリ以外のすべての問題とタスクに
 
 .NET ドキュメントの改善と完成に役立つご協力をお待ちしています。これは非常に大きなリポジトリで、大きな領域をカバーしています。 初めてアクセスする場合は、[ラベルとプロジェクトのロードマップ](styleguide/labels-projects.md)を参照してください。このリポジトリ内の問題とプロジェクトのナビゲートに役立ちます。
 
-ご投稿いただく場合は、[.NET コミュニティの共同作成者用のプロジェクト](https://github.com/dotnet/docs/projects/35)でさまざまなアイデアをご覧ください。 [共同作成ガイド](CONTRIBUTING.md)に、使用されている手順に関する説明があります。 
+ご投稿いただく場合は、[.NET コミュニティの共同作成者用のプロジェクト](https://github.com/dotnet/docs/projects/35)でさまざまなアイデアをご覧ください。 [共同作成ガイド](CONTRIBUTING.md)に、使用されている手順に関する説明があります。
 
 .NET Framework を対象とする既存のコードを、[提供終了したコード ギャラリー](https://docs.microsoft.com/teamblog/msdn-code-gallery-retired) サイトから、[サンプル リポジトリ](https://github.com/dotnet/samples)に格納されていて[サンプル ブラウザー](https://docs.microsoft.com/samples/browse)からダウンロードできる .NET Core アプリケーションに移行するのをサポートすることに関心がある場合は、[コード ギャラリーの移行](https://github.com/dotnet/docs/projects/88)プロジェクトを参照してください。 コード ギャラリーのサンプルは、[Microsoft アーカイブ](https://github.com/microsoftarchive?q=msdn-code-gallery)組織に移動しました。
 

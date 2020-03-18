@@ -10,10 +10,10 @@ helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
 ms.openlocfilehash: eb1805ed55921497fea88e6b39989c876ef003d1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75713559"
 ---
 # <a name="event-c-reference"></a>event (C# リファレンス)
@@ -22,7 +22,7 @@ ms.locfileid: "75713559"
 
 ## <a name="example"></a>例
 
-次の例では、基になるデリゲート型として <xref:System.EventHandler> を使用するイベントを宣言し、発生させる方法について説明します。 完全なコード例については、「[.NET Framework ガイドラインに準拠したイベントを発行する方法](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)」を参照してください。完全なコード例では、ジェネリック <xref:System.EventHandler%601> デリゲート型の使用方法と、イベントをサブスクライブして、イベント ハンドラー メソッドを作成する方法も確認できます。
+次の例では、基になるデリゲート型として <xref:System.EventHandler> を使用するイベントを宣言し、発生させる方法について説明します。 完全なコード例については、「<xref:System.EventHandler%601>.NET Framework ガイドラインに準拠したイベントを発行する方法[」を参照してください。完全なコード例では、ジェネリック ](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md) デリゲート型の使用方法と、イベントをサブスクライブして、イベント ハンドラー メソッドを作成する方法も確認できます。
 
 [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
 
@@ -34,7 +34,7 @@ ms.locfileid: "75713559"
 
 イベントには次のキーワードが適用されます。
 
-|キーワード|説明|詳細情報|
+|キーワード|[説明]|詳細情報|
 |-------------|-----------------|--------------------------|
 |[static](./static.md)|クラスのインスタンスが存在しない場合でも、呼び出し元がいつでもイベントを使用できるようになります。|[静的クラスと静的クラス メンバー](../../programming-guide/classes-and-structs/static-classes-and-static-class-members.md)|
 |[virtual](./virtual.md)|[override](./override.md) キーワードを使用してイベントの動作をオーバーライドすることを派生クラスに許可します。|[継承](../../programming-guide/classes-and-structs/inheritance.md)|
@@ -49,10 +49,10 @@ ms.locfileid: "75713559"
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# のキーワード](./index.md)
 - [add](./add.md)
 - [remove](./remove.md)
