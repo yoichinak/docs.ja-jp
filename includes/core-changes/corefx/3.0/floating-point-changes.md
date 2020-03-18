@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: ce4f09908b1025e8e5a0380c9bf035c6b0db479a
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568154"
 ---
 ### <a name="floating-point-formatting-and-parsing-behavior-changed"></a>浮動小数点の書式設定と解析の動作が変更されました
@@ -20,7 +20,7 @@ ms.locfileid: "74568154"
 
 3.0
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 「[Floating-point parsing and formatting improvements in .NET Core 3.0](https://devblogs.microsoft.com/dotnet/floating-point-parsing-and-formatting-improvements-in-net-core-3-0/)」(.NET Core 3.0 での浮動小数点の解析と書式設定の強化) に関するブログ記事の「Potential impact to existing code」(既存のコードに対して考えられる影響) セクションでは、.NET Core 2.2 アプリケーションと比較して動作の変化が見られた場合はコードの変更を提案しています。通常、これには、異なる標準またはカスタムの書式設定文字列を使用して目的の動作を強制することが含まれます。 一部の結果は、以前は正しくなかった場合、回避策がない場合があります。
 

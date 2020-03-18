@@ -4,17 +4,17 @@ description: dotnet nuget locals コマンドは、HTTP 要求キャッシュ、
 author: karann-msft
 ms.date: 02/14/2020
 ms.openlocfilehash: 3fdd7d946b08b4c18cfaeb65013de259b927a7fa
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503684"
 ---
 # <a name="dotnet-nuget-locals"></a>dotnet nuget locals
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet nuget locals` - ローカル NuGet リソースをクリアまたはリストします。
 
@@ -25,7 +25,7 @@ dotnet nuget locals <CACHE_LOCATION> [(-c|--clear)|(-l|--list)] [--force-english
 dotnet nuget locals [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet nuget locals` コマンドは、HTTP 要求キャッシュ、一時的なキャッシュ、コンピューター全体のグローバル パッケージ フォルダーのローカルの NuGet リソースをクリアまたは一覧表示します。
 
@@ -58,7 +58,7 @@ dotnet nuget locals [-h|--help]
 
   一覧表示オプションは、指定されたキャッシュの種類の場所を表示するために使用されます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - すべてのローカルのキャッシュ ディレクトリ (HTTP キャッシュ ディレクトリ、グローバル パッケージ キャッシュ ディレクトリ、および一時的なキャッシュ ディレクトリ) のパスを表示します。
 

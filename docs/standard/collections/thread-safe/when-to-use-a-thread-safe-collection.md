@@ -6,10 +6,10 @@ helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711221"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>スレッドセーフなコレクションを使用する状況

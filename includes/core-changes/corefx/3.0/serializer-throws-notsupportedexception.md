@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: e6e10b2ec451c07bf397cbdcac51ef57c29dab47
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568224"
 ---
 ### <a name="json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception"></a>`JsonException` から `NotSupportedException` に変更された Json シリアライザーの例外の型
@@ -27,7 +27,7 @@ ms.locfileid: "74568224"
 
 3.0 Preview 9
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 逆シリアル化時に <xref:System.Text.Json.JsonException> をキャッチする場合は、<xref:System.NotSupportedException> もキャッチすることを検討してください。
 

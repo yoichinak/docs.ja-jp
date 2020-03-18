@@ -5,10 +5,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/26/2019
 ms.openlocfilehash: aaece5e3554ab567cf82c23265c8fba1656298d8
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76920767"
 ---
 # <a name="opensuse-15-package-manager---install-net-core"></a>openSUSE 15 パッケージ マネージャー - .NET Core をインストールする

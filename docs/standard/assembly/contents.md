@@ -7,10 +7,10 @@ helpviewer_keywords:
 - single-file assemblies
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 ms.openlocfilehash: bee9d5422ec3101b2486f233ae0816ae3643f4e7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75345571"
 ---
 # <a name="assembly-contents"></a>アセンブリの内容
@@ -33,7 +33,7 @@ ms.locfileid: "75345571"
 
 ソース コードをデザインするときは、作成するアプリケーションの機能を 1 つのファイルにまとめるのか複数のファイルに分割するのか、分割する場合は機能をどのように分けるのかを明確に決める必要があります。 .NET コードをデザインする場合も同様に、機能を 1 つのアセンブリにまとめるのか複数のアセンブリに分割するのか、分割する場合は機能をどのように分割するのかを決めておく必要があります。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET のアセンブリ](index.md)
 - [アセンブリ マニフェスト](manifest.md)

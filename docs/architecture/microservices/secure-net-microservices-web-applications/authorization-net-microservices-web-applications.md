@@ -4,10 +4,10 @@ description: .NET マイクロサービスと Web アプリケーションのセ
 author: mjrousos
 ms.date: 01/30/2020
 ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77501764"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>.NET マイクロサービスと Web アプリケーションでの承認について
@@ -68,7 +68,7 @@ public ActionResult API1 ()
 
 この例では、API1 を呼び出すために、ユーザーは次の条件を満たす必要があります。
 
-- Administrator "*または*" PowerUser ロールであり、"*かつ*"
+- Adminstrator "*または*" PowerUser ロールであり、"*かつ*"
 
 - RemoteEmployee ロールであり、*かつ*
 
@@ -112,7 +112,7 @@ services.AddAuthorization(options =>
 
 カスタム承認要件およびユーザーの年齢 (`DateOfBirth` 要求に基づく) をチェックするハンドラーの例については、ASP.NET Core [承認ドキュメント](https://docs.asp.net/en/latest/security/authorization/policies.html)を参照してください。
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 - **ASP.NET Core の認証** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)

@@ -7,10 +7,10 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet, seodoc18
 ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156622"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>Visual Studio での .NET Core を使用した .NET Standard ライブラリのテスト
@@ -21,7 +21,7 @@ ms.locfileid: "78156622"
 
 単体テスト プロジェクトを作成するには、次の操作を行います。
 
-1. [Visual Studio での .NET Standard ライブラリの構築](library-with-visual-studio.md)に関する記事で作成した `ClassLibraryProjects` ソリューションを開きます。
+1. `ClassLibraryProjects`Visual Studio での .NET Standard ライブラリの構築[に関する記事で作成した ](library-with-visual-studio.md) ソリューションを開きます。
 
 1. 「StringLibraryTest」 という名前の新しい単体テスト プロジェクトをソリューションに追加します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "78156622"
 
    1. **[新しいプロジェクトの追加]** ページで、検索ボックスに「**mstest**」と入力します。 言語のリストから **[C#]** または **[Visual Basic]** を選択し、次に、プラットフォームのリストから **[すべてのプラットフォーム]** を選択します。 **[MsTest テスト プロジェクト (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
 
-   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**StringLibraryTest**」と入力します。 次に、 **[作成]** を選択します。
+   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**StringLibraryTest**」と入力します。 **[作成]** を選択します。
 
    > [!NOTE]
    > MSTest に加え、Visual Studio で .NET Core 用の xUnit と nUnit テスト プロジェクトを作成することもできます。
@@ -85,11 +85,11 @@ ms.locfileid: "78156622"
 
 ## <a name="add-and-run-unit-test-methods"></a>単体テスト メソッドの追加と実行
 
-Visual Studio で単体テストを実行すると、単体テスト クラス (<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 属性が適用されているクラス) 内の <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性でマークされた各メソッドが実行されます。 テスト メソッドは、最初の失敗が検出されたとき、またはそのメソッドに含まれているすべてのテストが成功したときに終了します。
+Visual Studio で単体テストを実行すると、単体テスト クラス (<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性が適用されているクラス) 内の <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 属性でマークされた各メソッドが実行されます。 テスト メソッドは、最初の失敗が検出されたとき、またはそのメソッドに含まれているすべてのテストが成功したときに終了します。
 
 一般的なテストでは、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> クラスのメンバーが呼び出されます。 多くのアサート メソッドは最低 2 つのパラメーターを含んでいます。1 つは予期されるテスト結果、もう 1 つは実際のテスト結果です。 次の表に、`Assert` クラスの頻繁に呼び出されるメソッドをいくつか示します。
 
-| Assert メソッド     | 関数 |
+| Assert メソッド     | Function |
 | ------------------ | -------- |
 | `Assert.AreEqual`  | 2 つの値または 2 つのオブジェクトが等しいことを確認します。 値またはオブジェクトが等しくない場合、アサートは失敗します。 |
 | `Assert.AreSame`   | 2 つのオブジェクト変数が同じオブジェクトを参照していることを確認します。 変数が別々のオブジェクトを参照している場合、アサートは失敗します。 |
@@ -100,7 +100,7 @@ Visual Studio で単体テストを実行すると、単体テスト クラス (
 
 `StringLibrary.StartsWithUpper` メソッドのテストでは、大文字で始まる文字列を多く用意します。 これらの場合ではメソッドが `true` を返すと予測されるので、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> メソッドを呼び出すことができます。 同様に、大文字以外で始まる文字列を多く用意します。 これらの場合ではメソッドが `false` を返すと予測されるので、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> メソッドを呼び出すことができます。
 
-ライブラリ メソッドは文字列を処理するため、[空の文字列 (`String.Empty`) ](xref:System.String.Empty) (文字がなく <xref:System.String.Length> が 0 である有効な文字列)、および初期化されていない `null` 文字列を正しく処理することも確認します。 <xref:System.String> インスタンスで `StartsWithUpper` が拡張メソッドとして呼び出される場合、それに `null` 文字列を渡すことはできません。 しかし、それを静的メソッドとして直接呼び出して、単一の <xref:System.String> 引数を渡すこともできます。
+ライブラリ メソッドは文字列を処理するため、[空の文字列 (`String.Empty`) ](xref:System.String.Empty) (文字がなく <xref:System.String.Length> が 0 である有効な文字列)、および初期化されていない `null` 文字列を正しく処理することも確認します。 `StartsWithUpper` インスタンスで <xref:System.String> が拡張メソッドとして呼び出される場合、それに `null` 文字列を渡すことはできません。 しかし、それを静的メソッドとして直接呼び出して、単一の <xref:System.String> 引数を渡すこともできます。
 
 メソッドを 3 つ定義します。これらのメソッドでは、文字列配列の各要素について <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> メソッドが繰り返し呼び出されます。 テスト メソッドは最初の失敗を検出するとすぐに失敗するので、メソッドのオーバー ロードを呼び出して、メソッドの呼び出しで使用される文字列値を示す文字列を渡すことができます。
 
@@ -136,7 +136,7 @@ Visual Studio で単体テストを実行すると、単体テスト クラス (
 
 テスト実行にはエラーがなかったので、少し変更を加えてテスト メソッドが 1 つ失敗するようにしてみましょう。
 
-1. `TestDoesNotStartWithUpper` メソッドの `words` 配列を変更し、文字列 "Error" を含めます。 ソリューションをビルドし、テストを実行するときに、Visual Studio では、自動的に開いているファイルが保存されるため、ファイルは保存する必要はありません。
+1. `words` メソッドの `TestDoesNotStartWithUpper` 配列を変更し、文字列 "Error" を含めます。 ソリューションをビルドし、テストを実行するときに、Visual Studio では、自動的に開いているファイルが保存されるため、ファイルは保存する必要はありません。
 
    ```csharp
    string[] words = { "alphabet", "Error", "zebra", "abc", "αυτοκινητοβιομηχανία", "государство",
@@ -154,7 +154,7 @@ Visual Studio で単体テストを実行すると、単体テスト クラス (
    > [!div class="mx-imgBorder"]
    > ![[テスト エクスプローラー] ウィンドウと失敗したテスト](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. 失敗したテスト `TestDoesNotStartWith` を選択します。 **[テスト エクスプローラー]** ウィンドウに、アサートによって生成されたメッセージ"Assert.IsFalse failed. Expected for 'Error': false; actual:True" が表示されます。 失敗のため、配列内の "Error" の後ろのすべての文字列はテストされませんでした。
+1. 失敗したテスト `TestDoesNotStartWith` を選択します。 **[テスト エクスプローラー]** ウィンドウに、アサートによって生成されたメッセージ "Assert.IsFalse failed. Expected for 'Error': false; actual: True" が表示されます。 失敗のため、配列内の "Error" の後ろのすべての文字列はテストされませんでした。
 
    > [!div class="mx-imgBorder"]
    > ![IsFalse アサーションの失敗を示す [テスト エクスプローラー] ウィンドウ](./media/testing-library-with-visual-studio/failed-test-detail.png)
@@ -181,6 +181,6 @@ Visual Studio で単体テストを実行すると、単体テスト クラス (
 
 これでライブラリのテストが完了したので、次の手順では呼び出し元が使用できるようにします。 1 つまたは複数のアプリケーションとバンドルするか、NuGet パッケージとして配布することができます。 詳細については、　[.NET Standard クラス ライブラリの使用](consuming-library-with-visual-studio.md) に関するページを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Studio - 単体テストの基本](/visualstudio/test/unit-test-basics)

@@ -3,10 +3,10 @@ title: CQRS マイクロサービスに読み取り/クエリを実装する
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | Dapper を使用した eShopOnContainers でのオーダリング マイクロサービスの CQRS のクエリ側の実装を理解する。
 ms.date: 10/08/2018
 ms.openlocfilehash: 235b0e471a17e2a37a883a111cf499b7837f3ea1
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73972084"
 ---
 # <a name="implement-readsqueries-in-a-cqrs-microservice"></a>CQRS マイクロサービスに読み取り/クエリを実装する

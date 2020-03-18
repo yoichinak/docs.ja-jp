@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
 ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705393"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードによるバージョン管理 (C# プログラミング ガイド)
@@ -61,26 +61,26 @@ C# 言語は、異なるライブラリ内の[基底](../../language-reference/k
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- `new` キーワードを使用すると、その定義によって基底クラス内の定義が非表示にされることがコンパイラに伝えられます。 これが既定の動作です。  
+ `new` キーワードを使用すると、その定義によって基底クラス内の定義が非表示にされることがコンパイラに伝えられます。 これは既定の動作です。  
   
 ## <a name="override-and-method-selection"></a>オーバーライドとメソッド選択  
  クラスでメソッドを指定したときに、その呼び出しと互換性のあるメソッドが 2 つ以上ある場合、C# コンパイラはどのメソッドを呼び出すのが最適かを選択します (たとえば、同じ名前のメソッドが 2 つあり、そのパラメーターと、渡されたパラメーターとの間に互換性がある場合)。 たとえば、次の各メソッドには互換性があります。  
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- `Derived` のインスタンスで `DoWork` が呼び出されると、C# コンパイラはまず、`Derived` で最初に宣言された `DoWork` のバージョンと互換性がある呼び出しを実行しようとします。 オーバーライド メソッドは、クラスで宣言されたものとは見なされません。これらは、基底クラスで宣言されたメソッドの新しい実装です。 C# コンパイラは、メソッドの呼び出しを `Derived` にある元のメソッドと対応付けできない場合にのみ、その呼び出しを、同じ名前と互換パラメーターを持つオーバーライド メソッドに対応付けます。 次に例を示します。  
+ `DoWork` のインスタンスで `Derived` が呼び出されると、C# コンパイラはまず、`DoWork` で最初に宣言された `Derived` のバージョンと互換性がある呼び出しを実行しようとします。 オーバーライド メソッドは、クラスで宣言されたものとは見なされません。これらは、基底クラスで宣言されたメソッドの新しい実装です。 C# コンパイラは、メソッドの呼び出しを `Derived` にある元のメソッドと対応付けできない場合にのみ、その呼び出しを、同じ名前と互換パラメーターを持つオーバーライド メソッドに対応付けます。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- 変数 `val` は double 型に暗黙的に変換できるので、C# コンパイラは `DoWork(int)` の代わりに `DoWork(double)` を呼び出します。 この問題を回避する方法は 2 つあります。 1 つ目は、仮想メソッドと同じ名前の新しいメソッドを宣言しないようにすることです。 2 つ目は、`Derived` のインスタンスを `Base` にキャストすることで、C# コンパイラに基底クラス メソッドのリストを検索させ、仮想メソッドを呼び出すようにすることです。 メソッドが仮想なので、`Derived` にある `DoWork(int)` の実装が呼び出されます。 次に例を示します。  
+ 変数 `val` は double 型に暗黙的に変換できるので、C# コンパイラは `DoWork(double)` の代わりに `DoWork(int)` を呼び出します。 この問題を回避する方法は 2 つあります。 1 つ目は、仮想メソッドと同じ名前の新しいメソッドを宣言しないようにすることです。 2 つ目は、`Derived` のインスタンスを `Base` にキャストすることで、C# コンパイラに基底クラス メソッドのリストを検索させ、仮想メソッドを呼び出すようにすることです。 メソッドが仮想なので、`DoWork(int)` にある `Derived` の実装が呼び出されます。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   
  `new` と `override` の例について詳しくは、「[Override キーワードと New キーワードを使用する場合について](./knowing-when-to-use-override-and-new-keywords.md)」をご覧ください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [クラスと構造体](./index.md)
 - [メソッド](./methods.md)
 - [継承](./inheritance.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - object initializers [C#]
 - collection initializers [C#]
 ms.assetid: c58f3db5-d7d4-4651-bd2d-5a3a97357f61
-ms.openlocfilehash: 5565f37c9cfd8cb84c07f9ecc6f6c2edf8c66c61
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: ae8741e2f29db0a470ad8d3b121375fbdeaff0d9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714750"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79170196"
 ---
 # <a name="object-and-collection-initializers-c-programming-guide"></a>オブジェクト初期化子とコレクション初期化子 (C# プログラミング ガイド)
 
@@ -22,7 +22,7 @@ C# では、1 つの命令文でオブジェクトまたはコレクションを
   
 [!code-csharp[ObjectInitializer1](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#CatDeclaration)]  
 [!code-csharp[ObjectInitializer1a](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ObjectPropertyInitialization)]  
- 
+
 オブジェクト初期化子の構文では、インスタンスを作成できます。その後、新規作成されたオブジェクトは、割り当てられたプロパティと共に、割り当ての変数に代入されます。
 
 C# 6 より、オブジェクト初期化子では、フィールドとプロパティを割り当てることに加え、インデクサーを設定できます。 次の基底 `Matrix` クラスをご覧ください。
@@ -94,7 +94,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[ListInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitializer)]  
   
-コレクションの `Add` メソッドで許容されている場合、コレクション初期化子の要素として [null](../../language-reference/keywords/null.md) を指定できます。  
+コレクションの [ メソッドで許容されている場合、コレクション初期化子の要素として ](../../language-reference/keywords/null.md)null`Add` を指定できます。  
   
 [!code-csharp[ListInitializerNull](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitialerWithNull)]  
   
@@ -108,7 +108,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 この初期化子の例では、<xref:System.Collections.Generic.Dictionary%602.Add(%600,%601)> を呼び出し、3 つの項目をディクショナリに追加しています。 連想コレクションを初期化するこれら 2 つの異なる方法には、コンパイラによって生成されるメソッド呼び出しにより、動作にわずかな違いがあります。 いずれの場合も `Dictionary` クラスが使用されます。 他の型の場合、パブリック API に基づいて、いずれかのみサポートされることがあります。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 次の例では、オブジェクトの概念とコレクション初期化子の概念が組み合わさっています。
 
@@ -122,8 +122,8 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
 
 [!code-csharp[InitializerListExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#FullDictionaryInitializer)]  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [C# での LINQ](../../linq/index.md)
 - [匿名型](anonymous-types.md)

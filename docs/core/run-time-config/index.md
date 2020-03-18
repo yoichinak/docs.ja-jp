@@ -3,11 +3,11 @@ title: ランタイムの構成オプション
 description: ランタイム構成設定を使用して .NET Core アプリケーションを構成する方法について説明します。
 ms.date: 01/21/2020
 ms.openlocfilehash: ddf68c30e620a06856f65e71bd050e1b77618f20
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76733437"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79397612"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core ランタイム構成設定
 
@@ -39,7 +39,7 @@ ms.locfileid: "76733437"
 > [!NOTE]
 > この *[appname].runtimeconfig.json* ファイルは、以降のビルドで上書きされます。
 
-*runtimeconfig.json* ファイルの **configProperties** セクションに、ランタイム構成オプションを指定します。 このセクションには次の形式が含まれます。
+**runtimeconfig.json** ファイルの *configProperties* セクションに、ランタイム構成オプションを指定します。 このセクションには次の形式が含まれます。
 
 ```json
 "configProperties": {

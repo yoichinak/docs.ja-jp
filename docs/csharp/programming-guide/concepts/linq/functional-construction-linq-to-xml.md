@@ -1,15 +1,15 @@
 ---
-title: 関数型構築の比較 (LINQ to XML) (C#)
+title: 関数型構築 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 57a82bcf-de03-4f1c-a0c8-9a76e989d542
 ms.openlocfilehash: e55b0010a5f75eee8137d1e9bcefc573b5e07e72
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635757"
 ---
-# <a name="functional-construction-linq-to-xml-c"></a>関数型構築の比較 (LINQ to XML) (C#)
+# <a name="functional-construction-linq-to-xml-c"></a>関数型構築 (LINQ to XML) (C#)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] には、"*関数型構築*" と呼ばれる強力な XML 要素作成機能があります。 関数型構築は、単一のステートメントで XML ツリーを作成するための機能です。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] プログラミング インターフェイスには、関数型構築を利用するためのいくつかの重要な機能があります。  

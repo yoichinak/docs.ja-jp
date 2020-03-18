@@ -3,17 +3,17 @@ title: dotnet msbuild コマンド
 description: dotnet msbuild コマンドは、MSBuild コマンド ラインへのアクセスを提供します。
 ms.date: 02/14/2020
 ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503669"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet msbuild` - プロジェクトとそのすべての依存関係をビルドします。
 
@@ -21,7 +21,7 @@ ms.locfileid: "77503669"
 
 `dotnet msbuild <msbuild_arguments> [-h]`
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet msbuild` コマンドでは、完全に機能する MSBuild へのアクセスを許可します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "77503669"
 
 [dotnet build](dotnet-build.md) コマンドは、`dotnet msbuild -restore -target:Build` に相当します。 [dotnet ビルド](dotnet-build.md)は、プロジェクトのビルドによく使用されますが、ビルド ターゲットを常に実行するため、プロジェクトをビルドしなくてもよい場合は `dotnet msbuild` を使用できます。 たとえば、プロジェクトをビルドせずに実行したい特定のターゲットがある場合は、`dotnet msbuild` を使用してターゲットを指定します。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - プロジェクトとその依存関係をビルドします。
 

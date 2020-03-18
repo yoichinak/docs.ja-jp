@@ -1,5 +1,5 @@
 ---
-title: '方法: 特定のパターンを持つファイルをディレクトリにコピーする'
+title: '方法 : 特定のパターンを持つファイルをディレクトリにコピーする'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.FileSystem.CopyFile method, copying files [Visual Basic]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
 ms.openlocfilehash: ee3951e967436a1b8aec09b8e42dc6d1b547bc02
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348849"
 ---
-# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>方法: Visual Basic で特定のパターンを持つファイルをディレクトリにコピーする
+# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>方法 : Visual Basic で特定のパターンを持つファイルをディレクトリにコピーする
 
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> メソッドは、ファイルのパス名を表す文字列の読み取り専用のコレクションを返します。 `wildCards` パラメーターを使用して、特定のパターンを指定できます。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "74348849"
   
  [!code-vb[VbFileIOMisc#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#37)]  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
 
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "74348849"
   
 - ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>) ユーザーに必要な権限がない (<xref:System.UnauthorizedAccessException>)。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>

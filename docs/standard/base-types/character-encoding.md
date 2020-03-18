@@ -12,10 +12,10 @@ helpviewer_keywords:
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 ms.openlocfilehash: 3cd461d8c56c3f31bf3ffe04acf239ecd32fe328
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711442"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード

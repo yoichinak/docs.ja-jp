@@ -5,10 +5,10 @@ helpviewer_keywords:
 - command-line arguments [C#], displaying
 ms.assetid: b8479f2d-9e05-4d38-82da-2e61246e5437
 ms.openlocfilehash: 210dad71220572535a0325fac925b0453b0d4e03
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712027"
 ---
 # <a name="how-to-display-command-line-arguments-c-programming-guide"></a>コマンド ライン引数を表示する方法 (C# プログラミング ガイド)
@@ -28,9 +28,9 @@ ms.locfileid: "75712027"
   
  [!code-csharp[csProgGuideMain#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class1.cs#9)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [csc.exe を使用したコマンド ラインからのビルド](../../language-reference/compiler-options/command-line-building-with-csc-exe.md)
 - [Main() とコマンドライン引数](./index.md)
 - [Main() の戻り値](./main-return-values.md)

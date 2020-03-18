@@ -10,10 +10,10 @@ helpviewer_keywords:
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
 ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75337253"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
@@ -46,7 +46,7 @@ ms.locfileid: "75337253"
   
  [文字列](./strings/index.md)  
   
- [プロパティ](./classes-and-structs/properties.md)  
+ [Properties](./classes-and-structs/properties.md)  
   
  [インデクサー](./indexers/index.md)  
   
@@ -84,6 +84,6 @@ ms.locfileid: "75337253"
   
  [リフレクション](./concepts/reflection.md)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# リファレンス](../language-reference/index.md)

@@ -4,10 +4,10 @@ titleSuffix: ''
 description: .NET Core で常に例外をスローする .NET Framework の API について説明します。
 ms.date: 12/23/2019
 ms.openlocfilehash: c4b94321d30cacd90d5c2ee23c258681683a6faa
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77092968"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core で常に例外をスローする API
@@ -322,7 +322,7 @@ ms.locfileid: "77092968"
 | <xref:System.Xml.XmlDictionaryReader.CreateMtomReader(System.IO.Stream,System.Text.Encoding[],System.String,System.Xml.XmlDictionaryReaderQuotas,System.Int32,System.Xml.OnXmlDictionaryReaderClose)?displayProperty=nameWithType> | すべて |
 | <xref:System.Xml.XmlDictionaryWriter.CreateMtomWriter(System.IO.Stream,System.Text.Encoding,System.Int32,System.String,System.String,System.String,System.Boolean,System.Boolean)?displayProperty=nameWithType> | すべて |
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Framework から .NET Core への移行の破壊的変更](../compatibility/fx-core.md)
 - [.NET Core でのバイナリ シリアル化](../../standard/serialization/binary-serialization.md#net-core)

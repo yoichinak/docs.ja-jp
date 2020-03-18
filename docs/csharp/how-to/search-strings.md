@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
 ms.openlocfilehash: 15ea77d13a93d88bd996a22b6fe1aaad81df572d
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74959703"
 ---
 # <a name="how-to-search-strings"></a>文字列を検索する方法
@@ -41,9 +41,9 @@ ms.locfileid: "74959703"
 
 次のコード例では、文章内の "the" または "their" という単語を検索します (大文字と小文字の区別は無視されます)。 静的メソッドの <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> で検索を実行します。 検索対象の文字列と、検索パターンを指定します。 この例では、3 番目の引数で大文字と小文字を区別しない検索を指定します。 詳細については、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> を参照してください。  
 
-検索パターンで検索対象のテキストを説明します。 次の表では、検索パターンの各要素について説明します (以下の表では、C# 文字列で `\\` としてエスケープされる必要がある、単一の `\` を使用します)。
+検索パターンで検索対象のテキストを説明します。 次の表では、検索パターンの各要素について説明します (以下の表では、C# 文字列で `\` としてエスケープされる必要がある、単一の `\\` を使用します)。
 
-| pattern  | 説明     |
+| pattern  | 意味     |
 | -------- |-------------|
 | the      | テキスト "the" と一致 |
 | (eir)?   | "eir" の 0 個または 1 個の出現箇所と一致 |
@@ -58,7 +58,7 @@ ms.locfileid: "74959703"
 
 次のコードでは正規表現を使用して、配列の各文字列の形式を検証します。 各文字列が電話番号の形式であることが検証されます。つまり、3 グループの数値がダッシュで区切られ、最初の 2 グループには 3 桁の数値が含まれ、3 つ目のグループには 4 桁の数値が含まれることが検証されます。 検索パターンでは正規表現の `^\\d{3}-\\d{3}-\\d{4}$` を使用します。 詳細については、「[正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)」をご覧ください。
 
-| pattern  | 説明                             |
+| pattern  | 意味                             |
 | -------- |-------------------------------------|
 | ^        | 文字列の先頭と一致 |
 | \d{3}    | 3 桁の文字と完全に一致  |
@@ -74,9 +74,9 @@ ms.locfileid: "74959703"
 
 [GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../programming-guide/index.md)
+- [C# プログラミングガイド](../programming-guide/index.md)
 - [文字列](../programming-guide/strings/index.md)
 - [LINQ と文字列](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>

@@ -1,15 +1,15 @@
 ---
-title: 作業開始
+title: はじめに
 ms.date: 09/10/2018
 helpviewer_keywords:
 - get started, Visual Basic
 - Visual Basic, get started
 ms.assetid: 6685467b-28fa-4cde-9516-f0e00ad08911
 ms.openlocfilehash: 0221889f6d736b41546b564273ebb41d49dfb039
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75559886"
 ---
 # <a name="get-started-with-visual-basic"></a>Visual Basic 入門
@@ -28,7 +28,7 @@ ms.locfileid: "75559886"
 
 - [Visual Basic プログラマーのための追加リソース](additional-resources.md) 一般的な問題に対する回答を見つけるのに役立つ場合がある、Web サイトおよびニュースグループの一覧を示します。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [Visual Basic の取得](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019): Visual Basic のサポートを含む Visual Studio のバージョン (無料版など) のダウンロード リンクを提供します。
 

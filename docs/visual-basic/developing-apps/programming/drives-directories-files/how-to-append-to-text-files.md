@@ -1,5 +1,5 @@
 ---
-title: '方法: テキスト ファイルに追記する'
+title: '方法 : テキスト ファイルに追記する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
@@ -7,15 +7,15 @@ helpviewer_keywords:
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
 ms.openlocfilehash: 97bcb5c511452e418df010f12d4b63f04251d021
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348870"
 ---
-# <a name="how-to-append-to-text-files-in-visual-basic"></a>方法: Visual Basic でテキスト ファイルに追記する
+# <a name="how-to-append-to-text-files-in-visual-basic"></a>方法 : Visual Basic でテキスト ファイルに追記する
 
-`append` パラメーターが `True` に設定されるように指定して、<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> メソッドを使いテキスト ファイルに追加できます。  
+<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> パラメーターが `append` に設定されるように指定して、`True` メソッドを使いテキスト ファイルに追加できます。  
   
 ### <a name="to-append-to-a-text-file"></a>テキスト ファイルに追加するには  
   
@@ -43,7 +43,7 @@ ms.locfileid: "74348870"
   
 - ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

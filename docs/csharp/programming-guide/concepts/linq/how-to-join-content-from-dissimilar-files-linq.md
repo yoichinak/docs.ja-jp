@@ -2,12 +2,12 @@
 title: 異種ファイルのコンテンツを結合する方法 (LINQ) (C#)
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 49b70c15b3be2efea5cf6a9e7d85df944a67c730
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: efe11c31873f21841c28bd393b295eea117d1e46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345882"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169091"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>異種ファイルのコンテンツを結合する方法 (LINQ) (C#)
 
@@ -62,7 +62,7 @@ class JoinStrings
     {  
         // Join content from dissimilar files that contain  
         // related information. File names.csv contains the student  
-        // name plus an ID number. File scores.csv contains the ID   
+        // name plus an ID number. File scores.csv contains the ID
         // and a set of four test scores. The following query joins  
         // the scores to the student names by using ID as a  
         // matching key.  
@@ -84,7 +84,7 @@ class JoinStrings
             from id in scores  
             let scoreFields = id.Split(',')  
             where Convert.ToInt32(nameFields[2]) == Convert.ToInt32(scoreFields[0])
-            select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]   
+            select nameFields[0] + "," + scoreFields[1] + "," + scoreFields[2]
                    + "," + scoreFields[3] + "," + scoreFields[4];  
   
         // Pass a query variable to a method and execute it  
@@ -124,7 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ と文字列 (C#)](./linq-and-strings.md)
 - [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

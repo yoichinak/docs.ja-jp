@@ -3,10 +3,10 @@ title: 高いスケーラビリティと可用性のためにマイクロサー�
 description: 実際の運用アプリケーションは、すべてのコンテナーの正常性、ワークロードおよびライフ サイクルを管理するオーケストレーターと共に展開して管理する必要があります。
 ms.date: 02/15/2019
 ms.openlocfilehash: e548e6b3816dec1e56c273c53c9fd052443eb09b
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76919537"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する

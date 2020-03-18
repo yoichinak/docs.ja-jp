@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 9520f8c6b6671917f5694bc602293a00e2dab82d
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568215"
 ---
 ### <a name="ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes"></a>ZipArchiveEntry による、エントリ サイズに一貫性のないアーカイブ処理の中止
@@ -22,7 +22,7 @@ Zip アーカイブは、圧縮されているサイズと圧縮されていな�
 
 3.0
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 この問題が発生している zip アーカイブをすべて再パッケージ化します。
 

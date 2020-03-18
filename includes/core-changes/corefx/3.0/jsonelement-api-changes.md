@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 79901d0b57816915ca7ea73cfe7fa3d40820434e
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568104"
 ---
 ### <a name="jsonelement-api-changes"></a>JsonElement API の変更
@@ -41,17 +41,17 @@ ms.locfileid: "74568104"
     }
     ```
 
-1. <xref:System.Text.Json.JsonElement.WriteTo%2A> で、それのメソッド パラメーターが `null` の場合に、<xref:System.ArgumentNullException> がスローされるようになりました。
+1. <xref:System.Text.Json.JsonElement.WriteTo%2A> で、それのメソッド パラメーターが <xref:System.ArgumentNullException> の場合に、`null` がスローされるようになりました。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
 3.0 Preview 7
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 これらの変更の影響をコードが受ける場合、次を行うことができます。
 
-- <xref:System.Text.Json.JsonElement> に `WriteProperty` オーバーロードに対する置換 API はありません。 同じ結果を得るには、代わりに <xref:System.Text.Json.JsonElement.WriteTo%2A> メソッドと共に <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> オーバーロードの 1 つを呼び出します。 次に例を示します。
+- `WriteProperty` に <xref:System.Text.Json.JsonElement> オーバーロードに対する置換 API はありません。 同じ結果を得るには、代わりに <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> メソッドと共に <xref:System.Text.Json.JsonElement.WriteTo%2A> オーバーロードの 1 つを呼び出します。 次に例を示します。
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ ms.locfileid: "74568104"
    }
    ```
 
-- <xref:System.Text.Json.JsonElement.WriteTo%2A> メソッドへの呼び出しの <xref:System.ArgumentNullException> を処理します。
+- <xref:System.ArgumentNullException> メソッドへの呼び出しの <xref:System.Text.Json.JsonElement.WriteTo%2A> を処理します。
 
 #### <a name="affected-apis"></a>影響を受ける API
 

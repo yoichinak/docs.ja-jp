@@ -3,17 +3,17 @@ title: dotnet list package コマンド
 description: "\"dotnet list package\" コマンドでは、プロジェクトまたはソリューションのパッケージ参照を列挙する便利なオプションが提供されています。"
 ms.date: 02/14/2020
 ms.openlocfilehash: 1cb52b8de10b2eef2ef7465f04316e9446318763
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78157233"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
 **この記事の対象:** ✔️ .NET Core 2.2 SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet list package` - プロジェクトまたはソリューションのパッケージ参照を一覧表示します。
 
@@ -25,9 +25,9 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-m
 dotnet list package [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
-`dotnet list package` コマンドでは、特定のプロジェクトまたはソリューションのすべての NuGet パッケージ参照を列挙する便利なオプションが提供されています。 このコマンドで処理するために必要なアセットを用意するには、最初にプロジェクトをビルドする必要があります。 次の例では、[SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) プロジェクトに対する `dotnet list package` コマンドの出力を示します。
+`dotnet list package` コマンドでは、特定のプロジェクトまたはソリューションのすべての NuGet パッケージ参照を列挙する便利なオプションが提供されています。 このコマンドで処理するために必要なアセットを用意するには、最初にプロジェクトをビルドする必要があります。 次の例では、`dotnet list package`SentimentAnalysis[ プロジェクトに対する ](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) コマンドの出力を示します。
 
 ```output
 Project 'SentimentAnalysis' has the following package references
@@ -54,7 +54,7 @@ Project `SentimentAnalysis` has the following updates to its packages
    > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-プロジェクトに推移的依存関係があるかどうかを確認する必要がある場合は、`--include-transitive` オプションを使用します。 推移的依存関係は、プロジェクトに追加したパッケージがさらに別のパッケージに依存している場合に発生します。 次の例では、[HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) プロジェクトに対して `dotnet list package --include-transitive` コマンドを実行した出力を示します、最上位のパッケージと、それらが依存しているパッケージが表示されています。
+プロジェクトに推移的依存関係があるかどうかを確認する必要がある場合は、`--include-transitive` オプションを使用します。 推移的依存関係は、プロジェクトに追加したパッケージがさらに別のパッケージに依存している場合に発生します。 次の例では、`dotnet list package --include-transitive`HelloPlugin[ プロジェクトに対して ](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) コマンドを実行した出力を示します、最上位のパッケージと、それらが依存しているパッケージが表示されています。
 
 ```output
 Project 'HelloPlugin' has the following package references
@@ -111,7 +111,7 @@ Project 'HelloPlugin' has the following package references
 
   より新しいパッケージを検索するときに使用する NuGet ソース。 `--outdated` オプションが必要です。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - 特定のプロジェクトのパッケージ参照を一覧表示します。
 

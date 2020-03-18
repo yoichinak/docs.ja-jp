@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
 ms.openlocfilehash: b5d2da011ec6318c8b07f1eb4d383a4d56488239
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700836"
 ---
 # <a name="how-to-access-office-interop-objects-c-programming-guide"></a>Office 相互運用オブジェクトにアクセスする方法 (C# プログラミング ガイド)

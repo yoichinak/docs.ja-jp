@@ -3,10 +3,10 @@ title: LINQ to XML を使用してディクショナリを操作する方法 (C#
 ms.date: 07/20/2015
 ms.assetid: 57bcefe3-8433-4d3b-935a-511c9bcbdfa8
 ms.openlocfilehash: 1a98293f208e80e969362fca27014ecd2e5c4183
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347221"
 ---
 # <a name="how-to-work-with-dictionaries-using-linq-to-xml-c"></a>LINQ to XML を使用してディクショナリを操作する方法 (C#)

@@ -5,10 +5,10 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
 ms.openlocfilehash: 7a641c1b6665af6e9e78ef182174b360041d74aa
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77450045"
 ---
 # <a name="development-process-for-azure"></a>Azure の開発プロセス
@@ -22,7 +22,7 @@ ms.locfileid: "77450045"
 
 ## <a name="development-environment-for-aspnet-core-apps"></a>ASP.NET Core アプリの開発環境
 
-### <a name="development-tools-choices-ide-or-editor"></a>開発ツールの選択:IDE またはエディター
+### <a name="development-tools-choices-ide-or-editor"></a>開発ツールの選択: IDE またはエディター
 
 完全で強力な IDE または軽量でアジャイルなエディターのどちらを選んでも、Microsoft は ASP.NET Core アプリケーションの開発に対応できます。
 
@@ -84,11 +84,11 @@ Azure にデプロイする場合の ASP.NET Core アプリケーションの開
 
 チームでコードを共有できるようになった場合は、常にローカル ソース リポジトリからチームの共有ソース リポジトリに変更をプッシュする必要があります。 カスタム ブランチで作業をしていた場合、この手順では通常、(たとえば、[pull request](https://docs.microsoft.com/azure/devops/git/pull-requests)を使用して) コードを共有ブランチにマージします。
 
-#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>手順 3. ビルド サーバー:継続的インテグレーション。 ビルド、テスト、パッケージ
+#### <a name="step-3-build-server-continuous-integration-build-test-package"></a>手順 3. ビルド サーバー: 継続的インテグレーション。 ビルド、テスト、パッケージ
 
 共有アプリケーション コード リポジトリに新しいコミットが行われるたびに、ビルド サーバーで新しいビルドがトリガーされます。 CI プロセスの一部として、このビルドで完全にアプリケーションをコンパイルし、自動テストを実行して、すべて予期したとおりに動作していることを確認する必要があります。 CI プロセスの最終結果は、デプロイの準備ができている、パッケージ化されたバージョンの Web アプリである必要があります。
 
-#### <a name="step-4-build-server-continuous-delivery"></a>手順 4. ビルド サーバー:継続的デリバリー
+#### <a name="step-4-build-server-continuous-delivery"></a>手順 4. ビルド サーバー: 継続的デリバリー
 
 ビルドが成功すると、CD プロセスは生成されたビルド成果物を選択します。 これには、Web デプロイ パッケージが含まれます。 ビルド サーバーは Azure App Service にこのパッケージをデプロイして、既存のサービスを新しく作成されたものに置き換えます。 通常、この手順の対象はステージング環境ですが、一部のアプリケーションは CD プロセスを通じて運用環境に直接デプロイします。
 
@@ -100,7 +100,7 @@ Azure にデプロイする場合の ASP.NET Core アプリケーションの開
 
 Web アプリの実行中に、アプリケーションの正常性を監視し、診断およびユーザー動作のデータを収集することができます。 Application Insights は Visual Studio に含まれており、ASP.NET アプリの自動実装を提供します。 使用状況、例外、要求、パフォーマンス、およびログに関する情報を提供できます。
 
-## <a name="references"></a>参照
+## <a name="references"></a>References
 
 **ASP.NET Core アプリを構築して Azure にデプロイする**  
 <https://docs.microsoft.com/azure/devops/build-release/apps/aspnet/build-aspnet-core>

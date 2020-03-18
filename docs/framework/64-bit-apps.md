@@ -7,10 +7,10 @@ helpviewer_keywords:
 - 64-bit programming [C++]
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 ms.openlocfilehash: 90e022d5643dc49ccc5b78d071b3b473c92f0670
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74429668"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
@@ -52,7 +52,7 @@ ms.locfileid: "74429668"
 |--------------|---------------------|  
 |Visual Basic|[-platform (Visual Basic)](../visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform (C# コンパイラ オプション)](../csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|**/clr:safe** を使用すると、プラットフォームに依存しない、Microsoft Intermediate Language (MSIL) アプリケーションを作成できます。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](/cpp/build/reference/clr-common-language-runtime-compilation)」を参照してください。<br /><br /> Visual C++ には、それぞれの 64 ビット オペレーティング システムを対象とする個別のコンパイラが含まれます。 Visual C++ を使用して 64 ビット Windows オペレーティング システム上で実行するネイティブ アプリケーションを作成する方法の詳細については、「[Visual C++ による 64 ビット プログラミング](/cpp/build/configuring-programs-for-64-bit-visual-cpp)」を参照してください。|  
+|Visual C++|**/clr:safe** を使用すると、プラットフォームに依存しない、Microsoft Intermediate Language (MSIL) アプリケーションを作成できます。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](/cpp/build/reference/clr-common-language-runtime-compilation)」を参照してください。<br /><br /> Visual C++ には、それぞれの 64 ビット オペレーティング システムを対象とする個別のコンパイラが含まれます。 Visual C++ を使用して 64 ビット Windows オペレーティング システム上で実行するネイティブ アプリケーションを作成する方法の詳細については、「[Visual C++ による 64 ビット プログラミング](/cpp/build/configuring-programs-for-64-bit-visual-cpp)」を参照してください。|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>.exe ファイルまたは .dll ファイルのステータスの特定  
  .exe ファイルまたは .dll ファイルが、特定のプラットフォーム上または WOW64 の下でのみ動作するように意図されているかどうかを確認するには、[CorFlags.exe (CorFlags 変換ツール)](./tools/corflags-exe-corflags-conversion-tool.md) を使用します (オプションは指定しません)。 また、CorFlags.exe を使用して、.exe ファイルまたは .dll ファイルのプラットフォームのステータスを変更することもできます。 Visual Studio アセンブリの CLR ヘッダーのメジャー ランタイム バージョン番号が 2、マイナー ランタイム バージョン番号が 5 に設定されています。 マイナー ランタイム バージョンが 0 に設定されたアプリケーションは、レガシ アプリケーションとして扱われ、常に WOW64 の下で実行されます。  

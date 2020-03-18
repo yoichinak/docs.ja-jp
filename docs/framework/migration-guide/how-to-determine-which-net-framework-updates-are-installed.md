@@ -9,12 +9,12 @@ helpviewer_keywords:
 - updates, determining for .NET Framework
 - .NET Framework, determining updates
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
-ms.openlocfilehash: 087519048b412798ef7495d250dc2538ee5c2fd0
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 5c7bf48d5786530a9bcb69fb7cf605ac2c80a4eb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716253"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181266"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>インストールされている NET Framework セキュリティ更新プログラムおよび修正プログラムを確認する方法
 
@@ -35,7 +35,7 @@ ms.locfileid: "75716253"
 
      インストールされている更新プログラムは、適用された .NET Framework バージョンを識別するサブキーの下に一覧表示されています。 各更新プログラムは、サポート技術情報の (KB) 番号で識別されます。
 
-レジストリ エディターでは、各バージョンの .NET Framework バージョンとインストールされている更新プログラムが別々のサブキーに格納されます。 インストールされているバージョン番号の詳細については、「[方法: インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。
+レジストリ エディターでは、各バージョンの .NET Framework バージョンとインストールされている更新プログラムが別々のサブキーに格納されます。 インストールされているバージョン番号を検出する方法については、「[方法: インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 ## <a name="query-the-registry-using-code"></a>コードを使用してレジストリのクエリを実行する
 
@@ -74,7 +74,7 @@ $DotNetVersions = Get-ChildItem HKLM:\SOFTWARE\WOW6432Node\Microsoft\Updates | W
  "*.NET Framework*"}
 
 ForEach($Version in $DotNetVersions){
-    
+
    $Updates = Get-ChildItem $Version.PSPath
     $Version.PSChildName
     ForEach ($Update in $Updates){
@@ -104,7 +104,7 @@ KB2600211
 KB2600217
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [方法: インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)
 - [開発者向けの .NET Framework のインストール](../install/guide-for-developers.md)

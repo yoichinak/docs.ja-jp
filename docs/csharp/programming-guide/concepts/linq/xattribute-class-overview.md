@@ -3,10 +3,10 @@ title: XAttribute クラスの概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
 ms.openlocfilehash: 7a806314664c6319fc45cff0dddedbe38027059d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635666"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute クラスの概要 (C#)
@@ -20,7 +20,7 @@ ms.locfileid: "75635666"
 ## <a name="the-xattribute-constructor"></a>XAttribute コンストラクター  
  最もよく使用する <xref:System.Xml.Linq.XAttribute> クラスのコンストラクターを次に示します。  
   
-|コンストラクター|説明|  
+|Constructor|[説明]|  
 |-----------------|-----------------|  
 |`XAttribute(XName name, object content)`|<xref:System.Xml.Linq.XAttribute> オブジェクトを作成します。 `name` 引数には属性の名前を指定し、`content` には属性のコンテンツを指定します。|  
   
@@ -79,6 +79,6 @@ Console.WriteLine(c);
   
  属性と要素の区別は主に、ノード レベルで XML ツリーを操作するコードを記述する開発者にとってのみ重要な意味を持ちます。 多くの開発者は、この区別を考慮する必要はありません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ to XML プログラミングの概要 (C#)](./linq-to-xml-overview.md)

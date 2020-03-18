@@ -6,10 +6,10 @@ author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
 ms.openlocfilehash: 735782a4a0877a917b6e1885f009aa49d834170f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73976964"
 ---
 # <a name="re-train-a-model"></a>モデルを再トレーニングする
@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>トレーニング済みモデルのパラメーターを抽出する
 
-モデルが読み込まれたら、トレーニング済みモデルの [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) プロパティにアクセスして、学習済みモデルのパラメーターを抽出します。 トレーニング済みモデルは、[`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) を出力する [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) を作成する線形回帰モデル [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) を使用して学習されています。 これらの線形回帰モデルのパラメーターには、学習済みのバイアスと、モデルの重みまたは係数が含まれています。 これらの値は、新しい再トレーニング済みモデルの出発点として使用されます。
+モデルが読み込まれたら、トレーニング済みモデルの [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) プロパティにアクセスして、学習済みモデルのパラメーターを抽出します。 トレーニング済みモデルは、[`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) を出力する [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) を作成する線形回帰モデル [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) を使用して学習されています。 これらの線形回帰モデルのパラメーターには、学習済みのバイアスと、モデルの重みまたは係数が含まれています。 これらの値は、新しい再トレーニング済みモデルの出発点として使用されます。
 
 ```csharp
 // Extract trained model parameters
@@ -121,7 +121,7 @@ for(int i=0;i < weightDiffs.Count();i++)
 
 以下の表は、出力がどのようになるかを示しています。
 
-|元 | 再トレーニング済み | 相違点 |
+|変更元 | 再トレーニング済み | 相違点 |
 |---|---|---|
 | 33039.86 | 56293.76 | -23253.9 |
 | 29099.14 | 49586.03 | -20486.89 |

@@ -3,10 +3,10 @@ title: Web API を使用したマイクロサービス アプリケーション 
 description: Web API アプリケーション レイヤーでの依存関係の挿入、メディエーター パターン、およびそれらの実装の詳細について理解します。
 ms.date: 01/30/2020
 ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502444"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する

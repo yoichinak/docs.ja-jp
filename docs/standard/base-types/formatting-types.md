@@ -26,10 +26,10 @@ helpviewer_keywords:
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75348253"
 ---
 # <a name="format-types-in-net"></a>.NET での型の書式設定

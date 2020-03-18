@@ -6,10 +6,10 @@ helpviewer_keywords:
 - .NET Framework, configuring apps
 ms.assetid: 63c6b9a8-0088-4077-9aa3-521ab7290f79
 ms.openlocfilehash: 586f39fc9b50dcd45bb959ebd0063e3c38d9c3ed
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716247"
 ---
 # <a name="how-to-configure-an-app-to-support-net-framework-4-or-later-versions"></a>方法: .NET Framework 4 以降のバージョンをサポートするアプリを構成する

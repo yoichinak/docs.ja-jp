@@ -5,10 +5,10 @@ ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: c5308530831fa288bf637849c1342f51769c3ad4
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77503961"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>チュートリアル: .NET for Apache Spark アプリケーションを Databricks にデプロイする

@@ -3,11 +3,11 @@ title: バージョン管理および .NET ライブラリ
 description: .NET ライブラリのバージョン管理に関するベスト プラクティスの推奨事項。
 ms.date: 12/10/2018
 ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745029"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398497"
 ---
 # <a name="versioning"></a>バージョン管理
 

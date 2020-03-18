@@ -3,10 +3,10 @@ title: 'チュートリアル: .NET Core グローバル ツールをインス�
 description: .NET ツールをグローバル ツールとしてインストールして使用する方法について説明します。
 ms.date: 02/12/2020
 ms.openlocfilehash: 9f8378e50fd2544eedbbaaeffb89d67800ec6880
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156739"
 ---
 # <a name="tutorial-install-and-use-a-net-core-global-tool-using-the-net-core-cli"></a>チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する

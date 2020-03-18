@@ -3,10 +3,10 @@ title: ログとトレース - .NET Core
 description: .NET Core のログとトレースの概要について説明します。
 ms.date: 08/05/2019
 ms.openlocfilehash: 392b88c9ea3c31c919a605ac0a5c886f7d63f79a
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75714423"
 ---
 # <a name="net-core-logging-and-tracing"></a>.NET Core のログとトレース
@@ -85,9 +85,9 @@ ms.locfileid: "75714423"
 
 ## <a name="logging-related-references"></a>ログ関連の参照
 
-- [方法: トレースとデバッグを指定して条件付きコンパイルを実行する](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [方法 : トレースとデバッグを指定して条件付きコンパイルを実行する](../../framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
 
-- [方法: アプリケーション コードにトレース ステートメントを追加する](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [方法 : アプリケーション コードにトレース ステートメントを追加する](../../framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 
 - [ASP.NET のログ記録](/aspnet/core/fundamentals/logging)に関する記事では、サポートしているログ記録技法の概要を示しています。
 

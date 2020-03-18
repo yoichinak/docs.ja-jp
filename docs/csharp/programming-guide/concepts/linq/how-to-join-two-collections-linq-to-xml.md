@@ -3,10 +3,10 @@ title: 2 つのコレクションを結合する方法 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 7b817ede-911a-4cff-9dd3-639c3fc228c9
 ms.openlocfilehash: a5044778bbfd9529faf5fe63c72076f6a973c815
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75345857"
 ---
 # <a name="how-to-join-two-collections-linq-to-xml-c"></a>2 つのコレクションを結合する方法 (LINQ to XML) (C#)
@@ -29,9 +29,9 @@ XML ドキュメント内の要素または属性は、別の要素または属�
 
 このクエリでは、まずすべての `Customer` 要素を取得し、次にそれらを `Order` 要素に結合します。 クエリでは、"K" より大きい `CustomerID` を持つ顧客の注文のみを選択します。 次に、各注文内に顧客情報を含む新しい `Order` 要素を射影します。
 
-この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」。
+この例では、「[サンプル XML ファイル: 顧客と注文 (LINQ to XML)](./sample-xml-file-customers-and-orders-linq-to-xml-2.md)」の XML ドキュメントを使用します。
 
-この例では、XSD スキーマ、[サンプル XSD ファイル: 顧客と注文](./sample-xsd-file-customers-and-orders1.md)を使用します。
+この例では、「[サンプル XSD ファイル: 顧客と注文](./sample-xsd-file-customers-and-orders1.md)」の XSD スキーマを使用します。
 
 この方式の結合ではパフォーマンスが低下します。 結合は線形探索によって実行されます。 パフォーマンスを向上させるハッシュ テーブルまたはインデックスはありません。
 

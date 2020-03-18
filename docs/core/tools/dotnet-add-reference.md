@@ -3,10 +3,10 @@ title: dotnet add reference コマンド
 description: dotnet add 参照コマンドは、プロジェクト間参照を追加する便利なオプションを提供します。
 ms.date: 02/14/2020
 ms.openlocfilehash: 84ea25e94efc8d84aebfeccf62c30a64551c5019
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77503785"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
@@ -17,7 +17,7 @@ ms.locfileid: "77503785"
 [!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
 -->
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet add reference` - プロジェクト間 (P2P) 参照を追加します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "77503785"
 
 `dotnet add [<PROJECT>] reference [-f|--framework] <PROJECT_REFERENCES> [-h|--help] [--interactive]`
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet add reference` コマンドは、プロジェクトにプロジェクト参照を追加する便利なオプションを提供します。 このコマンドを実行すると、`<ProjectReference>` 要素がプロジェクト ファイルに追加されます。
 
@@ -61,7 +61,7 @@ ms.locfileid: "77503785"
 
   コマンドを停止して、ユーザーの入力または操作のために待機させることができます (たとえば、認証を完了する場合)。 .NET Core 3.0 SDK 以降で使用できます。
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - プロジェクト参照を追加する:
 

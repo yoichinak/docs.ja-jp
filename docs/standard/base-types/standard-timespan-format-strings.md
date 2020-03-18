@@ -18,10 +18,10 @@ helpviewer_keywords:
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
 ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75346628"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 書式指定文字列

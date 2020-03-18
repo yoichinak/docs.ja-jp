@@ -13,10 +13,10 @@ helpviewer_keywords:
 - I/O [.NET Framework], reading text from files
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 ms.openlocfilehash: 8676e5f0acd0646b4854df7dde060ec15548ec3e
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78155725"
 ---
 # <a name="how-to-read-text-from-a-file"></a>方法: ファイルのテキストの読み取り

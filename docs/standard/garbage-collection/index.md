@@ -19,10 +19,10 @@ helpviewer_keywords:
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
 ms.openlocfilehash: 846df5ecb1e681e8d0440e627586a681bf071efa
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160145"
 ---
 # <a name="garbage-collection"></a>ガベージ コレクション
@@ -31,7 +31,7 @@ ms.locfileid: "78160145"
 <a name="related_topics"></a>
 ## <a name="related-topics"></a>関連トピック  
   
-|Title|説明|  
+|タイトル|[説明]|  
 |-----------|-----------------|  
 |[ガベージ コレクションの基礎](../../../docs/standard/garbage-collection/fundamentals.md)|ガベージ コレクションの動作、マネージド ヒープに対するオブジェクトの割り当て方法、およびその他の主要な概念について説明します。|  
 |[ガベージ コレクションとパフォーマンス](../../../docs/standard/garbage-collection/performance.md)|ガベージ コレクションとパフォーマンスの問題を診断するために使用できるパフォーマンス チェックについて説明します。|  
@@ -42,7 +42,7 @@ ms.locfileid: "78160145"
 |[アプリケーション ドメインのリソース監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)|アプリケーション ドメインによる CPU とメモリの使用状況を監視する方法について説明します。|  
 |[弱い参照](../../../docs/standard/garbage-collection/weak-references.md)|アプリケーションからオブジェクトへのアクセスを許容したまま、そのオブジェクトをガベージ コレクターが収集できるようにする機能について説明します。|  
   
-## <a name="reference"></a>関連項目  
+## <a name="reference"></a>リファレンス  
  <xref:System.GC?displayProperty=nameWithType>  
   
  <xref:System.GCCollectionMode?displayProperty=nameWithType>  
@@ -59,6 +59,6 @@ ms.locfileid: "78160145"
   
  <xref:System.IDisposable?displayProperty=nameWithType>  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [アンマネージ リソースのクリーンアップ](../../../docs/standard/garbage-collection/unmanaged.md)

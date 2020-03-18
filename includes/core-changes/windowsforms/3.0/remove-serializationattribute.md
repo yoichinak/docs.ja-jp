@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d48ced9d0201a33f9149aba155ddd3d8bc04c93f
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74643851"
 ---
 ### <a name="serializableattribute-removed-from-some-windows-forms-types"></a>SerializableAttribute が一部の Windows フォーム型から削除された
@@ -34,7 +34,7 @@ ms.locfileid: "74643851"
 
 3.0 Preview 9
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 これらの型に依存する可能性のあるすべてのコードを、シリアル化可能としてマークするように更新します。
 

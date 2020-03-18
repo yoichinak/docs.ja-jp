@@ -9,10 +9,10 @@ helpviewer_keywords:
 - thread-safe collections, blocking dictionary
 ms.assetid: 38f2f3d8-15e5-4bf4-9c83-2b5b6f22bad1
 ms.openlocfilehash: 3f4270d2ec71421bad8974a3e5cd8f1d65db3b74
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711299"
 ---
 # <a name="how-to-add-and-take-items-individually-from-a-blockingcollection"></a>方法: BlockingCollection の項目を個別に追加および取得する
@@ -27,12 +27,12 @@ ms.locfileid: "75711299"
  [!code-vb[CDS_BlockingCollection#01](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/simpleblocking.vb#01)]  
   
 ## <a name="example"></a>例  
- この 2 番目の例では、操作をブロックしないように、項目を追加および取得する方法を示します。 項目が存在しない場合、サイズ制限のあるコレクションの最大容量に達した場合、またはタイムアウト期間が経過した場合、<xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> または <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 操作は false を返します。 これによりスレッドはしばらくの間、他の何らかの有益な処理を行い、後からもう一度新しいアイテムを取得するか、以前に追加できなかった項目を追加しようとします。 このプログラムはまた、 <xref:System.Collections.Concurrent.BlockingCollection%601>へのアクセス時にキャンセルを実装する方法も示しています。  
+ この 2 番目の例では、操作をブロックしないように、項目を追加および取得する方法を示します。 項目が存在しない場合、サイズ制限のあるコレクションの最大容量に達した場合、またはタイムアウト期間が経過した場合、<xref:System.Collections.Concurrent.BlockingCollection%601.TryAdd%2A> または <xref:System.Collections.Concurrent.BlockingCollection%601.TryTake%2A> 操作は false を返します。 これによりスレッドはしばらくの間、他の何らかの有益な処理を行い、後からもう一度新しいアイテムを取得するか、以前に追加できなかった項目を追加しようとします。 このプログラムはまた、<xref:System.Collections.Concurrent.BlockingCollection%601> へのアクセス時にキャンセルを実装する方法も示しています。  
   
  [!code-csharp[CDS_BlockingCollection#02](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds_blockingcollection/cs/example02.cs#02)]
  [!code-vb[CDS_BlockingCollection#02](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_blockingcollection/vb/nonblockingbc.vb#02)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [BlockingCollection の概要](../../../../docs/standard/collections/thread-safe/blockingcollection-overview.md)

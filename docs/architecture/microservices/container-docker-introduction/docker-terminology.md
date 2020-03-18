@@ -3,10 +3,10 @@ title: Docker に関する用語
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Docker 用語
 ms.date: 01/30/2020
 ms.openlocfilehash: 5ffc7e791df8cbc999c6ababf62670bae46e1d5e
-ms.sourcegitcommit: f38e527623883b92010cf4760246203073e12898
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77502840"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語

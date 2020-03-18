@@ -4,10 +4,10 @@ titleSuffix: ''
 description: .NET Framework から .NET Core への破壊的変更を一覧表示します。
 ms.date: 12/18/2019
 ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "77449403"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移行の破壊的変更
@@ -128,7 +128,7 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 
 ***
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Core で常に例外をスローする API](unsupported-apis.md)
 - [.NET Core で使用できない .NET Framework テクノロジ](../porting/net-framework-tech-unavailable.md)

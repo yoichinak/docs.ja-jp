@@ -3,10 +3,10 @@ title: 区切りファイルのフィールドの順序を変更する方法 (LI
 ms.date: 07/20/2015
 ms.assetid: 4e62d82c-61b7-4f18-b9a1-86723746d7d2
 ms.openlocfilehash: 6bc502ff12a908edf43f9ff7f5f63f98c3ff29c4
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75347654"
 ---
 # <a name="how-to-reorder-the-fields-of-a-delimited-file-linq-c"></a>区切りファイルのフィールドの順序を変更する方法 (LINQ) (C#)
@@ -78,7 +78,7 @@ class CSVFiles
 ## <a name="compiling-the-code"></a>コードのコンパイル  
 System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [LINQ と文字列 (C#)](./linq-and-strings.md)
 - [LINQ とファイル ディレクトリ (C#)](./linq-and-file-directories.md)

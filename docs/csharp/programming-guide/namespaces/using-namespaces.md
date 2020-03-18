@@ -8,10 +8,10 @@ helpviewer_keywords:
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
 ms.openlocfilehash: 5193fc7aaae83cbc0c75e81835244eaaaece69a5
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700199"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>名前空間の使用 (C# プログラミング ガイド)
@@ -30,7 +30,7 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
  [!code-csharp[csProgGuide#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#31)]  
   
- これは次のコードの代わりに使用します。  
+ 次の表記の代わりに、  
   
  [!code-csharp[csProgGuide#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuide/CS/progGuide.cs#30)]  
   
@@ -90,9 +90,9 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
  このコードは動作しますが、`Alias` という名前の型が後で導入された場合、`Alias.` は代わりにその型にバインドされます。 `Alias::Exception` を使用すれば、`Alias` は名前空間エイリアスとして扱われ、型と間違われることがなくなります。  
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [名前空間](./index.md)
 - [演算子 .](../../language-reference/operators/member-access-operators.md#member-access-operator-)
 - [:: 演算子](../../language-reference/operators/namespace-alias-qualifier.md)

@@ -3,17 +3,17 @@ title: dotnet new コマンド
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
 ms.date: 02/13/2020
 ms.openlocfilehash: d3c609419596b123f5bfb3ca85cf292a61154a70
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157220"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398029"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
 **この記事の対象:** ✔️ .NET Core 2.0 SDK 以降のバージョン
 
-## <a name="name"></a>名前
+## <a name="name"></a>name
 
 `dotnet new` - 指定したテンプレートに基づいて、新しいプロジェクト、構成ファイル、またはソリューションを作成します。
 
@@ -26,7 +26,7 @@ dotnet new <TEMPLATE> [-l|--list] [--type]
 dotnet new [-h|--help]
 ```
 
-## <a name="description"></a>説明
+## <a name="description"></a>[説明]
 
 `dotnet new` コマンドは、テンプレートに基づいて、.NET Core プロジェクトまたはその他の成果物を作成します。
 
@@ -49,8 +49,8 @@ dotnet new [-h|--help]
 
 | テンプレート                                    | 短い名前                      | 言語     | Tags                                  | 導入時期 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
-| コンソール アプリケーション                          | [console](#console)             | [C#], F#, VB | Common/Console                        | 1        |
-| クラス ライブラリ                                | [classlib](#classlib)           | [C#], F#, VB | Common/Library                        | 1        |
+| コンソール アプリケーション                          | [console](#console)             | [C#], F#, VB | Common/Console                        | 1.0        |
+| クラス ライブラリ                                | [classlib](#classlib)           | [C#], F#, VB | Common/Library                        | 1.0        |
 | WPF アプリケーション                              | [wpf](#wpf)                     | [C#]         | Common/WPF                            | 3.0        |
 | WPF クラス ライブラリ                            | [wpflib](#wpf)                  | [C#]         | Common/WPF                            | 3.0        |
 | WPF カスタム コントロール ライブラリ                   | [wpfcustomcontrollib](#wpf)     | [C#]         | Common/WPF                            | 3.0        |
@@ -58,31 +58,31 @@ dotnet new [-h|--help]
 | Windows フォーム (WinForms) アプリケーション         | [winforms](#winforms)           | [C#]         | Common/WinForms                       | 3.0        |
 | Windows フォーム (WinForms) クラス ライブラリ       | [winformslib](#winforms)        | [C#]         | Common/WinForms                       | 3.0        |
 | Worker Service                               | [worker](#web-others)           | [C#]         | Common/Worker/Web                     | 3.0        |
-| 単体テスト プロジェクト                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1        |
+| 単体テスト プロジェクト                            | [mstest](#test)                 | [C#], F#, VB | Test/MSTest                           | 1.0        |
 | NUnit 3 テスト プロジェクト                         | [nunit](#nunit)                  | [C#], F#, VB | Test/NUnit                            | 2.1.400    |
 | NUnit 3 テスト項目                            | `nunit-test`                    | [C#], F#, VB | Test/NUnit                            | 2.2        |
-| xUnit テスト プロジェクト                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1        |
+| xUnit テスト プロジェクト                           | [xunit](#test)                  | [C#], F#, VB | Test/xUnit                            | 1.0        |
 | Razor コンポーネント                              | `razorcomponent`                | [C#]         | Web/ASP.NET                           | 3.0        |
 | Razor ページ                                   | [page](#page)                   | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor サーバー アプリ                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
-| ASP.NET Core 空                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1        |
-| ASP.NET Core Web アプリ (モデル ビュー コントローラー) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1        |
+| ASP.NET Core 空                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1.0        |
+| ASP.NET Core Web アプリ (モデル ビュー コントローラー) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1.0        |
 | ASP.NET Core Web アプリ                         | [webapp、razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2、2.0   |
 | Angular 付きの ASP.NET Core                    | [angular](#spa)                 | [C#]         | Web/MVC/SPA                           | 2.0        |
 | React.js 付きの ASP.NET Core                   | [react](#spa)                   | [C#]         | Web/MVC/SPA                           | 2.0        |
 | React.js および Redux 付きの ASP.NET Core         | [reactredux](#reactredux)       | [C#]         | Web/MVC/SPA                           | 2.0        |
 | Razor クラス ライブラリ                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor Class Library | 2.1        |
-| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1        |
+| ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1.0        |
 | ASP.NET Core gRPC サービス                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
 | プロトコル バッファー ファイル                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
-| dotnet gitignore ファイル                        | `gitignore`                     |              | 構成                                | 3.0        |
-| global.json file                             | [globaljson](#globaljson)       |              | 構成                                | 2.0        |
-| NuGet 構成                                 | `nugetconfig`                   |              | 構成                                | 1        |
-| dotnet ローカル ツール マニフェスト ファイル              | `tool-manifest`                 |              | 構成                                | 3.0        |
-| Web 構成                                   | `webconfig`                     |              | 構成                                | 1        |
-| ソリューション ファイル                                | `sln`                           |              | ソリューション                              | 1        |
+| dotnet gitignore ファイル                        | `gitignore`                     |              | Config                                | 3.0        |
+| global.json file                             | [globaljson](#globaljson)       |              | Config                                | 2.0        |
+| NuGet 構成                                 | `nugetconfig`                   |              | Config                                | 1.0        |
+| dotnet ローカル ツール マニフェスト ファイル              | `tool-manifest`                 |              | Config                                | 3.0        |
+| Web 構成                                   | `webconfig`                     |              | Config                                | 1.0        |
+| ソリューション ファイル                                | `sln`                           |              | 解決策:                              | 1.0        |
 
 ## <a name="options"></a>オプション
 
@@ -96,7 +96,7 @@ dotnet new [-h|--help]
 
 - **`-h|--help`**
 
-  コマンドのヘルプを印刷します。 `dotnet new` コマンド自体、または任意のテンプレートに対して呼び出すことができます。 たとえば、`dotnet new mvc --help` のようにします。
+  コマンドのヘルプを印刷します。 `dotnet new` コマンド自体、または任意のテンプレートに対して呼び出すことができます。 たとえば、「 `dotnet new mvc --help` 」のように入力します。
 
 - **`-i|--install <PATH|NUGET_ID>`**
 
@@ -115,7 +115,7 @@ dotnet new [-h|--help]
   作成するテンプレートの言語。 使用できる言語は、テンプレートによって異なります ([引数](#arguments)の既定値を参照してください)。 一部のテンプレートでは無効です。
 
   > [!NOTE]
-  > 一部のシェルは `#` を特殊文字として解釈します。 そのような場合は、言語パラメーター値を引用符で囲みます。 たとえば、`dotnet new console -lang "F#"` のようにします。
+  > 一部のシェルは `#` を特殊文字として解釈します。 そのような場合は、言語パラメーター値を引用符で囲みます。 たとえば、「 `dotnet new console -lang "F#"` 」のように入力します。
 
 - **`-n|--name <OUTPUT_NAME>`**
 
@@ -155,7 +155,7 @@ dotnet new [-h|--help]
 
 プロジェクト テンプレートはそれぞれ、追加のオプションが与えられている場合があります。 コア テンプレートの場合、次のオプションが追加されています。
 
-### <a name="console"></a>コンソール
+### <a name="console"></a>console
 
 - **`-f|--framework <FRAMEWORK>`**
 
@@ -318,7 +318,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  使う認証の種類。 次の値を指定できます。
+  使う認証の種類。 指定できる値は、
 
   - `None` - 認証は行われません (既定)。
   - `Individual` - 個別認証です。
@@ -417,7 +417,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  使う認証の種類。 次の値を指定できます。
+  使う認証の種類。 指定できる値は、
 
   - `None` - 認証は行われません (既定)。
   - `Individual` - 個別認証です。
@@ -505,7 +505,7 @@ dotnet new [-h|--help]
 
   使う認証の種類。 .NET Core 3.0 SDK 以降で使用できます。
   
-  次の値を指定できます。
+  指定できる値は、
 
   - `None` - 認証は行われません (既定)。
   - `Individual` - 個別認証です。
@@ -584,7 +584,7 @@ dotnet new [-h|--help]
 
 - **`-au|--auth <AUTHENTICATION_TYPE>`**
 
-  使う認証の種類。 次の値を指定できます。
+  使う認証の種類。 指定できる値は、
 
   - `None` - 認証は行われません (既定)。
   - `IndividualB2C` - Azure AD B2C での個別認証。
@@ -657,7 +657,7 @@ dotnet new [-h|--help]
 
 ***
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 - テンプレート名を指定することによって、C# コンソール アプリケーション プロジェクトを作成します。
 
@@ -725,7 +725,7 @@ dotnet new [-h|--help]
   dotnet new globaljson --sdk-version 3.1.101
   ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [dotnet new のカスタム テンプレート](custom-templates.md)
 - [dotnet new のカスタム テンプレートを作成する](../tutorials/cli-templates-create-item-template.md)

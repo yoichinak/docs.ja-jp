@@ -13,10 +13,10 @@ helpviewer_keywords:
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
 ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789755"
 ---
 # <a name="list-c-programming-guide"></a>\<list> (C# プログラミング ガイド)
@@ -46,7 +46,7 @@ ms.locfileid: "76789755"
 
   行頭文字または番号付きリストの項目、または `term` の定義です。
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 \< > ブロックを使用して、テーブルまたは定義の一覧の見出し行を定義します。 テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。
 
@@ -60,7 +60,7 @@ ms.locfileid: "76789755"
 
 [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

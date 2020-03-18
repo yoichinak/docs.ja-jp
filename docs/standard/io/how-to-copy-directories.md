@@ -13,10 +13,10 @@ helpviewer_keywords:
 - directories [.NET Framework], copying
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 ms.openlocfilehash: 5d40db7f902dac8bd6bbdc1510be8e56a321be30
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78159456"
 ---
 # <a name="how-to-copy-directories"></a>方法: ディレクトリをコピーする

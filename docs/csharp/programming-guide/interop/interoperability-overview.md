@@ -9,10 +9,10 @@ helpviewer_keywords:
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
 ms.openlocfilehash: 2c9eb2a8e6c2db8dc06ebe48ca6eb37d5cf638e7
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75700732"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>相互運用性の概要 (C# プログラミング ガイド)
@@ -53,15 +53,15 @@ C# マネージド コードとアンマネージド コード間で相互運用
   
 2. COM タイプ ライブラリを生成し、COM の使用状況に登録します。  
   
-     Visual C# プロジェクト プロパティを変更して、C# アセンブリが COM 相互運用に自動的に登録されるようにできます。 Visual Studio は `/tlb` コマンド ライン スイッチを使用して [Regasm.exe (アセンブリ登録ツール)](../../../framework/tools/regasm-exe-assembly-registration-tool.md) を使用します。これにより、マネージド アセンブリが入力として取得され、タイプ ライブラリを生成できます。 タイプ ライブラリは、アセンブリ内の `public` 型を記述し、レジストリ エントリを追加することで、COM クライアントがマネージド クラスを作成できるようにします。  
+     Visual C# プロジェクト プロパティを変更して、C# アセンブリが COM 相互運用に自動的に登録されるようにできます。 Visual Studio は [ コマンド ライン スイッチを使用して ](../../../framework/tools/regasm-exe-assembly-registration-tool.md)Regasm.exe (アセンブリ登録ツール)`/tlb` を使用します。これにより、マネージド アセンブリが入力として取得され、タイプ ライブラリを生成できます。 タイプ ライブラリは、アセンブリ内の `public` 型を記述し、レジストリ エントリを追加することで、COM クライアントがマネージド クラスを作成できるようにします。  
   
  詳細については、「[COM への .NET Framework コンポーネントの公開](../../../framework/interop/exposing-dotnet-components-to-com.md)」と「[COM クラスの例](./example-com-class.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [相互運用パフォーマンスの向上](https://docs.microsoft.com/previous-versions/msp-n-p/ff647812%28v=pandp.10%29)
 - [COM と .NET の相互運用性の概要](/office/client-developer/outlook/pia/introduction-to-interoperability-between-com-and-net)
 - [COM 相互運用の概要 (Visual Basic)](../../../visual-basic/programming-guide/com-interop/introduction-to-com-interop.md)
 - [マネージド コードとアンマネージド コード間でのマーシャリング](../../../framework/interop/interop-marshaling.md)
 - [アンマネージ コードとの相互運用](../../../framework/interop/index.md)
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)

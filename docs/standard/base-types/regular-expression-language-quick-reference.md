@@ -15,10 +15,10 @@ helpviewer_keywords:
 - .NET Framework regular expressions, language elements
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 ms.openlocfilehash: 8acf0886215c2d31f949e38401c4705ac9e2aef5
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "77124313"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正規表現言語 - クイック リファレンス

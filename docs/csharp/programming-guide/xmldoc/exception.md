@@ -9,10 +9,10 @@ helpviewer_keywords:
 - exception C# XML tag
 ms.assetid: dd73aac5-3c74-4fcf-9498-f11bff3a2f3c
 ms.openlocfilehash: 14318ac0b0cdf781d0488eecaf934879017d91f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "76789805"
 ---
 # <a name="exception-c-programming-guide"></a>\<exception> (C# プログラミング ガイド)
@@ -35,7 +35,7 @@ ms.locfileid: "76789805"
 
   例外の説明。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 \<exception> タグを使用すると、スローできる例外を指定できます。 このタブは、メソッド、プロパティ、イベント、インデクサーの定義に適用できます。
 
@@ -47,7 +47,7 @@ ms.locfileid: "76789805"
 
 [!code-csharp[csProgGuideDocComments#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#4)]
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](recommended-tags-for-documentation-comments.md)

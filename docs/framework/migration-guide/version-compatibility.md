@@ -8,15 +8,15 @@ helpviewer_keywords:
 - .NET Framework versions, compatibility
 ms.assetid: 2f25e522-456a-48c3-8a53-e5f39275649f
 ms.openlocfilehash: e0de18b5a40875d1fec2633c16688111d8f4b9ee
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73974953"
 ---
 # <a name="version-compatibility-in-the-net-framework"></a>.NET Framework のバージョンの互換性
 
-下位互換とは、プラットフォームの特定のバージョンで開発されたアプリが、そのプラットフォームの新しいバージョンでも実行できることを意味します。 .NET Framework では、下位互換性が最大限に高められています。.NET Framework のあるバージョンで記述されたソース コードは、.NET Framework の新しいバージョンでコンパイルでき、.NET Framework のあるバージョンで実行されるバイナリは、新しいバージョンの .NET Framework でも同じように動作します。
+下位互換とは、プラットフォームの特定のバージョンで開発されたアプリが、そのプラットフォームの新しいバージョンでも実行できることを意味します。 .NET Framework では、下位互換性が最大限に高められています。 .NET Framework のあるバージョンで記述されたソース コードは、.NET Framework の新しいバージョンでコンパイルでき、.NET Framework のあるバージョンで実行されるバイナリは、新しいバージョンの .NET Framework でも同じように動作します。
 
 ## <a name="Apps"></a> アプリのバージョンの互換性
 
@@ -33,7 +33,7 @@ ms.locfileid: "73974953"
 </configuration>
 ```
 
-詳細については、[.NET Framework 4 以降のバージョンをサポートするアプリを構成する](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)」を参照してください。
+詳しくは、[.NET Framework 4 または 4.x をサポートするアプリの構成方法](../migration-guide/how-to-configure-an-app-to-support-net-framework-4-or-4-5.md)に関するページをご覧ください。
 
 ## <a name="version-compatibility-for-components"></a>コンポーネントのバージョンの互換性
 
@@ -67,9 +67,9 @@ ms.locfileid: "73974953"
 
 問題の適切な解決策が見つからない場合は、.NET Framework 4.5 (またはそのポイント リリースのいずれか) はバージョン 1.1、2.0、3.5 と side-by-side で実行でき、バージョン 4 に置き換わるインプレース更新であることを思い出してください。 Version 1.1、2.0、3.5 を対象とするアプリでは、適切なバージョンの .NET Framework を対象コンピューターにインストールして、アプリを最良の環境で実行できます。 side-by-side 実行について詳しくは、[side-by-side 実行](../deployment/side-by-side-execution.md)に関するページを参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [新機能](../whats-new/index.md)
+- [最新情報](../whats-new/index.md)
 - [クラス ライブラリ内にある旧版のもの](../whats-new/whats-obsolete.md)
 - [アプリケーションの互換性](../migration-guide/application-compatibility.md)
 - [.NET Framework の公式サポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-framework)

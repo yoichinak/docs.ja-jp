@@ -6,10 +6,10 @@ helpviewer_keywords:
 - reference equality [C#]
 ms.assetid: 91307fda-267b-4fd2-a338-2aada39ee791
 ms.openlocfilehash: 77ce2ef0ccf47d619134c120101ba2aa04f485e6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75699055"
 ---
 # <a name="how-to-test-for-reference-equality-identity-c-programming-guide"></a>参照の等価性 (同値) をテストする方法 (C# プログラミング ガイド)
@@ -26,6 +26,6 @@ ms.locfileid: "75699055"
   
  同じアセンブリ内の定数文字列は、常に、実行時にインターンされます。 つまり、一意のリテラル文字列ごとにそのインスタンスが 1 つだけ保持されます。 ただし、ランタイムは実行時に作成された文字列がインターンされることを保証しません。また、異なるアセンブリの 2 つの等しい定数文字列がインターンされることも保証しません。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [等価比較](./equality-comparisons.md)

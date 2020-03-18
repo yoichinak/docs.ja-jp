@@ -7,10 +7,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: 323a2390f079c17b81db01e4e3787916251943bf
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "78156557"
 ---
 # <a name="whats-new-in-net-core-31"></a>.NET Core 3.1 の新機能

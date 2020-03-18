@@ -2,12 +2,12 @@
 title: 大きな XML ドキュメントのストリーミング変換を実行する方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 5f16d1f8-5370-4b55-b0c8-e497df163037
-ms.openlocfilehash: 86b74534635dcca7e8c7f94873abcb50ea7c4d2b
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9eb2e832f798e550ef3b534b0c9a0e3416378b43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345823"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169105"
 ---
 # <a name="how-to-perform-streaming-transform-of-large-xml-documents-c"></a>大きな XML ドキュメントのストリーミング変換を実行する方法 (C#)
 大きな XML ファイルを変換して、アプリケーションのメモリ使用量を予想できるようにアプリケーションを作成しなければならない場合があります。 非常に大きな XML ファイルを XML ツリーに設定しようとすると、ファイルのサイズに比例してメモリが過剰に使用されます。 したがって、代わりにストリーミングの手法を使用する必要があります。  
@@ -28,7 +28,7 @@ ms.locfileid: "75345823"
  ソース ドキュメント Source.xml を次に示します。  
   
 ```xml  
-<?xml version="1.0" encoding="utf-8" ?>   
+<?xml version="1.0" encoding="utf-8" ?>
 <Root>  
   <Customer>  
     <Name>A. Datum Corporation</Name>  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
 ms.openlocfilehash: 3a70d2ae077552bab536e96367cab0fda1661310
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75712053"
 ---
 # <a name="interoperability-c-programming-guide"></a>相互運用性 (C# プログラミング ガイド)
@@ -32,7 +32,7 @@ ms.locfileid: "75712053"
  [プラットフォーム呼び出しを使用して WAV ファイルを再生する方法](./how-to-use-platform-invoke-to-play-a-wave-file.md)  
  プラットフォーム呼び出しサービスを使用して、Windows オペレーティング システム上の .wav サウンド ファイルを再生する方法について説明します。  
   
- [チュートリアル:Office プログラミング](./walkthrough-office-programming.md)  
+ [チュートリアル: Office のプログラミング](./walkthrough-office-programming.md)  
  Excel ブックと、ブックへのリンクを含む Word 文書を作成する方法を示します。  
   
  [COM クラスの例](./example-com-class.md)  
@@ -40,11 +40,11 @@ ms.locfileid: "75712053"
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の「[基本概念](~/_csharplang/spec/unsafe-code.md)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](~/_csharplang/spec/unsafe-code.md)」の「[基本概念](/dotnet/csharp/language-reference/language-specification/introduction)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A?displayProperty=nameWithType>
-- [C# プログラミング ガイド](../index.md)
+- [C# プログラミングガイド](../index.md)
 - [アンマネージ コードとの相互運用](../../../framework/interop/index.md)
-- [チュートリアル: Office プログラミング](./walkthrough-office-programming.md)
+- [チュートリアル: Office のプログラミング](./walkthrough-office-programming.md)

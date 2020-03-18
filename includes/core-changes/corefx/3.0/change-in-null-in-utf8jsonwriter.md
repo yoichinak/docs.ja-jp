@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7c39fe7ffd59fa7a5564bb45f32a6a2fbe0ddb33
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568196"
 ---
 ### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Utf8JsonWriter での `(string)null` のセマンティクスの変更
@@ -58,7 +58,7 @@ using (Utf8JsonWriter writer = new Utf8JsonWriter(stream))
 
 3.0 Preview 8
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 <xref:System.Text.Json.Utf8JsonWriter> クラスを使用してプロパティ名および値を作成する場合、次のようになります。
 

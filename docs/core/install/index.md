@@ -5,10 +5,10 @@ author: thraka
 ms.author: adegeo
 ms.date: 12/04/2019
 ms.openlocfilehash: 4a133393db28ac5c7fd2384c4b842483c7c30d6f
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74836993"
 ---
 # <a name="download-and-install-net-core"></a>.NET Core のダウンロードとインストール

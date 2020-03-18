@@ -4,12 +4,12 @@ description: C# 言語に対する最新の機能強化により、以前はア�
 ms.date: 10/23/2018
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: f590a338d35966e2cd3a507164057a49b8a5f6f8
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d4a7916b80e15c7f00fa0a7da213ed0593e0959d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346702"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78239977"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>安全で効率的な C# コードを記述する
 
@@ -154,7 +154,7 @@ public struct Point3D
 
 呼び出しサイトでは、`Origin` プロパティを `ref readonly` または値のどちらとして使用するかを、呼び出し元が選択します。
 
-[!code-csharp[AssignRefReadonly](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
+[!code-csharp[AssignRefReadonly](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#AssignRefReadonly "Assigning a ref readonly")]
 
 先のコードの最初の割り当てでは、`Origin` 定数のコピーが作成され、そのコピーが割り当てられます。 2 つ目は参照を割り当てます。 `readonly` 修飾子は変数の宣言の一部にする必要があります。 それが参照するものは変更できません。 変更を試みると、コンパイル時エラーが発生します。
 
@@ -180,7 +180,7 @@ public struct Point3D
 
 次のコードは、3D 空間の 2 点間の距離を計算するメソッドの例です。
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 引数は 2 つの構造で、それぞれに 3 つの倍精度浮動小数点型が含まれます。 倍精度浮動小数点型は 8 バイトです。そのため、各引数は 24 バイトになります。 `in` 修飾子を指定することで、コンピューターのアーキテクチャに基づき、4 バイトまたは 8 バイトの参照をそれらの引数に渡します。 サイズの差はわずかですが、アプリケーションにおいて、多くの異なる値を使用する短いループでこのメソッドを呼び出すと膨れあがります。
 
@@ -190,7 +190,7 @@ public struct Point3D
 
 `in` パラメーターのもう 1 つの機能として、`in` パラメーターへの引数にリテラル値または定数を使用できます。 また、`ref` パラメーターや `out` パラメーターとは異なり、呼び出しサイトで `in` 修飾子を適用する必要はありません。 次のコードは、`CalculateDistance` メソッドを呼び出す 2 つの例です。 最初のメソッドでは、参照で渡される 2 つのローカル変数が使用されます。 2 つ目のメソッドには、メソッド呼び出しの一部として作成される一時的な変数が含まれます。
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#UseInArgument "Specifying an In argument")]
 
 コンパイラでは、`in` 引数の読み取り専用の性質を強制する方法がいくつかあります。  まず、呼び出されたメソッドは `in` パラメーターに直接割り当てできません。 値が `struct` 型の場合、`in` パラメーターのどのフィールドにも直接割り当てできません。 また、`ref` または `out` 修飾子を使用するメソッドに、`in` パラメーターを渡すことはできません。
 これらの規則は、`in` パラメーターのすべてのフィールドに適用されます (ただし、フィールドが `struct` 型でパラメーターも `struct` 型の場合)。 実際、これらの規則は、メンバー アクセスのすべてのレベルで型が `structs` であれば、複数層のメンバー アクセスに適用されます。
@@ -204,11 +204,11 @@ public struct Point3D
 
 これらの規則は、既存のコードを読み取り専用の参照引数を使用するように更新するときに役立ちます。 呼び出されるメソッド内で、値渡しパラメーターを使用する任意のインスタンス メソッドを呼び出すことができます。 それらのインスタンスで、`in` パラメーターのコピーが作成されます。 コンパイラは `in` パラメーターに一時的な変数を作成できるため、`in` パラメーターに既定値を指定することもできます。 次のコードでは、2 つ目の点の既定値として原点 (点 0,0) を指定します。
 
-[!code-csharp[InArgumentDefault](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
+[!code-csharp[InArgumentDefault](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgumentDefault "Specifying defaults for an in parameter")]
 
 コンパイラに読み取り専用引数の参照渡しを強制するには、次のコードに示すように、呼び出しサイトで引数に `in` 修飾子を指定します。
 
-[!code-csharp[UseInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
+[!code-csharp[UseInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ExplicitInArgument "Specifying an In argument")]
 
 この動作により、パフォーマンスの向上が可能な大規模なコードベースで、徐々に `in` パラメーターを採用しやすくなります。 最初に、メソッド シグネチャに `in` 修飾子を追加します。 その後、呼び出しサイトで `in` 修飾子を追加し、`readonly struct` 型を作成して、コンパイラに他の場所で `in` パラメーターの防御用コピーを作成しないようにすることができます。
 
@@ -218,13 +218,13 @@ public struct Point3D
 
 上で説明した手法では、参照を返し、参照で値を渡すことにより、コピーを避ける方法が説明されています。 これらの手法は、引数の型が `readonly struct` 型として宣言されているときに最善の結果が得られます。 そうでない場合は、多くの状況において、引数の読み取り専用性を強制するために、コンパイラで**防御用コピー**を作成する必要があります。 原点からの 3D の点の距離を計算する以下の例について考えます。
 
-[!code-csharp[InArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
+[!code-csharp[InArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#InArgument "Specifying an in argument")]
 
 `Point3D` 構造体は、読み取り専用の構造体では "*ありません*"。 このメソッドの本体には、6 つの異なるプロパティ アクセス呼び出しがあります。 最初の調査では、これらのアクセスは安全であると思ったかもしれません。 いずれにしても、`get` アクセサーではオブジェクトの状態を変更すべきではありません。 しかし、それを強制する言語規則はありません。 それは、一般的な規則のみです。 すべての型で、内部状態を変更する `get` アクセサーを実装できます。 何らかの言語的保証がないと、メンバーを呼び出す前に、コンパイラで引数の一時コピーを作成する必要があります。 スタック上に一時的なストレージが作成され、引数の値が一時的なストレージにコピーされて、`this` 引数としての各メンバー アクセスに対して値がスタックにコピーされます。 多くの場合、これらのコピーによってパフォーマンスが悪影響を受けるので、引数の型が `readonly struct` ではない場合は、値渡しの方が、読み取り専用参照渡しより速くなります。
 
 代わりに、距離の計算で変更不可の構造体 `ReadonlyPoint3D` が使用されている場合は、一時オブジェクトは必要ありません。
 
-[!code-csharp[readonlyInArgument](../../samples/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
+[!code-csharp[readonlyInArgument](../../samples/snippets/csharp/safe-efficient-code/ref-readonly-struct/Program.cs#ReadOnlyInArgument "Specifying a readonly in argument")]
 
 コンパイラでは、`readonly struct` のメンバーの呼び出しに対してもっと効率的なコードが生成されます。`this` 参照は、レシーバーのコピーではなく、常に、メンバー メソッドに参照で渡される `in` パラメーターです。 この最適化によって、`in` 引数として `readonly struct` を使用するときのコピーが減ります。
 

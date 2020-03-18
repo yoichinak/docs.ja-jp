@@ -3,10 +3,10 @@ title: 量指定子操作 (C#)
 ms.date: 07/20/2015
 ms.assetid: 84ac2ac2-7a63-4581-bc4c-14e34be1493b
 ms.openlocfilehash: 5c931e0971a2ae7970415905be8772a64a82ee39
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635484"
 ---
 # <a name="quantifier-operations-c"></a>量指定子操作 (C#)
@@ -20,11 +20,11 @@ ms.locfileid: "75635484"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|説明|C# のクエリ式の構文|説明|  
+|メソッド名|[説明]|C# のクエリ式の構文|説明|  
 |-----------------|-----------------|---------------------------------|----------------------|  
-|すべて|シーケンス内のすべての要素が条件を満たしているかどうかを調べます。|該当なし。|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
-|どれでも可|シーケンス内のいずれかの要素が条件を満たしているかどうかを調べます。|該当なし。|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
-|内容|指定した要素がシーケンスに格納されているかどうかを調べます。|該当なし。|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
+|すべて|シーケンス内のすべての要素が条件を満たしているかどうかを調べます。|該当しない。|<xref:System.Linq.Enumerable.All%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.All%2A?displayProperty=nameWithType>|  
+|どれでも可|シーケンス内のいずれかの要素が条件を満たしているかどうかを調べます。|該当しない。|<xref:System.Linq.Enumerable.Any%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Any%2A?displayProperty=nameWithType>|  
+|次の値を含む|指定した要素がシーケンスに格納されているかどうかを調べます。|該当しない。|<xref:System.Linq.Enumerable.Contains%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Contains%2A?displayProperty=nameWithType>|  
 
 ## <a name="query-expression-syntax-examples"></a>クエリ式の構文例  
   
@@ -38,12 +38,12 @@ ms.locfileid: "75635484"
   
 [!code-csharp[Any](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Any)]  
   
-### <a name="contains"></a>内容  
+### <a name="contains"></a>次の値を含む  
 次の例では、`Contains` を使用して、配列に特定の要素が含まれることを確認します。  
   
 [!code-csharp[Contains](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQQuantifier/CS/Quantifier.cs#Contains)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)

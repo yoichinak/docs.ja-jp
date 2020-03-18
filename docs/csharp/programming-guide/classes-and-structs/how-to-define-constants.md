@@ -6,10 +6,10 @@ helpviewer_keywords:
 - constants [C#]
 ms.assetid: 43f511be-346c-4b8a-995e-aded94542ece
 ms.openlocfilehash: 15526655de8af6fed464376db1ac761468215210
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75337654"
 ---
 # <a name="how-to-define-constants-in-c"></a>C\# で定数を定義する方法
@@ -27,6 +27,6 @@ ms.locfileid: "75337654"
   
  クラス名修飾子を使用すると、定数を使用するユーザーは、それが定数であり、変更できないことがわかります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [クラスと構造体](./index.md)

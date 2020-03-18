@@ -14,10 +14,10 @@ helpviewer_keywords:
 - custom TimeSpan format strings
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 ms.openlocfilehash: a5963f9afe422206627a1baea47339ecb81becf0
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75348313"
 ---
 # <a name="custom-timespan-format-strings"></a>カスタム TimeSpan 書式指定文字列

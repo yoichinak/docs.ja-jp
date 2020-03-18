@@ -3,10 +3,10 @@ title: 開発環境またはテスト環境の RabbitMQ でイベント バス�
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 開発環境またはテスト環境の統合イベント向けに RabbitMQ でイベント バスのメッセージングを実装します。
 ms.date: 10/02/2018
 ms.openlocfilehash: ba1cea9384893955ae0743ac8d6a34c350224cd5
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74711198"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
@@ -112,7 +112,7 @@ Subscribe メソッドは IIntegrationEventHandler オブジェクト (現在の
 
 実稼働シナリオの場合は、以下の RabbitMQ に特化した追加のリソースと、「[マイクロサービス間でイベント ベースの通信を実装する](./integration-event-based-microservice-communications.md#additional-resources)」のセクションを確認してください。
 
-## <a name="additional-resources"></a>その他の技術情報
+## <a name="additional-resources"></a>その他のリソース
 
 RabbitMQ に対応した実稼働可能なソリューション。
 

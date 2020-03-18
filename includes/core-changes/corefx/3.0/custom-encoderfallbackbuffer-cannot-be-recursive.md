@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 58d1c8cd3aff52703522391c14348bd81c108587
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568123"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>カスタム EncoderFallbackBuffer インスタンスが再帰的にフォールバックしない
@@ -16,7 +16,7 @@ ms.locfileid: "74568123"
 
 それからランタイムはこれらの置換文字を、ターゲットのエンコードに変換しようとします。 この操作が成功する場合、ランタイムによって、元の入力文字列の中断した箇所からコード変換が継続されます。
 
-.NET Core Preview 7 以前では、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> をカスタム実装することにより、変換先のエンコードに変換できなかった文字シーケンスが返されました。 置換文字がターゲットのエンコードにコード変換できない場合、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> メソッドによって新しい置換のシーケンスが返されることを期待し、ランタイムによって置換文字列が使用されて <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドが再度呼び出されます。 この処理は、結果的に、ランタイムによって正しい形式の、変換可能な代替が確認されるまで、または最大再帰数に到達するまで、継続します。
+.NET Core Preview 7 以前では、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> をカスタム実装することにより、変換先のエンコードに変換できなかった文字シーケンスが返されました。 置換文字がターゲットのエンコードにコード変換できない場合、<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドによって新しい置換のシーケンスが返されることを期待し、ランタイムによって置換文字列が使用されて <xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> メソッドが再度呼び出されます。 この処理は、結果的に、ランタイムによって正しい形式の、変換可能な代替が確認されるまで、または最大再帰数に到達するまで、継続します。
 
 .NET Core 3.0 以降では、<xref:System.Text.EncoderFallbackBuffer.GetNextChar?displayProperty=nameWithType> をカスタム実装した場合、変換先のエンコードに変換できる文字シーケンスが返される必要があります。 置換文字がターゲットのエンコードにコード変換できない場合、<xref:System.ArgumentException> がスローされます。 ランタイムは、それ以上 <xref:System.Text.EncoderFallbackBuffer> インスタンスに対し、再帰呼び出しを実行しなくなります。
 
@@ -30,11 +30,11 @@ ms.locfileid: "74568123"
 
 3.0
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 ほとんどの開発者は、何も措置を講じる必要はありません。
 
-アプリケーションでカスタム <xref:System.Text.EncoderFallback> および <xref:System.Text.EncoderFallbackBuffer> クラスを使用している場合、<xref:System.Text.EncoderFallbackBuffer.Fallback%2A> メソッドがランタイムによって最初に呼び出されたときに、<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> を実装することで、ターゲットのエンコードに直接変換できる正しい形式の UTF-16 で、データがフォールバック バッファーに入力されるようにします。
+アプリケーションでカスタム <xref:System.Text.EncoderFallback> および <xref:System.Text.EncoderFallbackBuffer> クラスを使用している場合、<xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドがランタイムによって最初に呼び出されたときに、<xref:System.Text.EncoderFallbackBuffer.Fallback%2A> を実装することで、ターゲットのエンコードに直接変換できる正しい形式の UTF-16 で、データがフォールバック バッファーに入力されるようにします。
 
 #### <a name="category"></a>カテゴリ
 

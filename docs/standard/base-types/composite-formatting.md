@@ -14,11 +14,11 @@ helpviewer_keywords:
 - objects [.NET Framework], formatting multiple objects
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 ms.openlocfilehash: b1ec8cfc0f8c6e660d716c51bf3c3387b73a278f
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159313"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398479"
 ---
 # <a name="composite-formatting"></a>複合書式指定
 

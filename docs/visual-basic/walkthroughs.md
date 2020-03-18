@@ -9,10 +9,10 @@ helpviewer_keywords:
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
 ms.openlocfilehash: 76f9b428bc5f613296e24d893f49f124bb13c089
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75636043"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 言語のチュートリアル

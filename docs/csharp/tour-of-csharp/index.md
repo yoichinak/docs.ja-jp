@@ -2,12 +2,12 @@
 title: C# のツアー - C# ガイド
 description: C# を始めてお使いの方のために、 この言語の基本を説明します。
 ms.date: 02/26/2020
-ms.openlocfilehash: 69651d6233bfaf217366be3850f6b3d9c550d8e2
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: bf5a200f2ee777698ae8564f348ffc117d9abab0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159144"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79156845"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 言語のツアー
 
@@ -33,12 +33,12 @@ C# のプログラムとライブラリが互換性を保ちながら時間と�
 
 通常、C# のソース ファイルのファイル拡張子は `.cs` です。 このプログラムを作成するには、まず、[.NET Core SDK](https://dotnet.microsoft.com/download) をダウンロードしてインストールします。 次に、コマンド `dotnet new console -o hello` を実行して、新しいプログラムとビルド スクリプトを作成します。 プログラムとビルド スクリプトは、それぞれ `Program.cs` と `hello.csproj` のファイルにあります。 `run` コマンドでアプリケーションをビルドして実行します。
 
-```console
+```dotnetcli
 cd hello
 dotnet run
 ```
 
-このプログラムの出力は、次のようになります。 
+このプログラムの出力は、次のようになります。
 
 ```console
 Hello, World!

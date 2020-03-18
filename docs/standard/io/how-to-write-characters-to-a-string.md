@@ -12,10 +12,10 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
 ms.openlocfilehash: ecbfa2de2c21ff79df269f74eeddfa0738e7e25c
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160282"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>方法: 文字列への文字の書き込み

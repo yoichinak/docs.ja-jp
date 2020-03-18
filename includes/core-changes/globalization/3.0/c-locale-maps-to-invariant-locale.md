@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: d35de48dd22003c851cf5dba9e8517ec48b9217b
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74567779"
 ---
 ### <a name="c-locale-maps-to-the-invariant-locale"></a>"C" ロケールは、インバリアント ロケールにマップされます
@@ -20,7 +20,7 @@ en_US_POSIX では大文字と小文字を区別しない並べ替え/検索文�
 
 3.0
 
-### <a name="recommended-action"></a>推奨される操作
+### <a name="recommended-action"></a>推奨アクション
 
 この変更を認識する以外には特にありません。 この変更は、"C" ロケール マッピングを使用するアプリケーションにのみ影響します。
 

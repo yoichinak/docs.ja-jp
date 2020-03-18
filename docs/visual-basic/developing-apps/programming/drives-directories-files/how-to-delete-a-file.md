@@ -1,5 +1,5 @@
 ---
-title: '方法: ファイルを削除する'
+title: '方法 : ファイルを削除する'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
 ms.openlocfilehash: 57182f1a1d92b7fe954fd26b32c5e4b1107823ee
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "74348781"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>方法: Visual Basic でファイルを削除する
 
-`My.Computer.FileSystem` オブジェクトの `DeleteFile` メソッドを使用すると、ファイルを削除することができます。 削除したファイルを**ごみ箱**に送るかどうか、ファイルを削除することをユーザーに確認するかどうか、ユーザーが操作をキャンセルした場合の処理方法などが、オプションとして用意されています。  
+`DeleteFile` オブジェクトの `My.Computer.FileSystem` メソッドを使用すると、ファイルを削除することができます。 削除したファイルを**ごみ箱**に送るかどうか、ファイルを削除することをユーザーに確認するかどうか、ユーザーが操作をキャンセルした場合の処理方法などが、オプションとして用意されています。  
   
 ### <a name="to-delete-a-text-file"></a>テキスト ファイルを削除するには  
   
@@ -26,13 +26,13 @@ ms.locfileid: "74348781"
   
 ### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>テキスト ファイルを削除して、ユーザーがファイルを削除することを確認するには  
   
-- `showUI` を `AllDialogs` に設定し、`DeleteFile` メソッドを使用してファイルを削除します。 次のコードは、`test.txt` という名前のファイルを、ユーザーに削除するファイルを確認した上で削除する方法の例です。  
+- `DeleteFile` を `showUI` に設定し、`AllDialogs` メソッドを使用してファイルを削除します。 次のコードは、`test.txt` という名前のファイルを、ユーザーに削除するファイルを確認した上で削除する方法の例です。  
   
      [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
 ### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>テキスト ファイルを削除してごみ箱に送るには  
   
-- `recycle` パラメーターに `SendToRecycleBin` を指定し、`DeleteFile` メソッドを使用してファイルを削除します。 次のコードは、`test.txt` という名前のファイルを削除して**ごみ箱**に送る方法の例です。  
+- `DeleteFile` パラメーターに `SendToRecycleBin` を指定し、`recycle` メソッドを使用してファイルを削除します。 次のコードは、`test.txt` という名前のファイルを削除して**ごみ箱**に送る方法の例です。  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   
@@ -60,7 +60,7 @@ ms.locfileid: "74348781"
   
 - ユーザーが操作を取り消し、`onUserCancel` が `ThrowException` に設定されている (<xref:System.OperationCanceledException>)。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

@@ -3,10 +3,10 @@ title: 式ツリーを使用して動的クエリをビルドする方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 52cd44dd-a3ec-441e-b93a-4eca388119c7
 ms.openlocfilehash: 6114ec13dd43a7df146b87dda00fba06d6eb870c
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "75635900"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-c"></a>式ツリーを使用して動的クエリをビルドする方法 (C#)
@@ -24,7 +24,7 @@ LINQ では、<xref:System.Linq.IQueryable%601> を実装するデータ ソー�
           .OrderBy(company => company)
  ```
   
- クエリ全体を構成する式を表す式ツリーの作成には、<xref:System.Linq.Expressions> 名前空間のファクトリ メソッドが使われます。 標準クエリ演算子メソッドの呼び出しを表す式は、これらのメソッドの <xref:System.Linq.Queryable> の実装を参照します。 最終的な式ツリーが、`IQueryable` データ ソースのプロバイダーの <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 実装に渡されて、`IQueryable` 型の実行可能なクエリが作成されます。 結果は、そのクエリ変数を列挙することにより取得されます。  
+ クエリ全体を構成する式を表す式ツリーの作成には、<xref:System.Linq.Expressions> 名前空間のファクトリ メソッドが使われます。 標準クエリ演算子メソッドの呼び出しを表す式は、これらのメソッドの <xref:System.Linq.Queryable> の実装を参照します。 最終的な式ツリーが、<xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> データ ソースのプロバイダーの `IQueryable` 実装に渡されて、`IQueryable` 型の実行可能なクエリが作成されます。 結果は、そのクエリ変数を列挙することにより取得されます。  
   
 ```csharp  
 // Add a using directive for System.Linq.Expressions.  
@@ -105,7 +105,7 @@ foreach (string company in results)
   
 - System.Linq.Expressions 名前空間をインクルードします。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [式ツリー (C#)](./index.md)
 - [式ツリーを実行する方法 (C#)](./how-to-execute-expression-trees.md)

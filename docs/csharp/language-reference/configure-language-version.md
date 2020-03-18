@@ -2,16 +2,18 @@
 title: C# 言語のバージョン管理 - C# ガイド
 description: C# 言語のバージョンがプロジェクトに基づいて決定されるしくみとその選択の背後にある理由について説明します。 既定値を手動でオーバーライドする方法について説明します。
 ms.date: 02/21/2020
-ms.openlocfilehash: 2be76fdac471a7175b661d896b0da2910b3609f3
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77626765"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398233"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
 最新の C# コンパイラでは、プロジェクトのターゲット フレームワーク (1 つまたは複数) に基づいて既定の言語バージョンが決定されます。 Visual Studio には値を変更するための UI がありませんが、それは *csproj* ファイルを編集することで変更できます。 既定値を選択すれば、ターゲット フレームワークと互換性がある最新の言語バージョンが使用されます。 プロジェクトのターゲットと互換性がある最新の言語機能にアクセスできるという利点があります。 また、このように既定値を選択すると、ターゲット フレームワークで利用できない型や実行時動作を必要とする言語が使用されません。 既定値より新しい言語バージョンを選択すると、コンパイル時間や実行時エラーの診断が困難になることがあります。
+
+この記事の規則は、Visual Studio 2019 または .NET Core 3.0 SDK に付属するコンパイラに適用されます。 Visual Studio 2017 インストールまたは以前の .NET Core SDK バージョンに含まれる C# コンパイラは、既定で C# 7.0 を対象とします。
 
 C# 8.0 (以降) は .NET Core 3.x 以降のバージョンでのみサポートされています。 最新機能の多くには、.NET Core 3.x で導入されたライブラリとランタイムの機能が必要になります。
 

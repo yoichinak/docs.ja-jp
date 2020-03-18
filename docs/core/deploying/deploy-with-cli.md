@@ -8,11 +8,11 @@ dev_langs:
 - csharp
 - vb
 ms.openlocfilehash: f4c2a4ccf551c53e4aa4e125cb5720d6f1cc9601
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920909"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397993"
 ---
 # <a name="publish-net-core-apps-with-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core アプリを発行する
 
@@ -22,7 +22,7 @@ ms.locfileid: "76920909"
 
 CLI の使用方法について簡単にわかるヘルプをお探しですか。 次の表では、アプリの公開方法についての例を示します。 ターゲット フレームワークは、`-f <TFM>` パラメーターを使用するか、プロジェクト ファイルを編集して、指定することができます。 詳細については、「[公開の基礎](#publishing-basics)」をご覧ください。
 
-| 公開モード | SDK のバージョン | コマンド |
+| 公開モード | SDK バージョン | command |
 | ------------ | ----------- | ------- |
 | フレームワークに依存する展開 | 2.x | `dotnet publish -c Release` |
 | フレームワークに依存する実行可能ファイル | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
@@ -40,7 +40,7 @@ CLI の使用方法について簡単にわかるヘルプをお探しですか�
 
 複数のフレームワークをターゲットにしたい場合は、セミコロンで区切ることにより設定 `<TargetFrameworks>` で複数の TFM 値を設定できます。 `dotnet publish -f <TFM>` コマンドではフレームワークの 1 つを公開できます。 たとえば、`<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` と設定して `dotnet publish -f netcoreapp2.1` を実行すると、.NET Core 2.1 をターゲットとするバイナリが作成されます。
 
-他の値を設定しない限り、[`dotnet publish`](../tools/dotnet-publish.md) コマンドの出力ディレクトリは `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` です。 `-c` パラメーターで変更しない限り、**BUILD-CONFIGURATION** の既定のモードは **Debug** です。 たとえば、`dotnet publish -c Release -f netcoreapp2.1` と指定すると、`myfolder/bin/Release/netcoreapp2.1/publish/` に公開されます。
+他の値を設定しない限り、[`dotnet publish`](../tools/dotnet-publish.md) コマンドの出力ディレクトリは `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` です。 **パラメーターで変更しない限り、** BUILD-CONFIGURATION**の既定のモードは**Debug`-c` です。 たとえば、`dotnet publish -c Release -f netcoreapp2.1` と指定すると、`myfolder/bin/Release/netcoreapp2.1/publish/` に公開されます。
 
 .NET Core SDK 3.0 以降を使用する場合、.NET Core バージョン 2.1、2.2、3.0、またはそれ以降のバージョンをターゲットとするアプリの既定の公開モードは、フレームワークに依存する実行可能ファイルです。
 
@@ -107,7 +107,7 @@ End Module
 
 .NET Core SDK 2.x の CLI では、フレームワークに依存する展開 (FDD) が、基本的な `dotnet publish` コマンドの既定のモードです。
 
-FDD としてアプリを公開すると、`./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` フォルダーに`<PROJECT-NAME>.dll` ファイルが作成されます。 アプリを実行するには、出力フォルダーに移動して、`dotnet <PROJECT-NAME>.dll` コマンドを使用します。
+FDD としてアプリを公開すると、`<PROJECT-NAME>.dll` フォルダーに`./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` ファイルが作成されます。 アプリを実行するには、出力フォルダーに移動して、`dotnet <PROJECT-NAME>.dll` コマンドを使用します。
 
 アプリは、特定のバージョンの .NET Core をターゲットにするように構成されます。 アプリが実行されるすべてのマシンには、そのターゲットの .NET Core ランタイムが存在する必要があります。 たとえば、アプリのターゲットが .NET Core 2.2 である場合、アプリを実行するコンピューターには、.NET Core 2.2 ランタイムがインストールされている必要があります。 「[公開の基礎](#publishing-basics)」セクションで説明したように、プロジェクト ファイルを編集することで、既定のターゲット フレームワークを変更したり、複数のフレームワークをターゲットにしたりできます。
 
@@ -151,7 +151,7 @@ SCD の公開で作成されるアプリでは、使用可能な最新の .NET C
 > [!NOTE]
 > **グローバリゼーション インバリアント モード**を有効にすることで、展開の合計サイズを小さくすることができます。 このモードは、全世界を意識するものではなく、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の書式設定規則、大文字/小文字の区別規則、文字列比較、並べ替え順序を使用できるアプリケーションにとって便利です。 **グローバリゼーション インバリアント モード**の詳細と、それを有効にする方法については、「[.NET Core Globalization Invariant Mode](https://github.com/dotnet/runtime/blob/master/docs/design/features/globalization-invariant-mode.md)」(.NET Core のグローバリゼーション インバリアント モード) を参照してください。
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - [.NET Core アプリケーションの展開の概要](index.md)
 - [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)

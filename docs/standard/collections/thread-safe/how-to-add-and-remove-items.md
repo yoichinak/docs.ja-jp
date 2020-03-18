@@ -9,10 +9,10 @@ helpviewer_keywords:
 - thread-safe collections, concurrent dictionary
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 ms.openlocfilehash: dc4d13e09a91633fac1fcf5bd8ab5b043473bd7d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711312"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>方法: ConcurrentDictionary の項目を追加および削除する
@@ -20,7 +20,7 @@ ms.locfileid: "75711312"
   
  <xref:System.Collections.Concurrent.ConcurrentDictionary%602> では、コードが事前にキーの存在を調べなくてもデータを追加または削除できるようにする便利なメソッドが提供されています。 次の表では、これらのメソッドとそれを使用する状況を示します。  
   
-|メソッド|使用する状況|  
+|方法|使用する状況|  
 |------------|---------------|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>|指定したキーで新しい値を追加し、キーが既に存在する場合は値を置換します。|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|指定したキーの既存の値を取得し、キーが存在しない場合はキー/値ペアを指定します。|  
@@ -46,7 +46,7 @@ ms.locfileid: "75711312"
   
  したがって、<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> によって返されるデータが、スレッドの valueFactory によって作成された同じデータであることは保証されません。 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A> を呼び出したときも、同様の一連のイベントが発生する可能性があります。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [スレッドセーフなコレクション](../../../../docs/standard/collections/thread-safe/index.md)

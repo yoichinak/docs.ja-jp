@@ -17,10 +17,10 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 792aa8da-918b-458e-b154-9836b97735f3
 ms.openlocfilehash: cce01a7c87f6f20b5e6c46881b8c863bb5a72a88
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160068"
 ---
 # <a name="event-based-asynchronous-pattern-overview"></a>イベントベースの非同期パターンの概要
@@ -131,7 +131,7 @@ public class AsyncExample
   
  一部のクラスは、非同期操作の進行に応じて、インクリメンタル結果をレポートします。 これらの結果は <xref:System.ComponentModel.ProgressChangedEventArgs> から派生したクラス内に保存され、派生クラスのプロパティとして表示されます。 `ProgressChanged` イベントのイベント ハンドラーのこれらの結果へは、<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A> プロパティにアクセスするのと同じようにアクセスできます。 複数の非同期操作が保留中の場合は、<xref:System.ComponentModel.ProgressChangedEventArgs.UserState%2A> プロパティを使用して、どの操作がインクリメンタル結果をレポートしているのかを判別できます。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.BackgroundWorker>

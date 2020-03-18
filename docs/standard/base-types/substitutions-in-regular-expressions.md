@@ -14,10 +14,10 @@ helpviewer_keywords:
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
 ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "78160080"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正規表現での置換

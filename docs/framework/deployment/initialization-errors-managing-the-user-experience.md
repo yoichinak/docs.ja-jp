@@ -7,10 +7,10 @@ helpviewer_keywords:
 - .NET Framework, initialization errors
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 ms.openlocfilehash: 73a0ffd4a39b144a61bf559ac424414728fb9a3f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "75716447"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework の初期化エラー:ユーザー エクスペリエンスの管理
