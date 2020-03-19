@@ -1,5 +1,6 @@
 ---
 title: セキュリティと実行時のコード生成
+description: 信頼度の低いコードに代わってコードを生成する場合、特に呼び出し元がコード生成に影響を与える可能性がある場合は、セキュリティ上の問題になります。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 64ddcc6a379e5719eb734eede13e576a707696fe
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705887"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186793"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>セキュリティと実行時のコード生成
 ライブラリによっては、コードを生成し、それを実行することによって、呼び出し元のためになんらかの処理を行います。 基本的に問題となるのは、より低い信頼度のコードの代わりに生成し、そのコードをより高い信頼度で実行することです。 呼び出し側がコードの生成に影響を及ぼすと問題はさらに悪化するため、安全と考えられるコードだけが生成されることを確認してください。  

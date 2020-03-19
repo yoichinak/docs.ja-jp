@@ -13,11 +13,11 @@ helpviewer_keywords:
 - COM callable wrappers
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 ms.openlocfilehash: 6f2f4055a95dbcea8d7872b5c5fa3ccede8c2c8c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120727"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401173"
 ---
 # <a name="com-callable-wrapper"></a>COM 呼び出し可能ラッパー
 
@@ -47,9 +47,9 @@ CCW は、パブリックで COM から参照できるすべてのインター�
 
 マネージド環境でクラスによって明示的に実装されるインターフェイスを公開するだけでなく、.NET ランタイムは、オブジェクトの代わりに、次の表に一覧表示されている COM インターフェイスの実装を提供します。 .NET クラスは、これらのインターフェイスの独自の実装を提供することで、既定の動作をオーバーライドできます。 ただし、ランタイムは **IUnknown** と **IDispatch** インターフェイス実装を常に提供します。
 
-|Interface|説明|
+|インターフェイス|説明|
 |---------------|-----------------|
-|**IDispatch**|型への遅延バインディングのメカニズムを提供します。|
+|**Idispatch**|型への遅延バインディングのメカニズムを提供します。|
 |**IErrorInfo**|エラー、そのソース、ヘルプ ファイル、ヘルプ コンテキスト、およびエラーを定義したインターフェイスの GUID (.NET クラスでは常に **GUID_NULL**) に関する説明文を示します。|
 |**IProvideClassInfo**|マネージド クラスによって実装される **ITypeInfo** インターフェイスに COM クライアントがアクセスできるようにします。 COM からインポートされていない型については、.NET Core 上で `COR_E_NOTSUPPORTED` を返します。 |
 |**ISupportErrorInfo**|マネージド オブジェクトが **IErrorInfo** インターフェイスをサポートするかどうかを COM クライアントが判別できるようにします。 その場合は、クライアントが最新の例外オブジェクトへのポインターを取得できるようにします。 すべてのマネージド型は、**IErrorInfo** インターフェイスをサポートします。|
@@ -58,10 +58,10 @@ CCW は、パブリックで COM から参照できるすべてのインター�
 
  マネージド クラスは、次の表で説明されている COM インターフェイスを提供することもできます。
 
-|Interface|説明|
+|インターフェイス|説明|
 |---------------|-----------------|
-|(\_*classname*) クラス インターフェイス|マネージド オブジェクトで明示的に公開されている、すべてのパブリック インターフェイス、メソッド、プロパティ、およびフィールドを公開する、ランタイムによって公開され、明示的に定義されていない、インターフェイス、|
-|**IConnectionPoint** と **IConnectionPointContainer**|デリゲート ベースのソース イベント (イベント サブスクライバーを登録するためのインターフェイス) を供給するオブジェクトのインターフェイス。|
+|クラス\_*名*クラスインタフェース|マネージド オブジェクトで明示的に公開されている、すべてのパブリック インターフェイス、メソッド、プロパティ、およびフィールドを公開する、ランタイムによって公開され、明示的に定義されていない、インターフェイス、|
+|**I 接続ポイント**と**I 接続ポイントコンテナ**|デリゲート ベースのソース イベント (イベント サブスクライバーを登録するためのインターフェイス) を供給するオブジェクトのインターフェイス。|
 |**IDispatchEx** (.NET Framework のみ)|クラスが **IExpando** を実装する場合、ランタイムによって提供されているインターフェイス。 **IDispatchEx** インターフェイスは、**IDispatch** インターフェイスの拡張版で、**IDispatch** とは異なり、列挙、追加、削除、および大文字小文字を区別したメンバーの呼び出しが可能になります。|
 |**IEnumVARIANT**|クラスが **IEnumerable** を実装する場合、コレクション内のオブジェクトを列挙するコレクション型クラスのインターフェイス。|
 
@@ -198,5 +198,5 @@ public class LoanApp
 - [COM ラッパー](com-wrappers.md)
 - [COM への .NET Framework コンポーネントの公開](../../framework/interop/exposing-dotnet-components-to-com.md)
 - [COM への .NET Core コンポーネントの公開](../../core/native-interop/expose-components-to-com.md)
-- [要件 (相互運用のための .NET 型の)](qualify-net-types-for-interoperation.md)
+- [相互運用のための .NET 型の要件](qualify-net-types-for-interoperation.md)
 - [ランタイム呼び出し可能ラッパー](runtime-callable-wrapper.md)

@@ -1,5 +1,5 @@
 ---
-title: Cryptographic Services
+title: 暗号化サービス
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,20 +24,20 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: 66af8126ab61d37065b9a328d5e088ed7bf4cbef
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: c1783a578d0b55b0b62a1ffb870802faca97623f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709206"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79187013"
 ---
-# <a name="cryptographic-services"></a>Cryptographic Services
+# <a name="cryptographic-services"></a>暗号化サービス
 
 インターネットなどの公衆ネットワークには、エンティティ間の通信を保護する手段が用意されていません。 公衆ネットワークを経由した通信は、不当な第三者によって読み取られたり、さらには変更されたりするおそれがあります。 暗号化を使用すると、データが表示されないように保護し、データが変更されたかどうかを検出する方法を提供し、通常は安全でないチャネル上に安全な通信手段を確立できます。 たとえば、暗号化アルゴリズムを使用してデータを暗号化し、暗号化された状態で送信できます。送信先の相手は、後でこのデータを復号化できます。 暗号化されたデータを第三者が傍受したとしても、復号化するのは困難です。
 
 .NET Framework では、 <xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスが暗号化のさまざまな詳細事項を自動的に管理します。 アンマネージド Microsoft Cryptography API (CryptoAPI) 用のラッパーもあれば、純粋なマネージド実装もあります。 これらのクラスを使用するにあたって、暗号の専門家になる必要はありません。 いずれかの暗号化アルゴリズム クラスのインスタンスを新しく作成すると、使いやすいようにキーが自動生成されます。また、既定のプロパティは可能な限り安全に保たれます。
 
-この概要では、.NET Framework 3.5 で導入された ClickOnce マニフェスト、Suite B、Cryptography Next Generation (CNG) のサポートなど、.NET Framework によってサポートされる暗号化の方法と手法の概要を説明します。
+この概要では、.NET Framework で導入された ClickOnce マニフェスト、スイート B、および次世代暗号 (CNG) のサポートなど、.NET Framework でサポートされる暗号化方法と方法の概要について説明します。
 
 暗号化の詳細と、暗号によるセキュリティをアプリケーションに追加できる Microsoft のサービス、コンポーネント、およびツールの詳細については、このドキュメントの「セキュリティ」セクションで、Win32 および COM 開発に関するトピックを参照してください。
 
@@ -57,7 +57,7 @@ ms.locfileid: "75709206"
 
 これらの目標を達成するために、暗号プリミティブと呼ばれるアルゴリズムと手法の組み合わせを使用して暗号スキームを作成します。 暗号プリミティブとその用途の一覧を次の表に示します。
 
-|暗号プリミティブ|[使用]|
+|暗号プリミティブ|用途|
 |-----------------------------|---------|
 |共有キー暗号方式 (対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、単一の共有キーを使用してデータの暗号化と復号化が行われます。|
 |公開キー暗号方式 (非対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、公開キーと秘密キーのペアを使用してデータの暗号化と復号化が行われます。|
@@ -82,11 +82,11 @@ CBC 暗号によって暗号化されたデータを解読する 1 つの方法�
 
 共有キー暗号方式の弱点は、両者のキーと IV を一致させ、それぞれの値を転送しておく必要がある点です。 IV は秘密情報とは見なされないため、平文のメッセージで転送できます。 しかし、キーは承認されていないユーザーから保護する必要があります。 このような問題のため、共有キー暗号方式は公開キー暗号方式と併用されることがよくあります。公開キー暗号方式は、キーと IV の値を秘密に通信するために使用されます。
 
-安全でないチャネルを経由して Alice と Bob が通信しようとしている場合は、次のように共有キー暗号方式を使用することが考えられます。Alice と Bob は、特定の 1 つのアルゴリズム (たとえば AES) と、特定のキーおよび IV を使用することに合意します。 Alice はメッセージを作成し、メッセージの送信先となるネットワークストリーム (名前付きパイプやネットワーク電子メールなど) を作成します。 次に、キーと IV を使用してテキストを暗号化し、暗号化されたメッセージと IV をインターネット経由で Bob に送信します。 暗号化されたテキストを受信した Bob は、IV とあらかじめ決めてあるキーを使用して復号化を行います。 通信が傍受されたとしても、傍受した人にはキーがわからないため、元のメッセージが復元されることはありません。 このシナリオでは、秘密にしておく必要があるのはキーだけです。 実際のシナリオでは、Alice または Bob のどちらかが共有キーを生成し、公開キー (非対称) 暗号方式を使用して相手に共有 (対称) キーを転送することになります。 公開キー暗号方式の詳細については、次のセクションを参照してください。
+安全でないチャネルを経由して Alice と Bob が通信しようとしている場合は、次のように共有キー暗号方式を使用することが考えられます。Alice と Bob は、特定の 1 つのアルゴリズム (たとえば AES) と、特定のキーおよび IV を使用することに合意します。 Alice はメッセージを作成し、メッセージを送信するネットワーク ストリーム (名前付きパイプまたはネットワーク電子メール) を作成します。 次に、キーと IV を使用してテキストを暗号化し、暗号化されたメッセージと IV をインターネット経由で Bob に送信します。 暗号化されたテキストを受信した Bob は、IV とあらかじめ決めてあるキーを使用して復号化を行います。 送信がインターセプトされると、インターセプターはキーを認識していないため、元のメッセージを回復できません。 このシナリオでは、秘密にしておく必要があるのはキーだけです。 実際のシナリオでは、Alice または Bob のどちらかが共有キーを生成し、公開キー (非対称) 暗号方式を使用して相手に共有 (対称) キーを転送することになります。 公開キー暗号方式の詳細については、次のセクションを参照してください。
 
-.NET Framework には、共有キー暗号化アルゴリズムを実装する次のクラスが用意されています。
+.NET Framework には、秘密キー暗号化アルゴリズムを実装する次のクラスが用意されています。
 
-- <xref:System.Security.Cryptography.AesManaged> (.NET Framework 3.5 で導入)。
+- <xref:System.Security.Cryptography.AesManaged>(.NET Framework 3.5 で導入されました)。
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>.
 
@@ -167,7 +167,7 @@ Alice は、公開キー暗号方式を使用してメッセージにデジタ�
 
 - Alice はプレーンテキスト メッセージとハッシュしたメッセージ (デジタル署名) を Bob に送信します。 Bob はメッセージを受信してハッシュ値を計算し、算出したハッシュ値を Alice から受け取ったハッシュ値と比較します。 ハッシュ値が同一の場合、メッセージは変更されていません。 ハッシュ値が同一でない場合は、Alice がメッセージを作成した後でその内容が変更されています。
 
-  残念ながら、この方法では送信元の信頼性を保証できません。 どのユーザーでも Alice を偽装して Bob にメッセージを送信できます。 だれもが同じハッシュ アルゴリズムを使用してメッセージに署名できます。Bob が判断できるのは、メッセージがその署名と一致するかどうかだけです。 これは、一種の man-in-the-middle 攻撃です。 詳細については、「 [Cryptography Next Generation (CNG) セキュリティで保護された通信の例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))」を参照してください。
+  残念ながら、この方法では送信元の信頼性を保証できません。 どのユーザーでも Alice を偽装して Bob にメッセージを送信できます。 だれもが同じハッシュ アルゴリズムを使用してメッセージに署名できます。Bob が判断できるのは、メッセージがその署名と一致するかどうかだけです。 これは、一種の man-in-the-middle 攻撃です。 詳細については、「[次世代の暗号化 (CNG) セキュア通信の例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))」を参照してください。
 
 - Alice はセキュリティで保護されていないパブリック チャネルを使用して、Bob にプレーンテキスト メッセージを送信します。 そして、セキュリティで保護されたプライベート チャネルを使用して、Bob にハッシュしたメッセージを送信します。 Bob はプレーンテキスト メッセージを受信し、ハッシュを計算して、プライベートに交換したハッシュと比較します。 ハッシュが一致すると、Bob は次の 2 つのことを判断できます。
 
@@ -183,7 +183,7 @@ Alice は、公開キー暗号方式を使用してメッセージにデジタ�
 
 Alice のメッセージはプレーンテキストで送信されるため、前に説明した方法では、Alice のメッセージがだれかから読み取られないように防ぐことはできません。 セキュリティを完全にするには、一般に、デジタル署名 (メッセージ署名) と暗号化が必要です。
 
-.NET Framework には、ハッシュアルゴリズムを実装する次のクラスが用意されています。
+.NET Framework には、ハッシュ アルゴリズムを実装する次のクラスが用意されています。
 
 - <xref:System.Security.Cryptography.HMACSHA1>.
 
@@ -212,13 +212,13 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="random-number-generation"></a>乱数生成
 
-乱数生成は、多くの暗号化操作に欠かせない部分です。 たとえば、暗号キーはできるだけランダムにして、再現できないようにする必要があります。 暗号乱数ジェネレーターは、予測される確率が 50% よりも低い、計算上は不可能な出力を生成しなければなりません。 したがって、当て推量をされた場合でも予測できないような手段を使用する必要があります。 .NET Framework のクラスは、乱数ジェネレーターを使用して暗号化キーを生成します。
+乱数生成は、多くの暗号化操作に欠かせない部分です。 たとえば、暗号キーはできるだけランダムにして、再現できないようにする必要があります。 暗号乱数ジェネレーターは、予測される確率が 50% よりも低い、計算上は不可能な出力を生成しなければなりません。 したがって、当て推量をされた場合でも予測できないような手段を使用する必要があります。 .NET Framework のクラスは、暗号化キーを生成するために乱数ジェネレーターを使用します。
 
 乱数ジェネレーター アルゴリズムは、 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> クラスに実装されています。
 
 ## <a name="clickonce-manifests"></a>ClickOnce マニフェスト
 
-.NET Framework 3.5 では、次の暗号化クラスを使用して、 [ClickOnce テクノロジ](/visualstudio/deployment/clickonce-security-and-deployment)を使用して配置されたアプリケーションのマニフェスト署名に関する情報を取得および検証できます。
+NET Framework 3.5 では、次の暗号化クラスを使用して[、ClickOnce テクノロジ](/visualstudio/deployment/clickonce-security-and-deployment)を使用して配置されたアプリケーションのマニフェスト署名に関する情報を取得および検証できます。
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformation> クラスは、 <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> メソッド オーバーロードの使用時に、マニフェストの署名に関する情報を取得します。
 
@@ -238,7 +238,7 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="suite-b-support"></a>Suite B のサポート
 
-.NET Framework 3.5 は、国家安全機関 (NSA) によって発行された暗号化アルゴリズムの Suite B セットをサポートしています。 Suite B の詳細については、「 [NSA の Suite B 暗号化に関するファクト シート](https://www.nsa.gov/what-we-do/information-assurance/)」を参照してください。
+.NET Framework 3.5 は、国家安全保障局 (NSA) が発行する、スイート B の暗号化アルゴリズムセットをサポートしています。 Suite B の詳細については、「 [NSA の Suite B 暗号化に関するファクト シート](https://www.nsa.gov/what-we-do/information-assurance/)」を参照してください。
 
 次のアルゴリズムが含まれています。
 
@@ -254,7 +254,7 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="cryptography-next-generation-cng-classes"></a>CNG (Cryptography Next Generation) クラス
 
-CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラッパーが用意されています (CNG は CryptoAPI に代わるものです)。これらのクラスは、名前の一部として "Cng" を持ちます。 CNG ラッパー クラスの中心は、CNG キーのストレージと使用を抽象化する <xref:System.Security.Cryptography.CngKey> キー コンテナー クラスです。 このクラスにより、キー ペアまたは公開キーを安全に格納したり、単純な文字列名を使って参照したりすることが可能になります。 楕円曲線ベースの <xref:System.Security.Cryptography.ECDsaCng> 署名クラスおよび <xref:System.Security.Cryptography.ECDiffieHellmanCng> 暗号化クラスは、 <xref:System.Security.Cryptography.CngKey> オブジェクトを使用できます。
+CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラッパーが用意されています (CNG は CryptoAPI の代わりです。これらのクラスには、名前の一部として "Cng" があります。 CNG ラッパー クラスの中心は、CNG キーのストレージと使用を抽象化する <xref:System.Security.Cryptography.CngKey> キー コンテナー クラスです。 このクラスにより、キー ペアまたは公開キーを安全に格納したり、単純な文字列名を使って参照したりすることが可能になります。 楕円曲線ベースの <xref:System.Security.Cryptography.ECDsaCng> 署名クラスおよび <xref:System.Security.Cryptography.ECDiffieHellmanCng> 暗号化クラスは、 <xref:System.Security.Cryptography.CngKey> オブジェクトを使用できます。
 
 <xref:System.Security.Cryptography.CngKey> クラスは、キーを開く、作成する、削除する、エクスポートするなど、さまざまな補足的な操作に使用されます。 また、ネイティブ関数を直接呼び出すときに使用する、基になるキー ハンドルへのアクセスも提供します。
 
@@ -268,7 +268,7 @@ CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラ�
 
 ## <a name="related-topics"></a>関連トピック
 
-|[タイトル]|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[暗号モデル](../../../docs/standard/security/cryptography-model.md)|基底クラス ライブラリに暗号化がどのように実装されているかについて説明します。|
 |[チュートリアル: 暗号化アプリケーションの作成](../../../docs/standard/security/walkthrough-creating-a-cryptographic-application.md)|基本的な暗号化タスクと復号化タスクについて説明します。|

@@ -13,41 +13,41 @@ helpviewer_keywords:
 - generic type parameters
 ms.assetid: 87a4b0da-ed64-43b1-ac43-968576c444ce
 ms.openlocfilehash: 2c528348c0e84037a80df9797c56f03b51c73adc
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727788"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401239"
 ---
 # <a name="names-of-classes-structs-and-interfaces"></a>クラス、構造体、およびインターフェイスの名前
-次に示す名前付けのガイドラインは、一般的な型の名前付けに適用されます。
+次の命名規則は、一般的な型の命名に適用されます。
 
- ✔️は、文字の大文字と小文字の区別を使用して、名詞または名詞句でクラスと構造体に名前を付けます。
+ クラスや構造体に、PascalCasing を使用して、名詞または名詞句を使用して✔️します。
 
- これにより、動詞句を使用して名前が付けられたメソッドの型名が区別されます。
+ これにより、型名とメソッドが動詞句で指定されているのが区別されます。
 
- ✔️には、形容詞のフレーズを使用するか、名詞や名詞句を使用することもあります。
+ ✔️は、形容詞句、または名詞や名詞句を使用してインタフェースに名前を付けます。
 
- 名詞と名詞句を使用することはほとんどなく、型がインターフェイスではなく抽象クラスであることを示している可能性があります。
+ 名詞や名詞句はめったに使用されず、型がインターフェイスではなく抽象クラスであるべきであることを示している場合があります。
 
- ❌ は、クラス名にプレフィックスを付けません (例: "C")。
+ ❌クラス名にプレフィックス ("C"など) を付けないでください。
 
- ✔️派生クラスの名前を基底クラスの名前で終了することを検討してください。
+ ✔️ CONSIDER 基底クラスの名前で派生クラスの名前を終了します。
 
- これは非常に読みやすく、リレーションシップについて明確に説明しています。 このコードの例としては、`ArgumentOutOfRangeException`があります。これは `Exception`の一種であり、`SerializableAttribute`であり、`Attribute`です。 ただし、このガイドラインを適用するには、適切な判断を使用することが重要です。たとえば、`Button` クラスは `Control` イベントの一種ですが、名前に `Control` は表示されません。
+ これは非常に読みやすく、関係を明確に説明します。 コードの例としては`ArgumentOutOfRangeException`、`Exception`の一種である、 と`SerializableAttribute`の一種である`Attribute`、 が挙げられます。 しかし、このガイドラインを適用する際には、合理的な判断を下す必要があります。たとえば、`Button`クラスは一種の`Control`イベントですが`Control`、その名前には表示されません。
 
- 型がインターフェイスであることを示すには、インターフェイス名の前に I という文字を付ける✔️ます。
+ 型がインターフェイスであることを示すために、DO プレフィックスインターフェイス名を I という文字で✔️します。
 
- たとえば、`IComponent` (わかりやすい名詞)、`ICustomAttributeProvider` (名詞句)、および `IPersistable` (形容詞) は、適切なインターフェイス名です。 他の型名と同様に、省略形を避けます。
+ 例えば、(`IComponent`名詞)、(`ICustomAttributeProvider`名詞句)、および`IPersistable`(形容詞)は適切なインタフェース名である。 他の型名と同様に、省略形は避けてください。
 
- クラスがインターフェイスの標準実装であるクラスインターフェイスのペアを定義する場合は、名前がインターフェイス名の "I" プレフィックスによってのみ異なることを✔️してください。
+ ✔️は、クラスがインターフェイスの標準実装である class-interface ペアを定義する場合、インターフェイス名の "I" プレフィックスだけが名前を異なることを確認します。
 
 ## <a name="names-of-generic-type-parameters"></a>ジェネリック型パラメーターの名前
- ジェネリックが .NET Framework 2.0 に追加されました。 この機能では、*型パラメーター*と呼ばれる新しい種類の識別子が導入されました。
+ ジェネリックは .NET Framework 2.0 に追加されました。 この機能は、*型パラメーター*と呼ばれる新しい種類の識別子を導入しました。
 
- 1文字の名前が完全に記述されており、わかりやすい名前で値が追加されない場合を除き、ジェネリック型パラメーターにわかりやすい名前を付ける✔️ます。
+ ✔️は、単一文字の名前が完全にわかりやすい名前であり、わかりやすい名前が値を追加しない限り、ジェネリック型パラメーターにわかりやすい名前を付けます。
 
- ✔️1つの1文字の型パラメーターを持つ型の型パラメーター名として `T` を使用することを検討してください。
+ ✔️ 1`T`文字の型パラメーターを持つ型の型パラメーター名として使用することを検討してください。
 
 ```csharp
 public int IComparer<T> { ... }
@@ -55,7 +55,7 @@ public delegate bool Predicate<T>(T item);
 public struct Nullable<T> where T:struct { ... }
 ```
 
- ✔️は、わかりやすい型パラメーター名を `T`でプレフィックスします。
+ ✔️ DO プレフィックスの説明型`T`パラメーター名に.
 
 ```csharp
 public interface ISessionChannel<TSession> where TSession : ISession {
@@ -63,43 +63,43 @@ public interface ISessionChannel<TSession> where TSession : ISession {
 }
 ```
 
- パラメーターの名前の型パラメーターに設定されている制約を示す✔️ます。
+ ✔️ CONSIDER は、パラメーターの名前の型パラメーターに配置される制約を示します。
 
- たとえば、`ISession` に制約されたパラメーターは `TSession`と呼ばれる場合があります。
+ たとえば、制約された`ISession`パラメーターは 、 という`TSession`名前になることがあります。
 
 ## <a name="names-of-common-types"></a>共通型の名前
- ✔️は、次の表に記載されているガイドラインに従って、特定の .NET Framework 型から派生した型に名前を付けることができます。
+ ✔️は、特定の .NET Framework 型から派生した型に名前を付ける場合、または特定の .NET Framework 型を実装する場合に、次の表で説明されているガイドラインに従います。
 
-|Base Type|派生/実装型のガイドライン|
+|基本型|派生/実装型ガイドライン|
 |---------------|------------------------------------------|
-|`System.Attribute`|カスタム属性クラスの名前にサフィックス "Attribute" を追加✔️ます。|
-|`System.Delegate`|✔️は、イベントで使用されるデリゲートの名前に "EventHandler" というサフィックスを追加します。<br /><br /> イベントハンドラーとして使用されていないデリゲートの名前に "Callback" というサフィックスを追加✔️ます。<br /><br /> ❌、デリゲートにサフィックス "Delegate" を追加しないでください。|
-|`System.EventArgs`|サフィックス "EventArgs" を追加✔️ます。|
-|`System.Enum`|❌ は、このクラスから派生しません。代わりに、お使いの言語でサポートされているキーワードを使用してください。たとえば、でC#は、`enum` キーワードを使用します。<br /><br /> ❌ サフィックス "Enum" または "Flag" は追加しないでください。|
-|`System.Exception`|サフィックス "Exception" を追加✔️ます。|
-|`IDictionary` <br /> `IDictionary<TKey,TValue>`|サフィックス "Dictionary" を追加✔️ます。 `IDictionary` は特定の種類のコレクションであることに注意してくださいが、このガイドラインは、次に示す一般的なコレクションのガイドラインよりも優先されます。|
-|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|サフィックス "Collection" を追加✔️ます。|
-|`System.IO.Stream`|サフィックス "Stream" を追加✔️ます。|
-|`CodeAccessPermission IPermission`|✔️サフィックス "Permission" を追加します。|
+|`System.Attribute`|✔️は、カスタム属性クラスの名前に接尾辞 "Attribute" を追加します。|
+|`System.Delegate`|イベントで使用されるデリゲートの名前にサフィックス "EventHandler" を追加✔️。<br /><br /> ✔️は、イベント ハンドラとして使用されるデリゲート以外のデリゲートの名前にサフィックス "Callback" を追加します。<br /><br /> ❌デリゲートに "Delegate" というサフィックスを追加しないでください。|
+|`System.EventArgs`|✔️は、サフィックス "EventArgs" を追加します。|
+|`System.Enum`|❌このクラスから派生しないでください。代わりに、使用する言語でサポートされているキーワードを使用します。たとえば、C# では、キーワードを`enum`使用します。<br /><br /> ❌"列挙" または "フラグ" というサフィックスを追加しないでください。|
+|`System.Exception`|✔️ DO は、"例外" というサフィックスを追加します。|
+|`IDictionary` <br /> `IDictionary<TKey,TValue>`|✔️は、"辞書" というサフィックスを追加します。 これは`IDictionary`特定の種類のコレクションですが、このガイドラインは、次に示す一般的なコレクションのガイドラインよりも優先されます。|
+|`IEnumerable` <br /> `ICollection` <br /> `IList` <br /> `IEnumerable<T>` <br /> `ICollection<T>` <br /> `IList<T>`|✔️は、"コレクション" というサフィックスを追加します。|
+|`System.IO.Stream`|✔️は、サフィックス"Stream"を追加します。|
+|`CodeAccessPermission IPermission`|✔️は、"アクセス許可" というサフィックスを追加します。|
 
-## <a name="naming-enumerations"></a>列挙型の名前付け
- 一般的に、列挙型の名前 (列挙型とも呼ばれます) は、標準的な型の名前付け規則に従う必要があります。 ただし、列挙型に特に適用される追加のガイドラインがあります。
+## <a name="naming-enumerations"></a>列挙体の名前付け
+ 列挙型の名前 (enum) は、一般に、標準の型の名前付け規則 (PascalCasing など) に従う必要があります。 ただし、列挙型に特に適用される追加のガイドラインがあります。
 
- ✔️値がビットフィールドでない限り、列挙体には単数型名を使用します。
+ ✔️値がビット フィールドでない限り、列挙型には単数型名を使用します。
 
- ✔️は、値としてビットフィールドを持つ列挙体に対して複数形の型名を使用します (flags enum とも呼ばれます)。
+ ✔️ DO では、値としてビット フィールドを持つ列挙体に複数形の型名を使用します。
 
- 列挙型の名前に "Enum" サフィックスを使用 ❌ ことはできません。
+ ❌列挙型名に "Enum" サフィックスを使用しないでください。
 
- enum 型の名前に "Flag" または "Flags" サフィックスを使用しない ❌。
+ ❌列挙型名に "フラグ" または "フラグ" サフィックスを使用しないでください。
 
- 列挙値の名前にプレフィックスを使用しないでください (たとえば、ADO 列挙型の場合は "ad"、リッチテキスト列挙型の場合は "rtf" など)。 ❌
+ ❌列挙値名にプレフィックスを使用しないでください (たとえば、ADO 列挙型の "ad" やリッチ テキストの列挙型の場合は "rtf" など)。
 
- *©2005、2009 Microsoft Corporation の部分。すべての権限が予約されています。*
+ *2005年、2009年©マイクロソフト株式会社。すべての権利が予約されています。*
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
 - [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)

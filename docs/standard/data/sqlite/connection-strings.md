@@ -1,35 +1,35 @@
 ---
-title: 接続文字列
+title: Connection strings
 ms.date: 12/13/2019
-description: 接続文字列のサポートされているキーワードと値。
+description: サポートされている接続文字列のキーワードと値。
 ms.openlocfilehash: bb54d152bac62a86c2a49192cf678a745159164e
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75450274"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401197"
 ---
-# <a name="connection-strings"></a>接続文字列
+# <a name="connection-strings"></a>Connection strings
 
-接続文字列は、データベースへの接続方法を指定するために使用されます。 ADO.NET の接続文字列は、キーワードと値をセミコロンで区切ったリストとして、標準の[構文](../../../framework/data/adonet/connection-strings.md)に従います。
+接続文字列を使用して、データベースへの接続方法を指定します。 Microsoft.Data.Sqlite の接続文字列は、キーワードと値のセミコロン区切りのリストとして標準の[ADO.NET構文](../../../framework/data/adonet/connection-strings.md)に従います。
 
-## <a name="keywords"></a>キーワード
+## <a name="keywords"></a>Keywords
 
-次の接続文字列キーワードは、Microsoft. Data. Sqlite と共に使用できます。
+次の接続文字列キーワードを使用できます。
 
-### <a name="data-source"></a>[データ ソース]
+### <a name="data-source"></a>データ ソース
 
-データベース ファイルのパス。 *DataSource* (スペースなし) と*Filename*は、このキーワードのエイリアスです。
+データベース ファイルのパス。 *データソース*(スペースなし) と*ファイル名*はこのキーワードのエイリアスです。
 
-SQLite は、現在の作業ディレクトリを基準とした相対パスを扱います。 絶対パスを指定することもできます。
+SQLite は、現在の作業ディレクトリに対する相対パスを扱います。 絶対パスも指定できます。
 
 **空**の場合、SQLite は接続が閉じられたときに削除される一時的なディスク上のデータベースを作成します。
 
-`:memory:`すると、メモリ内データベースが使用されます。 詳細については、「[メモリ内データベース](in-memory-databases.md)」を参照してください。
+の`:memory:`場合、インメモリ データベースが使用されます。 詳細については、「[インメモリ データベース](in-memory-databases.md)」を参照してください。
 
-`|DataDirectory|` 置換文字列で始まるパスは、相対パスと同じように扱われます。 設定すると、DataDirectory アプリケーションドメインプロパティ値を基準とした相対パスが作成されます。
+`|DataDirectory|`置換文字列で始まるパスは、相対パスと同じように扱われます。 設定すると、パスは DataDirectory アプリケーション ドメイン プロパティの値に対して相対的に作成されます。
 
-このキーワードは[URI ファイル名](https://www.sqlite.org/uri.html)もサポートしています。
+このキーワードは[、URI ファイル名](https://www.sqlite.org/uri.html)もサポートしています。
 
 ### <a name="mode"></a>モード
 
@@ -37,66 +37,66 @@ SQLite は、現在の作業ディレクトリを基準とした相対パスを�
 
 | Value           | 説明                                                                                        |
 | --------------- | -------------------------------------------------------------------------------------------------- |
-| ReadWriteCreate | 読み取りと書き込みのためにデータベースを開き、存在しない場合は作成します。 これは既定です。 |
-| ReadWrite       | 読み取りと書き込みのためにデータベースを開きます。                                                        |
+| 書き込み書き込み作成 | データベースを読み書き用に開き、存在しない場合は作成します。 これは既定値です。 |
+| ReadWrite       | データベースを読み書き用に開きます。                                                        |
 | ReadOnly        | データベースを読み取り専用モードで開きます。                                                              |
-| メモリ          | メモリ内データベースを開きます。                                                                       |
+| メモリ          | インメモリ データベースを開きます。                                                                       |
 
 ### <a name="cache"></a>キャッシュ
 
-接続で使用されるキャッシュモード。
+接続で使用されるキャッシュ モード。
 
 | Value   | 説明                                                                                    |
 | ------- | ---------------------------------------------------------------------------------------------- |
-| [既定値] | は、基になる SQLite ライブラリの既定のモードを使用します。 これは既定です。                   |
-| Private | 各接続は、プライベートキャッシュを使用します。                                                          |
-| [共有]  | 接続はキャッシュを共有します。 このモードでは、トランザクションおよびテーブルロックの動作を変更できます。 |
+| Default | 基になる SQLite ライブラリの既定のモードを使用します。 これは既定値です。                   |
+| プライベート | 各接続はプライベート キャッシュを使用します。                                                          |
+| 共有  | 接続はキャッシュを共有します。 このモードは、トランザクションとテーブルロックの動作を変更できます。 |
 
 ### <a name="password"></a>Password
 
-暗号化キー。 指定した場合、接続を開いた直後に `PRAGMA key` が送信されます。
+暗号化キー。 指定すると、`PRAGMA key`接続を開いた直後に送信されます。
 
 > [!WARNING]
-> ネイティブ SQLite ライブラリで暗号化がサポートされていない場合、パスワードは無効です。
+> パスワードは、暗号化がネイティブの SQLite ライブラリでサポートされていない場合には無効です。
 
 ### <a name="foreign-keys"></a>外部キー
 
-Foreign key 制約を有効にするかどうかを示す値です。
+外部キー制約を有効にするかどうかを示す値。
 
 | Value   | 説明
 | ------- | --- |
-| True    | 接続を開いた直後に `PRAGMA foreign_keys = 1` を送信します。
-| [False]   | 接続を開いた直後に `PRAGMA foreign_keys = 0` を送信します。
-| (空) | `PRAGMA foreign_keys`を送信しません。 これは既定です。 |
+| True    | 接続`PRAGMA foreign_keys = 1`を開いた直後に送信します。
+| False   | 接続`PRAGMA foreign_keys = 0`を開いた直後に送信します。
+| (空) | を送信`PRAGMA foreign_keys`しません。 これは既定値です。 |
 
-E_sqlite3 のように、ネイティブ SQLite ライブラリをコンパイルするために SQLITE_DEFAULT_FOREIGN_KEYS を使用した場合、外部キーを有効にする必要はありません。
+ネイティブ SQLite ライブラリのコンパイルに使用SQLITE_DEFAULT_FOREIGN_KEYS、e_sqlite3のように、外部キーを有効にする必要はありません。
 
-### <a name="recursive-triggers"></a>再帰トリガー
+### <a name="recursive-triggers"></a>再帰的トリガー
 
-再帰トリガーを有効にするかどうかを示す値です。
+再帰的なトリガーを有効にするかどうかを示す値。
 
 | Value | 説明                                                                 |
 | ----- | --------------------------------------------------------------------------- |
-| True  | 接続を開いた直後に `PRAGMA recursive_triggers` を送信します。 |
-| [False] | `PRAGMA recursive_triggers`を送信しません。 これは既定です。              |
+| True  | 接続`PRAGMA recursive_triggers`を開いた直後に送信します。 |
+| False | を送信`PRAGMA recursive_triggers`しません。 これは既定値です。              |
 
-## <a name="connection-string-builder"></a>接続文字列ビルダー
+## <a name="connection-string-builder"></a>接続文字列ビルダ
 
-<xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder> は、厳密に型指定された接続文字列の作成方法として使用できます。 また、接続文字列のインジェクション攻撃を防ぐためにも使用できます。
+接続文字列を作成<xref:Microsoft.Data.Sqlite.SqliteConnectionStringBuilder>する厳密に型指定された方法として使用できます。 また、接続文字列の挿入攻撃を防ぐためにも使用できます。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/EncryptionSample/Program.cs?name=snippet_ConnectionStringBuilder)]
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
 
 ### <a name="basic"></a>Basic
 
-同時実行性を向上させるための共有キャッシュを備えた基本的な接続文字列。
+同時実行性を向上させる共有キャッシュを持つ基本的な接続文字列。
 
 ```ConnectionString
 Data Source=Application.db;Cache=Shared
 ```
 
-### <a name="encrypted"></a>暗号化
+### <a name="encrypted"></a>Encrypted
 
 暗号化されたデータベース。
 
@@ -106,7 +106,7 @@ Data Source=Encrypted.db;Password=MyEncryptionKey
 
 ### <a name="read-only"></a>読み取り専用
 
-アプリによって変更できない読み取り専用のデータベース。
+アプリで変更できない読み取り専用データベース。
 
 ```ConnectionString
 Data Source=Reference.db;Mode=ReadOnly
@@ -122,7 +122,7 @@ Data Source=:memory:
 
 ### <a name="sharable-in-memory"></a>メモリ内で共有可能
 
-*共有可能な名前で*識別される、共有可能なメモリ内のデータベース。
+名前で識別される共有可能なインメモリ データベース*で、*
 
 ```ConnectionString
 Data Source=Sharable;Mode=Memory;Cache=Shared
@@ -130,6 +130,6 @@ Data Source=Sharable;Mode=Memory;Cache=Shared
 
 ## <a name="see-also"></a>関連項目
 
-* [ADO.NET の接続文字列](../../../framework/data/adonet/connection-strings.md)
-* [インメモリデータベース](in-memory-databases.md)
+* [ADO.NET での接続文字列](../../../framework/data/adonet/connection-strings.md)
+* [インメモリ データベース](in-memory-databases.md)
 * [トランザクション](transactions.md)

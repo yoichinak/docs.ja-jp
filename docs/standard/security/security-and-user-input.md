@@ -1,5 +1,6 @@
 ---
 title: セキュリティとユーザー入力
+description: コードは、ユーザーが入力したデータをパラメーターとして他のコードに渡す場合があり、セキュリティに影響を与える可能性があります。 範囲チェックを実行して、問題のある入力を拒否できます。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - secure coding, user input
 - code security, user input
 ms.assetid: 9141076a-96c9-4b01-93de-366bb1d858bc
-ms.openlocfilehash: 0d34b06b44241feb7d6e3c8f76447b861563cfdc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: fa9f8d4708e928c51e446d8369c9b4556fc6fb77
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705861"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186108"
 ---
 # <a name="security-and-user-input"></a>セキュリティとユーザー入力
 
@@ -23,7 +24,7 @@ ms.locfileid: "75705861"
 
 ユーザー データに関連する重要な注意事項を次に示します。
 
-- サーバー応答内のすべてのユーザー データは、クライアント上でサーバーのサイトのコンテキストで実行されます。 ご使用の Web サーバーがユーザー データを受け取り、返す Web ページにそのデータを挿入する場合、たとえば、そのデータが **\<script>** タグを組み込んで、サーバーからのように実行する可能性があります。
+- サーバー応答内のすべてのユーザー データは、クライアント上でサーバーのサイトのコンテキストで実行されます。 Web サーバーがユーザー データを取得して返された Web ページに挿入する場合、たとえば、**\<タグ>スクリプト**を含め、サーバーから実行する場合があります。
 
 - クライアントはすべての URL を要求できることに注意してください。
 

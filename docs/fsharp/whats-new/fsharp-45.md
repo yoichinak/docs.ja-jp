@@ -1,30 +1,30 @@
 ---
-title: F# 4.5 の新機能- F#ガイド
-description: 4\.5 でF#利用可能な新機能の概要を説明します。
+title: F# 4.5 の新機能 - F# ガイド
+description: F# 4.5 で利用可能な新機能の概要を確認します。
 ms.date: 11/27/2019
-ms.openlocfilehash: b699165125d345ad783b24da8a0a994cba72d4ba
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 560e3dd941f79b76d3b864ba0f6560be154ebc1a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715695"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186136"
 ---
-# <a name="whats-new-in-f-45"></a>4\.5 のF#新機能
+# <a name="whats-new-in-f-45"></a>F# 4.5 の新機能
 
-F#4.5 では、言語にF#複数の機能強化が追加されています。 これらの機能の多くは、このコードが安全でF#あることを保証するために、効率的なコードを記述できるようにするためにまとめられています。 これにより、言語にいくつかの概念が追加され、これらのコンストラクトを使用するときに大量のコンパイラ分析が行われることになります。
+F# 4.5 では、F# 言語に複数の改良が加えました。 これらの機能の多くは、F# で効率的なコードを記述できる一方で、このコードの安全性を確保するために組み合わせて追加されました。 この場合、これらの構成要素を使用する場合、言語にいくつかの概念を追加し、コンパイラ分析の量を大幅に増やします。
 
-## <a name="get-started"></a>作業開始
+## <a name="get-started"></a>はじめに
 
-F#4.5 は、すべての .NET Core ディストリビューションと Visual Studio ツールで使用できます。 詳細につい[ては、 F# ](../get-started/index.md) 「」を参照してください。
+F# 4.5 は、すべての .NET コアディストリビューションと Visual Studio ツールで使用できます。 [F# の使用を開始](../get-started/index.md)して、詳細を確認してください。
 
-## <a name="span-and-byref-like-structs"></a>Span および byref に似た構造体
+## <a name="span-and-byref-like-structs"></a>スパンとバイレフのような構造体
 
-.NET Core で導入された <xref:System.Span%601> 型では、メモリ内のバッファーを厳密に型指定された方法でF#表すことF#ができるようになりました。これは、4.5 以降で使用できるようになりました。 次の例は、さまざまなバッファー表現を使用して <xref:System.Span%601> で動作する関数を再利用する方法を示しています。
+NET <xref:System.Span%601> Core で導入された型では、厳密に型指定された方法でメモリ内のバッファーを表すことができます。 次の例は、異なるバッファー表現を持つ 関数<xref:System.Span%601>を使用して再利用する方法を示しています。
 
 ```fsharp
 let safeSum (bytes: Span<byte>) =
     let mutable sum = 0
-    for i in 0 .. bytes.Length - 1 do 
+    for i in 0 .. bytes.Length - 1 do
         sum <- sum + int bytes.[i]
     sum
 
@@ -49,26 +49,26 @@ let stackSpan = Span<byte>(mem2, 100)
 safeSum(stackSpan) |> printfn "res = %d"
 ```
 
-これにとって重要な点は、Span とその他の[byref に似た構造体](../language-reference/structures.md#byreflike-structs)は、コンパイラによって実行される静的分析が非常に厳密であり、予期しない状態になる可能性がある方法でその使用を制限することです。 これは、4.5 でF#導入されたパフォーマンス、表現力、安全性の基本的なトレードオフです。
+この重要な側面は、Span やその他[の byref のような構造体](../language-reference/structures.md#byreflike-structs)が、コンパイラによって非常に厳密な静的分析を実行し、予期しない方法で使用を制限することです。 これは、F# 4.5 で導入されたパフォーマンス、表現力、安全性の基本的なトレードオフです。
 
-## <a name="revamped-byrefs"></a>Byref の改良
+## <a name="revamped-byrefs"></a>改良されたバイレフ
 
-F# 4.5 より前の[byref](../language-reference/byrefs.md)でF#は、多くのアプリケーションに対して安全ではありませんでした。 Byref に関する束縛の問題が 4.5 F#で対処されており、span と byref に似た構造体に対して行われる同じ静的分析も適用されました。
+F# 4.5 より前のバージョンでは、F# の[Byrefs](../language-reference/byrefs.md)は安全で、多くのアプリケーションでは不音でした。 byrefs に関するサウンドの問題は F# 4.5 で取り上げられており、span および byref のような構造体に対して行われたのと同じ静的分析も適用されました。
 
-### <a name="inreft-and-outreft"></a>inref < ' t > および outref < ' >
+### <a name="inreft-and-outreft"></a>インレフ<>とアウトレフ<>
 
-読み取り専用、書き込み専用、および読み取り/書き込み用のマネージポインターの概念を表すために、 F# 4.5 では、それぞれ読み取り専用ポインターと書き込み専用ポインターを表すために、`inref<'T>`、`outref<'T>` 型が導入されています。 それぞれに異なるセマンティクスがあります。 たとえば、`inref<'T>`に書き込むことはできません。
+読み取り専用、書き込み専用、および読み取り/書き込みマネージ ポインターの概念`inref<'T>`を`outref<'T>`表すために、F# 4.5 では、それぞれ、読み取り専用ポインターと書き込み専用ポインターを表す型が導入されています。 それぞれに異なるセマンティクスがあります。 たとえば、`inref<'T>`に書き込むことはできません。
 
 ```fsharp
 let f (dt: inref<DateTime>) =
     dt <- DateTime.Now // ERROR - cannot write to an inref!
 ```
 
-既定では、型の推定は、変更可能として既に宣言されてF#いない限り、コードの不変の性質を持つ `inref<'T>` としてマネージポインターを推論します。 何かを書き込み可能にするには、そのアドレスを操作する関数またはメンバーに渡す前に、型を `mutable` として宣言する必要があります。 詳細については、「 [byref](../language-reference/byrefs.md)」を参照してください。
+既定では、何か変更可能として宣言されていない限り、型`inref<'T>`の推論は、F# コードの不変の性質に沿ったマネージ ポインターを推論します。 書き込み可能なものにするには、そのアドレスを操作する関数またはメンバー`mutable`に渡す前に、型を宣言する必要があります。 詳細については[、「Byrefs」](../language-reference/byrefs.md)を参照してください。
 
-## <a name="readonly-structs"></a>Readonly 構造体
+## <a name="readonly-structs"></a>読み取り専用構造体
 
-F# 4.5 以降では、次のように <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute> で構造体に注釈を付けることができます。
+F# 4.5 以降では、構造体<xref:System.Runtime.CompilerServices.IsReadOnlyAttribute>に次のようにアポイントを付けることができます。
 
 ```fsharp
 [<IsReadOnly; Struct>]
@@ -77,20 +77,20 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-これにより、構造体の変更可能なメンバーを宣言して、 F#アセンブリC#から使用するときに、およびを読み取り専用として扱うことができるメタデータを生成することはできません。 詳細については、「 [ReadOnly 構造体](../language-reference/structures.md#readonly-structs)」を参照してください。
+これにより、構造体で変更可能なメンバーを宣言することを禁止し、F# と C# がアセンブリから読み取り時に読み取り専用として扱うことを可能にするメタデータを出力します。 詳細については、「 [ReadOnly 構造体](../language-reference/structures.md#readonly-structs)」を参照してください。
 
-## <a name="void-pointers"></a>Void ポインター
+## <a name="void-pointers"></a>ボイドポインタ
 
-`voidptr` 型は、次のF#関数のように4.5 に追加されます。
+型`voidptr`は、次の関数と同様に、F# 4.5 に追加されます。
 
-* void ポインターをネイティブ int ポインターに変換する `NativePtr.ofVoidPtr`
-* ネイティブの int ポインターを void ポインターに変換する `NativePtr.toVoidPtr`
+* `NativePtr.ofVoidPtr`void ポインタをネイティブの int ポインタに変換するには
+* `NativePtr.toVoidPtr`ネイティブの int ポインターを void ポインターに変換するには
 
-これは、void ポインターを使用するネイティブコンポーネントと相互運用する場合に役立ちます。
+これは、void ポインターを使用するネイティブ コンポーネントと相互運用するときに役立ちます。
 
 ## <a name="the-match-keyword"></a>`match!` キーワード
 
-`match!` キーワードは、コンピュテーション式の内部でパターンマッチングを強化します。
+この`match!`キーワードは、計算式の内部でパターン マッチングを強化します。
 
 ```fsharp
 // Code that returns an asynchronous option
@@ -101,21 +101,21 @@ let checkBananaAsync (s: string) =
         else
             return None
     }
-    
+
 // Now you can use 'match!'
 let funcWithString (s: string) =
-    async { 
+    async {
         match! checkBananaAsync s with
         | Some bananaString -> printfn "It's banana!"
         | None -> printfn "%s" s
 }
 ```
 
-これにより、非同期などのコンピュテーション式でオプション (または他の型) を混在させることが多いコードを短縮できます。 詳細については、「 [match!](../language-reference/computation-expressions.md#match)」を参照してください。
+これにより、多くの場合、オプション (または他の型) と非同期などの計算式を混在させるコードを短くすることができます。 詳細については[、「match!」](../language-reference/computation-expressions.md#match)を参照してください。
 
-## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>配列、リスト、およびシーケンス式における緩やかなキャストの要件
+## <a name="relaxed-upcasting-requirements-in-array-list-and-sequence-expressions"></a>配列、リスト、シーケンス式での緩和されたアップキャスト要件
 
-配列、リスト、およびシーケンス式の内部から継承する可能性のある型を混在させるには、`:>` または `upcast`で任意の派生型をその親型にアップキャストする必要がありました。 これは、次に示すように、緩和されました。
+配列、リスト、シーケンス式の別の内部から継承する型を混在させる場合は、従来、任意の派生型を親の型にアップキャストする`:>`必要`upcast`があります。 これは緩和され、次のように示されています。
 
 ```fsharp
 let x0 : obj list  = [ "a" ] // ok pre-F# 4.5
@@ -125,13 +125,13 @@ let x2 : obj list  = [ yield "a" :> obj ] // ok pre-F# 4.5
 let x3 : obj list  = [ yield "a" ] // Now ok for F# 4.5, and can replace x2
 ```
 
-## <a name="indentation-relaxation-for-array-and-list-expressions"></a>配列とリスト式のインデント緩和
+## <a name="indentation-relaxation-for-array-and-list-expressions"></a>配列およびリスト式のインデント緩和
 
-F# 4.5 より前では、メソッド呼び出しに引数として渡すときに、配列とリスト式を過度にインデントする必要がありました。 これは必要なくなりました。
+F# 4.5 より前のバージョンでは、メソッド呼び出しに引数として渡された場合、配列とリスト式を過度にインデントする必要があった。 これは不要になりました。
 
 ```fsharp
-module NoExcessiveIndenting = 
-    System.Console.WriteLine(format="{0}", arg = [| 
+module NoExcessiveIndenting =
+    System.Console.WriteLine(format="{0}", arg = [|
         "hello"
     |])
     System.Console.WriteLine([|

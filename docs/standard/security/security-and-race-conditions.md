@@ -1,5 +1,6 @@
 ---
 title: セキュリティと競合状態
+'description:': Describes pitfalls to avoid around security holes exploited by race conditions, including dispose methods, constructors, cached objects, and finalizers.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,18 +12,18 @@ helpviewer_keywords:
 - secure coding, race conditions
 - code security, race conditions
 ms.assetid: ea3edb80-b2e8-4e85-bfed-311b20cb59b6
-ms.openlocfilehash: bc0d9f481fd212ede55bffde6cc20c3e080629e4
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 09d8d0d6e85af04fe0fb00f53df408126012081e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159417"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186780"
 ---
 # <a name="security-and-race-conditions"></a>セキュリティと競合状態
-問題のもう1つの領域は、競合状態によってセキュリティホールが悪用される可能性があることです。 これにはいくつかの方法があります。 次のサブトピックでは、開発者が回避する必要のある主要な落とし穴をいくつか紹介します。  
+もう一つの懸念事項は、レース条件によって悪用されるセキュリティホールの可能性です。 これが起こるいくつかの方法があります。 次のサブトピックでは、開発者が避けなければならないいくつかの主な落とし穴の概要を説明します。  
   
-## <a name="race-conditions-in-the-dispose-method"></a>Dispose メソッドの競合状態  
- クラスの**dispose**メソッド (詳細については、「[ガベージコレクション](../../../docs/standard/garbage-collection/index.md)」を参照) が同期されていない場合は、次の例に示すように、 **dispose**内のクリーンアップコードを複数回実行できる可能性があります。  
+## <a name="race-conditions-in-the-dispose-method"></a>Dispose メソッドの競合条件  
+ クラスの**Dispose**メソッド (詳細については、「[ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)」を参照) が同期されていない場合、次の例に示すように **、Dispose**内のクリーンアップ コードを複数回実行できます。  
   
 ```vb  
 Sub Dispose()  
@@ -44,13 +45,13 @@ void Dispose()
 }  
 ```  
   
- この**Dispose**実装は同期されていないため、最初の1つのスレッドによって `Cleanup` が呼び出され、`_myObj` が**null**に設定される前に2番目のスレッドが呼び出される可能性があります。 これがセキュリティ上の問題であるかどうかは、`Cleanup` コードの実行時の動作によって異なります。 非同期の**Dispose**実装の主な問題は、ファイルなどのリソースハンドルを使用することです。 不適切な破棄によって、誤ったハンドルが使用されることがあります。これは、多くの場合、セキュリティの脆弱性につながります。  
+ この**Dispose**実装は同期されていないため、最初の`Cleanup`1 つのスレッドから呼び出し、次に 2`_myObj`つ目のスレッドを呼び出す場合は**null**に設定できます。 これがセキュリティ上の問題であるかどうかは、コードの`Cleanup`実行時に何が起こるかによって異なります。 非同期**の Dispose**実装に関する大きな問題は、ファイルなどのリソース ハンドルの使用です。 不適切な破棄により、不適切なハンドルが使用され、セキュリティの脆弱性が発生する場合があります。  
   
-## <a name="race-conditions-in-constructors"></a>コンストラクターの競合状態  
- アプリケーションによっては、クラスコンストラクターが完全に実行される前に、他のスレッドがクラスメンバーにアクセスできる場合があります。 すべてのクラスコンストラクターを確認して、このような場合にセキュリティの問題が発生していないことを確認し、必要に応じてスレッドを同期してください。  
+## <a name="race-conditions-in-constructors"></a>コンストラクタの競合状況  
+ アプリケーションによっては、クラス コンストラクターが完全に実行される前に、他のスレッドがクラス メンバーにアクセスできる場合があります。 すべてのクラス コンストラクターを確認して、セキュリティ上の問題が発生しないかどうかを確認するか、必要に応じてスレッドを同期する必要があります。  
   
-## <a name="race-conditions-with-cached-objects"></a>キャッシュされたオブジェクトを使用した競合状態  
- 次の例に示すように、セキュリティ情報をキャッシュしたり、コードアクセスセキュリティ[アサート](../../../docs/framework/misc/using-the-assert-method.md)操作を使用したりするコードは、クラスの他の部分が適切に同期されていない場合に、競合状態に対して脆弱になることがあります。  
+## <a name="race-conditions-with-cached-objects"></a>キャッシュされたオブジェクトを含む競合条件  
+ セキュリティ情報をキャッシュするコード、またはコード アクセス セキュリティ[Assert](../../../docs/framework/misc/using-the-assert-method.md)操作を使用するコードは、次の例に示すように、クラスの他の部分が適切に同期されていない場合にも競合状態に対して脆弱になる可能性があります。  
   
 ```vb  
 Sub SomeSecureFunction()  
@@ -95,13 +96,13 @@ void DoOtherWork()
 }  
 ```  
   
- 同じオブジェクトを持つ別のスレッドから呼び出すことができる `DoOtherWork` へのパスが他にある場合は、信頼されていない呼び出し元が要求を過去にスリップすることができます。  
+ 同じオブジェクトを`DoOtherWork`持つ別のスレッドから他のパスを呼び出すことができる場合、信頼されていない呼び出し元は要求を超えてスリップできます。  
   
- コードでセキュリティ情報がキャッシュされている場合は、この脆弱性を確認してください。  
+ コードでセキュリティ情報がキャッシュされる場合は、この脆弱性について確認してください。  
   
-## <a name="race-conditions-in-finalizers"></a>ファイナライザーでの競合状態  
- 競合状態は、静的またはアンマネージリソースを参照するオブジェクトでも発生し、その後、そのファイナライザーで解放されます。 クラスのファイナライザーで操作されているリソースを複数のオブジェクトが共有している場合、そのオブジェクトは、そのリソースへのすべてのアクセスを同期する必要があります。  
+## <a name="race-conditions-in-finalizers"></a>ファイナライザーのレース条件  
+ 競合状態は、静的リソースまたはアンマネージ リソースを参照するオブジェクトで発生し、ファイナライザーで解放されることもあります。 クラスのファイナライザーで操作されるリソースを複数のオブジェクトが共有する場合、そのオブジェクトは、そのリソースへのすべてのアクセスを同期する必要があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)

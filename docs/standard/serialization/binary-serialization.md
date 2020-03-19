@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.openlocfilehash: 9df9b73a1a1347b952d76b76c9058578f5e9f401
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75901050"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401269"
 ---
 # <a name="binary-serialization"></a>バイナリ シリアル化
 
@@ -28,35 +28,35 @@ ms.locfileid: "75901050"
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
 
-バイナリシリアル化を使用すると、オブジェクト内のプライベートメンバーを変更し、その状態を変更できます。 このため、パブリック API サーフェイスで動作する他のシリアル化フレームワーク (<xref:System.Text.Json?displayProperty=fullName>など) をお勧めします。
+バイナリ シリアル化を使用すると、オブジェクト内のプライベート メンバーを変更できるため、その状態を変更できます。 このため、パブリック API サーフェスで動作する<xref:System.Text.Json?displayProperty=fullName>他のシリアル化フレームワーク (など) をお勧めします。
 
 ## <a name="net-core"></a>.NET Core
 
-.NET Core では、型のサブセットのバイナリシリアル化がサポートされています。 サポートされている型の一覧については、次の「 [Serializable 型](#serializable-types)」を参照してください。 表示される型は、.NET Framework 4.5.1 以降のバージョンと .NET Core 2.0 以降のバージョン間でシリアル化可能であることが保証されます。 Mono などのその他の .NET 実装は公式にはサポートされていませんが、機能する必要もあります。
+.NET Core では、型のサブセットに対してバイナリ シリアル化がサポートされています。 サポートされている型の一覧については、次の[「シリアル化可能な型](#serializable-types)」セクションを参照してください。 ここに示されている型は、.NET Framework 4.5.1 以降のバージョン間、および .NET Core 2.0 以降のバージョン間でシリアル化できることが保証されています。 Mono などの他の .NET 実装は公式にはサポートされていませんが、動作する必要があります。
 
 ### <a name="serializable-types"></a>シリアル化可能な型
 
 > [!div class="mx-tdCol2BreakAll"]
-> | の型 | メモ |
+> | Type | Notes |
 > | - | - |
-> | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.AccessViolationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.AggregateException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.AppDomainUnloadedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ApplicationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ArgumentException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ArgumentNullException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ArgumentOutOfRangeException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ArithmeticException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:Microsoft.CSharp.RuntimeBinder.RuntimeBinderInternalCompilerException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.AccessViolationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.AggregateException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.AppDomainUnloadedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ApplicationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ArgumentException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ArgumentNullException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ArgumentOutOfRangeException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ArithmeticException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Array?displayProperty=nameWithType> | |
 > | <xref:System.ArraySegment%601?displayProperty=nameWithType> | |
-> | <xref:System.ArrayTypeMismatchException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.ArrayTypeMismatchException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Attribute?displayProperty=nameWithType> | |
-> | <xref:System.BadImageFormatException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.BadImageFormatException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Boolean?displayProperty=nameWithType> | |
 > | <xref:System.Byte?displayProperty=nameWithType> | |
-> | <xref:System.CannotUnloadAppDomainException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.CannotUnloadAppDomainException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Char?displayProperty=nameWithType> | |
 > | <xref:System.Collections.ArrayList?displayProperty=nameWithType> | |
 > | <xref:System.Collections.BitArray?displayProperty=nameWithType> | |
@@ -66,7 +66,7 @@ ms.locfileid: "75901050"
 > | <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> | |
 > | <xref:System.Collections.Generic.EqualityComparer%601?displayProperty=nameWithType> | |
 > | <xref:System.Collections.Generic.HashSet%601?displayProperty=nameWithType> | |
-> | <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Collections.Generic.KeyNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Collections.Generic.KeyValuePair%602?displayProperty=nameWithType> | |
 > | <xref:System.Collections.Generic.LinkedList%601?displayProperty=nameWithType> | |
 > | <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> | |
@@ -90,44 +90,44 @@ ms.locfileid: "75901050"
 > | <xref:System.Collections.Specialized.StringCollection?displayProperty=nameWithType> | |
 > | <xref:System.Collections.Specialized.StringDictionary?displayProperty=nameWithType> | |
 > | <xref:System.Collections.Stack?displayProperty=nameWithType> | |
-> | `System.Collections.Generic.NonRandomizedStringEqualityComparer` | .NET Core 2.0.4 以降。 |
+> | `System.Collections.Generic.NonRandomizedStringEqualityComparer` | NET コア 2.0.4 から始まります。 |
 > | <xref:System.ComponentModel.BindingList%601?displayProperty=nameWithType> | |
-> | <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。<br/>.NET Framework から .NET Core へのシリアル化はサポートされていません。 |
-> | <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Configuration.ConfigurationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Configuration.Provider.ProviderException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Configuration.SettingsPropertyIsReadOnlyException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Configuration.SettingsPropertyNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Configuration.SettingsPropertyWrongTypeException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ContextMarshalException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DBNull?displayProperty=nameWithType> | .NET Core 2.0.2 以降のバージョンから開始します。 |
-> | <xref:System.Data.Common.DbException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.ConstraintException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.DataException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.ComponentModel.DataAnnotations.ValidationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ComponentModel.Design.CheckoutException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ComponentModel.InvalidAsynchronousStateException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ComponentModel.LicenseException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。<br/>.NET Framework から .NET Core へのシリアル化はサポートされていません。 |
+> | <xref:System.ComponentModel.WarningException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ComponentModel.Win32Exception?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Configuration.ConfigurationErrorsException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Configuration.ConfigurationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Configuration.Provider.ProviderException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Configuration.SettingsPropertyIsReadOnlyException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Configuration.SettingsPropertyNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Configuration.SettingsPropertyWrongTypeException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ContextMarshalException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DBNull?displayProperty=nameWithType> | NET Core 2.0.2 以降のバージョンから開始します。 |
+> | <xref:System.Data.Common.DbException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.ConstraintException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.DBConcurrencyException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.DataException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Data.DataSet?displayProperty=nameWithType> | |
-> | <xref:System.Data.DataTable?displayProperty=nameWithType> | `RemotingFormat` を `SerializationFormat.Binary`に設定すると、.NET Core 2.1 以降のバージョンとのみ交換できます。 |
-> | <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.EvaluateException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.InRowChangingEventException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.InvalidConstraintException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.InvalidExpressionException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.MissingPrimaryKeyException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.NoNullAllowedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.Odbc.OdbcException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.OperationAbortedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Data.DataTable?displayProperty=nameWithType> | に`RemotingFormat``SerializationFormat.Binary`設定した場合、.NET Core 2.1 以降のバージョンとのみ交換できます。 |
+> | <xref:System.Data.DeletedRowInaccessibleException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.DuplicateNameException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.EvaluateException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.InRowChangingEventException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.InvalidConstraintException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.InvalidExpressionException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.MissingPrimaryKeyException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.NoNullAllowedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.Odbc.OdbcException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.OperationAbortedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Data.PropertyCollection?displayProperty=nameWithType> | |
-> | <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。<br/>.NET Framework から .NET Core へのシリアル化はサポートされていません |
-> | <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Data.ReadOnlyException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.RowNotInTableException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.SqlClient.SqlException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。<br/>.NET Framework から .NET Core へのシリアル化はサポートされていません |
+> | <xref:System.Data.SqlTypes.SqlAlreadyFilledException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Data.SqlTypes.SqlBoolean?displayProperty=nameWithType> | |
 > | <xref:System.Data.SqlTypes.SqlByte?displayProperty=nameWithType> | |
 > | <xref:System.Data.SqlTypes.SqlDateTime?displayProperty=nameWithType> | |
@@ -136,42 +136,42 @@ ms.locfileid: "75901050"
 > | <xref:System.Data.SqlTypes.SqlInt16?displayProperty=nameWithType> | |
 > | <xref:System.Data.SqlTypes.SqlInt32?displayProperty=nameWithType> | |
 > | <xref:System.Data.SqlTypes.SqlInt64?displayProperty=nameWithType> | |
-> | <xref:System.Data.SqlTypes.SqlNotFilledException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.SqlTypes.SqlNullValueException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Data.SqlTypes.SqlNotFilledException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.SqlTypes.SqlNullValueException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Data.SqlTypes.SqlString?displayProperty=nameWithType> | |
-> | <xref:System.Data.SqlTypes.SqlTruncateException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.SqlTypes.SqlTypeException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.StrongTypingException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.SyntaxErrorException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Data.VersionNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DataMisalignedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Data.SqlTypes.SqlTruncateException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.SqlTypes.SqlTypeException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.StrongTypingException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.SyntaxErrorException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Data.VersionNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DataMisalignedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.DateTime?displayProperty=nameWithType> | |
 > | <xref:System.DateTimeOffset?displayProperty=nameWithType> | |
 > | <xref:System.Decimal?displayProperty=nameWithType> | |
-> | `System.Diagnostics.Contracts.ContractException` | .NET Core 2.0.4 以降。 |
-> | <xref:System.Diagnostics.Tracing.EventSourceException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.AccountManagement.MultipleMatchesException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.AccountManagement.PasswordException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.AccountManagement.PrincipalException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.AccountManagement.PrincipalExistsException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.AccountManagement.PrincipalOperationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.DirectoryServicesCOMException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.Protocols.BerConversionException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.Protocols.DirectoryException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.Protocols.DirectoryOperationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.Protocols.LdapException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DirectoryServices.Protocols.TlsOperationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DivideByZeroException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.DllNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | `System.Diagnostics.Contracts.ContractException` | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Diagnostics.Tracing.EventSourceException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.AccountManagement.MultipleMatchesException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.AccountManagement.NoMatchingPrincipalException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.AccountManagement.PasswordException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.AccountManagement.PrincipalException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.AccountManagement.PrincipalExistsException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.AccountManagement.PrincipalOperationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.AccountManagement.PrincipalServerDownException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectExistsException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryObjectNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryOperationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.ActiveDirectory.ActiveDirectoryServerDownException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.ActiveDirectory.ForestTrustCollisionException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.ActiveDirectory.SyncFromAllServersOperationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.DirectoryServicesCOMException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.Protocols.BerConversionException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.Protocols.DirectoryException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.Protocols.DirectoryOperationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.Protocols.LdapException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DirectoryServices.Protocols.TlsOperationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DivideByZeroException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.DllNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Double?displayProperty=nameWithType> | |
 > | <xref:System.Drawing.Color?displayProperty=nameWithType> | |
 > | <xref:System.Drawing.Point?displayProperty=nameWithType> | |
@@ -180,177 +180,177 @@ ms.locfileid: "75901050"
 > | <xref:System.Drawing.RectangleF?displayProperty=nameWithType> | |
 > | <xref:System.Drawing.Size?displayProperty=nameWithType> | |
 > | <xref:System.Drawing.SizeF?displayProperty=nameWithType> | |
-> | <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.EntryPointNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.DuplicateWaitObjectException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.EntryPointNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Enum?displayProperty=nameWithType> | |
-> | <xref:System.EventArgs?displayProperty=nameWithType> | .NET Core 2.0.6 以降。 |
+> | <xref:System.EventArgs?displayProperty=nameWithType> | NET コア 2.0.6 から始まります。 |
 > | <xref:System.Exception?displayProperty=nameWithType> | |
-> | <xref:System.ExecutionEngineException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.FieldAccessException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.FormatException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.ExecutionEngineException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.FieldAccessException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.FormatException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> | |
-> | <xref:System.Globalization.CultureNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Globalization.CultureNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Globalization.SortVersion?displayProperty=nameWithType> | |
 > | <xref:System.Guid?displayProperty=nameWithType> | |
-> | `System.IO.Compression.ZLibException` | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.DriveNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.EndOfStreamException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.FileFormatException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.FileLoadException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.FileNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.IOException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.InternalBufferOverflowException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.InvalidDataException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.IsolatedStorage.IsolatedStorageException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IO.PathTooLongException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.InsufficientExecutionStackException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.InsufficientMemoryException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | `System.IO.Compression.ZLibException` | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.DriveNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.EndOfStreamException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.FileFormatException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.FileLoadException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.FileNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.IOException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.InternalBufferOverflowException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.InvalidDataException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.IsolatedStorage.IsolatedStorageException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IO.PathTooLongException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.IndexOutOfRangeException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.InsufficientExecutionStackException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.InsufficientMemoryException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Int16?displayProperty=nameWithType> | |
 > | <xref:System.Int32?displayProperty=nameWithType> | |
 > | <xref:System.Int64?displayProperty=nameWithType> | |
 > | <xref:System.IntPtr?displayProperty=nameWithType> | |
-> | <xref:System.InvalidCastException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.InvalidOperationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.InvalidProgramException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.InvalidTimeZoneException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.MemberAccessException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.MethodAccessException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.MissingFieldException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.MissingMemberException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.MissingMethodException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.MulticastNotSupportedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.InvalidCastException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.InvalidOperationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.InvalidProgramException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.InvalidTimeZoneException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.MemberAccessException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.MethodAccessException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.MissingFieldException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.MissingMemberException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.MissingMethodException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.MulticastNotSupportedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Net.Cookie?displayProperty=nameWithType> | |
 > | <xref:System.Net.CookieCollection?displayProperty=nameWithType> | |
 > | <xref:System.Net.CookieContainer?displayProperty=nameWithType> | |
-> | <xref:System.Net.CookieException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.HttpListenerException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.Mail.SmtpException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.Mail.SmtpFailedRecipientException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.Mail.SmtpFailedRecipientsException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.NetworkInformation.NetworkInformationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.NetworkInformation.PingException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.ProtocolViolationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.Sockets.SocketException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.WebException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Net.WebSockets.WebSocketException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.NotFiniteNumberException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.NotImplementedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.NotSupportedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.NullReferenceException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Net.CookieException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.HttpListenerException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.Mail.SmtpException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.Mail.SmtpFailedRecipientException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.Mail.SmtpFailedRecipientsException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.NetworkInformation.NetworkInformationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.NetworkInformation.PingException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.ProtocolViolationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.Sockets.SocketException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.WebException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Net.WebSockets.WebSocketException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.NotFiniteNumberException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.NotImplementedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.NotSupportedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.NullReferenceException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Nullable%601?displayProperty=nameWithType> | |
 > | <xref:System.Numerics.BigInteger?displayProperty=nameWithType> | |
 > | <xref:System.Numerics.Complex?displayProperty=nameWithType> | |
 > | <xref:System.Object?displayProperty=nameWithType> | |
-> | <xref:System.ObjectDisposedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.OperationCanceledException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.OutOfMemoryException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.OverflowException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.PlatformNotSupportedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.RankException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。<br/>.NET Framework から .NET Core へのシリアル化はサポートされていません。 |
-> | <xref:System.Reflection.TargetException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Resources.MissingManifestResourceException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Resources.MissingSatelliteAssemblyException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.CompilerServices.RuntimeWrappedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.InteropServices.COMException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.InteropServices.ExternalException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.InteropServices.InvalidComObjectException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.InteropServices.InvalidOleVariantTypeException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.InteropServices.MarshalDirectiveException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.InteropServices.SEHException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.Serialization.InvalidDataContractException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Runtime.Serialization.SerializationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.ObjectDisposedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.OperationCanceledException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.OutOfMemoryException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.OverflowException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.PlatformNotSupportedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.RankException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Reflection.AmbiguousMatchException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Reflection.CustomAttributeFormatException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Reflection.InvalidFilterCriteriaException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Reflection.ReflectionTypeLoadException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。<br/>.NET Framework から .NET Core へのシリアル化はサポートされていません。 |
+> | <xref:System.Reflection.TargetException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Reflection.TargetInvocationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Reflection.TargetParameterCountException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Resources.MissingManifestResourceException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Resources.MissingSatelliteAssemblyException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.CompilerServices.RuntimeWrappedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.InteropServices.COMException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.InteropServices.ExternalException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.InteropServices.InvalidComObjectException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.InteropServices.InvalidOleVariantTypeException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.InteropServices.MarshalDirectiveException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.InteropServices.SEHException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.InteropServices.SafeArrayRankMismatchException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.InteropServices.SafeArrayTypeMismatchException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.Serialization.InvalidDataContractException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Runtime.Serialization.SerializationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.SByte?displayProperty=nameWithType> | |
-> | <xref:System.Security.AccessControl.PrivilegeNotHeldException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.Authentication.AuthenticationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.Authentication.InvalidCredentialException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.Cryptography.CryptographicException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.HostProtectionException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.SecurityException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。<br/>限定されたシリアル化データ。 |
-> | <xref:System.Security.VerificationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Security.AccessControl.PrivilegeNotHeldException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.Authentication.AuthenticationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.Authentication.InvalidCredentialException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.Cryptography.CryptographicException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.Cryptography.CryptographicUnexpectedOperationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | `System.Security.Cryptography.Xml.CryptoSignedXmlRecursionException` | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.HostProtectionException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.Policy.PolicyException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.Principal.IdentityNotMappedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.SecurityException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。<br/>限定されたシリアル化データ。 |
+> | <xref:System.Security.VerificationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Security.XmlSyntaxException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.ServiceProcess.TimeoutException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Single?displayProperty=nameWithType> | |
-> | <xref:System.StackOverflowException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.StackOverflowException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.String?displayProperty=nameWithType> | |
 > | <xref:System.StringComparer?displayProperty=nameWithType> | |
-> | <xref:System.SystemException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Text.DecoderFallbackException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Text.EncoderFallbackException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Text.RegularExpressions.RegexMatchTimeoutException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.SystemException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Text.DecoderFallbackException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Text.EncoderFallbackException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Text.RegularExpressions.RegexMatchTimeoutException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Text.StringBuilder?displayProperty=nameWithType> | |
-> | <xref:System.Threading.AbandonedMutexException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.BarrierPostPhaseException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.LockRecursionException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.SemaphoreFullException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.SynchronizationLockException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.Tasks.TaskSchedulerException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.ThreadInterruptedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.ThreadStartException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.ThreadStateException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Threading.WaitHandleCannotBeOpenedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Threading.AbandonedMutexException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.BarrierPostPhaseException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.LockRecursionException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.SemaphoreFullException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.SynchronizationLockException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.Tasks.TaskCanceledException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.Tasks.TaskSchedulerException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.ThreadInterruptedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.ThreadStartException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.ThreadStateException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Threading.WaitHandleCannotBeOpenedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.TimeSpan?displayProperty=nameWithType> | |
 > | <xref:System.TimeZoneInfo.AdjustmentRule?displayProperty=nameWithType> | |
 > | <xref:System.TimeZoneInfo?displayProperty=nameWithType> | |
-> | <xref:System.TimeZoneNotFoundException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.TimeoutException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Transactions.TransactionAbortedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Transactions.TransactionException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Transactions.TransactionInDoubtException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Transactions.TransactionManagerCommunicationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Transactions.TransactionPromotionException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.TimeZoneNotFoundException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.TimeoutException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Transactions.TransactionAbortedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Transactions.TransactionException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Transactions.TransactionInDoubtException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Transactions.TransactionManagerCommunicationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Transactions.TransactionPromotionException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Tuple?displayProperty=nameWithType> | |
-> | <xref:System.TypeAccessException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.TypeInitializationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.TypeLoadException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.TypeUnloadedException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.TypeAccessException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.TypeInitializationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.TypeLoadException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.TypeUnloadedException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.UInt16?displayProperty=nameWithType> | |
 > | <xref:System.UInt32?displayProperty=nameWithType> | |
 > | <xref:System.UInt64?displayProperty=nameWithType> | |
 > | <xref:System.UIntPtr?displayProperty=nameWithType> | |
-> | <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.UnauthorizedAccessException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.Uri?displayProperty=nameWithType> | |
-> | <xref:System.UriFormatException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.UriFormatException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 > | <xref:System.ValueTuple?displayProperty=nameWithType> | .NET Framework 4.7 以前のバージョンではシリアル化できません。 |
 > | <xref:System.ValueType?displayProperty=nameWithType> | |
 > | <xref:System.Version?displayProperty=nameWithType> | |
 > | <xref:System.WeakReference%601?displayProperty=nameWithType> | |
 > | <xref:System.WeakReference?displayProperty=nameWithType> | |
-> | <xref:System.Xml.Schema.XmlSchemaException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Xml.Schema.XmlSchemaInferenceException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Xml.Schema.XmlSchemaValidationException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Xml.XPath.XPathException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Xml.XmlException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
-> | <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> | .NET Core 2.0.4 以降。 |
+> | <xref:System.Xml.Schema.XmlSchemaException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Xml.Schema.XmlSchemaInferenceException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Xml.Schema.XmlSchemaValidationException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Xml.XPath.XPathException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Xml.XmlException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Xml.Xsl.XsltCompileException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
+> | <xref:System.Xml.Xsl.XsltException?displayProperty=nameWithType> | NET コア 2.0.4 から始まります。 |
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.Serialization>\
 オブジェクトのシリアル化と逆シリアル化に使用できるクラスが含まれています。
 
-- [XML シリアル化および SOAP シリアル化](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
+- [XML および SOAP シリアル化](../../../docs/standard/serialization/xml-and-soap-serialization.md)\
 共通言語ランタイムに付属している XML シリアル化機構について説明します。
 
-- [セキュリティとシリアル化の](../../../docs/framework/misc/security-and-serialization.md)\
+- [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)\
 シリアル化を実行するコードを記述する際に従う必要がある、安全なコーディングのガイドラインについて説明します。
 
-- [.Net リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
-リモート通信のために .NET Framework で開始されるさまざまな方法について説明します。
+- [NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))\
+リモート通信用の .NET Framework で開始するさまざまな方法について説明します。
 
-- [ASP.NET と Xml Web サービスクライアントを使用して作成された Xml Web サービス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
-ASP.NET を使用して作成された XML Web サービスをプログラミングする方法について説明した記事です。
+- [ASP.NETおよび XML Web サービス クライアントを使用して作成される XML Web サービス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7bkzywba(v=vs.100))\
+ASP.NETを使用して作成された XML Web サービスをプログラミングする方法について説明する記事です。
