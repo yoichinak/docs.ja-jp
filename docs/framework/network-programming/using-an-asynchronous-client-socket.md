@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-ms.openlocfilehash: 22e7c670f93293bd37edcb181c8130cdbe9ceb26
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 748745ca6799005dccdbfcbcc37a8c2a38f2a88e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047059"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180646"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>非同期クライアント ソケットの使用
 ネットワーク操作が完了するまで待機している間、非同期クライアント ソケットはアプリケーションを一時停止しません。 標準の .NET Framework 非同期プログラミング モデルを使用して、1 つのスレッドでネットワーク接続を処理しながら、アプリケーションは元のスレッドで実行を継続します。 ネットワークの使用量が多いアプリケーションや、ネットワーク操作が完了するのを待機してから完了することができないアプリケーションの場合、非同期ソケットが適しています。  
@@ -46,7 +46,7 @@ End Sub 'Connect
   
 ```csharp  
 public static void Connect(EndPoint remoteEP, Socket client) {  
-    client.BeginConnect(remoteEP,   
+    client.BeginConnect(remoteEP,
         new AsyncCallback(ConnectCallback), client );  
   
    connectDone.WaitOne();  
@@ -162,11 +162,11 @@ private static void SendCallback(IAsyncResult ar) {
 ```vb  
 Public Class StateObject  
     ' Client socket.  
-    Public workSocket As Socket = Nothing   
+    Public workSocket As Socket = Nothing
     ' Size of receive buffer.  
     Public BufferSize As Integer = 256  
     ' Receive buffer.  
-    Public buffer(256) As Byte   
+    Public buffer(256) As Byte
     ' Received data string.  
     Public sb As New StringBuilder()  
 End Class 'StateObject  
@@ -226,7 +226,7 @@ private static void Receive(Socket client) {
 ```vb  
 Private Shared Sub ReceiveCallback(ar As IAsyncResult)  
     Try  
-        ' Retrieve the state object and the client socket   
+        ' Retrieve the state object and the client socket
         ' from the asynchronous state object.  
         Dim state As StateObject = CType(ar.AsyncState, StateObject)  
         Dim client As Socket = state.workSocket  
@@ -259,7 +259,7 @@ End Sub 'ReceiveCallback
 ```csharp  
 private static void ReceiveCallback( IAsyncResult ar ) {  
     try {  
-        // Retrieve the state object and the client socket   
+        // Retrieve the state object and the client socket
         // from the asynchronous state object.  
         StateObject state = (StateObject) ar.AsyncState;  
         Socket client = state.workSocket;  
