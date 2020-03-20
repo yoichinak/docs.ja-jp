@@ -2,13 +2,13 @@
 title: ML.NET CLI を使用してモデルのトレーニングを自動化する
 description: ML.NET CLI ツールを使用してコマンドラインから最適なモデルを自動的にトレーニングする方法について説明します。
 ms.date: 12/17/2019
-ms.custom: how-to
-ms.openlocfilehash: ffcdba28fcb73a02f5d4726075588fe3b7789375
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.custom: how-to, mlnet-tooling
+ms.openlocfilehash: 3344ed15266503d4d5c7cd9db0a0596f58a904fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75740121"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79185882"
 ---
 # <a name="automate-model-training-with-the-mlnet-cli"></a>ML.NET CLI を使用してモデルのトレーニングを自動化する
 
@@ -16,14 +16,14 @@ ML.NET CLI は、.NET 開発者のためにモデル生成を自動化します�
 
 (ML.NET AutoML CLI を使用せずに) ML.NET API を単独で使用するには、トレーナー (特定のタスクに対する機械学習アルゴリズムの実装) と、データに適用する一連のデータ変換 (特徴エンジニアリング) を選択する必要があります。 最適なパイプラインはデータセットごとに異なるので、すべての選択肢から最適なアルゴリズムを選択すると、複雑さが増します。 さらに、各アルゴリズムには調整が必要な一連のハイパーパラメーターがあります。 そのため、特徴エンジニアリング、学習アルゴリズム、およびハイパーパラメーターの最適な組み合わせを見つけようとすると、機械学習モデルの最適化に数週間から数か月かかる可能性があります。
 
-ML.NET CLI は、このプロセスを、自動機械学習 (AutoML) を使用して簡略化します。 
+ML.NET CLI は、このプロセスを、自動機械学習 (AutoML) を使用して簡略化します。
 
 > [!NOTE]
 > このトピックは、現在プレビュー段階の ML.NET **CLI** と ML.NET **AutoML** について述べており、内容が変更される場合があります。
 
 ## <a name="what-is-the-mlnet-command-line-interface-cli"></a>ML.NET コマンドライン インターフェイス (CLI) とは
 
-ML.NET CLI は、dotnet グローバル ツールです。 ツールをインストールしたら、機械学習タスクとトレーニング データセットを提供します。その後、ML.NET モデルと、アプリケーションでそのモデルを使用するときに実行する C# コードが生成されます。
+ML.NET CLI は [.NET Core ツール](../core/tools/global-tools.md)です。 ツールをインストールしたら、機械学習タスクとトレーニング データセットを提供します。その後、ML.NET モデルと、アプリケーションでそのモデルを使用するときに実行する C# コードが生成されます。
 
 次の図に示すように、高品質の ML.NET モデル (シリアル化されたモデルの .zip ファイル) と、そのモデルを実行/スコア付けするサンプル C# コードを簡単に生成できます。 さらに、そのモデルを作成/トレーニングする C# コードも生成されるので、その生成された "最適なモデル" に使用されるアルゴリズムと設定を調べ、反復処理することができます。
 

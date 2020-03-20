@@ -2,12 +2,12 @@
 title: dotnet tool install コマンド
 description: dotnet tool install コマンドでは、お使いのコンピューター上に指定された .NET Core ツールをインストールします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 641e6a2753b1cf3bfc334ba2495342f7c42421fc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1e142773d1f981a8dc3b552d5a23d2864cdd82c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156975"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146464"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -20,9 +20,18 @@ ms.locfileid: "78156975"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
-dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
-dotnet tool install <PACKAGE_NAME> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
+dotnet tool install <PACKAGE_NAME> <-g|--global>
+    [--add-source] [--configfile] [--framework]
+    [-v|--verbosity] [--version]
+
+dotnet tool install <PACKAGE_NAME> <--tool-path>
+    [--add-source] [--configfile] [--framework]
+    [-v|--verbosity] [--version]
+
+dotnet tool install <PACKAGE_NAME>
+    [--add-source] [--configfile] [--framework]
+    [-v|--verbosity] [--version]
+
 dotnet tool install <-h|--help>
 ```
 
@@ -116,3 +125,5 @@ dotnet new tool-manifest
 ## <a name="see-also"></a>関連項目
 
 - [.NET Core ツール](global-tools.md)
+- [チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
+- [チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

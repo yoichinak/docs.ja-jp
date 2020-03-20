@@ -15,12 +15,12 @@ helpviewer_keywords:
 - security policy [.NET Framework], modifying
 - manually editing security configuration files
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
-ms.openlocfilehash: b5b5e1872af89417fbad6e95b7a8bee5e9b68925
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 792d89351b3759984b085fd8aee9c3ae8e012c09
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129905"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180412"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (コード アクセス セキュリティ ポリシー ツール)
 ユーザーと管理者は、コード アクセス セキュリティ (CAS) ポリシー ツール (Caspol.exe) を使用して、コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを変更できます。  
@@ -84,8 +84,8 @@ caspol [options]
 |**-allcode**|すべてのコードを指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-appdir**|アプリケーション ディレクトリを指定します。 メンバーシップ条件として **–appdir** を指定する場合は、コードの URL 証拠が、そのコードのアプリケーション ディレクトリ証拠と比較されます。 両方の証拠の値が同じである場合は、このメンバーシップ条件が成立します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-custom**  *xmlfile*|カスタム メンバーシップ条件を追加します。 必須引数の *xmlfile* は、XML シリアル化したカスタム メンバーシップ条件を含む .xml ファイルを指定します。|  
-|**-hash** *hashAlg* { **-hex** *hashValue* &#124; **-file** *assembly_file*}|指定されたアセンブリ ハッシュを持つコードを指定します。 コード グループのメンバーシップ条件としてハッシュを使用するには、ハッシュ値またはアセンブリ ファイルを指定する必要があります。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
-|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string*}|指定されたソフトウェア発行者を持つコードを、証明書ファイル、ファイル上の署名、または X509 証明書の 16 進表示で指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-hash** *hashAlg* { **-hex** *hashValue* &#124; **-file** *assembly_file* }|指定されたアセンブリ ハッシュを持つコードを指定します。 コード グループのメンバーシップ条件としてハッシュを使用するには、ハッシュ値またはアセンブリ ファイルを指定する必要があります。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.HashMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
+|**-pub** { **-cert** *cert_file_name* &#124;<br /><br /> **-file** *signed_file_name* &#124; **-hex**  *hex_string* }|指定されたソフトウェア発行者を持つコードを、証明書ファイル、ファイル上の署名、または X509 証明書の 16 進表示で指定します。 このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.PublisherMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-site** *website*|指定されたサイトがソースであるコードを指定します。 次に例を示します。<br /><br /> `-site** www.proseware.com`<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.SiteMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-strong -file** *file_name* {*name* &#124; **-noname**} {*version* &#124; **-noversion**}|特定の厳密な名前を持つコードを、ファイル名、文字列としてのアセンブリ名、および *major*.*minor*.*build*.*revision* 形式のアセンブリ バージョンで指定します。 次に例を示します。<br /><br /> **-strong -file** myAssembly.exe myAssembly 1.2.3.4<br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.StrongNameMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
 |**-url** *URL*|指定された URL をソースとするコードを指定します。 URL には、`http://` や `ftp://` などのプロトコルを含める必要があります。 さらに、ワイルドカード文字 (\*) を使用して、特定の URL から複数のアセンブリを指定できます。 **注:** 複数の名前を使用して 1 つの URL を識別できるため、URL をメンバーシップ条件として使用する方法は、コードの識別情報を安全に確認できる方法ではありません。 できるだけ厳密な名前メンバーシップ条件、発行元メンバーシップ条件、またはハッシュ メンバーシップ条件を使用してください。 <br /><br /> このメンバーシップ条件の詳細については、「<xref:System.Security.Policy.UrlMembershipCondition?displayProperty=nameWithType>」を参照してください。|  
@@ -100,7 +100,7 @@ caspol [options]
 |**-levelfinal** {**on**&#124;**off**}|**on** に設定すると、追加または変更するコード グループが出現するレベルよりも下にあるポリシー レベルは考慮されなくなります。 通常、このオプションはコンピューター ポリシー レベルで使用されます。 たとえば、このフラグをコンピューター レベルでコード グループに設定し、なんらかのコードがこのコード グループのメンバーシップ条件に適合した場合、Caspol.exe はそのコードのユーザー レベル ポリシーの計算または適用を行いません。|  
 |**-name** "*name*"|**–addgroup** オプションと共に使用した場合、追加するコード グループのスクリプト名を指定します。 **-chggroup** オプションと共に使用した場合、編集するコード グループのスクリプト名を指定します。 引数 *name* を二重引用符で囲む必要があります。 引数 *name* には A-Z、0-9、およびアンダースコア文字だけを含めることができます。また、先頭には数字を使用できません。 コード グループは、数値のラベルではなくこの *name* によって参照できます。 *name* は、スクリプト目的で使用する場合にも便利です。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  セキュリティ ポリシーは 3 種類のポリシー レベル、つまりコンピューター ポリシー、ユーザー ポリシー、エンタープライズ ポリシーによって表現されます。 アセンブリが受信するアクセス許可のセットは、これらの 3 種類のポリシー レベルで許可されるアクセス許可セットの積集合によって決定されます。 それぞれのポリシー レベルは、コード グループの階層で表現されます。 すべてのコード グループは、どのコードをそのグループのメンバーとするのかを決定するためのメンバーシップ条件を持ちます。 名前付きアクセス許可セットも、各コード グループと関連付けられます。 このアクセス許可セットは、メンバーシップ条件を満たすコードに対してランタイムから与えられるアクセス許可を指定します。 コード グループの階層、および関連する名前付きアクセス許可セットによって、各レベルのセキュリティ ポリシーの定義と保守が行われます。 **–user**、 **-customuser**、 **–machine**、 **-enterprise** の各オプションを使用して、セキュリティ ポリシーのレベルを設定できます。  
   
  セキュリティ ポリシーの詳細、およびランタイムがコードに与えるアクセス許可を決定する方法については、「[セキュリティ ポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))」を参照してください。  
@@ -119,7 +119,7 @@ caspol [options]
   
  Caspol.exe が正しく機能するには、**Everything** アクセス許可セットと等価の許可を与えられている必要があります。 Caspol.exe には防御機構があるため、Caspol.exe が動作するために必要なアクセス許可を得られなくなるような方法でポリシーを変更することはできません。 変更を実行しようとすると、Caspol.exe は、要求されたポリシーの変更で Caspol.exe の実行が中断されること、およびポリシーの変更が拒否されることをユーザーに通知します。 特定のコマンドについてこの防御機構をオフにするには、 **–force** オプションを使用します。  
   
-<a name="cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1"></a>   
+<a name="cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1"></a>
 ## <a name="manually-editing-the-security-configuration-files"></a>手動によるセキュリティ構成ファイルの編集  
  3 種類のセキュリティ構成ファイルは、Caspol.exe でサポートされる 3 種類のポリシー レベル、つまりコンピューター ポリシー、指定されたユーザーのポリシー、およびエンタープライズ ポリシーと対応します。 これらのファイルがディスク上に作成されるのは、コンピューター ポリシー、ユーザー ポリシー、またはエンタープライズ ポリシーが Caspol.exe によって変更される場合だけです。 必要な場合は、Caspol.exe の **–reset** オプションを使用して、既定のセキュリティ ポリシーをディスクに保存できます。  
   

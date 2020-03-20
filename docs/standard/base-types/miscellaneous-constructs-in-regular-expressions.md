@@ -11,10 +11,10 @@ helpviewer_keywords:
 - regular expressions, miscellaneous constructs
 ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 ms.openlocfilehash: a43ce44e11a9231dee2961ee02bac745d9ca71cb
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73141604"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>正規表現でのその他の構成体

@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。
 ms.date: 09/20/2019
-ms.openlocfilehash: 540b95beaf00c17812a3b602602504278be69b0e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 0013f621268e2a4f1b916b226d83d18c68445ed1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74429391"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398329"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -319,7 +319,7 @@ static int WriteLinesToFile(IEnumerable<string> lines)
 
 ## <a name="static-local-functions"></a>静的ローカル関数
 
-`static` 修飾子をローカル関数に追加することにより、ローカル関数で外側のスコープの変数がキャプチャ (参照) されないようにすることができます。 それを行うと、`CS8421` "静的ローカル関数は \<variable> への参照を含むことができない" が生成されます。 
+`static` 修飾子をローカル関数に追加することにより、ローカル関数で外側のスコープの変数がキャプチャ (参照) されないようにすることができます。 それを行うと、`CS8421` "静的ローカル関数は \<variable> への参照を含むことができない" が生成されます。
 
 次のコードについて考えてみましょう。 ローカル関数 `LocalFunction` は、外側のスコープ (`M` メソッド) で宣言されている変数 `y` にアクセスしています。 そのため、`LocalFunction` では `static` 修飾子を宣言することはできません。
 
@@ -391,7 +391,7 @@ await foreach (var number in GenerateSequence())
 }
 ```
 
-[非同期ストリームの作成と使用](../tutorials/generate-consume-asynchronous-stream.md)に関するチュートリアルを使用して、自分で非同期ストリームを試すことができます。
+[非同期ストリームの作成と使用](../tutorials/generate-consume-asynchronous-stream.md)に関するチュートリアルを使用して、自分で非同期ストリームを試すことができます。 既定では、ストリーム要素はキャプチャされたコンテキストで処理されます。 コンテキストのキャプチャを無効にする場合は、<xref:System.Threading.Tasks.TaskAsyncEnumerableExtensions.ConfigureAwait%2A?displayProperty=nameWithType> 拡張メソッドを使用します。 同期コンテキストについて、および現在のコンテキストのキャプチャについての詳細は、「[タスク ベースの非同期パターンの利用](../../standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)」を参照してください。
 
 ## <a name="indices-and-ranges"></a>インデックスと範囲
 

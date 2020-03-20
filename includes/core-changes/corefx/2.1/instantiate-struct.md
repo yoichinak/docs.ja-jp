@@ -1,18 +1,18 @@
 ---
-ms.openlocfilehash: dc5f608dc9eb4635e1282a9ca5e15ff1bf7d0e0d
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 711b51c590be149545fda3130148e2bcaef8be4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77449559"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78262586"
 ---
 ### <a name="private-fields-added-to-built-in-struct-types"></a>組み込みの構造体型に追加されたプライベート フィールド
 
-プライベート フィールドが[参照アセンブリ](../../../../docs/standard/assembly/reference-assemblies.md)の組み込み構造体型に追加されました。 その結果、C# では、構造体型は常に、[new 演算子](../../../../docs/csharp/language-reference/operators/new-operator.md)または [default リテラル](../../../../docs/csharp/language-reference/operators/default.md#default-literal)を使用するか、それぞれのプライベート フィールドを初期化してインスタンス化する必要があります。
+プライベート フィールドが[参照アセンブリ](#affected-apis)の[特定の構造体型](../../../../docs/standard/assembly/reference-assemblies.md)に追加されました。 その結果、C# では、それらの構造体型は常に、[new 演算子](../../../../docs/csharp/language-reference/operators/new-operator.md)または [default リテラル](../../../../docs/csharp/language-reference/operators/default.md#default-literal)を使用してインスタンス化する必要があります。
 
 #### <a name="change-description"></a>変更の説明
 
-.NET Core 2.0 およびそれ以前のバージョンでは、一部の組み込み構造体型 (たとえば、<xref:System.ConsoleKeyInfo>) は、C# で `new` 演算子や [default リテラル](../../../../docs/csharp/language-reference/operators/default.md#default-literal)を使用せずにインスタンス化できました。 これは、C# コンパイラーによって使用される[参照アセンブリ](../../../../docs/standard/assembly/reference-assemblies.md)に、構造体のプライベート フィールドが含まれていなかったためです。 .NET Core 2.1 以降、.NET 構造体型のすべてのプライベート フィールドが参照アセンブリに追加されます。
+.NET Core 2.0 およびそれ以前のバージョンでは、一部の提供されている構造体型 (たとえば、<xref:System.ConsoleKeyInfo>) を、C# で `new` 演算子や [default リテラル](../../../../docs/csharp/language-reference/operators/default.md#default-literal)を使用せずにインスタンス化できました。 これは、C# コンパイラーによって使用される[参照アセンブリ](../../../../docs/standard/assembly/reference-assemblies.md)に、構造体のプライベート フィールドが含まれていなかったためです。 .NET Core 2.1 以降、.NET 構造体型のすべてのプライベート フィールドが参照アセンブリに追加されます。
 
 たとえば、次の C# コードは .NET Core 2.0 ではコンパイルされますが、.NET Core 2.1 ではされません。
 
@@ -49,16 +49,6 @@ ConsoleKeyInfo key = default;    // Struct type.
 
 if (key.ToString() == "y")
     Console.WriteLine("Yes!");
-```
-
-```csharp
-ConsoleKeyInfo[] keys = new ConsoleKeyInfo[5];    // Array of structs.
-
-for (int i = 0; i < keys.Length; i++)
-{
-    // Initialize each array element with the new operator.
-    keys[i] = new ConsoleKeyInfo();
-}
 ```
 
 #### <a name="category"></a>カテゴリ

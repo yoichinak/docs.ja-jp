@@ -5,10 +5,10 @@ ms.technology: csharp-fundamentals
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
 ms.openlocfilehash: 23d193faf9702628698fe558f6667aeb130e8916
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "73100661"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>タプルとその他の型の分解

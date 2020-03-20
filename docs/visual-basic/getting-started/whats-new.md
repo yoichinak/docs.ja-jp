@@ -8,12 +8,12 @@ helpviewer_keywords:
 - what's new [Visual Basic]
 - Visual Basic, what's new
 ms.assetid: d7e97396-7f42-4873-a81c-4ebcc4b6ca02
-ms.openlocfilehash: 45763504c2d25596b0adfb4b8a0236b332d89e8c
-ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
+ms.openlocfilehash: 3ab468f6c68429a3a5cb8706152288afae520df3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74802053"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79187142"
 ---
 # <a name="whats-new-for-visual-basic"></a>Visual Basic の新機能
 
@@ -186,7 +186,7 @@ Visual Basic はタプルに対応しているため、簡単にタプルを定�
 
 C# 7.0 以降の C# は参照戻り値に対応しています。 つまり、メソッドを呼び出して、参照により返された値を受け取るとき、参照の値が変わることがあります。 Visual Basic の場合、参照戻り値でメソッドを作成することはできませんが、参照戻り値を利用したり、変更したりすることはできます。
 
-たとえば、C# で記述された次の `Sentence` クラスには、指定された部分文字列で始まる文の次の単語を探す `FindNext` メソッドが含まれています。 文字列は参照戻り値として返され、参照によりメソッドに渡される `Boolean` 変数は検索が成功したかどうかを示します。 つまり、呼び出すことで戻り値を読めるだけでなく、変更することもできます。その変更は `Sentence` クラスで反映されます。
+たとえば、C# で記述された次の `Sentence` クラスには、指定された部分文字列で始まる文の次の単語を探す `FindNext` メソッドが含まれています。 文字列は参照戻り値として返され、参照によりメソッドに渡される `Boolean` 変数は検索が成功したかどうかを示します。 これは、返された値を読み取ることに加えて、呼び出し元がそれを変更することもでき、その変更が `Sentence` クラスに反映されることを意味します。
 
 [!code-csharp[Ref-Return](../../../samples/snippets/visualbasic/getting-started/ref-returns.cs)]
 

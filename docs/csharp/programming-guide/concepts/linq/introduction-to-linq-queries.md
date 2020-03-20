@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 74a6f2e1e9296551f4faf73a905b49d3e2e3687e
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 7fbdfa8656e3c4832226370dc6efe56964e14934
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75635718"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79168506"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ クエリの概要 (C#)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは通常、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、データ ソースの種類に合わせてさまざまな言語が開発されてきました。 このため、開発者は、サポートする必要のあるデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。 LINQ は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 LINQ クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、LINQ プロバイダーを利用できる XML ドキュメント、SQL データベース、ADO.NET データセット、.NET コレクション、その他の任意の形式のデータを照会したり変換したりできます。  
@@ -58,10 +58,10 @@ IQueryable<Customer> custQuery =
 > [!NOTE]
 > 非ジェネリック <xref:System.Collections.IEnumerable> インターフェイスをサポートする <xref:System.Collections.ArrayList> などの型も、LINQ データ ソースとして使用できます。 詳細については、「[LINQ を使用して ArrayList にクエリを実行する方法 (C#)](./how-to-query-an-arraylist-with-linq.md)」を参照してください。  
   
-## <a name="query"></a> クエリ  
+## <a name="the-query"></a><a name="query"></a> クエリ  
  クエリでは、データ ソースからどのような情報を取得するかを指定します。 オプションとして、情報が返される前に、その情報を並べ替え、グループ化し、構造化する方法を指定することもできます。 クエリはクエリ変数に格納され、クエリ式で初期化されます。 クエリを簡単に記述できるようにするために、C# に新しいクエリ構文が導入されています。  
   
- 前の例のクエリでは、整数の配列からすべての偶数が返されます。 クエリ式には、`from`、`where`、および `select` の 3 つの句が含まれています (SQL に詳しい方は、句の順番が SQL での順番とは逆になっていることに気付かれると思います)。`from` 句はデータ ソースを指定し、`where` 句はフィルターを適用し、`select` 句は返される要素の種類を指定します。 これらのクエリ句およびその他のクエリ句の詳細については、「[LINQ クエリ式](../../../linq/index.md)」セクションで説明しています。 今の段階で重要な点は、LINQ では、クエリ変数自体は何も処理を行わず、データを返さないという点です。 この時点では、後でクエリが実行されるときに結果の生成に必要となる情報が格納されるだけです。 背後でどのようにクエリが構築されるかについては、「[標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)」をご覧ください。  
+ 前の例のクエリでは、整数の配列からすべての偶数が返されます。 クエリ式には、`from`、`where`、および `select` の 3 つの句が含まれています (SQL に詳しい方は、句の順番が SQL での順番とは逆になっていることに気付かれると思います)。`from` 句はデータ ソースを指定し、`where` 句はフィルターを適用し、`select` 句は返される要素の種類を指定します。 これらのクエリ句およびその他のクエリ句の詳細については、「[統合言語クエリ (LINQ)](../../../linq/index.md)」セクションを参照してください。 今の段階で重要な点は、LINQ では、クエリ変数自体は何も処理を行わず、データを返さないという点です。 この時点では、後でクエリが実行されるときに結果の生成に必要となる情報が格納されるだけです。 背後でどのようにクエリが構築されるかについては、「[標準クエリ演算子の概要 (C#)](./standard-query-operators-overview.md)」をご覧ください。  
   
 > [!NOTE]
 > クエリは、メソッド構文を使用して表すこともできます。 詳細については、「[LINQ でのクエリ構文とメソッド構文](./query-syntax-and-method-syntax-in-linq.md)」を参照してください。  
@@ -90,8 +90,8 @@ IQueryable<Customer> custQuery =
   
 ## <a name="see-also"></a>関連項目
 
-- [C# の LINQ の概要](/dotnet/csharp/programming-guide/concepts/linq/)
+- [C# の LINQ の概要](index.md)
 - [チュートリアル: C# でのクエリの作成](./walkthrough-writing-queries-linq.md)
-- [LINQ クエリ式](../../../linq/index.md)
+- [統合言語クエリ (LINQ)](../../../linq/index.md)
 - [foreach、in](../../../language-reference/keywords/foreach-in.md)
 - [クエリ キーワード (LINQ)](../../../language-reference/keywords/query-keywords.md)

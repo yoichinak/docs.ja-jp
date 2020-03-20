@@ -2,12 +2,12 @@
 title: dotnet tool list コマンド
 description: dotnet tool list コマンドでは、お使いのコンピューターにインストールされている .NET Core ツールの一覧を表示します。
 ms.date: 02/14/2020
-ms.openlocfilehash: f231dcfe64a925f75f948d508e7a2d83befd9a00
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: def3c345a775e5a65ec3d37718d207c80ca7ceee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156986"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847873"
 ---
 # <a name="dotnet-tool-list"></a>dotnet tool list
 
@@ -21,8 +21,11 @@ ms.locfileid: "78156986"
 
 ```dotnetcli
 dotnet tool list <-g|--global>
+
 dotnet tool list <--tool-path>
+
 dotnet tool list
+
 dotnet tool list <-h|--help>
 ```
 
@@ -71,3 +74,5 @@ dotnet tool list <-h|--help>
 ## <a name="see-also"></a>関連項目
 
 - [.NET Core ツール](global-tools.md)
+- [チュートリアル: .NET Core CLI を使って .NET Core グローバル ツールをインストールして使用する](global-tools-how-to-use.md)
+- [チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

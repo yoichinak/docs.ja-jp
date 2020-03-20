@@ -1,14 +1,14 @@
 ---
 ms.openlocfilehash: db1d09c8c9e606b5327a42977a74a74703282d84
-ms.sourcegitcommit: 79a2d6a07ba4ed08979819666a0ee6927bbf1b01
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "74568100"
 ---
 ### <a name="net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences"></a>.NET Core 3.0 は不正な形式の UTF-8 バイト シーケンスを置換するときに Unicode のベスト プラクティスに従う
 
-<xref:System.Text.UTF8Encoding> クラスで、バイトを文字にコード変換する操作中に不正な形式の UTF-8 バイトのシーケンスが検出されるとき、そのシーケンスは、出力文字列で '�' (U+FFFD REPLACEMENT CHARACTER) 文字に置き換えられます。 .NET Core 3.0 では、コード変換の操作中にこの置換を実行するための Unicode ベスト プラクティスに従うことで、以前のバージョンの .NET Core と .NET Framework との差別化が行われています。
+<xref:System.Text.UTF8Encoding> クラスで、バイトから文字へのコード変換中に不適切な形式の UTF-8 バイト シーケンスが検出された場合、そのシーケンスは出力文字列内で '�' (U+FFFD REPLACEMENT CHARACTER) 文字に置き換えられます。 .NET Core 3.0 では、コード変換の操作中にこの置換を実行するための Unicode ベスト プラクティスに従うことで、以前のバージョンの .NET Core と .NET Framework との差別化が行われています。
 
 これは、新しい <xref:System.Text.Unicode.Utf8?displayProperty=nameWithType> 型および <xref:System.Text.Rune?displayProperty=nameWithType> 型の使用を含め、.NET 全体での UTF-8 の処理を向上させようとする、より大きな取り組みの一環です。 <xref:System.Text.UTF8Encoding> 型では、新しく導入された型と一致する出力が生成されるよう、エラー処理のメカニズムが向上しています。
 
@@ -30,7 +30,7 @@ ms.locfileid: "74568100"
 
 3.0
 
-#### <a name="recommended-action"></a>推奨される操作
+#### <a name="recommended-action"></a>推奨アクション
 
 開発者側では、何も行う必要はありません。
 

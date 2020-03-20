@@ -14,12 +14,12 @@ ms.prod:
 - PRODUCT VALUE
 helpviewer_keywords:
 - OFFLINE BOOK INDEX ENTRIES
-ms.openlocfilehash: ed9fd55fd84606d2083e0576581391331769a1e6
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 1ddeeaca4645bd4788f03018643a0bc2682c731a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089277"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79186908"
 ---
 # <a name="metadata-and-markdown-template"></a>メタデータとマークダウン テンプレート
 
@@ -36,7 +36,7 @@ ms.locfileid: "74089277"
 - 値 (タイトルなど) にコロンが含まれていると、メタデータ パーサーが中断します。 この場合は、タイトルを二重引用符で囲みます (例: `title: "Writing .NET Core console apps: An advanced step-by-step guide"`)。
 - **title**:検索エンジンの結果に表示されます。 タイトルは H1 見出しのタイトルと同一でなくてもかまいません。60 文字以下にする必要があります。
 - **説明**:記事の内容を要約します。 これは通常、検索結果ページに表示されますが、検索ランキングには使用されません。 長さは、スペースを含め 115 から 145 文字にする必要があります。
-- **author** および **ms.author**:"author" フィールドには、作成者のエイリアスではなく、**GitHub ユーザー名**を含める必要があります。  一方で、**ms.author** フィールドには、Microsoft エイリアスが記載され、記事の管理者が示されている必要があります。
+- **author** および **ms.author**:"author" フィールドには、作成者のエイリアスではなく、**GitHub ユーザー名**を含める必要があります。 一方で、**ms.author** フィールドには、Microsoft エイリアスが記載され、記事の管理者が示されている必要があります。
 - **ms.topic**:トピックの種類です。 最も一般的な値は `conceptual` であり、グローバル レベルに設定されています。 使用されるその他の一般的な値は、`tutorial`、`overview`、`reference` です。
 - **dev_langs** では、トピックに表示される言語フィルターが定義されます。 「[サポートされる言語](#supported-languages)」セクションに、サポートされる値のリストが表示されます。 トピックの中に複数のプログラミング言語がある場合にのみ設定が必要です。 通常、コンテンツ内にあるこの値については、`csharp`、`vb`、`fsharp`、`cpp` のみを使用します。
 - **ms.prod**:BI の目的に使用される製品 ID です。 これらは通常グローバル レベルに設定されているため、各記事のメタデータ ブロックには、通常は表示されません。
@@ -276,7 +276,7 @@ UID に特殊文字 \`、\# または \* が含まれる場合、UID 値はそ�
 
 #### <a name="supported-languages"></a>サポートされる言語
 
-|name|マークダウン ラベル|
+|名前|マークダウン ラベル|
 |-----|-------|
 |.NET コンソール|dotnetcli|
 |ASP.NET (C#)|aspx-csharp|

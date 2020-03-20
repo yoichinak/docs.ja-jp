@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 469be53e14c42775f21ef1ef815becd5cad03a97
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: e5da9a98e8725880223df3737dc60f773db8d20e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75336720"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79141134"
 ---
 # <a name="contributing"></a>コントリビューション
 
@@ -25,6 +25,10 @@ ms.locfileid: "75336720"
 - [コードのサンプルとスニペット](https://github.com/dotnet/samples) このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
 - [.NET API リファレンス](https://github.com/dotnet/dotnet-api-docs) このリポジトリの問題とタスクについては、[dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) で追跡されます。
 - [.NET Compiler Platform SDK リファレンス](https://github.com/dotnet/roslyn-api-docs) このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
+
+### <a name="contributing-to-international-content"></a>海外のコンテンツへの投稿
+
+現在、機械翻訳 (MT) コンテンツへの投稿は受け付けておりません。 MT コンテンツの品質を向上させるため、ニューラル MT エンジンに移行しました。 人間が翻訳した (HT) コンテンツへの投稿は受け付けています。これは、ニューラル MT エンジンをトレーニングするために使用されるため、ご協力ください。 時間の経過と共に、HT コンテンツへの投稿により、HT と MT の両方の品質が向上します。 MT トピックには、トピックの一部が MT であることを示す免責事項が含まれています。また、 **[編集]** ボタンは無効になっているため、表示されません。
 
 ## <a name="dos-and-donts"></a>注意事項
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 25c74317ce9033ef10735ee0087f275632b6bd17
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75715185"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398131"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
@@ -41,7 +41,7 @@ ms.locfileid: "75715185"
 ```csharp
 class CS0663_Example
 {
-    // Compiler error CS0663: "Cannot define overloaded 
+    // Compiler error CS0663: "Cannot define overloaded
     // methods that differ only on ref and out".
     public void SampleMethod(out int i) { }
     public void SampleMethod(ref int i) { }
@@ -115,9 +115,11 @@ ref VeryLargeStruct reflocal = ref veryLargeStruct;
 
 C#7.3 以降、`foreach` ステートメントの反復変数を ref ローカルまたは ref readonly ローカル変数にすることができます。 詳細については、[foreach ステートメント](foreach-in.md)に関する記事を参照してください。
 
+また、C# 7.3 以降では、[ref 代入演算子](../operators/assignment-operator.md#ref-assignment-operator)を使用して、ref ローカルまたは ref readonly ローカル変数を再割り当てできます。
+
 ## <a name="ref-readonly-locals"></a>ref readonly ローカル
 
-ref readonly ローカルは、その署名に `ref readonly` があり、`return ref` を使用するメソッドまたはプロパティにより返される値の参照に使用されます。 `ref readonly` 変数は `ref` ローカル変数のプロパティと `readonly` 変数の組み合わせです。それに割り当てられたストレージのエイリアスであり、変更できません。 
+ref readonly ローカルは、その署名に `ref readonly` があり、`return ref` を使用するメソッドまたはプロパティにより返される値の参照に使用されます。 `ref readonly` 変数は `ref` ローカル変数のプロパティと `readonly` 変数の組み合わせです。それに割り当てられたストレージのエイリアスであり、変更できません。
 
 ## <a name="a-ref-returns-and-ref-locals-example"></a>ref 戻り値と ref ローカル変数の使用例
 
@@ -137,7 +139,7 @@ ref readonly ローカルは、その署名に `ref readonly` があり、`retur
 
 - `ref struct` はボックス化できません。 `object` 型、`dynamic` 型、またはあらゆるインターフェイス型の変数には、`ref struct` 型を割り当てることができません。
 - `ref struct` 型では、インターフェイスを実装できません。
-- クラスまたは通常構造体のフィールド メンバーとして `ref struct` を宣言することはできません。 これには、コンパイラで生成されたバッキング フィールドを作成する、自動実装プロパティの宣言が含まれます。 
+- クラスまたは通常構造体のフィールド メンバーとして `ref struct` を宣言することはできません。 これには、コンパイラで生成されたバッキング フィールドを作成する、自動実装プロパティの宣言が含まれます。
 - 非同期メソッドでは、`ref struct` 型のローカル変数を宣言できません。 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、`Task` のような型を返す同期メソッドで宣言できます。
 - 反復子で `ref struct` ローカル変数を宣言することはできません。
 - ラムダ式またはローカル関数で `ref struct` 変数をキャプチャすることはできません。
@@ -155,7 +157,6 @@ ref readonly ローカルは、その署名に `ref readonly` があり、`retur
 - [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)
 - [ref 戻り値と ref ローカル変数](../../programming-guide/classes-and-structs/ref-returns.md)
 - [ref 条件式](../operators/conditional-operator.md#conditional-ref-expression)
-- [ref 代入演算子](../operators/assignment-operator.md#ref-assignment-operator)
 - [パラメーターの引き渡し](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [メソッド パラメーター](method-parameters.md)
 - [C# リファレンス](../index.md)

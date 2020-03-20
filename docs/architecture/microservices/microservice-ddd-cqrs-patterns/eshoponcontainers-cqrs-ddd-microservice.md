@@ -1,13 +1,13 @@
 ---
 title: eShopOnContainers で DDD マイクロサービスの CQRS と CQS のアプローチを適用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | CQRS を eShopOnContainers の注文マイクロサービスに実装する方法を理解する。
-ms.date: 10/08/2018
-ms.openlocfilehash: 0380e759595e8a159e89f858a5ced4dacfa4e9b4
-ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
+ms.date: 03/03/2020
+ms.openlocfilehash: 16fe46189a5b43591adebbb764d4acef2f7efbfb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68674129"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "78847155"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers の DDD マイクロサービスに CQRS および CQS のアプローチを適用する
 
@@ -23,7 +23,7 @@ eShopOnContainers 参照アプリケーションの注文マイクロサービ�
 
 そうしたパターンの 1 つは集計パターンです。これについては、後のセクションでさらに説明します。 簡単に言うと、集約パターンでは、多数のドメイン オブジェクトがドメイン内で互いに持つリレーションシップの結果として、1 つの単位として処理されます。 このパターンを採用しても、クエリに利点があるとは限りません。クエリ ロジックの複雑さが増す可能性があります。 読み取り専用クエリの場合、複数のオブジェクトを単一の集計として扱う利点はありません。 複雑さが増すだけです。
 
-図 7-2 に示されているように、このガイドでは、DDD パターンをマイクロサービスのトランザクション/更新領域 (つまり、コマンドによってトリガーされる部分) にのみ使用することを提案しています。 クエリはよりシンプルなアプローチに従うことができ、CQRS アプローチに従ってコマンドから分離する必要があります。
+前のセクションの図 7-2 に示されているように、このガイドでは、DDD パターンをマイクロサービスのトランザクション/更新領域 (つまり、コマンドによってトリガーされる部分) にのみ使用することを提案しています。 クエリはよりシンプルなアプローチに従うことができ、CQRS アプローチに従ってコマンドから分離する必要があります。
 
 「クエリ サイド」を実装する場合、EF Core、AutoMapper プロジェクション、ストアド プロシージャ、ビュー、具体化されたビュー、マイクロ ORM など本格的な ORM の多様なアプローチから選択できます。
 

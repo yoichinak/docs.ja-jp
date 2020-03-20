@@ -16,10 +16,10 @@ helpviewer_keywords:
 - components [.NET Framework], metadata
 ms.assetid: 3dd13c5d-a508-455b-8dce-0a852882a5a7
 ms.openlocfilehash: a4f4c0e1af379d31c5b478472780d5c7de813bf6
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73121934"
 ---
 # <a name="metadata-and-self-describing-components"></a>メタデータと自己言及的なコンポーネント
@@ -157,11 +157,11 @@ JIT コンパイラはこのメソッド全体の MSIL を読み取って詳細�
 
 **メソッドが記述されているメタデータ トークンによって参照される、** MethodDef`Add` テーブルの一部の例を次の表に示します。 このアセンブリにはほかにもメタデータ テーブルが存在し、それぞれ独自の値を持っていますが、ここでは、このテーブルだけを参照します。
 
-|行|Relative Virtual Address (RVA)|ImplFlags|フラグ|name<br /><br /> (文字列ヒープを指す)|Signature (BLOB ヒープを指す)|
+|行|Relative Virtual Address (RVA)|ImplFlags|フラグ|名前<br /><br /> (文字列ヒープを指す)|Signature (BLOB ヒープを指す)|
 |---------|--------------------------------------|---------------|-----------|-----------------------------------------|----------------------------------------|
 |1|0x00002050|IL<br /><br /> マネージド|Public<br /><br /> ReuseSlot<br /><br /> SpecialName<br /><br /> RTSpecialName<br /><br /> .ctor|.ctor (コンストラクター)||
-|2|0x00002058|IL<br /><br /> マネージド|Public<br /><br /> スタティック<br /><br /> ReuseSlot|メイン|String|
-|3|0x0000208c|IL<br /><br /> マネージド|Public<br /><br /> スタティック<br /><br /> ReuseSlot|追加|int, int, int|
+|2|0x00002058|IL<br /><br /> マネージド|Public<br /><br /> Static<br /><br /> ReuseSlot|メイン|String|
+|3|0x0000208c|IL<br /><br /> マネージド|Public<br /><br /> Static<br /><br /> ReuseSlot|追加|int, int, int|
 
 このテーブルの各列には、コードについての重要な情報が格納されています。 ランタイムは **RVA** 列を使用して、このメソッドを定義する MSIL の開始メモリ アドレスを計算します。 **ImplFlags** および **Flags** 列には、このメソッドを記述するビットマスク (たとえば、メソッドがパブリックかプライベートかを記述するビットマスク) が格納されています。 **Name** 列は、文字列ヒープからメソッドの名前へのインデックスとなります。 **Signature** 列は、BLOB ヒープ内のメソッドのシグネチャ定義へのインデックスとなります。
 

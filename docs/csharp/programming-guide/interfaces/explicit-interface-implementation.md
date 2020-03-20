@@ -5,12 +5,12 @@ helpviewer_keywords:
 - explicit interfaces [C#]
 - interfaces [C#], explicit
 ms.assetid: 181c901f-0d4c-4f29-97fc-895079617bf2
-ms.openlocfilehash: c6f1f849e0d4e831802b4c9b8b4bc3887363a34c
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: ea32a279b7c464174a7fada5ef93ccf62ef39884
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628151"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167674"
 ---
 # <a name="explicit-interface-implementation-c-programming-guide"></a>明示的なインターフェイスの実装 (C# プログラミング ガイド)
 
@@ -34,7 +34,7 @@ ms.locfileid: "77628151"
 
 [!code-csharp[NameCollisions](~/samples/snippets/csharp/interfaces/ExplicitImplementation.cs#NameCollision)]
 
-クラスでインターフェイスからメソッド実装が継承される場合、そのメソッドにはインターフェイス型の参照を利用する方法でのみアクセスできます。 継承したメンバーは、パブリック インターフェイスの一部として表示されません。 次のサンプルでは、インターフェイス メソッドの既定の実装が定義されます。
+[C# 8.0](../../whats-new/csharp-8.md#default-interface-methods) 以降では、インターフェイスで宣言されたメンバーの実装を定義できます。 クラスでインターフェイスからメソッド実装が継承される場合、そのメソッドにはインターフェイス型の参照を利用する方法でのみアクセスできます。 継承したメンバーは、パブリック インターフェイスの一部として表示されません。 次のサンプルでは、インターフェイス メソッドの既定の実装が定義されます。
 
 [!code-csharp[NameCollisions](~/samples/snippets/csharp/interfaces/ExplicitImplementation.cs#DefaultImplementation)]
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 32784f7d4b9e3a93eb7f81b4829b39c1a06ef949
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: 54ace52fc6a8f4614c1f762b65453979bcb92c7a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920393"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79397873"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -43,7 +43,7 @@ ms.locfileid: "76920393"
 
 ### <a name="new-cli-commands"></a>新しい CLI コマンド
 
-[`DotnetCliToolReference`](../tools/extensibility.md) を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。 それらのツールを以下に示します。
+`DotnetCliToolReference` を使用してプロジェクト単位でのみ入手可能であった複数のツールを .NET Core SDK の一部として入手できるようになりました。 それらのツールを以下に示します。
 
 - `dotnet watch` は、ファイルの変更を待機してから、指定された一連のコマンドを実行するファイル システム ウォッチャーを提供します。 たとえば、次のコマンドは現在のプロジェクト内のファイルが変更されるたびにプロジェクトを自動的にリビルドして、詳細な出力を生成します。
 
@@ -65,7 +65,7 @@ ms.locfileid: "76920393"
 
 ### <a name="global-tools"></a>グローバル ツール
 
-.NET Core 2.1 では、*グローバル ツール* (コマンドラインからグローバルに使用できるカスタム ツール) がサポートされます。 以前のバージョンの .NET Core の拡張モデルでは、[`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools) を使用してカスタム ツールをプロジェクト単位で入手することのみ可能でした。
+.NET Core 2.1 では、*グローバル ツール* (コマンドラインからグローバルに使用できるカスタム ツール) がサポートされます。 以前のバージョンの .NET Core の拡張モデルでは、`DotnetCliToolReference` を使用してカスタム ツールをプロジェクト単位で入手することのみ可能でした。
 
 グローバル ツールをインストールするには、[dotnet tool install](../tools/dotnet-tool-install.md) コマンドを使用します。 次に例を示します。
 
@@ -177,17 +177,17 @@ JIT コンパイラで実行される重要なタスクの 1 つはコード実�
 
 次の例では、<xref:System.Span%601> および <xref:System.Memory%601> インスタンスを使用して配列の 10 個の要素を仮想的に表示します。
 
-[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/program.cs)]
 
-[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
+[!code-vb[Memory\<T>](~/samples/snippets/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 圧縮
 
 .NET Core 2.1 には、Brotli 圧縮と展開のサポートが追加されています。 Brotli は、[RFC 7932](https://www.ietf.org/rfc/rfc7932.txt) で定義されており、ほとんどの Web ブラウザーと主要な Web サーバーでサポートされている汎用の無損失圧縮アルゴリズムです。 ストリーム ベースの <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> クラスまたは高性能なスパン ベースの <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> クラスと <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> クラスを使用できます。 次の例は、<xref:System.IO.Compression.BrotliStream> クラスによる圧縮を示しています。
 
-[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/csharp/brotli.cs#1)]
 
-[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
+[!code-vb[Brotli compression](~/samples/snippets/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> の動作は、<xref:System.IO.Compression.DeflateStream> および <xref:System.IO.Compression.GZipStream> と同じです。そのため、これらの API を呼び出すコードを簡単に <xref:System.IO.Compression.BrotliStream> に変換できます。
 
@@ -244,6 +244,10 @@ AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", False)
 Windows では、ネイティブ実装に依存する <xref:System.Net.Http.WinHttpHandler?displayProperty=nameWithType> を使用するか、または <xref:System.Net.Http.HttpClient> コンストラクターにクラスのインスタンスを渡すことにより <xref:System.Net.Http.SocketsHttpHandler> クラスを使用することもできます。
 
 Linux と macOS では、<xref:System.Net.Http.HttpClient> をプロセス単位でのみ構成できます。 Linux で古い <xref:System.Net.Http.HttpClient> 実装を使用する場合は、[libcurl](https://curl.haxx.se/libcurl/) を配置する必要があります (これは .NET Core 2.0 と共にインストールされています)。
+
+### <a name="breaking-changes"></a>互換性に影響する変更
+
+重大な変更の詳細については、「[バージョン 2.0 から 2.1 への移行の破壊的変更](../compatibility/2.0-2.1.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

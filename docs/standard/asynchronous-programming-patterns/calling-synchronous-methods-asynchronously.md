@@ -21,10 +21,10 @@ helpviewer_keywords:
 - status information [.NET Framework], asynchronous operations
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 ms.openlocfilehash: 06df584f0120fbd4978e18647854a3ee844a2095
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73105125"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>同期メソッドの非同期呼び出し

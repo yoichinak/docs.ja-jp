@@ -13,10 +13,10 @@ helpviewer_keywords:
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
 ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73972114"
 ---
 # <a name="regular-expression-options"></a>正規表現のオプション

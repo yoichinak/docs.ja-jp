@@ -38,11 +38,11 @@ helpviewer_keywords:
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132856"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79398767"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -87,12 +87,12 @@ ms.locfileid: "73132856"
 |カテゴリ|クラス名|説明|Visual Basic のデータ型|C# のデータ型|C++/CLI のデータ型|F# のデータ型|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |整数型|<xref:System.Byte>|8 ビット符号なし整数。|**Byte**|**byte**|**unsigned char**|**byte**|  
-||<xref:System.SByte>|8 ビット符号付き整数。<br /><br /> 非 CLS 準拠|**SByte**|**sbyte**|**char**<br /> または<br /> **signed** **char**|**sbyte**|  
+||<xref:System.SByte>|8 ビット符号付き整数。<br /><br /> 非 CLS 準拠|**SByte**|**sbyte**|**char**<br /> \- または -<br /> **signed** **char**|**sbyte**|  
 ||<xref:System.Int16>|16 ビット符号付き整数。|**Short**|**short**|**short**|**int16**|  
-||<xref:System.Int32>|32 ビット符号付き整数。|**Integer**|**int**|**int**<br /><br /> または<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|32 ビット符号付き整数。|**Integer**|**int**|**int**<br /><br /> \- または -<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|64 ビット符号付き整数。|**Long**|**long**|**__int64**|**int64**|  
 ||<xref:System.UInt16>|16 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**UShort**|**ushort**|**unsigned short**|**uint16**|  
-||<xref:System.UInt32>|32 ビット符号なし整数<br /><br /> 非 CLS 準拠|**UInteger**|**uint**|**unsigned int**<br /> または<br /> **unsigned long**|**uint32**|  
+||<xref:System.UInt32>|32 ビット符号なし整数<br /><br /> 非 CLS 準拠|**UInteger**|**uint**|**unsigned int**<br /> \- または -<br /> **unsigned long**|**uint32**|  
 ||<xref:System.UInt64>|64 ビット符号なし整数。<br /><br /> 非 CLS 準拠|**ULong**|**ulong**|**unsigned __int64**|**uint64**|  
 |浮動小数点数|<xref:System.Single>|単精度 (32 ビット) 浮動小数点数|**Single**|**float**|**float**|**float32**<br> or<br>**single**|  
 ||<xref:System.Double>|倍精度 (64 ビット) 浮動小数点数|**Double**|**double**|**double**|**float**<br> or <br> **double**|  

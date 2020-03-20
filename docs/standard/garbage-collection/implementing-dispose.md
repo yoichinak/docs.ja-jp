@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Dispose method
 - garbage collection, Dispose method
 ms.assetid: eb4e1af0-3b48-4fbc-ad4e-fc2f64138bf9
-ms.openlocfilehash: a7e03a833886a1486e0dc081d6ef059791a464b5
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: f3d3269ccf56954f963762503d2bc1c53b9e6b83
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78156336"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "78238989"
 ---
 # <a name="implementing-a-dispose-method"></a>Dispose メソッドの実装
 
@@ -33,7 +33,7 @@ Dispose パターンには 2 種類あります。
   
 <xref:System.IDisposable.Dispose%2A> メソッドが複数回呼び出される場合でも、例外をスローすることなく呼び出されるようにして、リソースが常に適切にクリーンアップされるようにする必要があります。  
   
-<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> メソッドのコード例では、再利用するオブジェクトのメンバーがまだ実行中の場合でも、ガベージ コレクションがファイナライザーを実行しようとします。 長い <xref:System.GC.KeepAlive%2A> メソッドの最後に、<xref:System.IDisposable.Dispose%2A> メソッドを呼び出すことをお勧めします。  
+<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> メソッドに関して提供されたコード例では、オブジェクトまたはそのメンバーへのアンマネージ参照がまだ使用中であるにも関わらず、ガベージ コレクションによりファイナライザーがどのように実行される可能性があるのかを示しています。 現在のルーチンの開始時点からこのメソッドが呼び出される時点まで、<xref:System.GC.KeepAlive%2A?displayProperty=nameWithType> を利用してそのオブジェクトをガベージ コレクションの対象から外すことは理にかなっていると考えられます。
   
 <a name="Dispose2"></a>
 ## <a name="dispose-and-disposeboolean"></a>Dispose() と Dispose(Boolean)  

@@ -10,16 +10,16 @@ helpviewer_keywords:
 - operating systems supported
 - hardware requirements
 ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
-ms.openlocfilehash: f853663bef4dd0de7ac61e706dedf8c6a19b5b51
-ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
+ms.openlocfilehash: 6f67d01b4af4a72fb09e5f2aa225e226e268eee2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/29/2019
-ms.locfileid: "75545012"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79181582"
 ---
 # <a name="net-framework-system-requirements"></a>.NET Framework のシステム要件
 
-このトピックの表では、次のバージョンの .NET Framework のハードウェア、オペレーティング システム、およびソフトウェアの要件を示します。
+この記事の表では、次のバージョンの .NET Framework のハードウェア、オペレーティング システム、およびソフトウェアの要件を示します。
 
 - .NET Framework 4.5 とそのポイント リリース (4.5.1 と 4.5.2)。
 - .NET Framework 4.6 とそのポイント リリース (4.6.1 と 4.6.2)。
@@ -94,7 +94,7 @@ ms.locfileid: "75545012"
 | Windows Server 2008 R2 SP1|64 ビット | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6<br /><br /> .NET Framework 4.6.1<br /><br /> .NET Framework 4.6.2<br /><br />.NET Framework 4.7<br/><br/>.NET Framework 4.7.1<br/><br/>.NET Framework 4.7.2<br/><br/>.NET Framework 4.8 |
 | Windows Server 2008 SP2|32 ビットおよび 64 ビット | -- | .NET Framework 4<br /><br /> .NET Framework 4.5<br /><br /> .NET Framework 4.5.1<br /><br /> .NET Framework 4.5.2<br /><br /> .NET Framework 4.6 |
 
- **注:**
+**注:**
 
 - Windows Server 2012 には .NET Framework 4.5 が含まれているため、これを個別にインストールする必要はありません。 同様に、Windows Server 2012 R2 には .NET Framework 4.5.1 が含まれています。
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: 953d8d3055dff48cd943b748771f20803a4d6573
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120901"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79174785"
 ---
 # <a name="globalization"></a>グローバリゼーション
 
@@ -66,7 +66,7 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 > [!TIP]
 > <xref:System.Globalization.StringInfo> クラスを使用して、文字列の個別の文字ではなく、テキスト要素を操作できます。
 
-文字列の検索と比較でよくある間違いは、それぞれが <xref:System.Char> オブジェクトによって表される文字のコレクションとして文字列を処理することです。 実際に、1 つの文字が 1 つ、2 つ、またはそれ以上の <xref:System.Char> オブジェクトによって形成される場合があります。 このような文字は、アルファベットが、Unicode 基本ラテン文字の範囲 (U+0021 ～ U+007E) 外にある文字で構成されるカルチャの文字列に最もよくみられます。 次の例では、文字列で LATIN CAPITAL LETTER A WITH GRAVE 文字 (U+00C0) のインデックスを検索します。 ただし、この文字は、1 つのコード単位 (U+00C0) または複合文字 (2 つのコード単位:U+0021 と U+007E) という 2 つの方法で表現できます。 この場合、この文字は、文字列インスタンスで 2 つの <xref:System.Char> オブジェクト (U+0021 と U+007E) によって表されます。 このコード例では、<xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> オーバーロードと <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> オーバーロードを呼び出して、文字列インスタンスでのこの文字の位置を検索しますが、この 2 つは異なる結果を返します。 最初のメソッド呼び出しでは <xref:System.Char> 引数を指定しているので、序数に基づく比較が実行され、一致を見つけることができません。 2 番目の呼び出しでは <xref:System.String> 引数を指定しているので、カルチャに依存した比較が実行され、一致が見つかります。
+文字列の検索と比較でよくある間違いは、それぞれが <xref:System.Char> オブジェクトによって表される文字のコレクションとして文字列を処理することです。 実際に、1 つの文字が 1 つ、2 つ、またはそれ以上の <xref:System.Char> オブジェクトによって形成される場合があります。 このような文字は、アルファベットが、Unicode 基本ラテン文字の範囲 (U+0021 ～ U+007E) 外にある文字で構成されるカルチャの文字列に最もよくみられます。 次の例では、文字列で LATIN CAPITAL LETTER A WITH GRAVE 文字 (U+00C0) のインデックスを検索します。 ただし、この文字は、1 つのコード単位 (U+00C0) または複合文字 (2 つのコード単位:U+0041 および U+0300)。 この場合、この文字は、文字列インスタンスで 2 つの <xref:System.Char> オブジェクト (U+0041 と U+0300) によって表されます。 このコード例では、<xref:System.String.IndexOf%28System.Char%29?displayProperty=nameWithType> オーバーロードと <xref:System.String.IndexOf%28System.String%29?displayProperty=nameWithType> オーバーロードを呼び出して、文字列インスタンスでのこの文字の位置を検索しますが、この 2 つは異なる結果を返します。 最初のメソッド呼び出しでは <xref:System.Char> 引数を指定しているので、序数に基づく比較が実行され、一致を見つけることができません。 2 番目の呼び出しでは <xref:System.String> 引数を指定しているので、カルチャに依存した比較が実行され、一致が見つかります。
 
 [!code-csharp[Conceptual.Globalization#18](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.globalization/cs/search1.cs#18)]
 [!code-vb[Conceptual.Globalization#18](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.globalization/vb/search1.vb#18)]

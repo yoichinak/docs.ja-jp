@@ -2,12 +2,12 @@
 title: dotnet tool restore コマンド
 description: dotnet tool restore コマンドでは、現在のディレクトリのスコープ内にある .NET Core ローカル ツールをお使いのコンピューター上にインストールします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 2900d431987661a9232ceed10d9a424093f8be45
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: cb46f70afb58e482b6aedfddfbf5f3a0c40674f4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543852"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146438"
 ---
 # <a name="dotnet-tool-restore"></a>dotnet tool restore
 
@@ -20,7 +20,11 @@ ms.locfileid: "77543852"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet tool restore <PACKAGE_NAME> [--configfile] [--add-source] [tool-manifest] [--disable-parallel] [--ignore-failed-sources] [--no-cache] [-interactive] [-v|--verbosity]
+dotnet tool restore <PACKAGE_NAME>
+    [--configfile] [--add-source] [tool-manifest]
+    [--disable-parallel] [--ignore-failed-sources]
+    [--no-cache] [-interactive] [-v|--verbosity]
+
 dotnet tool restore <-h|--help>
 ```
 
@@ -81,3 +85,4 @@ dotnet tool restore <-h|--help>
 ## <a name="see-also"></a>関連項目
 
 - [.NET Core ツール](global-tools.md)
+- [チュートリアル: .NET Core CLI を使って .NET Core ローカル ツールをインストールして使用する](local-tools-how-to-use.md)

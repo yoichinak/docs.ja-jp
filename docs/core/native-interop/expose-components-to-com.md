@@ -1,5 +1,6 @@
 ---
 title: COM への .NET Core コンポーネントの公開
+description: このチュートリアルでは、.NET Core から COM にクラスを公開する方法について説明します。 COM サーバーと、レジストリを使用しない COM 用のサイドバイサイド サーバー マニフェストを生成します。
 ms.date: 07/12/2019
 helpviewer_keywords:
 - exposing .NET Core components to COM
@@ -8,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 301177113f67748b62ea2686615cfe5378fdc2fd
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157545"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146659"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM への .NET Core コンポーネントの公開
 
@@ -41,7 +42,21 @@ ms.locfileid: "78157545"
 3. ファイルの先頭に、`using System.Runtime.InteropServices;` を追加します。
 4. `IServer` という名前のインターフェイスを作成します。 次に例を示します。
 
-   [!code-csharp[The IServer interface](~/samples/core/extensions/COMServerDemo/COMContract/IServer.cs)]
+   ```csharp
+   using System;
+   using System.Runtime.InteropServices;
+
+   [ComVisible(true)]
+   [Guid(ContractGuids.ServerInterface)]
+   [InterfaceType(ComInterfaceType.InterfaceIsIUnknown)]
+   public interface IServer
+   {
+       /// <summary>
+       /// Compute the value of the constant Pi.
+       /// </summary>
+       double ComputePi();
+   }
+   ```
 
 5. このインターフェイスに、実装する COM インターフェイス用のインターフェイス GUID を使用して、`[Guid("<IID>")]` 属性を追加します。 たとえば、`[Guid("fe103d6e-e71b-414c-80bf-982f18f6c1c7")]` のようにします。 この GUID は、COM 用のこのインターフェイスの唯一の識別子であるため、一意である必要があることに注意してください。 Visual Studio で GUID を作成するには、[ツール] > [GUID の作成] の順に移動して GUI の作成ツールを開きます。
 6. インターフェイスに `[InterfaceType]` 属性を追加し、お使いのインターフェイスで実装すべき基本 COM インターフェイスを指定します。

@@ -2,12 +2,12 @@
 title: 標準クエリ演算子の概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 812fa119-5f65-4139-b4fa-55dccd8dc3ac
-ms.openlocfilehash: e6419fef5c211995aa4d2bd0796a0d0336dc47a9
-ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
+ms.openlocfilehash: 76c2c4684f33c3fb30748b5f08efd215548661ef
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69590980"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79167856"
 ---
 # <a name="standard-query-operators-overview-c"></a>標準クエリ演算子の概要 (C#)
 "*標準クエリ演算子*" は、LINQ パターンを形成するメソッドです。 これらのメソッドの大部分はシーケンスに対して機能します。ここでシーケンスとは、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスまたは <xref:System.Linq.IQueryable%601> インターフェイスを実装している型のオブジェクトのことです。 標準クエリ演算子には、フィルター処理、プロジェクション、集計、並べ替えなどのクエリ機能が用意されています。  
@@ -63,7 +63,7 @@ foreach (var obj in query)
 // Words of length 5:  
 // QUICK  
 // BROWN  
-// JUMPS   
+// JUMPS
 ```  
   
 ## <a name="query-expression-syntax"></a>クエリ式の構文  

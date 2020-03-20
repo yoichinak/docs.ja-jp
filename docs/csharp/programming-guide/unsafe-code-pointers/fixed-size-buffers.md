@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 9005c425badc5a4ed74e6af3447e563daf61229e
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77627800"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79157027"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定サイズ バッファー (C# プログラミング ガイド)
 
@@ -24,7 +24,7 @@ private fixed char name[30];
 
 セーフ コードでは、配列を含む C# 構造体に配列要素が含まれません。 この場合、構造体には、配列の要素ではなく、その参照が格納されます。 [unsafe](../../language-reference/keywords/unsafe.md) のコード ブロックで使われている [struct](../../language-reference/builtin-types/struct.md) に、固定サイズの配列を埋め込むことができます。
 
-次の `struct` のサイズは 8 バイトです。 `pathName` 配列は参照です。
+`struct` が参照であるため、次の `pathName` のサイズは配列内の要素の数に依存しません。
 
 [!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
 

@@ -2,15 +2,15 @@
 title: ネットワーク プログラミングのサンプル
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: 1c3dc630f8675084d434431fbe227cf373c54b62
-ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.openlocfilehash: 860ee2ee766a4c0c1ea158662f195e6e29628687
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71047601"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180715"
 ---
 # <a name="network-programming-samples"></a>ネットワーク プログラミングのサンプル
-このセクションでは、<xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets>、および関連する名前空間のクラスを使用した、ダウンロード可能なネットワーク プログラミング サンプルの説明とリンクを示します。 
+このセクションでは、<xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets>、および関連する名前空間のクラスを使用した、ダウンロード可能なネットワーク プログラミング サンプルの説明とリンクを示します。
   
 > [!NOTE]
 > すべてのサンプルは、.NET Framework 2.0 用にリリースされた [.Net Framework SDK バージョン 2.0 サンプルのダウンロード](https://www.microsoft.com/download/confirmation.aspx?id=22181) ページで入手できますが、古くなっている可能性があります。
@@ -24,9 +24,8 @@ ms.locfileid: "71047601"
   
  [HttpListener テクノロジのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/y7cbb2y2(v=vs.85))  
  アプリケーション内から HTTP 要求を処理する方法を示します。  
- 
- [HttpListener ASPX ホスト アプリケーションのサンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90))   
- <xref:System.Net.HttpListener?displayProperty=nameWithType> クラスの機能を使用して、ホストされた ASP.NET アプリケーションへの呼び出しをルーティングする HTTP サーバーを作成する方法を示します。
+
+ [HttpListener ASPX ホスト アプリケーションのサンプル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/dd767375(v%3dvs.90)) <xref:System.Net.HttpListener?displayProperty=nameWithType> クラスの機能を使用して、ホストされている ASP.NET アプリケーションに呼び出しをルーティングする HTTP サーバーを作成する方法を示します。
   
  [メーラー テクノロジのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/whw7xbk2(v=vs.85))  
  クライアント アプリケーションから電子メール メッセージを送信する方法を示します。  

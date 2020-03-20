@@ -2,12 +2,12 @@
 title: コレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 23d73a26bbe0e711bb3a081994826e06634c4bac
-ms.sourcegitcommit: 14ad34f7c4564ee0f009acb8bfc0ea7af3bc9541
+ms.openlocfilehash: a560155b936aef7a4a346d39eaed75e0a85c1a73
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2019
-ms.locfileid: "73418707"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79169884"
 ---
 # <a name="collections-c"></a>コレクション (C#)
 
@@ -351,7 +351,7 @@ private static void FindInDictionary2(string symbol)
 
 ## <a name="using-linq-to-access-a-collection"></a>LINQ を使用してコレクションにアクセスする
 
-統合言語クエリ (LINQ) を使用してコレクションにアクセスできます。 LINQ クエリは、フィルター処理、並べ替え、およびグループ化の機能を提供します。 詳細については、「[Getting Started with LINQ in C#](/dotnet/csharp/programming-guide/concepts/linq/)」 (C# での LINQ の概要) を参照してください。
+統合言語クエリ (LINQ) を使用してコレクションにアクセスできます。 LINQ クエリは、フィルター処理、並べ替え、およびグループ化の機能を提供します。 詳細については、[C# での LINQ の概要](linq/index.md)に関するページを参照してください。
 
 次の例では、ジェネリック `List` に対して LINQ クエリを実行します。 LINQ クエリは、結果が格納されている別のコレクションを戻します。
 

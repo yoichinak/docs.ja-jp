@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Mgmtclassgen.exe
 - early-bound managed classes
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
-ms.openlocfilehash: 5002d7a180e480b0e1d38f1c1180fe565dc5e1dc
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5e39670fbb40acb999a243ac86683219f3c89e4f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73105017"
+ms.lasthandoff: 03/15/2020
+ms.locfileid: "79180376"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (厳密型クラス ジェネレーター)
 厳密型クラス ジェネレーター (Mgmtclassgen.exe) ツールを使用すると、指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージド クラスをすばやく生成できます。 生成されたクラスを使用すると、WMI クラスのインスタンスにアクセスするために書く必要のあるコードを簡略化できます。  
@@ -24,8 +24,8 @@ ms.locfileid: "73105017"
 ## <a name="syntax"></a>構文  
   
 ```console  
-mgmtclassgen   
-WMIClass [options]   
+mgmtclassgen
+WMIClass [options]
 ```  
   
 |引数|説明|  
@@ -43,7 +43,7 @@ WMIClass [options]
 |**/u**  *user name*|**/m** オプションで指定したコンピューターにログオンするときに使用するユーザー名を指定します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  Mgmtclassgen.exe は、<xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> メソッドを使用します。 したがって、任意のカスタム コード プロバイダーを使用して、C#、Visual Basic、および JScript 以外のマネージド言語でコードを生成できます。  
   
  生成されたクラスは、それらのクラスを生成する目的となったスキーマにバインドされます。 基になるスキーマが変更された場合に、その変更をこのスキーマに反映するには、クラスを生成し直す必要があります。  
@@ -105,11 +105,11 @@ Imports System
 Imports System.Management  
 Imports ROOT.CIMV2.Win32  
   
-Public Class App     
-   Public Shared Sub Main()        
+Public Class App
+   Public Shared Sub Main()
       ' Enumerate instances of the Win32_process.  
       ' Print the Name property of the instance.  
-      Dim ps As Process     
+      Dim ps As Process
       For Each ps In  Process.GetInstances()  
          Console.WriteLine(ps.Name)  
       Next ps  

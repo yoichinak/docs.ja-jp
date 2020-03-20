@@ -8,10 +8,10 @@ helpviewer_keywords:
 - registering assemblies
 ms.assetid: e190e342-36ef-4651-a0b4-0e8c2c0281cb
 ms.openlocfilehash: 45b4c6c08d3afb948444a8c97dc32bd41f2615ce
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104951"
 ---
 # <a name="regasmexe-assembly-registration-tool"></a>Regasm.exe (アセンブリ登録ツール)
@@ -50,7 +50,7 @@ regasm assemblyFile [options]
 > [!NOTE]
 > Regasm.exe のコマンド行オプションでは大文字と小文字が区別されません。 オプションの一部を指定するだけで一意に識別できます。 たとえば、 **/n** は **/nologo** と等価であり、 **/t:** *outfile.tlb* は **/tlb:** *outfile.tlb* と等価です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 **/regfile** オプションを使用すると、直接にレジストリを変更しなくても、レジストリ エントリを含む .reg ファイルを生成できます。 コンピューターのレジストリを更新するには、レジストリ エディター ツール (Regedit.exe) を使用して .reg ファイルをインポートします。 .reg ファイルには、ユーザー定義の登録機能で行われるレジストリの更新についての情報は含まれません。  **/regfile** オプションは、マネージド クラスのレジストリ エントリだけを生成します。  このオプションは、`TypeLibID` と `InterfaceID` のエントリは生成しません。
 

@@ -16,10 +16,10 @@ dev_langs:
 - vb
 - cpp
 ms.openlocfilehash: 8a9845e3cd18ff86ec04216ad0e9c5606186b113
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73122520"
 ---
 # <a name="how-to-create-a-public-private-key-pair"></a>方法: 公開キーと秘密キーのキー ペアを作成する
@@ -33,7 +33,7 @@ ms.locfileid: "73122520"
 
 キー ペアを作成するには、コマンド プロンプトに次のコマンドを入力します。
 
-**sn –k** \<*ファイル名*>
+**sn –k** \<*file name*>
 
 このコマンドでは、*ファイル名*はキー ペアを含む出力ファイルの名前になります。
 

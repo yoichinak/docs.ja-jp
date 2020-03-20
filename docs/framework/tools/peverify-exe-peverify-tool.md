@@ -11,10 +11,10 @@ helpviewer_keywords:
 - PE files, PEVerify
 ms.assetid: f4f46f9e-8d08-4e66-a94b-0c69c9b0bbfa
 ms.openlocfilehash: 9d5f8c80937c36e975d42d6efb0a83295cb28be9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
+ms.lasthandoff: 03/15/2020
 ms.locfileid: "73104978"
 ---
 # <a name="peverifyexe-peverify-tool"></a>Peverify.exe (PEVerify ツール)
@@ -54,10 +54,10 @@ peverify filename [options]
 |**/verbose**|.NET Framework Version 2.0 で、MSIL 検証メッセージに追加情報を表示します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  共通言語ランタイムは、セキュリティ機構や分離機構の実施を簡単にするために、アプリケーション コードがタイプ セーフに実行されることに依存しています。 通常、[検査可能でタイプ セーフ](../../standard/security/key-security-concepts.md#type-safety-and-security)なコード以外のコードは実行できません。しかし、信頼できるが検査を実行できないコードを実行可能にするセキュリティ ポリシーを設定することはできます。  
   
- **/md** と **/il** のいずれのオプションも指定しない場合は、両方の種類の検査が実行されます。 まず、 **/md** オプションによる検査が実行されます。 エラーが検出されない場合は、 **/il** オプションによる検査が実行されます。 **/md** と **/il** の両方のオプションを指定した場合は、メタデータの検査でエラーが検出された場合でも、 **/il** オプションによる検査が実行されます。 つまり、メタデータの検査でエラーが検出されないときは、**peverify** *filename* と **peverify** *filename* **/md** **/il** のいずれを指定しても同じ検査が実行されます。  
+ **/md** と **/il** のいずれのオプションも指定しない場合は、両方の種類の検査が実行されます。 まず、 **/md** オプションによる検査が実行されます。 エラーが検出されない場合は、 **/il** オプションによる検査が実行されます。 **/md** と **/il** の両方のオプションを指定した場合は、メタデータの検査でエラーが検出された場合でも、 **/il** オプションによる検査が実行されます。 つまり、メタデータの検査でエラーが検出されないときは、**peverify** *filename* は **peverify** *filename* **/md** **/il** と同等です。  
   
  Peverify.exe は、データ フローの分析と、メタデータの有効性に関する多数の規則のリストに基づいて、MSIL に対する包括的な検査を実行します。 Peverify.exe によって実行される検査の詳細については、Windows SDK の Tools Developers Guide フォルダー内にある "Metadata Validation Specification" (メタデータ検証仕様) と "MSIL Instruction Set Specification" (MSIL 命令セット仕様) を参照してください。  
   

@@ -3,12 +3,12 @@ title: .NET Core ツールの使用に関する問題のトラブルシューテ
 description: .NET Core ツールを実行するときの一般的な問題と考えられる解決策について説明します。
 author: kdollard
 ms.date: 02/14/2020
-ms.openlocfilehash: ab5d1be8f201ea283f8537f18886feab46157127
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: ed6243f802c4d3ce56a742916a1a28676e3cd876
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77543275"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79146451"
 ---
 # <a name="troubleshoot-net-core-tool-usage-issues"></a>.NET Core ツールの使用に関する問題のトラブルシューティング
 
@@ -42,16 +42,16 @@ Possible reasons for this include:
 
 * グローバル ツール
 
-    グローバル ツールは、既定のディレクトリ内または特定の場所にインストールすることができます。 既定のディレクトリは次のとおりです。
+  グローバル ツールは、既定のディレクトリ内または特定の場所にインストールすることができます。 既定のディレクトリは次のとおりです。
 
-    | OS          | パス                          |
-    |-------------|-------------------------------|
-    | Linux/macOS | `$HOME/.dotnet/tools`         |
-    | Windows     | `%USERPROFILE%\.dotnet\tools` |
+  | OS          | パス                          |
+  |-------------|-------------------------------|
+  | Linux/macOS | `$HOME/.dotnet/tools`         |
+  | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-    グローバル ツールを実行しようとしている場合は、コンピューター上の `PATH` 環境変数にグローバル ツールをインストールしたパスが含まれること、およびそのパスに実行可能ファイルが存在することを確認してください。
+  グローバル ツールを実行しようとしている場合は、コンピューター上の `PATH` 環境変数にグローバル ツールをインストールしたパスが含まれること、およびそのパスに実行可能ファイルが存在することを確認してください。
 
-    .NET Core CLI は、初めて使用したときに既定の場所を PATH 環境変数に追加しようとします。 ただし、場所が PATH に自動的に追加されないシナリオがいくつかあるため、次のような場合は PATH を編集して構成する必要があります。
+  .NET Core CLI は、初めて使用したときに既定の場所を PATH 環境変数に追加しようとします。 ただし、次のようなシナリオでは、その場所が PATH に自動的に追加されない場合があります。
 
   * Linux を使用していて、apt-get または rpm ではなく *.tar.gz* ファイルを使用して .NET Core SDK をインストールしている場合。
   * macOS 10.15 "Catalina" またはそれ以降のバージョンを使用している場合。
@@ -59,7 +59,7 @@ Possible reasons for this include:
   * .NET Core 3.0 SDK をインストールしてあり、`DOTNET_ADD_GLOBAL_TOOLS_TO_PATH` 環境変数を `false` に設定している場合。
   * .NET Core 2.2 SDK 以前のバージョンをインストールしてあり、`DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 環境変数を `true` に設定している場合。
 
-  詳細については、[.NET Core ツール](global-tools.md)に関する記事を参照してください。
+  これらのシナリオでは、または `--tool-path` オプションを指定した場合、ご利用のコンピューター上の `PATH` 環境変数には、グローバル ツールをインストールしたパスが自動的に含められません。 その場合は、ご利用のシェルで提供されている、環境変数を更新するための任意の方法を使用して、ツールの場所 (たとえば、`$HOME/.dotnet/tools`) を `PATH` 環境変数に追加します。 詳細については、[.NET Core ツール](global-tools.md)に関する記事を参照してください。
 
 * ローカル ツール
 

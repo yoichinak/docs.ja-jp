@@ -5,12 +5,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 692a0f8ad933f3ba4bef50681cb3487fa0a7eea9
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714830"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79398431"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>暗黙的に型指定されるローカル変数 (C# プログラミング ガイド)
 
@@ -88,7 +88,7 @@ private var bookTitles = new List<string>();
 
 [!code-csharp[cscsrefQueryKeywords#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#13)]
 
-ただし、`var` を使用すると、他の開発者がコードを理解しづらくなる可能性はあります。 このため、C# のドキュメントでは、通常、必要な場合にだけ `var` を使用しています。
+`var` を使用すると、コードを簡単にすることができますが、必要な場合、またはコードを読みやすくする場合にのみ使用するようにします。 `var` 使用するのが適切な場合の詳細については、C# コーディング ガイドラインの記事の「[暗黙的に型指定されるローカル変数](../inside-a-program/coding-conventions.md#implicitly-typed-local-variables)」セクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

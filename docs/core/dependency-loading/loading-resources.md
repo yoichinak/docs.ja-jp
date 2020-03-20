@@ -5,10 +5,10 @@ ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
 ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
-ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
+ms.lasthandoff: 03/14/2020
 ms.locfileid: "72303624"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>サテライト アセンブリの読み込みアルゴリズム
@@ -29,7 +29,7 @@ ms.locfileid: "72303624"
 
 .NET Core リソース フォールバック プロセスには次の手順が含まれます。
 
-1. `active` <xref:System.Runtime.Loader.AssemblyLoadContext> インスタンスを決定します。 いずれの場合も、`active` インスタンスは実行中のアセンブリの <xref:System.Runtime.Loader.AssemblyLoadContext> です。
+1. `active`<xref:System.Runtime.Loader.AssemblyLoadContext> インスタンスを決定します。 いずれの場合も、`active` インスタンスは実行中のアセンブリの <xref:System.Runtime.Loader.AssemblyLoadContext> です。
 
 2. `active` インスタンスは、要求されたカルチャのサテライト アセンブリの読み込みを、以下の優先順位で試行します。
     - キャッシュを調べます。
