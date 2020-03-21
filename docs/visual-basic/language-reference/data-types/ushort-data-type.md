@@ -1,5 +1,5 @@
 ---
-title: UShort 型
+title: UShort データ型
 ms.date: 01/31/2018
 f1_keywords:
 - vb.ushort
@@ -17,38 +17,38 @@ helpviewer_keywords:
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 ms.openlocfilehash: 7cdbd5fb192fd5cc1be6260dcdcdb1f30cf3f865
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343850"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "79401311"
 ---
-# <a name="ushort-data-type-visual-basic"></a>UShort データ型 (Visual Basic)
+# <a name="ushort-data-type-visual-basic"></a>データ型を短くする
 
-0 ~ 65535 の値の範囲内の符号なし16ビット (2 バイト) 整数を保持します。  
+0 から 65,535 までの範囲の符号なし 16 ビット (2 バイト) 整数を保持します。  
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
- `Byte`に対して大きすぎるバイナリデータを格納するには、`UShort` データ型を使用します。  
+ データ型`UShort`を使用して、バイナリ データが大`Byte`きすぎて.  
   
  `UShort` の既定値は 0 です。  
 
-## <a name="literal-assignments"></a>リテラルの代入
+## <a name="literal-assignments"></a>リテラル代入
 
-`UShort` 変数は、10進リテラル、16進リテラル、8進数リテラル、または (Visual Basic 2017 で始まる) バイナリリテラルを割り当てることによって、宣言および初期化できます。 整数リテラルが `UShort` の範囲外にある場合 (つまり、<xref:System.UInt16.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.UInt16.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
+変数を`UShort`宣言して初期化するには、10 進リテラル、16 進リテラル、8 進数リテラル、または (Visual Basic 2017 以降) バイナリ リテラルを割り当てます。 整数リテラルが `UShort` の範囲外にある場合 (つまり、<xref:System.UInt16.MinValue?displayProperty=nameWithType> より小さいか、<xref:System.UInt16.MaxValue?displayProperty=nameWithType> より大きい場合)、コンパイル エラーが発生します。
 
-次の例では、整数65034を10進リテラル、16進リテラル、バイナリリテラルで表したものが `UShort` 値に割り当てられています。
+次の例では、10 進数、16 進数、およびバイナリ リテラルとして表される 65,034 に`UShort`等しい整数が値に割り当てられます。
   
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShort)]
 
 > [!NOTE]
-> プレフィックス `&h` または `&H` を使用して、16進リテラル、プレフィックス `&b` または `&B` がバイナリリテラルを示すようにし、プレフィックス `&o` または `&O` を使用して8進数リテラルを表します。 10 進リテラルには、プレフィックスはありません。
+> プレフィックス`&h`を使用`&H`するか、16 進リテラル、プレフィックス`&b`、または`&B`バイナリ リテラルを表す場合、およびプレフィックス`&o`を`&O`表すか、8 進数リテラルを表します。 10 進リテラルには、プレフィックスはありません。
 
-Visual Basic 2017 以降では、次の例に示すように、アンダースコア文字 (`_`) を桁区切り記号として使用して、読みやすくすることもできます。
+Visual Basic 2017 以降では、`_`下線付きの文字を桁区切り記号として使用して読みやすさを向上させることもできます。
 
 [!code-vb[UShort](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#UShortS)]
 
-Visual Basic 15.5 以降では、アンダースコア文字 (`_`) をプレフィックスと16進数、バイナリ、または8進数の間の先頭の区切り記号として使用することもできます。 例 :
+Visual Basic 15.5 以降では、接頭辞と`_`16 進数、2 進数、または 8 進数の間の先頭の区切り記号としてアンダースコア文字 ( ) を使用することもできます。 次に例を示します。
 
 ```vb
 Dim number As UShort = &H_FF8C
@@ -56,7 +56,7 @@ Dim number As UShort = &H_FF8C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-数値リテラルには、次の例に示すように、`UShort` データ型を示す `US` または `us`[型の文字](../../programming-guide/language-features/data-types/type-characters.md)を含めることもできます。
+次の例に示すように、`US`数値`us`リテラルには`UShort`、データ型を示す[or 型文字](../../programming-guide/language-features/data-types/type-characters.md)を含めることもできます。
 
 ```vb
 Dim number = &H_5826us
@@ -64,21 +64,21 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>プログラミングのヒント
   
-- **負の数値。** `UShort` は符号なしの型であるため、負の数を表すことはできません。 `UShort`型に評価される式に対して単項マイナス記号 (`-`) 演算子を使用すると、Visual Basic 式が最初に `Integer` に変換されます。  
+- **負の数。** 符号`UShort`なしの型であるため、負の数を表すことはできません。 型`-``UShort`と評価される式に単項マイナス ( ) 演算子を使用すると、その式が最初に`Integer`変換されます。  
   
-- **CLS 準拠。** `UShort` のデータ型は[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(cls) の一部ではないため、cls 準拠のコードはそれを使用するコンポーネントを使用できません。
+- **CLS コンプライアンス。** データ`UShort`型は[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) の一部ではないため、CLS 準拠のコードで使用するコンポーネントを使用することはできません。
   
-- **広げ.** `UShort` のデータ型は、`Integer`、`UInteger`、`Long`、`ULong`、`Decimal`、`Single`、`Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、`UShort` をこれらの型のいずれかに変換できます。  
+- **拡大。** データ`UShort`型は`Integer`、 、 `UInteger`、 `Long` `ULong`、 `Decimal` `Single`、 `Double`、 、 、 、 にまで広がります。 つまり、<xref:System.OverflowException?displayProperty=nameWithType>エラーが発生`UShort`することなく、これらの型に変換できます。  
   
-- **文字を入力します。** リテラルに `US` リテラル型文字を追加すると、`UShort` データ型に強制されます。 `UShort` に識別子の型文字がありません。  
+- **文字を入力します。** リテラルにリテラルの型文字`US`を追加すると、データ型に`UShort`強制的に追加されます。 `UShort`識別子の種類の文字がありません。  
   
-- **フレームワークの種類。** .NET Framework において対応する型は、<xref:System.UInt16?displayProperty=nameWithType> 構造体です。  
+- **Framework のデータ型** .NET Framework において対応する型は、<xref:System.UInt16?displayProperty=nameWithType> 構造体です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.UInt16>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [データ型](../../../visual-basic/language-reference/data-types/index.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [方法 : 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

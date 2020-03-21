@@ -1,20 +1,20 @@
 ---
-title: Visual Basic2 での XML リテラルの概要
+title: XML リテラルの概要 2
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 9f5c54574e51c537d9ea58d307afda10736d0d88
+ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834988"
+ms.lasthandoff: 03/04/2020
+ms.locfileid: "78266951"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic の XML リテラルの概要
-ここでは、Visual Basic での XML ツリーの作成について説明します。  
+このセクションでは、Visual Basic での XML ツリーの作成について説明します。  
   
- LINQ クエリの結果を XML ツリーのコンテンツとして使用する方法の詳細については、「[関数型構築 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)」を参照してください。  
+ XML ツリーのコンテンツとして LINQ クエリの結果を使用する方法については、「[機能構築 (LINQ to XML)(Visual Basic)」](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)を参照してください。  
   
- Visual Basic の XML リテラルの詳細については、「 [Visual Basic の LINQ to XML の概要](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)」を参照してください。  
+ Visual Basic の XML リテラルの詳細については、「 Visual Basic で[の LINQ to XML の概要](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)」を参照してください。  
   
 ## <a name="creating-xml-trees"></a>XML ツリーの作成  
  <xref:System.Xml.Linq.XElement> (この場合は `contacts`) を作成する方法を次の例に示します。  
@@ -40,10 +40,10 @@ Dim contacts As XElement = _
   
 ```vb  
 Dim n as XElement = <Customer>Adventure Works</Customer>  
-Console.WriteLine(n)   
+Console.WriteLine(n)
 ```  
   
- この例を実行すると、次の出力が生成されます。  
+ この例の結果は、次のようになります。  
   
 ```xml  
 <Customer>Adventure Works</Customer>  
@@ -57,7 +57,7 @@ Dim n As XElement = <Customer/>
 Console.WriteLine(n)  
 ```  
   
- この例を実行すると、次の出力が生成されます。  
+ この例の結果は、次のようになります。  
   
 ```xml  
 <Customer />  
@@ -84,7 +84,7 @@ Dim xmlTree2 As XElement = _
 Console.WriteLine(xmlTree2)  
 ```  
   
- この例を実行すると、次の出力が生成されます。  
+ この例の結果は、次のようになります。  
   
 ```xml  
 <Root>  
@@ -102,7 +102,7 @@ Dim root As XElement = <Root><%= str %></Root>
 Console.WriteLine(root)  
 ```  
   
- この例を実行すると、次の出力が生成されます。  
+ この例の結果は、次のようになります。  
   
 ```xml  
 <Root>Some content</Root>  
@@ -122,7 +122,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- この例を実行すると、次の出力が生成されます。  
+ この例の結果は、次のようになります。  
   
 ```xml  
 <Root>  
@@ -149,7 +149,7 @@ Dim n As XElement = _
 Console.WriteLine(n)  
 ```  
   
- この例を実行すると、次の出力が生成されます。  
+ この例の結果は、次のようになります。  
   
 ```xml  
 <Root att="aValue">  
@@ -188,7 +188,7 @@ Console.WriteLine("Child2 was {0}", _
     "attached", "cloned"))  
 ```  
   
- この例を実行すると、次の出力が生成されます。  
+ この例の結果は、次のようになります。  
   
 ```console  
 Child1 was cloned  
@@ -197,4 +197,4 @@ Child2 was attached
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ツリーの作成](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
