@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: 30b5cf9a-a762-4bd4-be12-d6c1442b78b1
 topic_type:
 - apiref
-ms.openlocfilehash: ed841d1b2ff346ebef668cbd96a58ddfe466b3b8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1a1bc7609042422de876fe167a9e61655aaf62b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73120447"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176410"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain メソッド
-指定したマネージアセンブリの指定した型の指定したメソッドを呼び出します。  
+指定したマネージ アセンブリ内の指定した型の指定したメソッドを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT ExecuteInDefaultAppDomain (  
     [in] LPCWSTR pwzAssemblyPath,  
-    [in] LPCWSTR pwzTypeName,   
+    [in] LPCWSTR pwzTypeName,
     [in] LPCWSTR pwzMethodName,  
     [in] LPCWSTR pwzArgument,  
     [out] DWORD *pReturnValue  
@@ -39,46 +39,46 @@ HRESULT ExecuteInDefaultAppDomain (
   
 ## <a name="parameters"></a>パラメーター  
  `pwzAssemblyPath`  
- からメソッドを呼び出す <xref:System.Type> を定義する <xref:System.Reflection.Assembly> へのパス。  
+ [in]呼び出される<xref:System.Reflection.Assembly>メソッドを<xref:System.Type>定義する へのパス。  
   
  `pwzTypeName`  
- から呼び出すメソッドを定義する <xref:System.Type> の名前。  
+ [in]呼び出す<xref:System.Type>メソッドを定義する の名前。  
   
  `pwzMethodName`  
- から呼び出すメソッドの名前。  
+ [in]呼び出すメソッドの名前。  
   
  `pwzArgument`  
- からメソッドに渡す文字列パラメーター。  
+ [in]メソッドに渡す文字列パラメーター。  
   
  `pReturnValue`  
- 入出力呼び出されたメソッドによって返される整数値。  
+ [アウト]呼び出されたメソッドによって返される整数値。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`ExecuteInDefaultAppDomain` が正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
+|S_OK|`ExecuteInDefaultAppDomain`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
+|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
-|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、その CRL はプロセス内で使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返す場合、プロセス内で CRL を使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
   
-## <a name="remarks"></a>Remarks  
- 呼び出されたメソッドには、次のシグネチャが必要です。  
+## <a name="remarks"></a>解説  
+ 呼び出されるメソッドには、次のシグネチャが必要です。  
   
 ```cpp  
 static int pwzMethodName (String pwzArgument)  
 ```  
   
- ここで `pwzMethodName` は呼び出されたメソッドの名前を表し、`pwzArgument` はそのメソッドにパラメーターとして渡される文字列値を表します。 HRESULT 値が S_OK に設定されている場合、`pReturnValue` は、呼び出されたメソッドによって返される整数値に設定されます。 それ以外の場合、`pReturnValue` は設定されません。  
+ 呼`pwzMethodName`び出されたメソッドの名前を表し`pwzArgument`、そのメソッドにパラメーターとして渡される文字列値を表します。 HRESULT 値が S_OK に設定`pReturnValue`されている場合は、呼び出されたメソッドによって返される整数値に設定されます。 それ以外`pReturnValue`の場合は、設定されません。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,31 +15,31 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 18fe0c834506d0ac4cd15fd7af4c4f15904b0f81
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437576"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177266"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps メソッド
-宣言する型、デリゲートの add メソッドおよび remove メソッド、すべてのフラグおよびその他の関連データを含む、指定したイベントトークンによって表されるイベントのメタデータ情報を取得します。  
+宣言型、デリゲートの add メソッドと remove メソッド、フラグおよびその他の関連付けられたデータなど、指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetEventProps (  
    [in]  mdEvent       ev,  
-   [out] mdTypeDef     *pClass,   
-   [out] LPCWSTR       szEvent,   
-   [in]  ULONG         cchEvent,   
-   [out] ULONG         *pchEvent,   
+   [out] mdTypeDef     *pClass,
+   [out] LPCWSTR       szEvent,
+   [in]  ULONG         cchEvent,
+   [out] ULONG         *pchEvent,
    [out] DWORD         *pdwEventFlags,  
    [out] mdToken       *ptkEventType,  
-   [out] mdMethodDef   *pmdAddOn,   
-   [out] mdMethodDef   *pmdRemoveOn,   
-   [out] mdMethodDef   *pmdFire,   
-   [out] mdMethodDef   rmdOtherMethod[],   
+   [out] mdMethodDef   *pmdAddOn,
+   [out] mdMethodDef   *pmdRemoveOn,
+   [out] mdMethodDef   *pmdFire,
+   [out] mdMethodDef   rmdOtherMethod[],
    [in]  ULONG         cMax,  
    [out] ULONG         *pcOtherMethod  
 );  
@@ -47,47 +47,47 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>パラメーター  
  `ev`  
- からメタデータを取得するイベントを表すイベントメタデータトークン。  
+ [in]メタデータを取得するイベントを表すイベント メタデータ トークン。  
   
  `pClass`  
- 入出力イベントを宣言するクラスを表す TypeDef トークンへのポインター。  
+ [アウト]イベントを宣言するクラスを表す TypeDef トークンへのポインター。  
   
  `szEvent`  
- 入出力`ev`によって参照されるイベントの名前。  
+ [アウト]によって`ev`参照されるイベントの名前。  
   
  `pchEvent`  
- から`szEvent`の、要求された長さをワイド文字数で指定します。  
+ [in]要求された長さは、 の`szEvent`ワイド文字で表示されます。  
   
  `pdwEventFlags`  
- 入出力`szEvent`のワイド文字数で返された長さ。  
+ [アウト]返される長さは、 の`szEvent`ワイド文字で返されます。  
   
  `ptkEventType`  
- 入出力イベントの <xref:System.Delegate> 型を表す TypeRef または TypeDef メタデータトークンへのポインター。  
+ [アウト]イベントの型を表す<xref:System.Delegate>TypeRef または TypeDef メタデータ トークンへのポインター。  
   
  `pmdAddOn`  
- 入出力イベントのハンドラーを追加するメソッドを表すメタデータトークンへのポインター。  
+ [アウト]イベントのハンドラーを追加するメソッドを表すメタデータ トークンへのポインター。  
   
  `pmdRemoveOn`  
- 入出力イベントのハンドラーを削除するメソッドを表すメタデータトークンへのポインター。  
+ [アウト]イベントのハンドラーを削除するメソッドを表すメタデータ トークンへのポインター。  
   
  `pmdFire`  
- 入出力イベントを発生させるメソッドを表すメタデータトークンへのポインター。  
+ [アウト]イベントを発生させるメソッドを表すメタデータ トークンへのポインター。  
   
  `rmdOtherMethod`  
- 入出力イベントに関連付けられている他のメソッドへのトークンポインターの配列。  
+ [アウト]イベントに関連付けられた他のメソッドへのトークン ポインターの配列。  
   
  `cMax`  
  [in] `rmdOtherMethod` 配列の最大サイズ。  
   
  `pcOtherMethod`  
- 入出力`rmdOtherMethod`で返されたトークンの数。  
+ [アウト]に返される`rmdOtherMethod`トークンの数。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

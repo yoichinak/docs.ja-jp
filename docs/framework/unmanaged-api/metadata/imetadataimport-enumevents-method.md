@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e1efedcb-3dd7-42ae-a399-21c24728aec5
 topic_type:
 - apiref
-ms.openlocfilehash: 4faf8646b81f92ddf65eff15fdc610d275b37864
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: bd50d63b1f7080f510c29f90979b7b36242af1c0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440015"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177372"
 ---
 # <a name="imetadataimportenumevents-method"></a>IMetaDataImport::EnumEvents メソッド
 指定した TypeDef トークンのイベント定義トークンを列挙します。  
@@ -28,10 +28,10 @@ ms.locfileid: "74440015"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT EnumEvents (   
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdEvent     rEvents[],   
+HRESULT EnumEvents (
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdEvent     rEvents[],
    [in]      ULONG       cMax,  
    [out]    ULONG        *pcEvents  
 );  
@@ -39,33 +39,33 @@ HRESULT EnumEvents (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。  
+ [イン、アウト]列挙子へのポインター。  
   
  `td`  
- からイベント定義を列挙する TypeDef トークン。  
+ [in]イベント定義を列挙する TypeDef トークン。  
   
  `rEvents`  
- 入出力返されたイベントの配列。  
+ [アウト]返されたイベントの配列。  
   
  `cMax`  
  [in] `rEvents` 配列の最大サイズ。  
   
  `pcEvents`  
- 入出力`rEvents`で返されるイベントの実際の数。  
+ [アウト]で返される実際のイベント数`rEvents`。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` が正常に返されました。|  
-|`S_FALSE`|列挙するイベントがありません。 この場合、`pcEvents` は0になります。|  
+|`S_OK`|`EnumEvents`正常に返されました。|  
+|`S_FALSE`|列挙するイベントはありません。 その場合は、`pcEvents`ゼロです。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

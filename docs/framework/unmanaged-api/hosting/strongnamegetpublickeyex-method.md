@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 63d8260c-fb32-4f8f-a357-768afd570f68
 topic_type:
 - apiref
-ms.openlocfilehash: 834292192aa447a113372bc8807041954b39a115
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 93afe1afd9ea9637d039a8b4a4e81267d49c08b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937768"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176228"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx メソッド
-公開キーと秘密キーのペアから公開キーを取得し、ハッシュアルゴリズムと署名アルゴリズムを指定します。  
+公開キーと秘密キーのペアから公開キーを取得し、ハッシュ アルゴリズムと署名アルゴリズムを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT StrongNameGetPublicKey (   
+HRESULT StrongNameGetPublicKey (
     [in]  LPCWSTR   pwzKeyContainer,  
     [in]  BYTE      *pbKeyBlob,  
     [in]  ULONG     cbKeyBlob,  
@@ -41,53 +41,53 @@ HRESULT StrongNameGetPublicKey (
   
 ## <a name="parameters"></a>パラメーター  
  `pwzKeyContainer`  
- から公開キーと秘密キーのペアを格納するキーコンテナーの名前。 `pbKeyBlob` が null の場合、`szKeyContainer` は暗号化サービスプロバイダー (CSP) 内の有効なコンテナーを指定する必要があります。 この場合、`StrongNameGetPublicKeyEx` メソッドは、コンテナーに格納されているキーペアから公開キーを抽出します。  
+ [in]公開キーと秘密キーのペアを含むキー コンテナーの名前。 null`pbKeyBlob`の場合`szKeyContainer`は、暗号化サービス プロバイダー (CSP) 内で有効なコンテナーを指定する必要があります。 この場合、メソッドは`StrongNameGetPublicKeyEx`、コンテナーに格納されているキーペアから公開キーを抽出します。  
   
- `pbKeyBlob` が null でない場合、キーのペアは、バイナリラージオブジェクト (BLOB) に格納されていると見なされます。  
+ null`pbKeyBlob`でない場合、キー ペアは、キー のバイナリ ラージ オブジェクト (BLOB) に含まれていると見なされます。  
   
- キーは 1024-Rivest-shamir-adleman-Rivest-shamir-adleman (RSA) 署名キーである必要があります。 この時点では、他の種類のキーはサポートされていません。  
+ キーは、1024 ビットのリベスト シャミール-アドレマン (RSA) 署名キーである必要があります。 現時点では、他の種類のキーはサポートされていません。  
   
  `pbKeyBlob`  
- から公開/秘密キーのペアへのポインター。 このペアは、Win32 `CryptExportKey` 関数によって作成される形式です。 `pbKeyBlob` が null の場合、`szKeyContainer` によって指定されたキーコンテナーには、キーのペアが含まれていると見なされます。  
+ [in]公開キーと秘密キーのペアへのポインター。 このペアは、Win32`CryptExportKey`関数によって作成された形式です。 null`pbKeyBlob`の場合、指定されたキー`szKeyContainer`コンテナーにはキー ペアが含まれるものと見なされます。  
   
  `cbKeyBlob`  
- から`pbKeyBlob`のサイズ (バイト単位)。  
+ [in]のサイズ (バイト単位)`pbKeyBlob`です。  
   
  `ppbPublicKeyBlob`  
- 入出力返された公開キー BLOB。 `ppbPublicKeyBlob` パラメーターは、共通言語ランタイムによって割り当てられ、呼び出し元に返されます。 呼び出し元は、 [ICLRStrongName:: StrongNameFreeBuffer](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)メソッドを使用して、メモリを解放する必要があります。  
+ [アウト]返された公開キー BLOB。 パラメーター`ppbPublicKeyBlob`は、共通言語ランタイムによって割り当てられ、呼び出し元に返されます。 呼び出し元は、メソッドを使用してメモリ[を](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)解放する必要があります。  
   
  `pcbPublicKeyBlob`  
- 入出力返される公開キー BLOB のサイズ。  
+ [アウト]返される公開キー BLOB のサイズ。  
   
  `uHashAlgId`  
- からアセンブリハッシュアルゴリズム。 許容される値の一覧については、「解説」を参照してください。  
+ [in]アセンブリ ハッシュ アルゴリズム。 受け入れられる値の一覧については、「解説」を参照してください。  
   
  `uReserved`  
- から将来使用するために予約されています。既定値は null です。  
+ [in]将来の使用のために予約されています。デフォルトは null です。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが正常に完了した場合は `S_OK`。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
+ `S_OK`メソッドが正常に完了した場合。それ以外の場合は、失敗を示す HRESULT 値です (リストの[HRESULT の共通値](/windows/win32/seccrypto/common-hresult-values)を参照)。  
   
-## <a name="remarks"></a>Remarks  
- 公開キーは[Publickeyblob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)構造に含まれています。  
+## <a name="remarks"></a>解説  
+ 公開キーは[、パブリックキー Blob](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)構造体に含まれています。  
   
-## <a name="remarks"></a>Remarks  
- 次の表は、`uHashAlgId` パラメーターで許容される値のセットを示しています。  
+## <a name="remarks"></a>解説  
+ 次の表は、パラメーターに使用できる値の`uHashAlgId`セットを示しています。  
   
-|[名前]|Value|  
+|名前|Value|  
 |----------|-----------|  
-|[なし]|0|  
+|なし|0|  
 |SHA-1|0x8004|  
 |SHA-256|0x800c|  
 |SHA-384|0x800d|  
 |SHA-512|0x800e|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** メタホスト .h  
+ **ヘッダー:** メタホスト.h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

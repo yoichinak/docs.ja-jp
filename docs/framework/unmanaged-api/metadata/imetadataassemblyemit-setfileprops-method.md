@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 85667d38-611c-45a9-938d-930ac7a7b681
 topic_type:
 - apiref
-ms.openlocfilehash: 106ffeee521f69a73628b1fb6a611abc733583f9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 25baa6ffda3d50915cc7898275d6a557c1b3e947
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431875"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176033"
 ---
 # <a name="imetadataassemblyemitsetfileprops-method"></a>IMetaDataAssemblyEmit::SetFileProps メソッド
 指定された `File` メタデータ構造体を変更します。  
@@ -30,7 +30,7 @@ ms.locfileid: "74431875"
 ```cpp  
 HRESULT SetFileProps (  
     [in] mdFile        file,  
-    [in] const void    *pbHashValue,   
+    [in] const void    *pbHashValue,
     [in] ULONG         cbHashValue,  
     [in] DWORD         dwFileFlags  
 );  
@@ -38,26 +38,26 @@ HRESULT SetFileProps (
   
 ## <a name="parameters"></a>パラメーター  
  `file`  
- から変更する `File` メタデータ構造を指定するメタデータトークン。  
+ [in]変更するメタデータ構造を`File`指定するメタデータ トークン。  
   
  `pbHashValue`  
- からファイルに関連付けられているハッシュデータへのポインター。  
+ [in]ファイルに関連付けられているハッシュ データへのポインター。  
   
  `cbHashValue`  
- から`pbHashValue`のサイズ (バイト単位)。  
+ [in]のサイズ (バイト`pbHashValue`単位)  
   
  `dwFileFlags`  
- からファイルのさまざまな属性を指定する[Corfileflags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)値のビットごとの組み合わせ。  
+ [in]ファイルのさまざまな属性を指定する[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)値のビットごとの組み合わせ。  
   
-## <a name="remarks"></a>コメント  
- `File` メタデータ構造を作成するには、 [IMetaDataAssemblyEmit::D efineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)メソッドを使用します。  
+## <a name="remarks"></a>解説  
+ メタデータ構造を`File`作成するには[、IMetaDataAssemblyEmit::DefineFile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)メソッドを使用します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

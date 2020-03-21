@@ -15,52 +15,52 @@ helpviewer_keywords:
 ms.assetid: 958970d6-f6a2-4b84-b32a-f555cbaf8f61
 topic_type:
 - apiref
-ms.openlocfilehash: 66aab8081a5cce8c5ba986470bc91eb0604781a5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7198698edce48546c4f9a82ace18d5a6e71891ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121513"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176254"
 ---
 # <a name="ihostsecuritymanagergetsecuritycontext-method"></a>IHostSecurityManager::GetSecurityContext メソッド
-ホストから要求された[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)を取得します。  
+ホストから要求された[IHost セキュリティ コンテキスト](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)を取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp
 HRESULT GetSecurityContext (  
-    [in]  EContextType eContextType,   
+    [in]  EContextType eContextType,
     [out] IHostSecurityContext** ppSecurityContext  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `eContextType`  
- から[EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)値の1つ。返されるセキュリティコンテキストの種類を示します。  
+ [in]返すセキュリティ コンテキストの種類を示す[、EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)値の 1 つ。  
   
  `ppSecurityContext`  
- 入出力`eContextType`の `IHostSecurityContext` へのインターフェイスポインターのアドレス。  
+ [アウト]のインターフェイス ポインタ`IHostSecurityContext`の`eContextType`アドレス。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`GetSecurityContext` が正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
+|S_OK|`GetSecurityContext`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
+|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
-|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返すと、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
   
-## <a name="remarks"></a>Remarks  
- ホストは、CLR とユーザーコードの両方によって、スレッドトークンへのすべてのコードアクセスを制御できます。 また、完全なセキュリティコンテキスト情報が、制限されたコードアクセスで非同期操作またはコードポイント全体に渡されるようにすることもできます。 `IHostSecurityContext` は、CLR に対して非透過的なこのセキュリティコンテキスト情報をカプセル化します。 CLR は、この情報をキャプチャし、スレッドプールのワーカー項目のディスパッチ、ファイナライザーの実行、およびモジュールとクラスの構築の間で移動します。  
+## <a name="remarks"></a>解説  
+ ホストは、CLR とユーザー コードの両方で、スレッド トークンへのすべてのコード アクセスを制御できます。 また、完全なセキュリティ コンテキスト情報が、コード アクセスが制限された非同期操作やコード ポイント間で確実に渡されるようにすることもできます。 `IHostSecurityContext`は、CLR に対して不透明なこのセキュリティ コンテキスト情報をカプセル化します。 CLR は、この情報をキャプチャし、スレッド プールのワーカー アイテム のディスパッチ、ファイナライザの実行、およびモジュールとクラスの構築間で移動します。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

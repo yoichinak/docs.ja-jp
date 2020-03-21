@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-ms.openlocfilehash: 79a9e4513a98a29edc11cc76c599f03c9c3a72b4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8fe6216e11a64ea182d796247d888b862b1e8377
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450112"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177927"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 列挙型
-モジュールまたは複合イメージをインストールするときに登録に使用されるフラグ値を提供します。  
+モジュールまたは複合イメージをインストールするときに登録に使用するフラグ値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-typedef enum   
+typedef enum
 {  
     regNoCopy  = 0x00000001,  
     regConfig  = 0x00000002,  
@@ -39,19 +39,19 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`regNoCopy`|転送先にファイルをコピーしないことを指定します。|  
-|`regConfig`|モジュールまたは複合が構成であることを指定します。|  
-|`regHasRefs`|モジュールまたは複合にクラス参照があることを指定します。|  
+|`regNoCopy`|ファイルをコピー先にコピーしないように指定します。|  
+|`regConfig`|モジュールまたはコンポジットが構成であることを指定します。|  
+|`regHasRefs`|モジュールまたは複合がクラス参照を持っていることを指定します。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

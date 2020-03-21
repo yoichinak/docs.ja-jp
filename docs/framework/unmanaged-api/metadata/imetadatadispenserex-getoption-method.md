@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: d7f794e5-8e25-4d65-850a-7c34fbfce87d
 topic_type:
 - apiref
-ms.openlocfilehash: ab74b02df959fe6e6457273e67ba3b82ae6a015c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 816e2f2dc7d4d00f74f67720ee45d7b3483e57fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74435996"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177726"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption メソッド
-現在のメタデータスコープの指定したオプションの値を取得します。 オプションは、現在のメタデータスコープへの呼び出しの処理方法を制御します。  
+現在のメタデータ スコープの指定されたオプションの値を取得します。 このオプションは、現在のメタデータ スコープへの呼び出しの処理方法を制御します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetOption (  
-    [in]  REFGUID         optionId,   
+    [in]  REFGUID         optionId,
     [out] const VARIANT   *pValue  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `optionId`  
- から取得するオプションを指定する GUID へのポインター。 サポートされている Guid の一覧については、「解説」を参照してください。  
+ [in]取得するオプションを指定する GUID へのポインター。 サポートされている GUID の一覧については、「解説」を参照してください。  
   
  `pValue`  
- 入出力返されたオプションの値。 この値の型は、指定されたオプションの型のバリアントになります。  
+ [アウト]返されるオプションの値。 この値の型は、指定されたオプションの型のバリアントになります。  
   
-## <a name="remarks"></a>コメント  
- 次の一覧は、このメソッドでサポートされている Guid を示しています。 説明については、 [IMetaDataDispenserEx:: SetOption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)メソッドを参照してください。 `optionId` がこの一覧にない場合、このメソッドは HRESULT `E_INVALIDARG`を返します。これは、正しくないパラメーターを示します。  
+## <a name="remarks"></a>解説  
+ このメソッドでサポートされている GUID を次に示します。 詳細については[、メソッドを](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)参照してください。 この`optionId`リストに含まれていない場合、このメソッドは、誤`E_INVALIDARG`ったパラメーターを示す HRESULT を返します。  
   
-- MetaDataCheckDuplicatesFor  
+- メタデータチェック重複  
   
-- MetaDataRefToDefCheck  
+- をチェックします。  
   
-- MetaDataNotificationForTokenMovement  
+- トークンの動き  
   
-- MetaDataSetENC  
+- メタデータセットエンク  
   
-- MetaDataErrorIfEmitOutOfOrder  
+- 注文のエラーをエラーします。  
   
-- MetaDataGenerateTCEAdapters  
+- メタデータ生成TCEアダプター  
   
-- MetaDataLinkerOptions  
+- メタデータリンカーのオプション  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[「システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
 - [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)

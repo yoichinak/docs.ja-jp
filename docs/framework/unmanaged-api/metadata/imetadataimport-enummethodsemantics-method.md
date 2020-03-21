@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7e3c630-9691-46d6-94df-b5593a7bb08a
 topic_type:
 - apiref
-ms.openlocfilehash: ff6932b6040a19e0ccda2f8d2140fa131cdd9224
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f20652a7f86576e64646a1f63c3e2c48b55cf811
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450076"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175461"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics メソッド
 指定したメソッドが関連付けられているプロパティおよびプロパティ変更イベントを列挙します。  
@@ -30,7 +30,7 @@ ms.locfileid: "74450076"
 ```cpp  
 HRESULT EnumMethodSemantics (  
    [in, out] HCORENUM    *phEnum,  
-   [in]  mdMethodDef     mb,   
+   [in]  mdMethodDef     mb,
    [out] mdToken         rEventProp[],  
    [in]  ULONG           cMax,  
    [out] ULONG           *pcEventProp  
@@ -39,40 +39,40 @@ HRESULT EnumMethodSemantics (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
+ [イン、アウト]列挙子へのポインター。 このメソッドの最初の呼び出しでは、NULL にする必要があります。  
   
  `mb`  
- から列挙型のスコープを制限する MethodDef トークン。  
+ [in]列挙のスコープを制限する MethodDef トークン。  
   
  `rEventProp`  
- 入出力イベントまたはプロパティを格納するために使用される配列。  
+ [アウト]イベントまたはプロパティを格納するために使用される配列。  
   
  `cMax`  
  [in] `rEventProp` 配列の最大サイズ。  
   
  `pcEventProp`  
- 入出力`rEventProp`で返されるイベントまたはプロパティの数。  
+ [アウト]で返されるイベントまたはプロパティの`rEventProp`数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSemantics` が正常に返されました。|  
-|`S_FALSE`|列挙するイベントやプロパティはありません。 この場合、`pcEventProp` は0になります。|  
+|`S_OK`|`EnumMethodSemantics`正常に返されました。|  
+|`S_FALSE`|列挙するイベントまたはプロパティはありません。 その場合は、`pcEventProp`ゼロです。|  
   
-## <a name="remarks"></a>コメント  
- 多くの共通言語ランタイム型では、プロパティ`Changed` イベント *、`On`プロパティ*に関連*するプロパティ`Changed`* メソッドが定義されています。 たとえば、<xref:System.Windows.Forms.Control?displayProperty=nameWithType> 型は、<xref:System.Windows.Forms.Control.Font%2A> プロパティ、<xref:System.Windows.Forms.Control.FontChanged> イベント、および <xref:System.Windows.Forms.Control.OnFontChanged%2A> メソッドを定義します。 <xref:System.Windows.Forms.Control.Font%2A> プロパティの set アクセサーメソッドは <xref:System.Windows.Forms.Control.OnFontChanged%2A> メソッドを呼び出します。このメソッドによって、<xref:System.Windows.Forms.Control.FontChanged> イベントが発生します。 <xref:System.Windows.Forms.Control.OnFontChanged%2A> に対して MethodDef を使用して `EnumMethodSemantics` を呼び出し、<xref:System.Windows.Forms.Control.Font%2A> プロパティと <xref:System.Windows.Forms.Control.FontChanged> イベントへの参照を取得します。  
+## <a name="remarks"></a>解説  
+ 多くの共通言語ランタイム型は *、プロパティ*`Changed``On`イベントとプロパティに関連する*プロパティ*`Changed`メソッドを定義します。 たとえば、型は<xref:System.Windows.Forms.Control?displayProperty=nameWithType><xref:System.Windows.Forms.Control.Font%2A>プロパティ、イベント、およびメソッド<xref:System.Windows.Forms.Control.FontChanged>を定義します<xref:System.Windows.Forms.Control.OnFontChanged%2A>。 プロパティの set アクセサ<xref:System.Windows.Forms.Control.Font%2A>メソッド<xref:System.Windows.Forms.Control.OnFontChanged%2A>はメソッドを呼び出し、<xref:System.Windows.Forms.Control.FontChanged>イベントを発生させます。 プロパティとイベント`EnumMethodSemantics`への参照を取得するには<xref:System.Windows.Forms.Control.OnFontChanged%2A>、 メソッド定義を<xref:System.Windows.Forms.Control.Font%2A>使用して呼<xref:System.Windows.Forms.Control.FontChanged>び出します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

@@ -15,65 +15,65 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 5c81bc82e19bce658336e4860a61f2721e17423d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431692"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177695"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam メソッド
-指定したトークンによって参照されるメソッドに対して、指定したシグネチャを持つパラメーター定義を作成し、そのパラメーター定義のトークンを取得します。  
+指定したトークンによって参照されるメソッドの指定したシグネチャを持つパラメーター定義を作成し、そのパラメーター定義のトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT DefineParam (  
-    [in]  mdMethodDef md,   
-    [in]  ULONG       ulParamSeq,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwParamFlags,   
-    [in]  DWORD       dwCPlusTypeFlag,   
+    [in]  mdMethodDef md,
+    [in]  ULONG       ulParamSeq,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwParamFlags,
+    [in]  DWORD       dwCPlusTypeFlag,
     [in]  void const  *pValue,  
-    [in]  ULONG       cchValue,   
-    [out] mdParamDef  *ppd   
+    [in]  ULONG       cchValue,
+    [out] mdParamDef  *ppd
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `md`  
- からパラメーターが定義されているメソッドのトークン。  
+ [in]パラメーターが定義されているメソッドのトークン。  
   
  `ulParamSeq`  
- からパラメーターのシーケンス番号。  
+ [in]パラメーターのシーケンス番号。  
   
  `szName`  
- からUnicode でのパラメーターの名前。  
+ [in]ユニコードのパラメータの名前。  
   
  `dwParamFlags`  
- からパラメーターのフラグ。 これは `CorParamAttr` 値のビットマスクです。  
+ [in]パラメーターのフラグ。 これは値の`CorParamAttr`ビットマスクです。  
   
  `dwCPlusTypeFlag`  
- [in] 定数値の *\** を `ELEMENT_TYPE_`します。  
+ [in]`ELEMENT_TYPE_`を定数値に対して指定*\** します。  
   
  `pValue`  
- からパラメーターの定数値。  
+ [in]パラメーターの定数値。  
   
  `cchValue`  
- から`pValue`のサイズ (Unicode 文字)。  
+ [in]のサイズ (Unicode 文字) `pValue`  
   
  `ppd`  
- 入出力割り当てられた `mdParamDef` トークン。  
+ [アウト]割`mdParamDef`り当てられたトークン。  
   
-## <a name="remarks"></a>コメント  
- `ulParamSeq` のシーケンス値は、パラメーターに対して1から始まります。 戻り値のシーケンス番号は0です。  
+## <a name="remarks"></a>解説  
+ シーケンス値は、`ulParamSeq`パラメーターの場合は 1 から始まります。 戻り値のシーケンス番号は 0 です。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

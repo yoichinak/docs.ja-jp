@@ -15,21 +15,21 @@ topic_type:
 - apiref
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 3b4f85072b9dcf87d696b979fa6cbf4e59393f82
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 8fc5f1a488826d8adc6aecb8ef122609bebbe813
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77453040"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177098"
 ---
 # <a name="cor_prf_rejit_flags-enumeration"></a>COR_PRF_REJIT_FLAGS 列挙型
-[ICorProfilerInfo10:: RequestReJITWithInliners](icorprofilerinfo10-requestrejitwithinliners-method.md) API の動作を示す値を格納します。  
+[ICorProfilerInfo10::RequestReJITWithInライナー](icorprofilerinfo10-requestrejitwithinliners-method.md) API の動作を示す値が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 typedef enum  
-{      
+{
     COR_PRF_REJIT_BLOCK_INLINING = 0x1,
     COR_PRF_REJIT_INLINING_CALLBACKS    = 0x2
 } COR_PRF_REJIT_FLAGS;  
@@ -40,17 +40,17 @@ typedef enum
 |メンバー|説明|  
 |------------|-----------------|  
 |`COR_PRF_REJIT_BLOCK_INLINING`| ReJITted メソッドは、他のメソッドでインライン化されないようにブロックされます。 |  
-|`COR_PRF_REJIT_INLINING_CALLBACKS`| メソッドをインラインで ReJITted する必要があるメソッドのコールバックを `GetFunctionParameters` 受信します。 |  
+|`COR_PRF_REJIT_INLINING_CALLBACKS`| RejiTted を要求されたメソッドにインライン化するメソッドのコールバックを受信`GetFunctionParameters`します。 |  
 
-## <a name="requirements"></a>要件  
- **プラットフォーム:** 「 [.Net Core でサポートされるオペレーティングシステム](../../../core/install/dependencies.md?pivots=os-windows)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:** NET [Core サポートされるオペレーティング システム](../../../core/install/dependencies.md?pivots=os-windows)を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)] 
+ **.NET Framework のバージョン:** [!INCLUDE[net_core_22](../../../../includes/net-core-22-md.md)]
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [列挙型のプロファイリング](profiling-enumerations.md)
+- [列挙体のプロファイリング](profiling-enumerations.md)

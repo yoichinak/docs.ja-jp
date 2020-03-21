@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-ms.openlocfilehash: 2ced153798355aff882f0244f3dd946c39dea2bd
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 11d042ea9eecc8d428761da6eaa15f7c2907ebd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73121469"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176267"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken メソッド
-現在実行中のスレッドに関連付けられている随意アクセストークンを開きます。  
+現在実行中のスレッドに関連付けられている任意のアクセス トークンを開きます。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT OpenThreadToken (  
-    [in]  DWORD    dwDesiredAccess,   
-    [in]  BOOL     bOpenAsSelf,   
+    [in]  DWORD    dwDesiredAccess,
+    [in]  BOOL     bOpenAsSelf,
     [out] HANDLE   *phThreadToken  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `dwDesiredAccess`  
- からスレッドトークンへの要求されたアクセスの種類を指定するアクセス値のマスク。 これらの値は、Win32 `OpenThreadToken` 関数で定義されています。 要求されたアクセスの種類は、付与または拒否するアクセスの種類を決定するために、トークンの随意アクセス制御リスト (DACL) に対して調整されます。  
+ [in]スレッド トークンへのアクセスの要求された種類を指定するアクセス値のマスク。 これらの値は Win32`OpenThreadToken`関数で定義されます。 要求されたアクセスの種類は、トークンの随意アクセス制御リスト (DACL) に対して調整され、許可または拒否するアクセスの種類を決定します。  
   
  `bOpenAsSelf`  
- [in] 呼び出し元スレッドのプロセスのセキュリティコンテキストを使用してアクセスチェックを行うように指定するには `true` ます。`false`、呼び出し元のスレッド自体のセキュリティコンテキストを使用してアクセスチェックを実行するように指定します。 スレッドがクライアントを偽装している場合は、クライアントプロセスのセキュリティコンテキストになります。  
+ [in]`true`呼び出し元スレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを行うことを指定します。`false`呼び出し元スレッド自体のセキュリティ コンテキストを使用してアクセス チェックを実行するように指定します。 スレッドがクライアントを偽装している場合、セキュリティ コンテキストはクライアント プロセスのコンテキストにすることができます。  
   
  `phThreadToken`  
- 入出力新しく開かれたアクセストークンへのポインター。  
+ [アウト]新しく開いたアクセス トークンへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`OpenThreadToken` が正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
+|S_OK|`OpenThreadToken`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
+|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
-|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返すと、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
   
-## <a name="remarks"></a>Remarks  
- `IHostSecurityManager::OpenThreadToken` は、同じ名前の対応する Win32 関数と同じように動作します。ただし、Win32 関数では、呼び出し元が任意のスレッドへのハンドルを渡すことを許可し、`IHostSecurityManager::OpenThreadToken` は呼び出し元のスレッドに関連付けられているトークンのみを開くことができます。  
+## <a name="remarks"></a>解説  
+ `IHostSecurityManager::OpenThreadToken`Win32 関数では、呼び出し元が任意のスレッドにハンドルを渡し、呼び出し元スレッドに関連付けられたトークンのみを`IHostSecurityManager::OpenThreadToken`開くことを許可する点を除いて、同じ名前の対応する Win32 関数と同様に動作します。  
   
- `HANDLE` 型は COM に準拠していません。つまり、そのサイズはオペレーティングシステムに固有であり、カスタムマーシャリングが必要です。 したがって、このトークンは、CLR とホストの間でプロセス内でのみ使用されます。  
+ 型`HANDLE`は COM に準拠していない、つまり、そのサイズはオペレーティング システムに固有であり、カスタム マーシャリングが必要です。 したがって、このトークンは、プロセス内で、CLR とホストの間でのみ使用されます。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

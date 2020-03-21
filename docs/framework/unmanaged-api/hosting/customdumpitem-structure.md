@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: fd9085ff-7beb-4c38-97f0-037cd8ba4f65
 topic_type:
 - apiref
-ms.openlocfilehash: ae64edd8a3a628100d4c51d0b78be1bc8d49fc17
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 154beef9398029f31dcb4d081019b9f292238af4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73138277"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176475"
 ---
 # <a name="customdumpitem-structure"></a>CustomDumpItem 構造体
-エラー報告のカスタムダンプに追加するアイテムについて説明します。  
+エラー報告でカスタム ダンプに追加する項目を記述します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 struct {  
-    ECustomDumpItemKind itemKind;   
+    ECustomDumpItemKind itemKind;
     union {  
         UINT_PTR pReserved;  
     }  
@@ -40,17 +40,17 @@ struct {
 |メンバー|説明|  
 |------------|-----------------|  
 |`itemKind`|追加する項目の種類を示す[ECustomDumpItemKind](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)値。|  
-|`pReserved`|現在使用されていません。 共用体に追加された項目は、ポインターサイズ以下である必要があります。 `struct` が必要な場合は、それを個別に割り当てて、それをポイントする必要があります。|  
+|`pReserved`|現在は使用しません。 共用体に追加される項目は、ポインター・サイズより大きくすることはできません。 が必要`struct`な場合は、個別に割り当ててポイントする必要があります。|  
   
-## <a name="remarks"></a>Remarks  
- [ICLRErrorReportingManager:: BeginCustomDump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)は `CustomDumpItem`型のパラメーターを受け取ります。  
+## <a name="remarks"></a>解説  
+ [を](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)指定`CustomDumpItem`します。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** MSCorEE.idl  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
