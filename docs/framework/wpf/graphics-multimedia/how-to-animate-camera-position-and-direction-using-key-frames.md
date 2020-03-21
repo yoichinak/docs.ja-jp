@@ -1,5 +1,5 @@
 ---
-title: '方法: キー フレームを使用してカメラの位置および方向をアニメーション化する'
+title: '方法 : キー フレームを使用してカメラの位置および方向をアニメーション化する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], camera direction with key frames
@@ -9,21 +9,21 @@ helpviewer_keywords:
 - key frames [WPF], animating camera position
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
-ms.openlocfilehash: 44464cc314d649516998338e36c1b523101ac4e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 28471f9b42140a6c75b043d33939503528b63194
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651338"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80112168"
 ---
-# <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>方法: キー フレームを使用してカメラの位置および方向をアニメーション化する
-次の例では、<xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames>の位置をアニメーション化するために使用する<xref:System.Windows.Media.Media3D.PerspectiveCamera>3D シーンでします。 さらに、 <xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames> 3D シーンでカメラが指す方向をアニメーション化するために使用します。 どちらのアニメーションは、一連のアニメーション効果を作成するいくつかのキー フレームを使用します。  
+# <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>方法 : キー フレームを使用してカメラの位置および方向をアニメーション化する
+次の例では、3D<xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames>シーンでの a の<xref:System.Windows.Media.Media3D.PerspectiveCamera>位置をアニメートするために使用します。 さらに、<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>カメラが 3D シーンで向いている方向をアニメートするために使用されます。 これらのアニメーションはどちらも、一連のアニメーション効果を作成するいくつかのキー フレームを使用します。  
   
-1. <xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame> <xref:System.Windows.Media.Animation.LinearVector3DKeyFrame>する滑らかな線形補間値の間での作成に使用します。  
+1. <xref:System.Windows.Media.Animation.LinearPoint3DKeyFrame>値<xref:System.Windows.Media.Animation.LinearVector3DKeyFrame>間の滑らかな直線補間を作成するために使用されます。  
   
-2. <xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame> <xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame>値 (補間) の間で突然「ジャンプ」の作成に使用します。  
+2. <xref:System.Windows.Media.Animation.DiscretePoint3DKeyFrame>値<xref:System.Windows.Media.Animation.DiscreteVector3DKeyFrame>間に突然の「ジャンプ」を作成するために使用されます(補間なし)。  
   
-3. <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame> <xref:System.Windows.Media.Animation.SplineVector3DKeyFrame>に応じて値の間に可変遷移を作成するために使用、<xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A>プロパティ。 次の例では、アニメーションは低速と始まりますが、時間セグメントの末尾に向かって、急激に速くなります。  
+3. <xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame>プロパティ<xref:System.Windows.Media.Animation.SplineVector3DKeyFrame>に応じて値間の変数遷移を<xref:System.Windows.Media.Animation.SplinePoint3DKeyFrame.KeySpline%2A>作成するために使用されます。 次の例では、アニメーションは低速から開始しますが、時間セグメントの終わりに向かって、指数関数的に高速化します。  
   
 ## <a name="example"></a>例  
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
@@ -31,4 +31,4 @@ ms.locfileid: "61651338"
 ## <a name="see-also"></a>関連項目
 
 - [3D シーンでカメラの位置および方向をアニメーション化する](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
-- [3-D グラフィックスの概要](3-d-graphics-overview.md)
+- [3D グラフィックスの概要](3-d-graphics-overview.md)

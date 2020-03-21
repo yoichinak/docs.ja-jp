@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 2221fd06-9e27-4113-972e-2530db8c3594
 topic_type:
 - apiref
-ms.openlocfilehash: 2c84112984e9cb7dec2a492ac16af00e14770806
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f5af8e559b4fbfeb60530372185ca10104ade987
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782494"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178853"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next メソッド
-マネージヒープ上のオブジェクトに関する情報を格納している、指定した数の[COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを取得します。  
+マネージ ヒープ上のオブジェクトに関する情報を格納する、指定した数[のCOR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT Next(  
-    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_HEAPOBJECT  objects[],   
+    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_HEAPOBJECT  objects[],
     [out] ULONG *pceltFetched  
 );  
 ```  
@@ -38,17 +38,17 @@ HRESULT Next(
  celt  
  [in] 取得するオブジェクトの数。  
   
- /復元  
- 入出力ポインターの配列。各ポインターは、マネージヒープ上のオブジェクトに関する情報を提供する[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトを指します。  
+ オブジェクト  
+ [アウト]マネージ ヒープ上のオブジェクトに関する情報を提供する[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトを指すポインターの配列。  
   
  pceltFetched  
- 入出力`objects`で実際に返される[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトの数へのポインター。 `celt` が 1 の場合、この値は`null` になることがあります。  
+ [アウト]で実際に返される[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトの数へのポインター `objects`。 `celt` が 1 の場合、この値は`null` になることがあります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  `COR_HEAPOBJECT.type` フィールドは、入れ子になった参照カウントの COM インターフェイスの識別子です。 この参照は、`ICorDebugHeapEnum::Next` の呼び出し元によって解放される必要があります。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

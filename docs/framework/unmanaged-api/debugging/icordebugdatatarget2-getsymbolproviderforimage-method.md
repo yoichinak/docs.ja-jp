@@ -2,12 +2,12 @@
 title: ICorDebugDataTarget2::GetSymbolProviderForImage メソッド
 ms.date: 03/30/2017
 ms.assetid: b7c0a2f0-e904-43b3-98e1-d669e8a589e8
-ms.openlocfilehash: bada60295c3a9b3a702aa674e06f8f5cf6ac0a24
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 500d36b414be686071990a6e1b40dd8759d02ae9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788826"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178929"
 ---
 # <a name="icordebugdatatarget2getsymbolproviderforimage-method"></a>ICorDebugDataTarget2::GetSymbolProviderForImage メソッド
 モジュールのベース アドレスからそのモジュールのシンボル プロバイダーを返します。  
@@ -16,25 +16,25 @@ ms.locfileid: "76788826"
   
 ```cpp  
 HRESULT GetSymbolProviderForImage(  
-    [in] CORDB_ADDRESS imageBaseAddress,   
+    [in] CORDB_ADDRESS imageBaseAddress,
     [out] ICorDebugSymbolProvider **ppSymProvider  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `imageBaseAddress`  
- からモジュールのベースアドレスを表す[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)値。  
+ [in]モジュールのベース アドレスを表す[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)値。  
   
  `ppSymProvider`  
- 入出力ツール[プロバイダー](icordebugsymbolprovider-interface.md)オブジェクトのアドレスへのポインター。  
+ [アウト][オブジェクトの](icordebugsymbolprovider-interface.md)アドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

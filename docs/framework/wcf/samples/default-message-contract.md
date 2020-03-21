@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: dcdeeda0d6054c9cf6fefa31ea33d720c0c0f3f7
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 46b69697616ad7983daed16f8a180a4da7f61a16
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716577"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183766"
 ---
 # <a name="default-message-contract"></a>既定のメッセージ コントラクト
-既定のメッセージ コントラクトのサンプルでは、ユーザー定義のカスタム メッセージをサービス操作に渡したり、サービス操作から渡されたりするサービスを示します。 このサンプルは、型指定されたサービスとして電卓インターフェイスを実装する[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。 このサンプルでは、[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)で使用される加算、減算、乗算、および除算の個々のサービス操作ではなく、オペランドと演算子の両方を含むカスタムメッセージを渡し、算術計算の結果を返します。  
+既定のメッセージ コントラクトのサンプルでは、ユーザー定義のカスタム メッセージをサービス操作に渡したり、サービス操作から渡されたりするサービスを示します。 このサンプルは、型指定されたサービスとして電卓インターフェイスを実装する[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。 このサンプルでは、[開始の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)で使用される加算、減算、乗算、および除算に対する個々のサービス操作の代わりに、オペランドと演算子の両方を含むカスタム メッセージを渡し、算術計算の結果を返します。  
   
  クライアントはコンソール プログラム (.exe) であり、サービス ライブラリはインターネット インフォメーション サービス (IIS) によってホストされます。 クライアント アクティビティは、コンソール ウィンドウに表示されます。  
   
@@ -48,7 +48,7 @@ public class MyMessage
   
     //Constructor - create a message and populate its members.  
   
-    public MyMessage(double n1, double n2, string operation,   
+    public MyMessage(double n1, double n2, string operation,
                      double result)  
     {  
         this.n1 = n1;  
@@ -131,7 +131,7 @@ public class CalculatorService : ICalculator
 }  
 ```  
   
- クライアント用に生成されたクライアントコードは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツールを使用して作成されています。 このツールでは、必要に応じて、生成済みのクライアント コード内にメッセージ コントラクト型が自動的に作成されます。 `/messageContract` コマンド オプションを指定すると、メッセージ コントラクトを強制的に生成できます。  
+ クライアント用に生成されたクライアント コードは[、サービス モデル メタデータ ユーティリティ ツール (Svcutil.exe) ツール](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して作成されました。 このツールでは、必要に応じて、生成済みのクライアント コード内にメッセージ コントラクト型が自動的に作成されます。 `/messageContract` コマンド オプションを指定すると、メッセージ コントラクトを強制的に生成できます。  
   
 ```console  
 svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" /o:client\generatedClient.cs http://localhost/servicemodelsamples/service.svc/mex  
@@ -145,7 +145,7 @@ CalculatorClient client = new CalculatorClient();
   
 // Perform addition using a typed message.  
   
-MyMessage request = new MyMessage() 
+MyMessage request = new MyMessage()
                     {  
                         N1 = 100D,  
                         N2 = 15.99D,  
@@ -170,17 +170,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
+1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
   
 2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
+3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
->   
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  

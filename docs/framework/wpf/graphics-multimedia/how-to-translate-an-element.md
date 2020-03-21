@@ -1,29 +1,29 @@
 ---
-title: '方法: 要素を平行移動する'
+title: '方法 : 要素を変換する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
-ms.openlocfilehash: 9c1b873a89820e85efb99789f483c4832fb23cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: addff0e22fb3f27ea924887809c0635aeb3ad67d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051443"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111973"
 ---
-# <a name="how-to-translate-an-element"></a>方法: 要素を平行移動する
-この例では変換 (移動) に要素を使用して、<xref:System.Windows.Media.TranslateTransform>します。  
+# <a name="how-to-translate-an-element"></a>方法 : 要素を変換する
+この例では、 を使用して要素を移動 (移動<xref:System.Windows.Media.TranslateTransform>) する方法を示します。  
   
- <xref:System.Windows.Media.TranslateTransform>クラスは、絶対配置をサポートしていないパネル内の要素を移動するために特に便利です。 適用することなどによって、<xref:System.Windows.Media.TranslateTransform>を<xref:System.Windows.UIElement.RenderTransform%2A>要素のプロパティ内の要素を移動することができます、<xref:System.Windows.Controls.StackPanel>または<xref:System.Windows.Controls.DockPanel>。  
+ この<xref:System.Windows.Media.TranslateTransform>クラスは、絶対位置決めをサポートしないパネル内の要素を移動する場合に特に便利です。 たとえば<xref:System.Windows.Media.TranslateTransform>、要素の<xref:System.Windows.UIElement.RenderTransform%2A>プロパティに a を適用すると、 または<xref:System.Windows.Controls.StackPanel><xref:System.Windows.Controls.DockPanel>内の要素を移動できます。  
   
- 使用して、<xref:System.Windows.Media.TranslateTransform.X%2A>のプロパティ、<xref:System.Windows.Media.TranslateTransform>要素を x 軸に沿って移動させるピクセル単位で、時間を指定します。 使用して、<xref:System.Windows.Media.TranslateTransform.Y%2A>プロパティ要素を y 軸に沿って移動させるピクセル単位で、時間を指定します。 最後に、適用、<xref:System.Windows.Media.TranslateTransform>を<xref:System.Windows.UIElement.RenderTransform%2A>要素のプロパティ。  
+ 要素を<xref:System.Windows.Media.TranslateTransform.X%2A>x<xref:System.Windows.Media.TranslateTransform>軸に沿って移動するには、のプロパティを使用してピクセル単位で指定します。 y<xref:System.Windows.Media.TranslateTransform.Y%2A>軸に沿って要素を移動する量をピクセル単位で指定するには、プロパティを使用します。 最後に、要素<xref:System.Windows.Media.TranslateTransform>の<xref:System.Windows.UIElement.RenderTransform%2A>プロパティにを適用します。  
   
- 次の例では、<xref:System.Windows.Media.TranslateTransform>下に移動する要素を 50 ピクセル右方向と 50 ピクセルにします。  
+ 次の例では、<xref:System.Windows.Media.TranslateTransform>要素をを使用して、要素を右に 50 ピクセル、下に 50 ピクセル移動します。  
   
 ## <a name="example"></a>例  
  [!code-xaml[transformsSample#53](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/TranslateTransformExample.xaml#53)]  
   
- 完全なサンプルについては、「[2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)」をご覧ください。  
+ 完全なサンプルについては[、2D 変換のサンプルを](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

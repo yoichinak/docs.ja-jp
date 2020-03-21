@@ -15,49 +15,49 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-ms.openlocfilehash: 63fb505a92683fda21b6e71a6ca891ca35afba1d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bdafacfe52d678aacfcd44de1e924bcb88547424
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136405"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178202"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 関数
-プロセスに読み込まれる共通言語ランタイム (CLR) のインストールディレクトリを返します。 インストールディレクトリは完全に修飾されています。たとえば、"c:\windows\microsoft.net\framework\v1.0.3705" のようになります。  
+プロセスに読み込まれる共通言語ランタイム (CLR) のインストール ディレクトリを返します。 インストール ディレクトリは、"c:\windows\microsoft.net\framework\v1.0.3705" など、完全修飾ディレクトリです。  
   
- この関数は非推奨とされます。 .NET Framework 4 で提供される[ICLRRuntimeInfo:: GetRuntimeDirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)メソッドに置き換えられています。  
+ この関数の使用は非推奨とされます。 これは、.NET フレームワーク 4 で提供[されるメソッドに](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)置き換えられます。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetCORSystemDirectory (   
-    [out] LPWSTR  pbuffer,     
-    [in]  DWORD   cchBuffer,   
+HRESULT GetCORSystemDirectory (
+    [out] LPWSTR  pbuffer,
+    [in]  DWORD   cchBuffer,
     [out] DWORD*  dwlength  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pbuffer`  
- 入出力プロセスに読み込まれたランタイムのインストールディレクトリの完全修飾名が含まれた文字列をランタイムが返すバッファー。 ランタイムがまだプロセスに読み込まれていない場合、関数はコンピューターにインストールされている最新バージョンのランタイムの適切なディレクトリ情報を返します。  
+ [アウト]プロセスに読み込まれるランタイムのインストール ディレクトリの完全修飾名を含む文字列をランタイムが返すバッファー。 ランタイムがまだプロセスに読み込まれていない場合、この関数は、コンピューターにインストールされている最新バージョンのランタイムに対応するディレクトリ情報を返します。  
   
  `cchBuffer`  
- から`pbuffer`のサイズ (バイト単位)。  
+ [in]のサイズ (バイト単位)`pbuffer`です。  
   
  `dwLength`  
- 入出力`pbuffer`で返される文字数。  
+ [アウト]で返される文字数`pbuffer`。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!CAUTION]
-> CLR のバージョン4を実行しているプロセスでは、この関数を使用しないでください。 コンピューターに以前のバージョンの CLR がインストールされている場合、この関数はそのバージョンのインストールディレクトリを返します。  
+> CLR のバージョン 4 を実行しているプロセスでは、この関数を使用しないでください。 以前のバージョンの CLR がコンピューターにインストールされている場合、この関数は、そのバージョンのインストール ディレクトリを返します。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

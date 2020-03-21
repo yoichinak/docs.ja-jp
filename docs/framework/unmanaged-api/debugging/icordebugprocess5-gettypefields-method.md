@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6a0ad3ee-dacb-47e9-abae-4536bcc4804b
 topic_type:
 - apiref
-ms.openlocfilehash: 644b5ed751caaf1809250244b37badc8037b0f57
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 29006eba3d3a523fd24a461207ab12222a639782
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792354"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178588"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields メソッド
-型に属しているフィールドに関する情報を提供します。  
+型に属するフィールドに関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,29 +31,29 @@ ms.locfileid: "76792354"
 HRESULT GetTypeFields(  
     [in] COR_TYPEID id,  
     [in] ULONG32 celt,  
-    [out] COR_FIELD fields[],   
+    [out] COR_FIELD fields[],
     [out] ULONG32 *pceltNeeded  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `id`  
- からフィールド情報を取得する型の識別子。  
+ [in]フィールド情報を取得する型の識別子。  
   
  `celt`  
- からフィールド情報を取得する[COR_FIELD](cor-field-structure.md)オブジェクトの数。  
+ [in]フィールド情報を取得する[COR_FIELD](cor-field-structure.md)オブジェクトの数。  
   
  `fields`  
- 入出力型に属するフィールドに関する情報を提供する[COR_FIELD](cor-field-structure.md)オブジェクトの配列。  
+ [アウト]型に属するフィールドに関する情報を提供する[COR_FIELD](cor-field-structure.md)オブジェクトの配列。  
   
  `pceltNeeded`  
- 入出力`fields`に含まれる[COR_FIELD](cor-field-structure.md)オブジェクトの数へのポインター。  
+ [アウト]に含まれる[COR_FIELD](cor-field-structure.md)オブジェクトの数へのポインター `fields`。  
   
-## <a name="remarks"></a>コメント  
- `celt` パラメーターは、メソッドが `fields`を設定するために使用するフィールド情報を持つフィールドの数を指定します。 `COR_TYPE_LAYOUT::numFields` フィールドの値に対応する必要があります。  
+## <a name="remarks"></a>解説  
+ この`celt`パラメーターは、メソッドがフィールド情報を設定`fields`するために使用するフィールドの数を`COR_TYPE_LAYOUT::numFields`フィールドの値に対応させる必要があります。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

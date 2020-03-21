@@ -14,12 +14,12 @@ helpviewer_keywords:
 - trace listeners, filters
 - trace listeners, initializing
 ms.assetid: 21dc2169-947d-453a-b0e2-3dac3ba0cc9f
-ms.openlocfilehash: 53cdce767d437c47aab94e883381954f8cf70653
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7d2b9da72ae0b2a5c60eb90da0b56b45634e6e05
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215918"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181820"
 ---
 # <a name="how-to-use-tracesource-and-filters-with-trace-listeners"></a>方法 : TraceSource とフィルターをトレース リスナーと共に使用する
 .NET Framework Version 2.0 の新機能の 1 つは、強化されたトレース システムです。 基本的な前提は変更されていません。トレース メッセージはスイッチ経由でリスナーに送信され、関連付けられている出力メディアに、データを報告します。 バージョン 2.0 の主な違いは、<xref:System.Diagnostics.TraceSource> クラスのインスタンスを介してトレースを開始できることです。 <xref:System.Diagnostics.TraceSource> は、拡張されたトレース システムとして機能することを目的としており、以前の <xref:System.Diagnostics.Trace> トレース クラスと <xref:System.Diagnostics.Debug> トレース クラスの静的メソッドの代わりに使用できます。 使い慣れた <xref:System.Diagnostics.Trace> クラスと <xref:System.Diagnostics.Debug> クラスがまだ存在していますが、推奨される方法は、<xref:System.Diagnostics.TraceSource> クラスを使用したトレースです。  
@@ -39,7 +39,7 @@ ms.locfileid: "77215918"
     {  
         class Program  
         {  
-            private static TraceSource mySource =   
+            private static TraceSource mySource =
                 new TraceSource("TraceSourceApp");  
             static void Main(string[] args)  
             {  
@@ -49,9 +49,9 @@ ms.locfileid: "77215918"
             }  
             static void Activity1()  
             {  
-                mySource.TraceEvent(TraceEventType.Error, 1,   
+                mySource.TraceEvent(TraceEventType.Error, 1,
                     "Error message.");  
-                mySource.TraceEvent(TraceEventType.Warning, 2,   
+                mySource.TraceEvent(TraceEventType.Warning, 2,
                     "Warning message.");  
             }  
         }  
@@ -66,13 +66,13 @@ ms.locfileid: "77215918"
     <configuration>  
       <system.diagnostics>  
         <sources>  
-          <source name="TraceSourceApp"   
-            switchName="sourceSwitch"   
+          <source name="TraceSourceApp"
+            switchName="sourceSwitch"
             switchType="System.Diagnostics.SourceSwitch">  
             <listeners>  
-              <add name="console"   
+              <add name="console"
                 type="System.Diagnostics.ConsoleTraceListener">  
-                <filter type="System.Diagnostics.EventTypeFilter"   
+                <filter type="System.Diagnostics.EventTypeFilter"
                   initializeData="Warning"/>  
               </add>  
               <add name="myListener"/>  
@@ -84,10 +84,10 @@ ms.locfileid: "77215918"
           <add name="sourceSwitch" value="Warning"/>  
         </switches>  
         <sharedListeners>  
-          <add name="myListener"   
-            type="System.Diagnostics.TextWriterTraceListener"   
+          <add name="myListener"
+            type="System.Diagnostics.TextWriterTraceListener"
             initializeData="myListener.log">  
-            <filter type="System.Diagnostics.EventTypeFilter"   
+            <filter type="System.Diagnostics.EventTypeFilter"
               initializeData="Error"/>  
           </add>  
         </sharedListeners>  
@@ -108,27 +108,27 @@ ms.locfileid: "77215918"
     {  
         class Program  
         {  
-            private static TraceSource mySource =   
+            private static TraceSource mySource =
                 new TraceSource("TraceSourceApp");  
             static void Main(string[] args)  
             {  
                 Activity1();  
   
                 // Change the event type for which tracing occurs.  
-                // The console trace listener must be specified   
+                // The console trace listener must be specified
                 // in the configuration file. First, save the original  
                 // settings from the configuration file.  
-                EventTypeFilter configFilter =   
+                EventTypeFilter configFilter =
                     (EventTypeFilter)mySource.Listeners["console"].Filter;  
   
-                // Then create a new event type filter that ensures   
+                // Then create a new event type filter that ensures
                 // critical messages will be written.  
                 mySource.Listeners["console"].Filter =  
                     new EventTypeFilter(SourceLevels.Critical);  
                 Activity2();  
   
-                // Allow the trace source to send messages to listeners   
-                // for all event types. This statement will override   
+                // Allow the trace source to send messages to listeners
+                // for all event types. This statement will override
                 // any settings in the configuration file.  
                 mySource.Switch.Level = SourceLevels.All;  
   
@@ -140,20 +140,20 @@ ms.locfileid: "77215918"
             }  
             static void Activity1()  
             {  
-                mySource.TraceEvent(TraceEventType.Error, 1,   
+                mySource.TraceEvent(TraceEventType.Error, 1,
                     "Error message.");  
-                mySource.TraceEvent(TraceEventType.Warning, 2,   
+                mySource.TraceEvent(TraceEventType.Warning, 2,
                     "Warning message.");  
             }  
             static void Activity2()  
             {  
-                mySource.TraceEvent(TraceEventType.Critical, 3,   
+                mySource.TraceEvent(TraceEventType.Critical, 3,
                     "Critical message.");  
                 mySource.TraceInformation("Informational message.");  
             }  
             static void Activity3()  
             {  
-                mySource.TraceEvent(TraceEventType.Error, 4,   
+                mySource.TraceEvent(TraceEventType.Error, 4,
                     "Error message.");  
                 mySource.TraceInformation("Informational message.");  
             }  
@@ -161,7 +161,7 @@ ms.locfileid: "77215918"
     }  
     ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TextWriterTraceListener>

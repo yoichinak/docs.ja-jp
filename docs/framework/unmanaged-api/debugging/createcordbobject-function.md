@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 1d190c5b558c7c523be09267e59eab7c5611563a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793860"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179227"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 関数
-リモートプロセスでマネージデバッグセッションをインスタンス化する機能を提供するデバッガーインターフェイス ([ICorDebug](icordebug-interface.md)) を作成します。  
+リモート プロセスでマネージ デバッグ セッションをインスタンス化するための機能を提供するデバッガー インターフェイス ([ICorDebug](icordebug-interface.md)) を作成します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT CordbCreateObject (  
-       [in]  int         iDebuggerVersion,   
+       [in]  int         iDebuggerVersion,
        [out] IUnknown**  ppCordb  
 );  
 ```  
@@ -40,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] ターゲット プロセスのデバッガー バージョン。 リモート デバッグの場合、このパラメーターは CorDebugVersion_2_0 である必要があります。  
   
  `ppCordb`  
- 入出力[ICorDebug](icordebug-interface.md)インターフェイスにキャストされて返されるオブジェクトへのポインターへのポインター。  
+ [アウト][ICorDebug](icordebug-interface.md)インターフェイスにキャストされ、返されるオブジェクトへのポインターへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
@@ -55,14 +55,14 @@ HRESULT CordbCreateObject (
  E_FAIL (またはその他の E_ リターン コード)  
  その他のエラーが発生しました。  
   
-## <a name="remarks"></a>コメント  
- `ppCordb` で返される[ICorDebug](icordebug-interface.md)インターフェイスは、すべてのマネージデバッグサービスの最上位レベルのデバッグインターフェイスです。  
+## <a name="remarks"></a>解説  
+ 返される[ICorDebug](icordebug-interface.md)インターフェイス`ppCordb`は、すべてのマネージ デバッグ サービスのトップレベルのデバッグ インターフェイスです。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
+ **ヘッダー:** インターフェイスを使用します。  
   
- **Library:** mscordbi_macx86 .dll  
+ **ライブラリ:** mscordbi_macx86.dll  
   
- **.NET Framework のバージョン:** 3.5 SP1
+ **.NET フレームワークのバージョン:** 3.5 SP1

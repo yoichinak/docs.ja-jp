@@ -1,5 +1,5 @@
 ---
-title: DacpGetModuleAddress::Request メソッド
+title: メソッドを要求します。
 ms.date: 01/16/2019
 api.name:
 - DacpGetModuleAddress::Request Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 07ad83da2bc608e3c5925664a68eec4a548860e1
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: 6850dc256a70e0c0343104b3904e9eda62d11e7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67739223"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179208"
 ---
-# <a name="dacpgetmoduleaddressrequest-method"></a>DacpGetModuleAddress::Request メソッド
+# <a name="dacpgetmoduleaddressrequest-method"></a>メソッドを要求します。
 
-指定したランタイムの構造体から構造の作成要求を実行します。
+指定されたランタイム構造体から構造体を設定する要求を実行します。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,20 +41,19 @@ HRESULT Request(
 `pDataModule`\
 [in]シード データ モジュールへのポインター。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-この構造は、ランタイム内に収めるし、任意のヘッダーまたはライブラリ ファイルでは公開されません。 これを使用するには、最も簡単な方法は、実装を模倣するためには。
+この構造体はランタイム内に存在し、ヘッダーやライブラリ ファイルを通じて公開されません。 これを使用するには、実装を模倣するのが最も簡単な方法です。
 
-- 呼び出し元から取得した値を返す、`Request`メソッドを`IXCLRDataModule*`パラメーターは次のパラメーター。 `((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
+- 次のパラメーターを使用して、`Request`パラメーターのメソッド`IXCLRDataModule*`を呼び出した結果取得した値を返します。`((uint32) 0xf0000000, 0, 0, (uint32) sizeof(*this), (uint8*) this)`
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-**ヘッダー:** なし     
-**ライブラリ:** なし  
+**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+**ヘッダー:** なし**ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
 - [デバッグ](index.md)
-- [DacpGetModuleAddress インターフェイス](dacpgetmoduleaddress-structure.md)
+- [インターフェイス](dacpgetmoduleaddress-structure.md)

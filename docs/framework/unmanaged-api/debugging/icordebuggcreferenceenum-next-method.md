@@ -15,39 +15,39 @@ helpviewer_keywords:
 ms.assetid: 91b1345c-a94f-4ef8-9696-3823d06c6d05
 topic_type:
 - apiref
-ms.openlocfilehash: 3a8e967a3ecc452ebda08872d8bcd9e9d08c766f
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d87f414e9dfd05a519b60efc7ecdd5328a6dd86f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76777693"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178867"
 ---
 # <a name="icordebuggcreferenceenumnext-method"></a>ICorDebugGCReferenceEnum::Next メソッド
-ガベージコレクトされるオブジェクトに関する情報を格納している、指定した数の[COR_GC_REFERENCE](cor-gc-reference-structure.md)インスタンスを取得します。  
+ガベージ コレクションされるオブジェクトに関する情報を含む、指定した数の[COR_GC_REFERENCE](cor-gc-reference-structure.md)インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT Next(  
-    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_GC_REFERENCE roots[],   
+    [in] ULONG celt,    [out, size_is(celt), length_is(*pceltFetched)] COR_GC_REFERENCE roots[],
     [out] ULONG *pceltFetched  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  celt  
- から取得するルートの数。  
+ [in]取得するルートの数。  
   
- ca  
- 入出力ポインターの配列。各ポインターは、ガベージコレクトされるオブジェクトのルートを表す[COR_GC_REFERENCE](cor-gc-reference-structure.md)オブジェクトを指します。  
+ 根  
+ [アウト]ガベージ コレクションされるオブジェクトのルートを表す[COR_GC_REFERENCE](cor-gc-reference-structure.md)オブジェクトを指すポインターの配列。  
   
  pceltFetched  
- 入出力`roots`で実際に返される[COR_GC_REFERENCE](cor-gc-reference-structure.md)オブジェクトの数へのポインター。 `celt` が 1 の場合、この値は`null` になることがあります。  
+ [アウト]で実際に返される[COR_GC_REFERENCE](cor-gc-reference-structure.md)オブジェクトの数へのポインター `roots`。 `celt` が 1 の場合、この値は`null` になることがあります。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

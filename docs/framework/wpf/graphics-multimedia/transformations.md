@@ -8,27 +8,27 @@ helpviewer_keywords:
 - transformations [WPF], about transformations
 - transformations [WPF]
 - graphics [WPF], transformations
-- transform classes [WPF], 2-D
+- transform classes [WPF], 2D
 - scaling objects [WPF]
 - translating objects [WPF]
-- 2-D transform classes
+- 2D transform classes
 - rotating objects [WPF]
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26956b8ae692d6092a1c81643b94d05e297ef130
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925999"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111908"
 ---
 # <a name="transformations"></a>変換
-変換を使用し、回転、拡大縮小、平行移動、または傾斜<xref:System.Windows.FrameworkElement>オブジェクト。  
+変換は、オブジェクトの回転、拡大/縮小、移動、<xref:System.Windows.FrameworkElement>または傾斜に使用されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [変換の概要](transforms-overview.md)  
- [方法トピック](transformations-how-to-topics.md)  
+ [ハウツートピック](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 

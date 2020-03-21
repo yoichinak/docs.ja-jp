@@ -6,32 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
-ms.openlocfilehash: 7305258570ad853afa88a231592fd4b6cd2dd74e
-ms.sourcegitcommit: feb42222f1430ca7b8115ae45e7a38fc4a1ba623
+ms.openlocfilehash: 49d2988cbad33497f2214098bcde68f7d5434b5e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/02/2020
-ms.locfileid: "76965868"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180020"
 ---
 # <a name="microsoft-ui-automation"></a>Microsoft UI オートメーション
 
 > [!NOTE]
-> このドキュメントは、<xref:System.Windows.Automation> 名前空間で定義されているマネージ UI オートメーションクラスを使用する .NET 開発者を対象としています。 UI オートメーションの最新情報については、「 [Windows AUTOMATION API: Ui オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
+> このドキュメントは、名前空間で定義されたマネージ UI オートメーション クラスを使用する .NET 開発者を<xref:System.Windows.Automation>対象としています。 UI オートメーションの最新情報については、「 [Windows オートメーション API : UI オートメーション](/windows/win32/winauto/entry-uiauto-win32)」を参照してください。
 
- Microsoft UI オートメーションは、Microsoft Windows のアクセシビリティフレームワークです。 ユーザーインターフェイス (UI) に関する情報へのプログラムによるアクセスを提供することで、支援技術製品および自動テストフレームワークのニーズに対応します。 さらに、UI オートメーションを使用すると、コントロールおよびアプリケーション開発者は製品をアクセス可能にすることができます。
+ マイクロソフトの UI オートメーションは、Windows のアクセシビリティ フレームワークです。 ユーザー インターフェイス (UI) に関する情報にプログラムでアクセスできるようにすることで、支援技術製品や自動テスト フレームワークのニーズに対応します。 さらに、UI オートメーションを使用すると、コントロールおよびアプリケーション開発者は製品をアクセス可能にできます。
 
- このドキュメントでは、マネージコード用の UI オートメーション API について説明します。 でC++の ui オートメーションのプログラミングの詳細については、「 [Win32 アプリケーションの ui オートメーション](/windows/desktop/winauto/windows-automation-api-portal)」を参照してください。
+ このドキュメントでは、マネージ コード用の UI オートメーション API について説明します。 C++ での UI オートメーションのプログラミングの詳細については、「 [Win32 アプリケーションの UI オートメーション](/windows/desktop/winauto/windows-automation-api-portal)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 - [ユーザー補助のベスト プラクティス](accessibility-best-practices.md)
-- [UI オートメーションの基礎](ui-automation-fundamentals.md)
+- [UI オートメーションの基本](ui-automation-fundamentals.md)
 - [マネージド コードの UI オートメーション プロバイダー](ui-automation-providers-for-managed-code.md)
 - [マネージド コードの UI オートメーション クライアント](ui-automation-clients-for-managed-code.md)
 - [UI オートメーション コントロール パターン](ui-automation-control-patterns.md)
 - [UI オートメーション テキスト パターン](ui-automation-text-pattern.md)
-- [UI Automation Control Types](ui-automation-control-types.md)
+- [UI オートメーション コントロール型](ui-automation-control-types.md)
 
 ## <a name="related-sections"></a>関連項目
 
-- [ユーザー補助のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility) 
+- [ユーザー補助のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility)

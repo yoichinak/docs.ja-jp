@@ -16,21 +16,21 @@ helpviewer_keywords:
 ms.assetid: 1cf4ca8e-d9bb-4633-9adf-5e24315bf87a
 topic_type:
 - apiref
-ms.openlocfilehash: a7fed8cb70785f0ccfcadf1e16181db303ac98e0
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0b210f105495fa3f5595adbcb0805e1d1fb62310
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789194"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179216"
 ---
 # <a name="createcoreclrdebugtarget-function"></a>CreateCoreClrDebugTarget 関数
-リモートコンピューター上で実行されているデバッガープロキシへの接続を作成し、 [ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)オブジェクトを返します。このオブジェクトを使用して、リモートコンピューター上で実行中のプロセスおよび読み込まれたランタイムのクエリを実行できます。  
+リモート コンピューターで実行されているデバッガー プロキシへの接続を作成し、リモート コンピューター上で実行中のプロセスと読み込まれたランタイムを照会するために使用できる[ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)オブジェクトを返します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT CreateCoreClrDebugTarget (  
-       [in]  DWORD    dwAddress,   
+       [in]  DWORD    dwAddress,
        [out] ICoreClrDebugTarget**     ppTarget  
 );  
 ```  
@@ -40,7 +40,7 @@ HRESULT CreateCoreClrDebugTarget (
  [in] リモート対象コンピューターの IPv4 アドレス。  
   
  `ppTarget`  
- 入出力作成される[ICoreClrDebugTarget](icoreclrdebugtarget-interface.md)オブジェクトへのポインターへのポインター。  
+ [アウト]作成される[オブジェクト](icoreclrdebugtarget-interface.md)へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
@@ -52,11 +52,11 @@ HRESULT CreateCoreClrDebugTarget (
  E_FAIL (またはその他の E_ リターン コード)  
  その他のエラーが発生しました。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
+ **ヘッダー:** インターフェイスを使用します。  
   
- **Library:** mscordbi_macx86 .dll  
+ **ライブラリ:** mscordbi_macx86.dll  
   
- **.NET Framework のバージョン:** 3.5 SP1
+ **.NET フレームワークのバージョン:** 3.5 SP1

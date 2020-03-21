@@ -2,12 +2,12 @@
 title: ICorDebugAppDomain4::GetObjectForCCW メソッド
 ms.date: 03/30/2017
 ms.assetid: 2cacdb85-e7b8-42e7-b310-c3e8c22e5d33
-ms.openlocfilehash: 50f46394c809321f0bd256e4c8d75b76fc7c2c70
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 10d32314e46aba4f030b294cadc3cbb36e8742f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784860"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179049"
 ---
 # <a name="icordebugappdomain4getobjectforccw-method"></a>ICorDebugAppDomain4::GetObjectForCCW メソッド
 COM 呼び出し可能ラッパー (CCW: COM Callable Wrapper) ポインターからマネージド オブジェクトを取得します。  
@@ -16,7 +16,7 @@ COM 呼び出し可能ラッパー (CCW: COM Callable Wrapper) ポインター�
   
 ```cpp  
 HRESULT GetObjectForCCW(  
-   [in]CORDB_ADDRESS ccwPointer,   
+   [in]CORDB_ADDRESS ccwPointer,
    [out]ICorDebugValue **ppManagedObject  
 );  
 ```  
@@ -26,12 +26,12 @@ HRESULT GetObjectForCCW(
  [in] COM 呼び出し可能ラッパー (CCW) ポインター。  
   
  `ppManagedObject`  
- 入出力指定された CCW ポインターに対応するマネージオブジェクトを表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
+ [アウト]指定された CCW ポインターに対応するマネージ オブジェクトを表す "ICorDebugValue" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -1,15 +1,15 @@
 ---
-title: <Subtypes> 要素 (.NET ネイティブ)
+title: <Subtypes>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
-ms.openlocfilehash: 9f090e7d1558d31111345e2c9b8dabb55b7122c1
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128101"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180932"
 ---
-# <a name="subtypes-element-net-native"></a>\<サブタイプ > 要素 (.NET ネイティブ)
+# <a name="subtypes-element-net-native"></a>\<要素 (.NET ネイティブ)>サブタイプ
 それを含む型から継承されたすべてのクラスに実行時ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -18,7 +18,7 @@ ms.locfileid: "73128101"
 <Subtypes Activate="policy_type"  
           Browse="policy_type"  
           Dynamic="policy_type"  
-          Serialize="policy_type"   
+          Serialize="policy_type"
           DataContractSerializer="policy_setting"  
           DataContractJsonSerializer="policy_setting"  
           XmlSerializer="policy_setting"  
@@ -47,20 +47,20 @@ ms.locfileid: "73128101"
   
 ## <a name="all-attributes"></a>すべての属性  
   
-|[値]|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<タイプ>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `<Subtypes>` 要素は、それを含む型のすべてのサブタイプにポリシーを適用します。 派生型および基底クラスに異なるポリシーを適用する場合に使用します。  
   
  リフレクション、シリアル化、および相互運用属性はいずれも省略可能ですが、そのうち少なくとも 1 つが存在する必要があります。  
@@ -89,7 +89,7 @@ ms.locfileid: "73128101"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<Type > 要素](type-element-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<要素>タイプ](type-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレン](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)
 - [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)

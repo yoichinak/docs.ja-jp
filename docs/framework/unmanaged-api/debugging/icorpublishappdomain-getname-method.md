@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 4325d61d12a66b17f88e5e368cbbc7806d0a3ec5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 762c637696fdf79ccab6702918b5bf962ea55903
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790716"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178416"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName メソッド
-この[ICorPublishAppDomain](icorpublishappdomain-interface.md)によって表されるアプリケーションドメインの名前を取得します。  
+この[ICorPublishAppDomain](icorpublishappdomain-interface.md)によって表されるアプリケーション ドメインの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetName (  
-    [in]  ULONG32   cchName,   
+    [in]  ULONG32   cchName,
     [out] ULONG32   *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
         WCHAR       *szName  
 );  
 ```  
@@ -41,20 +41,20 @@ HRESULT GetName (
  [in] `szName` 配列のサイズ。  
   
  `pcchName`  
- 入出力`szName` 配列に返された、null 文字を含むワイド文字の数へのポインター。  
+ [アウト]配列に返される null 文字を含むワイド文字の数への`szName`ポインター。  
   
  `szName`  
- 入出力名前を格納する配列。  
+ [アウト]名前を格納する配列。  
   
-## <a name="remarks"></a>コメント  
- `szName` が null 以外の場合、`GetName` メソッドは `szName`に最大 `cchName` 文字 (null ターミネータを含む) をコピーします。 `pcchName`で null 以外の値が返された場合、名前の実際の文字数 (null ターミネータを含む) が `szName` 配列に格納されます。  
+## <a name="remarks"></a>解説  
+ null`szName`以外の場合、`GetName`メソッドは最大`cchName`文字 (null 終端文字を含む)`szName`を にコピーします。 で null 以外が返される`pcchName`場合、名前の実際の文字数 (NULL 終端文字を含む) が`szName`配列に格納されます。  
   
- `GetName` メソッドは、コピーされた文字数に関係なく、S_OK HRESULT を返します。  
+ この`GetName`メソッドは、コピーされた文字数に関係なく、hRESULT S_OKを返します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub .idl、CorPub .h  
+ **ヘッダー:** コルパブ.idl,コルパブ.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -2,12 +2,12 @@
 title: '方法: マネージ コード DCOM を WCF に移行する'
 ms.date: 03/30/2017
 ms.assetid: 52961ffc-d1c7-4f83-832c-786444b951ba
-ms.openlocfilehash: 4d814d9c2e62af9aa5cc2a8d1f84738b69e36ad1
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 2576e88c25ae381e90ec7d613efb648048145b3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217176"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181388"
 ---
 # <a name="how-to-migrate-managed-code-dcom-to-wcf"></a>方法: マネージ コード DCOM を WCF に移行する
 Windows Communication Foundation (WCF) は、分散コンポーネント オブジェクト モデル (DCOM) と比較して、分散環境でサーバーとクライアントの間でマネージド コードを呼び出すための、推奨されているセキュリティで保護された選択肢です。 この記事では、以下のシナリオで、DCOM から WCF にコードを移行する方法を示します。  
@@ -64,7 +64,7 @@ public interface IRemoteService
 ```csharp  
 using System.Runtime.Serialization;  
 using System.ServiceModel;  
-using System.ServiceModel.Web;   
+using System.ServiceModel.Web;
 . . .  
 [ServiceContract]  
 public interface ICustomerManager  
@@ -72,7 +72,7 @@ public interface ICustomerManager
     [OperationContract]  
     void StoreCustomer(Customer customer);  
   
-    [OperationContract]     Customer GetCustomer(string firstName, string lastName);   
+    [OperationContract]     Customer GetCustomer(string firstName, string lastName);
   
 }  
 ```  
@@ -123,7 +123,7 @@ public class Address
  次に、前の手順で定義したインターフェイスを実装する、WCF サービス クラスを実装する必要があります。  
   
 ```csharp  
-public class CustomerService: ICustomerManager    
+public class CustomerService: ICustomerManager
 {  
     public void StoreCustomer(Customer customer)  
     {  
@@ -144,7 +144,7 @@ public class CustomerService: ICustomerManager
   <system.serviceModel>  
     <services>  
       <service name="Server.CustomerService">  
-        <endpoint address="http://localhost:8083/CustomerManager"   
+        <endpoint address="http://localhost:8083/CustomerManager"
                   binding="basicHttpBinding"  
                   contract="Shared.ICustomerManager" />  
       </service>  
@@ -159,9 +159,9 @@ public class CustomerService: ICustomerManager
 <configuration>  
   <system.serviceModel>  
     <client>  
-      <endpoint name="customermanager"   
-                address="http://localhost:8083/CustomerManager"   
-                binding="basicHttpBinding"   
+      <endpoint name="customermanager"
+                address="http://localhost:8083/CustomerManager"
+                binding="basicHttpBinding"
                 contract="Shared.ICustomerManager"/>  
     </client>  
   </system.serviceModel>  
@@ -180,7 +180,7 @@ customerServiceHost.Open();
  クライアントからのサービスを呼び出すには、サービスのチャネル ファクトリを作成し、チャネルを要求する必要があります。これにより、クライアントから `GetCustomer` メソッドを直接呼び出すことができるようになります。 チャネルはサービスのインターフェイスを実装し、基になる要求/応答のロジックを処理します。  このメソッドの呼び出しからの戻り値は、サービス応答の逆シリアル化されたコピーです。  
   
 ```csharp  
-ChannelFactory<ICustomerManager> factory =   
+ChannelFactory<ICustomerManager> factory =
      new ChannelFactory<ICustomerManager>("customermanager");  
 ICustomerManager service = factory.CreateChannel();  
 Customer customer = service.GetCustomer("Mary", "Smith");  
@@ -301,12 +301,12 @@ public interface ISessionBoundObject
     }  
 ```  
   
- このサービスの実装を次に示します。 この実装では、セッションフル オブジェクトを作成するためにシングルトン チャネル ファクトリを保持しています。  チャネル ファクトリは、`GetInstanceAddress` が呼び出されるとチャネルを作成し、このチャネルに関連付けられているリモート アドレスをポイントする <xref:System.ServiceModel.EndpointAddress10> オブジェクトを作成します。   <xref:System.ServiceModel.EndpointAddress10> は、値渡しでクライアントに返すことのできるデータ型です。
+ このサービスの実装は次のとおりです。 この実装では、セッションフル オブジェクトを作成するためにシングルトン チャネル ファクトリを保持しています。  チャネル ファクトリは、`GetInstanceAddress` が呼び出されるとチャネルを作成し、このチャネルに関連付けられているリモート アドレスをポイントする <xref:System.ServiceModel.EndpointAddress10> オブジェクトを作成します。   <xref:System.ServiceModel.EndpointAddress10> は、値渡しでクライアントに返すことのできるデータ型です。
   
 ```csharp  
 public class SessionBoundFactory : ISessionBoundFactory  
     {  
-        public static ChannelFactory<ISessionBoundObject> _factory =   
+        public static ChannelFactory<ISessionBoundObject> _factory =
             new ChannelFactory<ISessionBoundObject>("sessionbound");  
   
         public SessionBoundFactory()  
@@ -328,7 +328,7 @@ public class SessionBoundFactory : ISessionBoundFactory
   
 2. `<services>` セクションで、ファクトリおよびセッションフル オブジェクトのサービス エンドポイントを宣言します。  これにより、クライアントは、サービス エンドポイントと通信すること、<xref:System.ServiceModel.EndpointAddress10> を取得すること、およびセッションフル チャネルを作成することが可能になります。  
   
- これらの設定を含む構成ファイルの例を次に示します。  
+ 次に、これらの設定を含む構成ファイルの例を示します。  
   
 ```xml  
 <configuration>  
@@ -343,12 +343,12 @@ public class SessionBoundFactory : ISessionBoundFactory
     <services>  
       <service name="Server.MySessionBoundObject">  
         <endpoint address="net.tcp://localhost:8081/SessionBoundObject"  
-                  binding="netTcpBinding"   
+                  binding="netTcpBinding"
                   contract="Shared.ISessionBoundObject" />  
       </service>  
       <service name="Server.SessionBoundFactory">  
         <endpoint address="net.tcp://localhost:8081/SessionBoundFactory"  
-                  binding="netTcpBinding"   
+                  binding="netTcpBinding"
                   contract="Shared.ISessionBoundFactory" />  
       </service>  
     </services>  
@@ -374,15 +374,15 @@ sessionBoundServiceHost.Open();
 <configuration>  
   <system.serviceModel>  
     <client>  
-      <endpoint name="sessionbound"   
-                address="net.tcp://localhost:8081/SessionBoundObject"   
-                binding="netTcpBinding"   
+      <endpoint name="sessionbound"
+                address="net.tcp://localhost:8081/SessionBoundObject"
+                binding="netTcpBinding"
                 contract="Shared.ISessionBoundObject"/>  
-      <endpoint name="factory"   
-                address="net.tcp://localhost:8081/SessionBoundFactory"   
-                binding="netTcpBinding"   
+      <endpoint name="factory"
+                address="net.tcp://localhost:8081/SessionBoundFactory"
+                binding="netTcpBinding"
                 contract="Shared.ISessionBoundFactory"/>  
-    </client>    
+    </client>
   </system.serviceModel>  
 </configuration>  
 ```  
@@ -420,7 +420,7 @@ if (sessionBoundObject.GetCurrentValue() == "Hello")
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [基本的な WCF プログラミング](../wcf/basic-wcf-programming.md)
 - [サービスの設計と実装](../wcf/designing-and-implementing-services.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 93829d15-d942-4e2d-b7a4-dfc9d7fb96be
 topic_type:
 - apiref
-ms.openlocfilehash: ffab2762fd86e95c3272ca456039028e0897bc41
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: fb8b8f3e29c141e91587a4d0cdc81cdabccdbc9e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73137179"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178645"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint メソッド
-指定したネイティブイメージオフセットにアンマネージブレークポイントを設定します。  
+指定したネイティブ イメージ オフセットにアンマネージ ブレークポイントを設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,7 +31,7 @@ ms.locfileid: "73137179"
 HRESULT SetUnmanagedBreakpoint (  
     [in]  CORDB_ADDRESS    address,  
     [in]  ULONG32          bufsize,  
-    [out, size_is(bufsize), length_is(*bufLen)]   
+    [out, size_is(bufsize), length_is(*bufLen)]
         BYTE               buffer[],  
     [out] ULONG32          *bufLen  
 );  
@@ -39,22 +39,22 @@ HRESULT SetUnmanagedBreakpoint (
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- からネイティブイメージオフセットを指定する `CORDB_ADDRESS` オブジェクト。  
+ [in]ネイティブ`CORDB_ADDRESS`イメージ オフセットを指定するオブジェクト。  
   
  `bufsize`  
- から`buffer` 配列のサイズ (バイト単位)。  
+ [in]`buffer`配列のサイズ (バイト単位)。  
   
  `buffer`  
- 入出力ブレークポイントによって置き換えられるオペコードを格納している配列。  
+ [アウト]ブレークポイントに置き換えられるオペコードを含む配列。  
   
  `bufLen`  
- 入出力`buffer` 配列で返されたバイト数へのポインター。  
+ [アウト]`buffer`配列に返されるバイト数へのポインター。  
   
-## <a name="remarks"></a>Remarks  
- ネイティブイメージオフセットが共通言語ランタイム (CLR) 内にある場合、ブレークポイントは無視されます。 これにより、ブレークポイントがデバッガーによって設定されたときに、CLR は帯域外のブレークポイントのディスパッチを回避できます。  
+## <a name="remarks"></a>解説  
+ ネイティブ イメージのオフセットが共通言語ランタイム (CLR) 内にある場合、ブレークポイントは無視されます。 これにより、ブレークポイントがデバッガーによって設定されている場合、CLR は帯域外ブレークポイントをディスパッチしないようにできます。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
