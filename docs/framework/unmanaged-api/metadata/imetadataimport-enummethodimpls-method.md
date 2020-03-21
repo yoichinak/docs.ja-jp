@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e0f865d-88b5-44bd-be35-492622e5e08e
 topic_type:
 - apiref
-ms.openlocfilehash: 193e8788d5a1b28f43f2fb0d4d935a18542dd923
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e766cec8fd84713e12c43cd1095650ed5b757bcb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427490"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175474"
 ---
 # <a name="imetadataimportenummethodimpls-method"></a>IMetaDataImport::EnumMethodImpls メソッド
 指定した型のメソッドを表す MethodBody トークンと MethodDeclaration トークンを列挙します。  
@@ -29,51 +29,51 @@ ms.locfileid: "74427490"
   
 ```cpp  
 HRESULT EnumMethodImpls (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   td,   
-   [out]     mdToken     rMethodBody[],   
-   [out]     mdToken     rMethodDecl[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   td,
+   [out]     mdToken     rMethodBody[],
+   [out]     mdToken     rMethodDecl[],
+   [in]      ULONG       cMax,
    [in]      ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
+ [イン、アウト]列挙子へのポインター。 このメソッドの最初の呼び出しでは、NULL にする必要があります。  
   
  `td`  
- から列挙するメソッド実装を持つ型の TypeDef トークン。  
+ [in]列挙するメソッドの実装を持つ型の TypeDef トークン。  
   
  `rMethodBody`  
- 入出力MethodBody トークンを格納する配列。  
+ [アウト]メソッドボディ トークンを格納する配列。  
   
  `rMethodDecl`  
- 入出力MethodDeclaration トークンを格納する配列。  
+ [アウト]メソッド宣言トークンを格納する配列。  
   
  `cMax`  
- から`rMethodBody` および `rMethodDecl` 配列の最大サイズ。  
+ [in]配列と`rMethodBody``rMethodDecl`配列の最大サイズ。  
   
  `pcTokens`  
- から`rMethodBody` および `rMethodDecl`で返されるメソッドの実際の数。  
+ [in]で返されるメソッドの実際の`rMethodBody`数`rMethodDecl`と で返されるメソッドの実際の数。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodImpls` が正常に返されました。|  
-|`S_FALSE`|列挙するメソッドトークンがありません。 この場合、`pcTokens` は0になります。|  
+|`S_OK`|`EnumMethodImpls`正常に返されました。|  
+|`S_FALSE`|列挙するメソッド トークンがありません。 その場合は、`pcTokens`ゼロです。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

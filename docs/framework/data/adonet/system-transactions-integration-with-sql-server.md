@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 075eea42c65a822fc46ca14f820599567c35d231
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 42007dafbdc9f61b9fc0776e0aaa2987551b704a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791365"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174239"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server と System.Transactions の統合
-.NET Framework バージョン2.0 では、 <xref:System.Transactions>名前空間を使用してアクセスできるトランザクションフレームワークが導入されました。 このフレームワークは、ADO.NET など、.NET Framework に完全に統合された方法でトランザクションを公開します。  
+NET Framework バージョン 2.0 では、名前空間を介してアクセスできる<xref:System.Transactions>トランザクション フレームワークが導入されました。 このフレームワークは、ADO.NETを含む .NET Framework に完全に統合された方法でトランザクションを公開します。  
   
- プログラミングの機能強化に加えて<xref:System.Transactions> 、ADO.NET を連携させることで、トランザクションを操作するときに最適化を調整できます。 昇格可能なトランザクションとは、必要に応じて完全な分散トランザクションに自動的に昇格する、軽量の (ローカル) トランザクションです。  
+ プログラミング機能の強化に加えて、ADO.NET<xref:System.Transactions>連携してトランザクションを操作するときに最適化を調整できます。 昇格可能なトランザクションとは、必要に応じて完全な分散トランザクションに自動的に昇格する、軽量の (ローカル) トランザクションです。  
   
- ADO.NET 2.0 以降では<xref:System.Data.SqlClient> 、SQL Server を操作するときに、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 昇格可能なトランザクションは自動的に行われ、開発者の介入は必要ありません。  
+ ADO.NET 2.0 以降<xref:System.Data.SqlClient>では、SQL Server で作業する場合の昇格可能なトランザクションがサポートされます。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 昇格可能なトランザクションは自動的に行われ、開発者の介入は必要ありません。  
   
- 昇格可能なトランザクションは、SQL Server で SQL Server (`SqlClient`) の .NET Framework Data Provider を使用する場合にのみ使用できます。  
+ 昇格可能なトランザクションは、SQL Server の .NET Framework データ プロバイダ`SqlClient`( ) を SQL Server で使用する場合にのみ使用できます。  
   
 ## <a name="creating-promotable-transactions"></a>昇格可能なトランザクションの作成  
- SQL Server の .NET Framework プロバイダーは、昇格可能なトランザクションをサポートします。これは、.NET Framework <xref:System.Transactions>名前空間のクラスを通じて処理されます。 昇格可能なトランザクションでは、必要が生じるまで分散トランザクションの作成を延期することで、分散トランザクションが最適化されます。 必要なリソース マネージャーが 1 つだけである場合は、分散トランザクションは発生しません。  
+ SQL Server の .NET フレームワーク プロバイダーは、.NET Framework<xref:System.Transactions>名前空間のクラスを通じて処理される、昇格可能なトランザクションのサポートを提供します。 昇格可能なトランザクションでは、必要が生じるまで分散トランザクションの作成を延期することで、分散トランザクションが最適化されます。 必要なリソース マネージャーが 1 つだけである場合は、分散トランザクションは発生しません。  
   
 > [!NOTE]
 > 部分信頼のシナリオで分散トランザクションに昇格するには、 <xref:System.Transactions.DistributedTransactionPermission> が必要です。  
   
 ## <a name="promotable-transaction-scenarios"></a>昇格可能なトランザクションのシナリオ  
- 分散トランザクションは一般的にシステム リソースを大量に消費するため、トランザクションでアクセスされるすべてのリソース マネージャーを統合する、Microsoft Distributed Transaction Coordinator (MS DTC) で管理されます。 昇格可能なトランザクションは特殊な形式<xref:System.Transactions>のトランザクションであり、効率的に作業を単純な SQL Server トランザクションに委任します。 <xref:System.Transactions>、 <xref:System.Data.SqlClient>、および SQL Server トランザクションの処理に関連する作業を調整し、必要に応じて完全な分散トランザクションに昇格させます。  
+ 分散トランザクションは一般的にシステム リソースを大量に消費するため、トランザクションでアクセスされるすべてのリソース マネージャーを統合する、Microsoft Distributed Transaction Coordinator (MS DTC) で管理されます。 昇格可能なトランザクションは、作業を<xref:System.Transactions>単純な SQL Server トランザクションに効果的に委任する特殊な形式のトランザクションです。 <xref:System.Transactions>、、<xref:System.Data.SqlClient>および SQL Server は、トランザクションの処理に関連する作業を調整し、必要に応じてトランザクションを完全な分散トランザクションに昇格させます。  
   
  昇格可能なトランザクションを使用する利点は、アクティブな <xref:System.Transactions.TransactionScope> トランザクションによって接続が開かれ、その他の接続が開いていない場合に、完全な分散トランザクションによるオーバーヘッドが生じることなく、トランザクションが軽量なトランザクションとしてコミットされることです。  
   
@@ -39,20 +39,20 @@ ms.locfileid: "70791365"
   
  次の表で使用可能な値について説明します。  
   
-|キーワード|説明|  
+|Keyword|説明|  
 |-------------|-----------------|  
 |Implicit Unbind|これが既定値です。 完了時に接続がトランザクションからデタッチされ、自動コミット モードに切り替わります。|  
 |Explicit Unbind|トランザクションが閉じられるまで、接続がトランザクションにアタッチされたままになります。 関連付けられているトランザクションがアクティブでない場合や、 <xref:System.Transactions.Transaction.Current%2A>と一致しない場合、接続は失敗します。|  
   
 ## <a name="using-transactionscope"></a>TransactionScope の使用  
- <xref:System.Transactions.TransactionScope> クラスでは、接続を分散トランザクションに暗黙的に参加させることで、コード ブロックがトランザクションのコード ブロックになります。 <xref:System.Transactions.TransactionScope.Complete%2A> ブロックの末尾では、終了する前に <xref:System.Transactions.TransactionScope> メソッドを呼び出す必要があります。 ブロックを終了すると、 <xref:System.Transactions.TransactionScope.Dispose%2A> メソッドが呼び出されます。 例外がスローされてコードがスコープから外れている場合は、トランザクションがアボートされたと見なされます。  
+ <xref:System.Transactions.TransactionScope> クラスは、接続を分散トランザクションに暗黙に参加させることで、コード ブロックをトランザクション対応にします。 <xref:System.Transactions.TransactionScope.Complete%2A> ブロックの末尾では、終了する前に <xref:System.Transactions.TransactionScope> メソッドを呼び出す必要があります。 ブロックを終了すると、 <xref:System.Transactions.TransactionScope.Dispose%2A> メソッドが呼び出されます。 例外がスローされてコードがスコープから外れている場合は、トランザクションがアボートされたと見なされます。  
   
- 使用中のブロックを終了したときに `using` オブジェクトで <xref:System.Transactions.TransactionScope.Dispose%2A> が呼び出されるように、 <xref:System.Transactions.TransactionScope> ブロックを使用することをお勧めします。 保留中のトランザクションのコミットまたはロールバックに失敗すると、 <xref:System.Transactions.TransactionScope> の既定のタイムアウトが 1 分であるため、パフォーマンスが大幅に低下する場合があります。 `using` ステートメントを使用しない場合は、すべての処理を `Try` ブロックで実行し、 <xref:System.Transactions.TransactionScope.Dispose%2A> メソッドを `Finally` ブロック内で明示的に呼び出す必要があります。  
+ 使用中のブロックを終了したときに `using` オブジェクトで <xref:System.Transactions.TransactionScope.Dispose%2A> が呼び出されるように、 <xref:System.Transactions.TransactionScope> ブロックを使用することをお勧めします。 保留中のトランザクションのコミットまたはロールバックに失敗すると、 <xref:System.Transactions.TransactionScope> の既定のタイムアウトが 1 分であるため、パフォーマンスが大幅に低下する場合があります。 `using` ステートメントを使用しない場合は、`Try` ブロック内のすべての処理を実行し、<xref:System.Transactions.TransactionScope.Dispose%2A> ブロックで `Finally` メソッドを明示的に呼び出す必要があります。  
   
- <xref:System.Transactions.TransactionScope>内で例外が発生した場合、そのトランザクションは矛盾しているとしてマークされ、破棄されます。 トランザクションは、 <xref:System.Transactions.TransactionScope> が破棄されるとロールバックされます。 例外が発生しない場合は、参加しているトランザクションがコミットされます。  
+ <xref:System.Transactions.TransactionScope>内で例外が発生した場合、そのトランザクションは矛盾しているとしてマークされ、破棄されます。 トランザクションは、 <xref:System.Transactions.TransactionScope> が破棄されるとロールバックされます。 例外が発生しなければ、参加しているトランザクションがコミットされます。  
   
 > [!NOTE]
-> 既定では、 `TransactionScope` クラスは、 <xref:System.Transactions.Transaction.IsolationLevel%2A> が `Serializable` であるトランザクションを作成します。 使用しているアプリケーションによっては、アプリケーション内での競合を回避するために、分離レベルを低下させる必要がある場合があります。  
+> 既定では、`TransactionScope` クラスは、<xref:System.Transactions.Transaction.IsolationLevel%2A> が `Serializable` であるトランザクションを作成します。 アプリケーションによっては、分離レベルを低くして、アプリケーション内の競合を回避することを検討する必要があります。  
   
 > [!NOTE]
 > データベース リソースを大量に消費するため、分散トランザクション内で実行するのは更新、挿入、削除だけにすることをお勧めします。 Select ステートメントを使用すると、データベース リソースが不必要にロックされることがあり、シナリオによっては選択にトランザクションを使用する必要がある場合があります。 処理済みのその他のリソース マネージャーに関係する場合以外、データベース以外の処理はトランザクションのスコープ外で実行する必要があります。 トランザクションのスコープ内で例外が発生するとトランザクションのコミットが防止されますが、 <xref:System.Transactions.TransactionScope> クラスでは、作成したコードによってトランザクションのスコープ外で行われた変更はロールバックされません。 トランザクションがロールバックされたときに何らかの動作を行うようにする場合は、 <xref:System.Transactions.IEnlistmentNotification> インターフェイスを独自に実装し、トランザクションに明示的に参加する必要があります。  
@@ -60,12 +60,12 @@ ms.locfileid: "70791365"
 ## <a name="example"></a>例  
  <xref:System.Transactions> を使用する場合は、System.Transactions.dll への参照が必要になります。  
   
- 次の関数は、 <xref:System.Data.SqlClient.SqlConnection> ブロックでラップされている、異なる 2 つの <xref:System.Transactions.TransactionScope> オブジェクトで表された異なる 2 つの SQL Server インスタンスに対する、昇格可能なトランザクションを作成する方法を示しています。 このコードにより、 <xref:System.Transactions.TransactionScope> ステートメントを持つ `using` ブロックが作成され、最初の接続が開き、 <xref:System.Transactions.TransactionScope>に自動的に参加します。 このトランザクションは、完全な分散トランザクションとしてではなく、最初に軽量のトランザクションとして参加します。 2 つ目の接続は、1 つ目の接続のコマンドで例外がスローされなかった場合にのみ、 <xref:System.Transactions.TransactionScope> に参加します。 2 つ目の接続が開かれると、トランザクションが完全な分散トランザクションに自動的に昇格されます。 <xref:System.Transactions.TransactionScope.Complete%2A> メソッドが呼び出され、例外がスローされなかった場合にのみ、トランザクションがコミットされます。 <xref:System.Transactions.TransactionScope> ブロックの任意の場所で例外がスローされると、 `Complete` が呼び出されず、 <xref:System.Transactions.TransactionScope> ブロックの最後で `using` が破棄されたときに分散トランザクションがロールバックされます。  
+ 次の関数は、 <xref:System.Data.SqlClient.SqlConnection> ブロックでラップされている、異なる 2 つの <xref:System.Transactions.TransactionScope> オブジェクトで表された異なる 2 つの SQL Server インスタンスに対する、昇格可能なトランザクションを作成する方法を示しています。 このコードにより、 <xref:System.Transactions.TransactionScope> ステートメントを持つ `using` ブロックが作成され、最初の接続が開き、 <xref:System.Transactions.TransactionScope>に自動的に参加します。 最初、トランザクションは完全な分散トランザクションではなく、軽量トランザクションとして参加します。 2 つ目の接続は、1 つ目の接続のコマンドで例外がスローされなかった場合にのみ、 <xref:System.Transactions.TransactionScope> に参加します。 2 つ目の接続が開かれると、トランザクションが完全な分散トランザクションに自動的に昇格されます。 <xref:System.Transactions.TransactionScope.Complete%2A> メソッドが呼び出され、例外がスローされなかった場合にのみ、トランザクションがコミットされます。 <xref:System.Transactions.TransactionScope> ブロックの任意の場所で例外がスローされると、 `Complete` が呼び出されず、 <xref:System.Transactions.TransactionScope> ブロックの最後で `using` が破棄されたときに分散トランザクションがロールバックされます。  
   
 ```csharp  
 // This function takes arguments for the 2 connection strings and commands in order  
 // to create a transaction involving two SQL Servers. It returns a value > 0 if the  
-// transaction committed, 0 if the transaction rolled back. To test this code, you can   
+// transaction committed, 0 if the transaction rolled back. To test this code, you can
 // connect to two different databases on the same server by altering the connection string,  
 // or to another RDBMS such as Oracle by altering the code in the connection2 code block.  
 static public int CreateTransactionScope(  
@@ -84,7 +84,7 @@ static public int CreateTransactionScope(
         {  
             try  
             {  
-                // Opening the connection automatically enlists it in the   
+                // Opening the connection automatically enlists it in the
                 // TransactionScope as a lightweight transaction.  
                 connection1.Open();  
   
@@ -95,8 +95,8 @@ static public int CreateTransactionScope(
   
                 // if you get here, this means that command1 succeeded. By nesting  
                 // the using block for connection2 inside that of connection1, you  
-                // conserve server and network resources by opening connection2   
-                // only when there is a chance that the transaction can commit.     
+                // conserve server and network resources by opening connection2
+                // only when there is a chance that the transaction can commit.
                 using (SqlConnection connection2 = new SqlConnection(connectString2))  
                     try  
                     {  
@@ -125,7 +125,7 @@ static public int CreateTransactionScope(
             }  
         }  
   
-        // If an exception has been thrown, Complete will not   
+        // If an exception has been thrown, Complete will not
         // be called and the transaction is rolled back.  
         scope.Complete();  
     }  
@@ -152,7 +152,7 @@ static public int CreateTransactionScope(
 ```vb  
 ' This function takes arguments for the 2 connection strings and commands in order  
 ' to create a transaction involving two SQL Servers. It returns a value > 0 if the  
-' transaction committed, 0 if the transaction rolled back. To test this code, you can   
+' transaction committed, 0 if the transaction rolled back. To test this code, you can
 ' connect to two different databases on the same server by altering the connection string,  
 ' or to another RDBMS such as Oracle by altering the code in the connection2 code block.  
 Public Function CreateTransactionScope( _  
@@ -168,7 +168,7 @@ Public Function CreateTransactionScope( _
     Using scope As New TransactionScope()  
         Using connection1 As New SqlConnection(connectString1)  
             Try  
-                ' Opening the connection automatically enlists it in the   
+                ' Opening the connection automatically enlists it in the
                 ' TransactionScope as a lightweight transaction.  
                 connection1.Open()  
   
@@ -179,8 +179,8 @@ Public Function CreateTransactionScope( _
   
                 ' If you get here, this means that command1 succeeded. By nesting  
                 ' the Using block for connection2 inside that of connection1, you  
-                ' conserve server and network resources by opening connection2   
-                ' only when there is a chance that the transaction can commit.     
+                ' conserve server and network resources by opening connection2
+                ' only when there is a chance that the transaction can commit.
                 Using connection2 As New SqlConnection(connectString2)  
                     Try  
                         ' The transaction is promoted to a full distributed  
@@ -207,7 +207,7 @@ Public Function CreateTransactionScope( _
             End Try  
         End Using  
   
-        ' If an exception has been thrown, Complete will   
+        ' If an exception has been thrown, Complete will
         ' not be called and the transaction is rolled back.  
         scope.Complete()  
     End Using  
@@ -230,5 +230,5 @@ End Function
   
 ## <a name="see-also"></a>関連項目
 
-- [トランザクションと同時実行](transactions-and-concurrency.md)
+- [トランザクションとコンカレンシー](transactions-and-concurrency.md)
 - [ADO.NET の概要](ado-net-overview.md)

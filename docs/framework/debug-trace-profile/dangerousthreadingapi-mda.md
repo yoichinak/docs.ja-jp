@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Suspend method
 - threading [.NET Framework], managed debugging assistants
 ms.assetid: 3e5efbc5-92e4-4229-b31f-ce368a1adb96
-ms.openlocfilehash: 4e7e858dfb85eeccbadb23da60d081d1407e89d8
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d3fe7d11657c2f9edd1fea7ff639f878f993d6b1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216673"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174772"
 ---
 # <a name="dangerousthreadingapi-mda"></a>dangerousThreadingAPI MDA
 `dangerousThreadingAPI` マネージド デバッグ アシスタント (MDA) は、現在のスレッド以外のスレッドで <xref:System.Threading.Thread.Suspend%2A?displayProperty=nameWithType> メソッドが呼び出されるとアクティブになります。  
@@ -36,7 +36,7 @@ ms.locfileid: "77216673"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。 危険なスレッド処理操作に関するデータを報告するだけです。  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  MDA は、アクティブになった原因である危険なスレッド処理メソッドを示します。  
   
 ## <a name="configuration"></a>構成  
@@ -50,7 +50,7 @@ ms.locfileid: "77216673"
 ```  
   
 ## <a name="example"></a>例  
- <xref:System.Threading.Thread.Suspend%2A> のアクティブ化の原因となる `dangerousThreadingAPI` メソッド呼び出しのコード例を次に示します。  
+ `dangerousThreadingAPI` のアクティブ化の原因となる <xref:System.Threading.Thread.Suspend%2A> メソッド呼び出しのコード例を次に示します。  
   
 ```csharp
 using System.Threading;  
@@ -59,13 +59,13 @@ void FireMda()
 Thread t = new Thread(delegate() { Thread.Sleep(1000); });  
     t.Start();  
     // The following line activates the MDA.  
-    t.Suspend();   
+    t.Suspend();
     t.Resume();  
     t.Join();  
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Thread>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

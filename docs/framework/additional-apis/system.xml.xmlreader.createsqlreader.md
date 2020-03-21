@@ -1,5 +1,5 @@
 ---
-title: XmlReader (System.xml) メソッド (System.xml)
+title: メソッドを作成します。
 ms.date: 10/17/2019
 topic_type:
 - apiref
@@ -9,19 +9,19 @@ api_location:
 - system.xml.dll
 api_type:
 - Assembly
-ms.openlocfilehash: c65ef7c073175488c11c5e912a44d46fd4319209
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7bd2ef5158516acede47f73f9937d06159bc16c9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215450"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155740"
 ---
 # <a name="xmlreadercreatesqlreader-method"></a>XmlReader.CreateSqlReader  メソッド
 
 解析のために指定されたストリーム、設定、およびコンテキスト情報を使用して、新しい <xref:System.Xml.XmlReader> インスタンスを作成します。
 
 ```csharp
-internal static XmlReader CreateSqlReader(Stream input, 
+internal static XmlReader CreateSqlReader(Stream input,
   XmlReaderSettings settings, XmlParserContext inputContext)
 ```
 
@@ -41,17 +41,17 @@ internal static XmlReader CreateSqlReader(Stream input,
 <xref:System.Xml.XmlReader>  
 ストリーム内の XML データの読み取りに使用するオブジェクト。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 > [!WARNING]
-> `XmlReader.CreateSqlReader` メソッドは内部であり、コードで直接使用するためのものではありません。
+> メソッド`XmlReader.CreateSqlReader`は内部であり、コード内で直接使用するためのものではありません。
 >
-> Microsoft では、どのような状況でも、実稼働アプリケーションでこの方法を使用することはサポートしていません。
+> マイクロソフトでは、どのような状況でも、本稼動アプリケーションでこの方法の使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**名前空間:** <xref:System.Xml>
+**名前空間:**<xref:System.Xml>
 
-**アセンブリ:** System.xml
+**アセンブリ:** システム.Xml.dll
 
-**.NET Framework のバージョン:** 2.0 以降で使用できます。
+**.NET フレームワークのバージョン:** 2.0 以降で利用可能。

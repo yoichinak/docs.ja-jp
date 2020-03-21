@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58ac8202-854d-4efd-acfb-d2da8b446e12
 topic_type:
 - apiref
-ms.openlocfilehash: 2d49a146a465210cea8466a75666ca3f800b090b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 95a798d662b44cf2e088af84d3b1eec97da8e7fb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74450141"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177937"
 ---
 # <a name="corpropertyattr-enumeration"></a>CorPropertyAttr 列挙型
 プロパティのメタデータを記述する値が格納されます。  
@@ -29,7 +29,7 @@ ms.locfileid: "74450141"
 ```cpp  
 typedef enum CorPropertyAttr {  
   
-    prSpecialName           =   0x0200,   
+    prSpecialName           =   0x0200,
     prReservedMask          =   0xf400,  
     prRTSpecialName         =   0x0400,  
     prHasDefault            =   0x1000,  
@@ -42,19 +42,19 @@ typedef enum CorPropertyAttr {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`prSpecialName`|プロパティが特別であり、その名前がどのように説明するかを指定します。|  
-|`prReservedMask`|共通言語ランタイムによる内部使用のために予約されています。|  
-|`prRTSpecialName`|共通言語ランタイムメタデータの内部 Api がプロパティ名のエンコーディングを確認する必要があることを指定します。|  
-|`prHasDefault`|プロパティに既定値が設定されていることを指定します。|  
+|`prSpecialName`|プロパティが特別であり、その名前が使用方法を記述することを指定します。|  
+|`prReservedMask`|共通言語ランタイムで内部使用のために予約されています。|  
+|`prRTSpecialName`|共通言語ランタイムのメタデータ内部 API がプロパティ名のエンコーディングをチェックすることを指定します。|  
+|`prHasDefault`|プロパティが既定値を持つことを指定します。|  
 |`prUnused`|未使用。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorHdr. h  
+ **ヘッダー:** コルドル.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,5 +1,5 @@
 ---
-title: M_ResponseHeaders CoreResponseData フィールド
+title: m_ResponseHeaders フィールド
 ms.date: 01/29/2018
 topic_type:
 - apiref
@@ -10,16 +10,16 @@ api_location:
 api_type:
 - Assembly
 author: stevewhims
-ms.openlocfilehash: df0b592a5f85d4c99dee4ecb60963f4abb560a13
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 723df6dc2de978695608d106e3a01bde286fc4fe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741009"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79156104"
 ---
-# <a name="coreresponsedatam_responseheaders-field"></a>CoreResponseData\_ResponseHeaders フィールド
+# <a name="coreresponsedatam_responseheaders-field"></a>応答\_ヘッダー フィールド
 
-`CoreResponseData.m_ResponseHeaders` は、サーバーの応答に関連付けられているヘッダーの <xref:System.Net.WebHeaderCollection> です。
+`CoreResponseData.m_ResponseHeaders`は、<xref:System.Net.WebHeaderCollection>サーバー応答に関連付けられたヘッダーの 1 です。
 
 ## <a name="syntax"></a>構文
   
@@ -28,14 +28,14 @@ public WebHeaderCollection m_ResponseHeaders
 ```
 
 > [!WARNING]
-> この API は、コード内で直接使用するためのものではありません。 代わりに、<xref:System.Diagnostics.DiagnosticSource> を使用してネットワークコードをフックする必要があります。 「 [DiagnosticSource User'S Guide](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)」を参照してください。
-> 
-> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
+> この API は、コード内で直接使用するためのものではありません。 代わりに、 を<xref:System.Diagnostics.DiagnosticSource>使用してネットワーク コードをフックする必要があります。 [診断ソースユーザーズガイドを](https://github.com/dotnet/runtime/blob/master/src/libraries/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)参照してください。
+>
+> マイクロソフトでは、どのような状況でも、運用環境のアプリケーションでこのクラスを使用することはできません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**名前空間:** <xref:System.Net>
+**名前空間:**<xref:System.Net>
 
-**アセンブリ:** システム (.dll 内)
+**アセンブリ:** システム (システム.dll 内)
 
-**.NET Framework のバージョン:** 2.0 以降で使用できます。
+**.NET フレームワークのバージョン:** 2.0 以降で利用可能。

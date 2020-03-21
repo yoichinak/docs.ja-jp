@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: be3f5985-b1e4-4036-8602-c16e8508d4af
 topic_type:
 - apiref
-ms.openlocfilehash: e5eb735acac73d694a0719c206bd22711a8c0333
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 4b8ddf7fec12d175f030c0ea0ed982c6fb334aee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437542"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175383"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps メソッド
-指定したメソッドを実装する <xref:System.Type> のメタデータトークンへのポインターと、そのメソッドを宣言するインターフェイスを取得します。
+指定したメソッドを実装するメタデータ<xref:System.Type>トークン、およびそのメソッドを宣言するインターフェイスのメタデータ トークンへのポインターを取得します。
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ HRESULT GetInterfaceImplProps (
   
 ## <a name="parameters"></a>パラメーター  
  `iiImpl`  
- からクラスとインターフェイストークンを返すメソッドを表すメタデータトークン。  
+ [in]クラス トークンとインターフェイス トークンを返すメソッドを表すメタデータ トークン。  
   
  `pClass`  
- 入出力メソッドを実装するクラスを表すメタデータトークン。  
+ [アウト]メソッドを実装するクラスを表すメタデータ トークン。  
   
  `ptkIface`  
- 入出力実装されたメソッドを定義するインターフェイスを表すメタデータトークン。  
+ [アウト]実装されたメソッドを定義するインターフェイスを表すメタデータ トークン。  
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
- `iImpl` の値を取得するには、 [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)メソッドを呼び出します。
- 
- たとえば、クラスの `mdTypeDef` トークン値が0x02000007 で、型にトークンが含まれている3つのインターフェイスを実装しているとします。 
+ メソッドを呼び出`iImpl`すことによって値[を取得します](imetadataimport-enuminterfaceimpls-method.md)。
 
-- 0x02000003 (TypeDef)
-- 0x0100000A (TypeRef)
-- 0x0200001C (TypeDef)
+ たとえば、クラスの`mdTypeDef`トークン値が 0x0200007 で、型にトークンを持つ 3 つのインターフェイスを実装しているとします。
+
+- 0x02000003 (タイプ定義)
+- 0x010000A (タイプレファレンス)
+- 0x0200001C (タイプ定義)
 
 概念的には、この情報は次のようにインターフェイス実装テーブルに格納されます。
 
-| 行番号 | クラストークン | インターフェイストークン |
+| 行番号 | クラストークン | インターフェイス トークン |
 |------------|-------------|-----------------|
 | 4          |             |                 |
 | 5          | 02000007    | 02000003        |
@@ -65,19 +65,19 @@ HRESULT GetInterfaceImplProps (
 | 7          |             |                 |
 | 8          | 02000007    | 0200001C        |
 
-これは、トークンが4バイトの値であることを思い出してください。
+このトークンは 4 バイトの値です。
 
-- 下位3バイトは、行番号 (RID) を保持します。
-- 上位バイトは、`mdtInterfaceImpl`のトークンの種類 (0x09) を保持します。
+- 下位 3 バイトは行番号(RID)を保持します。
+- 上位バイトはトークンタイプを保持します – 0x09 for `mdtInterfaceImpl`.
 
-`GetInterfaceImplProps` は、`iImpl` 引数で指定したトークンを持つ行に保持されている情報を返します。 
+`GetInterfaceImplProps`は、引数に指定したトークンの行に保持されている情報`iImpl`を返します。
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

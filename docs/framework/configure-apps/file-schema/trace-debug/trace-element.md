@@ -10,24 +10,24 @@ helpviewer_keywords:
 - trace element
 - trace listener, <trace> element
 ms.assetid: 7931c942-63c1-47c3-a045-9d9de3cacdbf
-ms.openlocfilehash: 02fd794eb7b7b7f46f7f7bc4e43036cb4a4758ed
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7d8a989219d84e8604e767456c84c0092bc73b22
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699184"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153167"
 ---
-# <a name="trace-element"></a>\<trace> 要素
+# <a name="trace-element"></a>\<要素>トレース
 トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system.diagnostics>** ](system-diagnostics-element.md)  
-&nbsp;&nbsp;&nbsp;&nbsp; **\<trace>**  
+[**\<構成>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<診断>**](system-diagnostics-element.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;**\<トレース>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<trace autoflush="true|false"   
+<trace autoflush="true|false"
        indentsize="indent value"  
        useGlobalLock="true| false"/>  
 ```  
@@ -39,29 +39,29 @@ ms.locfileid: "71699184"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`autoflush`|省略可能な属性です。<br /><br /> 書き込み操作が行われるたびに、トレースリスナーが出力バッファーを自動的にフラッシュするかどうかを指定します。|  
+|`autoflush`|省略可能な属性です。<br /><br /> トレース リスナーが書き込み操作のたびに出力バッファーを自動的にフラッシュするかどうかを指定します。|  
 |`indentsize`|省略可能な属性です。<br /><br /> インデントするスペースの数を指定します。|  
-|`useGlobalLock`|省略可能な属性です。<br /><br /> グローバルロックを使用する必要があるかどうかを示します。|  
+|`useGlobalLock`|省略可能な属性です。<br /><br /> グローバル ロックを使用するかどうかを示します。|  
   
-## <a name="autoflush-attribute"></a>autoflush 属性  
+## <a name="autoflush-attribute"></a>属性の自動フラッシュ  
   
-|値|説明|  
+|Value|説明|  
 |-----------|-----------------|  
-|`false`|では、出力バッファーは自動的にはフラッシュされません。 既定値です。|  
+|`false`|出力バッファーを自動的にフラッシュしません。 これは既定値です。|  
 |`true`|出力バッファーを自動的にフラッシュします。|  
   
-## <a name="usegloballock-attribute"></a>useGlobalLock 属性  
+## <a name="usegloballock-attribute"></a>使用グローバルロック属性  
   
-|値|説明|  
+|Value|説明|  
 |-----------|-----------------|  
-|`false`|リスナーがスレッドセーフである場合、はグローバルロックを使用しません。それ以外の場合、はグローバルロックを使用します。|  
-|`true`|は、リスナーがスレッドセーフかどうかに関係なく、グローバルロックを使用します。 既定値です。|  
+|`false`|リスナーがスレッド セーフである場合は、グローバル ロックを使用しません。それ以外の場合は、グローバル ロックを使用します。|  
+|`true`|リスナーがスレッド セーフかどうかに関係なく、グローバル ロックを使用します。 これは既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<listeners>](listeners-element-for-trace.md)|メッセージを収集、格納、およびルーティングするリスナーを指定します。|  
+|[\<リスナー>](listeners-element-for-trace.md)|メッセージを収集、格納、およびルーティングするリスナーを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -71,7 +71,7 @@ ms.locfileid: "71699184"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="example"></a>例  
- 次の例は、`<trace>` 要素を使用して、リスナー `MyListener` を `Listeners` コレクションに追加する方法を示しています。 `MyListener` `MyListener.log` という名前のファイルを作成し、出力をファイルに書き込みます。 @No__t-0 属性が `false` に設定されています。これにより、トレースリスナーがスレッドセーフである場合は、グローバルロックが使用されません。 @No__t-0 属性が `true` に設定されています。これにより、<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType> メソッドが呼び出されているかどうかに関係なく、トレースリスナーがファイルに書き込みます。 @No__t-0 属性が 0 (ゼロ) に設定されています。これにより、<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType> メソッドが呼び出されたときにリスナーが0個のスペースにインデントを設定します。  
+ 要素を使用してリスナー`<trace>``MyListener`をコレクションに追加する方法を次の例`Listeners`に示します。 `MyListener`という名前`MyListener.log`のファイルを作成し、そのファイルに出力を書き込みます。 この`useGlobalLock`属性は に`false`設定され、トレース リスナーがスレッド セーフである場合にグローバル ロックが使用されません。 属性`autoflush`が に`true`設定され、メソッドが呼び出されるかどうかに関係なく、トレース<xref:System.Diagnostics.Trace.Flush%2A?displayProperty=nameWithType>リスナーがファイルに書き込まれます。 属性`indentsize`が 0 (ゼロ) に設定され、<xref:System.Diagnostics.Trace.Indent%2A?displayProperty=nameWithType>メソッドが呼び出されるとリスナーのインデントが 0 になります。  
   
 ```xml  
 <configuration>  

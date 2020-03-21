@@ -3,22 +3,22 @@ title: <serviceTokenResolver>
 ms.date: 03/30/2017
 ms.assetid: 6e9001e1-e064-4f47-84b2-46225c177746
 author: BrucePerlerMS
-ms.openlocfilehash: 30a53c11b551623311f7ca3f957143fc702568a1
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0983380e553acfe246d6b987784d818b8ae85b17
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251847"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152581"
 ---
-# <a name="servicetokenresolver"></a>\<serviceTokenResolver >
-トークンハンドラーコレクションのハンドラーによって使用されるサービストークンリゾルバーを登録します。 サービストークンリゾルバーは、受信トークンとメッセージの暗号化トークンを解決するために使用されます。  
+# <a name="servicetokenresolver"></a>\<>
+トークン ハンドラー コレクション内のハンドラーによって使用されるサービス トークン リゾルバーを登録します。 サービス トークン リゾルバーは、受信トークンとメッセージの暗号化トークンを解決するために使用されます。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<システムの >** ](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<構成 >** ](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlerConfiguration >** ](securitytokenhandlerconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceTokenResolver >**  
+[**\<構成>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<id構成>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70251847"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|サービストークンリゾルバーの種類を指定します。 クラスから派生した型または型。<xref:System.IdentityModel.Selectors.SecurityTokenResolver> <xref:System.IdentityModel.Selectors.SecurityTokenResolver> `type`属性を指定する方法の詳細については、「[カスタム型参照]」を参照してください。 必須。|  
+|type|サービス トークン リゾルバーの種類を指定します。 <xref:System.IdentityModel.Selectors.SecurityTokenResolver>クラスから派生する<xref:System.IdentityModel.Selectors.SecurityTokenResolver>型または型。 `type`属性の指定方法の詳細については、「[カスタム型参照]」を参照してください。 必須。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  
@@ -51,19 +51,18 @@ ms.locfileid: "70251847"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](securitytokenhandlerconfiguration.md)|セキュリティトークンハンドラーのコレクションの構成を提供します。|  
+|[\<>](securitytokenhandlerconfiguration.md)|セキュリティ トークン ハンドラーのコレクションの構成を提供します。|  
   
-## <a name="remarks"></a>Remarks  
- サービストークンリゾルバーを使用して、受信トークンとメッセージの暗号化トークンを解決できます。 これは、受信トークンの暗号化を解除するために使用する必要があるキーを取得するために使用されます。 `type`属性を指定する必要があります。 指定できる型は、また<xref:System.IdentityModel.Selectors.SecurityTokenResolver>は<xref:System.IdentityModel.Selectors.SecurityTokenResolver>クラスから派生したカスタム型のいずれかです。  
+## <a name="remarks"></a>解説  
+ サービス トークン リゾルバーを使用して、受信トークンとメッセージの暗号化トークンを解決できます。 これは、受信トークンの暗号化を解除するために使用するキーを取得するために使用されます。 属性を指定する`type`必要があります。 指定する型は、<xref:System.IdentityModel.Selectors.SecurityTokenResolver><xref:System.IdentityModel.Selectors.SecurityTokenResolver>クラスから派生するカスタム型のいずれかです。  
   
- 一部のトークンハンドラーでは、構成でサービストークンリゾルバーの設定を指定できます。 個々のトークンハンドラーの設定は、セキュリティトークンハンドラーコレクションで指定された設定よりも優先されます。  
+ 一部のトークン ハンドラーでは、構成でサービス トークン リゾルバーの設定を指定できます。 個々のトークン ハンドラーの設定は、セキュリティ トークン ハンドラーコレクションで指定された設定をオーバーライドします。  
   
 > [!NOTE]
-> 要素を、指定した[ \<>](identityconfiguration.md)要素の子要素として指定することは推奨されていませんが、旧バージョンとの互換性のためにサポートされています。 `<serviceTokenResolver>` 要素の設定`<securityTokenHandlerConfiguration>`は、要素の設定`<identityConfiguration>`よりも優先されます。  
+> 要素を`<serviceTokenResolver>` [ \<identityConfiguration>](identityconfiguration.md)要素の子要素として指定することは非推奨になりましたが、下位互換性のために引き続きサポートされています。 要素の設定`<securityTokenHandlerConfiguration>`は、要素上の`<identityConfiguration>`設定よりも優先されます。  
   
 ## <a name="example"></a>例  
   
 ```xml  
 <serviceTokenResolver type="MyNamespace.CustomTokenResolver, MyAssembly" />  
 ```
- 

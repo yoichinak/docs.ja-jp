@@ -18,41 +18,41 @@ helpviewer_keywords:
 ms.assetid: a5cab4c6-990e-47f3-8798-cf422b791015
 topic_type:
 - apiref
-ms.openlocfilehash: fe61503cdf46b6b2cf568deb78b96f8fa885c203
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 44578595b3cb790570c5359e714bd39c109cf1f8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136932"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176462"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 関数
 現在のアンマネージ プロセスを終了します。  
   
- この関数は .NET Framework 4 で非推奨とされました。 代わりに[ICLRMetaHost:: ExitProcess](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)メソッドを使用してください。  
+ この関数は、.NET Framework 4 では廃止されました。 代わりにメソッドを使用[します](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-exitprocess-method.md)。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-void STDMETHODCALLTYPE CorExitProcess (   
+void STDMETHODCALLTYPE CorExitProcess (
   int  exitCode  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `exitCode`  
- プロセス終了コードを指定する整数です。  
+ プロセス終了コードを指定する整数。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
-> .NET Framework 4 以降では、レガシ Api がバインドされているランタイムだけでなく、プロセスで開始されたすべてのランタイムを終了 `CorExitProcess` ます。  
+> .NET Framework 4 以降`CorExitProcess`では、従来の API がバインドされているランタイムだけでなく、プロセス内で開始されたすべてのランタイムを終了します。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

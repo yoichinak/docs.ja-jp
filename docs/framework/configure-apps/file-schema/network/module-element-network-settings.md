@@ -8,26 +8,26 @@ helpviewer_keywords:
 - module element
 - <module> element
 ms.assetid: 10318725-9666-4d65-ab61-b94c64e59f13
-ms.openlocfilehash: 78f6418160b80096214c6e37268a5a90498d6d4d
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: ed28ae4a52085cbfa781b4baf2ee1eafbeff6eb4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089247"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154830"
 ---
-# <a name="module-element-network-settings"></a>\<module> 要素 (ネットワーク設定)
+# <a name="module-element-network-settings"></a>\<モジュール>要素(ネットワーク設定)
 新しいプロキシ モジュールをアプリケーションに追加します。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**defaultProxy>** ](defaultproxy-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**paste>**
+[**\<構成>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<既定のプロキシ>**](defaultproxy-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<モジュール>**
 
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<module   
-  type="type_fullname, assembly_fullname"   
+<module
+  type="type_fullname, assembly_fullname"
 />  
 ```  
   
@@ -38,27 +38,27 @@ ms.locfileid: "74089247"
   
 |**属性**|**説明**|  
 |-------------------|---------------------|  
-|`type`|プロキシを実装する完全修飾型名 (<xref:System.Type.FullName%2A> プロパティによって示されます) とアセンブリ名 (<xref:System.Reflection.Assembly.FullName%2A> プロパティによって示されます) をコンマで区切って指定します。|  
+|`type`|プロキシを実装する<xref:System.Type.FullName%2A>完全修飾型名 (プロパティで示される) とアセンブリ名<xref:System.Reflection.Assembly.FullName%2A>(プロパティで示される名前)。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
-|**要素**|**説明**|  
+|**Element**|**説明**|  
 |-----------------|---------------------|  
 |[defaultProxy](defaultproxy-element-network-settings.md)|ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。|  
   
-## <a name="remarks"></a>Remarks  
- `module` 要素は、<xref:System.Net.IWebProxy> インターフェイスを実装するプロキシクラスを登録します。 プロキシクラスを登録すると、`module` を使用して、サポートされているプロキシ経由で情報を要求できます。  
+## <a name="remarks"></a>解説  
+ 要素`module`は、インターフェイスを実装するプロキシ<xref:System.Net.IWebProxy>クラスを登録します。 プロキシクラスを登録した後`module`、サポートされているプロキシを介して情報を要求するために使用できます。  
   
- `type` 属性の値は、モジュールのクラス名と、対応するダイナミックリンクライブラリ (DLL) の名前にする必要があります。  
+ 属性の`type`値は、モジュールのクラス名と、対応するダイナミック リンク ライブラリ (DLL) の名前にする必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、カスタムプロキシクラスを登録します。  
+ カスタム プロキシ クラスを登録する例を次に示します。  
   
 ```xml  
 <configuration>  

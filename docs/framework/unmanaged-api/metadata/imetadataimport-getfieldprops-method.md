@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 462512fd2c2b33905b45bb67599b23b301fc71f7
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437995"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177244"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps メソッド
 指定した FieldDef トークンによって参照されるフィールドに関連付けられているメタデータを取得します。  
@@ -29,15 +29,15 @@ ms.locfileid: "74437995"
   
 ```cpp  
 HRESULT GetFieldProps (  
-   [in]  mdFieldDef        mb,   
+   [in]  mdFieldDef        mb,
    [out] mdTypeDef         *pClass,  
    [out] LPWSTR            szField,  
-   [in]  ULONG             cchField,   
+   [in]  ULONG             cchField,
    [out] ULONG             *pchField,  
    [out] DWORD             *pdwAttr,  
-   [in]  PCCOR_SIGNATURE   *ppvSigBlob,   
-   [out] ULONG             *pcbSigBlob,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [in]  PCCOR_SIGNATURE   *ppvSigBlob,
+   [out] ULONG             *pcbSigBlob,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppValue,  
    [out] ULONG             *pcchValue  
 );  
@@ -45,44 +45,44 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- から関連付けられたメタデータを取得する対象のフィールドを表す FieldDef トークン。  
+ [in]関連付けられたメタデータを取得するフィールドを表す FieldDef トークン。  
   
  `pClass`  
- 入出力フィールドが属するクラスの型を表す TypeDef トークンへのポインター。  
+ [アウト]フィールドが属するクラスの型を表す TypeDef トークンへのポインター。  
   
  `szField`  
- 入出力フィールドの名前。  
+ [アウト]フィールドの名前。  
   
  `cchField`  
- から*Szfield*のバッファーのサイズ (ワイド文字単位)。  
+ [in]*szField*のバッファーのワイド文字でのサイズ。  
   
  `pchField`  
- 入出力返されたバッファーの実際のサイズ。  
+ [アウト]返されるバッファーの実際のサイズ。  
   
  `pdwAttr`  
- 入出力フィールドのメタデータに関連付けられているフラグ。  
+ [アウト]フィールドのメタデータに関連付けられたフラグ。  
   
  `ppvSigBlob`  
- からフィールドを説明するバイナリメタデータ値へのポインター。  
+ [in]フィールドを記述するバイナリ メタデータ値へのポインター。  
   
  `pcbSigBlob`  
- 入出力`ppvSigBlob`のサイズ (バイト単位)。  
+ [アウト]のサイズ (バイト`ppvSigBlob`単位)  
   
  `pdwCPlusTypeFlag`  
- 入出力フィールドの値の型を指定するフラグ。  
+ [アウト]フィールドの値の型を指定するフラグ。  
   
  `ppValue`  
- 入出力フィールドの定数値。  
+ [アウト]フィールドの定数値。  
   
  `pcchValue`  
- 入出力`ppValue`の文字数のサイズ。文字列が存在しない場合は0。  
+ [アウト]の文字`ppValue`で表されるサイズ。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

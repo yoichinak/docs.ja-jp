@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: b9b4bf2f-1098-43d6-9619-a99b4bda1940
 topic_type:
 - apiref
-ms.openlocfilehash: fd362beb9f8fd7a1f2076eb6490a96c0358520e4
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 428b022ed560648f59798154d5987d382938c280
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432152"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176072"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map メソッド
-メタデータシグネチャを使用して、アセンブリ間のリレーションシップをマップします。  
+メタデータ シグネチャを使用してアセンブリ間のリレーションシップをマップします。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT Map (  
-    [in]  mdToken tkImp,   
+    [in]  mdToken tkImp,
     [in]  mdToken tkEmit  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `tkImp`  
- からインポートされたコードオブジェクトを表すメタデータトークン。  
+ [in]インポートされたコード オブジェクトを表すメタデータ トークン。  
   
  `tkEmit`  
- から出力されたコードオブジェクトを表すメタデータトークン。  
+ [in]出力されたコード オブジェクトを表すメタデータ トークン。  
   
-## <a name="remarks"></a>コメント  
- マージ中にトークンの再マップが行われると、元のトークンはインポートされた (ソース) メタデータスコープ内でスコープが設定され、新しいトークンのスコープは、出力された (ターゲット) メタデータスコープに設定されます。  
+## <a name="remarks"></a>解説  
+ マージ中にトークンの再マップが発生すると、元のトークンはインポートされた (ソース) メタデータ スコープでスコープが設定され、新しいトークンは出力される (ターゲット) メタデータ スコープ内でスコープが設定されます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMapToken インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)

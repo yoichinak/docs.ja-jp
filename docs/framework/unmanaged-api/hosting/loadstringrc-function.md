@@ -14,59 +14,59 @@ helpviewer_keywords:
 ms.assetid: 752e49b4-987c-4c28-a118-1a0c1ed510c5
 topic_type:
 - apiref
-ms.openlocfilehash: 66d4c14234c7929af443922f86098b46a4aa6eb7
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 56ae7b7cf3b577bfe41ebd0bdd98e0da68047b44
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73122013"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176241"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 関数
 現在のスレッドの既定のカルチャを使用して、HRESULT 値をエラー メッセージに変換します。  
   
- この関数は .NET Framework 4 で非推奨とされました。  
+ この関数は、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT LoadStringRC (  
-    [in]  UINT    iResourceID,   
-    [out] LPWSTR  szBuffer,   
-    [in]  int     iMax,   
+    [in]  UINT    iResourceID,
+    [out] LPWSTR  szBuffer,
+    [in]  int     iMax,
     [in]  int     bQuiet  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `iResourceID`  
- からHRESULT。  
+ [in]HRESULT。  
   
  `szBuffer`  
- 入出力正常に完了したときのエラーメッセージを格納するバッファー。  
+ [アウト]正常終了時にエラー メッセージが格納されているバッファー。  
   
  `iMax`  
- からエラーメッセージバッファーのサイズ。  
+ [in]エラー メッセージ バッファーのサイズ。  
   
  `bQuiet`  
- から無効.  
+ [in]無視。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。  
+ このメソッドは、WinError.h で定義されている次の値に加えて、標準のコンポーネント オブジェクト モデル (COM) エラー コードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`szBuffer` が null であるか、`iMax` がゼロ (0) です。|  
+|E_INVALIDARG|`szBuffer`が null`iMax`であるか、ゼロ (0) です。|  
   
-## <a name="remarks"></a>Remarks  
- メソッドが正常に完了しなかった場合、`szBuffer` には空の文字列が含まれます。  
+## <a name="remarks"></a>解説  
+ メソッドが正常に完了しなかった場合は、`szBuffer`空の文字列が含まれます。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll と Mscorwks.dll。 Mscorwks.dll の代わりに Mscoree.dll を使用して、.NET Framework の正しいバージョンをターゲットにするようにしてください。  
+ **ライブラリ:** MSCorEE.dll と Mscorwks.dll. Mscorwks.dll の代わりに MSCorEE.dll を使用して、.NET Framework の正しいバージョンを対象にしていることを確認します。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee518bda-3296-482e-a7b7-e9d51dd1a181
 topic_type:
 - apiref
-ms.openlocfilehash: 3ab24ab869e1f2cff9beafe50e6982ba2e7cf0aa
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 34b7cebfa063a3ad077b74a753fd37ba67ff53a5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74436695"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175318"
 ---
 # <a name="imetadataimportgettypespecfromtoken-method"></a>IMetaDataImport::GetTypeSpecFromToken メソッド
 指定したトークンが表すタイプ仕様のバイナリ メタデータ シグネチャを取得します。  
@@ -28,32 +28,32 @@ ms.locfileid: "74436695"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT GetTypeSpecFromToken (   
-   [in]  mdTypeSpec            typespec,   
-   [out] PCCOR_SIGNATURE       *ppvSig,   
+HRESULT GetTypeSpecFromToken (
+   [in]  mdTypeSpec            typespec,
+   [out] PCCOR_SIGNATURE       *ppvSig,
    [out] ULONG                 *pcbSig  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `typespec`  
- から要求されたメタデータ署名に関連付けられている TypeSpec トークン。  
+ [in]要求されたメタデータ シグネチャに関連付けられた TypeSpec トークン。  
   
  `ppvSig`  
- 入出力バイナリメタデータシグネチャへのポインター。  
+ [アウト]バイナリ メタデータ シグネチャへのポインター。  
   
  `pcbSig`  
- 入出力メタデータシグネチャのサイズ (バイト単位)。  
+ [アウト]メタデータ シグネチャのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
- 成功または失敗を示す HRESULT。 失敗したマクロを使用してエラーをテストできます。  
+ 成功または失敗を示す HRESULT。 失敗は、FAILED マクロでテストできます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

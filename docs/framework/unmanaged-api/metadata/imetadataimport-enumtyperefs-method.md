@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4896b8f-8e97-469c-8089-e72a025661b5
 topic_type:
 - apiref
-ms.openlocfilehash: 778ebf1d4fad0c8703964be88fdc3ff8c033bc28
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e5d4ddd43b27d733a63c2e0dc5e92ffd2ba94a7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449985"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175435"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs メソッド
 現在のメタデータ スコープに定義されている TypeRef トークンを列挙します。  
@@ -29,42 +29,42 @@ ms.locfileid: "74449985"
   
 ```cpp  
 HRESULT EnumTypeRefs (  
-   [in, out] HCORENUM    *phEnum,   
+   [in, out] HCORENUM    *phEnum,
    [out] mdTypeRef       rTypeRefs[],  
-   [in]  ULONG           cMax,   
+   [in]  ULONG           cMax,
    [out] ULONG           *pcTypeRefs  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
+ [イン、アウト]列挙子へのポインター。 このメソッドの最初の呼び出しでは、NULL にする必要があります。  
   
  `rTypeRefs`  
- 入出力TypeRef トークンを格納するために使用される配列。  
+ [アウト]TypeRef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rTypeRefs` 配列の最大サイズ。  
   
  `pcTypeRefs`  
- 入出力`rTypeRefs`で返された TypeRef トークンの数へのポインター。  
+ [アウト]に返される TypeRef トークンの数への`rTypeRefs`ポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeRefs` が正常に返されました。|  
-|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTypeRefs` は0になります。|  
+|`S_OK`|`EnumTypeRefs`正常に返されました。|  
+|`S_FALSE`|列挙するトークンがありません。 その場合は、`pcTypeRefs`ゼロです。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  TypeRef トークンは、型への参照を表します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

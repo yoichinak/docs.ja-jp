@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c9e9120-3104-42f0-86ce-19a025f20dcc
 topic_type:
 - apiref
-ms.openlocfilehash: ed193aab8beb0de1321aa1d52ec9f963b08b316c
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 7410f91a853f3a677a105dc2e12a86d723c9fad6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441661"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177316"
 ---
 # <a name="imetadataimportenummemberswithname-method"></a>IMetaDataImport::EnumMembersWithName メソッド
 指定した名前を持つ指定した型のメンバーを表す MemberDef トークンを列挙します。  
@@ -29,54 +29,54 @@ ms.locfileid: "74441661"
   
 ```cpp  
 HRESULT EnumMembersWithName (  
-   [in, out] HCORENUM    *phEnum,   
-   [in]      mdTypeDef   cl,   
-   [in]      LPCWSTR     szName,   
-   [out]     mdToken     rMembers[],   
-   [in]      ULONG       cMax,   
+   [in, out] HCORENUM    *phEnum,
+   [in]      mdTypeDef   cl,
+   [in]      LPCWSTR     szName,
+   [out]     mdToken     rMembers[],
+   [in]      ULONG       cMax,
    [out]     ULONG       *pcTokens  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]列挙子へのポインター。  
+ [イン、アウト]列挙子へのポインター。  
   
  `cl`  
- から列挙するメンバーを持つ型を表す TypeDef トークン。  
+ [in]列挙するメンバーを持つ型を表す TypeDef トークン。  
   
  `szName`  
- から列挙子のスコープを制限するメンバー名。  
+ [in]列挙子のスコープを制限するメンバー名。  
   
  `rMembers`  
- 入出力MemberDef トークンを格納するために使用される配列。  
+ [アウト]メンバー定義トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rMembers` 配列の最大サイズ。  
   
  `pcTokens`  
- 入出力`rMembers`で返された MemberDef トークンの実際の数。  
+ [アウト]に返される MemberDef トークンの`rMembers`実際の数。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、フィールドとメソッドを列挙しますが、プロパティやイベントは列挙しません。 [IMetaDataImport:: EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)とは異なり、`EnumMembersWithName` は、指定された名前のないすべてのフィールドとメンバートークンを破棄します。  
+## <a name="remarks"></a>解説  
+ このメソッドは、フィールドとメソッドを列挙しますが、プロパティやイベントは列挙しません。 [IMetaDataImport::EnumMembers](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enummembers-method.md)と`EnumMembersWithName`は異なり、指定された名前を持たないすべてのフィールドとメンバー トークンを破棄します。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumTypeDefs` が正常に返されました。|  
-|`S_FALSE`|列挙する MemberDef トークンがありません。 この場合、`pcTokens` は0になります。|  
+|`S_OK`|`EnumTypeDefs`正常に返されました。|  
+|`S_FALSE`|列挙する MemberDef トークンがありません。 その場合は、`pcTokens`ゼロです。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

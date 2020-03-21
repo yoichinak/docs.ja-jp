@@ -9,18 +9,18 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: 19f37095bd01b76fda8b1e29423c413dbdb06a65
-ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
+ms.openlocfilehash: 40a3c84e1deed4d215383670176623a6a79ac41d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70168918"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155389"
 ---
-# <a name="systemcodedom-element"></a>\<system.string > 要素
+# <a name="systemcodedom-element"></a>\<要素>コードダム
 使用可能な言語プロバイダーのコンパイラ構成設定を指定します。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<システムの codedom >**  
+[**\<構成>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<コードダム>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,32 +34,32 @@ ms.locfileid: "70168918"
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし。  
+ [なし] :  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<compilers>](compilers-element.md)|0 個以上の [\<compiler>](compiler-element.md) 要素を含むコンパイラ構成要素のコンテナー。|  
+|[\<コンパイラ>](compilers-element.md)|コンパイラ構成要素のコンテナ。コンパイラ[\<>](compiler-element.md)要素が 0 個以上含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|[\<構成>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
   
-## <a name="net-framework-version-20"></a>.NET Framework バージョン2.0  
- System.string > 要素には、コンピューターにインストールされている言語プロバイダーのコンパイラ構成設定<xref:Microsoft.CSharp.CSharpCodeProvider>と、.NET Framework と共にインストールされる既定のプロバイダー (やなど) が含まれ[ます。 \<](system-codedom-element.md)<xref:Microsoft.VisualBasic.VBCodeProvider>. [ \<コンパイラの >](compilers-element.md)要素には、0個以上[ \<のコンパイラ >](compiler-element.md)要素が含まれています。 [各\<コンパイラ >](compiler-element.md)要素は、特定の言語プロバイダーのコンパイラ構成属性を指定します。  
+## <a name="net-framework-version-20"></a>.NET フレームワーク バージョン 2.0  
+ [ \<system.codedom>](system-codedom-element.md)要素には、.NET Framework と共にインストールされる既定のプロバイダに加えて、<xref:Microsoft.CSharp.CSharpCodeProvider>コンピュータにインストールされている言語プロバイダのコンパイラ構成設定が<xref:Microsoft.VisualBasic.VBCodeProvider>含まれています。 [\<コンパイラ>](compilers-element.md)要素には、0 個以上[\<のコンパイラ>](compiler-element.md)要素が含まれています。 各[\<コンパイラ>要素は](compiler-element.md)、特定の言語プロバイダのコンパイラ構成属性を指定します。  
   
- 開発者やコンパイラベンダーは、新しい<xref:System.CodeDom.Compiler.CodeDomProvider>実装のために構成設定をマシン構成ファイル (machine.config) に追加できます。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>メソッドを使用して、コンピューター上のコンパイラ構成設定によって識別される既定の言語プロバイダーと言語プロバイダーの両方をプログラムによって列挙します。  
+ 開発者およびコンパイラ ベンダは、新しい<xref:System.CodeDom.Compiler.CodeDomProvider>実装用にマシン構成ファイル (Machine.config) に構成設定を追加できます。 このメソッド<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType>を使用して、既定の言語プロバイダーと、コンピューターのコンパイラ構成設定で識別される言語プロバイダーの両方をプログラムで列挙します。  
   
 > [!NOTE]
-> .NET Framework バージョン1.0 および1.1 では、.NET Framework によって提供される既定の言語プロバイダーは、 [ \<コンパイラの >](compilers-element.md)要素で識別されます。 .NET Framework バージョン2.0 では、 [ \<コンパイラの >](compilers-element.md)要素で既定の言語プロバイダーは識別されませんが、 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>メソッドを使用して列挙できます。  
+> .NET Framework バージョン 1.0 および 1.1 では、.NET Framework によって提供される既定の言語プロバイダーが[\<コンパイラ>](compilers-element.md)要素で識別されます。 .NET Framework Version 2.0 では、既定の言語プロバイダは[\<コンパイラ>](compilers-element.md)要素で識別されませんが、メソッドを<xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A>使用して列挙できます。  
   
-## <a name="net-framework-versions-10-and-11"></a>.NET Framework バージョン1.0 および1.1  
- System.string > 要素には、コンピューター上の言語プロバイダーのコンパイラ構成設定が含まれています。 [ \<](system-codedom-element.md) [ \<コンパイラの >](compilers-element.md)要素には、0個以上[ \<のコンパイラ >](compiler-element.md)要素が含まれています。 [各\<コンパイラ >](compiler-element.md)要素は、特定の言語プロバイダーのコンパイラ構成属性を指定します。  
+## <a name="net-framework-versions-10-and-11"></a>.NET フレームワーク バージョン 1.0 および 1.1  
+ system.codedom>要素には、コンピューター上の言語プロバイダーのコンパイラ構成設定が含まれています。 [ \<](system-codedom-element.md) [\<コンパイラ>](compilers-element.md)要素には、0 個以上[\<のコンパイラ>](compiler-element.md)要素が含まれています。 各[\<コンパイラ>要素は](compiler-element.md)、特定の言語プロバイダのコンパイラ構成属性を指定します。  
   
  .NET Framework は、マシン構成ファイル (Machine.config) 内でコンパイラの初期設定を定義します。 開発者やコンパイラ ベンダーは、新しい <xref:System.CodeDom.Compiler.CodeDomProvider> の実装のために構成設定を追加することができます。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> メソッドを使用して、プログラムによってコンピューターの言語プロバイダーとコンパイラ構成の設定を列挙します。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "70168918"
   <system.codedom>  
     <compilers>  
       <!-- zero or more compiler elements -->  
-      <compiler   
+      <compiler
         language="c#;cs;csharp"  
         extension=".cs"  
-        type="Microsoft.CSharp.CSharpCodeProvider, System,   
-          Version=1.0.5000.0, Culture=neutral,   
+        type="Microsoft.CSharp.CSharpCodeProvider, System,
+          Version=1.0.5000.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089"  
         compilerOptions=""  
         warningLevel="1" />  
@@ -92,5 +92,5 @@ ms.locfileid: "70168918"
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [構成ファイル スキーマ](../index.md)
-- [コンパイラおよび言語プロバイダー設定のスキーマ](index.md)
-- [\<compiler> 要素](compiler-element.md)
+- [コンパイラおよび言語プロバイダー設定スキーマ](index.md)
+- [\<コンパイラ>要素](compiler-element.md)

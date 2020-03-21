@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc0ff3e6-7e7d-4f6c-948d-52b28f5cb78c
 topic_type:
 - apiref
-ms.openlocfilehash: 247a2793bf3806f5ee38585d50b4535820dfcb69
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 5fc71bf240b89afadbf8f2ba10906322921bdda2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74437062"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175331"
 ---
 # <a name="imetadataimportgetpropertyprops-method"></a>IMetaDataImport::GetPropertyProps メソッド
 指定したトークンによって表されるプロパティのメタデータを取得します。  
@@ -30,79 +30,79 @@ ms.locfileid: "74437062"
 ```cpp  
 HRESULT GetPropertyProps (  
    [in]  mdProperty        prop,  
-   [out] mdTypeDef         *pClass,   
-   [out] LPCWSTR           szProperty,   
-   [in]  ULONG             cchProperty,   
-   [out] ULONG             *pchProperty,   
-   [out] DWORD             *pdwPropFlags,   
-   [out] PCCOR_SIGNATURE   *ppvSig,   
-   [out] ULONG             *pbSig,   
-   [out] DWORD             *pdwCPlusTypeFlag,   
+   [out] mdTypeDef         *pClass,
+   [out] LPCWSTR           szProperty,
+   [in]  ULONG             cchProperty,
+   [out] ULONG             *pchProperty,
+   [out] DWORD             *pdwPropFlags,
+   [out] PCCOR_SIGNATURE   *ppvSig,
+   [out] ULONG             *pbSig,
+   [out] DWORD             *pdwCPlusTypeFlag,
    [out] UVCP_CONSTANT     *ppDefaultValue,  
    [out] ULONG             *pcchDefaultValue,  
-   [out] mdMethodDef       *pmdSetter,   
-   [out] mdMethodDef       *pmdGetter,   
+   [out] mdMethodDef       *pmdSetter,
+   [out] mdMethodDef       *pmdGetter,
    [out] mdMethodDef       rmdOtherMethod[],  
-   [in]  ULONG             cMax,   
-   [out] ULONG             *pcOtherMethod   
+   [in]  ULONG             cMax,
+   [out] ULONG             *pcOtherMethod
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `prop`  
- からメタデータを返すプロパティを表すトークン。  
+ [in]メタデータを返すプロパティを表すトークン。  
   
  `pClass`  
- 入出力プロパティを実装する型を表す TypeDef トークンへのポインター。  
+ [アウト]プロパティを実装する型を表す TypeDef トークンへのポインター。  
   
  `szProperty`  
- 入出力プロパティ名を保持するバッファー。  
+ [アウト]プロパティ名を保持するバッファー。  
   
  `cchProperty`  
- から`szProperty`のワイド文字単位のサイズ。  
+ [in]のワイド文字で表示される`szProperty`サイズ。  
   
  `pchProperty`  
- 入出力`szProperty`に返されるワイド文字数。  
+ [アウト]に返されるワイド文字の`szProperty`数。  
   
  `pdwPropFlags`  
- 入出力プロパティに適用されている属性フラグへのポインター。 この値は、 [Corpropertyattr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md)列挙子のビットマスクです。  
+ [アウト]プロパティに適用される属性フラグへのポインター。 この値は[、CorPropertyAttr](../../../../docs/framework/unmanaged-api/metadata/corpropertyattr-enumeration.md)列挙体のビットマスクです。  
   
  `ppvSig`  
- 入出力プロパティのメタデータシグネチャへのポインター。  
+ [アウト]プロパティのメタデータ シグネチャへのポインター。  
   
  `pbSig`  
- 入出力`ppvSig`で返されたバイト数。  
+ [アウト]で返されるバイト数`ppvSig`。  
   
  `pdwCPlusTypeFlag`  
- 入出力プロパティの既定値である定数の型を指定するフラグ。 この値は CorElementType 列挙子からのものです。  
+ [アウト]プロパティの既定値である定数の型を指定するフラグ。 この値は、CorElementType 列挙体から取得されます。  
   
  `ppDefaultValue`  
- 入出力このプロパティの既定値を格納するバイトへのポインター。  
+ [アウト]このプロパティの既定値を格納するバイトへのポインター。  
   
  `pcchDefaultValue`  
- 入出力`pdwCPlusTypeFlag` が ELEMENT_TYPE_STRING 場合、`ppDefaultValue`のワイド文字のサイズ。それ以外の場合、この値は関係ありません。 この場合、`ppDefaultValue` の長さは、`pdwCPlusTypeFlag`によって指定された型から推論されます。  
+ [アウト]のワイド文字`ppDefaultValue`で示されるサイズ`pdwCPlusTypeFlag`は、ELEMENT_TYPE_STRING。それ以外の場合、この値は関係ありません。 その場合、の長`ppDefaultValue`さは で指定された型から推論されます。 `pdwCPlusTypeFlag`  
   
  `pmdSetter`  
- 入出力プロパティの set アクセサーメソッドを表す MethodDef トークンへのポインター。  
+ [アウト]プロパティの set アクセサー メソッドを表す MethodDef トークンへのポインター。  
   
  `pmdGetter`  
- 入出力プロパティの get アクセサーメソッドを表す MethodDef トークンへのポインター。  
+ [アウト]プロパティの get アクセサー メソッドを表す MethodDef トークンへのポインター。  
   
  `rmdOtherMethod`  
- 入出力プロパティに関連付けられている他のメソッドを表す MethodDef トークンの配列。  
+ [アウト]プロパティに関連付けられている他のメソッドを表す MethodDef トークンの配列。  
   
  `cMax`  
- [in] `rmdOtherMethod` 配列の最大サイズ。 すべてのメソッドを保持するのに十分な大きさの配列を指定しなかった場合、警告なしにスキップされます。  
+ [in] `rmdOtherMethod` 配列の最大サイズ。 すべてのメソッドを保持するのに十分な大きさの配列を指定しない場合、警告なしにスキップされます。  
   
  `pcOtherMethod`  
- 入出力`rmdOtherMethod`で返される MethodDef トークンの数。  
+ [アウト]に返される MethodDef トークン`rmdOtherMethod`の数。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

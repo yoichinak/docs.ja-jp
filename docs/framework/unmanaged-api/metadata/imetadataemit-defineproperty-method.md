@@ -15,82 +15,82 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: f11b374ed0ecbfc137c43fb641ae691237604691
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431525"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175786"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty メソッド
-指定した `get` および `set` メソッドアクセサーを使用して、指定した型のプロパティ定義を作成し、そのプロパティ定義へのトークンを取得します。  
+指定した型のプロパティ定義を、指定`get`したメソッド アクセサ`set`ーとメソッド アクセサーで作成し、そのプロパティ定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DefineProperty (   
-    [in]  mdTypeDef          td,   
-    [in]  LPCWSTR            szProperty,   
-    [in]  DWORD              dwPropFlags,   
-    [in]  PCCOR_SIGNATURE    pvSig,   
-    [in]  ULONG              cbSig,   
-    [in]  DWORD              dwCPlusTypeFlag,   
-    [in]  void const         *pValue,   
-    [in]  ULONG              cchValue,   
-    [in]  mdMethodDef        mdSetter,   
-    [in]  mdMethodDef        mdGetter,   
-    [in]  mdMethodDef        rmdOtherMethods[],   
-    [out] mdProperty         *pmdProp   
+HRESULT DefineProperty (
+    [in]  mdTypeDef          td,
+    [in]  LPCWSTR            szProperty,
+    [in]  DWORD              dwPropFlags,
+    [in]  PCCOR_SIGNATURE    pvSig,
+    [in]  ULONG              cbSig,
+    [in]  DWORD              dwCPlusTypeFlag,
+    [in]  void const         *pValue,
+    [in]  ULONG              cchValue,
+    [in]  mdMethodDef        mdSetter,
+    [in]  mdMethodDef        mdGetter,
+    [in]  mdMethodDef        rmdOtherMethods[],
+    [out] mdProperty         *pmdProp
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- からプロパティが定義されているクラスまたはインターフェイスのトークン。  
+ [in]プロパティが定義されているクラスまたはインターフェイスのトークン。  
   
  `szProperty`  
- からプロパティの名前。  
+ [in]プロパティの名前。  
   
  `dwPropFlags`  
- からプロパティフラグ。  
+ [in]プロパティフラグ。  
   
  `pvSig`  
- からプロパティシグネチャ。  
+ [in]プロパティのシグネチャ。  
   
  `cbSig`  
- から`pvSig`内のバイト数。  
+ [in]のバイト数`pvSig`。  
   
  `dwCPlusTypeFlag`  
- からプロパティの既定値の型。  
+ [in]プロパティの既定値の型。  
   
  `pValue`  
- からプロパティの既定値。  
+ [in]プロパティの既定値。  
   
  `cchValue`  
- から`pValue`内の (Unicode) 文字の数。  
+ [in]の (Unicode) 文字の`pValue`数。  
   
  `mdSetter`  
- からプロパティ値を設定するメソッド。  
+ [in]プロパティ値を設定するメソッド。  
   
  `mdGetter`  
- からプロパティ値を取得するメソッド。  
+ [in]プロパティ値を取得するメソッド。  
   
  `rmdOtherMethods[]`  
- からプロパティに関連付けられている他のメソッドの配列。 `mdTokenNil`で配列を終了します。  
+ [in]プロパティに関連付けられている他のメソッドの配列。 配列を で終了`mdTokenNil`します。  
   
  `pmdProp`  
- 入出力割り当てられた `mdProperty` トークン。  
+ [アウト]割`mdProperty`り当てられたトークン。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

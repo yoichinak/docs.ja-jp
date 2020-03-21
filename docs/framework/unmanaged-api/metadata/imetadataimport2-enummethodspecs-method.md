@@ -15,57 +15,57 @@ helpviewer_keywords:
 ms.assetid: b3fc1e6c-bcb6-4915-baf8-7dc0a31b8724
 topic_type:
 - apiref
-ms.openlocfilehash: 4a1de144163ec2b4952bd16b59fb1c92b706631b
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 2df53ba53c64e042abc54a1d2ac043d301acdde9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74428301"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177173"
 ---
 # <a name="imetadataimport2enummethodspecs-method"></a>IMetaDataImport2::EnumMethodSpecs メソッド
-指定した MethodDef または MemberRef トークンに関連付けられている MethodSpec トークンの配列の列挙子を取得します。  
+指定した MethodDef トークンまたは MemberRef トークンに関連付けられている MethodSpec トークンの配列の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT EnumMethodSpecs (  
-    [in, out] HCORENUM      *phEnum,   
+    [in, out] HCORENUM      *phEnum,
     [in]      mdToken       tk,  
     [out]     mdMethodSpec  rMethodSpecs[],  
     [in]      ULONG         cMax,  
     [out]     ULONG         *pcMethodSpecs  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [入力、出力]`rMethodSpecs`の列挙子へのポインター。  
+ [イン、アウト]の列挙子へのポインター `rMethodSpecs`。  
   
  `tk`  
- からMethodSpec トークンを列挙するメソッドを表す MemberRef または MethodDef トークン。 `tk` の値が 0 (ゼロ) の場合、スコープ内のすべての MethodSpec トークンが列挙されます。  
+ [in]メソッドのトークンを列挙するメソッドを表すメンバー参照またはメソッド定義のトークン。 値が 0 `tk` (ゼロ) の場合、スコープ内のすべての MethodSpec トークンが列挙されます。  
   
  `rMethodSpecs`  
- 入出力列挙する MethodSpec トークンの配列。  
+ [アウト]列挙するメソッドスペック トークンの配列。  
   
  `cMax`  
- から`rMethodSpecs`に格納する、要求されたトークンの最大数。  
+ [in]に配置するトークンの要求最大数`rMethodSpecs`。  
   
  `pcMethodSpecs`  
- 入出力`rMethodSpecs`に格納された、返されたトークンの数。  
+ [アウト]に格納されたトークンの数が`rMethodSpecs`返されます。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|`S_OK`|`EnumMethodSpecs` が正常に返されました。|  
-|`S_FALSE`|`phEnum` にメンバー要素がありません。 この場合、`pcMethodSpecs` は 0 (ゼロ) に設定されます。|  
+|`S_OK`|`EnumMethodSpecs`正常に返されました。|  
+|`S_FALSE`|`phEnum`メンバー要素がありません。 この場合、0(`pcMethodSpecs`ゼロ)に設定されます。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

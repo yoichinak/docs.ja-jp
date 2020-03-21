@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: 512fdd00-262a-4456-a075-365ef4133c4d
 topic_type:
 - apiref
-ms.openlocfilehash: 81d11c87c9bc970dd5b5c9010023610cea7c0e72
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: be257930ca0fad658afa75d6efa4573d4f888a2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865195"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177088"
 ---
 # <a name="icorprofilercallback4rejitcompilationstarted-method"></a>ICorProfilerCallback4::ReJITCompilationStarted メソッド
-Just-in-time (JIT) コンパイラが関数の再コンパイルを開始したことをプロファイラーに通知します。  
+ジャスト イン タイム (JIT) コンパイラが関数の再コンパイルを開始したことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT ReJITCompilationStarted(   
+HRESULT ReJITCompilationStarted(
     [in] FunctionID functionId,  
     [in] ReJITID    rejitId,  
     [in] BOOL       fIsSafeToBlock);  
@@ -36,21 +36,21 @@ HRESULT ReJITCompilationStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- からJIT コンパイラが再コンパイルを開始した関数の ID。  
+ [in]JIT コンパイラが再コンパイルを開始した関数の ID。  
   
  `rejitId`  
- から関数の新しいバージョンの再コンパイル ID。  
+ [in]関数の新しいバージョンの再コンパイル ID。  
   
  `fIsSafeToBlock`  
- [in] ブロックによって、呼び出し元のスレッドがこのコールバックから戻るまでランタイムが待機する可能性があることを示す `true` ます。`false` は、ブロックがランタイムの操作に影響を与えないことを示します。 `true` の値はランタイムに害を与えませんが、プロファイルの結果に影響を与える可能性があります。  
+ [in]`true`をクリックすると、呼び出し元のスレッドがこのコールバックから返されるのをランタイムが待機する可能性があることを示します。`false`ブロックがランタイムの操作に影響しないことを示します。 値を指定`true`すると、ランタイムに影響はありませんが、プロファイル結果に影響を与える可能性があります。  
   
-## <a name="remarks"></a>Remarks  
- ランタイムがクラスコンストラクターを処理する方法により、各関数に対して複数の `ReJITCompilationStarted` および[ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md)メソッド呼び出しを受け取ることができます。 たとえば、ランタイムはメソッド A の再コンパイルを開始しますが、クラス B のクラスコンストラクターを実行する必要があります。 このため、ランタイムはクラス B のコンストラクターを再コンパイルして実行します。 コンストラクターが実行されている間、メソッド a が呼び出されます。これにより、メソッド A が再コンパイルされます。 このシナリオでは、メソッド A の最初の再コンパイルが停止します。 ただし、メソッド A を再コンパイルしようとすると、JIT 再コンパイルイベントで報告されます。  
+## <a name="remarks"></a>解説  
+ ランタイムがクラス コンストラクターを処理する方法により`ReJITCompilationStarted`、各関数に対して複数のペアと[ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md)メソッド呼び出しを受け取ることも可能です。 たとえば、ランタイムはメソッド A の再コンパイルを開始しますが、クラス B のクラス コンストラクターを実行する必要があります。 したがって、ランタイムはクラス B のコンストラクターを再コンパイルして実行します。 コンストラクターの実行中にメソッド A が呼び出され、メソッド A が再コンパイルされます。 このシナリオでは、メソッド A の最初の再コンパイルが停止します。 ただし、メソッド A の再コンパイルは、両方とも JIT 再コンパイル イベントと共に報告されます。  
   
- 2つのスレッドが同時にコールバックを作成する場合、プロファイラーは JIT 再コンパイルコールバックのシーケンスをサポートする必要があります。 たとえば、スレッド A は `ReJITCompilationStarted`を呼び出します。ただし、スレッド A が[ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md)を呼び出す前に、スレッド B はスレッド a の `ReJITCompilationStarted` コールバックからの関数 ID を使用して[ICorProfilerCallback:: ExceptionSearchFunctionEnter](icorprofilercallback-exceptionsearchfunctionenter-method.md)を呼び出します。[ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md)の呼び出しがまだプロファイラーによって受信されていないため、関数 ID がまだ有効ではないように見えることがあります。 ただし、この場合、関数 ID は有効です。  
+ 2 つのスレッドが同時にコールバックを行っている場合、プロファイラーは JIT 再コンパイル コールバックのシーケンスをサポートする必要があります。 たとえば、スレッド A`ReJITCompilationStarted`が呼び出し、ただし、スレッド A[が ReJITCompilationFinished を](icorprofilercallback4-rejitcompilationfinished-method.md)呼び出す前に、スレッド B は、スレッド A`ReJITCompilationStarted`のコールバックから関数 ID を使用して[ICorProfilerCallback::ExceptionSearchFunctionEnter を](icorprofilercallback-exceptionsearchfunctionenter-method.md)呼び出します。[ReJITCompilationFinished](icorprofilercallback4-rejitcompilationfinished-method.md)の呼び出しがプロファイラーによって受信されていないため、関数 ID がまだ有効でないように見える場合があります。 ただし、この場合、関数 ID は有効です。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   

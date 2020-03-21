@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
-ms.openlocfilehash: 92f9457dd0c118c9a7c578a7088f66cdea1e5ad0
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: e7ee1a8ce358c77e46db39af67bd9dc20114fb3b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320667"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174824"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation サービスのバインディングの構成
 アプリケーションの作成では、アプリケーションの配置後は各種決定事項を管理者に任せる場合がよくあります。 たとえば、どのサービス アドレス (URI (Uniform Resource Identifier)) を使用するかなどの情報は、多くの場合、前もって知る方法がありません。 アドレスをハードコーディングする代わりに、サービスの作成後に管理者が指定する方が便利です。 構成を活用することで、この柔軟性が得られます。  
   
 > [!NOTE]
-> 構成ファイルをすばやく作成するには、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)と `/config` スイッチを使用します。  
+> 設定ファイルをすばやく作成するには、スイッチを使用して[サービスモデル メタデータ ユーティリティ ツール (Svcutil.exe) を](servicemodel-metadata-utility-tool-svcutil-exe.md)使用します。 `/config`  
   
 ## <a name="major-sections"></a>主要なセクション  
- Windows Communication Foundation (WCF) 構成スキームには、次の3つの主要なセクション (`serviceModel`、`bindings`、および `services`) が含まれています。  
+ WCF (Windows 通信財団) の構成スキームには、次の`serviceModel` `bindings`3`services`つの主要なセクション ( 、、および ) が含まれています。  
   
 ```xml  
 <configuration>  
@@ -34,15 +34,15 @@ ms.locfileid: "72320667"
 ```  
   
 ### <a name="servicemodel-elements"></a>ServiceModel 要素  
- @No__t-0 要素によって制限されたセクションを使用して、1つまたは複数のエンドポイントでサービスの種類を構成したり、サービスの設定を構成したりできます。 各エンドポイントでは、アドレス、コントラクト、およびバインディングをそれぞれ 1 つずつ構成できます。 エンドポイントの詳細については、「[エンドポイントの作成の概要](endpoint-creation-overview.md)」を参照してください。 エンドポイントを指定しない場合、ランタイムは、既定のエンドポイントを追加します。 既定のエンドポイントについては、「[簡略化された構成](simplified-configuration.md)」と「[WCF サービスの簡略化された構成](./samples/simplified-configuration-for-wcf-services.md)」 を参照してください。  
+ 要素によって囲まれたセクションを`system.ServiceModel`使用して、1 つ以上のエンドポイントを持つサービスの種類と、サービスの設定を構成できます。 各エンドポイントでは、アドレス、コントラクト、およびバインディングをそれぞれ 1 つずつ構成できます。 エンドポイントの詳細については、「[エンドポイントの作成の概要](endpoint-creation-overview.md)」を参照してください。 エンドポイントを指定しない場合、ランタイムは、既定のエンドポイントを追加します。 既定のエンドポイントについては、「[Simplified Configuration](simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](./samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。  
   
  バインディングはトランスポート (HTTP、TCP、パイプ、およびメッセージ キュー) とプロトコル (セキュリティ、信頼性、およびトランザクション フロー) を指定し、バインディング要素で構成されます。各バインディング要素は、エンドポイントの通信方法のさまざまな側面を指定します。  
   
- たとえば、 [\<basicHttpBinding >](../configure-apps/file-schema/wcf/basichttpbinding.md)要素を指定すると、エンドポイントのトランスポートとして HTTP を使用することが示されます。 このエンドポイントを使用するサービスが開かれる実行時に、エンドポイントとの接続に HTTP が使用されます。  
+ たとえば、[\<基本 HttpBinding>](../configure-apps/file-schema/wcf/basichttpbinding.md)要素を指定すると、エンドポイントのトランスポートとして HTTP を使用することが示されます。 このエンドポイントを使用するサービスが開かれる実行時に、エンドポイントとの接続に HTTP が使用されます。  
   
- バインディングには、定義済みバインディングとカスタム バインドの 2 種類があります。 定義済みバインディングには、一般的なシナリオで使用される要素の組み合わせが含まれています。 WCF に用意されている定義済みバインディングの種類の一覧については、「[システム指定のバインディング](system-provided-bindings.md)」を参照してください。 定義済みバインディング コレクションに、サービス アプリケーションに必要な正しい機能の組み合わせがないときは、カスタム バインドを作成して、そのアプリケーションの要件を満たすことができます。 カスタムバインディングの詳細については、「 [\< custombinding >](../configure-apps/file-schema/wcf/custombinding.md)」を参照してください。  
+ バインディングには、定義済みバインディングとカスタム バインドの 2 種類があります。 定義済みバインディングには、一般的なシナリオで使用される要素の組み合わせが含まれています。 WCF が提供する定義済みのバインドの種類の一覧については、「[システム提供のバインディング](system-provided-bindings.md)」を参照してください。 定義済みバインディング コレクションに、サービス アプリケーションに必要な正しい機能の組み合わせがないときは、カスタム バインドを作成して、そのアプリケーションの要件を満たすことができます。 カスタム バインドの詳細については、「 [ \<customBinding>](../configure-apps/file-schema/wcf/custombinding.md)」を参照してください。  
   
- 次の4つの例は、WCF サービスの設定に使用される最も一般的なバインド構成を示しています。  
+ 次の 4 つの例は、WCF サービスのセットアップに使用される最も一般的なバインディング構成を示しています。  
   
 #### <a name="specifying-an-endpoint-to-use-a-binding-type"></a>バインディングの種類を使用するエンドポイントの指定  
  最初の例は、アドレス、コントラクト、およびバインディングをそれぞれ 1 つずつ使用して構成されたエンドポイントを指定する方法を示しています。  
@@ -51,14 +51,14 @@ ms.locfileid: "72320667"
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
   <!-- This section is optional with the default configuration introduced  
        in .NET Framework 4. -->  
-  <endpoint   
+  <endpoint
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
       binding="basicHttpBinding" />
 </service>  
 ```  
   
- この例では、`name` 属性は、構成がどのサービス型に対するものであるかを示します。 `HelloWorld` コントラクトを使用してコードでサービスを作成すると、そのサービスは、この例の構成に定義されているすべてのエンドポイントと共に初期化されます。 アセンブリが1つのサービスコントラクトのみを実装する場合、サービスは使用可能な型のみを使用するため、`name` 属性を省略できます。 この属性が受け取る文字列は、`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null` の形式で指定される必要があります。  
+ この例では、`name` 属性は、構成がどのサービス型に対するものであるかを示します。 `HelloWorld` コントラクトを使用してコードでサービスを作成すると、そのサービスは、この例の構成に定義されているすべてのエンドポイントと共に初期化されます。 アセンブリが 1 つのサービス コントラクトのみを実装`name`している場合、サービスは使用可能な唯一の型を使用するため、属性を省略できます。 この属性が受け取る文字列は、`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null` の形式で指定される必要があります。  
   
  `address` 属性では、他のエンドポイントがこのサービスと通信するために使用する URI を指定します。 この URI は、絶対パスでも相対パスでもかまいません。 相対アドレスを指定すると、ホストは、そのバインディングで使用されるトランスポート スキームに適したベース アドレスを提供します。 アドレスが構成されていない場合、ベース アドレスはそのエンドポイントのアドレスと見なされます。  
   
@@ -76,20 +76,20 @@ ms.locfileid: "72320667"
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
-  <endpoint   
+  <endpoint
       address="/HelloWorld2/"  
       contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
       binding="basicHttpBinding" />
 </service>  
 <bindings>  
-    <basicHttpBinding   
+    <basicHttpBinding
         receiveTimeout="00:00:01"  
     />  
 </bindings>  
 ```  
   
 ## <a name="configuring-a-behavior-to-apply-to-a-service"></a>サービスに適用する動作の構成  
- 次の例では、サービス型に対して、特定の動作を構成します。 @No__t-0 要素を使用して、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)を有効にし、サービスを照会し、メタデータから Web サービス記述言語 (WSDL) ドキュメントを生成します。  
+ 次の例では、サービス型に対して、特定の動作を構成します。 この`ServiceMetadataBehavior`要素は、サービスを照会し、メタデータから Web サービス記述言語 (WSDL) ドキュメントを生成する[サービスモデル メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)を有効にするために使用されます。  
   
 > [!NOTE]
 > 動作に特定の名前を付ける場合、サービスまたはエンドポイント セクションで指定した `behaviorConfiguration` と同じ名前にする必要があります。  
@@ -97,13 +97,13 @@ ms.locfileid: "72320667"
 ```xml  
 <behaviors>  
     <behavior>  
-        <ServiceMetadata httpGetEnabled="true" />   
+        <ServiceMetadata httpGetEnabled="true" />
     </behavior>  
 </behaviors>  
 <services>  
-    <service   
+    <service
        name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">
-       <endpoint   
+       <endpoint
           address="http://computer:8080/Hello"  
           contract="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null"  
           binding="basicHttpBinding" />
@@ -116,7 +116,7 @@ ms.locfileid: "72320667"
  `svcutil /config:Client.exe.config http://computer:8080/Hello?wsdl`  
   
 ## <a name="specifying-a-service-with-two-endpoints-using-different-binding-values"></a>異なるバインディング値を使用する 2 つのエンドポイントを持つサービスの指定  
- この最後の例では、`HelloWorld` サービス型に 2 つのエンドポイントを構成します。 各エンドポイントは、同じバインドの種類の異なるカスタマイズされた `bindingConfiguration` 属性を使用します (それぞれ `basicHttpBinding` を変更します)。  
+ この最後の例では、`HelloWorld` サービス型に 2 つのエンドポイントを構成します。 各エンドポイントは、同じバインディング`bindingConfiguration`タイプの異なるカスタマイズ属性を使用します`basicHttpBinding`(それぞれがを変更します)。  
   
 ```xml  
 <service name="HelloWorld, IndigoConfig, Version=2.0.0.0, Culture=neutral, PublicKeyToken=null">  
@@ -132,11 +132,11 @@ ms.locfileid: "72320667"
         bindingConfiguration="Secure" />
 </service>  
 <bindings>  
-    <basicHttpBinding   
+    <basicHttpBinding
         name="shortTimeout"  
-        timeout="00:00:00:01"   
+        timeout="00:00:00:01"
      />  
-     <basicHttpBinding   
+     <basicHttpBinding
         name="Secure">  
         <Security mode="Transport" />  
      </basicHttpBinding>
@@ -151,11 +151,11 @@ ms.locfileid: "72320667"
     <add scheme="https" binding="basicHttpBinding" bindingConfiguration="Secure" />  
 </protocolMapping>  
 <bindings>  
-    <basicHttpBinding   
+    <basicHttpBinding
         name="shortTimeout"  
-        timeout="00:00:00:01"   
+        timeout="00:00:00:01"
      />  
-     <basicHttpBinding   
+     <basicHttpBinding
         name="Secure" />  
         <Security mode="Transport" />  
 </bindings>  

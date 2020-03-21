@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: 696389b51328e167212fb2292a873c34b9263811
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e371330336002c673f2c54d882e70dbed41b743c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431821"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175838"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef メソッド
 現在のスコープ外のモジュールのメンバーへの参照を定義し、その参照定義へのトークンを取得します。  
@@ -28,37 +28,37 @@ ms.locfileid: "74431821"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DefineMemberRef (   
-    [in]  mdToken           tkImport,   
-    [in]  LPCWSTR           szName,   
-    [in]  PCCOR_SIGNATURE   pvSigBlob,   
-    [in]  ULONG             cbSigBlob,   
-    [out] mdMemberRef       *pmr   
+HRESULT DefineMemberRef (
+    [in]  mdToken           tkImport,
+    [in]  LPCWSTR           szName,
+    [in]  PCCOR_SIGNATURE   pvSigBlob,
+    [in]  ULONG             cbSigBlob,
+    [out] mdMemberRef       *pmr
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `tkImport`  
- からメンバーがグローバルでない場合は、ターゲットメンバーのクラスまたはインターフェイスのトークン。メンバーがグローバルの場合は、その他のファイルの `mdModuleRef` トークンです。  
+ [in]対象メンバのクラスまたはインターフェイスのトークン (グローバルでない場合)。メンバーがグローバルである場合は、`mdModuleRef`その他のファイルのトークン。  
   
  `szName`  
- からターゲットメンバーの名前。  
+ [in]ターゲット メンバーの名前。  
   
  `pvSigBlob`  
- からターゲットメンバーのシグネチャ。  
+ [in]ターゲット メンバーのシグネチャ。  
   
  `cbSigBlob`  
- から`pvSigBlob`内のバイト数。  
+ [in]のバイト数`pvSigBlob`。  
   
  `pmr`  
- 入出力割り当てられた `mdMemberRef` トークン。  
+ [アウト]割`mdMemberRef`り当てられたトークン。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

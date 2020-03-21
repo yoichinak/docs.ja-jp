@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
-ms.openlocfilehash: df6da84dfc120e3f6c3cb0e46729ca2cecc9fe3a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 757a87f92d8dc6049de1844fed892d95dc57c990
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040399"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151521"
 ---
 # <a name="annotating-typed-datasets"></a>型指定された DataSet の注釈
-注釈を使用すると、基になるスキーマを変更せずに型指定された <xref:System.Data.DataSet> の要素の名前を変更できます。 基になるスキーマの要素の名前を変更すると、型指定されたデータ**セット**は、データソース内に存在しないオブジェクトを参照するだけでなく、データソース内に存在するオブジェクトへの参照も失われます。  
+注釈を使用すると、基になるスキーマを変更せずに型指定された <xref:System.Data.DataSet> の要素の名前を変更できます。 基になるスキーマの要素の名前を変更すると、型指定された**DataSet**がデータ ソースに存在しないオブジェクトを参照し、データ ソースに存在するオブジェクトへの参照が失われます。  
   
- 注釈を使用すると、基になるスキーマをそのまま残したまま、型指定された**データセット**内のオブジェクトの名前をわかりやすい名前でカスタマイズし、コードを読みやすくし、型指定された**データセット**をクライアントで簡単に使用できるようにすることができます。 たとえば、 **Northwind**データベースの**customers**テーブルに対する次の Schema 要素は、 **customers** **Srow**の**DataRow**オブジェクト名と Customers という名前の <xref:System.Data.DataRowCollection> になります。  
+ 注釈を使用すると、より意味のある名前で型指定された**DataSet**内のオブジェクトの名前をカスタマイズできるため、基になるスキーマをそのまま使用しながら、コードを読みやすくし、型指定された**DataSet**をクライアントが使いやすくすることができます。 たとえば、**ノースウィンド**データベースの**Customers**テーブルに対する次のスキーマ要素は **、DataRow**オブジェクト名として **[得意先] と**[<xref:System.Data.DataRowCollection>**得意先]** という名前になります。  
   
 ```xml  
 <xs:element name="Customers">  
@@ -27,7 +27,7 @@ ms.locfileid: "73040399"
 </xs:element>  
 ```  
   
- **顧客**の**DataRowCollection**名は、クライアントコードでは意味がありますが、1つのオブジェクトであるため、顧客**srow**の**DataRow**名は誤解を招くことがあります。 また、一般的なシナリオでは、オブジェクトは**行**識別子なしで参照され、代わりに**Customer**オブジェクトとして参照されます。 この問題を解決するには、スキーマに注釈を付け、 **DataRow**オブジェクトと**DataRowCollection**オブジェクトの新しい名前を識別します。 上記のスキーマに注釈を付けたスキーマを次に示します。  
+ **顧客**の**データ行の名前**は、クライアント コードで意味がありますが、1 つのオブジェクトであるため **、CustomersRow**の**データ行**名は誤解を招く可能性があります。 また、一般的なシナリオでは、オブジェクトは**Row**識別子なしで参照され、代わりに単に**Customer**オブジェクトと呼ばれます。 解決策は、スキーマにア名を付け **、DataRow**オブジェクトと**DataRowCollection**オブジェクトの新しい名前を識別することです。 上記のスキーマに注釈を付けたスキーマを次に示します。  
   
 ```xml  
 <xs:element name="Customers" codegen:typedName="Customer" codegen:typedPlural="Customers">  
@@ -39,55 +39,55 @@ ms.locfileid: "73040399"
 </xs:element>  
 ```  
   
- **Customer**の**typedName**値を指定すると、 **customer**の**DataRow**オブジェクト名が生成されます。 **顧客**の**typedPlural**値を指定すると、**顧客**の**DataRowCollection**名が保持されます。  
+ **型指定された名前**の値を**Customer**に指定すると **、DataRow**オブジェクト名が**Customer**になります。 **型指定された複数の**値を**指定して顧客**の**データRowコレクション**名**を保持します**。  
   
  使用できる注釈を次の表に示します。  
   
-|注釈|説明|  
+|Annotation|説明|  
 |----------------|-----------------|  
-|**typedName**|オブジェクト名。|  
+|**typedName**|オブジェクトの名前。|  
 |**typedPlural**|オブジェクトのコレクション名。|  
 |**typedParent**|親のリレーションシップで参照される場合のオブジェクト名。|  
 |**typedChildren**|子のリレーションシップからオブジェクトを返すメソッド名。|  
-|**nullValue**|基になる値が**DBNull**の場合の値。 **Nullvalue**の注釈については、次の表を参照してください。 既定値は**throw**です。|  
+|**null値**|基になる値が**DBNull**の場合の値。 **null 値**の注釈については、次の表を参照してください。 デフォルトは **_throw**です。|  
   
- **Nullvalue**注釈に指定できる値を次の表に示します。  
+ 次の表は **、nullValue**アノテーションに指定できる値を示しています。  
   
 |nullValue の値|説明|  
 |---------------------|-----------------|  
-|*置換後の値*|返される値を指定します。 返された値は要素の型と一致する必要があります。 たとえば、整数型フィールドが null の場合に 0 を返すために `nullValue="0"` を使用します。|  
-|**スロー (_l)**|例外をスローします。 既定値です。|  
-|**null (_e)**|プリミティブ型が見つかった場合は、null 参照を返すか、例外をスローします。|  
-|**空 (_d)**|文字列の場合は、文字列を返し**ます。** それ以外の場合は、空のコンストラクターから作成されたオブジェクトを返します。 プリミティブ型が見つかった場合、例外をスローします。|  
+|*置換値*|返される値を指定します。 返された値は要素の型と一致する必要があります。 たとえば、整数型フィールドが null の場合に 0 を返すために `nullValue="0"` を使用します。|  
+|**_throw**|例外をスローします。 これは既定値です。|  
+|**_null**|プリミティブ型が見つかった場合は、null 参照を返すか、例外をスローします。|  
+|**_empty**|文字列の場合は**String.Empty**を返します。 プリミティブ型が見つかった場合、例外をスローします。|  
   
- 次の表は、型指定された**データセット**内のオブジェクトの既定値と使用可能な注釈を示しています。  
+ 次の表は、型指定された**DataSet**内のオブジェクトの既定値と使用可能な注釈を示しています。  
   
-|オブジェクト/メソッド/イベント|既定|注釈|  
+|オブジェクト/メソッド/イベント|Default|Annotation|  
 |---------------------------|-------------|----------------|  
-|**データ**|TableNameDataTable|typedPlural|  
-|**DataTable**メソッド|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
+|**Datatable**|TableNameDataTable|typedPlural|  
+|**データテーブル**メソッド|NewTableNameRow<br /><br /> AddTableNameRow<br /><br /> DeleteTableNameRow|typedName|  
 |**DataRowCollection**|TableName|typedPlural|  
-|**DataRow**|TableNameRow|typedName|  
+|**Datarow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**Property**|PropertyName|typedName|  
-|**子**Accessor|GetChildTableNameRows|typedChildren|  
-|**親**Accessor|TableNameRow|typedParent|  
-|**データセット**記録|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
+|**プロパティ**|PropertyName|typedName|  
+|**子供**アクセサー|GetChildTableNameRows|typedChildren|  
+|**親**アクセサー|TableNameRow|typedParent|  
+|**データセット**イベント|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  
   
- 型指定された**データセット**の注釈を使用するには、XML スキーマ定義言語 (XSD) スキーマに次の**xmlns**参照を含める必要があります。 データベーステーブルから xsd を作成するには、「 [Visual Studio でのデータセットの](/visualstudio/data-tools/dataset-tools-in-visual-studio)<xref:System.Data.DataSet.WriteXmlSchema%2A> または操作」を参照してください。  
+ 型指定された**データセット**の注釈を使用するには、XML スキーマ定義言語 (XSD) スキーマに次の**xmlns**参照を含める必要があります。 データベース テーブルから xsd を作成<xref:System.Data.DataSet.WriteXmlSchema%2A>するには、「 Visual [Studio でデータセットを操作する](/visualstudio/data-tools/dataset-tools-in-visual-studio)」を参照してください。  
   
 ```xml  
 xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
 ```  
   
- 次のサンプルの注釈付きスキーマでは、 **Northwind**データベースの**Customers**テーブルが、含まれている**Orders**テーブルとの関係と共に公開されます。  
+ 次に示す **、"受注"** テーブルに関係のある**Northwind**データベースの**Customers**テーブルを公開する、サンプルのアノーセット スキーマを示します。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
-<xs:schema id="CustomerDataSet"   
+<xs:schema id="CustomerDataSet"
       xmlns:codegen="urn:schemas-microsoft-com:xml-msprop"  
-      xmlns=""   
-      xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+      xmlns=""
+      xmlns:xs="http://www.w3.org/2001/XMLSchema"
       xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
   <xs:element name="CustomerDataSet" msdata:IsDataSet="true">  
     <xs:complexType>  
@@ -111,10 +111,10 @@ type="xs:int" minOccurs="0" />
               <xs:element name="CustomerID"  
 codegen:typedName="CustomerID"                  codegen:nullValue="" type="xs:string" minOccurs="0" />  
               <xs:element name="EmployeeID"  
-codegen:typedName="EmployeeID" codegen:nullValue="0"   
+codegen:typedName="EmployeeID" codegen:nullValue="0"
 type="xs:int" minOccurs="0" />  
               <xs:element name="OrderAdapter"  
-codegen:typedName="OrderAdapter" codegen:nullValue="1980-01-01T00:00:00"   
+codegen:typedName="OrderAdapter" codegen:nullValue="1980-01-01T00:00:00"
 type="xs:dateTime" minOccurs="0" />  
             </xs:sequence>  
           </xs:complexType>  
@@ -134,7 +134,7 @@ codegen:typedParent="Customer" codegen:typedChildren="GetOrders">
 </xs:schema>  
 ```  
   
- 次のコード例では、サンプルスキーマから作成した厳密に型指定された**データセット**を使用します。 1つの <xref:System.Data.SqlClient.SqlDataAdapter> を使用して**Customers**テーブルを設定し、別の <xref:System.Data.SqlClient.SqlDataAdapter> を使用して**Orders**テーブルにデータを設定します。 厳密に型指定された**データセット**は、 **datarelation**を定義します。  
+ サンプル スキーマから作成された厳密に型指定された**データセット**を使用するコード例を次に示します。 このテーブルでは<xref:System.Data.SqlClient.SqlDataAdapter>、1 つを使用して<xref:System.Data.SqlClient.SqlDataAdapter>**[得意先]** テーブルにデータを入力し、もう 1 つを使用して **[受注]** テーブルにデータを入力します。 厳密に型指定された**データセットは**、**データリレーションシップ**を定義します。  
   
 ```vb  
 ' Assumes a valid SqlConnection object named connection.  
@@ -187,7 +187,7 @@ SqlDataAdapter customerAdapter = new SqlDataAdapter(
     "SELECT CustomerID, CompanyName, Phone FROM Customers",  
     connection);  
 SqlDataAdapter orderAdapter = new SqlDataAdapter(  
-    "SELECT OrderID, CustomerID, EmployeeID, OrderAdapter FROM Orders",   
+    "SELECT OrderID, CustomerID, EmployeeID, OrderAdapter FROM Orders",
     connection);  
   
 // Populate a strongly typed DataSet.  
@@ -198,11 +198,11 @@ orderAdapter.Fill(customers, "Orders");
 connection.Close();  
   
 // Add a strongly typed event.  
-customers.Customers.CustomerChanged += new   
+customers.Customers.CustomerChanged += new
   CustomerDataSet.CustomerChangeEventHandler(OnCustomerChanged);  
   
 // Add a strongly typed DataRow.  
-CustomerDataSet.Customer newCustomer =   
+CustomerDataSet.Customer newCustomer =
     customers.Customers.NewCustomer();  
 newCustomer.CustomerID = "NEW01";  
 newCustomer.CompanyName = "My New Company";  

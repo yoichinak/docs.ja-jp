@@ -15,54 +15,54 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 5d985e22ba77053127610445374b8c13ca6b97f1
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431707"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175812"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType メソッド
-型定義のメタデータシグネチャを作成し、その型の `mdTypeDef` トークンを返し、`tdEncloser` パラメーターによって参照される型のメンバーであることを指定します。  
+型定義のメタデータ シグネチャを作成し、その型`mdTypeDef`のトークンを返し、定義された型が`tdEncloser`パラメーターによって参照される型のメンバーであることを指定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DefineNestedType (   
+HRESULT DefineNestedType (
     [in]  LPCWSTR     szTypeDef,  
-    [in]  DWORD       dwTypeDefFlags,   
-    [in]  mdToken     tkExtends,   
-    [in]  mdToken     rtkImplements[],   
-    [in]  mdTypeDef   tdEncloser,   
+    [in]  DWORD       dwTypeDefFlags,
+    [in]  mdToken     tkExtends,
+    [in]  mdToken     rtkImplements[],
+    [in]  mdTypeDef   tdEncloser,
     [out] mdTypeDef   *ptd  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `szTypeDef`  
- からUnicode での型の名前。  
+ [in]ユニコードの型の名前。  
   
  `dwTypeDefFlags`  
- [in] 属性 `TypeDef` ます。 これは `CorTypeAttr` 値のビットマスクです。  
+ [in]`TypeDef`属性を指定します。 これは値の`CorTypeAttr`ビットマスクです。  
   
  `tkExtends`  
- から基本クラスのトークン。 これは、`mdTypeDef` または `mdTypeRef` トークンのいずれかです。  
+ [in]基本クラスのトークン。 これは、トークン`mdTypeDef`またはトークンのいずれか`mdTypeRef`です。  
   
  `rtkImplements`[]  
- からこのクラスまたはインターフェイスが実装するインターフェイスを指定するトークンの配列。  
+ [in]このクラスまたはインターフェイスが実装するインターフェイスを指定するトークンの配列。  
   
  `tdEncloser`  
- から外側の型のトークン。 配列の最後の要素は `mdTokenNil`である必要があります。  
+ [in]外側の型のトークン。 配列の最後の要素は`mdTokenNil`.  
   
  `ptd`  
- 入出力割り当てられた `mdTypeDef` トークン。  
+ [アウト]割`mdTypeDef`り当てられたトークン。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

@@ -15,66 +15,66 @@ helpviewer_keywords:
 ms.assetid: e2501fc8-b2bc-4dcc-9205-e3acd5a53ffe
 topic_type:
 - apiref
-ms.openlocfilehash: 0fdec87324d6efa0f911e37573093c19b93c0349
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dc6375f3e2cff1a744a8ff2e6a6adab27bbf8af3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440540"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177473"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps メソッド
-以前の呼び出し[プロパティメソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)の呼び出しで定義されたプロパティのメタデータに格納されている機能を設定します。  
+[DefineProperty メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)の前の呼び出しによって定義されたプロパティのメタデータに格納されているフィーチャを設定します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT SetPropertyProps (   
-    [in]  mdProperty      pr,   
-    [in]  DWORD           dwPropFlags,   
-    [in]  DWORD           dwCPlusTypeFlag,   
-    [in]  void const      *pValue,   
-    [in]  ULONG           cchValue,   
-    [in]  mdMethodDef     mdSetter,   
-    [in]  mdMethodDef     mdGetter,   
-    [in]  mdMethodDef     rmdOtherMethods[]   
+HRESULT SetPropertyProps (
+    [in]  mdProperty      pr,
+    [in]  DWORD           dwPropFlags,
+    [in]  DWORD           dwCPlusTypeFlag,
+    [in]  void const      *pValue,
+    [in]  ULONG           cchValue,
+    [in]  mdMethodDef     mdSetter,
+    [in]  mdMethodDef     mdGetter,
+    [in]  mdMethodDef     rmdOtherMethods[]
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pr`  
- から変更するプロパティのトークン  
+ [in]変更するプロパティのトークン  
   
  `dwPropFlags`  
- からプロパティフラグ。  
+ [in]プロパティ フラグ。  
   
  `dwCPlusTypeFlag`  
- からプロパティの既定値の型。  
+ [in]プロパティの既定値の型。  
   
  `pValue`  
- からプロパティの既定値。  
+ [in]プロパティの既定値。  
   
  `cchValue`  
- から`pValue`内の (Unicode) 文字の数。  
+ [in]の (Unicode) 文字の`pValue`数。  
   
  `mdSetter`  
- からプロパティ値を設定するメソッド。  
+ [in]プロパティ値を設定するメソッド。  
   
  `mdGetter`  
- からプロパティ値を取得するメソッド。  
+ [in]プロパティ値を取得するメソッド。  
   
  `rmdOtherMethods[]`  
- からプロパティに関連付けられている他のメソッドの配列。 `mdTokenNil` トークンを使用して、この配列を終了します。  
+ [in]プロパティに関連付けられている他のメソッドの配列。 この配列をトークンで`mdTokenNil`終了します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

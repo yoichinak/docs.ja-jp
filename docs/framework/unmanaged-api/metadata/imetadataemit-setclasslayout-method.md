@@ -15,59 +15,59 @@ helpviewer_keywords:
 ms.assetid: 2576c449-388d-4434-a0e1-9f53991e11b6
 topic_type:
 - apiref
-ms.openlocfilehash: 5214298c6ad9594548ab45ed583cb5b14ce1f30d
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: e855868d18fc6cffdd5d92cfa401606caf45b76c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74441767"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177569"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout メソッド
-以前に呼び出した[Typedef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)の呼び出しで定義されたクラスのフィールドのレイアウトを完了します。  
+[DefineTypeDef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)の前の呼び出しによって定義されたクラスのフィールドのレイアウトを完了します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT SetClassLayout (  
-    [in]  mdTypeDef           td,   
-    [in]  DWORD               dwPackSize,   
-    [in]  COR_FIELD_OFFSET    rFieldOffsets[],   
-    [in]  ULONG               ulClassSize   
+    [in]  mdTypeDef           td,
+    [in]  DWORD               dwPackSize,
+    [in]  COR_FIELD_OFFSET    rFieldOffsets[],
+    [in]  ULONG               ulClassSize
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- からレイアウトするクラスを指定する `mdTypeDef` トークン。  
+ [in]レイアウト`mdTypeDef`するクラスを指定するトークン。  
   
  `dwPackSize`  
- からパッキングサイズは1、2、4、8、または16バイトです。 パッキングサイズは、隣接するフィールド間のバイト数です。  
+ [in]パッキング サイズ: 1、2、4、8 または 16 バイト。 パッキング・サイズは、隣接するフィールド間のバイト数です。  
   
  `rFieldOffsets`  
- から[COR_FIELD_OFFSET](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)構造体の配列。各構造体は、クラスのフィールドと、クラス内のフィールドのオフセットを指定します。 `mdTokenNil`で配列を終了します。  
+ [in]COR_FIELD_OFFSET[構造体の](../../../../docs/framework/unmanaged-api/metadata/cor-field-offset-structure.md)配列で、各構造体はクラスのフィールドとクラス内のフィールドのオフセットを指定します。 配列を`mdTokenNil`で終了します。  
   
  `ulClassSize`  
- からクラスのサイズ (バイト単位)。  
+ [in]クラスのサイズ (バイト単位)。  
   
-## <a name="remarks"></a>コメント  
- クラスを最初に定義するには、 [IMetaDataEmit::D efineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)メソッドを呼び出し、クラスのフィールドに対して3つのレイアウト (automatic、シーケンシャル、explicit) のいずれかを指定します。 通常は、自動レイアウトを使用し、フィールドをレイアウトする最適な方法をランタイムが選択できるようにします。  
+## <a name="remarks"></a>解説  
+ このクラスは、最初は[IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)メソッドを呼び出し、クラスのフィールドに対して自動、順次、または明示的な 3 つのレイアウトのいずれかを指定することによって定義されます。 通常は自動レイアウトを使用し、実行時にフィールドをレイアウトする最適な方法を選択します。  
   
- ただし、アンマネージコードが使用する配置に従って、フィールドをレイアウトすることが必要になる場合があります。 この場合は、シーケンシャルまたは明示的なレイアウトを選択し `SetClassLayout` を呼び出して、フィールドのレイアウトを完成させます。  
+ ただし、アンマネージ コードで使用される配置に従ってフィールドをレイアウトする場合があります。 この場合は、シーケンシャルレイアウトまたは明示的レイアウトを`SetClassLayout`選択し、フィールドのレイアウトを完了するために呼び出します。  
   
-- シーケンシャルレイアウト: パッキングサイズを指定します。 フィールドは、自然サイズまたはパッキングサイズのいずれかに従って整列されます。どちらの場合も、フィールドのオフセットは小さくなります。 `rFieldOffsets` と `ulClassSize` を0に設定します。  
+- シーケンシャルレイアウト: 梱包サイズを指定します。 フィールドは、自然なサイズまたはパッキング サイズのいずれかに従って配置されます。 0 `rFieldOffsets` `ulClassSize`に設定します。  
   
-- 明示的なレイアウト: 各フィールドのオフセットを指定するか、クラスのサイズとパッキングサイズを指定します。  
+- 明示的なレイアウト: 各フィールドのオフセットを指定するか、クラスサイズとパッキングサイズを指定します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

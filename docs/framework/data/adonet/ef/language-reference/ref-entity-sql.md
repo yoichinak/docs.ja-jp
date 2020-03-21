@@ -2,12 +2,12 @@
 title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
-ms.openlocfilehash: 08bcaad4fdc0cf5324ff9976fcf48c23b206e72f
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 40a5afd7eb99dba7cae8fe14ed0a45213fda94a0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319393"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149948"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 エンティティ インスタンスへの参照を返します。  
@@ -15,7 +15,7 @@ ms.locfileid: "72319393"
 ## <a name="syntax"></a>構文  
   
 ```sql  
-REF( expression )   
+REF( expression )
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -25,7 +25,7 @@ REF( expression )
 ## <a name="return-value"></a>戻り値  
  指定されたエンティティ インスタンスへの参照。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  エンティティ参照は、エンティティ キーとエンティティ セット名で構成されます。 異なるエンティティ セットが同じエンティティ型に基づくことができるので、特定のエンティティ キーが複数のエンティティ セットで使用される場合があります。 ただし、エンティティ参照は常に一意です。 入力式が永続エンティティを表す場合、このエンティティへの参照が返されます。 入力式が永続エンティティではない場合は、NULL 参照が返されます。  
   
  プロパティ抽出演算子 (.) を使用してエンティティのプロパティにアクセスすると、参照は自動的に逆参照されます。  
@@ -33,7 +33,7 @@ REF( expression )
 ## <a name="example"></a>例  
  次の Entity SQL クエリは、REF 演算子を使用して入力エンティティ引数の参照を返します。 プロパティ抽出演算子 (.) を使用して Product エンティティのプロパティにアクセスすることにより、同じクエリでこの参照が逆参照されます。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. [「方法: PrimitiveType の結果を返すクエリを実行](../how-to-execute-a-query-that-returns-primitivetype-results.md)する」の手順に従います。  
+1. [「方法: プリミティブ型の結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-primitivetype-results.md)」の手順に従います。  
   
 2. 次のクエリを引数として `ExecutePrimitiveTypeQuery` メソッドに渡します。  
   
@@ -43,6 +43,6 @@ REF( expression )
 
 - [DEREF](deref-entity-sql.md)
 - [CREATEREF](createref-entity-sql.md)
-- [KEY](key-entity-sql.md)
+- [キー](key-entity-sql.md)
 - [Entity SQL リファレンス](entity-sql-reference.md)
 - [型定義](type-definitions-entity-sql.md)

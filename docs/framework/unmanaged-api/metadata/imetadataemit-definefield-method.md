@@ -15,66 +15,66 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 40f24a4ea628ce92a27ab1bfe97fc87a57dfa4f0
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432548"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177715"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField メソッド
-指定したメタデータシグネチャを持つフィールドの定義を作成し、そのフィールド定義へのトークンを取得します。  
+指定したメタデータ シグネチャを持つフィールドの定義を作成し、そのフィールド定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT DefineField (   
-    [in]  mdTypeDef   td,   
-    [in]  LPCWSTR     szName,   
-    [in]  DWORD       dwFieldFlags,   
-    [in]  PCCOR_SIGNATURE pvSigBlob,   
-    [in]  ULONG       cbSigBlob,   
-    [in]  DWORD       dwCPlusTypeFlag,   
-    [in]  void const  *pValue,   
-    [in]  ULONG       cchValue,   
-    [out] mdFieldDef  *pmd   
+HRESULT DefineField (
+    [in]  mdTypeDef   td,
+    [in]  LPCWSTR     szName,
+    [in]  DWORD       dwFieldFlags,
+    [in]  PCCOR_SIGNATURE pvSigBlob,
+    [in]  ULONG       cbSigBlob,
+    [in]  DWORD       dwCPlusTypeFlag,
+    [in]  void const  *pValue,
+    [in]  ULONG       cchValue,
+    [out] mdFieldDef  *pmd
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- から外側のクラスまたはインターフェイスの `mdTypeDef` トークン。  
+ [in]外側`mdTypeDef`のクラスまたはインターフェイスのトークン。  
   
  `szName`  
- からUnicode でのフィールド名。  
+ [in]ユニコードのフィールド名。  
   
  `dwFieldFlags`  
- からフィールド属性。 これは `CorFieldAttr` 値のビットマスクです。  
+ [in]フィールド属性。 これは値の`CorFieldAttr`ビットマスクです。  
   
  `pvSigBlob`  
- からBLOB としてのフィールドシグネチャ。  
+ [in]BLOB としてのフィールド シグネチャ。  
   
  `cbSigBlob`  
- から`pvSigBlob`内のバイト数。  
+ [in]のバイト数`pvSigBlob`。  
   
  `dwCPlusTypeFlag`  
- から定数値の `ELEMENT_TYPE_` *\** 。 これは `CorElementType` の値です。 フィールドの定数値を定義していない場合は、`ELEMENT_TYPE_END`を使用します。  
+ [in]`ELEMENT_TYPE_`*\** 定数値の場合。 これは値です`CorElementType`。 フィールドの定数値を定義しない場合は、 を`ELEMENT_TYPE_END`使用します。  
   
  `pValue`  
- からフィールドの定数値。  
+ [in]フィールドの定数値。  
   
  `cchValue`  
- から`pValue`の (Unicode) 文字のサイズ。  
+ [in]のサイズ (Unicode) 文字`pValue`  
   
  `pmd`  
- 入出力割り当てられた `mdFieldDef` トークン。  
+ [アウト]割`mdFieldDef`り当てられたトークン。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

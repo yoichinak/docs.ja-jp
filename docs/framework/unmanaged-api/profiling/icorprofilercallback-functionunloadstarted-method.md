@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 2b228337a55d50b94da966b45877e2000b3c03e4
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 988843559e55cc4cacd2a40bb3e6ac51721e99b6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866313"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175162"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted メソッド
 ランタイムが関数のアンロードを開始したことをプロファイラーに通知します。  
@@ -29,20 +29,20 @@ ms.locfileid: "76866313"
   
 ```cpp  
 HRESULT FunctionUnloadStarted(  
-    [in] FunctionID functionId);   
+    [in] FunctionID functionId);
 ```  
   
 ## <a name="parameters"></a>パラメーター
 
 - `functionId`
 
-  \[] アンロードされる関数の ID。
+  \[in] アンロードされている関数の ID。
 
-## <a name="remarks"></a>コメント  
- このメソッドが呼び出し元に戻った後、`functionId` パラメーターの値は無効になりました。  
+## <a name="remarks"></a>解説  
+ このメソッドが呼`functionId`び出し元に戻った後、パラメーターの値は無効になります。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   

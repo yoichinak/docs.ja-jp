@@ -10,26 +10,26 @@ helpviewer_keywords:
 - <remove> element, webRequestModules
 - <webRequestModules>, remove element
 ms.assetid: dd84d2fe-2f4f-457a-9d3c-441d0d21cc10
-ms.openlocfilehash: ca3a78a491c61b6e23dab0f96eebceb3157706ae
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: afa1aef8ea71f43a136987ec5b6e1925c6d9fb40
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74089142"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154726"
 ---
-# <a name="remove-element-for-webrequestmodules-network-settings"></a>webRequestModules の \<remove> 要素 (ネットワーク設定)
-アプリケーションからカスタム Web 要求モジュールを削除します。  
+# <a name="remove-element-for-webrequestmodules-network-settings"></a>\<web 要求モジュール (ネットワーク設定) の要素>を削除します。
+カスタム Web 要求モジュールをアプリケーションから削除します。  
   
-[**\<configuration>**](../configuration-element.md)\
+[**\<構成>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<webRequestModules>**](webrequestmodules-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](webrequestmodules-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>を削除する**
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<remove   
-  prefix="URI prefix"   
+<remove
+  prefix="URI prefix"
 />  
 ```  
   
@@ -43,25 +43,25 @@ ms.locfileid: "74089142"
 |`prefix`|この Web 要求モジュールによって処理される要求の URI プレフィックス。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
-|**要素**|**説明**|  
+|**Element**|**説明**|  
 |-----------------|---------------------|  
-|[webRequestModules](webrequestmodules-element-network-settings.md)|ネットワークホストから情報を要求するために使用するモジュールを指定します。|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|ネットワーク ホストから情報を要求するために使用するモジュールを指定します。|  
   
-## <a name="remarks"></a>Remarks  
- `remove` 要素は、指定された URI プレフィックスの登録済み Web 要求モジュールを削除します。  
+## <a name="remarks"></a>解説  
+ 要素`remove`は、指定された URI プレフィックスに登録されている Web 要求モジュールを削除します。  
   
- `prefix` 属性の値は、有効な URI の先頭の文字 ("`http`"、"`http://www.contoso.com`" など) にする必要があります。  
+ 属性の`prefix`値は、有効な URI の先頭文字である必要があります。`http``http://www.contoso.com`  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
 
-次の例では、HTTP 用の既存の Web 要求モジュールを削除し、HTTP 要求用の新しいカスタム Web 要求モジュールを `www.contoso.com`に登録します。
+次の例では、HTTP 用の既存の Web 要求モジュールを削除し、HTTP 要求用の新`www.contoso.com`しいカスタム Web 要求モジュールを登録します。
   
 ```xml  
 <configuration>  

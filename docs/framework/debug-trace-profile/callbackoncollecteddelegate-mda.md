@@ -14,12 +14,12 @@ helpviewer_keywords:
 - garbage collection, run-time errors
 - delegates [.NET Framework], garbage collection
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
-ms.openlocfilehash: eb14e0df5396d92eb223dde2e562684c4c318295
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: d4ca777fa5b41433eec227762fe315f22ab33cf6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217566"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79174226"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 `callbackOnCollectedDelegate` マネージド デバッグ アシスタント (MDA) は、デリゲートがマネージド コードからアンマネージド コードに関数ポインターとしてマーシャリングされ、デリゲートがガベージ コレクトされた後にその関数ポインター上にコールバックが配置された場合にアクティブ化されます。  
@@ -42,7 +42,7 @@ ms.locfileid: "77217566"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  デリゲートを関数ポインターとしてマーシャリングすると、ランタイムはアンマネージドからマネージドへの遷移を行うサンクを割り当てます。 このサンクが、マネージド デリゲートが最終的に呼び出される前に、アンマネージド コードによって実際に呼び出されるものです。 `callbackOnCollectedDelegate` MDA を有効にしない場合、アンマネージのマーシャリング コードはデリゲートがガベージ コレクトされたときに削除されます。 `callbackOnCollectedDelegate` MDA を有効にした場合、アンマネージのマーシャリング コードはデリゲートがガベージ コレクトされたとき、すぐには削除されません。 代わりに、既定では最新の 1,000 個のインスタンスが有効のまま保持され、呼び出されたときに MDA をアクティブ化するように変更されます。 サンクはやがて、さらに 1,001 個のマーシャリングされたデリゲートがガベージ コレクトされた後に削除されます。  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  MDA は、デリゲートのアンマネージ関数ポインターへのコールバックが試みられる前に、ガベージ コレクトされたデリゲートの型名を報告します。  
   
 ## <a name="configuration"></a>構成  
@@ -96,7 +96,7 @@ public class Entry
     }  
   
     public static void Target()  
-    {          
+    {
     }  
   
     [DllImport("Library", CallingConvention = CallingConvention.StdCall)]  
@@ -109,7 +109,7 @@ public class Entry
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

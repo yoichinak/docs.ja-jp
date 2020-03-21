@@ -2,20 +2,20 @@
 title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: 611e90f362bbc0eac521e1e1998fb85200169c19
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: a0f5dd19c439861451b1e88c3ae35f9f265288fa
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039945"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150494"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
-式の結果が指定の範囲内の値になるかどうかを判断します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN 式は、Transact-sql との間の Transact-sql と同じ機能を持ちます。  
+式の結果が指定の範囲内の値になるかどうかを判断します。 BETWEEN[!INCLUDE[esql](../../../../../../includes/esql-md.md)]式は、Transact-SQL BETWEEN 式と同じ機能を持ちます。  
   
 ## <a name="syntax"></a>構文  
   
 ```csharp  
-expression [ NOT ] BETWEEN begin_expression AND end_expression    
+expression [ NOT ] BETWEEN begin_expression AND end_expression
 ```  
   
 ## <a name="arguments"></a>引数  
@@ -37,8 +37,8 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="return-value"></a>戻り値  
  `true` が、`expression` と `begin_expression` で指定される範囲内にある場合は `end_expression`。それ以外の場合は `false`。 `null` が `expression` であるか、`null` または `begin_expression` が `end_expression` である場合は、`null` が返されます。  
   
-## <a name="remarks"></a>Remarks  
- 限定範囲を指定するには、BETWEEN の代わりに、より大きい (>) 演算子とより小さい (<) 演算子を使用します。  
+## <a name="remarks"></a>解説  
+ 排他的な範囲を指定するには、BETWEEN ではなく、より大きい (>) とより小さい (<) 演算子を使用します。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、BETWEEN 演算子を使用して、式の結果が指定の範囲内の値になるかどうかを調べます。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  

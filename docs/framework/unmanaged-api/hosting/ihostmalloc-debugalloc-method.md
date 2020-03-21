@@ -15,65 +15,65 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: a2a752f23ed64795f9208b9101c21bc585d5f431
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 20ad5485b8603cc7de1c27c00d53c8939871d525
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136815"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178038"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc メソッド
-ホストがヒープから指定された量のメモリを割り当て、さらにメモリが割り当てられた場所を追跡するように要求します。  
+ホストに、ヒープから指定された量のメモリを割り当て、さらにメモリが割り当てられた場所を追跡することを要求します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT DebugAlloc (  
-    [in]  SIZE_T  cbSize,   
-    [in]  EMemoryCriticalLevel dwCriticalLevel,   
-    [in]  char*   pszFileName,   
-    [in]  int     iLineNo,   
+    [in]  SIZE_T  cbSize,
+    [in]  EMemoryCriticalLevel dwCriticalLevel,
+    [in]  char*   pszFileName,
+    [in]  int     iLineNo,
     [out] void**  ppMem  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `cbSize`  
- から現在のメモリ割り当て要求のサイズ (バイト単位)。  
+ [in]現在のメモリ割り当て要求のサイズ (バイト単位)。  
   
  `dwCriticalLevel`  
- から割り当てエラーの影響を示す[EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md)値の1つ。  
+ [in]割り当てエラーの影響を示す[EMemoryCriticalLevel](../../../../docs/framework/unmanaged-api/hosting/ememorycriticallevel-enumeration.md)値の 1 つ。  
   
  `pszFileName`  
- からデバッグ中の実行可能ファイルのコードファイル。  
+ [in]デバッグ中の実行可能ファイルのコード ファイル。  
   
  `iLineNo`  
- から割り当てが要求された `pszFileName` 内の行番号。  
+ [in]割り当て`pszFileName`が要求された行番号。  
   
  `ppMem`  
- 入出力割り当てられたメモリへのポインター。要求を完了できなかった場合は null。  
+ [アウト]割り当てられたメモリへのポインター、または null 要求を完了できなかった場合。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`DebugAlloc` が正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
-|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
+|S_OK|`DebugAlloc`正常に返されました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
+|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
-|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドから E_FAIL が返された場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは、HOST_E_CLRNOTAVAILABLE が返されます。|  
-|E_OUTOFMEMORY|割り当て要求を完了するのに十分なメモリがありませんでした。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
+|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返すと、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
+|E_OUTOFMEMORY|メモリ不足で、割り当て要求を完了できませんでした。|  
   
-## <a name="remarks"></a>Remarks  
- CLR は、 [IHostMemoryManager:: CreateMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)メソッドを呼び出すことによって、 [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)インスタンスへのインターフェイスポインターを取得します。 `DebugAlloc` を使用すると、ランタイムはデバッグ時に使用するコードファイルの情報を取得できます。  
+## <a name="remarks"></a>解説  
+ CLR は、メソッドを呼び出すことによって[、IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)インスタンスへのインターフェイス ポインター[を](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)取得します。 `DebugAlloc`ランタイムは、デバッグ中に使用するコード ファイル情報を取得できます。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46264b2c-574d-4dde-aafc-77187a104fdd
 topic_type:
 - apiref
-ms.openlocfilehash: 3e470250fa0e86610fcc9a6d6e2ca03569d62b54
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: edfe5de9c9d7ef9607a2eea5146194bbd4393a92
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74449448"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175994"
 ---
 # <a name="imetadataassemblyimportfindexportedtypebyname-method"></a>IMetaDataAssemblyImport::FindExportedTypeByName メソッド
 名前と外側の型を指定して、エクスポートされた型へのポインターを取得します。  
@@ -29,35 +29,35 @@ ms.locfileid: "74449448"
   
 ```cpp  
 HRESULT FindExportedTypeByName (  
-    [in]  LPCWSTR           szName,   
-    [in]  mdToken           mdtExportedType,   
+    [in]  LPCWSTR           szName,
+    [in]  mdToken           mdtExportedType,
     [out] mdExportedType    *ptkExportedType  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- からエクスポートされた型の名前。  
+ [in]エクスポートされた型の名前。  
   
  `mdtExportedType`  
- からエクスポートする型の外側のクラスのメタデータトークン。 要求されたエクスポート型が入れ子にされた型ではない場合、この値は `mdExportedTypeNil` です。  
+ [in]エクスポートされた型の外側のクラスのメタデータ トークン。 この値は`mdExportedTypeNil`、要求されたエクスポート型が入れ子にされた型でない場合です。  
   
  `ptkExportedType`  
- 入出力エクスポートされた型を表す `mdExportedType` トークンへのポインター。  
+ [アウト]エクスポートされた型を`mdExportedType`表すトークンへのポインター。  
   
-## <a name="remarks"></a>コメント  
- `FindExportedTypeByName` メソッドは、参照を解決するために共通言語ランタイムによって採用されている標準の規則を使用します。  
+## <a name="remarks"></a>解説  
+ この`FindExportedTypeByName`メソッドは、共通言語ランタイムで使用される標準規則を使用して参照を解決します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
 - [ランタイムがアセンブリを検索する方法](../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

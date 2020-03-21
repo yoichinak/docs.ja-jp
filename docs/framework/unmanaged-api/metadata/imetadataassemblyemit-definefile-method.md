@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c065aadf-c1ca-4981-bde6-597042cb29c4
 topic_type:
 - apiref
-ms.openlocfilehash: 0b7ca6f9878ed2fa2d90ea93e5101f0a66ec2d5e
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: cabd6a47e5d6fc2a4cea87b16d349d9c778b3507
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74440209"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176059"
 ---
 # <a name="imetadataassemblyemitdefinefile-method"></a>IMetaDataAssemblyEmit::DefineFile メソッド
 このアセンブリが参照するアセンブリのメタデータを含む `File` メタデータ構造体を作成し、関連付けられたメタデータ トークンを返します。  
@@ -29,8 +29,8 @@ ms.locfileid: "74440209"
   
 ```cpp  
 HRESULT DefineFile (  
-    [in]  LPCWSTR        szName,   
-    [in]  const void     *pbHashValue,   
+    [in]  LPCWSTR        szName,
+    [in]  const void     *pbHashValue,
     [in]  ULONG          cbHashValue,  
     [in]  DWORD          dwFileFlags,  
     [out] mdFile         *pmdf  
@@ -39,32 +39,32 @@ HRESULT DefineFile (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- から使用するファイルの名前。  
+ [in]使用するファイルの名前。  
   
  `pbHashValue`  
- からアセンブリに関連付けられているハッシュデータへのポインター。  
+ [in]アセンブリに関連付けられているハッシュ データへのポインター。  
   
  `cbHashValue`  
- から`pbHashValue`のサイズ (バイト単位)。  
+ [in]のサイズ (バイト`pbHashValue`単位)  
   
  `dwFileFlags`  
- からプロパティ設定を指定する `FileFlags` 値のビットごとの組み合わせ。  
+ [in]プロパティ設定を指定する`FileFlags`値のビットごとの組み合わせ。  
   
  `pmdf`  
- 入出力返された `File` トークンへのポインター。  
+ [アウト]返された`File`トークンへのポインター。  
   
-## <a name="remarks"></a>コメント  
- このアセンブリがビルドされた時点で、このアセンブリに含まれていたファイルごとに1つの `File` メタデータ構造を定義する必要があります。メタデータを含むファイルは除きます。  
+## <a name="remarks"></a>解説  
+ この`File`アセンブリのビルド時にこのアセンブリの一部であったファイルごとに、メタデータを含むファイルを除いて、1 つのメタデータ構造を定義する必要があります。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[「システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

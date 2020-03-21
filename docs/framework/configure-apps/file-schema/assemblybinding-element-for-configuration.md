@@ -1,5 +1,5 @@
 ---
-title: <assemblyBinding>appSettings&gt;の<configuration>add&gt;要素
+title: <configuration> の <assemblyBinding> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -7,19 +7,18 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-ms.openlocfilehash: e0b83c4b3573ab6819654e72cac1bf3e4a0ba637
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 21cf5e749b0dae310c3326f8abf82c6678fc97e9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69921275"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155480"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<構成 > の\<assemblybinding > 要素
+# <a name="assemblybinding-element-for-configuration"></a>\<コンフィギュレーション>の>要素\<の組み合て
 
 構成レベルでのアセンブリ バインディング ポリシーを指定します。
 
-[ **\<configuration>** ](configuration-element.md)   
-&nbsp;&nbsp; **\<assemblyBinding >**
+&nbsp;[**\<アセンブリ>**](configuration-element.md)&nbsp;**構成>\<**
 
 ## <a name="syntax"></a>構文
 
@@ -39,24 +38,24 @@ ms.locfileid: "69921275"
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<configuration>** ](configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
+| [**\<構成>**](configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
 
 ## <a name="child-element"></a>子要素
 
 |     | 説明 |
 | --- | ----------- |
-| [ **\<linkedConfiguration >** ](linkedconfiguration-element.md) | インクルードする構成ファイルを指定します。 |
+| [**\<リンクされた構成>**](linkedconfiguration-element.md) | インクルードする構成ファイルを指定します。 |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-[ **\<Linkedconfiguration >** ](linkedconfiguration-element.md)要素は、アセンブリを複製するのではなく、既知の場所にアセンブリ構成ファイルを含めることをアプリケーション構成ファイルに許可することで、コンポーネントアセンブリの管理を簡略化します。構成設定。
+[** \<linkedConfiguration>**](linkedconfiguration-element.md)要素は、アセンブリ構成設定を複製するのではなく、既知の場所にアセンブリ構成ファイルを含めることで、コンポーネント アセンブリの管理を簡素化します。
 
 > [!NOTE]
-> **\<Linkedconfiguration >** 要素は、Windows サイドバイサイドマニフェストを持つアプリケーションではサポートされていません。
+> リンクされた構成>要素は、Windows のサイド バイ サイド マニフェストを持つアプリケーションではサポートされていません。 ** \<**
 
 ## <a name="example"></a>例
 
-次の例は、ローカルのハードディスクに構成ファイルを含める方法を示しています。
+次の例は、ローカル ハード ディスクに構成ファイルを含める方法を示しています。
 
 ```xml
 <configuration>
@@ -68,4 +67,4 @@ ms.locfileid: "69921275"
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイルスキーマ](index.md)
+- [.NET Framework の構成ファイル スキーマ](index.md)

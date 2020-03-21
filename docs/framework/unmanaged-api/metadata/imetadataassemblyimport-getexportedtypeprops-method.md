@@ -15,61 +15,61 @@ helpviewer_keywords:
 ms.assetid: 25ca7623-5a55-4f09-b44a-36b03d142278
 topic_type:
 - apiref
-ms.openlocfilehash: 82302124828a2dab73b445128d7d847e112edd36
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 15b58e01d4ce99f19f510c760819471b84380b45
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74448213"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177759"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps メソッド
-指定したメタデータシグネチャを持つ、エクスポートされた型のプロパティのセットを取得します。  
+指定したメタデータ シグネチャを持つエクスポートされた型のプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetExportedTypeProps (  
-    [in]  mdExportedType    mdct,   
-    [out] LPWSTR            szName,   
-    [in]  ULONG             cchName,   
-    [out] ULONG             *pchName,   
-    [out] mdToken           *ptkImplementation,   
-    [out] mdTypeDef         *ptkTypeDef,   
+    [in]  mdExportedType    mdct,
+    [out] LPWSTR            szName,
+    [in]  ULONG             cchName,
+    [out] ULONG             *pchName,
+    [out] mdToken           *ptkImplementation,
+    [out] mdTypeDef         *ptkTypeDef,
     [out] DWORD             *pdwExportedTypeFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `mdct`  
- からエクスポートされた型を表す `mdExportedType` メタデータトークン。  
+ [in]エクスポート`mdExportedType`された型を表すメタデータ トークン。  
   
  `szName`  
- 入出力エクスポートされた型の名前。  
+ [アウト]エクスポートされた型の名前。  
   
  `cchName`  
- から`szName`のサイズ (ワイド文字単位)。  
+ [in]のサイズ (ワイド文字)`szName`です。  
   
  `pchName`  
- 入出力実際に返されるワイド文字の数 `szName`  
+ [アウト]実際に返されるワイド文字の数`szName`  
   
  `ptkImplementation`  
- 入出力エクスポートされた型のプロパティへのアクセスを格納または許可する、`mdFile`、`mdAssemblyRef`、または `mdExportedType` メタデータトークン。  
+ [アウト]エクスポート`mdFile`された`mdAssemblyRef`型の`mdExportedType`プロパティを格納または許可する 、または、エクスポートされた型のプロパティへのアクセスを許可する 、、、、またはメタデータ トークン。  
   
  `ptkTypeDef`  
- 入出力ファイル内の型を表す `mdTypeDef` トークンへのポインター。  
+ [アウト]ファイル内の型`mdTypeDef`を表すトークンへのポインター。  
   
  `pdwExportedTypeFlags`  
- 入出力エクスポートされた型に適用されるメタデータを記述するフラグへのポインター。 Flags 値には、1つまたは複数の[Cortypeattr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)値を指定できます。  
+ [アウト]エクスポートされた型に適用されるメタデータを記述するフラグへのポインター。 フラグ値は、1 つまたは複数[の CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md)値にすることができます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)

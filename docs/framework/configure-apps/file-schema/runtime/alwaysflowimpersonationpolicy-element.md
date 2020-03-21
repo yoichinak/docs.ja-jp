@@ -8,24 +8,24 @@ helpviewer_keywords:
 - alwaysFlowImpersonationPolicy element
 - <alwaysFlowImpersonationPolicy> element
 ms.assetid: ee622801-9e46-470b-85ab-88c4b1dd2ee1
-ms.openlocfilehash: 06e91ea6989dcdf0b2a179e7d6ce79b8d9aaff03
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7c8ac37932a528ff0f000cbaab49124dec51b88c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118339"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154484"
 ---
-# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy > 要素
+# <a name="alwaysflowimpersonationpolicy-element"></a>\<alwaysFlowImpersonationPolicy> 要素
 偽装の実行方法に関係なく、Windows ID が常に非同期ポイント間でフローすることを指定します。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<alwaysFlowImpersonationPolicy >** \  
+[**\<構成>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<ランタイム>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<常にフロー偽装ポリシー>**\  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<alwaysFlowImpersonationPolicy    
+<alwaysFlowImpersonationPolicy
   enabled="true|false"/>  
 ```  
   
@@ -36,17 +36,17 @@ ms.locfileid: "73118339"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> Windows id が非同期ポイント間でフローするかどうかを示します。|  
+|`enabled`|必須の属性です。<br /><br /> Windows ID が非同期ポイントをまたいでフローするかどうかを示します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|Value|説明|  
 |-----------|-----------------|  
-|`false`|<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>などのマネージメソッドを使用して偽装を実行しない限り、Windows id は非同期ポイント間ではフローしません。 既定値です。|  
-|`true`|Windows id は、偽装がどのように実行されたかに関係なく、常に非同期のポイント間でフローします。|  
+|`false`|Windows ID は、偽装がなどの<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>マネージ メソッドを通じて実行されない限り、非同期ポイントをまたいでフローしません。 これは既定値です。|  
+|`true`|Windows ID は、偽装の実行方法に関係なく、常に非同期ポイント間でフローします。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -55,25 +55,25 @@ ms.locfileid: "73118339"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>Remarks  
- .NET Framework バージョン1.0 および1.1 では、Windows id は非同期ポイント間ではフローしません。 .NET Framework バージョン2.0 には、現在実行中のスレッドに関する情報を含む <xref:System.Threading.ExecutionContext> オブジェクトがあり、アプリケーションドメイン内の非同期ポイント間でフローします。 <xref:System.Security.Principal.WindowsIdentity> は、<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A> などのマネージメソッドを使用して偽装が行われた場合に、ネイティブメソッドへのプラットフォーム呼び出しなどの他の方法を使用して行われなかった場合に、非同期ポイント間を流れる情報の一部としてもフローします。 この要素は、偽装がどのように実現されたかに関係なく、Windows id が非同期ポイント間でフローすることを指定するために使用されます。  
+## <a name="remarks"></a>解説  
+ .NET Framework バージョン 1.0 および 1.1 では、Windows ID は非同期ポイントを渡ってフローしません。 .NET Framework Version 2.0 には、<xref:System.Threading.ExecutionContext>現在実行中のスレッドに関する情報を格納し、アプリケーション ドメイン内の非同期ポイントを渡ってその情報を格納するオブジェクトがあります。 また<xref:System.Security.Principal.WindowsIdentity>、ネイティブ メソッドへのプラットフォーム呼び出しなどの<xref:System.Security.Principal.WindowsIdentity.Impersonate%2A>他の方法ではなくマネージ メソッドを使用して偽装が実現された場合、非同期ポイントを流れる情報の一部としてもフローします。 この要素は、偽装の実行方法に関係なく、Windows ID が非同期ポイントを渡ってフローすることを指定するために使用されます。  
   
- この既定の動作は、次の2つの方法で変更できます。  
+ このデフォルトの動作は、他の 2 つの方法で変更できます。  
   
-1. マネージコード内で、スレッド単位で。  
+1. スレッド単位でのマネージ コード。  
   
-     <xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>、<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>、または <xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Threading.ExecutionContext> と <xref:System.Security.SecurityContext> の設定を変更することで、スレッド単位でフローを抑制できます。  
+     <xref:System.Threading.ExecutionContext>の<xref:System.Security.SecurityContext>設定を変更して、スレッド単位でフローを<xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType><xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType><xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>抑制できます。  
   
-2. アンマネージホストインターフェイスを呼び出して、共通言語ランタイム (CLR) を読み込みます。  
+2. 共通言語ランタイム (CLR) を読み込むためのアンマネージ ホスト インターフェイスの呼び出しで。  
   
-     アンマネージホストインターフェイス (単純なマネージ実行可能ファイルではなく) を使用して CLR を読み込む場合は、 [Corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)関数の呼び出しで特別なフラグを指定できます。 プロセス全体で互換モードを有効にするには、 [Corbindtoruntimeex 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)の `flags` パラメーターを `STARTUP_ALWAYSFLOW_IMPERSONATION`に設定します。  
+     CLR の読み込みに、単純なマネージ実行可能ファイルではなく、アンマネージ ホスト インターフェイスを使用する場合は[、CorBindToRuntimeEx 関数関数関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)の呼び出しで特別なフラグを指定できます。 プロセス全体の互換モードを有効にするには`flags`[、CorBindToRuntimeEx 関数](../../../unmanaged-api/hosting/corbindtoruntimeex-function.md)のパラメーターを に`STARTUP_ALWAYSFLOW_IMPERSONATION`設定します。  
   
 ## <a name="configuration-file"></a>構成ファイル  
  .NET Framework アプリケーションでは、この要素はアプリケーション構成ファイルでのみ使用できます。  
   
- ASP.NET アプリケーションの場合、偽装フローは、\<Windows フォルダー > \Microsoft.NET\Framework\vx.x.xxxx ディレクトリにある aspnet. .config ファイルで構成できます。  
+ ASP.NET アプリケーションの場合、偽装フローは\<、Windows フォルダ>\Microsoft.NET\Framework\vx.x.xxxx ディレクトリにある aspnet.config ファイルで構成できます。  
   
- ASP.NET は、既定では、次の構成設定を使用して、aspnet ファイル内の偽装フローを無効にします。  
+ 既定では、ASP.NET、次の構成設定を使用して aspnet.config ファイルの偽装フローを無効にします。  
   
 ```xml
 <configuration>  
@@ -84,7 +84,7 @@ ms.locfileid: "73118339"
 </configuration>  
 ```  
   
- ASP.NET で、代わりに偽装のフローを許可する場合は、次の構成設定を明示的に使用する必要があります。  
+ ASP.NETでは、偽装のフローを許可する場合は、次の構成設定を明示的に使用する必要があります。  
   
 ```xml  
 <configuration>  
@@ -96,7 +96,7 @@ ms.locfileid: "73118339"
 ```  
   
 ## <a name="example"></a>例  
- 次の例では、マネージメソッド以外の方法で権限借用が行われた場合でも、Windows id を非同期ポイント間でフローするように指定する方法を示します。  
+ 次の例は、マネージ メソッド以外の方法で偽装が実現された場合でも、Windows ID が非同期ポイントをまたいで流れるよう指定する方法を示しています。  
   
 ```xml  
 <configuration>  
@@ -110,4 +110,4 @@ ms.locfileid: "73118339"
 
 - [ランタイム設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
-- [\<legacyImpersonationPolicy > 要素](legacyimpersonationpolicy-element.md)
+- [\<要素>偽装ポリシー](legacyimpersonationpolicy-element.md)

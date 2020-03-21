@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 124656f6-0dad-4ceb-9043-d3869ab65cde
 topic_type:
 - apiref
-ms.openlocfilehash: efce0c13944b383c42cbff6a6af4795293ee2989
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 44a84e0752eecc1c694f3b8cf6e568b72b7d0f5c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74444159"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79176215"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 列挙型
-[ICeeGen:: AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)への呼び出しで生成される `reloc` 命令の型に影響を与える値を提供します。  
+`reloc` [ICeeGen::AddSectionReloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)の呼び出しで出力される命令の種類に影響を与える値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -30,7 +30,7 @@ ms.locfileid: "74444159"
 typedef enum  {  
     srRelocAbsolute,  
     srRelocHighLow          = 3,  
-    srRelocHighAdj,       
+    srRelocHighAdj,
     srRelocMapToken,  
     srRelocRelative,  
     srRelocFilePos,  
@@ -52,33 +52,33 @@ typedef enum  {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`srRelocAbsolute`|では、セクション相対 `reloc`が生成され、reloc セクションには何も送信されません。|  
-|`srRelocHighLow`|ポインターサイズの位置の `reloc` を生成します。 これは、プラットフォームに応じて BASED_HIGHLOW または BASED_DIR64 に変換されます。|  
-|`srRelocHighAdj`|では、32ビット数値の上位16ビットの `reloc` が生成されます。この場合、下位16ビットが、reloc テーブルの次の単語に含まれます。|  
-|`srRelocMapToken`|トークンマップの再配置を生成し、reloc セクションに何も送信しません。|  
-|`srRelocRelative`|値が相対アドレスの修正であることを示します。|  
-|`srRelocFilePos`|では、セクション相対 `reloc`が生成され、reloc セクションには何も送信されません。 この `reloc` は、セクションの仮想アドレスではなく、セクションのファイルの位置を基準としています。|  
+|`srRelocAbsolute`|セクション相対`reloc`部分だけを生成し、.reloc セクションに何も送信しません。|  
+|`srRelocHighLow`|ポインター サイズ`reloc`の場所の を生成します。 これは、プラットフォームに応じてBASED_HIGHLOWまたはBASED_DIR64に変換されます。|  
+|`srRelocHighAdj`|32`reloc`ビットの数値の上位 16 ビットに対して a を生成し、下の 16 ビットが .reloc テーブルの次の単語に含まれます。|  
+|`srRelocMapToken`|トークン マップの再配置を生成し、.reloc セクションに何も送信しません。|  
+|`srRelocRelative`|値が相対アドレスフィックスアップであることを示します。|  
+|`srRelocFilePos`|セクション相対`reloc`部分だけを生成し、.reloc セクションに何も送信しません。 これは`reloc`セクションの仮想アドレスではなく、セクションのファイル位置を基準にしています。|  
 |`srRelocCodeRelative`|コード相対アドレスのフィックスアップを指定します。|  
-|`srRelocIA64Imm64`|Ia64 `movl` 命令に64ビットアドレスの `reloc` を生成します。|  
-|`srRelocDir64`|64ビットアドレスの `reloc` を生成します。|  
-|`srRelocIA64PcRel25`|Ia64 `br.call` 命令で25ビット PC 相対アドレスの `reloc` を生成します。|  
-|`srRelocIA64PcRel64`|Ia64 `brl.call` 命令で64ビット PC 相対アドレスの `reloc` を生成します。|  
-|`srRelocAbsoluteTagged`|タグ付きポインター値に使用される、30ビットのセクション相対 `reloc`を生成します。|  
-|`srRelocSentinel`|この列挙型への追加が内部 `reloc` 名配列に反映されるようにするための sentinel 値。|  
-|`srNoBaseReloc`|基本 `reloc`を生成しないように指定します。|  
-|`srRelocPtr`|メモリの事前修正の内容が、セクションオフセットではなくポインターであることを示す値。|  
+|`srRelocIA64Imm64`|ia64`reloc``movl`命令で 64 ビットアドレスの a を生成します。|  
+|`srRelocDir64`|64`reloc`ビット アドレスの を生成します。|  
+|`srRelocIA64PcRel25`|`reloc` ia64`br.call`命令で 25 ビット PC 相対アドレスの を生成します。|  
+|`srRelocIA64PcRel64`|ia64`reloc``brl.call`命令で 64 ビット PC 相対アドレスの a を生成します。|  
+|`srRelocAbsoluteTagged`|タグ付きポインター値に使用される 30 ビットのセクション相対`reloc`値を生成します。|  
+|`srRelocSentinel`|この列挙型への追加が内部`reloc`の名前配列に反映されることを確認するのに役立つセンチネル値。|  
+|`srNoBaseReloc`|ベース`reloc`を出力しないことを指定します。|  
+|`srRelocPtr`|メモリの修正前の内容がセクション オフセットではなくポインターであることを示す値。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll にリソースとして含まれています  
+ **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙型](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
 - [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
 - [AddSectionReloc メソッド](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)
