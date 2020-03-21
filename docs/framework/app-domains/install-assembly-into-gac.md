@@ -9,22 +9,22 @@ helpviewer_keywords:
 - Global Assembly Cache tool
 - windows installer, global assembly cache
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
-ms.openlocfilehash: e670f5dba47393b7df047fb4e6f7d92df8cb187c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119805"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155564"
 ---
 # <a name="how-to-install-an-assembly-into-the-global-assembly-cache"></a>方法: アセンブリをグローバル アセンブリ キャッシュにインストールする
 
-グローバル アセンブリ キャッシュ (GAC) には、複数のアプリケーションで共有されるアセンブリが格納されています。 次のコンポーネントのいずれかを使用して、アセンブリを[グローバル アセンブリ キャッシュ](gac.md)にインストールします。 
+グローバル アセンブリ キャッシュ (GAC) には、複数のアプリケーションで共有されるアセンブリが格納されています。 次のコンポーネントのいずれかを使用して、アセンブリを[グローバル アセンブリ キャッシュ](gac.md)にインストールします。
 
-- [Windows インストーラー](#windows-installer)
+- [インストーラ](#windows-installer)
 - [グローバル アセンブリ キャッシュ ツール](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> グローバル アセンブリ キャッシュにインストールできるのは、厳密な名前のアセンブリだけです。 厳密な名前付きアセンブリを作成する方法の詳細については、「[方法: 厳密な名前でアセンブリに署名](../../standard/assembly/sign-strong-name.md)する」を参照してください。
+> グローバル アセンブリ キャッシュにインストールできるのは、厳密な名前のアセンブリだけです。 厳密な名前を持つアセンブリを作成する方法については、「[方法 : 厳密な名前でアセンブリに署名](../../standard/assembly/sign-strong-name.md)する 」を参照してください。
 
 ## <a name="windows-installer"></a>Windows インストーラー
 
@@ -43,9 +43,9 @@ ms.locfileid: "73119805"
 gacutil -i <assembly name>
 ```
 
-このコマンドの *\<assembly name>* は、グローバル アセンブリ キャッシュにインストールされるアセンブリの名前です。
+このコマンドでは、*\<アセンブリ名>* グローバル アセンブリ キャッシュにインストールするアセンブリの名前を指定します。
 
-システム パスに *gacutil.exe* が含まれていない場合は、[開発者コマンド プロンプト for VS *\<バージョン>* ](../tools/developer-command-prompt-for-vs.md) を使用します。
+*gacutil.exe*がシステム パスにない場合は[、VS*\<バージョン>* の開発者コマンド プロンプトを](../tools/developer-command-prompt-for-vs.md)使用します。
 
 ファイル名 *hello.dll* のアセンブリをグローバル アセンブリ キャッシュにインストールする例を次に示します。
 
@@ -59,6 +59,6 @@ gacutil -i hello.dll
 ## <a name="see-also"></a>関連項目
 
 - [アセンブリとグローバル アセンブリ キャッシュの使用](working-with-assemblies-and-the-gac.md)
-- [方法: グローバルアセンブリキャッシュからアセンブリを削除する](how-to-remove-an-assembly-from-the-gac.md)
+- [方法: グローバル アセンブリ キャッシュからアセンブリを削除する](how-to-remove-an-assembly-from-the-gac.md)
 - [Gacutil.exe (グローバル アセンブリ キャッシュ ツール)](../tools/gacutil-exe-gac-tool.md)
 - [方法: 厳密な名前でアセンブリに署名する](../../standard/assembly/sign-strong-name.md)

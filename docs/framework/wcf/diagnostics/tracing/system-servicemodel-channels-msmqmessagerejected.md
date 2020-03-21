@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-ms.openlocfilehash: 4feeb1b57d79c7445d51f5d688b0a9f55e761542
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f783dcd4b966ed89c24d724918a3923c5a2d0b1
+ms.sourcegitcommit: 515469828d0f040e01bde01df6b8e4eb43630b06
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61997515"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78674770"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 MSMQ はメッセージを拒否しました。  
@@ -15,16 +15,16 @@ MSMQ はメッセージを拒否しました。
 ## <a name="description"></a>説明  
  このトレースは、MSMQ メッセージが拒否されたことを示します。  
   
- Windows Communication Foundation (WCF) が (NetMsmqBinding または MsmqIntegrationBinding のいずれかで使用) が、それらを処理できない場合、MSMQ メッセージを拒否できます。 このようなメッセージは、有害メッセージと呼ばれます。 有害メッセージは、NetMsmqBinding または MsmqIntegrationBinding の `ReceiveErrorHandling` プロパティが `Reject` に設定されると拒否されます。 拒否されたメッセージは、送信者に配信されます[配信不能キュー](https://go.microsoft.com/fwlink/?LinkID=99544)します。  
+ MSMQ メッセージは、Windows 通信ファウンデーション (WCF) (NetMsmqBinding または MsmqIntegrationBinding で使用される) がメッセージを処理できない場合に拒否できます。 このようなメッセージは、有害メッセージと呼ばれます。 有害メッセージは、NetMsmqBinding または MsmqIntegrationBinding の `ReceiveErrorHandling` プロパティが `Reject` に設定されると拒否されます。 拒否されたメッセージは、送信者の[配信不能キュー](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures)に戻されます。  
   
- 参照してください[有害メッセージの処理](https://go.microsoft.com/fwlink/?LinkID=99546)メッセージが有害になると、サービスを適切に処理を構成する方法の詳細についてはします。  
+ メッセージが有害になるタイミングと、メッセージを適切に処理するようにサービスを設定する方法の詳細については、「 [Poison-Message の処理](../../feature-details/poison-message-handling.md)」を参照してください。  
   
- 参照してください[MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)拒否されたメッセージは MSMQ では意味の詳細についてはします。  
+ 拒否されたメッセージが MSMQ で何を意味するかの詳細については[、「MQMarkMessageRejected」を参照](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))してください。  
   
 ## <a name="see-also"></a>関連項目
 
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [有害メッセージ処理](https://go.microsoft.com/fwlink/?LinkID=99546)
-- [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)
+- [有害メッセージの処理](../../feature-details/poison-message-handling.md)
+- [拒否されたメッセージ](https://docs.microsoft.com/previous-versions/windows/desktop/msmq/ms707071(v%3dvs.85))

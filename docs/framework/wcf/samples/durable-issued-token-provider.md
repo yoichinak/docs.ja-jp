@@ -2,22 +2,22 @@
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 62e4cca50e9a2fbbf319d66fbe85cec6cdb73b23
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 08c6837f45ba1c422cdc3df2c884aa81b50a7f2b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716464"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144748"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 このサンプルでは、カスタム クライアントの発行済みトークン プロバイダーを実装する方法を示します。  
   
 ## <a name="discussion"></a>ディスカッション  
- Windows Communication Foundation (WCF) のトークンプロバイダーは、セキュリティインフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF には、CardSpace トークンプロバイダーが付属しています。 カスタム トークン プロバイダーは、次の場合に便利です。  
+ Windows 通信基盤 (WCF) のトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、カードスペース トークン プロバイダーと共に出荷されます。 カスタム トークン プロバイダーは、次の場合に便利です。  
   
 - 組み込みのトークン プロバイダが連係動作できない資格情報ストアがある場合。  
   
-- ユーザーが資格情報を使用するときに、ユーザーが詳細情報を提供した時点から資格情報を変換するための独自のカスタムメカニズムを提供する場合。  
+- ユーザーが WCF クライアントが資格情報を使用する場合に詳細を提供する時点から資格情報を変換するための独自のカスタム メカニズムを提供する場合。  
   
 - カスタム トークンを構築している場合。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "74716464"
   
 - クライアントをカスタム トークン プロバイダーを使用して構成する手順。  
   
-- 発行済みトークンをキャッシュし、WCF クライアントに提供する方法。  
+- 発行されたトークンをキャッシュし、WCF クライアントに提供する方法。  
   
 - サーバーがクライアントによってサーバーの X.509 証明書を使用して認証される手順。  
   
@@ -36,16 +36,16 @@ ms.locfileid: "74716464"
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- このサンプルでは、 [\<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)を使用して、ICalculator コントラクトを公開します。 このバインディングのクライアント側の構成は、次のコードに示すとおりです。  
+ このサンプルでは[\<、wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)を使用して ICalculator コントラクトを公開します。 このバインディングのクライアント側の構成は、次のコードに示すとおりです。  
   
 ```xml  
 <bindings>
   <wsFederationHttpBinding>
     <binding name="ServiceFed">
       <security mode="Message">
-        <message issuedKeyType="SymmetricKey" 
+        <message issuedKeyType="SymmetricKey"
                  issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
-          <issuer address="http://localhost:8000/sts/windows" 
+          <issuer address="http://localhost:8000/sts/windows"
                   binding="wsHttpBinding" />
         </message>
       </security>
@@ -63,13 +63,13 @@ ms.locfileid: "74716464"
   <wsFederationHttpBinding>
     <binding name="ServiceFed">
       <security mode="Message">
-        <message issuedKeyType="SymmetricKey" 
+        <message issuedKeyType="SymmetricKey"
                  issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">
           <issuerMetadata address="http://localhost:8000/sts/mex">
             <identity>
-              <certificateReference storeLocation="CurrentUser" 
-                                    storeName="TrustedPeople" 
-                                    x509FindType="FindBySubjectDistinguishedName" 
+              <certificateReference storeLocation="CurrentUser"
+                                    storeName="TrustedPeople"
+                                    x509FindType="FindBySubjectDistinguishedName"
                                     findValue="CN=STS" />
             </identity>
           </issuerMetadata>
@@ -91,15 +91,15 @@ ms.locfileid: "74716464"
   <serviceCredentials>
     <issuedTokenAuthentication>
       <knownCertificates>
-        <add storeLocation="LocalMachine" 
-              storeName="TrustedPeople" 
-              x509FindType="FindBySubjectDistinguishedName" 
+        <add storeLocation="LocalMachine"
+              storeName="TrustedPeople"
+              x509FindType="FindBySubjectDistinguishedName"
               findValue="CN=STS" />
       </knownCertificates>
     </issuedTokenAuthentication>
-    <serviceCertificate storeLocation="LocalMachine" 
-                        storeName="My" 
-                        x509FindType="FindBySubjectDistinguishedName" 
+    <serviceCertificate storeLocation="LocalMachine"
+                        storeName="My"
+                        x509FindType="FindBySubjectDistinguishedName"
                         findValue="CN=localhost" />
   </serviceCredentials>
 </behavior>  
@@ -110,7 +110,7 @@ ms.locfileid: "74716464"
  セキュリティ トークン サービスは、標準の wsHttpBinding を使用して、単一のエンドポイントを公開します。 セキュリティ トークン サービスは、クライアントからのトークンの要求に応答し、クライアントが Windows アカウントを使用して認証していることを前提として、クライアントのユーザー名がクレームとして含まれているトークンを発行します。 セキュリティ トークン サービスは、トークン作成の一環として、CN=STS 証明書に関連付けられている秘密キーを使用して、トークンに署名します。 また、対称キーを作成し、CN=localhost 証明書に関連付けられている秘密キーを使用して暗号化します。 セキュリティ トークン サービスは、トークンをクライアントに返すときに、対称キーも返します。 クライアントは、発行されたトークンを Calculator サービスに提示し、対称キーを使用してメッセージに署名することで対称キーを認識していることを証明します。  
   
 ## <a name="custom-client-credentials-and-token-provider"></a>カスタム クライアント資格情報とトークン プロバイダ  
- 次の手順では、発行されたトークンをキャッシュし、WCF: security に統合するカスタムトークンプロバイダーを開発する方法を示します。  
+ 次の手順では、発行されたトークンをキャッシュし、WCF と統合するカスタム トークン プロバイダーを開発する方法を示します。  
   
 ### <a name="to-develop-a-custom-token-provider"></a>カスタム トークン プロバイダーを開発するには  
   
@@ -235,7 +235,7 @@ ms.locfileid: "74716464"
   
 1. setup.cmd ファイルを実行して、必要な証明書を作成します。  
   
-2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
+2. ソリューションをビルドするには、「 [Windows コミュニケーション ファウンデーション のサンプルの構築](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。 ソリューション内のすべてのプロジェクトがビルドされていることを確認します (Shared、RSTRSTR、Service、SecurityTokenService、Client)。  
   
 3. Service.exe と SecurityTokenService.exe がどちらも管理者権限で実行されていることを確認します。  
   
@@ -247,9 +247,9 @@ ms.locfileid: "74716464"
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
->   
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Security\DurableIssuedTokenProvider`  

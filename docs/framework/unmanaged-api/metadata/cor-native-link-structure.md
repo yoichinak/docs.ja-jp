@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6ef78d3c-1c69-4141-b687-dcb065b7a74d
 topic_type:
 - apiref
-ms.openlocfilehash: d03c22c455f0e44ce32d4593d9eee50ceef94a22
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 812b70a594b5aa933f52d36f32d96d712267ecf4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443948"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177956"
 ---
 # <a name="cor_native_link-structure"></a>COR_NATIVE_LINK 構造体
 ネイティブ コードのリンクに使用される情報が含まれます。  
@@ -27,7 +27,7 @@ ms.locfileid: "74443948"
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-typedef struct   
+typedef struct
 {  
     BYTE        m_linkType;  
     BYTE        m_flags;  
@@ -39,20 +39,20 @@ typedef struct
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`m_linkType`|ネイティブコードでリンクされる型。 この値は、 [CorNativeLinkType](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)値の1つです。|  
-|`m_flags`|ネイティブコードをリンクするときにリンカーによって使用されるフラグ。 この値は、 [CorNativeLinkFlags](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)値の1つです。|  
-|`m_entryPoint`|エントリポイントを表す MemberRef メタデータトークン。 形式は `lib:entrypoint`です。|  
+|`m_linkType`|ネイティブ コードでリンクされる型。 この値は、[いずれかの](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)値です。|  
+|`m_flags`|ネイティブ コードをリンクするときにリンカーによって使用されるフラグ。 この値は、[いずれかの](../../../../docs/framework/unmanaged-api/metadata/cornativelinkflags-enumeration.md)値です。|  
+|`m_entryPoint`|エントリ ポイントを表す MemberRef メタデータ トークン。 形式は `lib:entrypoint` です。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [CorNativeLinkType 列挙型](../../../../docs/framework/unmanaged-api/metadata/cornativelinktype-enumeration.md)

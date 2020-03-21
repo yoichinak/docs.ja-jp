@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0fae3ac1769163101dcdb183f4c5c2135354b1fc
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487188"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79145424"
 ---
 # <a name="application-startup-time"></a>アプリケーションの起動時間
 WPF アプリケーションの起動に必要な時間には、かなりばらつきがあります。 このトピックでは、Windows Presentation Foundation (WPF) アプリケーションの認識される起動時間と実際の起動時間を短縮する方法について説明します。  
@@ -24,9 +24,9 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
  ウォーム スタートは、主要な共通言語ランタイム (CLR) コンポーネント用のページのほとんどが、既にメモリに読み込まれているときに発生し、貴重なディスク アクセス タイムを節約できます。 このため、マネージド アプリケーションを再度実行すると、初回よりも短い時間で起動します。  
   
 ## <a name="implement-a-splash-screen"></a>スプラッシュ スクリーンの実装  
- アプリケーションを起動してから最初の UI が表示されるまでに、どうしても多大な時間がかかる場合は、"*スプラッシュ スクリーン*" を使用して、認識される起動時間を最適化します。 この方法により、ユーザーがアプリケーションを起動すると、すぐにイメージが表示されます。 アプリケーションが最初の UI を表示する準備が整うと、スプラッシュ スクリーンはフェード アウトします。 以降、.NET Framework 3.5 SP1 を使えば、<xref:System.Windows.SplashScreen>スプラッシュ スクリーンを実装するクラス。 詳細については、[WPF アプリケーションへのスプラッシュ スクリーンの追加](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)に関するページをご覧ください。  
+ アプリケーションを起動してから最初の UI が表示されるまでに、どうしても多大な時間がかかる場合は、"*スプラッシュ スクリーン*" を使用して、認識される起動時間を最適化します。 この方法により、ユーザーがアプリケーションを起動すると、すぐにイメージが表示されます。 アプリケーションが最初の UI を表示する準備が整うと、スプラッシュ スクリーンはフェード アウトします。 NET Framework 3.5 SP1 以降では、このクラス<xref:System.Windows.SplashScreen>を使用してスプラッシュ スクリーンを実装できます。 詳細については、[WPF アプリケーションへのスプラッシュ スクリーンの追加](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)に関するページをご覧ください。  
   
- ネイティブな Win32 グラフィックスを使用して、独自のスプラッシュ スクリーンを実装することもできます。 表示する前に、実装、<xref:System.Windows.Application.Run%2A>メソッドが呼び出されます。  
+ ネイティブな Win32 グラフィックスを使用して、独自のスプラッシュ スクリーンを実装することもできます。 メソッドが呼び出<xref:System.Windows.Application.Run%2A>される前に実装を表示します。  
   
 ## <a name="analyze-the-startup-code"></a>スタートアップ コードの分析  
  コールド スタートに時間がかかる理由を特定します。 ディスク I/O が原因である可能性がありますが、常にそうとは限りません。 通常、ネットワーク、Web サービス、ディスクなどの外部リソースの使用は最小限に抑えてください。  
@@ -65,7 +65,7 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
  NGen と JIT モジュールを併用すると、最悪の影響がもたらされる可能性があります。 mscorjit.dll を読み込む必要があるほか、JIT コンパイラは、アプリケーション コードを処理するとき、アセンブリのメタデータを読み込む際に NGen イメージ内の多数のページにアクセスする必要があるためです。  
   
 ### <a name="ngen-and-clickonce"></a>NGen と ClickOnce  
- アプリケーションの配置方法が、読み込み時間に影響することもあります。 ClickOnce アプリケーションの展開は、Ngen をサポートしていません。 アプリケーションで Ngen.exe を使用する場合は、Windows インストーラーなど、他の配置機構を使用する必要があります。  
+ アプリケーションの配置方法が、読み込み時間に影響することもあります。 ClickOnce アプリケーションの配置は Ngen をサポートしていません。 アプリケーションで Ngen.exe を使用する場合は、Windows インストーラーなど、他の配置機構を使用する必要があります。  
   
  詳細については、「[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../tools/ngen-exe-native-image-generator.md)」を参照してください。  
   
@@ -81,17 +81,17 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
   
  CA 証明書をクライアント コンピューターにインストールするか、可能な場合は Authenticode の使用を避けることを検討してください。 アプリケーションが発行者の証拠を必要としないことがわかっている場合は、署名を検証する手間をかける必要はありません。  
   
- Authenticode の検証をバイパスすることを許可する構成オプションは .NET Framework 3.5 以降です。 これを行うには、次の設定を app.exe.config ファイルに追加します。  
+ NET Framework 3.5 以降では、Authenticode 検証をバイパスできる構成オプションがあります。 これを行うには、次の設定を app.exe.config ファイルに追加します。  
   
 ```xml  
 <configuration>  
     <runtime>  
-        <generatePublisherEvidence enabled="false"/>   
+        <generatePublisherEvidence enabled="false"/>
     </runtime>  
 </configuration>  
 ```  
   
- 詳細については、「[\<generatePublisherEvidence> 要素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)」を参照してください。  
+ 詳細については、「[\<要素>パブリッシャーインフォーメンタルを生成](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)する 」を参照してください。  
   
 ## <a name="compare-performance-on-windows-vista"></a>Windows Vista でのパフォーマンスの比較  
  Windows Vista のメモリ マネージャーには、SuperFetch というテクノロジが組み込まれています。 SuperFetch は、一定期間内のメモリ使用パターンを分析して、そのユーザーに適したメモリの内容を判断します。 そして、その内容が維持されるよう継続的に動作します。  
@@ -104,23 +104,23 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
  パフォーマンスを最大限に高めるには、ドメイン間呼び出しを減らしてドメイン間の通信を効率化します。 可能な場合は、引数のない呼び出し、または引数がプリミティブ型である呼び出しを使用します。  
   
 ## <a name="use-the-neutralresourceslanguage-attribute"></a>NeutralResourcesLanguage 属性の使用  
- 使用して、<xref:System.Resources.NeutralResourcesLanguageAttribute>のニュートラル カルチャを指定する、<xref:System.Resources.ResourceManager>します。 この方法を使用すると、アセンブリのルックアップの失敗が回避されます。  
+ を<xref:System.Resources.NeutralResourcesLanguageAttribute>使用して、 のニュートラル カルチャ<xref:System.Resources.ResourceManager>を指定します。 この方法を使用すると、アセンブリのルックアップの失敗が回避されます。  
   
 ## <a name="use-the-binaryformatter-class-for-serialization"></a>シリアル化での BinaryFormatter クラスの使用  
- シリアル化を使用する場合は、使用、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>クラスの代わりに、<xref:System.Xml.Serialization.XmlSerializer>クラス。 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>クラスは、mscorlib.dll アセンブリの基本クラス ライブラリ (BCL) で実装されます。 <xref:System.Xml.Serialization.XmlSerializer>別の DLL を読み込む可能性のある System.Xml.dll アセンブリに実装します。  
+ シリアル化を使用する必要がある場合<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>は、クラスの<xref:System.Xml.Serialization.XmlSerializer>代わりにクラスを使用します。 クラス<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>は mscorlib.dll アセンブリの基本クラス ライブラリ (BCL) に実装されます。 は<xref:System.Xml.Serialization.XmlSerializer>System.Xml.dll アセンブリに実装されており、追加の DLL を読み込む可能性があります。  
   
- 使用する場合、<xref:System.Xml.Serialization.XmlSerializer>クラス、事前にシリアル化アセンブリを生成する場合より優れたパフォーマンスを実現できます。  
+ クラスを使用する<xref:System.Xml.Serialization.XmlSerializer>必要がある場合は、シリアル化アセンブリを事前に生成すれば、パフォーマンスが向上します。  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>起動後に更新プログラムをチェックする ClickOnce の構成  
- アプリケーションでは、ClickOnce を使用する場合は、ClickOnce アプリケーションの起動後に、配置サイトの更新プログラムを確認するを構成することで起動時にネットワーク アクセスを回避します。  
+ アプリケーションで ClickOnce を使用している場合は、アプリケーションの起動後に配置サイトの更新を確認するように ClickOnce を構成して、起動時にネットワーク アクセスを回避します。  
   
- XAML ブラウザー アプリケーション (XBAP) モデルを使用する場合は、XBAP は、ClickOnce キャッシュで既に場合でも、ClickOnce は、配置サイトの更新プログラムを確認します。 注意してください。 詳細については、「 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
+ XAML ブラウザー アプリケーション (XBAP) モデルを使用する場合は、XBAP が既に ClickOnce キャッシュに存在する場合でも、ClickOnce によって配置サイトの更新がチェックされます。 詳細については、「 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>PresentationFontCache サービスの自動起動の構成  
  再起動後に最初に実行される WPF アプリケーションは PresentationFontCache サービスです。 このサービスは、システム フォントをキャッシュし、フォント アクセスを高速化して、パフォーマンス全体を向上させます。 このサービスの起動にはオーバーヘッドが伴うため、一部の制御された環境では、システムの再起動時にこのサービスを自動起動するように構成することを検討してください。  
   
 ## <a name="set-data-binding-programmatically"></a>データ バインディングのプログラムによる設定  
- XAML を使用して設定するのではなく、<xref:System.Windows.FrameworkElement.DataContext%2A>宣言によって、メイン ウィンドウにプログラムで設定することを検討してください、<xref:System.Windows.Application.OnActivated%2A>メソッド。  
+ XAML を使用してメイン<xref:System.Windows.FrameworkElement.DataContext%2A>ウィンドウの宣言的に設定する代わりに、<xref:System.Windows.Application.OnActivated%2A>メソッドでプログラムで設定することを検討してください。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -130,4 +130,4 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
 - <xref:System.Resources.ResourceManager>
 - [スプラッシュ スクリーンを WPF アプリケーションに追加する](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> 要素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<>要素を生成します。](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

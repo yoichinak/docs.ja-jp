@@ -2,12 +2,12 @@
 title: セッション、インスタンス化、およびコンカレンシー
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: b8c0b40ca67de92f4f1b481298a8a26d96e887d4
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: a7466d819e15f3bfe8def2d9407dcf2c6e0c7346
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976091"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184441"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>セッション、インスタンス化、およびコンカレンシー
 *"セッション"* とは、2 つのエンドポイント間で送信されるすべてのメッセージを相互に関連付けたものです。 *"インスタンス化"* とは、ユーザー定義のサービス オブジェクトとこれらのオブジェクトに関連する <xref:System.ServiceModel.InstanceContext> オブジェクトの有効期間を制御することです。 また、*コンカレンシー*は、<xref:System.ServiceModel.InstanceContext> で同時に実行されるスレッドの数の制御を表す用語です。  
@@ -17,7 +17,7 @@ ms.locfileid: "73976091"
 ## <a name="sessions"></a>セッション  
  サービス コントラクトによって <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> プロパティが <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType>に設定されている場合、すべての呼び出し (つまり、呼び出しをサポートする、基になるメッセージ交換) を同じメッセージ交換の一部にする必要があります。 セッションが許可されるが必須ではないコントラクトの場合、クライアントは、接続した後にセッションを確立できます。また、セッションを確立しないままにしておくこともできます。 セッションが終了したのに、同じセッション ベースのチャネルでメッセージが送信されると、例外がスローされます。  
   
- WCF セッションには、次の主要な概念機能があります。  
+ WCF セッションには、次の主要な概念的な機能があります。  
   
 - 呼び出し側アプリケーションによって明示的に開始および終了される。  
   
@@ -25,15 +25,15 @@ ms.locfileid: "73976091"
   
 - セッションはメッセージのグループを相互に関連付けて通信を行う。 ここで "相互に関連付ける" は、抽象的な意味を持ちます。 たとえば、あるセッション ベースのチャネルでは、共有ネットワーク接続に基づいてメッセージが相互に関連付けられる一方、別のセッション ベースのチャネルでは、メッセージ本文にある共有タグに基づいてメッセージが相互に関連付けられます。 セッションから派生可能な機能は、相互関連付けの性質によって異なります。  
   
-- WCF セッションに関連付けられている一般的なデータストアはありません。  
+- WCF セッションに関連付けられている一般的なデータ ストアはありません。  
   
- ASP.NET アプリケーションの <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> クラスと、それによって提供される機能に慣れている場合は、そのようなセッションと WCF セッションの間で次の点が異なることに気付くことがあります。  
+ ASP.NETアプリケーションの<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>クラスと、そのクラスが提供する機能に精通している場合は、このようなセッションと WCF セッションの間で次のような違いが見られます。  
   
-- ASP.NET セッションは常にサーバーによって開始されます。  
+- ASP.NETセッションは、常にサーバーによって開始されます。  
   
-- ASP.NET セッションは暗黙的に順序付けされていません。  
+- ASP.NETセッションは、暗黙的に順序付けされません。  
   
-- ASP.NET セッションでは、複数の要求にわたって一般的なデータストレージメカニズムが提供します。  
+- ASP.NETセッションは、要求間で一般的なデータストレージメカニズムを提供します。  
   
  クライアント アプリケーションとサービス アプリケーションでは、異なる方法でセッションと対話します。 クライアント アプリケーションはセッションを開始し、セッション内で送信されてきたメッセージの受信と処理を行います。 サービス アプリケーションでは、動作を追加するための機能拡張ポイントとしてセッションを使用できます。 これは <xref:System.ServiceModel.InstanceContext> を直接操作する、またはカスタムのインスタンス コンテキスト プロバイダーを実装することで可能になります。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "73976091"
  既定の <xref:System.ServiceModel.InstanceContextMode> 値 (サービス クラスで明示的に設定された <xref:System.ServiceModel.InstanceContextMode.PerSession> ) を次のコード例に示します。  
   
 ```csharp  
-[ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]   
-public class CalculatorService : ICalculatorInstance   
-{   
+[ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]
+public class CalculatorService : ICalculatorInstance
+{
     ...  
 }  
 ```  
@@ -63,9 +63,9 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>既知のシングルトン サービス  
  単一インスタンス サービス オブジェクトの 1 つのバリエーションとして、サービス オブジェクトをユーザーが自分で作成し、このオブジェクトを使用してサービス ホストを作成すると有用な場合があります。 そのためには、 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.InstanceContextMode.Single> に設定するか、サービス ホストが開かれたときに例外をスローする必要があります。  
   
- このようなサービスを作成するには、 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> コンストラクターを使用します。 この方法は、シングルトン サービスが使用する特定のオブジェクト インスタンスを提供する場合に、カスタムの <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> を実装する代わりに使用できます。 このオーバーロードは、サービス実装型を構築するのが困難な場合 (たとえば、パラメーターなしのパブリックコンストラクターが実装されていない場合) に使用できます。  
+ このようなサービスを作成するには、 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> コンストラクターを使用します。 この方法は、シングルトン サービスが使用する特定のオブジェクト インスタンスを提供する場合に、カスタムの <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> を実装する代わりに使用できます。 このオーバーロードは、サービス実装型の構築が困難な場合 (たとえば、パラメーターなしのパブリック コンストラクターを実装していない場合) に使用できます。  
   
- このコンストラクターにオブジェクトが提供されている場合は、Windows Communication Foundation (WCF) のインスタンス化動作に関連する一部の機能が異なる動作をすることに注意してください。 たとえば、シングルトン オブジェクト インスタンスを指定しているときは、 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> を呼び出しても効果はありません。 他のインスタンス解放機構も、同様に無視されます。 <xref:System.ServiceModel.ServiceHost> は常に、すべての操作について <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> プロパティが <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> に設定されているかのように動作します。  
+ このコンストラクターにオブジェクトが提供されると、Windows 通信財団 (WCF) のインスタンス化動作に関連するいくつかの機能は異なる動作をします。 たとえば、シングルトン オブジェクト インスタンスを指定しているときは、 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> を呼び出しても効果はありません。 他のインスタンス解放機構も、同様に無視されます。 <xref:System.ServiceModel.ServiceHost> は常に、すべての操作について <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> プロパティが <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> に設定されているかのように動作します。  
   
 ### <a name="sharing-instancecontext-objects"></a>InstanceContext オブジェクトの共有  
  ユーザーが自ら関連付けを行うことにより、どの <xref:System.ServiceModel.InstanceContext> オブジェクトに、どのセッションフル チャネルまたは呼び出しを関連付けるかを制御することもできます。  
@@ -79,19 +79,19 @@ public class CalculatorService : ICalculatorInstance
   
 - <xref:System.ServiceModel.ConcurrencyMode.Multiple>: 各サービス インスタンスは、同時にメッセージを処理する複数のスレッドを持つことができます。 このコンカレンシー モードを使用するには、サービスの実装がスレッドセーフである必要があります。  
   
-- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 各サービス インスタンスは、一度に 1 つのメッセージを処理しますが、再入操作の呼び出しを受け入れます。 サービスは、WCF クライアントオブジェクトを介して呼び出しを行う場合にのみ、これらの呼び出しを受け入れます。  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 各サービス インスタンスは、一度に 1 つのメッセージを処理しますが、再入操作の呼び出しを受け入れます。 サービスは、WCF クライアント オブジェクトを介して呼び出す場合にのみ、これらの呼び出しを受け入れます。  
   
 > [!NOTE]
-> 複数のスレッドを安全に使用するコードを理解し、適切に記述することが困難な場合もあります。 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 値や <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 値を使用する前に、これらのモード用にサービスが適切に設計されていることを確認してください。 詳細については、「<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>」を参照してください。  
+> 複数のスレッドを安全に使用するコードを理解し、適切に記述することが困難な場合もあります。 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 値や <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 値を使用する前に、これらのモード用にサービスが適切に設計されていることを確認してください。 詳細については、<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> を参照してください。  
   
- コンカレンシーの使用は、インスタンス化モードに関連します。 <xref:System.ServiceModel.InstanceContextMode.PerCall> のインスタンス化では、各メッセージが新しい <xref:System.ServiceModel.InstanceContext> によって処理されるため、同時実行は関係ありません。したがって、<xref:System.ServiceModel.InstanceContext>では、複数のスレッドがアクティブになることはありません。  
+ コンカレンシーの使用は、インスタンス化モードに関連します。 インスタンス<xref:System.ServiceModel.InstanceContextMode.PerCall>化では、各メッセージが新しい<xref:System.ServiceModel.InstanceContext>によって処理されるため、同時実行は関係ありません。 <xref:System.ServiceModel.InstanceContext>  
   
  <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> プロパティを <xref:System.ServiceModel.ConcurrencyMode.Multiple>に設定するコード例を次に示します。  
   
 ```csharp
-[ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]   
-public class CalculatorService : ICalculatorConcurrency   
-{   
+[ServiceBehavior(ConcurrencyMode=ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.Single)]
+public class CalculatorService : ICalculatorConcurrency
+{
     ...  
 }  
 ```  
@@ -103,15 +103,15 @@ public class CalculatorService : ICalculatorConcurrency
   
 |InstanceContextMode 値|<xref:System.ServiceModel.SessionMode.Required>|<xref:System.ServiceModel.SessionMode.Allowed>|<xref:System.ServiceModel.SessionMode.NotAllowed>|  
 |-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|  
-|PerCall|-セッションフルチャネルでの動作: 呼び出しごとにセッションと <xref:System.ServiceModel.InstanceContext>。<br />-セッションレスチャネルでの動作: 例外がスローされます。|-セッションフルチャネルでの動作: 呼び出しごとにセッションと <xref:System.ServiceModel.InstanceContext>。<br />-セッションレス channel での動作: 呼び出しごとに <xref:System.ServiceModel.InstanceContext>。|-セッションフルチャネルでの動作: 例外がスローされます。<br />-セッションレス channel での動作: 呼び出しごとに <xref:System.ServiceModel.InstanceContext>。|  
-|PerSession|-セッションフルチャネルでの動作: 各チャネルのセッションと <xref:System.ServiceModel.InstanceContext>。<br />-セッションレスチャネルでの動作: 例外がスローされます。|-セッションフルチャネルでの動作: 各チャネルのセッションと <xref:System.ServiceModel.InstanceContext>。<br />-セッションレス channel での動作: 呼び出しごとに <xref:System.ServiceModel.InstanceContext>。|-セッションフルチャネルでの動作: 例外がスローされます。<br />-セッションレス channel での動作: 呼び出しごとに <xref:System.ServiceModel.InstanceContext>。|  
-|Single|-セッションフル channel での動作: セッションと、すべての呼び出しの1つの <xref:System.ServiceModel.InstanceContext>。<br />-セッションレスチャネルでの動作: 例外がスローされます。|-セッションフルチャネルでの動作: 作成またはユーザー指定のシングルトンに対するセッションと <xref:System.ServiceModel.InstanceContext>。<br />-セッションレス channel での動作: 作成またはユーザー指定のシングルトンの <xref:System.ServiceModel.InstanceContext> です。|-セッションフルチャネルでの動作: 例外がスローされます。<br />-セッションレス channel での動作: 作成されたシングルトンまたはユーザー指定のシングルトンごとに <xref:System.ServiceModel.InstanceContext>。|  
+|PerCall|- セッションフル チャネルでの動作:<xref:System.ServiceModel.InstanceContext>セッションと呼び出しごとに。<br />- セッションレス チャネルでの動作: 例外がスローされます。|- セッションフル チャネルでの動作:<xref:System.ServiceModel.InstanceContext>セッションと呼び出しごとに。<br />- セッションレス チャネルの動作<xref:System.ServiceModel.InstanceContext>: 呼び出しごとに An。|- セッションフル チャネルでの動作: 例外がスローされます。<br />- セッションレス チャネルの動作<xref:System.ServiceModel.InstanceContext>: 呼び出しごとに An。|  
+|PerSession|- セッションフル チャネルでの動作:<xref:System.ServiceModel.InstanceContext>セッションと各チャネルの動作。<br />- セッションレス チャネルでの動作: 例外がスローされます。|- セッションフル チャネルでの動作:<xref:System.ServiceModel.InstanceContext>セッションと各チャネルの動作。<br />- セッションレス チャネルの動作<xref:System.ServiceModel.InstanceContext>: 呼び出しごとに An。|- セッションフル チャネルでの動作: 例外がスローされます。<br />- セッションレス チャネルの動作<xref:System.ServiceModel.InstanceContext>: 呼び出しごとに An。|  
+|Single|- セッションフル チャネルの動作: セッション<xref:System.ServiceModel.InstanceContext>とすべての呼び出しに対する 1 つの動作。<br />- セッションレス チャネルでの動作: 例外がスローされます。|- セッションフル チャネルでの動作:<xref:System.ServiceModel.InstanceContext>セッション、および作成されたシングルトンまたはユーザー指定のシングルトン。<br />- セッションレス チャネルでの<xref:System.ServiceModel.InstanceContext>動作: 作成されたシングルトンまたはユーザー指定のシングルトンの場合は、|- セッションフル チャネルでの動作: 例外がスローされます。<br />- セッションレスチャネルでの動作<xref:System.ServiceModel.InstanceContext>: 作成されたシングルトンまたはユーザー指定のシングルトンごとに、|  
   
 ## <a name="see-also"></a>関連項目
 
 - [セッションの使用](../../../../docs/framework/wcf/using-sessions.md)
 - [方法 : セッションを必要とするサービスを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
 - [方法 : サービスのインスタンス化を制御する](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
-- [コンカレンシー](../../../../docs/framework/wcf/samples/concurrency.md)
+- [並行 処理](../../../../docs/framework/wcf/samples/concurrency.md)
 - [インスタンス化](../../../../docs/framework/wcf/samples/instancing.md)
-- [Session](../../../../docs/framework/wcf/samples/session.md)
+- [セッション](../../../../docs/framework/wcf/samples/session.md)

@@ -15,36 +15,36 @@ helpviewer_keywords:
 ms.assetid: 35991289-f389-495d-8caa-a6384fb1d557
 topic_type:
 - apiref
-ms.openlocfilehash: b9cad4c9647983e5b39f9b7a5d03736f2848e1c9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: f876187624d066b9e672fbf44a984d6d02a54c43
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74432700"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175877"
 ---
 # <a name="imetadataemitapplyeditandcontinue-method"></a>IMetaDataEmit::ApplyEditAndContinue メソッド
-指定したメタデータに加えられた変更を使用して、現在のアセンブリスコープを更新します。  
+指定したメタデータに加えられた変更を使用して、現在のアセンブリ スコープを更新します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
-HRESULT ApplyEditAndContinue (   
+HRESULT ApplyEditAndContinue (
     [in]  IUnknown    *pImport  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pImport`  
- 移植可能な実行可能 (PE) ファイルからのデルタメタデータを表す[IUnknown](/cpp/atl/iunknown)オブジェクトへのポインターの\] を \[します。
+ \[移植\]可能な実行可能 (PE) ファイルからのデルタ メタデータを表す[IUnknown](/cpp/atl/iunknown)オブジェクトへのポインター。
   
- 差分メタデータは、モジュールの実際のメタデータのコピーに加えられた変更を含むメタデータのブロックです。  
+ デルタ メタデータは、モジュールの実際のメタデータのコピーに加えられた変更を含むメタデータのブロックです。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

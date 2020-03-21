@@ -2,12 +2,12 @@
 title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
-ms.openlocfilehash: 2010ef9d6fe37e65824cac877074453db1b789db
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: 1233971b172079aa48227d0ec520068afbdf0952
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72319446"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150070"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)
 SELECT ステートメントで返されるオブジェクトで使用される並べ替え順を指定します。  
@@ -15,13 +15,13 @@ SELECT ステートメントで返されるオブジェクトで使用される�
 ## <a name="syntax"></a>構文  
   
 ```sql  
-[ ORDER BY   
+[ ORDER BY
    {  
       order_by_expression [SKIP n] [LIMIT n]  
       [ COLLATE collation_name ]  
       [ ASC | DESC ]  
    }  
-   [ ,…n ]   
+   [ ,…n ]
 ]  
 ```  
   
@@ -33,7 +33,7 @@ SELECT ステートメントで返されるオブジェクトで使用される�
  ORDER BY 操作が `collation_name`で指定された照合順序に従って実行されることを指定します。 COLLATE は文字列式にのみ適用できます。  
   
  ASC  
- 指定したプロパティの値が昇順、つまり小さい値から大きい値へと並べ替えられます。 既定値です。  
+ 指定したプロパティの値が昇順、つまり小さい値から大きい値へと並べ替えられます。 これは既定値です。  
   
  DESC  
  指定したプロパティの値が降順、つまり大きい値から小さい値へと並べ替えられます。  
@@ -44,7 +44,7 @@ SELECT ステートメントで返されるオブジェクトで使用される�
  SKIP `n`  
  最初の `n` 個の項目をスキップします。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  ORDER BY 句は、SELECT 句の結果に論理的に適用されます。 ORDER BY 句では、別名を使用して選択リストの項目を参照できます。 ORDER BY 句は、現在スコープ内にあるその他の変数も参照できます。 ただし、SELECT 句が DISTINCT 修飾子で指定されている場合は、ORDER BY 句は SELECT 句の別名のみを参照できます。  
   
  `SELECT c AS c1 FROM cs AS c ORDER BY c1.e1, c.e2`  
@@ -53,7 +53,7 @@ SELECT ステートメントで返されるオブジェクトで使用される�
   
  順序付けされたセットで、最上位の投影を除きコードが反復処理を行う場合、出力でその順序が維持されることは保証されません。  
 
-次の例では、順序は維持されることが保証されています。
+次の例では、順序が保持されます。
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -87,22 +87,22 @@ ORDER BY ...
   
 - KEY  
   
-- 左方向 (←) キー  
+- LEFT  
   
 - ORDER  
   
 - OUTER  
   
-- 右方向 (→) キー  
+- RIGHT  
   
 - ROW  
   
-- VALUE  
+- 値  
   
 ## <a name="ordering-nested-queries"></a>入れ子になったクエリの順序  
  Entity Framework では、入れ子になった式をクエリ内の任意の場所に配置できるため、入れ子になったクエリの順序は維持されません。  
 
-次のクエリでは、結果を姓で並べ替えます。  
+次のクエリは、結果を姓順に並べ替えます。  
 
 ```sql  
 SELECT C1.FirstName, C1.LastName  
@@ -132,6 +132,6 @@ SELECT C2.FirstName, C2.LastName
 
 - [クエリ式](query-expressions-entity-sql.md)
 - [Entity SQL リファレンス](entity-sql-reference.md)
-- [SKIP](skip-entity-sql.md)
-- [LIMIT](limit-entity-sql.md)
-- [TOP](top-entity-sql.md)
+- [スキップ](skip-entity-sql.md)
+- [制限](limit-entity-sql.md)
+- [ページのトップへ](top-entity-sql.md)

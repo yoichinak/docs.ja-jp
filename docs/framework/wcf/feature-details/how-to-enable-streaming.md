@@ -1,19 +1,19 @@
 ---
-title: '方法: ストリーミングを有効にする'
+title: '方法 : ストリーミングを有効にする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 6ca2cf4b-c7a1-49d8-a79b-843a90556ba4
-ms.openlocfilehash: bd1a52f1ce0f656af79928a20e3badc73661e89a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1d1eaa1ebf41ef86478dda795b3b199239cd37b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64635302"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184941"
 ---
-# <a name="how-to-enable-streaming"></a>方法: ストリーミングを有効にする
-Windows Communication Foundation (WCF) では、ストリームまたはバッファー内のいずれかの転送を使用してメッセージを送信できます。 既定のバッファー転送モードでは、受信側がメッセージを読み取る前に、メッセージの送信が完了している必要があります。 ストリーミング転送モードでは、送信が完了していなくても、受信側でメッセージの処理を開始できます。 ストリーミング モードは、渡される情報が長い場合、または連続的に処理する場合に役立ちます。 ストリーミング モードは、メッセージが大きすぎてすべてをバッファーできない場合にも役立ちます。  
+# <a name="how-to-enable-streaming"></a>方法 : ストリーミングを有効にする
+Windows 通信基盤 (WCF) は、バッファーまたはストリーム転送を使用してメッセージを送信できます。 既定のバッファー転送モードでは、受信側がメッセージを読み取る前に、メッセージの送信が完了している必要があります。 ストリーミング転送モードでは、送信が完了していなくても、受信側でメッセージの処理を開始できます。 ストリーミング モードは、渡される情報が長い場合、または連続的に処理する場合に役立ちます。 ストリーミング モードは、メッセージが大きすぎてすべてをバッファーできない場合にも役立ちます。  
   
  ストリーミングを有効にするには、`OperationContract` を適切に定義し、トランスポート レベルでストリーミングを有効にします。  
   
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) では、ストリームまたはバッ�
   
 2. バインディングではストリーミングを有効にする必要があります。 `TransferMode` プロパティを次の値のいずれかに設定します。  
   
-    1. `Buffered`、  
+    1. `Buffered`,  
   
     2. `Streamed` (両方向のストリーミング通信を有効にする)。  
   
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) では、ストリームまたはバッ�
   
     1. 次のサンプルの構成スニペットでは、`TransferMode` とカスタム HTTP バインディングで、`basicHttpBinding` プロパティをストリーミングに設定しています。  
   
-         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]   
+         [!code-xml[c_HowTo_EnableStreaming#103](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_enablestreaming/common/app.config#103)]
   
     2. 次のコード スニペットでは、`TransferMode` とカスタム HTTP バインディングで、`basicHttpBinding` プロパティをストリーミングに設定しています。  
   
@@ -76,5 +76,5 @@ Windows Communication Foundation (WCF) では、ストリームまたはバッ�
   
 ## <a name="see-also"></a>関連項目
 
-- [大規模データとストリーミング](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
+- [大規模なデータとストリーミング](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)
 - [ストリーム](../../../../docs/framework/wcf/samples/stream.md)

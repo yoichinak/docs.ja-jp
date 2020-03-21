@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: ae682c354a7a5188611b103008a3e18f8d821260
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74431943"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177849"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps メソッド
 指定された `ExportedType` メタデータ構造体を変更します。  
@@ -29,7 +29,7 @@ ms.locfileid: "74431943"
   
 ```cpp  
 HRESULT SetExportedTypeProps (  
-    [in] mdExportedType   ct,   
+    [in] mdExportedType   ct,
     [in] mdToken          tkImplementation,  
     [in] mdTypeDef        tkTypeDef,  
     [in] DWORD            dwExportedTypeFlags  
@@ -38,29 +38,29 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>パラメーター  
  `ct`  
- から変更する `ExportedType` メタデータ構造を指定するメタデータトークン。  
+ [in]変更するメタデータ構造を`ExportedType`指定するメタデータ トークン。  
   
  `tkImplementation`  
- からこの型の実装方法を指定する `File`、`AssemblyRef`、または `ExportedType`型のトークン。  
+ [in]この型`File`の実装方法`AssemblyRef`を指定する`ExportedType`、種類 、または のトークン。  
   
  `tkTypeDef`  
- からコードファイルで参照される `TypeDef` トークン。  
+ [in]コード`TypeDef`ファイルで参照されるトークン。  
   
  `dwExportedTypeFlags`  
- から型の属性を指定する値のビットごとの組み合わせ。  
+ [in]型の属性を指定する値のビットごとの組み合わせ。  
   
-## <a name="remarks"></a>コメント  
- `ExportedType` メタデータ構造を作成するには、 [IMetaDataAssemblyEmit::D efineExportedType](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)メソッドを使用します。  
+## <a name="remarks"></a>解説  
+ メタデータ構造を`ExportedType`作成するには、[メソッド :Dを](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)使用します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

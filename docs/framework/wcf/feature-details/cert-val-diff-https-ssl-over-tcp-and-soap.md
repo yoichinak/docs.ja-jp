@@ -7,23 +7,23 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 0ab343da821e8994ac3a652bfc55db261d5e48f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e82d1898bec7cda474a5a92958b5af1b30c9de7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857650"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185404"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS、SSL Over TCP、SOAP セキュリティ間における証明書検証方法の相違点
-できます証明書使用する Windows Communication Foundation (WCF) でトランスポート層セキュリティ (TLS) だけでなく、メッセージ層 (SOAP) セキュリティで HTTP (HTTPS) または TCP 経由で。 ここでは、このような証明書の検証方法の違いについて説明します。  
+HTTP (HTTPS) または TCP 経由のトランスポート層セキュリティ (TLS) に加えて、メッセージ層 (SOAP) セキュリティを備えた WCF (WCF) の証明書を使用できます。 ここでは、このような証明書の検証方法の違いについて説明します。  
   
 ## <a name="validation-of-https-client-certificates"></a>HTTPS クライアント証明書の検証  
- HTTPS を使用してクライアントとサービス間で通信を行う場合、サービスに対して認証を行うためにクライアントが使用する証明書はチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 そうでない HTTP レイヤーが発生した場合、<xref:System.Net.WebException>メッセージで"リモート サーバーがエラーを返しました。「(403) 許可されていません。" WCF のサーフェスとしては、この例外を<xref:System.ServiceModel.Security.MessageSecurityException>します。  
+ HTTPS を使用してクライアントとサービス間で通信を行う場合、サービスに対して認証を行うためにクライアントが使用する証明書はチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 ない場合、HTTP 層は、「リモート<xref:System.Net.WebException>サーバーがエラーを返しました: (403) 禁止」というメッセージを表示します。 WCF では、この例外は<xref:System.ServiceModel.Security.MessageSecurityException>.  
   
 ## <a name="validation-of-https-service-certificates"></a>HTTP サービス証明書の検証  
  HTTPS を使用してクライアントとサービス間で通信を行う場合、サーバーが認証に使用する証明書は既定でチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 証明書が失効しているかどうかを確認するためのオンライン チェックは行われません。 この動作は、<xref:System.Net.Security.RemoteCertificateValidationCallback> コールバックを登録することによってオーバーライドできます。コードは次のようになります。  
   
- [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)] 
+ [!code-csharp[c_CertificateValidationDifferences#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_certificatevalidationdifferences/cs/source.cs#1)]
  [!code-vb[c_CertificateValidationDifferences#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_certificatevalidationdifferences/vb/source.vb#1)]  
   
  `ValidateServerCertificate` の署名は次のようになります。  
@@ -50,4 +50,4 @@ ms.locfileid: "61857650"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
-- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

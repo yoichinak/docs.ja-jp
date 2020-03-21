@@ -2,15 +2,15 @@
 title: '方法 : WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
-ms.openlocfilehash: 41d9f0e53401bcd6b57b04a38e76af5ddb9fb4cc
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: c85ab6725876a2d523a18c817ce3fd89f0d2285a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976101"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184481"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>方法 : WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する
-開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作が WCF でサポートされていない形式でデータを返す必要がある場合に当てはまります。 このトピックでは、WCF WEB HTTP プログラミングモデルを使用してこのようなサービスを作成する方法について説明します。 ストリームを返す操作を 1 つ持つサービスを例に取ります。  
+開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作が WCF でサポートされていない形式でデータを返す必要がある場合です。 このトピックでは、WCF WEB HTTP プログラミング モデルを使用してこのようなサービスを作成する方法について説明します。 ストリームを返す操作を 1 つ持つサービスを例に取ります。  
   
 ### <a name="to-implement-the-service-contract"></a>サービス コントラクトを実装するには  
   
@@ -25,7 +25,7 @@ ms.locfileid: "73976101"
         }  
     ```  
   
-     メソッドは <xref:System.IO.Stream>を返すため、WCF は、操作がサービス操作から返されたバイトを完全に制御し、返されるデータに書式設定を適用しないことを前提としています。  
+     メソッドは<xref:System.IO.Stream>、WCF が返すため、サービス操作から返されるバイトを操作が完全に制御でき、返されるデータに書式が適用されません。  
   
 2. サービス コントラクトを実装します。 コントラクトには 1 つの操作 (`GetImage`) しかありません。 このメソッドはビットマップを生成して、それを <xref:System.IO.MemoryStream> に .jpg 形式で保存します。 操作はそのストリームを呼び出し元に戻します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73976101"
   
      コードの最後から 2 番目の行にある `WebOperationContext.Current.OutgoingResponse.ContentType = "image/jpeg";` に注意してください。  
   
-     これにより、コンテンツタイプのヘッダーが `"image/jpeg"`に設定されます。 この例では .jpg ファイルを戻す方法を示していますが、必要に応じて、任意の種類のデータを任意の形式で戻すように変更できます。 操作はデータを生成または取得してそれをストリームに書き込む必要があります。  
+     これにより、コンテンツ タイプ ヘッダー`"image/jpeg"`が に設定されます。 この例では .jpg ファイルを戻す方法を示していますが、必要に応じて、任意の種類のデータを任意の形式で戻すように変更できます。 操作はデータを生成または取得してそれをストリームに書き込む必要があります。  
   
 ### <a name="to-host-the-service"></a>サービスをホストするには  
   
@@ -64,7 +64,7 @@ ms.locfileid: "73976101"
     {  
         static void Main(string[] args)  
         {  
-        }   
+        }
     }  
     ```  
   

@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
-ms.openlocfilehash: 0291b6684092ec15fc672c39c909caf7781194e3
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70783259"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149246"
 ---
 # <a name="performing-catalog-operations"></a>カタログ操作の実行
-データベースまたはカタログを変更するコマンドを実行するには (CREATE TABLE ステートメントや CREATE PROCEDURE ステートメントなど)、適切な SQL ステートメントと**接続**オブジェクトを使用して**command**オブジェクトを作成します。 **Command オブジェクトの** **ExecuteNonQuery**メソッドを使用してコマンドを実行します。  
+CREATE TABLE ステートメントや CREATE PROCEDURE ステートメントなどのデータベースまたはカタログを変更するコマンドを実行するには、適切な SQL ステートメントと**接続**オブジェクトを使用して**Command**オブジェクトを作成します。 コマンド オブジェクトの**ExecuteNonQuery**メソッドを使用して**コマンド**を実行します。  
   
  Microsoft SQL Server データベースにストアド プロシージャを作成するコード サンプルを次に示します。  
   
@@ -33,11 +33,11 @@ command.ExecuteNonQuery()
   
 ```csharp  
 // Assumes connection is a valid SqlConnection.  
-string queryString = "CREATE PROCEDURE InsertCategory  " +   
+string queryString = "CREATE PROCEDURE InsertCategory  " +
     "@CategoryName nchar(15), " +  
     "@Identity int OUT " +  
-    "AS " +   
-    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +   
+    "AS " +
+    "INSERT INTO Categories (CategoryName) VALUES(@CategoryName) " +
     "SET @Identity = @@Identity " +  
     "RETURN @@ROWCOUNT";  
   

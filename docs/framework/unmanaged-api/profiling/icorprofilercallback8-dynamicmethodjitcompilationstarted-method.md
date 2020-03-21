@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback8::D ynamicMethodJITCompilationStarted メソッド
+title: メソッドを開始 :Dしました。
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8.DynamicMethodJITCompilationStarted
@@ -8,14 +8,14 @@ api_location:
 - corprof.idl
 api_type:
 - COM
-ms.openlocfilehash: 1eaf29e1c93f352facde4af2ee57910783d82e5d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e8b1a243b691d8d5eb364fd16821fd9156505c60
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136464"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177047"
 ---
-# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::D ynamicMethodJITCompilationStarted メソッド
+# <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>メソッドを開始 :Dしました。
 [.NET Framework 4.7 以降のバージョンでサポートされています]  
   
 動的メソッドの JIT コンパイルが開始されるたびにプロファイラーに通知します。  
@@ -24,37 +24,35 @@ ms.locfileid: "73136464"
   
 ```cpp  
 HRESULT DynamicMethodJITCompilationStarted(  
-     [in]  FunctionID  functionId,   
-     [in]  BOOL        fIsSafeToBlock,   
-     [in]  LPCBYTE     pILHeader,   
-     [in]  LONG        cbILHeader   
+     [in]  FunctionID  functionId,
+     [in]  BOOL        fIsSafeToBlock,
+     [in]  LPCBYTE     pILHeader,
+     [in]  LONG        cbILHeader
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
 [入力] `functionId`  
-JIT コンパイルが開始されるメモリ内関数の識別子。   
+JIT コンパイルを開始するインメモリ関数の識別子。
 
-[入力] `fIsSafeToBlock`   
-ブロックによって、呼び出し元のスレッドがこのコールバックから戻るまでランタイムが待機する可能性があることを示す `true` ます。`false` は、ブロックがランタイムの操作に影響を与えないことを示します。  
+[in]`fIsSafeToBlock`をクリックすると、呼び出し元のスレッドがこのコールバックから返されるのをランタイムが待機する可能性があることを示
+`true`します。`false`ブロックがランタイムの操作に影響しないことを示します。  
 
-[入力] `pILHeader`    
-メソッドの IL ヘッダーの最初のバイトへのポインター。   
+[in]`pILHeader`メソッドの IL ヘッダーの最初のバイトへのポインター。
 
-[入力] `cbILHeader`    
-IL ヘッダー内のバイト数。 
+[in]`cbILHeader` IL ヘッダーのバイト数。
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
 
-このコールバックは、動的メソッドが JIT コンパイルされるたびにトリガーされます。 これには、さまざまな IL スタブおよび LCG メソッドが含まれます。 その目的は、コンパイルされたメソッドをユーザーに識別するのに十分な情報をプロファイラーライターに提供することです。
+このコールバックは、動的メソッドが JIT コンパイルされたときにトリガーされます。 これには、さまざまな IL スタブと LCG メソッドが含まれます。 その目的は、プロファイラーの作成者に、コンパイルされたメソッドを識別するための十分な情報をユーザーに提供することです。
 
 > [!NOTE]
-> 動的メソッドにはメタデータがないため、`functionId` 値を使用してメタデータトークンに解決することはできません。
+> `functionId`動的メソッドにはメタデータがないため、値をメタデータ トークンに解決するために使用することはできません。
 
-`pILHeader` ポインターは、コールバック中にのみ有効です。
+ポインター`pILHeader`はコールバック中にのみ有効です。
 
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
@@ -62,7 +60,7 @@ IL ヘッダー内のバイト数。
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [DynamicMethodJITCompilationFinished メソッド](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [ICorProfilerCallback8 インターフェイス](icorprofilercallback8-interface.md)

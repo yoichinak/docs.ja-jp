@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e380edac-da67-4276-80a5-b64decae4947
-ms.openlocfilehash: ddb53c9224d56803c3528d79c5ccdf5534b9ab03
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: e8d24a3998ca97fdf45e647bc40c1f7d6018ec20
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73039819"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79149454"
 ---
 # <a name="optimistic-concurrency"></a>オプティミスティック コンカレンシー
 マルチユーザー環境には、データベースのデータを更新するための 2 つのモデルがあります。オプティミスティック コンカレンシーとペシミスティック コンカレンシーです。 ph x="1" /&gt; オブジェクトは、データをリモート処理するときや、データと対話するときのように長時間にわたる利用状況では、オプティミスティック コンカレンシーの使用を奨励するように設計されています。  
@@ -30,9 +30,9 @@ ms.locfileid: "73039819"
   
  午後 1 時に、User1 が、次の値を持つデータベースから行を読み取ります。  
   
- **CustID LastName FirstName**  
+ **CustID     LastName     FirstName**  
   
- 101 Smith Bob  
+ 101          Smith             Bob  
   
 |列名|元の値|現在の値|データベース内の値|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -42,7 +42,7 @@ ms.locfileid: "73039819"
   
  午後 1 時 1 分に、User2 が同じ行を読み取ります。  
   
- 1:03 p.m. に、User2 は**FirstName**を "Bob" から "Robert" に変更し、データベースを更新します。  
+ 午後 1 時 3 分に、User2 は **"Bob"** から "Robert" に名を変更し、データベースを更新します。  
   
 |列名|元の値|現在の値|データベース内の値|  
 |-----------------|--------------------|-------------------|-----------------------|  
@@ -65,13 +65,13 @@ ms.locfileid: "73039819"
 ## <a name="testing-for-optimistic-concurrency-violations"></a>オプティミスティック コンカレンシー違反テスト  
  オプティミスティック コンカレンシー違反をテストするには、いくつか方法があります。 1 つは、テーブルにタイムスタンプ列を含める方法です。 一般に、データベースには、レコードを最後に更新した日付と時刻を識別するために使用するタイムスタンプ機能が用意されています。 この機能を使用すると、timestamp 列がテーブル定義に組み込まれます。 レコードが更新されると、タイムスタンプが更新されて現在の日付と時刻が反映されます。 オプティミスティック コンカレンシー違反テストでは、テーブル内容についてのクエリによって timestamp 列が返されます。 更新しようとすると、データベースのタイムスタンプ値と、変更行に格納されている元のタイムスタンプ値が比較されます。 一致した場合、更新が実行され、timestamp 列が現在の時刻に更新されてその更新が反映されます。 一致しなかった場合は、オプティミスティック コンカレンシー違反が発生します。  
   
- オプティミスティック コンカレンシー違反をテストするためのもう 1 つの方法は、行のすべての列の元の値が、データベース内の値とまだ一致しているかどうかを検証することです。 たとえば、次のクエリを見てみましょう。  
+ オプティミスティック コンカレンシー違反をテストするためのもう 1 つの方法は、行のすべての列の元の値が、データベース内の値とまだ一致しているかどうかを検証することです。 たとえば、次のクエリについて考えてみます。  
   
 ```sql
 SELECT Col1, Col2, Col3 FROM Table1  
 ```  
   
- **Table1**の行を更新するときにオプティミスティック同時実行制御違反をテストするには、次の UPDATE ステートメントを実行します。  
+ **Table1**の行を更新するときにオプティミスティック同時実行制御違反をテストするには、次の UPDATE ステートメントを発行します。  
   
 ```sql
 UPDATE Table1 Set Col1 = @NewCol1Value,  
@@ -96,14 +96,14 @@ UPDATE Table1 Set Col1 = @NewVal1
  オプティミスティック コンカレンシー モデルを使用するときは、より制限の少ない抽出条件を適用するように選択することもできます。 たとえば、WHERE 句で主キー列だけを使用すると、前回のクエリ実行後に主キー以外の列が更新されたかどうかに関係なく、データが上書きされます。 WHERE 句を特定の列だけに適用することもできます。特定の列だけに WHERE 句を適用した場合は、特定のフィールドが前回のクエリ実行後に更新されていない限りデータが上書きされます。  
   
 ### <a name="the-dataadapterrowupdated-event"></a>DataAdapter.RowUpdated イベント  
- <xref:System.Data.Common.DataAdapter> オブジェクトの**RowUpdated**イベントを、前に説明した手法と組み合わせて使用して、オプティミスティック同時実行制御違反のアプリケーションに通知を提供することができます。 **RowUpdated**は、**変更**された行を**データセット**から更新しようとするたびに発生します。 これにより、例外発生時の処理、カスタム エラー情報の追加、再試行ロジックの追加などの特別の処理コードを追加できます。 <xref:System.Data.Common.RowUpdatedEventArgs> オブジェクトは、テーブル内の変更された行について、特定の update コマンドによって影響を受けた行の数を含む**RecordsAffected**プロパティを返します。 オプティミスティック同時実行制御をテストするように update コマンドを設定することにより、 **RecordsAffected**プロパティは、オプティミスティック同時実行制御違反が発生したときに、レコードが更新されなかったため、値0を返します。 この場合、例外がスローされます。 **RowUpdated**イベントを使用すると、 **Updatestatus. skipcurrentrow**などの適切な**RowUpdatedEventArgs**値を設定することによって、この発生を処理し、例外を回避できます。 **RowUpdated**イベントの詳細については、「 [DataAdapter イベントの処理](handling-dataadapter-events.md)」を参照してください。  
+ <xref:System.Data.Common.DataAdapter>オブジェクトの**RowUpdated**イベントは、前述の手法と組み合わせて使用して、オプティミスティック同時実行制御違反のアプリケーションに通知を提供できます。 **行更新**は **、DataSet**から**変更された**行を更新するたびに発生します。 これにより、例外発生時の処理、カスタム エラー情報の追加、再試行ロジックの追加などの特別の処理コードを追加できます。 この<xref:System.Data.Common.RowUpdatedEventArgs>オブジェクトは、テーブル内の変更された行に対して、特定の更新コマンドによって影響を受ける行数を含む**RecordsAffected**プロパティを返します。 オプティミスティック同時実行制御をテストするように更新コマンドを設定すると、レコードが更新されなかったため、オプティミスティック同時実行制御違反が発生した場合 **、RecordsAffected**プロパティは値 0 を返します。 この場合、例外がスローされます。 **RowUpdated**イベントを使用すると、この発生を処理し **、UpdateStatus.SkipCurrentRow**などの適切な**RowUpdatedEventArgs.Status**値を設定することで例外を回避できます。 **RowUpdated**イベントの詳細については、「[データアダプタ イベントの処理](handling-dataadapter-events.md)」を参照してください。  
   
- 必要に応じて、 **update**を呼び出す前に**ContinueUpdateOnError**を**True**に設定し、**更新**が完了したときに特定の行の**RowError**プロパティに格納されているエラー情報に応答することができます。 詳細については、「[行エラー情報](./dataset-datatable-dataview/row-error-information.md)」を参照してください。  
+ 必要に応じて、**更新**を呼び出す前に**DataAdapter.ContinueUpdateOnError**を**true**に設定し、**更新**が完了したときに特定の行の**RowError**プロパティに格納されているエラー情報に応答できます。 詳細については、「[行エラー情報](./dataset-datatable-dataview/row-error-information.md)」を参照してください。  
   
 ## <a name="optimistic-concurrency-example"></a>オプティミスティック コンカレンシーの例  
- 次の例では、 **DataAdapter**の**UpdateCommand**をオプティミスティック同時実行制御をテストするように設定し、 **RowUpdated**イベントを使用してオプティミスティック同時実行制御違反をテストしています。 オプティミスティック同時実行制御違反が発生すると、アプリケーションは、更新プログラムが発行された行の**RowError**を、オプティミスティック同時実行制御違反を反映するように設定します。  
+ 次の簡単な例は、オプティミスティック同時実行制御をテストする**DataAdapter**の**UpdateCommand**を設定し、**その後、RowUpdated**イベントを使用してオプティミスティック同時実行制御違反をテストします。 オプティミスティック同時実行制御違反が発生すると、アプリケーションは、オプティミスティック同時実行制御違反を反映するために、更新が発行された行の**RowError**を設定します。  
   
- UPDATE コマンドの WHERE 句に渡されるパラメーター値は、それぞれの列の**元**の値にマップされることに注意してください。  
+ UPDATE コマンドの WHERE 句に渡されるパラメータ値は、それぞれのカラムの**オリジナル**値にマップされることに注意してください。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -143,7 +143,7 @@ adapter.Update(dataSet, "Customers")
 Dim dataRow As DataRow  
   
 For Each dataRow In dataSet.Tables("Customers").Rows  
-    If dataRow.HasErrors Then   
+    If dataRow.HasErrors Then
        Console.WriteLine(dataRow (0) & vbCrLf & dataRow.RowError)  
     End If  
 Next  
@@ -198,7 +198,7 @@ foreach (DataRow dataRow in dataSet.Tables["Customers"].Rows)
   
 protected static void OnRowUpdated(object sender, SqlRowUpdatedEventArgs args)  
 {  
-  if (args.RecordsAffected == 0)   
+  if (args.RecordsAffected == 0)
   {  
     args.Row.RowError = "Optimistic Concurrency Violation Encountered";  
     args.Status = UpdateStatus.SkipCurrentRow;  

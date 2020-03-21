@@ -1,5 +1,5 @@
 ---
-title: <diagnostics> 要素
+title: <システム診断>要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#system.diagnostics
@@ -8,23 +8,23 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: dc05c46cb1ba74baceaaeadc2959a6889faf19c9
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4f831592d7d178276b1625e1ef7d8512085342af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699194"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153208"
 ---
-# <a name="systemdiagnostics-element"></a>\<system. diagnostics > 要素
+# <a name="systemdiagnostics-element"></a>\<要素>診断
 メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<system.diagnostics>**  
+[**\<構成>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<診断>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<system.diagnostics>   
+<system.diagnostics>
 </system.diagnostics>  
 ```  
   
@@ -38,12 +38,12 @@ ms.locfileid: "71699194"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<assert>](assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。|  
-|[\<performanceCounters>](performancecounters-element.md)|パフォーマンス カウンターが共有するグローバル メモリのサイズを指定します。|  
-|[\<sharedListeners>](sharedlisteners-element.md)|任意の source 要素または trace 要素が参照できるリスナーを含みます。 共有リスナーとして識別されるリスナーは、名前を指定してソースまたはトレースに追加できます。|  
-|[\<sources>](sources-element.md)|トレースメッセージを開始するトレースソースを指定します。|  
-|[\<switches>](switches-element.md)|トレーススイッチと、トレーススイッチが設定されているレベルを格納します。|  
-|[\<trace>](trace-element.md)|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
+|[\<>をアサートする](assert-element.md)|<xref:System.Diagnostics.Debug.Assert%2A?displayProperty=nameWithType> メソッドの呼び出し時にメッセージ ボックスを表示するかどうかを指定し、メッセージの書き込み先のファイルの名前も指定します。|  
+|[\<パフォーマンス カウンタ>](performancecounters-element.md)|パフォーマンス カウンターが共有するグローバル メモリのサイズを指定します。|  
+|[\<共有リスナー>](sharedlisteners-element.md)|任意の source 要素または trace 要素が参照できるリスナーを含みます。 共有リスナーとして識別されたリスナーは、ソースまたはトレースに名前で追加できます。|  
+|[\<ソース>](sources-element.md)|トレース メッセージを開始するトレース ソースを指定します。|  
+|[\<スイッチ>](switches-element.md)|トレース スイッチとトレース スイッチが設定されているレベルが含まれます。|  
+|[\<トレース>](trace-element.md)|トレース メッセージを収集、格納、およびルーティングするリスナーを保持します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -52,10 +52,10 @@ ms.locfileid: "71699194"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
 ## <a name="example"></a>例  
- 次の例は、トレーススイッチとトレースリスナーを **\<system. diagnostics >** 要素内に埋め込む方法を示しています。 @No__t-0 トレーススイッチが <xref:System.Diagnostics.TraceLevel> レベルに設定されています。 トレースリスナー `myListener` は、`MyListener.log` という名前のファイルを作成し、出力をファイルに書き込みます。  
+ 次の例は**\<、system.diagnostics>** 要素内にトレース スイッチとトレース リスナーを埋め込む方法を示しています。 `General`トレース スイッチはレベルに設定<xref:System.Diagnostics.TraceLevel>されます。 トレース リスナー`myListener`は、呼び`MyListener.log`出されたファイルを作成し、出力をファイルに書き込みます。  
   
 > [!NOTE]
-> .NET Framework バージョン 2.0 では、スイッチの値を指定するためにテキストを使用できます。 たとえば、<xref:System.Diagnostics.BooleanSwitch> の場合は `true` を指定し、<xref:System.Diagnostics.TraceSwitch> の場合は `Error` などの列挙値を表すテキストを使用します。 `<add name="myTraceSwitch" value="Error" />` という行は、`<add name="myTraceSwitch" value="1" />` と同じです。  
+> .NET Framework バージョン 2.0 では、スイッチの値を指定するためにテキストを使用できます。 `true`たとえば、 に指定<xref:System.Diagnostics.BooleanSwitch>したり、 などの列挙値を表すテキスト`Error`を<xref:System.Diagnostics.TraceSwitch>使用したりできます。 `<add name="myTraceSwitch" value="Error" />` という行は、`<add name="myTraceSwitch" value="1" />` と同じです。  
   
 ```xml  
 <configuration>  

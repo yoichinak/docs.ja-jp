@@ -1,5 +1,5 @@
 ---
-title: <sharedListeners> の <add> の <filter> 要素
+title: <filter>の<add>要素<sharedListeners>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add/filter
@@ -10,26 +10,26 @@ helpviewer_keywords:
 - filters, trace listeners
 - trace listeners, filters
 ms.assetid: 7d4e7faa-2e4e-4379-ac76-f6cd7f2f8fac
-ms.openlocfilehash: e04ecd773bd6aa7791858711edbd72128dc391ea
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 6fb52cdfa5792ab6059b60d8dbb91c107cd666ca
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088878"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153454"
 ---
-# <a name="filter-element-for-add-for-sharedlisteners"></a>\<sharedListeners> の \<add> の \<filter> 要素
+# <a name="filter-element-for-add-for-sharedlisteners"></a>\<共有リスナー>の\<追加>の\<フィルター>要素
 `sharedListeners` コレクションのリスナーにフィルターを追加します。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<system.diagnostics>** ](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[ **\<sharedListeners>** ](sharedlisteners-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<add>** ](add-element-for-sharedlisteners.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<filter>**
+[**\<構成>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<診断>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<共有リスナー>**](sharedlisteners-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>を追加する**](add-element-for-sharedlisteners.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<フィルター>**
 
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<filter type="System.Diagnostics.EventTypeFilter"   
+<filter type="System.Diagnostics.EventTypeFilter"
   initializeData="Warning" />  
 ```  
   
@@ -40,11 +40,11 @@ ms.locfileid: "74088878"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**type**|必須の属性です。<br /><br /> フィルターの種類を指定します。 (<xref:System.Type.FullName%2A?displayProperty=nameWithType> プロパティの形式で) 型の完全な名前のみを使用することも、アセンブリ情報を含む完全修飾型名 (<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType> プロパティの形式) を使用することもできます。 完全修飾型名の作成の詳細については、「[完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。|  
-|**initializeData**|省略可能な属性です。<br /><br /> 指定したクラスのコンストラクターに渡される文字列。|  
+|**型**|必須の属性です。<br /><br /> フィルタの種類を指定します。 型の完全名 (<xref:System.Type.FullName%2A?displayProperty=nameWithType>プロパティの形式) のみを使用するか、アセンブリ情報を含む完全修飾型名 (プロパティの形式) を<xref:System.Type.AssemblyQualifiedName%2A?displayProperty=nameWithType>使用できます。 完全修飾型名の作成については、「完全修飾[型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。|  
+|**初期化データ**|省略可能な属性です。<br /><br /> 指定したクラスのコンストラクターに渡される文字列。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -55,13 +55,13 @@ ms.locfileid: "74088878"
 |`sharedListeners`|任意のソースまたはトレース要素が参照できるリスナーのコレクション。|  
 |`add`|リスナーを**sharedListeners**コレクションに追加します。|  
   
-## <a name="remarks"></a>Remarks  
- リスナーが `<sharedListeners>` 要素の `<add>` 要素で定義されている場合は、そのリスナーのフィルターを `<add>` 要素の子である `<filter>` 要素で定義する必要があります。  
+## <a name="remarks"></a>解説  
+ `<add>`リスナーが`<sharedListeners>`要素の要素で定義されている場合、そのリスナーのフィルターは、要素の子要素で`<filter>`定義する`<add>`必要があります。  
   
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューター構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、`<filter>` 要素を使用して、`sharedListeners` コレクション内のトレースリスナー `console` にフィルターを追加する方法を示しています。  
+ 要素を使用してコレクション内の`<filter>`トレース リスナー`console`にフィルターを追加する方法を次の`sharedListeners`例に示します。  
   
 ```xml  
 <configuration>  
@@ -75,9 +75,9 @@ ms.locfileid: "74088878"
       </source>  
     </sources>  
     <sharedListeners>  
-      <add name="console"   
+      <add name="console"
         type="System.Diagnostics.ConsoleTraceListener" >  
-        <filter type="System.Diagnostics.EventTypeFilter"   
+        <filter type="System.Diagnostics.EventTypeFilter"
           initializeData="Error" />  
       </add>  
     </sharedListeners>  

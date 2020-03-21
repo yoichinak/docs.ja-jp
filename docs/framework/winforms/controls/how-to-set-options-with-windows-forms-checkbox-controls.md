@@ -12,21 +12,21 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: 84198eab42aa02b1bb37fa16a3c4247a37f58a10
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 00b467836d8e60aeee51a010a6384abf7dd73c56
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746770"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141849"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>方法 : Windows フォームの CheckBox コントロールでオプションを設定する
-Windows フォーム <xref:System.Windows.Forms.CheckBox> コントロールは、ユーザーに True/False または Yes/No オプションを提供するために使用されます。 コントロールが選択されると、そのコントロールにチェックマークが表示されます。  
+Windows フォーム<xref:System.Windows.Forms.CheckBox>コントロールは、ユーザーに True/False または Yes/No オプションを提供するために使用されます。 コントロールを選択すると、チェック マークが表示されます。  
   
-### <a name="to-set-options-with-checkbox-controls"></a>CheckBox コントロールを使用してオプションを設定するには  
+### <a name="to-set-options-with-checkbox-controls"></a>チェック ボックス コントロールでオプションを設定するには  
   
-1. <xref:System.Windows.Forms.CheckBox.Checked%2A> プロパティの値を調べてその状態を確認し、その値を使用してオプションを設定します。  
+1. プロパティの値を<xref:System.Windows.Forms.CheckBox.Checked%2A>調べて状態を確認し、その値を使用してオプションを設定します。  
   
-     次のコードサンプルでは、<xref:System.Windows.Forms.CheckBox> コントロールの <xref:System.Windows.Forms.CheckBox.CheckedChanged> イベントが発生すると、このチェックボックスがオンになっている場合、フォームの <xref:System.Windows.Forms.Control.AllowDrop%2A> プロパティが `false` に設定されます。 これは、ユーザーの操作を制限する必要がある場合に便利です。  
+     次のコード サンプルでは、コントロール<xref:System.Windows.Forms.CheckBox>の<xref:System.Windows.Forms.CheckBox.CheckedChanged>イベントが発生したときに、チェック ボックスがオン<xref:System.Windows.Forms.Control.AllowDrop%2A>`false`になっている場合にフォームのプロパティが設定されます。 これは、ユーザーの操作を制限する場合に便利です。  
   
     ```vb  
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, _  
@@ -43,7 +43,7 @@ Windows フォーム <xref:System.Windows.Forms.CheckBox> コントロールは�
     private void checkBox1_CheckedChanged(object sender, System.EventArgs e)  
     {  
        // Determine the CheckState of the check box.  
-       if (checkBox1.CheckState == CheckState.Checked)   
+       if (checkBox1.CheckState == CheckState.Checked)
        {  
           // If checked, do not allow items to be dragged onto the form.  
           this.AllowDrop = false;  
@@ -57,7 +57,7 @@ Windows フォーム <xref:System.Windows.Forms.CheckBox> コントロールは�
           System::EventArgs ^ e)  
        {  
           // Determine the CheckState of the check box.  
-          if (checkBox1->CheckState == CheckState::Checked)   
+          if (checkBox1->CheckState == CheckState::Checked)
           {  
              // If checked, do not allow items to be dragged onto the form.  
              this->AllowDrop = false;  
@@ -65,9 +65,9 @@ Windows フォーム <xref:System.Windows.Forms.CheckBox> コントロールは�
        }  
     ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)
-- [方法: Windows フォームの CheckBox のクリックに応答する](how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [CheckBox コントロール](checkbox-control-windows-forms.md)
+- [方法 : Windows フォーム CheckBox のクリックに応答する](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [チェック ボックス コントロール](checkbox-control-windows-forms.md)

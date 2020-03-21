@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5a29de74-acfc-4134-8616-829dd7ce0710
-ms.openlocfilehash: e958c96e304962dace72e90b9266b57943f01ac9
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: a7ad0d4d950da71db0aebca872949fa82669c5c5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785736"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151703"
 ---
 # <a name="connection-events"></a>接続イベント
-すべての .NET Framework データプロバイダーには、データソースから情報メッセージを取得したり、**接続**の状態が変更されたかどうかを確認したりするために使用できる、2つのイベントを持つ**接続**オブジェクトがあります。 次の表では、**接続**オブジェクトのイベントについて説明します。  
+すべての .NET Framework データ プロバイダには、データ ソースから情報メッセージを取得したり、**接続**の状態が変更されたかどうかを判断したりするために使用できる 2 つのイベントを持つ**Connection**オブジェクトがあります。 次の表は **、Connection**オブジェクトのイベントを示しています。  
   
-|イベント|説明|  
+|Event|説明|  
 |-----------|-----------------|  
-|**InfoMessage**|データ ソースから情報メッセージが返されたときに発生します。 情報メッセージはデータ ソースからのメッセージであり、例外はスローされません。|  
-|**StateChange**|**接続**の状態が変化したときに発生します。|  
+|**Infomessage**|データ ソースから情報メッセージが返されたときに発生します。 情報メッセージはデータ ソースからのメッセージであり、例外はスローされません。|  
+|**StateChange**|**接続**の状態が変更されたときに発生します。|  
   
 ## <a name="working-with-the-infomessage-event"></a>InfoMessage イベントの使用  
- <xref:System.Data.SqlClient.SqlConnection.InfoMessage> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> イベントを使用して、SQL Server データ ソースから警告や情報メッセージを取得できます。 重大度レベルが 11 から 16 のエラーがデータ ソースから返されると、例外がスローされます。 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントを使用して、エラーに関連付けられていないメッセージをデータ ソースから取得することもできます。 Microsoft SQL Server の場合は、重大度レベルが 10 以下のエラーは情報メッセージと見なされ、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントでキャプチャされます。 詳細については、[データベースエンジンエラーの重大度](/sql/relational-databases/errors-events/database-engine-error-severities)に関する記事を参照してください。
+ <xref:System.Data.SqlClient.SqlConnection.InfoMessage> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> イベントを使用して、SQL Server データ ソースから警告や情報メッセージを取得できます。 重大度レベルが 11 から 16 のエラーがデータ ソースから返されると、例外がスローされます。 <xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントを使用して、エラーに関連付けられていないメッセージをデータ ソースから取得することもできます。 Microsoft SQL Server の場合は、重大度レベルが 10 以下のエラーは情報メッセージと見なされ、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントでキャプチャされます。 詳細については、「[データベース エンジン エラーの問題」の記事を](/sql/relational-databases/errors-events/database-engine-error-severities)参照してください。
   
- イベント<xref:System.Data.SqlClient.SqlConnection.InfoMessage>は、その<xref:System.Data.SqlClient.SqlInfoMessageEventArgs> **Errors**プロパティに、データソースからのメッセージのコレクションを含むオブジェクトを受け取ります。 エラー番号とメッセージテキスト、およびエラーの原因については、このコレクション内の**error**オブジェクトに対してクエリを実行できます。 .NET Framework Data Provider for SQL Server には、データベースの詳細情報、ストアド プロシージャ、およびメッセージ送信元の行番号も含まれます。  
+ イベント<xref:System.Data.SqlClient.SqlConnection.InfoMessage>は **、Errors** <xref:System.Data.SqlClient.SqlInfoMessageEventArgs>プロパティにデータ ソースからのメッセージのコレクションを含むオブジェクトを受け取ります。 このコレクションの**Error**オブジェクトに対して、エラー番号とメッセージ テキスト、およびエラーの原因を照会できます。 .NET Framework Data Provider for SQL Server には、データベースの詳細情報、ストアド プロシージャ、およびメッセージ送信元の行番号も含まれます。  
   
 ### <a name="example"></a>例  
  <xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントのイベント ハンドラーを追加する方法を次のコード サンプルに示します。  
@@ -48,7 +48,7 @@ End Sub
   
 ```csharp  
 // Assumes that connection represents a SqlConnection object.  
-  connection.InfoMessage +=   
+  connection.InfoMessage +=
     new SqlInfoMessageEventHandler(OnInfoMessage);  
   
 protected static void OnInfoMessage(  
@@ -59,7 +59,7 @@ protected static void OnInfoMessage(
     Console.WriteLine(  
   "The {0} has received a severity {1}, state {2} error number {3}\n" +  
   "on line {4} of procedure {5} on server {6}:\n{7}",  
-   err.Source, err.Class, err.State, err.Number, err.LineNumber,   
+   err.Source, err.Class, err.State, err.Number, err.LineNumber,
    err.Procedure, err.Server, err.Message);  
   }  
 }  
@@ -74,9 +74,9 @@ protected static void OnInfoMessage(
 > 重大度レベルが 17 以上のエラーが発生すると、サーバーのコマンド処理が停止します。このエラーは、例外として処理する必要があります。 この場合、<xref:System.Data.SqlClient.SqlConnection.InfoMessage> イベントによるエラー処理の方法にかかわらず例外がスローされます。  
   
 ## <a name="working-with-the-statechange-event"></a>StateChange イベントの使用  
- **StateChange**イベントは、**接続**の状態が変化したときに発生します。 **StateChange**イベントは、 <xref:System.Data.StateChangeEventArgs> **originalstate** **プロパティと**設定されたプロパティを使用して、**接続**の状態の変化を確認できるようにを受け取ります。 **Originalstate**プロパティは、変更<xref:System.Data.ConnectionState>前の**接続**の状態を示す列挙体です。 "状態 **" は、** 変更後の<xref:System.Data.ConnectionState> **接続**の状態を示す列挙体です。  
+ **StateChange**イベントは、**接続**の状態が変更されたときに発生します。 **StateChange**イベントを受<xref:System.Data.StateChangeEventArgs>け取ると **、OriginalState**プロパティと**CurrentState**プロパティを使用して **、接続**の状態の変更を確認できます。 **OriginalState**プロパティは、<xref:System.Data.ConnectionState>変更前の**接続**の状態を示す列挙体です。 **CurrentState**は<xref:System.Data.ConnectionState>、変更後の**接続**の状態を示す列挙体です。  
   
- 次のコード例では、 **StateChange**イベントを使用して、**接続**の状態が変化したときにコンソールにメッセージを書き込みます。  
+ 次のコード例では **、StateChange**イベントを使用して **、接続**の状態が変更されたときにコンソールにメッセージを書き込みます。  
   
 ```vb  
 ' Assumes connection represents a SqlConnection object.  
@@ -96,7 +96,7 @@ End Sub
 // Assumes connection represents a SqlConnection object.  
   connection.StateChange  += new StateChangeEventHandler(OnStateChange);  
   
-protected static void OnStateChange(object sender,   
+protected static void OnStateChange(object sender,
   StateChangeEventArgs args)  
 {  
   Console.WriteLine(  

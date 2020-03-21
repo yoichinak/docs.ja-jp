@@ -15,41 +15,41 @@ helpviewer_keywords:
 ms.assetid: dbab7d90-d515-4dc9-8195-294d5d04bab6
 topic_type:
 - apiref
-ms.openlocfilehash: 1cf3f2b62b388b6c2d6fcd75b1b07a67d5b2e49f
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8b3f7712436c001e5cd44f214f6edb06390abd41
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866703"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79177073"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished メソッド
-アプリケーションドメインが作成されたことをプロファイラーに通知します。  
+アプリケーション ドメインが作成されたことをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT AppDomainCreationFinished(  
     [in] AppDomainID appDomainId,  
-    [in] HRESULT     hrStatus);   
+    [in] HRESULT     hrStatus);
 ```  
   
 ## <a name="parameters"></a>パラメーター
 
 - `appDomainId`
 
-  の \[] は、作成されたドメインを識別します。
+  \[in] 作成されたドメインを識別します。
 
 - `hrStatus`
 
-  \[] アプリケーションドメインの作成が正常に完了したかどうかを示す HRESULT。
+  \[in] アプリケーション ドメインの作成が正常に完了したかどうかを示す HRESULT。
 
-## <a name="remarks"></a>コメント  
- アプリケーション ID は、`AppDomainCreationFinished` メソッドが呼び出されるまで、情報要求に対して有効ではありません。  
+## <a name="remarks"></a>解説  
+ メソッドが呼び出されるまで、アプリケーション ID は`AppDomainCreationFinished`情報要求に対して無効です。  
   
- `AppDomainCreationFinished` コールバックの後も、アプリケーションドメインの読み込みの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、アプリケーションドメインの作成の最初の部分が成功したことのみを示します。  
+ アプリケーション ドメインの読み込みの一部`AppDomainCreationFinished`は、コールバック後も続行される場合があります。 エラー HRESULT`hrStatus`のエラーは、失敗を示します。 ただし、成功した HRESULT`hrStatus`は、アプリケーション ドメインの作成の最初の部分が成功したことを示します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   

@@ -12,23 +12,23 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: ba2afb52939a6274978ce725dac19b5622419b99
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6ff20c443519446d3804b325924cb3c5cbedea97
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76735670"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79141927"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>方法 : Windows フォームの CheckBox のクリックに応答する
-ユーザーが Windows フォーム <xref:System.Windows.Forms.CheckBox> コントロールをクリックするたびに、<xref:System.Windows.Forms.Control.Click> イベントが発生します。 チェックボックスの状態に応じて、何らかのアクションを実行するようにアプリケーションをプログラミングできます。  
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>方法 : Windows フォーム CheckBox のクリックに応答する
+ユーザーが Windows フォーム<xref:System.Windows.Forms.CheckBox>コントロールをクリックすると<xref:System.Windows.Forms.Control.Click>、イベントが発生します。 チェック ボックスの状態に応じて、何らかのアクションを実行するようにアプリケーションをプログラムできます。  
   
-### <a name="to-respond-to-checkbox-clicks"></a>チェックボックスのクリックに応答するには  
+### <a name="to-respond-to-checkbox-clicks"></a>チェック ボックスのクリックに応答するには  
   
-1. <xref:System.Windows.Forms.Control.Click> イベントハンドラーで、<xref:System.Windows.Forms.CheckBox.Checked%2A> プロパティを使用してコントロールの状態を確認し、必要な操作を実行します。  
+1. イベント<xref:System.Windows.Forms.Control.Click>ハンドラーで、プロパティを<xref:System.Windows.Forms.CheckBox.Checked%2A>使用してコントロールの状態を確認し、必要なアクションを実行します。  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
-       ' The CheckBox control's Text property is changed each time the   
+       ' The CheckBox control's Text property is changed each time the
        ' control is clicked, indicating a checked or unchecked state.  
        If CheckBox1.Checked = True Then  
           CheckBox1.Text = "Checked"  
@@ -41,7 +41,7 @@ ms.locfileid: "76735670"
     ```csharp  
     private void checkBox1_Click(object sender, System.EventArgs e)  
     {  
-       // The CheckBox control's Text property is changed each time the   
+       // The CheckBox control's Text property is changed each time the
        // control is clicked, indicating a checked or unchecked state.  
        if (checkBox1.Checked)  
        {  
@@ -71,16 +71,16 @@ ms.locfileid: "76735670"
     ```  
   
     > [!NOTE]
-    > ユーザーが <xref:System.Windows.Forms.CheckBox> コントロールをダブルクリックすると、各クリックが個別に処理されます。つまり、<xref:System.Windows.Forms.CheckBox> コントロールでは、ダブルクリックイベントはサポートされません。  
+    > ユーザーが<xref:System.Windows.Forms.CheckBox>コントロールをダブルクリックしようとすると、各クリックが個別に処理されます。つまり、<xref:System.Windows.Forms.CheckBox>コントロールはダブルクリック イベントをサポートしていません。  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.CheckBox.AutoCheck%2A> プロパティが `true` (既定値) の場合、クリックされると <xref:System.Windows.Forms.CheckBox> が自動的に選択またはクリアされます。 それ以外の場合は、<xref:System.Windows.Forms.Control.Click> イベントが発生したときに、<xref:System.Windows.Forms.CheckBox.Checked%2A> プロパティを手動で設定する必要があります。  
+    > プロパティが<xref:System.Windows.Forms.CheckBox.AutoCheck%2A>`true`(既定値) の場合<xref:System.Windows.Forms.CheckBox>は、 がクリックされると、自動的に選択または選択解除されます。 それ以外の場合は、イベント<xref:System.Windows.Forms.CheckBox.Checked%2A>が発生したときに<xref:System.Windows.Forms.Control.Click>プロパティを手動で設定する必要があります。  
   
-     <xref:System.Windows.Forms.CheckBox> コントロールを使用して、一連の操作を決定することもできます。  
+     コントロールを<xref:System.Windows.Forms.CheckBox>使用して、アクションの一覧を決定することもできます。  
   
-### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>チェックボックスがクリックされたときの動作を確認するには  
+### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>チェック ボックスがクリックされたときにアクションのコースを決定するには  
   
-1. Case ステートメントを使用して、<xref:System.Windows.Forms.CheckBox.CheckState%2A> プロパティの値を照会し、アクションの実行を決定します。 <xref:System.Windows.Forms.CheckBox.ThreeState%2A> プロパティが `true`に設定されている場合、<xref:System.Windows.Forms.CheckBox.CheckState%2A> プロパティは、チェックボックスを表す3つの値、チェックボックスをオフにする値、またはチェックボックスが淡色表示され、オプションが使用できないことを示すために淡色表示された状態で表示される3つの不確定状態を返すことができます。  
+1. case ステートメントを使用して、プロパティの値<xref:System.Windows.Forms.CheckBox.CheckState%2A>を照会してアクションの一覧を決定します。 プロパティが<xref:System.Windows.Forms.CheckBox.ThreeState%2A>に`true`設定されている場合、<xref:System.Windows.Forms.CheckBox.CheckState%2A>このプロパティは、チェック ボックス、チェックボックスの選択解除、またはオプションが使用できないことを示す淡色表示でボックスが表示される 3 番目の不確定状態を表す 3 つの可能な値を返す場合があります。  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -91,7 +91,7 @@ ms.locfileid: "76735670"
              ' Code for unchecked state.  
           Case CheckState.Indeterminate  
              ' Code for indeterminate state.  
-       End Select   
+       End Select
     End Sub  
     ```  
   
@@ -133,11 +133,11 @@ ms.locfileid: "76735670"
     ```  
   
     > [!NOTE]
-    > <xref:System.Windows.Forms.CheckBox.ThreeState%2A> プロパティが `true`に設定されている場合、<xref:System.Windows.Forms.CheckBox.Checked%2A> プロパティは <xref:System.Windows.Forms.CheckState.Checked> と <xref:System.Windows.Forms.CheckState.Indeterminate>の両方に対して `true` を返します。  
+    > プロパティが<xref:System.Windows.Forms.CheckBox.ThreeState%2A>に`true`設定されている場合、<xref:System.Windows.Forms.CheckBox.Checked%2A>プロパティは`true`、<xref:System.Windows.Forms.CheckState.Checked>と<xref:System.Windows.Forms.CheckState.Indeterminate>の両方に対して返されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)
-- [方法: Windows フォームの CheckBox コントロールでオプションを設定する](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [CheckBox コントロール](checkbox-control-windows-forms.md)
+- [方法 : Windows フォームの CheckBox コントロールでオプションを設定する](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [チェック ボックス コントロール](checkbox-control-windows-forms.md)

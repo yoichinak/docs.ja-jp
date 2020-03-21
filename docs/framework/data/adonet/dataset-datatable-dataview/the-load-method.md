@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: da0695aff9447355b1fc44a033c1b4a1cc224435
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f1c819333225c22efb85946001a1fc8340d57989
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70785886"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150728"
 ---
 # <a name="the-load-method"></a>Load メソッド
-<xref:System.Data.DataTable.Load%2A> メソッドを使用して、データ ソースの行を <xref:System.Data.DataTable> に読み込むことができます。 これはオーバーロードされたメソッドであり、最も単純な形式で、1つのパラメーターである**DataReader**を受け取ります。 この形式では、単に行を含む**DataTable**が読み込まれます。 必要に応じて、 **LoadOption**パラメーターを指定して、データを**DataTable**に追加する方法を制御できます。  
+<xref:System.Data.DataTable.Load%2A> メソッドを使用して、データ ソースの行を <xref:System.Data.DataTable> に読み込むことができます。 これは、最も単純な形式で、単一のパラメーター **DataReader**を受け取るオーバーロードされたメソッドです。 このフォームでは、単に行を**含む DataTable を**読み込みます。 必要に応じて、データを**DataTable**に追加する方法を制御する**LoadOption**パラメーターを指定できます。  
   
- **LoadOption**パラメーターは、 **DataTable**に既にデータ行が含まれている場合に特に便利です。これは、データソースからの受信データをテーブル内の既存のデータと結合する方法を記述するためです。 たとえば、 **PreserveCurrentValues** (既定値) は、行が**DataTable**に**追加さ**れたとしてマークされている場合に、**元**の値または各列がデータソースの一致する行の内容に設定されることを指定します。 **現在**の値は、行が追加されたときに割り当てられた値を保持し、その行の**RowState**は**Changed**に設定されます。  
+ **LoadOption**パラメーターは、データ ソースからの入力データとテーブル内の既存のデータを結合する方法を記述するため **、DataTable**に既にデータ行が含まれている場合に特に便利です。 たとえば **、PreserveCurrentValues** (既定値) では、行が**DataTable**で**追加**済みとしてマークされている場合、**元**の値または各列がデータ ソースの一致する行の内容に設定されるように指定します。 **Current**値は、行が追加されたときに割り当てられた値を保持し、行の**RowState**が**変更**に設定されます。  
   
  <xref:System.Data.LoadOption> 列挙値の簡単な説明を次の表に示します。  
   
 |LoadOption の値|説明|  
 |----------------------|-----------------|  
-|**OverwriteRow**|受信した行の**PrimaryKey**値が**DataTable**に既に存在する行と同じ場合、各列の**元**の値と**現在**の値は、受信した行の値に置き換えられ、 **RowState**プロパティはに設定されます。**変更なし**。<br /><br /> **DataTable**にまだ存在しないデータソースからの行は、 **RowState**値が**Unchanged のまま**追加されます。<br /><br /> このオプションを有効にすると、データソースの内容と一致するように**DataTable**の内容が更新されます。|  
-|**PreserveCurrentValues (既定値)**|入力方向の行の**PrimaryKey**値が**DataTable**に既に存在する行と同じ場合、**元**の値は受信した行の内容に設定され、**現在**の値は変更されません。<br /><br /> **RowState**が**追加**または**変更**されると、 **[変更済み]** に設定されます。<br /><br /> **RowState**が**削除**された場合、**削除**されたままになります。<br /><br /> **DataTable**にまだ存在しないデータソースからの行が追加され、 **RowState**は**Unchanged**に設定されます。|  
-|**UpdateCurrentValues**|受信した行の**PrimaryKey**値が**DataTable**内の既存の行と同じ場合、**現在**の値が**元**の値にコピーされ、**現在**の値が受信した行の内容に設定されます。<br /><br /> **DataTable**の**RowState**が**追加**された場合、 **RowState**は**追加さ**れたままになります。 **変更**または**削除済み**としてマークされた行については、 **RowState**が**変更**されます。<br /><br /> **DataTable**に存在しないデータソースの行が追加され、 **RowState**が**追加**されるように設定されます。|  
+|**OverwriteRow**|受信行が**DataTable**内の行と同じ**主キー**値を持つ場合、各列の**元**の値と**現在**の値は、入力行の値に置き換えられ **、RowState**プロパティは**Unchanged**に設定されます。<br /><br /> データ ソースの行のうち、**データ テーブル**に存在しない行は **、RowState**値が **[未変更]** の値で追加されます。<br /><br /> このオプションは、データ ソースの内容と一致するように**DataTable**の内容を更新します。|  
+|**PreserveCurrentValues (既定値)**|受信行が**DataTable**内の行と同じ**主キー**値を持つ場合、**元**の値は受信行の内容に設定され、**現在**の値は変更されません。<br /><br /> **RowState**が **[追加]** または **[変更済み**] の場合は、**変更済**みに設定されます。<br /><br /> **RowState**が**削除された**場合は、**削除された**ままになります。<br /><br /> データ ソースの行が追加され、**データ テーブル**に存在しない行が追加され **、RowState**が**未変更**に設定されます。|  
+|**UpdateCurrentValues**|受信行が**DataTable**内の既に存在する行と同じ**主キー**値を持つ場合 **、現在**の値は**元**の値にコピーされ、**現在**の値は、受信行の内容に設定されます。<br /><br /> **データ テーブル**の**RowState**が**追加**された場合 **、RowState**は**追加された**ままになります。 **更新または****削除済**みとしてマークされた行の**場合、RowState**は**変更済み**になります。<br /><br /> データ ソースの行が追加され、**データ テーブル**に存在しない、 **RowState**が**追加に**設定されます。|  
   
- 次のサンプルでは、 **Load**メソッドを使用して、 **Northwind**データベース内の従業員の誕生日の一覧を表示します。  
+ 次のサンプルでは **、Load**メソッドを使用して **、Northwind**データベース内の従業員の誕生日の一覧を表示します。  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -35,7 +35,7 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
       " FROM dbo.Employees " & _  
       "ORDER BY BirthDate, LastName, FirstName"  
   
-    ' Open and fill a DataSet.   
+    ' Open and fill a DataSet.
     Dim adapter As SqlDataAdapter = New SqlDataAdapter( _  
         queryString, connectionString)  
     Dim employees As New DataSet  

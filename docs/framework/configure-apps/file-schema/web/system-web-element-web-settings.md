@@ -8,18 +8,18 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: 5c5c857d4494b6d78b819e56bae4213abc5e2035
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: b37b05bdf90630251cbfcf86751243a3a8b77663
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71699091"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152842"
 ---
-# <a name="systemweb-element-web-settings"></a>\<system.web > 要素 (Web 設定)
-ASP.NET ホスティングレイヤーがプロセス全体の動作をどのように管理するかについて説明します。  
+# <a name="systemweb-element-web-settings"></a>\<要素> (Web 設定)
+ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方法に関する情報が含まれています。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp; **\<system.web >**  
+[**\<構成>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<ウェブ>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,40 +28,40 @@ ASP.NET ホスティングレイヤーがプロセス全体の動作をどのよ
 </system.web>  
 ```  
   
-## <a name="attributes-and-elements"></a>属性と要素  
+## <a name="attributes-and-elements"></a>属性および要素  
 
-次のセクションでは、属性、子要素、親要素について説明します。  
+以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
 
-[なし]。  
+[なし] :  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<applicationPool>](applicationpool-element-web-settings.md)|Aspnet ファイル内の IIS アプリケーションプールの構成設定を指定します。|  
+|[\<アプリケーションプール>](applicationpool-element-web-settings.md)|aspnet.config ファイル内の IIS アプリケーション プールの構成設定を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素を指定します。|  
+|[\<構成>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素を指定します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
 
-`system.web` 要素とその子 `applicationPool` 要素が .NET Framework 3.5 SP1 の .NET Framework に追加されました。 IIS 7.0 以降のバージョンを統合モードで実行すると、この要素の組み合わせによって、ASP.NET がどのようにスレッドを管理し、ASP.NET が IIS アプリケーションプールでホストされている場合の要求をキューに配置するかを構成できます。 IIS 7.0 以降のバージョンをクラシックモードまたは ISAPI モードで実行した場合、これらの設定は無視されます。  
+要素`system.web`とその子`applicationPool`要素は、.NET Framework 3.5 SP1 の時点で .NET Framework に追加されました。 統合モードで IIS 7.0 以降のバージョンを実行すると、この要素の組み合わせによって、ASP.NETがスレッドを管理する方法と、iIS アプリケーション プールでホストされている場合の要求ASP.NETキューに追加する方法を構成できます。 クラシック モードまたは ISAPI モードで IIS 7.0 以降のバージョンを実行する場合、これらの設定は無視されます。  
   
 ## <a name="example"></a>例  
 
-次の例は、ASP.NET が IIS アプリケーションプールでホストされている場合に、ASP.NET ファイルでプロセス全体の動作を構成する方法を示しています。 この例では、IIS が統合モードで実行されており、アプリケーションが .NET Framework 3.5 SP1 以降のバージョンを使用していることを前提としています。 この動作は、.NET Framework 3.5 SP1 より前のバージョンの .NET Framework では発生しません。 この例の値は既定値です。  
+次の例は ASP.NET、iIS アプリケーション プールでASP.NETがホストされている場合に、aspnet.config ファイルでプロセス全体の動作を構成する方法を示ASP.NET。 この例では、IIS が統合モードで実行されており、アプリケーションが .NET Framework 3.5 SP1 以降のバージョンを使用していることを前提としています。 この現象は、.NET Framework 3.5 SP1 より前のバージョンの .NET Framework では発生しません。 この例の値はデフォルト値です。  
   
 ```xml  
 <configuration>  
   <system.web>  
-    <applicationPool   
-        maxConcurrentRequestsPerCPU="5000"   
-        maxConcurrentThreadsPerCPU="0"   
+    <applicationPool
+        maxConcurrentRequestsPerCPU="5000"
+        maxConcurrentThreadsPerCPU="0"
         requestQueueLimit="5000" />  
   </system.web>  
 </configuration>  
@@ -71,11 +71,11 @@ ASP.NET ホスティングレイヤーがプロセス全体の動作をどのよ
   
 |||  
 |-|-|  
-|Namespace||  
+|名前空間||  
 |スキーマ名||  
 |検証ファイル||  
-|空にすることができます||  
+|空にできる||  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [\<applicationPool> 要素 (Web 設定)](applicationpool-element-web-settings.md)
+- [\<アプリケーションプール>要素 (Web 設定)](applicationpool-element-web-settings.md)

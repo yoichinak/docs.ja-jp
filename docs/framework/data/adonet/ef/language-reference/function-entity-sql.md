@@ -2,12 +2,12 @@
 title: FUNCTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 0bb88992-37ed-4991-ace5-55be612a2c4d
-ms.openlocfilehash: bacc773351812a5db60f493f3025c8e4b07dbaa2
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: fd7f484733e7135d2d6c8094b6527d672a988088
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71833798"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150299"
 ---
 # <a name="function-entity-sql"></a>FUNCTION (Entity SQL)
 Entity SQL クエリ コマンドのスコープに関数を定義します。  
@@ -16,21 +16,21 @@ Entity SQL クエリ コマンドのスコープに関数を定義します。
   
 ```sql  
 FUNCTION function-name  
-( [ { parameter_name <type_definition>   
+( [ { parameter_name <type_definition>
         [ ,...n ]  
   ]  
-) AS ( function_expression )   
+) AS ( function_expression )
   
 <type_definition>::=  
-    { data_type | COLLECTION ( <type_definition> )   
-                | REF ( data_type )   
-                | ROW ( row_expression )   
-        }   
+    { data_type | COLLECTION ( <type_definition> )
+                | REF ( data_type )
+                | ROW ( row_expression )
+        }
 ```  
   
 ## <a name="arguments"></a>引数  
  `function-name`  
- 関数名。  
+ 関数の名前です。  
   
  `parameter-name`  
  関数のパラメーター名。  
@@ -41,16 +41,16 @@ FUNCTION function-name
  `data_type`  
  サポートされる型の名前。  
   
- コレクション (< type_definition`>`)  
+ コレクション (`>` <type_definition )  
  サポートされる型、行、または参照のコレクションを返す式。  
   
- REF **(** `data_type` **)**  
+ REF **(**`data_type`**)**  
  エンティティ型への参照を返す式。  
   
- ROW **(** `row_expression` **)**  
+ 行 **(**`row_expression`**)**  
  1 つまたは複数の値から構造的に型指定された匿名レコードを返す式。 詳細については、「 [ROW](row-entity-sql.md)」を参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  関数のシグネチャが異なっていれば、名前が同じ複数の関数をインラインで宣言することは可能です。 詳細については、「 [Function Overload Resolution](function-overload-resolution-entity-sql.md)」を参照してください。  
   
  関数がインラインである場合、Entity SQL コマンドに呼び出せるのは、そのコマンド内で定義された後のみです。 ただし、インライン関数を別のインライン関数内で呼び出す場合には、呼び出される関数が定義される前でも後でもかまいません。 次の例では、関数 B が定義される前に、関数 A が関数 B を呼び出しています。  
@@ -75,7 +75,7 @@ FUNCTION function-name
   
  [!code-sql[DP EntityServices Concepts#FUNCTION2](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#function2)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Entity SQL リファレンス](entity-sql-reference.md)
 - [Entity SQL 言語](entity-sql-language.md)

@@ -5,35 +5,35 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99d7a528-7ae4-4d39-a0f9-3066ea237de0
-ms.openlocfilehash: e784e254fb9314e69457d81a70400f7be30d9c13
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: e2aaf1a5e6ae1074a81c08fc798f22ea5e9ce139
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211989"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184611"
 ---
 # <a name="message-security-with-mutual-certificates"></a>メッセージ セキュリティと相互の証明書
-次のシナリオは、メッセージセキュリティモードを使用してセキュリティで保護された Windows Communication Foundation (WCF) サービスとクライアントを示しています。 クライアントとサービスは、証明書を使用して認証されます。  
+次のシナリオは、メッセージ セキュリティ モードを使用してセキュリティで保護された Windows 通信基盤 (WCF) サービスとクライアントを示しています。 クライアントとサービスは、証明書を使用して認証されます。  
   
  このシナリオは、X.509 証明書トークン プロファイルと共に WS-Security を使用するため、相互運用性があります。  
   
 > [!NOTE]
 > このシナリオでは、サービス証明書のネゴシエーションは実行されません。 通信を開始する前に、サービス証明書をクライアントに提供しておく必要があります。 サーバー証明書は、アプリケーションと共に配布したり、帯域外通信で提供できます。  
   
- ![相互証明書を使用したメッセージセキュリティ](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
+ ![相互証明書を使用したメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/media/f4157312-b17c-416c-a5ee-fa7b54db211b.gif "f4157312-b17c-416c-a5ee-fa7b54db211b")  
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|[メッセージ]|  
+|セキュリティ モード|Message|  
 |相互運用性|○ WS-Security および X.509 証明書トークン プロファイルと互換性があるクライアントとサービスで相互運用性があります。|  
 |認証|サーバーとクライアントの相互認証|  
-|整合性|○|  
-|機密性|○|  
-|Transport|HTTP|  
-|バインディング|<xref:System.ServiceModel.WSHttpBinding>|  
+|整合性|はい|  
+|機密情報|はい|  
+|トランスポート|HTTP|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>サービス  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "76211989"
  [!code-csharp[C_SecurityScenarios#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#13)]
  [!code-vb[C_SecurityScenarios#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#13)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  コードの代わりに次の構成を使用して、同じサービスを作成できます。  
   
 ```xml  
@@ -56,18 +56,18 @@ ms.locfileid: "76211989"
       <serviceBehaviors>  
         <behavior name="serviceCredentialBehavior">  
           <serviceCredentials>  
-            <serviceCertificate findValue="Contoso.com"   
+            <serviceCertificate findValue="Contoso.com"
                                 storeLocation="LocalMachine"  
-                                storeName="My"   
+                                storeName="My"
                                 x509FindType="FindBySubjectName" />  
           </serviceCredentials>  
         </behavior>  
       </serviceBehaviors>  
     </behaviors>  
     <services>  
-      <service behaviorConfiguration="serviceCredentialBehavior"   
+      <service behaviorConfiguration="serviceCredentialBehavior"
                name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
+        <endpoint address="http://localhost/Calculator"
                   binding="wsHttpBinding"  
                   bindingConfiguration="InteropCertificateBinding"  
                   name="WSHttpBinding_ICalculator"  
@@ -90,12 +90,12 @@ ms.locfileid: "76211989"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+## <a name="client"></a>Client  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
-- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 例:  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -106,8 +106,8 @@ ms.locfileid: "76211989"
  [!code-csharp[C_SecurityScenarios#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#20)]
  [!code-vb[C_SecurityScenarios#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#20)]  
   
-### <a name="configuration"></a>の構成  
- 次のコードは、クライアントを構成します。 クライアント証明書は、 [\<clientCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)を使用して指定する必要があります。 また、サービス証明書は[\<defaultcertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)を使用して指定されます。  
+### <a name="configuration"></a>構成  
+ 次のコードは、クライアントを構成します。 クライアント証明書は、[\<クライアント証明書>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)を使用して指定する必要があります。 また、サービス証明書は[\<defaultcertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)を使用して指定されます。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -117,12 +117,12 @@ ms.locfileid: "76211989"
       <endpointBehaviors>  
         <behavior name="ClientCredentialsBehavior">  
           <clientCredentials>  
-            <clientCertificate findValue="Cohowinery.com"   
+            <clientCertificate findValue="Cohowinery.com"
                  storeLocation="CurrentUser"  
                  storeName="My"  
                  x509FindType="FindBySubjectName" />  
             <serviceCertificate>  
-              <defaultCertificate findValue="Contoso.com"   
+              <defaultCertificate findValue="Contoso.com"
                                   storeLocation="CurrentUser"  
                                   storeName="TrustedPeople"  
                                   x509FindType="FindBySubjectName" />  
@@ -135,7 +135,7 @@ ms.locfileid: "76211989"
       <wsHttpBinding>  
         <binding name="WSHttpBinding_ICalculator" >  
           <security mode="Message">  
-            <message clientCredentialType="Certificate"   
+            <message clientCredentialType="Certificate"
                      negotiateServiceCredential="false"  
                      establishSecurityContext="false" />  
           </security>  
@@ -143,9 +143,9 @@ ms.locfileid: "76211989"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="http://machineName/Calculator"   
+      <endpoint address="http://machineName/Calculator"
                 behaviorConfiguration="ClientCredentialsBehavior"  
-                binding="wsHttpBinding"   
+                binding="wsHttpBinding"
                 bindingConfiguration="WSHttpBinding_ICalculator"  
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator">  
@@ -161,5 +161,5 @@ ms.locfileid: "76211989"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
-- [方法: 開発時にトランスポートセキュリティのために WCF で一時的な証明書を作成およびインストールする](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [方法: 開発中にトランスポート セキュリティを確保するために WCF で一時証明書を作成およびインストールする](https://docs.microsoft.com/previous-versions/msp-n-p/ff648498(v=pandp.10))

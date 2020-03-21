@@ -15,58 +15,58 @@ helpviewer_keywords:
 ms.assetid: c5e6216f-ae3d-4697-9688-66b69c1251ec
 topic_type:
 - apiref
-ms.openlocfilehash: beb697d80417b937876a0887e4376341185a47d9
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: dae4a36537eeac58ffb17ebc1b78d935ec807cd8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74447209"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79175981"
 ---
 # <a name="imetadataassemblyimportgetfileprops-method"></a>IMetaDataAssemblyImport::GetFileProps メソッド
-指定したメタデータシグネチャを持つファイルのプロパティを取得します。  
+指定したメタデータ シグネチャを持つファイルのプロパティを取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetFileProps (  
-    [in]  mdFile      mdf,   
-    [out] LPWSTR      szName,   
-    [in]  ULONG       cchName,   
-    [out] ULONG       *pchName,   
-    [out] const void  **ppbHashValue,   
-    [out] ULONG       *pcbHashValue,   
+    [in]  mdFile      mdf,
+    [out] LPWSTR      szName,
+    [in]  ULONG       cchName,
+    [out] ULONG       *pchName,
+    [out] const void  **ppbHashValue,
+    [out] ULONG       *pcbHashValue,
     [out] DWORD       *pdwFileFlags  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `mdf`  
- からプロパティを取得する対象のファイルを表す `mdFile` メタデータトークン。  
+ [in]プロパティ`mdFile`を取得する対象のファイルを表すメタデータ トークン。  
   
  `szName`  
- 入出力ファイルの簡易名。  
+ [アウト]ファイルの簡易名。  
   
  `cchName`  
- から`szName`のサイズ (ワイド文字単位)。  
+ [in]のサイズ、ワイド文字で`szName`、 のサイズ。  
   
  `pchName`  
- 入出力`szName`に実際に返されるワイド文字数。  
+ [アウト]で実際に返されたワイド文字の`szName`数。  
   
  `ppbHashValue`  
- 入出力ハッシュ値へのポインター。 これは、ファイルの SHA-1 アルゴリズムを使用したハッシュです。  
+ [アウト]ハッシュ値へのポインター。 これは、SHA-1 アルゴリズムを使用したファイルのハッシュです。  
   
  `pcbHashValue`  
- 入出力返されたハッシュ値のワイド文字の数。  
+ [アウト]返されたハッシュ値のワイド文字の数。  
   
  `pdwFileFlags`  
- 入出力ファイルに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つまたは複数の[Corfileflags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)値を組み合わせたものです。  
+ [アウト]ファイルに適用されるメタデータを記述するフラグへのポインター。 フラグ値は、1 つ以上の[CorFileFlags](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)値の組み合わせです。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[「システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Cor  
+ **ヘッダー:** コル・h  
   
- **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
+ **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

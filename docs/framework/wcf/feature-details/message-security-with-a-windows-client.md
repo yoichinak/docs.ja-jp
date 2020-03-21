@@ -5,31 +5,31 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: d3c1661acf4d4aa2de8b6eca7015c74ba7f80af1
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212012"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184625"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows クライアントとのメッセージ セキュリティ
-このシナリオは、メッセージセキュリティモードによってセキュリティ保護された Windows Communication Foundation (WCF) クライアントおよびサーバーを示しています。 クライアントとサービスは、Windows 資格情報を使用して認証します。  
+このシナリオでは、メッセージ セキュリティ モードによってセキュリティで保護された Windows 通信基盤 (WCF) クライアントとサーバーを示します。 クライアントとサービスは、Windows 資格情報を使用して認証します。  
   
- ![Windows クライアントを使用したメッセージセキュリティ](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Windows クライアントによるメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|[メッセージ]|  
+|セキュリティ モード|Message|  
 |相互運用性|WCF のみ|  
 |認証 (サーバー)|サーバーとクライアントの相互認証|  
 |認証 (クライアント)|サーバーとクライアントの相互認証|  
 |整合性|はい、共有のセキュリティ コンテキストを使用します|  
-|機密性|はい、共有のセキュリティ コンテキストを使用します|  
-|Transport|NET.TCP|  
-|バインディング|<xref:System.ServiceModel.NetTcpBinding>|  
+|機密情報|はい、共有のセキュリティ コンテキストを使用します|  
+|トランスポート|NET.TCP|  
+|バインド|<xref:System.ServiceModel.NetTcpBinding>|  
   
 ## <a name="service"></a>サービス  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "76212012"
  [!code-csharp[C_SecurityScenarios#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#11)]
  [!code-vb[C_SecurityScenarios#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#11)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  コードの代わりに次の構成を使用して、サービスをセットアップできます。  
   
 ```xml  
@@ -72,12 +72,12 @@ ms.locfileid: "76212012"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+## <a name="client"></a>Client  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
-- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 例:  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -88,7 +88,7 @@ ms.locfileid: "76212012"
  [!code-csharp[C_SecurityScenarios#18](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#18)]
  [!code-vb[C_SecurityScenarios#18](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#18)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  次の構成を使用してクライアントのプロパティを設定します。  
   
 ```xml  
@@ -105,11 +105,11 @@ ms.locfileid: "76212012"
       </netTcpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="net.tcp://machineName:8008/Calculator"   
+      <endpoint address="net.tcp://machineName:8008/Calculator"
                 binding="netTcpBinding"  
                 bindingConfiguration="NetTcpBinding_ICalculator"  
                 contract="ICalculator"  
-                name="NetTcpBinding_ICalculator">          
+                name="NetTcpBinding_ICalculator">
       </endpoint>  
     </client>  
   </system.serviceModel>  
@@ -119,4 +119,4 @@ ms.locfileid: "76212012"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

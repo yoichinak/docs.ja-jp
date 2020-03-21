@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: c2b6be79855955887988378b9fcffe1891520d68
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 6fc54bb9e38768e390201ea77243d3df4cd67f10
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980263"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151742"
 ---
 # <a name="code-access-security-and-adonet"></a>コード アクセス セキュリティと ADO.NET
 .NET Framework はコード アクセス セキュリティ (CAS) に加えてロール ベースのセキュリティを備えています。どちらも、共通言語ランタイム (CLR) が提供する共通のインフラストラクチャを使って実装されています。 アンマネージ コードの場合、ほとんどのアプリケーションはユーザーまたはプリンシパルの権限で実行されます。 そのため、悪意のあるソフトウェアやエラーを含むソフトウェアが、システム特権を持つユーザーによって実行された場合、コンピューター システムが被害を受けたり、機密データが改ざんされる可能性があります。  
@@ -23,7 +23,7 @@ ms.locfileid: "76980263"
  CLR は、そのコードに許されている操作の範囲内で実行を許可します。 コードは権限を要求できますが、その要求は管理者が設定したセキュリティ ポリシーに基づいて受理されます。  
   
 > [!NOTE]
-> CLR で実行されるコード自体に、アクセス許可を与えることはできません。 たとえば、コードから要求できる権限は、セキュリティ ポリシーによって許可されたレベルよりも低い権限だけであり、それを超える権限が付与されることはありません。 権限を付与する場合は、まず、権限をまったく付与しない状態から始め、その後で、実行しようとする特定のタスクに必要な最小限の権限を追加してゆくようにします。 すべての権限を与えてから、不要なものを 1 つずつ拒否していく方法では、アプリケーションを危険にさらす結果となります。必要以上の権限を付与することによって意図しないセキュリティ ホールを招く可能性があります。 詳細については、「[セキュリティポリシーの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100))」および「[セキュリティポリシーの管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))」を参照してください。  
+> CLR で実行されるコード自体に、アクセス許可を与えることはできません。 たとえば、コードから要求できる権限は、セキュリティ ポリシーによって許可されたレベルよりも低い権限だけであり、それを超える権限が付与されることはありません。 権限を付与する場合は、まず、権限をまったく付与しない状態から始め、その後で、実行しようとする特定のタスクに必要な最小限の権限を追加してゆくようにします。 すべての権限を与えてから、不要なものを 1 つずつ拒否していく方法では、アプリケーションを危険にさらす結果となります。必要以上の権限を付与することによって意図しないセキュリティ ホールを招く可能性があります。 詳細については、「 セキュリティ ポリシーとセキュリティ ポリシー[管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))[の構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7c9c2y1w(v=vs.100))」を参照してください。  
   
  コードのアクセス権限には、次の 3 種類があります。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "76980263"
   
  ランタイムのセキュリティ システムは、特定のリソースへのアクセスまたは特定の操作の実行がコードに許されているかどうかを判断するため、呼び出し履歴をたどりながら、各呼び出し元に付与されている権限と、要求されている権限とを比較します。 呼び出し履歴に、要求された権限を持たない呼び出し元が 1 つでも見つかった場合、<xref:System.Security.SecurityException> がスローされてアクセスが拒否されます。  
   
-### <a name="requesting-permissions"></a>アクセス許可の要求  
+### <a name="requesting-permissions"></a>権限の要求  
  権限を要求する目的は、そのアプリケーションを実行するために必要な権限をランタイムに伝えると共に、実際に必要な権限以外は付与されないようにすることです。 たとえば、ローカル ディスクにデータを書き込むアプリケーションは <xref:System.Security.Permissions.FileIOPermission> を必要とします。 この権限が付与されていない場合、アプリケーションがディスクへの書き込みを試行した時点で実行に失敗します。 ただし、アプリケーションから `FileIOPermission` を要求した場合、その権限が付与されなければ、最初の段階で例外が生成され、アプリケーションが読み込まれることはありません。  
   
  ディスクからのデータの読み取りだけを必要とするアプリケーションでは、書き込み権限が決して付与されないように要求できます。 バグが存在していたり、悪意のある攻撃を受けたとしても、操作の対象となるデータに損害を与えることはありません。 詳細については、「[アクセス許可の要求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/yd267cce(v=vs.100))」を参照してください。  
@@ -47,7 +47,7 @@ ms.locfileid: "76980263"
   
  CLR にはマネージド コードに制限を適用するためのメカニズムが、権限を使用することによって実装されています。 ロール ベースのセキュリティ権限により、ユーザー (またはユーザーのために行動するエージェント) が特定の ID を持っているかどうか、または特定のロールに所属しているかどうかを検出するメカニズムが実現されます。 詳細については、「[セキュリティのアクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5ba4k1c5(v=vs.100))」を参照してください。  
   
- 開発しているアプリケーションの種類によっては、データベースに対するロール ベースの権限の実装も考慮する必要があります。 SQL Server のロールベースセキュリティの詳細については、「 [SQL Server セキュリティ](./sql/sql-server-security.md)」を参照してください。  
+ 開発しているアプリケーションの種類によっては、データベースに対するロール ベースの権限の実装も考慮する必要があります。 SQL Server のロール ベースセキュリティの詳細については、「 [SQL Server セキュリティ](./sql/sql-server-security.md)」を参照してください。  
   
 ## <a name="assemblies"></a>アセンブリ  
  アセンブリは、.NET Framework アプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。 アセンブリは、互いに連携して動作するように作成された一連の型やリソースを提供し、"機能" の論理上の単位を成すものです。 CLR から見て、型がアセンブリのコンテキスト外に存在することはありません。 アセンブリの作成と配置の詳細については、「[アセンブリを使用したプログラミング](../../../standard/assembly/program.md)」を参照してください。  
@@ -69,32 +69,32 @@ ms.locfileid: "76980263"
   
 |アクセス許可属性プロパティ|説明|  
 |-----------------------------------|-----------------|  
-|`Action`|セキュリティ アクションを取得または設定します。 <xref:System.Security.Permissions.SecurityAttribute> から継承されます。|  
-|`AllowBlankPassword`|接続文字列内で空白のパスワードの使用を許可または禁止します。 有効な値は、空白のパスワードの使用を許可する `true` および空白のパスワードの使用を禁止する `false` です。 <xref:System.Data.Common.DBDataPermissionAttribute> から継承されます。|  
-|`ConnectionString`|使用できる接続文字列を指定します。 複数の接続文字列を指定できます。 **注:** 接続文字列にユーザー ID またはパスワードを含めないでください。 このリリースでは、.NET Framework 構成ツールを使用して接続文字列制限を変更することはできません。 <br /><br /> <xref:System.Data.Common.DBDataPermissionAttribute> から継承されます。|  
-|`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列パラメーターが、フォームで識別される *\<パラメーター名>=* します。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:** `KeyRestrictions`を指定せず、`KeyRestrictionBehavior` プロパティを `AllowOnly` または `PreventUsage`に設定した場合、追加の接続文字列パラメーターは許可されません。 <xref:System.Data.Common.DBDataPermissionAttribute> から継承されます。|  
-|`KeyRestrictionBehavior`|接続文字列パラメーターが、追加を許可された唯一の接続文字列パラメーター (`AllowOnly`) か、または追加を禁止された接続文字列パラメーター (`PreventUsage`) かを指定します。 `AllowOnly` が既定値です。 <xref:System.Data.Common.DBDataPermissionAttribute> から継承されます。|  
-|`TypeID`|派生クラスで実装すると、この属性の一意の識別子を取得します。 <xref:System.Attribute> から継承されます。|  
-|`Unrestricted`|このリソースに対する無制限のアクセス許可が宣言されているかどうかを示します。 <xref:System.Security.Permissions.SecurityAttribute> から継承されます。|  
+|`Action`|セキュリティ アクションを取得または設定します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
+|`AllowBlankPassword`|接続文字列内で空白のパスワードの使用を許可または禁止します。 有効な値は、空白のパスワードの使用を許可する `true` および空白のパスワードの使用を禁止する `false` です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`ConnectionString`|使用できる接続文字列を指定します。 複数の接続文字列を指定できます。 **注:** 接続文字列にユーザー ID やパスワードを含めるのは使用しないでください。 このリリースでは、.NET Framework 構成ツールを使用して接続文字列制限を変更することはできません。 <br /><br /> このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`KeyRestrictions`|許可または禁止する接続文字列パラメーターを指定します。 接続文字列のパラメータは、フォーム*\<パラメータ名>=* で識別されます。 セミコロン (;) で区切って、複数のパラメーターを指定できます。 **注:** を指定`KeyRestrictions`せず、プロパティを または`KeyRestrictionBehavior``AllowOnly``PreventUsage`に設定した場合、追加の接続文字列パラメーターは使用できません。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`KeyRestrictionBehavior`|接続文字列パラメーターが、追加を許可された唯一の接続文字列パラメーター (`AllowOnly`) か、または追加を禁止された接続文字列パラメーター (`PreventUsage`) かを指定します。 `AllowOnly` は既定値です。 このプロパティは、<xref:System.Data.Common.DBDataPermissionAttribute> から継承されています。|  
+|`TypeID`|派生クラスで実装すると、この属性の一意の識別子を取得します。 このプロパティは、<xref:System.Attribute> から継承されています。|  
+|`Unrestricted`|このリソースに対する無制限のアクセス許可が宣言されているかどうかを示します。 このプロパティは、<xref:System.Security.Permissions.SecurityAttribute> から継承されています。|  
   
 #### <a name="connectionstring-syntax"></a>ConnectionString の構文  
- 次の例では、特定の接続文字列のみ使用できるようにするために、構成ファイルの `connectionStrings` 要素を使用する方法を示しています。 構成ファイルからの接続文字列の格納と取得の詳細については、「[接続文字列](connection-strings.md)」を参照してください。  
+ 次の例では、特定の接続文字列のみ使用できるようにするために、構成ファイルの `connectionStrings` 要素を使用する方法を示しています。 構成ファイルからの[接続文字列](connection-strings.md)の格納と取得の詳細については、「接続文字列」を参照してください。  
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;" />  
 </connectionStrings>  
 ```  
   
 #### <a name="keyrestrictions-syntax"></a>KeyRestrictions の構文  
- 次の例では、同じ接続文字列を有効にし、`Encrypt` と `Packet Size` の接続文字列オプションを使用できるようにしますが、その他の接続文字列オプションの使用は制限します。  
+ 次の例では、同じ接続文字列を有効に`Encrypt`し、 および`Packet Size`接続文字列オプションの使用を有効にしますが、その他の接続文字列オプションの使用は制限されています。  
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="Encrypt=;Packet Size=;"  
     KeyRestrictionBehavior="AllowOnly" />  
@@ -106,8 +106,8 @@ ms.locfileid: "76980263"
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="User Id=;Password=;Persist Security Info=;"  
     KeyRestrictionBehavior="PreventUsage" />  
@@ -119,27 +119,27 @@ ms.locfileid: "76980263"
   
 ```xml  
 <connectionStrings>  
-  <add name="DatabaseConnection"   
-    connectionString="Data Source=(local);Initial   
+  <add name="DatabaseConnection"
+    connectionString="Data Source=(local);Initial
     Catalog=Northwind;Integrated Security=true;"  
     KeyRestrictions="Initial Catalog;Connection Timeout=;  
-       Encrypt=;Packet Size=;"   
+       Encrypt=;Packet Size=;"
     KeyRestrictionBehavior="AllowOnly" />  
   
-  <add name="DatabaseConnection2"   
-    connectionString="Data Source=SqlServer2;Initial   
+  <add name="DatabaseConnection2"
+    connectionString="Data Source=SqlServer2;Initial
     Catalog=Northwind2;Integrated Security=true;"  
     KeyRestrictions="Initial Catalog;Connection Timeout=;  
-       Encrypt=;Packet Size=;"   
+       Encrypt=;Packet Size=;"
     KeyRestrictionBehavior="AllowOnly" />  
 </connectionStrings>  
 ```  
   
 ### <a name="enabling-partial-trust-with-a-custom-permission-set"></a>カスタム アクセス許可セットを使用した Partial Trust の有効化  
- 特定のゾーンに対して <xref:System.Data.SqlClient> アクセス許可を有効にするには、システム管理者がカスタム アクセス許可セットを作成して、目的のゾーンに指定する必要があります。 `LocalIntranet` などの既定のアクセス許可セットは変更できません。 たとえば、`LocalIntranet`の <xref:System.Security.Policy.Zone> を持つコードに対する <xref:System.Data.SqlClient> アクセス許可を追加するには、システム管理者が `LocalIntranet`のアクセス許可セットをコピーし、それを "CustomLocalIntranet" に変更して、<xref:System.Data.SqlClient> アクセス許可を追加し、 [caspol.exe (コードアクセスセキュリティポリシーツール)](../../tools/caspol-exe-code-access-security-policy-tool.md)を使用して customlocalintranet アクセス許可セットをインポートします。  
+ 特定のゾーンに対して <xref:System.Data.SqlClient> アクセス許可を有効にするには、システム管理者がカスタム アクセス許可セットを作成して、目的のゾーンに指定する必要があります。 `LocalIntranet` などの既定のアクセス許可セットは変更できません。 <xref:System.Data.SqlClient>たとえば、<xref:System.Security.Policy.Zone>`LocalIntranet`を持つコードのアクセス許可を含めるには、システム管理者が アクセス許可セット`LocalIntranet`をコピーし、"CustomLocalIntranet" に名前<xref:System.Data.SqlClient>を変更し、アクセス許可を追加し[、Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../tools/caspol-exe-code-access-security-policy-tool.md)を使用`LocalIntranet_Zone`して CustomLocalIntranet アクセス許可セットをインポートし、アクセス許可セットを CustomLocalIntranet に設定します。  
   
 ### <a name="sample-permission-set"></a>サンプル アクセス許可セット  
- 部分信頼のシナリオでの、.NET Framework Data Provider for SQL Server 用アクセス許可セットの例を次に示します。 カスタムアクセス許可セットの作成の詳細については、「 [Caspol.exe を使用したアクセス許可セットの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))」を参照してください。  
+ 部分信頼のシナリオでの、.NET Framework Data Provider for SQL Server 用アクセス許可セットの例を次に示します。 カスタムアクセス許可セットの作成については、「 [Caspol.exe を使用したアクセス許可セットの設定](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/4ybs46y6(v=vs.100))」を参照してください。  
   
 ```xml  
 <PermissionSet class="System.Security.NamedPermissionSet"  
@@ -153,16 +153,16 @@ version="1"
 AllowBlankPassword="False">  
 <add ConnectionString="Data Source=(local);Integrated Security=true;"  
  KeyRestrictions="Initial Catalog=;Connection Timeout=;  
-   Encrypt=;Packet Size=;"   
+   Encrypt=;Packet Size=;"
  KeyRestrictionBehavior="AllowOnly" />  
  </IPermission>  
 </PermissionSet>  
 ```  
   
 ## <a name="verifying-adonet-code-access-using-security-permissions"></a>セキュリティ アクセス許可を使用した ADO.NET コード アクセスの検証  
- 部分信頼のシナリオでは、<xref:System.Data.SqlClient.SqlClientPermissionAttribute> を指定することによって、コード内の特定のメソッドに対する CAS 特権を要求できます。 制限されたセキュリティ ポリシーによって、実際にはその特権が許可されていない場合は、そのコードを実行する前に例外がスローされます。 セキュリティポリシーの詳細については、「セキュリティポリシーの[管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))と[セキュリティポリシーのベストプラクティス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))」を参照してください。  
+ 部分信頼のシナリオでは、<xref:System.Data.SqlClient.SqlClientPermissionAttribute> を指定することによって、コード内の特定のメソッドに対する CAS 特権を要求できます。 制限されたセキュリティ ポリシーによって、実際にはその特権が許可されていない場合は、そのコードを実行する前に例外がスローされます。 セキュリティ ポリシーの詳細については、「[セキュリティ ポリシーの管理とセキュリティ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))[ポリシーのベスト プラクティス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))」を参照してください。  
   
-### <a name="example"></a>使用例  
+### <a name="example"></a>例  
  次のサンプルは、特定の接続文字列を必要とするコードの作成方法を示しています。 このサンプルは、<xref:System.Data.SqlClient> に対する無制限の権限を拒否する機能をシミュレートします。この機能は、実際には、システム管理者が、CAS ポリシーを使用して実装します。  
   
 > [!IMPORTANT]
@@ -177,7 +177,7 @@ AllowBlankPassword="False">
   
 ```output  
 Failed, as expected: <IPermission class="System.Data.SqlClient.  
-SqlClientPermission, System.Data, Version=2.0.0.0,   
+SqlClientPermission, System.Data, Version=2.0.0.0,
   Culture=neutral, PublicKeyToken=b77a5c561934e089" version="1"  
   AllowBlankPassword="False">  
 <add ConnectionString="Data Source=(local);Initial Catalog=  
@@ -197,6 +197,6 @@ Failed, as expected: Request failed.
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET アプリケーションのセキュリティ保護](securing-ado-net-applications.md)
-- [ネイティブコードと .NET Framework コードのセキュリティ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
-- [ロール ベースのセキュリティ](../../../standard/security/role-based-security.md)
+- [ネイティブ コードと .NET Framework コードのセキュリティ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [ロールベースのセキュリティ](../../../standard/security/role-based-security.md)
 - [ADO.NET の概要](ado-net-overview.md)

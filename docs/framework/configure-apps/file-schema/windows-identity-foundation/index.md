@@ -3,16 +3,16 @@ title: Windows Identity Foundation 構成スキーマ
 ms.date: 03/30/2017
 ms.assetid: 4d4f6d76-49a5-4bad-b345-097b2e2844e9
 author: BrucePerlerMS
-ms.openlocfilehash: 8dc58f3dc68ee226228056e457914c9dfa53cca5
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 14d596ae77019932d169e1a84732fb8522bfc46c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70251977"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79152724"
 ---
 # <a name="windows-identity-foundation-configuration-schema"></a>Windows Identity Foundation 構成スキーマ
 
-このセクションのトピックでは、Windows Identity Foundation (WIF) の構成スキーマに関する情報を提供します。 また、フレームワークによって公開されているクラスを介して WIF を使用するようにアプリケーションを構成することもできます。 これらのクラスは、スキーマ内の関連要素を処理するセクションに記載されています。 次に示すのは、WIF 構成スキーマによって公開された基本的な XML タグ構造です。 属性は省略されています。 強調表示したコメントは、スキーマの主要なコンポーネントを示しています。  
+このセクションのトピックでは、Windows Identity Foundation (WIF) の構成スキーマに関する情報を提供します。 フレームワークによって公開されるクラスを通じて WIF を使用するようにアプリケーションを構成することもできます。 これらのクラスは、スキーマ内の関連要素を処理するセクションに記載されています。 次に示すのは、WIF 構成スキーマによって公開された基本的な XML タグ構造です。 属性は省略されています。 強調表示したコメントは、スキーマの主要なコンポーネントを示しています。  
   
 ```xml  
 <configuration>  
@@ -23,23 +23,23 @@ ms.locfileid: "70251977"
                 <sessionSecurityTokenCache />  
                 <tokenReplayCache />  
             </caches>  
-      
+
             <certificateValidation>  
-                <certificateValidator />   
+                <certificateValidator />
             </certificateValidation>  
-      
+
             <claimsAuthenticationManager />  
-      
+
             <claimsAuthorizationManager>  
                 <optionalConfigurationElement>  
             </claimsAuthorizationManager>  
-      
+
             <claimTypeRequired>  
-                <claimType />   
+                <claimType />
             </claimTypeRequired>  
-      
+
             <tokenReplayDetection />  
-      
+
             <!-- Security Token Handler Collection Configuration -->  
             <securityTokenHandlers>  
                 <add>  
@@ -47,9 +47,9 @@ ms.locfileid: "70251977"
                          the following or a custom element -->  
                     <samlSecurityTokenHandlerRequirement>  
                         <nameClaimType>  
-                        <roleClaimType>   
+                        <roleClaimType>
                     </samlSecurityTokenHandlerRequirement>  
-      
+
                     <sessionSecurityTokenHandlerRequirement />  
                     <x509SecurityTokenHandlerRequirement />  
                     <userNameSecurityTokenHandlerRequirement />  
@@ -62,16 +62,16 @@ ms.locfileid: "70251977"
                         <clear>  
                         <remove>  
                     </audienceUris>  
-      
+
                     <caches>  
                         <sessionSecurityTokenCache />  
                         <tokenReplayCache />  
                     </caches>  
-      
+
                     <certificateValidation>  
-                        <certificateValidator>   
+                        <certificateValidator>
                     </certificateValidation>  
-      
+
                     <issuerNameRegistry>  
                         <!-- Can take an optional configuration element which can be   
                              the <trustedIssuers> element to configure a configuration-based  
@@ -82,7 +82,7 @@ ms.locfileid: "70251977"
                             <remove>  
                         </trustedIssuers>  
                     </issuerNameRegistry>  
-      
+
                     <issuerTokenResolver />  
                     <serviceTokenResolver />  
                     <tokenReplayDetection />  
@@ -90,7 +90,7 @@ ms.locfileid: "70251977"
             </securityTokenHandlers>  
         </identityConfiguration>  
     </system.identityModel>  
-      
+
     <system.identityModel.services>  
         <!-- Federation Authentication Configuration -->  
         <federatedAuthentication>  
@@ -98,11 +98,11 @@ ms.locfileid: "70251977"
                 <chunkedCookieHandler />  
                 <customCookieHandler />  
             </cookieHandler>  
-      
+
             <serviceCertificate>  
                 <certificateReference>  
             </serviceCertificate>  
-      
+
             <wsFederation />  
         </federatedAuthentication>  
     </system.identityModel.services>  
@@ -111,6 +111,6 @@ ms.locfileid: "70251977"
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
-[\<system.identityModel>](system-identitymodel.md) アプリケーションで WIF オプションを有効にするための構成を指定します。  
+[ \<>](system-identitymodel.md)アプリケーションで WIF オプションを有効にするための構成を提供します。  
   
-[\<system.identityModel.services>](system-identitymodel-services.md) WIF を使用するパッシブなフェデレーションの構成を指定します。 セッション認証モジュール (SAM) とフェデレーション認証モジュール (WSFAM) を構成します。
+[\<サービス>](system-identitymodel-services.md)WIF を使用したパッシブ フェデレーションの構成を提供します。 セッション認証モジュール (SAM) とフェデレーション認証モジュール (WSFAM) を構成します。

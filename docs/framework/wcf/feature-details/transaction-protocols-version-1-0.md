@@ -2,15 +2,15 @@
 title: トランザクション プロトコル バージョン 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 5ca0210c15afd6a3fc2e05bc3b9016a1fcd929b7
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
+ms.openlocfilehash: a19329b56bb569a04195b38877a42d635996ff1f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73460282"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184374"
 ---
 # <a name="transaction-protocols-version-10"></a>トランザクション プロトコル バージョン 1.0
-Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION および WS-ATOMICTRANSACTION プロトコルのバージョン1.0 を実装します。 バージョン1.1 の詳細については、「[トランザクションプロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)」を参照してください。  
+Windows 通信基盤 (WCF) バージョン 1 では、WS-アトミック トランザクションプロトコルと WS-調整プロトコルのバージョン 1.0 を実装します。 バージョン 1.1 の詳細については、「[トランザクション プロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)」を参照してください。  
   
 |仕様/ドキュメント|Link|  
 |-----------------------------|----------|  
@@ -21,25 +21,25 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
   
  ここでは、WS-AtomicTransaction (WS-AT) 仕様のセキュリティに関する構成と、トランザクション マネージャー間の通信に使用されるセキュリティで保護されたバインディングについて説明します。 このドキュメントで説明されているアプローチは、IBM、IONA、Sun Microsystems などを含む WS-AT および WS-Coordination の各種の実装でテスト済みのものです。  
   
- 次の図は、2つのトランザクションマネージャー (トランザクションマネージャー1とトランザクションマネージャー 2) と2つのアプリケーション (アプリケーション1とアプリケーション 2) 間の相互運用性を示しています。  
+ 次の図は、トランザクション マネージャー 1 とトランザクション マネージャー 2 の 2 つのトランザクション マネージャーと、アプリケーション 1 とアプリケーション 2 の 2 つのアプリケーション間の相互運用性を示しています。  
   
- ![トランザクションマネージャー間の対話を示すスクリーンショット。](./media/transaction-protocols/transaction-managers-flow.gif)  
+ ![トランザクション マネージャー間の対話を示すスクリーンショット。](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  1 つのイニシエーター (I) と 1 つの参加要素 (P) を持つ、一般的な WS-Coordination/WS-AtomicTransaction のシナリオを考えます。 イニシエーターと参加要素の両方にトランザクション マネージャー (それぞれ ITM および PTM と呼びます) があります。 2 フェーズ コミットは、このトピックでは 2PC と呼びます。  
   
 |||  
 |-|-|  
-|1. CreateCoordinationContext|12. アプリケーションメッセージの応答|  
-|2. CreateCoordinationContextResponse|13. コミット (完了)|  
-|3. 登録 (完了)|14. 準備 (2PC)|  
-|4. RegisterResponse|15. 準備 (2PC)|  
+|1. コーディネーションコンテキストの作成|12. アプリケーションメッセージ応答|  
+|2. 調整コンテキスト応答の作成|13. コミット(完了)|  
+|3. 登録(完了)|14. 準備 (2PC)|  
+|4. 登録応答|15. 準備 (2PC)|  
 |5. アプリケーションメッセージ|16. 準備済み (2PC)|  
-|6. CreateCoordinationContext とコンテキスト|17. 準備済み (2PC)|  
-|7. Register (持続性)|18. コミット (完了)|  
-|8. RegisterResponse|19. コミット (2PC)|  
-|9. CreateCoordinationContextResponse|20. コミット (2PC)|  
-|10. レジスタ (持続性)|21. コミット済み (2PC)|  
-|11. RegisterResponse|22. コミット済み (2PC)|  
+|6. コンテキストを使用したコーディネーションコンテキストの作成|17. 準備済み (2PC)|  
+|7. レジスタ(耐久性)|18. コミット (完了)|  
+|8. 登録応答|19. コミット (2PC)|  
+|9. 調整コンテキスト応答の作成|20. コミット (2PC)|  
+|10. レジスター (耐久性)|21. コミット済み (2PC)|  
+|11. 登録応答|22. コミット済み (2PC)|  
   
  このドキュメントでは、WS-AtomicTransaction 仕様のセキュリティに関する構成と、トランザクション マネージャー間の通信に使用されるセキュリティで保護されたバインディングについて説明します。 このドキュメントで説明されているアプローチは、WS-AT および WS-Coordination の各種の実装でテスト済みのものです。  
   
@@ -53,11 +53,11 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
   
 - アプリケーション メッセージ  
   
- 最初の 3 つのメッセージ クラスはトランザクション マネージャーのメッセージと考えられます。これらのクラスのバインド構成については、後の「アプリケーション メッセージ交換」で説明します。 4 番目のメッセージ クラスは、アプリケーション間のメッセージであり、後の「メッセージの例」で説明します。 ここでは、これらの各クラスに対して WCF によって使用されるプロトコルバインドについて説明します。  
+ 最初の 3 つのメッセージ クラスはトランザクション マネージャーのメッセージと考えられます。これらのクラスのバインド構成については、後の「アプリケーション メッセージ交換」で説明します。 4 番目のメッセージ クラスは、アプリケーション間のメッセージであり、後の「メッセージの例」で説明します。 ここでは、WCF でこれらのクラスのそれぞれで使用されるプロトコル バインディングについて説明します。  
   
  このドキュメントでは、次の XML 名前空間と関連付けられたプレフィックスが使用されます。  
   
-|プレフィックス|名前空間の URI|  
+|Prefix|名前空間 URI|  
 |------------|-------------------|  
 |s11|http://schemas.xmlsoap.org/soap/envelope|  
 |wsa|http://www.w3.org/2004/08/addressing|  
@@ -83,15 +83,15 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 - B1112 : X.509 のサブジェクト名のチェックが成功するには、システム内の送信者と受信者の各ペア間で、DNS が機能している必要があります。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>アクティベーションと登録のバインド構成  
- WCF では、HTTPS 経由の相関関係を持つ要求/応答双方向バインドが必要です。 (関連付けと要求/応答メッセージ交換パターンの詳細については、WS-AtomicTransaction 仕様のセクション 8 を参照してください)。  
+ WCF では、HTTPS に対する相関関係を持つ要求/応答の双方向バインディングが必要です。 (関連付けと要求/応答メッセージ交換パターンの詳細については、WS-AtomicTransaction 仕様のセクション 8 を参照してください)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインディング構成  
- WCF では、HTTPS 経由の一方向 (データグラム) メッセージがサポートされています。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
+ WCF は、HTTPS 経由の一方向 (データグラム) メッセージをサポートします。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
   
- B2131: 実装では、「WS-ADDRESSING」で説明されているように、WCF の2PC メッセージの相関関係を実現するために `wsa:ReferenceParameters` をサポートする必要があります。  
+ B2131: WCF の`wsa:ReferenceParameters`2PC メッセージの相関関係を実現するために、実装は WS-Addressing で説明されているようにサポートする必要があります。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>トランザクション マネージャーによる混合セキュリティ バインディング  
- これは、id の確立のために、WS-FEDERATION の発行済みトークンモデルと組み合わせたトランスポートセキュリティを使用する代替 (混合モード) バインドです。  2 つのバインディングを区別する要素は、アクティベーションと登録のみです。  
+ これは、トランスポート セキュリティと WS-調整発行トークン モデルを組み合わせて使用する代替 (混合モード) バインディングです。  2 つのバインディングを区別する要素は、アクティベーションと登録のみです。  
   
 #### <a name="https-transport-configuration"></a>HTTPS トランスポート構成  
  トランザクション マネージャー ID を確立するために X.509 証明書が使用されます。 クライアントおよびサーバーの承認が必要です。クライアントおよびサーバーの承認は、以下のような実装詳細の状態にしておきます。  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 #### <a name="activation-message-binding-configuration"></a>アクティベーション メッセージのバインド構成  
  アクティベーション メッセージは通常、アプリケーションとローカルのトランザクション マネージャー間で発生するため、相互運用には参加しません。  
   
- B1221: WCF では、アクティベーションメッセージに双方向 HTTPS バインド (「[メッセージングプロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)」で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
+ B1221: WCF は、アクティブ化メッセージに双方向 HTTPS バインディング ([メッセージング プロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
   
@@ -107,21 +107,21 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
   
 - R1223 : アクティベーションが既存のコーディネーション コンテキスト内で発生した場合、既存のコンテキストに関連付けられた `t:IssuedTokens` がある `SecurityContextToken` ヘッダーは、`CreateCoordinationContext` メッセージでフローする必要があります。  
   
- 送信 `wscoor:CreateCoordinationContextResponse` メッセージにアタッチするために、新しい `t:IssuedTokens` ヘッダーを生成する必要があります。  
+ 送信`wscoor:CreateCoordinationContextResponse`メッセージ`t:IssuedTokens`に添付するための新しいヘッダーを生成する必要があります。  
   
 #### <a name="registration-message-binding-configuration"></a>登録メッセージのバインディング構成  
- B1231: WCF では、双方向の HTTPS バインド (「[メッセージングプロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)」で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
+ B1231: WCF は双方向 HTTPS バインディングを使用します ([メッセージング プロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)で説明)。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
   
- R1232: 送信 `wscoor:Register` メッセージでは、「[セキュリティプロトコル](../../../../docs/framework/wcf/feature-details/security-protocols.md)」で説明されている `IssuedTokenOverTransport` 認証モードを使用する必要があります。  
+ R1232:`wscoor:Register`送信メッセージは`IssuedTokenOverTransport`[、「セキュリティ プロトコル](../../../../docs/framework/wcf/feature-details/security-protocols.md)」で説明されている認証モードを使用する必要があります。  
   
- `wsse:Timestamp` 要素は、発行された `SecurityContextToken STx` を使用して署名する必要があります。 この署名は特定のトランザクションに関連付けられたトークンを所有していることの証明であり、トランザクションに登録されている参加要素の認証で使用されます。 RegistrationResponse メッセージは、HTTPS を使用して返信されます。  
+ 要素`wsse:Timestamp`は、発行済みで`SecurityContextToken STx`署名する必要があります。 この署名は特定のトランザクションに関連付けられたトークンを所有していることの証明であり、トランザクションに登録されている参加要素の認証で使用されます。 RegistrationResponse メッセージは、HTTPS を使用して返信されます。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインディング構成  
- WCF では、HTTPS 経由の一方向 (データグラム) メッセージがサポートされています。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
+ WCF は、HTTPS 経由の一方向 (データグラム) メッセージをサポートします。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
   
- B2131: 実装では、「WS-ADDRESSING」で説明されているように、WCF の2PC メッセージの相関関係を実現するために `wsa:ReferenceParameters` をサポートする必要があります。  
+ B2131: WCF の`wsa:ReferenceParameters`2PC メッセージの相関関係を実現するために、実装は WS-Addressing で説明されているようにサポートする必要があります。  
   
 ## <a name="application-message-exchange"></a>アプリケーション メッセージ交換  
  アプリケーションでは、バインディングが次のセキュリティ要件を満たしている限り、アプリケーション間メッセージに任意のバインディングを使用できます。  
@@ -130,9 +130,9 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
   
 - R2002 : `t:IssuedToken` の整合性と機密性が提供される必要があります。  
   
- `CoordinationContext` ヘッダーには `wscoor:Identifier` が含まれます。 `xsd:AnyURI` の定義では絶対 Uri と相対 Uri の両方を使用できますが、WCF でサポートされるのは、絶対 Uri である `wscoor:Identifiers`のみです。  
+ `CoordinationContext` ヘッダーには `wscoor:Identifier` が含まれます。 の`xsd:AnyURI`定義では、絶対 URI と相対 URI の両方の使用が`wscoor:Identifiers`許可されますが、WCF では、絶対 URI であるのみサポートされます。  
   
- `wscoor:CoordinationContext` の `wscoor:Identifier` が相対 URI である場合は、トランザクション WCF サービスからエラーが返されます。  
+ `wscoor:Identifier`の`wscoor:CoordinationContext`が相対 URI である場合、トランザクション WCF サービスからエラーが返されます。  
   
 ## <a name="message-examples"></a>メッセージの例  
   
@@ -176,9 +176,9 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
     <a:RelatesTo>urn:uuid:069f5104-fd88-4264-9f99-60032a82854e</a:RelatesTo>  
     <a:To s:mustUnderstand="1">https://... </a:To>  
     <t:IssuedTokens>  
- <wst:RequestSecurityTokenResponse     
+ <wst:RequestSecurityTokenResponse
     xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
-    xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"   
+    xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
     xmlns:wst="http://schemas.xmlsoap.org/ws/2005/02/trust"  
     xmlns:wsc="http://schemas.xmlsoap.org/ws/2005/02/sc"  
     xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">  
@@ -188,27 +188,27 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
         <wssu:Identifier>  
           http://fabrikam123.com/SCTi  
         </wssu:Identifier>  
-      </wsc:SecurityContextToken>   
+      </wsc:SecurityContextToken>
     </wst:RequestedSecurityToken>  
     <wsp:AppliesTo>  
         http://fabrikam123.com/CCi  
-    </wsp:AppliesTo>    
+    </wsp:AppliesTo>
     <wst:RequestedAttachedReference>  
       <wsse:SecurityTokenReference >  
-        <wsse:Reference   
+        <wsse:Reference
            ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
            URI="http://fabrikam123.com/SCTi"/>  
       </wsse:SecurityTokenReference>  
     </wst:RequestedAttachedReference>  
     <wst:RequestedUnattachedReference>  
       <wsse:SecurityTokenReference>  
-        <wsse:Reference   
+        <wsse:Reference
           ValueType="http://schemas.xmlsoap.org/ws/2005/02/sc/sct"  
           URI="http://fabrikam123.com/SCTi"/>  
       </wsse:SecurityTokenReference>  
     </wst:RequestedUnattachedReference>  
     <wst:RequestedProofToken>  
-      <wst:BinarySecret   
+      <wst:BinarySecret
         Type="http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey">  
         <!-- base64 encoded value -->  
       </wst:BinarySecret>  
@@ -250,7 +250,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 ### <a name="registration-messages"></a>登録メッセージ  
  次のメッセージは、登録メッセージです。  
   
-#### <a name="register"></a>登録  
+#### <a name="register"></a>[登録]  
   
 ```xml  
 <s:Envelope>  
@@ -258,11 +258,11 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
     <a:Action>http://schemas.xmlsoap.org/ws/2004/10/wscoor/Register</a:Action>  
     <a:MessageID>urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e</a:MessageID>  
     <a:ReplyTo>  
-      <a:Address>https://...</a:Address>        
+      <a:Address>https://...</a:Address>
     </a:ReplyTo>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp wssu:Id="_0" >  
@@ -293,7 +293,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
         <ds:KeyInfo>  
           <wsse:SecurityTokenReference  
             xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">  
-            <wsse:Reference   
+            <wsse:Reference
               URI="http://fabrikam123.com/SCTi"/>  
           </wsse:SecurityTokenReference>  
         </ds:KeyInfo>  
@@ -321,11 +321,11 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
     </a:Action>  
     <a:MessageID>urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088d</a:MessageID>  
     <a:RelatesTo>  
-      urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e        
+      urn:uuid:ed418b86-a75e-4aea-9d4e-a5d0cb5c088e
     </a:RelatesTo>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp>  
@@ -350,15 +350,15 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 ### <a name="two-phase-commit-protocol-messages"></a>2 フェーズ コミット プロトコル メッセージ  
  次のメッセージは、2 フェーズ コミット (2PC) プロトコルに関連しています。  
   
-#### <a name="commit"></a>確定  
+#### <a name="commit"></a>Commit  
   
 ```xml  
 <s:Envelope>  
   <s:Header>  
     <a:Action>http://.../ws/2004/10/wsat/Commit</a:Action>  
     <a:To>https://...</a:To>  
-    <wsse:Security   
-      s:mustUnderstand="1"   
+    <wsse:Security
+      s:mustUnderstand="1"
       xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"  
       xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">  
       <wssu:Timestamp wssu:Id="_0" >  
@@ -383,18 +383,18 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
   <s:Header>  
 <!-- Addressing headers, all signed-->  
     <wsse:Security s:mustUnderstand="1">  
-      <wssu:Timestamp wssu:Id="timestamp">   
+      <wssu:Timestamp wssu:Id="timestamp">
         <wssu:Created>2005-10-25T06:29:18.703Z</wssu:Created>  
         <wssu:Expires>2005-10-25T06:34:18.703Z</wssu:Expires>  
       </wssu:Timestamp>  
-      <wsse:BinarySecurityToken   
-          wssu:Id="IA_Certificate"   
-          ValueType="...#X509v3"   
+      <wsse:BinarySecurityToken
+          wssu:Id="IA_Certificate"
+          ValueType="...#X509v3"
           EncodingType="...#Base64Binary">  
         <!-- IA certificate -->  
       </wsse:BinarySecurityToken>  
       <e:EncryptedKey Id="encrypted_key">  
-            <!-- ephemeral key encrypted for PA certificate -->    
+            <!-- ephemeral key encrypted for PA certificate -->
         <e:ReferenceList xmlns:e="http://www.w3.org/2001/04/xmlenc#">  
           <e:DataReference URI="#encrypted_body"/>  
           <e:DataReference URI="#encrypted_CCi"/>  
@@ -408,15 +408,15 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
     <wsse11:EncryptedHeader >  
      <!-- encrypted wscoor:CoordinationContext header containing CCi -->  
     </wsse11:EncryptedHeader>  
-    <wsse11:EncryptedHeader   
+    <wsse11:EncryptedHeader
       <!-- encrypted wst:IssuedTokens header containing SCTi -->  
       <!-- wst:IssuedTokens header is taken verbatim from message #2 above, omitted for brevity -->  
     </wsse11:EncryptedHeader>  
   </s:Header>  
   <s:Body wssu:Id="body">  
-    <!-- encrypted content of the Body element of the application message -->      
-    <e:EncryptedData Id="encrypted_body"   
-           Type="http://www.w3.org/2001/04/xmlenc#Content"   
+    <!-- encrypted content of the Body element of the application message -->
+    <e:EncryptedData Id="encrypted_body"
+           Type="http://www.w3.org/2001/04/xmlenc#Content"
            xmlns:e="http://www.w3.org/2001/04/xmlenc#">  
 ...  
     </e:EncryptedData>  

@@ -8,24 +8,24 @@ helpviewer_keywords:
 - <CompatSortNLSVersion> element
 - CompatSortNLSVersion element
 ms.assetid: 782cc82e-83f7-404a-80b7-6d3061a8b6e3
-ms.openlocfilehash: 5de760fe07283ddee36b3475fa0975c8d46776e5
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 30afeb2ab9380db75cbeb723ea15a23e4313c9e8
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73969254"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154271"
 ---
-# <a name="compatsortnlsversion-element"></a>\<CompatSortNLSVersion > 要素
+# <a name="compatsortnlsversion-element"></a>\<>要素のバージョンを圧縮します。
 文字列比較の実行時に、ランタイムがレガシ並べ替え順序を使用するように指定します。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<CompatSortNLSVersion >**  
+[**\<構成>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<ランタイム>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<>**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<CompatSortNLSVersion    
+<CompatSortNLSVersion
    enabled="4096"/>  
 ```  
   
@@ -40,12 +40,12 @@ ms.locfileid: "73969254"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|Value|説明|  
 |-----------|-----------------|  
-|4096|代替の並べ替え順序を表すロケール ID。 この場合、4096は .NET Framework 3.5 以前のバージョンの並べ替え順序を表します。|  
+|4096|代替の並べ替え順序を表すロケール ID。 この場合、4096 は .NET Framework 3.5 以前のバージョンの並べ替え順序を表します。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -54,8 +54,8 @@ ms.locfileid: "73969254"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
-## <a name="remarks"></a>Remarks  
- .NET Framework 4 の <xref:System.Globalization.CompareInfo?displayProperty=nameWithType> クラスによって実行される文字列比較、並べ替え、および大文字と小文字の区別の操作は、Unicode 5.1 標準に準拠しているため、<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType> や <xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType> などの文字列比較メソッドの結果は、以前のバージョンの .NET Framework とは異なる場合があります。 アプリケーションが従来の動作に依存している場合は、アプリケーションの構成ファイルに `<CompatSortNLSVersion>` 要素を含めることによって、.NET Framework 3.5 以前のバージョンで使用されている文字列比較規則および並べ替え規則を復元できます。  
+## <a name="remarks"></a>解説  
+ .NET Framework 4 の<xref:System.Globalization.CompareInfo?displayProperty=nameWithType>クラスによって実行される文字列の比較、並べ替え、および大文字と小文字の区別の操作は Unicode 5.1 標準<xref:System.String.Compare%28System.String%2CSystem.String%29?displayProperty=nameWithType>に<xref:System.String.LastIndexOf%28System.String%29?displayProperty=nameWithType>準拠しているため、.NET Framework の以前のバージョンとは異なる場合があります。 アプリケーションが従来の動作に依存する場合は、アプリケーションの構成ファイルに`<CompatSortNLSVersion>`要素を含めることによって、.NET Framework 3.5 以前のバージョンで使用されている文字列比較および並べ替え規則を復元できます。  
   
 > [!IMPORTANT]
 > 文字列の比較および並べ替えのレガシ規則を復元する場合は、ローカル システムで sort00001000.dll ダイナミック リンク ライブラリも使用できるようにする必要があります。  
@@ -68,19 +68,19 @@ ms.locfileid: "73969254"
  [!code-csharp[String.BreakingChanges#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/string.breakingchanges/cs/example1.cs#1)]
  [!code-vb[String.BreakingChanges#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/string.breakingchanges/vb/example1.vb#1)]  
   
- .NET Framework 4 でこの例を実行すると、次の出力が表示されます。
+ .NET Framework 4 でサンプルを実行すると、次の出力が表示されます。
   
 ```console
 sta follows a in the sort order.  
 ```  
   
- これは、.NET Framework 3.5 で例を実行したときに表示される出力とはまったく異なります。
+ これは、.NET Framework 3.5 で例を実行したときに表示される出力とは完全に異なります。
   
 ```console
 sta equals a in the sort order.  
 ```  
   
- ただし、次の構成ファイルを例のディレクトリに追加し、.NET Framework 4 でこの例を実行すると、出力は、.NET Framework 3.5 で実行された場合に例で生成されたものと同じになります。  
+ ただし、次の構成ファイルを例のディレクトリに追加し、.NET Framework 4 でサンプルを実行した場合、出力は.NET Framework 3.5 で実行される場合の出力と同じです。  
   
 ```xml  
 <?xml version ="1.0"?>  

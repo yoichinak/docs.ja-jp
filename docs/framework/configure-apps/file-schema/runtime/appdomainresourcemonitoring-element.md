@@ -5,24 +5,24 @@ helpviewer_keywords:
 - appDomainResourceMonitoring element
 - <appDomainResourceMonitoring> element
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
-ms.openlocfilehash: 991833500cae4d96e9c28f7e94ca366e9b976a9d
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3c6092b6c34bb13c0ad0e66df2d3b7e65ac3de7e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73118255"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154377"
 ---
-# <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 要素
+# <a name="appdomainresourcemonitoring-element"></a>\<要素>リソースの監視
 プロセスのライフサイクルにおいて、プロセスのすべてのアプリケーション ドメインの統計を収集するようにランタイムに指示します。  
   
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<runtime>** ](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<appDomainResourceMonitoring >**  
+[**\<構成>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<ランタイム>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<>の監視**  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<appDomainResourceMonitoring    
+<appDomainResourceMonitoring
    enabled="true|false"/>  
 ```  
   
@@ -33,17 +33,17 @@ ms.locfileid: "73118255"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> アプリケーションドメインのリソース監視の統計情報をランタイムが収集するかどうかを指定します。|  
+|`enabled`|必須の属性です。<br /><br /> ランタイムがアプリケーション ドメインリソース監視の統計を収集するかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|[値]|説明|  
+|Value|説明|  
 |-----------|-----------------|  
-|`true`|アプリケーションドメインのリソース監視の統計情報が収集されます。|  
-|`false`|アプリケーションドメインのリソース監視の統計情報は収集されません。|  
+|`true`|アプリケーション ドメインリソース監視の統計が収集されます。|  
+|`false`|アプリケーション ドメインリソースの監視の統計は収集されません。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -52,15 +52,15 @@ ms.locfileid: "73118255"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
-## <a name="remarks"></a>Remarks  
- アプリケーションドメインのリソース監視は、マネージアプリケーションドメインクラス、ホスティング[ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)インターフェイス、および Windows イベントトレーシング (ETW) を介して使用できます。 監視が有効になっている場合、プロセス内のすべてのアプリケーションドメインについて、プロセスの実行中に統計が収集されます。  
+## <a name="remarks"></a>解説  
+ アプリケーション ドメイン リソースの監視は、マネージ アプリケーション ドメイン クラス、ホストする[ICLRAppDomainResourceMonitor](../../../unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)インターフェイス、および Windows のイベント トレース (ETW) を通じて使用できます。 監視が有効な場合、プロセスの有効期間中に、プロセス内のすべてのアプリケーション ドメインに関する統計が収集されます。  
   
- マネージコードからの監視を有効にするには、<xref:System.AppDomain.MonitoringIsEnabled%2A> プロパティを使用します。  
+ マネージ コードからの監視を有効にするには、<xref:System.AppDomain.MonitoringIsEnabled%2A>プロパティを使用します。  
   
  この構成要素は、.NET Framework 4 以降でのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、アプリケーションドメインのリソース監視を有効にする方法を示しています。  
+ アプリケーション ドメインのリソース監視を有効にする方法を次の例に示します。  
   
 ```xml  
 <configuration>  

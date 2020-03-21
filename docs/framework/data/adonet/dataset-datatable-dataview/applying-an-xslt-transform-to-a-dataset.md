@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: 2641637d176b411108aeb2fa00ef4268584e9cb3
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: 3f066f29b99ade6e92a263110fed8079208567b5
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834265"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79151495"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>DataSet への XSLT 変換の適用
 
-@No__t-1 の**WriteXml**メソッドを使用すると、**データセット**の内容を XML データとして書き込むことができます。 一般的な作業は、XSLT (XSL Transformation) を使用してこの XML を別の形式へ変換する操作です。 ただし、**データセット**を <xref:System.Xml.XmlDataDocument> と同期させると、まず、 **WriteXml**を使用してデータセットの内容を XML**データとし**て書き込むことなく **、データセット**のコンテンツに XSLT スタイルシートを適用できます。  
+の**WriteXml**メソッド<xref:System.Data.DataSet>を使用すると、**データセット**の内容を XML データとして書き込みます。 一般的な作業は、XSLT (XSL Transformation) を使用してこの XML を別の形式へ変換する操作です。 ただし **、DataSet**と<xref:System.Xml.XmlDataDocument>を同期すると、最初に**WriteXml**を使用してデータセットの内容を XML データとして書き込む必要がなくても **、DataSet**の内容に XSLT スタイルシートを適用できます。 **DataSet**  
   
- 次の例では、**データセット**にテーブルとリレーションシップを設定し、 **dataset**を**XmlDataDocument**と同期して、XSLT スタイルシートを使用してデータセットの一部を HTML ファイル**として**書き込みます。 XSLT スタイルシートの内容は次のとおりです。
+ 次の例では、**データセット**にテーブルとリレーションシップを設定し、**データセット**を**XmlDataDocument**と同期させ、XSLT スタイルシートを使用して**データセット**の一部を HTML ファイルとして書き込みます。 XSLT スタイルシートの内容は次のとおりです。
   
 ```xml  
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
@@ -57,10 +57,10 @@ ms.locfileid: "71834265"
 </xsl:stylesheet>  
 ```  
   
- 次のコードでは、**データセットにデータ**を読み込み、XSLT スタイルシートを適用します。  
+ 次のコードは **、データセット**に値を入力し、XSLT スタイル シートを適用します。  
   
 > [!NOTE]
-> リレーションシップを含む**データセット**に XSLT スタイルシートを適用している場合は、入れ子になった各関係の <xref:System.Data.DataRelation> の**nested**プロパティを**true**に設定すると、最適なパフォーマンスが得られます。 これにより、階層を自然な順番で上から下へと進みながらデータを変換する XSLT スタイル シートを利用できるようになります。パフォーマンスに大きく影響する XPath ロケーション軸 (たとえば、スタイル シートのノード テスト式での preceding-sibling や following-sibling) を使用して階層をたどる必要はなくなります。 入れ子になったリレーションの詳細については、「 [datarelation の入れ子](nesting-datarelations.md)」を参照してください。  
+> リレーションを含む**DataSet**に XSLT スタイル シートを適用する場合は、ネストされた各リレーションに対<xref:System.Data.DataRelation>して**Nested**プロパティを**true**に設定すると、最高のパフォーマンスが得られます。 これにより、階層を自然な順番で上から下へと進みながらデータを変換する XSLT スタイル シートを利用できるようになります。パフォーマンスに大きく影響する XPath ロケーション軸 (たとえば、スタイル シートのノード テスト式での preceding-sibling や following-sibling) を使用して階層をたどる必要はなくなります。 ネストされたリレーションの詳細については、「[データリレーションのネスト](nesting-datarelations.md)」を参照してください。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -80,7 +80,7 @@ dataSet.Relations.Add("CustOrders", _
 dataSet.Tables("Customers").Columns("CustomerID"), _  
 dataSet.Tables("Orders").Columns("CustomerID")).Nested = true  
   
-Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)   
+Dim xmlDoc As XmlDataDocument = New XmlDataDocument(dataSet)
   
 Dim xslTran As XslTransform = New XslTransform  
 xslTran.Load("transform.xsl")  
@@ -112,12 +112,12 @@ custDS.Relations.Add("CustOrders",
   custDS.Tables["Customers"].Columns["CustomerID"],  
                      custDS.Tables["Orders"].Columns["CustomerID"]).Nested = true;  
   
-XmlDataDocument xmlDoc = new XmlDataDocument(custDS);   
+XmlDataDocument xmlDoc = new XmlDataDocument(custDS);
   
 XslTransform xslTran = new XslTransform();  
 xslTran.Load("transform.xsl");  
   
-XmlTextWriter writer = new XmlTextWriter("xslt_output.html",   
+XmlTextWriter writer = new XmlTextWriter("xslt_output.html",
   System.Text.Encoding.UTF8);  
   
 xslTran.Transform(xmlDoc, null, writer);  

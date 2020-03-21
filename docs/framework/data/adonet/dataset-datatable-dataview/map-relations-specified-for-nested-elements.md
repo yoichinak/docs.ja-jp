@@ -2,21 +2,21 @@
 title: 入れ子になっている要素に指定したリレーションシップの割り当て
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: 138fbbc3ccaa90096a15fa87544e5c29f66beb08
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: cd652f51f01dcfa16a8b707f35c658043c20670d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040058"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79150897"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>入れ子になっている要素に指定したリレーションシップの割り当て
-スキーマには、スキーマ内の2つの要素間のマッピングを明示的に指定する**msdata: Relationship**注釈を含めることができます。 **Msdata: Relationship**で指定する2つの要素は、スキーマで入れ子にすることができますが、である必要はありません。 マッピングプロセスでは、スキーマ内で**msdata: Relationship**を使用して、2つの列の間に主キー/外部キーのリレーションシップを生成します。  
+スキーマには **、msdata:Relationship**アノテーションを含めることができるので、スキーマ内の任意の 2 つの要素間のマッピングを明示的に指定できます。 **msdata:リレーションシップ**で指定された 2 つの要素は、スキーマ内で入れ子にできますが、必要はありません。 マッピング プロセスでは、スキーマ内で**msdata:Relationship**を使用して、2 つの列間の主キー/外部キーリレーションシップを生成します。  
   
- 次の例は、 **Orderdetail**要素が**Order**の子要素である XML スキーマを示しています。 **Msdata: relationship**は、この親子リレーションシップを識別し、結果として得られる**Order**テーブルの**ordernumber**列が、結果の**ordernumber**テーブルの**ordernumber**列に関連付けられるように指定します。  
+ 次の例は **、OrderDetail**要素が**Order**の子要素である XML スキーマを示しています。 **msdata:リレーションシップ**は、この親子リレーションシップを識別し、結果の**Order**テーブルの **[受注番号**] 列が、結果の**OrderDetail**テーブルの**OrderNo**列に関連付けられていることを指定します。  
   
 ```xml  
-<xs:schema id="MyDataSet" xmlns=""   
-            xmlns:xs="http://www.w3.org/2001/XMLSchema"   
+<xs:schema id="MyDataSet" xmlns=""
+            xmlns:xs="http://www.w3.org/2001/XMLSchema"
             xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">  
 <xs:element name="MyDataSet" msdata:IsDataSet="true">  
  <xs:complexType>  
@@ -29,10 +29,10 @@ ms.locfileid: "73040058"
        <xs:element name="OrderDetail">  
           <xs:annotation>  
            <xs:appinfo>  
-            <msdata:Relationship name="OrdODRelation"   
-                                msdata:parent="Order"   
-                                msdata:child="OrderDetail"   
-                                msdata:parentkey="OrderNumber"   
+            <msdata:Relationship name="OrdODRelation"
+                                msdata:parent="Order"
+                                msdata:child="OrderDetail"
+                                msdata:parentkey="OrderNumber"
                                 msdata:childkey="OrderNo"/>  
            </xs:appinfo>  
           </xs:annotation>  
@@ -54,20 +54,20 @@ ms.locfileid: "73040058"
   
  XML スキーマの割り当て処理によって <xref:System.Data.DataSet> に作成される内容は、次のとおりです。  
   
-- **Order**および**orderdetail**テーブル。  
+- **注文テーブル**と**注文明細**テーブル。  
   
     ```text  
     Order(OrderNumber, EmpNumber)  
     OrderDetail(OrderNo, ItemNo)  
     ```  
   
-- **Order**テーブルと**orderdetail**テーブル間のリレーションシップ。 **Order**および**orderdetail**要素がスキーマで入れ子になっているため、このリレーションシップの**nested**プロパティは**True**に設定されています。  
+- **Order**テーブルと**OrderDetail**テーブルの間のリレーションシップ。 このリレーションシップの**入れ子になった**プロパティは **、Order**要素と**OrderDetail**要素がスキーマ内で入れ子になっているため **、True**に設定されます。  
   
     ```text  
     ParentTable: Order  
-    ParentColumns: OrderNumber   
+    ParentColumns: OrderNumber
     ChildTable: OrderDetail  
-    ChildColumns: OrderNo   
+    ChildColumns: OrderNo
     RelationName: OrdODRelation  
     Nested: True  
     ```  

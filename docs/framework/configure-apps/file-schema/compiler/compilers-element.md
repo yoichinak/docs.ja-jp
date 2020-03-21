@@ -9,19 +9,19 @@ helpviewer_keywords:
 - <compilers> element
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
-ms.openlocfilehash: b09c2a1f67974a67a3f9d58af7cb8cf66a197026
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 09b1efe321c39402c9280eda0e9def9112462470
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088696"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155415"
 ---
-# <a name="compilers-element"></a>\<コンパイラ > 要素
-0 個以上の [\<compiler>](compiler-element.md) 要素を含むコンパイラ構成要素のコンテナー。  
+# <a name="compilers-element"></a>\<コンパイラは要素>
+コンパイラ構成要素のコンテナ。コンパイラ[\<>](compiler-element.md)要素が 0 個以上含まれています。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[ **\<システムの >** ](system-codedom-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp; **\<コンパイラ >**
+[**\<構成>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<コードダム>**](system-codedom-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<コンパイラ>**
 
 ## <a name="syntax"></a>構文  
   
@@ -35,25 +35,25 @@ ms.locfileid: "74088696"
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- なし。  
+ [なし] :  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<compiler> 要素](compiler-element.md)|言語プロバイダーのコンパイラ構成属性を指定します。|  
+|[\<コンパイラ>要素](compiler-element.md)|言語プロバイダーのコンパイラ構成属性を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration> 要素](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
-|[\<システムの codedom > 要素](system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|  
+|[\<要素>構成](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|[\<要素>コードダム](system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|  
   
-## <a name="remarks"></a>Remarks  
- [\<compiler >](compilers-element.md)要素には、コンピューター上の言語プロバイダーのコンパイラ構成設定が含まれています。 各[\<compiler >](compiler-element.md)要素は、特定の言語プロバイダーのコンパイラ構成属性を指定します。  
+## <a name="remarks"></a>解説  
+ コンパイラ>要素には、コンピューター上の言語プロバイダーのコンパイラ構成設定が含まれています。 [ \<](compilers-element.md) 各[\<コンパイラ>要素は](compiler-element.md)、特定の言語プロバイダのコンパイラ構成属性を指定します。  
   
- .NET Framework は、マシン構成ファイル (machine.config) の初期コンパイラおよび言語プロバイダー設定を定義します。 開発者やコンパイラ ベンダーは、新しい <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> の実装のために構成設定を追加することができます。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> メソッドを使用して、プログラムによってコンピューターの言語プロバイダーとコンパイラ構成の設定を列挙します。  
+ .NET Framework では、マシン構成ファイル (Machine.config) でコンパイラと言語の初期設定を定義します。 開発者やコンパイラ ベンダーは、新しい <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> の実装のために構成設定を追加することができます。 <xref:System.CodeDom.Compiler.CodeDomProvider.GetAllCompilerInfo%2A?displayProperty=nameWithType> メソッドを使用して、プログラムによってコンピューターの言語プロバイダーとコンパイラ構成の設定を列挙します。  
   
 ## <a name="configuration-file"></a>構成ファイル  
  この要素は、マシン構成ファイルおよびアプリケーション構成ファイルで使用できます。  
@@ -66,11 +66,11 @@ ms.locfileid: "74088696"
    <system.codedom>  
      <compilers>  
        <!-- zero or more compiler elements -->  
-       <compiler   
-          language="c#;cs;csharp"   
+       <compiler
+          language="c#;cs;csharp"
           extension=".cs"  
           type="Microsoft.CSharp.CSharpCodeProvider, System, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"  
-          compilerOptions=""    
+          compilerOptions=""
           warningLevel="1" />  
      </compilers>  
    </system.codedom>  
@@ -82,5 +82,5 @@ ms.locfileid: "74088696"
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [構成ファイル スキーマ](../index.md)
-- [コンパイラおよび言語プロバイダー設定のスキーマ](index.md)
-- [\<compiler> 要素](compiler-element.md)
+- [コンパイラおよび言語プロバイダー設定スキーマ](index.md)
+- [\<コンパイラ>要素](compiler-element.md)

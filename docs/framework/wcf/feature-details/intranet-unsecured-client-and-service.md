@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 1ffd0421195b0339ad966b661c229e5a5ebb94ec
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 2fa13a12a377cc16a95318367605d8b5d92769a7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212093"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184695"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>セキュリティで保護されていないイントラネットのクライアントとサービス
-次の図は、セキュリティで保護されたプライベートネットワークに関する情報を WCF アプリケーションに提供するために開発された simple Windows Communication Foundation (WCF) サービスを示しています。 データが重要度の低い、ネットワークが本質的にセキュリティで保護されている、または WCF インフラストラクチャの下にあるレイヤーによってセキュリティが提供されるため、セキュリティは必要ありません。  
+次の図は、セキュリティで保護されたプライベート ネットワークに関する情報を WCF アプリケーションに提供するために開発された、単純な WCF (WCF) サービスを示しています。 データの重要性が低い、ネットワークが本質的にセキュリティで保護されると予想される、またはセキュリティが WCF インフラストラクチャの下の層によって提供されるため、セキュリティは必要ありません。  
   
- ![イントラネットのセキュリティで保護されていないクライアントとサービスのシナリオ。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![セキュリティで保護されていないイントラネットのクライアントおよびサービスシナリオ。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|[なし]|  
-|Transport|TCP|  
-|バインディング|<xref:System.ServiceModel.NetTcpBinding>|  
+|セキュリティ モード|なし|  
+|トランスポート|TCP|  
+|バインド|<xref:System.ServiceModel.NetTcpBinding>|  
 |相互運用性|WCF のみ|  
-|認証|[なし]|  
-|整合性|[なし]|  
-|機密性|[なし]|  
+|認証|なし|  
+|整合性|なし|  
+|機密情報|なし|  
   
 ## <a name="service"></a>サービス  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "76212093"
  [!code-csharp[C_UnsecuredService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#2)]
  [!code-vb[C_UnsecuredService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#2)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  次のコードは、次に示す構成を使用して同一のエンドポイントをセットアップします。  
   
 ```xml  
@@ -49,11 +49,11 @@ ms.locfileid: "76212093"
   <system.serviceModel>  
     <behaviors />  
     <services>  
-      <service behaviorConfiguration=""   
+      <service behaviorConfiguration=""
                name="ServiceModel.Calculator">  
-        <endpoint address="net.tcp://localhost:8008/Calculator"   
+        <endpoint address="net.tcp://localhost:8008/Calculator"
                   binding="netTcpBinding"  
-                  bindingConfiguration="tcp_Unsecured"   
+                  bindingConfiguration="tcp_Unsecured"
                   name="netTcp_ICalculator"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -70,12 +70,12 @@ ms.locfileid: "76212093"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+## <a name="client"></a>Client  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
-- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 例:  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -86,7 +86,7 @@ ms.locfileid: "76212093"
  [!code-csharp[C_UnsecuredClient#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredclient/cs/source.cs#2)]
  [!code-vb[C_UnsecuredClient#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredclient/vb/source.vb#2)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  次の構成コードは、クライアントに適用されます。  
   
 ```xml  
@@ -103,9 +103,9 @@ ms.locfileid: "76212093"
     </bindings>  
     <client>  
       <endpoint address="net.tcp://machineName:8008/Calculator "  
-                binding="netTcpBinding"   
+                binding="netTcpBinding"
                 bindingConfiguration="NetTcpBinding_ICalculator"  
-                contract="ICalculator"   
+                contract="ICalculator"
                 name="NetTcpBinding_ICalculator" />  
     </client>  
   </system.serviceModel>  
@@ -116,4 +116,4 @@ ms.locfileid: "76212093"
 
 - <xref:System.ServiceModel.NetTcpBinding>
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-ms.openlocfilehash: b59144f4772c940f8c7e6ca19aa21666069b4b55
-ms.sourcegitcommit: 7f8eeef060ddeb2cabfa52843776faf652c5a1f5
+ms.openlocfilehash: 417722ce2f3865350158413307495e3ab435d386
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/14/2019
-ms.locfileid: "74088832"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79153296"
 ---
-# <a name="source-element"></a>\<source> 要素
+# <a name="source-element"></a>\<ソース>要素
 トレース メッセージを開始するトレース ソースを指定します。  
 
-[ **\<configuration>** ](../configuration-element.md)\
-&nbsp;&nbsp;[**\<system.diagnostics**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;\<[**sources**](sources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\<**source>**
+[**\<構成>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<診断>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<ソース>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<ソース>**
 
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<source>   
+<source>
   <listeners>...</listeners>  
 </source>  
 ```  
@@ -37,16 +37,16 @@ ms.locfileid: "74088832"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`name`|省略可能な属性です。<br /><br /> トレースソースの名前を指定します。|  
-|`switchName`|省略可能な属性です。<br /><br /> アプリケーションのトレーススイッチインスタンスの名前を指定します。 スイッチが `<switches>` 要素で識別されない場合は、スイッチのレベルを値で指定します。|  
-|`switchType`|省略可能な属性です。<br /><br /> トレーススイッチの種類を指定します。 存在する場合、型は有効なクラス名である必要があり、空の文字列にすることはできません。|  
-|`extraAttribute`|省略可能な属性です。<br /><br /> トレースソースの <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> メソッドによって識別される、トレースソース固有の属性の値を指定します。|  
+|`name`|省略可能な属性です。<br /><br /> トレース ソースの名前を指定します。|  
+|`switchName`|省略可能な属性です。<br /><br /> アプリケーション内のトレース スイッチ インスタンスの名前を指定します。 `<switches>`スイッチが要素内で識別されない場合、値はスイッチのレベルを指定します。|  
+|`switchType`|省略可能な属性です。<br /><br /> トレース スイッチの種類を指定します。 存在する場合、型は有効なクラス名である必要があり、空の文字列にすることはできません。|  
+|`extraAttribute`|省略可能な属性です。<br /><br /> そのトレース ソースのメソッドによって識別されるトレース ソース固有<xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A>の属性の値を指定します。|  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<listeners>](listeners-element-for-source.md)|メッセージを収集、格納、およびルーティングするリスナーを格納します。|  
+|[\<リスナー>](listeners-element-for-source.md)|メッセージを収集、格納、およびルーティングするリスナーが含まれています。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -56,11 +56,11 @@ ms.locfileid: "74088832"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
   
-## <a name="remarks"></a>Remarks  
- この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
+## <a name="remarks"></a>解説  
+ この要素は、コンピューター構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、`<source>` 要素を使用してトレースソース `mySource` を追加し、`sourceSwitch`という名前のソーススイッチのレベルを設定する方法を示します。 トレース情報をコンソールに書き込むコンソールトレースリスナーが追加されます。  
+ 次の例は、要素を`<source>`使用してトレース ソース`mySource`を追加し、という名前`sourceSwitch`のソース スイッチのレベルを設定する方法を示しています。 トレース情報をコンソールに書き込むコンソール トレース リスナーが追加されます。  
   
 ```xml  
 <configuration>  
@@ -77,8 +77,8 @@ ms.locfileid: "74088832"
     </sources>  
         <switches>  
            <add name="sourceSwitch" value="Warning" />  
-        </switches>    
-  </system.diagnostics>   
+        </switches>
+  </system.diagnostics>
 </configuration>  
 ```  
   

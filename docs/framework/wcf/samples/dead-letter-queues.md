@@ -2,21 +2,21 @@
 title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 5025aa784817d1189f23918eacfef275abf968e1
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: eab1c52f4d0b3d0f82cf561a9478ea8233598e1c
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76921433"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79144949"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
-このサンプルでは、配信できなかったメッセージの処理方法を示します。 これは、トランザクション処理された[MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)のサンプルに基づいています。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
+このサンプルでは、配信できなかったメッセージの処理方法を示します。 これは[、トランザクション処理された MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプルに基づいています。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
 
 > [!NOTE]
-> このサンプルでは、Windows Vista でのみ使用できるアプリケーション配信不能キューを示します。 このサンプルは、Windows Server 2003 および Windows XP 上の MSMQ 3.0 の既定のシステム全体のキューを使用するように変更できます。
+> このサンプルでは、Windows Vista でのみ使用できる各アプリケーションの配信不能キューを示します。 このサンプルは、Windows Server 2003 および Windows XP の MSMQ 3.0 の既定のシステム全体のキューを使用するように変更できます。
 
  キュー通信では、クライアントはサービスとの通信にキューを使用します。 厳密には、クライアントはメッセージをキューに送信します。 サービスは、メッセージをキューから受信します。 したがって、キューを使用する通信では、サービスとクライアントが同時に実行されていなくてもかまいません。
 
@@ -49,7 +49,7 @@ public interface IOrderProcessor
 }
 ```
 
- このサンプルのサービスコードは、トランザクション処理された[MSMQ バインド](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)のコードです。
+ サンプルのサービス コードは、[トランザクション処理された MSMQ バインディング のサービス](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)コードです。
 
  サービスとの通信はトランザクションのスコープ内で実行されます。 サービスはキューからメッセージを読み取って操作を実行し、操作の結果を表示します。 このアプリケーションでは、配信不能メッセージ用の配信不能キューも作成します。
 
@@ -169,9 +169,9 @@ public void SubmitPurchaseOrder(PurchaseOrder po)
 }
 ```
 
- 配信不能キューの中のメッセージは、メッセージを処理するサービス宛てのメッセージです。 このため、配信不能メッセージサービスがキューからメッセージを読み取る場合、Windows Communication Foundation (WCF) チャネル層はエンドポイントで不一致を検出し、メッセージをディスパッチしません。 この場合、メッセージの宛先は注文処理サービスですが、受信するのは配信不能メッセージ サービスです。 別のエンドポイント宛てのメッセージを受信するには、どのアドレスにも一致するアドレス フィルタを `ServiceBehavior` で指定します。 これは、配信不能キューから読み取ったメッセージを正常に処理するために必要です。
+ 配信不能キューの中のメッセージは、メッセージを処理するサービス宛てのメッセージです。 したがって、配信不能メッセージ サービスがキューからメッセージを読み取るとき、Windows 通信基盤 (WCF) チャネル層はエンドポイントの不一致を検出し、メッセージをディスパッチしません。 この場合、メッセージの宛先は注文処理サービスですが、受信するのは配信不能メッセージ サービスです。 別のエンドポイント宛てのメッセージを受信するには、どのアドレスにも一致するアドレス フィルタを `ServiceBehavior` で指定します。 これは、配信不能キューから読み取ったメッセージを正常に処理するために必要です。
 
- このサンプルでは、エラーの原因がメッセージのタイムアウトである場合に、配信不能メッセージサービスによってメッセージが再送信されます。その他のすべての理由により、次のサンプルコードに示すように、配信エラーが表示されます。
+ このサンプルでは、メッセージがタイムアウトした理由が失敗の場合、送り出し不能メッセージ サービスはメッセージを再送信します。その他のすべての理由から、次のサンプル コードに示すように、配信エラーが表示されます。
 
 ```csharp
 // Service class that implements the service contract.
@@ -310,23 +310,23 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
+1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。
 
 2. サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
 
-    1. Visual Studio 2012 でサーバーマネージャーを開きます。
+    1. サーバー マネージャーを開く Visual Studio 2012.
 
-    2. **[機能]** タブを展開します。
+    2. [**機能]** タブを展開します。
 
-    3. **[プライベートメッセージキュー]** を右クリックし、 **[新規]** 、 **[プライベートキュー]** の順に選択します。
+    3. **[プライベート メッセージ キュー**] を右クリックし、[**新規作成**]、[**プライベート キュー**] の順に選択します。
 
-    4. **[トランザクション]** ボックスをオンにします。
+    4. [**トランザクション**] ボックスをオンにします。
 
-    5. 新しいキューの名前として `ServiceModelSamplesTransacted` を入力します。
+    5. 新`ServiceModelSamplesTransacted`しいキューの名前として入力します。
 
 3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 
-4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、キュー名を適切に変更し、localhost をコンピューターの完全な名前に置き換えて、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。
+4. 単一または複数のコンピューター構成変更キュー名でサンプルを実行するには、ローカル ホストをコンピューターのフル ネームに置き換え[、「Windows コミュニケーション ファウンデーション サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の指示に従います。
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>ワークグループに参加しているコンピューターでこのサンプルを実行するには
 
@@ -349,14 +349,14 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
     > [!NOTE]
     > `security mode` を `None` に設定することは、`MsmqAuthenticationMode`、`MsmqProtectionLevel`、および `Message` のセキュリティを `None` に設定することに相当します。
 
-## <a name="comments"></a>コメント
+## <a name="comments"></a>説明
  `netMsmqBinding` バインディング トランスポートを使用する場合の既定では、セキュリティが有効です。 トランスポート セキュリティの種類は、`MsmqAuthenticationMode` と `MsmqProtectionLevel` の 2 つのプロパティで決まります。 既定の設定では、認証モードは `Windows`、保護レベルは `Sign` です。 MSMQ の認証および署名の機能を利用するには、ドメインに属している必要があります。 ドメインに属していないコンピューターでこのサンプルを実行すると、"User's internal message queuing certificate does not exist" というエラーが表示されます。
 
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
->   
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  

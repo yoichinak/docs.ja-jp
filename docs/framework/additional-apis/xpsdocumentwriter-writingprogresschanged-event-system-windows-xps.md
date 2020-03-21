@@ -1,5 +1,5 @@
 ---
-title: System.windows.xps.xpsdocumentwriter>. _WritingProgressChanged イベント (system.string)
+title: _WritingProgressChanged イベント (システム.Windows.Xps)
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,16 +11,16 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 59df080b4c07e4aa9714a5b00f3ed87be44a9449
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 4d61a11ec6546ed4e1b0011d541f10fec4f86b68
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524999"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79155584"
 ---
-# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>System.windows.xps.xpsdocumentwriter>.\_WritingProgressChanged イベント
+# <a name="xpsdocumentwriter_writingprogresschanged-event"></a>を使用します。\_イベントの書き込み進行状況変更
 
-@No__t_0 が進行状況を更新したときに発生します。 
+<xref:System.Windows.Xps.XpsDocumentWriter> がその進行状況を更新したときに発生します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,10 +28,10 @@ ms.locfileid: "72524999"
 internal event WritingProgressChangedEventHandler _WritingProgressChanged
 ```
 
-## <a name="requirements"></a>［要件］
+## <a name="requirements"></a>必要条件
 
-**名前空間:** <xref:System.Windows.Xps>
+**名前空間:**<xref:System.Windows.Xps>
 
-**アセンブリ:** システム印刷 ((system.string で))
+**アセンブリ:** システム.印刷(システム印刷.dll内)
 
-**.NET Framework のバージョン:** 3.0 以降で使用可能
+**.NET フレームワークのバージョン:** 3.0以降で利用可能

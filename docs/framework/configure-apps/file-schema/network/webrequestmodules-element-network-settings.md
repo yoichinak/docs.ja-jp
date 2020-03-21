@@ -8,24 +8,24 @@ helpviewer_keywords:
 - webRequestModules element
 - <webRequestModules> element
 ms.assetid: 1263de11-3e0a-4f94-97c9-710b2ae53817
-ms.openlocfilehash: e119d9ce1f8bb6f07f8050612550db459a2f065c
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 7f2805283f89e6165d336b3e593d34054e02115d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71697461"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79154544"
 ---
 # <a name="webrequestmodules-element-network-settings"></a>\<webRequestModules> 要素 (ネットワーク設定)
-ネットワークホストから情報を要求するために使用するモジュールを指定します。  
+ネットワーク ホストから情報を要求するために使用するモジュールを指定します。  
   
-[ **\<configuration>** ](../configuration-element.md)  
-&nbsp;&nbsp;[ **\<system.net>** ](system-net-element-network-settings.md)  
-&nbsp; @ no__t-1 @ no__t @ no__t @ no__t-4webRequestModules >  
+[**\<構成>**](../configuration-element.md)  
+&nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;\<>  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<webRequestModules>   
+<webRequestModules>
 </webRequestModules>  
 ```  
   
@@ -37,28 +37,28 @@ ms.locfileid: "71697461"
   
 ### <a name="child-elements"></a>子要素  
   
-|**要素**|**[説明]**|  
+|**Element**|**説明**|  
 |-----------------|---------------------|  
-|[add](add-element-for-webrequestmodules-network-settings.md)|アプリケーションにカスタム Web 要求モジュールを追加します。|  
-|[clear](clear-element-for-webrequestmodules-network-settings.md)|アプリケーションから、登録されているすべての Web 要求モジュールを削除します。|  
-|[remove](remove-element-for-webrequestmodules-network-settings.md)|アプリケーションからカスタム Web 要求モジュールを削除します。|  
+|[追加](add-element-for-webrequestmodules-network-settings.md)|カスタム Web 要求モジュールをアプリケーションに追加します。|  
+|[クリア](clear-element-for-webrequestmodules-network-settings.md)|登録されているすべての Web 要求モジュールをアプリケーションから削除します。|  
+|[削除](remove-element-for-webrequestmodules-network-settings.md)|カスタム Web 要求モジュールをアプリケーションから削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|**要素**|**[説明]**|  
+|**Element**|**説明**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
-## <a name="remarks"></a>コメント  
- @No__t-0 要素は、ネットワークホストへの情報要求を処理するために、<xref:System.Net.WebRequest> クラスの子孫を登録します。 Web 要求モジュールは @no__t 0 インターフェイスを実装する必要があります。  
+## <a name="remarks"></a>解説  
+ 要素`webRequestModules`は、ネットワーク ホストへの情報<xref:System.Net.WebRequest>要求を処理するクラスの子孫を登録します。 Web 要求モジュールは、<xref:System.Net.IWebRequestCreate>インターフェイスを実装する必要があります。  
   
- .NET Framework には、`http://`、`https://`、および `file://` で始まる Uri の Web 要求モジュールが含まれています。 既定のモジュールをオーバーライドするには、構成ファイルにカスタムモジュールを登録する必要があります。  
+ .NET Framework には`http://`、 で`https://`始まる URI の Web`file://`要求モジュールが含まれています。 デフォルトのモジュールをオーバーライドするには、構成ファイルにカスタム モジュールを登録する必要があります。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、既定の HTTP モジュールを登録します。 Version および PublicKeyToken の値は、指定されたモジュールの正しい値に置き換える必要があります。  
+ 次の例では、既定の HTTP モジュールを登録します。 バージョンと公開キートークンの値を、指定したモジュールの正しい値に置き換える必要があります。  
   
 ```xml  
 <configuration>  
