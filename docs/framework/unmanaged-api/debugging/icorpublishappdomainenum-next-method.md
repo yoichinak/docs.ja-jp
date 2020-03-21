@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: ad37cd10-0339-4d08-9b0e-4b3428bb4dc3
 topic_type:
 - apiref
-ms.openlocfilehash: c8866e98be0dd064138acdf5e0f6fb9c339fb3d2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6f7f400c51ded0b98c0c2286cb6f90bbd77e47d7
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790645"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178395"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next メソッド
-現在プロセスに存在する、指定した数のアプリケーションドメインを、現在の位置から取得します。  
+現在の位置から開始して、プロセスに現在存在するアプリケーション ドメインの指定した数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
-    [out, size_is(celt), length_is(*pceltFetched)]   
+    [out, size_is(celt), length_is(*pceltFetched)]
         ICorPublishAppDomain **objects,  
     [out] ULONG *pceltFetched  
 );  
@@ -38,18 +38,18 @@ HRESULT Next (
   
 ## <a name="parameters"></a>パラメーター  
  `celt`  
- から取得する要素の数。  
+ [in]取得する要素の数。  
   
  `objects`  
- 入出力取得された[ICorPublishAppDomain](icorpublishappdomain-interface.md)オブジェクトの配列へのポインター。各オブジェクトは、アプリケーションドメインを表します。  
+ [アウト]取得した[ICorPublishAppDomain](icorpublishappdomain-interface.md)オブジェクトの配列へのポインター。  
   
  `pceltFetched`  
- 入出力実際に返されたアプリケーションドメインの数へのポインター。 `celt` が1の場合、この値は null になります。  
+ [アウト]実際に返されるアプリケーション ドメインの数へのポインター。 この値は null`celt`の場合は null である可能性があります。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** CorPub .idl、CorPub .h  
+ **ヘッダー:** コルパブ.idl,コルパブ.h  
   
  **ライブラリ:** CorGuids.lib  
   

@@ -15,21 +15,21 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: dca2a4e5ee869346108137a8ba01ab8855756725
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 383e3f8990a1f355c94ff5e9f9daa69bdbdd97bb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792553"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178663"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory メソッド
-このプロセスの指定したメモリ領域を読み取ります。  
+このプロセスのメモリの指定された領域を読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT ReadMemory(  
-    [in]  CORDB_ADDRESS address,   
+    [in]  CORDB_ADDRESS address,
     [in]  DWORD size,  
     [out, size_is(size), length_is(size)] BYTE buffer[],  
     [out] SIZE_T *read);  
@@ -37,26 +37,26 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- から読み取るメモリのベースアドレスを指定する `CORDB_ADDRESS` 値。  
+ [in]読`CORDB_ADDRESS`み取るメモリのベース アドレスを指定する値。  
   
  `size`  
- からメモリから読み取るバイト数。  
+ [in]メモリから読み取るバイト数。  
   
  `buffer`  
- 入出力メモリの内容を受け取るバッファー。  
+ [アウト]メモリの内容を受け取るバッファ。  
   
  `read`  
- 入出力指定したバッファーに転送されたバイト数へのポインター。  
+ [アウト]指定したバッファーに転送されるバイト数へのポインター。  
   
-## <a name="remarks"></a>コメント  
- `ReadMemory` メソッドは、主に、デバッグ対象のアンマネージ部分で使用されているメモリ領域を検査するために相互運用機能デバッグによって使用されることを意図しています。 このメソッドを使用して、Microsoft 中間言語 (MSIL) コードとネイティブの JIT コンパイルコードを読み取ることもできます。  
+## <a name="remarks"></a>解説  
+ この`ReadMemory`メソッドは、主に、デバッグ対象のアンマネージ部分で使用されているメモリ領域を調べるための相互運用機能デバッグで使用されることを目的としています。 このメソッドは、Microsoft 中間言語 (MSIL) コードおよびネイティブ JIT コンパイルコードを読み取るためにも使用できます。  
   
- マネージブレークポイントは、`buffer` パラメーターで返されたデータから削除されます。 [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)によって設定されたネイティブブレークポイントに対して調整は行われません。  
+ マネージ ブレークポイントは、`buffer`パラメーターで返されるデータから削除されます。 [ICorDebugProcess2](icordebugprocess2-setunmanagedbreakpoint-method.md)によって設定されたネイティブ ブレークポイントに対する調整は行いません。  
   
- プロセスメモリのキャッシュは実行されません。  
+ プロセス メモリのキャッシュは実行されません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

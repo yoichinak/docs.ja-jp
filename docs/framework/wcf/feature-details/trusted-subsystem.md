@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: 4f3166b8f1e59a100f54574ab548f5dae88eb5cd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b226eed9218207cde99add61ef1f3eb64b459009
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742637"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184303"
 ---
 # <a name="trusted-subsystem"></a>信頼できるサブシステム
 クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。 Web サービスは、追加のリソース (データベースや他の Web サービスなど) に対するアクセスが、Web サービスのビジネス ロジック内にカプセル化されるように設計されています。 これらのリソースは、非承認のアクセスに対して保護する必要があります。 信頼できるサブシステムの処理を次の図に示します。  
@@ -29,16 +29,16 @@ ms.locfileid: "76742637"
   
 5. 信頼できるサブシステムはこの応答を処理し、自身の応答をクライアントに発行します。  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |セキュリティ モード|Message|  
-|相互運用性|Windows Communication Foundation (WCF) のみ。|  
+|相互運用性|WCF (WCF) のみ。|  
 |認証 (サービス)|セキュリティ トークン サービスはクライアントの認証と承認を行います。|  
 |認証 (クライアント)|信頼できるサブシステムがクライアントを認証し、リソースが信頼できるサブシステム サービスを認証します。|  
 |整合性|はい|  
 |機密情報|はい|  
 |トランスポート|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
-|バインド|<xref:System.ServiceModel.WSHttpBinding> と <xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.NetTcpBinding>[および\<>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>リソース (バックエンド サービス)  
   
@@ -122,7 +122,7 @@ ms.locfileid: "76742637"
       </service>  
     </services>  
     <client>  
-      <endpoint name=""   
+      <endpoint name=""
                 address="net.tcp://contoso.com:8001/BackendService"  
                 binding="customBinding"  
                 bindingConfiguration="ClientBinding"  
@@ -179,7 +179,7 @@ ms.locfileid: "76742637"
 <configuration>  
   <system.serviceModel>  
     <client>  
-        <endpoint name=""   
+        <endpoint name=""
                   address="http://www.cohowinery.com:8000/FacadeService"  
                   binding="wsHttpBinding"  
                   bindingConfiguration="Binding1"  
@@ -210,7 +210,7 @@ ms.locfileid: "76742637"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

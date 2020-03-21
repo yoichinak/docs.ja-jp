@@ -18,18 +18,18 @@ helpviewer_keywords:
 - translating resources into languages
 - localizing resources
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
-ms.openlocfilehash: 39bb518306b6e76aea1ae4a791fca79fbbb1b6c8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 17795db2cdec419a31fe862793c88506f9535ff9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74445745"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180446"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>デスクトップ アプリケーションのリソースの取得
 
-ローカライズされたリソースを NET Framework デスクトップ アプリケーションで使用する場合は、既定カルチャまたはニュートラル カルチャ用のリソースをメイン アセンブリと共にパッケージ化し、アプリでサポートされている言語またはカルチャごとに個別のサテライト アセンブリを作成することが理想的です。 名前付きリソースには、次のセクションで説明する <xref:System.Resources.ResourceManager> クラスを使用してアクセスすることができます。 目的のリソースをメイン アセンブリおよびサテライト アセンブリに埋め込まない場合でも、.resources バイナリ ファイルには直接アクセスすることができます。詳細については、「[.resources ファイルからのリソースの取得](#from_file)」セクションを参照してください。  Windows 8.x ストアアプリのリソースを取得するには、「 [Windows ストアアプリでのリソースの作成と取得](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))」を参照してください。  
+ローカライズされたリソースを NET Framework デスクトップ アプリケーションで使用する場合は、既定カルチャまたはニュートラル カルチャ用のリソースをメイン アセンブリと共にパッケージ化し、アプリでサポートされている言語またはカルチャごとに個別のサテライト アセンブリを作成することが理想的です。 名前付きリソースには、次のセクションで説明する <xref:System.Resources.ResourceManager> クラスを使用してアクセスすることができます。 目的のリソースをメイン アセンブリおよびサテライト アセンブリに埋め込まない場合でも、.resources バイナリ ファイルには直接アクセスすることができます。詳細については、「[.resources ファイルからのリソースの取得](#from_file)」セクションを参照してください。  Windows 8.x ストア アプリでリソースを取得するには[、「Windows ストア アプリでのリソースの作成と取得](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))」を参照してください。  
   
-<a name="from_assembly"></a>   
+<a name="from_assembly"></a>
 ## <a name="retrieving-resources-from-assemblies"></a>アセンブリからのリソースの取得  
  <xref:System.Resources.ResourceManager> クラスでは、実行時にリソースにアクセスすることができます。 文字列リソースを取得するには <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> メソッドを使用し、文字列以外のリソースを取得するには <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> メソッドを使用します。 各メソッドには、次の 2 つのオーバーロードが含まれます。  
   
@@ -58,7 +58,7 @@ TimeHeader=L'heure actuelle est
 TimeHeader=Текущее время —  
 ```  
   
- この例のソース コード (C# バージョンのコードについては GetString.cs という名前のファイルに、Visual Basic バージョンのコードについては GetString.vb という名前のファイルに入っています) では、4 つのカルチャの名前を含む文字列配列が定義されます。具体的には、リソースが提供されている 3 つのカルチャと、スペイン語 (スペイン) カルチャです。 ランダムに 5 回実行されるループでは、これらのカルチャのいずれかを選択し、それを <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> プロパティに割り当てます。 次に、 <xref:System.Resources.ResourceManager.GetString%28System.String%29> メソッドを呼び出して、ローカライズされた文字列を取得します。この文字列は時刻と一緒に表示されます。  
+ この例のソース コード (C# バージョンのコードについては GetString.cs という名前のファイルに、Visual Basic バージョンのコードについては GetString.vb という名前のファイルに入っています) では、4 つのカルチャの名前を含む文字列配列が定義されます。具体的には、リソースが提供されている 3 つのカルチャと、スペイン語 (スペイン) カルチャです。 ランダムに 5 回実行されるループでは、これらのカルチャのいずれかを選択し、それを <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=nameWithType> プロパティに割り当てます。 次に、<xref:System.Resources.ResourceManager.GetString%28System.String%29> メソッドを呼び出して、ローカライズされた文字列を取得します。この文字列は時刻と一緒に表示されます。  
   
  [!code-csharp[Conceptual.Resources.Retrieving#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstring.cs#3)]
  [!code-vb[Conceptual.Resources.Retrieving#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstring.vb#3)]  
@@ -93,7 +93,7 @@ al -embed:strings.ru-RU.resources -culture:ru-RU -out:ru-RU\GetString.resources.
  [!code-csharp[Conceptual.Resources.Retrieving#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/getstream.cs#5)]
  [!code-vb[Conceptual.Resources.Retrieving#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/getstream.vb#5)]  
   
- 次のバッチ ファイルを使用すると、C# の例をビルドできます。 Visual Basic の場合は、`csc` を `vbc` に変更し、さらにソース コード ファイルの拡張子を `.cs` から `.vb` に変更します。  
+ 次のバッチ ファイルを使用すると、C# の例をビルドできます。 Visual Basic の場合は、 `csc` を `vbc`に変更し、さらにソース コード ファイルの拡張子を `.cs` から `.vb`に変更します。  
   
 ```console
 csc CreateResources.cs  
@@ -104,7 +104,7 @@ resgen AppResources.resx
 csc GetStream.cs -resource:AppResources.resources  
 ```  
   
- 次の例では、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> メソッドを使用して、カスタム オブジェクトを逆シリアル化します。 この例では、次に示す `PersonTable`という名前の構造体が定義されている UIElements.cs (Visual Basic の場合は UIElements.vb) という名前のソース コード ファイルを使用しています。 この構造体は、ローカライズされたテーブル列名を表示する一般的なテーブル表示ルーチンでの使用を目的としています。 `PersonTable` 構造体は、 <xref:System.SerializableAttribute> 属性でマークされています。  
+ 次の例では、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29?displayProperty=nameWithType> メソッドを使用して、カスタム オブジェクトを逆シリアル化します。 この例では、次に示す `PersonTable` という名前の構造体が定義されている UIElements.cs (Visual Basic の場合は UIElements.vb) という名前のソース コード ファイルを使用しています。 この構造体は、ローカライズされたテーブル列名を表示する一般的なテーブル表示ルーチンでの使用を目的としています。 `PersonTable` 構造体は、 <xref:System.SerializableAttribute> 属性でマークされています。  
   
  [!code-csharp[Conceptual.Resources.Retrieving#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example.cs#6)]
  [!code-vb[Conceptual.Resources.Retrieving#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example.vb#6)]  
@@ -137,19 +137,19 @@ GetObject.exe
   
  メイン アセンブリのバージョン管理のサポートは、 <xref:System.Resources.SatelliteContractVersionAttribute> 属性で指定されます。 この属性をアプリのメイン アセンブリで指定すると、サテライト アセンブリを更新しなくてもメイン アセンブリの更新および再展開を行うことができます。 メイン アセンブリを更新すると、メイン アセンブリのバージョン番号はインクリメントされますが、サテライト コントラクト バージョン番号はそのままで変わりありません。 リソース マネージャーは、要求されたリソースを取得するとき、この属性で指定されたサテライト アセンブリのバージョンを読み込みます。  
   
- 発行者ポリシー アセンブリでは、サテライト アセンブリのバージョン管理をサポートしています。 メイン アセンブリを更新することなく、サテライト アセンブリの更新および再展開を行うことができます。 サテライト アセンブリを更新すると、そのバージョン番号はインクリメントされ、発行者ポリシー アセンブリと一緒に出力されます。 発行者ポリシー アセンブリ内では、新しいサテライト アセンブリが旧バージョンと互換性があるように指定します。 リソース マネージャーでは、 <xref:System.Resources.SatelliteContractVersionAttribute> 属性を使用してサテライト アセンブリのバージョンを特定しますが、アセンブリ ローダーは、発行元ポリシーで指定されたサテライト アセンブリのバージョンにバインドします。 発行者ポリシー アセンブリの詳細については、「 [発行者ポリシー ファイルを作成する](../configure-apps/how-to-create-a-publisher-policy.md)」を参照してください。  
+ 発行者ポリシー アセンブリでは、サテライト アセンブリのバージョン管理をサポートしています。 メイン アセンブリを更新することなく、サテライト アセンブリの更新および再展開を行うことができます。 サテライト アセンブリを更新すると、そのバージョン番号はインクリメントされ、発行者ポリシー アセンブリと一緒に出力されます。 発行者ポリシー アセンブリ内では、新しいサテライト アセンブリが旧バージョンと互換性があるように指定します。 リソース マネージャーでは、 <xref:System.Resources.SatelliteContractVersionAttribute> 属性を使用してサテライト アセンブリのバージョンを特定しますが、アセンブリ ローダーは、発行元ポリシーで指定されたサテライト アセンブリのバージョンにバインドします。 発行者ポリシー アセンブリの詳細については、「[発行者ポリシー ファイルを作成する](../configure-apps/how-to-create-a-publisher-policy.md)」を参照してください。  
   
  アセンブリの完全なバージョン管理サポートを有効にするには、 [グローバル アセンブリ キャッシュ](../app-domains/gac.md) 内に厳密な名前を付けたアセンブリを展開し、アプリケーション ディレクトリ内に厳密な名前を持たないアセンブリを展開することをお勧めします。 厳密な名前を付けたアセンブリをアプリケーション ディレクトリに展開すると、更新時に、サテライト アセンブリのバージョン番号をインクリメントできなくなります。 そのため、インプレース更新を実行する必要があります。インプレース更新では、既存のコードを更新されたコードに置き換えて、同じバージョン番号を維持します。 たとえば、サテライト アセンブリのバージョン 1.0.0.0 を、完全に指定されたアセンブリ名 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" で更新する場合は、完全に指定された同じアセンブリ名 "myApp.resources, Version=1.0.0.0, Culture=de, PublicKeyToken=b03f5f11d50a3a" でコンパイルされた更新済みの myApp.resources.dll で上書きします。 サテライト アセンブリ ファイルに対してインプレース更新を使用すると、サテライト アセンブリのバージョンをアプリケーションで正確に特定するのが難しくなります。  
   
  アセンブリのバージョン管理の詳細については、「 [アセンブリのバージョン管理](../../standard/assembly/versioning.md) 」と「 [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
-<a name="from_file"></a>   
+<a name="from_file"></a>
 ## <a name="retrieving-resources-from-resources-files"></a>.resources ファイルからのリソースの取得  
  サテライト アセンブリにリソースを展開しないように選択した場合でも、 <xref:System.Resources.ResourceManager> オブジェクトを使用して、.resources ファイルからリソースに直接アクセスすることができます。 そのためには、.resources ファイルを正しく展開する必要があります。 次に、 <xref:System.Resources.ResourceManager.CreateFileBasedResourceManager%2A?displayProperty=nameWithType> メソッドを使用して <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化し、スタンドアロンの .resources ファイルを含むディレクトリを指定します。  
   
 ### <a name="deploying-resources-files"></a>.resources ファイルの展開  
- アプリケーション アセンブリとサテライト アセンブリに .resources ファイルを埋め込むと、各サテライト アセンブリのファイル名は同じになりますが、各サテライト アセンブリが配置される場所はそれぞれのカルチャを反映するサブディレクトリとなります。 これに対して、.resources ファイルからリソースに直接アクセスする場合は、すべての .resources ファイルを単一のディレクトリ (通常は、アプリケーション ディレクトリのサブディレクトリ) に配置することができます。 アプリの既定の .resources ファイルの名前は、ルート名のみで構成され、カルチャ名はありません (たとえば、strings.resources)。 ローカライズされた各カルチャのリソースが格納されるファイルの名前は、ルート名の後にカルチャが続きます (たとえば、strings.ja.resources または strings.de-DE.resources)。 
- 
+ アプリケーション アセンブリとサテライト アセンブリに .resources ファイルを埋め込むと、各サテライト アセンブリのファイル名は同じになりますが、各サテライト アセンブリが配置される場所はそれぞれのカルチャを反映するサブディレクトリとなります。 これに対して、.resources ファイルからリソースに直接アクセスする場合は、すべての .resources ファイルを単一のディレクトリ (通常は、アプリケーション ディレクトリのサブディレクトリ) に配置することができます。 アプリの既定の .resources ファイルの名前は、ルート名のみで構成され、カルチャ名はありません (たとえば、strings.resources)。 ローカライズされた各カルチャのリソースが格納されるファイルの名前は、ルート名の後にカルチャが続きます (たとえば、strings.ja.resources または strings.de-DE.resources)。
+
  次の図では、ディレクトリ構造内のどこにリソース ファイルを配置する必要があるかを示しています。 また、.resource ファイルの名前付け規則が与えられます。  
 
  ![アプリケーションのメイン ディレクトリを示す図。](./media/retrieving-resources-in-desktop-apps/resource-application-directory.gif)  
@@ -160,7 +160,7 @@ GetObject.exe
 > [!NOTE]
 > ASP.NET アプリを展開する場合には、スタンドアロン .resources ファイルを使用しないでください。 このファイルを使用すると、ロックの問題が生じ、XCOPY 展開が破損する恐れがあります。 ASP.NET リソースの展開先はサテライト アセンブリにすることをお勧めします。 詳細については、「[ASP.NET Web ページのリソースの概要](https://docs.microsoft.com/previous-versions/aspnet/ms227427(v=vs.100))」を参照してください。  
   
- <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化したら、前述したように <xref:System.Resources.ResourceManager.GetString%2A>メソッド、 <xref:System.Resources.ResourceManager.GetObject%2A>メソッド、 <xref:System.Resources.ResourceManager.GetStream%2A> メソッドを使用してリソースを取得します。 ただし、.resources ファイルからリソースを直接取得することは、アセンブリから埋め込みリソースを取得することとは異なります。 .resources ファイルからリソースを取得する場合、 <xref:System.Resources.ResourceManager.GetString%28System.String%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%29> メソッドは、現在のカルチャに関係なく、常に既定のカルチャのリソースを取得します。 アプリケーションの現在のカルチャまたは特定のカルチャのリソースを取得するには、 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、または <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> メソッドを呼び出して、どのカルチャのリソースを取得するのか指定する必要があります。 現在のカルチャのリソースを取得するには、 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティの値を `culture` 引数として指定します。 リソース マネージャーは、 `culture`のリソースを取得できない場合、標準的なリソース フォールバック規則を使用して適切なリソースを取得します。  
+ <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化したら、前述したように <xref:System.Resources.ResourceManager.GetString%2A>メソッド、 <xref:System.Resources.ResourceManager.GetObject%2A>メソッド、 <xref:System.Resources.ResourceManager.GetStream%2A> メソッドを使用してリソースを取得します。 ただし、.resources ファイルからリソースを直接取得することは、アセンブリから埋め込みリソースを取得することとは異なります。 .resources ファイルからリソースを取得する場合、 <xref:System.Resources.ResourceManager.GetString%28System.String%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%29> メソッドは、現在のカルチャに関係なく、常に既定のカルチャのリソースを取得します。 アプリケーションの現在のカルチャまたは特定のカルチャのリソースを取得するには、 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、または <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> メソッドを呼び出して、どのカルチャのリソースを取得するのか指定する必要があります。 現在のカルチャのリソースを取得するには、 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティの値を `culture` 引数として指定します。 リソース マネージャーは、`culture` のリソースを取得できない場合、標準的なリソース フォールバック規則を使用して適切なリソースを取得します。  
   
 ### <a name="an-example"></a>例  
  次の例では、リソース マネージャーが .resources ファイルからリソースを直接取得する方法を示しています。 この例は、英語 (米国) カルチャ、フランス語 (フランス) カルチャ、ロシア語 (ロシア) カルチャ用の 3 つのテキスト ベースのリソース ファイルで構成されます。 英語 (米国) は、この例の既定のカルチャです。 このリソースは、次の Strings.txt という名前のファイルに格納されています。  
@@ -172,7 +172,7 @@ Prompt=What is your name?
   
  フランス語 (フランス) カルチャのリソースは、次の Strings.fr-FR.txt という名前のファイルに格納されています。  
   
-```text 
+```text
 Greeting=Bon jour  
 Prompt=Comment vous appelez-vous?  
 ```  
@@ -184,12 +184,12 @@ Greeting=Здравствуйте
 Prompt=Как вас зовут?  
 ```  
   
- この例のソース コードを次に示します。 この例では、英語 (米国)、英語 (カナダ)、フランス語 (フランス)、およびロシア語 (ロシア) カルチャ用の <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化し、それぞれを現在のカルチャとします。 次に、 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッドで、 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティの値を `culture` 引数として指定して、カルチャ固有の適切なリソースを取得します。  
+ この例のソース コードを次に示します。 この例では、英語 (米国)、英語 (カナダ)、フランス語 (フランス)、およびロシア語 (ロシア) カルチャ用の <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化し、それぞれを現在のカルチャとします。 次に、<xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッドで、<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティの値を `culture` 引数として指定して、カルチャ固有の適切なリソースを取得します。  
   
  [!code-csharp[Conceptual.Resources.Retrieving#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.retrieving/cs/example3.cs#9)]
  [!code-vb[Conceptual.Resources.Retrieving#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.retrieving/vb/example3.vb#9)]  
   
- この例の C# バージョンをコンパイルするには、次のバッチ ファイルを実行します。 Visual Basic を使用している場合は、 `csc` を `vbc`に置換し、 `.cs` 拡張子を `.vb`に置換します。  
+ この例の C# バージョンをコンパイルするには、次のバッチ ファイルを実行します。 Visual Basic を使用している場合は、`csc` を `vbc` に置換し、`.cs` 拡張子を `.vb` に置換します。  
   
 ```console
 Md Resources  
@@ -200,10 +200,10 @@ Resgen Strings.ru-RU.txt Resources\Strings.ru-RU.resources
 csc Example.cs  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Resources.ResourceManager>
 - [デスクトップ アプリケーションのリソース](index.md)
-- [リソースのパッケージ化と配置](packaging-and-deploying-resources-in-desktop-apps.md)
+- [Packaging and Deploying Resources](packaging-and-deploying-resources-in-desktop-apps.md)
 - [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)
 - [Windows ストア アプリでのリソースの作成と取得](https://docs.microsoft.com/previous-versions/windows/apps/hh694557(v=vs.140))

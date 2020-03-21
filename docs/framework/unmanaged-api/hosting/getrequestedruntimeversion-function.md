@@ -15,57 +15,57 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-ms.openlocfilehash: be7d6ce29a9c9c4e3e530df40432b1a4c3b2d389
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6be0bc5d08f612dcb8ed7d256711e0c4367b9274
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136340"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178138"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 関数
 指定したアプリケーションによって要求された共通言語ランタイム (CLR) のバージョン番号を取得します。 そのバージョンがインストールされていない場合は、要求されるバージョンより前にインストールされた最も新しいバージョンを取得します。  
   
- この関数は .NET Framework 4 で非推奨とされました。  
+ この関数は、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetRequestedRuntimeVersion (  
-    [in]  LPWSTR  pExe,   
-    [out] LPWSTR  pVersion,   
-    [in]  DWORD   cchBuffer,   
+    [in]  LPWSTR  pExe,
+    [out] LPWSTR  pVersion,
+    [in]  DWORD   cchBuffer,
     [out] DWORD  *pdwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pExe`  
- からアプリケーションの名前。  
+ [in]アプリケーションの名前。  
   
  `pVersion`  
- 入出力正常に完了したときのバージョン番号の文字列を格納するバッファー。  
+ [アウト]正常終了した場合に、バージョン番号文字列を格納するバッファー。  
   
  `cchBuffer`  
- からバージョンバッファーの長さ。  
+ [in]バージョン バッファーの長さ。  
   
  `pdwLength`  
- 入出力バージョン番号文字列の長さへのポインター。  
+ [アウト]バージョン番号文字列の長さへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。  
+ このメソッドは、WinError.h で定義されている次の値に加えて、標準のコンポーネント オブジェクト モデル (COM) エラー コードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|ERROR_INSUFFICIENT_BUFFER|バージョンバッファーが、バージョン文字列を格納するのに十分な大きさではありません。|  
+|ERROR_INSUFFICIENT_BUFFER|バージョン バッファーのサイズが、バージョン文字列を格納するのに十分ではありません。|  
 |E_POINTER|`pdwLength` が null です。|  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

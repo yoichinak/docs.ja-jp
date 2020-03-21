@@ -5,30 +5,30 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 4a84b32664c16dad48dd415e430134c5fb98303a
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 7eb640576bc00bc767ba16f8dc4a5d5952a479c6
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211924"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184727"
 ---
 # <a name="internet-unsecured-client-and-service"></a>セキュリティで保護されていないインターネット環境のクライアントとサービス
-次の図は、セキュリティで保護されていないパブリック Windows Communication Foundation (WCF) クライアントとサービスの例を示しています。  
+次の図は、セキュリティで保護されていないパブリックな Windows 通信基盤 (WCF) クライアントとサービスの例を示しています。  
   
- ![セキュリティで保護されていないインターネットシナリオを示すスクリーンショット](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
+ ![セキュリティで保護されていないインターネット シナリオを示すスクリーンショット](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|[なし]|  
-|Transport|HTTP|  
-|バインディング|構成のコードまたは[\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)要素を <xref:System.ServiceModel.BasicHttpBinding> します。|  
+|セキュリティ モード|なし|  
+|トランスポート|HTTP|  
+|バインド|<xref:System.ServiceModel.BasicHttpBinding>コード内、または構成内の[\<基本 HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)要素。|  
 |相互運用性|既存の Web サービス クライアントとサービスを使用する|  
-|認証|[なし]|  
-|整合性|[なし]|  
-|機密性|[なし]|  
+|認証|なし|  
+|整合性|なし|  
+|機密情報|なし|  
   
 ## <a name="service"></a>サービス  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "76211924"
  [!code-csharp[C_UnsecuredService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_unsecuredservice/cs/source.cs#1)]
  [!code-vb[C_UnsecuredService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_unsecuredservice/vb/source.vb#1)]  
   
-### <a name="service-configuration"></a>サービスの構成  
+### <a name="service-configuration"></a>サービス構成  
  次のコードは、構成を使用して同一のエンドポイントをセットアップします。  
   
 ```xml  
@@ -50,9 +50,9 @@ ms.locfileid: "76211924"
     <behaviors />  
     <services>  
       <service behaviorConfiguration="" name="ServiceModel.Calculator">  
-        <endpoint address="http://localhost/Calculator"   
+        <endpoint address="http://localhost/Calculator"
                   binding="basicHttpBinding"  
-                  bindingConfiguration="Basic_Unsecured"   
+                  bindingConfiguration="Basic_Unsecured"
                   name="BasicHttp_ICalculator"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -67,12 +67,12 @@ ms.locfileid: "76211924"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+## <a name="client"></a>Client  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
-- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 例:  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -100,9 +100,9 @@ ms.locfileid: "76211924"
     </bindings>  
     <client>  
       <endpoint address="http://localhost/Calculator/Unsecured"  
-          binding="basicHttpBinding"   
+          binding="basicHttpBinding"
           bindingConfiguration="BasicHttpBinding_ICalculator"  
-          contract="ICalculator"   
+          contract="ICalculator"
           name="BasicHttpBinding_ICalculator" />  
     </client>  
   </system.serviceModel>  
@@ -113,4 +113,4 @@ ms.locfileid: "76211924"
 
 - [一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

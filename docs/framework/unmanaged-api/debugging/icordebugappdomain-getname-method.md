@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 2c9aa6792885c685195049948a540453b1f5235e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 45d27fca888bdabedf197525c63dbd03af7ba1ee
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73110309"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179090"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName メソッド
-アプリケーションドメインの名前を取得します。  
+アプリケーション ドメインの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,26 +31,26 @@ ms.locfileid: "73110309"
 HRESULT GetName (  
     [in]  ULONG32           cchName,  
     [out] ULONG32           *pcchName,  
-    [out, size_is(cchName), length_is(*pcchName)]   
+    [out, size_is(cchName), length_is(*pcchName)]
          WCHAR              szName[]  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `cchName`  
- [in] `szName` 配列のサイズ。 このメソッドをクエリモードにするには、この値を0に設定します。  
+ [in] `szName` 配列のサイズ。 このメソッドをクエリ モードにするには、この値を 0 に設定します。  
   
  `pcchName`  
- 入出力名前のサイズまたは実際に `szName`に返された文字数を指すポインター。 クエリモードでは、この値によって、呼び出し元は、名前に割り当てるバッファーの大きさを知ることができます。  
+ [アウト]名前のサイズ、または 実際に返される文字数へのポインター `szName`。 クエリ モードでは、この値を使用すると、呼び出し元は名前に割り当てるバッファの大きさを知ることができます。  
   
  `szName`  
- 入出力アプリケーションドメインの名前を格納する配列。  
+ [アウト]アプリケーション ドメインの名前を格納する配列。  
   
-## <a name="remarks"></a>Remarks  
- デバッガーは、`GetName` メソッドを1回呼び出して、名前に必要なバッファーのサイズを取得します。 デバッガーによってバッファーが割り当てられ、メソッドが2回目に呼び出されてバッファーに格納されます。 名前のサイズを取得するための最初の呼び出しは、*クエリモード*と呼ばれます。  
+## <a name="remarks"></a>解説  
+ デバッガーは、名前`GetName`に必要なバッファーのサイズを取得するメソッドを 1 回呼び出します。 デバッガーは、バッファーを割り当てるし、バッファーを埋めるために、メソッドを呼び出します。 名前のサイズを取得する最初の呼び出しは、クエリ*モード*と呼ばれます。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

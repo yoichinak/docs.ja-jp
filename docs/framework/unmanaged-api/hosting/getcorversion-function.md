@@ -15,44 +15,44 @@ helpviewer_keywords:
 ms.assetid: 2f09cd37-bf3a-4cc5-87b0-adc42a7eed31
 topic_type:
 - apiref
-ms.openlocfilehash: 1283abaf6b08af1d842d8fe4469f7f6c15e38ec5
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 1f40f27651d2d75cf2c3e4d7d1c21e1f47d402af
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136421"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178189"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 関数
 現在のプロセスで実行されている共通言語ランタイム (CLR) のバージョン番号を返します。  
   
- この関数は .NET Framework 4 で非推奨とされました。  
+ この関数は、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetCORVersion (  
     [in] LPWSTR  pbuffer,  
-    [in]  DWORD   cchBuffer,   
+    [in]  DWORD   cchBuffer,
     [out] DWORD*  dwlength  
-);   
+);
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `pbuffer`  
- 現在プロセスに読み込まれているランタイムのバージョンを指定する文字列を CLR が返すバッファーへのポインター。 返される文字列は、 [Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に渡される文字列と同じ形式になります (例、"v 1.0.1216")。 ランタイムがまだプロセスに読み込まれていない場合、関数はコンピューターにインストールされている最新バージョンのランタイムの適切なディレクトリ情報を返します。  
+ 現在プロセスに読み込まれているランタイムのバージョンを指定する文字列を CLR が返すバッファーへのポインター。 返される文字列は、"v1.0.1216" のように[、CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)に渡される文字列と同じ形式になります。 ランタイムがまだプロセスに読み込まれていない場合、この関数は、コンピューターにインストールされている最新バージョンのランタイムに対応するディレクトリ情報を返します。  
   
  `cchBuffer`  
- `pbuffer`に保持できる文字の数 (`WCHAR`s)。  
+ に保持できる文字数`WCHAR``pbuffer`。  
   
  `dwLength`  
- `pbuffer`に実際に返された文字数へのポインター。 `pbuffer` が null ポインターの場合、ランタイムは E_POINTER を返します。 文字数が `pbuffer` の長さより大きい場合、ランタイムは ERROR_INSUFFICIENT_BUFFER を返します。  
+ で実際に返される文字数へのポインタ`pbuffer`。 null`pbuffer`ポインターの場合、ランタイムはE_POINTERを返します。 文字数が長い場合は`pbuffer`、ランタイムは ERROR_INSUFFICIENT_BUFFER を返します。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
- **ライブラリ:** Mscoree.dll  
+ **ライブラリ:** MSCorEE.dll  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   

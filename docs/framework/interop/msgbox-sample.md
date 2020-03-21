@@ -9,12 +9,12 @@ helpviewer_keywords:
 - marshaling, MsgBox sample
 - data marshaling, MsgBox sample
 ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
-ms.openlocfilehash: 9f1e6d58742f60b6043a4be9218b80b323cd523e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: b970a5a193f82ca141c030491febce5ef352eb70
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124104"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181343"
 ---
 # <a name="msgbox-sample"></a>MsgBox のサンプル
 このサンプルでは、文字列型を In パラメーターとして値渡しする方法と、<xref:System.Runtime.InteropServices.DllImportAttribute.EntryPoint>、<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet>、および <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> の各フィールドを使用する場合について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "73124104"
 - User32.dll からエクスポートされる **MessageBox**。  
   
     ```cpp
-    int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,   
+    int MessageBox(HWND hWnd, LPCTSTR lpText, LPCTSTR lpCaption,
        UINT uType);  
     ```  
   

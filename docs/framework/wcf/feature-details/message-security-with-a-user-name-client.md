@@ -5,33 +5,33 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-ms.openlocfilehash: 547c23509096b66c1fdbd46117a10f4de1692387
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 3dd21268d4ea7dc59c74889ac94dc86678e91865
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212045"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184639"
 ---
 # <a name="message-security-with-a-user-name-client"></a>ユーザー名クライアントを使用したメッセージ セキュリティ
-次の図は、メッセージレベルのセキュリティを使用してセキュリティで保護された Windows Communication Foundation (WCF) サービスとクライアントを示しています。 サービスは X.509 証明書を使用して認証されます。 クライアントはユーザー名とパスワードを使用して認証されます。  
+次の図は、メッセージ レベルのセキュリティを使用してセキュリティで保護された Windows 通信基盤 (WCF) サービスとクライアントを示しています。 サービスは X.509 証明書を使用して認証されます。 クライアントはユーザー名とパスワードを使用して認証されます。  
   
- サンプルアプリケーションについては、「[メッセージセキュリティユーザー名](../../../../docs/framework/wcf/samples/message-security-user-name.md)」を参照してください。  
+ サンプル アプリケーションについては、「[メッセージ セキュリティ ユーザー名](../../../../docs/framework/wcf/samples/message-security-user-name.md)」を参照してください。  
   
- ![ユーザー名認証を使用したメッセージセキュリティ](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
+ ![ユーザー名認証を使用したメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/media/1fb10a61-7e1d-42f5-b1af-195bfee5b3c6.gif "1fb10a61-7e1d-42f5-b1af-195bfee5b3c6")  
   
 |特徴|説明|  
 |--------------------|-----------------|  
-|セキュリティ モード|[メッセージ]|  
-|相互運用性|Windows Communication Foundation (WCF) のみ|  
+|セキュリティ モード|Message|  
+|相互運用性|WCF (WCF) のみ|  
 |認証 (サーバー)|初期ネゴシエーションにはサーバー認証が必要|  
 |認証 (クライアント)|ユーザー名/パスワード|  
 |整合性|はい、共有のセキュリティ コンテキストを使用します|  
-|機密性|はい、共有のセキュリティ コンテキストを使用します|  
-|Transport|HTTP|  
-|バインディング|<xref:System.ServiceModel.WSHttpBinding>|  
+|機密情報|はい、共有のセキュリティ コンテキストを使用します|  
+|トランスポート|HTTP|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding>|  
   
 ## <a name="service"></a>サービス  
- 次のコードと構成は、別々に実行します。 以下のいずれかを実行します。  
+ 次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "76212045"
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  コードの代わりに次の構成を使用できます。  
   
 ```xml  
@@ -54,9 +54,9 @@ ms.locfileid: "76212045"
       <serviceBehaviors>  
         <behavior name="ServiceCredentialsBehavior">  
           <serviceCredentials>  
-            <serviceCertificate findValue="Contoso.com"   
+            <serviceCertificate findValue="Contoso.com"
                                 storeLocation="LocalMachine"  
-                                storeName="My"     
+                                storeName="My"
                                 x509FindType="FindBySubjectName" />  
           </serviceCredentials>  
         </behavior>  
@@ -75,7 +75,7 @@ ms.locfileid: "76212045"
     <bindings>  
       <wsHttpBinding>  
         <binding name="MessageAndUserName">  
-          <security mode="Message">              
+          <security mode="Message">
             <message clientCredentialType="UserName" />  
           </security>  
         </binding>  
@@ -86,7 +86,7 @@ ms.locfileid: "76212045"
 </configuration>  
 ```  
   
-## <a name="client"></a>クライアント  
+## <a name="client"></a>Client  
   
 ### <a name="code"></a>コード  
  クライアントを作成する場合のコード例を次に示します。 バインディングではメッセージ モード セキュリティを使用し、クライアント資格情報の種類は `UserName` に設定します。 ユーザー名とパスワードの指定はコードを使用する場合に限られます (構成可能ではありません)。 ユーザー名とパスワードを返すコードは、アプリケーション レベルで実行される必要があるため、ここには示しません。 たとえば、Windows フォーム ダイアログ ボックスを使用してユーザーにデータを照会します。  
@@ -94,7 +94,7 @@ ms.locfileid: "76212045"
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
   
-### <a name="configuration"></a>の構成  
+### <a name="configuration"></a>構成  
  クライアントを構成する場合のコード例を次に示します。 バインディングではメッセージ モード セキュリティを使用し、クライアント資格情報の種類は `UserName` に設定します。 ユーザー名とパスワードの指定はコードを使用する場合に限られます (構成可能ではありません)。  
   
 ```xml  
@@ -111,9 +111,9 @@ ms.locfileid: "76212045"
       </wsHttpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="http://machineName/Calculator"   
+      <endpoint address="http://machineName/Calculator"
                 binding="wsHttpBinding"  
-                bindingConfiguration="WSHttpBinding_ICalculator"   
+                bindingConfiguration="WSHttpBinding_ICalculator"
                 contract="ICalculator"  
                 name="WSHttpBinding_ICalculator">  
         <identity>  
@@ -130,5 +130,5 @@ ms.locfileid: "76212045"
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [メッセージ セキュリティ ユーザー名](../../../../docs/framework/wcf/samples/message-security-user-name.md)
 - [サービス ID と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
-- [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [\<アイデンティティ>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

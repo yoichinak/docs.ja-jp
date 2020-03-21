@@ -1,22 +1,22 @@
 ---
-title: <Event> 要素 (.NET ネイティブ)
+title: <Event>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
-ms.openlocfilehash: 6966caede63faafa718b760be879f6bc6cbd3ab9
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 60da48d5872d7ce61afcffa7977411bc6e1efc7f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73128492"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181040"
 ---
-# <a name="event-element-net-native"></a>\<イベント > 要素 (.NET ネイティブ)
+# <a name="event-element-net-native"></a>\<イベント>要素 (.NET ネイティブ)
 イベントにランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
   
 ```xml  
-<Event Name="event_name"   
-       Browse="policy_type"   
+<Event Name="event_name"
+       Browse="policy_type"
        Dynamic="policy_type" />  
 ```  
   
@@ -33,31 +33,31 @@ ms.locfileid: "73128492"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|[値]|説明|  
+|Value|説明|  
 |-----------|-----------------|  
-|*method_name*|イベントの名前です。 イベントの型は親 [\<Type>](type-element-net-native.md) または [\<TypeInstantiation>](typeinstantiation-element-net-native.md) 要素により定義されます。|  
+|*method_name*|イベント名。 イベントの型は、親[\<の型>](type-element-net-native.md)または[\<TypeInstantiation>](typeinstantiation-element-net-native.md)要素によって定義されます。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|[値]|説明|  
+|Value|説明|  
 |-----------|-----------------|  
 |*policy_setting*|イベントのこのポリシーの種類に適用する設定です。 指定できる値は、`Auto`、`Excluded`、`Included`、および `Required` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
- なし。  
+ [なし] :  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<Type>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
-|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<タイプ>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<入力インスタンス化>](typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  イベントのポリシーが明示的に定義されていない場合は、その親要素の実行時ポリシーを継承します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレン](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)
 - [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)

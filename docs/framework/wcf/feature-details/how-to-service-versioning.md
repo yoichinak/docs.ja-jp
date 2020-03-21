@@ -1,15 +1,15 @@
 ---
-title: '方法: サービスのバージョン管理'
+title: サービスのバージョンを管理する方法
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: 5ce9e7fc896f1ebc46dd25777fc629532339cbe2
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 3cd52e1f52a93e408ebed846894cc5686652cc91
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988705"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184840"
 ---
-# <a name="how-to-service-versioning"></a>方法: サービスのバージョン管理
+# <a name="how-to-service-versioning"></a>サービスのバージョンを管理する方法
 このトピックでは、メッセージを同じサービスの異なるバージョンにルーティングするルーティング構成を作成するために必要な、基本的な手順について説明します。 この例では、電卓サービスの 2 つのバージョン `roundingCalc` (v1) および `regularCalc` (v2) にメッセージがルーティングされます。 これらの実装は両方とも同じ操作をサポートしますが、古い方のサービス `roundingCalc` では、戻る前にすべての計算を最も近い整数値に丸めます。 クライアント アプリケーションは、新しい方の `regularCalc` サービスを使用するかどうかを示すことが可能である必要があります。  
   
 > [!WARNING]
@@ -23,7 +23,7 @@ ms.locfileid: "69988705"
   
 - 乗算  
   
-- 除算  
+- Divide  
   
  両方のサービス実装が同じ操作を処理し、返すデータを除いて基本的に同一であるため、クライアント アプリケーションから送信されるメッセージに含まれる基本データでは、要求をルーティングする方法を特定できません。 たとえば、両方のサービスの既定のアクションが同じであるために、アクション フィルターを使用できない場合があります。  
   
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2. 送信先エンドポイントにメッセージをルーティングするのに使用するフィルターを定義します。  この例では、XPath フィルターを使用して "CalcVer" カスタムヘッダーの値を検出し、メッセージのルーティング先のバージョンを決定します。 XPath フィルターは、"CalcVer" ヘッダーが含まれていないメッセージを検出するためにも使用されます。 次の例では、必要なフィルターおよび名前空間のテーブルを定義します。  
+2. 送信先エンドポイントにメッセージをルーティングするのに使用するフィルターを定義します。  この例では、XPath フィルターを使用して、メッセージのルーティング先のバージョンを決定する "CalcVer" カスタム ヘッダーの値を検出します。 XPath フィルターは、"CalcVer" ヘッダーを含まないメッセージを検出するためにも使用されます。 次の例では、必要なフィルターおよび名前空間のテーブルを定義します。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -94,9 +94,9 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     ```  
   
     > [!NOTE]
-    > S12 名前空間プレフィックスは、既定で名前空間テーブルに定義され、名前`http://www.w3.org/2003/05/soap-envelope`空間を表します。
+    > 名前空間のプレフィックス s12 は、名前空間テーブルで既定で定義され、名前空間`http://www.w3.org/2003/05/soap-envelope`を表します。
   
-3. 各フィルターをクライアント エンドポイントと関連付けるフィルター テーブルを定義します。 メッセージの "CalcVer" ヘッダーに値1が含まれている場合は、regularCalc サービスに送信されます。 ヘッダーに値 2 が含まれる場合は、roundingCalc サービスに送信されます。 ヘッダーがない場合、メッセージは regularCalc にルーティングされます。  
+3. 各フィルターをクライアント エンドポイントと関連付けるフィルター テーブルを定義します。 メッセージに値 1 の "CalcVer" ヘッダーが含まれている場合、そのメッセージは通常の Calc サービスに送信されます。 ヘッダーに値 2 が含まれる場合は、roundingCalc サービスに送信されます。 ヘッダーがない場合、メッセージは regularCalc にルーティングされます。  
   
      次のコードでは、フィルター テーブルを定義し、前に定義されたフィルターを追加します。  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4. フィルター テーブルに含まれているフィルターと照合して受信メッセージを評価するには、ルーティング動作を使用して、フィルター テーブルをサービス エンドポイントと関連付ける必要があります。 次の例は、 `filterTable1`サービスエンドポイントとの関連付けを示しています。  
+4. フィルター テーブルに含まれているフィルターと照合して受信メッセージを評価するには、ルーティング動作を使用して、フィルター テーブルをサービス エンドポイントと関連付ける必要があります。 次の例は、サービス エンドポイント`filterTable1`との関連付けを示しています。  
   
     ```xml  
     <behaviors>  
@@ -269,7 +269,7 @@ namespace Microsoft.Samples.AdvancedFilters
                     //if they wanted to create the header, go ahead and add it to the outgoing message  
                     if (header != null && (header=="1" || header=="2"))  
                     {  
-                        //create a new header "RoundingCalculator", no specific namespace, and set the value to   
+                        //create a new header "RoundingCalculator", no specific namespace, and set the value to
                         //the value of header.  
                         //the Routing Service will look for this header in order to determine if the message  
                         //should be routed to the RoundingCalculator  

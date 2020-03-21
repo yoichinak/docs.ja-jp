@@ -8,12 +8,12 @@ helpviewer_keywords:
 - restricted security environment
 - code security, sandboxing
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
-ms.openlocfilehash: 0191846f5589b0162ba342161fb5919ff20099d4
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: b2f5a72e747f6c71743a7b22fe9f1962ac2f6b53
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77215854"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181176"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法 : サンドボックスで部分信頼コードを実行する
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -42,7 +42,7 @@ AppDomain.CreateDomain( string friendlyName,
   
  `grantSet` パラメーターには、明示的に作成したアクセス許可セットを指定するか、<xref:System.Security.SecurityManager.GetStandardSandbox%2A> メソッドによって作成された標準アクセス許可セットを指定します。  
   
- 他の多くの <xref:System.AppDomain> 読み込みとは異なり、部分的に信頼されたアセンブリの許可セットの決定に (<xref:System.AppDomain> パラメーターで指定される) `securityInfo` の証拠は使用されません。 代わりに、`grantSet` パラメーターによって単独で指定されます。 ただし、分離ストレージのスコープの決定など、他の用途に証拠を使用できます。  
+ 他の多くの <xref:System.AppDomain> 読み込みとは異なり、部分的に信頼されたアセンブリの許可セットの決定に (`securityInfo` パラメーターで指定される) <xref:System.AppDomain> の証拠は使用されません。 代わりに、`grantSet` パラメーターによって単独で指定されます。 ただし、分離ストレージのスコープの決定など、他の用途に証拠を使用できます。  
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>サンドボックスでアプリケーションを実行するには  
   
@@ -71,7 +71,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      mscorlib や System.dll などの .NET Framework アセンブリを完全信頼一覧に追加することはできません。グローバル アセンブリ キャッシュから完全信頼として読み込まれているためです。  
   
-3. <xref:System.AppDomainSetup> メソッドの <xref:System.AppDomain.CreateDomain%2A> パラメーターを初期化します。 このパラメーターを使用すると、新しい <xref:System.AppDomain> の多くの設定を制御できます。 <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティは重要な設定なので、ホスト アプリケーションの <xref:System.AppDomainSetup.ApplicationBase%2A> の <xref:System.AppDomain> プロパティとは違う設定にする必要があります。 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定が同じ場合、部分的に信頼されたアプリケーションは、ホスト アプリケーションが定義する例外を完全信頼として読み込み、それを悪用できるようになります。 これは、キャッシュ (例外) が推奨されないもう 1 つの理由です。 ホストのアプリケーション ベースと、サンドボックス アプリケーションのアプリケーション ベースを異なる設定にすると、悪用のリスクが軽減されます。  
+3. <xref:System.AppDomain.CreateDomain%2A> メソッドの <xref:System.AppDomainSetup> パラメーターを初期化します。 このパラメーターを使用すると、新しい <xref:System.AppDomain> の多くの設定を制御できます。 <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティは重要な設定なので、ホスト アプリケーションの <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティとは違う設定にする必要があります。 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定が同じ場合、部分的に信頼されたアプリケーションは、ホスト アプリケーションが定義する例外を完全信頼として読み込み、それを悪用できるようになります。 これは、キャッシュ (例外) が推奨されないもう 1 つの理由です。 ホストのアプリケーション ベースと、サンドボックス アプリケーションのアプリケーション ベースを異なる設定にすると、悪用のリスクが軽減されます。  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
@@ -83,18 +83,18 @@ AppDomain.CreateDomain( string friendlyName,
      このメソッドのシグネチャは次のとおりです。  
   
     ```csharp
-    public static AppDomain CreateDomain(string friendlyName,   
-        Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,   
+    public static AppDomain CreateDomain(string friendlyName,
+        Evidence securityInfo, AppDomainSetup info, PermissionSet grantSet,
         params StrongName[] fullTrustAssemblies)  
     ```  
   
      追加情報:  
   
-    - これは、パラメーターとして <xref:System.AppDomain.CreateDomain%2A> を使用する <xref:System.Security.PermissionSet> メソッドの唯一のオーバーロードです。つまり、部分信頼設定でアプリケーションを読み込むことができる唯一のオーバーロードになります。  
+    - これは、パラメーターとして <xref:System.Security.PermissionSet> を使用する <xref:System.AppDomain.CreateDomain%2A> メソッドの唯一のオーバーロードです。つまり、部分信頼設定でアプリケーションを読み込むことができる唯一のオーバーロードになります。  
   
     - `evidence` パラメーターは、アクセス許可セットの計算では使用されません。このパラメーターは、.NET Framework の他の機能が識別目的で使用します。  
   
-    - このオーバーロードでは、<xref:System.AppDomainSetup.ApplicationBase%2A> パラメーターの `info` プロパティを必ず設定します。  
+    - このオーバーロードでは、`info` パラメーターの <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティを必ず設定します。  
   
     - `fullTrustAssemblies` パラメーターには `params` キーワードがあります。これは <xref:System.Security.Policy.StrongName> 配列を作成する必要がないことを示します。 パラメーターとして、0 個、1 個、または複数の厳密な名前を渡すことができます。  
   
@@ -114,7 +114,7 @@ AppDomain.CreateDomain( string friendlyName,
   
     - アセンブリが保存されていない場所を示すコード ベースを使用できます。  
   
-    - <xref:System.Security.CodeAccessPermission.Assert%2A> の下で、完全信頼 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) で作成操作を実行できます。こうすることで、重要なクラスのインスタンスを作成できます。 (これは、アセンブリに透明度のマークがなく、完全に信頼されているものとして読み込まれるたびに発生します)。したがって、この関数で信頼するコードのみを作成するように注意する必要があります。また、新しいアプリケーションドメインでは、完全に信頼されたクラスのインスタンスのみを作成することをお勧めします。  
+    - <xref:System.Security.CodeAccessPermission.Assert%2A> の下で、完全信頼 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) で作成操作を実行できます。こうすることで、重要なクラスのインスタンスを作成できます。 (これは、アセンブリに透過性のマーキングがなく、完全に信頼されたアセンブリとして読み込まれる場合に発生します)。したがって、この関数で信頼するコードのみを作成するように注意する必要があります。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  
@@ -134,7 +134,7 @@ AppDomain.CreateDomain( string friendlyName,
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7. 作成した `ExecuteUntrustedCode` クラスのインスタンスで、`Sandboxer` メソッドを呼び出します。  
+7. 作成した `Sandboxer` クラスのインスタンスで、`ExecuteUntrustedCode` メソッドを呼び出します。  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
@@ -145,7 +145,7 @@ AppDomain.CreateDomain( string friendlyName,
     ```csharp
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
     {  
-        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or   
+        //Load the MethodInfo for a method in the new assembly. This might be a method you know, or
         //you can use Assembly.EntryPoint to get to the entry point in an executable.  
         MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
         try  
@@ -155,7 +155,7 @@ AppDomain.CreateDomain( string friendlyName,
         }  
         catch (Exception ex)  
         {  
-        //When information is obtained from a SecurityException extra information is provided if it is   
+        //When information is obtained from a SecurityException extra information is provided if it is
         //accessed in full-trust.  
             new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
@@ -167,13 +167,13 @@ AppDomain.CreateDomain( string friendlyName,
   
      <xref:System.Reflection> を使用して、部分的に信頼されたアセンブリでメソッドのハンドルを取得します。 このハンドルは、最小限のアクセス許可を持つ安全な方法でコードを実行するために使用できます。  
   
-     上記のコードでは、<xref:System.Security.PermissionSet.Assert%2A> を出力する前に完全信頼のアクセス許可の <xref:System.Security.SecurityException> があることがわかります。  
+     上記のコードでは、<xref:System.Security.SecurityException> を出力する前に完全信頼のアクセス許可の <xref:System.Security.PermissionSet.Assert%2A> があることがわかります。  
   
     ```csharp
     new PermissionSet(PermissionState.Unrestricted).Assert()  
     ```  
   
-     完全信頼アサートは、<xref:System.Security.SecurityException> から拡張情報を取得するために使用します。 <xref:System.Security.PermissionSet.Assert%2A> を使用しない場合、<xref:System.Security.SecurityException.ToString%2A> の <xref:System.Security.SecurityException> メソッドは、スタック上に部分的に信頼されたコードがあることを検出します。また、返される情報を制限します。 部分信頼コードがその情報を読み取ることができる場合、これによってセキュリティ上の問題が発生する可能性もありますが、<xref:System.Security.Permissions.UIPermission> を付与しないことでそのリスクは軽減されます。 完全信頼アサートは慎重に使用する必要があります。部分信頼コードが完全信頼に昇格できないことが確実である場合にのみ使用します。 通則として、信頼できないコードは、完全信頼のアサートを呼び出した後に同じ関数で呼び出すのは避ける必要があります。 アサートの使用を完了したときは、常にアサートを元に戻すことをお勧めします。  
+     完全信頼アサートは、<xref:System.Security.SecurityException> から拡張情報を取得するために使用します。 <xref:System.Security.PermissionSet.Assert%2A> を使用しない場合、<xref:System.Security.SecurityException> の <xref:System.Security.SecurityException.ToString%2A> メソッドは、スタック上に部分的に信頼されたコードがあることを検出します。また、返される情報を制限します。 部分信頼コードがその情報を読み取ることができる場合、これによってセキュリティ上の問題が発生する可能性もありますが、<xref:System.Security.Permissions.UIPermission> を付与しないことでそのリスクは軽減されます。 完全信頼アサートは慎重に使用する必要があります。部分信頼コードが完全信頼に昇格できないことが確実である場合にのみ使用します。 通則として、信頼できないコードは、完全信頼のアサートを呼び出した後に同じ関数で呼び出すのは避ける必要があります。 アサートの使用を完了したときは、常にアサートを元に戻すことをお勧めします。  
   
 ## <a name="example"></a>例  
  次の例では、前のセクションの手順を実装しています。 この例では、Visual Studio ソリューションの `Sandboxer` というプロジェクトにも `UntrustedCode` というプロジェクトが含まれます。これはクラス `UntrustedClass` を実装します。 このシナリオでは、指定した数字がフィボナッチ数かどうかを示すために、`true` または `false` を返すことが期待されているメソッドを含むライブラリ アセンブリをダウンロードしたことを想定しています。 代わりに、このメソッドはコンピューターからのファイルの読み込みを試みます。 次の例は信頼関係のないコードを示します。  
@@ -210,7 +210,7 @@ using System.Security.Permissions;
 using System.Reflection;  
 using System.Runtime.Remoting;  
   
-//The Sandboxer class needs to derive from MarshalByRefObject so that we can create it in another   
+//The Sandboxer class needs to derive from MarshalByRefObject so that we can create it in another
 // AppDomain and refer to it from the default AppDomain.  
 class Sandboxer : MarshalByRefObject  
 {  
@@ -221,12 +221,12 @@ class Sandboxer : MarshalByRefObject
     private static Object[] parameters = { 45 };  
     static void Main()  
     {  
-        //Setting the AppDomainSetup. It is very important to set the ApplicationBase to a folder   
+        //Setting the AppDomainSetup. It is very important to set the ApplicationBase to a folder
         //other than the one in which the sandboxer resides.  
         AppDomainSetup adSetup = new AppDomainSetup();  
         adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
   
-        //Setting the permissions for the AppDomain. We give the permission to execute and to   
+        //Setting the permissions for the AppDomain. We give the permission to execute and to
         //read/discover the location where the untrusted code is loaded.  
         PermissionSet permSet = new PermissionSet(PermissionState.None);  
         permSet.AddPermission(new SecurityPermission(SecurityPermissionFlag.Execution));  
@@ -238,19 +238,19 @@ class Sandboxer : MarshalByRefObject
         AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
   
         //Use CreateInstanceFrom to load an instance of the Sandboxer class into the  
-        //new AppDomain.   
+        //new AppDomain.
         ObjectHandle handle = Activator.CreateInstanceFrom(  
             newDomain, typeof(Sandboxer).Assembly.ManifestModule.FullyQualifiedName,  
             typeof(Sandboxer).FullName  
             );  
-        //Unwrap the new domain instance into a reference in this domain and use it to execute the   
+        //Unwrap the new domain instance into a reference in this domain and use it to execute the
         //untrusted code.  
         Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
         newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  
     }  
     public void ExecuteUntrustedCode(string assemblyName, string typeName, string entryPoint, Object[] parameters)  
     {  
-        //Load the MethodInfo for a method in the new Assembly. This might be a method you know, or   
+        //Load the MethodInfo for a method in the new Assembly. This might be a method you know, or
         //you can use Assembly.EntryPoint to get to the main function in an executable.  
         MethodInfo target = Assembly.Load(assemblyName).GetType(typeName).GetMethod(entryPoint);  
         try  
@@ -260,7 +260,7 @@ class Sandboxer : MarshalByRefObject
         }  
         catch (Exception ex)  
         {  
-            // When we print informations from a SecurityException extra information can be printed if we are   
+            // When we print informations from a SecurityException extra information can be printed if we are
             //calling it with a full-trust stack.  
             new PermissionSet(PermissionState.Unrestricted).Assert();  
             Console.WriteLine("SecurityException caught:\n{0}", ex.ToString());  
@@ -271,6 +271,6 @@ class Sandboxer : MarshalByRefObject
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [安全なコーディングのガイドライン](../../standard/security/secure-coding-guidelines.md)

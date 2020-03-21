@@ -2,15 +2,15 @@
 title: System.Web.Routing 統合
 ms.date: 03/30/2017
 ms.assetid: 31fe2a4f-5c47-4e5d-8ee1-84c524609d41
-ms.openlocfilehash: fdc355d4560294a16f3e9c488fdaf142d2982c0d
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a80b5c3b336b4fd18b347a25ceaf509baf6461b4
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76745340"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184388"
 ---
 # <a name="systemwebrouting-integration"></a>System.Web.Routing 統合
-インターネットインフォメーションサービス (IIS) で Windows Communication Foundation (WCF) サービスをホストする場合は、.svc ファイルを仮想ディレクトリに配置します。 この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。 サービスに要求を行うときは、URI に .svc ファイルを指定します (例: `http://contoso.com/EmployeeServce.svc`)。 REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。 REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。 <xref:System.Web.Routing> 統合機能を使用すると、拡張機能なしで Uri に応答する WCF REST サービスをホストできます。 ルーティングの詳細については、「 [ASP.NET routing](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))」を参照してください。  
+インターネット インフォメーション サービス (IIS) で Windows 通信基盤 (WCF) サービスをホストする場合は、仮想ディレクトリに .svc ファイルを配置します。 この .svc ファイルは、使用するサービス ホスト ファクトリと、サービスを実装するクラスを指定します。 サービスに要求を行う場合は、URI に .svc ファイルを指定`http://contoso.com/EmployeeServce.svc`します。 REST サービスを記述するプログラマにとっては、この種類の URI は最適とは言えません。 REST サービス用の URI は、特定のリソースを指定しており、拡張子がないのが普通です。 <xref:System.Web.Routing>統合機能を使用すると、拡張機能なしで URI に応答する WCF REST サービスをホストできます。 ルーティングの詳細については、「[ルーティングのASP.NET](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))」を参照してください。  
   
 ## <a name="using-systemwebrouting-integration"></a>System.Web.Routing 統合の使用  
  <xref:System.Web.Routing> 統合機能を使用するには、<xref:System.ServiceModel.Activation.ServiceRoute> クラスを使用して 1 つ以上のルートを作成し、Global.asax ファイルでそれらを <xref:System.Web.Routing.RouteTable> に追加します。 これらのルートは、サービスが応答する相対 URI を指定します。 次の例は、その方法を示したものです。  
@@ -29,7 +29,7 @@ ms.locfileid: "76745340"
   
     private void RegisterRoutes(RouteCollection routes)  
     {  
-        routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));   
+        routes.Add(new ServiceRoute("Customers", new WebServiceHostFactory(), typeof(Service)));
    }  
 </script>  
 ```  
@@ -60,7 +60,7 @@ ms.locfileid: "76745340"
   
  次の例に示すように、このサービスを実装するクラスでは、ASP.NET 互換要件を有効にする必要があります。  
   
-```csharp 
+```csharp
 [ServiceContract]  
 [AspNetCompatibilityRequirements(RequirementsMode=AspNetCompatibilityRequirementsMode.Allowed)]  
     public class Service  
@@ -69,7 +69,7 @@ ms.locfileid: "76745340"
     }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [ASP.NET ルーティング](https://docs.microsoft.com/previous-versions/aspnet/cc668201(v=vs.100))

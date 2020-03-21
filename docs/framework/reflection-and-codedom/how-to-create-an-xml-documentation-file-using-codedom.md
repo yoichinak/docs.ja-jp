@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documentation, creating using CodeDOM
 - Code Document Object Model, generating XML documentation
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
-ms.openlocfilehash: cdd1f173274b6bd33c4a67ed8eb0974c4c8e8e70
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: a0ccb469a43c3a21a76eaf24fa7ce7b490dd5c4a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130191"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180522"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>方法: CodeDOM を使用して XML ドキュメント ファイルを作成する
 CodeDOM を利用し、XML ドキュメントを生成するコードを作成できます。 XML ドキュメント コメントを含む CodeDOM グラフを作成する、コードを生成する、XML 文書出力を作成するコンパイラ オプションでその生成されたコードをコンパイルするというプロセスが行われます。  
@@ -51,22 +51,22 @@ CodeDOM を利用し、XML ドキュメントを生成するコードを作成�
  このコード例では、HelloWorldDoc.xml ファイルで次の XML ドキュメントが作成されます。  
   
 ```xml  
-<?xml version="1.0" ?>   
+<?xml version="1.0" ?>
 <doc>  
   <assembly>  
-    <name>HelloWorld</name>   
+    <name>HelloWorld</name>
   </assembly>  
   <members>  
     <member name="T:Samples.Class1">  
       <summary>  
-        Create a Hello World application.   
-        <seealso cref="M:Samples.Class1.Main" />   
+        Create a Hello World application.
+        <seealso cref="M:Samples.Class1.Main" />
       </summary>  
     </member>  
     <member name="M:Samples.Class1.Main">  
       <summary>  
-        Main method for HelloWorld application.   
-        <para>Add a new paragraph to the description.</para>   
+        Main method for HelloWorld application.
+        <para>Add a new paragraph to the description.</para>
       </summary>  
     </member>  
   </members>  

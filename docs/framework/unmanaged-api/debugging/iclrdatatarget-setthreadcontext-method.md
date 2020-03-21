@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 103c8502-81fe-40d7-9c1e-9008d8fb19e1
 topic_type:
 - apiref
-ms.openlocfilehash: cdf5776e1ac9907e63aba0e0d400e48aff683d51
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d76a907434b12b85aaedeef169390ec6f0df724a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785299"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179125"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext メソッド
-ターゲットプロセス内の指定されたスレッドの現在のコンテキストを設定します。 このメソッドは、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
+ターゲット プロセス内の指定したスレッドの現在のコンテキストを設定します。 このメソッドは、共通言語ランタイム (CLR) のデータ アクセス サービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -31,30 +31,30 @@ ms.locfileid: "76785299"
 HRESULT SetThreadContext (  
     [in] ULONG32            threadID,  
     [in] ULONG32            contextSize,  
-    [in, size_is(contextSize)]   
+    [in, size_is(contextSize)]
          BYTE               *context  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `threadID`  
- からターゲットプロセス内のスレッドのオペレーティングシステム識別子。  
+ [in]ターゲット プロセス内のスレッドのオペレーティング システム識別子。  
   
  `contextSize`  
- からコンテキストのサイズ。  
+ [in]コンテキストのサイズ。  
   
  `context`  
- からコンテキストを格納しているバッファーへのポインター。  
+ [in]コンテキストを含むバッファーへのポインター。  
   
- `context` バッファー内のデータは、Win32 `CONTEXT` 構造の形式になります。 コンテキストはプロセッサ固有のレジスタデータを指定するため、Win32 `CONTEXT` 構造体の定義は、プロセッサのアーキテクチャによって異なります。 Win32 `CONTEXT` 構造の定義については、Winnt.h ヘッダーファイルを参照してください。  
+ バッファー内の`context`データは、Win32`CONTEXT`構造体の形式になります。 コンテキストはプロセッサ固有のレジスタ データを指定するため、Win32`CONTEXT`構造体の定義はプロセッサのアーキテクチャによって異なります。 Win32`CONTEXT`構造体の定義については、WinNT.h ヘッダー ファイルを参照してください。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData .idl, ClrData .h  
+ **ヘッダー:** をします。  
   
  **ライブラリ:** CorGuids.lib  
   

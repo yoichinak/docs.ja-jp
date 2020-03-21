@@ -8,19 +8,19 @@ helpviewer_keywords:
 - marshaling, Arrays sample
 - data marshaling, Arrays sample
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
-ms.openlocfilehash: 1490171c4dd423baa3b6c5f5e00cf133c2584cae
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73124392"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181362"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>さまざまな型の配列のマーシャリング
-配列は、同じ型の 1 つ以上の要素を含むマネージド コード内の参照型です。 配列は参照型ですが、アンマネージ関数には In パラメーターとして渡されます。 この動作は、マネージド配列がマネージド オブジェクトに渡される方法 (In/Out パラメーターとして渡される) と一致しません。 詳しくは、「[コピーと固定](copying-and-pinning.md)」をご覧ください。  
+配列は、同じ型の 1 つ以上の要素を含むマネージド コード内の参照型です。 配列は参照型ですが、アンマネージ関数には In パラメーターとして渡されます。 この動作は、マネージド配列がマネージド オブジェクトに渡される方法 (In/Out パラメーターとして渡される) と一致しません。 詳細については、「 [コピーと固定](copying-and-pinning.md)」を参照してください。  
   
  次の表では、配列のマーシャリング オプションをリストして、それらの使用方法を説明します。  
   
-|配列|説明|  
+|Array|説明|  
 |-----------|-----------------|  
 |値による整数の。|整数の配列を In パラメーターとして渡します。|  
 |参照による整数の。|整数の配列を In/Out パラメーターとして渡します。|  
@@ -84,19 +84,19 @@ ms.locfileid: "73124392"
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) はカスタム アンマネージド ライブラリであり、上記の関数および 2 つの構造体変数 **MYPOINT** および **MYPERSON** に関する実装を含んでいます。 構造体には次の要素が含まれます。  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) はカスタム アンマネージ ライブラリであり、上記の関数および 2 つの構造体変数 **MYPOINT** および **MYPERSON**に関する実装を含んでいます。 構造体には次の要素が含まれます。  
   
 ```cpp
 typedef struct _MYPOINT  
 {  
-   int x;   
-   int y;   
+   int x;
+   int y;
 } MYPOINT;  
   
 typedef struct _MYPERSON  
 {  
-   char* first;   
-   char* last;   
+   char* first;
+   char* last;
 } MYPERSON;  
 ```  
   

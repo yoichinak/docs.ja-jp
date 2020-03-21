@@ -14,46 +14,46 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: f197c8802bd9e55391b3e3e20c64398736070a16
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: f3b51c1b376fa9c664de53aa76ec724ca305ae6a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73136332"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178176"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 関数
-指定したバッファーを使用して、指定したファイルの共通言語ランタイム (CLR) のバージョン情報を取得します。  
+指定したバッファーを使用して、指定したファイルの共通言語ランタイム (CLR) バージョン情報を取得します。  
   
- この関数は .NET Framework 4 で非推奨とされました。  
+ この関数は、.NET Framework 4 では廃止されました。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetFileVersion (  
-    [in]  LPCWSTR      szFilename,   
-    [in, out] LPWSTR   szBuffer,   
-    [in]  DWORD        cchBuffer,   
+    [in]  LPCWSTR      szFilename,
+    [in, out] LPWSTR   szBuffer,
+    [in]  DWORD        cchBuffer,
     [out] DWORD        *dwLength  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `szFilename`  
- から検査するファイルのパス。  
+ [in]検査するファイルのパス。  
   
  `szBuffer`  
- [入力、出力]返されたバージョン情報に割り当てられたバッファー。  
+ [イン、アウト]返されるバージョン情報に割り当てられたバッファー。  
   
  `cchBuffer`  
- から`szBuffer`のサイズ (ワイド文字単位)。  
+ [in]のサイズ (ワイド文字)`szBuffer`です。  
   
  `dwLength`  
- 入出力返された `szBuffer`のサイズ (バイト単位)。  
+ [アウト]返された`szBuffer`のサイズ (バイト単位)  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** Mscoree.dll  
+ **ヘッダー:** msCorEE.h  
   
  **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   

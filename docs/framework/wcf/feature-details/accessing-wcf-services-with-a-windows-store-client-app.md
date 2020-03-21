@@ -2,12 +2,12 @@
 title: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 77dc5d19bc40dc09148a8d2368c56e522bfafc1a
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: b4b91c103aa91e3b2c9e811c642a8347c7db1a88
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75938178"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185484"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 Windows 8 では、Windows ストア アプリケーションと呼ばれる新しい種類のアプリケーションが導入されています。 これらのアプリケーションはタッチ スクリーンのインターフェイスを念頭にデザインされています。 .NET Framework 4.5 により、Windows ストア アプリケーションから WCF サービスを呼び出すことができます。  
@@ -21,7 +21,7 @@ Windows 8 では、Windows ストア アプリケーションと呼ばれる新�
 > [!WARNING]
 > サービス参照の追加を使用して Windows ランタイム コンポーネントへの Web サービス参照を追加することはサポートされていません。  
   
-### <a name="supported-bindings"></a>サポート対象のバインド  
+### <a name="supported-bindings"></a>サポートされているバインド  
  Windows ストア アプリケーションでは、以下の WCF バインドがサポートされています。  
   
 1. <xref:System.ServiceModel.BasicHttpBinding>  
@@ -55,7 +55,7 @@ Windows 8 では、Windows ストア アプリケーションと呼ばれる新�
  テキスト エンコードとバイナリ エンコードの両方がサポートされています。 すべての WCF 転送モードがサポートされています。 詳細については、「 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)」を参照してください。  
   
 ### <a name="add-service-reference"></a>サービス参照の追加  
- WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。 Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。 まず、構成ファイルが生成されません。 Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。 この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。 このファイルを表示するには、ソリューションエクスプローラーで [すべてのファイルを表示] を選択してください。 このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。 Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。 詳細については、「[非同期タスク-タスクを使用した非同期プログラミングの簡素化](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)」を参照してください。  
+ WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。 Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。 まず、構成ファイルが生成されません。 Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。 この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。 このファイルを表示するには、ソリューション エクスプローラーで [すべてのファイルを表示] を選択してください。 このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。 Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。 詳細については、「[非同期タスク - タスクを使用した非同期プログラミングの簡略化](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)」を参照してください。  
   
  構成がコードで生成されるようになったため、サービス参照を更新するたびに、Reference.cs ファイルで行ったすべての変更が上書きされます。 この状況に対処するために、構成コードは部分メソッド内に生成され、これをクライアント プロキシ クラスで実装できます。 部分メソッドは次のように宣言されています。  
   
@@ -68,23 +68,23 @@ static partial void Configure(System.ServiceModel.Description.ServiceEndpoint se
   
 ```csharp  
 public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfClient.ServiceRefMultiEndpt.IService1>, MetroWcfClient.ServiceRefMultiEndpt.IService1  
-    {   
-        static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,   
+    {
+        static partial void Configure(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint,
             System.ServiceModel.Description.ClientCredentials clientCredentials)  
         {  
-            if (serviceEndpoint.Name ==   
+            if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.BasicHttpBinding_IService1.ToString())  
             {  
                 serviceEndpoint.Binding.SendTimeout = new System.TimeSpan(0, 1, 0);  
             }  
-            else if (serviceEndpoint.Name ==   
+            else if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.BasicHttpBinding_IService11.ToString())  
             {  
                 serviceEndpoint.Binding.SendTimeout = new System.TimeSpan(0, 1, 0);  
                 clientCredentials.UserName.UserName = "username1";  
                 clientCredentials.UserName.Password = "password";  
             }  
-            else if (serviceEndpoint.Name ==   
+            else if (serviceEndpoint.Name ==
                     ServiceRefMultiEndpt.Service1Client.EndpointConfiguration.NetTcpBinding_IService1.ToString())  
             {  
                 serviceEndpoint.Binding.Name = "MyTcpBinding";  
@@ -94,7 +94,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
     }  
 ```  
   
-### <a name="serialization"></a>Serialization  
+### <a name="serialization"></a>シリアル化  
  Windows ストア アプリケーションでは、次のシリアライザーがサポートされています。  
   
 1. DataContractSerializer  
@@ -106,9 +106,9 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 > [!WARNING]
 > XmlDictionaryWriter.Write(DateTime) は、DateTime オブジェクトを文字列として出力するようになりました。  
   
-### <a name="security"></a>セキュリティ  
+### <a name="security"></a>Security  
 
-Windows ストアアプリケーションでは、次のセキュリティモードがサポートされています。
+Windows ストア アプリケーションでは、次のセキュリティ モードがサポートされています。
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,15 +118,15 @@ Windows ストアアプリケーションでは、次のセキュリティモー
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-Windows ストアアプリケーションでは、次のクライアント資格情報の種類がサポートされています。
+Windows ストア アプリケーションでは、次のクライアント資格情報の種類がサポートされています。
   
-1. [なし]  
+1. なし  
   
 2. Basic  
   
-3. Digest  
+3. ダイジェスト  
   
-4. Negotiate  
+4. ネゴシエート  
   
 5. NTLM  
   
@@ -139,9 +139,9 @@ Windows ストアアプリケーションでは、次のクライアント資格
  Windows ストア アプリケーションから既定の Windows 資格情報にアクセスして送信するためには、Package.appmanifest ファイル内でこの機能を有効にする必要があります。 このファイルを開き、[機能] タブを選択し、[既定の Windows 資格情報] を選択します。 これにより、ドメイン資格情報を必要とするイントラネット リソースにアプリケーションが接続できるようになります。  
   
 > [!IMPORTANT]
-> Windows ストアアプリケーションでコンピューター間の呼び出しを行うには、"ホーム/社内ネットワーク" と呼ばれる別の機能を有効にする必要があります。 この設定は、appmanifest.xaml ファイルの [機能] タブにもあります。 [ホーム/社内ネットワーク] チェックボックスをオンにします。 これで、アプリケーションは、自宅や職場など、ユーザーが信頼できる場所のネットワークに着信および発信アクセスできるようになります。 着信方向の重要なポートは常にブロックされます。 また、インターネット上のサービスにアクセスするには、インターネット (クライアント) の機能も有効にする必要があります。  
+> Windows ストア アプリケーションがマシン間の呼び出しを行うには、"ホーム/ワーク ネットワーク" という別の機能を有効にする必要があります。 この設定は、機能タブの下の Package.appmanifest ファイルにも含まれています。 これで、アプリケーションは、自宅や職場など、ユーザーが信頼できる場所のネットワークに着信および発信アクセスできるようになります。 着信方向の重要なポートは常にブロックされます。 また、インターネット上のサービスにアクセスするには、インターネット (クライアント) の機能も有効にする必要があります。  
   
-### <a name="misc"></a>[その他]  
+### <a name="misc"></a>その他  
  Windows ストア アプリケーションでは、次のクラスの使用がサポートされています。  
   
 1. <xref:System.ServiceModel.ChannelFactory>  
@@ -176,9 +176,9 @@ void async SomeMethod()
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows ストアアプリブログの WCF](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
-- [WCF Windows ストアクライアントおよびセキュリティ](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
-- [Windows ストアアプリとコンピューター間の呼び出し](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [Windows ストアアプリから Azure にデプロイされた WCF サービスの呼び出し](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Windows ストア アプリ ブログの WCF](https://docs.microsoft.com/archive/blogs/piyushjo/wcf-in-windows-8-metro-styled-apps-absolutely-supported)
+- [WCF Windows ストア クライアントおよびセキュリティ](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
+- [Windows ストア アプリとコンピューター間の呼び出し](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
+- [Azure にデプロイされた WCF サービスの Windows ストア アプリからの呼び出し](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [バインディング](../../../../docs/framework/wcf/bindings.md)
+- [バインド](../../../../docs/framework/wcf/bindings.md)

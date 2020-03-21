@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 6392ea0f17596406a8671a039bd78777d9e11e42
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742649"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184313"
 ---
 # <a name="transport-security-with-windows-authentication"></a>トランスポート セキュリティと Windows 認証
-次のシナリオは、Windows セキュリティによって保護された Windows Communication Foundation (WCF) クライアントとサービスを示しています。 プログラミングの詳細については、「[方法: Windows 資格情報を使用してサービスをセキュリティで保護](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)する」を参照してください。  
+次のシナリオは、Windows のセキュリティで保護された WCF (WCF) クライアントとサービスを示しています。 プログラミングの詳細については、「 方法[: Windows 資格情報を使用してサービスをセキュリティで保護する](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)」を参照してください。  
   
  イントラネットの Web サービスでは人事情報を表示しています。 クライアントは Windows フォーム アプリケーションです。 このアプリケーションは、Kerberos コントローラーで保護されたドメインに展開されています。  
   
- ![Windows 認証を利用したトランスポート セキュリティ](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
+ ![Windows 認証を使用する場合のトランスポート セキュリティ](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |セキュリティ モード|トランスポート|  
 |相互運用性|WCF のみ|  
@@ -52,9 +52,9 @@ ms.locfileid: "76742649"
     <behaviors />  
     <services>  
       <service behaviorConfiguration="" name="ServiceModel.Calculator">  
-        <endpoint address="net.tcp://localhost:8008/Calculator"   
+        <endpoint address="net.tcp://localhost:8008/Calculator"
                   binding="netTcpBinding"  
-          bindingConfiguration="WindowsClientOverTcp"   
+          bindingConfiguration="WindowsClientOverTcp"
                   name="WindowsClientOverTcp"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -106,9 +106,9 @@ ms.locfileid: "76742649"
       </netTcpBinding>  
     </bindings>  
     <client>  
-      <endpoint address="net.tcp://localhost:8008/Calculator"   
-                binding="netTcpBinding"            
-                bindingConfiguration="NetTcpBinding_ICalculator"   
+      <endpoint address="net.tcp://localhost:8008/Calculator"
+                binding="netTcpBinding"
+                bindingConfiguration="NetTcpBinding_ICalculator"
                 contract="ICalculator"  
                 name="NetTcpBinding_ICalculator">  
       </endpoint>  
@@ -117,8 +117,8 @@ ms.locfileid: "76742649"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [方法: Windows 資格情報でサービスをセキュリティで保護する](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

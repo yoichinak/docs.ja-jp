@@ -1,5 +1,5 @@
 ---
-title: スレッドセーフな呼び出しをコントロールに対して行う
+title: コントロールへのスレッド セーフな呼び出しを行う
 ms.date: 02/19/2019
 dev_langs:
 - csharp
@@ -15,22 +15,22 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: 101457ab2a02b8de49d06c354ca307e07b690ba2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 365b1acb693b9ff2be603a3e659ed8d846a7696a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76736163"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79142005"
 ---
-# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>方法: Windows フォームコントロールに対してスレッドセーフな呼び出しを行う
+# <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>方法 : Windows フォーム コントロールをスレッド セーフに呼び出す
 
-マルチスレッドは Windows フォームアプリのパフォーマンスを向上させることができますが、Windows フォームコントロールへのアクセスは本質的にスレッドセーフではありません。 マルチスレッドでは、非常に深刻で複雑なバグにコードを公開できます。 コントロールを操作する2つ以上のスレッドによって、コントロールが一貫性のない状態になり、競合状態、デッドロック、フリーズまたはハングが発生する可能性があります。 アプリにマルチスレッドを実装する場合は、スレッドセーフな方法でスレッド間コントロールを呼び出すようにしてください。 詳細については、「[マネージスレッド処理のベストプラクティス](../../../standard/threading/managed-threading-best-practices.md)」を参照してください。 
+マルチスレッド化は Windows フォーム アプリのパフォーマンスを向上させることができますが、Windows フォーム コントロールへのアクセスは本質的にスレッド セーフではありません。 マルチスレッド化は、コードを非常に深刻で複雑なバグにさらす可能性があります。 コントロールを操作する 2 つ以上のスレッドが、コントロールを強制的に不整合状態にし、競合状態、デッドロック、フリーズまたはハングを引き起こす可能性があります。 アプリにマルチスレッドを実装する場合は、スレッド セーフな方法でスレッド間コントロールを呼び出してください。 詳細については、「マネージ[スレッド化のベスト プラクティス」を参照してください](../../../standard/threading/managed-threading-best-practices.md)。
 
-コントロールを作成していないスレッドから Windows フォームコントロールを安全に呼び出すには、2つの方法があります。 <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> メソッドを使用して、メインスレッドで作成されたデリゲートを呼び出すことができます。これにより、コントロールが呼び出されます。 または、<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>を実装できます。これは、イベントドリブンモデルを使用して、バックグラウンドスレッドで実行された作業を結果のレポートから分離します。 
+そのコントロールを作成していないスレッドから Windows フォーム コントロールを安全に呼び出す方法は 2 つあります。 このメソッドを<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>使用して、メイン スレッドで作成されたデリゲートを呼び出し、そのデリゲートを呼び出すことができます。 または、イベント駆動モデルを<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>使用して、バックグラウンド スレッドで実行された作業と結果のレポートを区別する を実装できます。
 
-## <a name="unsafe-cross-thread-calls"></a>安全でないクロススレッド呼び出し
+## <a name="unsafe-cross-thread-calls"></a>安全でないスレッド間呼び出し
 
-コントロールを作成していないスレッドから直接呼び出すことは安全ではありません。 次のコードスニペットは、<xref:System.Windows.Forms.TextBox?displayProperty=nameWithType> コントロールへの安全でない呼び出しを示しています。 `Button1_Click` イベントハンドラーは、メインスレッドの <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> プロパティを直接設定する新しい `WriteTextUnsafe` スレッドを作成します。 
+コントロールを作成しなかったスレッドから直接コントロールを呼び出すのは安全ではありません。 次のコード スニペットは、コントロールへの安全でない<xref:System.Windows.Forms.TextBox?displayProperty=nameWithType>呼び出しを示しています。 イベント`Button1_Click`ハンドラーは、メイン`WriteTextUnsafe`スレッドの<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>プロパティを直接設定する新しいスレッドを作成します。
 
 ```csharp
 private void Button1_Click(object sender, EventArgs e)
@@ -55,44 +55,44 @@ Private Sub WriteTextUnsafe()
 End Sub
 ```
 
-Visual Studio デバッガーは、メッセージを使用して <xref:System.InvalidOperationException> を発生させることによって、これらのアンセーフスレッド呼び出しを検出し、**スレッド間の操作は無効になります。コントロール "" が作成されたスレッド以外のスレッドからアクセスされました。** <xref:System.InvalidOperationException> は、Visual Studio のデバッグ中に安全でないクロススレッド呼び出しに対して常に発生し、アプリの実行時に発生する可能性があります。 この問題を解決する必要がありますが、<xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType> プロパティを `false`に設定して、例外を無効にすることができます。
+Visual Studio デバッガーは、メッセージを持つを発生<xref:System.InvalidOperationException>させることによってこれらの安全でないスレッドの呼び出しを検出します,**スレッド間操作が無効です。作成されたスレッド以外のスレッドからアクセスされるコントロール "" 。** 常<xref:System.InvalidOperationException>に、Visual Studio のデバッグ中に安全でないスレッド間呼び出しに発生し、アプリの実行時に発生する可能性があります。 この問題は修正する必要がありますが、プロパティを に設定することで例外<xref:System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls%2A?displayProperty=nameWithType>を無効`false`にできます。
 
-## <a name="safe-cross-thread-calls"></a>安全なクロススレッド呼び出し 
+## <a name="safe-cross-thread-calls"></a>安全なスレッド間呼び出し
 
-次のコード例は、作成されていないスレッドから Windows フォームコントロールを安全に呼び出す2つの方法を示しています。 
+次のコード例は、Windows フォーム コントロールを作成していないスレッドから安全に呼び出す 2 つの方法を示しています。
 
-1. <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName> メソッド。メインスレッドからコントロールを呼び出すデリゲートを呼び出します。 
-2. イベントドリブンモデルを提供する <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> コンポーネント。 
+1. <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>メイン スレッドからデリゲートを呼び出してコントロールを呼び出すメソッド。
+2. イベント<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>駆動モデルを提供するコンポーネント。
 
-どちらの例でも、バックグラウンドスレッドは1秒間スリープして、そのスレッドで実行されている作業をシミュレートします。 
+どちらの例でも、バックグラウンド スレッドは 1 秒間スリープして、そのスレッドで実行される作業をシミュレートします。
 
-これらの例は、または Visual Basic のC#コマンドラインから .NET Framework アプリとしてビルドして実行できます。 詳細については、「 [csc.exe を使用したコマンドライン](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)からのビルド」または「[コマンドラインからのビルド (Visual Basic)](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)」を参照してください。 
+これらの例は、C# または Visual Basic のコマンド ラインから .NET Framework アプリとしてビルドして実行できます。 詳細については、「 [csc.exe を使用したコマンド ラインビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」または「[コマンド ラインからビルドする (Visual Basic)」](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)を参照してください。
 
-.NET Core 3.0 以降では、.NET Core Windows フォーム *\<フォルダー名 > .csproj*プロジェクトファイルを持つフォルダーから、Windows .net core アプリとして例をビルドして実行することもできます。 
+NET Core 3.0 以降では、.NET Core Windows フォーム*\<フォルダー名>.csproj*プロジェクト ファイルを持つフォルダーから Windows .NET Core アプリとしてサンプルをビルドして実行することもできます。
 
 ## <a name="example-use-the-invoke-method-with-a-delegate"></a>例: デリゲートで Invoke メソッドを使用する
 
-次の例は、Windows フォームコントロールへのスレッドセーフな呼び出しを保証するパターンを示しています。 <xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName> プロパティを照会します。これにより、コントロールの作成スレッド ID と呼び出し元のスレッド ID が比較されます。 スレッド Id が同じである場合は、コントロールを直接呼び出します。 スレッド Id が異なる場合は、メインスレッドからのデリゲートを使用して <xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType> メソッドを呼び出します。これにより、コントロールへの実際の呼び出しが行われます。
+次の例は、Windows フォーム コントロールへのスレッド セーフな呼び出しを保証するためのパターンを示しています。 このプロパティは、<xref:System.Windows.Forms.Control.InvokeRequired%2A?displayProperty=fullName>コントロールの作成スレッド ID と呼び出し元のスレッド ID を比較します。 スレッド ID が同じ場合は、コントロールを直接呼び出します。 スレッド ID が異なる場合は、メイン<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=nameWithType>スレッドのデリゲートを使用してメソッドを呼び出し、コントロールを実際に呼び出します。
 
-`SafeCallDelegate` を使用すると、<xref:System.Windows.Forms.TextBox> コントロールの <xref:System.Windows.Forms.TextBox.Text%2A> プロパティを設定できます。 `WriteTextSafe` メソッドは、<xref:System.Windows.Forms.Control.InvokeRequired%2A>クエリを行います。 <xref:System.Windows.Forms.Control.InvokeRequired%2A> が `true`を返す場合、`WriteTextSafe` は `SafeCallDelegate` を <xref:System.Windows.Forms.Control.Invoke%2A> メソッドに渡して、コントロールへの実際の呼び出しを行います。 <xref:System.Windows.Forms.Control.InvokeRequired%2A> が `false`を返す場合、`WriteTextSafe` は <xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType> を直接設定します。 `Button1_Click` イベントハンドラーは、新しいスレッドを作成し、`WriteTextSafe` メソッドを実行します。 
+コントロール`SafeCallDelegate`の<xref:System.Windows.Forms.TextBox.Text%2A>プロパティを<xref:System.Windows.Forms.TextBox>設定できます。 メソッド`WriteTextSafe`は、<xref:System.Windows.Forms.Control.InvokeRequired%2A>を照会します。 が<xref:System.Windows.Forms.Control.InvokeRequired%2A>返`true`された`WriteTextSafe`場合は、 `SafeCallDelegate` <xref:System.Windows.Forms.Control.Invoke%2A>メソッドに渡され、コントロールへの実際の呼び出しが行われます。 を<xref:System.Windows.Forms.Control.InvokeRequired%2A>返`false`す`WriteTextSafe`場合は<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>、直接を設定します。 イベント`Button1_Click`ハンドラーは、新しいスレッドを作成`WriteTextSafe`し、メソッドを実行します。
 
  [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
-## <a name="example-use-a-backgroundworker-event-handler"></a>例: BackgroundWorker イベントハンドラーを使用する
+## <a name="example-use-a-backgroundworker-event-handler"></a>例: バックグラウンドワーカー イベント ハンドラを使用する
 
-マルチスレッドを実装する簡単な方法は、イベントドリブンモデルを使用する <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType> コンポーネントを使用することです。 バックグラウンドスレッドは、メインスレッドと対話しない <xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType> イベントを実行します。 メインスレッドは、メインスレッドのコントロールを呼び出すことができる、<xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType> および <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType> のイベントハンドラーを実行します。
+マルチスレッドを実装する簡単な方法は、イベント<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>駆動モデルを使用するコンポーネントを使用することです。 バックグラウンド スレッドは、<xref:System.ComponentModel.BackgroundWorker.DoWork?displayProperty=nameWithType>メイン スレッドと対話しないイベントを実行します。 メイン スレッドは<xref:System.ComponentModel.BackgroundWorker.ProgressChanged?displayProperty=nameWithType>、<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted?displayProperty=nameWithType>および イベント ハンドラーを実行し、メイン スレッドのコントロールを呼び出すことができます。
 
-<xref:System.ComponentModel.BackgroundWorker>を使用してスレッドセーフな呼び出しを行うには、バックグラウンドスレッドでメソッドを作成して作業を実行し、それを <xref:System.ComponentModel.BackgroundWorker.DoWork> イベントにバインドします。 メインスレッドで別のメソッドを作成して、バックグラウンド作業の結果を報告し、<xref:System.ComponentModel.BackgroundWorker.ProgressChanged> または <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> イベントにバインドします。 バックグラウンドスレッドを開始するには、<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType>を呼び出します。 
+を使用<xref:System.ComponentModel.BackgroundWorker>してスレッド セーフな呼び出しを行うには、バックグラウンド スレッドでメソッドを作成して処理を行い<xref:System.ComponentModel.BackgroundWorker.DoWork>、イベントにバインドします。 メイン スレッドに別のメソッドを作成して、バックグラウンド処理の結果を報告し、 または<xref:System.ComponentModel.BackgroundWorker.ProgressChanged><xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベントにバインドします。 バックグラウンド スレッドを開始するには、<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A?displayProperty=nameWithType>を呼び出します。
 
-この例では、<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> イベントハンドラーを使用して、<xref:System.Windows.Forms.TextBox> コントロールの <xref:System.Windows.Forms.TextBox.Text%2A> プロパティを設定します。 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> イベントの使用例については、「<xref:System.ComponentModel.BackgroundWorker>」を参照してください。 
+この例では、<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>イベント ハンドラーを使用<xref:System.Windows.Forms.TextBox>してコントロールの<xref:System.Windows.Forms.TextBox.Text%2A>プロパティを設定します。 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベントの使用例については、を参照してください<xref:System.ComponentModel.BackgroundWorker>。
 
  [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
  [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [方法: バックグラウンドで操作を実行する](how-to-run-an-operation-in-the-background.md)
+- [方法: 操作をバックグラウンドで実行する](how-to-run-an-operation-in-the-background.md)
 - [方法: バックグラウンド操作を使用するフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [.NET Framework を使用したカスタム Windows フォームコントロールの開発](developing-custom-windows-forms-controls.md)
+- [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)

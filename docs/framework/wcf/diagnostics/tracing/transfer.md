@@ -2,18 +2,18 @@
 title: 転送
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: c3f9420ac798bf2722f825d14ca64653127432b4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662885"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79185703"
 ---
 # <a name="transfer"></a>転送
-このトピックでは、Windows Communication Foundation (WCF) のアクティビティ トレース モデルでの転送について説明します。  
+このトピックでは、Windows 通信ファウンデーション (WCF) アクティビティ トレース モデルでの転送について説明します。  
   
 ## <a name="transfer-definition"></a>転送の定義  
- アクティビティ間の転送は、エンドポイント内の関連アクティビティで発生したイベント間の因果関係を表します。 制御が 2 つのアクティビティ間を流れる場合 (アクティビティの境界を越えたメソッド呼び出しなど)、転送によってこれらのアクティビティが関連付けられます。 WCF では、バイトは、サービスで受信したときに、"リッスン"アクティビティに転送されますバイトを受信アクティビティ メッセージ オブジェクトが作成される場所。 エンド ツー エンドのトレースのシナリオ、および個々 のアクティビティとトレース デザインについては、次を参照してください。[エンド ツー エンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)します。  
+ アクティビティ間の転送は、エンドポイント内の関連アクティビティで発生したイベント間の因果関係を表します。 制御が 2 つのアクティビティ間を流れる場合 (アクティビティの境界を越えたメソッド呼び出しなど)、転送によってこれらのアクティビティが関連付けられます。 WCF では、サービスでバイトが受信されると、メッセージ オブジェクトが作成される受信バイト アクティビティに待機アクティビティが転送されます。 エンド ツー エンドのトレース シナリオ、およびそれぞれのアクティビティとトレースの設計の一覧については、「[エンド ツー エンドトレース シナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)」を参照してください。  
   
  転送トレースを出力するには、次の構成コードのように、トレース ソースに `ActivityTracing` を設定します。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "64662885"
   
  アクティビティ M とアクティビティ N の間に制御のフローが存在する場合、転送トレースは M から N に出力されます。たとえば、メソッド呼び出しがアクティビティの境界を越えるため、N が M に代わって何らかの処理を実行するとします。 N は既に存在する場合もあれば、作成されている場合もあります。 N が、M に代わって何らかの処理を実行する新しいアクティビティである場合、N は M によって発生します。  
   
- M から N への転送の後に、N から M に転送することはできません。これは、M は N で処理を発生させることはできますが、N がその処理をいつ完了するかまでは追跡しないからです。 実際、N がタスクを完了する前に M が終了する場合があります。 これは、リスナーのアクティビティ (N) を生成し、終了する"ServiceHost を開く"アクティビティ (M) で行われます。 N から M への転送は、N が M に関連する処理を完了したことを意味します。  
+ M から N への転送の後に、N から M に転送することはできません。これは、M は N で処理を発生させることはできますが、N がその処理をいつ完了するかまでは追跡しないからです。 実際、N がタスクを完了する前に M が終了する場合があります。 これは、リスナー アクティビティ (N) を生成し、終了する "オープンサービスホスト" アクティビティ (M) で発生します。 N から M への転送は、N が M に関連する処理を完了したことを意味します。  
   
  N は、M に関連しない他の処理を引き続き実行できます。たとえば、既存の認証システム アクティビティ (N) は、さまざまなログイン アクティビティからのログイン要求 (M) を受信し続けることができます。  
   
@@ -67,7 +67,7 @@ TraceSource ts = new TraceSource("myTS");
 // 1. remember existing ("ambient") activity for clean up  
 Guid oldGuid = Trace.CorrelationManager.ActivityId;  
 // this will be our new activity  
-Guid newGuid = Guid.NewGuid();   
+Guid newGuid = Guid.NewGuid();
 
 // 2. call transfer, indicating that we are switching to the new AID  
 ts.TraceTransfer(667, "Transferring.", newGuid);  
@@ -87,7 +87,7 @@ ts.TraceEvent(TraceEventType.Information, 667, "Hello from activity " + i);
 // Perform Work  
 // some work.  
 // Return  
-ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);   
+ts.TraceEvent(TraceEventType.Information, 667, "Work complete on activity " + i);
 
 // 6. Emit the transfer returning to the original activity  
 ts.TraceTransfer(667, "Transferring Back.", oldGuid);  
@@ -96,7 +96,7 @@ ts.TraceTransfer(667, "Transferring Back.", oldGuid);
 ts.TraceEvent(TraceEventType.Stop, 667, "Boundary: Activity " + i);  
 
 // 8. Change the tls variable to the original AID  
-Trace.CorrelationManager.ActivityId = oldGuid;    
+Trace.CorrelationManager.ActivityId = oldGuid;
 
 // 9. Resume the old activity  
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  

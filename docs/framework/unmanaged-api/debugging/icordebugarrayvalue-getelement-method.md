@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ac3cba5-c282-402e-b7ef-b46634f5176b
 topic_type:
 - apiref
-ms.openlocfilehash: 3d45caae56403d77776f1a8adbb5fb9c368ff105
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: adcb7b5a27f3b8c63dbbb660a23b5c891f84ac46
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088487"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179010"
 ---
 # <a name="icordebugarrayvaluegetelement-method"></a>ICorDebugArrayValue::GetElement メソッド
 指定された配列要素の値を取得します。  
@@ -30,7 +30,7 @@ ms.locfileid: "73088487"
 ```cpp  
 HRESULT GetElement (  
     [in]  ULONG32          cdim,  
-    [in, size_is(cdim), length_is(cdim)]   
+    [in, size_is(cdim), length_is(cdim)]
          ULONG32           indices[],  
     [out] ICorDebugValue   **ppValue  
 );  
@@ -38,20 +38,20 @@ HRESULT GetElement (
   
 ## <a name="parameters"></a>パラメーター  
  `cdim`  
- からこの `ICorDebugArrayValue` オブジェクトの次元数。  
+ [in]この`ICorDebugArrayValue`オブジェクトの次元数。  
   
- この値は、サイズが `ICorDebugArrayValue` オブジェクトの次元数と同じであるため、`indices` 配列のサイズでもあります。  
+ この値は、オブジェクトの次元数`indices`と同じサイズであるため、配列の`ICorDebugArrayValue`サイズでもあります。  
   
  `indices`  
- からインデックス値の配列。それぞれが `ICorDebugArrayValue` オブジェクトのディメンション内の位置を指定します。  
+ [in]インデックス値の配列で、各配列はオブジェクトの次元内の位置を指定`ICorDebugArrayValue`します。  
   
- この値を null にすることはできません。  
+ この値は null にできません。  
   
  `ppValue`  
- 入出力指定した要素の値を表す ICorDebugValue オブジェクトのアドレスへのポインター。  
+ [アウト]指定した要素の値を表すオブジェクトのアドレスへのポインター。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

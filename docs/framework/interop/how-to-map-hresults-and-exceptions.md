@@ -11,15 +11,15 @@ helpviewer_keywords:
 - COM interop, HRESULTs
 - COM interop, exceptions
 ms.assetid: 610b364b-2761-429d-9c4a-afbc3e66f1b9
-ms.openlocfilehash: 13dcca5f35750ad3e8bd6ea4f6dd443fe9a8ee94
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: e186228d1dc9a42ddfe92428f7dfad29a5789095
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123876"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181407"
 ---
 # <a name="how-to-map-hresults-and-exceptions"></a>方法: HRESULT に例外を割り当てる
-COM メソッドでは、HRESULT を返してエラーを報告します。 .NET メソッドでは、例外をスローしてエラーを報告します。 ランタイムは、この 2 つの間の遷移を処理します。 .NET Framework の例外クラスはそれぞれ HRESULT に割り当てられます。  
+COM メソッドでは、HRESULT を返してエラーを報告します。.NET メソッドでは、例外をスローしてエラーを報告します。 ランタイムは、この 2 つの間の遷移を処理します。 .NET Framework の例外クラスはそれぞれ HRESULT に割り当てられます。  
   
  ユーザー定義の例外クラスは、適切な HRESULT であればどの HRESULT でも指定できます。 これらの例外クラスでは、例外オブジェクトの **HResult** フィールドを設定することで例外が生成されたときに返される HRESULT を動的に変更できます。 アンマネージ プロセスの .NET オブジェクトに実装されている **IErrorInfo** インターフェイスを通じて、クライアントに例外についての追加情報が提供されます。  
   
@@ -35,7 +35,7 @@ COM メソッドでは、HRESULT を返してエラーを報告します。 .NET
     Class NoAccessException : public ApplicationException  
     {  
         NoAccessException () {  
-        HResult = E_ACCESSDENIED;   
+        HResult = E_ACCESSDENIED;
     }  
     }  
     CMyClass::MethodThatThrows  
@@ -66,14 +66,14 @@ CMyClass::MethodThatThrows
 |**COR_E_BADIMAGEFORMAT または ERROR_BAD_FORMAT**|**BadImageFormatException**|  
 |**COR_E_COMEMULATE_ERROR**|**COMEmulateException**|  
 |**COR_E_CONTEXTMARSHAL**|**ContextMarshalException**|  
-|**COR_E_CORE**|**CoreException**|  
+|**COR_E_CORE**|**コア例外**|  
 |**NTE_FAIL**|**CryptographicException**|  
 |**COR_E_DIRECTORYNOTFOUND または ERROR_PATH_NOT_FOUND**|**DirectoryNotFoundException**|  
 |**COR_E_DIVIDEBYZERO**|**DivideByZeroException**|  
 |**COR_E_DUPLICATEWAITOBJECT**|**DuplicateWaitObjectException**|  
 |**COR_E_ENDOFSTREAM**|**EndOfStreamException**|  
 |**COR_E_TYPELOAD**|**EntryPointNotFoundException**|  
-|**COR_E_EXCEPTION**|**Exception**|  
+|**COR_E_EXCEPTION**|**例外**|  
 |**COR_E_EXECUTIONENGINE**|**ExecutionEngineException**|  
 |**COR_E_FIELDACCESS**|**FieldAccessException**|  
 |**COR_E_FILENOTFOUND または ERROR_FILE_NOT_FOUND**|**FileNotFoundException**|  
@@ -107,7 +107,7 @@ CMyClass::MethodThatThrows
 |**COR_E_SERIALIZATION**|**SerializationException**|  
 |**COR_E_STACKOVERFLOW または ERROR_STACK_OVERFLOW**|**StackOverflowException**|  
 |**COR_E_SYNCHRONIZATIONLOCK**|**SynchronizationLockException**|  
-|**COR_E_SYSTEM**|**SystemException**|  
+|**COR_E_SYSTEM**|**システム例外**|  
 |**COR_E_TARGET**|**TargetException**|  
 |**COR_E_TARGETINVOCATION**|**TargetInvocationException**|  
 |**COR_E_TARGETPARAMCOUNT**|**TargetParameterCountException**|  
@@ -130,12 +130,12 @@ CMyClass::MethodThatThrows
   
 |例外フィールド|COM からの情報のソース|  
 |---------------------|------------------------------------|  
-|**ErrorCode**|呼び出しから返された HRESULT。|  
-|**HelpLink**|**IErrorInfo->HelpContext** が 0 以外の場合、文字列は **IErrorInfo->GetHelpFile**、"#"、および **IErrorInfo->GetHelpContext** を連結して形成されます。 それ以外の場合、文字列は **IErrorInfo->GetHelpFile** から返されます。|  
-|**InnerException**|常に null 参照 (Visual Basic では **Nothing**)。|  
-|**[メッセージ]**|**IErrorInfo->GetDescription** から返された文字列。|  
-|**Source**|**IErrorInfo->GetSource** から返された文字列。|  
-|**StackTrace**|スタック トレース。|  
+|**Errorcode**|呼び出しから返された HRESULT。|  
+|**Helplink**|**IErrorInfo->HelpContext** が 0 以外の場合、文字列は **IErrorInfo->GetHelpFile**、"#"、および **IErrorInfo->GetHelpContext** を連結して形成されます。 それ以外の場合、文字列は **IErrorInfo->GetHelpFile** から返されます。|  
+|**InnerException**|常に null 参照 (Visual Basic では**何もありません**)。|  
+|**メッセージ**|**IErrorInfo->GetDescription** から返された文字列。|  
+|**ソース**|**IErrorInfo->GetSource** から返された文字列。|  
+|**Stacktrace**|スタック トレース。|  
 |**TargetSite**|失敗を示す HRESULT を返したメソッドの名前。|  
   
  **Message**、**Source**、および **StackTrace** などの例外フィールドは、**StackOverflowException** では使用できません。  

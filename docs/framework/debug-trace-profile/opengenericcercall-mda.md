@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed debugging assistants (MDAs), CER calls
 - generics [.NET Framework], open generic CER calls
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
-ms.openlocfilehash: de1735103314dfedbabe27623f579ce2c1e728af
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 7492a4c0547680a6ace85a5f7c98567770f5575a
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77217275"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181775"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 
@@ -29,7 +29,7 @@ ms.locfileid: "77217275"
 
 JIT コンパイル時には、処理結果のコードが共有され、オブジェクト参照型変数がそれぞれ任意のオブジェクト参照型になる可能性があるため、オブジェクト参照型を含むインスタンス化は代理にすぎません。 このため、一部のランタイム リソースを前もって準備することが妨げられる場合があります。
 
-特に、ジェネリック型変数を含むメソッドは、バックグラウンドでリソースを遅延割り当てする可能性があります。 このようなメソッドは、ジェネリック辞書エントリと呼ばれます。 たとえば、ステートメント `List<T> list = new List<T>();` `T` がジェネリック型の変数である場合、ランタイムは、実行時に正確なインスタンス化 (たとえば、`List<Object>, List<String>`など) を検索して作成する必要があります。 この操作は、メモリ不足など、開発者が制御できないさまざまな理由で失敗することがあります。
+特に、ジェネリック型変数を含むメソッドは、バックグラウンドでリソースを遅延割り当てする可能性があります。 このようなメソッドは、ジェネリック辞書エントリと呼ばれます。 たとえば、ジェネリック型変数である`List<T> list = new List<T>();``T`ステートメントの場合、ランタイムは実行時に正確なインスタンス化`List<Object>, List<String>`を作成する必要があります( など)。 この操作は、メモリ不足など、開発者が制御できないさまざまな理由で失敗することがあります。
 
 この MDA は、JIT コンパイル時にのみアクティブになり、正確なインスタンス化が存在するときにはアクティブになりません。
 
@@ -43,13 +43,13 @@ CER が存在する可能性があるメソッドには、オブジェクト参�
 
 この MDA は CLR に影響しません。
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
-この MDA からの出力の例を次に示します。
+この MDA からの出力例を次に示します。
   
  ```output
  Method 'GenericMethodWithCer', which contains at least one constrained execution region, cannot be prepared automatically since it has one or more unbound generic type parameters.
- The caller must ensure this method is prepared explicitly at run time prior to execution. 
+ The caller must ensure this method is prepared explicitly at run time prior to execution.
  method name="GenericMethodWithCer"
  declaringType name="OpenGenericCERCall"
  ```
@@ -86,7 +86,7 @@ class Program
         MyClass.GenericMethodWithCer<int>();
 
         // This call is incorrect. A shared version of the method that
-        // cannot be completely analyzed will be JIT-compiled. The 
+        // cannot be completely analyzed will be JIT-compiled. The
         // MDA will be activated at JIT-compile time, not at run time.
         MyClass.GenericMethodWithCer<String>();
     }
@@ -110,7 +110,7 @@ class MyClass
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>

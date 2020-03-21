@@ -15,22 +15,22 @@ helpviewer_keywords:
 ms.assetid: da3769eb-1828-4aa1-b9ed-db4842136a43
 topic_type:
 - apiref
-ms.openlocfilehash: 83e2d1231b85086c2e65813cf427df3de36405b7
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0332fae46d6a65cfb7cc0b929cc2fd0d97e1790e
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785311"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179157"
 ---
 # <a name="iclrdatatargetreadvirtual-method"></a>ICLRDataTarget::ReadVirtual メソッド
-指定された仮想メモリアドレスから指定されたバッファーにデータを読み取ります。  
+指定した仮想メモリ アドレスから指定したバッファーにデータを読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT ReadVirtual (  
     [in] CLRDATA_ADDRESS    address,  
-    [out, size_is(bytesRequested), length_is(*bytesRead)]   
+    [out, size_is(bytesRequested), length_is(*bytesRead)]
         BYTE                *buffer,  
     [in] ULONG32            bytesRequested,  
     [out] ULONG32           *bytesRead  
@@ -39,21 +39,21 @@ HRESULT ReadVirtual (
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- から仮想メモリアドレスを格納する CLRDATA_ADDRESS。  
+ [in]仮想メモリ アドレスを格納するCLRDATA_ADDRESS。  
   
  `buffer`  
- 入出力データを受け取るバッファーへのポインター。  
+ [アウト]データを受け取るバッファーへのポインター。  
   
  `bytesRequested`  
- からバッファーの長さ。  
+ [in]バッファーの長さ。  
   
  `bytesRead`  
- 入出力返されたバイト数へのポインター。  
+ [アウト]返されるバイト数へのポインター。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ClrData .idl, ClrData .h  
+ **ヘッダー:** をします。  
   
  **ライブラリ:** CorGuids.lib  
   

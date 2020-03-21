@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 6f60aae6-70ec-4c4c-963a-138df98c4668
 topic_type:
 - apiref
-ms.openlocfilehash: afeec3df03fc2b122ca8deb8123b79314b5e3837
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 341a86f4c1c8367f979e193a6284bf89f1b03ca0
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782427"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178802"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -28,25 +28,25 @@ ms.locfileid: "76782427"
   
 ```cpp
 HRESULT EnumerateLocalVariablesEx(  
-   [in] ILCodeKind flags,   
+   [in] ILCodeKind flags,
    [out] ICorDebugValueEnum **ppValueEnum  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `flags`  
- からプロファイラー ReJIT インストルメンテーションに追加された変数がフレームに含まれるかどうかを指定する[Ilcodekind](ilcodekind-enumeration.md)列挙型のメンバー。  
+ [in]プロファイラー ReJIT インストルメンテーションで追加された変数をフレームに含めるかどうかを指定する[ILCodeKind](ilcodekind-enumeration.md)列挙メンバー。  
   
  `ppValueEnum`  
- 入出力このフレーム内のローカル変数の列挙子である "テキスト" オブジェクトのアドレスへのポインター。  
+ [アウト]このフレーム内のローカル変数の列挙子である "ICorDebugValueEnum" オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- このメソッドは、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)メソッドに似ていますが、プロファイラー rejit インストルメンテーションに追加された変数にオプションでアクセスする点が異なります。 `flags` を `ILCODE_ORIGINAL_IL` に設定することは、 [EnumerateLocalVariables](icordebugilframe-enumeratelocalvariables-method.md)を呼び出した場合と同じです。 `flags` を `ILCODE_REJIT_IL` に設定することにより、デバッガは プロファイラー ReJIT インストルメンテーションに追加されるローカル変数にアクセスできるようになります。 中間言語 (IL) がインストルメント化されていない場合は、列挙子は空になり、メソッドは `S_OK` を返します。  
+## <a name="remarks"></a>解説  
+ このメソッドは、オプションでプロファイラー ReJIT インストルメンテーションで追加された変数にアクセスする点を除いて、[列挙LocalVariables](icordebugilframe-enumeratelocalvariables-method.md)メソッドに似ています。 に`flags``ILCODE_ORIGINAL_IL`設定することは、呼び出し元[と](icordebugilframe-enumeratelocalvariables-method.md)同じです。 `flags` を `ILCODE_REJIT_IL` に設定することにより、デバッガは プロファイラー ReJIT インストルメンテーションに追加されるローカル変数にアクセスできるようになります。 中間言語 (IL) がインストルメント化されていない場合は、列挙子は空になり、メソッドは `S_OK` を返します。  
   
  実行中のメソッドにあるすべてのローカル変数が列挙子に含まれない場合がありますが、それは一部のローカル変数が非アクティブである可能性があるためです。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -58,4 +58,4 @@ HRESULT EnumerateLocalVariablesEx(
 
 - [ICorDebugILFrame4 インターフェイス](icordebugilframe4-interface.md)
 - [デバッグ インターフェイス](debugging-interfaces.md)
-- [ReJIT: ハウツーガイド](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)
+- [ReJIT:ハウツーガイド](https://docs.microsoft.com/archive/blogs/davbr/rejit-a-how-to-guide)

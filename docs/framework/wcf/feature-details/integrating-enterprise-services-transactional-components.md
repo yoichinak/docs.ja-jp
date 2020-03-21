@@ -2,16 +2,16 @@
 title: エンタープライズ サービスのトランザクション コンポーネントの統合
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 5914f76639adc3ff569a3bfb8d6eb1db14313e76
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 292573f911459d8a8419e09d81fd1e54dbc6c70b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211937"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184738"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>エンタープライズ サービスのトランザクション コンポーネントの統合
 
-Windows Communication Foundation (WCF) は、エンタープライズサービスと統合するための自動メカニズムを提供します (「 [COM + アプリケーションとの統合](integrating-with-com-plus-applications.md)」を参照してください)。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能は <xref:System.Transactions> インフラストラクチャ上に構築されているので、Enterprise Services と WCF を統合するプロセスは、「 [Enterprise services と COM + トランザクションの相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))」で説明されているように、<xref:System.Transactions> とエンタープライズサービス間の相互運用性を指定するためのものと同じです。  
+Windows 通信基盤 (WCF) は、エンタープライズ サービスとの統合のための自動メカニズムを提供します ( [COM+ アプリケーションとの統合を](integrating-with-com-plus-applications.md)参照してください ) 。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能は<xref:System.Transactions>インフラストラクチャ上に構築されているため、エンタープライズ サービスと WCF を統合するプロセスは、エンタープライズ サービスと[COM+ トランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))との相互運用性で説明されているように、エンタープライズ サービスとエンタープライズ サービス間<xref:System.Transactions>の相互運用性を指定するためのプロセスと同じです。  
   
  フローされる受信トランザクションと COM+ コンテキスト トランザクションの間に必要なレベルの相互運用性を提供するには、サービス実装で <xref:System.Transactions.TransactionScope> インスタンスを作成し、<xref:System.Transactions.EnterpriseServicesInteropOption> 列挙型の適切な値を使用する必要があります。  
   
@@ -46,11 +46,11 @@ public class CustomerService : ICustomerServiceContract
                      EnterpriseServicesInteropOption.Full))  
       {  
          // Create an Enterprise Services component  
-         // Call UpdateCustomer method on an Enterprise Services   
-         // component   
+         // Call UpdateCustomer method on an Enterprise Services
+         // component
   
-         // Call UpdateOtherCustomerData method on an Enterprise   
-         // Services component   
+         // Call UpdateOtherCustomerData method on an Enterprise
+         // Services component
          ts.Complete();  
       }  
   
@@ -81,13 +81,13 @@ static void Main()
   
         // Create an Enterprise Services component  
   
-        // Call UpdateCustomer method on an Enterprise Services   
-        // component   
+        // Call UpdateCustomer method on an Enterprise Services
+        // component
   
         ts.Complete();  
     }  
   
-    // Closing the client gracefully closes the connection and   
+    // Closing the client gracefully closes the connection and
     // cleans up resources  
     client.Close();  
 }  

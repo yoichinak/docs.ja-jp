@@ -2,12 +2,12 @@
 title: ICorDebugMergedAssemblyRecord::GetVersion メソッド
 ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
-ms.openlocfilehash: 8b5995183be7f1c992cf3230e16456cb248eff0c
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 5dc9995e88086da854d2e9382cef81b229ff9dc9
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793075"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178685"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion メソッド
 アセンブリのバージョン情報を取得します。  
@@ -16,9 +16,9 @@ ms.locfileid: "76793075"
   
 ```cpp  
 HRESULT GetVersion(  
-   [out] USHORT *pMajor,   
-   [out] USHORT *pMinor,   
-   [out] USHORT *pBuild,   
+   [out] USHORT *pMajor,
+   [out] USHORT *pMinor,
+   [out] USHORT *pBuild,
    [out] USHORT *pRevision  
 );  
 ```  
@@ -36,14 +36,14 @@ HRESULT GetVersion(
  `pRevision`  
  [out] リビジョン番号へのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  アセンブリのバージョン番号については、<xref:System.Version> クラスのトピックを参照してください。  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

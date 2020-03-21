@@ -2,12 +2,12 @@
 title: 厳密に型指定された拡張のサンプル
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 4ad0a8e10ecbcb5e3ddf9106dbbaa55356314020
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 3cfbcddfdc7700618d499dd41d3a8c3b629bf550
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716619"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183313"
 ---
 # <a name="strongly-typed-extensions-sample"></a>厳密に型指定された拡張のサンプル
 このサンプルでは、例を示す目的で <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを使用します。 ただし、このサンプルで示すパターンは、拡張データをサポートするすべての配信クラスで使用できます。  
@@ -27,10 +27,10 @@ ms.locfileid: "74716619"
          This is a response to the original entry</summary>  
     <updated>2006-03-01T12:12:13Z</updated>  
     <link href="http://www.example.org/entries/1/2" />  
-    <in-reply-to p3:ref="tag:example.org,2005:1"   
-                 p3:href="http://www.example.org/entries/1"   
-                 p3:type="application/xhtml+xml"   
-                 xmlns:p3="http://contoso.org/syndication/thread/1.0"   
+    <in-reply-to p3:ref="tag:example.org,2005:1"
+                 p3:href="http://www.example.org/entries/1"
+                 p3:type="application/xhtml+xml"
+                 xmlns:p3="http://contoso.org/syndication/thread/1.0"
                  xmlns="http://contoso.org/syndication/thread/1.0">  
       <anotherElement xmlns="http://www.w3.org/2005/Atom">  
                      Some more data</anotherElement>  
@@ -40,7 +40,7 @@ ms.locfileid: "74716619"
 </entry>  
 ```  
   
- `<in-reply-to>` 要素は、3つの必須属性 (`ref`、`type`、および `href`) を指定しますが、追加の拡張属性と拡張要素も存在できます。  
+ 要素`<in-reply-to>`は、追加の拡張属性`ref`と`type`拡張`href`要素の存在を許可しながら、3 つの必須属性 ( 、および ) を指定します。  
   
 ## <a name="modeling-the-in-reply-to-element"></a>In-Reply-To 要素のモデル化  
  このサンプルでは、`<in-reply-to>` 要素は <xref:System.Xml.Serialization.IXmlSerializable> を実装する CLR としてモデル化されており、<xref:System.Runtime.Serialization.DataContractSerializer> と共に使用できます。 さらに、次のサンプル コードに示すように、要素のデータにアクセスするメソッドおよびプロパティも実装しています。  
@@ -50,7 +50,7 @@ ms.locfileid: "74716619"
 public class InReplyToElement : IXmlSerializable  
 {  
     internal const string ElementName = "in-reply-to";  
-    internal const string NsUri =   
+    internal const string NsUri =
                   "http://contoso.org/syndication/thread/1.0";  
     private Dictionary<XmlQualifiedName, string> extensionAttributes;  
     private Collection<XElement> extensionElements;  
@@ -58,7 +58,7 @@ public class InReplyToElement : IXmlSerializable
     public InReplyToElement()  
     {  
         this.extensionElements = new Collection<XElement>();  
-        this.extensionAttributes = new Dictionary<XmlQualifiedName,   
+        this.extensionAttributes = new Dictionary<XmlQualifiedName,
                                                           string>();  
     }  
   
@@ -121,9 +121,9 @@ public void ReadXml(System.Xml.XmlReader reader)
                 }  
                 else  
                 {  
-                    this.AttributeExtensions.Add(new   
-                                 XmlQualifiedName(reader.LocalName,   
-                                 reader.NamespaceURI),   
+                    this.AttributeExtensions.Add(new
+                                 XmlQualifiedName(reader.LocalName,
+                                 reader.NamespaceURI),
                                  reader.Value);  
                 }  
             }  
@@ -151,29 +151,29 @@ public void WriteXml(System.Xml.XmlWriter writer)
 {  
     if (this.Ref != null)  
     {  
-        writer.WriteAttributeString("ref", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("ref", InReplyToElement.NsUri,
                                             this.Ref);  
     }  
     if (this.Href != null)  
     {  
-        writer.WriteAttributeString("href", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("href", InReplyToElement.NsUri,
                                                 this.Href.ToString());  
     }  
     if (this.Source != null)  
     {  
-        writer.WriteAttributeString("source", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("source", InReplyToElement.NsUri,
                                               this.Source.ToString());  
     }  
     if (this.MediaType != null)  
     {  
-        writer.WriteAttributeString("type", InReplyToElement.NsUri,   
+        writer.WriteAttributeString("type", InReplyToElement.NsUri,
                                                     this.MediaType);  
     }  
   
-    foreach (KeyValuePair<XmlQualifiedName, string> kvp in   
+    foreach (KeyValuePair<XmlQualifiedName, string> kvp in
                                              this.AttributeExtensions)  
     {  
-        writer.WriteAttributeString(kvp.Key.Name, kvp.Key.Namespace,   
+        writer.WriteAttributeString(kvp.Key.Name, kvp.Key.Namespace,
                                                    kvp.Value);  
     }  
   
@@ -234,7 +234,7 @@ public class ThreadedItem : SyndicationItem
     }  
   
     protected override bool TryParseElement(  
-                        System.Xml.XmlReader reader,   
+                        System.Xml.XmlReader reader,
                         string version)  
     {  
         if (version == SyndicationVersions.Atom10 &&  
@@ -253,13 +253,13 @@ public class ThreadedItem : SyndicationItem
         }  
     }  
   
-    protected override void WriteElementExtensions(XmlWriter writer,   
+    protected override void WriteElementExtensions(XmlWriter writer,
                                                  string version)  
     {  
-        if (this.InReplyTo != null &&   
+        if (this.InReplyTo != null &&
                      version == SyndicationVersions.Atom10)  
         {  
-            writer.WriteStartElement(InReplyToElement.ElementName,   
+            writer.WriteStartElement(InReplyToElement.ElementName,
                                            InReplyToElement.NsUri);  
             this.InReplyTo.WriteXml(writer);  
             writer.WriteEndElement();  
@@ -272,17 +272,17 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
+1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
   
 2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
+3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
->   
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

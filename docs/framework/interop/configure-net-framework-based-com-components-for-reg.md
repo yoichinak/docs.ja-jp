@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: 61f5f0f3ec9a4386fa12e7511b4a518f2b56a21c
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123666"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181463"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  
@@ -42,10 +42,10 @@ ms.locfileid: "73123666"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="msil"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="msil"
       />  
     ```  
   
@@ -54,18 +54,18 @@ ms.locfileid: "73123666"
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
-      <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myComApp"   
-                        version="1.0.0.0"   
-                        processorArchitecture="x86"   
+      <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myComApp"
+                        version="1.0.0.0"
+                        processorArchitecture="x86"
                         publicKeyToken="8275b28176rcbbef"  
       />  
       <dependency>  
         <dependentAssembly>  
-          <assemblyIdentity type="win32"   
-                        name="myOrganization.myDivision.myManagedComp"   
-                        version="6.0.0.0"   
-                        processorArchitecture="X86"   
+          <assemblyIdentity type="win32"
+                        name="myOrganization.myDivision.myManagedComp"
+                        version="6.0.0.0"
+                        processorArchitecture="X86"
                         publicKeyToken="8275b28176rcbbef"  
           />  
         </dependentAssembly>  
@@ -103,15 +103,15 @@ ms.locfileid: "73123666"
   
 4. アセンブリ内の各クラスを指定します。 マネージド アセンブリ内の各クラスを一意に識別するには `<clrClass>` 要素を使用します。 この要素は、`<assembly>` 要素のサブ要素であり、次の表に示す属性を持っています。  
   
-    |属性|説明|必要|  
+    |属性|説明|Required|  
     |---------------|-----------------|--------------|  
-    |`clsid`|アクティブにするクラスを指定する識別子。|[はい]|  
-    |`description`|ユーザーにコンポーネントを説明する文字列。 既定では文字列は空です。|Ｘ|  
-    |`name`|マネージド クラスを表す文字列。|[はい]|  
-    |`progid`|遅延バインディングによるアクティベーションで使用される識別子。|Ｘ|  
-    |`threadingModel`|COM スレッド モデル。 "Both" が既定値です。|Ｘ|  
-    |`runtimeVersion`|使用する共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 この属性を指定せず、CLR がまだ読み込まれていない場合は、インストールされている最新の CLR (CLR Version 4 よりも前のバージョン) でコンポーネントが読み込まれます。 v1.0.3705、v1.1.4322、または v2.0.50727 を指定すると、インストールされている最新の CLR バージョン (CLR Version 4 よりも前のバージョン。通常は v2.0.50727) に自動的にロールフォワードされます。 別のバージョンの CLR が既に読み込まれていて、指定されたバージョンをインプロセスで並行して (side-by-side で) 読み込むことができる場合は、指定されたバージョンが読み込まれます。それ以外の場合は、読み込まれた CLR が使用されます。 これにより、読み込みエラーが発生する可能性があります。|Ｘ|  
-    |`tlbid`|クラスに関する型情報を格納するタイプ ライブラリの識別子。|Ｘ|  
+    |`clsid`|アクティブにするクラスを指定する識別子。|はい|  
+    |`description`|ユーザーにコンポーネントを説明する文字列。 既定では文字列は空です。|いいえ|  
+    |`name`|マネージド クラスを表す文字列。|はい|  
+    |`progid`|遅延バインディングによるアクティベーションで使用される識別子。|いいえ|  
+    |`threadingModel`|COM スレッド モデル。 "Both" が既定値です。|いいえ|  
+    |`runtimeVersion`|使用する共通言語ランタイム (CLR: Common Language Runtime) のバージョンを指定します。 この属性を指定せず、CLR がまだ読み込まれていない場合は、インストールされている最新の CLR (CLR Version 4 よりも前のバージョン) でコンポーネントが読み込まれます。 v1.0.3705、v1.1.4322、または v2.0.50727 を指定すると、インストールされている最新の CLR バージョン (CLR Version 4 よりも前のバージョン。通常は v2.0.50727) に自動的にロールフォワードされます。 別のバージョンの CLR が既に読み込まれていて、指定されたバージョンをインプロセスで並行して (side-by-side で) 読み込むことができる場合は、指定されたバージョンが読み込まれます。それ以外の場合は、読み込まれた CLR が使用されます。 これにより、読み込みエラーが発生する可能性があります。|いいえ|  
+    |`tlbid`|クラスに関する型情報を格納するタイプ ライブラリの識別子。|いいえ|  
   
      属性タグはすべて大文字と小文字が区別されます。 OLE/COM オブジェクト ビューアー (Oleview.exe) で、エクスポートされたアセンブリのタイプ ライブラリを表示することによって、CLSID、ProgID、スレッド モデル、およびランタイムのバージョンを取得できます。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "73123666"
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
            <assemblyIdentity  
                         name="myOrganization.myDivision.myManagedComp"  
-                        version="1.2.3.4"   
+                        version="1.2.3.4"
                         publicKeyToken="8275b28176rcbbef"  
            />  
            <clrClass  
@@ -156,13 +156,13 @@ ms.locfileid: "73123666"
   
      このステートメントで、`myManagedComp.manifest` は埋め込むコンポーネント マニフェストの名前です。 この例では、スクリプト ファイル名は `myresource.rc` です。  
   
-2. Microsoft Windows リソース コンパイラ (Rc.exe) を使用してスクリプトをコンパイルします。 コマンド プロンプトに次のコマンドを入力します。  
+2. Microsoft Windows リソース コンパイラ (Rc.exe) を使用してスクリプトをコンパイルします。 コマンド プロンプトで、次のコマンドを入力します。  
   
      `rc myresource.rc`  
   
      Rc.exe は `myresource.res` リソース ファイルを生成します。  
   
-3. もう一度アセンブリのソース ファイルをコンパイルし、 **/win32res** オプションを使用してリソース ファイルを指定します。  
+3. もう一度アセンブリのソース ファイルをコンパイルし、**/win32res** オプションを使用してリソース ファイルを指定します。  
   
     `/win32res:myresource.res`  
   

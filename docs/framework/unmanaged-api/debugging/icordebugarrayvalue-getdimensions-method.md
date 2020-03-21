@@ -15,37 +15,37 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: c5199794098e4d83588728eeb165aee5f81fe4c4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73088510"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79179028"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions メソッド
-この配列の各次元に含まれる要素の数を取得します。  
+この配列の各次元の要素の数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetDimensions (  
     [in] ULONG32         cdim,  
-    [out, size_is(cdim), length_is(cdim)]   
+    [out, size_is(cdim), length_is(cdim)]
         ULONG32          dims[]  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `cdim`  
- からこの ICorDebugArrayValue オブジェクトの次元数。  
+ [in]このオブジェクトの次元の数。  
   
- この値は、サイズが `ICorDebugArrayValue` オブジェクトの次元数と同じであるため、`dims` 配列のサイズでもあります。  
+ この値は、オブジェクトの次元数`dims`と同じサイズであるため、配列の`ICorDebugArrayValue`サイズでもあります。  
   
  `dims`  
- 入出力整数の配列。各整数は、この `ICorDebugArrayValue` オブジェクトのディメンションに含まれる要素の数を指定します。  
+ [アウト]整数の配列で、この`ICorDebugArrayValue`オブジェクト内の次元内の要素の数をそれぞれ指定します。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

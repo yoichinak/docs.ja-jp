@@ -2,12 +2,12 @@
 title: ICorDebugInstanceFieldSymbol::GetName メソッド
 ms.date: 03/30/2017
 ms.assetid: d9c12b1f-9c1d-4943-8e9e-93b55faf085f
-ms.openlocfilehash: 05914863dfbc2aca608a5d74f298f81c64345fe8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: dd925cc213ed8a6c5d1def85b3e6335751c1b594
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782385"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178758"
 ---
 # <a name="icordebuginstancefieldsymbolgetname-method"></a>ICorDebugInstanceFieldSymbol::GetName メソッド
 インスタンス フィールドの名前を取得します。  
@@ -16,8 +16,8 @@ ms.locfileid: "76782385"
   
 ```cpp  
 HRESULT GetName(  
-   [in] ULONG32 cchName,   
-   [out] ULONG32 *pcchName,   
+   [in] ULONG32 cchName,
+   [out] ULONG32 *pcchName,
    [out, size_is(cchName), length_is(*pcchName)] WCHAR szName[]  
 );  
 ```  
@@ -32,13 +32,13 @@ HRESULT GetName(
  `szName`  
  [out] 返される名前を格納する文字配列。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

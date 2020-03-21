@@ -9,21 +9,21 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 805fbac5fe33071006f29692d503e5c57eacd765
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 550ac1660a077e8d766a01bfa8d102c07f0fbfeb
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746564"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182239"
 ---
 # <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>方法 : Windows フォーム内の ToolStrip 項目の間隔と配置を変更する
-<xref:System.Windows.Forms.ToolStrip> コントロールは、サイズ変更、相互に関連する <xref:System.Windows.Forms.ToolStripItem> コントロールの間隔、<xref:System.Windows.Forms.ToolStrip>上のコントロールの配置、<xref:System.Windows.Forms.ToolStrip>を基準としたコントロールの間隔などのレイアウト機能を完全にサポートします。  
+この<xref:System.Windows.Forms.ToolStrip>コントロールは、サイズ変更、相互に相対的なコントロールの<xref:System.Windows.Forms.ToolStripItem>間隔、<xref:System.Windows.Forms.ToolStrip>コントロールの配置、コントロールの間隔などのレイアウト機能を完全にサポートしています<xref:System.Windows.Forms.ToolStrip>。  
   
- <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> プロパティの既定値は `true`ので、<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> プロパティを `false`に設定しない限り、コントロールは自動的にサイズ変更されます。  
+ プロパティの既定値は に<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>設定されている`true`場合、<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>プロパティのサイズは自動的に`false`変更されます。  
   
-### <a name="to-manually-size-a-toolstripitem"></a>ToolStripItem のサイズを手動で変更するには  
+### <a name="to-manually-size-a-toolstripitem"></a>手動でサイズを変更するには  
   
-1. 関連付けられたコントロールの <xref:System.Windows.Forms.ToolStripItem.AutoSize%2A> プロパティを `false` に設定します。  
+1. 関連付<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>けられたコントロール`false`の プロパティを に設定します。  
   
     ```vb  
     ToolStripButton1.AutoSize = False  
@@ -33,13 +33,13 @@ ms.locfileid: "76746564"
     toolStripButton1.AutoSize = false;  
     ```  
   
-2. 関連する <xref:System.Windows.Forms.ToolStripItem>に対して、<xref:System.Windows.Forms.ToolStripItem.Size%2A> プロパティを必要に応じて設定します。  
+2. 関連付<xref:System.Windows.Forms.ToolStripItem.Size%2A>けられた<xref:System.Windows.Forms.ToolStripItem>.  
   
-### <a name="to-set-the-spacing-of-a-toolstripitem"></a>ToolStripItem の間隔を設定するには  
+### <a name="to-set-the-spacing-of-a-toolstripitem"></a>ツールストリップ アイテムの間隔を設定するには  
   
-1. 目的の値をピクセル単位で、関連付けられているコントロールの <xref:System.Windows.Forms.ToolStripItem.Margin%2A> プロパティに挿入します。  
+1. 関連付けられたコントロールのプロパティに、必要な<xref:System.Windows.Forms.ToolStripItem.Margin%2A>値をピクセル単位で挿入します。  
   
-     <xref:System.Windows.Forms.ToolStripItem.Margin%2A> プロパティの値は、項目と隣接する項目の間の間隔を、左、上、右、下の順に指定します。  
+     <xref:System.Windows.Forms.ToolStripItem.Margin%2A>このプロパティの値は、アイテムと隣接するアイテムの間隔を、左、上、右、下の順に指定します。  
   
     ```vb  
     ToolStripTextBox1.Margin = New System.Windows.Forms.Padding _  
@@ -47,13 +47,13 @@ ms.locfileid: "76746564"
     ```  
   
     ```csharp  
-    toolStripTextBox1.Margin = new System.Windows.Forms.Padding   
+    toolStripTextBox1.Margin = new System.Windows.Forms.Padding
         (3, 0, 3, 0);  
     ```  
   
-### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>ToolStripItem を ToolStrip の右側に配置するには  
+### <a name="to-align-a-toolstripitem-to-the-right-side-of-the-toolstrip"></a>ツールストリップアイテムをツールストリップの右側に揃えるには  
   
-1. 関連付けられたコントロールの <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> プロパティを <xref:System.Windows.Forms.ToolStripItemAlignment.Right> に設定します。 既定では、<xref:System.Windows.Forms.ToolStripItem.Alignment%2A> は <xref:System.Windows.Forms.ToolStripItemAlignment.Left>に設定されます。これにより、コントロールが <xref:System.Windows.Forms.ToolStrip>の左側に配置されます。  
+1. 関連付<xref:System.Windows.Forms.ToolStripItem.Alignment%2A>けられたコントロール<xref:System.Windows.Forms.ToolStripItemAlignment.Right>の プロパティを に設定します。 既定では、 <xref:System.Windows.Forms.ToolStripItem.Alignment%2A> <xref:System.Windows.Forms.ToolStripItemAlignment.Left>は に設定され、コントロールは<xref:System.Windows.Forms.ToolStrip>の左側に揃えます。  
   
     ```vb  
     ToolStripSplitButton1.Alignment = _  
@@ -61,13 +61,13 @@ ms.locfileid: "76746564"
     ```  
   
     ```csharp  
-    toolStripSplitButton1.Alignment =   
+    toolStripSplitButton1.Alignment =
         System.Windows.Forms.ToolStripItemAlignment.Right;  
     ```  
   
-### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>Toolstrip に ToolStrip 項目を配置するには  
+### <a name="to-arrange-toolstrip-items-on-the-toolstrip"></a>ツールストリップの項目を配置するには  
   
-- <xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A> プロパティに、必要な <xref:System.Windows.Forms.ToolStripLayoutStyle> の値を設定します。  
+- プロパティを<xref:System.Windows.Forms.ToolStrip.LayoutStyle%2A>目的の<xref:System.Windows.Forms.ToolStripLayoutStyle>値に設定します。  
   
     ```vb  
     ToolStripDropDown1.LayoutStyle = _  
@@ -75,11 +75,11 @@ ms.locfileid: "76746564"
     ```  
   
     ```csharp  
-    toolStripDropDown1.LayoutStyle =   
+    toolStripDropDown1.LayoutStyle =
         System.Windows.Forms.ToolStripLayoutStyle.Flow;  
     ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>

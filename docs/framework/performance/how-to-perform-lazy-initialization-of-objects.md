@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - lazy initialization in .NET, how to perform
 ms.assetid: 8cd68620-dcc3-4f20-8835-c728a6820e71
-ms.openlocfilehash: 6efc89e5c22f53d9b2c48e535c783d488df16462
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: d89d19a7a3edb57dcd6c0e37e6688701da8b3713
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73130325"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180601"
 ---
 # <a name="how-to-perform-lazy-initialization-of-objects"></a>方法: オブジェクトの遅延初期化を実行する
 <xref:System.Lazy%601?displayProperty=nameWithType> クラスは、オブジェクトの遅延初期化とインスタンス化を実行する操作を簡略化します。 オブジェクトを限定的に初期化すれば、不要なオブジェクトを作成する必要がなくなります。また、オブジェクトに初めてアクセスするときまで、そのオブジェクトの初期化を延期できます。 詳細については、「[限定的な初期化](lazy-initialization.md)」を参照してください。  
@@ -48,7 +48,7 @@ End Sub
 ```  
   
 ```csharp  
-  static bool someCondition = false;    
+  static bool someCondition = false;
   //Initializing a value with a big computation, computed in parallel  
   Lazy<int> _data = new Lazy<int>(delegate  
   {  

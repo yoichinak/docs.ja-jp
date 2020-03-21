@@ -15,37 +15,37 @@ helpviewer_keywords:
 ms.assetid: c8111502-5a20-447f-9dc2-76e8acd7ed5a
 topic_type:
 - apiref
-ms.openlocfilehash: 540ca78c5548d4fbdd3338671ea02314736f15cd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4b48132ee60bcaebb218d8f583de6558372f5055
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792360"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79178605"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject メソッド
-オブジェクトのアドレスを "の値" オブジェクトに変換します。  
+オブジェクト アドレスを "ICorDebugObjectValue" オブジェクトに変換します。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT GetObject(  
-    [in] CORDB_ADDRESS addr,   
+    [in] CORDB_ADDRESS addr,
     [out] ICorDebugObjectValue **ppObject  
 );  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
  `addr`  
- からオブジェクトのアドレス。  
+ [in]オブジェクト アドレス。  
   
  `ppObject`  
- 入出力"の値" オブジェクトのアドレスへのポインター。  
+ [アウト]オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- `addr` が有効なマネージオブジェクトを指していない場合、`GetObject` メソッドは `E_FAIL`を返します。  
+## <a name="remarks"></a>解説  
+ 有効`addr`なマネージ オブジェクトを指していない場合、メソッド`GetObject`は`E_FAIL`を返します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

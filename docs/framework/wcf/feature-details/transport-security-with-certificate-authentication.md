@@ -4,29 +4,29 @@ ms.date: 03/30/2017
 dev_langs:
 - csharp
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
-ms.openlocfilehash: 9ac563ad237749665e9cc53c15aec35f461abfc0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ad2f0922afbd94e1699b383cf2fc9762771b637d
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76742654"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184327"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>トランスポート セキュリティと証明書認証
 
-この記事では、トランスポートセキュリティを使用する場合に、サーバーとクライアントの認証に x.509 証明書を使用する方法について説明します。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 証明書は証明機関によって発行される必要があります。これは、多くの場合、証明書のサードパーティ発行者です。 Windows サーバー ドメインでは、そのドメインのクライアント コンピューターに対して証明書を発行する際に Active Directory 証明書サービスを使用できます。 このシナリオでは、Secure Sockets Layer (SSL) を使用して構成されたインターネット インフォメーション サービス (IIS) でサービスをホストします。 サービスは、クライアントがサーバーの ID を確認するための SSL (X.509) 証明書を使用して構成されます。 クライアントも、サービスがクライアントの ID を確認するための X.509 証明書を使用して構成されます。 サーバーの証明書はクライアントによって信頼されている必要があり、クライアントの証明書はサーバーによって信頼されている必要があります。 サービスとクライアントが互いの id を検証する実際のしくみについては、この記事では扱いません。 詳細については、Wikipedia の[デジタル署名](https://en.wikipedia.org/wiki/Digital_signature)に関する説明を参照してください。
+この資料では、トランスポート セキュリティを使用する場合のサーバー認証とクライアント認証に X.509 証明書を使用する方法について説明します。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 証明書は、証明機関 (通常はサード パーティの証明書の発行者) によって発行される必要があります。 Windows サーバー ドメインでは、そのドメインのクライアント コンピューターに対して証明書を発行する際に Active Directory 証明書サービスを使用できます。 このシナリオでは、Secure Sockets Layer (SSL) を使用して構成されたインターネット インフォメーション サービス (IIS) でサービスをホストします。 サービスは、クライアントがサーバーの ID を確認するための SSL (X.509) 証明書を使用して構成されます。 クライアントも、サービスがクライアントの ID を確認するための X.509 証明書を使用して構成されます。 サーバーの証明書はクライアントによって信頼されている必要があり、クライアントの証明書はサーバーによって信頼されている必要があります。 サービスとクライアントが互いの身元を確認する方法の実際の仕組みは、この記事の範囲外です。 詳細については、ウィキペディアの[デジタル署名](https://en.wikipedia.org/wiki/Digital_signature)を参照してください。
   
  このシナリオでは、次の図に示すような要求/応答のメッセージ パターンを実装します。  
   
  ![証明書を使用した安全な転送](../../../../docs/framework/wcf/feature-details/media/8f7b8968-899f-4538-a9e8-0eaa872a291c.gif "8f7b8968-899f-4538-a9e8-0eaa872a291c")  
   
- サービスで証明書を使用する方法の詳細については、「[証明書の操作](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)」および「[方法: SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。 このシナリオのさまざまな特性を次の表に示します。  
+ サービスで証明書を使用する方法の詳細については、「[証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)」および「[方法 : SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。 このシナリオのさまざまな特性を次の表に示します。  
   
-|特徴|[説明]|  
+|特徴|説明|  
 |--------------------|-----------------|  
 |セキュリティ モード|トランスポート|  
 |相互運用性|既存の Web サービス クライアントおよびサービスとの相互運用性|  
 |認証 (サーバー)<br /><br /> 認証 (クライアント)|○ (SSL 証明書を使用)<br /><br /> ○ (X.509 証明書を使用)|  
-|データ整合性|はい|  
+|データの整合性|はい|  
 |データの機密性|はい|  
 |トランスポート|HTTPS|  
 |バインド|<xref:System.ServiceModel.WSHttpBinding>|  
@@ -45,7 +45,7 @@ ms.locfileid: "76742654"
         <!-- configure wsHttp binding with Transport security mode and clientCredentialType as Certificate -->  
         <binding>  
           <security mode="Transport">  
-            <transport clientCredentialType="Certificate"/>              
+            <transport clientCredentialType="Certificate"/>
           </security>  
         </binding>  
       </wsHttpBinding>  
@@ -53,7 +53,7 @@ ms.locfileid: "76742654"
     <!--For debugging purposes set the includeExceptionDetailInFaults attribute to true-->  
     <behaviors>  
       <serviceBehaviors>  
-        <behavior>            
+        <behavior>
            <serviceDebug includeExceptionDetailInFaults="True" />  
         </behavior>  
       </serviceBehaviors>  
@@ -72,13 +72,13 @@ myBinding.Security.Mode = SecurityMode.Transport;
 myBinding.Security.Transport.ClientCredentialType =  
    HttpClientCredentialType.Certificate;  
   
-// Create the endpoint address. Note that the machine name   
+// Create the endpoint address. Note that the machine name
 // must match the subject or DNS field of the X.509 certificate  
-// used to authenticate the service.   
+// used to authenticate the service.
 var ea = new  
    EndpointAddress("https://localhost/CalculatorService/service.svc");  
   
-// Create the client. The code for the calculator   
+// Create the client. The code for the calculator
 // client is not shown here. See the sample applications  
 // for examples of the calculator code.  
 var cc =  
@@ -104,10 +104,10 @@ cc.Close();
   <system.serviceModel>  
     <client>  
       <!-- this endpoint has an https: address -->  
-      <endpoint address=" https://localhost/CalculatorService/service.svc "   
+      <endpoint address=" https://localhost/CalculatorService/service.svc "
                 behaviorConfiguration="endpointCredentialBehavior"  
-                binding="wsHttpBinding"   
-                bindingConfiguration="Binding1"   
+                binding="wsHttpBinding"
+                bindingConfiguration="Binding1"
                 contract="Microsoft.Samples.TransportSecurity.ICalculator"/>  
     </client>  
     <behaviors>  
@@ -138,7 +138,7 @@ cc.Close();
 <startup><supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.0"/></startup></configuration>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

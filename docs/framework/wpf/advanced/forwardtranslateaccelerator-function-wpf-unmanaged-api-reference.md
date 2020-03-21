@@ -1,5 +1,5 @@
 ---
-title: ForwardTranslateAccelerator 関数-WPF アンマネージ API リファレンス
+title: 関数を転送する - WPF アンマネージ API リファレンス
 titleSuffix: ''
 ms.date: 03/30/2017
 dev_langs:
@@ -9,45 +9,45 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: fff47a86-9d9f-4176-9530-10e1876e393f
-ms.openlocfilehash: f6e8208ffe2c186234f30f31e346ca6b1d0be4c0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: a0a01be3000dc53df7855cb74015ba1164206838
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76747038"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186631"
 ---
-# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>ForwardTranslateAccelerator 関数 (WPF アンマネージ API リファレンス)
-この API は、Windows Presentation Foundation (WPF) インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
+# <a name="forwardtranslateaccelerator-function-wpf-unmanaged-api-reference"></a>フォワードトランスレートアクセラレータ関数 (WPF アンマネージ API リファレンス)
+この API は、Windows プレゼンテーション基盤 (WPF) インフラストラクチャをサポートし、コードから直接使用することを意図していません。  
   
- Windows management の Windows Presentation Foundation (WPF) インフラストラクチャで使用されます。  
+ Windows プレゼンテーション ファウンデーション (WPF) インフラストラクチャによってウィンドウ管理に使用されます。  
   
 ## <a name="syntax"></a>構文  
   
 ```cpp  
 HRESULT ForwardTranslateAccelerator(  
-   MSG* pMsg,   
+   MSG* pMsg,
    VARIANT_BOOL appUnhandled  
 )  
 ```  
   
 ## <a name="parameters"></a>パラメーター  
- pMsg  
+ Pmsg  
  メッセージへのポインター。  
   
- appUnhandled  
- アプリに既に入力メッセージを処理する機会が与えられているが、処理されていない場合は、`true` ます。それ以外の場合は、`false`ます。  
+ アプリ未処理  
+ `true`アプリが入力メッセージを処理する機会が既に与えられているが、それを処理していない場合。それ以外`false`の場合は、 .  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** 「 [.NET Framework のシステム要件](../../get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:**[NET Framework のシステム要件](../../get-started/system-requirements.md)を参照してください。  
   
- **DLL**  
+ **Dll：**  
   
- .NET Framework 3.0 と 3.5: プレゼンテーション Hostdll .dll  
+ NET フレームワーク 3.0 および 3.5: プレゼンテーションホストDLL.dll  
   
- .NET Framework 4 以降: PresentationHost_v0400 .dll  
+ NET フレームワーク 4 以降の場合: PresentationHost_v0400.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
+ **.NET フレームワーク のバージョン:**[!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [WPF のアンマネージ API リファレンス](wpf-unmanaged-api-reference.md)

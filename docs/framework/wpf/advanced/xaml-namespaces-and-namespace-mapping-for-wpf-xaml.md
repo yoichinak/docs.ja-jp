@@ -1,5 +1,5 @@
 ---
-title: XAML 名前空間と名前空間のマッピング
+title: XAML 名前空間と名前空間マッピング
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,47 +14,47 @@ helpviewer_keywords:
 - classes [WPF], mapping namespaces to
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
-ms.openlocfilehash: ac9e028d8804c4fdadf4e6be8d7650afa1406969
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: 9b01643e8f8d77073595253580ebea60fabfd23b
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77124469"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79186234"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>XAML 名前空間および WPF XAML の名前空間の割り当て
-このトピックでは、WPF XAML ファイルのルートタグでよく見られる2つの XAML 名前空間マッピングの存在と目的について詳しく説明します。 また、独自のコードで定義されている要素、または別のアセンブリ内に定義されている要素を使用するために、同様のマッピングを生成する方法についても説明します。  
+このトピックでは、WPF XAML ファイルのルート タグでよく見られる 2 つの XAML 名前空間マッピングの存在と目的についてさらに説明します。 また、独自のコードで定義された要素や、個別のアセンブリ内で定義されている要素を使用するための同様のマッピングを生成する方法についても説明します。  
 
-## <a name="what-is-a-xaml-namespace"></a>XAML 名前空間とは何ですか。  
- XAML 名前空間は、実際には XML 名前空間の概念を拡張したものです。 XAML 名前空間を指定する方法は、XML 名前空間の構文、Uri を名前空間の識別子として使用する規則、同じマークアップソースから複数の名前空間を参照する手段を提供するプレフィックスを使用する方法などに依存します。 XML 名前空間の XAML 定義に追加される主な概念は、XAML 名前空間がマークアップ使用の一意性の範囲を示すことです。また、特定の CLR 名前空間および参照によってマークアップエンティティがどのようにサポートされるかにも影響します。アセンブリ. この2つ目の考慮事項は、XAML スキーマコンテキストの概念にも影響を受けます。 ただし、WPF で XAML 名前空間を使用する方法については、一般に、xaml 名前空間、xaml 言語の名前空間、および XAML マークアップによって特定のバッキング CLR に直接マップされる xaml 名前空間に関して、xaml 名前空間について考えることができます。名前空間と参照されるアセンブリ。  
+## <a name="what-is-a-xaml-namespace"></a>XAML 名前空間とは何ですか?  
+ XAML 名前空間は、XML 名前空間の概念の拡張です。 XAML 名前空間を指定する手法は、XML 名前空間構文、名前空間識別子として URI を使用する規則、プレフィックスを使用して、同じマークアップ ソースから複数の名前空間を参照する手段などを使用します。 XML 名前空間の XAML 定義に追加される主な概念は、XAML 名前空間はマークアップの使用に対して一意性のスコープを意味し、マークアップ エンティティが特定の CLR 名前空間によって潜在的にサポートされ、参照される方法に影響を与えるということです。アセンブリ。 この後者の考慮事項は、XAML スキーマ コンテキストの概念によっても影響されます。 しかし、WPF が XAML 名前空間を使用する方法を目的として、XAML 名前空間は、通常、既定の XAML 名前空間、XAML 言語名前空間、および XAML マークアップによって特定のバッキング CLR に直接マップされた XAML 名前空間を考えることができます。名前空間と参照アセンブリ。  
   
-<a name="The_WPF_and_XAML_Namespace_Declarations"></a>   
-## <a name="the-wpf-and-xaml-namespace-declarations"></a>WPF および XAML 名前空間の宣言  
- 多くの XAML ファイルのルートタグ内の名前空間宣言内では、通常、2つの XML 名前空間宣言があることがわかります。 最初の宣言は、WPF クライアント/フレームワークの全体的な XAML 名前空間を既定値としてマップします。  
+<a name="The_WPF_and_XAML_Namespace_Declarations"></a>
+## <a name="the-wpf-and-xaml-namespace-declarations"></a>WPF 名前空間宣言と XAML 名前空間宣言  
+ 多くの XAML ファイルのルート タグ内の名前空間宣言内では、通常 2 つの XML 名前空間宣言があることがわかります。 最初の宣言では、WPF クライアント /フレームワーク XAML 名前空間全体が既定としてマップされます。  
   
  `xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"`  
   
- 2番目の宣言は、別の XAML 名前空間をマップし、その名前空間 (通常は) を `x:` のプレフィックスに割り当てます。  
+ 2 番目の宣言は、個別の XAML 名前空間をマップし`x:`、(通常は) プレフィックスに対応付けます。  
   
  `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
   
- これらの宣言の間の関係は、`x:` プレフィックスマッピングが XAML 言語定義の一部である組み込みをサポートし、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は xaml を言語として使用し、XAML 用のオブジェクトのボキャブラリを定義する1つの実装であることです。 WPF のボキャブラリの使用は XAML 組み込みの使用法よりはるかに一般的であるため、WPF のボキャブラリは既定値としてマップされます。  
+ これらの宣言間の関係は、`x:`プレフィックス マッピングが XAML 言語定義の一部である組み込み関数[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]をサポートし、XAML を言語として使用し、XAML のオブジェクトのボキャブラリを定義する 1 つの実装です。 WPF ボキャブラリの使用法は XAML 組み込み関数の使用法よりもはるかに一般的であるため、WPF ボキャブラリは既定としてマップされます。  
   
- XAML 言語の組み込みサポートをマップするための `x:` プレフィックス規則には、プロジェクトテンプレート、サンプルコード、およびこの SDK 内の言語機能のドキュメントが続きます。 XAML 名前空間は、基本的な WPF アプリケーションでも必要な一般的に使用される多くの機能を定義します。 たとえば、部分クラスを使用して XAML ファイルに分離コードを結合するには、そのクラスに関連する XAML ファイルのルート要素の `x:Class` 属性として名前を付ける必要があります。 または、キー付きリソースとしてアクセスする XAML ページで定義されているすべての要素に、対象の要素に対して `x:Key` 属性が設定されている必要があります。 これらの XAML の詳細については、「 [xaml の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md) 」または「 [Xaml 構文の詳細](xaml-syntax-in-detail.md)」を参照してください。  
+ XAML`x:`言語組み込みサポートをマッピングするためのプレフィックス規則の後には、プロジェクト テンプレート、サンプル コード、およびこの SDK 内の言語機能のドキュメントが続きます。 XAML 名前空間は、基本的な WPF アプリケーションにも必要な、一般的に使用される多くの機能を定義します。 たとえば、部分クラスを通じて分離コードを XAML ファイルに結合するには、関連する XAML ファイルのルート要素`x:Class`の属性としてそのクラスに名前を付ける必要があります。 または、キー付きリソースとしてアクセスする XAML ページで定義されている要素には、対象の`x:Key`要素に属性が設定されている必要があります。 XAML のこれらの側面と他の側面の詳細については、「 [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)または[XAML 構文の詳細](xaml-syntax-in-detail.md)」を参照してください。  
   
-<a name="Mapping_To_Custom_Classes_and_Assemblies"></a>   
-## <a name="mapping-to-custom-classes-and-assemblies"></a>カスタムクラスとアセンブリへのマッピング  
- `xmlns` プレフィックス宣言内の一連のトークンを使用して、XML 名前空間をアセンブリにマップできます。これは、標準の WPF および XAML 組み込みの XAML 名前空間をプレフィックスにマップする方法と似ています。  
+<a name="Mapping_To_Custom_Classes_and_Assemblies"></a>
+## <a name="mapping-to-custom-classes-and-assemblies"></a>カスタム クラスおよびカスタム アセンブリへのマッピング  
+ 標準 WPF および XAML 組み込み XAML 名前空間`xmlns`がプレフィックスにマップされるのと同様に、プレフィックス宣言内の一連のトークンを使用して、XML 名前空間をアセンブリにマップできます。  
   
- 構文では、次の名前付きトークンと次の値を使用できます。  
+ 構文には、次の名前付きトークンと次の値が使用されます。  
   
- 要素として公開するパブリック型を含むアセンブリ内で宣言されている CLR 名前空間を `clr-namespace:` します。  
+ `clr-namespace:`要素として公開するパブリック型を含むアセンブリ内で宣言された CLR 名前空間。  
   
- 参照されている CLR 名前空間の一部またはすべてを含むアセンブリを `assembly=` します。 通常、この値はパスではなくアセンブリの名前にすぎず、拡張子 (.dll や .exe など) は含まれません。 このアセンブリへのパスは、マップしようとしている XAML を含むプロジェクトファイル内のプロジェクト参照として設定する必要があります。 バージョン管理と厳密な名前の署名を組み込むには、単純な文字列名ではなく、<xref:System.Reflection.AssemblyName>で定義されている文字列を `assembly` 値にすることができます。  
+ `assembly=`参照先 CLR 名前空間の一部またはすべてを含むアセンブリ。 この値は、通常、パスではなく、アセンブリの名前に過ぎず、拡張子 (.dll や .exe など) は含まれません。 そのアセンブリへのパスは、マップする XAML を含むプロジェクト ファイル内のプロジェクト参照として確立する必要があります。 バージョニングと厳密な名前の署名を組み込`assembly`むために、値は単純な文字列名<xref:System.Reflection.AssemblyName>ではなく、 で定義された文字列にすることができます。  
   
- `clr-namespace` トークンを値から区切る文字がコロン (:) であることに注意してください。`assembly` トークンを値から区切る文字は等号 (=) です。 これら2つのトークンの間で使用する文字はセミコロンです。 また、宣言のどこにも空白を入れないでください。  
+ トークンとその値を`clr-namespace`区切る文字はコロン (:)一方、トークンとその値`assembly`を区切る文字は等号 (=) です。 これらの 2 つのトークンの間で使用する文字はセミコロンです。 また、宣言のどこにも空白を含まないでください。  
   
-### <a name="a-basic-custom-mapping-example"></a>基本的なカスタムマッピングの例  
- 次のコードでは、カスタムクラスの例を定義しています。  
+### <a name="a-basic-custom-mapping-example"></a>基本的なカスタム マッピングの例  
+ 次のコードは、カスタム クラスの例を定義しています。  
   
 ```csharp  
 namespace SDKSample {  
@@ -77,19 +77,19 @@ Namespace SDKSample
 End Namespace  
 ```  
   
- このカスタムクラスは、プロジェクト設定 (図に示されていません) ごとに `SDKSampleLibrary`という名前のライブラリにコンパイルされます。  
+ このカスタム クラスはライブラリにコンパイルされ、プロジェクト設定 (図示せず) に従って`SDKSampleLibrary`という名前が付けられます。  
   
- このカスタムクラスを参照するには、現在のプロジェクトの参照としても含める必要があります。これは通常、Visual Studio のソリューションエクスプローラー UI を使用します。  
+ このカスタム クラスを参照するには、Visual Studio のソリューション エクスプローラー UI を使用する、現在のプロジェクトの参照としてこのクラスを含める必要があります。  
   
- クラスが含まれているライブラリと、プロジェクト設定にそのライブラリへの参照があるので、次のプレフィックスマッピングを XAML のルート要素の一部として追加できます。  
+ クラスを含むライブラリとプロジェクト設定での参照ができたので、XAML のルート要素の一部として次のプレフィックス マッピングを追加できます。  
   
  `xmlns:custom="clr-namespace:SDKSample;assembly=SDKSampleLibrary"`  
   
- すべてをまとめて配置するには、次の XAML を使用します。これには、ルートタグ内の一般的な default および x: マッピングと共にカスタムマッピングが含まれています。次に、プレフィックス付き参照を使用して、その UI で `ExampleClass` をインスタンス化します。  
+ すべてをまとめると、ルート タグの一般的な既定と x: マッピングと共にカスタム マッピングを含む XAML を次`ExampleClass`に示します。  
   
 ```xaml  
 <Page x:Class="WPFApplication1.MainPage"  
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"   
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"  
     xmlns:custom="clr-namespace:SDKSample;assembly=SDKSampleLibrary">  
   ...  
@@ -99,43 +99,43 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>現在のアセンブリへのマッピング  
- 参照されている `clr-namespace` が、カスタムクラスを参照しているアプリケーションコードと同じアセンブリ内で定義されている場合は、`assembly` を省略できます。 または、この場合と同等の構文として、等号の後に文字列トークンを指定せずに `assembly=`を指定します。  
+ `assembly`参照先がカスタム クラス`clr-namespace`を参照しているアプリケーション コードと同じアセンブリ内で定義されている場合は省略できます。 または、等号の後に文字列トークンを指定`assembly=`しない、 この場合の同等の構文を指定します。  
   
- カスタムクラスは、同じアセンブリ内で定義されている場合、ページのルート要素として使用することはできません。 部分クラスをマップする必要はありません。XAML の要素として参照する場合は、アプリケーション内のページの部分クラスではないクラスのみをマップする必要があります。  
+ 同じアセンブリで定義されている場合、カスタム クラスをページのルート要素として使用することはできません。 部分クラスをマップする必要はありません。XAML の要素として参照する場合は、アプリケーションのページの部分クラスではないクラスのみをマップする必要があります。  
   
-<a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>   
-## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>アセンブリ内の XML 名前空間への CLR 名前空間のマッピング  
- WPF では、複数の CLR 名前空間を1つの XAML 名前空間にマップするために XAML プロセッサによって使用される CLR 属性を定義します。 この属性 <xref:System.Windows.Markup.XmlnsDefinitionAttribute>は、アセンブリを生成するソースコードのアセンブリレベルに配置されます。 WPF アセンブリソースコードでは、この属性を使用して、<xref:System.Windows> や <xref:System.Windows.Controls>などのさまざまな共通名前空間を `http://schemas.microsoft.com/winfx/2006/xaml/presentation` 名前空間にマップします。  
+<a name="Mapping_CLR_Namespaces_to_XML_Namespaces_in_an"></a>
+## <a name="mapping-clr-namespaces-to-xml-namespaces-in-an-assembly"></a>CLR 名前空間をアセンブリ内の XML 名前空間にマップする  
+ WPF では、複数の CLR 名前空間を 1 つの XAML 名前空間にマップするために、XAML プロセッサによって使用される CLR 属性を定義します。 この属性は<xref:System.Windows.Markup.XmlnsDefinitionAttribute>、アセンブリを生成するソース コードのアセンブリ レベルに配置されます。 WPF アセンブリ ソース コードでは、この属性を使用して、 や<xref:System.Windows><xref:System.Windows.Controls>などのさまざまな一般的`http://schemas.microsoft.com/winfx/2006/xaml/presentation`な名前空間を名前空間にマップします。  
   
- <xref:System.Windows.Markup.XmlnsDefinitionAttribute> は、XML/XAML 名前空間名と CLR 名前空間名の2つのパラメーターを受け取ります。 複数の CLR 名前空間を同じ XML 名前空間にマップするために、複数の <xref:System.Windows.Markup.XmlnsDefinitionAttribute> を存在させることができます。 これらの名前空間のメンバーは、マップされた後、部分クラスの分離コードページで適切な `using` ステートメントを指定することにより、必要に応じて完全修飾なしで参照することもできます。 詳細については、「<xref:System.Windows.Markup.XmlnsDefinitionAttribute>」を参照してください。  
+ には<xref:System.Windows.Markup.XmlnsDefinitionAttribute>、XML/XAML 名前空間名と CLR 名前空間名の 2 つのパラメーターを使用します。 複数の<xref:System.Windows.Markup.XmlnsDefinitionAttribute>CLR 名前空間を同じ XML 名前空間にマップするために複数存在できます。 いったんマップされた名前空間のメンバーは、部分クラスの分離コード ページに適切な`using`ステートメントを提供することで、必要に応じて完全な修飾なしで参照することもできます。 詳細については、「<xref:System.Windows.Markup.XmlnsDefinitionAttribute>」を参照してください。  
   
-## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>デザイナーの名前空間と XAML テンプレートからのその他のプレフィックス  
- WPF XAML 用の開発環境やデザインツールで作業している場合は、xaml マークアップ内に他の定義済みの XAML 名前空間/プレフィックスがあることがわかります。  
+## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>XAML テンプレートからのデザイナー名前空間とその他のプレフィックス  
+ WPF XAML の開発環境やデザイン ツールを使用している場合は、XAML マークアップ内に他の定義済みの XAML 名前空間やプレフィックスがあることに気付く場合があります。  
   
- Visual Studio の WPF デザイナーでは、通常、プレフィックス `d:`にマップされるデザイナーの名前空間を使用します。 WPF の新しいプロジェクトテンプレートでは、この XAML 名前空間を事前にマップして、Visual Studio の WPF デザイナーとその他のデザイン環境間で XAML のインターチェンジをサポートすることができます。 このデザインの XAML 名前空間は、デザイナーの XAML ベースの UI を roundtripping しながら、デザイン状態を perpetuate するために使用されます。 また、デザイナーで実行時データソースを有効にする `d:IsDataSource`などの機能にも使用されます。  
+ Visual Studio の WPF デザイナーでは、通常はプレフィックス`d:`にマップされるデザイナー名前空間を使用します。 WPF の最近のプロジェクト テンプレートでは、この XAML 名前空間を事前にマップして、Visual Studio 用 WPF デザイナーと他のデザイン環境との間で XAML の交換をサポートする場合があります。 このデザイン XAML 名前空間は、デザイナーで XAML ベースの UI をラウンドしながらデザイン状態を永続化するために使用されます。 また、デザイナーでランタイム データ`d:IsDataSource`ソースを有効にする などの機能にも使用されます。  
   
- マップされていると思われるもう1つのプレフィックスは `mc:`です。 `mc:` は、マークアップ互換性のためのものであり、必ずしも XAML 固有ではないマークアップ互換性パターンを利用しています。 また、マークアップ互換性機能を使用して、フレームワーク間、またはバッキング実装の他の境界間で XAML を交換したり、XAML スキーマコンテキスト間で作業したり、デザイナーで制限されたモードの互換性を提供したりすることができます。 マークアップ互換性の概念と WPF との関係の詳細については、「[マークアップの互換性 (mc:)」を参照してください。言語機能](markup-compatibility-mc-language-features.md)。  
+ マップされたもう 1 つのプレフィックス`mc:`は です。 `mc:`はマークアップの互換性を保つために使用され、必ずしも XAML 固有ではないマークアップ互換性パターンを利用しています。 ある程度、マークアップ互換性機能を使用して、フレームワーク間またはバッキング実装の他の境界を越えて XAML を交換したり、XAML スキーマ コンテキスト間での作業、デザイナーのモードが制限されている場合に互換性を提供したりできます。 マークアップ互換性の概念と、それらが WPF とどのように関連しているかについて詳しくは、[マークアップ互換性 (mc:) を参照してください。言語機能](markup-compatibility-mc-language-features.md):  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF とアセンブリの読み込み  
- WPF の XAML スキーマコンテキストは WPF アプリケーションモデルと統合され、さらに、CLR によって定義された <xref:System.AppDomain>の概念が使用されます。 次に、XAML スキーマコンテキストで、WPF での <xref:System.AppDomain> とその他の要素の使用に基づいて、実行時またはデザイン時にアセンブリを読み込む方法または型を検索する方法について説明します。  
+ WPF の XAML スキーマ コンテキストは、WPF アプリケーション モデルと統合され、CLR で定義<xref:System.AppDomain>された概念の を使用します。 次のシーケンスでは、実行時またはデザイン時に、WPF の使用やその他の要因に基づいて、XAML スキーマ コンテキストがどのようにしてアセンブリを読<xref:System.AppDomain>み込むか、またはデザイン時に型を検索するかを解釈する方法について説明します。  
   
-1. 最後に読み込まれたアセンブリから開始して、名前のすべての側面に一致する、既に読み込まれているアセンブリを検索して、<xref:System.AppDomain>を反復処理します。  
+1. <xref:System.AppDomain>を反復処理して、最後に読み込まれたアセンブリから始めて、名前のすべての側面に一致する既に読み込まれたアセンブリを探します。  
   
-2. 名前が修飾されている場合は、修飾名に対して <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType> を呼び出します。  
+2. 名前が修飾されている場合は、<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>修飾名を呼び出します。  
   
-3. 修飾名の短い名前と公開キートークンが、マークアップが読み込まれたアセンブリと一致する場合は、そのアセンブリを返します。  
+3. 修飾名の短縮名 + 公開キー トークンが、マークアップの読み込み元のアセンブリと一致する場合は、そのアセンブリを返します。  
   
-4. <xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>を呼び出すには、短い名前と公開キートークンを使用します。  
+4. 短縮名 + 公開鍵トークンを使用<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>して を呼び出します。  
   
 5. 名前が修飾されていない場合は、<xref:System.Reflection.Assembly.LoadWithPartialName%2A?displayProperty=nameWithType>を呼び出します。  
   
- ルース XAML では、手順 3; が使用されません。アセンブリが読み込まれていません。  
+ ルーズ XAML では手順 3 は使用されません。読み込みからアセンブリがありません。  
   
- WPF 用にコンパイルされた XAML (XamlBuildTask を使用して生成) では、<xref:System.AppDomain> (手順 1) で既に読み込まれているアセンブリは使用しません。 また、XamlBuildTask の出力から名前を修飾しないでください。そのため、手順5は適用されません。  
+ WPF 用にコンパイルされた XAML (XamlBuildTask を使用して生成) は<xref:System.AppDomain>、既に読み込まれているアセンブリを使用しません (手順 1)。 また、名前は XamlBuildTask 出力から修飾されないようにする必要があるため、手順 5 は適用されません。  
   
- (プレゼンテーション Buildtask によって生成される) コンパイル済みの BAML はすべての手順を使用しますが、BAML には修飾されていないアセンブリ名を含めることはできません。  
+ コンパイルされた BAML (プレゼンテーションビルドタスクを介して生成された) はすべての手順を使用しますが、BAML には非修飾のアセンブリ名も含めるべきではありません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML 名前空間について](https://docs.microsoft.com/previous-versions/aa468565(v=msdn.10))
 - [XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)

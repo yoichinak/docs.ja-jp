@@ -2,15 +2,15 @@
 title: .NET ネイティブによる起動時間の改善の測定
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
-ms.openlocfilehash: 453159c3fd0590a1ed549bb7e6f8c171aac7d064
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937748"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79180999"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET ネイティブによる起動時間の改善の測定
-.NET ネイティブすると、アプリの起動時間が大幅に短縮されます。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
+.NET ネイティブは、アプリの起動時間を大幅に短縮します。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
   
  パフォーマンスの調査を容易にするために、.NET Framework と Windows では、イベントが発生したときにアプリからツールに通知できるようにする Windows イベント トレーシング (ETW) という名前のイベント フレームワークを使用しています。 PerfView というツールを使用して、ETW イベントを簡単に表示および分析できます。 このトピックでは、次の方法を説明します。  
   
@@ -60,10 +60,10 @@ ms.locfileid: "75937748"
  コマンド ラインから PerfView を呼び出すこともできます。 プロバイダーからのイベントのみをログに記録する場合は、コマンドプロンプト ウィンドウを開き、次のコマンドを入力します。  
   
 ```console
-perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile   
+perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFile
 ```  
   
- それぞれの文字について以下に説明します。  
+ 各値の説明:  
   
  `-KernelEvents:Process`  
  プロセスが開始および停止したときに通知するよう指定します。 他のイベント時間から減算できるよう、アプリに Process/Start イベントが必要です。  
@@ -82,10 +82,10 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
 - Windows では、アプリの起動時間を短縮するために複数のキャッシュ戦略を使用しています。 アプリが現在メモリにキャッシュされており、ディスクから読み込む必要がない場合、起動時間は短縮されます。 一貫性を保つために、測定前にアプリを数回起動して停止してください。  
   
- 生成されたイベントを PerfView can が収集できるようにアプリを実行した場合は、 **[コレクションの停止]** を選択します。 通常は、アプリを停止する前にコレクションを停止して、不要なイベントを取得しないようにする必要があります。 ただし、シャットダウンまたは中断のパフォーマンスを測定する場合は、コレクションを続行します。  
+ 生成されたイベントを PerfView can が収集できるようにアプリを実行した場合は、**[コレクションの停止]** を選択します。 通常は、アプリを停止する前にコレクションを停止して、不要なイベントを取得しないようにする必要があります。 ただし、シャットダウンまたは中断のパフォーマンスを測定する場合は、コレクションを続行します。  
   
 ## <a name="displaying-the-events"></a>イベントの表示  
- 既に収集されたイベントを表示するには、PerfView を使用して作成した .etl ファイルまたは .etl.zip ファイルを開き、 **[イベント]** を選択します。 ETW によって、他のプロセスのイベントを含む、多数のイベントに関する情報が収集されています。 調査の対象を絞り込むために、イベント ビューで次のテキスト ボックスに入力します。  
+ 既に収集されたイベントを表示するには、PerfView を使用して作成した .etl ファイルまたは .etl.zip ファイルを開き、**[イベント]** を選択します。 ETW によって、他のプロセスのイベントを含む、多数のイベントに関する情報が収集されています。 調査の対象を絞り込むために、イベント ビューで次のテキスト ボックスに入力します。  
   
 - **[Process Filter]\(プロセス フィルター\)** ボックスで、アプリの名前を指定します (".exe" は含めません)。  
   
@@ -93,7 +93,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  左ペインに示されているイベントをすべて選択し (Ctrl + A)、**Enter** キーを押します。 これで、各イベントのタイムスタンプを表示できるようになります。 これらのタイムスタンプは、トレースの開始時間を基準としています。そのため、起動時からの経過時間を調べるには、プロセスの開始時間から各イベントの時間を減算する必要があります。 Ctrl キーを押しながらクリックして 2 つのタイムスタンプを選択すると、ページ下部にあるステータス バーにそれらのタイムスタンプの差が表示されます。 これにより、表示されている 2 つのイベント間の経過時間が簡単にわかるようになります (プロセスの開始を含む)。 ビューのショートカット メニューを開いて、CSV ファイルにエクスポートしたり、Microsoft Excel を開いてデータを保存または処理したりするなど、便利なオプションを選択できます。  
   
- 元のアプリと .NET ネイティブツールチェーンを使用して作成したバージョンの両方に対して手順を繰り返すことで、パフォーマンスの違いを比較できます。   .NET ネイティブアプリは、一般に non-.NET ネイティブアプリよりも高速に起動します。 より詳しく調べる場合は、最も時間がかかっているコードの部分を PerfView で特定することもできます。 詳細については、[PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)または [Vance Morrison のブログ エントリ](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)をご覧ください。  
+ 元のアプリと .NET Native ツール チェーンを使用して構築したバージョンの両方に対して手順を繰り返すことで、パフォーマンスの違いを比較できます。   .NET ネイティブ アプリは、通常、ネイティブ アプリnon-.NETよりも高速に起動します。 より詳しく調べる場合は、最も時間がかかっているコードの部分を PerfView で特定することもできます。 詳細については、[PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)または [Vance Morrison のブログ エントリ](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

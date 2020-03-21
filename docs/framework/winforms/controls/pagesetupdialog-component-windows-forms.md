@@ -19,31 +19,30 @@ helpviewer_keywords:
 - page header
 - printing [Windows Forms], headers and footers
 ms.assetid: 1c7ccb02-ac62-4fc8-8e4f-c67b01a86802
-ms.openlocfilehash: 59c5599aa5d36e61b89e1a67ac3064d2c8358206
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c17da91efcb1c8fc90fe61f58d0280a954d59e34
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868071"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182023"
 ---
 # <a name="pagesetupdialog-component-windows-forms"></a>PageSetupDialog コンポーネント (Windows フォーム)
-Windows フォーム <xref:System.Windows.Forms.PageSetupDialog> コンポーネントは、Windows ベースのアプリケーションで印刷するページの詳細を設定するための構成済みダイアログボックスです。 ユーザーが独自のダイアログボックスを構成する代わりにページ設定を設定するための簡単なソリューションとして、Windows ベースのアプリケーション内で使用します。 ユーザーが罫線と余白の調整、ヘッダーとフッター、縦と横の向きを設定できるようにすることができます。 Windows の標準のダイアログ ボックスを使用して、ユーザーがすぐに慣れる基本的な機能を持つアプリケーションを作成します。  
+Windows フォーム<xref:System.Windows.Forms.PageSetupDialog>コンポーネントは、Windows ベースのアプリケーションで印刷するためのページの詳細を設定するために使用する、事前に構成されたダイアログ ボックスです。 Windows ベースのアプリケーション内で、ユーザーが独自のダイアログ ボックスを構成する代わりにページ設定を設定するための簡単なソリューションとして使用します。 ユーザーが境界線と余白の調整、ヘッダーとフッター、縦向きと横向きを設定できるようにすることができます。 Windows の標準のダイアログ ボックスを使用して、ユーザーがすぐに慣れる基本的な機能を持つアプリケーションを作成します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [PageSetupDialog コンポーネントの概要](pagesetupdialog-component-overview-windows-forms.md)  
- <xref:System.Windows.Forms.PageSetupDialog> コンポーネントの一般的な概念について説明します。このコンポーネントを使用すると、ユーザーがページ設定を操作するために使用できる、事前に構成されたダイアログボックスを表示できます。  
+ ユーザーがページ設定を<xref:System.Windows.Forms.PageSetupDialog>操作するために使用できる、構成済みのダイアログ ボックスを表示するために使用できる、コンポーネントの一般的な概念について説明します。  
   
- [方法: PageSetupDialog コンポーネントを使用してページのプロパティを決定する](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
- 実行時に <xref:System.Windows.Forms.PageSetupDialog> コンポーネントのインスタンスを使用してページのプロパティを設定する方法について説明します。  
+ [方法 : PageSetupDialog コンポーネントを使用してページのプロパティを決定する](how-to-determine-page-properties-using-the-pagesetupdialog-component.md)  
+ 実行時にコンポーネントのインスタンスを使用してページ プロパティを<xref:System.Windows.Forms.PageSetupDialog>設定する方法について説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>リファレンス  
  <xref:System.Windows.Forms.PageSetupDialog>  
  クラスとそのメンバーに関するリファレンス情報を提供します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)  
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
  [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)  
  ユーザーがアプリケーションまたはシステムと標準的な対話を実行できるようにする一連のコントロールおよびコンポーネントについて説明します。
- 

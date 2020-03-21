@@ -1,5 +1,5 @@
 ---
-title: CheckedListBox コントロールでチェックされている項目を確認する
+title: CheckedListBox コントロールでチェックされた項目を確認する
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 5854f7e6be759daeb604458ea8554d3c98ed39c2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 5d93a63e9c1c6aae91ecfe83590c59450a565afe
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743241"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79182192"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>方法 : Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する
-Windows フォーム <xref:System.Windows.Forms.CheckedListBox> コントロールにデータを表示する場合は、<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> プロパティに格納されているコレクションを反復処理するか、<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> メソッドを使用してリストをステップ実行し、どの項目がチェックされるかを判断します。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> メソッドは、項目のインデックス番号を引数として受け取り、`true` または `false`を返します。 期待しているものとは異なり、<xref:System.Windows.Forms.ListBox.SelectedItems%2A> と <xref:System.Windows.Forms.ListBox.SelectedIndices%2A> のプロパティでは、どの項目がチェックされるかは決定されません。どの項目が強調表示されるかを決定します。  
+Windows フォーム<xref:System.Windows.Forms.CheckedListBox>コントロールにデータを表示する場合は、<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>プロパティに格納されているコレクションを反復処理するか、<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>メソッドを使用してリストをステップ実行して、チェックされる項目を決定できます。 この<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>メソッドは、項目のインデックス番号を引数として受`true`け`false`取り、または を返します。 期待する内容とは対照的に<xref:System.Windows.Forms.ListBox.SelectedItems%2A>、<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>および プロパティはどの項目がチェックされるのかを決定しません。ハイライト表示される項目を決定します。  
   
-### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>CheckedListBox コントロールでチェックされている項目を確認するには  
+### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>CheckedListBox コントロール内のチェックされた項目を確認するには  
   
-1. コレクションが0から始まるため、<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A> コレクションを反復処理して0から開始します。 このメソッドは、リスト全体ではなく、チェックされた項目の一覧に項目番号を提供します。 このため、リストの最初の項目がチェックされず、2番目の項目がオンになっている場合は、次のコードに "Checked Item 1 = MyListItem2" のようなテキストが表示されます。  
+1. コレクションが<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>0 から始まるので、0 から順に反復します。 このメソッドは、全体のリストではなく、チェックされた項目のリスト内の項目番号を示します。 リストの最初の項目がチェックされておらず、2 番目の項目がチェックされている場合、以下のコードは"チェックされた項目 1 = MyListItem2" のようなテキストを表示します。  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -66,9 +66,9 @@ Windows フォーム <xref:System.Windows.Forms.CheckedListBox> コントロー�
     }  
     ```  
   
-     - \- または -  
+     - - または -  
   
-2. コレクションが0から始まるため、<xref:System.Windows.Forms.CheckedListBox.Items%2A> コレクションをステップ実行し、各項目に対して <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A> メソッドを呼び出します。 この方法では、一覧の項目番号が表示されるので、リスト内の最初の項目がチェックされず、2番目の項目がオンになっている場合は、"Item 2 = MyListItem2" のような内容が表示されます。  
+2. コレクションが<xref:System.Windows.Forms.CheckedListBox.Items%2A>0 から始まるコレクションをステップ実行し、各項目のメソッドを<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>呼び出します。 このメソッドは、リスト全体の項目番号を示すため、リストの最初の項目がチェックされず、2 番目の項目がチェックされている場合は、"Item 2 = MyListItem2" のような項目が表示されます。  
   
     ```vb  
     Dim i As Integer  
@@ -84,7 +84,7 @@ Windows フォーム <xref:System.Windows.Forms.CheckedListBox> コントロー�
   
     ```csharp  
     int i;  
-    string s;   
+    string s;
     s = "Checked items:\n" ;  
     for (i = 0; i <= (checkedListBox1.Items.Count-1); i++)  
     {  
@@ -98,7 +98,7 @@ Windows フォーム <xref:System.Windows.Forms.CheckedListBox> コントロー�
   
     ```cpp  
     int i;  
-    String ^ s;   
+    String ^ s;
     s = "Checked items:\n" ;  
     for (i = 0; i <= (checkedListBox1->Items->Count-1); i++)  
     {  
@@ -111,6 +111,6 @@ Windows フォーム <xref:System.Windows.Forms.CheckedListBox> コントロー�
     MessageBox::Show(s);  
     ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

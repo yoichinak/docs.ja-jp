@@ -2,21 +2,21 @@
 title: NetHttpBinding の使用
 ms.date: 03/30/2017
 ms.assetid: fe134acf-ceca-49de-84a9-05a37e3841f1
-ms.openlocfilehash: 0f908361c5f9152d333daaf5e3ee90de3b1b89e9
-ms.sourcegitcommit: 37616676fde89153f563a485fc6159fc57326fc2
+ms.openlocfilehash: 82222dbfa3f35ed00d0173f2bc927c32e9e98470
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "69988625"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79184229"
 ---
 # <a name="using-the-nethttpbinding"></a>NetHttpBinding の使用
 <xref:System.ServiceModel.NetHttpBinding> は、HTTP や WebSocket のサービスを使用するために設計されたバインドで、既定ではバイナリ エンコードを使用します。 <xref:System.ServiceModel.NetHttpBinding> は、要求-応答コントラクトと二重のコントラクトのどちらで使用されているかを検出し、一致するように動作を変更します。要求-応答コントラクトには HTTP、二重のコントラクトには Websocket を使用します。 この動作は、<xref:System.ServiceModel.Channels.WebSocketTransportUsage> 設定を使用してオーバーライドできます。  
   
-1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>-これにより、要求/応答コントラクトでも Websocket が強制的に使用されます。  
+1. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Always>- これにより、要求/応答コントラクトでも WebSocket が使用されます。  
   
-2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>-Websocket が使用されないようにします。 この設定で二重のコントラクトを使用しようとすると、例外が発生します。  
+2. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.Never>- これにより、WebSocket が使用されなくなります。 この設定で二重のコントラクトを使用しようとすると、例外が発生します。  
   
-3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>-これは既定値で、前述のように動作します。  
+3. <xref:System.ServiceModel.Channels.WebSocketTransportUsage.WhenDuplex>- これはデフォルト値であり、上記のように動作します。  
   
  <xref:System.ServiceModel.NetHttpBinding> は、HTTP モードと WebSocket モードの両方で信頼できるセッションをサポートします。 WebSocket モードでは、セッションがトランスポートによって提供されます。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "69988625"
 ```csharp  
 ServiceHost svchost = new ServiceHost(typeof(Service1), baseAddress);  
             NetHttpBinding binding = new NetHttpBinding();  
-            svchost.AddServiceEndpoint(typeof(IService1), binding, address);   
+            svchost.AddServiceEndpoint(typeof(IService1), binding, address);
         }  
 ```  
   
 ## <a name="see-also"></a>関連項目
 
 - [サービスのバインディングの構成](../../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)
-- [バインディング](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [バインド](../../../../docs/framework/wcf/feature-details/bindings.md)
 - [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [双方向サービス](../../../../docs/framework/wcf/feature-details/duplex-services.md)

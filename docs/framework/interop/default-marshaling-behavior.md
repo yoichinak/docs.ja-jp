@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, marshaling
 - marshaling behavior
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
-ms.openlocfilehash: abb8b507b21ca8f40461192c37e6c2fbe73b684e
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 18282d14540027e4fae4fe152d3867ad8c223c37
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123599"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181481"
 ---
 # <a name="default-marshaling-behavior"></a>既定のマーシャリングの動作
 相互運用マーシャリングは、メソッドのパラメーターに関連付けられたデータが、マネージド メモリとアンマネージド メモリの間で渡されるときに、どのように動作するかを指示する規則に従って機能します。 これらの組み込みの規則は、データ型の変換などのマーシャリング動作、呼び出し先が渡されたデータを変更してその変更を呼び出し元にこ返すことが可能かどうか、およびどのような状況のときにマーシャラーがパフォーマンスの最適化を実現するかを制御します。  
@@ -42,7 +42,7 @@ BSTR MethodOne (BSTR b) {
  ランタイムは、常に **CoTaskMemFree** メソッドを使用してメモリを解放します。 使用しているメモリが **CoTaskMemAlloc** メソッドで割り当てられていない場合、**IntPtr** を使用し、適切なメソッドを使用して手動でメモリを解放する必要があります。 同様に、カーネル メモリへのポインターを返す **GetCommandLine** 関数を Kernel32.dll から使用するときなど、メモリを解放してはいけない状況のときには、自動的なメモリの解放を防止できます。 手動でメモリを解放する方法について詳しくは、「[Buffers サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))」を参照してください。  
   
 ## <a name="default-marshaling-for-classes"></a>クラスに対する既定のマーシャリング  
- クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法について詳しくは、「[クラス インターフェイスの概要](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。  
+ クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 選択したインターフェイスでクラス インターフェイスをオーバーライドする方法については、[クラス インターフェイスの概要を](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)参照してください。  
   
 ### <a name="passing-classes-to-com"></a>クラスを COM に渡す  
  マネージド クラスが COM に渡されると、相互運用マーシャラーは自動的にクラスを COM プロキシでラップし、プロキシによって生成されたクラス インターフェイスを COM メソッド呼び出しに渡します。 その後、プロキシは、クラス インターフェイス上のすべての呼び出しを、マネージド オブジェクトにデリゲートして戻します。 プロキシはまた、クラスによって明示的に実装されていない他のインターフェイスも公開します。 プロキシは、クラスの代わりに、**IUnknown** や **IDispatch** などのインターフェイスを自動的に実装します。  
@@ -80,7 +80,7 @@ BSTR MethodOne (BSTR b) {
 |列挙型|アンマネージ形式の説明|  
 |----------------------|-------------------------------------|  
 |**UnmanagedType.FunctionPtr**|アンマネージ関数ポインター。|  
-|**UnmanagedType.Interface**|Mscorlib.tlb で定義されている、 **_Delegate** 型のインターフェイス。|  
+|**UnmanagedType.Interface**|Mscorlib.tlb で定義されている、**_Delegate** 型のインターフェイス。|  
   
  `DelegateTestInterface` のメソッドが COM タイプ ライブラリにエクスポートされる、次のコード例を検討してください。 **ref** (または **ByRef**) キーワードでマークされたデリゲートだけが、In/Out パラメーターとして渡されることに注意してください。  
   
@@ -90,10 +90,10 @@ using System.Runtime.InteropServices;
   
 public interface DelegateTest {  
 void m1(Delegate d);  
-void m2([MarshalAs(UnmanagedType.Interface)] Delegate d);     
-void m3([MarshalAs(UnmanagedType.Interface)] ref Delegate d);    
-void m4([MarshalAs(UnmanagedType.FunctionPtr)] Delegate d);   
-void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);     
+void m2([MarshalAs(UnmanagedType.Interface)] Delegate d);
+void m3([MarshalAs(UnmanagedType.Interface)] ref Delegate d);
+void m4([MarshalAs(UnmanagedType.FunctionPtr)] Delegate d);
+void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
 }  
 ```  
   
@@ -132,10 +132,10 @@ public class CallBackClass {
 internal class DelegateTest {  
    public static void Test() {  
       CallBackClass cb = new CallBackClass();  
-      // Caution: The following reference on the cb object does not keep the   
-      // object from being garbage collected after the Main method   
+      // Caution: The following reference on the cb object does not keep the
+      // object from being garbage collected after the Main method
       // executes.  
-      ExternalAPI.SetChangeHandler(new ChangeDelegate(cb.OnChange));     
+      ExternalAPI.SetChangeHandler(new ChangeDelegate(cb.OnChange));
    }  
 }  
 ```  
@@ -152,7 +152,7 @@ internal class DelegateTest {
    }  
    // Called after using the callback function for the last time.  
    public static void RemoveChangeHandler() {  
-      // The cb object can be collected now. The unmanaged code is   
+      // The cb object can be collected now. The unmanaged code is
       // finished with the callback function.  
       cb = null;  
    }  
@@ -207,7 +207,7 @@ using System.Runtime.InteropServices;
 public struct Point {  
    public int x;  
    public int y;  
-}     
+}
   
 [StructLayout(LayoutKind.Explicit)]  
 public struct Rect {  
@@ -269,14 +269,14 @@ End Class
 ```csharp  
 [StructLayout(LayoutKind.Sequential)]  
    public class SystemTime {  
-   public ushort wYear;   
+   public ushort wYear;
    public ushort wMonth;  
-   public ushort wDayOfWeek;   
-   public ushort wDay;   
-   public ushort wHour;   
-   public ushort wMinute;   
-   public ushort wSecond;   
-   public ushort wMilliseconds;   
+   public ushort wDayOfWeek;
+   public ushort wDay;
+   public ushort wHour;
+   public ushort wMinute;
+   public ushort wSecond;
+   public ushort wMilliseconds;
 }  
 ```  
   
@@ -321,7 +321,7 @@ End Class
 [StructLayout(LayoutKind.Sequential)]  
 public class Point {  
    int x, y;  
-   public void SetXY(int x, int y){   
+   public void SetXY(int x, int y){
       this.x = x;  
       this.y = y;  
    }  
@@ -331,7 +331,7 @@ public class Point {
 ### <a name="value-types-used-in-com-interop"></a>COM 相互運用で使用される値型  
  書式指定された型は、COM 相互運用のメソッドの呼び出しに渡すこともできます。 実際には、タイプ ライブラリにエクスポートされると、値型は構造体に自動的に変換されます。 次の例に示すように、`Point` 値型は `Point` という名前の型定義 (typedef) になります。 タイプ ライブラリ内の他の場所にある `Point` 値型へのすべての参照は、`Point` typedef に置き換えられます。  
   
- **タイプ ライブラリの表現**  
+ **タイプ ライブラリ表現**  
   
 ```cpp  
 typedef struct tagPoint {  
@@ -346,7 +346,7 @@ interface _Graphics {
 }  
 ```  
   
- 値と参照をプラットフォーム呼び出しにマーシャリングする際に使用されるものと同じ規則が、COM インターフェイスを介してマーシャリングする際にも使用されます。 たとえば、`Point` 値型のインスタンスが .NET Framework から COM に渡されるとき、`Point` は値によって渡されます。 `Point` 値型が参照によって渡される場合、`Point` へのポインターはスタックで渡されます。 相互運用マーシャラーは、どちらの方向でも、より高いレベルの間接参照 (**Point** \*\*) はサポートしていません。  
+ 値と参照をプラットフォーム呼び出しにマーシャリングする際に使用されるものと同じ規則が、COM インターフェイスを介してマーシャリングする際にも使用されます。 たとえば、`Point` 値型のインスタンスが .NET Framework から COM に渡されるとき、`Point` は値によって渡されます。 `Point` 値型が参照によって渡される場合、`Point` へのポインターはスタックで渡されます。 相互運用マーシャラーは、どちらの方向でも、より高いレベルの間接参照 (**Point ** \*\*) はサポートしていません。  
   
 > [!NOTE]
 > <xref:System.Runtime.InteropServices.LayoutKind> 列挙値が **Explicit** に設定された構造体は、エクスポートされたタイプ ライブラリが明示的なレイアウトを表現できないので、COM 相互運用で使用することはできません。  
@@ -376,9 +376,9 @@ interface _Graphics {
   
 |システムの値型|IDL 型|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**日付**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**10 進**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  次のコードでは、Stdole2 タイプ ライブラリにあるアンマネージ型の **DATE**、**GUID**、**DECIMAL**、および **OLE_COLOR** の定義を示します。  

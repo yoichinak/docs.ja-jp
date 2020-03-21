@@ -10,21 +10,21 @@ helpviewer_keywords:
 - SafeHandle class, run-time errors
 - MDAs (managed debugging assistants), handles
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
-ms.openlocfilehash: 265344cb100a41cde5443cd0914dc66271aabf93
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 268acb01a6777315829378e6fd8c06c46d3136d2
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216122"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181749"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
-`releaseHandleFailed` マネージド デバッグ アシスタント (MDA) は、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> または <xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスの <xref:System.Runtime.InteropServices.CriticalHandle> メソッドが `false` を返すときに、開発者に通知するためにアクティブ化されます。  
+`releaseHandleFailed` マネージド デバッグ アシスタント (MDA) は、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドが `false` を返すときに、開発者に通知するためにアクティブ化されます。  
   
 ## <a name="symptoms"></a>現象  
- リソースまたはメモリのリーク。  <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> または <xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスの <xref:System.Runtime.InteropServices.CriticalHandle> メソッドでエラーが発生する場合、クラスによってカプセル化されたリソースが、解放またはクリーンアップされていない可能性があります。  
+ リソースまたはメモリのリーク。  <xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドでエラーが発生する場合、クラスによってカプセル化されたリソースが、解放またはクリーンアップされていない可能性があります。  
   
 ## <a name="cause"></a>原因  
- ユーザーは、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> または <xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスを作成している場合に、<xref:System.Runtime.InteropServices.CriticalHandle> メソッドの実装を行う必要があります。このため、状況は個別のリソースに固有です。 ただし、要件は次のとおりです。  
+ ユーザーは、<xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> から派生するクラスを作成している場合に、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> メソッドの実装を行う必要があります。このため、状況は個別のリソースに固有です。 ただし、要件は次のとおりです。  
   
 - <xref:System.Runtime.InteropServices.SafeHandle> 型および <xref:System.Runtime.InteropServices.CriticalHandle> 型は、プロセスの重要なリソースのラッパーを表します。 メモリ リークは、時間の経過と共にプロセスを使用不能にしてしまいます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "77216122"
   
 - <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> メソッドの呼び出しを探します。 このメソッドへの呼び出しは、ごく限られた場合に行い、実行する場合は、<xref:System.Runtime.InteropServices.SafeHandle.DangerousAddRef%2A> メソッドと <xref:System.Runtime.InteropServices.SafeHandle.DangerousRelease%2A> メソッドの呼び出しで囲む必要があります。 後者のメソッドは、未処理のハンドル値を安全に使用できるコードの領域を指定します。 この領域の外、または参照カウントが最初にインクリメントされない場合は、別のスレッドで <xref:System.Runtime.InteropServices.SafeHandle.Dispose%2A> または <xref:System.Runtime.InteropServices.SafeHandle.Close%2A> を呼び出して、いつでもハンドル値を無効化できます。 <xref:System.Runtime.InteropServices.SafeHandle.DangerousGetHandle%2A> のすべての利用を追跡したら、未処理のハンドルが取得するパスに従い、ハンドルを解放する `CloseHandle` または別の低レベル ネイティブ メソッドを最終的に呼び出すコンポーネントに渡されないようにします。  
   
-- 未処理の有効なハンドル値を使用して <xref:System.Runtime.InteropServices.SafeHandle> を初期化するために使用されるコードがハンドルを所有していることを確認します。 基本コンストラクターで <xref:System.Runtime.InteropServices.SafeHandle> パラメーターを `ownsHandle` に設定せずに、コードで所有していないハンドルの周囲に `false` を作成する場合、<xref:System.Runtime.InteropServices.SafeHandle> と実際のハンドルの所有者の両方がハンドルを閉じようとすることがあり、<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> が閉じることができないと <xref:System.Runtime.InteropServices.SafeHandle> でエラーが発生します。  
+- 未処理の有効なハンドル値を使用して <xref:System.Runtime.InteropServices.SafeHandle> を初期化するために使用されるコードがハンドルを所有していることを確認します。 基本コンストラクターで `ownsHandle` パラメーターを `false` に設定せずに、コードで所有していないハンドルの周囲に <xref:System.Runtime.InteropServices.SafeHandle> を作成する場合、<xref:System.Runtime.InteropServices.SafeHandle> と実際のハンドルの所有者の両方がハンドルを閉じようとすることがあり、<xref:System.Runtime.InteropServices.SafeHandle> が閉じることができないと <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> でエラーが発生します。  
   
 - <xref:System.Runtime.InteropServices.SafeHandle> がアプリケーション ドメイン間でマーシャリングされる場合、使用されている <xref:System.Runtime.InteropServices.SafeHandle> の派生がシリアル可能とマークされていることを確認してください。 <xref:System.Runtime.InteropServices.SafeHandle> から派生したクラスがシリアル化されているまれなケースでは、<xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装するか、シリアル化と逆シリアル化のプロセスを手動で管理するその他のテクニックのいずれかを使用する必要があります。 これが必要なのは、既定のシリアル化アクションでは、その中の未処理のハンドル値のビットごとのクローンを作成し、結果として 2 つの <xref:System.Runtime.InteropServices.SafeHandle> のインスタンスが同じハンドルを所有すると認識してしまうためです。 両方とも、同じ地点で同じハンドルの <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> を呼び出そうとします。 2 番目の <xref:System.Runtime.InteropServices.SafeHandle> がこれを行おうとすると、エラーが発生します。 <xref:System.Runtime.InteropServices.SafeHandle> をシリアル化するときの適切な一連のアクションは、ネイティブのハンドル型に適した `DuplicateHandle` 関数、または同様の関数を呼び出し、有効なハンドルのコピーを明示的に作成することです。 ハンドル型がこれをサポートしない場合、それをラップしている <xref:System.Runtime.InteropServices.SafeHandle> 型をシリアル化可能にすることはできません。  
   
@@ -50,14 +50,14 @@ ms.locfileid: "77216122"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は CLR に影響しません。  
   
-## <a name="output"></a>出力  
- <xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> でエラーが発生し、ハンドルを適切に解放できないことを示すメッセージ。 例 :  
+## <a name="output"></a>Output  
+ <xref:System.Runtime.InteropServices.SafeHandle> または <xref:System.Runtime.InteropServices.CriticalHandle> でエラーが発生し、ハンドルを適切に解放できないことを示すメッセージ。 次に例を示します。  
   
 ```output
-"A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
-failed to properly release the handle with value 0x0000BEEF. This   
-usually indicates that the handle was released incorrectly via   
-another means (such as extracting the handle using DangerousGetHandle   
+"A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'
+failed to properly release the handle with value 0x0000BEEF. This
+usually indicates that the handle was released incorrectly via
+another means (such as extracting the handle using DangerousGetHandle
 and closing it directly or building another SafeHandle around it."  
 ```  
   
@@ -77,18 +77,18 @@ and closing it directly or building another SafeHandle around it."
 ```csharp
 bool ReleaseHandle()  
 {  
-    // Calling the Win32 CloseHandle function to release the   
-    // native handle wrapped by this SafeHandle. This method returns   
-    // false on failure, but should only fail if the input is invalid   
-    // (which should not happen here). The method specifically must not   
-    // fail simply because of lack of resources or other transient   
-    // failures beyond the user’s control. That would make it unacceptable   
+    // Calling the Win32 CloseHandle function to release the
+    // native handle wrapped by this SafeHandle. This method returns
+    // false on failure, but should only fail if the input is invalid
+    // (which should not happen here). The method specifically must not
+    // fail simply because of lack of resources or other transient
+    // failures beyond the user’s control. That would make it unacceptable
     // to call CloseHandle as part of the implementation of this method.  
     return CloseHandle(handle);  
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

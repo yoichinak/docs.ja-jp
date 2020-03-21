@@ -2,18 +2,18 @@
 title: ラップされていないメッセージ
 ms.date: 03/30/2017
 ms.assetid: 019657bd-1f9b-4315-ad74-eaa4e7551ff6
-ms.openlocfilehash: 4d6525393bb65dd6361b8d195f3a71991102daa1
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 81592910d8530cea2df5ec1fd8a8b1145350ef78
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716736"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79143734"
 ---
 # <a name="unwrapped-messages"></a>ラップされていないメッセージ
 このサンプルでは、ラップされていないメッセージを示します。 既定では、メッセージの本文は、サービス操作に渡されるパラメーターがラップされるように書式設定されます。 ラップされたモードでの `Add` サービスへの `ICalculator` 要求メッセージのサンプルを次に示します。  
   
 ```xml  
-<s:Envelope   
+<s:Envelope
     xmlns:s="http://www.w3.org/2003/05/soap-envelope"  
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
@@ -31,8 +31,8 @@ ms.locfileid: "74716736"
  メッセージ本文の `<Add>` 要素は、`n1` パラメータおよび `n2` パラメータをラップします。 これに対して、ラップされていないモードでの同様のメッセージのサンプルを次に示します。  
   
 ```xml  
-<s:Envelope   
-    xmlns:s="http://www.w3.org/2003/05/soap-envelope"   
+<s:Envelope
+    xmlns:s="http://www.w3.org/2003/05/soap-envelope"
     xmlns:a="http://schemas.xmlsoap.org/ws/2005/08/addressing">  
     <s:Header>  
         ….  
@@ -91,23 +91,23 @@ public class ResponseMessage
   
  送受信されたメッセージを表示できるようにするため、このサンプルではトレースを使用します。 さらに、<xref:System.ServiceModel.WSHttpBinding> は、記録されるメッセージ数を減らす目的で、セキュリティを無効にして構成されています。  
   
- 生成されたトレースログ (c:\logs\Message.log) は、[サービストレースビューアーツール (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)を使用して表示できます。 メッセージの内容を表示するには、サービストレースビューアーツールの左側と右側の両方のウィンドウで **[メッセージ]** を選択します。 このサンプルのトレース ログは、C:\LOGS フォルダに生成されるように構成されています。 サンプルの実行前にこのフォルダを作成し、ユーザー Network Service にそのディレクトリへの書き込み権限を与えます。  
+ 結果として生成されるトレース ログ (c:\logs\Message.log) は、[サービス トレース ビューアー ツール (SvcTraceViewer.exe) を](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)使用して表示できます。 メッセージの内容を表示するには、サービス トレース ビューアー ツールの左側および右側のペインで **[メッセージ**] を選択します。 このサンプルのトレース ログは、C:\LOGS フォルダに生成されるように構成されています。 サンプルの実行前にこのフォルダを作成し、ユーザー Network Service にそのディレクトリへの書き込み権限を与えます。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
+1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
   
 2. メッセージのログ記録用に C:\LOGS ディレクトリを作成します。 ユーザー Network Service にそのディレクトリの書き込み権限を与えます。  
   
 3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
+4. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
->   
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Unwrapped`  

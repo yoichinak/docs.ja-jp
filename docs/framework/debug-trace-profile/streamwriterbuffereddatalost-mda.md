@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data buffering problems
 - streamWriterBufferedDataLost MDA
 ms.assetid: 6e5c07be-bc5b-437a-8398-8779e23126ab
-ms.openlocfilehash: 82940b40b302f4a928547f2e6a0c285727e13934
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: 18b2a5a95756ed125d26b2846c0b1ddc320463ea
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216096"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79181739"
 ---
 # <a name="streamwriterbuffereddatalost-mda"></a>streamWriterBufferedDataLost MDA
-`streamWriterBufferedDataLost` マネージド デバッグ アシスタント (MDA) は <xref:System.IO.StreamWriter> が書き込まれたときに起動しますが、その後、<xref:System.IO.StreamWriter.Flush%2A> のインスタンスが破棄される前に <xref:System.IO.StreamWriter.Close%2A> または <xref:System.IO.StreamWriter> メソッドが呼び出されません。 この MDA が有効になると、バッファーに入れられたデータが <xref:System.IO.StreamWriter> 内に残っているか、ランタイムにより判断されます。 バッファーに入れられたデータが残っている場合、MDA が起動します。 <xref:System.GC.Collect%2A> メソッドと <xref:System.GC.WaitForPendingFinalizers%2A> メソッドを呼び出すことで、ファイナライザーを強制的に実行できます。 それ以外の場合、ファイナライザーは任意のタイミングで実行されます。プロセス終了時に実行されることは、ほぼありません。 この MDA が有効になっている状態でファイナライザーを明示的に実行すると、この種類の問題をより確実に再現できます。  
+`streamWriterBufferedDataLost` マネージド デバッグ アシスタント (MDA) は <xref:System.IO.StreamWriter> が書き込まれたときに起動しますが、その後、<xref:System.IO.StreamWriter> のインスタンスが破棄される前に <xref:System.IO.StreamWriter.Flush%2A> または <xref:System.IO.StreamWriter.Close%2A> メソッドが呼び出されません。 この MDA が有効になると、バッファーに入れられたデータが <xref:System.IO.StreamWriter> 内に残っているか、ランタイムにより判断されます。 バッファーに入れられたデータが残っている場合、MDA が起動します。 <xref:System.GC.Collect%2A> メソッドと <xref:System.GC.WaitForPendingFinalizers%2A> メソッドを呼び出すことで、ファイナライザーを強制的に実行できます。 それ以外の場合、ファイナライザーは任意のタイミングで実行されます。プロセス終了時に実行されることは、ほぼありません。 この MDA が有効になっている状態でファイナライザーを明示的に実行すると、この種類の問題をより確実に再現できます。  
   
 ## <a name="symptoms"></a>現象  
  <xref:System.IO.StreamWriter> では、最後の 1 – 4 KB のデータがファイルに書き込まれません。  
@@ -30,7 +30,7 @@ ms.locfileid: "77216096"
   
 ```csharp  
 // Poorly written code.  
-void Write()   
+void Write()
 {  
     StreamWriter sw = new StreamWriter("file.txt");  
     sw.WriteLine("Data");  
@@ -46,37 +46,37 @@ GC.WaitForPendingFinalizers();
 ```  
   
 ## <a name="resolution"></a>解決策  
- アプリケーションを閉じる前に、あるいは、<xref:System.IO.StreamWriter.Close%2A> のインスタンスが含まれるコード ブロックを終了する前に、<xref:System.IO.StreamWriter.Flush%2A> で <xref:System.IO.StreamWriter> または <xref:System.IO.StreamWriter> を呼び出します。 これを最も効率的に行う方法は、C# `using` ブロック (Visual Basic の場合、`Using`) でインスタンスを作成することです。ライターの <xref:System.IO.StreamWriter.Dispose%2A> メソッドが呼び出され、インスタンスが正しく終了します。  
+ アプリケーションを閉じる前に、あるいは、<xref:System.IO.StreamWriter> のインスタンスが含まれるコード ブロックを終了する前に、<xref:System.IO.StreamWriter> で <xref:System.IO.StreamWriter.Close%2A> または <xref:System.IO.StreamWriter.Flush%2A> を呼び出します。 これを最も効率的に行う方法は、C# `using` ブロック (Visual Basic の場合、`Using`) でインスタンスを作成することです。ライターの <xref:System.IO.StreamWriter.Dispose%2A> メソッドが呼び出され、インスタンスが正しく終了します。  
   
 ```csharp
-using(StreamWriter sw = new StreamWriter("file.txt"))   
+using(StreamWriter sw = new StreamWriter("file.txt"))
 {  
     sw.WriteLine("Data");  
 }  
 ```  
   
- 次のコードは同じ解決策ですが、`try/finally` の代わりに `using` が使用されています。  
+ 次のコードは同じ解決策ですが、`using` の代わりに `try/finally` が使用されています。  
   
 ```csharp
 StreamWriter sw;  
-try   
+try
 {  
     sw = new StreamWriter("file.txt"));  
     sw.WriteLine("Data");  
 }  
-finally   
+finally
 {  
     if (sw != null)  
         sw.Close();  
 }  
 ```  
   
- いずれの解決策も利用できない場合 (<xref:System.IO.StreamWriter> が静的変数に保存されており、その有効期間の終わりにコードを実行することが簡単でない場合など)、最後に使用した後で <xref:System.IO.StreamWriter.Flush%2A> で <xref:System.IO.StreamWriter> を呼び出すか、最初に使用する前に <xref:System.IO.StreamWriter.AutoFlush%2A> プロパティを `true` に設定すると、この問題を解決できるはずです。  
+ いずれの解決策も利用できない場合 (<xref:System.IO.StreamWriter> が静的変数に保存されており、その有効期間の終わりにコードを実行することが簡単でない場合など)、最後に使用した後で <xref:System.IO.StreamWriter> で <xref:System.IO.StreamWriter.Flush%2A> を呼び出すか、最初に使用する前に <xref:System.IO.StreamWriter.AutoFlush%2A> プロパティを `true` に設定すると、この問題を解決できるはずです。  
   
 ```csharp
 private static StreamWriter log;  
 // static class constructor.  
-static WriteToFile()   
+static WriteToFile()
 {  
     StreamWriter sw = new StreamWriter("log.txt");  
     sw.AutoFlush = true;  
@@ -89,7 +89,7 @@ static WriteToFile()
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は、ランタイムに影響しません。  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  この違反が発生したことを示すメッセージ  
   
 ## <a name="configuration"></a>構成  
@@ -102,7 +102,7 @@ static WriteToFile()
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.StreamWriter>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

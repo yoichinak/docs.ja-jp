@@ -2,15 +2,15 @@
 title: DataContract サロゲート
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 3246466f9268fc920fd58d4f1ba2c06c3627c88e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 7ef78c4361c055d7be35c03a3c8717e86aceddab
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74715368"
+ms.lasthandoff: 03/12/2020
+ms.locfileid: "79183828"
 ---
 # <a name="datacontract-surrogate"></a>DataContract サロゲート
-このサンプルでは、シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。 このサンプルでは、クライアントとサーバーのシナリオでサロゲートを使用する方法を示します。このシナリオでは、データがシリアル化され、Windows Communication Foundation (WCF) クライアントとサービスの間で転送されます。  
+このサンプルでは、シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。 このサンプルでは、クライアントおよびサーバーのシナリオでサロゲートを使用する方法を示します。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -121,7 +121,7 @@ public object GetObjectToSerialize(object obj, Type targetType)
  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> メソッドは、逆シリアル化のための逆マップを実現します。次のサンプル コードを参照してください。  
   
 ```csharp
-public object GetDeserializedObject(object obj,   
+public object GetDeserializedObject(object obj,
 Type targetType)  
 {  
     if (obj is PersonSurrogated)  
@@ -140,7 +140,7 @@ Type targetType)
  スキーマのインポート中に `PersonSurrogated` データ コントラクトを既存の `Person` クラスにマップするため、このサンプルでは <xref:System.Runtime.Serialization.IDataContractSurrogate.GetReferencedTypeOnImport%28System.String%2CSystem.String%2CSystem.Object%29> メソッドを実装しています。次のサンプル コードを参照してください。  
   
 ```csharp
-public Type GetReferencedTypeOnImport(string typeName,   
+public Type GetReferencedTypeOnImport(string typeName,
                string typeNamespace, object customData)  
 {  
 if (  
@@ -160,12 +160,12 @@ typeNamespace.Equals("http://schemas.datacontract.org/2004/07/DCSurrogateSample"
   
 ```csharp
 public System.CodeDom.CodeTypeDeclaration ProcessImportedType(  
-          System.CodeDom.CodeTypeDeclaration typeDeclaration,   
+          System.CodeDom.CodeTypeDeclaration typeDeclaration,
           System.CodeDom.CodeCompileUnit compileUnit)  
 {  
     return typeDeclaration;  
 }  
-public object GetCustomDataToExport(Type clrType,   
+public object GetCustomDataToExport(Type clrType,
                                Type dataContractType)  
 {  
     return null;  
@@ -220,7 +220,7 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  メタデータの生成中にサロゲートをプラグインとして使用するには、追加手順が必要です。 これを行うための機構として、このサンプルで示す `IWsdlExportExtension` が用意されています。 さらに、`WsdlExporter` を直接変更するという方法もあります。  
   
- `AllowNonSerializableTypesAttribute` 属性は `IWsdlExportExtension` と `IContractBehavior`を実装します。 この場合、拡張機能には `IContractBehavior` または `IEndpointBehavior` のいずれかを指定できます。 `IWsdlExportExtension.ExportContract` メソッドの実装は、DataContract のスキーマ生成中に使用される`XsdDataContractExporter` にサロゲートを追加することによって、サロゲートを有効にします。 これを行う方法を次のコード スニペットに示します。  
+ 属性`AllowNonSerializableTypesAttribute`は、`IWsdlExportExtension`および`IContractBehavior`を実装します。 拡張は、またはこの場合`IContractBehavior``IEndpointBehavior`に使用できます。 `IWsdlExportExtension.ExportContract` メソッドの実装は、DataContract のスキーマ生成中に使用される`XsdDataContractExporter` にサロゲートを追加することによって、サロゲートを有効にします。 これを行う方法を次のコード スニペットに示します。  
   
 ```csharp
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  
@@ -247,24 +247,24 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 }  
 ```  
   
- サンプルを実行すると、クライアントは AddEmployee の呼び出しに続いて、最初の呼び出しが正常に行われたかどうかをチェックする GetEmployee を呼び出します。 GetEmployee の操作要求の結果は、クライアント コンソール ウィンドウに表示されます。 GetEmployee 操作では、従業員の検索と "found" の印刷を成功させる必要があります。  
+ サンプルを実行すると、クライアントは AddEmployee の呼び出しに続いて、最初の呼び出しが正常に行われたかどうかをチェックする GetEmployee を呼び出します。 GetEmployee の操作要求の結果は、クライアント コンソール ウィンドウに表示されます。 GetEmployee 操作は、従業員を検索し、"見つかりました" を印刷する必要があります。  
   
 > [!NOTE]
-> このサンプルでは、シリアル化、逆シリアル化、およびメタデータの生成で、サロゲートをプラグインとして使用する方法を示します。 メタデータからコードを生成するためにサロゲートをプラグインとして使用する方法を示すものではありません。 サロゲートを使用してクライアントコード生成にプラグインする方法のサンプルについては、「[カスタム WSDL 発行](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)のサンプル」を参照してください。  
+> このサンプルでは、シリアル化、逆シリアル化、およびメタデータの生成で、サロゲートをプラグインとして使用する方法を示します。 メタデータからコードを生成するためにサロゲートをプラグインとして使用する方法を示すものではありません。 サロゲートを使用してクライアント コード生成にプラグインする方法のサンプルについては、「[カスタム WSDL パブリケーション](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)のサンプル」を参照してください。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
+1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
   
-2. ソリューションのC#エディションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# エディションをビルドするには[、「Windows コミュニケーション ファウンデーション のサンプルの構築」の手順に](../../../../docs/framework/wcf/samples/building-the-samples.md)従います。  
   
-3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
+3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
->   
+>
 > `<InstallDrive>:\WF_WCF_Samples`  
->   
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
->   
+>
+> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+>
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
