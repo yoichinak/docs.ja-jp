@@ -107,7 +107,7 @@ int i = 5;
 char c = 'Z';
 ```
 
-値型は、"*シール*" されています。たとえば <xref:System.Int32?displayProperty=nameWithType> から値型を派生させることはできません。構造体は <xref:System.ValueType?displayProperty=nameWithType> からしか継承できないため、任意のユーザー定義型または構造体を継承する構造体を定義することはできません。 ただし、構造体は 1 つ以上のインターフェイスを実装できます。 構造体型は、実装する任意のインターフェイス型にキャストできます。これを行うと、"*ボックス化操作*" によって、構造体がマネージド ヒープ上の参照型オブジェクト内にラップされます。 ボックス化操作が発生するのは、入力パラメーターとして <xref:System.Object?displayProperty=nameWithType> または任意のインターフェイス型を受け取るメソッドに値型を渡した場合です。 詳細については、「[ボックス化とボックス化解除](./boxing-and-unboxing.md)」を参照してください。
+値型は、"*シール*" されています。たとえば <xref:System.Int32?displayProperty=nameWithType> から値型を派生させることはできません。構造体は <xref:System.ValueType?displayProperty=nameWithType> しか継承できないため、任意のユーザー定義型または構造体を継承する構造体を定義することはできません。 ただし、構造体は 1 つ以上のインターフェイスを実装できます。 構造体型は、実装する任意のインターフェイス型にキャストできます。これを行うと、"*ボックス化操作*" によって、構造体がマネージド ヒープ上の参照型オブジェクト内にラップされます。 ボックス化操作が発生するのは、入力パラメーターとして <xref:System.Object?displayProperty=nameWithType> または任意のインターフェイス型を受け取るメソッドに値型を渡した場合です。 詳細については、「[ボックス化とボックス化解除](./boxing-and-unboxing.md)」を参照してください。
 
 独自のカスタム値型を作成するには、[struct](../../language-reference/builtin-types/struct.md) キーワードを使用します。 通常、構造体は、次の例に示すように、少数の関連する変数のコンテナーとして使用します。
 
@@ -148,7 +148,7 @@ IMyInterface iface = new MyClass();
 
 ## <a name="types-of-literal-values"></a>リテラル値の型
 
-C# では、リテラル値の型がコンパイラによって決定されます。 数値リテラルの型指定の方法を指定するには、その数値の末尾に文字を付加します。 たとえば、値 4.56 を float 型として扱うには、数値の後に "f" または "F" を付加して、`4.56f` のように指定します。 文字を付加しない場合、リテラルの型はコンパイラによって推論されます。 文字サフィックスで指定できる型の詳細については、「[整数数値型 ](../../language-reference/builtin-types/integral-numeric-types.md)」と「[浮動小数点数値型](../../language-reference/builtin-types/floating-point-numeric-types.md)」を参照してください。
+C# では、リテラル値の型がコンパイラによって決定されます。 数値リテラルの型指定の方法を指定するには、その数値の末尾に文字を付加します。 たとえば、値 4.56 を float 型として扱うには、数値の後に "f" または "F" を付加して、`4.56f` のように指定します。 文字を付加しない場合、リテラルの型はコンパイラによって推論されます。 文字サフィックスで指定できる型の詳細については、「[整数数値型](../../language-reference/builtin-types/integral-numeric-types.md)」と「[浮動小数点数値型](../../language-reference/builtin-types/floating-point-numeric-types.md)」を参照してください。
 
 リテラルは型指定され、すべての型は最終的に <xref:System.Object?displayProperty=nameWithType> から派生するため、次のようなコードを記述してコンパイルできます。
 
