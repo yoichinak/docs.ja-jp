@@ -142,7 +142,7 @@ ms.locfileid: "79398377"
   
 ### <a name="-and-124124-operators"></a>&& 演算子および &#124;&#124; 演算子  
   
-例外を回避し、不要な比較をスキップしてパフォーマンスを向上させるには、比較を実行する場合、次の例に示すように [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) の代わりに [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) を、[&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) の代わりに [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) を使用します。  
+例外を回避し、不要な比較をスキップしてパフォーマンスを向上させるには、比較を実行する場合、次の例に示すように [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) の代わりに [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) を、[&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) の代わりに [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) を使用します。  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
