@@ -497,9 +497,6 @@
                 - name: 名前空間
                   tocHref: /dotnet/csharp/programming-guide/namespaces/
                   topicHref: /dotnet/csharp/programming-guide/namespaces/index
-                - name: Null 許容型
-                  tocHref: /dotnet/csharp/programming-guide/nullable-types/
-                  topicHref: /dotnet/csharp/programming-guide/nullable-types/index
                 - name: プログラミングの概念
                   tocHref: /dotnet/csharp/programming-guide/concepts/
                   topicHref: /dotnet/csharp/programming-guide/concepts/index
@@ -695,3 +692,10 @@
         - name: .NET for Apache Spark ガイド
           tocHref: /dotnet/spark/
           topicHref: /dotnet/spark/index
+        - name: Azure
+          tocHref: /dotnet/azure/
+          topicHref: /dotnet/azure/index
+          items:
+            - name: Azure SDK for .NET
+              tocHref: /dotnet/azure/sdk/
+              topicHref: /dotnet/azure/sdk/index

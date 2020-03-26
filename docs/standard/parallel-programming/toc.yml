@@ -119,7 +119,7 @@
           href: how-to-measure-plinq-query-performance.md
         - name: PLINQ データのサンプル
           href: plinq-data-sample.md
-    - name: 並列プログラミングのデータ構造
+    - name: 並列プログラミング向けのデータ構造
       href: data-structures-for-parallel-programming.md
     - name: 並列診断ツール
       href: parallel-diagnostic-tools.md

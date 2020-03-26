@@ -1,0 +1,19 @@
+- name: Azure SDK for .NET
+  href: index.yml
+  items:
+    - name: 概念
+      expanded: true
+      items:
+        - name: 認証
+          href: authentication.md
+        - name: ログの記録
+          href: logging.md
+    - name: ダウンロード
+      expanded: true
+      items:
+        - name: パッケージ
+          href: 'https://www.nuget.org/packages?q=windowsazureofficial'
+        - name: ツール
+          href: tools.md
+    - name: API リファレンス
+      href: 'https://docs.microsoft.com/dotnet/api/overview/azure/?view=azure-dotnet'

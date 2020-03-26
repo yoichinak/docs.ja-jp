@@ -7,6 +7,8 @@
 - name: バージョン別
   expanded: true
   items:
+    - name: 3.1 から 5.0
+      href: 3.1-5.0.md
     - name: 3.0 から 3.1 へ
       href: 3.0-3.1.md
     - name: 2.2 から 3.1

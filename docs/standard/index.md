@@ -5,16 +5,16 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: ce76448b69a002216125192f75d24b38e7582260
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7856cbb12ac78830ceace6ad44214ca32444a82
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76730781"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228808"
 ---
 # <a name="net-guide"></a>.NET ガイド
 
-.NET ガイドでは、.NET に関する情報を提供します。 お客様の .NET に関する知識に応じて、このガイドのさまざまなセクションを参照したり、[.NET Core](../core/index.md) や [.NET Framework](../framework/index.md) などの他のガイドを参照してください。
+.NET ガイドでは、.NET に関する情報を提供します。 お客様の .NET に関する知識に応じて、このガイドのさまざまなセクションを参照したり、[.NET Core](../core/index.md) や [.NET Framework](../framework/index.yml) などの他のガイドを参照してください。
 
 ## <a name="new-to-net"></a>.NET を初めて使う
 
@@ -48,7 +48,7 @@ ms.locfileid: "76730781"
 * [ガベージ コレクション](garbage-collection/index.md)
 * [.NET の基本データ型](base-types/index.md)
 * [コレクション](collections/index.md)
-* [日付、時刻およびタイム ゾーン](datetime/index.md)
+* [日付、時刻、およびタイム ゾーン](datetime/index.md)
 * [非同期プログラミング](async.md)
 
 3 つの主要な .NET 言語の詳細については、次を参照してください。

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - interfaces [C#]
 - C# language, interfaces
 ms.assetid: 2feda177-ce11-432d-81b4-d50f5f35fd37
-ms.openlocfilehash: f4ee269f41e79562c113a7627816f797b083095e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb1b812fdbf1d521ed3fd86e23f430bcd04d00f6
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79157079"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249182"
 ---
 # <a name="interfaces-c-programming-guide"></a>インターフェイス (C# プログラミング ガイド)
 
-インターフェイスには、非抽象[クラス](../../language-reference/keywords/class.md)または[構造体](../../language-reference/builtin-types/struct.md)で実装する必要がある、関連する機能のグループに対する定義が含まれます。 インターフェイスを使用すると、実装が必要な `static` メソッドを定義することができます。 インターフェイスでは、宣言されたインスタンス メンバーの一部またはすべてに既定の実装を提供できます。 インターフェイスでは、フィールド、自動実装プロパティ、プロパティに似たイベントなどのインスタンス データを宣言できません。
+インターフェイスには、非抽象[クラス](../../language-reference/keywords/class.md)または[構造体](../../language-reference/builtin-types/struct.md)で実装する必要がある、関連する機能のグループに対する定義が含まれます。 インターフェイスを使用すると、実装が必要な `static` メソッドを定義することができます。 C# 8.0 以降では、インターフェイスによってメンバーの既定の実装を定義できます。 インターフェイスでは、フィールド、自動実装プロパティ、プロパティに似たイベントなどのインスタンス データを宣言できません。
 
 インターフェイスを使用すると、たとえば、クラス内の複数のソースからの動作を含めることができます。 C# ではクラスの複数の継承がサポートされないため、この機能は重要です。 また、構造体の継承をシミュレートする場合はインターフェイスを使用する必要があります。これは、実際に別の構造体またはクラスから継承することができないためです。
 
@@ -54,7 +54,7 @@ ms.locfileid: "79157079"
 - インターフェイスを直接インスタンス化することはできません。 そのメンバーは、インターフェイスを実装する任意のクラスまたは構造体によって実装されます。
 - クラスまたは構造体は、複数のインターフェイスを実装できます。 クラスは、基本クラスを継承する一方で、1 つまたは複数のインターフェイスを実装できます。
 
-## <a name="BKMK_RelatedSections"></a> 関連セクション
+## <a name="related-sections"></a><a name="BKMK_RelatedSections"></a> 関連セクション
 
 - [インターフェイスのプロパティ](../classes-and-structs/interface-properties.md)  
 - [インターフェイスのインデクサー](../indexers/indexers-in-interfaces.md)  

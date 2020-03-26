@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 12/19/2019
-  ms.openlocfilehash: 6b23ab2f0214f23d45499fcf8ab7c3f2771be15c
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: f0660cf23bcbc6520d7b0d853e1b214dee785300
+  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "77452743"
+  ms.lasthandoff: 03/24/2020
+  ms.locfileid: "80228563"
 highlightedContent:
   items:
   - title: C# の概要。 クイック インタラクティブ スタート。
@@ -80,7 +80,7 @@ conceptualContent:
     - url: standard/components.md
       itemType: concept
       text: .NET アーキテクチャ コンポーネント
-    - url: framework/index.md
+    - url: framework/index.yml
       itemType: overview
       text: .NET Framework (Windows) アプリ
   - title: .NET アプリを開発する

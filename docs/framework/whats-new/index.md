@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: fa7138127379b069b646c4b2488d1973a3ddd628
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79143318"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249696"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework の新機能
 
@@ -427,7 +427,7 @@ web config ファイルを変更することによって、<xref:System.Web.Secu
       <forms cookieSameSite="Lax">
          <!-- ...   -->
       </forms>
-   <authentication />
+   </authentication>
    <sessionState cookieSameSite="Lax"></sessionState>
 </system.web>
 ```
@@ -500,7 +500,7 @@ NET Framework 4.7.2 では、エンクレーブ ベースの Always Encrypted �
 .NET Framework 4.7.2 以降、診断アシスタントでは、特定のソース URI から作成された  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries> を見つけることができます。 (この機能は、実稼働アプリケーションではなく診断アシスタントによって使用されます)。Visual Studio の "エディット コンティニュ" 機能などの診断アシスタントでは、ユーザーが、実行中のアプリケーションに変更を適用する目的で ResourceDictionary を編集できます。 これを実現するための 1 つの手順は、実行中のアプリケーションが編集されているディクショナリから作成したすべての ResourceDictionaries を見つけることです。 たとえば、アプリケーションは、コンテンツが特定のソース URI からコピーされる ResourceDictionary を宣言できます。
 
 ```xml
-<ResourceDictionary Source="MyRD.xaml">
+<ResourceDictionary Source="MyRD.xaml" />
 ```
 
 *MyRD.xaml*  の元のマークアップを編集する診断アシスタントでは、ディクショナリを検索する新しい機能を使用できます。 この機能は、新しい静的メソッド <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType> によって実装されます。 診断のアシスタントは、次のコードに示すように、元のマークアップを識別する絶対 URI を使用して新しいメソッドを呼び出します。
@@ -1976,7 +1976,7 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
 - [Visual Studio 2013 の ASP.NET と Web ツールのリリース ノート](/aspnet/visual-studio/overview/2013/release-notes)
 
-### <a name="networking-a-namenetworking-"></a>ネットワーク <a name="networking" />
+### <a name="networking"></a>ネットワーク <a name="networking" />
 
 .NET Framework 4.5 は、HTTP アプリケーションに新しいプログラミング インターフェイスを提供します。 詳細については、新しい <xref:System.Net.Http?displayProperty=nameWithType> 名前空間と <xref:System.Net.Http.Headers?displayProperty=nameWithType> 名前空間を参照してください。
 
@@ -2120,7 +2120,7 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
 Windows 8.x ストア アプリは、特定のフォーム ファクターに合わせて設計されており、Windows オペレーティング システムの機能を利用します。 C# または Visual Basic を使って Windows 用の Windows 8.x ストア アプリをビルドするために、.NET Framework 4.5 または 4.5.1 のサブセットを使うことができます。 このサブセットは Windows 8.x ストア アプリ用 .NET と呼ばれ、[概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))のページで説明されています。
 
-### <a name="portable-class-libraries-a-nameportable-"></a>ポータブル クラス ライブラリ <a name="portable" />
+### <a name="portable-class-libraries"></a>ポータブル クラス ライブラリ <a name="portable" />
 
 Visual Studio 2012 (および以降のバージョン) のポータブル クラス ライブラリ プロジェクトを使うと、複数の .NET Framework プラットフォームで動作するマネージド アセンブリを作成してビルドできます。 ポータブル クラス ライブラリ プロジェクトを使って、対象とするプラットフォーム (Windows Phone や Windows 8.x ストア アプリ用 .NET など) を選択できます。 プロジェクトで使用できる型およびメンバーは、自動的にこれらのプラットフォーム間で共通の型とメンバーに制限されます。 詳細については、[ポータブル クラス ライブラリ](../../standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)に関するページを参照してください。
 

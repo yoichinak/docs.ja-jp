@@ -4,16 +4,16 @@ description: .NET Core は、Windows、Linux、macOS アプリを作成するた
 author: richlander
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 3db98d21a7cdc80d8a98b23782a81ffa37520937
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d2ce5951fa01ca3945ce0e64aa58fbadc8ab5af
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75740751"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546550"
 ---
 # <a name="net-core-guide"></a>.NET Core ガイド
 
-[.NET Core](about.md) は、Microsoft および .NET コミュニティによって [GitHub](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT) 上で管理されている、[オープンソース](https://github.com/dotnet/core)の汎用的な開発プラットフォームです。 クロスプラットフォーム (Windows、macOS、Linux をサポート) であり、デバイス、クラウド、および IoT アプリケーションを構築するために使用できます。
+[.NET Core](about.md) は、Microsoft および .NET コミュニティによって [GitHub](https://github.com/dotnet/core) 上で管理されている、[オープンソース](https://github.com/dotnet/runtime/blob/master/LICENSE.TXT)の汎用的な開発プラットフォームです。 クロスプラットフォーム (Windows、macOS、Linux をサポート) であり、デバイス、クラウド、および IoT アプリケーションを構築するために使用できます。
 
 特徴、サポートされる言語とフレームワーク、キー API など、.NET Core について詳しくは、「[.NET Core について](about.md)」 をご覧ください。
 
@@ -21,7 +21,7 @@ ms.locfileid: "75740751"
 
 ## <a name="download-net-core"></a>.NET Core のダウンロード
 
-[.NET Core SDK](https://www.microsoft.com/net/download) をダウンロードして、お使いの Windows、macOS、または Linux コンピューター上で .NET Core をお試しください。 また、Docker コンテナーを使用する場合は、[.NET Core の Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/) にアクセスしてください。
+[.NET Core SDK](https://dotnet.microsoft.com/download) をダウンロードして、お使いの Windows、macOS、または Linux コンピューター上で .NET Core をお試しください。 また、Docker コンテナーを使用する場合は、[.NET Core の Docker Hub](https://hub.docker.com/_/microsoft-dotnet-core/) にアクセスしてください。
 
 別の .NET Core バージョンを探している場合も、すべての .NET Core バージョンを [.NET Core のダウンロード](https://dotnet.microsoft.com/download/dotnet-core)で入手できます。
 
@@ -29,7 +29,7 @@ ms.locfileid: "75740751"
 
 最新バージョンは .NET Core 3.1 です。 3.1 に含まれているのは .NET Core 3.0 に対する軽微な改善ですが、.NET Core 3.1 は [長期的にサポートされるリリース](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)です。 .NET Core 3.1 リリースの詳細については、[.NET Core 3.1 の新機能](./whats-new/dotnet-core-3-1.md)を参照してください。
 
-## <a name="create-your-first-application"></a>最初のアプリケーションを作成する
+## <a name="create-your-first-application"></a>最初のアプリケーションの作成
 
 .NET Core SDK をインストールしたらコマンド プロンプトを開きます。 次の `dotnet` コマンドを入力し、C# アプリケーションを作成して実行します。
 

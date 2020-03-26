@@ -3,12 +3,12 @@ title: .NET にようこそ
 description: .NET ファミリのテクノロジの概要です。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: 20332f4dcc0664287873a27e0064a4765b1ecde7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bfc9b55f06a5830c13df52f992d2630f1f45d8be
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124222"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228794"
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
 
@@ -44,7 +44,7 @@ ms.locfileid: "77124222"
 
 - [.NET のガイド](standard/index.md)
 - [.NET Core のガイド](core/index.md)
-- [.NET Framework ガイド](framework/index.md)
+- [.NET Framework ガイド](framework/index.yml)
 - [C# のガイド](csharp/index.yml)
 - [F# Guide (F# ガイド)](fsharp/index.yml)
 - [Visual Basic のガイド](visual-basic/index.yml)

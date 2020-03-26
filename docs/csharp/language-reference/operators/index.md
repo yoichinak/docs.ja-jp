@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operator associativity [C#]
 - expressions [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 11c544e7fc923b0820141fb2e096ef7707f0a95f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 341d5a2e62ca7f94a8448fa0c1286cf7e599c759
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74552473"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546667"
 ---
 # <a name="c-operators-c-reference"></a>C# 演算子 (C# リファレンス)
 
@@ -40,14 +40,15 @@ Console.WriteLine(a); //  output: 8
 
 次の表は、C# の演算子を優先順位の高い順にまとめたものです。 各行内の演算子の優先順位は同じです。
 
-| オペレーター | カテゴリまたは名前 |
+| 演算子 | カテゴリまたは名前 |
 | --------- | ---------------- |
-| [x.y](member-access-operators.md#member-access-operator-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-operator-)、[a&#91;i&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--) | 1 次式 |
-| [+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[\!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++x](arithmetic-operators.md#increment-operator-)、[--x](arithmetic-operators.md#decrement-operator---)、[^x](member-access-operators.md#index-from-end-operator-)、[(T)x](type-testing-and-cast.md#cast-operator-)、[await](await.md)、[&x](pointer-related-operators.md#address-of-operator-)、[*x](pointer-related-operators.md#pointer-indirection-operator-)、[true and false](true-false-operators.md) | 単項演算子 |
+| [x.y](member-access-operators.md#member-access-expression-)、[x?.y](member-access-operators.md#null-conditional-operators--and-)、[x?[y]](member-access-operators.md#null-conditional-operators--and-)、[f(x)](member-access-operators.md#invocation-expression-)、[a&#91;i&#93;](member-access-operators.md#indexer-operator-)、[x++](arithmetic-operators.md#increment-operator-)、[x--](arithmetic-operators.md#decrement-operator---)、[new](new-operator.md)、[typeof](type-testing-and-cast.md#typeof-operator)、[checked](../keywords/checked.md)、[unchecked](../keywords/unchecked.md)、[default](default.md)、[nameof](nameof.md)、[delegate](delegate-operator.md)、[sizeof](sizeof.md)、[stackalloc](stackalloc.md)、[x->y](pointer-related-operators.md#pointer-member-access-operator--) | 1 次式 |
+| [+x](arithmetic-operators.md#unary-plus-and-minus-operators)、[-x](arithmetic-operators.md#unary-plus-and-minus-operators)、[\!x](boolean-logical-operators.md#logical-negation-operator-)、[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-)、[++x](arithmetic-operators.md#increment-operator-)、[--x](arithmetic-operators.md#decrement-operator---)、[^x](member-access-operators.md#index-from-end-operator-)、[(T)x](type-testing-and-cast.md#cast-operator-)、[await](await.md)、[&x](pointer-related-operators.md#address-of-operator-)、[*x](pointer-related-operators.md#pointer-indirection-operator-)、[true and false](true-false-operators.md) | 単項 |
 | [x..y](member-access-operators.md#range-operator-) | 範囲 |
-| [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乗算|
+| [switch](../../whats-new/csharp-8.md#switch-expressions) | `switch` 式 |
+| [x * y](arithmetic-operators.md#multiplication-operator-)、[x / y](arithmetic-operators.md#division-operator-)、[x % y](arithmetic-operators.md#remainder-operator-) | 乗法|
 | [x + y](arithmetic-operators.md#addition-operator-)、[x – y](arithmetic-operators.md#subtraction-operator--) | 加法 |
-| [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | Shift |
+| [x \<\<  y](bitwise-and-shift-operators.md#left-shift-operator-)、[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) | シフト |
 | [x \< y](comparison-operators.md#less-than-operator-)、[x > y](comparison-operators.md#greater-than-operator-)、[x \<= y](comparison-operators.md#less-than-or-equal-operator-)、[x >= y](comparison-operators.md#greater-than-or-equal-operator-)、[is](type-testing-and-cast.md#is-operator)、[as](type-testing-and-cast.md#as-operator) | 関係式と型検査 |
 | [x == y](equality-operators.md#equality-operator-), [x != y](equality-operators.md#inequality-operator-) | 等価比較 |
 | `x & y` | [ブール演算の論理 AND](boolean-logical-operators.md#logical-and-operator-) または[ビット演算の論理 AND](bitwise-and-shift-operators.md#logical-and-operator-) |
@@ -63,8 +64,8 @@ Console.WriteLine(a); //  output: 8
 
 演算子の優先順位が同じ場合は、演算子の結合規則によって、操作の実行順序が決まります。
 
-- *結合規則が左から右*の演算子は、左から右に順番に評価されます。 [代入演算子](assignment-operator.md)と [null 合体演算子](null-coalescing-operator.md)を除き、2 項演算子はすべて左からの結合です。 たとえば、 `a + b - c` は `(a + b) - c`と評価されます。
-- *結合規則が右から左*の演算子は、右から左に評価されます。 代入演算子、null 合体演算子、および[条件演算子`?:`](conditional-operator.md)は、右からの結合です。 たとえば、 `x = y = z` は `x = (y = z)`と評価されます。
+- *結合規則が左から右*の演算子は、左から右に順番に評価されます。 [代入演算子](assignment-operator.md)と [null 合体演算子](null-coalescing-operator.md)を除き、2 項演算子はすべて左からの結合です。 たとえば、`a + b - c` は `(a + b) - c` と評価されます。
+- *結合規則が右から左*の演算子は、右から左に評価されます。 代入演算子、null 合体演算子、および[条件演算子`?:`](conditional-operator.md)は、右からの結合です。 たとえば、`x = y = z` は `x = (y = z)` と評価されます。
 
 演算子の結合規則によって定められた評価の順序を変更するには、かっこを使用します。
 
@@ -89,9 +90,9 @@ Console.WriteLine($"a = {a}, b = {b}");  // output: a = 1, b = 6
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md#operators)に関するページの「[演算子](~/_csharplang/spec/introduction.md)」セクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関するページの「[演算子](~/_csharplang/spec/expressions.md#operators)」セクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [式](../../programming-guide/statements-expressions-operators/expressions.md)

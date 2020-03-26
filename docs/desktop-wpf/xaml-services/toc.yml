@@ -21,7 +21,7 @@
           href: xclass-directive.md
         - name: 'x:ClassModifier ディレクティブ'
           href: xclassmodifier-directive.md
-        - name: 'x:Code 組み込み XAML 型'
+        - name: 'x:Code 組み込み XAML 型 '
           href: xcode-intrinsic-xaml-type.md
         - name: 'x:FieldModifier ディレクティブ'
           href: xfieldmodifier-directive.md
@@ -59,8 +59,6 @@
           href: xml-language-handling.md
         - name: 'XAML における xml:space の処理'
           href: xml-space-handling.md
-    - name: WPF から System.Xaml に移行した型
-      href: types-migrated-from-wpf-to-system.md
     - name: XAML ノード ストリームの構造と概念について
       href: understanding-xaml-node-stream-structures-and-concepts.md
     - name: XAMLServices クラスおよび基本的な XAML の読み取りまたは書き込み
