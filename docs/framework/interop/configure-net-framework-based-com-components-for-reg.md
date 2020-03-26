@@ -8,12 +8,12 @@ helpviewer_keywords:
 - registration-free COM interop, configuring .NET-based components
 - activation, registration-free
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
-ms.openlocfilehash: dedf5ab51ab5cf9befb5bd183968388406df4e5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79181463"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291752"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  
@@ -24,7 +24,7 @@ ms.locfileid: "79181463"
   
  このトピックでは、アプリケーション マニフェストをアプリケーションに関連付ける方法、コンポーネント マニフェストをコンポーネントに関連付ける方法、およびコンポーネント マニフェストをアセンブリに埋め込む方法について説明します。  
   
-### <a name="to-create-an-application-manifest"></a>アプリケーション マニフェストを作成するには  
+## <a name="create-an-application-manifest"></a>アプリケーション マニフェストを作成する  
   
 1. XML エディターを使用して、1 つ以上のマネージド コンポーネントと相互運用する COM アプリケーションによって所有されるアプリケーション マニフェストを作成または編集します。  
   
@@ -32,7 +32,8 @@ ms.locfileid: "79181463"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
      マニフェストの要素とその属性については、「[Application Manifests](/windows/desktop/SbsCs/application-manifests)」(アプリケーション マニフェスト) をご覧ください。  
@@ -46,7 +47,8 @@ ms.locfileid: "79181463"
                         name="myOrganization.myDivision.myComApp"
                         version="1.0.0.0"
                         processorArchitecture="msil"
-      />  
+      />
+    </assembly>  
     ```  
   
 4. 依存アセンブリを指定します。 `myComApp` が `myManagedComp` に依存する例を次に示します。  
@@ -75,9 +77,9 @@ ms.locfileid: "79181463"
   
 5. マニフェスト ファイルに名前を付けて保存します。 アプリケーション マニフェストの名前は、アセンブリ実行可能ファイルの名前に拡張子 .manifest が付いたものです。 たとえば、myComApp.exe のアプリケーション マニフェスト ファイル名は myComApp.exe.manifest です。  
   
- アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳しくは、「[About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-)」(side-by-side アセンブリについて) をご覧ください。  
+アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳細については、「[サイド バイ サイド アセンブリについて](/windows/desktop/SbsCs/about-side-by-side-assemblies-)」を参照してください。  
   
-#### <a name="to-create-a-component-manifest"></a>コンポーネント マニフェストを作成するには  
+## <a name="create-a-component-manifest"></a>コンポーネント マニフェストを作成する  
   
 1. XML エディターを使用して、マネージド アセンブリを記述するコンポーネント マニフェストを作成します。  
   
@@ -85,7 +87,8 @@ ms.locfileid: "79181463"
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
-    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
+    <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
+    </assembly>
     ```  
   
 3. ファイルの所有者を指定します。 アプリケーション マニフェスト ファイル内の `<assemblyIdentity>` 要素の `<dependentAssembly>` 要素は、コンポーネント マニフェスト内の要素と一致している必要があります。 次の例では、`myManagedComp` バージョン 1.2.3.4 がマニフェスト ファイルを所有しています。  
@@ -98,12 +101,13 @@ ms.locfileid: "79181463"
                         version="1.2.3.4"  
                         publicKeyToken="8275b28176rcbbef"  
                         processorArchitecture="msil"  
-           />  
+           />
+    </assembly>
     ```  
   
 4. アセンブリ内の各クラスを指定します。 マネージド アセンブリ内の各クラスを一意に識別するには `<clrClass>` 要素を使用します。 この要素は、`<assembly>` 要素のサブ要素であり、次の表に示す属性を持っています。  
   
-    |属性|説明|Required|  
+    |属性|説明|必須|  
     |---------------|-----------------|--------------|  
     |`clsid`|アクティブにするクラスを指定する識別子。|はい|  
     |`description`|ユーザーにコンポーネントを説明する文字列。 既定では文字列は空です。|いいえ|  

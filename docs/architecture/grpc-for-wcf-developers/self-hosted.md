@@ -2,12 +2,12 @@
 title: 自己ホスト型 gRPC アプリケーション - WCF 開発者向け gRPC
 description: コア gRPC アプリケーションASP.NET自己ホスト型サービスとして展開します。
 ms.date: 09/02/2019
-ms.openlocfilehash: 00fb1453e19a02469f80af79672e0c1f72c7280f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 69f70e4077247fd07eba7abeee82f257dd1f4f90
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79147803"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80110907"
 ---
 # <a name="self-hosted-grpc-applications"></a>自己ホスト型 gRPC アプリケーション
 
@@ -152,7 +152,7 @@ sudo journalctl -u myapp
 > [!TIP]
 > ホストで GUI 環境を使用できる場合は、Linux で*QJournalctl*や*gnome-logs*などのいくつかのグラフィカルログビューアを利用できます。
 
-を使用`journalctl`してコマンド ラインから`systemd`ジャーナルを照会する方法の詳細については、[マニュアル ページを参照してください](https://manpages.debian.org/buster/systemd/journalctl.1)。
+を使用`journalctl`してコマンド ラインから`systemd`ジャーナルを照会する方法の詳細については、[のマニュアルを参照してください](https://manpages.debian.org/buster/systemd/journalctl.1)。
 
 ## <a name="https-certificates-for-self-hosted-applications"></a>自己ホスト型アプリケーションの HTTPS 証明書
 

@@ -2,12 +2,12 @@
 title: RPC の種類 - WCF 開発者向け gRPC
 description: WCF でサポートされているリモート プロシージャコールの種類と、gRPC での対応するリモート プロシージャ コールの種類のレビュー
 ms.date: 09/02/2019
-ms.openlocfilehash: b9d4ce7cae693ed7904229483cbccfe3b299b640
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40c0779dc015904e9dabbb448075e3c5aa5dc49a
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401785"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111089"
 ---
 # <a name="types-of-rpc"></a>RPC の種類
 
@@ -23,7 +23,7 @@ Windows 通信基盤 (WCF) 開発者として、次の種類のリモート プ�
 
 | WCF | gRPC |
 | --- | ---- |
-| 通常の要求/応答 | 単項演算子 |
+| 通常の要求/応答 | 単項 |
 | クライアント コールバック インターフェイスを使用したセッションを使用した双方向サービス | サーバー ストリーミング |
 | セッションを使用した全二重サービス | 双方向ストリーミング |
 | 一方向操作 | クライアント ストリーミング |
@@ -125,7 +125,7 @@ WCF では、セッションを持つ[ServiceContract](xref:System.ServiceModel.
 
 ## <a name="wcf-one-way-operations-and-grpc-client-streaming"></a>WCF の一方向操作と gRPC クライアント ストリーミング
 
-WCF には、トランスポート固有の確認を`[OperationContract(IsOneWay = true)]`返す一方向の操作 (でマーク) が用意されています。 gRPC サービスメソッドは、空であっても常に応答を返します。 クライアントは常にその応答を待つ必要があります。 gRPC でのメッセージングの "ファイアアンドフォーゲット" スタイルでは、クライアント ストリーミング サービスを作成できます。
+WCF は、トランスポート固有の受信確認`[OperationContract(IsOneWay = true)]`を返す一方向の操作 ( でマーク ) を提供します。 gRPC サービスメソッドは、空であっても常に応答を返します。 クライアントは常にその応答を待つ必要があります。 gRPC でのメッセージングの "ファイアアンドフォーゲット" スタイルでは、クライアント ストリーミング サービスを作成できます。
 
 ### <a name="thing_logproto"></a>thing_log.プロト
 

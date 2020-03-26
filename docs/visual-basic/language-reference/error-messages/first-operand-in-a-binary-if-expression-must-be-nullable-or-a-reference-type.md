@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: a73a66313e7ca540711838c4d147d6bd163ec8d6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625570"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249527"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>バイナリ 'If' 式の最初のオペランドは Null 許容または参照型である必要があります
-`If`式が 2 つまたは 3 つの引数を受け取ることができます。 2 つの引数を送信すると、最初の引数は、参照型または null 許容型でする必要があります。 最初の引数の評価が何も以外の場合`Nothing`、その値が返されます。 最初の引数が評価された場合`Nothing`、2 番目の引数が評価され、返されます。  
+式`If`は、2 つまたは 3 つの引数を受け取ることができます。 2 つの引数だけを送信する場合、最初の引数は参照型または null 許容値型である必要があります。 最初の引数が`Nothing`以外の値に評価される場合は、その値が返されます。 最初の引数が`Nothing`に評価されると、2 番目の引数が評価され、返されます。  
   
- たとえば、次のコードには 2 つ`If`で 3 つの引数と 2 つの引数の式。 式を計算し、同じ値を返します。  
+ たとえば、次のコードには、引数`If`が 3 つ、引数が 2 つある式が 2 つ含まれています。 式は、同じ値を計算して返します。  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- 次の式では、このエラーが発生します。  
+ 次の式がこのエラーを引き起こします。  
   
 ```vb  
 Dim choice1 = 4  
@@ -46,7 +46,7 @@ Dim booleanVar = True
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- 最初の引数が null 許容型または参照型であるようにコードを変更することはできない場合、は、3 つの引数に変換することを検討してください`If`式、または、`If...Then...Else`ステートメント。  
+- 最初の引数が null 許容値型または参照型になるようにコードを変更できない場合は、3 つの引数を持`If`つ式または`If...Then...Else`ステートメントに変換することを検討してください。  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  

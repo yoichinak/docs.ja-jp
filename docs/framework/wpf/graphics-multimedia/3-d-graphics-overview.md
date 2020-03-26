@@ -8,12 +8,12 @@ helpviewer_keywords:
 - 3D graphics [WPF]
 - graphics [WPF], 3D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
-ms.openlocfilehash: b8a3876030c533dd37eca0b00ebd50bccf309e53
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: e4918f7737bbe57a4f29c6c5cff1099f4f21674b
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80112389"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291818"
 ---
 # <a name="3d-graphics-overview"></a>3D グラフィックスの概要
 <a name="introduction"></a>3D 機能では[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、マークアップと手続き型の両方のコードで 3D グラフィックスを描画、変換、アニメーション化できます。 開発者は、2D グラフィックスと 3D グラフィックスを組み合わせて、リッチ コントロールを作成したり、複雑なデータの図を提供したり、アプリケーションのインターフェイスのユーザー エクスペリエンスを向上させることができます。 3D サポート[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は、フル機能のゲーム開発プラットフォームを提供するようには設計されていません。 このトピックでは、グラフィックス システムの 3D[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]機能の概要について説明します。  
@@ -71,7 +71,7 @@ ms.locfileid: "80112389"
   
  この<xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>プロパティは、テクスチャが<xref:System.Windows.Point>メッシュの頂点にどのように描画されるのかを決定する座標をマップする方法をグラフィックス システムに指示する s のコレクションを指定します。 <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>は 0 から 1 までの範囲の値で指定します。  プロパティと同様<xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>に、グラフィックス システムは既定のテクスチャ座標を計算できますが、繰り返しパターンの一部を含むテクスチャのマッピングを制御するために、異なるテクスチャ座標を設定することもできます。 テクスチャ座標について詳しくは、マネージド Direct3D SDK の後続のトピックをご覧ください。  
   
- 次の例では、手続き型コードで立方体モデルの 1 つの面を作成する方法を示します。 立方体全体を単一の GeometryModel3D として描画できることに注意してください。この例では、後で各面に異なるテクスチャを適用するため、個別のモデルとして立方体の面を描画します。  
+ 次の例では、手続き型コードで立方体モデルの 1 つの面を作成する方法を示します。 キューブ全体を単一のジオメトリモデル3Dとして描画できます。この例では、後で各面に個別のテクスチャを適用するために、キューブの面を別個のモデルとして描画します。  
   
  [!code-csharp[3doverview#3DOverview3DN6](~/samples/snippets/csharp/VS_Snippets_Wpf/3DOverview/CSharp/Window1.xaml.cs#3doverview3dn6)]
  [!code-vb[3doverview#3DOverview3DN6](~/samples/snippets/visualbasic/VS_Snippets_Wpf/3DOverview/visualbasic/window1.xaml.vb#3doverview3dn6)]  
@@ -105,7 +105,7 @@ ms.locfileid: "80112389"
   
 <a name="lights"></a>
 ## <a name="illuminating-the-scene"></a>シーンの照明  
- 3D グラフィックスのライトは、現実世界でのライトの実行を行います: サーフェスが表示されます。 さらに重要なことは、ライトによって投影に含まれるシーンの部分が決まります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の Light オブジェクトは、さまざまなライト効果とシャドウ効果を作成し、現実世界のさまざまな照明の動作に従ってモデル化されます。 シーンには少なくとも 1 つのライトを含める必要があり、含めないとモデルは見えません。  
+ 3D グラフィックスのライトは、現実世界でのライトの実行を行います: サーフェスが表示されます。 さらに重要なことは、ライトによって投影に含まれるシーンの部分が決まります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の Light オブジェクトは、さまざまなライト効果とシャドウ効果を作成し、現実世界のさまざまな照明の動作に従ってモデル化されます。 シーンに少なくとも 1 つのライトを含めるか、モデルが表示されません。  
   
  次のライトは、基本クラスから<xref:System.Windows.Media.Media3D.Light>派生します。  
   
@@ -113,7 +113,7 @@ ms.locfileid: "80112389"
   
 - <xref:System.Windows.Media.Media3D.DirectionalLight>: 遠くの光源のように照らされます。  指向性光源は<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>Vector3D として指定されていますが、指定された位置はありません。  
   
-- <xref:System.Windows.Media.Media3D.PointLight>: 近くの光源のように照らされます。 PointLight には位置があり、その位置から光を投射します。 シーン内のオブジェクトは、その位置および光源からの距離に応じて照らされます。 <xref:System.Windows.Media.Media3D.PointLightBase><xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>は、モデルがライトによって照らされない距離を決定するプロパティを公開します。 また、PointLight には減衰プロパティもあり、距離によって光の強度がどの程度低下するかを指定します。 光の減衰には、一定、線形、または 2 次補間を指定できます。  
+- <xref:System.Windows.Media.Media3D.PointLight>: 近くの光源のように照らされます。 PointLight には位置があり、その位置から光を投射します。 シーン内のオブジェクトは、その位置および光源からの距離に応じて照らされます。 <xref:System.Windows.Media.Media3D.PointLightBase><xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>は、モデルがライトによって照らされない距離を決定するプロパティを公開します。 PointLight は減衰プロパティも公開し、距離の間に光の強度がどのように減少するかを決定します。 光の減衰には、一定、線形、または 2 次補間を指定できます。  
   
 - <xref:System.Windows.Media.Media3D.SpotLight>: から<xref:System.Windows.Media.Media3D.PointLight>継承します。 SpotLight は PointLight と同じように照らし、位置と方向の両方を持ちます。 これらのプロパティは、角度で指定された<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>、設定されたコーン形状<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>の領域とプロパティにライトを投影します。  
   
@@ -142,7 +142,7 @@ ms.locfileid: "80112389"
 ## <a name="animating-models"></a>モデルのアニメーション化  
  3D 実装は[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、2D グラフィックスと同じタイミングおよびアニメーション システムに参加します。 つまり、3D シーンをアニメートするには、モデルのプロパティをアニメートします。 プリミティブのプロパティを直接アニメーション化することもできますが、通常は、モデルの位置や外観を変更する変換をアニメーション化する方が簡単です。 変換はオブジェクトだけでなく個々のモデル<xref:System.Windows.Media.Media3D.Model3DGroup>にも適用できるため、Model3DGroup の子に 1 つのアニメーションセットを適用し、別のアニメーションセットを子オブジェクトのグループに適用することができます。 また、シーンの照明のプロパティをアニメーション化することにより、さまざまな視覚効果を実現できます。 最後に、カメラの位置または視野をアニメーション化することで、投影自体をアニメーション化することもできます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のタイミングおよびアニメーション システムの背景情報については、「[アニメーションの概要](animation-overview.md)」、「[ストーリーボードの概要](storyboards-overview.md)」、および「[Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)」の各トピックをご覧ください。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のオブジェクトをアニメーション化するには、タイムラインを作成し、アニメーションを定義して (時間経過と共に一部のプロパティの値を実際に変更します)、アニメーションを適用するプロパティを指定します。 3D シーン内のすべてのオブジェクトは<xref:System.Windows.Controls.Viewport3D>の子であるため、シーンに適用するアニメーションの対象となるプロパティは、Viewport3D のプロパティのプロパティです。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のオブジェクトをアニメーション化するには、タイムラインを作成し、アニメーションを定義して (時間経過と共に一部のプロパティの値を実際に変更します)、アニメーションを適用するプロパティを指定します。 3D シーン内のすべてのオブジェクトは<xref:System.Windows.Controls.Viewport3D>の子であるため、シーンに適用するアニメーションの対象となるプロパティは Viewport3D のプロパティです。  
   
  その場で揺れるように見えるモデルを作成したいものとします。 モデルに を適用<xref:System.Windows.Media.Media3D.RotateTransform3D>し、あるベクトルから別のベクトルへの回転軸をアニメートすることもできます。 次のコード例では、RotateTransform3D が TransformGroup でモデルに適用される複数の変換の 1 つであるものとして、変換の Rotation3D の Axis プロパティに Vector3DAnimation を適用する方法を示します。  
   
@@ -174,6 +174,6 @@ ms.locfileid: "80112389"
 - <xref:System.Windows.Media.Media3D.Material>
 - [3D 変換の概要](3-d-transformations-overview.md)
 - [WPF の 3D パフォーマンスの最大化](maximize-wpf-3d-performance.md)
-- [ハウツートピック](3-d-graphics-how-to-topics.md)
+- [方法のトピック](3-d-graphics-how-to-topics.md)
 - [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)
 - [イメージ、描画、およびビジュアルによる塗りつぶし](painting-with-images-drawings-and-visuals.md)

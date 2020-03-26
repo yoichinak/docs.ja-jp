@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: 5e99a8cbf1a3fcac2b6785128c284911949f7997
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 05847271cf82739a6a0b609771043c02a7ffc0e9
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111843"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291586"
 ---
 # <a name="graphics-rendering-tiers"></a>グラフィックスの描画層
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションを実行するデバイスのグラフィックス ハードウェア性能は描画層で決まります。  
@@ -45,7 +45,7 @@ ms.locfileid: "80111843"
 ### <a name="rendering-tier-0"></a>描画層 0  
  0 値の描画層は、デバイスのアプリケーションでグラフィックス ハードウェア高速化を利用できないことを意味します。 この層レベルでは、ハードウェア高速化がなく、すべてのグラフィックスがソフトウェアにより描画されるものと想定してください。 この層の機能は、DirectX バージョンが 9.0 未満に対応しています。  
   
-### <a name="rendering-tier-1-and-rendering-tier-2"></a>描画層 1 と描画層 2  
+### <a name="rendering-tier-1-and-rendering-tier-2"></a>描画層 1 と描画層 2
   
 > [!NOTE]
 > .NET Framework 4 以降、レンダリング層 1 は、DirectX 9.0 以降をサポートするグラフィックス ハードウェアのみを含むように再定義されました。 DirectX 7 または 8 をサポートするグラフィックス ハードウェアは、レンダリング層 0 として定義されるようになりました。  
@@ -57,7 +57,7 @@ ms.locfileid: "80111843"
 |機能|レベル 1|レベル 2|  
 |-------------|------------|------------|  
 |DirectX バージョン|9.0 以上が要求されます。|9.0 以上が要求されます。|  
-|ビデオ RAM|60MB 以上が要求されます。|120MB 以上が要求されます。|  
+|ビデオ RAM|60 MB 以上である必要があります。|120 MB 以上である必要があります。|  
 |ピクセル シェーダー|バージョン 2.0 以上が要求されます。|バージョン 2.0 以上が要求されます。|  
 |頂点シェーダー|要件はありません。|バージョン 2.0 以上が要求されます。|  
 |マルチテクスチャ ユニット|要件はありません。|ユニット数が 4 以上であることが要求されます。|  
@@ -72,7 +72,7 @@ ms.locfileid: "80111843"
 |3D MIP マッピング|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は 3D コンテンツを描画するとき、MIP マッピングを試行します。 MIP マッピングでは、テクスチャが小さな視野を占める場合のテクスチャ レンダリングの品質<xref:System.Windows.Controls.Viewport3D>が向上します。|  
 |放射状グラデーション|サポートされている間は、ラージ<xref:System.Windows.Media.RadialGradientBrush>オブジェクトの使用は避けてください。|  
 |3D ライティング計算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は頂点ごとに照明を実行します。つまり、メッシュに適用される素材ごとに各頂点で光の強度を計算する必要があります。|  
-|テキスト描画|サブピクセル フォント描画では、グラフィックス ハードウェアのピクセル シェーダーを利用します。|  
+|テキスト描画|サブピクセル フォントのレンダリングでは、グラフィックス ハードウェアで使用可能なピクセル シェーダが使用されます。|  
   
  次の機能は、描画層 2 でのみハードウェア高速化されます。  
   

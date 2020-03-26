@@ -5,12 +5,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: 4e98dd41606bff559abb981397acf2582a961cef
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 88efab8adf36989938ba5aa887a28b41eb8820f3
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111856"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291619"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、Windows フォーム コードに多大な投資を行う場合は、既存の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows フォーム アプリケーションを最初から書き直すよりも、より効果的に拡張できます。 一般的なシナリオは、Windows フォーム アプリケーション内で実装された[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]1 つ以上のコントロールを埋め込む場合です。 WPF コントロールのカスタマイズの詳細については、「[コントロールのカスタマイズ](../controls/control-customization.md)」を参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "80111856"
   
  このチュートリアルで説明するタスクの完全なコード リストについては、「 [Windows フォームのサンプルでの WPF 複合コントロールのホスト](https://github.com/microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WindowsFormsHostingWpfControl)」を参照してください。  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
 
 このチュートリアルを完了するには Visual Studio が必要です。  
   
@@ -181,11 +181,11 @@ namespace MyControls
   
 <a name="winforms_host_section"></a>
 ## <a name="implementing-the-windows-forms-host-application"></a>Windows フォーム ホスト アプリケーションの実装  
- Windows フォーム ホスト アプリケーション<xref:System.Windows.Forms.Integration.ElementHost>は、オブジェクトを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用して複合コントロールをホストします。 アプリケーションは、`OnButtonClick`複合コントロールからデータを受け取るイベントを処理します。 アプリケーションにはオプションのボタンのセットもあり、それを使用してコントロールの外観を変更することができます。 次の図は、アプリケーションを示しています。  
+ Windows フォーム ホスト アプリケーション<xref:System.Windows.Forms.Integration.ElementHost>は、オブジェクトを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用して複合コントロールをホストします。 アプリケーションは、`OnButtonClick`複合コントロールからデータを受け取るイベントを処理します。 また、コントロールの外観を変更するために使用できるオプション ボタンのセットもあります。 次の図は、アプリケーションを示しています。  
 
 次の図は、Windows フォーム アプリケーションでホストされている WPF 複合コントロールを示しています"  
 
- ![Windows フォーム ホスティング アバロン コントロールを示すスティーンショット。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
+ ![Windows フォーム ホスティング アバロン コントロールを示すスクリーンショット。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-form-hosting-avalon-control.png)  
   
 ### <a name="creating-the-project"></a>プロジェクトの作成  
  プロジェクトを開始するには  

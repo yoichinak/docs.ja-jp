@@ -2,12 +2,12 @@
 title: 追跡プロファイル
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 9723b8fbb0bb8f24e8c9544d8bac8252b2fc763a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 609c3f0c728e71d1bbf5335aae0b18d6f99a7181
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182724"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249039"
 ---
 # <a name="tracking-profiles"></a>追跡プロファイル
 
@@ -23,6 +23,7 @@ ms.locfileid: "79182724"
 <system.serviceModel>
     ...
     <tracking>
+     <profiles>
       <trackingProfile name="Sample Tracking Profile">
         <workflow activityDefinitionId="*">
           <workflowInstanceQueries>

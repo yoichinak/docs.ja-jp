@@ -2,12 +2,12 @@
 title: スタンドアロン JSON シリアル化を使用したデータを取得します。
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 36945f2d42f22ef3aa4f27bcbe403466f124a279
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 614776a905ec319624f76876762c25bfca15a357
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184422"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249449"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>スタンドアロン JSON シリアル化を使用したデータを取得します。
 
@@ -42,7 +42,7 @@ JSON を使用する場合、一部例外はありますが、<xref:System.Runti
 |コレクション、ディクショナリ、および配列|Array|このトピックの「コレクション、ディクショナリ、および配列」を参照してください。|
 |複合型 (<xref:System.Runtime.Serialization.DataContractAttribute> または <xref:System.SerializableAttribute> が適用された型)|複合型|データ メンバーは、JavaScript 複合型のメンバーになります。|
 |<xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装する複合型|複合型|他の複合型と同じですが、一部の <xref:System.Runtime.Serialization.ISerializable> 型はサポートされません。このトピックの「高度な情報」の「ISerializable のサポート」を参照してください。|
-|任意の型の `Null` 値|[Null]|null 許容型もサポートされており、null 非許容型と同様に JSON にマップされます。|
+|任意の型の `Null` 値|[Null]|NULL 許容値型もサポートされ、NULL 非許容値型と同じ方法で JSON にマップされます。|
 
 ### <a name="enumerations-and-json"></a>列挙体と JSON
 

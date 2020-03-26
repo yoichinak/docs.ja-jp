@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: b0f2ad8293daf6ad53899a0f8be82985c24ff50d
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: fa7391ef0f7170ddb9d9d24aa5a1a03635bf46e0
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111206"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291723"
 ---
 # <a name="three-categories-of-graphics-services"></a>グラフィックス サービスの 3 つのカテゴリ
 Windows フォームのグラフィックス製品は、次の 3 つの大きなカテゴリに分類されます。  
@@ -25,7 +25,7 @@ Windows フォームのグラフィックス製品は、次の 3 つの大きな
 - タイポグラフィ  
   
 ## <a name="2d-vector-graphics"></a>2D ベクトル グラフィックス  
- 2 次元ベクトル グラフィックスはプリミティブです。線、曲線、図など。座標系上のポイントのセットで指定されます。 たとえば、直線は 2 つの端点で指定され、四角形は左上隅の位置を示す点と、幅と高さを示す数値のペアで指定されます。 単純パスは、直線で接続されたポイントの配列で指定されます。 ベジェ スプラインは、4 つのコントロール ポイントで指定された高度な曲線です。  
+ 直線、曲線、図などの 2 次元ベクトル グラフィックスは、座標系上のポイントのセットによって指定されるプリミティブです。 たとえば、直線は 2 つの端点で指定され、四角形は左上隅の位置を示す点と、幅と高さを示す数値のペアで指定されます。 単純パスは、直線で接続されたポイントの配列で指定されます。 ベジェ スプラインは、4 つのコントロール ポイントで指定された高度な曲線です。  
   
  GDI+ には、プリミティブ自体に関する情報、プリミティブの描画方法に関する情報を格納するクラス、および実際に描画を行うクラスを格納するクラスと構造体が用意されています。 たとえば、この構造体<xref:System.Drawing.Rectangle>には、四角形の位置とサイズが格納されます。この<xref:System.Drawing.Pen>クラスには、線の色、線の幅、線のスタイルに関する情報が格納されます。<xref:System.Drawing.Graphics>クラスには、線、長方形、パス、およびその他の図形を描画するためのメソッドがあります。 閉じた図形や<xref:System.Drawing.Brush>パスが色やパターンで塗りつぶされる方法に関する情報を格納するクラスもいくつかあります。  
   

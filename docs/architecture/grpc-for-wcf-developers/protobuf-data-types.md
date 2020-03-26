@@ -2,12 +2,12 @@
 title: プロトブーフ スカラー データ型 - WCF 開発者向け gRPC
 description: NET Core で Protobuf および gRPC がサポートする基本的なデータ型と既知のデータ型について説明します。
 ms.date: 09/09/2019
-ms.openlocfilehash: a40f51fa32ddb97ba417ec01f31e1f0187f0d544
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ea3b53426ecf6f50f3bae22a537e227b07248508
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148128"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249436"
 ---
 # <a name="protobuf-scalar-data-types"></a>Protobuf スカラー データ型
 
@@ -125,7 +125,7 @@ Protobuf は、生成`T?`されたメッセージ プロパティ`int?`に単純
 | `uint?`   | `google.protobuf.UInt32Value` |
 | `ulong?`  | `google.protobuf.UInt64Value` |
 
-既知の型`Timestamp`と`Duration`.NET ではクラスとして表現されるため、null 許容バージョンは必要ありません。 しかし、これらの型のプロパティを null に変換する場合は、これらの型のプロパティ`DateTimeOffset`を`TimeSpan`チェックすることが重要です。
+よく知られている型`Timestamp`と`Duration`クラスとして .NET で表されます。 C# 8 以降では、null 許容参照型を使用できます。 しかし、これらの型のプロパティを null に変換する場合は、これらの型のプロパティ`DateTimeOffset`を`TimeSpan`チェックすることが重要です。
 
 ## <a name="decimals"></a>10 進数
 

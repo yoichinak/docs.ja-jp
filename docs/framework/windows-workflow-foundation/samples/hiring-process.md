@@ -2,12 +2,12 @@
 title: 雇用プロセス
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 258ad41f52957023fd091f1668a9532ead270f39
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: ade72422d29d170e9c80f602f151ce765a1a00f7
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111882"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291695"
 ---
 # <a name="hiring-process"></a>雇用プロセス
 このサンプルでは、メッセージング アクティビティ、およびワークフロー サービスとしてホストされる 2 つのワークフローを使用して、ビジネス プロセスを実装する方法を示します。 この 2 つのワークフローは、Contoso, Inc という架空の会社の IT インフラストラクチャの一部です。  
@@ -97,7 +97,7 @@ ms.locfileid: "80111882"
   
 |Project|説明|  
 |-------------|-----------------|  
-|ContosoHR|データ コントラクト、ビジネス オブジェクト、およびリポジトリ クラスを含んでいます。|  
+|ContosoHR|データ コントラクト、ビジネス オブジェクト、およびリポジトリ クラスが含まれます。|  
 |HiringRequestService|Hiring Request Process ワークフローの定義を含んでいます。<br /><br /> このプロジェクトは、サービスとしてワークフロー (xaml ファイル) を自己ホストするコンソール アプリケーションとして実装されます。|  
 |ResumeRequestService|タイムアウトとなるかプロセス終了が決定するまで応募者からの履歴書を収集するワークフロー サービス。<br /><br /> このプロジェクトは、宣言型ワークフロー サービス (xamlx) として実装されます。|  
 |OrgService|組織情報 (Employees、Positions、PositionTypes、および Departments) を公開するサービス。 このサービスは、Enterprise Resource Plan (ERP) の Company Organization モジュールと考えることができます。<br /><br /> このプロジェクトは、Windows 通信基盤 (WCF) サービスを公開するコンソール アプリケーションとして実装されます。|  
@@ -113,7 +113,7 @@ ms.locfileid: "80111882"
 |フローチャート|ビジネス プロセスがフローチャートとして表されます。 このフローチャートの説明では、業務時にプロセスがホワイトボードに描画されるのと同じ方法でプロセスが表されます。|HiringRequestService|  
 |ワークフロー サービス|プロセスの定義を持つフローチャートは、サービスでホストされます (この例では、サービスはコンソール アプリケーションでホストされます)。|HiringRequestService|  
 |メッセージング アクティビティ|フローチャートでは、次の 2 つの方法でメッセージング アクティビティが使用されます。<br /><br /> - ユーザーから情報を取得する(各承認ステップで決定と関連情報を受け取る)。<br />- 他の既存のサービス (受信トレイサービスおよび OrgDataService、サービス参照を通じて使用) と対話する。|HiringRequestService|  
-|コンテンツ ベースの相関関係|雇用要求の ID プロパティにおける承認メッセージ相関関係は次のとおりです。<br /><br /> - プロセスが開始されると、相関ハンドルは要求の ID で初期化されます。<br />- 受信承認メッセージは、その ID に関連付けられます (各承認メッセージの最初のパラメーターは、要求の ID です)。|HiringRequestService / ResumeRequestService|  
+|コンテンツ・ベースの相関|雇用要求の ID プロパティにおける承認メッセージ相関関係は次のとおりです。<br /><br /> - プロセスが開始されると、相関ハンドルは要求の ID で初期化されます。<br />- 受信承認メッセージは、その ID に関連付けられます (各承認メッセージの最初のパラメーターは、要求の ID です)。|HiringRequestService / ResumeRequestService|  
 |カスタム アクティビティ (宣言型およびコード ベース)|このサンプルには、次の複数のカスタム アクティビティがあります。<br /><br /> -   `SaveActionTracking`: このアクティビティはカスタム<xref:System.Activities.Tracking.TrackingRecord>を出力します<xref:System.Activities.NativeActivityContext.Track%2A>(を使用)。 このアクティビティは、<xref:System.Activities.NativeActivity> を拡張する命令型コードを使用して作成されています。<br />-   `GetEmployeesByPositionTypes`: このアクティビティは、位置タイプ ID のリストを受け取り、Contoso でその職位を持つ人物のリストを返します。 このアクティビティは、宣言的に作成されています (アクティビティ デザイナーを使用)。<br />-   `SaveHiringRequestInfo`: このアクティビティは、 の`HiringRequest`情報を`HiringRequestRepository.Save`保存します ( を使用します)。 このアクティビティは、<xref:System.Activities.CodeActivity> を拡張する命令型コードを使用して作成されています。|HiringRequestService|  
 |システムで指定された SQL サーバー永続性|Flowchart プロセス定義をホストする<xref:System.ServiceModel.Activities.WorkflowServiceHost> インスタンスは、システムで指定された SQL サーバー永続性を使用するように構成されています。|HiringRequestService / ResumeRequestService|  
 |カスタム追跡|このサンプルには、`HiringRequestProcess` の履歴を保存するカスタム追跡参加要素が含まれています (これによって、アクションの内容、実行者、および時期が記録されます)。 ソース コードは、HiringRequestService の Tracking フォルダーにあります。|HiringRequestService|  
@@ -122,7 +122,7 @@ ms.locfileid: "80111882"
 |並列アクティビティ|-   <xref:System.Activities.Statements.ParallelForEach%601>は、CEO と人事部長の受信ボックスに同時に登録するために使用されます (2 人の人事マネージャーの承認ステップを待機しています)。<br />-   <xref:System.Activities.Statements.Parallel>は、完了および却下されたステップでクリーンアップタスクを実行するために使用されます。|HiringRequestService|  
 |モデルの取り消し|フローチャートでは、<xref:System.Activities.Statements.CancellationScope> を使用して、取り消し動作を作成します (この場合、一部のクリーンアップが実行されます)。|HiringRequestService|  
 |カスタマー永続参加要素|`HiringRequestPersistenceParticipant` は、ワークフロー変数のデータを Contoso HR データベースに保存されているテーブルに保存します。|HiringRequestService|  
-|ワークフロー サービス|`ResumeRequestService` は、ワークフロー サービスを使用して実装されます。 ワークフロー定義およびサービス情報は、ResumeRequestService.xamlx に含まれています。 サービスは、永続性と追跡を使用するように構成されます。|ResumeRequestService|  
+|ワークフロー サービス|`ResumeRequestService` は、ワークフロー サービスを使用して実装されます。 ワークフロー定義とサービス情報は、ResumeRequestService.xamlx に含まれています。 サービスは、永続性と追跡を使用するように構成されます。|ResumeRequestService|  
 |永続的なタイマー|`ResumeRequestService` は、永続的なタイマーを使用して、求人の期間を定義します (タイムアウトになると、求人は終了します)。|ResumeRequestService|  
 |トランザクション|<xref:System.Activities.Statements.TransactionScope> は、複数のアクティビティの実行時にデータの一貫性を保つために使用されます (新しい履歴書の受信時)。|ResumeRequestService|  
 |トランザクション|カスタムの永続参加要素 (`HiringRequestPersistenceParticipant`) とカスタムの追跡参加要素 (`HistoryFileTrackingParticipant`) では、同じトランザクションを使用します。|HiringRequestService|  

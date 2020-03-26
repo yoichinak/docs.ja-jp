@@ -2,12 +2,12 @@
 title: WCF Web HTTP プログラミング モデルの概要
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: fb6ef0fdcefbc6ceec75ce30db3abf5896d85c61
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f2350b58e3cb33613ebc8e2c3cda1e234bcde25
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184185"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291745"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP プログラミング モデルの概要
 WCF (WCF) WEB HTTP プログラミング モデルは、WCF を使用して WEB HTTP サービスを構築するために必要な基本的な要素を提供します。 WCF WEB HTTP サービスは、Web ブラウザーを含む、可能なクライアントの範囲が最も広い範囲でアクセスするように設計されており、次の固有の要件があります。  
@@ -121,7 +121,7 @@ interface ICustomer
 |<xref:System.TimeSpan>|DD.HH:MM:SS<br /><br /> DD = 日、HH = 時、MM = 分、SS = 秒|  
 |<xref:System.Guid>|GUID。たとえば、次のようになります。<br /><br /> 936DA01F-9ABD-4d9d-80C7-02AF85C822A8|  
 |<xref:System.DateTimeOffset>|MM/DD/YYYY HH:MM:SS MM:SS<br /><br /> DD = 日、HH = 時、MM = 分、SS = 秒|  
-|列挙型|列挙値。たとえば、次のコードのように列挙体を定義します。<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> クエリ文字列に、任意の列挙値 (またはそれぞれに対応する integer 値) を指定できます。|  
+|列挙|列挙値。たとえば、次のコードのように列挙体を定義します。<br /><br /> `public enum Days{ Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };`<br /><br /> クエリ文字列に、任意の列挙値 (またはそれぞれに対応する integer 値) を指定できます。|  
 |型と文字列表現を双方向に変換できる `TypeConverterAttribute` を持つ型。|型コンバーターによって異なります。|  
   
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>形式と WCF WEB HTTP プログラミング モデル  
@@ -135,7 +135,7 @@ interface ICustomer
   
  つまり、WCF WEB HTTP プログラミング モデルは任意の種類のデータを処理できますが、プログラミングを<xref:System.IO.Stream>行う場合があります。  
   
- .NET Framework 3.5 では、JSON データ (AJAX) とシンジケーション フィード (ATOM および RSS を含む) のサポートが提供されます。 これらの機能の詳細については、「 [WCF Web HTTP の書式設定](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)WCF[配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)」および[「AJAX 統合と JSON サポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)」を参照してください。  
+ .NET Framework 3.5 では、JSON データ (AJAX) とシンジケーション フィード (ATOM および RSS を含む) のサポートが提供されます。 これらの機能の詳細については、「 [WCF Web HTTP の書式設定](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md) [、WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)、および[AJAX 統合と JSON サポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)」を参照してください。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP プログラミング モデルとセキュリティ  
 

@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: c64f11c00174981925342f1493ef0b809a57ecb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c45c6672983866df6c47ec84981cc7bd11637c0c
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148648"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249078"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 列の値が不明、または欠落している場合は、リレーショナル データベース内の null 値が使用されます。 null は、空の文字列 (文字型または 日時データ型の場合) でも、0 値 (数値データ型の場合) でもありません。 ANSI SQL-92 の規格では、すべての null が一貫して処理されるように、すべてのデータ型で同じである必要があると規定されています。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することによって null セマンティクスが提供されます。 <xref:System.Data.SqlTypes> の各データ型には、そのデータ型のインスタンスに割り当てることができる独自の `IsNull` プロパティと `Null` 値があります。  
   
 > [!NOTE]
-> .NET Framework version 2.0 では、NULL 許容型がサポートされました。この型を使用することで、値型を拡張して基になる型のすべての値を表すことができます。 これらの CLR null 許容型は、<xref:System.Nullable> 構造体のインスタンスを表します。 この機能は、値の型がボックス化およびボックス化解除されている場合に特に有効であり、オブジェクトの型との互換性が強化されます。 ANSI SQL null は `null` 参照 (または Visual Basic の `Nothing`) と同じようには動作しないため、CLR null 許容型はデータベース null の格納を目的としたものではありません。 データベースの ANSI SQL null 値を操作するには、<xref:System.Nullable> ではなく <xref:System.Data.SqlTypes> null を使用します。 Visual Basic で CLR NULL 許容型を使用する方法の詳細については、「 [Null 許容値型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)」[を参照してください](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)。  
+> .NET Framework Version 2.0 では、NULL 許容値型のサポートが導入され、プログラマは値型を拡張して基になる型のすべての値を表す機能を提供しました。 これらの CLR NULL 許容値型は、<xref:System.Nullable>構造体のインスタンスを表します。 この機能は、値の型がボックス化およびボックス化解除されている場合に特に有効であり、オブジェクトの型との互換性が強化されます。 CLR の null 許容値型は、データベース`null``Nothing`の NULL を格納するためのものではありません。 データベースの ANSI SQL null 値を操作するには、<xref:System.Nullable> ではなく <xref:System.Data.SqlTypes> null を使用します。 Visual Basic で CLR 値 null 許容型を使用する方法の詳細については、「 [Null 許容値型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)」[を参照してください](../../../../csharp/language-reference/builtin-types/nullable-value-types.md)。  
   
 ## <a name="nulls-and-three-valued-logic"></a>NULL および 3 つの値を持つロジック  
  列定義で null 値を許可すると、アプリケーションに 3 値ロジックが導入されます。 比較では、次の 3 つの状態のいずれかに評価されます。  
@@ -143,5 +143,5 @@ String.Equals instance method:
   
 ## <a name="see-also"></a>関連項目
 
-- [SQL Server データ型とADO.NET](sql-server-data-types.md)
+- [SQL Server データ型と ADO.NET](sql-server-data-types.md)
 - [ADO.NET の概要](../ado-net-overview.md)
