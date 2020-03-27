@@ -481,6 +481,8 @@
     - name: 移行と相互運用性
       href: migration-and-interoperability.md
       items:
+        - name: WPF 3.X から WPF 4.5 に移行する
+          href: types-migrated-from-wpf-to-system.md
         - name: WPF と Windows フォームの相互運用性
           href: wpf-and-windows-forms-interoperation.md
           items:

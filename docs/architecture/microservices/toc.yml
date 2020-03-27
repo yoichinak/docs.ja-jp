@@ -1,4 +1,4 @@
-- name: '.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ'
+- name: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ'
   href: index.md
   items:
     - name: コンテナーと Docker の概要
@@ -10,7 +10,7 @@
           href: container-docker-introduction/docker-terminology.md
         - name: Docker コンテナー、イメージ、レジストリ
           href: container-docker-introduction/docker-containers-images-registries.md
-    - name: Docker コンテナー用 .NET Core と .NET Framework の選択
+    - name: Docker コンテナー用 .NET Core または .NET Framework を選択する
       href: net-core-net-framework-containers/index.md
       items:
         - name: 一般的なガイダンス
@@ -25,7 +25,7 @@
           href: net-core-net-framework-containers/net-container-os-targets.md
         - name: 公式の .NET Docker イメージ
           href: net-core-net-framework-containers/official-net-docker-images.md
-    - name: コンテナーとマイクロサービス ベースのアプリケーションの設計
+    - name: コンテナーベースおよびマイクロサービスベースのアプリの設計
       href: architect-microservice-container-applications/index.md
       items:
         - name: モノリシック アプリケーションのコンテナー化
@@ -60,12 +60,12 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-    - name: Docker ベースのアプリケーションの開発プロセス
+    - name: Docker ベースのアプリの開発プロセス
       href: docker-application-development-process/index.md
       items:
         - name: Docker アプリの開発ワークフロー
           href: docker-application-development-process/docker-app-development-workflow.md
-    - name: 複数のコンテナーとマイクロサービス ベースの NET アプリケーションのデザインと開発
+    - name: 複数コンテナーおよびマイクロサービスベースの .NET アプリの設計と開発
       href: multi-container-microservice-net-applications/index.md
       items:
         - name: マイクロサービス指向アプリケーションの設計
@@ -125,7 +125,7 @@
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
         - name: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
           href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
-    - name: 回復性の高いアプリケーションの実装
+    - name: 回復性があるアプリを実装する
       href: implement-resilient-applications/index.md
       items:
         - name: 部分的なエラーの処理
@@ -136,9 +136,7 @@
           href: implement-resilient-applications/implement-retries-exponential-backoff.md
         - name: 回復力の高い Entity Framework Core SQL 接続の実装
           href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
-        - name: 指数のバックオフを含むカスタムの HTTP 呼び出しの再試行について
-          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
-        - name: HttpClientFactory を使用して回復力の高い HTTP 要求を実装する
+        - name: IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
           href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
         - name: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
           href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
@@ -146,7 +144,7 @@
           href: implement-resilient-applications/implement-circuit-breaker-pattern.md
         - name: 正常性の監視
           href: implement-resilient-applications/monitor-app-health.md
-    - name: NET マイクロサービスおよび Web アプリケーションをセキュリティで保護する
+    - name: .NET マイクロサービスと Web Apps をセキュリティで保護する
       href: secure-net-microservices-web-applications/index.md
       items:
         - name: .NET マイクロサービスと Web アプリケーションでの承認について
