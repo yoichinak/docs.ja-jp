@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 1a94acde3d0726808deebcae1437e7318f5392df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3aacc7c73167771a632bb31164f2c551d60ce8f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183557"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345245"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。 このサンプルで示すのは、シリアル化および逆シリアル化時に既知の型を動的に追加する方法です。  
@@ -356,11 +356,11 @@ Lists combined:
   
 5. アプリケーションが正しく動作しない場合は、次の手順に従って環境設定が適切であることを確認してください。  
   
-6. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](https://go.microsoft.com/fwlink/?LinkId=150774)実行したことを確認します。  
+6. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](https://docs.microsoft.com/dotnet/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples)実行したことを確認します。  
   
-7. ソリューションをビルドするには[、「Windows コミュニケーション ファウンデーションの構築サンプル」の指示に](https://go.microsoft.com/fwlink/?LinkId=150775)従います。  
+7. ソリューションをビルドするには[、「Windows コミュニケーション ファウンデーションの構築サンプル」の指示に](https://docs.microsoft.com/dotnet/framework/wcf/samples/building-the-samples)従います。  
   
-8. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](https://go.microsoft.com/fwlink/?LinkId=150776)従います。  
+8. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](https://docs.microsoft.com/dotnet/framework/wcf/samples/running-the-samples)従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

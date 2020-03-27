@@ -1,18 +1,18 @@
 ---
-title: '方法 : カスタム WS-Metadata Exchange バインディングを構成する'
+title: '方法: カスタム WS-Metadata Exchange バインディングを構成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4e0c583eeef4bf068c08b273c833506ce80cbc3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185605"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345281"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>方法 : カスタム WS-Metadata Exchange バインディングを構成する
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>方法: カスタム WS-Metadata Exchange バインディングを構成する
 ここでは、カスタム WS-Metadata Exchange バインディングを構成する方法について説明します。 Wcf (Wcf) には、システム定義のメタデータ バインディングが 4 つ含まれていますが、任意のバインドを使用してメタデータを公開できます。 ここでは、`wsHttpBinding` を使用してメタデータを公開する方法を示します。 このバインディングでは、メタデータをセキュリティで保護して公開することができます。 この記事のコードは、[作業の開始](../samples/getting-started-sample.md)に基づいています。  
   
 ### <a name="using-a-configuration-file"></a>構成ファイルの使用  
@@ -32,8 +32,8 @@ ms.locfileid: "79185605"
 2. この新しい動作を参照する `behaviorConfiguration` 属性をサービス タグに追加します。  
   
     ```xml  
-    <service        name="Microsoft.ServiceModel.Samples.CalculatorService"  
-    behaviorConfiguration="CalculatorServiceBehavior">
+    <service name="Microsoft.ServiceModel.Samples.CalculatorService"  
+    behaviorConfiguration="CalculatorServiceBehavior" />
     ```  
   
 3. メタデータ エンドポイントを追加し、アドレスに mex、バインディングに `wsHttpBinding`、コントラクトに <xref:System.ServiceModel.Description.IMetadataExchange> をそれぞれ指定します。  

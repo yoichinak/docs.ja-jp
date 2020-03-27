@@ -1,37 +1,37 @@
 ---
-title: '方法: キー フレームを使用してオブジェクトをアニメーション化する'
+title: '方法 : キー フレームを使用してオブジェクトをアニメーション化する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: ffbe1845b634c8f94eb6a10dfa44fcf9903e0cd5
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.openlocfilehash: 0bc33b189fd856dbe8106c1db35bc18e27ea131e
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69933906"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344702"
 ---
-# <a name="how-to-animate-an-object-by-using-key-frames"></a>方法: キー フレームを使用してオブジェクトをアニメーション化する
-この例では、キーフレームを使用して、オブジェクト (この<xref:System.Windows.Controls.Page.Background%2A>例では<xref:System.Windows.Controls.Page>コントロールのプロパティ) をアニメーション化する方法を示します。  
+# <a name="how-to-animate-an-object-by-using-key-frames"></a>方法 : キー フレームを使用してオブジェクトをアニメーション化する
+この例では、キー フレームを使用してコントロールの<xref:System.Windows.Controls.Page.Background%2A>プロパティであるオブジェクトをアニメーション化する方法<xref:System.Windows.Controls.Page>を次の例に示します。  
   
 ## <a name="example"></a>例  
- 次の例では<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames> 、クラスを使用して、 <xref:System.Windows.Controls.Page.Background%2A> <xref:System.Windows.Controls.Page>コントロールのプロパティの色の変更をアニメーション化しています。 この例のアニメーションは、一定の間隔で別の背景ブラシに変わります。 このアニメーションでは<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame> 、クラスを使用して、3つの異なるキーフレームを作成します。 アニメーションは、次の方法でキーフレームを使用します。  
+ 次の例では、<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>このクラスを使用して、コントロールのプロパティ<xref:System.Windows.Controls.Page.Background%2A>の色の<xref:System.Windows.Controls.Page>変更をアニメーション化します。 アニメーション例は、一定の間隔で別の背景ブラシに変更されます。 このアニメーションでは、<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>クラスを使用して 3 つの異なるキー フレームを作成します。 アニメーションでは、次のようにキー フレームを使用します。  
   
-1. 最初の秒の最後に、 <xref:System.Windows.Media.LinearGradientBrush>クラスのインスタンスをアニメーション化します。 この例のこのセクションでは、色が黄色からオレンジ色に変化するように、背景色に線状グラデーションを適用します。  
+1. 最初の 1 秒目の終わりに、クラスのインスタンスを<xref:System.Windows.Media.LinearGradientBrush>アニメーション化します。 このセクションでは、背景色に線形グラデーションを適用し、色が黄色からオレンジ色から赤に変わります。  
   
-2. 次の秒の最後に、 <xref:System.Windows.Media.RadialGradientBrush>クラスのインスタンスをアニメーション化します。 この例のこのセクションでは、色が白から青に変化するように背景色に放射状グラデーションを適用します。  
+2. 次の 1 秒の終わりに、クラスのインスタンスをアニメーション<xref:System.Windows.Media.RadialGradientBrush>化します。 このセクションでは、背景色に放射状グラデーションを適用し、色が白から青から黒に変わります。  
   
-3. 3番目の秒の最後に、 <xref:System.Windows.Media.DrawingBrush>クラスのインスタンスをアニメーション化します。 この例のこのセクションでは、背景にチェッカーボードパターンを適用します。  
+3. 3 秒目の終わりに、クラスのインスタンスをアニメーション化します<xref:System.Windows.Media.DrawingBrush>。 このセクションでは、背景にチェッカーボードパターンを適用します。  
   
 4. アニメーションは再び開始され、無限に繰り返されます。  
   
 > [!NOTE]
-> <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>は、 <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>クラスで使用できるキーフレームの唯一の種類です。 値が急激<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>に変化するようなキーフレーム (この例の色の変化) は突然発生します。  
+> <xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>は、クラスで使用できる唯一のタイプのキー<xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>フレームです。 キー フレーム<xref:System.Windows.Media.Animation.DiscreteObjectKeyFrame>のような値の急激な変化、つまりこの例の色の変化が突然発生します。  
   
  [!code-xaml[keyframes_snip#ObjectAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ObjectAnimationUsingKeyFramesExample.xaml#objectanimationusingkeyframeswholepage)]  
   
- サンプル全体については、「[キーフレーム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。  
+ サンプル全体については、「[キーフレーム アニメーションのサンプル](https://github.com/microsoft/WPF-Samples/tree/master/Animation/KeyFrameAnimation)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

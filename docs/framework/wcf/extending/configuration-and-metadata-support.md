@@ -2,12 +2,12 @@
 title: 構成とメタデータのサポート
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: 0ec8c3286037e7adbe6f5efb73e846a30b9d48d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fb4e1cc51b827f083e580362f57df27ced770179
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185665"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345298"
 ---
 # <a name="configuration-and-metadata-support"></a>構成とメタデータのサポート
 ここでは、バインディングおよびバインド要素用に構成とメタデータのサポートを有効にする方法を説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "79185665"
   <system.serviceModel>  
     <extensions>  
       <bindingElementExtensions>  
-      <add name="udpTransport" type="Microsoft.ServiceModel.Samples.UdpTransportElement, UdpTransport />  
+      <add name="udpTransport" type="Microsoft.ServiceModel.Samples.UdpTransportElement, UdpTransport" />  
       </bindingElementExtensions>  
     </extensions>  
   </system.serviceModel>  
@@ -93,7 +93,7 @@ protected override void OnApplyConfiguration(string configurationName)
   <configSections>  
      <sectionGroup name="system.serviceModel">  
          <sectionGroup name="bindings">  
-                 <section name="sampleProfileUdpBinding" type="Microsoft.ServiceModel.Samples.SampleProfileUdpBindingCollectionElement, UdpTransport />  
+                 <section name="sampleProfileUdpBinding" type="Microsoft.ServiceModel.Samples.SampleProfileUdpBindingCollectionElement, UdpTransport" />  
          </sectionGroup>  
      </sectionGroup>  
   </configSections>  
@@ -153,7 +153,7 @@ if (soapBinding != null)
       <metadata>  
         <wsdlImporters>  
           <extension type=" Microsoft.ServiceModel.Samples.UdpBindingElementImporter, UdpTransport" />  
-        </policyImporters>  
+        </wsdlImporters>  
       </metadata>  
     </client>  
   </system.serviceModel>  

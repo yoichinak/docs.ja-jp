@@ -1,16 +1,16 @@
 ---
-title: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する方法
+title: '方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: dd96bc168413eef99260a5251e74971aa1309ff4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf89c793cbd72a0a3980e6ec8e42c688dcedec26
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184882"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344971"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>プログラムを使用して探索可能性に WCF サービスとクライアントを追加する方法
-ここでは、WCF (WCF) サービスを検出可能にする方法について説明します。 これは[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプルに基づいています。  
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する
+ここでは、WCF (WCF) サービスを検出可能にする方法について説明します。 これは[セルフホスト](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)サンプルに基づいています。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>既存の自己ホスト サービス サンプルを探索用に構成するには  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79184882"
   
      このメソッドは、`FindCalculatorServiceAddress` から返されたエンドポイント アドレスを使用して、電卓サービスを呼び出します。  
   
-11. `InvokeCalculatorService` メソッド内で、`CalculatorServiceClient` クラスのインスタンスを作成します。 このクラスは、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプルで定義されています。 これは、Svcutil.exe を使用して生成されました。  
+11. `InvokeCalculatorService` メソッド内で、`CalculatorServiceClient` クラスのインスタンスを作成します。 このクラスは、[セルフホスト](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)サンプルで定義されています。 これは、Svcutil.exe を使用して生成されました。  
   
     ```csharp  
     // Create a client  
@@ -220,7 +220,7 @@ ms.locfileid: "79184882"
     ```  
   
 ## <a name="example"></a>例  
- このサンプルで使用されているコード全体の一覧を次に示します。 このコードは[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプルに基づいているため、変更されたファイルのみがリストされます。 セルフホストサンプルの詳細については、[セットアップ手順](https://go.microsoft.com/fwlink/?LinkId=145522)を参照してください。  
+ このサンプルで使用されているコード全体の一覧を次に示します。 このコードは[セルフホスト](https://docs.microsoft.com/dotnet/framework/wcf/samples/self-host)サンプルに基づいているため、変更されたファイルのみがリストされます。 セルフホストサンプルの詳細については、[セットアップ手順](https://docs.microsoft.com/dotnet/framework/wcf/samples/set-up-instructions)を参照してください。  
   
 ```csharp  
 // Service.cs  
