@@ -3,18 +3,28 @@
 - name: 概要
   expanded: true
   items:
-    - name: API
-      items:
-        - name: ML.NET API
-          href: how-does-mldotnet-work.md
     - name: モデル ビルダー & CLI
       items:
         - name: ML.NET モデル ビルダー ツール
           href: automate-training-with-model-builder.md
         - name: ML.NET コマンド ライン インターフェイス
           href: automate-training-with-cli.md
+    - name: API
+      items:
+        - name: ML.NET API
+          href: how-does-mldotnet-work.md
 - name: チュートリアル
   items:
+    - name: モデル ビルダー & CLI
+      items:
+        - name: 価格を予測する (モデル ビルダー & 回帰)
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: ML.NET CLI を使用してセンチメントを分析する
+          href: tutorials/sentiment-analysis-cli.md
+        - name: Razor Pages でのセンチメントの分析 (モデル ビルダー & 二項分類)
+          href: tutorials/sentiment-analysis-model-builder.md
+        - name: 正常性違反の分類 (モデル ビルダー & 多クラス分類)
+          href: tutorials/health-violation-classification-model-builder.md
     - name: API
       items:
         - name: 概要
@@ -41,16 +51,6 @@
           href: tutorials/object-detection-onnx.md
         - name: TensorFlow を使用したセンチメントの分類 (テキスト分類)
           href: tutorials/text-classification-tf.md
-    - name: モデル ビルダー & CLI
-      items:
-        - name: 価格を予測する (モデル ビルダー & 回帰)
-          href: tutorials/predict-prices-with-model-builder.md
-        - name: ML.NET CLI を使用してセンチメントを分析する
-          href: tutorials/sentiment-analysis-cli.md
-        - name: Razor Pages でのセンチメントの分析 (モデル ビルダー & 二項分類)
-          href: tutorials/sentiment-analysis-model-builder.md
-        - name: 正常性違反の分類 (モデル ビルダー & 多クラス分類)
-          href: tutorials/health-violation-classification-model-builder.md
     - name: Infer.NET
       items:
         - name: Infer.NET を使用した確率的プログラミング
@@ -69,6 +69,16 @@
       href: resources/improve-machine-learning-model-ml-net.md
 - name: 使い方ガイド
   items:
+    - name: モデル ビルダー & CLI
+      items:
+        - name: モデル ビルダーにデータを読み込む
+          href: how-to-guides/load-data-model-builder.md
+        - name: モデル ビルダーのインストール
+          href: how-to-guides/install-model-builder.md
+        - name: CLI をインストールする
+          href: how-to-guides/install-ml-net-cli.md
+        - name: 自動化された ML API を使用する
+          href: how-to-guides/how-to-use-the-automl-api.md
     - name: API
       items:
         - name: データの読み込み
@@ -97,16 +107,6 @@
               href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
             - name: Web API にモデルをデプロイする
               href: how-to-guides/serve-model-web-api-ml-net.md
-    - name: モデル ビルダー & CLI
-      items:
-        - name: モデル ビルダーにデータを読み込む
-          href: how-to-guides/load-data-model-builder.md
-        - name: モデル ビルダーのインストール
-          href: how-to-guides/install-model-builder.md
-        - name: CLI をインストールする
-          href: how-to-guides/install-ml-net-cli.md
-        - name: 自動化された ML API を使用する
-          href: how-to-guides/how-to-use-the-automl-api.md
 - name: 関連項目
   items:
     - name: ML.NET API リファレンス

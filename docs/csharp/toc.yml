@@ -1328,7 +1328,7 @@
                   displayName: 'enum, bit flags, bit field'
                 - name: 構造体型
                   href: language-reference/builtin-types/struct.md
-                  displayName: struct type
+                  displayName: 'struct type, readonly'
                 - name: null 許容値型
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'

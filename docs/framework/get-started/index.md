@@ -6,19 +6,19 @@ helpviewer_keywords:
 - .NET Framework, getting started
 - getting started [.NET Framework]
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
-ms.openlocfilehash: 0fffbb2f1b58d8ba65d9c5ca8b7c8edc583af2da
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8708fbd21967c5acb548e0e77ba5d9e060336c50
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397624"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345045"
 ---
 # <a name="get-started-with-net-framework"></a>.NET Framework の使用を開始する
 
 .NET Framework は、.NET Framework を対象としたアプリを管理するランタイム実行環境です。 これは、メモリ管理やその他のシステム サービスを提供する共通言語ランタイムと、プログラマがアプリ開発のすべての主要領域で堅牢性と信頼性の高いコードを利用できるようにするための広範なクラス ライブラリから構成されています。
 
 > [!NOTE]
-> .NET Framework は、Windows システムでのみ使用できます。 [.NET Core](../../core/index.md) を使用することで、Windows、MacOS、および Linux でアプリを実行できます。
+> .NET Framework は、Windows システムでのみ使用できます。 Windows、macOS、Linux 上で [.NET Core](../../core/index.yml) を使用してアプリを開発および実行できます。
 
 ## <a name="what-is-net-framework"></a>.NET Framework とは
 
@@ -80,12 +80,12 @@ Windows 8 よりも前の Windows バージョンで .NET Framework を削除す
 | [.NET Framework および特別なリリース](the-net-framework-and-out-of-band-releases.md) | .NET Framework のアウトオブバンド リリースと、これらをアプリ内で使用する方法について説明します。 |
 | [システム要件](system-requirements.md) | .NET Framework を実行するためのハードウェアおよびソフトウェアの要件を示します。 |
 | [.NET Core とオープン ソース](net-core-and-open-source.md) | .NET Core と .NET Framework の関係性、およびオープン ソースの .NET Core プロジェクトにアクセスする方法について説明します。 |
-| [.NET Core ドキュメント](../../core/index.md) | .NET Core の概念と API リファレンス ドキュメントを提供します。 |
+| [.NET Core ドキュメント](../../core/index.yml) | .NET Core の概念と API リファレンス ドキュメントを提供します。 |
 | [.NET Standard](../../standard/net-standard.md) | 統一された API のセットを複数のプラットフォームで使用できるようにするために、個々の .NET 実装がサポートするバージョン管理された仕様である、.NET Standard について説明します。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework ガイド](../index.md)
+- [.NET Framework ガイド](../index.yml)
 - [新機能](../whats-new/index.md)
 - [.NET API ブラウザー](../../../api/index.md)
 - [開発ガイド](../development-guide.md)

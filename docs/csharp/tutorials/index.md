@@ -2,12 +2,12 @@
 title: C# のチュートリアル
 description: 以下の C# のチュートリアルでは、C# プログラムをビルドする方法と C# 言語機能について説明します。
 ms.date: 10/25/2018
-ms.openlocfilehash: 8adbec3311c7a0e88475734312ecc3621042c3f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 57d2471ef8ad06eb821a1d1d88210dfbb8dc732e
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346796"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345093"
 ---
 # <a name="c-tutorials"></a>C# のチュートリアル
 
@@ -56,7 +56,7 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 
 ## <a name="general-tutorials"></a>全般的なチュートリアル
 
-次のチュートリアルで、[.NET Core](../../core/index.md) を使用して C# プログラムをビルドできます。
+次のチュートリアルで、[.NET Core](../../core/index.yml) を使用して C# プログラムをビルドできます。
 
 * [コンソール アプリケーション](console-teleprompter.md): コンソール I/O、コンソール アプリケーションの構造、およびタスクベースの非同期プログラミング モデルの基礎について説明します。
 * [REST クライアント](console-webapiclient.md): Web 通信、JSON シリアル化、および C# 言語でのオブジェクト指向の機能について説明します。

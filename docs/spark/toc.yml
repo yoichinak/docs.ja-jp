@@ -21,6 +21,8 @@
       href: tutorials/batch-processing.md
     - name: 構造化ストリーミング
       href: tutorials/streaming.md
+    - name: 感情分析
+      href: tutorials/ml-sentiment-analysis.md
 - name: 使い方ガイド
   items:
     - name: アプリケーションをデバッグする
