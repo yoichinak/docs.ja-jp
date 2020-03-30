@@ -3,19 +3,21 @@ title: Fedora 29 に .NET Core をインストールする - パッケージ マ
 description: パッケージ マネージャーを使用して、.NET Core SDK とランタイムを Fedora 29 にインストールします。
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: d917c867e0d8cdb066b7dee64a9dbd767b56072d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: bf75231ddf1cbf96668e949e20b24a0c0f6b4154
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920804"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134282"
 ---
 # <a name="fedora-29-package-manager---install-net-core"></a>Fedora 29 パッケージ マネージャー - .NET Core をインストールする
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-この記事では、パッケージ マネージャーを使用して Fedora 29 に .NET Core をインストールする方法について説明します。 ランタイムをインストールする場合は、[ASP.NET Core ランタイム](#install-the-aspnet-core-runtime)をインストールすることをお勧めします。これには、.NET Core ランタイムと ASP.NET Core ランタイムの両方が含まれているためです。
+この記事では、パッケージ マネージャーを使用して Fedora 29 に .NET Core をインストールする方法について説明します。
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Microsoft キーとフィードを登録する
 
@@ -31,7 +33,7 @@ ms.locfileid: "76920804"
 
 ```bash
 sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
-sudo wget -q -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/29/prod.repo
+sudo wget -O /etc/yum.repos.d/microsoft-prod.repo https://packages.microsoft.com/config/fedora/29/prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>.NET Core SDK をインストールする

@@ -3,12 +3,12 @@ title: アンマネージド型 - C# リファレンス
 ms.date: 09/06/2019
 helpviewer_keywords:
 - unmanaged type [C#]
-ms.openlocfilehash: 8a4599514115aa21f17c32848ce203fea704072e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9dd2ab4e044b8a86bfe72a6fcf2481b8e1e80bf4
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846466"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507231"
 ---
 # <a name="unmanaged-types-c-reference"></a>アンマネージド型 (C# リファレンス)
 
@@ -31,12 +31,12 @@ C# 8.0 以降では、次の例に示すように、アンマネージド型の�
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳しくは、「[C# 言語仕様](~/_csharplang/spec/unsafe-code.md#pointer-types)」の「[ポインター型](~/_csharplang/spec/introduction.md)」をご覧ください。
+詳しくは、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[ポインター型](~/_csharplang/spec/unsafe-code.md#pointer-types)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [メモリおよびスパンに関連する型](../../../standard/memory-and-spans/index.md)
 - [sizeof 演算子](../operators/sizeof.md)
-- [stackalloc 演算子](../operators/stackalloc.md)
+- [stackalloc](../operators/stackalloc.md)

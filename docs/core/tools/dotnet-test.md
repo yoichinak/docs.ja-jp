@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 02/27/2020
-ms.openlocfilehash: 6e906ab396a788905c99f50e73390b765b240efc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78157012"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507309"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,11 +20,13 @@ ms.locfileid: "78157012"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame]
-    [-c|--configuration] [--collect] [-d|--diag] [-f|--framework]
-    [--filter] [-l|--logger] [--no-build] [--no-restore]
-    [-o|--output] [-r|--results-directory] [-s|--settings]
-    [-t|--list-tests] [-v|--verbosity] [-- <RunSettings arguments>]
+dotnet test [<PROJECT> | <SOLUTION>]
+    [-a|--test-adapter-path] [--blame] [-c|--configuration]
+    [--collect] [-d|--diag] [-f|--framework] [--filter]
+    [--interactive] [-l|--logger] [--no-build] [--nologo]
+    [--no-restore] [-o|--output] [-r|--results-directory]
+    [--runtime] [-s|--settings] [-t|--list-tests]
+    [-v|--verbosity] [[--] <RunSettings arguments>]
 
 dotnet test [-h|--help]
 ```
@@ -39,9 +41,9 @@ dotnet test [-h|--help]
 
 ## <a name="arguments"></a>引数
 
-- **`PROJECT`**
+- **`PROJECT | SOLUTION`**
 
-  テスト プロジェクトへのパス。 指定しない場合は、既定で現在のディレクトリに設定されます。
+  テスト プロジェクトまたはソリューションへのパス。 指定しない場合は、既定で現在のディレクトリに設定されます。
 
 ## <a name="options"></a>オプション
 
@@ -49,11 +51,11 @@ dotnet test [-h|--help]
 
   テスト実行で指定されたパスからカスタムのテスト アダプターを使用します。
 
-- **`-blame`**
+- **`--blame`**
 
   変更履歴モードでテストを実行します。 このオプションは、テスト ホストがクラッシュする原因となる問題のあるテストを分離するために役立ちます。 これは、現在のディレクトリ内に出力ファイルを *Sequence.xml* として作成します。このファイルは、クラッシュ前にテストの実行順序をキャプチャします。
 
-- **`c|--configuration {Debug|Release}`**
+- **`c|--configuration <CONFIGURATION>`**
 
   ビルド構成を定義します。 既定値は `Debug` ですが、プロジェクトの構成がこの既定の SDK 設定をオーバーライドする可能性があります。
 
@@ -77,6 +79,10 @@ dotnet test [-h|--help]
 
   コマンドの短いヘルプを印刷します。
 
+- **`--interactive`**
+
+  コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
+
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
   テスト結果のロガーを指定します。
@@ -84,6 +90,10 @@ dotnet test [-h|--help]
 - **`--no-build`**
 
   実行前にテスト プロジェクトをビルドしません。 また、- `--no-restore` フラグが暗黙的に設定されます。
+
+- **`--nologo`**
+
+  Microsoft TestPlatform バナーを表示せずにテストを実行します。 .NET Core 3.0 SDK 以降で使用できます。
 
 - **`--no-restore`**
 
@@ -96,6 +106,10 @@ dotnet test [-h|--help]
 - **`-r|--results-directory <PATH>`**
 
   テスト結果が配置されるディレクトリです。 指定されたディレクトリが存在しない場合は、作成されます。
+
+- **`--runtime <RUNTIME_IDENTIFIER>`**
+
+  テスト対象のターゲット ランタイム。
 
 - **`-s|--settings <SETTINGS_FILE>`**
 

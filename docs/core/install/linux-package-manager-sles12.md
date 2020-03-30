@@ -3,19 +3,21 @@ title: SLES 12 に .NET Core をインストールする - パッケージ マ�
 description: パッケージ マネージャーを使用して、.NET Core SDK とランタイムを SLES 12 にインストールします。
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: a6c10c6b11bc57ae4bbe814c66c563b85ce3c22b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: 8358107c682274fc2b75bf72689eaa4b168a86c5
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76920730"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134218"
 ---
 # <a name="sles-12-package-manager---install-net-core"></a>SLES 12 パッケージ マネージャー - .NET Core をインストールする
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-この記事では、パッケージ マネージャーを使用して SLES 12 に .NET Core をインストールする方法について説明します。 ランタイムをインストールする場合は、[ASP.NET Core ランタイム](#install-the-aspnet-core-runtime)をインストールすることをお勧めします。これには、.NET Core ランタイムと ASP.NET Core ランタイムの両方が含まれているためです。
+この記事では、パッケージ マネージャーを使用して SLES 12 に .NET Core をインストールする方法について説明します。
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Microsoft キーとフィードを登録する
 

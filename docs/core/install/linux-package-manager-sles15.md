@@ -3,19 +3,21 @@ title: SLES 15 に .NET Core をインストールする - パッケージ マ�
 description: パッケージ マネージャーを使用して、.NET Core SDK とランタイムを SLES 15 にインストールします。
 author: thraka
 ms.author: adegeo
-ms.date: 12/04/2019
-ms.openlocfilehash: f48c131b4250bd04fffc0d815a3500732caacb7c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: b86b97bf17165f2f7a70e80ff581750ba39be375
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76921031"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134173"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>SLES 15 パッケージ マネージャー - .NET Core のインストール
 
 [!INCLUDE [package-manager-switcher](./includes/package-manager-switcher.md)]
 
-この記事では、パッケージ マネージャーを使用して SLES 15 に .NET Core をインストールする方法について説明します。 ランタイムをインストールする場合は、[ASP.NET Core ランタイム](#install-the-aspnet-core-runtime)をインストールすることをお勧めします。これには、.NET Core ランタイムと ASP.NET Core ランタイムの両方が含まれているためです。
+この記事では、パッケージ マネージャーを使用して SLES 15 に .NET Core をインストールする方法について説明します。
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-microsoft-key-and-feed"></a>Microsoft キーとフィードを登録する
 
