@@ -3,12 +3,12 @@ title: サーバー アプリ用 .NET Core と .NET Framework の選択
 description: .NET でのサーバー アプリのビルド時に考慮する必要がある .NET の実装に関するガイドです。
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 0b6bf4c2eb66aa4de497923a0a16b65a955ba6fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159976"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344148"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -105,7 +105,7 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 - [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework)
 - [.NET Framework を対象とする ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
 - [ターゲット フレームワーク](frameworks.md)
-- [.NET Core のガイド](../core/index.md)
+- [.NET Core のガイド](../core/index.yml)
 - [.NET Framework から .NET Core への移植](../core/porting/index.md)
 - [.NET および Docker の概要](../core/docker/introduction.md)
 - [.NET コンポーネントの概要](components.md)

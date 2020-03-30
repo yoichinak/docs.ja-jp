@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: 6e85c2c3e796ae59a13f944bd4913e4b7316c56a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccb987944af29c170b8d960d7112a13078b67dd1
+ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397825"
+ms.lasthandoff: 03/26/2020
+ms.locfileid: "80291550"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -108,7 +108,7 @@ appHost を使用しない場合、ユーザーが[ランタイムに依存す�
 dotnet publish -r win10-x64 -p:PublishSingleFile=true
 ```
 
-単一ファイルの発行の詳細については、[単一ファイル バンドラー設計のドキュメント](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md)を参照してください。
+単一ファイルの発行の詳細については、[単一ファイル バンドラー設計のドキュメント](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design_3_0.md)を参照してください。
 
 ### <a name="assembly-linking"></a>アセンブリのリンク
 

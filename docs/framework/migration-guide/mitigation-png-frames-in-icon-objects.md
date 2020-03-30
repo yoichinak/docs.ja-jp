@@ -2,12 +2,12 @@
 title: '軽減策: Icon オブジェクトの PNG フレーム'
 ms.date: 03/30/2017
 ms.assetid: ca87fefb-7144-4b4e-8832-5a939adbb4b2
-ms.openlocfilehash: d661e45bfbbe5e1c5ca5b7eb123e71aa32a096ca
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 713e6a0fa615ac748134fac501e5142a65e434f1
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79181218"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248896"
 ---
 # <a name="mitigation-png-frames-in-icon-objects"></a>軽減策: Icon オブジェクトの PNG フレーム
 .NET Framework 4.6 以降では、 <xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType> メソッドで、PNG フレームを含んだアイコンを正常に <xref:System.Drawing.Bitmap> オブジェクトに変換できます。  
@@ -29,8 +29,8 @@ ms.locfileid: "79181218"
   
 ```xml  
 <AppContextSwitchOverrides
-      value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;<previous key>=<previous value>" />  
-```  
+      value="Switch.System.Drawing.DontSupportPngFramesInIcons=true;previous key=previous-value" />
+```
   
 ## <a name="see-also"></a>参照
 

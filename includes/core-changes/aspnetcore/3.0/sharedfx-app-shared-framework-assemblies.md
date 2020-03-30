@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a8146db1fb54d63d4716b879ce793f7d817cef59
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937294"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79549614"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>共有フレームワーク: Microsoft.AspNetCore.App から削除されたアセンブリ
 
@@ -36,7 +36,7 @@ ASP.NET Core 3.0 以降、ASP.NET Core 共有フレームワーク (`Microsoft.A
 
 詳細については、[dotnet/aspnetcore#3612](https://github.com/dotnet/aspnetcore/issues/3612) を参照してください。
 
-Entity Framework Core は NuGet パッケージとして配布されます。 この変更により、.NET 上の他のすべてのデータ アクセス ライブラリに合わせて配布モデルが調整されます。 さまざまな .NET プラットフォームをサポートしながらイノベーションを継続するための最も簡単なパスが Entity Framework Core に提供されます。 共有フレームワークからの Entity Framework Core の移動は、Microsoft が開発、サポートし、処理可能なライブラリとしての状態には影響しません。 [.NET Core のサポート ポリシー](https://www.microsoft.com/net/platform/support-policy)は、引き続きこれに対応しています。
+Entity Framework Core は NuGet パッケージとして配布されます。 この変更により、.NET 上の他のすべてのデータ アクセス ライブラリに合わせて配布モデルが調整されます。 さまざまな .NET プラットフォームをサポートしながらイノベーションを継続するための最も簡単なパスが Entity Framework Core に提供されます。 共有フレームワークからの Entity Framework Core の移動は、Microsoft が開発、サポートし、処理可能なライブラリとしての状態には影響しません。 [.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)は、引き続きこれに対応しています。
 
 Json.NET と Entity Framework Core は、ASP.NET Core と引き続き連携します。 ただし、これらは共有フレームワークには含まれません。
 

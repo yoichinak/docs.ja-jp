@@ -3,19 +3,21 @@ title: Linux RHEL 8 に .NET Core をインストールする - パッケージ 
 description: パッケージ マネージャーを使用して、.NET Core SDK とランタイムを RHEL 8 にインストールします。
 author: thraka
 ms.author: adegeo
-ms.date: 12/03/2019
-ms.openlocfilehash: 054494a9b77e1c7803e42c947e067d3eb290f73c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 03/17/2020
+ms.openlocfilehash: b564a386eb67b6e414a832ad3bca10d3d09022bd
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78849796"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134190"
 ---
 # <a name="rhel-8-package-manager---install-net-core"></a>RHEL 8 パッケージ マネージャー - .NET Core をインストールする
 
 [!INCLUDE [package-manager-switcher](includes/package-manager-switcher.md)]
 
 この記事では、パッケージ マネージャーを使用して RHEL 8 に .NET Core をインストールする方法について説明します。
+
+[!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
 ## <a name="register-your-red-hat-subscription"></a>ご利用の Red Hat サブスクリプションを登録する
 

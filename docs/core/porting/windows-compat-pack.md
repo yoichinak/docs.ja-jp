@@ -3,12 +3,12 @@ title: Windows 互換機能パックを使用してコードを .NET Core に移
 description: Windows 互換機能パックとそれを使用して既存の .NET Framework コードを .NET Core に移植する方法について紹介します。
 author: terrajobst
 ms.date: 12/07/2018
-ms.openlocfilehash: 91a653b2345d414c18ebdb6e8b7d6d49bbdbb83e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 166259ca37a2005d67f6c545e4843a940f05fb71
+ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733611"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80228633"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 互換機能パックを使用してコードを .NET Core に移植する
 
@@ -40,7 +40,7 @@ Windows 専用 API やプラットフォーム非依存 API など、約 20,000 
 - Windows ランタイム キャッシュ
 - Windows サービス
 
-詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)に関するページを参照してください。
+詳細については、[互換機能パックの仕様](https://github.com/dotnet/designs/blob/master/accepted/2018/compat-pack/compat-pack.md)に関するページを参照してください。
 
 ## <a name="get-started"></a>はじめに
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - cast expression [C#]
 - () operator [C#]
 - typeof operator [C#]
-ms.openlocfilehash: 037ddc8eeda418b2e4858ab98be6cd362ca0e1e2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dc215a91c55be15e8eee488f0030f41e3492af5
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398173"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507088"
 ---
 # <a name="type-testing-and-cast-operators-c-reference"></a>型テストとキャスト演算子 (C# リファレンス)
 
@@ -113,7 +113,7 @@ E is T ? (T)(E) : (T)null
 
 ### <a name="other-usages-of-"></a>() の他の使用方法
 
-かっこは、[メソッドまたはデリゲートを呼び出すとき](member-access-operators.md#invocation-operator-)にも使います。
+かっこは、[メソッドまたはデリゲートを呼び出すとき](member-access-operators.md#invocation-expression-)にも使います。
 
 他には、式に含まれる演算を評価する順序を調整する場合にもかっこを使います。 詳細については、[C# 演算子](index.md)に関するページを参照してください。
 
