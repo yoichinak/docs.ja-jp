@@ -33,7 +33,7 @@ ms.locfileid: "75937313"
 
    このツールは移植性アナライザーに似ていますが、.NET Core 上にコードをビルドできるかどうかが分析されるのではなく、実行時に <xref:System.PlatformNotSupportedException> をスローするような方法で API を使っているかどうかが分析されます。 .NET Framework 4.7.2 以上から移行する場合、これは一般的ではありませんが、確認することをお勧めします。 .NET Core で例外をスローする API の詳細については、「[.NET Core で常に例外をスローする API](../compatibility/unsupported-apis.md)」を参照してください。
 
-4. `packages.config`Visual Studio の変換ツール[を使用して、すべての ](/nuget/consume-packages/package-references-in-project-files) の依存関係を [PackageReference](/nuget/consume-packages/migrate-packages-config-to-package-reference) 形式に変換します。
+4. [Visual Studio の変換ツール](/nuget/consume-packages/package-references-in-project-files)を使用して、すべての`packages.config`依存関係を [PackageReference](/nuget/consume-packages/migrate-packages-config-to-package-reference) 形式に変換します。
 
    この手順では、依存関係を従来の `packages.config` 形式から変換します。 `packages.config` は .NET Core では機能しないため、パッケージの依存関係がある場合は、この変換が必須です。
 
