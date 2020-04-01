@@ -3,12 +3,12 @@ title: サービス間通信
 description: バックエンド クラウドネイティブ マイクロサービスが他のバックエンド マイクロサービスと通信する方法について説明します。
 author: robvet
 ms.date: 09/09/2019
-ms.openlocfilehash: a5124b8b83f62ff17b1230ead63db26e0c1f2a5b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 926be3c2eb4513c89ebcd1f31dceb7d58639dc6f
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401761"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523564"
 ---
 # <a name="service-to-service-communication"></a>サービス間通信
 
@@ -144,7 +144,7 @@ Service Bus には、[トランザクション サポート](https://docs.micros
 
 前の図では、ポイントツーポイントの関係に注意してください。 同じプロバイダーの 2 つのインスタンスが、メッセージを 1 つの Service Bus キューにキューイングしています。 各メッセージは、右側の 3 つのコンシューマー インスタンスのうち 1 つだけによって使用されます。 次に、異なるコンシューマが同じメッセージに関心を持つメッセージングを実装する方法について説明します。
 
-## <a name="events"></a>events
+## <a name="events"></a>イベント
 
 メッセージ キューイングは、プロデューサがコンシューマにメッセージを非同期的に送信できる通信を実装する効果的な方法です。 しかし、*多くの異なる消費者*が同じメッセージに興味を持っている場合はどうなりますか? 各コンシューマーの専用メッセージ キューは、適切にスケーリングされず、管理が困難になります。
 
@@ -232,4 +232,4 @@ Event Hubs は、各コンシューマーがメッセージ ストリームの�
 
 >[!div class="step-by-step"]
 >[前次](front-end-communication.md)
->[Next](rest-grpc.md)
+>[Next](grpc.md)

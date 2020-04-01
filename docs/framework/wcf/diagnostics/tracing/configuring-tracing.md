@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: d8b216bf5497cf2a1faa2fa24ba1d8b3102f6f10
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aca3b5c54bff9c2b4c5380c04dd0da162215b088
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185737"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523315"
 ---
 # <a name="configuring-tracing"></a>トレースの構成
 ここでは、トレースを有効にする方法、トレースを出力し、トレース レベルを設定するようにトレース ソースを構成する方法、エンドツーエンドのトレース相関をサポートするようにアクティビティ トレースと伝達を設定する方法、およびトレースにアクセスするようにトレース リスナーを設定する方法について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "79185737"
 <configuration>  
    <system.diagnostics>  
       <sources>  
-            <source name="System.ServiceModel"
+         <source name="System.ServiceModel"
                     switchValue="Information, ActivityTracing"  
                     propagateActivity="true">  
             <listeners>  
@@ -152,7 +152,7 @@ ms.locfileid: "79185737"
   
 |トレース レベル|追跡イベントの性質|追跡イベントの内容|追跡イベント|対象ユーザー|  
 |-----------------|----------------------------------|-----------------------------------|--------------------|-----------------|  
-|Off|該当なし|該当なし|トレースは出力されません。|該当なし|  
+|Off|該当なし|該当なし|トレースは出力されません。|N/A|  
 |Critical|「負の」イベント: 予期しない処理またはエラー状態を示すイベント。||次の例を含む未処理の例外が記録されます。<br /><br /> - メモリ例外<br />- 任意のスレッド中止例外を呼び出します。<br />- スタックオーバーフロー例外 (キャッチできません)<br />- エラーの例外<br />- セフ例外<br />- アプリケーションの起動エラー<br />- フェールファストイベント<br />- システムハング<br />- 有害メッセージ: アプリケーションが失敗する原因となるメッセージ トレース。|管理者<br /><br /> アプリケーション開発者|  
 |エラー|「負の」イベント: 予期しない処理またはエラー状態を示すイベント。|予期しない処理が発生した。 アプリケーションが、タスクを正常に実行できなかった。 ただし、アプリケーションは依然として動作している。|すべての例外がログに記録されます。|管理者<br /><br /> アプリケーション開発者|  
 |警告|「負の」イベント: 予期しない処理またはエラー状態を示すイベント。|問題が発生したか、発生する可能性があるが、アプリケーションは正常に動作している。 ただし、正常な動作を継続できなくなる可能性がある。|- アプリケーションが、その調整設定で許可されている数を超える要求を受信しています。<br />- 受信キューが設定されている最大容量に近い。<br />- タイムアウトを超えました。<br />- 資格情報が拒否されます。|管理者<br /><br /> アプリケーション開発者|  
@@ -184,5 +184,5 @@ ms.locfileid: "79185737"
 
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [方法 : トレース リスナーを作成し初期化する](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
+- [方法: トレース リスナーを作成し初期化する](../../../debug-trace-profile/how-to-create-and-initialize-trace-listeners.md)
 - [カスタム TraceListener の作成](https://docs.microsoft.com/archive/msdn-magazine/2006/april/clr-inside-out-extending-system-diagnostics)
