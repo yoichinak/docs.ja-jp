@@ -1,4 +1,4 @@
-- name: .NET Standard ガイド
+- name: .NET のドキュメント
   href: index.md
 - name: .NET の使用を開始する
   href: get-started.md
@@ -6,11 +6,10 @@
   href: tour.md
 - name: .NET アーキテクチャ コンポーネント
   href: components.md
-- name: .NET Standard
+- name: .NET Standard の概要
   href: net-standard.md
-  items:
-    - name: .NET Standard の新機能
-      href: whats-new/whats-new-in-dotnet-standard.md
+- name: .NET Standard の新機能
+  href: whats-new/whats-new-in-dotnet-standard.md
 - name: ターゲット フレームワーク
   href: frameworks.md
 - name: .NET 用語集
@@ -19,21 +18,24 @@
   href: library-guidance/
 - name: サーバー アプリ用 .NET Core と .NET Framework の選択
   href: choosing-core-framework-server.md
-- name: '"マネージド コード" とは'
-  href: managed-code.md
+- name: マネージド コード
   items:
-    - name: Automatic Memory Management
+    - name: '"マネージド コード" とは'
+      href: managed-code.md
+    - name: 自動メモリ管理
       href: automatic-memory-management.md
 - name: 共通言語ランタイム (CLR)
   href: clr.md
 - name: 言語の独立性
-  href: language-independence.md
   items:
-    - name: 言語への非依存性、および言語非依存コンポーネント
+    - name: 概要
+      href: language-independence.md
+    - name: 言語依存コンポーネント
       href: language-independence-and-language-independent-components.md
 - name: フレームワーク ライブラリ
-  href: framework-libraries.md
   items:
+    - name: 概要
+      href: framework-libraries.md
     - name: クラス ライブラリの概要
       href: class-library-overview.md
     - name: 基本型
@@ -41,15 +43,17 @@
 - name: .NET クラス ライブラリ
   href: class-libraries.md
 - name: アナライザー
-  href: analyzers/index.md
   items:
+    - name: 概要
+      href: analyzers/index.md
+      displayName: analyzers
     - name: API アナライザー
       href: analyzers/api-analyzer.md
     - name: 移植性アナライザー
       href: analyzers/portability-analyzer.md
     - name: フレームワーク アナライザー
       href: analyzers/framework-analyzer.md
-- name: 例外の処理とスロー
+- name: 例外処理
   href: exceptions/
 - name: .NET のアセンブリ
   href: assembly/
@@ -64,11 +68,14 @@
 - name: 共通型システムと共通言語仕様
   href: common-type-system.md
 - name: 並列処理、コンカレンシー、および非同期
-  href: parallel-processing-and-concurrency.md
   items:
+    - name: 概要
+      href: parallel-processing-and-concurrency.md
+      displayName: 'Parallel processing, concurrency, async'
     - name: 非同期プログラミング
-      href: async.md
       items:
+        - name: 概要
+          href: async.md
         - name: 非同期プログラミングの詳細
           href: async-in-depth.md
         - name: 非同期プログラミングのパターン
@@ -78,13 +85,16 @@
     - name: スレッド
       href: threading/
 - name: メモリおよびスパンに関連する型
-  href: memory-and-spans/index.md
   items:
+    - name: 概要
+      href: memory-and-spans/index.md
     - name: Memory<T> と Span<T> の使用ガイドライン
       href: memory-and-spans/memory-t-usage-guidelines.md
 - name: ネイティブ相互運用性
-  href: native-interop/index.md
   items:
+    - name: 概要
+      href: native-interop/index.md
+      displayName: Native interop
     - name: P/Invoke
       href: native-interop/pinvoke.md
     - name: 型のマーシャリング
@@ -98,22 +108,26 @@
     - name: 文字セットとマーシャリング
       href: native-interop/charset.md
     - name: COM 相互運用
-      href: native-interop/cominterop.md
       items:
+        - name: 概要
+          href: native-interop/cominterop.md
+          displayName: COM interop
         - name: COM ラッパー
-          href: native-interop/com-wrappers.md
           items:
+            - name: 概要
+              href: native-interop/com-wrappers.md
+              displayName: COM wrappers
             - name: ランタイム呼び出し可能ラッパー
               href: native-interop/runtime-callable-wrapper.md
             - name: COM 呼び出し可能ラッパー
               href: native-interop/com-callable-wrapper.md
-        - name: COM 相互運用のための .NET 型の要件
+        - name: COM 相互運用のための .NET 型の修飾
           href: native-interop/qualify-net-types-for-interoperation.md
-    - name: 相互運用固有の属性の適用
+    - name: 相互運用属性の適用
       href: native-interop/apply-interop-attributes.md
     - name: 例外
       href: native-interop/exceptions-interoperability.md
-- name: コレクションとデータ構造体
+- name: コレクションとデータ構造
   href: collections/
 - name: .NET における数値
   href: numerics.md
@@ -121,17 +135,17 @@
   href: datetime/
 - name: イベント
   href: events/
-- name: マネージド実行プロセス
+- name: マネージ実行プロセス
   href: managed-execution-process.md
 - name: メタデータと自己言及的なコンポーネント
   href: metadata-and-self-describing-components.md
-- name: コンソール アプリケーションの構築
+- name: コンソール アプリの作成
   href: building-console-apps.md
 - name: アプリケーションの基本事項
   href: application-essentials.md
 - name: ファイルおよびストリーム入出力
   href: io/index.md
-- name: グローバライズとローカライズ
+- name: グローバリゼーションとローカリゼーション
   href: globalization-localization/
 - name: 属性
   href: attributes/
@@ -145,5 +159,5 @@
   href: security/
 - name: シリアル化
   href: serialization/
-- name: 複数のプラットフォームの開発
+- name: 複数のプラットフォーム向けの開発
   href: cross-platform/
