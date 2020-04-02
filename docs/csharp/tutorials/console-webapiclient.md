@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 5796df2d2fd8c4d9aaca783d720448c90858c067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156858"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249169"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -131,7 +131,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-この最初のバージョンでは、.NET Foundation にあるすべてのリポジトリのリストを読み取る Web 要求を作成します (.NET Foundation の gitHub ID は "dotnet" です)。 最初の数行では、この要求の <xref:System.Net.Http.HttpClient> を設定します。 最初は、GitHub の JSON 応答を受け入れるように構成されます。
+この最初のバージョンでは、.NET Foundation にあるすべてのリポジトリのリストを読み取る Web 要求を作成します (.NET Foundation の GitHub ID は "dotnet" です)。 最初の数行では、この要求の <xref:System.Net.Http.HttpClient> を設定します。 最初は、GitHub の JSON 応答を受け入れるように構成されます。
 この形式は単なる JSON です。 次の行では、このオブジェクトからのすべての要求にユーザー エージェント ヘッダーを追加します。 これらの 2 つのヘッダーは、GitHub サーバー コードによってチェックされ、GitHub から情報を取得するために必要です。
 
 <xref:System.Net.Http.HttpClient> を構成したら、Web 要求を作成して応答を取得します。 この最初のバージョンでは、<xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 簡易メソッドを使います。 この簡易メソッドは、Web 要求を作成するタスクを開始し、要求が返されると応答ストリームを読み取って、ストリームからコンテンツを抽出します。 応答の本文は <xref:System.String> として返されます。 この文字列は、タスクが完了すると使用できます。
@@ -163,7 +163,7 @@ JSON シリアライザーは、使用されているクラス型に含まれて
 
 型の作成が完了したら、逆シリアル化を実行します。
 
-次に、シリアライザーを使用して、JSON を C# オブジェクトに変換します。 `ProcessRepositories` メソッド内の <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> の呼び出しを次の 3 行に置き換えます。
+次に、シリアライザーを使用して、JSON を C# オブジェクトに変換します。 `ProcessRepositories` メソッド内の <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)> の呼び出しを、次の行に置き換えます。
 
 ```csharp
 var streamTask = client.GetStreamAsync("https://api.github.com/orgs/dotnet/repos");
@@ -288,23 +288,16 @@ foreach (var repo in repositories)
 2016-02-08T21:27:00Z
 ```
 
-この形式は .NET の標準の <xref:System.DateTime> 形式に従っていません。 そのため、カスタムの変換メソッドを記述する必要があります。 また、`Repository` クラスのユーザーに公開されている未加工の文字列もおそらく不要でしょう。 この文字列も属性を使用して制御できます。 最初に、日時の文字列表現を `Repository` クラスに保持する `public` プロパティと、返される日付を表す書式設定された文字列を返す `LastPush` `readonly` プロパティを定義します。
+この形式は協定世界時 (UTC) であるため、<xref:System.DateTime.Kind%2A> プロパティが <xref:System.DateTimeKind.Utc> である <xref:System.DateTime> 値が得られます。 ご自分のタイム ゾーンで表される日付が必要な場合は、カスタムの変換メソッドを記述する必要があります。 最初に、日付と時刻の UTC 表現を `Repository` クラスに保持する `public` プロパティと、ローカル時刻に変換された日付を返す `LastPush` `readonly` プロパティを定義します。
 
 ```csharp
 [JsonPropertyName("pushed_at")]
-public string JsonDate { get; set; }
+public DateTime LastPushUtc { get; set; }
 
-public DateTime LastPush =>
-    DateTime.ParseExact(JsonDate, "yyyy-MM-ddTHH:mm:ssZ", CultureInfo.InvariantCulture);
+public DateTime LastPush => LastPushUtc.ToLocalTime();
 ```
 
-定義したばかりの新しいコンストラクトについて詳しく見てみましょう。 `LastPush` プロパティは、"*式形式のメンバー*" を使用して `get` アクセサーに対して定義されます。 `set` アクセサーがない。 C# では `set` アクセサーを省略することで "*読み取り専用*" プロパティを定義します (C# では "*書き込み専用*" プロパティを作成できますが、その値は制限されています)。<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> メソッドは、指定された日付形式を使用して文字列を解析し、<xref:System.DateTime> オブジェクトを作成します。次に、`CultureInfo` オブジェクトを使用して `DateTime` にメタデータを追加します。 解析操作が失敗した場合、プロパティのアクセサーは例外をスローします。
-
-<xref:System.Globalization.CultureInfo.InvariantCulture> を使用するには、`repo.cs` の `using` ディレクティブに <xref:System.Globalization> 名前空間を追加する必要があります。
-
-```csharp
-using System.Globalization;
-```
+定義したばかりの新しいコンストラクトについて詳しく見てみましょう。 `LastPush` プロパティは、"*式形式のメンバー*" を使用して `get` アクセサーに対して定義されます。 `set` アクセサーがない。 C# では `set` アクセサーを省略することで "*読み取り専用*" プロパティを定義します (C# では "*書き込み専用*" プロパティを作成できますが、その値は制限されています)。
 
 最後に、コンソールで出力ステートメントをもう 1 つ追加すれば、このアプリケーションを再度ビルドして実行する準備は完了です。
 

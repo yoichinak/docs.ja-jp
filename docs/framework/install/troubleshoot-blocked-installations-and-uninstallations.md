@@ -1,17 +1,18 @@
 ---
 title: .NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング
+description: .NET Framework のインストールを妨げる問題が発生した場合のトラブルシューティングを行います。 問題を解決するには、ステータス メッセージの情報を確認してください。
 ms.date: 04/18/2019
 ms.custom: updateeachrelease
 helpviewer_keywords:
 - .NET Framework, troubleshooting blocked installations
 - blocked .NET Framework installations, troubleshooting
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
-ms.openlocfilehash: edc471ad2c389a37a2ffbf739a74d4d5d0e9696f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 70cefb53d29c7a895a3e242776bae39b7636fd65
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76965985"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79506958"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング
 

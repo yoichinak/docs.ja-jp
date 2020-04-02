@@ -14,12 +14,12 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: 883902142a91e275ab64ad5d12c197c665bd9b36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a3ba2838458d6e6833035186dfd69b34c780317
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398473"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248135"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 
@@ -54,7 +54,7 @@ ms.locfileid: "79398473"
 |"T"|長い形式の時刻パターン。<br /><br /> 詳細情報:[長い形式の時刻 ("T") 書式指定子](#LongTime)。|2009-06-15T13:45:30 -> 1:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> 13:45:30 (hr-HR)<br /><br /> 2009-06-15T13:45:30 -> 01:45:30 م (ar-EG)|
 |"u"|並べ替え可能な日付と時刻のパターン (世界時刻)。<br /><br /> 詳細情報:[世界共通の並べ替え可能な日付と時刻 ("u") 書式指定子](#UniversalSortable)。|<xref:System.DateTime> 値の場合: 2009-06-15T13:45:30 -> 2009-06-15 13:45:30Z<br /><br /> <xref:System.DateTimeOffset> 値の場合: 2009-06-15T13:45:30 -> 2009-06-15 20:45:30Z|
 |"U"|完全な日付と時刻のパターン (世界時刻)。<br /><br /> 詳細情報:[世界共通の完全な日付と時刻 ("U") 書式指定子](#UniversalFull)。|2009-06-15T13:45:30 -> Monday, June 15, 2009 8:45:30 PM (en-US)<br /><br /> 2009-06-15T13:45:30 -> den 15 juni 2009 20:45:30 (sv-SE)<br /><br /> 2009-06-15T13:45:30 -> Δευτέρα, 15 Ιουνίου 2009 8:45:30 μμ (el-GR)|
-|"Y"、"y"|年月パターン。<br /><br /> 詳細情報:[年月 ("Y") 書式指定子](#YearMonth)。|2009-06-15T13:45:30 -> June, 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
+|"Y"、"y"|年月パターン。<br /><br /> 詳細情報:[年月 ("Y") 書式指定子](#YearMonth)。|2009-06-15T13:45:30 -> June 2009 (en-US)<br /><br /> 2009-06-15T13:45:30 -> juni 2009 (da-DK)<br /><br /> 2009-06-15T13:45:30 -> Juni 2009 (id-ID)|
 |その他の 1 文字|未定義の指定子。|ランタイム <xref:System.FormatException> をスローします。|
 
 ## <a name="how-standard-format-strings-work"></a>標準書式指定文字列の動作

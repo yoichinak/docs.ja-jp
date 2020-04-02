@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: c4e29e6437edfe549b36a04a2050f63caa0d3d2a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8727e47e13082e8550fb174c92139dfd5c17ec36
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846523"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134340"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
 
 `char` 型のキーワードは、Unicode UTF-16 文字を表す .NET <xref:System.Char?displayProperty=nameWithType> 構造体型のエイリアスです。
 
-|[種類]|範囲|Size|.NET の種類|
+|種類|範囲|サイズ|.NET 型|
 |----------|-----------|----------|-------------------------|
 |`char`|U+0000 ～ U+FFFF|16 ビット|<xref:System.Char?displayProperty=nameWithType>|
 
@@ -43,7 +43,7 @@ ms.locfileid: "78846523"
 >
 > 16 進数エスケープ シーケンスの場合、先頭のゼロを省略できます。 つまり、エスケープ シーケンスの `\x006A`、`\x06A`、`\x6A` は有効であり、同じ文字に対応します。
 
-## <a name="conversions"></a>コンバージョン
+## <a name="conversions"></a>変換
 
 `char` 型は、[整数](integral-numeric-types.md)型 (`ushort`、`int`、`uint`、`long`、`ulong`) に暗黙的に変換できます。 また、組み込みの[浮動小数点](floating-point-numeric-types.md)数値型 (`float`、`double`、`decimal`) に暗黙的に変換することもできます。 `sbyte`、`byte`、`short` 整数型に明示的に変換できます。
 
@@ -51,11 +51,12 @@ ms.locfileid: "78846523"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/types.md#integral-types)」の[整数型](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の[整数型](~/_csharplang/spec/types.md#integral-types)に関するセクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [値型](value-types.md)
 - [文字列](../../programming-guide/strings/index.md)
 - <xref:System.Text.Rune?displayProperty=nameWithType>
+- [.NET での文字エンコード](../../../standard/base-types/character-encoding-introduction.md)

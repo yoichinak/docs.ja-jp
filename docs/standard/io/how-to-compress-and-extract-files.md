@@ -10,12 +10,12 @@ helpviewer_keywords:
 - compression
 - compress files
 ms.assetid: e9876165-3c60-4c84-a272-513e47acf579
-ms.openlocfilehash: 5aa25e265ed6ffb613e9916414c6f2335a4aaf57
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 10f990401830bc5f77176f4e586f15f7dd75ff14
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159378"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80248018"
 ---
 # <a name="how-to-compress-and-extract-files"></a>方法: ファイルを圧縮して抽出する
 
@@ -27,15 +27,21 @@ ms.locfileid: "78159378"
 - <xref:System.IO.Compression.DeflateStream>
 - <xref:System.IO.Compression.GZipStream>
 
-圧縮ファイルで実行できる操作の例を次に示します。
+圧縮ファイルで実行できる操作の例を次に示します。 これらの例では、プロジェクトに次の NuGet パッケージを追加する必要があります。
+
+- [System.IO.Compression](https://www.nuget.org/packages/System.IO.Compression)
+- [System.IO.Compression.ZipFile](https://www.nuget.org/packages/System.IO.Compression.ZipFile)
+
+.NET Framework を使用している場合は、プロジェクトにこれら 2 つのライブラリへの参照を追加します。
+
+- `System.IO.Compression`
+- `System.IO.Compression.FileSystem`
 
 ## <a name="example-1-create-and-extract-a-zip-file"></a>例 1: .zip ファイルを作成して抽出する
 
 次の例では、<xref:System.IO.Compression.ZipFile> クラスを使用して圧縮された *.zip* ファイルの作成と抽出を行う方法を示しています。 この例では、フォルダーの内容を新しい *.zip* ファイルに圧縮し、その zip を新しいフォルダーに抽出します。
 
 サンプルを実行するには、プログラムのフォルダーに *start* フォルダーを作成し、圧縮するファイルをそこに置きます。
-
-"名前 'ZipFile' は現在のコンテキストに存在しません" というビルド エラーが発生する場合は、`System.IO.Compression.FileSystem` アセンブリへの参照をプロジェクトに追加します。
 
 [!code-csharp[System.IO.Compression.ZipFile#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.io.compression.zipfile/cs/program1.cs#1)]
 [!code-vb[System.IO.Compression.ZipFile#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.io.compression.zipfile/vb/program1.vb#1)]
@@ -45,10 +51,6 @@ ms.locfileid: "78159378"
 次の例では、既存の *.zip* ファイルの内容を反復処理し、拡張子が *.txt* のファイルを抽出します。 <xref:System.IO.Compression.ZipArchive> クラスを使用して zip にアクセスし、<xref:System.IO.Compression.ZipArchiveEntry> クラスを使用して個々のエントリを調べます。 <xref:System.IO.Compression.ZipArchiveEntry> オブジェクトの拡張メソッド <xref:System.IO.Compression.ZipFileExtensions.ExtractToFile%2A> は、<xref:System.IO.Compression.ZipFileExtensions?displayProperty=nameWithType> クラスで使用できます。
 
 サンプルを実行するには、*result.zip* という名前の *.zip* ファイルをプログラム フォルダーに配置します。 入力を求められたら、抽出先のフォルダー名を指定します。
-
-"名前 'ZipFile' は現在のコンテキストに存在しません" というビルド エラーが発生する場合は、`System.IO.Compression.FileSystem` アセンブリへの参照をプロジェクトに追加します。
-
-"型 'ZipArchive' は、参照されていないアセンブリに定義されています" というエラーが発生する場合は、`System.IO.Compression` アセンブリへの参照をプロジェクトに追加します。
 
 > [!IMPORTANT]
 > ファイルを解凍する場合は、解凍先のディレクトリを回避する悪意のあるファイル パスを検索する必要があります。 これは、パス トラバーサル攻撃と呼ばれます。 次の例では、悪意のあるファイル パスを確認して安全な解凍手段を提供する方法を示します。

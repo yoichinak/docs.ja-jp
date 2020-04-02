@@ -5,12 +5,12 @@ author: leecow
 ms.author: leecow
 ms.date: 12/04/2019
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: ca86b3c158bb38c1293cd4303dcf4c00ea9175b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157812"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546563"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core の依存関係と要件
 
@@ -41,6 +41,8 @@ ms.locfileid: "78157812"
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
 
+" *.NET Core 3.0 は現在サポートされていません。詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。* "
+
 .NET Core 3.0 では以下の Windows のバージョンがサポートされます。
 
 > [!NOTE]
@@ -56,6 +58,8 @@ ms.locfileid: "78157812"
 .NET Core 3.0 でサポートされているオペレーティング システム、ディストリビューション、ライフサイクル ポリシーの詳細については、「[.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)」(.NET Core 3.0 でサポートされている OS バージョン) を参照してください。
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+" *.NET Core 2.2 は現在サポートされていません。詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。* "
 
 .NET Core 2.2 では以下の Windows のバージョンがサポートされます。
 
@@ -132,7 +136,7 @@ ms.locfileid: "78157812"
 | Red Hat Enterprise Linux       | 6、7、8               | X64 |
 | CentOS                         | 7+                    | X64 |
 | Oracle Linux                   | 7+                    | X64 |
-| Fedora                         | 29+                   | X64 |
+| Fedora                         | 30+                   | X64 |
 | Debian                         | 9+                    | x64、ARM32、ARM64 |
 | Ubuntu                         | 16.04+                | x64、ARM32、ARM64 |
 | Linux Mint                     | 18+                   | X64 |
@@ -148,6 +152,8 @@ ARM64 (カーネル 4.14+) 上に .NET Core 3.1 をインストールする方�
 > ARM64 のサポートには、Linux カーネル 4.14 以降が必要です。 一部の linux ディストリビューションは、この要件を満たしていますが、そうでないものもあります。 たとえば、Ubuntu 18.04 ではサポートされていますが、Ubuntu 16.04 ではされていません。
 
 # <a name="net-core-30"></a>[.NET Core 3.0](#tab/netcore30)
+
+" *.NET Core 3.0 は現在サポートされていません。詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。* "
 
 .NET Core 3.0 は、1 つのオペレーティング システムとして Linux を扱います。 サポートされている Linux ディストリビューション用に、1 つの Linux ビルド (チップ アーキテクチャあたり) があります。
 
@@ -174,6 +180,8 @@ ARM64 (カーネル 4.14+) 上に .NET Core 3.1 をインストールする方�
 ARM64 で .NET Core 3.0 をインストールする方法の詳細については、「[Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)」 (Linux ARM64 での .NET Core 3.0 のインストール) を参照してください。
 
 # <a name="net-core-22"></a>[.NET Core 2.2](#tab/netcore22)
+
+" *.NET Core 2.2 は現在サポートされていません。詳細については、「[.NET Core のサポート ポリシー](https://dotnet.microsoft.com/platform/support/policy/dotnet-core)」をご覧ください。* "
 
 .NET Core 2.2 は、1 つのオペレーティング システムとして Linux を扱います。 サポートされている Linux ディストリビューション用に、1 つの Linux ビルド (チップ アーキテクチャあたり) があります。
 
@@ -211,7 +219,7 @@ ARM64 で .NET Core 3.0 をインストールする方法の詳細について�
 | Red Hat Enterprise Linux       |  6、7、8                | X64 |
 | CentOS                         |  7+                     | X64 |
 | Oracle Linux                   |  7+                     | X64 |
-| Fedora                         |  29+                    | X64 |
+| Fedora                         |  30+                    | X64 |
 | Debian                         |  9                      | x64、ARM32 |
 | Ubuntu                         |  16.04、18.04、19.04、19.10    | x64、ARM32 |
 | Linux Mint                     |  17+                    | X64 |

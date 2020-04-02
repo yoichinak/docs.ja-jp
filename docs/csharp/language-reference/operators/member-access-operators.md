@@ -1,5 +1,5 @@
 ---
-title: メンバー アクセス演算子 - C# リファレンス
+title: メンバー アクセス演算子と式 - C# リファレンス
 description: 型のメンバーにアクセスするために使用できる C# 演算子について説明します。
 ms.date: 09/18/2019
 author: pkulikov
@@ -32,25 +32,25 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 4d4bc0c192912b5fa87a8e91bc5ba0e1d4ce3598
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
+ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398209"
+ms.lasthandoff: 03/19/2020
+ms.locfileid: "79546641"
 ---
-# <a name="member-access-operators-c-reference"></a>メンバー アクセス演算子 (C# リファレンス)
+# <a name="member-access-operators-and-expressions-c-reference"></a>メンバー アクセス演算子と式 (C# リファレンス)
 
-型のメンバーにアクセスするときは、次の演算子を使用できます。
+型のメンバーにアクセスするときは、次の演算子と式を使用できます。
 
-- [`.` (メンバー アクセス) ](#member-access-operator-): 名前空間または型のメンバーにアクセスします
+- [`.` (メンバー アクセス) ](#member-access-expression-): 名前空間または型のメンバーにアクセスします
 - [`[]` (配列要素またはインデクサー アクセス) ](#indexer-operator-): 配列要素または型のインデクサーにアクセスします
 - [`?.` および `?[]` (null 条件演算子)](#null-conditional-operators--and-): オペランドが null でない場合にのみ、メンバーまたは要素へのアクセス操作を実行します
-- [`()` (呼び出し)](#invocation-operator-): アクセスしたメソッドを呼び出すか、デリゲートを呼び出します
+- [`()` (呼び出し)](#invocation-expression-): アクセスしたメソッドを呼び出すか、デリゲートを呼び出します
 - [`^` (末尾からのインデックス)](#index-from-end-operator-): 要素の位置がシーケンスの末尾からであることを示します
 - [`..` (範囲)](#range-operator-): シーケンス要素の範囲を取得するために使用できるインデックスの範囲を指定します
 
-## <a name="member-access-operator-"></a>メンバー アクセス演算子 .
+## <a name="member-access-expression-"></a>メンバー アクセス式 .
 
 以下の例に示すように、名前空間のメンバーまたは型にアクセスするために `.` トークンを使います。
 
@@ -109,7 +109,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 条件演算子 ?. および ?[]
 
-C# 6 以降で使用できる Null 条件付き演算子は、そのオペランドが null 以外と評価された場合にのみ、オペランドに[メンバー アクセス](#member-access-operator-)操作 (`?.`) または[要素アクセス](#indexer-operator-)操作 (`?[]`) を適用し、それ以外の場合は、`null` を返します。 つまり、以下のようになります。
+C# 6 以降で使用できる Null 条件付き演算子は、そのオペランドが null 以外と評価された場合にのみ、オペランドに[メンバー アクセス](#member-access-expression-)操作 (`?.`) または[要素アクセス](#indexer-operator-)操作 (`?[]`) を適用し、それ以外の場合は、`null` を返します。 つまり、以下のようになります。
 
 - `a` が `null` と評価された場合、`a?.x` または `a?[x]` の結果は `null` です。
 - `a` が null 以外と評価された場合、`a?.x` または `a?[x]` の結果は、`a.x` または `a[x]` の結果とそれぞれ同じです。
@@ -150,7 +150,7 @@ if (handler != null)
 }
 ```
 
-## <a name="invocation-operator-"></a>呼び出し演算子 ()
+## <a name="invocation-expression-"></a>呼び出し式 ()
 
 かっこ `()` は、[メソッド](../../programming-guide/classes-and-structs/methods.md)を呼び出すとき、または[デリゲート](../../programming-guide/delegates/index.md)を呼び出すときに使用します。
 

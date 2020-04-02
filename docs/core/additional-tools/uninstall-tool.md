@@ -3,16 +3,16 @@ title: アンインストール ツール
 description: .NET CORE アンインストール ツールの概要です。これは、.NET Core SKD とランタイムの制御されたクリーンアップを可能にするガイド付きツールです。
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 4944c983cbd02b456c3a09a1b03bc28ba6e458cc
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75714552"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507322"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core アンインストール ツール
 
-[.NET Core アンインストール ツール](https://github.com/dotnet/cli-lab/releases) (`dotnet-core-uninstall`) を使用すると、.NET Core SDK とランタイムをシステムから削除できます。 一連のオプションを使用して、アンインストールするバージョンを指定できます。
+[.NET Core アンインストール ツール](https://aka.ms/dotnet-core-uninstall-tool) (`dotnet-core-uninstall`) を使用すると、.NET Core SDK とランタイムをシステムから削除できます。 一連のオプションを使用して、アンインストールするバージョンを指定できます。
 
 このツールでは、Windows と macOS がサポートされています。 Linux は現在サポートされていません。
 
@@ -27,10 +27,10 @@ macOS では、このツールでアンインストールできるのは */usr/l
 
 ## <a name="install-the-tool"></a>ツールをインストールする
 
-.NET Core アンインストール ツールは、[dotnet/cli-lab](https://github.com/dotnet/cli-lab/releases) GitHub リポジトリからダウンロードできます。
+.NET Core アンインストール ツールは、[ここ](https://aka.ms/dotnet-core-uninstall-tool)からダウンロードできます。また、ソース コードは、[dotnet/cli-lab](https://github.com/dotnet/cli-lab) GitHub リポジトリにあります。
 
 > [!NOTE]
-> このツールでは、.NET Core SDK とランタイムをアンインストールするために昇格が必要です。 そのため、Windows では *C:\Program Files*、macOS では */usr/local/bin* などの書き込み保護されたディレクトリにインストールする必要があります。 「[dotnet コマンドの特権アクセス](../tools/elevated-access.md)」も参照してください。 詳細なインストール手順については、[GitHub リリース ページ](https://github.com/dotnet/cli-lab/releases)をご覧ください。
+> このツールでは、.NET Core SDK とランタイムをアンインストールするために昇格が必要です。 そのため、Windows では *C:\Program Files*、macOS では */usr/local/bin* などの書き込み保護されたディレクトリにインストールする必要があります。 「[dotnet コマンドの特権アクセス](../tools/elevated-access.md)」も参照してください。 詳細については、[詳細なインストール手順](https://aka.ms/dotnet-core-uninstall-tool)に関するページを参照してください。
 
 ## <a name="run-the-tool"></a>ツールを実行します。
 
@@ -44,6 +44,9 @@ macOS では、このツールでアンインストールできるのは */usr/l
 ### <a name="step-1---display-installed-net-core-sdks-and-runtimes"></a>手順 1 - インストールされている .NET Core SDK とランタイムを表示する
 
 `dotnet-core-uninstall list` コマンドを実行すると、このツールで削除できる、インストールされている .NET Core SDK とランタイムが一覧表示されます。 一部の SDK とランタイムは、Visual Studio で必要な場合があり、それらのアンインストールが推奨されない理由を示す注釈と共に表示されます。
+
+> [!NOTE]
+> `dotnet-core-uninstall list` コマンドの出力は、ほとんどの場合、`dotnet --info` で出力されるインストールされているバージョンの一覧と一致しません。 具体的には、このツールでは、zip ファイルによってインストールされたバージョンや、Visual Studio によって管理されているバージョン (Visual Studio 2019 16.3 以降を使用してインストールされたバージョン) は表示されません。 バージョンが Visual Studio によって管理されているかどうかを確認する方法の 1 つは、これを `Add or Remove Programs` で表示することです。そこでは、Visual Studio によって管理されているバージョンの表示名にそれを示すマークが付きます。
 
 **dotnet-core-uninstall list**
 

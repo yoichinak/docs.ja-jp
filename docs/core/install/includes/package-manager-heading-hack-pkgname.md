@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 51b3c1b3e3d61b23a0511ca807afef0269ac9ee4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4340ed7444681b4601dea50c93926b0ee0c07eec
+ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77466121"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80134105"
 ---
 
 パッケージ マネージャーのフィードに追加されたパッケージは、`{product}-{type}-{version}` のハック可能な形式で名前が付けられます。
@@ -30,11 +30,11 @@ SDK またはランタイムを選択します。 有効なオプションは次
 
   ダウンロードしようとしている SDK/ランタイムが Linux ディストリビューションで使用できない可能性があります。 サポートされているディストリビューションの一覧については、「[.NET Core の依存関係と要件](../dependencies.md?pivots=os-linux)」を参照してください。
 
-### <a name="examples"></a>例
+### <a name="examples"></a>使用例
 
 - ASP.NET Core 3.1 ランタイムをインストールする: `aspnetcore-runtime-3.1`
 - .NET Core 2.1 ランタイムをインストールする: `dotnet-runtime-2.1`
-- .NET Core 3.0 SDK をインストールする: `dotnet-sdk-3.0`
+- .NET Core 3.1 SDK をインストールする: `dotnet-sdk-3.1`
 
 ### <a name="package-missing"></a>パッケージがない
 

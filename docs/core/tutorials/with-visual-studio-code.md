@@ -3,12 +3,12 @@ title: C# および Visual Studio Code の使用を開始する
 description: Visual Studio Code を使用した、C# で初めての .NET Core アプリケーションを作成してデバッグする方法について説明します。
 author: kendrahavens
 ms.date: 12/05/2018
-ms.openlocfilehash: 8eaf1ba2314dcab96db615a8691afed82c5011a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49a1271f2bf74224e189e70bebf0d22c49408e5d
+ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397885"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80111063"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -79,7 +79,7 @@ ms.locfileid: "79397885"
     ![ブレークポイントの設定](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
 6. デバッグを開始するには、<kbd>F5</kbd> キーを押すか、緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
-    - デバッグ中は左上のペインにローカル変数が表示され、デバッグ コンソールを使用できます。
+    - デバッグ中は、左上のペインでローカル変数を確認するか、デバッグ コンソールを使用できます。
 
 7. 上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
 

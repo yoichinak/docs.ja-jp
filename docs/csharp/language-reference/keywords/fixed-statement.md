@@ -6,12 +6,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: e527e8a54a739391d18b180532372b5b70f34d37
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 53bee82bf24a847b0b21ed2375d09a6303d4fe48
+ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713520"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79507192"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed ステートメント (C# リファレンス)
 
@@ -62,16 +62,16 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-スタックにメモリを割り当てることができ、スタックはガベージ コレクションの対象にならないので、固定する必要はありません。 それを行うには、[`stackalloc` 演算子](../operators/stackalloc.md)を使用します。
+スタックにメモリを割り当てることができ、スタックはガベージ コレクションの対象にならないので、固定する必要はありません。 これを行うには、[`stackalloc` 式](../operators/stackalloc.md)を使用します。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)」の [fixed ステートメント](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の [fixed ステートメント](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)に関するセクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [unsafe](unsafe.md)
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
