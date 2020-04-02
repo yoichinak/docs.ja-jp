@@ -12,14 +12,16 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: e5580e81b9175cd95491fdba724bacbffa692a5e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 49b3836f17e91ae8de10d68e97fd662aae80d1ff
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75345387"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249319"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)
+
+この記事では、`switch` ステートメントについて説明します。 `switch` 式 (C# 8.0 で導入) については、[式と演算子](../operators/index.md)のセクションの [`switch` 式](../operators/switch-expression.md)に関する記事をご覧ください。
 
 `switch` ステートメントは選択ステートメントです。このステートメントは、実行する 1 つの "*switch セクション*" を候補のリストから "*match 式*" によるパターン マッチに基づいて選択します。
 
@@ -106,7 +108,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 
 `default` case は、`switch` ステートメントで任意の順序で指定できます。 この case は、ソース コード内での順序に関係なく、すべての `case` ラベルが評価された後、最後に評価されます。
 
-## <a name="a-namepattern--pattern-matching-with-the-switch-statement"></a>`switch` ステートメントによる <a name="pattern" /> パターン マッチング
+## <a name="pattern-matching-with-the-switch-statement"></a>`switch` ステートメントによる <a name="pattern" /> パターン マッチング
 
 各 `case` ステートメントで定義されたパターンが match 式と一致した場合に、switch セクションが実行されます。 定数パターンは、すべてのバージョンの C# でサポートされます。 それ以外のパターンは、C# 7.0 以降でサポートされています。
 
@@ -183,7 +185,7 @@ case null:
 
 [!code-csharp[type-pattern2#1](~/samples/snippets/csharp/language-reference/keywords/switch/type-pattern2.cs#1)]
 
-## <a name="a-namewhen--the-case-statement-and-the-when-clause"></a><a name="when" />`case`ステートメントおよび `when` 句
+## <a name="the-case-statement-and-the-when-clause"></a><a name="when" />`case`ステートメントおよび `when` 句
 
 C# 7.0 以降では、case ステートメントは相互に排他的である必要がないため、`when` 句を追加して、case ステートメントを true に評価するために満たされなければならない条件を指定できます。 `when` 句には、ブール値を返す任意の式を指定できます。
 

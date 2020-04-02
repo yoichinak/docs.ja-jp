@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: e1f419dd57c1e90d7ebb57ef572f338a34d1c509
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 03751fa3758c239cb9eea5fe826dff66c1c1605b
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73423633"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249579"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -191,7 +191,7 @@ CLS 準拠の規則を次の表に示します。 これらの規則のテキス
 オーバーロード | [Overloads](#overloads) |プロパティおよびメソッドは、パラメーターの数値と型にのみ基づいてオーバーロードできる。ただし、戻り値の型に基づいてオーバーロードできる変換演算子の `op_Implicit` と o`op_Explicit` は例外である。 | 38
 オーバーロード | -- | 型で宣言された複数の CLS 準拠のメソッドに同じ名前が指定されている場合、特定の一連の型のインスタンス化において、これらのメソッドのパラメーターと戻り値の型は同じである。また、これらの型のインスタンス化で、すべてのメソッドをセマンティクス レベルで等価にする必要がある。 | 48
 プロパティ | [プロパティ](#properties) | プロパティの getter メソッドおよび setter メソッドを実装するメソッドは、メタデータで `SpecialName` とマークする。 | 24
-プロパティ | [プロパティ](#properties) | プロパティ アクセサーはすべて静的、すべて仮想、またはすべてインスタンスになる。 | 26
+プロパティ | [プロパティ](#properties) | プロパティのアクセサーはすべて静的、すべて仮想、またはすべてインスタンスでなければならない。 | 26
 プロパティ | [プロパティ](#properties) | プロパティの型は、getter の戻り値の型であり、かつ setter の最後の引数の型でなければいけない。 プロパティのパラメーターの型は、getter へのパラメーターの型であり、かつ setter の最後のパラメーター以外のすべての型でなければいけない。 すべての型は CLS 準拠でなければならない。また、マネージド ポインターであってはいけない (つまり、参照渡しではいけない)。 | 27
 プロパティ | [プロパティ](#properties) | プロパティは、特定の名前付けパターンに従わなくてはいけない。 CLS 規則 24 で触れられている `SpecialName` 属性は、適切な名前比較で無視され、識別子規則に従わなければいけない。 プロパティには getter メソッド、setter メソッド、またはこの両方が必ずなければいけない。 | 28
 型変換 | [型変換](#type-conversion) | op_Implicit または op_Explicit が指定されている場合は、強制変換のための別の方法を用意する必要がある。 | 39

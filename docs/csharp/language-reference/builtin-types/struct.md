@@ -1,6 +1,6 @@
 ---
 title: 構造体型 - C# リファレンス
-ms.date: 02/24/2020
+ms.date: 03/26/2020
 f1_keywords:
 - struct_CSharpKeyword
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - struct type [C#]
 - structure type [C#]
 ms.assetid: ff3dd9b7-dc93-4720-8855-ef5558f65c7c
-ms.openlocfilehash: b85d0df086f3ca65ed995594dd374286e1c3ba5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a2c97b93a8f6d1d62bd8a96865a4fe6587f55d3
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847730"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345139"
 ---
 # <a name="structure-types-c-reference"></a>構造体型 (C# リファレンス)
 
@@ -24,6 +24,24 @@ ms.locfileid: "78847730"
 構造体型には、"*値のセマンティクス*" があります。 つまり、構造体型の変数には、型のインスタンスが含まれます。 既定では、変数値が代入時にコピーされ、引数がメソッドに渡され、メソッドの結果が返されます。 構造体型の変数の場合は、型のインスタンスがコピーされます。 詳細については、[値の型](value-types.md)に関するページを参照してください。
 
 通常は、構造体型を使用して、ほとんどまたはまったく動作を提供しない小さなデータ中心型を設計します。 たとえば、.NET では、構造体型を使用して数値 ([整数](integral-numeric-types.md)と[実数](floating-point-numeric-types.md)の両方)、[ブール値](bool.md)、[Unicode 文字](char.md)、[時刻インスタンス](xref:System.DateTime)が表現されます。 型の動作に重点を置いている場合は、[class](../keywords/class.md) を定義することを検討してください。 クラス型には "*参照セマンティクス*" があります。 つまり、クラス型の変数には、インスタンス自体ではなく、型のインスタンスへの参照が含まれています。
+
+構造体型には値セマンティクスがあるため、"*変更不可*" の構造体型を定義することをお勧めします。
+
+## <a name="readonly-struct"></a>`readonly` 構造体
+
+C# 7.2 以降では、構造体型が変更不可であることを宣言するには、`readonly` 修飾子を使用します。
+
+[!code-csharp[readonly struct](snippets/StructType.cs#ReadonlyStruct)]
+
+`readonly` 構造体のすべてのデータ メンバーを、次のように読み取り専用にする必要があります。
+
+- すべてのフィールド宣言には、[`readonly` 修飾子が必要です](../keywords/readonly.md)
+- 自動的に実装されるプロパティも含めて、すべてのプロパティは、読み取り専用である必要があります
+
+それにより、`readonly` 構造体のどのメンバーも構造体の状態を変更しないことが保証されます。
+
+> [!NOTE]
+> `readonly` 構造体でも、変更可能な参照型のデータ メンバーは、それ自身の状態を変更できます。 たとえば、<xref:System.Collections.Generic.List%601> インスタンスを置き換えることはできませんが、新しい要素をそれに追加することはできます。
 
 ## <a name="limitations-with-the-design-of-a-structure-type"></a>構造体型の設計に関する制限事項
 
@@ -43,7 +61,7 @@ ms.locfileid: "78847730"
 
 C# では、宣言された変数を使用するには、事前にこれを初期化する必要があります。 構造体型の変数は `null` とすることができないため (それが [null 許容値型](nullable-value-types.md)の変数でない限り)、対応する型のインスタンスをインスタンス化する必要があります。 それにはいくつかの方法があります。
 
-通常は、[`new`](../operators/new-operator.md) 演算子を使用して適切なコンストラクターを呼び出すことによって、構造体型をインスタンス化します。 すべての構造体型に、少なくとも 1 つのコンストラクターがあります。 それは暗黙的なパラメーターなしのコンストラクターであり、型の[既定値](default-values.md)を生成するものです。 また、[default](../operators/default.md) 演算子またはリテラルを使用して、型の既定値を作成することもできます。
+通常は、[`new`](../operators/new-operator.md) 演算子を使用して適切なコンストラクターを呼び出すことによって、構造体型をインスタンス化します。 すべての構造体型に、少なくとも 1 つのコンストラクターがあります。 それは暗黙的なパラメーターなしのコンストラクターであり、型の[既定値](default-values.md)を生成するものです。 また、[既定の値式](../operators/default.md)を使用して、型の既定値を生成することもできます。
 
 構造体型のすべてのインスタンス フィールドにアクセスできる場合は、それを `new` 演算子なしでインスタンス化することもできます。 その場合は、インスタンスを初めて使用する前に、すべてのインスタンス フィールドを初期化する必要があります。 その方法を次の例に示します。
 
@@ -62,6 +80,8 @@ C# では、宣言された変数を使用するには、事前にこれを初�
 ## <a name="c-language-specification"></a>C# 言語仕様
 
 詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[構造体](~/_csharplang/spec/structs.md)」セクションを参照してください。
+
+`readonly` 構造体について詳しくは、[機能提案メモ](~/_csharplang/proposals/csharp-7.2/readonly-ref.md#readonly-structs)をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

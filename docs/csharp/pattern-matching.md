@@ -4,12 +4,12 @@ description: C# のパターン マッチング式について説明します
 ms.date: 04/10/2019
 ms.technology: csharp-fundamentals
 ms.assetid: 1e575c32-2e2b-4425-9dca-7d118f3ed15b
-ms.openlocfilehash: 0c302499543c90bd01427e2791435968d580f644
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb6baf3771024d02b2027f81fd35b8be4872cf6e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170385"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249234"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
@@ -106,7 +106,7 @@ C# 7.0 より前では、一連の `if` ステートメントと `is` ステー�
 
 [!code-csharp[NullCase](../../samples/snippets/csharp/PatternMatching/GeometricUtilities.cs#10_NullCase "Add null case")]
 
-`null` パターンの特殊な動作に注目します。パターン内の定数 `null` は、型がありませんが、任意の参照型または null 許容型に変換できるためです。 `null` を任意の型に変換するよりも、変数のコンパイル時の型に関係なく、`null` 値が任意の型パターンと一致しないことを言語で定義します。 この動作により、新しい `switch` ベースの型パターンが `is` ステートメントと一貫性を持ちます。`is` ステートメントは、チェックされている値が `null` のとき、常に `false` を返します。 より簡単なのは、型をチェックしたら、追加の null チェックが必要ないことです。 上記のサンプルの case ブロックのいずれにも null チェックがないことからわかるように、型パターンのマッチングにより null 以外の値が保証されるため、これらは必要ありません。
+`null` パターンには興味深い特殊な動作があります。これは、パターン内の定数 `null` は、型がありませんが、任意の参照型または null 許容値型に変換できるためです。 `null` を任意の型に変換するよりも、変数のコンパイル時の型に関係なく、`null` 値が任意の型パターンと一致しないことを言語で定義します。 この動作により、新しい `switch` ベースの型パターンが `is` ステートメントと一貫性を持ちます。`is` ステートメントは、チェックされている値が `null` のとき、常に `false` を返します。 より簡単なのは、型をチェックしたら、追加の null チェックが必要ないことです。 上記のサンプルの case ブロックのいずれにも null チェックがないことからわかるように、型パターンのマッチングにより null 以外の値が保証されるため、これらは必要ありません。
 
 ## <a name="var-declarations-in-case-expressions"></a>`case` 式内の `var` 宣言
 

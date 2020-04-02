@@ -1,18 +1,18 @@
 ---
 title: readonly キーワード - C# リファレンス
-ms.date: 06/21/2018
+ms.date: 03/26/2020
 f1_keywords:
 - readonly_CSharpKeyword
 - readonly
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 165b6287e1610e013b289601e1535a08fdd3b5c9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 344d5e54fcd500e283c52fa7953c6366823f13f0
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398125"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80345150"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# リファレンス)
 
@@ -28,7 +28,7 @@ ms.locfileid: "79398125"
   > [!WARNING]
   > 変更可能な参照型である外部から参照できる読み取り専用フィールドを含む外部から参照できる型はセキュリティの脆弱性があり、警告 [CA2104](/visualstudio/code-quality/ca2104) がトリガーされる可能性があります: "読み取り専用の変更可能な参照型を宣言しません"。
 
-- [`readonly struct` の定義](#readonly-struct-example)では、`readonly` は `struct` が変更不可であることを示します。
+- `readonly struct` 型定義では、`readonly` は構造体型が変更不可であることを示します。 詳細については、「[構造体型](../builtin-types/struct.md)」の記事の「[`readonly` 構造体](../builtin-types/struct.md#readonly-struct)」セクションを参照してください。
 - [`readonly` メンバー定義](#readonly-member-examples)では、`readonly`は、`struct` のメンバーが構造体の内部状態を変更しないことを示します。
 - [`ref readonly` メソッドの戻り値](#ref-readonly-return-example)では、`readonly` 修飾子は、メソッドが参照を返し、その参照への書き込みが許可されないことを示します。
 
@@ -71,28 +71,6 @@ p2.y = 66;        // Error
 この場合、次のコンパイル エラー メッセージが表示されます。
 
 **読み取り専用フィールドに割り当てることはできません (コンストラクター、変数初期化子では可)**
-
-## <a name="readonly-struct-example"></a>読み取り専用の構造体の例
-
-`struct` 定義での `readonly` 修飾子は、構造体が**変更不可**であることを宣言します。 次の例のように、`struct` のすべてのインスタンス フィールドを `readonly` とマークする必要があります。
-
-[!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyStruct)]
-
-前の例では、[読み取り専用の自動プロパティ](../../properties.md#read-only)を使ってその記憶域を宣言しています。 これは、これらのプロパティに対して `readonly` バッキング フィールドを作成するようコンパイラに指示します。 `readonly` フィールドを直接宣言することもできます。
-
-```csharp
-public readonly struct Point
-{
-    public readonly double X;
-    public readonly double Y;
-
-    public Point(double x, double y) => (X, Y) = (x, y);
-
-    public override string ToString() => $"({X}, {Y})";
-}
-```
-
-`readonly` に指定されていないフィールドを追加すると、コンパイラ エラー `CS8340`:"読み取り専用の構造体のインスタンス フィールドは、読み取り専用である必要があります" が生成されます。
 
 ## <a name="readonly-member-examples"></a>読み取り専用メンバーの例
 
@@ -144,6 +122,7 @@ public string Message { readonly get; set; }
 `ref return`での `readonly` 修飾子は、返される参照を変更できないことを示します。 次の例は、origin に参照を返します。 `readonly` 修飾子を使用して、呼び出し元が origin を変更できないことを示しています。
 
 [!code-csharp[readonly struct example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+
 返される型を `readonly struct` にする必要はありません。 `ref` で返すことができる任意の型を、`ref readonly` で返すことができます。
 
 ## <a name="c-language-specification"></a>C# 言語仕様

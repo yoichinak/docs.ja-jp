@@ -3,12 +3,12 @@ title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 8da1d858835210590a80a624fb8989fbfe8e0a91
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
+ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398749"
+ms.lasthandoff: 03/27/2020
+ms.locfileid: "80344198"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -32,11 +32,11 @@ ASP.NET は、ASP.NET Core を含む ASP.NET の両方の実装を指す包括�
 
 ## <a name="aspnet-core"></a>ASP.NET Core
 
-.NET Core 上に構築された ASP.NET のクロスプラットフォームで高パフォーマンスなオープン ソースの実装。
+.NET Core 上に構築された ASP.NET のクロスプラットフォームで高パフォーマンスなオープンソースの実装。
 
 [ASP.NET Core のドキュメント](/aspnet/#pivot=core)をご覧ください。
 
-## <a name="assembly"></a>アセンブリ (assembly)
+## <a name="assembly"></a>アセンブリ
 
 アプリケーションまたは他のアセンブリから呼び出すことができる API のコレクションを含む *.dll*/ *.exe* ファイル。
 
@@ -46,7 +46,7 @@ ASP.NET は、ASP.NET Core を含む ASP.NET の両方の実装を指す包括�
 
 共通言語ランタイム (Common Language Runtime)。
 
-厳密な意味はコンテキストによって異なりますが、通常は、.NET Framework のランタイムを指します。 CLR は、メモリの割り当てと管理を行います。 CLR は、アプリの実行だけでなく、[JIT](#jit) コンパイラを使って実行時にコードを生成してコンパイルする仮想マシンでもあります。 現在の Microsoft CLR の実装は Windows だけです。
+厳密な意味はコンテキストによって異なりますが、通常、共通言語ランタイムは .NET Framework のランタイムを指します。 CLR は、メモリの割り当てと管理を行います。 CLR は、アプリの実行だけでなく、[JIT](#jit) コンパイラを使って実行時にコードを生成してコンパイルする仮想マシンでもあります。 現在の Microsoft CLR の実装は Windows だけです。
 
 ## <a name="coreclr"></a>CoreCLR
 
@@ -64,7 +64,7 @@ System.\* (および限られた範囲の Microsoft.\*) 名前空間を構成す
 
 .NET Core ランタイム。
 
-CLR/CoreCLR とは異なり、CoreRT は仮想マシンではありません。つまり、[JIT](#jit) が含まれないため、実行時にコードを生成して実行する機能はありません。 ただし、[GC](#gc) およびランタイム型識別 (RTTI) とリフレクションの機能は備えています。 ただ、CoreRT の型システムはリフレクション用のメタデータが必要ないように設計されています。 これにより、[AOT](#aot) ツール チェーンで余分なメタデータのリンクを削除し、(さらに重要なこととして) アプリが使っていないコードを特定することができます。 CoreRT は開発中です。
+CLR/CoreCLR とは異なり、CoreRT は仮想マシンではありません。つまり、[JIT](#jit) が含まれないため、実行時にコードを生成して実行する機能はありません。 ただし、[GC](#gc) およびランタイム型識別 (RTTI) とリフレクションの機能は備えています。 ただ、CoreRT の型システムはリフレクション用のメタデータが必要ないように設計されています。 メタデータが必要ないと、[AOT](#aot) ツール チェーンで余分なメタデータのリンクを削除し、(さらに重要なこととして) アプリが使っていないコードを特定することができます。 CoreRT は開発中です。
 
 [.NET Native と CoreRT の概要](https://github.com/dotnet/corert/blob/master/Documentation/intro-to-corert.md)をご覧ください。
 
@@ -116,9 +116,9 @@ Just-In-Time コンパイラ。
 
 .NET の実装には次のものが含まれます。
 
-- 1 つまたは複数のランタイム。 たとえば、CLR、CoreCLR CoreRT などです。
+- 1 つまたは複数のランタイム。 次に例を示します。 CLR、CoreCLR、CoreRT。
 - .NET Standard の 1 つのバージョンを実装し、他の API を含むことができるクラス ライブラリ。 たとえば、.NET Framework 基本クラス ライブラリや .NET Core 基本クラス ライブラリなどです。
-- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 たとえば、.NET Framework には ASP.NET、Windows フォーム、WPF が含まれます。
+- 必要に応じて、1 つまたは複数のアプリケーション フレームワーク。 次に例を示します。 .NET Framework には ASP.NET、Windows フォーム、WPF が含まれます。
 - 必要に応じて、開発ツール。 一部の開発ツールは、複数の実装間で共有されます。
 
 .NET の実装の例:
@@ -127,7 +127,7 @@ Just-In-Time コンパイラ。
 - [.NET Core](#net-core)
 - [ユニバーサル Windows プラットフォーム (UWP)](#uwp)
 
-## <a name="library"></a>library
+## <a name="library"></a>ライブラリ
 
 アプリまたは他のライブラリで呼び出すことができる API のコレクション。 .NET ライブラリは 1 つ以上の[アセンブリ](#assembly)で構成されます。
 
@@ -137,11 +137,11 @@ Just-In-Time コンパイラ。
 
 それ自体のライブラリを持たず、依存するもののリストのみを含む NuGet パッケージ。 含まれるパッケージは、必要に応じて、ターゲット フレームワーク用の API を確立できます。
 
-「[パッケージ、メタパッケージ、フレームワーク](../core/packages.md)」をご覧ください。
+「[パッケージ、メタパッケージ、フレームワーク](../core/packages.md)」をご覧ください
 
 ## <a name="mono"></a>Mono
 
-Mono はオープン ソースであり、主に小規模なランタイムが必要な場合に使用される[クロスプラットフォーム](#cross-platform)の .NET 実装です。 Android、Mac、iOS、tvOS、および watchOS 上の Xamarin アプリケーションで利用されるランタイムで、フットプリントが小さいアプリに重点を置いています。
+Mono はオープン ソースであり、主に小規模なランタイムが必要な場合に使用される[クロスプラットフォーム](#cross-platform)の .NET 実装です。 Android、Mac、iOS、tvOS、および watchOS 上の Xamarin アプリケーションで利用されるランタイムであり、フットプリントの小さいアプリに重点が置かれています。
 
 現在公開されているすべての .NET Standard バージョンをサポートしています。
 
@@ -159,9 +159,9 @@ Mono について詳しくは、[Mono のドキュメント](https://www.mono-pr
 
 ## <a name="net-core"></a>.NET Core
 
-.NET のクロスプラットフォームで高パフォーマンスなオープン ソースの実装。 Core 共通言語ランタイム (CoreCLR)、Core AOT ランタイム (CoreRT、開発中)、Core 基本クラス ライブラリ、Core SDK が含まれます。
+.NET のクロスプラットフォームで高パフォーマンスなオープンソースの実装。 Core 共通言語ランタイム (CoreCLR)、Core AOT ランタイム (CoreRT、開発中)、Core 基本クラス ライブラリ、Core SDK が含まれます。
 
-「[.NET Core](../core/index.md)」をご覧ください。
+「[.NET Core](../core/index.yml)」をご覧ください。
 
 ## <a name="net-core-cli"></a>.NET Core CLI
 
@@ -179,7 +179,7 @@ Mono について詳しくは、[Mono のドキュメント](https://www.mono-pr
 
 Windows でのみ動作する .NET の実装。 共通言語ランタイム (CLR)、基本クラス ライブラリ、および ASP.NET、Windows フォーム、WPF などのアプリケーション フレームワーク ライブラリが含まれます。
 
-「[.NET Framework ガイド](../framework/index.md)」をご覧ください。
+「[.NET Framework ガイド](../framework/index.yml)」をご覧ください。
 
 ## <a name="net-native"></a>.NET Native
 
@@ -205,7 +205,7 @@ UWP は、.NET Native によってサポートされる最初のアプリケー�
 
 このテクノロジは、永続的な JIT コンパイラと考えることができます。 通常はコードが実行されるコンピューター上でコードをコンパイルしますが、一般にコンパイルはインストール時に行われます。
 
-## <a name="package"></a>パッケージ
+## <a name="package"></a>package
 
 NuGet パッケージ &mdash; または単にパッケージ &mdash; は、同じ名前の 1 つまたは複数のアセンブリと、作成者名などの追加メタデータを含む、 *.zip* ファイルです。
 
@@ -237,7 +237,7 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 - "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。"
 - "複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。" (.NET Standard を指している場合)
-- "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。 ... .NET ランタイムの各バージョンは、サポートしている .NET Standard の最高のバージョンをアドバタイズします …"
+- "さまざまな .NET ランタイムで、.NET Standard の特定のバージョンが実装されます。 … .NET ランタイムの各バージョンは、サポートしている .NET Standard の最高のバージョンをアドバタイズします …"
 
 このような一貫性のない使用法は除去される予定です。
 
@@ -247,7 +247,7 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 ".NET スタック" は、.NET Standard および .NET のすべての実装を指します。 ".NET スタック" という語句が .NET の 1 つの実装を示すこともあります。
 
-## <a name="target-framework"></a>対象フレーム
+## <a name="target-framework"></a>ターゲット フレームワーク
 
 .NET アプリまたはライブラリが依存する API のコレクション。
 
@@ -269,12 +269,12 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 ユニバーサル Windows プラットフォーム (Universal Windows Platform)。
 
-モノのインターネット (IoT) のために最新のタッチ対応の Windows アプリケーションとソフトウェアを構築するために使われる .NET の実装。 PC、タブレット、ファブレット、携帯電話、Xbox など、ターゲットにする可能性があるさまざまな種類のデバイスを統一するように設計されています。 UWP は、一元的なアプリ ストア、実行環境 (AppContainer)、Win32 の代わりに使う Windows API のセット (WinRT) など、多くのサービスを提供します。 アプリは、C++、C#、Visual Basic、および JavaScript で記述することができます。 C# と Visual Basic を使うときは、.NET Core によって .NET API が提供されます。
+モノのインターネット (IoT) のために最新のタッチ対応の Windows アプリケーションとソフトウェアを構築するために使われる .NET の実装。 PC、タブレット、携帯電話、Xbox など、ターゲットにされる可能性があるさまざまな種類のデバイスを統一するように設計されています。 UWP は、一元的なアプリ ストア、実行環境 (AppContainer)、Win32 の代わりに使う Windows API のセット (WinRT) など、多くのサービスを提供します。 アプリは、C++、C#、Visual Basic、および JavaScript で記述することができます。 C# と Visual Basic を使うときは、.NET Core によって .NET API が提供されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET のガイド](index.md)
-- [.NET Framework ガイド](../framework/index.md)
-- [.NET Core](../core/index.md)
+- [.NET Framework ガイド](../framework/index.yml)
+- [.NET Core](../core/index.yml)
 - [ASP.NET の概要](/aspnet/index#pivot=aspnet)
 - [ASP.NET Core の概要](/aspnet/index#pivot=core)

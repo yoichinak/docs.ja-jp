@@ -1,15 +1,15 @@
 ---
 title: in パラメーター修飾子 - C# リファレンス
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: cbde7a571fb71ed7577077c77a5c61db553ec859
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 20956f9e25b6830a8876824a4c9dad1dbc4c4f3e
+ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173615"
+ms.lasthandoff: 03/25/2020
+ms.locfileid: "80249371"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in パラメーター修飾子 (C# リファレンス)
 
@@ -20,7 +20,7 @@ ms.locfileid: "79173615"
 前の例は、通常、`in` 修飾子が呼び出しサイトでは不要であることを示しています。 これはメソッド宣言でのみ必要です。
 
 > [!NOTE]
-> `in` ステートメントの一部、または LINQ クエリの `foreach` 句の一部として、型パラメーターが反変であることを示すために `join` キーワードをジェネリック型パラメーターで使用することもできます。 これらのコンテキストでの `in` キーワードの使用の詳細については、これらすべての使用に関するリンクを提供する「[in](in.md)」を参照してください。
+> `foreach` ステートメントの一部、または LINQ クエリの `join` 句の一部として、型パラメーターが反変であることを示すために `in` キーワードをジェネリック型パラメーターで使用することもできます。 これらのコンテキストでの `in` キーワードの使用の詳細については、これらすべての使用に関するリンクを提供する「[in](in.md)」を参照してください。
   
 `in` 引数として渡される変数は、メソッド呼び出しで渡される前に初期化する必要があります。 ただし、呼び出されたメソッドでは値の割り当てや、引数の変更を行うことはできません。  
 
@@ -115,15 +115,17 @@ Method(in i); // passed by readonly reference, explicitly using `in`
 次の種類のメソッドには、`in`、`ref`、`out` キーワードを使用することはできません。  
   
 - [async](async.md) 修飾子を使用して定義した Async メソッド。  
-- [yield return](yield.md) または `yield break` ステートメントを含む Iterator メソッド。  
+- [yield return](yield.md) または `yield break` ステートメントを含む Iterator メソッド。
+- 拡張メソッドの最初の引数では、その引数が構造体でない限り、`in` 修飾子を使用することはできません。
+- 拡張メソッドの 1 番目の引数がジェネリック型である場合 (その型が構造体として制約されている場合でも)。
 
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [メソッド パラメーター](method-parameters.md)
 - [安全で効率的なコードを記述する](../../write-safe-efficient-code.md)
