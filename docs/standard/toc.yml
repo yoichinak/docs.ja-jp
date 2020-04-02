@@ -38,8 +38,140 @@
       href: framework-libraries.md
     - name: クラス ライブラリの概要
       href: class-library-overview.md
-    - name: 基本型
-      href: base-types/
+    - name: 基本型の操作
+      items:
+        - name: 共通型システム
+          href: base-types/common-type-system.md
+        - name: .NET での型変換
+          href: base-types/type-conversion.md
+        - name: 型変換の表
+          href: base-types/conversion-tables.md
+        - name: 数値、日付、その他の型の書式を設定する
+          items:
+            - name: 概要
+              href: base-types/formatting-types.md
+            - name: 標準の数値書式指定文字列
+              href: base-types/standard-numeric-format-strings.md
+            - name: カスタム数値形式文字列
+              href: base-types/custom-numeric-format-strings.md
+            - name: 標準の日時書式指定文字列
+              href: base-types/standard-date-and-time-format-strings.md
+            - name: カスタム日時形式文字列
+              href: base-types/custom-date-and-time-format-strings.md
+            - name: 標準 TimeSpan 書式指定文字列
+              href: base-types/standard-timespan-format-strings.md
+            - name: カスタム TimeSpan 書式指定文字列
+              href: base-types/custom-timespan-format-strings.md
+            - name: 列挙型形式文字列
+              href: base-types/enumeration-format-strings.md
+            - name: 複合書式指定
+              href: base-types/composite-formatting.md
+            - name: 方法
+              items:
+                - name: 数値に先行するゼロを埋め込む
+                  href: base-types/how-to-pad-a-number-with-leading-zeros.md
+                - name: 日付から曜日を抽出する
+                  href: base-types/how-to-extract-the-day-of-the-week-from-a-specific-date.md
+                - name: カスタム数値書式プロバイダーを使用する
+                  href: base-types/how-to-define-and-use-custom-numeric-format-providers.md
+                - name: 日付と時刻の値をラウンドトリップさせる
+                  href: base-types/how-to-round-trip-date-and-time-values.md
+                - name: 日付および時刻の値のミリ秒部分を表示する
+                  href: base-types/how-to-display-milliseconds-in-date-and-time-values.md
+                - name: グレゴリオ暦以外の暦の日付を表示する
+                  href: base-types/how-to-display-dates-in-non-gregorian-calendars.md
+        - name: 文字列の操作
+          items:
+            - name: 文字列を使用するためのベスト プラクティス
+              href: base-types/best-practices-strings.md
+            - name: 基本的な文字列操作
+              items:
+                - name: 概要
+                  href: base-types/basic-string-operations.md
+                  displayName: string operations
+                - name: 新しい文字列の作成
+                  href: base-types/creating-new.md
+                - name: 文字のトリミングと削除
+                  href: base-types/trimming.md
+                - name: 文字列を埋め込む
+                  href: base-types/padding.md
+                - name: 文字列を比較する
+                  href: base-types/comparing.md
+                - name: 大文字/小文字の変更
+                  href: base-types/changing-case.md
+                - name: StringBuilder クラスの使用
+                  href: base-types/stringbuilder.md
+                - name: '方法: 基本的な文字列操作を実行する'
+                  href: base-types/basic-manipulations.md
+            - name: .NET の正規表現
+              items:
+                - name: 概要
+                  href: base-types/regular-expressions.md
+                  displayName: regular expressions
+                - name: 言語リファレンス
+                  items:
+                    - name: 概要
+                      href: base-types/regular-expression-language-quick-reference.md
+                    - name: 文字のエスケープ
+                      href: base-types/character-escapes-in-regular-expressions.md
+                    - name: 文字クラス
+                      href: base-types/character-classes-in-regular-expressions.md
+                    - name: アンカー
+                      href: base-types/anchors-in-regular-expressions.md
+                    - name: グループ化構成体
+                      href: base-types/grouping-constructs-in-regular-expressions.md
+                    - name: 量指定子
+                      href: base-types/quantifiers-in-regular-expressions.md
+                    - name: 前方参照構成体
+                      href: base-types/backreference-constructs-in-regular-expressions.md
+                    - name: 代替構成体
+                      href: base-types/alternation-constructs-in-regular-expressions.md
+                    - name: 置換
+                      href: base-types/substitutions-in-regular-expressions.md
+                    - name: 正規表現のオプション
+                      href: base-types/regular-expression-options.md
+                    - name: その他の構成体
+                      href: base-types/miscellaneous-constructs-in-regular-expressions.md
+                - name: 正規表現に関するベスト プラクティス
+                  href: base-types/best-practices.md
+                - name: 正規表現のオブジェクト モデル
+                  href: base-types/the-regular-expression-object-model.md
+                - name: 正規表現の動作
+                  items:
+                    - name: 概要
+                      href: base-types/details-of-regular-expression-behavior.md
+                    - name: バックトラッキング
+                      href: base-types/backtracking-in-regular-expressions.md
+                    - name: コンパイルと再利用
+                      href: base-types/compilation-and-reuse-in-regular-expressions.md
+                    - name: スレッド セーフ
+                      href: base-types/thread-safety-in-regular-expressions.md
+                - name: 使用例
+                  items:
+                    - name: HREF のスキャン
+                      href: base-types/regular-expression-example-scanning-for-hrefs.md
+                    - name: 日付形式の変更
+                      href: base-types/regular-expression-example-changing-date-formats.md
+                    - name: URL からプロトコルとポート番号を抽出する
+                      href: base-types/how-to-extract-a-protocol-and-port-number-from-a-url.md
+                    - name: 文字列から無効な文字を取り除く
+                      href: base-types/how-to-strip-invalid-characters-from-a-string.md
+                    - name: 文字列が有効な電子メール形式であるかどうかを検証する
+                      href: base-types/how-to-verify-that-strings-are-in-valid-email-format.md
+        - name: .NET での文字エンコード
+          href: base-types/character-encoding-introduction.md
+        - name: 文字エンコード クラスを使用する方法
+          href: base-types/character-encoding.md
+        - name: 文字列の解析
+          items:
+            - name: 概要
+              href: base-types/parsing-strings.md
+            - name: 数値文字列の解析
+              href: base-types/parsing-numeric.md
+            - name: 日付と時刻文字列の解析
+              href: base-types/parsing-datetime.md
+            - name: その他の文字列の解析
+              href: base-types/parsing-other.md
 - name: .NET クラス ライブラリ
   href: class-libraries.md
 - name: アナライザー
@@ -141,8 +273,6 @@
   href: metadata-and-self-describing-components.md
 - name: コンソール アプリの作成
   href: building-console-apps.md
-- name: アプリケーションの基本事項
-  href: application-essentials.md
 - name: ファイルおよびストリーム入出力
   href: io/index.md
 - name: グローバリゼーションとローカリゼーション
