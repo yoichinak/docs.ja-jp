@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 12/27/2019
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f6496ae38827da5d00c8b278011a9c373afe0e76
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6cca7330c10317129072b94c3973f5dec575363a
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344086"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523898"
 ---
 # <a name="net-guide"></a>.NET ガイド
 
@@ -46,7 +46,6 @@ ms.locfileid: "80344086"
 * [.NET Standard](net-standard.md)
 * [ネイティブ相互運用性](native-interop/index.md)
 * [ガベージ コレクション](garbage-collection/index.md)
-* [.NET の基本データ型](base-types/index.md)
 * [コレクション](collections/index.md)
 * [日付、時刻、およびタイム ゾーン](datetime/index.md)
 * [非同期プログラミング](async.md)
