@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 12/19/2019
-  ms.openlocfilehash: ca2ac70c2d55a2731ce3020753b6e36cd7307533
-  ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+  ms.openlocfilehash: 3f0b4c8df01ee6b20d118ea2d886aca16d9f747d
+  ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/27/2020
-  ms.locfileid: "80344648"
+  ms.lasthandoff: 04/02/2020
+  ms.locfileid: "80588315"
 highlightedContent:
   items:
   - title: C# の概要。 クイック インタラクティブ スタート。
@@ -178,7 +178,7 @@ additionalContent:
       links:
       - url: /uwp
         text: ユニバーサル Windows アプリ
-      - url: desktop-wpf/index.md
+      - url: desktop-wpf/index.yml
         text: Windows Presentation Foundation (.NET Core)
       - url: framework/wpf/index.md
         text: Windows Presentation Foundation (.NET Framework)
