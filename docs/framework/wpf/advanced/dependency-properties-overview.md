@@ -14,18 +14,18 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 1df75814c45a6f1c245d43e2390b8a6ce692a779
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 542e0a84e4c5cfc3750c33fe29cb40d3643e91e3
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80587805"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80636024"
 ---
 # <a name="dependency-properties-overview"></a>依存関係プロパティの概要
 
 Windows Presentation Foundation (WPF) には、型の[プロパティ](../../../standard/base-types/common-type-system.md#properties)の機能を拡張するために使用できる一連のサービスが用意されています。 通常、これらのサービスをまとめて WPF プロパティ システムと呼びます。 WPF プロパティ システムによって使用されるプロパティは、依存関係プロパティと呼ばれています。 ここでは、WPF プロパティ システムと、依存関係プロパティの機能について説明します。 この説明では、既存の依存関係プロパティを XAML およびコードで使用する方法を示します。 また、依存関係プロパティ メタデータなどの依存関係プロパティの特殊な側面や、カスタム クラスで独自の依存関係プロパティを作成する方法についても説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 ここでは、.NET 型システムおよびオブジェクト指向プログラミングに関する基礎知識があることを前提にしています。 このトピックの例について理解するには、XAML および WPF アプリケーションの記述方法について知っておく必要もあります。 詳細については、「[チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)」を参照してください。  
   
 ## <a name="dependency-properties-and-clr-properties"></a>依存関係プロパティおよび CLR プロパティ
@@ -128,7 +128,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 ### <a name="styles"></a>スタイル
 スタイルおよびテンプレートは、依存関係プロパティの使用に関する 2 つの主なシナリオです。 スタイルは、アプリケーション[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] を定義するプロパティを設定する際に特に役立ちます。 通常、スタイルは XAML のリソースとして定義されます。 スタイルには通常、特定のプロパティの "setter" および別のプロパティのリアルタイム値に基づいてプロパティ値を変更する "トリガー" が含まれるため、スタイルはプロパティ システムと対話します。
 
-次の例は、(表示されていない <xref:System.Windows.FrameworkElement.Resources%2A> ディクショナリ内に定義される) 非常に単純なスタイルを作成し、そのスタイルを直接 <xref:System.Windows.FrameworkElement.Style%2A> プロパティに <xref:System.Windows.Controls.Button> 用に適用します。 このスタイル内のセッターは、スタイル設定された <xref:System.Windows.Controls.Button> の <xref:System.Windows.Controls.Control.Background%2A> プロパティを緑色に設定します。
+次の例では、単純なスタイル (<xref:System.Windows.FrameworkElement.Resources%2A>ディクショナリ内で定義され、表示されずに定義されます) を作成し<xref:System.Windows.FrameworkElement.Style%2A>、そのスタイル<xref:System.Windows.Controls.Button>を プロパティに直接適用します。 このスタイル内のセッターは、スタイル設定された <xref:System.Windows.Controls.Button> の <xref:System.Windows.Controls.Control.Background%2A> プロパティを緑色に設定します。
 
 [!code-xaml[PropertiesOvwSupport#SimpleStyleDef](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#simplestyledef)]
 
@@ -146,7 +146,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 プロパティのアニメーション化の詳細については、「[アニメーションの概要](../graphics-multimedia/animation-overview.md)」および「[ストーリーボードの概要](../graphics-multimedia/storyboards-overview.md)」を参照してください。
 
 ### <a name="metadata-overrides"></a>メタデータのオーバーライド
-依存関係プロパティの特定の動作は、依存関係プロパティを最初に登録したクラスから派生させるときにプロパティのメタデータをオーバーライドすることで変更できます。 メタデータのオーバーライドは、<xref:System.Windows.DependencyProperty> 識別子に依存します。 メタデータのオーバーライドでは、プロパティを再実装する必要はありません。 メタデータの変更は、プロパティ システムでネイティブに処理されます。各クラスは、基本クラスから継承したすべてのプロパティに対して、型ごとに個別のメタデータを保持する可能性があります。
+依存関係プロパティの特定の動作は、依存関係プロパティを最初に登録したクラスから派生させるときにプロパティのメタデータをオーバーライドすることで変更できます。 メタデータのオーバーライドは、<xref:System.Windows.DependencyProperty> 識別子に依存します。 メタデータをオーバーライドする場合、プロパティを再実装する必要はありません。 メタデータの変更は、プロパティ システムでネイティブに処理されます。各クラスは、基本クラスから継承したすべてのプロパティに対して、型ごとに個別のメタデータを保持する可能性があります。
 
 次の例は、依存関係プロパティ <xref:System.Windows.FrameworkElement.DefaultStyleKey%2A> 用にメタデータをオーバーライドします。 この特定の依存関係プロパティ メタデータのオーバーライドは、テーマから既定のスタイルを使用できるコントロールを作成する実装パターンの一部です。
 
@@ -183,18 +183,18 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 [!code-xaml[PropertiesOvwSupport#MiniPrecedence](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page3.xaml#miniprecedence)]  
 
 ### <a name="why-does-dependency-property-precedence-exist"></a>依存関係プロパティの優先順位が存在する理由
-通常、スタイルを常に適用し、個別の要素のローカルに設定された値を無効にすることは望ましくありません (また、一般に、スタイルまたは要素の使用は非常に困難です)。 そのため、スタイルに基づく値は、ローカルに設定された値よりも低い優先順位で動作します。 依存関係プロパティの詳細なリストおよび依存関係プロパティの有効値を決める要因については、「[依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)」を参照してください。
+通常、スタイルを常に適用して、個々の要素のローカルに設定された値をあいまいにすることは望ましくありません (そうしないと、一般的にスタイルまたは要素を使用することは困難です)。 そのため、スタイルに基づく値は、ローカルに設定された値よりも低い優先順位で動作します。 依存関係プロパティの詳細なリストおよび依存関係プロパティの有効値を決める要因については、「[依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)」を参照してください。
 
 > [!NOTE]
 > WPF 要素で定義されるプロパティには、依存関係プロパティではないものが多数あります。 概してプロパティは、プロパティ システムによって可能になる 1 つ以上のシナリオ (データ バインディング、スタイル設定、アニメーション、既定値のサポート、継承、添付プロパティ、または無効化) をサポートする必要がある場合にのみ依存関係プロパティとして実装されます。
 
 ## <a name="learning-more-about-dependency-properties"></a>依存関係プロパティの詳細情報  
 
-- 添付プロパティは、XAML で特殊な構文をサポートするプロパティの一種です。 添付プロパティは、共通言語ランタイム (CLR) プロパティと 1 対 1 の対応関係を持たないことが多く、必ずしも依存関係プロパティではありません。 添付プロパティの一般的な目的は、親要素と子要素がどちらも、クラス メンバー リストの一部としてそのプロパティを処理しない場合でも、子要素が親要素にプロパティ値を報告できるようにすることです。 1 つの主要なシナリオは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] でどのように表示するかを、子要素を有効にして親に通知します。例については、「<xref:System.Windows.Controls.DockPanel.Dock%2A>」または「<xref:System.Windows.Controls.Canvas.Left%2A>」を参照してください。 詳細については、「[添付プロパティの概要](attached-properties-overview.md)」を参照してください。
+- 添付プロパティは、XAML で特殊な構文をサポートするプロパティの一種です。 添付プロパティは、共通言語ランタイム (CLR) プロパティと 1 対 1 の対応関係を持たないことが多く、必ずしも依存関係プロパティではありません。 添付プロパティの一般的な目的は、親要素と子要素の両方がクラス メンバーの一覧の一部としてそのプロパティを持っていない場合でも、子要素が親要素にプロパティ値を報告できるようにすることです。 1 つの主要なシナリオは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] でどのように表示するかを、子要素を有効にして親に通知します。例については、「<xref:System.Windows.Controls.DockPanel.Dock%2A>」または「<xref:System.Windows.Controls.Canvas.Left%2A>」を参照してください。 詳細については、「[添付プロパティの概要](attached-properties-overview.md)」を参照してください。
 
 - コンポーネントまたはアプリケーションの開発者は、データ バインディングやスタイルのサポートなどの機能を有効にするために、または無効化および値の強制のサポートのために、独自の依存関係プロパティを作成できます。 詳細については、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。
 
-- 依存関係プロパティは通常、インスタンスにアクセスできる呼び出し元がアクセス可能か、少なくとも検出可能なパブリック プロパティと見なされます。 詳細については、「[依存関係プロパティのセキュリティ](dependency-property-security.md)」を参照してください。
+- 依存関係プロパティは、パブリック プロパティであり、インスタンスにアクセスできる呼び出し元がアクセス可能であるか、少なくとも検出可能である必要があります。 詳細については、「[依存関係プロパティのセキュリティ](dependency-property-security.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-ms.openlocfilehash: 0d765a9789ad566428b1fbda6c0863b10b98c363
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: a40f35838655f6021af0b2e966335803ec8c16b4
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345073"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635400"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>カスタム要素
 
@@ -61,7 +61,7 @@ ms.locfileid: "80345073"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーションディレクトリレベルではないアプリケーション構成ファイル、マシン構成ファイル (*Machine.config*) および*Web.config*ファイルで使用できます。
+この要素は、アプリケーション構成ファイル、コンピューター構成ファイル (*Machine.config*) 、およびアプリケーション ディレクトリ レベルではない*Web.config*ファイルで使用できます。
 
 ## <a name="see-also"></a>関連項目
 

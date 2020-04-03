@@ -5,15 +5,16 @@ helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 9676ae4053553b84488602627b28790aae22eff6
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 6459e3f0cf0ab72af8027bd6802a0e7aa574aece
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345281"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635786"
 ---
 # <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>方法: カスタム WS-Metadata Exchange バインディングを構成する
-ここでは、カスタム WS-Metadata Exchange バインディングを構成する方法について説明します。 Wcf (Wcf) には、システム定義のメタデータ バインディングが 4 つ含まれていますが、任意のバインドを使用してメタデータを公開できます。 ここでは、`wsHttpBinding` を使用してメタデータを公開する方法を示します。 このバインディングでは、メタデータをセキュリティで保護して公開することができます。 この記事のコードは、[作業の開始](../samples/getting-started-sample.md)に基づいています。  
+
+この記事では、カスタム WS メタデータエクスチェンジ バインディングを構成する方法について説明します。 Wcf (Wcf) には、システム定義のメタデータ バインディングが 4 つ含まれていますが、任意のバインドを使用してメタデータを公開できます。 この記事では、 を使用してメタデータを公開`wsHttpBinding`する方法について説明します。 このバインディングでは、メタデータをセキュリティで保護して公開することができます。 この記事のコードは、[作業の開始](../samples/getting-started-sample.md)に基づいています。  
   
 ### <a name="using-a-configuration-file"></a>構成ファイルの使用  
   
@@ -44,7 +45,7 @@ ms.locfileid: "80345281"
               contract="IMetadataExchange" />  
     ```  
   
-4. Metadata Exchange エンドポイントが適切に動作することを確認するには、クライアントの構成ファイルにエンドポイント タグを追加します。  
+4. メタデータ交換エンドポイントが正常に動作していることを確認するには、クライアント構成ファイルにエンドポイントタグを追加します。  
   
     ```xml  
     <endpoint name="MyMexEndpoint"               address="http://localhost:8000/servicemodelsamples/service/mex"  
@@ -117,6 +118,6 @@ ms.locfileid: "80345281"
 
 - [メタデータ公開動作](../samples/metadata-publishing-behavior.md)
 - [メタデータの抽出](../samples/retrieve-metadata.md)
-- [メタデータ](../feature-details/metadata.md)
+- [Metadata](../feature-details/metadata.md)
 - [メタデータの公開](../feature-details/publishing-metadata.md)
 - [メタデータ エンドポイントを公開する](../publishing-metadata-endpoints.md)
