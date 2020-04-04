@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 12/19/2019
-  ms.openlocfilehash: 3f0b4c8df01ee6b20d118ea2d886aca16d9f747d
-  ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+  ms.openlocfilehash: 466059d4fb685a04e55cd43c75debbe24099c86e
+  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/02/2020
-  ms.locfileid: "80588315"
+  ms.lasthandoff: 04/03/2020
+  ms.locfileid: "80635755"
 highlightedContent:
   items:
   - title: C# の概要。 クイック インタラクティブ スタート。
@@ -62,7 +62,7 @@ conceptualContent:
     - url: https://channel9.msdn.com/Series/NET-Core-101/What-is-NET
       itemType: video
       text: .NET とは何ですか?
-    - url: standard/index.md
+    - url: standard/index.yml
       itemType: overview
       text: .NET の概要
     - url: standard/net-standard.md

@@ -3,12 +3,12 @@ title: .NET にようこそ
 description: .NET ファミリのテクノロジの概要です。
 ms.date: 12/03/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: f5673f91545b98fb706d8f1cc03ef7746f1b19b8
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: ecdbdf13aa64de0f07b09eb73953e64d66755bb0
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345304"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635963"
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
 
@@ -42,11 +42,11 @@ ms.locfileid: "80345304"
 
 このドキュメントでは、.NET 全体のプラットフォームおよび言語について説明します。 次のいずれかのセクションから .NET とその言語の作業を開始できます。
 
-- [.NET のガイド](standard/index.md)
+- [.NET のガイド](standard/index.yml)
 - [.NET Core のガイド](core/index.yml)
 - [.NET Framework ガイド](framework/index.yml)
 - [C# のガイド](csharp/index.yml)
-- [F# Guide (F# ガイド)](fsharp/index.yml)
+- [F# のガイド](fsharp/index.yml)
 - [Visual Basic のガイド](visual-basic/index.yml)
 - [ML.NET ガイド](machine-learning/index.yml)
 - [.NET for Apache Spark](spark/index.yml)
