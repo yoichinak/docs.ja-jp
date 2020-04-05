@@ -290,6 +290,8 @@
       href: deploying/creating-nuget-packages.md
     - name: 自己完結型展開ランタイムのロール フォワード
       href: deploying/runtime-patch-selection.md
+    - name: 自己完結型の展開と実行可能ファイルのトリミング
+      href: deploying/trim-self-contained.md
     - name: ランタイム パッケージ ストア
       href: deploying/runtime-store.md
 - name: Docker
