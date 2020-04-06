@@ -4,12 +4,12 @@ description: C# ライブラリやアプリケーションでの継承の使用�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: b72badb7833e018dfcbf5d2583b17f17c800c382
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156754"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391150"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -28,7 +28,7 @@ ms.locfileid: "79156754"
 1. 例にあるコードをコピーして、コード エディターに貼り付けます。
 1. コマンド ラインから [dotnet restore](../../core/tools/dotnet-restore.md) コマンドを入力し、プロジェクトの依存関係を読み込みまたは復元します。
 
-  [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
 1. [dotnet run](../../core/tools/dotnet-run.md) コマンドを入力して、例をコンパイルし実行します。
 
