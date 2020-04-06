@@ -26,7 +26,7 @@ ms.locfileid: "79180692"
 ## <a name="in-this-section"></a>このセクションの内容
 
 [.NET Framework でのトランスポート層セキュリティ (TLS) のベスト プラクティス](tls.md)  
-.NET Framwork での TLS ベスト プラクティスについて説明します。
+.NET Framework での TLS ベスト プラクティスについて説明します。
 
 [Secure Sockets Layer の使用](using-secure-sockets-layer.md)  
 SSL (Secure Sockets Layer) 接続を使用する方法について説明します。  
