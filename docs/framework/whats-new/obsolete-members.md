@@ -7,12 +7,12 @@ helpviewer_keywords:
 - members, obsolete in .NET Framework
 - obsolete members [.NET Framework]
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
-ms.openlocfilehash: 4a4da6bb36371fe5e2b14084d40df88e44dd17fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2e77f871f41dda2f7dd1a080ca6f3b696852b5ad
+ms.sourcegitcommit: 45cced471d59d5dac3f0c92abc9d4849716098a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75901318"
+ms.lasthandoff: 04/04/2020
+ms.locfileid: "80665583"
 ---
 # <a name="obsolete-members-in-net-framework"></a>.NET Framework で互換性のために残されているメンバー
 
@@ -491,7 +491,7 @@ ms.locfileid: "75901318"
 > |<xref:System.Net.ServicePointManager?displayProperty=nameWithType>|<xref:System.Net.ServicePointManager.CertificatePolicy%2A>|<xref:System.Net.ServicePointManager.CertificatePolicy%2A> は、この型の互換性のために残されています。 代わりに <xref:System.Net.ServicePointManager.ServerCertificateValidationCallback%2A?displayProperty=nameWithType> を使用してください|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.AllowReadStreamBuffering%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.AllowWriteStreamBuffering%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
-> |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.OnWriteStreamClosed%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
+> |<xref:System.Net.WebClient?displayProperty=nameWithType>|`System.Net.WebClient.OnWriteStreamClosed`|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
 > |<xref:System.Net.WebClient?displayProperty=nameWithType>|<xref:System.Net.WebClient.WriteStreamClosed>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|
 > |<xref:System.Net.WebProxy?displayProperty=nameWithType>|<xref:System.Net.WebProxy.GetDefaultProxy%2A>|このメソッドの使用は非推奨とされました。 既定で選択されているプロキシを使用してください。|
 > |<xref:System.Net.WebRequest?displayProperty=nameWithType>|<xref:System.Net.WebRequest.CreatorInstance%2A>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> このメンバーを使用すると、コンパイラ エラーが発生します。<br /><br /> この API は、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。|

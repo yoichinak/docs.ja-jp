@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 5b067fa277816e6105d37047c6c4996a4cbb9b5a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73138217"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588634"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ における順序維持
 PLINQ では、正確性を維持しながらパフォーマンスを最大にすることが重要です。 クエリをできるだけ速く実行する一方で、正確な結果を生成する必要があります。 正確性のために、ソース シーケンスの順序の維持が必要な場合がありますが、順序付けには負荷がかかります。 したがって、既定では、PLINQ はソース シーケンスの順序を維持しません。 この点で、PLINQ は [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] と似ていますが、順序を維持する LINQ to Objects とは異なります。  
@@ -122,5 +122,5 @@ PLINQ では、正確性を維持しながらパフォーマンスを最大に�
   
 ## <a name="see-also"></a>参照
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [並列プログラミング](../../../docs/standard/parallel-programming/index.md)

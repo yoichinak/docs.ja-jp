@@ -2,12 +2,12 @@
 title: イベントへのサブスクライブ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 統合イベントの発行とサブスクライブについて。
 ms.date: 01/30/2020
-ms.openlocfilehash: 544af8035ed23dd6507dfed4944b0c327c81d943
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bfcdb1766a15b1a8e8deab46055f14e1791c2cc
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501805"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523591"
 ---
 # <a name="subscribing-to-events"></a>イベントへのサブスクライブ
 
@@ -211,7 +211,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
       // Publish the integration event through the event bus
       _eventBus.Publish(priceChangedEvent);
 
-      integrationEventLogService.MarkEventAsPublishedAsync(
+      _integrationEventLogService.MarkEventAsPublishedAsync(
                                                 priceChangedEvent);
   }
 

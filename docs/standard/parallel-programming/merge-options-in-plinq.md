@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, merge options
 ms.assetid: e8f7be3b-88de-4f33-ab14-dc008e76c1ba
-ms.openlocfilehash: 18f233ac4c5afa63ec31e83d5fff8f0a57f9146f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 623466e0e960ea991ae92e5de432171b70bad1d2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74203999"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588621"
 ---
 # <a name="merge-options-in-plinq"></a>PLINQ のマージ オプション
 クエリが並列として実行される場合、PLINQ はソース シーケンスをパーティション分割し、複数のスレッドが同時に異なる部分 (通常は別個のスレッド) で動作できるようにします。 結果を 1 つのスレッドで、たとえば、`foreach` (Visual Basic では `For Each`) ループで使用する場合、すべてのスレッドからの結果を 1 つのシーケンスに再マージする必要があります。 PLINQ で実行されるマージの種類は、クエリに存在する演算子によって異なります。 たとえば、結果に新しい順序を適用する演算子は、すべてのスレッドのすべての要素をバッファリングする必要があります。 消費スレッド (アプリケーション ユーザーのものでもある) 観点から、完全にバッファリングされたクエリは、最初の結果が生成される前に非常に長い期間実行される可能性があります。 既定では、その他の演算子は部分的にバッファリングされ、結果はバッチ単位で生成されます。 既定では、1 つの演算子 <xref:System.Linq.ParallelEnumerable.ForAll%2A> がバッファリングされることはありません。 すべてのスレッドのすべての要素はすぐに生成されます。  
@@ -65,5 +65,5 @@ ms.locfileid: "74203999"
   
 ## <a name="see-also"></a>参照
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
 - [方法: PLINQ のマージ オプションを指定する](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)

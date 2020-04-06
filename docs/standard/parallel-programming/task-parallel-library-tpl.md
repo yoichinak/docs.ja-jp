@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET, parallel programming in
 - Parallel Programming
 ms.assetid: b8f99f43-9104-45fd-9bff-385a20488a23
-ms.openlocfilehash: 487fe48462803ac19318f450f2576989f196a9be
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6785041730a048fb08677dbd054f727e351185d4
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139959"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588586"
 ---
 # <a name="task-parallel-library-tpl"></a>タスク並列ライブラリ (TPL)
 タスク並列ライブラリ (TPL: Task Parallel Library) は、<xref:System.Threading?displayProperty=nameWithType> 名前空間および <xref:System.Threading.Tasks?displayProperty=nameWithType> 名前空間におけるパブリック型と API のセットです。 TPL の目的は、アプリケーションに並列処理とコンカレンシーを追加するプロセスを簡略化して、開発者の生産性を高めることです。 TPL は、使用可能なすべてのプロセッサを最も効率的に使用するように、コンカレンシーの程度を動的に拡大します。 さらに TPL は、作業のパーティション分割、<xref:System.Threading.ThreadPool> 上のスレッドのスケジュール、キャンセルのサポート、状態管理、および他の低水準の詳細を処理します。 TPL を使用すると、コードのパフォーマンスが大幅に向上し、目的を達成するためのプログラミング作業に集中できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "73139959"
 |[データフロー](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)|相互に非同期通信を行う必要がある複数の操作を処理する場合、またはデータが使用可能になったときにデータを処理する場合に、TPL データ フロー ライブラリのデータ フロー コンポーネントを使用する方法について説明します。|  
 |[TPL と他の非同期パターンの使用](../../../docs/standard/parallel-programming/using-tpl-with-other-asynchronous-patterns.md)|TPL と他の非同期パターンを .NET で使用する方法について説明します。|  
 |[データとタスクの並列化における注意点](../../../docs/standard/parallel-programming/potential-pitfalls-in-data-and-task-parallelism.md)|一般的な落とし穴とその回避方法について説明します。|  
-|[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)|LINQ クエリでデータの並列化を達成する方法について説明します。|  
+|[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)|LINQ クエリでデータの並列化を達成する方法について説明します。|  
 |[並列プログラミング](../../../docs/standard/parallel-programming/index.md)|.NET 並列プログラミングのトップ レベル ノード。|  
   
 ## <a name="see-also"></a>参照

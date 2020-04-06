@@ -15,12 +15,12 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 151bf40cf042517b7441b89688122373259dc7dc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140066"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523935"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法: カスタム数値書式プロバイダーを定義して使用する
 .NET Framework では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
@@ -84,8 +84,4 @@ ms.locfileid: "73140066"
  [!code-csharp[System.ICustomFormatter.Format#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.ICustomFormatter.Format/cs/format.cs#1)]
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
- この例の場合、<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> を実装するメソッドは、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドのコールバック メソッドを果たす目的があります。 そのため、`formatProvider` パラメーターを調べ、現在の `TelephoneFormatter` オブジェクトへの参照が含まれるかどうかを判断します。 ただし、メソッドはコードから直接呼び出すこともできます。 その場合は、`formatProvider` パラメーターを使用して、カルチャに固有の書式情報を提供する <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクトを提供することができます。  
-  
-## <a name="see-also"></a>関連項目
-
-- [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
+ この例の場合、<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> を実装するメソッドは、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドのコールバック メソッドを果たす目的があります。 そのため、`formatProvider` パラメーターを調べ、現在の `TelephoneFormatter` オブジェクトへの参照が含まれるかどうかを判断します。 ただし、メソッドはコードから直接呼び出すこともできます。 その場合は、`formatProvider` パラメーターを使用して、カルチャに固有の書式情報を提供する <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクトを提供することができます。

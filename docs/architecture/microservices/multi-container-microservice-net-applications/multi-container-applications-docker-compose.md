@@ -2,12 +2,12 @@
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
 description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
 ms.date: 01/30/2020
-ms.openlocfilehash: 86d6feda343df7f4b72374f93fc45b3246780cdf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502465"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523651"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -156,7 +156,7 @@ Docker Compose を使用すると、コマンド プロンプトまたはスク�
 ```console
 docker-compose -f docker-compose.yml -f docker-compose-test.override.yml up -d
 ./run_unit_tests
-docker-compose -f docker-compose.yml -f docker-compose.test.override.yml down
+docker-compose -f docker-compose.yml -f docker-compose-test.override.yml down
 ```
 
 #### <a name="production-deployments"></a>運用展開

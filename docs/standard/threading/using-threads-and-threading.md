@@ -6,12 +6,12 @@ helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 9b5ec2cd-121b-4d49-b075-222cf26f2344
-ms.openlocfilehash: 1d487edff2cdc2e63f81963bfaa1f68a06e5b36e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14159ff9a6ca39108aec14b0ad46004e95fa3cf2
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75936840"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588425"
 ---
 # <a name="using-threads-and-threading"></a>スレッドの使用とスレッド処理
 
@@ -20,7 +20,7 @@ ms.locfileid: "75936840"
 マルチスレッドを利用するアプリケーションはユーザーの入力に対する応答性が良くなります。プロセッサを集中的に利用するタスクが個別のスレッドで実行されるため、ユーザー インターフェイスの動作が妨げられません。 マルチスレッドはまた、スケーラブルなアプリケーションの開発にも便利です。ワークロードが増えたとき、スレッドを追加できるからです。
 
 > [!NOTE]
-> アプリケーションのスレッドの動作をさらに細かく制御するには、スレッドを自分で管理します。 しかし、.NET Framework 4 以降では、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラス、[Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間の新しい同時実行コレクション クラス、スレッドではなくタスクの概念を基にした新しいプログラミング モデルにより、マルチスレッド プログラミングが大幅に簡略化されています。 詳細については、「[.NET での並列プログラミング](../parallel-programming/index.md)」と「[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)」を参照してください。
+> アプリケーションのスレッドの動作をさらに細かく制御するには、スレッドを自分で管理します。 しかし、.NET Framework 4 以降では、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラス、[Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間の新しい同時実行コレクション クラス、スレッドではなくタスクの概念を基にした新しいプログラミング モデルにより、マルチスレッド プログラミングが大幅に簡略化されています。 詳細については、「[.NET での並列プログラミング](../parallel-programming/index.md)」と「[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)」を参照してください。
 
 ## <a name="how-to-create-and-start-a-new-thread"></a>方法: 新しいスレッドを作成して開始する
 

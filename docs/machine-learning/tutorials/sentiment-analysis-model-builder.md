@@ -6,12 +6,12 @@ author: luisquintanilla
 ms.author: luquinta
 ms.topic: tutorial
 ms.custom: mvc,mlnet-tooling
-ms.openlocfilehash: 3419afb36d73599b8fdb0417a8c0cc4057f60089
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 98c9f28ca4ce6365ed4cf4ff1566a33dbe8f35ca
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187631"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438229"
 ---
 # <a name="tutorial-analyze-sentiment-of-website-comments-in-a-web-application-using-mlnet-model-builder"></a>チュートリアル: ML.NET モデル ビルダーを使用して Web アプリケーションで Web サイトのコメントのセンチメントを分析する
 
@@ -302,6 +302,6 @@ ms.locfileid: "79187631"
 
 このチュートリアルで説明しているトピックについて詳しくは、次のリソースを参照してください。
 
-- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenarios)
+- [モデル ビルダーのシナリオ](../automate-training-with-model-builder.md#scenario)
 - [二項分類](../resources/glossary.md#binary-classification)
 - [二項分類モデル メトリック](../resources/metrics.md#evaluation-metrics-for-binary-classification)

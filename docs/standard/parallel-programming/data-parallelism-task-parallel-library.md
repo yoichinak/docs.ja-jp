@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallelism, data
 ms.assetid: 3f05f33f-f1da-4b16-81c2-9ceff1bef449
-ms.openlocfilehash: 72696a41cd3b71f47fdcf43e4ece70ebeb7d34d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f0910ae928e94b487df5a3dfd456ee9d7c0fb7df
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73123161"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80587593"
 ---
 # <a name="data-parallelism-task-parallel-library"></a>データの並列化 (タスク並列ライブラリ)
 "*データの並列化*" とは、ソース コレクションまたは配列の要素に対して、同じ操作を同時に (つまり、並列で) 実行するシナリオを意味します。 データの並列化操作では、複数のスレッドが異なるセグメント上で同時に操作できるようにソース コレクションがパーティション分割されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "73123161"
   
  詳細については、「[Patterns for Parallel Programming: Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222)」 (並列プログラミングのパターン: .NET Framework 4 での並列パターンの理解と適用) を参照してください。  
   
- PLINQ では、宣言構文またはクエリ形式の構文によるデータの並列化がサポートされています。 詳細については、「[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)」を参照してください。  
+ PLINQ では、宣言構文またはクエリ形式の構文によるデータの並列化がサポートされています。 詳細については、「[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)」を参照してください。  
   
 ## <a name="related-topics"></a>関連トピック  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET]
 - threading [.NET], multiple threads
 ms.assetid: 5baac3aa-e603-4fa6-9f89-0f2c1084e6b1
-ms.openlocfilehash: ad36789579b95e0129e402765194b9f5e45a4cc1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e29c131f8459179d0641ac9a0cb8234fbba0e7d0
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127512"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588440"
 ---
 # <a name="threads-and-threading"></a>スレッドおよびスレッド処理
 
@@ -37,7 +37,7 @@ ms.locfileid: "73127512"
 
 ## <a name="how-to-use-multithreading-in-net"></a>.NET でのマルチスレッドの使用方法
 
-.NET Framework 4 より、マルチスレッドを使用するために推奨される方法が、[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md) と [Parallel LINQ (PLINQ)](../parallel-programming/parallel-linq-plinq.md) の使用です。 詳細については、[並列プログラミング](../parallel-programming/index.md)に関するページを参照してください。
+.NET Framework 4 より、マルチスレッドを使用するために推奨される方法が、[タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md) と [Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md) の使用です。 詳細については、[並列プログラミング](../parallel-programming/index.md)に関するページを参照してください。
 
 TPL も PLINQ も、<xref:System.Threading.ThreadPool> スレッドに依存しています。 <xref:System.Threading.ThreadPool?displayProperty=nameWithType> クラスから .NET アプリケーションにワーカー スレッドのプールが提供されます。 スレッド プールのスレッドを使用することもできます。 詳しくは、「[マネージド スレッド プール](the-managed-thread-pool.md)」を参照してください。
 

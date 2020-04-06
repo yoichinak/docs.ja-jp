@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Parse method
 - parsing strings
 ms.assetid: 5e758b41-db93-456b-8999-99b7304b090d
-ms.openlocfilehash: e4bf14981e538d95aebac3b0f36d38b61747989f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 717022e5d2e292c1624e6155bd7571e4daa997b9
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084314"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523799"
 ---
 # <a name="parsing-strings-in-net"></a>.NET での文字列の解析
 解析操作では、.NET の基本データ型を表す文字列をその基本データ型に変換します。 たとえば解析操作は、文字列を浮動小数点数や日付と時刻の値に変換するために使用します。 解析操作を実行するには、`Parse` メソッドがよく使用されます。 解析は書式設定の逆の操作 (基本データ型のその文字列形式への変換を含む) であるため、多くの同じ規則が適用されます。 カルチャに依存する書式情報を指定するために、書式設定で <xref:System.IFormatProvider> インターフェイスを実装するオブジェクトを使用するのと同じように、解析でも <xref:System.IFormatProvider> インターフェイスを実装するオブジェクトを使用し、文字列形式を解釈する方法を決定します。 詳細については、[型の書式設定](../../../docs/standard/base-types/formatting-types.md)に関するページをご覧ください。  
@@ -34,7 +34,4 @@ ms.locfileid: "73084314"
  書式指定子や書式プロバイダーなどの基本書式の概念について説明します。  
   
  [.NET での型変換](../../../docs/standard/base-types/type-conversion.md)  
- 型に変換する方法について説明します。  
-  
- [基本データ型](../../../docs/standard/base-types/index.md)  
- .NET の基本型で実行できる一般的な操作について説明します。
+ 型に変換する方法について説明します。

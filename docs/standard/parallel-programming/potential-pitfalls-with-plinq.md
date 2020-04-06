@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, pitfalls
 ms.assetid: 75a38b55-4bc4-488a-87d5-89dbdbdc76a2
-ms.openlocfilehash: 3ddc0c013335e6a7b4708a5dd8be0b2247b2f60c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44f40d6caad9187376a790f9a0ed09e22c861e37
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74716254"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588593"
 ---
 # <a name="potential-pitfalls-with-plinq"></a>PLINQ の非利便性
 
@@ -123,4 +123,4 @@ Enumerable.Range(0, Environment.ProcessorCount * 100).AsParallel().ForAll((j) =>
 
 ## <a name="see-also"></a>関連項目
 
-- [Parallel LINQ (PLINQ)](parallel-linq-plinq.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)
