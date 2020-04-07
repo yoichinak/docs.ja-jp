@@ -9,12 +9,12 @@ helpviewer_keywords:
 - regular expressions, behavior
 - .NET Framework regular expressions, behavior
 ms.assetid: 0ee1a6b8-caac-41d2-917f-d35570021b10
-ms.openlocfilehash: 504e315dda4e76f56a88d97149b1515b6743668b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0273d16028315452e35f83086dbc134d6fcb66c6
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124352"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635985"
 ---
 # <a name="details-of-regular-expression-behavior"></a>正規表現の動作の詳細
 
@@ -71,7 +71,7 @@ ms.locfileid: "77124352"
 
      肯定先読みアサーションについて詳しくは、「[グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」をご覧ください。
 
-- 否定先読み: `(?!`*subexpression*`)`。 この機能により、部分式に一致する文字列が見つからなかった場合にのみ、表現に一致できるようになります。 ある文字列を除外する表現の方が、含める表現よりも単純になることが多いため、この機能は検索を簡略化する場合に特に力を発揮します。 たとえば、"non" で始まらない単語を表す表現を記述するのは簡単ではありません。 次の例では、否定先読みを使用してこれらを除外します。
+- 否定先読み: `(?!`*subexpression*`)`。 この機能により、部分式に一致する文字列が見つからなかった場合にのみ、表現に一致できるようになります。 ある文字列を除外する表現の方が、含める表現よりも単純になることが多いため、この機能は検索を簡略化する場合に力を発揮します。 たとえば、"non" で始まらない単語を表す表現を記述するのは簡単ではありません。 次の例では、否定先読みを使用してこれらを除外します。
 
      [!code-csharp[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.design/cs/lookahead2.cs#3)]
      [!code-vb[Conceptual.RegularExpressions.Design#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.design/vb/lookahead2.vb#3)]
@@ -151,7 +151,6 @@ ms.locfileid: "77124352"
 |[スレッド セーフ](../../../docs/standard/base-types/thread-safety-in-regular-expressions.md)|正規表現のスレッド セーフの詳細と、正規表現オブジェクトへのアクセスを同期することが必要なケースについて説明します。|
 |[.NET Framework 正規表現](../../../docs/standard/base-types/regular-expressions.md)|正規表現のプログラミング言語的な面の概要について説明します。|
 |[正規表現のオブジェクト モデル](../../../docs/standard/base-types/the-regular-expression-object-model.md)|正規表現クラスの使用方法について詳しく説明し、コード例を示します。|
-|[正規表現の例](../../../docs/standard/base-types/regular-expression-examples.md)|一般的なアプリケーションで正規表現を使用するときのコード例を示します。|
 |[正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|正規表現の定義に使用できる一連の文字、演算子、および構成体について説明します。|
 
 ## <a name="reference"></a>関連項目
