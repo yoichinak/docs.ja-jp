@@ -3,12 +3,12 @@ title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 25d20de2eae8ad1f544fa17553c173a6141ae464
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156690"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635661"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
@@ -46,7 +46,7 @@ namespace list_tutorial
 
 文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。
 
-名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。  `string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。 実際の文字列は、生成する値でその C# コードを置き換えます。 この例では、`{name.ToUpper()}` メソッドを呼び出したため、文字列は <xref:System.String.ToUpper%2A> をそれぞれの名前に置き換え、文字を大文字に変換しています。
+名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。  `string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。 実際の文字列は、生成する値でその C# コードを置き換えます。 この例では、<xref:System.String.ToUpper%2A> メソッドを呼び出したため、文字列は `{name.ToUpper()}` をそれぞれの名前に置き換え、文字を大文字に変換しています。
 
 続けて確認していきましょう。
 
@@ -54,7 +54,7 @@ namespace list_tutorial
 
 作成したコレクションは <xref:System.Collections.Generic.List%601> 型を使用します。 この型は、要素のシーケンスを格納します。 要素の型を山かっこの内側で指定します。
 
-この <xref:System.Collections.Generic.List%601> 型の重要な点は増減が可能で、要素を追加したり削除したりできることです。 `}` メソッドの閉じかっこ `Main` の前に、次のコードを追加します。
+この <xref:System.Collections.Generic.List%601> 型の重要な点は増減が可能で、要素を追加したり削除したりできることです。 `Main` メソッドの閉じかっこ `}` の前に、次のコードを追加します。
 
 ```csharp
 Console.WriteLine();
@@ -123,7 +123,7 @@ foreach (var name in names)
 
 ファイルを保存し、「`dotnet run`」と入力してこの最新バージョンを試します。
 
-次のセクションを開始する前に、現在のコードを別のメソッドに移動してみましょう。 移動しておくと、新しい例で作業を開始するときに楽になります。 `Main` メソッドの名前を `WorkingWithStrings` に変更し、`Main` を呼び出す新しい `WorkingWithStrings` メソッドを記述します。 完成したコードは次のようになります。
+次のセクションを開始する前に、現在のコードを別のメソッドに移動してみましょう。 移動しておくと、新しい例で作業を開始するときに楽になります。 `Main` メソッドの名前を `WorkingWithStrings` に変更し、`WorkingWithStrings` を呼び出す新しい `Main` メソッドを記述します。 完成したコードは次のようになります。
 
 ```csharp
 using System;
@@ -216,7 +216,7 @@ foreach (var item in fibonacciNumbers)
 ファイルを保存し、「`dotnet run`」と入力して結果を確認します。
 
 > [!TIP]
-> このセクションにだけ集中したいときは、`WorkingWithStrings();` を呼び出すコードはコメント アウトしてかまいません。 `/` のように、呼び出しの前に `// WorkingWithStrings();` 文字を 2 つ記述します。
+> このセクションにだけ集中したいときは、`WorkingWithStrings();` を呼び出すコードはコメント アウトしてかまいません。 `// WorkingWithStrings();` のように、呼び出しの前に `/` 文字を 2 つ記述します。
 
 ## <a name="challenge"></a>課題
 
@@ -230,4 +230,4 @@ foreach (var item in fibonacciNumbers)
 
 おつかれさまでした。リストについてのチュートリアルはこれで終了です。 続けて独自の開発環境で[クラスの概要](introduction-to-classes.md)のチュートリアルに進むことができます。
 
-`List` 型の使用方法の詳細については、[.NET ガイド](../../../standard/index.md)の[コレクション](../../../standard/collections/index.md)に関するトピックで学習できます。 その他の多くのコレクション型についても学習できます。
+`List` 型の使用方法の詳細については、「[.NET ガイド](../../../standard/index.yml)」の[コレクション](../../../standard/collections/index.md)に関する記事を参照してください。 その他の多くのコレクション型についても学習できます。

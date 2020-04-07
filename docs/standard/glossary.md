@@ -3,12 +3,12 @@ title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: ed4dceed1a3f39c5c4ce7a278efc37bb38ed0d94
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: d8f16579ea4dcbc9260aac83e16d3fbd30db519c
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344198"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635579"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -155,7 +155,7 @@ Mono について詳しくは、[Mono のドキュメント](https://www.mono-pr
 
 [.NET Standard](#net-standard) とすべての [.NET の実装](#implementation-of-net)およびワークロードを表す包括的な用語。 常にすべて大文字で表し、".Net" とは表記されません。
 
-「[.NET ガイド](index.md)」をご覧ください。
+「[.NET ガイド](index.yml)」をご覧ください。
 
 ## <a name="net-core"></a>.NET Core
 
@@ -273,7 +273,7 @@ OS は、ランタイム環境の一部ですが、.NET ランタイムの一部
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET のガイド](index.md)
+- [.NET のガイド](index.yml)
 - [.NET Framework ガイド](../framework/index.yml)
 - [.NET Core](../core/index.yml)
 - [ASP.NET の概要](/aspnet/index#pivot=aspnet)

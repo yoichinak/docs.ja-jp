@@ -1,18 +1,18 @@
 ---
 title: ref キーワード - C# リファレンス
-ms.date: 03/26/2019
+ms.date: 03/19/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 05f0bd8566851678203a3f064b96bfff7dee18b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d04f888befae2cad815c88a0d27bd836f458c63
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398131"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523776"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
@@ -25,7 +25,7 @@ ms.locfileid: "79398131"
 
 ## <a name="passing-an-argument-by-reference"></a>参照渡しで引数を渡す
 
-メソッドのパラメーター リストで使用した場合、`ref` キーワードは、引数を値ではなく、参照によって渡すことを示します。 `ref` キーワードは、仮パラメーターを引数 (変数にする必要があります) の別名にします。 つまり、パラメーターに対するすべての操作は引数に対して行われます。 たとえば、呼び出し元がローカル変数の式、または配列要素のアクセス式を渡し、呼び出されたメソッドが ref パラメーターが参照するオブジェクトを置き換える場合、メソッドが戻ったときに呼び出し元のローカル変数または配列要素は新しいオブジェクトを参照します。
+メソッドのパラメーター リストで使用した場合、`ref` キーワードは、引数を値ではなく、参照によって渡すことを示します。 `ref` キーワードは、仮パラメーターを引数 (変数にする必要があります) の別名にします。 つまり、パラメーターに対するすべての操作は引数に対して行われます。 たとえば、呼び出し元がローカル変数の式、または配列要素のアクセス式を渡し、呼び出されたメソッドが ref パラメーターが参照するオブジェクトを置き換える場合、メソッドから戻ったとき、呼び出し元のローカル変数または配列要素では新しいオブジェクトが参照されます。
 
 > [!NOTE]
 > 参照渡しの概念と参照型の概念を混同しないでください。 2 つの概念は同じではありません。 メソッドのパラメーターは、値型か参照型かどうかに関係なく、`ref` によって変更できます。 参照渡しで渡される場合、値型はボックス化されません。  
@@ -59,7 +59,13 @@ class CS0663_Example
  次の種類のメソッドには、`ref`、`in`、`out` キーワードを使用することはできません。  
   
 - [async](async.md) 修飾子を使用して定義した Async メソッド。  
-- [yield return](yield.md) または `yield break` ステートメントを含む Iterator メソッド。  
+- [yield return](yield.md) または `yield break` ステートメントを含む Iterator メソッド。
+
+さらに、[拡張メソッド](../../programming-guide/classes-and-structs/extension-methods.md)には次の制約があります。
+
+- 拡張メソッドの最初の引数では、`out` キーワードを使用できません。
+- 拡張メソッドの最初の引数が構造体ではない場合、または構造体として制約されていないジェネリック型である場合、その引数で `ref` キーワードを使用することはできません。
+- 最初の引数が構造体である場合を除き、`in` キーワードは使用できません。 ジェネリック型では、構造体として制約されている場合であっても、`in` キーワードを使用することはできません。
 
 ## <a name="passing-an-argument-by-reference-an-example"></a>参照渡しで引数を渡す:使用例
 

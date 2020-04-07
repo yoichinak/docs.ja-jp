@@ -18,12 +18,12 @@ helpviewer_keywords:
 - isolated storage, types
 - user authentication, isolated storage
 ms.assetid: 14812988-473f-44ae-b75f-fd5c2f21fb7b
-ms.openlocfilehash: 99e1f3f96465d05c100a0dbb2bc5218810c33754
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9bbd2c3cdca9b2eaee268738bf99189b0be78eba
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159430"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635732"
 ---
 # <a name="types-of-isolation"></a>分離のタイプ
 分離ストレージへのアクセスは、常にそのストレージを作成したユーザーに限定されます。 この種の分離を実装するために、共通言語ランタイムは、オペレーティング システムが認識するユーザー ID (ストアを開くときにコードが実行しているプロセスに関連付けられた ID) と同じ概念を使用します。 この ID は認証されたユーザーの ID ですが、偽装によって現在のユーザーの ID が動的に変更される可能性があります。  
@@ -32,7 +32,7 @@ ms.locfileid: "78159430"
   
 - ドメイン ID は、アプリケーションの証拠を表します。Web アプリケーションの場合は、完全な URL の可能性があります。 シェルでホストされるコードの場合、ドメイン ID はアプリケーション ディレクトリのパスに基づいている可能性があります。 たとえば、実行可能ファイルが C:\Office\MyApp.exe というパスから実行される場合、ドメイン ID は C:\Office\MyApp.exe になります。  
   
-- アセンブリ ID はアセンブリの証拠です。 アセンブリ ID は暗号化デジタル署名に由来することがあります。この場合、アセンブリの[厳密な名前](../assembly/strong-named.md)、アセンブリのソフトウェア発行元、または URL の ID である可能性があります。 アセンブリに厳密な名前とソフトウェア発行元 ID が両方ともある場合は、ソフトウェア発行元 ID が使用されます。 アセンブリがインターネットから取得され、署名されていない場合は、URL ID が使用されます。 アセンブリおよび厳密な名前の詳細については、「[アセンブリを使用したプログラミング](../assembly/program.md)」を参照してください。  
+- アセンブリ ID はアセンブリの証拠です。 アセンブリ ID は暗号化デジタル署名に由来することがあります。この場合、アセンブリの[厳密な名前](../assembly/strong-named.md)、アセンブリのソフトウェア発行元、または URL の ID である可能性があります。 アセンブリに厳密な名前とソフトウェア発行元 ID が両方ともある場合は、ソフトウェア発行元 ID が使用されます。 アセンブリがインターネットから取得され、署名されていない場合は、URL ID が使用されます。 アセンブリおよび厳密な名前の詳細については、「[アセンブリを使用したプログラミング](/dotnet/standard/assembly/index)」を参照してください。  
   
 - ローミング ストアは、ローミング ユーザー プロファイルを持つユーザーと共に移動します。 ファイルはネットワーク ディレクトリに書き込まれ、ユーザーがログインする任意のコンピューターにダウンロードされます。 ローミング ユーザー プロファイルの詳細については、「<xref:System.IO.IsolatedStorage.IsolatedStorageScope.Roaming?displayProperty=nameWithType>」を参照してください。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "78159430"
   
 <a name="UserDomainAssembly"></a>
 ## <a name="isolation-by-user-domain-and-assembly"></a>ユーザー、ドメイン、およびアセンブリによる分離  
- アプリケーションでプライベート データ ストアが必要なサードパーティ アセンブリを使用している場合、プライベート データを格納するために分離ストレージを使用できます。 ユーザー、ドメイン、アセンブリによる分離では、アセンブリがストアを作成したときに実行されていたアプリケーションによってアセンブリが使用されている場合、かつストアが作成されたときのユーザーがアプリケーションを実行した場合にのみ、特定のアセンブリ内のコードのみがデータにアクセスできます。 ユーザー、ドメイン、アセンブリによる分離では、サードパーティのアセンブリから他のアプリケーションにデータが漏えいされません。 分離ストレージを使用したくても、使用する隔離の種類がわからない場合は、この分離方法を既定の選択肢にすることをお勧めします。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> の静的な <xref:System.IO.IsolatedStorage.IsolatedStorageFile> メソッドを呼び出し、ユーザー、ドメイン、およびアセンブリ <xref:System.IO.IsolatedStorage.IsolatedStorageScope> を渡すと、この種類の分離でストレージが返されます。  
+ アプリケーションでプライベート データ ストアが必要なサードパーティ アセンブリを使用している場合、プライベート データを格納するために分離ストレージを使用できます。 ユーザー、ドメイン、アセンブリによる分離では、アセンブリがストアを作成したときに実行されていたアプリケーションによってアセンブリが使用されている場合、かつストアが作成されたときのユーザーがアプリケーションを実行した場合にのみ、特定のアセンブリ内のコードのみがデータにアクセスできます。 ユーザー、ドメイン、アセンブリによる分離では、サードパーティのアセンブリから他のアプリケーションにデータが漏えいされません。 分離ストレージを使用したくても、使用する隔離の種類がわからない場合は、この分離方法を既定の選択肢にすることをお勧めします。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile> の静的な <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> メソッドを呼び出し、ユーザー、ドメイン、およびアセンブリ <xref:System.IO.IsolatedStorage.IsolatedStorageScope> を渡すと、この種類の分離でストレージが返されます。  
   
  次のコード例は、ユーザー、ドメイン、アセンブリによって分離されたストアを取得します。 このストアには `isoFile` オブジェクトを介してアクセスできます。  
   
@@ -103,7 +103,7 @@ ms.locfileid: "78159430"
  [!code-csharp[Conceptual.IsolatedStorage#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.isolatedstorage/cs/source9.cs#12)]
  [!code-vb[Conceptual.IsolatedStorage#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.isolatedstorage/vb/source9.vb#12)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.IsolatedStorage.IsolatedStorageScope>
 - [分離ストレージ](../../../docs/standard/io/isolated-storage.md)

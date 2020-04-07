@@ -2,15 +2,15 @@
 title: ASP.NET Core の破壊的変更
 titleSuffix: ''
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 01/10/2020
+ms.date: 03/27/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: c54735cd53fb9cb48eb84045791ccc559fe683cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
+ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093176"
+ms.lasthandoff: 03/30/2020
+ms.locfileid: "80391248"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -18,7 +18,6 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 
 このページでは、次の破壊的変更について説明します。
 
-- [HTTP:ブラウザー SameSite の変更による認証への影響](#http-browser-samesite-changes-impact-authentication)
 - [Antiforgery、CORS、Diagnostics、MVC、Routing の古い API の削除](#obsolete-antiforgery-cors-diagnostics-mvc-and-routing-apis-removed)
 - [認証:Google+ の非推奨](#authentication-google-deprecated-and-replaced)
 - [認証:HttpContext.Authentication プロパティの削除](#authentication-httpcontextauthentication-property-removed)
@@ -27,6 +26,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [承認:AddAuthorization のオーバーロードを別のアセンブリに移動](#authorization-addauthorization-overload-moved-to-different-assembly)
 - [承認:AuthorizationFilterContext.Filters から IAllowAnonymous を削除](#authorization-iallowanonymous-removed-from-authorizationfiltercontextfilters)
 - [承認:IAuthorizationPolicyProvider の実装に新しいメソッドが必要](#authorization-iauthorizationpolicyprovider-implementations-require-new-method)
+- [Azure:Microsoft というプレフィックスが付いた Azure 統合パッケージが削除された](#azure-microsoft-prefixed-azure-integration-packages-removed)
 - [キャッシュ:CompactOnMemoryPressure プロパティの削除](#caching-compactonmemorypressure-property-removed)
 - [キャッシュ:Microsoft.Extensions.Caching.SqlServer で新しい SqlClient パッケージを使用](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [キャッシュ:ResponseCaching の "pubternal" 型を internal に変更](#caching-responsecaching-pubternal-types-changed-to-internal)
@@ -36,6 +36,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [ホスティング:IIS アウトプロセス アプリ用に HTTPS リダイレクトを有効化](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [ホスティング:IHostingEnvironment と IApplicationLifetime の型を置き換え](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [ホスティング:WebHostBuilder 依存関係から ObjectPoolProvider を削除](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP:ブラウザー SameSite の変更による認証への影響](#http-browser-samesite-changes-impact-authentication)
 - [HTTP:DefaultHttpContext の機能拡張の削除](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP:HeaderNames フィールドを静的読み取り専用に変更](#http-headernames-constants-changed-to-static-readonly)
 - [HTTP:応答本文のインフラストラクチャの変更](#http-response-body-infrastructure-changes)
@@ -65,10 +66,31 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [SignalR:HubConnection メソッドを削除](#signalr-hubconnection-resetsendping-and-resettimeout-methods-removed)
 - [SignalR:HubConnectionContext コンストラクターを変更](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR:JavaScript クライアント パッケージ名を変更](#signalr-javascript-client-package-name-changed)
+- [SignalR:MessagePack ハブ プロトコルが MessagePack 2.x パッケージに移動された](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
 - [SignalR:古い API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
-- [SPA:SpaServices および NodeServices を古いとしてマーク](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [SignalR:UseSignalR メソッドと UseConnections メソッドが削除された](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPA:SpaServices および NodeServices コンソール ロガー フォールバックの既定値を変更](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
+- [SPA:SpaServices および NodeServices を古いとしてマーク](#spas-spaservices-and-nodeservices-marked-obsolete)
+- [静的ファイル: CSV コンテンツ タイプが標準準拠に変更されました](#static-files-csv-content-type-changed-to-standards-compliant)
 - [ターゲット フレームワーク: .NET Framework がサポートされない](#target-framework-net-framework-support-dropped)
+
+## <a name="aspnet-core-50"></a>ASP.NET Core 5.0
+
+[!INCLUDE[Azure: Microsoft-prefixed Azure integration packages removed](~/includes/core-changes/aspnetcore/5.0/azure-integration-packages-removed.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: UseSignalR and UseConnections methods removed](~/includes/core-changes/aspnetcore/5.0/signalr-usesignalr-useconnections-removed.md)]
+
+***
+
+[!INCLUDE[Static files: CSV content type changed to standards-compliant](~/includes/core-changes/aspnetcore/5.0/static-files-csv-content-type-changed.md)]
+
+***
 
 ## <a name="aspnet-core-31"></a>ASP.NET Core 3.1
 

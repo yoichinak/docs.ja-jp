@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
 ms.date: 02/24/2020
-ms.openlocfilehash: c34618409c9a539043c84c7e03daa8aa249d64f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
+ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146556"
+ms.lasthandoff: 04/02/2020
+ms.locfileid: "80588268"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -38,7 +38,23 @@ dotnet publish [-h|--help]
 - *.runtimeconfig.json* ファイル。アプリケーションが想定する共有ランタイムと、ランタイム用の他の構成オプション (ガベージ コレクションの種類など) を指定します。
 - アプリケーションの依存関係。NuGet キャッシュから出力フォルダーにコピーされます。
 
-`dotnet publish` コマンドの出力は、実行のためにホスト システム (サーバー、PC、Mac、ラップトップなど) にすぐに展開できます。 これは、アプリケーションの展開を準備するための正式にサポートされている唯一の方法です。 プロジェクトに指定されている展開の種類によっては、ホスティング システムに .NET Core 共有ランタイムがインストールされている場合とされていない場合があります。
+`dotnet publish` コマンドの出力は、実行のためにホスト システム (サーバー、PC、Mac、ラップトップなど) にすぐに展開できます。 これは、アプリケーションの展開を準備するための正式にサポートされている唯一の方法です。 プロジェクトに指定されている展開の種類によっては、ホスティング システムに .NET Core 共有ランタイムがインストールされている場合とされていない場合があります。 詳細については、「[.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)」を参照してください。
+
+### <a name="msbuild"></a>MSBuild
+
+`dotnet publish` コマンドは、`Publish` ターゲットを呼び出す MSBuild を呼び出します。 `dotnet publish` に渡されたすべてのパラメーターが MSBuild に渡されます。 `-c` と `-o` のパラメーターは、それぞれ MSBuild の `Configuration` と `OutputPath` にマップします。
+
+`dotnet publish` コマンドは、プロパティを設定する `-p` やロガーを定義する `-l` などの MSBuild オプションも受け入れます。 たとえば、`-p:<NAME>=<VALUE>` という形式を使用して、MSBuild プロパティを設定できます。 また、 *.pubxml* ファイルを参照することで、公開関連のプロパティを設定することもできます。次に例を示します。
+
+```dotnetcli
+dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
+```
+
+詳細については、次のリソースを参照してください。
+
+- [MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)
+- [ASP.NET Core アプリを配置するための Visual Studio 発行プロファイル (.pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)
 
 ## <a name="arguments"></a>引数
 
@@ -94,13 +110,27 @@ dotnet publish [-h|--help]
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  出力ディレクトリのパスを指定します。 指定しない場合、ランタイムに依存する実行可能ファイルおよびクロスプラットフォーム バイナリの既定値は *./bin/[configuration]/[framework]/publish/* に設定されます。 自己完結型の実行可能ファイルの場合、既定値は *./bin/[configuration]/[framework]/[runtime]/publish/* です。
+  出力ディレクトリのパスを指定します。
+  
+  指定しない場合、ランタイムに依存する実行可能ファイルおよびクロスプラットフォーム バイナリの既定値は *[project_file_folder]./bin/[configuration]/[framework]/publish/* に設定されます。 自己完結型の実行可能ファイルの場合、既定値は *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
 
-  パスが相対的である場合、生成された出力ディレクトリは、現在の作業ディレクトリではなく、プロジェクト ファイルの場所に相対的なパスとなります。
+  - .NET Core 3.x SDK 以降
+  
+    プロジェクトの発行時に相対パスが指定された場合、生成された出力ディレクトリは、プロジェクト ファイルの場所ではなく、現在の作業ディレクトリに相対的なパスとなります。
+
+    ソリューションの発行時に相対パスが指定されている場合、すべてのプロジェクトに対する出力はすべて、現在の作業ディレクトリと相対的な指定されたフォルダーに移動されます。 発行の出力が各プロジェクトの個別のフォルダーに移動されるようにするには、`--output` オプションの代わりに、msbuild `PublishDir` プロパティを使用して相対パスを指定します。 たとえば、`dotnet publish -p:PublishDir=.\publish` を使用すると、プロジェクト ファイルが格納されているフォルダーの下にある `publish` フォルダーに、各プロジェクトの発行の出力が送信されます。
+
+  - .NET Core 2.x SDK
+  
+    プロジェクトの発行時に相対パスが指定された場合、生成された出力ディレクトリは、現在の作業ディレクトリではなく、プロジェクト ファイルの場所に相対的なパスとなります。
+
+    ソリューションの発行時に相対パスを指定すると、各プロジェクトの出力は、プロジェクト ファイルの場所に相対的な別のフォルダーに移動されます。 ソリューションの発行時に絶対パスを指定すると、すべてのプロジェクトに対する発行の出力はすべて、指定されたフォルダーに移動されます。
 
 - **`--self-contained [true|false]`**
 
-  アプリケーションと一緒に .NET Core ランタイムを発行します。これにより、ランタイムをターゲット コンピューターにインストールする必要がなくなります。 ランタイム識別子が指定されている場合、既定値は `true` です。 詳細については、[.NET Core アプリケーションの発行](../deploying/index.md)に関する記事と「[.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)」を参照してください。
+  アプリケーションと一緒に .NET Core ランタイムを発行します。これにより、ランタイムをターゲット コンピューターにインストールする必要がなくなります。 ランタイム識別子が指定され、プロジェクトが (ライブラリ プロジェクトではなく) 実行可能なプロジェクトである場合、既定値は `true` です。 詳細については、[.NET Core アプリケーションの発行](../deploying/index.md)に関する記事と「[.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)」を参照してください。
+
+  `true` または `false` を指定せずに、このオプションを使用した場合、既定値は `true` になります。 その場合は、その位置で `true` または `false` が想定されているため、`--self-contained` の直後にソリューションまたはプロジェクト引数を配置しないでください。
 
 - **`--no-self-contained`**
 
@@ -168,5 +198,8 @@ dotnet publish [-h|--help]
 - [.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)
 - [ターゲット フレームワーク](../../standard/frameworks.md)
 - [ランタイム識別子 (RID) のカタログ](../rid-catalog.md)
-- [macOS Catalina の公証に対応する](../install/macos-notarization-issues.md) 詳細については、次のリソースを参照してください。
+- [macOS Catalina の公証に対応する](../install/macos-notarization-issues.md)
 - [発行されたアプリケーションのディレクトリ構造](/aspnet/core/hosting/directory-structure)
+- [MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)
+- [ASP.NET Core アプリを配置するための Visual Studio 発行プロファイル (.pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
+- [dotnet msbuild](dotnet-msbuild.md)

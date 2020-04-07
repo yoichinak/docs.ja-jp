@@ -1,7 +1,7 @@
 ---
 title: メンバー アクセス演算子と式 - C# リファレンス
 description: 型のメンバーにアクセスするために使用できる C# 演算子について説明します。
-ms.date: 09/18/2019
+ms.date: 03/31/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: da2ca4517bd007678d74ae9b76e10cad4c2696b4
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546641"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635311"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>メンバー アクセス演算子と式 (C# リファレンス)
 
@@ -129,6 +129,12 @@ A?.B?[C];
 [!code-csharp-interactive[null-conditional operators](snippets/MemberAccessOperators.cs#NullConditional)]
 
 前の例では、null 条件演算の結果が `null` の場合に評価する代替の式を指定するために、[null 合体演算子 `??`](null-coalescing-operator.md) も使用しています。
+
+`a.x` または `a[x]` が null 非許容値型の `T` の場合は、`a?.x` または `a?[x]` は対応する [null 許容値型](../builtin-types/nullable-value-types.md)の `T?` になります。 `T` 型の式が必要な場合は、次の例に示すように、null 合体演算子 `??` を null 条件式に適用します。
+
+[!code-csharp-interactive[null-conditional with null-coalescing](snippets/MemberAccessOperators.cs#NullConditionalWithNullCoalescing)]
+
+前の例では、`??` 演算子を使用しなければ、`numbers` が `null` の場合、`numbers?.Length < 2` は `false` と評価されます。
 
 Null 条件メンバー アクセス演算子 `?.` は Elvis 演算子とも呼ばれます。
 

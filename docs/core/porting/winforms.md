@@ -3,13 +3,13 @@ title: Windows フォーム アプリを .NET Core に移植する
 description: .NET Framework Windows フォーム アプリケーションを .NET Core for Windows に移植する方法について説明します。
 author: Thraka
 ms.author: adegeo
-ms.date: 03/01/2019
-ms.openlocfilehash: dbd522851faa0a4fe435199914a034ee230d3455
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 01/24/2020
+ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116030"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635509"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows フォーム デスクトップ アプリを .NET Core に移植する方法
 
@@ -17,16 +17,16 @@ ms.locfileid: "76116030"
 
 この記事では、さまざまな名前が使用して、移行で使用されるファイルの種類を識別しています。 実際のファイルの名前とは異なっているため、自分のプロジェクトを移行するときは、次の一覧の名前に置き換えて説明をお読みください。
 
-| ファイル | [説明] |
+| ファイル | 説明 |
 | ---- | ----------- |
 | **MyApps.sln** | ソリューション ファイルの名前。 |
 | **MyForms.csproj** | 移植する .NET Framework Windows Forms プロジェクトの名前。 |
 | **MyFormsCore.csproj** | 作成する新しい .NET Core プロジェクトの名前。 |
 | **MyAppCore.exe** | .NET Core Windows Forms アプリの実行可能ファイル。 |
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
-- 実行したいデザイナー作業用の [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
+- デザイナー作業を行う必要がある場合、[Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) 以降。 最新の[プレビュー バージョンの Visual Studio](https://visualstudio.microsoft.com/vs/preview/) をお勧めします。
 
   次の Visual Studio ワークロードをインストールします。
   - .NET デスクトップ開発
@@ -34,10 +34,11 @@ ms.locfileid: "76116030"
 
 - 問題なくビルドされて実行されているソリューション内の作業用 Windows Forms プロジェクト。
 - C# でコードを書いたプロジェクト。
-- [.NET Core](https://dotnet.microsoft.com/download/dotnet-core) 3.0 以降
 
 > [!NOTE]
-> **Visual Studio 2017** では、.NET Core 3.0 プロジェクトはサポートされていません。 **Visual Studio 2019** では .NET Core 3.0 プロジェクトはサポートされていますが、.NET Core 3.0 Windows Forms プロジェクト用のビジュアル デザイナーはまだサポートされていません。 ビジュアル デザイナーを使用するには、.NET Core プロジェクトとフォーム ファイルを共有するソリューション内に .NET Windows フォーム プロジェクトを配置する必要です。
+> .NET Core 3.0 プロジェクトは、**Visual Studio 2019** 以降のバージョンでのみサポートされています。 **Visual Studio 2019 version 16.5 Preview 1** 以降では、.NET Core Windows フォーム デザイナーもサポートされています。
+>
+> デザイナーを有効にするには、 **[ツール]**  >  **[オプション]**  >  **[環境]**  >  **[プレビュー機能]** に移動し、 **[Use the preview Windows Forms designer for .NET Core apps]\(プレビュー版 Windows フォーム デザイナー (.NET Core アプリ) を使用する\)** オプションを選択します。
 
 ### <a name="consider"></a>次の例を考えてみましょう
 
@@ -58,10 +59,6 @@ ms.locfileid: "76116030"
 01. 自分のプロジェクトで使用されている NuGet パッケージを更新する。
 
     移行する前に、常に NuGet パッケージの最新バージョンを使用することをお勧めします。 アプリケーションで NuGet パッケージを参照している場合は、最新バージョンに更新してください。 アプリケーションが正常にビルドされることを確認します。 アップグレード後にパッケージ エラーが発生した場合は、コードを壊さない最新のバージョンにパッケージをダウングレードします。
-
-01. Visual Studio 2019 では、.NET Core 3.0 のフォーム デザイナーはまだサポートされていない
-
-    現時点では、Visual Studio のフォーム デザイナーを使用する場合は、既存の .NET Framework Windows Forms プロジェクト ファイルを保持する必要があります。
 
 ## <a name="create-a-new-sdk-project"></a>新しい SDK プロジェクトを作成する
 
@@ -127,7 +124,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 - **RootNamespace**\
 プロジェクトで使用される既定の名前空間。 これは、.NET Framework プロジェクトの既定の名前空間と一致させる必要があります。
 
-これら 3 つの要素を、`<PropertyGroup>` ファイルの `MyFormsCore.csproj` ノードに追加します。
+これら 3 つの要素を、`MyFormsCore.csproj` ファイルの `<PropertyGroup>` ノードに追加します。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
@@ -160,7 +157,7 @@ dotnet sln add .\MyFormsAppCore\MyFormsCore.csproj
 
 または、.NET Framework プロジェクトの各ファイルに対する `<Compile>` または `<EmbeddedResource>` エントリを作成できます。
 
-## <a name="add-nuget-packages"></a>NuGet パッケージの追加
+## <a name="add-nuget-packages"></a>NuGet パッケージを追加する
 
 .NET Framework プロジェクトによって参照される各 NuGet パッケージを.NET Core プロジェクトに追加します。
 
@@ -188,7 +185,7 @@ Windows Forms 制御ライブラリ プロジェクトを移植する場合の�
 
 前の手順の例を使用して、作業するプロジェクトとファイルを展開しましょう。
 
-| ファイル | [説明] |
+| ファイル | 説明 |
 | ---- | ----------- |
 | **MyApps.sln** | ソリューション ファイルの名前。 |
 | **MyControls.csproj** | 移植する .NET Framework Windows Forms 制御プロジェクトの名前。 |
@@ -297,7 +294,7 @@ dotnet add .\MyFormsAppCore\MyFormsCore.csproj package Microsoft.Windows.Compati
 
 Visual Studio 2019 で Windows Forms デザイナーがサポートされるようになったら、.NET Core プロジェクト ファイルの内容を .NET Framework プロジェクト ファイルにコピーして貼り付けることができます。 その後、`<Source>` と `<EmbeddedResource>` 項目を使用して追加されたファイルの glob パターンを削除します。 アプリで使用されるすべてのプロジェクト参照のパスを修正します。 これにより、.NET Framework プロジェクトが .NET Core プロジェクトに効率的にアップグレードされます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - [.NET Framework から .NET Core への破壊的変更](../compatibility/fx-core.md)について学習する。
 - [Windows 互換機能パック][compat-pack]の詳細を確認する。

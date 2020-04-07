@@ -25,12 +25,12 @@ helpviewer_keywords:
 - custom formatting [.NET Framework]
 - strings [.NET Framework], formatting
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
-ms.openlocfilehash: a1f4d9107427140bcfa6b49bc8a850432fb204f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 124c32a09a32dd90b8b96b39aa80352094030b23
+ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75348253"
+ms.lasthandoff: 04/01/2020
+ms.locfileid: "80523944"
 ---
 # <a name="format-types-in-net"></a>.NET での型の書式設定
 
@@ -40,7 +40,7 @@ ms.locfileid: "75348253"
 
 - オブジェクトから文字列形式への変換が直観的に理解しづらい場合がある。 たとえば、Temperature オブジェクトや Person オブジェクトの文字列形式がどのようになるのか、明確ではありません。 Temperature オブジェクトをさまざまな方法で書式指定する例については、「 [標準書式指定文字列](#standard-format-strings) 」を参照してください。
 
-- 通常、カルチャ依存の書式指定が必要になる。 たとえば、通貨値を数字で表すアプリケーションでは、数値文字列にカルチャ別の通貨記号、桁区切り記号 (ほとんどのカルチャでは 1000 単位)、および小数点を含める必要があります。 例については、「[書式プロバイダーによるカルチャに依存した書式設定](#culture-sensitive-formatting-with-format-providers)」セクションを参照してください。
+- 通常、カルチャ依存の書式指定が必要になる。 たとえば、通貨値を数字で表すアプリケーションでは、数値文字列に現在のカルチャ別の通貨記号、グループ区切り (ほとんどのカルチャでは桁区切り記号)、小数点を含める必要があります。 例については、「[書式プロバイダーによるカルチャに依存した書式設定](#culture-sensitive-formatting-with-format-providers)」セクションを参照してください。
 
 - アプリケーションによっては、同じ値をさまざまな方法で表示する必要がある。 たとえば、列挙型のメンバーを表すために、その名前の文字列形式を表示する場合や、基になる値を表示する場合が考えられます。 <xref:System.DayOfWeek> 列挙体のメンバーをさまざまな方法で書式指定する例については、「 [標準書式指定文字列](#standard-format-strings) 」を参照してください。
 
@@ -53,9 +53,9 @@ ms.locfileid: "75348253"
 
 基本的な書式設定の方式は、<xref:System.Object.ToString%2A?displayProperty=nameWithType> メソッドによって既定として実装されます。このメソッドについては、このトピックの「[ToString メソッドを使用した既定の書式設定](#default-formatting-using-the-tostring-method) 」のセクションを参照してください。 ただし、.NET には、この既定の書式設定機能を変更および拡張する方法がいくつかあります。 次に例を示します。
 
-- <xref:System.Object.ToString%2A?displayProperty=nameWithType> メソッドをオーバーライドして、オブジェクトの値のカスタム文字列形式を定義する方法。 詳細については、このトピックの後の「[ToString メソッドのオーバーライド](#override-the-tostring-method)」セクションを参照してください。
+- <xref:System.Object.ToString%2A?displayProperty=nameWithType> メソッドをオーバーライドして、オブジェクトの値のカスタム文字列形式を定義する。 詳細については、このトピックの後の「[ToString メソッドのオーバーライド](#override-the-tostring-method)」セクションを参照してください。
 
-- オブジェクトの値の文字列形式に複数の形式を持たせる書式指定子を定義する方法。 たとえば、次のステートメントでは "X" 書式指定子を使用して整数を 16 進値の文字列形式に変換します。
+- オブジェクトの値の文字列形式に複数の形式を持たせる書式指定子を定義する。 たとえば、次のステートメントでは "X" 書式指定子を使用して整数を 16 進値の文字列形式に変換します。
 
      [!code-csharp[Conceptual.Formatting.Overview#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/specifier1.cs#3)]
      [!code-vb[Conceptual.Formatting.Overview#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/specifier1.vb#3)]
@@ -94,7 +94,7 @@ ms.locfileid: "75348253"
 
 ## <a name="override-the-tostring-method"></a>ToString メソッドのオーバーライド
 
-型の名前の表示は用途が限定され、型のコンシューマー側でインスタンスを別のインスタンスと区別することはできません。 ただし、 `ToString` メソッドをオーバーライドして、もっと役に立つオブジェクトの値の形式を作成することができます。 次の例では `Temperature` オブジェクトを定義し、その `ToString` メソッドをオーバーライドして、温度を摂氏で表示します。
+型の名前の表示は用途が限定され、型のコンシューマー側でインスタンスを別のインスタンスと区別することはできません。 しかし、`ToString` メソッドをオーバーライドして、もっと役に立つオブジェクトの値の形式を作成することができます。 次の例では `Temperature` オブジェクトを定義し、その `ToString` メソッドをオーバーライドして、温度を摂氏で表示します。
 
 [!code-csharp[Conceptual.Formatting.Overview#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/overrides1.cs#2)]
 [!code-vb[Conceptual.Formatting.Overview#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/overrides1.vb#2)]
@@ -132,7 +132,7 @@ ms.locfileid: "75348253"
 
 .NET では、すべての数値型、すべての日付/時刻型、およびすべての列挙型に対して一連の標準書式指定子が定義されています。 たとえば、それらのカテゴリごとに、対応する型の値の一般的な文字列形式を定義する "G" 標準書式指定子がサポートされています。
 
-列挙型の標準書式指定文字列は、値の文字列形式を直接制御します。 列挙値の `ToString` メソッドに渡された書式指定文字列によって、文字列名 ("G" 書式指定子および "F" 書式指定子)、基になる整数値 ("D" 書式指定子)、または 16 進値 ("X" 書式指定子) のどの形式で値を表示するかが決定します。 次のコード例では、標準書式指定文字列を使用して、 <xref:System.DayOfWeek> 列挙値の書式を設定する方法を示しています。
+列挙型の標準書式指定文字列は、値の文字列形式を直接制御します。 列挙値の `ToString` メソッドに渡された書式指定文字列によって、文字列名 ("G" 書式指定子および "F" 書式指定子)、基になる整数値 ("D" 書式指定子)、または 16 進値 ("X" 書式指定子) のいずれを使用して値を表示するかが決定されます。 次のコード例では、標準書式指定文字列を使用して、 <xref:System.DayOfWeek> 列挙値の書式を設定する方法を示しています。
 
 [!code-csharp[Conceptual.Formatting.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/standard1.cs#4)]
 [!code-vb[Conceptual.Formatting.Overview#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/standard1.vb#4)]
@@ -168,7 +168,7 @@ ms.locfileid: "75348253"
 
 標準の数値書式指定文字列の詳細については、「 [標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)」を参照してください。
 
-日付と時刻の値の標準書式指定文字列は、特定の <xref:System.Globalization.DateTimeFormatInfo> プロパティに格納されているカスタム書式指定文字列のエイリアスです。 たとえば、"D" 書式指定子を渡して日付と時刻の値の `ToString` メソッドを呼び出すと、現在のカルチャの <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> プロパティに格納されているカスタム書式指定文字列を使用して日付と時刻が表示されます (カスタム書式指定文字列の詳細については、[次のセクション](#custom-format-strings)を参照してください)。この関係を次の例に示します。
+日付と時刻の値の標準書式指定文字列は、特定の <xref:System.Globalization.DateTimeFormatInfo> プロパティに格納されているカスタム書式指定文字列のエイリアスです。 たとえば、"D" 書式指定子を渡して日付と時刻の値の `ToString` メソッドを呼び出すと、現在のカルチャの <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern%2A?displayProperty=nameWithType> プロパティに格納されているカスタム書式指定文字列を使用して日付と時刻が表示されます。 (カスタム書式指定文字列の詳細については、[次のセクション](#custom-format-strings)を参照してください)。この関係を次の例に示します。
 
 [!code-csharp[Conceptual.Formatting.Overview#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.formatting.overview/cs/alias1.cs#5)]
 [!code-vb[Conceptual.Formatting.Overview#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/alias1.vb#5)]
@@ -253,7 +253,7 @@ ms.locfileid: "75348253"
 
 - <xref:System.Globalization.CultureInfo>。 対応する <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> の実装では、数値に対する書式設定情報を提供する <xref:System.Globalization.NumberFormatInfo> オブジェクトか、日付と時刻の値に対する書式設定情報を提供する <xref:System.Globalization.DateTimeFormatInfo> オブジェクトのいずれかが返されます。
 
-また、これらのクラスのうちのいずれかを置き換える独自の書式プロバイダーを実装できます。 ただし、実装の <xref:System.IFormatProvider.GetFormat%2A> メソッドは、書式設定情報を `ToString` メソッドに渡す場合、前の表に示した型のオブジェクトを返す必要があります。
+また、これらのクラスのうちのいずれかを置き換える独自の書式プロバイダーを実装できます。 ただし、実装の <xref:System.IFormatProvider.GetFormat%2A> メソッドは、書式設定情報を `ToString` メソッドに渡す必要がある場合、前の表に一覧された型のオブジェクトを返す必要があります。
 
 ### <a name="culture-sensitive-formatting-of-numeric-values"></a>数値のカルチャに依存した書式設定
 
@@ -333,7 +333,7 @@ ms.locfileid: "75348253"
 
 ## <a name="custom-formatting-with-icustomformatter"></a>ICustomFormatter を使用したカスタム書式設定
 
-<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> および <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>の 2 つの複合書式指定メソッドには、カスタム書式設定をサポートしている書式プロバイダー パラメーターが含まれています。 これらの書式指定メソッドのいずれかを呼び出すと、書式プロバイダーの <xref:System.Type> メソッドに <xref:System.ICustomFormatter> インターフェイスを表す <xref:System.IFormatProvider.GetFormat%2A> オブジェクトが渡されます。 次に、 <xref:System.IFormatProvider.GetFormat%2A> メソッドによって、カスタム書式設定を提供する <xref:System.ICustomFormatter> の実装が返されます。
+<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> および <xref:System.Text.StringBuilder.AppendFormat%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>の 2 つの複合書式指定メソッドには、カスタム書式設定をサポートしている書式プロバイダー パラメーターが含まれています。 これらの書式指定メソッドのいずれかを呼び出すと、書式プロバイダーの <xref:System.IFormatProvider.GetFormat%2A> メソッドに <xref:System.ICustomFormatter> インターフェイスを表す <xref:System.Type> オブジェクトが渡されます。 次に、 <xref:System.IFormatProvider.GetFormat%2A> メソッドによって、カスタム書式設定を提供する <xref:System.ICustomFormatter> の実装が返されます。
 
 <xref:System.ICustomFormatter> インターフェイスには、 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29>という単一のメソッドがあります。このメソッドは、複合書式指定文字列の書式指定項目ごとに 1 回、複合書式指定メソッドによって自動的に呼び出されます。 <xref:System.ICustomFormatter.Format%28System.String%2CSystem.Object%2CSystem.IFormatProvider%29> メソッドには、3 つのパラメーターがあります。書式指定項目の `formatString` 引数を表す書式指定文字列、書式を設定するオブジェクト、および書式指定サービスを提供する <xref:System.IFormatProvider> オブジェクトの 3 つです。 通常は、 <xref:System.ICustomFormatter> を実装するクラスでは <xref:System.IFormatProvider>も実装するため、この最後のパラメーターはカスタム書式指定クラス自体への参照になります。 このメソッドは、書式を設定するオブジェクトのカスタム書式の文字列形式を返します。 オブジェクトの書式を設定できない場合は、null 参照 (Visual Basic の場合は`Nothing` ) を返します。
 
@@ -359,7 +359,6 @@ ms.locfileid: "75348253"
 |[カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)|時間間隔に対するアプリケーション固有の文字列形式を作成するカスタム書式指定文字列について説明します。|
 |[Enumeration Format Strings](../../../docs/standard/base-types/enumeration-format-strings.md)|列挙型の文字列形式を作成するために使用される標準書式指定文字列について説明します。|
 |[複合書式指定](../../../docs/standard/base-types/composite-formatting.md)|文字列に 1 つ以上の書式指定された値を埋め込む方法について説明します。 この文字列は、コンソールに表示したり、ストリームに書き込んだりできます。|
-|[書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)|特定の書式設定操作を行うための手順を説明するトピックの一覧を示します。|
 |[文字列の解析](../../../docs/standard/base-types/parsing-strings.md)|オブジェクトの文字列表現によって指定された値にオブジェクトを初期化する方法について説明します。 解析は書式設定の逆の操作です。|
 
 ## <a name="reference"></a>関連項目

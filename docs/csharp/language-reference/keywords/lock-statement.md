@@ -1,19 +1,19 @@
 ---
 title: lock ステートメント - C# リファレンス
 description: C# lock ステートメントを使用し、共有リソースへのスレッド アクセスを同期します
-ms.date: 10/01/2018
+ms.date: 04/02/2020
 f1_keywords:
 - lock_CSharpKeyword
 - lock
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 467881dd36c97b6b18b7f31d4e4af25152b0d012
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
+ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75713388"
+ms.lasthandoff: 04/03/2020
+ms.locfileid: "80635381"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 
@@ -46,9 +46,9 @@ finally
 
 このコードでは [try...finally](try-finally.md) ブロックが使用されているため、`lock` ステートメントの本文内で例外がスローされた場合でもロックは解放されます。
 
-[ ステートメントの本文で ](../operators/await.md)await`lock` 演算子を使用することはできません。
+`lock` ステートメントの本文で [await](../operators/await.md) 演算子を使用することはできません。
 
-## <a name="remarks"></a>解説
+## <a name="guidelines"></a>ガイドライン
 
 共有リソースへのスレッド アクセスを同期する場合、専用オブジェクト インスタンス (`private readonly object balanceLock = new object();` など) またはコードの関連のない部分によってロック オブジェクトとして使用される可能性がない別のインスタンスをロックします。 異なる共有リソースに対して同じロック オブジェクト インスタンスを使用することは避けてください。デッドロックやロックの競合が発生する可能性があります。 特に、以下をロック オブジェクトとして使用しないでください。
 
@@ -56,21 +56,23 @@ finally
 - <xref:System.Type> インスタンス。[typeof](../operators/type-testing-and-cast.md#typeof-operator) 演算子またはリフレクションによって取得される可能性があります。
 - 文字列リテラルを含む文字列インスタンス。[インターン処理](/dotnet/api/system.string.intern#remarks)される可能性があります。
 
+ロックの競合を減らすために、できるだけ短い時間ロックを保持します。
+
 ## <a name="example"></a>例
 
-次の例では、専用 `Account` インスタンスをロックすることでそのプライベート `balance` フィールドへのアクセスを同期する `balanceLock` クラスが定義されます。 ロッキングに同じインスタンスを使用すると、2 つのスレッドが `balance` または `Debit` メソッドを同時に呼び出すことによって `Credit` フィールドを同時に更新することができなくなります。
+次の例では、専用 `balanceLock` インスタンスをロックすることでそのプライベート `balance` フィールドへのアクセスを同期する `Account` クラスが定義されます。 ロッキングに同じインスタンスを使用すると、2 つのスレッドが `Debit` または `Credit` メソッドを同時に呼び出すことによって `balance` フィールドを同時に更新することができなくなります。
 
 [!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/statements.md#the-lock-statement)」の [lock ステートメント](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の [lock ステートメント](~/_csharplang/spec/statements.md#the-lock-statement)に関するセクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
+- [C# リファレンス](../index.md)
+- [C# キーワード](index.md)
 - <xref:System.Threading.Monitor?displayProperty=nameWithType>
 - <xref:System.Threading.SpinLock?displayProperty=nameWithType>
 - <xref:System.Threading.Interlocked?displayProperty=nameWithType>
-- [C# リファレンス](../index.md)
-- [C# キーワード](index.md)
 - [同期プリミティブの概要](../../../standard/threading/overview-of-synchronization-primitives.md)

@@ -1,16 +1,16 @@
 ---
 title: .NET Standard
-description: .NET Standard、そのバージョン、.NET Standard をサポートする .NET 実装について説明します。
+description: .NET Standard、そのバージョン、それをサポートする .NET 実装について学習します。
 ms.date: 02/13/2020
 ms.technology: dotnet-standard
 ms.custom: updateeachrelease
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 00b40b771a8608bad7e3f992e3c99367ff6bb131
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6e573056132c25b912ff1eb76b9b055f6e47cfe
+ms.sourcegitcommit: 2ff49dcf9ddf107d139b4055534681052febad62
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77452592"
+ms.lasthandoff: 03/31/2020
+ms.locfileid: "80438219"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -55,8 +55,8 @@ ms.locfileid: "77452592"
 
 バージョン管理規則は主に 2 つあります。
 
-- 追加式。 .NET Standard バージョンは論理的に同心円形です。高位のバージョンには、旧バージョンのすべての API が組み込まれています。 バージョン間に互換性に影響する変更はありません。
-- 不変: 出荷後、.NET Standard のバージョンは固定されます。 新しい API は、特定の .NET 実装 (.NET Core など) でまず使用できるようになります。 .NET Standard の審査会が、新しい API をすべての .NET 実装で使用できるようにした方がよいと判断すると、新しい .NET Standard バージョンに追加されます。
+- 追加式: .NET Standard バージョンは論理的に同心円形です。高位のバージョンには、旧バージョンのすべての API が組み込まれています。 バージョン間に互換性に影響する変更はありません。
+- 不変:出荷後、.NET Standard のバージョンは固定されます。 新しい API は、特定の .NET 実装 (.NET Core など) でまず使用できるようになります。 .NET Standard の審査会が、新しい API をすべての .NET 実装で使用できるようにした方がよいと判断すると、新しい .NET Standard バージョンに追加されます。
 
 ## <a name="specification"></a>仕様
 
@@ -64,7 +64,7 @@ ms.locfileid: "77452592"
 
 ### <a name="official-artifacts"></a>正式な成果物
 
-正式な仕様は標準に含まれる API を定義する一連の .cs ファイルです。 [dotnet/standard リポジトリ](https://github.com/dotnet/standard/tree/master/src/netstandard/ref)の [ref](https://github.com/dotnet/standard) ディレクトリに.NET Standard API が定義されています。
+正式な仕様は標準に含まれる API を定義する一連の .cs ファイルです。 [dotnet/standard リポジトリ](https://github.com/dotnet/standard)の [ref](https://github.com/dotnet/standard/tree/master/src/netstandard/ref) ディレクトリに.NET Standard API が定義されています。
 
 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library) メタパッケージ ([ソース](https://github.com/dotnet/standard/blob/master/src/netstandard/pkg/NETStandard.Library.dependencies.props)) は、1 つ以上の .NET Standard のバージョンを定義する (一部) ライブラリのセットについて説明しています。
 
@@ -84,7 +84,7 @@ ms.locfileid: "77452592"
 
 NuGet パッケージは 1 つまたは複数の[フレームワーク](frameworks.md)を対象にしています。 .NET Standard パッケージは、".NET Standard" フレームワークを対象にしています。 `netstandard` [コンパクト TFM](frameworks.md) (`netstandard1.4` など) を使用して、.NET Standard フレームワークを対象にすることができます。 複数のランタイムでの実行を意図したライブラリは、このフレームワークを対象とする必要があります。 広範なセットの API の場合、.NET Standard 1.6 から 2.0 の間に使用できる API の数は 2 倍以上になったため、`netstandard2.0` を対象としてください。
 
-[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) メタパッケージは .NET Standard を定義する NuGet パッケージの完全なセットを参照しています。  `netstandard` を対象とする最も一般的な方法は、このメタパッケージを参照することです。 それは、.NET Standard を定義する約 40 の .NET ライブラリと関連する API について説明しており、それらにアクセスできるようにしています。 `netstandard` を対象とする追加のパッケージを参照することで、追加の API へのアクセス権を取得できます。
+[`NETStandard.Library`](https://www.nuget.org/packages/NETStandard.Library/) メタパッケージは .NET Standard を定義する NuGet パッケージの完全なセットを参照しています。  `netstandard` を対象とする最も一般的な方法は、このメタパッケージを参照することです。 それは、.NET Standard を定義する約 40 の .NET ライブラリと関連する API について説明しており、それらにアクセスできるようにしています。 `netstandard` を対象とする追加のパッケージを参照して、追加の API にアクセスできます。
 
 ### <a name="versioning"></a>バージョン管理
 
@@ -92,7 +92,7 @@ NuGet パッケージは 1 つまたは複数の[フレームワーク](framewor
 
 .NET Standard は、1 つの .NET 実装に固有ではなく、それらの実装のいずれかのバージョン管理スキームに一致することもありません。
 
-いずれかの実装 (.NET Framework、.NET Core、Mono など) に追加された API は、本質的に基本的であると考えられる場合に、仕様に追加される候補とみなされる可能性があります。 新しい[.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md) は、.NET 実装のリリースに基づいて作成されるので、.NET Standard PCL から新しい API を対象にすることができます。 バージョン管理メカニズムの詳細は、「[.NET Core Versioning](../core/versions/index.md)」(.NET Core のバージョン管理) で説明されています。
+いずれかの実装 (.NET Framework、.NET Core、Mono など) に追加された API は、本質的に基本的であると考えられる場合に、仕様に追加される候補とみなされる可能性があります。 新しい[.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md) は、.NET 実装のリリースに基づいて作成されるので、.NET Standard PCL から新しい API を対象にすることができます。 バージョン管理メカニズムの詳細は、「[.NET Core のバージョン管理](../core/versions/index.md)」に関するページで説明されています。
 
 .NET Standard のバージョン管理は、使用する場合に重要です。 .NET Standard のバージョンが指定されている場合、それと同じか以下のバージョンを対象とするライブラリを使用できます。 次の方法では、.NET Standard の対象設定に固有の、.NET Standard PCL の使用のワークフローを説明します。
 
@@ -100,9 +100,9 @@ NuGet パッケージは 1 つまたは複数の[フレームワーク](framewor
 - .NET Standard と同じかそれ以下のバージョンに依存するライブラリを使用します。
 - それより上の .NET Standard バージョンに依存するライブラリを見つけた場合は、それと同じバージョンを採用するか、そのライブラリを使用しないようにする必要があります。
 
-## <a name="targeting-net-standard"></a>.NET Standard を対象とする
+## <a name="target-net-standard"></a>ターゲットの .NET Standard
 
-[ フレームワークと NETStandard.Library メタパッケージの組み合わせを使用して、](../core/tutorials/libraries.md).NET Standard Library をビルド`netstandard`できます。 [.NET Core ツールを使用して .NET Standard を対象とする](../core/packages.md)例を参照できます。
+`netstandard` フレームワークと NETStandard.Library メタパッケージの組み合わせを使用して、[.NET Standard Library をビルド](../core/tutorials/libraries.md)できます。 [.NET Core ツールでターゲットとする .NET Standard](../core/packages.md) の例を参照できます。
 
 ## <a name="net-framework-compatibility-mode"></a>.NET Framework 互換モード
 
@@ -118,7 +118,7 @@ Visual Studio で .NET Standard ライブラリを作成するには、Windows �
 
 ## <a name="comparison-to-portable-class-libraries"></a>ポータブル クラス ライブラリとの比較
 
-.NET Standard は、[ポータブル クラス ライブラリ (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md) に代わるものです。 .NET Standard は、標準 BCL を精選し、結果として、.NET 実装間で高度な統一性を確立することによって、ポータブル ライブラリの作成の方法を向上しています。 .NET Standard を対象とするライブラリは、PCL つまり ".NET Standard ベースの PCL" です。 既存の PCL は、"プロファイルベースの PCL" です。
+.NET Standard は、[ポータブル クラス ライブラリ (PCL)](./cross-platform/cross-platform-development-with-the-portable-class-library.md) に代わるものです。 .NET Standard では、標準 BCL を整理し、結果として、.NET 実装全体で高度な統一性を確立することによって、ポータブル ライブラリの作成の方法を向上させています。 .NET Standard を対象とするライブラリは、PCL つまり ".NET Standard ベースの PCL" です。 既存の PCL は、"プロファイルベースの PCL" です。
 
 .NET Standard と PCL プロファイルは、似たような目的で作成されましたが、主な点が異なります。
 
@@ -143,23 +143,23 @@ Visual Studio で .NET Standard ライブラリを作成するには、Windows �
 
 `netstandard` としてパッケージされたプロファイルベースの PCL は、通常パッケージされるプロファイルベースの PCL より使いやすくなります。 `netstandard` パッケージは、既存のユーザーと互換性があります。
 
-標準 .NET と互換性がある PCL プロファイルのセットを確認できます。
+.NET Standard と互換性がある PCL プロファイルのセットを確認できます。
 
 | PCL プロファイル | .NET Standard | PCL プラットフォーム
 |:-----------:|:-------------:|------------------------------------------------------------------------------
 | Profile7    | 1.1           | .NET Framework 4.5、Windows 8
-| Profile31   | 1.0           | Windows 8.1、Windows Phone Silverlight 8.1
+| Profile31   | 1           | Windows 8.1、Windows Phone Silverlight 8.1
 | Profile32   | 1.2           | Windows 8.1、Windows Phone 8.1
 | Profile44   | 1.2           | .NET Framework 4.5.1、Windows 8.1
-| Profile49   | 1.0           | .NET Framework 4.5、Windows Phone Silverlight 8
+| Profile49   | 1           | .NET Framework 4.5、Windows Phone Silverlight 8
 | Profile78   | 1.0           | .NET Framework 4.5、Windows 8、Windows Phone Silverlight 8
-| Profile84   | 1.0           | Windows Phone 8.1、Windows Phone Silverlight 8.1
+| Profile84   | 1           | Windows Phone 8.1、Windows Phone Silverlight 8.1
 | Profile111  | 1.1           | .NET Framework 4.5、Windows 8、Windows Phone 8.1
 | Profile151  | 1.2           | .NET Framework 4.5.1、Windows 8.1、Windows Phone 8.1
-| Profile157  | 1.0           | Windows 8.1、Windows Phone 8.1、Windows Phone Silverlight 8.1
-| Profile259  | 1.0           | .NET Framework 4.5、Windows 8、Windows Phone 8.1、Windows Phone Silverlight 8
+| Profile157  | 1           | Windows 8.1、Windows Phone 8.1、Windows Phone Silverlight 8.1
+| Profile259  | 1           | .NET Framework 4.5、Windows 8、Windows Phone 8.1、Windows Phone Silverlight 8
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET Standard のバージョン](https://github.com/dotnet/standard/blob/master/docs/versions.md)
 - [.NET Standard ライブラリを構築する](../core/tutorials/library-with-visual-studio.md)
