@@ -1,16 +1,16 @@
 ---
-title: リレーショナルデータとNoSQLデータ
+title: リレーショナル データ ソースとNoSQL データ
 description: クラウドネイティブアプリケーションのリレーショナルデータとNoSQLデータについて学ぶ
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: 04693e30ba3848f1e51f1c69a75be5f18ead4cf1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3fb3dcc3a87e278c05f3e15d261245f4d61453d1
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79141420"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805798"
 ---
-# <a name="relational-vs-nosql-data"></a>リレーショナルデータとNoSQLデータ
+# <a name="relational-vs-nosql-data"></a>リレーショナル データ ソースとNoSQL データ
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
@@ -228,7 +228,7 @@ Azure Cosmos DB には、図 5-15 に示す 5 つの明確に定義された[一
 
 記事では[、9ボールの背後にある: Cosmos DB の一貫性レベルの説明](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)、 Microsoft クラウド開発者の提唱ジェレミー類似性 5 つのモデルの優れた説明を提供します。
 
-### <a name="partitioning"></a>[パーティション分割]
+### <a name="partitioning"></a>パーティション分割
 
 Azure Cosmos DB では、自動[パーティション分割](https://docs.microsoft.com/azure/cosmos-db/partitioning-overview)を採用して、クラウド ネイティブ サービスのパフォーマンス ニーズに合わせてデータベースを拡張します。
 
@@ -284,5 +284,5 @@ NewSQL データベースの背後にある仕組みを詳しく見る方法に�
 このサービスでは、小規模または大規模の両方で移行を実行するために必要な変更について説明する推奨事項を提供します。
 
 >[!div class="step-by-step"]
->[前次](Database-per-microservice.md)
->[Next](azure-caching.md)
+>[前へ](database-per-microservice.md)
+>[次へ](azure-caching.md)

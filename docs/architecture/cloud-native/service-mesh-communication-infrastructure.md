@@ -3,12 +3,12 @@ title: サービス メッシュ通信インフラストラクチャ
 description: サービス メッシュ テクノロジがクラウドネイティブマイクロサービス通信を効率化する方法を学習する
 author: robvet
 ms.date: 03/03/2020
-ms.openlocfilehash: 6b177ef33b804ec35f3acb919539a97683e5a487
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 8bb57e990dbf1baf8c246fe4aacfbb2904a251e6
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523520"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805751"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>サービス メッシュ通信インフラストラクチャ
 
@@ -42,7 +42,7 @@ ms.locfileid: "80523520"
 
 クラウド ネイティブ システムでの通信の実装に役立つマネージド Azure サービスに特に重点を置いています。
 
-- [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview)
+- [Azure アプリケーション ゲートウェイ](https://docs.microsoft.com/azure/application-gateway/overview)
 - [Azure API Management](https://azure.microsoft.com/services/api-management/)
 - [Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)
 - [Azure Storage キュー](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
@@ -73,5 +73,5 @@ ms.locfileid: "80523520"
 - [NET ビデオを使用した gRPC サービスの構築](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
->[前次](grpc.md)
->[Next](Database-per-microservice.md)
+>[前へ](grpc.md)
+>[次へ](database-per-microservice.md)
