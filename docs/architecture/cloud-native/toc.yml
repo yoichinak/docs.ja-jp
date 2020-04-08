@@ -44,10 +44,8 @@
         - name: サービス メッシュ通信インフラストラクチャ
           href: service-mesh-communication-infrastructure.md
     - name: 分散データ
-      href: null
+      href: database-per-microservice.md
       items:
-        - name: マイクロサービスごとのデータベース
-          href: database-per-microservice.md
         - name: リレーショナル データ ソースとNoSQL データ
           href: relational-vs-nosql-data.md
         - name: クラウド ネイティブのアプリケーションでのキャッシュ
