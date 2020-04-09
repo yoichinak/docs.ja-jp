@@ -1343,6 +1343,9 @@
                   href: language-reference/keywords/class.md
                 - name: interface
                   href: language-reference/keywords/interface.md
+                - name: null 許容参照型
+                  href: language-reference/builtin-types/nullable-reference-types.md
+                  displayName: '? token, ? symbol'
             - name: void
               href: language-reference/builtin-types/void.md
             - name: var
