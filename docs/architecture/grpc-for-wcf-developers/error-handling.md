@@ -1,33 +1,33 @@
 ---
-title: エラー処理-WCF 開発者向け gRPC
-description: GRPC でのエラー処理に関するトピック。 最も一般的に使用されるステータスコードの表が含まれています。
+title: エラー処理 - WCF 開発者用 gRPC
+description: gRPC でのエラー処理に関するトピック。 最も一般的に使用されるステータスコードの表が含まれています。
 ms.date: 09/02/2019
-ms.openlocfilehash: c380c651f854adc97e8b2ead36d30c3b83662aac
-ms.sourcegitcommit: 771c554c84ba38cbd4ac0578324ec4cfc979cf2e
+ms.openlocfilehash: 64a2355a8bd608c074f9bc420312b23aba0c1fb2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2020
-ms.locfileid: "77542794"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988948"
 ---
 # <a name="error-handling"></a>エラー処理
 
-Windows Communication Foundation (WCF) は <xref:System.ServiceModel.FaultException%601> と[Faultcontract](xref:System.ServiceModel.FaultContractAttribute)を使用して、SOAP Fault standard のサポートなど、詳細なエラー情報を提供します。
+Windows 通信ファウンデーション<xref:System.ServiceModel.FaultException%601>(WCF) は、SOAP フォールト標準のサポートを含む詳細なエラー情報を提供するために使用および[FaultContract](xref:System.ServiceModel.FaultContractAttribute)を使用します。
 
-残念ながら、現在のバージョンの gRPC には、WCF での洗練された機能がありません。単純なステータスコードとメタデータに基づいて組み込まれたエラー処理は限られています。 次の表に、最も一般的に使用されるステータスコードの簡単なガイドを示します。
+残念ながら、現在のバージョンの gRPC には WCF で見られる高度な機能が欠けており、単純な状態コードとメタデータに基づく組み込みのエラー処理のみが制限されています。 次の表は、最も一般的に使用されるステータスコードのクイックガイドです。
 
 | status code | 問題 |
 | ----------- | ------- |
-| `GRPC_STATUS_UNIMPLEMENTED` | メソッドが書き込まれていません。 |
+| `GRPC_STATUS_UNIMPLEMENTED` | メソッドが書かれていません。 |
 | `GRPC_STATUS_UNAVAILABLE` | サービス全体に問題があります。 |
 | `GRPC_STATUS_UNKNOWN` | 無効な応答です。 |
 | `GRPC_STATUS_INTERNAL` | エンコード/デコードに問題があります。 |
 | `GRPC_STATUS_UNAUTHENTICATED` | 認証に失敗しました。 |
 | `GRPC_STATUS_PERMISSION_DENIED` | 承認に失敗しました。 |
-| `GRPC_STATUS_CANCELLED` | 呼び出しはキャンセルされました。通常は呼び出し元によって行われます。 |
+| `GRPC_STATUS_CANCELLED` | 呼び出しは、通常、呼び出し元によって取り消されました。 |
 
-## <a name="raise-errors-in-aspnet-core-grpc"></a>ASP.NET Core gRPC でエラーが発生する
+## <a name="raise-errors-in-aspnet-core-grpc"></a>ASP.NETコア gRPC でエラーを発生させる
 
-ASP.NET Core gRPC サービスは、`RpcException`をスローすることによってエラー応答を送信することができます。これは、同じプロセスにあるかのようにクライアントからキャッチできます。 `RpcException` には、状態コードと説明を含める必要があります。また、必要に応じて、メタデータと長い例外メッセージを含めることができます。 メタデータを使用して、サポートデータを送信することができます。これは、`FaultContract` オブジェクトが WCF エラーに対して追加データを伝達する方法と似ています。
+ASP.NET Core gRPC サービスは`RpcException`、同じプロセスにあるかのようにクライアントがキャッチできる をスローすることでエラー応答を送信できます。 には`RpcException`、ステータス コードと説明を含める必要があり、オプションでメタデータと長い例外メッセージを含めることができます。 メタデータを使用すると、WCF エラーに対する追加データを`FaultContract`オブジェクトが伝送する方法と同様に、サポート データを送信できます。
 
 ```csharp
 public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request, ServerCallContext context)
@@ -44,9 +44,9 @@ public async Task<GetPortfolioResponse> GetPortfolio(GetPortfolioRequest request
 }
 ```
 
-## <a name="catch-errors-in-grpc-clients"></a>GRPC クライアントでエラーをキャッチする
+## <a name="catch-errors-in-grpc-clients"></a>gRPC クライアントでエラーをキャッチする
 
-WCF クライアントが <xref:System.ServiceModel.FaultException%601> エラーをキャッチできるのと同様に、gRPC クライアントは、エラーを処理するための `RpcException` をキャッチできます。 `RpcException` はジェネリック型ではないため、異なるブロックでさまざまなエラーの種類をキャッチすることはできません。 ただし、次のC#例に示すように、の*例外フィルター*機能を使用して、状態コードごとに個別の `catch` ブロックを宣言できます。
+WCF クライアントがエラーを<xref:System.ServiceModel.FaultException%601>キャッチできるのと同様に、gRPC`RpcException`クライアントはエラーを処理するをキャッチできます。 ジェネリック`RpcException`型ではないため、異なるブロックで異なるエラータイプをキャッチすることはできません。 ただし、C# の*例外フィルター*機能を使用して、次`catch`の例に示すように、さまざまな状態コードに対して個別のブロックを宣言できます。
 
 ```csharp
 try
@@ -65,11 +65,11 @@ catch (RpcException)
 ```
 
 > [!IMPORTANT]
-> エラーのために追加のメタデータを指定する場合は、API のドキュメント、または `.proto` ファイルのコメントで、関連するキーと値を必ず文書化してください。
+> エラーの追加メタデータを提供する場合は、API ドキュメントまたはファイル内のコメントに関連するキーと値を必ず文書化`.proto`してください。
 
-## <a name="grpc-richer-error-model"></a>gRPC の豊富なエラーモデル
+## <a name="grpc-richer-error-model"></a>gRPC リッチ エラー モデル
 
-Google は、WCF の[Faultcontract](xref:System.ServiceModel.FaultContractAttribute)のようなより[豊富なエラーモデル](https://cloud.google.com/apis/design/errors#error_model)を開発しましたが、 C#このモデルはまだではサポートされていません。 現在、このファイルは、ゴー、Java、Python、およびC++でのみ使用できます。
+Google は WCF の[FaultContract](xref:System.ServiceModel.FaultContractAttribute)に似た[より豊富なエラー モデル](https://cloud.google.com/apis/design/errors#error_model)を開発しましたが、このモデルはまだ C# ではサポートされていません。 現在のところ、Go、Java、Python、および C++ でのみ使用できます。
 
 >[!div class="step-by-step"]
 >[前へ](metadata.md)
