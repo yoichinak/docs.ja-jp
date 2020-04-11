@@ -2,12 +2,12 @@
 title: 診断用の WMI (Windows Management Instrumentation) の使用
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 0c803e3988f7a63980d991190db87c263c992b80
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b14f9401266bdf7edccd7dca12cb818cdd2cb348
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185675"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121549"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>診断用の WMI (Windows Management Instrumentation) の使用
 WCF (WCF) は、WCF Windows 管理インストルメンテーション (WMI) プロバイダーを使用して、実行時にサービスの検査データを公開します。  
@@ -141,7 +141,7 @@ WCF (WCF) は、WCF Windows 管理インストルメンテーション (WMI) プ
     ```  
   
 ### <a name="granting-access-to-arbitrary-users-or-groups"></a>任意のユーザーまたはグループへのアクセス権の付与  
- このセクションの例では、すべてのローカル ユーザーに WMI プロバイダー登録権限を付与します。 組み込まれていないユーザーまたはグループにアクセス権を付与する場合は、そのユーザーまたはグループのセキュリティ識別子 (SID) を取得する必要があります。 任意のユーザーの SID を取得する簡単な方法はありません。 1 つの方法としては、目的のユーザーとしてログオンし、次のシェル コマンドを発行します。  
+ このセクションの例では、すべてのローカル ユーザーに WMI プロバイダー登録権限を付与します。 組み込まれていないユーザーまたはグループにアクセスを許可する場合は、そのユーザーまたはグループのセキュリティ識別子 (SID) を取得する必要があります。 任意のユーザーの SID を取得する簡単な方法はありません。 1 つの方法としては、目的のユーザーとしてログオンし、次のシェル コマンドを発行します。  
   
 ```console
 Whoami /user  
@@ -152,10 +152,11 @@ Whoami /user
 ## <a name="accessing-remote-wmi-object-instances"></a>リモート WMI オブジェクトのインスタンスへのアクセス  
  リモート コンピューター上の WCF WMI インスタンスにアクセスする必要がある場合は、アクセスに使用するツールでパケット のプライバシーを有効にする必要があります。 次のセクションでは、WMI CIM Studio、Windows Management Instrumentation テスト、および .NET SDK 2.0 を使用してこれらを実現する方法を説明します。  
   
-### <a name="wmi-cim-studio"></a>WMI CIM Studio  
- [WMI 管理ツール](https://go.microsoft.com/fwlink/?LinkId=95185)をインストールしている場合は、WMI CIM Studio を使用して WMI インスタンスにアクセスできます。 このツールは次のフォルダーにあります。  
+### <a name="wmi-cim-studio"></a>WMI CIM Studio
+
+WMI 管理ツールをインストールした場合は、WMI CIM Studio を使用して WMI インスタンスにアクセスできます。 ツールは次のフォルダにあります。
   
- **%ウィンディル%\プログラム ファイル\WMI ツール\\**  
+*%ウィンディル%\プログラム ファイル\WMI ツール\\*
   
 1. **[名前空間への接続:** ] ウィンドウで、「**ルート\サービスモデル**」と入力し **、[OK]** をクリックします。  
   

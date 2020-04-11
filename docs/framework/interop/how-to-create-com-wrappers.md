@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM,wrappers creating
 - COM,wrappers Visual Studio
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
-ms.openlocfilehash: 623df8aa86d25d9a57d3039bee01b0ee39d402a8
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73123939"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121596"
 ---
 # <a name="how-to-create-com-wrappers"></a>方法: COM ラッパーを作成する
 
@@ -32,14 +32,14 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
 
 3. **[プロジェクト]** メニューの **[参照の追加]** をクリックします。
 
-4. [参照の追加] ダイアログ ボックスで、 **[COM]** タブをクリックし、使用するコンポーネントを選択して **[OK]** をクリックします。
+4. [参照の追加] ダイアログ ボックスで、**[COM]** タブをクリックし、使用するコンポーネントを選択して **[OK]** をクリックします。
 
      **ソリューション エクスプローラー**で、COM コンポーネントがプロジェクトの [参照設定] フォルダーに追加されていることを確認します。
 
 これで、COM オブジェクトにアクセスするためのコードを作成できます。 まず、Visual Basic の場合は `Imports` ステートメント、C# の場合は `Using` ステートメントなど、オブジェクトの宣言から始めます。
 
 > [!NOTE]
-> Microsoft Office コンポーネントをプログラミングする場合は、最初に Microsoft ダウンロード センターから [Microsoft Office プライマリ相互運用機能アセンブリ](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) をインストールします。 手順 4 で、必要な Office 製品で使用可能な最新バージョンのオブジェクト ライブラリ (**Microsoft Word 11.0 Object Library** など) を選択します。  
+> Microsoft Office コンポーネントをプログラムする場合は、まず[Microsoft Office プライマリ相互運用機能アセンブリ再頒布可能パッケージを](https://www.microsoft.com/Download/details.aspx?id=3508)インストールします。
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用してランタイム呼び出し可能ラッパーを作成するには  
   
@@ -61,7 +61,7 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 4. **[COM の相互運用機能に登録]** チェック ボックスをオンにします。  
   
- プロジェクトをビルドすると、アセンブリが COM 相互運用機能に対して自動的に登録されます。 Visual Studio 2005 でネイティブ アプリケーションをビルドする場合は、 **[プロジェクト]** メニューの **[参照の追加]** をクリックすることで、アセンブリを使用できます。  
+ プロジェクトをビルドすると、アセンブリが COM 相互運用機能に対して自動的に登録されます。 Visual Studio 2005 でネイティブ アプリケーションをビルドする場合は、**[プロジェクト]** メニューの **[参照の追加]** をクリックすることで、アセンブリを使用できます。  
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用して COM 呼び出し可能ラッパーを作成するには  
   
