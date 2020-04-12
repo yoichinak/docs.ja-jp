@@ -1595,7 +1595,7 @@
         - name: メンバー アクセス演算子と式
           href: language-reference/operators/member-access-operators.md
           displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
-        - name: 型テストとキャスト演算子
+        - name: 型のテスト演算子とキャスト式
           href: language-reference/operators/type-testing-and-cast.md
           displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), explicit, conversion'
         - name: ユーザー定義の変換演算子
