@@ -3,12 +3,12 @@ title: コンパイルの構成設定
 description: .NET Core アプリの JIT コンパイラの動作方法を構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: adf1f01dba7387b89ee56784e33653d6a132c0e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ac51aa13254b2f2b1fdd8d1dd9c52559831a1659
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092890"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989117"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>コンパイルのランタイム構成オプション
 
@@ -19,7 +19,7 @@ ms.locfileid: "77092890"
   - 2 番目の階層では、最適化されたコードをバックグラウンドで生成します ("JIT の最適化")。
 - .NET Core 3.0 以降、階層型コンパイルは既定で有効に設定されます。
 - .NET Core 2.1 および 2.2 では、階層型コンパイルは既定で無効に設定されます。
-- 詳細については、「[階層型コンパイル ガイド](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation-guide.md)」を参照してください。
+- 詳細については、「[階層型コンパイル ガイド](https://github.com/dotnet/runtime/blob/master/docs/design/features/tiered-compilation.md)」を参照してください。
 
 | | 設定の名前 | 値 |
 | - | - | - |

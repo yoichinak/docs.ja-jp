@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: a132e527deadcffb4826c1965987fc09da470a09
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635311"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120992"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>メンバー アクセス演算子と式 (C# リファレンス)
 
@@ -170,7 +170,7 @@ if (handler != null)
 
 式に含まれる演算を評価する順序を調整する場合にもかっこを使用します。 詳細については、[C# 演算子](index.md)に関するページを参照してください。
 
-明示的な型変換を実行する[キャスト式](type-testing-and-cast.md#cast-operator-)でも、かっこが使われます。
+明示的な型変換を実行する[キャスト式](type-testing-and-cast.md#cast-expression)でも、かっこが使われます。
 
 ## <a name="index-from-end-operator-"></a>末尾からのインデックス演算子 ^
 

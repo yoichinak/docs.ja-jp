@@ -3,12 +3,12 @@ title: dotnet コマンドの特権アクセス
 description: 特権アクセスを必要とする dotnet コマンドのベスト プラクティスについて説明します。
 author: wli3
 ms.date: 06/26/2019
-ms.openlocfilehash: 4aff9badfa8ad9b83adc4496d4ebd6df29252e36
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f99e0b257772e0a73d4945f1129997d1d3308ed2
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156765"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805793"
 ---
 # <a name="elevated-access-for-dotnet-commands"></a>dotnet コマンドの特権アクセス
 
@@ -18,6 +18,7 @@ ms.locfileid: "78156765"
 
 - [dotnet tool install](dotnet-tool-install.md) など、`dotnet tool` コマンド。
 - `dotnet run --no-build`
+- `dotnet-core-uninstall`
 
 その他のコマンドを管理者特権で実行することはお勧めしません。 具体的には、[dotnet restore](dotnet-restore.md)、[dotnet build](dotnet-build.md)、[dotnet run](dotnet-run.md) など、MSBuild を使用するコマンドで特権昇格を推奨していません。 主な問題は、dotnet コマンドの実行後、ルートと制限付きアカウントの間をユーザーが行ったり来たりするという、アクセス管理の問題です。 制限付きユーザーであれば、ルート ユーザーが作成したファイルにアクセスできません。 この状況を解決する方法はありますが、このような状況になることがそもそも不要です。
 

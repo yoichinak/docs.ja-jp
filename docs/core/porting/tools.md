@@ -3,12 +3,12 @@ title: .NET Core に移植するためのツール
 description: .NET Core への移植に使用できるいくつかのツールに関する詳細情報
 author: cartermp
 ms.date: 12/07/2018
-ms.openlocfilehash: 98b3a29f2287414b2cd323f1cbf2225905592b26
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 64bad7600d8e17ada83d4bd8bc56762fd1789f43
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157519"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80989130"
 ---
 # <a name="tools-to-help-with-porting-to-net-core"></a>.NET Core への移植で役立つツール
 
@@ -16,7 +16,7 @@ ms.locfileid: "78157519"
 
 - [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) - .NET Framework と .NET Core の間で、コードを
   - [コマンド ライン ツール](https://github.com/Microsoft/dotnet-apiport/releases)として
-  - [Visual Studio 拡張機能](https://visualstudiogallery.msdn.microsoft.com/1177943e-cfb7-4822-a8a6-e56c7905292b)として、どの程度移植できるかを示すレポートを生成できるツールチェーン。
+  - [Visual Studio 拡張機能](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)として、どの程度移植できるかを示すレポートを生成できるツールチェーン。
 - [.NET API アナライザー](../../standard/analyzers/api-analyzer.md): さまざまなプラットフォームでの C# API の互換性リスクの可能性と、非推奨の API の呼び出しを検出する Roslyn アナライザー。
 
 さらに、[CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) ツールを使って、小規模なソリューションや個々のプロジェクトを .NET Core プロジェクトのファイル形式に移植してみることが可能です。

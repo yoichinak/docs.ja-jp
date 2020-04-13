@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 34c34865a2feece5fe037daeb035292aafd015b9
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 60e69a8ef55484e3b04f1674c35a1c5dadfa3b7c
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249358"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81120996"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>パターン マッチング、is 演算子、as 演算子を使用して安全にキャストする方法
 
@@ -37,4 +37,4 @@ ms.locfileid: "80249358"
 
 ご覧のとおり、このコードとパターン マッチング コードを比較することで、テストと割り当てが 1 回のステートメントで組み合わされ、パターン マッチング構文がより強固になります。 可能な限り、パターン マッチングを使用してください。
 
-[GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/safelycast)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/safelycast.zip)ダウンロードすることができます。
+[GitHub リポジトリ](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/safelycast)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](../../../samples/snippets/csharp/how-to/safelycast.zip)ダウンロードすることができます。

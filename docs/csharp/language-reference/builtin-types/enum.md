@@ -11,12 +11,12 @@ helpviewer_keywords:
 - enumeration type [C#]
 - bit flags [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: ab5eb1679f846bf0e25d90a4d0e0a71f0bdb0096
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15f5e9ccb1396277229ba935381812700f63ece8
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847711"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121154"
 ---
 # <a name="enumeration-types-c-reference"></a>列挙型 (C# リファレンス)
 
@@ -66,7 +66,7 @@ C# 7.3 以降、基底クラス制約 ([列挙の制約](../../programming-guide
 
 ## <a name="conversions"></a>変換
 
-列挙型については、列挙型とその基になる整数型との間に明示的な変換が存在します。 列挙値をその基になる型に[キャスト](../operators/type-testing-and-cast.md#cast-operator-)すると、結果は列挙メンバーの関連する整数値になります。
+列挙型については、列挙型とその基になる整数型との間に明示的な変換が存在します。 列挙値をその基になる型に[キャスト](../operators/type-testing-and-cast.md#cast-expression)すると、結果は列挙メンバーの関連する整数値になります。
 
 [!code-csharp[enum conversions](snippets/EnumType.cs#Conversions)]
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 24141f4b95cda2ae382a923da034e75c329b8555
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 645df8080abd21e4db95903a301a36b79a698858
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74643857"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888128"
 ---
 ### <a name="modernization-of-the-folderbrowserdialog"></a>FolderBrowserDialog の最新化
 
@@ -48,6 +48,6 @@ Windows フォーム
 
 ### Affected APIs
 
-- `System.Windows.Forms.FolderBrowserDialog`
+- `T:System.Windows.Forms.FolderBrowserDialog`
 
 -->

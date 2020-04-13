@@ -4,19 +4,19 @@ description: C# の Null 許容値型とその使用方法について説明し�
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: a84b3d60269491846b783e5046a84a1d14e258a1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398275"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888073"
 ---
 # <a name="nullable-value-types-c-reference"></a>null 許容値型 (C# リファレンス)
 
 "*null 許容値型*" `T?` は、基になる[値型](value-types.md) `T` のすべての値と、追加の [null](../keywords/null.md) 値を表します。 たとえば、`bool?` 変数には、`true`、`false`、`null` の 3 つの値のいずれかを割り当てることができます。 基になる値型 `T` を null 許容値型にすることはできません。
 
 > [!NOTE]
-> C# 8.0 で、Null 許容参照型機能が導入されました。 詳細については、「[null 許容参照型](../../nullable-references.md)」を参照してください。 null 許容値型は、C# 2 から使用できます。
+> C# 8.0 で、Null 許容参照型機能が導入されました。 詳細については、「[null 許容参照型](nullable-reference-types.md)」を参照してください。 null 許容値型は、C# 2 から使用できます。
 
 null 許容値型は、ジェネリック <xref:System.Nullable%601?displayProperty=nameWithType> 構造体のインスタンスです。 `T` または `Nullable<T>` の代替可能な形式のいずれかで基になる型 `T?` を持つ null 許容値型を参照できます。
 
@@ -120,7 +120,7 @@ null 許容値型のインスタンス `T?` は、次のように[ボックス�
 [!code-csharp-interactive[whether an instance is of a nullable type](snippets/NullableValueTypes.cs#IsInstanceNullable)]
 
 > [!NOTE]
-> このセクションで説明されているメソッドは、[null 許容参照型](../../nullable-references.md)の場合には適用されません。
+> このセクションで説明されているメソッドは、[null 許容参照型](nullable-reference-types.md)の場合には適用されません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
@@ -139,4 +139,4 @@ null 許容値型のインスタンス `T?` は、次のように[ボックス�
 - <xref:System.Nullable%601?displayProperty=nameWithType>
 - <xref:System.Nullable?displayProperty=nameWithType>
 - <xref:System.Nullable.GetUnderlyingType%2A?displayProperty=nameWithType>
-- [Null 許容参照型](../../nullable-references.md)
+- [Null 許容参照型](nullable-reference-types.md)
