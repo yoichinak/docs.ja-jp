@@ -8,26 +8,27 @@ helpviewer_keywords:
 - resource files, .resx files
 - .resx files
 ms.assetid: 168f941a-2b84-43f8-933f-cf4a8548d824
-ms.openlocfilehash: 2bbca5712639e14370d090e95b78bb89eba134e4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 3b84d77e4ac9b9889d1bc2f08e5ead6b81deecb0
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129906"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243038"
 ---
-# <a name="working-with-resx-files-programmatically"></a>プログラムによる .resx ファイルの使用
-XML リソース (.resx) ファイルは適切に定義された XML で構成する必要があり、特定のスキーマに従ったヘッダーの後に、名前と値のペアになったデータが続きます。そのため、手動で作成するとエラーが発生しやすくなります。 代わりに、.NET クラス ライブラリの型とメンバーを使用して、.resx ファイルをプログラムで作成できます。 また、.NET クラス ライブラリを使用して、.resx ファイルに格納されているリソースを取得することもできます。 このトピックでは、 <xref:System.Resources> 名前空間の型とメンバーを使って、.resx ファイルを操作する方法を説明します。
+# <a name="work-with-resx-files-programmatically"></a>プログラムによる .resx ファイルの使用
 
- なお、この記事では、リソースを含む XML (.resx) ファイルの操作について説明します。 アセンブリに埋め込まれたバイナリ リソース ファイルの操作について詳しくは、 <xref:System.Resources.ResourceManager> トピックをご覧ください。
+XML リソース (.resx) ファイルは適切に定義された XML で構成する必要があり、特定のスキーマに従ったヘッダーの後に、名前と値のペアになったデータが続きます。そのため、手動で作成するとエラーが発生しやすくなります。 代わりに、.NET クラス ライブラリの型とメンバーを使用して、.resx ファイルをプログラムで作成できます。 また、.NET クラス ライブラリを使用して、.resx ファイルに格納されているリソースを取得することもできます。 この資料では、<xref:System.Resources>名前空間内の型とメンバーを使用して .resx ファイルを操作する方法について説明します。
+
+この資料では、リソースを含む XML (.resx) ファイルの操作について説明します。 アセンブリに埋め込まれているバイナリ リソース ファイルの操作については、を参照<xref:System.Resources.ResourceManager>してください。
 
 > [!WARNING]
-> プログラムでの操作以外にも、.resx ファイルを操作する方法はあります。 リソース ファイルを [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) プロジェクトに追加するときは、Visual Studio で .resx ファイルを作成して維持するためのインターフェイスが提供され、コンパイル時に .resx ファイルは .resources ファイルに自動的に変換されます。 .resx ファイルを直接操作するためにテキスト エディターを使うこともできます。 ただし、ファイルの破損を避けるため、ファイルに格納されているバイナリ情報を変更しないように注意してください。
+> プログラムでの操作以外にも、.resx ファイルを操作する方法はあります。 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)プロジェクトにリソース ファイルを追加すると、Visual Studio には .resx ファイルを作成および管理するためのインターフェイスが用意され、コンパイル時に .resx ファイルが .resources ファイルに自動的に変換されます。 .resx ファイルを直接操作するためにテキスト エディターを使うこともできます。 ただし、ファイルの破損を避けるため、ファイルに格納されているバイナリ情報を変更しないように注意してください。
 
 ## <a name="create-a-resx-file"></a>.resx ファイルを作成する
 
 <xref:System.Resources.ResXResourceWriter?displayProperty=nameWithType> クラスを使い、次の手順に従って .resx ファイルをプログラムで作成できます。
 
-1. <xref:System.Resources.ResXResourceWriter> メソッドを呼び出して、.resx ファイルの名前を指定することにより、 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29?displayProperty=nameWithType> オブジェクトをインスタンス化します。 ファイル名には、.resx 拡張子を含める必要があります。 <xref:System.Resources.ResXResourceWriter> ブロック内の `using` オブジェクトをインスタンス化する場合、手順 3 で <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> メソッドを明示的に呼び出す必要はありません。
+1. <xref:System.Resources.ResXResourceWriter> メソッドを呼び出して、.resx ファイルの名前を指定することにより、 <xref:System.Resources.ResXResourceWriter.%23ctor%28System.String%29> オブジェクトをインスタンス化します。 ファイル名には、.resx 拡張子を含める必要があります。 <xref:System.Resources.ResXResourceWriter> ブロック内の `using` オブジェクトをインスタンス化する場合、手順 3 で <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> メソッドを明示的に呼び出す必要はありません。
 
 2. ファイルに追加するリソースごとに <xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType> メソッドを呼び出します。 このメソッドのオーバーロードを使って、文字列、オブジェクト、バイナリ (バイト配列) のデータを追加します。 リソースがオブジェクトの場合は、シリアル化可能でなければなりません。
 
@@ -38,13 +39,13 @@ XML リソース (.resx) ファイルは適切に定義された XML で構成�
 > [!WARNING]
 > パスワード、セキュリティの配慮が必要な情報、プライベートなデータなどの格納には、リソース ファイルを使用しないでください。
 
-次の例では、6 つの文字列、1 つのアイコン、2 つのアプリケーション定義オブジェクト (2 つの `Automobile` オブジェクト) を格納する CarResources.resx という名前の .resx ファイルを作成します。 例で定義されてインスタンス化された `Automobile` クラスは、<xref:System.SerializableAttribute> 属性でタグ付けされることに注意してください。
+次の例では、6 つの文字列、1 つのアイコン、2 つのアプリケーション定義オブジェクト (2 つの `Automobile` オブジェクト) を格納する CarResources.resx という名前の .resx ファイルを作成します。 この`Automobile`例で定義され、インスタンス化されたクラスは、<xref:System.SerializableAttribute>属性でタグ付けされます。
 
 [!code-csharp[Conceptual.Resources.ResX#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.resx/cs/create1.cs#1)]
 [!code-vb[Conceptual.Resources.ResX#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.resx/vb/create1.vb#1)]
 
 > [!TIP]
-> [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) を使用して .resx ファイルを作成することもできます。 コンパイル時に、Visual Studio は [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換し、アプリケーション アセンブリかサテライト アセンブリのいずれかに埋め込みます。
+> [また、Visual Studio を](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)使用して .resx ファイルを作成することもできます。 コンパイル時に、Visual Studio は [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md) を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換し、アプリケーション アセンブリかサテライト アセンブリのいずれかに埋め込みます。
 
 .resx ファイルをランタイムの実行可能ファイルに埋め込むことや、サテライト アセンブリにコンパイルすることはできません。 [リソース ファイル ジェネレーター (Resgen.exe)](../tools/resgen-exe-resource-file-generator.md)を使って、.resx ファイルをバイナリ リソース (.resources) ファイルに変換する必要があります。 結果として得られる .resources ファイルは、アプリケーション アセンブリやサテライト アセンブリに埋め込むことができます。 詳細については、「 [Creating Resource Files](creating-resource-files-for-desktop-apps.md)」を参照してください。
 
@@ -86,5 +87,5 @@ XML リソース (.resx) ファイルは適切に定義された XML で構成�
 ## <a name="see-also"></a>関連項目
 
 - [リソース ファイルの作成](creating-resource-files-for-desktop-apps.md)
-- [Resgen.exe (リソース ファイル ジェネレーター)](../tools/resgen-exe-resource-file-generator.md)
-- [Al.exe (アセンブリ リンカー)](../tools/al-exe-assembly-linker.md)
+- [Resgen.exe (リソース ファイル ジェネレータ)](../tools/resgen-exe-resource-file-generator.md)
+- [Al.exe (アセンブリリンカー)](../tools/al-exe-assembly-linker.md)

@@ -1,5 +1,5 @@
 ---
-title: 10 進型 (Decimal)
+title: Decimal データ型
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Decimal
@@ -20,32 +20,32 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 6d62bcc1d043b45c0fc30154d9dc633b998f97b7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d4d868ba7c05cf3c2d538de1217231df91d4f43d
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344043"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243324"
 ---
 # <a name="decimal-data-type-visual-basic"></a>10 進型 (Decimal) (Visual Basic)
 
-可変 10 の累乗によってスケーリングされた 96 ビット (12 バイト) 整数値を表す符号付き 128 ビット (16 バイト) 値を保持します。 スケールファクターは、小数点の右側の桁数を指定します。0から28までの範囲です。 小数点以下桁数が 0 (小数点以下桁数) の場合、有効な最大値は +/-79228162514264337593543950335 (+/-7.9228162514264337593543950335E + 28) です。 小数点以下を28桁にすると、最大値は +/-7.9228162514264337593543950335、0以外の最小値は +/-0.0000000000000000000000000001 (+/-1E-28) になります。
+可変 10 の累乗によってスケーリングされた 96 ビット (12 バイト) 整数値を表す符号付き 128 ビット (16 バイト) 値を保持します。 スケール ファクターは、小数点の右側の桁数を指定します。0 から 28 までの範囲です。 0 (小数点以下の桁数なし) の場合、最大の値は +/-79,228,162,514,264,337,593,543,950,335 (+/-7.92816251422643375935335335E+28) です。 小数点以下 28 桁の最大値は +/-7.92281625142643375935439393955555555530335 で、ゼロ以外の最小値は +/-0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-`Decimal` データ型は、数値の最大有効桁数を提供します。 最大29桁の有効桁数をサポートし、7.9228 x 10 ^ 28 を超える値を表すことができます。 これは、多くの数字を必要とするが丸め誤差を許容できない財務などの計算に特に適しています。
+データ`Decimal`型は、数値の有効桁数の最大数を提供します。 最大 29 桁の有効桁数をサポートし、7.9228 x 10^28 を超える値を表すことができます。 特に、財務計算など、桁数が多く必要な場合でも、丸め誤差を許容できない計算に適しています。
 
 `Decimal` の既定値は 0 です。
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **精度.** `Decimal` は、浮動小数点データ型ではありません。 `Decimal` 構造体は、2進数の整数値を保持します。符号ビットと、値のどの部分が小数点であるかを指定する整数の拡大率です。 このため、`Decimal` の数値は、浮動小数点型 (`Single` と `Double`) よりもメモリ内でより正確に表現されます。
+- **精度。** `Decimal`は浮動小数点データ型ではありません。 この`Decimal`構造体には、2 進整数値と、符号ビットと、値のどの部分が小数であるかを指定する整数のスケーリング係数が格納されます。 このため、`Decimal`数値は浮動小数点型 ( および`Single``Double`) よりも正確なメモリ表現を持ちます。
 
-- **パフォーマンス。** `Decimal` データ型は、すべての数値型の中で最も低速なデータ型です。 データ型を選択する前に、精度の重要性をパフォーマンスと比較する必要があります。
+- **パフォーマンス。** データ`Decimal`型は、すべての数値型の中で最も低速です。 データ型を選択する前に、精度の重要性とパフォーマンスの比較を検討する必要があります。
 
-- **拡大変換。  **   `Decimal` データ型は、`Single` または `Double`に拡大変換されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType> エラーが発生することなく、これらの型のいずれかに `Decimal` を変換できます。
+- **拡大。** データ`Decimal`型が、 または`Single``Double`に拡大されます。 つまり、<xref:System.OverflowException?displayProperty=nameWithType>エラーが発生`Decimal`することなく、これらの型のいずれかに変換できます。
 
-- **後続のゼロ。** Visual Basic は、末尾のゼロを `Decimal` リテラルに格納しません。 ただし、`Decimal` 変数は、計算を取得した後続のゼロを保持します。 これを次の例に示します。
+- **末尾のゼロ。** Visual Basic では、末尾のゼロは`Decimal`リテラルに格納されません。 ただし、変数`Decimal`は計算上、取得した後続のゼロを保持します。 次の例を使って説明します。
 
   ```vb
   Dim d1, d2, d3, d4 As Decimal
@@ -57,19 +57,19 @@ ms.locfileid: "74344043"
         ", d3 = " & CStr(d3) & ", d4 = " & CStr(d4))
   ```
 
-  前の例の `MsgBox` の出力は次のとおりです。
+  上記の`MsgBox`例の出力は次のとおりです。
 
   ```console
   d1 = 2.375, d2 = 1.625, d3 = 4.000, d4 = 4
   ```
 
-- **文字を入力します。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 `Decimal` に変換されます。
+- **文字を入力します。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 (`Decimal`) に変換されます。
 
-- **Framework のデータ型。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。
+- **Framework のデータ型** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。
 
-## <a name="range"></a>[範囲]
+## <a name="range"></a>範囲
 
- `Decimal` の変数または定数に大きな値を割り当てるには、`D` 型文字を使用することが必要になる場合があります。 この要件は、次の例に示すように、リテラルの型文字がリテラルの後に続く場合を除き、コンパイラがリテラルを `Long` として解釈するためです。
+ 変数または定数に大きな`D`値を割り当てるには、型`Decimal`文字を使用する必要がある場合があります。 この要件は、次の例に示すように、`Long`リテラルの型文字がリテラルの後に続く場合を除き、コンパイラがリテラルを解釈するためです。
 
 ```vb
 Dim bigDec1 As Decimal = 9223372036854775807   ' No overflow.
@@ -77,20 +77,20 @@ Dim bigDec2 As Decimal = 9223372036854775808   ' Overflow.
 Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
 ```
 
-割り当てられた値が `Long`の範囲内にあるため、`bigDec1` の宣言でオーバーフローが発生することはありません。 `Long` 値は `Decimal` 変数に割り当てることができます。
+に割り`bigDec1`当てられた値が の範囲内にあるため、 の宣言ではオーバーフローが発生しません`Long`。 値`Long`は変数に`Decimal`割り当てることができます。
 
-`bigDec2` の宣言でオーバーフローエラーが発生するのは、割り当てられた値が `Long`に対して大きすぎるためです。 数値リテラルは最初に `Long`として解釈できないため、`Decimal` 変数に割り当てることはできません。
+に割り`bigDec2`当てられた値が大きすぎるため、 の宣言はオーバーフロー エラーを`Long`生成します。 数値リテラルは、 として`Long`解釈できないため、 変数に`Decimal`代入することはできません。
 
-`bigDec3`の場合、リテラルの型文字 `D` は、コンパイラが `Long`ではなく `Decimal` としてリテラルを解釈するよう強制することによって、問題を解決します。
+リテラル`bigDec3`型文字`D`は、リテラルを の`Decimal`代わりに a として解釈するようにコンパイラに強制することによって、この問題`Long`を解決します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Decimal?displayProperty=nameWithType>
-- <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Decimal.%23ctor%2A>
 - <xref:System.Math.Round%2A?displayProperty=nameWithType>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [データ型](../../../visual-basic/language-reference/data-types/index.md)
 - [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)
-- [Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)
+- [Double データ型](../../../visual-basic/language-reference/data-types/double-data-type.md)
 - [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
 - [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

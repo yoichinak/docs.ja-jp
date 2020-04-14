@@ -7,18 +7,19 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 7905d540e0f06dd2863cf80381210307e3021918
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183071"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278887"
 ---
 # <a name="wcf-client-overview"></a>WCF クライアントの概要
+
 このセクションでは、クライアント アプリケーションの動作、Windows 通信基盤 (WCF) クライアントの構成、作成、および使用方法、およびクライアント アプリケーションをセキュリティで保護する方法について説明します。  
   
 ## <a name="using-wcf-client-objects"></a>WCF クライアント オブジェクトの使用  
- クライアント アプリケーションは、WCF クライアントを使用して別のアプリケーションと通信するマネージ アプリケーションです。 WCF サービスのクライアント アプリケーションを作成するには、次の手順が必要です。  
+ クライアント アプリケーションは、WCF クライアントを使用して別のアプリケーションと通信するマネージ アプリケーションです。 WCF サービスのクライアント アプリケーションを作成するには、次の手順を実行する必要があります。  
   
 1. サービス エンドポイントのサービス コントラクト、バインディング、およびアドレス情報を取得します。  
   
@@ -28,7 +29,7 @@ ms.locfileid: "79183071"
   
 4. WCF クライアント オブジェクトを閉じます。  
   
- この後の各セクションでは、これらの手順について詳しく説明します。また、次の内容についても簡単に説明します。  
+この後の各セクションでは、これらの手順について詳しく説明します。また、次の内容についても簡単に説明します。  
   
 - エラーの処理  
   
@@ -70,7 +71,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  このクラスを、コンストラクターの 1 つを使用してローカル オブジェクトとして作成し、構成して、型 `ISampleService` のサービスへの接続に使用できます。  
   
- 最初に WCF クライアント オブジェクトを作成してから使用し、単一の try/catch ブロック内で閉じてお勧めします。 特定のエラー モード`using`では例外`Using`をマスクする可能性があるため、Visual Basic ではステートメントを使用しないでください。 詳細については、次のセクションを参照してくださいと[WCF クライアント リソースを解放するのには、閉じると中止を使用](./samples/use-close-abort-release-wcf-client-resources.md)します。  
+ 最初に WCF クライアント オブジェクトを作成してから使用し、単一の try/catch ブロック内で閉じてお勧めします。 特定のエラー モード`using`で例外`Using`をマスクできるため、Visual Basic ではステートメントを使用しないでください。 詳細については、次のセクションを参照してくださいと[WCF クライアント リソースを解放するのには、閉じると中止を使用](./samples/use-close-abort-release-wcf-client-resources.md)します。  
   
 ### <a name="contracts-bindings-and-addresses"></a>コントラクト、バインディング、およびアドレス  
  WCF クライアント オブジェクトを作成する前に、クライアント オブジェクトを構成する必要があります。 具体的には、使用するサービス*エンドポイント*が必要です。 エンドポイントは、サービス コントラクト、バインディング、およびアドレスの組み合わせです  (エンドポイントの詳細については、「[エンドポイント: アドレス、バインディング、およびコントラクト](./feature-details/endpoints-addresses-bindings-and-contracts.md)」を参照してください。通常、この情報は、Svcutil.exe ツールが生成する構成ファイルなどのクライアント アプリケーション構成ファイルの[\<エンドポイント>](../configure-apps/file-schema/wcf/endpoint-of-client.md)要素に配置され、クライアント オブジェクトを作成すると自動的に読み込まれます。 また、両方の WCF クライアントの種類には、プログラムでこの情報を指定できるオーバーロードがあります。  
@@ -79,7 +80,7 @@ svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/M
   
  [!code-xml[C_GeneratedCodeFiles#19](../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/common/client.exe.config#19)]  
   
- この構成ファイルの `<client>` 要素には、ターゲット エンドポイントが指定されます。 複数のターゲット エンドポイントの使用の詳細については、「<xref:System.ServiceModel.ClientBase%601.%23ctor%2A?displayProperty=nameWithType>または<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A?displayProperty=nameWithType>コンストラクター」を参照してください。  
+ この構成ファイルの `<client>` 要素には、ターゲット エンドポイントが指定されます。 複数のターゲット エンドポイントの使用の詳細については、「<xref:System.ServiceModel.ClientBase%601.%23ctor%2A>または<xref:System.ServiceModel.ChannelFactory%601.%23ctor%2A>コンストラクター」を参照してください。  
   
 ## <a name="calling-operations"></a>操作の呼び出し  
  クライアント オブジェクトを作成して構成したら、try/catch ブロックを作成し、オブジェクトがローカルである場合と同じ方法で操作を呼び出し、WCF クライアント オブジェクトを閉じます。 クライアント アプリケーションが最初の操作を呼び出すと、WCF は基になるチャネルを自動的に開き、オブジェクトがリサイクルされるときに基になるチャネルが閉じられます。 (また、他の操作を呼び出す前後にチャネルを明示的に開いたり閉じたりすることもできます)。  

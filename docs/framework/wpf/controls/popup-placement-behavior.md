@@ -7,12 +7,12 @@ helpviewer_keywords:
 - placing popups [WPF]
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
-ms.openlocfilehash: 063b309ebaf0944787ce40725eed250e59f09dff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c377e62ffd334638031baee4d4831ac5a31acf3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176761"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243259"
 ---
 # <a name="popup-placement-behavior"></a>ポップアップの配置動作
 コントロール<xref:System.Windows.Controls.Primitives.Popup>は、アプリケーション上に浮かぶ別のウィンドウにコンテンツを表示します。 コントロール、マウス、または画面に<xref:System.Windows.Controls.Primitives.Popup>対する相対位置は<xref:System.Windows.Controls.Primitives.Popup.PlacementTarget%2A><xref:System.Windows.Controls.Primitives.Popup.Placement%2A>、 、 、、<xref:System.Windows.Controls.Primitives.Popup.PlacementRectangle%2A>および<xref:System.Windows.Controls.Primitives.Popup.HorizontalOffset%2A><xref:System.Windows.Controls.Primitives.Popup.VerticalOffset%2A>のプロパティを使用して指定できます。  これらのプロパティは連携して動作し、柔軟に<xref:System.Windows.Controls.Primitives.Popup>.  
@@ -205,4 +205,4 @@ ms.locfileid: "79176761"
   
 ## <a name="see-also"></a>関連項目
 
-- [ポップアップの配置のサンプル](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)
+- [ポップアップの配置のサンプル](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/PopupPositionSnippet/CS)

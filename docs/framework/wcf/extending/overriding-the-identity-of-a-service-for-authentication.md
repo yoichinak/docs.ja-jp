@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: e7273c1e140e52eb37a30b6cabeb9e9a83a6fa2d
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 5649ef4cc05c9c16b1f8f626ba5e2e584b0e52eb
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121554"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278913"
 ---
 # <a name="override-the-identity-of-a-service-for-authentication"></a>認証用のサービスの ID をオーバーライドする
 
 クライアント資格情報の種類を選択すると、サービス メタデータで公開される ID の種類が指定されるため、通常、サービスで ID を設定する必要はありません。 たとえば、次の構成コードでは[\<、wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)要素を使用し`clientCredentialType`、属性を Windows に設定します。  
 
- 次の Web サービス記述言語 (WSDL) コードは、定義済みのエンドポイントの ID を示しています。 この例では、サービスが特定のユーザー アカウント (username@contoso.com) で自己ホスト型サービスとして実行されているため、ユーザー プリンシパル名 (UPN) ID にはアカウント名が含まれています。 UPN は、Windows ドメインではユーザー ログオン名とも呼ばれます。  
+ 次の Web サービス記述言語 (WSDL) コードは、定義済みのエンドポイントの ID を示しています。 この例では、サービスが特定のユーザー アカウント (username@contoso.com) で自己ホスト型サービスとして実行されているため、ユーザー プリンシパル名 (UPN) ID にはアカウント名が含まれています。 UPN は、Windows ドメインのユーザー サインイン名とも呼ばれます。  
 
  ID 設定を示すサンプル アプリケーションについては、「[サービス ID](../samples/service-identity-sample.md)のサンプル」を参照してください。 サービス ID の詳細については、「[サービス ID と認証](../feature-details/service-identity-and-authentication.md)」を参照してください。  
   
@@ -41,18 +41,18 @@ ms.locfileid: "81121554"
   
 - メッセージ レベルのセキュリティを使用している場合は、認証モードによっては認証に失敗する可能性があります。  
   
-- `spnego` モードを使用し、`AllowNtlm` 属性を `false` に設定している場合は、認証に失敗します。  
+- mode を使用`spnego`していて、属性`AllowNtlm`が に`false`設定されている場合、認証は失敗します。  
   
-- `spnego` モードを使用し、`AllowNtlm` 属性を `true` に設定している場合、UPN が空の場合は認証に失敗しますが、SPN が空の場合は認証に成功します。  
+- mode を使用`spnego`していて、`AllowNtlm`属性が に`true`設定されている場合、UPN が空の場合は認証は失敗しますが、SPN が空の場合は成功します。  
   
 - Kerberos ダイレクト ("ワンショット" とも呼ばれます) を使用している場合は、認証に失敗します。  
   
-### <a name="using-the-identity-element-in-configuration"></a>構成で\<の要素> ID の使用  
- 前の例で示したバインディングのクライアント資格情報の種類を Certificate に変更すると、生成される WSDL には、Base64 でシリアル化された ID 値用の X.509 証明書が含まれます。コードを次に示します`,`。 これは、Windows 以外のすべてのクライアント資格情報の種類の既定値です。  
+### <a name="use-the-identity-element-in-configuration"></a>構成で\<要素> ID を使用する  
+ 前に示したバインディングでクライアント資格情報の種類を`Certificate`変更すると、生成された WSDL には、次のコードに示すように、ID 値の Base64 シリアル化された X.509 証明書が含まれます。 これは、Windows 以外のすべてのクライアント資格情報の種類の既定値です。  
 
  既定のサービス ID の値を変更したり、構成で <`identity`> 要素を使用するか、コードで ID を設定することによって、ID の種類を変更したりできます。 値 `contoso.com` を使用してドメイン ネーム システム (DNS) ID を設定する構成コードを次に示します。  
 
-### <a name="setting-identity-programmatically"></a>プログラムによる ID の設定  
+### <a name="set-identity-programmatically"></a>プログラムで ID を設定する  
  WCF によって自動的に決定されるため、サービスは ID を明示的に指定する必要はありません。 ただし、WCF では、必要に応じてエンドポイントで ID を指定できます。 特定の DNS ID を持つ新しいサービス エンドポイントを追加するコードを次に示します。  
   
  [!code-csharp[C_Identity#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_identity/cs/source.cs#5)]

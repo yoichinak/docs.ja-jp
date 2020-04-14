@@ -2,12 +2,12 @@
 title: セッション、インスタンス化、およびコンカレンシー
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: a7466d819e15f3bfe8def2d9407dcf2c6e0c7346
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19dedddadad2f27acdeeaceb2c186a731fa79c32
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184441"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243116"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>セッション、インスタンス化、およびコンカレンシー
 *"セッション"* とは、2 つのエンドポイント間で送信されるすべてのメッセージを相互に関連付けたものです。 *"インスタンス化"* とは、ユーザー定義のサービス オブジェクトとこれらのオブジェクトに関連する <xref:System.ServiceModel.InstanceContext> オブジェクトの有効期間を制御することです。 また、*コンカレンシー*は、<xref:System.ServiceModel.InstanceContext> で同時に実行されるスレッドの数の制御を表す用語です。  
@@ -63,7 +63,7 @@ public class CalculatorService : ICalculatorInstance
 ### <a name="well-known-singleton-services"></a>既知のシングルトン サービス  
  単一インスタンス サービス オブジェクトの 1 つのバリエーションとして、サービス オブジェクトをユーザーが自分で作成し、このオブジェクトを使用してサービス ホストを作成すると有用な場合があります。 そのためには、 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.InstanceContextMode.Single> に設定するか、サービス ホストが開かれたときに例外をスローする必要があります。  
   
- このようなサービスを作成するには、 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29?displayProperty=nameWithType> コンストラクターを使用します。 この方法は、シングルトン サービスが使用する特定のオブジェクト インスタンスを提供する場合に、カスタムの <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> を実装する代わりに使用できます。 このオーバーロードは、サービス実装型の構築が困難な場合 (たとえば、パラメーターなしのパブリック コンストラクターを実装していない場合) に使用できます。  
+ このようなサービスを作成するには、 <xref:System.ServiceModel.ServiceHost.%23ctor%28System.Object%2CSystem.Uri%5B%5D%29> コンストラクターを使用します。 この方法は、シングルトン サービスが使用する特定のオブジェクト インスタンスを提供する場合に、カスタムの <xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer?displayProperty=nameWithType> を実装する代わりに使用できます。 このオーバーロードは、サービス実装型の構築が困難な場合 (たとえば、パラメーターなしのパブリック コンストラクターを実装していない場合) に使用できます。  
   
  このコンストラクターにオブジェクトが提供されると、Windows 通信財団 (WCF) のインスタンス化動作に関連するいくつかの機能は異なる動作をします。 たとえば、シングルトン オブジェクト インスタンスを指定しているときは、 <xref:System.ServiceModel.InstanceContext.ReleaseServiceInstance%2A?displayProperty=nameWithType> を呼び出しても効果はありません。 他のインスタンス解放機構も、同様に無視されます。 <xref:System.ServiceModel.ServiceHost> は常に、すべての操作について <xref:System.ServiceModel.OperationBehaviorAttribute.ReleaseInstanceMode%2A?displayProperty=nameWithType> プロパティが <xref:System.ServiceModel.ReleaseInstanceMode.None?displayProperty=nameWithType> に設定されているかのように動作します。  
   
@@ -82,7 +82,7 @@ public class CalculatorService : ICalculatorInstance
 - <xref:System.ServiceModel.ConcurrencyMode.Reentrant>: 各サービス インスタンスは、一度に 1 つのメッセージを処理しますが、再入操作の呼び出しを受け入れます。 サービスは、WCF クライアント オブジェクトを介して呼び出す場合にのみ、これらの呼び出しを受け入れます。  
   
 > [!NOTE]
-> 複数のスレッドを安全に使用するコードを理解し、適切に記述することが困難な場合もあります。 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 値や <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 値を使用する前に、これらのモード用にサービスが適切に設計されていることを確認してください。 詳細については、<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> を参照してください。  
+> 複数のスレッドを安全に使用するコードを理解し、適切に記述することが困難な場合もあります。 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 値や <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 値を使用する前に、これらのモード用にサービスが適切に設計されていることを確認してください。 詳細については、「<xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A>」を参照してください。  
   
  コンカレンシーの使用は、インスタンス化モードに関連します。 インスタンス<xref:System.ServiceModel.InstanceContextMode.PerCall>化では、各メッセージが新しい<xref:System.ServiceModel.InstanceContext>によって処理されるため、同時実行は関係ありません。 <xref:System.ServiceModel.InstanceContext>  
   
@@ -110,8 +110,8 @@ public class CalculatorService : ICalculatorConcurrency
 ## <a name="see-also"></a>関連項目
 
 - [セッションの使用](../../../../docs/framework/wcf/using-sessions.md)
-- [方法 : セッションを必要とするサービスを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [方法 : サービスのインスタンス化を制御する](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
-- [並行 処理](../../../../docs/framework/wcf/samples/concurrency.md)
-- [インスタンス化](../../../../docs/framework/wcf/samples/instancing.md)
-- [セッション](../../../../docs/framework/wcf/samples/session.md)
+- [方法: セッションを必要とするサービスを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [方法: サービスのインスタンス化を制御する](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [コンカレンシー](../../../../docs/framework/wcf/samples/concurrency.md)
+- ["インスタンス化"](../../../../docs/framework/wcf/samples/instancing.md)
+- [Session](../../../../docs/framework/wcf/samples/session.md)

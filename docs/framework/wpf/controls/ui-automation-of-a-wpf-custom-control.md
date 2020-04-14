@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [WPF], improving accessibility
 - UI Automation [WPF], using with custom controls
 ms.assetid: 47b310fc-fbd5-4ce2-a606-22d04c6d4911
-ms.openlocfilehash: 9c33d0e5da70820041ba2a2881082d9f7d179fc5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 97db94215220ac2a68e0395bd63b7a874a745a48
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79187510"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243246"
 ---
 # <a name="ui-automation-of-a-wpf-custom-control"></a>WPF カスタム コントロールの UI オートメーション
 [!INCLUDE[TLA#tla_uiautomation](../../../../includes/tlasharptla-uiautomation-md.md)] は、オートメーション クライアントが使用してさまざまなプラットフォームやフレームワークのユーザー インターフェイスを調査または操作できる、単一の汎用的なインターフェイスを提供します。 [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] では、品質保証 (テスト) のコードとスクリーン リーダーなどのユーザー補助アプリケーションの両方を使用して、ユーザー インターフェイス要素を調べて、他のコードからその要素を使用してユーザーの操作をシュミレーションできます。 すべてのプラットフォームにまたがる [!INCLUDE[TLA2#tla_uiautomation](../../../../includes/tla2sharptla-uiautomation-md.md)] について詳しくは、「ユーザー補助機能」を参照してください。  
@@ -144,7 +144,7 @@ Public Class RangePeer2
 End Class  
 ```  
   
-実装例については、NumericUpDown カスタム コントロールを実装および使用する[C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)または[Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)のソース コードを参照してください。  
+実装例については、NumericUpDown カスタム コントロールを実装および使用する[C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)または[Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)のソース コードを参照してください。  
   
 ### <a name="raise-events"></a>イベントを発生させる  
  オートメーション クライアントは、オートメーション イベントをサブスクライブできます。 カスタム コントロールは、メソッドを呼び出すことによって<xref:System.Windows.Automation.Peers.AutomationPeer.RaiseAutomationEvent%2A>、コントロールの状態に対する変更を報告する必要があります。 同様に、プロパティ値が変更された場合は<xref:System.Windows.Automation.Peers.AutomationPeer.RaisePropertyChangedEvent%2A>、メソッドを呼び出します。 次のコードは、コントロール コード内からピア オブジェクトを取得し、イベントを発生させるメソッドを呼び出す方法を示しています。 最適化として、このコードは、このイベント型のリスナーがいるかどうかを判断します。 リスナーがいる場合にのみイベントを発生させると、不要なオーバーヘッドを回避し、コントロールの応答性を維持できます。  
@@ -156,5 +156,5 @@ End Class
 
 - [UI オートメーションの概要](../../ui-automation/ui-automation-overview.md)
 - [サーバー側 UI オートメーション プロバイダーの実装](../../ui-automation/server-side-ui-automation-provider-implementation.md)
-- [ギクジットアップダウン カスタム コントロール (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
-- [ギクジットハブのカスタム コントロール (ビジュアル ベーシック)](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)
+- [ギクジットアップダウン カスタム コントロール (C#)](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)  
+- [ギクジットハブのカスタム コントロール (ビジュアル ベーシック)](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic)

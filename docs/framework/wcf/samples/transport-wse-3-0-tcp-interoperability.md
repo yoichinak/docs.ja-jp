@@ -2,12 +2,12 @@
 title: トランスポート:WSE 3.0 TCP 相互運用性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 55c59fe3a677d3aea8de62ae714e1007cfcbb86a
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f799f3b6968f31472acc7752846bab34351648db
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121296"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81278900"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>トランスポート:WSE 3.0 TCP 相互運用性
 WSE 3.0 TCP 相互運用性トランスポートサンプルは、カスタム Windows 通信基盤 (WCF) トランスポートとして TCP 双方向セッションを実装する方法を示しています。 さらに、チャネル レイヤーの拡張機能を使用して、ネットワーク経由で既存の配置システムと連結する方法も示します。 次の手順は、このカスタム WCF トランスポートをビルドする方法を示しています。  
@@ -39,7 +39,7 @@ WSE 3.0 TCP 相互運用性トランスポートサンプルは、カスタム W
   
  <xref:System.ServiceModel.Channels.Message> がバイトにエンコードされたら、ネットワーク上に送信する必要があります。 これを行うには、メッセージ境界を定義するシステムが必要です。 WSE 3.0 では、フレーミング プロトコルとして[DIME](https://docs.microsoft.com/archive/msdn-magazine/2002/december/sending-files-attachments-and-soap-messages-via-dime)のバージョンを使用します。 `WriteData` はこのフレーム ロジックをカプセル化して、byte[] を一連の DIME レコードにラップします。  
   
- メッセージ受信用のロジックは、上記のロジックとほぼ同じです。 複雑な点は、主に、読み取られたソケットによって返されるバイトが、要求されたバイトよりも少ない場合があることに関する処理です。 メッセージを受信するには、`WseTcpDuplexSessionChannel` がネットワーク経由でないバイトを読み取って DIME フレームを復号化し、その後<xref:System.ServiceModel.Channels.MessageEncoder> を使用して byte[] を <xref:System.ServiceModel.Channels.Message> に変換します。  
+ メッセージを受信するロジックは似ています。 主な複雑さは、ソケットの読み取りが要求されたバイト数より少ないバイト数を返すことができるという事実を処理することです。 メッセージを受信するには、`WseTcpDuplexSessionChannel` がネットワーク経由でないバイトを読み取って DIME フレームを復号化し、その後<xref:System.ServiceModel.Channels.MessageEncoder> を使用して byte[] を <xref:System.ServiceModel.Channels.Message> に変換します。  
   
  基本の `WseTcpDuplexSessionChannel` は、接続されたソケットを受信することを前提とします。 この基本クラスでは、ソケットのシャットダウンが処理されます。 ソケットの終了と連動する場所は、次の 3 つです。  
   
@@ -47,7 +47,7 @@ WSE 3.0 TCP 相互運用性トランスポートサンプルは、カスタム W
   
 - On[Begin]Close -- ソケットを正常に終了します (正常終了)。  
   
-- session.CloseOutputSession --  送信データ ストリームをシャットダウンします (半終了)。  
+- セッション。出力セッションを閉じる -- アウトバウンド・データ・ストリームをシャットダウンします (半分閉じる)。  
   
 ## <a name="channel-factory"></a>チャネル ファクトリ  
  TCP トランスポートを記述する次の手順では、クライアント チャネルでの <xref:System.ServiceModel.Channels.IChannelFactory> の実装を作成します。  
@@ -170,7 +170,7 @@ Symbols:
         CONTOSO  
 ```  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
+## <a name="set-up-build-and-run-the-sample"></a>サンプルのセットアップ、ビルド、および実行  
   
 1. このサンプルを実行するには[、Microsoft .NET 用の Web サービス拡張機能 (WSE) 3.0](https://www.microsoft.com/download/details.aspx?id=14089)が`TcpSyncStockService`インストールされている必要があります。
   
@@ -179,9 +179,9 @@ Symbols:
   
 1. `TcpSyncStockService` サンプルをインストールしたら、次の手順を実行します。  
   
-    1. Visual Studio で `TcpSyncStockService` を開きます (TcpSyncStockService サンプルは WSE 3.0 と共にインストールされます。 このサンプル コードの一部ではありません)。  
+    1. を`TcpSyncStockService`開きます。 (サンプルは WSE 3.0 と共にインストールされています。 このサンプルのコードの一部ではありません)。  
   
-    2. StockService プロジェクトをスタートアップ プロジェクトに設定します。  
+    2. StockService プロジェクトをスタートアップ プロジェクトとして設定します。  
   
     3. StockService プロジェクトの StockService.cs を開き、`StockService` クラスの [Policy] 属性をコメント化します。 これにより、サンプルのセキュリティが無効になります。 WCF は WSE 3.0 のセキュリティで保護されたエンドポイントと相互運用できますが、このサンプルをカスタム TCP トランスポートに重点を置いておくためにセキュリティは無効になっています。  
   

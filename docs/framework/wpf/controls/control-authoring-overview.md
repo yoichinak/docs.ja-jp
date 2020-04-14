@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: d5dd2d962c554b860fb6f68110945d56c4ee03ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2326520039085beb5f5294e23db67b67f9d7d7da
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401029"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243272"
 ---
-# <a name="control-authoring-overview"></a>コントロールの作成の概要
+# <a name="control-authoring-overview"></a>コントロール作成の概要
 
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] コントロール モデルの機能拡張により、新しいコントロールを作成する必要性が大幅に削減されます。 ただし、場合によっては、カスタム コントロールを作成する必要があります。 このトピックでは、カスタム コントロールを作成する必要性を最小限に抑える機能と、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のさまざまなコントロール作成モデルについて説明します。 また、新しいコントロールを作成する方法も示します。
 
@@ -227,7 +227,7 @@ CLR`get`と`set`アクセサーは、前述の「依存関係プロパティの�
 
 #### <a name="defining-resources-at-the-element-level"></a>要素レベルでのリソース定義
 
-カスタムのリソース ディクショナリを作成し、それをコントロールのリソース ディクショナリと結合することによって、共有リソースを要素レベルで定義できます。  このメソッドで定義する場合は、リソース ファイルに任意の名前を付けて、コントロールと同じフォルダーに配置できます。 要素レベルでのリソースでは、単純な文字列をキーとして使用することもできます。 次の例では、Dictionary1.xaml という名前の<xref:System.Windows.Media.LinearGradientBrush>リソース ファイルを作成します。
+ユーザー定義リソース ディクショナリを作成し、それをコントロールのリソース ディクショナリとマージすることで、要素レベルで共有リソースを定義できます。  このメソッドで定義する場合は、リソース ファイルに任意の名前を付けて、コントロールと同じフォルダーに配置できます。 要素レベルでのリソースでは、単純な文字列をキーとして使用することもできます。 次の例では、Dictionary1.xaml という名前の<xref:System.Windows.Media.LinearGradientBrush>リソース ファイルを作成します。
 
 [!code-xaml[SharedResources#1](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/Dictionary1.xaml#1)]
 
@@ -264,7 +264,7 @@ CLR`get`と`set`アクセサーは、前述の「依存関係プロパティの�
 
 すべてのテーマのリソースを定義する必要はありません。 特定のテーマについてリソースが定義されていない場合、コントロールはリソースの `Classic.xaml` を確認します。 現在のテーマに対応するファイルや `Classic.xaml` でリソースが定義されていない場合、コントロールは汎用のリソースを使用します。汎用のリソースは、`generic.xaml` という名前のリソース ディクショナリ ファイルにあります。  `generic.xaml` ファイルは、テーマ固有のリソース ディクショナリ ファイルと同じフォルダーに配置されています。 `generic.xaml` は、特定の Windows テーマには対応していませんが、テーマ レベルのディクショナリであることに変わりありません。
 
-テーマと UI オートメーション のサポート サンプルを含む[C#](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)または[Visual Basic](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown`NumericUpDown`カスタム コントロールには、コントロール用の 2 つのリソース ディクショナリが含まれています。
+テーマと UI オートメーション のサポート サンプルを含む[C#](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/VS_Snippets_Wpf/CustomControlNumericUpDown/CSharp)または[Visual Basic](https://github.com/dotnet/docs/tree/master/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic) NumericUpDown`NumericUpDown`カスタム コントロールには、コントロール用の 2 つのリソース ディクショナリが含まれています。
 
 テーマ固有のリソース<xref:System.Windows.Controls.ControlTemplate>ディクショナリ ファイルのいずれかに を配置する場合は、次の例に示すように、コントロールの静的コンストラクターを<xref:System.Windows.DependencyProperty.OverrideMetadata%28System.Type%2CSystem.Windows.PropertyMetadata%29>作成し<xref:System.Windows.FrameworkElement.DefaultStyleKey%2A>、 でメソッドを呼び出す必要があります。
 
