@@ -1,12 +1,12 @@
 ---
 title: 属性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 2a07035ea97bb0ff1a8f4793fe8a30d3a42c34a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397642"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389540"
 ---
 # <a name="attributes-c"></a>属性 (C#)
 
@@ -67,15 +67,15 @@ ms.locfileid: "79397642"
 
 次の表に、使用可能な `target` の値を示します。
 
-|対象の値|適用対象|
+|対象の値|対象|
 |------------------|----------------|
 |`assembly`|アセンブリ全体|
 |`module`|現在のアセンブリ モジュール|
 |`field`|クラスまたは構造体のフィールド|
-|`event`|Event|
+|`event`|event|
 |`method`|メソッドまたは `get` および `set` プロパティ アクセサー|
 |`param`|メソッド パラメーターまたは `set` プロパティ アクセサー パラメーター|
-|`property`|property|
+|`property`|プロパティ|
 |`return`|メソッド、プロパティ インデクサー、または `get` プロパティ アクセサーの戻り値|
 |`type`|構造体、クラス、インターフェイス、列挙型、またはデリゲート|
 
@@ -95,14 +95,14 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 [!code-csharp[Applying attributes to different code elements](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#6)]
 
 > [!NOTE]
-> `ValidatedContract` が有効になるように定義されるターゲットが何であっても、`return` は指定する必要があります。これは、`ValidatedContract` が戻り値にのみ適用されるように定義されている場合でも必要です。 つまり、コンパイラは `AttributeUsage` 情報を使用して、あいまいな属性ターゲットを解決しません。 詳細については、「[AttributeUsage (C#)](attributeusage.md)」を参照してください。
+> `ValidatedContract` が有効になるように定義されるターゲットが何であっても、`return` は指定する必要があります。これは、`ValidatedContract` が戻り値にのみ適用されるように定義されている場合でも必要です。 つまり、コンパイラは `AttributeUsage` 情報を使用して、あいまいな属性ターゲットを解決しません。 詳細については、「[AttributeUsage (C#)](../../../language-reference/attributes/general.md)」を参照してください。
 
 ## <a name="common-uses-for-attributes"></a>属性の一般的な使用法
 
 次の表に、コードでの属性の一般的な使用法をいくつか示します。
 
-- Web サービスの `WebMethod` 属性を使用してメソッドをマークして、メソッドが SOAP プロトコルを介して呼び出されるようにします。 詳細については、<xref:System.Web.Services.WebMethodAttribute> を参照してください。
-- ネイティブ コードと相互運用するときにメソッドのパラメーターをマーシャリングする方法を記述します。 詳細については、<xref:System.Runtime.InteropServices.MarshalAsAttribute> を参照してください。
+- Web サービスの `WebMethod` 属性を使用してメソッドをマークして、メソッドが SOAP プロトコルを介して呼び出されるようにします。 詳細については、「<xref:System.Web.Services.WebMethodAttribute>」を参照してください。
+- ネイティブ コードと相互運用するときにメソッドのパラメーターをマーシャリングする方法を記述します。 詳細については、「<xref:System.Runtime.InteropServices.MarshalAsAttribute>」を参照してください。
 - クラス、メソッド、およびインターフェイスの COM プロパティを記述します。
 - <xref:System.Runtime.InteropServices.DllImportAttribute> クラスを使用してアンマネージ コードを呼び出します。
 - タイトル、バージョン、説明、または商標についてのアセンブリを記述します。
@@ -121,11 +121,11 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 - [リフレクションを使用した属性へのアクセス (C#)](accessing-attributes-by-using-reflection.md)  
 - [属性を使用して C/C++ の共用体を作成する方法 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
 - [共通属性 (C#)](common-attributes.md)  
-- [呼び出し元情報 (C#)](../caller-information.md)  
+- [呼び出し元情報 (C#)](../../../language-reference/attributes/caller-information.md)  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../../index.md)
+- [C# プログラミング ガイド](../../index.md)
 - [リフレクション (C#)](../reflection.md)
 - [属性](../../../../standard/attributes/index.md)
 - [C# での属性の使用](../../../tutorials/attributes.md)

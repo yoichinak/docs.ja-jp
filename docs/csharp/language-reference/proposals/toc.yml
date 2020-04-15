@@ -74,6 +74,8 @@
           href: ../../../../_csharplang/proposals/csharp-8.0/ranges.md
         - name: パターン ベース using および using 宣言
           href: ../../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: 静的ローカル関数
+          href: ../../../../_csharplang/proposals/csharp-8.0/static-local-functions.md
         - name: Null 合体演算子割り当て
           href: ../../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
         - name: 読み取り専用インスタンス メンバー
