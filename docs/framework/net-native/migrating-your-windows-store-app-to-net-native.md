@@ -2,12 +2,12 @@
 title: Windows ストア アプリの .NET ネイティブへの移行
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
-ms.openlocfilehash: 36f9ac4647b349ff379869f3415a5fb9e55228e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 987669fc51eeaf7e3bdef3e91a2f1ce23164a055
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241946"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389703"
 ---
 # <a name="migrate-your-windows-store-app-to-net-native"></a>Windows ストア アプリを .NET ネイティブに移行する
 
@@ -85,7 +85,7 @@ NET ネイティブで:
 
 - <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、その他の [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) メソッドの場合も同様です。
 
-- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> と <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> は、特定の組み合わせ (たとえば、byref の配列) を作成しようとしたときに失敗しません。
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType>特定<xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType>の組み合わせ (オブジェクトの`byref`配列など) を作成しようとしても失敗しません。
 
 - リフレクションを使用して、ポインター パラメーターを持つメンバーを呼び出すことはできません。
 
@@ -117,7 +117,7 @@ NET ネイティブで:
 
 - 値型の <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドと <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> メソッドをオーバーライドする場合は、基底クラスの実装を呼び出さないでください。 Windows ストア アプリ用 .NET では、これらのメソッドはリフレクションに依存します。 コンパイル時に、.NET ネイティブはランタイム リフレクションに依存しない実装を生成します。 つまり、これらの 2 つのメソッドをオーバーライドしないと、コンパイル時に .NET Native が実装を生成するため、正常に動作します。 ただし、基底クラスの実装を呼び出さずにこれらのメソッドをオーバーライドすると、例外が発生します。
 
-- 1 メガバイトより大きい値型はサポートされません。
+- 1 MB を超える値型はサポートされていません。
 
 - 値型は、.NET ネイティブでパラメーターなしのコンストラクターを持つ必要があります。 (C# および Visual Basic では、値型に対してパラメーターなしのコンストラクターを禁止します。 ただし、IL ではこれらを作成できます。)
 
@@ -225,7 +225,7 @@ NET ネイティブで:
 - <xref:System.Runtime.InteropServices.UnmanagedType.SafeArray?displayProperty=nameWithType>
 - <xref:System.Runtime.InteropServices.VarEnum?displayProperty=nameWithType>
 
- <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType> はサポートされていますが、 [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) や byref バリアントと共に使用された場合など、一部のシナリオでは例外がスローされます。
+ <xref:System.Runtime.InteropServices.UnmanagedType.Struct?displayProperty=nameWithType>はサポートされていますが[、IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)や`byref`バリアントで使用される場合など、一部のシナリオでは例外をスローします。
 
  [IDispatch](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch)サポートの非推奨 API には、次のものがあります。
 
@@ -324,7 +324,7 @@ NET ネイティブで:
 
 - マネージド型での <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> インターフェイスの実装
 
-- [属性を使用したマネージド型での](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> インターフェイスの実装。 ただし、 `IDispatch`から COM オブジェクトを呼び出すことはできず、マネージド オブジェクトは `IDispatch`を実装できないことに注意してください。
+- [属性を使用したマネージド型での](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> インターフェイスの実装。 ただし、 を使用して COM オブジェクト`IDispatch`を呼び出す方法は使用できません`IDispatch`。
 
 リフレクションを使用したプラットフォーム呼び出しメソッドの呼び出しはサポートされません。 この制限を回避するには、別のメソッドでメソッド呼び出しをラップし、リフレクションを使用してラッパーを代わりに呼び出します。
 
@@ -332,7 +332,7 @@ NET ネイティブで:
 
 ### <a name="other-differences-from-net-apis-for-windows-store-apps"></a>その他の Windows ストア アプリ用 .NET API との違い
 
-このセクションでは、.NET ネイティブでサポートされていない残りの API を示します。 サポートされない API で最も多いのは、Windows Communication Foundation (WCF) API です。
+このセクションでは、.NET ネイティブでサポートされていない残りの API を示します。 サポートされていない API の最大セットは、Windows 通信基盤 (WCF) API です。
 
 **DataAnnotations (System.ComponentModel.DataAnnotations)**
 
@@ -396,7 +396,7 @@ NET ネイティブで:
 
 **Windows Communication Foundation (WCF) (System.ServiceModel.\*)**
 
-[名前空間](xref:System.ServiceModel)の型は、.NET ネイティブではサポートされていません。 そうした型には、次のようなものがあります。
+[名前空間](xref:System.ServiceModel)の型は、.NET ネイティブではサポートされていません。 これには、次のタイプが含まれます。
 
 - <xref:System.ServiceModel.ActionNotSupportedException?displayProperty=nameWithType>
 - <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>

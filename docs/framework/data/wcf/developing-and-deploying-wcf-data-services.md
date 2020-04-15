@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 61527e51ea4d28cfe4589f6bed32b3c505443c22
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121173"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389727"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF データ サービスの開発と展開
 
@@ -42,7 +42,7 @@ Visual Studio 2015 を使用して、WCF データ サービスをASP.NET アプ
 
 1. **ローカル IIS サーバー**
 
-     インターネット インフォメーション サービス (IIS) で実行されるASP.NET アプリケーションまたはASP.NET Web サイトであるデータ サービスを作成する場合は、ローカル コンピュータで IIS を使用してデータ サービスを開発し、テストすることをお勧めします。 IIS でデータ サービスを実行すると、デバッグ時における HTTP 要求のトレースが容易になります。 また、データ サービスに必要なファイルやデータベースなどのリソースにアクセスするために IIS で必要とされる権限を事前に確認することもできます。 IIS でデータ サービスを実行するには、IIS と Windows 通信財団 (WCF) の両方が正しくインストールおよび構成されていることを確認し、ファイル システムとデータベース内の IIS アカウントへのアクセスを許可する必要があります。 詳細については、「 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)」を参照してください。
+     インターネット インフォメーション サービス (IIS) で実行されるASP.NET アプリケーションまたはASP.NET Web サイトであるデータ サービスを作成する場合は、ローカル コンピュータで IIS を使用してデータ サービスを開発し、テストすることをお勧めします。 IIS でデータ サービスを実行すると、デバッグ時における HTTP 要求のトレースが容易になります。 また、データ サービスに必要なファイルやデータベースなどのリソースにアクセスするために IIS で必要とされる権限を事前に確認することもできます。 IIS でデータ サービスを実行するには、IIS と Windows 通信財団 (WCF) の両方が正しくインストールおよび構成されていることを確認し、ファイル システムとデータベース内の IIS アカウントへのアクセスを許可します。 詳細については、「 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)」を参照してください。
 
     > [!NOTE]
     > 開発環境を有効にしてローカル IIS サーバーを構成するには、管理者権限を持つ Visual Studio を実行する必要があります。
@@ -61,7 +61,7 @@ Visual Studio 2015 を使用して、WCF データ サービスをASP.NET アプ
 
     - このサーバーには、認証など、IIS の必要以上の機能は含まれていません。
 
-    - このサーバーはチャンク HTTP ストリームを処理できません。 詳細については、「ストリーミング[プロバイダ」を](streaming-provider-wcf-data-services.md)参照してください。
+    - このサーバーは、データ サービスから大きなバイナリ データにアクセスするときに、WCF データ サービス クライアントによって既定で送信されるチャンク HTTP ストリームを処理できません。 詳細については、「ストリーミング[プロバイダ」を](streaming-provider-wcf-data-services.md)参照してください。
 
     - このサーバーでは、キー値の WCF`.`データ サービスでこの文字がサポートされているにもかかわらず、URL 内のピリオド ( ) 文字の処理に問題があります。
 
@@ -74,11 +74,11 @@ Visual Studio 2015 を使用して、WCF データ サービスをASP.NET アプ
 
 ### <a name="development-tips"></a>開発のヒント
 
-データ サービスを開発する際は、次の点を考慮してください。
+データ サービスを開発する場合は、次の点を考慮してください。
 
 - ユーザーを認証する場合や、特定のユーザーのアクセスを制限する場合は、データ サービスのセキュリティ要件を決定します。 詳細については、「 [Securing WCF Data Services](securing-wcf-data-services.md)」を参照してください。
 
-- データ サービスをデバッグするときは、HTTP 検査プログラムを使用すると、要求メッセージおよび応答メッセージの内容を検査できるので非常に便利です。 生のパケットを表示できるネットワーク パケット アナライザーを使用すると、データ サービスの HTTP 要求および HTTP 応答を検査できます。
+- HTTP 検査プログラムは、要求メッセージと応答メッセージの内容を検査できるようにすることで、データ・サービスをデバッグする際に役立ちます。 生のパケットを表示できるネットワーク パケット アナライザーを使用すると、データ サービスの HTTP 要求および HTTP 応答を検査できます。
 
 - データ サービスをデバッグする場合は、通常の操作時よりも、データ サービスからエラーに関する詳細情報を取得する必要があります。 データ サービスから詳細なエラー情報を取得するには、 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> の <xref:System.Data.Services.DataServiceConfiguration> プロパティを `true` に設定し、データ サービス クラスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 属性の <xref:System.ServiceModel.Description.ServiceDebugBehavior> プロパティを `true`に設定します。 詳細については、「 [WCF データ サービスのデバッグ](https://docs.microsoft.com/archive/blogs/phaniraj/debugging-wcf-data-services)後 」を参照してください。 また、HTTP メッセージング層で発生した例外を表示するために、WCF でトレースを有効にすることもできます。 詳細については、「 [Configuring Tracing](../../wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。
 
@@ -119,7 +119,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 ### <a name="deployment-considerations"></a>配置に関する注意事項
 
-データ サービスを配置する際は、次の点を考慮してください。
+データ サービスを展開する場合は、次の点を考慮してください。
 
 - Entity Framework プロバイダーを使用して SQL Server データベースにアクセスするデータ サービスを配置する場合、データ構造、データ、またはその両方をデータ サービスの配置に反映する必要があります。 Visual Studio では、対象データベースでこれを実行するスクリプト (.sql ファイル) を自動的に作成でき、これらのスクリプトは、ASP.NET アプリケーションの Web 配置パッケージに含めることができます。 詳細については、「[方法 : Web アプリケーション プロジェクトを使用してデータベースを配置する](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))」を参照してください。 ASP.NET Web サイトの場合は、Visual Studio の**データベース発行ウィザード**を使用して、これを行うことができます。 詳細については、「 [SQL データベースのパブリッシュ](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))」を参照してください。
 

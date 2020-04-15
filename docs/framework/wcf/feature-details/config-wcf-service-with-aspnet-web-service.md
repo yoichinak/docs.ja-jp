@@ -1,25 +1,26 @@
 ---
-title: '方法 : WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する'
+title: '方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 6a06e1983a54581cfb89f008e9f063a671e992c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185348"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389786"
 ---
-# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>方法 : WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する
+# <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する
+
 Windows 通信基盤 (WCF) サービス エンドポイントを構成して、ASP.NET Web サービス クライアント<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>と相互運用可能にするには、サービス エンドポイントのバインディングの種類としてその型を使用します。  
   
  必要に応じて、HTTPS およびトランスポート レベルのクライアント認証のサポートをバインディングで有効にできます。 ASP.NET Web サービス クライアントは MTOM メッセージ<xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType>エンコーディングをサポートしていません。 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> また、ASP.Net Web サービス クライアントでは WS-Security がサポートされていないため、<xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> を <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定する必要があります。  
   
- WCF サービスのメタデータを、web サービスのプロキシ生成ツール (Web[サービス記述言語ツール (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)) [、Web サービス探索ツール (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100))、および Visual Studio の Web 参照の追加機能をASP.NETして使用できるようにするには、HTTP/GET メタデータ エンドポイントを公開する必要があります。  
+ WCF サービスのメタデータを Web サービスプロキシ生成ツール (Web[サービス記述言語ツール (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)) [、Web サービス検出ツール (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100)))、および Visual Studio の**Web 参照の追加**機能で ASP.NET使用できるようにするには、HTTP/GET メタデータ エンドポイントを公開する必要があります。  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>コードを使用して ASP.NET Web サービス クライアントと互換性のある WCF エンドポイントを追加するには  
+## <a name="add-an-endpoint-in-code"></a>コードにエンドポイントを追加する  
   
 1. 新しい <xref:System.ServiceModel.BasicHttpBinding> インスタンスを作成します。  
   
@@ -29,7 +30,7 @@ Windows 通信基盤 (WCF) サービス エンドポイントを構成して、A
   
 4. サービス用に HTTP/GET メタデータのエンドポイントを有効にします。 詳細については、「[方法 : コードを使用してサービスのメタデータを公開する](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)」を参照してください。  
   
-### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>構成ファイルを使用して ASP.NET Web サービス クライアントと互換性のある WCF エンドポイントを追加するには  
+## <a name="add-an-endpoint-in-a-configuration-file"></a>構成ファイルにエンドポイントを追加する  
   
 1. 新しい <xref:System.ServiceModel.BasicHttpBinding> バインディング構成を作成します。 詳細については、「[方法 : 構成でサービス バインドを指定する](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)」を参照してください。  
   
@@ -48,10 +49,10 @@ Windows 通信基盤 (WCF) サービス エンドポイントを構成して、A
   
 ## <a name="see-also"></a>関連項目
 
-- [方法 : コード内にサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
+- [方法: コード内にサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)
 - [方法: コードを使用してサービスのメタデータを公開する](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
 - [方法: 構成でサービス バインディングを指定する](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [方法 : 構成にサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
-- [方法 : 構成ファイルを使用してサービスのメタデータを公開する](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [方法: 構成にサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [方法: 構成ファイルを使用してサービスのメタデータを公開する](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [輸送セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)
 - [メタデータを使用する](../../../../docs/framework/wcf/feature-details/using-metadata.md)

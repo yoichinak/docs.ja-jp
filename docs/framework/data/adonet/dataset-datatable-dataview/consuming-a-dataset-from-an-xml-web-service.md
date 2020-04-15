@@ -5,14 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: d835ffe7a10492ee731de8e5301e6d34545f9c32
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151391"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389742"
 ---
-# <a name="consuming-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>XML Web サービスからのデータセットの使用
+
 <xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **DataSet**は、XML Web サービスからクライアントに**DataSet**の内容をストリーム処理するために追加のコーディングを必要とせずに、XML Web サービスへの入力または出力として指定できる点で「シリアル化可能」です。 **データセット**は、DiffGram 形式を使用して XML ストリームに暗黙的に変換され、ネットワーク経由で送信され、受信側の**DataSet**として XML ストリームから再構築されます。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、「 [DiffGrams](diffgrams.md)」を参照してください。  
   
  次の例は **、DataSet**を使用してリレーショナル データ (変更されたデータを含む) を転送し、更新を元のデータ ソースに解決する XML Web サービスとクライアントを作成する方法を示しています。  
@@ -20,7 +21,7 @@ ms.locfileid: "79151391"
 > [!NOTE]
 > XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することをお勧めします。 XML Web サービスのセキュリティ保護については、「 [ASP.NET を使用して作成された XML Web サービスのセキュリティ保護](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))」を参照してください。  
   
-### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>DataSet を返し、処理する XML Web サービスを作成するには、次のようにします。  
+## <a name="create-an-xml-web-service"></a>XML Web サービスの作成
   
 1. XML Web サービスを作成します。  
   
@@ -189,9 +190,11 @@ ms.locfileid: "79151391"
   
 3. XML Web サービスのクライアントを作成します。  
   
-     Visual Studio で Web サービス プロキシ クラスを生成する場合は、クライアント プロジェクトを作成し、[ソリューション エクスプローラ] ウィンドウでプロジェクトを右クリックし **、[Web 参照の追加**] をクリックします。前の手順で説明したように、XML Web サービス プロキシを自分で作成する場合は、クライアント コードにインポートして XML Web サービス メソッドを使用できます。 次のサンプル コードは、プロキシ ライブラリをインポートし **、GetCustomers を**呼び出して顧客の一覧を取得し、新しい顧客を追加してから、**更新**プログラムを含**む DataSet**を返します。  
+     Visual Studio で Web サービス プロキシ クラスを生成する場合は、クライアント プロジェクトを作成し、[ソリューション エクスプローラー] ウィンドウでプロジェクトを右クリックし、[**Add** > **サービス参照**の追加] を選択します。 [**サービス参照の追加**] ダイアログ ボックスで、[**詳細設定**] をクリックし **、[Web 参照の追加**] を選択します。 使用可能な Web サービスの一覧から Web サービスを選択します (Web サービスが現在のソリューションまたは現在のコンピューターで使用できない場合は、Web サービス エンドポイントのアドレスを指定する必要があります)。 上記の手順に従って、XML Web サービス プロキシを作成した場合は、それをクライアント コードにインポートし、XML Web サービスのメソッドを処理できます。
+
+     次のサンプル コードは、プロキシ ライブラリをインポートし **、GetCustomers を**呼び出して顧客の一覧を取得し、新しい顧客を追加してから、**更新**プログラムを含**む DataSet**を返します。  
   
-     この例では、変更された行**DataSet**のみを UpdateCustomers に渡す必要があるため **、DataSet.GetChanges**から返されるデータセットが**UpdateCustomers**に渡されることに注意**してください**。 **UpdateCustomers は**解決済みの**DataSet**を返し、既存の**データセット**に**マージ**して、解決済みの変更と更新プログラムの行エラー情報を組み込むことができます。 次のコードは、Visual Studio を使用して Web 参照を作成し、[Web**参照の追加**] ダイアログ ボックスで Web 参照を DsSample に変更したことを前提としています。  
+     この例では、変更**DataSet**された行のみを UpdateCustomers に渡す必要があるため **、DataSet.GetChanges**から返されるデータセットを**UpdateCustomers**に渡します。 **UpdateCustomers** **UpdateCustomers は**解決済みの**DataSet**を返し、既存の**データセット**に**マージ**して、解決済みの変更と更新プログラムの行エラー情報を組み込むことができます。 次のコードは、Visual Studio を使用して Web 参照を作成し、[Web**参照の追加**] ダイアログ ボックスで Web 参照を DsSample に変更したことを前提としています。  
   
     ```vb  
     Imports System  

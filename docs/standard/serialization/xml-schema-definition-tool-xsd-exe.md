@@ -2,16 +2,19 @@
 title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: cd017eb1866fff2ce8fd7a858b184351ef13e815
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588349"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389771"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
 XML スキーマ定義ツール (Xsd.exe) は、XDR、XML、および XSD ファイル、またはランタイム アセンブリ内のクラスから XML スキーマ クラスまたは共通言語ランタイム クラスを生成します。
+
+XML スキーマ定義ツール (Xsd.exe) は、通常、次のパスにあります。
+_C:\\プログラム\\ファイル (x86)\\マイクロソフト\\SDK\\ウィンドウ\\{バージョン} ビン NETFX {バージョン} ツール\\_
 
 ## <a name="syntax"></a>構文
 
@@ -74,7 +77,7 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/t\[ype\]:**_型名_|スキーマの作成対象とする型の名前を指定します。 複数の型の引数を指定できます。 *typename* によって名前空間が特定されない場合、指定された型を持つアセンブリに含まれるすべての型が対象となります。 *typename* によって名前空間が特定される場合は、その型だけが対象になります。 *typename* の末尾がアスタリスク (\*) の場合は、\* の前にある文字列で始まる型のすべてが対象となります。 `/type` オプションを省略すると、アセンブリに含まれるすべての型についてスキーマが生成されます。|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 Xsd.exe が実行する操作を次の表に示します。
 
@@ -200,7 +203,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |nologo|バナーを表示しません。 `true` または `false` に設定します。|
 |help|このツールのコマンド構文とオプションを表示します。 `true` または `false` に設定します。|
 
-## <a name="examples"></a>使用例
+## <a name="examples"></a>例
  `myFile.xdr` から XML スキーマを生成し、現在のディレクトリに保存するコマンドを次に示します。
 
 ```console

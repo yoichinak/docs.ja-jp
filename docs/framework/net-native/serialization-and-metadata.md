@@ -2,12 +2,12 @@
 title: シリアル化とメタデータ
 ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
-ms.openlocfilehash: 7c6fe241fbf92f52abfa0eb66c37bff4d227b4e5
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: cc9adf0e6627ef3190e74fea5d4f0f3afd581811
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81241920"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389228"
 ---
 # <a name="serialization-and-metadata"></a>シリアル化とメタデータ
 
@@ -15,7 +15,7 @@ ms.locfileid: "81241920"
   
 - リフレクション ベースのサードパーティ シリアライザー。 この場合、ランタイム ディレクティブ ファイルの変更が必要です。詳細については次のセクションで説明します。  
   
-- .NET Framework クラス ライブラリにある非リフレクション ベースのシリアライザー。 この場合、ランタイム ディレクティブ ファイルの変更が必要なことがあります。詳細については、「[Microsoft のシリアライザー](#Microsoft)」セクションで説明します。  
+- .NET Framework クラス ライブラリに存在する非リフレクション ベースのシリアライザー。 この場合、ランタイム ディレクティブ ファイルの変更が必要なことがあります。詳細については、「[Microsoft のシリアライザー](#Microsoft)」セクションで説明します。  
   
 <a name="ThirdParty"></a>
 ## <a name="third-party-serializers"></a>サードパーティ シリアライザー
@@ -59,13 +59,13 @@ ms.locfileid: "81241920"
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   
- 型ごとに次のようなエントリをランタイム ディレクティブ ファイルに追加する必要があります。  
+ランタイム ディレクティブ ファイルに、型ごとに次のようなエントリを追加します。  
   
 ```xml  
 <Type Name="t" Browse="Required Public" />  
 ```  
   
- この例で使用されている構文については、「[\<要素の型>」](type-element-net-native.md)を参照してください。  
+この例で使用されている構文については、「[\<要素の型>」](type-element-net-native.md)を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

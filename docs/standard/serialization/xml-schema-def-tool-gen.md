@@ -7,16 +7,19 @@ helpviewer_keywords:
 - XML Schema Definition tool, using to generate classes that conform to specific schema
 - XML Schema Definition tool, using to generate XML Schema Document
 ms.assetid: 51f0edc3-993d-4051-b7f2-77753694d3d1
-ms.openlocfilehash: 4c6996e2279693cf96c826741869d72007cf81cf
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 2bbdced0f984b653a58afba9685683e8c0891271
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249553"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389794"
 ---
 # <a name="how-to-use-the-xml-schema-definition-tool-to-generate-classes-and-xml-schema-documents"></a>方法: XML スキーマ定義ツールを使用してクラスと XML スキーマ ドキュメントを生成する
-XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明する XML スキーマを生成したり、XML スキーマで定義されるクラスを生成したりできます。 次の手順では、これらの操作の実行方法を示します。  
-  
+XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明する XML スキーマを生成したり、XML スキーマで定義されるクラスを生成したりできます。 次の手順では、これらの操作の実行方法を示します。
+
+XML スキーマ定義ツール (Xsd.exe) は、通常、次のパスにあります。
+_C:\\プログラム\\ファイル (x86)\\マイクロソフト\\SDK\\ウィンドウ\\{バージョン} ビン NETFX {バージョン} ツール\\_
+
 ### <a name="to-generate-classes-that-conform-to-a-specific-schema"></a>特定のスキーマに準拠するクラスを生成するには  
   
 1. コマンド プロンプトを開きます。  
@@ -57,7 +60,7 @@ XML スキーマ定義ツール (Xsd.exe) を使用して、クラスを説明�
 - <xref:System.Data.DataSet>
 - [XML スキーマ定義ツールと XML シリアル化](../../../docs/standard/serialization/the-xml-schema-definition-tool-and-xml-serialization.md)
 - [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [XML Schema Definition Tool (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
+- [XML スキーマ定義ツール (Xsd.exe)](../../../docs/standard/serialization/xml-schema-definition-tool-xsd-exe.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [方法: オブジェクトをシリアル化する](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [方法: オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
