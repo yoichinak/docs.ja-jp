@@ -26,9 +26,9 @@ ms.locfileid: "79141134"
 - [.NET API リファレンス](https://github.com/dotnet/dotnet-api-docs) このリポジトリの問題とタスクについては、[dotnet/dotnet-api-docs/issues](https://github.com/dotnet/dotnet-api-docs/issues) で追跡されます。
 - [.NET Compiler Platform SDK リファレンス](https://github.com/dotnet/roslyn-api-docs) このリポジトリの問題とタスクについては、[dotnet/docs/issues](https://github.com/dotnet/docs/issues) で追跡されます。
 
-### <a name="contributing-to-international-content"></a>海外のコンテンツへの投稿
+### <a name="contributing-to-international-content"></a>翻訳コンテンツへの貢献
 
-現在、機械翻訳 (MT) コンテンツへの投稿は受け付けておりません。 MT コンテンツの品質を向上させるため、ニューラル MT エンジンに移行しました。 人間が翻訳した (HT) コンテンツへの投稿は受け付けています。これは、ニューラル MT エンジンをトレーニングするために使用されるため、ご協力ください。 時間の経過と共に、HT コンテンツへの投稿により、HT と MT の両方の品質が向上します。 MT トピックには、トピックの一部が MT であることを示す免責事項が含まれています。また、 **[編集]** ボタンは無効になっているため、表示されません。
+現在、機械翻訳 (MT) コンテンツへの貢献は受け付けておりません。 MT コンテンツの品質を向上させるため、ニューラル MT エンジンに移行しました。 人間が翻訳した (HT) コンテンツへの貢献は受け付けています。これは、ニューラル MT エンジンをトレーニングするために使用されます。 時間の経過と共に、HT コンテンツへの貢献により、HT と MT の両方の品質が向上します。 MT トピックには、トピックの一部が MT であることを示す免責事項が含まれています。また、 **[編集]** ボタンは無効になっているため、表示されません。
 
 ## <a name="dos-and-donts"></a>注意事項
 
