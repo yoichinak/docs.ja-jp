@@ -140,7 +140,7 @@
 	}
       },
       "feedback_system": "GitHub",
-      "feedback_github_repo": "dotnet/docs.de-de",
+      "feedback_github_repo": "dotnet/docs.ja-jp",
       "feedback_product_url": "https://developercommunity.visualstudio.com/spaces/61/index.html",
       "featureFlags": [
         "enable_uhf_ppe"
