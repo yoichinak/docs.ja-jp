@@ -2,12 +2,12 @@
 title: 大規模データとストリーミング
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 91e53f66fb0f2f94a315c318eb0b203d78427bae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4b6275a27fb1e09ecac1f8f00f56068a80a214ef
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184677"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464082"
 ---
 # <a name="large-data-and-streaming"></a>大規模データとストリーミング
 
@@ -88,7 +88,7 @@ WCF (WCF) は、XML ベースの通信インフラストラクチャです。 XM
       </wsHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  前述のように、MTOM エンコーディングの使用が適しているかどうかは、送信するデータ量によって異なります。 また、MTOM はバインディング レベルで有効になるので、MTOM を有効にすると、個々のエンドポイント上のすべての操作に作用します。  
@@ -178,7 +178,7 @@ class MyData
       </basicHttpBinding>  
     </bindings>  
      …  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  コード内でバインディングをインスタンス化するときは、そのバインディングの `TransferMode` プロパティ (またはカスタム バインドを作成している場合は、トランスポート バインド要素) をそれぞれ上記の値のいずれかに設定する必要があります。  
@@ -241,4 +241,4 @@ public class UploadStreamMessage
   
 ## <a name="see-also"></a>関連項目
 
-- [方法 : ストリーミングを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [方法: ストリーミングを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

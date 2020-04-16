@@ -2,12 +2,12 @@
 title: 標準エンドポイント
 ms.date: 03/30/2017
 ms.assetid: 3fcb4225-addc-44f2-935d-30e4943a8812
-ms.openlocfilehash: 880601664d7602e279c5d022fa37c44914a58772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 48924e06457cf9f91ce4f900bb38de4d22bfc550
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184405"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463776"
 ---
 # <a name="standard-endpoints"></a>標準エンドポイント
 エンドポイントは、アドレス、バインディング、およびコントラクトを指定して定義します。 エンドポイントに設定できるその他のパラメーターには、動作構成、ヘッダー、リッスン URI などがあります。  特定の種類のエンドポイントでは、これらの値が変化しません。 たとえば、メタデータ交換エンドポイントでは、常に <xref:System.ServiceModel.Description.IMetadataExchange> コントラクトを使用します。 <xref:System.ServiceModel.Description.WebHttpEndpoint> などのその他のエンドポイントでは、指定されたエンドポイント動作が必要です。 一般的に使用されるエンドポイント プロパティの既定の値を設定することによって、エンドポイントの操作性を向上させることができます。 開発者は、標準エンドポイントを使用して、既定値を持つエンドポイント、またはエンドポイントの 1 つ以上のプロパティが変化しないエンドポイントを定義できます。  これらのエンドポイントによって、静的な性質の情報を指定する必要がないエンドポイントの使用が可能になります。 標準エンドポイントは、インフラストラクチャ エンドポイントおよびアプリケーション エンドポイントに使用できます。  
@@ -121,6 +121,8 @@ public class CustomEndpointCollectionElement : StandardEndpointCollectionElement
           name="customStandardEndpoint"  
           type="CustomEndpointCollectionElement, Example.dll,  
                 Version=1.0.0.0, Culture=neutral, PublicKeyToken=ffffffffffffffff"/>  
+      </standardEndpointExtensions>
+</extensions>  
 ```  
   
 ## <a name="configuring-a-standard-endpoint"></a>標準エンドポイントの構成  

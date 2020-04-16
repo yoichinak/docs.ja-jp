@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 86c679af77f2b7b1960e7489e0e6e61b811e1bad
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9616a5afb88e46bb5d69f1cd253c854cc1684d9f
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185223"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464184"
 ---
 # <a name="federation"></a>フェデレーション
 ここでは、フェデレーション セキュリティの概念について簡単に説明します。 また、フェデレーション セキュリティ アーキテクチャを展開するための Windows 通信財団 (WCF) のサポートについても説明します。 フェデレーションを示すサンプル アプリケーションについては、「[フェデレーションのサンプル](../../../../docs/framework/wcf/samples/federation-sample.md)」を参照してください。  
@@ -240,7 +240,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
                        storeLocation="LocalMachine"
                        storeName="My" />  
        </identity>  
-    <endpoint>  
+    </endpoint>  
   </service>  
 </services>  
   
@@ -291,4 +291,4 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
 ## <a name="see-also"></a>関連項目
 
-- [セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)
+- [Security](../../../../docs/framework/wcf/feature-details/security.md)

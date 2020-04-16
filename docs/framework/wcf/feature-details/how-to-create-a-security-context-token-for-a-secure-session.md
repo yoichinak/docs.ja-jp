@@ -1,18 +1,18 @@
 ---
-title: '方法 : セキュリティで保護されたセッションに対しセキュリティ コンテキスト トークンを作成する'
+title: '方法: セキュリティで保護されたセッションに対しセキュリティ コンテキスト トークンを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 640676b6-c75a-4ff7-aea4-b1a1524d71b2
-ms.openlocfilehash: 02e0403f9ae5bb437145fa3a015edc69b884c4d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4e91580035d4de23ae90cd0d59a08f321ae70a1c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185013"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464147"
 ---
-# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>方法 : セキュリティで保護されたセッションに対しセキュリティ コンテキスト トークンを作成する
+# <a name="how-to-create-a-security-context-token-for-a-secure-session"></a>方法: セキュリティで保護されたセッションに対しセキュリティ コンテキスト トークンを作成する
 セキュリティで保護されたセッションでステートフルなセキュリティ コンテキスト トークン (SCT: Security Context Token) を使用すると、そのセッションでサービスを再利用できます。 たとえば、セキュリティで保護されたセッションでステートレスな SCT を使用しているときにインターネット インフォメーション サービス (IIS) をリセットすると、サービスに関連付けられているセッション データが失われます。 このセッション データには、SCT キャッシュが含まれています。 このため、クライアントが次回ステートレスな SCT をサービスに送信すると、エラーが返されます。これは、SCT に関連付けられているキーを取得できないためです。 しかし、ステートフルな SCT を使用した場合、SCT に関連付けられているキーは、その SCT 内に格納されます。 キーが SCT 内、つまりメッセージ内に格納されているため、セキュリティで保護されたセッションは、サービスの再使用の影響を受けません。 既定では、Windows 通信基盤 (WCF) は、セキュリティで保護されたセッションでステートレス SCD を使用します。 ここでは、セキュリティで保護されたセッションでステートフルな SCT を使用する方法について詳しく説明します。  
   
 > [!NOTE]
@@ -32,6 +32,7 @@ ms.locfileid: "79185013"
   
         ```xml  
         <customBinding>  
+        </customBinding>
         ```  
   
     2. 子要素[\<>バインド](../../configure-apps/file-schema/wcf/bindings.md)を[customBinding>に追加します。 \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
@@ -40,6 +41,7 @@ ms.locfileid: "79185013"
   
         ```xml  
         <binding name="StatefulSCTSecureSession">  
+        </binding>
         ```  
   
     3. このサービスとの間で送受信されるメッセージの認証モードを指定するには[\<、セキュリティ>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)子要素を[customBinding>に追加します。 \< ](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
@@ -48,7 +50,8 @@ ms.locfileid: "79185013"
   
         ```xml  
         <security authenticationMode="SecureConversation"  
-                  requireSecurityContextCancellation="false">  
+                  requireSecurityContextCancellation="false">
+        </security>
         ```  
   
     4. セキュリティ セッションの確立中に、[\<セキュリティ保護されたConversationBootstrap>](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子要素を[\<セキュリティ>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)に追加して、クライアントを認証する方法を指定します。  
@@ -103,7 +106,7 @@ ms.locfileid: "79185013"
         <security
             requireSecurityContextCancellation="false">  
               <secureConversationBootstrap />  
-      </security>  
+        </security>  
     <httpTransport />  
   </binding>  
 </customBinding>  

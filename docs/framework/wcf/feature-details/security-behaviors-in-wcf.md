@@ -2,12 +2,12 @@
 title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: f56bbd66aa61b8db9d6e720fb3a67ddbbf5e267e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f96abac0f5f32279c5579dd01c3dd7f2dc1786c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184531"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464057"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows 通信基盤 (WCF) では、動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般的な動作の詳細については、「[サービスの実行時動作の指定](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)」を参照してください)。*セキュリティ動作により、* 資格情報、認証、承認、監査ログを制御できます。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
@@ -82,7 +82,7 @@ Windows 通信基盤 (WCF) では、動作は、サービス レベルまたは�
   
 - このコレクションに URI を追加して、有効な URI のセットを指定します。 これを行うには、各 URI に[\<追加>](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)を挿入します。  
   
- 詳細については、<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> を参照してください。  
+ 詳細については、「<xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>」を参照してください。  
   
  この構成要素の使用方法の詳細については、「方法[: フェデレーション サービスで資格情報を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)」を参照してください。  
   
@@ -112,6 +112,7 @@ Windows 通信基盤 (WCF) では、動作は、サービス レベルまたは�
    </clientCredentials>  
   </behavior>  
  </endpointBehaviors>  
+</behaviors>  
 ```  
   
 #### <a name="clientcertificate-element"></a>\<クライアント証明書>要素  
@@ -135,6 +136,9 @@ Windows 通信基盤 (WCF) では、動作は、サービス レベルまたは�
       <issuerChannelBehaviors>  
          <add issuerAddress="http://www.contoso.com"  
                behaviorConfiguration="clientBehavior1" />
+      </issuerChannelBehaviors>  
+   </issuedToken>  
+</clientCredentials>
 ```  
   
 #### <a name="servicecertificate-element"></a>\<サービス証明書>要素  
@@ -191,15 +195,15 @@ Windows 通信基盤 (WCF) では、動作は、サービス レベルまたは�
  書き込み先のログと、ログに記録するイベントの種類を指定するには[、serviceSecurityAudit>を使用します。 \<](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md) 詳細については、「監査」[を](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)参照してください。  
   
 ```xml  
-<system.serviceModel>  
-<serviceBehaviors>  
+<behaviors>
+ <serviceBehaviors>  
   <behavior name="NewBehavior">  
     <serviceSecurityAudit auditLogLocation="Application"
              suppressAuditFailure="true"  
              serviceAuthorizationAuditLevel="Success"
              messageAuthenticationAuditLevel="Success" />  
-    </behavior>  
-  </serviceBehaviors>  
+  </behavior>  
+ </serviceBehaviors>  
 </behaviors>  
 ```  
   

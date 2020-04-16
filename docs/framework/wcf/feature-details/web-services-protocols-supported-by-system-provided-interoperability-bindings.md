@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Web services protocols
 - Windows Communication Foundation, Web service protocols
 ms.assetid: 1f7fc4ff-30fe-4e46-adda-91caad3b06c6
-ms.openlocfilehash: a1e67401a09370a46bc7a3e8546c95467bc18b67
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25efda74d205a36332a801e91ddc508796f7df5d
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184140"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463986"
 ---
 # <a name="web-services-protocols-supported-by-system-provided-interoperability-bindings"></a>システム標準の相互運用性バインディングがサポートしている Web サービス プロトコル
 Wcf (WCF) は、Web サービス仕様と呼ばれる一連の仕様をサポートする Web サービスと相互運用できるように構築されています。 相互運用性のベスト プラクティスを実現するためにサービス構成を簡略化するために、WCF では、相互運用可能な<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>システム<xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType>指定の<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>バインディング 、 、および の 3 つのバインディングが導入されています。 構造化情報標準 (OASIS) の高度化のための組織との相互運用性のために、 WCF には、相互運用可能なシステム<xref:System.ServiceModel.WS2007HttpBinding?displayProperty=nameWithType>提供のバインディングが 1 つ含まれています。 メタデータのパブリケーションの場合、WCF には、2 つの相互運用可能なシステム指定のバインディングが含まれています: [ \<mexHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpbinding.md)と[\<mexHttpsBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/mexhttpsbinding.md)。 このトピックでは、システム指定の相互運用可能なバインディングがサポートする仕様を示します。  
@@ -76,7 +76,7 @@ Wcf (WCF) は、Web サービス仕様と呼ばれる一連の仕様をサポー
        <message issuedKeyType="Symmetric"
                 issuedTokenType="http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.1#SAMLV1.1">  
          <issuerMetadata address =
-         'http://localhost/FederationSample/HomeRealmSTS/STS.svc/mex'>  
+         'http://localhost/FederationSample/HomeRealmSTS/STS.svc/mex'/>  
        </message>  
      </security>  
   </binding>  

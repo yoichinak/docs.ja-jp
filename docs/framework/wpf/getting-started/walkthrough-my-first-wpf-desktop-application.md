@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 ms.topic: tutorial
 ms.custom: mvc,vs-dotnet
-ms.openlocfilehash: 65b6fe31e86380162e90820c2cf118a9d1b96b4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: facb9ebebd9ce1904886a946277185ac2c2e4bc4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186582"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463922"
 ---
 # <a name="tutorial-create-your-first-wpf-application-in-visual-studio-2019"></a>チュートリアル: Visual Studio 2019 で最初の WPF アプリケーションを作成する
 
-この記事では、WPF アプリケーションの大部分に共通する要素を含む Windows プレゼンテーション ファンデーション (WPF) デスクトップ アプリケーションを開発する方法を示します。コントロール、レイアウト、データ バインディング、およびスタイル。 アプリケーションを開発するには、Visual Studio を使用します。
+この記事では、WPF アプリケーションの大部分に共通する要素を含む Windows プレゼンテーション ファンデーション (WPF) デスクトップ アプリケーションを開発する方法を示します。 アプリケーションを開発するには、Visual Studio を使用します。
 
 このチュートリアルでは、以下の内容を学習します。
 > [!div class="checklist"]
@@ -40,7 +40,7 @@ ms.locfileid: "79186582"
 >
 > このページの上部にある言語セレクタを使用して、サンプル コードのコード言語を C# と Visual Basic の間で切り替えることができます。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - **NET デスクトップ開発**ワークロードがインストールされた[Visual Studio 2019。](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)
 
@@ -293,11 +293,11 @@ ms.locfileid: "79186582"
 
 1. で*`ExpenseItHome.xaml`*、固定<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A><xref:System.Windows.Controls.ColumnDefinition.Width%2A>の 230 ピクセルの別の列をに追加します。
 
-    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
+    [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewColumn)]
 
 2. に別の行を<xref:System.Windows.Controls.Grid.RowDefinitions%2A>追加し、合計 4 行を指定します。
 
-    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=57-62)]
+    [!code-xaml[ExpenseIt#11b](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=2#NewRows)]
 
 3. 3 つのコントロール ([境界線]、[リスト<xref:System.Windows.Controls.Grid.Column%2A?displayProperty=nameWithType>ボックス]、および [ボタン]) のそれぞれでプロパティを 1 に設定して、コントロールを 2 番目の列に移動します。
 
@@ -471,8 +471,8 @@ UI の同じ型のすべての要素で、さまざまな要素の外観が同�
 > [!NOTE]
 > このサンプルでは、WPF の特定の機能を示し、セキュリティ、ローカライズ、アクセシビリティなどのベスト プラクティスに従うわけではありません。 WPF と .NET アプリ開発のベスト プラクティスの包括的なカバレッジについては、次のトピックを参照してください。
 >
-> - [アクセシビリティ](../../ui-automation/accessibility-best-practices.md)
-> - [セキュリティ](../security-wpf.md)
+> - [ユーザー補助](../../ui-automation/accessibility-best-practices.md)
+> - [Security](../security-wpf.md)
 > - [WPF のグローバリゼーションとローカライズ](../advanced/wpf-globalization-and-localization-overview.md)
 > - [WPF のパフォーマンス](../advanced/optimizing-wpf-application-performance.md)
 

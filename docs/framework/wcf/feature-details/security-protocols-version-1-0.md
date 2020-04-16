@@ -2,12 +2,12 @@
 title: セキュリティ プロトコル バージョン 1.0
 ms.date: 03/30/2017
 ms.assetid: ee3402d2-1076-410b-a3cb-fae0372bd7af
-ms.openlocfilehash: 2014e1f6f8fefa89ed44bd820c3712617ff51470
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b86d870350d8728134cd2b42bbeb232183535bc
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184519"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463806"
 ---
 # <a name="security-protocols-version-10"></a>セキュリティ プロトコル バージョン 1.0
 Web サービス セキュリティ プロトコルには、既存のエンタープライズ メッセージング セキュリティのあらゆる要件に対応する Web サービス セキュリティ機構が用意されています。 このセクションでは、次の Web サービス セキュリティ プロトコルの Windows 通信財団<xref:System.ServiceModel.Channels.SecurityBindingElement>(WCF) バージョン 1.0 の詳細 (で実装) について説明します。  
@@ -62,7 +62,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
   
  WCF では WS-SecureConversation を利用して、セキュリティで保護されたセッションのサポートを提供し、アプリケーション間の複数メッセージ交換を保護します。  実装の詳細については、後述の「セキュリティで保護されたセッション」を参照してください。  
   
- 認証モードに加えて、WCF は、ほとんどのメッセージ セキュリティ ベースの認証モードに適用される共通の保護メカニズムを制御するための設定を提供します。、および署名の確認。  
+ WCF では、認証モードに加えて、ほとんどのメッセージ セキュリティ ベースの認証モードに適用される共通の保護メカニズムを制御するための設定が用意されています。  
   
  このドキュメントでは、以下のプレフィックスと名前空間を使用します。  
   
@@ -250,7 +250,7 @@ sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeTok
   <wsu:Timestamp u:Id="_0">  
   ...  
   </wsu:Timestamp>  
-  <wsse:UsernameToken ... >  
+  <wsse:UsernameToken>  
   ...  
   </wsse:UsernameToken>  
 </wsse:Security>  
@@ -437,7 +437,7 @@ Namespace='http://www.w3.org/2005/08/addressing' />
   <wsu:Timestamp>  
   ...  
   </wsu:Timestamp>  
-  <saml:Assertion ...>  
+  <saml:Assertion>  
   ...  
   </saml:Assertion>  
   <ds:Signature>  
@@ -1856,7 +1856,7 @@ http://schemas.xmlsoap.org/ws/2005/02/trust/SymmetricKey
         <wsp:Policy>  
           <sp:ProtectionToken>  
             <wsp:Policy>  
-              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient' />  
+              <mssp:SslContextToken sp:IncludeToken='http://schemas.xmlsoap.org/ws/2005/07/securitypolicy/IncludeToken/AlwaysToRecipient'>  
                 <wsp:Policy>  
                   <sp:RequireDerivedKeys />
                 </wsp:Policy>  

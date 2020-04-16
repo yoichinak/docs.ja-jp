@@ -2,12 +2,12 @@
 title: クライアント構成
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: ff82f56639ec451c04624d22fff0bcb03f46d946
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 141b7f7fc04f98f267ce520544fb89451beac7b6
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185371"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463866"
 ---
 # <a name="client-configuration"></a>クライアント構成
 Windows 通信基盤 (WCF) クライアント構成を使用して、クライアントがサービス エンドポイントへの接続に使用するクライアント エンドポイントの "ABC" プロパティであるアドレス、バインディング、動作、およびコントラクトを指定できます。 クライアント>要素には[\<、エンドポイント>](../../configure-apps/file-schema/wcf/endpoint-of-client.md)要素があり、その属性はエンドポイントの AFC を構成するために使用されます。 [ \<](../../configure-apps/file-schema/wcf/client.md) これらの属性については、「[エンドポイントの構成」](#configuring-endpoints)セクションで説明します。  
@@ -41,7 +41,7 @@ Windows 通信基盤 (WCF) クライアント構成を使用して、クライ�
               <servicePrincipalName value="host/localhost" />  
             </identity>  
           </endpoint>  
-// Add another endpoint by adding another <endpoint> element.  
+            <!-- Add another endpoint by adding another <endpoint> element. -->
           <endpoint  
             name="endpoint2">  
            //Configure another endpoint here.  
@@ -62,10 +62,10 @@ Windows 通信基盤 (WCF) クライアント構成を使用して、クライ�
           </security>  
         </binding>  
         <binding name="Another Binding"  
-        //Configure this binding here.  
+          <!-- Configure this binding here. -->  
         </binding>  
           </wsHttpBinding>  
-        </bindings>  
+     </bindings>  
   
 //The behavior section references by the behaviorConfiguration endpoint attribute.  
         <behaviors>  
@@ -95,5 +95,5 @@ Windows 通信基盤 (WCF) クライアント構成を使用して、クライ�
   
 ## <a name="see-also"></a>関連項目
 
-- [エンドポイント : アドレス、バインディング、およびコントラクト](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [エンドポイント:アドレス、バインディング、およびコントラクト](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [クライアントの動作の構成](../../../../docs/framework/wcf/configuring-client-behaviors.md)

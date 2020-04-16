@@ -2,12 +2,12 @@
 title: '方法: WorkflowServiceHost を使用して追跡を構成する'
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: 962dfda9fc5780cc3ac7211464bb3a9be8b7fa90
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3f78b77849d6da7dfff3bdcba90bb4d5200186a7
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185070"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81464158"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用して追跡を構成する
 このトピックでは、[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] でホストされている <xref:System.ServiceModel.Activities.WorkflowServiceHost> ワークフロー サービスの追跡を構成する方法について説明します。 これは、Web.config ファイルにサービスの動作を指定することによって指定します。  
@@ -23,7 +23,7 @@ ms.locfileid: "79185070"
            <etwTracking profileName="Sample Tracking Profile" />  
          </behavior>
        </serviceBehaviors>  
-    <behaviors>  
+    </behaviors>  
     ```  
   
     > [!NOTE]
