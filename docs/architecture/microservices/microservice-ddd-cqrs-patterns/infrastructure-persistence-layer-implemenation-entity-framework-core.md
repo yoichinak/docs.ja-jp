@@ -2,12 +2,12 @@
 title: Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 description: コンテナー化された .NET アプリケーション向け .NET マイクロサービス アーキテクチャ | Entity Framework Core を使用してインフラストラクチャの永続レイヤーを実装する方法の詳細を確認します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 2d28d9246be3e102625ed5bb67ee1ccede03c942
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 7ab3be0d6a5affda478f7ec8f6c356571e304759
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523321"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805482"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 
@@ -78,7 +78,7 @@ public class Order : Entity
 }
 ```
 
-`OrderItems` プロパティには `IReadOnlyCollection<OrderItem>` を利用して読み取り専用アクセスのみが可能となることに注意してください。 この型は読み取り専用であり、定期的な外部更新から守られます。
+`OrderItems` プロパティには `IReadOnlyCollection<OrderItem>` を使用した読み取り専用アクセスのみが可能です。 この型は読み取り専用であり、定期的な外部更新から守られます。
 
 EF Core では、ドメイン モデルを "汚染する" ことなく物理データベースにマッピングできます。 マッピング アクションは永続レイヤーで行われるため、純粋な .NET POCO コードになります。 そのマッピング アクションでは、フィールドとデータベースのマッピングを構成する必要があります。 `OrderingContext` からの `OnModelCreating` メソッドと `OrderEntityTypeConfiguration` クラスが出てくる次の例では、`SetPropertyAccessMode` を呼び出すことで、そのフィールドを介して `OrderItems` プロパティにアクセスするように EF Core に伝えます。
 
@@ -88,7 +88,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -154,7 +154,7 @@ namespace Microsoft.eShopOnContainers.Services.Ordering.Infrastructure.Repositor
 }
 ```
 
-IBuyerRepository インターフェイスは、コントラクトとしてのドメイン モデル レイヤーから取得されることに注意してください。 ただし、リポジトリ実装は永続化とインフラストラクチャのレイヤーで行われます。
+`IBuyerRepository` インターフェイスは、コントラクトとしてのドメイン モデル レイヤーから取得されます。 ただし、リポジトリ実装は永続化とインフラストラクチャのレイヤーで行われます。
 
 EF DbContext は、依存関係の挿入により、コンストラクター経由で取得されます。 IoC コンテナー (`services.AddDbContext<>` で明示的に設定することもできます) にある既定の有効期間 (`ServiceLifetime.Scoped`) に起因し、同じ HTTP 要求範囲内の複数のリポジトリ間で強要されます。
 
@@ -168,9 +168,9 @@ eShopOnContainers でマイクロサービスを注文する手法も CQS/CQRS �
 
 ### <a name="using-a-custom-repository-versus-using-ef-dbcontext-directly"></a>カスタム リポジトリの使用と EF DbContext の直接使用の違い
 
-Entity Framework DbContext クラスは Unit of Work と Repository のパターンに基づきます。ASP.NET Core MVC コントローラーなど、コードから直接使用できます。 これで、eShopOnContainers の CRUD カタログ マイクロサービスのように、最も単純なコードを作成できます。 できるだけ単純なコードが必要であれば、DbContext クラスを直接使用することをお勧めします。多くの開発者がそうしています。
+Entity Framework DbContext クラスは Unit of Work と Repository のパターンに基づきます。ASP.NET Core MVC コントローラーなど、コードから直接使用できます。 Unit of Work と Repository のパターンにより、eShopOnContainers の CRUD カタログ マイクロサービスのように、最も単純なコードを作成できます。 できるだけ単純なコードが必要であれば、DbContext クラスを直接使用することをお勧めします。多くの開発者がそうしています。
 
-ただし、カスタム リポジトリを実装するのであれば、より複雑なマイクロサービスやアプリケーションを実装するとき、いくつかの利点があります。 Unit of Work と Repository のパターンは、インフラストラクチャの永続レイヤーのカプセル化を意図しています。アプリケーションとドメイン モデルのレイヤーから切り離されます。 これらのパターンを実装すると、データベースへのアクセスをシミュレートするモック リポジトリの使用が容易になります。
+ただし、カスタム リポジトリを実装するのであれば、より複雑なマイクロサービスやアプリケーションを実装するとき、いくつかの利点があります。 Unit of Work と Repository のパターンは、インフラストラクチャの永続レイヤーのカプセル化を意図しているため、アプリケーションとドメイン モデルのレイヤーから切り離されます。 これらのパターンを実装すると、データベースへのアクセスをシミュレートするモック リポジトリの使用が容易になります。
 
 図 7-18 では、リポジトリを使用しない (EF DbContext を直接使用する) 場合とリポジトリのモック (疑似) を簡単にするリポジトリを使用する場合の違いを確認できます。
 
@@ -228,7 +228,7 @@ builder.RegisterType<OrderRepository>()
     .InstancePerLifetimeScope();
 ```
 
-DbContext の有効期間が範囲 (InstancePerLifetimeScope) として設定されているとき (DBContext の既定の有効期間)、リポジトリに単一の有効期間を使用すると、コンカレンシー関連で重大な問題が発生する可能性があります。
+DbContext の有効期間が範囲 (InstancePerLifetimeScope) として設定されているとき (DBContext の既定の有効期間)、リポジトリにシングルトンの有効期間を使用すると、コンカレンシー関連で重大な問題が発生する可能性があります。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
@@ -243,7 +243,7 @@ DbContext の有効期間が範囲 (InstancePerLifetimeScope) として設定さ
 
 ## <a name="table-mapping"></a>テーブル マッピング
 
-テーブル マッピングでは、データベースに問い合わせたり、保存したりするテーブル データが識別されます。 先に、ドメイン エンティティ (製品や注文のドメインなど) を利用し、関連データベース スキーマを生成する方法を確認しました。 EF は、*規則*という概念を中心に作られています。 規則は “テーブルの名前は何になるのか?” または “主キーはどのようなプロパティか?” のような質問に対処するものです。 規則は通常、慣例的な名前に基づきます。たとえば、主キーであれば、ID で終わるプロパティが一般的に与えられます。
+テーブル マッピングでは、データベースに問い合わせたり、保存したりするテーブル データが識別されます。 先に、ドメイン エンティティ (製品や注文のドメインなど) を利用し、関連データベース スキーマを生成する方法を確認しました。 EF は、*規則*という概念を中心に作られています。 規則は "テーブルの名前は何になるのか?" または "主キーはどのようなプロパティか?" のような質問に対処するものです。 規則は通常、慣例的な名前に基づきます。 たとえば、主キーであれば、`Id` で終わるプロパティが一般的に与えられます。
 
 規則では、派生コンテキストでエンティティを公開する `DbSet<TEntity>` プロパティと同じ名前を持つテーブルにマッピングされるように各エンティティが設定されます。 所与のエンティティに `DbSet<TEntity>` 値が指定されない場合、クラス名が使用されます。
 
@@ -265,7 +265,7 @@ protected override void OnModelCreating(ModelBuilder modelBuilder)
 {
    // ...
    modelBuilder.ApplyConfiguration(new OrderEntityTypeConfiguration());
-   // Other entities’ configuration ...
+   // Other entities' configuration ...
 }
 
 // At OrderEntityTypeConfiguration.cs from eShopOnContainers
@@ -422,7 +422,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-次の仕様では、買い物かごの ID か買い物かごが属する購入者の ID が指定されると、買い物かごエンティティが 1 つ読み込まれます。 買い物かごの項目コレクションを[集中的に読み込み](https://docs.microsoft.com/ef/core/querying/related-data)ます。
+次の仕様では、買い物かごの ID か買い物かごが属する購入者の ID が指定されると、買い物かごエンティティが 1 つ読み込まれます。 買い物かごの `Items` コレクションが[集中的に読み込まれます](/ef/core/querying/related-data)。
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -470,7 +470,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
 
 この仕様はフィルタリング ロジックをカプセル化するだけでなく、データを入力するプロパティなど、返すデータのシェイプも指定できます。
 
-リポジトリから `IQueryable` を返すことはお勧めできませんが、リポジトリ内で使用して結果の集まりを作ることには何の問題もありません。 上の List メソッドでこの手法の使用を確認できます。中間の `IQueryable` 式を利用してクエリのインクルード リストを作成し、それから最後の行にある仕様の基準に合わせてクエリが実行されています。
+リポジトリから `IQueryable` を返すことはお勧めできませんが、リポジトリ内で使用して結果の集まりを作ることには何の問題もありません。 上の List メソッドでこの手法の使用を確認できます。中間の `IQueryable` 式を利用してクエリのインクルード リストが作成され、それから最後の行にある仕様の基準に合わせてクエリが実行されています。
 
 ### <a name="additional-resources"></a>その他の技術情報
 

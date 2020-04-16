@@ -2,12 +2,12 @@
 title: サーキット ブレーカー パターンの実装
 description: サーキット ブレーカー パターンを HTTP 再試行の補助システムとして実装する方法について説明します。
 ms.date: 03/03/2020
-ms.openlocfilehash: a79c6fcca1e29f3c30d697cb369060d59a72c121
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bebe0b4a622db928175f78f8d3e303d3d7adf170
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847246"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988886"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>サーキット ブレーカー パターンを実装する
 
@@ -132,7 +132,7 @@ public class CartController : Controller
 }
 ```
 
-まとめます。 再試行ポリシーは、HTTP 要求の実行を数回試行し、HTTP エラーが発生します。 再試行回数がサーキット ブレーカー ポリシーに設定された最大回数に達すると (この場合は 5 回)、アプリケーションは BrokenCircuitException をスローします。 結果として、図 8-6 に示されているようなメッセージが表示されます。
+次に概要を示します。 再試行ポリシーは、HTTP 要求の実行を数回試行し、HTTP エラーが発生します。 再試行回数がサーキット ブレーカー ポリシーに設定された最大回数に達すると (この場合は 5 回)、アプリケーションは BrokenCircuitException をスローします。 結果として、図 8-6 に示されているようなメッセージが表示されます。
 
 ![バスケット サービスが機能しないというエラーを含む MVC Web アプリのスクリーンショット。](./media/implement-circuit-breaker-pattern/basket-service-inoperative.png)
 

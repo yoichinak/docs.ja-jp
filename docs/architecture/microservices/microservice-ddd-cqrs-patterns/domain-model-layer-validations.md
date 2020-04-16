@@ -2,12 +2,12 @@
 title: ドメイン モデル レイヤーでの検証の設計
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | ドメイン モデル検証の主要な概念を理解する。
 ms.date: 10/08/2018
-ms.openlocfilehash: 98ccc5df84c9f6f402ecbee83b077c806d6a76fc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d2efc5f3b3267c4573409952791c6e883a01aae2
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75899664"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988506"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証を設計する
 
@@ -63,7 +63,7 @@ DbContext の SaveChanges メソッドをオーバーライドすれば、デー
 
 `IValidatableObject` エンティティを検証するための実装のサンプルについては、[GitHub 上のこちらのコメント](https://github.com/dotnet/efcore/issues/3680#issuecomment-155502539)を参照してください。 そのサンプルでは属性ベースの検証は行われていません。その検証については、同じオーバーライド内でリフレクションを使用することで容易に実装できるはずです。
 
-ただし、DDD の観点から、ドメイン モデルはエンティティの動作メソッド内の例外を使用して、または検証ルールを強制する仕様パターンと通知パターンを実装することで、リーンに保つことをお勧めします。
+ただし、DDD の観点から、ドメイン モデルはエンティティの動作メソッド内の例外を使用して、または検証規則を強制する仕様パターンと通知パターンを実装することで、リーンに保つことをお勧めします。
 
 UI 層内でモデルの検証を許可するために、入力を受け取る ViewModel クラス内 (ドメイン エンティティではなく) のアプリケーション層でデータ注釈を使用するのは合理的です。 ただし、ドメイン モデル内での検証の実行時にはこれを行わないでください。
 

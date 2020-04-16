@@ -4,12 +4,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: 3d97ab2b3f53179cb184f2ad3944ea29ff5566a2
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 7061b6c1988da9f6dfac115ee555a914531df863
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345124"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805929"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -25,9 +25,9 @@ ms.locfileid: "80345124"
 
 ## <a name="example"></a>例
 
-この例では、[.NET Core](../../../core/index.yml) コマンド ライン ツールを使用します。 .NET Core コマンド ライン ツールに慣れていない場合は、この[概要のトピック](../../../core/tutorials/cli-create-console-app.md)を参照してください。
+この例では、[.NET Core](../../../core/index.yml) コマンドライン ツールを使用します。 .NET Core コマンドライン ツールに慣れていない場合は、この[概要の記事](../../../core/tutorials/cli-create-console-app.md)を参照してください。
 
-`Main`program.cs*の* メソッドを次のように変更します。
+*program.cs* の `Main` メソッドを次のように変更します。
 
  [!code-csharp[csProgGuideMain#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#14)]
 
@@ -53,7 +53,7 @@ if ($LastExitCode -eq 0) {
 Write-Host "Return value = " $LastExitCode
 ```
 
-## <a name="sample-output"></a>サンプル出力
+## <a name="sample-output"></a>出力例
 
 ```txt
 Execution succeeded
@@ -83,7 +83,7 @@ private static async Task<int> AsyncConsoleWork()
 
 新しい構文を使用すると、コンパイラから常に正しいコードが生成されるという利点があります。
 
-## <a name="compiler-generated-code"></a>コンパイラから生成されるコード
+## <a name="compiler-generated-code"></a>コンパイラで生成されたコード
 
 アプリケーションのエントリ ポイントから `Task` または `Task<int>` が返されると、コンパイラによって、アプリケーション コードで宣言されたエントリ ポイント メソッドを呼び出す新しいエントリ ポイントが生成されます。 このエントリ ポイント名が `$GeneratedMain` だとすると、これらのエントリ ポイントについて次のコードが生成されます。
 
@@ -93,11 +93,11 @@ private static async Task<int> AsyncConsoleWork()
 - `static Task<int> Main(string[])` の結果、`private static int $GeneratedMain(string[] args) => Main(args).GetAwaiter().GetResult();` と同等のコードが生成されます。
 
 > [!NOTE]
->この例の `async` メソッドで `Main` 修飾子を使用した場合、同じコードが生成されます。
+>この例の `Main` メソッドで `async` 修飾子を使用した場合、同じコードが生成されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [C# リファレンス](../index.md)
 - [Main() とコマンドライン引数](index.md)
 - [コマンド ライン引数を表示する方法](./how-to-display-command-line-arguments.md)

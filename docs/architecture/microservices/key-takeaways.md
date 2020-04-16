@@ -2,12 +2,12 @@
 title: 重要な習得事項
 description: コンテナー化された .NET アプリケーションのための .NET マイクロサービス アーキテクチャに関するガイド/電子書籍の重要なポイントを取り上げ、マイクロサービス アーキテクチャを使用する際に発生する高レベルの問題の概要 (長所と短所、設計と開発の DDD パターン、回復性、セキュリティ、オーケストレーターの使用など) を説明します。
 ms.date: 10/19/2018
-ms.openlocfilehash: 3b8b7be9b3903c64221cba7c6abdb1e38f5d944f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e793a76fa59d6c131422480071d85ab3f18102c
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "68674459"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988779"
 ---
 # <a name="key-takeaways"></a>重要な習得事項
 
@@ -36,4 +36,4 @@ ms.locfileid: "68674459"
 **オーケストレーター。** Azure Kubernetes Service や Azure Service Fabric などのコンテナー ベースのオーケストレーターは、重要なマイクロサービスおよびコンテナーベースのアプリケーションの主要部分を占めています。 このようなアプリケーションは非常に複雑でスケーラビリティのニーズがあり、常に進化し続けています。 このガイドでは、オーケストレーターの概要と、マイクロサービスベースおよびコンテナーベースのソリューションでのその役割を紹介しました。 アプリケーションで複雑なコンテナー化されたアプリケーションに移行する必要がある場合は、オーケストレーターについて学習するための追加のリソースを探すと役に立ちます。
 
 >[!div class="step-by-step"]
->[[戻る]](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)
+>[前へ](secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md)

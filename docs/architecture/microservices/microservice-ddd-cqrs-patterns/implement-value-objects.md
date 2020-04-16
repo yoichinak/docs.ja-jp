@@ -2,12 +2,12 @@
 title: 値オブジェクトの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 新しい Entity Framework 機能を使用し、値オブジェクトを実装する方法の詳細とオプション。
 ms.date: 01/30/2020
-ms.openlocfilehash: 919b23f7c1a0cd0aec8c4417f3af98469a0743dd
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a8a92a8dabcf09654ecd0e5dea2a7df25d7abf7
+ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249423"
+ms.lasthandoff: 04/07/2020
+ms.locfileid: "80805740"
 ---
 # <a name="implement-value-objects"></a>値オブジェクトを実装する
 
@@ -133,7 +133,7 @@ public class Address : ValueObject
 
 Entity Framework (EF) で使用するクラスに ID フィールドを置かないことは、EF Core 2.0 までは不可能でした。これにより、ID のない値オブジェクトの実装が大幅に改善されます。 これについては次のセクションで説明します。
 
-不変である値オブジェクトは読み取り専用 (つまり get-only プロパティ) にすべきであるという意見が出るかもしれませんが、そのとおりです。 しかしながら、値オブジェクトは通常、シリアル化/逆シリアル化されてメッセージ キューを通過します。読み取り専用であれば、デシリアライザーによる値の割り当てが停止します。そのため、十分に実用的な範囲で読み取り専用になるプライベート セットとして残します。
+不変である値オブジェクトは読み取り専用 (つまり get-only プロパティ) にすべきであるという意見が出るかもしれませんが、そのとおりです。 しかしながら、値オブジェクトは通常、シリアル化および逆シリアル化されてメッセージ キューを通過します。読み取り専用であれば、デシリアライザーによる値の割り当てが停止します。そのため、十分に実用的な範囲で読み取り専用になる `private set` として残します。
 
 ## <a name="how-to-persist-value-objects-in-the-database-with-ef-core-20-and-later"></a>EF Core 2.0 以降でデータベース内の値オブジェクトを永続化する方法
 
@@ -186,7 +186,7 @@ DDD の標準の値オブジェクト パターンと EF Core の所有エンテ
 
 EF Core の規約で所有型が検出されることはないので、明示的に宣言する必要がある点に注意してください。
 
-eShopOnContainers では、OnModelCreating() メソッド内の OrderingContext.cs に複数のインフラストラクチャ構成が適用されています。 そのうちの 1 つが Order エンティティに関連しています。
+eShopOnContainers では、`OnModelCreating()` メソッド内の OrderingContext.cs ファイルに複数のインフラストラクチャ構成が適用されています。 そのうちの 1 つが Order エンティティに関連しています。
 
 ```csharp
 // Part of the OrderingContext.cs class at the Ordering.Infrastructure project
@@ -281,7 +281,7 @@ public class Address
 
 - 同じ所有者エンティティの同じ CLR 型を、個別のナビゲーション プロパティを使用して異なる所有型としてマップすることができます。
 
-- テーブル分割は規約で設定されますが、ToTable を使用して所有型を別のテーブルにマップすることでオプト アウトすることができます。
+- テーブル分割は規約で設定されますが、ToTable を使用して所有型を別のテーブルにマップすることでオプトアウトすることができます。
 
 - Eager の読み込みは、所有型に対して自動的に実行されます。つまり、クエリで `.Include()` を呼び出す必要はありません。
 

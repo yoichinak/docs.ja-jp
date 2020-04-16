@@ -2,12 +2,12 @@
 title: Windows フォームに関する破壊的変更
 description: .NET Core 用の Windows フォームにおける破壊的変更の一覧を示します。
 ms.date: 01/08/2020
-ms.openlocfilehash: 7fba78382d011bc9d489924fa185a44e598c5a76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25c568a8a0092a9c4874419c64c7dcebea4dce9e
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398011"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888131"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows フォームでの破壊的変更
 
@@ -15,21 +15,30 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 
 このページでは、次の破壊的変更について説明します。
 
-- [削除されたコントロール](#removed-controls)
-- [ヒントが表示されていると CellFormatting が発生しない](#cellformatting-event-not-raised-if-tooltip-is-shown)
-- [Control.DefaultFont を Segoe UI 9 pt に変更](#default-control-font-changed-to-segoe-ui-9-pt)
-- [FolderBrowserDialog の最新化](#modernization-of-the-folderbrowserdialog)
-- [一部の Windows フォーム型から SerializableAttribute を削除](#serializableattribute-removed-from-some-windows-forms-types)
-- [AllowUpdateChildControlIndexForTabControls 互換性スイッチがサポートされない](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported)
-- [DomainUpDown.UseLegacyScrolling 互換性スイッチがサポートされない](#domainupdownuselegacyscrolling-compatibility-switch-not-supported)
-- [DoNotLoadLatestRichEditControl 互換性スイッチがサポートされない](#donotloadlatestricheditcontrol-compatibility-switch-not-supported)
-- [DoNotSupportSelectAllShortcutInMultilineTextBox 互換性スイッチがサポートされない](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported)
-- [DontSupportReentrantFilterMessage 互換性スイッチがサポートされない](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported)
-- [EnableVisualStyleValidation 互換性スイッチがサポートされない](#enablevisualstylevalidation-compatibility-switch-not-supported)
-- [UseLegacyContextMenuStripSourceControlValue 互換性スイッチがサポートされない](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported)
-- [UseLegacyImages 互換性スイッチがサポートされない](#uselegacyimages-compatibility-switch-not-supported)
-- [AccessibleObject.RuntimeIDFirstItem のアクセスに対する変更](#change-of-access-for-accessibleobjectruntimeidfirstitem)
-- [Windows フォームからの重複する API の削除](#duplicated-apis-removed-from-windows-forms)
+| 互換性に影響する変更点 | 導入されたバージョン |
+| - | :-: |
+| [WinForms API で ArgumentNullException がスローされる](#winforms-apis-now-throw-argumentnullexception) | 5.0 |
+| [削除されたコントロール](#removed-controls) | 3.1 |
+| [ヒントが表示されていると CellFormatting が発生しない](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
+| [Control.DefaultFont を Segoe UI 9 pt に変更](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
+| [FolderBrowserDialog の最新化](#modernization-of-the-folderbrowserdialog) | 3.0 |
+| [一部の Windows フォーム型から SerializableAttribute を削除](#serializableattribute-removed-from-some-windows-forms-types) | 3.0 |
+| [AllowUpdateChildControlIndexForTabControls 互換性スイッチがサポートされない](#allowupdatechildcontrolindexfortabcontrols-compatibility-switch-not-supported) | 3.0 |
+| [DomainUpDown.UseLegacyScrolling 互換性スイッチがサポートされない](#domainupdownuselegacyscrolling-compatibility-switch-not-supported) | 3.0 |
+| [DoNotLoadLatestRichEditControl 互換性スイッチがサポートされない](#donotloadlatestricheditcontrol-compatibility-switch-not-supported) | 3.0 |
+| [DoNotSupportSelectAllShortcutInMultilineTextBox 互換性スイッチがサポートされない](#donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported) | 3.0 |
+| [DontSupportReentrantFilterMessage 互換性スイッチがサポートされない](#dontsupportreentrantfiltermessage-compatibility-switch-not-supported) | 3.0 |
+| [EnableVisualStyleValidation 互換性スイッチがサポートされない](#enablevisualstylevalidation-compatibility-switch-not-supported) | 3.0 |
+| [UseLegacyContextMenuStripSourceControlValue 互換性スイッチがサポートされない](#uselegacycontextmenustripsourcecontrolvalue-compatibility-switch-not-supported) | 3.0 |
+| [UseLegacyImages 互換性スイッチがサポートされない](#uselegacyimages-compatibility-switch-not-supported) | 3.0 |
+| [AccessibleObject.RuntimeIDFirstItem のアクセスに対する変更](#change-of-access-for-accessibleobjectruntimeidfirstitem) | 3.0 |
+| [Windows フォームからの重複する API の削除](#duplicated-apis-removed-from-windows-forms) | 3.0 |
+
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
+
+***
 
 ## <a name="net-core-31"></a>.NET Core 3.1
 
@@ -95,6 +104,6 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 
 ***
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Windows フォーム アプリを .NET Core に移植する](../porting/winforms.md)

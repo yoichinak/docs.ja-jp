@@ -2,12 +2,12 @@
 title: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
 description: Web API アプリケーション レイヤーでの依存関係の挿入、メディエーター パターン、およびそれらの実装の詳細について理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: a88f3bfd11ea06df085ca82ed7265cb37006fc31
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77502444"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988467"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 
@@ -183,7 +183,7 @@ Autofac には、[アセンブリをスキャンし、命名規則で型を登�
 
 ![クライアントからデータベースへの上位レベルのデータ フローを示す図。](./media/microservice-application-layer-implementation-web-api/high-level-writes-side.png)
 
-**図 7-24**. コマンド (CQRS パターンのトランザクション側) の概要
+**図 7-24**. コマンド (CQRS パターンの "トランザクション側") の概要
 
 図 7-24 では、UI アプリは API 経由で `CommandHandler` にコマンドを送信します。これは、ドメイン モデルとインフラストラクチャに依存し、データベースが更新されます。
 

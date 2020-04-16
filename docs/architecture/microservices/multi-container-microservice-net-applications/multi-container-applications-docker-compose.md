@@ -2,12 +2,12 @@
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
 description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
 ms.date: 01/30/2020
-ms.openlocfilehash: 9143801fbbffbdc5b795a232b3333edf71f05c7c
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 029fad8bb912457872dd5817a2f76aed57dc53c6
+ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523651"
+ms.lasthandoff: 04/08/2020
+ms.locfileid: "80888229"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 
@@ -177,7 +177,7 @@ Compose を使用してリモート Docker エンジンに展開することも�
 
 既定では、Compose は docker-compose.yml と省略可能な docker-compose.override.yml の 2 つのファイルを読み取ります。 図 6-11 に示すように、Visual Studio を使用している場合に Docker サポートを有効にすると、アプリケーションをデバッグするための docker compose.vs.debug.g.yml ファイルも Visual Studio によって追加で作成されます。このファイルは、メイン ソリューション フォルダー内の obj\\Docker\\ フォルダーで確認できます。
 
-![docker compose プロジェクト内のファイルのスクリーンショット。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
+![docker compose プロジェクト内のファイル。](./media/multi-container-applications-docker-compose/docker-compose-file-visual-studio.png)
 
 **図 6-11**。 Visual Studio 2019 の docker-compose ファイル
 
@@ -201,7 +201,7 @@ docker-compose.override.yml ファイルには、その名前が示すように�
 
 **図 6-12**。 基本の docker-compose.yml ファイル内の値をオーバーライドする複数の docker-compose ファイル
 
-複数の docker-compose*.yml ファイルを組み合わせて、さまざまな環境を処理することができます。 基本の docker-compose.yml ファイルから開始します。 この基本ファイルには、環境に合わせて変更されない基本構成または静的な構成設定が含まれている必要があります。 たとえば、eShopOnContainers には、基本ファイルとして次の docker-compose.yml ファイル (サービスを減らして簡略化したもの) があります。
+複数の docker-compose*.yml ファイルを組み合わせて、さまざまな環境を処理することができます。 基本の docker-compose.yml ファイルから開始します。 この基本ファイルには、環境に合わせて変更されない基本構成または静的な構成設定が含まれています。 たとえば、eShopOnContainers アプリには、基本ファイルとして次の docker-compose.yml ファイル (サービスを減らして簡略化したもの) があります。
 
 ```yml
 #docker-compose.yml (Base)
@@ -448,22 +448,22 @@ ENTRYPOINT ["dotnet", "run"]
 
 このような Dockerfile は機能します。 ただし、イメージ、とりわけ運用イメージは大幅に最適化できます。
 
-コンテナーとマイクロサービス モデルでは、常にコンテナーを起動します。 コンテナーは破棄可能なため、コンテナーの一般的な使用方法では、スリープ状態のコンテナーを再起動しません。 オーケストレーター (Kubernetes や Azure Service Fabric など) では、イメージの新しいインスタンスが作成されるだけです。 これは、インスタンス化のプロセスを高速化するため、アプリケーションのビルド時に、アプリケーションをプリコンパイルして最適化する必要があることを意味します。 コンテナーは起動すると、実行できる状態になります。 .NET Core と Docker に関する多くのブログ記事で見られるような、dotnet CLI から `dotnet restore` コマンドおよび `dotnet build` コマンドを使用した、実行時の復元およびコンパイルは行わないでください。
+コンテナーとマイクロサービス モデルでは、常にコンテナーを起動します。 コンテナーは破棄可能なため、コンテナーの一般的な使用方法では、スリープ状態のコンテナーを再起動しません。 オーケストレーター (Kubernetes や Azure Service Fabric など) では、イメージの新しいインスタンスが作成されるだけです。 これは、インスタンス化のプロセスを高速化するため、アプリケーションのビルド時に、アプリケーションをプリコンパイルして最適化する必要があることを意味します。 コンテナーは起動すると、実行できる状態になります。 .NET Core と Docker に関するブログ記事で説明されているように、`dotnet restore` および `dotnet build` CLI コマンドを使用して実行時に復元およびコンパイルしないでください。
 
 .NET チームは、.NET Core と ASP.NET Core をコンテナー用に最適化されたフレームワークにするための重要な作業を行っています。 .NET Core は、メモリの使用量を抑えた簡易フレームワークというだけではありません。バージョン 2.1 以降、チームでは次の 3 つの主なシナリオに合わせた Docker イメージの最適化に重点を置き、*dotnet/core* にある Docker Hub レジストリに、最適化されたイメージを発行してきました。
 
 1. **開発**: 変更の繰り返しとデバッグを迅速に行う機能が優先され、サイズは 2 番目です。
 
-2. **ビルド:** アプリケーションのコンパイルが優先され、これにはバイナリや、バイナリを最適化するための他の依存関係が含まれています。
+2. **ビルド:** アプリケーションのコンパイルが優先され、イメージにはバイナリや、バイナリを最適化するための他の依存関係が含まれています。
 
 3. **実稼働**: コンテナーを迅速に展開し、開始することに重点が置かれます。そのため、これらのイメージは、バイナリと、アプリケーションを稼働させるために必要なコンテンツに限定されます。
 
-これを実現するために、.NET チームは、次の 4 つの基本的なバリエーションを [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub) に用意しています。
+.NET チームは、次の 4 つの基本的なバリエーションを [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub) に用意しています。
 
 1. **sdk**: 開発シナリオおよびビルド シナリオ向け
 1. **aspnet**: ASP.NET 運用シナリオ向け
 1. **runtime**: .NET 運用シナリオ向け
-1. **runtime-deps**: [自己完結型アプリケーション](../../../core/deploying/index.md#publish-self-contained)の運用シナリオ向け。
+1. **runtime-deps**: [自己完結型アプリケーション](../../../core/deploying/index.md#publish-self-contained)の運用シナリオ向け
 
 迅速に起動するために、ランタイム イメージでも aspnetcore\_urls にポート 80 が自動的に設定され、Ngen を使用してアセンブリのネイティブ イメージ キャッシュが作成されます。
 

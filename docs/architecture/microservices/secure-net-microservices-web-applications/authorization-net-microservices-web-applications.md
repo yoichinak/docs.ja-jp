@@ -3,18 +3,18 @@ title: .NET マイクロサービスと Web アプリケーションでの承認
 description: .NET マイクロサービスと Web アプリケーションのセキュリティ - ASP.NET Core アプリケーションの主な承認オプション (ロールベースとポリシーベース) の概要について説明します。
 author: mjrousos
 ms.date: 01/30/2020
-ms.openlocfilehash: f6b69faceac9a9b4819212cc04f89080f3ddad56
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27936a33ea2bb46cedb9d10ee47a2117e1843e14
+ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77501764"
+ms.lasthandoff: 04/09/2020
+ms.locfileid: "80988207"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>.NET マイクロサービスと Web アプリケーションでの承認について
 
 認証の後に、ASP.NET Core Web API がアクセスを承認する必要があります。 このプロセスによって、サービスが一部の認証ユーザーに API を提供できますが、すべてのユーザーではありません。 [承認](/aspnet/core/security/authorization/introduction)は、ユーザーのロールまたはカスタム ポリシーに基づいて行われ、要求またはその他のヒューリスティックの調査が含まれる場合があります。
 
-次の例に示すように、ASP.NET Core MVC ルートへのアクセス制限は、アクション メソッド (またはすべてのコントローラーのアクションで承認が必要な場合は、コントローラーのクラス) に Authorize 属性を適用するのと同じくらい簡単です。
+次の例に示すように、ASP.NET Core MVC ルートへのアクセス制限は、アクション メソッド (またはすべてのコントローラーのアクションで承認が必要な場合は、コントローラーのクラス) に Authorize 属性を適用する場合と同様に簡単です。
 
 ```csharp
 public class AccountController : Controller
@@ -68,7 +68,7 @@ public ActionResult API1 ()
 
 この例では、API1 を呼び出すために、ユーザーは次の条件を満たす必要があります。
 
-- Adminstrator "*または*" PowerUser ロールであり、"*かつ*"
+- Administrator "*または*" PowerUser ロールであり、"*かつ*"
 
 - RemoteEmployee ロールであり、*かつ*
 
@@ -110,9 +110,9 @@ services.AddAuthorization(options =>
 
 カスタム ポリシーの要件の `AddPolicy` 呼び出しへの登録に加えて、依存関係の挿入 (`services.AddTransient<IAuthorizationHandler, MinimumAgeHandler>()`) を使用してカスタム要件ハンドラーも登録する必要があります。
 
-カスタム承認要件およびユーザーの年齢 (`DateOfBirth` 要求に基づく) をチェックするハンドラーの例については、ASP.NET Core [承認ドキュメント](https://docs.asp.net/en/latest/security/authorization/policies.html)を参照してください。
+カスタム承認要件およびユーザーの年齢 (`DateOfBirth` 要求に基づく) をチェックするハンドラーの例については、ASP.NET Core での[承認のドキュメント](https://docs.asp.net/en/latest/security/authorization/policies.html)を参照してください。
 
-## <a name="additional-resources"></a>その他のリソース
+## <a name="additional-resources"></a>その他の技術情報
 
 - **ASP.NET Core の認証** \
   [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)

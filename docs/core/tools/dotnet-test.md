@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 02/27/2020
-ms.openlocfilehash: a11814f9fdc6326e681a09d7d2654b968014f318
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507309"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121038"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -85,7 +85,7 @@ dotnet test [-h|--help]
 
 - **`l|--logger <LoggerUri/FriendlyName>`**
 
-  テスト結果のロガーを指定します。
+  テスト結果のロガーを指定します。 MSBuild とは異なり、dotnet テストでは省略形は受け入れられません。`-l "console;v=d"` ではなく `-l "console;verbosity=detailed"` を使用してください。
 
 - **`--no-build`**
 
@@ -121,7 +121,7 @@ dotnet test [-h|--help]
 
 - **`-v|--verbosity <LEVEL>`**
 
-  コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
+  コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 既定値は、`minimal` です。 詳細については、「<xref:Microsoft.Build.Framework.LoggerVerbosity>」を参照してください。
 
 - `RunSettings` 引数
 
@@ -149,6 +149,12 @@ dotnet test [-h|--help]
 
   ```dotnetcli
   dotnet test --logger trx
+  ```
+
+- 現在のディレクトリでプロジェクトのテストを実行し、詳細をコンソールに記録します。
+
+  ```dotnetcli
+  dotnet test --logger "console;verbosity=detailed"
   ```
 
 ## <a name="filter-option-details"></a>フィルター オプションの詳細
@@ -192,3 +198,4 @@ dotnet test [-h|--help]
 
 - [フレームワークとターゲット](../../standard/frameworks.md)
 - [.NET Core のランタイム識別子 (RID) のカタログ](../rid-catalog.md)
+- [コマンドラインを使用して runsettings 引数を渡す](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)

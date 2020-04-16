@@ -9,12 +9,12 @@ helpviewer_keywords:
 - casting [C#]
 - converting types [C#]
 ms.assetid: 568df58a-d292-4b55-93ba-601578722878
-ms.openlocfilehash: 252d509617ab5dbc53b282bac52e356396d82fab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ae8f18deff5e96d7e475df8814ad64b38d14d585
+ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711897"
+ms.lasthandoff: 04/11/2020
+ms.locfileid: "81121387"
 ---
 # <a name="casting-and-type-conversions-c-programming-guide"></a>キャストと型変換 (C# プログラミング ガイド)
 
@@ -29,7 +29,7 @@ i = "Hello"; // error CS0029: Cannot implicitly convert type 'string' to 'int'
   
 - **暗黙的な変換**: この変換はタイプ セーフであり、データが失われることはないため、特別な構文は必要ありません。 例としては、小さい整数型から大きい整数型への変換や、派生クラスから基底クラスへの変換が挙げられます。  
   
-- **明示的な変換 (キャスト)** : 明示的な変換には、[キャスト演算子 `()`](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)が必要です。 変換時に情報が失われる可能性がある場合や、その他の理由によって変換が成功しない可能性がある場合には、キャストが必要です。 典型的な例としては、より精度の低い型 (または、より範囲が狭い型) に数値を変換する場合や、基底クラスのインスタンスを派生クラスに変換する場合が挙げられます。  
+- **明示的な変換 (キャスト)** : 明示的な変換には、[キャスト式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)が必要です。 変換時に情報が失われる可能性がある場合や、その他の理由によって変換が成功しない可能性がある場合には、キャストが必要です。 典型的な例としては、より精度の低い型 (または、より範囲が狭い型) に数値を変換する場合や、基底クラスのインスタンスを派生クラスに変換する場合が挙げられます。  
   
 - **ユーザー定義の変換**: ユーザー定義の変換は特殊なメソッドによって実行されます。これを定義することで、基本クラスと派生クラスの関係がないカスタム型間の明示的および暗黙的な変換が可能になります。 詳細については、「[ユーザー定義の変換演算子](../../language-reference/operators/user-defined-conversion-operators.md)」 に関するページを参照してください。  
   
@@ -92,7 +92,7 @@ Giraffe g2 = (Giraffe) a;
 
 - [C# プログラミング ガイド](../index.md)
 - [型](./index.md)
-- [() キャスト演算子](../../language-reference/operators/type-testing-and-cast.md#cast-operator-)
+- [キャスト式](../../language-reference/operators/type-testing-and-cast.md#cast-expression)
 - [ユーザー定義の変換演算子](../../language-reference/operators/user-defined-conversion-operators.md)
 - [一般的な型変換](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/yy580hbd(v=vs.120))
 - [文字列を数値に変換する方法](./how-to-convert-a-string-to-a-number.md)
