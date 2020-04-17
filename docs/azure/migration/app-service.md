@@ -3,16 +3,16 @@ title: .NET Web アプリまたはサービスを Azure App Service に移行す
 description: オンプレミスから Azure アプリ サービスへの .NET Web アプリまたはサービスの移行について説明します。
 ms.topic: conceptual
 ms.date: 08/11/2018
-ms.openlocfilehash: c9ef679743ce00add422110b11f2bfbdd8343530
-ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+ms.openlocfilehash: 57f3b981a1d94c2193160f55f9c8242da694c169
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "81433236"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607877"
 ---
 # <a name="migrate-your-net-web-app-or-service-to-azure-app-service"></a>.NET Web アプリまたはサービスを Azure App Service に移行する
 
-[App Service](https://docs.microsoft.com/azure/app-service/app-service-web-overview#why-use-web-apps)は、スケーラブルな Web サイトと Web アプリケーションのホスティングに最適化された、完全に管理されたコンピューティング プラットフォーム サービスです。 この記事では、既存のアプリケーションを Azure App Service にリフト アンド シフトする方法、検討する変更、および[クラウドへの移行](https://azure.microsoft.com/migration/web-applications/)に関する追加リソースについて説明します。 ほとんどの ASP.NET Web サイト (WebForms、MVC) とサービス (Web API、WCF) は、変更なしで Azure App Service に直接移行できます。 若干の変更が必要なものもあれば、リファクタリングが必要なものもあります。
+[App Service](https://docs.microsoft.com/azure/app-service/overview)は、スケーラブルな Web サイトと Web アプリケーションのホスティングに最適化された、完全に管理されたコンピューティング プラットフォーム サービスです。 この記事では、既存のアプリケーションを Azure App Service にリフト アンド シフトする方法、検討する変更、および[クラウドへの移行](https://azure.microsoft.com/migration/web-applications/)に関する追加リソースについて説明します。 ほとんどの ASP.NET Web サイト (WebForms、MVC) とサービス (Web API、WCF) は、変更なしで Azure App Service に直接移行できます。 若干の変更が必要なものもあれば、リファクタリングが必要なものもあります。
 
 使い始める準備はできていますか。 [ASP.NET および SQL アプリケーションを Azure App Service に発行](https://tutorials.visualstudio.com/azure-webapp-migrate/intro)します。
 
@@ -33,7 +33,7 @@ Azure App Service では、HTTP トラフィック用のポート 80 と、HTTPS
 
 WCF では、次のバインドがサポートされています。
 
-バインド | Notes
+バインド | メモ
 --------|--------
 BasicHttp |
 WSHttp |

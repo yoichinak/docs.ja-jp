@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: 4591175da5078a194bfe69884701e5432a0c38a3
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 5c473f818ea874392011065dc3d07101d2ef3bf5
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389727"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607959"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>WCF データ サービスの開発と展開
 
@@ -42,7 +42,7 @@ Visual Studio 2015 を使用して、WCF データ サービスをASP.NET アプ
 
 1. **ローカル IIS サーバー**
 
-     インターネット インフォメーション サービス (IIS) で実行されるASP.NET アプリケーションまたはASP.NET Web サイトであるデータ サービスを作成する場合は、ローカル コンピュータで IIS を使用してデータ サービスを開発し、テストすることをお勧めします。 IIS でデータ サービスを実行すると、デバッグ時における HTTP 要求のトレースが容易になります。 また、データ サービスに必要なファイルやデータベースなどのリソースにアクセスするために IIS で必要とされる権限を事前に確認することもできます。 IIS でデータ サービスを実行するには、IIS と Windows 通信財団 (WCF) の両方が正しくインストールおよび構成されていることを確認し、ファイル システムとデータベース内の IIS アカウントへのアクセスを許可します。 詳細については、「 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)」を参照してください。
+     インターネット インフォメーション サービス (IIS) で実行されるASP.NET アプリケーションまたはASP.NET Web サイトであるデータ サービスを作成する場合は、ローカル コンピュータで IIS を使用してデータ サービスを開発し、テストすることをお勧めします。 IIS でデータ サービスを実行すると、デバッグ時における HTTP 要求のトレースが容易になります。 また、データ サービスで必要なファイル、データベース、およびその他のリソースにアクセスするために IIS が必要とする権限を事前に決定することもできます。 IIS でデータ サービスを実行するには、IIS と Windows 通信財団 (WCF) の両方が正しくインストールおよび構成されていることを確認し、ファイル システムとデータベース内の IIS アカウントへのアクセスを許可します。 詳細については、「 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)」を参照してください。
 
     > [!NOTE]
     > 開発環境を有効にしてローカル IIS サーバーを構成するには、管理者権限を持つ Visual Studio を実行する必要があります。
@@ -51,7 +51,7 @@ Visual Studio 2015 を使用して、WCF データ サービスをASP.NET アプ
 
      Visual Studio には、ASP.NET プロジェクトの既定の Web サーバーである、組み込みの Web サーバー、Visual Studio 開発サーバーが含まれています。 この Web サーバーは、開発中にローカル コンピューター上でASP.NET プロジェクトを実行するように設計されています。 [WCF データ サービスのクイック スタートでは](quickstart-wcf-data-services.md)、Visual Studio 開発サーバーで実行されるデータ サービスを作成する方法を示します。
 
-     Visual Studio 開発サーバーを使用してデータ サービスを開発する場合は、次の制限に注意する必要があります。
+     Visual Studio 開発サーバーを使用してデータ サービスを開発する場合は、次の制限に注意してください。
 
     - このサーバーにはローカル コンピューター上でしかアクセスできません。
 
@@ -68,9 +68,9 @@ Visual Studio 2015 を使用して、WCF データ サービスをASP.NET アプ
     > [!TIP]
     > Visual Studio 開発サーバーを使用して開発中にデータ サービスをテストすることはできますが、IIS を実行している Web サーバーに配置した後で、再度テストする必要があります。
 
-3. **Microsoft Azure 開発環境**
+3. **Azure 開発環境**
 
-     Windows Azure ツールの Visual Studio には、Visual Studio で Windows Azure サービスを開発するためのツールの統合セットが含まれています。 これらのツールでは、Microsoft Azure に配置できるデータ サービスを開発し、配置前にローカル コンピューターでデータ サービスをテストすることができます。 Visual Studio を使用して Windows Azure プラットフォーム上で実行されるデータ サービスを開発する場合は、これらのツールを使用します。 ツールのインストールの詳細については[、「Visual Studio 2015 の Azure ツール](../../../azure/sdk/vs2015-install.md)」を参照してください。 Windows Azure で実行されるデータ サービスの開発の詳細については、「Windows Azure[での OData サービスのデプロイ](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」の投稿を参照してください。
+     Visual Studio 用の Windows Azure ツールには、Visual Studio で Azure サービスを開発するための統合されたツール セットが含まれています。 これらのツールを使用すると、Azure にデプロイできるデータ サービスを開発し、展開前にローカル コンピューターでデータ サービスをテストできます。 Visual Studio を使用して Azure プラットフォーム上で実行されるデータ サービスを開発する場合は、これらのツールを使用します。 ツールのインストールの詳細については[、「Visual Studio 2015 の Azure ツール](../../../azure/sdk/vs2015-install.md)」を参照してください。 Azure で実行されるデータ サービスの開発の詳細については[、「Azure での OData サービスのデプロイ](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」の投稿を参照してください。
 
 ### <a name="development-tips"></a>開発のヒント
 
@@ -92,7 +92,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
 
 - **IIS でホストされる Web サーバー**
 
-    データ サービスがASP.NET プロジェクトとして開発されると、標準のASP.NET配置プロセスを使用して IIS Web サーバーに展開できます。  Visual Studio には、配置するデータ サービスをホストするASP.NET プロジェクトの種類に応じて、ASP.NETに対して次の展開テクノロジが用意されています。
+    データ サービスがASP.NET プロジェクトとして開発されると、標準のASP.NET配置プロセスを使用して IIS Web サーバーに展開できます。 Visual Studio には、配置するデータ サービスをホストするASP.NET プロジェクトの種類に応じて、ASP.NETに対して次の展開テクノロジが用意されています。
 
   - **ASP.NET Web アプリケーション用の配置テクノロジ**
 
@@ -113,9 +113,9 @@ WCF Data Services では、データ サービスをホストするプロセス�
     > [!TIP]
     > データ サービスを IIS に配置する前に、IIS を実行している Web サーバーへの配置をテストしておく必要があります。 詳細については、「 [How to: Develop a WCF Data Service Running on IIS](how-to-develop-a-wcf-data-service-running-on-iis.md)」を参照してください。
 
-- **Microsoft Azure**
+- **Azure**
 
-     データ サービスを Windows Azure に展開するには、Visual Studio 用の Windows Azure ツールを使用します。 Windows Azure ツールの Visual Studio は[、マイクロソフト ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=201848)からダウンロードできます。 Windows Azure へのデータ サービスのデプロイの詳細については、「Windows Azure[での OData サービスのデプロイ](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」の投稿を参照してください。
+     データ サービスを Azure にデプロイするには[、Azure ツールを](../../../azure/sdk/vs2015-install.md)使用します。 Azure へのデータ サービスのデプロイの詳細については、「Azure[での OData サービスのデプロイ](https://docs.microsoft.com/archive/blogs/astoriateam/deploying-an-odata-service-in-windows-azure)」を参照してください。
 
 ### <a name="deployment-considerations"></a>配置に関する注意事項
 

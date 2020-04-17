@@ -3,12 +3,12 @@ title: .NET 用 Azure ライブラリを使った認証
 description: .NET 用 Azure ライブラリを使って認証を行います
 ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
-ms.openlocfilehash: e562b60da0a2d34f716e80d3d5d0d0b5e55b0cdb
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "81433146"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607871"
 ---
 # <a name="authenticate-with-the-azure-libraries-for-net"></a>.NET 用 Azure ライブラリを使った認証
 
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-サービス接続文字列は[、CosmosDB、Redis](/azure/documentdb/documentdb-dotnet-application#a-nametoc395637769astep-5-wiring-up-azure-cosmos-db)[用 Azure キャッシュ](/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)、サービス バスなどの他の Azure[サービス](/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)で使用され、Azure ポータル、CLI、または PowerShell を使用してこれらの文字列を取得できます。 また、コード内から .NET 用 Azure 管理ライブラリを使い、リソースを照会することによって接続文字列を作成することもできます。
+サービス接続文字列は[、CosmosDB](https://docs.microsoft.com/azure/cosmos-db/) [、Redis 用の Azure キャッシュ](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)、サービス[バス](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)などの他の Azure サービスで使用されます。 これらの文字列は、Azure ポータル、CLI、または PowerShell を使用して取得できます。 また、コード内から .NET 用 Azure 管理ライブラリを使い、リソースを照会することによって接続文字列を作成することもできます。
 
 次のスニペットでは、管理ライブラリを使ってストレージ アカウントの接続文字列を作成しています。
 

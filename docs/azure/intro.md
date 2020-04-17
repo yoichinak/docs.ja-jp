@@ -2,12 +2,12 @@
 title: Azure と .NET を使用して作業を開始する
 description: Azure と .NET について知っておくべき基本的事項について説明します。
 ms.date: 03/15/2020
-ms.openlocfilehash: 69c005ff1cfbd7ecddb4666bc23c8bc5cb813519
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 64defed4433647c2a0dcce91493d9ec77d21b541
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "81433206"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607883"
 ---
 # <a name="introduction-to-azure-and-net"></a>Azure と .NET の概要
 
@@ -47,9 +47,9 @@ Azure でのホスティングは、3 つのカテゴリに分けることがで
 * [Azure Virtual Machines](https://docs.microsoft.com/azure/virtual-machines/): 特定の依存関係のため、App Service では既存のアプリケーションのホスティングのニーズが満たされない場合は、Virtual Machines が最も簡単な出発点となります。 Virtual Machines と ASP.NET または WCF を使った作業を開始する場合は、「[Deploy an ASP.NET app to an Azure virtual machine (ASP.NET アプリを Azure 仮想マシンにデプロイする)](https://tutorials.visualstudio.com/aspnet-vm/intro)」をご覧ください。
 
 > [!TIP]
-> Azure サービスの詳細な一覧については、「[Azure コンピューティング オプションの概要](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-overview#azure-compute-options)」をご覧ください。 サービスの選択の詳細については、「[Azure コンピューティング サービスのデシジョン ツリー](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)」をご覧ください。
+> サービスの選択の詳細については、「[アプリケーションの Azure コンピューティング サービスの選択」を](https://docs.microsoft.com/azure/architecture/guide/technology-choices/compute-decision-tree)参照してください。
 
-## <a name="choosing-a-data-storage-service"></a>データ ストレージ サービスの選択
+## <a name="choose-a-data-storage-service"></a>データ ストレージ サービスの選択
 
 Azure には、ニーズに応じてデータを格納するための複数のサービスが用意されています。 .NET 開発者向けの最も一般的なデータ サービスを次に示します。
 
@@ -62,7 +62,7 @@ Azure には、ニーズに応じてデータを格納するための複数の�
 > [!TIP]
 > 詳細については、「[適切なデータ ストアの選択](https://docs.microsoft.com/azure/architecture/guide/technology-choices/data-store-overview)」をご覧ください。
 
-## <a name="connecting-to-azure-services"></a>Azure サービスへの接続
+## <a name="connect-to-azure-services"></a>Azure サービスに接続する
 
 Visual Studio を使用する場合は、特定の Azure サービスのサポートをプロジェクトに追加できます。 Visual Studio の **[接続済みサービス]** ダイアログを使用すると、必要な参照、接続コード、および構成設定をプロジェクトに簡単に追加できます。 よく使用される一部の Azure サービス ([Storage](/azure/vs-azure-tools-connected-services-storage)、[Azure Active Directory](/azure/active-directory/develop/vs-active-directory-add-connected-service) 認証、[Azure Key Vault](/azure/key-vault/vs-key-vault-add-connected-service)、([Computer Vision](/azure/cognitive-services/computer-vision/vs-computer-vision-connected-service) を含む) [Cognitive Services](/azure/cognitive-services/) など) は、すぐ使えるようにサポートされています。 サード パーティのサービスを含むその他のサービスは、拡張機能として [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?term=connected%20service&target=VS&category=Tools&vsVersion=&subCategory=All&sortBy=Relevance) で入手できます。
 
@@ -73,7 +73,7 @@ Visual Studio を使用する場合は、特定の Azure サービスのサポ�
 
 * **Application Insights**: [Application Insights](https://docs.microsoft.com/azure/application-insights/) は、診断データ、テレメトリ、パフォーマンス データをアプリケーションから自動的に取り込む、完全なアプリケーション パフォーマンス監視 (APM) ソリューションです。 アプリの診断データの収集を開始するには、「[ASP.NET Web アプリケーションの監視を開始する](https://docs.microsoft.com/azure/application-insights/quick-monitor-portal)」をご覧ください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [Azure に最初の ASP.NET Core Web アプリをデプロイする](https://docs.microsoft.com/azure/app-service/app-service-web-get-started-dotnet)
 * [NET 用 Azure SDK での認証について](./sdk/authentication.md)

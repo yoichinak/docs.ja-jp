@@ -3,12 +3,12 @@ title: ADO.NET コード サンプルのサンプル SQL Server データベー�
 description: ADO.NET のドキュメントのコード サンプルで使用されているサンプル SQL Server データベース、および SQL Server および管理ツールをダウンロードします。
 ms.date: 01/11/2019
 ms.assetid: ef9d69a1-9461-43fe-94bb-7c836754bcb5
-ms.openlocfilehash: 19d659cbe8f39d27b71dc59c738355f12fce92a0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3449f502834f449f5023bd52457d45ffaf9b0fa1
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148388"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607985"
 ---
 # <a name="get-the-sample-databases-for-adonet-code-samples"></a>ADO.NETコード サンプルのサンプル データベースを取得する
 
@@ -37,7 +37,7 @@ Northwind データベースを使用するには、ダウンロードした`ins
 
 1. 新しいウィンドウの **[ファイル名**] テキスト ボックスに、Northwind データベースのコピーのファイル名を入力します。
 
-1. [**作成**] を選択します。 ノースウィンド データベースがダウンロードされ、ファイルが準備されます。
+1. **［作成］** を選択します ノースウィンド データベースがダウンロードされ、ファイルが準備されます。
 
 1. このプロセスが完了すると、データベースが開き、ようこそ画面が表示されます。
 
@@ -54,7 +54,7 @@ Northwind データベースを使用するには、ダウンロードした`ins
 
 [SQL Server Management Studio (SSMS) のダウンロード](/sql/ssms/download-sql-server-management-studio-ssms)
 
-また、Visual Studio 統合開発環境 (IDE) でデータベースを表示および管理することもできます。 [Visual Studio で](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)、 SQL **Server オブジェクト エクスプローラー**からデータベースに接続するか、**またはサーバー エクスプローラー**でデータベースへのデータ接続を作成します。 [**表示**] メニューからこれらのエクスプローラ ペインを開きます。
+また、Visual Studio 統合開発環境 (IDE) でデータベースを表示および管理することもできます。 [Visual Studio で](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)、 SQL **Server オブジェクト エクスプローラー**からデータベースに接続するか、**またはサーバー エクスプローラー**でデータベースへのデータ接続を作成します。 [**表示**] メニューからこれらのエクスプローラ ペインを開きます。
 
 ## <a name="get-sql-server-express"></a><a name="get_sql"></a>SQL サーバー エクスプレスを取得します。
 
@@ -62,8 +62,8 @@ SQL Server Express は、アプリケーションと共に再配布できる、�
   
 [SQL Server Express Edition](https://www.microsoft.com/sql-server/sql-server-editions-express)
 
-[を](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)使用している場合は、SQL Server エクスプレス のローカル DB は、無料のコミュニティ エディションの Visual Studio に含まれています。  
+[を](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)使用している場合は、SQL Server エクスプレス のローカル DB は、無料のコミュニティ エディションの Visual Studio に含まれています。  
 
 ## <a name="see-also"></a>関連項目
 
-- [はじめに](getting-started.md)
+- [作業の開始](getting-started.md)
