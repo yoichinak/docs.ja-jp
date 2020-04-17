@@ -119,7 +119,7 @@
       href: programming-guide/types/index.md
     - name: null 許容参照型
       href: nullable-references.md
-    - name: 属性と制約を使用した null 許容 API の記述
+    - name: API 署名を null 許容参照に更新する
       href: nullable-attributes.md
     - name: 名前空間
       href: programming-guide/namespaces/index.md
@@ -355,16 +355,10 @@
               href: programming-guide/concepts/attributes/index.md
             - name: カスタム属性の作成
               href: programming-guide/concepts/attributes/creating-custom-attributes.md
-            - name: AttributeUsage
-              href: programming-guide/concepts/attributes/attributeusage.md
             - name: リフレクションを使用した属性へのアクセス
               href: programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md
             - name: 属性を使用して C/C++ の共用体を作成する方法
               href: programming-guide/concepts/attributes/how-to-create-a-c-cpp-union-by-using-attributes.md
-            - name: 共通の属性
-              href: programming-guide/concepts/attributes/common-attributes.md
-        - name: 呼び出し元情報
-          href: programming-guide/concepts/caller-information.md
         - name: コレクション
           href: programming-guide/concepts/collections.md
         - name: 共変性と反変性
@@ -1664,6 +1658,19 @@
           href: language-reference/tokens/interpolated.md
         - name: '@ -- 逐語的識別子'
           href: language-reference/tokens/verbatim.md
+    - name: コンパイラによって読み込まれる属性
+      items:
+        - name: グローバル属性
+          displayName: 'AssemblyName, AssemblyVersion, AssemblyCulture, AssemblyFlags, AssemblyProduct, AssemblyTrademark, AssemblyInformationalVersion, AssemblyCompany, AssemblyCopyright, AssemblyFileVersion, CLSCompliant, AssemblyTitle, AssemblyDescription, AssemblyConfiguration, AssemblyDefaultAlias'
+        - name: 全般
+          displayName: 'Conditional, Obsolete, AttributeUsage'
+          href: language-reference/attributes/general.md
+        - name: 呼び出し元情報
+          displayName: 'CallerFilePath, CallerLineNumber, CallerMemberName'
+          href: language-reference/attributes/caller-information.md
+        - name: Null 許容のスタティック分析
+          displayName: 'AllowNull, DisallowNull, MaybeNull, NotNull, MaybeNullWhen, NotNullWhen, NotNullIfNotNull, DoesNotReturn, DoesNotReturnIf'
+          href: language-reference/attributes/nullable-analysis.md
     - name: 'C# プリプロセッサ ディレクティブ'
       items:
         - name: 概要
