@@ -2,12 +2,12 @@
 title: ML.NET 使い方ガイド
 description: カスタム AI ソリューションの作成と、.NET アプリケーションへの Machine Learning 統合を支援するための、特定のタスクを実行する方法について説明します。
 ms.date: 03/01/2019
-ms.openlocfilehash: 4ce2de77c35062aa19449e3ba6bb3d5abd003d60
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25c5cb6247c202e3ef51d0ed25b3b213fdca7a56
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715665"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607533"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET の機械学習に関するハウツー ガイド
 
@@ -19,7 +19,7 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 ### <a name="prepare-the-data"></a>データを準備する
 
-* [データ処理で使うためにノーマライザーでトレーニング データを前処理します。](normalizers-preprocess-data-ml-net.md)
+* [データ処理で使うためにノーマライザーでトレーニング データを前処理します。](prepare-data-ml-net.md)
 
 ## <a name="train-the-model"></a>モデルをトレーニングする
 
@@ -31,13 +31,13 @@ ML.NET ガイドの方法に関するセクションには、よく寄せられ�
 
 * [メトリックを計算してモデルの品質を評価します。](verify-model-quality-ml-net.md)
 
-### <a name="model-explainability"></a>モデル説明
+### <a name="model-explainability"></a>モデルの説明可能性
 
 * [Permutation Feature Importance を使ってモデルの特徴の重要度を判断します。](explain-machine-learning-model-permutation-feature-importance-ml-net.md)
 
 * [モデルの説明可能性のために一般化加法モデルと形状関数を使います。](use-gams-for-model-explainability.md)
 
-## <a name="run"></a>ラン
+## <a name="run"></a>実行
 
 * [ML.NET パイプライン処理中の中間データ値を検査します。](inspect-intermediate-data-ml-net.md)
 
