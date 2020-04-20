@@ -2,12 +2,12 @@
 title: dotnet run コマンド
 description: dotnet run コマンドは、ソース コードからアプリケーションを実行する便利なオプションを提供します。
 ms.date: 02/19/2020
-ms.openlocfilehash: e442ed56d676ffd189ef6d394d840cea671c2dc6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28ed13a17c127ae1c61548fed8491315db279c20
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157077"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463417"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,10 +20,13 @@ ms.locfileid: "78157077"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet run [-c|--configuration] [-f|--framework] [--force] [--interactive] [--launch-profile]
-    [--no-build] [--no-dependencies] [--no-launch-profile] [--no-restore] [-p|--project]
-    [-r|--runtime] [-v|--verbosity] [[--] [application arguments]]
-dotnet run [-h|--help]
+dotnet run [-c|--configuration <CONFIGURATION>] [-f|--framework <FRAMEWORK>]
+    [--force] [--interactive] [--launch-profile <NAME>] [--no-build]
+    [--no-dependencies] [--no-launch-profile] [--no-restore]
+    [-p|--project <PATH>] [-r|--runtime <RUNTIME_IDENTIFIER>]
+    [-v|--verbosity <LEVEL>] [[--] [application arguments]]
+
+dotnet run -h|--help
 ```
 
 ## <a name="description"></a>説明

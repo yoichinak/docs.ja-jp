@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 063cac1de6634125d7dabad9d627bceff877e567
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546738"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242739"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>.NET で文字エンコーディング クラスを使用する方法
 
@@ -37,7 +37,7 @@ ms.locfileid: "79546738"
 
 - エンコーディングのクラス コンストラクターを呼び出します。 ASCII、UTF-7、UTF-8、UTF-16、および UTF-32 の各エンコーディングのオブジェクトは、この方法でインスタンス化できます。 既定では、各オブジェクトはエンコードできない文字列とデコードできないバイトを処理するために置換フォールバックを使用します。ただし、代わりに例外がスローされるように指定することもできます 詳細については、「[Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement)」および「[Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception)」セクションをご覧ください。
 
-- <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> コンストラクターを呼び出して、エンコーディングを表す整数を渡します。 エンコードできない文字列とデコードできないバイトの処理には、標準エンコーディングのエンコーディング オブジェクトでは置換フォールバックが、コード ページ エンコーディングと 2 バイト文字セット (DBCS) エンコーディングのエンコーディング オブジェクトでは最適フォールバックが使用されます 詳細については、「[Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit)」をご覧ください。
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29> コンストラクターを呼び出して、エンコーディングを表す整数を渡します。 エンコードできない文字列とデコードできないバイトの処理には、標準エンコーディングのエンコーディング オブジェクトでは置換フォールバックが、コード ページ エンコーディングと 2 バイト文字セット (DBCS) エンコーディングのエンコーディング オブジェクトでは最適フォールバックが使用されます 詳細については、「[Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit)」をご覧ください。
 
 - <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> メソッドを呼び出します。このメソッドは、.NET で使用できる任意のエンコーディング (標準、コード ページ、または DBCS) を返します。 オーバーロードを使用すると、エンコーダーおよびデコーダーの両方のフォールバック オブジェクトを指定できます。
 

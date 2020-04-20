@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d8c9cec723ec4e57fb4868cc95881be8eb4001b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa2a856911c7dcf81a39b7682a62a86c35328037
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "67857249"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81275061"
 ---
 ### <a name="wcf-addressheadercollection-now-throws-an-argumentexception-if-an-addressheader-element-is-null"></a>addressHeader 要素が null の場合、WCF AddressHeaderCollection で ArgumentException がスローされるようになった
 
@@ -15,4 +15,4 @@ ms.locfileid: "67857249"
 |スコープ|Minor|
 |バージョン|4.7.1|
 |[種類]|ランタイム|
-|影響を受ける API|<ul><li><xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})?displayProperty=nameWithType></li></ul>|
+|影響を受ける API|<ul><li><xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})></li></ul>|

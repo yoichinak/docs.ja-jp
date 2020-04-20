@@ -2,12 +2,12 @@
 title: dotnet tool uninstall コマンド
 description: dotnet tool uninstall コマンドでは、お使いのコンピューター上から指定された .NET Core ツールをアンインストールします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 82799404c40baa3a39f4e2a5fdb414fb745ef448
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0416f91019a49e17f1be14a1d928ad1fafaa736c
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847834"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463311"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -20,13 +20,13 @@ ms.locfileid: "78847834"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
+dotnet tool uninstall <PACKAGE_NAME> -g|--global
 
-dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
+dotnet tool uninstall <PACKAGE_NAME> --tool-path <PATH>
 
 dotnet tool uninstall <PACKAGE_NAME>
 
-dotnet tool uninstall <-h|--help>
+dotnet tool uninstall -h|--help
 ```
 
 ## <a name="description"></a>説明

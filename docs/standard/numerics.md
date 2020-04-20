@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: 3e9c817006930a36ebdce5c5965d78f1721c7056
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635155"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242765"
 ---
 # <a name="numerics-in-net"></a>.NET における数値
 
@@ -62,7 +62,7 @@ ms.locfileid: "80635155"
 
 各浮動小数点型で標準的な算術演算子セットがサポートされています。 <xref:System.Math?displayProperty=nameWithType> クラスでは、広範囲の数学関数セットのためのメソッドが提供されます。 .NET Core 2.0 以降には、<xref:System.Single> 型の引数を受け取るメソッドを提供する <xref:System.MathF?displayProperty=nameWithType> クラスが含まれています。
 
-<xref:System.BitConverter?displayProperty=nameWithType> クラスを使用して、<xref:System.Double> および <xref:System.Single> の値の個々のビットを操作することもできます。 <xref:System.Decimal?displayProperty=nameWithType> 構造体には、10 進値の個々のビットを操作するための独自のメソッド (<xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> と <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29?displayProperty=nameWithType>)、および追加の数学演算を実行するための独自のメソッド セットがあります。
+<xref:System.BitConverter?displayProperty=nameWithType> クラスを使用して、<xref:System.Double> および <xref:System.Single> の値の個々のビットを操作することもできます。 <xref:System.Decimal?displayProperty=nameWithType> 構造体には、10 進値の個々のビットを操作するための独自のメソッド (<xref:System.Decimal.GetBits%2A?displayProperty=nameWithType> と <xref:System.Decimal.%23ctor%28System.Int32%5B%5D%29>)、および追加の数学演算を実行するための独自のメソッド セットがあります。
   
 <xref:System.Double> 型と <xref:System.Single> 型は、不正確な値 (2 つの星の間の距離など) での使用と、高い精度や小さな丸め誤差の検出が必要ではないアプリケーションでの使用が想定されています。 より高い精度が必要とされ、丸め誤差を最小限に抑えるべきケースでは、<xref:System.Decimal?displayProperty=nameWithType> 型を使用します。
 

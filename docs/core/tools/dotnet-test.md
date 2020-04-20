@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 02/27/2020
-ms.openlocfilehash: 359e4522b26e2b59092d55eea3fca575d2afaf1f
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121038"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463376"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,14 +21,18 @@ ms.locfileid: "81121038"
 
 ```dotnetcli
 dotnet test [<PROJECT> | <SOLUTION>]
-    [-a|--test-adapter-path] [--blame] [-c|--configuration]
-    [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [--interactive] [-l|--logger] [--no-build] [--nologo]
-    [--no-restore] [-o|--output] [-r|--results-directory]
-    [--runtime] [-s|--settings] [-t|--list-tests]
-    [-v|--verbosity] [[--] <RunSettings arguments>]
+    [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
+    [-c|--configuration <CONFIGURATION>]
+    [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
+    [-d|--diag <PATH_TO_DIAGNOSTICS_FILE>] [-f|--framework <FRAMEWORK>]
+    [--filter <EXPRESSION>] [--interactive]
+    [-l|--logger <LOGGER_URI/FRIENDLY_NAME>] [--no-build]
+    [--nologo] [--no-restore] [-o|--output <OUTPUT_DIRECTORY>]
+    [-r|--results-directory <PATH>] [--runtime <RUNTIME_IDENTIFIER>]
+    [-s|--settings <SETTINGS_FILE>] [-t|--list-tests]
+    [-v|--verbosity <LEVEL>] [[--] <RunSettings arguments>]
 
-dotnet test [-h|--help]
+dotnet test -h|--help
 ```
 
 ## <a name="description"></a>説明
@@ -83,7 +87,7 @@ dotnet test [-h|--help]
 
   コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
 
-- **`l|--logger <LoggerUri/FriendlyName>`**
+- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   テスト結果のロガーを指定します。 MSBuild とは異なり、dotnet テストでは省略形は受け入れられません。`-l "console;v=d"` ではなく `-l "console;verbosity=detailed"` を使用してください。
 

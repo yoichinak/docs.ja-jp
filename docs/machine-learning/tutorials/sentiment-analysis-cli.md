@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 12/23/2019
 ms.custom: mvc,mlnet-tooling
 ms.topic: tutorial
-ms.openlocfilehash: 2243aad0e787a3a594bde3dfa9884f104eab74e8
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 832124e6d027b240c4d06692ee87c84f57b982d3
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546693"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243337"
 ---
 # <a name="analyze-sentiment-using-the-mlnet-cli"></a>ML.NET CLI を使用してセンチメントを分析する
 
@@ -45,7 +45,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 ここでは、二項分類機械学習タスクである "感情分析" シナリオに使用されている既存のデータセットを使用します。 お持ちのデータセットを同様の方法で使用して、モデルとコードを自動的に生成することができます。
 
-1. [UCI Sentiment Labeled Sentences データセット zip ファイル (次の注の引用を参照してください)](https://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) をダウンロードし、任意のフォルダーに展開します。
+1. [UCI Sentiment Labeled Sentences データセット zip ファイル (次の注の引用を参照してください)](http://archive.ics.uci.edu/ml/machine-learning-databases/00331/sentiment%20labelled%20sentences.zip) をダウンロードし、任意のフォルダーに展開します。
 
     > [!NOTE]
     > このチュートリアルで使用されるデータセットでは、「From Group to Individual Labels using Deep Features」 (Kotzias 他 KDD 2015) のものであり、UCI 機械学習リポジトリ (Dua, D. and Karra Taniskidou, E.(2017)) でホストされています。 UCI 機械学習リポジトリ [http://archive.ics.uci.edu/ml ]。 カリフォルニア州アーバイン: カリフォルニア大学情報コンピュータサイエンス学部。

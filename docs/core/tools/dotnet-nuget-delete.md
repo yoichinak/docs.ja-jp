@@ -3,12 +3,12 @@ title: dotnet nuget delete コマンド
 description: dotnet-nuget-delete コマンドは、サーバーからパッケージを削除または一覧から削除します。
 author: karann-msft
 ms.date: 06/26/2019
-ms.openlocfilehash: 0950f03c0986bde17ae3e2e7170d402ea8222853
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4fa4f24adba251d7872986de4a8b1a63203c36c3
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733122"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463583"
 ---
 # <a name="dotnet-nuget-delete"></a>dotnet nuget delete
 
@@ -25,9 +25,11 @@ ms.locfileid: "76733122"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output] [--interactive] [-k|--api-key] [--no-service-endpoint]
-    [--non-interactive] [-s|--source]
-dotnet nuget delete [-h|--help]
+dotnet nuget delete [<PACKAGE_NAME> <PACKAGE_VERSION>] [--force-english-output]
+    [--interactive] [-k|--api-key <API_KEY>] [--no-service-endpoint]
+    [--non-interactive] [-s|--source <SOURCE>]
+
+dotnet nuget delete -h|--help
 ```
 
 ## <a name="description"></a>[説明]

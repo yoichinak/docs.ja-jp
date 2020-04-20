@@ -3,14 +3,14 @@ title: サーバー アプリ用 .NET Core と .NET Framework の選択
 description: .NET でのサーバー アプリのビルド時に考慮する必要がある .NET の実装に関するガイドです。
 author: cartermp
 ms.date: 06/19/2018
-ms.openlocfilehash: 393d6d89fb299e87edf55cf50991537e8afe9753
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 885a7fb3419eafa5d88ef621cf6ad04a8d48bb59
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344148"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607494"
 ---
-# <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
+# <a name="choose-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
 .NET を使用してサーバー側のアプリケーションをビルドする場合に選択できるサポート対象の実装には、.NET Framework と .NET Core の 2 つがあります。 この 2 つは多数の同じコンポーネントを共有しているため、両者でコードを共有できます。 ただし、2 つには基本的な違いがあり、どちらを選択するかは実行内容によって決まります。  この記事では、それぞれを使用するタイミングに関するガイダンスを提供します。
 
@@ -103,7 +103,7 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 ## <a name="see-also"></a>関連項目
 
 - [ASP.NET と ASP.NET Core の選択](/aspnet/core/choose-aspnet-framework)
-- [.NET Framework を対象とする ASP.NET Core](/aspnet/core#aspnet-core-targeting-net-framework)
+- [.NET Framework を対象とする ASP.NET Core](/aspnet/core/introduction-to-aspnet-core#aspnet-core-targeting-net-framework)
 - [ターゲット フレームワーク](frameworks.md)
 - [.NET Core のガイド](../core/index.yml)
 - [.NET Framework から .NET Core への移植](../core/porting/index.md)

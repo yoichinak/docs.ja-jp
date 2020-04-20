@@ -4,12 +4,12 @@ description: Azure HDInsight の Jupyter Notebook に .NET for Apache Spark を�
 ms.date: 03/13/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 32047efcde093a3752bdd59baa88896d1547b93e
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 953bffe5f6ec56cd0adf4224afd2eedfe0001aa9
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546751"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607416"
 ---
 # <a name="install-net-for-apache-spark-on-jupyter-notebooks-on-azure-hdinsight-spark-clusters"></a>Azure HDInsight Spark クラスター上の Jupyter Notebook に .NET for Apache Spark をインストールする
 
@@ -24,7 +24,7 @@ Jupyter Notebook のエクスペリエンスを通じて .NET for Apache Spark �
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-まだお持ちでない場合は、[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-hdinsight-spark-cluster) クラスターを作成します。
+まだお持ちでない場合は、[Azure HDInsight Spark](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-jupyter-spark-sql-use-portal#create-an-apache-spark-cluster-in-hdinsight) クラスターを作成します。
 
 1. [Azure portal](https://portal.azure.com) にアクセスし、 **[+ リソースの作成]** を選択します。
 

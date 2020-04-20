@@ -2,12 +2,12 @@
 title: dotnet tool run コマンド
 description: dotnet tool run コマンドでは、ローカル ツールを起動します。
 ms.date: 02/14/2020
-ms.openlocfilehash: a088cd0b7f4bba014234a8189a42a63aa6d88f4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f79c239363e8b3abbd55c54dd1912443e6777fb7
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847847"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463327"
 ---
 # <a name="dotnet-tool-run"></a>dotnet tool run
 
@@ -22,7 +22,7 @@ ms.locfileid: "78847847"
 ```dotnetcli
 dotnet tool run <COMMAND NAME>
 
-dotnet tool run <-h|--help>
+dotnet tool run -h|--help
 ```
 
 ## <a name="description"></a>説明

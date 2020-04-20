@@ -2,12 +2,12 @@
 title: dotnet nuget list source コマンド
 description: dotnet nuget list source コマンドを使うと、NuGet 構成ファイルの既存のソースをすべて一覧表示できます。
 ms.date: 03/20/2020
-ms.openlocfilehash: 4d7bc3dbd3ab5eb14c1ebf592044b685d28355cd
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 8b14413949bd60ddeed977d19eec9bb99982da70
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80148496"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463551"
 ---
 # <a name="dotnet-nuget-list-source"></a>dotnet nuget list source
 
@@ -20,8 +20,9 @@ ms.locfileid: "80148496"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet nuget list source [--format] [--configfile]
-dotnet nuget list source [-h|--help]
+dotnet nuget list source [--format [Detailed|Short]] [--configfile <FILE>]
+
+dotnet nuget list source -h|--help
 ```
 
 ## <a name="description"></a>説明
@@ -30,11 +31,11 @@ dotnet nuget list source [-h|--help]
 
 ## <a name="options"></a>オプション
 
-- **`--configfile`**
+- **`--configfile <FILE>`**
 
   NuGet 構成ファイル。 指定した場合、このファイルの設定のみが使用されます。 指定しない場合、現在のディレクトリからの構成ファイルの階層が使用されます。 詳細については、「[一般的な NuGet 構成](https://docs.microsoft.com/nuget/consume-packages/configuring-nuget-behavior)」をご覧ください。
 
-- **`--format`**
+- **`--format [Detailed|Short]`**
 
   list コマンドの出力の形式: `Detailed` (既定) と `Short`。
 

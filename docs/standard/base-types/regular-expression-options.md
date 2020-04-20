@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inline option constructs
 - options parameter
 ms.assetid: c82dc689-7e82-4767-a18d-cd24ce5f05e9
-ms.openlocfilehash: a53d7517485d2a0b02b6f11928f478a7da3f9503
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf352d6494a823d4f7b24eb2876d9bffa5877b2b
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972114"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242778"
 ---
 # <a name="regular-expression-options"></a>正規表現のオプション
 
@@ -40,7 +40,7 @@ ms.locfileid: "73972114"
 
 正規表現のオプションは、次の 3 種類の方法のいずれかで指定できます。
 
-- `options` や <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> など、`Shared` クラス コンストラクターまたは、静的 (Visual Basic の場合は <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>) パターン一致メソッドの <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターで指定します。 `options` パラメーターは、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列挙値のビットごとの OR の組み合わせです。
+- `options` や <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> など、`Shared` クラス コンストラクターまたは、静的 (Visual Basic の場合は <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29>) パターン一致メソッドの <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> パラメーターで指定します。 `options` パラメーターは、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列挙値のビットごとの OR の組み合わせです。
 
   クラス コンストラクターの `options` パラメーターを使用して、オプションが <xref:System.Text.RegularExpressions.Regex> インスタンスに指定されると、それらのオプションは <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティに割り当てられます。 ただし、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> プロパティは、正規表現パターン自体でのインライン オプションを反映しません。
 

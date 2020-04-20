@@ -2,12 +2,12 @@
 title: dotnet store コマンド
 description: "'dotnet store' コマンドは、指定したアセンブリをランタイム パッケージ ストアに格納します。"
 ms.date: 02/14/2020
-ms.openlocfilehash: da1d132b2b873ff55ec104b5bb092d0194889bdc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f28a9bc287a87f600bda385c579e8070cbaa5ab
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503584"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463395"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -20,7 +20,13 @@ ms.locfileid: "77503584"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet store -m|--manifest -f|--framework -r|--runtime  [--framework-version] [-h|--help] [--output] [--skip-optimization] [--skip-symbols] [-v|--verbosity] [--working-dir]
+dotnet store -m|--manifest <PATH_TO_MANIFEST_FILE>
+    -f|--framework <FRAMEWORK_VERSION> -r|--runtime <RUNTIME_IDENTIFIER>
+    [--framework-version <FRAMEWORK_VERSION>] [--output <OUTPUT_DIRECTORY>]
+    [--skip-optimization] [--skip-symbols] [-v|--verbosity <LEVEL>]
+    [--working-dir <WORKING_DIRECTORY>]
+
+dotnet store -h|--help
 ```
 
 ## <a name="description"></a>[説明]

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - application development [.NET Framework], globalization
 - culture, globalization
 ms.assetid: 4e919934-6b19-42f2-b770-275a4fae87c9
-ms.openlocfilehash: fe03bbdd7d037a9f1fb4985b62b447c6ef9c6535
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c08f4309d7673d7e7fb1c6bd84307e4323411d9e
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79174785"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242687"
 ---
 # <a name="globalization"></a>グローバリゼーション
 
@@ -336,7 +336,7 @@ Unicode を使用することで、同じコード単位を必ず同じ文字に
 
 - .NET では置換カルチャをサポートしています。 これにより、既存の標準カルチャを補足または既存の標準カルチャを完全に置き換える新しいカスタム カルチャを定義できます。
 
-- Windows システムのユーザーは、コントロール パネルの **[地域と言語]** アプリを使用してカルチャ固有の設定をカスタマイズできます。 <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化するときに、<xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> コンストラクターを呼び出すことでこのようなユーザーによるカスタマイズを反映するかどうかを決定できます。 通常は、エンド ユーザーのアプリでは、ユーザー設定を尊重して、ユーザー自身が予期する形式でデータを表示する必要があります。
+- Windows システムのユーザーは、コントロール パネルの **[地域と言語]** アプリを使用してカルチャ固有の設定をカスタマイズできます。 <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化するときに、<xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29> コンストラクターを呼び出すことでこのようなユーザーによるカスタマイズを反映するかどうかを決定できます。 通常は、エンド ユーザーのアプリでは、ユーザー設定を尊重して、ユーザー自身が予期する形式でデータを表示する必要があります。
 
 ## <a name="see-also"></a>関連項目
 

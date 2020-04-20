@@ -2,12 +2,12 @@
 title: dotnet msbuild コマンド
 description: dotnet msbuild コマンドは、MSBuild コマンド ラインへのアクセスを提供します。
 ms.date: 02/14/2020
-ms.openlocfilehash: 28a32a460d644d3e22f16b5dd9416222ae466e2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 88e85868e2d7de564b2e4c90ce6e78bde4cb350e
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503669"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463620"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 
@@ -19,7 +19,11 @@ ms.locfileid: "77503669"
 
 ## <a name="synopsis"></a>構文
 
-`dotnet msbuild <msbuild_arguments> [-h]`
+```dotnetcli
+dotnet msbuild <MSBUILD_ARGUMENTS>
+
+dotnet msbuild -h
+```
 
 ## <a name="description"></a>[説明]
 

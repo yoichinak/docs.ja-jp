@@ -13,12 +13,12 @@ helpviewer_keywords:
 - runtime, language interoperability
 - common language runtime, language interoperability
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
-ms.openlocfilehash: 689ca9f7278dcf91b12bc62b5255a968388bb9f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 725884d8ab6d6d9009ad1cdd7bc185889cd5e485
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398785"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81243064"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -527,7 +527,7 @@ CLS 準拠の属性のコンストラクターまたはプロパティは、次�
 
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 属性
 
-<xref:System.CLSCompliantAttribute> 属性は、プログラム要素が共通言語仕様でコンパイルされているかどうかを示すために使用されます。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> コンストラクターには、プログラム要素が CLS に準拠しているかどうかを示す 1 つの必須パラメーター、`isCompliant` が含まれます。
+<xref:System.CLSCompliantAttribute> 属性は、プログラム要素が共通言語仕様でコンパイルされているかどうかを示すために使用されます。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29> コンストラクターには、プログラム要素が CLS に準拠しているかどうかを示す 1 つの必須パラメーター、`isCompliant` が含まれます。
 
 コンパイル時に、CLS 準拠が前提とされる非準拠要素が検出され、警告が出力されます。 非準拠として明示的に宣言された型またはメンバーに対しては、警告は出力されません。
 

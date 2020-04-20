@@ -2,12 +2,12 @@
 title: dotnet add package コマンド
 description: "'dotnet add package' コマンドは、NuGet パッケージ参照をプロジェクトに追加する便利なオプションを提供します。"
 ms.date: 02/14/2020
-ms.openlocfilehash: 8121539a50d2ac2837693ccc35581f7fde1d1fc1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24a25cdab2aab30d52f8407adfda437f47437290
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146607"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463755"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -19,7 +19,14 @@ ms.locfileid: "79146607"
 
 ## <a name="synopsis"></a>構文
 
-`dotnet add [<PROJECT>] package <PACKAGE_NAME> [-h|--help] [-f|--framework] [--interactive] [-n|--no-restore] [--package-directory] [-s|--source] [-v|--version]`
+```dotnetcli
+dotnet add [<PROJECT>] package <PACKAGE_NAME>
+    [-f|--framework <FRAMEWORK>] [--interactive]
+    [-n|--no-restore] [--package-directory <PACKAGE_DIRECTORY>]
+    [-s|--source <SOURCE>] [-v|--version <VERSION>]
+
+dotnet add package -h|--help
+```
 
 ## <a name="description"></a>[説明]
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2fb980c8b75e25ba347c56ccc1c90f2959e83e21
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5b724afefcce69df706f2bea0b1612db653af03
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74567965"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81275245"
 ---
 ### <a name="minimum-size-for-rsaopenssl-key-generation-has-increased"></a>RSAOpenSsl キー生成の最小サイズが増加しました
 
@@ -12,7 +12,7 @@ Linux で新しい RSA キーを生成する場合の最小サイズが、384 �
 
 #### <a name="change-description"></a>変更の説明
 
-.NET Core 3.0 以降では、Linux で `LegalKeySizes`、<xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>、および <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType> から RSA インスタンス上の <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType> プロパティによって報告される最小の有効キー サイズが 384 から 512 に増えました。
+.NET Core 3.0 以降では、Linux で `LegalKeySizes`、<xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>、および <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A> から RSA インスタンス上の <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A> プロパティによって報告される最小の有効キー サイズが 384 から 512 に増えました。
 
 その結果、.NET Core 2.2 以前のバージョンでは、`RSA.Create(384)` などのメソッドの呼び出しが成功しています。 .NET Core 3.0 以降のバージョンでは、メソッドの呼び出し `RSA.Create(384)` によって、サイズが小さすぎることを示す例外がスローされます。
 
@@ -37,8 +37,8 @@ Linux で新しい RSA キーを生成する場合の最小サイズが、384 �
 
 - <xref:System.Security.Cryptography.AsymmetricAlgorithm.LegalKeySizes?displayProperty=nameWithType>
 - <xref:System.Security.Cryptography.RSA.Create%2A?displayProperty=nameWithType>
-- <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A?displayProperty=nameWithType>
-- <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A?displayProperty=nameWithType>
+- <xref:System.Security.Cryptography.RSAOpenSsl.%23ctor%2A>
+- <xref:System.Security.Cryptography.RSACryptoServiceProvider.%23ctor%2A>
 
 <!--
 ### Affected APIs

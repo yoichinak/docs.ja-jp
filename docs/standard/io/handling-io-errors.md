@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 51eb0e758f1ae8fb41c842ef9b32a9f8928af9ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c592039b3b12eedcfceda45c2f54403a8e04b5d5
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120742"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242674"
 ---
 # <a name="handling-io-errors-in-net"></a>.NET での I/O エラーの処理
 
@@ -39,7 +39,7 @@ ms.locfileid: "73120742"
 
 たとえば、Windows オペレーティング システムでは、エラー コード`ERROR_FILE_NOT_FOUND` (または 0x02) を返すメソッドの呼び出しは <xref:System.IO.FileNotFoundException> にマップされ、エラー コード `ERROR_PATH_NOT_FOUND` (または 0x03) は <xref:System.IO.DirectoryNotFoundException> にマップされます。
 
-ただし、オペレーティング システムが特定のエラー コードが返す正確な条件は、多くの場合、文書化されていないか、適切に文書化されていません。 その結果、予期しない例外が発生する可能性があります。 たとえば、ファイルではなくディレクトリを操作している場合、無効なディレクトリ パスを <xref:System.IO.DirectoryInfo.%23ctor%2A?displayProperty=nameWithType> に提供すると、<xref:System.IO.DirectoryNotFoundException> コンストラクターがスローされることが想定されます。 ただし、<xref:System.IO.FileNotFoundException> がスローされる場合もあります。
+ただし、オペレーティング システムが特定のエラー コードが返す正確な条件は、多くの場合、文書化されていないか、適切に文書化されていません。 その結果、予期しない例外が発生する可能性があります。 たとえば、ファイルではなくディレクトリを操作している場合、無効なディレクトリ パスを <xref:System.IO.DirectoryInfo.%23ctor%2A> に提供すると、<xref:System.IO.DirectoryNotFoundException> コンストラクターがスローされることが想定されます。 ただし、<xref:System.IO.FileNotFoundException> がスローされる場合もあります。
 
 ## <a name="exception-handling-in-io-operations"></a>I/O 操作の例外処理
 
