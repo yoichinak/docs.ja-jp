@@ -2,12 +2,12 @@
 title: .NET Core ランタイムと SDK をバージョン管理する方法
 description: この記事では、.NET Core SDK と ランタイムをバージョン管理する方法について説明します (セマンティック バージョニングと似ています)。
 ms.date: 07/26/2018
-ms.openlocfilehash: c85a2112b439768068663688947960ac814de824
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f166a6dfc1c9127eb629365efd628855489a60cb
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75777314"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644394"
 ---
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core をバージョン管理する方法の概要
 
@@ -23,23 +23,23 @@ ms.locfileid: "75777314"
 
 SDK バージョン番号の 3 番目の位置には、マイナー番号とパッチ番号の両方が示されます。 マイナー バージョンには 100 が乗算されます。 マイナー バージョン 1、パッチ バージョン 2 の場合は、102 と表現されます。 最後の 2 桁はパッチの番号を示しています。 たとえば、.NET Core 2.2 のリリースの場合、次の表のようなリリースが作成される可能性があります。
 
-| Change                | .NET Core ランタイム | .NET Core SDK (\*) |
+| 変更                | .NET Core ランタイム | .NET Core SDK (\*) |
 |-----------------------|-------------------|-------------------|
-| 最初のリリース       | 2.2.0             | 2.2.100           |
+| 初期リリース       | 2.2.0             | 2.2.100           |
 | SDK パッチ             | 2.2.0             | 2.2.101           |
 | ランタイムおよび SDK パッチ | 2.2.1             | 2.2.102           |
 | SDK 機能変更    | 2.2.1             | 2.2.200           |
 
 (\*) 上記の表では、2.2 .NET Core Runtime が例として使用されています。 .NET Core 2.1 に対する最初の SDK が 2.1.300 であることが、履歴アーティファクトで示されていたからです。 詳細については、「[.NET Core のバージョンの選択](selection.md)」を参照してください。
 
-メモ:
+注:
 
 - SDK において、ランタイムの機能更新プログラムの前に 10 の機能更新プログラムがある場合、バージョン番号は 1000 シリーズに展開され、番号は 2.2.1000 のようになります。これは 2.2.900 に続く機能リリースを示しています。 このような状況が発生することは想定されていません。
 - 機能リリースなしで 99 のパッチ リリースは、発生しません。 リリースがこの数に近づくと、機能リリースが強制的に適用されます。
 
 詳細については、[dotnet/designs](https://github.com/dotnet/designs/pull/29) リポジトリにある初期の提案を参照してください。
 
-## <a name="semantic-versioning"></a>セマンティック バージョニング
+## <a name="semantic-versioning"></a>セマンティック バージョン管理
 
 .NET Core *ランタイム*は、[セマンティック バージョニング (SemVer)](https://semver.org/) にほぼ準拠しています。`MAJOR.MINOR.PATCH` バージョン管理の使用が採用され、バージョン番号のさまざまな部分を使用して変更の程度と種類が記述されています。
 
@@ -80,11 +80,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>プレビュー バージョン
 
-プレビュー バージョンには、`-preview[number]-([build]|"final")` がバージョンに追加されます。 たとえば、「 `2.0.0-preview1-final` 」のように入力します。
+プレビュー バージョンには、`-preview[number]-([build]|"final")` がバージョンに追加されます。 たとえば、`2.0.0-preview1-final` のようにします。
 
 ### <a name="servicing-versions"></a>サービスのバージョン
 
-リリースされると、通常はリリース ブランチが毎日のビルドの生成を停止し、代わりにサービスのビルドの生成を開始します。 サービスのバージョンには、`-servicing-[number]` がバージョンに追加されます。 たとえば、「 `2.0.1-servicing-006924` 」のように入力します。
+リリースされると、通常はリリース ブランチが毎日のビルドの生成を停止し、代わりにサービスのビルドの生成を開始します。 サービスのバージョンには、`-servicing-[number]` がバージョンに追加されます。 たとえば、`2.0.1-servicing-006924` のようにします。
 
 ## <a name="relationship-to-net-standard-versions"></a>.NET Standard との関係
 
@@ -98,16 +98,16 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 | .NET Core | .NET Standard |
 |-----------|---------------|
-| 1.0       | 最大 1.6     |
+| 1       | 最大 1.6     |
 | 2.0       | 最大 2.0     |
 | 2.1       | 最大 2.0     |
 | 2.2       | 最大 2.0     |
 | 3.0       | 最大 2.1     |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ターゲット フレームワーク](../../standard/frameworks.md)
-- [.NET Core の配布パッケージ](../build/distribution-packaging.md)
+- [.NET Core の配布パッケージ](../distribution-packaging.md)
 - [.NET Core サポート ライフサイクルのファクト シート](https://dotnet.microsoft.com/platform/support/policy)
 - [.NET core 2 + バージョン バインディング](https://github.com/dotnet/designs/issues/3)
 - [.NET Core の Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)

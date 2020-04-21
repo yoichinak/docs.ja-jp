@@ -7,12 +7,12 @@ helpviewer_keywords:
 - tools [.NET Framework]
 - running .NET Framework tools
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
-ms.openlocfilehash: 4503e2cff18f4aa901d20c76cfe4076a7fed3600
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 60a9cb241f289cacc7437174f112114e843aca47
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75715775"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645559"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 
@@ -22,7 +22,7 @@ ms.locfileid: "75715775"
 
 アセンブリ キャッシュ ビューアー (*Shfusion.dll*) を除き、これらのツールはすべてコマンド ラインから実行できます。 エクスプローラーから *Shfusion.dll* にアクセスする必要があります。
   
-コマンド ライン ツールの最適な実行方法は、Visual Studio 用開発者コマンド プロンプトを使用することです。 これらのユーティリティを使用すると、インストール フォルダーに移動することなくツールを簡単に実行できます。 詳細については、「[コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
+コマンド ライン ツールの最適な実行方法は、Visual Studio 用開発者コマンド プロンプトを使用することです。 これらのユーティリティを使用すると、インストール フォルダーに移動することなくツールを簡単に実行できます。 詳細については、「[Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)」を参照してください。
 
 > [!NOTE]
 > ツールの中には、32 ビット コンピューターまたは 64 ビット コンピューターに固有のものもあります。 該当するコンピューターに適切なバージョンのツールを実行します。
@@ -36,7 +36,7 @@ ms.locfileid: "75715775"
 ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。
 
 - [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](caspol-exe-code-access-security-policy-tool.md)  
-コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを表示および構成できます。 .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、このツールがコード アクセス セキュリティ (CAS) ポリシーに影響を与えることはありません。 詳細については、「[セキュリティの変更点](../security/security-changes.md)」を参照してください。
+コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを表示および構成できます。 .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、このツールがコード アクセス セキュリティ (CAS) ポリシーに影響を与えることはありません。 詳細については、「[セキュリティの変更点](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」を参照してください。
 
 - [Cert2spc.exe (ソフトウェア発行元証明書テスト ツール)](cert2spc-exe-software-publisher-certificate-test-tool.md)  
 1 つ以上の X.509 証明書からソフトウェア発行元証明書 (SPC: Software Publisher's Certificate) を作成します。 このツールはテスト専用です。

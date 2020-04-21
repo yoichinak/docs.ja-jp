@@ -1,12 +1,12 @@
 ---
 title: 属性 (C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: 62424163303417746a67707d9ef34185954db316
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 0379bb76cf18ff836bd14aafb9cb97c30aee8ec7
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389540"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645484"
 ---
 # <a name="attributes-c"></a>属性 (C#)
 
@@ -81,7 +81,7 @@ ms.locfileid: "81389540"
 
 対象の値 `field` を指定して、[auto-implemented プロパティ](../../../properties.md)に作成されたバッキング フィールドに属性を適用します。
 
-次の例では、アセンブリとモジュールに属性を適用する方法を示します。 詳細については、「[共通の属性 (C#)](common-attributes.md)」を参照してください。
+次の例では、アセンブリとモジュールに属性を適用する方法を示します。 詳細については、「[共通の属性 (C#)](../../../language-reference/attributes/global.md)」を参照してください。
 
 ```csharp
 using System;
@@ -120,7 +120,7 @@ C# でメソッド、メソッドのパラメーター、およびメソッド�
 - [カスタム属性の作成 (C#)](creating-custom-attributes.md)  
 - [リフレクションを使用した属性へのアクセス (C#)](accessing-attributes-by-using-reflection.md)  
 - [属性を使用して C/C++ の共用体を作成する方法 (C#)](how-to-create-a-c-cpp-union-by-using-attributes.md)  
-- [共通属性 (C#)](common-attributes.md)  
+- [共通属性 (C#)](../../../language-reference/attributes/global.md)  
 - [呼び出し元情報 (C#)](../../../language-reference/attributes/caller-information.md)  
 
 ## <a name="see-also"></a>関連項目
