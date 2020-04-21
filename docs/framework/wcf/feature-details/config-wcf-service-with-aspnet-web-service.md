@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 22713aba4f86fe493ba3d16ef09c2a71b6d55fe0
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: ddd7e8c95701532010b54e5136a33d37d139f6a4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389786"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739227"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する
 
 Windows 通信基盤 (WCF) サービス エンドポイントを構成して、ASP.NET Web サービス クライアント<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>と相互運用可能にするには、サービス エンドポイントのバインディングの種類としてその型を使用します。  
   
- 必要に応じて、HTTPS およびトランスポート レベルのクライアント認証のサポートをバインディングで有効にできます。 ASP.NET Web サービス クライアントは MTOM メッセージ<xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType>エンコーディングをサポートしていません。 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> また、ASP.Net Web サービス クライアントでは WS-Security がサポートされていないため、<xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType> を <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定する必要があります。  
+ 必要に応じて、HTTPS およびトランスポート レベルのクライアント認証のサポートをバインディングで有効にできます。 ASP.NET Web サービス クライアントは MTOM メッセージ<xref:System.ServiceModel.BasicHttpBinding.MessageEncoding%2A?displayProperty=nameWithType>エンコーディングをサポートしていません。 <xref:System.ServiceModel.WSMessageEncoding.Text?displayProperty=nameWithType> ASP.NET Web サービス クライアントは WS-Security<xref:System.ServiceModel.BasicHttpBinding.Security%2A?displayProperty=nameWithType>をサポートしていません<xref:System.ServiceModel.BasicHttpSecurityMode.Transport>。  
   
  WCF サービスのメタデータを Web サービスプロキシ生成ツール (Web[サービス記述言語ツール (Wsdl.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7h3ystb6(v%3dvs.100)) [、Web サービス検出ツール (Disco.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cy2a3ybs(v=vs.100)))、および Visual Studio の**Web 参照の追加**機能で ASP.NET使用できるようにするには、HTTP/GET メタデータ エンドポイントを公開する必要があります。  
   
@@ -24,7 +24,7 @@ Windows 通信基盤 (WCF) サービス エンドポイントを構成して、A
   
 1. 新しい <xref:System.ServiceModel.BasicHttpBinding> インスタンスを作成します。  
   
-2. 必要に応じて、バインディングのセキュリティ モードを <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定して、このサービス エンドポイント バインディングのトランスポート セキュリティを有効にします。 詳細については、トランスポート[セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)を参照してください。  
+2. 必要に応じて、バインディングのセキュリティ モードを <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定して、このサービス エンドポイント バインディングのトランスポート セキュリティを有効にします。 詳細については、[トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)を参照してください。  
   
 3. 上で作成したバインディング インスタンスを使用して、サービス ホストに新しいアプリケーション エンドポイントを追加します。 コードでサービス エンドポイントを追加する方法の詳細については、「[方法 : コードでサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)」を参照してください。  
   

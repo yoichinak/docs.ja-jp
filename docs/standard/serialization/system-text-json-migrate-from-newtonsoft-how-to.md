@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serializing objects
 - serialization
 - objects, serializing
-ms.openlocfilehash: 957bafcdf69d5792702962db6598458a0c8ec974
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.openlocfilehash: 0828a5654171df39230055215903d3a49690155d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "80291568"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739248"
 ---
 # <a name="how-to-migrate-from-newtonsoftjson-to-systemtextjson"></a>Newtonsoft. Json から System.Text.Json に移行する方法
 
@@ -73,15 +73,15 @@ ms.locfileid: "80291568"
 | `JsonConvert.PopulateObject` メソッド                   | ⚠️[サポートされていない、回避策](#populate-existing-objects) |
 | `ObjectCreationHandling`グローバル設定               | ⚠️[サポートされていない、回避策](#reuse-rather-than-replace-properties) |
 | セッターを使用せずにコレクションに追加する                    | ⚠️[サポートされていない、回避策](#add-to-collections-without-setters) |
-| `PreserveReferencesHandling`グローバル設定           | ❌[サポートされていません](#preserve-object-references-and-handle-loops) |
-| `ReferenceLoopHandling`グローバル設定                | ❌[サポートされていません](#preserve-object-references-and-handle-loops) |
-| 属性の`System.Runtime.Serialization`サポート | ❌[サポートされていません](#systemruntimeserialization-attributes) |
-| `MissingMemberHandling`グローバル設定                | ❌[サポートされていません](#missingmemberhandling) |
-| 引用符を付けずにプロパティ名を許可する                   | ❌[サポートされていません](#json-strings-property-names-and-string-values) |
-| 文字列値の前後に単一引用符を使用できるようにする              | ❌[サポートされていません](#json-strings-property-names-and-string-values) |
-| 文字列プロパティに文字列以外の JSON 値を許可する    | ❌[サポートされていません](#non-string-values-for-string-properties) |
+| `PreserveReferencesHandling`グローバル設定           | ❌ [サポートされていません](#preserve-object-references-and-handle-loops) |
+| `ReferenceLoopHandling`グローバル設定                | ❌ [サポートされていません](#preserve-object-references-and-handle-loops) |
+| 属性の`System.Runtime.Serialization`サポート | ❌ [サポートされていません](#systemruntimeserialization-attributes) |
+| `MissingMemberHandling`グローバル設定                | ❌ [サポートされていません](#missingmemberhandling) |
+| 引用符を付けずにプロパティ名を許可する                   | ❌ [サポートされていません](#json-strings-property-names-and-string-values) |
+| 文字列値の前後に単一引用符を使用できるようにする              | ❌ [サポートされていません](#json-strings-property-names-and-string-values) |
+| 文字列プロパティに文字列以外の JSON 値を許可する    | ❌ [サポートされていません](#non-string-values-for-string-properties) |
 
-これは、機能の`Newtonsoft.Json`完全なリストではありません。 このリストには[、GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)の問題または[StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json)投稿で要求された多くのシナリオが含まれています。 現在サンプル コードを持たないシナリオの 1 つに回避策を実装し、ソリューションを共有する場合は、このページの[[フィードバック](/dotnet/standard/serialization/system-text-json-migrate-from-newtonsoft-how-to#feedback)] セクションでこの**ページ**を選択します。 これにより GitHub の問題が作成され、このページの下部に一覧表示されます。
+これは、機能の`Newtonsoft.Json`完全なリストではありません。 このリストには[、GitHub](https://github.com/dotnet/runtime/issues?q=is%3Aopen+is%3Aissue+label%3Aarea-System.Text.Json)の問題または[StackOverflow](https://stackoverflow.com/questions/tagged/system.text.json)投稿で要求された多くのシナリオが含まれています。 現在サンプル コードを持たないシナリオの 1 つに回避策を実装し、ソリューションを共有する場合は、このページの下部にある [**フィードバック**] セクションでこの**ページ**を選択します。 このドキュメントの GitHub リポジトリに問題が生じ、このページの**フィードバック**セクションにも一覧表示されます。
 
 ## <a name="differences-in-default-jsonserializer-behavior-compared-to-newtonsoftjson"></a>ニュートンソフト.Jsonとの既定の JsonSerializer 動作の違い
 
@@ -510,7 +510,7 @@ DOM<xref:System.Text.Json>は、JSON 要素を追加、削除、または変更�
 
 ### <a name="utf8jsonreader-is-a-ref-struct"></a>構造体です。
 
-`Utf8JsonReader`型は ref*構造体*であるため、[いくつかの制限があります](../../csharp/language-reference/keywords/ref.md#ref-struct-types)。 たとえば、ref 構造体以外のクラスまたは構造体にフィールドとして格納することはできません。 高いパフォーマンスを実現するには、この型は`ref struct`、ref 構造体である[入力の\<ReadOnlySpan バイト>](xref:System.ReadOnlySpan%601)をキャッシュする必要があるため、この型をする必要があります。 また、この型は状態を保持するため、変更可能です。 したがって、値ではなく**ref で渡**します。 値を渡すと、構造体のコピーが作成され、状態の変更は呼び出し元からは見えません。 これは、クラスであるため`Newtonsoft.Json``Newtonsoft.Json``JsonTextReader`、異なります。 ref 構造体の使用方法の詳細については、「[安全で効率的な C# コードを記述](../../csharp/write-safe-efficient-code.md)する 」を参照してください。
+`Utf8JsonReader`型は ref*構造体*であるため、[いくつかの制限があります](../../csharp/language-reference/builtin-types/struct.md#ref-struct)。 たとえば、ref 構造体以外のクラスまたは構造体にフィールドとして格納することはできません。 高いパフォーマンスを実現するには、この型は`ref struct`、ref 構造体である[入力の\<ReadOnlySpan バイト>](xref:System.ReadOnlySpan%601)をキャッシュする必要があるため、この型をする必要があります。 また、この型は状態を保持するため、変更可能です。 したがって、値ではなく**ref で渡**します。 値を渡すと、構造体のコピーが作成され、状態の変更は呼び出し元からは見えません。 これは、クラスであるため`Newtonsoft.Json``Newtonsoft.Json``JsonTextReader`、異なります。 ref 構造体の使用方法の詳細については、「[安全で効率的な C# コードを記述](../../csharp/write-safe-efficient-code.md)する 」を参照してください。
 
 ### <a name="read-utf-8-text"></a>UTF-8 テキストを読む
 

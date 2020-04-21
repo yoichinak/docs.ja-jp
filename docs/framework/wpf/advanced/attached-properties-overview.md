@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: 5086401f4616074d364c1d387b751116120d5969
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: b207db459776c9f8fa7ea247d01071eeb8c995cf
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389000"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739293"
 ---
 # <a name="attached-properties-overview"></a>添付プロパティの概要
 
@@ -20,11 +20,11 @@ ms.locfileid: "81389000"
 
 ## <a name="prerequisites"></a>前提条件<a name="prerequisites"></a>
 
-このトピックは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] クラスの既存の依存関係プロパティのコンシューマーの観点から依存関係プロパティを理解しており、「[依存関係プロパティの概要](dependency-properties-overview.md)」を読んでいることを前提としています。 このトピックの例に従うには、XAML を理解し、WPF アプリケーションの作成方法を理解する必要があります。
+この記事では、クラスの既存の依存関係プロパティのコンシューマーの観点から依存関係プロパティを[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]理解し、「[依存関係プロパティの概要](dependency-properties-overview.md)」を参照していることを前提としています。 この記事の例に従うには、XAML を理解し、WPF アプリケーションの作成方法を理解する必要もあります。
 
 ## <a name="why-use-attached-properties"></a>添付プロパティを使用する理由<a name="attached_properties_usage"></a>
 
-添付プロパティの目的の 1 つは、親要素に実際に定義されているプロパティに対する一意の値を、異なる子要素が指定できるようにすることです。 このシナリオの適用例として、子要素から親要素に、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] での表示方法を通知させることがあります。 その一例が<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>プロパティです。 プロパティ<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>は、それ自体ではなく<xref:System.Windows.Controls.DockPanel>、 内に含まれる要素に設定されるように設計されているため、<xref:System.Windows.Controls.DockPanel>添付プロパティとして作成されます。 この<xref:System.Windows.Controls.DockPanel>クラスは、<xref:System.Windows.DependencyProperty>という名前<xref:System.Windows.Controls.DockPanel.DockProperty>の静的フィールドを定義<xref:System.Windows.Controls.DockPanel.GetDock%2A>し<xref:System.Windows.Controls.DockPanel.SetDock%2A>、 と メソッドを添付プロパティのパブリック アクセサーとして提供します。
+添付プロパティの目的の 1 つは、親要素で定義されているプロパティに対して、異なる子要素が一意の値を指定できるようにすることです。 このシナリオの適用例として、子要素から親要素に、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] での表示方法を通知させることがあります。 その一例が<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>プロパティです。 プロパティ<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>は、それ自体<xref:System.Windows.Controls.DockPanel>ではなく、 内に含まれる要素に設定されるように設計されているため、<xref:System.Windows.Controls.DockPanel>添付プロパティとして作成されます。 この<xref:System.Windows.Controls.DockPanel>クラスは、<xref:System.Windows.DependencyProperty>という名前<xref:System.Windows.Controls.DockPanel.DockProperty>の静的フィールドを定義<xref:System.Windows.Controls.DockPanel.GetDock%2A>し<xref:System.Windows.Controls.DockPanel.SetDock%2A>、 と メソッドを添付プロパティのパブリック アクセサーとして提供します。
 
 ## <a name="attached-properties-in-xaml"></a>XAML の添付プロパティ<a name="attached_properties_xaml"></a>
 
@@ -34,13 +34,13 @@ XAML<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType
 
 [!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
-使用法は静的プロパティと似ています。名前で指定されたインスタンス<xref:System.Windows.Controls.DockPanel>を参照するのではなく、常に添付プロパティを所有し、登録する型を参照します。
+使用法は静的プロパティに似ています。名前で指定されたインスタンス<xref:System.Windows.Controls.DockPanel>を参照するのではなく、常に添付プロパティを所有し、登録する型を参照します。
 
-さらに、XAML の添付プロパティはマークアップに設定する属性であるため、設定操作にのみ関連性があります。 XAML でプロパティを直接取得することはできませんが、スタイルのトリガー (詳細については、「[スタイルとテンプレート](../controls/styling-and-templating.md)」を参照) などの値を比較するための間接的な機構があります。
+さらに、XAML の添付プロパティはマークアップに設定する属性であるため、設定操作にのみ関連性があります。 XAML でプロパティを直接取得することはできませんが、スタイルのトリガー (詳細については、「[スタイルとテンプレート](../../../desktop-wpf/fundamentals/styles-templates-overview.md)」を参照) などの値を比較するための間接的な機構があります。
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF での添付プロパティの実装
 
-では[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、UI プレゼンテーションに関連する WPF 型に存在する添付プロパティのほとんどは、依存関係プロパティとして実装されます。 添付プロパティは XAML の概念ですが、依存関係プロパティは WPF の概念です。 WPF 添付プロパティは依存関係プロパティであるため、プロパティ メタデータなどの依存関係プロパティの概念とそのプロパティ メタデータの既定値をサポートします。
+では[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、WPF 型の UI 関連の添付プロパティのほとんどは、依存関係プロパティとして実装されています。 添付プロパティは XAML の概念ですが、依存関係プロパティは WPF の概念です。 WPF 添付プロパティは依存関係プロパティであるため、プロパティ メタデータなどの依存関係プロパティの概念とそのプロパティ メタデータの既定値をサポートします。
 
 ## <a name="how-attached-properties-are-used-by-the-owning-type"></a>所有型で添付プロパティを使用する方法<a name="howused"></a>
 
@@ -91,7 +91,7 @@ XAML の場合と同様に`myCheckBox`、コードの 4 行目`myDockPanel`で�
 
 クラスが他の型で使用するために添付プロパティを厳密に定義している場合、そのクラスは から<xref:System.Windows.DependencyObject>派生する必要はありません。 ただし、アタッチされたプロパティを依存関係<xref:System.Windows.DependencyObject>プロパティにするという WPF モデル全体に従う場合は、から派生する必要があります。
 
-型のフィールドを宣言して、添付プロパティを`public static readonly`依存関係プロパティとして定義<xref:System.Windows.DependencyProperty>します。 このフィールドは、メソッドの戻り値を使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>して定義します。 フィールド名は、識別フィールドとそれらが表すプロパティに名前を付`Property`けるという確立された WPF パターンに従って、文字列を付加した添付プロパティ名と一致する必要があります。 また、添付プロパティ プロバイダは、静的**Get_PropertyName_** および**Set_PropertyName_** メソッドを添付プロパティのアクセサとして提供する必要があります。これを行わないと、プロパティ システムが添付プロパティを使用できなくなります。
+型のフィールドを宣言して、添付プロパティを`public static readonly`依存関係プロパティとして定義<xref:System.Windows.DependencyProperty>します。 このフィールドは、メソッドの戻り値を使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>して定義します。 フィールド名は、識別フィールドとそれらが表すプロパティに名前を付`Property`けるという確立された WPF パターンに従って、文字列を付加した添付プロパティ名と一致する必要があります。 また、添付プロパティ プロバイダは、静的**Get_PropertyName_** および**Set_PropertyName_** メソッドを添付プロパティのアクセサとして提供する必要があります。この操作を行わないと、プロパティ システムが添付プロパティを使用できなくなります。
 
 > [!NOTE]
 > 添付プロパティの get アクセサーを省略すると、Visual Studio や Visual Studio 用ブレンドなどのデザイン ツールでは、プロパティのデータ バインディングは機能しません。

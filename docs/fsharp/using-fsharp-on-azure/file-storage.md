@@ -3,20 +3,20 @@ title: F# を使用した Azure File Storage の概要
 description: Azure File Storage を使用してクラウドにファイル データを格納し、Azure 仮想マシン (VM) から、または Windows を実行しているオンプレミスのアプリケーションからクラウド ファイル共有をマウントします。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 2088442e05ba36b388a3324942ebbf8c7eb263dd
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 1b38ee53f2f73f7b7f4ee12f712f487cb726d41e
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607468"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739593"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F を使用して Azure ファイル ストレージを使用する\#
 
 Azure File Storage は、標準の [サーバー メッセージ ブロック (SMB) プロトコル](https://msdn.microsoft.com/library/windows/desktop/aa365233.aspx)を使用してクラウドでファイル共有を提供するサービスです。 SMB 2.1 と SMB 3.0 の両方がサポートされます。 Azure File Storage を使用すると、コストがかかる書き換えを行わずに、ファイル共有に依存しているレガシ アプリケーションをすばやく Azure に移行することができます。 Azure 仮想マシンまたはクラウド サービスで実行されているアプリケーション、またはオンプレミスのクライアントから実行されているアプリケーションは、デスクトップ アプリケーションが一般的な SMB 共有をマウントするのと同じように、クラウドにファイル共有をマウントできます。 このため、任意の数のアプリケーション コンポーネントが、File Storage 共有をマウントして同時にアクセスできます。
 
-ファイルストレージの概念的な概要については[、.NETのファイルストレージガイドを](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)参照してください。
+ファイル記憶域の概念の概要については[、.NET のファイル記憶域のガイドを](https://docs.microsoft.com/azure/storage/storage-dotnet-how-to-use-files)参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 このガイドを使用するには、まず[Azure ストレージ アカウントを作成する](https://docs.microsoft.com/azure/storage/storage-create-storage-account)必要があります。
 このアカウントにはストレージアクセスキーも必要です。
@@ -131,9 +131,9 @@ Azure ストレージ分析では、ファイル ストレージのメトリッ�
 
 [!code-fsharp[FileStorage](~/samples/snippets/fsharp/azure/file-storage.fsx#L126-L140)]
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
-Azure File Storage の詳細については、次のリンクを参照してください。
+Azure ファイル ストレージの詳細については、これらのリンクを参照してください。
 
 ### <a name="conceptual-articles-and-videos"></a>概念に関する記事とビデオ
 
@@ -146,7 +146,7 @@ Azure File Storage の詳細については、次のリンクを参照してく�
 - [Microsoft Azure Storage で AzCopy を使用する方法](https://docs.microsoft.com/azure/storage/storage-use-azcopy)
 - [Azure CLI を使用して BLOB を作成、ダウンロード、一覧表示する](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-cli#create-and-manage-file-shares)
 
-### <a name="reference"></a>関連項目
+### <a name="reference"></a>リファレンス
 
 - [.NET 用ストレージ クライアント ライブラリ リファレンス](https://msdn.microsoft.com/library/azure/mt347887.aspx)
 - [File サービスの REST API リファレンス](/rest/api/storageservices/fileservices/File-Service-REST-API)
