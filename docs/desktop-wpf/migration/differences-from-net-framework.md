@@ -4,12 +4,12 @@ description: Windows プレゼンテーション ファンデーション (WPF) 
 author: thraka
 ms.date: 09/21/2019
 ms.author: adegeo
-ms.openlocfilehash: 4386654aad205e3c9f2cbd986d7b812e261e737f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 341e576f17c522fbcbb9c417176e9d4a13ab1b18
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "81433134"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021839"
 ---
 # <a name="differences-in-wpf"></a>WPF の違い
 
@@ -40,7 +40,7 @@ ms.locfileid: "81433134"
 
 コード アクセス セキュリティ (CAS) は、.NET コアまたは .NET コアの WPF ではサポートされていません。 CAS 関連のすべての機能は、完全信頼の前提で処理されます。 .NET コアの WPF は、CAS 関連のコードを削除します。 これらの型への呼び出しが成功するために、これらの型のパブリック API サーフェスは依然として存在します。
 
-パブリックに定義された CAS 関連の型は、WPF アセンブリから CoreFX アセンブリに移動されました。 WPF アセンブリは、移動された型の新しい場所に設定された型転送を持っています。
+パブリックに定義された CAS 関連の型は、WPF アセンブリからコア .NET ライブラリ アセンブリに移動されました。 WPF アセンブリは、移動された型の新しい場所に設定された型転送を持っています。
 
 | ソース アセンブリ | ターゲット アセンブリ | Type                |
 | --------------- | --------------- | ------------------- |

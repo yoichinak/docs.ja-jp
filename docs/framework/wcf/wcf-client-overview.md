@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: c12579062b04cfb46e14d5c3d734a7c155f8d654
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: b314b61584e45ac5e80a248e639bdac427ba4a57
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81278887"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021725"
 ---
 # <a name="wcf-client-overview"></a>WCF クライアントの概要
 
@@ -42,7 +42,7 @@ ms.locfileid: "81278887"
 - クライアント チャネルを使用したサービスの呼び出し  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>サービス コントラクト、バインディング、およびアドレスを取得する  
- WCF では、サービスとクライアントは、マネージ属性、インターフェイス、およびメソッドを使用してコントラクトをモデル化します。 クライアント アプリケーションからサービスに接続するには、そのサービス コントラクトの型情報を取得する必要があります。 通常、これを行うには、サービスからメタデータをダウンロードし、任意の言語でマネージ ソース コード ファイルに変換し、WCF クライアント オブジェクトを構成するために使用できるクライアント アプリケーション構成ファイルを作成する[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe) を](servicemodel-metadata-utility-tool-svcutil-exe.md)使用します。 たとえば、`MyCalculatorService`を呼び出す WCF クライアント オブジェクトを作成する場合、そのサービスのメタデータが で`http://computerName/MyCalculatorService/Service.svc?wsdl`公開されている場合、次のコード例は、マネージ コードでサービス コントラクトを含む`ClientCode.vb`ファイルを取得するために Svcutil.exe を使用する方法を示しています。  
+ WCF では、サービスとクライアントは、マネージ属性、インターフェイス、およびメソッドを使用してコントラクトをモデル化します。 クライアント アプリケーションからサービスに接続するには、そのサービス コントラクトの型情報を取得する必要があります。 通常は、サービス コントラクトの型情報を取得するには、[サービス モデル メタデータ ユーティリティ ツール (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)を使用します。 このユーティリティは、サービスからメタデータをダウンロードし、選択した言語でマネージ ソース コード ファイルに変換し、WCF クライアント オブジェクトの構成に使用できるクライアント アプリケーション構成ファイルを作成します。 たとえば、`MyCalculatorService`を呼び出す WCF クライアント オブジェクトを作成する場合、そのサービスのメタデータが で`http://computerName/MyCalculatorService/Service.svc?wsdl`公開されている場合、次のコード例は、マネージ コードでサービス コントラクトを含む`ClientCode.vb`ファイルを取得するために Svcutil.exe を使用する方法を示しています。  
   
 ```console  
 svcutil /language:vb /out:ClientCode.vb /config:app.config http://computerName/MyCalculatorService/Service.svc?wsdl  
