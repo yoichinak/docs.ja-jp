@@ -489,7 +489,7 @@
                     - name: CSV テキスト ファイルの列値を計算する方法 (LINQ)
                       href: programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md
                 - name: LINQ とリフレクション
-                  href: programming-guide/concepts/linq/linq-and-reflection.md
+                  href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: リフレクションを使用してアセンブリのメタデータを照会する方法 (LINQ)
                   href: programming-guide/concepts/linq/how-to-query-an-assembly-s-metadata-with-reflection-linq.md
                 - name: LINQ とファイル ディレクトリ
@@ -1322,7 +1322,7 @@
                   displayName: 'enum, bit flags, bit field'
                 - name: 構造体型
                   href: language-reference/builtin-types/struct.md
-                  displayName: 'struct type, readonly'
+                  displayName: 'struct type, readonly struct, ref struct, readonly ref struct'
                 - name: null 許容値型
                   href: language-reference/builtin-types/nullable-value-types.md
                   displayName: '? token, ? symbol'
