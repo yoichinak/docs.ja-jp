@@ -130,6 +130,8 @@
           href: additional-security-considerations-in-windows-forms.md
     - name: Windows フォームの ClickOnce 配置
       href: clickonce-deployment-for-windows-forms.md
+    - name: .NET Core 3.0 でのアクセシビリティの向上
+      href: windows-forms-accessibility-improvements.md
     - name: '方法: Windows フォームのコレクションにアクセス キーを指定する'
       href: how-to-access-keyed-collections-in-windows-forms.md
     - name: Windows フォーム アプリケーションの拡張
