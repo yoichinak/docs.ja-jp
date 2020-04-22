@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - what's new [.NET Framework]
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
-ms.openlocfilehash: d5657f4081577b2a27bc3c2f6880784015c56060
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f56ba7d68be107e697d3f732767f0a5f11c1a622
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249696"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644230"
 ---
 # <a name="whats-new-in-net-framework"></a>.NET Framework の新機能
 
@@ -695,7 +695,7 @@ GitHub で [.NET Framework 4.7 の暗号化の向上の例](https://gist.github.
 
 **DataContractJsonSerializer による制御文字のサポートの向上**
 
-.NET Framework 4.7 の <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では、ECMAScript 6 標準に準拠して制御文字がシリアル化されます。 この動作は、.NET Framework 4.7 を対象とするアプリケーションでは既定で有効になり、.NET Framework 4.7 で実行していても対象が以前のバージョンの .NET Framework であるアプリケーションの場合はオプトイン機能です。 詳細については、「[.NET Framework 4.7 における再ターゲットの変更点](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)」をご覧ください。
+.NET Framework 4.7 の <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> クラスでは、ECMAScript 6 標準に準拠して制御文字がシリアル化されます。 この動作は、.NET Framework 4.7 を対象とするアプリケーションでは既定で有効になり、.NET Framework 4.7 で実行していても対象が以前のバージョンの .NET Framework であるアプリケーションの場合はオプトイン機能です。 詳細については、「[アプリケーションの互換性](../migration-guide/application-compatibility.md)」セクションを参照してください。
 
 <a name="net47" />
 
@@ -768,11 +768,11 @@ WCF に競合状態を除去する複数のコード変更が追加され、シ�
 
 **Windows WM_POINTER メッセージに基づくタッチ/スタイラス スタックのサポート**
 
-Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages)に基づいてタッチ/スタイラス スタックを使うオプションが追加されました。 これは、.NET Framework のオプトイン機能です。 詳細については、「[.NET Framework 4.7 における再ターゲットの変更点](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)」をご覧ください。
+Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ](https://docs.microsoft.com/previous-versions/windows/desktop/InputMsg/messages)に基づいてタッチ/スタイラス スタックを使うオプションが追加されました。 これは、.NET Framework のオプトイン機能です。 詳細については、「[アプリケーションの互換性](../migration-guide/application-compatibility.md)」セクションを参照してください。
 
 **WPF 印刷 API の新しい実装**
 
-<xref:System.Printing.PrintQueue?displayProperty=nameWithType> クラスの WPF 印刷 API は、非推奨になった [XPS 印刷 API](/windows/desktop/printdocs/xps-printing) ではなく Windows [ドキュメント印刷パッケージ API](/windows/desktop/printdocs/tailored-app-printing-api) を呼び出します。 アプリケーションの互換性に対するこの変更の影響については、「[.NET Framework 4.7 における再ターゲットの変更点](../migration-guide/retargeting-changes-in-the-net-framework-4-7.md)」をご覧ください。
+<xref:System.Printing.PrintQueue?displayProperty=nameWithType> クラスの WPF 印刷 API は、非推奨になった [XPS 印刷 API](/windows/desktop/printdocs/xps-printing) ではなく Windows [ドキュメント印刷パッケージ API](/windows/desktop/printdocs/tailored-app-printing-api) を呼び出します。 アプリケーションの互換性に対するこの変更の影響については、「[アプリケーションの互換性](../migration-guide/application-compatibility.md)」をご覧ください。
 
 <a name="v462" />
 
