@@ -1,71 +1,68 @@
 ---
 title: 非同期の戻り値の型 (C#)
-ms.date: 05/29/2017
+ms.date: 04/14/2020
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 9926fea5308f9088ad924bcc98d8deed319c6300
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 73a6e1924652c8635377547e2faddc864ac5540a
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170040"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389134"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
+
 非同期メソッドには、次の戻り値の型があります。
 
 - <xref:System.Threading.Tasks.Task%601>: 値を返す非同期メソッドの場合。
-
 - <xref:System.Threading.Tasks.Task>: 操作を実行し、値を返さない非同期メソッドの場合。
-
 - `void`: イベント ハンドラーの場合。
+- C# 7.0 以降、アクセス可能な `GetAwaiter` を持つ任意の型です。 <xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> メソッドによって返されるオブジェクトは、`GetAwaiter` インターフェイスを実装する必要があります。
+- C# 8.0 以降、"*非同期ストリーム*" を返す非同期メソッドの場合は <xref:System.Collections.Generic.IAsyncEnumerable%601>。
 
-- C# 7.0 以降、アクセス可能な `GetAwaiter` を持つ任意の型です。 `GetAwaiter` メソッドによって返されるオブジェクトは、<xref:System.Runtime.CompilerServices.ICriticalNotifyCompletion?displayProperty=nameWithType> インターフェイスを実装する必要があります。
-  
 非同期メソッドの詳細については、「[Async および Await を使用した非同期プログラミング (C#)](./index.md)」を参照してください。  
   
-それぞれの戻り値の型は、次のセクションの 1 つで確認でき、トピックの最後で 3 種類のすべてを使用する例を参照できます。  
-  
-## <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> の戻り値の型  
-<xref:System.Threading.Tasks.Task%601> 型のオペランドを持つ [return](../../../language-reference/keywords/return.md) (C#) ステートメントを含む非同期メソッドには、`TResult` 戻り値の型が使用されます。  
+## <a name="tasktresult-return-type"></a>Task\<TResult\> の戻り値の型  
+オペランドが `TResult` の [return](../../../language-reference/keywords/return.md) (C#) ステートメントを含む非同期メソッドには、<xref:System.Threading.Tasks.Task%601> 戻り値の型が使用されます。  
   
 次の例では、`GetLeisureHours` 非同期メソッドには整数を返す `return` ステートメントが含まれます。 そのため、メソッド宣言では、戻り値の型を `Task<int>` と指定する必要があります。  <xref:System.Threading.Tasks.Task.FromResult%2A> 非同期メソッドは、文字列を返す操作を表すプレースホルダーです。
   
-[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1.cs)]
+:::code language="csharp" source="./snippets/async-returns1.cs" id="SnippetFirstExample":::
 
-`GetLeisureHours` が `ShowTodaysInfo` メソッドの await 式の中から呼び出されると、await 式は `leisureHours` メソッドから返されるタスクに格納されている整数値 (`GetLeisureHours` の値) を取得します。 await 式の詳細については、「[await](../../../language-reference/operators/await.md)」を参照してください。  
+`GetLeisureHours` が `ShowTodaysInfo` メソッドの await 式の中から呼び出されると、await 式は `GetLeisureHours` メソッドから返されるタスクに格納されている整数値 (`leisureHours` の値) を取得します。 await 式の詳細については、「[await](../../../language-reference/operators/await.md)」を参照してください。  
   
-次のコードに示すように、`GetLeisureHours` の呼び出しと、`await` の適用を分離すると、この仕組みをよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `integerTask` 変数に割り当てられます。 `integerTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `integerTask` に適用されると、<xref:System.Threading.Tasks.Task%601.Result%2A> の `integerTask` プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
+次のコードが示すように、`GetLeisureHours` への呼び出しを `await` のアプリケーションから分離すると、`await` で `Task<T>` から結果を取得する方法をよりよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `integerTask` 変数に割り当てられます。 `integerTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `integerTask` に適用されると、`integerTask` の <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
   
 > [!IMPORTANT]
-> <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは Blocking プロパティです。 タスクが終了する前にアクセスしようとすると、現在アクティブなスレッドは、タスクが完了して値が使用可能になるまで、ブロックされます。 多くの場合、プロパティに直接アクセスする代わりに、`await` を使用して値にアクセスする必要があります。 <br/> 前の例では、アプリケーションが終了する前に <xref:System.Threading.Tasks.Task%601.Result%2A> メソッドが実行を終了できるように、`ShowTodaysInfo` プロパティの値を取得してメイン スレッドをブロックしました。  
+> <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは Blocking プロパティです。 タスクが終了する前にアクセスしようとすると、現在アクティブなスレッドは、タスクが完了して値が使用可能になるまで、ブロックされます。 多くの場合、プロパティに直接アクセスする代わりに、`await` を使用して値にアクセスする必要があります。 <br/> 前の例では、アプリケーションが終了する前に `ShowTodaysInfo` メソッドが実行を終了できるように、<xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの値を取得してメイン スレッドをブロックしました。  
 
-[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
-  
-## <a name="BKMK_TaskReturnType"></a>Task 型  
+:::code language="csharp" source="./snippets/async-returns1a.cs" id="SnippetSecondVersion":::
+
+## <a name="task-return-type"></a>Task の戻り値の型  
 `return` ステートメントを含まない非同期メソッド、またはオペランドを返さない `return` ステートメントを含む非同期メソッドは、通常は <xref:System.Threading.Tasks.Task> の戻り値の型を指定します。 こうしたメソッドは、同期的に実行するように作成されている場合に `void` を返します。 非同期メソッドに戻り値の型 <xref:System.Threading.Tasks.Task> を使用した場合、呼び出し元のメソッドは `await` 演算子を使って、呼び出された async のメソッドが終了するまで、呼び出し元の完了を中断します。  
   
-次の例では、`WaitAndApologize` 非同期メソッドには `return` ステートメントが含まれていないため、メソッドは <xref:System.Threading.Tasks.Task> オブジェクトを返します。 これにより、`WaitAndApologize` を待機できます。 <xref:System.Threading.Tasks.Task> 型には戻り値がないため、`Result` プロパティを含みません。  
+次の例では、`WaitAndApologize` 非同期メソッドには `return` ステートメントが含まれていないため、メソッドは <xref:System.Threading.Tasks.Task> オブジェクトを返します。 `Task` を返すことで、`WaitAndApologize` を待機できるようになります。 <xref:System.Threading.Tasks.Task> 型には戻り値がないため、`Result` プロパティを含みません。  
 
-[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2.cs)]  
-  
+:::code language="csharp" source="./snippets/async-returns2.cs" id="SnippetTaskReturn":::
+
 `WaitAndApologize` を待機するには、void を返す同期メソッドを呼び出す場合と同様に、await 式でなく、await ステートメントを使用します。 この場合、await 演算子の適用によって値は生成されません。  
   
 前の <xref:System.Threading.Tasks.Task%601> の例のように、次のコードに示すとおり、`WaitAndApologize` の呼び出しを await 演算子の適用から分離することができます。 ただし `Task` は `Result` プロパティを持たないこと、また await 演算子が `Task` に適用されるときに値は生成されないことに注意します。  
   
 次のコードは、`WaitAndApologize` メソッドの呼び出しを、そのメソッドが返すタスクの待機から分離します。  
 
-[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
+:::code language="csharp" source="./snippets/async-returns2a.cs" id="SnippetAwaitTask":::
 
-## <a name="BKMK_VoidReturnType"></a> Void 戻り値の型
+## <a name="void-return-type"></a>Void の戻り値の型
 
-`void` 戻り値の型は、`void` 戻り値の型が必要な非同期イベント ハンドラーで使用します。 値を返さないイベント ハンドラー以外のメソッドについては、<xref:System.Threading.Tasks.Task> を返す必要があります。これは、`void` を返す非同期メソッドを待機できないためです。 このようなメソッドの呼び出し元は、呼び出した非同期メソッドが完了するのを待たずに、完了まで継続できる必要があります。また呼び出し元は、非同期メソッドが生成する値または例外とは無関係である必要があります。  
+`void` 戻り値の型は、`void` 戻り値の型が必要な非同期イベント ハンドラーで使用します。 値を返さないイベント ハンドラー以外のメソッドについては、<xref:System.Threading.Tasks.Task> を返す必要があります。これは、`void` を返す非同期メソッドを待機できないためです。 このようなメソッドの呼び出し元は、呼び出された非同期メソッドが完了するまで待機せずに、完了するまで続行する必要があります。 呼び出し元は、非同期メソッドによって生成される値や例外から独立している必要があります。  
   
-void を返す非同期メソッドの呼び出し元は、メソッドがスローする例外をキャッチすることはできません。そのようなハンドルされない例外によって、アプリケーションが失敗する可能性が高くなります。 <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返す非同期メソッドで例外が発生すると、例外は返されたタスクに格納され、タスクが待機するときに再スローされます。 したがって、例外を生成する場合がある非同期メソッドは <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> の戻り値の型を持つこと、またメソッドの呼び出しが待機することを確認します。  
+void を返す非同期メソッドの呼び出し元は、メソッドからスローされる例外をキャッチすることはできません。そのようなハンドルされない例外によって、アプリケーションが失敗する可能性が高くなります。 <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返すメソッドから例外がスローされた場合、例外は返されたタスクに格納されます。 タスクを待機しているときは、例外が再スローされます。 したがって、例外を生成する場合がある非同期メソッドは <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> の戻り値の型を持つこと、またメソッドの呼び出しが待機することを確認します。  
   
-非同期メソッドで例外をキャッチする方法の詳細については、「[try-catch](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods)」トピックの「[非同期メソッドの例外](../../../language-reference/keywords/try-catch.md)」を参照してください。  
+非同期メソッドで例外をキャッチする方法の詳細については、「[try-catch](../../../language-reference/keywords/try-catch.md)」の記事の「[非同期メソッドの例外](../../../language-reference/keywords/try-catch.md#exceptions-in-async-methods)」を参照してください。  
   
-次の例では、非同期イベント ハンドラーの動作を示します。 コード例では、非同期イベント ハンドラーが終了したとき、その非同期イベント ハンドラーからメイン スレッドに通知が送られる必要があることに注目してください。 このため、メイン スレッドでは、非同期イベント ハンドラーの終了を待ってから、プログラムを終了することができます。
+次の例では、非同期イベント ハンドラーの動作を示します。 コード例では、非同期イベント ハンドラーが終了したとき、その非同期イベント ハンドラーからメイン スレッドに通知が送られる必要があります。 このため、メイン スレッドでは、非同期イベント ハンドラーの終了を待ってから、プログラムを終了することができます。
 
-[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns3.cs)]  
+:::code language="csharp" source="./snippets/async-returns3.cs":::
 
 ## <a name="generalized-async-return-types-and-valuetasktresult"></a>一般化された非同期の戻り値の型と ValueTask\<TResult\>
 
@@ -75,12 +72,20 @@ C# 7.0 以降、非同期メソッドで、アクセス可能な `GetAwaiter` �
 
 .NET には、一般化されたタスク戻り値の軽量な実装として、<xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 構造が用意されています。 <xref:System.Threading.Tasks.ValueTask%601?displayProperty=nameWithType> 型を使用するには、`System.Threading.Tasks.Extensions` NuGet パッケージをプロジェクトに追加する必要があります。 次の例では、<xref:System.Threading.Tasks.ValueTask%601> 構造を使用して、2 つのさいころを転がしたときの値を取得します。
   
-[!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-valuetask.cs)]
+:::code language="csharp" source="./snippets/async-valuetask.cs":::
 
-## <a name="see-also"></a>参照
+## <a name="async-streams-with-iasyncenumerablet"></a>IAsyncEnumerable\<T\> を使用する非同期ストリーム
+
+C# 8.0 以降は、非同期メソッドから <xref:System.Collections.Generic.IAsyncEnumerable%601> で表される*非同期ストリーム*が返される場合があります。 非同期ストリームを使用すると、非同期呼び出しが繰り返される要素がチャンクで生成されるときに、ストリームから読み取られた項目を列挙できます。 次の例は、非同期ストリームを生成する非同期メソッドを示しています。
+
+:::code language="csharp" source="./snippets/AsyncStreams.cs" id="SnippetGenerateAsyncStream":::
+
+前の例では、文字列から非同期に行を読み取ります。 各行が読み取られると、コードによって文字列内の各単語が列挙されます。 呼び出し元では、`await foreach` ステートメントを使用して各単語を列挙します。 このメソッドを使用すると、ソース文字列から次の行を非同期的に読み取る必要があるときに待機できます。
+
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [チュートリアル: async と await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](./walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [非同期プログラムにおける制御フロー (C#)](./control-flow-in-async-programs.md)
 - [async](../../../language-reference/keywords/async.md)
 - [await](../../../language-reference/operators/await.md)

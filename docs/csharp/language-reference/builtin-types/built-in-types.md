@@ -6,18 +6,18 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: 4f748373350ed0596a5f1d595c273243ae3227c3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bf8823c6674b1ff3f0028a50df8ce8d0f803cfc1
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77095295"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389495"
 ---
 # <a name="built-in-types-c-reference"></a>組み込み型 (C# リファレンス)
 
 C# の組み込みの[値](value-types.md)型を次の表に一覧表示します。
 
-|C# 型キーワード|.NET の種類|
+|C# 型キーワード|.NET 型|
 |--------------|-------------------------|
 |[`bool`](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|
 |[`byte`](integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|
@@ -35,19 +35,21 @@ C# の組み込みの[値](value-types.md)型を次の表に一覧表示しま�
 
 C# の組み込みの[参照](../keywords/reference-types.md)型を次の表に一覧表示します。
 
-|C# 型キーワード|.NET の種類|
+|C# 型キーワード|.NET 型|
 |--------------|-------------------------|
 |[`object`](reference-types.md#the-object-type)|<xref:System.Object?displayProperty=nameWithType>|
 |[`string`](reference-types.md#the-string-type)|<xref:System.String?displayProperty=nameWithType>|
 
-上の表の左の列にある各 C# 型キーワードは、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では同じ型の変数が宣言されています。
+上の表の左の列にある各 C# 型キーワードは、対応する .NET 型の別名です。 これらは交換可能です。 たとえば、次の宣言では、同じ型の変数が宣言されています。
 
 ```csharp
 int a = 123;
 System.Int32 b = 123;
 ```
 
-## <a name="see-also"></a>参照
+[`void`](void.md) キーワードで、値がないことが表されます。 値を返さないメソッドの戻り値の型として使用します。
+
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# 型の既定値](default-values.md)

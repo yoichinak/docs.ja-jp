@@ -4,12 +4,12 @@ description: ML.NET を使用すると、オンラインまたはオフライン
 ms.date: 11/5/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: 169250adf81992ad0025e78eb9c8f151107bcf40
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0929005e02ad9b43636213735f8c7232aa6d4f42
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185862"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607772"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -25,10 +25,10 @@ ML.NET で行うことができる予測の種類の例を次に示します。
 
 |||
 |-|-|
-|分類/カテゴリ|顧客からのフィードバックを肯定的なカテゴリと否定的なカテゴリに自動的に分割します|
-|回帰/予測の連続値|サイズと場所に基づいて住宅の価格を予測する|
+|分類/カテゴリ化|カスタマー フィードバックを自動的に肯定的なカテゴリと否定的なカテゴリに分類する|
+|回帰/連続値の予測|サイズと場所に基づいて住宅の価格を予測する|
 |異常検出|不正な銀行取引を検出する |
-|Recommendations|以前の購入に基づいて、オンラインの顧客が購入する商品を提案します|
+|推奨事項|以前の購入に基づいてオンラインの買い物客が購入する可能性がある商品を提案する|
 |時系列/シーケンシャル データ|天気/製品売上を予測する|
 |イメージ分類|病状を医療画像で分類する|
 
@@ -101,7 +101,7 @@ ML.NET で行うことができる予測の種類の例を次に示します。
 
 これらの概念についてもう少し詳しく掘り下げてみましょう。
 
-## <a name="machine-learning-model"></a>Machine Learning モデル
+## <a name="machine-learning-model"></a>機械学習モデル
 
 ML.NET モデルは、予測される出力に到達するために入力データに対して実行される変換を含むオブジェクトです。
 
@@ -123,7 +123,7 @@ ML.NET モデルは、予測される出力に到達するために入力デー�
 
 住宅価格モデルとテキスト分類モデルはどちらも**線形**モデルです。 データの性質や解決対象の問題に応じて、**デシジョン ツリー** モデル、**一般化加法**モデルなどを使用することもできます。 モデルの詳細については、[タスク](./resources/tasks.md)に関する記事を参照してください。
 
-## <a name="data-preparation"></a>データの準備
+## <a name="data-preparation"></a>データ準備
 
 ほとんどの場合、利用できるデータは、機械学習モデルのトレーニングにそのまま使用するために適していません。 生データは使用前に準備するか前処理して、モデルのパラメーターを見つける必要があります。 文字列値から数値表現へのデータの変換が必要な場合があります。 入力データには冗長な情報が含まれる場合があります。 入力データの次元の縮小または拡大が必要な場合があります。 データの正規化またはスケールが必要な場合があります。
 
@@ -173,7 +173,7 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 |||||
 |-|-|-|-|
 |データの読み込みと保存||<xref:Microsoft.ML.DataOperationsCatalog>||
-|データの準備||<xref:Microsoft.ML.TransformsCatalog>||
+|データ準備||<xref:Microsoft.ML.TransformsCatalog>||
 |トレーニングのアルゴリズム|二項分類|<xref:Microsoft.ML.BinaryClassificationCatalog>||
 ||多クラス分類|<xref:Microsoft.ML.MulticlassClassificationCatalog>||
 ||異常検出|<xref:Microsoft.ML.AnomalyDetectionCatalog>||
@@ -181,7 +181,7 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
 ||予測|<xref:Microsoft.ML.ForecastingCatalog>||
 ||ランキング|<xref:Microsoft.ML.RankingCatalog>||
 ||回帰|<xref:Microsoft.ML.RegressionCatalog>||
-||推奨|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet パッケージを取得する|
+||推奨事項|<xref:Microsoft.ML.RecommendationCatalog>|`Microsoft.ML.Recommender` NuGet パッケージを取得する|
 ||TimeSeries|<xref:Microsoft.ML.TimeSeriesCatalog>|`Microsoft.ML.TimeSeries` NuGet パッケージを取得する|
 |モデルの使用法 ||<xref:Microsoft.ML.ModelOperationsCatalog>||
 
@@ -230,7 +230,7 @@ ML.NET アプリケーションは <xref:Microsoft.ML.MLContext> オブジェク
     var price = predEngine.Predict(size);
 ```
 
-`CreatePredictionEngine()` メソッドは、入力クラスと出力クラスを受け取ります。 このフィールドの名前やコード属性によって、モデルのトレーニングと予測中に使用されるデータ列の名前が決まります。 方法のセクションで [1 つの予測方法](./how-to-guides/single-predict-model-ml-net.md)に関する記事を参照してください。
+`CreatePredictionEngine()` メソッドは、入力クラスと出力クラスを受け取ります。 このフィールドの名前やコード属性によって、モデルのトレーニングと予測中に使用されるデータ列の名前が決まります。 詳細については、「[トレーニング済みモデルを使用して予測する](how-to-guides/machine-learning-model-predictions-ml-net.md)」を参照してください。
 
 ### <a name="data-models-and-schema"></a>データ モデルとスキーマ
 
@@ -278,7 +278,7 @@ DataView オブジェクトの重要なプロパティは、**遅延**評価さ�
    mlContext.Model.Save(model, trainingData.Schema,"model.zip");
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [チュートリアル](./tutorials/index.md)で、より現実的なデータ セットと共にさまざまな機械学習タスクを使用してアプリケーションを構築する方法を学習します。
 

@@ -2,12 +2,12 @@
 title: dotnet vstest コマンド
 description: dotnet vstest コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 02/27/2020
-ms.openlocfilehash: 88e5b6a8966d78d0746f9ea5ccbccab142a2e0f6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156934"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463281"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -20,11 +20,15 @@ ms.locfileid: "78156934"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
-    [--TestAdapterPath] [--Platform] [--Framework] [--Parallel]
-    [--TestCaseFilter] [--logger] [-lt|--ListTests]
-    [--ParentProcessId] [--Port] [--Diag] [--Blame]
-    [--InIsolation] [[--] <args>...]] [-?|--Help]
+dotnet vstest [<TEST_FILE_NAMES>] [--Blame] [--Diag <PATH_TO_LOG_FILE>]
+    [--Framework <FRAMEWORK>] [--InIsolation] [-lt|--ListTests <FILE_NAME>]
+    [--logger <LOGGER_URI/FRIENDLY_NAME>] [--Parallel]
+    [--ParentProcessId <PROCESS_ID>] [--Platform] <PLATFORM_TYPE>
+    [--Port <PORT>] [--ResultsDirectory<PATH>] [--Settings <SETTINGS_FILE>]
+    [--TestAdapterPath <PATH>] [--TestCaseFilter <EXPRESSION>]
+    [--Tests <TEST_NAMES>] [[--] <args>...]]
+
+dotnet vstest -?|--Help
 ```
 
 ## <a name="description"></a>説明
@@ -39,39 +43,27 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
 
 ## <a name="options"></a>オプション
 
-- **`--Settings <Settings File>`**
+- **`--Blame`**
 
-  テストの実行時に使用される設定です。
+  変更履歴モードでテストを実行します。 このオプションは、テスト ホストのクラッシュを引き起こす問題のあるテストを分離するのに役立ちます。 これは、現在のディレクトリ内に出力ファイルを *Sequence.xml* として作成します。このファイルは、クラッシュ前にテストの実行順序をキャプチャします。
 
-- **`--Tests <Test Names>`**
+- **`--Diag <PATH_TO_LOG_FILE>`**
 
-  指定した値に一致する名前のテストを実行します。 複数の値を指定するときは、コンマで区切ります。
+  テスト プラットフォームの詳細ログを有効にします。 指定されたファイルにログが書き込まれます。
 
-- **`--TestAdapterPath`**
-
-  テストの実行では、指定されたパス (存在する場合) からカスタム テスト アダプターを使用します。
-
-- **`--Platform <Platform type>`**
-
-  テストの実行に使用する対象のプラットフォーム アーキテクチャです。 有効な値は `x86`、`x64`、`ARM` です。
-
-- **`--Framework <Framework Version>`**
+- **`--Framework <FRAMEWORK>`**
 
   テストの実行に使用する対象の .NET Framework バージョンです。 有効な値の例としては、`.NETFramework,Version=v4.6` や `.NETCoreApp,Version=v1.0` などがあります。 サポートされるその他の値は、`Framework40`、`Framework45`、`FrameworkCore10`、および `FrameworkUap10` です。
 
-- **`--Parallel`**
+- **`--InIsolation`**
 
-  テストを並列で実行します。 既定では、コンピューター上のすべての使用可能なコアを使用できます。 *runsettings* ファイルの `RunConfiguration` ノードの下に `MaxCpuCount` プロパティを設定して、明示的なコア数を指定します。
+  分離プロセスでテストを実行します。 これにより、テストでエラーが発生しても *vstest.console.exe* プロセスが停止することは少なくなりますが、テストの実行速度は低下する可能性があります。
 
-- **`--TestCaseFilter <Expression>`**
+- **`-lt|--ListTests <FILE_NAME>`**
 
-  指定した式に一致するテストを実行します。 `<Expression>` の形式は `<property>Operator<value>[|&<Expression>]` です。この場合の演算子は `=`、`!=`、または `~` のいずれかになります。 演算子 `~` は 'contains' セマンティクスを持ち、`DisplayName` などの文字列プロパティに適用できます。 サブ式をグループ化するにはかっこ `()` を使用します。
+  指定されたテスト コンテナーから探索されたテストをすべて一覧表示します。
 
-- **`-?|--Help`**
-
-  コマンドの短いヘルプを印刷します。
-
-- **`--logger <Logger Uri/FriendlyName>`**
+- **`--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   テスト結果のロガーを指定します。
 
@@ -93,29 +85,45 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings] [--Tests]
     /logger:trx [;LogFileName=<Defaults to unique file name>]
     ```
 
-- **`-lt|--ListTests <File Name>`**
+- **`--Parallel`**
 
-  指定されたテスト コンテナーから探索されたテストをすべて一覧表示します。
+  テストを並列で実行します。 既定では、コンピューター上のすべての使用可能なコアを使用できます。 *runsettings* ファイルの `RunConfiguration` ノードの下に `MaxCpuCount` プロパティを設定して、明示的なコア数を指定します。
 
-- **`--ParentProcessId <ParentProcessId>`**
+- **`--ParentProcessId <PROCESS_ID>`**
 
   現在のプロセスを起動する親プロセスのプロセス ID です。
 
-- **`--Port <Port>`**
+- **`--Platform <PLATFORM_TYPE>`**
+
+  テストの実行に使用する対象のプラットフォーム アーキテクチャです。 有効な値は `x86`、`x64`、`ARM` です。
+
+- **`--Port <PORT>`**
 
   ソケット接続およびイベント メッセージの受信用のポートを指定します。
 
-- **`--Diag <Path to log file>`**
+- **`--ResultsDirectory:<PATH>`**
 
-  テスト プラットフォームの詳細ログを有効にします。 指定されたファイルにログが書き込まれます。
+  テスト結果ディレクトリが存在しない場合、指定されたパスに作成されます。
 
-- **`--Blame`**
+- **`--Settings <SETTINGS_FILE>`**
 
-  変更履歴モードでテストを実行します。 このオプションは、テスト ホストのクラッシュを引き起こす問題のあるテストを分離するのに役立ちます。 これは、現在のディレクトリ内に出力ファイルを *Sequence.xml* として作成します。このファイルは、クラッシュ前にテストの実行順序をキャプチャします。
+  テストの実行時に使用される設定です。
 
-- **`--InIsolation`**
+- **`--TestAdapterPath <PATH>`**
 
-  分離プロセスでテストを実行します。 これにより、テストでエラーが発生しても *vstest.console.exe* プロセスが停止することは少なくなりますが、テストの実行速度は低下する可能性があります。
+  テストの実行では、指定されたパス (存在する場合) からカスタム テスト アダプターを使用します。
+
+- **`--TestCaseFilter <EXPRESSION>`**
+
+  指定した式に一致するテストを実行します。 `<EXPRESSION>` の形式は `<property>Operator<value>[|&<EXPRESSION>]` です。この場合の演算子は `=`、`!=`、または `~` のいずれかになります。 演算子 `~` は 'contains' セマンティクスを持ち、`DisplayName` などの文字列プロパティに適用できます。 サブ式のグループ化には、かっこ `()` を使用します。 詳細については、[TestCase フィルター](https://github.com/Microsoft/vstest-docs/blob/master/docs/filter.md)に関するページを参照してください。
+
+- **`--Tests <TEST_NAMES>`**
+
+  指定した値に一致する名前のテストを実行します。 複数の値を指定するときは、コンマで区切ります。
+
+- **`-?|--Help`**
+
+  コマンドの短いヘルプを印刷します。
 
 - **`@<file>`**
 
@@ -156,3 +164,7 @@ dotnet vstest /Tests:TestMethod1
 ```dotnetcli
 dotnet vstest /Tests:TestMethod1,TestMethod2
 ```
+
+## <a name="see-also"></a>関連項目
+
+- [VSTest.Console.exe のコマンド ライン オプション](/visualstudio/test/vstest-console-options)

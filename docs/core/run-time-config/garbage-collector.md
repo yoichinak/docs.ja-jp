@@ -3,12 +3,12 @@ title: ガベージ コレクター構成の設定
 description: ガベージ コレクターでの .NET Core アプリ用のメモリの管理方法を構成するための、実行時設定について学習します。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: 044083d69601f5092724a46d358b2ee5673d428d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76733525"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607811"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>ガベージ コレクションの実行時構成オプション
 
@@ -117,8 +117,8 @@ ms.locfileid: "76733525"
 
 - ガベージ コレクターによって作成されるヒープの数を制限します。
 - サーバー ガベージ コレクションにのみ適用されます。
-- GC プロセッサの関係が有効になっている場合 (既定値)、ヒープ数の設定では、最初の `n` プロセッサに `n` GC ヒープやスレッドを関連付けます (関係付けマスクまたは関係付け範囲の設定を使用して、関係付けるプロセッサを正確に指定します)。
-- GC プロセッサの関係が無効になっている場合、この設定によって GC ヒープの数が制限されます。
+- [GC プロセッサの関係](#systemgcnoaffinitizecomplus_gcnoaffinitize)が有効になっている場合 (既定値)、ヒープ数の設定では、最初の `n` プロセッサに `n` GC ヒープやスレッドを関連付けます。 ([関係付けマスク](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask)または[関係付け範囲](#systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges)の設定を使用して、関係付けるプロセッサを正確に指定します)。
+- [GC プロセッサの関係](#systemgcnoaffinitizecomplus_gcnoaffinitize)が無効になっている場合、この設定によって GC ヒープの数が制限されます。
 - 詳細については、[GCHeapCount の解説](../../framework/configure-apps/file-schema/runtime/gcheapcount-element.md#remarks)に関する記述を参照してください。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
@@ -145,7 +145,7 @@ ms.locfileid: "76733525"
 ### <a name="systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask"></a>System.GC.HeapAffinitizeMask/COMPlus_GCHeapAffinitizeMask
 
 - ガベージ コレクター スレッドで使用する必要がある正確なプロセッサを指定します。
-- `System.GC.NoAffinitize` を `true` に設定してプロセッサの関係を無効にした場合、この設定は無視されます。
+- [GC プロセッサの関係](#systemgcnoaffinitizecomplus_gcnoaffinitize)が無効になっている場合、この設定は無視されます。
 - サーバー ガベージ コレクションにのみ適用されます。
 - この値は、プロセスで使用できるプロセッサを定義するビット マスクです。 たとえば、10 進値の 1023 (環境変数を使用する場合は、16 進値の 0x3FF または 3FF) は、バイナリ表記では 0011 1111 1111 となります。 これにより、最初の 10 プロセッサが使用されることが指定されます。 次の 10 プロセッサ (つまり、10 から 19 プロセッサ) を指定するには、10 進値の 1047552 (または 16 進値の 0xFFC00 または FFC00) を指定します。これは、バイナリ値の 1111 1111 1100 0000 0000 に相当します。
 
@@ -170,9 +170,9 @@ ms.locfileid: "76733525"
 ### <a name="systemgcgcheapaffinitizerangescomplus_gcheapaffinitizeranges"></a>System.GC.GCHeapAffinitizeRanges/COMPlus_GCHeapAffinitizeRanges
 
 - ガベージ コレクター スレッドに使用するプロセッサのリストを指定します。
-- この設定は `System.GC.HeapAffinitizeMask` に似ていますが、64 を超えるプロセッサを指定できる点が異なります。
+- この設定は [System.GC.HeapAffinitizeMask](#systemgcheapaffinitizemaskcomplus_gcheapaffinitizemask) に似ていますが、64 を超えるプロセッサを指定できる点が異なります。
 - Windows オペレーティング システムの場合、プロセッサの番号または範囲の前に、対応する [CPU グループ](/windows/win32/procthread/processor-groups)を付けます。たとえば、"0:1-10,0:12,1:50-52,1:70" となります。
-- `System.GC.NoAffinitize` を `true` に設定してプロセッサの関係を無効にした場合、この設定は無視されます。
+- [GC プロセッサの関係](#systemgcnoaffinitizecomplus_gcnoaffinitize)が無効になっている場合、この設定は無視されます。
 - サーバー ガベージ コレクションにのみ適用されます。
 - 詳細については、Maoni Stephens のブログの「[CPU が 64 を超えるコンピューター上での GC のための CPU 構成の向上](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)」を参照してください。
 
@@ -239,6 +239,11 @@ ms.locfileid: "76733525"
 ### <a name="systemgcheaphardlimitcomplus_gcheaphardlimit"></a>System.GC.HeapHardLimit/COMPlus_GCHeapHardLimit
 
 - GC ヒープおよび GC ブックキーピングに対して、最大コミット サイズをバイト単位で指定します。
+- この設定は 64 ビットのコンピューターにのみ該当します。
+- 特定のケースにのみ該当する既定値は、20 MB 未満であるか、コンテナーのメモリ制限の 75% 未満です。 次の場合に既定値は該当します。
+
+  - プロセスが、メモリ制限が指定されたコンテナー内で実行されています。
+  - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) が設定されていません。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
@@ -262,7 +267,14 @@ ms.locfileid: "76733525"
 
 ### <a name="systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent"></a>System.GC.HeapHardLimitPercent/COMPlus_GCHeapHardLimitPercent
 
-- GC ヒープ使用量を、合計メモリに対する割合として指定します。
+- 許容可能な GC ヒープの使用量を、物理メモリ合計に対する割合として指定します。
+- この設定は、[System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) も設定されている場合、無視されます。
+- この設定は 64 ビットのコンピューターにのみ該当します。
+- プロセスが、メモリ制限が指定されたコンテナー内で実行されている場合、パーセンテージはそのメモリ制限に対するパーセンテージとして計算されます。
+- 特定のケースにのみ該当する既定値は、20 MB 未満であるか、コンテナーのメモリ制限の 75% 未満です。 次の場合に既定値は該当します。
+
+  - プロセスが、メモリ制限が指定されたコンテナー内で実行されています。
+  - [System.GC.HeapHardLimit](#systemgcheaphardlimitcomplus_gcheaphardlimit) が設定されていません。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |

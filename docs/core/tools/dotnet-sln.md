@@ -2,28 +2,30 @@
 title: dotnet sln コマンド
 description: dotnet-sln コマンドは、ソリューション ファイルでプロジェクトを追加、削除、一覧表示するための便利なオプションを提供します。
 ms.date: 02/14/2020
-ms.openlocfilehash: b2455c04a46b2a10b8142d8ddc2d8129f2154b27
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 231287477d986f9ec4a5404cc5278e76c297faa4
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77543483"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463399"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet sln` - .NET Core ソリューション ファイル内のプロジェクトを一覧表示または変更します。
 
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] [command] [-h|--help]
+dotnet sln [<SOLUTION_FILE>] [command]
+
+dotnet sln [command] -h|--help
 ```
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
 
 `dotnet sln` コマンドでは、ソリューション ファイル内のプロジェクトを一覧表示および変更するための便利な方法を提供します。
 
@@ -76,7 +78,7 @@ dotnet sln list [-h|--help]
 #### <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder] <PROJECT_PATH> [<PROJECT_PATH>...]
+dotnet sln [<SOLUTION_FILE>] add [--in-root] [-s|--solution-folder <PATH>] <PROJECT_PATH> [<PROJECT_PATH>...]
 dotnet sln add [-h|--help]
 ```
 
@@ -100,7 +102,7 @@ dotnet sln add [-h|--help]
 
   ソリューション フォルダーを作成するのではなく、プロジェクトをソリューションのルートに配置します。 .NET Core 3.0 SDK 以降で使用できます。
 
-- **`-s|--solution-folder`**
+- **`-s|--solution-folder <PATH>`**
 
   プロジェクトの追加先のソリューション フォルダーのパス。 .NET Core 3.0 SDK 以降で使用できます。
 
@@ -131,7 +133,7 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
 
   コマンドの使用方法を示した説明を出力します。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 - ソリューション内のプロジェクトを一覧表示する:
 
@@ -175,8 +177,20 @@ dotnet sln [<SOLUTION_FILE>] remove [-h|--help]
   dotnet sln todo.sln add **/*.csproj
   ```
 
+- glob パターンを使用して、ソリューションに複数の C# プロジェクトを追加する (Windows PowerShell のみ):
+
+  ```dotnetcli
+  dotnet sln todo.sln add (ls **/*.csproj)
+  ```
+
 - glob パターンを使用して、ソリューションから複数の C# プロジェクトを削除する (Unix/Linux のみ):
 
   ```dotnetcli
   dotnet sln todo.sln remove **/*.csproj
+  ```
+
+- glob パターンを使用して、ソリューションから複数の C# プロジェクトを削除する (Windows PowerShell のみ):
+
+  ```dotnetcli
+  dotnet sln todo.sln remove (ls **/*.csproj)
   ```

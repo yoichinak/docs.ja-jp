@@ -2,12 +2,12 @@
 title: Docker アプリの開発ワークフロー
 description: Docker ベースのアプリケーションを開発するためのワークフローの詳細を理解します。 まず、段階的に見ていき、Dockerfile の最適化について詳しく確認し、最終的には Visual Studio を使用する際に利用できる簡略化されたワークフローを理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: c58ea2436027968143777a19286a1a0a72107717
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f380c840e186c345f9222aa6b0cf1097a74874e
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401509"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389197"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -286,7 +286,7 @@ RUN dotnet restore
  7  COPY . .
  8  RUN dotnet restore /ignoreprojectextensions:.dcproj
  9  WORKDIR /src/src/Services/Catalog/Catalog.API
-10  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+10  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 11
 12  FROM base AS final
 13  WORKDIR /app
@@ -479,7 +479,7 @@ docker-compose up コマンドを実行すると、図 5-10 に示すように�
 
 #### <a name="using-visual-studio"></a>Visual Studio の使用
 
-Visual Studio 2019 を使用したマルチコンテナー アプリケーションの実行は非常に簡単です。 **Ctrl + F5** キーを押して実行するか、**F5** キーを押してデバッグするだけです。その場合、通常どおり、**docker-compose** をスタートアップ プロジェクトとして設定します。  必要なすべてのセットアップは Visual Studio によって処理されるため、既に接続されているデバッガーを使用して、通常どおりブレークポイントを作成し、最終的に "リモート サーバー" で実行される独立したプロセスになるものを簡単に デバッグできます。
+Visual Studio 2019 を使用したマルチコンテナー アプリケーションの実行は非常に簡単です。 **Ctrl + F5** キーを押して実行するか、**F5** キーを押してデバッグするだけです。その場合、通常どおり、**docker-compose** をスタートアップ プロジェクトとして設定します。  必要なすべてのセットアップは Visual Studio によって処理されるため、既に接続されているデバッガーを使用して、通常どおりにブレークポイントを作成し、最終的に "リモート サーバー" で実行される独立したプロセスになるものを簡単にデバッグできます。
 
 既に説明したとおり、ソリューション内のプロジェクトに Docker ソリューションのサポートを追加するたびに、そのプロジェクトは、グローバル (ソリューション レベル) docker-compose.yml ファイルに構成され、一度にソリューション全体を実行またはデバッグできるようになります。 Visual Studio では、Docker ソリューションのサポートが有効になっているプロジェクトごとに 1 つのコンテナーが起動され、内部のすべての手順をユーザーのために実行してくれます (dotnet publish、docker build など)。
 

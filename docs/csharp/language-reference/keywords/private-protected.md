@@ -2,12 +2,12 @@
 title: private protected - C# リファレンス
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 01a8b716ce87a63a50a92a25b2842f7bb12d4c9f
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 03fa90582d096919f2e6546fae2fde28e486fe41
+ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134360"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81463055"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# リファレンス)
 
@@ -18,7 +18,7 @@ ms.locfileid: "80134360"
 
 ## <a name="example"></a>例
 
-基底クラスの private protected メンバーには、変数の静的な型が派生クラス型の場合にのみ、その包含アセンブリで派生型からアクセスできます。 たとえば、次のコード セグメントを考えてみます。  
+基底クラスの private protected メンバーには、変数の静的な型が派生クラス型の場合にのみ、その包含アセンブリで派生型からアクセスできます。 たとえば、次のコード セグメントを考えてみます。
 
 ```csharp
 public class BaseClass
@@ -34,7 +34,7 @@ public class DerivedClass1 : BaseClass
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.
-        // baseObject.myValue = 5;  
+        // baseObject.myValue = 5;
 
         // OK, accessed through the current derived class instance
         myValue = 5;
@@ -43,8 +43,8 @@ public class DerivedClass1 : BaseClass
 ```
 
 ```csharp
-// Assembly2.cs  
-// Compile with: /reference:Assembly1.dll  
+// Assembly2.cs
+// Compile with: /reference:Assembly1.dll
 class DerivedClass2 : BaseClass
 {
     void Access()
@@ -57,19 +57,22 @@ class DerivedClass2 : BaseClass
 ```
 
 この例には、2 つのファイル (`Assembly1.cs` と `Assembly2.cs`) が含まれています。
-最初のファイルには public 基底クラスである `BaseClass` とそれから派生した型である `DerivedClass1` が含まれています。 `BaseClass` は private protected メンバー `myValue` を持っています。`DerivedClass1` はこれに 2 通りのアクセスを試行します。 最初に `myValue` のインスタンス経由で `BaseClass` にアクセスしようとするとエラーが出ます。 ただし、`DerivedClass1` で継承されたメンバーとして使用してみると成功します。
-2 番目のファイルでは、`myValue` の継承されたメンバーとして `DerivedClass2` にアクセスしようとしてエラーを出します。これには Assembly1 の派生型のみがアクセスできるためです。
+最初のファイルには public 基底クラスである `BaseClass` とそれから派生した型である `DerivedClass1` が含まれています。 `BaseClass` は private protected メンバー `myValue` を持っています。`DerivedClass1` はこれに 2 通りのアクセスを試行します。 最初に `BaseClass` のインスタンス経由で `myValue` にアクセスしようとするとエラーが出ます。 ただし、`DerivedClass1` で継承されたメンバーとして使用してみると成功します。
 
-構造体は継承できないため、構造体メンバーは `private protected` になりません。  
+2 番目のファイルでは、`DerivedClass2` の継承されたメンバーとして `myValue` にアクセスしようとしてエラーを出します。これには Assembly1 の派生型のみがアクセスできるためです。
+
+`Assembly1.cs` に `Assembly2` という名前の <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> が含まれている場合、派生クラス `DerivedClass1` は、`BaseClass` で宣言された `private protected` メンバーにアクセスできます。 `InternalsVisibleTo` を使用すると、`private protected` メンバーを他のアセンブリの派生クラスから参照できるようになります。
+
+構造体は継承できないため、構造体メンバーは `private protected` になりません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [アクセス修飾子](access-modifiers.md)
 - [アクセシビリティ レベル](accessibility-levels.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 21271167-fe7f-46ba-a81f-a6812ea649d4
 author: jkoritzinsky
 ms.author: jekoritz
-ms.openlocfilehash: 98d303c99693a8aadb23da509a700772db69c0e0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17d85b9e9734fae0bb69f94da8c08669216ab0ae
+ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146659"
+ms.lasthandoff: 04/13/2020
+ms.locfileid: "81242869"
 ---
 # <a name="exposing-net-core-components-to-com"></a>COM への .NET Core コンポーネントの公開
 
@@ -92,5 +92,7 @@ GitHub の dotnet/samples リポジトリには、完全に機能する [COM サ
 ## <a name="additional-notes"></a>補足メモ
 
 .NET Core では、.NET Framework とは異なり、.NET Core アセンブリからの COM タイプ ライブラリ (TLB) の生成はサポートしていません。 このガイダンスは、COM インターフェイスのネイティブ宣言のために、IDL ファイルまたは C/C++ ヘッダーを手動で記述する方法について説明するものです。
+
+COM コンポーネントの[自己完結型の配置](../deploying/index.md#publish-self-contained)はサポートされていません。 COM コンポーネントの[ランタイムに依存する配置](../deploying/index.md#publish-runtime-dependent)のみがサポートされています。
 
 また、.NET Framework と .NET Core の両方を同じプロセスに読み込むと、診断が制限されます。 主にマネージド コンポーネントのデバッグが制限されます。これは、.NET Framework と .NET Core の両方を同時にデバッグすることはできないためです。 また、2 つのランタイム インスタンスはマネージド アセンブリを共有しません。 つまり、2 つのランタイム間で実際の .NET 型を共有することはできません。代わりに、すべての対話を、公開されている COM インターフェイス コントラクトに制限する必要があります。

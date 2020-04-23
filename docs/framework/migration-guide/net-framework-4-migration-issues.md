@@ -5,27 +5,29 @@ helpviewer_keywords:
 - .NET Framework 4, migration
 - application compatibility
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
-ms.openlocfilehash: c1c3298d87ad0f481fa30182e40cd5edcd535d6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 200acea81b9f00c659ddceae011430983e2b5f5b
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73975617"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389724"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 への移行に関する問題
 
-このトピックでは、.NET Framework バージョン 3.5 Service Pack 1 から .NET Framework バージョン 4 への移行に関する問題、修正、標準への準拠やセキュリティに関する変更、お客様のフィードバックに基づいた変更などについて説明します。 これらの変更点のほとんどは、アプリケーションのプログラミング変更を必要としません。 変更が必要になる可能性のある変更点については、表の「推奨される変更」列をご覧ください。 目立った変更点は、ASP.NET や Windows Presentation Foundation (WPF) などの領域別に分類されています。
+この記事では、.NET Framework バージョン 3.5 Service Pack 1 から .NET Framework バージョン 4 への移行に関する問題、修正、標準への準拠やセキュリティに関する変更、お客様のフィードバックに基づいた変更などについて説明します。 これらの変更点のほとんどは、アプリケーションのプログラミング変更を必要としません。 変更が必要になる可能性のある変更点については、表の「**推奨される変更**」列を参照してください。 目立った変更点は、ASP.NET や Windows Presentation Foundation (WPF) などの領域別に分類されています。
 
-このトピックで取り上げる問題の大まかな概要については、「[.NET Framework 4 移行ガイド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)」をご覧ください。
+この記事に記載されている問題の概要については、「[.NET Framework 4 移行ガイド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)」を参照してください。
 
-新しい機能については、「[.NET Framework 4 の新機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)」をご覧ください。
+新しい機能については、「[.NET Framework 4 の新機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)」を参照してください。
 
 ## <a name="aspnet-and-web"></a>ASP.NET と Web
 
-名前空間: <xref:System.Web>、<xref:System.Web.Mobile>、<xref:System.Web.Security>、<xref:System.Web.UI.WebControls>。アセンブリ: System.Web (System.Web.dll 内)
+名前空間: <xref:System.Web>、<xref:System.Web.Mobile>、<xref:System.Web.Security>、<xref:System.Web.UI.WebControls>
 
-| 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
-| ------- | ------------------------ | ------------------- |
+アセンブリ:System.Web (System.Web.dll 内)
+
+| 機能  | 3\.5 SP1 との相違 | 推奨される変更 |
+| -------- | ------------------------ | ------------------- |
 | **ブラウザー定義ファイル** | ブラウザー定義ファイルは、新しいブラウザーとデバイスや、更新されたブラウザーとデバイスに関する情報を含むように、更新されました。 Netscape Navigator などの古いブラウザーとデバイスは削除され、Google Chrome や Apple iPhone などの新しいブラウザーとデバイスが追加されました。<br><br>削除されたブラウザー定義の 1 つを継承するカスタム ブラウザー定義がご利用のアプリケーションに含まれている場合は、エラーが表示されます。<br><br><xref:System.Web.HttpBrowserCapabilities> オブジェクト (ページの `Request.Browse` プロパティで公開されます) は、ブラウザー定義ファイルによって実行されます。 そのため、ASP.NET 4 でこのオブジェクトのプロパティにアクセスすることで返される情報は、旧バージョンの ASP.NET で返された情報とは異なる場合があります。 | ご利用のアプリケーションが古いブラウザー定義ファイルに依存している場合は、次のフォルダーからそれらのファイルをコピーできます。<br><br>*Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\Browsers*<br><br>ASP.NET 4 の対応する *\\CONFIG\\Browsers* フォルダーにファイルをコピーします。 ファイルをコピーしたら、[Aspnet_regbrowsers.exe](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms229858(v=vs.90)) コマンドライン ツールを実行します。 詳細については、Web サイト [https://www.asp.net/mobile](/aspnet/mobile/overview) を参照してください。 |
 | **ASP.NET の複数のバージョンが混在する環境で実行される子アプリケーション** | 旧バージョンの ASP.NET を実行する子アプリケーションとして構成されている ASP.NET 4 アプリケーションは、構成エラーまたはコンパイル エラーにより起動しない場合があります。 実際に発生するエラーは、アプリケーションが実行される IIS のバージョン (6.0、7、または 7.5) によって異なります。 | 影響を受けるアプリケーションの構成ファイルを変更することで、構成システムが ASP.NET 4 アプリケーションを適切に認識するように設定できます。 実行する必要がある変更については、ASP.NET Web サイトの「[ASP.NET 4 Breaking Changes (ASP.NET 4 の互換性に影響する変更点)](/aspnet/whitepapers/aspnet4/breaking-changes)」の「ASP.NET 4 Child Applications Fail to Start When Under ASP.NET 2.0 or ASP.NET 3.5 Applications (ASP.NET 2.0 または ASP.NET 3.5 アプリケーションで ASP.NET 4 の子アプリケーションが起動しない)」をご覧ください。 |
 | **ClientID の変更** | ASP.NET 4 の新しい `clientIDMode` 設定では、ASP.NET が HTML 要素の `id` 属性を生成する方法を指定できます。 以前のバージョンの ASP.NET では、既定の動作は `clientIDMode` の `AutoID` 設定と同じでした。 現在の既定の設定は `Predictable` です。 詳細については、[ASP.NET Web サーバー コントロールの識別](https://docs.microsoft.com/previous-versions/aspnet/1d04y8ss%28v=vs.100%29)に関する記事をご覧ください。 | Visual Studio を使用して ASP.NET 2.0 または ASP.NET 3.5 からアプリケーションをアップグレードする場合は、旧バージョンの .NET Framework の動作を維持する設定が、ツールによって Web.config ファイルに自動的に追加されます。 ただし、IIS のアプリケーション プールを変更して .NET Framework 4 をターゲットにするようにアプリケーションをアップグレードする場合、ASP.NET では新しいモードが既定で使用されます。 新しいクライアント ID モードを無効にするには、Web.config ファイルに次の設定を追加します。<br><br>`<pages clientIDMode="AutoID" />` |
@@ -40,7 +42,7 @@ ms.locfileid: "73975617"
 | **メンバーシップ タイプ** | ASP.NET メンバーシップで使用される一部のタイプ (例: <xref:System.Web.Security.MembershipProvider>) は、System.Web.dll から System.Web.ApplicationServices.dll アセンブリに移動しました。 これらのタイプは、クライアントのタイプと拡張 .NET Framework SKU のタイプとの間のアーキテクチャ層の依存関係を解決するために移動しました。 | 旧バージョンの ASP.NET からアップグレードされた、移動したメンバーシップ タイプを使用するクラス ライブラリを ASP.NET 4 プロジェクトで使用すると、コンパイルに失敗することがあります。 この場合は、System.Web.ApplicationServices.dll への参照をクラス ライブラリ プロジェクトに追加します。 |
 | **メニュー コントロールの変更** | <xref:System.Web.UI.WebControls.Menu> コントロールの変更によって、以下の動作が発生します。<br><br>* <xref:System.Web.UI.WebControls.MenuRenderingMode> が `List` に設定されている場合、または <xref:System.Web.UI.WebControls.MenuRenderingMode> が `Default` に設定され、<xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion> が `4.0` 以降に設定されている場合、<xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl> プロパティは無効です。<br>* <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> プロパティと <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> プロパティに設定されたパスに円記号 (\\) が含まれている場合、イメージはレンダリングされません (旧バージョンの ASP.NET では、パスに円記号を含めることができました)。 | * 個々のメニュー項目に対して <xref:System.Web.UI.WebControls.MenuItem.PopOutImageUrl> プロパティを設定する代わりに、親の <xref:System.Web.UI.WebControls.Menu> コントロールの <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> または <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> を設定します。<br><br>\- または -<br><br><xref:System.Web.UI.WebControls.MenuRenderingMode> を `Table` に設定します。または、<xref:System.Web.UI.WebControls.MenuRenderingMode> を `Default` に設定し、<xref:System.Web.Configuration.PagesSection.ControlRenderingCompatibilityVersion> を `3.5` に設定します。 これらの設定により、<xref:System.Web.UI.WebControls.Menu> コントロールで、旧バージョンの ASP.NET で使用された HTML テーブル ベースのレイアウトが使用されます。<br>* <xref:System.Web.UI.WebControls.Menu.StaticPopOutImageUrl%2A> プロパティまたは <xref:System.Web.UI.WebControls.Menu.DynamicPopOutImageUrl> プロパティのパスに円記号 (\\) が含まれている場合は、スラッシュ文字 (/) に置き換えます。 |
 | **Web.config ファイル内の Mobile アセンブリ** | 以前のバージョンの ASP.NET では、System.Web.Mobile.dll アセンブリへの参照は、`system.web`/`compilation` の `assemblies` セクションにある、ルートの Web.config ファイルに含まれていました。 パフォーマンスを向上させるために、このアセンブリへの参照は削除されました。<br><br>メモ:System.Web.Mobile.dll アセンブリと ASP.NET モバイル コントロールは ASP.NET 4 に含まれていますが、それらの使用は非推奨とされました。 | このアセンブリに含まれる型を使用する場合は、ルートの Web.config ファイルまたはアプリケーションの Web.config ファイルにアセンブリへの参照を追加します。 |
-| **出力キャッシュ** | ASP.NET 1.0 のバグが原因で、出力キャッシュの設定として `Location="ServerAndClient"` が指定されたキャッシュ ページでは、応答に `Vary:*` HTTP ヘッダーが生成されていました。 その結果、クライアント ブラウザーに対して、ローカルにページをキャッシュしないように指示がなされていました。 ASP.NET 1.1 では、<xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> メソッドが追加され、`Vary:*` ヘッダーを抑制するためにこのメソッドを呼び出すことができました。 ただし、バグ報告では、開発者が既存の `SetOmitVaryStar` の動作を認識していないことが示唆されています。<br><br>ASP.NET 4 では、次のディレクティブを指定する応答から `Vary:*` HTTP ヘッダーは生成されなくなりました。<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>そのため、<xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> ヘッダーを無効にするための `Vary:*` メソッドは不要になりました。 `Location` 属性に "ServerAndClient" を指定するアプリケーションでは、<xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> を呼び出す必要なくブラウザーにページをキャッシュできます。 | アプリケーション内のページで `Vary:*` を生成する必要がある場合は、次の例に示すように <xref:System.Web.HttpResponse.AppendHeader%2A> メソッドを呼び出します。<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>または、出力キャッシュ `Location` 属性の値を "Server" に変更できます。 |
+| **出力キャッシュ** | ASP.NET 1.0 のバグが原因で、出力 &euro;" キャッシュの設定として `Location="ServerAndClient"` が指定されたキャッシュ ページでは、応答に `Vary:*` HTTP ヘッダーが生成されていました。 その結果、クライアント ブラウザーに対して、ローカルにページをキャッシュしないように指示がなされていました。 ASP.NET 1.1 では、<xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> メソッドが追加され、`Vary:*` ヘッダーを抑制するためにこのメソッドを呼び出すことができました。 ただし、バグ報告では、開発者が既存の `SetOmitVaryStar` の動作を認識していないことが示唆されています。<br><br>ASP.NET 4 では、次のディレクティブを指定する応答から `Vary:*` HTTP ヘッダーは生成されなくなりました。<br><br>`<%@ OutputCache Location="ServerAndClient" %>`<br><br>そのため、<xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> ヘッダーを無効にするための `Vary:*` メソッドは不要になりました。 `Location` 属性に "ServerAndClient" を指定するアプリケーションでは、<xref:System.Web.HttpCachePolicy.SetOmitVaryStar%2A> を呼び出す必要なくブラウザーにページをキャッシュできます。 | アプリケーション内のページで `Vary:*` を生成する必要がある場合は、次の例に示すように <xref:System.Web.HttpResponse.AppendHeader%2A> メソッドを呼び出します。<br><br>`System.Web.HttpResponse.AppendHeader("Vary","*");`<br><br>または、出力キャッシュ `Location` 属性の値を "Server" に変更できます。 |
 | **ページの解析** | ASP.NET Web ページ (.aspx ファイル) とユーザー コントロール (.ascx ファイル) のページ パーサーは、旧バージョンの ASP.NET よりも ASP.NET 4 の方が厳密であり、無効とみなされて警告が出力されるマークアップの数が、旧バージョンに比べて多くなります。 | ページの実行時に出力されたエラー メッセージを調べて、無効なマークアップが原因で発生したエラーを修正します。 |
 | **Passport 型** | Passport (現在の Live ID SDK) の変更により、ASP.NET 2.0 に組み込まれた Passport のサポートは廃止され、サポートされなくなりました。 その結果、<xref:System.Web.Security> の Passport に関連する型は、`ObsoleteAttribute` 属性としてマークされるようになりました。 | <xref:System.Web.Security> 名前空間の Passport 型 (たとえば、<xref:System.Web.Security.PassportIdentity>) を使用するコードは、Windows Live ID SDK を使用するように変更してください。 |
 | **FilePath プロパティの PathInfo 情報** | ASP.NET 4 では、<xref:System.Web.HttpRequest.FilePath>、<xref:System.Web.HttpRequest.AppRelativeCurrentExecutionFilePath>、<xref:System.Web.HttpRequest.CurrentExecutionFilePath> などのプロパティからの戻り値に `PathInfo` 値が含まれなくなりました。 代わりに、<xref:System.Web.HttpRequest.PathInfo> 内の `PathInfo` 情報が使用できます。 たとえば、次のような URL フラグメントがあるとします。<br><br>`/testapp/Action.mvc/SomeAction`<br><br>旧バージョンの ASP.NET では、<xref:System.Web.HttpRequest> プロパティは次の値を持ちます。<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc/SomeAction`<br>* <xref:System.Web.HttpRequest.PathInfo>: (空)<br><br>ASP.NET 4 では、<xref:System.Web.HttpRequest> プロパティは代わりに次の値を持ちます。<br><br>* <xref:System.Web.HttpRequest.FilePath>: `/testapp/Action.mvc`<br>* <xref:System.Web.HttpRequest.PathInfo>: `SomeAction` | <xref:System.Web.HttpRequest> クラスのプロパティに依存してパス情報を返しているコード内の箇所を調べます。コードを変更して、パス情報の返し方に関する変更を反映させてください。 |
@@ -63,7 +65,9 @@ ms.locfileid: "73975617"
 
 ### <a name="date-and-time"></a>日付と時刻
 
-名前空間: <xref:System>。アセンブリ: mscorlib (mscorlib.dll 内)
+名前空間: <xref:System>
+
+アセンブリ: mscorlib (mscorlib.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -74,11 +78,13 @@ ms.locfileid: "73975617"
 
 新しいニュートラル カルチャと特定のカルチャの一覧については、「[グローバリゼーションとローカリゼーションの新機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd997383%28v=vs.100%29)」をご覧ください。
 
-名前空間: <xref:System.Globalization>。アセンブリ: mscorlib (mscorlib.dll 内)
+名前空間: <xref:System.Globalization>
+
+アセンブリ: mscorlib (mscorlib.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
-| **カルチャ名** | 次の名前変更は、ドイツ語、ディベヒ語、アフリカーンス語のカルチャに影響します。<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: ドイツ語 (スイス) (de-CH) カルチャの通貨名は "sFr." から "Fr." に変更されました。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: ディベヒ語 (モルディブ) (dv-MV) カルチャの長い日付パターンは、"dd/MMMM/yyyy" から "dd/MM/yyyy" に変更されました。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>:午後: アフリカーンス語 (南アフリカ) (af-ZA) カルチャの午後指定子は、"nm" から "PM" に変更されました。 | カルチャ名の変更に注意してください。 |
+| **カルチャ名** | 次の名前変更は、ドイツ語、ディベヒ語、アフリカーンス語のカルチャに影響します。<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>:ドイツ語 (スイス) (de-CH) カルチャの通貨名は "sFr." から "Fr." に変更されました。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: ディベヒ語 (モルディブ) (dv-MV) カルチャの長い日付パターンは、"dd/MMMM/yyyy" から "dd/MM/yyyy" に変更されました。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>:午後: アフリカーンス語 (南アフリカ) (af-ZA) カルチャの午後指定子は、"nm" から "PM" に変更されました。 | カルチャ名の変更に注意してください。 |
 | **LCID パラメーター** | オートメーション サーバー設定で予期される動作と一貫させるために、CLR はアンマネージ COM ベースのアプリケーションに `LCID` パラメーターの現在のカルチャを渡さなくなりました。 代わりに、カルチャとして 1033 (en-us) が渡されます。 | 指定したカルチャを必要とするネイティブ アプリケーションを除き、変更は不要です。 |
 | **互換性のために残されているカルチャ タイプ** | <xref:System.Globalization.CultureTypes> と <xref:System.Globalization.CultureTypes> のカルチャ タイプは互換性のために残されています。<br><br>下位互換性を維持するために、<xref:System.Globalization.CultureTypes> は以前の .NET Framework に含まれていたニュートラル カルチャと特定のカルチャを返し、<xref:System.Globalization.CultureTypes> は空のリストを返すようになりました。 | <xref:System.Globalization.CultureTypes> 列挙の他の値を使用します。 |
 | **カルチャの取得** | Windows 7 以降、.NET Framework 4 ではデータ自体を格納する代わりにオペレーティング システムからカルチャ情報を取得します。 また、.NET Framework では、データの並べ替えおよび大文字と小文字の指定を行うために Windows と同期します。 | なし。 |
@@ -86,7 +92,9 @@ ms.locfileid: "73975617"
 
 ### <a name="exceptions"></a>例外
 
-名前空間: <xref:System>、<xref:System.Runtime.ExceptionServices>。アセンブリ: mscorlib (mscorlib.dll 内)
+名前空間: <xref:System>、<xref:System.Runtime.ExceptionServices>
+
+アセンブリ: mscorlib (mscorlib.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -95,7 +103,9 @@ ms.locfileid: "73975617"
 
 ### <a name="reflection"></a>リフレクション
 
-名前空間: <xref:System.Reflection>。アセンブリ: mscorlib (mscorlib.dll 内)
+名前空間: <xref:System.Reflection>
+
+アセンブリ: mscorlib (mscorlib.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -108,7 +118,9 @@ ms.locfileid: "73975617"
 
 ### <a name="interoperability"></a>相互運用性
 
-名前空間: <xref:System.Runtime.InteropServices>。アセンブリ: mscorlib (mscorlib.dll 内)
+名前空間: <xref:System.Runtime.InteropServices>
+
+アセンブリ: mscorlib (mscorlib.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -125,7 +137,9 @@ ms.locfileid: "73975617"
 
 次の表に、以前は制限やその他の問題があった機能に対する改善点を示します。
 
-名前空間: <xref:System.Data>、<xref:System.Data.Objects.DataClasses>、<xref:System.Data.SqlClient>。アセンブリ: System.Data (System.Data.dll 内)、System.Data.Entity (System.Data.Entity.dll 内)
+名前空間: <xref:System.Data>、<xref:System.Data.Objects.DataClasses>、<xref:System.Data.SqlClient>
+
+アセンブリ:System.Data (System.Data.dll 内)、System.Data.Entity (System.Data.Entity.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 |
 | ------- | ------------------------ |
@@ -140,7 +154,9 @@ ms.locfileid: "73975617"
 
 次の表に、以前は制限やその他の問題があった機能に対する改善点を示します。
 
-名前空間: <xref:System.Data>、<xref:System.Data.Objects>、<xref:System.Data.Objects.DataClasses>。アセンブリ: System.Data.Entity (System.Data.Entity.dll 内)
+名前空間: <xref:System.Data>、<xref:System.Data.Objects>、<xref:System.Data.Objects.DataClasses>
+
+アセンブリ:System.Data.Entity (System.Data.Entity.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 |
 | ------- | ------------------------ |
@@ -153,7 +169,9 @@ ms.locfileid: "73975617"
 
 次の表に、以前は制限やその他の問題があった機能に対する改善点を示します。
 
-名前空間: <xref:System.Data.Linq>。アセンブリ: System.Data.Linq (System.Data.Linq.dll 内)
+名前空間: <xref:System.Data.Linq>
+
+アセンブリ:System.Data.Linq (System.Data.Linq.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 |
 | ------- | ------------------------ |
@@ -164,7 +182,9 @@ ms.locfileid: "73975617"
 
 次の表に、以前は制限やその他の問題があった機能に対する改善点を示します。
 
-名前空間: <xref:System.Data.Services>、<xref:System.Data.Services.Client>、<xref:System.Data.Services.Common>、<xref:System.Data.Services.Providers>。アセンブリ: System.Data.Services (System.Data.Services.dll 内)、System.Data.Services.Client (System.Data.Services.Client.dll 内)
+名前空間: <xref:System.Data.Services>、<xref:System.Data.Services.Client>、<xref:System.Data.Services.Common>、<xref:System.Data.Services.Providers>
+
+アセンブリ:System.Data.Services (System.Data.Services.dll 内)、System.Data.Services.Client (System.Data.Services.Client.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 |
 | ------- | ------------------------ |
@@ -191,7 +211,9 @@ ms.locfileid: "73975617"
 
 ### <a name="applications"></a>アプリケーション
 
-名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>。アセンブリ: PresentationFramework (PresentationFramework.dll 内)
+名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>
+
+アセンブリ:PresentationFramework (PresentationFramework.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -201,11 +223,13 @@ ms.locfileid: "73975617"
 | **リソース ディクショナリ** | テーマ レベルのリソース ディクショナリを改善し、その変更を防ぐために、リソース ディクショナリで定義された固定可能リソース、およびテーマ レベル ディクショナリにマージされた固定可能リソースは、常に固定され、変更できなくなりました。 これは、固定可能リソースで想定される動作です。 | アプリケーションで、テーマ レベルでマージされたディクショナリで定義されたリソースを変更する場合は、リソースを複製して、複製した方のコピーを変更する必要があります。 または、リソースを `x:Shared="false"` とマークして、リソースにクエリが実行されるたびに <xref:System.Windows.ResourceDictionary> が新しいコピーを作成できるようにします。 |
 | **Windows 7** | WPF アプリケーションを Windows 7 でより適切に動作させるために、ウィンドウの動作を修正する次の改良が行われました。<br><br>* ドッキングとジェスチャの状態は、ユーザーとのやり取りに基づいて予想どおりに動作するようになりました。<br>* タスク バー コマンドの **[重ねて表示]、[ウィンドウを上下に並べて表示]** 、 **[ウィンドウを左右に並べて表示]** は正しく動作し、適切なプロパティを更新するようになりました。<br>* 最大化または最小化されたウィンドウの `Top`、`Left`、`Width`、`Height` の各プロパティには、モニターに応じて、他の値ではなくウィンドウの適切な復元場所が含まれるようになりました。 | なし。 |
 | **ウィンドウのスタイルと透過性** | <xref:System.Windows.Window.AllowsTransparency> が `true` で、<xref:System.Windows.WindowState> が <xref:System.Windows.WindowState> のときに、<xref:System.Windows.Window.WindowStyle> を <xref:System.Windows.WindowStyle> 以外の値に設定しようとすると、<xref:System.InvalidOperationException> がスローされます。 | <xref:System.Windows.Window.AllowsTransparency> が `true` であるときに、<xref:System.Windows.Window.WindowStyle> を変更する必要がある場合は、Win32 の `SetWindowLongPtr` 関数を呼び出すことができます。 |
-| **XPS ビューアー** | WPF には Microsoft XML Paper Specification Essentials Pack (XPSEP) が含まれていません。 XPSEP は Windows 7 と Windows Vista に付属しています。<br><br>.NET Framework 3.5 SP1 がインストールされていない Windows XP を実行中のコンピューターでは、<xref:System.Windows.Controls.PrintDialog> 以外の WPF API を使用した印刷は WINSPOOL に依存します。 その場合、印刷の実行中に一部のプリンター機能が表示されないことや、プリンター設定が適用されないことが考えられます。 | 必要に応じて [Microsoft XML Paper Specification Essentials Pack](https://go.microsoft.com/fwlink/?LinkId=178895) をインストールしてください。 |
+| **XPS ビューアー** | WPF には Microsoft XML Paper Specification Essentials Pack (XPSEP) が含まれていません。 XPSEP は Windows 7 と Windows Vista に付属しています。<br><br>.NET Framework 3.5 SP1 がインストールされていない Windows XP を実行中のコンピューターでは、<xref:System.Windows.Controls.PrintDialog> 以外の WPF API を使用した印刷は WINSPOOL に依存します。 その場合、印刷の実行中に一部のプリンター機能が表示されないことや、プリンター設定が適用されないことが考えられます。 | 必要に応じて [Microsoft XML Paper Specification Essentials Pack](https://www.microsoft.com/en-us/download/details.aspx?id=11816) をインストールしてください。 |
 
 ### <a name="controls"></a>コントロール
 
-名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>。アセンブリ: PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、WindowsBase (WindowsBase.dll 内)
+名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>
+
+アセンブリ:PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、WindowsBase (WindowsBase.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -221,7 +245,9 @@ ms.locfileid: "73975617"
 
 ### <a name="graphics"></a>グラフィックス
 
-名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Media.Effects>。アセンブリ: PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、WindowsBase (WindowsBase.dll 内)
+名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Media.Effects>
+
+アセンブリ:PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、WindowsBase (WindowsBase.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -231,7 +257,9 @@ ms.locfileid: "73975617"
 
 ### <a name="input"></a>入力
 
-名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>。アセンブリ: PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、WindowsBase (WindowsBase.dll 内)
+名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>
+
+アセンブリ:PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、WindowsBase (WindowsBase.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -242,7 +270,9 @@ ms.locfileid: "73975617"
 
 ### <a name="ui-automation"></a>UI オートメーション
 
-Namespace: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xref:System.Windows.Automation.Provider>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>。アセンブリ: PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、UIAutomationProvider (UIAutomationProvider.dll 内)、WindowsBase (WindowsBase.dll 内)
+名前空間: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xref:System.Windows.Automation.Provider>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>
+
+アセンブリ:PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、UIAutomationProvider (UIAutomationProvider.dll 内)、WindowsBase (WindowsBase.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -255,7 +285,9 @@ Namespace: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xre
 
 ### <a name="xaml"></a>XAML
 
-名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Markup>。アセンブリ: PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、WindowsBase (WindowsBase.dll 内)
+名前空間: <xref:System.Windows>、<xref:System.Windows.Controls>、<xref:System.Windows.Data>、<xref:System.Windows.Input>、<xref:System.Windows.Markup>
+
+アセンブリ:PresentationFramework (PresentationFramework.dll 内)、PresentationCore (PresentationCore.dll 内)、WindowsBase (WindowsBase.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
@@ -268,7 +300,9 @@ Namespace: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xre
 
 ### <a name="schema-and-transforms"></a>スキーマと変換
 
-名前空間: <xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>。アセンブリ: System.Xml (System.Xml.dll 内)、System.Xml.Linq (System.Xml.Linq.dll 内)
+名前空間: <xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>
+
+アセンブリ:System.Xml (System.Xml.dll 内)、System.Xml.Linq (System.Xml.Linq.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 |
 | ------- | ------------------------ |
@@ -282,7 +316,9 @@ Namespace: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xre
 
 ### <a name="validation"></a>検証
 
-名前空間: <xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>。アセンブリ: System.Xml (System.Xml.dll 内)、System.Xml.Linq (System.Xml.Linq.dll 内)
+名前空間: <xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>
+
+アセンブリ:System.Xml (System.Xml.dll 内)、System.Xml.Linq (System.Xml.Linq.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 |
 | ------- | ------------------------ |
@@ -291,7 +327,9 @@ Namespace: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xre
 
 ### <a name="writing"></a>書き込み
 
-名前空間: <xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>。アセンブリ: System.Xml (System.Xml.dll 内)、System.Xml.Linq (System.Xml.Linq.dll 内)
+名前空間: <xref:System.Xml.Linq>、<xref:System.Xml.Schema>、<xref:System.Xml.XPath>
+
+アセンブリ:System.Xml (System.Xml.dll 内)、System.Xml.Linq (System.Xml.Linq.dll 内)
 
 | 機能 | 3\.5 SP1 との相違 |
 | ------- | ------------------------ |
@@ -301,7 +339,7 @@ Namespace: <xref:System.Windows>、<xref:System.Windows.Automation.Peers>、<xre
 ## <a name="see-also"></a>関連項目
 
 - [.NET Framework 4 における新しい型とメンバー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff641764%28v=vs.100%29)
-- [.NET Framework 4 移行ガイド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
+- [.NET Framework 4 への移行ガイド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ff657133%28v=vs.100%29)
 - [.NET Framework 4 の新機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms171868%28v=vs.100%29)
 - [.NET Framework のバージョンの互換性](version-compatibility.md)
 - [.NET Framework 4 への Office ソリューションの移行](/visualstudio/vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later)

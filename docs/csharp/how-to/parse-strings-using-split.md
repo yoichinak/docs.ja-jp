@@ -9,14 +9,14 @@ helpviewer_keywords:
 - parse strings
 ms.assetid: 729c2923-4169-41c6-9c90-ef176c1e2953
 ms.custom: mvc
-ms.openlocfilehash: fb11ff59705188f9425beedfbbbf3c244d21f587
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: cf8307517213b54041b272843232eb595660b2e9
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121511"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389504"
 ---
-# <a name="how-to-parse-strings-using-stringsplit-c-guide"></a>String.Split を使用して文字列を解析する方法 (C# ガイド)
+# <a name="how-to-parse-strings-using-stringsplit-in-c"></a>C\# で String.Split を使用して文字列を解析する方法
 
 <xref:System.String.Split%2A?displayProperty=nameWithType> メソッドは、1 つまたは複数の区切り記号に基づいて入力文字列を分割することで部分文字列の配列を作成します。 英語のように単語の間にスペースがある文章の場合に、単語の境界で文字列を分割する最も簡単な方法になります。 他の特定の文字や文字列で文字列を分割する際にも利用されます。
 
@@ -26,7 +26,7 @@ ms.locfileid: "81121511"
 
 [!code-csharp-interactive[split strings on word boundaries](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#1)]
 
-区切り文字のインスタンスごとに、返される配列で値が生成されます。 連続する区切り文字により、返される配列の値として空の文字列が生成されます。  次の例でこれを確認できます。次の例では区切り文字としてスペースが使用されています。
+区切り文字のインスタンスごとに、返される配列で値が生成されます。 連続する区切り文字により、返される配列の値として空の文字列が生成されます。 空白文字を区切り記号として使用する次の例では、空の文字列がどのように作成されるかを確認できます。
 
 [!code-csharp-interactive[split strings with repeated separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#2)]
 
@@ -40,7 +40,7 @@ ms.locfileid: "81121511"
 
 [!code-csharp-interactive[split strings using multiple separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#3)]
 
-連続する区切り文字により、出力配列で空の文字列が生成されます。
+区切りの連続するインスタンスにより、出力配列で空の文字列が生成されます。
 
 [!code-csharp-interactive[split strings using multiple consecutive separators](../../../samples/snippets/csharp/how-to/strings/ParseStringsUsingSplit.cs#4)]
 
@@ -50,8 +50,8 @@ ms.locfileid: "81121511"
 
 [GitHub リポジトリ](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](../../../samples/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../programming-guide/index.md)
+- [C# プログラミング ガイド](../programming-guide/index.md)
 - [文字列](../programming-guide/strings/index.md)
 - [.NET の正規表現](../../standard/base-types/regular-expressions.md)

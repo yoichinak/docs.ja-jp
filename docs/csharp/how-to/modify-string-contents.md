@@ -3,12 +3,12 @@ title: 文字列の内容を変更する方法 - C# ガイド
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 260e4022c514db0cee3c1459b9d746a1c8e2addd
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 8e9bbe76c689d3c3f9f238ca9dd95cc7fcf98b18
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121133"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389521"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>C\# で文字列の内容を変更する方法
 
@@ -16,7 +16,7 @@ ms.locfileid: "81121133"
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
-この記事ではいくつかの手法を示します。 既存のテキストは置き換えることができます。 パターンを検索して、一致するテキストを他のテキストに置き換えることができます。 文字列は、一連の文字として扱うことができます。 空白を削除する便利なメソッドも使用できます。 シナリオに最も近い手法を選択する必要があります。
+この記事ではいくつかの手法を示します。 既存のテキストは置き換えることができます。 パターンを検索して、一致するテキストを他のテキストに置き換えることができます。 文字列は、一連の文字として扱うことができます。 空白を削除する便利なメソッドも使用できます。 シナリオに最も近い手法を選択してください。
 
 ## <a name="replace-text"></a>テキストの置換
 
@@ -58,7 +58,7 @@ ms.locfileid: "81121133"
 
 文字列から文字配列を生成し、配列の内容を変更して、変更された配列の内容から新しい文字列を作成できます。
 
-次の例は、文字列の文字のセットを置き換える方法を示しています。 最初に、<xref:System.String.ToCharArray?displayProperty=nameWithName> メソッドを使用して文字の配列が作成されます。 <xref:System.String.IndexOf%2A> メソッドを使用して "fox" という単語の開始インデックスを検索します。 次の 3 つの文字が、別の単語に置き換えられます。 最後に、新しい文字列が更新された文字配列から構築されます。
+次の例は、文字列の文字のセットを置き換える方法を示しています。 最初に、<xref:System.String.ToCharArray?displayProperty=nameWithType> メソッドを使用して文字の配列が作成されます。 <xref:System.String.IndexOf%2A> メソッドを使用して "fox" という単語の開始インデックスを検索します。 次の 3 つの文字が、別の単語に置き換えられます。 最後に、新しい文字列が更新された文字配列から構築されます。
 
 [!code-csharp-interactive[replace creates a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#6)]
 
@@ -72,7 +72,7 @@ ms.locfileid: "81121133"
 
 [GitHub リポジトリ](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](../../../samples/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET Framework 正規表現](../../standard/base-types/regular-expressions.md)
 - [正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)

@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: 9d9e212c9531828a8c2dd51fdd7488c17be41ba2
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: fadc6de43f522129970e48bc72914cf187fe3f82
+ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134063"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81607707"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -145,7 +145,7 @@ ASP.NET Core メタパッケージに対するこれらの参照では、ほと�
 
 #### <a name="version"></a>バージョン
 
-必須の `Version` 属性では、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョン管理](/nuget/reference/package-versioning#version-ranges-and-wildcards)スキームの規則に従います。 既定の動作は、最小一致バージョンです。 たとえば、`Version="1.2.3"` を指定すると、NuGet 表記の `[1.2.3, )` と同等になります。つまり、パッケージのバージョンは、使用できる場合は 1.2.3 になり、使用できない場合はその後のバージョンになります。
+必須の `Version` 属性では、復元するパッケージのバージョンを指定します。 この属性は、[NuGet バージョンの範囲](/nuget/concepts/package-versioning#version-ranges)スキームの規則に従います。 既定の動作は、最小一致バージョンです。 たとえば、`Version="1.2.3"` を指定すると、NuGet 表記の `[1.2.3, )` と同等になります。つまり、パッケージのバージョンは、使用できる場合は 1.2.3 になり、使用できない場合はその後のバージョンになります。
 
 #### <a name="includeassets-excludeassets-and-privateassets"></a>IncludeAssets、ExcludeAssets、PrivateAssets
 

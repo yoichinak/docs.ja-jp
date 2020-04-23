@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 7fbdfa8656e3c4832226370dc6efe56964e14934
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5a9d97ff14f087ddfc55986bf77f18492cbf8a04
+ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168506"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81389579"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ クエリの概要 (C#)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは通常、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、データ ソースの種類に合わせてさまざまな言語が開発されてきました。 このため、開発者は、サポートする必要のあるデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。 LINQ は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 LINQ クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、LINQ プロバイダーを利用できる XML ドキュメント、SQL データベース、ADO.NET データセット、.NET コレクション、その他の任意の形式のデータを照会したり変換したりできます。  
@@ -41,7 +41,7 @@ ms.locfileid: "79168506"
   
  [!code-csharp[CsLINQGettingStarted#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#2)]  
   
- [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] では、まず、デザイン時に手動で、または Visual Studio で [LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)を使用して、オブジェクト リレーショナル マッピングを作成します。 オブジェクトに対するクエリを記述すると、実行時には、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] によってデータベースとの通信が処理されます。 次の例では、`Customers` がデータベース内の特定のテーブルを表し、クエリ結果の型 <xref:System.Linq.IQueryable%601> が <xref:System.Collections.Generic.IEnumerable%601> から派生しています。  
+ [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] では、まず、デザイン時に手動で、または [Visual Studio で LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)を使用して、オブジェクト リレーショナル マッピングを作成します。 オブジェクトに対するクエリを記述すると、実行時には、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] によってデータベースとの通信が処理されます。 次の例では、`Customers` がデータベース内の特定のテーブルを表し、クエリ結果の型 <xref:System.Linq.IQueryable%601> が <xref:System.Collections.Generic.IEnumerable%601> から派生しています。  
   
 ```csharp  
 Northwnd db = new Northwnd(@"c:\northwnd.mdf");  
