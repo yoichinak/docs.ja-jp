@@ -2,12 +2,12 @@
 title: F# コードのフォーマットに関するガイドライン
 description: F# コードの書式設定に関するガイドラインを学習します。
 ms.date: 11/04/2019
-ms.openlocfilehash: b8be70dd29a04e71614308164e541b99a1724305
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: dd48380a90ee92b2c1edaaabc116fa1cd8010390
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739556"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102490"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
@@ -579,10 +579,10 @@ let pascalsTriangle =
 
 ```fsharp
 // Preferred
-let squares = [ for x in 1..10 -> x*x ]
+let squares = [ for x in 1..10 -> x * x ]
 
 // Not preferred
-let squares' = [ for x in 1..10 do yield x*x ]
+let squares' = [ for x in 1..10 do yield x * x ]
 ```
 
 古いバージョンの F# 言語では`yield`、条件付きでデータが生成される場合や、評価する連続した式が存在する場合に指定する必要がありました。 古い F#`yield`言語バージョンでコンパイルする必要がある場合を除き、これらのキーワードを省略することをおすすめします。
@@ -816,10 +816,10 @@ let function1 a b = a - b * b
 ```fsharp
 // A1 and A2 are local modules.
 module A1 =
-    let function1 a b = a*a + b*b
+    let function1 a b = a * a + b * b
 
 module A2 =
-    let function2 a b = a*a - b*b
+    let function2 a b = a * a - b * b
 ```
 
 ### <a name="formatting-object-expressions-and-interfaces"></a>オブジェクトの式とインターフェイスの書式設定
@@ -878,7 +878,7 @@ type MyRecord =
 
 ### <a name="formatting-attributes-on-parameters"></a>パラメータの属性の書式設定
 
-属性は、パラメーターの場所にすることもできます。 この場合は、パラメータと同じ行に、名前の前に置きます。
+属性は、パラメーターに配置することもできます。 この場合は、パラメータと同じ行に、名前の前に置きます。
 
 ```fsharp
 // Defines a class that takes an optional value as input defaulting to false.

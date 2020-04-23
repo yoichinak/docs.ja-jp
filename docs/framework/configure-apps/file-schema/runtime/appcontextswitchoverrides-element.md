@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuration switches
 - configuration
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
-ms.openlocfilehash: 95ae438e9fb52cc584d18a981bffb66147eb4a77
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8d5cd73bb9393533cb669581420e24297cb5ff71
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242817"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102932"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<要素>オーバーライドします。
 
@@ -40,12 +40,12 @@ ms.locfileid: "81242817"
 
 ### <a name="value-attribute"></a>値 属性
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |"名前=値"|定義済みのスイッチ名とその値 (`true`または`false`) を指定します。 複数のスイッチの名前と値のペアは、セミコロン (";") で区切られます。 .NET Framework でサポートされている定義済みのスイッチ名の一覧については、「解説」を参照してください。|
 
 ### <a name="child-elements"></a>子要素
- なし。
+ [なし] :
 
 ### <a name="parent-elements"></a>親要素
 
@@ -55,13 +55,13 @@ ms.locfileid: "81242817"
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|
 
 ## <a name="remarks"></a>解説
- .NET Framework 4.6 以降では`<AppContextSwitchOverrides>`、構成ファイル内の要素を使用すると、API の呼び出し元は、アプリが新しい機能を利用できるか、または以前のバージョンのライブラリとの互換性を維持できるかどうかを判断できます。 たとえば、API の動作がライブラリの 2 つのバージョン間で変更された場合`<AppContextSwitchOverrides>`、要素は、その API の呼び出し元が、新しい機能をサポートするライブラリのバージョンで新しい動作をオプトアウトすることを許可します。 .NET Framework で API を呼び出`<AppContextSwitchOverrides>`すアプリの場合、この要素は、以前のバージョンの .NET Framework を対象とするアプリを含む .NET Framework バージョンでアプリが実行されている場合に、新しい機能を選択することを呼び出し元に許可することもできます。
+ .NET Framework 4.6 以降`<AppContextSwitchOverrides>`では、構成ファイル内の要素を使用すると、API の呼び出し元は、アプリが新しい機能を利用できるか、または以前のバージョンのライブラリとの互換性を維持できるかどうかを判断できます。 たとえば、API の動作がライブラリの 2 つのバージョン間で変更された場合`<AppContextSwitchOverrides>`、要素は、その API の呼び出し元が、新しい機能をサポートするライブラリのバージョンで新しい動作をオプトアウトすることを許可します。 .NET Framework で API を呼び出`<AppContextSwitchOverrides>`すアプリの場合、この要素は、以前のバージョンの .NET Framework を対象とするアプリを含む .NET Framework バージョンでアプリが実行されている場合に、新しい機能を選択することを呼び出し元に許可することもできます。
 
  要素`value`の`<AppContextSwitchOverrides>`属性は、1 つ以上のセミコロン区切りの名前と値のペアで構成される単一の文字列で構成されます。  各名前は互換性スイッチを識別し、対応する値は、スイッチが`true`設定`false`されているかどうかを示すブール値 ( または ) です。 既定では、スイッチは、`false`ライブラリは、新しい機能を提供します。 スイッチが設定されている場合のみ、以前の機能を提供します (つまり、その`true`値は です)。 これにより、ライブラリは既存の API に新しい動作を提供し、以前の動作に依存する呼び出し元は新しい機能をオプトアウトできます。
 
- .NET Framework では、次のスイッチがサポートされています。
+.NET Framework では、次のスイッチがサポートされています。
 
-|スイッチ名|説明|導入|
+|スイッチ名|説明|導入時期|
 |-----------------|-----------------|----------------|
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|Windows プレゼンテーションファンデーションがコントロール レイアウトに従来のアルゴリズムを使用するかどうかを制御します。 詳細については、「[軽減策: WPF レイアウト](../../../migration-guide/mitigation-wpf-layout.md)」を参照してください。|.NET Framework 4.6|
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|パッケージのパーツに署名するために使用される既定のアルゴリズムが SHA1 または SHA256 かどうかを制御します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
@@ -141,7 +141,7 @@ ms.locfileid: "81242817"
 
  ライブラリ開発者は、カスタム スイッチを定義して、呼び出し元がライブラリの以降のバージョンで導入された変更された機能をオプトアウトできるようにすることもできます。 詳細については、<xref:System.AppContext> クラスを参照してください。
 
-## <a name="switches-in-aspnet-applications"></a>ASP.NETアプリケーションのスイッチ
+## <a name="switches-in-aspnet-apps"></a>ASP.NETアプリのスイッチ
 
 web.config ファイルの[\<appSettings>](../appsettings/index.md)セクションに[\<[>の追加]](../appsettings/add-element-for-appsettings.md)要素を追加することで、互換性設定を使用するようにASP.NET アプリケーションを構成できます。
 
@@ -179,6 +179,7 @@ web.config ファイルの[\<appSettings>](../appsettings/index.md)セクショ�
 
 ## <a name="see-also"></a>関連項目
 
+- [.NET Framework 4.6 以降の新しい動作を軽減する](../../../migration-guide/mitigations.md)
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<ランタイム>要素](runtime-element.md)
 - [\<要素>構成](../configuration-element.md)

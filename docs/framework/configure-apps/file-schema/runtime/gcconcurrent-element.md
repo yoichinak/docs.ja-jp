@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gcConcurrent element
 - <gcConcurrent> element
 ms.assetid: 503f55ba-26ed-45ac-a2ea-caf994da04cd
-ms.openlocfilehash: 5957337aa960a0d5f445249b410dbfaddb7b08e9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 249518ae7477d284d50f9010757db83b7752c657
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79400981"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102919"
 ---
 # <a name="gcconcurrent-element"></a>\<gcコンカレント>要素
 
@@ -43,7 +43,7 @@ ms.locfileid: "79400981"
 
 #### <a name="enabled-attribute"></a>有効な属性
 
-|Value|説明|
+|値|説明|
 |-----------|-----------------|
 |`false`|ガベージ コレクションを同時に実行しません。|
 |`true`|ガベージ コレクションを並列に実行します。 これは既定値です。|
@@ -82,7 +82,7 @@ ms.locfileid: "79400981"
 
 マシン構成ファイルに**gcConcurrentSetting 設定**がある場合は、すべての .NET Framework アプリケーションの既定値が定義されます。 マシン構成ファイルの設定は、アプリケーション構成ファイルの設定をオーバーライドします。
 
-同時実行ガベージ コレクションとバックグラウンド ガベージ コレクションの詳細については、「ガベージ コレクション[の基礎](../../../../standard/garbage-collection/fundamentals.md)」の「[コンカレント ガベージ コレクション](../../../../standard/garbage-collection/fundamentals.md#concurrent-garbage-collection)」、[バックグラウンド ワークステーションのガベージ コレクション](../../../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)、およびバックグラウンド サーバーのガベージ[コレクション](../../../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)のセクションを参照してください。
+同時実行ガベージ コレクションとバックグラウンド ガベージ コレクションの詳細については、「[バックグラウンド ガベージ コレクション](../../../../standard/garbage-collection/background-gc.md)」を参照してください。
 
 ## <a name="example"></a>例
 
