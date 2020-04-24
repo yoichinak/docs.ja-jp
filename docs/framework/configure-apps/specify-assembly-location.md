@@ -6,24 +6,24 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: f13b19dcd0aceac969d9639e6230ad33c6cd8d84
-ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
+ms.openlocfilehash: ead69d1e850050214c15295134c06ff6f66e9760
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/13/2019
-ms.locfileid: "70971546"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81646032"
 ---
 # <a name="specifying-an-assemblys-location"></a>アセンブリの場所の指定
-アセンブリの場所を指定するには、次の2つの方法があります。  
+アセンブリの場所を指定するには、次の 2 つの方法があります。  
   
-- [ \<codeBase>](./file-schema/runtime/codebase-element.md) 要素を使用  
+- [\<コードベース>要素を](./file-schema/runtime/codebase-element.md)使用します。  
   
-- [\<probing>](./file-schema/runtime/probing-element.md) 要素を使用  
+- [\<プローブ>要素を](./file-schema/runtime/probing-element.md)使用します。  
   
- また、 [.NET Framework 構成ツール (mscorcfg.msc)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100))を使用して、アセンブリの場所を指定したり、共通言語ランタイムがアセンブリをプローブする場所を指定したりすることもできます。  
+ .NET Framework[構成ツール (Mscorcfg.msc) を](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/2bc0cxhc(v=vs.100))使用して、アセンブリの場所を指定したり、共通言語ランタイムがアセンブリを調査する場所を指定することもできます。  
   
-## <a name="using-the-codebase-element"></a>\<codeBase> 要素の使用  
- **\<コードベース >** 要素は、アセンブリのバージョンをリダイレクトするマシン構成または発行者ポリシーファイルでのみ使用できます。 使用するアセンブリバージョンをランタイムが決定すると、バージョンを決定するファイルのコードベース設定が適用されます。 コードベースが指定されていない場合、ランタイムは通常の方法でアセンブリをプローブします。 詳細については、「[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
+## <a name="using-the-codebase-element"></a>\<コードベース>要素の使用  
+ ** \<codeBase>** 要素は、アセンブリのバージョンをリダイレクトするコンピューター構成または発行者ポリシー ファイルでのみ使用できます。 ランタイムは、使用するアセンブリ のバージョンを決定するときに、バージョンを決定するファイルからコード ベースの設定を適用します。 コード ベースが指定されていない場合、ランタイムは通常の方法でアセンブリをプローブします。 詳細については、「[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
  アセンブリの場所を指定する方法を次の例に示します。  
   
@@ -43,15 +43,15 @@ ms.locfileid: "70971546"
 </configuration>  
 ```  
   
- **Version**属性は、厳密な名前を持つすべてのアセンブリに必要ですが、厳密な名前ではないアセンブリでは省略する必要があります。 **\<CodeBase>** 要素が必要です、 **href** 属性。 コードベースの > 要素で **\<** バージョン範囲を指定することはできません。  
+ **バージョン**属性は、厳密な名前を持つアセンブリすべてに必要ですが、厳密な名前を持たないアセンブリでは省略する必要があります。 ** \<codeBase>** 要素には**href**属性が必要です。 ** \<codeBase>** 要素でバージョン範囲を指定することはできません。  
   
 > [!NOTE]
-> 厳密な名前が付けられていないアセンブリのコードベースヒントを指定する場合、ヒントはアプリケーションベースディレクトリのアプリケーションベースまたはサブディレクトリをポイントする必要があります。  
+> 厳密な名前を持たないアセンブリにコード ベース ヒントを指定する場合、ヒントはアプリケーション ベースまたはアプリケーション ベース ディレクトリのサブディレクトリを指している必要があります。  
   
-## <a name="using-the-probing-element"></a>\<probing> 要素の使用  
- 実行時に、プローブによってコードベースのないアセンブリが検索されます。 プローブの詳細については、「[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
+## <a name="using-the-probing-element"></a>プローブ>\<要素の使用  
+ ランタイムは、プローブによってコード ベースを持たないアセンブリを検索します。 プローブの詳細については、「[ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)」を参照してください。  
   
- アプリケーション構成ファイルの[\<probing>](./file-schema/runtime/probing-element.md)要素を使用して、アセンブリを検索するときにランタイムが検索する必要があるサブディレクトリを指定できます。 次の例は、ランタイムが検索するディレクトリを指定する方法を示しています。  
+ アプリケーション構成ファイルの[\<プローブ>](./file-schema/runtime/probing-element.md)要素を使用して、ランタイムがアセンブリを検索するときに検索するサブディレクトリを指定できます。 ランタイムが検索するディレクトリを指定する方法を次の例に示します。  
   
 ```xml  
 <configuration>  
@@ -63,11 +63,11 @@ ms.locfileid: "70971546"
 </configuration>  
 ```  
   
- **PrivatePath**属性には、ランタイムがアセンブリを検索するディレクトリが含まれています。 アプリケーションが C:\Program Files\MyApp に配置されている場合、ランタイムは C:\Program Files\MyApp\Bin、C:\Program Files\MyApp\Bin2\Subbin、および C:\Program Files\MyApp\Bin3. でコードベースを指定していないアセンブリを検索します。 **PrivatePath**に指定されたディレクトリは、アプリケーションのベースディレクトリのサブディレクトリである必要があります。  
+ **privatePath**属性には、ランタイムがアセンブリを検索するディレクトリが含まれます。 アプリケーションが C:\Program Files\MyApp にある場合、ランタイムは C:\プログラム ファイル\MyApp\Bin、C:\プログラム ファイル\MyApp\Bin2\Subbin、および C:\プログラム ファイル\MyApp\Bin3 でコード ベースを指定していないアセンブリを検索します。 **privatePath**で指定するディレクトリは、アプリケーションベースディレクトリのサブディレクトリでなければなりません。  
   
 ## <a name="see-also"></a>関連項目
 
 - [.NET のアセンブリ](../../standard/assembly/index.md)
-- [アセンブリを使用したプログラミング](../../standard/assembly/program.md)
+- [アセンブリを使用したプログラミング](../../standard/assembly/index.md)
 - [ランタイムがアセンブリを検索する方法](../deployment/how-the-runtime-locates-assemblies.md)
-- [構成ファイルを使用したアプリの構成](index.md)
+- [構成ファイルを使用してアプリを構成する方法](index.md)
