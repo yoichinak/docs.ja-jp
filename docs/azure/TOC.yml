@@ -1,0 +1,16 @@
+- name: .NET 開発者向けの Azure
+  href: index.yml
+  items:
+    - name: Azure と .NET の概要
+      href: intro.md
+    - name: Azure への移行
+      expanded: true
+      items:
+        - name: Azure ホスティング オプションを選択する
+          href: ./migration/choose.md
+        - name: .NET Web アプリまたはサービスを Azure App Service に移行する
+          href: ./migration/app-service.md
+        - name: ASP.NET アプリを Azure VM に移行する
+          href: ./migration/vm.md
+        - name: SQL Server データベースを Azure に移行する
+          href: ./migration/sql.md

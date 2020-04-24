@@ -33,13 +33,13 @@ ms.locfileid: "74352115"
  [アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)  
  アプリケーションによって参照される Web サービスに `My.WebServices` オブジェクトを使用してアクセスする方法に関するドキュメントです。  
   
- [Accessing Application Settings](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
+ [アプリケーション設定へのアクセス](../../../visual-basic/developing-apps/programming/app-settings/index.md)  
  `My.Settings` オブジェクトを使用して、アプリケーションの設定にアクセスする方法に関するドキュメントです。  
   
  [ドライブ、ディレクトリ、およびファイルの処理](drives-directories-files/index.md)  
  `My.Computer.FileSystem` オブジェクトを使用してファイル システムにアクセスする方法に関するドキュメントです。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Visual Basic 言語の機能](../../../visual-basic/programming-guide/language-features/index.md)
 - [プログラミングの概念](../../../visual-basic/programming-guide/concepts/index.md)

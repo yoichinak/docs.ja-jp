@@ -24,7 +24,7 @@ ms.locfileid: "75706336"
 > [!NOTE]
 > このセクションのほとんどの例は、.NET Core でサポートされる 3 つのプラットフォームすべて (Windows、Linux、macOS) について提示しています。 ただし、短い解説的な例については、Windows ファイル名と拡張子 (つまり、ライブラリの場合は "dll") を使用する 1 つのサンプルだけを示します。 その機能が Linux や macOS で使用できないというわけではなく、単に便宜上のためにそうしています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [プラットフォーム呼び出し (P/Invoke)](pinvoke.md)
 - [型のマーシャリング](type-marshaling.md)
