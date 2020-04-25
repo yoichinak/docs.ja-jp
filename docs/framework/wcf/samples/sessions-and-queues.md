@@ -2,12 +2,12 @@
 title: セッションとキュー
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 8a342b185c7965e9ee0ff9941a09e00fc392ad4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 489a8f5e782faca679991809e575e98153de95e0
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144100"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140601"
 ---
 # <a name="sessions-and-queues"></a>セッションとキュー
 このサンプルでは、メッセージ キュー (MSMQ) トランスポートを介して、キュー通信で一連の関連メッセージを送受信する方法を示します。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。  
@@ -20,7 +20,7 @@ ms.locfileid: "79144100"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\Session`  
   
@@ -135,7 +135,7 @@ public static void Main()
     </service>  
   </services>  
   ...  
-<system.serviceModel>  
+</system.serviceModel>  
 ```  
   
  クライアントはトランザクション スコープを作成します。 セッション内のすべてのメッセージは、トランザクション スコープ内のキューに送信され、すべてのメッセージが成功か失敗かを示すアトミックな単位として扱われます。 トランザクションは <xref:System.Transactions.TransactionScope.Complete%2A> を呼び出してコミットされます。  
@@ -207,13 +207,13 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# エディション、C++ エディション、または Visual Basic .NET エディションをビルドするには[、「Windows コミュニケーション ファウンデーション のサンプルのビルド」の手順に](../../../../docs/framework/wcf/samples/building-the-samples.md)従ってください。  
+2. ソリューションの C#、C++、または Visual Basic .NET エディションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
- <xref:System.ServiceModel.NetMsmqBinding> を使用する場合の既定では、トランスポート セキュリティが有効です。 MSMQ トランスポート セキュリティには 2 つの関連プロパティ<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>があります<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`。 `Windows` `Sign` MSMQ の認証機能と署名機能を利用するには、ドメインに MSMQ があることと、MSMQ に関する Active Directory の統合オプションがインストールされていることが必要です。 この条件を満たしていないコンピューターでこのサンプルを実行すると、エラーになります。  
+ <xref:System.ServiceModel.NetMsmqBinding> を使用する場合の既定では、トランスポート セキュリティが有効です。 MSMQ トランスポートセキュリティ<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>には、 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> `.` 2 つの関連するプロパティがあります。既定では、認証`Windows`モードがに設定され、 `Sign`保護レベルがに設定されています。 MSMQ の認証機能と署名機能を利用するには、ドメインに MSMQ があることと、MSMQ に関する Active Directory の統合オプションがインストールされていることが必要です。 この条件を満たしていないコンピューターでこのサンプルを実行すると、エラーになります。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>ワークグループに属しているコンピューターまたは Active Directory 統合のないコンピューターでこのサンプルを実行するには  
   
