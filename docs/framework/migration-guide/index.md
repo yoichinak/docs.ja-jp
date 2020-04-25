@@ -6,18 +6,18 @@ helpviewer_keywords:
 - .NET Framework, migrating applications to
 - migration, .NET Framework
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
-ms.openlocfilehash: 2fa992e1c0897d360f322581888c51dca8d8a734
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbaee646f7adcfe1a53d4231790e4258fd95a892
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73974987"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102633"
 ---
-# <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>.NET Framework 4.8、4.7、4.6、4.5 移行ガイド
+# <a name="migrate-to-net-framework-48-47-46-and-45"></a>.NET Framework 4.8、4.7、4.6、4.5 への移行
 
 旧バージョンの .NET Framework を使用してアプリを作成した場合、通常は .NET Framework 4.5 とそのポイント リリース (4.5.1 と 4.5.2)、.NET Framework 4.6 とそのポイント リリース (4.6.1 と 4.6.2)、.NET Framework 4.7 とそのポイント リリース (4.7.1 および 4.7.2)、または .NET Framework 4.8 へ簡単にアップグレードできます。 Visual Studio でプロジェクトを開きます。 プロジェクトが旧バージョンの Visual Studio で作成されている場合は、 **[Project Compatibility]\(プロジェクト互換性\)** ダイアログ ボックスが自動的に開きます。 Visual Studio におけるプロジェクトのアップグレードの詳細については、「[Visual Studio プロジェクトのポート、移行、アップグレード](/visualstudio/porting/port-migrate-and-upgrade-visual-studio-projects)」と「[Visual Studio 2019 の対象プラットフォームと互換性](/visualstudio/releases/2019/compatibility)」を参照してください。
 
- ただし、.NET Framework で行われたいくつかの変更により、コードを変更する必要があります。 .NET Framework 4.5 とそのポイント リリース、.NET Framework 4.6 とそのポイント リリース、.NET Framework 4.7 とそのポイント リリース、または .NET Framework 4.8 の新しい機能を利用することもできます。 .NET Framework の新しいバージョンに対応するためのアプリに対するこの種の変更は、一般に*移行*と呼ばれます。 アプリを移行する必要がない場合、アプリは再コンパイルなしで .NET Framework 4.5 またはそれ以降のバージョンで実行できます。
+ ただし、.NET Framework で行われたいくつかの変更により、コードの変更が必要になります。 .NET Framework 4.5 とそのポイント リリース、.NET Framework 4.6 とそのポイント リリース、.NET Framework 4.7 とそのポイント リリース、または .NET Framework 4.8 の新しい機能を利用することもできます。 .NET Framework の新しいバージョンに対応するために行う、アプリに対するこの種の変更は、一般に "*移行*" と呼ばれます。 アプリを移行する必要がない場合、アプリは再コンパイルなしで .NET Framework 4.5 またはそれ以降のバージョンで実行できます。
 
 ## <a name="migration-resources"></a>移行のためのリソース
 

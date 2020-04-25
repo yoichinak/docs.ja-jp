@@ -232,6 +232,10 @@
           displayName: garbage collection
         - name: 基礎
           href: garbage-collection/fundamentals.md
+        - name: ワークステーションとサーバーの GC
+          href: garbage-collection/workstation-server-gc.md
+        - name: バックグラウンド GC
+          href: garbage-collection/background-gc.md
         - name: 大きなオブジェクト ヒープ
           href: garbage-collection/large-object-heap.md
         - name: ガベージ コレクションとパフォーマンス
@@ -749,7 +753,7 @@
         - name: '方法: .NET 標準オブジェクトがシリアル化可能なのかどうかを判断する'
           href: serialization/how-to-determine-if-netstandard-object-is-serializable.md
         - name: サンプル
-          href: serialization/samples-binary.md
+          href: serialization/basic-serialization-technology-sample.md
     - name: XML シリアル化および SOAP シリアル化
       items:
         - name: 概要
@@ -804,8 +808,6 @@
               href: serialization/xml-serializer-generator-tool-sgen-exe.md
             - name: XML スキーマ定義ツール (Xsd.exe)
               href: serialization/xml-schema-definition-tool-xsd-exe.md
-        - name: サンプル
-          href: serialization/samples-xml.md
 - name: 複数のプラットフォーム向けの開発
   items:
     - name: 概要

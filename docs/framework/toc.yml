@@ -221,6 +221,8 @@
                   href: migration-guide/retargeting/4.5.1-4.7.1.md
                 - name: 4.5.1 から 4.7.2
                   href: migration-guide/retargeting/4.5.1-4.7.2.md
+                - name: 4.5.1 から 4.8
+                  href: migration-guide/retargeting/4.5.1-4.8.md
                 - name: 4.5.2 から 4.6
                   href: migration-guide/retargeting/4.5.2-4.6.md
                 - name: 4.5.2 から 4.6.1
@@ -277,6 +279,44 @@
                   href: migration-guide/retargeting/4.7.1-4.8.md
                 - name: 4.7.2 から 4.8
                   href: migration-guide/retargeting/4.7.2-4.8.md
+        - name: 動作の緩和
+          items:
+            - name: 概要
+              href: migration-guide/mitigations.md
+            - name: カスタムの IMessageFilter.PreFilterMessage 実装
+              href: migration-guide/mitigation-custom-imessagefilter-prefiltermessage-implementations.md
+            - name: アプリ ドメイン全体でのオブジェクトの逆シリアル化
+              href: migration-guide/mitigation-deserialization-of-objects-across-app-domains.md
+            - name: 新しい 64 ビット JIT コンパイラ
+              href: migration-guide/mitigation-new-64-bit-jit-compiler.md
+            - name: パスのコロン チェック
+              href: migration-guide/mitigation-path-colon-checks.md
+            - name: パスの正規化
+              href: migration-guide/mitigation-path-normalization.md
+            - name: icon オブジェクトの PNG フレーム
+              href: migration-guide/mitigation-png-frames-in-icon-objects.md
+            - name: ポインター ベースのタッチおよびスタイラスのサポート
+              href: migration-guide/mitigation-pointer-based-touch-and-stylus-support.md
+            - name: プールのブロック期間
+              href: migration-guide/mitigation-pool-blocking-period.md
+            - name: 製品のバージョン管理
+              href: migration-guide/mitigation-product-versioning.md
+            - name: 制御文字のシリアル化
+              href: migration-guide/mitigation-serialization-control-characters.md
+            - name: TLS プロトコル
+              href: migration-guide/mitigation-tls-protocols.md
+            - name: WCF サービスと証明書認証
+              href: migration-guide/mitigation-wcf-services-and-certificate-authentication.md
+            - name: WPF レイアウト
+              href: migration-guide/mitigation-wpf-layout.md
+            - name: WPF ウィンドウのレンダリング
+              href: migration-guide/mitigation-wpf-window-rendering.md
+            - name: X509CertificateClaimSet.FindClaims メソッド
+              href: migration-guide/mitigation-x509certificateclaimset-findclaims-method.md
+            - name: XML スキーマ検証
+              href: migration-guide/mitigation-xml-schema-validation.md
+            - name: ZipArchiveEntry.FullName パスの区切り文字
+              href: migration-guide/mitigation-ziparchiveentry-fullname-path-separator.md
         - name: バージョンの互換性
           href: migration-guide/version-compatibility.md
     - name: .NET Framework のバージョン

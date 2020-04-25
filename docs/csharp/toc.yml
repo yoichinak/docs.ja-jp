@@ -119,8 +119,8 @@
       href: programming-guide/types/index.md
     - name: null 許容参照型
       href: nullable-references.md
-    - name: API 署名を null 許容参照に更新する
-      href: nullable-attributes.md
+    - name: null 許容参照型を有効にするための方法を選択する
+      href: nullable-migration-strategies.md
     - name: 名前空間
       href: programming-guide/namespaces/index.md
     - name: 基本型
@@ -1200,6 +1200,8 @@
               href: programming-guide/xmldoc/exception.md
             - name: <include>
               href: programming-guide/xmldoc/include.md
+            - name: <inheritdoc>
+              href: programming-guide/xmldoc/inheritdoc.md
             - name: <list>
               href: programming-guide/xmldoc/list.md
             - name: <para>
