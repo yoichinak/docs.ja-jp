@@ -7,7 +7,7 @@
       href: xaml-in-wpf.md
       items:
         - name: XAML の概要 (WPF)
-          href: xaml-overview-wpf.md
+          href: ../../../desktop-wpf/fundamentals/xaml.md
         - name: XAML 構文の詳細
           href: xaml-syntax-in-detail.md
         - name: WPF における分離コードと XAML
@@ -290,7 +290,7 @@
       href: resources-wpf.md
       items:
         - name: XAML リソース
-          href: xaml-resources.md
+          href: ../../../desktop-wpf/fundamentals/xaml-resources-define.md
           items:
             - name: リソースとコード
               href: resources-and-code.md
