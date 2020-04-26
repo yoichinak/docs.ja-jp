@@ -2,12 +2,12 @@
 title: コンテナー化アプリ用の Microsoft プラットフォームとツールの概要
 description: Docker アプリケーションのライフサイクルをサポートする Microsoft のサービスについて説明します。
 ms.date: 02/15/2019
-ms.openlocfilehash: 8cb7870035003e956ee57684a2a2528732849379
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 84f4136c6b6c284dd5ecb3fc174ac825857a567e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738448"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158503"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>コンテナー化アプリ用の Microsoft プラットフォームとツールの概要
 
@@ -16,7 +16,7 @@ ms.locfileid: "81738448"
 図 3-1 は、複数のチーム (アプリの開発、DevOps インフラストラクチャ プロセス、および IT 管理および運用) によって提供される作業の種類で分類された Docker アプリのライフ サイクルの主要な柱を示しています。 通常、企業では、それぞれの領域を代表する "ペルソナ" のプロファイルは異なります。 そのため、スキルも異なります。
 
 :::image type="complex" source="./media/index/microsoft-tools-contanerized-docker-app.png" alt-text="Docker アプリの保守に必要な Microsoft ツールを示す図。":::
-Microsoft ツール。 開発/設計ワークロード用:Windows 用 Docker エンジン、VS と VS Code、.NET Core、Azure Kubernetes Service。 ビルド/テスト/出荷ワークロード用:Azure DevOps、Team Foundation Server、Docker CLI、Azure Kubernetes Service。 実行/監視/管理ワークロード用:Azure Monitor、Azure Portal Azure Kubernetes Services、Service Fabric、その他のオーケストレーター。
+Microsoft ツール。 開発/設計ワークロード用:Windows 用 Docker エンジン、Visual Studio および Visual Studio Code、.NET Core、Azure Kubernetes Service。 ビルド/テスト/出荷ワークロード用:Azure DevOps、Team Foundation Server、Docker CLI、Azure Kubernetes Service。 実行/監視/管理ワークロード用:Azure Monitor、Azure portal、Azure Kubernetes Services、Service Fabric、その他のオーケストレーター。
 :::image-end:::
 
 **図 3-1.** Microsoft プラットフォームとツールを使用するコンテナー化された Docker アプリケーションのライフ サイクルの主要な柱
