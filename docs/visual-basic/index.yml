@@ -5,16 +5,20 @@ metadata:
   title: Visual Basic のドキュメント - はじめに、チュートリアル、リファレンス。
   description: .NET での Visual Basic プログラミングについて学ぶ - ビギナー開発者、Visual Basic を初めて使用する開発者、および Visual Basic の上級開発者向け
   ms.topic: landing-page
-  ms.date: 11/27/2019
-  ms.openlocfilehash: 9019ed13a6e9a02710ec063a6538a406f4940e21
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 0dba96b4d42085680a8e0aa25456ec756e8c9b42
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/15/2020
-  ms.locfileid: "75303430"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135790"
 landingContent:
 - title: 作業開始
   linkLists:
+  - linkListType: download
+    links:
+    - text: .NET SDK をダウンロードする
+      url: https://dotnet.microsoft.com/download
   - linkListType: get-started
     links:
     - text: .NET Core を使用して "Hello World" アプリを構築する

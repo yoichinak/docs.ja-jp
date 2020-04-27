@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: c0aa8533-3b3b-42e8-9f60-84919793098c
 ms.openlocfilehash: 8b8bb4dff4f73247282060c0b4fd778ae0169b1f
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181515"
@@ -23,7 +23,7 @@ ms.locfileid: "79181515"
   
  ![プラットフォーム呼び出しのコールバック プロセスを示す図。](./media/callback-functions/platform-invoke-callback-process.gif)  
   
- コールバック関数は、タスクが繰り返し実行される状況での使用に最適です。 また、一般的な用途として、Windows API の **EnumFontFamilies**、**EnumPrinters**、**EnumWindows** などの列挙関数があります。 **EnumWindows** 関数は、各ウィンドウでタスクを実行するコールバック関数を呼び出して、コンピューター上のすべての既存のウィンドウを列挙します。 手順と例については、「[How to: Implement Callback Functions](how-to-implement-callback-functions.md)」(方法: コールバック関数を実装する) を参照してください。  
+ コールバック関数は、タスクが繰り返し実行される状況での使用に最適です。 また、一般的な用途として、Windows API の **EnumFontFamilies**、**EnumPrinters**、**EnumWindows** などの列挙関数があります。 **EnumWindows** 関数は、各ウィンドウでタスクを実行するコールバック関数を呼び出して、コンピューター上のすべての既存のウィンドウを列挙します。 手順と例については、「[方法:コールバック関数を実装する](how-to-implement-callback-functions.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

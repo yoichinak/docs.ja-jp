@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 ms.openlocfilehash: 66c7ba5989952edb55f21aab960ad7395a92ae0d
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181362"
@@ -20,7 +20,7 @@ ms.locfileid: "79181362"
   
  次の表では、配列のマーシャリング オプションをリストして、それらの使用方法を説明します。  
   
-|Array|説明|  
+|配列|説明|  
 |-----------|-----------------|  
 |値による整数の。|整数の配列を In パラメーターとして渡します。|  
 |参照による整数の。|整数の配列を In/Out パラメーターとして渡します。|  

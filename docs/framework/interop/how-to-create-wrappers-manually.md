@@ -1,17 +1,17 @@
 ---
-title: '方法: ラッパを手動で作成する'
+title: '方法: ラッパーを手動で作成する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - wrappers, creating manually
 ms.assetid: cc2a70d8-6a58-4071-a8cf-ce28c018c09b
 ms.openlocfilehash: a7818a1c08d8538acfacb22dc270d7ef23a7a582
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181421"
 ---
-# <a name="how-to-create-wrappers-manually"></a>方法: ラッパを手動で作成する
+# <a name="how-to-create-wrappers-manually"></a>方法: ラッパーを手動で作成する
 マネージド ソース コード内で COM の型を手動で宣言することにした場合、まず既存のインターフェイス定義言語 (IDL: Interface Definition Language) ファイルまたはタイプ ライブラリを用意することをお勧めします。 IDL ファイルがないか、またはタイプ ライブラリ ファイルを生成できない場合には、マネージド宣言を作成してその結果のアセンブリをタイプ ライブラリにエクスポートすることで、COM の型をシミュレートできます。  
   
 ### <a name="to-simulate-com-types-from-managed-source"></a>マネージド ソースから COM の型をシミュレートするには  
@@ -30,7 +30,7 @@ ms.locfileid: "79181421"
   
 3. 宣言が完成したら、他のマネージド ソース コードのコンパイルと同様に、このファイルをコンパイルします。  
   
-4. Tlbimp.exe でインポートする型と同様に、追加情報が必要となる場合があります。その場合には、コードに直接追加できます。 詳細については、「[方法 : 相互運用機能アセンブリを編集する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))」を参照してください。  
+4. Tlbimp.exe でインポートする型と同様に、追加情報が必要となる場合があります。その場合には、コードに直接追加できます。 詳細については、「[方法: 相互運用機能アセンブリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))」を参照してください。  
   
 ## <a name="example"></a>例  
  IDL に含まれる `ISATest` インターフェイスおよび `SATest` クラスの例と、C# ソース コードのそれらに対応する型を次のコードに示します。  
@@ -101,7 +101,7 @@ namespace SAServer
 
 - [ランタイム呼び出し可能ラッパーのカスタマイズ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))
 - [COM のデータ型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sak564ww(v=vs.100))
-- [方法: 相互運用機能アセンブリを編集する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
+- [方法: 相互運用機能アセンブリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8zbc969t(v=vs.100))
 - [タイプ ライブラリからアセンブリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))
 - [Tlbimp.exe (タイプ ライブラリ インポーター)](../tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (タイプ ライブラリ エクスポーター)](../tools/tlbexp-exe-type-library-exporter.md)

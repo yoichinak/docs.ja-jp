@@ -11,12 +11,12 @@ helpviewer_keywords:
 - emitting dynamic assemblies,partial trust scenarios
 - dynamic assemblies, security
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
-ms.openlocfilehash: 11eb4c9bc4ba1b1fe9051a04d12f893e693fb175
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.openlocfilehash: d1b6994f7ee9efa9f6472deffb2f3d869606e182
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79180468"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81644198"
 ---
 # <a name="security-issues-in-reflection-emit"></a>リフレクション出力のセキュリティ関連事項
 .NET Framework には、Microsoft Intermediate Language (MSIL) を出力する方法が 3 種類ありますが、それぞれに固有のセキュリティ問題があります。  
@@ -34,7 +34,7 @@ ms.locfileid: "79180468"
   
 <a name="Dynamic_Assemblies"></a>
 ## <a name="dynamic-assemblies"></a>動的アセンブリ  
- 動的アセンブリを作成するには、<xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> メソッドのオーバーロードを使用します。 コンピューター全体のセキュリティ ポリシーが削除されたため、このメソッドのほとんどのオーバーロードは .NET Framework 4 では推奨されていません。 ([セキュリティの変更を](../security/security-changes.md)参照してください。残りのオーバーロードは、信頼レベルに関係なく、どのコードでも実行できます。 これらのオーバーロードは 2 つのグループに分けられます。1 つは、動的アセンブリの作成時に適用する属性の一覧を指定するグループで、もう 1 つは属性の一覧を指定しないグループです。 アセンブリの透過性モデルを指定しない場合は、アセンブリの作成時に <xref:System.Security.SecurityRulesAttribute> 属性を適用することによって、出力アセンブリから透過性モデルが継承されます。  
+ 動的アセンブリを作成するには、<xref:System.AppDomain.DefineDynamicAssembly%2A?displayProperty=nameWithType> メソッドのオーバーロードを使用します。 コンピューター全体のセキュリティ ポリシーが削除されたため、このメソッドのほとんどのオーバーロードは .NET Framework 4 では推奨されていません。 (「[セキュリティの変更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」をご覧ください。)残りのオーバーロードは、信頼レベルに関係なく、任意のコードによって実行できます。 これらのオーバーロードは 2 つのグループに分けられます。1 つは、動的アセンブリの作成時に適用する属性の一覧を指定するグループで、もう 1 つは属性の一覧を指定しないグループです。 アセンブリの透過性モデルを指定しない場合は、アセンブリの作成時に <xref:System.Security.SecurityRulesAttribute> 属性を適用することによって、出力アセンブリから透過性モデルが継承されます。  
   
 > [!NOTE]
 > <xref:System.Reflection.Emit.AssemblyBuilder.SetCustomAttribute%2A> メソッドを使用すると、動的アセンブリの作成後に適用する属性は、そのアセンブリがディスクに保存され、メモリに再び読み込まれるまでは有効になりません。  
@@ -137,7 +137,7 @@ ms.locfileid: "79180468"
   
 <a name="Version_Information"></a>
 ## <a name="version-information"></a>バージョン情報  
- .NET Framework 4 以降では、コンピューター全体のセキュリティ ポリシーが削除され、セキュリティ透過性が既定の適用機構になりました。 「[セキュリティの変更](../security/security-changes.md)」をご覧ください。  
+ .NET Framework 4 以降では、コンピューター全体のセキュリティ ポリシーが削除され、セキュリティ透過性が既定の適用機構になりました。 「[セキュリティの変更](https://docs.microsoft.com/previous-versions/dotnet/framework/security/security-changes)」をご覧ください。  
   
  .NET Framework 2.0 Service Pack 1 以降では、動的アセンブリと動的メソッドを出力するときに、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグを指定する必要がなくなりました。 このフラグは、それ以前のすべてのバージョンの .NET Framework では必要となります。  
   

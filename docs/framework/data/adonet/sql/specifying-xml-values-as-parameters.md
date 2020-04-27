@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
 ms.openlocfilehash: acb94efd8b6b6b66d0cc84309c2d68ad692b08d3
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79174499"
@@ -19,11 +19,11 @@ ms.locfileid: "79174499"
  次のコンソール アプリケーションでは、**AdventureWorks** データベースに新しいテーブルを作成します。 新しいテーブルには、**SalesID** という名前の列と、**SalesInfo** という名前の XML 列があります。  
   
 > [!NOTE]
-> **AdventureWorks** サンプル データベースは、既定では SQL Server のインストール時にはインストールされません。 それをインストールするには、SQL Server Setup を実行します。  
+> **AdventureWorks** サンプル データベースは、既定では SQL Server のインストール時にはインストールされません。 インストールするには、SQL Server Setup を実行します。  
   
  この例では、新しいテーブルに行を挿入するための <xref:System.Data.SqlClient.SqlCommand> オブジェクトを準備します。 保存されたファイルは、**SalesInfo** 列に必要な XML データを提供します。  
   
- この例の実行に必要なファイルを作成するには、プロジェクトと同じフォルダーに新しいテキスト ファイルを作成します。 このファイルの名前を MyTestStoreData.xml にします。 メモ帳でファイルを開き、次のテキストをコピーして貼り付けます。  
+ この例の実行に必要なファイルを作成するには、プロジェクトと同じフォルダーに新しいテキスト ファイルを作成します。 このファイルの名前を MyTestStoreData.xml にします。 ファイルをメモ帳で開き、次のテキストをコピーして貼り付けます。  
   
 ```xml  
 <StoreSurvey xmlns="http://schemas.microsoft.com/sqlserver/2004/07/adventure-works/StoreSurvey">  
@@ -162,5 +162,5 @@ class Class1
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Data.SqlTypes.SqlXml>
-- [XML データの SQL サーバー](xml-data-in-sql-server.md)
+- [SQL Server における XML データ](xml-data-in-sql-server.md)
 - [ADO.NET の概要](../ado-net-overview.md)

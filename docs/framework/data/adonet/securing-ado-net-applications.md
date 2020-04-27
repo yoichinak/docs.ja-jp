@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: c1bdf4329665e4d29a47c26fb7dba8eb41c1cc3a
 ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/04/2020
 ms.locfileid: "76980029"
@@ -32,14 +32,14 @@ ms.locfileid: "76980029"
  [プライバシーとデータ セキュリティ](privacy-and-data-security.md)  
  ADO.NET アプリケーションの暗号化オプションについて説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [SQL Server のセキュリティ](./sql/sql-server-security.md)  
  開発者の観点から SQL Server のセキュリティ機能について説明します。  
   
  [セキュリティの考慮事項](./ef/security-considerations.md)  
  Entity Framework アプリケーションのセキュリティについて説明します。  
   
- [Security](../../../standard/security/index.md)  
+ [セキュリティ](../../../standard/security/index.md)  
  .NET のセキュリティをあらゆる観点から説明したトピックへのリンクが含まれています。  
   
  [セキュリティ ツール](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  

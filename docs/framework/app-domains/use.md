@@ -6,12 +6,12 @@ helpviewer_keywords:
 - common language runtime, application domains
 - runtime, application domains
 ms.assetid: c6d99815-e022-4d2c-9420-1d7ab5b9d504
-ms.openlocfilehash: d6bbc2648608e9542158e0f281984174447633a4
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 6ee02a3f27a645f19fd6a327052939586fac4aa9
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73119727"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645438"
 ---
 # <a name="using-application-domains"></a>アプリケーション ドメインの使用
 
@@ -48,7 +48,7 @@ ms.locfileid: "73119727"
 [アセンブリ読み込みの解決](../../standard/assembly/resolve-loads.md)  
 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントを使用してアセンブリの読み込みエラーを解決する方法について説明します。  
   
-## <a name="reference"></a>辞書／辞典／その他  
+## <a name="reference"></a>関連項目  
 
 <xref:System.AppDomain>  
 アプリケーション ドメインを表現します。 アプリケーション ドメインの作成と制御に使用するメソッドについて説明します。  
@@ -57,7 +57,7 @@ ms.locfileid: "73119727"
 [.NET のアセンブリ](../../standard/assembly/index.md)  
 アセンブリで実行される関数の概要について説明します。  
   
-[アセンブリを使用したプログラミング](../../standard/assembly/program.md)  
+[アセンブリを使用したプログラミング](../../standard/assembly/index.md)  
 アセンブリを作成し、署名し、その属性を設定する方法を説明します。  
   
 [動的メソッドおよびアセンブリの出力](../reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)  

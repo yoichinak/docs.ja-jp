@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: a7e6f091-d02c-49ba-b736-7295cb0eb743
 ms.openlocfilehash: 64878a795a7c5b790c8991064e32b82505685c0c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79155564"
@@ -20,11 +20,11 @@ ms.locfileid: "79155564"
 
 グローバル アセンブリ キャッシュ (GAC) には、複数のアプリケーションで共有されるアセンブリが格納されています。 次のコンポーネントのいずれかを使用して、アセンブリを[グローバル アセンブリ キャッシュ](gac.md)にインストールします。
 
-- [インストーラ](#windows-installer)
+- [Windows インストーラー](#windows-installer)
 - [グローバル アセンブリ キャッシュ ツール](#global-assembly-cache-tool)
 
 > [!IMPORTANT]
-> グローバル アセンブリ キャッシュにインストールできるのは、厳密な名前のアセンブリだけです。 厳密な名前を持つアセンブリを作成する方法については、「[方法 : 厳密な名前でアセンブリに署名](../../standard/assembly/sign-strong-name.md)する 」を参照してください。
+> グローバル アセンブリ キャッシュにインストールできるのは、厳密な名前のアセンブリだけです。 厳密な名前付きのアセンブリを作成する方法については、「[方法:厳密な名前でアセンブリに署名する](../../standard/assembly/sign-strong-name.md)」を参照してください。
 
 ## <a name="windows-installer"></a>Windows インストーラー
 
@@ -43,9 +43,9 @@ ms.locfileid: "79155564"
 gacutil -i <assembly name>
 ```
 
-このコマンドでは、*\<アセンブリ名>* グローバル アセンブリ キャッシュにインストールするアセンブリの名前を指定します。
+このコマンドの *\<assembly name>* は、グローバル アセンブリ キャッシュにインストールされるアセンブリの名前です。
 
-*gacutil.exe*がシステム パスにない場合は[、VS*\<バージョン>* の開発者コマンド プロンプトを](../tools/developer-command-prompt-for-vs.md)使用します。
+システム パスに *gacutil.exe* が含まれていない場合は、[開発者コマンド プロンプト for VS *\<バージョン>* ](../tools/developer-command-prompt-for-vs.md) を使用します。
 
 ファイル名 *hello.dll* のアセンブリをグローバル アセンブリ キャッシュにインストールする例を次に示します。
 

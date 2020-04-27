@@ -10,15 +10,18 @@ metadata:
   ms.collection: collection
   author: BillWagner
   ms.author: wiwagn
-  ms.date: 12/19/2019
-  ms.openlocfilehash: 466059d4fb685a04e55cd43c75debbe24099c86e
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/21/2020
+  ms.openlocfilehash: 31d7e3e916971e605e814f36f412b46210c533b6
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80635755"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135569"
 highlightedContent:
   items:
+  - title: .NET をダウンロードする
+    itemType: download
+    url: https://dotnet.microsoft.com/download
   - title: C# の概要。 クイック インタラクティブ スタート。
     itemType: get-started
     url: csharp/tutorials/intro-to-csharp/hello-world.yml
@@ -56,6 +59,12 @@ conceptualContent:
     - url: core/tutorials/index.md
       itemType: tutorial
       text: チュートリアル
+    - url: https://dotnet.microsoft.com/platform/community
+      itemType: whats-new
+      text: コミュニティ
+    - url: https://dotnetfoundation.org/
+      itemType: overview
+      text: .NET Foundation
   - title: .NET の概念
     summary: .NET の基本的な概念について学習する
     links:
@@ -89,7 +98,7 @@ conceptualContent:
     - url: core/sdk.md
       itemType: download
       text: .NET Core SDK をダウンロードする
-    - url: core/tools/index.md
+    - url: https://dotnet.microsoft.com/download
       itemType: overview
       text: .NET Core CLI の概要
     - url: core/porting/index.md
