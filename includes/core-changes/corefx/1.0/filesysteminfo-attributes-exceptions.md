@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4091bdcf7d9ed8872aed5faa6e6d3ed143903787
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ea9abca7578c2ddf92712a1c597f8f1ff4a5c0c
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449404"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021820"
 ---
 ### <a name="unauthorizedaccessexception-thrown-by-filesysteminfoattributes"></a>FileSystemInfo.Attributes によってスローされる UnauthorizedAccessException
 
@@ -12,19 +12,19 @@ ms.locfileid: "77449404"
 
 #### <a name="change-description"></a>変更の説明
 
-.NET Framework では、呼び出し元が <xref:System.ArgumentException> でファイル属性値を設定しようとして、書き込みアクセス許可がない場合、<xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType> がスローされます。 .NET Core では、代わりに <xref:System.UnauthorizedAccessException> がスローされます (.NET Core では、呼び出し元が無効なファイル属性を設定しようとした場合でも <xref:System.ArgumentException> がスローされます)。
+.NET Framework では、呼び出し元が <xref:System.IO.FileSystemInfo.Attributes?displayProperty=nameWithType> でファイル属性値を設定しようとして、書き込みアクセス許可がない場合、<xref:System.ArgumentException> がスローされます。 .NET Core では、代わりに <xref:System.UnauthorizedAccessException> がスローされます (.NET Core では、呼び出し元が無効なファイル属性を設定しようとした場合でも <xref:System.ArgumentException> がスローされます)。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
-1.0
+1
 
 #### <a name="recommended-action"></a>推奨アクション
 
-必要に応じて、`catch` の代わりに、または追加として、<xref:System.UnauthorizedAccessException> をキャッチするように <xref:System.ArgumentException> ステートメントを変更します。
+必要に応じて、<xref:System.ArgumentException> の代わりに、または追加として、<xref:System.UnauthorizedAccessException> をキャッチするように `catch` ステートメントを変更します。
 
 #### <a name="category"></a>カテゴリ
 
-CoreFx
+Core .NET ライブラリ
 
 #### <a name="affected-apis"></a>影響を受ける API
 

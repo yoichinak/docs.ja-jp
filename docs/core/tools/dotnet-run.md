@@ -2,12 +2,12 @@
 title: dotnet run コマンド
 description: dotnet run コマンドは、ソース コードからアプリケーションを実行する便利なオプションを提供します。
 ms.date: 02/19/2020
-ms.openlocfilehash: 28ed13a17c127ae1c61548fed8491315db279c20
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 77282fd8615ef01b7867c1bf0f741c834b6ddb30
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463417"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102770"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -46,6 +46,8 @@ dotnet myapp.dll
 `dotnet` ドライバーの詳細については、[.NET Core コマンド ライン ツール (CLI)](index.md) に関する記事を参照してください。
 
 アプリケーションを実行するため、`dotnet run` コマンドは、NuGet キャッシュから共有ランタイムの外にあるアプリケーションの依存関係を解決します。 このコマンドではキャッシュされた依存関係を使用するため、`dotnet run` を使用してアプリケーションを実稼働環境で実行することは推奨されません。 代わりに、[`dotnet publish`](dotnet-publish.md) コマンドを使用して[展開を作成](../deploying/index.md)し、発行された出力を展開します。
+
+### <a name="implicit-restore"></a>暗黙的な復元
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 

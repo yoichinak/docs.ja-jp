@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 7c39fe7ffd59fa7a5564bb45f32a6a2fbe0ddb33
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c9547cdc2f127cf13a3610118a26736930fcd8bd
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74568196"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021614"
 ---
 ### <a name="change-in-semantics-of-stringnull-in-utf8jsonwriter"></a>Utf8JsonWriter での `(string)null` のセマンティクスの変更
 
@@ -70,7 +70,7 @@ using (Utf8JsonWriter writer = new Utf8JsonWriter(stream))
 
 #### <a name="category"></a>カテゴリ
 
-CoreFx
+Core .NET ライブラリ
 
 #### <a name="affected-apis"></a>影響を受ける API
 

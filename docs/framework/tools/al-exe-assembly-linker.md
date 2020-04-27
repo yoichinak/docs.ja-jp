@@ -7,12 +7,12 @@ helpviewer_keywords:
 - modules, Assembly Linker
 - assembly manifest, Assembly Linker
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
-ms.openlocfilehash: 8e60bdaedb403237383c4655e728443747af29e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9877c1a4e86d035b614bf421364e3281878f0d8f
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398635"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645592"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 
@@ -176,5 +176,5 @@ al t2.netmodule /target:exe /out:t2a.exe /main:MyClass.Main
 - [ツール](index.md)
 - [*Sn.exe* (厳密名ツール)](sn-exe-strong-name-tool.md)
 - [*Gacutil.exe* (グローバル アセンブリ キャッシュ ツール)](gacutil-exe-gac-tool.md)
-- [アセンブリを使用したプログラミング](../../standard/assembly/program.md)
+- [アセンブリを使用したプログラミング](../../standard/assembly/index.md)
 - [Visual Studio 用開発者コマンド プロンプト](developer-command-prompt-for-vs.md)

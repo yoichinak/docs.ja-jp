@@ -2,18 +2,18 @@
 title: dotnet add package コマンド
 description: "'dotnet add package' コマンドは、NuGet パッケージ参照をプロジェクトに追加する便利なオプションを提供します。"
 ms.date: 02/14/2020
-ms.openlocfilehash: 24a25cdab2aab30d52f8407adfda437f47437290
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 1d57aed59ccd45417c88f9b6a2f9dd768fda9b58
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463755"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102854"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet add package` - プロジェクト ファイルにパッケージ参照を追加します。
 
@@ -28,11 +28,9 @@ dotnet add [<PROJECT>] package <PACKAGE_NAME>
 dotnet add package -h|--help
 ```
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
 
 `dotnet add package` コマンドは、プロジェクト ファイルにパッケージ参照を追加する便利なオプションを提供します。 このコマンドの実行後に、パッケージがプロジェクト内のフレームワークと互換性があることを確認する互換性チェックがあります。 互換性チェックに合格すると、`<PackageReference>` 要素がプロジェクト ファイルに追加されて、[dotnet restore](dotnet-restore.md) が実行されます。
-
-[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 たとえば、`Newtonsoft.Json` を *ToDo.csproj* に追加すると、次のような出力が生成されます。
 
@@ -54,6 +52,10 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
 ```
+
+### <a name="implicit-restore"></a>暗黙的な復元
+
+[!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 ## <a name="arguments"></a>引数
 
@@ -95,7 +97,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
   パッケージのバージョン。 [NuGet パッケージのバージョン管理](https://docs.microsoft.com/nuget/reference/package-versioning)に関するページを参照してください。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 - `Newtonsoft.Json` NuGet パッケージをプロジェクトに追加する:
 
@@ -115,7 +117,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
   dotnet add package Microsoft.AspNetCore.StaticFiles -s https://dotnet.myget.org/F/dotnet-core/api/v3/index.json
   ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [NuGet でグローバル パッケージ、キャッシュ、および一時フォルダーを管理する](https://docs.microsoft.com/nuget/consume-packages/managing-the-global-packages-and-cache-folders)
 - [NuGet パッケージのバージョン管理](https://docs.microsoft.com/nuget/reference/package-versioning)

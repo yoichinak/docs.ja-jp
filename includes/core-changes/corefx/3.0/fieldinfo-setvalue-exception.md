@@ -1,20 +1,20 @@
 ---
-ms.openlocfilehash: dc733ee32184db5af59bb06e294cd73765977581
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9f8a790718fbb9d685bb8959808338dc1766bf2c
+ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449560"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82021657"
 ---
 ### <a name="fieldinfosetvalue-throws-exception-for-static-init-only-fields"></a>FieldInfo.SetValue で、静的な初期化専用フィールドに対する例外がスローされる
 
-.NET Core 3.0 以降、<xref:System.Reflection.FieldAttributes.InitOnly> を呼び出して静的な <xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName> フィールドに値を設定しようとすると、例外がスローされます。
+.NET Core 3.0 以降、<xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName> を呼び出して静的な <xref:System.Reflection.FieldAttributes.InitOnly> フィールドに値を設定しようとすると、例外がスローされます。
 
 #### <a name="change-description"></a>変更の説明
 
 .NET Framework と、3.0 より前のバージョンの .NET Core では、定数である静的フィールドの初期化 ([C# では読み取り専用に](~/docs/csharp/language-reference/keywords/readonly.md)) した後、<xref:System.Reflection.FieldInfo.SetValue%2A?displayProperty=fullName> を呼び出すことで値を設定できました。 ただし、この方法でこのようなフィールドを設定すると、ターゲット フレームワークと最適化の設定に基づく動作を予測できなくなります。
 
-.NET Core 3.0 以降のバージョンでは、静的な <xref:System.Reflection.FieldInfo.SetValue%2A> フィールドに対して <xref:System.Reflection.FieldAttributes.InitOnly> を呼び出すと、<xref:System.FieldAccessException?displayProperty=nameWithType> 例外がスローされます。
+.NET Core 3.0 以降のバージョンでは、静的な <xref:System.Reflection.FieldAttributes.InitOnly> フィールドに対して <xref:System.Reflection.FieldInfo.SetValue%2A> を呼び出すと、<xref:System.FieldAccessException?displayProperty=nameWithType> 例外がスローされます。
 
 > [!TIP]
 > <xref:System.Reflection.FieldAttributes.InitOnly> フィールドは、その宣言時またはそれを含んでいるクラスのコンストラクター内にのみ設定可能なフィールドです。 つまり、それは初期化された後は定数になります。
@@ -31,7 +31,7 @@ ms.locfileid: "77449560"
 
 #### <a name="category"></a>カテゴリ
 
-CoreFx
+Core .NET ライブラリ
 
 #### <a name="affected-apis"></a>影響を受ける API
 

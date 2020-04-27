@@ -4,12 +4,12 @@ description: MetadataLoadContext を使用する方法について説明しま�
 author: MSDN-WhiteKnight
 ms.date: 03/10/2020
 ms.technology: dotnet-standard
-ms.openlocfilehash: d2589d51a6e0611504c0133d293d3fdfae32553c
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 90c84147c52199afc42a2efc297bc7fe40658ec7
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242661"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141198"
 ---
 # <a name="how-to-inspect-assembly-contents-using-metadataloadcontext"></a>方法: MetadataLoadContext を使用してアセンブリの内容を検査する
 
@@ -41,4 +41,4 @@ ms.locfileid: "81242661"
 
 ## <a name="example"></a>例
 
-完全なコード例については、[MetadataLoadContext サンプルを使用したアセンブリ内容の検査](https://github.com/dotnet/samples/tree/master/core/assembly/MetadataLoadContext)に関するページを参照してください。
+完全なコード例については、[MetadataLoadContext サンプルを使用したアセンブリ内容の検査](https://docs.microsoft.com/samples/dotnet/samples/inspect-assembly-contents-using-metadataloadcontext/)に関するページを参照してください。

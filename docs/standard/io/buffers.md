@@ -7,12 +7,12 @@ helpviewer_keywords:
 - I/O [.NET], buffers
 author: rick-anderson
 ms.author: riande
-ms.openlocfilehash: f939164cd56b2fb2feeeb171236b0e1171327e19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d113def0182dc6a5bcea6c18b2d0e4b475946e31
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160119"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739625"
 ---
 # <a name="work-with-buffers-in-net"></a>.NET でのバッファーの使用
 
@@ -191,5 +191,5 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 ### <a name="sequencereadert-common-problems"></a>SequenceReader\<T\> の一般的な問題
 
 - `SequenceReader<T>` は変更可能な構造体であるため、常に[参照](../../csharp/language-reference/keywords/ref.md)渡しする必要があります。
-- `SequenceReader<T>` は [ref struct](../../csharp/language-reference/keywords/ref.md#ref-struct-types) であるため、同期メソッド内でのみ使用でき、フィールドに格納することはできません。 詳細については、「[安全で効率的な C# コードを記述する](../../csharp/write-safe-efficient-code.md)」をご覧ください。
+- `SequenceReader<T>` は [ref struct](../../csharp/language-reference/builtin-types/struct.md#ref-struct) であるため、同期メソッド内でのみ使用でき、フィールドに格納することはできません。 詳細については、「[安全で効率的な C# コードを記述する](../../csharp/write-safe-efficient-code.md)」をご覧ください。
 - `SequenceReader<T>` は、順方向専用のリーダーとして使用するために最適化されています。 `Rewind` は、他の `Read`、`Peek`、`IsNext` API を使用しても対処できない小規模なバックアップを目的としています。

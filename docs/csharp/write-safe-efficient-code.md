@@ -1,15 +1,15 @@
 ---
 title: 安全で効率的な C# コードを記述する
 description: C# 言語に対する最新の機能強化により、以前はアンセーフ コードに関連付けられていたようなパフォーマンスの検証可能なセーフ コードを記述することができます。
-ms.date: 10/23/2018
+ms.date: 03/17/2020
 ms.technology: csharp-advanced-concepts
 ms.custom: mvc
-ms.openlocfilehash: 365320fef5a2f9cd123086c1baed9a786ede9f05
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: c324f3603c69555b40efa56d8e26c046c28f3a7c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345083"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "82021486"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>安全で効率的な C# コードを記述する
 
@@ -22,11 +22,11 @@ C# の新しい機能により、よりよいパフォーマンスの検証可�
 この記事では、以下のリソース管理手法に焦点を当てます。
 
 - [`readonly struct`](language-reference/builtin-types/struct.md#readonly-struct) を宣言して、型が**不変**であることを表します。 それにより、コンパイラでは [`in`](language-reference/keywords/in-parameter-modifier.md) パラメーターを使用するときに防御用のコピーを保存できます。
-- 型を変更できない場合は、メンバーが状態を変更しないことを示すために、`struct` メンバーに `readonly` を宣言します。
+- 型を変更できない場合は、メンバーが状態を変更しないことを示すために、`struct` メンバーの [`readonly`](language-reference/builtin-types/struct.md#readonly-instance-members) を宣言します。
 - 戻り値が <xref:System.IntPtr.Size?displayProperty=nameWithType> より大きい `struct` であり、ストレージの有効期間が値を返すメソッドより長い場合に、[`ref readonly`](language-reference/keywords/ref.md#reference-return-values) を使用して戻します。
 - `readonly struct` のサイズが <xref:System.IntPtr.Size?displayProperty=nameWithType> より大きいときは、パフォーマンスのため、`in` として渡す必要があります。
 - `readonly` 修飾子で宣言されている場合、またはメソッドが構造体の `readonly` メンバーのみを呼び出す場合を除き、`in` パラメーターとして `struct` は渡さないでください。 このガイダンスに違反すると、パフォーマンスが低下し、動作が不明瞭になる場合があります。
-- バイトのシーケンスとしてメモリを操作するには、[`ref struct`](language-reference/keywords/ref.md#ref-struct-types) または <xref:System.Span%601> や <xref:System.ReadOnlySpan%601> などの `readonly ref struct` を使用します。
+- バイトのシーケンスとしてメモリを操作するには、[`ref struct`](language-reference/builtin-types/struct.md#ref-struct) または <xref:System.Span%601> や <xref:System.ReadOnlySpan%601> などの `readonly ref struct` を使用します。
 
 これらの手法では、**参照**と**値**に関する 2 つの相反する目標のバランスを取ることが強要されます。 [参照型](programming-guide/types/index.md#reference-types)の変数では、メモリ内の場所への参照が保持されます。 [値の型](programming-guide/types/index.md#value-types)の変数には、値が直接格納されます。 これらの違いにより、メモリ リソースを管理するために重要となる主な違いが強調されます。 **値の型**は、通常、メソッドに渡されるとき、またはメソッドから戻されるときに、コピーされます。 この動作には、値の型のメンバーを呼び出すときの、`this` の値のコピーが含まれます。 コピーのコストは、型のサイズに関係します。 **参照型**は、マネージド ヒープ上に割り当てられます。 新しいオブジェクトごとに新しく割り当てる必要があり、後でそれを回収する必要があります。 どちらの操作にも時間がかかります。 参照型が引数としてメソッドに渡されるとき、またはメソッドから戻されるときは、参照がコピーされます。
 
@@ -113,7 +113,7 @@ public struct Point3D
 
 上の例では、`readonly` 修飾子を適用できる多数の場所を多く示しています (メソッド、プロパティ、およびプロパティ アクセサー)。 自動実装プロパティを使用する場合、コンパイラは読み取り/書き込みプロパティに対し、`get` アクセサーに `readonly` 修飾子を追加します。 コンパイラは、`get` アクセサーのみを持つプロパティに対し、`readonly` 修飾子を、自動実装プロパティの宣言に追加します。
 
-状態が変更不可なメンバーに `readonly` 修飾子を追加すると、2 つの関連する利点があります。 まず、コンパイラによって意図が適用されます。 そのメンバーは構造体の状態を変更することも、`readonly` とマークされていないメンバーにもアクセスできません。 2 つ目には、`readonly` メンバーにアクセスするときに、コンパイラは `in` パラメーターの防御的なコピーを作成しません。 コンパイラは、`readonly` メンバーによって `struct` が変更されないことを保証するため、この最適化を安全に行うことができます。
+状態が変更不可なメンバーに `readonly` 修飾子を追加すると、2 つの関連する利点があります。 まず、コンパイラによって意図が適用されます。 そのメンバーによる構造体の状態の変更はできません。 2 つ目には、`readonly` メンバーにアクセスするときに、コンパイラは `in` パラメーターの防御的なコピーを作成しません。 コンパイラは、`readonly` メンバーによって `struct` が変更されないことを保証するため、この最適化を安全に行うことができます。
 
 ## <a name="use-ref-readonly-return-statements-for-large-structures-when-possible"></a>可能であれば大きい構造体には `ref readonly return` ステートメントを使用する
 
