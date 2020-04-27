@@ -2,12 +2,12 @@
 title: C# の予約済み属性:Null 許容のスタティック分析
 ms.date: 04/14/2020
 description: これらの属性は、null 許容および null 非許容参照型に対するより適切な静的分析を提供するために、コンパイラによって解釈されます。
-ms.openlocfilehash: 0315d78db7517541efe578d8675c0f2fe45f5aea
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 33521133a6a01196e6e1ab9c3cdc191a24f1ecf3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389812"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102711"
 ---
 # <a name="reserved-attributes-contribute-to-the-compilers-null-state-static-analysis"></a>予約済み属性はコンパイラの null 状態の静的分析に寄与する
 
@@ -129,7 +129,7 @@ public Customer FindCustomer(string lastName, string firstName)
 
 検索された名前が見つからなかったときに `null` を返す、このようなメソッドを記述した可能性があります。 `null` は、レコードが見つからなかったことを明確に示しています。 この例では、戻り値の型を `Customer` から `Customer?` に変更する可能性があります。 戻り値を null 許容参照型として宣言すると、この API の意図が明確になります。
 
-「[ジェネリック定義と NULL 値の許容](../../nullable-attributes.md#generic-definitions-and-nullability)」に記載されている理由により、その手法はジェネリック メソッドでは機能しません。 同様のパターンに従うジェネリック メソッドがある場合があります。
+「[ジェネリック定義と NULL 値の許容](../../nullable-migration-strategies.md#generic-definitions-and-nullability)」に記載されている理由により、その手法はジェネリック メソッドでは機能しません。 同様のパターンに従うジェネリック メソッドがある場合があります。
 
 ```csharp
 public T Find<T>(IEnumerable<T> sequence, Func<T, bool> match)

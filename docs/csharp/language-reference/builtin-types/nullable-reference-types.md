@@ -2,12 +2,12 @@
 title: Null 許容参照型 - C# リファレンス
 description: C# の Null 許容参照型とその使用方法について説明します
 ms.date: 04/06/2020
-ms.openlocfilehash: cbc7397ac76b43b79a4168f4c61fe2c631b4a46b
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: cb61b162b06faa51faabbcdd91e55618cdeaca73
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888288"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102698"
 ---
 # <a name="nullable-reference-types-c-reference"></a>Null 許容参照型 (C# リファレンス)
 
@@ -61,11 +61,11 @@ Null 許容参照型は、`null`に初期化することも、割り当てるこ
 
 :::code language="csharp" source="snippets/NullableReferenceTypes.cs" id="SnippetLocalWarnings":::
 
-上記の例は、参照変数の null 状態を判断するコンパイラのスタティック分析を示しています。 コンパイラは、null のチェックと割り当てに関する言語規則を適用して、その分析を通知します。  コンパイラは、メソッドまたはプロパティのセマンティクスについて想定することはできません。 null チェックを実行するメソッドを呼び出した場合、コンパイラは、それらのメソッドが変数の null 状態に影響することを認識できません。 API が引数と戻り値のセマンティクスについてコンパイラに通知するために追加できる属性がいくつかあります。 これらの属性は、.NET Core ライブラリ内の多数の一般的な API に適用されています。 たとえば、<xref:System.String.IsNullOrEmpty%2A> は更新され、コンパイラは、そのメソッドを null チェックとして正しく解釈します。 null 状態のスタティック分析に適用される属性の詳細については、[Null 許容属性](../../nullable-attributes.md)に関する記事を参照してください。
+上記の例は、参照変数の null 状態を判断するコンパイラのスタティック分析を示しています。 コンパイラは、null のチェックと割り当てに関する言語規則を適用して、その分析を通知します。  コンパイラは、メソッドまたはプロパティのセマンティクスについて想定することはできません。 null チェックを実行するメソッドを呼び出した場合、コンパイラは、それらのメソッドが変数の null 状態に影響することを認識できません。 API が引数と戻り値のセマンティクスについてコンパイラに通知するために追加できる属性がいくつかあります。 これらの属性は、.NET Core ライブラリ内の多数の一般的な API に適用されています。 たとえば、<xref:System.String.IsNullOrEmpty%2A> は更新され、コンパイラは、そのメソッドを null チェックとして正しく解釈します。 null 状態のスタティック分析に適用される属性の詳細については、[Null 許容属性](../attributes/nullable-analysis.md)に関する記事を参照してください。
 
 ## <a name="setting-the-nullable-context"></a>Null 許容コンテキストの設定
 
-Null 許容コンテキストを制御するには、2 つの方法があります。 プロジェクト レベルでは、`<Nullable>enable</Nullable>` プロジェクトを追加できます。 単一の C# ソース ファイルでは、`#nullable enable` pragma を追加して、Null 許容コンテキストを有効にすることができます。 [Null 許容戦略の設定](../../nullable-attributes.md) に関する記事を参照してください。
+Null 許容コンテキストを制御するには、2 つの方法があります。 プロジェクト レベルでは、`<Nullable>enable</Nullable>` プロジェクトを追加できます。 単一の C# ソース ファイルでは、`#nullable enable` pragma を追加して、Null 許容コンテキストを有効にすることができます。 [Null 許容戦略の設定](../../nullable-migration-strategies.md) に関する記事を参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

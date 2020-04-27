@@ -6,12 +6,12 @@ helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: aadf555fb47963eab323bbb6105227c5b119e6f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d726ab3a882d2e6913fa69c7b82f1d6db78dd47d
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170313"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102048"
 ---
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 
@@ -26,7 +26,7 @@ MyClass mc = new MyClass();
 MyClass mc2 = mc;
 ```
 
-オブジェクトが作成されると、その特定のオブジェクトに対してマネージド ヒープ上で十分なメモリが割り当てられ、変数にはそのオブジェクトの場所への参照のみが格納されます。 マネージド ヒープを使用する型では、メモリの割り当て時と、CLR の自動メモリ管理機能 ("*ガベージ コレクション*") による再要求時の両方についてオーバーヘッドが発生します。 しかし、ガベージ コレクションも高度に最適化されるため、ほとんどのシナリオでは、パフォーマンス上の問題が発生することはありません。 ガベージ コレクションの詳細については、「[自動メモリ管理とガベージ コレクション](../../../standard/garbage-collection/gc.md)」を参照してください。  
+オブジェクトが作成されると、その特定のオブジェクトに対してマネージド ヒープ上で十分なメモリが割り当てられ、変数にはそのオブジェクトの場所への参照のみが格納されます。 マネージド ヒープを使用する型では、メモリの割り当て時と、CLR の自動メモリ管理機能 ("*ガベージ コレクション*") による再要求時の両方についてオーバーヘッドが発生します。 しかし、ガベージ コレクションも高度に最適化されるため、ほとんどのシナリオでは、パフォーマンス上の問題が発生することはありません。 ガベージ コレクションの詳細については、「[自動メモリ管理とガベージ コレクション](../../../standard/garbage-collection/fundamentals.md)」を参照してください。  
   
 ## <a name="declaring-classes"></a>クラスの宣言
 

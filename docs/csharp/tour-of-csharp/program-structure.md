@@ -3,12 +3,12 @@ title: C# プログラムの構造 - C# 言語のツアー
 description: C# プログラムの基本的な構造について説明します
 ms.date: 02/25/2020
 ms.assetid: 984f0314-507f-47a0-af56-9011243f5e65
-ms.openlocfilehash: c09c11a4dd957b29b2adb7aaa8d68a50f30620b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0a4dcaed7b53a7da7008d6000b3bec2ffe3ee7b
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156832"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141019"
 ---
 # <a name="program-structure"></a>プログラムの構造
 
@@ -16,7 +16,7 @@ C# における主要な組織的概念は、***プログラム***、***名前�
 
 `dotnet new` コマンドを使用して、*acme* という名前のライブラリ プロジェクトを作成できます。
 
-```console
+```dotnetcli
 dotnet new classlib -o acme
 ```
 
@@ -26,7 +26,7 @@ dotnet new classlib -o acme
 
 このクラスの完全修飾名は `Acme.Collections.Stack` です。 このクラスには複数のメンバーが含まれています: `top` という名前のフィールドが 1 つ、`Push` と `Pop` という名前のメソッドが合わせて 2 つ、そして `Entry` という名前の入れ子になったクラスです。 `Entry` クラスにはさらに、3 つのメンバーが含まれています: `next` という名前のフィールド、`data` という名前のフィールド、およびコンストラクターです。 コマンド:
 
-```console
+```dotnetcli
 dotnet build
 ```
 
@@ -48,7 +48,7 @@ dotnet build
 
 これを追加すると、`dotnet build` によって `example.exe` という名前の実行可能なアセンブリが作成され、実行時に次の出力が生成されます。
 
-```console
+```dotnetcli
 100
 10
 1

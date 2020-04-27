@@ -2,12 +2,12 @@
 title: C# 言語のバージョン管理 - C# ガイド
 description: C# 言語のバージョンがプロジェクトに基づいて決定されるしくみとその選択の背後にある理由について説明します。 既定値を手動でオーバーライドする方法について説明します。
 ms.date: 02/21/2020
-ms.openlocfilehash: ef7275aad7638f52ecbfca1dfbdb962ae242fb48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398233"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102659"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
@@ -20,7 +20,7 @@ C# 8.0 (以降) は .NET Core 3.x 以降のバージョンでのみサポート�
 - 既定のインターフェイス メンバー実装には、.NET Core 3.0 CLR の新機能が必要になります。
 - 非同期ストリームには、<xref:System.IAsyncDisposable?displayProperty=nameWithType>、<xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>、<xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType> という新しい型が必要になります。
 - インデックスと範囲には、<xref:System.Index?displayProperty=nameWithType> と <xref:System.Range?displayProperty=nameWithType> という新しい型が必要です。
-- null 参照型では、効果的に警告を与える目的でいくつかの[属性](../nullable-attributes.md)が利用されます。 その属性は .NET Core 3.0 で追加されました。 他のターゲット フレームには、そのような属性に関する注釈が付けられていません。 つまり、null 許容警告は潜在的な問題を正確に反映していない可能性があります。
+- null 参照型では、効果的に警告を与える目的でいくつかの[属性](attributes/nullable-analysis.md)が利用されます。 その属性は .NET Core 3.0 で追加されました。 他のターゲット フレームには、そのような属性に関する注釈が付けられていません。 つまり、null 許容警告は潜在的な問題を正確に反映していない可能性があります。
 
 ## <a name="defaults"></a>[既定値]
 
