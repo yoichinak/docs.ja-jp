@@ -1,5 +1,5 @@
 ---
-title: '方法 : アプリケーション ドメインを作成する'
+title: '方法: アプリケーション ドメインを作成する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: ba1fa43e-49f5-47d9-bd7f-3024af16f4ba
 ms.openlocfilehash: 83bf0ad96b352ed5c015723dd89aee7913d2a88e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119887"
 ---
-# <a name="how-to-create-an-application-domain"></a>方法 : アプリケーション ドメインを作成する
+# <a name="how-to-create-an-application-domain"></a>方法: アプリケーション ドメインを作成する
 共通言語ランタイム ホストにより、必要なときに、アプリケーション ドメインが自動的に作成されます。 ただし、独自のアプリケーション ドメインを作成し、個人的に管理するアセンブリにそれを読み込むことができます。 アプリケーション ドメインを作成し、そこからコードを実行することもできます。  
   
  <xref:System.AppDomain?displayProperty=nameWithType> クラスのオーバーロードされた **CreateDomain** メソッドの 1 つを利用し、新しいアプリケーション ドメインを作成します。 アプリケーション ドメインに名前を付け、その名前で参照できます。  

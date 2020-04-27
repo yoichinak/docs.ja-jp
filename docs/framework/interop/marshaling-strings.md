@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 ms.openlocfilehash: 88b6342038f99bf06fa2986c43f422e63cffd31e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124381"
@@ -23,7 +23,7 @@ ms.locfileid: "73124381"
   
  次の表では、文字列のマーシャリング オプションの一覧、それぞれの使用方法の説明、対応する .NET Framework サンプルへのリンクを示します。  
   
-|文字列型|説明|サンプル|  
+|String|説明|サンプル|  
 |------------|-----------------|------------|  
 |値渡し。|In パラメーターとして文字列を渡します。|[MsgBox](msgbox-sample.md)|  
 |結果として。|アンマネージ コードから文字列を返します。|[文字列](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  

@@ -14,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 ms.openlocfilehash: 0223cb25b933cc84af49aa86d90259fdf1fd3efc
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73124170"
@@ -26,15 +26,15 @@ ms.locfileid: "73124170"
   
 ### <a name="to-import-a-library"></a>ライブラリをインポートするには  
   
-- **#import** ディレクティブで **raw_interfaces_only** オプションを指定します。 (例:  
+- **#import** ディレクティブで **raw_interfaces_only** オプションを指定します。 次に例を示します。  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
     ```  
   
-     -または-  
+     \- または -  
   
-- Mscorlib.tlb の #import ディレクティブを含めます。 (例:  
+- Mscorlib.tlb の #import ディレクティブを含めます。 次に例を示します。  
   
     ```cpp  
     #import "mscorlib.tlb"  

@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: e42a65f7-1e61-411f-b09a-aca1bbce24c6
 ms.openlocfilehash: 09045fb455a2163641d6f4af0ba07520ead59f1e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73123482"
@@ -52,4 +52,4 @@ ms.locfileid: "73123482"
 ## <a name="see-also"></a>関連項目
 
 - [アンマネージ コードとの相互運用](index.md)
-- [COM 相互運用機能のサンプル: COM クライアントおよび .NET サーバー](com-interop-sample-com-client-and-net-server.md)
+- [COM 相互運用機能のサンプル:COM クライアントおよび .NET サーバー](com-interop-sample-com-client-and-net-server.md)

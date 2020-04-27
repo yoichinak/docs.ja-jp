@@ -1,5 +1,5 @@
 ---
-title: '方法 : グローバル アセンブリ キャッシュの内容を表示する'
+title: '方法: グローバル アセンブリ キャッシュの内容を表示する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 ms.openlocfilehash: b5d8b31e7eb23789878da620f3a4517056a1ee3e
 ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73119831"
@@ -30,7 +30,7 @@ ms.locfileid: "73119831"
 gacutil -l
 ```
 
--または-
+\- または -
 
 ```shell
 gacutil /l
