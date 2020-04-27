@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: 12ae15d72644e314aa694f8d169bc8f45fa284a2
 ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/19/2020
 ms.locfileid: "77452345"
@@ -28,13 +28,13 @@ SQL Server 2005 で、Microsoft Windows 用の .NET Framework の共通言語ラ
  テーブル値関数、スカラー関数、ユーザー定義集計関数など、さまざまな種類の CLR 関数の実装方法と使用方法について説明します。  
   
  [CLR ユーザー定義型](clr-user-defined-types.md)  
- CLR ユーザー定義型の実装方法と使用方法について説明します。 追加情報へのリンクもあります。  
+ CLR のユーザー定義型を実装して使用する方法について説明します。 追加情報へのリンクもあります。  
   
  [CLR ストアド プロシージャ](clr-stored-procedures.md)  
- CLR ストアド プロシージャの実装方法と使用方法について説明します。 追加情報へのリンクもあります。  
+ CLR のストアド プロシージャを実装して使用する方法について説明します。 追加情報へのリンクもあります。  
   
  [CLR トリガー](clr-triggers.md)  
- CLR トリガーの実装方法と使用方法について説明します。 追加情報へのリンクもあります。  
+ CLR のトリガーを実装して使用する方法について説明します。 追加情報へのリンクもあります。  
   
  [コンテキスト接続](the-context-connection.md)  
  コンテキスト接続について説明します。  
@@ -42,7 +42,7 @@ SQL Server 2005 で、Microsoft Windows 用の .NET Framework の共通言語ラ
  [SQL Server のインプロセス固有の ADO.NET の動作](sql-server-in-process-specific-behavior-of-adonet.md)  
  SQL Server のインプロセス固有の ADO.NET の拡張およびコンテキスト接続について説明します。 追加情報へのリンクもあります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [SQL Server と ADO.NET](index.md)
 - [ADO.NET の概要](../ado-net-overview.md)

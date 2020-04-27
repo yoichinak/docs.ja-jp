@@ -5,7 +5,7 @@ ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
 ms.openlocfilehash: 632ee87635d221d1929823d6f8588632b2e7a114
 ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/19/2020
 ms.locfileid: "77452319"
@@ -19,6 +19,6 @@ ms.locfileid: "77452319"
   
 1. [ADO.NET に対する SQL Server インプロセス固有の拡張機能](/sql/relational-databases/clr-integration-data-access-in-process-ado-net/sql-server-in-process-specific-extensions-to-ado-net)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ADO.NET の概要](../ado-net-overview.md)
