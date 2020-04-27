@@ -9,7 +9,7 @@ dev_langs:
 ms.assetid: cce69574-5861-4a30-b730-2e18d915d8ee
 ms.openlocfilehash: dbe02242f9bb8654e3f12d87b6ff6c2aea1f76b1
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710116"
@@ -22,7 +22,7 @@ ms.locfileid: "75710116"
 
 <xref:System.Xml.Schema.XmlSchema> クラスの次のプロパティを使用すると、XML スキーマに追加されたすべてのグローバル要素のコレクションにアクセスできます。
 
-|property|コレクションまたは配列に格納されているオブジェクトの型|
+|プロパティ|コレクションまたは配列に格納されているオブジェクトの型|
 |--------------|---------------------------------------------------|
 |<xref:System.Xml.Schema.XmlSchema.Elements%2A>|<xref:System.Xml.Schema.XmlSchemaElement>|
 |<xref:System.Xml.Schema.XmlSchema.Attributes%2A>|<xref:System.Xml.Schema.XmlSchemaAttribute>|
@@ -31,7 +31,7 @@ ms.locfileid: "75710116"
 |<xref:System.Xml.Schema.XmlSchema.Includes%2A>|<xref:System.Xml.Schema.XmlSchemaExternal>、<xref:System.Xml.Schema.XmlSchemaInclude>、<xref:System.Xml.Schema.XmlSchemaImport>、または <xref:System.Xml.Schema.XmlSchemaRedefine>|
 |<xref:System.Xml.Schema.XmlSchema.Items%2A>|<xref:System.Xml.Schema.XmlSchemaObject> (グローバル レベルのすべての要素、属性、および型にアクセスできる)|
 |<xref:System.Xml.Schema.XmlSchema.Notations%2A>|<xref:System.Xml.Schema.XmlSchemaNotation>|
-|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>では、 <xref:System.Xml.Schema.XmlSchemaSimpleType>では、 <xref:System.Xml.Schema.XmlSchemaComplexType>|
+|<xref:System.Xml.Schema.XmlSchema.SchemaTypes%2A>|<xref:System.Xml.Schema.XmlSchemaType>、<xref:System.Xml.Schema.XmlSchemaSimpleType>、<xref:System.Xml.Schema.XmlSchemaComplexType>|
 |<xref:System.Xml.Schema.XmlSchema.UnhandledAttributes%2A>|<xref:System.Xml.XmlAttribute> (スキーマの名前空間に属さない属性にアクセスできる)|
 
 > [!NOTE]

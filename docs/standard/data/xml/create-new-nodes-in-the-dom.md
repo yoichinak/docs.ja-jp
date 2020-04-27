@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 ms.openlocfilehash: f48990286405baee347becef87d0511cd42e9e77
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711000"
@@ -44,7 +44,7 @@ ms.locfileid: "75711000"
 |メソッド|ノードの位置|  
 |------------|--------------------|  
 |<xref:System.Xml.XmlNode.InsertBefore%2A>|参照ノードの前に挿入されます。 たとえば、5 番目の位置に新しいノードを挿入するには、次のようにします。<br /><br /> `Dim refChild As XmlNode = node.ChildNodes(4) 'The reference is zero-based.node.InsertBefore(newChild, refChild);`<br /><br /> `XmlNode refChild = node.ChildNodes[4]; //The reference is zero-based. node.InsertBefore(newChild, refChild);`<br /><br /> 詳細については、<xref:System.Xml.XmlNode.InsertBefore%2A> メソッドを参照してください。|  
-|<xref:System.Xml.XmlNode.InsertAfter%2A>|参照ノードの後に挿入されます。 例:<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 詳細については、<xref:System.Xml.XmlNode.InsertAfter%2A> メソッドを参照してください。|  
+|<xref:System.Xml.XmlNode.InsertAfter%2A>|参照ノードの後に挿入されます。 次に例を示します。<br /><br /> `node.InsertAfter(newChild, refChild)`<br /><br /> `node.InsertAfter(newChild, refChild);`<br /><br /> 詳細については、<xref:System.Xml.XmlNode.InsertAfter%2A> メソッドを参照してください。|  
 |<xref:System.Xml.XmlNode.AppendChild%2A>|当該ノードの子ノードのリストの末尾にノードを追加します。 追加するノードが <xref:System.Xml.XmlDocumentFragment> の場合は、ドキュメント フラグメントの内容全体がこのノードの子リストに移動されます。 詳細については、<xref:System.Xml.XmlNode.AppendChild%2A> メソッドを参照してください。|  
 |<xref:System.Xml.XmlNode.PrependChild%2A>|当該ノードの子ノードのリストの先頭にノードを追加します。 追加するノードが <xref:System.Xml.XmlDocumentFragment> の場合は、ドキュメント フラグメントの内容全体がこのノードの子リストに移動されます。 詳細については、<xref:System.Xml.XmlNode.PrependChild%2A> メソッドを参照してください。|  
 |<xref:System.Xml.XmlAttributeCollection.Append%2A>|要素に関連付けられている属性コレクションの末尾に <xref:System.Xml.XmlAttribute> ノードを追加します。 詳細については、<xref:System.Xml.XmlAttributeCollection.Append%2A> メソッドを参照してください。|  

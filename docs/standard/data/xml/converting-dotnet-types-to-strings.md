@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: dc2e2b65-f623-4dc3-938b-d2a054d6832c
 ms.openlocfilehash: a63e0175f6660967eb4aa678c6731d353e44e2d5
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711078"
@@ -15,7 +15,7 @@ ms.locfileid: "75711078"
   
 |.NET Framework 型|返される文字列型|  
 |-------------------------|--------------------------|  
-|Boolean|"true"、"false"|  
+|ブール型|"true"、"false"|  
 |Single.PositiveInfinity|"INF"|  
 |Single.NegativeInfinity|"-INF"|  
 |Double.PositiveInfinity|"INF"|  

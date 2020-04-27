@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710662"
@@ -17,7 +17,7 @@ XML データ型と共通言語ランタイム (CLR) 型の既定のマッピン
 > [!NOTE]
 > `xs` および `xdt` のプレフィックスは、それぞれ <https://www.w3.org/2001/XMLSchema> および <https://www.w3.org/2003/05/xpath-datatypes> 名前空間 URI にマッピングされます。
 
-|XML の種類|CLR 型|
+|XML 型|CLR 型|
 |--------------|--------------|
 |`xs:anyURI`|<xref:System.Uri>|
 |`xs:base64Binary`|`Byte[]`|

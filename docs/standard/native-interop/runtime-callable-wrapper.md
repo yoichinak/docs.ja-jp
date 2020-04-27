@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 ms.openlocfilehash: 0b448379fba965060fdf3bf067e65374f40d1fc2
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156011"
@@ -41,7 +41,7 @@ ms.locfileid: "78156011"
   
  RCW は、それがラップするオブジェクトによって公開されている、次の表にリストされたインターフェイスを使用します。  
   
-|インターフェイス|Description|  
+|Interface|説明|  
 |---------------|-----------------|  
 |**IDispatch**|リフレクションによる COM オブジェクトへの遅延バインディングのために使用します。|  
 |**IErrorInfo**|エラー、そのソース、ヘルプ ファイル、ヘルプ コンテキスト、およびエラーを定義したインターフェイスの GUID (.NET クラスでは常に **GUID_NULL**) に関する説明文を示します。|  
@@ -50,13 +50,13 @@ ms.locfileid: "78156011"
   
  必要に応じて、RCW はそれがラップするオブジェクトによって公開されている、次の表にリストされたインターフェイスを使用することもできます。  
   
-|インターフェイス|Description|  
+|Interface|説明|  
 |---------------|-----------------|  
 |**IConnectionPoint** と **IConnectionPointContainer**|RCW は、接続ポイントのイベント スタイルを公開するオブジェクトを、デリゲート ベースのイベントに変換します。|  
 |**IDispatchEx** (.NET Framework のみ) |クラスが **IDispatchEx** を実装する場合、RCW は **IExpando** を実装します。 **IDispatchEx** インターフェイスは、**IDispatch** インターフェイスの拡張版で、**IDispatch** とは異なり、列挙、追加、削除、および大文字小文字を区別したメンバーの呼び出しが可能になります。|  
 |**IEnumVARIANT**|列挙をサポートする COM 型がコレクションとして扱われることを可能にします。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [COM ラッパー](com-wrappers.md)
 - [COM 呼び出し可能ラッパー](com-callable-wrapper.md)

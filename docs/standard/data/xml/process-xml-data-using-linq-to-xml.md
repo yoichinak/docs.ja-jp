@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 059d6b9d-63f7-4011-9ba8-8406f0bbae7d
 ms.openlocfilehash: f45c5c9dccd2c1e8bdd67000a8b2f22425822ac9
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710467"
@@ -23,7 +23,7 @@ LINQ to XML は、XML データの処理を目的とした Microsoft .NET Framew
 
 - <xref:System.Xml.Linq>
 - <xref:System.Linq>
-- [LINQ to XML と DOM (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML と DOM (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
-- [LINQ to XML とその他の XML テクノロジC#()](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
+- [LINQ to XML とDOM (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML とDOM (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-dom.md)
+- [LINQ to XML とその他の XML テクノロジ (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)
 - [LINQ to XML とその他の XML テクノロジ (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-vs-other-xml-technologies.md)

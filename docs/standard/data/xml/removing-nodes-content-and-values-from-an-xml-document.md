@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: d818a29a-6ee5-4725-97c4-78cf60a156b6
 ms.openlocfilehash: def229c636e1cd0414282113e61a649fa197ef81
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710324"

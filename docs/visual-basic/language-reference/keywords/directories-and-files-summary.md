@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
 ms.openlocfilehash: 6c7e1ef37b8abffee89c207ac1dcfb5cbef25c29
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349837"
@@ -33,7 +33,7 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
 |ファイル名またはボリューム ラベルの取得|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
 |ファイルの属性情報の設定|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)

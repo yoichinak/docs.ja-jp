@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: fe60aaa0-ae43-4b1c-9be1-426af66ba757
 ms.openlocfilehash: cc412042e69a43bbecec9dbe68618e2d307ca793
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709700"
@@ -42,13 +42,13 @@ XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加す�
   
  その他の型はエラーになります。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  算出された割引日を保持するパラメーターを <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用して作成する例を次に示します。 割引日は、発注日から 20 日後として算出されます。  
   
  [!code-csharp[XSLT_Param#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Param/CS/xsltparam.cs#1)]
  [!code-vb[XSLT_Param#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XSLT_Param/VB/xsltparam.vb#1)]  
   
-### <a name="input"></a>[入力]  
+### <a name="input"></a>入力  
   
 ##### <a name="orderxml"></a>order.xml  
  [!code-xml[XSLT_Param#2](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/order.xml#2)]  
@@ -56,7 +56,7 @@ XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加す�
 ##### <a name="discountxsl"></a>discount.xsl  
  [!code-xml[XSLT_Param#3](../../../../samples/snippets/xml/VS_Snippets_Data/XSLT_Param/XML/discount.xsl#3)]  
   
-### <a name="output"></a>出力  
+### <a name="output"></a>Output  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 ms.openlocfilehash: 30b788c77a2352d0d02ee772ab3f428381facd9f
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155621"
@@ -45,6 +45,6 @@ ms.locfileid: "78155621"
   
  **XmlDataDocument** から **DataSet** にデータを読み込む方法については、[Dataset と XML ドキュメントの同期](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)に関するページを参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [DataSet での XML の使用](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)

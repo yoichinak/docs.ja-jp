@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
 ms.openlocfilehash: cc5d7964d5f3268f08721593fefc07e3eff853ca
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159599"
@@ -31,7 +31,7 @@ public class MyObject
 
 [!INCLUDE [binary-serialization-warning](../../../includes/binary-serialization-warning.md)]
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [バイナリ シリアル化](binary-serialization.md)
 - [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)

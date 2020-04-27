@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: df4ba2bf-a99e-4d22-bbf3-04fc67669dbc
 ms.openlocfilehash: 04f9788fe34ba74d0cf12fdd37adf46e85777192
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710870"
@@ -23,5 +23,5 @@ ms.locfileid: "75710870"
  [msxsl:script を使用したスクリプト ブロック](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)  
  `msxsl:script` 要素の使い方を説明します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)

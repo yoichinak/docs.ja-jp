@@ -4,7 +4,7 @@ ms.date: 9/20/2018
 ms.topic: include
 ms.openlocfilehash: c3746ff92838ac97d8158a0daf0b1a1de07ae024
 ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "81433218"

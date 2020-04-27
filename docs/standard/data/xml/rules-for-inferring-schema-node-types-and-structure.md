@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 ms.openlocfilehash: 6d66384dea7018bcc3b2dd8fde96f4fa2653f8e8
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710246"
@@ -135,12 +135,12 @@ ms.locfileid: "75710246"
   
 |ノード型|変換|  
 |---------------|-----------------|  
-|処理命令|無視。|  
-|コメント|無視。|  
+|処理命令|無視されます。|  
+|コメント|無視されます。|  
 |エンティティ参照|<xref:System.Xml.Schema.XmlSchemaInference> クラスではエンティティ参照を処理しません。 XML ドキュメントにエンティティ参照が含まれている場合は、エンティティを展開するリーダーを使用する必要があります。 たとえば、<xref:System.Xml.XmlTextReader> プロパティを <xref:System.Xml.XmlTextReader.EntityHandling%2A> に設定した <xref:System.Xml.EntityHandling.ExpandEntities> をパラメーターとして渡すことができます。 エンティティ参照が検出されたにもかかわらず、リーダーがエンティティを展開しない場合は、例外がスローされます。|  
 |CDATA|XML ドキュメント内のすべての `<![CDATA[ … ]]` セクションが `xs:string` として推論されます。|  
-|[ドキュメントの種類]|無視。|  
-|名前空間|無視。|  
+|ドキュメント型|無視されます。|  
+|名前空間|無視されます。|  
   
  スキーマ推論プロセスの詳細については、「[XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)」を参照してください。  
   

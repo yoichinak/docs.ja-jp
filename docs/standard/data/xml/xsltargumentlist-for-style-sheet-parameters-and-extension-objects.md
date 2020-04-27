@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 ms.openlocfilehash: 34ffb9923337bbad90b2170a16d610d26c7f6f23
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160197"
@@ -17,7 +17,7 @@ ms.locfileid: "78160197"
 <xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT (Extensible Stylesheet Language for Transformations) パラメーターと XSLT 拡張オブジェクトが含まれています。 これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。  
   
 > [!NOTE]
-> .NET Framework 2.0 では、<xref:System.Xml.Xsl.XslTransform> クラスと <xref:System.Xml.Xsl.XsltArgumentList> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT 変換を実行できます。 詳細については、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」と「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」を参照してください。  
+> .NET Framework 2.0 では、<xref:System.Xml.Xsl.XslTransform> クラスと <xref:System.Xml.Xsl.XsltArgumentList> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
   
  <xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT パラメーターと XSLT 拡張オブジェクトが含まれています。 これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "78160197"
 |W3C 型|対応する .NET Framework クラス (型)|XPath 型または XSLT 型|  
 |--------------|----------------------------------------------|-----------------------------|  
 |String|System.String|XPath|  
-|Boolean|System.Boolean|XPath|  
-|Number|System.Double|XPath|  
-|Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT (XSLT)|  
+|ブール型|System.Boolean|XPath|  
+|数値|System.Double|XPath|  
+|Result Tree Fragment|System.Xml.XPath.XPathNavigator|XSLT|  
 |Node Set|System.Xml.XPath.XPathNodeIterator|XPath|  
   
  パラメーター オブジェクトが上に示したクラスでない場合は、クラスの種類に応じて、Double または String に強制的に変換されます。 Int16、UInt16、Int32、UInt32、Int64、UInt64、Single、Decimal の各型は、強制的に Double に変換されます。 その他すべての型は、`ToString` メソッドを使用して強制的に文字列に変換されます。  
@@ -362,6 +362,6 @@ public class Sample
   
  `</circles>`  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XslTransform クラスによる XSLT プロセッサの実装](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)

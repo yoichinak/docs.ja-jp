@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 ms.openlocfilehash: 55ea0e31bb8a2863dc0e0eb30f6ca5700c3110b8
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155738"
@@ -117,6 +117,6 @@ class test {
   
  **AttributeCollection** から属性を削除するコード サンプルについては、「[XmlNamedNodeMap.RemoveNamedItem メソッド](xref:System.Xml.XmlNamedNodeMap.RemoveNamedItem%2A)」を参照してください。 メソッドとプロパティの詳細については、「[XmlNamedNodeMap メンバー](xref:System.Xml.XmlNamedNodeMap)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

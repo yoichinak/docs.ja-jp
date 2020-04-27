@@ -7,7 +7,7 @@ helpviewer_keywords:
 - -deterministic compiler option [Visual Basic]
 ms.openlocfilehash: 9b611a72656bdd570eccec8a0585bf5ce6fa55f6
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716790"

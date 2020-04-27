@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
 ms.openlocfilehash: 061999d7b46f04838e9740330f22f14733a9306b
 ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/08/2020
 ms.locfileid: "75741033"
@@ -14,7 +14,7 @@ ms.locfileid: "75741033"
 # <a name="collection-object-summary-visual-basic"></a>Collection オブジェクトの概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
   
-|動作|Language 要素|  
+|アクション|言語要素|  
 |------------|----------------------|  
 |`Collection` オブジェクトを作成します。|<xref:Microsoft.VisualBasic.Collection>|  
 |コレクションへの項目の追加|<xref:Microsoft.VisualBasic.Collection.Add%2A>|  

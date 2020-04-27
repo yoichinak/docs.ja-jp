@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: b5489c96-4afd-439a-a25d-fc82eb4a148d
 ms.openlocfilehash: 11c7e8c8d2ea3b49fe73ab4dde4e2ccc8bc917ff
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78159677"
@@ -250,6 +250,6 @@ Number of elements in book.xml: 3
 
 派生クラスの <xref:System.Xml.XmlDocument.CreateElement%2A> メソッドをオーバーライドした場合は、ドキュメントの編集中に新しい要素を作成しても、既定の属性は追加されません。 これは編集中だけの問題です。 <xref:System.Xml.XmlDocument.CreateElement%2A> メソッドが既定の属性を <xref:System.Xml.XmlDocument> に追加する機能を実行するため、この機能は <xref:System.Xml.XmlDocument.CreateElement%2A> メソッドにコーディングする必要があります。 既定の属性が含まれた <xref:System.Xml.XmlDocument> を読み込めば、既定の属性が正しく処理されます。 既定の属性の詳細については、「[DOM の要素に対する新しい属性の作成](creating-new-attributes-for-elements-in-the-dom.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ドキュメント オブジェクト モデル (DOM)](xml-document-object-model-dom.md)

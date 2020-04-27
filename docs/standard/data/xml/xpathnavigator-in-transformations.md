@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 118f97d1-7110-4d1b-b0bd-4143252c0bb0
 ms.openlocfilehash: 240f9ca7a887a4a146437fdef46de776b299705a
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709752"
@@ -107,7 +107,7 @@ public class sample
 }  
 ```  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  変換結果はファイル **out.xml** に出力されます。  
   
 ```xml  

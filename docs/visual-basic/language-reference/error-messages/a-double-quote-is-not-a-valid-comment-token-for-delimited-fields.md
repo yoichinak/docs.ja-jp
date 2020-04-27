@@ -6,7 +6,7 @@ f1_keywords:
 ms.assetid: 636d4b81-00ba-4cfd-98f7-4d57036f494d
 ms.openlocfilehash: df7868c510eaacbad1d4421259234f4187f60cd7
 ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/12/2019
 ms.locfileid: "73976215"
@@ -17,7 +17,7 @@ ms.locfileid: "73976215"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- `EscapeQuotes` を `False`に設定します。  
+- `EscapeQuotes` を `False` に設定します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: fde6f43f-c594-486f-abcb-2211197fae20
 ms.openlocfilehash: a63452df16e452a90eff3977ac8726cc0a5ac439
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710194"
@@ -92,7 +92,7 @@ ms.locfileid: "75710194"
 #### <a name="namespaces"></a>名前空間  
  次の名前空間は既定で含まれます。  
   
-- System  
+- システム  
   
 - System.Collection  
   
@@ -119,7 +119,7 @@ ms.locfileid: "75710194"
 </msxsl:script>  
 ```  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  埋め込みスクリプトを使用して、半径が指定された円の円周を算出する例を次に示します。  
   
  [!code-csharp[XSLT_Script#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XSLT_Script/CS/xslt_script.cs#1)]

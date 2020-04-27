@@ -5,7 +5,7 @@ ms.date: 10/19/2017
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: a29709d56f2debe04d49ee4eafdc27acd4ca480f
 ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/19/2020
 ms.locfileid: "81433152"
@@ -22,13 +22,13 @@ ms.locfileid: "81433152"
 
     ![Web Platform Installer](../media/sdk/vs2015-install/webpi.png)
 
-3. 次の画面で、**[同意する]** をクリックします。 Web PI が、選択したコンポーネントのダウンロードとインストールを始めます。
+3. 次の画面で、 **[同意する]** をクリックします。 Web PI が、選択したコンポーネントのダウンロードとインストールを始めます。
 
 4. インストールが完了すると、確認画面が表示されます。 **[完了]** をクリックします。 Web Platform Installer を閉じてかまいません。
 
 ## <a name="verifying-the-installation"></a>インストールの確認
 
-1. Visual Studio 2015 で、**[ツール]** メニューの **[拡張機能と更新プログラム...]** をクリックします。
+1. Visual Studio 2015 で、 **[ツール]** メニューの **[拡張機能と更新プログラム...]** をクリックします。
 
 2. 表示される一覧には、**Microsoft Azure App Service Tools**、**Microsoft Azure Storage 接続済みサービス**、**Service Fabric Tools** など、複数の Azure ツールが含まれます。
 

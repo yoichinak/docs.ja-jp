@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
 ms.openlocfilehash: a818fd46bd93682f0bede1d22b8cbc2ca6467a40
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75716740"
@@ -22,7 +22,7 @@ ms.locfileid: "75716740"
 -doc[+ | -]  
 ```
 
-または  
+or  
 
 ```console
 -doc:file  
@@ -30,9 +30,9 @@ ms.locfileid: "75716740"
   
 ## <a name="arguments"></a>引数  
   
-|用語|Definition|  
+|用語|定義|  
 |---|---|  
-|`+` &#124; `-`|省略可。 +、または単に `-doc` を指定すると、コンパイラによってドキュメント情報が生成され、XML ファイル内に置かれます。 `-` を指定することは `-doc` を指定しないことと同じで、この場合ドキュメント情報は作成されません。|  
+|`+` &#124; `-`|任意。 +、または単に `-doc` を指定すると、コンパイラによってドキュメント情報が生成され、XML ファイル内に置かれます。 `-` を指定することは `-doc` を指定しないことと同じで、この場合ドキュメント情報は作成されません。|  
 |`file`|`-doc:` を使用する場合に、必ず指定します。 出力の XML ファイルを指定します。これにはコンパイルのソース コード ファイルからのコメントが入力されます。 ファイル名に空白が含まれている場合は、名前を引用符 (" ") で囲みます。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -52,9 +52,9 @@ ms.locfileid: "75716740"
   
 |Visual Studio 統合開発環境で -doc を設定するには|  
 |---|  
-|1.**ソリューションエクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[XML ドキュメントファイルの生成]** ボックスの値を設定します。|  
+|1.**ソリューション エクスプローラー**でプロジェクトを選択します。 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。 <br />2. **[コンパイル]** タブをクリックします。<br />3. **[XML ドキュメント ファイルを生成する]** ボックスに値を設定します。|  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  サンプルについては、「[XML の使用によるコードのドキュメントの作成](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目

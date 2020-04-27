@@ -9,7 +9,7 @@ dev_langs:
 - CSharp
 ms.openlocfilehash: ce86f7897c5c117c4fd6f1eabc4c8b802103261c
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80248031"

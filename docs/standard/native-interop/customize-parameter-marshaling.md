@@ -4,7 +4,7 @@ description: .NET でパラメーターをネイティブ表現にマーシャ�
 ms.date: 01/18/2019
 ms.openlocfilehash: ff646ad942cf051ce90cd75b24c8562e536182d9
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401161"
@@ -21,7 +21,7 @@ ms.locfileid: "79401161"
 
 これらの各形式では、null で終わる文字列をネイティブ コードに渡します。 これらはネイティブ文字列のエンコードが異なります。
 
-| `System.Runtime.InteropServices.UnmanagedType` 値 | エンコード |
+| `System.Runtime.InteropServices.UnmanagedType` の値 | エンコード |
 |------------------------------------------------------|----------|
 | LPStr | ANSI |
 | LPUTF8Str | UTF-8 |

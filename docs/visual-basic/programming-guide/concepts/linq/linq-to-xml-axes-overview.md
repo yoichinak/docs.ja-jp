@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 9161f151-cfa8-4408-94ba-08a9ba3a486d
 ms.openlocfilehash: 0cf3c20266d0ca9d861eec963afda8f2e71a55a3
 ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/03/2020
 ms.locfileid: "75636485"
@@ -16,7 +16,7 @@ XML ツリーを作成した後、または XML ドキュメントを XML ツリ
   
  コレクションを返す軸メソッド以外に、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クエリでよく使用されるメソッドが 2 つあります。 <xref:System.Xml.Linq.XContainer.Element%2A> メソッドは、1 つの <xref:System.Xml.Linq.XElement> を返します。 <xref:System.Xml.Linq.XElement.Attribute%2A> メソッドは、1 つの <xref:System.Xml.Linq.XAttribute> を返します。  
   
- LINQ クエリは、多くの目的で、ツリーを調べてデータを抽出して変換するための最も強力な方法を提供します。 LINQ クエリは <xref:System.Collections.Generic.IEnumerable%601>を実装するオブジェクトに対して動作し、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸は <xref:System.Xml.Linq.XElement> コレクションの <xref:System.Collections.Generic.IEnumerable%601> と <xref:System.Collections.Generic.IEnumerable%601> コレクションの <xref:System.Xml.Linq.XAttribute> を返します。 クエリを実行するには、これらのコレクションが必要です。  
+ LINQ クエリは多くの用途において、ツリーを調べてデータを抽出し、それを変換する方法として最も強力です。 LINQ クエリは、<xref:System.Collections.Generic.IEnumerable%601> を実装するオブジェクトに対して機能します。[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 軸が、<xref:System.Xml.Linq.XElement> コレクションの <xref:System.Collections.Generic.IEnumerable%601> と <xref:System.Collections.Generic.IEnumerable%601> コレクションの <xref:System.Xml.Linq.XAttribute> を返します。 クエリを実行するには、これらのコレクションが必要です。  
   
  要素と属性のコレクションを取得する軸メソッドに加えて、ツリーを詳細に反復処理するための軸メソッドもあります。 たとえば、要素と属性を処理する代わりに、ツリーのノードを操作できます。 ノードは、要素や属性よりも細かい粒度レベルです。 ノードの操作時には、XML コメント、テキスト ノード、処理命令などを調べることができます。 この機能は、たとえば、文書を XML として保存できるワード プロセッサを作成する場合に重要です。 ただし、大多数の XML プログラマが主に扱うのは、要素、属性、およびその値です。  
   

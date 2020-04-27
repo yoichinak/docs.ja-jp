@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 ms.openlocfilehash: b27c51572b1ba83480d90eba4add7f930715a4e5
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78156531"
@@ -16,7 +16,7 @@ ms.locfileid: "78156531"
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs による XML ドキュメントのイベント処理
 イベント処理のために **XmlDocument** オブジェクトに登録されたイベント ハンドラーでは、渡された引数が **XmlNodeChangedEventArgs** によってカプセル化されます。 各イベントとその発生するタイミングを次の表に示します。  
   
-|Event|発生するタイミング|  
+|event|発生するタイミング|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|現在のドキュメントに属するノードが別のノードに挿入されるとき。|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|現在のドキュメントに属するノードが別のノードに挿入されたとき。|  
@@ -204,8 +204,8 @@ public class Sample
 } // End class
 ```  
   
- 詳細については、「 <xref:System.Xml.XmlNodeChangedEventArgs> および <xref:System.Xml.XmlNodeChangedEventHandler>」を参照してください。  
+ 詳細については、次のトピックを参照してください。 <xref:System.Xml.XmlNodeChangedEventArgs> および <xref:System.Xml.XmlNodeChangedEventHandler>  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

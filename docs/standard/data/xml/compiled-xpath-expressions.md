@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 ms.openlocfilehash: b4675765849299050eb6cddeaaa497bc6cdc620a
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75711104"
@@ -38,7 +38,7 @@ ms.locfileid: "75711104"
 |W3C XPath の戻り値の型|.NET Framework の等価の型|説明|メソッド|  
 |---------------------------|------------------------------------|-----------------|-------------|  
 |`Node set`|<xref:System.Xml.XPath.XPathNodeIterator>|重複がなく順序付けされていない、ドキュメント順に作成されたノードのコレクション。|<xref:System.Xml.XPath.XPathNavigator.Select%2A> または <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
-|`Boolean`|<xref:System.Boolean>|`true` または `false` の値。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A><br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
+|`Boolean`|<xref:System.Boolean>|`true` または `false` の値。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> または<br /><br /> <xref:System.Xml.XPath.XPathNavigator.Matches%2A>|  
 |`Number`|<xref:System.Double>|浮動小数点数。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
 |`String`|<xref:System.String>|UCS 文字のシーケンス。|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   

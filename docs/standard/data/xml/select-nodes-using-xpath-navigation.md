@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 8e4450dc-56b3-472b-b467-32f5694f83ad
 ms.openlocfilehash: 58f1487486c2802a2c64b51afcecb01c76dd291a
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78155608"
@@ -160,6 +160,6 @@ this doc.DocumentElement.FirstChild.SelectNodes(. . .);
 </bookstore>  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

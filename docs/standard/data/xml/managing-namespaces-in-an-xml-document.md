@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
 ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/28/2020
 ms.locfileid: "78160041"
@@ -65,7 +65,7 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
   
  <xref:System.Xml.XmlNamespaceManager> クラスを使用して実行できる管理タスクと検索タスクをいくつか次に示します。 使用例を含む詳細については、各メソッドまたはプロパティのリファレンス ページへのリンクをクリックしてください。  
   
-|ターゲット|用途|  
+|終了|使用|  
 |--------|---------|  
 |名前空間を追加する|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> メソッド|  
 |名前空間を削除する|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> メソッド|  
@@ -77,7 +77,7 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
 |現在のスコープ内にプレフィックスが定義されているかどうかを確認する|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> メソッド|  
 |プレフィックスおよび URI を検索するときに使用する名前テーブルを取得する|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> プロパティ|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.XmlNamespaceManager>
 - [XML ドキュメントと XML データ](../../../../docs/standard/data/xml/index.md)

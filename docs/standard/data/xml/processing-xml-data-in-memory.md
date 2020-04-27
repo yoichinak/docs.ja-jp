@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: 1bbb4d05-ead7-4bda-8ece-f86d35c57ad4
 ms.openlocfilehash: 038bcfcb9d40ee6087efa3487b6f27f252393f2c
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710428"
@@ -29,5 +29,5 @@ Microsoft .NET Framework には、XML データを処理するための 3 つの
  [LINQ to XML を使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-linq-to-xml.md)  
  LINQ to XML の概要を簡単に説明し、LINQ to XML に関する参照先のリンクを示します。  
   
-## <a name="related-sections"></a>関連セクション  
+## <a name="related-sections"></a>関連項目  
  [XML ドキュメントと XML データ](../../../../docs/standard/data/xml/index.md)

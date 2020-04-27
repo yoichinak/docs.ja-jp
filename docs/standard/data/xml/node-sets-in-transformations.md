@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: ad034f0e-ff8b-4a71-9a4c-528c754263c4
 ms.openlocfilehash: 2828b95f6a4050dd05b38e7ab6ef740ee4eb16b4
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710558"
@@ -38,7 +38,7 @@ ms.locfileid: "75710558"
 </xsl:stylesheet>  
 ```  
   
-## <a name="input"></a>[入力]  
+## <a name="input"></a>入力  
   
 ```xml  
 <bookstore>  
@@ -56,7 +56,7 @@ ms.locfileid: "75710558"
 </bookstore>  
 ```  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
   
 ```output  
 ******  
