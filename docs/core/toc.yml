@@ -20,6 +20,8 @@
       href: install/how-to-detect-installed-versions.md
     - name: Linux パッケージ マネージャー
       items:
+        - name: Ubuntu 20.04
+          href: install/linux-package-manager-ubuntu-2004.md
         - name: Ubuntu 19.10
           href: install/linux-package-manager-ubuntu-1910.md
         - name: Ubuntu 19.04
@@ -351,7 +353,7 @@
     - name: Windows フォーム プロジェクトを移植する
       href: porting/winforms.md
     - name: WPF プロジェクトを移植する
-      href: porting/wpf.md
+      href: ../desktop-wpf/migration/convert-project-from-net-framework.md
     - name: C++/CLI プロジェクトを移植する
       href: porting/cpp-cli.md
 - name: 単体テスト
@@ -418,7 +420,7 @@
         - name: プラグインがある .NET Core アプリケーションを作成する
           href: tutorials/creating-app-with-plugin-support.md
         - name: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする方法
-          href: ../standard/assembly/unloadability-howto.md
+          href: ../standard/assembly/unloadability.md
 - name: .NET Core の配布パッケージ
   href: distribution-packaging.md
 - name: COM への .NET Core コンポーネントの公開

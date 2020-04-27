@@ -10,13 +10,13 @@ metadata:
   - f61f02f2-2f20-483d-8f56-a9c8f3a54986
   helpviewer_keywords:
   - .NET Framework guide
-  ms.date: 03/23/2020
-  ms.openlocfilehash: 5f362cff359800b0bffd2283819824b8660cfa24
-  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 67e1549395ab5657a5d609b186fc1816211c5af3
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/24/2020
-  ms.locfileid: "80228853"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135907"
 landingContent:
 - title: .NET Framework の詳細
   linkLists:
@@ -36,6 +36,10 @@ landingContent:
       url: deployment/deployment-guide-for-developers.md
 - title: .NET Framework をインストールする
   linkLists:
+  - linkListType: download
+    links:
+    - text: .NET SDK をダウンロードする
+      url: https://dotnet.microsoft.com/download
   - linkListType: overview
     links:
     - text: インストール ガイド

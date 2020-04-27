@@ -5,16 +5,20 @@ metadata:
   title: .NET のドキュメント
   description: さまざまな種類のアプリケーションを構築するための、オープンソースの開発者プラットフォームである .NET について説明します。
   ms.topic: landing-page
-  ms.date: 03/27/2020
-  ms.openlocfilehash: 5984996b59cfb89e5f165bf966722093c0992eea
-  ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+  ms.date: 04/22/2020
+  ms.openlocfilehash: 67fa6bb8c14ef3fad05b4874553a9ce75f811833
+  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/03/2020
-  ms.locfileid: "80636136"
+  ms.lasthandoff: 04/24/2020
+  ms.locfileid: "82135816"
 landingContent:
 - title: .NET について
   linkLists:
+  - linkListType: download
+    links:
+    - text: .NET SDK をダウンロードする
+      url: https://dotnet.microsoft.com/download
   - linkListType: overview
     links:
     - text: .NET のツアー
