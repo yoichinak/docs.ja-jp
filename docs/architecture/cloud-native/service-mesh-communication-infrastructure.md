@@ -1,48 +1,48 @@
 ---
 title: サービス メッシュ通信インフラストラクチャ
-description: サービス メッシュ テクノロジがクラウドネイティブマイクロサービス通信を効率化する方法を学習する
+description: サービスメッシュテクノロジがクラウドネイティブマイクロサービス通信を効率化するしくみについて説明します
 author: robvet
 ms.date: 03/03/2020
-ms.openlocfilehash: 8bb57e990dbf1baf8c246fe4aacfbb2904a251e6
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 89bc4d307d725e7e31e020ef156c4c5967dd2a1c
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805751"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199949"
 ---
 # <a name="service-mesh-communication-infrastructure"></a>サービス メッシュ通信インフラストラクチャ
 
 [!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
-この章では、マイクロサービス通信の課題について説明しました。 開発チームは、バックエンド サービスが相互に通信する方法に注意を向ける必要があると述べています。 理想的には、サービス間通信が少ないほど、より良い方法です。 ただし、バックエンド サービスは、多くの場合、操作を完了するために互いに依存しているので、回避は常に可能ではありません。
+この章では、マイクロサービス通信の課題について詳しく説明しました。 開発チームは、バックエンドサービスが相互に通信する方法を重視する必要があると言いました。 理想的には、サービス間の通信が少なくて済むということです。 ただし、バックエンドサービスが操作の完了に相互に依存していることが多いため、回避することは常に可能であるとは限りません。
 
-同期 HTTP 通信と非同期メッセージングを実装するためのさまざまなアプローチを検討しました。 いずれの場合も、開発者は通信コードの実装に負担をかかえています。 通信コードは複雑で時間がかかります。 誤った決定は、パフォーマンス上の重大な問題を引き起こす可能性があります。
+同期 HTTP 通信と非同期メッセージングを実装するためのさまざまなアプローチについて説明します。 各ケースでは、開発者はコミュニケーションコードを実装する負担になります。 通信コードは複雑で時間のかかる作業です。 不適切な決定を行うと、パフォーマンスに大きな問題が生じる可能性があります。
 
-マイクロサービス通信に対するより現代的なアプローチは、*サービスメッシュ*と題された新しく急速に進化する技術を中心にしています。 [サービス メッシュ](https://www.nginx.com/blog/what-is-a-service-mesh/)は、サービス間の通信、復元性、および多くの横断的な懸念事項を処理する組み込み機能を備えた構成可能なインフラストラクチャ 層です。 これらの懸念事項に対する責任をマイクロサービスからサービス メッシュ層に移動します。 通信は、マイクロサービスから分離されます。
+*サービスメッシュ*を利用して、新しい急速に進化するテクノロジを中心としたマイクロサービス通信センターのより新しいアプローチ。 [サービスメッシュ](https://www.nginx.com/blog/what-is-a-service-mesh/)は、サービス間の通信、回復性、およびさまざまな横断的懸念を処理する組み込みの機能を備えた、構成可能なインフラストラクチャレイヤーです。 これらの懸念事項については、マイクロサービスからサービスメッシュレイヤーに移行します。 マイクロサービスからは、通信が抽象化されます。
 
-サービス メッシュの重要なコンポーネントはプロキシです。 クラウド ネイティブ アプリケーションでは、プロキシのインスタンスは通常、各マイクロサービスと共に配置されます。 これらは別々のプロセスで実行されますが、2 つは密接にリンクされており、同じライフサイクルを共有します。 このパターンは[、Sidecar パターン](https://docs.microsoft.com/azure/architecture/patterns/sidecar)と呼ばれ、図 4-24 に示されています。
+サービスメッシュの重要なコンポーネントはプロキシです。 クラウドネイティブアプリケーションでは、通常、プロキシのインスタンスは各マイクロサービスと共存します。 異なるプロセスで実行されますが、2つは密接にリンクされ、同じライフサイクルを共有します。 このパターンは、サイドカー[パターン](https://docs.microsoft.com/azure/architecture/patterns/sidecar)として知られており、図4-24 に示しています。
 
 ![サイドカーを使用したサービスメッシュ](./media/service-mesh-with-side-car.png)
 
 **図 4-24** サイドカーを使用したサービスメッシュ
 
-前の図では、各マイクロサービスと一緒に実行されるプロキシによってメッセージが傍受される方法に注意してください。 各プロキシは、マイクロサービスに固有のトラフィック ルールで構成できます。 メッセージを理解し、サービスや外部にルーティングできます。
+前の図では、各マイクロサービスと共に実行されるプロキシによってメッセージが傍受されていることに注意してください。 各プロキシは、マイクロサービスに固有のトラフィックルールを使用して構成できます。 メッセージを認識し、サービスや外部との間でルーティングできます。
 
-サービス間通信の管理に加えて、サービス・メッシュはサービス検出と負荷分散をサポートします。
+サービス間通信の管理と共に、サービスメッシュはサービス検出と負荷分散のサポートを提供します。
 
-設定すると、サービス メッシュは高機能になります。 メッシュは、サービス検索エンドポイントから対応するインスタンスプールを取得します。 要求を特定のサービス インスタンスに送信し、結果の待機時間と応答の種類を記録します。 最近の要求に対して観察された待機時間など、さまざまな要因に基づいて高速応答を返す可能性が最も高いインスタンスを選択します。
+構成が完了すると、サービスメッシュが非常に機能します。 メッシュは、サービス探索エンドポイントから、対応するインスタンスのプールを取得します。 このメソッドは、特定のサービスインスタンスに要求を送信し、結果の待機時間と応答の種類を記録します。 これは、最近の要求の待機時間など、さまざまな要因に基づいて高速な応答を返す可能性の高いインスタンスを選択します。
 
-サービス メッシュは、トラフィック、通信、およびネットワークの問題をアプリケーション レベルで管理します。 メッセージと要求を理解します。 通常、サービス メッシュはコンテナー オーケストレーターと統合されます。 Kubernetes は、サービス メッシュを追加できる拡張可能なアーキテクチャをサポートしています。
+サービスメッシュは、トラフィック、通信、およびネットワークの問題をアプリケーションレベルで管理します。 メッセージと要求を認識します。 通常、サービスメッシュはコンテナー orchestrator と統合されます。 Kubernetes は、サービスメッシュを追加できる拡張可能なアーキテクチャをサポートしています。
 
-第 6 章では、アーキテクチャと利用可能なオープン ソース実装に関する議論を含む、Service Mesh テクノロジについて詳しく説明します。
+6章では、アーキテクチャと使用可能なオープンソースの実装に関する議論など、サービスメッシュテクノロジについて詳しく説明します。
 
 ## <a name="summary"></a>まとめ
 
-この章では、クラウドネイティブの通信パターンについて説明しました。 まず、フロントエンド クライアントがバックエンド マイクロサービスと通信する方法を調べることから始めました。 その過程で、APIゲートウェイプラットフォームとリアルタイムコミュニケーションについて話しました。 次に、マイクロサービスが他のバックエンド サービスと通信する方法を確認しました。 ここでは、同期 HTTP 通信と非同期メッセージングの両方を複数のサービスで見ました。 クラウドネイティブの世界で今後の技術であるgRPCを取り上げました。 最後に、マイクロサービス通信を合理化できる「Service Mesh」という新しい急速に進化する技術を導入しました。
+この章では、クラウドネイティブの通信パターンについて説明しました。 まず、フロントエンドクライアントがバックエンドマイクロサービスと通信する方法について説明します。 その過程で、API ゲートウェイのプラットフォームとリアルタイム通信について説明します。 次に、マイクロサービスが他のバックエンドサービスと通信する方法について見ていきます。 サービス間の同期 HTTP 通信と非同期メッセージングの両方を検討しました。 GRPC は、クラウドネイティブ環境における今後のテクノロジです。 最後に、マイクロサービスの通信を効率化することができる、サービスメッシュを持つ、急速に進化する新しいテクノロジが導入されました。
 
-クラウド ネイティブ システムでの通信の実装に役立つマネージド Azure サービスに特に重点を置いています。
+クラウドネイティブシステムでの通信の実装に役立つ、管理された Azure サービスに特に重点を置いていました。
 
-- [Azure アプリケーション ゲートウェイ](https://docs.microsoft.com/azure/application-gateway/overview)
+- [Azure Application Gateway](https://docs.microsoft.com/azure/application-gateway/overview)
 - [Azure API Management](https://azure.microsoft.com/services/api-management/)
 - [Azure SignalR Service](https://azure.microsoft.com/services/signalr-service/)
 - [Azure Storage キュー](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction)
@@ -50,7 +50,7 @@ ms.locfileid: "80805751"
 - [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)
 - [Azure Event Hub](https://azure.microsoft.com/services/event-hubs/)
 
-次に、クラウドネイティブシステムで分散データを導入し、そのメリットと課題を抱えています。
+次に、クラウドネイティブシステムの分散データと、それが提示する利点と課題に移ります。
 
 ### <a name="references"></a>References
 
@@ -58,20 +58,20 @@ ms.locfileid: "80805751"
 
 - [マイクロサービスのサービス間通信の設計](https://docs.microsoft.com/azure/architecture/microservices/design/interservice-communication)
 
-- [Azure SignalR サービスは、リアルタイム機能を追加する完全に管理されたサービスです。](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
+- [リアルタイム機能を追加するための完全に管理されたサービスである Azure SignalR サービス](https://azure.microsoft.com/blog/azure-signalr-service-a-fully-managed-service-to-add-real-time-functionality/)
 
-- [Azure API ゲートウェイイングレス コントローラー](https://azure.github.io/application-gateway-kubernetes-ingress/)
+- [Azure API ゲートウェイの受信コントローラー](https://azure.github.io/application-gateway-kubernetes-ingress/)
 
-- [Azure Kubernetes サービス (AKS) での入力について](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
+- [Azure Kubernetes Service の受信について (AKS)](https://vincentlauzon.com/2018/10/10/about-ingress-in-azure-kubernetes-service-aks/)
 
-- [gRPC ドキュメント](https://grpc.io/docs/guides/)
+- [gRPC のドキュメント](https://grpc.io/docs/guides/)
 
 - [WCF 開発者向け gRPC](https://docs.microsoft.com/dotnet/architecture/grpc-for-wcf-developers/)
 
-- [gRPC サービスと HTTP API の比較](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
+- [GRPC サービスと HTTP Api の比較](https://docs.microsoft.com/aspnet/core/grpc/comparison?view=aspnetcore-3.0)
 
-- [NET ビデオを使用した gRPC サービスの構築](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
+- [.NET ビデオを使用した gRPC サービスのビルド](https://channel9.msdn.com/Shows/The-Cloud-Native-Show/Building-Microservices-with-gRPC-and-NET)
 
 >[!div class="step-by-step"]
 >[前へ](grpc.md)
->[次へ](database-per-microservice.md)
+>[次へ](distributed-data.md)
