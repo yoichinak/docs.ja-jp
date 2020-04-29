@@ -3,12 +3,12 @@ title: リレーショナル データ ソースとNoSQL データ
 description: クラウドネイティブアプリケーションでのリレーショナルデータと NoSQL データについて説明します
 author: robvet
 ms.date: 01/22/2020
-ms.openlocfilehash: c074be0c973156c1757b97ffc727711d5dd072af
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a2561b0abfc1975badfafeeb4fa2f2c6429814be
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199985"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507365"
 ---
 # <a name="relational-vs-nosql-data"></a>リレーショナル データ ソースとNoSQL データ
 
@@ -226,7 +226,7 @@ Azure Cosmos DB は、図5-15 に示すように、明確に定義された5つ�
 
 **図 5-16**: Cosmos DB の整合性レベルの説明
 
-「 [9-ボール: Cosmos DB の整合性レベル](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)」で説明している記事では、Microsoft Cloud 開発者にとって Jeremy Likeness は、5つのモデルについての優れた説明を提供しています。
+「 [9-ボール: Cosmos DB の整合性レベル](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)」の記事では、Microsoft プログラムマネージャー Jeremy Likness が5つのモデルについての優れた説明を提供しています。
 
 ### <a name="partitioning"></a>パーティション分割
 
