@@ -11,12 +11,12 @@ metadata:
   author: BillWagner
   ms.author: wiwagn
   ms.date: 04/21/2020
-  ms.openlocfilehash: 31d7e3e916971e605e814f36f412b46210c533b6
-  ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
+  ms.openlocfilehash: 7680641385e013711e62a8585149ea204e327c95
+  ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/24/2020
-  ms.locfileid: "82135569"
+  ms.lasthandoff: 04/29/2020
+  ms.locfileid: "82507495"
 highlightedContent:
   items:
   - title: .NET をダウンロードする
@@ -252,4 +252,4 @@ additionalContent:
     - title: Visual Basic の言語リファレンス
       summary: Visual Basic 言語のリファレンスと仕様
       url: visual-basic/language-reference/index.md
-  footer: .NET ドキュメントに投稿してください。[共同作成者ガイド](https://github.com/dotnet/Docs/blob/master/CONTRIBUTING.md)をお読みください。
+  footer: .NET ドキュメントに投稿してください。[共同作成者ガイド](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)をお読みください。

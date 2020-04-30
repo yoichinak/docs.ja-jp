@@ -14,14 +14,14 @@
       href: install/runtime.md
     - name: サポートされる OS と依存関係
       href: install/dependencies.md
+    - name: .NET テンプレートの管理
+      href: install/templates.md
     - name: macOS の公証の問題
       href: install/macos-notarization-issues.md
     - name: .NET Core のバージョンを確認する方法
       href: install/how-to-detect-installed-versions.md
     - name: Linux パッケージ マネージャー
       items:
-        - name: Ubuntu 20.04
-          href: install/linux-package-manager-ubuntu-2004.md
         - name: Ubuntu 19.10
           href: install/linux-package-manager-ubuntu-1910.md
         - name: Ubuntu 19.04

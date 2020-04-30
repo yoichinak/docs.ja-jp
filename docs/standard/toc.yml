@@ -488,7 +488,11 @@
     - name: スレッド セーフなコレクション
       href: collections/thread-safe/
 - name: .NET における数値
-  href: numerics.md
+  items:
+    - name: 概要
+      href: numerics.md
+    - name: SIMD が有効な型
+      href: simd.md
 - name: 日付、時刻、およびタイム ゾーン
   href: datetime/
 - name: イベント

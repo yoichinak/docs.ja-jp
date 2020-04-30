@@ -12,12 +12,12 @@ helpviewer_keywords:
 - command line [C#], arguments
 - command-line arguments [C#], Main method
 ms.assetid: 73a17231-cf96-44ea-aa8a-54807c6fb1f4
-ms.openlocfilehash: 0571ec6dbc42f103ec922a6b2b13a52510640a78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 190216b01ea416aedbca270a6d7a5acbf0c2e797
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75700602"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82200120"
 ---
 # <a name="main-and-command-line-arguments-c-programming-guide"></a>Main() とコマンドライン引数 (C# プログラミング ガイド)
 
@@ -47,6 +47,8 @@ public static async Task<int> Main() { }
 public static async Task Main(string[] args) { }
 public static async Task<int> Main(string[] args) { }
 ```
+
+前の例ではすべて、public アクセサー修飾子を使用しています。 これは一般的ですが、必須ではありません。
 
 コンソール アプリケーションの `Main` で `await` を使用して非同期操作を開始する必要がある場合、戻り値の型 `async`、`Task`、`Task<int>` を追加することでプログラム コードを簡略化できます。
 
