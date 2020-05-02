@@ -2,15 +2,16 @@
 title: トレースの拡張
 ms.date: 03/30/2017
 ms.assetid: 2b971a99-16ec-4949-ad2e-b0c8731a873f
-ms.openlocfilehash: ad46f09c69e94146f9e1569eb506cb350a2a9307
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: e61265210640d2b801ad55b9dc5a357cc4f161a7
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141232"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728392"
 ---
-# <a name="extending-tracing"></a>トレースの拡張
-このサンプルでは、ユーザー定義のアクティビティトレースをクライアントとサービスコードに記述することによって、Windows Communication Foundation (WCF) トレース機能を拡張する方法を示します。 これにより、ユーザーはトレース アクティビティを作成し、トレースを作業の論理単位ごとにグループ化することができます。 さらに、転送 (同じエンドポイント内) や伝達 (異なるエンドポイント間) を経由してアクティビティを相互に関連付けることもできます。 このサンプルでは、トレースはクライアントとサービスの両方で有効です。 クライアントとサービスの構成ファイルでトレースを有効にする方法の詳細については、「[トレースとメッセージログ](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)」を参照してください。  
+# <a name="extend-tracing"></a>トレースの拡張
+
+このサンプルでは、ユーザー定義のアクティビティトレースをクライアントとサービスコードに記述することによって、Windows Communication Foundation (WCF) トレース機能を拡張する方法を示します。 ユーザー定義のアクティビティトレースを記述すると、ユーザーはトレースアクティビティを作成し、トレースを論理的な作業単位にグループ化することができます。 さらに、転送 (同じエンドポイント内) や伝達 (異なるエンドポイント間) を経由してアクティビティを相互に関連付けることもできます。 このサンプルでは、トレースはクライアントとサービスの両方で有効です。 クライアントとサービスの構成ファイルでトレースを有効にする方法の詳細については、「[トレースとメッセージログ](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)」を参照してください。  
   
  このサンプルは、[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。  
   
@@ -29,8 +30,8 @@ ms.locfileid: "82141232"
 ## <a name="tracing-and-activity-propagation"></a>トレースとアクティビティの伝達  
  ユーザー定義のアクティビティトレースを使用すると、ユーザーは独自のトレースアクティビティを作成して、トレースを論理的な作業単位にグループ化し、転送と伝達を通じてアクティビティを相互に関連付けることができます。また、WCF トレース (ログファイルのディスク領域コストなど) のパフォーマンスコストを削減することもできます。  
   
-### <a name="adding-custom-sources"></a>カスタム ソースの追加  
- ユーザー定義のトレースは、クライアントとサービス コードの両方に追加できます。 トレースソースをクライアントまたはサービスの構成ファイルに追加することで、これらのカスタムトレースを記録し、[サービストレースビューアーツール (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)に表示することができます。 次のコードは、`ServerCalculatorTraceSource` というユーザー定義のトレース ソースを構成ファイルに追加する方法を示します。  
+### <a name="add-custom-sources"></a>カスタムソースの追加  
+ ユーザー定義のトレースは、クライアントとサービス コードの両方に追加できます。 トレースソースをクライアントまたはサービスの構成ファイルに追加すると、これらのカスタムトレースを記録して[サービストレースビューアーツール (svctraceviewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)に表示できます。 次のコードは、`ServerCalculatorTraceSource` というユーザー定義のトレース ソースを構成ファイルに追加する方法を示します。  
   
 ```xml  
 <system.diagnostics>  
@@ -67,7 +68,7 @@ ms.locfileid: "82141232"
 ....
 ```  
   
-### <a name="correlating-activities"></a>アクティビティの相互関連付け  
+### <a name="correlate-activities"></a>アクティビティの関連付け  
  エンドポイント間でアクティビティを直接関連付けるには、`propagateActivity` トレース ソースの `true` 属性を `System.ServiceModel` に設定する必要があります。 また、WCF アクティビティを介さずにトレースを伝達するには、ServiceModel アクティビティトレースをオフにする必要があります。 次のコード サンプルを参照してください。  
   
 > [!NOTE]
@@ -85,10 +86,10 @@ ms.locfileid: "82141232"
 </system.diagnostics>  
 ```  
   
-### <a name="lessening-performance-cost"></a>パフォーマンスの負荷の軽減  
- `ActivityTracing` トレース ソースの `System.ServiceModel` をオフに設定すると、ユーザー定義のアクティビティ トレースのみを含み、ServiceModel アクティビティ トレースは含まないトレース ファイルが生成されます。 これによって、ログ ファイルのサイズがはるかに小さくなります。 ただし、WCF 処理トレースを相互に関連付ける機会は失われます。  
+### <a name="lessen-performance-cost"></a>パフォーマンスコストの軽減  
+ `ActivityTracing` トレース ソースの `System.ServiceModel` をオフに設定すると、ユーザー定義のアクティビティ トレースのみを含み、ServiceModel アクティビティ トレースは含まないトレース ファイルが生成されます。 ServiceModel アクティビティトレースを除外すると、ログファイルが大幅に小さくなります。 ただし、WCF 処理トレースを相互に関連付ける機会は失われます。  
   
-##### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
+## <a name="set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行する  
   
 1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   

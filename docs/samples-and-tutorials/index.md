@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 9a161d5325125fba8d4f4e53a0a306c989ed6bc5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44ce0d740502686db1801db428a2f79c2250f8c0
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397672"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507430"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -107,7 +107,7 @@ ms.locfileid: "79397672"
 
 1. 次の手順のいずれかを実行して、サンプル コードを含むリポジトリをダウンロードします。
    * リポジトリの ZIP ファイルをローカル システムにダウンロードします。 圧縮アーカイブを解凍します。
-   * リポジトリを[フォーク](https://help.github.com/articles/fork-a-repo/)し、フォークしたものをローカル システムに[クローン](https://help.github.com/articles/cloning-a-repository/)します。 フォークとクローンを使用すると、作成したフォークに変更をコミットし、公式のドキュメントのリポジトリに対する pull request を作成することで、ドキュメントに貢献できます。 詳細については、「[.NET Documentation Contributing Guide (.NET ドキュメント貢献ガイド](https://github.com/dotnet/docs/blob/master/CONTRIBUTING.md)」と「[ASP.NET Core Docs Contributing Guide (ASP.NET Core ドキュメント貢献ガイド)](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)」をご覧ください。
+   * リポジトリを[フォーク](https://help.github.com/articles/fork-a-repo/)し、フォークしたものをローカル システムに[クローン](https://help.github.com/articles/cloning-a-repository/)します。 フォークとクローンを使用すると、作成したフォークに変更をコミットし、公式のドキュメントのリポジトリに対する pull request を作成することで、ドキュメントに貢献できます。 詳細については、「[.NET Documentation Contributing Guide (.NET ドキュメント貢献ガイド](https://docs.microsoft.com/contribute/dotnet/dotnet-contribute)」と「[ASP.NET Core Docs Contributing Guide (ASP.NET Core ドキュメント貢献ガイド)](https://github.com/aspnet/AspNetCore.Docs/blob/master/CONTRIBUTING.md)」をご覧ください。
    * リポジトリをローカル環境にクローンします。 ローカル システムにドキュメントのリポジトリを直接クローンすると、公式のリポジトリに対して直接コミットできないため、後でドキュメントに貢献できなくなります。 後でドキュメントに貢献する可能性がある場合は、前述のフォークとクローンの手順を使用してください。
 1. リポジトリ フォルダー内のサンプルがある場所に移動します。 サンプルへのリンクをクリックすると、サンプルがある場所への相対パスがブラウザーのアドレス バーに表示されます。
 1. サンプルを実行するには、次のいくつかのオプションがあります。

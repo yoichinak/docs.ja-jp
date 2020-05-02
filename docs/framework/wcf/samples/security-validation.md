@@ -2,12 +2,12 @@
 title: セキュリティ検証
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: d635ae72b71df18934acd1016ac3e799d2c4aea1
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 90d335f32c43ecf575c69cf800ab69bee05f39ee
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140506"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728382"
 ---
 # <a name="security-validation"></a>セキュリティ検証
 このサンプルでは、サービスが特定の条件を満たしていることを確認するカスタム動作を使用して、コンピューター上のサービスを検証する方法を示します。 このサンプルでは、サービス上の各エンドポイントをスキャンし、セキュリティ保護されたバインディング要素が含まれているかどうかを確認するカスタム動作を使用して、サービスを検証します。 このサンプルは、[はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。  
@@ -78,9 +78,9 @@ public void Validate(ServiceDescription serviceDescription,
 > [!NOTE]
 > 動作をすべてのサービスに追加する場合、Machine.config ファイルの変更を行う前に、このファイルのバックアップを推奨するメッセージが表示されます。  
   
- ここで、このサンプルの client\bin ディレクトリに用意されたクライアントを実行します。 "要求されたサービス 'http://localhost/servicemodelsamples/service.svc' をアクティブにできませんでした。" というメッセージが表示され、例外が発生します。 これは予期される例外です。エンドポイント検証の動作により、エンドポイントがセキュリティで保護されていないと見なされ、サービスが開始されないためです。 さらにこの動作によって、エンドポイントがセキュリティ保護されていないという内部例外がスローされ、システム イベント ビューアで "WebHost" カテゴリの "System.ServiceModel 4.0.0.0" ソースの下にメッセージが書き込まれます。 さらにこのサンプルでは、サービスのトレースを有効にできます。 これによって、サービス トレース ビューア ツールを使用してサービス トレースの結果を開き、エンドポイント検証の動作からスローされた例外を表示することができます。  
+ ここで、このサンプルの client\bin ディレクトリに用意されたクライアントを実行します。 例外がスローされ、"要求されたサービス 'http://localhost/servicemodelsamples/service.svc' をアクティブにできませんでした。" というメッセージが表示されます。 これは予期される例外です。エンドポイント検証の動作により、エンドポイントがセキュリティで保護されていないと見なされ、サービスが開始されないためです。 さらにこの動作によって、エンドポイントがセキュリティ保護されていないという内部例外がスローされ、システム イベント ビューアで "WebHost" カテゴリの "System.ServiceModel 4.0.0.0" ソースの下にメッセージが書き込まれます。 さらにこのサンプルでは、サービスのトレースを有効にできます。 これによって、サービス トレース ビューア ツールを使用してサービス トレースの結果を開き、エンドポイント検証の動作からスローされた例外を表示することができます。  
   
-#### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>エンドポイント検証エラーの例外メッセージをイベント ビューアーで表示するには  
+### <a name="view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>イベントビューアーで失敗したエンドポイント検証例外メッセージを表示する  
   
 1. [**スタート**] メニューをクリックし、[**実行**] を選択します。  
   
@@ -90,7 +90,7 @@ public void Validate(ServiceDescription serviceDescription,
   
 4. **アプリケーション**ウィンドウで、"WebHost" カテゴリの下に最近追加された "system.servicemodel 4.0.0.0" イベントをダブルクリックして、セキュリティで保護されていないエンドポイントのメッセージを表示します。  
   
-#### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
+## <a name="set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行する  
   
 1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   

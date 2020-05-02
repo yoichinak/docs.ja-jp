@@ -2,12 +2,12 @@
 title: カスタム サービス ホスト
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: 6470249c557d571dfee165d57ce518d475340093
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 70d527599c310cba694624839f14a313f6000337
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140938"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728429"
 ---
 # <a name="custom-service-host"></a>カスタム サービス ホスト
 このサンプルでは、<xref:System.ServiceModel.ServiceHost> クラスから派生したカスタムのサービス ホストを使用して、サービスの実行時動作を変更する方法を示します。 この方法は、多数のサービスを共通方式で構成するという方法の代わりに使用でき、再利用可能です。 このサンプルでは、<xref:System.ServiceModel.Activation.ServiceHostFactory> クラスを使用して、カスタムの ServiceHost を、インターネット インフォメーション サービス (IIS) または Windows プロセス アクティブ化サービス (WAS) でホストされる環境で使用する方法も示します。  
@@ -22,17 +22,17 @@ ms.locfileid: "82140938"
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Hosting\CustomServiceHost`  
   
 ## <a name="about-the-scenario"></a>シナリオについて
- 機密性の高いサービスメタデータが誤って公開されるのを防ぐために、Windows Communication Foundation (WCF) サービスの既定の構成では、メタデータの公開が無効になっています。 この動作は、既定の設定ではセキュリティで保護されますが、同時に、サービスの構成の中でメタデータ発行の動作が明示的に有効化されない限り、サービスの呼び出しに必要なクライアント コードをメタデータ インポート ツール (Svcutil.exe など) を使用して生成できないことも意味します。  
+ 機密性の高いサービスメタデータが誤って公開されるのを防ぐために、Windows Communication Foundation (WCF) サービスの既定の構成では、メタデータの公開が無効になっています。 この動作は既定ではセキュリティで保護されていますが、サービスのメタデータ公開動作が構成で明示的に有効になっていない限り、サービスの呼び出しに必要なクライアントコードをメタデータインポートツール (Svcutil.exe など) を使用して生成することはできません。  
   
  多数のサービスのメタデータ公開を有効にすると、同一の構成要素が各サービスに追加されます。この結果、本質的に同じ構成情報が大量に発生することになります。 各サービスを個別に構成する代わりに、メタデータ公開を有効化する命令型コードを一度だけプログラミングして、そのコードを複数のサービスで再利用するという方法もあります。 この方法を使用するには、<xref:System.ServiceModel.ServiceHost> から派生する新しいクラスを作成し、`ApplyConfiguration`() メソッドをオーバーライドして命令型コードでメタデータ公開動作を追加します。  
   
 > [!IMPORTANT]
-> このサンプルでは、わかりやすくするために、セキュリティで保護されていないメタデータ公開エンドポイントを作成する方法を示します。 このようなエンドポイントを利用するコンシューマーは、匿名で、認証を受けていない可能性もあります。したがって、エンドポイントを配置する前には注意を払い、サービスのメタデータをパブリックに開示することが適切であることを確認する必要があります。  
+> このサンプルでは、わかりやすくするために、セキュリティで保護されていないメタデータ公開エンドポイントを作成する方法を示します。 このようなエンドポイントは、匿名の認証されていないコンシューマーが使用できる可能性があり、サービスのメタデータの公開が適切であることを保証するために、このようなエンドポイントをデプロイする前に注意する必要が  
   
 ## <a name="implementing-a-custom-servicehost"></a>カスタム ServiceHost の実装
- <xref:System.ServiceModel.ServiceHost> クラスは、便利な仮想メソッドを多数公開しています。継承側でこの仮想メソッドをオーバーライドして、サービスの実行時動作を変更することができます。 たとえば、`ApplyConfiguration`() メソッドはサービスの構成情報を構成ストアから読み取り、それに応じてホストの <xref:System.ServiceModel.Description.ServiceDescription> を変更します。 既定の実装は構成をアプリケーションの構成ファイルから読み取りますが、 カスタム実装では、`ApplyConfiguration`() をオーバーライドすれば、命令型コードを使用して <xref:System.ServiceModel.Description.ServiceDescription> にさらに変更を加えることや、既定の構成ストア全体を置き換えることも可能です ( たとえば、サービスのエンドポイント構成を、アプリケーションの構成ファイルではなくデータベースから読み取るようにする場合)。  
+ <xref:System.ServiceModel.ServiceHost> クラスは、便利な仮想メソッドを多数公開しています。継承側でこの仮想メソッドをオーバーライドして、サービスの実行時動作を変更することができます。 たとえば、`ApplyConfiguration`() メソッドはサービスの構成情報を構成ストアから読み取り、それに応じてホストの <xref:System.ServiceModel.Description.ServiceDescription> を変更します。 既定の実装では、アプリケーションの構成ファイルから構成を読み取ります。 カスタム実装では、`ApplyConfiguration`() をオーバーライドすれば、命令型コードを使用して <xref:System.ServiceModel.Description.ServiceDescription> にさらに変更を加えることや、既定の構成ストア全体を置き換えることも可能です ( たとえば、アプリケーションの構成ファイルではなく、データベースからサービスのエンドポイント構成を読み取ることができます。  
   
- このサンプルでは、ServiceMetadataBehavior (メタデータ公開を有効にする動作) がサービスの構成ファイルに明示的に追加されていない場合でもこの動作を追加する、カスタムの ServiceHost を構築します。 これを実現するには、<xref:System.ServiceModel.ServiceHost> から継承する新しいクラスを作成して `ApplyConfiguration`() をオーバーライドします。  
+ このサンプルでは、サービスの構成ファイルにこの動作が明示的に追加されていない場合でも、ServiceMetadataBehavior (メタデータの公開を有効にする) を追加するカスタム ServiceHost を作成します。 これを実現するには、から<xref:System.ServiceModel.ServiceHost>継承して () `ApplyConfiguration`をオーバーライドする新しいクラスを作成します。  
   
 ```csharp
 class SelfDescribingServiceHost : ServiceHost  
@@ -57,7 +57,7 @@ class SelfDescribingServiceHost : ServiceHost
 }  
 ```  
   
- アプリケーションの構成ファイルで指定されている構成が無視されないようにしたいので、`ApplyConfiguration`() のオーバーライドで最初に行うことは、基本実装の呼び出しです。 このメソッドが完了した後で、次の命令型コードを使用して、サービス記述に <xref:System.ServiceModel.Description.ServiceMetadataBehavior> を追加します。  
+ アプリケーションの構成ファイルで提供されている構成を無視したくないので、() の最初の`ApplyConfiguration`オーバーライドは基本実装を呼び出します。 このメソッドが完了した後で、次の命令型コードを使用して、サービス記述に <xref:System.ServiceModel.Description.ServiceMetadataBehavior> を追加します。  
   
 ```csharp
 ServiceMetadataBehavior mexBehavior = this.Description.Behaviors.Find<ServiceMetadataBehavior>();  
@@ -74,7 +74,7 @@ else
 }  
 ```  
   
- `ApplyConfiguration`() のオーバーライドでの最後の処理は、既定のメタデータ エンドポイントの追加です。 通常は、サービス ホストの BaseAddresses コレクション内の各 URI に対して 1 つずつメタデータ エンドポイントを作成します。  
+ `ApplyConfiguration`() のオーバーライドでの最後の処理は、既定のメタデータ エンドポイントの追加です。 慣例により、サービスホストの BaseAddresses コレクション内の各 URI に対して1つのメタデータエンドポイントが作成されます。  
   
 ```csharp
 //Add a metadata endpoint at each base address  
@@ -119,7 +119,7 @@ SelfDescribingServiceHost host =
 host.Open();  
 ```  
   
- 既定の <xref:System.ServiceModel.ServiceHost> クラスを使用してサービスをホストする場合と同様に、このカスタム ServiceHost も、サービスのエンドポイント構成をアプリケーションの構成ファイルから読み取ります。 ただし、カスタム ホストの内部でメタデータ公開を有効にするというロジックを追加したので、構成の中でメタデータ公開動作を明示的に有効化することは不要になりました。 この方法のメリットがはっきりと現れるのは、開発するアプリケーションに複数のサービスがあり、同じ構成要素を繰り返し記述することなく各サービスでメタデータ公開を有効化できるようにする場合です。  
+ 既定<xref:System.ServiceModel.ServiceHost>のクラスを使用してサービスをホストしていたかのように、カスタムホストは引き続きアプリケーションの構成ファイルからサービスのエンドポイント構成を読み取ります。 ただし、カスタム ホストの内部でメタデータ公開を有効にするというロジックを追加したので、構成の中でメタデータ公開動作を明示的に有効化することは不要になりました。 この方法のメリットがはっきりと現れるのは、開発するアプリケーションに複数のサービスがあり、同じ構成要素を繰り返し記述することなく各サービスでメタデータ公開を有効化できるようにする場合です。  
   
 ## <a name="using-a-custom-servicehost-in-iis-or-was"></a>IIS または WAS でのカスタム ServiceHost の使用  
  カスタム サービス ホストを自己ホストのシナリオで使用することは簡単です。サービス ホストのインスタンスを作成して開くことは、アプリケーションのコードで行うからです。 ただし、IIS または WAS のホスト環境では、WCF インフラストラクチャは、受信メッセージに応答してサービスのホストを動的にインスタンス化します。 このホスト環境でもカスタム サービス ホストを使用できますが、ServiceHostFactory の形式でコードを追加する必要があります。 次に示すコードは、カスタム <xref:System.ServiceModel.Activation.ServiceHostFactory> のインスタンスを返す、`SelfDescribingServiceHost` の派生クラスの例です。  
@@ -141,9 +141,9 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
 }  
 ```  
   
- 上のコードでわかるように、カスタム ServiceHostFactory の実装は非常に簡単です。 すべてのカスタム ロジックは ServiceHost 実装内部にあり、このファクトリによって派生クラスのインスタンスが返されます。  
+ ご覧のように、カスタム ServiceHostFactory の実装は簡単です。 すべてのカスタム ロジックは ServiceHost 実装内部にあり、このファクトリによって派生クラスのインスタンスが返されます。  
   
- サービス実装と共にカスタム ファクトリを使用するには、いくつかのメタデータをサービスの .svc ファイルに追加する必要があります。  
+ サービス実装でカスタムファクトリを使用するには、サービスの .svc ファイルに追加のメタデータを追加する必要があります。  
   
 ```xml
 <% @ServiceHost Service="Microsoft.ServiceModel.Samples.CalculatorService"
@@ -151,10 +151,10 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
                language=c# Debug="true" %>
 ```
   
- ここでは、`Factory` 属性を `@ServiceHost` ディレクティブに追加し、カスタム ファクトリの CLR 型の名前を属性値として渡しました。 IIS または WAS がこのサービスのメッセージを受信すると、WCF ホスティングインフラストラクチャは、まず ServiceHostFactory のインスタンスを作成してから、を呼び出し`ServiceHostFactory.CreateServiceHost()`てサービスホスト自体をインスタンス化します。  
+ ここでは、 `Factory` `@ServiceHost`ディレクティブに追加の属性を追加し、属性の値としてカスタムファクトリの CLR 型名を渡しました。 IIS または WAS がこのサービスのメッセージを受信すると、WCF ホスティングインフラストラクチャは、まず ServiceHostFactory のインスタンスを作成してから、を呼び出し`ServiceHostFactory.CreateServiceHost()`てサービスホスト自体をインスタンス化します。  
   
 ## <a name="running-the-sample"></a>サンプルの実行  
- このサンプルには完全な機能を持つクライアントとサービスの実装が用意されていますが、ここでの目的は、カスタム ホストを使用してサービスのランタイム動作を変更する方法を示すことです。次の手順を実行します。  
+ このサンプルでは、完全に機能するクライアントとサービスの実装を提供していますが、サンプルのポイントは、カスタムホストを使用してサービスの実行時の動作を変更する方法を示しています。次の手順を実行します。  
   
 ### <a name="observe-the-effect-of-the-custom-host"></a>カスタムホストの効果を確認する
   
