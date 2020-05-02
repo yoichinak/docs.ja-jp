@@ -10,26 +10,26 @@ helpviewer_keywords:
 ms.assetid: 7f9b2c77-03cd-428f-adc2-b18070226e7c
 ms.openlocfilehash: 62b22a54904a45380052d3d81d9415517d4f8d3b
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346882"
 ---
 # <a name="how-to-refer-to-the-current-instance-of-an-object-visual-basic"></a>方法: オブジェクトの現在のインスタンスを参照する (Visual Basic)
-オブジェクトの*現在のインスタンス*は、コードが現在実行されているインスタンスです。  
+オブジェクトの "*現在のインスタンス*" は、コードが現在実行されているインスタンスです。  
   
  現在のインスタンスを参照するには、`Me` キーワードを使用します。  
   
 ### <a name="to-refer-to-the-current-instance"></a>現在のインスタンスを参照するには  
   
-- 通常はオブジェクト変数の名前を使用する場合は、`Me` キーワードを使用します。  
+- オブジェクト変数の名前を通常使用する箇所で `Me` キーワードを使用します。  
   
     ```vb  
     Me.ForeColor = System.Drawing.Color.Crimson  
     Me.Close()  
     ```  
   
-     `Me` はオブジェクト変数のように動作しますが、宣言したり、何も割り当てたりすることはできません。 `Me` は常に現在のインスタンスを参照します。  
+     `Me` はオブジェクト変数と同様に動作しますが、宣言したり、何かを代入したりすることはできません。 `Me` では常に現在のインスタンスが参照されます。  
   
 ## <a name="see-also"></a>関連項目
 

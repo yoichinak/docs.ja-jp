@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: eb984aa5-ac98-4d0b-a0d2-24238d7bc8dc
 ms.openlocfilehash: 6013b92206e00a77a8ca30d38846c87372c3873e
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74344269"
@@ -25,26 +25,26 @@ ms.locfileid: "74344269"
 -help  
 ```
 
-または  
+or  
 
 ```console
 -?  
 ```  
   
-## <a name="remarks"></a>コメント  
- このオプションをコンパイルに含めた場合、出力ファイルは作成されず、コンパイルも行われません。  
+## <a name="remarks"></a>Remarks  
+ このオプションをコンパイルに含めると、出力ファイルが作成されず、コンパイルが行われません。  
   
 > [!NOTE]
-> `-help` オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
+> `-help` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードは、コマンドラインからヘルプを表示します。  
+ 次のコードによってコマンド ラインからヘルプを表示します。  
   
 ```console  
 vbc -help  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
