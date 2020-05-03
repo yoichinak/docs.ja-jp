@@ -4,12 +4,12 @@ description: ASP.NET Core と Azure を使用したモノリシックな Web ア
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 18449ea02b7f9e89744a0f3088f80b7a51a807da
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987895"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507194"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core および Azure での最新の Web アプリケーションの設計
 
@@ -50,6 +50,12 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 編集者:
 
 > **Maira Wenzel**
+
+## <a name="action-links"></a>アクション リンク
+
+- この電子書籍は、PDF 形式 (英語版のみ) で[ダウンロード](https://aka.ms/webappebook)することもできます
+
+- 参照アプリケーションを複製/フォーク [GitHub の eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)
 
 ## <a name="introduction"></a>はじめに
 
@@ -102,7 +108,7 @@ Azure でホストされる ASP.NET Core での Web アプリケーションを�
 
 ## <a name="how-you-can-use-this-guide"></a>このガイドを使用する方法
 
-このガイドは、最新の .NET テクノロジと Windows Azure を使用した Web アプリケーションの構築に焦点を当てた比較的小さなドキュメントに凝縮されています。 そのため、このようなアプリケーションと、技術的な考慮事項を理解するための基盤を提供するものとして、全体を読むことができます。 ガイドは、サンプル アプリケーションと共に、最初に参照するものとして使用できます。 関連するサンプル アプリケーションをテンプレートとして使用するか、アプリケーションのコンポーネント部分を整理する方法を参照してください。 独自のアプリケーションでこれらの選択肢を比較検討する場合、ガイドの基本原則とアーキテクチャのカバレッジ、テクノロジのオプション、および決定時の考慮事項を参照してください。
+このガイドは、最新の .NET テクノロジと Azure を使用した Web アプリケーションの構築に焦点を当てた比較的小さなドキュメントに凝縮されています。 そのため、このようなアプリケーションと、技術的な考慮事項を理解するための基盤を提供するものとして、全体を読むことができます。 ガイドは、サンプル アプリケーションと共に、最初に参照するものとして使用できます。 関連するサンプル アプリケーションをテンプレートとして使用するか、アプリケーションのコンポーネント部分を整理する方法を参照してください。 独自のアプリケーションでこれらの選択肢を比較検討する場合、ガイドの基本原則とアーキテクチャのカバレッジ、テクノロジのオプション、および決定時の考慮事項を参照してください。
 
 これらの考慮事項と営業案件の共通理解を確保するために、チームにこのガイドを自由に転送してください。 用語の共通セットと基本原則を理解して全員が作業すると、アーキテクチャのパターンと実践方法を一貫して適用できるようになります。
 

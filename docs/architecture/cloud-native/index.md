@@ -2,13 +2,13 @@
 title: Azure 向けクラウド ネイティブ .NET アプリケーションの設計
 description: Azure のコンテナー、マイクロサービス、サーバーレス機能を活用するクラウドネイティブなアプリケーションを構築するためのガイド。
 author: ardalis
-ms.date: 03/07/2019
-ms.openlocfilehash: cf3be07f0d37aacf4f0252ef2f4d922b7be93eee
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.date: 04/23/2020
+ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989065"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507391"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure 向けクラウド ネイティブ .NET アプリケーションの設計
 
@@ -44,19 +44,25 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 作成者:
 
-> **Steve "ardalis" Smith** - ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
+> **Rob Vettor**、Microsoft、プリンシパル クラウド システム アーキテクト/IP アーキテクト - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
 >
-> **Rob Vettor** - Microsoft - プリンシパル クラウド システム アーキテクト/IP アーキテクト - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> **Steve "ardalis" Smith**、ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
 
 参加者とレビュー担当者:
 
 > **Cesar De la Torre**、Microsoft、.NET チーム、プリンシパル プログラム マネージャー
 >
 > **Nish Anil**、Microsoft、.NET チーム、シニア プログラム マネージャー
+>
+> **Jeremy Likness**、Microsoft、.NET チーム、シニア プログラム マネージャー
+>
+> **Cecil Phillip**、Microsoft、上級クラウド アドボケイト
+
+eShopOnContainers に関する詳細をご覧ください
 
 編集者:
 
-> **Maira Wenzel**、Microsoft、.NET チーム、コンテンツ開発者
+> **Maira Wenzel**、Microsoft、.NET チーム、シニア プログラム マネージャー
 
 ## <a name="who-should-use-this-guide"></a>対象読者
 

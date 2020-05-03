@@ -14,6 +14,8 @@
       href: install/runtime.md
     - name: サポートされる OS と依存関係
       href: install/dependencies.md
+    - name: 期限切れのランタイムと SDK の削除
+      href: install/remove-runtime-sdk-versions.md
     - name: .NET テンプレートの管理
       href: install/templates.md
     - name: macOS の公証の問題
@@ -36,6 +38,8 @@
           href: install/linux-package-manager-debian10.md
         - name: Debian 9
           href: install/linux-package-manager-debian9.md
+        - name: Fedora 32
+          href: install/linux-package-manager-fedora32.md
         - name: Fedora 31
           href: install/linux-package-manager-fedora31.md
         - name: Fedora 30
@@ -393,8 +397,6 @@
       href: versions/index.md
     - name: .NET Core のバージョンの選択
       href: versions/selection.md
-    - name: 期限切れのランタイムと SDK の削除
-      href: versions/remove-runtime-sdk-versions.md
 - name: ランタイム識別子 (RID) のカタログ
   href: rid-catalog.md
 - name: 依存関係の管理と読み込み
