@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
 ms.openlocfilehash: e8607f8254783b5486b02ccc4c7e4081da506fae
 ms.sourcegitcommit: 32a575bf4adccc901f00e264f92b759ced633379
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/04/2019
 ms.locfileid: "74802151"
@@ -66,10 +66,10 @@ ms.locfileid: "74802151"
 
 ## <a name="setting-this-option"></a>このオプションを設定する
 
-Visual Studio で **-subsystemversion**コンパイラオプションを設定するには、.vbproj ファイルを開き、MSBuild XML で `SubsystemVersion` プロパティの値を指定する必要があります。 Visual Studio IDE でこのオプションを設定することはできません。 詳細については、このトピックの「既定値」または「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。
+Visual Studio で **-subsystemversion** コンパイラ オプションを設定するには、.vbproj ファイルを開き、MSBuild XML で `SubsystemVersion` プロパティの値を指定する必要があります。 Visual Studio IDE でこのオプションを設定することはできません。 詳細については、このトピックの「既定値」または「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
 
 - [MSBuild プロパティ](/visualstudio/msbuild/msbuild-properties)

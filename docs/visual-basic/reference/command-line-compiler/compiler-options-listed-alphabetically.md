@@ -6,13 +6,13 @@ helpviewer_keywords:
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
 ms.openlocfilehash: 85fb07f46c2d885491db7358f24b3b50836c2ca8
 ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/14/2020
 ms.locfileid: "75937758"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic コンパイラ オプション一覧 (アルファベット順)
-Visual Basic コマンドラインコンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルするための代替手段として提供されています。 アルファベット順に並べ替えられた Visual Basic のコマンドラインコンパイラオプションの一覧を次に示します。  
+Visual Basic コマンドライン コンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルする方法の代替手段として提供されています。 次に、Visual Basic コマンドライン コンパイラ オプションの一覧 (アルファベット順) を示します。  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -25,22 +25,22 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |`-analyzer`|このアセンブリからアナライザーを実行します (短縮形: -a)。|  
 |[-baseaddress](../../../visual-basic/reference/command-line-compiler/baseaddress.md)|DLL のベース アドレスを指定します。|  
 |[-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)|バグを簡単に報告するための情報を含むファイルを作成します。|  
-|`-checksumalgorithm:<alg>`|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は、SHA1 (既定値) または SHA256 です。 <br>SHA1 の衝突の問題のため、SHA256 以上をお勧めします。|  
+|`-checksumalgorithm:<alg>`|PDB に格納されているソース ファイルのチェックサムを計算するためのアルゴリズムを指定します。  サポートされる値は SHA1 (既定値) または SHA256 です。 <br>SHA1 には競合の問題があるため、Microsoft では SHA256 以上を推奨しています。|  
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|コンパイルですべてのソース コード ファイルに使用するコード ページを指定します。|  
 |[-debug](../../../visual-basic/reference/command-line-compiler/debug.md)|デバッグ情報を生成します。|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|条件付きコンパイルのシンボルを定義します。|  
 |[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)|アセンブリに完全に署名するか、部分的に署名するかを指定します。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|入力が同一である場合、バイナリ コンテンツがコンパイル全体で同一のアセンブリをコンパイラに出力させます。|
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|ドキュメント コメントを XML ファイルに出力します。|  
-|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic コンパイラが内部コンパイラエラーを報告する方法を指定します。|  
+|[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic コンパイラで内部コンパイル エラーを報告する方法を指定します。|  
 |[-filealign](../../../visual-basic/reference/command-line-compiler/filealign.md)|出力ファイルでセクションをアラインするサイズを指定します。|  
 |[-help](../../../visual-basic/reference/command-line-compiler/help.md)|コンパイラ オプションを出力します。 このコマンドは、`-?` オプションの指定と同じです。 コンパイルは発生しません。|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|特定の実行可能ファイルで高エントロピ ASLR (Address Space Layout Randomization) をサポートするかどうかを示します。|  
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|指定したアセンブリから名前空間をインポートします。|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|アセンブリに厳密な名前を付けるキー ペアのキー コンテナー名を指定します。|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|言語バージョンを指定し&#124;ます&#124;:&#124;9&#124;9.0&#124;10 10.0 11 11.0。|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|[-Reference](../../../visual-basic/reference/command-line-compiler/reference.md)オプションによって参照されるアセンブリの場所を指定します。|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|言語バージョンとして、9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0 を指定します。|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|[-reference](../../../visual-basic/reference/command-line-compiler/reference.md) オプションにより参照されるアセンブリの場所を指定します。|  
 |[-linkresource](../../../visual-basic/reference/command-line-compiler/linkresource.md)|マネージド リソースへのリンクを作成します。|  
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|起動時に使用する `Sub Main` プロシージャを含むクラスを指定します。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|モジュールが一部となるアセンブリの名前を指定します。|  
@@ -57,8 +57,7 @@ Visual Basic コマンドラインコンパイラは、Visual Studio 統合開�
 |[-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)|変数宣言でローカル型推論を使用できるようにします。|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|厳密な言語セマンティクスを適用します。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|出力ファイルを指定します。|  
-<code>-parallel[+&#124;-]</code> 
-
+|<code>-parallel[+&#124;-]</code>|同時実行ビルドを使用する (+) かどうかを指定します。|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|コンパイラによる出力ファイルの対象となるプロセッサ プラットフォームを指定します。|  
 |`-preferreduilang`|出力用の言語名を指定します。|  
 |[-quiet](../../../visual-basic/reference/command-line-compiler/quiet.md)|コンパイラで構文関連のエラーと警告のコードが表示されないようにします。|  
