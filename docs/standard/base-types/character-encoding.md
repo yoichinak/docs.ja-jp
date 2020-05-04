@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 1a294a577d10b3e621871b168344f2b0610693dd
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242739"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624944"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>.NET で文字エンコーディング クラスを使用する方法
 
@@ -103,7 +103,7 @@ Web アプリケーションでは、Web 要求への応答としてクライア
 
 特定のエンコーディングの <xref:System.Text.Encoder> オブジェクトは、そのエンコーディングの <xref:System.Text.Encoding.GetEncoder%2A?displayProperty=nameWithType> プロパティから取得できます。 特定のエンコーディングの <xref:System.Text.Decoder> オブジェクトは、そのエンコーディングの <xref:System.Text.Encoding.GetDecoder%2A?displayProperty=nameWithType> プロパティから取得できます。 デコード操作の場合、 <xref:System.Text.Decoder> から派生するクラスに含まれるのは <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> メソッドだけで、 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType>に対応するメソッドはありません。
 
-次の例は、Unicode のバイト配列のデコードに <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> メソッドを使用する場合と <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> メソッドを使用する場合の違いを示しています。 この例では、いくつかの Unicode 文字を含む文字列をファイルにエンコードした後、この 2 つのデコード メソッドを使用して一度に 10 バイトずつデコードしています。 10 番目と 11 番目のバイトに出現するサロゲート ペアは、別のメソッド呼び出しでデコードされます。 出力を見るとわかるように、 <xref:System.Text.Encoding.GetChars%2A?displayProperty=nameWithType> メソッドではこれらのバイトが正しくデコードされず、U+FFFD (REPLACEMENT CHARACTER) に置き換えられます。 一方、 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> メソッドでは、このバイト配列が正しくデコードされて、元の文字列を取得できます。
+次の例は、Unicode のバイト配列のデコードに <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> メソッドを使用する場合と <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> メソッドを使用する場合の違いを示しています。 この例では、いくつかの Unicode 文字を含む文字列をファイルにエンコードした後、この 2 つのデコード メソッドを使用して一度に 10 バイトずつデコードしています。 10 番目と 11 番目のバイトに出現するサロゲート ペアは、別のメソッド呼び出しでデコードされます。 出力を見るとわかるように、 <xref:System.Text.Encoding.GetString%2A?displayProperty=nameWithType> メソッドではこれらのバイトが正しくデコードされず、U+FFFD (REPLACEMENT CHARACTER) に置き換えられます。 一方、 <xref:System.Text.Decoder.GetChars%2A?displayProperty=nameWithType> メソッドでは、このバイト配列が正しくデコードされて、元の文字列を取得できます。
 
 [!code-csharp[Conceptual.Encoding#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.encoding/cs/stream1.cs#10)]
 [!code-vb[Conceptual.Encoding#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/stream1.vb#10)]

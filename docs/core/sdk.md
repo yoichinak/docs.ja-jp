@@ -3,12 +3,12 @@ title: .NET Core SDK の概要
 description: .NET Core プロジェクトの作成に使用するライブラリとツールのセットである .NET Core SDK について説明します。
 ms.date: 07/31/2019
 ms.technology: dotnet-cli
-ms.openlocfilehash: c2723e0e28c889f91f79ea3c0b26aa38f69fb41c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7eb06e4fd94ed2a73af2741e98e21e02728c27e4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78157467"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595742"
 ---
 # <a name="net-core-sdk-overview"></a>.NET Core SDK の概要
 
@@ -31,9 +31,9 @@ ms.locfileid: "78157467"
 
 既定では、SDK は "side-by-side" (SxS) 方式でインストールされます。つまり、複数のバージョンを 1 台のコンピューター上にいつでも共存させることができます。 CLI コマンドを実行したときにバージョンが選択される方法について詳しくは、「[使用する .NET Core のバージョンを選択する](versions/selection.md)」記事をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET Core CLI の概要](tools/index.md)
 - [.NET Core のバージョン管理の概要](versions/index.md)
-- [.NET Core ランタイムと SDK を削除する方法](versions/remove-runtime-sdk-versions.md)
+- [.NET Core ランタイムと SDK を削除する方法](install/remove-runtime-sdk-versions.md)
 - [使用する .NET Core のバージョンを選択する](versions/selection.md)
