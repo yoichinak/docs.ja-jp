@@ -3,12 +3,12 @@ title: アンインストール ツール
 description: .NET CORE アンインストール ツールの概要です。これは、.NET Core SKD とランタイムの制御されたクリーンアップを可能にするガイド付きツールです。
 author: sfoslund
 ms.date: 01/06/2020
-ms.openlocfilehash: 816aef6ab8bc0e51bb8befb14fde60513d4fadfc
-ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79507322"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595716"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core アンインストール ツール
 
@@ -297,7 +297,7 @@ dotnet-core-uninstall whatif [options] [<VERSION>...]
 
 `dotnet-core-uninstall remove` は、一連のオプションによって指定された .NET Core SDK とランタイムをアンインストールします。 このツールを使用して、バージョン 5.0 以上の SDK とランタイムをアンインストールすることはできません。
 
-このツールには破壊的動作があるため、remove コマンドを実行する前に、ドライ ランを実行することを**強く**お勧めします。 ドライランにより、`remove` コマンドを使用したときに削除される .NET Core SDK とランタイムが示されます。 削除しても安全な SDK とランタイムを確認するには、「[バージョンを削除する必要はあるか](../versions/remove-runtime-sdk-versions.md#should-i-remove-a-version)」を参照してください。
+このツールには破壊的動作があるため、remove コマンドを実行する前に、ドライ ランを実行することを**強く**お勧めします。 ドライランにより、`remove` コマンドを使用したときに削除される .NET Core SDK とランタイムが示されます。 削除しても安全な SDK とランタイムを確認するには、「[バージョンを削除する必要はあるか](../install/remove-runtime-sdk-versions.md#should-i-remove-a-version)」を参照してください。
 
 > [!CAUTION]
 > 次の注意事項に留意してください。
@@ -510,7 +510,7 @@ dotnet-core-uninstall remove [options] [<VERSION>...]
 
 ### <a name="step-4---delete-the-nuget-fallback-folder-optional"></a>手順 4 - NuGet フォールバック フォルダーを削除する (省略可能)
 
-場合によっては、`NuGetFallbackFolder` が不要になり、削除することもできます。 このフォルダーの削除の詳細については、[NuGetFallbackFolder の削除](../versions/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder)に関する記事を参照してください。
+場合によっては、`NuGetFallbackFolder` が不要になり、削除することもできます。 このフォルダーの削除の詳細については、[NuGetFallbackFolder の削除](../install/remove-runtime-sdk-versions.md#remove-the-nuget-fallback-folder)に関する記事を参照してください。
 
 ## <a name="uninstall-the-tool"></a>ツールをアンインストールする
 
