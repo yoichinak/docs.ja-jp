@@ -3,12 +3,12 @@ title: Microsoft.NET.Sdk の MSBuild プロパティ
 description: .NET Core SDK によって認識される MSBuild プロパティのリファレンスです。
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: d4a204a1e0216313418d278ec3bd333f72db8751
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 105b7d67ea24515ea88481cb4a4fe42d2a03cfd0
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "81386658"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506791"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK プロジェクトの MSBuild プロパティ
 
@@ -74,6 +74,7 @@ ms.locfileid: "81386658"
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
+- [TrimmerRootAssembly](#trimmerrootassembly)
 - [UseAppHost](#useapphost)
 
 ### <a name="runtimeidentifier"></a>RuntimeIdentifier
@@ -103,6 +104,20 @@ ms.locfileid: "81386658"
 </Project>
 ```
 
+### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
+
+`TrimmerRootAssembly` 項目ではアセンブリを "[*トリミング*](../deploying/trim-self-contained.md)" から除外できます。 トリミングとは、パッケージ化されたアプリケーションからランタイムの未使用部分を削除するプロセスです。 必要な参照がトリミングによって間違って削除されることもあります。
+
+次の XML では、トリミングから `System.Security` アセンブリが除外されます。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <TrimmerRootAssembly Include="System.Security" />
+  </ItemGroup>
+</Project>
+```
+
 ### <a name="useapphost"></a>UseAppHost
 
 `UseAppHost` プロパティは、.NET Core SDK の 2.1.400 バージョンで導入されました。 デプロイ用にネイティブ実行可能ファイルを作成するかどうかを制御できます。 自己完結型の配置にはネイティブの実行可能ファイルが必要です。
@@ -121,6 +136,8 @@ ms.locfileid: "81386658"
 
 ## <a name="compile-properties"></a>コンパイルのプロパティ
 
+- [LangVersion](#langversion)
+
 ### <a name="langversion"></a>LangVersion
 
 `LangVersion` プロパティを使用すると、特定のプログラミング言語バージョンを指定できます。 たとえば、C# プレビュー機能にアクセスする場合は、`LangVersion` を `preview` に設定します。
@@ -134,6 +151,128 @@ ms.locfileid: "81386658"
 ```
 
 詳細については、「[C# 言語のバージョン管理](../../csharp/language-reference/configure-language-version.md#override-a-default)」を参照してください。
+
+## <a name="run-time-configuration-properties"></a>ランタイム構成プロパティ
+
+アプリのプロジェクト ファイルに MSBuild プロパティを指定することで一部のランタイム動作を構成できます。 ランタイム動作のその他の構成方法については、「[.NET Core ランタイム構成設定](../run-time-config/index.md)」を参照してください。
+
+- [ConcurrentGarbageCollection](#concurrentgarbagecollection)
+- [InvariantGlobalization](#invariantglobalization)
+- [RetainVMGarbageCollection](#retainvmgarbagecollection)
+- [ServerGarbageCollection](#servergarbagecollection)
+- [ThreadPoolMaxThreads](#threadpoolmaxthreads)
+- [ThreadPoolMinThreads](#threadpoolminthreads)
+- [TieredCompilation](#tieredcompilation)
+- [TieredCompilationQuickJit](#tieredcompilationquickjit)
+- [TieredCompilationQuickJitForLoops](#tieredcompilationquickjitforloops)
+
+### <a name="concurrentgarbagecollection"></a>ConcurrentGarbageCollection
+
+`ConcurrentGarbageCollection` プロパティでは、[バックグラウンド (同時実行) ガベージ コレクション](../../standard/garbage-collection/background-gc.md)の有効または無効が設定されます。 この値を `false` に設定すると、バックグラウンド ガベージ コレクションが無効になります。 詳細については、「[System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="invariantglobalization"></a>InvariantGlobalization
+
+`InvariantGlobalization` プロパティでは、アプリを *globalization-invariant* モードで実行するかどうかを設定します。このモードでは、カルチャ固有のデータにアクセスできません。 この値を `true` に設定すると、globalization-invariant モードで実行されます。 詳細については、「[インバリアント モード](../run-time-config/globalization.md#invariant-mode)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <InvariantGlobalization>true</InvariantGlobalization>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
+
+`RetainVMGarbageCollection` プロパティでは、将来利用する目的で削除済みメモリ セグメントを待機一覧に載せるように、あるいは削除済みメモリ セグメントを解放するようにガベージ コレクターを設定します。 この値を `true` に設定すると、セグメントを待機一覧に載せるよう、ガベージ コレクターが命令されます。 詳細については、「[System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="servergarbagecollection"></a>ServerGarbageCollection
+
+`ServerGarbageCollection` プロパティでは、アプリケーションで使用するガベージ コレクションとして[ワークステーション ガベージ コレクションまたはサーバー ガベージ コレクション](../../standard/garbage-collection/workstation-server-gc.md)を設定します。 この値を `true` に設定すると、サーバー ガベージ コレクションが使用されます。 詳細については、「[System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="threadpoolmaxthreads"></a>ThreadPoolMaxThreads
+
+`ThreadPoolMaxThreads` プロパティでは、ワーカー スレッド プールの最大スレッド数を設定します。 詳細については、「[最大スレッド数](../run-time-config/threading.md#maximum-threads)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="threadpoolminthreads"></a>ThreadPoolMinThreads
+
+`ThreadPoolMinThreads` プロパティでは、ワーカー スレッド プールの最小スレッド数を設定します。 詳細については、「[最小スレッド数](../run-time-config/threading.md#minimum-threads)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="tieredcompilation"></a>TieredCompilation
+
+`TieredCompilation` プロパティでは、Just-In-Time (JIT) コンパイラで[階層型コンパイル](../whats-new/dotnet-core-3-0.md#tiered-compilation)を使用するかどうかを設定します。 この値を `false` に設定すると、階層型コンパイルが無効になります。 詳細については、「[階層型コンパイル](../run-time-config/compilation.md#tiered-compilation)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TieredCompilation>false</TieredCompilation>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="tieredcompilationquickjit"></a>TieredCompilationQuickJit
+
+`TieredCompilationQuickJit` プロパティでは、JIT コンパイラでクイック JIT を使用するかどうかを設定します。 この値を `false` に設定すると、クイック JIT が無効になります。 詳細については、「[クイック JIT](../run-time-config/compilation.md#quick-jit)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+  </PropertyGroup>
+</Project>
+```
+
+### <a name="tieredcompilationquickjitforloops"></a>TieredCompilationQuickJitForLoops
+
+`TieredCompilationQuickJitForLoops` プロパティでは、ループを含むメソッドに対して JIT コンパイラでクリック JIT を使用するかどうかを設定します。 この値を `true` に設定すると、ループが含まれるメソッドでクイック JIT が有効になります。 詳細については、「[ループに対するクイック JIT](../run-time-config/compilation.md#quick-jit-for-loops)」を参照してください。
+
+```xml
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
+  </PropertyGroup>
+</Project>
+```
 
 ## <a name="nuget-packages"></a>NuGet パッケージ
 

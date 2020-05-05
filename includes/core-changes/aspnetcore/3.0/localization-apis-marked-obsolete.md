@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8cb0aca991f5adfe4561ef56090cb9f7b2e56283
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d70a8d2a3031a5b3d47ab3fb7f40193dce6e311e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75902057"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728328"
 ---
 ### <a name="localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete"></a>ローカリゼーション:ResourceManagerWithCultureStringLocalizer と WithCulture を古い形式としてマーク
 
@@ -38,8 +38,8 @@ ASP.NET Core
 
 #### <a name="affected-apis"></a>影響を受ける API
 
-- <xref:Microsoft.Extensions.Localization.ResourceManagerWithCultureStringLocalizer>
-- <xref:Microsoft.Extensions.Localization.ResourceManagerStringLocalizer.WithCulture%2A?displayProperty=nameWithType>
+- [ResourceManagerWithCultureStringLocalizer](/dotnet/api/microsoft.extensions.localization.resourcemanagerwithculturestringlocalizer?view=dotnet-plat-ext-3.0)
+- [ResourceManagerStringLocalizer.WithCulture](/dotnet/api/microsoft.extensions.localization.resourcemanagerstringlocalizer.withculture?view=dotnet-plat-ext-3.0)
 
 <!--
 

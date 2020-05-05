@@ -4,12 +4,12 @@ ms.date: 04/07/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: a237a90b4782e0460857c3d5d887771bcc8ccaaf
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3c479faeeb66865b8c368edba881429a7cb956ec
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989182"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199678"
 ---
 # <a name="using-statement-c-reference"></a>using ステートメント (C# リファレンス)
 

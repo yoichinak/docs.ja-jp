@@ -2,13 +2,13 @@
 title: C# および Visual Studio Code の使用を開始する
 description: Visual Studio Code を使用した、C# で初めての .NET Core アプリケーションを作成してデバッグする方法について説明します。
 author: kendrahavens
-ms.date: 12/05/2018
-ms.openlocfilehash: 6722b97cee5ca3672c9dddece6e61f4d13de05a9
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 04/23/2020
+ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805820"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506899"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -22,39 +22,28 @@ ms.locfileid: "80805820"
 
 ## <a name="hello-world"></a>Hello World
 
-.NET Core でシンプルな "Hello World" プログラムを作成してみましょう。
+.NET Core でシンプルな "Hello World" プログラムを作成します。
 
 1. プロジェクトを開く
 
     - Visual Studio Code を開きます。
-    - 左側のメニューで [エクスプローラー] アイコンをクリックし、 **[フォルダーを開く]** をクリックします。
-    - メイン メニューから **[ファイル]**  >  **[フォルダーを開く]** の順に選択し、C# プロジェクトを保存するフォルダーを開き、 **[フォルダーの選択]** をクリックします。 ここで、*Hello World* という名前のプロジェクトのフォルダーを作成します。
+    - メイン メニューから **[ファイル]** 、 **[フォルダーを開く]** の順に選択します。
+    - *HelloWorld* という名前のフォルダーを作成し、 **[フォルダーを作成する]** をクリックします。 フォルダー名は既定でプロジェクト名と名前空間名になります。 このチュートリアルでは後でコードを追加しますが、プロジェクト名前空間は `HelloWorld` にします。
 
-      ![Visual Studio Code の [フォルダーを開く]](media/with-visual-studio-code/vs-code-open-folder.png)
-
-2. C# プロジェクトを初期化する
+1. C# プロジェクトを初期化する
 
     - Visual Studio Code からターミナルを開きます。メイン メニューで **[表示]**  >  **[端末]** の順に選択してください。
-    - ターミナル ウィンドウで、`dotnet new console` と入力します。
-    - このコマンドは、*HelloWorld.csproj* という名前の C# プロジェクト ファイルと共に、単純な "Hello World" プログラムが既に書き込まれた *Program.cs* ファイルをフォルダーに作成します。
+    - ターミナル ウィンドウで「`dotnet new console`」と入力します。
+
+      このコマンドは、*HelloWorld.csproj* という名前の C# プロジェクト ファイルと共に、単純な "Hello World" プログラムが既に書き込まれた *Program.cs* ファイルをフォルダーに作成します。
 
       ![dotnet new コマンド](media/with-visual-studio-code/dotnet-new-command.png)
 
-3. ビルド資産を解決する
+1. "Hello World" プログラムを実行する
 
-    - **.NET Core 1.x** の場合、「`dotnet restore`」と入力します。 `dotnet restore` を実行すると、プロジェクトのビルドに必要な .NET Core パッケージにアクセスします。
-
-      ![dotnet restore コマンド](media/with-visual-studio-code/dotnet-restore-command.png)
-
-      [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
-
-4. "Hello World" プログラムを実行する
-
-    - 「`dotnet run`」と入力します。
+    - ターミナル ウィンドウで「`dotnet run`」と入力します。
 
       ![dotnet run コマンド](media/with-visual-studio-code/dotnet-run-command.png)
-
-[Windows](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core)、[macOS](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-using-CSharp-and-NET-Core-on-MacOS)、または [Linux](https://channel9.msdn.com/Blogs/dotnet/Get-started-with-VS-Code-Csharp-dotnet-Core-Ubuntu) での詳細設定については、簡単なビデオ チュートリアルを見ることができます。
 
 ## <a name="debug"></a>デバッグ
 
@@ -62,26 +51,26 @@ ms.locfileid: "80805820"
 
     ![Program.cs ファイルを開く](media/with-visual-studio-code/open-program-cs.png)
 
-2. Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められます。 **[はい]** を選択します。
+1. Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められます。 **[はい]** を選択します。
 
     ![足りない資産の入力を求める](media/with-visual-studio-code/missing-assets.png)
 
-3. デバッグ ビューを開くには、左側のメニューにある [デバッグ] アイコンをクリックします。
+1. デバッグ ビューを開くには、左側のメニューにある [デバッグ] アイコンをクリックします。
 
     ![Visual Studio Code で [デバッグ] タブを開く](media/with-visual-studio-code/open-debug-tab.png)
 
-4. ウィンドウの上部で緑色の矢印を探します。 その横にあるドロップダウン リストで **[.NET Core Launch (console)]** \(.NET Core の起動 (コンソール)\) が選択されていることを確認します。
+1. ウィンドウの上部で緑色の矢印を探します。 その横にあるドロップダウン リストで **[.NET Core Launch (console)]** \(.NET Core の起動 (コンソール)\) が選択されていることを確認します。
 
     ![Visual Studio Code で .NET Core を選択する](media/with-visual-studio-code/select-net-core.png)
 
-5. 9 行目の横にある**エディター余白** (エディター内の行番号の左側の領域) をクリックして、プロジェクトにブレークポイントを追加するか、またはエディター内でテキスト カーソルを 9 行目に移動して <kbd>F9</kbd> キーを押します。
+1. 9 行目の横にある**エディター余白** (エディター内の行番号の左側の領域) をクリックして、プロジェクトにブレークポイントを追加するか、またはエディター内でテキスト カーソルを 9 行目に移動して <kbd>F9</kbd> キーを押します。
 
     ![ブレークポイントの設定](media/with-visual-studio-code/set-breakpoint-vs-code.png)
 
-6. デバッグを開始するには、<kbd>F5</kbd> キーを押すか、緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
+1. デバッグを開始するには、<kbd>F5</kbd> キーを押すか、緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
     - デバッグ中は、左上のペインでローカル変数を確認するか、デバッグ コンソールを使用できます。
 
-7. 上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
+1. 上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
 
     ![Visual Studio Code の実行とデバッグ](media/with-visual-studio-code/run-debug-vs-code.png)
 
@@ -90,9 +79,9 @@ ms.locfileid: "80805820"
 
 ## <a name="add-a-class"></a>クラスを追加する
 
-1. 新しいクラスを追加するには、VSCode エクスプローラーを右クリックし、 **[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
-2. ファイルに *MyClass.cs* という名前を指定します。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
-3. 次のコードを追加して、1 つ目のクラスを作成します。 *Program.cs* ファイルから参照できるように、正しい名前空間を含めるようにします。
+1. 新しいクラスを追加するには、*Program.cs* の下で VSCode エクスプローラーを右クリックし、 **[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
+1. ファイルに *MyClass.cs* という名前を指定します。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
+1. 次のコードを追加し、最初のクラスを作成します。
 
     ``` csharp
     using System;
@@ -109,7 +98,7 @@ ms.locfileid: "80805820"
     }
     ```
 
-4. 次のコードを追加して、*Program.cs* のメイン メソッドから新しいクラスを呼び出します。
+1. *Program.cs* のコードを次のコードに置換し、`Main` メソッドから新しいクラスを呼び出します。
 
     ```csharp
     using System;
@@ -127,13 +116,15 @@ ms.locfileid: "80805820"
     }
     ```
 
-5. 変更を保存し、プログラムを再度実行します。 新しいメッセージと共に追加した文字列が表示されます。
+1. 変更内容を保存します。
+
+1. 再びプログラムを実行します。
 
     ```dotnetcli
     dotnet run
     ```
 
-    次の出力が得られます。
+    新しいメッセージと共に追加した文字列が表示されます。
 
     ```console
     Hello World! Happy coding!

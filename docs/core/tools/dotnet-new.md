@@ -2,12 +2,12 @@
 title: dotnet new コマンド
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
 ms.date: 04/10/2020
-ms.openlocfilehash: 1979f98a6005a414acc64c5eaa086a88aca9f033
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 9a68baafa7ac3e6ad2fdc8f1c6e8621d6e15f1ff
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102828"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82506858"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -46,14 +46,14 @@ dotnet new -h|--help
 
   コマンドが呼び出されたときにインスタンス化するテンプレート。 各テンプレートには、渡すことができるオプションが存在する場合があります。 詳細については、[テンプレートのオプション](#template-options)を参照してください。
 
-  `dotnet new --list` を実行すると、インストールされているすべてのテンプレートの一覧を表示できます。 `TEMPLATE` の値が返されたテーブルの「**テンプレート**」列または「**短い形式の名前**」列のテキストと完全に一致しない場合、それら 2 つの列で部分文字列一致が実行されます。
+  `dotnet new --list` または `dotnet new -l` を実行すると、インストールされているすべてのテンプレートの一覧を表示できます。 `TEMPLATE` の値が返されたテーブルの「**テンプレート**」列または「**短い形式の名前**」列のテキストと完全に一致しない場合、それら 2 つの列で部分文字列一致が実行されます。
 
   .NET Core 3.0 SDK 以降では、次の条件で `dotnet new` コマンドを呼び出すと、CLI によって NuGet.org 内のテンプレートが検索されます。
 
   - `dotnet new` の呼び出し時に、CLI でテンプレートの一致を (部分的にも) 検出できない場合。
   - テンプレートの新しいバージョンが利用可能な場合。 この場合、プロジェクトまたは成果物が作成されますが、更新されたバージョンのテンプレートについて、CLI によって警告が表示されます。
 
-  このコマンドには、テンプレートの既定の一覧が含まれています。 使用可能なテンプレートの一覧を取得するには、`dotnet new -l` を使います。 次の表は、.NET Core SDK にプレインストールされているテンプレートの一覧です。 テンプレートの既定の言語は、角かっこで示されます。 短い名前のリンクをクリックすると、特定のテンプレート オプションが表示されます。
+  次の表は、.NET Core SDK にプレインストールされているテンプレートの一覧です。 テンプレートの既定の言語は、角かっこで示されます。 短い名前のリンクをクリックすると、特定のテンプレート オプションが表示されます。
 
 | テンプレート                                    | 短い名前                      | 言語     | Tags                                  | 導入時期 |
 |----------------------------------------------|---------------------------------|--------------|---------------------------------------|------------|
@@ -84,19 +84,19 @@ dotnet new -h|--help
 | Razor クラス ライブラリ                          | [razorclasslib](#razorclasslib) | [C#]         | Web/Razor/Library/Razor Class Library | 2.1        |
 | ASP.NET Core Web API                         | [webapi](#webapi)               | [C#], F#     | Web/WebAPI                            | 1        |
 | ASP.NET Core gRPC サービス                    | [grpc](#web-others)             | [C#]         | Web/gRPC                              | 3.0        |
-| プロトコル バッファー ファイル                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 | dotnet gitignore ファイル                        | `gitignore`                     |              | 構成                                | 3.0        |
 | global.json file                             | [globaljson](#globaljson)       |              | 構成                                | 2.0        |
 | NuGet 構成                                 | `nugetconfig`                   |              | 構成                                | 1        |
 | dotnet ローカル ツール マニフェスト ファイル              | `tool-manifest`                 |              | 構成                                | 3.0        |
 | Web 構成                                   | `webconfig`                     |              | 構成                                | 1        |
 | ソリューション ファイル                                | `sln`                           |              | ソリューション                              | 1        |
+| プロトコル バッファー ファイル                         | [proto](#namespace)             |              | Web/gRPC                              | 3.0        |
 
 ## <a name="options"></a>オプション
 
 - **`--dry-run`**
 
-  指定されたコマンドが実行された場合に起きることの概要が表示されます。 .NET Core 2.2 SDK 以降で利用できます。
+  指定されたコマンドが実行されてテンプレートが作成された場合に起きることの概要が表示されます。 .NET Core 2.2 SDK 以降で利用できます。
 
 - **`--force`**
 
@@ -507,7 +507,7 @@ dotnet new -h|--help
 
 - **`-rrc|--razor-runtime-compilation`**
 
-  デバッグ ビルドで [Razor ランタイム コンパイル](/aspnet/core/mvc/views/view-compilation#runtime-compilation)を使用するようにプロジェクトが構成されているかどうかを判断します。 .NET Core 3.1 SDK 以降で利用できるオプションです。
+  デバッグ ビルドで [Razor ランタイム コンパイル](/aspnet/core/mvc/views/view-compilation#runtime-compilation)を使用するようにプロジェクトが構成されているかどうかを判断します。 .NET Core 3.1.201 SDK 以降で利用できるオプションです。
 
 ***
 

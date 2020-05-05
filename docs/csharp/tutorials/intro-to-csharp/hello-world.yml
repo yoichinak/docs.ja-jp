@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 6e3742991820a8805b3c9b57767079940899d8fc
-  ms.sourcegitcommit: 2514f4e3655081dcfe1b22470c0c28500f952c42
+  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
+  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/18/2020
-  ms.locfileid: "79507010"
+  ms.lasthandoff: 04/30/2020
+  ms.locfileid: "82595911"
 items:
 - durationInMinutes: 1
   content: >
@@ -34,7 +34,7 @@ items:
     ```
 
 
-    おめでとうございます! 最初の C# プログラムを実行しました。 これは "Hello World!" というメッセージを出力する単純なプログラムです。 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用してこのメッセージを出力しました。 `Console` は、コンソール ウィンドウを表す型です。 `WriteLine` は、そのテキスト コンソールに 1 行のテキストを出力する `Console` 型の 1 つのメソッドです。
+    おめでとうございます!  最初の C# プログラムを実行しました。 これは "Hello World!" というメッセージを出力する単純なプログラムです。 <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドを使用してこのメッセージを出力しました。 `Console` は、コンソール ウィンドウを表す型です。 `WriteLine` は、そのテキスト コンソールに 1 行のテキストを出力する `Console` 型の 1 つのメソッドです。
 
 
     次に進んで、さらに詳しく見てみましょう。 このレッスンの残りの部分では、C# においてテキストを表す `string` 型の機能を確認します。 `Console` 型と同じように、`string` 型にもメソッドがあります。 `string` メソッドはテキストを処理します。
@@ -197,6 +197,9 @@ items:
     Console.WriteLine($"[{trimmedGreeting}]");
 
     ```
+
+
+    角括弧の `[` と `]` により、`Trim`、`TrimStart`、`TrimEnd` メソッドですることを目で確認できます。 この括弧により、空白の始まりと終わりが示されます。
 
 
     このサンプルでは、文字列を処理するための重要な概念のいくつかを説明しています。 文字列を操作するメソッドは、定位置に変更を加えるのではなく、新しい文字列オブジェクトを返します。 `Trim` メソッドのいずれかに対する各呼び出しは新しい文字列を返すが元のメッセージを変更しない、ということが確認できます。

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d5b642e-7ef2-428b-a5ae-509c35ed461a
 topic_type:
 - apiref
-ms.openlocfilehash: 8ce48b63a92e84ce92da0dcf35a6242744c1a8c3
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 18a5e337b6026a20a95b1c29f3d7bda5187efc66
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76778420"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795868"
 ---
 # <a name="cordebugintercept-enumeration"></a>CorDebugIntercept 列挙型
 インターセプト (ステップ イン) できるコードの型を示します。  
@@ -47,21 +47,21 @@ typedef enum CorDebugIntercept {
 |`INTERCEPT_EXCEPTION_FILTER`|例外フィルターをインターセプトできます。|  
 |`INTERCEPT_SECURITY`|セキュリティを適用するコードをインターセプトできます。|  
 |`INTERCEPT_CONTEXT_POLICY`|コンテキスト ポリシーをインターセプトできます。|  
-|`INTERCEPT_INTERCEPTION`|使用しません。|  
+|`INTERCEPT_INTERCEPTION`|使用されていません。|  
 |`INTERCEPT_ALL`|すべてのコードをインターセプトできます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  インターセプトできるコードの型を確立するには、 [ICorDebugStepper:: SetInterceptMask](icordebugstepper-setinterceptmask-method.md)メソッドを使用します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](debugging-enumerations.md)
+- [列挙体のデバッグ](debugging-enumerations.md)
