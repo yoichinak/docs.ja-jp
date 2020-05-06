@@ -4,12 +4,12 @@ ms.date: 06/25/2019
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: 84131bc503a106961419a27fc4e3e0f2d82306a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ed18c42cd28412a967c94a65c2a92b0b75097b52
+ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78846234"
+ms.lasthandoff: 04/28/2020
+ms.locfileid: "82199730"
 ---
 # <a name="new-operator-c-reference"></a>new 演算子 (C# リファレンス)
 
@@ -19,7 +19,7 @@ ms.locfileid: "78846234"
 
 ## <a name="constructor-invocation"></a>コンストラクターの呼び出し
 
-型の新しいインスタンスを作成するには、通常は [ 演算子を使用して、その型の](../../programming-guide/classes-and-structs/constructors.md)コンストラクター`new`の 1 つを呼び出します。
+型の新しいインスタンスを作成するには、通常は `new` 演算子を使用して、その型の[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)の 1 つを呼び出します。
 
 [!code-csharp-interactive[invoke constructor](snippets/NewOperator.cs#Constructor)]
 
@@ -57,9 +57,9 @@ ms.locfileid: "78846234"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md#the-new-operator)の [new 演算子](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の [new 演算子](~/_csharplang/spec/expressions.md#the-new-operator)に関するセクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)

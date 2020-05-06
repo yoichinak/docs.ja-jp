@@ -2,13 +2,13 @@
 title: パッケージ、メタパッケージ、フレームワーク - .NET Core
 description: パッケージ、メタパッケージ、フレームワークの用語を説明します。
 author: richlander
-ms.date: 06/20/2016
-ms.openlocfilehash: 657519edf1c0860ee3222c71ce85723e19029a9d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/29/2020
+ms.openlocfilehash: a6575226feb71b96f1fe5070406c118081a8cbf0
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397933"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595586"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>パッケージ、メタパッケージ、フレームワーク
 
@@ -55,7 +55,7 @@ ms.locfileid: "79397933"
 
 メタパッケージは、統合して意味をなすパッケージ セットを記述するための NuGet パッケージの規則です。 メタパッケージでは、このパッケージのセットを表すために、それらを依存関係にします。 メタパッケージを使うと、必要に応じて、フレームワークを指定して、パッケージのセットのフレームワークを確立することができます。
 
-.NET Core ツールの以前のバージョンは (project.json ツールと csproj-based ツールの両方)、既定では、フレームワークとメタパッケージの両方を指定していました。 ただし、現時点では、各メタパッケージがターゲット フレームワークに関連付けられるように、ターゲット フレームワークによってメタパッケージが暗黙的に参照されます。 たとえば、`netstandard1.6` フレームワークは NetStandard.Library バージョン 1.6.0 メタパッケージを参照します。 同様に、`netcoreapp2.1` フレームワークは Microsoft.NETCore.App バージョン 2.1.0 メタパッケージを参照します。 詳細については、「[Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)」 (.NET Core SDK のメタパッケージの暗黙的パッケージ参照) を参照してください。
+.NET Core ツールの以前のバージョンは (*project.json* ツールと *\*csproj* based ツールの両方)、既定では、フレームワークとメタパッケージの両方を指定していました。 ただし、現時点では、各メタパッケージがターゲット フレームワークに関連付けられるように、ターゲット フレームワークによってメタパッケージが暗黙的に参照されます。 たとえば、`netstandard1.6` フレームワークは NETStandard.Library バージョン 1.6.0 メタパッケージを参照します。 同様に、`netcoreapp2.1` フレームワークは Microsoft.NETCore.App バージョン 2.1.0 メタパッケージを参照します。 詳細については、「[Implicit metapackage package reference in the .NET Core SDK](https://github.com/dotnet/core/blob/master/release-notes/1.0/sdk/1.0-rc3-implicit-package-refs.md)」 (.NET Core SDK のメタパッケージの暗黙的パッケージ参照) を参照してください。
 
 フレームワークをターゲットにし、メタパッケージを暗黙的に参照することは、各依存パッケージの参照を 1 つのジェスチャとして追加することを実質的に意味します。 これらのパッケージのライブラリはすべて、IntelliSense (または同様のエクスペリエンス) とアプリの公開で利用できます。
 
@@ -120,7 +120,7 @@ ms.locfileid: "79397933"
 </Project>
 ```
 
-ただし、プロジェクト ファイルのフレームワーク参照とメタパッケージ参照が一致する必要はありません。プロジェクト ファイルの `<NetStandardImplicitPackageVersion>` 要素を利用し、メタパッケージ バージョンより下のフレームワーク バージョンを指定できます。 たとえば、次のプロジェクト ファイルが有効です。
+メタパッケージ バージョンを暗黙的に指定する `<NetStandardImplicitPackageVersion>` 要素をプロジェクト ファイルに追加することで、メタパッケージ バージョンより下のフレームワーク バージョンを指定できます。 `<NetStandardImplicitPackageVersion>` 要素は、.NET Core と .NET Standard を対象とする場合にのみ適用されます。 たとえば、次のプロジェクト ファイルが有効です。
 
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
@@ -133,7 +133,7 @@ ms.locfileid: "79397933"
 
 `netstandard1.3` を対象とするのに `NETStandard.Library` のバージョン 1.6.0 を使用するのは、奇妙に思えるかもしれません。 これは、メタパッケージでは古い `netstandard` バージョンのサポートが継続されていることから、使用例として有効です。 メタパッケージのバージョン 1.6.0 が標準とされている状況で、これをすべてのライブラリ (`netstandard` の各種バージョンを対象とする) で使用する場合が考えられます。 この方法を使用した場合、`NETStandard.Library` 1.6.0 を復元する必要があるだけで、それより前のバージョンの復元は必要ありません。
 
-逆は無効になります (`netstandard1.6` を対象とするが、`NETStandard.Library` のバージョン 1.3.0 を使用する)。 上位フレームワークと下位メタパッケージの組み合わせを対象とすることはできません。下位バージョンのメタパッケージはその上位フレームワークに対して資産を公開しないことが理由です。 メタパッケージのバージョン管理スキームは、メタパッケージが、記述したフレームワークの最上位バージョンと一致することをアサートします。 バージョン管理スキームにより、`NETStandard.Library` 資産が含まれている場合、`netstandard1.6` の最初のバージョンは v1.6.0 となります。 (前の例と対称の場合、ここでは v 1.3.0 が使用されますが、実際には存在しません)。
+逆は無効になります (`netstandard1.6` を対象とするが、`NETStandard.Library` のバージョン 1.3.0 を使用する)。 上位フレームワークと下位メタパッケージの組み合わせを対象とすることはできません。下位バージョンのメタパッケージはその上位フレームワークに対して資産を公開しないことが理由です。 メタパッケージのバージョン管理スキームは、メタパッケージが、記述したフレームワークの最上位バージョンと一致することをアサートします。 バージョン管理スキームにより、`netstandard1.6` 資産が含まれている場合、`NETStandard.Library` の最初のバージョンは v1.6.0 となります。 (前の例と対称の場合、ここでは v 1.3.0 が使用されますが、実際には存在しません)。
 
 ### <a name="net-core-application"></a>.NET Core アプリケーション
 

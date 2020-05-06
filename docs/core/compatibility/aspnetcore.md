@@ -2,15 +2,15 @@
 title: ASP.NET Core の破壊的変更
 titleSuffix: ''
 description: ASP.NET Core における破壊的変更をリストアップします。
-ms.date: 03/27/2020
+ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 95057425614d7c717154ecfb687db2b9a6ca4a18
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391248"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728339"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -31,14 +31,17 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [キャッシュ:Microsoft.Extensions.Caching.SqlServer で新しい SqlClient パッケージを使用](#caching-microsoftextensionscachingsqlserver-uses-new-sqlclient-package)
 - [キャッシュ:ResponseCaching の "pubternal" 型を internal に変更](#caching-responsecaching-pubternal-types-changed-to-internal)
 - [データ保護:DataProtection.AzureStorage で新しい Azure Storage API を使用](#data-protection-dataprotectionazurestorage-uses-new-azure-storage-apis)
+- [ 拡張機能:一部の NuGet パッケージに影響するパッケージ参照の変更](#extensions-package-reference-changes-affecting-some-nuget-packages)
 - [ホスティング:Windows ホスティング バンドルから AspNetCoreModule V1 を削除](#hosting-aspnetcoremodule-v1-removed-from-windows-hosting-bundle)
 - [ホスティング:汎用ホストによる Startup コンストラクター挿入の制限](#hosting-generic-host-restricts-startup-constructor-injection)
 - [ホスティング:IIS アウトプロセス アプリ用に HTTPS リダイレクトを有効化](#hosting-https-redirection-enabled-for-iis-out-of-process-apps)
 - [ホスティング:IHostingEnvironment と IApplicationLifetime の型を置き換え](#hosting-ihostingenvironment-and-iapplicationlifetime-types-marked-obsolete-and-replaced)
 - [ホスティング:WebHostBuilder 依存関係から ObjectPoolProvider を削除](#hosting-objectpoolprovider-removed-from-webhostbuilder-dependencies)
+- [HTTP:Kestrel および IIS BadHttpRequestException の種類を古い形式としてマークし、置換](#http-kestrel-and-iis-badhttprequestexception-types-marked-obsolete-and-replaced)
 - [HTTP:ブラウザー SameSite の変更による認証への影響](#http-browser-samesite-changes-impact-authentication)
 - [HTTP:DefaultHttpContext の機能拡張の削除](#http-defaulthttpcontext-extensibility-removed)
 - [HTTP:HeaderNames フィールドを静的読み取り専用に変更](#http-headernames-constants-changed-to-static-readonly)
+- [HTTP:IHttpClientFactory ログの整数状態コードによって作成された HttpClient インスタンス](#http-httpclient-instances-created-by-ihttpclientfactory-log-integer-status-codes)
 - [HTTP:応答本文のインフラストラクチャの変更](#http-response-body-infrastructure-changes)
 - [HTTP:一部の cookie SameSite の既定値の変更](#http-some-cookie-samesite-defaults-changed-to-none)
 - [HTTP:同期 IO を既定で無効化](#http-synchronous-io-disabled-in-all-servers)
@@ -52,6 +55,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [Kestrel:要求トレーラー ヘッダーを新しいコレクションに移動](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel:トランスポート抽象化レイヤーの変更](#kestrel-transport-abstractions-removed-and-made-public)
 - [ローカリゼーション:API を古いとしてマーク](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [ローカリゼーション:ResourceManagerWithCultureStringLocalizer クラスと WithCulture インターフェイス メンバーを削除](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [ログ:internal になった DebugLogger クラス](#logging-debuglogger-class-made-internal)
 - [MVC:コントローラー アクション Async サフィックスを削除](#mvc-async-suffix-trimmed-from-controller-action-names)
 - [MVC:JsonResult を Microsoft.AspNetCore.Mvc.Core に移動](#mvc-jsonresult-moved-to-microsoftaspnetcoremvccore)
@@ -67,6 +71,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [SignalR:HubConnectionContext コンストラクターを変更](#signalr-hubconnectioncontext-constructors-changed)
 - [SignalR:JavaScript クライアント パッケージ名を変更](#signalr-javascript-client-package-name-changed)
 - [SignalR:MessagePack ハブ プロトコルが MessagePack 2.x パッケージに移動された](#signalr-messagepack-hub-protocol-moved-to-messagepack-2x-package)
+- [SignalR:MessagePack ハブ プロトコル オプションの種類を変更](#signalr-messagepack-hub-protocol-options-type-changed)
 - [SignalR:古い API](#signalr-usesignalr-and-useconnections-methods-marked-obsolete)
 - [SignalR:UseSignalR メソッドと UseConnections メソッドが削除された](#signalr-usesignalr-and-useconnections-methods-removed)
 - [SPA:SpaServices および NodeServices コンソール ロガー フォールバックの既定値を変更](#spas-spaservices-and-nodeservices-no-longer-fall-back-to-console-logger)
@@ -80,7 +85,27 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 
 ***
 
+[!INCLUDE[Extensions: Package reference changes](~/includes/core-changes/aspnetcore/5.0/extensions-package-reference-changes.md)]
+
+***
+
+[!INCLUDE[HTTP: HttpClient instances created by IHttpClientFactory log integer status codes](~/includes/core-changes/aspnetcore/5.0/http-httpclient-instances-log-integer-status-codes.md)]
+
+***
+
+[!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE[Localization: ResourceManagerWithCultureStringLocalizer class and WithCulture interface member removed](~/includes/core-changes/aspnetcore/5.0/localization-members-removed.md)]
+
+***
+
 [!INCLUDE[SignalR: MessagePack Hub Protocol moved to MessagePack 2.x package](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-package.md)]
+
+***
+
+[!INCLUDE[SignalR: MessagePack Hub Protocol options type changed](~/includes/core-changes/aspnetcore/5.0/signalr-messagepack-hub-protocol-options-changed.md)]
 
 ***
 

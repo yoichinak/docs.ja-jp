@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fe248069-b33c-48e1-a777-06ac9b239c54
 topic_type:
 - apiref
-ms.openlocfilehash: 92aee981aca3bac32c0ef264799e486315ca5103
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 288d7bfdf18be5cef032227c537032966fa68df4
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789252"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795704"
 ---
 # <a name="cordebugstepreason-enumeration"></a>CorDebugStepReason 列挙型
 個々のステップの結果を示します。  
@@ -50,16 +50,16 @@ typedef enum CorDebugStepReason {
 |`STEP_INTERCEPT`|コントロールがインターセプターに渡されました。|  
 |`STEP_EXIT`|ステップが完了する前にスレッドが終了しました。|  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [StepComplete メソッド](icordebugmanagedcallback-stepcomplete-method.md)
-- [列挙型のデバッグ](debugging-enumerations.md)
+- [列挙体のデバッグ](debugging-enumerations.md)

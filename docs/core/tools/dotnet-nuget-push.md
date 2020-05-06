@@ -3,18 +3,18 @@ title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 02/14/2020
-ms.openlocfilehash: 96f8d008c8306a0782d5149360a24bb4097a1ec4
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 8b0437d7f4ada2b56af50e30717d131668c21f7e
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463517"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728354"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet nuget push` - パッケージをサーバーにプッシュして発行します。
 
@@ -30,9 +30,11 @@ dotnet nuget push [<ROOT>] [-d|--disable-buffering] [--force-english-output]
 dotnet nuget push -h|--help
 ```
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
 
 `dotnet nuget push` コマンドは、パッケージをサーバーにプッシュして発行します。 プッシュ コマンドでは、システムの NuGet 構成ファイル、または構成ファイルのチェーンで検出されたサーバーと資格情報の詳細を使用します。 構成ファイルの詳細については、「[Configuring NuGet Behavior](/nuget/consume-packages/configuring-nuget-behavior)」 (NuGet 動作を構成する) をご覧ください。 NuGet の既定の構成は、 *%AppData%\NuGet\NuGet.config* (Windows) または *$HOME/.local/share* (Linux/macOS) を読み込み、次にドライブのルートから開始され、現在のディレクトリで終わる、任意の *nuget.config* または *.nuget\nuget.config* を読み込むことによって取得されます。
+
+このコマンドにより、既存のパッケージがプッシュされます。 パッケージは作成されません。 パッケージを作成するには、[`dotnet pack`](dotnet-pack.md) を使用します。
 
 ## <a name="arguments"></a>引数
 
@@ -90,7 +92,7 @@ dotnet nuget push -h|--help
 
   秒単位でサーバーにプッシュする場合のタイムアウトを指定します。 既定値は 300 秒 (5 分) です。 0 (0 秒) を指定すると、既定値が適用されます。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 - API キーを指定して、既定のプッシュ ソースに *foo.nupkg* をプッシュします。
 
@@ -104,7 +106,7 @@ dotnet nuget push -h|--help
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://api.nuget.org/v3/index.json
   ```
   
-  * API キーを指定して、カスタム プッシュ ソース *に*foo.nupkg`https://customsource` をプッシュします。
+  * API キーを指定して、カスタム プッシュ ソース `https://customsource` に *foo.nupkg* をプッシュします。
 
   ```dotnetcli
   dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/
@@ -143,3 +145,12 @@ dotnet nuget push -h|--help
   ```dotnetcli
   dotnet nuget push *.nupkg --skip-duplicate
   ```
+
+- ローカル フィード ディレクトリに現在のディレクトリ内のすべての *.nupkg* ファイルをプッシュします。
+
+  ```dotnetcli
+  dotnet nuget push *.nupkg -s c:\mydir
+  ```
+
+  このコマンドでは、パッケージが階層フォルダー構造に格納されないため、パフォーマンスを最適化することをお勧めします。 詳細については、[ローカル フィード](//nuget/hosting-packages/local-feeds)に関するページをご覧ください。
+  
