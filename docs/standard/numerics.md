@@ -11,12 +11,12 @@ helpviewer_keywords:
 - numerics
 - BigInteger
 ms.assetid: dfebc18e-acde-4510-9fa7-9a0f4aa3bd11
-ms.openlocfilehash: ec5d4c088d3a954a4670891e3bb115c73e6cfdcf
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 3b95a322377e82249a0375af589df74c658fcbf4
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242765"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507417"
 ---
 # <a name="numerics-in-net"></a>.NET における数値
 
@@ -92,6 +92,8 @@ ms.locfileid: "81242765"
   > <xref:System.Numerics.Vector%601> 型は .NET Framework に含まれません。 この型にアクセスするには、[System.Numerics.Vectors](https://www.nuget.org/packages/System.Numerics.Vectors) NuGet パッケージをインストールする必要があります。
   
 SIMD 対応の型は、それが SIMD 非対応のハードウェアや JIT コンパイラと共に使用できるように実装されます。 SIMD 命令を活用するために、64 ビット アプリは RyuJIT コンパイラを使用するランタイムで実行する必要があります。このコンパイラは .NET Core と 4.6 以降の .NET Framework に含まれています。 64 ビット プロセッサを対象にするとき、SIMD サポートが追加されます。
+
+詳細については、[SIMD アクセラレータの数値型の使用](simd.md)に関するページを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

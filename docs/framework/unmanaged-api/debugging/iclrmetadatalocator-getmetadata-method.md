@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 704a8893-ac56-43b4-90ea-715f38ccb40e
 topic_type:
 - apiref
-ms.openlocfilehash: 66b3934d000b4f000c368acb1f57c8fc82a5c453
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ad309290319396ff4e74e30d572effeffe802d1d
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793624"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859881"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata メソッド
 イメージのメタデータを取得するために、共通言語ランタイム (CLR) データアクセスサービスによって呼び出されます。  
@@ -70,17 +70,17 @@ HRESULT GetMetadata(
  `dataSize`  
  入出力返されるメタデータのサイズ。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

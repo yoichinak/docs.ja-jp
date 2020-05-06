@@ -4,12 +4,12 @@ description: .NET Portability Analyzer ツールを使って、さまざまな .
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 397d9f08a0dd28f80d653ac5044d6acfa2418727
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
+ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344307"
+ms.lasthandoff: 05/02/2020
+ms.locfileid: "82728439"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -27,7 +27,7 @@ ms.locfileid: "80344307"
 
 ## <a name="how-to-use-the-net-portability-analyzer"></a>.NET Portability Analyzer の使用方法
 
-Visual Studio で .NET Portability Analyzer を使用するには、[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) から拡張機能をダウンロードし、インストールする必要があります。 Visual Studio 2017 以降のバージョンで機能します。 Visual Studio で構成するには、 **[Analyze]\(分析\)**  >  **[Portability Analyzer Settings]\(Portability Analyzer の設定\)** でターゲット プラットフォームを選択します。ターゲット プラットフォームは、現在のアセンブリがビルドされているプラットフォーム/バージョンと比較して移植性のギャップを評価する .NET プラットフォーム/バージョンです。
+Visual Studio で .NET Portability Analyzer を使用するには、[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer) から拡張機能をダウンロードし、インストールする必要があります。 Visual Studio 2017 以降のバージョンで機能します。 Visual Studio で構成するには、 **[Analyze]\(分析\)**  >  **[Portability Analyzer Settings]\(Portability Analyzer の設定\)** でターゲット プラットフォームを選択します。ターゲット プラットフォームとは、アセンブリが現在ビルドされているプラットフォーム/バージョンと比較をする、移植における違いを評価する .NET プラットフォーム/バージョンです。
 
 ![移植性アナライザーのスクリーンショット。](./media/portability-analyzer/portability-screenshot.png)
 
@@ -67,12 +67,12 @@ Visual Studio で分析を実行すると、.NET 移植性レポート ファイ
 - [Target member]\(ターゲットのメンバー\): メンバーがターゲット プラットフォームにありません
 - [Assembly name]\(アセンブリ名\): ない API が存在する .NET Framework アセンブリです。
 - 選択されているターゲット プラットフォームごとに 1 つの列 (".NET Core" など): [Not supported]\(サポートされていません\) という値は、その API がこのターゲット プラットフォームでサポートされていないことを意味します。
-- [Recommended Changes]\(推奨される変更\): それに変更することが推奨される API またはテクノロジです。 現時点では、このフィールドは、多くの API で空または期限切れです。 API の数が多いので、最新の状態に保つのは大変な作業です。 お客様に役に立つ情報を提供する代わりのソリューションを探しています。
+- [Recommended Changes]\(推奨される変更\): それに変更することが推奨される API またはテクノロジです。 現時点では、このフィールドは空であるか、多くの API に対応しなくなっています。 API の数は多く、最新の状態に保つために尽力しているところです。 お客様に役に立つ情報を提供する代わりの解決策を検討中です。
 
 #### <a name="missing-assemblies"></a>足りないアセンブリ
 
 ![足りないアセンブリのスクリーンショット。](./media/portability-analyzer/api-catalog-missing-assemblies.png)
 
-レポートには [Missing Assemblies]\(足りないアセンブリ\) セクションが含まれる場合があります。 そこに示されているアセンブリの一覧は、分析されたアセンブリによって参照されていますが、分析されませんでした。 自分が所有しているアセンブリの場合は、API Portability Analyzer の実行にそれを含めて、そのアセンブリに関する API レベルの詳細な移植性レポートを取得できます。 サード パーティのライブラリである場合は、ターゲット プラットフォームをサポートしている新しいバージョンがあるかどうかを調べます。 ある場合は、新しいバージョンへの移行を検討します。 最終的に、この一覧には、アプリが依存していて、ターゲット プラットフォームをサポートするバージョンがあることが確認された、すべてのサード パーティ アセンブリが含まれることが期待されます。
+レポートには [Missing Assemblies]\(足りないアセンブリ\) セクションが含まれる場合があります。 このセクションには、分析されたアセンブリによって参照されている、分析されていないアセンブリの一覧が示されます。 自分が所有しているアセンブリの場合は、API Portability Analyzer の実行にそれを含めて、そのアセンブリに関する API レベルの詳細な移植性レポートを取得できます。 それがサードパーティ製のライブラリである場合は、ご自分のターゲット プラットフォームをサポートする新しいバージョンがあるかどうかを確認し、その新しいバージョンに移行することを検討してください。 この一覧には最終的に、アプリが依存し、ターゲット プラットフォームをサポートするバージョンのすべてのサード パーティ アセンブリが含まれるようにします。
 
 .NET Portability Analyzer の詳細については、[GitHub ドキュメント](https://github.com/Microsoft/dotnet-apiport#documentation)にアクセスし、Channel 9 動画の「[A Brief Look at the .NET Portability Analyzer](https://channel9.msdn.com/Blogs/Seth-Juarez/A-Brief-Look-at-the-NET-Portability-Analyzer)」 (.NET Portability Analyzer の概要) をご覧ください。

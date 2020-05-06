@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 1e3a62de3259c012438c64ece26e696682ec96e6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e460264e2393858c028ba51aec4a4f2c01649994
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76789203"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860827"
 ---
 # <a name="dacpgetmoduleaddress-structure"></a>DacpGetModuleAddress 構造体
 
@@ -45,19 +45,19 @@ struct DacpGetModuleAddress
 
 ## <a name="methods"></a>メソッド
 
-| メソッド                                                                                               | 説明                                                                    |
+| Method                                                                                               | 説明                                                                    |
 | ---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------ |
-| [要求](dacpgetmoduleaddress-request-method.md) | 指定されたランタイム構造体を構造体に設定する要求を実行します。 |
+| [Request](dacpgetmoduleaddress-request-method.md) | 指定されたランタイム構造体を構造体に設定する要求を実行します。 |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、前に示したように構造体を定義します。 `CLRDATA_ADDRESS` は、64ビットの符号なし整数です。
+この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するに`CLRDATA_ADDRESS`は、上で指定したように構造体を定義します。は、64ビットの符号なし整数です。
 
-## <a name="requirements"></a>要件
-**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
 **ヘッダー:** 存在  
 **ライブラリ:** 存在  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 

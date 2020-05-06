@@ -1,5 +1,5 @@
 ---
-title: CorGCReferenceType 列挙体
+title: CorGCReferenceType 列挙型
 ms.date: 03/30/2017
 api_name:
 - CorGCReferenceType
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: d9f16439-5a36-4474-8ffd-4f0b2c2bb686
 topic_type:
 - apiref
-ms.openlocfilehash: 17d47b6242bb12ff5ca3cfbde3e4ec183b9c19fc
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d156f103c3812c91da380e722a1c6c95d621df4c
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793874"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860918"
 ---
-# <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 列挙体
+# <a name="corgcreferencetype-enumeration"></a>CorGCReferenceType 列挙型
 ガベージ コレクトされる必要のあるオブジェクトのソースを識別します。  
   
 ## <a name="syntax"></a>構文  
@@ -64,22 +64,22 @@ typedef enum {
 |`CorHandleWeakOnly`|ハンドルテーブルからの弱い参照だけを返します。 この値は、 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)メソッドによってのみ使用されます。|  
 |`CorHandleAll`|Handle テーブルからすべての参照を返します。 この値は、 [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)メソッドによってのみ使用されます。|  
   
-## <a name="remarks"></a>コメント  
- `CorGCReferenceType` 列挙体は次のように使用されます。  
+## <a name="remarks"></a>解説  
+ 列挙`CorGCReferenceType`体は次のように使用されます。  
   
-- [COR_GC_REFERENCE](cor-gc-reference-structure.md)構造体の `type` フィールドの値として、参照またはハンドルのソースを示します。  
+- `type` [COR_GC_REFERENCE](cor-gc-reference-structure.md)構造体のフィールドの値として、参照またはハンドルのソースを示します。  
   
-- [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)メソッドの `types` 引数として、列挙体に含めるハンドルの種類を指定します。  
+- `types` [ICorDebugProcess5:: EnumerateHandles](icordebugprocess5-enumeratehandles-method.md)メソッドの引数として、列挙体に含めるハンドルの種類を指定します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のデバッグ](debugging-enumerations.md)
+- [列挙体のデバッグ](debugging-enumerations.md)

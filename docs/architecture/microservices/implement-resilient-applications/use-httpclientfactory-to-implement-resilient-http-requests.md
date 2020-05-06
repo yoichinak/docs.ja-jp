@@ -2,12 +2,12 @@
 title: IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 description: .NET Core 2.1 以降で使用できる IHttpClientFactory を使用して、`HttpClient` インスタンスを作成し、それをアプリケーションで簡単に使用できるようにする方法について説明します。
 ms.date: 03/03/2020
-ms.openlocfilehash: 088fb6c7e10ad656247ee4065da5c13d383b2cf7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ade26208a931faa456c8e267def2caef7a3f32de
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78847220"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507300"
 ---
 # <a name="use-ihttpclientfactory-to-implement-resilient-http-requests"></a>IHttpClientFactory を使用して回復力の高い HTTP 要求を実装する
 
@@ -21,7 +21,7 @@ ms.locfileid: "78847220"
 
 そのため、`HttpClient` は一度インスタンス化されたら、アプリケーションの有効期間にわたって再利用されることを目的としています。 すべての要求に対して `HttpClient` クラスをインスタンス化すると、高負荷の下で使用可能なソケットの数が枯渇してしまいます。 この問題により、`SocketException` エラーが発生します。 この問題を解決するために可能なアプローチは、HttpClient クライアントの使用に関するこの [Microsoft の記事](../../../csharp/tutorials/console-webapiclient.md)で説明されているように、`HttpClient` オブジェクトをシングルトンまたは静的として作成することに基づいています。 これは、1 日に数回実行される有効期間の短いコンソールアプリまたは類似のものに適したソリューションとなります。
 
-開発者が遭遇するもう 1 つの問題は、長時間実行されるプロセスで `HttpClient` の共有インスタンスを使用するタイミングです。 HttpClient がシングルトンまたは静的オブジェクトとしてインスタンス化される状況では、dotnet/corefx GitHub リポジトリのこちらの[問題](https://github.com/dotnet/corefx/issues/11224)で説明されているように、DNS の変更を処理できません。
+開発者が遭遇するもう 1 つの問題は、長時間実行されるプロセスで `HttpClient` の共有インスタンスを使用するタイミングです。 HttpClient がシングルトンまたは静的オブジェクトとしてインスタンス化される状況では、dotnet/runtime GitHub リポジトリのこちらの[問題](https://github.com/dotnet/runtime/issues/18348)で説明されているように、DNS の変更を処理できません。
 
 ただし、この問題は実際には `HttpClient` にあるのではなく、[HttpClient の既定のコンストラクター](https://docs.microsoft.com/dotnet/api/system.net.http.httpclient.-ctor?view=netcore-3.1#System_Net_Http_HttpClient__ctor)にあります。理由として、それによって、前述の "*ソケット枯渇*" および DNS 変更の問題を抱える、<xref:System.Net.Http.HttpMessageHandler> の新しい具象インスタンスが作成されるということが挙げられます。
 
