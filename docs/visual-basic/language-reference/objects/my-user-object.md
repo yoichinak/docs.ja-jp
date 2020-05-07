@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: caa7462e-2149-4bdb-8850-802b80b93cbf
 ms.openlocfilehash: 26ecb4a29080a8691217e1093805a7b40f63f022
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350647"
@@ -15,13 +15,13 @@ ms.locfileid: "74350647"
 # <a name="myuser-object"></a>My.User オブジェクト
 現在のユーザーに関する情報へのアクセスを提供します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `My.User` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.ApplicationServices.User?displayProperty=nameWithType>」をご覧ください。  
   
- 詳細については、「[ユーザーデータへのアクセス](../../../visual-basic/developing-apps/programming/accessing-user-data.md)」を参照してください。  
+ 詳細については、「[ユーザー データへのアクセス](../../../visual-basic/developing-apps/programming/accessing-user-data.md)」を参照してください。  
   
-## <a name="requirements"></a>要件  
- **アセンブリ:** Visual Basic ランタイムライブラリ (Microsoft.VisualBasic.dll)  
+## <a name="requirements"></a>必要条件  
+ **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
 

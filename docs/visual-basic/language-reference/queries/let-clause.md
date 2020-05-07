@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 981aa516-16eb-4c53-b1f1-5aa3e82f316e
 ms.openlocfilehash: 63eaf97016db259870eb77199651ecbdc5f809c7
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350435"
 ---
 # <a name="let-clause-visual-basic"></a>Let 句 (Visual Basic)
-値を計算し、クエリ内の新しい変数に代入します。  
+値を計算し、その値をクエリ内の新しい変数に代入します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -28,16 +28,16 @@ Let variable = expression [, ...]
   
 |用語|定義|  
 |---|---|  
-|`variable`|必須。 指定された式の結果を参照するために使用できるエイリアス。|  
-|`expression`|必須。 評価され、指定された変数に割り当てられる式。|  
+|`variable`|必須です。 指定された式の結果を参照するために使用できる別名。|  
+|`expression`|必須です。 評価され、指定された変数に割り当てられる式。|  
   
-## <a name="remarks"></a>コメント  
- `Let` 句を使用すると、各クエリ結果の値を計算し、別名を使用してその値を参照できます。 別名は、`Where` 句などの他の句で使用できます。 `Let` 句を使用すると、クエリに含まれる式の句の別名を指定し、expression 句が使用されるたびに別名を置き換えることができるため、読みやすいクエリステートメントを作成できます。  
+## <a name="remarks"></a>Remarks  
+ `Let` 句を使用すると、各クエリ結果の値を計算し、別名を使用してその値を参照できます。 別名は、`Where` 句などの他の句で使用できます。 `Let` 句を使用すると、クエリに含まれる式の句の別名を指定し、その式の句が使用されるたびに別名を置き換えることができるため、読みやすいクエリ ステートメントを作成できます。  
   
- `Let` 句には、任意の数の `variable` と `expression` の割り当てを含めることができます。 各割り当てはコンマ (,) で区切ります。  
+ `Let` 句には、任意の数の `variable` と `expression` の代入を含めることができます。 各代入はコンマ (,) で区切ります。  
   
 ## <a name="example"></a>例  
- 次のコード例では、`Let` 句を使用して、製品に対して10% の割引を計算します。  
+ 次のコード例では、`Let` 句を使用して、製品に対して 10% の割引を計算します。  
   
  [!code-vb[VbSimpleQuerySamples#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#16)]  
   
