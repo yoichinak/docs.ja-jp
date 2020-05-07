@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: b9d8c3b5-3a2e-4225-95d4-dd052c4532c3
 topic_type:
 - apiref
-ms.openlocfilehash: 3777ad4b12c7d0593c095c470aba81088137a859
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5c0fb023dd355f3a9c1ed846913f86b354592ed5
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179176"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860611"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext メソッド
-ターゲット プロセス内の特定のスレッドの現在の実行コンテキストを取得します。 このメソッドは、共通言語ランタイムのデータ アクセス サービスによって呼び出されます。  
+ターゲットプロセス内の指定されたスレッドの現在の実行コンテキストを取得します。 このメソッドは、共通言語ランタイムのデータアクセスサービスによって呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +39,30 @@ HRESULT GetThreadContext (
   
 ## <a name="parameters"></a>パラメーター  
  `threadID`  
- [in]ターゲット プロセス内のスレッドのオペレーティング システム識別子。  
+ からターゲットプロセス内のスレッドのオペレーティングシステム識別子。  
   
  `contextFlags`  
- [in]コンテキストのどの部分を返すかを指定するフラグ。 実装は、少なくともコンテキストのこれらの部分を返します。  
+ からコンテキストのどの部分を返すかを指定するフラグ。 実装は、少なくともこれらのコンテキストの部分を返します。  
   
  `contextSize`  
- [in]コンテキストのサイズ。  
+ からコンテキストのサイズ。  
   
  `context`  
- [アウト]コンテキストを配置するバッファーへのポインター。  
+ 入出力コンテキストを配置するバッファーへのポインター。  
   
- バッファー内の`context`データは、Win32`CONTEXT`構造体の形式である必要があります。 コンテキストはプロセッサ固有のレジスタ データを指定するため、Win32`CONTEXT`構造体の定義はプロセッサのアーキテクチャによって異なります。 Win32`CONTEXT`構造体の定義については、WinNT.h ヘッダー ファイルを参照してください。  
+ `context`バッファー内のデータは、Win32 `CONTEXT`構造体の形式である必要があります。 コンテキストはプロセッサ固有のレジスタデータを指定するため、Win32 `CONTEXT`構造体の定義はプロセッサのアーキテクチャによって異なります。 Win32 `CONTEXT`構造体の定義については、winnt.h ヘッダーファイルを参照してください。  
   
 ## <a name="remarks"></a>解説  
  このメソッドは、デバッグ アプリケーションの作成者によって実装されます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** をします。  
+ **ヘッダー:** ClrData .idl, ClrData .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

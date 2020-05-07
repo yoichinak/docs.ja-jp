@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: cc54664ea8ad61005de3f3fae7407946d1c861b2
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: d623fe862eaf5902fd89d0e512dd07f73a03246f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76793842"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860816"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 構造体
 
@@ -61,7 +61,7 @@ struct DacpMethodDescData
 | `wSlotNumber`                | メソッドテーブル内のメソッドのスロット番号。                                                   |
 | `NativeCodeAddr`             | メソッドの初期ネイティブアドレス。                                                            |
 | `data`                       | ランタイムによって内部的に使用されるバッファーへのポインター。                                             |
-| `MethodDescPtr`              | ランタイム内の `MethodDesc` へのポインター。                                                     |
+| `MethodDescPtr`              | ランタイム内の`MethodDesc`へのポインター。                                                     |
 | `nativeCodeInfo`             | メソッドを追跡するためにランタイムによって内部的に使用されるバッファーへのポインター。                            |
 | `moduleInfo`                 | モジュール情報のランタイムによって内部的に使用されるバッファーへのポインター。                      |
 | `MDToken`                    | 指定したメソッドに関連付けられているトークン。                                                         |
@@ -73,18 +73,18 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | 要求されたネイティブアドレスの rejit 情報。                                             |
 | `cJittedRejitVersions`       | メソッドがインストルメンテーションによって rejitted された回数。                           |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 この構造体はランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 これを使用するには、前に示したように構造体を定義します。
 
-## <a name="requirements"></a>要件
-**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
 **ヘッダー:** 存在  
 **ライブラリ:** 存在  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
 - [デバッグ](index.md)
 - [デバッグ構造体](debugging-structures.md)
-- [共有のデータ型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [共有のデータ型](../common-data-types-unmanaged-api-reference.md)

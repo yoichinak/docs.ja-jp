@@ -16,15 +16,15 @@ helpviewer_keywords:
 ms.assetid: b259821d-4fa7-464d-85cf-304dfffc8089
 topic_type:
 - apiref
-ms.openlocfilehash: 2716adcc8c79c8003202561ea2011c2469a6bc5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 340d2de09562ea9b767203a7fa839cdc6b729b3b
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179227"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82860888"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 関数
-リモート プロセスでマネージ デバッグ セッションをインスタンス化するための機能を提供するデバッガー インターフェイス ([ICorDebug](icordebug-interface.md)) を作成します。  
+リモートプロセスでマネージデバッグセッションをインスタンス化する機能を提供するデバッガーインターフェイス ([ICorDebug](icordebug-interface.md)) を作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,7 +40,7 @@ HRESULT CordbCreateObject (
  [in] ターゲット プロセスのデバッガー バージョン。 リモート デバッグの場合、このパラメーターは CorDebugVersion_2_0 である必要があります。  
   
  `ppCordb`  
- [アウト][ICorDebug](icordebug-interface.md)インターフェイスにキャストされ、返されるオブジェクトへのポインターへのポインター。  
+ 入出力[ICorDebug](icordebug-interface.md)インターフェイスにキャストされて返されるオブジェクトへのポインターへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
@@ -56,13 +56,13 @@ HRESULT CordbCreateObject (
  その他のエラーが発生しました。  
   
 ## <a name="remarks"></a>解説  
- 返される[ICorDebug](icordebug-interface.md)インターフェイス`ppCordb`は、すべてのマネージ デバッグ サービスのトップレベルのデバッグ インターフェイスです。  
+ で[ICorDebug](icordebug-interface.md) `ppCordb`返される ICorDebug インターフェイスは、すべてのマネージデバッグサービスの最上位レベルのデバッグインターフェイスです。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** インターフェイスを使用します。  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86 .dll  
   
- **.NET フレームワークのバージョン:** 3.5 SP1
+ **.NET Framework のバージョン:** 3.5 SP1
