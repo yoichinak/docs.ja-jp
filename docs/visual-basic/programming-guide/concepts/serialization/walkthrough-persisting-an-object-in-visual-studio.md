@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: fbd342c929e8519571c0f6bb76d4091efcfe4476
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350395"
@@ -89,7 +89,7 @@ ms.locfileid: "74350395"
   
 6. **[参照の追加]** ダイアログ ボックスで、 **[プロジェクト]** タブをクリックし、LoanClass プロジェクトを選択します。  
   
-7. **[OK]** をクリックして、ダイアログ ボックスを閉じます。  
+7. **[OK]** をクリックしてダイアログ ボックスを閉じます。  
   
 8. デザイナーで、フォームに <xref:System.Windows.Forms.TextBox> コントロールを 4 つ追加します。  
   
@@ -218,4 +218,4 @@ ms.locfileid: "74350395"
 ## <a name="see-also"></a>関連項目
 
 - [シリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
-- [Visual Basic のプログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)

@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
 ms.openlocfilehash: 28f33c88f7aaaf51938a7d27fd2218a97b628acd
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74349275"
@@ -48,8 +48,8 @@ System.Console.WriteLine(info)
   
 - 遅延バインディングを実行するために、実行時に作成された型でメソッドにアクセスする。 「[型の動的な読み込みおよび使用](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)」を参照してください。  
   
-## <a name="related-sections"></a>関連セクション  
- 詳細:  
+## <a name="related-sections"></a>関連項目  
+ 詳細情報  
   
 - [リフレクション](../../../framework/reflection-and-codedom/reflection.md)  
   
@@ -61,7 +61,7 @@ System.Console.WriteLine(info)
   
 - [属性に格納されている情報の取得](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [Visual Basic のプログラミング ガイド](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../../../visual-basic/programming-guide/index.md)
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
