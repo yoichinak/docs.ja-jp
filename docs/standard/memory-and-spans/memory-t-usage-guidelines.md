@@ -4,12 +4,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: 0a614f628faa98be778c627573e4dddc462c9107
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b89969f212da6ac90d0fb0d1bf388626e136b92e
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121962"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158594"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> と Span\<T> の使用ガイドライン
 
@@ -23,7 +23,7 @@ ms.locfileid: "73121962"
 
 - **所有権**。 バッファー インスタンスの所有者は、バッファーが使用されなくなったときにバッファーを破棄することを含め、有効期間の管理を担当します。 すべてのバッファーの所有者は 1 つです。 通常、所有者とは、バッファーを作成したコンポーネント、またはファクトリーからバッファーを受け取ったコンポーネントです。 所有権は譲渡することもできます。**コンポーネント A** はバッファーの制御を**コンポーネント B** に譲渡することができます。その時点で**コンポーネント A** はバッファーを使用できなくなり、**コンポーネント B** が、使用されなくなったバッファーの破棄を担当します。
 
-- **消費**。 バッファー インスタンスのコンシューマーは、読み取り、場合によっては書き込みでバッファー インスタンスを使用できます。 何らかの外部の同期メカニズムが提供されていない限り、バッファーは同時に持つことができるコンシューマーは 1 つです。 バッファーのアクティブなコンシューマーは必ずしもバッファーの所有者ではない点に注意してください。
+- **消費**。 バッファー インスタンスのコンシューマーは、読み取り、場合によっては書き込みでバッファー インスタンスを使用できます。 何らかの外部の同期メカニズムが提供されていない限り、バッファーは同時に持つことができるコンシューマーは 1 つです。 バッファーのアクティブなコンシューマーは必ずしもバッファーの所有者ではありません。
 
 - **リース**。 リースは、特定のコンポーネントがバッファーの消費者になることができる時間の長さです。
 
@@ -336,7 +336,7 @@ public unsafe Task<int> ManagedWrapperAsync(Memory<byte> data)
 private static void MyCompletedCallbackImplementation(IntPtr state, int result)
 {
     GCHandle handle = (GCHandle)state;
-    var actualState = (MyCompletedCallbackState)state;
+    var actualState = (MyCompletedCallbackState)(handle.Target);
     handle.Free();
     actualState.MemoryHandle.Dispose();
 

@@ -2,12 +2,12 @@
 title: EShopOnContainers reference アプリの概要
 description: ASP.NET Core と Azure 用の eShopOnContainers Cloud ネイティブマイクロサービスリファレンスアプリの概要。
 ms.date: 06/30/2019
-ms.openlocfilehash: 0d55f248acbc34bcc76d38987d7e1d537cf6065a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8d4ad982716a07613ebbef6668afab69d5a8b4f6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73841775"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895538"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers reference アプリの概要
 
@@ -17,7 +17,7 @@ Microsoft は、一流のコミュニティエキスパートと提携して、�
 
 ![eShopOnContainers サンプルアプリのスクリーンショット。](./media/eshoponcontainers-sample-app-screenshot.png)
 
-**(図 2-1)** 。 eShopOnContainers サンプルアプリのスクリーンショット。
+**図 2-1**. eShopOnContainers サンプルアプリのスクリーンショット。
 
 この章を開始する前に、 [eShopOnContainers reference アプリケーション](https://github.com/dotnet-architecture/eShopOnContainers)をダウンロードすることをお勧めします。 これを行うと、表示される情報と一緒に操作しやすくなります。
 
@@ -25,15 +25,15 @@ Microsoft は、一流のコミュニティエキスパートと提携して、�
 
 まず、アプリケーションの機能と要件について確認します。 EShopOnContainers アプリケーションは、t シャツやコーヒーカップなどのさまざまな物理製品を販売するオンラインストアを表します。 これまでにオンラインで購入したものがある場合、そのストアの使用経験は比較的なじみがあるはずです。 ストアが実装する基本的な機能の一部を次に示します。
 
-- カタログ項目の一覧表示
+- カタログ項目のリスト
 - 項目を種類でフィルター処理
 - ブランド別に項目をフィルター処理する
 - 買い物かごに商品を追加する
 - バスケットの項目を編集または削除する
-- 清算
+- チェックアウト
 - アカウントを登録する
 - サインイン
-- サインアウト
+- サインアウトする
 - 注文の確認
 
 このアプリケーションには、次の非機能的な要件もあります。
@@ -46,7 +46,7 @@ Microsoft は、一流のコミュニティエキスパートと提携して、�
 
 ![eShopOnContainers リファレンスアプリケーション開発アーキテクチャ。](./media/eshoponcontainers-development-architecture.png)
 
-**図 2-2** eShopOnContainers リファレンスアプリケーション開発アーキテクチャ。
+**図 2-2**. eShopOnContainers リファレンスアプリケーション開発アーキテクチャ。
 
 EShopOnContainers アプリケーションには、ASP.NET Core MVC サーバーアプリケーションまたは適切な API ゲートウェイを対象とする HTTPS 経由でアプリケーションにアクセスする web またはモバイルクライアントからアクセスできます。 API ゲートウェイには、個々のフロントエンドクライアントからバックエンドサービスを切り離し、より優れたセキュリティを提供するなど、いくつかの利点があります。 また、アプリケーションでは、フロントエンドクライアントごとに個別の API ゲートウェイを作成することを推奨するフロントエンド (BFF) と呼ばれる関連パターンを使用します。 参照アーキテクチャは、要求が web またはモバイルクライアントから送信されているかどうかに基づいて API ゲートウェイを分割する方法を示しています。
 
@@ -56,7 +56,7 @@ EShopOnContainers アプリケーションには、ASP.NET Core MVC サーバー
 
 ![さまざまな種類のマイクロサービス](./media/different-kinds-of-microservices.png)
 
-**図 2-3** さまざまな種類のマイクロサービス。
+**図 2-3**. さまざまな種類のマイクロサービス。
 
 ## <a name="overview-of-the-code"></a>コードの概要
 
@@ -64,13 +64,13 @@ EShopOnContainers アプリケーションには、ASP.NET Core MVC サーバー
 
 ![Visual Studio ソリューション内のプロジェクト。](./media/projects-in-visual-studio-solution.png)
 
-**図 2-4** Visual Studio ソリューション内のプロジェクト。
+**図 2-4**. Visual Studio ソリューション内のプロジェクト。
 
 コードはさまざまなマイクロサービスをサポートするように編成されており、各マイクロサービス内では、コードがドメインロジック、インフラストラクチャの問題、およびユーザーインターフェイスまたはサービスエンドポイントに分割されます。 多くの場合、各サービスの依存関係は、運用環境の Azure サービスによって、また、ローカル開発のための別のオプションでも実現できます。 アプリケーションの要件が Azure サービスにどのように対応しているかを確認してみましょう。
 
 ## <a name="understanding-microservices"></a>マイクロサービスについて
 
-この本は、Azure テクノロジを使用して構築されたクラウドネイティブアプリケーションに焦点を当てています。 マイクロサービスのベストプラクティスと、マイクロサービスベースのアプリケーションを設計する方法の詳細については、「 [.Net マイクロサービス: コンテナー化された .Net アプリケーションのアーキテクチャ](https://dotnet.microsoft.com/learn/aspnet/microservices-architecture)」を参照してください。 本はオンライン、PDF、または eReader 形式で入手できます。
+この本は、Azure テクノロジを使用して構築されたクラウドネイティブアプリケーションに焦点を当てています。 マイクロサービスのベストプラクティスと、マイクロサービスベースのアプリケーションを設計する方法の詳細については、「 [.Net マイクロサービス: コンテナー化された .Net アプリケーションのアーキテクチャ](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)」を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](candidate-apps.md)

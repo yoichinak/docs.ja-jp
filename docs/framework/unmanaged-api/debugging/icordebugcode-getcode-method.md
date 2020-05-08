@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7137e3d1-1dad-48d8-8c37-16ac816534d3
 topic_type:
 - apiref
-ms.openlocfilehash: fde76c3b34fcc9f2321f3426d2801b310f681067
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 59a497d203d241bbc6e0f884007d4a401c112073
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178999"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82893654"
 ---
 # <a name="icordebugcodegetcode-method"></a>ICorDebugCode::GetCode メソッド
-指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。 このメソッドは、.NET Framework バージョン 2.0 では非推奨になりました。 代わりに[、ICorDebugCode2::GetCode チャンクを使用します](icordebugcode2-getcodechunks-method.md)。  
+指定した関数のすべてのコードを取得し、逆アセンブリ用に書式設定します。 このメソッドは .NET Framework バージョン2.0 では非推奨とされました。 代わりに[ICorDebugCode2:: GetCodeChunks](icordebugcode2-getcodechunks-method.md)を使用してください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,31 +40,31 @@ HRESULT GetCode (
   
 ## <a name="parameters"></a>パラメーター  
  `startOffset`  
- [in]関数の先頭のオフセット。  
+ から関数の開始位置のオフセット。  
   
  `endOffset`  
- [in]関数の終了位置のオフセット。  
+ から関数の終了位置のオフセット。  
   
  `cBufferAlloc`  
- [in]コードが`buffer`返される配列のサイズ。  
+ からコードが返される`buffer`配列のサイズ。  
   
  `buffer`  
- [アウト]コードが返される配列。  
+ 入出力コードが返される配列。  
   
  `pcBufferSize`  
- [アウト]返されるバイト数。  
+ 入出力返されたバイト数。  
   
 ## <a name="remarks"></a>解説  
- 関数のコードが複数のチャンクに分割されている場合、ネイティブ オフセットを増加させる順に連結されます。 命令の境界はチェックされません。  
+ 関数のコードが複数のチャンクに分割されている場合は、ネイティブオフセットが増加する順序で連結されます。 命令の境界はチェックされません。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET フレームワークのバージョン:** 1.1、 1.0  
+ **.NET Framework のバージョン:** 1.1、1.0  
   
 ## <a name="see-also"></a>関連項目
 

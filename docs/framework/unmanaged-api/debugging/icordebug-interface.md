@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33f431d7-ab1a-494d-8af2-20ab15aba194
 topic_type:
 - apiref
-ms.openlocfilehash: 0ca66f001d04bc86b64e0fe2d1cd37559e4fc633
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 66b50bad0e8d2622922da96c213643ac3be83a9e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76785117"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895371"
 ---
 # <a name="icordebug-interface"></a>ICorDebug インターフェイス
 開発者が共通言語ランタイム (CLR) 環境でアプリケーションをデバッグできるようにするメソッドを提供します。  
@@ -39,25 +39,25 @@ ms.locfileid: "76785117"
 |[Initialize メソッド](icordebug-initialize-method.md)|`ICorDebug` オブジェクトを初期化します。|  
 |[SetManagedHandler メソッド](icordebug-setmanagedhandler-method.md)|マネージイベントのイベントハンドラーオブジェクトを指定します。|  
 |[SetUnmanagedHandler メソッド](icordebug-setunmanagedhandler-method.md)|アンマネージイベントのイベントハンドラーオブジェクトを指定します。|  
-|[Terminate メソッド](icordebug-terminate-method.md)|`ICorDebug` オブジェクトを終了します。|  
+|[Terminate メソッド](icordebug-terminate-method.md)|オブジェクトを`ICorDebug`終了します。|  
   
-## <a name="remarks"></a>コメント  
- `ICorDebug` は、デバッガープロセスのイベント処理ループを表します。 デバッガーは、このインターフェイスを解放する前に、デバッグされているすべてのプロセスからの "ExitProcess" コール[バック](icordebugmanagedcallback-exitprocess-method.md)を待機する必要があります。  
+## <a name="remarks"></a>解説  
+ `ICorDebug`デバッガープロセスのイベント処理ループを表します。 デバッガーは、このインターフェイスを解放する前に、デバッグされているすべてのプロセスからの "ExitProcess" コール[バック](icordebugmanagedcallback-exitprocess-method.md)を待機する必要があります。  
   
- `ICorDebug` オブジェクトは、さらに管理されているすべてのデバッグを制御するための初期オブジェクトです。 .NET Framework バージョン1.0 および1.1 では、このオブジェクトは COM から作成された `CoClass` オブジェクトでした。 .NET Framework バージョン2.0 では、このオブジェクトは `CoClass` オブジェクトではなくなりました。 これは、バージョンを認識する[CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md)関数によって作成される必要があります。 この新しい作成関数を使用すると、クライアントは特定のバージョンのデバッグ API もエミュレートする `ICorDebug`の特定の実装を取得できます。  
+ `ICorDebug`オブジェクトは、さらに管理されているすべてのデバッグを制御するための初期オブジェクトです。 .NET Framework バージョン1.0 および1.1 では、このオブジェクトは COM `CoClass`から作成されたオブジェクトでした。 .NET Framework バージョン2.0 では、このオブジェクトは`CoClass`オブジェクトではなくなりました。 これは、バージョンを認識する[CreateDebuggingInterfaceFromVersion](../hosting/createdebugginginterfacefromversion-function.md)関数によって作成される必要があります。 この新しい作成関数を使用すると、クライアントは特定`ICorDebug`のバージョンのデバッグ API もエミュレートするの特定の実装を取得できます。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

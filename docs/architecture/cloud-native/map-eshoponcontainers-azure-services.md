@@ -1,13 +1,13 @@
 ---
 title: eShopOnContainers を Azure サービスにマッピングする
 description: Azure Kubernetes Service、API Gateway、Azure Service Bus などの Azure サービスへの eShopOnContainers のマッピング。
-ms.date: 06/30/2019
-ms.openlocfilehash: eb37be94461a5373afe328572a94892dec50432d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.date: 04/20/2020
+ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76781212"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895509"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers を Azure サービスにマッピングする
 
@@ -44,7 +44,7 @@ APIM を使用すると、アプリケーションは複数の異なるサービ
 
 アプリケーションが AKS を使用している場合のもう1つのオプションは、AKS クラスター内のポッドとして Azure ゲートウェイの受信コントローラーをデプロイすることです。 これにより、クラスターを Azure アプリケーションゲートウェイと統合し、ゲートウェイがトラフィックを AKS ポッドに負荷分散できるようになります。 [詳細については、AKS 用の Azure ゲートウェイの受信コントローラーに関するページを参照して](https://github.com/Azure/application-gateway-kubernetes-ingress)ください。
 
-## <a name="data"></a>データ
+## <a name="data"></a>Data
 
 EShopOnContainers で使用されるさまざまなバックエンドサービスには、異なる記憶域要件があります。 複数のマイクロサービスで SQL Server データベースを使用します。 バスケットマイクロサービスは、永続化のために Redis キャッシュを活用します。 場所マイクロサービスでは、データに MongoDB API が必要です。 Azure では、これらの各データ形式をサポートしています。
 
@@ -54,26 +54,15 @@ EShopOnContainers アプリケーションでは、ユーザーの現在の買�
 
 場所マイクロサービスは、その永続化に MongoDB NoSQL データベースを使用します。 開発時には、データベースを独自のコンテナーに配置できます。運用環境では、サービスは[Azure Cosmos DB の MongoDB 用 API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)を活用できます。 Azure Cosmos DB の利点の1つは、SQL API や、MongoDB、Cassandra、NoSQL、Azure Table Storage などの一般的な Api を含む、複数の異なる通信プロトコルを利用できることです。 Azure Cosmos DB は、完全に管理されたグローバルに分散されたデータベースをサービスとして提供し、それを使用するサービスのニーズに合わせて拡張することができます。
 
-クラウドネイティブアプリケーションの分散データの詳細については、[第5章](database-per-microservice.md)を参照してください。
+クラウドネイティブアプリケーションの分散データの詳細については、[第5章](distributed-data.md)を参照してください。
 
 ## <a name="event-bus"></a>イベントバス
 
 アプリケーションでは、イベントを使用して異なるサービス間で変更を通知します。 この機能は、さまざまな実装で実装できます。また、ローカルの eShopOnContainers アプリケーションでは、 [RabbitMQ](https://www.rabbitmq.com/)を使用します。 Azure でホストされている場合、アプリケーションはメッセージングのために[Azure Service Bus](https://docs.microsoft.com/azure/service-bus/)を活用します。 Azure Service Bus は、アプリケーションとサービスが分離された信頼性の高い非同期方式で相互に通信できるようにする、完全に管理された統合メッセージブローカーです。 Azure Service Bus は、個々のキューと、パブリッシャーとサブスクライバーのシナリオをサポートするための個別の*トピック*をサポートしています。 EShopOnContainers アプリケーションでは、Azure Service Bus のトピックを活用して、あるマイクロサービスから特定のメッセージに応答するために必要なその他のマイクロサービスへのメッセージの配布をサポートしています。
 
-## <a name="resiliency"></a>柔軟性
+## <a name="resiliency"></a>回復性
 
 運用環境にデプロイされると、eShopOnContainers アプリケーションは、回復性を向上させるために使用できる複数の Azure サービスを活用できるようになります。 アプリケーションは、Application Insights と統合できる正常性チェックを発行して、アプリの可用性に基づいてレポートとアラートを提供します。 Azure リソースには、バグやパフォーマンスの問題を特定して修正するために使用できる診断ログも用意されています。 リソースログは、アプリケーションでさまざまな Azure リソースがどのように使用されているか、およびその方法に関する詳細情報を提供します。 クラウドネイティブの回復性機能の詳細については、[第6章](resiliency.md)を参照してください。
-
-## <a name="references"></a>参照
-
-- [EShopOnContainers アーキテクチャ](https://github.com/dotnet-architecture/eShopOnContainers/wiki/Architecture)
-- [高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する](https://docs.microsoft.com/dotnet/architecture/microservices/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications)
-- [Azure API Management](https://docs.microsoft.com/azure/api-management/api-management-key-concepts)
-- [Azure SQL Database の概要](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)
-- [Redis 用 Azure キャッシュ](https://azure.microsoft.com/services/cache/)
-- [MongoDB 用の Azure Cosmos DB の API](https://docs.microsoft.com/azure/cosmos-db/mongodb-introduction)
-- [Azure Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-messaging-overview)
-- [Azure Monitor の概要](https://docs.microsoft.com/azure/azure-monitor/overview)
 
 >[!div class="step-by-step"]
 >[前へ](introduce-eshoponcontainers-reference-app.md)

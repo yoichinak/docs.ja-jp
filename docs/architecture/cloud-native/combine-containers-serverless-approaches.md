@@ -2,12 +2,12 @@
 title: クラウドネイティブサービスでのコンテナーとサーバーレスアプローチの組み合わせ
 description: コンテナーと Kubernetes をサーバーレスアプローチと組み合わせる
 ms.date: 04/23/2020
-ms.openlocfilehash: fe9e9fd5d07132971d64bc6433a762fb7bd22048
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: a6ae17543c9075ca84126a4c19f9f51887f7fe9a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199665"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895647"
 ---
 # <a name="combining-containers-and-serverless-approaches"></a>コンテナーとサーバーレスの手法の組み合わせ
 
@@ -35,7 +35,11 @@ func init ProjectName --worker-runtime dotnet --docker
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>サーバーレスと Kubernetes を KEDA と組み合わせる方法
 
-Azure functions は、対象とするイベントの割合に基づいて、需要に合わせて自動的にスケールします。 いつでも AKS を利用して関数をホストし、Kubernetes ベースのイベントドリブン自動スケール (KEDA) を使用することができます。 イベントが発生していない場合、KEDA はゼロインスタンスにスケールダウンできます。 [詳細については、KEDA での Azure functions のスケーリングに関するページを参照して](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)ください。
+この章では、Azure Functions のプラットフォームが需要に応じて自動的にスケールアウトされることを確認しました。 ただし、コンテナー化された関数を AKS に配置する場合、組み込みのスケーリング機能は失われます。 これには、 [Kubernetes ベースのイベントドリブン (KEDA)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)が用意されています。 これにより、コンテナー化さ`event-driven Kubernetes workloads,`れた関数を含めるための高度な自動スケールが可能になります。
+
+KEDA は、Docker コンテナー内の関数のランタイムにイベントドリブンスケーリング機能を提供します。 KEDA は、負荷に基づいて、ゼロのインスタンス (イベントが発生`n instances`していない場合) からまで拡張できます。 Kubernetes オートスケーラー (水平ポッドオートスケーラー) にカスタムメトリックを公開することによって、自動スケールを有効にします。 KEDA で Functions のコンテナーを使用すると、任意の Kubernetes クラスターにおいてサーバーレス関数の機能をレプリケートできるようになります。
+
+KEDA プロジェクトは、Cloud Native Computing Foundation (CNCF) によって管理されていることに注意してください。
 
 >[!div class="step-by-step"]
 >[前へ](leverage-serverless-functions.md)

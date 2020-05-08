@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 02c596d7-00b0-4e2c-856b-5425158fcefd
 topic_type:
 - apiref
-ms.openlocfilehash: 45d27fca888bdabedf197525c63dbd03af7ba1ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3db37576f5da7b26e7bd9d3343f8bb8b97f2ba82
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179090"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895243"
 ---
 # <a name="icordebugappdomaingetname-method"></a>ICorDebugAppDomain::GetName メソッド
-アプリケーション ドメインの名前を取得します。  
+アプリケーションドメインの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,22 +38,22 @@ HRESULT GetName (
   
 ## <a name="parameters"></a>パラメーター  
  `cchName`  
- [in] `szName` 配列のサイズ。 このメソッドをクエリ モードにするには、この値を 0 に設定します。  
+ [in] `szName` 配列のサイズ。 このメソッドをクエリモードにするには、この値を0に設定します。  
   
  `pcchName`  
- [アウト]名前のサイズ、または 実際に返される文字数へのポインター `szName`。 クエリ モードでは、この値を使用すると、呼び出し元は名前に割り当てるバッファの大きさを知ることができます。  
+ 入出力名前のサイズ、またはで実際に`szName`返された文字数へのポインター。 クエリモードでは、この値によって、呼び出し元は、名前に割り当てるバッファーの大きさを知ることができます。  
   
  `szName`  
- [アウト]アプリケーション ドメインの名前を格納する配列。  
+ 入出力アプリケーションドメインの名前を格納する配列。  
   
 ## <a name="remarks"></a>解説  
- デバッガーは、名前`GetName`に必要なバッファーのサイズを取得するメソッドを 1 回呼び出します。 デバッガーは、バッファーを割り当てるし、バッファーを埋めるために、メソッドを呼び出します。 名前のサイズを取得する最初の呼び出しは、クエリ*モード*と呼ばれます。  
+ デバッガーは、 `GetName`メソッドを1回呼び出して、名前に必要なバッファーのサイズを取得します。 デバッガーによってバッファーが割り当てられ、メソッドが2回目に呼び出されてバッファーに格納されます。 名前のサイズを取得するための最初の呼び出しは、*クエリモード*と呼ばれます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

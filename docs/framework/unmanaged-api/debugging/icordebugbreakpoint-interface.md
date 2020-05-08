@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa5ad3d7-e1bb-42af-99bc-471224e3bcaa
 topic_type:
 - apiref
-ms.openlocfilehash: 53d8d219a13f2dade16a338efccf0837f8de0158
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b92c3d3328c657762ed002155ef4947a9292b19e
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76784374"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82894726"
 ---
 # <a name="icordebugbreakpoint-interface"></a>ICorDebugBreakpoint インターフェイス
 
@@ -29,26 +29,26 @@ ms.locfileid: "76784374"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[Activate メソッド](icordebugbreakpoint-activate-method.md)|この `ICorDebugBreakpoint`のアクティブな状態を設定します。|  
-|[IsActive メソッド](icordebugbreakpoint-isactive-method.md)|この `ICorDebugBreakpoint` がアクティブかどうかを示す値を取得します。|  
+|[Activate メソッド](icordebugbreakpoint-activate-method.md)|この`ICorDebugBreakpoint`のアクティブな状態を設定します。|  
+|[IsActive メソッド](icordebugbreakpoint-isactive-method.md)|この`ICorDebugBreakpoint`がアクティブかどうかを示す値を取得します。|  
   
-## <a name="remarks"></a>コメント  
- ブレークポイントは、条件式を直接サポートしません。 このような機能が必要な場合は、デバッガーが `ICorDebugBreakpoint`上に実装する必要があります。  
+## <a name="remarks"></a>解説  
+ ブレークポイントは、条件式を直接サポートしません。 このような機能が必要な場合は、デバッガーでを上`ICorDebugBreakpoint`に実装する必要があります。  
   
- は、関数内のブレークポイントをサポートするために `ICorDebugBreakpoint` を拡張します。  
+ は、関数内のブレーク`ICorDebugBreakpoint`ポイントをサポートするために、によって拡張されます。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
