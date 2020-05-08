@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43416dd5-8892-4106-9f59-f9143b19ddb4
 topic_type:
 - apiref
-ms.openlocfilehash: fa154d0bb48f4ecd4fc6a50ce22fd13c592b7c40
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8e4f745440936a39e22faf60d10a05a0bb110606
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782732"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975954"
 ---
 # <a name="icordebugexceptionobjectvalue-interface"></a>ICorDebugExceptionObjectValue インターフェイス
 "は、マネージ例外オブジェクトからスタックトレース情報を提供するために、" は、"" のような "のインターフェイスを拡張します。  
@@ -30,19 +30,19 @@ ms.locfileid: "76782732"
 |------------|-----------------|  
 |[EnumerateExceptionCallStack メソッド](icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md)|例外オブジェクトに埋め込まれている呼び出し履歴に対する列挙子を取得します。|  
   
-## <a name="remarks"></a>コメント  
- `QueryInterface` の呼び出しは、<xref:System.Exception?displayProperty=nameWithType>から派生したマネージオブジェクトに対して成功します。  
+## <a name="remarks"></a>Remarks  
+ の呼び出し`QueryInterface`は、から<xref:System.Exception?displayProperty=nameWithType>派生したマネージオブジェクトに対して成功します。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e925d88a-67a5-4f76-88b8-09cedeed0232
 topic_type:
 - apiref
-ms.openlocfilehash: 5c9049edd6d139bff29d21b65f9c87ec3e6de1a6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 64d9db09b3e604247ab6a26cdca9eca22adbaace
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76782969"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82976305"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip メソッド
 指定した数の項目だけ、列挙内でカーソルを前方に移動します。  
@@ -37,14 +37,14 @@ HRESULT Skip (
  `celt`  
  からカーソルを前方に移動する項目の数。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 00c64533-15dd-47f4-bb97-fe80a1ebadef
 topic_type:
 - apiref
-ms.openlocfilehash: 57eb284bfe39ce92b2d6c03a2aeb4ae84d6aba91
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: e45b180ac6d943d89740ad7ae10500ea4ad1aa9c
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788675"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975967"
 ---
 # <a name="icordebugexceptionobjectvalueenumerateexceptioncallstack-method"></a>ICorDebugExceptionObjectValue::EnumerateExceptionCallStack メソッド
 例外オブジェクトに埋め込まれている呼び出し履歴に対する列挙子を取得します。  
@@ -35,24 +35,23 @@ HRESULT EnumerateExceptionCallStack(
   
 ## <a name="parameters"></a>パラメーター  
  ppCallStackEnum  
- 入出力マネージ例外オブジェクトの[スタックトレース](icordebugexceptionobjectcallstackenum-interface.md)列挙子である、というコードのアドレスへのポインターを示します。
+ 入出力マネージ例外オブジェクトのスタックトレース列挙[ICorDebugExceptionObjectCallStackEnum](icordebugexceptionobjectcallstackenum-interface.md)子である、というコードのアドレスへのポインターを示します。  
   
+## <a name="remarks"></a>Remarks  
+ 呼び出し履歴情報が使用できない場合、メソッドは`S_OK`を返します。また、は、値が0の有効な列挙[子です。](icordebugexceptionobjectcallstackenum-interface.md) メソッドがスタックトレース情報を取得できない場合、戻り値は`E_FAIL`であり、列挙子は返されません。  
   
-## <a name="remarks"></a>コメント  
- 呼び出し履歴情報が使用できない場合、メソッドは `S_OK`を返します。また、は、値が0の有効な列挙[子です。](icordebugexceptionobjectcallstackenum-interface.md) メソッドがスタックトレース情報を取得できない場合、戻り値は `E_FAIL`、列挙子は返されません。  
+ の[例外](icordebugexceptionobjectcallstackenum-interface.md)オブジェクトの`_stackTrace`フィールドからスタックトレースデータをデコードするには、のオブジェクトを使用します。  
   
- は、例外オブジェクトの `_stackTrace` フィールドからスタックトレースデータをデコードするために、のオブジェクトを[使用します](icordebugexceptionobjectcallstackenum-interface.md)。  
-  
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugExceptionObjectValue インターフェイス](icordebugexceptionobjectvalue-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
