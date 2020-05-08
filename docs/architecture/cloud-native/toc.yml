@@ -93,3 +93,5 @@
           href: infrastructure-as-code.md
         - name: クラウド ネイティブ アプリケーション バンドル
           href: application-bundles.md
+    - name: まとめ
+      href: summary.md

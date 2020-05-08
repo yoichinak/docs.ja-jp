@@ -2,12 +2,12 @@
 title: dotnet add reference コマンド
 description: dotnet add 参照コマンドは、プロジェクト間参照を追加する便利なオプションを提供します。
 ms.date: 02/14/2020
-ms.openlocfilehash: f2bd67d181784c4858b8971d05053d196df7818e
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: b261e24ed6a9d5bd489d317d2663b1420b5c34ff
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463745"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158321"
 ---
 # <a name="dotnet-add-reference"></a>dotnet add reference
 
@@ -52,7 +52,7 @@ dotnet add reference -h|--help
 
 - **`-f|--framework <FRAMEWORK>`**
 
-  特定の[フレームワーク](../../standard/frameworks.md)を対象にしている場合にのみ、プロジェクト参照を追加します。
+  TFM 形式を使用して特定の[フレームワーク](../../standard/frameworks.md)を対象にしている場合にのみ、プロジェクト参照を追加します。
 
 - **`-h|--help`**
 
@@ -60,7 +60,7 @@ dotnet add reference -h|--help
 
 - **`--interactive`**
 
-  コマンドを停止して、ユーザーの入力または操作のために待機させることができます (たとえば、認証を完了する場合)。 .NET Core 3.0 SDK 以降で使用できます。
+  コマンドを停止して、ユーザーの入力または操作のために待機させることができます (通常は、認証を完了する場合)。 .NET Core 3.0 SDK 以降で使用できます。
 
 ## <a name="examples"></a>使用例
 

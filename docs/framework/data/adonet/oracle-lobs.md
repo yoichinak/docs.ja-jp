@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 ms.assetid: 272e8e1e-a31f-475a-8c2a-ae8e1286bdab
 ms.openlocfilehash: 62525fed85525e26b7c61208fe44b108de562fb0
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79149428"
 ---
 # <a name="oracle-lobs"></a>Oracle LOB
-Oracle 用の .NET フレームワーク<xref:System.Data.OracleClient.OracleLob>データ プロバイダーには、Oracle **LOB**データ型を操作するために使用されるクラスが含まれています。  
+.NET Framework Data Provider for Oracle には、<xref:System.Data.OracleClient.OracleLob> クラスが含まれています。このクラスは、Oracle の **LOB** データ型を操作するために使用されます。  
   
- **OracleLob**は、次<xref:System.Data.OracleClient.OracleType>のいずれかのデータ型になります。  
+ **OracleLob** は、これらの <xref:System.Data.OracleClient.OracleType> データ型の 1 つです。  
   
-|データ型|説明|  
+|データの種類|説明|  
 |---------------|-----------------|  
-|[**BLOB**]|最大サイズが 4 GB のバイナリ データを格納する Oracle **BLOB**データ型。 これは **、Byte**型の**配列**にマップされます。|  
-|**Clob**|サーバー上の既定の文字セットに基づいて、最大サイズが 4 ギガバイトの文字データを格納する Oracle **CLOB**データ型。 これは**文字列**にマップされます。|  
-|**Nclob**|最大サイズが 4 ギガバイトのサーバー上の国別文字セットに基づく、文字データを格納する Oracle **NCLOB**データ型。 これは**文字列**にマップされます。|  
+|**BLOB**|最大 4 GB までのバイナリ データを含む Oracle の **BLOB** データ型です。 **Byte** 型の **Array** にマップします。|  
+|**Clob**|Oracle の **CLOB** データ型です。サーバーの既定の文字セットに基づいて最大 4 GB までの文字データを含みます。 **String** にマップします。|  
+|**NClob**|Oracle の **NCLOB** データ型です。サーバーの各国語文字セットに基づいて最大 4 GB までの文字データを含みます。 **String** にマップします。|  
   
- **OracleLob**は、オペレーティング・<xref:System.Data.OracleClient.OracleBFile>システムの物理ファイルではなく、サーバーにデータが保管される点とは異なります。 また **、OracleBFile**とは異なり、読み取り/書き込みオブジェクトを使用することもできます。  
+ **OracleLob** は、データがオペレーティング システムの物理ファイルにではなくサーバーに格納されるという点で、<xref:System.Data.OracleClient.OracleBFile> とは異なります。 また、常に読み取り専用になっている **OracleBFile** とは異なり、読み書き可能なオブジェクトにもなります。  
   
 ## <a name="creating-retrieving-and-writing-to-a-lob"></a>LOB の作成、取得、および書き込み  
- 次の C# の例では、Oracle テーブルで LOB を作成し **、OracleLob**オブジェクトの形式で LOB を取得して書き込む方法を示します。 この例<xref:System.Data.OracleClient.OracleDataReader>では、オブジェクトと**OracleLob** **の読み取り**および**書き込み**メソッドの使用方法を示します。 この例では、Oracle **BLOB** **、CLOB、NCLOB**データ型を使用します。 **NCLOB**  
+ 次の C# の例では、Oracle テーブルに LOB を作成し、それらを取得して **OracleLob** オブジェクトの形式で書き込む方法について説明します。 この例では、<xref:System.Data.OracleClient.OracleDataReader> オブジェクトと **OracleLob** の **Read** および **Write** メソッドを使用する方法について説明します。 Oracle の **BLOB**、**CLOB**、**NCLOB** データ型を使用します。  
   
 ```csharp  
 using System;  

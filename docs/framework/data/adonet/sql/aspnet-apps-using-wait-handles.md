@@ -7,22 +7,22 @@ dev_langs:
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
 ms.openlocfilehash: d354dda05e8353a33c3a64440e5c2bad390743b4
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79148856"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>待機ハンドルを使用した ASP.NET アプリケーション
-非同期操作を処理するためのコールバックおよびポーリング モデルは、アプリケーションが処理する非同期操作が一度に 1 つだけの場合に役立ちます。 Wait モデルは、複数の非同期操作を処理するための、さらに柔軟な方法を提供します。 2 つの Wait モデルがあり、それを実装するために使用される <xref:System.Threading.WaitHandle> メソッドから、Wait (Any) モデルと Wait (All) モデルという名前が付けられています。  
+アプリケーションが一度に 1 つの非同期操作しか処理しない場合は、コールバック モデルとポーリング モデルが非同期操作の処理に役立ちます。 Wait モデルは、複数の非同期操作を処理するための、さらに柔軟な方法を提供します。 2 つの Wait モデルがあり、それを実装するために使用される <xref:System.Threading.WaitHandle> メソッドから、Wait (Any) モデルと Wait (All) モデルという名前が付けられています。  
   
  どちらの Wait モデルを使用する場合でも、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A>、<xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A>、または <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> メソッドによって返される <xref:System.IAsyncResult> オブジェクトの <xref:System.IAsyncResult.AsyncWaitHandle%2A> プロパティを使用する必要があります。 <xref:System.Threading.WaitHandle.WaitAny%2A> メソッドと <xref:System.Threading.WaitHandle.WaitAll%2A> メソッドはどちらも、配列内にグループ化された <xref:System.Threading.WaitHandle> オブジェクトを引数として送信する必要があります。  
   
- どちらの Wait メソッドも、非同期操作を監視し、完了を待機します。 この<xref:System.Threading.WaitHandle.WaitAny%2A>メソッドは、操作が完了するかタイムアウトするまで待機します。特定の操作が完了したら、その結果を処理し、次の操作が完了するかタイムアウトするまで待機します。この<xref:System.Threading.WaitHandle.WaitAll%2A>メソッドは、<xref:System.Threading.WaitHandle>インスタンスの配列内のすべてのプロセスが完了するかタイムアウトになるまで待機してから続行します。  
+ どちらの Wait メソッドも、非同期操作を監視し、完了を待機します。 <xref:System.Threading.WaitHandle.WaitAny%2A> メソッドは、いずれか 1 つの操作の完了またはタイムアウトを待機します。特定の操作が完了したことがわかれば、その結果を処理し、引き続き次の操作の完了またはタイムアウトを待機できます。<xref:System.Threading.WaitHandle.WaitAll%2A> メソッドは、<xref:System.Threading.WaitHandle> インスタンスの配列に含まれているすべてのプロセスが完了するかタイムアウトするまで次の操作の監視を開始しません。  
   
  Wait モデルの利点は、ある程度の長さの複数の操作を異なるサーバーで実行する必要がある場合や、サーバーがすべてのクエリを同時に処理するのに十分な性能を備えている場合に最も大きくなります。 ここで示す例では、重要度の低い SELECT クエリにさまざまな長さの WAITFOR コマンドを追加することによって、3 つのクエリが長いプロセスをエミュレートします。  
   
-## <a name="example-wait-any-model"></a>例 : Wait (Any) モデル  
- 次の例は、Wait (Any) モデルを示しています。 3 つの非同期プロセスが開始されると、いずれかのプロセスの完了を待つために <xref:System.Threading.WaitHandle.WaitAny%2A> メソッドが呼び出されます。 各プロセスが完了すると、<xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> メソッドが呼び出され、結果の <xref:System.Data.SqlClient.SqlDataReader> オブジェクトが読み取られます。 この時点で、実際のアプリケーションでは、<xref:System.Data.SqlClient.SqlDataReader> を使用してページの一部にデータが入力されることがあります。 この単純な例では、プロセスが完了した時刻が、そのプロセスに対応するテキスト ボックスに追加されます。 テキスト ボックスに表示される時刻を見ると、1 つのプロセスが完了するたびにコードが実行されることがわかります。  
+## <a name="example-wait-any-model"></a>例:Wait (Any) モデル  
+ 次の例は Wait (Any) モデルを示しています。 3 つの非同期プロセスが開始されると、いずれかのプロセスの完了を待つために <xref:System.Threading.WaitHandle.WaitAny%2A> メソッドが呼び出されます。 各プロセスが完了すると、<xref:System.Data.SqlClient.SqlCommand.EndExecuteReader%2A> メソッドが呼び出され、結果の <xref:System.Data.SqlClient.SqlDataReader> オブジェクトが読み取られます。 この時点で、実際のアプリケーションでは、<xref:System.Data.SqlClient.SqlDataReader> を使用してページの一部にデータが入力されることがあります。 この単純な例では、プロセスが完了した時刻が、そのプロセスに対応するテキスト ボックスに追加されます。 このように、テキスト ボックス内の時刻はその時点を示します。プロセスが完了するたびに、コードが実行されます。  
   
  この例を設定するには、新しい ASP.NET Web サイト プロジェクトを作成します。 ページ上に 1 つの <xref:System.Web.UI.WebControls.Button> コントロールと 4 つの <xref:System.Web.UI.WebControls.TextBox> コントロールを配置します (各コントロールの既定の名前をそのまま使用します)。  
   
@@ -312,14 +312,14 @@ void Button1_Click(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="example-wait-all-model"></a>例 : Wait (All) モデル  
- 次の例は、Wait (All) モデルを示しています。 3 つの非同期プロセスが開始されると、プロセスの完了またはタイムアウトを待つ <xref:System.Threading.WaitHandle.WaitAll%2A> メソッドが呼び出されます。  
+## <a name="example-wait-all-model"></a>例:Wait (All) モデル  
+ 次の例は Wait (All) モデルを示しています。 3 つの非同期プロセスが開始されると、プロセスの完了またはタイムアウトを待つ <xref:System.Threading.WaitHandle.WaitAll%2A> メソッドが呼び出されます。  
   
- Wait (Any) モデルの例と同様に、プロセスが完了した時刻が、そのプロセスに対応するテキスト ボックスに追加されます。 テキスト ボックスに表示される時刻を見ると、すべてのプロセスが完了した後で <xref:System.Threading.WaitHandle.WaitAny%2A> メソッドに続くコードが実行されることがわかります。  
+ Wait (Any) モデルの例と同様に、プロセスが完了した時刻が、そのプロセスに対応するテキスト ボックスに追加されます。 ここでも、テキスト ボックス内の時刻がその時点を示します。<xref:System.Threading.WaitHandle.WaitAny%2A> メソッドに続くコードは、すべてのプロセスが完了した後でのみ実行されます。  
   
  この例を設定するには、新しい ASP.NET Web サイト プロジェクトを作成します。 ページ上に 1 つの <xref:System.Web.UI.WebControls.Button> コントロールと 4 つの <xref:System.Web.UI.WebControls.TextBox> コントロールを配置します (各コントロールの既定の名前をそのまま使用します)。  
   
- フォームのクラスに次のコードを追加し、実際の環境で必要に応じて接続文字列を変更します。  
+ お使いの環境に応じて接続文字列を変更し、次のコードをフォームのクラスに追加します。  
   
 ```vb  
 ' Add these to the top of the class  

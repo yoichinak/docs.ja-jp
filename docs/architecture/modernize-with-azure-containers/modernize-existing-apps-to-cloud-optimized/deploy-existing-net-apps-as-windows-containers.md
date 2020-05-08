@@ -2,12 +2,12 @@
 title: Windows コンテナーとして既存の .NET アプリを展開する
 description: Azure Cloud と Windows コンテナーで既存の .NET アプリケーションを最新化する | 既存の .NET アプリを Windows コンテナーとして展開する
 ms.date: 04/29/2018
-ms.openlocfilehash: c99c2e756320fc886203efcbf98a81e571d907e5
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 15e99e2ec0edd072a3d47d5c212ebbbf6705ecef
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987973"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738424"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリを展開する
 

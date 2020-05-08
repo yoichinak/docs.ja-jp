@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: fc0eec26073c299887b4748d0ad37e21c7294e84
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 7a6b0b15de4295506ff03b8566c06010b918566c
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81274796"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158400"
 ---
-### <a name="winforms-apis-now-throw-argumentnullexception"></a>WinForms API で ArgumentNullException がスローされる
+### <a name="winforms-methods-now-throw-argumentnullexception"></a>WinForms メソッドで ArgumentNullException がスローされるようになった
 
 一部の Windows フォーム メソッドで、null 引数について <xref:System.ArgumentNullException> がスローされるようになりました。以前は <xref:System.NullReferenceException> がスローされていました。
 

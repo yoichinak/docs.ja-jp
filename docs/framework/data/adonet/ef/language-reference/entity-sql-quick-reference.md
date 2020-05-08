@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
 ms.openlocfilehash: fc7cf8f8f692f9dc4230569d5f575b6d5fad19fa
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79150351"
@@ -15,7 +15,7 @@ ms.locfileid: "79150351"
 ## <a name="literals"></a>リテラル  
   
 ### <a name="string"></a>String  
- Unicode と非 Unicode の文字列リテラルがあります。 Unicode 文字列の前に N が付加されます。たとえば、`N'hello'`などです。  
+ Unicode と非 Unicode の文字列リテラルがあります。 Unicode 文字列は先頭に N が付きます。たとえば、`N'hello'` のようになります。  
   
  非 Unicode 文字列リテラルの例を次に示します。  
   
@@ -25,9 +25,9 @@ ms.locfileid: "79150351"
 "hello"  
 ```  
   
- 出力:  
+ Output:  
   
-|Value|  
+|[値]|  
 |-----------|  
 |hello|  
   
@@ -42,13 +42,13 @@ DATETIME '2006-12-25 01:01:00.000'
 DATETIME '2006-12-25 01:01'  
 ```  
   
- 出力:  
+ Output:  
   
-|Value|  
+|[値]|  
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>Integer  
+### <a name="integer"></a>整数型  
  整数リテラルには Int32 (123) 型、UInt32 (123U) 型、Int64 (123L) 型、および UInt64 (123UL) 型があります。  
   
  例:  
@@ -58,9 +58,9 @@ DATETIME '2006-12-25 01:01'
 {1, 2, 3}  
 ```  
   
- 出力:  
+ Output:  
   
-|Value|  
+|[値]|  
 |-----------|  
 |1|  
 |2|  
@@ -72,7 +72,7 @@ DATETIME '2006-12-25 01:01'
 ## <a name="type-constructors"></a>型コンストラクター  
   
 ### <a name="row"></a>ROW  
- [ROW](row-entity-sql.md)は、次のように、構造的に型指定された匿名の (レコード) 値を構築します。`ROW(1 AS myNumber, ‘Name’ AS myName).`  
+ [ROW](row-entity-sql.md) では、`ROW(1 AS myNumber, ‘Name’ AS myName).` のように、構造的に型付けされた匿名のレコード値が作成されます。  
   
  例:  
   
@@ -81,7 +81,7 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
     AS ProductName) FROM AdventureWorksEntities.Product AS product
 ```  
   
- 出力:  
+ Output:  
   
 |ProductID|名前|  
 |---------------|----------|  
@@ -91,7 +91,7 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
 |...|...|  
   
 ### <a name="multiset"></a>MULTISET  
- [MULTISET](multiset-entity-sql.md)は、次のようなコレクションを構築します。  
+ [MULTISET](multiset-entity-sql.md) では、次のようなコレクションが作成されます。  
   
  `MULTISET(1,2,2,3)` `--same as`-`{1,2,2,3}.`  
   
@@ -101,14 +101,14 @@ SELECT VALUE row (product.ProductID AS ProductID, product.Name
 SELECT VALUE product FROM AdventureWorksEntities.Product AS product WHERE product.ListPrice IN MultiSet (125, 300)  
 ```  
   
- 出力:  
+ Output:  
   
 |ProductID|名前|ProductNumber|…|  
 |---------------|----------|-------------------|-------|  
 |842|Touring-Panniers, Large|PA-T100|…|  
   
 ### <a name="object"></a>Object  
- [名前付き型コンストラクター](named-type-constructor-entity-sql.md)は、などのユーザー定義オブジェクトを構築`person("abc", 12)`します。  
+ [名前付きの型コンストラクター](named-type-constructor-entity-sql.md)では、`person("abc", 12)` のように、名前付きのユーザー定義オブジェクトが作成されます。  
   
  例:  
   
@@ -119,7 +119,7 @@ o.rowguid, o.ModifiedDate) FROM AdventureWorksEntities.SalesOrderDetail
 AS o  
 ```  
   
- 出力:  
+ Output:  
   
 |SalesOrderDetailID|CarrierTrackingNumber|OrderQty|ProductID|...|  
 |------------------------|---------------------------|--------------|---------------|---------|  
@@ -127,18 +127,18 @@ AS o
 |2|4911-403C-98|3|777|...|  
 |...|...|...|...|...|  
   
-## <a name="references"></a>References  
+## <a name="references"></a>関連項目  
   
 ### <a name="ref"></a>REF  
- [REF は](ref-entity-sql.md)、エンティティ型インスタンスへの参照を作成します。 たとえば、次のクエリは、Orders エンティティ セットの各 Order エンティティへの参照を返します。  
+ [REF](ref-entity-sql.md) では、エンティティ型のインスタンスへの参照が作成されます。 たとえば、次のクエリは、Orders エンティティ セットの各 Order エンティティへの参照を返します。  
   
 ```sql  
 SELECT REF(o) AS OrderID FROM Orders AS o  
 ```  
   
- 出力:  
+ Output:  
   
-|Value|  
+|[値]|  
 |-----------|  
 |1|  
 |2|  
@@ -154,9 +154,9 @@ SELECT VALUE REF(p).Name FROM
     AdventureWorksEntities.Product AS p
 ```  
   
- 出力:  
+ Output:  
   
-|Value|  
+|[値]|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -164,7 +164,7 @@ SELECT VALUE REF(p).Name FROM
 |...|  
   
 ### <a name="deref"></a>DEREF  
- [DEREF](deref-entity-sql.md)は参照値を逆参照し、その逆参照の結果を生成します。 たとえば、次のクエリは、`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2` のように、Orders エンティティ セットの各 Order について Order エンティティを生成します。  
+ [DEREF](deref-entity-sql.md) では、参照値が逆参照されて、その逆参照の結果が生成されます。 たとえば、次のクエリは、`SELECT DEREF(o2.r) FROM (SELECT REF(o) AS r FROM LOB.Orders AS o) AS o2` のように、Orders エンティティ セットの各 Order について Order エンティティを生成します。  
   
  例:  
   
@@ -173,9 +173,9 @@ SELECT VALUE DEREF(REF(p)).Name FROM
     AdventureWorksEntities.Product AS p
 ```  
   
- 出力:  
+ Output:  
   
-|Value|  
+|[値]|  
 |-----------|  
 |Adjustable Race|  
 |All-Purpose Bike Stand|  
@@ -183,7 +183,7 @@ SELECT VALUE DEREF(REF(p)).Name FROM
 |...|  
   
 ### <a name="createref-and-key"></a>CREATEREF と KEY  
- [CREATEREF は](createref-entity-sql.md)、キーを渡す参照を作成します。 [KEY](key-entity-sql.md)は、型参照を使用して式のキー部分を抽出します。  
+ [CREATEREF](createref-entity-sql.md) では、キーを渡す参照が作成されます。 [KEY](key-entity-sql.md) では、型参照を持つ式のキー部分が抽出されます。  
   
  例:  
   
@@ -192,7 +192,7 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
     FROM AdventureWorksEntities.Product AS p
 ```  
   
- 出力:  
+ Output:  
   
 |ProductID|  
 |---------------|  
@@ -203,8 +203,8 @@ SELECT VALUE Key(CreateRef(AdventureWorksEntities.Product, row(p.ProductID)))
   
 ## <a name="functions"></a>関数  
   
-### <a name="canonical"></a>Canonical  
- [正規関数](canonical-functions.md)の名前空間は Edm です`Edm.Length("string")`。 正規関数と同じ名前の関数を含んでいる別の名前空間がインポートされない限り、名前空間を指定する必要はありません。 2 つの名前空間に同じ関数が存在する場合は、完全な名前を指定する必要があります。  
+### <a name="canonical"></a>正規  
+ [正規関数](canonical-functions.md)の名前空間は Edm で、`Edm.Length("string")` のように使用されます。 正規関数と同じ名前の関数を含んでいる別の名前空間がインポートされない限り、名前空間を指定する必要はありません。 2 つの名前空間に同じ関数が存在する場合は、完全な名前を指定する必要があります。  
   
  例:  
   
@@ -214,7 +214,7 @@ SELECT Length(c. FirstName) AS NameLen FROM
     WHERE c.ContactID BETWEEN 10 AND 12  
 ```  
   
- 出力:  
+ Output:  
   
 |NameLen|  
 |-------------|  
@@ -223,7 +223,7 @@ SELECT Length(c. FirstName) AS NameLen FROM
 |5|  
   
 ### <a name="microsoft-provider-specific"></a>Microsoft プロバイダー固有  
- [Microsoft プロバイダー固有の関数](../sqlclient-for-ef-functions.md)は、`SqlServer`名前空間にあります。  
+ [Microsoft プロバイダー固有の関数](../sqlclient-for-ef-functions.md)は、`SqlServer` 名前空間にあります。  
   
  例:  
   
@@ -233,7 +233,7 @@ SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
     c.ContactID BETWEEN 10 AND 12  
 ```  
   
- 出力:  
+ Output:  
   
 |EmailLen|  
 |--------------|  
@@ -242,7 +242,7 @@ SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
 |26|  
   
 ## <a name="namespaces"></a>名前空間  
- [USING は](using-entity-sql.md)、クエリ式で使用される名前空間を指定します。  
+ [USING](using-entity-sql.md) では、クエリ式で使用する名前空間を指定します。  
   
  例:  
   
@@ -250,14 +250,14 @@ SELECT SqlServer.LEN(c.EmailAddress) AS EmailLen FROM
 using SqlServer; LOWER('AA');  
 ```  
   
- 出力:  
+ Output:  
   
-|Value|  
+|[値]|  
 |-----------|  
 |aa|  
   
-## <a name="paging"></a>Paging  
- [ページングは、ORDER BY](order-by-entity-sql.md)句に[SKIP](skip-entity-sql.md)サブ句と[LIMIT](limit-entity-sql.md)サブ句を宣言することで表現できます。  
+## <a name="paging"></a>ページング  
+ ページングは、[ORDER BY](order-by-entity-sql.md) 句に対して [SKIP](skip-entity-sql.md) および [LIMIT](limit-entity-sql.md) サブ句を宣言することによって表すことができます。  
   
  例:  
   
@@ -266,16 +266,16 @@ SELECT c.ContactID as ID, c.LastName AS Name FROM
     AdventureWorks.Contact AS c ORDER BY c.ContactID SKIP 9 LIMIT 3;  
 ```  
   
- 出力:  
+ Output:  
   
-|id|名前|  
+|ID|名前|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
 |12|Aguilar|  
   
 ## <a name="grouping"></a>グループ化  
- [GROUPING BY](group-by-entity-sql.md)は、照会 ([SELECT](select-entity-sql.md)) 式によって戻されるオブジェクトを配置するグループを指定します。  
+ [GROUPING BY](group-by-entity-sql.md) では、クエリ ([SELECT](select-entity-sql.md)) 式によって返されるオブジェクトをグループ化するよう指定します。  
   
  例:  
   
@@ -284,7 +284,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
     GROUP BY P.Name HAVING MAX(P.ListPrice) > 5  
 ```  
   
- 出力:  
+ Output:  
   
 |name|  
 |----------|  
@@ -293,8 +293,8 @@ SELECT VALUE name FROM AdventureWorksEntities.Product AS P
 |HL Mountain Seat Assembly|  
 |...|  
   
-## <a name="navigation"></a>「ナビゲーション」  
- リレーションシップ ナビゲーション操作を使用すると、開始側のエンティティと終了側のエンティティ間のリレーションシップをナビゲートできます。 [NAVIGATE](navigate-entity-sql.md)は、名前空間>として\<修飾されたリレーションシップの種類を取ります。\<リレーションシップの種類名>。 [移動]\<は、終わりまでのカーディナリティが 1 の場合、Ref T>を返します。 終わりまでのカーディナリティーが n の場合、\<コレクション<Ref T>> が返されます。  
+## <a name="navigation"></a>ナビゲーション  
+ リレーションシップ ナビゲーション操作を使用すると、開始側のエンティティと終了側のエンティティ間のリレーションシップをナビゲートできます。 [NAVIGATE](navigate-entity-sql.md) では、\<名前空間>.\<リレーションシップ型名> として修飾されるリレーションシップ型が取得されます。 終了側のカーディナリティが 1 の場合、Ref\<T> が返されます。 終了側のカーディナリティが n の場合、Collection<Ref\<T>> が返されます。  
   
  例:  
   
@@ -304,7 +304,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
     FROM AdventureWorksEntities.Address AS a  
 ```  
   
- 出力:  
+ Output:  
   
 |AddressID|  
 |---------------|  
@@ -316,7 +316,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 ## <a name="select-value-and-select"></a>SELECT VALUE AND SELECT  
   
 ### <a name="select-value"></a>SELECT VALUE  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、暗黙の行の構築をスキップする SELECT VALUE 句が用意されています。 SELECT VALUE 句には 1 つの項目のみを指定できます。 このような句を使用する場合、SELECT 句の項目の周囲に行ラッパーは作成されず、目的の図形のコレクションを作成できます`SELECT VALUE a`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] には、暗黙の行の構築をスキップする SELECT VALUE 句が用意されています。 SELECT VALUE 句には 1 つの項目のみを指定できます。 このような句を使用した場合、SELECT 句内の項目には row ラッパーは構築されず、`SELECT VALUE a` などの目的の構造を持つコレクションを作成できます。  
   
  例:  
   
@@ -324,7 +324,7 @@ SELECT a.AddressID, (SELECT VALUE DEREF(v) FROM
 SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 ```  
   
- 出力:  
+ Output:  
   
 |名前|  
 |----------|  
@@ -348,7 +348,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 |...|...|  
   
 ## <a name="case-expression"></a>CASE 式  
- [case 式](case-entity-sql.md)は、結果を決定するために一連のブール式を評価します。  
+ [CASE 式](case-entity-sql.md)では、一連のブール式が評価されて結果が判定されます。  
   
  例:  
   
@@ -356,11 +356,11 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product AS p
 CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END  
 ```  
   
- 出力:  
+ Output:  
   
-|Value|  
+|[値]|  
 |-----------|  
-|TRUE|  
+|true|  
   
 ## <a name="see-also"></a>関連項目
 

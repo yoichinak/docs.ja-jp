@@ -7,18 +7,18 @@ dev_langs:
 ms.assetid: 35900aa2-5615-4174-8212-ba184c6b82fb
 ms.openlocfilehash: 94ec554ca2dc5ed4eb6792b9b42ae6f1b856f51e
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79148609"
 ---
 # <a name="inserting-an-image-from-a-file"></a>ファイルからの画像の挿入
-バイナリ ラージ オブジェクト (BLOB) は、データ ソースのフィールドの種類に応じて、バイナリ データまたは文字データとしてデータベースに書き込むことができます。 BLOB は、`text`、`ntext`、および `image` データ型をのことを指す一般用語であり、通常はドキュメントと画像が含まれます。  
+データ ソースのフィールドの型に応じて、バイナリ データまたは文字データとして、BLOB (バイナリ ラージ オブジェクト) をデータベースに書き込むことができます。 BLOB は `text`、`ntext`、および `image` データ型を示す一般的な用語であり、通常ドキュメントとピクチャが含まれています。  
   
- BLOB 値をデータベースに書き込むには、適切な INSERT ステートメントまたは UPDATE ステートメントを発行し、BLOB 値を入力パラメーターとして渡します ([パラメーターおよびパラメーター・データ・タイプの構成を](../configuring-parameters-and-parameter-data-types.md)参照してください)。 BLOB を SQL Server `text` フィールドなどのテキストとして格納する場合は、BLOB を文字列パラメーターとして渡すことができます。 BLOB を SQL Server `image` フィールドなどのバイナリ形式で格納する場合は、`byte` 型の配列をバイナリ パラメーターとして渡すことができます。  
+ BLOB 値をデータベースに書き込むには、適切な INSERT または UPDATE ステートメントを実行し、入力パラメーターとして BLOB 値を渡します (「[パラメーターおよびパラメーター データ型の構成](../configuring-parameters-and-parameter-data-types.md)」を参照)。 BLOB が、SQL Server の `text` フィールドなどのようにテキストとして格納される場合は、文字列パラメーターとして BLOB を渡すことができます。 BLOB を SQL Server `image` フィールドなどのバイナリ形式で格納する場合は、`byte` 型の配列をバイナリ パラメーターとして渡すことができます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、Northwind データベースの Employees テーブルに従業員情報を追加します。 従業員の写真がファイルから読み取られ、テーブルの Photo フィールド (画像フィールド) に追加されます。  
+ 次のコード例では、Northwind データベースの Employees テーブルに従業員情報を追加します。 従業員の写真がファイルから読み取られ、テーブルの Photo フィールド (イメージ フィールド) に追加されます。  
   
 ```vb  
 Public Shared Sub AddEmployee( _  

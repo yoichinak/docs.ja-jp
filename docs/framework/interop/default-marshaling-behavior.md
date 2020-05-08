@@ -11,7 +11,7 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 ms.openlocfilehash: f7df323dacfbee3361fe75d831f1e87df328b194
 ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/09/2020
 ms.locfileid: "80989221"
@@ -42,7 +42,7 @@ BSTR MethodOne (BSTR b) {
  ランタイムは、常に **CoTaskMemFree** メソッドを使用してメモリを解放します。 使用しているメモリが **CoTaskMemAlloc** メソッドで割り当てられていない場合、**IntPtr** を使用し、適切なメソッドを使用して手動でメモリを解放する必要があります。 同様に、カーネル メモリへのポインターを返す **GetCommandLine** 関数を Kernel32.dll から使用するときなど、メモリを解放してはいけない状況のときには、自動的なメモリの解放を防止できます。 手動でメモリを解放する方法について詳しくは、「[Buffers サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x3txb6xc(v=vs.100))」を参照してください。  
   
 ## <a name="default-marshaling-for-classes"></a>クラスに対する既定のマーシャリング  
- クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 選択したインターフェイスでクラス インターフェイスをオーバーライドする方法については、[クラス インターフェイスの概要を](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)参照してください。  
+ クラスは、COM 相互運用でのみマーシャリングすることができ、常にインターフェイスとしてマーシャリングされます。 クラスをマーシャリングするために使用されるインターフェイスが、クラス インターフェイスと呼ばれる場合があります。 クラス インターフェイスを任意のインターフェイスでオーバーライドする方法について詳しくは、「[クラス インターフェイスの概要](../../standard/native-interop/com-callable-wrapper.md#introducing-the-class-interface)」をご覧ください。  
   
 ### <a name="passing-classes-to-com"></a>クラスを COM に渡す  
  マネージド クラスが COM に渡されると、相互運用マーシャラーは自動的にクラスを COM プロキシでラップし、プロキシによって生成されたクラス インターフェイスを COM メソッド呼び出しに渡します。 その後、プロキシは、クラス インターフェイス上のすべての呼び出しを、マネージド オブジェクトにデリゲートして戻します。 プロキシはまた、クラスによって明示的に実装されていない他のインターフェイスも公開します。 プロキシは、クラスの代わりに、**IUnknown** や **IDispatch** などのインターフェイスを自動的に実装します。  
@@ -80,7 +80,7 @@ BSTR MethodOne (BSTR b) {
 |列挙型|アンマネージ形式の説明|  
 |----------------------|-------------------------------------|  
 |**UnmanagedType.FunctionPtr**|アンマネージ関数ポインター。|  
-|**UnmanagedType.Interface**|Mscorlib.tlb で定義されている、**_Delegate** 型のインターフェイス。|  
+|**UnmanagedType.Interface**|Mscorlib.tlb で定義されている、 **_Delegate** 型のインターフェイス。|  
   
  `DelegateTestInterface` のメソッドが COM タイプ ライブラリにエクスポートされる、次のコード例を検討してください。 **ref** (または **ByRef**) キーワードでマークされたデリゲートだけが、In/Out パラメーターとして渡されることに注意してください。  
   
@@ -172,7 +172,7 @@ internal class DelegateTest {
   
  書式設定された型は、メモリ内のメンバーのレイアウトを明示的に制御するための情報を含む複合型です。 メンバーのレイアウト情報は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を使用して示すことができます。 レイアウトは、次のいずれかの <xref:System.Runtime.InteropServices.LayoutKind> 列挙値です。  
   
-- **自動**  
+- **LayoutKind.Auto**  
   
      共通言語ランタイムで、効率を上げるのために、型のメンバーを自由に再配置できることを示します。 ただし、値型がアンマネージ コードに渡されると、メンバーのレイアウトは予測可能です。 このような構造体を自動的にマーシャリングしようとすると、例外が発生します。  
   
@@ -331,7 +331,7 @@ public class Point {
 ### <a name="value-types-used-in-com-interop"></a>COM 相互運用で使用される値型  
  書式指定された型は、COM 相互運用のメソッドの呼び出しに渡すこともできます。 実際には、タイプ ライブラリにエクスポートされると、値型は構造体に自動的に変換されます。 次の例に示すように、`Point` 値型は `Point` という名前の型定義 (typedef) になります。 タイプ ライブラリ内の他の場所にある `Point` 値型へのすべての参照は、`Point` typedef に置き換えられます。  
   
- **タイプ ライブラリ表現**  
+ **タイプ ライブラリの表現**  
   
 ```cpp  
 typedef struct tagPoint {  
@@ -346,7 +346,7 @@ interface _Graphics {
 }  
 ```  
   
- 値と参照をプラットフォーム呼び出しにマーシャリングする際に使用されるものと同じ規則が、COM インターフェイスを介してマーシャリングする際にも使用されます。 たとえば、`Point` 値型のインスタンスが .NET Framework から COM に渡されるとき、`Point` は値によって渡されます。 `Point` 値型が参照によって渡される場合、`Point` へのポインターはスタックで渡されます。 相互運用マーシャラーは、どちらの方向でも、より高いレベルの間接参照 (**Point ** \*\*) はサポートしていません。  
+ 値と参照をプラットフォーム呼び出しにマーシャリングする際に使用されるものと同じ規則が、COM インターフェイスを介してマーシャリングする際にも使用されます。 たとえば、`Point` 値型のインスタンスが .NET Framework から COM に渡されるとき、`Point` は値によって渡されます。 `Point` 値型が参照によって渡される場合、`Point` へのポインターはスタックで渡されます。 相互運用マーシャラーでは、どちらの方向についても、より高いレベルの間接参照 (**Point**  \*\*) はサポートされていません。  
   
 > [!NOTE]
 > <xref:System.Runtime.InteropServices.LayoutKind> 列挙値が **Explicit** に設定された構造体は、エクスポートされたタイプ ライブラリが明示的なレイアウトを表現できないので、COM 相互運用で使用することはできません。  
@@ -376,9 +376,9 @@ interface _Graphics {
   
 |システムの値型|IDL 型|  
 |-----------------------|--------------|  
-|<xref:System.DateTime?displayProperty=nameWithType>|**日付**|  
-|<xref:System.Decimal?displayProperty=nameWithType>|**10 進**|  
-|<xref:System.Guid?displayProperty=nameWithType>|**Guid**|  
+|<xref:System.DateTime?displayProperty=nameWithType>|**DATE**|  
+|<xref:System.Decimal?displayProperty=nameWithType>|**DECIMAL**|  
+|<xref:System.Guid?displayProperty=nameWithType>|**GUID**|  
 |<xref:System.Drawing.Color?displayProperty=nameWithType>|**OLE_COLOR**|  
   
  次のコードでは、Stdole2 タイプ ライブラリにあるアンマネージ型の **DATE**、**GUID**、**DECIMAL**、および **OLE_COLOR** の定義を示します。  

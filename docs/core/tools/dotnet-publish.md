@@ -2,12 +2,12 @@
 title: dotnet publish コマンド
 description: dotnet publish コマンドを実行すると、.NET Core プロジェクトまたはソリューションをディレクトリに発行できます。
 ms.date: 02/24/2020
-ms.openlocfilehash: 0e18220443f3713c86c257fcf401b98ddd716ebc
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 78ed8098be1b6887fc6a2a647fd169e2bf7f7fd1
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588268"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102802"
 ---
 # <a name="dotnet-publish"></a>dotnet publish
 
@@ -20,13 +20,16 @@ ms.locfileid: "80588268"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration]
-    [-f|--framework] [--force] [--interactive] [--manifest]
-    [--no-build] [--no-dependencies] [--no-restore] [--nologo]
-    [-o|--output] [-r|--runtime] [--self-contained]
-    [--no-self-contained] [-v|--verbosity] [--version-suffix]
+dotnet publish [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
+    [-f|--framework <FRAMEWORK>] [--force] [--interactive]
+    [--manifest <PATH_TO_MANIFEST_FILE>] [--no-build] [--no-dependencies]
+    [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
+    [-p:PublishReadyToRun=true] [-p:PublishSingleFile=true] [-p:PublishTrimmed=true]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [--self-contained [true|false]]
+    [--no-self-contained] [-v|--verbosity <LEVEL>]
+    [--version-suffix <VERSION_SUFFIX>]
 
-dotnet publish [-h|--help]
+dotnet publish -h|--help
 ```
 
 ## <a name="description"></a>説明
@@ -39,6 +42,10 @@ dotnet publish [-h|--help]
 - アプリケーションの依存関係。NuGet キャッシュから出力フォルダーにコピーされます。
 
 `dotnet publish` コマンドの出力は、実行のためにホスト システム (サーバー、PC、Mac、ラップトップなど) にすぐに展開できます。 これは、アプリケーションの展開を準備するための正式にサポートされている唯一の方法です。 プロジェクトに指定されている展開の種類によっては、ホスティング システムに .NET Core 共有ランタイムがインストールされている場合とされていない場合があります。 詳細については、「[.NET Core CLI を使用して .NET Core アプリを発行する](../deploying/deploy-with-cli.md)」を参照してください。
+
+### <a name="implicit-restore"></a>暗黙的な復元
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
 
 ### <a name="msbuild"></a>MSBuild
 
@@ -114,6 +121,12 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
   
   指定しない場合、ランタイムに依存する実行可能ファイルおよびクロスプラットフォーム バイナリの既定値は *[project_file_folder]./bin/[configuration]/[framework]/publish/* に設定されます。 自己完結型の実行可能ファイルの場合、既定値は *[project_file_folder]/bin/[configuration]/[framework]/[runtime]/publish/* に設定されます。
 
+  Web プロジェクトで、出力フォルダーがプロジェクト フォルダー内にある場合、`dotnet publish` コマンドを連続して実行すると、出力フォルダーが入れ子になって生成されます。 たとえば、プロジェクト フォルダーが *myproject* で、発行の出力フォルダーが *myproject/publish* であり、`dotnet publish` を 2 回実行した場合、2 回目の実行では *myproject/publish/publish* に *.config* および *.json* ファイルなどのコンテンツ ファイルが配置されます。 発行フォルダーが入れ子にならないようにするには、プロジェクト フォルダーの直下以外の発行フォルダーを指定するか、またはプロジェクトから発行フォルダーを除外します。 *publishoutput* という名前の発行フォルダーを除外するには、 *.csproj* ファイルの `PropertyGroup` 要素に次の要素を追加します。
+
+  ```xml
+  <DefaultItemExcludes>$(DefaultItemExcludes);publishoutput**</DefaultItemExcludes>
+  ```
+
   - .NET Core 3.x SDK 以降
   
     プロジェクトの発行時に相対パスが指定された場合、生成された出力ディレクトリは、プロジェクト ファイルの場所ではなく、現在の作業ディレクトリに相対的なパスとなります。
@@ -125,6 +138,26 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
     プロジェクトの発行時に相対パスが指定された場合、生成された出力ディレクトリは、現在の作業ディレクトリではなく、プロジェクト ファイルの場所に相対的なパスとなります。
 
     ソリューションの発行時に相対パスを指定すると、各プロジェクトの出力は、プロジェクト ファイルの場所に相対的な別のフォルダーに移動されます。 ソリューションの発行時に絶対パスを指定すると、すべてのプロジェクトに対する発行の出力はすべて、指定されたフォルダーに移動されます。
+
+- **`-p:PublishReadyToRun=true`**
+
+  アプリケーション アセンブリは ReadyToRun (R2R) 形式にコンパイルされます。 R2R とは、Ahead-Of-Time (AOT) コンパイルの一種です。 詳細については、「[ReadyToRun イメージ](../whats-new/dotnet-core-3-0.md#readytorun-images)」を参照してください。 .NET Core 3.0 SDK 以降で使用できます。
+
+  このオプションは、コマンド ラインではなく、発行プロファイルで指定することをお勧めします。 詳細については、「[MSBuild](#msbuild)」を参照してください。
+
+- **`-p:PublishSingleFile=true`**
+
+  アプリを、プラットフォームごとに単一の実行可能ファイルにパッケージ化します。 この実行可能ファイルは自己展開型であり、アプリの実行に必要なすべての依存関係 (ネイティブを含む) を含んでいます。 アプリを初めて実行すると、アプリ名とビルド ID に基づいてアプリケーションがディレクトリに抽出されます。 アプリケーションを再実行すると、起動は速くなります。 新しいバージョンが使用されない限り、アプリケーションは自身を 2 回抽出する必要がありません。 .NET Core 3.0 SDK 以降で使用できます。
+
+  単一ファイルの発行の詳細については、[単一ファイル バンドラー設計のドキュメント](https://github.com/dotnet/designs/blob/master/accepted/2020/single-file/design.md)を参照してください。
+
+  このオプションは、コマンド ラインではなく、発行プロファイルで指定することをお勧めします。 詳細については、「[MSBuild](#msbuild)」を参照してください。
+
+- **`-p:PublishTrimmed=true`**
+
+  自己完結型の実行可能ファイルを発行するとき、使用されていないライブラリをトリミングして、アプリの展開サイズを減らします。 詳細については、「[自己完結型の展開と実行可能ファイルのトリミング](../deploying/trim-self-contained.md)」を参照してください。 .NET Core 3.0 SDK 以降で使用できます。
+
+  このオプションは、コマンド ラインではなく、発行プロファイルで指定することをお勧めします。 詳細については、「[MSBuild](#msbuild)」を参照してください。
 
 - **`--self-contained [true|false]`**
 
@@ -203,3 +236,4 @@ dotnet publish -p:PublishProfile=Properties\PublishProfiles\FolderProfile.pubxml
 - [MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)
 - [ASP.NET Core アプリを配置するための Visual Studio 発行プロファイル (.pubxml)](/aspnet/core/host-and-deploy/visual-studio-publish-profiles)
 - [dotnet msbuild](dotnet-msbuild.md)
+- [ILLInk.Tasks](https://aka.ms/dotnet-illink)

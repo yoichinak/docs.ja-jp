@@ -1,5 +1,5 @@
 ---
-title: 'クエリ式の構文例 : 制限 (LINQ to DataSet)'
+title: クエリ式の構文例:制限 (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,23 +7,23 @@ dev_langs:
 ms.assetid: 1daf42c2-c9f4-4cda-b291-7641b9c6d3fe
 ms.openlocfilehash: 6ec4eac6c0fb2d044e429e88d50c619aa38de4b2
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79149194"
 ---
-# <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>クエリ式の構文例 : 制限 (LINQ to DataSet)
+# <a name="query-expression-syntax-examples-restriction-linq-to-dataset"></a>クエリ式の構文例:制限 (LINQ to DataSet)
 このトピックでは、<xref:System.Linq.Enumerable.Where%2A> メソッドで、クエリ式の構文を使って <xref:System.Data.DataSet> に対するクエリを実行する例を紹介しています。  
   
- これらの`FillDataSet`例で使用されるメソッドは[、DataSet へのデータの読み込み で指定します](loading-data-into-a-dataset.md)。  
+ これらの例で使用されている `FillDataSet` メソッドの指定については、「[DataSet へのデータの読み込み](loading-data-into-a-dataset.md)」を参照してください。  
   
  このトピックの例には、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルが使用されています。  
   
- このトピックの例では、次`using`/`Imports`のステートメントを使用します。  
+ このトピックの例には、次の `using`/`Imports` ステートメントが使用されています。  
   
 [!code-csharp[DP LINQ to DataSetExamples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
   
- 詳細については、「方法[: Visual Studio で LINQ to DataSet プロジェクトを作成する](how-to-create-a-linq-to-dataset-project-in-vs.md)」を参照してください。  
+ 詳細については、[Visual Studio で LINQ to DataSet プロジェクトを作成する](how-to-create-a-linq-to-dataset-project-in-vs.md)」を参照してください。  
   
 ## <a name="where"></a>Where  
   

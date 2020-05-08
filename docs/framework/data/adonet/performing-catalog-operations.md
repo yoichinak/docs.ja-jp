@@ -7,13 +7,13 @@ dev_langs:
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
 ms.openlocfilehash: bedeb4e9c510a3feeedc038e9c4cef6c4721e345
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79149246"
 ---
 # <a name="performing-catalog-operations"></a>カタログ操作の実行
-CREATE TABLE ステートメントや CREATE PROCEDURE ステートメントなどのデータベースまたはカタログを変更するコマンドを実行するには、適切な SQL ステートメントと**接続**オブジェクトを使用して**Command**オブジェクトを作成します。 コマンド オブジェクトの**ExecuteNonQuery**メソッドを使用して**コマンド**を実行します。  
+データベースまたはカタログを変更するコマンド (CREATE TABLE ステートメント、CREATE PROCEDURE ステートメントなど) を実行するには、適切な SQL ステートメントと **Connection** オブジェクトを使用して、**Command** オブジェクトを作成します。 **Command** オブジェクトの **ExecuteNonQuery** メソッドでコマンドを実行します。  
   
  Microsoft SQL Server データベースにストアド プロシージャを作成するコード サンプルを次に示します。  
   

@@ -1,5 +1,5 @@
 ---
-title: 'メソッド ベースのクエリ構文例 : 要素演算子 (LINQ to DataSet)'
+title: メソッド ベースのクエリ構文例:要素演算子 (LINQ to DataSet)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,24 +7,24 @@ dev_langs:
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
 ms.openlocfilehash: e43208d6ae524a1370b936d42508e9c7a7d196e5
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79149508"
 ---
-# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>メソッド ベースのクエリ構文例 : 要素演算子 (LINQ to DataSet)
+# <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>メソッド ベースのクエリ構文例:要素演算子 (LINQ to DataSet)
 このトピックでは、<xref:System.Linq.Enumerable.First%2A> メソッドおよび <xref:System.Linq.Enumerable.ElementAt%2A> メソッドを使用し、クエリ式の構文を使って <xref:System.Data.DataRow> から <xref:System.Data.DataSet> 要素を取得する例を紹介しています。  
   
- これらの`FillDataSet`例で使用されるメソッドは[、DataSet へのデータの読み込み で指定します](loading-data-into-a-dataset.md)。  
+ これらの例で使用されている `FillDataSet` メソッドの指定については、「[DataSet へのデータの読み込み](loading-data-into-a-dataset.md)」を参照してください。  
   
  このトピックの例には、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルが使用されています。  
   
- このトピックの例では、次`using`/`Imports`のステートメントを使用します。  
+ このトピックの例には、次の `using`/`Imports` ステートメントが使用されています。  
   
 [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
 [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]
 
- 詳細については、「方法[: Visual Studio で LINQ to DataSet プロジェクトを作成する](how-to-create-a-linq-to-dataset-project-in-vs.md)」を参照してください。  
+ 詳細については、[Visual Studio で LINQ to DataSet プロジェクトを作成する](how-to-create-a-linq-to-dataset-project-in-vs.md)」を参照してください。  
   
 ## <a name="elementat"></a>ElementAt  
   
@@ -34,7 +34,7 @@ ms.locfileid: "79149508"
 [!code-csharp[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#elementat)]
 [!code-vb[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#elementat)]
   
-## <a name="first"></a>First (先頭へ)  
+## <a name="first"></a>First  
   
 ### <a name="example"></a>例  
  この例では、<xref:System.Linq.Enumerable.First%2A> メソッドを使用して、名が 'Brooke' である最初の連絡先を取得します。  

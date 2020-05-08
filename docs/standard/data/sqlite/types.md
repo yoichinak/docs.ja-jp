@@ -1,63 +1,63 @@
 ---
-title: データ型
+title: データの種類
 ms.date: 12/13/2019
-description: サポートされているデータ型と、そのデータ型に関する制限事項について説明します。
+description: サポートされているデータ型と、それらに関する制限事項について説明します。
 ms.openlocfilehash: a11ff382f80cd979506d6195c299c8234c3eb8ea
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/15/2020
 ms.locfileid: "81389037"
 ---
-# <a name="data-types"></a>データ型
+# <a name="data-types"></a>データの種類
 
-SQLite には、整数、実数、テキスト、BLOB の 4 つのプリミティブ データ型しかありません。 データベース値を a として返`object`す API は、これら 4 つの型のうちの 1 つだけを返します。 追加の .NET 型は Microsoft.Data.Sqlite でサポートされていますが、値は最終的にこれらの型と 4 つのプリミティブ型の 1 つとの間で強制的に変換されます。
+SQLite には、INTEGER、REAL、TEXT、BLOB の 4 つのプリミティブ データ型のみが存在します。 データベースの値が `object` として返される API では、この 4 つの型のいずれかのみが返されます。 Microsoft.Data.Sqlite では他の .NET 型がサポートされていますが、最終的には、それらの型と 4 つのいずれかのプリミティブ型との間で値が強制的に変換されます。
 
-| .NET           | SQLite  | 解説                                                       |
+| .NET           | SQLite  | Remarks                                                       |
 | -------------- | ------- | ------------------------------------------------------------- |
-| Boolean        | INTEGER | `0` または `1`                                                    |
+| ブール型        | INTEGER | `0` または `1`                                                    |
 | Byte           | INTEGER |                                                               |
 | Byte[]         | BLOB    |                                                               |
-| Char           | [TEXT]    | UTF-8                                                         |
-| DateTime       | [TEXT]    | yyyy-MM-dd HH:mm:ss.フフフフ                                   |
-| DateTimeOffset | [TEXT]    | yyyy-MM-dd HH:mm:ss.FFFFFFFzzzz                                |
-| Decimal        | [TEXT]    | `0.0###########################`形式。 REALは損失を出すだろう。 |
+| Char           | TEXT    | UTF-8                                                         |
+| DateTime       | TEXT    | yyyy-MM-dd HH:mm:ss.FFFFFFF                                   |
+| DateTimeOffset | TEXT    | yyyy-MM-dd HH:mm:ss.FFFFFFFzzz                                |
+| Decimal (10 進数型)        | TEXT    | `0.0###########################` 形式。 REAL は情報の損失を伴います。 |
 | Double         | real    |                                                               |
-| Guid           | [TEXT]    | 00000000-0000-0000-0000-000000000000                          |
+| GUID           | TEXT    | 00000000-0000-0000-0000-000000000000                          |
 | Int16          | INTEGER |                                                               |
 | Int32          | INTEGER |                                                               |
 | Int64          | INTEGER |                                                               |
 | SByte          | INTEGER |                                                               |
 | Single         | real    |                                                               |
-| String         | [TEXT]    | UTF-8                                                         |
-| TimeSpan       | [TEXT]    | d.hh:mm:ss.fffffff                                            |
+| String         | TEXT    | UTF-8                                                         |
+| TimeSpan       | TEXT    | d.hh:mm:ss.fffffff                                            |
 | UInt16         | INTEGER |                                                               |
 | UInt32         | INTEGER |                                                               |
 | UInt64         | INTEGER | 大きな値のオーバーフロー                                         |
 
-## <a name="alternative-types"></a>代替タイプ
+## <a name="alternative-types"></a>代替型
 
-NET 型の中には、代替 SQLite 型から読み取ることができるものがあります。 パラメーターは、これらの代替タイプを使用するように構成することもできます。 詳しくは、「[パラメーター](parameters.md#alternative-types)」をご覧ください。
+一部の .NET 型は、代替の SQLite 型から読み取ることができます。 これらの代替型を使用するようにパラメーターを構成することもできます。 詳しくは、「[パラメーター](parameters.md#alternative-types)」をご覧ください。
 
-| .NET           | SQLite  | 解説          |
+| .NET           | SQLite  | Remarks          |
 | -------------- | ------- | ---------------- |
 | Char           | INTEGER | UTF-16           |
 | DateTime       | real    | ユリウス日の値 |
 | DateTimeOffset | real    | ユリウス日の値 |
-| Guid           | BLOB    |                  |
-| TimeSpan       | real    | 数日で          |
+| GUID           | BLOB    |                  |
+| TimeSpan       | real    | 日数          |
 
-たとえば、次のクエリは、結果セット内の REAL 列から TimeSpan 値を読み取ります。
+たとえば、次のクエリでは、結果セット内の REAL 列から TimeSpan 値が読み取られます。
 
 [!code-csharp[](../../../../samples/snippets/standard/data/sqlite/DateAndTimeSample/Program.cs?name=snippet_AlternativeType)]
 
 ## <a name="column-types"></a>列の型
 
-SQLite は動的型システムを使用し、値の型は値自体に関連付けられており、格納されている列には関連付けされません。 任意の列型名を使用できます。 これらの名前に追加のセマンティクスを適用しません。
+SQLite では、動的な型システムが使用されており、値の型がその格納先の列ではなく値自体に関連付けられています。 列の型名には任意の名前を使用できます。 Microsoft.Data.Sqlite ではそれらの名前に追加のセマンティクスは適用されません。
 
-列の型名は、[型のアフィニティ](https://www.sqlite.org/datatype3.html#type_affinity)に影響を与えます。 一般的な問題の 1 つは、列型の STRING を使用すると、値を INTEGER または REAL に変換しようと試み、予期しない結果を招く可能性があるという点です。 4 つのプリミティブ SQLite 型名 (整数、実数、テキスト、BLOB) のみを使用することをお勧めします。
+列の型名は、[型のアフィニティ](https://www.sqlite.org/datatype3.html#type_affinity)に影響します。 一般的な注意事項として、列の型 STRING を使用すると、値に対して INTEGER または REAL への変換が試みられ、予期しない結果を招く可能性があります。 INTEGER、REAL、TEXT、BLOB の 4 つのプリミティブ SQLite 型名だけを使用することをお勧めします。
 
-SQLite では、長さ、精度、スケールなどのタイプ ファセットを指定できますが、データベース エンジンによって強制されません。 アプリは、これらを適用する責任があります。
+SQLite では、長さ、有効桁数、小数点以下桁数などの型のファセットを指定できますが、これらはデータベース エンジンによって適用されません。 これらは使用しているアプリによって適用されます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -4,13 +4,13 @@ ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
 ms.openlocfilehash: a0f5dd19c439861451b1e88c3ae35f9f265288fa
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79150494"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
-式の結果が指定の範囲内の値になるかどうかを判断します。 BETWEEN[!INCLUDE[esql](../../../../../../includes/esql-md.md)]式は、Transact-SQL BETWEEN 式と同じ機能を持ちます。  
+式の結果が指定の範囲内の値になるかどうかを判断します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の BETWEEN 式は、Transact-SQL の BETWEEN 式と同じ効果を持ちます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,13 +37,13 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
 ## <a name="return-value"></a>戻り値  
  `true` が、`expression` と `begin_expression` で指定される範囲内にある場合は `end_expression`。それ以外の場合は `false`。 `null` が `expression` であるか、`null` または `begin_expression` が `end_expression` である場合は、`null` が返されます。  
   
-## <a name="remarks"></a>解説  
- 排他的な範囲を指定するには、BETWEEN ではなく、より大きい (>) とより小さい (<) 演算子を使用します。  
+## <a name="remarks"></a>Remarks  
+ 両端を除いた範囲を指定するには、BETWEEN の代わりに、より大きい (>) とより小さい (<) を意味する演算子を使用します。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリでは、BETWEEN 演算子を使用して、式の結果が指定の範囲内の値になるかどうかを調べます。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  
   
-1. 「 [How to: Execute a Query that Returns StructuralType Results](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
+1. 「[方法: StructuralType 結果を返すクエリを実行する](../how-to-execute-a-query-that-returns-structuraltype-results.md)」の手順に従います。  
   
 2. 次のクエリを引数として `ExecuteStructuralTypeQuery` メソッドに渡します。  
   

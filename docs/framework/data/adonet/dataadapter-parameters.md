@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: f21e6aba-b76d-46ad-a83e-2ad8e0af1e12
 ms.openlocfilehash: 9954570dcf33c5eea4dcccf880de2c307de0aeca
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79151547"
@@ -15,7 +15,7 @@ ms.locfileid: "79151547"
 # <a name="dataadapter-parameters"></a>DataAdapter パラメーター
 <xref:System.Data.Common.DbDataAdapter> には 4 つのプロパティがあり、データ ソースからデータを取得したりデータ ソースのデータを更新したりするために使用されます。<xref:System.Data.Common.DbDataAdapter.SelectCommand%2A> プロパティは、データ ソースのデータを返します。<xref:System.Data.Common.DbDataAdapter.InsertCommand%2A>、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A>、および <xref:System.Data.Common.DbDataAdapter.DeleteCommand%2A> の各プロパティは、データ ソースの変更を管理するために使用されます。 `SelectCommand` プロパティは、`Fill` の `DataAdapter` メソッドを呼び出す前に設定しておく必要があります。 `InsertCommand`、`UpdateCommand`、`DeleteCommand` の各プロパティは、`Update` 内のデータに加えられた変更に応じて、`DataAdapter` の <xref:System.Data.DataTable> メソッドを呼び出す前に設定する必要があります。 たとえば、行が追加された場合には、`InsertCommand` を呼び出す前に `Update` を設定する必要があります。 `Update` によって挿入行、更新行、または削除行が処理されるとき、`DataAdapter` でそれぞれの `Command` プロパティが使用され、アクションが処理されます。 変更された行に関する現在の情報が `Command` コレクションを経由して `Parameters` オブジェクトに渡されます。  
   
- データ ソースの行を更新する場合は、UPDATE ステートメントを呼び出します。 一意識別子は、一般には主キー フィールドの値です。 UPDATE ステートメントでは、次の Transact-SQL ステートメントに示すように、一意識別子と更新する列および値の両方を含むパラメーターを使用します。  
+ データ ソースの行を更新するときは、一意識別子を使用してテーブル内の更新する列を識別する UPDATE ステートメントを呼び出します。 一意識別子は、一般には主キー フィールドの値です。 UPDATE ステートメントでは、次の Transact-SQL ステートメントに示すように、一意識別子と更新する列および値の両方を含むパラメーターを使用します。  
   
 ```sql
 UPDATE Customers SET CompanyName = @CompanyName
@@ -25,7 +25,7 @@ UPDATE Customers SET CompanyName = @CompanyName
 > [!NOTE]
 > パラメーターのプレースホルダーの構文はデータ ソースに依存します。 次に、SQL Server のデータ ソースのプレースホルダーの例を示します。 <xref:System.Data.OleDb> パラメーターおよび <xref:System.Data.Odbc> パラメーターのプレースホルダーとして、疑問符 (?) を使用します。  
   
- この Visual Basic の`CompanyName`例では、フィールドが、`@CompanyName`パラメーターの値`CustomerID`と等しい行のパラメーターの値で更新`@CustomerID`されます。 パラメーターは、オブジェクトの<xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A>プロパティを使用して、変更された行<xref:System.Data.SqlClient.SqlParameter>から情報を取得します。 前のサンプル UPDATE ステートメントのパラメーターを次に示します。 このコードは、変数 `adapter` が有効な <xref:System.Data.SqlClient.SqlDataAdapter> オブジェクトを表すことを前提としています。  
+ この Visual Basic の例では、`CustomerID` が `@CustomerID` パラメーターの値と等しい行の `@CompanyName` パラメーターの値で `CompanyName` フィールドが更新されます。 これらのパラメーターでは、<xref:System.Data.SqlClient.SqlParameter> オブジェクトの <xref:System.Data.SqlClient.SqlParameter.SourceColumn%2A> プロパティを使用して、変更された行から情報が取得されます。 前のサンプル UPDATE ステートメントのパラメーターを次に示します。 このコードは、変数 `adapter` が有効な <xref:System.Data.SqlClient.SqlDataAdapter> オブジェクトを表すことを前提としています。  
   
 ```vb
 adapter.Parameters.Add( _  
@@ -39,7 +39,7 @@ parameter.SourceVersion = DataRowVersion.Original
  `Parameters` コレクションの `Add` メソッドは、パラメーター名、データ型、サイズ (その型に適用可能な場合)、および <xref:System.Data.Common.DbParameter.SourceColumn%2A> の名前を `DataTable` から受け取ります。 <xref:System.Data.Common.DbParameter.SourceVersion%2A> パラメーターの `@CustomerID` が `Original` に設定されることに注意してください。 この設定により、変更された <xref:System.Data.DataRow> で 1 つまたは複数の識別列の値が変更されている場合に、データ ソース内の既存の行が確実に更新されます。 識別列の値が変更されている場合、`Original` 行の値がデータ ソースの現在の値と一致し、`Current` 行の値に更新済みの値が格納されます。 `SourceVersion` パラメーターの `@CompanyName` は設定されていないため、既定値である `Current` の行の値が使用されます。  
   
 > [!NOTE]
-> `DataAdapter`の`Fill`操作と`Get`のメソッドの`DataReader`両方で、.NET Framework 型は 、.NET Framework データ プロバイダーから返される型から推論されます。 推論される .NET Framework 型と、OLE DB、および ODBC データ型のアクセサ メソッドについては[、「ADO.NETのデータ型マッピング」を](data-type-mappings-in-ado-net.md)参照してください。  
+> `DataAdapter` の `Fill` 操作と `DataReader` の `Get` メソッドのどちらの場合も、.NET Framework の型は .NET Framework データ プロバイダーから返された型から推論されます。 Microsoft SQL Server、OLE DB、および ODBC のデータ型から推論される .NET Framework の型およびアクセサー メソッドについては、「[ADO.NET でのデータ型のマッピング](data-type-mappings-in-ado-net.md)」を参照してください。  
   
 ## <a name="parametersourcecolumn-parametersourceversion"></a>Parameter.SourceColumn、Parameter.SourceVersion  
  `SourceColumn` および `SourceVersion` が、引数として `Parameter` コンストラクターに渡されるか、既存の `Parameter` のプロパティとして設定されます。 `SourceColumn` は、<xref:System.Data.DataColumn> の値の取得先である <xref:System.Data.DataRow> の `Parameter` の名前です。 `SourceVersion` により、`DataRow` で値の取得に使用される `DataAdapter` のバージョンを指定します。  
@@ -48,12 +48,12 @@ parameter.SourceVersion = DataRowVersion.Original
   
 |DataRowVersion 列挙定数|説明|  
 |--------------------------------|-----------------|  
-|`Current`|このパラメーターは列の現在の値を使用します。 これは既定値です。|  
+|`Current`|このパラメーターは列の現在の値を使用します。 既定値です。|  
 |`Default`|このパラメーターには列の `DefaultValue` を使用します。|  
 |`Original`|このパラメーターは列の元の値を使用します。|  
 |`Proposed`|このパラメーターは提示された値を使用します。|  
   
- 次のセクションの `SqlClient` コード サンプルでは、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 列を 2 つのパラメーター `CustomerID` (`SourceColumn`) および `@CustomerID` (`SET CustomerID = @CustomerID`) の `@OldCustomerID` として使用する `WHERE CustomerID = @OldCustomerID` のパラメーターを定義します。 この`@CustomerID`パラメーターは **、CustomerID**列を の現在の値に更新`DataRow`するために使用されます。 その結果、a`CustomerID``SourceColumn`を持`SourceVersion`つ`Current`ものが使用されます。 この`@OldCustomerID`パラメーターは、データ ソースの現在の行を識別するために使用されます。 一致する列の値がその行の `Original` バージョンで見つかったため、`SourceColumn` が `CustomerID` である同じ `SourceVersion` (`Original`) が使用されます。  
+ 次のセクションの `SqlClient` コード サンプルでは、<xref:System.Data.Common.DbDataAdapter.UpdateCommand%2A> 列を 2 つのパラメーター `CustomerID` (`SourceColumn`) および `@CustomerID` (`SET CustomerID = @CustomerID`) の `@OldCustomerID` として使用する `WHERE CustomerID = @OldCustomerID` のパラメーターを定義します。 `@CustomerID` パラメーターを使用して、**CustomerID** 列を `DataRow` の現在の値に更新します。 そのため、`SourceVersion` が `Current` である `CustomerID` の `SourceColumn` が使用されます。 `@OldCustomerID` パラメーターは、データ ソースの現在の行を識別するために使用されています。 一致する列の値がその行の `Original` バージョンで見つかったため、`SourceColumn` が `CustomerID` である同じ `SourceVersion` (`Original`) が使用されます。  
   
 ## <a name="working-with-sqlclient-parameters"></a>SqlClient パラメーターの使用  
  次のコード サンプルでは、データベースから追加のスキーマ情報を取得するために <xref:System.Data.SqlClient.SqlDataAdapter> を作成し、<xref:System.Data.Common.DataAdapter.MissingSchemaAction%2A> を <xref:System.Data.MissingSchemaAction.AddWithKey> に設定する方法を示します。 <xref:System.Data.SqlClient.SqlDataAdapter.SelectCommand%2A> プロパティ、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> プロパティ、<xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> プロパティ、および <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> プロパティが設定され、各プロパティに対応する <xref:System.Data.SqlClient.SqlParameter> オブジェクトが <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> コレクションに追加されます。 このメソッドは `SqlDataAdapter` オブジェクトを返します。  
@@ -162,7 +162,7 @@ adapter.Fill(customers, "Customers");
 ```  
   
 > [!NOTE]
-> パラメーターにパラメーター名が指定されていない場合、パラメーターには、"Parameter1"*で始*まる増分デフォルト名のパラメーター*N*が付けられます。 パラメーター名を指定する場合、*指定する*名前が の既存の既定のパラメーター名と競合する可能性があるため、パラメーター N の名前付け`ParameterCollection`規則は使用しないようにすることをお勧めします。 指定した名前が既に存在する場合は、例外がスローされます。  
+> パラメーターにパラメーター名が指定されない場合、"Parameter1" から始まり数字が増分される既定名 Parameter*N* ** が割り当てられます。 パラメーター名を指定するときには、Parameter*N* という名前付け規則を使用しないことをお勧めします。これは、指定した名前が `ParameterCollection` 内の既存の既定パラメーター名と競合しないようにするためです。 指定した名前が既に存在する場合は、例外がスローされます。  
   
 ## <a name="see-also"></a>関連項目
 

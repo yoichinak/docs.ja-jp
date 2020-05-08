@@ -4,12 +4,12 @@ description: パッケージ マネージャーを使用して、Ubuntu 19.10 �
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: aac63ba74a8bfaba63e9d23882c9350a7d3d84f3
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 9e77628d557e52c61ee75d6d6affe21f627ec40a
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134126"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595603"
 ---
 # <a name="ubuntu-1910-package-manager---install-net-core"></a>Ubuntu 19.10 パッケージ マネージャー - .NET Core のインストール
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134126"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft キーとフィードを登録する
+## <a name="add-microsoft-repository-key-and-feed"></a>Microsoft リポジトリ キーとフィードを追加する
 
 .NET をインストールする前に、次のことを行う必要があります。
 
-- Microsoft キーを登録する。
-- 製品リポジトリを登録する。
+- Microsoft パッケージ署名キーを信頼されたキーのリストに追加します。
+- リポジトリをパッケージ マネージャーに追加します。
 - 必要な依存関係をインストールする。
 
 これは、コンピューターごとに 1 回実行する必要があるだけです。
@@ -100,7 +100,7 @@ sudo apt-get install {the .NET Core package}
 
 ```bash
 sudo apt-get install -y gpg
-wget O- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
+wget -O - https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor -o microsoft.asc.gpg
 sudo mv microsoft.asc.gpg /etc/apt/trusted.gpg.d/
 wget https://packages.microsoft.com/config/ubuntu/19.10/prod.list
 sudo mv prod.list /etc/apt/sources.list.d/microsoft-prod.list

@@ -2,12 +2,12 @@
 title: Windows フォームに関する破壊的変更
 description: .NET Core 用の Windows フォームにおける破壊的変更の一覧を示します。
 ms.date: 01/08/2020
-ms.openlocfilehash: 25c568a8a0092a9c4874419c64c7dcebea4dce9e
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: 75d369c7fb999da81a50fe46716e125c3840eb7a
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888131"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158438"
 ---
 # <a name="breaking-changes-in-windows-forms"></a>Windows フォームでの破壊的変更
 
@@ -17,7 +17,9 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
-| [WinForms API で ArgumentNullException がスローされる](#winforms-apis-now-throw-argumentnullexception) | 5.0 |
+| [削除されたステータス バー コントロール](#removed-status-bar-controls) | 5.0 |
+| [WinForms メソッドで ArgumentException がスローされるようになった](#winforms-methods-now-throw-argumentexception) | 5.0 |
+| [WinForms メソッドで ArgumentNullException がスローされるようになった](#winforms-methods-now-throw-argumentnullexception) | 5.0 |
 | [削除されたコントロール](#removed-controls) | 3.1 |
 | [ヒントが表示されていると CellFormatting が発生しない](#cellformatting-event-not-raised-if-tooltip-is-shown) | 3.1 |
 | [Control.DefaultFont を Segoe UI 9 pt に変更](#default-control-font-changed-to-segoe-ui-9-pt) | 3.0 |
@@ -35,6 +37,14 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 | [Windows フォームからの重複する API の削除](#duplicated-apis-removed-from-windows-forms) | 3.0 |
 
 ## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [winforms-deprecated-controls](../../../includes/core-changes/windowsforms/5.0/winforms-deprecated-controls.md)]
+
+***
+
+[!INCLUDE [invalid-args-cause-argumentexception](../../../includes/core-changes/windowsforms/5.0/invalid-args-cause-argumentexception.md)]
+
+***
 
 [!INCLUDE [null-args-cause-argumentnullexception](../../../includes/core-changes/windowsforms/5.0/null-args-cause-argumentnullexception.md)]
 

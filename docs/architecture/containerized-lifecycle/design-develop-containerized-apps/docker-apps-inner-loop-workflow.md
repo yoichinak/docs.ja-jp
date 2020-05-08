@@ -2,12 +2,12 @@
 title: Docker アプリの内部ループ開発ワークフロー
 description: Docker アプリケーションの開発の "内部ループ" ワークフローについて説明します。
 ms.date: 02/15/2019
-ms.openlocfilehash: 615cfd08f46609c4e100ea3e72b541fe2c1ae62a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: bce047bd5ba75f9ef652a294ff6a15656fc5ac34
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989013"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738417"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
@@ -83,7 +83,7 @@ Docker 拡張機能をインストールするには、Ctrl + Shift + P キー�
 
 ![VS Code 用 Docker 拡張機能の表示。](./media/docker-apps-inner-loop-workflow/install-docker-extension-vs-code.png)
 
-**図 4-23**. Visual Studio Code で Docker 拡張機能をインストールする
+**図 4-23**.  Visual Studio Code で Docker 拡張機能をインストールする
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>手順 2: 既存のイメージ (プレーンな OS か、.NET Core、Node.js、Ruby などの開発環境) に関連する DockerFile を作成する
 
@@ -156,7 +156,7 @@ Docker の[この記事](https://docs.docker.com/engine/userguide/eng-image/base
 >
 > そのため、各開発者はまず、内部ループ プロセス全体を行ってローカル テストし、それから、完全な機能または変更をソース コントロール システムにプッシュするまで開発を続けます。
 
-DockerFile を使用し、ローカル環境でイメージを作成するには、図 4-25 にあるように、docker build コマンドを使用できます (いくつかのコンテナー/サービスで構成されるアプリケーションに `docker-compose up --build` を実行することもできます)。
+DockerFile を使用し、ローカル環境でイメージを作成するには、図 4-25 にあるように、docker build コマンドを使用できます (いくつかのコンテナーとサービスで構成されるアプリケーションに対して `docker-compose up --build` を実行することもできます)。
 
 ![docker build コマンドのコンソール出力を示すスクリーンショット。](./media/docker-apps-inner-loop-workflow/run-docker-build-command.png)
 

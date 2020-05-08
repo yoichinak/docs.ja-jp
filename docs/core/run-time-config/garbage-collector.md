@@ -3,12 +3,12 @@ title: ガベージ コレクター構成の設定
 description: ガベージ コレクターでの .NET Core アプリ用のメモリの管理方法を構成するための、実行時設定について学習します。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: dfb641eeda03d1acaa4771bd6253fcb33c4082a6
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607811"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102867"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>ガベージ コレクションの実行時構成オプション
 
@@ -24,7 +24,7 @@ ms.locfileid: "81607811"
 
 ## <a name="flavors-of-garbage-collection"></a>ガベージ コレクションのフレーバー
 
-ガベージ コレクションの主な 2 つのフレーバーは、ワークステーション GC とサーバー GC です。 2 つの間の相違点について詳しくは、「[ガベージ コレクションの基礎](../../standard/garbage-collection/fundamentals.md#workstation-and-server-garbage-collection)」を参照してください。
+ガベージ コレクションの主な 2 つのフレーバーは、ワークステーション GC とサーバー GC です。 2 つの間の相違点について詳しくは、「[ワークステーションとサーバーのガベージ コレクション](../../standard/garbage-collection/workstation-server-gc.md)」をご覧ください。
 
 ガベージ コレクションのサブフレーバーは、バックグラウンドと非同時実行です。
 
@@ -72,7 +72,7 @@ ms.locfileid: "81607811"
 
 - バックグラウンド (同時実行) ガベージ コレクションを有効にするかどうかを構成します。
 - 既定:有効 (`true`)。
-- 詳細については、[バックグラウンド ガベージ コレクション](../../standard/garbage-collection/fundamentals.md#background-workstation-garbage-collection)に関する記事と、「[バックグラウンド サーバー ガベージ コレクション](../../standard/garbage-collection/fundamentals.md#background-server-garbage-collection)」を参照してください。
+- 詳しくは、「[バックグラウンド ガベージ コレクション](../../standard/garbage-collection/background-gc.md)」をご覧ください。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
@@ -240,7 +240,7 @@ ms.locfileid: "81607811"
 
 - GC ヒープおよび GC ブックキーピングに対して、最大コミット サイズをバイト単位で指定します。
 - この設定は 64 ビットのコンピューターにのみ該当します。
-- 特定のケースにのみ該当する既定値は、20 MB 未満であるか、コンテナーのメモリ制限の 75% 未満です。 次の場合に既定値は該当します。
+- 特定のケースにのみ該当する既定値は、20 MB より大、またはコンテナーのメモリ制限の 75% より大です。 次の場合に既定値は該当します。
 
   - プロセスが、メモリ制限が指定されたコンテナー内で実行されています。
   - [System.GC.HeapHardLimitPercent](#systemgcheaphardlimitpercentcomplus_gcheaphardlimitpercent) が設定されていません。

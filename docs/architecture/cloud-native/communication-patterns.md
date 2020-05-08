@@ -3,12 +3,12 @@ title: クラウドネイティブの通信パターン
 description: クラウドネイティブアプリケーションでの重要なサービス通信に関する考慮事項について説明します。
 author: robvet
 ms.date: 08/31/2019
-ms.openlocfilehash: 3bda9baa516b7bd8f893e0f58bbe5e2bfde2b61d
-ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
+ms.openlocfilehash: b3edc0817fb76ad99a1344b17d600eb747187f86
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "73841145"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895624"
 ---
 # <a name="cloud-native-communication-patterns"></a>クラウドネイティブの通信パターン
 
@@ -26,7 +26,7 @@ ms.locfileid: "73841145"
 
 ![Azure の Kubernetes クラスター](./media/kubernetes-cluster-in-azure.png)
 
-**図 4-1** Azure の Kubernetes クラスター
+**図 4-1**. Azure の Kubernetes クラスター
 
 クラスター全体で、マイクロサービスは Api およびメッセージングテクノロジによって相互に通信します。
 
@@ -44,7 +44,7 @@ ms.locfileid: "73841145"
 
 - メッセージの暗号化/復号化が重要になります。
 
-本「 [.Net マイクロサービス: コンテナー化された .Net アプリケーションのアーキテクチャ](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)」では、Microsoft から無料で利用でき、マイクロサービスアプリケーションの通信パターンの詳細について説明しています。 この章では、これらのパターンの概要と、Azure クラウドで利用可能な実装オプションについて説明します。
+本「 [.Net マイクロサービス: コンテナー化された .Net アプリケーションのアーキテクチャ](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)」では、Microsoft から無料で利用でき、マイクロサービスアプリケーションの通信パターンの詳細について説明しています。 この章では、これらのパターンの概要と、Azure クラウドで利用可能な実装オプションについて説明します。
 
 この章では、まずフロントエンドアプリケーションとバックエンドマイクロサービス間の通信に対処します。 次に、バックエンドマイクロサービスが相互に通信することを確認します。 ここでは、up and gRPC 通信テクノロジについて説明します。 最後に、サービスメッシュテクノロジを使用した革新的な新しい通信パターンについて見ていきます。 また、クラウドネイティブ通信をサポートするために、Azure クラウドがさまざまな種類の*バッキングサービス*を提供する方法についても説明します。
 

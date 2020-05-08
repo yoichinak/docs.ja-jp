@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: f8db79db6c4a66dfe13ec936313c4cf2c3b93be5
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79174408"
@@ -43,7 +43,7 @@ ms.locfileid: "79174408"
   
  <xref:System.Transactions.CommittableTransaction.BeginCommit%2A> を呼び出すことで、スレッド プールからのスレッドにコミット ホールドアップをディスパッチできます。 また、<xref:System.Transactions.CommittableTransaction.EndCommit%2A> を呼び出して、トランザクションが実際にコミットされたかどうかを判断することもできます。 なんらかの理由でトランザクションがコミットされなかった場合、<xref:System.Transactions.CommittableTransaction.EndCommit%2A> はトランザクションの例外を発生させます。 <xref:System.Transactions.CommittableTransaction.EndCommit%2A> が呼び出された時点でトランザクションがまだコミットされていない場合、トランザクションがコミットまたは中止されるまで、呼び出し元がブロックされます。  
   
- 非同期のコミットを行う最も簡単な方法は、コミットの完了時に呼び出されるコールバック メソッドを提供することです。 ただし、呼び出しを実行するために使用する元の <xref:System.Transactions.CommittableTransaction.EndCommit%2A> オブジェクトに対して <xref:System.Transactions.CommittableTransaction> メソッドを呼び出す必要があります。 このオブジェクトを取得するには、クラスが実装<xref:System.IAsyncResult>されているため、コールバック メソッドの*IAsyncResult*パラメーター<xref:System.Transactions.CommittableTransaction>をダウンキャストできます。  
+ 非同期のコミットを行う最も簡単な方法は、コミットの完了時に呼び出されるコールバック メソッドを提供することです。 ただし、呼び出しを実行するために使用する元の <xref:System.Transactions.CommittableTransaction.EndCommit%2A> オブジェクトに対して <xref:System.Transactions.CommittableTransaction> メソッドを呼び出す必要があります。 そのオブジェクトを取得するには、コールバック メソッドの *IAsyncResult* パラメーターをダウンキャストできます。これは、<xref:System.Transactions.CommittableTransaction> クラスで <xref:System.IAsyncResult> クラスが実装されているためです。  
   
  次の例は、非同期コミットの実行方法を示しています。  
   
@@ -88,4 +88,4 @@ void OnCommitted(IAsyncResult asyncResult)
 ## <a name="see-also"></a>関連項目
 
 - [トランザクション スコープを使用した暗黙的なトランザクションの実装](implementing-an-implicit-transaction-using-transaction-scope.md)
-- [トランザクション処理 ](index.md)
+- [トランザクション処理](index.md)

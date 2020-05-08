@@ -7,18 +7,18 @@ dev_langs:
 ms.assetid: 55c545e5-dcd5-4323-a5b9-3825c2157462
 ms.openlocfilehash: 18bb03e17b19243ee1bc6e3f7ebd70afb4d4c60b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79174447"
 ---
 # <a name="updating-data-in-a-data-source"></a>データ ソースのデータの更新
-データを変更する SQL ステートメント (INSERT、UPDATE、DELETE など) は行を返しません。 同様に、多くのストアド プロシージャは、アクションを実行しても行を返しません。 行を返さないコマンドを実行するには、適切な SQL コマンドを使用して**Command**オブジェクトを作成し、必要なパラメーター を含む**接続****を作成します**。 コマンド オブジェクトの**ExecuteNonQuery**メソッドを使用して**コマンド**を実行します。  
+データを変更する SQL ステートメント (INSERT、UPDATE、DELETE など) は行を返しません。 同様に、多くのストアド プロシージャは、アクションを実行しても行を返しません。 行を返さないコマンドを実行するには、適切な SQL コマンドを使用して **Command** オブジェクトを作成し、必要な **Parameters** を含む **Connection** を作成します。 **Command** オブジェクトの **ExecuteNonQuery** メソッドでコマンドを実行します。  
   
- **ExecuteNonQuery**メソッドは、実行されたステートメントまたはストアド プロシージャによって影響を受ける行数を表す整数を返します。 複数のステートメントが実行された場合は、実行された各ステートメントの影響を受けたレコードの合計を示す値が返されます。  
+ **ExecuteNonQuery** メソッドからは、実行されたステートメントまたはストアド プロシージャの影響を受けた行数を表す整数が返されます。 複数のステートメントが実行された場合は、実行された各ステートメントの影響を受けたレコードの合計を示す値が返されます。  
   
 ## <a name="example"></a>例  
- 次のコード例では、INSERT ステートメントを実行して、データベースにレコードを**挿入**します。  
+ INSERT ステートメントを実行して、**ExecuteNonQuery** でデータベースにレコードを挿入するコードの例を次に示します。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  
@@ -42,9 +42,9 @@ SqlCommand command = new SqlCommand(queryString, connection);
 Int32 recordsAffected = command.ExecuteNonQuery();  
 ```  
   
- 次のコード例では、「[カタログ操作の実行](performing-catalog-operations.md)」のサンプル コードで作成されたストアド プロシージャを実行します。 ストアド プロシージャからは行が返されないため **、ExecuteNonQuery**メソッドが使用されますが、ストアド プロシージャは入力パラメータを受け取り、出力パラメータと戻り値を返します。  
+ 「[カタログ操作の実行](performing-catalog-operations.md)」と同じコードで作成されたストアド プロシージャを実行するコードの例を次に示します。 ストアド プロシージャは行を返さないため **ExecuteNonQuery** メソッドが使用されていますが、ストアド プロシージャは入力パラメーターを受け取り、出力パラメーターと戻り値を返します。  
   
- オブジェクトの<xref:System.Data.OleDb.OleDbCommand>場合は、最初にパラメーター**コレクションに** **ReturnValue**パラメーターを追加する必要があります。  
+ <xref:System.Data.OleDb.OleDbCommand> オブジェクトの場合は、最初に **Parameters** コレクションに **ReturnValue** パラメーターを追加する必要があります。  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection.  

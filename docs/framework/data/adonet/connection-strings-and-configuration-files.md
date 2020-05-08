@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
 ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2020
 ms.locfileid: "80345057"
@@ -65,7 +65,7 @@ ms.locfileid: "80345057"
  .NET Framework 2.0 では、<xref:System.Configuration> 名前空間に新しいクラスが導入され、実行時に簡単に構成ファイルから接続文字列を取得できるようになりました。 プログラムから名前またはプロバイダー名を使用して接続文字列を取得できます。  
   
 > [!NOTE]
-> **connectionStrings** セクションは、**machine.config** ファイルにも存在します。このセクションには、Visual Studio によって使用される接続文字列が格納されます。 Windows アプリケーションの**app.config**ファイルからプロバイダー名で接続文字列を取得する場合、最初に**machine.config**の接続文字列が読み込まれ、次に**app.config**からエントリが読み込まれます。**connectionStrings**要素の直後に**clear を**追加すると、メモリ内のデータ構造から継承されたすべての参照が削除され、ローカルの**app.config**ファイルで定義されている接続文字列のみが考慮されます。  
+> **connectionStrings** セクションは、**machine.config** ファイルにも存在します。このセクションには、Visual Studio によって使用される接続文字列が格納されます。 Windows アプリケーションの **app.config** ファイルからプロバイダー名で接続文字列を取得した場合、まず **machine.config** 内の接続文字列が読み込まれ、その後、**app.config** のエントリが読み込まれます。**connectionStrings** 要素の直後に **clear** を追加すると、継承されたすべての参照がメモリ内のデータ構造から削除され、ローカルの **app.config** ファイルに定義されている接続文字列だけが考慮されます。  
   
 ### <a name="working-with-the-configuration-classes"></a>構成クラスの使用  
  .NET Framework 2.0 以降では、ローカル コンピューター上の構成ファイルで作業するときに、非推奨とされた <xref:System.Configuration.ConfigurationManager> に代わって <xref:System.Configuration.ConfigurationSettings> を使用します。 ASP.NET 構成ファイルでの作業では、<xref:System.Web.Configuration.WebConfigurationManager> を使用します。 Web サーバー上の構成ファイルを扱うことを目的に設計され、**system.web** など、構成ファイルのセクションにプログラムからアクセスできます。  
@@ -79,10 +79,10 @@ ms.locfileid: "80345057"
 |--------------|-----------------|  
 |<xref:System.Configuration.ConnectionStringSettings.Name%2A>|接続文字列の名前。 **name** 属性にマップされています。|  
 |<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A>|プロバイダーの完全修飾名。 **providerName** 属性にマップされています。|  
-|<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|接続文字列です。 **connectionString** 属性にマップされています。|  
+|<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|接続文字列。 **connectionString** 属性にマップされています。|  
   
-### <a name="example-listing-all-connection-strings"></a>例 : すべての接続文字列を一覧表示する  
- この例では、 を<xref:System.Configuration.ConnectionStringSettingsCollection>反復処理し<xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>、<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>コンソール<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType>ウィンドウに プロパティ 、、および プロパティを表示します。  
+### <a name="example-listing-all-connection-strings"></a>例:すべての接続文字列を一覧表示する  
+ この例では、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理しながら、<xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>、<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>、<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType> の各プロパティをコンソール ウィンドウに表示します。  
   
 > [!NOTE]
 > プロジェクトの種類によっては System.Configuration.dll がインクルードされていない場合があります。構成クラスを使用する場合は、必要に応じて参照設定するようにしてください。 特定のアプリケーションの構成ファイルの名前と場所は、アプリケーションの種類やホストしているプロセスによって異なります。  
@@ -90,13 +90,13 @@ ms.locfileid: "80345057"
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfig#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfig/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-name"></a>例 : 接続文字列を名前で取得する  
+### <a name="example-retrieving-a-connection-string-by-name"></a>例:接続文字列を名前で取得する  
  次の例では、接続文字列の名前を指定することによって、接続文字列を構成ファイルから取得する方法を説明します。 このコードでは、指定された入力パラメーターと <xref:System.Configuration.ConnectionStringSettings> の名前とを照合することによって、<xref:System.Configuration.ConfigurationManager.ConnectionStrings%2A> オブジェクトを作成します。 一致する名前が見つからなかった場合は `null` (Visual Basic の場合は `Nothing`) が返されます。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringSettings.RetrieveFromConfigByName#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByName/VB/source.vb#1)]  
   
-### <a name="example-retrieving-a-connection-string-by-provider-name"></a>例 : 接続文字列をプロバイダー名で取得する  
+### <a name="example-retrieving-a-connection-string-by-provider-name"></a>例:プロバイダー名による接続文字列の取得  
  次の例では、プロバイダーの不変名を *System.Data.ProviderName* の形式で指定することによって接続文字列を取得する方法を説明します。 このコードでは、<xref:System.Configuration.ConnectionStringSettingsCollection> を反復処理し、最初に見つかった <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> の接続文字列を返します。 プロバイダー名が見つからなかった場合は `null` (Visual Basic の場合は `Nothing`) が返されます。  
   
  [!code-csharp[DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringSettings.RetrieveFromConfigByProvider/CS/source.cs#1)]
@@ -143,7 +143,7 @@ ms.locfileid: "80345057"
  どちらのプロバイダーも、強力なデータ暗号化機能を備えています。 ただし、Web ファームなど、複数のサーバーで、同じ構成ファイルを暗号化して使用する場合、データの暗号化に使用される暗号化キーをエクスポートしたり、それを別のサーバーにインポートしたりできるのは、<xref:System.Configuration.RsaProtectedConfigurationProvider> だけです。 詳細については、「[保護された構成 RSA キー コンテナのインポートとエクスポート](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))」を参照してください。  
   
 ### <a name="using-the-configuration-classes"></a>構成クラスの使用  
- <xref:System.Configuration> 名前空間には、構成設定をプログラムから行うためのクラスが存在します。 <xref:System.Configuration.ConfigurationManager> クラスは、コンピューター、アプリケーション、ユーザーの各構成ファイルへのアクセスを提供します。 ASP.NETアプリケーションを作成する場合は、同じ機能を<xref:System.Web.Configuration.WebConfigurationManager>提供するクラスを使用すると同時に**\<、system.web>** に含まれるようなASP.NETアプリケーションに固有の設定にアクセスすることもできます。  
+ <xref:System.Configuration> 名前空間には、構成設定をプログラムから行うためのクラスが存在します。 <xref:System.Configuration.ConfigurationManager> クラスは、コンピューター、アプリケーション、ユーザーの各構成ファイルへのアクセスを提供します。 ASP.NET アプリケーションを作成している場合は、同じ機能を持った <xref:System.Web.Configuration.WebConfigurationManager> クラスを使用します。他にも **\<system.web>** の設定など、ASP.NET アプリケーション固有の設定にもアクセスできます。  
   
 > [!NOTE]
 > <xref:System.Security.Cryptography> 名前空間には、データの暗号化と復号化に関連した補足的なオプションを提供するクラスが存在します。 これらのクラスは、保護構成では利用できない暗号化サービスが必要な場合に使用します。 これらのクラスは必ずしも純粋なマネージド実装とは限らず、アンマネージド Microsoft CryptoAPI 用のラッパーもあります。 詳細については、「[暗号サービス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))」をご覧ください。  
@@ -168,7 +168,7 @@ ms.locfileid: "80345057"
  [!code-csharp[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/CS/source.cs#1)]
  [!code-vb[DataWorks ConnectionStringsWeb.Encrypt#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks ConnectionStringsWeb.Encrypt/VB/source.vb#1)]  
   
- ASP.NETアプリケーションのセキュリティ保護の詳細については、「 [web サイトのセキュリティASP.NET」](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))を参照してください。  
+ ASP.NET アプリケーションのセキュリティ保護について詳しくは、「[ASP.NET Web サイトのセキュリティ保護](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

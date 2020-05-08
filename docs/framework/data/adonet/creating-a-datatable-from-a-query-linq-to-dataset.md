@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
 ms.openlocfilehash: 46e977088cd6eca7842565ae6b258f70ca5920a9
 ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80111817"
@@ -17,7 +17,7 @@ ms.locfileid: "80111817"
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドでは、次の処理を実行することでクエリの結果から <xref:System.Data.DataTable> を作成します。  
   
-1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドにより、ソース テーブル (<xref:System.Data.DataTable> インターフェイスを実装する <xref:System.Data.DataTable> オブジェクト) から <xref:System.Linq.IQueryable%601> を複製します。 ソース<xref:System.Collections.IEnumerable>は、通常、LINQ to DataSet 式またはメソッド クエリから発生しています。  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドにより、ソース テーブル (<xref:System.Data.DataTable> インターフェイスを実装する <xref:System.Data.DataTable> オブジェクト) から <xref:System.Linq.IQueryable%601> を複製します。 通常、<xref:System.Collections.IEnumerable> ソースは LINQ to DataSet 式またはメソッド クエリから生成されます。  
   
 2. 複製の <xref:System.Data.DataTable> のスキーマは、ソース テーブルで最初に列挙されている <xref:System.Data.DataRow> オブジェクトの列から作成されます。複製したテーブルの名前は、ソース テーブルの名前に "query" という単語を付加した名前になります。  
   
@@ -25,19 +25,19 @@ ms.locfileid: "80111817"
   
 4. クエリ実行可能な入力テーブルの <xref:System.Data.DataTable> オブジェクトがすべてコピーされた後、複製の <xref:System.Data.DataRow> が返されます。 基となるシーケンスに <xref:System.Data.DataRow> オブジェクトが含まれていない場合、このメソッドは空の <xref:System.Data.DataTable> を返します。  
   
-メソッドを<xref:System.Data.DataTableExtensions.CopyToDataTable%2A>呼び出すと、ソース テーブルにバインドされたクエリが実行されます。  
+<xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドを呼び出すと、ソース テーブルにバインドされているクエリが実行されます。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドにより、ソース テーブルの行に Null 参照または Null 許容の値型が検出された場合、その値は <xref:System.DBNull.Value> に置き換えられます。 このようにして、返される <xref:System.Data.DataTable> の Null 値が適切に処理されます。  
   
- メモ : <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、複数の <xref:System.Data.DataTable> オブジェクトまたは <xref:System.Data.DataSet> オブジェクトから行を返せるクエリを入力として受け入れます。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、ソースの <xref:System.Data.DataTable> または <xref:System.Data.DataSet> オブジェクトから、返された <xref:System.Data.DataTable> にデータをコピーしますが、プロパティはコピーしません。 <xref:System.Data.DataTable> や <xref:System.Data.DataTable.Locale%2A> などの返された <xref:System.Data.DataTable.TableName%2A> に、明示的にプロパティを設定する必要があります。  
+ メモ:<xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、複数の <xref:System.Data.DataTable> オブジェクトまたは <xref:System.Data.DataSet> オブジェクトから行を返せるクエリを入力として受け入れます。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、ソースの <xref:System.Data.DataTable> または <xref:System.Data.DataSet> オブジェクトから、返された <xref:System.Data.DataTable> にデータをコピーしますが、プロパティはコピーしません。 <xref:System.Data.DataTable> や <xref:System.Data.DataTable.Locale%2A> などの返された <xref:System.Data.DataTable.TableName%2A> に、明示的にプロパティを設定する必要があります。  
   
  次の例では、SalesOrderHeader テーブルに対して 2001 年 8 月 8 日以降の注文をクエリし、<xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドを使用して、このクエリから <xref:System.Data.DataTable> を作成します。 次に、<xref:System.Data.DataTable> が <xref:System.Windows.Forms.BindingSource> にバインドされます。これは <xref:System.Windows.Forms.DataGridView> のプロキシとして機能します。  
   
  [!code-csharp[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#copytodatatable1)]
  [!code-vb[DP LINQ to DataSet Examples#CopyToDataTable1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#copytodatatable1)]  
   
-## <a name="creating-a-custom-copytodatatablet-method"></a>カスタム コピーデータ テーブル\<T> メソッドの作成  
- 既存の <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、ジェネリック パラメーター <xref:System.Collections.Generic.IEnumerable%601> が `T` 型である <xref:System.Data.DataRow> ソースに対してのみ作用します。 有用ではありますが、一連のスカラー型、匿名型を返すクエリ、またはテーブルの結合を実行するクエリからは、テーブルを作成できません。 スカラー型または匿名型のシーケンスから`CopyToDataTable`テーブルを読み込む 2 つのカスタム メソッドを実装する方法の例については、「[方法:\<ジェネリック型 T が DataRow でない場合に copyToDataTable T>実装](implement-copytodatatable-where-type-not-a-datarow.md)する」を参照してください。  
+## <a name="creating-a-custom-copytodatatablet-method"></a>カスタム CopyToDataTable\<T> メソッドの作成  
+ 既存の <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、ジェネリック パラメーター <xref:System.Collections.Generic.IEnumerable%601> が `T` 型である <xref:System.Data.DataRow> ソースに対してのみ作用します。 有用ではありますが、一連のスカラー型、匿名型を返すクエリ、またはテーブルの結合を実行するクエリからは、テーブルを作成できません。 一連のスカラー型または匿名型からテーブルを読み込む 2 つのカスタム `CopyToDataTable` メソッドの実装例については、「[方法: ジェネリック型 T が DataRow ではない CopyToDataTable\<T> を実装する](implement-copytodatatable-where-type-not-a-datarow.md)」を参照してください。  
   
  このセクションの例には、次のカスタム型が使用されています。  
   

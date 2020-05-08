@@ -4,12 +4,12 @@ description: パッケージ マネージャーを使用して、.NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: cfe28d04edfac97938612537986498636c141be0
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 2e45698d6b87499a54a25b6779ec1a767a2ece6b
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134293"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645378"
 ---
 # <a name="debian-9-package-manager---install-net-core"></a>Debian 9 パッケージ マネージャー - .NET Core をインストールする
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134293"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft キーとフィードを登録する
+## <a name="add-microsoft-repository-key-and-feed"></a>Microsoft リポジトリ キーとフィードを追加する
 
 .NET をインストールする前に、次のことを行う必要があります。
 
-- Microsoft キーを登録する。
-- 製品リポジトリを登録する。
+- Microsoft パッケージ署名キーを信頼されたキーのリストに追加します。
+- リポジトリをパッケージ マネージャーに追加します。
 - 必要な依存関係をインストールする。
 
 これは、コンピューターごとに 1 回実行する必要があるだけです。

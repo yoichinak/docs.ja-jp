@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/04/2019
 ms.custom: updateeachrelease
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 3efc54cea7e10bc21a472a7fa9d4026e305be79a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3a78acee6cf427085e98f14353fc2c0ac65d3d80
+ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79397981"
+ms.lasthandoff: 04/20/2020
+ms.locfileid: "81645347"
 ---
 # <a name="how-to-check-that-net-core-is-already-installed"></a>.NET Core が既にインストールされていることを確認する方法
 
@@ -166,11 +166,56 @@ Microsoft.NETCore.App 3.1.0 [/usr/local/share/dotnet/shared/Microsoft.NETCore.Ap
 
 ::: zone-end
 
+## <a name="check-for-install-folders"></a>インストール フォルダーを確認する
+
+.NET Core がインストールされていても、オペレーティング システムまたはユーザー プロファイルの `PATH` 変数に追加されていない可能性があります。 前のセクションのコマンドを実行しても、機能しない場合があります。 別の方法として、.NET Core のインストール フォルダーが存在することを確認できます。
+
+インストーラーまたはスクリプトから .NET Core をインストールすると、標準のフォルダーにインストールされます。 通常、.NET Core のインストールに使用するインストーラーまたはスクリプトには、別のフォルダーにインストールするためのオプションがあります。 別のフォルダーにインストールする場合は、フォルダー パスの先頭を調整します。
+
+::: zone pivot="os-windows"
+
+- **dotnet 実行可能ファイル**\
+_C:\\program files\\dotnet\\dotnet.exe_
+
+- **.NET SDK**\
+_C:\\program files\\dotnet\\sdk\\<バージョン>\\_
+
+- **.NET ランタイム**\
+_C:\\program files\\dotnet\\shared\\<ランタイムの種類>\\<バージョン>\\_
+
+::: zone-end
+
+::: zone pivot="os-linux"
+
+- **dotnet 実行可能ファイル**\
+_/home/user/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/home/user/share/dotnet/sdk/<バージョン>/_
+
+- **.NET ランタイム**\
+_/home/user/share/dotnet/shared/<ランタイムの種類>/<バージョン>/_
+
+::: zone-end
+
+::: zone pivot="os-macos"
+
+- **dotnet 実行可能ファイル**\
+_/usr/local/share/dotnet/dotnet_
+
+- **.NET SDK**\
+_/usr/local/share/dotnet/sdk/<バージョン>/_
+
+- **.NET ランタイム**\
+_/usr/local/share/dotnet/shared/<ランタイムの種類>/<バージョン>/_
+
+::: zone-end
+
 ## <a name="more-information"></a>詳細情報
 
 コマンド `dotnet --info` を使用すると、SDK バージョンとランタイム バージョンの両方を確認できます。 また、オペレーティング システムのバージョンやランタイム識別子 (RID) など、その他の環境に関連する情報も取得されます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - [.NET Core ランタイムをインストール](runtime.md)します。
 - [.NET Core SDK をインストール](sdk.md)します。

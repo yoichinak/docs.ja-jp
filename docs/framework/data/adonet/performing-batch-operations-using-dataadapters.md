@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: 62a61051e5b9d896f8a89ed3d2745859fc07a7ec
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79149259"
@@ -24,7 +24,7 @@ ADO.NET のバッチ サポートを利用すると、<xref:System.Data.Common.D
 ## <a name="using-the-updatebatchsize-property"></a>UpdateBatchSize プロパティの使用  
  バッチ更新を有効にする場合、DataAdapter の <xref:System.Data.IDbCommand.UpdatedRowSource%2A>、`UpdateCommand` および `InsertCommand` の `DeleteCommand` プロパティ値を、<xref:System.Data.UpdateRowSource.None> または <xref:System.Data.UpdateRowSource.OutputParameters> に設定する必要があります。 バッチ更新を実行する際、<xref:System.Data.IDbCommand.UpdatedRowSource%2A> または <xref:System.Data.UpdateRowSource.FirstReturnedRecord> のコマンドの <xref:System.Data.UpdateRowSource.Both> プロパティ値は、無効になります。  
   
- `UpdateBatchSize` プロパティを使用するプロシージャを次に示します。 プロシージャは、2 つの引数<xref:System.Data.DataSet>を受け取ります、 **ProductCategoryID**と**名前**フィールドを表す列を持つオブジェクト、**製品.ProductCategory**テーブル、およびバッチ サイズ (バッチ内の行の数) を表す整数。 このコードにより、新しい <xref:System.Data.SqlClient.SqlDataAdapter> オブジェクトが作成され、その <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> プロパティ、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> プロパティ、および <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> プロパティが設定されます。 このコードは、<xref:System.Data.DataSet> オブジェクトによって行が変更済みになっていることを前提としています。 このオブジェクトは、`UpdateBatchSize` プロパティを設定し、更新を実行します。  
+ `UpdateBatchSize` プロパティを使用するプロシージャを次に示します。 このプロシージャは、2 つの引数を受け取ります。1 つは、**Production.ProductCategory** テーブル内の **ProductCategoryID** フィールドと **Name** フィールドを表す列を持つ <xref:System.Data.DataSet> オブジェクトで、もう 1 つは、バッチ サイズ (バッチ ファイル内の行数) を表す整数です。 このコードにより、新しい <xref:System.Data.SqlClient.SqlDataAdapter> オブジェクトが作成され、その <xref:System.Data.SqlClient.SqlDataAdapter.UpdateCommand%2A> プロパティ、<xref:System.Data.SqlClient.SqlDataAdapter.InsertCommand%2A> プロパティ、および <xref:System.Data.SqlClient.SqlDataAdapter.DeleteCommand%2A> プロパティが設定されます。 このコードは、<xref:System.Data.DataSet> オブジェクトによって行が変更済みになっていることを前提としています。 このオブジェクトは、`UpdateBatchSize` プロパティを設定し、更新を実行します。  
   
 ```vb  
 Public Sub BatchUpdate( _  
@@ -126,7 +126,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ```  
   
 ## <a name="handling-batch-update-related-events-and-errors"></a>バッチ更新に関連するイベントおよびエラーの処理  
- **DataAdapter には**、**更新**に関連する 2 つのイベント**があります。** 以前のバージョンの ADO.NET では、バッチ処理が無効になっていると、処理された行ごとにこれらのイベントがそれぞれ生成されます。 更新が行われる前に**RowUpdate**が生成され、データベースの更新が完了した後に**RowUpdated**が生成されます。  
+ **DataAdapter** には、次の 2 つの更新関連イベントがあります: **RowUpdating** と **RowUpdated**。 以前のバージョンの ADO.NET では、バッチ処理が無効になっていると、処理された行ごとにこれらのイベントがそれぞれ生成されます。 **RowUpdating** は更新が行われる前に生成され、**RowUpdated** はデータベースの更新が完了した後で生成されます。  
   
 ### <a name="event-behavior-changes-with-batch-updates"></a>バッチ更新とイベント動作の違い  
  バッチ処理が有効になっている場合、1 度のデータベース操作で複数の行が更新されます。 このため、`RowUpdated` イベントは処理された各行ごとに発生しますが、`RowUpdating` イベントは各バッチ処理につき、1 つしか発生しません。 バッチ処理が無効になっている場合、1 対 1 のインターリーブを伴う 2 つのイベントが発生します。つまり、1 つの行に対し、`RowUpdating` イベントが 1 つ、`RowUpdated` イベントが 1 つ発生します。すべての行が処理されるまで、次の行に対して `RowUpdating` イベントが 1 つ、`RowUpdated` イベントが 1 つ発生します。  

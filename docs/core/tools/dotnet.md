@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI の汎用ドライバー) とその使用方法について説明します。
 ms.date: 02/13/2020
-ms.openlocfilehash: 8692d419afd528bf49e1dc7dc1a7a5fd698b363b
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134072"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739079"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -22,26 +22,27 @@ ms.locfileid: "80134072"
 利用できるコマンドと環境に関する情報を取得するには:
 
 ```dotnetcli
-dotnet [-h|--help] [--version] [--info]
-    [--list-runtimes] [--list-sdks]
+dotnet [--version] [--info] [--list-runtimes] [--list-sdks]
+
+dotnet -h|--help
 ```
 
 コマンドを実行するには (SDK のインストールが必要):
 
 ```dotnetcli
-dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity]
+dotnet <COMMAND> [-d|--diagnostics] [-h|--help] [--verbosity <LEVEL>]
     [command-options] [arguments]
 ```
 
 アプリケーションを実行するには:
 
 ```dotnetcli
-dotnet [--additionalprobingpath] [--additional-deps]
-    [--fx-version]  [--roll-forward]
+dotnet [--additionalprobingpath <PATH>] [--additional-deps <PATH>]
+    [--fx-version <VERSION>]  [--roll-forward <SETTING>]
     <PATH_TO_APPLICATION> [arguments]
 
-dotnet exec [--additionalprobingpath] [--additional-deps]
-    [--fx-version]  [--roll-forward]
+dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
+    [--fx-version <VERSION>]  [--roll-forward <SETTING>]
     <PATH_TO_APPLICATION> [arguments]
 ```
 
@@ -57,7 +58,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - .NET Core アプリケーションを実行します。
 
-  アプリケーションを実行するには、アプリケーション `.dll` ファイルへのパスを指定します。 たとえば、`dotnet myapp.dll` を使うと、`myapp` アプリケーションが実行されます。 展開オプションについては、「[.NET Core アプリケーションの展開](../deploying/index.md)」を参照してください。
+  アプリケーションを実行するには、アプリケーション `.dll` ファイルへのパスを指定します。  アプリケーションを実行するということは、エントリ ポイントを見つけて実行することを意味します。コンソール アプリの場合、これは `Main` メソッドです。 たとえば、`dotnet myapp.dll` を使うと、`myapp` アプリケーションが実行されます。 展開オプションについては、「[.NET Core アプリケーションの展開](../deploying/index.md)」を参照してください。
 
 ## <a name="options"></a>オプション
 
@@ -77,7 +78,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps]
 
 - **`--list-runtimes`**
 
-  インストールされている .NET Core ランタイムの一覧が出力されます。
+  インストールされている .NET Core ランタイムの一覧が出力されます。 x86 バージョンの SDK には x86 ランタイムのみが登録され、x64 バージョンの SDK には x64 ランタイムのみが登録されています。
 
 - **`--list-sdks`**
 
@@ -263,7 +264,7 @@ dotnet myapp.dll
 
 - `DOTNET_NOLOGO`
 
-  最初の実行時に .NET Core のウェルカム メッセージとテレメトリ メッセージを表示するかどうかを指定します。 `true` に設定すると、これらのメッセージは表示されません (値 `true`、`1`、または `yes` が受け入れられます)。`false` に設定すると許可されます (値 `false`、`0`、または `no` が受け入れられます)。 設定しない場合、既定値は `false` であり、最初の実行時にメッセージが表示されます。 このフラグはテレメトリに影響しないことに注意してください (テレメトリの送信のオプトアウトについては `DOTNET_CLI_TELEMETRY_OPTOUT` を参照)。
+  最初の実行時に .NET Core のウェルカム メッセージとテレメトリ メッセージを表示するかどうかを指定します。 `true` に設定すると、これらのメッセージは表示されません (値 `true`、`1`、または `yes` が受け入れられます)。`false` に設定すると許可されます (値 `false`、`0`、または `no` が受け入れられます)。 設定しない場合、既定値は `false` であり、最初の実行時にメッセージが表示されます。 このフラグはテレメトリには影響しません (テレメトリの送信のオプトアウトについては `DOTNET_CLI_TELEMETRY_OPTOUT` を参照)。
 
 - `DOTNET_CLI_TELEMETRY_OPTOUT`
 

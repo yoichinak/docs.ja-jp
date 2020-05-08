@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 ms.openlocfilehash: 9e273bd3e4bf2bb6945fe48c850783a54fa9a869
 ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/26/2020
 ms.locfileid: "80291752"
@@ -77,7 +77,7 @@ ms.locfileid: "80291752"
   
 5. マニフェスト ファイルに名前を付けて保存します。 アプリケーション マニフェストの名前は、アセンブリ実行可能ファイルの名前に拡張子 .manifest が付いたものです。 たとえば、myComApp.exe のアプリケーション マニフェスト ファイル名は myComApp.exe.manifest です。  
   
-アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳細については、「[サイド バイ サイド アセンブリについて](/windows/desktop/SbsCs/about-side-by-side-assemblies-)」を参照してください。  
+アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳しくは、「[side-by-side アセンブリについて](/windows/desktop/SbsCs/about-side-by-side-assemblies-)」をご覧ください。  
   
 ## <a name="create-a-component-manifest"></a>コンポーネント マニフェストを作成する  
   
@@ -160,13 +160,13 @@ ms.locfileid: "80291752"
   
      このステートメントで、`myManagedComp.manifest` は埋め込むコンポーネント マニフェストの名前です。 この例では、スクリプト ファイル名は `myresource.rc` です。  
   
-2. Microsoft Windows リソース コンパイラ (Rc.exe) を使用してスクリプトをコンパイルします。 コマンド プロンプトで、次のコマンドを入力します。  
+2. Microsoft Windows リソース コンパイラ (Rc.exe) を使用してスクリプトをコンパイルします。 コマンド プロンプトに次のコマンドを入力します。  
   
      `rc myresource.rc`  
   
      Rc.exe は `myresource.res` リソース ファイルを生成します。  
   
-3. もう一度アセンブリのソース ファイルをコンパイルし、**/win32res** オプションを使用してリソース ファイルを指定します。  
+3. もう一度アセンブリのソース ファイルをコンパイルし、 **/win32res** オプションを使用してリソース ファイルを指定します。  
   
     `/win32res:myresource.res`  
   

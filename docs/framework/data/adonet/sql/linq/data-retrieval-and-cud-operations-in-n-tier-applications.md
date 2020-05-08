@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: 5ab829993b8f8faa6dcb91d3f23e8442b8aa95bd
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79148414"
@@ -15,12 +15,12 @@ ms.locfileid: "79148414"
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 層アプリケーションでのデータ取得および CUD 操作 (LINQ to SQL)
 Customers または Orders のようなエンティティ オブジェクトをネットワークを介してクライアントにシリアル化すると、これらのエンティティはデータ コンテキストからデタッチされます。 変更内容、および他のオブジェクトとの関連付けはデータ コンテキストによって追跡されなくなります。 クライアントがデータを読み取るだけの場合は、これは問題にはなりません。 また、クライアントが新しい行をデータベースに追加できるようにすることも、ある程度簡単です。 しかし、アプリケーションでクライアントによるデータの更新または削除を可能にする必要がある場合には、<xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> を呼び出す前に、新しいデータ コンテキストにエンティティをアタッチする必要があります。 さらに、元の値によるオプティミスティック コンカレンシーチェックを使用する場合には、何らかの方法で、元のエンティティと変更後のエンティティをデータベースに渡す必要もあります。 エンティティがデタッチされた後に新しいデータ コンテキストにエンティティを入れるために、`Attach` メソッドが用意されています。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]エンティティの代わりにプロキシ オブジェクトをシリアル化する場合でも、データ アクセス層 (DAL) にエンティティを構築し、それを新しい<xref:System.Data.Linq.DataContext?displayProperty=nameWithType>にアタッチしてデータをデータベースに送信する必要があります。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] エンティティの代わりにプロキシ オブジェクトをシリアル化する場合でも、データベースにデータを送るには、データ アクセス層 (DAL) 上にエンティティを構築して、新しい <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> にそれをアタッチする必要があります。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]エンティティのシリアル化方法については、まったく異なります。 オブジェクト リレーショナル デザイナーツールおよび SQLMetal ツールを使用して、Windows 通信基盤 (WCF) を使用してシリアル化できるクラスを生成する方法の詳細については、「[方法: エンティティをシリアル化可能にする](how-to-make-entities-serializable.md)」を参照してください。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、エンティティがどのようにシリアル化されるかについてはまったく関与しません。 Windows Communication Foundation (WCF) を使ってシリアル化できるクラスを、オブジェクト リレーショナル デザイナーと SQLMetal ツールを使用して生成する方法について詳しくは、「[方法: エンティティをシリアル化可能にする](how-to-make-entities-serializable.md)」をご覧ください。  
   
 > [!NOTE]
-> `Attach` メソッドは、新しいエンティティまたは逆シリアル化されたエンティティに対してのみ呼び出してください。 エンティティを元のデータ コンテキストからデタッチする唯一の方法は、シリアル化です。 デタッチされていないエンティティを新しいデータ コンテキストにアタッチしようとした場合、元のデータ コンテキストの遅延ローダーがそのエンティティにまだ存在するならば、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は例外をスローします。 2 つの異なるデータ コンテキストの遅延ローダーを持つエンティティに対して、挿入、更新、および削除操作を実行すると、予想外の結果が生じる可能性があります。 遅延ローダーの詳細については、「[遅延読み込みと即時読み込み](deferred-versus-immediate-loading.md)」を参照してください。  
+> `Attach` メソッドは、新しいエンティティまたは逆シリアル化されたエンティティに対してのみ呼び出してください。 エンティティを元のデータ コンテキストからデタッチする唯一の方法は、シリアル化です。 デタッチされていないエンティティを新しいデータ コンテキストにアタッチしようとした場合、元のデータ コンテキストの遅延ローダーがそのエンティティにまだ存在するならば、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は例外をスローします。 2 つの異なるデータ コンテキストの遅延ローダーを持つエンティティに対して、挿入、更新、および削除操作を実行すると、予想外の結果が生じる可能性があります。 遅延ローダーについて詳しくは、「[遅延読み込みと即時読み込み](deferred-versus-immediate-loading.md)」をご覧ください。  
   
 ## <a name="retrieving-data"></a>データの取得  
   
@@ -121,7 +121,7 @@ public IEnumerable<Product> GetProductsByCategory(int categoryID)
   
  データ コンテキストの 1 つのインスタンスの有効期間は、1 つの「作業単位」である必要があります。 疎結合環境では、通常、作業単位は小さく、たとえば `SubmitChanges` の 1 つの呼び出しを含む単一のオプティミスティック トランザクションです。 このため、データ コンテキストはメソッドのスコープ内で作成されて破棄されます。 作業単位にビジネス ルール ロジックの呼び出しが含まれる場合、通常は、その操作全体のために `DataContext` インスタンスを保持する必要が生じます。 いずれにしても、`DataContext` インスタンスの有効期間は、多数のトランザクションにわたって長い時間になることが意図されていません。  
   
- このメソッドは Product オブジェクトを返しますが、各 Product に関連付けられた Order_Detail オブジェクトのコレクションを返しません。 この既定の動作を変更するには、<xref:System.Data.Linq.DataLoadOptions> オブジェクトを使用します。 詳細については、「[方法 : 関連データの取得量を制御](how-to-control-how-much-related-data-is-retrieved.md)する 」を参照してください。  
+ このメソッドは Product オブジェクトを返しますが、各 Product に関連付けられた Order_Detail オブジェクトのコレクションを返しません。 この既定の動作を変更するには、<xref:System.Data.Linq.DataLoadOptions> オブジェクトを使用します。 詳細については、[取得する関連データの量を制御する](how-to-control-how-much-related-data-is-retrieved.md)」をご覧ください。  
   
 ## <a name="inserting-data"></a>データの挿入  
  新しいオブジェクトを挿入するために、プレゼンテーション層は単に中間層インターフェイス上の関連するメソッドを呼び出して、挿入対象の新しいオブジェクトを渡します。 ただし、クライアントがいくつかの値だけを渡して、オブジェクト全体の構築を中間層に任せた方が効率的である場合もあります。  
@@ -157,7 +157,7 @@ End Sub
 ## <a name="deleting-data"></a>データの削除  
  既存のオブジェクトをデータベースから削除するために、プレゼンテーション層は中間層インターフェイス上の関連するメソッドを呼び出して、削除対象のオブジェクトの元の値を含むコピーを渡します。  
   
- 削除操作ではオプティミスティック コンカレンシー チェックが行われて、削除対象のオブジェクトを新しいデータ コンテキストに最初にアタッチする必要があります。 この例では、オブジェクトにタイムスタンプ (RowVersion) が含まれないことを示すために `Boolean` パラメーターが `false` に設定されます。 各レコードのタイムスタンプがデータベース テーブルで生成される場合には、コンカレンシー チェックは特にクライアントにとって非常に簡単です。 元のオブジェクトまたは変更後のオブジェクトを渡して、`Boolean` パラメーターを `true` に設定するだけです。 いずれの場合も、中間層では、通常、<xref:System.Data.Linq.ChangeConflictException> をキャッチする必要があります。 オプティミスティック同時実行制御の競合を処理する方法の詳細については、「[オプティミスティック同時実行制御: 概要](optimistic-concurrency-overview.md)」を参照してください。  
+ 削除操作ではオプティミスティック コンカレンシー チェックが行われて、削除対象のオブジェクトを新しいデータ コンテキストに最初にアタッチする必要があります。 この例では、オブジェクトにタイムスタンプ (RowVersion) が含まれないことを示すために `Boolean` パラメーターが `false` に設定されます。 各レコードのタイムスタンプがデータベース テーブルで生成される場合には、コンカレンシー チェックは特にクライアントにとって非常に簡単です。 元のオブジェクトまたは変更後のオブジェクトを渡して、`Boolean` パラメーターを `true` に設定するだけです。 いずれの場合も、中間層では、通常、<xref:System.Data.Linq.ChangeConflictException> をキャッチする必要があります。 オプティミスティック コンカレンシーの競合を処理する方法について詳しくは、「[オプティミスティック コンカレンシー: 概要)](optimistic-concurrency-overview.md) の下のステートメントを右クリックします。  
   
  関連するテーブルに対する外部キー制約を含むエンティティを削除する際には、<xref:System.Data.Linq.EntitySet%601> コレクション内のすべてのオブジェクトを最初に削除する必要があります。  
   
@@ -218,7 +218,7 @@ public void DeleteOrder(Order order)
   
  また、エンティティとそのリレーションシップの両方に対して更新または削除を実行することもできます (たとえば Customer と、それに関連した Order オブジェクトのコレクション)。 エンティティ オブジェクトとその子 (`EntitySet`) コレクションから成るグラフをクライアント上で変更して、オプティミスティック コンカレンシー チェックで元の値が必要とされる場合には、クライアントはそれぞれのエンティティと <xref:System.Data.Linq.EntitySet%601> オブジェクトの元の値を提供する必要があります。 1 つのメソッド呼び出しで互いに関連する更新、削除、挿入のセットをクライアントが実行できるようにするには、各エンティティにどんな操作を実行するかを示す方法をクライアントに提供する必要があります。 その後、中間層で適切な <xref:System.Data.Linq.ITable.Attach%2A> メソッドを呼び出した後、<xref:System.Data.Linq.ITable.InsertOnSubmit%2A> を呼び出す前に、各エンティティに対して <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>, <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> または `Attach` (挿入の場合は <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 無し) を呼び出す必要があります。 更新を試行する前に元の値を入手するためにデータベースからデータを取得しないでください。  
   
- オプティミスティック同時実行制御の詳細については、「[オプティミスティック同時実行制御: 概要](optimistic-concurrency-overview.md)」を参照してください。 オプティミスティック同時実行制御の競合の解決方法の詳細については、「[方法 : 変更の競合を管理する](how-to-manage-change-conflicts.md)」を参照してください。  
+ オプティミスティック コンカレンシーについて詳しくは、「[オプティミスティック コンカレンシー: 概要)](optimistic-concurrency-overview.md) の下のステートメントを右クリックします。 オプティミスティック コンカレンシーの変更の競合を解決する方法について、詳しくは「[方法: 変更の競合を管理する](how-to-manage-change-conflicts.md)」をご覧ください。  
   
  それぞれのシナリオの例を以下に示します。  
   
@@ -391,7 +391,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
  これらの必要なメンバーのいずれかが欠落している場合、<xref:System.Data.Linq.ChangeConflictException> 中に <xref:System.Data.Linq.DataContext.SubmitChanges%2A> ("行が見つからないか変更されています") がスローされます。  
   
-### <a name="state"></a>State  
+### <a name="state"></a>状態  
  エンティティ オブジェクトが <xref:System.Data.Linq.DataContext> インスタンスにアタッチされた後、そのオブジェクトは `PossiblyModified` 状態にあると見なされます。 アタッチされたオブジェクトを強制的に `Modified` 状態にする方法は、3 つあります。  
   
 1. 未変更としてアタッチした後、フィールドを直接変更する。  
@@ -400,7 +400,7 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 3. (true に設定された) 2 番目のブール値パラメーターを受け入れる <xref:System.Data.Linq.Table%601.Attach%2A> オーバーロードを使ってアタッチする。 こうすると、元の値を提供しなくても、変更トラッカーはオブジェクトが変更済みと見なします。 この手法では、オブジェクトにバージョン/タイムスタンプ フィールドが含まれる必要があります。  
   
- 詳細については、「[オブジェクトの状態と変更追跡](object-states-and-change-tracking.md)」を参照してください。  
+ 詳しくは、「[オブジェクトの状態と変更の追跡](object-states-and-change-tracking.md)」をご覧ください。  
   
  アタッチ対象のオブジェクトと同じ ID を持つエンティティ オブジェクトが ID キャッシュ内に既に存在する場合、<xref:System.Data.Linq.DuplicateKeyException> がスローされます。  
   

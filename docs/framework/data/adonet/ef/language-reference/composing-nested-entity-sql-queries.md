@@ -4,13 +4,13 @@ ms.date: 03/30/2017
 ms.assetid: 685d4cd3-2c1f-419f-bb46-c9d97a351eeb
 ms.openlocfilehash: 6b2fc9a32fc30d205b9c33257bf98781cfa07499
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79150390"
 ---
 # <a name="composing-nested-entity-sql-queries"></a>入れ子になった Entity SQL クエリの作成
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、機能の豊富な関数言語です。 の構成要素[!INCLUDE[esql](../../../../../../includes/esql-md.md)]は式です。 従来の SQL[!INCLUDE[esql](../../../../../../includes/esql-md.md)]とは異なり、表形式の[!INCLUDE[esql](../../../../../../includes/esql-md.md)]結果セットに限定されません: リテラル、パラメーター、またはネストされた式を持つことができる複雑な式の作成をサポートします。 式の値は、パラメーター化されている場合、つまり他の式で構成される場合があります。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、機能の豊富な関数言語です。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の構成要素は式です。 従来の SQL と異なり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では結果セットは表形式に限定されません。[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、リテラル、パラメーター、入れ子になった式などが含まれた複雑な式を作成できます。 式の値は、パラメーター化されている場合、つまり他の式で構成される場合があります。  
   
 ## <a name="nested-expressions"></a>入れ子になった式  
  入れ子になった式は、その式によって返される型の値が受け入れられる場所であればどこにでも配置できます。 次に例を示します。  
@@ -46,10 +46,10 @@ UNION ALL
 FROM … );  
 ```  
   
- 次の例は、 で[!INCLUDE[esql](../../../../../../includes/esql-md.md)]式を正しく入れ子にする方法を示[しています](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。  
+ 次の例では、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] で式を正しく入れ子にする方法を示します。[方法:2 つのクエリの結合を並べ替える](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896299(v=vs.100))。  
   
 ## <a name="nested-queries-in-projection"></a>投影内の入れ子になったクエリ  
- project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SQL Server を含む一部のバックエンド サーバーでは、TempDB テーブルが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす可能性があります。  
+ project 句内の入れ子になったクエリは、サーバーでデカルト積に変換されないことがあります。 SQL Server などの一部のバックエンド サーバーでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。  
   
  以下は、このようなクエリの例です。  
   

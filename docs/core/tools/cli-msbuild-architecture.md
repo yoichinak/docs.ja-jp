@@ -2,12 +2,12 @@
 title: .NET Core コマンドライン ツールのアーキテクチャ
 description: .NET Core ツール レイヤーと最近のバージョンの変更内容について説明します。
 ms.date: 03/06/2017
-ms.openlocfilehash: fde1a0acb6af9dd65aa3466b4ea37473b2eab6fb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e1a9fe59225c17d54f6e7213d2b3c3fa70ee58e0
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77092916"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102880"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core ツールの変更の概要
 
@@ -24,13 +24,13 @@ ms.locfileid: "77092916"
 
 ## <a name="the-tooling-layers"></a>ツールの階層
 
-ビルド エンジンにおける変更と既存のプロジェクト システムからの移行に伴い、当然ながらいくつかの疑問が生じます。 これらの変更によって .NET Core ツールのエコシステム全体の "レイヤー" に変更はあるのでしょうか? 小さなものからコンポーネントまで、新しいものはありますか?
+ビルド エンジンにおける変更と既存のプロジェクト システムからの移行に伴い、当然ながらいくつかの疑問が生じます。 これらの変更によって .NET Core ツールのエコシステム全体の "レイヤー" に変更はあるのでしょうか?  小さなものからコンポーネントまで、新しいものはありますか?
 
 次の図で Preview 2 のレイヤーを簡単に再確認してみましょう。
 
 ![Preview 2 のツールの概要](media/cli-msbuild-architecture/p2-arch.png)
 
-Preview 2 ではツールのレイヤーは簡単です。 下部にある基盤は .NET Core CLI です。 Visual Studio または Visual Studio Code などのその他すべての上位レベルのツールは、プロジェクトのビルドや依存関係の復元などで CLI に依存しています。 たとえば Visual Studio で復元操作を行う場合、CLI の `dotnet restore` ([注を参照](#dotnet-restore-note)) コマンドを呼び出します。
+Preview 2 ではツールのレイヤーは簡単です。 下部にある基盤は .NET Core CLI です。 Visual Studio または Visual Studio Code などのその他すべての上位レベルのツールは、プロジェクトのビルドや依存関係の復元などで CLI に依存しています。 たとえば、Visual Studio で復元操作を行う場合は、CLI で `dotnet restore` コマンドを呼び出します。
 
 新しいプロジェクト システムに移行すると、前の図は以下のように変わります。
 
@@ -41,7 +41,7 @@ Preview 2 ではツールのレイヤーは簡単です。 下部にある基盤
 > [!NOTE]
 > "ターゲット" とは、MSBuild が呼び出すことのできる名前付きの操作を意味する MSBuild の用語です。 これは、通常ターゲットが行うことを期待されているいくつかのロジックを実行する 1 つ以上のタスクと連結されています。 MSBuild では、`Copy` や `Execute` などの多数の既製ターゲットをサポートしています。また、ユーザーがマネージド コードを使用して、独自のタスクを記述し、それらのタスクをターゲットに実行させるよう定義することも可能です。 詳細については、「[MSBuild タスク](/visualstudio/msbuild/msbuild-tasks)」を参照してください。
 
-すべてのツールセットは、CLI を含む、共有 SDK コンポーネントとそのターゲットを消費します。 たとえば、Visual Studio 2019 では、.NET Core プロジェクトの依存関係を復元するために `dotnet restore` ([注を参照](#dotnet-restore-note)) コマンドは呼び出されません。 代わりに、"復元" のターゲットを直接使用します。 これらは MSBuild のターゲットであるため、これらの実行に未加工の MSBuild の [dotnet msbuild](dotnet-msbuild.md) コマンドを使用することも可能です。
+すべてのツールセットは、CLI を含む、共有 SDK コンポーネントとそのターゲットを消費します。 たとえば、Visual Studio 2019 では、.NET Core プロジェクトの依存関係を復元するために `dotnet restore` コマンドは呼び出されません。 代わりに、"復元" のターゲットを直接使用します。 これらは MSBuild のターゲットであるため、これらの実行に未加工の MSBuild の [dotnet msbuild](dotnet-msbuild.md) コマンドを使用することも可能です。
 
 ### <a name="cli-commands"></a>CLI コマンド
 
@@ -73,5 +73,6 @@ Preview 2 ではツールのレイヤーは簡単です。 下部にある基盤
 
 この規則の注目すべき例外は、`new` コマンドと `run` のコマンドです。 それらは MSBuild ターゲットとして実装されていません。
 
-<a name="dotnet-restore-note"></a>
+### <a name="implicit-restore"></a>暗黙的な復元
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

@@ -1,10 +1,10 @@
 ---
-title: データ操作の SQL Server
+title: SQL Server のデータ操作
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
 ms.openlocfilehash: 663d7eff5b5972c4fae070695a526e927aee311f
 ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/04/2020
 ms.locfileid: "76979886"

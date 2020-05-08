@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: 33b51cf26a35bbdda70582d86db6ac39c22597da
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79174395"
@@ -23,25 +23,25 @@ ms.locfileid: "79174395"
  [!code-csharp[TransactionScope#1](../../../../samples/snippets/csharp/VS_Snippets_Remoting/TransactionScope/cs/ScopeWithSQL.cs#1)]
  [!code-vb[TransactionScope#1](../../../../samples/snippets/visualbasic/VS_Snippets_Remoting/TransactionScope/vb/ScopeWithSQL.vb#1)]  
   
- 新しい<xref:System.Transactions.TransactionScope>オブジェクトを作成すると、トランザクション スコープが開始されます。  コード サンプルに示すように、`using`ステートメントを使用してスコープを作成することをお勧めします。 ステートメント`using`は C# と Visual Basic の両方で使用でき`try`、..`finally`スコープが適切に破棄されていることを確認します。  
+ 新しい <xref:System.Transactions.TransactionScope> オブジェクトを作成すると、トランザクション スコープが開始されます。  コード サンプルで示されているように、`using` ステートメントを使用してスコープを作成することをお勧めします。 `using` ステートメントは C# と Visual Basic の両方で使用でき、`try`...`finally` ブロックと同じように機能して、スコープが適切に破棄されるようにします。  
   
- <xref:System.Transactions.TransactionScope> をインスタンス化すると、参加するトランザクションがトランザクション マネージャーによって決定されます。 いったん決定されると、このスコープは常にそのトランザクションに参加します。 この決定は 2 つの要因に基づいて行われます。1 つはアンビエント トランザクションが存在するかどうか、もう 1 つはコンストラクターの `TransactionScopeOption` パラメーターの値です。 アンビエント トランザクションとは、実行するコードが含まれているトランザクションのことです。 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> クラスの静的 <xref:System.Transactions.Transaction> プロパティを呼び出すことによってアンビエント トランザクションへの参照を取得できます。 このパラメーターの使用方法の詳細については、このトピックのセクションの[「TransactionScopeOption を使用したトランザクション フローの管理](#ManageTxFlow)」セクションを参照してください。  
+ <xref:System.Transactions.TransactionScope> をインスタンス化すると、参加するトランザクションがトランザクション マネージャーによって決定されます。 いったん決定されると、このスコープは常にそのトランザクションに参加します。 この決定は 2 つの要因に基づいて行われます。1 つはアンビエント トランザクションが存在するかどうか、もう 1 つはコンストラクターの `TransactionScopeOption` パラメーターの値です。 アンビエント トランザクションとは、実行するコードが含まれているトランザクションのことです。 <xref:System.Transactions.Transaction.Current%2A?displayProperty=nameWithType> クラスの静的 <xref:System.Transactions.Transaction> プロパティを呼び出すことによってアンビエント トランザクションへの参照を取得できます。 このパラメーターの使用法の詳細については、このトピックの「[TransactionScopeOption を使用したトランザクション フローの管理](#ManageTxFlow)」を参照してください。  
   
 ## <a name="completing-a-transaction-scope"></a>トランザクション スコープの完了  
- アプリケーションがトランザクション内で実行する必要のあるすべての作業を完了したら、トランザクションをコミットできることをトランザクション マネージャーに知らせるために、<xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> メソッドを一度だけ呼び出す必要があります。 ブロック内の最後のステートメント<xref:System.Transactions.TransactionScope.Complete%2A>として呼び出しを配置することは非常に良い方法です。 `using`  
+ アプリケーションがトランザクション内で実行する必要のあるすべての作業を完了したら、トランザクションをコミットできることをトランザクション マネージャーに知らせるために、<xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> メソッドを一度だけ呼び出す必要があります。 `using` ブロックの最後のステートメントとして <xref:System.Transactions.TransactionScope.Complete%2A> の呼び出しを配置するのは非常によい方法です。  
   
- このメソッドを呼び出さないと、トランザクション マネージャはこれをシステム 障害として解釈するか、トランザクションのスコープ内でスローされた例外と同等であると解釈するため、トランザクションを中止します。 ただし、このメソッドを呼び出したからといって必ずしもトランザクションのコミットが保証されるわけではありません。 これはトランザクション マネージャーにステータスを通知する手段にすぎません。 <xref:System.Transactions.TransactionScope.Complete%2A> メソッドを呼び出した後は、<xref:System.Transactions.Transaction.Current%2A> プロパティを使用してアンビエント トランザクションにアクセスできなくなります。アクセスしようとすると例外がスローされます。  
+ この呼び出しを行わないと、トランザクション マネージャーは、システム障害が発生したかまたはトランザクションのスコープ内で例外がスローされたと解釈するため、トランザクションが中止されます。 ただし、このメソッドを呼び出したからといって必ずしもトランザクションのコミットが保証されるわけではありません。 これはトランザクション マネージャーにステータスを通知する手段にすぎません。 <xref:System.Transactions.TransactionScope.Complete%2A> メソッドを呼び出した後は、<xref:System.Transactions.Transaction.Current%2A> プロパティを使用してアンビエント トランザクションにアクセスできなくなります。アクセスしようとすると例外がスローされます。  
   
- オブジェクトが<xref:System.Transactions.TransactionScope>最初にトランザクションを作成した場合、トランザクション・マネージャーによるトランザクションのコミットの実際の作業は、ブロック内のコードの最後の`using`行の後に発生します。 このオブジェクトによってトランザクションが作成されていない場合、<xref:System.Transactions.CommittableTransaction.Commit%2A> オブジェクトの所有者によって <xref:System.Transactions.CommittableTransaction> が呼び出されるたびにコミットが発生します。 その時点で、トランザクション マネージャはリソース マネージャを呼び出し、<xref:System.Transactions.TransactionScope.Complete%2A><xref:System.Transactions.TransactionScope>オブジェクトでメソッドが呼び出されたかどうかに基づいて、コミットまたはロールバックを通知します。  
+ <xref:System.Transactions.TransactionScope> オブジェクトによって最初にトランザクションが作成された場合、トランザクション マネージャーでトランザクションが実際にコミットされる処理は、`using` ブロックの最後のコード行の後で行われます。 このオブジェクトによってトランザクションが作成されていない場合、<xref:System.Transactions.CommittableTransaction.Commit%2A> オブジェクトの所有者によって <xref:System.Transactions.CommittableTransaction> が呼び出されるたびにコミットが発生します。 その時点で、トランザクション マネージャーによってリソース マネージャーが呼び出され、<xref:System.Transactions.TransactionScope> オブジェクトの <xref:System.Transactions.TransactionScope.Complete%2A> メソッドが呼び出されたかどうかに基づいて、コミットするかロールバックするかが通知されます。  
   
- この`using`ステートメントは、例外<xref:System.Transactions.TransactionScope.Dispose%2A>が発生した<xref:System.Transactions.TransactionScope>場合でも、オブジェクトのメソッドが呼び出されるようにします。 <xref:System.Transactions.TransactionScope.Dispose%2A> メソッドは、トランザクション スコープの末尾を表します。 このメソッドの呼び出し後に発生した例外は、トランザクションに影響しない場合があります。 また、このメソッドはアンビエント トランザクションを前の状態に復元します。  
+ `using` ステートメントを使用すると、例外が発生した場合でも必ず <xref:System.Transactions.TransactionScope> オブジェクトの <xref:System.Transactions.TransactionScope.Dispose%2A> メソッドが呼び出されます。 <xref:System.Transactions.TransactionScope.Dispose%2A> メソッドは、トランザクション スコープの末尾を表します。 このメソッドの呼び出し後に発生した例外は、トランザクションに影響しない場合があります。 また、このメソッドはアンビエント トランザクションを前の状態に復元します。  
   
  スコープがトランザクションを作成し、そのトランザクションが中止された場合は、<xref:System.Transactions.TransactionAbortedException> がスローされます。 トランザクション マネージャーがコミットを判断できない場合は、<xref:System.Transactions.TransactionInDoubtException> がスローされます。 トランザクションがコミットされた場合は、例外はスローされません。  
   
 ## <a name="rolling-back-a-transaction"></a>トランザクションのロールバック  
  トランザクションをロールバックする場合は、トランザクション スコープ内で <xref:System.Transactions.TransactionScope.Complete%2A> メソッドを呼び出さないようにしてください。 たとえば、スコープ内で例外をスローすると、 スコープが参加しているトランザクションがロールバックされます。  
   
-## <a name="managing-transaction-flow-using-transactionscopeoption"></a><a name="ManageTxFlow"></a>トランザクションスコープオプションを使用したトランザクションフローの管理  
+## <a name="managing-transaction-flow-using-transactionscopeoption"></a><a name="ManageTxFlow"></a> TransactionScopeOption を使用したトランザクション フローの管理  
  次の例にある <xref:System.Transactions.TransactionScope> メソッドのように、独自のスコープを使用するメソッド内から、`RootMethod` を使用するメソッドを呼び出すことによって、トランザクション スコープを入れ子にすることができます。  
   
 ```csharp  
@@ -81,16 +81,16 @@ void SomeMethod()
   
  スコープが <xref:System.Transactions.TransactionScopeOption.RequiresNew> でインスタンス化された場合は、常にルート スコープです。 スコープが新しいトランザクションを開始し、そのトランザクションがスコープ内の新しいアンビエント トランザクションになります。  
   
- スコープが <xref:System.Transactions.TransactionScopeOption.Suppress> でインスタンス化された場合は、アンビエント トランザクションの有無にかかわらず、スコープがトランザクションに参加することはありません。 この値でインスタンス化されたスコープは、`null`常にそのアンビエント トランザクションとして持ちます。  
+ スコープが <xref:System.Transactions.TransactionScopeOption.Suppress> でインスタンス化された場合は、アンビエント トランザクションの有無にかかわらず、スコープがトランザクションに参加することはありません。 この値でインスタンス化されたスコープの場合は、スコープのアンビエント トランザクションは常に `null` になります。  
   
  上記のオプションを要約すると、次の表のようになります。  
   
 |TransactionScopeOption|アンビエント トランザクション|スコープの参加|  
 |----------------------------|-------------------------|-----------------------------|  
-|Required|いいえ|新規トランザクション (ルートになる)|  
+|必須|いいえ|新規トランザクション (ルートになる)|  
 |RequiresNew|いいえ|新規トランザクション (ルートになる)|  
 |Suppress|いいえ|トランザクションなし|  
-|Required|はい|アンビエント トランザクション|  
+|必須|はい|アンビエント トランザクション|  
 |RequiresNew|はい|新規トランザクション (ルートになる)|  
 |Suppress|はい|トランザクションなし|  
   
@@ -119,13 +119,13 @@ using(TransactionScope scope1 = new TransactionScope())
 }
 ```  
   
- このコード例では、アンビエント トランザクションがない状態で、新しいスコープ `scope1` を <xref:System.Transactions.TransactionScopeOption.Required> で作成しています。 スコープ `scope1` は、新しいトランザクション (トランザクション A) を作成し、トランザクション A をアンビエント トランザクションにするため、ルート スコープになります。 `Scope1`次に、それぞれ異なる<xref:System.Transactions.TransactionScopeOption>値を持つ 3 つのオブジェクトを作成します。 たとえば、`scope2` は <xref:System.Transactions.TransactionScopeOption.Required> で作成されますが、アンビエント トランザクションがあるため、`scope1` によって作成された最初のトランザクションに参加します。 `scope3` は新しいトランザクションのルート スコープです。`scope4` にはアンビエント トランザクションがありません。  
+ このコード例では、アンビエント トランザクションがない状態で、新しいスコープ `scope1` を <xref:System.Transactions.TransactionScopeOption.Required> で作成しています。 スコープ `scope1` は、新しいトランザクション (トランザクション A) を作成し、トランザクション A をアンビエント トランザクションにするため、ルート スコープになります。 `Scope1` では次に、さらに 3 つのオブジェクトが、それぞれ異なる <xref:System.Transactions.TransactionScopeOption> 値で作成されます。 たとえば、`scope2` は <xref:System.Transactions.TransactionScopeOption.Required> で作成されますが、アンビエント トランザクションがあるため、`scope1` によって作成された最初のトランザクションに参加します。 `scope3` は新しいトランザクションのルート スコープです。`scope4` にはアンビエント トランザクションがありません。  
   
  <xref:System.Transactions.TransactionScopeOption> の既定値でかつ最もよく使用される値は <xref:System.Transactions.TransactionScopeOption.Required> ですが、その他の各値にはそれぞれ固有の用途があります。  
 
 ### <a name="non-transactional-code-inside-a-transaction-scope"></a>トランザクション スコープ内の非トランザクション コード
 
- <xref:System.Transactions.TransactionScopeOption.Suppress>は、コード セクションで実行される操作を保持し、操作が失敗した場合にアンビエント トランザクションを中止しない場合に便利です。 たとえば、ログの記録や監査操作を実行する場合や、アンビエント トランザクションがコミットしても中止してもサブスクライバーにイベントを公開する場合などです。 次の例で示すように、この値を使用すれば、トランザクション スコープ内に非トランザクション コード セクションを置くことができます。  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> は、コード セクションによって実行されている操作を保持する必要があり、操作が失敗した場合にアンビエント トランザクションを中止したくない場合に便利です。 たとえば、ログの記録や監査操作を実行する場合や、アンビエント トランザクションがコミットしても中止してもサブスクライバーにイベントを公開する場合などです。 次の例で示すように、この値を使用すれば、トランザクション スコープ内に非トランザクション コード セクションを置くことができます。  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())
@@ -160,12 +160,12 @@ using(TransactionScope scope1 = new TransactionScope())
   
  さらに、すべてのリソース マネージャーがすべての分離レベルをサポートするわけではなく、構成されたレベルより高いレベルのトランザクションへの参加をリソース マネージャーが選択する場合もあります。  
   
- <xref:System.Transactions.IsolationLevel.Serializable> を除くすべての分離レベルは、他のトランザクションが同じ情報にアクセスすることで生じる不整合の影響を受けやすくなっています。 分離レベルごとの違いは、読み取りロックおよび書き込みロックの使用方法にあります。 ロックには、トランザクションがリソース マネージャーのデータにアクセスするときのみ保持できるか、トランザクションがコミットまたは中止されるまで保持できるかの 2 種類があります。 前者はスループットの面で優れており、後者は整合性の面で優れています。 2 種類のロックと 2 種類の操作 (読み取り/書き込み) から、4 つの基本分離レベルが構成されます。 詳細については、「 <xref:System.Transactions.IsolationLevel> 」を参照してください。  
+ <xref:System.Transactions.IsolationLevel.Serializable> を除くすべての分離レベルは、他のトランザクションが同じ情報にアクセスすることで生じる不整合の影響を受けやすくなっています。 分離レベルごとの違いは、読み取りロックおよび書き込みロックの使用方法にあります。 ロックには、トランザクションがリソース マネージャーのデータにアクセスするときのみ保持できるか、トランザクションがコミットまたは中止されるまで保持できるかの 2 種類があります。 前者はスループットの面で優れており、後者は整合性の面で優れています。 2 種類のロックと 2 種類の操作 (読み取り/書き込み) から、4 つの基本分離レベルが構成されます。 詳細については、「<xref:System.Transactions.IsolationLevel>」を参照してください。  
   
  入れ子になった <xref:System.Transactions.TransactionScope> オブジェクトを使用する場合、入れ子になったすべてのスコープがアンビエント トランザクションに参加するときには、必ず同じ分離レベルを使用するようにそれらのスコープを構成する必要があります。 入れ子になった <xref:System.Transactions.TransactionScope> オブジェクトがアンビエント トランザクションに参加するときに、別の分離レベルが指定された場合は、<xref:System.ArgumentException> がスローされます。  
   
 ## <a name="interop-with-com"></a>COM+ との相互運用  
- 新しい <xref:System.Transactions.TransactionScope> インスタンスを作成する際には、いずれかのコンストラクターで <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体を使用して、COM+ との対話方法を指定することができます。 詳細については、「[エンタープライズ サービスおよび COM+ トランザクションとの相互運用性](interoperability-with-enterprise-services-and-com-transactions.md)」を参照してください。  
+ 新しい <xref:System.Transactions.TransactionScope> インスタンスを作成する際には、いずれかのコンストラクターで <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体を使用して、COM+ との対話方法を指定することができます。 詳しくは、「[Enterprise Services および COM+ トランザクションとの相互運用性](interoperability-with-enterprise-services-and-com-transactions.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

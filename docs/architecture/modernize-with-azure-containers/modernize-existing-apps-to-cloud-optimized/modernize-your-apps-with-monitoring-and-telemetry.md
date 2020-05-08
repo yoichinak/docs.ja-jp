@@ -2,12 +2,12 @@
 title: 監視と製品利用統計情報でアプリを最新化する
 description: Azure クラウドおよび Windows コンテナーを使用して既存の .NET アプリケーションを最新化する | 監視と製品利用統計情報でアプリを最新化する
 ms.date: 04/30/2018
-ms.openlocfilehash: 3d629e89a73c870d4b6396c6b1d0ecbe95b79ead
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a5101f150d6548406db8638904fb4ab6375edf9c
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72393849"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739178"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>監視と製品利用統計情報でアプリを最新化する
 
@@ -61,7 +61,7 @@ Log Analytics コンテナー監視ソリューションを使用して、次の
 
 - コンテナーについて、CPU、メモリ、ストレージ、ネットワークの使用量と、パフォーマンスに関する情報を一元的に確認します。
 
-### <a name="additional-resources"></a>その他のリソース
+### <a name="additional-resources"></a>その他の技術情報
 
 - **Microsoft Azure での監視の概要**
 

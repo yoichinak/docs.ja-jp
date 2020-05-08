@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 28e77a63-d20d-4b6a-9caf-ddad86550427
 ms.openlocfilehash: 76712710bf42f498ba859c7b1cd18a261387078c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79174421"
@@ -15,7 +15,7 @@ ms.locfileid: "79174421"
  トレースを有効にすると、こうしたリスナーの 1 つである <xref:System.Diagnostics.DefaultTraceListener> が自動的に作成および初期化されます。 トレース出力を別のソースに送るには、別のトレース リスナーを作成して初期化する必要があります。 作成するリスナーには、個別の要求が反映されている必要があります。 たとえば、すべてのトレース出力のテキスト レコードが必要である場合は、 有効になったときにすべての出力を新しいテキスト ファイルに書き込むリスナーを作成します。 また、アプリケーションの実行時に出力を表示するだけでよい場合は、 すべての出力をコンソール ウィンドウに送るリスナーを作成します。 <xref:System.Diagnostics.EventLogTraceListener> はイベント ログにトレース出力を転送し、<xref:System.Diagnostics.TextWriterTraceListener> はストリームにトレース出力を書き込みます。  
   
 ## <a name="enabling-tracing"></a>トレースの有効化  
- トランザクション処理中にトレースを有効にするには、アプリケーションの構成ファイルを編集する必要があります。 以下に例を示します。  
+ トランザクション処理中にトレースを有効にするには、アプリケーションの構成ファイルを編集する必要があります。 次に例を示します。  
   
 ```xml  
 <configuration>  
@@ -39,13 +39,13 @@ ms.locfileid: "79174421"
   
 |トレース レベル|説明|  
 |-----------------|-----------------|  
-|Critical|次のような重大な障害が発生しました。<br /><br /> - ユーザー機能の即時の損失を引き起こす可能性のあるエラー。<br />- 管理者が機能の損失を回避するためのアクションを実行する必要があるイベント。<br />- コードがハングします。<br />- このトレース レベルは、他の重要なトレースを解釈するための十分なコンテキストを提供することもできます。 これは、重大なエラーにつながる操作シーケンスの特定に役立ちます。|  
-|エラー|ユーザー機能の損失につながるエラー (無効な設定、ネットワークの動作など) が発生しました。|  
+|重大|次のような重大な障害が発生しました。<br /><br /> -   ユーザー機能が即座に失われる可能性のあるエラー。<br />-   機能が失われるのを防ぐために管理者が対処する必要のあるイベント。<br />-   コードのハング。<br />-   このトレース レベルでは、他の重大なトレースを解釈するための十分なコンテキストも提供できます。 これは、重大なエラーにつながる操作シーケンスの特定に役立ちます。|  
+|Error|ユーザー機能の損失につながるエラー (無効な設定、ネットワークの動作など) が発生しました。|  
 |警告|後続の処理でエラーまたは重大なエラーが起こる可能性のある状態が存在します (割り当ての失敗、制限への接近など)。 ユーザー コードからのエラーの通常処理 (トランザクションの中止、タイムアウト、認証の失敗など) が警告を生成する場合もあります。|  
-|Information|システム ステータスの監視と診断、パフォーマンスの計測、またはプロファイリングに有用なメッセージが生成されます。 これには、トランザクションの作成またはコミット、重要な境界の超過、重要なリソースの割り当てなど、トランザクションと参加の有効期間イベントが含まれる場合があります。 このような情報は、後で開発者が容量設計やパフォーマンス管理に利用できます。|  
+|情報|システム ステータスの監視と診断、パフォーマンスの計測、またはプロファイリングに有用なメッセージが生成されます。 これには、トランザクションの作成またはコミット、重要な境界の超過、重要なリソースの割り当てなど、トランザクションと参加の有効期間イベントが含まれる場合があります。 このような情報は、後で開発者が容量設計やパフォーマンス管理に利用できます。|  
   
 ## <a name="trace-codes"></a>トレース コード  
- 次の表は、<xref:System.Transactions> インフラストラクチャで生成されるトレース コードの一覧です。 テーブルには、トレース コード識別子、トレースの<xref:System.Diagnostics.EventTypeFilter.EventType%2A>列挙レベル、およびトレースの**TraceRecord**に含まれる追加データが含まれています。 また、トレースの対応するトレース レベルも**トレース レコード**に格納されます。  
+ 次の表は、<xref:System.Transactions> インフラストラクチャで生成されるトレース コードの一覧です。 この表には、トレース コード識別子、トレースの <xref:System.Diagnostics.EventTypeFilter.EventType%2A> 列挙レベル、およびトレースの **TraceRecord** に含まれる追加データが示されています。 さらに、そのトレースに対応するトレース レベルも **TraceRecord** に保存されます。  
   
 |TraceCode|EventType|TraceRecord の追加データ|  
 |---------------|---------------|-------------------------------|  
@@ -56,20 +56,20 @@ ms.locfileid: "79174421"
 |TransactionRollbackCalled|警告|TransactionTraceId|  
 |TransactionAborted|警告|TransactionTraceId|  
 |TransactionInDoubt|警告|TransactionTraceId|  
-|TransactionScopeCreated|Info|TransactionScopeResult (次のようになります)<br /><br /> - 新しいトランザクション。<br />- トランザクションが渡されました。<br />- 依存トランザクションが渡されました。<br />- 現在のトランザクションを使用しています。<br />- トランザクションはありません。<br /><br /> 新しい現在の TransactionTraceId|  
-|TransactionScopeDisposed|Info|スコープの "予期される" 現在のトランザクションのトランザクショントレース ID。|  
-|TransactionScopeIncomplete|警告|スコープの "予期される" 現在のトランザクションのトランザクショントレース ID。|  
-|TransactionScopeNestedIncorrectly|警告|スコープの "予期される" 現在のトランザクションのトランザクショントレース ID。|  
+|TransactionScopeCreated|Info|TransactionScopeResult (次のようになります)<br /><br /> -   新しいトランザクション。<br />-   渡されたトランザクション。<br />-   渡された依存トランザクション。<br />-   現在のトランザクションを使用。<br />-   トランザクションなし<br /><br /> 新しい現在の TransactionTraceId|  
+|TransactionScopeDisposed|Info|スコープの "想定される" 現在のトランザクションの TransactionTraceId。|  
+|TransactionScopeIncomplete|警告|スコープの "想定される" 現在のトランザクションの TransactionTraceId。|  
+|TransactionScopeNestedIncorrectly|警告|スコープの "想定される" 現在のトランザクションの TransactionTraceId。|  
 |TransactionScopeCurrentTransactionChanged|警告|古い (現在の) TransactionTraceId、他の TransactionTraceId|  
-|TransactionScopeTimeout|警告|スコープの "予期される" 現在のトランザクションのトランザクショントレース ID。|  
+|TransactionScopeTimeout|警告|スコープの "想定される" 現在のトランザクションの TransactionTraceId。|  
 |DependentCloneCreated|Info|TransactionTraceId、作成される依存トランザクションの種類 (RollbackIfNotComplete/BlockCommitUntilComplete)|  
 |DependentCloneComplete|Info|TransactionTraceId|  
 |RecoveryComplete|Info|リソース マネージャー GUID (ベースから)|  
 |Reenlist|Info|リソース マネージャー GUID (ベースから)|  
 |TransactionSerialized|Info|TransactionTraceId|  
-|TransactionException|エラー|例外メッセージ|  
-|InvalidOperationException|エラー|例外メッセージ|  
-|InternalError|Critical|例外メッセージ|  
+|TransactionException|Error|例外メッセージ|  
+|InvalidOperationException|Error|例外メッセージ|  
+|InternalError|重大|例外メッセージ|  
 |TransferEvent||トランザクションが逆シリアル化されるか、または <xref:System.Transactions> トランザクションから分散トランザクションに昇格される場合、ExecutionContext の現在の ActivityID および分散トランザクション ID が書き込まれます。<br /><br /> DTC がマネージド コードにコールバックする場合、コールバックの間、分散トランザクション ID が ExecutionContext の ActivityID として設定されます。|  
 |ConfiguredDefaultTimeoutAdjusted|警告|追加データなし|  
 |TransactionTimeout|警告|タイムアウトするトランザクションの TransactionTraceId|  

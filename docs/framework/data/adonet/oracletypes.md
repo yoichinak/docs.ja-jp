@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 18143304-d5c7-4c95-9995-678088d0c142
 ms.openlocfilehash: 95a1173dfbcc4cf49ded8c7b8a42d9764fee9aff
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79149402"
@@ -52,7 +52,7 @@ public void Setup(string connectionString)
 ```  
   
 ## <a name="retrieving-data-from-the-oracle-table"></a>Oracle テーブルからのデータの取得  
- この例では **、OracleDataReader**を使用してデータにアクセスし、いくつかの**OracleType**構造体を使用してデータを表示します。  
+ この例では、**OracleDataReader** を使用してデータにアクセスし、いくつかの **OracleType** 構造体を使用してデータを表示します。  
   
 ```csharp  
 public void ReadOracleTypesExample(string connectionString)  

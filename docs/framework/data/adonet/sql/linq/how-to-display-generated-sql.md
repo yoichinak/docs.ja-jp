@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
 ms.openlocfilehash: 15fc6a50d232ea12b229b7b2790c0398bc1c370d
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72002968"
@@ -18,7 +18,7 @@ ms.locfileid: "72002968"
 ## <a name="example"></a>例  
  <xref:System.Data.Linq.DataContext.Log%2A> プロパティを使用して、コードを実行する前にコンソール ウィンドウに SQL コードを表示するコード例を次に示します。  このプロパティは、query、insert、update、および delete の各コマンドで使用できます。  
   
- コンソールウィンドウの行は、Visual Basic またはC#次のコードを実行すると表示されます。  
+ コンソール ウィンドウの行は、後の Visual Basic コードまたは C# コードを実行すると表示される内容です。  
   
 ```console  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  

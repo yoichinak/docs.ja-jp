@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: d1247f08-0965-416a-b978-e0b50652dfe3
 ms.openlocfilehash: c5f8f735dd3e8c359f88044a532c29303237acc8
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181308"
@@ -17,7 +17,7 @@ ms.locfileid: "79181308"
 
 エントリ ポイントは、DLL 内の関数の位置を識別します。 マネージド プロジェクト内では、対象となる関数の元の名前または序数エントリ ポイントによって、その関数が相互運用の境界にまたがって識別されます。 また、エントリ ポイントを別の名前に割り当てて、関数の名前を事実上変更できます。  
   
- DLL 関数の名前を変更する理由の一覧を次に示します。  
+ DLL 関数の名前を変更する理由を次に示します。  
   
 - 大文字と小文字が区別される API 関数名を使わないようにするため  
   

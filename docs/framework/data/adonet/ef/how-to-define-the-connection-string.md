@@ -1,20 +1,20 @@
 ---
-title: 接続文字列を定義する方法
+title: '方法: 接続文字列を定義する'
 ms.date: 03/30/2017
 ms.assetid: 6027335d-4e26-420d-9151-6523289b1989
 ms.openlocfilehash: e5b675a50f883825cce97275048447b79b64cc97
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79150572"
 ---
-# <a name="how-to-define-the-connection-string"></a>接続文字列を定義する方法
+# <a name="how-to-define-the-connection-string"></a>方法: 接続文字列を定義する
 
-このトピックでは、概念モデルに接続するための接続文字列を定義する方法について説明します。 このトピックは[、AdventureWorks の販売](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100))概念モデルに基づいています。 AdventureWorks の販売モデルは、エンティティ フレームワークのドキュメントのタスク関連のトピック全体で使用されます。 このトピックでは、エンティティ フレームワークを既に設定し、AdventureWorks 販売モデルを定義していることを前提としています。 詳細については、「[方法 : モデル ファイルとマッピング ファイルを手動で定義する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))」を参照してください。 このトピックの手順は、「[方法: エンティティ フレームワーク プロジェクトを手動で構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))」にも含まれています。
+このトピックでは、概念モデルに接続するための接続文字列を定義する方法について説明します。 このトピックは、[AdventureWorks Sales](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387147(v=vs.100)) の概念モデルが基になっています。 AdventureWorks Sales Model は、Entity Framework ドキュメントのタスク関連のトピック全般で使用されます。 このトピックでは、Entity Framework の構成が済んでいること、および AdventureWorks Sales Model が定義済みであることを前提としています。 詳細については、[モデル ファイルとマッピング ファイルを手動で定義する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))」を参照してください。 このトピックの手順は、「[方法: Entity Framework プロジェクトを手動で構成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))」にも含まれます。
 
 > [!NOTE]
-> Visual Studio プロジェクトでエンティティ データ モデル ウィザードを使用すると、.edmx ファイルが自動的に生成され、エンティティ フレームワークを使用するようにプロジェクトが構成されます。 詳細については、「[方法 : エンティティ データ モデル ウィザードを使用する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))」を参照してください。
+> Visual Studio プロジェクトで Entity Data Model ウィザードを使用した場合、自動的に .edmx ファイルが生成され、Entity Framework を使用するようにプロジェクトが構成されます。 詳細については、[Entity Data Model ウィザードを使用する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))」を参照してください。
 
 ## <a name="to-define-the-entity-framework-connection-string"></a>Entity Framework 接続文字列を定義するには
 
@@ -30,7 +30,7 @@ ms.locfileid: "79150572"
 </connectionStrings>
 ```
 
-プロジェクトにアプリケーション構成ファイルがない場合は、[**プロジェクト**] メニューの **[新しい項目の追加**] をクリックし、[**全般**] カテゴリを選択して [**アプリケーション構成ファイル**] を選択し、[追加] をクリックして**追加**できます。
+プロジェクトにアプリケーション構成ファイルが存在しない場合は、 **[プロジェクト]** メニューの **[新しい項目の追加]** を選択し、 **[全般]** カテゴリの **[アプリケーション構成ファイル]** を選択して、 **[追加]** をクリックすることによって追加できます。
 
 ## <a name="see-also"></a>関連項目
 

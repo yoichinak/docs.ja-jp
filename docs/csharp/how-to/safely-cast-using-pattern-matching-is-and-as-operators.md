@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 60e69a8ef55484e3b04f1674c35a1c5dadfa3b7c
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 9f5690e6840098f94360dba89f09fb23b258b782
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120996"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739048"
 ---
 # <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>パターン マッチング、is 演算子、as 演算子を使用して安全にキャストする方法
 

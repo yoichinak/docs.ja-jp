@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
 ms.openlocfilehash: a8ddcab4b065c3400f9f9f7ec9ce04befdd0f29b
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79174382"
@@ -12,12 +12,12 @@ ms.locfileid: "79174382"
 # <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction によるコンカレンシーの管理
 <xref:System.Transactions.Transaction> オブジェクトは、<xref:System.Transactions.Transaction.DependentClone%2A> メソッドを使用して作成されます。 このオブジェクトの唯一の目的は、他のコード (ワーカー スレッドなど) でトランザクションの処理を実行している間、トランザクションをコミットできないように保証することです。 複製されたトランザクション内の処理が完了してコミットの準備が整うと、<xref:System.Transactions.DependentTransaction.Complete%2A> メソッドを使用して、そのトランザクションの作成者に通知できます。 これにより、データの一貫性と正確性を保持できます。  
   
- ph x="1" /&gt; クラスは、非同期タスク間のコンカレンシーの管理にも使用できます。 この場合は、トランザクションに依存している複製が独自のタスクの処理を行う間、親が任意のコードの実行を継続できます。 つまり、依存している複製が完了するまで親の実行がブロックされることはありません。  
+ <xref:System.Transactions.DependentTransaction> クラスは、非同期タスク間のコンカレンシーの管理にも使用できます。 この場合は、トランザクションに依存している複製が独自のタスクの処理を行う間、親が任意のコードの実行を継続できます。 つまり、依存している複製が完了するまで親の実行がブロックされることはありません。  
   
 ## <a name="creating-a-dependent-clone"></a>トランザクションに依存している複製の作成  
  依存トランザクションを作成するには、<xref:System.Transactions.Transaction.DependentClone%2A> メソッドを呼び出し、パラメーターとして <xref:System.Transactions.DependentCloneOption> 列挙体を渡します。 このパラメーターは、トランザクションに依存している複製が `Commit` メソッドを呼び出してトランザクションのコミットの準備が整ったことを示す前に、親トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出された場合のトランザクションの動作を定義します。 このパラメーターで有効な値は次のとおりです。  
   
-- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete>親トランザクションがタイムアウトするまで、または完了を示すすべての従属に対して呼び出されるまで<xref:System.Transactions.DependentTransaction.Complete%2A>、親トランザクションのコミット プロセスをブロックする依存トランザクションを作成します。 これは、依存トランザクションが完了するまで、クライアントが親トランザクションのコミットを望まない場合に役立ちます。 親トランザクションが依存トランザクションより前に処理を完了して <xref:System.Transactions.CommittableTransaction.Commit%2A> を呼び出した場合、すべての依存トランザクションが <xref:System.Transactions.DependentTransaction.Complete%2A> を呼び出すまで、コミット プロセスはブロックされ、そのトランザクションで追加処理を実行し、新しい参加リストを作成できる状態になります。 すべての依存トランザクションの処理が完了し、<xref:System.Transactions.DependentTransaction.Complete%2A> を呼び出すとすぐに、トランザクションのコミット プロセスが開始します。  
+- <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> では、親トランザクションがタイムアウトするまで、またはすべての依存トランザクションで完了を示す <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出されるまで、親トランザクションのコミットプロセスをブロックする、依存トランザクションが作成されます。 これは、依存トランザクションが完了するまで、クライアントが親トランザクションのコミットを望まない場合に役立ちます。 親トランザクションが依存トランザクションより前に処理を完了して <xref:System.Transactions.CommittableTransaction.Commit%2A> を呼び出した場合、すべての依存トランザクションが <xref:System.Transactions.DependentTransaction.Complete%2A> を呼び出すまで、コミット プロセスはブロックされ、そのトランザクションで追加処理を実行し、新しい参加リストを作成できる状態になります。 すべての依存トランザクションの処理が完了し、<xref:System.Transactions.DependentTransaction.Complete%2A> を呼び出すとすぐに、トランザクションのコミット プロセスが開始します。  
   
 - 一方、<xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete> では、<xref:System.Transactions.CommittableTransaction.Commit%2A> が呼び出される前に親トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出された場合、自動的に中止する依存トランザクションが作成されます。 この場合、依存トランザクションで行われたすべての処理は、1 つのトランザクションの有効期間内はそのまま変更されず、その一部でもコミットすることはできません。  
   
@@ -70,7 +70,7 @@ using(TransactionScope scope = new TransactionScope())
   
  `ThreadMethod` メソッドは、新しいスレッドで実行されます。 クライアントは新しいスレッドを開始し、`ThreadMethod` パラメーターとして依存トランザクションを渡します。  
   
- 依存トランザクションは <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> により作成されるため、2 番目のスレッド上ですべてのトランザクションの処理が完了し、依存トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出されるまで、トランザクションがコミットされないことが保証されます。 つまり、依存トランザクションで新しいスレッドが呼び出す前に、クライアントのスコープが終了した場合 (`using`ステートメントの最後にトランザクション オブジェクト<xref:System.Transactions.DependentTransaction.Complete%2A>を破棄しようとするとき)、依存するトランザクションで<xref:System.Transactions.DependentTransaction.Complete%2A>呼び出されるまで、クライアント コードはブロックされます。 その後、トランザクションはコミットまたは中止の処理を完了できます。  
+ 依存トランザクションは <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> により作成されるため、2 番目のスレッド上ですべてのトランザクションの処理が完了し、依存トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出されるまで、トランザクションがコミットされないことが保証されます。 つまり、新しいスレッドが依存トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> を呼び出す前にクライアントのスコープが終了した場合 (`using` ステートメントの最後でトランザクション オブジェクトの破棄を試みた場合)、依存トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出されるまで、クライアント コードはブロックします。 その後、トランザクションはコミットまたは中止の処理を完了できます。  
   
 ## <a name="concurrency-issues"></a>コンカレンシーに関する問題  
  コンカレンシーに関して、<xref:System.Transactions.DependentTransaction> クラスを使用する場合に注意が必要な問題がいくつかあります。  

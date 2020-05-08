@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
 ms.openlocfilehash: 880b81f2b6d4c4b893d28c919490f88dfb2a42e8
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79150377"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL の概要
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)]は、エンティティ フレームワークで概念モデルを照会できる SQL に似た言語です。 概念モデルは、エンティティとリレーションシップとしてデータ[!INCLUDE[esql](../../../../../../includes/esql-md.md)]を表し、SQL を使用したユーザーになじみのある形式で、それらのエンティティとリレーションシップを照会できます。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、Entity Framework 内の概念モデルに対するクエリの実行に使用できる SQL に似た言語です。 概念モデルでは、データがエンティティおよびリレーションシップとして表されます。[!INCLUDE[esql](../../../../../../includes/esql-md.md)] を使用すると、SQL を使用したことのあるユーザーが慣れている形式でそれらのエンティティおよびリレーションシップに対してクエリを実行できます。  
 
- Entity Framework は、ストレージ固有のデータ プロバイダーと連携[!INCLUDE[esql](../../../../../../includes/esql-md.md)]して、ジェネリックをストレージ固有のクエリに変換します。 EntityClient プロバイダーには、エンティティ モデルに対して [!INCLUDE[esql](../../../../../../includes/esql-md.md)] コマンドを実行し、スカラー結果、結果セット、オブジェクト グラフなど、さまざまなデータ型を返すための手段が用意されています。 <xref:System.Data.EntityClient.EntityCommand> オブジェクトを構築する場合は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] のクエリ文字列を <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> プロパティに割り当てることで、ストアド プロシージャの名前またはクエリのテキストを指定できます。 EDM に対する <xref:System.Data.EntityClient.EntityDataReader> の実行結果は、<xref:System.Data.EntityClient.EntityCommand> によって公開されます。 <xref:System.Data.EntityClient.EntityDataReader> を返すコマンドを実行するには、<xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A> を呼び出します。  
+ Entity Framework では、ストレージ固有のデータ プロバイダーとの連携により、汎用的な [!INCLUDE[esql](../../../../../../includes/esql-md.md)] がストレージ固有のクエリに変換されます。 EntityClient プロバイダーには、エンティティ モデルに対して [!INCLUDE[esql](../../../../../../includes/esql-md.md)] コマンドを実行し、スカラー結果、結果セット、オブジェクト グラフなど、さまざまなデータ型を返すための手段が用意されています。 <xref:System.Data.EntityClient.EntityCommand> オブジェクトを構築する場合は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] のクエリ文字列を <xref:System.Data.EntityClient.EntityCommand.CommandText%2A?displayProperty=nameWithType> プロパティに割り当てることで、ストアド プロシージャの名前またはクエリのテキストを指定できます。 EDM に対する <xref:System.Data.EntityClient.EntityDataReader> の実行結果は、<xref:System.Data.EntityClient.EntityCommand> によって公開されます。 <xref:System.Data.EntityClient.EntityDataReader> を返すコマンドを実行するには、<xref:System.Data.EntityClient.EntityCommand.ExecuteReader%2A> を呼び出します。  
   
- EntityClient プロバイダーに加えて、Entity Framework を使用[!INCLUDE[esql](../../../../../../includes/esql-md.md)]して概念モデルに対するクエリを実行し、エンティティ型のインスタンスである厳密に型指定された CLR オブジェクトとしてデータを返します。 詳細については、「[オブジェクトの操作](../working-with-objects.md)」を参照してください。  
+ EntityClient プロバイダーだけでなく Entity Framework でも、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] を使用して概念モデルに対するクエリを実行し、エンティティ型のインスタンスである厳密に型指定された CLR オブジェクトとしてデータを返すことができます。 詳しくは、「[オブジェクトの使用](../working-with-objects.md)」をご覧ください。  
   
  ここでは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] の概念について説明します。  
   

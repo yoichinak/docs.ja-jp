@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 19359422f79f8240676b0057c7391f6b06f961ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1562cb76f37b6cc2aeb6fe2f7c17c393e169e84
+ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147550"
+ms.lasthandoff: 04/25/2020
+ms.locfileid: "82158479"
 ---
 ### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>InvalidAsynchronousStateException が別のアセンブリに移動された
 
@@ -22,15 +22,15 @@ ms.locfileid: "79147550"
 
 #### <a name="recommended-action"></a>推奨アクション
 
-この変更によって影響を受けるのは、リフレクションを使用し、<xref:System.ComponentModel.InvalidAsynchronousStateException> などのメソッドや、型が特定のアセンブリにあることを想定している <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> のオーバーロードを呼び出すことによって、<xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> を読み込んでいるアプリケーションのみです。 その場合は、メソッドの呼び出しで参照されているアセンブリを、型の新しいアセンブリの場所を反映するように更新する必要があります。
+この変更によって影響を受けるのは、リフレクションを使用し、<xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> などのメソッドや、型が特定のアセンブリにあることを想定している <xref:System.Activator.CreateInstance%2A?displayProperty=nameWithType> のオーバーロードを呼び出すことによって、<xref:System.ComponentModel.InvalidAsynchronousStateException> を読み込んでいるアプリケーションのみです。 これに該当する場合は、メソッドの呼び出しで参照されているアセンブリを、型の新しいアセンブリの場所を反映するように更新します。
 
 #### <a name="category"></a>カテゴリ
 
-CoreFx
+Core .NET ライブラリ
 
 #### <a name="affected-apis"></a>影響を受ける API
 
-[なし] :
+なし。
 
 <!--
 

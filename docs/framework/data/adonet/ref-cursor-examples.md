@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: c257da03-c6c9-4cf8-b591-b7740a962c40
 ms.openlocfilehash: dc82648ff5a565c9b4d6fa593433ee1e22249d93
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79149136"
@@ -15,7 +15,7 @@ REF CURSOR の例は、REF CURSOR の使い方を説明する、次の 3 つの 
 |サンプル|説明|  
 |------------|-----------------|  
 |[OracleDataReader の REF CURSOR パラメーター](ref-cursor-parameters-in-an-oracledatareader.md)|この例では、REF CURSOR パラメーターを返し、<xref:System.Data.OracleClient.OracleDataReader> として値を読み込む PL/SQL ストアド プロシージャを実行します。|  
-|[OracleDataReader を使用した複数の REF CURSOR からのデータの取得](retrieving-data-from-multiple-ref-cursors.md)|この例では、2 つの REF CURSOR パラメーターを返す PL/SQL ストアド プロシージャを実行し **、OracleDataReader**を使用して値を読み取ります。|  
+|[OracleDataReader を使用した複数の REF CURSOR からのデータの取得](retrieving-data-from-multiple-ref-cursors.md)|この例では、2 つの REF CURSOR パラメーターを返し、**OracleDataReader** を使用して値を読み込む PL/SQL ストアド プロシージャを実行します。|  
 |[1 つまたは複数の REF CURSOR を使用した DataSet の値の設定](filling-a-dataset-using-one-or-more-ref-cursors.md)|この例では、2 つの REF CURSOR パラメーターを返し、返された行を <xref:System.Data.DataSet> に入力する PL/SQL ストアド プロシージャを実行します。|  
   
  これらの例を使用するには、必要に応じて Oracle テーブルを作成し、さらに PL/SQL パッケージとパッケージ本体を作成する必要があります。  

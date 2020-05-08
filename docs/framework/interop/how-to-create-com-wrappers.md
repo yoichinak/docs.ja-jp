@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 ms.openlocfilehash: 035d6439ec90426d7b68e05043ea8b6722f81d28
 ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/11/2020
 ms.locfileid: "81121596"
@@ -32,14 +32,14 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
 
 3. **[プロジェクト]** メニューの **[参照の追加]** をクリックします。
 
-4. [参照の追加] ダイアログ ボックスで、**[COM]** タブをクリックし、使用するコンポーネントを選択して **[OK]** をクリックします。
+4. [参照の追加] ダイアログ ボックスで、 **[COM]** タブをクリックし、使用するコンポーネントを選択して **[OK]** をクリックします。
 
      **ソリューション エクスプローラー**で、COM コンポーネントがプロジェクトの [参照設定] フォルダーに追加されていることを確認します。
 
 これで、COM オブジェクトにアクセスするためのコードを作成できます。 まず、Visual Basic の場合は `Imports` ステートメント、C# の場合は `Using` ステートメントなど、オブジェクトの宣言から始めます。
 
 > [!NOTE]
-> Microsoft Office コンポーネントをプログラムする場合は、まず[Microsoft Office プライマリ相互運用機能アセンブリ再頒布可能パッケージを](https://www.microsoft.com/Download/details.aspx?id=3508)インストールします。
+> Microsoft Office コンポーネントをプログラミングする場合は、最初に Microsoft ダウンロード センターから [Microsoft Office Primary Interop Assemblies Redistributable](https://www.microsoft.com/Download/details.aspx?id=3508) をインストールします。
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用してランタイム呼び出し可能ラッパーを作成するには  
   
@@ -61,7 +61,7 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 4. **[COM の相互運用機能に登録]** チェック ボックスをオンにします。  
   
- プロジェクトをビルドすると、アセンブリが COM 相互運用機能に対して自動的に登録されます。 Visual Studio 2005 でネイティブ アプリケーションをビルドする場合は、**[プロジェクト]** メニューの **[参照の追加]** をクリックすることで、アセンブリを使用できます。  
+ プロジェクトをビルドすると、アセンブリが COM 相互運用機能に対して自動的に登録されます。 Visual Studio 2005 でネイティブ アプリケーションをビルドする場合は、 **[プロジェクト]** メニューの **[参照の追加]** をクリックすることで、アセンブリを使用できます。  
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用して COM 呼び出し可能ラッパーを作成するには  
   

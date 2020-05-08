@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 08fa34e8-2ffa-470d-ba62-e511a5f8558e
 ms.openlocfilehash: 85383c46dd029db825d24d2f67d2dbda00f3bc95
 ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/19/2020
 ms.locfileid: "77452384"
@@ -49,14 +49,14 @@ ms.locfileid: "77452384"
   
 - どうしても必要な場合を除き、動的 SQL は使用しない。 文字列値を Transact-SQL の QUOTENAME() 関数に渡すことで、入力文字列に含まれている可能性のある区切り記号をエスケープできます。  
   
-## <a name="external-resources"></a>外部資料  
+## <a name="external-resources"></a>外部リソース  
  詳細については、次のリソースを参照してください。  
   
 |リソース|説明|  
 |--------------|-----------------|  
-|[ストアドプロシージャ](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)と[SQL インジェクション](/sql/relational-databases/security/sql-injection)|記事では、ストアドプロシージャの作成方法と SQL インジェクションのしくみについて説明します。|  
+|「[ストアド プロシージャ](/sql/relational-databases/stored-procedures/stored-procedures-database-engine)」および「[SQL インジェクション](/sql/relational-databases/security/sql-injection)」|ストアド プロシージャの作成方法と SQL インジェクションのしくみについて説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ADO.NET アプリケーションのセキュリティ保護](../securing-ado-net-applications.md)
 - [SQL Server セキュリティの概要](overview-of-sql-server-security.md)

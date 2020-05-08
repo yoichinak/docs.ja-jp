@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 ms.openlocfilehash: f0094ac572834b2cf0d74fb53c94877da55669e2
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181455"
@@ -29,11 +29,11 @@ ms.locfileid: "79181455"
   
  次の表に示すように、マネージド配列の任意のインスタンスは、特定の要素の型、ランク、および下限があります。  
   
-|マネージド配列型|要素型|Rank|下限|シグネチャの表記|  
+|マネージド配列型|要素型|順位|下限|シグネチャの表記|  
 |------------------------|------------------|----------|-----------------|------------------------|  
-|**ELEMENT_TYPE_ARRAY**|型で指定。|ランクで指定。|必要に応じて境界で指定。|*タイプ* **[** *n*,*m* **]**|  
-|**ELEMENT_TYPE_CLASS**|Unknown|Unknown|Unknown|**System.Array**|  
-|**ELEMENT_TYPE_SZARRAY**|型で指定。|1|0|*タイプ* **[** *n* **]**|  
+|**ELEMENT_TYPE_ARRAY**|型で指定。|ランクで指定。|必要に応じて境界で指定。|*type* **[** *n*,*m* **]**|  
+|**ELEMENT_TYPE_CLASS**|不明|不明|不明|**System.Array**|  
+|**ELEMENT_TYPE_SZARRAY**|型で指定。|1|0|*type* **[** *n* **]**|  
   
 ## <a name="unmanaged-arrays"></a>アンマネージ配列  
  アンマネージ配列は、COM スタイルのセーフ配列または固定長または可変長の C スタイルの配列です。 セーフ配列は、関連付けられた配列データの型、ランク、および境界を格納する自己記述型の配列です。 C スタイル配列は下限が 0 に固定された 1 次元型の配列です。 マーシャリング サービスには、両方の配列型の制限されたサポートがあります。  
@@ -43,8 +43,8 @@ ms.locfileid: "79181455"
   
 |アンマネージ型|インポートされた型|  
 |--------------------|-------------------|  
-|**セーフアレイ(** *タイプ* **)**|**ELEMENT_TYPE_SZARRAY****\<***変換型***>**<br /><br /> ランク = 1、下限 = 0。 サイズはマネージド シグネチャで指定された場合にのみ判明します。 ランク = 1 または下限 = 0 ではないセーフ配列は、**SZARRAY** としてマーシャリングできません。|  
-|*タイプ*  **[]**|**ELEMENT_TYPE_SZARRAY****\<***変換型***>**<br /><br /> ランク = 1、下限 = 0。 サイズはマネージド シグネチャで指定された場合にのみ判明します。|  
+|**SafeArray(** *Type* **)**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> ランク = 1、下限 = 0。 サイズはマネージド シグネチャで指定された場合にのみ判明します。 ランク = 1 または下限 = 0 ではないセーフ配列は、**SZARRAY** としてマーシャリングできません。|  
+|*Type*  **[]**|**ELEMENT_TYPE_SZARRAY** **\<** *ConvertedType* **>**<br /><br /> ランク = 1、下限 = 0。 サイズはマネージド シグネチャで指定された場合にのみ判明します。|  
   
 ### <a name="safe-arrays"></a>セーフ配列  
  セーフ配列がタイプ ライブラリから .NET アセンブリにインポートされるときに、配列は既知の型 (**int** など) の 1 次元配列に変換されます。 パラメーターに適用される同じ型変換規則は、配列要素にも適用されます。 たとえば、**BSTR** 型のセーフ配列は文字列のマネージド配列になり、バリアントのセーフ配列はオブジェクトのマネージド配列になります。 **SAFEARRAY** 要素型はタイプ ライブラリからキャプチャされ、<xref:System.Runtime.InteropServices.UnmanagedType> 列挙型の **SAFEARRAY** 値に保存されます。  
@@ -182,11 +182,11 @@ void New3(ref String ar);
   
 |マネージド配列型|エクスポート|  
 |------------------------|-----------------|  
-|**ELEMENT_TYPE_SZARRAY****\<***タイプ***>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型はシグネチャで提供されます。 ランクは常に 1 で、下限は常に 0 です。 サイズは実行時に常に把握されています。|  
-|**ELEMENT_TYPE_ARRAY****\<***型***>****>***bounds**rank*ランク**\<**[ 境界**>****\<**]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型、ランク、境界はシグネチャで提供されます。 サイズは実行時に常に把握されています。|  
-|**ELEMENT_TYPE_CLASS****\<**<xref:System.Array?displayProperty=nameWithType>**>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 型、ランク、境界、およびサイズは実行時に常に把握されています。|  
+|**ELEMENT_TYPE_SZARRAY** **\<** *type* **>**|<xref:System.Runtime.InteropServices.UnmanagedType> **.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型はシグネチャで提供されます。 ランクは常に 1 で、下限は常に 0 です。 サイズは実行時に常に把握されています。|  
+|**ELEMENT_TYPE_ARRAY** **\<** *type* **>** **\<** *rank* **>** [ **\<** *bounds* **>** ]|**UnmanagedType.SafeArray(** *type* **)**<br /><br /> **UnmanagedType.LPArray**<br /><br /> 型、ランク、境界はシグネチャで提供されます。 サイズは実行時に常に把握されています。|  
+|**ELEMENT_TYPE_CLASS** **\<** <xref:System.Array?displayProperty=nameWithType> **>**|**UT_Interface**<br /><br /> **UnmanagedType.SafeArray(** *type* **)**<br /><br /> 型、ランク、境界、およびサイズは実行時に常に把握されています。|  
   
- LPSTR または LPWSTR を含む構造体の配列に関連する OLE オートメーションの制限があります。  そのため、**String** フィールドは **UnmanagedType.BSTR** としてマーシャリングする必要があります。 そうでない場合は、例外がスローされます。  
+ LPSTR または LPWSTR を含む構造体の配列に関連する OLE オートメーションの制限があります。  そのため、**String** フィールドは **UnmanagedType.BSTR** としてマーシャリングする必要があります。 この操作を行わない場合、例外がスローされます。  
   
 ### <a name="element_type_szarray"></a>ELEMENT_TYPE_SZARRAY  
  **ELEMENT_TYPE_SZARRAY** パラメーター (1 次元配列) を含むメソッドが .NET アセンブリからタイプ ライブラリにエクスポートされるときに、配列パラメーターが特定の型の **SAFEARRAY** に変換されます。 同じ変換規則が配列要素型に適用されます。 マネージド配列の内容はマネージド メモリから **SAFEARRAY** に自動的にコピーされます。 次に例を示します。  
@@ -310,7 +310,7 @@ void New(long [][][] ar );
 ```  
   
 ### <a name="element_type_class-systemarray"></a>ELEMENT_TYPE_CLASS \<System.Array>  
- <xref:System.Array?displayProperty=nameWithType> パラメーターを含むメソッドが .NET アセンブリからタイプ ライブラリにエクスポートされるときに、配列パラメーターが特定の型の **_Array** インターフェイスに変換されます。 マネージド配列の内容には、**_Array** インターフェイスのメソッドとプロパティを介してのみアクセスできます。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用することで、**System.Array** を **SAFEARRAY** としてマーシャリングすることもできます。 セーフ配列としてマーシャリングすると、配列要素はバリアントとしてマーシャリングされます。 次に例を示します。  
+ <xref:System.Array?displayProperty=nameWithType> パラメーターを含むメソッドが .NET アセンブリからタイプ ライブラリにエクスポートされるときに、配列パラメーターが特定の型の **_Array** インターフェイスに変換されます。 マネージド配列の内容には、 **_Array** インターフェイスのメソッドとプロパティを介してのみアクセスできます。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性を使用することで、**System.Array** を **SAFEARRAY** としてマーシャリングすることもできます。 セーフ配列としてマーシャリングすると、配列要素はバリアントとしてマーシャリングされます。 次に例を示します。  
   
 #### <a name="managed-signature"></a>マネージド シグネチャ  
   
