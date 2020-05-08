@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: d492284f-d3c5-4614-adb8-d718d5042500
 topic_type:
 - apiref
-ms.openlocfilehash: f720b06581ac60c8bd68dc5e85f15843fd9425f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6b02657012870de4d0f888f6c05b115b25073fa2
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788903"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82892834"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes メソッド
 現在のオブジェクトがキャストされた、またはとして使用されたインターフェイス型の列挙子を提供します。  
@@ -33,23 +33,23 @@ HRESULT GetCachedInterfaceTypes(
   
 ## <a name="parameters"></a>パラメーター  
  `bIInspectableOnly`  
- からメソッドが、ランタイム呼び出し可能ラッパー (RCW) によってキャッシュされた Windows ランタイムインターフェイス (`IInspectable` インターフェイス) またはすべての COM インターフェイスだけを返すかどうかを示す値。  
+ からメソッドが、ランタイム呼び出し可能ラッパー (RCW) によっ`IInspectable`てキャッシュされた Windows ランタイムインターフェイス (インターフェイス) またはすべての COM インターフェイスだけを返すかどうかを示す値。  
   
  `ppInterfacesEnum`  
- 入出力`bIInspectableOnly`に従ってフィルター処理された、キャッシュされたインターフェイスの種類を表す、の型のオブジェクトへのアクセスを提供する、の型のオブジェクトへのアクセスを提供する、の型のアドレスへのポインター。  
+ 入出力に`bIInspectableOnly`従ってフィルター処理された、キャッシュされたインターフェイスの種類を表す、の型のオブジェクトへのアクセスを提供する、、の各型のオブジェクトへのアクセスを提供する、テキストを指すポインターです。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugComObjectValue のインターフェイス](icordebugcomobjectvalue-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

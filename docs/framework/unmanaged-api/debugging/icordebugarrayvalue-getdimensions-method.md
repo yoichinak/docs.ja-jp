@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6c116592-134b-4ef2-a319-680e92d013aa
 topic_type:
 - apiref
-ms.openlocfilehash: 35e043c56977bf644efe1dd9cee1409f50cc877f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa2be894af6e44d09c25a736f45acba56052f9fa
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179028"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895041"
 ---
 # <a name="icordebugarrayvaluegetdimensions-method"></a>ICorDebugArrayValue::GetDimensions メソッド
-この配列の各次元の要素の数を取得します。  
+この配列の各次元に含まれる要素の数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,18 +37,18 @@ HRESULT GetDimensions (
   
 ## <a name="parameters"></a>パラメーター  
  `cdim`  
- [in]このオブジェクトの次元の数。  
+ からこの ICorDebugArrayValue オブジェクトの次元数。  
   
- この値は、オブジェクトの次元数`dims`と同じサイズであるため、配列の`ICorDebugArrayValue`サイズでもあります。  
+ この値は、 `dims`配列のサイズが`ICorDebugArrayValue`オブジェクトの次元数と同じであるため、配列のサイズでもあります。  
   
  `dims`  
- [アウト]整数の配列で、この`ICorDebugArrayValue`オブジェクト内の次元内の要素の数をそれぞれ指定します。  
+ 入出力整数の配列。各整数は、この`ICorDebugArrayValue`オブジェクト内のディメンション内の要素の数を指定します。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

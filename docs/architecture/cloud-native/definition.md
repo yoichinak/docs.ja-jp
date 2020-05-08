@@ -3,12 +3,12 @@ title: クラウド ネイティブの定義
 description: クラウドネイティブシステムの基盤を提供する基本的な柱について説明します。
 author: robvet
 ms.date: 08/20/2019
-ms.openlocfilehash: ba11cb1cf0d9d7ef9734ad49aee1df22f285fc4c
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 33977ff736fc5cbfcf86ed6479e8d0b927b87a63
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199782"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895616"
 ---
 # <a name="defining-cloud-native"></a>クラウドネイティブの定義
 
@@ -35,8 +35,8 @@ ms.locfileid: "82199782"
 | [会社] | エクスペリエンス |
 | :-------- | :-------- |
 | [Netflix](https://www.infoq.com/news/2013/06/netflix/) | 実稼働環境で600以上のサービスをご用意しています。 1日に100回デプロイします。 |
-| [Uber](https://eng.uber.com/micro-deploy/) | 運用環境に1,000 を超えるサービスが格納されています。 では、週ごとに数千のビルドがデプロイされます。 |
-| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 運用環境には300を超えるサービスがあります。 1日に約1000の変更を行います。 |
+| [Uber](https://eng.uber.com/micro-deploy/) | 運用環境に1,000 を超えるサービスがあります。 週ごとに数千回デプロイされます。 |
+| [WeChat](https://www.cs.columbia.edu/~ruigu/papers/socc18-final100.pdf) | 運用環境には300を超えるサービスがあります。 1日に1000回デプロイします。 |
 
 ご覧のように、Netflix、Uber、w は、数百の独立したマイクロサービスで構成されるシステムを公開しています。 このアーキテクチャスタイルを使用すると、市場の状況に迅速に対応できます。 ライブで複雑なアプリケーションの小さな領域を瞬時に更新し、必要に応じてそれらの領域を個別にスケールできます。
 
@@ -95,7 +95,7 @@ Web ベースのアプリケーションにも該当しますが、多くの専�
 
 |    |  新しい係数 | 説明  |
 | :-------- | :-------- | :-------- |
-| 13 | API 優先 | すべてのサービスを作成します。 コードがフロントエンドクライアント、ゲートウェイ、または別のサービスによって使用されるとします。 |
+| 13 | API ファースト | すべてのサービスを作成します。 コードがフロントエンドクライアント、ゲートウェイ、または別のサービスによって使用されるとします。 |
 | 14 | 製品利用統計情報 | ワークステーションには、アプリケーションとその動作の詳細が表示されます。 クラウドでは、そうではありません。 監視、ドメイン固有、およびシステムデータのコレクションが設計に含まれていることを確認します。 |
 | 15 | 認証/承認  | Start から id を実装します。 パブリッククラウドで利用できる[RBAC (ロールベースのアクセス制御)](https://docs.microsoft.com/azure/role-based-access-control/overview)機能を検討してください。  |
 
@@ -167,7 +167,7 @@ Id の詳細については、「8. *id*」を参照してください。
 
 - 各マイクロサービスは個別にスケーリングできます。 アプリケーション全体を1つのユニットとしてスケールアウトするのではなく、より多くの処理能力やネットワーク帯域幅を必要とするサービスのみをスケールアウトします。 このように細分化されたスケーリングのアプローチによって、システムをより細かく制御し、システム全体ではなく、システムの一部をスケールするときに全体的なコストを削減することができます。
 
-マイクロサービスを理解するための優れたリファレンスガイドは、 [.Net マイクロサービス: コンテナー化された .Net アプリケーションのアーキテクチャ](https://docs.microsoft.com/dotnet/standard/microservices-architecture/)です。 この書籍は、マイクロサービスの設計とアーキテクチャに深くダイブしています。 これは、Microsoft から無料でダウンロードできる[フルスタックマイクロサービス参照アーキテクチャ](https://github.com/dotnet-architecture/eShopOnContainers)のコンパニオンです。
+マイクロサービスを理解するための優れたリファレンスガイドは、 [.Net マイクロサービス: コンテナー化された .Net アプリケーションのアーキテクチャ](https://dotnet.microsoft.com/download/thank-you/microservices-architecture-ebook)です。 この書籍は、マイクロサービスの設計とアーキテクチャに深くダイブしています。 これは、Microsoft から無料でダウンロードできる[フルスタックマイクロサービス参照アーキテクチャ](https://github.com/dotnet-architecture/eShopOnContainers)のコンパニオンです。
 
 ### <a name="developing-microservices"></a>マイクロサービスの開発
 
