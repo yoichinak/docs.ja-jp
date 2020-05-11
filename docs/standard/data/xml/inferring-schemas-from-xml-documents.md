@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
-ms.openlocfilehash: 5c2d997d9006a3f1eb971eac20982b9dd5677ebf
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 2d991a7835d22af2c780b020d6884f626908665e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710753"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796172"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>XML ドキュメントからのスキーマの推論
 このトピックでは、<xref:System.Xml.Schema.XmlSchemaInference> クラスを使用して、XML ドキュメントの構造から XML スキーマ定義言語 (XSD) スキーマを推論する方法を説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "75710753"
     <child>One</child>  
     <child>Two</child>  
 </parent>  
-<parent attribute1="A">  
+<parent attribute1="A" />
 ```  
   
  上の例で `attribute1` 属性の値 `6` が <xref:System.Xml.Schema.XmlSchemaInference> プロセスによって検出されると、この属性は `xs:unsignedByte` 型であると想定されます。 2 番目の `parent` 要素が <xref:System.Xml.Schema.XmlSchemaInference> プロセスによって検出されると、`xs:string` 属性の値が `attribute1` であるため、型が `A` に変更され、制限が緩和されます。 同様に、2 番目の親要素が子要素を持っていないため、スキーマで推論されるすべての `minOccurs` 要素の `child` 属性が `minOccurs="0"` に緩和されます。  

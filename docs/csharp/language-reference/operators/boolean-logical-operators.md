@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 930329b922f585ac4763e6a66d3b192ae839f14f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5f85b88236c2e643f97453c64173a3f4f7159a35
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398197"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795002"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
 
@@ -157,7 +157,8 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](snippets/BooleanLogicalOperators.cs#CompoundAssignment)]
 
-条件付き論理演算子 `&&` と `||` は複合代入をサポートしません。
+> [!NOTE]
+> 条件付き論理演算子 `&&` と `||` は複合代入をサポートしません。
 
 ## <a name="operator-precedence"></a>演算子の優先順位
 

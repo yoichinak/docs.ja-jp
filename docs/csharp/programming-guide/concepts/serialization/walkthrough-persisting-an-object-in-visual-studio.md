@@ -1,12 +1,12 @@
 ---
 title: 'チュートリアル: C# を使用してオブジェクトを永続化する'
 ms.date: 04/26/2018
-ms.openlocfilehash: 85c5d1b711180eda5734d5860d996242c6bc89d1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bbe239008629d687084af7e28a75fa68560ca0ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167571"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796068"
 ---
 # <a name="walkthrough-persisting-an-object-using-c"></a>チュートリアル: C\# を使用してオブジェクトを永続化する
 
@@ -20,7 +20,7 @@ ms.locfileid: "79167571"
 > [!IMPORTANT]
 > この例では、バイナリ形式のファイルにデータを格納します。 この形式は、パスワードやクレジット カード情報などの重要情報には使用しないでください。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - ビルドして実行するには、[.NET Core SDK](https://dotnet.microsoft.com/download) をインストールします。
 
@@ -99,7 +99,7 @@ C# 7.3 以降、`field` のターゲット値を使用して、自動実装プ�
 
 この時点で、アプリケーションを再度ビルドして実行できます。 初めて実行すると、利率は 7.5 から始まり、7.1 に変更されます。 いったんアプリケーションを閉じて、再び実行します。 利率を変更するコードの前でも、保存済みのファイルが読み込まれ、利率は 7.1 であるというメッセージがアプリケーションから出力されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [シリアル化 (C#)](index.md)
-- [C# プログラミングガイド](../..//index.md)
+- [C# プログラミング ガイド](../../index.md)

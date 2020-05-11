@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: c5308530831fa288bf637849c1342f51769c3ad4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b00823034cbcb271cb7e169df40122f1144462a
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77503961"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895715"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>チュートリアル: .NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -28,7 +28,7 @@ ms.locfileid: "77503961"
 
 開始する前に、以下の作業を行います。
 
-* Azure アカウントがない場合は、[無料アカウント](https://azure.microsoft.com/free/)を作成します。
+* Azure アカウントがない場合は、[無料アカウント](https://azure.microsoft.com/free/dotnet/)を作成します。
 * [Azure Portal](https://portal.azure.com/) にサインインします。
 * 「[.NET for Apache Spark - 10 分で開始する](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」のチュートリアルを完了します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "77503961"
 
 > [!Note]
 > **Azure 無料試用版サブスクリプション**を使用してこのチュートリアルを実行することはできません。
-> 無料アカウントをお持ちの場合は、お使いのプロファイルにアクセスし、サブスクリプションを **[従量課金制]** に変更します。 詳細については、[Azure 無料アカウント](https://azure.microsoft.com/free/)に関するページをご覧ください。 次に、リージョン内の vCPU について[使用制限を削除し](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)、[クォータの増加を依頼](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)します。 Azure Databricks ワークスペースを作成するときに、 **[Trial (Premium - 14-Days Free DBUs)]\(試用版 (Premium - 14 日間の無料 DBU)\)** の価格レベルを選択し、ワークスペースから 14 日間無料の Premium Azure Databricks DBU にアクセスできるようにします。
+> 無料アカウントをお持ちの場合は、お使いのプロファイルにアクセスし、サブスクリプションを **[従量課金制]** に変更します。 詳細については、[Azure 無料アカウント](https://azure.microsoft.com/free/dotnet/)に関するページをご覧ください。 次に、リージョン内の vCPU について[使用制限を削除し](https://docs.microsoft.com/azure/billing/billing-spending-limit#why-you-might-want-to-remove-the-spending-limit)、[クォータの増加を依頼](https://docs.microsoft.com/azure/azure-supportability/resource-manager-core-quotas-request)します。 Azure Databricks ワークスペースを作成するときに、 **[Trial (Premium - 14-Days Free DBUs)]\(試用版 (Premium - 14 日間の無料 DBU)\)** の価格レベルを選択し、ワークスペースから 14 日間無料の Premium Azure Databricks DBU にアクセスできるようにします。
 
 このセクションでは、Azure Portal を使って Azure Databricks ワークスペースを作成します。
 

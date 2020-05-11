@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 48ab765db7c839ed0dd14df5e6b30f5bd6c0d29b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8082dbd7398b6634b68f1dd2887cd55d6798a5d9
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173537"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795158"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>アクセシビリティ レベルの使用に関する制限事項 (C# リファレンス)
 
@@ -109,14 +109,14 @@ public class A
 
 ## <a name="see-also"></a>参照
 
-- [C# リファレンス](../../language-reference/index.md)
+- [C# リファレンス](../index.md)
 - [C# プログラミングガイド](../../programming-guide/index.md)
-- [C# のキーワード](../../language-reference/keywords/index.md)
-- [アクセス修飾子](../../language-reference/keywords/access-modifiers.md)
-- [アクセシビリティ ドメイン](../../language-reference/keywords/accessibility-domain.md)
-- [アクセシビリティ レベル](../../language-reference/keywords/accessibility-levels.md)
+- [C# のキーワード](index.md)
+- [アクセス修飾子](access-modifiers.md)
+- [アクセシビリティ ドメイン](accessibility-domain.md)
+- [アクセシビリティ レベル](accessibility-levels.md)
 - [アクセス修飾子](../../programming-guide/classes-and-structs/access-modifiers.md)
-- [public](../../language-reference/keywords/public.md)
-- [private](../../language-reference/keywords/private.md)
-- [protected](../../language-reference/keywords/protected.md)
-- [internal](../../language-reference/keywords/internal.md)
+- [public](public.md)
+- [private](private.md)
+- [protected](protected.md)
+- [internal](internal.md)

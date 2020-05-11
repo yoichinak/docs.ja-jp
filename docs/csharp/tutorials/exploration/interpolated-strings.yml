@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b54ea8b3bbb63bdadb8386b0f6311f1f5458b42
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 7736a2a26b37d8fbfac98328f94ce3c9a25be181
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "76737536"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860995"
 items:
 - durationInMinutes: 2
   content: >
@@ -40,25 +40,20 @@ items:
     上記の例には、すべての挿入文字列式に含める必要がある次の 2 つの要素が含まれています。
 
 
-    - 始まりの引用符文字の前の `$` で始まる文字列リテラル。 `$` シンボルと引用符文字の間にスペースを挿入することはできません (スペースが含まれている場合の動作を確認したい場合は、対話型ウィンドウで `$` 文字の後にスペースを挿入し、更新されたコードを実行します。 C# コンパイラには "予期しない '$' 文字です" と示されます)。
+    - 始まりの引用符文字の前の `$` で始まる文字列リテラル。 `$` シンボルと引用符文字の間にスペースを挿入することはできません  (スペースが含まれている場合の動作を確認したい場合は、対話型ウィンドウで `$` 文字の後にスペースを挿入し、更新されたコードを実行します。 C# コンパイラには "予期しない '$' 文字です" と示されます)。
 
 
     - 1 つ以上の*補間式*。 補間式は、始めかっこと終わりかっこ (`{` と `}`) で示されます。 かっこ内に (`null` を含む) 値を返す C# 式を配置できます。
 
 
     その他のいくつかのデータ型を持つ文字列補間の例をさらにいくつか試してみましょう。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: さまざまなデータ型を含める
   durationInMinutes: 5
   content: >
     前の手順では、文字列補間を使用して、1 つの文字列内に別の文字列を挿入しましたが、 ただし、挿入文字列式に含まれる各補間式にはあらゆるデータ型を指定できます。 挿入文字列にさまざまなデータ型式の値を含めてみましょう。
 
 
-    次の例では、最初に [、](../../tuples.md)、`Name` というメンバーを持つ`Price`タプル`perPackage`を定義します。 対話型ウィンドウで次のコードを実行します。
+    次の例では、最初に `Name`、`Price`、`perPackage` というメンバーを持つ[タプル](../../tuples.md)を定義します。 対話型ウィンドウで次のコードを実行します。
 
 
     ```csharp
@@ -82,11 +77,6 @@ items:
 
 
     この例の出力では、日付の精度が高すぎ ("eggplant" の価格は毎秒変更されることはありません)、価格の値は通貨の単位を示していません。 次の手順では、式の結果における文字列表現の書式を制御することで、こうした問題を修正する方法について説明します。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 補間式の書式設定を制御する
   durationInMinutes: 5
   content: >
@@ -103,18 +93,13 @@ items:
     コロン (":") と書式指定文字列を持つ補間式に従って、書式指定文字列を指定します。 "d" は、短い日付形式を表す[標準の日時書式設定文字列](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)です。 "C2" は、小数点以下が 2 桁の通貨値として数値を表す[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)です。
 
 
-    .NET ライブラリの多くの型で、定義済みの書式指定文字列セットがサポートされています。 これらには、数値型と日時型がすべて含まれます。 書式指定文字列をサポートする型の完全なリストについては、「[.Net 型の書式設定](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)」記事の「[.NET クラス ライブラリの型および書式指定文字列](../../../standard/base-types/formatting-types.md)」を参照してください。
+    .NET ライブラリの多くの型で、定義済みの書式指定文字列セットがサポートされています。 これらには、数値型と日時型がすべて含まれます。 書式指定文字列をサポートする型の完全なリストについては、「[.Net 型の書式設定](../../../standard/base-types/formatting-types.md)」記事の「[.NET クラス ライブラリの型および書式指定文字列](../../../standard/base-types/formatting-types.md#format-strings-and-net-types)」を参照してください。
 
 
     この例で書式指定文字列を変更してみて、日時と数値の書式設定にどのように影響するかを確認します。 `{date:d}` の "d" を "t" (短い時刻形式を表示する)、"y" (年と月を表示する)、"yyyy" (4 桁の数字として年を表示する) に変更します。 `{price:C2}` "C2" を "e" (指数表記の場合) と "F3" (小数点以下が 3 桁の数値の場合) に変更します。
 
 
     書式設定を制御するだけでなく、結果の文字列に含まれる書式指定された文字列のフィールドの幅と配置を制御することもできます。 次の手順では、この方法を説明します。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 補間式のフィールドの幅と配置を制御する
   durationInMinutes: 6
   content: >
@@ -151,11 +136,6 @@ items:
     Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");
 
     ```
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - content: >-
     文字列補間の対話式チュートリアルはこれで終了です。 [.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。
 

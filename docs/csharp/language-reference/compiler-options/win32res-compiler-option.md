@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 39f02c4c2e060c4be40002a2f48b0da31004a9ae
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3bb1614fcf28c62a9000c9b96af2f046f329fb1e
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69606200"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794378"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C# コンパイラ オプション)
 **-win32res** オプションは、Win32 リソースを出力ファイルに挿入します。  
@@ -30,7 +30,7 @@ ms.locfileid: "69606200"
  出力ファイルに追加するリソース ファイル。  
   
 ## <a name="remarks"></a>Remarks  
- Win32 リソース ファイルは、[リソース コンパイラ](../../language-reference/compiler-options/resource-compiler-option.md)を使用して作成できます。 リソース コンパイラは、Visual C++ プログラムをコンパイルするときに呼び出されます。 .res ファイルは .rc ファイルから作成されます。  
+ Win32 リソース ファイルは、[リソース コンパイラ](resource-compiler-option.md)を使用して作成できます。 リソース コンパイラは、Visual C++ プログラムをコンパイルするときに呼び出されます。 .res ファイルは .rc ファイルから作成されます。  
   
  Win32 リソースは、バージョンまたはビットマップ (アイコン) 情報を格納できます。エクスプローラーでアプリケーションを識別するのに役立ちます。 **-win32res** を指定しない場合、コンパイラはアセンブリ バージョンに基づいてバージョン情報を生成します。  
   

@@ -5,12 +5,12 @@ author: mlacouture
 ms.date: 01/19/2017
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 094dd1227033e167050ad73121b3005a592a0ae4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c3f1fcda8a8a6abc58d35bf37e51485bb3590fa3
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75714521"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794638"
 ---
 # <a name="using-microsoft-xml-serializer-generator-on-net-core"></a>.NET Core で Microsoft XML Serializer Generator を使用する
 
@@ -50,7 +50,7 @@ dotnet new console
 
 ### <a name="add-a-reference-to-the-microsoftxmlserializergenerator-package-in-the-myapp-project"></a>MyApp プロジェクトで Microsoft.XmlSerializer.Generator パッケージへの参照を追加する
 
-[`dotnet add package`](../tools//dotnet-add-package.md) コマンドを使用して、プロジェクトで参照を追加します。
+[`dotnet add package`](../tools/dotnet-add-package.md) コマンドを使用して、プロジェクトで参照を追加します。
 
 型:
 
@@ -64,7 +64,7 @@ dotnet add package Microsoft.XmlSerializer.Generator -v 1.0.0
 
 テキスト エディターで *MyApp.csproj* を開きます。
 
-[`dotnet add package`](../tools//dotnet-add-package.md) コマンドを実行すると、以下の行が *MyApp.csproj* プロジェクト ファイルに追加されます。
+[`dotnet add package`](../tools/dotnet-add-package.md) コマンドを実行すると、以下の行が *MyApp.csproj* プロジェクト ファイルに追加されます。
 
  ```xml
  <ItemGroup>

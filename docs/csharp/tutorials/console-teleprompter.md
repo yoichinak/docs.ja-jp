@@ -4,12 +4,12 @@ description: このチュートリアルでは、.NET Core と C# 言語のさ�
 ms.date: 03/06/2017
 ms.technology: csharp-fundamentals
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: 09ce36e7a61f576dc4449976ce676701dc57c9cd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 06affa01b67edeea09088834cf131adb55650bbb
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76921128"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794664"
 ---
 # <a name="console-app"></a>コンソール アプリ
 
@@ -313,4 +313,4 @@ RunTeleprompter().Wait();
 
 このチュートリアルでは、コンソール アプリケーションでの作業に関連する、C# 言語と .NET Core ライブラリについての多くの機能を説明しました。 ここでの知識を基にすれば、この言語やここで紹介したクラスについてさらに理解していけるでしょう。 ファイルとコンソール入出力の基本、タスク ベースの非同期プログラミングのブロック使用と非ブロック使用、C# 言語のツアーと C# プログラムの構成方法、および .NET Core CLI について説明しました。
 
-ファイル入出力の詳細については、「[ファイルおよびストリーム入出力](../../standard/io/index.md)」トピックを参照してください。 このチュートリアルで使用される非同期プログラミング モデルの詳細については、「[タスク ベースの非同期プログラミング](../..//standard/parallel-programming/task-based-asynchronous-programming.md)」トピックと「[非同期プログラミング](../async.md)」トピックを参照してください。
+ファイル入出力の詳細については、「[ファイルおよびストリーム入出力](../../standard/io/index.md)」トピックを参照してください。 このチュートリアルで使用される非同期プログラミング モデルの詳細については、「[タスク ベースの非同期プログラミング](../../standard/parallel-programming/task-based-asynchronous-programming.md)」トピックと「[非同期プログラミング](../async.md)」トピックを参照してください。

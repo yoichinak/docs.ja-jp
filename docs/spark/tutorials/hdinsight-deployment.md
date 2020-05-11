@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Azure HDInsight �
 ms.date: 01/23/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 77b57463375c36444532bdd383ec4b3bfe3ab056
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6b8dbe395a5db9631433a5821f5ef2b9ade556f6
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77504169"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895691"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-azure-hdinsight"></a>チュートリアル: .NET for Apache Spark アプリケーションを Azure HDInsight にデプロイする
 
@@ -29,7 +29,7 @@ ms.locfileid: "77504169"
 
 開始する前に、以下の作業を行います。
 
-* Azure サブスクリプションをお持ちでない場合は、[無料アカウント](https://azure.microsoft.com/free/)を作成してください。
+* Azure サブスクリプションをお持ちでない場合は、[無料アカウント](https://azure.microsoft.com/free/dotnet/)を作成してください。
 * [Azure Portal](https://portal.azure.com/) にサインインします。
 * Azure Storage Explorer を [Windows](https://go.microsoft.com/fwlink/?LinkId=708343&clcid=0x409)、[Linux](https://go.microsoft.com/fwlink/?LinkId=722418&clcid=0x409)、または [MacOS](https://go.microsoft.com/fwlink/?LinkId=708342&clcid=0x409) コンピューターにインストールします。
 * チュートリアル「[.NET for Apache Spark - Get Started in 10-Minutes](https://dotnet.microsoft.com/learn/data/spark-tutorial/intro)」 (.NET for Apache Spark - 10 分で開始する) を完了します。

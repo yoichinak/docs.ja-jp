@@ -4,12 +4,12 @@ description: .NET Core でのサテライト アセンブリ読み込みアル�
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: bfdc1d8179d46a13b3d137a87397fa3e573da33c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17f29a9aca79019daa91736e586bf1b6b753a9ec
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "72303624"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859530"
 ---
 # <a name="satellite-assembly-loading-algorithm"></a>サテライト アセンブリの読み込みアルゴリズム
 
@@ -40,6 +40,7 @@ ms.locfileid: "72303624"
         >
         > [!NOTE]
         > Linux と macOS では、サブディレクトリは大文字と小文字が区別されるため、次のいずれかでなければなりません。
+        >
         > - 大文字と小文字が完全に一致している。
         > - 小文字になっている。
 

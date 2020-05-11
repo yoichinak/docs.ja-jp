@@ -3,12 +3,12 @@ title: .NET Core でサポートされていない API
 titleSuffix: ''
 description: .NET Core で常に例外をスローする .NET Framework の API について説明します。
 ms.date: 12/23/2019
-ms.openlocfilehash: bd3516d9480ef42b6ea89825ba64867a3ca104e3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: 941e9149c7679afe4a888149108d0a9a28e5e7ab
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81242947"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794599"
 ---
 # <a name="apis-that-always-throw-exceptions-on-net-core"></a>.NET Core で常に例外をスローする API
 
@@ -324,6 +324,6 @@ ms.locfileid: "81242947"
 
 ## <a name="see-also"></a>参照
 
-- [.NET Framework から .NET Core への移行の破壊的変更](../compatibility/fx-core.md)
+- [.NET Framework から .NET Core への移行の破壊的変更](fx-core.md)
 - [.NET Core でのバイナリ シリアル化](../../standard/serialization/binary-serialization.md#net-core)
 - [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md)

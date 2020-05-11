@@ -3,12 +3,12 @@ title: XML ドキュメントでの名前空間の管理
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 7b219788895ab2f89fa285c2e1b7de62639bfcf9
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160041"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796153"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML ドキュメントでの名前空間の管理
 XML 名前空間は、XML ドキュメントの要素名と属性名をカスタムの定義済み URI に関連付けます。 この関係を作成するには、名前空間 URI のプレフィックスを定義し、そのプレフィックスを使用して XML データ内の要素名と属性名を修飾します。 名前空間は要素名や属性名の競合を防ぎ、同じ名前の要素や属性を個別に処理および評価できるようにします。  
@@ -25,7 +25,8 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
   
 ```xml  
 <mybook:BOOK xmlns:mybook="http://www.contoso.com/books.dtd">  
-<bb:BOOK xmlns:bb="urn:blueyonderairlines">  
+<bb:BOOK xmlns:bb="urn:blueyonderairlines" />
+</mybook>
 ```  
   
  ある要素が特定の名前空間の一部であることを指定するには、名前空間プレフィックスをその要素に追加します。 たとえば、`Author` 要素が `mybook` 名前空間に属する場合は、`<mybook:Author>` として宣言されます。  
@@ -53,6 +54,8 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
   
 ```xml  
 <BOOK xmlns="http://www.contoso.com/books.dtd">  
+...
+</BOOK>
 ```  
   
 ## <a name="managing-namespaces"></a>名前空間の管理  

@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 77180064f810cf70b1ec0ef3d72bbd9005b78a47
-  ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+  ms.openlocfilehash: 025b3e0fcaf693be00f1ca396b92617d6faf31aa
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/30/2020
-  ms.locfileid: "82595911"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860970"
 items:
 - durationInMinutes: 1
   content: >
@@ -38,11 +38,6 @@ items:
 
 
     次に進んで、さらに詳しく見てみましょう。 このレッスンの残りの部分では、C# においてテキストを表す `string` 型の機能を確認します。 `Console` 型と同じように、`string` 型にもメソッドがあります。 `string` メソッドはテキストを処理します。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 変数の宣言と使用
   durationInMinutes: 3
   content: >
@@ -119,11 +114,6 @@ items:
 
 
     もう一度 **[実行]** を選択して結果を確認します。 メッセージは "Hello {aFriend}" ではなく、"Hello Maira" であるはずです。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 文字列の処理
   durationInMinutes: 5
   content: >
@@ -159,11 +149,6 @@ items:
     > [!TIP]
 
     > このあたりで、自分で試してみるといいでしょう。 `Console.WriteLine()` を使用して画面にテキストを出力できることを学習しました。 変数を宣言して文字列同士を連結する方法についても学習しました。 対話型ウィンドウで実際に確認してみてください。 このウィンドウには、実行できることの候補を作成する **IntelliSense** という機能があります。 `firstFriend` で `d` の後に `.` を入力します。 使用できるプロパティとメソッドの候補の一覧が表示されます。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 文字列の追加操作
   durationInMinutes: 5
   content: >
@@ -231,11 +216,6 @@ items:
     Console.WriteLine(sayHello.ToLower());
 
     ```
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 検索文字列
   durationInMinutes: 10
   content: >
@@ -268,11 +248,6 @@ items:
 
 
     先頭が "You" で末尾が "hello" の場合は `true`、先頭または末尾が "goodbye" の場合は false になります。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 課題完了
   durationInMinutes: 3
   content: >
@@ -293,11 +268,6 @@ items:
     Console.WriteLine(songLyrics.EndsWith("goodbye"));
 
     ```
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - content: >-
     C# 概要の "Hello C#" チュートリアルはこれで終了です。 下の **[C# の数値]** リンクを選択することで次の対話式チュートリアルを開始することも、[.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして .NET Core SDK をダウンロードし、ご利用のマシン上でプロジェクトを作成し、コーディングを続けることもできます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 

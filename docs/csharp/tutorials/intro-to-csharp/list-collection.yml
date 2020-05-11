@@ -9,12 +9,12 @@ metadata:
   level: Beginner
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: f7fd68120defbfcda6ac11e14bc749bf4d69c109
-  ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+  ms.openlocfilehash: 03f12cbdd8f9c088a5f279efcadef64c2848fa13
+  ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/14/2020
-  ms.locfileid: "73969384"
+  ms.lasthandoff: 05/06/2020
+  ms.locfileid: "82860955"
 items:
 - durationInMinutes: 1
   content: >
@@ -44,15 +44,10 @@ items:
     文字列のリストを作成し、そのリストに 3 つの名前を追加し、それらの名前をすべて大文字で出力しました。 先のチュートリアルで学習した概念を使用して、リストをループしています。
 
 
-    名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。 `string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。 実際の文字列は、生成する値でその C# コードを置き換えます。 この例では、`{name.ToUpper()}` メソッドを呼び出したため、文字列は <xref:System.String.ToUpper%2A?displayProperty=nameWithType> をそれぞれの名前に置き換え、文字を大文字に変換しています。
+    名前を表示するコードは、[文字列補間](../../language-reference/tokens/interpolated.md)機能を使用します。 `string` の前に文字 `$` を配置すると、文字列宣言に C# コードを埋め込むことができます。 実際の文字列は、生成する値でその C# コードを置き換えます。 この例では、<xref:System.String.ToUpper%2A?displayProperty=nameWithType> メソッドを呼び出したため、文字列は `{name.ToUpper()}` をそれぞれの名前に置き換え、文字を大文字に変換しています。
 
 
     続けて確認していきましょう。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: リスト コンテンツを変更する
   durationInMinutes: 3
   content: >
@@ -107,11 +102,6 @@ items:
 
 
     もう一度 **[実行]** を選択して結果を確認します。 C# ではインデックスは 0 から始まるため、有効なインデックスの最大値はリスト内の項目の数より 1 小さくなります。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: リストを検索して並び替える
   durationInMinutes: 5
   content: >
@@ -147,11 +137,6 @@ items:
     }
 
     ```
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: その他の型のリスト
   durationInMinutes: 5
   content: >
@@ -184,51 +169,13 @@ items:
 
 
     **[実行]** をクリックして結果を確認します。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 課題
   durationInMinutes: 10
   content: >
     このレッスンと以前のレッスンの中から、いくつかの概念を理解できているかどうかを確認してみましょう。 ここまでフィボナッチ数を使用して作成してきたコードを使ってください。 シーケンスの最初の 20 個の数を生成するコードを記述してみましょう。 (ヒント: フィボナッチ数の 20 番目の数は 6765 です。)
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
 - title: 課題完了
   durationInMinutes: 3
-  content: >
-    コードは次のようになりましたか?
-
-
-    ```csharp
-
-    var fibonacciNumbers = new List<int> {1, 1};
-
-
-    while (fibonacciNumbers.Count < 20)
-
-    {
-        var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];
-        var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];
-
-        fibonacciNumbers.Add(previous + previous2);
-    }
-
-    foreach(var item in fibonacciNumbers)
-        Console.WriteLine(item);
-    ```
-
-
-    ループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。
-
-
-    > [!NOTE]
-
-    > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
+  content: "コードは次のようになりましたか? \n\n```csharp\nvar fibonacciNumbers = new List<int> {1, 1};\n\nwhile (fibonacciNumbers.Count < 20)\n{\n    var previous = fibonacciNumbers[fibonacciNumbers.Count - 1];\n    var previous2 = fibonacciNumbers[fibonacciNumbers.Count - 2];\n\n    fibonacciNumbers.Add(previous + previous2);\n}\nforeach(var item in fibonacciNumbers)\n    Console.WriteLine(item);\n```\n\nループの繰り返しごとに、リストの最後の 2 つの整数を取得して合計し、その値をリストに追加しています。 このループは、20 個の項目がリストに追加されるまで繰り返されます。\n"
 - content: >-
     これで、対話型チュートリアルは終了です。 これは、C# の対話型チュートリアルの最後の概要です。 [.NET サイト](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)にアクセスして、.NET Core SDK をダウンロードし、お使いのコンピューター上にプロジェクトを作成し、コーディングを続けることができます。 "次の手順" セクションでは、これらのチュートリアルに戻ります。
 
