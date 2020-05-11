@@ -4,12 +4,12 @@ description: パッケージ マネージャーを使用して、.NET Core SDK �
 author: thraka
 ms.author: adegeo
 ms.date: 03/17/2020
-ms.openlocfilehash: b86b97bf17165f2f7a70e80ff581750ba39be375
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: be5a21db8c3942bfe8827dfbce41bcf88aec342a
+ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134173"
+ms.lasthandoff: 04/30/2020
+ms.locfileid: "82595618"
 ---
 # <a name="sles-15-package-manager---install-net-core"></a>SLES 15 パッケージ マネージャー - .NET Core のインストール
 
@@ -19,12 +19,12 @@ ms.locfileid: "80134173"
 
 [!INCLUDE [package-manager-intro-sdk-vs-runtime](includes/package-manager-intro-sdk-vs-runtime.md)]
 
-## <a name="register-microsoft-key-and-feed"></a>Microsoft キーとフィードを登録する
+## <a name="add-microsoft-repository-key-and-feed"></a>Microsoft リポジトリ キーとフィードを追加する
 
 .NET をインストールする前に、次のことを行う必要があります。
 
-- Microsoft キーを登録する。
-- 製品リポジトリを登録する。
+- Microsoft パッケージ署名キーを信頼されたキーのリストに追加します。
+- リポジトリをパッケージ マネージャーに追加します。
 - 必要な依存関係をインストールする。
 
 これは、コンピューターごとに 1 回実行する必要があるだけです。
@@ -33,6 +33,12 @@ ms.locfileid: "80134173"
 
 ```bash
 sudo rpm -Uvh https://packages.microsoft.com/config/sles/15/packages-microsoft-prod.rpm
+```
+
+現時点では、SLES 15 Microsoft リポジトリ セットアップ パッケージによって "*microsoft-prod.repo*" ファイルが間違ったディレクトリにインストールされるため、zypper が .NET Core パッケージを見つけることができません。 この問題を解決するには、正しいディレクトリにシンボリックリンクを作成します。
+
+```bash
+sudo ln -s /etc/yum.repos.d/microsoft-prod.repo /etc/zypp/repos.d/microsoft-prod.repo
 ```
 
 ## <a name="install-the-net-core-sdk"></a>.NET Core SDK をインストールする
