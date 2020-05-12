@@ -1,14 +1,14 @@
 ---
 title: global.json の概要
 description: .NET Core CLI コマンドを実行するときに global.json ファイルを使用して .NET Core SDK のバージョンを設定する方法について説明します。
-ms.date: 01/14/2020
+ms.date: 05/01/2020
 ms.custom: updateeachrelease
-ms.openlocfilehash: 70257566e1ff30f5c97212a5e0e3c308c27738b7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15d8e6191394b9ba67b1e5eb5e8ae54ebaf61bef
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77625996"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795509"
 ---
 # <a name="globaljson-overview"></a>global.json の概要
 
@@ -85,6 +85,12 @@ SDK バージョンを選択するときに、特定の SDK バージョンが�
 | `latestMajor` | インストールされている最上位の .NET Core SDK と、指定した値以上のメジャーを使用します。 <br> 見つからない場合は、失敗します。 |
 | `disable`     | ロールフォワードしません。 完全一致が必要です。 |
 
+### <a name="msbuild-sdks"></a>msbuild-sdks
+
+型: `object`
+
+個々のプロジェクトではなく、1 か所でプロジェクト SDK バージョンを管理できます。 詳細については、「[プロジェクト SDK の解決方法](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)」を参照してください。
+
 ## <a name="examples"></a>使用例
 
 次の例は、プレリリース バージョンを使用しない方法を示しています。
@@ -97,12 +103,12 @@ SDK バージョンを選択するときに、特定の SDK バージョンが�
 }
 ```
 
-次の例は、指定したバージョン以上の、インストールされている最新バージョンを使用する方法を示しています。
+次の例は、指定したバージョン以上の、インストールされている最新バージョンを使用する方法を示しています。 この JSON では、2.2.200 より前の SDK バージョンがすべて禁止され、3.0.xxx や 3.1.xxx など、2.2.200 以降のバージョンがすべて許可されます。
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "2.2.200",
     "rollForward": "latestMajor"
   }
 }
@@ -119,12 +125,23 @@ SDK バージョンを選択するときに、特定の SDK バージョンが�
 }
 ```
 
-次の例は、特定のバージョン (3.1.1xx 形式) のインストールされている最新のパッチ バージョンを使用する方法を示しています。
+次の例では、特定のメジャー バージョンとマイナー バージョンでインストールされる最新の機能バンドと修正プログラムのバージョンを使用する方法を示します。 この JSON では、3.1.102 より前の SDK バージョンがすべて禁止され、3.1.103 や 3.1.200 など、3.1.102 とそれ以降の 3.1.xxx バージョンがすべて許可されます。
 
 ```json
 {
   "sdk": {
-    "version": "3.1.100",
+    "version": "3.1.102",
+    "rollForward": "latestFeature"
+  }
+}
+```
+
+次の例は、特定のバージョンのインストールされている最新のパッチ バージョンを使用する方法を示しています。 この JSON では、3.1.102 より前の SDK バージョンがすべて禁止され、3.1.103 や 3.1.199 など、3.1.102 とそれ以降の 3.1.1xx バージョンがすべて許可されます。
+
+```json
+{
+  "sdk": {
+    "version": "3.1.102",
     "rollForward": "latestPatch"
   }
 }

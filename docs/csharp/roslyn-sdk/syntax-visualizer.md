@@ -3,12 +3,12 @@ title: Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べ
 description: Syntax Visualizer は、.NET Compiler Platform SDK がコード用に生成したモデルを調べるためのビジュアル ツールを提供します。
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 27e5a1f0b31dd2af2ac779223538b03cdb4db0c5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7a34fda909bd044a9e65a8353d5626b533730e3
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156988"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975928"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio で Roslyn Syntax Visualizer を使ってコードを調べる
 
@@ -63,13 +63,13 @@ Visualizer は、アクティブなコード ファイル内の変更に合わ�
 
 # <a name="c"></a>[C#](#tab/csharp)
 
-Visualizer により、選択した項目をルートとするサブツリーのグラフィカル表現が表示されます。 C# の例で **のメソッドに対応する**MethodDeclaration`Main()` ノードに、これらの手順を試してみます。 Visualizer により、次のような構文グラフが表示されます。
+Visualizer により、選択した項目をルートとするサブツリーのグラフィカル表現が表示されます。 C# の例で `Main()` のメソッドに対応する **MethodDeclaration** ノードに、これらの手順を試してみます。 Visualizer により、次のような構文グラフが表示されます。
 
 ![C# の構文グラフの表示](media/syntax-visualizer/csharp-syntax-graph.png)
 
 # <a name="visual-basic"></a>[Visual Basic](#tab/vb)
 
-前出の Visual Basic の例の **メソッドに対応する**SubBlock`Main()` ノードにも同じことを試してみます。 Visualizer により、次のような構文グラフが表示されます。
+前出の Visual Basic の例の `Main()` メソッドに対応する **SubBlock** ノードにも同じことを試してみます。 Visualizer により、次のような構文グラフが表示されます。
 
 ![Visual Basic 構文グラフの表示](media/syntax-visualizer/visual-basic-syntax-graph.png)
 
@@ -89,7 +89,7 @@ Visualizer ツール ウィンドウと構文グラフ ウィンドウを使用�
 
 Syntax Visualizer を使用すると、シンボルとセマンティクス情報についての基本的な検査ができます。 C# の例で Main() 内に `double x = 1 + 1;` を入力します。 次に、コード エディター ウィンドウで式 `1 + 1` を選択します。 Visualizer で **AddExpression** ノードが強調表示されます。 この **[AddExpression]** をクリックし、 **[View Symbol (if any)]\(シンボルの表示 (ある場合)\)** をクリックします。 メニュー項目のほとんどに "if any" 修飾子があることに注目してください。 Syntax Visualizer は、ノードのプロパティ (すべてのノードに提示されない場合があるプロパティを含む) を検査します。
 
-Visualizer 内のプロパティ グリッドが、次の図のように更新されます。式のシンボルは、**SynthesizedIntrinsicOperatorSymbol** と **Kind = Method** です。
+ビジュアライザー内のプロパティ グリッドが、次の図のように更新されます。式のシンボルは、**SynthesizedIntrinsicOperatorSymbol** と **Kind = Method** です。
 
 ![シンボル プロパティ](media/syntax-visualizer/symbol-properties.png)
 
@@ -97,7 +97,7 @@ Visualizer 内のプロパティ グリッドが、次の図のように更新�
 
 ![TypeSymbol プロパティ](media/syntax-visualizer/type-symbol-properties.png)
 
-同じ **AddExpression** ノードに対し、 **[View Converted TypeSymbol (if any)]\(変換された TypeSymbol の表示 (ある場合)\)** を試してみます。 プロパティ グリッドが更新され、次の図に示すように、式の型は `Int32` で、式の変換後の型は `Double` であることを示します。 `Int32` に変換する必要があるコンテキストで `Double` 式が発生するため、このノードには変換後の型のシンボル情報が含まれます。 この変換により、代入演算子の左側にある変数 `Double` に指定された `x` 型を満たします。
+同じ **AddExpression** ノードに対し、 **[View Converted TypeSymbol (if any)]\(変換された TypeSymbol の表示 (ある場合)\)** を試してみます。 プロパティ グリッドが更新され、次の図に示すように、式の型は `Int32` で、式の変換後の型は `Double` であることを示します。 `Double` に変換する必要があるコンテキストで `Int32` 式が発生するため、このノードには変換後の型のシンボル情報が含まれます。 この変換により、代入演算子の左側にある変数 `x` に指定された `Double` 型を満たします。
 
 ![変換された TypeSymbol プロパティ](media/syntax-visualizer/converted-type-symbol-properties.png)
 
@@ -119,11 +119,11 @@ Module Program
 End Module
 ```
 
-このコードは、ファイルの上部にある型 `C` にマップする `System.Console` という名前の別名を導入し、この別名を `Main()` の内部で使用します。 `C` メソッド内部で、この別名の使用を選択します (`C.WriteLine()` の `Main()`)。 Visualizer で、対応する **IdentifierName** ノードが選択されます。 このノードを右クリックし、 **[View Symbol (if any)]\(シンボルの表示 (ある場合)\)** をクリックします。 プロパティ グリッドには、次の図に示すように、この識別子が型 `System.Console` にバインドされていることが示されます。
+このコードは、ファイルの上部にある型 `System.Console` にマップする `C` という名前の別名を導入し、この別名を `Main()` の内部で使用します。 `Main()` メソッド内部で、この別名の使用を選択します (`C.WriteLine()` の `C`)。 Visualizer で、対応する **IdentifierName** ノードが選択されます。 このノードを右クリックし、 **[View Symbol (if any)]\(シンボルの表示 (ある場合)\)** をクリックします。 プロパティ グリッドには、次の図に示すように、この識別子が型 `System.Console` にバインドされていることが示されます。
 
 ![シンボル プロパティ](media/syntax-visualizer/symbol-visual-basic.png)
 
-同じ **IdentifierName** ノードに対して、 **[View AliasSymbol (if any)]\(AliasSymbol の表示 (ある場合)\)** を試してみます。 プロパティ グリッドには、識別子が `C` ターゲットにバインドされている `System.Console` という名前の別名であることが示されます。 つまり、プロパティ グリッドでは、識別子 **に対応する**AliasSymbol`C` に関する情報が提供されます。
+同じ **IdentifierName** ノードに対して、 **[View AliasSymbol (if any)]\(AliasSymbol の表示 (ある場合)\)** を試してみます。 プロパティ グリッドには、識別子が `System.Console` ターゲットにバインドされている `C` という名前の別名であることが示されます。 つまり、プロパティ グリッドでは、識別子 `C` に対応する **AliasSymbol** に関する情報が提供されます。
 
 ![AliasSymbol プロパティ](media/syntax-visualizer/alias-symbol.png)
 
@@ -131,7 +131,7 @@ End Module
 
 ![メソッドの宣言のシンボルを表示する](media/syntax-visualizer/method-symbol.png)
 
-上記の Visual Basic の例は、C# で簡単にレプリケートできます。 別名の `using C = System.Console;` の代わりに `Imports C = System.Console` を入力します。 C# で上記の手順を行うと、Visualizer ウィンドウの結果はまったく同じになります。
+上記の Visual Basic の例は、C# で簡単にレプリケートできます。 別名の `Imports C = System.Console` の代わりに `using C = System.Console;` を入力します。 C# で上記の手順を行うと、Visualizer ウィンドウの結果はまったく同じになります。
 
 セマンティックの検査操作は、ノードでのみ使用できます。 トークンまたはトリビアでは使用できません。 すべてのノードに検査する興味深いセマンティック情報があるわけではありません。 ノードに興味深いセマンティック情報がない場合は、 **[View \* Symbol (if any)]\(シンボルの表示 (ある場合)\)** をクリックすると、空白のプロパティ グリッドが表示されます。
 
