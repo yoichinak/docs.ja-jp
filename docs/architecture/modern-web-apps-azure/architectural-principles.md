@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: ffc890bf8cd6b07bd70d8fc7b2b8cfeaf474ae35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e291888bee25a9c87259560ca4b12635ee73c3c7
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77450272"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975408"
 ---
 # <a name="architectural-principles"></a>アーキテクチャの原則
 
@@ -66,7 +66,7 @@ ms.locfileid: "77450272"
 
 ### <a name="dont-repeat-yourself-dry"></a>DRY 原則
 
-アプリケーションでは、特定の概念に関連するビヘイビアーを複数の場所で指定すると、エラーの原因となることが多いので、回避する必要があります。 ある時点で、要件の変更にはこのビヘイビアーの変更が必要になります。ビヘイビアーの少なくとも 1 つのインスタンスを更新できない可能性がある場合、それによってシステムのビヘイビアーの一貫性が維持できなくなります。
+アプリケーションでは、特定の概念に関連するビヘイビアーを複数の場所で指定すると、エラーの原因となることが多いので、回避する必要があります。 どこかの時点で要件を変更するには、この動作を変更する必要があります。 動作の少なくとも 1 つのインスタンスが更新に失敗し、システムの動作が不整合になる可能性があります。
 
 ロジックは複製するのではなく、プログラミング コンストラクト内でカプセル化します。 このコンストラクトをこのビヘイビアーに対する単一権限とし、このビヘイビアーを必要とするアプリケーションの他の部分で新しいコンストラクターを使用するようにします。
 

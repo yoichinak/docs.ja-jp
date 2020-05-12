@@ -2,13 +2,13 @@
 title: 破壊的変更 - .NET Framework から .NET Core
 titleSuffix: ''
 description: .NET Framework から .NET Core への破壊的変更を一覧表示します。
-ms.date: 12/18/2019
-ms.openlocfilehash: f712be14d7debc4b3008f8459e6ee925754b25f0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/05/2020
+ms.openlocfilehash: bb18e38fecc0805dfafe6a16c853ae04fd2a2913
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449403"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859947"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移行の破壊的変更
 
@@ -17,10 +17,12 @@ ms.locfileid: "77449403"
 > [!NOTE]
 > この記事は、.NET Framework と .NET Core の間の破壊的変更の完全な一覧ではありません。 最も重要な破壊的変更が認識されると、こちらに追加されます。
 
-## <a name="corefx"></a>CoreFx
+## <a name="core-net-libraries"></a>Core .NET ライブラリ
 
 - [UseShellExecute の既定値の変更](#change-in-default-value-of-useshellexecute)
 - [FileSystemInfo.Attributes によってスローされる UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
+- [プロセス破損状態例外の処理がサポートされない](#handling-corrupted-state-exceptions-is-not-supported)
+- [UriBuilder のプロパティでは今後、先頭に文字が付加されない](#uribuilder-properties-no-longer-prepend-leading-characters)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -34,6 +36,14 @@ ms.locfileid: "77449403"
 
 ***
 
+[!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
+
+***
+
 ## <a name="cryptography"></a>暗号
 
 - [SignedCms.ComputeSignature のブール型パラメーターの尊重](#boolean-parameter-of-signedcmscomputesignature-is-respected)
@@ -41,6 +51,16 @@ ms.locfileid: "77449403"
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
+
+***
+
+## <a name="networking"></a>ネットワーキング
+
+- [WebClient.CancelAsync がすぐにキャンセルされない場合がある](#webclientcancelasync-doesnt-always-cancel-immediately)
+
+### <a name="net-core-20"></a>.NET Core 2.0
+
+[!INCLUDE [behavior-change-webclient-cancelasync](../../../includes/core-changes/networking/2.0/behavior-change-webclient-cancelasync.md)]
 
 ***
 
@@ -128,7 +148,7 @@ Windows フォームのサポートは、.NET Core にバージョン 3.0 で追
 
 ***
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET Core で常に例外をスローする API](unsupported-apis.md)
 - [.NET Core で使用できない .NET Framework テクノロジ](../porting/net-framework-tech-unavailable.md)

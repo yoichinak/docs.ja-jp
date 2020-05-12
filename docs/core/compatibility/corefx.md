@@ -1,28 +1,29 @@
 ---
 title: 基本クラス ライブラリの破壊的変更
-description: 基本クラス ライブラリである .NET CoreFx での破壊的変更の一覧を示します。
+description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 09/20/2019
-ms.openlocfilehash: 56a3cf4f4c00a79752d5a98bb086bb9f8c0614b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a2eb4be89d78f50d201272f3449374bc27d8c785
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79147576"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859929"
 ---
-# <a name="corefx-breaking-changes"></a>CoreFx に関する破壊的変更
+# <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
-CoreFx では、.NET Core で使用されるプリミティブとその他の一般的な型が提供されます。
+Core .NET ライブラリでは、.NET Core で使用されるプリミティブとその他の一般的な型が提供されます。
 
 このページでは、次の破壊的変更について説明します。
 
 | 互換性に影響する変更点 | 導入されたバージョン |
 | - | :-: |
+| [SSE および SSE2 の CompareGreaterThan メソッドで NaN 入力が正しく処理されるようになった](#sse-and-sse2-comparegreaterthan-methods-properly-handle-nan-inputs) | 5.0 |
 | [バージョンをレポートする API が、ファイル バージョンではなく製品をレポートするようになった](#apis-that-report-version-now-report-product-and-not-file-version) | 3.0 |
 | [カスタム EncoderFallbackBuffer インスタンスが再帰的にフォールバックしない](#custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively) | 3.0 |
 | [浮動小数点の書式設定と解析の動作の変更](#floating-point-formatting-and-parsing-behavior-changed) | 3.0 |
 | [浮動小数点の解析操作が失敗したり OverflowException がスローされたりすることがなくなった](#floating-point-parsing-operations-no-longer-fail-or-throw-an-overflowexception) | 3.0 |
 | [InvalidAsynchronousStateException を別のアセンブリに移動](#invalidasynchronousstateexception-moved-to-another-assembly) | 3.0 |
-| [.NET Core 3.0 は不正な形式の UTF-8 バイト シーケンスを置換するときに Unicode のベスト プラクティスに従う](#net-core-30-follows-unicode-best-practices-when-replacing-ill-formed-utf-8-byte-sequences) | 3.0 |
+| [Unicode のガイドラインに従って不適切な形式の UTF-8 バイト シーケンスを置き換える](#replacing-ill-formed-utf-8-byte-sequences-follows-unicode-guidelines) | 3.0 |
 | [TypeDescriptionProviderAttribute を別のアセンブリに移動](#typedescriptionproviderattribute-moved-to-another-assembly) | 3.0 |
 | [ZipArchiveEntry による、エントリ サイズに一貫性のないアーカイブ処理の中止](#ziparchiveentry-no-longer-handles-archives-with-inconsistent-entry-sizes) | 3.0 |
 | [JSON シリアライザーの例外の種類を JsonException から NotSupportedException に変更](#json-serializer-exception-type-changed-from-jsonexception-to-notsupportedexception) | 3.0 |
@@ -35,6 +36,14 @@ CoreFx では、.NET Core で使用されるプリミティブとその他の一
 | [UseShellExecute の既定値の変更](#change-in-default-value-of-useshellexecute) | 2.1 |
 | [macOS 上の OpenSSL バージョン](#openssl-versions-on-macos) | 2.1 |
 | [FileSystemInfo.Attributes によってスローされる UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1 |
+| [プロセス破損状態例外の処理がサポートされない](#handling-corrupted-state-exceptions-is-not-supported) | 1 |
+| [UriBuilder のプロパティでは今後、先頭に文字が付加されない](#uribuilder-properties-no-longer-prepend-leading-characters) | 1 |
+
+## <a name="net-50"></a>.NET 5.0
+
+[!INCLUDE [sse-comparegreaterthan-intrinsics](../../../includes/core-changes/corefx/5.0/sse-comparegreaterthan-intrinsics.md)]
+
+***
 
 ## <a name="net-core-30"></a>.NET Core 3.0
 
@@ -111,5 +120,13 @@ CoreFx では、.NET Core で使用されるプリミティブとその他の一
 ## <a name="net-core-10"></a>.NET Core 1.0
 
 [!INCLUDE [UnauthorizedAccessException thrown by FileSystemInfo.Attributes](~/includes/core-changes/corefx/1.0/filesysteminfo-attributes-exceptions.md)]
+
+***
+
+[!INCLUDE [corrupted-state-exceptions](~/includes/core-changes/corefx/1.0/corrupted-state-exceptions.md)]
+
+***
+
+[!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
 
 ***

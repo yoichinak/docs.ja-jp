@@ -1,13 +1,13 @@
 ---
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
-ms.date: 02/27/2020
-ms.openlocfilehash: f9df03cda01bdaf649394a58e96903e764193338
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.date: 04/29/2020
+ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463376"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975434"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -20,7 +20,7 @@ ms.locfileid: "81463376"
 ## <a name="synopsis"></a>構文
 
 ```dotnetcli
-dotnet test [<PROJECT> | <SOLUTION>]
+dotnet test [<PROJECT> | <SOLUTION> | <DIRECTORY> | <DLL>]
     [-a|--test-adapter-path <PATH_TO_ADAPTER>] [--blame]
     [-c|--configuration <CONFIGURATION>]
     [--collect <DATA_COLLECTOR_FRIENDLY_NAME>]
@@ -37,49 +37,62 @@ dotnet test -h|--help
 
 ## <a name="description"></a>説明
 
-`dotnet test` コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。 `dotnet test` コマンドは、プロジェクト用に指定されたテスト ランナーのコンソール アプリケーションを起動します。 テスト ランナーでは、単体テスト フレームワーク (MSTest、NUnit、xUnit など) 用に定義されたテストを実行し、各テストの成功または失敗をレポートします。 すべてのテストが成功した場合、テスト ランナーは 0 の終了コードを返します。それ以外の、いずれかのテストに失敗した場合は、1 を返します。 テスト ランナーと単体テスト ライブラリは、NuGet パッケージとしてパッケージ化され、プロジェクトの通常の依存関係として復元されます。
+`dotnet test` コマンドは、指定されたソリューションで単体テストを実行する場合に使用されます。 `dotnet test` コマンドを実行すると、ソリューションがビルドされ、ソリューション内の各テスト プロジェクトのテスト ホスト アプリケーションが実行されます。 テスト ホストは、指定されたプロジェクトで、テスト フレームワークを使用してテストを実行します。たとえば、MSTest、NUnit、xUnit などです。そして、各テストの成功または失敗を報告します。 すべてのテストが成功した場合、テスト ランナーは 0 の終了コードを返します。それ以外の、いずれかのテストに失敗した場合は、1 を返します。
+
+複数の対象を持つプロジェクトでは、対象となる各フレームワークに対してテストが実行されます。 テスト ホストと単体テスト フレームワークは、NuGet パッケージとしてパッケージ化され、プロジェクトの通常の依存関係として復元されます。
 
 テスト プロジェクトでは、通常の `<PackageReference>` 要素を使用してテスト ランナーを指定します。次のサンプル プロジェクト ファイルのようになります。
 
 [!code-xml[XUnit Basic Template](../../../samples/snippets/csharp/xunit-test/xunit-test.csproj)]
 
+`Microsoft.NET.Test.Sdk` がテスト ホストの場合、`xunit` はテスト フレームワークです。 また、`xunit.runner.visualstudio` はテスト アダプターであり、xUnit フレームワークはテスト ホストと連携できます。
+
+### <a name="implicit-restore"></a>暗黙的な復元
+
+[!INCLUDE[dotnet restore note](~/includes/dotnet-restore-note.md)]
+
 ## <a name="arguments"></a>引数
 
-- **`PROJECT | SOLUTION`**
+- **`PROJECT | SOLUTION | DIRECTORY | DLL`**
 
-  テスト プロジェクトまたはソリューションへのパス。 指定しない場合は、既定で現在のディレクトリに設定されます。
+  - テスト プロジェクトへのパス。
+  - ソリューションへのパス。
+  - プロジェクトまたはソリューションを含むディレクトリへのパス。
+  - テスト プロジェクト " *.dll*" ファイルへのパス。
+
+  指定されていない場合、プロジェクトまたはソリューションが現在のディレクトリで検索されます。
 
 ## <a name="options"></a>オプション
 
-- **`a|--test-adapter-path <PATH_TO_ADAPTER>`**
+- **`-a|--test-adapter-path <PATH_TO_ADAPTER>`**
 
-  テスト実行で指定されたパスからカスタムのテスト アダプターを使用します。
+  追加のテスト アダプターを検索するディレクトリへのパス。 サフィックス `.TestAdapter.dll` を持つ " *.dll*" ファイルのみが検査されます。 指定しない場合、テスト " *.dll*" のディレクトリが検索されます。
 
 - **`--blame`**
 
-  変更履歴モードでテストを実行します。 このオプションは、テスト ホストがクラッシュする原因となる問題のあるテストを分離するために役立ちます。 これは、現在のディレクトリ内に出力ファイルを *Sequence.xml* として作成します。このファイルは、クラッシュ前にテストの実行順序をキャプチャします。
+  変更履歴モードでテストを実行します。 このオプションは、テスト ホストがクラッシュする原因となる問題のあるテストを分離するために役立ちます。 クラッシュが検出されると、クラッシュ前に実行されたテストの順序をキャプチャするシーケンス ファイルが `TestResults/<Guid>/<Guid>_Sequence.xml` に作成されます。
 
-- **`c|--configuration <CONFIGURATION>`**
+- **`-c|--configuration <CONFIGURATION>`**
 
   ビルド構成を定義します。 既定値は `Debug` ですが、プロジェクトの構成がこの既定の SDK 設定をオーバーライドする可能性があります。
 
-- **`-collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
+- **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   テストの実行のためのデータ コレクターを有効にします。 詳細については、[「Monitor and analyze test run」](https://aka.ms/vstest-collect) (テストの実行のモニターと分析) を参照してください。
 
-- **`d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
+- **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
-  テスト プラットフォームの診断モードを有効にし、指定したファイルに診断メッセージを出力します。
+  テスト プラットフォームの診断モードを有効にし、指定したファイルとそれ以降のファイルに診断メッセージを出力します。 メッセージをログに記録するプロセスによって、テスト ホスト ログの `*.host_<date>.txt` やデータ コレクター ログの `*.datacollector_<date>.txt` などの、作成されるファイルが決まります。
 
-- **`f|--framework <FRAMEWORK>`**
+- **`-f|--framework <FRAMEWORK>`**
 
-  特定の[フレームワーク](../../standard/frameworks.md)のテスト バイナリを検索します。
+  テスト バイナリに `dotnet` または .NET Framework テスト ホストを強制的に使用します。 このオプションでは、使用するホストの種類のみが決定されます。 実際に使用されるフレームワークのバージョンは、テスト プロジェクトの "*runtimeconfig. json*" によって決まります。 指定しない場合、[TargetFramework アセンブリ属性](/dotnet/api/system.runtime.versioning.targetframeworkattribute) を使用してホストの種類が決定されます。 その属性が " *.dll*" から削除されると、.NET Framework ホストが使用されます。
 
 - **`--filter <EXPRESSION>`**
 
   指定された式を使用して、現在のプロジェクト内のテストを除外します。 詳細については、「[フィルター オプションの詳細](#filter-option-details)」セクションをご覧ください。 選択的単体テストのフィルター処理の使用方法に関する詳細と例については、「[選択的単体テストの実行](../testing/selective-unit-tests.md)」をご覧ください。
 
-- **`h|--help`**
+- **`-h|--help`**
 
   コマンドの短いヘルプを印刷します。
 
@@ -87,7 +100,7 @@ dotnet test -h|--help
 
   コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
 
-- **`l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
+- **`-l|--logger <LOGGER_URI/FRIENDLY_NAME>`**
 
   テスト結果のロガーを指定します。 MSBuild とは異なり、dotnet テストでは省略形は受け入れられません。`-l "console;v=d"` ではなく `-l "console;verbosity=detailed"` を使用してください。
 
@@ -105,11 +118,11 @@ dotnet test -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  実行するバイナリを検索するディレクトリです。
+  実行するバイナリを検索するディレクトリです。 指定しない場合、既定のパスは `./bin/<configuration>/<framework>/` になります。  (`TargetFrameworks` プロパティを使用した) ターゲット フレームワークが複数あるプロジェクトの場合は、このオプションを指定するときに `--framework` も定義する必要があります。 `dotnet test` は常に、出力ディレクトリからテストを実行します。 <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> を使用して、出力ディレクトリ内のテスト資産を使用できます。
 
 - **`-r|--results-directory <PATH>`**
 
-  テスト結果が配置されるディレクトリです。 指定されたディレクトリが存在しない場合は、作成されます。
+  テスト結果が配置されるディレクトリです。 指定されたディレクトリが存在しない場合は、作成されます。 既定値は、プロジェクト ファイルが含まれるディレクトリの `TestResults` です。
 
 - **`--runtime <RUNTIME_IDENTIFIER>`**
 
@@ -117,7 +130,10 @@ dotnet test -h|--help
 
 - **`-s|--settings <SETTINGS_FILE>`**
 
-  テストの実行に使用する `.runsettings` ファイルです。 [`.runsettings` ファイルを使用して単体テストを構成します。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  テストの実行に使用する `.runsettings` ファイルです。 `TargetPlatform` 要素 (x86|x64) は `dotnet test` には影響しません。 x86 を対象とするテストを実行するには、x86 バージョンの .NET Core をインストールします。 パスにある *dotnet.exe* のビットは、テストを実行するために使用されるものです。 詳細については、次のリソースを参照してください。
+
+  - [`.runsettings` ファイルを使用して単体テストを構成します。](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
+  - [テスト実行を構成する](https://github.com/Microsoft/vstest-docs/blob/master/docs/configure.md)
 
 - **`-t|--list-tests`**
 
@@ -127,13 +143,13 @@ dotnet test -h|--help
 
   コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。 既定値は、`minimal` です。 詳細については、「<xref:Microsoft.Build.Framework.LoggerVerbosity>」を参照してください。
 
-- `RunSettings` 引数
+- **`RunSettings`** 引数
 
-  引数は、テストの `RunSettings` 構成として渡されます。 引数は、"-- " に続く `[name]=[value]` のペアとして指定されます (-- の後ろのスペースに注意してください)。 複数の `[name]=[value]` のペアを区切るにはスペースを使用します。
+ インラインの `RunSettings` は、コマンド ラインの最後の引数として "-- " の後に渡されます (-- の後のスペースに注意してください)。 インラインの `RunSettings` は `[name]=[value]` のペアとして指定されます。 複数の `[name]=[value]` のペアを区切るにはスペースを使用します。
 
   例 : `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
 
-  詳細については、[vstest.console.exe の RunSettings 引数渡し](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)に関するページをご覧ください。
+  詳しくは、「[コマンド ラインで RunSettings 引数を渡す](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)」をご覧ください。
 
 ## <a name="examples"></a>使用例
 
@@ -159,6 +175,12 @@ dotnet test -h|--help
 
   ```dotnetcli
   dotnet test --logger "console;verbosity=detailed"
+  ```
+  
+  - 現在のディレクトリのプロジェクトでテストを実行し、テスト ホストがクラッシュしたときに実行されていたテストを報告します。
+
+  ```dotnetcli
+  dotnet test --blame
   ```
 
 ## <a name="filter-option-details"></a>フィルター オプションの詳細

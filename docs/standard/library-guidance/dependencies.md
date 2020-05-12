@@ -2,12 +2,12 @@
 title: 依存関係と .NET ライブラリ
 description: .NET ライブラリの NuGet の依存関係を管理するためのベスト プラクティスの推奨事項。
 ms.date: 10/02/2018
-ms.openlocfilehash: 6a260b54c45a0cd231059ab3bc6f2707ef7fb20e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76731480"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895707"
 ---
 # <a name="dependencies"></a>依存関係
 
@@ -40,7 +40,7 @@ ms.locfileid: "76731480"
 <PackageReference Include="ExamplePackage" Version="1.0" />
 ```
 
-依存関係を解決するときに NuGet で使用される規則は[複合](/nuget/consume-packages/dependency-resolution)ですが、NuGet では常に適用可能な最低バージョンが検索されます。 互換性の問題が最も少ないのは最低バージョンなので、NuGet では、適用できる最高バージョンよりも適用できる最低バージョンが優先されます。
+依存関係を解決するときに NuGet で使用される規則は[複合](/nuget/consume-packages/dependency-resolution)ですが、NuGet の[既定では](/nuget/consume-packages/install-use-packages-visual-studio#install-and-update-options)適用可能な最低バージョンが検索されます。 互換性の問題が最も少ないのは最低バージョンなので、NuGet では、適用できる最高バージョンよりも適用できる最低バージョンが優先されます。
 
 NuGet の適用できる最低バージョン規則があるので、最新のバージョンを取得しないようにパッケージ参照に上限のバージョンまたは正確な範囲を指定する必要はありません。 NuGet は、最低の最も互換性の高いバージョンを自動的に検索しようとします。
 
@@ -58,7 +58,7 @@ NuGet の適用できる最低バージョン規則があるので、最新の�
 
 ❌ 最小バージョンを指定していない NuGet パッケージ参照を使用しないでください。
 
-バージョンが正確である必要がある NuGet パッケージ参照は ❌ 回避してください。
+❌ 正確なバージョンを要求する NuGet パッケージ参照は回避してください。
 
 ❌ バージョンの上限がある NuGet パッケージ参照を使用しないでください。
 

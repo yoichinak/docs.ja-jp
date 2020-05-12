@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 24e990d0561f1f0faade2c8e62ca640e4daba93f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9eac406b96e682793b784ca76593885d95365dd
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78848081"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82844635"
 ---
 
 > [!div class="op_single_selector"]
@@ -13,9 +13,11 @@ ms.locfileid: "78848081"
 > - [Ubuntu 19.04 - x64](../linux-package-manager-ubuntu-1904.md)
 > - [Ubuntu 18.04 - x64](../linux-package-manager-ubuntu-1804.md)
 > - [Ubuntu 16.04 - x64](../linux-package-manager-ubuntu-1604.md)
+> - [CentOS 8 - x64](../linux-package-manager-centos8.md)
 > - [CentOS 7 - x64](../linux-package-manager-centos7.md)
 > - [Debian 10 - x64](../linux-package-manager-debian10.md)
 > - [Debian 9 - x64](../linux-package-manager-debian9.md)
+> - [Fedora 32 - x64](../linux-package-manager-fedora32.md)
 > - [Fedora 31 - x64](../linux-package-manager-fedora31.md)
 > - [Fedora 30 - x64](../linux-package-manager-fedora30.md)
 > - [Fedora 29 - x64](../linux-package-manager-fedora29.md)
