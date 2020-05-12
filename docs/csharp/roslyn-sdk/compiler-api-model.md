@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK の概念とオブジェクト モデル
 description: この概要では、.NET Compiler SDK を効果的に使用するために必要な背景を示します。 API レイヤー、関連する主な型、全体のオブジェクト モデルについて学習します。
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: e563260e21fb8807017db90ff63e30fec0415a48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 529ce6fbdef22964251c8b22abbd5d8aadab633d
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156962"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975941"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK モデルについて
 

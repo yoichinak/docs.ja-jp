@@ -3,14 +3,14 @@ title: .NET Core SDK とランタイムの依存関係 - .NET Core
 description: Windows、Linux、および macOS に .NET Core SDK とランタイムをインストールするためのオペレーティング システムと CPU アーキテクチャの前提条件について説明します。
 author: leecow
 ms.author: leecow
-ms.date: 12/04/2019
+ms.date: 04/30/2020
 zone_pivot_groups: operating-systems-set-one
-ms.openlocfilehash: 023b8fdf029dd6b17fe2186296d87dd7507c60b5
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: 280aa1431686ff99257580bb024a84b1e57f85c0
+ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79546563"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82895488"
 ---
 # <a name="net-core-dependencies-and-requirements"></a>.NET Core の依存関係と要件
 
@@ -95,7 +95,7 @@ ms.locfileid: "79546563"
 
 <!-- markdownlint-disable MD001 -->
 
-### <a name="windows-7--vista--81--server-2008-r2"></a>Windows 7 / Vista / 8.1 / Server 2008 R2
+### <a name="windows-7--vista--81--server-2008-r2--server-2012-r2"></a><a name="additional-deps"></a> Windows 7 / Vista / 8.1 / Server 2008 R2 / Server 2012 R2
 
 次の Windows のバージョンに .NET SDK またはランタイムをインストールする場合は、追加の依存関係が必要です。
 
@@ -113,6 +113,10 @@ ms.locfileid: "79546563"
 上記の要件は、次のいずれかのエラーが発生した場合にも必要です。
 
 > お使いのコンピューターに *api-ms-win-crt-runtime-l1-1-0.dll* が見つからず、プログラムを開始できない。 この問題を解決するには、プログラムを再インストールしてください。
+>
+> \- または
+>
+> お使いのコンピューターに *api-ms-win-cor-timezone-l1-1-0.dll* が見つからず、プログラムを開始できない。 この問題を解決するには、プログラムを再インストールしてください。
 >
 > \- または
 >
@@ -286,6 +290,24 @@ Fedora ユーザー:ご使用の OpenSSL のバージョンが 1.1 以降の場�
 
 > [!WARNING]
 > CentOS と Fedora のほとんどのバージョンには、以前のバージョンの libgdiplus が含まれています。 新しいバージョンの libgdiplus をインストールするには、システムに Mono リポジトリを追加します。 詳細については、「<https://www.mono-project.com/download/stable/>」を参照してください。
+
+### <a name="alpine"></a>Alpine
+
+Alpine ディストリビューションには、次のライブラリがインストールされている必要があります。
+
+- icu-libs (グローバリゼーションが無効になっている場合、これは不要です)
+- krb5-libs
+- libcurl
+- libintl
+- libssl1.1 (Alpine 3.9 以降の場合) または libssl1.0 (それより以前のもの)
+- libstdc++
+- lttng-ust
+- numactl (省略可能、NUMA が有効になっているデバイスでのみ便利)
+- zlib
+
+*System.Drawing.Common* アセンブリを使用する .NET Core アプリの場合は、次の依存関係も必要です。
+
+- libgdiplus (edge/testing リポジトリでのみ利用可能)
 
 ::: zone-end
 

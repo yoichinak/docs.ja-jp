@@ -2,12 +2,12 @@
 title: .NET Core のランタイム識別子 (RID) のカタログ
 description: ランタイム識別子 (RID) と .NET Core での RID の使用方法について説明します。
 ms.date: 02/22/2019
-ms.openlocfilehash: feb19632f16a047ecfb2dcb697a9b837824a1929
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b581f46becc6808ca957ac66c0c22e5e5f973bd1
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77451734"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795561"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core の RID カタログ
 
@@ -117,7 +117,8 @@ RID を使用するには、どのような RID があるのか知る必要が�
 - ポータブル (.NET Core 2.0 以降のバージョン)
   - `linux-x64` (CentOS、Debian、Fedora、Ubuntu、および派生ディストリビューションなどのほとんどのデスクトップ ディストリビューション)
   - `linux-musl-x64` (Alpine Linux など、[musl](https://wiki.musl-libc.org/projects-using-musl.html) を使用している軽量ディストリビューション)
-  - `linux-arm` (Raspberry Pi など、ARM で実行されている Linux ディストリビューション)
+  - `linux-arm` (Raspberry Pi Model 2+ 上の Raspbian など、ARM で実行されている Linux ディストリビューション)
+  - `linux-arm64` (Raspberry Pi Model 3+ 上の Ubuntu Server 64 ビットなど、64 ビット ARM で実行されている Linux ディストリビューション)
 - Red Hat Enterprise Linux
   - `rhel-x64` (RHEL バージョン 6 より後では、`linux-x64` に置き換えられます)
   - `rhel.6-x64` (.NET Core 2.0 以降)

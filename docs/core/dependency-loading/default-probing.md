@@ -4,12 +4,12 @@ description: 依存関係を特定するための .NET Core の System.Runtime.L
 ms.date: 08/09/2019
 author: sdmaclea
 ms.author: stmaclea
-ms.openlocfilehash: 500ee6ee863b1f311970a9e718936f57f7d4efd6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e347c716c2d739a1bd03be056b57fdbda6c678f
+ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398005"
+ms.lasthandoff: 05/06/2020
+ms.locfileid: "82859516"
 ---
 # <a name="default-probing"></a>既定のプローブ
 
@@ -21,7 +21,7 @@ ms.locfileid: "79398005"
 
 各プローブ プロパティはオプションです。 存在する場合、各プロパティは区切り記号で区切られた絶対パスのリストを含む文字列値です。 区切り記号は、Windows では ';'、他のすべてのプラットフォームでは ':' になります。
 
-|プロパティ名                 |[説明]  |
+|プロパティ名                 |説明  |
 |------------------------------|---------|
 |`TRUSTED_PLATFORM_ASSEMBLIES`   | プラットフォームとアプリケーション アセンブリ ファイル パスの一覧。 |
 |`PLATFORM_RESOURCE_ROOTS`       | サテライト リソース アセンブリを検索するディレクトリ パスの一覧。 |
@@ -40,6 +40,8 @@ ms.locfileid: "79398005"
 
 最後に、環境変数 `ADDITIONAL_DEPS` を使用して、依存関係を追加できます。
 
+`APP_PATHS` プロパティと `APP_NI_PATHS` プロパティには既定でデータが入力されず、ほとんどのアプリケーションで省略されます。
+
 ### <a name="how-do-i-see-the-probing-properties-from-managed-code"></a>マネージド コードからプローブ プロパティを参照する方法
 
 各プロパティは、上記の表のプロパティ名を使用して <xref:System.AppContext.GetData(System.String)?displayProperty=nameWithType> 関数を呼び出すことによって使用できます。
@@ -48,7 +50,7 @@ ms.locfileid: "79398005"
 
 以下に示す特定の環境変数が有効になっている場合、.NET Core ランタイム ホストは便利なトレース メッセージを出力します。
 
-|環境変数        |[説明]  |
+|環境変数        |説明  |
 |----------------------------|---------|
 |`COREHOST_TRACE=1`          |トレースを有効にします。|
 |`COREHOST_TRACEFILE=<path>` |既定の `stderr` ではなくファイル パスにトレースします。|
@@ -58,7 +60,7 @@ ms.locfileid: "79398005"
 
 マネージド アセンブリを探すためにプローブするとき、<xref:System.Runtime.Loader.AssemblyLoadContext.Default%2A?displayProperty=nameWithType> は次の順序で検索します。
 
-- <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> 内の `TRUSTED_PLATFORM_ASSEMBLIES` に一致するファイル (ファイル拡張子を削除した後)。
+- `TRUSTED_PLATFORM_ASSEMBLIES` 内の <xref:System.Reflection.AssemblyName.Name?displayProperty=nameWithType> に一致するファイル (ファイル拡張子を削除した後)。
 - 共通のファイル拡張子を持つ `APP_NI_PATHS` のネイティブ イメージ アセンブリ ファイル。
 - 共通のファイル拡張子を持つ `APP_PATHS` のアセンブリ ファイル。
 

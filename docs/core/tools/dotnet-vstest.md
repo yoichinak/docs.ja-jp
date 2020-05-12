@@ -2,20 +2,23 @@
 title: dotnet vstest コマンド
 description: dotnet vstest コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 02/27/2020
-ms.openlocfilehash: e8fa94cf12ca2fe5fb99c6e3c1dcdb52185798c0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: f7db58f4aab59354b8c69ce0371324c23482dafe
+ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463281"
+ms.lasthandoff: 05/08/2020
+ms.locfileid: "82975395"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
 **この記事の対象:** ✔️ .NET Core 2.1 SDK 以降のバージョン
 
+> [!IMPORTANT]
+> `dotnet vstest` コマンドに取って代わりのが `dotnet test` であり、これでアセンブリを実行できます。 [`dotnet test`](dotnet-test.md) をご覧ください。
+
 ## <a name="name"></a>名前
 
-`dotnet-vstest` - 指定されたファイルからテストを実行します。
+`dotnet-vstest` - 指定されたアセンブリからテストを実行します。
 
 ## <a name="synopsis"></a>構文
 

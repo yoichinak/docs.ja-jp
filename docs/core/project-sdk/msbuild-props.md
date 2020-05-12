@@ -3,16 +3,16 @@ title: Microsoft.NET.Sdk の MSBuild プロパティ
 description: .NET Core SDK によって認識される MSBuild プロパティのリファレンスです。
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 105b7d67ea24515ea88481cb4a4fe42d2a03cfd0
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506791"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82795574"
 ---
 # <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK プロジェクトの MSBuild プロパティ
 
-このページでは、.NET Core プロジェクトを構成するための MSBuild プロパティについて説明します。
+このページでは、.NET Core プロジェクトを構成するための MSBuild プロパティについて説明します。 プロパティの子要素としてプロパティごとに "*メタデータ*" を指定できます。
 
 > [!NOTE]
 > このページの編集は進行中であり、.NET Core SDK の便利な MSBuild プロパティがすべて記載されている訳ではありません。 一般的な MSBuild プロパティの一覧については、「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。
@@ -28,11 +28,9 @@ ms.locfileid: "82506791"
 `TargetFramework` プロパティには、[ メタパッケージ ](../packages.md#metapackages) を暗黙的に参照するアプリのターゲット フレームワーク バージョンを指定します。 有効なターゲット フレームワーク モニカーの一覧については、「[SDK スタイルのプロジェクトでのターゲット フレームワーク](../../standard/frameworks.md#supported-target-framework-versions)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netcoreapp3.1</TargetFramework>
+</PropertyGroup>
 ```
 
 詳細については、「[SDK スタイルのプロジェクトでのターゲット フレームワーク](../../standard/frameworks.md)」を参照してください。
@@ -45,11 +43,9 @@ ms.locfileid: "82506791"
 > `TargetFramework` (単数形) が指定されている場合、このプロパティは無視されます。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFrameworks>netcoreapp3.1;net462</TargetFrameworks>
+</PropertyGroup>
 ```
 
 詳細については、「[SDK スタイルのプロジェクトでのターゲット フレームワーク](../../standard/frameworks.md)」を参照してください。
@@ -62,12 +58,24 @@ ms.locfileid: "82506791"
 [メタパッケージ](../packages.md#metapackages) バージョンよりも低いフレームワーク バージョンを指定する場合は、`NetStandardImplicitPackageVersion` プロパティを使用します。 次の例のプロジェクト ファイルは、`netstandard1.3` をターゲットにしていますが、`NETStandard.Library` の 1.6.0 バージョンを使用しています。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
-    <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TargetFramework>netstandard1.3</TargetFramework>
+  <NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+</PropertyGroup>
+```
+
+## <a name="package-properties"></a>パッケージのプロパティ
+
+`PackageId`、`PackageVersion`、`PackageIcon`、`Title`、`Description` などのプロパティを指定し、プロジェクトから作成されたパッケージについて説明できます。 以上のプロパティとその他のプロパティの詳細については、「[pack ターゲット](/nuget/reference/msbuild-targets#pack-target)」を参照してください。
+
+```xml
+<PropertyGroup>
+  ...
+  <PackageId>ClassLibDotNetStandard</PackageId>
+  <Version>1.0.0</Version>
+  <Authors>John Doe</Authors>
+  <Company>Contoso</Company>
+</PropertyGroup>
 ```
 
 ## <a name="publish-properties"></a>[発行] プロパティ
@@ -82,11 +90,9 @@ ms.locfileid: "82506791"
 `RuntimeIdentifier` プロパティを使用すると、プロジェクトに 1 つの[ランタイム識別子 (RID)](../rid-catalog.md) を指定できます。 RID により、自己完結型の展開を発行できます。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifier>ubuntu.16.04-x64</RuntimeIdentifier>
+</PropertyGroup>
 ```
 
 ### <a name="runtimeidentifiers"></a>RuntimeIdentifiers
@@ -97,11 +103,9 @@ ms.locfileid: "82506791"
 > `RuntimeIdentifier` (単数形) を使用すると、必要なランタイムが 1 つだけのとき、ビルドが速くなります。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RuntimeIdentifiers>win10-x64;osx.10.11-x64;ubuntu.16.04-x64</RuntimeIdentifiers>
+</PropertyGroup>
 ```
 
 ### <a name="trimmerrootassembly"></a>TrimmerRootAssembly
@@ -111,11 +115,9 @@ ms.locfileid: "82506791"
 次の XML では、トリミングから `System.Security` アセンブリが除外されます。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <ItemGroup>
-    <TrimmerRootAssembly Include="System.Security" />
-  </ItemGroup>
-</Project>
+<ItemGroup>
+  <TrimmerRootAssembly Include="System.Security" />
+</ItemGroup>
 ```
 
 ### <a name="useapphost"></a>UseAppHost
@@ -125,11 +127,9 @@ ms.locfileid: "82506791"
 .NET Core 3.0 以降のバージョンでは、既定でフレームワークに依存する実行可能ファイルが作成されます。 実行可能ファイルの生成を無効にするには、`UseAppHost` プロパティを `false` に設定します。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <UseAppHost>false</UseAppHost>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <UseAppHost>false</UseAppHost>
+</PropertyGroup>
 ```
 
 配置の詳細については、[.NET Core アプリケーションの配置](../deploying/index.md)に関するページを参照してください。
@@ -143,11 +143,9 @@ ms.locfileid: "82506791"
 `LangVersion` プロパティを使用すると、特定のプログラミング言語バージョンを指定できます。 たとえば、C# プレビュー機能にアクセスする場合は、`LangVersion` を `preview` に設定します。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <LangVersion>preview</LangVersion>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <LangVersion>preview</LangVersion>
+</PropertyGroup>
 ```
 
 詳細については、「[C# 言語のバージョン管理](../../csharp/language-reference/configure-language-version.md#override-a-default)」を参照してください。
@@ -171,11 +169,9 @@ ms.locfileid: "82506791"
 `ConcurrentGarbageCollection` プロパティでは、[バックグラウンド (同時実行) ガベージ コレクション](../../standard/garbage-collection/background-gc.md)の有効または無効が設定されます。 この値を `false` に設定すると、バックグラウンド ガベージ コレクションが無効になります。 詳細については、「[System.GC.Concurrent/COMPlus_gcConcurrent](../run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ConcurrentGarbageCollection>false</ConcurrentGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="invariantglobalization"></a>InvariantGlobalization
@@ -183,11 +179,9 @@ ms.locfileid: "82506791"
 `InvariantGlobalization` プロパティでは、アプリを *globalization-invariant* モードで実行するかどうかを設定します。このモードでは、カルチャ固有のデータにアクセスできません。 この値を `true` に設定すると、globalization-invariant モードで実行されます。 詳細については、「[インバリアント モード](../run-time-config/globalization.md#invariant-mode)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <InvariantGlobalization>true</InvariantGlobalization>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <InvariantGlobalization>true</InvariantGlobalization>
+</PropertyGroup>
 ```
 
 ### <a name="retainvmgarbagecollection"></a>RetainVMGarbageCollection
@@ -195,11 +189,9 @@ ms.locfileid: "82506791"
 `RetainVMGarbageCollection` プロパティでは、将来利用する目的で削除済みメモリ セグメントを待機一覧に載せるように、あるいは削除済みメモリ セグメントを解放するようにガベージ コレクターを設定します。 この値を `true` に設定すると、セグメントを待機一覧に載せるよう、ガベージ コレクターが命令されます。 詳細については、「[System.GC.RetainVM/COMPlus_GCRetainVM](../run-time-config/garbage-collector.md#systemgcretainvmcomplus_gcretainvm)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <RetainVMGarbageCollection>true</RetainVMGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="servergarbagecollection"></a>ServerGarbageCollection
@@ -207,11 +199,9 @@ ms.locfileid: "82506791"
 `ServerGarbageCollection` プロパティでは、アプリケーションで使用するガベージ コレクションとして[ワークステーション ガベージ コレクションまたはサーバー ガベージ コレクション](../../standard/garbage-collection/workstation-server-gc.md)を設定します。 この値を `true` に設定すると、サーバー ガベージ コレクションが使用されます。 詳細については、「[System.GC.Server/COMPlus_gcServer](../run-time-config/garbage-collector.md#systemgcservercomplus_gcserver)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ServerGarbageCollection>true</ServerGarbageCollection>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ServerGarbageCollection>true</ServerGarbageCollection>
+</PropertyGroup>
 ```
 
 ### <a name="threadpoolmaxthreads"></a>ThreadPoolMaxThreads
@@ -219,11 +209,9 @@ ms.locfileid: "82506791"
 `ThreadPoolMaxThreads` プロパティでは、ワーカー スレッド プールの最大スレッド数を設定します。 詳細については、「[最大スレッド数](../run-time-config/threading.md#maximum-threads)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ThreadPoolMaxThreads>20</ThreadPoolMaxThreads>
+</PropertyGroup>
 ```
 
 ### <a name="threadpoolminthreads"></a>ThreadPoolMinThreads
@@ -231,11 +219,9 @@ ms.locfileid: "82506791"
 `ThreadPoolMinThreads` プロパティでは、ワーカー スレッド プールの最小スレッド数を設定します。 詳細については、「[最小スレッド数](../run-time-config/threading.md#minimum-threads)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <ThreadPoolMinThreads>4</ThreadPoolMinThreads>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilation"></a>TieredCompilation
@@ -243,11 +229,9 @@ ms.locfileid: "82506791"
 `TieredCompilation` プロパティでは、Just-In-Time (JIT) コンパイラで[階層型コンパイル](../whats-new/dotnet-core-3-0.md#tiered-compilation)を使用するかどうかを設定します。 この値を `false` に設定すると、階層型コンパイルが無効になります。 詳細については、「[階層型コンパイル](../run-time-config/compilation.md#tiered-compilation)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilation>false</TieredCompilation>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilation>false</TieredCompilation>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilationquickjit"></a>TieredCompilationQuickJit
@@ -255,11 +239,9 @@ ms.locfileid: "82506791"
 `TieredCompilationQuickJit` プロパティでは、JIT コンパイラでクイック JIT を使用するかどうかを設定します。 この値を `false` に設定すると、クイック JIT が無効になります。 詳細については、「[クイック JIT](../run-time-config/compilation.md#quick-jit)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilationQuickJit>false</TieredCompilationQuickJit>
+</PropertyGroup>
 ```
 
 ### <a name="tieredcompilationquickjitforloops"></a>TieredCompilationQuickJitForLoops
@@ -267,51 +249,84 @@ ms.locfileid: "82506791"
 `TieredCompilationQuickJitForLoops` プロパティでは、ループを含むメソッドに対して JIT コンパイラでクリック JIT を使用するかどうかを設定します。 この値を `true` に設定すると、ループが含まれるメソッドでクイック JIT が有効になります。 詳細については、「[ループに対するクイック JIT](../run-time-config/compilation.md#quick-jit-for-loops)」を参照してください。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <TieredCompilationQuickJitForLoops>true</TieredCompilationQuickJitForLoops>
+</PropertyGroup>
 ```
 
-## <a name="nuget-packages"></a>NuGet パッケージ
+## <a name="reference-properties"></a>参照のプロパティ
 
-- [PackageReference](#packagereference)
 - [AssetTargetFallback](#assettargetfallback)
-
-### <a name="packagereference"></a>PackageReference
-
-`PackageReference` 項目を使用すると、NuGet の依存関係を指定できます。 たとえば、[メタパッケージ](../packages.md#metapackages)ではなく 1 つのパッケージを参照する場合があります。 `Include` 属性は、パッケージ ID を指定します。 次の例のプロジェクト ファイル スニペットでは、[System.Runtime](https://www.nuget.org/packages/System.Runtime/) パッケージを参照しています。
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <ItemGroup>
-    <PackageReference Include="System.Runtime" Version="4.3.0" />
-  </ItemGroup>
-</Project>
-```
-
-詳細については、[プロジェクト ファイルのパッケージ参照](/nuget/consume-packages/package-references-in-project-files)に関するページを参照してください。
+- [PackageReference](#packagereference)
+- [ProjectReference](#projectreference)
+- [参照](#reference)
+- [Restore プロパティ](#restore-properties)
 
 ### <a name="assettargetfallback"></a>AssetTargetFallback
 
-`AssetTargetFallback` プロパティを使用すると、プロジェクトから参照されるプロジェクトの互換性のある追加のフレームワーク バージョンと、プロジェクトに使用する NuGet パッケージを指定できます。 たとえば、`PackageReference` を使用してパッケージの依存関係を指定し、そのパッケージにプロジェクトの `TargetFramework` と互換性のある資産が含まれない場合は、`AssetTargetFallback` プロパティが機能します。 参照されたパッケージの互換性は、`AssetTargetFallback` で指定された各ターゲット フレームワークを使用して再確認されます。
+`AssetTargetFallback` プロパティを使用すると、プロジェクト参照と NuGet パッケージに対して、互換性のある追加のフレームワーク バージョンを指定できます。 たとえば、`PackageReference` を使用してパッケージの依存関係を指定し、そのパッケージにプロジェクトの `TargetFramework` と互換性のある資産が含まれない場合は、`AssetTargetFallback` プロパティが機能します。 参照されたパッケージの互換性は、`AssetTargetFallback` で指定された各ターゲット フレームワークを使用して再確認されます。
 
 `AssetTargetFallback` プロパティを 1 つ以上の[ターゲット フレームワーク バージョン](../../standard/frameworks.md#supported-target-framework-versions)に設定できます。
 
 ```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  ...
-  <PropertyGroup>
-    <AssetTargetFallback>net461</AssetTargetFallback>
-  </PropertyGroup>
-</Project>
+<PropertyGroup>
+  <AssetTargetFallback>net461</AssetTargetFallback>
+</PropertyGroup>
 ```
 
-### <a name="pack-and-restore-targets"></a>ターゲットのパックと復元
+### <a name="packagereference"></a>PackageReference
 
-MSBuild 15.1 では、ビルドの一部として NuGet パッケージを作成および復元するための `pack` および `restore` ターゲットが導入されました。 `PackageTargetFallback` など、これらのターゲットの MSBuild プロパティについては、「[MSBuild ターゲットとしての NuGet の pack と restor](/nuget/reference/msbuild-targets)」を参照してください。
+`PackageReference` では、NuGet パッケージへの参照が定義されます。 たとえば、[メタパッケージ](../packages.md#metapackages)ではなく 1 つのパッケージを参照する場合があります。
+
+`Include` 属性は、パッケージ ID を指定します。 `Version` 属性では、バージョンまたはバージョン範囲を指定します。 最小バージョン、最大バージョン、範囲、厳密一致を指定する方法については、「[バージョン範囲](/nuget/concepts/package-versioning#version-ranges)」を参照してください。 また、メタデータ `IncludeAssets`、`ExcludeAssets`、`PrivateAssets` をプロジェクト参照に追加できます。
+
+次の例のプロジェクト ファイル スニペットでは、[System.Runtime](https://www.nuget.org/packages/System.Runtime/) パッケージを参照しています。
+
+```xml
+<ItemGroup>
+  <PackageReference Include="System.Runtime" Version="4.3.0" />
+</ItemGroup>
+```
+
+詳細については、[プロジェクト ファイルのパッケージ参照](/nuget/consume-packages/package-references-in-project-files)に関するページを参照してください。
+
+### <a name="projectreference"></a>ProjectReference
+
+`ProjectReference` 項目では、別のプロジェクトへの参照を定義します。 参照されたプロジェクトは NuGet パッケージ依存関係として追加されます。つまり、`PackageReference` と同じように処理されます。
+
+`Include` 属性は、プロジェクトのパスを指定します。 また、メタデータ `IncludeAssets`、`ExcludeAssets`、`PrivateAssets` をプロジェクト参照に追加できます。
+
+次の例のプロジェクト ファイル スニペットでは、`Project2` という名前のプロジェクトが参照されます。
+
+```xml
+<ItemGroup>
+  <ProjectReference Include="..\Project2.csproj" />
+</ItemGroup>
+```
+
+### <a name="reference"></a>関連項目
+
+`Reference` 項目では、アセンブリ ファイルへの参照を定義します。
+
+`Include` 属性によってファイルの名前が指定され、`HintPath` 子要素によってアセンブリへのパスが指定されます。
+
+```xml
+<ItemGroup>
+  <Reference Include="MyAssembly">
+    <HintPath>..\..\Assemblies\MyAssembly.dll</HintPath>
+  </Reference>
+</ItemGroup>
+```
+
+### <a name="restore-properties"></a>restore のプロパティ
+
+参照されたパッケージを復元すると、その直接的な依存関係と間接的な依存関係がすべてインストールされます。 `RestorePackagesPath` や `RestoreIgnoreFailedSources` など、プロパティを指定することでパッケージ復元をカスタマイズできます。 以上のプロパティとその他のプロパティの詳細については、「[restore ターゲット](/nuget/reference/msbuild-targets#restore-target)」を参照してください。
+
+```xml
+<PropertyGroup>
+  <RestoreIgnoreFailedSource>true</RestoreIgnoreFailedSource>
+</PropertyGroup>
+```
 
 ## <a name="see-also"></a>関連項目
 
