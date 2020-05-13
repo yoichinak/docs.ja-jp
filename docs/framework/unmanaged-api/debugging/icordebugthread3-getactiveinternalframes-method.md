@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d69796b4-5b6d-457c-85f6-2cf42e8a8773
 topic_type:
 - apiref
-ms.openlocfilehash: 680af5afa3ebef5bcaf9e34580e421dcc8093aaf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 953b7c1cb5e471072776fe03e53a46d3ff19c0ac
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178463"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379862"
 ---
 # <a name="icordebugthread3getactiveinternalframes-method"></a>ICorDebugThread3::GetActiveInternalFrames メソッド
-スタック上の内部フレーム[(ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)オブジェクト) の配列を返します。  
+スタック上の内部フレーム ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) objects) の配列を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,44 +39,44 @@ HRESULT GetActiveInternalFrames
   
 ## <a name="parameters"></a>パラメーター  
  `cInternalFrames`  
- [in]で想定される内部フレームの`ppInternalFrames`数。  
+ からで予期される内部フレームの数 `ppInternalFrames` 。  
   
  `pcInternalFrames`  
- [アウト]スタック上の内部`ULONG32`フレームの数を含むを指すポインター。  
+ 入出力`ULONG32`スタック上の内部フレームの数を格納しているへのポインター。  
   
  `ppInternalFrames`  
- [イン、アウト]スタック上の内部フレームの配列のアドレスへのポインター。  
+ [入力、出力]スタック上の内部フレームの配列のアドレスへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
  このメソッドは、次の特定の HRESULT と、メソッドの失敗を示す HRESULT エラーも返します。  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|オブジェクト[が](icordebuginternalframe2-interface.md)正常に作成されました。|  
-|E_INVALIDARG|`cInternalFrames`は 0`ppInternalFrames`ではない`null`か、`pcInternalFrames`または`null`です。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`は内部フレームの数より小さい。|  
+|S_OK|[ICorDebugInternalFrame2](icordebuginternalframe2-interface.md)オブジェクトが正常に作成されました。|  
+|E_INVALIDARG|`cInternalFrames`が0では `ppInternalFrames` なく `null` 、がであるか、または `pcInternalFrames` がです `null` 。|  
+|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|`ppInternalFrames`が内部フレームの数より小さくなっています。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
  内部フレームは、一時データを格納するためにランタイムによってスタックにプッシュされるデータ構造です。  
   
- 最初に 呼`GetActiveInternalFrames`び出すときは、`cInternalFrames`パラメーターを 0 (ゼロ)`ppInternalFrames`に設定し、パラメーターを null に設定する必要があります。 最初`GetActiveInternalFrames`に戻るとき`pcInternalFrames`、スタックの内部フレームの数を格納します。  
+ を初めて呼び出すときは、 `GetActiveInternalFrames` パラメーターを `cInternalFrames` 0 (ゼロ) に設定し、パラメーターを null に設定する必要があり `ppInternalFrames` ます。 最初にが返されるときに `GetActiveInternalFrames` 、 `pcInternalFrames` スタック上の内部フレームの数を格納します。  
   
- `GetActiveInternalFrames`その後、もう一度呼び出す必要があります。 パラメータに適切なカウント(`pcInternalFrames`) を渡し、 で適切なサイズの配列へのポインタを指定`ppInternalFrames`する必要があります。 `cInternalFrames`  
+ `GetActiveInternalFrames`次に、を2回目に呼び出す必要があります。 パラメーターに適切なカウント () を渡し、 `pcInternalFrames` `cInternalFrames` で適切にサイズ設定された配列へのポインターを指定する必要があり `ppInternalFrames` ます。  
   
- 実際の[スタック](icordebugthread3-getactiveinternalframes-method.md)フレームを返すためには、メソッドを使用します。  
+ 実際のスタックフレームを返すには、の[テキスト](icordebugthread3-getactiveinternalframes-method.md)を使用します。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)

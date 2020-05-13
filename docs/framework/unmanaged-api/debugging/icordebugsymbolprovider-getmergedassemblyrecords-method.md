@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetMergedAssemblyRecords メソッド
 ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
-ms.openlocfilehash: 6a537a88bd4ab666eff8b5dda994da96bfcc5e52
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b7d26fa80a7a8ebe7b4606b914c8cd09c52df1e4
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791619"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379618"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords メソッド
 すべてのマージされたアセンブリのシンボル レコードを取得します。  
@@ -32,21 +32,21 @@ HRESULT GetMergedAssemblyRecords(
  `pRecords`  
  [ICorDebugMergedAssemblyRecord](icordebugmergedassemblyrecord-interface.md)オブジェクトの配列へのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

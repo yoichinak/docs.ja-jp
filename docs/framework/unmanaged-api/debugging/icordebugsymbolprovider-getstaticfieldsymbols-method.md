@@ -2,12 +2,12 @@
 title: ICorDebugSymbolProvider::GetStaticFieldSymbols メソッド
 ms.date: 03/30/2017
 ms.assetid: b178367f-a6e4-413c-b06f-daf3804b456b
-ms.openlocfilehash: 02cc62a421058f83e28ce945ae9e76745f768988
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2428521b9b08060fd147a7c9b9054239bf957f69
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791552"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379372"
 ---
 # <a name="icordebugsymbolprovidergetstaticfieldsymbols-method"></a>ICorDebugSymbolProvider::GetStaticFieldSymbols メソッド
 typespec シグネチャに対応する静的フィールド シンボルを取得します。  
@@ -40,22 +40,22 @@ HRESULT GetStaticFieldSymbols(
  `pSymbols`  
  入出力要求された静的なフィールドシンボルが格納されている、表示名のある[シンボル](icordebugstaticfieldsymbol-interface.md)配列へのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [GetInstanceFieldSymbols メソッド](icordebugsymbolprovider-getinstancefieldsymbols-method.md)
 - [ICorDebugSymbolProvider インターフェイス](icordebugsymbolprovider-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

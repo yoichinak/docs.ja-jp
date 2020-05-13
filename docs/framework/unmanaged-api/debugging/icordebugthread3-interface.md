@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb2860ef-06cb-4968-a6c3-6d048ecda2a4
 topic_type:
 - apiref
-ms.openlocfilehash: 19bd869aec7e4d046890d2314f5142753ba0b112
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: dc556dfb59e999ed9b7fc5f35c603dc26c35f314
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791385"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378706"
 ---
 # <a name="icordebugthread3-interface"></a>ICorDebugThread3 インターフェイス
 とそれに対応するインターフェイス[へのエントリ](icordebugstackwalk-interface.md)ポイントを提供します。  
@@ -31,22 +31,22 @@ ms.locfileid: "76791385"
 |[CreateStackWalk メソッド](icordebugthread3-createstackwalk-method.md)|スタックをアンワインドするスレッドに対し[て、このオブジェクトを](icordebugstackwalk-interface.md)作成します。|  
 |[GetActiveInternalFrames メソッド](icordebugthread3-getactiveinternalframes-method.md)|スタック上の内部フレーム ([ICorDebugInternalFrame2](icordebuginternalframe2-interface.md) objects) の配列を返します。|  
   
-## <a name="remarks"></a>コメント  
- `ICorDebugThread3` は、のように、のような論理上の拡張機能です。  
+## <a name="remarks"></a>Remarks  
+ `ICorDebugThread3`は、のように、の論理上の拡張機能です。  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)

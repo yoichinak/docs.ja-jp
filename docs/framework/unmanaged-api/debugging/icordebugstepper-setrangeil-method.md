@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a20c95f0-6da7-4b41-b27f-584211cebb92
 topic_type:
 - apiref
-ms.openlocfilehash: b3153a88867d249aad8365bb774348fb8c9d57d5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 7fadffaab6eee5beed513f339ea300acef5a1c6b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791750"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378999"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL メソッド
 [ICorDebugStepper:: StepRange](icordebugstepper-steprange-method.md)の呼び出しで、ネイティブコードに対して相対的な引数値を渡すか、またはステップスルー中のメソッドの MSIL (Microsoft 中間言語) コードに対する相対パスを指定するかを指定する値を設定します。  
@@ -35,13 +35,13 @@ HRESULT SetRangeIL (
   
 ## <a name="parameters"></a>パラメーター  
  `bIL`  
- から`true` に設定すると、範囲が MSIL コードに対して相対的であることを指定できます。 範囲がネイティブコードに対して相対的であることを指定する場合は `false` に設定します。 既定値は `true`です。  
+ から`true`範囲が MSIL コードに対して相対的であることを指定するには、をに設定します。 `false`範囲がネイティブコードに対して相対的であることを指定するには、をに設定します。 既定値は `true` です。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

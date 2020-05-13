@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0df5c5d-9a2e-47bf-894c-6f8a9fe24a1f
 topic_type:
 - apiref
-ms.openlocfilehash: b78bff2994cefc6c35a4bd59133338392c3a1b24
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b95e9f3a0d584511a2bcf156ed2c50a98f96d071
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791976"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379061"
 ---
 # <a name="icordebugremotedebugactiveprocessex-method"></a>ICorDebugRemote::DebugActiveProcessEx メソッド
 デバッガーでリモートコンピューター上のプロセスを起動します。  
@@ -44,7 +44,7 @@ HRESULT DebugActiveProcessEx (
  からデバッガーがアタッチされるプロセスの ID。  
   
  `win32Attach`  
- [in] デバッガーをプロセスの Win32 デバッガーとして動作させる必要があるかどうかを `true` し、アンマネージコールバックをディスパッチします。それ以外の場合は、`false`ます。  
+ [入力] `true`デバッガーがプロセスの Win32 デバッガーとして動作し、アンマネージコールバックをディスパッチする必要がある場合は。それ以外の場合は `false` 。  
   
  `ppProcess`  
  入出力デバッガーがアタッチされているプロセスを表す "いいプロセス" オブジェクトのアドレスへのポインター。  
@@ -56,11 +56,11 @@ HRESULT DebugActiveProcessEx (
  E_FAIL (またはその他の E_ リターン コード)  
  リモートコンピューター上のプロセスにアタッチできません。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  混合モードのデバッグは、Silverlight ではサポートされていません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
@@ -73,4 +73,4 @@ HRESULT DebugActiveProcessEx (
 - [ICorDebugRemote インターフェイス](icordebugremote-interface.md)
 - [ICorDebug インターフェイス](icordebug-interface.md)
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

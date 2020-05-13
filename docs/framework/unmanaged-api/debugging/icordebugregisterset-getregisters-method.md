@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fdf91864-48ea-4aa6-b70c-361b7a3184c7
 topic_type:
 - apiref
-ms.openlocfilehash: 32e899622b9c649a08e3bca1b6645f70dcbcbb19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 40de06d47654337542d2c80dc325f8201335312a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178546"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379151"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters メソッド
-ビット マスクで指定されている各レジスタ (現在コードを実行しているコンピューター上) の値を取得します。  
+ビットマスクによって指定された、(現在コードを実行しているコンピューター上の) 各レジスタの値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT GetRegisters (
   
 ## <a name="parameters"></a>パラメーター  
  `mask`  
- [in]取得するレジスタ値を指定するビット マスク。 各ビットはレジスタに対応します。 ビットが 1 に設定されている場合、レジスタの値が取得されます。それ以外の場合、レジスタの値は取得されません。  
+ から取得するレジスタ値を指定するビットマスク。 各ビットは、レジスタに対応します。 ビットが1に設定されている場合は、レジスタの値が取得されます。それ以外の場合は、レジスタの値は取得されません。  
   
  `regCount`  
- [in]取得するレジスタ値の数。  
+ から取得するレジスタ値の数。  
   
  `regBuffer`  
- [アウト]レジスタの`CORDB_REGISTER`値を受け取るオブジェクトの配列。  
+ 入出力オブジェクトの配列 `CORDB_REGISTER` 。各オブジェクトは、レジスタの値を受け取ります。  
   
-## <a name="remarks"></a>解説  
- 配列のサイズは、ビット マスク内の 1 に設定されたビット数と等しくする必要があります。 パラメーター`regCount`は、レジスタ値を受け取るバッファー内の要素の数を指定します。 マスクで`regCount`示されるレジスタの数に対して値が小さすぎる場合は、番号が大きいレジスタはセットから切り捨てられます。 値が`regCount`大きすぎると、未使用`regBuffer`の要素は変更されません。  
+## <a name="remarks"></a>Remarks  
+ 配列のサイズは、ビットマスクで1に設定されているビット数と同じである必要があります。 パラメーターは、 `regCount` レジスタ値を受け取るバッファー内の要素の数を指定します。 `regCount`マスクによって示されるレジスタの数に対して値が小さすぎる場合は、番号が大きいレジスタがセットから切り捨てられます。 `regCount`値が大きすぎる場合、未使用の `regBuffer` 要素は変更されません。  
   
- ビット マスクが使用できないレジスタを指定している場合`GetRegisters`、そのレジスタの不確定な値を返します。  
+ 使用できないレジスタがビットマスクによって指定されている場合、は `GetRegisters` そのレジスタの不定値を返します。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

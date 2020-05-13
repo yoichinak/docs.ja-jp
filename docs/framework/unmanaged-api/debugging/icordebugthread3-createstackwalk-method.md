@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c55e35d9-f9aa-4268-94b5-dce44c61acf2
 topic_type:
 - apiref
-ms.openlocfilehash: 64f6bc9abb8105cdfa942c2aaca71994e8a91765
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: f2850e6c9cbb2250a08ab4a0e34c69e377d3a23d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791414"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375846"
 ---
 # <a name="icordebugthread3createstackwalk-method"></a>ICorDebugThread3::CreateStackWalk メソッド
 スタックをアンワインドするスレッドに対し[て、このオブジェクトを](icordebugstackwalk-interface.md)作成します。  
@@ -40,24 +40,24 @@ HRESULT CreateStackWalk([out] ICorDebugStackWalk **ppStackWalk);
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|`ICorDebugStackWalk` オブジェクトが正常に作成されました。|  
-|E_FAIL|`ICorDebugStackWalk` オブジェクトは作成されませんでした。|  
+|S_OK|`ICorDebugStackWalk`オブジェクトが正常に作成されました。|  
+|E_FAIL|オブジェクトは作成され `ICorDebugStackWalk` ませんでした。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
- `CreateStackWalk` メソッドが成功すると、返された `ICorDebugStackWalk` オブジェクトのコンテキストが、スレッドの現在のコンテキストに設定されます。  
+## <a name="remarks"></a>Remarks  
+ メソッドが `CreateStackWalk` 成功すると、返された `ICorDebugStackWalk` オブジェクトのコンテキストがスレッドの現在のコンテキストに設定されます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)

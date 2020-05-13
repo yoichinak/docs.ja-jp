@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ba08ffa-55a2-4662-9d6d-4738f1db60c9
 topic_type:
 - apiref
-ms.openlocfilehash: b137b956e06a2b2954918e4024860f9b234e7583
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 74eef0c1ec456d647e5a58e5009d2c77e5002289
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792106"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378290"
 ---
 # <a name="icordebugregistersetgetregistersavailable-method"></a>ICorDebugRegisterSet::GetRegistersAvailable メソッド
 [このは、この](icordebugregisterset-interface.md)"この" のどのレジスタが現在使用可能であるかを示すビットマスクを取得します。  
@@ -37,19 +37,19 @@ HRESULT GetRegistersAvailable (
  `pAvailable`  
  入出力現在使用できるレジスタを示すビットマスク。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  特定の状況でその値を特定できない場合は、レジスタを使用できない可能性があります。  
   
- 返されたマスクには、レジスタごとにビットが含まれています (1 < レジスタインデックス <)。 レジスタが使用可能な場合、ビット値は1です。使用できない場合は0です。  
+ 返されるマスクには、レジスタごとにビットが含まれています (1 << レジスタインデックス)。 レジスタが使用可能な場合、ビット値は1です。使用できない場合は0です。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3ed344b-0d3a-44e8-8000-2a97e0805a2c
 topic_type:
 - apiref
-ms.openlocfilehash: 00c9939b25f395010f6ea5832b405c3e9928a223
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2149c985519b95f89af2c50d05753ae7259babe4
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792024"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378218"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable メソッド
 使用できるレジスタのビットマップを提供するバイト配列を取得します。  
@@ -41,25 +41,25 @@ HRESULT GetRegistersAvailable (
  `availableRegChunks`  
  入出力バイト配列。各ビットはレジスタに対応します。 レジスタが使用可能な場合は、レジスタの対応するビットが設定されます。  
   
-## <a name="remarks"></a>コメント  
- CorDebugRegister 列挙子の値は、異なるマイクロプロセッサのレジスタを指定します。 各値の上位5ビットは、`availableRegChunks` バイト配列のインデックスになります。 各値の下位3ビットは、インデックス付きバイト内のビット位置を識別します。 特定のレジスタを指定する `CorDebugRegister` 値を指定すると、マスク内のレジスタの位置は次のように決定されます。  
+## <a name="remarks"></a>Remarks  
+ CorDebugRegister 列挙子の値は、異なるマイクロプロセッサのレジスタを指定します。 各値の上位5ビットは、バイト配列へのインデックスです `availableRegChunks` 。 各値の下位3ビットは、インデックス付きバイト内のビット位置を識別します。 特定の `CorDebugRegister` レジスタを指定する値を指定すると、マスク内のレジスタの位置は次のように決定されます。  
   
-1. `availableRegChunks` 配列内の正しいバイトにアクセスするために必要なインデックスを抽出します。  
+1. 配列内の正しいバイトにアクセスするために必要なインデックスを抽出し `availableRegChunks` ます。  
   
-     `CorDebugRegister` 値 > > 3  
+     `CorDebugRegister`値 >> 3  
   
 2. インデックス付きバイト内のビット位置を抽出します。ビットゼロは最下位ビットです。  
   
-     `CorDebugRegister` 値 & 7  
+     `CorDebugRegister`値 & 7  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

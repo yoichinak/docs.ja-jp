@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05558daa-39e2-4c38-aeaf-e2aec4a09468
 topic_type:
 - apiref
-ms.openlocfilehash: f558a4c94afeb69f58605958ddcb91e4be772c39
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 4d954057c519263da49f8aaeeeef6ab9402b6956
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791347"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378374"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException メソッド
 スレッドで未処理の例外が発生したかどうかを示します。  
@@ -45,20 +45,20 @@ HRESULT GetBlockingObjects (
 |S_OK|スレッドの作成以降、ハンドルされない例外が発生しました。|  
 |S_FALSE|スレッドでハンドルされない例外が発生していません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  このメソッドは、スレッドにハンドルされない例外が発生したかどうかを示します。 未処理の例外のコールバックがトリガーされるか、ネイティブ JIT アタッチが開始されるまで、このメソッドは S_OK を返すことが保証されます。 処理不能な例外が返されるという保証はありませ[ん。](icordebugthread-getcurrentexception-method.md)ただし、ハンドルされない例外コールバックを取得した後、またはネイティブ JIT アタッチによってプロセスがまだ続行されていない場合に発生します。 また、ネイティブ JIT アタッチがトリガーされたときに、ハンドルされない例外を持つ複数のスレッドを使用することもできます。 このような場合は、どの例外が JIT アタッチをトリガーしたかを判断する方法はありません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugThread4 インターフェイス](icordebugthread4-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 081d1c95-152b-4797-8552-18453eb7b14b
 topic_type:
 - apiref
-ms.openlocfilehash: 9953d0f3e1a4d4cd935918f0e5721e474453ca7d
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 743b0c8016ca5c0401046166a770d857215429a3
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791909"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379213"
 ---
 # <a name="icordebugstackwalkgetcontext-method"></a>ICorDebugStackWalk::GetContext メソッド
 [は、テキストオブジェクト内](icordebugstackwalk-interface.md)の現在のフレームのコンテキストを返します。  
@@ -54,24 +54,24 @@ HRESULT GetContext([in]  ULONG32 contextFlags,
 |-------------|-----------------|  
 |S_OK|現在のフレームのコンテキストが正常に返されました。|  
 |E_FAIL|コンテキストを返すことができませんでした。|  
-|HRESULT_FROM_WIN32(ERROR_INSUFFICIENT BUFFER)|コンテキストバッファーが小さすぎます。|  
+|HRESULT_FROM_WIN32 (ERROR_INSUFFICIENT バッファー)|コンテキストバッファーが小さすぎます。|  
 |CORDBG_E_PAST_END_OF_STACK|フレームポインターは既にスタックの末尾にあります。そのため、追加のフレームにアクセスすることはできません。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  アンワインドでは、非揮発性レジスタなどのレジスタのサブセットのみが復元されるため、呼び出し時にコンテキストがレジスタの状態と完全に一致するとは限りません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)
