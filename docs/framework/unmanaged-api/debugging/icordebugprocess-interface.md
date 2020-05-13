@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: be86f4b5-418a-4c5c-a67c-97148c65ed8c
 topic_type:
 - apiref
-ms.openlocfilehash: b2429052173a187297b67c756213e5d27a79298b
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: ab48efccc88787f099a182627777db95304cdc3e
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792601"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212075"
 ---
 # <a name="icordebugprocess-interface"></a>ICorDebugProcess インターフェイス
 マネージド コードを実行しているプロセスを表します。 このインターフェイスは、というコントロールのサブクラスです。  
@@ -43,24 +43,24 @@ ms.locfileid: "76792601"
 |[ModifyLogSwitch メソッド](icordebugprocess-modifylogswitch-method.md)|指定されたログスイッチの重大度レベルを設定します。|  
 |[ReadMemory メソッド](icordebugprocess-readmemory-method.md)|プロセスからメモリを読み取ります。|  
 |[SetThreadContext メソッド](icordebugprocess-setthreadcontext-method.md)|指定されたスレッドのコンテキストを設定します。|  
-|[ThreadForFiberCookie メソッド](icordebugprocess-threadforfibercookie-method.md)|非推奨。|  
+|[ThreadForFiberCookie メソッド](icordebugprocess-threadforfibercookie-method.md)|非推奨になりました。|  
 |[WriteMemory メソッド](icordebugprocess-writememory-method.md)|プロセスのメモリ領域にデータを書き込みます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebug インターフェイス](icordebug-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

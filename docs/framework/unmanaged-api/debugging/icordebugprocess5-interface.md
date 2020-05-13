@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 30a39d79-1f10-4328-9c5d-094ed824e2ba
 topic_type:
 - apiref
-ms.openlocfilehash: 263124db75abdc058d26ffb606a13fc711aed8bf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 1953a3e0492e4cfcdaea761b68ea22cf5a4a8ed7
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792300"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205518"
 ---
 # <a name="icordebugprocess5-interface"></a>ICorDebugProcess5 インターフェイス
 は、アプリケーションインターフェイスを拡張して、マネージヒープへのアクセスをサポートし、マネージオブジェクトのガベージコレクションに関する情報を提供し、デバッガーがアプリケーションのローカルネイティブイメージキャッシュからイメージを読み込むかどうかを判断します。  
@@ -28,7 +28,7 @@ ms.locfileid: "76792300"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnableNGENPolicy メソッド](icordebugprocess5-enablengenpolicy-method.md)|マネージデバッガーで実行中にアプリケーションがネイティブイメージを読み込む方法を決定する値を設定します。|  
+|[EnableNGenPolicy メソッド](icordebugprocess5-enablengenpolicy-method.md)|マネージデバッガーで実行中にアプリケーションがネイティブイメージを読み込む方法を決定する値を設定します。|  
 |[EnumerateGCReferences メソッド](icordebugprocess5-enumerategcreferences-method.md)|プロセスでガベージコレクトされるすべてのオブジェクトの列挙子を取得します。|  
 |[EnumerateHandles メソッド](icordebugprocess5-enumeratehandles-method.md)|プロセス内のオブジェクトハンドルの列挙子を取得します。|  
 |[EnumerateHeap メソッド](icordebugprocess5-enumerateheap-method.md)|マネージヒープ上のオブジェクトの列挙子を取得します。|  
@@ -41,22 +41,22 @@ ms.locfileid: "76792300"
 |[GetTypeID メソッド](icordebugprocess5-gettypeid-method.md)|指定したアドレスにあるオブジェクトの型識別子を取得します。|  
 |[GetTypeLayout メソッド](icordebugprocess5-gettypelayout-method.md)|型識別子に基づいて、メモリ内のオブジェクトのレイアウトに関する情報を取得します。|  
   
-## <a name="remarks"></a>コメント  
- このインターフェイスは、ICorDebugProcess、ICorDebugProcess2、および [ICorDebugProcess3](icordebugprocess3-interface.md) の各インターフェイスを論理的に拡張します。  
+## <a name="remarks"></a>Remarks  
+ このインターフェイスは、ICorDebugProcess2、ICorDebugProcess3、および[ICorDebugProcess3](icordebugprocess3-interface.md)の各インターフェイスを論理的に拡張します。  
   
 > [!NOTE]
 > このインターフェイスは、別のコンピューターまたは別のプロセスからのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)

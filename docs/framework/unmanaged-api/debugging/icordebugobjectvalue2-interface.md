@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f93cc2ec-0a12-4499-9bf6-405dc58c9a81
 topic_type:
 - apiref
-ms.openlocfilehash: 566d4323bfd76a2189e1a8280465eb2dcde2a03a
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: a338116f6eae670cad785807ed580039fbd7fb78
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792676"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207405"
 ---
 # <a name="icordebugobjectvalue2-interface"></a>ICorDebugObjectValue2 インターフェイス
 
@@ -29,22 +29,22 @@ ms.locfileid: "76792676"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetVirtualMethodAndType メソッド](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType` はまだ実装されていません。|  
+|[GetVirtualMethodAndType メソッド](icordebugobjectvalue2-getvirtualmethodandtype-method.md)|`GetVirtualMethodAndType`はまだ実装されていません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.Net Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.Net Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f94b9d53-d8f8-4424-a95e-53a1bfd26e4a
 topic_type:
 - apiref
-ms.openlocfilehash: c5fa0a67309e23c02393b70d849af3884dfd0adf
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 2e0f284625e99215900c6aaab94e4eae611787ed
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76788540"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212101"
 ---
 # <a name="icordebugilframe2-interface"></a>ICorDebugILFrame2 インターフェイス
 
@@ -29,23 +29,23 @@ ms.locfileid: "76788540"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumerateTypeParameters メソッド](icordebugilframe2-enumeratetypeparameters-method.md)|このフレームの <xref:System.Type> パラメーターを格納している、テキスト型オブジェクトを取得します。|  
+|[EnumerateTypeParameters メソッド](icordebugilframe2-enumeratetypeparameters-method.md)|このフレームのパラメーターを格納している、テキスト型の型の列挙体オブジェクトを取得し <xref:System.Type> ます。|  
 |[RemapFunction メソッド](icordebugilframe2-remapfunction-method.md)|新しい MSIL オフセットを指定して、編集された関数を再マップします。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 > このインターフェイスは、コンピューター間またはプロセス間でのリモート呼び出しをサポートしていません。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

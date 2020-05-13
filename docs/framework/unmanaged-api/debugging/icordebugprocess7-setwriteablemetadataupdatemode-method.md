@@ -12,12 +12,12 @@ api_type:
 ms.assetid: 8589bba7-7304-45ba-9e31-7bf43dfd5c19
 topic_type:
 - apiref
-ms.openlocfilehash: 35767529d9433764b7eed0b3b4acdd806f399962
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 6de75e1e27660ac91bd6320a501db47f3b055fb0
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792178"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212257"
 ---
 # <a name="icordebugprocess7setwriteablemetadataupdatemode-method"></a>ICorDebugProcess7::SetWriteableMetadataUpdateMode メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  
@@ -34,21 +34,21 @@ HRESULT SetWriteableMetadataUpdateMode(
   
 ## <a name="parameters"></a>パラメーター  
  `flags`  
- ターゲットプロセス内のメタデータに対するメモリ内更新がデバッガーに対して表示 (`WriteableMetadataUpdateMode::AlwaysShowUpdates`) されるか、表示されない (`WriteableMetadataUpdateMode::LegacyCompatPolicy`) かを指定する[WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md)列挙値。  
+ ターゲットプロセス内のメタデータに対するメモリ内更新をデバッガーに対して表示 () するか、非表示 () するかを指定する[WriteableMetadataUpdateMode](writeablemetadataupdatemode-enumeration.md)列挙値です `WriteableMetadataUpdateMode::AlwaysShowUpdates` `WriteableMetadataUpdateMode::LegacyCompatPolicy` 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  ターゲット プロセスのメタデータに対する更新は、[編集]、[続行] で行うか、プロファイラー、または <xref:System.Reflection.Emit?displayProperty=nameWithType> で行うことができます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugProcess7 インターフェイス](icordebugprocess7-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

@@ -2,12 +2,12 @@
 title: ICorDebugProcess6::GetCode メソッド
 ms.date: 03/30/2017
 ms.assetid: faa538c2-60c9-4064-b996-1b4c24ebd751
-ms.openlocfilehash: 94882c67752705f9f13b858ae3b386a19dc103a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 178d1df7e6c8246b18afed442e944c49051b6597
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178553"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209267"
 ---
 # <a name="icordebugprocess6getcode-method"></a>ICorDebugProcess6::GetCode メソッド
 特定のコード アドレスで、マネージド コードに関する情報を取得します。  
@@ -22,26 +22,26 @@ HRESULT GetCode(
   
 ## <a name="parameters"></a>パラメーター  
  `codeAddress`  
- [in]マネージ コード セグメントの開始アドレスを指定する[CORDB_ADDRESS](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)値。  
+ からマネージコードセグメントの開始アドレスを指定する[CORDB_ADDRESS](../common-data-types-unmanaged-api-reference.md)値。  
   
  `ppCode`  
- [アウト]マネージ コードのセグメントを表す "ICorDebugCode" オブジェクトのアドレスへのポインター。  
+ 入出力マネージコードのセグメントを表す "" コード "オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 > [!NOTE]
 > このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugProcess6 インターフェイス](icordebugprocess6-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

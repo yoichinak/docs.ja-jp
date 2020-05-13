@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d508981f-e2b2-445b-a649-69951c22702d
 topic_type:
 - apiref
-ms.openlocfilehash: 4489238df05edef384b4073ee738a184ff8809ff
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 748a44075f7f73e54bab689bcb8865dee2b14946
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178672"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207837"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains メソッド
-このプロセス内のすべてのアプリケーション ドメインを列挙します。  
+このプロセス内のすべてのアプリケーションドメインを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,16 +34,16 @@ HRESULT EnumerateAppDomains(
   
 ## <a name="parameters"></a>パラメーター  
  `ppAppDomains`  
- [アウト]このプロセスのアプリケーション ドメインの列挙子である[ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md)のアドレスへのポインター。  
+ 入出力このプロセス内のアプリケーションドメインの列挙子である[ICorDebugAppDomainEnum](icordebugappdomainenum-interface.md)のアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
- このメソッドは、[コールバック](icordebugmanagedcallback-createprocess-method.md)の前に使用できます。  
+## <a name="remarks"></a>Remarks  
+ このメソッド[は、によって](icordebugmanagedcallback-createprocess-method.md)使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

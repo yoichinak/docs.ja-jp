@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 86c397c3-81d8-463e-a248-3cbe06c44d9d
 topic_type:
 - apiref
-ms.openlocfilehash: a97c14d83f99c847bb8569a33e175ab6eb5bccd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0d98df05291ed8405addcfd183d7e02332e4e025
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178622"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209696"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences メソッド
-プロセスでガベージ コレクションされるすべてのオブジェクトの列挙子を取得します。  
+プロセスでガベージコレクトされるすべてのオブジェクトの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,24 +36,24 @@ HRESULT EnumerateGCReferences(
   
 ## <a name="parameters"></a>パラメーター  
  `enumerateWeakReferences`  
- [in]弱い参照も列挙するかどうかを示すブール値。 の`enumerateWeakReferences``true`場合、`ppEnum`列挙子には厳密な参照と弱い参照の両方が含まれます。 の`enumerateWeakReferences`場合`false`、列挙子には厳密な参照のみが含まれます。  
+ から弱い参照も列挙するかどうかを示すブール値。 がの場合 `enumerateWeakReferences` `true` 、 `ppEnum` 列挙子には、厳密な参照と弱い参照の両方が含まれます。 がの場合 `enumerateWeakReferences` `false` 、列挙子には厳密な参照のみが含まれます。  
   
  `ppEnum`  
- [アウト]ガベージ コレクションされるオブジェクトの列挙子である[ICorDebugGCReferenceEnum](icordebuggcreferenceenum-interface.md)のアドレスへのポインター。  
+ 入出力ガベージコレクションの対象となるオブジェクトの列挙子[である、](icordebuggcreferenceenum-interface.md)ツールのアドレスへのポインターです。  
   
-## <a name="remarks"></a>解説  
- このメソッドは、プロセス内の任意のマネージ オブジェクトの完全なルート チェーンを決定する方法を提供し、オブジェクトがまだ生きている理由を判断するために使用できます。  
+## <a name="remarks"></a>Remarks  
+ このメソッドは、プロセス内の任意のマネージオブジェクトの完全なルートチェーンを確認する方法を提供し、オブジェクトがまだアクティブである理由を判断するために使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugProcess5 インターフェイス](icordebugprocess5-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

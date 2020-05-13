@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd62f5d1-e874-41f1-81e5-a29a7572c15d
 topic_type:
 - apiref
-ms.openlocfilehash: 306d881c05c2fcdb15a53a439bfce6eff3afffa8
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 861af4ba9c6f4d4bdb16abb9d4e1fd79debac59b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792311"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205575"
 ---
 # <a name="icordebugprocess5gettypelayout-method"></a>ICorDebugProcess5::GetTypeLayout メソッド
 型識別子に基づいて、メモリ内のオブジェクトのレイアウトに関する情報を取得します。  
@@ -38,20 +38,20 @@ HRESULT GetTypeLayout(    [in] COR_TYPEID id,     [out] COR_TYPE_LAYOUT *pLayout
  `pLayout`  
  入出力メモリ内のオブジェクトのレイアウトに関する情報を格納している[COR_TYPE_LAYOUT](cor-type-layout-structure.md)構造体へのポインター。  
   
-## <a name="remarks"></a>コメント  
- `ICorDebugProcess5::GetTypeLayout` メソッドは、その[COR_TYPEID](cor-typeid-structure.md)に基づいてオブジェクトに関する情報を提供します。これは、他の多くの[ICorDebugProcess5](icordebugprocess5-interface.md)メソッドによって返されます。 この情報は、メソッドによって設定される[COR_TYPE_LAYOUT](cor-type-layout-structure.md)構造体によって提供されます。  
+## <a name="remarks"></a>Remarks  
+ メソッドは、その `ICorDebugProcess5::GetTypeLayout` [COR_TYPEID](cor-typeid-structure.md)に基づいてオブジェクトに関する情報を提供します。これは、他の多くの[ICorDebugProcess5](icordebugprocess5-interface.md)メソッドによって返されます。 この情報は、メソッドによって設定される[COR_TYPE_LAYOUT](cor-type-layout-structure.md)構造体によって提供されます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [COR_TYPE_LAYOUT 構造体](cor-type-layout-structure.md)
 - [ICorDebugProcess5 インターフェイス](icordebugprocess5-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

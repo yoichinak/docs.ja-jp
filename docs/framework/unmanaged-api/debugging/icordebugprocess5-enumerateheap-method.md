@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0192104-6073-4089-a4df-dc29ee033074
 topic_type:
 - apiref
-ms.openlocfilehash: 780f9eb0984e35c4487d770b5e7ff33917cf07ed
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 9386c77cc98df17d797d5886e1603ffc4824b6dc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792414"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205233"
 ---
 # <a name="icordebugprocess5enumerateheap-method"></a>ICorDebugProcess5::EnumerateHeap メソッド
 マネージヒープ上のオブジェクトの列挙子を取得します。  
@@ -37,21 +37,21 @@ HRESULT EnumerateHeap(
  `ppObject`  
  入出力マネージヒープ上に存在するオブジェクト[の列挙子](icordebugheapenum-interface.md)である、コードオブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- `ICorDebugProcess5::EnumerateHeap` メソッドを呼び出す前に、 [ICorDebugProcess5:: Getg](icordebugprocess5-getgcheapinformation-method.md)メソッドを呼び出し、返された[COR_HEAPINFO](cor-heapinfo-structure.md)オブジェクトの `areGCStructuresValid` フィールドの値を調べて、現在の状態のガベージコレクションヒープが列挙可能であることを確認する必要があります。 さらに、`ICorDebugProcess5::EnumerateHeap` は、マネージヒープのメモリが割り当てられる前に、プロセスの有効期間が早すぎた場合に `E_FAIL` を返します。  
+## <a name="remarks"></a>Remarks  
+ メソッドを呼び出す前に `ICorDebugProcess5::EnumerateHeap` 、 [ICorDebugProcess5:: Getg](icordebugprocess5-getgcheapinformation-method.md)メソッドを呼び出し、 `areGCStructuresValid` 返された[COR_HEAPINFO](cor-heapinfo-structure.md)オブジェクトのフィールドの値を調べて、現在の状態のガベージコレクションヒープが列挙可能であることを確認する必要があります。 さらに、は `ICorDebugProcess5::EnumerateHeap` 、 `E_FAIL` プロセスの有効期間が早すぎると、マネージヒープのメモリが割り当てられる前に、を返します。  
   
  は[、ICorDebugEnum](icordebugheapenum-interface.md)インターフェイスから派生した標準列挙子であり、 [COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトを列挙できます。 このメソッド[は、すべてのオブジェクト](icordebugheapenum-interface.md)に関する情報を提供する[COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを使用して、このコレクションオブジェクトを設定します。 コレクションには、オブジェクトによってルートされていないが、まだガベージコレクターによって収集されていないオブジェクトに関する情報を提供する[COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを含めることもできます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugProcess5 インターフェイス](icordebugprocess5-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)

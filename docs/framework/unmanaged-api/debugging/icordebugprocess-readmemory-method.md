@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 28e4b2f6-9589-445c-be24-24a3306795e7
 topic_type:
 - apiref
-ms.openlocfilehash: 383e3f8990a1f355c94ff5e9f9daa69bdbdd97bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccd2350589126109ff11da439a8b83abfc4b91fa
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178663"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83210476"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory メソッド
-このプロセスのメモリの指定された領域を読み取ります。  
+このプロセスの指定したメモリ領域を読み取ります。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,29 +37,29 @@ HRESULT ReadMemory(
   
 ## <a name="parameters"></a>パラメーター  
  `address`  
- [in]読`CORDB_ADDRESS`み取るメモリのベース アドレスを指定する値。  
+ から`CORDB_ADDRESS`読み取るメモリのベースアドレスを指定する値。  
   
  `size`  
- [in]メモリから読み取るバイト数。  
+ からメモリから読み取るバイト数。  
   
  `buffer`  
- [アウト]メモリの内容を受け取るバッファ。  
+ 入出力メモリの内容を受け取るバッファー。  
   
  `read`  
- [アウト]指定したバッファーに転送されるバイト数へのポインター。  
+ 入出力指定したバッファーに転送されたバイト数へのポインター。  
   
-## <a name="remarks"></a>解説  
- この`ReadMemory`メソッドは、主に、デバッグ対象のアンマネージ部分で使用されているメモリ領域を調べるための相互運用機能デバッグで使用されることを目的としています。 このメソッドは、Microsoft 中間言語 (MSIL) コードおよびネイティブ JIT コンパイルコードを読み取るためにも使用できます。  
+## <a name="remarks"></a>Remarks  
+ メソッドは、主に、 `ReadMemory` デバッグ対象のアンマネージ部分で使用されているメモリ領域を検査するために相互運用機能デバッグによって使用されることを意図しています。 このメソッドを使用して、Microsoft 中間言語 (MSIL) コードとネイティブの JIT コンパイルコードを読み取ることもできます。  
   
- マネージ ブレークポイントは、`buffer`パラメーターで返されるデータから削除されます。 [ICorDebugProcess2](icordebugprocess2-setunmanagedbreakpoint-method.md)によって設定されたネイティブ ブレークポイントに対する調整は行いません。  
+ マネージブレークポイントは、パラメーターで返されたデータから削除され `buffer` ます。 [ICorDebugProcess2:: SetUnmanagedBreakpoint](icordebugprocess2-setunmanagedbreakpoint-method.md)によって設定されたネイティブブレークポイントに対して調整は行われません。  
   
- プロセス メモリのキャッシュは実行されません。  
+ プロセスメモリのキャッシュは実行されません。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
