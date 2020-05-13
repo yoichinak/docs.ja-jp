@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30d906f2-cf35-4fa9-9d4c-0c31b58c9f3a
 topic_type:
 - apiref
-ms.openlocfilehash: fb96949e22b4edfc0e64780a54bb38da44eb8369
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 8f3cc16054d4b5340c9460e9c3fbcba6e563567a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73129545"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212556"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface メソッド
 モジュールのメタデータを調べるために使用できるメタデータインターフェイスオブジェクトを取得します。  
@@ -39,20 +39,20 @@ HRESULT GetMetaDataInterface (
  からメタデータインターフェイスを指定する参照 ID。  
   
  `ppObj`  
- 入出力[メタデータインターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)の1つである `T:IUnknown` オブジェクトのアドレスへのポインター。  
+ 入出力`T:IUnknown`[メタデータインターフェイス](../metadata/metadata-interfaces.md)の1つであるオブジェクトのアドレスへのポインター。  
   
 ## <a name="remarks"></a>Remarks  
- デバッガーでは、`GetMetaDataInterface` メソッドを使用して、モジュールの元のメタデータのコピーを作成できます。モジュールは、モジュールを編集するために実行する必要があります。 デバッガーは `GetMetaDataInterface` を呼び出してモジュールの[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)インターフェイスオブジェクトを取得し、 [IMetaDataEmit:: savetomemory](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-savetomemory-method.md)を呼び出してモジュールのメタデータのコピーをメモリに保存します。  
+ デバッガーは、メソッドを使用して `GetMetaDataInterface` モジュールの元のメタデータのコピーを作成できます。モジュールは、モジュールを編集するために実行する必要があります。 デバッガーはを呼び出して、 `GetMetaDataInterface` モジュールの[IMetaDataEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md) interface オブジェクトを取得し、 [IMetaDataEmit:: savetomemory](../metadata/imetadataemit-savetomemory-method.md)を呼び出してモジュールのメタデータのコピーをメモリに保存します。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ](../../../../docs/framework/unmanaged-api/metadata/index.md)
+- [メタデータ](../metadata/index.md)

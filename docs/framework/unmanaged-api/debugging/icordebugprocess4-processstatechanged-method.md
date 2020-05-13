@@ -1,5 +1,5 @@
 ---
-title: メソッドを変更 :Pしました。
+title: ICorDebugProcess4::P rocessStateChanged メソッド
 ms.date: 02/07/2019
 api_name:
 - ICorDebugProcess4::ProcessStateChanged
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a6f36f5b86b4fa58ce2a4ef4aa23d527f797a5a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 910c411d2c63ce2c6cf262e28e08546657dc2a4c
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178626"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213570"
 ---
-# <a name="icordebugprocess4processstatechanged-method"></a>メソッドを変更 :Pしました。
+# <a name="icordebugprocess4processstatechanged-method"></a>ICorDebugProcess4::P rocessStateChanged メソッド
 
-プロセス外のデバッガーがデバッグ先の実行を続行していることを ICorDebug パイプラインに通知します。
+アウトプロセスデバッガーがデバッグ対象の実行を継続していることを ICorDebug パイプラインに通知します。
 
 ## <a name="syntax"></a>構文
 
@@ -37,24 +37,24 @@ HRESULT ProcessStateChanged(
 ## <a name="parameters"></a>パラメーター
 
  `eChange`\
-[in]プロセスの実行状態の変更を記述する[列挙体](cordebugstatechange-enumeration.md)のメンバー。
+からプロセスの実行状態の変更を記述する[CorDebugStateChange 列挙体](cordebugstatechange-enumeration.md)のメンバー。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-指定されたメソッドはインターフェイスの`ICorDebugProcess4`一部であり、仮想メソッド テーブルの 4 番目のスロットに対応します。
+指定されたメソッドはインターフェイスの一部で `ICorDebugProcess4` あり、仮想メソッドテーブルの4番目のスロットに対応します。
 
 ## <a name="requirements"></a>必要条件
 
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
- **ヘッダー:** なし
+ **ヘッダー:** 存在
 
- **ライブラリ:** なし
+ **ライブラリ:** 存在
 
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v20plus-md.md)]
 
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugProcess4 インターフェイス](icordebugprocess4-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)

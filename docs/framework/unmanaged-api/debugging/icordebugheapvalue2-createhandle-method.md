@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: fbc418e8-fa22-420d-84ec-e0e1800db041
 topic_type:
 - apiref
-ms.openlocfilehash: c7a1bf3cb10cbc8cdae2788b45e1badaf66a9dbd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cbc056e9a3cc00178b32dee4011da4403dff508a
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178882"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212777"
 ---
 # <a name="icordebugheapvalue2createhandle-method"></a>ICorDebugHeapValue2::CreateHandle メソッド
-この ICorDebugHeapValue2 オブジェクトによって表されるヒープ値の指定された型のハンドルを作成します。  
+この ICorDebugHeapValue2 オブジェクトによって表されるヒープ値に対して指定された型のハンドルを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT CreateHandle (
   
 ## <a name="parameters"></a>パラメーター  
  `type`  
- [in]作成するハンドルの型を指定する列挙体の値。  
+ から作成するハンドルの種類を指定する CorDebugHandleType 列挙体の値。  
   
  `ppHandle`  
- [アウト]このヒープ値の新しいハンドルを表すオブジェクトのアドレスへのポインター。  
+ 入出力このヒープ値の新しいハンドルを表す、値オブジェクトのアドレスへのポインター。  
   
-## <a name="remarks"></a>解説  
- ハンドルはヒープ値に関連付けられているアプリケーション ドメインに作成され、アプリケーション ドメインがアンロードされると無効になります。  
+## <a name="remarks"></a>Remarks  
+ ハンドルは、ヒープ値に関連付けられているアプリケーションドメインに作成され、アプリケーションドメインがアンロードされると無効になります。  
   
- 同じヒープ値に対してこの関数を複数回呼び出すと、複数のハンドルが作成されます。 ハンドルはガベージ コレクターのパフォーマンスに影響するため、デバッガーは、一度にアクティブになっている比較的少数のハンドル (約 256) に限定する必要があります。  
+ 同じヒープ値に対してこの関数を複数回呼び出すと、複数のハンドルが作成されます。 ハンドルはガベージコレクターのパフォーマンスに影響を与えるため、デバッガーは、一度にアクティブな比較的少数のハンドル (約 256) に制限する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

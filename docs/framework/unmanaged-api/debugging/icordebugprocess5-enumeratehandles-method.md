@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d7fa796-0dc6-4ee8-9d56-40166246d91d
 topic_type:
 - apiref
-ms.openlocfilehash: 2a1653055a3834ce1bed0e7de7877b255bea0c38
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 291b384d6f0c8c1404b380c653693ec65fcfc960
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792426"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83213414"
 ---
 # <a name="icordebugprocess5enumeratehandles-method"></a>ICorDebugProcess5::EnumerateHandles メソッド
 プロセス内のオブジェクトハンドルの列挙子を取得します。  
@@ -39,25 +39,25 @@ HRESULT EnumerateHandles(     [in] CorGCReferenceType types,
  `ppENum`  
  入出力ガベージコレクションの対象となるオブジェクトの列挙子[である、](icordebuggcreferenceenum-interface.md)ツールのアドレスへのポインターです。  
   
-## <a name="remarks"></a>コメント  
- `EnumerateHandles` は、ハンドルテーブルの検査をサポートするヘルパー関数です。 これは[ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md)メソッドに似ていますが、すべてのオブジェクトがガベージコレクトされるよう[に、すべて](icordebuggcreferenceenum-interface.md)のオブジェクトを使用してすべてのオブジェクトを作成するのではなく、handle テーブルからハンドルを持つオブジェクトのみが含まれる点が異なります。  
+## <a name="remarks"></a>Remarks  
+ `EnumerateHandles`は、ハンドルテーブルの検査をサポートするヘルパー関数です。 これは[ICorDebugProcess5:: EnumerateGCReferences](icordebugprocess5-enumerategcreferences-method.md)メソッドに似ていますが、すべてのオブジェクトがガベージコレクトされるよう[に、すべて](icordebuggcreferenceenum-interface.md)のオブジェクトを使用してすべてのオブジェクトを作成するのではなく、handle テーブルからハンドルを持つオブジェクトのみが含まれる点が異なります。  
   
- `types` パラメーターは、コレクションに含めるハンドルの種類を指定します。 `types`、次の3つのメンバーのいずれかを[Corgcreの型](corgcreferencetype-enumeration.md)の列挙体にすることができます。  
+ パラメーターは、 `types` コレクションに含めるハンドルの種類を指定します。 `types`は、 [Corgcreの型](corgcreferencetype-enumeration.md)の列挙体の次の3つのメンバーのいずれかになります。  
   
-- `CorHandleStrongOnly` (厳密な参照へのハンドルのみ)。  
+- `CorHandleStrongOnly`(厳密な参照へのハンドルのみ)。  
   
-- `CorHandleWeakOnly` (弱参照のみを処理します)。  
+- `CorHandleWeakOnly`(弱参照のみを処理します)。  
   
-- `CorHandleAll` (すべてのハンドル)。  
+- `CorHandleAll`(すべてのハンドル)。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f6a449c8-a941-43ba-9a90-c98b29ae3c36
 topic_type:
 - apiref
-ms.openlocfilehash: ca742ba9e89e1d189cfa38dead314df0d8b4e9d1
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b88b3907eb555050de93f35411629b2bd30c7375
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76792764"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212946"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize メソッド
 X86 オペレーティングシステムのスタックのパラメーターの累積サイズを返します。  
@@ -41,26 +41,26 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|スタックサイズが正常に返されました。|  
-|S_FALSE|`GetStackParameterSize` が x86 以外のプラットフォームで呼び出されました。|  
+|S_FALSE|`GetStackParameterSize`は、x86 以外のプラットフォームで呼び出されました。|  
 |E_FAIL|`The size of the parameters could not be returned`.|  
-|E_INVALIDARG|`pSize` は `null`です。|  
+|E_INVALIDARG|`pSize`が `null` です。|  
   
 ## <a name="exceptions"></a>例外  
   
-## <a name="remarks"></a>コメント  
- この[方法では、スタック](icordebugstackwalk-interface.md)にプッシュされるパラメーターのスタックポインターは調整されません。 代わりに、`GetStackParameterSize` によって返された値を使用して、スタックポインターを調整してネイティブアンワインダーをシード処理することができます。これにより、パラメーターが調整されます。  
+## <a name="remarks"></a>Remarks  
+ この[方法では、スタック](icordebugstackwalk-interface.md)にプッシュされるパラメーターのスタックポインターは調整されません。 代わりに、によって返される値を使用して、スタックポインターを調整してネイティブアンワインダーをシード処理することができます。これにより、 `GetStackParameterSize` パラメーターが調整されます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugNativeFrame2 インターフェイス](icordebugnativeframe2-interface.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [デバッグ](index.md)
