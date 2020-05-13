@@ -463,18 +463,17 @@
           href: localization-attributes-and-comments.md
         - name: WPF の双方向機能の概要
           href: bidirectional-features-in-wpf-overview.md
-        - name: 方法のトピック
-          href: globalization-and-localization-how-to-topics.md
+        - name: 方法
           items:
-            - name: アプリケーションをローカライズする
+            - name: アプリをローカライズする
               href: how-to-localize-an-application.md
             - name: 自動レイアウトを使用してボタンを作成する
               href: how-to-use-automatic-layout-to-create-a-button.md
             - name: 自動レイアウト用のグリッドを使用する
               href: how-to-use-a-grid-for-automatic-layout.md
-            - name: ResourceDictionary を使用してローカライズ可能な文字列リソースを管理する
+            - name: ResourceDictionary を使用してリソースを管理する
               href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
-            - name: ローカライズ可能アプリケーションでリソースを使用する
+            - name: ローカライズ可能なアプリでリソースを使用する
               href: how-to-use-resources-in-localizable-applications.md
     - name: レイアウト
       href: layout.md

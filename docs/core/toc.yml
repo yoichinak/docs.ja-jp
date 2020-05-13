@@ -401,6 +401,8 @@
       href: versions/selection.md
 - name: ランタイム識別子 (RID) のカタログ
   href: rid-catalog.md
+- name: リソース マニフェスト名
+  href: resources/manifest-file-names.md
 - name: 依存関係の管理と読み込み
   items:
     - name: 依存関係管理
