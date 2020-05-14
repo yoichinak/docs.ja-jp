@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
 ms.openlocfilehash: f0eeda77a721d482ec7a2b8562c0a71f34c5a3ae
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75348044"
@@ -15,9 +15,9 @@ ms.locfileid: "75348044"
 
 ### <a name="to-create-a-file-that-contains-data"></a>データを含むファイルを作成するには
 
-トピック「[方法: 異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)」の「方法: コンテンツ](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)をソリューションフォルダーに保存する」を参照してください。
+「[方法:異種ファイルのコンテンツを結合する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)」トピックから scores.csv のデータをコピーし、ソリューション フォルダーに保存します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```vb
 Class SortLines
@@ -70,11 +70,11 @@ End Class
 ' 115, 35, 72, 91, 70
 ```
 
-また、この例では、関数からクエリ変数を返す方法も示しています。
+この例では、関数からクエリ変数を返す方法についても示します。
 
 ## <a name="compile-the-code"></a>コードのコンパイル
 
-System. Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソールアプリケーションプロジェクトを作成します。
+System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。
 
 ## <a name="see-also"></a>関連項目
 

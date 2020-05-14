@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
 ms.openlocfilehash: 07d53c9afca88cd3156c7fc8fcfab5ac7ca24f25
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75348025"
@@ -30,7 +30,7 @@ ms.locfileid: "75348025"
     Garcia, Debra
     ```
 
-2. 以下の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。いくつかの名前は両方のファイルに共通して存在することに注意してください。
+2. 次の名前を names2.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。2 つのファイルには、共通の名前がいくつか含まれていることに注意してください。
 
     ```text
     Liu, Jinghao
@@ -45,7 +45,7 @@ ms.locfileid: "75348025"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```vb
 Class SplitWithGroups
@@ -118,7 +118,7 @@ End Class
 
 ## <a name="compile-the-code"></a>コードのコンパイル
 
-System. Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソールアプリケーションプロジェクトを作成します。
+System.Linq 名前空間の `Imports` ステートメントを使用して、Visual Basic コンソール アプリケーション プロジェクトを作成します。
 
 ## <a name="see-also"></a>関連項目
 

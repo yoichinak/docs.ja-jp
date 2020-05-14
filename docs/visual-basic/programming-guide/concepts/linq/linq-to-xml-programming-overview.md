@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
 ms.openlocfilehash: 0a369f811fcfd17826087b275fdee8f44715781c
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74352169"
@@ -21,8 +21,8 @@ ms.locfileid: "74352169"
 |[XElement クラスの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xelement-class-overview.md)|XML 要素を表す <xref:System.Xml.Linq.XElement> クラスについて説明します。 <xref:System.Xml.Linq.XElement> は、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クラス階層の基礎クラスの 1 つです。|  
 |[XAttribute クラスの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xattribute-class-overview.md)|XML 属性を表す <xref:System.Xml.Linq.XAttribute> クラスについて説明します。|  
 |[XDocument クラスの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/xdocument-class-overview.md)|XML ドキュメントを表す <xref:System.Xml.Linq.XDocument> クラスについて説明します。|  
-|[方法: LINQ to XML の例をビルドする (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|LINQ to XML の例をビルドするために必要な `Imports` ステートメントが含まれています。|  
+|[方法: LINQ to XML の例をビルドする (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-build-linq-to-xml-examples.md)|LINQ to XML の例のビルドに必要な `Imports` ステートメントについて説明します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [プログラミングガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+- [プログラミング ガイド (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

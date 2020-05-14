@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 24fd244d-ebae-4721-8858-89bb544aea0b
 ms.openlocfilehash: efc1fc5bb738e3d5d9d3fa2a8226c37da69c045c
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74345707"
@@ -25,7 +25,7 @@ ms.locfileid: "74345707"
 > [!IMPORTANT]
 > このチュートリアルの以降では、"純粋関数" という用語を、特定の言語機能ではなくプログラミング方法を指す広い意味で使用します。
 >
-> 純粋関数は Visual Basic の関数として実装する必要があることに注意してください。
+> 純粋関数は、Visual Basic では関数として実装する必要があります。
 >
 > また、純粋関数を C++ の純粋仮想メソッドと混同しないようにしてください。 純粋仮想メソッドとは、そのメソッドを含むクラスが抽象クラスであり、メソッドの本体が提供されないことを指します。
 
@@ -33,20 +33,20 @@ ms.locfileid: "74345707"
 
 "*関数型プログラミング*" とは、純粋関数型変換を直接サポートするプログラミング方法です。
 
-これまで、ML、Scheme、Haskell、F# などの汎用関数型プログラミング言語に対する関心は、主に学術的な分野に限られていました。 Visual Basic では常に純粋関数型変換を作成できましたが、その難しさはほとんどのプログラマにとって魅力的な選択肢にはなりませんでした。 ただし、新しいバージョンの Visual Basic では、ラムダ式や型推論などの新しい言語構成要素によって、関数型プログラミングがはるかに簡単で生産性の高いものになります。
+これまで、ML、Scheme、Haskell、F# などの汎用関数型プログラミング言語に対する関心は、主に学術的な分野に限られていました。 Visual Basic では常に純粋関数型変換を記述することが可能でしたが、その難しさから、ほとんどのプログラマにとっては魅力的な選択肢になりませんでした。 しかし、Visual Basic の最近のバージョンでは、ラムダ式や型の推定などの新しい言語構成要素により、関数型プログラミングがはるかに簡単で生産性の高いものとなっています。
 
 関数型プログラミングの詳細については、「[関数型プログラミングと命令型プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)」を参照してください。
 
 #### <a name="domain-specific-fp-languages"></a>特定領域の FP 言語
 
-広く採用されるに至らなかった汎用関数型プログラミング言語に比べると、特定領域の関数型プログラミング言語は成功していると言えます。 たとえば、カスケード スタイル シート (CSS) は多くの Web ページのルック アンド フィールの決定に利用されていますし、Extensible Stylesheet Language Transformations (XSLT) スタイル シートは XML データ操作に広く利用されています。 XSLT について詳しくは、「[XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)」をご覧ください。
+広く採用されるに至らなかった汎用関数型プログラミング言語に比べると、特定領域の関数型プログラミング言語は成功していると言えます。 たとえば、カスケード スタイル シート (CSS) は多くの Web ページのルック アンド フィールの決定に利用されていますし、Extensible Stylesheet Language Transformations (XSLT) スタイル シートは XML データ操作に広く利用されています。 XSLT について詳しくは、「[XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)」を参照してください。
 
 ## <a name="terminology"></a>用語
 
 次の表に、関数型変換に関連するいくつかの用語の定義を示します。
 
 高階 (ファーストクラス) 関数 \
-プログラム オブジェクトとして扱うことのできる関数です。 たとえば、他の関数に渡したり、他の関数から返したりすることができます。 Visual Basic では、デリゲートとラムダ式は、高階関数をサポートする言語機能です。 高階関数を記述するには、デリゲートを受け取る引数を 1 つ以上宣言し、通常はラムダ式を使用して呼び出します。 標準クエリ演算子の多くは高階関数です。
+プログラム オブジェクトとして扱うことのできる関数です。 たとえば、他の関数に渡したり、他の関数から返したりすることができます。 Visual Basic では、高階関数をサポートする言語機能として、デリゲートやラムダ式があります。 高階関数を記述するには、デリゲートを受け取る引数を 1 つ以上宣言し、通常はラムダ式を使用して呼び出します。 標準クエリ演算子の多くは高階関数です。
 
 詳細については、「[標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)」を参照してください。
 
@@ -71,11 +71,11 @@ ms.locfileid: "74345707"
 遅延実行とレイジー評価 \
 解決された値が実際に必要となるまで式の評価を遅らせることを意味します。 遅延実行はコレクションでサポートされています。
 
-詳細については、「 [LINQ to XML (Visual Basic)」](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)の「[基本的なクエリ操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) 」および「遅延実行とレイジー評価」を参照してください。
+詳細については、「[基本的なクエリ操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)」と「[LINQ to XML における遅延実行とレイジー評価 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」を参照してください。
 
 これらの言語機能は、このセクション全体にわたってサンプル コードで使用されています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [純粋関数型変換の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
 - [関数型プログラミングと命令型プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-programming-vs-imperative-programming.md)

@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
 ms.openlocfilehash: 2df5db16e51e8f9de8a8e3506eb1f7b737065a14
 ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/25/2019
 ms.locfileid: "75337572"
@@ -13,7 +13,7 @@ ms.locfileid: "75337572"
 
 この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。 具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。
 
-## <a name="set-up-the-project-and-the-text-files"></a>プロジェクトとテキストファイルを設定する
+## <a name="set-up-the-project-and-the-text-files"></a>プロジェクトとテキスト ファイルを設定する
 
 1. 次の名前を names1.txt という名前のテキスト ファイルにコピーし、プロジェクト フォルダーに保存します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "75337572"
     El Yassir, Mehdi
     ```
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 ```vb
 Class ConcatenateStrings
@@ -165,7 +165,7 @@ End Class
 
 ## <a name="compile-the-code"></a>コードのコンパイル
 
-Visual Basic コンソールアプリケーションプロジェクトを作成します。 System. Linq 名前空間の `Imports` ステートメントを追加します。
+Visual Basic コンソール アプリケーションのプロジェクトを作成します。 System.Linq 名前空間の `Imports` ステートメントを追加します。
 
 ## <a name="see-also"></a>関連項目
 

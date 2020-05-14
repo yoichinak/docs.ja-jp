@@ -1,10 +1,10 @@
 ---
-title: '方法 : 属性のコレクションを取得する (LINQ to XML)'
+title: '方法: 属性のコレクションを取得する (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: a07e9645-b45b-403b-b698-f652f904c7d2
 ms.openlocfilehash: ff260660057c3b75f4cc92c37c67fca0a0b7f192
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74347568"
@@ -34,6 +34,6 @@ Type="int"
 ConvertableTo="double"  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)

@@ -4,7 +4,7 @@ ms.date: 07/20/2015
 ms.assetid: 48757216-c21d-4051-86d5-8a3e03c39d2c
 ms.openlocfilehash: 7e54e82c1e9edfd0d9d393a014f9d91f82970363
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74353538"
@@ -55,9 +55,9 @@ Class Class1
 End Class
 ```
 
-この例では、`MultiUseAttr` が `AllowMultiple` に設定されているので、`true` を繰り返し適用できます。 示されているどちらの形式でも、複数の属性を適用できます。
+この例では、`AllowMultiple` が `true` に設定されているので、`MultiUseAttr` を繰り返し適用できます。 示されているどちらの形式でも、複数の属性を適用できます。
 
-`Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。 例 :
+`Inherited` を `false` に設定すると、属性化されたクラスから派生するクラスは属性を継承しません。 次に例を示します。
 
 ```vb
 <AttributeUsage(AttributeTargets.Class, Inherited:=False)>
@@ -77,7 +77,7 @@ End Class
 
 この例では、`Attr1` は継承によって `DClass` に適用されません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `AttributeUsage` 属性は、1 回だけ使用できる属性です。同じクラスに複数回適用することはできません。 `AttributeUsage` は <xref:System.AttributeUsageAttribute> の別名です。
 
@@ -85,7 +85,7 @@ End Class
 
 ## <a name="example"></a>例
 
-次の例を見ると、`Inherited` 属性に対する `AllowMultiple` 引数と `AttributeUsage` 引数の効果、およびクラスに適用されているカスタム属性の列挙方法がわかります。
+次の例を見ると、`AttributeUsage` 属性に対する `Inherited` 引数と `AllowMultiple` 引数の効果、およびクラスに適用されているカスタム属性の列挙方法がわかります。
 
 ```vb
 ' Create some custom attributes:
@@ -136,7 +136,7 @@ Public Class TestAttributeUsage
 End Class
 ```
 
-## <a name="sample-output"></a>サンプル出力
+## <a name="sample-output"></a>出力例
 
 ```console
 Attributes on Base Class:
@@ -148,11 +148,11 @@ A3
 A2
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Attribute>
 - <xref:System.Reflection>
-- [Visual Basic のプログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
 - [属性](../../../../standard/attributes/index.md)
 - [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)

@@ -1,10 +1,10 @@
 ---
-title: LINQ to XML Annotations2
+title: LINQ to XML の注釈 2
 ms.date: 07/20/2015
 ms.assetid: c3e8b3ff-fceb-4428-b0ca-1ed6f128aac8
 ms.openlocfilehash: edf8e0126c632deae6b6d4c235c4880d7b8687e8
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61663428"

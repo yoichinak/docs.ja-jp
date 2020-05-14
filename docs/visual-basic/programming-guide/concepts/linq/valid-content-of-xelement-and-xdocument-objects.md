@@ -1,10 +1,10 @@
 ---
-title: XElement オブジェクトと XDocument Objects2 の有効なコンテンツ
+title: XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ 2
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
 ms.openlocfilehash: 5e9b5ec54b3005d18a1a0da10d78d3c8ad5300ea
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64614357"
@@ -90,4 +90,4 @@ ms.locfileid: "64614357"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリー (Visual Basic) の作成](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 00833027-1428-4586-83c1-42f5de3323d1
 ms.openlocfilehash: c1383dbb5419eadbfb7c07f288ee46b1ca11cf5c
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709999"
@@ -30,7 +30,7 @@ xsc.Add("urn:newbooks-schema", "newbooks.xdr")
 xsc.Add("urn:newbooks-schema", "newbooks.xdr");
 ```
 
-次のコード例では、 **XmlTextReader**を受け取り、xdr スキーマである**XmlValidatingReader**を**XmlSchemaCollection**に追加します。
+**XmlTextReader** を受け取り、XDR スキーマ HeadCount.xdr を **XmlSchemaCollection** に追加する **XmlValidatingReader** を作成するコード サンプルを次に示します。
 
 ```vb
 Imports System.IO

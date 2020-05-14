@@ -1,10 +1,10 @@
 ---
-title: サンプル XML ファイル:3 での複数の購買発注
+title: サンプル XML ファイル:名前空間内の複数の購買発注書 3
 ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
 ms.openlocfilehash: 4f7a25b9b56c5d37d45ee46928f3d4ceb3607c35
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61787011"

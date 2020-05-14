@@ -12,12 +12,12 @@ helpviewer_keywords:
 - timers, about timers
 ms.assetid: 7091500d-be18-499b-a942-95366ce185e5
 author: pkulikov
-ms.openlocfilehash: d7d1fa13b02fe7425fa9b4cb81ba20297a23fe4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d463eb2a8d598dc5ba9b2fb51a6fc08c563e6fe4
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73128948"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739491"
 ---
 # <a name="timers"></a>タイマー
 
@@ -51,11 +51,11 @@ ms.locfileid: "73128948"
 
 マルチスレッド環境で使用できる別のタイマーが <xref:System.Timers.Timer?displayProperty=nameWithType> です。このタイマーは既定で、<xref:System.Threading.ThreadPool> スレッドでイベントを発生させます。
 
-<xref:System.Timers.Timer?displayProperty=nameWithType> オブジェクトを作成するとき、<xref:System.Timers.Timer.Elapsed> イベントを発生させる間隔を指定できます。 <xref:System.Timers.Timer.Enabled%2A> プロパティを使用し、タイマーが <xref:System.Timers.Timer.Elapsed> イベントを発生させるかどうかを示します。 指定間隔の経過後、1 回だけ <xref:System.Timers.Timer.Elapsed> イベントを発生させる必要がある場合、<xref:System.Timers.Timer.AutoReset%2A> を `false` に設定します。 <xref:System.Timers.Timer.AutoReset%2A> プロパティの既定値は `true` です。<xref:System.Timers.Timer.Elapsed> プロパティで定義される間隔で <xref:System.Timers.Timer.Interval%2A> イベントが発生します。
+<xref:System.Timers.Timer?displayProperty=nameWithType> オブジェクトを作成するとき、<xref:System.Timers.Timer.Elapsed> イベントを発生させる間隔を指定できます。 <xref:System.Timers.Timer.Enabled%2A> プロパティを使用し、タイマーが <xref:System.Timers.Timer.Elapsed> イベントを発生させるかどうかを示します。 指定間隔の経過後、1 回だけ <xref:System.Timers.Timer.Elapsed> イベントを発生させる必要がある場合、<xref:System.Timers.Timer.AutoReset%2A> を `false` に設定します。 <xref:System.Timers.Timer.AutoReset%2A> プロパティの既定値は `true` です。<xref:System.Timers.Timer.Interval%2A> プロパティで定義される間隔で <xref:System.Timers.Timer.Elapsed> イベントが発生します。
 
 使用例を含む詳細については、「<xref:System.Timers.Timer?displayProperty=nameWithType>」を参照してください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Timer?displayProperty=nameWithType>
 - <xref:System.Timers.Timer?displayProperty=nameWithType>

@@ -1,10 +1,10 @@
 ---
-title: 読み込み時または解析 XML2 空白の維持
+title: XML の読み込み時または解析時の空白の維持 2
 ms.date: 07/20/2015
 ms.assetid: ef6518e0-2c8d-462c-8b92-a16e9dc737ad
 ms.openlocfilehash: 7febbf1ea27d3e73df8b91869befcd0b29a07c6e
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64666138"
@@ -39,4 +39,4 @@ ms.locfileid: "64666138"
   
 ## <a name="see-also"></a>関連項目
 
-- [(Visual Basic) の XML の解析](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)
+- [XML の解析 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

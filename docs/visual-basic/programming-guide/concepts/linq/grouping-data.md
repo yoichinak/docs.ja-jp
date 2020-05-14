@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
 ms.openlocfilehash: 9a4011b77f91ff241d23f7aeca95925a1e170483
 ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/04/2020
 ms.locfileid: "78266821"
 ---
-# <a name="grouping-data-visual-basic"></a>データのグループ化
+# <a name="grouping-data-visual-basic"></a>データのグループ化 (Visual Basic)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
   
  次の図は、文字のシーケンスをグループ化した結果を示しています。 各グループのキーは文字です。  
@@ -20,10 +20,10 @@ ms.locfileid: "78266821"
   
 ## <a name="methods"></a>メソッド  
   
-|メソッド名|[説明]|Visual Basic クエリ式の構文|説明|  
+|メソッド名|説明|Visual Basic のクエリ式の構文|説明|  
 |-----------------|-----------------|------------------------------------------|----------------------|  
 |GroupBy|共通の属性を共有する要素をグループ化します。 各グループは <xref:System.Linq.IGrouping%602> オブジェクトによって表されます。|`Group … By … Into …`|<xref:System.Linq.Enumerable.GroupBy%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.GroupBy%2A?displayProperty=nameWithType>|  
-|ToLookup|キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。|適用不可。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
+|ToLookup|キー セレクター関数に基づいて、<xref:System.Linq.Lookup%602> (一対多の辞書) に要素を挿入します。|該当なし。|<xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType>|  
   
 ## <a name="query-expression-syntax-example"></a>クエリ式の構文例  
  次のコード例では、`Group By` 句を使用して、偶数か奇数かによってリスト内の整数をグループ化します。  
@@ -67,6 +67,6 @@ MsgBox(sb.ToString())
 
 - <xref:System.Linq>
 - [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [句でグループ化](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
 - [方法: 拡張機能でファイルをグループ化する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [方法: グループを使用してファイルを多くのファイルに分割する (LINQ)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

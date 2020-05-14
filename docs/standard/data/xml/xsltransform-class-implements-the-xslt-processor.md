@@ -8,7 +8,7 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 ms.openlocfilehash: 73a432db9a3fcb6587184e27e6dfe9ba49010e92
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75709609"
@@ -76,7 +76,7 @@ URL パラメーターが含まれた <xref:System.Xml.Xsl.XslTransform.Load%2A>
 
 URI も証拠も指定されていない場合は、スタイル シートに対して設定されている証拠が完全に信頼されます。 信頼されていないソースからスタイル シートを読み込んだり、信頼されていない拡張オブジェクトを <xref:System.Xml.Xsl.XsltArgumentList> に追加したりしないでください。
 
-セキュリティ レベルと証拠、それがスクリプトに及ぼす影響の詳細については、「[XSLT Stylesheet Scripting Using \<msxsl:script>](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)」(<msxsl:script> を使用する XSLT スタイルシート スクリプト) を参照してください。 セキュリティ レベルと証拠、それが拡張オブジェクトに与える影響の詳細については、「[スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)」を参照してください。
+セキュリティ レベルと証拠、それがスクリプトに及ぼす影響の詳細については、「[\<msxsl:script> を使用する XSLT スタイルシート スクリプト](../../../../docs/standard/data/xml/xslt-stylesheet-scripting-using-msxsl-script.md)」 を参照してください。 セキュリティ レベルと証拠、それが拡張オブジェクトに与える影響の詳細については、「[スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList](../../../../docs/standard/data/xml/xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md)」を参照してください。
 
 セキュリティ レベルと証拠、それが `document()` 関数に及ぼす影響については、「[外部の XSLT スタイル シートとドキュメントの解決](../../../../docs/standard/data/xml/resolving-external-xslt-style-sheets-and-documents.md)」を参照してください。
 
@@ -178,7 +178,7 @@ Console.WriteLine("Passing " + tmpDoc.OuterXml + " to print_root.xsl");
 xslt.Transform(tmpDoc, null, Console.Out, null);
 ```
 
-この例では、ライブラリの .xml ファイルを入力として print_root し、次のコードをコンソールに出力します。
+この例では、library.xml ファイルと print_root.xsl ファイルを入力として使用し、次の出力をコンソールに表示します。
 
 ```console
 Passing <book genre="novel" ISBN="1-861001-57-5"><title>Pride And Prejudice</title></book> to print_root.xsl
@@ -219,7 +219,7 @@ print_root.xsl
 |Load(IXPathNavigable stylesheet);<br /><br /> Load(IXPathNavigable stylesheet, XmlResolver resolver);|Load(IXPathNavigable stylesheet, XmlResolver resolver, Evidence evidence);|
 |Load(XmlReader stylesheet);<br /><br /> Load(XmlReader stylesheet, XmlResolver resolver);|Load(XmlReader stylesheet, XmlResolver resolver, Evidence evidence);|
 
-廃止された <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドと新しい メソッドを次の表に示します。 新しいメソッドは <xref:System.Xml.XmlResolver> オブジェクトを受け取ります。
+廃止された <xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドと新しい  メソッドを次の表に示します。 新しいメソッドは <xref:System.Xml.XmlResolver> オブジェクトを受け取ります。
 
 |廃止された .NET Framework バージョン 1.0 の Transform メソッド|新しい .NET Framework バージョン 1.1 の Transform メソッド|
 |-----------------------------------------------------------|--------------------------------------------------------------|
