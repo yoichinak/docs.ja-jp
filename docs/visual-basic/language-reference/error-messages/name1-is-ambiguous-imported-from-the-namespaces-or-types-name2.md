@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61918347"
 ---
-# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >' があいまい、名前空間または型からインポートされた\<name2 >'
-あいまいな名前を指定したため、別の名前と競合しています。 Visual Basic コンパイラには、競合の解決ルールはありません。名前は、自分で明確する必要があります。  
+# <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>名前空間または型 '\<name2>' からインポートされた '\<name1>' があいまいです
+あいまいな名前を指定したため、別の名前と競合しています。 Visual Basic コンパイラには、競合解決規則がありません。ユーザー自身が名前のあいまいさを解消する必要があります。  
   
  **エラー ID:** BC30561  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-1. 名前、名前空間のインポートを削除することによってあいまいさを解消します。  
+1. 名前空間のインポートを削除して、名前のあいまいさをなくします。  
   
 2. 名前を完全修飾します。  
   

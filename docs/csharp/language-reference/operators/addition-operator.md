@@ -1,6 +1,6 @@
 ---
 title: + および += 演算子 - C# リファレンス
-ms.date: 05/24/2019
+ms.date: 04/23/2020
 f1_keywords:
 - +_CSharpKeyword
 - +=_CSharpKeyword
@@ -13,22 +13,22 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: cafd07f4b4aefdcc4b43750d61c155fe3d65aa46
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18364d80b8117fd4074c2c4231eac07c76829bb3
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398101"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135738"
 ---
 # <a name="-and--operators-c-reference"></a>+ および += 演算子 (C# リファレンス)
 
 `+` 演算子と `+=` 演算子は、組み込みの[整数](../builtin-types/integral-numeric-types.md)および[浮動小数点型](../builtin-types/floating-point-numeric-types.md)の数値型、[文字列](../builtin-types/reference-types.md#the-string-type)型、[デリゲート](../builtin-types/reference-types.md#the-delegate-type)型によってサポートされています。
 
-算術演算子 `+` については、「[算術演算子 (C# リファレンス)](arithmetic-operators.md#unary-plus-and-minus-operators)」の記事の「[単項プラス演算子と単項マイナス演算子](arithmetic-operators.md#addition-operator-)」セクションと「[加算演算子 +](arithmetic-operators.md)」セクションを参照してください。
+算術演算子 `+` については、「[算術演算子 (C# リファレンス)](arithmetic-operators.md)」の記事の「[単項プラス演算子と単項マイナス演算子](arithmetic-operators.md#unary-plus-and-minus-operators)」セクションと「[加算演算子 +](arithmetic-operators.md#addition-operator-)」セクションを参照してください。
 
 ## <a name="string-concatenation"></a>文字列連結
 
-一方または両方のオペランドが[文字列](../builtin-types/reference-types.md#the-string-type)型の場合、`+` 演算子によってそのオペランドの文字列表現が連結されます。
+一方または両方のオペランドが[文字列](../builtin-types/reference-types.md#the-string-type)型の場合、`+` 演算子によってそのオペランドの文字列表現が連結されます (`null` の文字列表現は空の文字列です)。
 
 [!code-csharp-interactive[string concatenation](snippets/AdditionOperator.cs#AddStrings)]
 
@@ -66,17 +66,17 @@ x = x + y
 
 [!code-csharp-interactive[+= examples](snippets/AdditionOperator.cs#AddAndAssign)]
 
-`+=`イベント[をサブスクライブするとき、](../keywords/event.md) 演算子を使用してイベント ハンドラー メソッドを指定することもできます。 詳細については、「[方法: イベント サブスクリプションとサブスクリプションの解除](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
+[イベント](../keywords/event.md)をサブスクライブするとき、`+=` 演算子を使用してイベント ハンドラー メソッドを指定することもできます。 詳細については、「[方法: イベント サブスクリプションとサブスクリプションの解除](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型は [ 演算子を](operator-overloading.md)オーバーロード`+`できます。 2 項 `+` 演算子をオーバーロードすると、`+=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`+=` 演算子を明示的にオーバーロードできません。
+ユーザー定義型は `+` 演算子を[オーバーロード](operator-overloading.md)できます。 2 項 `+` 演算子をオーバーロードすると、`+=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`+=` 演算子を明示的にオーバーロードできません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md#unary-plus-operator)の[単項プラス演算子](~/_csharplang/spec/expressions.md#addition-operator)と[加算演算子](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[単項プラス演算子](~/_csharplang/spec/expressions.md#unary-plus-operator)と[加算演算子](~/_csharplang/spec/expressions.md#addition-operator)に関するセクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# 演算子](index.md)

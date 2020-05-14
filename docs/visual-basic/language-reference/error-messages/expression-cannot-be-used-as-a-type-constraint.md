@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
 ms.openlocfilehash: ff51bb27847a92b07ce6275a8ddee4789e865f08
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64642797"
@@ -41,10 +41,10 @@ ms.locfileid: "64642797"
   
 - 式が上記の要件リストを満たしていない場合は、制約リストから削除します。  
   
-- 式でインターフェイスまたはクラスを参照する場合、コンパイラにそのインターフェイスまたはクラスへのアクセス権があることを確認します。 その名前を修飾し、プロジェクトに参照を追加することが必要な場合があります。 詳細については、[宣言された要素への参照 (Visual Basic)](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)の中の 'プロジェクトへの参照' をご覧ください。  
+- 式でインターフェイスまたはクラスを参照する場合、コンパイラにそのインターフェイスまたはクラスへのアクセス権があることを確認します。 その名前を修飾し、プロジェクトに参照を追加することが必要な場合があります。 詳細については、「[宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の「プロジェクトへの参照」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [値型と参照型](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Value Types and Reference Types](../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

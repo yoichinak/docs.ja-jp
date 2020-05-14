@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 67743319-2d1c-496e-bfd9-22b046b43b5a
 ms.openlocfilehash: fa474aaff4b1ceaf9b80be5dbc869276a54a6e65
 ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71700992"
@@ -21,7 +21,7 @@ ms.locfileid: "71700992"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- 数字の後にコード行の先頭にコロンを付けます。例えば：  
+- コード行の先頭に、番号とその後にコロンを置きます。たとえば、次のようにします。  
   
     ```vb  
     400:    X += 1  

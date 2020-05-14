@@ -1,5 +1,5 @@
 ---
-title: WithEvents
+title: ReadOnly
 ms.date: 07/20/2015
 f1_keywords:
 - vb.WithEvents
@@ -9,29 +9,29 @@ helpviewer_keywords:
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
 ms.openlocfilehash: 2309c675b50a2025d73841a47fe8e30e7cecd522
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350748"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
-1つ以上の宣言されたメンバー変数が、イベントを発生させることができるクラスのインスタンスを参照することを指定します。
+1 つ以上の宣言されたメンバー変数が、イベントを発生させる可能性のあるクラスのインスタンスを参照していることを示します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-`WithEvents`を使用して変数が定義されている場合は、メソッドが `Handles` キーワードを使用して変数のイベントを処理するように、宣言によって指定できます。
+変数が `WithEvents` を使用して定義されている場合は、メソッドが `Handles` キーワードを使用して変数のイベントを処理するように、宣言によって指定できます。
 
-`WithEvents` は、クラスレベルまたはモジュールレベルでのみ使用できます。 つまり、`WithEvents` 変数の宣言コンテキストは、クラスまたはモジュールである必要があり、ソースファイル、名前空間、構造体、またはプロシージャにすることはできません。
+`WithEvents` は、クラスまたはモジュール レベルでのみ使用できます。 つまり、`WithEvents` 変数の宣言コンテキストはクラスまたはモジュールにする必要があり、ソース ファイル、名前空間、構造体、またはプロシージャにすることはできません。
 
-構造体メンバーで `WithEvents` を使用することはできません。
+構造体メンバーでは `WithEvents` は使用できません。
 
-`WithEvents`では、配列ではなく個々の変数のみを宣言できます。
+`WithEvents` では、配列ではなく個々の変数のみを宣言できます。
 
 ## <a name="rules"></a>ルール
 
-**要素の型。** オブジェクト変数として `WithEvents` 変数を宣言して、クラスのインスタンスを受け入れるようにする必要があります。 ただし、`Object`として宣言することはできません。 これらのクラスは、イベントを発生させることができる特定のクラスとして宣言する必要があります。
+**要素型。** オブジェクト変数として `WithEvents` 変数を宣言して、クラス インスタンスを受け入れられるようにする必要があります。 C++ では、これらを `Object` として宣言することはできません。 イベントを発生可能な特定のクラスとして宣言する必要があります。
 
-`WithEvents` 修飾子は、次のコンテキストで使用できます: [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+`WithEvents` 修飾子は、次のコンテキストで使用できます。[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
 
 ## <a name="example"></a>例
 
@@ -39,8 +39,8 @@ ms.locfileid: "74350748"
 Dim WithEvents app As Application
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [!](../../../visual-basic/language-reference/statements/handles-clause.md)
+- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
 - [キーワード](../../../visual-basic/language-reference/keywords/index.md)
 - [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)

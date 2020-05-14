@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
 ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80249527"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>バイナリ 'If' 式の最初のオペランドは Null 許容または参照型である必要があります
-式`If`は、2 つまたは 3 つの引数を受け取ることができます。 2 つの引数だけを送信する場合、最初の引数は参照型または null 許容値型である必要があります。 最初の引数が`Nothing`以外の値に評価される場合は、その値が返されます。 最初の引数が`Nothing`に評価されると、2 番目の引数が評価され、返されます。  
+`If` 式は、2 つまたは 3 つの引数を取ることができます。 2 つの引数のみを送信する場合、最初の引数は参照型または Null 許容値型である必要があります。 最初の引数が `Nothing` 以外に評価される場合は、その値が返されます。 最初の引数が `Nothing` に評価される場合は、2 番目の引数が評価されて返されます。  
   
- たとえば、次のコードには、引数`If`が 3 つ、引数が 2 つある式が 2 つ含まれています。 式は、同じ値を計算して返します。  
+ たとえば、次のコードには、3 つの引数を含むものと 2 つの引数を含むものの、2 つの `If` 式が含まれています。 これらの式は、同じ値を計算して返します。  
   
 ```vb  
 ' firstChoice is a nullable value type.  
@@ -29,7 +29,7 @@ Console.WriteLine(If(firstChoice IsNot Nothing, firstChoice, secondChoice))
 Console.WriteLine(If(firstChoice, secondChoice))  
 ```  
   
- 次の式がこのエラーを引き起こします。  
+ 次の式では、このエラーが発生します。  
   
 ```vb  
 Dim choice1 = 4  
@@ -46,7 +46,7 @@ Dim booleanVar = True
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- 最初の引数が null 許容値型または参照型になるようにコードを変更できない場合は、3 つの引数を持`If`つ式または`If...Then...Else`ステートメントに変換することを検討してください。  
+- 最初の引数が Null 許容値型または参照型になるようにコードを変更できない場合は、3 つの引数の `If` 式、または `If...Then...Else` ステートメントに変換することを検討してください。  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  

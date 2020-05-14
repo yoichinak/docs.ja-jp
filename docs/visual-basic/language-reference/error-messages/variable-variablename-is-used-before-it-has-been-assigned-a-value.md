@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 6909aa0b-b4a1-46f5-a18c-ba3e565c1dd8
 ms.openlocfilehash: a2ba752b95933d146da090a58c416015db75e106
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662673"
 ---
-# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>変数 '\<variablename >' は、値が割り当てられる前に使用
-変数 '\<variablename >' は、値が割り当てられる前に使用します。 結果として、実行時に null 参照の例外が発生する可能性があります。  
+# <a name="variable-variablename-is-used-before-it-has-been-assigned-a-value"></a>変数 '\<variablename>' は、値が割り当てられる前に使用されています
+変数 '\<variablename>' は、値が割り当てられる前に使用されています。 結果として、実行時に null 参照の例外が発生する可能性があります。  
   
- アプリケーションでは、少なくとも 1 つのパスをそのコードを任意の値が割り当てられる前に変数を読み込むことがあります。  
+ アプリケーションには、値が割り当てられる前に変数を読み取るコードを通る可能性があるパスが少なくとも 1 つあります。  
   
  変数に値が割り当てられていない場合、変数はそのデータ型の既定値を保持します。 参照データ型の場合、その既定値は [Nothing](../../../visual-basic/language-reference/nothing.md)です。 値が `Nothing` である参照変数を読み取ると、状況によって <xref:System.NullReferenceException> が発生する可能性があります。  
   
@@ -27,9 +27,9 @@ ms.locfileid: "64662673"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- 制御フローのロジックを確認し、によって読み取られる任意のステートメントに制御が渡される前に、変数が有効な値を持つかどうかを確認します。  
+- 制御フロー ロジックをチェックして、変数を読み取るステートメントに制御が渡される前に、変数に有効な値が設定されていることを確認します。  
   
-- 変数が常に有効な値を持つことを保証するために 1 つの方法では、その宣言の一部として初期化します。 「初期化」を参照してください[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)します。  
+- 変数が常に有効な値を持つようにする 1 つの方法は、その宣言の一部として変数を初期化することです。 [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)の "初期化" に関する説明を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

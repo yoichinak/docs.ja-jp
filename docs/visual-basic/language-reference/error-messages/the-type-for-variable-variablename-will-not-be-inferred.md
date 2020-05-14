@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: ef4442eb-08d1-434f-a03b-4aa2ed4e4414
 ms.openlocfilehash: e56529919945558df178e18a83a895a79bfe4919
 ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/26/2019
 ms.locfileid: "68512724"
 ---
-# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>変数 '\<variablename > ' の型は、外側のスコープ内のフィールドにバインドされているため、推論されません。
+# <a name="the-type-for-variable-variablename-will-not-be-inferred-because-it-is-bound-to-a-field-in-an-enclosing-scope"></a>変数 '\<variablename>' の型は、外側のスコープ内のフィールドにバインドされているため、推論できません
 
-変数 '\<variablename > ' の型は、外側のスコープ内のフィールドにバインドされているため、推論されません。 '\<Variablename > ' の名前を変更するか、完全修飾名 (' variablename '、' variablename ' など) を使用してください。
+変数 '\<variablename>' の型は、外側のスコープ内のフィールドにバインドされているため、推論できません。 '\<variablename>' の名前を変更するか、完全修飾名 (例: 'Me.variablename' や 'MyBase.variablename') を使用してください。
 
 コードのループ制御変数は、クラスまたは他の外側のスコープ内のフィールドと同じ名前を持っています。 制御変数は、`As` 句なしで使用されるため、外側のスコープ内のフィールドにバインドされ、コンパイラがこれに対して新しい変数を作成したり、その型を推論したりすることはありません。
 

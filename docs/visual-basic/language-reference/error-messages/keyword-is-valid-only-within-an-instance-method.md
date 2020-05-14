@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
 ms.openlocfilehash: 8ec1e704815ee10cb98d8cc20fb5982ee4b92832
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662012"
 ---
-# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' は、インスタンス メソッド内でのみ有効です。
-`Me`、 `MyClass`、および`MyBase`キーワードは、特定のクラスのインスタンスを参照してください。 共有内で使用することはできません`Function`または`Sub`プロシージャ。  
+# <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' は、インスタンス メソッド内でのみ有効です
+`Me`、`MyClass`、および `MyBase` キーワードは、特定のクラス インスタンスを参照します。 それらを共有の `Function` または `Sub` プロシージャ内で使用することはできません。  
   
  **エラー ID:** BC30043  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- プロシージャからキーワードを削除または削除、`Shared`プロシージャ宣言からキーワード。  
+- プロシージャからキーワードを削除するか、プロシージャ宣言から `Shared` キーワードを削除します。  
   
 ## <a name="see-also"></a>関連項目
 

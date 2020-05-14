@@ -1,5 +1,5 @@
 ---
-title: "'演算子宣言は次のいずれかでなければなりません: +、-、*、\\\\、/、^、&amp;、Like、Mod、And、Or、Xor、Not、<<、>>、=、<>、<、<=、>、 >=、CType、IsTrue、または IsFalse'"
+title: '演算子宣言は次のいずれかでなければなりません: +、-、*、\、/、^、&amp;、Like、Mod、And、Or、Xor、Not、<<、>>、=、<>、<、<=、>、>=、CType、IsTrue、または IsFalse'
 ms.date: 07/20/2015
 f1_keywords:
 - bc33000
@@ -9,21 +9,21 @@ helpviewer_keywords:
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
 ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61946602"
 ---
-# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>演算子宣言は次のいずれかでなければなりません: +、-、*、\,、/、^、&amp;、Like、Mod、And、Or、Xor、Not、\<\<、>>、=、\<>、\<、\<=、>、 >=、CType、
-オーバー ロードできるは、演算子のみを宣言できます。 次の表は、演算子を宣言することができます。  
+# <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>演算子宣言は次のいずれかでなければなりません: +、-、*、\,/、^、&amp;、Like、Mod、And、Or、Xor、Not、\<\<、>>...
+オーバーロードの対象となる演算子のみ宣言できます。 次の表に宣言可能な演算子を示します。  
   
-|型|演算子|  
+|種類|演算子|  
 |----------|---------------|  
 |単項|`+`, `-`, `IsFalse`, `IsTrue`, `Not`|  
 |2 項|`+`, `-`, `*`, `/`, `\`, `&`, `^`, `>>`, `<<`, `=`, `<>`, `>`, `>=`, `<`, `<=`, `And`, `Like`, `Mod`, `Or`, `Xor`|  
 |変換 (単項)|`CType`|  
   
- なお、`=`バイナリの一覧で演算子は、比較演算子、代入演算子ではありません。  
+ 2 項の一覧に示した `=` 演算子は比較演算子であり、代入演算子ではありません。  
   
  **エラー ID:** BC33000  
   

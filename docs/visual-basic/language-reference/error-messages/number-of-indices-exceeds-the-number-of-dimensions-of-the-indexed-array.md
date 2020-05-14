@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 2c5363e1-62c2-4f5a-b675-c7337aeb363d
 ms.openlocfilehash: 76cf0a997e9ad36ab4b5dfdc7c4bc29c57d309eb
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64665693"
@@ -21,7 +21,7 @@ ms.locfileid: "64665693"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- 添字の合計数には、配列のランクと同じになるまでは、配列参照からの添字を削除します。 例えば:  
+- 添字の合計数が配列のランクと同じになるまで、配列参照から添字を削除します。 次に例を示します。  
   
     ```vb  
     Dim gameBoard(3, 3) As String  

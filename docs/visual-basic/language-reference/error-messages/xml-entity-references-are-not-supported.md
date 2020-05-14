@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 2a393327-d8e2-4187-85b1-642b4f53b4ae
 ms.openlocfilehash: 02620b5b4a33fcfcdecd8c9152106262df252c85
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64662568"
 ---
 # <a name="xml-entity-references-are-not-supported"></a>XML エンティティの参照はサポートされていません
-エンティティ参照 (たとえば、 `©`) が定義されていない XML 1.0 仕様は、XML リテラルの値として含まれています。 のみ`&`、 `"`、 `<`、 `>`、および`'`XML エンティティの参照は XML リテラルでサポートされています。  
+XML 1.0 仕様で定義されていないエンティティ参照 (`©` など) が、XML リテラルの値として含まれています。 XML リテラルでは、`&`、`"`、`<`、`>`、および `'` の XML エンティティ参照のみがサポートされています。  
   
  **エラー ID:** BC31180  
   

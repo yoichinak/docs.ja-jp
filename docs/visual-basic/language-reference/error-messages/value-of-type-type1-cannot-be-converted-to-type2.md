@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 03d50c31-addd-4c90-9c53-725b84f9782e
 ms.openlocfilehash: 4a0f3eb2b1603899e9acc1273c023ec5d0ed3132
 ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/29/2019
 ms.locfileid: "64913328"
 ---
 # <a name="value-of-type-type1-cannot-be-converted-to-type2"></a>型 'type1' の値を 'type2' に変換できません
-型 'type1' の値は、'type2' へ変換できません。 最初の要素の文字列値を取得する、'Value' プロパティを使用することができます '\<parentElement >'。  
+型 'type1' の値を 'type2' に変換できません。 'Value' プロパティを使用して、'\<parentElement>' の最初の要素の文字列値を取得できます  
   
  XML リテラルを特定の型を暗黙的にキャストしようとしました。 XML リテラルは、指定した型に暗黙的にキャストできません。  
   

@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
 ms.openlocfilehash: e9bf248da980705f070be878208c55b0cc6dae01
 ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64589725"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>ラムダ式は、'Select Case' ステートメントの最初の式では有効ではありません
-テスト式でのラムダ式を使用することはできません、`Select Case`ステートメント。 ラムダ式の定義は、関数、およびのテスト式を返す、`Select Case`ステートメントは、基本データ型である必要があります。  
+ラムダ式は、`Select Case` ステートメントのテスト式に使用できません。 ラムダ式の定義では関数を返しますが、`Select Case` ステートメントのテスト式は基本データ型である必要があります。  
   
- 次のコードでは、このエラーが発生します。  
+ 次のコードではこのエラーが発生します。  
   
 ```vb  
 ' Select Case (Function(arg) arg Is Nothing)  
@@ -31,7 +31,7 @@ ms.locfileid: "64589725"
   
 - コードを調べて、 `If...Then...Else` ステートメントなどの別の条件構造を使用できないかをご確認ください。  
   
-- 指定した、関数を呼び出す次のコードに示すように。  
+- 次のコードに示すように、関数を呼び出そうとした可能性があります。  
   
 ```vb  
 Dim num? As Integer  

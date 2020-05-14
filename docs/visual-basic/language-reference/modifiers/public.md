@@ -1,5 +1,5 @@
 ---
-title: Public (Visual Basic)
+title: Public
 ms.date: 07/20/2015
 f1_keywords:
 - vb.Public
@@ -10,30 +10,30 @@ helpviewer_keywords:
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
 ms.openlocfilehash: 35bf1a65e0b8f24a1263adc480719c69b95dff9b
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351294"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
-1つ以上の宣言されたプログラミング要素にアクセス制限がないことを指定します。  
+1 つ以上の宣言されたプログラミング要素にアクセス制限がないことを示します。  
   
-## <a name="remarks"></a>コメント  
- クラスライブラリなど、コンポーネントまたはコンポーネントのセットを発行する場合は、通常、アセンブリと相互運用できるコードでプログラミング要素にアクセスできるようにする必要があります。 要素に対して無制限のアクセス権を付与するには、`Public`で宣言します。  
+## <a name="remarks"></a>Remarks  
+ クラス ライブラリなどのコンポーネントまたはコンポーネントのセットを公開する場合は、通常、アセンブリと相互運用できるコードでプログラミング要素にアクセスできるようにする必要があります。 要素に対してこのような無制限のアクセス権を付与するには、`Public` で宣言します。  
   
- パブリックアクセスは、プログラミング要素へのアクセスを制限する必要がない場合の通常のレベルです。 インターフェイス、モジュール、クラス、または構造体で宣言されている要素のアクセスレベルは、既定では、宣言しない場合は `Public` になることに注意してください。  
+ パブリック アクセスは、プログラミング要素へのアクセスを制限する必要がない場合の通常のレベルです。 インターフェイス、モジュール、クラス、または構造体で宣言されている要素のアクセス レベルは、宣言しない場合、既定では `Public` になることに注意してください。  
   
 ## <a name="rules"></a>ルール  
   
-- **宣言コンテキスト。** `Public` は、モジュール、インターフェイス、または名前空間レベルでのみ使用できます。 つまり、`Public` 要素の宣言コンテキストは、ソースファイル、名前空間、インターフェイス、モジュール、クラス、または構造体である必要があり、プロシージャにすることはできません。  
+- **宣言コンテキスト。** `Public` は、モジュール、インターフェイス、または名前空間レベルでのみ使用できます。 つまり、`Public` 要素の宣言コンテキストは、ソース ファイル、名前空間、インターフェイス、モジュール、クラス、または構造体にする必要があり、プロシージャにすることはできません。  
   
 ## <a name="behavior"></a>動作  
   
-- **アクセスレベル。** モジュール、クラス、または構造体にアクセスできるすべてのコードは、その `Public` 要素にアクセスできます。  
+- **アクセス レベル。** モジュール、クラス、または構造体にアクセスできるすべてのコードは、その `Public` 要素にアクセスできます。  
   
-- **既定のアクセス。** プロシージャ内のローカル変数は、既定でパブリックアクセスに設定されているので、アクセス修飾子を使用することはできません。  
+- **既定のアクセス。** プロシージャ内のローカル変数は、既定でパブリック アクセスに設定されていて、それらでアクセス修飾子を使用することはできません。  
   
-- **アクセス修飾子。** アクセスレベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+- **アクセス修飾子。** アクセス レベルを指定するキーワードは、*アクセス修飾子*と呼ばれています。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
  `Public` 修飾子は、次のコンテキストで使用できます。  
   
@@ -73,6 +73,6 @@ ms.locfileid: "74351294"
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
 - [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [Visual Basic におけるプロシージャ](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)

@@ -1,5 +1,5 @@
 ---
-title: "'<membername>' は、型 '<typename>' を <containertype>'<containertypename>' 経由でプロジェクトの外側に公開できません。"
+title: "'<membername>' は、型 '<typename>' を <containertype> '<containertypename>' 経由でプロジェクトの外側に公開できません。"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30909
@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: ffa7395d-e182-4087-8ce8-079810fdae54
 ms.openlocfilehash: ca67e74d7790352bd1842cb8a59fe1525af6e18c
 ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/01/2019
 ms.locfileid: "71700897"
 ---
-# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername>' は、型 '\<typename>' を \<containertype>'\<containertypename>' 経由でプロジェクトの外側に公開できません。
-変数、プロシージャパラメーター、または関数の戻り値は、コンテナーの外部に公開されますが、コンテナーの外部に公開されてはならない型として宣言されています。  
+# <a name="membername-cannot-expose-type-typename-outside-the-project-through-containertype-containertypename"></a>'\<membername>' は、型 '\<typename>' を \<containertype> '\<containertypename>' 経由でプロジェクトの外側に公開できません
+変数、プロシージャ パラメーター、または関数の戻り値がそのコンテナーの外側に公開されていますが、コンテナーの外側に公開できない型として宣言されています。  
   
- 次のスケルトンコードは、このエラーを生成する状況を示しています。  
+ 次のスケルトン コードは、このエラーが生成される状況を示しています。  
   
 ```vb  
 Private Class privateClass  
@@ -27,13 +27,13 @@ Public Class mainClass
 End Class  
 ```  
   
- @No__t-0、`Friend`、`Protected Friend`、または `Private` として宣言された型は、宣言コンテキストの外部でアクセスが制限されることを意図しています。 アクセス制限が低い変数のデータ型として使用すると、この目的が損なわれます。 前のスケルトンコードでは、`exposedVar` は `Public` であり、@no__t にアクセスできないようにするコードには、-2 を公開します。  
+ `Protected`、`Friend`、`Protected Friend`、または `Private` として宣言されている型は、その宣言コンテキストの外部でアクセスが制限されることを目的としています。 アクセス制限が緩い変数のデータ型として使用すると、この目的が損なわれます。 上記のスケルトン コードでは、`exposedVar` は `Public` であり、アクセス権を持たないコードに `privateClass` を公開します。  
   
  **エラー ID:** BC30909  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
-- 変数、プロシージャパラメーター、または関数のアクセスレベルを、少なくともそのデータ型のアクセスレベルと同じ制限以上になるように変更します。  
+- 変数、プロシージャ パラメーター、または関数の戻り値のアクセス レベルを、少なくともそのデータ型のアクセス レベルと同じ制限になるように変更します。  
   
 ## <a name="see-also"></a>関連項目
 

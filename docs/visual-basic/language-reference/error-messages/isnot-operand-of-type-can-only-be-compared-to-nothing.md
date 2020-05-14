@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 1155b23a-ad75-4bab-b9da-73f35c767a36
 ms.openlocfilehash: 1660971e2a1a11d7a2d14f222cd149edf4aa4c7b
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80249514"
 ---
 # <a name="isnot-operand-of-type-typename-can-only-be-compared-to-nothing-because-typename-is-a-nullable-type"></a>'typename' は Null 許容型であるため、'typename' 型の 'IsNot' オペランドは 'Nothing' とのみ比較できます
 
-null 許容値型として宣言された変数が`Nothing``IsNot`、演算子を使用する以外の式と比較されました。
+Null 許容値型として宣言された変数が、`Nothing` 演算子を使用して、`IsNot` 以外の式と比較されました。
 
 **エラー ID:** BC32128
 

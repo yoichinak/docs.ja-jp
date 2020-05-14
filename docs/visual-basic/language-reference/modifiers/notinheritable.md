@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 5c4da7c9-9562-4653-a947-1972e992f9f9
 ms.openlocfilehash: c7e820fe4c6de78171be0510608d7b9da1f97f2f
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74351459"
 ---
 # <a name="notinheritable-visual-basic"></a>NotInheritable (Visual Basic)
-クラスを基底クラスとして使用できないことを指定します。  
+クラスが基底クラスとして使用できないことを示します。  
   
-## <a name="remarks"></a>コメント  
- **代替語句**。 継承できないクラスは、*シール*クラスと呼ばれることもあります。  
+## <a name="remarks"></a>Remarks  
+ **代替用語**。 継承できないクラスは、*シールド* クラスと呼ばれることもあります。  
   
- このコンテキストでは、`NotInheritable` 修飾子を使用できます。  
+ `NotInheritable` 修飾子は、次のコンテキストで使用できます。  
   
  [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
   
