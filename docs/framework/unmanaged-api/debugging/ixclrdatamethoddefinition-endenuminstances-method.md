@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 605a4244d20ef6c0b7af3c2b26b65ff2a63fa9dd
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: febe6766c7a35228820421eee975c777988efd1f
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790453"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396484"
 ---
 # <a name="ixclrdatamethoddefinitionendenuminstances-method"></a>IXCLRDataMethodDefinition:: EndEnumInstances メソッド
 
@@ -41,16 +41,16 @@ HRESULT EndEnumInstances(
 `handle`\
 入出力インスタンスを列挙するハンドル。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
-指定されたメソッドは `IXCLRDataMethodDefinition` インターフェイスの一部であり、仮想メソッドテーブルの5番目のスロットに対応します。
+指定されたメソッドはインターフェイスの一部で `IXCLRDataMethodDefinition` あり、仮想メソッドテーブルの7番目のスロットに対応します。
 
 ## <a name="requirements"></a>要件
 
-**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
 **ヘッダー:** 存在  
 **ライブラリ:** 存在  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 

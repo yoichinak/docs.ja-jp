@@ -1,5 +1,5 @@
 ---
-title: メソッドをメソッドとして使用します。
+title: 'IXCLRDataProcess:: EnumMethodInstanceByAddress メソッド'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::EnumMethodInstanceByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: afc5fc377dd45d5e8d4d2d7b3385ca0524df69e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f3800a5980304394dd648111fe23a3bb0890c575
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176657"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395108"
 ---
-# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>メソッドをメソッドとして使用します。
+# <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess:: EnumMethodInstanceByAddress メソッド
 
-アドレス オフセットから開始するこのプロセスのメソッド インスタンスを列挙します。
+このプロセスのメソッドインスタンスを、アドレスオフセットを開始位置として列挙します。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,22 +40,22 @@ HRESULT EnumMethodInstanceByAddress(
 ## <a name="parameters"></a>パラメーター
 
 `handle`\
-[in]メソッド インスタンスを列挙するためのハンドル。
+からメソッドインスタンスを列挙するハンドル。
 
 `mod`\
-[アウト]列挙されたメソッド のインスタンス。
+入出力列挙されたメソッドインスタンス。
 
 ## <a name="remarks"></a>解説
 
-提供されたメソッドはインターフェイスの`IXCLRDataProcess`一部であり、仮想メソッド テーブルの 28 番目のスロットに対応します。
+指定されたメソッドはインターフェイスの一部で `IXCLRDataProcess` あり、仮想メソッドテーブルの29スロットに対応します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
-**ヘッダー:** なし**ライブラリ:** なし **.NET フレームワークのバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
+**ヘッダー:** None **Library:** None **.NET Framework バージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
-- [列挙型](clrdatasourcetype-enumeration.md)
+- [CLRDataSourceType 列挙型](clrdatasourcetype-enumeration.md)
 - [デバッグ](index.md)
 - [IXCLRDataProcess インターフェイス](ixclrdataprocess-interface.md)

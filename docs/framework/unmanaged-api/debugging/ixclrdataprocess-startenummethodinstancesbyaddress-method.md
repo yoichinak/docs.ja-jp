@@ -1,5 +1,5 @@
 ---
-title: IXCLRDataProcess::StartEnumMethodInstancesByAddress メソッド
+title: 'IXCLRDataProcess:: StartEnumMethodInstancesByAddress メソッド'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataProcess::StartEnumMethodInstancesByAddress Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d7c395e68ad5d8042f9850f25757a5aa445e5c40
-ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.openlocfilehash: e28fa73300e147ac07a2d325fbf517480bb73797
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67752678"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394947"
 ---
-# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress メソッド
+# <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess:: StartEnumMethodInstancesByAddress メソッド
 
-メソッドのインスタンスを列挙ハンドルを提供します`AppDomain`特定のアドレスで開始します。
+指定されたアドレスから開始するのメソッドインスタンスを列挙するハンドルを提供し `AppDomain` ます。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -41,24 +41,24 @@ HRESULT StartEnumMethodInstancesByAddress(
 ## <a name="parameters"></a>パラメーター
 
 `address`\
-[in]メソッドの最初のインスタンスのアドレス。
+から最初のメソッドインスタンスのアドレス。
 
 `appDomain`\
-[in]メソッド インスタンスのアプリケーション ドメイン。
+からメソッドインスタンスの AppDomain。
 
 `handle`\
-[out]メソッド インスタンスを列挙するためのハンドル。
+入出力メソッドインスタンスを列挙するハンドル。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
-指定されたメソッドは、`IXCLRDataProcess`インターフェイスし、仮想メソッド テーブルの 27 のスロットに対応しています。
+指定されたメソッドはインターフェイスの一部で `IXCLRDataProcess` あり、仮想メソッドテーブルの28番目のスロットに対応します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
-**ヘッダー:** なし  
-**ライブラリ:** なし  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+**ヘッダー:** 存在  
+**ライブラリ:** 存在  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 

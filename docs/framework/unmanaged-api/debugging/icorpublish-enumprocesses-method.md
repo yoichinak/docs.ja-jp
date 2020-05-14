@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ae765f0-93b2-4b6f-aea1-7b0cf44e04a7
 topic_type:
 - apiref
-ms.openlocfilehash: 5f785b22a3fbda6403c124ec70757b16f5335907
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 70255a89cee13abfe63b01351f8ffba51e54665a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790767"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396404"
 ---
 # <a name="icorpublishenumprocesses-method"></a>ICorPublish::EnumProcesses メソッド
 このコンピューター上で実行されているマネージプロセスの列挙子を取得します。  
@@ -41,19 +41,19 @@ HRESULT EnumProcesses (
  `ppIEnum`  
  プロセスの列挙子である[ICorPublishProcessEnum](icorpublishprocessenum-interface.md)インスタンスのアドレスへのポインター。  
   
-## <a name="remarks"></a>コメント  
- 列挙子のプロセスのコレクションは、`EnumProcesses` メソッドが呼び出されたときに実行されているプロセスのスナップショットに基づいています。 列挙子には、`EnumProcesses` が呼び出された後に終了または開始されるプロセスは含まれません。  
+## <a name="remarks"></a>解説  
+ 列挙子のプロセスのコレクションは、メソッドが呼び出されたときに実行されているプロセスのスナップショットに基づいてい `EnumProcesses` ます。 列挙子には、の呼び出しの前または後に終了するプロセスは含まれません `EnumProcesses` 。  
   
- この[ICorPublish](icorpublish-interface.md)インスタンスでは、`EnumProcesses` メソッドを複数回呼び出して、新しい最新のプロセスコレクションを作成することができます。 既存のコレクションは、`EnumProcesses` メソッドの後続の呼び出しの影響を受けません。  
+ `EnumProcesses`この[ICorPublish](icorpublish-interface.md)インスタンスでメソッドを複数回呼び出して、新しい最新のプロセスコレクションを作成することができます。 既存のコレクションは、メソッドの後続の呼び出しの影響を受けません `EnumProcesses` 。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

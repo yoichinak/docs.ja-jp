@@ -1,117 +1,117 @@
 ---
-title: WPF アプリケーションを .NET Core 3.0 に移行する
-description: Windows プレゼンテーション ファンデーション (WPF) アプリを .NET Core 3.0 に移行する方法について説明します。
+title: .NET Core 3.0 への WPF アプリの移行
+description: Windows Presentation Foundation (WPF) アプリを .NET Core 3.0 に移行する方法について説明します。
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: f52005e7c8a6312b8c4e09a950f1f635af1894e4
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
-ms.translationtype: MT
+ms.openlocfilehash: ccd2fc5a49d9c2d31c693e48099732614b568c7b
+ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "81432594"
+ms.lasthandoff: 04/29/2020
+ms.locfileid: "82507456"
 ---
-# <a name="migrating-wpf-apps-to-net-core"></a>WPF アプリを .NET コアに移行する
+# <a name="migrating-wpf-apps-to-net-core"></a>.NET Core への WPF アプリの移行
 
-この記事では、.NET Framework から .NET Core 3.0 に Windows プレゼンテーション ファンデーション (WPF) アプリを移行するために必要な手順について説明します。 手持ちの WPF アプリケーションを移植する必要はありませんが、プロセスを試したい場合は[、GitHub](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)で入手できる**Bean Trader**サンプル アプリを使用できます。 元のアプリ (対象となる .NET Framework 4.7.2) は、NetFx\BeanTraderClient フォルダーで使用できます。 まず、アプリの移植に必要な手順を説明し、次に**Bean Trader**サンプルに適用される特定の変更について説明します。
+この記事では、Windows Presentation Foundation (WPF) アプリを .NET Framework から .NET Core 3.0 に 移行するために必要な手順について説明します。 移植する WPF アプリが手元になくても、このプロセスを試してみたい場合は、[GitHub](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader) で入手できる **Bean Trader** サンプル アプリを使用できます。 元のアプリ (.NET Framework 4.7.2 をターゲットとする) は、NetFx\BeanTraderClient フォルダーにあります。 まず、一般的にアプリの移植に必要な手順について説明し、次に **Bean Trader** サンプルに適用される特定の変更について説明します。
 
 [!INCLUDE [desktop guide under construction](../../../includes/desktop-guide-preview-note.md)]
 
-NET Core に移行するには、まず次の手順を実行する必要があります。
+.NET Core に移行するには、最初に以下を行う必要があります。
 
 01. NuGet の依存関係を理解し、更新します。
 
-    01. 形式を使用するように NuGet`<PackageReference>`依存関係をアップグレードします。
-    01. NET Core または .NET 標準互換性の最上位レベルの NuGet 依存関係を確認します。
+    01. `<PackageReference>` 形式を使用するように NuGet の依存関係をアップグレードします。
+    01. .NET Core または .NET Standard の互換性に関する最上位の NuGet の依存関係を確認します。
     01. NuGet パッケージを新しいバージョンにアップグレードします。
-    01. NET[の依存関係を理解するには、.NET 移植性アナライザ](../../standard/analyzers/portability-analyzer.md)ーを使用します。
+    01. [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) を使用して、.NET の依存関係を理解します。
 
-01. プロジェクト ファイルを新しい SDK スタイル形式に移行します。
+01. プロジェクト ファイルを新しい SDK スタイルの形式に移行します。
 
-    01. .NET コアと .NET Framework の両方を対象とするか、.NET Core のみを対象とするかを選択します。
+    01. .NET Core と .NET Framework の両方をターゲットとするか、.NET Core のみをターゲットとするかを選択します。
     01. 関連するプロジェクト ファイルのプロパティと項目を新しいプロジェクト ファイルにコピーします。
 
 01. ビルドの問題を修正します。
 
-    01. [互換性](https://www.nuget.org/packages/Microsoft.Windows.Compatibility/)パッケージへの参照を追加します。
-    01. API レベルの違いを見つけて修正します。
-    01. または 以外*の app.config*セクションを`appSettings``connectionStrings`削除します。
-    01. 生成されたコードを必要に応じて再生成します。
+    01. [Microsoft.Windows.Compatibility](https://www.nuget.org/packages/Microsoft.Windows.Compatibility/) パッケージへの参照を追加します。
+    01. API レベルの相違点を見つけて修正します。
+    01. `appSettings` または `connectionStrings` 以外の *app.config* セクションを削除します。
+    01. 必要に応じて、生成されたコードを再生成します。
 
-01. ランタイム テスト:
+01. ランタイムのテストを行います。
 
-    01. 移植されたアプリが期待どおりに動作することを確認します。
-    01. 例外に<xref:System.NotSupportedException>注意してください。
+    01. 移植されたアプリが想定どおりに動作することを確認します。
+    01. <xref:System.NotSupportedException> 例外に注意してください。
 
 ## <a name="about-the-sample"></a>サンプルについて
 
-この記事では、実際の WPF アプリと同様のさまざまな依存関係を使用するため[、Bean Trader サンプル](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)アプリを参照します。 アプリは大きくはありませんが、複雑さの点で「ハローワールド」からのステップアップを意図しています。 アプリは、実際のアプリを移植しながら、ユーザーが遭遇する可能性のあるいくつかの問題を示しています。 アプリは WCF サービスと通信するため、正しく実行するには、BeanTraderServer プロジェクト (同じ GitHub リポジトリで利用可能) を実行し、BeanTraderClient の設定が正しいエンドポイントを指していることを確認する必要があります。 (デフォルトでは、このサンプルでは、サーバーが 同じマシン上で*http://localhost:8090*実行されていると仮定しています。
+この記事では、[Bean Trader サンプル アプリ](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)を参照しています。これは、実際の WPF アプリのものと類似するさまざまな依存関係がそこで使用されているためです。 このアプリは大きくはありませんが、複雑さの点で "Hello World" からのステップアップを意図しています。 このアプリでは、ユーザーが実際のアプリを移植するときに発生する可能性のある問題が実証されます。 このアプリは WCF サービスと通信するので、これを適切に実行するためには、BeanTraderServer プロジェクト (同じ GitHub リポジトリで入手できます) を実行し、BeanTraderClient の構成が正しいエンドポイントを指していることを確認する必要があります。 (既定では、このサンプルではサーバーが *http://localhost:8090* の同じコンピューターで実行されていることが前提となっています。BeanTraderServer をローカルで起動した場合はこれが該当します。)
 
-このサンプル アプリは、.NET Core の移植に関する課題とソリューションを示すことを目的としています。 WPF のベスト プラクティスを示すものではありません。 実際には、移植中に少なくともいくつかの興味深い課題に遭遇することを確認するために、意図的にいくつかのアンチパターンが含まれています。
+このサンプル アプリは、.NET Core の移植に関する課題と解決策を示すことを目的としている点に留意してください。 WPF のベスト プラクティスを示すことを目的としたものではありません。 実際、いくつかのアンチパターンが意図的に組み込まれており、移植中に少なくともいくつかの有用な課題が確実に発生するようになっています。
 
 ## <a name="getting-ready"></a>開発の準備
 
-.NET Framework アプリを .NET Core に移行する際の主な課題は、依存関係が異なる場合とまったく機能しないことです。 移行は以前よりずっと簡単です。多くの NuGet パッケージが .NET 標準を対象としているようになりました。 NET Core 2.0 以降では、.NET Framework と .NET Core のサーフェス領域が似ています。 それでも、NuGet パッケージと利用可能な .NET API の両方からのサポートの違いが残っています。 移行の最初の手順は、アプリの依存関係を確認し、参照が .NET Core に簡単に移行できる形式であることを確認することです。
+.NET Framework アプリを .NET Core に移行する際の主な課題は、その依存関係が異なる動作をする場合やまったく動作しない場合があることです。 移行は以前よりはるかに簡単になり、多くの NuGet パッケージが .NET Standard をターゲットにするようになっています。 .NET Core 2.0 以降、.NET Framework と .NET Core の領域が類似するようになっています。 それでも、相違点は (NuGet パッケージによるサポートと使用可能な .NET API の両方に) いくつか残っています 。 移行の最初の手順では、アプリの依存関係を確認し、参照が .NET Core に簡単に移行できる形式であることを確かめます。
 
-### <a name="upgrade-to-packagereference-nuget-references"></a>NuGet`<PackageReference>`参照にアップグレード
+### <a name="upgrade-to-packagereference-nuget-references"></a>`<PackageReference>` NuGet 参照へのアップグレード
 
-古い .NET Framework プロジェクトでは、通常、*パッケージ.config*ファイルに NuGet の依存関係が一覧表示されます。 新しい SDK スタイルのプロジェクト ファイル形式では、NuGet パッケージを別の構成ファイルではなく csproj ファイル自体の要素として[`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files)参照します。
+通常、以前の .NET Framework プロジェクトでは、NuGet の依存関係は *packages.config* ファイルにリストされます。 新しい SDK スタイルのプロジェクト ファイル形式では、別の構成ファイルではなく、csproj ファイル自体の [`<PackageReference>`](/nuget/consume-packages/package-references-in-project-files) 要素として NuGet パッケージを参照します。
 
-移行時には、-style 参照を使用`<PackageReference>`する利点が 2 つあります。
+移行時に `<PackageReference>` スタイルの参照を使用する利点は 2 つあります。
 
-- これは、新しい .NET Core プロジェクト ファイルに必要な NuGet 参照のスタイルです。 既に を使用`<PackageReference>`している場合は、これらのプロジェクト ファイル要素をコピーして新しいプロジェクトに直接貼り付けることができます。
-- packages.config ファイルとは`<PackageReference>`異なり、要素は、プロジェクトが直接依存している最上位の依存関係のみを参照します。 その他すべての推移的な NuGet パッケージは、復元時に決定され、自動生成された obj\project.assets.json ファイルに記録されます。 これにより、プロジェクトの依存関係を簡単に判断できます。
+- これは、新しい .NET Core プロジェクト ファイルに必要な NuGet 参照のスタイルです。 既に `<PackageReference>` を使用している場合、これらのプロジェクト ファイルの要素をコピーして、直接新しいプロジェクトに貼り付けることができます。
+- packages.config ファイルとは異なり、`<PackageReference>` 要素は、プロジェクトが直接依存する最上位の依存関係のみを参照します。 他のすべての推移的な NuGet パッケージは復元時に判別され、自動生成された obj\project.assets.json ファイルに記録されます。 これにより、プロジェクトにどのような依存関係があるかを判断するのがはるかに簡単になり、必要な依存関係が .NET Core で動作するかどうかを判断するのに役立ちます。
 
-.NET Framework アプリを .NET Core に移行する最初の手順は、NuGet 参照を使用`<PackageReference>`するように更新することです。 ビジュアルスタジオはこれを簡単にします。 Visual Studio の**ソリューション エクスプローラー**でプロジェクトの*packages.config*ファイルを右クリックし、[**パッケージ.config をパッケージ参照に移行**する] を選択します。
+.NET Framework アプリを .NET Core に移行する最初の手順は、それを、`<PackageReference>` NuGet 参照を使用するように更新することです。 Visual Studio を使用すると、これを簡単に行うことができます。 Visual Studio の**ソリューション エクスプローラー**で プロジェクトの *packages.config* ファイルを右クリックし、次に **[packages.config を PackageReference に移行する]** を選択します。
 
-![パッケージリファレンスへのアップグレード](./media/convert-project-from-net-framework/package-reference-migration.png)
+![PackageReference へのアップグレード](./media/convert-project-from-net-framework/package-reference-migration.png)
 
-計算された最上位レベルの NuGet 依存関係を示すダイアログが表示され、他のどの NuGet パッケージを最上位レベルに昇格するかを確認します。 これらの他のパッケージは、Bean Trader サンプルの最上位レベルである必要はありませんので、これらのボックスをすべてオフにすることができます。 次に **、[OK] を**クリックすると *、packages.config*ファイルが削除され、`<PackageReference>`プロジェクト ファイルに要素が追加されます。
+計算された最上位の NuGet 依存関係を表示し、他のどの NuGet パッケージを最上位に昇格する必要があるかを尋ねるダイアログが表示されます。 Bean Trader サンプルでは、これらの他のパッケージはいずれも最上位にする必要はないため、それらのボックスをすべてオフにすることができます。 次に、 **[OK]** をクリックすると、*packages.config* ファイルが削除され、`<PackageReference>` 要素がプロジェクト ファイルに追加されます。
 
-`<PackageReference>`-style 参照では、NuGet パッケージをパッケージ フォルダーにローカルに格納しません。 代わりに、最適化としてグローバルに格納されます。 移行が完了したら、csproj ファイルを編集し、以前`<Analyzer>`に.から来たアナライザーを参照している要素を削除*します。\パッケージ*ディレクトリ。 心配しないで。NuGet パッケージ参照が残っているため、アナライザーはプロジェクトに含まれます。 古い packages.config スタイル`<Analyzer>`の要素をクリーンアップするだけです。
+`<PackageReference>` スタイルの参照では、NuGet パッケージはパッケージ フォルダーにローカルに格納されません。 代わりに、最適化としてグローバルに格納されます。 移行が完了したら、csproj ファイルを編集し、以前に *..\packages* ディレクトリから取得したアナライザーを参照するすべての `<Analyzer>` 要素を削除します。 ご心配は不要です。NuGet パッケージ参照は維持されるため、アナライザーはプロジェクトに含まれます。 必要なことは、以前の packages.config スタイルの `<Analyzer>` 要素をクリーンアップするだけです。
 
 ### <a name="review-nuget-packages"></a>NuGet パッケージの確認
 
-これで、プロジェクトが依存する最上位レベルの NuGet パッケージが表示され、これらのパッケージが .NET Core で使用できるかどうかを確認できます。 パッケージが .NET Core をサポートしているかどうかを確認するには[、nuget.org](https://www.nuget.org/)への依存関係を調べます。コミュニティが作成した[fuget.org](https://www.fuget.org/)サイトでは、パッケージ情報ページの上部にこの情報が目立つように表示されます。
+プロジェクトが依存する最上位の NuGet パッケージが表示されるようになったので、それらのパッケージを .NET Core で使用できるかどうかを確認できます。 パッケージが .NET Core をサポートしているかどうかは、[nuget.org](https://www.nuget.org/) でその依存関係を調べることで判断できます。コミュニティによって作成された [fuget.org](https://www.fuget.org/) サイトでは、この情報がパッケージ情報ページの上部に目立つように表示されます。
 
-NET Core 3.0 を対象とする場合、.NET Core または .NET Standard を対象とするパッケージは動作します (.NET Core は .NET 標準の領域を実装しているため)。 場合によっては、使用されるパッケージの特定のバージョンは、.NET Core または .NET Standard を対象としませんが、新しいバージョンは、その対象になります。 この場合は、パッケージの最新バージョンへのアップグレードを検討する必要があります。
+.Net Core 3.0 をターゲットとする場合、.NET Core または .NET Standard をターゲットとするパッケージはすべて動作するはずです (.NET Core では .NET Standard の領域が実装されるため)。 場合によっては、使用されているパッケージの特定のバージョンで .NET Core または .NET Standard がターゲットにならないことがありますが、新しいバージョンではターゲットになります。 この場合は、最新バージョンのパッケージにアップグレードすることを検討してください。
 
-.NET Framework を対象とするパッケージも使用できますが、リスクが生じます。 .NET Core と .NET Framework のサーフェス領域は、多*くの場合*、依存関係が機能するほど類似しているため、.NET コアから .NET Framework への依存関係は許可されます。 ただし、パッケージが .NET Core に存在しない .NET API を使用しようとすると、ランタイム例外が発生します。 そのため、他のオプションが利用できない場合にのみ .NET Framework パッケージを参照し、これを行うとテストの負担が発生することを理解する必要があります。
+.NET Framework をターゲットとするパッケージも使用できますが、それにはある程度のリスクが伴います。 .NET Core から .NET Framework への依存関係は許容されます。.NET Core と .NET Framework の領域は類似しているので、このような依存関係は "*多くの場合*" 機能するためです。 ただし、パッケージで .NET Core に存在しない .NET API を使用しようとすると、ランタイム例外が発生します。 そのため、選択可能なオプションが他にない場合にのみ .NET Framework パッケージを参照し、これを行うことによってテストの負担が生じることを理解する必要があります。
 
-.NET Core または .NET Standard を対象としないパッケージが参照されている場合は、他の方法を考える必要があります。
+.NET Core や .NET Standard をターゲットとしないパッケージが参照されている場合は、他の代替手段を検討する必要があります。
 
-- 代わりに使用できる他の同様のパッケージはありますか? NuGet の作成者が個別に ' を発行する場合もあります。特に .NET Core を対象とするライブラリのコアバージョン。 エンタープライズ ライブラリ パッケージはコミュニティ発行の一例です。ネットコア」の代替案。 その他の場合は、特定のサービスの新しい SDK (パッケージ名が異なる場合もあります) は .NET Standard で使用できます。 代替手段がない場合は、.NET Framework を対象とするパッケージを使用して、.NET Core で実行した後に完全にテストする必要があることを念頭に置いて続行できます。
+- 代わりに使用できる類似のパッケージは他にあるでしょうか。 NuGet の作成者が、特に .NET Core をターゲットとする別個の '.Core' バージョンのライブラリを公開している場合があります。 Enterprise Library パッケージは、コミュニティ発行 ".NetCore" の代替手段の例です。 他のケースとして、特定のサービス用の新しい SDK が (ときにより、異なるパッケージ名で) .NET Standard 用に用意されています。 使用できる他の代替手段がない場合は、.NET Framework をターゲットとするパッケージを使用して続行できますが、.NET Core で実行する際は、十分なテストが必要になることを念頭に置いてください。
 
-Bean のトレーダーのサンプルには、次の最上位の NuGet 依存関係があります。
+Bean Trader サンプルには、次の最上位 NuGet 依存関係があります。
 
-- [**ウィンザー、バージョン 4.1.1**](https://www.castleproject.org/projects/windsor/)  
+- [**Castle.Windsor、バージョン 4.1.1**](https://www.castleproject.org/projects/windsor/)  
 
-  このパッケージは .NET 標準 1.6 を対象とするため、.NET Core で動作します。
+  このパッケージは .NET Standard 1.6 をターゲットとしているため、.NET Core で動作します。
 
-- [**コード分析.FxCop アナライザ、バージョン 2.6.3**](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3)  
-  これはメタ パッケージなので、サポートするプラットフォームはすぐには明らかではありませんが、[ドキュメントでは](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisfxcopanalyzers)、最新バージョン (2.9.2) が .NET Framework と .NET Core の両方で動作することを示しています。
+- [**Microsoft.CodeAnalysis.FxCopAnalyzers、バージョン 2.6.3**](https://www.nuget.org/packages/Microsoft.CodeAnalysis.FxCopAnalyzers/2.6.3)  
+  これはメタパッケージであるため、 どのプラットフォームがサポートされるかはすぐには明らかになりません。ただし、[ドキュメント](https://github.com/dotnet/roslyn-analyzers#microsoftcodeanalysisfxcopanalyzers)には、その最新バージョン (2.9.2) が .NET Framework と .NET Core の両方で動作することが示されています。
 
-- [**ニト.非同期、バージョン 4.0.1**](https://www.nuget.org/packages/Nito.AsyncEx/4.0.1)  
+- [**Nito.AsyncEx、バージョン 4.0.1**](https://www.nuget.org/packages/Nito.AsyncEx/4.0.1)  
 
-  このパッケージは .NET Core を対象としませんが、新しいバージョンの 5.0 は対象になります。 移行時に一般的な方法は、多くの NuGet パッケージが最近 .NET Standard サポートを追加していますが、古いバージョンのプロジェクトでは .NET Framework のみを対象とするためです。 バージョンの違いがマイナーバージョンの違いである場合、新しいバージョンにアップグレードするのは簡単です。 これはメジャー バージョンの変更であるため、パッケージに重大な変更が加えられる可能性があるため、アップグレードには注意が必要です。 しかし、前進する道がありますが、それは良いことです。
+  このパッケージは .NET Core をターゲットとしていませんが、新しい 5.0 バージョンではターゲットとしています。 これは移行時によくあることです。多くの NuGet パッケージでは .NET Standard のサポートが最近追加されていますが、以前のバージョンのプロジェクトでは .NET Framework のみがターゲットになるためです。 バージョンの違いがマイナー バージョンの違いであれば、多くの場合、新しいバージョンに簡単にアップグレードできます。 これはメジャー バージョンの変更であるため、パッケージに破壊的変更が生じる可能性があるので、アップグレード時には注意が必要です。 しかし、前進できるので、それは望ましいことです。
 
-- [**MahApps.メトロ、バージョン1.6.5**](https://www.nuget.org/packages/MahApps.Metro/1.6.5)  
+- [**MahApps.Metro、バージョン1.6.5**](https://www.nuget.org/packages/MahApps.Metro/1.6.5)  
 
-  このパッケージは .NET Core を対象としませんが、新しいプレリリース (2.0-alpha) を使用しています。 繰り返しますが、変更を破ることに気をつける必要がありますが、新しいパッケージは励みになります。
+  このパッケージも .NET Core をターゲットとしていませんが、これをターゲットとする新しいプレリリース (2.0 アルファ版) があります。 この場合も、破壊的変更について注意する必要がありますが、新しいパッケージがあることは心強いものです。
 
-Bean Trader サンプルの NuGet 依存関係はすべて、ターゲットの .NET Standard/.NET Core を対象とするか、新しいバージョンを使用するため、ここでブロッキングの問題が発生する可能性は低いです。
+Bean Trader サンプルの NuGet の依存関係はすべて .NET Standard または .NET Core をターゲットとしているか、これらをターゲットとする新しいバージョンを備えています。そのため、ここで障害となる問題が生じる可能性はほとんどありません。
 
-### <a name="upgrade-nuget-packages"></a>NuGet パッケージをアップグレードする
+### <a name="upgrade-nuget-packages"></a>NuGet パッケージのアップグレード
 
-可能であれば、この時点で (プロジェクトが .NET Framework を対象としている) 新しいバージョンを使用して .NET Core または .NET Standard のみを対象とするパッケージのバージョンをアップグレードして、互換性に関する変更を早期に検出して対処することをお勧めします。
+可能であれば、破壊的変更を早期に検出して対処するために、この時点 (プロジェクトが引き続き .NET Framework をターゲットとしている状態) で、.NET Core または .NET Standard のみをターゲットとするパッケージのバージョンをより新しいバージョンにアップグレードすることをお勧めします。
 
-既存の .NET Framework バージョンのアプリに重要な変更を加えたくない場合は、.NET Core を対象とする新しいプロジェクト ファイルが作成されるまで待機できます。 ただし、NuGet パッケージを .NET Core 互換バージョンにアップグレードすると、新しいプロジェクト ファイルを作成すると移行プロセスがさらに簡単になり、.NET Framework バージョンと .NET Core バージョンのアプリ間の違いが少なくなります。
+アプリの既存の .NET Framework バージョンに対して重大な変更を加えたくない場合は、.NET Core をターゲットとする新しいプロジェクト ファイルが作成されるまで待つことができます。 ただし、NuGet パッケージを前もって .NET Core の互換バージョンにアップグレードしておくと、新しいプロジェクト ファイルを作成したときの移行プロセスがより簡単になり、アプリの .NET Framework と .NET Core のバージョンの相違点が少なくなります。
 
-Bean Trader サンプルを使用すると、必要なすべてのアップグレードを簡単に (Visual Studio の NuGet パッケージ マネージャーを使用して) 行うことができますが、1 つの例外を除いて**MahApps.Metro 1.6.5**から**2.0**へのアップグレードでは、テーマとアクセント管理 API に関連する変更が大きめになります。
+Bean Trader サンプルを使用すると、(Visual Studio の NuGet パッケージ マネージャーを使用して) 必要なすべてのアップグレードを簡単に行うことができますが、1 つ例外があります。**MahApps.Metro 1.6.5** から **2.0** にアップグレードすると、テーマとアクセント管理の API に関する破壊的変更が発生します。
 
-理想的には、アプリは新しいバージョンのパッケージを使用するように更新されます (.NET Core で動作する可能性が高いため)。 ただし、場合によっては、実現不可能な場合があります。 これらの場合、必要な変更は簡単ではなく、このチュートリアルでは **、MahApps.Metro** 2 ではなく .NET Core 3 への移行に重点を置いているため **、MahApps.Metro**をアップグレードしないでください。 また、Bean Trader アプリは**MahApps.Metro**のごく一部しか使用しないため、これは低リスクの .NET Framework 依存関係です。 もちろん、移行が完了したらすべてが機能していることを確認するためのテストが必要です。 これが現実世界のシナリオである場合は、移行を行わないため **、MahApps.Metro**バージョン 2.0 に移行する作業を追跡する問題を提出すると、技術的な負債が残っています。
+可能であれば、新しいバージョンのパッケージを使用するようにアプリを更新してください (その方が .NET Core で動作する可能性が高いためです)。 ただし、これが可能でない場合もあります。 このような場合は、**MahApps.Metro** をアップグレードしないでください。必要な変更が簡単ではないことと、このチュートリアルでは **MahApps.Metro 2** ではなく .NET Core 3 への移行に焦点を置いているからです。 また、Bean Trader アプリでは **MahApps.Metro** のわずかな部分のみが実行されるため、これはリスクの低い .NET Framework 依存関係です。 もちろん、移行が完了したら、すべてが正常に機能していることを確認するためのテストが必要になります。 これが実際のシナリオである場合は、**MahApps.Metro** バージョン 2.0 に移行する作業を追跡するために課題を提起することをお勧めします。移行を行わないと、今度は、技術的な問題点が残ったままになるためです。
 
-NuGet パッケージが最新バージョンに更新されると、Bean Trader サンプルのプロジェクト ファイル内の`<PackageReference>`項目グループは次のようになります。
+NuGet パッケージが最新バージョンに更新されると、Bean Trader サンプルのプロジェクト ファイル内の `<PackageReference>` 項目グループは次のようになります。
 
 ```xml
 <ItemGroup>
@@ -130,51 +130,51 @@ NuGet パッケージが最新バージョンに更新されると、Bean Trader
 </ItemGroup>
 ```
 
-### <a name="net-framework-portability-analysis"></a>NET フレームワークの移植性分析
+### <a name="net-framework-portability-analysis"></a>.NET Framework の移植性の分析
 
-プロジェクトの NuGet 依存関係の状態を理解したら、次に考慮すべき点は .NET Framework API の依存関係です。 [NET ポータビリティ アナライザ](../../standard/analyzers/portability-analyzer.md)ー ツールは、プロジェクトで使用する .NET API のうち、他の .NET プラットフォームで使用できる .NET API を理解するのに役立ちます。
+プロジェクトの NuGet 依存関係の状態を把握したら、次に考慮すべき点は、.NET Framework API の依存関係です。 [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) ツールは、プロジェクトで使用されている .NET API のうち、他の .NET プラットフォームで利用可能なものを理解するのに役立ちます。
 
-このツールは[Visual Studio プラグイン](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)、コマンド ライン[ツール](https://github.com/Microsoft/dotnet-apiport/releases)、または[シンプルな GUI](https://github.com/Microsoft/dotnet-apiport-ui)でラップされ、オプションが簡略化されます。 [「.NET Core](https://devblogs.microsoft.com/dotnet/porting-desktop-apps-to-net-core/)へのデスクトップ アプリの移植」のブログ記事の GUI を使用した .NET ポータビリティ アナライザー (API ポート) の使用について詳しくは、こちらをご覧ください。 コマンド ラインを使用する場合は、次の手順を実行します。
+このツールは、[Visual Studio プラグイン](https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer)や[コマンドライン ツール](https://github.com/Microsoft/dotnet-apiport/releases)として提供されるか、オプションを単純化する[シンプルな GUI](https://github.com/Microsoft/dotnet-apiport-ui) 内にラップされています。 GUI を使用した .NET Portability Analyzer (API Port) の使用の詳細については、「[.NET Core へのデスクトップ アプリの移植](https://devblogs.microsoft.com/dotnet/porting-desktop-apps-to-net-core/)」というブログ記事を参照してください。 コマンド ラインを使用する場合に必要な手順は次のとおりです。
 
-1. NET[ポータビリティ アナライザ](https://github.com/Microsoft/dotnet-apiport/releases)ーをまだダウンロードしていない場合は、ダウンロードしてください。
-1. 移植する .NET Framework アプリが正常にビルドされることを確認します (これは、移行の前に、関係なく、この方法を使用することをお勧めします)。
-1. 次のようなコマンド ラインで API ポートを実行します。
+1. [.NET Portability Analyzer](https://github.com/Microsoft/dotnet-apiport/releases) がまだない場合は、ダウンロードします。
+1. 移植する .NET Framework アプリが正常にビルドされていることを確認します (移行前に必ずこれを行うことをお勧めします)。
+1. 次のようなコマンド ラインを使用して API Port を実行します。
 
     ```console
     ApiPort.exe analyze -f <PathToBeanTraderBinaries> -r html -r excel -t ".NET Core"
     ```
 
-    この`-f`引数は、分析するバイナリを含むパスを指定します。 引数`-r`は、必要な出力ファイル形式を指定します。 この`-t`引数は、API の使用を分析する .NET プラットフォームを指定します。 この場合は、.NET Core が必要です。
+    `-f` 引数は、分析するバイナリを含むパスを指定します。 `-r` 引数は、使用する出力ファイル形式を指定します。 `-t` 引数は、API の使用状況の分析対象である .NET プラットフォームを指定します。 この場合は .NET Core です。
 
-HTML レポートを開くと、最初のセクションに、分析されたすべてのバイナリと、対象プラットフォームで使用できる .NET API の割合が一覧表示されます。 割合は単独では意味がありません。 さらに役立つのは、欠落している特定の API を確認する方法です。 これを行うには、アセンブリ名を選択するか、個々のアセンブリのレポートまでスクロールします。
+HTML レポートを開くと、最初のセクションに、分析されたすべてのバイナリと、それらで使用される .NET API のうち何パーセントをターゲット プラットフォームで使用できるかが一覧表示されます。 このパーセントは、それ自体では意味がありません。 さらに役に立つのは、欠落している特定の API を確認することです。 これを行うには、アセンブリ名を選択するか、個々のアセンブリのレポートまで下にスクロールします。
 
-ソース コードを所有しているアセンブリに注目します。 たとえば、Bean Trader ApiPort レポートには多くのバイナリが記載されていますが、そのほとんどが NuGet パッケージに属しています。 `Castle.Windsor`は、.NET Core に存在しない System.Web API に依存していることを示しています。 以前に .NET Core をサポートしていることを`Castle.Windsor`確認したため、これは問題ではありません。 NuGet パッケージは、異なる .NET プラットフォームで使用するバイナリが異なるので、.NET Framework バージョン`Castle.Windsor`が System.Web API を使用するかどうかは、パッケージが .NET Standard または .NET Core を対象としている限り、無関係です ( この場合は使用します ) 。
+ご自身がソース コードを所有しているアセンブリに注目してください。 たとえば、Bean Trader ApiPort レポートには多くのバイナリが一覧表示されますが、そのほとんどは NuGet パッケージに属しています。 `Castle.Windsor` は、.NET Core に存在しないいくつかの System.Web API に依存していることを示しています。 .NET Core が `Castle.Windsor` によってサポートされていることを事前に確認しているため、これは問題ではありません。 一般に、NuGet パッケージにはさまざまな .NET プラットフォームで使用する各種のバイナリがあるため、`Castle.Windsor` の .NET Framework バージョンで System.Web API が使用されるかどうかは、パッケージが、(この API が使用される) .NET Standard または .NET Core もターゲットとしている限り、重要ではありません。
 
-Bean Trader サンプルでは、考慮する必要がある唯一のバイナリは**BeanTraderClient**で、レポートには.NET API が`System.ServiceModel.ClientBase<T>.Close`2`System.ServiceModel.ClientBase<T>.Open`つしか存在しない、とが表示されます。
+Bean Trader サンプルでは、考慮する必要があるバイナリは **BeanTraderClient** のみであり、レポートでは、`System.ServiceModel.ClientBase<T>.Close` と `System.ServiceModel.ClientBase<T>.Open` の 2 つの .NET API だけが欠落していることが示されています。
 
-![ビートレーダークライアントポータビリティレポート](./media/convert-project-from-net-framework/portability-report.png)
+![BeanTraderClient の移植性レポート](./media/convert-project-from-net-framework/portability-report.png)
 
-WCF クライアント API は (ほとんど) .NET Core でサポートされているため、これらの中心的な API に代わる方法が必要であるため、これらの問題がブロックされる可能性は低いです。 実際には、.NET `System.ServiceModel`Core のサーフェス領域 (を<https://apisof.net>使用して) を見ると、.NET Core に非同期の代替手段があることがわかります。
+これらが障害となる問題になる可能性はほとんどありません。WCF クライアント API は (ほとんどの場合) .NET Core でサポートされるので、これらの主要 API には代替手段が用意されているはずであるためです。 事実、(<https://apisof.net> を使用して) `System.ServiceModel` の .NET Core の領域を調べると、.NET Core では代わりに非同期の代替手段があることがわかります。
 
-このレポートと以前の NuGet 依存関係分析に基づいて、Bean Trader サンプルを .NET Core に移行する際に大きな問題が発生する必要はないようです。 移行を実際に開始する次の手順に進みます。
+このレポートと以前の NuGet 依存関係分析に基づいて、Bean Trader サンプルを .NET Core に移行する際に大きな問題はないと考えられます。 これで、実際に移行を開始する次の手順の準備が整いました。
 
 ## <a name="migrating-the-project-file"></a>プロジェクト ファイルの移行
 
-アプリで新しい SDK スタイルの[プロジェクト ファイル形式](../../core/tools/csproj.md)を使用していない場合は、.NET Core を対象とするための新しいプロジェクト ファイルが必要です。 既存の csproj ファイルを置き換えたり、既存のプロジェクトを現在の状態に変更したくない場合は、.NET Core を対象とする新しい csproj ファイルを追加できます。 [複数のターゲット](../../standard/library-guidance/cross-platform-targeting.md)を持つ単一の SDK スタイルのプロジェクト ファイル (複数`<TargetFrameworks>`のターゲットを指定) を使用して、.NET Framework および .NET Core 用のアプリのバージョンをビルドできます。
+お使いのアプリで新しい [SDK スタイルのプロジェクト ファイル形式](../../core/tools/csproj.md)を使用していない場合は、.NET Core をターゲットとする新しいプロジェクト ファイルが必要になります。 既存の csproj ファイルを置き換えることも、既存のプロジェクトを現在の状態に維持する場合は、.NET Core をターゲットとする新しい csproj ファイルを追加することもできます。 [マルチターゲット](../../standard/library-guidance/cross-platform-targeting.md) (複数の `<TargetFrameworks>` ターゲットを指定すること) を使用すると、1 つの SDK スタイル プロジェクト ファイルで .NET Framework 用と .NET Core 用のアプリのバージョンをビルドできます。
 
-新しいプロジェクト ファイルを作成するには、Visual Studio で新しい WPF プロジェクト`dotnet new wpf`を作成するか、一時ディレクトリでコマンドを使用してプロジェクト ファイルを生成し、正しい場所にコピーまたは名前を変更します。 コミュニティで作成されたツール[CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017)もあり、プロジェクトファイルの一部の移行を自動化できます。 ツールは役に立ちますが、移行のすべての詳細が正しいことを確認するために、結果を確認する必要があります。 ツールが最適に処理しない特定の領域の 1 つは *、packages.config*ファイルから NuGet パッケージを移行することです。 ツールが、引き続き*packages.config*ファイルを使用して NuGet パッケージを参照するプロジェクト`<PackageReference>`ファイルで実行される場合、`<PackageReference>`自動的に要素に移行されますが、最上位レベルのパッケージだけでなく *、すべての*パッケージの要素が追加されます。 Visual Studio を使用`<PackageReference>`して既に要素に移行している場合 (このサンプルで行ったように)、このツールは残りの変換に役立ちます。 Scott Hanselman が[csproj ファイルの移行に関するブログ記事](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx)で推奨しているように、手で移植することは教育的であり、移植するプロジェクトが少ししかない場合は、より良い結果を得ることができます。 しかし、数十または数百のプロジェクトファイルを移植する場合、[CsprojToVs2017]のようなツールが役立ちます。
+新しいプロジェクト ファイルを作成する場合、Visual Studio で新しい WPF プロジェクトを作成することも、一時ディレクトリで `dotnet new wpf` コマンドを使用してプロジェクト ファイルを生成してから、それを適切な場所にコピー/名前変更することもできます。 また、コミュニティによって作成されたツール [CsprojToVs2017](https://github.com/hvanbakel/CsprojToVs2017) もあります。これを使用すると、プロジェクト ファイルの移行の一部を自動化できます。 このツールは便利ですが、それでも移行のすべての詳細が正しいことを確認するために、人間が結果をレビューする必要があります。 このツールで適切に処理できない特定の分野の 1 つは、*packages.config* ファイルからの NuGet パッケージの移行です。 NuGet パッケージを参照するためにまだ *packages.config* ファイルを使用しているプロジェクト ファイルでこのツールを実行すると、自動的に `<PackageReference>` 要素に移行されますが、最上位のパッケージだけでなく、"*すべての*" パッケージに対して `<PackageReference>` 要素が追加されます。 (このサンプルで行ったように) Visual Studio を使用して `<PackageReference>` 要素に既に移行している場合は、変換の残りの部分でこのツールが役立します。 Scott Hanselman 氏が [csproj ファイルの移行に関する彼のブログ記事](https://www.hanselman.com/blog/UpgradingAnExistingNETProjectFilesToTheLeanNewCSPROJFormatFromNETCore.aspx)で勧めているように、手操作で移植すると、そこから学ぶことができ、移植するプロジェクトが少数のみである場合は、より良い結果が得られます。 しかし、数十や数百ものプロジェクト ファイルを移植する場合は、[[CsprojToVs2017]](https://github.com/hvanbakel/CsprojToVs2017) などのツールが役に立ちます。
 
-Bean Trader サンプルの新しいプロジェクト ファイルを作成`dotnet new wpf`するには、一時ディレクトリで実行し、生成された *.csproj*ファイルを*BeanTraderClient*フォルダに移動し、名前を**BeanTraderClient.Core.csproj**に変更します。
+Bean Trader サンプル用に新しいプロジェクト ファイルを作成するには、一時ディレクトリで `dotnet new wpf` を実行し、生成された *.csproj* ファイルを *BeanTraderClient* フォルダーに移動して、その名前を **BeanTraderClient.Core.csproj** に変更します。
 
-新しいプロジェクト ファイル形式には、C# ファイル *、resx*ファイル、およびディレクトリ内またはディレクトリの下にある XAML ファイルが自動的に含まれるため、プロジェクト ファイルは既にほぼ完成しています。 移行を完了するには、古いプロジェクト ファイルと新しいプロジェクト ファイルを並べて開き、古いプロジェクト ファイルを調べて、そのファイルに含まれる情報を移行する必要があるかどうかを確認します。 Bean Trader サンプルケースでは、以下の項目を新しいプロジェクトにコピーする必要があります。
+新しいプロジェクト ファイル形式には、そのディレクトリの中または下で見つかる C# ファイル、*resx* ファイル、XAML ファイルが自動的に含まれるため、プロジェクト ファイルは既にほぼ完成しています。 移行を完了するには、以前のプロジェクト ファイルと新しいプロジェクト ファイルを横に並べて開き、以前のプロジェクト ファイルを調べて、そこに含まれる情報に移行が必要なものがあるかどうかを確認します。 Bean Trader サンプルの場合、次の項目を新しいプロジェクトにコピーする必要があります。
 
-- `<RootNamespace>`プロパティ、 `<AssemblyName>`、`<ApplicationIcon>`および プロパティはすべてコピーする必要があります。
+- `<RootNamespace>`、`<AssemblyName>`、`<ApplicationIcon>` プロパティをすべてコピーする必要があります。
 
-- Bean Trader サンプル`<GenerateAssemblyInfo>false</GenerateAssemblyInfo>`には、AssemblyInfo.cs ファイルにアセンブリ レベルの属性 ( など`[AssemblyTitle]`) が含まれているため、新しいプロジェクト ファイルにプロパティを追加する必要もあります。 既定では、新しい SDK スタイルのプロジェクトは、csproj ファイルのプロパティに基づいてこれらの属性を自動生成します。 この場合は、この場合 (自動生成された属性が AssemblyInfo.cs の属性と競合する) には、これが発生しないようにするため、自動`<GenerateAssemblyInfo>`生成された属性は で無効になります。
+- また、`<GenerateAssemblyInfo>false</GenerateAssemblyInfo>` プロパティも新しいプロジェクト ファイルに追加する必要があります。Bean Trader サンプルでは、AssemblyInfo.cs ファイルにアセンブリ レベルの属性 (`[AssemblyTitle]` など) が含まれているためです。 既定では、新しい SDK スタイルのプロジェクトにより、csproj ファイルのプロパティに基づいてこれらの属性が自動生成されます。 ここでは、これが行われないようにしたいので (自動生成された属性は AssemblyInfo.cs のものと競合します)、`<GenerateAssemblyInfo>` を使用して自動生成される属性を無効にします。
 
-- *resx*ファイルは自動的に埋め込みリソース`<Resource>`として含まれますが、画像のような他の項目は含まれません。 したがって、画像ファイル`<Resource>`とアイコンファイルを埋め込むための要素をコピーします。 新しいプロジェクト ファイル形式の globbing パターンのサポートを使用して、png 参照を 1`<Resource Include="**\*.png" />`行に単純化できます。
+- *resx* ファイルは埋め込みリソースとして自動的に含まれますが、イメージなどの他の `<Resource>` 項目は含まれません。 そのため、イメージとアイコンのファイルを埋め込むには `<Resource>` 要素をコピーしてください。 新しいプロジェクト ファイル形式での glob パターン (`<Resource Include="**\*.png" />`) のサポートを利用すると、png 参照を 1 行に簡略化できます。
 
-- 同様に`<None>`、項目は自動的に含まれますが、デフォルトでは出力ディレクトリにコピーされません。 Bean Trader プロジェクトには出力`<None>`ディレクトリに*コピーされる*項目 (動作を使用`PreserveNewest`) が含まれているため、このファイルに対して自動的`<None>`に入力された項目を更新する必要があります。
+- 同様に、`<None>` 項目は自動的に含まれますが、既定では出力ディレクトリにコピーされません。 Bean Trader プロジェクトには、(`PreserveNewest` の動作を使用して) 出力ディレクトリにコピー "*される*" `<None>` 項目が含まれているので、次のように、そのファイルに対して自動的に設定される `<None>` 項目を更新する必要があります。
 
   ```xml
   <None Update="BeanTrader.pfx">
@@ -182,7 +182,7 @@ Bean Trader サンプルの新しいプロジェクト ファイルを作成`dot
   </None>
   ```
 
-- Bean Trader サンプルには`Content`XAML ファイル (Default.Accent.xaml)`Page`が含まれています (ではなく) このファイルで定義されているテーマとアクセントは、アプリ自体に埋め込まれるのではなく、実行時にファイルの XAML から読み込まれます。 ただし、新しいプロジェクト システムでは、XAML`<Page>`ファイルであるため、このファイルは自動的に として含まれます。 そのため、XAML ファイルをページ ( )`<Page Remove="**\Default.Accent.xaml" />`として削除し、コンテンツとして追加する必要があります。
+- Bean Trader サンプルには、XAML ファイル (Default.Accent.xaml) が (`Page` ではなく) `Content` として含まれます。このファイルで定義されているテーマとアクセントが、アプリ自体に埋め込まれるのではなく実行時にそのファイルの XAML から読み込まれるためです。 ただし、これは XAML ファイルであるため、新しいプロジェクト システムでは、このファイルは自動的に `<Page>` として組み込まれます。 そのため、XAML ファイルをページとして削除 (`<Page Remove="**\Default.Accent.xaml" />`) することと、コンテンツとして追加することが両方とも必要です。
 
   ```xml
   <Content Include="Resources\Themes\Default.Accent.xaml">
@@ -190,86 +190,86 @@ Bean Trader サンプルの新しいプロジェクト ファイルを作成`dot
   </Content>
   ```
 
-- 最後に、すべての要素を含む を`<ItemGroup>`コピーして`<PackageReference>`NuGet 参照を追加します。 NuGet パッケージを .NET Core 互換バージョンにアップグレードしていない場合は、パッケージ参照が .NET Core 固有のプロジェクトに含まれるようになります。
+- 最後に、すべての `<PackageReference>` 要素とともに `<ItemGroup>` をコピーして、NuGet 参照を追加します。 まだ NuGet パッケージを .NET Core 互換バージョンにアップグレードしていない場合は、パッケージ参照が .NET Core 固有のプロジェクトに含まれるようになったので、それを行うことができます。
 
-この時点で、新しいプロジェクトを BeanTrader ソリューションに追加して、Visual Studio で開く必要があります。 **プロジェクトはソリューション エクスプローラ**で正しく表示され`dotnet restore BeanTraderClient.Core.csproj`、パッケージを正常に復元する必要があります (対象となる .NET Framework を使用している MahApps.Metro バージョンに関連する 2 つの警告が予想されます)。
+この時点で、Bean Trader ソリューションに新しいプロジェクトを追加し、Visual Studio で開くことができます。 プロジェクトは**ソリューション エクスプローラー**で正しく表示され、`dotnet restore BeanTraderClient.Core.csproj` ではパッケージが正常に復元されているはずです (.NET Framework をターゲットとする、使用している MahApps.Metro バージョンに関連した 2 つの警告が出される可能性があります)。
 
-両方のプロジェクト ファイルを並べて保存することもできますが (古いプロジェクトをそのまま構築する場合も望ましい場合もあります)、移行プロセスが複雑になります (2 つのプロジェクトは同じ bin フォルダと obj フォルダを使用しようとします)。 NET Core と .NET Framework の両方のターゲットをビルドする場合は`<TargetFramework>netcoreapp3.0</TargetFramework>`、`<TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>`代わりに新しいプロジェクト ファイルのプロパティを置き換えることができます。 Bean トレーダサンプルの場合は、古いプロジェクトファイル (BeanTraderClient.csproj) は不要になったため削除します。 両方のプロジェクト ファイルを保持する場合は、異なる出力パスと中間出力パスにビルドするようにしてください。
+両方のプロジェクト ファイルを並行して保持することは可能ですが (古いプロジェクトを以前とまったく同じようにビルドし続ける場合は、これが望ましい場合もあります)、これによって移行プロセスが複雑になり (2 つのプロジェクトが同じ bin と obj フォルダーを使用しようとします)、通常は必要ありません。 .NET Core と .NET Framework の両方のターゲット用にビルドする場合は、代わりに新しいプロジェクト ファイルの `<TargetFramework>netcoreapp3.0</TargetFramework>` プロパティを `<TargetFrameworks>netcoreapp3.0;net472</TargetFrameworks>` に置き換えることができます。 Bean Trader サンプルでは、以前のプロジェクト ファイル (BeanTraderClient.csproj) は不要になるため、削除します。 両方のプロジェクト ファイルを保持する場合は、必ず異なる出力パスと中間出力パスにビルドするようにしてください。
 
-## <a name="fix-build-issues"></a>ビルドの問題を修正する
+## <a name="fix-build-issues"></a>ビルドの問題の修正
 
-移植プロセスの 3 番目の手順は、プロジェクトをビルドすることです。 一部のアプリは、プロジェクト ファイルが SDK スタイルのプロジェクトに変換されると、既に正常にビルドされます。 アプリの場合は、おめでとうございます! ステップ 4 に進むことができます。 他のアプリは、.NET Core 用にビルドするためにいくつかの更新プログラムが必要になります。 Bean Trader`dotnet build`サンプル プロジェクトで実行する (または Visual Studio でビルドする) 場合は、多くのエラーが発生しますが、すぐに修正されます。
+移植プロセスの 3 番目の手順は、プロジェクトをビルドすることです。 プロジェクト ファイルが SDK スタイルのプロジェクトに変換されると、その時点で一部のアプリは既に正常にビルドされます。 使用しているアプリがそうであれば幸運です。 手順 4 に進むことができます。 その他のアプリでは、.NET Core 用にビルドするために、いくつかの更新を行う必要があります。 たとえば、この時点で Bean Trader サンプル プロジェクトで `dotnet build` を実行 (またはそれを Visual Studio でビルド) しようとすると、多くのエラーが発生しますが、すぐに修正できます。
 
-### <a name="systemservicemodel-references-and-microsoftwindowscompatibility"></a>サービスモデルの参照と互換性
+### <a name="systemservicemodel-references-and-microsoftwindowscompatibility"></a>System.ServiceModel の参照と Microsoft.Windows.Compatibility
 
-エラーの一般的な原因は、.NET Core で使用できる API の参照が見つからないが、.NET Core アプリのメタパッケージには自動的には含まれない点です。 これに対処するには、パッケージを参照する`Microsoft.Windows.Compatibility`必要があります。 互換性パッケージには、WCF クライアント、ディレクトリ サービス、レジストリ、構成、ACL API など、Windows デスクトップ アプリで一般的な API の広範なセットが含まれています。
+エラーの一般的な原因として、.NET Core で利用可能でありながら、.NET Core アプリのメタパッケージに自動的に含まれない API の参照が欠落していることが挙げられます。 これに対処するには、`Microsoft.Windows.Compatibility` パッケージを参照する必要があります。 この互換性パッケージには、WCF クライアント、ディレクトリ サービス、レジストリ、構成、ACL API など、Windows デスクトップ アプリに共通するさまざまな API のセットが含まれています。
 
-Bean Trader サンプルでは、ビルド エラーの大部分は型が不足<xref:System.ServiceModel>しているためです。 これらは、必要な WCF NuGet パッケージを参照することで解決できます。 WCF クライアント API は`Microsoft.Windows.Compatibility`パッケージ内に存在する API の中に存在しますが、互換性パッケージを参照すると、さらに優れたソリューションになります (API に関連する問題だけでなく、互換性パッケージが使用可能になる WCF の問題の解決策も対処するため)。 この`Microsoft.Windows.Compatibility`パッケージは、ほとんどの .NET Core 3.0 WPF および WinForms の移植シナリオで役立ちます。 NuGet 参照を に`Microsoft.Windows.Compatibility`追加した後、ビルド エラーは 1 つだけ残ります。
+Bean Trader サンプルでは、ビルド エラーのほとんどは <xref:System.ServiceModel> 型が欠落していることが原因です。 これらは、必要な WCF NuGet パッケージを参照することで対処できます。 ただし、WCF クライアント API は `Microsoft.Windows.Compatibility` パッケージに含まれるものの 1 つであるため、この互換性パッケージを参照すると、より効果的な解決策になります (これが、API に関連する問題の対策になり、この互換性パッケージによって提供される WCF の問題の解決策にもなるためです)。 `Microsoft.Windows.Compatibility` パッケージは、ほとんどの .NET Core 3.0 WPF と WinForms の移植のシナリオで役立ちます。 `Microsoft.Windows.Compatibility` への NuGet の参照を追加すると、残るビルド エラーは 1 つだけになります。
 
-### <a name="cleaning-up-unused-files"></a>未使用のファイルのクリーンアップ
+### <a name="cleaning-up-unused-files"></a>使用されていないファイルのクリーンアップ
 
-移行の問題の 1 つは、*すべての*ソースを自動的に含む新しい SDK スタイル のプロジェクトで取得されるビルドに以前は含まれていなかった C# および XAML ファイルに関連することがよくあります。
+移行に関して発生する問題の 1 つの種類として、以前はビルドに含まれていなかった C# と XAML のファイルが、"*すべての*" ソースが自動的に組み込まれる新しい SDK スタイルのプロジェクトによって取得されることに関連したものが多くあります。
 
-Bean Trader サンプルで表示される次のビルド エラーは *、OldUnusedViewModel.cs*の不適切なインターフェイス実装を参照しています。 ファイル名はヒントですが、検査では、このソースファイルが正しくないことがわかります。 元の .NET Framework プロジェクトに含まれていないため、以前は問題が発生しませんでした。 ディスク上に存在するソース ファイルが古い*csproj*に含まれていないものは、自動的にインクルードされるようになりました。
+Bean Trader サンプルで発生する次のビルド エラーは、*OldUnusedViewModel.cs* でのインターフェイスの不適切な実装を指しています。 このファイル名がヒントになりますが、検査時に、このソース ファイルが正しくないことがわかります。 以前は、それによって問題は発生しませんでした。それが元の .NET Framework プロジェクトには含まれていなかったためです。 ディスク上に存在していても以前の *csproj* に含まれていなかったソース ファイルは、自動的に含まれるようになっています。
 
-このような 1 回限りの問題では、以前の*csproj*と比較してファイルが不要であることを確認し`<Compile Remove="" />`、ソース ファイルが不要な場合は削除するのも簡単です。 この場合 *、OldUnusedViewModel.cs*削除しても安全です。
+このような 1 回限りの問題では、以前の *csproj* と比較してそのファイルが不要であることを確認し、それに対して `<Compile Remove="" />` を実行するか、そのソース ファイルがそれ以上どこにも必要でない場合は削除できます。 この場合は、単に *OldUnusedViewModel.cs* を削除すれば問題ありません。
 
-この方法で除外する必要があるソース ファイルが多数ある場合は、`<EnableDefaultCompileItems>`プロジェクト ファイルでプロパティを false に設定することで、C# ファイルの自動インクルードを無効にすることができます。 その後、古い`<Compile Include>`プロジェクト ファイルから新しいプロジェクト ファイルに項目をコピーして、含めるソースだけをビルドできます。 同様に`<EnableDefaultPageItems>`、XAML ページの自動インクルードをオフにし、1`<EnableDefaultItems>`つのプロパティで両方を制御するためにも使用できます。
+この方法で除外する必要があるソース ファイルが多数ある場合は、プロジェクト ファイルで `<EnableDefaultCompileItems>` プロパティを false に設定して C# ファイルの自動組み込みを無効にすることができます。 その後に、以前のプロジェクト ファイルから新しいものに `<Compile Include>` 項目をコピーすると、含める必要があるソースのみをビルドできます。 同様に、`<EnableDefaultPageItems>` を使用すると XAML ページの自動組み込みをオフにすることができ、`<EnableDefaultItems>` によって 1 つのプロパティで両方を制御できます。
 
-### <a name="a-brief-aside-on-multi-pass-compilers"></a>マルチパスコンパイラの簡単な脇
+### <a name="a-brief-aside-on-multi-pass-compilers"></a>マルチパス コンパイラに関する簡単な説明
 
-Bean Trader サンプルから問題のあるファイルを削除すると、ビルドを再実行でき、4 つのエラーが発生します。 あなたは前に1つを持っていませんでしたか? エラーの数が増え、なぜ増えましたか? C# コンパイラは[マルチパス コンパイラ](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes)です。 これは、各ソース ファイルを 2 回通過することを意味します。 まず、コンパイラは各ソース ファイル内のメタデータと宣言を調べ、宣言レベルの問題を特定します。 これらはあなたが修正したエラーです。 次に、コードをもう一度実行して、C# ソースを IL にビルドします。これらは、現在表示されているエラーの 2 番目のセットです。
+Bean Trader サンプルから問題のあるファイルを削除した後に、再ビルドできますが、4 つのエラーが発生します。 以前はこれが発生しなかった可能性があります。 エラーの数が増えたのはなぜでしょうか。 C# コンパイラは[マルチパス コンパイラ](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes)です。 これは、各ソース ファイルが 2 回確認されることを意味します。 まずコンパイラでは、各ソース ファイルのメタデータと宣言が確認され、宣言レベルの問題が特定されます。 これらは先ほど修正したエラーです。 次に、C# ソースを IL にビルドするためにコードがもう一度確認されます。これらが、現在検討している 2 番目のエラー セットです。
 
 > [!NOTE]
-> C# コンパイラは[2 つ以上のパス](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes)を実行しますが、最終的には、このような大規模なコード変更のコンパイラ エラーは 2 つの波に来る傾向があります。
+> C# コンパイラでは、[単なる 2 回のパス以上のこと](https://docs.microsoft.com/archive/blogs/ericlippert/how-many-passes)が行われますが、最終結果としては、このような大規模なコード変更でのコンパイラ エラーは 2 段階で発生する傾向にあります。
 
-### <a name="third-party-dependency-fixes-castlewindsor"></a>サードパーティの依存関係の修正 (キャッスル.ウィンザー)
+### <a name="third-party-dependency-fixes-castlewindsor"></a>サードパーティの依存関係の修正 (Castle.Windsor)
 
-一部の移行シナリオで発生する問題の別のクラスは、依存関係の .NET Framework と .NET Core バージョン間の API の違いです。 NuGet パッケージが .NET Framework と .NET 標準または .NET Core の両方を対象としている場合でも、異なる .NET ターゲットで使用するライブラリが異なる場合があります。 これにより、パッケージは多くの異なる .NET プラットフォームをサポートでき、異なる実装が必要になる場合があります。 また、異なる .NET プラットフォームを対象とする場合、ライブラリに API の違いが小さい可能性もあります。
+一部の移行シナリオで発生する別の種類の問題として、依存関係の .NET Framework と .NET Core バージョンの間の API の違いが挙げられます。 NuGet パッケージが .NET Framework と .NET Standard または .NET Core の両方をターゲットとしている場合でも、さまざまな .NET ターゲットで使用する各種のライブラリが存在する可能性があります。 これにより、パッケージではさまざまな .NET プラットフォームがサポートされますが、複数の異なる実装が必要になる場合があります。 さらに、異なる .NET プラットフォームをターゲットとする場合に、ライブラリ内にわずかな API の違いが存在する可能性もあります。
 
-Bean Trader サンプルで表示される次の一連のエラーは、API`Castle.Windsor`に関連しています。 NET Core Bean Trader プロジェクトでは、.NET Framework ターゲット プロジェクト (4.1.1)`Castle.Windsor`と同じバージョンを使用しますが、これら 2 つのプラットフォームの実装は若干異なります。
+Bean Trader サンプルで確認される次のエラー セットは、`Castle.Windsor` API に関連するものです。 .NET Core の Bean Trader プロジェクトでは、.NET Framework ターゲット プロジェクト (4.1.1) と同じバージョンの `Castle.Windsor` が使用されますが、これら 2 つのプラットフォームの実装には若干の違いがあります。
 
-この場合、修正が必要な次の問題が表示されます。
+この場合、修正が必要な次の問題が発生します。
 
-1. `Castle.MicroKernel.Registration.Classes.FromThisAssembly`は .NET Core では使用できません。 ただし、同様`Classes.FromAssemblyContaining`の API が利用できるため、 の両方の`Classes.FromThisAssembly()`使用を`Classes.FromAssemblyContaining(t)`呼び出し`t`に置き換えることができます。
-1. 同様に *、Bootstrapper.cs*`Castle.Windsor.Installer.FromAssembly`で。これは .NET Core では使用できません。 代わりに、その呼び出し`FromAssembly.Containing(typeof(Bootstrapper))`を に置き換えることができます。
+1. `Castle.MicroKernel.Registration.Classes.FromThisAssembly` は .NET Core では使用できません。 ただし、類似の API `Classes.FromAssemblyContaining` を使用できるため、`Classes.FromThisAssembly()` の両方の使用を `Classes.FromAssemblyContaining(t)` の呼び出しに置き換えることができます。ここで、`t` は、呼び出しを行う型です。
+1. 同様に、*Bootstrapper.cs* では、`Castle.Windsor.Installer.FromAssembly` です。これは .NET Core では使用できません。 代わりに、その呼び出しを `FromAssembly.Containing(typeof(Bootstrapper))` に置き換えることができます。
 
-### <a name="updating-wcf-client-usage"></a>WCF クライアントの使用状況の更新
+### <a name="updating-wcf-client-usage"></a>WCF クライアントの使用法の更新
 
-`Castle.Windsor`違いを修正した後、.NET Core Bean Trader プロジェクトの最後のビルド`BeanTraderServiceClient`エラーは、`DuplexClientBase`から派生するメソッドが`Open`ないということです。 これは、この移行プロセスの開始時に .NET ポータビリティ アナライザによって強調表示された API であるため、これは驚くべきことではありません。 しかし、`BeanTraderServiceClient`見て見ると、より大きな問題に注意が向きます。 この WCF クライアントは[、Svcutil.exe](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)ツールによって自動生成されました。
+`Castle.Windsor` の違いを修正したので、.NET Core の Bean Trader プロジェクトで最後に残ったビルド エラーは、`BeanTraderServiceClient` (`DuplexClientBase` から派生) に `Open` メソッドがないことです。 これは意外なことではありません。これが、この移行プロセスの最初の段階で .NET Portability Analyzer によって示された API であるためです。 ただし、`BeanTraderServiceClient` を調べることで、より大きな問題に注目することになります。 この WCF クライアントは、[Svcutil.exe](../../framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) ツールによって自動生成されました。
 
-**Svcutil によって生成された WCF クライアントは、.NET Framework で使用するためのものです。**
+**Svcutil によって生成される WCF クライアントは .NET Framework での使用を想定しています。**
 
-svcutil で生成された WCF クライアントを使用するソリューションは、.NET Core で使用するために .NET 標準互換クライアントを再生成する必要があります。 古いクライアントが動作しない主な理由の 1 つは、WCF バインドとエンドポイントを定義するためのアプリ構成に依存していることです。 NET 標準 WCF API はクロスプラットフォーム (System.Configuration API が使用できない場合) で動作するため、.NET Core および .NET 標準シナリオの WCF クライアントでは、構成ではなく、バインディングとエンドポイントをプログラムで定義する必要があります。
+Svcutil で生成された WCF クライアントを使用するソリューションでは、.NET Core で使用するための .NET Standard 互換クライアントを再生成する必要があります。 以前のクライアントが動作しない主な理由の 1 つは、それらが、WCF バインドとエンドポイントを定義するためにアプリ構成に依存していることです。 .NET Standard の WCF API はクロスプラットフォームで動作できるため (この場合、System.Configuration API は使用できません)、.NET Core と .NET Standard のシナリオ用の WCF クライアントでは、バインドとエンドポイントを、構成内ではなくプログラムで定義する必要があります。
 
-実際には`<system.serviceModel>`、(Svcutil または手動で作成するかどうか) のセクションに依存する WCF クライアントの使用法を変更する必要があります.NET Core で動作します。
+実際、`<system.serviceModel>` app.config セクションに依存する WCF クライアント (Svcutil によって作成されたか手動で作成されたかに関係なく) の使用法を、.NET Core で機能するように変更する必要があります。
 
-.NET 標準互換 WCF クライアントを自動的に生成するには、次の 2 つの方法があります。
+.NET Standard 互換の WCF クライアントを自動生成するには、次の 2 つの方法があります。
 
-- この`dotnet-svcutil`ツールは、Svcutil が以前に動作した方法と同様の方法で WCF クライアントを生成する .NET ツールです。
-- Visual Studio は、接続されたサービス機能の[WCF Web サービス参照](../../core/additional-tools/wcf-web-service-reference-guide.md)オプションを使用して WCF クライアントを生成できます。
+- `dotnet-svcutil` ツールは、以前に Svcutil が動作していた方法と同様の方法で WCF クライアントを生成する .NET ツールです。
+- Visual Studio では、その接続済みサービス機能の [[WCF Web Service Reference]](../../core/additional-tools/wcf-web-service-reference-guide.md) オプションを使用して、WCF クライアントを生成できます。
 
-どちらの方法でもうまくいきます。 もちろん、WCF クライアント コードを自分で記述することもできます。 このサンプルでは、Visual Studio 接続サービス機能を使用することを選択しました。 これを行うには、Visual Studio のソリューション エクスプローラーで*BeanTraderClient.Core*プロジェクトを右クリックし、[**接続されたサービス**の**追加** > ] を選択します。 次に、WCF Web サービス参照プロバイダーを選択します。 これにより、バックエンド Bean Trader Web サービスのアドレス (`localhost:8080`サーバーをローカルで実行している場合) と、生成された型の名前空間を使用する必要がある (**たとえば BeanTrader.Service**など) を指定できるダイアログが表示されます。
+どちらの方法も適切に機能します。 または、当然のことながら、WCF クライアント コードをご自身で記述することもできます。 このサンプルでは、Visual Studio の接続済みサービス機能を使用します。 これを行うには、Visual Studio のソリューション エクスプローラーで *BeanTraderClient.Core* プロジェクトを右クリックし、 **[追加]**  >  **[接続済みサービス]** を選択します。 次に、WCF Web Service Reference Provider を選択します。 これによってイアログが表示され、そこでバックエンド Bean Trader Web サービスのアドレス (サーバーをローカルで実行している場合は `localhost:8080`) と、生成された型で使用する名前空間 (**BeanTrader.Service** など) を指定できます。
 
-![WCF Web サービス参照接続済みサービス ダイアログ](./media/convert-project-from-net-framework/connected-service-dialog.png)
+![WCF Web Service Reference の接続済みサービスのダイアログ](./media/convert-project-from-net-framework/connected-service-dialog.png)
 
-**[完了]** ボタンを選択すると、新しい接続済みサービス ノードがプロジェクトに追加され、そのノードの下に Reference.cs、Bean Trader サービスにアクセスするための新しい .NET Standard WCF クライアントが含まれるファイルが追加されます。 そのファイルの`GetEndpointAddress`or`GetBindingForEndpoint`メソッドを見ると、バインドとエンドポイントが (アプリの構成ではなく) プログラムによって生成されることがわかります。 「接続されたサービスの追加」機能は、必要なすべての WCF パッケージが Microsoft.Windows.Compatibility を介して含まれているため、必要とされないプロジェクト ファイル内の System.ServiceModel パッケージへの参照を追加することもできます。 追加の System.ServiceModel`<PackageReference>`項目が追加されているかどうかを確認し、追加されている場合は削除するには、csproj を確認します。
+**[完了]** ボタンを選択すると、新しい接続済みサービス ノードがプロジェクトに追加され、そのノードの下に、Bean Trader サービスにアクセスするための新しい .NET Standard WCF クライアントを含む Reference.cs ファイルが追加されます。 そのファイルの `GetEndpointAddress` または `GetBindingForEndpoint` メソッドを確認すると、バインドとエンドポイントが (アプリ構成によってではなく) プログラムで生成されるようになったことがわかります。 また、[接続済みサービスの追加] 機能を使用することで、プロジェクト ファイル内のいくつかの System.ServiceModel パッケージへの参照が追加される場合もあります。これは、必要なすべての WCF パッケージは Microsoft.Windows.Compatibility によって含まれるため、必要ありません。 csproj を調べて、他の System.ServiceModel `<PackageReference>` 項目が追加されているかどうかを確認し、追加されている場合は削除してください。
 
-このプロジェクトには新しい WCF クライアント クラスが *(Reference.cs)* されますが、古いクラス (BeanTrader.cs) もまだあります。 この時点で 2 つのオプションがあります。
+このプロジェクトには新しい WCF クライアント クラスが (*Reference.cs* 内に) 追加されていますが、以前のものも (BeanTrader.cs 内に) まだ存在します。 この時点で、次の 2 つのオプションがあります。
 
-- 新しい .NET Core ターゲット プロジェクトと共に元の .NET Framework プロジェクトをビルドできるようにする場合は、.NET `<Compile Remove="BeanTrader.cs" />` Core プロジェクトの csproj ファイル内の項目を使用して、.NET Framework バージョンと .NET Core バージョンのアプリで異なる WCF クライアントを使用できるようにします。 この方法では、既存の .NET Framework プロジェクトを変更しないという利点がありますが、生成された WCF クライアントを使用するコードは .NET Framework プロジェクトとは若干異なる必要があるため、ディレクティブを使用`#if`して、WCF クライアントの使用法 (クライアントの作成など) を条件付きでコンパイルする必要があります。
+- 元の .NET Framework プロジェクトを (.NET Core ターゲットの新しいものとともに) ビルドできるようにする場合は、.NET Core プロジェクトの csproj ファイルの `<Compile Remove="BeanTrader.cs" />` 項目を使用して、アプリの .NET Framework と .NET Core バージョンで異なる WCF クライアントが使用されるようにすることができます。 これには、既存の .NET Framework プロジェクトが変更されないままになるという利点がありますが、生成された WCF クライアントを使用するコードが、.NET Core のケースでは場合によって .NET Framework プロジェクト内のときとは若干異なる必要があるという欠点もあります。そのため、`#if` ディレクティブを使用して、WCF クライアントの使用法 (たとえば、クライアントの作成) を条件付きでコンパイルして、.NET Core 用にビルドする際はある方法で動作し、.NET Framework 用にビルドする際は別の方法で動作するようにすることが必要になると考えられます。
 
-- 一方、既存の .NET Framework プロジェクト内のコード チャーンが許容される場合は *、BeanTrader.cs*をすべてまとめて削除できます。 新しい WCF クライアントは .NET 標準用に構築されているため、.NET Core と .NET Framework の両方のシナリオで動作します。 NET Framework 用に .NET Framework を構築する場合 (マルチターゲットまたは 2 つの csproj ファイルを使用して) は、両方のターゲットに対してこの新しい*Reference.cs*ファイルを使用できます。 この方法には、2 つの異なる WCF クライアントをサポートするためにコードを二分する必要がなされないという利点があります。同じコードがどこでも使用されます。 欠点は、(おそらく安定した) .NET Framework プロジェクトを変更する必要がある点です。
+- 一方、既存の .NET Framework プロジェクト内のコード チャーンを許容できる場合は、*BeanTrader.cs* をまとめて削除できます。 新しい WCF クライアントは .NET Standard 用にビルドされているため、.NET Core と .NET Framework の両方のシナリオで動作します。 .NET Core に加えて .NET Framework 用にビルドする (マルチターゲットにより、または 2 つの csproj ファイルを使用することにより) 場合は、この新しい *Reference.cs* ファイルを両方のターゲットに使用できます。 この方法には、2 つの異なる WCF クライアントをサポートするためにコードを 2 つに分ける必要がないという利点があります。同じコードがどこでも使われます。 欠点は、(安定していると想定される) .NET Framework プロジェクトの変更を伴うことです。
 
-Bean Trader サンプルの場合、移行が容易になる場合は元のプロジェクトに小さな変更を加えることができるため、次の手順に従って WCF クライアントの使用を調整します。
+Bean Trader サンプルの場合、移行が簡単になるのであれば、元のプロジェクトにわずかな変更を加えることができます。そのため、次の手順に従って WCF クライアントの使用法を調整してください。
 
-01. ソリューション エクスプローラーの [既存の項目の追加] コンテキスト メニューを使用して、新しいReference.cs ファイルを .NET Framework *BeanTraderClient.csproj*プロジェクトに追加します。 C# ファイルのコピーではなく、両方のプロジェクトで同じファイルが使用されるように、必ず 'as link' を追加してください。 単一の csproj (マルチターゲティングを使用) で .NET Core と .NET Framework の両方を構築する場合、この手順は必要ありません。
+01. ソリューション エクスプローラーの [既存項目の追加] コンテキスト メニューを使用して、.NET Framework の *BeanTraderClient.csproj* プロジェクトに新しい Reference.cs ファイルを追加します。 両方のプロジェクトで同じファイルが使用されるように、必ず 'as link' を追加してください (C# ファイルをコピーするのとは異なります)。 (マルチターゲットを使用して) 1 つの csproj で .NET Core と .NET Framework の両方をビルドする場合、この手順は必要ありません。
 
-01. *BeanTrader.cs*を削除します。
+01. *BeanTrader.cs* を削除します。
 
-01. 新しい WCF クライアントは、古いクライアントと似ていますが、生成されたコード内の名前空間の数が異なります。 このため、プロジェクトを更新して、Wcf クライアントの型が BeanTrader.Service (または選択した名前空間名) から使用されるようにする必要があります。 *BeanTraderClient.Core.csproj*を構築することは、これらの変更を行う必要がある場所を特定するのに役立ちます。 修正は、C# と XAML ソース ファイルの両方で必要になります。
+01. 新しい WCF クライアントは以前のものと似ていますが、生成されるコードの名前空間の数が異なります。 このため、BeanTrader.Model ではなく BeanTrader.Service (または任意に選択した名前空間) から、または名前空間なしで、WCF クライアント型が使用されるように、プロジェクトを更新する必要があります。 *BeanTraderClient.Core.csproj* を作成すると、これらの変更が必要な場所を特定するのに役立ちます。 修正は、C# と XAML の両方のソース ファイルで必要になります。
 
-01. 最後に、`BeanTraderServiceClient`型に使用可能なコンストラクターが変更されたため*に、BeanTraderServiceClientFactory.cs*にエラーが発生していることがわかります。 以前は`InstanceContext`、(IoC コンテナ`CallbackHandler`からを使用して作成された) 引数`Castle.Windsor`を指定できていました。 新しいコンストラクタは新しい`CallbackHandler`s を作成します。 ただし、's 基本型には`BeanTraderServiceClient`、必要に応じコンストラクターがあります。 自動生成された WCF クライアント コードはすべて部分クラスに存在するため、簡単に拡張できます。 これを行うには *、BeanTraderServiceClient.cs*という名前の新しいファイルを作成し、同じ名前の部分クラスを作成します (BeanTrader.Service 名前空間を使用)。 次に、次に示すように、部分型に 1 つのコンストラクターを追加します。
+01. 最後に、*BeanTraderServiceClientFactory.cs* 内にエラーがあることがわかります。これは、`BeanTraderServiceClient` 型で使用可能なコンストラクターが変更されたためです。 以前は、`InstanceContext` 引数 (`Castle.Windsor` IoC コンテナーから `CallbackHandler` を使用して作成されました) を指定できました。 新しいコンストラクターでは、新しい `CallbackHandler` が作成されます。 ただし、`BeanTraderServiceClient` の基本型には、必要なものと一致するコンストラクターがあります。 自動生成された WCF クライアント コードはすべて部分クラスに存在するため、簡単に拡張できます。 これを行うには、*BeanTraderServiceClient.cs* という名前の新しいファイルを作成してから、(BeanTrader.Service 名前空間を使用して) それと同じ名前の部分クラスを作成します。 その後、次に示すように、1 つのコンストラクターを部分型に追加します。
 
     ```csharp
     public BeanTraderServiceClient(System.ServiceModel.InstanceContext callbackInstance) :
@@ -277,15 +277,15 @@ Bean Trader サンプルの場合、移行が容易になる場合は元のプ�
             { }
     ```
 
-これらの変更が加えられた場合、Bean Trader サンプルは新しい .NET 標準互換 WCF クライアントを使用し、代わりに使用`Open``await OpenAsync`する呼び出し*を変更するTradingService.cs*の最終修正を行うことができます。
+これらの変更を行うと、Bean Trader サンプルでは新しい .NET Standard 互換の WCF クライアントが使用されるようになり、*TradingService.cs* で、`await OpenAsync` を代わりに使用するように `Open` の呼び出しを変更するための最終的な修正を行うことができます。
 
-WCF の問題に対処すると、Bean のトレーダーサンプルの .NET Core バージョンがクリーンビルドされるようになりました。
+WCF の問題が解決されたので、.NET Core バージョンの Bean Trader サンプルが正常にビルドされるようになりました。
 
-## <a name="runtime-testing"></a>ランタイム テスト
+## <a name="runtime-testing"></a>ランタイムのテスト
 
-プロジェクトが .NET Core に対してクリーンにビルドされるとすぐに移行作業が完了しないのは簡単です。 移植されたアプリをテストする時間も残しておく必要があります。 ビルドが正常に完了したら、特に .NET Framework を対象とするパッケージを使用している場合は、アプリが正常に実行され、動作することを確認します。
+忘れがちですが、.NET Core に対してプロジェクトが正常にビルドされてすぐに移行作業が完了するわけではありません。 移植されたアプリをテストする時間を確保することも重要です。 ビルドが正常に完了したら、アプリが想定どおりに実行され、動作することを確認します (特に、.NET Framework をターゲットとするパッケージを使用している場合)。
 
-移植されたBeanのトレーダーアプリを起動して、何が起こるかを見てみましょう。 アプリは、次の例外で失敗する前に遠くに行かない。
+移植された Bean Trader アプリを起動してみて、何が起こるか見ていきましょう。 まもなく、次の例外が発生してアプリが失敗します。
 
 ```output
 System.Configuration.ConfigurationErrorsException: 'Configuration system failed to initialize'
@@ -294,15 +294,15 @@ Inner Exception
 ConfigurationErrorsException: Unrecognized configuration section system.serviceModel.
 ```
 
-もちろん、これは理にかなっています。 WCF ではアプリ構成が使用されなくなったため、app.config ファイルの古い system.serviceModel セクションを削除する必要があることに注意してください。 更新された WCF クライアントは、コードに同じ情報をすべて含めているため、構成セクションは不要になりました。 app.config で WCF エンドポイントを構成可能にする場合は、アプリ設定として WCF クライアント コードを追加し、構成から WCF サービス エンドポイントを取得するように更新できます。
+これは当然の結果です。 WCF ではアプリ構成が使用されなくなったため、app.config ファイルの以前の system.serviceModel セクションは削除する必要があることを思い出してください。 更新された WCF クライアントでは、そのコード内に同じ情報がすべて含まれているため、構成セクションは不要になりました。 WCF エンドポイントを app.config で構成できるようにする場合は、それをアプリ設定として追加し、構成から WCF サービス エンドポイントを取得するように WCF クライアント コードを更新できます。
 
-*app.config*の system.serviceModel セクションを削除すると、アプリは起動しますが、ユーザーがサインインすると別の例外で失敗します。
+*app.config* の system.serviceModel セクションを削除すると、アプリは起動しますが、ユーザーがサインインするときに別の例外が発生して失敗します。
 
 ```output
 System.PlatformNotSupportedException: 'Operation is not supported on this platform.'
 ```
 
-サポートされていない API`Func<T>.BeginInvoke`は です。 [dotnet/corefx#5940](https://github.com/dotnet/corefx/issues/5940)で説明されているように、.NET Core は、`BeginInvoke`基`EndInvoke`になるリモート処理の依存関係のために、デリゲート型の メソッドと メソッドをサポートしていません。 この問題とその修正プログラムの詳細については、[移行する Delegate.BeginInvoke 呼び出](https://devblogs.microsoft.com/dotnet/migrating-delegate-begininvoke-calls-for-net-core/)`BeginInvoke`しの .NET Core ブログの投稿に説明`EndInvoke`されていますが、要点`Task.Run`は、呼び出しを (可能であれば非同期の代替) に置き換える必要があります。 ここで一般的な解決策を適用すると`BeginInvoke`、呼び出しは`Invoke`によって起動`Task.Run`された呼び出しに置き換えることができます。
+サポートされていない API は `Func<T>.BeginInvoke` です。 [dotnet/corefx#5940](https://github.com/dotnet/corefx/issues/5940) で説明されているように、.NET Core では、基になるリモート処理の依存関係が原因で、デリゲート型で `BeginInvoke` と `EndInvoke` メソッドはサポートされません。 この問題とその修正方法については、「[.NET Core の Delegate.BeginInvoke 呼び出しの移行](https://devblogs.microsoft.com/dotnet/migrating-delegate-begininvoke-calls-for-net-core/)」ブログ記事で詳しく説明されていますが、要点としては、`BeginInvoke` と `EndInvoke` の呼び出しを `Task.Run` (または、可能な場合は非同期の代替手段) に置き換える必要があるということです。 ここで一般的な解決策を適用すると、`BeginInvoke` の呼び出しを `Task.Run` によって起動される `Invoke` の呼び出しに置き換えることができます。
 
 ```csharp
 Task.Run(() =>
@@ -316,8 +316,8 @@ Task.Run(() =>
 }, TaskScheduler.Default);
 ```
 
-使用を削除`BeginInvoke`した後、Bean Trader アプリは .NET Core で正常に実行されます。
+`BeginInvoke` の使用を削除すると、Bean Trader アプリが .NET Core で正常に実行されます。
 
-![NET コアで実行されている Bean トレーダー](./media/convert-project-from-net-framework/running-on-core.png)
+![.NET Core で実行される Bean Trader](./media/convert-project-from-net-framework/running-on-core.png)
 
-すべてのアプリが異なるため、独自のアプリを .NET Core に移行するために必要な具体的な手順は異なります。 しかし、Bean Trader サンプルは、一般的なワークフローと予想される問題の種類を示します。 また、この記事の長さにもかかわらず、.NET Core で動作させるために Bean Trader サンプルで実際に必要な変更はかなり制限されていました。 多くのアプリは、同じ方法で .NET Core に移行します。コードの変更が限られているか、あるいは必要ありません。
+すべてのアプリは異なっているため、ご自身のアプリを .NET Core に移行するために必要な具体的な手順もそれぞれ異なります。 しかし、この Bean Trader サンプルによって、一般的なワークフローと想定される問題の種類が示されることと思います。 また、この記事の長さとは対照的に、.NET Core で動作させるために Bean Trader サンプルに必要な実際の変更は、かなり限定されていました。 多くのアプリは、これと同じ方法で .NET Core に移行します。必要なコード変更は限定的であり、場合によっては一切不要です。

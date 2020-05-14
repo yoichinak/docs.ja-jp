@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76f2bf3b-759f-4eed-bce7-119415b25915
 topic_type:
 - apiref
-ms.openlocfilehash: c347346c9157fea843527c662e26ffcfba22ace4
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: caf6a24207be98be9afb10be2bd027b51405fa3b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790954"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396545"
 ---
 # <a name="icordebugvariablehome-interface"></a>ICorDebugVariableHome インターフェイス
 関数のローカル変数または引数を表します。  
@@ -31,15 +31,15 @@ ms.locfileid: "76790954"
 |メソッド|説明|  
 |------------|-----------------|  
 |[GetArgumentIndex メソッド](icordebugvariablehome-getargumentindex-method.md)|関数の引数のインデックスを取得します。|  
-|[GetCode メソッド](icordebugvariablehome-getcode-method.md)|この `ICorDebugVariableHome` オブジェクトを含む "コード" インスタンスを取得します。|  
+|[GetCode メソッド](icordebugvariablehome-getcode-method.md)|このオブジェクトを含む "コード" インスタンスを取得し `ICorDebugVariableHome` ます。|  
 |[GetLiveRange メソッド](icordebugvariablehome-getliverange-method.md)|この変数がライブであるネイティブ範囲を取得します。|  
 |[GetLocationType メソッド](icordebugvariablehome-getlocationtype-method.md)|変数のネイティブな場所の型を取得します。|  
 |[GetOffset メソッド](icordebugvariablehome-getoffset-method.md)|変数の基本レジスタからのオフセットを取得します。|  
-|[GetRegister メソッド](icordebugvariablehome-getregister-method.md)|`VLT_REGISTER`の場所の種類を持つ変数と、場所の種類が `VLT_REGISTER_RELATIVE`の変数の基本レジスタを含むレジスタを取得します。|  
+|[GetRegister メソッド](icordebugvariablehome-getregister-method.md)|の場所の種類がである変数 `VLT_REGISTER` と、の場所の種類がの変数の基本レジスタを含むレジスタを取得し `VLT_REGISTER_RELATIVE` ます。|  
 |[GetSlotIndex メソッド](icordebugvariablehome-getslotindex-method.md)|ローカル変数のマネージドスロットインデックスを取得します。|  
   
-## <a name="example"></a>使用例  
- 次のコード片では、`pCode4`という名前の[ICorDebugCode4](icordebugcode4-interface.md)オブジェクトを使用します。  
+## <a name="example"></a>例  
+ 次のコード片では、という名前の[ICorDebugCode4](icordebugcode4-interface.md)オブジェクトを使用し `pCode4` ます。  
   
 ```cpp  
 ICorDebugCode4 *pCode4 = NULL;  
@@ -81,15 +81,15 @@ for (int i = 0; i < celtFetched; i++)
 ```  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [ICorDebugVariableHomeEnum インターフェイス](icordebugvariablehomeenum-interface.md)

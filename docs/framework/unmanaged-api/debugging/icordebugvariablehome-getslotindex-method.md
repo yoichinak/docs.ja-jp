@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 966da50d-5665-4fff-bf7b-1c72bbadd9a4
 topic_type:
 - apiref
-ms.openlocfilehash: 542bfa05c55ef224d1b9111f9af6c069e9e23542
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 0bffd2db0a4a061a8629ff50a03a319feec6d836
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790968"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396551"
 ---
 # <a name="icordebugvariablehomegetslotindex-method"></a>いい変数 Home:: GetSlotIndex メソッド
 ローカル変数のマネージドスロットインデックスを取得します。  
@@ -40,22 +40,22 @@ HRESULT GetSlotIndex(
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の値を返します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
-|`S_OK`|メソッド呼び出しによって `pSlotIndex`でスロットインデックス値が返されました。|  
+|`S_OK`|メソッド呼び出しによって、でスロットインデックス値が返されました `pSlotIndex` 。|  
 |`E_FAIL`|現在のは、[関数の引数](icordebugvariablehome-interface.md)を表します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  このローカル変数のメタデータを取得するために、スロットインデックスを使用できます。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f025c2e5-3f6c-4be8-9ffe-c8b214617dfe
 topic_type:
 - apiref
-ms.openlocfilehash: a6f93ec3c7ffe415c41dcf094dbde2f0a08969f6
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 75a165e2fd517f36d779a934a5bdd9c41956411a
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790997"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396762"
 ---
 # <a name="icordebugvariablehomegetoffset-method"></a>いい変数 Home:: GetOffset メソッド
 変数の基本レジスタからのオフセットを取得します。  
@@ -40,19 +40,19 @@ HRESULT GetOffset(
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の値を返します。  
   
-|Value|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |`S_OK`|変数は、レジスタ相対メモリの場所にあります。|  
 |`E_FAIL`|変数がレジスタ相対メモリ位置にありません。|  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

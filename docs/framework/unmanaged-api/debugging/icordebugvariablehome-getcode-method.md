@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef002890-4a7b-4a5d-abbf-16c60083f794
 topic_type:
 - apiref
-ms.openlocfilehash: fdfa38a4cdbbaad2fc2c987a10a122af4a1fc9a9
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 87d611a7b6e12a9238b00131326e8205778769e6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76791034"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396588"
 ---
 # <a name="icordebugvariablehomegetcode-method"></a>いい変数 Home:: GetCode メソッド
 このこのコード例の[ホーム](icordebugvariablehome-interface.md)オブジェクトを含む "コード" インスタンスを取得します。  
@@ -38,13 +38,13 @@ HRESULT GetCode(
  入出力この表示[変数ホーム](icordebugvariablehome-interface.md)オブジェクトを含む "コード" インスタンスのアドレスへのポインター。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

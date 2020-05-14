@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e00fd477-4f49-43d3-bd0e-3094824b1136
 topic_type:
 - apiref
-ms.openlocfilehash: 6484832e8e737b9a0d0b3eaf3ede4078729f7a4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0c1b18f24fd30b5f6d5e85633fc0c25839aba6df
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178439"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396417"
 ---
 # <a name="icoreclrdebugtargetenumprocesses-method"></a>ICoreClrDebugTarget::EnumProcesses メソッド
 リモート コンピューターで実行されているプロセスを列挙します。  
@@ -41,11 +41,11 @@ HRESULT EnumProcesses (
  [out] `ppProcs` に返されるプロセス数。 この値は 0 (ゼロ) になる可能性もあります。  
   
  `ppProcs`  
- [アウト]リモート コンピューターで実行されているプロセスを表す[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)構造体の配列。  
+ 入出力リモートコンピューター上で実行されているプロセスを表す[CoreClrDebugProcInfo](coreclrdebugprocinfo-structure.md)構造体の配列。  
   
 ## <a name="return-value"></a>戻り値  
  S_OK  
- 正常終了しました。  
+ 成功しました。  
   
  E_OUTOFMEMORY  
  `ppProcs`  用に十分なメモリを割り当てることができません。  
@@ -54,16 +54,16 @@ HRESULT EnumProcesses (
  その他のエラーが発生しました。  
   
 ## <a name="remarks"></a>解説  
- このメソッドによって割り当てられたメモリを解放するには、メソッドを呼び出[します](icoreclrdebugtarget-freememory-method.md)。  
+ このメソッドによって割り当てられたメモリを解放するには、 [ICoreClrDebugTarget:: FreeMemory](icoreclrdebugtarget-freememory-method.md)メソッドを呼び出します。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** インターフェイスを使用します。  
+ **ヘッダー:** Coreclrremoteデバッグインターフェイス .h  
   
- **ライブラリ:** mscordbi_macx86.dll  
+ **Library:** mscordbi_macx86 .dll  
   
- **.NET フレームワークのバージョン:** 3.5 SP1  
+ **.NET Framework のバージョン:** 3.5 SP1  
   
 ## <a name="see-also"></a>関連項目
 

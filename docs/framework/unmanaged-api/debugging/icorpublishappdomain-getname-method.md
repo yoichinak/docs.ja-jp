@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6ef8ac9b-9803-4b65-8b13-25f3e0b1bc6b
 topic_type:
 - apiref
-ms.openlocfilehash: 762c637696fdf79ccab6702918b5bf962ea55903
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e95f96847c6e069758362fb6febc28dc31911bc9
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178416"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396297"
 ---
 # <a name="icorpublishappdomaingetname-method"></a>ICorPublishAppDomain::GetName メソッド
-この[ICorPublishAppDomain](icorpublishappdomain-interface.md)によって表されるアプリケーション ドメインの名前を取得します。  
+この[ICorPublishAppDomain](icorpublishappdomain-interface.md)によって表されるアプリケーションドメインの名前を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,24 +41,24 @@ HRESULT GetName (
  [in] `szName` 配列のサイズ。  
   
  `pcchName`  
- [アウト]配列に返される null 文字を含むワイド文字の数への`szName`ポインター。  
+ 入出力配列に返された、null 文字を含むワイド文字の数へのポインター `szName` 。  
   
  `szName`  
- [アウト]名前を格納する配列。  
+ 入出力名前を格納する配列。  
   
 ## <a name="remarks"></a>解説  
- null`szName`以外の場合、`GetName`メソッドは最大`cchName`文字 (null 終端文字を含む)`szName`を にコピーします。 で null 以外が返される`pcchName`場合、名前の実際の文字数 (NULL 終端文字を含む) が`szName`配列に格納されます。  
+ `szName`が null 以外の場合、 `GetName` メソッドは最大 `cchName` 文字 (null ターミネータを含む) をにコピー `szName` します。 で null 以外の値が返された場合 `pcchName` 、名前の実際の文字数 (null ターミネータを含む) が配列に格納され `szName` ます。  
   
- この`GetName`メソッドは、コピーされた文字数に関係なく、hRESULT S_OKを返します。  
+ メソッドは、 `GetName` コピーされた文字数に関係なく、S_OK HRESULT を返します。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コルパブ.idl,コルパブ.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

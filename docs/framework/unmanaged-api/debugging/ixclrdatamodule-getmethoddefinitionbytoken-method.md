@@ -1,5 +1,5 @@
 ---
-title: メソッドメソッドを使用します。
+title: 'IXCLRDataModule:: GetMethodDefinitionByToken メソッド'
 ms.date: 01/16/2019
 api.name:
 - IXCLRDataModule::GetMethodDefinitionByToken Method
@@ -15,16 +15,16 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 294c5340caf2217f9337d654a11a63a43d46febd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c70920205b27376d453bdd0a13223c6a5569075b
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176670"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83395297"
 ---
-# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>メソッドメソッドを使用します。
+# <a name="ixclrdatamodulegetmethoddefinitionbytoken-method"></a>IXCLRDataModule:: GetMethodDefinitionByToken メソッド
 
-指定したメタデータ トークンに対応するメソッド定義を取得します。
+指定されたメタデータトークンに対応するメソッド定義を取得します。
 
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
@@ -40,21 +40,21 @@ HRESULT GetMethodDefinitionByToken(
 ## <a name="parameters"></a>パラメーター
 
 `token`\
-[in]メソッド トークン。
+からメソッドトークン。
 
 `methodDefinition`\
-[アウト]メソッド定義。
+入出力メソッドの定義。
 
 ## <a name="remarks"></a>解説
 
-提供されたメソッドはインターフェイスの`IXCLRDataModule`一部であり、仮想メソッド テーブルの 25 番目のスロットに対応します。
+指定されたメソッドはインターフェイスの一部で `IXCLRDataModule` あり、仮想メソッドテーブルの26日スロットに対応します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
-**ヘッダー:** なし  
-**ライブラリ:** なし  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**ヘッダー:** 存在  
+**ライブラリ:** 存在  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 

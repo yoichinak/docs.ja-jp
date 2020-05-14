@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c5143805-2eb7-45b8-85ed-c8fb34df1084
 topic_type:
 - apiref
-ms.openlocfilehash: 46f047dbec7ff008873540806b76ffe7085086b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cd2238ac67713564922be440ce64a2ebc4bbf44
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178418"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396330"
 ---
 # <a name="icorpublishgetprocess-method"></a>ICorPublish::GetProcess メソッド
 指定した識別子を持つプロセスを表す[ICorPublishProcess](icorpublishprocess-interface.md)インスタンスを取得します。  
@@ -36,22 +36,22 @@ HRESULT GetProcess(
   
 ## <a name="parameters"></a>パラメーター  
  `pid`  
- [in]プロセスの識別子。  
+ からプロセスの識別子。  
   
  `ppProcess`  
- [アウト]プロセスを表す`ICorPublishProcess`インスタンスのアドレスへのポインター。  
+ 入出力プロセスを表すインスタンスのアドレスへのポインター `ICorPublishProcess` 。  
   
 ## <a name="remarks"></a>解説  
- `GetProcess`プロセスが存在しない場合、または現在のユーザーがデバッグできるマネージ プロセスでない場合は失敗します。  
+ `GetProcess`プロセスが存在しない場合、または現在のユーザーがデバッグできるマネージプロセスでない場合は、失敗します。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コルパブ.idl,コルパブ.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
