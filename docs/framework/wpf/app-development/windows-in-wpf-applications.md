@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
 ms.openlocfilehash: 81a3191877f2e64d7d70a1a65c4a50757aadb315
 ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76739009"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF アプリケーションのウィンドウ
-ユーザーは、windows を使用してアプリケーションと対話します。 ウィンドウの基本的な目的は、コンテンツをホストして表示することです。 ウィンドウがホストするコンテンツの種類は、アプリケーションが操作するデータの種類によって異なります。これには、メディア、Extensible Application Markup Language (XAML) ページ、Web ページ、ドキュメント、データベーステーブルとレコード、システム情報が含まれます。  
+ユーザーは、ウィンドウをとおしてアプリケーションとやり取りします。 ウィンドウの基本的な目的は、コンテンツをホストして表示することです。 ウィンドウでホストされるコンテンツの種類は、アプリケーションで扱われるデータの種類によって異なります。これには、メディア、Extensible Application Markup Language (XAML) ページ、Web ページ、ドキュメント、データベース テーブルとレコード、システム情報などが含まれます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [WPF ウィンドウの概要](wpf-windows-overview.md)  
  [ダイアログ ボックスの概要](dialog-boxes-overview.md)  
- [データ バインドに関する「方法」トピック](window-management-how-to-topics.md)  
+ [方法トピック](window-management-how-to-topics.md)  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
  <xref:System.Windows.Window>  
   
  <xref:System.Windows.Navigation.NavigationWindow>  

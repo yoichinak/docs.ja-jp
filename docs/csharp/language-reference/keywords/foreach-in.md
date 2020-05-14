@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: dbe4f4e95c2b99f1be47885e39d51db81ba3a97d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 188d909fd33b14755d9b121953b1fa434ecf536d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173706"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738812"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# リファレンス)
 

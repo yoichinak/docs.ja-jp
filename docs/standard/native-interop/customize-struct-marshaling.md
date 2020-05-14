@@ -7,7 +7,7 @@ dev_langs:
 - cpp
 ms.openlocfilehash: 7f8d1ad93633d6feef9c3c6f5d19aad52105968c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/14/2020
 ms.locfileid: "79401167"
@@ -22,15 +22,15 @@ ms.locfileid: "79401167"
 
 ✔️ 推奨: 可能な限り `LayoutKind.Sequential` を使用するようにします。
 
-✔️ 実行: ネイティブ構造体に共用体などの明示的なレイアウトもある場合は、マーシャリング時に `LayoutKind.Explicit` のみを使用します。
+✔️ 実行: ネイティブ構造体に共用体などの明示的なレイアウトもある場合にのみ、マーシャリングで `LayoutKind.Explicit` を使用します。
 
-❌Net `LayoutKind.Explicit` Core 3.0 より前のランタイムを対象とする必要がある場合は、Windows 以外のプラットフォームで構造体をマーシャリングする場合は使用しないでください。 3.0 より前の .NET Core ランタイムは、明示的な構造体を Intel または AMD 64 ビット非 Windows システムのネイティブ関数に明示的な構造体を渡すことをサポートしていません。 ただし、ランタイムはすべてのプラットフォーム上で明示的な構造体の参照渡しをサポートしています。
+❌ 回避: .NET Core 3.0 より前のランタイムをターゲットにする必要がある場合、Windows 以外のプラットフォームで構造体をマーシャリングするときは `LayoutKind.Explicit` を使用しないでください。 3\.0 より前の .NET Core ランタイムは、Intel または AMD 64 ビットの Windows 以外のシステム上でネイティブ関数への値による明示的な構造体の受け渡しをサポートしていません。 ただし、ランタイムはすべてのプラットフォーム上で明示的な構造体の参照渡しをサポートしています。
 
 ## <a name="customizing-boolean-field-marshaling"></a>ブール値フィールドのマーシャリングのカスタマイズ
 
 ネイティブ コードには、さまざまなブール表現があります。 Windows だけでも、ブール値を表現する方法が 3 つあります。 ランタイムは構造体のネイティブ定義を認識しないので、ランタイムに可能な最善の処理は、ブール値のマーシャリング方法を推測することです。 .NET ランタイムには、ブール値フィールドのマーシャリング方法を示す方法が用意されています。 以下の例は、.NET `bool` をさまざまなネイティブ ブール型にマーシャリングする方法を示しています。
 
-次の例に示すように、ブール値は既定でネイティブの[`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL)4 バイト Win32 値としてマーシャリングされます。
+次の例に示すように、ブール値は既定でネイティブの 4 バイト Win32 [`BOOL`](/windows/desktop/winprog/windows-data-types#BOOL) 値としてマーシャリングされます。
 
 ```csharp
 public struct WinBool
@@ -317,7 +317,7 @@ struct DefaultString
 
 ## <a name="customizing-decimal-field-marshaling"></a>10 進数フィールドのマーシャリングのカスタマイズ
 
-Windows で作業している場合は、ネイティブ[`CY`または`CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1)構造体を使用する API がいくつか見つかる可能性があります。 既定では、.NET`decimal`型はネイティブ[`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1)構造体にマーシャリングします。 ただし、値が <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> の <xref:System.Runtime.InteropServices.MarshalAsAttribute> を使用して、`decimal` 値をネイティブの `CY` 値に変換するようにマーシャラーに指示することができます。
+Windows を使用している場合は、ネイティブの [`CY` または `CURRENCY`](/windows/win32/api/wtypes/ns-wtypes-cy~r1) 構造体を使用する API がいくつかあります。 既定で、.NET の `decimal` 型はネイティブの [`DECIMAL`](/windows/win32/api/wtypes/ns-wtypes-decimal~r1) 構造体にマーシャリングされます。 ただし、値が <xref:System.Runtime.InteropServices.UnmanagedType.Currency?displayProperty=nameWithType> の <xref:System.Runtime.InteropServices.MarshalAsAttribute> を使用して、`decimal` 値をネイティブの `CY` 値に変換するようにマーシャラーに指示することができます。
 
 ```csharp
 public struct Currency

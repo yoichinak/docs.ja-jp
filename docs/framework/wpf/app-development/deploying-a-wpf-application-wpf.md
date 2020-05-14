@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 54d14503a0f65bb50f2dfb14d40af3b47d51589c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79186313"
 ---
-# <a name="deploy-a-wpf-application"></a>WPF アプリケーションを展開する
+# <a name="deploy-a-wpf-application"></a>WPF アプリケーションを配置する
 
-Windows プレゼンテーション ファンデーション (WPF) アプリケーションをビルドした後、展開する必要があります。 Windows と .NET Framework には、いくつかの展開テクノロジが含まれています。 WPF アプリケーションの展開に使用される配置テクノロジは、アプリケーションの種類によって異なります。 このトピックでは、各展開テクノロジの概要と、各 WPF アプリケーションの種類の展開要件と共に使用する方法について簡単に説明します。
+ビルドされた Windows Presentation Foundation (WPF) アプリケーションは、配置する必要があります。 Windows および .NET Framework には、いくつかの配置テクノロジがあります。 WPF アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの WPF アプリケーションの種類の配置要件に関連して説明します。
 
 <a name="Deployment_Technologies"></a>
 ## <a name="deployment-technologies"></a>配置テクノロジ  
- Windows と .NET Framework には、次のようないくつかの展開テクノロジが含まれています。  
+ Windows および .NET Framework には、次のような、いくつかの配置テクノロジがあります。  
   
 - XCopy による配置。  
   
@@ -32,7 +32,7 @@ Windows プレゼンテーション ファンデーション (WPF) アプリケ�
   
 - アプリケーションは自己完結型である。 実行するためにクライアントを更新する必要がない。  
   
-- アプリケーション ファイルは、ビルド場所 (ローカル ディスク、UNC ファイル共有など) から発行場所 (Web サイト、UNC ファイル共有など) に移動する必要があります。  
+- アプリケーション ファイルをある場所から別の場所へ、たとえば、ビルド場所 (ローカル ディスク、UNC ファイル共有など) から公開場所 (Web サイト、UNC ファイル共有など) へ移動する必要がある。  
   
 - アプリケーションはシェル統合 ([スタート] メニューのショートカット、デスクトップ アイコンなど) を必要としない。  
   
@@ -40,15 +40,15 @@ Windows プレゼンテーション ファンデーション (WPF) アプリケ�
   
 <a name="Windows_Installer"></a>
 ### <a name="windows-installer"></a>Windows インストーラー  
- Windows インストーラを使用すると、アプリケーションを自己完結型の実行可能ファイルとしてパッケージ化し、クライアントに簡単に配布して実行できます。 さらに、Windows インストーラは Windows と共にインストールされ、デスクトップ、スタート メニュー、およびコントロール パネルの [プログラム] との統合が可能になります。  
+ Windows インストーラーを使用すると、アプリケーションを自己完結型の実行可能ファイルとしてパッケージ化でき、容易にクライアントに配布して、実行できます。 さらに、Windows インストーラーは Windows と共にインストールされるため、デスクトップ、[スタート] メニュー、および [プログラム] コントロール パネルとの統合が可能です。  
   
- Windows インストーラは、アプリケーションのインストールとアンインストールを簡略化しますが、インストールされているアプリケーションをバージョン管理の観点から最新の状態に保つ機能は提供しません。  
+ Windows インストーラーでは、アプリケーションのインストールとアンインストールが単純化されますが、インストールされたアプリケーションをバージョン管理の観点から最新に保つ機能は提供されません。  
   
- Windows インストーラの詳細については、「 [Windows インストーラの展開](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)」を参照してください。
+ Windows インストーラーの詳細については、「[Windows インストーラー配置](/visualstudio/deployment/deploying-applications-services-and-components#create-an-installer-package-windows-desktop)」を参照してください。
   
 <a name="ClickOnce_Deployment"></a>
-### <a name="clickonce-deployment"></a>ClickOnce の配置  
- ClickOnce は、Web スタイル以外のアプリケーションに対する Web スタイルのアプリケーションの配置を有効にします。 アプリケーションは、Web サーバーまたはファイル サーバーに公開され、これらのサーバーから配置されます。 ClickOnce は、Windows インストーラでインストールされたアプリケーションが実行するクライアント機能の完全な範囲をサポートしていませんが、次のようなサブセットをサポートしています。  
+### <a name="clickonce-deployment"></a>ClickOnce 配置  
+ ClickOnce を使用すると、非 Web アプリケーションを Web スタイル アプリケーションと同じように配置できます。 アプリケーションは、Web サーバーまたはファイル サーバーに公開され、これらのサーバーから配置されます。 ClickOnce では、Windows インストーラーによってインストールされるアプリケーションでサポートされるような広い範囲のクライアント機能がサポートされるわけではありませんが、次のような機能がサポートされます。  
   
 - [スタート] メニューおよび [プログラム] コントロール パネルとの統合。  
   
@@ -60,64 +60,64 @@ Windows プレゼンテーション ファンデーション (WPF) アプリケ�
   
 - ファイル拡張子の登録。  
   
- ClickOnce の詳細については、「 [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
+ ClickOnce の詳細については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
   
 <a name="Deploying_WPF_Applications"></a>
 ## <a name="deploying-wpf-applications"></a>WPF アプリケーションの配置  
- WPF アプリケーションの配置オプションは、アプリケーションの種類によって異なります。 展開の観点から見ると、WPF には次の 3 つの重要なアプリケーションの種類があります。  
+ WPF アプリケーションの配置オプションは、アプリケーションの種類によって決まります。 配置の観点から見ると、WPF には次の 3 種類のアプリケーションがあります。  
   
 - スタンドアロン アプリケーション。  
   
 - マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーション。  
   
-- XAML ブラウザー アプリケーション (XBaPs)  
+- XAML ブラウザー アプリケーション (XBAP)。  
   
 <a name="Deploying_Standalone_Applications"></a>
 ### <a name="deploying-standalone-applications"></a>スタンドアロン アプリケーションの配置  
- スタンドアロン アプリケーションは、ClickOnce または Windows インストーラーを使用して展開されます。 いずれの場合も、スタンドアロン アプリケーションを実行するには、アプリケーションが完全に信頼されている必要があります。 完全な信頼は、Windows インストーラを使用して展開されるスタンドアロン アプリケーションに自動的に付与されます。 ClickOnce を使用して配置されたスタンドアロン アプリケーションには、自動的に完全な信頼が付与されません。 代わりに、スタンドアロン アプリケーションをインストールする前にユーザーが受け入れる必要があるセキュリティ警告ダイアログが表示されます。 受け入れた場合、スタンドアロン アプリケーションがインストールされ、完全な信頼が付与されます。 受け入れなかった場合、スタンドアロン アプリケーションはインストールされません。  
+ スタンドアロン アプリケーションは、ClickOnce または Windows インストーラーを使用して配置されます。 いずれの場合も、スタンドアロン アプリケーションを実行するには、アプリケーションが完全に信頼されている必要があります。 Windows インストーラーを使用して配置されたスタンドアロン アプリケーションには、完全な信頼が自動的に付与されます。 ClickOnce を使用して配置されたスタンドアロン アプリケーションには、完全な信頼は自動的に付与されません。 代わりに、スタンドアロン アプリケーションをインストールする前に、ClickOnce によって [セキュリティ警告] ダイアログが表示され、ユーザーがそれを受け入れる必要があります。 受け入れた場合、スタンドアロン アプリケーションがインストールされ、完全な信頼が付与されます。 受け入れなかった場合、スタンドアロン アプリケーションはインストールされません。  
   
 <a name="Deploying_Markup_Only_XAML_Applications"></a>
 ### <a name="deploying-markup-only-xaml-applications"></a>マークアップのみの XAML アプリケーションの配置  
- マークアップのみの[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページは、通常 HTML ページなどの Web サーバーに発行され、Internet Explorer を使用して表示できます。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、部分信頼セキュリティ サンドボックス内で実行され、インターネット ゾーン アクセス許可セットによって定義された制約が適用されます。 これにより、HTML ベースの Web アプリケーションと同等のセキュリティサンドボックスが提供されます。  
+ マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、通常、HTML ページと同様に Web サーバーに公開され、Internet Explorer を使用して表示できます。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、部分信頼セキュリティ サンドボックス内で実行され、インターネット ゾーン アクセス許可セットによって定義された制約が適用されます。 これにより、HTML ベースの Web アプリケーションと同等のセキュリティ サンドボックスが提供されます。  
   
  WPF アプリケーションのセキュリティの詳細については、「[セキュリティ](../security-wpf.md)」を参照してください。  
   
- マークアップのみの[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページは、XCopy または Windows インストーラを使用してローカル ファイル システムにインストールできます。 これらのページは、インターネット エクスプローラまたはエクスプローラを使用して表示できます。  
+ マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページは、XCopy または Windows インストーラーを使用してローカル ファイル システムにインストールできます。 これらのページは、Internet Explorer または Windows エクスプローラーを使用して表示できます。  
   
  XAML の詳細については、「[XAML の概要 (WPF)](../../../desktop-wpf/fundamentals/xaml.md)」を参照してください。  
   
 <a name="Deploying_XAML_Browser_Applications"></a>
 ### <a name="deploying-xaml-browser-applications"></a>XAML ブラウザー アプリケーションの配置  
- XBaps は、次の 3 つのファイルをデプロイする必要があるコンパイル済みアプリケーションです。  
+ XBAP は、次の 3 つのファイルを配置する必要があるコンパイル済みのアプリケーションです。  
   
-- *ApplicationName*.exe: 実行可能アセンブリのアプリケーション ファイル。  
+- *ApplicationName*.exe:実行可能アセンブリのアプリケーション ファイル。  
   
-- *ApplicationName*.xbap: 配置マニフェスト。  
+- *ApplicationName*.xbap:配置マニフェスト。  
   
-- *ApplicationName*.exe.manifest: アプリケーション マニフェスト。  
+- *ApplicationName*.exe.manifest:アプリケーション マニフェスト。  
   
 > [!NOTE]
 > 配置マニフェストおよびアプリケーション マニフェストの詳細については、「[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  
   
- これらのファイルは、XBAP が構築されるときに生成されます。 詳細については、「[方法: 新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))」を参照してください。 マークアップのみの[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページと同様に、XBaap は通常 Web サーバーに公開され、Internet Explorer を使用して表示されます。  
+ これらのファイルは、XBAP がビルドされるときに生成されます。 詳細については、[新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))」を参照してください。 マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ページと同様に、XBAP は、通常、Web サーバーに発行され、Internet Explorer を使用して表示されます。  
   
- XBaPs は、任意の展開手法を使用してクライアントに展開できます。 ただし、次の機能を提供するため、ClickOnce をお勧めします。  
+ XBAP は、任意の配置技術を使用してクライアントに配置できます。 ただし、次の機能を備えている ClickOnce をお勧めします。  
   
 1. 新しいバージョンが公開されたときの自動更新。  
   
-2. 完全信頼で実行されている XBAP の昇格特権。  
+2. 完全な信頼で実行する XBAP の特権の昇格。  
   
  既定では、ClickOnce は、.deploy 拡張子を持つアプリケーション ファイルを公開します。 これは問題になる可能性がありますが、無効にできます。 詳細については、「[ClickOnce 配置でのサーバーおよびクライアント構成の問題](/visualstudio/deployment/server-and-client-configuration-issues-in-clickonce-deployments)」を参照してください。  
   
- XAML ブラウザー アプリケーション (XAPS) の展開の詳細については、「 [WPF XAML ブラウザー アプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
+ XAML ブラウザー アプリケーション (XBAP) の配置の詳細については、「[WPF XAML ブラウザー アプリケーションの概要](wpf-xaml-browser-applications-overview.md)」を参照してください。  
   
 <a name="Installing__NET_Framework_3_0"></a>
 ## <a name="installing-the-net-framework"></a>.NET Framework のインストール  
- WPF アプリケーションを実行するには、クライアントに Microsoft .NET Framework をインストールする必要があります。 WPF ブラウザー でホストされているアプリケーションを表示すると、クライアントが .NET Framework と共にインストールされているかどうかが自動的に検出されます。 .NET Framework がインストールされていない場合は、インストールを求めるメッセージが表示されます。  
+ WPF アプリケーションを実行するには、クライアントに Microsoft .NET Framework がインストールされている必要があります。 Internet Explorer では、ブラウザーでホストされる WPF アプリケーションが表示されるとき、クライアントに .NET Framework がインストールされているかどうかが自動的に検出されます。 .NET Framework がインストールされていない場合は、Internet Explorer によってユーザーにインストールが求められます。  
   
- .NET Framework がインストールされているかどうかを検出するために、Internet Explorer には、次の拡張子を持つコンテンツ ファイルのフォールバック多目的インターネット メール拡張機能 (MIME) ハンドラーとして登録されているブートストラップ アプリケーションが含まれています。、および .アプリケーション。 これらのファイルの種類に移動し、.NET Framework がクライアントにインストールされていない場合、ブートストラップ アプリケーションはインストールのアクセス許可を要求します。 アクセス許可が与えられる場合は、.NET Framework もアプリケーションもインストールされません。  
+ .NET Framework がインストールされているかどうかを検出するために、Internet Explorer には、.xaml、.xps、および .application の拡張子を持つコンテンツ ファイルのフォールバック Multipurpose Internet Mail Extensions (MIME) ハンドラーとして登録されているブートストラップ アプリケーションが含まれています。 これらのファイルの種類に移動するとき、.NET Framework がクライアントにインストールされていなかった場合、ブートス トラップ アプリケーションによってインストールの許可を求められます。 許可が与えられなかった場合は、.NET Framework もアプリケーションもインストールされません。  
   
- アクセス許可が与えられている場合、Internet Explorer は、Microsoft バックグラウンド インテリジェント転送サービス (BITS) を使用して .NET Framework をダウンロードしてインストールします。 .NET Framework のインストールが成功すると、最初に要求されたファイルが新しいブラウザー ウィンドウで開かれます。  
+ 許可が与えられた場合、Internet Explorer では Microsoft バックグラウンド インテリジェント転送サービス (BITS) を使用して .NET Framework がダウンロードされ、インストールされます。 .NET Framework が正常にインストールされた後、最初に要求されたファイルが新しいブラウザー ウィンドウで開きます。  
   
  詳細については、「[.NET Framework およびアプリケーションの配置](../../deployment/index.md)」を参照してください。  
   

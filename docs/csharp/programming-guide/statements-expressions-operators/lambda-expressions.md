@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: c549b9fcc91401aed846afd39e656b60e16afb74
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937600"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82101996"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
 
@@ -230,7 +230,7 @@ customers.Where(c => c.City == "London");
 - [C# プログラミング ガイド](../index.md)
 - [統合言語クエリ (LINQ)](../concepts/linq/index.md)
 - [式ツリー](../concepts/expression-trees/index.md)
-- [ローカル関数とラムダ式の比較](../../local-functions-vs-lambdas.md)
+- [ローカル関数とラムダ式の比較](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
 - [暗黙的に型指定されるラムダ式](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# Samples (Visual Studio 2008 の C# サンプル) (LINQ サンプル クエリ ファイルと XQuery プログラムを参照してください)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Recursive lambda expressions (再帰的なラムダ式)](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

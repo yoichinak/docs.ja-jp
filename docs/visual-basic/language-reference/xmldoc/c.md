@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
 ms.openlocfilehash: 857ea1ccca4d74daf65bba03845004561afefd55
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74348511"
@@ -27,16 +27,16 @@ ms.locfileid: "74348511"
 |---|---|  
 |`text`|コードとして指定するテキストです。|  
   
-## <a name="remarks"></a>コメント  
- `<c>` タグを使用すると、説明内のテキストをコードとしてマークする必要があることを示すことができます。 複数行をコードとして指定する場合は、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグを使用します。  
+## <a name="remarks"></a>Remarks  
+ `<c>` タグを使用すると、説明内のテキストをコードとしてマークする必要があることを指定できます。 複数行をコードとして指定する場合は、[\<code>](../../../visual-basic/language-reference/xmldoc/code.md) タグを使用します。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
- この例では、summary セクションの `<c>` タグを使用して、`Counter` がコードであることを示します。  
+ この例では、summary セクションで `<c>` タグを使用して、`Counter` がコードであることを示します。  
   
  [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)

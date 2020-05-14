@@ -4,12 +4,12 @@ description: C# の Null 許容値型とその使用方法について説明し�
 ms.date: 11/04/2019
 helpviewer_keywords:
 - nullable value types [C#]
-ms.openlocfilehash: c13ef6a091ec6aebd4608c5ed8d2c03b067c7312
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: fcd49d7d25b0ad23363db8cb61596004b2e87a8d
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888073"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81738999"
 ---
 # <a name="nullable-value-types-c-reference"></a>null 許容値型 (C# リファレンス)
 
@@ -18,7 +18,7 @@ ms.locfileid: "80888073"
 > [!NOTE]
 > C# 8.0 で、Null 許容参照型機能が導入されました。 詳細については、「[null 許容参照型](nullable-reference-types.md)」を参照してください。 null 許容値型は、C# 2 から使用できます。
 
-null 許容値型は、ジェネリック <xref:System.Nullable%601?displayProperty=nameWithType> 構造体のインスタンスです。 `T` または `Nullable<T>` の代替可能な形式のいずれかで基になる型 `T?` を持つ null 許容値型を参照できます。
+null 許容値型は、ジェネリック <xref:System.Nullable%601?displayProperty=nameWithType> 構造体のインスタンスです。 `Nullable<T>` または `T?` の代替可能な形式のいずれかで基になる型 `T` を持つ null 許容値型を参照できます。
 
 null 許容値型は通常、基になる値型の未定義の値を表す必要があるときに使用します。 たとえば、ブール型 (`bool`) 変数で可能なのは、`true` または `false` のいずれかです。 ただし、一部のアプリケーションでは、変数の値が未定義または存在しない場合があります。 たとえば、データベース フィールドに、`true` または `false` が含まれている場合や、値がまったく含まれていない場合 (`NULL`) があります。 このシナリオでは、`bool?` 型を使用できます。
 
@@ -40,13 +40,13 @@ null 許容値型の変数の値を確認して取得するには、常に次の
 
 - <xref:System.Nullable%601.HasValue%2A?displayProperty=nameWithType> は、null 許容値型のインスタンスに、基になる型の値が含まれるかどうかを示します。
 
-- <xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> が <xref:System.Nullable%601.HasValue%2A> の場合、`true` は基になる型の値を取得します。 <xref:System.Nullable%601.HasValue%2A> が `false` の場合、<xref:System.Nullable%601.Value%2A> プロパティは <xref:System.InvalidOperationException> をスローします。
+- <xref:System.Nullable%601.HasValue%2A> が `true` の場合、<xref:System.Nullable%601.Value%2A?displayProperty=nameWithType> は基になる型の値を取得します。 <xref:System.Nullable%601.HasValue%2A> が `false` の場合、<xref:System.Nullable%601.Value%2A> プロパティは <xref:System.InvalidOperationException> をスローします。
 
 次の例では、`HasValue` プロパティを使用して、値を表示する前に変数に値が格納されているかどうかをテストします。
 
 [!code-csharp-interactive[use HasValue](snippets/NullableValueTypes.cs#HasValue)]
 
-次の例に示すように、`null` プロパティを使用する代わりに、null 許容値型の変数を `HasValue` と比較することもできます。
+次の例に示すように、`HasValue` プロパティを使用する代わりに、null 許容値型の変数を `null` と比較することもできます。
 
 [!code-csharp-interactive[use comparison with null](snippets/NullableValueTypes.cs#CompareWithNull)]
 
@@ -56,7 +56,7 @@ null 許容値型の値を null 非許容値型の変数に割り当てる場合
 
 [!code-csharp-interactive[?? operator](snippets/NullableValueTypes.cs#NullCoalescing)]
 
-[ の代わりに基になる値の型の](default-values.md)既定`null`値を使用する場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
+`null` の代わりに基になる値の型の[既定](default-values.md)値を使用する場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
 
 次の例に示すように、null 許容値型を null 非許容型に明示的にキャストすることもできます。
 
@@ -73,7 +73,7 @@ null 非許容値型 `T` は、対応する null 許容値型 `T?` に暗黙的�
 [!code-csharp[lifted operators](snippets/NullableValueTypes.cs#LiftedOperator)]
 
 > [!NOTE]
-> `bool?` 型の場合、定義済みの `&` および `|` 演算子は、このセクションで説明されている規則に従わないことに注意してください。オペランドの 1 つが `null` の場合も、演算子の評価の結果は null 以外である可能性があります。 詳細については、「[Boolean logical operators (ブール論理演算子)](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)」記事の「[Nullable Boolean logical operators (null 許容論理演算子)](../operators/boolean-logical-operators.md)」セクションを参照してください。
+> `bool?` 型の場合、定義済みの `&` および `|` 演算子は、このセクションで説明されている規則に従わないことに注意してください。オペランドの 1 つが `null` の場合も、演算子の評価の結果は null 以外である可能性があります。 詳細については、「[Boolean logical operators (ブール論理演算子)](../operators/boolean-logical-operators.md)」記事の「[Nullable Boolean logical operators (null 許容論理演算子)](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)」セクションを参照してください。
 
 [比較演算子](../operators/comparison-operators.md) `<`、`>`、`<=`、`>=` では、一方または両方のオペランドが `null` の場合、結果は `false` になります。それ以外の場合は、オペランドに含まれる値が比較されます。 ある比較 (たとえば、`<=`) から返される結果が `false` であっても、逆の比較 (`>`) から返される結果が `true` であるとは限りません。 次の例は、10 が
 
@@ -93,7 +93,7 @@ null 非許容値型 `T` は、対応する null 許容値型 `T?` に暗黙的�
 null 許容値型のインスタンス `T?` は、次のように[ボックス化](../../programming-guide/types/boxing-and-unboxing.md)されます。
 
 - <xref:System.Nullable%601.HasValue%2A> が `false` を返した場合は、null 参照が生成されます。
-- <xref:System.Nullable%601.HasValue%2A> が `true`を返した場合は、`T` のインスタンスではなく、基になる値型 <xref:System.Nullable%601> の対応する値がボックス化されます。
+- <xref:System.Nullable%601.HasValue%2A> が `true`を返した場合は、<xref:System.Nullable%601> のインスタンスではなく、基になる値型 `T` の対応する値がボックス化されます。
 
 次の例に示すように、値型 `T` のボックス化された値を、対応する null 許容値型 `T?` にボックス化解除できます。
 
@@ -101,13 +101,13 @@ null 許容値型のインスタンス `T?` は、次のように[ボックス�
 
 ## <a name="how-to-identify-a-nullable-value-type"></a>方法: null 許容値型を識別する
 
-次の例は、<xref:System.Type?displayProperty=nameWithType> インスタンスが構築された null 許容値型 (つまり、指定された型パラメーター <xref:System.Nullable%601?displayProperty=nameWithType> を使用する `T` 型) を表すかどうかを判断する方法を示しています。
+次の例は、<xref:System.Type?displayProperty=nameWithType> インスタンスが構築された null 許容値型 (つまり、指定された型パラメーター `T` を使用する <xref:System.Nullable%601?displayProperty=nameWithType> 型) を表すかどうかを判断する方法を示しています。
 
 [!code-csharp-interactive[whether Type is nullable](snippets/NullableValueTypes.cs#IsTypeNullable)]
 
-例で示されているとおり、[ インスタンスの作成には、](../operators/type-testing-and-cast.md#typeof-operator)typeof<xref:System.Type?displayProperty=nameWithType> 演算子を使用します。
+例で示されているとおり、<xref:System.Type?displayProperty=nameWithType> インスタンスの作成には、[typeof](../operators/type-testing-and-cast.md#typeof-operator) 演算子を使用します。
 
-インスタンスが null 許容値型かどうかを判断したい場合は、<xref:System.Object.GetType%2A?displayProperty=nameWithType> インスタンスが前述のコードでテストされるように、<xref:System.Type> メソッドは使用しないでください。 null 許容値型のインスタンスで <xref:System.Object.GetType%2A?displayProperty=nameWithType> メソッドを呼び出した場合、そのインスタンスは [ に](#boxing-and-unboxing)ボクシング<xref:System.Object>されます。 null 許容値型の null 以外のインスタンスのボックス化は、基になる型の値のボックス化と等しいので、<xref:System.Object.GetType%2A> は、null 許容値型の基になる型を表す <xref:System.Type> インスタンスを返します。
+インスタンスが null 許容値型かどうかを判断したい場合は、<xref:System.Type> インスタンスが前述のコードでテストされるように、<xref:System.Object.GetType%2A?displayProperty=nameWithType> メソッドは使用しないでください。 null 許容値型のインスタンスで <xref:System.Object.GetType%2A?displayProperty=nameWithType> メソッドを呼び出した場合、そのインスタンスは <xref:System.Object> に[ボクシング](#boxing-and-unboxing)されます。 null 許容値型の null 以外のインスタンスのボックス化は、基になる型の値のボックス化と等しいので、<xref:System.Object.GetType%2A> は、null 許容値型の基になる型を表す <xref:System.Type> インスタンスを返します。
 
 [!code-csharp-interactive[GetType example](snippets/NullableValueTypes.cs#GetType)]
 
@@ -132,7 +132,7 @@ null 許容値型のインスタンス `T?` は、次のように[ボックス�
 - [明示的な null 許容変換](~/_csharplang/spec/conversions.md#explicit-nullable-conversions)
 - [リフト変換演算子](~/_csharplang/spec/conversions.md#lifted-conversion-operators)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [What Exactly Does 'Lifted' mean? ('Lifted' の正確な意味)](https://docs.microsoft.com/archive/blogs/ericlippert/what-exactly-does-lifted-mean)

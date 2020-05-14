@@ -2,12 +2,12 @@
 title: 文字列補間 - C# チュートリアル
 description: このチュートリアルでは、C# で文字列補間機能を使用して、大きい文字列で書式設定された計算式の結果を含める方法を示します。
 ms.date: 10/23/2018
-ms.openlocfilehash: 593f3a77370da73dfd5f090be98112327b86b1f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d1b78670361e8b333499d12b68c0364ad9e40a85
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75346779"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82796055"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>文字列補間を使用し、書式設定された文字列を作成する
 
@@ -165,4 +165,4 @@ Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.3
 
 文字列補間のチュートリアルはこれで終了です。
 
-詳細については、[文字列補間](../../language-reference/tokens/interpolated.md)に関するトピックと「[C# における文字列補間](../../tutorials/string-interpolation.md)」チュートリアルを参照してください。
+詳細については、[文字列補間](../../language-reference/tokens/interpolated.md)に関するトピックと「[C# における文字列補間](../string-interpolation.md)」チュートリアルを参照してください。

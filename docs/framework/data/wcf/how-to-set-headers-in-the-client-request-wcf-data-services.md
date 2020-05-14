@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 3d55168d-5901-4f48-8117-6c93da3ab5ae
 ms.openlocfilehash: 9267f0e5b68823516764891a40e1435c1325b77f
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79174343"
 ---
 # <a name="how-to-set-headers-in-the-client-request-wcf-data-services"></a>方法: クライアント要求のヘッダーを設定する (WCF Data Services)
-オープン データ プロトコル (OData) をサポートするデータ サービスにアクセスするのには WCF データ サービス クライアント ライブラリを使用すると、クライアント ライブラリは自動的にデータ サービスに送信される要求メッセージに必要な HTTP ヘッダーを設定します。 ただし、クライアント ライブラリでは、データ サービスがクレーム ベース認証やクッキーを要求する場合など、特定の場合に必要とされるメッセージ ヘッダーを設定することはできません。 詳細については、「 [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication)」を参照してください。 このような場合は、要求メッセージを送信する前にそのメッセージ ヘッダーを手動で設定する必要があります。 このトピックの例では、<xref:System.Data.Services.Client.DataServiceContext.SendingRequest> イベントを処理して、要求メッセージをデータ サービスに送信する前に新しいヘッダーを要求メッセージに追加する方法を示します。  
+WCF Data Services クライアント ライブラリを使用して、Open Data Protocol (OData) をサポートするデータ サービスにアクセスする場合、クライアント ライブラリにより、データ サービスに送信される要求メッセージに必要な HTTP ヘッダーが自動的に設定されます。 ただし、クライアント ライブラリでは、データ サービスがクレーム ベース認証やクッキーを要求する場合など、特定の場合に必要とされるメッセージ ヘッダーを設定することはできません。 詳細については、「 [Securing WCF Data Services](securing-wcf-data-services.md#clientAuthentication)」を参照してください。 このような場合は、要求メッセージを送信する前にそのメッセージ ヘッダーを手動で設定する必要があります。 このトピックの例では、<xref:System.Data.Services.Client.DataServiceContext.SendingRequest> イベントを処理して、要求メッセージをデータ サービスに送信する前に新しいヘッダーを要求メッセージに追加する方法を示します。  
   
- このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスは、 WCF[データ サービスのクイック スタート](quickstart-wcf-data-services.md)を完了したときに作成されます。 OData Web サイトに公開されている[ノースウィンド サンプル データ サービス](https://services.odata.org/Northwind/Northwind.svc/)を使用することもできます。このサンプル データ サービスは読み取り専用であり、変更を保存しようとするとエラーが返されます。 OData Web サイトのサンプル データ サービスでは、匿名認証が許可されています。  
+ このトピックの例では、Northwind サンプル データ サービスおよび自動生成されたクライアント データ サービス クラスを使用します。 このサービスとクライアント データ クラスは、「[WCF Data Services クイックスタート](quickstart-wcf-data-services.md)」を完了すると作成されます。 OData の Web サイトで公開されている [Northwind サンプル データ サービス](https://services.odata.org/Northwind/Northwind.svc/)を使用することもできます。このサンプル データ サービスは読み取り専用で、変更を保存しようとするとエラーが返されます。 OData の Web サイトのサンプル データ サービスでは、匿名認証が許可されます。  
   
 ## <a name="example"></a>例  
  次の例では、<xref:System.Data.Services.Client.DataServiceContext.SendingRequest> イベントのハンドラーを登録し、データ サービスに対してクエリを実行します。  

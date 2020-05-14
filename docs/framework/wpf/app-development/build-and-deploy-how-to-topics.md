@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
 ms.openlocfilehash: e233b84da1bdecdbc0bdcf676c7bf39125ada6ca
 ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/29/2020
 ms.locfileid: "76870711"
 ---
-# <a name="build-and-deploy-how-to-topics"></a>ビルドと配置の方法に関するトピック
+# <a name="build-and-deploy-how-to-topics"></a>ビルドおよび配置に関する方法のトピック
 
-次のトピックでは、さまざまな [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの種類に対応したプロジェクトファイルを作成する方法について説明します。
+以下のトピックでは、さまざまな [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの種類に対応したプロジェクト ファイルを作成する方法が説明されています。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
@@ -31,5 +31,5 @@ ms.locfileid: "76870711"
 - [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)
 - [WPF アプリケーションの配置](deploying-a-wpf-application-wpf.md)
 - [チュートリアル: 初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [方法: 新しい WPF ブラウザーアプリケーションプロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))
+- [方法: 新しい WPF ブラウザー アプリケーション プロジェクトを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))
 - [インストールされている WPF のバージョンを確認する (.NET Framework 3.5)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa349641(v=vs.90))

@@ -7,23 +7,23 @@ dev_langs:
 ms.assetid: f08008a9-042e-4de9-94f3-4f0e502b1eb5
 ms.openlocfilehash: 9e8c4204b51121b147fc7614066d9b849a687574
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79151261"
 ---
 # <a name="datatable-edits"></a>DataTable の編集
-<xref:System.Data.DataRow> 内の列値を変更すると、その変更はすぐに行の現在の状態に反映されます。 <xref:System.Data.DataRowState>は Modified**に設定**され、変更は**DataRow**の<xref:System.Data.DataRow.AcceptChanges%2A>or<xref:System.Data.DataRow.RejectChanges%2A>メソッドを使用して受け入れられるか拒否されます。 **DataRow**には、編集中に行の状態を中断するために使用できる 3 つのメソッドも用意されています。 これらのメソッドとは、<xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> および <xref:System.Data.DataRow.CancelEdit%2A> です。  
+<xref:System.Data.DataRow> 内の列値を変更すると、その変更はすぐに行の現在の状態に反映されます。 次に、<xref:System.Data.DataRowState> は **Modified** に設定され、**DataRow** の <xref:System.Data.DataRow.AcceptChanges%2A> または <xref:System.Data.DataRow.RejectChanges%2A> メソッドを使用して、変更が承認または拒否されます。 **DataRow** では、行の編集中に、その行の状態を保留にしておくために使用できる 3 つのメソッドも提供されます。 これらのメソッドとは、<xref:System.Data.DataRow.BeginEdit%2A>、<xref:System.Data.DataRow.EndEdit%2A> および <xref:System.Data.DataRow.CancelEdit%2A> です。  
   
- **DataRow**の列の値を直接変更すると **、DataRow**は **、現在**のバージョン、**既定**の行、**および元**の行のバージョンを使用して列の値を管理します。 これらの行バージョンに加えて、 **BeginEdit**、 **EndEdit**、および**CancelEdit**メソッドは 4 行目のバージョンを使用します:**提案済み**。 行バージョンの詳細については、「[行の状態」および「行バージョン](row-states-and-row-versions.md)」を参照してください。  
+ **DataRow** の列値が直接変更されると、**DataRow** によって、**Current**、**Default**、**Original** の各行バージョンを使用して列値が管理されます。 **BeginEdit**、**EndEdit**、**CancelEdit** の各メソッドでは、これらの行バージョンに加えて、4 番目の行バージョンが使用されます: **Proposed**。 行バージョンについて詳しくは、「[行の状態とバージョン](row-states-and-row-versions.md)」をご覧ください。  
   
- **提案された**行のバージョンは **、BeginEdit**を呼び出すことによって開始し **、EndEdit**または**CancelEdit**を使用するか、**または AcceptChanges**または**RejectChanges**を呼び出すことによって終了する編集操作中に存在します。  
+ **Proposed** 行バージョンは、編集操作中に存在するバージョンです。編集操作は、**BeginEdit** への呼び出しによって開始し、**EndEdit** または **CancelEdit** の使用あるいは **AcceptChanges** または **RejectChanges** の呼び出しによって終了します。  
   
- 編集操作中に **、DataTable**の**ColumnChanged**イベントで**提案値**を評価することで、個々の列に検証ロジックを適用できます。 **イベント**は、変更されている列への参照と**提案された値**への参照を保持する**DataColumnChangeEventArgs**を保持します。 提示された値を評価した後で、値を変更するか、または編集をキャンセルできます。 編集が終了すると、行は**提案済み**状態から外れます。  
+ 編集操作中に、**DataTable** の **ColumnChanged** イベントで **ProposedValue** を評価することにより、個々の列に検証ロジックを適用できます。 **ColumnChanged** イベントは、変更されている列への参照および **ProposedValue** への参照を維持する **DataColumnChangeEventArgs** を保持します。 提示された値を評価した後で、値を変更するか、または編集をキャンセルできます。 編集が終了すると、行は **Proposed** 状態ではなくなります。  
   
- 編集内容を確認するには **、EndEdit**を呼び出すか **、CancelEdit**を呼び出してキャンセルすることができます。 **EndEdit**は編集内容を確認**しますが、****データセットは、AcceptChanges**が呼び出されるまで、実際には変更を受け入れません。 また **、EndEdit**または**CancelEdit**で編集を終了する前に**AcceptChanges**を呼び出すと、編集は終了し、**提案された**行の値は**現在**の行と**元**の行のバージョンの両方で受け入れられます。 同様に **、RejectChanges を**呼び出すと、編集が終了し、**現在**の行と**提案された**行のバージョンが破棄されます。 **AcceptChanges**または**RejectChanges**を呼び出した後に**EndEdit**または**CancelEdit**を呼び出しても、編集は既に終了しているため、何の効果もありません。  
+ **EndEdit** を呼び出すと編集内容を確定でき、**CancelEdit** を呼び出すと編集内容をキャンセルできます。 **EndEdit** は編集内容を確定しますが、**DataSet** は **AcceptChanges** が呼び出されるまでは実際には変更を受け入れません。 また、**EndEdit** または **CancelEdit** を使用して編集を終了する前に **AcceptChanges** を呼び出した場合は、編集が終了し、**Proposed** 行値が **Current** 行バージョンと **Original** 行バージョンの両方に受け入れられます。 同様に、**RejectChanges** を呼び出した場合も編集が終了し、**Current** 行バージョンと **Proposed** 行バージョンの両方が破棄されます。 **AcceptChanges** または **RejectChanges** を呼び出した後で **EndEdit** または **CancelEdit** を呼び出しても、編集が既に終了しているため、その呼び出しは無効になります。  
   
- 次の例は **、EndEdit**と**CancelEdit**で**BeginEdit**を使用する方法を示しています。 この例では **、ColumnChanged**イベントの**提案値**もチェックし、編集をキャンセルするかどうかを決定します。  
+ **BeginEdit**、**EndEdit**、および **CancelEdit** を使用する方法を次の例に示します。 この例では、**ColumnChanged** イベントで **ProposedValue** をチェックして、編集をキャンセルするかどうかを決定しています。  
   
 ```vb  
 Dim workTable As DataTable = New DataTable  

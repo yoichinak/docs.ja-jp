@@ -1,16 +1,16 @@
 ---
 title: 固定サイズ バッファー - C# プログラミング ガイド
-ms.date: 04/20/2018
+ms.date: 04/23/2020
 helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 6770497b23212f1786b4f4a620ed2b650079c44b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157027"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140554"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定サイズ バッファー (C# プログラミング ガイド)
 
@@ -38,15 +38,39 @@ private fixed char name[30];
 
 一般的な固定サイズの配列としては、他にも [bool](../../language-reference/builtin-types/bool.md) 配列があります。 `bool` 配列内の要素のサイズは常に 1 バイトです。 `bool` 配列は、ビット配列やバッファーの作成には適していません。
 
-> [!NOTE]
-> C# コンパイラおよび共通言語ランタイム (CLR) は、[stackalloc](../../language-reference/operators/stackalloc.md) を使って作成されたメモリを除き、バッファー オーバーランのセキュリティ チェックを実行しません。 その他のアンセーフ コードと同様、十分な注意が必要です。
+固定サイズ バッファーは <xref:System.Runtime.CompilerServices.UnsafeValueTypeAttribute?displayProperty=nameWithType>を使用してコンパイルされます。これにより、オーバーフローする可能性があるアンマネージド配列が型に含まれていることが共通言語ランタイム (CLR) に指示されます。 これは [stackalloc](../../language-reference/operators/stackalloc.md) を使用して作成されたメモリに似ています。これにより、CLR 内でバッファー オーバーラン検出機能が自動的に有効になります。 前の例では、`unsafe struct` に固定サイズ バッファーがどのようにして存在できるかを示しています。
 
-アンセーフ バッファーは、次の点で通常の配列とは異なります。
+```csharp
+internal unsafe struct Buffer
+{
+    public fixed char fixedBuffer[128];
+}
+```
 
-- アンセーフ バッファーの使用は、unsafe コンテキストに限られます。
-- アンセーフ バッファーは常にベクタ (1 次元配列) です。
-- 配列の宣言には要素数を指定する必要があります (例: `char id[8]`)。 `char id[]` は使用できません。
-- アンセーフ バッファーは、unsafe コンテキストで構造体のインスタンス フィールドとしてのみ使用できます。
+`Buffer` 用にコンパイラで生成された C# は、次のように属性が付けられます。
+
+```csharp
+internal struct Buffer
+{
+    [StructLayout(LayoutKind.Sequential, Size = 256)]
+    [CompilerGenerated]
+    [UnsafeValueType]
+    public struct <fixedBuffer>e__FixedBuffer
+    {
+        public char FixedElementField;
+    }
+
+    [FixedBuffer(typeof(char), 128)]
+    public <fixedBuffer>e__FixedBuffer fixedBuffer;
+}
+```
+
+固定サイズ バッファーは、次の点で通常の配列とは異なります。
+
+- [unsafe](../../language-reference/keywords/unsafe.md) のコンテキストでのみ使用できます。
+- 構造体のインスタンス フィールドのみを指定できます。
+- これらは常にベクター (1 次元配列) です。
+- 宣言には、`fixed char id[8]` などの長さを含める必要があります。 `fixed char id[]` は使用できません。
 
 ## <a name="see-also"></a>関連項目
 

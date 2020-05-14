@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
 ms.openlocfilehash: dd98b45d75ff421dc81666ed47695132a49bfa3a
 ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/17/2019
 ms.locfileid: "72524482"
@@ -24,26 +24,26 @@ ms.locfileid: "72524482"
   
 ## <a name="arguments"></a>引数  
  `fileList`  
- 必須です。 メタデータが含まれているものの、アセンブリマニフェストが含まれていないファイルのコンマ区切りのリスト。 スペースを含むファイル名は引用符 ("") で囲む必要があります。  
+ 必須です。 メタデータは含まれるが、アセンブリ マニフェストは含まれないファイルのコンマ区切りのリスト。 ファイル名に空白が含まれる場合は、名前を二重引用符 ("") で囲みます。  
   
 ## <a name="remarks"></a>Remarks  
- @No__t_0 パラメーターによって指定されたファイルは、`-target:module` オプションを使用して作成するか、または `-target:module` に相当する別のコンパイラを使用して作成する必要があります。  
+ `fileList` パラメーターで指定するファイルは、`-target:module` オプションを使用して作成するか、`-target:module` と同等の別のコンパイラを使用して作成する必要があります。  
   
- @No__t_0 で追加されるすべてのモジュールは、実行時に出力ファイルと同じディレクトリに存在する必要があります。 つまり、コンパイル時に任意のディレクトリにモジュールを指定できますが、モジュールは実行時にアプリケーションディレクトリに存在する必要があります。 そうでない場合は、<xref:System.TypeLoadException> エラーが発生します。  
+ `-addmodule` で追加したモジュールはすべて、実行時に出力ファイルと同じディレクトリに置かれている必要があります。 つまり、コンパイル時には任意のディレクトリからモジュールを指定できますが、実行時にはアプリケーション ディレクトリにこのモジュールが置かれている必要があります。 そうでない場合、<xref:System.TypeLoadException> エラーが発生します。  
   
- @No__t_2 で `-target:module` 以外の[ターゲット (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)オプションを (暗黙的または明示的に) 指定すると、`-addmodule` に渡すファイルはプロジェクトのアセンブリの一部になります。 @No__t_0 で追加された1つ以上のファイルを含む出力ファイルを実行するには、アセンブリが必要です。  
+ `-addmodule` で `-target:module` 以外の [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) オプションを (暗黙的または明示的に) 指定すると、`-addmodule` に渡すファイルはプロジェクトのアセンブリの一部になります。 `-addmodule` で追加された 1 つ以上のファイルを含む出力ファイルを実行するには、アセンブリが必要です。  
   
- アセンブリを含むファイルからメタデータをインポートするには、[-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)を使用します。  
+ アセンブリが含まれるファイルからメタデータをインポートするには、[-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) を使用します。  
   
 > [!NOTE]
-> @No__t_0 オプションは、Visual Studio 開発環境内からは使用できません。これは、コマンドラインからコンパイルする場合にのみ使用できます。  
+> `-addmodule` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードでは、モジュールを作成します。  
+ モジュールは、次のコード例で作成されます。  
   
  [!code-vb[VbVbalrCompiler#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#47)]  
   
- 次のコードは、モジュールの型をインポートします。  
+ 次のコードにより、モジュールの型がインポートされます。  
   
  [!code-vb[VbVbalrCompiler#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionStrictOff.vb#48)]  
   

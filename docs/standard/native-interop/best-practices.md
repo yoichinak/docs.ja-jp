@@ -4,7 +4,7 @@ description: .NET でネイティブ コンポーネントとやり取りする�
 ms.date: 01/18/2019
 ms.openlocfilehash: e5d96471e796dca712d25d2d9e2609508180d83f
 ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/30/2020
 ms.locfileid: "80391222"
@@ -27,7 +27,7 @@ ms.locfileid: "80391222"
 
 ## <a name="dllimport-attribute-settings"></a>dllImport 属性の設定
 
-| 設定 | Default | 推奨 | 詳細 |
+| 設定 | Default | 推奨事項 | 説明 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  既定値のままにします  | これが明示的に false に設定されている場合、失敗した HRESULT の戻り値は例外になります (そして結果として定義内の戻り値は null になります)。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API によって異なります  | API が GetLastError を使用し、Marshal.GetLastWin32Error を使用して値を取得する場合は、true に設定します。 API がエラーがあるという条件を設定している場合は、誤って上書きされないように他の呼び出しを行う前にエラーを取得します。|
@@ -36,22 +36,22 @@ ms.locfileid: "80391222"
 
 ## <a name="string-parameters"></a>文字列パラメーター
 
-CharSet が Unicode の場合または引数が  であり、"`[MarshalAs(UnmanagedType.LPWSTR)]` _かつ_" 文字列が (`ref` または `out` ではなく) 値で渡される場合、設定は固定され、ネイティブ コードから (コピーではなく) 直接使用されます。
+CharSet が Unicode の場合、または引数が明示的に `[MarshalAs(UnmanagedType.LPWSTR)]` とマークされていて、"_かつ_" 文字列が (`ref` または `out` ではなく) 値で渡される場合、文字列は固定され、ネイティブ コードから (コピーではなく) 直接使用されます。
 
 文字列の ANSI 処理が明示的に必要ではない限り、必ず `[DllImport]` を `Charset.Unicode` としてマークしてください。
 
-❌パラメータを使用`[Out] string`しないでください。 文字列がインターン処理された文字列で、文字列パラメーターが `[Out]` 属性の値で渡された場合、ランタイムが不安定になる可能性があります。 文字列のインターン処理の詳細については、<xref:System.String.Intern%2A?displayProperty=nameWithType> のドキュメントを参照してください。
+❌ 禁止: `[Out] string` パラメーターを使用しないでください。 文字列がインターン処理された文字列で、文字列パラメーターが `[Out]` 属性の値で渡された場合、ランタイムが不安定になる可能性があります。 文字列のインターン処理の詳細については、<xref:System.String.Intern%2A?displayProperty=nameWithType> のドキュメントを参照してください。
 
-❌パラメーター`StringBuilder`を避けます。 `StringBuilder` のマーシャリングによって "*常に*" ネイティブ バッファー コピーが作成されます。 そのため、非常に非能率的になる場合もあります。 その典型的なシナリオとして、文字列を受け取る Windows API を呼び出す場合があります。
+❌ 回避: `StringBuilder` パラメーターを使用しないようにします。 `StringBuilder` のマーシャリングによって "*常に*" ネイティブ バッファー コピーが作成されます。 そのため、非常に非能率的になる場合もあります。 その典型的なシナリオとして、文字列を受け取る Windows API を呼び出す場合があります。
 
-1. 必要な容量の SB を作成する (管理対象容量を割り当てる)**{1}**
-2. Invoke
-   1. ネイティブ バッファを割り当てます。**{2}**
-   2.  "`[In]` _(`StringBuilder` パラメーターの既定値)_" の場合、内容をコピーします
-   3. `[Out]` **{3} "** _(`StringBuilder` の既定値でもあります)_" の場合、ネイティブ バッファーを新しく割り当てられたマネージド配列にコピーします。
-3. `ToString()`さらに別のマネージ配列を割り当てます**{4}**
+1. 目的の容量の SB を作成します (管理容量を割り当てます) **{1}**
+2. 呼び出し
+   1. ネイティブ バッファーを割り当てます **{2}**
+   2. `[In]` " _(`StringBuilder` パラメーターの既定値)_ " の場合、内容をコピーします。
+   3. `[Out]` **{3}** " _(`StringBuilder` の既定値でもあります)_ " の場合、ネイティブ バッファーを新しく割り当てられたマネージド配列にコピーします。
+3. `ToString()` でさらに別のマネージド配列を割り当てます **{4}**
 
-これは、*{4}* ネイティブ コードから文字列を取得するための割り当てです。 これを制限するために最適な方法は、`StringBuilder` を別の呼び出しで再利用することですが、それでも *1* つの割り当てが節約されるだけです。 `ArrayPool` から文字バッファーを使用してキャッシュする方がはるかにお勧めです。以降の呼び出しでは `ToString()` の割り当てのみで済むようになります。
+これは、ネイティブ コードから文字列を取得する *{4}* の割り当てです。 これを制限するために最適な方法は、`StringBuilder` を別の呼び出しで再利用することですが、それでも *1* つの割り当てが節約されるだけです。 `ArrayPool` から文字バッファーを使用してキャッシュする方がはるかにお勧めです。以降の呼び出しでは `ToString()` の割り当てのみで済むようになります。
 
 `StringBuilder` に関するもう 1 つの問題は、戻り値のバッファーが常に最初の null までコピーされることです。 渡された文字列が null で終了していない場合、または null 終端文字列が 2 つある場合、よくても P/Invoke は不正確になります。
 
@@ -61,11 +61,11 @@ CharSet が Unicode の場合または引数が  であり、"`[MarshalAs(Unmana
 
 文字列のマーシャリングの詳細については、「[文字列に対する既定のマーシャリング](../../framework/interop/default-marshaling-for-strings.md)」と「[Customizing string marshalling (文字列のマーシャリングのカスタマイズ)](customize-parameter-marshaling.md#customizing-string-parameters)」を参照してください。
 
-> __ウィンドウ固有__文字列`[Out]`の場合、CLR`CoTaskMemFree`は既定で文字列を解放`SysStringFree`するか、または`UnmanagedType.BSTR`としてマークされている文字列に使用します。
-> **出力文字列バッファを持つほとんどの API の場合:** 渡された文字カウントには、NULL が含まれている必要があります。 返された値が、渡された文字数より少ない場合、呼び出しは成功し、値は末尾の null を "*除いた*" 文字数になります。 それ以外の場合、カウントは null 文字を "*含む*" バッファーの必要なサイズになります。
+> __Windows 固有__: `[Out]` 文字列の場合、CLR は文字列を解放するために既定で `CoTaskMemFree` を使用します。また、`UnmanagedType.BSTR` とマークされている文字列の場合は `SysStringFree` を使用します。
+> **出力文字列バッファーがあるほとんどの API の場合:** 渡される文字数には、常に null が含まれています。 返された値が、渡された文字数より少ない場合、呼び出しは成功し、値は末尾の null を "*除いた*" 文字数になります。 それ以外の場合、カウントは null 文字を "*含む*" バッファーの必要なサイズになります。
 >
-> - 5 を渡す、取得 4: 文字列は 4 文字の長さで、末尾の NULL が含まれます。
-> - 5を渡し、6を取得する:文字列は5文字の長さであり、ヌルを保持するために6文字のバッファが必要です。
+> - 5 を渡し、4 を受け取る:文字列の長さは 4 文字であり、末尾に null が付きます。
+> - 5 を渡し、6 を受け取る:文字列の長さは 5 文字であり、null を保持するために 6 文字のバッファーが必要です。
 > [Windows の文字列のデータ型](/windows/desktop/Intl/windows-data-types-for-strings)
 
 ## <a name="boolean-parameters-and-fields"></a>ブール型のパラメーターとフィールド
@@ -80,7 +80,7 @@ GUID はシグネチャに直接使用できます。 多くの Windows API は�
 |------|-------------|
 | `KNOWNFOLDERID` | `REFKNOWNFOLDERID` |
 
-❌GUID パラメータ`[MarshalAs(UnmanagedType.LPStruct)]`以外`ref`には使用しないでください。
+❌ 禁止: `ref` GUID パラメーター以外に `[MarshalAs(UnmanagedType.LPStruct)]` を使用しないでください。
 
 ## <a name="blittable-types"></a>blittable 型
 
@@ -88,7 +88,7 @@ blittable 型は、マネージド コードとネイティブ コードで同�
 
 **blittable 型:**
 
-- `byte`, `sbyte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `single`, `double`
+- `byte`、`sbyte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`single`、`double`
 - blittable 型の入れ子になっていない 1 次元配列 (たとえば `int[]`)
 - インスタンス フィールドに対して blittable 値型のみを持つ固定レイアウトの構造体とクラス
   - 固定レイアウトには `[StructLayout(LayoutKind.Sequential)]` または `[StructLayout(LayoutKind.Explicit)]` が必要です
@@ -100,7 +100,7 @@ blittable 型は、マネージド コードとネイティブ コードで同�
 
 **blittable の場合がある:**
 
-- `char`, `string`
+- `char`、`string`
 
 blittable 型が参照渡しされると、中間バッファーにコピーされるのではなく、マーシャラーによって単純に固定されます (クラスは本質的に参照渡しされ、構造体は `ref` または `out` と共に使用されるときに参照渡しされます)。
 
@@ -120,18 +120,18 @@ public struct UnicodeCharStruct
 
 ✔️ 実行: 可能な限り、構造体を blittable にします。
 
-詳細については、次を参照してください。
+詳細については次を参照してください:
 
 - [Blittable 型と非 Blittable 型](../../framework/interop/blittable-and-non-blittable-types.md)
-- [型マーシャリング](type-marshaling.md)
+- [型のマーシャリング](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>マネージド オブジェクトのキープ アライブ
 
 `GC.KeepAlive()` で、KeepAlive メソッドがヒットするまでオブジェクトをスコープ内に維持することができます。
 
-[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef)では、P/Invoke の間、マーシャラーはオブジェクトを存続させることができます。 メソッドのシグネチャで `IntPtr` の代わりに使用できます。 事実上、`SafeHandle` によってこのクラスは置き換えられるため、代わりに使用するようにします。
+[`HandleRef`](xref:System.Runtime.InteropServices.HandleRef) を使用すると、マーシャラーは P/Invoke の期間、オブジェクトの有効性を維持することができます。 メソッドのシグネチャで `IntPtr` の代わりに使用できます。 事実上、`SafeHandle` によってこのクラスは置き換えられるため、代わりに使用するようにします。
 
-[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle)では、マネージ オブジェクトを固定し、そのオブジェクトへのネイティブ ポインターを取得できます。 次に基本的なパターンを示します。
+[`GCHandle`](xref:System.Runtime.InteropServices.GCHandle) を使用すると、マネージド オブジェクトを固定し、そのオブジェクトへのネイティブ ポインターを取得できます。 次に基本的なパターンを示します。
 
 ```csharp
 GCHandle handle = GCHandle.Alloc(obj, GCHandleType.Pinned);
@@ -161,7 +161,7 @@ Windows API で一般的に使用されるデータ型と、Windows コードを
 
 次の型は、32 ビット版と 64 ビット版の Windows でサイズは同じですが、名前は異なります。
 
-| 幅 | Windows          | C (Windows)          | C#       | 代替手段                          |
+| 幅 | Windows          | C (Windows)          | C#       | 代替                          |
 |:------|:-----------------|:---------------------|:---------|:-------------------------------------|
 | 32    | `BOOL`           | `int`                | `int`    | `bool`                               |
 | 8     | `BOOLEAN`        | `unsigned char`      | `byte`   | `[MarshalAs(UnmanagedType.U1)] bool` |
@@ -215,11 +215,11 @@ blittable 型の構造体は、単純にマーシャリング層から直接使�
 
 ✔️ 実行: マネージド構造体を、公式のプラットフォーム ドキュメントまたはヘッダーで使用されているシェイプと名前にできるだけ厳密に一致させます。
 
-✔️ 実行: パフォーマンスを向上するには、blittable 型の構造体に `Marshal.SizeOf<MyStruct>()` ではなく C# の `sizeof()` を使用します。
+✔️ 実行: パフォーマンスを向上させるには、blittable 型の構造体に `Marshal.SizeOf<MyStruct>()` ではなく C# の `sizeof()` を使用します。
 
-❌構造体の`System.Delegate`関数`System.MulticastDelegate`ポインターフィールドを表すために、または フィールドを使用しないでください。
+❌ 回避: 構造体の関数ポインター フィールドを表すために `System.Delegate` または `System.MulticastDelegate` フィールドを使用しないようにしてください。
 
-必要<xref:System.Delegate?displayProperty=fullName>な<xref:System.MulticastDelegate?displayProperty=fullName>シグネチャを持たないため、渡されたデリゲートがネイティブ コードが期待するシグネチャと一致することを保証するものではありません。 さらに、.NET Framework および .NET Core では、ネイティブ表現`System.Delegate`を`System.MulticastDelegate`含む構造体をマネージ オブジェクトにマーシャリングすると、ネイティブ表現のフィールドの値がマネージ デリゲートをラップする関数ポインターでない場合、ランタイムが不安定化する可能性があります。 NET 5 以降のバージョンでは、ネイティブ表現`System.Delegate`から`System.MulticastDelegate`マネージ オブジェクトへの or フィールドのマーシャリングはサポートされていません。 または`System.MulticastDelegate`の代わりに特定の`System.Delegate`デリゲート型を使用します。
+<xref:System.Delegate?displayProperty=fullName> と <xref:System.MulticastDelegate?displayProperty=fullName> には必要なシグネチャがないため、渡されるデリゲートがネイティブ コードで想定されるシグネチャと一致するとは限りません。 さらに、.NET Framework と .NET Core では、`System.Delegate` または `System.MulticastDelegate` を含む構造体をそのネイティブ表現からマネージド オブジェクトにマーシャリングすると、ネイティブ表現のフィールドの値がマネージド デリゲートをラップする関数ポインターでない場合、ランタイムが不安定になる可能性があります。 .NET 5 以降のバージョンでは、ネイティブ表現からマネージ オブジェクトへの `System.Delegate` または `System.MulticastDelegate` フィールドのマーシャリングはサポートされていません。 `System.Delegate` または `System.MulticastDelegate` ではなく、特定のデリゲート型を使用してください。
 
 ### <a name="fixed-buffers"></a>固定バッファー
 

@@ -2,12 +2,12 @@
 title: switch 式 - C# リファレンス
 description: パターン マッチングとその他のデータ イントロスペクションに C# の switch 式を使用する方法について説明します
 ms.date: 03/19/2020
-ms.openlocfilehash: 9e609bcea0f92f492b5f9b07840e47f75c1b71e4
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f53cbe873c841271f64496e4e5ff1f11750c7b8a
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249760"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82140665"
 ---
 # <a name="switch-expression-c-reference"></a>switch 式 (C# リファレンス)
 

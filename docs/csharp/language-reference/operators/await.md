@@ -7,16 +7,16 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 9f541ae9c26eb12acdcf9a8c59bab98c4772c3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 83ee51fcbcc5911c688e30542cefb1c56578a578
+ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79173446"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82141025"
 ---
 # <a name="await-operator-c-reference"></a>await 演算子 (C# リファレンス)
 
-`await` 演算子では、そのオペランドによって表わされる非同期操作が完了するまで、外側の [async](../keywords/async.md) メソッドの評価が保留になります。 非同期操作が完了すると、`await` 演算子から演算の結果が返されます (結果がある場合)。 既に完了している操作を表わすオペランドに `await` 演算子が適用されると、外側のメソッドを保留にすることなく、演算の結果がすぐに返されます。 `await` 演算子では、async メソッドを評価するスレッドがブロックされません。 `await` 演算子によって外側の async メソッドが保留になるとき、メソッドの呼び出し元にコントロールが戻ります。
+`await` 演算子では、そのオペランドによって表わされる非同期操作が完了するまで、外側の [async](../keywords/async.md) メソッドの評価が保留になります。 非同期操作が完了すると、`await` 演算子から演算の結果が返されます (結果がある場合)。 既に完了している操作を表すオペランドに `await` 演算子が適用されると、外側のメソッドを保留にすることなく、演算の結果がすぐに返されます。 `await` 演算子では、async メソッドを評価するスレッドがブロックされません。 `await` 演算子によって外側の async メソッドが保留になるとき、メソッドの呼び出し元にコントロールが戻ります。
 
 次の例では、完了時にバイト配列を生成する非同期操作を表わす `Task<byte[]>` インスタンスが、<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> メソッドから返されます。 操作が完了するまで、`await` 演算子によって `DownloadDocsMainPageAsync` メソッドが保留になります。 `DownloadDocsMainPageAsync` が保留になると、`DownloadDocsMainPageAsync` の呼び出し元である `Main` メソッドにコントロールが返されます。 `DownloadDocsMainPageAsync` メソッドで実行される非同期操作の結果が必要になるまで `Main` メソッドが実行されます。 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> ですべてのバイトが得られると、`DownloadDocsMainPageAsync` メソッドの残りが評価されます。 その後、`Main` メソッドの残りが評価されます。
 

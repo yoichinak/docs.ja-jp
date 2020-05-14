@@ -1,18 +1,18 @@
 ---
 title: ref キーワード - C# リファレンス
-ms.date: 03/19/2020
+ms.date: 04/21/2020
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: d54d932ca96f1966ecc05a532a2468b7e16fac46
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.openlocfilehash: 07e1b49605c83908f7b9af25e0cb2599a97257c5
+ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805852"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82102074"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
@@ -21,7 +21,7 @@ ms.locfileid: "80805852"
 - メソッド シグネチャとメソッドの呼び出しで、参照によってメソッドに引数を渡します。 詳細については、「[参照渡しで引数を渡す](#passing-an-argument-by-reference)」を参照してください。
 - メソッド シグネチャで、参照渡しで呼び出し元に値を返します。 詳細については、[参照戻り値](#reference-return-values)に関するページを参照してください。
 - メンバーの本文で、参照戻り値が、呼び出し元によって変更される参照としてローカルに格納されること、または、通常はローカル変数が参照渡しによって別の値にアクセスすることを示します。 詳細については、「[ref ローカル変数](#ref-locals)」を参照してください。
-- `struct` の宣言で、`ref struct` または `readonly ref struct` を宣言します。 詳細については、「[ref 構造体型](#ref-struct-types)」を参照してください。
+- `struct` の宣言で、`ref struct` または `readonly ref struct` を宣言します。 詳細については、「[構造体型](../builtin-types/struct.md)」の記事の「[`ref` 構造体](../builtin-types/struct.md#ref-struct)」セクションを参照してください。
 
 ## <a name="passing-an-argument-by-reference"></a>参照渡しで引数を渡す
 
@@ -77,7 +77,7 @@ class CS0663_Example
   
 ## <a name="reference-return-values"></a>参照戻り値
 
-参照戻り値 (または ref 戻り値) は、メソッドから呼び出し元に参照渡しで返される値です。 つまり、呼び出し元はメソッドによって返される値を変更することができ、メソッドを格納するオブジェクトの状態にその変更が反映されます。
+参照戻り値 (または ref 戻り値) は、メソッドから呼び出し元に参照渡しで返される値です。 つまり、呼び出し元はメソッドによって返される値を変更することができ、呼び出し元メソッド内のオブジェクトの状態にその変更が反映されます。
 
 参照戻り値は `ref` キーワードを使用して以下に定義されます。
 
@@ -94,6 +94,10 @@ return ref DecimalArray[0];
 ```
 
 呼び出し元がオブジェクトの状態を変更するには、[ref ローカル変数](#ref-locals)として明示的に定義した変数に参照戻り値を格納する必要があります。
+
+次に、メソッド シグネチャとメソッド本体の両方を示す、より完全な ref 戻り値の例を示します。
+
+[!code-csharp[FindReturningRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#FindReturningRef "Find returning by reference")]
 
 呼び出されたメソッドによって、戻り値が `ref readonly` として宣言されて参照渡しで値が返されることもあり、返された値が呼び出し元のコードで変更できないように強制されることもあります。 呼び出し元のメソッドでは、ローカルの [ref readonly](#ref-readonly-locals) 変数に値を格納することで、返された値のコピーを回避できます。
 
@@ -136,23 +140,6 @@ ref readonly ローカルは、その署名に `ref readonly` があり、`retur
 呼び出し元が `GetBookByTitle` によって返される値を ref ローカル変数として格納する場合、呼び出し元が戻り値に加えた変更が `BookCollection` オブジェクトに反映されます。次の例を参照してください。
 
 [!code-csharp[csrefKeywordsMethodParams#6](~/samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/RefParameterModifier.cs#5)]
-
-## <a name="ref-struct-types"></a>ref 構造体型
-
-`ref` 修飾子を `struct` 宣言に追加すると、その型のインスタンスにはスタック割り当てが必須になるように定義されます。 言い換えると、そのような型のインスタンスを別のクラスのメンバーとしてヒープ上で作成することはできません。 この機能の第一の動機は <xref:System.Span%601> と関連構造でした。
-
-スタック割り当て変数として `ref struct` 型を維持する目的の下、すべての `ref struct` 型にコンパイラが適用する規則がいくつか導入されます。
-
-- `ref struct` はボックス化できません。 `object` 型、`dynamic` 型、またはあらゆるインターフェイス型の変数には、`ref struct` 型を割り当てることができません。
-- `ref struct` 型では、インターフェイスを実装できません。
-- クラスまたは通常構造体のフィールド メンバーとして `ref struct` を宣言することはできません。 これには、コンパイラで生成されたバッキング フィールドを作成する、自動実装プロパティの宣言が含まれます。
-- 非同期メソッドでは、`ref struct` 型のローカル変数を宣言できません。 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、`Task` のような型を返す同期メソッドで宣言できます。
-- 反復子で `ref struct` ローカル変数を宣言することはできません。
-- ラムダ式またはローカル関数で `ref struct` 変数をキャプチャすることはできません。
-
-これらの制約によって、誤って、マネージド ヒープに昇格させるような方法で `ref struct` を使用することが確実になくなります。
-
-修飾子を組み合わせ、構造体を `readonly ref` として宣言できます。 `readonly ref struct` では、`ref struct` 宣言と `readonly struct` 宣言の利点と制限が組み合わされます。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

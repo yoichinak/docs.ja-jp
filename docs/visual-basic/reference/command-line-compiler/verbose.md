@@ -8,13 +8,13 @@ helpviewer_keywords:
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
 ms.openlocfilehash: 8c5bc1d2ce331b8fe9461f91d64fbeab5a070b59
 ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/07/2019
 ms.locfileid: "72004977"
 ---
 # <a name="-verbose"></a>-verbose
-コンパイラによって、詳細なステータスとエラーメッセージが生成されます。  
+コンパイラによって詳細なステータス メッセージとエラー メッセージが生成されるようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -24,16 +24,16 @@ ms.locfileid: "72004977"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 `-verbose` を指定すると `-verbose+` を指定した場合と同じになり、詳細なメッセージが生成されます。このオプションの既定値は `-verbose-` です。  
+ 任意。 `-verbose` を指定することは、`-verbose+` を指定することと同じです。これにより、コンパイラで詳細なメッセージが出力されます。 このオプションの既定値は `-verbose-` です。  
   
-## <a name="remarks"></a>コメント  
- `-verbose` オプションを指定すると、コンパイラが生成したエラーの総数についての情報、モジュールが読み込んでいるアセンブリ、および現在コンパイルされているファイルが表示されます。
+## <a name="remarks"></a>Remarks  
+ `-verbose` オプションでは、コンパイラによって発行されたエラーの合計数に関する情報を表示し、どのアセンブリがモジュールに読み込まれているかを報告します。また、どのファイルが現在コンパイルされているかを表示します。  
   
 > [!NOTE]
-> `-verbose` オプションは Visual Studio の開発環境内からは利用できません。このオプションを利用できるのは、コマンド ラインからコンパイルする場合のみです。  
+> `-verbose` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
   
 ## <a name="example"></a>例  
- 次のコードは `In.vb` をコンパイルし、詳細な状態情報を表示するようにコンパイラに指示します。  
+ 次のコードでは `In.vb` がコンパイルされ、詳細情報を表示するようにコンパイラに指示されます。  
   
 ```console  
 vbc -verbose in.vb  
@@ -41,5 +41,5 @@ vbc -verbose in.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic コマンドラインコンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイルコマンドラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

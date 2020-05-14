@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
 ms.openlocfilehash: e1e7f2d0fb06599f83ba224ed52a10429d9b11fe
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74346957"
@@ -28,7 +28,7 @@ ms.locfileid: "74346957"
  `description`  
  説明です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  `<exception>` タグを使用して、スローできる例外を指定します。 このタグは、メソッドの定義に適用されます。  
   
  コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  

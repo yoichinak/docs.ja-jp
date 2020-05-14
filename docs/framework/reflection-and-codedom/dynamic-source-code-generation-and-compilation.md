@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 ms.openlocfilehash: 7379bac07de9b78369d3742fa3288f6fea6a573f
 ms.sourcegitcommit: 8c99457955fc31785b36b3330c4ab6ce7984a7ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 12/29/2019
 ms.locfileid: "75544989"
 ---
-# <a name="compile-and-generate-dynamic-source-code"></a>動的なソースコードのコンパイルと生成
+# <a name="compile-and-generate-dynamic-source-code"></a>動的なソース コードをコンパイルして生成する
 
 .NET Framework には、CodeDOM (Code Document Object Model) と呼ばれるメカニズムが備わっています。CodeDOM を使用すると、ソース コードを出力するプログラム開発者は、レンダリング対象となるコードを表す単一のモデルに基づいて、実行時に複数のプログラミング言語でソース コードを生成することができます。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "75544989"
 
   CodeDOM の一般的な使用方法を説明し、CodeDOM を使って簡単なオブジェクト グラフを構築する例を示します。  
   
-- [ソースコードを生成し、CodeDOM グラフからプログラムをコンパイルする](generating-and-compiling-source-code-from-a-codedom-graph.md)  
+- [CodeDOM グラフからソース コードを生成してプログラムをコンパイルする](generating-and-compiling-source-code-from-a-codedom-graph.md)  
 
   ソース コードを生成する方法と、生成されたコードを `System.CodeDom.Compiler` 名前空間で定義されているクラスを使って外部コンパイラでコンパイルする方法について説明します。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "75544989"
 
   CodeDOM を使用して XML ドキュメントのコメント付きのコードを生成する方法、および生成されたコードをコンパイルして XML ドキュメントとして出力する方法について説明します。  
   
-- [方法 : CodeDOM を使用してクラスを作成する](how-to-create-a-class-using-codedom.md)  
+- [方法: CodeDOM を使用してクラスを作成する](how-to-create-a-class-using-codedom.md)  
 
   CodeDOM を使用してフィールド、プロパティ、メソッド、コンストラクター、およびエントリ ポイントを持つクラスを生成する方法を説明します。  
   
-## <a name="reference"></a>参照先  
+## <a name="reference"></a>関連項目  
 
 - <xref:System.CodeDom>  
 
@@ -59,4 +59,4 @@ ms.locfileid: "75544989"
   
 ## <a name="related-sections"></a>関連項目  
 
-- [Codedom クイックリファレンス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))を使用すると、開発者は、ソースコード要素を表す codedom 要素をすばやく見つけることができます。
+- 「[CodeDOM クイック リファレンス](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))」では、ソース コードの要素を表す CodeDOM 要素を簡単に検索するための方法が提供されています。

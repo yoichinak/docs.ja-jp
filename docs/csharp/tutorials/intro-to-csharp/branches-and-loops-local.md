@@ -3,18 +3,18 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: 44b634e3c2120116ee7fd66770398a6b66c8ed8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8c10a7462b7c27c5353aee6d957732a8d161015
+ms.sourcegitcommit: 8b02d42f93adda304246a47f49f6449fc74a3af4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73739130"
+ms.lasthandoff: 04/24/2020
+ms.locfileid: "82135946"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
 このチュートリアルでは、変数を調べ、その変数に基づいて実行パスを変更するコードを記述する方法について説明します。 C# コードを記述し、コードをコンパイルおよび実行して結果を確認します。 チュートリアルには、C# における分岐構造とループ構造を確認する一連のレッスンが含まれています。 これらのレッスンでは、C# 言語の基本を説明します。
 
-このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、[開発ツールの概要](local-environment.md)のページと詳細へのリンクをご覧ください。
+このチュートリアルでは、開発用に使用できるマシンがあることを想定しています。 Windows、Linux、または macOS 上でローカルの開発環境を設定する手順については、.NET チュートリアル [Hello World in 10 minutes](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro) (10 分で Hello World) に記載されています。 使用するコマンドの概要については、詳細な情報へのリンクが掲載されている、[開発ツールに対する理解を深める](local-environment.md)方法に関するページをご覧ください。
 
 ## <a name="make-decisions-using-the-if-statement"></a>`if` ステートメントを使用した条件判定
 
@@ -35,7 +35,7 @@ if (a + b > 10)
     Console.WriteLine("The answer is greater than 10.");
 ```
 
-コンソール ウィンドウで「`dotnet run`」と入力し、このコードを試します。 "The answer is greater than 10."(答えは 10 を超えています)というメッセージが コンソールに出力されるはずです。
+コンソール ウィンドウで「`dotnet run`」と入力し、このコードを試します。 "答えは 10 を超えています" というメッセージが コンソールに出力されるはずです。
 
 合計が 10 未満になるように `b` の宣言を変更します。
 
@@ -127,7 +127,7 @@ else
 
 `a`、`b`、および `c`の値を変更し、探索する `&&` と `||` を切り替えます。 `&&` 演算子と `||` 演算子がどのように機能するかをより深く理解できます。
 
-最初の手順が完了しました。 次のセクションを開始する前に、現在のコードを別のメソッドに移動してみましょう。 移動しておくと、新しい例で作業を開始するときに楽になります。 `Main` メソッドの名前を `ExploreIf` に変更し、`Main` を呼び出す新しい `ExploreIf` メソッドを記述します。 完成したコードは次のようになります。
+最初の手順が完了しました。 次のセクションを開始する前に、現在のコードを別のメソッドに移動してみましょう。 移動しておくと、新しい例で作業を開始するときに楽になります。 `Main` メソッドの名前を `ExploreIf` に変更し、`ExploreIf` を呼び出す新しい `Main` メソッドを記述します。 完成したコードは次のようになります。
 
 ```csharp
 using System;
@@ -204,7 +204,7 @@ while (counter < 10)
 
 `while` ステートメントは、条件を確認して `while` に続くステートメントまたはステートメント ブロックを実行します。 条件が false になるまで、条件の確認とステートメントの実行を繰り返します。
 
-この例では、もう 1 つ新しい演算子が使用されています。 `++` 変数のあとにある `counter` は、**インクリメント**演算子です。 `counter` の値に 1 を足し、その値を `counter` 変数に格納します。
+この例では、もう 1 つ新しい演算子が使用されています。 `counter` 変数のあとにある `++` は、**インクリメント**演算子です。 `counter` の値に 1 を足し、その値を `counter` 変数に格納します。
 
 > [!IMPORTANT]
 > コードを実行したときに `while` のループ条件が false に切り替わることを確認してください。 それ以外の場合は、プログラムが終了することのない**無限ループ**を作成します。 **CTRL-C** またはその他の方法でプログラムを強制的に終了する必要があるため、このサンプルでは実践しません。
@@ -247,6 +247,42 @@ for (int index = 0; index < 10; index++)
 - 条件を変更して別の値で停止する。
 
 完了したら次に進み、学習したことを使用して自分でいくつかのコードを記述してみましょう。
+
+## <a name="created-nested-loops"></a>入れ子になったループの作成
+
+`while`、`do` または `for` ループを別のループ内に入れ子にして、外側のループの各項目を内側のループの各項目と組み合わせて使用してマトリックスを作成することができます。 行と列を表す一連の英数字ペアを作成してみましょう。
+
+1 つの `for` ループで行を生成できます。
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    Console.WriteLine($"The row is {row}");
+}
+```
+
+別のループで列を生成できます。
+
+```csharp
+for (char column = 'a'; column < 'k'; column++)
+{
+    Console.WriteLine($"The column is {column}");
+}
+```
+
+一方のループをもう一方のループ内に入れ子にして、ペアを形成することができます。
+
+```csharp
+for (int row = 1; row < 11; row++)
+{
+    for (char column = 'a'; column < 'k'; column++)
+    {
+        Console.WriteLine($"The cell is ({row}, {column})");
+    }
+}
+```
+
+外側のループは、内側のループが完全に実行されるたびに 1 回インクリメントされることがわかります。 行と列の入れ子を逆にし、自分で変更を確認します。
 
 ## <a name="combine-branches-and-loops"></a>分岐とループの組み合わせ
 

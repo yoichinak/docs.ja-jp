@@ -7,27 +7,27 @@ dev_langs:
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
 ms.openlocfilehash: d7328949e3eb4822b1a645bb5f0c1866f01ecb0a
 ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/15/2020
 ms.locfileid: "81389742"
 ---
-# <a name="consume-a-dataset-from-an-xml-web-service"></a>XML Web サービスからのデータセットの使用
+# <a name="consume-a-dataset-from-an-xml-web-service"></a>XML Web サービスからの DataSet の使用
 
-<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **DataSet**は、XML Web サービスからクライアントに**DataSet**の内容をストリーム処理するために追加のコーディングを必要とせずに、XML Web サービスへの入力または出力として指定できる点で「シリアル化可能」です。 **データセット**は、DiffGram 形式を使用して XML ストリームに暗黙的に変換され、ネットワーク経由で送信され、受信側の**DataSet**として XML ストリームから再構築されます。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、「 [DiffGrams](diffgrams.md)」を参照してください。  
+<xref:System.Data.DataSet> は、非接続型デザインで設計されています。インターネットで簡単にデータを転送するのが目的の一部です。 **DataSet** は、**DataSet** の内容を XML Web サービスからクライアントに (およびその逆方向に) ストリーム転送するためのコードを追加せずに XML Web サービスへの入力または出力として指定できるという点で、"シリアル化可能" です。 **DataSet** は、DiffGram 形式を使用して暗黙に XML ストリームに変換され、ネットワーク経由で送信されます。その後、受信側で XML ストリームから **DataSet** として再構築されます。 これにより、XML Web サービスを使用してリレーショナル データを送信および返送する、たいへん簡単で柔軟性のある方法が提供されます。 DiffGram 形式の詳細については、「[DiffGrams](diffgrams.md)」を参照してください。  
   
- 次の例は **、DataSet**を使用してリレーショナル データ (変更されたデータを含む) を転送し、更新を元のデータ ソースに解決する XML Web サービスとクライアントを作成する方法を示しています。  
+ **DataSet** を使用してリレーショナル データ (変更データを含む) を転送し、更新内容を元のデータ ソースに反映させる XML Web サービスと XML Web サービスのクライアントを作成する手順を次の例に示します。  
   
 > [!NOTE]
-> XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することをお勧めします。 XML Web サービスのセキュリティ保護については、「 [ASP.NET を使用して作成された XML Web サービスのセキュリティ保護](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))」を参照してください。  
+> XML Web サービスを作成する場合は、常にセキュリティへの影響を考慮することをお勧めします。 XML Web サービスのセキュリティ保護については、「[ASP.NET を使用して作成した XML Web サービスのセキュリティ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))」を参照してください。  
   
 ## <a name="create-an-xml-web-service"></a>XML Web サービスの作成
   
 1. XML Web サービスを作成します。  
   
-     この例では、データを返す XML Web サービス (この場合は**Northwind**データベースの顧客の一覧) を作成し、データの更新を伴う**DataSet**を受信します。  
+     この例では、データ (ここでは、**Northwind** データベースの顧客リスト) を返し、元のデータ ソースに反映させるデータ更新が格納されている **DataSet** を受け取る XML Web サービスを作成します。  
   
-     XML Web サービスは、顧客の一覧を返す**GetCustomers**と、更新をデータ ソースに戻す**更新**プログラムを返すという 2 つのメソッドを公開します。 この XML Web サービスは、Web サーバー上の DataSetSample.asmx というファイルに格納されます。 次のコードは、DataSetSample.asmx の内容の概要を示しています。  
+     この XML Web サービスでは 2 つのメソッドが公開されています。顧客リストを返す **GetCustomers** と、更新をデータ ソースに反映させる **UpdateCustomers** です。 この XML Web サービスは、Web サーバー上の DataSetSample.asmx というファイルに格納されます。 次のコードは、DataSetSample.asmx の内容の概要を示しています。  
   
     ```vb  
     <% @ WebService Language = "vb" Class = "Sample" %>  
@@ -158,13 +158,13 @@ ms.locfileid: "81389742"
     }  
     ```  
   
-     一般的なシナリオでは、**オ**プティミスティック同時実行制御違反をキャッチするメソッドが記述されます。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック同時実行制御の詳細については、「[オプティミスティック同時実行制御](../optimistic-concurrency.md)」を参照してください。  
+     代表的なシナリオでは、**UpdateCustomers** メソッドはオプティミスティック コンカレンシー違反をキャッチするように記述されます。 説明を簡単にするために、この例では UpdateCustmoers メソッドを省略しています。 オプティミスティック コンカレンシーについて詳しくは、「[オプティミスティック コンカレンシー](../optimistic-concurrency.md)」を参照してください。  
   
 2. XML Web サービス プロキシを作成します。  
   
      XML Web サービスのクライアントは、公開されたメソッドを使用するために SOAP プロキシを必要とします。 このプロキシは、Visual Studio を使用して生成することができます。 Visual Studio から既存の Web サービスへの Web 参照を設定することにより、この手順で説明されているすべての動作が自動的に実行されます。 プロキシ クラスを手動で作成する場合は、後述の手順を参照してください。 ほとんどの場合、Visual Studio による、クライアント アプリケーションのプロキシ クラスの作成で十分です。  
   
-     プロキシは、Web サービス記述言語ツールを使用して作成できます。 たとえば、XML Web サービスが URL`http://myserver/data/DataSetSample.asmx`で公開されている場合は、次のようなコマンドを実行して **、名前空間が WebData.DSSample**の Visual Basic .NET プロキシを作成し、sample.vb ファイルに格納します。  
+     プロキシは、Web サービス記述言語ツールを使用して作成できます。 たとえば、XML Web サービスを `http://myserver/data/DataSetSample.asmx` の URL に公開する場合は、次のようなコマンドを実行して、名前空間 **WebData.DSSample** を指定した Visual Basic .NET プロキシを作成し、それをファイル sample.vb に格納します。  
   
     ```console
     wsdl /l:VB -out:sample.vb http://myserver/data/DataSetSample.asmx /n:WebData.DSSample  
@@ -190,11 +190,11 @@ ms.locfileid: "81389742"
   
 3. XML Web サービスのクライアントを作成します。  
   
-     Visual Studio で Web サービス プロキシ クラスを生成する場合は、クライアント プロジェクトを作成し、[ソリューション エクスプローラー] ウィンドウでプロジェクトを右クリックし、[**Add** > **サービス参照**の追加] を選択します。 [**サービス参照の追加**] ダイアログ ボックスで、[**詳細設定**] をクリックし **、[Web 参照の追加**] を選択します。 使用可能な Web サービスの一覧から Web サービスを選択します (Web サービスが現在のソリューションまたは現在のコンピューターで使用できない場合は、Web サービス エンドポイントのアドレスを指定する必要があります)。 上記の手順に従って、XML Web サービス プロキシを作成した場合は、それをクライアント コードにインポートし、XML Web サービスのメソッドを処理できます。
+     Visual Studio で Web サービスのプロキシ クラスを生成する場合は、クライアント プロジェクトを作成し、ソリューション エクスプローラー ウィンドウで、そのプロジェクトを右クリックし、 **[追加]**  >  **[サービス参照]** を選択します。 **[サービス参照の追加]** ダイアログ ボックスで、 **[詳細設定]** を選択し、 **[Web 参照の追加]** を選択します。 使用可能な Web サービスの一覧から Web サービスを選択します (ただし、Web サービスが現行ソリューション内または現在のコンピューター上で使用できない場合は、Web サービス エンドポイントのアドレスを指定する必要があります)。 (上記の手順に従って) XML Web サービス プロキシを作成した場合は、それをクライアント コードにインポートし、XML Web サービスのメソッドを処理できます。
 
-     次のサンプル コードは、プロキシ ライブラリをインポートし **、GetCustomers を**呼び出して顧客の一覧を取得し、新しい顧客を追加してから、**更新**プログラムを含**む DataSet**を返します。  
+     プロキシ ライブラリをインポートし、**GetCustomers** を呼び出して顧客リストを取得し、新しい顧客を追加した後、更新内容が格納された **DataSet** を **UpdateCustomers** に返すサンプル コードを次に示します。  
   
-     この例では、変更**DataSet**された行のみを UpdateCustomers に渡す必要があるため **、DataSet.GetChanges**から返されるデータセットを**UpdateCustomers**に渡します。 **UpdateCustomers** **UpdateCustomers は**解決済みの**DataSet**を返し、既存の**データセット**に**マージ**して、解決済みの変更と更新プログラムの行エラー情報を組み込むことができます。 次のコードは、Visual Studio を使用して Web 参照を作成し、[Web**参照の追加**] ダイアログ ボックスで Web 参照を DsSample に変更したことを前提としています。  
+     この例では、変更された行だけを **UpdateCustomers** に渡す必要があるため、**UpdateCustomers** には、**DataSet.GetChanges** によって返された **DataSet** が渡されます。 **UpdateCustomers** は解決された **DataSet** を返します。その後、この DataSet を既存の **DataSet** に **Merge** して、解決された変更と更新からの行エラー情報を取り込むことができます。 次のコードは、Visual Studio を使用して Web 参照が作成済みで、かつ、 **[Web 参照の追加]** ダイアログ ボックスでその Web 参照の名前が DsSample に変更済みであることが前提となっています。  
   
     ```vb  
     Imports System  

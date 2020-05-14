@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 2c521ef33c98234dac5f4b819a800cd524218462
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79151157"
 ---
 # <a name="diffgrams"></a>DiffGrams
-DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。  では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 DiffGram<xref:System.Data.DataSet>として書き込まれると、**元**の行バージョンと**現在**の行バージョンの列値、行エラー情報、および行の順序を含め<xref:System.Data.DataSet>、 の内容を正確に再作成するために必要なすべての情報が DiffGram に設定されます。  
+DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。 <xref:System.Data.DataSet> では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 DiffGram として作成された <xref:System.Data.DataSet> は、スキーマを使用せずに <xref:System.Data.DataSet> の内容を正確に再作成するために必要なすべての情報を DiffGram に格納します。このような情報には、**Original** 行バージョンと **Current** 行バージョンの両方の列値、行エラー情報、行順序などが含まれています。  
   
- XML Web サービスから <xref:System.Data.DataSet> を送信または取得するときには、DiffGram 形式が暗黙的に使用されます。 また **、ReadXml**メソッドを使用して<xref:System.Data.DataSet>XML からコンテンツを読み込む場合、または**WriteXml**メソッドを<xref:System.Data.DataSet>使用して XML の内容を書き込むときに、内容を DiffGram として読み取りまたは書き込むことを指定できます。 詳細については、「 [XML からのデータセットの読み込み](loading-a-dataset-from-xml.md)」および「 XML[データとしてのデータセットの内容の書き込み](writing-dataset-contents-as-xml-data.md)」を参照してください。  
+ XML Web サービスから <xref:System.Data.DataSet> を送信または取得するときには、DiffGram 形式が暗黙的に使用されます。 また、**ReadXml** メソッドを使用して XML から <xref:System.Data.DataSet> の内容を読み取るときや、**WriteXml** メソッドを使用して XML に <xref:System.Data.DataSet> の内容を書き込むときは、読み取りまたは書き込みの形式として DiffGram を指定できます。 詳細については、「[XML からの DataSet の読み込み](loading-a-dataset-from-xml.md)」および「[DataSet 内容の XML データとしての書き込み](writing-dataset-contents-as-xml-data.md)」を参照してください。  
   
  .NET Framework では、DiffGram 形式は主に <xref:System.Data.DataSet> の内容をシリアル化するときの形式として使用されますが、Microsoft SQL Server データベース内のテーブル データを変更するときにも DiffGrams を使用できます。  
   
- Diffgram は、すべてのテーブルの内容を**\<diffgram>** 要素に書き込むと生成されます。  
+ Diffgram は、すべてのテーブルの内容を **\<diffgram>** 要素に書き込むことによって生成されます。  
   
 ### <a name="to-generate-a-diffgram"></a>Diffgram を生成するには  
   
@@ -24,9 +24,9 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
 2. リストの各テーブルとその子孫について、すべての行の現在のバージョンを最初の Diffgram セクションに書き込みます。  
   
-3. <xref:System.Data.DataSet>の各テーブルに対して、すべての行の元のバージョン (存在する場合) を Diffgram の**\<前>** セクションに書き出します。  
+3. <xref:System.Data.DataSet> の各テーブルについて、すべての行の元のバージョン (存在する場合) を Diffgram の **\<before>** セクションに書き込みます。  
   
-4. エラーがある行の場合は、エラーの内容を Diffgram の**\<エラー>** セクションに書き込みます。  
+4. エラーのある行については、そのエラーの内容を Diffgram の **\<errors>** セクションに書き込みます。  
   
  Diffgram は XML ファイルの上から下に向かって処理されます。  
   
@@ -34,17 +34,17 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
 1. Diffgram の最初のセクションを処理します。このセクションには、行の現在のバージョンが格納されています。  
   
-2. 変更された行と削除**\<** された行の元の行バージョンを含む 2 番目または前のセクション>処理します。  
+2. 2 番目のセクションまたは **\<before>** セクションを処理します。このセクションには、修正または削除された行の元のバージョンが格納されています。  
   
     > [!NOTE]
     > 行が削除済みとしてマークされていた場合、削除操作によってその行の子孫も削除される場合があります。この点は、現在の `Cascade` の <xref:System.Data.DataSet> プロパティに依存します。  
   
-3. セクションの**\<エラー>** 処理します。 このセクションの各項目について、指定された行および列のエラー情報を設定します。  
+3. **\<errors>** セクションを処理します。 このセクションの各項目について、指定された行および列のエラー情報を設定します。  
   
 > [!NOTE]
 > <xref:System.Data.XmlWriteMode> を Diffgram に設定した場合、ターゲット <xref:System.Data.DataSet> の内容が、元の <xref:System.Data.DataSet> の内容と異なる場合があります。  
   
-## <a name="diffgram-format"></a>DiffGram の書式  
+## <a name="diffgram-format"></a>DiffGram 形式  
  DiffGram 形式は、現在のデータ、元のデータ (または前のデータ)、エラーの 3 つのセクションから構成されています。DiffGram の例を次に示します。  
   
 ```xml  
@@ -67,37 +67,37 @@ DiffGram は、データ要素の現在のバージョンと元のバージョ�
   
  DiffGram 形式を構成するデータ ブロックについて次に説明します。  
   
- **\<**  ***データインスタンス***  **>**  
- この要素の名前***DataInstance***は、このドキュメントで説明するために使用されます。 要素***は***、<xref:System.Data.DataSet>または の行を<xref:System.Data.DataTable>表します。 要素には *、 または*の名前<xref:System.Data.DataSet>が含まれます<xref:System.Data.DataTable>。 DiffGram 形式のこのブロックには現在のデータが含まれています。現在のデータは、変更されている場合と未変更の場合があります。 変更された要素または行は **、diffgr:hasChanges**アノテーションで識別されます。  
+ **\<**  ***DataInstance***  **>**  
+ この要素の名前 ***DataInstance*** は、このドキュメントでの説明用に使用するものです。 ***DataInstance*** 要素は、<xref:System.Data.DataTable> の <xref:System.Data.DataSet> または行を表します。 実際には *DataInstance* の代わりに、<xref:System.Data.DataSet> または <xref:System.Data.DataTable> の名前がこの要素に含まれます。 DiffGram 形式のこのブロックには現在のデータが含まれています。現在のデータは、変更されている場合と未変更の場合があります。 変更されている要素 (行) を識別するため、このような要素には **diffgr:hasChanges** 注釈が付きます。  
   
- **\<diffgr:>する前に**  
- DiffGram 形式のこのブロックには、行の元の内容が含まれています。 このブロック内の要素は **、diffgr:id**注釈を使用して***DataInstance***ブロック内の要素と照合されます。  
+ **\<diffgr:before>**  
+ DiffGram 形式のこのブロックには、行の元の内容が含まれています。 このブロックの要素は、**diffgr:id** 注釈を使用して ***DataInstance*** ブロックの内容と対応しています。  
   
- **\<diffgr:エラー>**  
- DiffGram 形式のこのブロックには ***、DataInstance***ブロック内の特定の行のエラー情報が含まれています。 このブロック内の要素は **、diffgr:id**注釈を使用して***DataInstance***ブロック内の要素と照合されます。  
+ **\<diffgr:errors>**  
+ DiffGram 形式のこのブロックには、***DataInstance*** ブロックの特定の行に関するエラー情報が含まれています。 このブロックの要素は、**diffgr:id** 注釈を使用して ***DataInstance*** ブロックの内容と対応しています。  
   
-## <a name="diffgram-annotations"></a>DiffGram の注釈  
+## <a name="diffgram-annotations"></a>DiffGram 注釈  
  DiffGram では、<xref:System.Data.DataSet> の行バージョンやエラー情報を表すさまざまな DiffGram ブロックの要素を関連付けるため、いくつかの注釈が使用されます。  
   
- 次の表に、DiffGram 名前空間**urn:schemas-microsoft-com:xml-diffgram-v1**で定義されている DiffGram 注釈について説明します。  
+ DiffGram 名前空間 **urn:schemas-microsoft-com:xml-diffgram-v1** で定義されている DiffGram 注釈を次の表に示します。  
   
-|Annotation|説明|  
+|注釈|説明|  
 |----------------|-----------------|  
-|**id**|**\<** **>** **diffgr:before>と diffgr:errors>ブロック内の要素を DataInstance ブロック内の要素にペアに\<** するのに使用されます。 ** \<** ***DataInstance*** **diffgr:id**アノテーションを持つ値は *、[テーブル名][RowIdentifier]* という形式です。 例: `<Customers diffgr:id="Customers1">`。|  
-|**Parentid**|現在の要素の**\<** 親要素である***DataInstance*****>** ブロックの要素を識別します。 **diffgr:parentId**アノテーションを持つ値は *、[テーブル名][行識別子]* という形式です。 例: `<Orders diffgr:parentId="Customers1">`。|  
-|**hasChanges**|**\<** ***DataInstance*****>** ブロック内の行を変更済みとして識別します。 **hasChanges**アノテーションには、次の 2 つの値のいずれかを指定できます。<br /><br /> **挿入**<br /> **追加された**行を識別します。<br /><br /> **変更**<br /> ** \<diffgr: before**ブロック内の**オリジナル**行バージョンを含む**変更された**行>識別します。 **削除された**行は**\<diffgr: before>** ブロックに**オリジナル**行バージョンを持ちますが ***、DataInstance*****>** ブロックには**\<** 注釈付き要素はありません。|  
-|**hasErrors**|**\<*****データ インスタンス*****>** ブロック内の行を **、行エラー**で識別します。 エラー要素は**\<diffgr:errors>** ブロックに配置されます。|  
-|**エラー**|** \<diffgr:errors>** ブロック内の特定の要素の**RowError**のテキストが含まれています。|  
+|**ID**|**\<diffgr:before>** ブロックと **\<diffgr:errors>** ブロックの要素を、 **\<** ***DataInstance*** **>** ブロックの要素とペアにするために使用されます。 **diffgr:id** 注釈の値は *[TableName][RowIdentifier]* という形式で指定されます。 たとえば、`<Customers diffgr:id="Customers1">` のように指定します。|  
+|**parentId**|現在の要素の親要素である **\<** ***DataInstance*** **>** ブロックの要素を識別します。 **diffgr:parentId** 注釈の値は *[TableName][RowIdentifier]* という形式で指定されます。 たとえば、`<Orders diffgr:parentId="Customers1">` のように指定します。|  
+|**hasChanges**|**\<** ***DataInstance*** **>** ブロックの行を変更済みとして識別します。 **hasChanges** 注釈には、次の 2 つのうち、いずれかの値を指定できます。<br /><br /> **inserted**<br /> **Added** 行を識別します。<br /><br /> **modified**<br /> **Original** 行バージョンが **\<diffgr:before>** ブロックに含まれている **Modified** 行を識別します。 **Deleted** 行の場合、対応する **Original** 行バージョンが **\<diffgr:before>** ブロックには存在しますが、 **\<** ***DataInstance*** **>** ブロックには注釈付き要素が存在しないことに注意してください。|  
+|**hasErrors**|**\<** ***DataInstance*** **>** ブロック内で **RowError** がある行を識別します。 エラー要素は **\<diffgr:errors>** ブロックに挿入されます。|  
+|**エラー**|**\<diffgr:errors>** ブロック内の特定の要素に関する **RowError** のテキストが含まれています。|  
   
- <xref:System.Data.DataSet> の内容が DiffGram として読み取られる、または書き込まれるときには、上記以外の注釈も含まれます。 次の表に、名前空間 urn で定義されているこれらの追加の注釈について**説明します。**  
+ <xref:System.Data.DataSet> の内容が DiffGram として読み取られる、または書き込まれるときには、上記以外の注釈も含まれます。 名前空間 **urn:schemas-microsoft-com:xml-msdata** で定義されている追加の注釈を次の表に示します。  
   
-|Annotation|説明|  
+|注釈|説明|  
 |----------------|-----------------|  
 |**RowOrder**|元のデータの行順序を保持し、特定の <xref:System.Data.DataTable> の行のインデックスを識別します。|  
-|**[非表示]**|列マッピング**プロパティが** **MappingType.Hidden**に設定されていると識別します。 属性は **、msdata:hidden** *[列名]*="*値*"の形式で書き込まれます。 例: `<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">`。<br /><br /> データが格納されている隠し列だけが DiffGram 属性として書き込まれます。 それ以外の場合は、無視されます。|  
+|**[非表示]**|特定の列を **ColumnMapping** プロパティが **MappingType.Hidden** に設定されている列として識別します。 この属性は、**msdata:hidden** *[ColumnName]* ="*value*" という形式で書き込まれます。 たとえば、`<Customers diffgr:id="Customers1" msdata:hiddenContactTitle="Owner">` のように指定します。<br /><br /> データが格納されている隠し列だけが DiffGram 属性として書き込まれます。 それ以外の場合は無視されます。|  
   
 ## <a name="sample-diffgram"></a>DiffGram のサンプル  
- DiffGram 形式の例を次に示します。 この例では、変更のコミット前のテーブル内の行に対する更新結果が示されています。 CustomerID の "ALFKI" である行は変更されていますが、更新されていません。 その結果 ***、DataInstance*****>** ブロック内に 「Customers1」 の**diffgr:id** **\<** を持つ**現在**の行と**\<、diffgr:in diffgr: 前の>** ブロックに "Customers1" の**diffgr:id**を持つ**元**の行があります。 "ANATR" の CustomerID を持つ行には**RowError**が含まれるため、`diffgr:hasErrors="true"`この行にはアノテーションが付けられており**\<、diffgr:errors>** ブロックに関連する要素があります。  
+ DiffGram 形式の例を次に示します。 この例では、変更のコミット前のテーブル内の行に対する更新結果が示されています。 CustomerID の "ALFKI" である行は変更されていますが、更新されていません。 このため、 **\<** ***DataInstance*** **>** ブロックに **diffgr:id** が "Customers1" の **Current** 行があり、 **\<diffgr:before>** ブロックに **diffgr:id** が "Customers1" の **Original** 行があります。 CustomerID が "ANATR" である行には **RowError** が含まれているため、この行には `diffgr:hasErrors="true"` という注釈が付いています。 **\<diffgr:errors>** ブロックに、この行に関連する要素があります。  
   
 ```xml  
 <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">  

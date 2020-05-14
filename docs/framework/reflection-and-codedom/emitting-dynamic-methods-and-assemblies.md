@@ -9,7 +9,7 @@ helpviewer_keywords:
 - assemblies [.NET Framework], emitting dynamic assemblies
 ms.openlocfilehash: fda5a20eb7798086ec10415889454b4a8beba5f3
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79180529"
@@ -34,22 +34,22 @@ ms.locfileid: "79180529"
   
 <xref:System.Reflection.Emit> 名前空間のマネージド型に加えて、アンマネージド メタデータ インターフェイスもあります。これについては、[メタデータ インターフェイス](../unmanaged-api/metadata/metadata-interfaces.md)に関するリファレンス ドキュメントを参照してください。 マネージド リフレクション出力は、アンマネージド メタデータ インターフェイスよりも強力なセマンティック エラー チェック機能、より高水準なメタデータの抽象化クラスを提供します。  
   
-メタデータと MSIL を使用する際に役立つリソースとしては、他に、共通言語基盤 (CLI: Common Language Infrastructure) のドキュメント、特に「Partition II: Metadata Definition and Semantics」と「Partition III: CIL Instruction Set」などもあります。 このドキュメントは[、Ecma の Web サイト](https://www.ecma-international.org/publications/standards/Ecma-335.htm)でオンラインで入手できます。  
+メタデータと MSIL を使用する際に役立つリソースとしては、他に、共通言語基盤 (CLI: Common Language Infrastructure) のドキュメント、特に「Partition II:Metadata Definition and Semantics」(パーティション II: メタデータの定義とセマンティクス) および「Partition III:CIL Instruction Set」(パーティション III: CIL 命令セット) を参照してください。 このドキュメントは、オンラインの [Ecma の Web サイト](https://www.ecma-international.org/publications/standards/Ecma-335.htm)で参照できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容
   
-[リフレクション出力におけるセキュリティの問題](security-issues-in-reflection-emit.md)  
+[リフレクション出力のセキュリティ関連事項](security-issues-in-reflection-emit.md)  
 リフレクション出力を使用した動的アセンブリの作成時のセキュリティ関連事項について説明します。  
 
-[方法 : 動的メソッドを定義および実行する](how-to-define-and-execute-dynamic-methods.md)クラスのインスタンスにバインドされた単純な動的メソッドと動的メソッドを実行する方法を示します。
+[方法: 動的メソッドを定義および実行する](how-to-define-and-execute-dynamic-methods.md) 単純な動的メソッドと、クラスのインスタンスにバインドされた動的メソッドを実行する方法について説明します。
 
-[方法 : リフレクション出力を使用してジェネリック型を定義する](how-to-define-a-generic-type-with-reflection-emit.md)2 つの型パラメーターを持つ単純なジェネリック型を作成する方法、クラス、インターフェイス、および特殊制約を型パラメーターに適用する方法、およびクラスの型パラメーターをパラメーター型および戻り値の型として使用するメンバーを作成する方法について説明します。
+[方法: リフレクション出力を使用してジェネリック型を定義する](how-to-define-a-generic-type-with-reflection-emit.md) 2 つの型パラメーターを持つ単純なジェネリック型を作成する方法、クラス制約、インターフェイス制約、特殊な制約を型パラメーターに適用する方法、パラメーターの型や戻り値の型としてクラスの型パラメーターを使用するメンバーを作成する方法を紹介します。
 
-[方法 : リフレクション出力を使用してジェネリック メソッドを定義する](how-to-define-a-generic-method-with-reflection-emit.md)単純なジェネリック メソッドを作成、出力、および呼び出す方法について説明します。
+[方法: リフレクション出力を使用してジェネリック メソッドを定義する](how-to-define-a-generic-method-with-reflection-emit.md) 単純なジェネリック メソッドを作成、出力、および呼び出す方法を示します。
 
-[動的型生成用の収集可能アセンブリ](collectible-assemblies.md)作成されたアプリケーション ドメインをアンロードせずにアンロードできる動的アセンブリである、収集可能なアセンブリを紹介します。
+[動的な型生成のための収集可能なアセンブリ](collectible-assemblies.md) そのアセンブリが作成されたアプリケーション ドメインをアンロードせずにアンロードできる動的アセンブリである、収集可能なアセンブリについて説明します。
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
 
 <xref:System.Reflection.Emit.OpCodes>  
 メソッド本体の構築に使用できる MSIL 命令コードのカタログを作成します。  
@@ -65,7 +65,7 @@ ms.locfileid: "79180529"
   
 ## <a name="related-sections"></a>関連項目  
 
-[反射](reflection.md)  
+[リフレクション](reflection.md)  
 メタデータとマネージド コードの探索方法について説明します。  
   
 [.NET のアセンブリ](../../standard/assembly/index.md)  

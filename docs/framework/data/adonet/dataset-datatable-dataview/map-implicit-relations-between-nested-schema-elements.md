@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 6b25002a-352e-4d9b-bae3-15129458a355
 ms.openlocfilehash: dc5b81fd06f2860283c8c5fa028af4b945e2b1e9
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79150964"
@@ -14,15 +14,15 @@ XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入
   
 - 複合型 (親および子) それぞれに対して 1 つのテーブル。  
   
-- 親に UNIQUE 制約が存在しない場合は *、TableName*という名前のテーブル定義ごとに 1 つの追加の主キー列_Id *TableName*が親テーブルの名前になります。  
+- 親に一意制約がない場合、テーブル定義ごとに 1 つの、*TableName*_Id という名前の追加主キー列。*TableName* は親テーブルの名前です、  
   
-- 追加の列を主キーとして識別する親テーブルの主キー制約 ( **IsPrimaryKey**プロパティを**True**に設定して ) 制約には、Constraint\# (\# は、1、2、3 など) という名前が付けられます。 たとえば、最初の制約の既定の名前は Constraint1 となります。  
+- 追加された列を主キーとする、親テーブルに対する主キー制約 (**IsPrimaryKey** プロパティを **True** に設定することで)。 制約には、Constraint\# (\# は、1、2、3 など) という名前が付けられます。 たとえば、最初の制約の既定の名前は Constraint1 となります。  
   
-- 子テーブルの外部キー制約により、追加された列が親テーブルの主キーを参照する外部キーとして認識されます。 制約は、*親テーブル*の名前が親テーブルの名前、子テーブルの名前である*場合**、ParentTable_ChildTable*名前が付けられます。  
+- 子テーブルの外部キー制約により、追加された列が親テーブルの主キーを参照する外部キーとして認識されます。 制約には *ParentTable_ChildTable* という名前が付けられます。ここで、*ParentTable* は親テーブルの名前、*ChildTable* は子テーブルの名前です。  
   
 - その結果、親テーブルと子テーブル間のデータが関連付けられます。  
   
- 次の例は **、OrderDetail**が**Order**の子要素であるスキーマを示しています。  
+ **OrderDetail** が **Order** 要素の子要素であるスキーマの例を次に示します。  
   
 ```xml  
 <xs:schema id="MyDataSet" xmlns=""
@@ -54,16 +54,16 @@ XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入
 </xs:schema>  
 ```  
   
- XML スキーマ マッピング プロセスでは **、DataSet**に次の情報が作成されます。  
+ XML スキーマ マッピング処理によって **DataSet** に作成される内容は、次のとおりです。  
   
-- **注文テーブル**と**注文明細**テーブル。  
+- **Order** および **OrderDetail** テーブル。  
   
     ```text  
     Order(OrderNumber, EmpNumber, Order_Id)  
     OrderDetail(OrderNo, ItemNo, Order_Id)  
     ```  
   
-- **Order**テーブルの一意性制約。 **プロパティが** **True**に設定されていることを確認します。  
+- **Order** テーブルの一意制約。 **IsPrimaryKey** プロパティが **True** に設定されることに注意してください。  
   
     ```text  
     ConstraintName: Constraint1  
@@ -73,7 +73,7 @@ XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入
     IsPrimaryKey: True  
     ```  
   
-- **OrderDetail**テーブルの外部キー制約。  
+- **OrderDetail** テーブルの外部キー制約。  
   
     ```text  
     ConstraintName: Order_OrderDetail  
@@ -84,7 +84,7 @@ XML スキーマ言語定義 (XSD) スキーマでは、複数の複合型を入
     RelatedColumns: Order_Id
     ```  
   
-- **Order**テーブルと**OrderDetail**テーブルの間のリレーションシップ。 このリレーションシップの**入れ子になった**プロパティは **、Order**要素と**OrderDetail**要素がスキーマ内で入れ子になっているため **、True**に設定されます。  
+- **Order** テーブルと **OrderDetail** テーブルの間のリレーションシップ。 スキーマの **Order** 要素と **OrderDetail** 要素が入れ子になっているため、このリレーションシップの **Nested** プロパティは **True** に設定されます。  
   
     ```text  
     ParentTable: Order  

@@ -28,7 +28,7 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 ms.openlocfilehash: d64e3b5201e34541fdafa5724b0c7e8c3f6c0c0d
 ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/13/2020
 ms.locfileid: "81243051"
@@ -50,10 +50,10 @@ ms.locfileid: "81243051"
 
 ## <a name="resource-naming-conventions"></a>リソースの名前付け規則
 
-アプリケーションのリソースをパッケージ化するときは、共通言語ランタイムで想定されているリソース名前付け規則を使って、リソースに名前を付ける必要があります。 ランタイムは、そのカルチャ名でリソースを識別します。 各カルチャには一意の名前が指定されています。通常は、言語に関連付けられた小文字 2 文字のカルチャ名と、必要に応じて、国または地域に関連付けられた大文字 2 文字のサブカルチャ名を組み合わせたものです。 カルチャ名の後にダッシュ (-) で区切ってサブカルチャ名は記述します。 日本で話される日本語は ja-JP、米国で話される英語は en-US、ドイツで話されるドイツ語は de-DE、オーストリアで話されるドイツ語は de-AT などとなります。 [Windows でサポートされている言語/地域名の一覧](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)の「**Language tag (言語タグ)**」列をご覧ください。 カルチャ名は、[BCP 47](https://tools.ietf.org/html/bcp47) によって定義されている標準に準拠します。
+アプリケーションのリソースをパッケージ化するときは、共通言語ランタイムで想定されているリソース名前付け規則を使って、リソースに名前を付ける必要があります。 ランタイムは、そのカルチャ名でリソースを識別します。 各カルチャには一意の名前が指定されています。通常は、言語に関連付けられた小文字 2 文字のカルチャ名と、必要に応じて、国または地域に関連付けられた大文字 2 文字のサブカルチャ名を組み合わせたものです。 カルチャ名の後にダッシュ (-) で区切ってサブカルチャ名は記述します。 日本で話される日本語は ja-JP、米国で話される英語は en-US、ドイツで話されるドイツ語は de-DE、オーストリアで話されるドイツ語は de-AT などとなります。 [Windows でサポートされている言語/地域名の一覧](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c)の「**Language tag (言語タグ)** 」列をご覧ください。 カルチャ名は、[BCP 47](https://tools.ietf.org/html/bcp47) によって定義されている標準に準拠します。
 
 > [!NOTE]
-> 中国語 (簡体字) など`zh-Hans`、2 文字のカルチャ名には例外があります。
+> 中国語 (簡体字) の `zh-Hans` など、2 文字のカルチャ名にはいくつかの例外があります。
 
 > [!NOTE]
 > リソース ファイルの作成については、「[リソース ファイルの作成](creating-resource-files-for-desktop-apps.md)」および「[サテライト アセンブリの作成](creating-satellite-assemblies-for-desktop-apps.md)」をご覧ください。
@@ -71,7 +71,7 @@ ms.locfileid: "81243051"
 .NET Framework のリソース フォールバック プロセスには次の手順が含まれます。
 
 > [!TIP]
-> リソース フォールバック プロセスおよびランタイムがリソース アセンブリをプローブするプロセスを最適化するのに[は、相対 BindForResources>構成要素を使用できます。 \<](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 詳しくは、「[リソース フォールバック プロセスの最適化](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)」セクションをご覧ください。
+> [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 構成要素を使うことで、リソース フォールバック プロセスおよびランタイムがリソース アセンブリをプローブするプロセスを、最適化できる場合があります。 詳しくは、「[リソース フォールバック プロセスの最適化](packaging-and-deploying-resources-in-desktop-apps.md#Optimizing)」セクションをご覧ください。
 
 1. ランタイムは最初に、[グローバル アセンブリ キャッシュ](../app-domains/gac.md)で、アプリケーションに対して要求されたカルチャと一致するアセンブリを調べます。
 
@@ -116,7 +116,7 @@ ms.locfileid: "81243051"
 
 - アプリケーションのコードは、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントを処理しません。
 
-次の例に示すように、[\<相対 BindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md)要素を含め、その`enabled`属性を`true`アプリケーション構成ファイルに設定することで、サテライト アセンブリのプローブを最適化します。
+次の例に示すように、アプリケーション構成ファイルで [\<relativeBindForResources>](../configure-apps/file-schema/runtime/relativebindforresources-element.md) 要素を指定し、その `enabled` 属性を `true` に設定することにより、サテライト アセンブリのプローブを最適化します。
 
 ```xml
 <configuration>
@@ -231,7 +231,7 @@ Bon jour!
 
 ## <a name="see-also"></a>関連項目
 
-- [デスクトップ アプリのリソース](index.md)
+- [デスクトップ アプリケーションのリソース](index.md)
 - [グローバル アセンブリ キャッシュ](../app-domains/gac.md)
 - [リソース ファイルの作成](creating-resource-files-for-desktop-apps.md)
 - [サテライト アセンブリの作成](creating-satellite-assemblies-for-desktop-apps.md)

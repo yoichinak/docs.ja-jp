@@ -7,7 +7,7 @@ dev_langs:
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
 ms.openlocfilehash: 159b23eb4ef5ca38ebce6e488080d315ec3be081
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79151183"
@@ -15,9 +15,9 @@ ms.locfileid: "79151183"
 # <a name="defining-primary-keys"></a>主キーの定義
 通常、データベース テーブルには、テーブル内の各行を一意に識別する単一の列または複数の列があります。 行を識別するこのような列を、主キーと呼びます。  
   
- として単<xref:System.Data.DataColumn>一<xref:System.Data.DataTable.PrimaryKey%2A><xref:System.Data.DataTable>のを指定すると、テーブルは自動的に false<xref:System.Data.DataColumn.AllowDBNull%2A>**に、**<xref:System.Data.DataColumn.Unique%2A>プロパティを**true**に設定します。 複数列の主キーの場合 **、AllowDBNull**プロパティのみが自動的に**false**に設定されます。  
+ 1 つの <xref:System.Data.DataColumn> を <xref:System.Data.DataTable> の <xref:System.Data.DataTable.PrimaryKey%2A> として指定すると、テーブルによってその列の <xref:System.Data.DataColumn.AllowDBNull%2A> プロパティが **false** に、<xref:System.Data.DataColumn.Unique%2A> プロパティが **true** に自動的に設定されます。 複数列の主キーの場合は、**AllowDBNull** プロパティだけが自動的に **false** に設定されます。  
   
- 次の例に示すように<xref:System.Data.DataTable>**、PrimaryKey**プロパティは、その値として 1 つ以上の**DataColumn**オブジェクトの配列を受け取ります。 最初の例は、1 つの列を主キーとして定義しています。  
+ <xref:System.Data.DataTable> の **PrimaryKey** プロパティがその値として、1 つ以上の **DataColumn** オブジェクトから成る配列を受け取る例を次に示します。 最初の例は、1 つの列を主キーとして定義しています。  
   
 ```vb  
 workTable.PrimaryKey = New DataColumn() {workTable.Columns("CustID")}  
