@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 8727e47e13082e8550fb174c92139dfd5c17ec36
-ms.sourcegitcommit: 07123a475af89b6da5bb6cc51ea40ab1e8a488f0
+ms.openlocfilehash: a07cae6e607bb6cda965240c669c655207632298
+ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80134340"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81739067"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
 
@@ -36,7 +36,7 @@ ms.locfileid: "80134340"
 
 [!code-csharp-interactive[char literals](snippets/CharType.cs#Literals)]
 
-前の例のように、文字コードの値をそれに対応する `char` 値に型変換することもできます。
+前の例に示したように、文字コードの値をそれに対応する `char` 値に型変換することもできます。
 
 > [!NOTE]
 > Unicode エスケープ シーケンスの場合、4 つの 16 進数をすべて指定する必要があります。 つまり、`\u006A` は有効なエスケープ シーケンスであり、`\u06A` と `\u6A` は有効ではありません。
