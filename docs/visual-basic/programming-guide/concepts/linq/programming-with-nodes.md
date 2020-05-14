@@ -2,14 +2,14 @@
 title: ノードでのプログラミング
 ms.date: 07/20/2015
 ms.assetid: d8422a9b-dd37-44a3-8aac-2237ed9561e0
-ms.openlocfilehash: b2c9022cb57cf122af47bbe6d1a7fe2b4d41327c
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
-ms.translationtype: MT
+ms.openlocfilehash: 9c64c348f5d26172f26593b927e6bc24baf365bf
+ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266964"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82794404"
 ---
-# <a name="programming-with-nodes-visual-basic"></a>ノードを使用したプログラミング
+# <a name="programming-with-nodes-visual-basic"></a>ノードでのプログラミング (Visual Basic)
 XML エディター、変換システム、レポート作成プログラムなどのプログラムを作成する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の開発者は、要素や属性よりも細かい粒度レベルで動作するプログラムを作成しなければならないことがよくあります。 また場合によっては、ノード レベルで、テキスト ノード、処理命令、およびコメントを操作する必要があります。 このトピックでは、ノード レベルでのプログラミングについて詳しく説明します。  
   
 ## <a name="node-details"></a>ノードの詳細  
@@ -167,10 +167,10 @@ Console.WriteLine(doc.Nodes().Count())
   
 ```xml  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
-<Root />  
-1  
+<Root />
+1
 ```  
   
 ## <a name="see-also"></a>関連項目
 
-- [高度な LINQ から XML へのプログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+- [高度な LINQ to XML プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

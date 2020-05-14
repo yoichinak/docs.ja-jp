@@ -1,5 +1,6 @@
 ---
 title: .NET のアセンブリ
+description: アセンブリは、.NET ベースのアプリケーションの配置、バージョン管理、再利用、アクティベーション スコープ、およびセキュリティ権限の基本単位です。
 ms.date: 08/15/2019
 ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: f85fef37ac952c91ac73570f26d80d8a46f4eedf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156506"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379909"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -116,3 +117,4 @@ C# では、1 つのアプリケーションで同じアセンブリの 2 つの
 - [方法: アセンブリを読み込み、アンロードする](load-unload.md)
 - [方法: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする](unloadability.md)
 - [方法: ファイルがアセンブリであるかどうかを確認する](identify.md)
+- [方法: MetadataLoadContext を使用してアセンブリの内容を検査する](inspect-contents-using-metadataloadcontext.md)

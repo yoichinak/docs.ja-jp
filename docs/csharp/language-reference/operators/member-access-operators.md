@@ -1,7 +1,7 @@
 ---
 title: メンバー アクセス演算子と式 - C# リファレンス
 description: 型のメンバーにアクセスするために使用できる C# 演算子について説明します。
-ms.date: 03/31/2020
+ms.date: 04/17/2020
 author: pkulikov
 f1_keywords:
 - ._CSharpKeyword
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 90066b1e9c219f66fc0c76423679e81aa3fa6770
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81120992"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624866"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>メンバー アクセス演算子と式 (C# リファレンス)
 
@@ -138,6 +138,9 @@ A?.B?[C];
 
 Null 条件メンバー アクセス演算子 `?.` は Elvis 演算子とも呼ばれます。
 
+> [!NOTE]
+> C# 8 では、[null を許容する演算子](null-forgiving.md)は、前の null 条件演算のリストを終了します。 たとえば、式 `x?.y!.z` は `(x?.y)!.z` として解析されます。 この解釈のため、`x` が `null` の場合でも `z` が評価されるため、<xref:System.NullReferenceException> が発生する可能性があります。
+
 ### <a name="thread-safe-delegate-invocation"></a>スレッドセーフなデリゲートの呼び出し
 
 次のコードに示すように、`?.` 演算子を使用してデリゲートが null 以外かどうかを確認し、それをスレッドセーフな方法で呼び出します (たとえば、[イベントを発生させる](../../../standard/events/how-to-raise-and-consume-events.md)場合)。
@@ -155,6 +158,8 @@ if (handler != null)
     handler(…);
 }
 ```
+
+これは、null 以外の `handler` のみが呼び出されるようにするためのスレッドセーフな方法です。 デリゲート インスタンスは不変であるため、`handler` ローカル変数によって参照される値を変更できるスレッドはありません。 具体的には、別のスレッドによって実行されるコードが `PropertyChanged` イベントから登録解除され、`handler` が呼び出される前に `PropertyChanged` が `null` になる場合、`handler` によって参照される値は影響を受けません。 `?.` 演算子では、左側のオペランドが 1 回だけ評価され、null 以外として検証された後に `null` に変更できないことが保証されます。
 
 ## <a name="invocation-expression-"></a>呼び出し式 ()
 

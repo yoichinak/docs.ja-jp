@@ -5,7 +5,7 @@ ms.date: 08/22/2018
 ms.custom: azure-sdk-dotnet
 ms.openlocfilehash: f6af813cd1423be8784b769b272756b2c8258392
 ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 04/17/2020
 ms.locfileid: "81607871"
@@ -45,7 +45,7 @@ var account = CloudStorageAccount.Parse(storageConnectionString);
 // Do things with the account here...
 ```
 
-サービス接続文字列は[、CosmosDB](https://docs.microsoft.com/azure/cosmos-db/) [、Redis 用の Azure キャッシュ](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)、サービス[バス](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues)などの他の Azure サービスで使用されます。 これらの文字列は、Azure ポータル、CLI、または PowerShell を使用して取得できます。 また、コード内から .NET 用 Azure 管理ライブラリを使い、リソースを照会することによって接続文字列を作成することもできます。
+[CosmosDB](https://docs.microsoft.com/azure/cosmos-db/)、[Azure Cache for Redis](https://docs.microsoft.com/azure/azure-cache-for-redis/cache-dotnet-how-to-use-azure-redis-cache)、および [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-dotnet-get-started-with-queues) などの他の Azure サービスでは、サービス接続文字列が使用されます。 これらの文字列は、Azure portal、CLI、または PowerShell を使用して取得できます。 また、コード内から .NET 用 Azure 管理ライブラリを使い、リソースを照会することによって接続文字列を作成することもできます。
 
 次のスニペットでは、管理ライブラリを使ってストレージ アカウントの接続文字列を作成しています。
 

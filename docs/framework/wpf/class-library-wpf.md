@@ -7,17 +7,17 @@ helpviewer_keywords:
 ms.assetid: dcb35927-00ad-4141-a1ab-a7a524dd3f10
 ms.openlocfilehash: bd099cbbbf96c71749375dab0aadfe84412ca103
 ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76742296"
 ---
 # <a name="class-library-wpf"></a>クラス ライブラリ (WPF)
-次のリンクは、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] Api を含む名前空間を参照します。  
+次のリンクは、[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] API を含む名前空間を参照します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
   
 - <xref:Microsoft.Build.Tasks.Windows>  
   
@@ -124,7 +124,7 @@ ms.locfileid: "76742296"
 - <xref:UIAutomationClientsideProviders>  
   
 ## <a name="xaml-support-in-net-4"></a>.NET 4 での XAML のサポート  
- 次の名前空間には、システム .Xaml アセンブリの型が含まれています。 System .Xaml は、.NET Framework 4 上に構築された WPF などのフレームワークに共通の XAML 言語サポートを提供します。  
+ 次の名前空間には、System.Xaml アセンブリの型が含まれています。 System.Xaml は、.NET Framework 4 上に構築された WPF などのフレームワークに共通の XAML 言語サポートを提供します。  
   
 - <xref:System.Windows.Markup> (共有)  
   

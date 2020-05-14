@@ -5,7 +5,7 @@ ms.technology: dotnet-standard
 ms.assetid: ad3fa320-4b8f-4e5c-b549-01157591007a
 ms.openlocfilehash: 05cc41cef7da07581d4f0ec8e584858b913d1a80
 ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/07/2020
 ms.locfileid: "75710272"
@@ -26,7 +26,7 @@ ms.locfileid: "75710272"
   
 |XmlResolver プロパティ|関数|メモ|  
 |--------------------------|--------------|-----------|  
-|**XmlDocument** で使用される **XmlResolver** クラスが、**XmlReader** で使用されるクラスと同じである。|**XmlDocument** は、**XmlReader** に割り当てられた **XmlResolver** を使用します。<br /><br /> **XmlReader**  から **XmlResolver** を取得しているため、**XmlDocument** の信頼レベルにかかわらず、**XmlDocument.Resolver** プロパティは設定できません。 **XmlDocument** の **XmlResolver** プロパティを設定することによって **XmlReaders** の **XmlResolver** の設定をオーバーライドすることはできません。|**XmlReader** は、**XmlTextReader**、**XmlValidatingReader**、または独自に作成したリーダーにすることができます。 使用するリーダーでエンティティ解決がサポートされている場合は、外部エンティティが解決されます。 渡されたリーダーでエンティティ参照がサポートされていない場合は、エンティティ参照は解決されません。|  
+|**XmlDocument** で使用される **XmlResolver** クラスが、**XmlReader** で使用されるクラスと同じである。|**XmlDocument** は、**XmlReader** に割り当てられた **XmlResolver** を使用します。<br /><br /> **XmlReader ** から **XmlResolver** を取得しているため、**XmlDocument** の信頼レベルにかかわらず、**XmlDocument.Resolver** プロパティは設定できません。 **XmlDocument** の **XmlResolver** プロパティを設定することによって **XmlReaders** の **XmlResolver** の設定をオーバーライドすることはできません。|**XmlReader** は、**XmlTextReader**、**XmlValidatingReader**、または独自に作成したリーダーにすることができます。 使用するリーダーでエンティティ解決がサポートされている場合は、外部エンティティが解決されます。 渡されたリーダーでエンティティ参照がサポートされていない場合は、エンティティ参照は解決されません。|  
   
 ## <a name="semi-trusted-xmldocument"></a>信頼性の高くない XmlDocument  
  オブジェクトの信頼性が高くない場合の **XmlDocument.XmlResolver** プロパティの動作を次の表に示します。 Load への入力が **TextReader**、**String**、**Stream**、または **URI** である場合の **XmlDocument.Load** メソッドが対象です。 **XmlDocument** が **XmlReader** から読み込まれた場合の **Load** メソッドは対象外です。  
@@ -41,7 +41,7 @@ ms.locfileid: "75710272"
   
 |XmlResolver プロパティ|関数|メモ|  
 |--------------------------|--------------|-----------|  
-|**XmlDocument** で使用される **XmlResolver** クラスが、**XmlReader** で使用されるクラスと同じである。|**XmlDocument** は、**XmlReader** に割り当てられた **XmlResolver** を使用します。<br /><br /> **XmlReader**  から **XmlResolver** を取得しているため、**XmlDocument** の信頼レベルにかかわらず、**XmlDocument.Resolver** プロパティは設定できません。 **XmlDocument**の**xmlresolver**プロパティを設定することにより、 **xmlreaders** **xmlresolver**の設定をオーバーライドすることはできません。|**XmlTextReader**、検証用の <xref:System.Xml.XmlReader>、または独自に作成したリーダーを **XmlTextReader** として使用できます。 使用するリーダーでエンティティ解決がサポートされている場合は、外部エンティティが解決されます。 渡されたリーダーでエンティティ参照がサポートされていない場合は、エンティティ参照は解決されません。|  
+|**XmlDocument** で使用される **XmlResolver** クラスが、**XmlReader** で使用されるクラスと同じである。|**XmlDocument** は、**XmlReader** に割り当てられた **XmlResolver** を使用します。<br /><br /> **XmlReader ** から **XmlResolver** を取得しているため、**XmlDocument** の信頼レベルにかかわらず、**XmlDocument.Resolver** プロパティは設定できません。 **XmlDocument** の **XmlResolver** プロパティを設定することによって **XmlReaders** の **XmlResolver** の設定をオーバーライドすることはできません。|**XmlTextReader**、検証用の <xref:System.Xml.XmlReader>、または独自に作成したリーダーを **XmlTextReader** として使用できます。 使用するリーダーでエンティティ解決がサポートされている場合は、外部エンティティが解決されます。 渡されたリーダーでエンティティ参照がサポートされていない場合は、エンティティ参照は解決されません。|  
   
  XmlResolver が正しい資格情報を持つように設定すれば、外部リソースにアクセスできます。  
   

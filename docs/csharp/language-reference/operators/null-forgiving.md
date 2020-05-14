@@ -6,18 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - null-forgiving operator [C#]
 - '! operator [C#]'
-ms.openlocfilehash: 658043f8d5e149064f6da328657b2ccef9b5da94
-ms.sourcegitcommit: 43cbde34970f5f38f30c43cd63b9c7e2e83717ae
+ms.openlocfilehash: 2a8db2882968dbcbe6a8868ab6fe1c128c94a41f
+ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81121442"
+ms.lasthandoff: 05/01/2020
+ms.locfileid: "82624879"
 ---
 # <a name="-null-forgiving-operator-c-reference"></a>! (null 免除) 演算子 (C# リファレンス)
 
 C# 8.0 以降では、単項の接尾辞 `!` 演算子は null 免除演算子です。 有効な [null 許容注釈コンテキスト](../../nullable-references.md#nullable-annotation-context)では、null 免除演算子を使用して、参照型の式 `x` が `null`: `x!` ではないことを宣言します。 単項の接頭辞 `!` 演算子は、[論理否定演算子](boolean-logical-operators.md#logical-negation-operator-)です。
 
 null 免除演算子は実行時には影響を与えません。 式の null 状態を変更することによって、コンパイラの静的フロー分析にのみ影響を与えます。 実行時に、式 `x!` は基になる式 `x` の結果に評価されます。
+
+> [!NOTE]
+> C# 8 では、null を許容しない演算子は、前の [null 条件](member-access-operators.md#null-conditional-operators--and-)操作のリストを終了します。 たとえば、式 `x?.y!.z` は `(x?.y)!.z` として解析されます。 この解釈のため、`x` が `null` の場合でも `z` が評価されるため、<xref:System.NullReferenceException> が発生する可能性があります。
 
 null 許容参照型の機能の詳細については、「[null 許容参照型](../builtin-types/nullable-reference-types.md)」を参照してください。
 
@@ -43,7 +46,7 @@ null 免除演算子を使用しない場合は、コンパイラによって `p
 
 [!code-csharp[Use an attribute](snippets/NullForgivingOperator.cs#UseAttribute)]
 
-前の例では、null 免除演算子を使用する必要はありません。これは、`if` ステートメント内で `p` を `null` にできないことを把握するのに十分な情報がコンパイラに含まれているためです。 変数の null 状態に関する追加情報を提供するための属性の詳細については、[null 予測を定義する属性を使用した API のアップグレード](../../nullable-attributes.md)に関するページを参照してください。
+前の例では、null 免除演算子を使用する必要はありません。これは、`if` ステートメント内で `p` を `null` にできないことを把握するのに十分な情報がコンパイラに含まれているためです。 変数の null 状態に関する追加情報を提供するための属性の詳細については、[null 予測を定義する属性を使用した API のアップグレード](../attributes/nullable-analysis.md)に関するページを参照してください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
