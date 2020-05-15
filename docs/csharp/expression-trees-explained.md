@@ -70,4 +70,4 @@ var finalAnswer = this.SecretSauceFunction(
 
 実行できないことの 1 つが式ツリーの変更です。  式ツリーは不変のデータ構造です。 式ツリーを変更するには、元の式ツリーのコピーに変更を加えた新しいツリーを作成する必要があります。
 
-[次回 -- 式ツリーをサポートするフレームワークの型](expression-classes.md)
+[次へ -- 式ツリーをサポートするフレームワークの型](expression-classes.md)
