@@ -86,9 +86,11 @@
       items:
         - name: クラウドネイティブ アプリ向け Azure セキュリティ
           href: azure-security.md
-    - name: クラウドネイティブ DevOps
+    - name: DevOps
       href: devops.md
       items:
+        - name: 機能フラグ
+          href: feature-flags.md
         - name: コードとしてのインフラストラクチャ
           href: infrastructure-as-code.md
         - name: クラウド ネイティブ アプリケーション バンドル
