@@ -37,6 +37,9 @@
             - name: WCF 開発者向け ASP.NET Core gRPC
               tocHref: /dotnet/architecture/grpc-for-wcf-developers/
               topicHref: /dotnet/architecture/grpc-for-wcf-developers/index
+            - name: デスクトップ アプリの最新化
+              tocHref: /dotnet/architecture/modernize-desktop/
+              topicHref: /dotnet/architecture/modernize-desktop/index
         - name: .NET ガイド
           tocHref: /dotnet/standard/
           topicHref: /dotnet/standard/index

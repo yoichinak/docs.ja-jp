@@ -6,12 +6,12 @@ metadata:
   description: .NET アプリの設計、構築、移行について推奨される方法について説明します。
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: 6e3573416191603e1e166979f955eaae6b74022c
-  ms.sourcegitcommit: b75a45f0cfe012b71b45dd9bf723adf32369d40c
+  ms.openlocfilehash: dc358f45532625bd5474b01af630674a170baf0b
+  ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 03/24/2020
-  ms.locfileid: "80228596"
+  ms.lasthandoff: 05/15/2020
+  ms.locfileid: "83418980"
 landingContent:
 - title: ASP.NET Core MVC アプリの開発
   linkLists:
@@ -53,3 +53,9 @@ landingContent:
       url: containerized-lifecycle/index.md
     - text: Azure での ASP.NET Core DevOps
       url: /aspnet/core/azure/devops/
+- title: デスクトップ アプリを最新化する
+  linkLists:
+  - linkListType: concept
+    links:
+    - text: .NET Core 3.1 を使用した Windows 10 でのデスクトップ アプリ最新化
+      url: modernize-desktop/index.md
