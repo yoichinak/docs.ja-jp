@@ -92,7 +92,7 @@ ms.locfileid: "79398071"
 
 `>>` 演算子の右側のオペランドでのシフト数の定義方法については、「[シフト演算子のシフト数](#shift-count-of-the-shift-operators)」セクションをご覧ください。
 
-## <a name="logical-and-operator-"></a> 論理 AND 演算子 &amp;
+## <a name="logical-and-operator-amp"></a><a name="logical-and-operator-"></a> 論理 AND 演算子 &amp;
 
 `&` 演算子では、そのオペランドのビットごとの論理 AND が計算されます。
 
