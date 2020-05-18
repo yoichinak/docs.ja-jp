@@ -18,7 +18,7 @@ ms.locfileid: "61659944"
 
 1. 新しいコンソール アプリケーションを開き、それに `PredicateFilters` という名前を付けます。
 
-2. 「`StudentClass`オブジェクトのコレクションを照会する[」から ](query-a-collection-of-objects.md) クラスをコピーし、クラス `PredicateFilters` の下の名前空間 `Program` に貼り付けます。 `StudentClass` は、`Student` オブジェクトの一覧を提供します。
+2. 「[`StudentClass`オブジェクトのコレクションを照会する](query-a-collection-of-objects.md) 」 から クラスをコピーし 、クラス `PredicateFilters` の下の名前空間 `Program` に貼り付けます。 `StudentClass` は、`Student` オブジェクトの一覧を提供します。
 
 3. `Main` で `StudentClass` メソッドをコメント アウトします。
 
