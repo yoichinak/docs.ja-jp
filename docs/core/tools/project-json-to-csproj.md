@@ -3,12 +3,12 @@ title: project.json と csproj の比較
 description: 「project.json 要素と csproj 要素の間のマッピング」を参照してください。
 author: natemcmaster
 ms.date: 03/13/2017
-ms.openlocfilehash: feaa7e9cde7e1aa4dfe94d699b14a018fc728f27
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: abe515007b47b415ac33e3350a29edced1784d68
+ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794625"
+ms.lasthandoff: 03/14/2020
+ms.locfileid: "77451106"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json プロパティと csproj プロパティの間のマッピング
 
@@ -675,4 +675,4 @@ MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-
 
 ## <a name="see-also"></a>参照
 
-- [CLI の変更の概要](cli-msbuild-architecture.md)
+- [CLI の変更の概要](../tools/cli-msbuild-architecture.md)
