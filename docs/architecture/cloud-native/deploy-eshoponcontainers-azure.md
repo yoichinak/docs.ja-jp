@@ -1,17 +1,15 @@
 ---
 title: eShopOnContainers を Azure にデプロイする
 description: Azure Kubernetes Service、ヘルム、および DevSpaces を使用した eShopOnContainers アプリケーションのデプロイ。
-ms.date: 04/20/2020
-ms.openlocfilehash: a3eacedac946cb25cf3cced305d7921e29f0d204
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 93a2848f095d7593e1e169f4a6c6c1818a76217d
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895594"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614098"
 ---
 # <a name="deploying-eshoponcontainers-to-azure"></a>eShopOnContainers を Azure にデプロイする
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 EShopOnContainers アプリケーションは、さまざまな Azure プラットフォームにデプロイできます。 Azure Kubernetes Services (AKS) にアプリケーションをデプロイする方法をお勧めします。 Kubernetes 配置ツールであるヘルムは、デプロイの複雑さを軽減するために使用できます。 開発プロセスを効率化するために、開発者は必要に応じて Kubernetes の Azure Dev Spaces を実装することもできます。
 
@@ -57,10 +55,10 @@ spec:
 
 EShopOnContainers ヘルムグラフは、/k8s/ヘルムフォルダーにあります。 図2-6 は、アプリケーションのさまざまなコンポーネントを、ヘルムが配置を定義するために使用するフォルダー構造に編成する方法を示しています。
 
-![eShopOnContainers アーキテクチャ](./media/eshoponcontainers-helm-folder.png)
-**図 2-6**。 EShopOnContainers ヘルムフォルダー。
+![eShopOnContainers アーキテクチャ ](./media/eshoponcontainers-helm-folder.png)
+ **図 2-6**。 EShopOnContainers ヘルムフォルダー。
 
-個々のコンポーネントは、 `helm install`コマンドを使用してインストールされます。 eShop には、それぞれのヘルムグラフを使用してコンポーネントをループしてインストールする "deploy all" スクリプトが含まれています。 結果として、ソース管理のアプリケーションでバージョン管理された反復可能なプロセスが生成されます。これにより、チームのすべてのユーザーが1行のスクリプトコマンドで AKS クラスターにデプロイできるようになります。
+個々のコンポーネントは、コマンドを使用してインストールされ `helm install` ます。 eShop には、それぞれのヘルムグラフを使用してコンポーネントをループしてインストールする "deploy all" スクリプトが含まれています。 結果として、ソース管理のアプリケーションでバージョン管理された反復可能なプロセスが生成されます。これにより、チームのすべてのユーザーが1行のスクリプトコマンドで AKS クラスターにデプロイできるようになります。
 
 > バージョン3のヘルムは、Tiller サーバーコンポーネントの必要性を正式に排除することに注意してください。 この拡張機能の詳細については、[こちら](https://medium.com/better-programming/why-is-tiller-missing-in-helm-3-2347c446714)を参照してください。
 
@@ -72,13 +70,13 @@ EShopOnContainers ヘルムグラフは、/k8s/ヘルムフォルダーにあり
 
 図2-7 では、Developer Susie が開発スペースに自転車マイクロサービスの更新バージョンをデプロイしたことがわかります。 次に、自分のスペースの名前 (susie.s.dev.myapp.eus.azds.io) で始まるカスタム URL を使用して、自分の変更をテストできます。
 
-![eShopOnContainers アーキテクチャ](./media/azure-devspaces-one.png)
-**図 2-7**。 Developer Susie は独自のバージョンの Bikes マイクロサービスをデプロイしてテストします。
+![eShopOnContainers アーキテクチャ ](./media/azure-devspaces-one.png)
+ **図 2-7**。 Developer Susie は独自のバージョンの Bikes マイクロサービスをデプロイしてテストします。
 
 同時に、開発者 John は予約マイクロサービスをカスタマイズし、変更をテストする必要があります。 図2-8 に示すように、Susie の変更と競合することなく、自分の開発スペースに自分の変更をデプロイします。 John は、スペースの名前 (john.s.dev.myapp.eus.azds.io) をプレフィックスとした独自の URL を使用して、自分の変更をテストします。
 
-![eShopOnContainers アーキテクチャ](./media/azure-devspaces-two.png)
-**図 2-8**。 開発者 John は独自のバージョンの予約マイクロサービスをデプロイし、他の開発者と競合することなくテストします。
+![eShopOnContainers アーキテクチャ ](./media/azure-devspaces-two.png)
+ **図 2-8**。 開発者 John は独自のバージョンの予約マイクロサービスをデプロイし、他の開発者と競合することなくテストします。
 
 Azure Dev Spaces を使用すると、チームは AKS を直接操作しながら、変更の変更、配置、およびテストを行うことができます。 この方法では、すべての開発者が独自の AKS 環境を使用するため、個別の専用ホスト環境が必要になります。 開発者は CLI を使用して Azure Dev Spaces を操作したり、アプリケーションを起動して Visual Studio から直接 Azure Dev Spaces したりできます。 [Azure Dev Spaces のしくみと構成方法の詳細については、こちらを参照してください。](https://docs.microsoft.com/azure/dev-spaces/how-dev-spaces-works)
 

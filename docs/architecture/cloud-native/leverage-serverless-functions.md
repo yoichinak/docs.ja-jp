@@ -1,17 +1,15 @@
 ---
 title: サーバーレス関数の活用
 description: クラウドネイティブアプリケーションでのサーバーレスと Azure Functions の活用
-ms.date: 04/13/2020
-ms.openlocfilehash: 176499e3cd0349cd689b9d13d1c237a6343d13f3
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: 53a0fdd29630b2a4368f3aa37ddfc5f93df10a24
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199743"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613864"
 ---
 # <a name="leveraging-serverless-functions"></a>サーバーレス関数の活用
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 物理マシンの管理からクラウド機能の活用までの範囲では、サーバーレスは極端な端に存在します。 唯一の責任はコードです。コードの実行時にのみ課金されます。 Azure Functions は、クラウドネイティブアプリケーションにサーバーレス機能を構築する方法を提供します。
 
@@ -54,8 +52,8 @@ ms.locfileid: "82199743"
 
 図3-10 は、コールドスタートパターンを示しています。 アプリがコールドである場合に必要な追加の手順に注意してください。
 
-![コールドスタートとウォーム](./media/cold-start-warm-start.png)
-スタートの**図 3-10**。 コールドスタートとウォームスタート。
+![コールドスタートとウォームスタート ](./media/cold-start-warm-start.png)
+ の**図 3-10**。 コールドスタートとウォームスタート。
 
 コールドスタートを完全に回避するには、[従量課金プランから専用プランに](https://azure.microsoft.com/blog/understanding-serverless-cold-start/)切り替えることができます。 Premium プランのアップグレードを使用して、1つまたは複数の事前設定された[med-v インスタンス](https://docs.microsoft.com/azure/azure-functions/functions-premium-plan#pre-warmed-instances)を構成することもできます。 このような場合は、別のインスタンスを追加する必要があるときに、既に稼働状態になっています。 これらのオプションは、サーバーレスコンピューティングに関連するコールドスタートの問題を軽減するのに役立ちます。
 

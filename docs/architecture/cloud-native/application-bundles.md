@@ -1,17 +1,15 @@
 ---
 title: クラウド ネイティブ アプリケーション バンドル
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |クラウドネイティブアプリケーションバンドル
-ms.date: 05/12/2020
-ms.openlocfilehash: c16a9cba1fe31e025532ba98d644114a319bb9de
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: fc6ee96078650dccd2ebeb3e65a0a00c4e05ecdb
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395485"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614345"
 ---
 # <a name="cloud-native-application-bundles"></a>クラウド ネイティブ アプリケーション バンドル
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 クラウドネイティブアプリケーションの重要な特性は、クラウドの機能を活用して開発を高速化できることです。 この設計は、多くの場合、アプリケーション全体がさまざまな種類のテクノロジを使用することを意味します。 アプリケーションは、Docker コンテナーに配布される場合があります。一部のサービスでは Azure Functions が使用される場合がありますが、ハードウェア GPU アクセラレーションを使用する大金属サーバー上に割り当てられた仮想マシン上で直接実行することもできます。 2つのクラウドネイティブアプリケーションは同じではありません。そのため、1つのメカニズムを配布することは困難でした。
 
@@ -80,7 +78,7 @@ CNAB の中核となるのは、という名前のファイルです `bundle.jso
 
 これらの日の DevOps 領域には多くの優れたツールがあり、これを成功させる方法についてはもっとすばらしい書籍や論文もあります。 DevOps の旅を始めるためのお気に入りの書籍は、架空の企業を NoOps から DevOps に変換する、[フェニックスのプロジェクト](https://www.oreilly.com/library/view/the-phoenix-project/9781457191350/)です。 1つは、複雑なクラウドネイティブアプリケーションをデプロイするときに、DevOps が "優れた" ということです。 これは要件であり、プロジェクトの開始時に、およびに対して計画を行う必要があります。
 
-## <a name="references"></a>参考資料
+## <a name="references"></a>References
 
 - [Azure DevOps](https://azure.microsoft.com/services/devops/)
 - [Azure Resource Manager](https://azure.microsoft.com/documentation/articles/resource-group-overview/)

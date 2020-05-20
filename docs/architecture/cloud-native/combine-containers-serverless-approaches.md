@@ -1,17 +1,15 @@
 ---
 title: クラウドネイティブサービスでのコンテナーとサーバーレスアプローチの組み合わせ
 description: コンテナーと Kubernetes をサーバーレスアプローチと組み合わせる
-ms.date: 04/23/2020
-ms.openlocfilehash: a6ae17543c9075ca84126a4c19f9f51887f7fe9a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 67eee89659026db06eb16ef6f1154ab6935725a4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895647"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614202"
 ---
 # <a name="combining-containers-and-serverless-approaches"></a>コンテナーとサーバーレスの手法の組み合わせ
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 クラウドネイティブアプリケーションは、通常、コンテナーとオーケストレーションを活用するサービスを実装します。 多くの場合、アプリケーションのサービスの一部を Azure Functions として公開する機会があります。 ただし、Kubernetes にデプロイされたクラウドネイティブアプリでは、この同じツールセット内で Azure Functions を活用すると便利です。 幸いにも、Docker コンテナー内で Azure Functions をラップして、Kubernetes ベースのアプリの他の部分と同じプロセスとツールを使用してデプロイすることができます。
 
@@ -31,13 +29,13 @@ Docker コンテナーで Azure 関数をラップするには、 [Azure Functio
 func init ProjectName --worker-runtime dotnet --docker
 ```
 
-プロジェクトが作成されると、Dockerfile とワーカーランタイムがに`dotnet`構成されます。 ここで、関数をローカルで作成してテストできます。 コマンド`docker build`と`docker run`コマンドを使用してビルドし、実行します。 Docker サポートを使用して Azure Functions の構築を開始する詳細な手順については、「[カスタムイメージを使用した Linux での関数の作成](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)」チュートリアルを参照してください。
+プロジェクトが作成されると、Dockerfile とワーカーランタイムがに構成され `dotnet` ます。 ここで、関数をローカルで作成してテストできます。 コマンドとコマンドを使用してビルドし、実行し `docker build` `docker run` ます。 Docker サポートを使用して Azure Functions の構築を開始する詳細な手順については、「[カスタムイメージを使用した Linux での関数の作成](https://docs.microsoft.com/azure/azure-functions/functions-create-function-linux-custom-image)」チュートリアルを参照してください。
 
 ## <a name="how-to-combine-serverless-and-kubernetes-with-keda"></a>サーバーレスと Kubernetes を KEDA と組み合わせる方法
 
-この章では、Azure Functions のプラットフォームが需要に応じて自動的にスケールアウトされることを確認しました。 ただし、コンテナー化された関数を AKS に配置する場合、組み込みのスケーリング機能は失われます。 これには、 [Kubernetes ベースのイベントドリブン (KEDA)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)が用意されています。 これにより、コンテナー化さ`event-driven Kubernetes workloads,`れた関数を含めるための高度な自動スケールが可能になります。
+この章では、Azure Functions のプラットフォームが需要に応じて自動的にスケールアウトされることを確認しました。 ただし、コンテナー化された関数を AKS に配置する場合、組み込みのスケーリング機能は失われます。 これには、 [Kubernetes ベースのイベントドリブン (KEDA)](https://docs.microsoft.com/azure/azure-functions/functions-kubernetes-keda)が用意されています。 これにより、コンテナー化された関数を含めるための高度な自動スケールが可能になり `event-driven Kubernetes workloads,` ます。
 
-KEDA は、Docker コンテナー内の関数のランタイムにイベントドリブンスケーリング機能を提供します。 KEDA は、負荷に基づいて、ゼロのインスタンス (イベントが発生`n instances`していない場合) からまで拡張できます。 Kubernetes オートスケーラー (水平ポッドオートスケーラー) にカスタムメトリックを公開することによって、自動スケールを有効にします。 KEDA で Functions のコンテナーを使用すると、任意の Kubernetes クラスターにおいてサーバーレス関数の機能をレプリケートできるようになります。
+KEDA は、Docker コンテナー内の関数のランタイムにイベントドリブンスケーリング機能を提供します。 KEDA は `n instances` 、負荷に基づいて、ゼロのインスタンス (イベントが発生していない場合) からまで拡張できます。 Kubernetes オートスケーラー (水平ポッドオートスケーラー) にカスタムメトリックを公開することによって、自動スケールを有効にします。 KEDA で Functions のコンテナーを使用すると、任意の Kubernetes クラスターにおいてサーバーレス関数の機能をレプリケートできるようになります。
 
 KEDA プロジェクトは、Cloud Native Computing Foundation (CNCF) によって管理されていることに注意してください。
 

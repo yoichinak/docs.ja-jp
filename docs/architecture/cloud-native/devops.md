@@ -1,17 +1,15 @@
 ---
 title: DevOps
 description: クラウドネイティブアプリケーションの DevOps に関する考慮事項
-ms.date: 05/12/2020
-ms.openlocfilehash: 498ce64c3a387433862142826059b4f7e513ec7b
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: ce814595245d49e409e780cb0f63c436299c2e4e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395814"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614119"
 ---
 # <a name="devops"></a>DevOps
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 ソフトウェアコンサルタントのお気に入りのスローガンは、"It が依存している" という質問に回答することです。 ソフトウェアコンサルタントが位置を fond ことはないからです。 ソフトウェアの質問に対する真の答えは1つではないからです。 絶対的な問題はありませんが、正反対間のバランスが必要です。
 

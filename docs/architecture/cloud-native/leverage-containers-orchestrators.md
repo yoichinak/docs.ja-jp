@@ -1,17 +1,15 @@
 ---
 title: コンテナーとコンテナー オーケストレーターの活用
 description: Azure での Docker コンテナーと Kubernetes Orchestrators 活用
-ms.date: 04/13/2020
-ms.openlocfilehash: 64c6c0666398d9ccbc87efad18017bf278568fc4
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 5d0b7f41caecb3422a4416514de2fdd54e94539a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895546"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613908"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>コンテナーとコンテナー オーケストレーターの活用
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 コンテナーとオーケストレーター、モノリシックデプロイアプローチに共通する問題を解決するように設計されています。
 
@@ -19,13 +17,13 @@ ms.locfileid: "82895546"
 
 従来、ほとんどのアプリケーションは1つのユニットとして展開されていました。 このようなアプリケーションは、モノリスと呼ばれます。 図3-1 に示すように、複数のモジュールまたはアセンブリで構成されている場合でも、アプリケーションを1つの単位としてデプロイする一般的な方法を次に示します。
 
-![モノリシックアーキテクチャ。](./media/monolithic-architecture.png)
+![モノリシックアーキテクチャ。](./media/monolithic-design.png)
 
 **図 3-1**. モノリシックアーキテクチャ。
 
 単純化の利点はありますが、モノリシックアーキテクチャはいくつかの課題に直面します。
 
-### <a name="deployment"></a>デプロイ
+### <a name="deployment"></a>展開
 
 モノリシックアプリケーションでは、わずかな変更しか加えられていない場合でも、アプリケーション全体を完全に展開する必要があります。 完全な展開はコストが高く、エラーが発生しやすい場合があります。 また、アプリケーションを再起動する必要があり、一時的に使用不可に影響します。
 
@@ -57,8 +55,9 @@ Docker は、最も一般的なコンテナー管理プラットフォームで�
 
 コンテナーは変更できません。 コンテナーを定義したら、それをまったく同じ方法で再作成し、実行することができます。 この不変性は、コンポーネントベースの設計に役立ちます。 アプリケーションの一部が他の部分とは異なる方法で進化する場合、最も頻繁に変更される部分を展開するだけで、アプリ全体を再展開するのはなぜですか。 アプリのさまざまな機能と横断的な問題を別々の単位に分割できます。 図3-2 は、モノリシックアプリが特定の機能を委任することによってコンテナーとマイクロサービスを利用する方法を示しています。 アプリ自体のその他の機能もコンテナー化されています。
 
-![バックエンドでマイクロサービスを使用するようにモノリシックアプリを分割します。](./media/breaking-up-monolith-with-backend-microservices.png)
-**図 3-2**. バックエンドでマイクロサービスを使用するようにモノリシックアプリを分割します。
+![バックエンドでマイクロサービスを使用するようにモノリシックアプリを分割します。](./media/cloud-native-design.png)
+
+**図 3-2**. モノリシックアプリを分解してマイクロサービスを利用する。
 
 各クラウドネイティブサービスは、個別のコンテナーにビルドおよび展開されます。 各は必要に応じて更新できます。 個々のサービスは、各サービスに適切なリソースを持つノードでホストできます。 各サービスが実行されている環境は、開発環境、テスト環境、運用環境間で共有することも、簡単にバージョン管理することもできます。 アプリケーションのさまざまな領域間の結合は、モノリス内のコンパイル時の依存関係ではなく、サービス間の呼び出しまたはメッセージとして明示的に行われます。 また、アプリの他の部分に変更を加えることなく、特定の機能に最適なテクノロジを選択することもできます。
 
@@ -100,7 +99,7 @@ AKS は、クラスターベースのテクノロジです。 フェデレーシ
 
 コンテナー上に構築されたサービスは、Kubernetes などのオーケストレーションツールによって提供されるスケーリングの利点を活用できます。 設計コンテナーによって認識されるのは、それ自体だけです。 複数のコンテナーを連携させる必要がある場合は、より高いレベルでそれらを整理する必要があります。 多数のコンテナーとその共有依存関係 (ネットワーク構成など) を整理すると、その日を節約するためにオーケストレーションツールが提供されます。 Kubernetes は、コンテナーのグループに対して抽象化レイヤーを作成し、*ポッド*に整理します。 ポッドは、*ノード*と呼ばれるワーカーマシン上で実行されます。 この体系化された構造は*クラスター*と呼ばれます。 図3-3 は、Kubernetes クラスターのさまざまなコンポーネントを示しています。
 
-![クラスターコンポーネントを Kubernetes します。](./media/kubernetes-cluster-components.png)
+![クラスターコンポーネントを Kubernetes します。 ](./media/kubernetes-cluster-components.png)
 **図 3-3**. クラスターコンポーネントを Kubernetes します。
 
 コンテナー化されたワークロードのスケーリングは、コンテナー orchestrators 主要な機能です。 AKS は、コンテナーインスタンスとコンピューティングノードの2つのディメンション間の自動スケーリングをサポートしています。 AKS を利用することで、需要の急増に迅速かつ効率的に応答し、リソースを追加することができます。 AKS でのスケーリングについては、この章で後ほど説明します。
@@ -111,7 +110,7 @@ Kubernetes は、宣言型と命令型の両方の構成をサポートしてい
 
 命令型コマンドは、学習や対話型の実験に適しています。 ただし、信頼性が高く反復可能なデプロイを実現するために、コードのアプローチとしてインフラストラクチャを採用するために、Kubernetes マニフェストファイルを宣言によって作成することをお勧めします。 マニフェストファイルはプロジェクトアーティファクトになり、Kubernetes デプロイを自動化するために CI/CD パイプラインで使用されます。
 
-命令型コマンドを使用して既にクラスターを構成している場合は、を`kubectl get svc SERVICENAME -o yaml > service.yaml`使用して宣言型マニフェストをエクスポートできます。 このコマンドを実行すると、次のようなマニフェストが生成されます。
+命令型コマンドを使用して既にクラスターを構成している場合は、を使用して宣言型マニフェストをエクスポートでき `kubectl get svc SERVICENAME -o yaml > service.yaml` ます。 このコマンドを実行すると、次のようなマニフェストが生成されます。
 
 ```yaml
 apiVersion: v1
@@ -139,7 +138,7 @@ status:
   loadBalancer: {}
 ```
 
-宣言型の構成を使用する場合は、構成ファイルが配置されているフォルダー `kubectl diff -f FOLDERNAME`に対してを使用してコミットする前に、変更をプレビューできます。 変更を適用することを確認したら、を実行`kubectl apply -f FOLDERNAME`します。 フォルダー `-R`階層を再帰的に処理するには、を追加します。
+宣言型の構成を使用する場合は、構成ファイルが配置されているフォルダーに対してを使用してコミットする前に、変更をプレビューでき `kubectl diff -f FOLDERNAME` ます。 変更を適用することを確認したら、を実行 `kubectl apply -f FOLDERNAME` します。 `-R`フォルダー階層を再帰的に処理するには、を追加します。
 
 宣言型の構成を他の Kubernetes 機能と共に使用することもできます。そのうちの1つは配置です。 宣言型の配置は、リリース、更新、およびスケーリングを管理するのに役立ちます。 新しい変更をデプロイする方法、負荷をスケールアウトする方法、または以前のリビジョンにロールバックする方法について、Kubernetes deployment controller に指示します。 クラスターが不安定な場合、宣言型のデプロイはクラスターを自動的に適切な状態に戻します。 たとえば、ノードがクラッシュした場合、デプロイメカニズムによって、目的の状態を実現するために置き換えが再デプロイされます。
 
@@ -181,7 +180,7 @@ Minikube とは Minikube プロジェクトでは、"Minikube は macOS、Linux�
 - コンテナーネットワークインターフェイスを有効にする (CNI)
 - イングレス
 
-Minikube をインストールしたら、イメージをダウンロードしてローカルの`minikube start` Kubernetes クラスターを起動するコマンドを実行して、すぐに使用を開始できます。 クラスターを起動したら、標準の Kubernetes `kubectl`コマンドを使用して操作します。
+Minikube をインストールしたら、 `minikube start` イメージをダウンロードしてローカルの Kubernetes クラスターを起動するコマンドを実行して、すぐに使用を開始できます。 クラスターを起動したら、標準の Kubernetes コマンドを使用して操作し `kubectl` ます。
 
 ### <a name="docker-desktop"></a>Docker Desktop
 
@@ -201,29 +200,29 @@ Visual Studio では、web ベースアプリケーションの Docker 開発を
 
 **図 3-5**. Visual Studio による Docker サポートの有効化
 
-このオプションを選択すると、プロジェクトはというルート`Dockerfile`に作成され、Docker コンテナーでアプリをビルドしてホストするために使用できます。 図 3-6 に Dockerfile の例を示します。
+このオプションを選択すると、プロジェクトはというルートに作成され、 `Dockerfile` Docker コンテナーでアプリをビルドしてホストするために使用できます。 図 3-6 に Dockerfile の例を示します。
 
 ```docker
-FROM mcr.microsoft.com/dotnet/core/aspnet:3.0-stretch-slim AS base
+FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/core/sdk:3.0-stretch AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
-COPY ["WebApplication3/WebApplication3.csproj", "WebApplication3/"]
-RUN dotnet restore "WebApplication3/WebApplication3.csproj"
+COPY ["eShopWeb/eShopWeb.csproj", "eShopWeb/"]
+RUN dotnet restore "eShopWeb/eShopWeb.csproj"
 COPY . .
-WORKDIR "/src/WebApplication3"
-RUN dotnet build "WebApplication3.csproj" -c Release -o /app
+WORKDIR "/src/eShopWeb"
+RUN dotnet build "eShopWeb.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "WebApplication3.csproj" -c Release -o /app
+RUN dotnet publish "eShopWeb.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
-COPY --from=publish /app .
-ENTRYPOINT ["dotnet", "WebApplication3.dll"]
+COPY --from=publish /app/publish .
+ENTRYPOINT ["dotnet", "eShopWeb.dll"]
 ```
 
 **図 3-6**. Visual Studio によって生成された Dockerfile
@@ -236,13 +235,17 @@ ENTRYPOINT ["dotnet", "WebApplication3.dll"]
 
 [Azure Dev Spaces](https://docs.microsoft.com/azure/dev-spaces/)には、ローカル開発に加えて、複数の開発者が Azure 内で独自の Kubernetes 構成を操作するための便利な方法が用意されています。 図3-7 に示すように、Azure Dev Spaces でアプリケーションを実行することもできます。
 
-また、いつでも既存の ASP.NET Core アプリケーションに Docker サポートを追加できます。 図3-8 に示すように、Visual Studio ソリューションエクスプローラーからプロジェクトを右クリックし、**Docker サポート**を**追加** > します。
+また、いつでも既存の ASP.NET Core アプリケーションに Docker サポートを追加できます。 図3-8 に示すように、Visual Studio ソリューションエクスプローラーからプロジェクト**Add**を右クリックし、  >  **Docker サポート**を追加します。
+
+![Visual Studio による Docker サポートの追加](./media/visual-studio-add-docker-support.png)
 
 **図 3-8**. Visual Studio への Docker サポートの追加
 
-また、図3-8 に示すように、コンテナーオーケストレーションのサポートを追加することもできます。 既定では、orchestrator は Kubernetes とヘルムを使用します。 Orchestrator を選択すると、 `azds.yaml`ファイルがプロジェクトのルートに追加され、アプリケーション`charts`を構成して Kubernetes に配置するために使用されるヘルムグラフを含むフォルダーが追加されます。 図3-9 に、新しいプロジェクトで生成されるファイルを示します。
+また、図3-8 に示すように、コンテナーオーケストレーションのサポートを追加することもできます。 既定では、orchestrator は Kubernetes とヘルムを使用します。 Orchestrator を選択する `azds.yaml` と、ファイルがプロジェクトのルートに追加され、 `charts` アプリケーションを構成して Kubernetes に配置するために使用されるヘルムグラフを含むフォルダーが追加されます。 図3-9 に、新しいプロジェクトで生成されるファイルを示します。
 
-また、図3-8 に示すように、コンテナーオーケストレーションのサポートを追加することもできます。 既定では、orchestrator は Kubernetes とヘルムを使用します。 Orchestrator を選択すると、 `azds.yaml`ファイルがプロジェクトのルートに追加され、アプリケーション`charts`を構成して Kubernetes に配置するために使用されるヘルムグラフを含むフォルダーが追加されます。 図3-9 に、新しいプロジェクトで生成されるファイルを示します。
+また、図3-8 に示すように、コンテナーオーケストレーションのサポートを追加することもできます。 既定では、orchestrator は Kubernetes とヘルムを使用します。 Orchestrator を選択する `azds.yaml` と、ファイルがプロジェクトのルートに追加され、 `charts` アプリケーションを構成して Kubernetes に配置するために使用されるヘルムグラフを含むフォルダーが追加されます。 図3-9 に、新しいプロジェクトで生成されるファイルを示します。
+
+![Visual Studio の Orchestrator サポートの追加](./media/visual-studio-add-orchestrator-support.png)
 
 **図 3-9**. Visual Studio へのオーケストレーションサポートの追加
 

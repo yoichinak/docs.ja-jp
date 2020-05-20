@@ -1,17 +1,15 @@
 ---
 title: EShopOnContainers reference アプリの概要
 description: ASP.NET Core と Azure 用の eShopOnContainers Cloud ネイティブマイクロサービスリファレンスアプリの概要。
-ms.date: 06/30/2019
-ms.openlocfilehash: b97b62268db1d9990f762d9769233ad72551c226
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a6f3defabec809eaf1cb143e2b521904248b74f2
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83395401"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613968"
 ---
 # <a name="introducing-eshoponcontainers-reference-app"></a>EShopOnContainers reference アプリの概要
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Microsoft は、一流のコミュニティエキスパートと提携して、完全な機能を備えたクラウドネイティブマイクロサービス参照アプリケーションである eShopOnContainers を生み出しました。 このアプリケーションは、.NET Core と Docker、および必要に応じて Azure、Kubernetes、および Visual Studio を使用してオンラインショップを構築するために構築されています。
 
@@ -33,7 +31,7 @@ Microsoft は、一流のコミュニティエキスパートと提携して、�
 - チェックアウト
 - アカウントを登録する
 - サインイン
-- サインアウトする
+- サインアウト
 - 注文の確認
 
 このアプリケーションには、次の非機能的な要件もあります。

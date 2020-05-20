@@ -1,17 +1,15 @@
 ---
 title: Azure Kubernetes Services での監視
 description: Azure Kubernetes Services での監視
-ms.date: 02/05/2020
-ms.openlocfilehash: 5c46b9e8599f70d430ad26cf1364343454d30a16
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: 138acf9d27fb4a676ec422c848097a6bea98fa42
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77450064"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613825"
 ---
 # <a name="monitoring-in-azure-kubernetes-services"></a>Azure Kubernetes Services での監視
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 Kubernetes の組み込みログはプリミティブです。 ただし、Kubernetes からログを取得し、適切に分析できる場所にするための優れたオプションがいくつかあります。 AKS クラスターを監視する必要がある場合は、Kubernetes のエラスティックスタックの構成が優れたソリューションです。
 
@@ -19,8 +17,8 @@ Kubernetes の組み込みログはプリミティブです。 ただし、Kuber
 
 [コンテナーの Azure Monitor](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-overview)は、Kubernetes だけでなく、DC/OS、Docker の群れ、Red Hat openshift などの他のオーケストレーションエンジンからのログの使用もサポートしています。
 
-さまざまなコンテナーからのログの使用 ![](./media/containers-diagram.png)
-**図 7-10**。 さまざまなコンテナーからのログの使用
+![さまざまなコンテナーからのログの消費 ](./media/containers-diagram.png)
+ **図 7-10**。 さまざまなコンテナーからのログの使用
 
 [Prometheus](https://prometheus.io/)は、広く普及しているオープンソースのメトリック監視ソリューションです。 クラウドネイティブコンピューティングファンデーションの一部です。 通常、Prometheus を使用するには、独自のストアで Prometheus サーバーを管理する必要があります。 ただし、[コンテナーの Azure Monitor は、Prometheus メトリックエンドポイントと直接統合](https://docs.microsoft.com/azure/azure-monitor/insights/container-insights-prometheus-integration)できるため、個別のサーバーは必要ありません。
 
@@ -30,8 +28,8 @@ Kubernetes の組み込みログはプリミティブです。 ただし、Kuber
 
 Azure Monitor デーモンを実行している orchestrator またはオペレーティングシステムにかかわらず、ログ情報は、ユーザーが使い慣れているのと同じ Azure Monitor ツールに転送されます。 これにより、ハイブリッド Kubernetes/Azure Functions 環境などのさまざまなログソースが混在する環境での並行操作が可能になります。
 
-多数の実行中のコンテナーからのログ記録とメトリック情報を示すサンプルダッシュボードを ![します。](./media/containers-dashboard.png)
-**図 7-11**。 多数の実行中のコンテナーからのログ記録とメトリック情報を示すサンプルダッシュボードです。
+![多数の実行中のコンテナーからのログ記録とメトリック情報を示すサンプルダッシュボードです。 ](./media/containers-dashboard.png)
+**図 7-11**. 多数の実行中のコンテナーからのログ記録とメトリック情報を示すサンプルダッシュボードです。
 
 ## <a name="logfinalize"></a>Log. Finalize ()
 

@@ -1,17 +1,15 @@
 ---
 title: クラウドネイティブアプリ向けの Azure セキュリティ
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |クラウドネイティブアプリ向けの Azure セキュリティ
-ms.date: 06/30/2019
-ms.openlocfilehash: 27ef6c8313f1573ca686e8489a84f64a56116fa4
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: a39b64477eb9e896c6603e5609ede653bfee1e07
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394729"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614254"
 ---
 # <a name="azure-security-for-cloud-native-apps"></a>クラウドネイティブアプリ向けの Azure セキュリティ
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 クラウドネイティブアプリケーションは、従来のアプリケーションよりも簡単で安全です。 欠点としては、より小さなアプリケーションを保護し、セキュリティインフラストラクチャを構築するためのエネルギーを追加する必要があります。 ほとんどのサービス展開におけるプログラミング言語とスタイルの異種の性質は、多くの異なるプロバイダーからのセキュリティ情報にさらに注意を払う必要があることを意味します。
 

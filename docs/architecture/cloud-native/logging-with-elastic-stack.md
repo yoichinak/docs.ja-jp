@@ -1,17 +1,15 @@
 ---
 title: エラスティック スタックを使用したログ記録
 description: エラスティックスタック、Logstash、および Kibana を使用したログ記録
-ms.date: 02/05/2020
-ms.openlocfilehash: 6863c66b63854fe3ecaabe2919beded2926ea64c
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.date: 05/13/2020
+ms.openlocfilehash: e886141fa691b75b882b5d67eae4ceb242e8089f
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77448920"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613851"
 ---
 # <a name="logging-with-elastic-stack"></a>エラスティック スタックを使用したログ記録
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 優れた一元化されたログツールが多数あり、無料のオープンソースツールからコストが高いオプションまで、コストが大きく異なります。 多くの場合、無料のツールは有料オファリングと同じか、それよりも優れています。 このようなツールの1つに、エラスティック検索、Logstash、Kibana という3つのオープンソースコンポーネントが組み合わされています。
 
@@ -30,8 +28,8 @@ KUBE_ENABLE_NODE_LOGGING=true
 
 これにより、クラスターに Elasticsearch がインストールされ、すべてのクラスターログをそのクラスターに送信するターゲットになります。
 
-Kibana ダッシュボードの例 ![、取り込まれたからのログに対するクエリの結果を Kubernetes](./media/kibana-dashboard.png)
-**図 7-6**に示します。 Kubernetes から取り込まれたのログに対するクエリの結果を表示する Kibana ダッシュボードの例
+![Kibana ダッシュボードの例。 Kubernetes 図7-6 からのログ取り込まれたに対するクエリの結果を示して ](./media/kibana-dashboard.png)
+ **Figure 7-6**います。 Kubernetes から取り込まれたのログに対するクエリの結果を表示する Kibana ダッシュボードの例
 
 ## <a name="what-are-the-advantages-of-elastic-stack"></a>エラスティックスタックの利点は何ですか?
 
@@ -81,7 +79,7 @@ output {
 
 パラメーターを格納するために作成されたログメッセージ、またはパラメーターが Logstash 処理によって分割されていることを示すログメッセージは、Elasticsearch がこの情報を保持するように直接照会できます。
 
-`jill@example.com`によってアクセスされた上位10ページを検索するクエリは、図7-9 に示されています。
+によってアクセスされた上位10ページを検索するクエリは `jill@example.com` 、図7-9 に示されています。
 
 ```
 "query": {

@@ -2,17 +2,15 @@
 title: フロントエンドのクライアント通信
 description: フロントエンドクライアントがクラウドネイティブシステムと通信する方法について説明します。
 author: robvet
-ms.date: 09/08/2019
-ms.openlocfilehash: 89f13ea1c9ecbe92e959ae63a4c21bf7775f8943
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 97421e9b90b19c720b1ab0ff8dd1e5f029cba5e4
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895573"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614059"
 ---
 # <a name="front-end-client-communication"></a>フロントエンドのクライアント通信
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 クラウドネイティブシステムでは、フロントエンドクライアント (モバイル、web、およびデスクトップアプリケーション) は、独立したバックエンドマイクロサービスと対話するために通信チャネルを必要とします。  
 

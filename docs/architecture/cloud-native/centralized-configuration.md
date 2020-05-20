@@ -1,17 +1,15 @@
 ---
 title: 集中管理構成
 description: Azure アプリ構成と AzureKey Vault を使用して、クラウドネイティブアプリケーションの構成を一元化します。
-ms.date: 04/19/2020
-ms.openlocfilehash: 53bdc03370b04af4d830fe7abbd8aebad81e9650
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: d389d29dcdb1db5162d95370d181ab5a85d72dc8
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895652"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614228"
 ---
 # <a name="centralized-configuration"></a>集中管理構成
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 すべてが1つのインスタンス内で実行されるモノリシックアプリとは異なり、クラウドネイティブアプリケーションは、仮想マシン、コンテナー、および地理的領域に分散された独立したサービスで構成されます。 多数の相互に依存するサービスの構成設定を管理することは困難な場合があります。 異なる場所にある構成設定の重複コピーは、エラーが発生しやすく、管理が困難です。 一元化された構成は、分散型クラウドネイティブアプリケーションにとって重要な要件です。
 

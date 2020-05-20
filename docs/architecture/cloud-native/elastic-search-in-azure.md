@@ -1,84 +1,82 @@
 ---
-title: クラウドネイティブアプリケーションでのエラスティックサーチ
-description: クラウドネイティブ アプリケーションに Elastic Search 機能を追加する方法について説明します。
+title: クラウドネイティブアプリケーションの Elasticsearch
+description: クラウドネイティブアプリケーションにエラスティック検索機能を追加する方法について説明します。
 author: robvet
-ms.date: 03/02/2020
-ms.openlocfilehash: da6b9402cf266f5a298b05cf837805b2377bc75a
-ms.sourcegitcommit: f87ad41b8e62622da126aa928f7640108c4eff98
+ms.date: 05/13/2020
+ms.openlocfilehash: e956f28877d88ce5279944964a877efc324918b6
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/07/2020
-ms.locfileid: "80805564"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614085"
 ---
-# <a name="elasticsearch-in-a-cloud-native-app"></a>クラウドネイティブ アプリでのエラスティック検索
+# <a name="elasticsearch-in-a-cloud-native-app"></a>クラウドネイティブアプリでの Elasticsearch
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
+Elasticsearch は、さまざまな種類のデータに対して複雑な検索機能を有効にする分散検索および分析システムです。 オープンソースで広く普及しています。 次の企業が Elasticsearch をアプリケーションに統合する方法を検討します。
 
-Elasticsearch は分散型の検索および分析システムであり、多様な種類のデータに対して複雑な検索機能を提供します。 それはオープンソースで、広く普及しています。 次の企業が Elasticsearch をアプリケーションに統合する方法を検討してください。
+- フルテキストとインクリメンタル (入力時の検索) の[Wikipedia](https://blog.wikimedia.org/2014/01/06/wikimedia-moving-to-elasticsearch/) 。
+- 800万コードリポジトリにインデックスを作成して公開する[GitHub](https://www.elastic.co/customers/github) 。  
+- コンテナーライブラリを検出できるようにするための[Docker](https://www.elastic.co/customers/docker) 。
 
-- [ウィキペディア](https://blog.wikimedia.org/2014/01/06/wikimedia-moving-to-elasticsearch/)で全文検索とインクリメンタル検索(入力時に検索)
-- [GitHub](https://www.elastic.co/customers/github)は、800 万を超えるコード リポジトリをインデックス化して公開します。  
-- コンテナー ライブラリを検出可能にするための[Docker。](https://www.elastic.co/customers/docker)
-
-弾性検索は[、Apache Lucene](https://lucene.apache.org/core/)フルテキスト検索エンジンの上に構築されています。 Lucene は、高パフォーマンスのドキュメントインデックス作成とクエリを提供します。 逆インデックス作成スキームでデータをインデックス化し、ページをキーワードにマッピングする代わりに、ブックの最後にある用語集と同じように、キーワードをページにマップします。 Lucene には強力なクエリ構文機能があり、次の方法でデータをクエリできます。
+Elasticsearch は、 [Apache Lucene](https://lucene.apache.org/core/)フルテキスト検索エンジンの上に構築されています。 Lucene は、高パフォーマンスのドキュメントのインデックス作成とクエリを実行します。 逆インデックススキームを使用してデータのインデックスを作成します。ページをキーワードにマップするのではなく、ブックの最後にある用語集と同じように、キーワードをページにマップします。 Lucene には強力なクエリ構文機能があり、次の方法でデータを照会できます。
 
 - 用語 (完全な単語)
-- プレフィックス (先頭から単語)
-- ワイルドカード ("" または "?"\*フィルターを使用)
-- フレーズ (ドキュメント内の一連のテキスト)
-- ブール値 (クエリを組み合わせた複雑な検索)
+- プレフィックス (先頭は word)
+- ワイルドカード (" \* " フィルターまたは "?" フィルターを使用)
+- フレーズ (ドキュメント内のテキストのシーケンス)
+- ブール値 (複合検索クエリの結合)
 
-Lucene は検索用の低レベル配管を提供しますが、Elasticsearch は Lucene の上に位置するサーバーを提供します。 Elasticsearch は、Lucene のインデックス作成と検索機能にアクセスするための RESTful API など、作業を簡素化する高レベルの機能を追加します。 また、大規模な拡張性、フォールト トレランス、および高可用性を実現できる分散インフラストラクチャも提供します。
+Lucene では検索のための低レベルのプラミングが提供されますが、Elasticsearch は Lucene の上にあるサーバーを提供します。 Elasticsearch は、Lucene のインデックス作成と検索機能にアクセスする RESTful API など、操作を簡略化するために、より高度な機能を追加します。 また、大規模なスケーラビリティ、フォールトトレランス、高可用性を備えた分散インフラストラクチャも提供します。
 
-複雑な検索要件を持つ大規模なクラウド ネイティブ アプリケーションでは、Elasticsearch を Azure のマネージド サービスとして利用できます。 Microsoft Azure マーケットプレースには、開発者が Azure に Elasticsearch クラスターをデプロイするために使用できる、事前に構成されたテンプレートが用意されています。
+複雑な検索要件を持つ大規模なクラウドネイティブアプリケーションの場合、Elasticsearch は Azure の管理されたサービスとして利用できます。 Microsoft Azure Marketplace には、Azure で Elasticsearch クラスターをデプロイするために開発者が使用できる事前構成済みのテンプレートが用意されています。
 
-開発者は、Microsoft Azure マーケットプレースから、Azure に Elasticsearch クラスターを迅速にデプロイするために構築された構成済みテンプレートを使用できます。 Azure 管理製品を使用すると、最大 50 個のデータ ノード、20 個の調整ノード、および 3 つの専用マスター ノードをデプロイできます。
+Microsoft Azure Marketplace から、開発者は、Azure で Elasticsearch クラスターをすばやくデプロイするために構築された構成済みテンプレートを使用できます。 Azure で管理されたサービスを使用すると、最大50のデータノード、20個の調整ノード、3つの専用マスターノードをデプロイできます。
 
-## <a name="summary"></a>まとめ
+## <a name="summary"></a>要約
 
-この章では、クラウドネイティブシステムのデータについて詳しく説明しました。 まず、モノリシックアプリケーションのデータストレージとクラウドネイティブシステムのデータストレージパターンを比べていました。 クラウドネイティブシステムに実装されているデータパターン(サービス間のクエリ、分散トランザクション、大量のシステムに対応するパターンなど)を見てきました。 SQL と NoSQL データを対比しました。 マイクロソフト中心のオプションとオープン ソース オプションの両方を含む、Azure で利用可能なデータ ストレージ オプションについて説明しました。 最後に、クラウドネイティブアプリケーションでのキャッシュと Elasticsearch について説明しました。
+この章では、クラウドネイティブシステムのデータについて詳しく説明します。 クラウドネイティブシステムのデータストレージパターンを使用してモノリシックアプリケーションのデータストレージを比較することから始めました。 クラウドネイティブシステムに実装されているデータパターンを見てきました。これには、クロスサービスクエリ、分散トランザクション、および大量システムを扱うためのパターンが含まれます。 NoSQL データを使用して SQL を比較しています。 Microsoft の中心とオープンソースの両方のオプションを含む、Azure で利用可能なデータストレージオプションについて説明しました。 最後に、クラウドネイティブアプリケーションでのキャッシュと Elasticsearch について説明しました。
 
 ### <a name="references"></a>References
 
 - [コマンド クエリ責務分離 (CQRS) パターン](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
-- [イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
+- [イベントソーシングパターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)
 
-- [CAP 定理で RDBMS パーティショントレラントが使用できないのはなぜですか。](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
+- [定理で RDBMS パーティショントレラントが使用できないのはなぜですか。](https://stackoverflow.com/questions/36404765/why-isnt-rdbms-partition-tolerant-in-cap-theorem-and-why-is-it-available)
 
-- [マテリアライズビュー](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+- [具体化されたビュー](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
-- [オープンソースデータベースについて本当に知っておくべきこと](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
-
-- [補正トランザクション パターン](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
-
-- [佐賀パターン](https://microservices.io/patterns/data/saga.html)
-
-- [サガパターン |マイクロサービスを使用してビジネス トランザクションを実装する方法](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
+- [オープンソースデータベースについて理解しておく必要があること](https://www.ibm.com/blogs/systems/all-you-really-need-to-know-about-open-source-databases/)
 
 - [補正トランザクション パターン](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
 
-- [9ボールの背後に立つ:コスモスDBの一貫性レベルの説明](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)
+- [Saga パターン](https://microservices.io/patterns/data/saga.html)
 
-- [NoSQL データベースの異なるタイプの探索パート II](https://www.3pillarglobal.com/insights/exploring-the-different-types-of-nosql-databases)
+- [Saga Patterns |マイクロサービスを使用してビジネストランザクションを実装する方法](https://blog.couchbase.com/saga-pattern-implement-business-transactions-using-microservices-part/)
 
-- [RDBMS、NoSQL、およびニューSQLデータベース。ジョン・ライアンインタビュー](http://www.odbms.org/blog/2018/03/on-rdbms-nosql-and-newsql-databases-interview-with-john-ryan/)
+- [補正トランザクション パターン](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+
+- [9 ~ ボールの背後: Cosmos DB の一貫性レベルについて説明します。](https://blog.jeremylikness.com/blog/2018-03-23_getting-behind-the-9ball-cosmosdb-consistency-levels/)
+
+- [さまざまな種類の NoSQL データベースの調査パート II](https://www.3pillarglobal.com/insights/exploring-the-different-types-of-nosql-databases)
+
+- [RDBMS、NoSQL、NewSQL データベースの場合。John ライアンとのインタビュー](http://www.odbms.org/blog/2018/03/on-rdbms-nosql-and-newsql-databases-interview-with-john-ryan/)
   
-- [SQL 対 NoSQL 対 新しい SQL: 完全な比較](https://www.xenonstack.com/blog/sql-vs-nosql-vs-newsql/)
+- [SQL vs NoSQL vs NewSQL: 完全な比較](https://www.xenonstack.com/blog/sql-vs-nosql-vs-newsql/)
 
-- [DASH: クベルネテス-ネイティブデータベースの4つのプロパティ](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/)
+- [ダッシュ: Kubernetes ネイティブデータベースの4つのプロパティ](https://thenewstack.io/dash-four-properties-of-kubernetes-native-databases/)
 
-- [ゴキブリDB](https://www.cockroachlabs.com/)
+- [CockroachDB](https://www.cockroachlabs.com/)
 
-- [ティジド](https://pingcap.com/en/)
+- [TiDB](https://pingcap.com/en/)
 
-- [ユガバイトDB](https://www.yugabyte.com/)
+- [YugabyteDB](https://www.yugabyte.com/)
 
-- [ヴィテス](https://vitess.io/)
+- [Vitess](https://vitess.io/)
 
 - [Elasticsearch: 決定版ガイド](http://shop.oreilly.com/product/0636920028505.do)
   
-- [アパッチ・ルセンの紹介](https://www.baeldung.com/lucene)
+- [Apache Lucene の概要](https://www.baeldung.com/lucene)
 
 >[!div class="step-by-step"]
 >[前へ](azure-caching.md)

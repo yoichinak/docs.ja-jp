@@ -1,17 +1,16 @@
 ---
 title: 機能フラグ
 description: Azure アプリ構成を利用するクラウドネイティブアプリケーションで機能フラグを実装する
-ms.date: 05/03/2020
-ms.openlocfilehash: 72e1bfe777854a74fcac926811caf97e59986146
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+author: robvet
+ms.date: 05/13/2020
+ms.openlocfilehash: 607bd14a415a25b382f550e697542cf749a21772
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83398321"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614072"
 ---
 # <a name="feature-flags"></a>機能フラグ
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 第1章では、クラウドネイティブの速度と機敏性が非常に高くなっています。 ユーザーは、迅速な応答性と革新的な機能を期待し、ダウンタイムをゼロにする必要があります。 `Feature flags`は、クラウドネイティブアプリケーションの俊敏性を向上させるための最新の展開手法です。 新しい機能を運用環境に展開することはできますが、その可用性は制限されます。 スイッチのフリックを使用すると、アプリを再起動したり新しいコードを展開したりせずに、特定のユーザーに対して新しい機能をアクティブ化できます。 これらは、新機能のリリースをコード配置から分離します。
 

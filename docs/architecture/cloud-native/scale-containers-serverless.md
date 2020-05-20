@@ -1,13 +1,13 @@
 ---
 title: コンテナーとサーバーレスのアプリケーションのスケーリング
 description: ユーザーの要求を満たすために、Azure Kubernetes サービスを使用してクラウドネイティブアプリケーションをスケーリングします。
-ms.date: 04/13/2020
-ms.openlocfilehash: b4580e6994611ad394bbaa2d5bb07f64c2798569
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.date: 05/13/2020
+ms.openlocfilehash: a5e1e8df785fd08901d9be41c0a06db35e09296b
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199925"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613721"
 ---
 # <a name="scaling-containers-and-serverless-applications"></a>コンテナーとサーバーレスのアプリケーションのスケーリング
 

@@ -1,17 +1,15 @@
 ---
 title: クラウドネイティブアプリ用のサーバー
 description: Azure 向けのクラウドネイティブ .NET アプリの設計 |IdentityServer
-ms.date: 06/30/2019
-ms.openlocfilehash: 536a4cbdbdaee47f3a5a0d9f93b2736270d9ea7a
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.date: 05/13/2020
+ms.openlocfilehash: 81cce30568becacda29f65f9506398790af321e0
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394881"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614033"
 ---
 # <a name="identityserver-for-cloud-native-applications"></a>クラウドネイティブアプリケーション用のサーバー
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 サービスは、OpenID Connect (OIDC) と OAuth 2.0 標準を実装するオープンソースの認証サーバーで、ASP.NET Core に使用します。 これは、web、ネイティブ、モバイル、API のいずれのエンドポイントであるかにかかわらず、すべてのアプリケーションに対する要求を認証するための一般的な方法を提供するように設計されています。 サーバーを使用して、複数のアプリケーションとアプリケーションの種類にシングルサインオン (SSO) を実装できます。 サインインフォームや同様のユーザーインターフェイスを使用して実際のユーザーを認証するために使用できます。また、通常は、ユーザーインターフェイスなしでトークンの発行、検証、更新を含むサービスベースの認証も行います。 サービスはカスタマイズ可能なソリューションとして設計されています。 各インスタンスは、通常、個々の組織やアプリケーションのニーズに合わせてカスタマイズされます。
 
@@ -99,7 +97,7 @@ public class Startup
 
 多くのクラウドネイティブアプリケーションでは、フロントエンドでサーバー側 Api とリッチクライアントシングルページアプリケーション (spa) を利用しています。 ユーザーは、NPM を使用して[JavaScript クライアント](http://docs.identityserver.io/en/latest/quickstarts/4_javascript_client.html)() を提供し `oidc-client.js` ます。これを spas に追加することで、web api のサインイン、サインアウト、トークンベースの認証に使用できるようになります。
 
-## <a name="references"></a>参考資料
+## <a name="references"></a>References
 
 - [サーバーのドキュメント](http://docs.identityserver.io/en/latest/)
 - [アプリケーションの種類](https://docs.microsoft.com/azure/active-directory/develop/app-types)

@@ -1,24 +1,22 @@
 ---
 title: eShopOnContainers を Azure サービスにマッピングする
 description: Azure Kubernetes Service、API Gateway、Azure Service Bus などの Azure サービスへの eShopOnContainers のマッピング。
-ms.date: 04/20/2020
-ms.openlocfilehash: 26fce71ba71f7da643b669396ab59affe592649a
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.date: 05/13/2020
+ms.openlocfilehash: 271707404f7fb51aec59c6f682ddaefd0bac82cc
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895509"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613838"
 ---
 # <a name="mapping-eshoponcontainers-to-azure-services"></a>eShopOnContainers を Azure サービスにマッピングする
-
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
 
 必須ではありませんが、Azure は eShopOnContainers のサポートに適しています。これは、プロジェクトがクラウドネイティブアプリケーションとして構築されたためです。 アプリケーションは .NET Core を使用して構築されているため、Docker ホストに応じて Linux または Windows コンテナーで実行できます。 アプリケーションは複数の自律マイクロサービスで構成され、それぞれに独自のデータがあります。 さまざまなマイクロサービスは、単純な CRUD 操作から複雑な DDD や CQRS パターンまで、さまざまなアプローチを紹介しています。 マイクロサービスは、HTTP 経由でクライアントと通信し、メッセージベースの通信を介して相互に通信します。 アプリケーションでは、標準の通信プロトコルとして HTTP を採用し、Android、iOS、Windows の各プラットフォームで実行される ASP.NET Core および Xamarin mobile アプリを含むため、クライアントの複数のプラットフォームもサポートしています。
 
 図2-5 に、アプリケーションのアーキテクチャを示します。 左側にはクライアントアプリがあり、モバイル、従来の Web、および Web シングルページアプリケーション (SPA) のフレーバーに分割されています。 右側には、システムを構成するサーバー側コンポーネントがあります。各コンポーネントは、Docker コンテナーと Kubernetes クラスターでホストできます。 従来の web アプリには、黄色で示されている ASP.NET Core MVC アプリケーションが搭載されています。 このアプリとモバイルおよび web SPA アプリケーションは、1つまたは複数の API ゲートウェイを介して個々のマイクロサービスと通信します。 API ゲートウェイは、"バックエンドのフロントエンド" (BFF) パターンに従います。つまり、各ゲートウェイは、特定のフロントエンドクライアントをサポートするように設計されています。 個々のマイクロサービスは API ゲートウェイの右側に一覧表示され、ビジネスロジックといくつかの永続化ストアが含まれます。 さまざまなサービスで、SQL Server データベース、Redis cache インスタンス、および MongoDB/CosmosDB ストアを使用します。 一番右には、マイクロサービス間の通信に使用されるシステムのイベントバスがあります。
 
-![eShopOnContainers アーキテクチャ](./media/eshoponcontainers-architecture.png)
-**図 2-5**。 EShopOnContainers アーキテクチャ。
+![eShopOnContainers アーキテクチャ ](./media/eshoponcontainers-architecture.png)
+ **図 2-5**。 EShopOnContainers アーキテクチャ。
 
 このアーキテクチャのサーバー側コンポーネントはすべて、Azure サービスに簡単にマップできます。
 
