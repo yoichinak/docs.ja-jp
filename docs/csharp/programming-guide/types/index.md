@@ -11,18 +11,18 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2fec7b5c36173bf4a99b35cc2bf9e3ca26354a11
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397636"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83615216"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
 ## <a name="types-variables-and-values"></a>型、変数、および値
 
-C# は、厳密に型指定された言語です。 すべての変数および定数は、値に評価されるすべての式がそうであるように、型を持ちます。 すべてのメソッド シグネチャで、各入力パラメーターの型と戻り値の型が指定されます。 .NET クラス ライブラリでは、一連の組み込みの数値型が定義され、さらにファイル システム、ネットワーク接続、オブジェクトのコレクション、オブジェクトの配列、日付など、さまざまな論理構造を表すより複雑な型も定義されています。 一般的な C# プログラムでは、クラス ライブラリで定義されている型と、そのプログラムの問題領域に固有の概念をモデル化するユーザー定義の型が使用されます。
+C# は、厳密に型指定された言語です。 すべての変数および定数は、値に評価されるすべての式がそうであるように、型を持ちます。 各メソッドの宣言は、各入力パラメーターと戻り値に対して、名前、パラメーターの数、型と種類 (値、参照、または出力) を指定します。 .NET クラス ライブラリでは、一連の組み込みの数値型が定義され、さらにファイル システム、ネットワーク接続、オブジェクトのコレクション、オブジェクトの配列、日付など、さまざまな論理構造を表すより複雑な型も定義されています。 一般的な C# プログラムでは、クラス ライブラリで定義されている型と、そのプログラムの問題領域に固有の概念をモデル化するユーザー定義の型が使用されます。
 
 型には、次のような情報が保存されます。
 
@@ -53,7 +53,7 @@ C# は、厳密に型指定された言語です。 すべての変数および�
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-メソッドのパラメーターおよび戻り値の型は、メソッド シグネチャで指定します。 入力引数として [int](../../language-reference/builtin-types/integral-numeric-types.md) を使用する必要があり、戻り値として文字列を返すメソッドのシグネチャを次に示します。
+メソッドのパラメーターおよび戻り値の型は、メソッドの宣言で指定します。 入力引数として [int](../../language-reference/builtin-types/integral-numeric-types.md) を使用する必要があり、戻り値として文字列を返すメソッドのシグネチャを次に示します。
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 

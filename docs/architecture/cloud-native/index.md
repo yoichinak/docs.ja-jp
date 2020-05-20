@@ -2,19 +2,19 @@
 title: Azure 向けクラウド ネイティブ .NET アプリケーションの設計
 description: Azure のコンテナー、マイクロサービス、サーバーレス機能を活用するクラウドネイティブなアプリケーションを構築するためのガイド。
 author: ardalis
-ms.date: 04/23/2020
-ms.openlocfilehash: 24d5c75fc5d2e5623892e8f83daea52553d13765
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.date: 05/13/2020
+ms.openlocfilehash: 1607c1bbcc9bbb3c9fe19840a2827aa5ea083728
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507391"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614001"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure 向けクラウド ネイティブ .NET アプリケーションの設計
 
-[!INCLUDE [book-preview](../../../includes/book-preview.md)]
-
 ![カバーの画像](./media/cover.png)
+
+**EDITION v.1.0**
 
 発行者
 
@@ -26,7 +26,7 @@ One Microsoft Way
 
 Redmond, Washington 98052-6399
 
-Copyright &copy; 2019 by Microsoft Corporation
+Copyright &copy; 2020 by Microsoft Corporation
 
 All rights reserved. 本書のいかなる部分も、書面による発行者の許可なしに、いかなる形式または方法によっても、複製または伝送することを禁じます。
 
@@ -58,11 +58,13 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 >
 > **Cecil Phillip**、Microsoft、上級クラウド アドボケイト
 
-eShopOnContainers に関する詳細をご覧ください
-
 編集者:
 
 > **Maira Wenzel**、Microsoft、.NET チーム、シニア プログラム マネージャー
+
+## <a name="version"></a>バージョン
+
+このガイドは、 **.NET Core 3.1** バージョンと、.NET Core 3.1 のリリースと同時期に更新された関連するその他の多数の同じ “相次ぐ” テクノロジ (つまり、Azure やサードパーティ製のテクノロジ) を説明するように記述されています。
 
 ## <a name="who-should-use-this-guide"></a>対象読者
 
@@ -83,6 +85,10 @@ eShopOnContainers に関する詳細をご覧ください
 - DevOps
 
 このガイドは PDF 形式とオンラインの両方で利用できます。 本書やそのオンライン版のリンクをチームに転送し、トピックの共通理解に役立ててください。 トピックのほとんどは、基礎的な原則、基礎的なパターン、トピックに関連する意思決定に関係する折り合いが同じように理解されることで効果を発揮します。 本書の目標は、アプリケーションのアーキテクチャ、開発、ホスティングについて、十分に情報が与えられた上で意思決定するために必要な情報をチームとそのリーダーに与えることです。
+
+## <a name="send-your-feedback"></a>フィードバックの送信
+
+本書と関連サンプルは継続的に更新されるので、お客様のフィードバックを歓迎しています。 本書を改善する方法についてコメントがある場合、[GitHub の問題](https://github.com/dotnet/docs/issues)に関して作成されたあらゆるページの下部にあるフィードバック セクションをご利用ください。
 
 >[!div class="step-by-step"]
 >[次へ](introduction.md)
