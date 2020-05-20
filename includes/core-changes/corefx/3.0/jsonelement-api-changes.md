@@ -41,7 +41,7 @@ ms.locfileid: "74568104"
     }
     ```
 
-1. <xref:System.Text.Json.JsonElement.WriteTo%2A> で、それのメソッド パラメーターが <xref:System.ArgumentNullException> の場合に、`null` がスローされるようになりました。
+1. <xref:System.Text.Json.JsonElement.WriteTo%2A> で、それのメソッド パラメーターが `null` の場合に、<xref:System.ArgumentNullException> がスローされるようになりました。
 
 #### <a name="version-introduced"></a>導入されたバージョン
 
@@ -51,7 +51,7 @@ ms.locfileid: "74568104"
 
 これらの変更の影響をコードが受ける場合、次を行うことができます。
 
-- `WriteProperty` に <xref:System.Text.Json.JsonElement> オーバーロードに対する置換 API はありません。 同じ結果を得るには、代わりに <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> メソッドと共に <xref:System.Text.Json.JsonElement.WriteTo%2A> オーバーロードの 1 つを呼び出します。 次に例を示します。
+- <xref:System.Text.Json.JsonElement> に `WriteProperty` オーバーロードに対する置換 API はありません。 同じ結果を得るには、代わりに <xref:System.Text.Json.JsonElement.WriteTo%2A> メソッドと共に <xref:System.Text.Json.Utf8JsonWriter.WritePropertyName%2A?displayProperty=nameWithType> オーバーロードの 1 つを呼び出します。 次に例を示します。
 
    ```csharp
    using (JsonDocument doc = JsonDocument.Parse(jsonString))
@@ -72,7 +72,7 @@ ms.locfileid: "74568104"
    }
    ```
 
-- <xref:System.ArgumentNullException> メソッドへの呼び出しの <xref:System.Text.Json.JsonElement.WriteTo%2A> を処理します。
+- <xref:System.Text.Json.JsonElement.WriteTo%2A> メソッドへの呼び出しの <xref:System.ArgumentNullException> を処理します。
 
 #### <a name="affected-apis"></a>影響を受ける API
 

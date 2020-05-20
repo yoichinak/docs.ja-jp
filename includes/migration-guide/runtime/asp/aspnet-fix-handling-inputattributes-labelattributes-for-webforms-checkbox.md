@@ -10,7 +10,7 @@ ms.locfileid: "67802679"
 
 |   |   |
 |---|---|
-|説明|.NET Framework 4.7.2 以前のバージョンをターゲットとするアプリケーションでは、WebForms <xref:System.Web.UI.WebControls.CheckBox.InputAttributes?displayProperty=nameWithType> コントロールにプログラムで追加された <xref:System.Web.UI.WebControls.CheckBox.LabelAttributes?displayProperty=nameWithType> および <xref:System.Web.UI.WebControls.CheckBox> がポストバック後に失われます。 .NET Framework 4.8 以降のバージョンをターゲットとするアプリケーションでは、これらはポストバック後に保持されます。|
+|説明|.NET Framework 4.7.2 以前のバージョンをターゲットとするアプリケーションでは、WebForms <xref:System.Web.UI.WebControls.CheckBox> コントロールにプログラムで追加された <xref:System.Web.UI.WebControls.CheckBox.InputAttributes?displayProperty=nameWithType> および <xref:System.Web.UI.WebControls.CheckBox.LabelAttributes?displayProperty=nameWithType> がポストバック後に失われます。 .NET Framework 4.8 以降のバージョンをターゲットとするアプリケーションでは、これらはポストバック後に保持されます。|
 |提案される解決策|ポストバック時に属性を復元する動作を正しいものにするには、<code>targetFrameworkVersion</code> を 4.8 以降に設定します。 次に例を示します。<pre><code class="lang-xml">&lt;configuration&gt;&#13;&#10;&lt;system.web&gt;&#13;&#10;&lt;httpRuntime targetFramework=&quot;4.8&quot;/&gt;&#13;&#10;&lt;/system.web&gt;&#13;&#10;&lt;/configuration&gt;&#13;&#10;</code></pre>これより小さい値に設定した場合、または、まったく設定しない場合、適切でない古い動作が維持されます。|
 |スコープ|不明|
 |バージョン|4.8|

@@ -11,7 +11,7 @@ ms.locfileid: "72887796"
 |   |   |
 |---|---|
 |説明|.NET Framework 4.6.2 以降では、署名自体の形式が正しくない場合、このメソッドでは **False** が返されます。 今すぐ false を返しますの検証に失敗しました。 .NET Framework 4.6 および 4.6.1 では、メソッドによってスローされる、<xref:System.Security.Cryptography.CryptographicException?displayProperty=name>署名自体が正しくフォーマットされている場合。|
-|提案される解決策|検証が失敗し、メソッドで <xref:System.Security.Cryptography.CryptographicException?displayProperty=name>False**が返される場合は、代わりにその実行が** の処理に依存するコードが実行される必要があります。|
+|提案される解決策|検証が失敗し、メソッドで **False** が返される場合は、代わりにその実行が <xref:System.Security.Cryptography.CryptographicException?displayProperty=name> の処理に依存するコードが実行される必要があります。|
 |スコープ|Minor|
 |バージョン|4.6.2|
 |[種類]|ランタイム|

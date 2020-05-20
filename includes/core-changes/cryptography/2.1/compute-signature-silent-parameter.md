@@ -8,11 +8,11 @@ ms.locfileid: "77449223"
 ---
 ### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>SignedCms.ComputeSignature のブール型パラメーターの尊重
 
-.NET Core では、`silent` メソッドのブール型の <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> パラメーターが尊重されます。 このパラメーターが `true` に設定されている場合、PIN プロンプトは表示されません。
+.NET Core では、<xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> メソッドのブール型の `silent` パラメーターが尊重されます。 このパラメーターが `true` に設定されている場合、PIN プロンプトは表示されません。
 
 #### <a name="change-description"></a>変更の説明
 
-.NET Framework では、`silent` メソッドの <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> パラメーターは無視され、プロバイダーから要求された場合は常に PIN プロンプトが表示されます。 .NET Core では、`silent` パラメーターが尊重されます。`true` に設定すると、プロバイダーから要求される場合でも PIN プロンプトは表示されません。
+.NET Framework では、<xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> メソッドの `silent` パラメーターは無視され、プロバイダーから要求された場合は常に PIN プロンプトが表示されます。 .NET Core では、`silent` パラメーターが尊重されます。`true` に設定すると、プロバイダーから要求される場合でも PIN プロンプトは表示されません。
 
 .NET Core のバージョン 2.1 では、CMS/PKCS #7 メッセージのサポートが導入されました。
 

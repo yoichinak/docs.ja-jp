@@ -22,7 +22,7 @@ ms.locfileid: "76116378"
 
 #### <a name="recommended-action"></a>推奨アクション
 
-[ に対する](xref:System.ObsoleteAttribute)廃止<xref:Microsoft.VisualBasic.Constants.vbNewLine>属性メッセージには、次の推奨事項が含まれています。
+<xref:Microsoft.VisualBasic.Constants.vbNewLine> に対する[廃止](xref:System.ObsoleteAttribute)属性メッセージには、次の推奨事項が含まれています。
 
 キャリッジ リターンとライン フィードの場合は、<xref:Microsoft.VisualBasic.Constants.vbCrLf> を使用します。 現在のプラットフォームの改行の場合は、<xref:System.Environment.NewLine?displayProperty=nameWithType> を使用します。
 

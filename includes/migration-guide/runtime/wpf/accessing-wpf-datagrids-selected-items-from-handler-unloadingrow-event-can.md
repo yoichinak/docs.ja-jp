@@ -10,7 +10,7 @@ ms.locfileid: "67858513"
 
 |   |   |
 |---|---|
-|説明|.NET Framework 4.5 のバグが原因で、行の削除に関連する <xref:System.Windows.Controls.DataGrid> イベントのイベント ハンドラーにより、<xref:System.NullReferenceException?displayProperty=name> の <xref:System.Windows.Controls.DataGrid> または <xref:System.Windows.Controls.Primitives.Selector.SelectedItem?displayProperty=name> プロパティにアクセスする場合に <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=name> がスローされる可能性があります。|
+|説明|.NET Framework 4.5 のバグが原因で、行の削除に関連する <xref:System.Windows.Controls.DataGrid> イベントのイベント ハンドラーにより、<xref:System.Windows.Controls.DataGrid> の <xref:System.Windows.Controls.Primitives.Selector.SelectedItem?displayProperty=name> または <xref:System.Windows.Controls.Primitives.MultiSelector.SelectedItems?displayProperty=name> プロパティにアクセスする場合に <xref:System.NullReferenceException?displayProperty=name> がスローされる可能性があります。|
 |提案される解決策|この問題は .NET Framework 4.6 で修正されたため、このバージョンの .NET Framework にアップグレードすることによって対処できます。|
 |スコープ|Minor|
 |バージョン|4.5|
