@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 025e358c-448f-4423-a2f2-57acf437c8a5
 topic_type:
 - apiref
-ms.openlocfilehash: 0c112819ef3bc4f9a7146ee80f55202ff89d689a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e88a844a7f79f14c717a5966b345588b3b3b9f81
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178314"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609418"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 メソッド
-メソッドを開き、イメージ内の実際のセクション オフセットを提供します。  
+メソッドを開き、イメージ内の実際のセクションオフセットを提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT OpenMethod2(
   
 ## <a name="parameters"></a>パラメーター  
  `method`  
- [in]開くメソッドのメタデータ トークン。  
+ から開くメソッドのメタデータトークン。  
   
  `isect`  
- [in]イメージ内のセクション オフセット。  
+ からイメージ内のセクションオフセット。  
   
  `offset`  
- [in]イメージ内のオフセット。  
+ からイメージ内のオフセット。  
   
 ## <a name="return-value"></a>戻り値  
- メソッドが成功した場合はS_OK。それ以外の場合は、E_FAILまたはその他のエラー コードを返します。  
+ メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** コーシム.idl,コーシム.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter3 インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [OpenMethod メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+- [ISymUnmanagedWriter3 インターフェイス](isymunmanagedwriter3-interface.md)
+- [OpenMethod メソッド](isymunmanagedwriter-openmethod-method.md)

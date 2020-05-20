@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d4d98676-444b-46ca-bfe6-0d827385cd22
 topic_type:
 - apiref
-ms.openlocfilehash: b404a187d8628a04d2aa51df15f86fcc9d0b14f8
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: b57bb549278f62cdce6ed5deaaa62f154ec919b5
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74427859"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83609366"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange メソッド
 指定した構文のスコープのオフセット範囲を定義します。 スコープは新しい現在のスコープになり、スコープのスタックにプッシュされます。 スコープは階層を形成する必要があります。 兄弟を重ねることはできません。  
@@ -47,12 +47,12 @@ HRESULT OpenScope(
 ## <a name="return-value"></a>戻り値  
  メソッドが成功した場合は S_OK。それ以外の場合は、E_FAIL またはその他のエラーコードを指定します。  
   
-## <a name="remarks"></a>コメント  
- [ISymUnmanagedWriter:: OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)は、後でスコープの開始オフセットと終了オフセットを定義するために `ISymUnmanagedWriter::SetScopeRange` と共に使用できる非透過スコープ識別子を返します。 この場合、`ISymUnmanagedWriter::OpenScope` と[ISymUnmanagedWriter:: cloに](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)渡されるオフセットは無視されます。 スコープ識別子は、現在のメソッドでのみ有効です。  
+## <a name="remarks"></a>解説  
+ [ISymUnmanagedWriter:: OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)は、 `ISymUnmanagedWriter::SetScopeRange` 後でスコープの開始オフセットと終了オフセットを定義するためにと共に使用できる非透過スコープ識別子を返します。 この場合、 `ISymUnmanagedWriter::OpenScope` と[ISymUnmanagedWriter:: cloに](isymunmanagedwriter-closescope-method.md)渡されるオフセットは無視されます。 スコープ識別子は、現在のメソッドでのみ有効です。  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** CorSym .idl、CorSym .h  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [ISymUnmanagedWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [ISymUnmanagedWriter インターフェイス](isymunmanagedwriter-interface.md)
