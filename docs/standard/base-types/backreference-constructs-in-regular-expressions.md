@@ -87,7 +87,7 @@ ms.locfileid: "75711533"
 [!code-csharp[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference3.cs#3)]
 [!code-vb[RegularExpressions.Language.Backreferences#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference3.vb#3)]
 
-*name* が数字の文字列表現で、その名前を持つキャプチャ グループが存在しない場合、`\k<`*name*`>` は前方参照 `\`*number* と同じになります。ここで、*number* はキャプチャの序数位置です。 次の例には、`char` という名前の単一のキャプチャ グループがあります。 前方参照構成体ではこれを `\k<1>` と呼びます。 例からの出力に示されているように、<xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> は最初のキャプチャ グループであるため、`char` の呼び出しは正常に行われています。
+*name* が数字の文字列表現で、その名前を持つキャプチャ グループが存在しない場合、`\k<`*name*`>` は前方参照 `\`*number* と同じになります。ここで、*number* はキャプチャの序数位置です。 次の例には、`char` という名前の単一のキャプチャ グループがあります。 前方参照構成体ではこれを `\k<1>` と呼びます。 例からの出力に示されているように、`char` は最初のキャプチャ グループであるため、<xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> の呼び出しは正常に行われています。
 
 [!code-csharp[Ordinal.Backreference](../../../samples/snippets/csharp/VS_Snippets_CLR/regularexpressions.language.backreferences/cs/backreference6.cs)]
 [!code-vb[Ordinal.BackReference](../../../samples/snippets/visualbasic/VS_Snippets_CLR/regularexpressions.language.backreferences/vb/backreference6.vb)]

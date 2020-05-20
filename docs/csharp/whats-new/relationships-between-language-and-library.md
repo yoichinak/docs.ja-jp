@@ -21,7 +21,7 @@ C# 言語の定義は、標準ライブラリが特定の型とその型にア�
 
 その最初のバージョンは単純でした。コンパイラと標準ライブラリは共に出荷され、それぞれ 1 つのバージョンしかありませんでした。
 
-C# の以降のバージョンでは、随時、依存関係に新しい型またはメンバーが追加されています。 例として、<xref:System.Runtime.CompilerServices.INotifyCompletion>、<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>、<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute> があります。 C# 7.0 では、 <xref:System.ValueTuple>タプル[言語機能を実装するために](../tuples.md)への依存関係が追加されます。
+C# の以降のバージョンでは、随時、依存関係に新しい型またはメンバーが追加されています。 例として、<xref:System.Runtime.CompilerServices.INotifyCompletion>、<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>、<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute> があります。 C# 7.0 では、 [タプル](../tuples.md)言語機能を実装するために<xref:System.ValueTuple>への依存関係が追加されます。
 
 言語設計チームは、準拠している標準ライブラリで必要な型およびメンバーのアクセス領域を最小限に抑えることに取り組んでいます。 その目標は、新しいライブラリ機能が言語にシームレスに組み込まれているクリーン設計と両立させることです。 将来、標準ライブラリ内の新しい型とメンバーを必要とする C# の新バージョンが登場するでしょう。 自分の作業でこれらの依存関係を管理する方法を理解することが重要です。
 

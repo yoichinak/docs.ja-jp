@@ -21,9 +21,9 @@ ms.locfileid: "73138030"
 ## <a name="example"></a>例  
  次の例はスレッド追跡モードを示しています。 以下のいずれかの結果の原因となるコード エラーをシミュレートするために、ロックを正しく解放する行がコメントアウトされています。  
   
-- <xref:System.Threading.SpinLock> (Visual Basic では `true`) の引数を使用して `True` が作成された場合、例外がスローされる。  
+- `true` (Visual Basic では `True`) の引数を使用して <xref:System.Threading.SpinLock> が作成された場合、例外がスローされる。  
   
-- <xref:System.Threading.SpinLock> (Visual Basic では `false`) の引数を使用して `False` が作成された場合、デッドロックが発生する。  
+- `false` (Visual Basic では `False`) の引数を使用して <xref:System.Threading.SpinLock> が作成された場合、デッドロックが発生する。  
   
  [!code-csharp[CDS_SpinLock#01](../../../samples/snippets/csharp/VS_Snippets_Misc/cds_spinlock/cs/spinlockdemo.cs#01)]
  [!code-vb[CDS_SpinLock#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cds_spinlock/vb/spinlock_threadtracking.vb#01)]  

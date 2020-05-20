@@ -17,7 +17,7 @@ ms.locfileid: "74345617"
 ---
 # <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>方法 : Visual Basic で、レジストリ キーから値を読み取る
 
-`GetValue` オブジェクトの `My.Computer.Registry` メソッドは、Windows レジストリ内の値を読み込むために使用できます。  
+`My.Computer.Registry` オブジェクトの `GetValue` メソッドは、Windows レジストリ内の値を読み込むために使用できます。  
   
  キー (次の例では "Software\MyApp") が存在しない場合は、例外がスローされます。 `ValueName` (次の例では "Name") が存在しない場合は、`Nothing` が返されます。  
   
@@ -27,7 +27,7 @@ ms.locfileid: "74345617"
   
 ### <a name="to-read-a-value-from-a-registry-key"></a>レジストリ キーから値を読み取るには  
   
-- `GetValue` メソッドを使用してパスと名前を指定し、レジストリ キーから値を読み取ります。 次の例は、`Name` から値 `HKEY_CURRENT_USER\Software\MyApp` を読み取り、その値をメッセージ ボックスに表示します。  
+- `GetValue` メソッドを使用してパスと名前を指定し、レジストリ キーから値を読み取ります。 次の例は、`HKEY_CURRENT_USER\Software\MyApp` から値 `Name` を読み取り、その値をメッセージ ボックスに表示します。  
   
      [!code-vb[VbResourceTasks#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#4)]  
   

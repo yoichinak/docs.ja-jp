@@ -33,7 +33,7 @@ dotnet new console -o myApp
 cd myApp
 ```
 
-`dotnet` コマンドで、種類が `new` の `console` アプリケーションを作成します。 `-o` パラメーターで、アプリが格納されるディレクトリ `myApp` を作成し、必要なファイルを指定します。 `cd myApp` コマンドで、新しく作成されたアプリ ディレクトリに移動します。
+`dotnet` コマンドで、種類が `console` の `new` アプリケーションを作成します。 `-o` パラメーターで、アプリが格納されるディレクトリ `myApp` を作成し、必要なファイルを指定します。 `cd myApp` コマンドで、新しく作成されたアプリ ディレクトリに移動します。
 
 ## <a name="install-infernet-package"></a>Infer.NET パッケージのインストール
 

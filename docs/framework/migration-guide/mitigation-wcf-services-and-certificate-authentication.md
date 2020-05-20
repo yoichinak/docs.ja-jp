@@ -49,7 +49,7 @@ TLS 1.2 では MD5 証明書認証がサポートされません。 そのため
   </configuration>
   ```
 
-- バインドがソース コードで動的に構成されている場合は、ソース コード内で TLS 1.1 (<xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType>) または以前のバージョンのプロトコルを使用するように <xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType> プロパティを更新します。
+- バインドがソース コードで動的に構成されている場合は、ソース コード内で TLS 1.1 (<xref:System.Security.Authentication.SslProtocols.Tls11?displayProperty=nameWithType>) または以前のバージョンのプロトコルを使用するように <xref:System.ServiceModel.TcpTransportSecurity.SslProtocols%2A?displayProperty=nameWithType> プロパティを更新します。
 
   > [!CAUTION]
   > MD5 ハッシュ アルゴリズムによる証明書は安全でないと見なされるため、この回避策はお勧めできません。

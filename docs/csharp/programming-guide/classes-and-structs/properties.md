@@ -24,7 +24,7 @@ ms.locfileid: "79170105"
   
 - [get](../../language-reference/keywords/get.md) プロパティ アクセサーはプロパティ値を取得するために使用し、[set](../../language-reference/keywords/set.md) プロパティ アクセサーは新しい値を割り当てるために使用します。 これらのアクセサーには異なるアクセス レベルを指定できます。 詳細については、「[アクセサーのアクセシビリティの制限](./restricting-accessor-accessibility.md)」を参照してください。  
   
-- [ アクセサーで割り当てる値は ](../../language-reference/keywords/value.md)value`set` キーワードを使用して定義します。  
+- `set` アクセサーで割り当てる値は [value](../../language-reference/keywords/value.md) キーワードを使用して定義します。  
 - プロパティの種類には、*読み取り/書き込み* (`get` アクセサーと `set` アクセサーの両方を備える)、*読み取り専用* (`get` アクセサーのみで `set` アクセサーはない)、*書き込み専用* (`set` アクセサーのみで `get` アクセサーはない) があります。 書き込み専用のプロパティの使用頻度は低く、ほとんどの場合、機密データへのアクセスを制限するために使用されます。
 
 - カスタムのアクセサー コードを必要としない単純なプロパティは、式本体の定義として、または[自動実装プロパティ](./auto-implemented-properties.md)として実装できます。
@@ -45,7 +45,7 @@ ms.locfileid: "79170105"
 
  [!code-csharp[Properties#2](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-2.cs)]  
 
- C# 7.0 以降では、`get` アクセサーと `set` アクセサーのどちらも、式形式のメンバーとして実装できます。 この場合、`get` キーワードと `set` キーワードを使用する必要があります。 両方のアクセサーに式本体の定義を使用する例を次に示します。 `return` アクセサーで `get` キーワードが使用されていない点に注意してください。
+ C# 7.0 以降では、`get` アクセサーと `set` アクセサーのどちらも、式形式のメンバーとして実装できます。 この場合、`get` キーワードと `set` キーワードを使用する必要があります。 両方のアクセサーに式本体の定義を使用する例を次に示します。 `get` アクセサーで `return` キーワードが使用されていない点に注意してください。
 
   [!code-csharp[Properties#3](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-3.cs)]  
 
@@ -71,7 +71,7 @@ ms.locfileid: "79170105"
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語の仕様](~/_csharplang/spec/classes.md#properties)」の[プロパティ](/dotnet/csharp/language-reference/language-specification/introduction)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[プロパティ](~/_csharplang/spec/classes.md#properties)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 

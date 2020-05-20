@@ -22,7 +22,7 @@ ms.locfileid: "74334471"
   
 #### <a name="to-write-text-to-a-file"></a>テキストをファイルに書き込むには  
   
-- ファイルにテキストを書き込むには `WriteAllText` メソッドを使い、ファイルと書き込むテキストを指定します。 この例では、`"This is new text."` という名前のファイルに既に存在するテキストの最後に、`test.txt` という行を書き込んで追加します。  
+- ファイルにテキストを書き込むには `WriteAllText` メソッドを使い、ファイルと書き込むテキストを指定します。 この例では、`test.txt` という名前のファイルに既に存在するテキストの最後に、`"This is new text."` という行を書き込んで追加します。  
   
      [!code-vb[VbFileIOWrite#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#3)]  
   

@@ -23,7 +23,7 @@ ms.locfileid: "78847652"
 
 `-` 演算子と `-=` 演算子は、組み込みの[整数](../builtin-types/integral-numeric-types.md)および[浮動小数点型](../builtin-types/floating-point-numeric-types.md)の数値型と、[デリゲート](../builtin-types/reference-types.md#the-delegate-type)型によってサポートされています。
 
-算術演算子 `-` については、「[算術演算子 (C# リファレンス)](arithmetic-operators.md#unary-plus-and-minus-operators)」の記事の「[単項プラス演算子と単項マイナス演算子](arithmetic-operators.md#subtraction-operator--)」セクションと「[減算演算子 -](arithmetic-operators.md)」セクションを参照してください。
+算術演算子 `-` については、「[算術演算子 (C# リファレンス)](arithmetic-operators.md)」の記事の「[単項プラス演算子と単項マイナス演算子](arithmetic-operators.md#unary-plus-and-minus-operators)」セクションと「[減算演算子 -](arithmetic-operators.md#subtraction-operator--)」セクションを参照してください。
 
 ## <a name="delegate-removal"></a>デリゲートの削除
 
@@ -37,7 +37,7 @@ ms.locfileid: "78847652"
 
   [!code-csharp-interactive[delegate removal with no effect](snippets/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  前の例では、デリゲート中に削除デリゲートのインスタンスが比較されることも示しています。 たとえば、同一の[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)の評価から生成されるデリゲートが等しくない、などです。 デリゲートの等値の詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md#delegate-equality-operators)の[デリゲートの等値演算子](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+  前の例では、デリゲート中に削除デリゲートのインスタンスが比較されることも示しています。 たとえば、同一の[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)の評価から生成されるデリゲートが等しくない、などです。 デリゲートの等値の詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[デリゲートの等値演算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)に関するセクションを参照してください。
 
 - 左側のオペランドが `null` の場合は、演算結果は `null` になります。 右側のオペランドが `null` の場合は、演算結果は左側のオペランドになります。
 
@@ -67,15 +67,15 @@ x = x - y
 
 [!code-csharp-interactive[-= examples](snippets/SubtractionOperator.cs#SubtractAndAssign)]
 
-`-=`イベント[から登録を解除するときに、](../keywords/event.md) 演算子を使用して削除するイベント ハンドラー メソッドを指定することもできます。 詳細については、「[イベントのサブスクリプションとサブスクリプション解除を行う方法](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
+[イベント](../keywords/event.md)から登録を解除するときに、`-=` 演算子を使用して削除するイベント ハンドラー メソッドを指定することもできます。 詳細については、「[イベントのサブスクリプションとサブスクリプション解除を行う方法](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型は [ 演算子を](operator-overloading.md)オーバーロード`-`できます。 2 項 `-` 演算子をオーバーロードすると、`-=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`-=` 演算子を明示的にオーバーロードできません。
+ユーザー定義型は `-` 演算子を[オーバーロード](operator-overloading.md)できます。 2 項 `-` 演算子をオーバーロードすると、`-=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`-=` 演算子を明示的にオーバーロードできません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md#unary-minus-operator)の[単項マイナス演算子](~/_csharplang/spec/expressions.md#subtraction-operator)と[減算演算子](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[単項マイナス演算子](~/_csharplang/spec/expressions.md#unary-minus-operator)と[減算演算子](~/_csharplang/spec/expressions.md#subtraction-operator)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>参照
 

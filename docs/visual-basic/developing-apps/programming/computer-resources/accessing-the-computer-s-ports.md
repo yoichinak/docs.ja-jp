@@ -42,7 +42,7 @@ ms.locfileid: "74329595"
  コンピューター上にあるシリアル ポートの名前のコレクションを取得する、`SerialPortNames` プロパティについて説明します。  
   
  <xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>  
- `OpenSerialPort` オブジェクトを作成して開く <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> メソッドについて説明します。  
+ <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> オブジェクトを作成して開く `OpenSerialPort` メソッドについて説明します。  
   
 ## <a name="related-sections"></a>関連項目  
 

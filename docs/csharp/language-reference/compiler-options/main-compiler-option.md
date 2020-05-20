@@ -27,7 +27,7 @@ ms.locfileid: "69602726"
 ## <a name="arguments"></a>引数  
  `class`  
  **Main** メソッドを含む型です。  
- 指定するクラス名は完全に修飾する必要があります。クラスを含む完全な名前空間を指定し、そのあとにクラス名を続ける必要があります。 たとえば、`Main` メソッドが、`Program` 名前空間の `MyApplication.Core` クラス内に置かれている場合、コンパイラ オプションは `-main:MyApplication.Core.Program` とする必要があります。
+ 指定するクラス名は完全に修飾する必要があります。クラスを含む完全な名前空間を指定し、そのあとにクラス名を続ける必要があります。 たとえば、`Main` メソッドが、`MyApplication.Core` 名前空間の `Program` クラス内に置かれている場合、コンパイラ オプションは `-main:MyApplication.Core.Program` とする必要があります。
   
 ## <a name="remarks"></a>解説  
  [Main](../../programming-guide/main-and-command-args/index.md) メソッドを使用した型がコンパイル対象に 2 つ以上含まれている場合には、プログラムへのエントリ ポイントとして使用する **Main** メソッドがどの型に含まれているかを指定できます。  
@@ -45,7 +45,7 @@ ms.locfileid: "69602726"
      このコンパイラ オプションをプログラムによって設定するには、「<xref:VSLangProj80.ProjectProperties3.StartupObject%2A>」を参照してください。  
   
 ## <a name="example"></a>例  
- `t2.cs`Main`t3.cs` メソッドが **にあることを指定して、** と `Test2` をコンパイルします。  
+ **Main** メソッドが`Test2` にあることを指定して、`t2.cs` と `t3.cs` をコンパイルします。  
   
 ```console  
 csc t2.cs t3.cs -main:Test2  

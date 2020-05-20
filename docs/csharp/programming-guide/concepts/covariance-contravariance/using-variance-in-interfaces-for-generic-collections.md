@@ -17,7 +17,7 @@ ms.locfileid: "79169741"
  .NET Framework のバリアント インターフェイスの一覧については、「[ジェネリック インターフェイスの変性 (C#)](./variance-in-generic-interfaces.md)」 (ジェネリック インターフェイスの変性 (C#)) を参照してください。  
   
 ## <a name="converting-generic-collections"></a>ジェネリック コレクションの変換  
- 次の例は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにおける共変性のサポートの利点を示しています。 `PrintFullName` メソッドは、パラメーターとして `IEnumerable<Person>` 型のコレクションを受け取ります。 ただし、`IEnumerable<Employee>` は `Employee` を継承しているため、`Person` 型のコレクションで再利用できます。  
+ 次の例は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスにおける共変性のサポートの利点を示しています。 `PrintFullName` メソッドは、パラメーターとして `IEnumerable<Person>` 型のコレクションを受け取ります。 ただし、`Employee` は `Person` を継承しているため、`IEnumerable<Employee>` 型のコレクションで再利用できます。  
   
 ```csharp  
 // Simple hierarchy of classes.  
@@ -55,7 +55,7 @@ class Program
 ```  
   
 ## <a name="comparing-generic-collections"></a>ジェネリック コレクションの比較  
- 次の例は、<xref:System.Collections.Generic.IComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。 `PersonComparer` クラスは、`IComparer<Person>` インターフェイスを実装します。 ただし、`Employee` は `Employee` を継承しているため、`Person` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。  
+ 次の例は、<xref:System.Collections.Generic.IComparer%601> インターフェイスにおける反変性のサポートの利点を示しています。 `PersonComparer` クラスは、`IComparer<Person>` インターフェイスを実装します。 ただし、`Employee` は `Person` を継承しているため、`Employee` 型の一連のオブジェクトを比較するためにこのクラスを再利用できます。  
   
 ```csharp  
 // Simple hierarchy of classes.  

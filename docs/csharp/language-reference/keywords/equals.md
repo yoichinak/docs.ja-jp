@@ -20,7 +20,7 @@ ms.locfileid: "75713579"
 
 ## <a name="example"></a>例
 
-`equals` 句での `join` キーワードの使用例を次に示します。
+`join` 句での `equals` キーワードの使用例を次に示します。
 
 [!code-csharp[csrefKeywordsContextual#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#12)]
 

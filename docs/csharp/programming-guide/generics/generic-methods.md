@@ -34,7 +34,7 @@ ms.locfileid: "75712196"
   
  [!code-csharp[csProgGuideGenerics#26](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#26)]  
   
- メソッドの型パラメーターでさらに多くの特殊操作を可能にするために、制約を使用します。 `Swap<T>` という名前が付けられた `SwapIfGreater<T>` のこのバージョンは、<xref:System.IComparable%601> を実装する型引数との併用でのみ利用できます。  
+ メソッドの型パラメーターでさらに多くの特殊操作を可能にするために、制約を使用します。 `SwapIfGreater<T>` という名前が付けられた `Swap<T>` のこのバージョンは、<xref:System.IComparable%601> を実装する型引数との併用でのみ利用できます。  
   
  [!code-csharp[csProgGuideGenerics#27](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#27)]  
   

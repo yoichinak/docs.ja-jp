@@ -37,7 +37,7 @@ ms.locfileid: "76789846"
 
 ## <a name="example"></a>例
 
-[code> タグの使用例については、「\<](./example.md)example\<」を参照してください。
+\<code> タグの使用例については、「[\<example](./example.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 

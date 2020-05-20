@@ -16,7 +16,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "75711260"
 ---
 # <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>方法: パイプラインでブロッキング コレクションの配列を使用する
-次の例は、<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> や <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> などの静的メソッドで <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A> オブジェクトの配列を使用し、コンポーネント間の高速で柔軟なデータ転送を実装する方法を示しています。  
+次の例は、<xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> や <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A> などの静的メソッドで <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> オブジェクトの配列を使用し、コンポーネント間の高速で柔軟なデータ転送を実装する方法を示しています。  
   
 ## <a name="example"></a>例  
  次の例では、各オブジェクトが同時にデータを入力コレクションから取得し、変換して、出力コレクションに渡す、基本的なパイプラインの実装を示します。  

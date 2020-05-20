@@ -22,7 +22,7 @@ ms.locfileid: "75713559"
 
 ## <a name="example"></a>例
 
-次の例では、基になるデリゲート型として <xref:System.EventHandler> を使用するイベントを宣言し、発生させる方法について説明します。 完全なコード例については、「<xref:System.EventHandler%601>.NET Framework ガイドラインに準拠したイベントを発行する方法[」を参照してください。完全なコード例では、ジェネリック ](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md) デリゲート型の使用方法と、イベントをサブスクライブして、イベント ハンドラー メソッドを作成する方法も確認できます。
+次の例では、基になるデリゲート型として <xref:System.EventHandler> を使用するイベントを宣言し、発生させる方法について説明します。 完全なコード例については、「[.NET Framework ガイドラインに準拠したイベントを発行する方法](../../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)」を参照してください。完全なコード例では、ジェネリック <xref:System.EventHandler%601> デリゲート型の使用方法と、イベントをサブスクライブして、イベント ハンドラー メソッドを作成する方法も確認できます。
 
 [!code-csharp[csrefKeywordsModifiers#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#7)]
 

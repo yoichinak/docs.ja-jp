@@ -112,10 +112,10 @@ IEnumerable<float> sizeColumn = data.GetColumn<float>("Size").ToList();
 
 ## <a name="inspect-idataview-values-one-row-at-a-time"></a>IDataView の値を 1 行ずつ検査する
 
-[`IDataView`](xref:Microsoft.ML.IDataView) は遅れて評価されます。 このドキュメントの前のセクションで示したように、[`IDataView`](xref:Microsoft.ML.IDataView) に変換せずに [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) の複数の行にわたって反復処理を行うには、[`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) メソッドを使用して [`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) の [DataViewSchema](xref:Microsoft.ML.DataViewSchema) をパラメーターとして渡すことで、[`IDataView`](xref:Microsoft.ML.IDataView) を作成します。 その後、複数の行にわたって反復処理を行うために、[`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) カーソル メソッドを [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) デリゲートと共に使用して、各列からそれぞれの値を抽出します。
+[`IDataView`](xref:Microsoft.ML.IDataView) は遅れて評価されます。 このドキュメントの前のセクションで示したように、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換せずに [`IDataView`](xref:Microsoft.ML.IDataView) の複数の行にわたって反復処理を行うには、[`GetRowCursor`](xref:Microsoft.ML.IDataView.GetRowCursor*) メソッドを使用して [`IDataView`](xref:Microsoft.ML.IDataView) の [DataViewSchema](xref:Microsoft.ML.DataViewSchema) をパラメーターとして渡すことで、[`DataViewRowCursor`](xref:Microsoft.ML.DataViewRowCursor) を作成します。 その後、複数の行にわたって反復処理を行うために、[`MoveNext`](xref:Microsoft.ML.DataViewRowCursor.MoveNext*) カーソル メソッドを [`ValueGetter`](xref:Microsoft.ML.ValueGetter%601) デリゲートと共に使用して、各列からそれぞれの値を抽出します。
 
 > [!IMPORTANT]
-> パフォーマンスのために、ML.NET 内のベクターには、ネイティブなコレクション型 (つまり、[、`VBuffer`) ではなく、](xref:Microsoft.ML.Data.VBuffer%601)`Vector``float[]` を使用します。
+> パフォーマンスのために、ML.NET 内のベクターには、ネイティブなコレクション型 (つまり、`Vector`、`float[]`) ではなく、[`VBuffer`](xref:Microsoft.ML.Data.VBuffer%601) を使用します。
 
 ```csharp
 // Get DataViewSchema of IDataView
@@ -150,7 +150,7 @@ using (DataViewRowCursor cursor = data.GetRowCursor(columns))
 > [!WARNING]
 > `Preview` はデバッグを目的としており、パフォーマンスを低下させる可能性があるため、実稼働環境のコードでは使用しないでください。
 
-モデルのビルド プロセスは実験的であり、反復されます。 データのサブセットに対して機械学習モデルの前処理またはトレーニングを行った後にデータがどうなってるかをプレビューするには、[`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) を返す [`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) メソッドを使用します。 結果のオブジェクトは `ColumnView` および `RowView` プロパティを含み、どちらも [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) になっていて、特定の列または行の値が格納されています。 `maxRows` パラメータ―を使って、変換を適用する行数を指定します。
+モデルのビルド プロセスは実験的であり、反復されます。 データのサブセットに対して機械学習モデルの前処理またはトレーニングを行った後にデータがどうなってるかをプレビューするには、[`DataDebuggerPreview`](xref:Microsoft.ML.Data.DataDebuggerPreview) を返す [`Preview`](xref:Microsoft.ML.DebuggerExtensions.Preview*) メソッドを使用します。 結果のオブジェクトは `ColumnView` および `RowView` プロパティを含み、どちらも [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) になっていて、特定の列または行の値が格納されています。 `maxRows` パラメータ―を使って、変換を適用する行数を指定します。
 
 ![データ デバッガーによるオブジェクトのプレビュー](./media/inspect-intermediate-data-ml-net/data-debugger-preview-01.png)
 

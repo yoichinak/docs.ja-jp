@@ -24,7 +24,7 @@ ms.locfileid: "74335297"
   
      [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
-- 大きいバイナリ ファイルの場合は、<xref:System.IO.FileStream.Read%2A> オブジェクトの <xref:System.IO.FileStream> メソッドを使用して、一度に指定した量だけファイルから読み取ることができます。 その後、各読み取り操作でファイルからメモリに読み込まれる量を制限することができます。 次のコード例では、ファイルをコピーし、各読み取り操作でファイルからメモリに読み込まれる量を呼び出し元が指定できるようにします。  
+- 大きいバイナリ ファイルの場合は、<xref:System.IO.FileStream> オブジェクトの <xref:System.IO.FileStream.Read%2A> メソッドを使用して、一度に指定した量だけファイルから読み取ることができます。 その後、各読み取り操作でファイルからメモリに読み込まれる量を制限することができます。 次のコード例では、ファイルをコピーし、各読み取り操作でファイルからメモリに読み込まれる量を呼び出し元が指定できるようにします。  
   
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   

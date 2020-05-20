@@ -27,7 +27,7 @@ ms.locfileid: "73128968"
 |[ミューテックス](mutexes.md)|共有リソースへの排他アクセスを付与する <xref:System.Threading.Mutex?displayProperty=nameWithType> クラスについて説明します。|
 |[Semaphore と SemaphoreSlim](semaphore-and-semaphoreslim.md)|共有リソースまたはリソースのプールに同時にアクセスできるスレッドの数を制限する <xref:System.Threading.Semaphore?displayProperty=nameWithType> について説明します。|
 |[バリア](barrier.md)|段階的な操作におけるスレッドの調整のためのバリア パターンを実装する <xref:System.Threading.Barrier?displayProperty=nameWithType> クラスについて説明します。|
-|[SpinLock](spinlock.md)|特定の下位レベルのシナリオで <xref:System.Threading.SpinLock?displayProperty=nameWithType> ロックの代わりに軽量クラスとして使用できる <xref:System.Threading.Monitor?displayProperty=nameWithType> 構造体について説明します。|
+|[SpinLock](spinlock.md)|特定の下位レベルのシナリオで <xref:System.Threading.Monitor?displayProperty=nameWithType> ロックの代わりに軽量クラスとして使用できる <xref:System.Threading.SpinLock?displayProperty=nameWithType> 構造体について説明します。|
 |[SpinWait](spinwait.md)|スピンベースの待機のサポートを提供する <xref:System.Threading.SpinWait?displayProperty=nameWithType> 構造体について説明します。|
 
 ## <a name="see-also"></a>参照

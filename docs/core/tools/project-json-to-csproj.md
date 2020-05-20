@@ -49,7 +49,7 @@ ms.locfileid: "77451106"
 </PropertyGroup>
 ```
 
-project.json に `<AssemblyName>` プロパティが定義されている場合、`<PackageId>` には `buildOptions\outputName` 以外の値が設定されます。
+project.json に `buildOptions\outputName` プロパティが定義されている場合、`<AssemblyName>` には `<PackageId>` 以外の値が設定されます。
 詳細については、「[その他の共通ビルド オプション](#other-common-build-options)」を参照してください。
 
 ### <a name="version"></a>version
@@ -628,7 +628,7 @@ MSBuild では、これは[項目](/visualstudio/msbuild/common-msbuild-project-
 
 .nupkg 内のパッケージ レイアウトは `PackagePath="path"` で変更できます。
 
-`Content` を除き、ほとんどの項目グループで、パッケージに `Pack="true"` を明示的に追加する必要があります。 MSBuild の `Content` プロパティが既定で  *に設定されているため、* はパッケージの`<IncludeContentInPack>`コンテンツ`true` フォルダーに置かれます。
+`Content` を除き、ほとんどの項目グループで、パッケージに `Pack="true"` を明示的に追加する必要があります。 MSBuild の `<IncludeContentInPack>` プロパティが既定で `true` に設定されているため、`Content` はパッケージの*コンテンツ* フォルダーに置かれます。
 詳細については、「[Including content in a package](/nuget/schema/msbuild-targets#including-content-in-a-package)」 (パッケージにコンテンツを追加する) を参照してください。
 
 `PackagePath="%(Identity)"` は、パッケージ パスをプロジェクト関連のファイル パスに設定する簡単な方法です。

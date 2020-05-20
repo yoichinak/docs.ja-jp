@@ -53,7 +53,7 @@ ms.locfileid: "78155959"
 
 ## <a name="example"></a>例
 
-次の例では、`Colors`、`Red`、`Blue` の 3 つのエントリから構成される、`Green` と呼ばれる列挙型を定義します。
+次の例では、`Red`、`Blue`、`Green` の 3 つのエントリから構成される、`Colors` と呼ばれる列挙型を定義します。
 
 [!code-csharp[Formatting.Enum#5](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.Enum/cs/enum1.cs#5)]
 [!code-vb[Formatting.Enum#5](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.Enum/vb/enum1.vb#5)]

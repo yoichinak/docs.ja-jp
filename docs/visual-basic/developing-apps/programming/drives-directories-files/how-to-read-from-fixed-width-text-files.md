@@ -23,7 +23,7 @@ ms.locfileid: "74334622"
   
 ### <a name="to-parse-a-fixed-width-text-file"></a>固定幅のテキスト ファイルを解析するには  
   
-1. 新しい `TextFieldParser` を作成します。 次のコードは、`TextFieldParser` という名前の `Reader` を作成し、`test.log` ファイルを開きます。  
+1. 新しい `TextFieldParser` を作成します。 次のコードは、`Reader` という名前の `TextFieldParser` を作成し、`test.log` ファイルを開きます。  
   
      [!code-vb[VbFileIORead#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#9)]  
   

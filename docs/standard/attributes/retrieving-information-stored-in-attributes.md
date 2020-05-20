@@ -22,7 +22,7 @@ ms.locfileid: "78158078"
 カスタム属性の取得は簡単なプロセスです。 まず、取得する属性のインスタンスを宣言します。 次に、<xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> メソッドを使用して、取得する属性の値に新しい属性を初期化します。 新しい属性が初期化されたら、そのプロパティを使用して値を取得できるようになります。  
   
 > [!IMPORTANT]
-> このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキストに読み込まれたコードの属性を取得するには、「<xref:System.Reflection.CustomAttributeData>方法: リフレクションのみのコンテキストにアセンブリを読み込む[」で説明されているように、](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md) クラスを使用する必要があります。  
+> このトピックでは、実行コンテキストに読み込まれるコードのカスタム属性を取得する方法について説明します。 リフレクションのみのコンテキストに読み込まれたコードの属性を取得するには、「[方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」で説明されているように、<xref:System.Reflection.CustomAttributeData> クラスを使用する必要があります。  
   
  このセクションでは、以下の属性の取得方法について説明します。  
   
@@ -58,7 +58,7 @@ The attribute was not found.
   
 <a name="cpconretrievingmultipleinstancesofattributeappliedtosamescope"></a>
 ## <a name="retrieving-multiple-instances-of-an-attribute-applied-to-the-same-scope"></a>同じスコープに適用された属性の複数のインスタンスを取得する  
- 前の例では、検査するクラスと検索する特定の属性が <xref:System.Attribute.GetCustomAttribute%2A> に渡されます。 このコードは、クラス レベルで属性のインスタンスが 1 つのみ適用される場合に動作します。 ただし、属性のインスタンスが同じクラス レベルに複数適用されている場合、**GetCustomAttribute** メソッドはすべての情報を取得しません。 同じ属性のインスタンスが同じスコープに複数適用されている場合、<xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> を使用して、属性のすべてのインスタンスを配列に配置することができます。 たとえば、同じクラスのクラス レベルで 2 インスタンスの `DeveloperAttribute` が適用された場合、両方の属性にある情報を表示するように `GetAttribute` メソッドを変更できます。 ただし、同じレベルで複数の属性を適用するには、**で**AllowMultiple**プロパティを**true<xref:System.AttributeUsageAttribute> に設定して属性を定義する必要があります。  
+ 前の例では、検査するクラスと検索する特定の属性が <xref:System.Attribute.GetCustomAttribute%2A> に渡されます。 このコードは、クラス レベルで属性のインスタンスが 1 つのみ適用される場合に動作します。 ただし、属性のインスタンスが同じクラス レベルに複数適用されている場合、**GetCustomAttribute** メソッドはすべての情報を取得しません。 同じ属性のインスタンスが同じスコープに複数適用されている場合、<xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType> を使用して、属性のすべてのインスタンスを配列に配置することができます。 たとえば、同じクラスのクラス レベルで 2 インスタンスの `DeveloperAttribute` が適用された場合、両方の属性にある情報を表示するように `GetAttribute` メソッドを変更できます。 ただし、同じレベルで複数の属性を適用するには、<xref:System.AttributeUsageAttribute> で **AllowMultiple** プロパティを **true** に設定して属性を定義する必要があります。  
   
  次のコード例は、**GetCustomAttributes** メソッドを使用して、指定されたクラスで `DeveloperAttribute` のすべてのインスタンスを参照する配列を作成する方法を示しています。 すべての属性の値がコンソールに表示されます。  
   

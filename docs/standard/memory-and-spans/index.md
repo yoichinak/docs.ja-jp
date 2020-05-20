@@ -37,7 +37,7 @@ ms.locfileid: "73121986"
 - <xref:System.MemoryExtensions?displayProperty=nameWithType>: 文字列、配列、および配列セグメントを、<xref:System.Memory%601> ブロックに変換するための拡張メソッドのコレクションです。
 
 > [!NOTE]
-> 以前のフレームワークでは、<xref:System.Span%601>System.Memory NuGet パッケージ<xref:System.Memory%601>で [ と ](https://www.nuget.org/packages/System.Memory/) を利用できます。
+> 以前のフレームワークでは、[System.Memory NuGet パッケージ](https://www.nuget.org/packages/System.Memory/)で <xref:System.Span%601> と <xref:System.Memory%601> を利用できます。
 
 詳細については、「<xref:System.Buffers?displayProperty=nameWithType>」を参照してください。
 

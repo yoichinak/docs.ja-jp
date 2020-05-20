@@ -51,7 +51,7 @@ class ReflectionHowTO
 }
 ```  
 
-この例では、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> メソッドを使用して、指定したアセンブリ内の型の配列を返します。 パブリック型のみが返されるように、[where](../../../language-reference/keywords/where-clause.md) フィルターが適用されています。 パブリック型ごとに、<xref:System.Reflection.MethodInfo> 呼び出しから返される <xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 配列を使用してサブクエリが生成されます。 これらの結果はフィルター処理され、戻り値の型が配列か、<xref:System.Collections.Generic.IEnumerable%601> を実装する型であるメソッドのみが返されます。 最後に、型名をキーとして使用して、これらの結果がグループ化されます。  
+この例では、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType> メソッドを使用して、指定したアセンブリ内の型の配列を返します。 パブリック型のみが返されるように、[where](../../../language-reference/keywords/where-clause.md) フィルターが適用されています。 パブリック型ごとに、<xref:System.Type.GetMethods%2A?displayProperty=nameWithType> 呼び出しから返される <xref:System.Reflection.MethodInfo> 配列を使用してサブクエリが生成されます。 これらの結果はフィルター処理され、戻り値の型が配列か、<xref:System.Collections.Generic.IEnumerable%601> を実装する型であるメソッドのみが返されます。 最後に、型名をキーとして使用して、これらの結果がグループ化されます。  
   
 ## <a name="see-also"></a>参照
 

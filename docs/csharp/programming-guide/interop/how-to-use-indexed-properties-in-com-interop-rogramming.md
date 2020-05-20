@@ -27,7 +27,7 @@ ms.locfileid: "75712066"
 > [!NOTE]
 > また、前の例では、[省略可能な引数](../classes-and-structs/named-and-optional-arguments.md)機能も使われており、`Type.Missing` を省略できます。  
   
- C# 3.0 以前で `Value` オブジェクトの <xref:Microsoft.Office.Interop.Excel.Range> プロパティの値を設定する場合と同様に、2 つの引数が必要です。 1 つのパラメーターでは、範囲の値の型を指定する省略可能なパラメーターの引数を渡します。 そしてもう 1 つのパラメーターで、`Value` プロパティの値を渡します。 次の例は、これらの方法を示したものです。 どちらも、セル A1 の値を `Name` に設定しています。
+ C# 3.0 以前で <xref:Microsoft.Office.Interop.Excel.Range> オブジェクトの `Value` プロパティの値を設定する場合と同様に、2 つの引数が必要です。 1 つのパラメーターでは、範囲の値の型を指定する省略可能なパラメーターの引数を渡します。 そしてもう 1 つのパラメーターで、`Value` プロパティの値を渡します。 次の例は、これらの方法を示したものです。 どちらも、セル A1 の値を `Name` に設定しています。
   
  [!code-csharp[csProgGuideIndexedProperties#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideindexedproperties/cs/program.cs#3)]  
   

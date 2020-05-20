@@ -57,8 +57,8 @@ public class HousingData
 
 列は次のように読み込みます。
 
-- `Size` クラスの `CurrentPrices` や `HousingData` のように個々の列。
-- `HistoricalPrices` クラスの `HousingData` のようにベクター形式で一度に複数の列。
+- `HousingData` クラスの `Size` や `CurrentPrices` のように個々の列。
+- `HousingData` クラスの `HistoricalPrices` のようにベクター形式で一度に複数の列。
 
 ベクター プロパティがある場合は、データ モデルのプロパティに [`VectorType`](xref:Microsoft.ML.Data.VectorTypeAttribute) 属性を適用します。 ベクター内のすべての要素は同じ型にする必要がある点に注意してください。 列を分割したままにすると、特徴エンジニアリングが容易になり、柔軟性が向上しますが、列数が非常に多い場合、個々の列を操作するとトレーニング速度に影響します。
 

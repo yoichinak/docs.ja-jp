@@ -28,7 +28,7 @@ ms.locfileid: "71047359"
   
  ネットワーク環境での変更により、システムで新しい一連のプロキシを使用することが必要となる場合があります。 ネットワーク接続がダウンしたか、新しいネットワーク接続が開始された場合、システムは新しい環境で構成スクリプトの適切なソースを検出し、新しいスクリプトを実行する必要があります。  
   
- 構成ファイル内の `usesystemdefault`[`<proxy>` 要素の ](../configure-apps/file-schema/network/proxy-element-network-settings.md) 属性を使用できます。 `usesystemdefault` 属性は、静的プロキシ設定 (プロキシ アドレス、バイパス リスト、およびローカルでのバイパス) をユーザーの Internet Explorer プロキシ設定から読み取るかどうかを制御します。 この値を `true` に設定した場合、Internet Explorer の静的プロキシ設定が使用されます。 この値が `false` であるか、または設定しない場合、静的プロキシ設定を構成で指定することができ、Internet Explorer のプロキシ設定をオーバーライドできます。 アダプティブ プロキシを有効にする場合も、この値を `false` に設定するか、または設定しないようにする必要があります。  
+ 構成ファイル内の [`<proxy>`](../configure-apps/file-schema/network/proxy-element-network-settings.md) 要素の `usesystemdefault` 属性を使用できます。 `usesystemdefault` 属性は、静的プロキシ設定 (プロキシ アドレス、バイパス リスト、およびローカルでのバイパス) をユーザーの Internet Explorer プロキシ設定から読み取るかどうかを制御します。 この値を `true` に設定した場合、Internet Explorer の静的プロキシ設定が使用されます。 この値が `false` であるか、または設定しない場合、静的プロキシ設定を構成で指定することができ、Internet Explorer のプロキシ設定をオーバーライドできます。 アダプティブ プロキシを有効にする場合も、この値を `false` に設定するか、または設定しないようにする必要があります。  
   
  一般的なアダプティブ プロキシの構成例を次に示します。  
   

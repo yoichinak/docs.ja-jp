@@ -54,7 +54,7 @@ TPL パーティショナーは、動的な数のパーティションもサポ�
 
 ### <a name="configuring-static-range-partitioners-for-parallelforeach"></a>Parallel.ForEach 用の静的範囲パーティショナーの構成
 
-<xref:System.Threading.Tasks.Parallel.For%2A> ループでは、ループの本体がデリゲートとしてメソッドに提供されます。 このデリゲートを呼び出すコストは、仮想メソッドの呼び出しとほぼ同じです。 シナリオによっては、並列ループの本体が小さく、各ループ反復でデリゲートを呼び出すコストが膨大になることがあります。 そのような状況では、いずれかの <xref:System.Collections.Concurrent.Partitioner.Create%2A> オーバーロードを使用して、ソース要素に対する範囲パーティション分割の <xref:System.Collections.Generic.IEnumerable%601> を作成できます。 その後、この範囲のコレクションを、本体が通常の <xref:System.Threading.Tasks.Parallel.ForEach%2A> ループで構成される `for` メソッドに渡すことができます。 この方法の利点は、デリゲートを呼び出すコストが、要素ごとに 1 回ではなく、範囲ごとに 1 回しか発生しないことです。 基本的なパターンを次の例に示します。
+<xref:System.Threading.Tasks.Parallel.For%2A> ループでは、ループの本体がデリゲートとしてメソッドに提供されます。 このデリゲートを呼び出すコストは、仮想メソッドの呼び出しとほぼ同じです。 シナリオによっては、並列ループの本体が小さく、各ループ反復でデリゲートを呼び出すコストが膨大になることがあります。 そのような状況では、いずれかの <xref:System.Collections.Concurrent.Partitioner.Create%2A> オーバーロードを使用して、ソース要素に対する範囲パーティション分割の <xref:System.Collections.Generic.IEnumerable%601> を作成できます。 その後、この範囲のコレクションを、本体が通常の `for` ループで構成される <xref:System.Threading.Tasks.Parallel.ForEach%2A> メソッドに渡すことができます。 この方法の利点は、デリゲートを呼び出すコストが、要素ごとに 1 回ではなく、範囲ごとに 1 回しか発生しないことです。 基本的なパターンを次の例に示します。
 
 [!code-csharp[TPL_Partitioners#01](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_partitioners/cs/partitioner01.cs#01)]
 [!code-vb[TPL_Partitioners#01](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_partitioners/vb/partitionercreate01.vb#01)]
@@ -80,7 +80,7 @@ TPL パーティショナーは、動的な数のパーティションもサポ�
 |||
 |-|-|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetPartitions%2A>|このメソッドは、メイン スレッドによって 1 回呼び出され、`IList(IEnumerator(TSource))` を返します。 ループまたはクエリ内の各ワーカー スレッドでは、リスト上で `GetEnumerator` を呼び出して、個別のパーティションに対する <xref:System.Collections.Generic.IEnumerator%601> を取得できます。|
-|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|`true` を実装した場合は <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A> を返し、それ以外の場合は false を返します。|
+|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A>|<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A> を実装した場合は `true` を返し、それ以外の場合は false を返します。|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetDynamicPartitions%2A>|通常は <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> を単純に呼び出します。|
 |<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A>|<xref:System.Collections.Concurrent.Partitioner%601.SupportsDynamicPartitions%2A> が `true` の場合、このメソッドを必要に応じて <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> の代わりに呼び出すことができます。|
 

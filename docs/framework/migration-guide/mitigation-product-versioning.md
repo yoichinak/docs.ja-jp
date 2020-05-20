@@ -17,7 +17,7 @@ ms.locfileid: "73457812"
 
 変更の詳細は次のとおりです。
 
-- `Version` キーの `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` 値エントリの形式は、.NET Framework 4.6 とそのポイント リリースの場合は `4.6.`*xxxxx* に、.NET Framework 4.7 の場合は `4.7.`*xxxxx* にそれぞれ変更されました。 .NET Framework 4.5、4.5.1、および 4.5.2 では `4.5.`*xxxxx* という形式でした。
+- `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` キーの `Version` 値エントリの形式は、.NET Framework 4.6 とそのポイント リリースの場合は `4.6.`*xxxxx* に、.NET Framework 4.7 の場合は `4.7.`*xxxxx* にそれぞれ変更されました。 .NET Framework 4.5、4.5.1、および 4.5.2 では `4.5.`*xxxxx* という形式でした。
 
 - .NET Framework ファイルにおけるファイルおよび製品のバージョン管理は、.NET Framework 4.6 とそのポイント リリースの場合は以前のスキーマのバージョン管理 `4.0.30319.x` から `4.6.X.0` に、.NET Framework 4.7 とそのポイント リリースの場合は `4.7.X.0` にそれぞれ変更されました。 ファイルを右クリックしてファイルの **[プロパティ]** を表示すると、これらの新しい値が表示されます。
 
@@ -31,10 +31,10 @@ ms.locfileid: "73457812"
 
 - .NET Framework のランタイムのバージョンを検出するには、「[方法 : インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」を参照してください。
 
-- .NET Framework のインストール パスを確認するには、`InstallPath` キーの `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` エントリの値を使用します。
+- .NET Framework のインストール パスを確認するには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full` キーの `InstallPath` エントリの値を使用します。
 
   > [!IMPORTANT]
-  > サブキー名は、`NET Framework Setup` ではなく `.NET Framework Setup` です。
+  > サブキー名は、`.NET Framework Setup` ではなく `NET Framework Setup` です。
 
 - .NET Framework の共通言語ランタイムへのディレクトリ パスを確認するには、<xref:System.Runtime.InteropServices.RuntimeEnvironment.GetRuntimeDirectory%2A?displayProperty=nameWithType> メソッドを呼び出します。
 

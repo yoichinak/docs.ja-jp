@@ -40,7 +40,7 @@ ms.locfileid: "75698756"
 
 ## <a name="example"></a>例
 
-この例では、<xref:System.BitConverter.GetBytes%28System.Int32%29> クラスの <xref:System.BitConverter> メソッドを呼び出して、`int` をバイト配列に変換します。
+この例では、<xref:System.BitConverter> クラスの <xref:System.BitConverter.GetBytes%28System.Int32%29> メソッドを呼び出して、`int` をバイト配列に変換します。
 
 > [!NOTE]
 > 出力は、コンピューター アーキテクチャのエンディアンによって異なる場合があります。

@@ -33,7 +33,7 @@ ms.locfileid: "74333842"
   
 ## <a name="parsing-files-with-multiple-formats"></a>複数の書式を持つファイルの解析  
 
- `PeekChars` オブジェクトの `TextFieldParser` メソッドを使用すると、各フィールドを読み取る前にチェックできます。これにより、フィールドに対して複数の書式を定義して、適切に対応できます。 詳細については、「[方法: 複数の書式を持つテキスト ファイルを読み取る](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)」を参照してください。  
+ `TextFieldParser` オブジェクトの `PeekChars` メソッドを使用すると、各フィールドを読み取る前にチェックできます。これにより、フィールドに対して複数の書式を定義して、適切に対応できます。 詳細については、「[方法: 複数の書式を持つテキスト ファイルを読み取る](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照
 

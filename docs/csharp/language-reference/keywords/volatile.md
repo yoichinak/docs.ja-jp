@@ -23,7 +23,7 @@ ms.locfileid: "75712846"
 - 参照型。
 - ポインター型 (unsafe コンテキスト内)。 ポインター自体は volatile にできますが、ポインターが指しているオブジェクトは volatile にできません。 つまり、"volatile を指すポインター" は宣言できません。
 - `sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`char`、`float`、`bool` など、単純型。
-- 基本型が `enum`、`byte`、`sbyte`、`short`、`ushort`、`int` のいずれかの `uint` 型。
+- 基本型が `byte`、`sbyte`、`short`、`ushort`、`int`、`uint` のいずれかの `enum` 型。
 - 参照型であることが判明しているジェネリック型パラメーター。
 - <xref:System.IntPtr> および <xref:System.UIntPtr>。
 

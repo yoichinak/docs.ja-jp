@@ -37,11 +37,11 @@ ms.locfileid: "73141330"
   
 - Long  
   
-     長期間の弱い参照は、オブジェクトの <xref:System.Object.Finalize%2A> メソッドが呼び出された後も保持されます。 これにより、オブジェクトが再作成されることを許可しますが、オブジェクトの状態は予測不可能なままです。 長い参照を使用するには、`true` コンストラクターに <xref:System.WeakReference> を指定します。  
+     長期間の弱い参照は、オブジェクトの <xref:System.Object.Finalize%2A> メソッドが呼び出された後も保持されます。 これにより、オブジェクトが再作成されることを許可しますが、オブジェクトの状態は予測不可能なままです。 長い参照を使用するには、<xref:System.WeakReference> コンストラクターに `true` を指定します。  
   
      オブジェクトの型に <xref:System.Object.Finalize%2A> メソッドがない場合、短期間の弱い参照の機能が適用され、弱い参照はターゲットが収集されるまで有効です。これはファイナライザーを実行した後であれば、いつでも発生する可能性があります。  
   
- 強い参照を確立して、もう一度オブジェクトを使用するには、オブジェクトの型に <xref:System.WeakReference.Target%2A> の <xref:System.WeakReference> プロパティをキャストします。 <xref:System.WeakReference.Target%2A> プロパティが `null` を返す場合、オブジェクトが収集されます。それ以外の場合、アプリケーションがその強い参照を再取得するため、オブジェクトを使用し続けることができます。  
+ 強い参照を確立して、もう一度オブジェクトを使用するには、オブジェクトの型に <xref:System.WeakReference> の <xref:System.WeakReference.Target%2A> プロパティをキャストします。 <xref:System.WeakReference.Target%2A> プロパティが `null` を返す場合、オブジェクトが収集されます。それ以外の場合、アプリケーションがその強い参照を再取得するため、オブジェクトを使用し続けることができます。  
   
 ## <a name="guidelines-for-using-weak-references"></a>弱い参照を使用するためのガイドライン  
  終了処理後のオブジェクトの状態が予測できないため、長期間の弱い参照は必要な場合にのみ使用します。  

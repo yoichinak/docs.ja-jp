@@ -100,7 +100,7 @@ C# 4 では、名前付き引数と省略可能な引数が導入されていま
 ## <a name="com-interfaces"></a>COM インターフェイス  
  名前付き引数と省略可能な引数を動的オブジェクトやその他の拡張機能のサポートと併用すると、Office オートメーション API などの COM API との相互運用性が大幅に向上します。  
   
- たとえば、Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> インターフェイスの <xref:Microsoft.Office.Interop.Excel.Range> メソッドには 7 つのパラメーターがあります。それらはすべて省略可能です。 これらのパラメーターを次の例に示します。  
+ たとえば、Microsoft Office Excel <xref:Microsoft.Office.Interop.Excel.Range> インターフェイスの <xref:Microsoft.Office.Interop.Excel.Range.AutoFormat%2A> メソッドには 7 つのパラメーターがあります。それらはすべて省略可能です。 これらのパラメーターを次の例に示します。  
   
  ![AutoFormat メソッドの IntelliSense クイック インフォを示すスクリーンショット。](./media/named-and-optional-arguments/autoformat-method-parameters.png)  
   

@@ -13,11 +13,11 @@ ms.locfileid: "75741370"
 ---
 # <a name="how-to-initialize-a-dictionary-with-a-collection-initializer-c-programming-guide"></a>コレクション初期化子を使用してディクショナリを初期化する方法 (C# プログラミング ガイド)
 
-<xref:System.Collections.Generic.Dictionary%602> にはキーと値のペアのコレクションが含まれています。 その <xref:System.Collections.Generic.Dictionary%602.Add%2A> メソッドは、それぞれキーと値に対する 2 つのパラメーターを受け取ります。 <xref:System.Collections.Generic.Dictionary%602> メソッドが複数のパラメーターを受け取る `Add` またはコレクションを初期化する 1 つの方法は、次の例に示すように、各パラメーターのセットを中かっこで囲むことです。 もう 1 つのオプションは、インデックス初期化子を使用することです。これも次の例に示されています。
+<xref:System.Collections.Generic.Dictionary%602> にはキーと値のペアのコレクションが含まれています。 その <xref:System.Collections.Generic.Dictionary%602.Add%2A> メソッドは、それぞれキーと値に対する 2 つのパラメーターを受け取ります。 `Add` メソッドが複数のパラメーターを受け取る <xref:System.Collections.Generic.Dictionary%602> またはコレクションを初期化する 1 つの方法は、次の例に示すように、各パラメーターのセットを中かっこで囲むことです。 もう 1 つのオプションは、インデックス初期化子を使用することです。これも次の例に示されています。
 
 ## <a name="example"></a>例
 
-次のコード例では、<xref:System.Collections.Generic.Dictionary%602> が型 `StudentName` のインスタンスで初期化されています。  最初の初期化では、`Add` メソッドを 2 つの引数と共に使用します。 コンパイラにより、`Add` キーと `int` 値の各ペアに対して、`StudentName` への呼び出しが生成されます。 2 回目の初期化では、`Dictionary` クラスのパブリック読み取り/書き込みインデクサー メソッドを使用します。
+次のコード例では、<xref:System.Collections.Generic.Dictionary%602> が型 `StudentName` のインスタンスで初期化されています。  最初の初期化では、`Add` メソッドを 2 つの引数と共に使用します。 コンパイラにより、`int` キーと `StudentName` 値の各ペアに対して、`Add` への呼び出しが生成されます。 2 回目の初期化では、`Dictionary` クラスのパブリック読み取り/書き込みインデクサー メソッドを使用します。
 
 [!code-csharp[InitializerExample](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/HowToDictionaryInitializer.cs#HowToDictionaryInitializer)]  
 

@@ -15,7 +15,7 @@ ms.locfileid: "74348870"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>方法 : Visual Basic でテキスト ファイルに追記する
 
-<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> パラメーターが `append` に設定されるように指定して、`True` メソッドを使いテキスト ファイルに追加できます。  
+`append` パラメーターが `True` に設定されるように指定して、<xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> メソッドを使いテキスト ファイルに追加できます。  
   
 ### <a name="to-append-to-a-text-file"></a>テキスト ファイルに追加するには  
   

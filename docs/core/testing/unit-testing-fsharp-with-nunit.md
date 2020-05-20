@@ -151,7 +151,7 @@ member this.TestEvenSequence() =
     Assert.That(actual, Is.EqualTo(expected))
 ```
 
-`expected` シーケンスがリストに変換されていることに注意してください。 NUnit ライブラリは、標準的な .NET 型の多くに依存しています。 この依存関係は、お使いのパブリック インターフェイスおよび期待される結果が、<xref:System.Collections.ICollection> でなく <xref:System.Collections.IEnumerable> をサポートしていることを意味します。
+`expected` シーケンスがリストに変換されていることに注意してください。 NUnit ライブラリは、標準的な .NET 型の多くに依存しています。 この依存関係は、お使いのパブリック インターフェイスおよび期待される結果が、<xref:System.Collections.IEnumerable> でなく <xref:System.Collections.ICollection> をサポートしていることを意味します。
 
 テストを実行すると、失敗することがわかります。 実装はまだ作成していません。 このテストに合格するには、動作する MathService プロジェクトの *Library.fs* クラスに、ごく簡単なコードを記述します。
 

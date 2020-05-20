@@ -320,7 +320,7 @@ using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, 
 using CityDataMeasurements = System.Collections.Generic.Dictionary<string, System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>>;
 ```
 
-構築ジェネリック型の "*エイリアス*" を作成しています。 これらのステートメントにより、後のコードでは、`DateMeasurements` と `CityDateMeasurements` のジェネリック コンストラクションではなく、よりわかりやすい `Dictionary<DateTime, Measurements>` と `Dictionary<string, Dictionary<DateTime, Measurements> >` という名前を使用できます。
+構築ジェネリック型の "*エイリアス*" を作成しています。 これらのステートメントにより、後のコードでは、`Dictionary<DateTime, Measurements>` と `Dictionary<string, Dictionary<DateTime, Measurements> >` のジェネリック コンストラクションではなく、よりわかりやすい `DateMeasurements` と `CityDateMeasurements` という名前を使用できます。
 このコンストラクトでは、`=` 記号の右辺で完全修飾型名を使用する必要はありません。
 
 2 つ目の手法では、コレクションへのインデックス作成に使用された任意の `DateTime` オブジェクトから時間部分を取り除きます。 .NET には、日付のみの型は含まれません。

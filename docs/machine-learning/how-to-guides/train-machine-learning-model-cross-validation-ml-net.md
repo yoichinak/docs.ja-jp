@@ -50,7 +50,7 @@ public class HousingData
 
 ## <a name="prepare-the-data"></a>データを準備する
 
-機械学習モデルの構築に使用する前に、データを前処理します。 このサンプルでは、`Size` 列と `HistoricalPrices` 列が 1 つの特徴ベクターに結合されます。これは、`Features`[`Concatenate` メソッドを使用して ](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) という新しい列に出力されます。 データを ML.NET アルゴリズムで想定されている形式にすることに加え、列を連結すると、個別の列ではなく、連結した列に対して 1 回操作を適用されるので、パイプライン内の後続の操作が最適化されます。
+機械学習モデルの構築に使用する前に、データを前処理します。 このサンプルでは、`Size` 列と `HistoricalPrices` 列が 1 つの特徴ベクターに結合されます。これは、[`Concatenate`](xref:Microsoft.ML.TransformExtensionsCatalog.Concatenate*) メソッドを使用して `Features` という新しい列に出力されます。 データを ML.NET アルゴリズムで想定されている形式にすることに加え、列を連結すると、個別の列ではなく、連結した列に対して 1 回操作を適用されるので、パイプライン内の後続の操作が最適化されます。
 
 列が 1 つのベクターに結合されると、[`NormalizeMinMax`](xref:Microsoft.ML.NormalizationCatalog.NormalizeMinMax*) が `Features` 列に適用され、0 - 1 という同じ範囲の `Size` と `HistoricalPrices` が得られます。
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 ## <a name="evaluate-the-model"></a>モデルを評価する
 
-個々の `Metrics`[`CrossValidationResult` オブジェクトの ](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) プロパティを介してさまざまなトレーニング済みモデルのメトリックにアクセスできます。 この場合は、[R-2 乗メトリック](https://en.wikipedia.org/wiki/Coefficient_of_determination)にアクセスし、変数 `rSquared` に格納されます。
+個々の [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) オブジェクトの `Metrics` プロパティを介してさまざまなトレーニング済みモデルのメトリックにアクセスできます。 この場合は、[R-2 乗メトリック](https://en.wikipedia.org/wiki/Coefficient_of_determination)にアクセスし、変数 `rSquared` に格納されます。
 
 ```csharp
 IEnumerable<double> rSquared =

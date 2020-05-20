@@ -53,7 +53,7 @@ C# マネージド コードとアンマネージド コード間で相互運用
   
 2. COM タイプ ライブラリを生成し、COM の使用状況に登録します。  
   
-     Visual C# プロジェクト プロパティを変更して、C# アセンブリが COM 相互運用に自動的に登録されるようにできます。 Visual Studio は [ コマンド ライン スイッチを使用して ](../../../framework/tools/regasm-exe-assembly-registration-tool.md)Regasm.exe (アセンブリ登録ツール)`/tlb` を使用します。これにより、マネージド アセンブリが入力として取得され、タイプ ライブラリを生成できます。 タイプ ライブラリは、アセンブリ内の `public` 型を記述し、レジストリ エントリを追加することで、COM クライアントがマネージド クラスを作成できるようにします。  
+     Visual C# プロジェクト プロパティを変更して、C# アセンブリが COM 相互運用に自動的に登録されるようにできます。 Visual Studio は `/tlb` コマンド ライン スイッチを使用して [Regasm.exe (アセンブリ登録ツール)](../../../framework/tools/regasm-exe-assembly-registration-tool.md) を使用します。これにより、マネージド アセンブリが入力として取得され、タイプ ライブラリを生成できます。 タイプ ライブラリは、アセンブリ内の `public` 型を記述し、レジストリ エントリを追加することで、COM クライアントがマネージド クラスを作成できるようにします。  
   
  詳細については、「[COM への .NET Framework コンポーネントの公開](../../../framework/interop/exposing-dotnet-components-to-com.md)」と「[COM クラスの例](./example-com-class.md)」を参照してください。  
   

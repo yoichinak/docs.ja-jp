@@ -20,7 +20,7 @@ ms.locfileid: "74348758"
  指定したパターンに一致するファイルがない場合は、空のコレクションが返されます。  
   
 > [!NOTE]
-> `DirectoryInfo` 名前空間の `System.IO` クラスを使用してファイルの一覧を返す方法については、「<xref:System.IO.DirectoryInfo.GetFiles%2A>」を参照してください。  
+> `System.IO` 名前空間の `DirectoryInfo` クラスを使用してファイルの一覧を返す方法については、「<xref:System.IO.DirectoryInfo.GetFiles%2A>」を参照してください。  
   
 ### <a name="to-find-files-with-a-specified-pattern"></a>特定のパターンに一致するファイルを検索するには  
   

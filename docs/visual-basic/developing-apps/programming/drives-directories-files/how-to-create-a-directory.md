@@ -14,13 +14,13 @@ ms.locfileid: "74348808"
 ---
 # <a name="how-to-create-a-directory-in-visual-basic"></a>方法 : Visual Basic でディレクトリを作成する
 
-ディレクトリを作成するには、`CreateDirectory` オブジェクトの `My.Computer.FileSystem` メソッドを使用します。  
+ディレクトリを作成するには、`My.Computer.FileSystem` オブジェクトの `CreateDirectory` メソッドを使用します。  
   
  ディレクトリが既にある場合、例外はスローされません。  
   
 ### <a name="to-create-a-directory"></a>ディレクトリを作成するには  
   
-- ディレクトリを作成する場所を完全にパスに指定して、`CreateDirectory` メソッドを使用します。 この例では、`NewDirectory` に `C:\Documents and Settings\All Users\Documents` ディレクトリを作成します。  
+- ディレクトリを作成する場所を完全にパスに指定して、`CreateDirectory` メソッドを使用します。 この例では、`C:\Documents and Settings\All Users\Documents` に `NewDirectory` ディレクトリを作成します。  
   
      [!code-vb[VbVbcnMyFileSystem#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#2)]  
   

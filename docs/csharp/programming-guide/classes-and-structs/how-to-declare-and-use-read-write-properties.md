@@ -18,7 +18,7 @@ ms.locfileid: "79170287"
 # <a name="how-to-declare-and-use-read-write-properties-c-programming-guide"></a>読み取り/書き込みプロパティを宣言および使用する方法 (C# プログラミング ガイド)
 プロパティは、オブジェクトのデータへの保護されていない、制御されず未確認のアクセスに伴うリスクなしにパブリック データ メンバーの利便性を提供します。 これは*アクセサー*を通じて行われます。アクセサーは、基になるデータ メンバーの値を割り当てたり、取得したりする特殊なメソッドです。 [set](../../language-reference/keywords/set.md) アクセサーはデータ メンバーの割り当てを可能にし、[get](../../language-reference/keywords/get.md) アクセサーはデータ メンバーの値を取得します。  
   
- このサンプルでは、`Person` (string) および `Name` (int) という 2 つのプロパティを持つ `Age` クラスを示します。 両方のプロパティは `get` および `set` アクセサーを提供するため、読み取り/書き込みプロパティと見なされます。  
+ このサンプルでは、`Name` (string) および `Age` (int) という 2 つのプロパティを持つ `Person` クラスを示します。 両方のプロパティは `get` および `set` アクセサーを提供するため、読み取り/書き込みプロパティと見なされます。  
   
 ## <a name="example"></a>例  
  [!code-csharp[csProgGuideObjects#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#33)]  
@@ -38,7 +38,7 @@ ms.locfileid: "79170287"
   
  [!code-csharp[csProgGuideObjects#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#36)]  
   
- `Age` オブジェクトの `Person` プロパティの値を増分する場合は、次のような簡潔な構文を使用します。  
+ `Person` オブジェクトの `Age` プロパティの値を増分する場合は、次のような簡潔な構文を使用します。  
   
  [!code-csharp[csProgGuideObjects#37](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideObjects/CS/Objects.cs#37)]  
   

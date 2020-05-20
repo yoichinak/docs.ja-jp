@@ -51,7 +51,7 @@ extern キーワードの C# での用法は、C++ の場合よりも制限さ�
     }
     ```
 
-2. Visual Studio のインストール ディレクトリから Visual Studio x64 (または x32) Native Tools コマンド プロンプト ウィンドウを開き、コマンド プロンプトで「`cmdll.c`cl -LD cmdll.c **」と入力して、** ファイルをコンパイルします。
+2. Visual Studio のインストール ディレクトリから Visual Studio x64 (または x32) Native Tools コマンド プロンプト ウィンドウを開き、コマンド プロンプトで「**cl -LD cmdll.c**」と入力して、`cmdll.c` ファイルをコンパイルします。
 
 3. 同じディレクトリに、次の C# ファイルを作成し、`cm.cs` という名前を付けます。
 

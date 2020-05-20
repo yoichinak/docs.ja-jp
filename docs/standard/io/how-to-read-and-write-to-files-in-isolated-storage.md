@@ -24,7 +24,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "75706687"
 ---
 # <a name="how-to-read-and-write-to-files-in-isolated-storage"></a>方法 : 分離ストレージ内でファイルの読み取りと書き込みを行う
-分離ストアのファイルを読み取ったり、それに書き込んだりするには、ストリーム リーダー (<xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> オブジェクト) またはストリーム ライター (<xref:System.IO.StreamReader> オブジェクト) で <xref:System.IO.StreamWriter> オブジェクトを使用します。  
+分離ストアのファイルを読み取ったり、それに書き込んだりするには、ストリーム リーダー (<xref:System.IO.StreamReader> オブジェクト) またはストリーム ライター (<xref:System.IO.StreamWriter> オブジェクト) で <xref:System.IO.IsolatedStorage.IsolatedStorageFileStream> オブジェクトを使用します。  
   
 ## <a name="example"></a>例  
  次のコード例では、分離ストアを取得し、ストア内に TestStore.txt をという名前のファイルが存在するかどうかが確認されます。 存在しない場合、ファイルが作成され、"Hello Isolated Storage" とファイルに書き込まれます。 TestStore.txt が既に存在する場合、コード例は、ファイルから読み取られます。  

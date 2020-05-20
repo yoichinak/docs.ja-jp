@@ -13,9 +13,9 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75712209"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>ジェネリック インターフェイス (C# プログラミング ガイド)
-ジェネリック コレクション クラスのインターフェイスか、コレクション内の項目を表すジェネリック クラスのインターフェイスを定義すると、多くの場合、便利です。 ジェネリック クラスの優先設定の意図は、値型に対するボックス化とボックス化解除を回避する目的で、<xref:System.IComparable%601> ではなく <xref:System.IComparable> など、ジェネリック インターフェイスを利用することにあります。 .NET Framework クラス ライブラリにより、<xref:System.Collections.Generic> 名前空間のコレクション クラスと共に利用するためのジェネリック インターフェイスがいくつか定義されます。  
+ジェネリック コレクション クラスのインターフェイスか、コレクション内の項目を表すジェネリック クラスのインターフェイスを定義すると、多くの場合、便利です。 ジェネリック クラスの優先設定の意図は、値型に対するボックス化とボックス化解除を回避する目的で、<xref:System.IComparable> ではなく <xref:System.IComparable%601> など、ジェネリック インターフェイスを利用することにあります。 .NET Framework クラス ライブラリにより、<xref:System.Collections.Generic> 名前空間のコレクション クラスと共に利用するためのジェネリック インターフェイスがいくつか定義されます。  
   
- インターフェイスが型パラメーターの制約として指定される場合、インターフェイスを実装する型のみを利用できます。 `SortedList<T>` クラスから派生する `GenericList<T>` クラスを示したのが次のコード サンプルです。 詳細については、「[ジェネリックの概要](./index.md)」を参照してください。 `SortedList<T>` により制約 `where T : IComparable<T>` が追加されます。 これにより、`BubbleSort` の `SortedList<T>` メソッドは、一覧要素でジェネリック <xref:System.IComparable%601.CompareTo%2A> メソッドを利用できます。 この例では、一覧要素は単純なクラスである `Person` です。これは `IComparable<Person>` を実装します。  
+ インターフェイスが型パラメーターの制約として指定される場合、インターフェイスを実装する型のみを利用できます。 `GenericList<T>` クラスから派生する `SortedList<T>` クラスを示したのが次のコード サンプルです。 詳細については、「[ジェネリックの概要](./index.md)」を参照してください。 `SortedList<T>` により制約 `where T : IComparable<T>` が追加されます。 これにより、`SortedList<T>` の `BubbleSort` メソッドは、一覧要素でジェネリック <xref:System.IComparable%601.CompareTo%2A> メソッドを利用できます。 この例では、一覧要素は単純なクラスである `Person` です。これは `IComparable<Person>` を実装します。  
   
  [!code-csharp[csProgGuideGenerics#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics2.cs#29)]  
   
@@ -31,7 +31,7 @@ ms.locfileid: "75712209"
   
  [!code-csharp[csProgGuideGenerics#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics.cs#32)]  
   
- ジェネリック インターフェイスが反変の場合、つまり、その型パラメーターを戻り値としてのみ利用する場合、ジェネリック インターフェイスは非ジェネリック インターフェイスから継承できます。 .NET Framework クラス ライブラリでは、<xref:System.Collections.Generic.IEnumerable%601> は <xref:System.Collections.IEnumerable> から継承します。これは、<xref:System.Collections.Generic.IEnumerable%601> が `T` の戻り値と <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> プロパティ ゲッターの <xref:System.Collections.Generic.IEnumerator%601.Current%2A> のみを利用するためです。  
+ ジェネリック インターフェイスが反変の場合、つまり、その型パラメーターを戻り値としてのみ利用する場合、ジェネリック インターフェイスは非ジェネリック インターフェイスから継承できます。 .NET Framework クラス ライブラリでは、<xref:System.Collections.Generic.IEnumerable%601> は <xref:System.Collections.IEnumerable> から継承します。これは、<xref:System.Collections.Generic.IEnumerable%601> が <xref:System.Collections.Generic.IEnumerable%601.GetEnumerator%2A> の戻り値と <xref:System.Collections.Generic.IEnumerator%601.Current%2A> プロパティ ゲッターの `T` のみを利用するためです。  
   
  具象クラスは、次のように、構築されたクローズ型インターフェイスを実装できます。  
   

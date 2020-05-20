@@ -20,7 +20,7 @@ ms.locfileid: "75713592"
 
 ## <a name="example"></a>例
 
-`descending`orderby 句[での ](./orderby-clause.md) の使用例を次に示します。
+[orderby 句](./orderby-clause.md)での `descending` の使用例を次に示します。
 
 [!code-csharp[csrefKeywordsContextual#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#11)]
 

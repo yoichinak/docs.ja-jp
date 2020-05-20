@@ -13,7 +13,7 @@ ms.locfileid: "77448440"
 ---
 # <a name="using-delegates-c-programming-guide"></a>デリゲートの使用 (C# プログラミング ガイド)
 
-[デリゲート](../../language-reference/builtin-types/reference-types.md)は、C および C++ の関数ポインターのようなメソッドを安全にカプセル化する型です。 ただし、C 関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 デリゲートの型は、デリゲートの名前によって定義されます。 次の例では、引数として`Del`文字列[を受け取り、](../../language-reference/builtin-types/reference-types.md)void[ を返すメソッドをカプセル化できる ](../../language-reference/builtin-types/void.md) という名前のデリゲートを宣言しています。
+[デリゲート](../../language-reference/builtin-types/reference-types.md)は、C および C++ の関数ポインターのようなメソッドを安全にカプセル化する型です。 ただし、C 関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 デリゲートの型は、デリゲートの名前によって定義されます。 次の例では、引数として[文字列](../../language-reference/builtin-types/reference-types.md)を受け取り、[void](../../language-reference/builtin-types/void.md) を返すメソッドをカプセル化できる `Del` という名前のデリゲートを宣言しています。
 
 [!code-csharp[csProgGuideDelegates#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDelegates/CS/Delegates.cs#21)]
 

@@ -28,11 +28,11 @@ ms.locfileid: "73131975"
 
 1. 整数値を 10 進数値と 16 進数値のどちらで表示するかを決定します。
 
-    - 整数値を 10 進数値として表示するには、`ToString(String)` メソッドを呼び出し、 *パラメーターの値として文字列 "D*n`format`" を渡します。この *n* は、文字列の最小長を表します。
+    - 整数値を 10 進数値として表示するには、`ToString(String)` メソッドを呼び出し、`format` パラメーターの値として文字列 "D*n*" を渡します。この *n* は、文字列の最小長を表します。
 
     - 整数値を 16 進数値として表示するには、`ToString(String)` メソッドを呼び出し、format パラメーターの値として文字列 "X*n*" を渡します。この *n* は、文字列の最小長を表します。
 
-また、[C#](../../csharp/language-reference/tokens/interpolated.md) と [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) の両方で挿入文字列に書式指定文字列を使用することも、<xref:System.String.Format%2A?displayProperty=nameWithType>複合書式指定<xref:System.Console.WriteLine%2A?displayProperty=nameWithType>を使用するメソッド ([ や ](../../../docs/standard/base-types/composite-formatting.md) など) を呼び出すこともできます。
+また、[C#](../../csharp/language-reference/tokens/interpolated.md) と [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) の両方で挿入文字列に書式指定文字列を使用することも、[複合書式指定](../../../docs/standard/base-types/composite-formatting.md)を使用するメソッド (<xref:System.String.Format%2A?displayProperty=nameWithType> や <xref:System.Console.WriteLine%2A?displayProperty=nameWithType> など) を呼び出すこともできます。
 
 次の例は、書式指定された数値全体の長さが 8 文字以上になるように、先行ゼロを使用してさまざまな数値を書式指定します。
 

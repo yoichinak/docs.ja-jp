@@ -22,13 +22,13 @@ ms.locfileid: "74349760"
 ## <a name="in-this-section"></a>このセクションの内容  
 
  [方法: レジストリ キーを作成し、その値を設定する](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-create-a-registry-key-and-set-its-value.md)  
- `CreateSubKey` オブジェクトの `SetValue` および `My.Computer.Registry` メソッドを使用して、レジストリ キーを作成し、その値を設定する方法について説明します。  
+ `My.Computer.Registry` オブジェクトの `CreateSubKey` および `SetValue` メソッドを使用して、レジストリ キーを作成し、その値を設定する方法について説明します。  
   
  [方法 : レジストリ キーから値を読み取る](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-read-a-value-from-a-registry-key.md)  
- `GetValue` オブジェクトの `My.Computer.Registry` メソッドを使用して、レジストリ キーから値を読み取る方法について説明します。  
+ `My.Computer.Registry` オブジェクトの `GetValue` メソッドを使用して、レジストリ キーから値を読み取る方法について説明します。  
   
  [方法: レジストリ キーを削除する](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-delete-a-registry-key.md)  
- `DeleteSubKey` プロパティの `My.Computer.Registry.CurrentUser` メソッドを使用して、レジストリ キーを削除する方法について説明します。  
+ `My.Computer.Registry.CurrentUser` プロパティの `DeleteSubKey` メソッドを使用して、レジストリ キーを削除する方法について説明します。  
   
  [Microsoft.Win32 名前空間を使用したレジストリの読み取りと書き込み](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md)  
  .NET Framework の `Registry` および `RegistryKey` クラスを使用して、レジストリにアクセスする方法について説明します。  

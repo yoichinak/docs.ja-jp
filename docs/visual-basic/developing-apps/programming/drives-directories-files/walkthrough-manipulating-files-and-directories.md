@@ -54,13 +54,13 @@ ms.locfileid: "74333804"
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>フォルダーを選択し、フォルダー内のファイルをリストするには  
   
-1. フォーム上のコントロールをダブルクリックして、`Click` の `browseButton` イベント ハンドラーを作成します。 コード エディターが開きます。  
+1. フォーム上のコントロールをダブルクリックして、`browseButton` の `Click` イベント ハンドラーを作成します。 コード エディターが開きます。  
   
 2. `Click` イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
-     `FolderBrowserDialog1.ShowDialog` 呼び出しにより、 **[フォルダーの参照]** ダイアログ ボックスが開きます。 ユーザーが **[OK]** をクリックすると、次の手順で追加する <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> メソッドに `ListFiles` プロパティが引数として渡されます。  
+     `FolderBrowserDialog1.ShowDialog` 呼び出しにより、 **[フォルダーの参照]** ダイアログ ボックスが開きます。 ユーザーが **[OK]** をクリックすると、次の手順で追加する `ListFiles` メソッドに <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> プロパティが引数として渡されます。  
   
 3. 次の `ListFiles` メソッドを追加します。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "74333804"
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>テキスト ファイルからファイルの属性とコンテンツを取得するには  
   
-1. フォーム上のコントロールをダブルクリックして、`Click` の `examineButton` イベント ハンドラーを作成します。  
+1. フォーム上のコントロールをダブルクリックして、`examineButton` の `Click` イベント ハンドラーを作成します。  
   
 2. `Click` イベント ハンドラーに次のコードを追加します。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "74333804"
   
      このコードは、ログ ファイルのパスを設定して、選択したファイルと同じディレクトリにログ ファイルを配置します。 ログ エントリのテキストは現在の日付と時刻に設定され、その後にファイル情報が記録されます。  
   
-     <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 引数を `append` に設定した `True` メソッドを使用して、ログ エントリを作成します。  
+     `append` 引数を `True` に設定した <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> メソッドを使用して、ログ エントリを作成します。  
   
 2. アプリケーションを実行します。 テキスト ファイルを参照し、`ListBox` でファイルを選択して、 **[結果の保存]** チェック ボックスをオンにした後、 **[調査]** をクリックします。 ログ エントリが `log.txt` ファイルに書き込まれていることを確認します。  
   
@@ -140,15 +140,15 @@ ms.locfileid: "74333804"
   
      `SetEnabled` メソッドは、`ListBox` で項目が選択されているかどうかに応じて、コントロールを有効または無効にします。  
   
-2. フォーム上の `SelectedIndexChanged` コントロールをダブルクリックして、`filesListBox` の `ListBox` イベント ハンドラーを作成します。  
+2. フォーム上の `ListBox` コントロールをダブルクリックして、`filesListBox` の `SelectedIndexChanged` イベント ハンドラーを作成します。  
   
-3. 新しい `SetEnabled` イベント ハンドラーで、`filesListBox_SelectedIndexChanged` に対する呼び出しを追加します。  
+3. 新しい `filesListBox_SelectedIndexChanged` イベント ハンドラーで、`SetEnabled` に対する呼び出しを追加します。  
   
-4. `SetEnabled` イベント ハンドラーの末尾に、`browseButton_Click` に対する呼び出しを追加します。  
+4. `browseButton_Click` イベント ハンドラーの末尾に、`SetEnabled` に対する呼び出しを追加します。  
   
-5. `SetEnabled` イベント ハンドラーの末尾に、`Form1_Load` に対する呼び出しを追加します。  
+5. `Form1_Load` イベント ハンドラーの末尾に、`SetEnabled` に対する呼び出しを追加します。  
   
-6. アプリケーションを実行します。 **で項目が選択されていない場合は、** [結果の保存 **] チェック ボックスと** [調査]`ListBox` ボタンが無効になります。  
+6. アプリケーションを実行します。 `ListBox` で項目が選択されていない場合は、**[結果の保存**] チェック ボックスと **[調査]** ボタンが無効になります。  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem を使用した完全な例  
 
@@ -158,7 +158,7 @@ ms.locfileid: "74333804"
   
 ## <a name="full-example-using-systemio"></a>System.IO を使用した完全な例  
 
- 次に示す同等の例では、<xref:System.IO> オブジェクトではなく、`My.Computer.FileSystem` 名前空間のクラスを使用しています。  
+ 次に示す同等の例では、`My.Computer.FileSystem` オブジェクトではなく、<xref:System.IO> 名前空間のクラスを使用しています。  
   
  [!code-vb[VbVbcnMyFileSystem#111](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class3.vb#111)]  
   

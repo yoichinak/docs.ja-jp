@@ -93,7 +93,7 @@ class QueryWithRegEx
 }  
 ```  
   
- <xref:System.Text.RegularExpressions.MatchCollection> 検索で返された `RegEx` オブジェクトのクエリを実行することも可能です。 この例では、一致した各文字列の値のみが結果として生成されています。 しかし、LINQ を使用して、各種のフィルター処理、並べ替え、グループ化をそのコレクションに対して実行することもできます。 <xref:System.Text.RegularExpressions.MatchCollection> が非ジェネリック <xref:System.Collections.IEnumerable> コレクションなので、クエリで範囲変数の型を明示的に記述する必要があります。  
+ `RegEx` 検索で返された <xref:System.Text.RegularExpressions.MatchCollection> オブジェクトのクエリを実行することも可能です。 この例では、一致した各文字列の値のみが結果として生成されています。 しかし、LINQ を使用して、各種のフィルター処理、並べ替え、グループ化をそのコレクションに対して実行することもできます。 <xref:System.Text.RegularExpressions.MatchCollection> が非ジェネリック <xref:System.Collections.IEnumerable> コレクションなので、クエリで範囲変数の型を明示的に記述する必要があります。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  

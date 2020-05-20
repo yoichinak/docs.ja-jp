@@ -17,7 +17,7 @@ ms.locfileid: "75712560"
 `#else` を使用すると、複合条件付きディレクティブを作成できるため、先行する [#if](./preprocessor-if.md) または (省略可能な) [#elif](./preprocessor-elif.md) ディレクティブの式がいずれも `true` に評価されない場合は、コンパイラが `#else` と以降の `#endif` の間のすべてのコードを評価します。  
   
 ## <a name="remarks"></a>解説  
- [#endif](./preprocessor-endif.md) が、`#else` の後の次のプリプロセッサ ディレクティブになる必要があります。 [ の使用例については、「](./preprocessor-if.md)#if`#else`」を参照してください。  
+ [#endif](./preprocessor-endif.md) が、`#else` の後の次のプリプロセッサ ディレクティブになる必要があります。 `#else` の使用例については、「[#if](./preprocessor-if.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照
 

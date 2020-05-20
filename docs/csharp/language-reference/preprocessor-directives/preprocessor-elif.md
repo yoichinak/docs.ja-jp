@@ -38,7 +38,7 @@ ms.locfileid: "75712573"
   
  `#elif` を使用する方が簡単です。`#if` には対になる [#endif](./preprocessor-endif.md) が必要ですが、`#elif` では対応する `#endif` が不要なためです。  
   
- [ の使用例については、「](./preprocessor-if.md)#if`#elif`」を参照してください。  
+ `#elif` の使用例については、「[#if](./preprocessor-if.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照
 

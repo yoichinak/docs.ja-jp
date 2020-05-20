@@ -22,7 +22,7 @@ ms.locfileid: "74353622"
 
 #### <a name="to-create-the-listener"></a>リスナーを作成するには
 
-- アプリケーションで、`SimpleListener` を継承する <xref:System.Diagnostics.TraceListener> という名前のクラスを作成します。
+- アプリケーションで、<xref:System.Diagnostics.TraceListener> を継承する `SimpleListener` という名前のクラスを作成します。
 
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "74353622"
 
 3. **[アセンブリの署名]** ボックスを選択します。
 
-4. **[厳密な名前のキー ファイルを選択してください]\< ドロップダウン リストから** [**新規作成>]** を選択します。
+4. **[厳密な名前のキー ファイルを選択してください]** ドロップダウン リストから **[\<新規作成>]** を選択します。
 
      **[厳密な名前キーの作成]** ダイアログ ボックスが開きます。
 

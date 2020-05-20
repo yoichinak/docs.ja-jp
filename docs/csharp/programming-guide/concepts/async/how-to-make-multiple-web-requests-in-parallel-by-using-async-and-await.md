@@ -49,7 +49,7 @@ var result = await myTask;
   
     - <xref:System.Net.Http> への参照を追加します。  
   
-    - MainWindow.xaml.cs ファイルで、`using` に `System.Net.Http` ディレクティブを追加します。  
+    - MainWindow.xaml.cs ファイルで、`System.Net.Http` に `using` ディレクティブを追加します。  
   
 ### <a name="to-add-the-code"></a>コードを追加するには  
   

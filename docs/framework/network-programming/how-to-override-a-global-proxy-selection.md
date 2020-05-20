@@ -13,7 +13,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "71048269"
 ---
 # <a name="how-to-override-a-global-proxy-selection"></a>方法: グローバル プロキシの選択をオーバーライドする
-この例では、**に**WebRequest`www.contoso.com` を送信し、ポート 80 の `alternateproxy` という名前のプロキシ サーバーでグローバル プロキシの選択をオーバーライドします。  
+この例では、`www.contoso.com` に **WebRequest** を送信し、ポート 80 の `alternateproxy` という名前のプロキシ サーバーでグローバル プロキシの選択をオーバーライドします。  
   
 ## <a name="example"></a>例  
   
@@ -30,7 +30,7 @@ req.Proxy = New WebProxy("http://alternateproxy:80/")
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
-- [System.Net`using` 名前空間の ](../../csharp/language-reference/keywords/using-directive.md) **ディレクティブ**。  
+- **System.Net** 名前空間の [`using` ディレクティブ](../../csharp/language-reference/keywords/using-directive.md)。  
   
 ## <a name="see-also"></a>参照
 

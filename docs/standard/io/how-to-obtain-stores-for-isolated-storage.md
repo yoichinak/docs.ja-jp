@@ -43,10 +43,10 @@ ms.locfileid: "75706932"
   
  <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>、および <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> メソッドは <xref:System.IO.IsolatedStorage.IsolatedStorageFile> オブジェクトを返します。 状況に最適な分離タイプの判別に役立つ「[分離のタイプ](../../../docs/standard/io/types-of-isolation.md)」を参照してください。 分離ストレージ ファイル オブジェクトがある場合は、分離ストレージ メソッドを使用して、ファイルとディレクトリの読み取り、書き込み、作成、削除を行うことができます。  
   
- ストア自体を取得するのに十分なアクセス権がないコードに <xref:System.IO.IsolatedStorage.IsolatedStorageFile> オブジェクトを渡さないようにするためのメカニズムはありません。 ドメインとアセンブリの ID と分離ストレージのアクセス許可が確認されるのは、通常、<xref:System.IO.IsolatedStorage.IsolatedStorage>、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>、または <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> メソッドで <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> オブジェクトへの参照が取得される場合のみです。 したがって、<xref:System.IO.IsolatedStorage.IsolatedStorageFile> への参照を保護するのは、これらの参照を使用するコードの役目です。  
+ ストア自体を取得するのに十分なアクセス権がないコードに <xref:System.IO.IsolatedStorage.IsolatedStorageFile> オブジェクトを渡さないようにするためのメカニズムはありません。 ドメインとアセンブリの ID と分離ストレージのアクセス許可が確認されるのは、通常、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>、または <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> メソッドで <xref:System.IO.IsolatedStorage.IsolatedStorage> オブジェクトへの参照が取得される場合のみです。 したがって、<xref:System.IO.IsolatedStorage.IsolatedStorageFile> への参照を保護するのは、これらの参照を使用するコードの役目です。  
   
 ## <a name="example"></a>例  
- 次のコードでは、ユーザーとアセンブリ別に分離されるストアを取得するクラスの単純な例を示します。 <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> メソッドが渡す引数に <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> を追加することで、ユーザー、ドメイン、およびアセンブリ別に分離されるストアを取得するようにコードを変更できます。  
+ 次のコードでは、ユーザーとアセンブリ別に分離されるストアを取得するクラスの単純な例を示します。 <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> メソッドが渡す引数に <xref:System.IO.IsolatedStorage.IsolatedStorageScope.Domain?displayProperty=nameWithType> を追加することで、ユーザー、ドメイン、およびアセンブリ別に分離されるストアを取得するようにコードを変更できます。  
   
  コードを実行したら、コマンド ラインで「**StoreAdm /LIST**」と入力して、ストアが作成されたことを確認することができます。 これにより、[分離ストレージ ツール (Storeadm.exe)](../../../docs/framework/tools/storeadm-exe-isolated-storage-tool.md) が実行され、ユーザーの現在の分離ストアがすべてリストされます。  
   

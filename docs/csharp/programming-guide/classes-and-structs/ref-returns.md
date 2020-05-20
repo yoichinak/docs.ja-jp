@@ -38,7 +38,7 @@ C# 7.0 以降の C# は参照戻り値 (ref 戻り値) に対応しています�
 - メソッドのシグネチャで、戻り値の型の前にキーワード [ref](../../language-reference/keywords/ref.md) が含まれること。
 - メソッド本体の各 [return](../../language-reference/keywords/return.md) ステートメントで、返されるインスタンスの名前の前に [ref](../../language-reference/keywords/ref.md) キーワードが含まれること。
 
-これらの条件を満たし、`Person` という名前の `p` オブジェクトへの参照を返すメソッドを、次の例に示します。
+これらの条件を満たし、`p` という名前の `Person` オブジェクトへの参照を返すメソッドを、次の例に示します。
 
 ```csharp
 public ref Person GetContactInformation(string fname, string lname)

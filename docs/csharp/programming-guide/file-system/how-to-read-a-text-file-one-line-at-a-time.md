@@ -14,7 +14,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79167516"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>テキスト ファイルを 1 行ずつ読み取る方法 (C# プログラミング ガイド)
-次の例では、`ReadLine` クラスの `StreamReader` メソッドを使用して、テキスト ファイルの内容を一度に 1 行ずつ文字列に読み込みます。 各テキスト行は文字列 `line` に格納され、画面に表示されます。  
+次の例では、`StreamReader` クラスの `ReadLine` メソッドを使用して、テキスト ファイルの内容を一度に 1 行ずつ文字列に読み込みます。 各テキスト行は文字列 `line` に格納され、画面に表示されます。  
   
 ## <a name="example"></a>例  
   

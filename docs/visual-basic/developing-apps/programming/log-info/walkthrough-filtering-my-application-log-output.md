@@ -52,7 +52,7 @@ ms.locfileid: "74353587"
 
 ## <a name="filtering-for-all-myapplicationlog-listeners"></a>すべての My.Application.Log リスナーのフィルター処理
 
-`My.Application.Log` オブジェクトは、<xref:System.Diagnostics.SourceSwitch> という名前の `DefaultSwitch` を使用し、`WriteEntry` および `WriteException` メソッドからログ リスナーに渡すメッセージを制御します。 アプリケーションの構成ファイル内にある `DefaultSwitch` は、その値を <xref:System.Diagnostics.SourceLevels> 列挙値のいずれかに設定することで構成できます。 既定では、この値は "Information" です。
+`My.Application.Log` オブジェクトは、`DefaultSwitch` という名前の <xref:System.Diagnostics.SourceSwitch> を使用し、`WriteEntry` および `WriteException` メソッドからログ リスナーに渡すメッセージを制御します。 アプリケーションの構成ファイル内にある `DefaultSwitch` は、その値を <xref:System.Diagnostics.SourceLevels> 列挙値のいずれかに設定することで構成できます。 既定では、この値は "Information" です。
 
 次の表は、Log がリスナーにメッセージを書き込むために必要な重大度レベルを、`DefaultSwitch` の設定ごとに示したものです。
 
@@ -86,7 +86,7 @@ ms.locfileid: "74353587"
 
     3. **[追加]** をクリックします。
 
-2. 最上位の `<switches>` セクション内の `<system.diagnostics>` セクションで、`<configuration>` セクションを見つけます。
+2. 最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションで、`<switches>` セクションを見つけます。
 
 3. スイッチのコレクションに `DefaultSwitch` を追加する要素を見つけます。 これは次のような要素です。
 
@@ -164,7 +164,7 @@ ms.locfileid: "74353587"
 
 2. **ソリューション エクスプローラー**で app.config を右クリックします。 **[開く]** をクリックします。
 
-3. `<listeners>` セクション内にある、`<source>` 属性が "DefaultSource" の `name` セクションで、`<sources>` セクションを見つけます。 `<sources>` セクションは、最上位の `<system.diagnostics>` セクション内の `<configuration>` セクションにあります。
+3. `<sources>` セクション内にある、`name` 属性が "DefaultSource" の `<source>` セクションで、`<listeners>` セクションを見つけます。 `<sources>` セクションは、最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションにあります。
 
 4. `<listeners>` セクションに次の要素を追加します。
 

@@ -36,7 +36,7 @@ member => expression;
 
 式形式のメソッドは、型がメソッドの戻り値の型と一致する値を返す単一の式、または、`void` を返すメソッドの場合は何らかの処理を実行する単一の式で構成されます。 たとえば、一般的に、<xref:System.Object.ToString%2A> メソッドをオーバーライドする型には、現在のオブジェクトの文字列形式を返す単一の式が含まれています。
 
-次の例では、式本体の定義を使用して `Person` メソッドをオーバーライドする <xref:System.Object.ToString%2A> クラスを定義します。 また、名前をコンソールに表示する `DisplayName` メソッドも定義します。 `return` 式本体の定義に `ToString` キーワードが使用されていない点に注意してください。
+次の例では、式本体の定義を使用して <xref:System.Object.ToString%2A> メソッドをオーバーライドする `Person` クラスを定義します。 また、名前をコンソールに表示する `DisplayName` メソッドも定義します。 `ToString` 式本体の定義に `return` キーワードが使用されていない点に注意してください。
 
 [!code-csharp[expression-bodied-methods](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-methods.cs)]  
 
@@ -50,7 +50,7 @@ C# 6 以降では、式本体の定義を使用して読み取り専用プロパ
 PropertyType PropertyName => expression;
 ```
 
-次の例では、プライベート `Location` フィールドの値を返す式本体の定義として読み取り専用の `Name` プロパティを実装する `locationName` クラスを定義します。
+次の例では、プライベート `locationName` フィールドの値を返す式本体の定義として読み取り専用の `Name` プロパティを実装する `Location` クラスを定義します。
 
 [!code-csharp[expression-bodied-read-only-property](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-readonly.cs#1)]  
 
@@ -68,7 +68,7 @@ C# 7.0 以降では、式本体の定義を使用してプロパティ `get` と
 
 一般的に、コンストラクターの式本体の定義は、コンストラクターの引数を処理したり、インスタンスの状態を初期化したりする単一の代入式またはメソッド呼び出しから構成されます。
 
-次の例では、コンストラクターに `Location`name*という名前の文字列パラメーターが 1 つある* クラスが定義されています。 式の本体の定義により `Name` プロパティに引数が割り当てられます。
+次の例では、コンストラクターに *name* という名前の文字列パラメーターが 1 つある `Location` クラスが定義されています。 式の本体の定義により `Name` プロパティに引数が割り当てられます。
 
 [!code-csharp[expression-bodied-constructor](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/expr-bodied-ctor.cs#1)]  
 

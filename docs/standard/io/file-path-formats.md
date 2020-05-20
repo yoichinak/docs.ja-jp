@@ -202,7 +202,7 @@ Windows API に渡されるパスはほとんどすべて正規化されます�
 
 `\\?\` で始まるパスは、[GetFullPathName 関数](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)に明示的に渡す場合、正規化されます。
 
-`MAX_PATH` 文字を超えるパスは [ なしで ](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)GetFullPathName`\\?\` に渡すことができます。 Windows で処理できる最大文字列サイズまで、任意の長さのパスがサポートされます。
+`MAX_PATH` 文字を超えるパスは `\\?\` なしで [GetFullPathName](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea) に渡すことができます。 Windows で処理できる最大文字列サイズまで、任意の長さのパスがサポートされます。
 
 ## <a name="case-and-the-windows-file-system"></a>大文字/小文字の区別と Windows ファイル システム
 

@@ -33,7 +33,7 @@ C# 4 では、`dynamic` という新しい型が導入されています。 こ�
 * `dynamic` から別の型への変換。
 * `dynamic` 型の引数を含むコンストラクターの呼び出し。
 
-たとえば、次の宣言の `testInstance` の型は、`ExampleClass` ではなく、`dynamic` です。
+たとえば、次の宣言の `testInstance` の型は、`dynamic` ではなく、`ExampleClass` です。
 
 [!code-csharp[CsProgGuideTypes#52](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/usingdynamic.cs#52)]
 

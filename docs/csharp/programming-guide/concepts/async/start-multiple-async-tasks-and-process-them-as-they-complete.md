@@ -29,7 +29,7 @@ ms.locfileid: "71736732"
 
 2. メニュー バーで、 **[ファイル]**  >  **[開く]**  >  **[プロジェクト/ソリューション]** を選択します。
 
-3. **[プロジェクトを開く]** ダイアログ ボックスで、ダウンロードしたサンプル コードを含むフォルダーを開き、*AsyncFineTuningCS*/*AsyncFineTuningVB* のソリューション ( *.sln*) ファイルを開きます。
+3. **[プロジェクトを開く]** ダイアログ ボックスで、ダウンロードしたサンプル コードを含むフォルダーを開き、*AsyncFineTuningCS*/*AsyncFineTuningVB* のソリューション (*.sln*) ファイルを開きます。
 
 4. **ソリューション エクスプローラー**で、**ProcessTasksAsTheyFinish** プロジェクトのショートカット メニューを開き、 **[スタートアップ プロジェクトに設定]** をクリックします。
 
@@ -41,7 +41,7 @@ ms.locfileid: "71736732"
 
 この例では、「[完了後の残りの非同期タスクのキャンセル (C#)](cancel-remaining-async-tasks-after-one-is-complete.md)」で開発したコードを追加し、同じ UI を使用します。
 
-この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、 **[スタートアップ プロジェクト]** では [CancelAfterOneTask](cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) を設定します。 そのプロジェクトの `AccessTheWebAsync` メソッドに、このトピックでの変更を追加します。 変更部分にはアスタリスクが付いています。
+この例を自分でビルドするには、「例をダウンロードする」のセクションの詳細な手順の指示に従いますが、**[スタートアップ プロジェクト]** では [CancelAfterOneTask](cancel-remaining-async-tasks-after-one-is-complete.md#downloading-the-example) を設定します。 そのプロジェクトの `AccessTheWebAsync` メソッドに、このトピックでの変更を追加します。 変更部分にはアスタリスクが付いています。
 
 **CancelAfterOneTask** プロジェクトには、実行時にタスクのコレクションを作成するクエリが含まれています。 次のコードの `ProcessURLAsync` への各呼び出しは、`TResult` が整数である <xref:System.Threading.Tasks.Task%601> を返します。
 

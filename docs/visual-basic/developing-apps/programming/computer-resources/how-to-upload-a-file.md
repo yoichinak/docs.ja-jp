@@ -33,7 +33,7 @@ ms.locfileid: "74345553"
   
 ### <a name="to-upload-a-file-supplying-a-user-name-and-password"></a>ユーザー名とパスワードを指定してファイルをアップロードするには  
   
-- `UploadFile` メソッドを使用してファイルをアップロードします。その際、対象ファイルの場所、アップロード先のディレクトリの場所を表す文字列または URI、およびユーザー名とパスワードを指定します。 この例では、ユーザー名に `Order.txt` を、パスワードに空白を指定して、`http://www.cohowinery.com/uploads.aspx` ファイルを `anonymous` にアップロードします。  
+- `UploadFile` メソッドを使用してファイルをアップロードします。その際、対象ファイルの場所、アップロード先のディレクトリの場所を表す文字列または URI、およびユーザー名とパスワードを指定します。 この例では、ユーザー名に `anonymous` を、パスワードに空白を指定して、`Order.txt` ファイルを `http://www.cohowinery.com/uploads.aspx` にアップロードします。  
   
      [!code-vb[VbResourceTasks#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#8)]  
   

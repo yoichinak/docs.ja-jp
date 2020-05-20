@@ -18,7 +18,7 @@ LINQ クエリは、.NET Framework のバージョン 2.0 で導入されたジ�
   
 1. <xref:System.Collections.Generic.List%601> などのジェネリック コレクション クラスのインスタンスを作成するときに、リストに保持されるオブジェクトの型で "T" を置き換えます。 たとえば、文字列のリストは `List<string>` で表され、`Customer`オブジェクトのリストは `List<Customer>` で表されます。 ジェネリック リストは厳密に型指定されるため、要素を <xref:System.Object> として格納するコレクションと比べて多くの利点があります。 `Customer`を `List<string>` に追加しようとすると、コンパイル時にエラーが発生します。 実行時に型キャストを実行する必要がないため、ジェネリック コレクションを使用するのは簡単です。  
   
-2. <xref:System.Collections.Generic.IEnumerable%601> は、`foreach` ステートメントを使用してジェネリック コレクションのクラスを列挙できるようにするインターフェイスです。 <xref:System.Collections.Generic.IEnumerable%601> などの非ジェネリック コレクション クラスが <xref:System.Collections.ArrayList> をサポートするように、ジェネリック コレクション クラスは、<xref:System.Collections.IEnumerable> をサポートします。  
+2. <xref:System.Collections.Generic.IEnumerable%601> は、`foreach` ステートメントを使用してジェネリック コレクションのクラスを列挙できるようにするインターフェイスです。 <xref:System.Collections.ArrayList> などの非ジェネリック コレクション クラスが <xref:System.Collections.IEnumerable> をサポートするように、ジェネリック コレクション クラスは、<xref:System.Collections.Generic.IEnumerable%601> をサポートします。  
   
  ジェネリックの詳細については、「[ジェネリック](../../generics/index.md)」を参照してください。  
   

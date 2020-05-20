@@ -15,7 +15,7 @@ ms.locfileid: "74334498"
 ---
 # <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>方法: StreamWriter を使用してファイルにテキストを書き込む (Visual Basic)
 
-この例では、<xref:System.IO.StreamWriter> メソッドで `My.Computer.FileSystem.OpenTextFileWriter` オブジェクトを開き、そのオブジェクトを使用し、<xref:System.IO.TextWriter.WriteLine%2A> クラスの <xref:System.IO.StreamWriter> メソッドでテキスト ファイルに文字列を書き込みます。  
+この例では、`My.Computer.FileSystem.OpenTextFileWriter` メソッドで <xref:System.IO.StreamWriter> オブジェクトを開き、そのオブジェクトを使用し、<xref:System.IO.StreamWriter> クラスの <xref:System.IO.TextWriter.WriteLine%2A> メソッドでテキスト ファイルに文字列を書き込みます。  
   
 ## <a name="example"></a>例  
 

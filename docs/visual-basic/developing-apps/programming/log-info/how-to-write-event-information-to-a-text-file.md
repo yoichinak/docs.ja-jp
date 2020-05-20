@@ -41,7 +41,7 @@ ms.locfileid: "74352072"
     <add name="FileLogListener" />
     ```
 
-4. 最上位の `<sharedListeners>` セクションに入れ子になっている `<system.diagnostics>` セクションで、`<configuration>` セクションを見つけます。
+4. 最上位の `<configuration>` セクションに入れ子になっている `<system.diagnostics>` セクションで、`<sharedListeners>` セクションを見つけます。
 
 5. その `<sharedListeners>` セクションに次の要素を追加します。
 

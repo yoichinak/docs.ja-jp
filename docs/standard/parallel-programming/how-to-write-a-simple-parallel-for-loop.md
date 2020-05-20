@@ -50,7 +50,7 @@ ms.locfileid: "73139657"
 
 デリゲートは、値が現在のイテレーションである 1 つの入力パラメーターを受け取ります。 このイテレーション値はランタイムによって提供され、その開始値は、現在のスレッドで処理されているソースのセグメント (パーティション) の最初の要素のインデックスです。
 
-コンカレンシー レベルをより細かく制御する必要がある場合は、<xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> などの <xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType> 入力パラメーターを受け取るいずれかのオーバーロードを使用します。
+コンカレンシー レベルをより細かく制御する必要がある場合は、<xref:System.Threading.Tasks.Parallel.For%28System.Int32%2CSystem.Int32%2CSystem.Threading.Tasks.ParallelOptions%2CSystem.Action%7BSystem.Int32%2CSystem.Threading.Tasks.ParallelLoopState%7D%29?displayProperty=nameWithType> などの <xref:System.Threading.Tasks.ParallelOptions?displayProperty=nameWithType> 入力パラメーターを受け取るいずれかのオーバーロードを使用します。
 
 ## <a name="return-value-and-exception-handling"></a>戻り値と例外処理
 

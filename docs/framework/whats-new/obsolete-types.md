@@ -621,8 +621,8 @@ IEHost.dll および IEExec.exe アセンブリは .NET Framework から削除�
 
 |[種類]|[メッセージ]|
 |----------|-------------|
-|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、<xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>Microsoft.Build*アセンブリの* を使用してください。|
-|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、<xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType>Microsoft.Build*アセンブリの* を使用してください。|
+|<xref:Microsoft.Build.BuildEngine.Engine?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、*Microsoft.Build* アセンブリの <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> を使用してください。|
+|<xref:Microsoft.Build.BuildEngine.Project?displayProperty=nameWithType>|このクラスの使用は非推奨とされました。 代わりに、*Microsoft.Build* アセンブリの <xref:Microsoft.Build.Evaluation.ProjectCollection?displayProperty=nameWithType> を使用してください。|
 
 [先頭に戻る](#introduction)
 

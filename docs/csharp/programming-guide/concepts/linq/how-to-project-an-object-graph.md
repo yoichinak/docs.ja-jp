@@ -13,7 +13,7 @@ ms.locfileid: "79168961"
 このトピックでは、XML からオブジェクト グラフを射影 (作成) する方法を示します。  
   
 ## <a name="example"></a>例  
- 次のコードでは、「`Address`サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)`PurchaseOrder`」という XML ドキュメントから `PurchaseOrderItem`、[、および ](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) の各クラスを使用してオブジェクト グラフを作成します。  
+ 次のコードでは、「[サンプル XML ファイル: 一般的な購買発注書 (LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md)」という XML ドキュメントから `Address`、`PurchaseOrder`、および `PurchaseOrderItem` の各クラスを使用してオブジェクト グラフを作成します。  
   
 ```csharp  
 class Address  
@@ -214,7 +214,7 @@ class Program {
 }  
 ```  
   
- この例では、LINQ クエリの結果は、<xref:System.Collections.Generic.IEnumerable%601> の `PurchaseOrderItem` として返されます。 `PurchaseOrder` クラスの項目は、<xref:System.Collections.Generic.IEnumerable%601> の `PurchaseOrderItem` 型です。 このコードでは、<xref:System.Linq.Enumerable.ToList%2A> 拡張メソッドを使用して、クエリの結果から <xref:System.Collections.Generic.List%601> コレクションを作成します。  
+ この例では、LINQ クエリの結果は、`PurchaseOrderItem` の <xref:System.Collections.Generic.IEnumerable%601> として返されます。 `PurchaseOrder` クラスの項目は、<xref:System.Collections.Generic.IEnumerable%601> の `PurchaseOrderItem` 型です。 このコードでは、<xref:System.Linq.Enumerable.ToList%2A> 拡張メソッドを使用して、クエリの結果から <xref:System.Collections.Generic.List%601> コレクションを作成します。  
   
  この例では次の出力が生成されます。  
   

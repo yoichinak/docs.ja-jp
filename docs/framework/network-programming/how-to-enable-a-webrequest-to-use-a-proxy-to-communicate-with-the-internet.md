@@ -32,8 +32,8 @@ GlobalProxySelection.Select = proxyObject
 
 この例で必要な要素は次のとおりです。
 
-- [System.Net`using` 名前空間の C# ](../../csharp/language-reference/keywords/using-directive.md)**ディレクティブ**。
-- [System.Net`Imports` 名前空間の Visual Basic ](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)**ステートメント**。
+- **System.Net** 名前空間の C# [`using`ディレクティブ](../../csharp/language-reference/keywords/using-directive.md)。
+- **System.Net** 名前空間の Visual Basic [`Imports`ステートメント](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。
 
 ## <a name="see-also"></a>参照
 

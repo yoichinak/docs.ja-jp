@@ -37,7 +37,7 @@ ms.locfileid: "76793420"
 
 ## <a name="example"></a>例
 
-[para> の使用例については、「\<](./summary.md)summary>\<」を参照してください。
+\<para> の使用例については、「[\<summary>](./summary.md)」を参照してください。
 
 ## <a name="see-also"></a>参照
 

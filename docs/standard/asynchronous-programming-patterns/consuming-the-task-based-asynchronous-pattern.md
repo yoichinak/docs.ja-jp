@@ -141,7 +141,7 @@ public async void button1_Click(object sender, EventArgs e)
 }
 ```
 
- <xref:System.Threading.Tasks.Task.Run%2A> オーバーロードなど、これらの <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> メソッドの一部は <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドの短縮形として存在します。  <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> など、他のオーバーロードでは、次のように、負荷分散される作業内で await を使用できます。
+ <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> オーバーロードなど、これらの <xref:System.Threading.Tasks.Task.Run%2A> メソッドの一部は <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドの短縮形として存在します。  <xref:System.Threading.Tasks.Task.Run%28System.Func%7BSystem.Threading.Tasks.Task%7D%29?displayProperty=nameWithType> など、他のオーバーロードでは、次のように、負荷分散される作業内で await を使用できます。
 
 ```csharp
 public async void button1_Click(object sender, EventArgs e)
@@ -155,10 +155,10 @@ public async void button1_Click(object sender, EventArgs e)
 }
 ```
 
- このようなオーバーロードは論理的に、タスク並列ライブラリの <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> 拡張メソッドとの連動で <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> メソッドを使用することと等しくなります。
+ このようなオーバーロードは論理的に、タスク並列ライブラリの <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 拡張メソッドとの連動で <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドを使用することと等しくなります。
 
 ### <a name="taskfromresult"></a>Task.FromResult
- データが既に利用でき、単に <xref:System.Threading.Tasks.Task.FromResult%2A> にリフトされたタスクを返すメソッドから返す必要があるシナリオでは、<xref:System.Threading.Tasks.Task%601> メソッドを使用します。
+ データが既に利用でき、単に <xref:System.Threading.Tasks.Task%601> にリフトされたタスクを返すメソッドから返す必要があるシナリオでは、<xref:System.Threading.Tasks.Task.FromResult%2A> メソッドを使用します。
 
 ```csharp
 public Task<int> GetValueAsync(string key)
@@ -185,7 +185,7 @@ IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
 await Task.WhenAll(asyncOps);
 ```
 
- このコードは発生する可能性がある例外を明示的に処理せず、`await` の結果のタスクの <xref:System.Threading.Tasks.Task.WhenAll%2A> から例外を反映します。  例外を処理するには、次のようなコードを使用できます。
+ このコードは発生する可能性がある例外を明示的に処理せず、<xref:System.Threading.Tasks.Task.WhenAll%2A> の結果のタスクの `await` から例外を反映します。  例外を処理するには、次のようなコードを使用できます。
 
 ```csharp
 IEnumerable<Task> asyncOps = from addr in addrs select SendMailAsync(addr);
@@ -199,7 +199,7 @@ catch(Exception exc)
 }
 ```
 
- この例では、非同期の操作が失敗した場合、すべての例外が <xref:System.AggregateException> 例外で連結され、<xref:System.Threading.Tasks.Task> メソッドから返される <xref:System.Threading.Tasks.Task.WhenAll%2A> に格納されます。  ただし、これらの例外の 1 つだけが `await` キーワードによって反映されます。  すべての例外を調べる場合は、上記のコードを次のように書き直します。
+ この例では、非同期の操作が失敗した場合、すべての例外が <xref:System.AggregateException> 例外で連結され、<xref:System.Threading.Tasks.Task.WhenAll%2A> メソッドから返される <xref:System.Threading.Tasks.Task> に格納されます。  ただし、これらの例外の 1 つだけが `await` キーワードによって反映されます。  すべての例外を調べる場合は、上記のコードを次のように書き直します。
 
 ```csharp
 Task [] asyncOps = (from addr in addrs select SendMailAsync(addr)).ToArray();
@@ -474,7 +474,7 @@ public async void btnRun_Click(object sender, EventArgs e)
 }
 ```
 
- 初期のエスケープのもう 1 つの例では、次のセクションで説明する <xref:System.Threading.Tasks.Task.WhenAny%2A> メソッドと連動で <xref:System.Threading.Tasks.Task.Delay%2A> メソッドを使用します。
+ 初期のエスケープのもう 1 つの例では、次のセクションで説明する <xref:System.Threading.Tasks.Task.Delay%2A> メソッドと連動で <xref:System.Threading.Tasks.Task.WhenAny%2A> メソッドを使用します。
 
 ### <a name="taskdelay"></a>Task.Delay
  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> メソッドを使用し、非同期メソッドの実行を一時停止できます。  これは、ポーリング ループのビルド、あらかじめ指定された期間にわたるユーザー入力処理の遅延など、さまざまな機能に役立ちます。  <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> メソッドは、<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> との連動で使用し、待機にタイムアウトを実装する場合にも便利です。

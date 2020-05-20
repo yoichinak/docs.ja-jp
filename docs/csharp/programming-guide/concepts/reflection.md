@@ -16,7 +16,7 @@ ms.locfileid: "74711661"
 次の例は、<xref:System.Object.GetType> メソッドを使用して変数の型を取得する簡単なリフレクションを示しています。このメソッドは、`Object` 基底クラスからすべての型に継承されるメソッドです。
 
 > [!NOTE]
-> `using System;`.cs`using System.Reflection;` ファイルの先頭に *と* を必ず追加してください。
+> *.cs* ファイルの先頭に `using System;` と `using System.Reflection;` を必ず追加してください。
 
 ```csharp
 // Using GetType to obtain type information:

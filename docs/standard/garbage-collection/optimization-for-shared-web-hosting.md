@@ -15,7 +15,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73140274"
 ---
 # <a name="optimization-for-shared-web-hosting"></a>共有 Web ホストの最適化
-複数の小規模な Web サイトをホストして共有されているサーバーの管理者は、.NET ディレクトリの Aspnet.config ファイルの `gcTrimCommitOnLowMemory` ノードに次の `runtime` 設定を追加することで、パフォーマンスを最適化し、サイトの容量を増やすことができます。  
+複数の小規模な Web サイトをホストして共有されているサーバーの管理者は、.NET ディレクトリの Aspnet.config ファイルの `runtime` ノードに次の `gcTrimCommitOnLowMemory` 設定を追加することで、パフォーマンスを最適化し、サイトの容量を増やすことができます。  
   
  `<gcTrimCommitOnLowMemory enabled="true|false"/>`  
   

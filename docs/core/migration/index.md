@@ -51,7 +51,7 @@ Visual Studio 2017 または Visual Studio 2019 バージョン 16.2 以前で *
 > Visual Studio Code を使用している場合、`dotnet migrate` コマンドを実行しても、*tasks.json* などの Visual Studio Code 固有のファイルは変更されません。 これらのファイルは手動で変更する必要があります。
 > これは、Visual Studio ではないエディターまたは統合開発環境 (IDE) を使用している場合にも該当します。
 
-[project.json](../tools/project-json-to-csproj.md) および *.csproj* 形式の比較については、「*project.json プロパティと csproj プロパティの間のマッピング*」を参照してください。
+*project.json* および *.csproj* 形式の比較については、「[project.json プロパティと csproj プロパティの間のマッピング](../tools/project-json-to-csproj.md)」を参照してください。
 
 次のエラーが発生する場合:
 
@@ -75,12 +75,12 @@ Visual Studio 2017 または Visual Studio 2019 バージョン 16.2 以前で *
 .NET Core csproj 形式は、ツールの新しいプレリリース バージョンごとに変化し、進化しています。 以前のバージョンの csproj から最新バージョンにプロジェクト ファイルを移行するツールはないため、プロジェクト ファイルを手動で編集する必要があります。 実際の手順は、移行するプロジェクト ファイルのバージョンによって異なります。 バージョン間で加えられた変更内容に基づいて、考慮する必要があるガイダンスの一部を次に示します。
 
 - `<Project>` 要素からツールのバージョン プロパティを削除します (存在する場合)。
-- `xmlns` 要素から XML 名前空間 (`<Project>`) を削除します。
-- 存在しない場合は、`Sdk` 要素に `<Project>` 属性を追加し、`Microsoft.NET.Sdk` または `Microsoft.NET.Sdk.Web` に設定します。 この属性は、プロジェクトが SDK を使用することを指定するために使用します。 `Microsoft.NET.Sdk.Web` は Web アプリに使用されます。
+- `<Project>` 要素から XML 名前空間 (`xmlns`) を削除します。
+- 存在しない場合は、`<Project>` 要素に `Sdk` 属性を追加し、`Microsoft.NET.Sdk` または `Microsoft.NET.Sdk.Web` に設定します。 この属性は、プロジェクトが SDK を使用することを指定するために使用します。 `Microsoft.NET.Sdk.Web` は Web アプリに使用されます。
 - プロジェクトの一番上と一番下から `<Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" />` および `<Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />` ステートメントを削除します。 これらの import ステートメントは SDK で暗黙的に指定されているので、プロジェクトに含める必要はありません。
 - プロジェクト内に `Microsoft.NETCore.App` または `NETStandard.Library` `<PackageReference>` アイテムがある場合は、削除することをお勧めします。 これらのパッケージ参照は、[SDK で暗黙的に指定されています](https://aka.ms/sdkimplicitrefs)。
-- `Microsoft.NET.Sdk` `<PackageReference>` 要素がある場合は削除します。 SDK の参照は、`Sdk` 要素の `<Project>` 属性によって行われます。
-- [SDK で暗黙的に指定](https://en.wikipedia.org/wiki/Glob_(programming))されている [glob](../project-sdk/overview.md#default-compilation-includes) を削除します。 プロジェクトにこれらの glob を残すと、コンパイル アイテムが重複するため、ビルド時にエラーが発生します。
+- `Microsoft.NET.Sdk` `<PackageReference>` 要素がある場合は削除します。 SDK の参照は、`<Project>` 要素の `Sdk` 属性によって行われます。
+- [SDK で暗黙的に指定](../project-sdk/overview.md#default-compilation-includes)されている [glob](https://en.wikipedia.org/wiki/Glob_(programming)) を削除します。 プロジェクトにこれらの glob を残すと、コンパイル アイテムが重複するため、ビルド時にエラーが発生します。
 
 これらの手順を実行すると、RTM .NET Core csproj 形式と完全に互換性のあるプロジェクトになります。
 

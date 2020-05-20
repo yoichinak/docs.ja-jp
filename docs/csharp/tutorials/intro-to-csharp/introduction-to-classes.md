@@ -73,7 +73,7 @@ namespace classes
 
 先に進む前に、構築したものを確認してみましょう。  `namespace` 宣言は、コードを論理的に整理する方法を提供します。 このチュートリアルで取り扱うコードは比較的小さいため、1 つの名前空間にすべてのコードを配置します。
 
-`public class BankAccount` は、これから作成するクラスまたは型を定義します。 クラス宣言のあとにある `{` と `}` の内側はすべて、クラスの状態と動作を定義しています。 ***クラスには、5 つの***メンバー`BankAccount`があります。 最初の 3 つは***プロパティ***です。 プロパティはデータ要素であり、検証やその他の規則を適用するコードを持つことができます。 最後の 2 つは***メソッド***です。 メソッドは 1 つの機能を実行するコード ブロックです。 各メンバーの名前を確認すると、開発者がそのクラスの作用を把握するための十分な情報が得られます。
+`public class BankAccount` は、これから作成するクラスまたは型を定義します。 クラス宣言のあとにある `{` と `}` の内側はすべて、クラスの状態と動作を定義しています。 `BankAccount` クラスには、5 つの***メンバー***があります。 最初の 3 つは***プロパティ***です。 プロパティはデータ要素であり、検証やその他の規則を適用するコードを持つことができます。 最後の 2 つは***メソッド***です。 メソッドは 1 つの機能を実行するコード ブロックです。 各メンバーの名前を確認すると、開発者がそのクラスの作用を把握するための十分な情報が得られます。
 
 ## <a name="open-a-new-account"></a>新しいアカウントを開く
 
@@ -89,7 +89,7 @@ public BankAccount(string name, decimal initialBalance)
 }
 ```
 
-[`new`](../../language-reference/operators/new-operator.md) を使用してオブジェクトを作成すると、コンストラクターが呼び出されます。 `Console.WriteLine("Hello World!");`Program.cs*の* の行を次のコードで置き換えます (`<name>` を自分の名前に置き換えます)。
+[`new`](../../language-reference/operators/new-operator.md) を使用してオブジェクトを作成すると、コンストラクターが呼び出されます。 *Program.cs* の `Console.WriteLine("Hello World!");` の行を次のコードで置き換えます (`<name>` を自分の名前に置き換えます)。
 
 ```csharp
 var account = new BankAccount("<name>", 1000);
@@ -123,7 +123,7 @@ accountNumberSeed++;
 
 [!code-csharp[Transaction](~/samples/snippets/csharp/classes-quickstart/Transaction.cs)]
 
-<xref:System.Collections.Generic.List%601> クラスに `Transaction` オブジェクトの `BankAccount` を追加しましょう。 次の宣言を追加します。
+`BankAccount` クラスに `Transaction` オブジェクトの <xref:System.Collections.Generic.List%601> を追加しましょう。 次の宣言を追加します。
 
 [!code-csharp[TransactionDecl](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#TransactionDeclaration)]
 
@@ -133,7 +133,7 @@ accountNumberSeed++;
 using System.Collections.Generic;
 ```
 
-`Balance` の報告方法を変更しましょう。  これは、すべてのトランザクションの値を合計することで確認できます。 `Balance` クラスの `BankAccount` の宣言を次のように変更します。
+`Balance` の報告方法を変更しましょう。  これは、すべてのトランザクションの値を合計することで確認できます。 `BankAccount` クラスの `Balance` の宣言を次のように変更します。
 
 [!code-csharp[BalanceComputation](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#BalanceComputation)]
 
@@ -194,7 +194,7 @@ catch (InvalidOperationException e)
 
 ## <a name="challenge---log-all-transactions"></a>課題 - すべてのトランザクションをログに記録する
 
-このチュートリアルを完了すると、トランザクション履歴の `GetAccountHistory` を作成する `string` メソッドを記述できるようになります。 このメソッドを `BankAccount` 型に追加します。
+このチュートリアルを完了すると、トランザクション履歴の `string` を作成する `GetAccountHistory` メソッドを記述できるようになります。 このメソッドを `BankAccount` 型に追加します。
 
 [!code-csharp[History](~/samples/snippets/csharp/classes-quickstart/BankAccount.cs#History)]
 

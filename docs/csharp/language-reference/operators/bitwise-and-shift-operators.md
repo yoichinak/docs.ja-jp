@@ -44,7 +44,7 @@ ms.locfileid: "79398071"
 - 2 項 [`<<` (左シフト)](#left-shift-operator-) および [`>>` (右シフト)](#right-shift-operator-) シフト演算子
 - 2 項 [`&` (論理 AND)](#logical-and-operator-)、[`|` (論理 OR)](#logical-or-operator-)、および [`^` (論理排他的 OR)](#logical-exclusive-or-operator-) 演算子
 
-これらの演算子は、`int`、`uint`、`long`、`ulong` 型に対して定義されています。 両方のオペランドが他の整数型 (`sbyte`、`byte`、`short`、`ushort`、`char`) の場合、それらの値は `int` 型に変換され、演算の結果もその型になります。 オペランドが異なる整数型の場合、それらの値は最も近い含んでいる整数型に変換されます。 詳しくは、「[C# 言語仕様](~/_csharplang/spec/expressions.md#numeric-promotions)」の「[数値の上位変換](~/_csharplang/spec/introduction.md)」セクションをご覧ください。
+これらの演算子は、`int`、`uint`、`long`、`ulong` 型に対して定義されています。 両方のオペランドが他の整数型 (`sbyte`、`byte`、`short`、`ushort`、`char`) の場合、それらの値は `int` 型に変換され、演算の結果もその型になります。 オペランドが異なる整数型の場合、それらの値は最も近い含んでいる整数型に変換されます。 詳しくは、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)」セクションをご覧ください。
 
 `&`、`|`、`^` の各演算子は、`bool` 型のオペランドに対しても定義されています。 詳しくは、「[ブール論理演算子](boolean-logical-operators.md)」をご覧ください。
 
@@ -136,7 +136,7 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](snippets/BitwiseAndShiftOperators.cs#CompoundAssignment)]
 
-[数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)のため、`op` 演算の結果は、`T` の型 `x` に暗黙的に変換できない可能性があります。 そのような場合、`op` が定義済みの演算子であり、演算の結果が `T` の型 `x` に明示的に変換できる場合、`x op= y` の形式の複合代入式は、`x = (T)(x op y)` が 1 回だけ評価される点を除き、`x` と等価です。 次の例は、その動作を示します。
+[数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)のため、`op` 演算の結果は、`x` の型 `T` に暗黙的に変換できない可能性があります。 そのような場合、`op` が定義済みの演算子であり、演算の結果が `x` の型 `T` に明示的に変換できる場合、`x op= y` の形式の複合代入式は、`x` が 1 回だけ評価される点を除き、`x = (T)(x op y)` と等価です。 次の例は、その動作を示します。
 
 [!code-csharp-interactive[compound assignment with cast](snippets/BitwiseAndShiftOperators.cs#CompoundAssignmentWithCast)]
 
@@ -154,11 +154,11 @@ x = x op y
 
 [!code-csharp-interactive[operator precedence](snippets/BitwiseAndShiftOperators.cs#Precedence)]
 
-優先度順に並べられた C# 演算子の完全な一覧については、「[C# 演算子](index.md#operator-precedence)」の記事の「[演算子の優先順位](index.md)」のセクションを参照してください。
+優先度順に並べられた C# 演算子の完全な一覧については、[C# 演算子](index.md)に関する記事の「[演算子の優先順位](index.md#operator-precedence)」セクションを参照してください。
 
 ## <a name="shift-count-of-the-shift-operators"></a>シフト演算子のシフト数
 
-シフト演算子 `<<` および `>>` の場合、右側のオペランドの型は、`int` であるか、または [ への](../builtin-types/numeric-conversions.md#implicit-numeric-conversions)事前に定義された暗黙的な数値変換`int`を持つ型にする必要があります。
+シフト演算子 `<<` および `>>` の場合、右側のオペランドの型は、`int` であるか、または `int` への[事前に定義された暗黙的な数値変換](../builtin-types/numeric-conversions.md#implicit-numeric-conversions)を持つ型にする必要があります。
 
 `x << count` および `x >> count` の式では、実際のシフト数は次のように `x` の型によって異なります。
 
@@ -175,13 +175,13 @@ x = x op y
 
 ## <a name="enumeration-logical-operators"></a>列挙論理演算子
 
-`~`、`&`、`|`、`^` の演算子は、任意の[列挙](../builtin-types/enum.md)型でもサポートされます。 オペランドが同じ列挙型の場合、基になっている整数型の対応する値に対して、論理演算が実行されます。 たとえば、基になる型が `x` である列挙型 `y` の任意の `T` と `U` に対して、式 `x & y` では式 `(T)((U)x & (U)y)` と同じ結果が生成されます。
+`~`、`&`、`|`、`^` の演算子は、任意の[列挙](../builtin-types/enum.md)型でもサポートされます。 オペランドが同じ列挙型の場合、基になっている整数型の対応する値に対して、論理演算が実行されます。 たとえば、基になる型が `U` である列挙型 `T` の任意の `x` と `y` に対して、式 `x & y` では式 `(T)((U)x & (U)y)` と同じ結果が生成されます。
 
-通常、ビットごとの論理演算子は、[Flags](xref:System.FlagsAttribute) 属性で定義されている列挙型で使います。 詳しくは、「[列挙型](../builtin-types/enum.md#enumeration-types-as-bit-flags)」記事の「[ビット フラグとしての列挙型](../builtin-types/enum.md)」セクションをご覧ください。
+通常、ビットごとの論理演算子は、[Flags](xref:System.FlagsAttribute) 属性で定義されている列挙型で使います。 詳しくは、「[列挙型](../builtin-types/enum.md)」記事の「[ビット フラグとしての列挙型](../builtin-types/enum.md#enumeration-types-as-bit-flags)」セクションをご覧ください。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型では、[、](operator-overloading.md)、`~`、`<<`、`>>`、`&` の各演算子を`|`オーバーロード`^`できます。 2 項演算子をオーバーロードすると、対応する複合代入演算子も暗黙的にオーバーロードされます。 ユーザー定義型は、複合代入演算子を明示的にオーバーロードすることはできません。
+ユーザー定義型では、`~`、`<<`、`>>`、`&`、`|`、`^` の各演算子を[オーバーロード](operator-overloading.md)できます。 2 項演算子をオーバーロードすると、対応する複合代入演算子も暗黙的にオーバーロードされます。 ユーザー定義型は、複合代入演算子を明示的にオーバーロードすることはできません。
 
 ユーザー定義型 `T` で `<<` または `>>` 演算子をオーバーロードする場合、左側のオペランドの型は `T` である必要があり、右側のオペランドの型は `int` である必要があります。
 

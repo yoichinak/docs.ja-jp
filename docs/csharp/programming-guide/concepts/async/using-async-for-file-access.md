@@ -41,7 +41,7 @@ using System.Threading.Tasks;
 ## <a name="use-of-the-filestream-class"></a>FileStream クラスの使用  
  このトピックの例では、<xref:System.IO.FileStream> クラスを使用します。このクラスには、非同期 I/O をオペレーティング システム レベルで発生させるオプションが用意されています。 このオプションを使用すると、多くのケースで ThreadPool スレッドがブロックされるのを回避できます。 このオプションを有効にするには、コンストラクター呼び出しで `useAsync=true` または `options=FileOptions.Asynchronous` 引数を指定します。  
   
- ファイル パスを指定して <xref:System.IO.StreamReader> と <xref:System.IO.StreamWriter> を直接開いた場合、このオプションは使用できません。 一方、<xref:System.IO.Stream> クラスによって開かれた <xref:System.IO.FileStream> を使用する場合は、このオプションを使用できます。 UI アプリでは、ThreadPool スレッドがブロックされた場合でも、非同期呼び出しのほうが高速です。これは、UI スレッドは待機中にブロックされないためです。  
+ ファイル パスを指定して <xref:System.IO.StreamReader> と <xref:System.IO.StreamWriter> を直接開いた場合、このオプションは使用できません。 一方、<xref:System.IO.FileStream> クラスによって開かれた <xref:System.IO.Stream> を使用する場合は、このオプションを使用できます。 UI アプリでは、ThreadPool スレッドがブロックされた場合でも、非同期呼び出しのほうが高速です。これは、UI スレッドは待機中にブロックされないためです。  
   
 ## <a name="writing-text"></a>テキストの書き込み  
  次の例では、ファイルにテキストを書き込みます。 各 await ステートメントに達すると、メソッドは直ちに終了します。 ファイル I/O が完了すると、メソッドは await ステートメントの後のステートメントから再開します。 await ステートメントを使用するメソッドの定義に async 修飾子が含まれていることに注意してください。  
@@ -127,7 +127,7 @@ private async Task<string> ReadTextAsync(string filePath)
 ## <a name="parallel-asynchronous-io"></a>並列非同期 I/O  
  次の例では、10 個のテキスト ファイルを記述する並列処理を示します。 <xref:System.IO.Stream.WriteAsync%2A> メソッドは、ファイルごとにタスクを返します。タスクはタスクの一覧に追加されます。 `await Task.WhenAll(tasks);` ステートメントはメソッドを終了し、すべてのタスクのファイル処理が完了すると、メソッド内で再開します。  
   
- この例では、タスクの完了後、<xref:System.IO.FileStream> ブロックのすべての `finally` インスタンスを閉じます。 `FileStream` ステートメントで `using` が作成された場合は、タスクが完了する前に `FileStream` が破棄されることがあります。  
+ この例では、タスクの完了後、`finally` ブロックのすべての <xref:System.IO.FileStream> インスタンスを閉じます。 `using` ステートメントで `FileStream` が作成された場合は、タスクが完了する前に `FileStream` が破棄されることがあります。  
   
  パフォーマンスの向上のほとんどが、非同期処理ではなく並列処理によって実現していることに注意してください。 非同期性の利点は、複数のスレッドやユーザー インターフェイス スレッドが拘束されなくなる点にあります。  
   

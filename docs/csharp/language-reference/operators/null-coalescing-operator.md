@@ -21,7 +21,7 @@ ms.locfileid: "78847314"
 
 null 合体演算子 `??` では、それが `null` ではない場合、その左側のオペランドの値が返されます。それ以外の場合は、右側のオペランドが評価され、その結果が返されます。 `??` 演算子では、左側のオペランドが null 値以外に評価された場合は、その右側のオペランドは評価されません。
 
-C# 8.0 以降では、左側のオペランドが `??=` に評価された場合にのみ、右側のオペランドの値を左側のオペランドに割り当てる null 合体割り当て演算子 `null` を使用できます。 `??=` 演算子では、左側のオペランドが null 値以外に評価された場合は、その右側のオペランドは評価されません。
+C# 8.0 以降では、左側のオペランドが `null` に評価された場合にのみ、右側のオペランドの値を左側のオペランドに割り当てる null 合体割り当て演算子 `??=` を使用できます。 `??=` 演算子では、左側のオペランドが null 値以外に評価された場合は、その右側のオペランドは評価されません。
 
 [!code-csharp[null-coalescing assignment](snippets/NullCoalescingOperator.cs#Assignment)]
 
@@ -49,7 +49,7 @@ d ??= (e ??= f)
 
 `??` 演算子および `??=` 演算子は、次のシナリオで役立つことがあります。
 
-- [null 条件演算子 ?. および ?[]](member-access-operators.md#null-conditional-operators--and-) を含む式は、null 条件演算の式の結果が `??` の場合に評価する代替の式を指定するために、`null` 演算子を使用することができます。
+- [null 条件演算子 ?. および ?[]](member-access-operators.md#null-conditional-operators--and-) を含む式は、null 条件演算の式の結果が `null` の場合に評価する代替の式を指定するために、`??` 演算子を使用することができます。
 
   [!code-csharp-interactive[with null-conditional](snippets/NullCoalescingOperator.cs#WithNullConditional)]
 
@@ -57,9 +57,9 @@ d ??= (e ??= f)
 
   [!code-csharp-interactive[with nullable types](snippets/NullCoalescingOperator.cs#WithNullableTypes)]
 
-  null 値許容型が <xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> の場合に使用される値を、基になる値型の既定値にする場合は、`null` メソッドを使用します。
+  null 値許容型が `null` の場合に使用される値を、基になる値型の既定値にする場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
 
-- C# 7.0 以降では、[ 演算子の右側のオペランドとして `throw`](../keywords/throw.md#the-throw-expression) 式`??`を使用し、引数のチェック コードをより簡潔にすることができます。
+- C# 7.0 以降では、`??` 演算子の右側のオペランドとして [`throw` 式](../keywords/throw.md#the-throw-expression)を使用し、引数のチェック コードをより簡潔にすることができます。
 
   [!code-csharp[with throw expression](snippets/NullCoalescingOperator.cs#WithThrowExpression)]
 
@@ -86,7 +86,7 @@ d ??= (e ??= f)
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-`??` 演算子の詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)の [null 合体演算子](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+`??` 演算子の詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の [null 合体演算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)に関するセクションを参照してください。
 
 `??=` リテラルの詳細については、[機能提案メモ](~/_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md)を参照してください。
 

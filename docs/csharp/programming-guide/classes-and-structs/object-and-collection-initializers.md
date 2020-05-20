@@ -94,7 +94,7 @@ List<int> digits2 = new List<int> { 0 + 1, 12 % 3, MakeInt() };
   
 [!code-csharp[ListInitializer](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitializer)]  
   
-コレクションの [ メソッドで許容されている場合、コレクション初期化子の要素として ](../../language-reference/keywords/null.md)null`Add` を指定できます。  
+コレクションの `Add` メソッドで許容されている場合、コレクション初期化子の要素として [null](../../language-reference/keywords/null.md) を指定できます。  
   
 [!code-csharp[ListInitializerNull](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/object-collection-initializers/BasicObjectInitializers.cs#ListInitialerWithNull)]  
   

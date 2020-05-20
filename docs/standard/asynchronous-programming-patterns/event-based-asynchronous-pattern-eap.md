@@ -33,7 +33,7 @@ ms.locfileid: "73130945"
  イベント ベースの非同期パターンに従って非同期機能を公開するための要件について説明します。  
   
  [イベントベースの非同期パターンをいつ実装するかの決定](deciding-when-to-implement-the-event-based-asynchronous-pattern.md)  
- どのような場合に、<xref:System.IAsyncResult>非同期プログラミング モデル (APM)[ で表される ](asynchronous-programming-model-apm.md) パターンではなく、イベント ベースの非同期パターンの実装を選択するかを判断する方法について説明します。
+ どのような場合に、[非同期プログラミング モデル (APM)](asynchronous-programming-model-apm.md) で表される <xref:System.IAsyncResult> パターンではなく、イベント ベースの非同期パターンの実装を選択するかを判断する方法について説明します。
   
  [方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する](component-that-supports-the-event-based-asynchronous-pattern.md)  
  イベント ベースの非同期パターンを実装するコンポーネントの作成方法について説明します。 これは、<xref:System.ComponentModel?displayProperty=nameWithType> 名前空間のヘルパー クラスを使用して実装します。これにより、コンポーネントは任意のアプリケーション モデルで正常に動作します。  

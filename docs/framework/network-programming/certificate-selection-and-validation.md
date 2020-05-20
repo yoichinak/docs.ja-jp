@@ -16,7 +16,7 @@ ms.locfileid: "71048747"
  証明書は、公開キー、属性 (バージョン番号、シリアル番号、有効期限など)、および証明機関のデジタル署名を含む ASCII バイト ストリームです。 証明書は、暗号化された接続を確立するため、またはサーバーに対してクライアントを認証するために使用されます。  
   
 ## <a name="client-certificate-selection-and-validation"></a>クライアント証明書の選択と検証  
- クライアントは、特定の SSL 接続に 1 つまたは複数の証明書を選択できます。 クライアント証明書は、Web サーバーまたは SMTP メール サーバーとの SSL 接続と関連付けることができます。 クライアントは、<xref:System.Security.Cryptography.X509Certificates.X509Certificate> または <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラス オブジェクトのコレクションに証明書を追加します。 たとえば、電子メールを使用する場合、証明書コレクションは、<xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> クラスの <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> プロパティと関連付けられた <xref:System.Net.Mail.SmtpClient> のインスタンスです。 <xref:System.Net.HttpWebRequest> クラスには類似した <xref:System.Net.HttpWebRequest.ClientCertificates%2A> プロパティがあります。  
+ クライアントは、特定の SSL 接続に 1 つまたは複数の証明書を選択できます。 クライアント証明書は、Web サーバーまたは SMTP メール サーバーとの SSL 接続と関連付けることができます。 クライアントは、<xref:System.Security.Cryptography.X509Certificates.X509Certificate> または <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラス オブジェクトのコレクションに証明書を追加します。 たとえば、電子メールを使用する場合、証明書コレクションは、<xref:System.Net.Mail.SmtpClient> クラスの <xref:System.Net.Mail.SmtpClient.ClientCertificates%2A> プロパティと関連付けられた <xref:System.Security.Cryptography.X509Certificates.X509CertificateCollection> のインスタンスです。 <xref:System.Net.HttpWebRequest> クラスには類似した <xref:System.Net.HttpWebRequest.ClientCertificates%2A> プロパティがあります。  
   
  <xref:System.Security.Cryptography.X509Certificates.X509Certificate> クラスと <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラスの主な違いは、秘密キーが <xref:System.Security.Cryptography.X509Certificates.X509Certificate> クラスの証明書ストアに存在する必要がある点です。  
   

@@ -28,7 +28,7 @@ ms.locfileid: "71048575"
  ヘッダー メタデータを使用するために **Headers** プロパティを使用する必要はありません。 プロトコル固有のメタデータをプロパティとして公開することができます。たとえば、<xref:System.Net.HttpWebResponse.LastModified%2A?displayProperty=nameWithType> プロパティは、**Last-Modified** HTTP ヘッダーを公開します。 ヘッダー メタデータをプロパティとして公開する場合、**Headers** プロパティを使用して同じプロパティが設定されないようにする必要があります。  
   
 ## <a name="responseuri-property"></a>ResponseUri プロパティ  
- <xref:System.Net.WebResponse.ResponseUri%2A> プロパティには、実際に応答を提供したリソースの URI が含まれています。 リダイレクトをサポートしないプロトコルの場合、**ResponseUri** は応答を作成した <xref:System.Net.WebRequest.RequestUri%2A>WebRequest**の** プロパティと同じになります。 プロトコルが要求のリダイレクトをサポートしている場合は、**ResponseUri** に応答の URI が含まれます。  
+ <xref:System.Net.WebResponse.ResponseUri%2A> プロパティには、実際に応答を提供したリソースの URI が含まれています。 リダイレクトをサポートしないプロトコルの場合、**ResponseUri** は応答を作成した **WebRequest** の <xref:System.Net.WebRequest.RequestUri%2A> プロパティと同じになります。 プロトコルが要求のリダイレクトをサポートしている場合は、**ResponseUri** に応答の URI が含まれます。  
   
 ## <a name="close-method"></a>Close メソッド  
  <xref:System.Net.WebResponse.Close%2A> メソッドは、要求と応答によって作成されたすべての接続を閉じ、応答で使用されているリソースをクリーンアップします。 **Close** メソッドは、応答で使用されたすべてのストリーム インスタンスを閉じますが、応答ストリームが <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> メソッドへの呼び出しにより以前に閉じられた場合は、例外をスローしません。  

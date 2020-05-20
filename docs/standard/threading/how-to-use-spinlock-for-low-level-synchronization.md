@@ -26,7 +26,7 @@ ms.locfileid: "73137963"
   
  この例では、<xref:System.Collections.Generic.Queue%601?displayProperty=nameWithType> クラスを使用するため、マルチスレッド アクセスにはユーザーによる同期が必要になります。 .NET Framework Version 4 をターゲットにしているアプリケーションでは、ユーザーのロックが不要な <xref:System.Collections.Concurrent.ConcurrentQueue%601?displayProperty=nameWithType> を使用することもできます。  
   
- `false` の呼び出しに `False` (Visual Basic では <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType>) が使用されていることに注目してください。 これにより、最適なパフォーマンスを得られます。 メモリ フェンスを使用するには、IA64 アーキテクチャで `true` (Visual Basic では `True`) を指定します。これにより、書き込みバッファーがフラッシュされるので、ロックを使用して他のスレッドを終了できるようになります。  
+ <xref:System.Threading.SpinLock.Exit%2A?displayProperty=nameWithType> の呼び出しに `false` (Visual Basic では `False`) が使用されていることに注目してください。 これにより、最適なパフォーマンスを得られます。 メモリ フェンスを使用するには、IA64 アーキテクチャで `true` (Visual Basic では `True`) を指定します。これにより、書き込みバッファーがフラッシュされるので、ロックを使用して他のスレッドを終了できるようになります。  
   
 ## <a name="see-also"></a>参照
 

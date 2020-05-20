@@ -13,7 +13,7 @@ ms.locfileid: "74345499"
 ---
 # <a name="reading-from-and-writing-to-the-registry-using-the-microsoftwin32-namespace-visual-basic"></a>Microsoft.Win32 名前空間を使用したレジストリの読み取りと書き込み (Visual Basic)
 
-レジストリに対してプログラミングする際の基本的なニーズには `My.Computer.Registry` で対応できますが、.NET Framework の <xref:Microsoft.Win32.Registry> 名前空間の <xref:Microsoft.Win32.RegistryKey> クラスと <xref:Microsoft.Win32> クラスを使用することもできます。  
+レジストリに対してプログラミングする際の基本的なニーズには `My.Computer.Registry` で対応できますが、.NET Framework の <xref:Microsoft.Win32> 名前空間の <xref:Microsoft.Win32.Registry> クラスと <xref:Microsoft.Win32.RegistryKey> クラスを使用することもできます。  
   
 ## <a name="keys-in-the-registry-class"></a>Registry クラスのキー  
 
@@ -30,7 +30,7 @@ ms.locfileid: "74345499"
 |<xref:Microsoft.Win32.Registry.Users>|既定のユーザー設定についての情報が含まれます。|  
   
 > [!IMPORTANT]
-> ローカル コンピューター (<xref:Microsoft.Win32.Registry.CurrentUser>) よりも、現在のユーザー (<xref:Microsoft.Win32.Registry.LocalMachine>) にデータを書き込む方が安全です。 作成しようとするキーが、以前に悪意のある可能性のある別のプロセスによって作成されたことがある場合、一般に "スクワッティング" と呼ばれる状況が発生します。 スクワッティングの発生を防ぐには、キーがまだ存在しない場合は <xref:Microsoft.Win32.RegistryKey.GetValue%2A> を返す `Nothing` などのメソッドを使用します。  
+> ローカル コンピューター (<xref:Microsoft.Win32.Registry.LocalMachine>) よりも、現在のユーザー (<xref:Microsoft.Win32.Registry.CurrentUser>) にデータを書き込む方が安全です。 作成しようとするキーが、以前に悪意のある可能性のある別のプロセスによって作成されたことがある場合、一般に "スクワッティング" と呼ばれる状況が発生します。 スクワッティングの発生を防ぐには、キーがまだ存在しない場合は `Nothing` を返す <xref:Microsoft.Win32.RegistryKey.GetValue%2A> などのメソッドを使用します。  
   
 ## <a name="reading-a-value-from-the-registry"></a>レジストリから値を読み取る  
 

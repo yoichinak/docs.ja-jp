@@ -22,7 +22,7 @@ ms.locfileid: "73127622"
 ---
 # <a name="padding-strings-in-net"></a>.NET での文字列の埋め込み
 
-ある文字の先頭または末尾に文字を埋め込み、合計を指定の長さにするとき、元の文字列で構成される新しい文字列を次の <xref:System.String> メソッドの 1 つを利用して作成します。 埋め込み文字は、スペースまたは指定した文字にすることができます。 結果の文字列は右揃えまたは左揃えのように見えます。 元の文字列の長さが既に必要な合計の長さ以上である場合、埋め込みメソッドは元の文字列をそのまま返します。詳細については、**および** メソッドの 2 つのオーバーロードの<xref:System.String.PadLeft%2A?displayProperty=nameWithType>戻り値<xref:System.String.PadRight%2A?displayProperty=nameWithType>に関するセクションを参照してください。
+ある文字の先頭または末尾に文字を埋め込み、合計を指定の長さにするとき、元の文字列で構成される新しい文字列を次の <xref:System.String> メソッドの 1 つを利用して作成します。 埋め込み文字は、スペースまたは指定した文字にすることができます。 結果の文字列は右揃えまたは左揃えのように見えます。 元の文字列の長さが既に必要な合計の長さ以上である場合、埋め込みメソッドは元の文字列をそのまま返します。詳細については、<xref:System.String.PadLeft%2A?displayProperty=nameWithType> および <xref:System.String.PadRight%2A?displayProperty=nameWithType> メソッドの 2 つのオーバーロードの**戻り値**に関するセクションを参照してください。
   
 |メソッド名|用途|  
 |-----------------|---------|  

@@ -56,7 +56,7 @@ dotnet run
 
     プログラムは `using System` で始まります。これは、"`System` 名前空間のすべてがこのファイルのスコープになる" こと意味します。 `System` 名前空間には、`Console` クラスが含まれています。
 
-    次に、`Hello` という名前空間を定義します。 これを必要なものに変更できます。 その名前空間に、`Program` という名前のクラスが、`Main` という名前の文字列配列を使用する `args` メソッドと共に定義されます。 この配列には、プログラムの実行時に渡される引数のリストが含まれます。 このままではこの配列は使用されず、プログラムは単に "Hello World!" というテキストを を表示する非常に簡単なアプリケーションのコード例を次に示します。 後に、この引数を利用するようにコードを変更します。
+    次に、`Hello` という名前空間を定義します。 これを必要なものに変更できます。 その名前空間に、`Program` という名前のクラスが、`args` という名前の文字列配列を使用する `Main` メソッドと共に定義されます。 この配列には、プログラムの実行時に渡される引数のリストが含まれます。 このままではこの配列は使用されず、プログラムは単に "Hello World!" というテキストを を表示する非常に簡単なアプリケーションのコード例を次に示します。 後に、この引数を利用するようにコードを変更します。
 
     `dotnet new` で、[dotnet restore](../tools/dotnet-restore.md) が暗黙的に呼び出されます。 `dotnet restore` は、[NuGet](https://www.nuget.org/) (.NET パッケージ マネージャー) を呼び出して依存関係ツリーを復元します。 NuGet は、*Hello.csproj* ファイルを分析し、ファイルに記載されている依存関係をダウンロードし (またはコンピューターのキャッシュから取得し)、サンプルをコンパイルして実行するために必要な *obj/project.assets.json* ファイルを記述します。
 
@@ -142,7 +142,7 @@ dotnet run
 
     [!code-csharp[Fibonacci Generator](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/FibonacciGenerator.cs)]
 
-02. `Main`Program.cs*ファイルの* メソッドを変更し、次の例のように新しいクラスをインスタンス化し、そのメソッドを呼び出します。
+02. *Program.cs* ファイルの `Main` メソッドを変更し、次の例のように新しいクラスをインスタンス化し、そのメソッドを呼び出します。
 
     [!code-csharp[New Program.cs](~/samples/snippets/core/tutorials/cli-create-console-app/FibonacciBetterMsBuild/csharp/Program.cs)]
 
@@ -176,7 +176,7 @@ dotnet run
 
 ## <a name="publish-your-app"></a>アプリケーションの発行
 
-アプリを配布する準備ができたら、[dotnet publish](../tools/dotnet-publish.md) コマンドを使用して、_bin_debug_netcoreapp3.1\\publish\\\\ に \\publish_ フォルダーを生成します (Windows 以外のシステムの場合は `/` を使用します)。 dotnet ランタイムが既にインストールされている他のプラットフォームには、_publish_ フォルダーの内容を配布できます。
+アプリを配布する準備ができたら、[dotnet publish](../tools/dotnet-publish.md) コマンドを使用して、_bin\\debug\\netcoreapp3.1\\publish\\_ に _publish_ フォルダーを生成します (Windows 以外のシステムの場合は `/` を使用します)。 dotnet ランタイムが既にインストールされている他のプラットフォームには、_publish_ フォルダーの内容を配布できます。
 
 ```dotnetcli
 dotnet publish

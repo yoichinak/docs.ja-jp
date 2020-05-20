@@ -13,7 +13,7 @@ ms.locfileid: "77628164"
 ---
 # <a name="using-indexers-c-programming-guide"></a>インデクサーの使用 (C# プログラミング ガイド)
 
-インデクサーは構文を簡略化します。これを使用すると、[クラス](../../language-reference/keywords/class.md)、[構造体](../../language-reference/builtin-types/struct.md)、または[インターフェイス](../../language-reference/keywords/interface.md)を作成でき、クライアント アプリケーションは配列と同じようにアクセスできます。 インデクサーは、内部コレクションまたは配列をカプセル化することが主な目的である型で最も多く実装されます。 たとえば、24 時間のうちの異なる 10 回の時刻で記録した温度を華氏で表す `TempRecord` クラスがあるとします。 このクラスには、温度値を格納する `temps` 型の配列 `float[]` が含まれています。 このクラスにインデクサーを実装することで、クライアントは、`TempRecord` ではなく `float temp = tr[4]` として `float temp = tr.temps[4]` インスタンスの温度にアクセスできます。 インデクサーはクライアント アプリケーションの構文を簡略化するだけでなく、クラスとその目的を、他の開発者たちにとってわかりやすい、より直感的なものにします。  
+インデクサーは構文を簡略化します。これを使用すると、[クラス](../../language-reference/keywords/class.md)、[構造体](../../language-reference/builtin-types/struct.md)、または[インターフェイス](../../language-reference/keywords/interface.md)を作成でき、クライアント アプリケーションは配列と同じようにアクセスできます。 インデクサーは、内部コレクションまたは配列をカプセル化することが主な目的である型で最も多く実装されます。 たとえば、24 時間のうちの異なる 10 回の時刻で記録した温度を華氏で表す `TempRecord` クラスがあるとします。 このクラスには、温度値を格納する `float[]` 型の配列 `temps` が含まれています。 このクラスにインデクサーを実装することで、クライアントは、`float temp = tr.temps[4]` ではなく `float temp = tr[4]` として `TempRecord` インスタンスの温度にアクセスできます。 インデクサーはクライアント アプリケーションの構文を簡略化するだけでなく、クラスとその目的を、他の開発者たちにとってわかりやすい、より直感的なものにします。  
   
 クラスまたは構造体でインデクサーを宣言するには、次の例のように [this](../../language-reference/keywords/this.md) キーワードを使用します。
 

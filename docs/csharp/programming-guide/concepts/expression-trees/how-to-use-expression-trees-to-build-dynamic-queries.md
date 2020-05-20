@@ -24,7 +24,7 @@ LINQ では、<xref:System.Linq.IQueryable%601> を実装するデータ ソー�
           .OrderBy(company => company)
  ```
   
- クエリ全体を構成する式を表す式ツリーの作成には、<xref:System.Linq.Expressions> 名前空間のファクトリ メソッドが使われます。 標準クエリ演算子メソッドの呼び出しを表す式は、これらのメソッドの <xref:System.Linq.Queryable> の実装を参照します。 最終的な式ツリーが、<xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> データ ソースのプロバイダーの `IQueryable` 実装に渡されて、`IQueryable` 型の実行可能なクエリが作成されます。 結果は、そのクエリ変数を列挙することにより取得されます。  
+ クエリ全体を構成する式を表す式ツリーの作成には、<xref:System.Linq.Expressions> 名前空間のファクトリ メソッドが使われます。 標準クエリ演算子メソッドの呼び出しを表す式は、これらのメソッドの <xref:System.Linq.Queryable> の実装を参照します。 最終的な式ツリーが、`IQueryable` データ ソースのプロバイダーの <xref:System.Linq.IQueryProvider.CreateQuery%60%601%28System.Linq.Expressions.Expression%29> 実装に渡されて、`IQueryable` 型の実行可能なクエリが作成されます。 結果は、そのクエリ変数を列挙することにより取得されます。  
   
 ```csharp  
 // Add a using directive for System.Linq.Expressions.  

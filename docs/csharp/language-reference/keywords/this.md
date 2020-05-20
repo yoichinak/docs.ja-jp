@@ -42,7 +42,7 @@ ms.locfileid: "75715101"
 
 ## <a name="example"></a>例
 
-この例では、似た名前によって非表示にされている `this` クラスのメンバー `Employee` と `name` を修飾するために `alias` が使用されています。 また、別のクラスに属するメソッド `CalcTax` にオブジェクトを渡すためにも使用されています。
+この例では、似た名前によって非表示にされている `Employee` クラスのメンバー `name` と `alias` を修飾するために `this` が使用されています。 また、別のクラスに属するメソッド `CalcTax` にオブジェクトを渡すためにも使用されています。
 
 [!code-csharp[csrefKeywordsAccess#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#3)]
 

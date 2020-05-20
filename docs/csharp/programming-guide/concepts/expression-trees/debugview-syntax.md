@@ -43,7 +43,7 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 
 ## <a name="constantexpression"></a>ConstantExpression
 
-整数値、文字列、および <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> を表す `null` オブジェクトの場合、定数の値が表示されます。
+整数値、文字列、および `null` を表す <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> オブジェクトの場合、定数の値が表示されます。
 
 C# リテラルとしての標準のサフィックスを持つ数値型の場合、サフィックスが値に追加されます。 さまざまな数値型に関連するサフィックスを次の表に示します。
 

@@ -35,7 +35,7 @@ ms.locfileid: "75708116"
 
 この理由で特定の書き込み試行が失敗する可能性があるかどうかを判断できるように、<xref:System.IO.IsolatedStorage.IsolatedStorage> クラスには 3 つの読み取り専用のプロパティ <xref:System.IO.IsolatedStorage.IsolatedStorage.AvailableFreeSpace%2A>、<xref:System.IO.IsolatedStorage.IsolatedStorage.UsedSize%2A>、<xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> が用意されています。 これらのプロパティを使用して、ストアへの書き込みによってストアの最大許容サイズを超えるかどうかを判断できます。 分離ストレージには同時にアクセスできます。そのため、残りのストレージ容量を計算しても、ストアに書き込もうとするまでにストレージ領域が使用される可能性がある点に注意してください。 ただし、ストアの最大サイズを使用すると、使用できるストレージの上限に近づいているかどうかを判断できます。
 
-<xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> プロパティはアセンブリからの証拠に応じて適切に動作します。 この理由から、<xref:System.IO.IsolatedStorage.IsolatedStorageFile>、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>、または <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A> メソッドを使用して作成された <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> オブジェクトでのみ、このプロパティを取得するようにします。 その他の方法で作成された <xref:System.IO.IsolatedStorage.IsolatedStorageFile> オブジェクト (<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> メソッドから返されたオブジェクトなど) は正確な最大サイズを返しません。
+<xref:System.IO.IsolatedStorage.IsolatedStorage.Quota%2A> プロパティはアセンブリからの証拠に応じて適切に動作します。 この理由から、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForAssembly%2A>、<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetUserStoreForDomain%2A>、または <xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetStore%2A> メソッドを使用して作成された <xref:System.IO.IsolatedStorage.IsolatedStorageFile> オブジェクトでのみ、このプロパティを取得するようにします。 その他の方法で作成された <xref:System.IO.IsolatedStorage.IsolatedStorageFile> オブジェクト (<xref:System.IO.IsolatedStorage.IsolatedStorageFile.GetEnumerator%2A> メソッドから返されたオブジェクトなど) は正確な最大サイズを返しません。
 
 ## <a name="example"></a>例
 

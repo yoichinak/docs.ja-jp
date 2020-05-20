@@ -31,7 +31,7 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
 3. **[Templates Categories (テンプレート カテゴリ)]** ウィンドウで、 **[Visual C#]** を展開し、 **[Windows]** をクリックします。
 
-4. **[テンプレート]** ウィンドウの上部で、 **[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** が表示されていることを確認します。
+4. **[テンプレート]** ウィンドウの上部で、**[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** が表示されていることを確認します。
 
 5. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。
 
@@ -59,7 +59,7 @@ C# 4 で導入された名前付き引数と省略可能な引数を使うと、
 
 ## <a name="to-display-text-in-a-word-document"></a>Word 文書にテキストを表示するには
 
-1. `Program`Program.cs*の* クラスに、Word アプリケーションと Word 文書を作成する次のメソッドを追加します。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) メソッドには、4 つの省略可能なパラメーターがあります。 この例では、それらの既定値を使います。 そのため、呼び出しステートメントに引数は必要ありません。
+1. *Program.cs* の `Program` クラスに、Word アプリケーションと Word 文書を作成する次のメソッドを追加します。 [Add](<xref:Microsoft.Office.Interop.Word.Documents.Add%2A>) メソッドには、4 つの省略可能なパラメーターがあります。 この例では、それらの既定値を使います。 そのため、呼び出しステートメントに引数は必要ありません。
 
      [!code-csharp[csProgGuideNamedAndOptional#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidenamedandoptional/cs/wordprogram.cs#6)]
 

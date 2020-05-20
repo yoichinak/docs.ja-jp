@@ -105,7 +105,7 @@ ms.locfileid: "77503511"
 
 プロジェクトが .NET Framework と .NET Core の両方をサポートしている場合、状況によっては古いバージョンの .NET Framework をターゲットにする必要があります。 このシナリオで、新しい API と新しいターゲット向けの言語構成を使用する場合、コードで `#if` ディレクティブを使用します。 また、必要に応じて、ターゲットにする各プラットフォームに応じて異なるパッケージと依存関係追加して、それぞれに異なる必要な API を含めます。
 
-たとえば、HTTP 上でネットワークキング操作を行うライブラリがあるとします。 .NET Standard と .NET Framework バージョン 4.5 以降の場合、`HttpClient` 名前空間の `System.Net.Http` クラスを使用できます。 ただし、それより前のバージョンの .NET Framework に `HttpClient` クラスはないので、代わりに `WebClient` 名前空間の `System.Net` クラスを使用できます。
+たとえば、HTTP 上でネットワークキング操作を行うライブラリがあるとします。 .NET Standard と .NET Framework バージョン 4.5 以降の場合、`System.Net.Http` 名前空間の `HttpClient` クラスを使用できます。 ただし、それより前のバージョンの .NET Framework に `HttpClient` クラスはないので、代わりに `System.Net` 名前空間の `WebClient` クラスを使用できます。
 
 プロジェクト ファイルは次のようになります。
 
@@ -131,8 +131,8 @@ ms.locfileid: "77503511"
 主な変更点が 3 つあります。
 
 1. `TargetFramework` ノードは `TargetFrameworks` で置き換えられ、3 つの TFM が内部に表現されています。
-1. 1 つの .NET Framework 参照を取り込む `<ItemGroup>` ターゲットの `net40` ノードがあります。
-1. .NET Framework の参照 2 に取り込む `<ItemGroup>` ターゲットの `net45` ノードがあります。
+1. 1 つの .NET Framework 参照を取り込む `net40` ターゲットの `<ItemGroup>` ノードがあります。
+1. .NET Framework の参照 2 に取り込む `net45` ターゲットの `<ItemGroup>` ノードがあります。
 
 ビルド システムは `#if` ディレクティブで使用される次のプリプロセッサ シンボルを認識します。
 
@@ -239,7 +239,7 @@ netstandard1.4/
    |__MyProject.Test/
    ```
 
-1. テスト プロジェクトのディレクトリに移動し、`MyProject.Test` から `MyProject` への参照を追加します。
+1. テスト プロジェクトのディレクトリに移動し、`MyProject` から `MyProject.Test` への参照を追加します。
 
    ```dotnetcli
    cd MyProject.Test
@@ -298,7 +298,7 @@ let doWork data = async {
 * **AwesomeLibrary.CSharp** - C# で使用するためのパブリック API を含むプロジェクト
 * **AwesomeLibrary.FSharp** - F# で使用するためのパブリック API を含むプロジェクト
 
-自分のターミナルで次のコマンドを実行し、このガイドと同じ構造を作成することができます。
+自分の端末で次のコマンドを実行し、このガイドと同じ構造を作成することができます。
 
 ```dotnetcli
 mkdir AwesomeLibrary && cd AwesomeLibrary
@@ -324,7 +324,7 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
-**AwesomeLibrary.CSharp** と **AwesomeLibrary.FSharp** の両方のプロジェクト ファイルは、**ターゲットとして**AwesomeLibrary.Core`ProjectReference` を参照するようになります。  この参照を確認するには、プロジェクト ファイルに以下の行があることを確認します。
+**AwesomeLibrary.CSharp** と **AwesomeLibrary.FSharp** の両方のプロジェクト ファイルは、`ProjectReference` ターゲットとして **AwesomeLibrary.Core** を参照するようになります。  この参照を確認するには、プロジェクト ファイルに以下の行があることを確認します。
 
 ```xml
 <ItemGroup>

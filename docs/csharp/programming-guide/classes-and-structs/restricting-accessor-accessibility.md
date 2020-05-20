@@ -50,9 +50,9 @@ ms.locfileid: "75714692"
  アクセサーでアクセス修飾子を使用しなかった場合、アクセサーのアクセシビリティ ドメインは、プロパティまたはインデクサーのアクセシビリティ レベルによって決まります。  
   
 ## <a name="example"></a>例  
- 次の例は、`BaseClass`、`DerivedClass`、および `MainClass` という 3 つのクラスを含んでいます。 すべてのクラスの `BaseClass`、`Name`、`Id` に 2 つのプロパティがあります。 この例は、`Id`protected`DerivedClass` や `Id`private`BaseClass` などの制限アクセス修飾子を使用するときに、[ のプロパティ ](../../language-reference/keywords/protected.md) によって [ のプロパティ ](../../language-reference/keywords/private.md) を非表示にする方法を示しています。 そのため、このプロパティに値を割り当てるときには、代わりに `BaseClass` クラスのプロパティが呼び出されます。 [public](../../language-reference/keywords/public.md) によってアクセス修飾子を置き換えると、プロパティがアクセス可能になります。  
+ 次の例は、`BaseClass`、`DerivedClass`、および `MainClass` という 3 つのクラスを含んでいます。 すべてのクラスの `BaseClass`、`Name`、`Id` に 2 つのプロパティがあります。 この例は、[protected](../../language-reference/keywords/protected.md) や [private](../../language-reference/keywords/private.md) などの制限アクセス修飾子を使用するときに、`BaseClass` のプロパティ `Id` によって `DerivedClass` のプロパティ `Id` を非表示にする方法を示しています。 そのため、このプロパティに値を割り当てるときには、代わりに `BaseClass` クラスのプロパティが呼び出されます。 [public](../../language-reference/keywords/public.md) によってアクセス修飾子を置き換えると、プロパティがアクセス可能になります。  
   
- この例はまた、`private` の `protected` プロパティの `set` アクセサー上の `Name` や `DerivedClass` などの制限されるアクセス修飾子が、アクセサーへのアクセスを防ぎ、アクセサーに割り当てたときにエラーが生成されることも示しています。  
+ この例はまた、`DerivedClass` の `Name` プロパティの `set` アクセサー上の `private` や `protected` などの制限されるアクセス修飾子が、アクセサーへのアクセスを防ぎ、アクセサーに割り当てたときにエラーが生成されることも示しています。  
   
  [!code-csharp[csProgGuideIndexers#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideIndexers/CS/Indexers.cs#5)]  
   

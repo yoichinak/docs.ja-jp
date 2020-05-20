@@ -149,7 +149,7 @@ public bool IsPrime(int candidate)
 
 [!code-csharp[Sample_TestCode](~/samples/snippets/core/testing/unit-testing-using-nunit/csharp/PrimeService.Tests/PrimeService_IsPrimeShould.cs?name=Sample_TestCode)]
 
-`dotnet test` を実行して、これらの 2 つのテストが失敗したとします。 すべてのテストを成功させるために、`if`PrimeService.cs`Main` ファイルで *メソッドの先頭にある* 句を変更します。
+`dotnet test` を実行して、これらの 2 つのテストが失敗したとします。 すべてのテストを成功させるために、*PrimeService.cs* ファイルで `Main` メソッドの先頭にある `if` 句を変更します。
 
 ```csharp
 if (candidate < 2)

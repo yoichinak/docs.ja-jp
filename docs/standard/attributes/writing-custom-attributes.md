@@ -57,7 +57,7 @@ ms.locfileid: "73140588"
  [!code-vb[Conceptual.Attributes.Usage#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#6)]  
   
 ### <a name="inherited-property"></a>Inherited プロパティ  
- <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> プロパティは、属性が、その属性が適用されたクラスから派生したクラスによって継承可能かどうかを示します。 このプロパティは、`true` (既定) か `false` フラグのいずれかを使います。 次の例では、`MyAttribute` には <xref:System.AttributeUsageAttribute.Inherited%2A> の既定の `true` 値が指定されていますが、`YourAttribute` には <xref:System.AttributeUsageAttribute.Inherited%2A> の `false` 値が指定されています。  
+ <xref:System.AttributeUsageAttribute.Inherited%2A?displayProperty=nameWithType> プロパティは、属性が、その属性が適用されたクラスから派生したクラスによって継承可能かどうかを示します。 このプロパティは、`true` (既定) か `false` フラグのいずれかを使います。 次の例では、`MyAttribute` には `true` の既定の <xref:System.AttributeUsageAttribute.Inherited%2A> 値が指定されていますが、`YourAttribute` には `false` の <xref:System.AttributeUsageAttribute.Inherited%2A> 値が指定されています。  
   
  [!code-cpp[Conceptual.Attributes.Usage#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Attributes.Usage#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#7)]
@@ -78,7 +78,7 @@ ms.locfileid: "73140588"
 ### <a name="allowmultiple-property"></a>AllowMultiple プロパティ  
  <xref:System.AttributeUsageAttribute.AllowMultiple%2A?displayProperty=nameWithType> プロパティは、1 つの要素に、属性の複数のインスタンスが存在できるかどうかを示します。 `true` に設定されている場合、複数のインスタンスが許可され、`false` (既定) に設定されている場合、1 つのインスタンスのみが許可されます。  
   
- 次の例では、`MyAttribute` には <xref:System.AttributeUsageAttribute.AllowMultiple%2A> の既定の `false` 値が指定されていますが、`YourAttribute` には `true` 値が指定されています。  
+ 次の例では、`MyAttribute` には `false` の既定の <xref:System.AttributeUsageAttribute.AllowMultiple%2A> 値が指定されていますが、`YourAttribute` には `true` 値が指定されています。  
   
  [!code-cpp[Conceptual.Attributes.Usage#11](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#11)]
  [!code-csharp[Conceptual.Attributes.Usage#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#11)]

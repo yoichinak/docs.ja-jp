@@ -95,7 +95,7 @@ ms.locfileid: "79398377"
   
      [!code-csharp[csProgGuideCodingConventions#10](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#10)]  
   
-- `var`dynamic[ の代わりに ](../../language-reference/builtin-types/reference-types.md) を使用しないようにしてください。  
+- [dynamic](../../language-reference/builtin-types/reference-types.md) の代わりに `var` を使用しないようにしてください。  
   
 - [for](../../language-reference/keywords/for.md) ループでループ変数の型を決定するときは、暗黙の型指定が使用されます。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "79398377"
      [!code-csharp[csProgGuideCodingConventions#12](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#12)]
 
      > [!NOTE]
-     > 反復可能コレクションの要素の型を誤って変更しないように注意してください。 たとえば、<xref:System.Linq.IQueryable?displayProperty=nameWithType> ステートメントで <xref:System.Collections.IEnumerable?displayProperty=nameWithType> から `foreach` に切り替えるのは簡単ですが、これを行うとクエリの結果が変更されます。
+     > 反復可能コレクションの要素の型を誤って変更しないように注意してください。 たとえば、`foreach` ステートメントで <xref:System.Linq.IQueryable?displayProperty=nameWithType> から <xref:System.Collections.IEnumerable?displayProperty=nameWithType> に切り替えるのは簡単ですが、これを行うとクエリの結果が変更されます。
 
 ### <a name="unsigned-data-type"></a>Unsigned データ型  
   
@@ -142,7 +142,7 @@ ms.locfileid: "79398377"
   
 ### <a name="-and-124124-operators"></a>&& 演算子および &#124;&#124; 演算子  
   
-例外を回避し、不要な比較をスキップしてパフォーマンスを向上させるには、比較を実行する場合、次の例に示すように [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) の代わりに [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) を、[&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) の代わりに [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) を使用します。  
+例外を回避し、不要な比較をスキップしてパフォーマンスを向上させるには、比較を実行する場合、次の例に示すように [&](../../language-reference/operators/boolean-logical-operators.md#logical-and-operator-) の代わりに [&&](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) を、[&#124;](../../language-reference/operators/boolean-logical-operators.md#logical-or-operator-) の代わりに [&#124;&#124;](../../language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) を使用します。  
   
 [!code-csharp[csProgGuideCodingConventions#18](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#18)]  
   
@@ -196,7 +196,7 @@ ms.locfileid: "79398377"
   
      [!code-csharp[csProgGuideCodingConventions#29](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#29)]  
   
-- 内部コレクションにアクセスするには、`from`join[ 句ではなく複数の ](../../language-reference/keywords/join-clause.md) 句を使用します。 たとえば、`Student` オブジェクトのコレクションがあり、各オブジェクトに試験の点数のコレクションが含まれているとします。 次のクエリを実行すると、90 点より高い点数とその点数を取った学生の姓が返されます。  
+- 内部コレクションにアクセスするには、[join](../../language-reference/keywords/join-clause.md) 句ではなく複数の `from` 句を使用します。 たとえば、`Student` オブジェクトのコレクションがあり、各オブジェクトに試験の点数のコレクションが含まれているとします。 次のクエリを実行すると、90 点より高い点数とその点数を取った学生の姓が返されます。  
   
      [!code-csharp[csProgGuideCodingConventions#30](../../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguidecodingconventions/cs/program.cs#30)]  
   

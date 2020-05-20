@@ -33,9 +33,9 @@ ms.locfileid: "79180621"
   
 - データ受信時のデータの処理。 ストリームは、アプリケーションに対して、ダウンロード対象として設定されたデータ全体を強制的に待機させるのではなく、ネットワークからデータを受信したときにデータへのアクセスを提供します。  
   
- <xref:System.Net.Sockets> 名前空間には、特にネットワーク リソースに使用される **クラスを実装する**NetworkStream<xref:System.IO.Stream> クラスが含まれています。 <xref:System.Net.Sockets> 名前空間のクラスは、**NetworkStream** クラスを使用してストリームを表します。  
+ <xref:System.Net.Sockets> 名前空間には、特にネットワーク リソースに使用される <xref:System.IO.Stream> クラスを実装する **NetworkStream** クラスが含まれています。 <xref:System.Net.Sockets> 名前空間のクラスは、**NetworkStream** クラスを使用してストリームを表します。  
   
- 返されたストリームを使用してネットワークにデータを送信するには、<xref:System.Net.WebRequest.GetRequestStream%2A> で <xref:System.Net.WebRequest> を呼び出します。 **WebRequest** は要求のヘッダーをサーバーに送信します。その後は、返されるストリームで <xref:System.IO.Stream.BeginWrite%2A>、<xref:System.IO.Stream.EndWrite%2A>、または <xref:System.IO.Stream.Write%2A> メソッドを呼び出して、ネットワーク リソースにデータを送信できるようになります。 HTTP など、一部のプロトコルでは、データを送信する前にプロトコル固有のプロパティを設定する必要があります。 データを送信するために、HTTP 固有のプロパティを設定する方法を示すコード例を次に示します。 変数 `sendData` には送信するデータが含まれ、変数 `sendLength` は送信するデータのバイト数を示しているとします。  
+ 返されたストリームを使用してネットワークにデータを送信するには、<xref:System.Net.WebRequest> で <xref:System.Net.WebRequest.GetRequestStream%2A> を呼び出します。 **WebRequest** は要求のヘッダーをサーバーに送信します。その後は、返されるストリームで <xref:System.IO.Stream.BeginWrite%2A>、<xref:System.IO.Stream.EndWrite%2A>、または <xref:System.IO.Stream.Write%2A> メソッドを呼び出して、ネットワーク リソースにデータを送信できるようになります。 HTTP など、一部のプロトコルでは、データを送信する前にプロトコル固有のプロパティを設定する必要があります。 データを送信するために、HTTP 固有のプロパティを設定する方法を示すコード例を次に示します。 変数 `sendData` には送信するデータが含まれ、変数 `sendLength` は送信するデータのバイト数を示しているとします。  
   
 ```csharp  
 HttpWebRequest request =
@@ -68,7 +68,7 @@ Catch
 End Try  
 ```  
   
- ネットワークからデータを受信するには、<xref:System.Net.WebResponse.GetResponseStream%2A> で <xref:System.Net.WebResponse> を呼び出します。 その後は、返されるストリームで <xref:System.IO.Stream.BeginRead%2A>、<xref:System.IO.Stream.EndRead%2A>、または <xref:System.IO.Stream.Read%2A> メソッドを呼び出すことで、ネットワーク リソースからデータを読み取ることができるようになります。  
+ ネットワークからデータを受信するには、<xref:System.Net.WebResponse> で <xref:System.Net.WebResponse.GetResponseStream%2A> を呼び出します。 その後は、返されるストリームで <xref:System.IO.Stream.BeginRead%2A>、<xref:System.IO.Stream.EndRead%2A>、または <xref:System.IO.Stream.Read%2A> メソッドを呼び出すことで、ネットワーク リソースからデータを読み取ることができるようになります。  
   
  ネットワーク リソースからストリームを使用する場合は、次の点に留意してください。  
   

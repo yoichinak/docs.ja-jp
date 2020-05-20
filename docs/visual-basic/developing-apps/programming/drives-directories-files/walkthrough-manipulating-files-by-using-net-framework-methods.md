@@ -71,7 +71,7 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 > [!NOTE]
 > Visual Studio 統合開発環境 (IDE) の画面がコード エディターに戻り、コードを追加するイベント ハンドラー内にカーソルが配置されます。
 
-1. ファイルへの書き込みを行うには、<xref:System.IO.StreamWriter.Write%2A> クラスの <xref:System.IO.StreamWriter> メソッドを使用します。 `Dim fw As StreamWriter` の直後に次のコードを追加します。 ファイルが見つからない場合に例外がスローされることを心配する必要はありません。ファイルまだ存在しない場合は、新規に作成されます。
+1. ファイルへの書き込みを行うには、<xref:System.IO.StreamWriter> クラスの <xref:System.IO.StreamWriter.Write%2A> メソッドを使用します。 `Dim fw As StreamWriter` の直後に次のコードを追加します。 ファイルが見つからない場合に例外がスローされることを心配する必要はありません。ファイルまだ存在しない場合は、新規に作成されます。
 
      [!code-vb[VbVbcnMyFileSystem#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#37)]
 
@@ -102,7 +102,7 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
 ### <a name="to-populate-the-combo-box"></a>コンボ ボックスを設定するには
 
-1. `PickEntries`<xref:System.Windows.Forms.ComboBox> は、ユーザーが各エントリを送信する日付を表示するために使用されます。これにより、ユーザーが特定の日付からエントリを選択できるようになります。 <xref:System.Windows.Forms.Control.Click> ボタンの `GetEntries` イベント ハンドラーを作成し、次のコードを追加します。
+1. `PickEntries`<xref:System.Windows.Forms.ComboBox> は、ユーザーが各エントリを送信する日付を表示するために使用されます。これにより、ユーザーが特定の日付からエントリを選択できるようになります。 `GetEntries` ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーを作成し、次のコードを追加します。
 
      [!code-vb[VbVbcnMyFileSystem#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#41)]
 
@@ -110,7 +110,7 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
 ### <a name="to-choose-and-display-individual-entries"></a>個別のエントリを選択して表示するには
 
-1. <xref:System.Windows.Forms.Control.Click> ボタンの `Display` イベント ハンドラーを作成し、次のコードを追加します。
+1. `Display` ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーを作成し、次のコードを追加します。
 
      [!code-vb[VbVbcnMyFileSystem#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#42)]
 
@@ -134,19 +134,19 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
      [!code-vb[VbVbcnMyFileSystem#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#43)]
 
-2. <xref:System.Windows.Forms.Control.Click> ボタンの `DeleteEntry` イベント ハンドラーを作成し、次のコードを追加します。
+2. `DeleteEntry` ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーを作成し、次のコードを追加します。
 
      [!code-vb[VbVbcnMyFileSystem#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#44)]
 
-3. ユーザーがエントリが表示すると、`EditEntry` ボタンが有効になります。 <xref:System.Windows.Forms.Control.Click> ボタンの `Display` イベント (`DisplayEntry.Text = ReadString` の後) に、次のコードを追加します。
+3. ユーザーがエントリが表示すると、`EditEntry` ボタンが有効になります。 `Display` ボタンの <xref:System.Windows.Forms.Control.Click> イベント (`DisplayEntry.Text = ReadString` の後) に、次のコードを追加します。
 
      [!code-vb[VbVbcnMyFileSystem#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#45)]
 
-4. <xref:System.Windows.Forms.Control.Click> ボタンの `EditEntry` イベント ハンドラーを作成し、次のコードを追加します。
+4. `EditEntry` ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーを作成し、次のコードを追加します。
 
      [!code-vb[VbVbcnMyFileSystem#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#46)]
 
-5. <xref:System.Windows.Forms.Control.Click> ボタンの `SubmitEdit` イベント ハンドラーを作成し、次のコードを追加します。
+5. `SubmitEdit` ボタンの <xref:System.Windows.Forms.Control.Click> イベント ハンドラーを作成し、次のコードを追加します。
 
      [!code-vb[VbVbcnMyFileSystem#47](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#47)]
 

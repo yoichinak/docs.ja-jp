@@ -22,13 +22,13 @@ ms.locfileid: "74348819"
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder"></a>ファイルのコピーを同じフォルダーに作成するには  
   
-- ターゲット ファイルと場所を指定し、`CopyFile` メソッドを使用します。 次の例では、`test.txt` という `test2.txt` のコピーを作成します。  
+- ターゲット ファイルと場所を指定し、`CopyFile` メソッドを使用します。 次の例では、`test2.txt` という `test.txt` のコピーを作成します。  
   
      [!code-vb[VbVbcnMyFileSystem#51](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#51)]  
   
 ### <a name="to-create-a-copy-of-a-file-in-the-same-folder-overwriting-existing-files"></a>同じフォルダーにファイルのコピーを、既存のファイルを上書きして作成するには  
   
-- ターゲット ファイルと場所を指定し、`CopyFile` を `overwrite` に設定して、`True` メソッドを使用します。 次の例では、`test.txt` という `test2.txt` のコピーを、既存のファイルをその名前で上書きして作成します。  
+- ターゲット ファイルと場所を指定し、`overwrite` を `True` に設定して、`CopyFile` メソッドを使用します。 次の例では、`test2.txt` という `test.txt` のコピーを、既存のファイルをその名前で上書きして作成します。  
   
      [!code-vb[VbVbcnMyFileSystem#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#52)]  
   

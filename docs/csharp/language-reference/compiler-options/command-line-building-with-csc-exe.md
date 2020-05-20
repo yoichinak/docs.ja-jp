@@ -24,7 +24,7 @@ Windows Software Development Kit (SDK) のみがインストールされてい�
 
 MSBuild を使用して、プログラムによって C# プログラムをビルドすることもできます。 詳細については、「[MSBuild](/visualstudio/msbuild/msbuild)」を参照してください。
 
-通常、実行可能ファイル *csc.exe* は、\\Windows *ディレクトリの Microsoft.NET\Framework\<* *バージョン>* フォルダーに格納されています。 ただし、この格納場所は、特定のコンピューターの構成によって異なる場合があります。 複数のバージョンの .NET Framework がコンピューターにインストールされている場合、このファイルのバージョンが複数見つかります。 このようなインストールの詳細については、「[方法: インストールされている .NET Framework バージョンを確認する](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
+通常、実行可能ファイル *csc.exe* は、*Windows* ディレクトリの Microsoft.NET\Framework\\*\<バージョン>* フォルダーに格納されています。 ただし、この格納場所は、特定のコンピューターの構成によって異なる場合があります。 複数のバージョンの .NET Framework がコンピューターにインストールされている場合、このファイルのバージョンが複数見つかります。 このようなインストールの詳細については、「[方法: インストールされている .NET Framework バージョンを確認する](../../../framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。
 
 > [!TIP]
 > Visual Studio IDE を使用してプロジェクトをビルドすると、**csc** コマンドとその関連するコンパイラ オプションが**出力**ウィンドウに表示されます。 この情報を表示するには、「[方法: ビルド ログ ファイルを表示、保存、および構成する](/visualstudio/ide/how-to-view-save-and-configure-build-log-files#to-change-the-amount-of-information-included-in-the-build-log)」の手順に従って、ログ データの詳細レベルを **[標準]** または **[詳細]** に変更します。 プロジェクトをリビルドした後、C# コンパイラの呼び出しを見つけるために**出力**ウィンドウで **csc** を検索します。

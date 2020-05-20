@@ -18,15 +18,15 @@ ms.locfileid: "61659944"
 
 1. 新しいコンソール アプリケーションを開き、それに `PredicateFilters` という名前を付けます。
 
-2. 「[`StudentClass`オブジェクトのコレクションを照会する](query-a-collection-of-objects.md) 」 から クラスをコピーし 、クラス `PredicateFilters` の下の名前空間 `Program` に貼り付けます。 `StudentClass` は、`Student` オブジェクトの一覧を提供します。
+2. 「[オブジェクトのコレクションを照会する](query-a-collection-of-objects.md)」から `StudentClass` クラスをコピーし、クラス `Program` の下の名前空間 `PredicateFilters` に貼り付けます。 `StudentClass` は、`Student` オブジェクトの一覧を提供します。
 
-3. `Main` で `StudentClass` メソッドをコメント アウトします。
+3. `StudentClass` で `Main` メソッドをコメント アウトします。
 
 4. クラス `Program` を次のコードで置き換えます。
 
      [!code-csharp[csProgGuideLINQ#26](~/samples/snippets/csharp/concepts/linq/how-to-dynamically-specify-predicate-filters-at-runtime_1.cs)]
 
-5. 次の行をクラス `Main` の `DynamicPredicates` メソッドに追加します。`ids` の宣言の下です。
+5. 次の行をクラス `DynamicPredicates` の `Main` メソッドに追加します。`ids` の宣言の下です。
 
      ```csharp
      QueryById(ids);
@@ -42,9 +42,9 @@ ms.locfileid: "61659944"
 
      Omelchenko: 111
 
-8. 次の手順はプロジェクトをもう一度実行することですが、今度は配列 `ids` の代わりに実行時に提供された入力を使用します。 `QueryByID(ids)` メソッドで `QueryByID(args)` を `Main` に変更します。
+8. 次の手順はプロジェクトをもう一度実行することですが、今度は配列 `ids` の代わりに実行時に提供された入力を使用します。 `Main` メソッドで `QueryByID(ids)` を `QueryByID(args)` に変更します。
 
-9. コマンド ライン引数 `122 117 120 115` でプロジェクトを実行します。 プロジェクトが実行されると、これらの値が `args` メソッドのパラメーター、`Main` の要素になります。
+9. コマンド ライン引数 `122 117 120 115` でプロジェクトを実行します。 プロジェクトが実行されると、これらの値が `Main` メソッドのパラメーター、`args` の要素になります。
 
 10. 次の出力がコンソール ウィンドウに表示されます。
 

@@ -27,7 +27,7 @@ ms.locfileid: "79180734"
   
  TCP/IP サービスの一意のアドレスは、ホストの IP アドレスとサービスのポート番号を組み合わせて、そのサービスのエンドポイントを作成することで定義します。 <xref:System.Net.Dns> クラスには、ローカル ネットワーク デバイスでサポートされているネットワーク アドレスに関する情報を返すメソッドがあります。 ローカル ネットワーク デバイスに複数のネットワーク アドレスがある場合、またはローカル システムが複数のネットワーク デバイスをサポートしている場合、**Dns** クラスは、すべてのネットワーク アドレスに関する情報を返します。また、アプリケーションはそのサービスに適切なアドレスを選択する必要があります。 Internet Assigned Numbers Authority (IANA) では、一般的なサービスのポート番号が定義されています (詳細については、「[サービス名および転送プロトコル ポート番号レジストリ) を参照してください](https://www.iana.org/assignments/port-numbers)」 。 他のサービスが、1,024 から 65,535 の範囲内でポート番号を登録している可能性があります。  
   
- 次の例では、ホスト コンピューターの <xref:System.Net.IPEndPoint>Dns**から返される最初の IP アドレスと、登録されているポート番号範囲から選択されたポート番号を組み合わせて、サーバーの** を作成しています。  
+ 次の例では、ホスト コンピューターの **Dns** から返される最初の IP アドレスと、登録されているポート番号範囲から選択されたポート番号を組み合わせて、サーバーの <xref:System.Net.IPEndPoint> を作成しています。  
   
 ```vb  
 Dim ipHostInfo As IPHostEntry = Dns.GetHostEntry(Dns.GetHostName())  
@@ -41,7 +41,7 @@ IPAddress ipAddress = ipHostInfo.AddressList[0];
 IPEndPoint localEndPoint = new IPEndPoint(ipAddress, 11000);  
 ```  
   
- ローカル エンドポイントを決定した後、<xref:System.Net.Sockets.Socket> メソッドを使用して <xref:System.Net.Sockets.Socket.Bind%2A> をそのエンドポイントと関連付け、<xref:System.Net.Sockets.Socket.Listen%2A> メソッドを使用してエンドポイントをリッスンするように設定する必要があります。 特定のアドレスとポートの組み合わせが既に使用されている場合、**Bind** は例外をスローします。 **Socket** と **IPEndPoint** を関連付ける例を次に示します。  
+ ローカル エンドポイントを決定した後、<xref:System.Net.Sockets.Socket.Bind%2A> メソッドを使用して <xref:System.Net.Sockets.Socket> をそのエンドポイントと関連付け、<xref:System.Net.Sockets.Socket.Listen%2A> メソッドを使用してエンドポイントをリッスンするように設定する必要があります。 特定のアドレスとポートの組み合わせが既に使用されている場合、**Bind** は例外をスローします。 **Socket** と **IPEndPoint** を関連付ける例を次に示します。  
   
 ```vb  
 Dim listener As New Socket(ipAddress.AddressFamily, _  

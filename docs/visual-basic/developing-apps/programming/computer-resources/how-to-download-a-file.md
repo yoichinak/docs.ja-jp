@@ -48,7 +48,7 @@ ms.locfileid: "74345621"
 
 ### <a name="to-download-a-file-supplying-a-user-name-and-password"></a>ユーザー名とパスワードを指定して、ファイルをダウンロードするには
 
-- `DownLoadFile` メソッドを使用してファイルをダウンロードします。その際、ターゲット ファイルの場所を表す文字列または URI、ファイルを格納する場所、ユーザー名、およびパスワードを指定します。 この例では、ユーザー名に `WineList.txt` を、パスワードに空白を指定し、`http://www.cohowinery.com/downloads` ファイルを `C:\Documents and Settings\All Users\Documents` からダウンロードして、`anonymous` に保存します。
+- `DownLoadFile` メソッドを使用してファイルをダウンロードします。その際、ターゲット ファイルの場所を表す文字列または URI、ファイルを格納する場所、ユーザー名、およびパスワードを指定します。 この例では、ユーザー名に `anonymous` を、パスワードに空白を指定し、`WineList.txt` ファイルを `http://www.cohowinery.com/downloads` からダウンロードして、`C:\Documents and Settings\All Users\Documents` に保存します。
 
   [!code-vb[VbResourceTasks#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#11)]
 

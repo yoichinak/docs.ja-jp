@@ -32,9 +32,9 @@ ms.locfileid: "71047312"
   
  より複雑なトランザクションを行う必要があるクライアント アプリケーションは、**WebRequest** クラスとその子孫を使って、サーバーにデータを要求します。 **WebRequest** は、サーバーへの接続、要求の送信、応答の受信の詳細をカプセル化します。 **WebRequest** は、プラグ可能なプロトコルを使うすべてのアプリケーションで使うことができるプロパティとメソッドのセットを定義している抽象クラスです。 **WebRequest** の子孫 (<xref:System.Net.HttpWebRequest> など) は、**WebRequest** によって定義されているプロパティとメソッドを、基になるプロトコルと整合性があるように実装します。  
   
- **WebRequest** クラスは、 **メソッドに渡された URI の値を使って、作成する特定の派生クラス インスタンスを決定することで、** WebRequest<xref:System.Net.WebRequest.Create%2A> の子孫のプロトコル固有のインスタンスを作成します。 アプリケーションは、子孫のコンストラクターを **メソッドに登録することで、要求の処理に使う必要のある**WebRequest<xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> の子孫を示します。  
+ **WebRequest** クラスは、<xref:System.Net.WebRequest.Create%2A> メソッドに渡された URI の値を使って、作成する特定の派生クラス インスタンスを決定することで、**WebRequest** の子孫のプロトコル固有のインスタンスを作成します。 アプリケーションは、子孫のコンストラクターを <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> メソッドに登録することで、要求の処理に使う必要のある **WebRequest** の子孫を示します。  
   
- インターネット リソースに対する要求は、<xref:System.Net.WebRequest.GetResponse%2A>WebRequest**の** メソッドを呼び出すことによって行われます。 **GetResponse** メソッドは、**WebRequest** のプロパティからプロトコル固有の要求を作成し、サーバーに TCP または UDP ソケット接続を行って、要求を送信します。 HTTP の **Post** 要求や FTP の **Put** 要求など、サーバーにデータを送信する要求の場合は、<xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> メソッドがデータを送信するネットワーク ストリームを提供します。  
+ インターネット リソースに対する要求は、**WebRequest** の <xref:System.Net.WebRequest.GetResponse%2A> メソッドを呼び出すことによって行われます。 **GetResponse** メソッドは、**WebRequest** のプロパティからプロトコル固有の要求を作成し、サーバーに TCP または UDP ソケット接続を行って、要求を送信します。 HTTP の **Post** 要求や FTP の **Put** 要求など、サーバーにデータを送信する要求の場合は、<xref:System.Net.WebRequest.GetRequestStream%2A?displayProperty=nameWithType> メソッドがデータを送信するネットワーク ストリームを提供します。  
   
  **GetResponse** メソッドは、**WebRequest** と一致するプロトコル固有の **WebResponse** を返します。  
   

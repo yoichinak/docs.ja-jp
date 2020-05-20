@@ -20,7 +20,7 @@ ms.locfileid: "73418051"
 ## <a name="create-a-c-project"></a>C# プロジェクトの作成  
   
 > [!NOTE]
-> 以下に示すのは Visual Studio 用の手順です。 別の開発環境を使用している場合は、System.Core.dll への参照と `using` 名前空間の <xref:System.Linq?displayProperty=nameWithType> ディレクティブを使用したコンソール プロジェクトを作成してください。  
+> 以下に示すのは Visual Studio 用の手順です。 別の開発環境を使用している場合は、System.Core.dll への参照と <xref:System.Linq?displayProperty=nameWithType> 名前空間の `using` ディレクティブを使用したコンソール プロジェクトを作成してください。  
   
 #### <a name="to-create-a-project-in-visual-studio"></a>Visual Studio でプロジェクトを作成するには  
   
@@ -36,7 +36,7 @@ ms.locfileid: "73418051"
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
-5. プロジェクトには、System.Core.dll への参照と、`using` 名前空間の <xref:System.Linq?displayProperty=nameWithType> ディレクティブが使用されています。  
+5. プロジェクトには、System.Core.dll への参照と、<xref:System.Linq?displayProperty=nameWithType> 名前空間の `using` ディレクティブが使用されています。  
   
 ## <a name="create-an-in-memory-data-source"></a>メモリ内データ ソースの作成  
  クエリのデータ ソースは、`Student` オブジェクトのシンプルなリストです。 各 `Student` レコードには、名前、姓、およびクラスでのテストの点数を表す整数の配列が含まれます。 このコードをプロジェクトにコピーします。 これには、次のような特徴があります。  
@@ -133,7 +133,7 @@ ms.locfileid: "73418051"
   
 #### <a name="to-make-the-variables-implicitly-typed"></a>変数を暗黙的に型指定するには  
   
-1. `IEnumerables` の `IGroupings` を明示的にコーディングするのは非常に面倒です。 `foreach` を使用すれば、同じクエリや `var` ループをはるかに効率的に記述できます。 `var` キーワードは、オブジェクトの型を変更しません。型を推論するようにコンパイラに指示するだけです。 `studentQuery` の型と反復変数 `group` を `var` に変更し、クエリを再実行します。 内部の `foreach` ループで、反復変数の型は `Student` のままになっており、クエリは以前と同様に機能します。 反復変数 `s` を `var` に変更し、クエリを再実行します。 まったく同じ結果が得られます。  
+1. `IGroupings` の `IEnumerables` を明示的にコーディングするのは非常に面倒です。 `var` を使用すれば、同じクエリや `foreach` ループをはるかに効率的に記述できます。 `var` キーワードは、オブジェクトの型を変更しません。型を推論するようにコンパイラに指示するだけです。 `studentQuery` の型と反復変数 `group` を `var` に変更し、クエリを再実行します。 内部の `foreach` ループで、反復変数の型は `Student` のままになっており、クエリは以前と同様に機能します。 反復変数 `s` を `var` に変更し、クエリを再実行します。 まったく同じ結果が得られます。  
   
      [!code-csharp[CsLINQGettingStarted#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#16)]  
   
@@ -141,7 +141,7 @@ ms.locfileid: "73418051"
   
 #### <a name="to-order-the-groups-by-their-key-value"></a>グループをキー値で順序付けるには  
   
-1. 前のクエリを実行すると、グループはアルファベット順になりません。 これを変えるには、`orderby` 句の後に `group` 句を記述する必要があります。 しかし `orderby` 句を使用するには、まず、`group` 句によって作成されたグループへの参照として機能する識別子が必要になります。 この識別子は、次のように `into` キーワード使用して記述します。  
+1. 前のクエリを実行すると、グループはアルファベット順になりません。 これを変えるには、`group` 句の後に `orderby` 句を記述する必要があります。 しかし `orderby` 句を使用するには、まず、`group` 句によって作成されたグループへの参照として機能する識別子が必要になります。 この識別子は、次のように `into` キーワード使用して記述します。  
   
      [!code-csharp[csLINQGettingStarted#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#17)]  
   

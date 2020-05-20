@@ -28,7 +28,7 @@ ms.locfileid: "79398113"
 throw [e];
 ```
 
-ここで `e` は <xref:System.Exception?displayProperty=nameWithType> から派生したクラスのインスタンスです。 次の例では、`throw` という名前のメソッドに渡された引数が内部配列の有効なインデックスに対応していない場合に、<xref:System.IndexOutOfRangeException> ステートメントを使用して `GetNumber` をスローします。
+ここで `e` は <xref:System.Exception?displayProperty=nameWithType> から派生したクラスのインスタンスです。 次の例では、`GetNumber` という名前のメソッドに渡された引数が内部配列の有効なインデックスに対応していない場合に、`throw` ステートメントを使用して <xref:System.IndexOutOfRangeException> をスローします。
 
 [!code-csharp[csrefKeyword#1](~/samples/snippets/csharp/language-reference/keywords/throw/throw-1.cs#1)]
 
@@ -43,7 +43,7 @@ throw [e];
 [!code-csharp[csrefKeyword#3](~/samples/snippets/csharp/language-reference/keywords/throw/throw-3.cs#3)]
 
 > [!IMPORTANT]
-> `throw e` ブロックで `catch` 構文を使用すると、呼び出し元に渡す新しい例外をインスタンス化することもできます。 この場合、<xref:System.Exception.StackTrace> プロパティから使用できる、元の例外のスタック トレースが保持されません。
+> `catch` ブロックで `throw e` 構文を使用すると、呼び出し元に渡す新しい例外をインスタンス化することもできます。 この場合、<xref:System.Exception.StackTrace> プロパティから使用できる、元の例外のスタック トレースが保持されません。
 
 ## <a name="the-throw-expression"></a>`throw` 式
 
@@ -57,7 +57,7 @@ C# 7.0 以降、`throw` は、式およびステートメントとして使用�
 
    [!code-csharp[csrefKeyword#5](~/samples/snippets/csharp/language-reference/keywords/throw/coalescing.cs#1)]
 
-- 式形式の[ラムダ](../../programming-guide/statements-expressions-operators/lambda-expressions.md)またはメソッド。 次の例では、<xref:System.InvalidCastException> 値への変換がサポートされていないため <xref:System.DateTime> をスローする、式形式のメソッドを示しています。
+- 式形式の[ラムダ](../../programming-guide/statements-expressions-operators/lambda-expressions.md)またはメソッド。 次の例では、<xref:System.DateTime> 値への変換がサポートされていないため <xref:System.InvalidCastException> をスローする、式形式のメソッドを示しています。
 
    [!code-csharp[csrefKeyword#6](~/samples/snippets/csharp/language-reference/keywords/throw/exp-bodied.cs#1)]
 

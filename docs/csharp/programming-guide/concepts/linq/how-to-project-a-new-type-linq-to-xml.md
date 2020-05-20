@@ -49,7 +49,7 @@ class Program {
 }
 ```
 
-この例では、「<xref:System.Xml.Linq.XContainer.Element%2A>単一の子要素を取得する方法 (LINQ to XML) (C#)[」トピックで説明している ](how-to-retrieve-a-single-child-element-linq-to-xml.md) メソッドを使用しています。 また、キャストを使用して、<xref:System.Xml.Linq.XContainer.Element%2A> メソッドによって返された要素の値を取得します。  
+この例では、「[単一の子要素を取得する方法 (LINQ to XML) (C#)](how-to-retrieve-a-single-child-element-linq-to-xml.md)」トピックで説明している <xref:System.Xml.Linq.XContainer.Element%2A> メソッドを使用しています。 また、キャストを使用して、<xref:System.Xml.Linq.XContainer.Element%2A> メソッドによって返された要素の値を取得します。  
 
 この例を実行すると、次の出力が生成されます。
 

@@ -17,7 +17,7 @@ ms.locfileid: "73091414"
 ---
 # <a name="how-to-implement-dynamic-partitions"></a>方法: 動的パーティションを実装する
 
-次の例は、特定のオーバーロード <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> と PLINQ から動的なパーティション分割を実装するカスタム <xref:System.Threading.Tasks.Parallel.ForEach%2A> を実装する方法を示します。  
+次の例は、特定のオーバーロード <xref:System.Threading.Tasks.Parallel.ForEach%2A> と PLINQ から動的なパーティション分割を実装するカスタム <xref:System.Collections.Concurrent.OrderablePartitioner%601?displayProperty=nameWithType> を実装する方法を示します。  
   
 ## <a name="example"></a>例
 

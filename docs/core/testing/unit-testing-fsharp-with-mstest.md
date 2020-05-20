@@ -82,7 +82,7 @@ dotnet add reference ../MathService/MathService.fsproj
         MathServiceTests.fsproj
 ```
 
-`dotnet sln add .\MathService.Tests\MathService.Tests.fsproj`unit-testing-with-fsharp*ディレクトリで* を実行します。
+*unit-testing-with-fsharp* ディレクトリで `dotnet sln add .\MathService.Tests\MathService.Tests.fsproj` を実行します。
 
 ## <a name="creating-the-first-test"></a>最初のテストの作成
 
@@ -120,7 +120,7 @@ member this.TestEvenSequence() =
     Assert.AreEqual(expected, actual)
 ```
 
-`expected` シーケンスがリストに変換されていることに注意してください。 MSTest ライブラリは、標準的な .NET 型の多くに依存しています。 この依存関係は、お使いのパブリック インターフェイスおよび期待される結果が、<xref:System.Collections.ICollection> でなく <xref:System.Collections.IEnumerable> をサポートしていることを意味します。
+`expected` シーケンスがリストに変換されていることに注意してください。 MSTest ライブラリは、標準的な .NET 型の多くに依存しています。 この依存関係は、お使いのパブリック インターフェイスおよび期待される結果が、<xref:System.Collections.IEnumerable> でなく <xref:System.Collections.ICollection> をサポートしていることを意味します。
 
 テストを実行すると、失敗することがわかります。 実装はまだ作成していません。 最も単純な動作のコードを `Mathservice` クラスに記述して、このテストが成功するようにします。
 

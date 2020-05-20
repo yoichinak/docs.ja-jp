@@ -68,11 +68,11 @@ C# 言語は、異なるライブラリ内の[基底](../../language-reference/k
   
  [!code-csharp[csProgGuideInheritance#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#32)]  
   
- `DoWork` のインスタンスで `Derived` が呼び出されると、C# コンパイラはまず、`DoWork` で最初に宣言された `Derived` のバージョンと互換性がある呼び出しを実行しようとします。 オーバーライド メソッドは、クラスで宣言されたものとは見なされません。これらは、基底クラスで宣言されたメソッドの新しい実装です。 C# コンパイラは、メソッドの呼び出しを `Derived` にある元のメソッドと対応付けできない場合にのみ、その呼び出しを、同じ名前と互換パラメーターを持つオーバーライド メソッドに対応付けます。 次に例を示します。  
+ `Derived` のインスタンスで `DoWork` が呼び出されると、C# コンパイラはまず、`Derived` で最初に宣言された `DoWork` のバージョンと互換性がある呼び出しを実行しようとします。 オーバーライド メソッドは、クラスで宣言されたものとは見なされません。これらは、基底クラスで宣言されたメソッドの新しい実装です。 C# コンパイラは、メソッドの呼び出しを `Derived` にある元のメソッドと対応付けできない場合にのみ、その呼び出しを、同じ名前と互換パラメーターを持つオーバーライド メソッドに対応付けます。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#33](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#33)]  
   
- 変数 `val` は double 型に暗黙的に変換できるので、C# コンパイラは `DoWork(double)` の代わりに `DoWork(int)` を呼び出します。 この問題を回避する方法は 2 つあります。 1 つ目は、仮想メソッドと同じ名前の新しいメソッドを宣言しないようにすることです。 2 つ目は、`Derived` のインスタンスを `Base` にキャストすることで、C# コンパイラに基底クラス メソッドのリストを検索させ、仮想メソッドを呼び出すようにすることです。 メソッドが仮想なので、`DoWork(int)` にある `Derived` の実装が呼び出されます。 次に例を示します。  
+ 変数 `val` は double 型に暗黙的に変換できるので、C# コンパイラは `DoWork(int)` の代わりに `DoWork(double)` を呼び出します。 この問題を回避する方法は 2 つあります。 1 つ目は、仮想メソッドと同じ名前の新しいメソッドを宣言しないようにすることです。 2 つ目は、`Derived` のインスタンスを `Base` にキャストすることで、C# コンパイラに基底クラス メソッドのリストを検索させ、仮想メソッドを呼び出すようにすることです。 メソッドが仮想なので、`Derived` にある `DoWork(int)` の実装が呼び出されます。 次に例を示します。  
   
  [!code-csharp[csProgGuideInheritance#34](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#34)]  
   

@@ -29,15 +29,15 @@ ms.locfileid: "79157092"
   
 4. `x.Equals(y)` が連続して呼び出された場合は、x と y によって参照されるオブジェクトが変更されていない限り、同じ値を返します。  
   
-5. 非 null 値は null と等しくありません。 ただし、CLR ではすべてのメソッド呼び出しで null がチェックされ、`NullReferenceException` 参照が null の場合、`this` がスローされます。 そのため、`x.Equals(y)` では、`x` が null のときに例外がスローされます。 それにより、`Equals` の引数に基づき、ルール 1 または 2 が破られます。
+5. 非 null 値は null と等しくありません。 ただし、CLR ではすべてのメソッド呼び出しで null がチェックされ、`this` 参照が null の場合、`NullReferenceException` がスローされます。 そのため、`x.Equals(y)` では、`x` が null のときに例外がスローされます。 それにより、`Equals` の引数に基づき、ルール 1 または 2 が破られます。
 
- 構造体を定義すると、<xref:System.ValueType?displayProperty=nameWithType> メソッドの <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> オーバーライドから継承された値の等価性が既定で実装されます。 この実装では、リフレクションを使用して、型のフィールドとプロパティをすべて調べます。 この実装によって正しい結果が生成されますが、その型専用に記述したカスタム実装と比較すると、処理にかなり時間がかかります。  
+ 構造体を定義すると、<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドの <xref:System.ValueType?displayProperty=nameWithType> オーバーライドから継承された値の等価性が既定で実装されます。 この実装では、リフレクションを使用して、型のフィールドとプロパティをすべて調べます。 この実装によって正しい結果が生成されますが、その型専用に記述したカスタム実装と比較すると、処理にかなり時間がかかります。  
   
  値の等価性に関する実装の詳細は、クラスと構造体で異なりますが、 等価性を実装するための基本的な手順については、両方とも同じです。  
   
-1. [仮想](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドをオーバーライドします。 ほとんどの場合、`bool Equals( object obj )` の実装には、`Equals` インターフェイスの実装である型固有の <xref:System.IEquatable%601?displayProperty=nameWithType> メソッドを呼び出すだけで済みます (手順 2 を参照)。  
+1. [仮想](../../language-reference/keywords/virtual.md) <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> メソッドをオーバーライドします。 ほとんどの場合、`bool Equals( object obj )` の実装には、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスの実装である型固有の `Equals` メソッドを呼び出すだけで済みます  (手順 2 を参照)。  
   
-2. 型固有の <xref:System.IEquatable%601?displayProperty=nameWithType> メソッドを指定して、`Equals` インターフェイスを実装します。 ここで実際の等価性の比較を実行します。 たとえば、型のフィールドを 1 ～ 2 個だけ比較することで等価性を定義できます。 `Equals`から例外をスローしないでください。 クラスの場合に限り、このメソッドはクラスで宣言されているフィールドのみを調べます。 基底クラスに含まれるフィールドを調べるには、`base.Equals` を呼び出す必要があります (<xref:System.Object> から型が直接継承された場合は、この呼び出しを行わないでください。<xref:System.Object> の <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 実装では参照の等価性チェックが実行されるためです)。  
+2. 型固有の `Equals` メソッドを指定して、<xref:System.IEquatable%601?displayProperty=nameWithType> インターフェイスを実装します。 ここで実際の等価性の比較を実行します。 たとえば、型のフィールドを 1 ～ 2 個だけ比較することで等価性を定義できます。 `Equals`から例外をスローしないでください。 クラスの場合に限り、このメソッドはクラスで宣言されているフィールドのみを調べます。 基底クラスに含まれるフィールドを調べるには、`base.Equals` を呼び出す必要があります (<xref:System.Object> から型が直接継承された場合は、この呼び出しを行わないでください。<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> の <xref:System.Object> 実装では参照の等価性チェックが実行されるためです)。  
   
 3. 推奨、ただし省略可能: [==](../../language-reference/operators/equality-operators.md#equality-operator-) 演算子および [!=](../../language-reference/operators/equality-operators.md#inequality-operator-) 演算子をオーバーロードします。  
   

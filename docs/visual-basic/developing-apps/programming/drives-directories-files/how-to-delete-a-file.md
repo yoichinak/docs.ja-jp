@@ -16,7 +16,7 @@ ms.locfileid: "74348781"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>方法: Visual Basic でファイルを削除する
 
-`DeleteFile` オブジェクトの `My.Computer.FileSystem` メソッドを使用すると、ファイルを削除することができます。 削除したファイルを**ごみ箱**に送るかどうか、ファイルを削除することをユーザーに確認するかどうか、ユーザーが操作をキャンセルした場合の処理方法などが、オプションとして用意されています。  
+`My.Computer.FileSystem` オブジェクトの `DeleteFile` メソッドを使用すると、ファイルを削除することができます。 削除したファイルを**ごみ箱**に送るかどうか、ファイルを削除することをユーザーに確認するかどうか、ユーザーが操作をキャンセルした場合の処理方法などが、オプションとして用意されています。  
   
 ### <a name="to-delete-a-text-file"></a>テキスト ファイルを削除するには  
   
@@ -26,13 +26,13 @@ ms.locfileid: "74348781"
   
 ### <a name="to-delete-a-text-file-and-ask-the-user-to-confirm-that-the-file-should-be-deleted"></a>テキスト ファイルを削除して、ユーザーがファイルを削除することを確認するには  
   
-- `DeleteFile` を `showUI` に設定し、`AllDialogs` メソッドを使用してファイルを削除します。 次のコードは、`test.txt` という名前のファイルを、ユーザーに削除するファイルを確認した上で削除する方法の例です。  
+- `showUI` を `AllDialogs` に設定し、`DeleteFile` メソッドを使用してファイルを削除します。 次のコードは、`test.txt` という名前のファイルを、ユーザーに削除するファイルを確認した上で削除する方法の例です。  
   
      [!code-vb[VbFileIOMisc#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#9)]  
   
 ### <a name="to-delete-a-text-file-and-send-it-to-the-recycle-bin"></a>テキスト ファイルを削除してごみ箱に送るには  
   
-- `DeleteFile` パラメーターに `SendToRecycleBin` を指定し、`recycle` メソッドを使用してファイルを削除します。 次のコードは、`test.txt` という名前のファイルを削除して**ごみ箱**に送る方法の例です。  
+- `recycle` パラメーターに `SendToRecycleBin` を指定し、`DeleteFile` メソッドを使用してファイルを削除します。 次のコードは、`test.txt` という名前のファイルを削除して**ごみ箱**に送る方法の例です。  
   
      [!code-vb[VbFileIOMisc#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#10)]  
   

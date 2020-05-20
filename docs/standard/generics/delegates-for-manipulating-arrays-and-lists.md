@@ -23,10 +23,10 @@ ms.locfileid: "75708385"
 ## <a name="generic-delegates-for-manipulating-arrays-and-lists"></a>配列とリストの操作に使用する汎用デリゲート  
  <xref:System.Action%601> 汎用デリゲートは、指定した型の要素に対して何らかのアクションを実行するメソッドを表します。 要素に対して必要なアクションを実行するメソッドを作成し、そのメソッドを表す <xref:System.Action%601> デリゲートのインスタンスを作成した後、配列とデリゲートを静的ジェネリック メソッド <xref:System.Array.ForEach%2A?displayProperty=nameWithType> に渡すことができます。 このメソッドは、配列の各要素に対して呼び出されます。  
   
- <xref:System.Collections.Generic.List%601> ジェネリック クラスにも、<xref:System.Collections.Generic.List%601.ForEach%2A> デリゲートを使用する <xref:System.Action%601> メソッドが用意されています。 このメソッドはジェネリックではありません。  
+ <xref:System.Collections.Generic.List%601> ジェネリック クラスにも、<xref:System.Action%601> デリゲートを使用する <xref:System.Collections.Generic.List%601.ForEach%2A> メソッドが用意されています。 このメソッドはジェネリックではありません。  
   
 > [!NOTE]
-> これは、ジェネリック型とジェネリック メソッドに関する興味深い点です。 <xref:System.Array.ForEach%2A?displayProperty=nameWithType> はジェネリック型ではないため、`Shared` メソッドは static (Visual Basic では <xref:System.Array>) かつジェネリックであることが必要です。<xref:System.Array.ForEach%2A?displayProperty=nameWithType> に型を指定して動作させることができるのは、このメソッドが独自の型パラメーター リストを保持しているからです。 これに対して、非ジェネリック <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> メソッドは <xref:System.Collections.Generic.List%601> ジェネリック クラスに属しています。したがって、このメソッドは、このクラスの型パラメーターを使用しているにすぎません。 このクラスは厳密に型指定されているため、メソッドをインスタンス メソッドにすることができます。  
+> これは、ジェネリック型とジェネリック メソッドに関する興味深い点です。 <xref:System.Array> はジェネリック型ではないため、<xref:System.Array.ForEach%2A?displayProperty=nameWithType> メソッドは static (Visual Basic では `Shared`) かつジェネリックであることが必要です。<xref:System.Array.ForEach%2A?displayProperty=nameWithType> に型を指定して動作させることができるのは、このメソッドが独自の型パラメーター リストを保持しているからです。 これに対して、非ジェネリック <xref:System.Collections.Generic.List%601.ForEach%2A?displayProperty=nameWithType> メソッドは <xref:System.Collections.Generic.List%601> ジェネリック クラスに属しています。したがって、このメソッドは、このクラスの型パラメーターを使用しているにすぎません。 このクラスは厳密に型指定されているため、メソッドをインスタンス メソッドにすることができます。  
   
  <xref:System.Predicate%601> 汎用デリゲートは、特定の要素が定義されている基準を満たしているかどうかを判断するメソッドを表します。 <xref:System.Array> の静的ジェネリック メソッドである <xref:System.Array.Exists%2A>、<xref:System.Array.Find%2A>、<xref:System.Array.FindAll%2A>、<xref:System.Array.FindIndex%2A>、<xref:System.Array.FindLast%2A>、<xref:System.Array.FindLastIndex%2A>、および <xref:System.Array.TrueForAll%2A> でこのデリゲートを使用することにより、要素または要素のセットを検索できます。  
   

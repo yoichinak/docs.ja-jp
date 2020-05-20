@@ -21,8 +21,8 @@ ms.locfileid: "78159742"
 
 - コール スタックに、`AssemblyLoadContext` にロードされたアセンブリ内のメソッドを含むスレッドがなくなった。
 - `AssemblyLoadContext` にロードされたアセンブリ内の型、それらの型のインスタンス、およびアセンブリ自体が、次の方法により参照されなくなった。
-  - 弱い参照 (`AssemblyLoadContext` または <xref:System.WeakReference>) を除く、<xref:System.WeakReference%601> の外部での参照。
-  - [ の内部と外部の両方からの厳密なガベージ コレクター (GC) ハンドル (](xref:System.Runtime.InteropServices.GCHandleType.Normal)GCHandleType.Normal[ または ](xref:System.Runtime.InteropServices.GCHandleType.Pinned)GCHandleType.Pinned`AssemblyLoadContext`)。
+  - 弱い参照 (<xref:System.WeakReference> または <xref:System.WeakReference%601>) を除く、`AssemblyLoadContext` の外部での参照。
+  - `AssemblyLoadContext` の内部と外部の両方からの厳密なガベージ コレクター (GC) ハンドル ([GCHandleType.Normal](xref:System.Runtime.InteropServices.GCHandleType.Normal) または [GCHandleType.Pinned](xref:System.Runtime.InteropServices.GCHandleType.Pinned))。
 
 ## <a name="use-collectible-assemblyloadcontext"></a>収集可能な AssemblyLoadContext の使用
 
@@ -38,7 +38,7 @@ ms.locfileid: "78159742"
 
 ご覧のとおり、`Load` メソッドから `null` が返されます。 つまり、すべての依存関係アセンブリが既定のコンテキストに読み込まれ、新しいコンテキストには、そこに明示的に読み込まれたアセンブリのみが含まれます。
 
-一部またはすべての依存関係も `AssemblyLoadContext` に読み込む必要がある場合は、`AssemblyDependencyResolver` メソッドで `Load` を使用することができます。 `AssemblyDependencyResolver` によりアセンブリ名が絶対アセンブリ ファイル パスに解決されます。 リゾルバーでは、コンテキストに読み込まれたメイン アセンブリのディレクトリ内の *.deps.json* ファイルとアセンブリ ファイルが使用されます。
+一部またはすべての依存関係も `AssemblyLoadContext` に読み込む必要がある場合は、`Load` メソッドで `AssemblyDependencyResolver` を使用することができます。 `AssemblyDependencyResolver` によりアセンブリ名が絶対アセンブリ ファイル パスに解決されます。 リゾルバーでは、コンテキストに読み込まれたメイン アセンブリのディレクトリ内の *.deps.json* ファイルとアセンブリ ファイルが使用されます。
 
 [!code-csharp[Advanced custom AssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/complex_assemblyloadcontext.cs)]
 
@@ -56,7 +56,7 @@ ms.locfileid: "78159742"
 
 [!code-csharp[Part 2](~/samples/snippets/standard/assembly/unloading/simple_example.cs#4)]
 
-`Main` メソッドが返ると、カスタム `Unload` で `AssemblyLoadContext` メソッドを呼び出すか、`AssemblyLoadContext` に対する参照を削除することにより、アンロードを開始できます。
+`Main` メソッドが返ると、カスタム `AssemblyLoadContext` で `Unload` メソッドを呼び出すか、`AssemblyLoadContext` に対する参照を削除することにより、アンロードを開始できます。
 
 [!code-csharp[Part 3](~/samples/snippets/standard/assembly/unloading/simple_example.cs#5)]
 
@@ -88,7 +88,7 @@ ms.locfileid: "78159742"
   - このようなアセンブリ内の型のインスタンス。
 - 収集可能な `AssemblyLoadContext` に読み込まれたアセンブリからコードを実行するスレッド。
 - 収集可能な `AssemblyLoadContext` 内部で作成されたカスタムの収集不可能な `AssemblyLoadContext` 型のインスタンス。
-- コールバックがカスタムの <xref:System.Threading.RegisteredWaitHandle> 内のメソッドに設定された保留中の `AssemblyLoadContext` インスタンス。
+- コールバックがカスタムの `AssemblyLoadContext` 内のメソッドに設定された保留中の <xref:System.Threading.RegisteredWaitHandle> インスタンス。
 
 > [!TIP]
 > スタック スロットまたはプロセッサ レジスタに格納されていて、`AssemblyLoadContext` のアンロードを妨げる可能性があるオブジェクト参照は、次の状況で発生する可能性があります。
@@ -98,7 +98,7 @@ ms.locfileid: "78159742"
 
 ## <a name="debug-unloading-issues"></a>アンロードに関する問題のデバッグ
 
-アンロードに関する問題のデバッグは、面倒な場合があります。 何が `AssemblyLoadContext` を保持しているかはわからないが、アンロードが失敗する状況に陥ることがあります。 最も役立つツールは、WinDbg (Unix では LLDB) と SOS プラグインです。 特定の `LoaderAllocator` に属する `AssemblyLoadContext` をキープ アライブしているのが何かを突き止める必要があります。 SOS プラグインを使用すると、GC ヒープ オブジェクト、その階層、およびルートを調べることができます。
+アンロードに関する問題のデバッグは、面倒な場合があります。 何が `AssemblyLoadContext` を保持しているかはわからないが、アンロードが失敗する状況に陥ることがあります。 最も役立つツールは、WinDbg (Unix では LLDB) と SOS プラグインです。 特定の `AssemblyLoadContext` に属する `LoaderAllocator` をキープ アライブしているのが何かを突き止める必要があります。 SOS プラグインを使用すると、GC ヒープ オブジェクト、その階層、およびルートを調べることができます。
 
 プラグインをデバッガーに読み込むには、次のコマンドをデバッガーのコマンド ラインに入力します。
 
@@ -137,7 +137,7 @@ Statistics:
 Total 2 objects
 ```
 
-次の例の "Statistics:" パーツで、`MT` に属する `MethodTable` (`System.Reflection.LoaderAllocator`) を確認します。これが、注目すべきオブジェクトです。 次に、最初にリストでこのエントリと `MT` が一致するエントリを見つけて、オブジェクト自体のアドレスを取得します。 この例では、"000002b78000ce40" です。
+次の例の "Statistics:" パーツで、`System.Reflection.LoaderAllocator` に属する `MT` (`MethodTable`) を確認します。これが、注目すべきオブジェクトです。 次に、最初にリストでこのエントリと `MT` が一致するエントリを見つけて、オブジェクト自体のアドレスを取得します。 この例では、"000002b78000ce40" です。
 
 `LoaderAllocator` オブジェクトのアドレスがわかったので、別のコマンドを使用して GC ルートを見つけることができます。
 
@@ -176,7 +176,7 @@ Found 3 roots.
 
 次の手順は、修正するために、ルートがどこにあるかを特定することです。 最も簡単なケースは、ルートがスタック スロットまたはプロセッサ レジスタである場合です。 この場合、`gcroot` には、フレームにルートとその関数を実行するスレッドを含む関数の名前が表示されます。 難解なケースは、ルートが静的変数または GC ハンドルの場合です。
 
-前述の例では、1 番目のルートは、アドレス `System.Reflection.RuntimeMethodInfo` にある関数 `example.Program.Main(System.String[])` のフレームに格納されている `rbp-20` 型のローカルです (`rbp` はプロセッサ レジスタ `rbp` で、-20 は、そのレジスタからの 16 進のオフセットです)。
+前述の例では、1 番目のルートは、アドレス `rbp-20` にある関数 `example.Program.Main(System.String[])` のフレームに格納されている `System.Reflection.RuntimeMethodInfo` 型のローカルです (`rbp` はプロセッサ レジスタ `rbp` で、-20 は、そのレジスタからの 16 進のオフセットです)。
 
 2 番目のルートは通常の (強い) `GCHandle` で、`test.Test` クラスのインスタンスへの参照を保持します。
 
@@ -249,6 +249,6 @@ OS Thread Id: 0x60bc (7)
 
 ## <a name="program-loaded-into-the-testassemblyloadcontext"></a>TestAssemblyLoadContext に読み込まれたプログラム
 
-次のコードは、メインのテスト プログラムで *メソッドに渡された*test.dll`ExecuteAndUnload` を表しています。
+次のコードは、メインのテスト プログラムで `ExecuteAndUnload` メソッドに渡された *test.dll* を表しています。
 
 [!code-csharp[Program loaded into the TestAssemblyLoadContext](~/samples/snippets/standard/assembly/unloading/unloadability_issues_example_test.cs)]

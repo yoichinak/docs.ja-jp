@@ -54,13 +54,13 @@ class Program
 
 この例は、型がデリゲート シグネチャ パラメーター型の基本データ型であるパラメーターを持つメソッドでデリゲートを使用する方法を示しています。 反変性により、複数のハンドラーの代わりに単一のイベント ハンドラーを使用できます。 次の例では、2 つのデリゲートを使用します。
 
-- <xref:System.Windows.Forms.KeyEventHandler>Button.KeyDown[ イベントのシグネチャを定義する ](xref:System.Windows.Forms.Control.KeyDown) デリゲート。 そのシグネチャ:
+- [Button.KeyDown](xref:System.Windows.Forms.Control.KeyDown) イベントのシグネチャを定義する <xref:System.Windows.Forms.KeyEventHandler> デリゲート。 そのシグネチャ:
 
    ```csharp
    public delegate void KeyEventHandler(object sender, KeyEventArgs e)
    ```
 
-- <xref:System.Windows.Forms.MouseEventHandler>Button.MouseClick[ イベントのシグネチャを定義する ](xref:System.Windows.Forms.Control.MouseDown) デリゲート。 そのシグネチャ:
+- [Button.MouseClick](xref:System.Windows.Forms.Control.MouseDown) イベントのシグネチャを定義する <xref:System.Windows.Forms.MouseEventHandler> デリゲート。 そのシグネチャ:
 
    ```csharp
    public delegate void MouseEventHandler(object sender, MouseEventArgs e)

@@ -18,7 +18,7 @@ ms.locfileid: "75713794"
 `ascending` コンテキスト キーワードは、クエリ式の [orderby 句](./orderby-clause.md)で使用され、並べ替え順序として昇順を指定します。 `ascending` は既定の並べ替え順序であるため、指定する必要はありません。  
   
 ## <a name="example"></a>例  
- `ascending`orderby 句[での ](./orderby-clause.md) の使用例を次に示します。  
+ [orderby 句](./orderby-clause.md)での `ascending` の使用例を次に示します。  
   
 [!code-csharp[csrefKeywordsContextual#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsContextual/CS/csrefKeywordsContextual.cs#14)]
   

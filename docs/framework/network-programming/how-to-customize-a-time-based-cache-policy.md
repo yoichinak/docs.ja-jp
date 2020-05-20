@@ -22,7 +22,7 @@ ms.locfileid: "73040634"
 
 ## <a name="to-create-a-time-based-cache-policy-that-uses-a-cache-synchronization-date"></a>キャッシュ同期日付を使用する時間ベースのキャッシュ ポリシーを作成するには
 
-<xref:System.DateTime> コンストラクターに <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトを渡して、キャッシュ同期日付を使用する時間ベースのキャッシュ ポリシーを作成します。
+<xref:System.Net.Cache.HttpRequestCachePolicy> コンストラクターに <xref:System.DateTime> オブジェクトを渡して、キャッシュ同期日付を使用する時間ベースのキャッシュ ポリシーを作成します。
 
 ```csharp
 public static HttpRequestCachePolicy CreateLastSyncPolicy(DateTime when)
@@ -52,7 +52,7 @@ Level:Default CacheSyncDate:1/14/2004 8:07:30 AM
 
 ## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness"></a>最小鮮度に基づく時間ベースのキャッシュ ポリシーを作成するには
 
-<xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> パラメーター値として `cacheAgeControl` を指定し、<xref:System.TimeSpan> コンストラクターに <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトを渡して、最小鮮度に基づく時間ベースのキャッシュ ポリシーを作成します。
+`cacheAgeControl` パラメーター値として <xref:System.Net.Cache.HttpCacheAgeControl.MinFresh> を指定し、<xref:System.Net.Cache.HttpRequestCachePolicy> コンストラクターに <xref:System.TimeSpan> オブジェクトを渡して、最小鮮度に基づく時間ベースのキャッシュ ポリシーを作成します。
 
 ```csharp
 public static HttpRequestCachePolicy CreateMinFreshPolicy(TimeSpan span)
@@ -85,7 +85,7 @@ Level:Default MinFresh:3600
 
 ## <a name="to-create-a-time-based-cache-policy-that-is-based-on-minimum-freshness-and-maximum-age"></a>最小鮮度と最大有効期間に基づく時間ベースのキャッシュ ポリシーを作成するには
 
-<xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> パラメーター値として `cacheAgeControl` を指定し、<xref:System.TimeSpan> コンストラクターに 2 つの <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクト (1 つはリソースの最大有効期間を指定し、もう 1 つはキャッシュから返されたオブジェクトで許可される最小鮮度を指定する) を渡して、最小鮮度と最大有効期間に基づく時間ベースのキャッシュ ポリシーを作成します。
+`cacheAgeControl` パラメーター値として <xref:System.Net.Cache.HttpCacheAgeControl.MaxAgeAndMinFresh> を指定し、<xref:System.Net.Cache.HttpRequestCachePolicy> コンストラクターに 2 つの <xref:System.TimeSpan> オブジェクト (1 つはリソースの最大有効期間を指定し、もう 1 つはキャッシュから返されたオブジェクトで許可される最小鮮度を指定する) を渡して、最小鮮度と最大有効期間に基づく時間ベースのキャッシュ ポリシーを作成します。
 
 ```csharp
 public static HttpRequestCachePolicy CreateFreshAndAgePolicy(TimeSpan freshMinimum, TimeSpan ageMaximum)

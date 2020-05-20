@@ -48,7 +48,7 @@ API アナライザーは、DE (Deprecation Error の略) で始まる API 固�
    4. **[Microsoft.DotNet.Analyzers.Compatibility]** を検索します。
    5. 一覧にある該当のパッケージを選択します。
    6. **[インストール]** ボタンを選択します。
-   7. **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
+   7. **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 
 ### <a name="use-the-api-analyzer"></a>API アナライザーを使用する
 
@@ -69,11 +69,11 @@ ID をクリックすると、API が非推奨になった理由に関する詳�
 
 ### <a name="suppress-warnings-locally"></a>警告をローカルに抑制する
 
-警告をローカルに抑制するには、警告を抑制するメンバーを右クリックして、 **[クイック アクションとリファクタリング]**  >  **[\<*診断 ID*> の非表示]**  >  **[ソース内]** の順に選びます。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告プリプロセッサ ディレクティブが、定義されているスコープ内のソース コードに追加されます。!["#pragma warning disable で囲まれたコードのスクリーンショット"](media/api-analyzer/suppress-in-source.jpg)
+警告をローカルに抑制するには、警告を抑制するメンバーを右クリックして、**[クイック アクションとリファクタリング]** > **[\<*診断 ID*> の非表示]** > **[ソース内]** の順に選びます。 [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 警告プリプロセッサ ディレクティブが、定義されているスコープ内のソース コードに追加されます。!["#pragma warning disable で囲まれたコードのスクリーンショット"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppress-warnings-globally"></a>警告をグローバルに抑制する
 
-警告をグローバルに抑制するには、警告を抑制するメンバーを右クリックして、 **[クイック アクションとリファクタリング]**  >  **[\<*診断 ID*> の非表示]**  >  **[抑制ファイル内]** の順に選びます。
+警告をグローバルに抑制するには、警告を抑制するメンバーを右クリックして、**[クイック アクションとリファクタリング]** > **[\<*診断 ID*> の非表示]** > **[抑制ファイル内]** の順に選びます。
 
 !["緑の波線が表示された WebClient API と左側の電球アイコンのスクリーンショット"](media/api-analyzer/suppress-in-sup-file.jpg)
 

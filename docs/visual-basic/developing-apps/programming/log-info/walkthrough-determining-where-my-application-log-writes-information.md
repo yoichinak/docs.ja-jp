@@ -45,7 +45,7 @@ ms.locfileid: "74353606"
 
         これらのセクションがない場合、 `My.Application.Log` にあるのは既定のログ リスナーのみです。
 
-3. <`add>` セクションで <`listeners>` 要素を見つけます。
+3. <`listeners>` セクションで <`add>` 要素を見つけます。
 
      これらの要素は、名前付きのログ リスナーを `My.Application.Log` のソースに追加します。
 

@@ -16,7 +16,7 @@ ms.locfileid: "78846211"
 ---
 # <a name="void-c-reference"></a>void (C# リファレンス)
 
-`void`メソッド[ (または ](../../programming-guide/classes-and-structs/methods.md)ローカル関数[) が値を返さないことを指定するには、メソッドの戻り値の型として ](../../programming-guide/classes-and-structs/local-functions.md) を使用します。
+[メソッド](../../programming-guide/classes-and-structs/methods.md) (または [ローカル関数](../../programming-guide/classes-and-structs/local-functions.md)) が値を返さないことを指定するには、メソッドの戻り値の型として `void` を使用します。
 
 [!code-csharp[void method](snippets/VoidType.cs#VoidExample)]
 

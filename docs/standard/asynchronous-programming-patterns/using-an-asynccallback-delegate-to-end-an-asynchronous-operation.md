@@ -23,10 +23,10 @@ ms.locfileid: "73130920"
   
 - <xref:System.AsyncCallback> デリゲートを使用し、個別のスレッドで非同期操作の結果を処理します。 このトピックでは、この方法のデモが実行されます。  
   
-- 非同期操作の <xref:System.IAsyncResult.IsCompleted%2A>Begin<xref:System.IAsyncResult>**OperationName** メソッドによって返される _の_ プロパティを使用して、その操作が完了したかどうかを判断します。 この方法のデモを実行する例については、「[非同期操作のステータスのポーリング](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)」を参照してください。  
+- 非同期操作の **Begin**_OperationName_ メソッドによって返される <xref:System.IAsyncResult> の <xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用して、その操作が完了したかどうかを判断します。 この方法のデモを実行する例については、「[非同期操作のステータスのポーリング](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)」を参照してください。  
   
 ## <a name="example"></a>例  
- 次のコード例は、ユーザー指定のコンピューターのドメイン ネーム システム (DNS) 情報を取得するために、<xref:System.Net.Dns> クラスの非同期メソッドを使用してデモを実行します。 この例では、<xref:System.AsyncCallback> メソッドを参照する `ProcessDnsInformation` デリゲートを作成します。 このメソッドは、DNS 情報に対する非同期要求ごとに 1 回呼び出されます。  
+ 次のコード例は、ユーザー指定のコンピューターのドメイン ネーム システム (DNS) 情報を取得するために、<xref:System.Net.Dns> クラスの非同期メソッドを使用してデモを実行します。 この例では、`ProcessDnsInformation` メソッドを参照する <xref:System.AsyncCallback> デリゲートを作成します。 このメソッドは、DNS 情報に対する非同期要求ごとに 1 回呼び出されます。  
   
  ユーザー指定のホストは、<xref:System.Net.Dns.BeginGetHostByName%2A><xref:System.Object> パラメーターに渡されます。 複雑な状態オブジェクトの定義と使用に関するデモを実行する例については、「[AsyncCallback デリゲートおよび状態オブジェクトの使用](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)」を参照してください。  
   

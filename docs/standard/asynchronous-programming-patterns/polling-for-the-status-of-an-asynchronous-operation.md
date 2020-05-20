@@ -20,7 +20,7 @@ ms.locfileid: "73123962"
 # <a name="polling-for-the-status-of-an-asynchronous-operation"></a>非同期操作のステータスのポーリング
 非同期操作の結果の待機中に、他の作業を実行できるアプリケーションは、操作が完了するまで待機をブロックする必要はありません。 次のオプションのいずれかを使用して、非同期操作が完了するまでの待機中に、手順の実行を継続します。  
   
-- 非同期操作の <xref:System.IAsyncResult.IsCompleted%2A>Begin<xref:System.IAsyncResult>**OperationName** メソッドによって返される _の_ プロパティを使用して、その操作が完了したかどうかを判断します。 この方法はポーリングと呼ばれ、このトピックでデモが実行されます。  
+- 非同期操作の **Begin**_OperationName_ メソッドによって返される <xref:System.IAsyncResult> の <xref:System.IAsyncResult.IsCompleted%2A> プロパティを使用して、その操作が完了したかどうかを判断します。 この方法はポーリングと呼ばれ、このトピックでデモが実行されます。  
   
 - <xref:System.AsyncCallback> デリゲートを使用し、個別のスレッドで非同期操作の結果を処理します。 この方法のデモを実行する例については、「[AsyncCallback デリゲートの使用による非同期操作の終了](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)」を参照してください。  
   

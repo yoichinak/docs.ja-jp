@@ -18,7 +18,7 @@ ms.locfileid: "75713863"
 `abstract` 修飾子は、その修飾対象の実装が不足しているか、不完全であることを示します。 クラスやメソッド、プロパティ、インデクサー、イベントと組み合わせて abstract 修飾子を使用することができます。 クラス宣言に `abstract` 修飾子を使用して、クラスは他のクラスの基底クラスとしてのみ使用することを意図し、それ自体ではインスタンス化されないことを示します。 abstract としてマークされたメンバーは、その抽象クラスから派生した非抽象クラスによって実装される必要があります。
   
 ## <a name="example"></a>例  
- この例で、`Square` の機能は、`GetArea` から派生している `Shape` クラスで実装する必要があります。  
+ この例で、`GetArea` の機能は、`Shape` から派生している `Square` クラスで実装する必要があります。  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   

@@ -31,7 +31,7 @@ ms.locfileid: "75705601"
      呼び出し元のコードでは最初のパラメーターを指定しません。これは演算子を適用する型を表すものであり、コンパイラはオブジェクトの型を既に認識しているためです。 指定する必要があるのは、2 番目から `n` 番目のパラメーターの引数だけです。  
   
 ## <a name="example"></a>例  
- 次の例では、`WordCount` クラスの `CustomExtensions.StringExtension` という名前の拡張メソッドを実装します。 このメソッドは、最初のメソッド パラメーターとして指定された <xref:System.String> クラスを操作します。 `CustomExtensions` 名前空間は、アプリケーション名前空間にインポートされ、メソッドは `Main` メソッド内で呼び出されます。  
+ 次の例では、`CustomExtensions.StringExtension` クラスの `WordCount` という名前の拡張メソッドを実装します。 このメソッドは、最初のメソッド パラメーターとして指定された <xref:System.String> クラスを操作します。 `CustomExtensions` 名前空間は、アプリケーション名前空間にインポートされ、メソッドは `Main` メソッド内で呼び出されます。  
   
  [!code-csharp[csProgGuideExtensionMethods#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#1)]  
   

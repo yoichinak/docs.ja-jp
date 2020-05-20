@@ -57,7 +57,7 @@ class DerivedClass : BaseClass
 
 この例には、2 つのファイル (`Assembly1.cs` と `Assembly2.cs`) が含まれています。
 最初のファイルには public 基底クラスである `BaseClass` ともう 1 つのクラスである `TestAccess` が含まれています。 `BaseClass` は protected internal メンバーの `myValue` を持っています。これは `TestAccess` 型にアクセスされます。
-2 番目のファイルでは、`myValue` のインスタンス経由で `BaseClass` にアクセスしようとするとエラーが発生します。一方で、派生クラス `DerivedClass` のインスタンスからこのメンバーにアクセスすると成功します。
+2 番目のファイルでは、`BaseClass` のインスタンス経由で `myValue` にアクセスしようとするとエラーが発生します。一方で、派生クラス `DerivedClass` のインスタンスからこのメンバーにアクセスすると成功します。
 
 構造体は継承できないため、構造体メンバーは `protected internal` になりません。
 

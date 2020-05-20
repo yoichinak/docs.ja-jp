@@ -43,7 +43,7 @@ ms.locfileid: "74345598"
   
      [!code-vb[VbVbalrMyComputer#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#42)]  
   
-7. `Else` ステートメントに `If` ブロックを追加して、文字列が実際に読み取られた場合のケースを処理します。 このブロックによって、シリアル ポートからの文字列を戻り値の文字列に追加します。  
+7. `If` ステートメントに `Else` ブロックを追加して、文字列が実際に読み取られた場合のケースを処理します。 このブロックによって、シリアル ポートからの文字列を戻り値の文字列に追加します。  
   
      [!code-vb[VbVbalrMyComputer#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#43)]  
   

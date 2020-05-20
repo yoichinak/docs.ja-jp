@@ -46,7 +46,7 @@ var query = from str in stringArray
 
 ## <a name="object-and-collection-initializers"></a>オブジェクト初期化子とコレクション初期化子
 
-オブジェクト初期化子とコレクション初期化子を使用すると、オブジェクトのコンストラクターを明示的に呼び出さなくても、オブジェクトを初期化できます。 通常、初期化子は、ソース データを新しいデータ型に投影するクエリ式で使用されます。 パブリックな `Customer` プロパティと `Name` プロパティを持つ `Phone` という名前のクラスがある場合、オブジェクト初期化子は次のコードのように使用できます。
+オブジェクト初期化子とコレクション初期化子を使用すると、オブジェクトのコンストラクターを明示的に呼び出さなくても、オブジェクトを初期化できます。 通常、初期化子は、ソース データを新しいデータ型に投影するクエリ式で使用されます。 パブリックな `Name` プロパティと `Phone` プロパティを持つ `Customer` という名前のクラスがある場合、オブジェクト初期化子は次のコードのように使用できます。
 
 ```csharp
 var cust = new Customer { Name = "Mike", Phone = "555-1212" };
@@ -60,7 +60,7 @@ var newLargeOrderCustomers = from o in IncomingOrders
                             select new Customer { Name = o.Name, Phone = o.Phone };
 ```
 
-データ ソースには、`Customer` など、`OrderSize` クラス以外にもプロパティが存在する可能性がありますが、オブジェクト初期化を利用することで、クエリから返されるデータは目的のデータ型に形成されます。今回のクラスに関連するデータを選択します。 その結果、必要とする新しい `IEnumerable` が `Customer` に入力されました。 上記は次のような LINQ のメソッド構文でも記述できます。
+データ ソースには、`OrderSize` など、`Customer` クラス以外にもプロパティが存在する可能性がありますが、オブジェクト初期化を利用することで、クエリから返されるデータは目的のデータ型に形成されます。今回のクラスに関連するデータを選択します。 その結果、必要とする新しい `Customer` が `IEnumerable` に入力されました。 上記は次のような LINQ のメソッド構文でも記述できます。
 
 ```csharp
 var newLargeOrderCustomers = IncomingOrders.Where(x => x.OrderSize > 5).Select(y => new Customer { Name = y.Name, Phone = y.Phone });

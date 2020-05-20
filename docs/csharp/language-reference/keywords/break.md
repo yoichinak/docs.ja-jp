@@ -26,7 +26,7 @@ ms.locfileid: "75713752"
 
 ## <a name="example"></a>例
 
-次に示すのは、`break`switch[ ステートメントで ](./switch.md) を使用する例です。
+次に示すのは、[switch](./switch.md) ステートメントで `break` を使用する例です。
 
 [!code-csharp[csrefKeywordsJump#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#2)]
 
@@ -45,7 +45,7 @@ Sorry, invalid selection.
 
 ## <a name="example"></a>例
 
-この例で、`break` ステートメントは、ループの各繰り返し時に現在の分岐を抜けるためだけに使用されています。 ループ自体は、入れ子になった `break`switch[ ステートメントに属する ](./switch.md) のインスタンスの影響は受けません。
+この例で、`break` ステートメントは、ループの各繰り返し時に現在の分岐を抜けるためだけに使用されています。 ループ自体は、入れ子になった [switch](./switch.md) ステートメントに属する `break` のインスタンスの影響は受けません。
 
 [!code-csharp[csrefKeywordsJump#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#8)]
 

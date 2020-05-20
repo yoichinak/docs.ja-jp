@@ -47,7 +47,7 @@ C# 7.0 では、破棄は次のコンテキストの割り当てでサポート�
 
 *破棄パターン*は、[is](language-reference/keywords/is.md) キーワードと [switch](language-reference/keywords/switch.md) キーワードを使用したパターン マッチングで使用できます。 各式は常に破棄パターンと一致します。
 
-`ProvidesFormatInfo`is[ ステートメントを使用して、オブジェクトが ](language-reference/keywords/is.md) 実装を提供しているかどうかを判断し、オブジェクトが <xref:System.IFormatProvider> かどうかをテストする `null` メソッドの定義例を次に示します。 また、破棄パターンを使用して、その他の任意の型の null 以外のオブジェクトを処理します。
+[is](language-reference/keywords/is.md) ステートメントを使用して、オブジェクトが <xref:System.IFormatProvider> 実装を提供しているかどうかを判断し、オブジェクトが `null` かどうかをテストする `ProvidesFormatInfo` メソッドの定義例を次に示します。 また、破棄パターンを使用して、その他の任意の型の null 以外のオブジェクトを処理します。
 
 [!code-csharp[discard-pattern](../../samples/snippets/csharp/programming-guide/discards/discard-pattern2.cs)]
 

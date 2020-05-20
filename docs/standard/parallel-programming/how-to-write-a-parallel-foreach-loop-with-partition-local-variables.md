@@ -43,7 +43,7 @@ ms.locfileid: "73139688"
 
   この例では、デリゲートによって個々の整数の値がパーティション ローカル変数に追加されます。スレッド ローカル変数には、そのパーティションで順次追加される整数要素の値の現在の合計が保持されます。
 
-- `localFinally`。各パーティションでのループ操作が完了した時点で、`Action<TLocal>` によって呼び出される <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> デリゲート。 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドは、`Action<TLocal>` デリゲートに、このループ パーティションのパーティション ローカル変数の最終値を返します。プログラマは、このパーティションの結果と他のパーティションの結果を結合するために必要な操作を実行するコードを作成します。 このデリゲートは、複数のタスクで同時に呼び出すことができます。 このため、この例では <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> 変数へのアクセスを同期するために `total` メソッドが使用されます。 デリゲート型は <xref:System.Action%601> であるため、戻り値はありません。
+- `localFinally`。各パーティションでのループ操作が完了した時点で、`Action<TLocal>` によって呼び出される <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> デリゲート。 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> メソッドは、`Action<TLocal>` デリゲートに、このループ パーティションのパーティション ローカル変数の最終値を返します。プログラマは、このパーティションの結果と他のパーティションの結果を結合するために必要な操作を実行するコードを作成します。 このデリゲートは、複数のタスクで同時に呼び出すことができます。 このため、この例では `total` 変数へのアクセスを同期するために <xref:System.Threading.Interlocked.Add%28System.Int32%40%2CSystem.Int32%29?displayProperty=nameWithType> メソッドが使用されます。 デリゲート型は <xref:System.Action%601> であるため、戻り値はありません。
 
 [!code-csharp[TPL_Parallel#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_parallel/cs/foreachthreadlocal.cs#04)]
 [!code-vb[TPL_Parallel#04](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_parallel/vb/foreachthreadlocal.vb#04)]

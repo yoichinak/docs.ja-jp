@@ -32,7 +32,7 @@ ms.locfileid: "79398557"
 
 スレッド プールのスレッドで未処理の例外が発生すると、プロセスが終了します。 このルールには次の 3 つの例外があります。  
   
-- <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType> が呼び出されたため、スレッド プールのスレッドに <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> がスローされる。  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> が呼び出されたため、スレッド プールのスレッドに <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType> がスローされる。  
 - アプリケーション ドメインがアンロードされるため、スレッド プールのスレッドに <xref:System.AppDomainUnloadedException?displayProperty=nameWithType> がスローされる。  
 - 共通言語ランタイムまたはホスト プロセスがスレッドを終了する。  
   

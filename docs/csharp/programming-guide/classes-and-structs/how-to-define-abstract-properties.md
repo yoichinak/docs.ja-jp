@@ -30,7 +30,7 @@ ms.locfileid: "75705614"
  これで、実行可能ファイル shapetest.exe が作成されます。  
   
 ## <a name="example"></a>例  
- このファイルは、`Shape` 型の `Area` プロパティを含む `double` クラスを宣言します。  
+ このファイルは、`double` 型の `Shape` プロパティを含む `Area` クラスを宣言します。  
   
  [!code-csharp[csProgGuideInheritance#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#1)]  
   

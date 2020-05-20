@@ -16,7 +16,7 @@ ms.locfileid: "73969901"
   
 1. 新しい**コンソール アプリケーション** プロジェクトを作成します。  
   
-2. ファイルに `using` 名前空間の `System.Linq.Expressions` ディレクティブを 追加します。  
+2. ファイルに `System.Linq.Expressions` 名前空間の `using` ディレクティブを 追加します。  
   
 3. `AndAlsoModifier` クラスをプロジェクトに追加します。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "73969901"
     }  
     ```  
   
-     このクラスは、<xref:System.Linq.Expressions.ExpressionVisitor> 条件演算を表す式を変更するための特別なクラスで、`AND` クラスを継承します。 このクラスによって条件 `AND` が条件 `OR` に変更されます。 そのために、クラスは基本データ型の <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> メソッドをオーバーライドします。`AND` 条件式は二項式で表されるためです。 `VisitBinary` メソッドでは、渡される式が `AND` 条件演算を表す場合、`OR` 条件演算子ではなく `AND` 条件演算子を含む新しい式がコードによって作成されます。 `VisitBinary` に渡される式が `AND` 条件演算を表さない場合は、基底クラスの実装が延期されます。 基底クラスのメソッドによって、渡された式ツリーに似たノードが作成されますが、そのノードのサブツリーは、ビジターによって再帰的に作成される式ツリーに置き換えられます。  
+     このクラスは、`AND` 条件演算を表す式を変更するための特別なクラスで、<xref:System.Linq.Expressions.ExpressionVisitor> クラスを継承します。 このクラスによって条件 `AND` が条件 `OR` に変更されます。 そのために、クラスは基本データ型の <xref:System.Linq.Expressions.ExpressionVisitor.VisitBinary%2A> メソッドをオーバーライドします。`AND` 条件式は二項式で表されるためです。 `VisitBinary` メソッドでは、渡される式が `AND` 条件演算を表す場合、`AND` 条件演算子ではなく `OR` 条件演算子を含む新しい式がコードによって作成されます。 `VisitBinary` に渡される式が `AND` 条件演算を表さない場合は、基底クラスの実装が延期されます。 基底クラスのメソッドによって、渡された式ツリーに似たノードが作成されますが、そのノードのサブツリーは、ビジターによって再帰的に作成される式ツリーに置き換えられます。  
   
-4. ファイルに `using` 名前空間の `System.Linq.Expressions` ディレクティブを 追加します。  
+4. ファイルに `System.Linq.Expressions` 名前空間の `using` ディレクティブを 追加します。  
   
 5. 式ツリーを作成し、それをメソッドに渡して変更するコードを、Program.cs ファイルの `Main` メソッドに追加します。  
   

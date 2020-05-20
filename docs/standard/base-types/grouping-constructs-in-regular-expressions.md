@@ -221,10 +221,10 @@ ms.locfileid: "78159222"
 |10|`(((?'Open'<)`|"\<mno" の左山かっこと一致し、そのかっこを `Open` グループに代入します。 その <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> コレクションには、現在、単一の値 "<" が含まれています。|  
 |11|`[^<>]*`|"mno" と一致します。|  
 |12|`)+`|"<mno" が 2 番目のキャプチャ グループの値になります。<br /><br /> 入力文字列内の次の文字は左山かっこなので、正規表現エンジンは `(?'Open'<)[^<>]*)` サブパターンに戻ります。|  
-|13|`(((?'Open'<)`|"\<xyz>" の左山かっこと一致し、そのかっこを `Open` グループに代入します。 現在、<xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> グループの `Open` コレクションには、"\<mno" の左山かっこと "\<xyz>" の左山かっこの 2 つのキャプチャが含まれています。|  
+|13|`(((?'Open'<)`|"\<xyz>" の左山かっこと一致し、そのかっこを `Open` グループに代入します。 現在、`Open` グループの <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> コレクションには、"\<mno" の左山かっこと "\<xyz>" の左山かっこの 2 つのキャプチャが含まれています。|  
 |14|`[^<>]*`|"xyz" と一致します。|  
 |15|`)+`|"<xyz" が 2 番目のキャプチャ グループの値になります。<br /><br /> 入力文字列内の次の文字は左山かっこではないので、正規表現エンジンは `(?'Open'<)[^<>]*)` サブパターンに戻りません。|  
-|16|`((?'Close-Open'>)`|"\<xyz>" の右山かっこと一致します。 "xyz" は `Open` グループと右山かっこの間の部分文字列を `Close` グループに代入して、`Open` グループの現在の値を削除します。 前のキャプチャの値 ("\<mno" の左山かっこ) が `Open` グループの現在の値になります。 <xref:System.Text.RegularExpressions.Group.Captures%2A> グループの `Open` コレクションには、現在、単一のキャプチャ ("\<xyz>" の左山かっこ) が含まれています。|  
+|16|`((?'Close-Open'>)`|"\<xyz>" の右山かっこと一致します。 "xyz" は `Open` グループと右山かっこの間の部分文字列を `Close` グループに代入して、`Open` グループの現在の値を削除します。 前のキャプチャの値 ("\<mno" の左山かっこ) が `Open` グループの現在の値になります。 `Open` グループの <xref:System.Text.RegularExpressions.Group.Captures%2A> コレクションには、現在、単一のキャプチャ ("\<xyz>" の左山かっこ) が含まれています。|  
 |17|`[^<>]*`|山かっこではない文字を検索します。一致する項目は見つかりません。|  
 |18|`)+`|3 番目のキャプチャ グループの値は ">" です。<br /><br /> 入力文字列内の次の文字は右山かっこなので、正規表現エンジンは `((?'Close-Open'>)[^<>]*)` サブパターンに戻ります。|  
 |19|`((?'Close-Open'>)`|"xyz>>" の最後の右山かっこと一致し、"mno\<xyz>" (`Open` グループと右山かっこの間の部分文字列) を `Close` グループに代入して、`Open` グループの現在の値を削除します。 `Open` グループは空になります。|  

@@ -69,7 +69,7 @@ mlContext.Model.Save(trainedModel, data.Schema, "model.zip");
 1. モデルの [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 2. [`DataViewSchema`](xref:Microsoft.ML.DataViewSchema) の想定される入力の [`ITransformer`](xref:Microsoft.ML.ITransformer)。
 
-モデルのトレーニング後、[`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) メソッドを使用し、入力データの `model.zip` を使用してトレーニング済みモデルを `DataViewSchema` というファイルに保存します。
+モデルのトレーニング後、[`Save`](xref:Microsoft.ML.ModelOperationsCatalog.Save*) メソッドを使用し、入力データの `DataViewSchema` を使用してトレーニング済みモデルを `model.zip` というファイルに保存します。
 
 ```csharp
 // Save Trained Model
@@ -92,7 +92,7 @@ ITransformer trainedModel = mlContext.Model.Load("model.zip", out modelSchema);
 
 ## <a name="load-a-model-stored-remotely"></a>リモートに保存されているモデルを読み込む
 
-リモートの場所に保存されているデータ準備パイプラインとモデルをアプリケーションに読み込むには、[`Stream`](xref:System.IO.Stream) メソッドでファイル パスではなく [`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) を使用します。
+リモートの場所に保存されているデータ準備パイプラインとモデルをアプリケーションに読み込むには、[`Load`](xref:Microsoft.ML.ModelOperationsCatalog.Load*) メソッドでファイル パスではなく [`Stream`](xref:System.IO.Stream) を使用します。
 
 ```csharp
 // Create MLContext

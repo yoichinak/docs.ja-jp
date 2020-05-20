@@ -40,7 +40,7 @@ CLI の使用方法について簡単にわかるヘルプをお探しですか�
 
 複数のフレームワークをターゲットにしたい場合は、セミコロンで区切ることにより設定 `<TargetFrameworks>` で複数の TFM 値を設定できます。 `dotnet publish -f <TFM>` コマンドではフレームワークの 1 つを公開できます。 たとえば、`<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>` と設定して `dotnet publish -f netcoreapp2.1` を実行すると、.NET Core 2.1 をターゲットとするバイナリが作成されます。
 
-他の値を設定しない限り、[`dotnet publish`](../tools/dotnet-publish.md) コマンドの出力ディレクトリは `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` です。 **パラメーターで変更しない限り、** BUILD-CONFIGURATION**の既定のモードは**Debug`-c` です。 たとえば、`dotnet publish -c Release -f netcoreapp2.1` と指定すると、`myfolder/bin/Release/netcoreapp2.1/publish/` に公開されます。
+他の値を設定しない限り、[`dotnet publish`](../tools/dotnet-publish.md) コマンドの出力ディレクトリは `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` です。 `-c` パラメーターで変更しない限り、**BUILD-CONFIGURATION** の既定のモードは **Debug** です。 たとえば、`dotnet publish -c Release -f netcoreapp2.1` と指定すると、`myfolder/bin/Release/netcoreapp2.1/publish/` に公開されます。
 
 .NET Core SDK 3.0 以降を使用する場合、.NET Core バージョン 2.1、2.2、3.0、またはそれ以降のバージョンをターゲットとするアプリの既定の公開モードは、フレームワークに依存する実行可能ファイルです。
 
@@ -107,7 +107,7 @@ End Module
 
 .NET Core SDK 2.x の CLI では、フレームワークに依存する展開 (FDD) が、基本的な `dotnet publish` コマンドの既定のモードです。
 
-FDD としてアプリを公開すると、`<PROJECT-NAME>.dll` フォルダーに`./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` ファイルが作成されます。 アプリを実行するには、出力フォルダーに移動して、`dotnet <PROJECT-NAME>.dll` コマンドを使用します。
+FDD としてアプリを公開すると、`./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` フォルダーに`<PROJECT-NAME>.dll` ファイルが作成されます。 アプリを実行するには、出力フォルダーに移動して、`dotnet <PROJECT-NAME>.dll` コマンドを使用します。
 
 アプリは、特定のバージョンの .NET Core をターゲットにするように構成されます。 アプリが実行されるすべてのマシンには、そのターゲットの .NET Core ランタイムが存在する必要があります。 たとえば、アプリのターゲットが .NET Core 2.2 である場合、アプリを実行するコンピューターには、.NET Core 2.2 ランタイムがインストールされている必要があります。 「[公開の基礎](#publishing-basics)」セクションで説明したように、プロジェクト ファイルを編集することで、既定のターゲット フレームワークを変更したり、複数のフレームワークをターゲットにしたりできます。
 

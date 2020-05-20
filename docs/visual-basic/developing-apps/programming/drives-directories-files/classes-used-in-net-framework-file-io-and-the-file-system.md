@@ -30,7 +30,7 @@ ms.locfileid: "74348924"
 |<xref:System.IO.FileAccess?displayProperty=nameWithType>|ファイルの読み取り、書き込み、または読み取り/書き込みアクセスのための定数を定義します。|  
 |<xref:System.IO.FileAttributes?displayProperty=nameWithType>|`Archive`、`Hidden`、`ReadOnly` など、ファイルとディレクトリの属性を提供します。|  
 |<xref:System.IO.FileInfo?displayProperty=nameWithType>|ファイルを作成、コピー、削除、移動、およびオープンするための静的メソッドを提供し、`FileStream`の作成を支援します。|  
-|<xref:System.IO.FileMode?displayProperty=nameWithType>|ファイルを開く方法を制御します。 このパラメーターは、`FileStream` と `IsolatedStorageFileStream` の多数のコンストラクター、および `Open` と <xref:System.IO.File> の <xref:System.IO.FileInfo> メソッドで使用します。|  
+|<xref:System.IO.FileMode?displayProperty=nameWithType>|ファイルを開く方法を制御します。 このパラメーターは、`FileStream` と `IsolatedStorageFileStream` の多数のコンストラクター、および <xref:System.IO.File> と <xref:System.IO.FileInfo> の `Open` メソッドで使用します。|  
 |<xref:System.IO.FileShare?displayProperty=nameWithType>|他のファイル ストリームから同一のファイルに対して可能なアクセスの種類を制御する定数を定義します。|  
 |<xref:System.IO.Path?displayProperty=nameWithType>|ディレクトリ文字列を処理するためのメソッドとプロパティを提供します。|  
 |<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>|<xref:System.Security.Permissions.FileIOPermissionAttribute.Read%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Write%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.Append%2A>、<xref:System.Security.Permissions.FileIOPermissionAttribute.PathDiscovery%2A> の各アクセス許可を定義してファイルおよびフォルダーへのアクセスを制御します。|  
@@ -55,8 +55,8 @@ ms.locfileid: "74348924"
 |---------------|---------------------|  
 |<xref:System.IO.BinaryReader?displayProperty=nameWithType>|エンコードされた文字列とプリミティブ データ型を <xref:System.IO.FileStream> から読み取ります。|  
 |<xref:System.IO.BinaryWriter?displayProperty=nameWithType>|エンコードされた文字列とプリミティブ データ型を <xref:System.IO.FileStream> に書き込みます。|  
-|<xref:System.IO.StreamReader?displayProperty=nameWithType>|<xref:System.IO.FileStream> を使用して文字とバイト間の変換を行い、<xref:System.IO.StreamReader.CurrentEncoding%2A> から文字を読み取ります。 <xref:System.IO.StreamReader> には、指定したストリームに適した <xref:System.IO.StreamReader.CurrentEncoding%2A> を <xref:System.IO.StreamReader.CurrentEncoding%2A> 固有のプリアンブル (バイト オーダー マークなど) に基づいて確認するコンストラクターが用意されています。|  
-|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|`FileStream` を使用して文字をバイトに変換し、<xref:System.IO.StreamWriter.Encoding%2A> に文字を書き込みます。|  
+|<xref:System.IO.StreamReader?displayProperty=nameWithType>|<xref:System.IO.StreamReader.CurrentEncoding%2A> を使用して文字とバイト間の変換を行い、<xref:System.IO.FileStream> から文字を読み取ります。 <xref:System.IO.StreamReader> には、指定したストリームに適した <xref:System.IO.StreamReader.CurrentEncoding%2A> を <xref:System.IO.StreamReader.CurrentEncoding%2A> 固有のプリアンブル (バイト オーダー マークなど) に基づいて確認するコンストラクターが用意されています。|  
+|<xref:System.IO.StreamWriter?displayProperty=nameWithType>|<xref:System.IO.StreamWriter.Encoding%2A> を使用して文字をバイトに変換し、`FileStream` に文字を書き込みます。|  
 |<xref:System.IO.StringReader?displayProperty=nameWithType>|`String` から文字を読み取ります。 出力は、任意のエンコーディングのストリームまたは `String` です。|  
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|`String` に文字を書き込みます。 出力は、任意のエンコーディングのストリームまたは `String` です。|  
   

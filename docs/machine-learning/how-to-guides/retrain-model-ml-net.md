@@ -51,7 +51,7 @@ ITransformer trainedModel = mlContext.Model.Load("ogd_model.zip", out modelSchem
 
 ## <a name="extract-pre-trained-model-parameters"></a>トレーニング済みモデルのパラメーターを抽出する
 
-モデルが読み込まれたら、トレーニング済みモデルの [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) プロパティにアクセスして、学習済みモデルのパラメーターを抽出します。 トレーニング済みモデルは、[`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) を出力する [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) を作成する線形回帰モデル [`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) を使用して学習されています。 これらの線形回帰モデルのパラメーターには、学習済みのバイアスと、モデルの重みまたは係数が含まれています。 これらの値は、新しい再トレーニング済みモデルの出発点として使用されます。
+モデルが読み込まれたら、トレーニング済みモデルの [`Model`](xref:Microsoft.ML.Data.PredictionTransformerBase`1.Model*) プロパティにアクセスして、学習済みモデルのパラメーターを抽出します。 トレーニング済みモデルは、[`LinearRegressionModelParameters`](xref:Microsoft.ML.Trainers.LinearRegressionModelParameters) を出力する [`RegressionPredictionTransformer`](xref:Microsoft.ML.Data.RegressionPredictionTransformer%601) を作成する線形回帰モデル [`OnlineGradientDescentTrainer`](xref:Microsoft.ML.Trainers.OnlineGradientDescentTrainer) を使用して学習されています。 これらの線形回帰モデルのパラメーターには、学習済みのバイアスと、モデルの重みまたは係数が含まれています。 これらの値は、新しい再トレーニング済みモデルの出発点として使用されます。
 
 ```csharp
 // Extract trained model parameters

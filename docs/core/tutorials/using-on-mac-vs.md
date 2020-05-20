@@ -37,7 +37,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
    ![Visual Studio for Mac のスタート ウィンドウの [新規] ボタン](./media/using-on-mac-vs/visual-studio-mac-new-project.png)
 
-1. **[新しいプロジェクト]** ダイアログで、 **[.NET Core]** ノードの下にある **[アプリ]** を選択します。 **[コンソール アプリケーション]** テンプレートを選択してから **[次へ]** を選択します。
+1. **[新しいプロジェクト]** ダイアログで、**[.NET Core]** ノードの下にある **[アプリ]** を選択します。 **[コンソール アプリケーション]** テンプレートを選択してから **[次へ]** を選択します。
 
    ![新しいプロジェクト テンプレートのリスト](./media/using-on-mac-vs/visual-studio-mac-new-dialog.png)
 
@@ -47,7 +47,7 @@ Visual Studio for Mac では、.NET Core アプリケーション開発用の機
 
    ![[Configure your new Console Application (新しいコンソール アプリケーションの構成)] ダイアログ](./media/using-on-mac-vs/visual-studio-mac-new-options.png)
 
-1. プロジェクトの依存関係が復元されるまで待ちます。 プロジェクトには、*メソッドを持つ* クラスを含む `Program`Program.cs`Main` という C# ファイルが 1 つあります。 `Console.WriteLine` ステートメントは、アプリの実行時に コンソールに "Hello World!" と出力します。
+1. プロジェクトの依存関係が復元されるまで待ちます。 プロジェクトには、`Main` メソッドを持つ `Program` クラスを含む *Program.cs* という C# ファイルが 1 つあります。 `Console.WriteLine` ステートメントは、アプリの実行時に コンソールに "Hello World!" と出力します。
 
    ![Program.cs ファイルが開かれた状態のメイン ウィンドウ](./media/using-on-mac-vs/visual-studio-mac-editor.png)
 

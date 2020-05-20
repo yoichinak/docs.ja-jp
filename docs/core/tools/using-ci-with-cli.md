@@ -120,7 +120,7 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 ### <a name="travis-ci"></a>Travis CI
 
-[ 言語と ](https://travis-ci.org/) キーを使用して .NET Core SDK をインストールするように `csharp`Travis CI`dotnet` を構成できます。 詳細については、公式 Travis CI ドキュメントの「[Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/)」(C#、F#、または Visual Basic プロジェクトのビルド) を参照してください。 Travis CI 情報にアクセスするときは、コミュニティが保守管理している `language: csharp` 言語識別子は F# や Mono を含む、あらゆる .NET 言語で機能することにご留意ください。
+`csharp` 言語と `dotnet` キーを使用して .NET Core SDK をインストールするように [Travis CI](https://travis-ci.org/) を構成できます。 詳細については、公式 Travis CI ドキュメントの「[Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/)」(C#、F#、または Visual Basic プロジェクトのビルド) を参照してください。 Travis CI 情報にアクセスするときは、コミュニティが保守管理している `language: csharp` 言語識別子は F# や Mono を含む、あらゆる .NET 言語で機能することにご留意ください。
 
 Travis CI は、*ビルド マトリックス*において、macOS ジョブと Linux ジョブの両方を実行できます。ビルド マトリックスでは、ランタイム、環境、除外/追加の組み合わせを指定し、アプリのビルド組み合わせを範囲に含めます。 詳細については、Travis CI ドキュメントの「[Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build)」 (ビルドをカスタマイズする) の記事を参照してください。 MSBuild ベースのツールのパッケージには、LTS (1.0.x) ランタイムと Current (1.1.x) ランタイムが含まれています。SDK をインストールすることで、ビルドに必要なすべてが与えられます。
 

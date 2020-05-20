@@ -20,7 +20,7 @@ ms.locfileid: "74349201"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>方法: レジストリ キーを作成し、その値を設定する (Visual Basic)
 
-レジストリ キーを作成するには、`CreateSubKey` オブジェクトの `My.Computer.Registry` メソッドを使用します。
+レジストリ キーを作成するには、`My.Computer.Registry` オブジェクトの `CreateSubKey` メソッドを使用します。
 
 ## <a name="procedure"></a>プロシージャ
 
@@ -52,7 +52,7 @@ ms.locfileid: "74349201"
 
 Web アプリケーションからレジストリを読み取る際、現在のユーザーは Web アプリケーションに実装されている認証と偽装によります。
 
-ローカル コンピューター (<xref:Microsoft.Win32.Registry.CurrentUser>) よりもユーザー フォルダー (<xref:Microsoft.Win32.Registry.LocalMachine>) にデータを書き込む方が安全です。
+ローカル コンピューター (<xref:Microsoft.Win32.Registry.LocalMachine>) よりもユーザー フォルダー (<xref:Microsoft.Win32.Registry.CurrentUser>) にデータを書き込む方が安全です。
 
 レジストリの値を作成するときは、その値が既存の値である場合の処理を決めておく必要があります。 悪意のあるユーザーによって作成された別のプロセスが既に値を作成し、アクセス権を持っている可能性があります。 レジストリ値にデータを設定すると、そのデータを他のプロセスから利用できるようになります。 これを回避するには、<xref:Microsoft.Win32.RegistryKey.GetValue%2A> メソッドを使います。 このメソッドは、キーがまだ存在しない場合、`Nothing` を返します。
 

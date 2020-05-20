@@ -54,7 +54,7 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 | `PackageTags`                      | `tags`                     | パッケージを説明するタグとキーワードのスペース区切りの一覧。 タグは、パッケージを検索するときに使用されます。             |
 | `PackageIconUrl`                   | `iconUrl`                  | パッケージのアイコンとして使用するイメージの URL。 URL は HTTPS にする必要があり、イメージは 64 x 64 で透明な背景になっている必要があります。             |
 | `PackageProjectUrl`                | `projectUrl`               | プロジェクトのホーム ページまたはソース リポジトリの URL。             |
-| `PackageLicenseExpression`         | `license`                  | プロジェクト ライセンスの [SPDX 識別子](https://spdx.org/licenses/)。 OSI と FSF によって承認されたライセンスのみが識別子を使用できます。 その他のライセンスでは、`PackageLicenseFile` を使用する必要があります。 [ メタデータの詳細については、`license`こちら](/nuget/reference/nuspec#license)をご覧ください。 |
+| `PackageLicenseExpression`         | `license`                  | プロジェクト ライセンスの [SPDX 識別子](https://spdx.org/licenses/)。 OSI と FSF によって承認されたライセンスのみが識別子を使用できます。 その他のライセンスでは、`PackageLicenseFile` を使用する必要があります。 `license` メタデータの詳細については、[こちら](/nuget/reference/nuspec#license)をご覧ください。 |
 
 > [!IMPORTANT]
 > ライセンスのないプロジェクトは、[排他的な著作権](https://choosealicense.com/no-permission/)を侵害しているため、他のユーザーが合法的に使用できなくなります。
@@ -92,7 +92,7 @@ NuGet パッケージは、多数の[メタデータ プロパティ](/nuget/ref
 
 シンボル ファイル (`*.pdb`) は、アセンブリと共に .NET コンパイラによって生成されます。 デバッガ―を使用して実行しながらソース コード全体をステップ実行できるように、シンボル ファイルは、実行場所を元のソース コードにマップします。 NuGet では、.NET アセンブリを含む主要なパッケージと共に、シンボル ファイルを格納している[別個のシンボル パッケージ (`*.snupkg`) の生成](/nuget/create-packages/symbol-packages-snupkg)をサポートしています。 シンボル サーバー上でホストされ、Visual Studio などのツールによってオンデマンドでしかダウンロードできないのが、シンボル パッケージの考え方です。
 
-NuGet.org は独自の[シンボル サーバー リポジトリ](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)をホストしています。 開発者は `https://symbols.nuget.org/download/symbols`Visual Studio でシンボル ソース[に ](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger) を追加することで NuGet.org シンボル サーバーに公開されたシンボルを使用できます。
+NuGet.org は独自の[シンボル サーバー リポジトリ](/nuget/create-packages/symbol-packages-snupkg#nugetorg-symbol-server)をホストしています。 開発者は [Visual Studio でシンボル ソース](/visualstudio/debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger)に `https://symbols.nuget.org/download/symbols` を追加することで NuGet.org シンボル サーバーに公開されたシンボルを使用できます。
 
 > [!IMPORTANT]
 > NuGet.org シンボル サーバーでは、SDK スタイルのプロジェクトで作成された新しい[ポータブル シンボル ファイル](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/portable_pdb.md) (`*.pdb`) のみがサポートされます。

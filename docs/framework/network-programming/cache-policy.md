@@ -27,7 +27,7 @@ ms.locfileid: "71048769"
 |クラス名|[説明]|  
 |----------------|-----------------|  
 |<xref:System.Net.Cache.HttpRequestCachePolicy>|<xref:System.Net.HttpWebRequest> オブジェクトを使用して要求されたリソースの場所ベースと時間ベースのキャッシュ ポリシーを表します。|  
-|<xref:System.Net.Cache.RequestCachePolicy>|<xref:System.Net.Cache.RequestCacheLevel.Default> オブジェクトを使用して要求されたリソースの場所ベースのキャッシュ ポリシーまたは <xref:System.Net.WebRequest> 時間ベースのキャッシュ ポリシーを表します。|  
+|<xref:System.Net.Cache.RequestCachePolicy>|<xref:System.Net.WebRequest> オブジェクトを使用して要求されたリソースの場所ベースのキャッシュ ポリシーまたは <xref:System.Net.Cache.RequestCacheLevel.Default> 時間ベースのキャッシュ ポリシーを表します。|  
 |<xref:System.Net.Cache.HttpCacheAgeControl>|時間ベースの <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトの作成に使用される値を指定します。|  
 |<xref:System.Net.Cache.HttpRequestCacheLevel>|場所ベースと時間ベースの <xref:System.Net.Cache.HttpRequestCachePolicy> オブジェクトの作成に使用される値を指定します。|  
 |<xref:System.Net.Cache.RequestCacheLevel>|場所ベースまたは <xref:System.Net.Cache.RequestCacheLevel.Default> 時間ベースの <xref:System.Net.Cache.RequestCachePolicy> オブジェクトの作成に使用される値を指定します。|  

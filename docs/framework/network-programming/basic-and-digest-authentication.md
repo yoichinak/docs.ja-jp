@@ -29,7 +29,7 @@ ms.locfileid: "71048898"
 # <a name="basic-and-digest-authentication"></a>基本認証とダイジェスト認証
 基本認証とダイジェスト認証の <xref:System.Net> 実装では、RFC2617 – HTTP 認証: 基本認証とダイジェスト認証 ([World Wide Web コンソーシアム](https://www.w3.org) の Web サイトで使用可能) に従います。  
   
- 基本認証とダイジェスト認証を使用するには、次の例に示すように、アプリケーションはインターネットからデータを要求するために使用される <xref:System.Net.WebRequest.Credentials%2A> オブジェクトの <xref:System.Net.WebRequest> プロパティでユーザー名とパスワードを指定する必要があります。  
+ 基本認証とダイジェスト認証を使用するには、次の例に示すように、アプリケーションはインターネットからデータを要求するために使用される <xref:System.Net.WebRequest> オブジェクトの <xref:System.Net.WebRequest.Credentials%2A> プロパティでユーザー名とパスワードを指定する必要があります。  
   
 ```vb  
 Dim MyURI As String = "http://www.contoso.com/"  

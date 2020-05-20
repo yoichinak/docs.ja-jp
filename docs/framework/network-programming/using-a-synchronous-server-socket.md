@@ -27,9 +27,9 @@ ms.locfileid: "71047031"
 # <a name="using-a-synchronous-server-socket"></a>同期サーバー ソケットの使用
 同期サーバー ソケットは、ソケットで接続要求が受け取られるまでアプリケーションの実行を一時停止させます。 同期ソケットは動作のためにネットワークを多用するアプリケーションには適しませんが、単純なネットワーク アプリケーションには適しています。  
   
- <xref:System.Net.Sockets.Socket> メソッドと <xref:System.Net.Sockets.Socket.Bind%2A> メソッドを利用してエンドポイントで待ち受けるように <xref:System.Net.Sockets.Socket.Listen%2A> を設定したら、<xref:System.Net.Sockets.Socket.Accept%2A> メソッドを利用し、入ってくる接続要求を受け取る準備が完了となります。 **Accept** メソッドが呼び出されると、接続要求が受け取られるまで、アプリケーションは一時停止となります。  
+ <xref:System.Net.Sockets.Socket.Bind%2A> メソッドと <xref:System.Net.Sockets.Socket.Listen%2A> メソッドを利用してエンドポイントで待ち受けるように <xref:System.Net.Sockets.Socket> を設定したら、<xref:System.Net.Sockets.Socket.Accept%2A> メソッドを利用し、入ってくる接続要求を受け取る準備が完了となります。 **Accept** メソッドが呼び出されると、接続要求が受け取られるまで、アプリケーションは一時停止となります。  
   
- 接続要求が受け取られると、**Accept** は、接続元のクライアントに関連付けられている新しい **Socket** インスタンスを返します。 次の例では、クライアントからデータを読み込み、コンソールに表示し、クライアントにデータをエコー バックしています。 **Socket** からは、いかなるメッセージング プロトコルも指定されません。そのため、文字列 "\<EOF>" はメッセージ データの終わりに印を付けます。 **という名前の**Socket`listener` が初期化され、エンドポイントにバインドされていると想定しています。  
+ 接続要求が受け取られると、**Accept** は、接続元のクライアントに関連付けられている新しい **Socket** インスタンスを返します。 次の例では、クライアントからデータを読み込み、コンソールに表示し、クライアントにデータをエコー バックしています。 **Socket** からは、いかなるメッセージング プロトコルも指定されません。そのため、文字列 "\<EOF>" はメッセージ データの終わりに印を付けます。 `listener` という名前の **Socket** が初期化され、エンドポイントにバインドされていると想定しています。  
   
 ```vb  
 Console.WriteLine("Waiting for a connection...")  

@@ -45,9 +45,9 @@ C# の `using` ステートメントおよび Visual Basic の `Using` ステー
 
 ## <a name="tryfinally-block"></a>Try/Finally ブロック
 
-`try/finally` ステートメントで `using` ブロックをラップする代わりに、`try/finally` ブロックを直接実装することもできます。 これは、個人のコーディング スタイルであることも、次のいずれかの理由からそうすることもあります。  
+`using` ステートメントで `try/finally` ブロックをラップする代わりに、`try/finally` ブロックを直接実装することもできます。 これは、個人のコーディング スタイルであることも、次のいずれかの理由からそうすることもあります。  
   
-- `catch` ブロックでスローされた例外をすべて処理する `try` ブロックを含めるため。 そうしないと、`using` ブロックがない場合に `using` ブロック内でスローされた例外と同様に、`try/catch` ステートメントによってスローされた例外は処理されません。  
+- `catch` ブロックでスローされた例外をすべて処理する `try` ブロックを含めるため。 そうしないと、`try/catch` ブロックがない場合に `using` ブロック内でスローされた例外と同様に、`using` ステートメントによってスローされた例外は処理されません。  
   
 - 宣言されたブロックに対してスコープがローカルでない <xref:System.IDisposable> を実装するオブジェクトをインスタンス化するため。  
   
@@ -56,7 +56,7 @@ C# の `using` ステートメントおよび Visual Basic の `Using` ステー
 [!code-csharp[Conceptual.Disposable#6](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.disposable/cs/using5.cs#6)]
 [!code-vb[Conceptual.Disposable#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.disposable/vb/using5.vb#6)]  
   
-この基本パターンを利用できるのは、プログラミング言語で `try/finally` ステートメントがサポートされていないが、`using` メソッドを直接呼び出すことはできるため、<xref:System.IDisposable.Dispose%2A> ブロックの実装を選択した場合、または実装する必要がある場合です。
+この基本パターンを利用できるのは、プログラミング言語で `using` ステートメントがサポートされていないが、<xref:System.IDisposable.Dispose%2A> メソッドを直接呼び出すことはできるため、`try/finally` ブロックの実装を選択した場合、または実装する必要がある場合です。
   
 ## <a name="see-also"></a>参照
 

@@ -20,7 +20,7 @@ ms.locfileid: "75713658"
 
 ## <a name="example"></a>例
 
-この例では、1 から 10 までカウントするようカウンターが初期化されます。 `continue` ステートメントと式 `(i < 9)` を組み合わせて使用すると、`continue` 本文の `for` から終わりまでのステートメントがスキップされます。
+この例では、1 から 10 までカウントするようカウンターが初期化されます。 `continue` ステートメントと式 `(i < 9)` を組み合わせて使用すると、`for` 本文の `continue` から終わりまでのステートメントがスキップされます。
 
 [!code-csharp[csrefKeywordsJump#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#3)]
 

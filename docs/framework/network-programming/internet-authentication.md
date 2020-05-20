@@ -25,7 +25,7 @@ ms.locfileid: "71047914"
 # <a name="internet-authentication"></a>インターネット認証
 <xref:System.Net> クラスは、さまざまなクライアント認証メカニズムをサポートしています。これには、基本、ダイジェスト、ネゴシエート、NTLM、および Kerberos の標準のインターネット認証方法の他に、ユーザーが作成できるカスタム メソッドも含まれます。  
   
- 認証の資格情報は、<xref:System.Net.NetworkCredential> インターフェイスを実装する <xref:System.Net.CredentialCache> クラスと <xref:System.Net.ICredentials> クラスに格納されています。 資格情報についてこれらのいずれかのクラスが照会されると、そのクラスが **NetworkCredential** クラスのインスタンスを返します。 認証プロセスは <xref:System.Net.AuthenticationManager> クラスで管理され、実際の認証プロセスは <xref:System.Net.IAuthenticationModule> インターフェイスを実装する認証モジュール クラスによって実行されます。 カスタム認証モジュールは、**AuthenticationManager** に登録してから使用する必要があります。基本、ダイジェスト、ネゴシエート、NTLM、および Kerberos の各認証方法は、既定で登録されています。  
+ 認証の資格情報は、<xref:System.Net.ICredentials> インターフェイスを実装する <xref:System.Net.NetworkCredential> クラスと <xref:System.Net.CredentialCache> クラスに格納されています。 資格情報についてこれらのいずれかのクラスが照会されると、そのクラスが **NetworkCredential** クラスのインスタンスを返します。 認証プロセスは <xref:System.Net.AuthenticationManager> クラスで管理され、実際の認証プロセスは <xref:System.Net.IAuthenticationModule> インターフェイスを実装する認証モジュール クラスによって実行されます。 カスタム認証モジュールは、**AuthenticationManager** に登録してから使用する必要があります。基本、ダイジェスト、ネゴシエート、NTLM、および Kerberos の各認証方法は、既定で登録されています。  
   
  **NetworkCredential** は、URI で識別される 1 つのインターネット リソースに関連付けられている一連の資格情報を格納し、<xref:System.Net.NetworkCredential.GetCredential%2A> メソッドへの任意の呼び出しに応答してそれらを返します。 **NetworkCredential** クラスは通常、限定された数のインターネット リソースにアクセスするアプリケーション、またはどんな場合でも同じ資格情報のセットを使用するアプリケーションで使用されます。  
   

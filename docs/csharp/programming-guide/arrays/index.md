@@ -36,7 +36,7 @@ type[] arrayName;
 - ジャグ配列は配列の配列です。そのため、配列要素は参照型で、`null` に初期化されます。
 - 配列には、ゼロから始まるインデックスが付けられます。`n` 個の要素を含む配列には、`0` から `n-1` までのインデックスが付けられます。
 - 配列の要素および配列型は、どのような型でもかまいません。
-- 配列型は、抽象基本型 [ から派生した](../../language-reference/keywords/reference-types.md)参照型<xref:System.Array>です。 この型は <xref:System.Collections.IEnumerable> と <xref:System.Collections.Generic.IEnumerable%601> を実装するので、C# のすべての配列で [foreach](../../language-reference/keywords/foreach-in.md) 反復処理を使用できます。
+- 配列型は、抽象基本型 <xref:System.Array> から派生した[参照型](../../language-reference/keywords/reference-types.md)です。 この型は <xref:System.Collections.IEnumerable> と <xref:System.Collections.Generic.IEnumerable%601> を実装するので、C# のすべての配列で [foreach](../../language-reference/keywords/foreach-in.md) 反復処理を使用できます。
 
 ## <a name="related-sections"></a>関連項目
 

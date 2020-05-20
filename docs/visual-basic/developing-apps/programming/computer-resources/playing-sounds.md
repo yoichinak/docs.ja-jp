@@ -36,11 +36,11 @@ ms.locfileid: "74345522"
   
 ## <a name="playing-looping-sounds"></a>ループ サウンドの再生  
 
- 次の例では、`My.Computer.Audio.Play` が指定されている場合に、指定されているサウンドが `PlayMode.BackgroundLoop` メソッドによってバックグラウンドで再生されます。 この例を使用する場合は、必ず自分のコンピューター上の .wav サウンド ファイルを示すファイル名を指定してください。  
+ 次の例では、`PlayMode.BackgroundLoop` が指定されている場合に、指定されているサウンドが `My.Computer.Audio.Play` メソッドによってバックグラウンドで再生されます。 この例を使用する場合は、必ず自分のコンピューター上の .wav サウンド ファイルを示すファイル名を指定してください。  
   
  [!code-vb[VbVbalrMyComputer#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#11)]  
   
- 次の例では、`My.Computer.Audio.Play` が指定されている場合に、指定されているサウンドが `PlayMode.BackgroundLoop` メソッドによってバックグラウンドで再生されます。 この例を使用する場合は、アプリケーション リソースに Waterfall という名前の .wav サウンド ファイルが含まれていることを確認してください。  
+ 次の例では、`PlayMode.BackgroundLoop` が指定されている場合に、指定されているサウンドが `My.Computer.Audio.Play` メソッドによってバックグラウンドで再生されます。 この例を使用する場合は、アプリケーション リソースに Waterfall という名前の .wav サウンド ファイルが含まれていることを確認してください。  
   
  [!code-vb[VbVbalrMyComputer#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class1.vb#12)]  
   

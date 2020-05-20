@@ -56,7 +56,7 @@ ms.locfileid: "78159391"
  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> を使用すると、同期されたコード領域へのアクセスの待機などのブロック操作から、スレッドを切り離すことができます。 また、この **Thread.Interrupt** を使用することで、<xref:System.Threading.Thread.Sleep%2A?displayProperty=nameWithType> などの操作からスレッドを切り離すこともできます。  
   
 > [!IMPORTANT]
-> `typeof(MyType)` メソッド (Visual Basic では`GetType(MyType)`) を保護するために、型 (C# の場合は`MyType::typeid`、Visual Basic の場合は`static`、C++ の場合は`Shared`) をロックしないでください。 代わりにプライベート静的オブジェクトを使用します。 同様に、C# の `this` (Visual Basic の場合は `Me`) を使用してインスタンス メソッドをロックしないでください。 代わりにプライベート オブジェクトを使用します。 クラスやインスタンスは、独自のコード以外のコードでもロックできますが、デッドロックやパフォーマンスの問題が発生する可能性があります。  
+> `static` メソッド (Visual Basic では`Shared`) を保護するために、型 (C# の場合は`typeof(MyType)`、Visual Basic の場合は`GetType(MyType)`、C++ の場合は`MyType::typeid`) をロックしないでください。 代わりにプライベート静的オブジェクトを使用します。 同様に、C# の `this` (Visual Basic の場合は `Me`) を使用してインスタンス メソッドをロックしないでください。 代わりにプライベート オブジェクトを使用します。 クラスやインスタンスは、独自のコード以外のコードでもロックできますが、デッドロックやパフォーマンスの問題が発生する可能性があります。  
   
 ### <a name="compiler-support"></a>コンパイラ サポート  
  Visual Basic と C# は、どちらも <xref:System.Threading.Monitor.Enter%2A?displayProperty=nameWithType> と <xref:System.Threading.Monitor.Exit%2A?displayProperty=nameWithType> を使用してオブジェクトをロックする言語キーワードをサポートします。 Visual Basic は [SyncLock](../../visual-basic/language-reference/statements/synclock-statement.md) ステートメントをサポートしており、C# は [lock](../../csharp/language-reference/keywords/lock-statement.md) ステートメントをサポートしています。  
@@ -65,7 +65,7 @@ ms.locfileid: "78159391"
   
 ## <a name="synchronized-context"></a>同期されたコンテキスト  
 
-.NET Framework と Xamarin のアプリケーションでのみ、任意の <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> で <xref:System.ContextBoundObject> を使用して、すべてのインスタンス メソッドとフィールドを同期できます。 同じコンテキスト ドメイン内のすべてのオブジェクトが同じロックを共有します。 複数のスレッドがメソッドやフィールドにアクセスできますが、これらのオブジェクトに一度にアクセスできるのは 1 つのスレッドだけです。  
+.NET Framework と Xamarin のアプリケーションでのみ、任意の <xref:System.ContextBoundObject> で <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> を使用して、すべてのインスタンス メソッドとフィールドを同期できます。 同じコンテキスト ドメイン内のすべてのオブジェクトが同じロックを共有します。 複数のスレッドがメソッドやフィールドにアクセスできますが、これらのオブジェクトに一度にアクセスできるのは 1 つのスレッドだけです。  
   
 ## <a name="see-also"></a>参照
 

@@ -21,7 +21,7 @@ C# のタプルは、軽量構文を使用して定義する型で、 構文が�
 > 新しいタプル機能を使用するには、<xref:System.ValueTuple> 型が必要です。
 > 型が含まれていないプラットフォームで使用する場合は、NuGet パッケージ [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/) を追加する必要があります。
 >
-> これは、フレームワークで提供される型に依存するその他の言語機能に似ています。 たとえば、`async` インターフェイスに依存する `await` や `INotifyCompletion`、`IEnumerable<T>` に依存する LINQ などがあります。 ただし、.NET がプラットフォームにさらに依存しなくなりつつあるため、配信メカニズムもそれに応じて変わりつつあります。 .NET Framework が、言語コンパイラと同じ周期で配布されるとは限りません。 新しい言語機能が新しい型に依存する場合、それらの型は、言語機能の配布時に NuGet パッケージとして入手できます。 これらの新しい型は .NET 標準 API に追加され、フレームワークの一部として配信されるため、NuGet パッケージは必要なくなります。
+> これは、フレームワークで提供される型に依存するその他の言語機能に似ています。 たとえば、`INotifyCompletion` インターフェイスに依存する `async` や `await`、`IEnumerable<T>` に依存する LINQ などがあります。 ただし、.NET がプラットフォームにさらに依存しなくなりつつあるため、配信メカニズムもそれに応じて変わりつつあります。 .NET Framework が、言語コンパイラと同じ周期で配布されるとは限りません。 新しい言語機能が新しい型に依存する場合、それらの型は、言語機能の配布時に NuGet パッケージとして入手できます。 これらの新しい型は .NET 標準 API に追加され、フレームワークの一部として配信されるため、NuGet パッケージは必要なくなります。
 
 詳しく見ていく前に、新しいタプルのサポートを追加した理由について説明します。 メソッドが返すのは 1 つのオブジェクトです。 タプルを使用すると、その 1 つのオブジェクトに複数の値を簡単にパッケージできます。
 
@@ -38,7 +38,7 @@ C# のタプルは、軽量構文を使用して定義する型で、 構文が�
 
 ## <a name="named-and-unnamed-tuples"></a>名前付きのタプルと名前がないタプル
 
-既存の `ValueTuple` 型で定義されたプロパティと同様、`Item1` 構造体のフィールドには `Item2`、`Item3`、`Tuple` といった名前が付いています。
+既存の `Tuple` 型で定義されたプロパティと同様、`ValueTuple` 構造体のフィールドには `Item1`、`Item2`、`Item3` といった名前が付いています。
 "*名前のないタプル*" には、この名前しか使用できません。 タプルに代替フィールド名を付けなかった場合は、名前のないタプルが作成されます。
 
 [!code-csharp[UnnamedTuple](../../samples/snippets/csharp/tuples/program.cs#01_UnNamedTuple "Unnamed tuple")]
@@ -54,7 +54,7 @@ C# のタプルは、軽量構文を使用して定義する型で、 構文が�
 
 コンパイラと言語によってシノニムが処理されるため、名前付きタプルを効果的に使用できるようになります。 IDE やエディターは Roslyn API を使用して、セマンティック名を読み取ります。 これにより、同じアセンブリ内の任意の場所で、セマンティック名によって名前付きタプルの要素を参照できます。 定義した名前は、コンパイル済み出力が生成されるときに、対応する `Item*` に置き換えられます。 これらの要素に設定した名前は、コンパイルされた Microsoft Intermediate Language (MSIL) には含まれません。
 
-C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使用した変数によって指定される場合があります。 これは、 **[タプル プロジェクション初期化子](#tuple-projection-initializers)** と呼ばれます。 次のコードでは、要素 `accumulation` (整数)、および `count` (倍精度浮動小数点型) で `sum` という名前のタプルを作成します。
+C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使用した変数によって指定される場合があります。 これは、 **[タプル プロジェクション初期化子](#tuple-projection-initializers)** と呼ばれます。 次のコードでは、要素 `count` (整数)、および `sum` (倍精度浮動小数点型) で `accumulation` という名前のタプルを作成します。
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 
@@ -68,7 +68,7 @@ C# 7.1 以降、タプルのフィールド名は、タプルの初期化に使�
 ## <a name="tuple-projection-initializers"></a>タプル プロジェクション初期化子
 
 一般に、タプル プロジェクション初期化子は、タプルの初期化ステートメントの右側にある変数またはフィールド名を使用して機能します。
-明示的な名前が指定された場合は、射影された名前より優先されます。 たとえば、次の初期化子では、要素は `explicitFieldOne` や `explicitFieldTwo` ではなく、`localVariableOne` と `localVariableTwo` になります。
+明示的な名前が指定された場合は、射影された名前より優先されます。 たとえば、次の初期化子では、要素は `localVariableOne` や `localVariableTwo` ではなく、`explicitFieldOne` と `explicitFieldTwo` になります。
 
 [!code-csharp[ExplicitNamedTuple](../../samples/snippets/csharp/tuples/program.cs#ProjectionExample_Explicit "Explicitly named tuple")]
 
@@ -162,7 +162,7 @@ named = differentShape;
 
 [!code-csharp[TupleVersion](../../samples/snippets/csharp/tuples/statistics.cs#07_TupleVersion "Refactor to use tuples")]
 
-Visual Studio のリファクタリング サポートにより、主要な統計情報の機能をプライベート メソッドに抽出できます。 これにより、3 つの値 `private static`、`Sum`、`SumOfSquares` を含むタプル型を返す `Count` メソッドが作成されます。
+Visual Studio のリファクタリング サポートにより、主要な統計情報の機能をプライベート メソッドに抽出できます。 これにより、3 つの値 `Sum`、`SumOfSquares`、`Count` を含むタプル型を返す `private static` メソッドが作成されます。
 
 [!code-csharp[TupleMethodVersion](../../samples/snippets/csharp/tuples/statistics.cs#08_TupleMethodVersion "After extracting utility method")]
 
@@ -252,7 +252,7 @@ public class Point
 
 上に示したように、すべてのタプル型を分解できます。 また、ユーザー定義型 (クラス、構造体、またはインターフェイス) も簡単に分解できます。
 
-型の作成者は、型を構成するデータ要素を表す任意の数の `Deconstruct` 変数に対して値を割り当てる `out` メソッドを 1 つ以上定義できます。 たとえば、次の `Person` 型は、person オブジェクトを、名と姓を表す要素に分解する `Deconstruct` メソッドを定義しています。
+型の作成者は、型を構成するデータ要素を表す任意の数の `out` 変数に対して値を割り当てる `Deconstruct` メソッドを 1 つ以上定義できます。 たとえば、次の `Person` 型は、person オブジェクトを、名と姓を表す要素に分解する `Deconstruct` メソッドを定義しています。
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
@@ -261,7 +261,7 @@ deconstruct メソッドを使用すると、`Person` から、`FirstName` プ�
 [!code-csharp[Deconstruct Type](../../samples/snippets/csharp/tuples/program.cs#12A_DeconstructType "Deconstruct a class type")]
 
 自分で作成していない型を分解することもできます。
-`Deconstruct` メソッドは、オブジェクトのアクセス可能なデータ メンバーを展開する拡張メソッドとして使用できます。 次の例は、`Student` から派生した `Person` 型と、`Student` を 3 つの変数 `FirstName`、`LastName`、`GPA` に分解する拡張メソッドを示しています。
+`Deconstruct` メソッドは、オブジェクトのアクセス可能なデータ メンバーを展開する拡張メソッドとして使用できます。 次の例は、`Person` から派生した `Student` 型と、`Student` を 3 つの変数 `FirstName`、`LastName`、`GPA` に分解する拡張メソッドを示しています。
 
 [!code-csharp[ExtensionDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#13_ExtensionDeconstructMethod "Type with a deconstruct extension method")]
 
@@ -270,9 +270,9 @@ student を 3 つの変数に割り当てると、名、姓、GPA のすべて�
 
 [!code-csharp[Deconstruct extension method](../../samples/snippets/csharp/tuples/program.cs#13A_DeconstructExtension "Deconstruct a class type using an extension method")]
 
-クラスまたはクラス階層で複数の `Deconstruct` メソッドを定義するときには注意が必要です。 `Deconstruct` パラメーターの数が同じ `out` メソッドが複数あると、あいまいさが生じ、 呼び出し元が、必要な `Deconstruct` メソッドを簡単には呼び出せなくなる場合があります。
+クラスまたはクラス階層で複数の `Deconstruct` メソッドを定義するときには注意が必要です。 `out` パラメーターの数が同じ `Deconstruct` メソッドが複数あると、あいまいさが生じ、 呼び出し元が、必要な `Deconstruct` メソッドを簡単には呼び出せなくなる場合があります。
 
-この例では、出力パラメーターが `Deconstruct` の `Person` メソッドには 2 つ、`Deconstruct` の `Student` メソッドには 3 つ含まれるため、呼び出しが不明確になる可能性は最小限に抑えられています。
+この例では、出力パラメーターが `Person` の `Deconstruct` メソッドには 2 つ、`Student` の `Deconstruct` メソッドには 3 つ含まれるため、呼び出しが不明確になる可能性は最小限に抑えられています。
 
 分解演算子は、等値性のテストには参加しません。 次の例ではコンパイラ エラー CS0019 が生成されます。
 

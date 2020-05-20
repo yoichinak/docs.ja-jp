@@ -52,7 +52,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
 1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、 **[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。
 
-2. **[アセンブリ]** タブの **[コンポーネント名]** 一覧で、`<version>.0.0.0`Microsoft.Office.Interop.Excel[、バージョン ](https://en.wikipedia.org/wiki/Microsoft_Office#Versions) (Office 製品番号のキーについては、**Microsoft バージョン**に関するページを参照してください) を選択し、Ctrl キーを押しながら **Microsoft.Office.Interop.Word**、`version <version>.0.0.0` を選択します。 アセンブリが表示されない場合は、アセンブリがインストールされ、表示されることの確認が必要になることがあります (「[方法: Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照)。
+2. **[アセンブリ]** タブの **[コンポーネント名]** 一覧で、**Microsoft.Office.Interop.Excel**、バージョン `<version>.0.0.0` (Office 製品番号のキーについては、[Microsoft バージョン](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)に関するページを参照してください) を選択し、Ctrl キーを押しながら **Microsoft.Office.Interop.Word**、`version <version>.0.0.0` を選択します。 アセンブリが表示されない場合は、アセンブリがインストールされ、表示されることの確認が必要になることがあります (「[方法: Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照)。
 
 3. **[OK]** をクリックします。
 
@@ -76,7 +76,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
      [!code-vb[csOfficeWalkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/account.vb#2)]
 
-3. 2 つの口座を含む `bankAccounts` 一覧を作成するには、次のコードを追加する、`ThisAddIn_Startup`ThisAddIn.vb*または*ThisAddIn.cs*の* メソッドに追加します。 一覧の宣言では、*コレクション初期化子*が使用されます。 詳細については、「[コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)」を参照してください。
+3. 2 つの口座を含む `bankAccounts` 一覧を作成するには、次のコードを追加する、*ThisAddIn.vb* または *ThisAddIn.cs* の `ThisAddIn_Startup` メソッドに追加します。 一覧の宣言では、*コレクション初期化子*が使用されます。 詳細については、「[コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)」を参照してください。
 
      [!code-csharp[csOfficeWalkthrough#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#3)]
 
@@ -96,7 +96,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
          詳細については、「[名前付き引数と省略可能な引数](../classes-and-structs/named-and-optional-arguments.md)」を参照してください。
 
-    - `Range`Range`Offset` オブジェクトの [ および ](<xref:Microsoft.Office.Interop.Excel.Range>) プロパティでは*インデックス付きプロパティ*機能を使用します。 この機能では、次の一般的な C# 構文を使用して COM 型からこれらのプロパティを使用することができます。 また、インデックス付きプロパティを使用すると、`Value` プロパティを使用せずに、`Range` オブジェクトの `Value2` プロパティを使用できます。 `Value` プロパティはインデックス付きですが、インデックスはオプションです。 次の例では、省略可能な引数とインデックス付きプロパティは連携しています。
+    - [Range](<xref:Microsoft.Office.Interop.Excel.Range>) オブジェクトの `Range` および `Offset` プロパティでは*インデックス付きプロパティ*機能を使用します。 この機能では、次の一般的な C# 構文を使用して COM 型からこれらのプロパティを使用することができます。 また、インデックス付きプロパティを使用すると、`Value` プロパティを使用せずに、`Range` オブジェクトの `Value2` プロパティを使用できます。 `Value` プロパティはインデックス付きですが、インデックスはオプションです。 次の例では、省略可能な引数とインデックス付きプロパティは連携しています。
 
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]
 
@@ -114,7 +114,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]
 
-     これらの追加機能では、C# の別の機能である、`Object`dynamic[ 型がある場合と同様に Office などの COM ホストから返される ](../../language-reference/builtin-types/reference-types.md) 値の処理を示します。 これは、 **[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [-link](../../language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、C# 3.0 以前のバージョンの言語で必要だった明示的なキャストが回避されます。
+     これらの追加機能では、C# の別の機能である、[dynamic](../../language-reference/builtin-types/reference-types.md) 型がある場合と同様に Office などの COM ホストから返される `Object` 値の処理を示します。 これは、 **[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [-link](../../language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、C# 3.0 以前のバージョンの言語で必要だった明示的なキャストが回避されます。
 
      たとえば、`excelApp.Columns[1]` は `Object` を返し、`AutoFit` は Excel の [Range](<xref:Microsoft.Office.Interop.Excel.Range>) メソッドであるとします。 `dynamic` がない場合、`excelApp.Columns[1]` のインスタンスとして、`Range` によって返されたオブジェクトをキャストしてから、`AutoFit` メソッドを呼び出す必要があります。
 

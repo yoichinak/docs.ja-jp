@@ -87,7 +87,7 @@ public static void Test()
   
  変性サポートのみを使用してメソッド シグネチャをデリゲート型に一致させ、`in` キーワードと `out` キーワードを使用しない場合、同等のラムダ式かメソッドを使用すれば、デリゲートをインスタンス化できることがありますが、デリゲートを別のデリゲートに割り当てることはできません。  
   
- 次のコード例では、`SampleGenericDelegate<String>` が `SampleGenericDelegate<Object>` を継承していますが、`String` を `Object` に明示的に変換することはできません。 この問題を修正するには、ジェネリック パラメーター `T` を `out` キーワードでマークします。  
+ 次のコード例では、`String` が `Object` を継承していますが、`SampleGenericDelegate<String>` を `SampleGenericDelegate<Object>` に明示的に変換することはできません。 この問題を修正するには、ジェネリック パラメーター `T` を `out` キーワードでマークします。  
   
 ```csharp  
 public delegate T SampleGenericDelegate<T>();  
@@ -112,9 +112,9 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework のバリアント型パラメーターが含まれる汎用デリゲート  
  .NET Framework 4 では、既存の複数の汎用デリゲートで、ジェネリック型パラメーターに対して変性サポートが導入されました。  
   
-- `Action` 名前空間の <xref:System> デリゲート。<xref:System.Action%601>、<xref:System.Action%602> など  
+- <xref:System> 名前空間の `Action` デリゲート。<xref:System.Action%601>、<xref:System.Action%602> など  
   
-- `Func` 名前空間の <xref:System> デリゲート。<xref:System.Func%601>、<xref:System.Func%602> など  
+- <xref:System> 名前空間の `Func` デリゲート。<xref:System.Func%601>、<xref:System.Func%602> など  
   
 - <xref:System.Predicate%601> デリゲート  
   

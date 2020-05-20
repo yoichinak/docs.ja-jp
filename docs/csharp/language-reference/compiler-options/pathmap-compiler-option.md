@@ -44,7 +44,7 @@ ms.locfileid: "69606630"
 
 ## <a name="example"></a>例
 
-ディレクトリ `t.cs`C:**work\\tests\\ 内の**  をコンパイルし、出力ではそのディレクトリを **\publish** にマップします。
+ディレクトリ **C:\\work\\tests** 内の `t.cs` をコンパイルし、出力ではそのディレクトリを **\publish** にマップします。
 
 ```console
 csc -pathmap:C:\work\tests=\publish t.cs

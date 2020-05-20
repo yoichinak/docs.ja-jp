@@ -42,9 +42,9 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-.NET Framework の以前のバージョンでは、C# ではこのコードを実行するとコンパイル エラーが発生し、Visual Basic では `Option Strict` がオンの場合にエラーが発生します。 今後は、`strings` インターフェイスが共変になったので、上記の例のように、`objects` の代わりに <xref:System.Collections.Generic.IEnumerable%601> を使用できるようになりました。
+.NET Framework の以前のバージョンでは、C# ではこのコードを実行するとコンパイル エラーが発生し、Visual Basic では `Option Strict` がオンの場合にエラーが発生します。 今後は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスが共変になったので、上記の例のように、`objects` の代わりに `strings` を使用できるようになりました。
 
-反変性により、メソッドの引数の型の派生を、インターフェイスのジェネリック パラメーターで指定されている型よりも弱くすることができます。 ここでは、反変性について説明するために、`BaseComparer` クラスのインスタンスを比較するための `BaseClass` クラスを作成した場合について考えます。 `BaseComparer` クラスは、`IEqualityComparer<BaseClass>` インターフェイスを実装します。 <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスが反変になったので、`BaseComparer` を使用して、`BaseClass` クラスを継承するクラスのインスタンスを比較することができます。 このコードの例を次に示します。
+反変性により、メソッドの引数の型の派生を、インターフェイスのジェネリック パラメーターで指定されている型よりも弱くすることができます。 ここでは、反変性について説明するために、`BaseClass` クラスのインスタンスを比較するための `BaseComparer` クラスを作成した場合について考えます。 `BaseComparer` クラスは、`IEqualityComparer<BaseClass>` インターフェイスを実装します。 <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスが反変になったので、`BaseComparer` を使用して、`BaseClass` クラスを継承するクラスのインスタンスを比較することができます。 このコードの例を次に示します。
 
 ```csharp
 // Simple hierarchy of classes.

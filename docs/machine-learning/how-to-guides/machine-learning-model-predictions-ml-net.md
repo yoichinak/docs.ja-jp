@@ -40,7 +40,7 @@ public class HousingData
 
 `Features` と `Label` の入力列名と同様に、ML.NET にはモデルによって生成される予測値列の既定の名前があります。 タスクによっては名前が異なる場合があります。
 
-このサンプルで使用されているアルゴリズムは線形回帰アルゴリズムなので、出力列の既定の名前は `Score` です。これは [ プロパティの `ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute)`PredictedPrice` 属性によって定義されます。
+このサンプルで使用されているアルゴリズムは線形回帰アルゴリズムなので、出力列の既定の名前は `Score` です。これは `PredictedPrice` プロパティの [`ColumnName`](xref:Microsoft.ML.Data.ColumnNameAttribute) 属性によって定義されます。
 
 ```csharp
 class HousingPrediction
@@ -86,7 +86,7 @@ HousingData inputData = new HousingData
 HousingPrediction prediction = predictionEngine.Predict(inputData);
 ```
 
-`Score` オブジェクトの `prediction` プロパティにアクセスすると、`150079` のような値になります。
+`prediction` オブジェクトの `Score` プロパティにアクセスすると、`150079` のような値になります。
 
 ## <a name="multiple-predictions"></a>複数の予測
 

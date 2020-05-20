@@ -91,7 +91,7 @@ using エイリアス ディレクティブの右側には、オープン ジェ
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/namespaces.md#using-directives)に関するページの [using ディレクティブ](/dotnet/csharp/language-reference/language-specification/introduction)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関するページの [using ディレクティブ](~/_csharplang/spec/namespaces.md#using-directives)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>参照
 

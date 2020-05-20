@@ -41,7 +41,7 @@ ms.locfileid: "73138103"
 
  .NET framework Version 2.0 では、<xref:System.Threading.ParameterizedThreadStart> デリゲートは、<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> メソッド オーバーロードの呼び出し時にスレッドにデータを含むオブジェクトを渡すための簡単な方法を提供します。 コード例については、「<xref:System.Threading.ParameterizedThreadStart>」を参照してください。  
   
- <xref:System.Threading.ParameterizedThreadStart> メソッド オーバーロードではすべてのオブジェクトを受け入れるため、<xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> デリゲートの使用はデータを渡すためのタイプ セーフな方法ではありません。 代わりに、ヘルパー クラスにデータとスレッド プロシージャをカプセル化し、<xref:System.Threading.ThreadStart> デリゲートを使用して、スレッド プロシージャを実行することができます。 この手法を示す例を、次に示します。
+ <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType> メソッド オーバーロードではすべてのオブジェクトを受け入れるため、<xref:System.Threading.ParameterizedThreadStart> デリゲートの使用はデータを渡すためのタイプ セーフな方法ではありません。 代わりに、ヘルパー クラスにデータとスレッド プロシージャをカプセル化し、<xref:System.Threading.ThreadStart> デリゲートを使用して、スレッド プロシージャを実行することができます。 この手法を示す例を、次に示します。
 
  [!code-cpp[System.Threading.ThreadStart2#3](../../../samples/snippets/cpp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CPP/source3.cpp#3)]
  [!code-csharp[System.Threading.ThreadStart2#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Threading.ThreadStart2/CS/source3.cs#3)]

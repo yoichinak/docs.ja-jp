@@ -17,7 +17,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "75705016"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>テキスト ファイルから読み取る方法 (C# プログラミング ガイド)
-この例では、<xref:System.IO.File.ReadAllText%2A> クラスの静的メソッド <xref:System.IO.File.ReadAllLines%2A> と <xref:System.IO.File?displayProperty=nameWithType> を使用してテキスト ファイルの内容を読み取ります。  
+この例では、<xref:System.IO.File?displayProperty=nameWithType> クラスの静的メソッド <xref:System.IO.File.ReadAllText%2A> と <xref:System.IO.File.ReadAllLines%2A> を使用してテキスト ファイルの内容を読み取ります。  
   
 <xref:System.IO.StreamReader> の使用例については、「[テキスト ファイルを 1 行ずつ読み取る方法](./how-to-read-a-text-file-one-line-at-a-time.md)」を参照してください。
   

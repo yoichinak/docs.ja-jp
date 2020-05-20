@@ -58,7 +58,7 @@ listener.BeginAccept(new AsyncCallback(SocketListener.AcceptCallback), listener)
   
  非同期ソケットは、システム スレッド プールの複数のスレッドを使用して、受信接続を処理します。 接続の受け入れに使用されるスレッド、各受信接続の処理に使用されるスレッド、接続からデータを受け取るために使用されるスレッドがあります。 スレッド プールが割り当てるスレッドによっては、これらのスレッドが同じスレッドになる可能性があります。 次の例では、<xref:System.Threading.ManualResetEvent?displayProperty=nameWithType> クラスがメイン スレッドの実行を停止し、実行を続行できるようになったらシグナルを送ります。  
   
- ローカル コンピューター上に非同期 TCP/IP Socket を作成し、接続の受け入れを開始する非同期メソッドの例を次に示します。 **というグローバル**ManualResetEvent`allDone` があり、メソッドが `SocketListener` というクラスのメンバーであり、`AcceptCallback` というコールバック メソッドが定義されているとします。  
+ ローカル コンピューター上に非同期 TCP/IP Socket を作成し、接続の受け入れを開始する非同期メソッドの例を次に示します。 `allDone` というグローバル **ManualResetEvent** があり、メソッドが `SocketListener` というクラスのメンバーであり、`AcceptCallback` というコールバック メソッドが定義されているとします。  
   
 ```vb  
 Public Sub StartListening()  
@@ -125,7 +125,7 @@ public void StartListening()
 }  
 ```  
   
- accept のコールバック メソッド (前の例では `AcceptCallback`) は、処理を継続するためにメイン アプリケーション スレッドにシグナルを送り、クライアントとの接続を確立し、クライアントからデータの非同期読み取りを開始します。 次の例は、`AcceptCallback` メソッドの実装の最初の部分です。 このメソッドのセクションでは、処理を継続するためにメイン アプリケーション スレッドに信号を送り、クライアントへの接続を確立しています。 **というグローバル**ManualResetEvent`allDone` があるとします。  
+ accept のコールバック メソッド (前の例では `AcceptCallback`) は、処理を継続するためにメイン アプリケーション スレッドにシグナルを送り、クライアントとの接続を確立し、クライアントからデータの非同期読み取りを開始します。 次の例は、`AcceptCallback` メソッドの実装の最初の部分です。 このメソッドのセクションでは、処理を継続するためにメイン アプリケーション スレッドに信号を送り、クライアントへの接続を確立しています。 `allDone` というグローバル **ManualResetEvent** があるとします。  
   
 ```vb  
 Public Sub AcceptCallback(ar As IAsyncResult)  
@@ -173,7 +173,7 @@ public class StateObject
   
  クライアント ソケットからデータの受信を開始する `AcceptCallback` メソッドのセクションでは、まず `StateObject` クラスのインスタンスを初期化してから、<xref:System.Net.Sockets.Socket.BeginReceive%2A> メソッドを呼び出してクライアント ソケットからデータの読み取りを非同期に開始します。  
   
- `AcceptCallback` メソッドのサンプル コード全体を次に示します。 **クラスが定義されている** というグローバル `allDone,`ManualResetEvent`StateObject` があり、`ReadCallback` メソッドが `SocketListener` というクラスで定義されているとします。  
+ `AcceptCallback` メソッドのサンプル コード全体を次に示します。 `StateObject` クラスが定義されている `allDone,` というグローバル **ManualResetEvent** があり、`ReadCallback` メソッドが `SocketListener` というクラスで定義されているとします。  
   
 ```vb  
 Public Shared Sub AcceptCallback(ar As IAsyncResult)  

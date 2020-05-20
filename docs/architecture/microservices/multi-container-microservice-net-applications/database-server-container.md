@@ -15,7 +15,7 @@ ms.locfileid: "77628528"
 
 ## <a name="sql-server-running-as-a-container-with-a-microservice-related-database"></a>マイクロサービスに関連するデータベースを含むコンテナーとして実行している SQL Server
 
-eShopOnContainers には、`sqldata`docker-compose.yml[ ファイルに定義される ](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) という名前のコンテナーがあり、これによって Linux インスタンス用の SQL サーバーとすべてのマイクロサービスに必要な SQL データベースが実行されます。
+eShopOnContainers には、[docker-compose.yml](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/docker-compose.yml) ファイルに定義される `sqldata` という名前のコンテナーがあり、これによって Linux インスタンス用の SQL サーバーとすべてのマイクロサービスに必要な SQL データベースが実行されます。
 
 マイクロサービスの重要な点は、各マイクロサービスで関連データが所有されるため、専用のデータベースを用意する必要があることです。 ただし、データベースは任意の場所に置くことができます。 ここでは、Docker のメモリ要件をできるだけ低く保つために、これらはすべて同じコンテナー内にあります。 これは開発にとって (おそらくテストにとっても) 十分なソリューションですが、運用環境には適していないことに留意してください。
 
@@ -55,7 +55,7 @@ SQL Server のコンテナーとしての実行は、SQL Server のインスタ�
 
 ## <a name="seeding-with-test-data-on-web-application-startup"></a>Web アプリケーションの起動時のテスト データのシード処理
 
-アプリケーションの起動時にデータベースにデータを追加するには、Web API プロジェクトの `Main` クラス内の `Program` メソッドに次のようなコードを追加できます。
+アプリケーションの起動時にデータベースにデータを追加するには、Web API プロジェクトの `Program` クラス内の `Main` メソッドに次のようなコードを追加できます。
 
 ```csharp
 public static int Main(string[] args)

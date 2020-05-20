@@ -20,7 +20,7 @@ ms.locfileid: "74335073"
   
 ### <a name="to-parse-a-comma-delimited-text-file"></a>コンマ区切りテキスト ファイルを解析するには  
   
-1. 新しい `TextFieldParser` を作成します。 次のコードは、`TextFieldParser` という名前の `MyReader` を作成し、`test.txt` ファイルを開きます。  
+1. 新しい `TextFieldParser` を作成します。 次のコードは、`MyReader` という名前の `TextFieldParser` を作成し、`test.txt` ファイルを開きます。  
   
      [!code-vb[VbFileIORead#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIORead/VB/Class1.vb#15)]  
   

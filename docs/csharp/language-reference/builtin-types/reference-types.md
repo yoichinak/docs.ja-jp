@@ -144,7 +144,7 @@ public delegate int AnotherDelegate(MyType m, long num);
 
 ほとんどの環境で、`dynamic` 型は `object` 型のように動作します。 具体的には、null 以外の任意の式を `dynamic` 型に変換できます。 `dynamic` 型は `object` と異なり、`dynamic` 型の式を含む演算はコンパイラによって解決または型チェックされません。 コンパイラは演算に関する情報をまとめてパッケージ化します。その情報が後で実行時に演算を評価するために使用されます。 このプロセスの過程で、`dynamic` 型の変数は `object` 型の変数にコンパイルされます。 そのため、`dynamic` 型はコンパイル時にのみ存在し、実行時には存在しません。
 
-`dynamic` 型の変数と `object` 型の変数の違いを次に示します。 コンパイル時に各変数の型を確認するには、`dyn` ステートメントの `obj` または `WriteLine` にマウス ポインターを置きます。 IntelliSense が使用可能なエディターに、次のコードをコピーします。 IntelliSense 機能によって、**には**dynamic`dyn`、**には**object`obj` が表示されます。
+`dynamic` 型の変数と `object` 型の変数の違いを次に示します。 コンパイル時に各変数の型を確認するには、`WriteLine` ステートメントの `dyn` または `obj` にマウス ポインターを置きます。 IntelliSense が使用可能なエディターに、次のコードをコピーします。 IntelliSense 機能によって、`dyn` には **dynamic**、`obj` には **object** が表示されます。
 
 [!code-csharp[csrefKeywordsTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/dynamic1.cs#21)]
 

@@ -37,7 +37,7 @@ ms.locfileid: "75635939"
 > 既に SQL や XQuery などのクエリ言語に精通している場合は、このトピックの大部分を省略できます。 LINQ クエリ式における句の順序について理解するには、次のセクションの "`from` 句" を参照してください。  
   
 ## <a name="obtaining-a-data-source"></a>データ ソースの取得  
- LINQ クエリで必要な最初の手順は、データ ソースを指定することです。 ほとんどのプログラミング言語と同じように、C# でも、変数を使用する前に宣言しておく必要があります。 LINQ クエリでは、データ ソース (`from`) および "`customers`範囲変数 *" (* ) を導入するために `cust` 句が最初に使用されます。  
+ LINQ クエリで必要な最初の手順は、データ ソースを指定することです。 ほとんどのプログラミング言語と同じように、C# でも、変数を使用する前に宣言しておく必要があります。 LINQ クエリでは、データ ソース (`customers`) および "*範囲変数*" (`cust`) を導入するために `from` 句が最初に使用されます。  
   
  [!code-csharp[csLINQGettingStarted#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#23)]  
   

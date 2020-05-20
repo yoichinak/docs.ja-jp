@@ -30,7 +30,7 @@ ms.locfileid: "75713249"
 
 `override` 宣言は、`virtual` メソッドのアクセシビリティを変更できません。 `override` メソッドと `virtual` メソッドの両方に、同じ[アクセス レベル修飾子](access-modifiers.md)が必要です。
 
-`new` メソッドの修飾に、修飾子 `static`、`virtual`、または `override` は使用できません。
+`override` メソッドの修飾に、修飾子 `new`、`static`、または `virtual` は使用できません。
 
 オーバーライドするプロパティの宣言では、継承されるプロパティとまったく同じアクセス修飾子、型、および名前を指定する必要があります。オーバーライドされるプロパティは、`virtual`、`abstract`、または `override` である必要があります。
 

@@ -16,7 +16,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "73123182"
 ---
 # <a name="attached-and-detached-child-tasks"></a>アタッチされた子タスクとデタッチされた子タスク
-*子タスク* (または*入れ子のタスク*) は、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>親タスク *と呼ばれる、別のタスクのユーザー デリゲートで作成された、* のインスタンスです。 子タスクはデタッチまたはアタッチできます。 *デタッチされた子タスク* は、親とは独立して実行されるタスクです。 *アタッチされた子タスク* は、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションで作成される入れ子のタスクです。その親は、明示的にも既定でも、子タスクがアタッチされることを禁止しません。 タスクでは、システム リソースが許す限り、任意の数のアタッチされた子タスクおよびデタッチされた子タスクを作成できます。  
+*子タスク* (または*入れ子のタスク*) は、*親タスク* と呼ばれる、別のタスクのユーザー デリゲートで作成された、<xref:System.Threading.Tasks.Task?displayProperty=nameWithType> のインスタンスです。 子タスクはデタッチまたはアタッチできます。 *デタッチされた子タスク* は、親とは独立して実行されるタスクです。 *アタッチされた子タスク* は、<xref:System.Threading.Tasks.TaskCreationOptions.AttachedToParent?displayProperty=nameWithType> オプションで作成される入れ子のタスクです。その親は、明示的にも既定でも、子タスクがアタッチされることを禁止しません。 タスクでは、システム リソースが許す限り、任意の数のアタッチされた子タスクおよびデタッチされた子タスクを作成できます。  
   
  以下の表に、2 種類の子タスクの基本的な相違点を示します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "73123182"
   
  アタッチされた子タスクを使用すると、非同期操作の厳密に同期されたグラフを作成できます。  
   
- ただし、その親タスクが子タスクのアタッチを禁止していない場合にのみ、子タスクは親タスクにアタッチできます。 親タスクは、親タスクのクラスのコンストラクターの <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> オプションまたは <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドで指定することで、明示的に子タスクが親タスクにアタッチできないようにすることができます。 親タスクが <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> メソッドを呼び出して作成された場合、親タスクは暗黙的に子タスクをアタッチできないようにします。 次の例を使って説明します。 親タスクが <xref:System.Threading.Tasks.Task.Run%28System.Action%29?displayProperty=nameWithType> メソッドではなく <xref:System.Threading.Tasks.TaskFactory.StartNew%28System.Action%29?displayProperty=nameWithType> メソッドを呼び出して作成される点を除き、これは前の例と同一です。 子タスクはその親にアタッチすることができないため、例からの出力は予測できません。 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> のオーバーロードにおける既定のタスクの作成オプションには <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> が含まれるため、この例は、「デタッチされた子タスク」セクションの最初の例と機能的に同等です。  
+ ただし、その親タスクが子タスクのアタッチを禁止していない場合にのみ、子タスクは親タスクにアタッチできます。 親タスクは、親タスクのクラスのコンストラクターの <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> オプションまたは <xref:System.Threading.Tasks.TaskFactory.StartNew%2A?displayProperty=nameWithType> メソッドで指定することで、明示的に子タスクが親タスクにアタッチできないようにすることができます。 親タスクが <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> メソッドを呼び出して作成された場合、親タスクは暗黙的に子タスクをアタッチできないようにします。 次の例を使って説明します。 親タスクが <xref:System.Threading.Tasks.TaskFactory.StartNew%28System.Action%29?displayProperty=nameWithType> メソッドではなく <xref:System.Threading.Tasks.Task.Run%28System.Action%29?displayProperty=nameWithType> メソッドを呼び出して作成される点を除き、これは前の例と同一です。 子タスクはその親にアタッチすることができないため、例からの出力は予測できません。 <xref:System.Threading.Tasks.Task.Run%2A?displayProperty=nameWithType> のオーバーロードにおける既定のタスクの作成オプションには <xref:System.Threading.Tasks.TaskCreationOptions.DenyChildAttach?displayProperty=nameWithType> が含まれるため、この例は、「デタッチされた子タスク」セクションの最初の例と機能的に同等です。  
   
  [!code-csharp[TPL_ChildTasks#3](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_childtasks/cs/child1a.cs#3)]
  [!code-vb[TPL_ChildTasks#3](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_childtasks/vb/child1a.vb#3)]  

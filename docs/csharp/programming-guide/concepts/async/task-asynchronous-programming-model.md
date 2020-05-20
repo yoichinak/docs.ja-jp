@@ -70,14 +70,14 @@ async Task<int> AccessTheWebAsync()
 }
 ```
 
-上のサンプルからいくつかの方法を習得できます。 メソッド シグネチャから始めます。 これには `async` 修飾子が含まれています。 戻り値の型は `Task<int>` です (他のオプションについては "戻り値の型" セクションを参照してください)。 メソッド名の末尾は `Async` です。 メソッドの本体で、`GetStringAsync` により `Task<string>` が返されます。 つまり、タスクに `await` を指定すると、`string` が与えられます (`urlContents`)。  タスクを待つ前に、`string` の `GetStringAsync` に依存しない作業を実行できます。
+上のサンプルからいくつかの方法を習得できます。 メソッド シグネチャから始めます。 これには `async` 修飾子が含まれています。 戻り値の型は `Task<int>` です (他のオプションについては "戻り値の型" セクションを参照してください)。 メソッド名の末尾は `Async` です。 メソッドの本体で、`GetStringAsync` により `Task<string>` が返されます。 つまり、タスクに `await` を指定すると、`string` が与えられます (`urlContents`)。  タスクを待つ前に、`GetStringAsync` の `string` に依存しない作業を実行できます。
 
 `await` 演算子に特に注意してください。 これは `AccessTheWebAsync` を一時停止させます。
 
 - `AccessTheWebAsync` は `getStringTask` が完了するまで続行できません。
 - その間、コントロールは `AccessTheWebAsync` の呼び出し元に戻されます。
 - `getStringTask` が完了すると、コントロールがここに戻ります。
-- 次に、`await` 演算子は `string` から `getStringTask` の結果を取得します。
+- 次に、`await` 演算子は `getStringTask` から `string` の結果を取得します。
 
 return ステートメントによって整数の結果が指定されます。 `AccessTheWebAsync` を待つメソッドは長さ値を取得します。
 
@@ -93,7 +93,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 - 非同期メソッドの名前は、慣例により「Async」というサフィックスで終わります。
 - 戻り値の型は次のいずれかになります:
 
-  - メソッドが、オペランドに <xref:System.Threading.Tasks.Task%601> 型を持つステートメントを戻す場合、`TResult`。
+  - メソッドが、オペランドに `TResult` 型を持つステートメントを戻す場合、<xref:System.Threading.Tasks.Task%601>。
   - メソッドがステートメントを戻さない、またはオペランドを持たないステートメントを戻す場合、<xref:System.Threading.Tasks.Task>。
   - 非同期のイベント ハンドラーを作成する場合、`void`。
   - `GetAwaiter` メソッドがあるその他の任意の型 (C# 7.0 以降)。
@@ -120,7 +120,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 
 3. `GetStringAsync` に何かが発生するとプロセスが中断します。 Web サイトからのダウンロード処理、または他のブロックしているアクティビティを待機する必要が考えられます。 リソースのブロックを回避するために、`GetStringAsync` は呼び出し元の `AccessTheWebAsync` にコントロールを戻します。
 
-     `GetStringAsync` は <xref:System.Threading.Tasks.Task%601> が文字列である `TResult` を返し、`AccessTheWebAsync` は `getStringTask` 変数にタスクを割り当てます。 タスクには `GetStringAsync` への呼び出しの進行中のプロセスを表し、作業が完了すると実際の文字列値を生成するコミットメントがあります。
+     `GetStringAsync` は `TResult` が文字列である <xref:System.Threading.Tasks.Task%601> を返し、`AccessTheWebAsync` は `getStringTask` 変数にタスクを割り当てます。 タスクには `GetStringAsync` への呼び出しの進行中のプロセスを表し、作業が完了すると実際の文字列値を生成するコミットメントがあります。
 
 4. `getStringTask` が待機しないため、`AccessTheWebAsync` は `GetStringAsync` からの最終結果に依存しない他の作業を続行できます。 この作業は同期メソッド `DoIndependentWork` への呼び出しによって表されます。
 
@@ -144,7 +144,7 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com/dot
 
 ## <a name="api-async-methods"></a><a name="BKMK_APIAsyncMethods"></a> API の非同期メソッド
 
-非同期のプログラミングをサポートする `GetStringAsync` などのメソッドがどこにあるのかということです。 .NET Framework 4.5 以降および .NET Core には、`async` および `await` で使用する多くのメンバーが含まれています。 メンバー名に付記されている "Async" というサフィックスと、その戻り値の型である <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> から識別できます。 たとえば、`System.IO.Stream` のクラスには、同期メソッドの <xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A>、および <xref:System.IO.Stream.WriteAsync%2A> と共に、<xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A> および <xref:System.IO.Stream.Write%2A> という同期メソッドが含まれています。
+非同期のプログラミングをサポートする `GetStringAsync` などのメソッドがどこにあるのかということです。 .NET Framework 4.5 以降および .NET Core には、`async` および `await` で使用する多くのメンバーが含まれています。 メンバー名に付記されている "Async" というサフィックスと、その戻り値の型である <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> から識別できます。 たとえば、`System.IO.Stream` のクラスには、同期メソッドの <xref:System.IO.Stream.CopyTo%2A>、<xref:System.IO.Stream.Read%2A>、および <xref:System.IO.Stream.Write%2A> と共に、<xref:System.IO.Stream.CopyToAsync%2A>、<xref:System.IO.Stream.ReadAsync%2A> および <xref:System.IO.Stream.WriteAsync%2A> という同期メソッドが含まれています。
 
 Windows ランタイムにも、Windows アプリの `async` と `await` で使用できる多くのメソッドが含まれています。 UWP 開発の詳細については、「[スレッド化と非同期プログラミング](/windows/uwp/threading-async/)」を参照してください。旧バージョンの Windows ランタイムを使用する場合は、「[Asynchronous programming (Windows Store apps)](https://docs.microsoft.com/previous-versions/windows/apps/hh464924(v=win.10))」 (非同期プログラミング (Windows ストア アプリ)) および「[Quickstart: Calling asynchronous APIs in C# or Visual Basic](https://docs.microsoft.com/previous-versions/windows/apps/hh452713(v=win.10))」(クイック スタート: C# または Visual Basic での非同期 API の呼び出し) を参照してください。
 
@@ -177,7 +177,7 @@ Windows ランタイムにも、Windows アプリの `async` と `await` で使�
 
 非同期メソッドは、通常 <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返します。 非同期のメソッド内で、`await` 演算子は、他の非同期のメソッドへの呼び出しから戻されたタスクに適用されます。
 
-メソッドが、<xref:System.Threading.Tasks.Task%601> 型のオペランドを指定する [`return`](../../../language-reference/keywords/return.md) ステートメントを含む場合、`TResult` を戻り値の型として指定します。
+メソッドが、`TResult` 型のオペランドを指定する [`return`](../../../language-reference/keywords/return.md) ステートメントを含む場合、<xref:System.Threading.Tasks.Task%601> を戻り値の型として指定します。
 
 メソッドに Return ステートメントがない場合、または Return ステートメントがオペランドを戻さない場合、<xref:System.Threading.Tasks.Task> を戻り値の型として使用します。
 

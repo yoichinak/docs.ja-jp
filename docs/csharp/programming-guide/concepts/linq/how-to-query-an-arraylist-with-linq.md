@@ -10,7 +10,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "79168935"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-c"></a>LINQ を使用して ArrayList にクエリを実行する方法 (C#)
-LINQ を使用して <xref:System.Collections.IEnumerable> などの非ジェネリックの <xref:System.Collections.ArrayList> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 たとえば、<xref:System.Collections.ArrayList> オブジェクトの `Student` がある場合、[from 句](../../../language-reference/keywords/from-clause.md)は次のようになります。  
+LINQ を使用して <xref:System.Collections.ArrayList> などの非ジェネリックの <xref:System.Collections.IEnumerable> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 たとえば、`Student` オブジェクトの <xref:System.Collections.ArrayList> がある場合、[from 句](../../../language-reference/keywords/from-clause.md)は次のようになります。  
   
 ```csharp
 var query = from Student s in arrList  

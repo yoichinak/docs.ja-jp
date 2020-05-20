@@ -34,7 +34,7 @@ ms.locfileid: "79181252"
   
 - 特定のまれな条件下では、コンパイラの最適化が有効な場合に、条件付きのビット テストで正しくない <xref:System.Boolean> 値が返されたり、例外がスローされたりすることがあります。  
   
-- 特定の条件下では、`if` ステートメントを使用して、`try` ブロックの開始前と `try` ブロックの終了時の条件をテストし、同じ条件を `catch` または `finally` ブロックで評価する場合、新しい 64 ビット JIT コンパイラが、コードの最適化の際に `if` または `catch` ブロックから `finally` 条件を削除します。 その結果、`if` または `catch` ブロックの `finally` ステートメント内のコードは無条件で実行されます。  
+- 特定の条件下では、`if` ステートメントを使用して、`try` ブロックの開始前と `try` ブロックの終了時の条件をテストし、同じ条件を `catch` または `finally` ブロックで評価する場合、新しい 64 ビット JIT コンパイラが、コードの最適化の際に `catch` または `finally` ブロックから `if` 条件を削除します。 その結果、`catch` または `finally` ブロックの `if` ステートメント内のコードは無条件で実行されます。  
   
 <a name="General"></a>
 ## <a name="mitigation-of-known-issues"></a>既知の問題の軽減策  
@@ -61,9 +61,9 @@ ms.locfileid: "79181252"
     </configuration>  
     ```  
   
-- ユーザーごとに、`REG_DWORD` という `useLegacyJit` 値をレジストリの `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` キーに追加できます。 値を 1 にすると、従来の 64 ビット JIT コンパイラが有効になり、値を 0 にすると、従来の 64 ビット JIT コンパイラが無効になり、新しい 64 ビット JIT コンパイラが有効になります。  
+- ユーザーごとに、`useLegacyJit` という `REG_DWORD` 値をレジストリの `HKEY_CURRENT_USER\SOFTWARE\Microsoft\.NETFramework` キーに追加できます。 値を 1 にすると、従来の 64 ビット JIT コンパイラが有効になり、値を 0 にすると、従来の 64 ビット JIT コンパイラが無効になり、新しい 64 ビット JIT コンパイラが有効になります。  
   
-- コンピューターごとに、`REG_DWORD` という名前の `useLegacyJit` 値をレジストリの `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` キーに追加できます。 値を 1 にすると、従来の 64 ビット JIT コンパイラが有効になり、値を 0 にすると、従来の 64 ビット JIT コンパイラが無効になり、新しい 64 ビット JIT コンパイラが有効になります。  
+- コンピューターごとに、`useLegacyJit` という名前の `REG_DWORD` 値をレジストリの `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework` キーに追加できます。 値を 1 にすると、従来の 64 ビット JIT コンパイラが有効になり、値を 0 にすると、従来の 64 ビット JIT コンパイラが無効になり、新しい 64 ビット JIT コンパイラが有効になります。  
   
  [Microsoft Connect](https://connect.microsoft.com/VisualStudio) でバグを報告し、問題を弊社に知らせることもできます。  
   

@@ -38,7 +38,7 @@ ms.locfileid: "74345574"
   
 - <xref:System.Windows.Forms> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
-- <xref:System.Windows.Forms.ListBox> という名前の `ListBox1` コントロールを持つフォーム。  
+- `ListBox1` という名前の <xref:System.Windows.Forms.ListBox> コントロールを持つフォーム。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
 

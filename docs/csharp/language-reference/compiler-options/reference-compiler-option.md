@@ -40,7 +40,7 @@ ms.locfileid: "79173667"
 ## <a name="remarks"></a>解説  
  複数のファイルからインポートするには、ファイルごとに **-reference** オプションを指定します。  
   
- インポートするファイルは、マニフェストが含まれている必要があります。出力ファイルは、[-target:module](./target-compiler-option.md) 以外のいずれかの [-target](./target-module-compiler-option.md) オプションでコンパイルされている必要があります。  
+ インポートするファイルは、マニフェストが含まれている必要があります。出力ファイルは、[-target:module](./target-module-compiler-option.md) 以外のいずれかの [-target](./target-compiler-option.md) オプションでコンパイルされている必要があります。  
   
  **-r** は **-reference** の省略形です。  
   
@@ -80,13 +80,13 @@ extern alias GridV2;
 // Using statements go here.  
 ```  
   
- このようにすると、コントロール名にプレフィックス `grid.dll` を付けることで、`GridV1` のグリッド コントロールを参照できます。次に示すのはその例です。  
+ このようにすると、コントロール名にプレフィックス `GridV1` を付けることで、`grid.dll` のグリッド コントロールを参照できます。次に示すのはその例です。  
   
 ```csharp  
 GridV1::Grid  
 ```  
   
- さらに、コントロール名にプレフィックス `grid20.dll` を付けることで、`GridV2` のグリッド コントロールを参照できます。次に示すのはその例です。  
+ さらに、コントロール名にプレフィックス `GridV2` を付けることで、`grid20.dll` のグリッド コントロールを参照できます。次に示すのはその例です。  
   
 ```csharp  
 GridV2::Grid

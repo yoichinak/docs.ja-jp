@@ -21,7 +21,7 @@ ms.locfileid: "79397753"
 
 一部のデータ変換には、そのパラメーターを計算するためにトレーニング データが必要です。 たとえば、<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> トランスフォーマーは、`Fit()` の操作中にトレーニング データの平均と分散を計算し、`Transform()` 操作でそのパラメーターを使用します。
 
-他のデータ変換はトレーニング データを必要としません。 たとえば、<xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> の変換は、`Transform()` の操作中にトレーニング データを確認せずに `Fit()` の操作を実行できます。
+他のデータ変換はトレーニング データを必要としません。 たとえば、<xref:Microsoft.ML.ImageEstimatorsCatalog.ConvertToGrayscale%2A> の変換は、`Fit()` の操作中にトレーニング データを確認せずに `Transform()` の操作を実行できます。
 
 ## <a name="column-mapping-and-grouping"></a>列のマップとグループ化
 

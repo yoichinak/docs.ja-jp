@@ -119,17 +119,17 @@ ms.locfileid: "79181703"
 ## <a name="avoid-loading-an-assembly-into-multiple-contexts"></a>1 つのアセンブリを複数のコンテキストに読み込まない  
  1 つのアセンブリを複数のコンテキストに読み込むと、型 ID の問題が引き起こされることがあります。 2 つの異なるコンテキストに同じアセンブリから同じ型が読み込まれると、同じ名前を持つ 2 つの異なる型が読み込まれたような状態になります。 一方の型を別の型にキャストしようとした場合、<xref:System.InvalidCastException> がスローされ、型 `MyType` を型 `MyType` にキャストできないという混乱を招くメッセージが表示されます。  
   
- たとえば、`ICommunicate` という名前のアセンブリで `Utility` インターフェイスが宣言されているとします。このアセンブリは、ユーザーのプログラムで参照され、そのプログラムが読み込む他のアセンブリによっても参照されています。 これらの他のアセンブリには、`ICommunicate` インターフェイスを実装する型が含まれ、ユーザーのプログラムで使用できるようになっています。  
+ たとえば、`Utility` という名前のアセンブリで `ICommunicate` インターフェイスが宣言されているとします。このアセンブリは、ユーザーのプログラムで参照され、そのプログラムが読み込む他のアセンブリによっても参照されています。 これらの他のアセンブリには、`ICommunicate` インターフェイスを実装する型が含まれ、ユーザーのプログラムで使用できるようになっています。  
   
  では、このプログラムを実行すると何が起きるでしょうか。 プログラムで参照されているアセンブリは、既定の読み込みコンテキストに読み込まれます。 <xref:System.Reflection.Assembly.Load%2A> メソッドを使用し、ID を指定してターゲット アセンブリを読み込んだ場合は、アセンブリが既定の読み込みコンテキストに配置され、その依存関係も同様に扱われます。 プログラムとターゲット アセンブリは、どちらも同じ `Utility` アセンブリを使用することになります。  
   
- ただし、ここでは、<xref:System.Reflection.Assembly.LoadFile%2A> メソッドを使用し、ファイル パスを指定してターゲット アセンブリを読み込む場合を想定します。 アセンブリはコンテキストなしで読み込まれるため、その依存関係は自動的には読み込まれません。 そこで、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベント ハンドラーを使用して依存関係を指定し、`Utility` メソッドを使用して、コンテキストなしで <xref:System.Reflection.Assembly.LoadFile%2A> アセンブリを読み込むことにします。 この場合、ターゲット アセンブリに含まれる型のインスタンスを作成し、そのインスタンスを型 `ICommunicate` の変数に割り当てようとすると、<xref:System.InvalidCastException> がスローされます。ランタイムでは、`ICommunicate` アセンブリの 2 つのコピーに含まれている `Utility` インターフェイスが、別々の型であると見なされるためです。  
+ ただし、ここでは、<xref:System.Reflection.Assembly.LoadFile%2A> メソッドを使用し、ファイル パスを指定してターゲット アセンブリを読み込む場合を想定します。 アセンブリはコンテキストなしで読み込まれるため、その依存関係は自動的には読み込まれません。 そこで、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベント ハンドラーを使用して依存関係を指定し、<xref:System.Reflection.Assembly.LoadFile%2A> メソッドを使用して、コンテキストなしで `Utility` アセンブリを読み込むことにします。 この場合、ターゲット アセンブリに含まれる型のインスタンスを作成し、そのインスタンスを型 `ICommunicate` の変数に割り当てようとすると、<xref:System.InvalidCastException> がスローされます。ランタイムでは、`Utility` アセンブリの 2 つのコピーに含まれている `ICommunicate` インターフェイスが、別々の型であると見なされるためです。  
   
  1 つのアセンブリが複数のコンテキストに読み込まれるシナリオは、これ以外にも数多くあります。 このような競合を回避する最善の方法は、ターゲット アセンブリをアプリケーション パスに再配置し、完全な表示名を指定して <xref:System.Reflection.Assembly.Load%2A> メソッドを使用することです。 これにより、アセンブリが既定の読み込みコンテキストに読み込まれ、どちらのアセンブリも同じ `Utility` アセンブリを使用することになります。  
   
  ターゲット アセンブリをアプリケーション パスの外部に配置する必要がある場合は、<xref:System.Reflection.Assembly.LoadFrom%2A> メソッドを使用して、読み込み元コンテキストに読み込むことができます。 アプリケーションの `Utility` アセンブリへの参照を使用してコンパイルされたターゲット アセンブリでは、アプリケーションが既定の読み込みコンテキストに読み込んだ `Utility` アセンブリが使用されます。 アプリケーション パスの外部に配置された `Utility` アセンブリのコピーに対してターゲット アセンブリが依存関係を持っている場合は、問題が発生する可能性があることに注意が必要です。 アプリケーションが `Utility` アセンブリを読み込む前に、このような依存関係を持つアセンブリが読み込み元コンテキストに読み込まれると、アプリケーションの読み込みは失敗します。  
   
- [ や ](#switch_to_default) などのファイル パスからの読み込みに代わる代替手段については、「<xref:System.Reflection.Assembly.LoadFile%2A>既定の読み込みコンテキストへの切り替えを検討する<xref:System.Reflection.Assembly.LoadFrom%2A>」で説明します。  
+ <xref:System.Reflection.Assembly.LoadFile%2A> や <xref:System.Reflection.Assembly.LoadFrom%2A> などのファイル パスからの読み込みに代わる代替手段については、「[既定の読み込みコンテキストへの切り替えを検討する](#switch_to_default)」で説明します。  
   
 <a name="avoid_loading_multiple_versions"></a>
 ## <a name="avoid-loading-multiple-versions-of-an-assembly-into-the-same-context"></a>複数のバージョンのアセンブリを同じコンテキストに読み込まない  

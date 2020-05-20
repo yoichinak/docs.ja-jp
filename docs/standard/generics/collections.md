@@ -24,7 +24,7 @@ ms.locfileid: "75708411"
   
 ## <a name="systemcollectionsgeneric"></a>System.Collections.Generic
 
- ジェネリック コレクション型の多くは、非ジェネリック型に直接類似しています。 <xref:System.Collections.Generic.Dictionary%602> は、<xref:System.Collections.Hashtable> のジェネリック バージョンです。これは列挙体のために <xref:System.Collections.Generic.KeyValuePair%602> ではなくジェネリック構造体 <xref:System.Collections.DictionaryEntry> を使用します。  
+ ジェネリック コレクション型の多くは、非ジェネリック型に直接類似しています。 <xref:System.Collections.Generic.Dictionary%602> は、<xref:System.Collections.Hashtable> のジェネリック バージョンです。これは列挙体のために <xref:System.Collections.DictionaryEntry> ではなくジェネリック構造体 <xref:System.Collections.Generic.KeyValuePair%602> を使用します。  
   
  <xref:System.Collections.Generic.List%601> は <xref:System.Collections.ArrayList> のジェネリック バージョンです。 ジェネリックの <xref:System.Collections.Generic.Queue%601> および <xref:System.Collections.Generic.Stack%601> クラスには、非ジェネリックのバージョンに対応するものがあります。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "75708411"
   
  <xref:System.ArraySegment%601> ジェネリック構造体は、任意の型の 0 から始まる 1 次元の配列内で、要素の範囲を区切る方法を提供します。 ジェネリック型パラメーターは、配列の要素の型です。  
   
- <xref:System.EventHandler%601> ジェネリック デリゲートにより、イベントが .NET Framework によって使用されるイベント処理パターンに従う場合に、イベントを処理するためにデリゲート型を宣言する必要がなくなります。 たとえば、イベントのデータを保持するために、`MyEventArgs` から派生した <xref:System.EventArgs> クラスを作成したとします。 その場合、イベントを次のように宣言できます。  
+ <xref:System.EventHandler%601> ジェネリック デリゲートにより、イベントが .NET Framework によって使用されるイベント処理パターンに従う場合に、イベントを処理するためにデリゲート型を宣言する必要がなくなります。 たとえば、イベントのデータを保持するために、<xref:System.EventArgs> から派生した `MyEventArgs` クラスを作成したとします。 その場合、イベントを次のように宣言できます。  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]

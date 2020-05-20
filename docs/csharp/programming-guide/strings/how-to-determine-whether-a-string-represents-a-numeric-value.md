@@ -28,7 +28,7 @@ bool result = int.TryParse(s, out i); //i now = 108
 > 文字列が数値文字列だけを含んでいても、使用する `TryParse` メソッドの型として有効ではない場合があります。 たとえば、"256" は `byte` の有効値ではありませんが、`int` としては有効です。 " 98.6" は `int` の有効値ではありませんが、有効な `decimal` です。  
   
 ## <a name="example"></a>例  
- 次の例では、`TryParse` 値、`long` 値、および `byte` 値の文字列表現を指定して `decimal` を使用する方法を示します。  
+ 次の例では、`long` 値、`byte` 値、および `decimal` 値の文字列表現を指定して `TryParse` を使用する方法を示します。  
   
  [!code-csharp[csProgGuideStrings#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#14)]  
   

@@ -110,7 +110,7 @@ Meow!
 dotnet add reference ../../src/NewTypes/NewTypes.csproj
 ```
 
-または、次のように、`<ItemGroup>`NewTypesTests.csproj*ファイルに* ノードを追加して、プロジェクト参照を手動で追加することもできます。
+または、次のように、*NewTypesTests.csproj* ファイルに `<ItemGroup>` ノードを追加して、プロジェクト参照を手動で追加することもできます。
 
 ```xml
 <ItemGroup>
@@ -158,7 +158,7 @@ public class PetTests
 }
 ```
 
-省略可能な演習: 所有者に `Bird` を与える前述の `Tweet!` タイプを追加した場合は、テスト メソッドを *PetTests.cs* ファイル `BirdTalkToOwnerReturnsTweet` に追加し、`TalkToOwner` タイプに対して `Bird` メソッドが正しく動作することを確認します。
+省略可能な演習: 所有者に `Tweet!` を与える前述の `Bird` タイプを追加した場合は、テスト メソッドを *PetTests.cs* ファイル `BirdTalkToOwnerReturnsTweet` に追加し、`Bird` タイプに対して `TalkToOwner` メソッドが正しく動作することを確認します。
 
 > [!NOTE]
 > `expected` と `actual` の値は等しくなることが予想されますが、`Assert.NotEqual` チェックに対する初期アサーションでは、これらの値が*等しくない*と指定されています。 通常、テストのロジックを確認するために、最初は一度失敗するテストを作成します。 テストが失敗したことを確認したら、テストに合格できるようにするアサーションを調整します。

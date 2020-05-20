@@ -137,7 +137,7 @@ ImmutableArray<RegressionMetricsStatistics> permutationFeatureImportance =
         .PermutationFeatureImportance(sdcaModel, preprocessedTrainData, permutationCount:3);
 ```
 
-トレーニング データセットに対して [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) を使用した結果は、[`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) オブジェクトの [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) になります。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) は、[ パラメーターに指定された順列の数と等しい `RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)`permutationCount`の複数の観測値について、平均や標準偏差などの概要の統計情報を提供します。
+トレーニング データセットに対して [`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) を使用した結果は、[`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) オブジェクトの [`ImmutableArray`](xref:System.Collections.Immutable.ImmutableArray) になります。 [`RegressionMetricsStatistics`](xref:Microsoft.ML.Data.RegressionMetricsStatistics) は、[ パラメーターに指定された順列の数と等しい `RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics)`permutationCount`の複数の観測値について、平均や標準偏差などの概要の統計情報を提供します。
 
 重要度、このケースで言い換えると、[`PermutationFeatureImportance`](xref:Microsoft.ML.PermutationFeatureImportanceExtensions) によって計算される R-2 乗メトリックの絶対平均減少は、最も高い重要度から最も低い重要度の順に並べ替えることができます。
 

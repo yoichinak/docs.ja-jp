@@ -40,9 +40,9 @@ ms.locfileid: "79180866"
 ---
 # <a name="handling-errors"></a>エラー処理
 
-<xref:System.Net.WebRequest> および <xref:System.Net.WebResponse> クラスでは、システム例外 (<xref:System.ArgumentException> など) と Web 固有の例外 (<xref:System.Net.WebException> メソッドでスローされる <xref:System.Net.WebRequest.GetResponse%2A>) の両方がスローされます。  
+<xref:System.Net.WebRequest> および <xref:System.Net.WebResponse> クラスでは、システム例外 (<xref:System.ArgumentException> など) と Web 固有の例外 (<xref:System.Net.WebRequest.GetResponse%2A> メソッドでスローされる <xref:System.Net.WebException>) の両方がスローされます。  
   
-各 **WebException** には、<xref:System.Net.WebException.Status%2A> 列挙体からの値を含む <xref:System.Net.WebExceptionStatus> プロパティがあります。 **Status** プロパティを調べることで、発生したエラーを特定し、エラーを解決するための適切な手順を実行することができます。  
+各 **WebException** には、<xref:System.Net.WebExceptionStatus> 列挙体からの値を含む <xref:System.Net.WebException.Status%2A> プロパティがあります。 **Status** プロパティを調べることで、発生したエラーを特定し、エラーを解決するための適切な手順を実行することができます。  
   
 **Status** プロパティの有効な値を次の表に示します。  
   

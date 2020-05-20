@@ -27,7 +27,7 @@ ms.locfileid: "69922510"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- `+` を指定するか、または単に **-debug** と指定すると、コンパイラによってデバッグ情報が生成され、その情報がプログラム データベース (.pdb ファイル) に出力されます。 `-`-debug **を指定しない場合、** の指定が有効となります。これを指定した場合、デバッグ情報は作成されません。  
+ `+` を指定するか、または単に **-debug** と指定すると、コンパイラによってデバッグ情報が生成され、その情報がプログラム データベース (.pdb ファイル) に出力されます。 **-debug** を指定しない場合、`-` の指定が有効となります。これを指定した場合、デバッグ情報は作成されません。  
   
  `full` &#124; `pdbonly`  
  コンパイラによって生成されるデバッグ情報の種類を指定します。 full 引数を使用すると ( **-debug:pdbonly** を指定しない場合)、実行中のプログラムにデバッガーをアタッチできます。 pdbonly を指定すると、プログラムがデバッガーで開始されたときにはソース コードをデバッグできますが、実行中のプログラムをデバッガーにアタッチしたときはアセンブラーしか表示されません。  
@@ -38,7 +38,7 @@ ms.locfileid: "69922510"
  **-debug:full** を使用する場合は、JIT によって最適化されるコードの速度とサイズに若干影響が生じる点に注意してください。また、 **-debug:full** でデバッグした場合、わずかではありますが、コードの品質にも影響が生じます。 生成されるリリース コードには、 **-debug:pdbonly** を使用するか、PDB を一切使用しないことをお勧めします。  
   
 > [!NOTE]
-> **-debug:pdbonly** と **-debug:full** の唯一の違いは、 **-debug:full** でコンパイルした場合、デバッグ情報が利用可能であることを JIT コンパイラに通知するための <xref:System.Diagnostics.DebuggableAttribute> が生成される点です。 したがって、<xref:System.Diagnostics.DebuggableAttribute>-debug:full**を使用する場合に、コード内で** が false に設定されていると、エラーが生成されます。  
+> **-debug:pdbonly** と **-debug:full** の唯一の違いは、 **-debug:full** でコンパイルした場合、デバッグ情報が利用可能であることを JIT コンパイラに通知するための <xref:System.Diagnostics.DebuggableAttribute> が生成される点です。 したがって、**-debug:full** を使用する場合に、コード内で <xref:System.Diagnostics.DebuggableAttribute> が false に設定されていると、エラーが生成されます。  
   
  アプリケーションのデバッグ パフォーマンスを構成する方法については、「[イメージのデバッグの簡略化](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)」を参照してください。  
   

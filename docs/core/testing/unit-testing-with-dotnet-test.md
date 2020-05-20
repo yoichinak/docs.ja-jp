@@ -97,7 +97,7 @@ ms.locfileid: "78240897"
   dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
   ```
 
-* `PrimeService`PrimeService.Tests*プロジェクトへの依存関係として* クラス ライブラリを追加します。
+* *PrimeService.Tests* プロジェクトへの依存関係として `PrimeService` クラス ライブラリを追加します。
 
   ```dotnetcli
   dotnet add ./PrimeService.Tests/PrimeService.Tests.csproj reference ./PrimeService/PrimeService.csproj  

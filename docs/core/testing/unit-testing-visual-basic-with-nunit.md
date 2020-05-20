@@ -157,7 +157,7 @@ End Function
 
 [!code-vb[Sample_TestCode](../../../samples/snippets/core/testing/unit-testing-vb-nunit/vb/PrimeService.Tests/PrimeService_IsPrimeShould.vb?name=Sample_TestCode)]
 
-`dotnet test` を実行して、これらの 2 つのテストが失敗したとします。 すべてのテストを成功させるために、`if`PrimeServices.cs`Main` ファイルで *メソッドの先頭にある* 句を変更します。
+`dotnet test` を実行して、これらの 2 つのテストが失敗したとします。 すべてのテストを成功させるために、*PrimeServices.cs* ファイルで `Main` メソッドの先頭にある `if` 句を変更します。
 
 ```vb
 if candidate < 2

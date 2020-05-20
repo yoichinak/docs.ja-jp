@@ -13,7 +13,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "77093553"
 ---
 # <a name="constants-c-programming-guide"></a>定数 (C# プログラミング ガイド)
-定数とは、コンパイル時に既知であり、プログラムの実行期間を通じて変更されない値です。 定数を宣言するには、[const](../../language-reference/keywords/const.md) 修飾子を使用します。 [ として宣言できるのは、C# ](../../language-reference/builtin-types/built-in-types.md)組み込み型<xref:System.Object?displayProperty=nameWithType> (`const` を除く) のみです。 クラス、構造体、配列などのユーザー定義型を `const` にすることはできません。 実行時に (コンストラクターなどで) 一度だけ初期化され、その後は変更できないクラス、構造体、または配列を作成するには、[readonly](../../language-reference/keywords/readonly.md) 修飾子を使用します。  
+定数とは、コンパイル時に既知であり、プログラムの実行期間を通じて変更されない値です。 定数を宣言するには、[const](../../language-reference/keywords/const.md) 修飾子を使用します。 `const` として宣言できるのは、C# [組み込み型](../../language-reference/builtin-types/built-in-types.md) (<xref:System.Object?displayProperty=nameWithType> を除く) のみです。 クラス、構造体、配列などのユーザー定義型を `const` にすることはできません。 実行時に (コンストラクターなどで) 一度だけ初期化され、その後は変更できないクラス、構造体、または配列を作成するには、[readonly](../../language-reference/keywords/readonly.md) 修飾子を使用します。  
   
  C# では、`const` のメソッド、プロパティ、またはイベントはサポートされません。  
   

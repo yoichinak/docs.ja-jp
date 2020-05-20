@@ -31,7 +31,7 @@ ms.locfileid: "75715288"
 
 ## <a name="the-range-variable"></a>範囲変数
 
-データ ソースが <xref:System.Collections.Generic.IEnumerable%601> を実装するとき、コンパイラは範囲変数の型を推測します。 たとえば、ソースの型が `IEnumerable<Customer>` の場合、範囲変数は `Customer` ではないかと推測されます。 ソースが `IEnumerable` のような非ジェネリック <xref:System.Collections.ArrayList> 型のときにのみ、型を明示的に指定する必要があります。 詳細については、「[LINQ を使用して ArrayList にクエリを実行する方法](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)」を参照してください。
+データ ソースが <xref:System.Collections.Generic.IEnumerable%601> を実装するとき、コンパイラは範囲変数の型を推測します。 たとえば、ソースの型が `IEnumerable<Customer>` の場合、範囲変数は `Customer` ではないかと推測されます。 ソースが <xref:System.Collections.ArrayList> のような非ジェネリック `IEnumerable` 型のときにのみ、型を明示的に指定する必要があります。 詳細については、「[LINQ を使用して ArrayList にクエリを実行する方法](../../programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)」を参照してください。
 
 前述の例では、`num` は型 `int` として推測されます。 範囲変数は厳密に型指定されるため、範囲変数の上でメソッドを呼び出したり、他の操作で範囲変数を使用したりできます。 たとえば、`select num` を記述する代わりに、`select num.ToString()` を記述し、クエリ式が整数ではなく文字列のシーケンスを返すようにできます。 あるいは、式でシーケンス 14、11、13、12、10 を返すように `select num + 10` を記述できます。 詳細については、「[select 句](select-clause.md)」をご覧ください。
 

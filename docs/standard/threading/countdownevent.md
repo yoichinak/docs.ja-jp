@@ -27,9 +27,9 @@ ms.locfileid: "73138108"
   
 - インスタンスの作成後に、シグナル数をインクリメントできます。  
   
-- <xref:System.Threading.CountdownEvent.Wait%2A> メソッドを呼び出すことで <xref:System.Threading.CountdownEvent.Reset%2A> が返された後、インスタンスを再利用できます。  
+- <xref:System.Threading.CountdownEvent.Reset%2A> メソッドを呼び出すことで <xref:System.Threading.CountdownEvent.Wait%2A> が返された後、インスタンスを再利用できます。  
   
-- インスタンスは、<xref:System.Threading.WaitHandle> などの他の .NET Framework の同期 API との統合のために <xref:System.Threading.WaitHandle.WaitAll%2A> を公開します。  
+- インスタンスは、<xref:System.Threading.WaitHandle.WaitAll%2A> などの他の .NET Framework の同期 API との統合のために <xref:System.Threading.WaitHandle> を公開します。  
   
 ## <a name="basic-usage"></a>基本的な使用方法  
  <xref:System.Threading.CountdownEvent> と <xref:System.Threading.ThreadPool> 作業項目を使用する方法を次の例に示します。  

@@ -133,7 +133,7 @@ Logger.WriteMessage -= LoggingMethods.LogToConsole;
 
 ## <a name="handling-null-delegates"></a>Null デリゲートの処理
 
-最後に、出力メカニズムが選択されなかったケースに備えて、LogMessage メソッドに変更を加えたいと思います。 現在の実装コードでは、`NullReferenceException` デリゲートに呼び出しリストがアタッチされなかった場合、`WriteMessage` がスローされます。
+最後に、出力メカニズムが選択されなかったケースに備えて、LogMessage メソッドに変更を加えたいと思います。 現在の実装コードでは、`WriteMessage` デリゲートに呼び出しリストがアタッチされなかった場合、`NullReferenceException` がスローされます。
 メソッドがアタッチされていなくても、何事もなかったように処理が継続されるような設計の方が望ましい場合もあります。 これは、`Delegate.Invoke()` メソッドに null 条件演算子を組み合わせて使えば簡単に実現できます。
 
 ```csharp
@@ -145,7 +145,7 @@ public static void LogMessage(string msg)
 
 null 条件演算子 (`?.`) は、左辺オペランド (このケースでは `WriteMessage`) が null のとき、そこで評価が打ち切られます。つまり、メッセージを記録する処理は試行されません。
 
-`Invoke()` や `System.Delegate` のドキュメントを探しても、`System.MulticastDelegate` メソッドは記載されていません。 宣言されているデリゲート型には、コンパイラによってタイプ セーフな `Invoke` メソッドが生成されます。 つまり、この例では、`Invoke` が `string` 引数を 1 つ持ち、戻り値の型が void であるということです。
+`System.Delegate` や `System.MulticastDelegate` のドキュメントを探しても、`Invoke()` メソッドは記載されていません。 宣言されているデリゲート型には、コンパイラによってタイプ セーフな `Invoke` メソッドが生成されます。 つまり、この例では、`Invoke` が `string` 引数を 1 つ持ち、戻り値の型が void であるということです。
 
 ## <a name="summary-of-practices"></a>実践のまとめ
 

@@ -42,11 +42,11 @@ ms.locfileid: "78847288"
 
 [!code-csharp[sizeof examples](snippets/SizeOfOperator.cs)]
 
-`sizeof` 演算子は、マネージド メモリ内の共通言語ランタイムによって割り当てられるバイト数を返します。 [構造体](../builtin-types/struct.md)型の場合、前の例のように、その値に埋め込みが含まれます。 `sizeof` 演算子の結果は、<xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType>アンマネージド*メモリの型のサイズを返す* メソッドの結果とは異なる場合があります。
+`sizeof` 演算子は、マネージド メモリ内の共通言語ランタイムによって割り当てられるバイト数を返します。 [構造体](../builtin-types/struct.md)型の場合、前の例のように、その値に埋め込みが含まれます。 `sizeof` 演算子の結果は、*アンマネージド* メモリの型のサイズを返す <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> メソッドの結果とは異なる場合があります。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)の [sizeof 演算子](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の [sizeof 演算子](~/_csharplang/spec/unsafe-code.md#the-sizeof-operator)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>参照
 

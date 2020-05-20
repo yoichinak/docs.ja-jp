@@ -24,7 +24,7 @@ ms.locfileid: "75715272"
 
 ## <a name="example"></a>例
 
-次の例では、`goto`switch[ ステートメントでの ](switch.md) の使い方を示します。
+次の例では、[switch](switch.md) ステートメントでの `goto` の使い方を示します。
 
 [!code-csharp[csrefKeywordsJump#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsJump/CS/csrefKeywordsJump.cs#4)]
 
