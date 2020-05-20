@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: c3f7d307-4047-4f9a-be8c-f152fca42fd0
 topic_type:
 - apiref
-ms.openlocfilehash: 21e92d8f2fb80c4c41d516ef281bf4fc8a75f4e1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d41e048b67d4bc7159f6dd5266457651f1658290
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176644"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420592"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 列挙体
-変数がコンパイラで生成されるかどうかを示します。  
+変数がコンパイラによって生成されたかどうかを示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,9 +39,9 @@ typedef enum CorSymVarFlag
 |------------|-----------------|  
 |`VAR_IS_COMP_GEN`|指定された変数がコンパイラによって生成されることを示します。|  
   
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** コーシム.idl,コーシム.h  
+## <a name="requirements"></a>要件  
+ **ヘッダー:** CorSym .idl、CorSym .h  
   
 ## <a name="see-also"></a>関連項目
 
-- [シンボル ストア診断列挙体](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+- [シンボル ストア診断列挙型](diagnostics-symbol-store-enumerations.md)

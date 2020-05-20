@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e7e53615e38d0ab76f9e7c0a753be3c13780057d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6a6def8fc10f04b89aa8d8c735025b01f9b6ddfb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178372"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420761"
 ---
 # <a name="ixclrdataprocess-interface"></a>IXCLRDataProcess インターフェイス
 
@@ -30,28 +30,28 @@ ms.locfileid: "79178372"
 
 ## <a name="methods"></a>メソッド
 
-| Method                                                                                                                                               | 説明                                                                                     |
+| メソッド                                                                                                                                               | 説明                                                                                     |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | 一意`AppDomain`の ID を使用してプロセス内の を取得します。                                              |
+| [GetAppDomainByUniqueId](ixclrdataprocess-getappdomainbyuniqueid-method.md)                       | `AppDomain`プロセス内のを一意の id で取得します。                                              |
 | [StartEnumModules](ixclrdataprocess-startenummodules-method.md)                                   | プロセスのモジュールを列挙するハンドルを提供します。                                        |
 | [EnumModule](ixclrdataprocess-enummodule-method.md)                                               | このプロセスのモジュールを列挙します。                                                         |
-| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | モジュールの列挙時に使用される内部反復子によって使用されるリソースを解放します。               |
-| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | 指定したアドレス`AppDomain`から開始するメソッド インスタンスを列挙するハンドルを提供します。 |
-| [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | アドレス オフセットから開始するこのプロセスのメソッド インスタンスを列挙します。                  |
-| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | インスタンスの列挙時に使用される内部反復子によって使用されるリソースを解放します。             |
+| [EndEnumModules](ixclrdataprocess-endenummodules-method.md)                                       | モジュールの列挙中に使用される内部反復子によって使用されるリソースを解放します。               |
+| [StartEnumMethodInstancesByAddress](ixclrdataprocess-startenummethodinstancesbyaddress-method.md) | 指定されたアドレスから開始するのメソッドインスタンスを列挙するハンドルを提供し `AppDomain` ます。 |
+| [EnumMethodInstanceByAddress](ixclrdataprocess-enummethodinstancebyaddress-method.md)             | このプロセスのメソッドインスタンスを、アドレスオフセットを開始位置として列挙します。                  |
+| [EndEnumMethodInstancesByAddress](ixclrdataprocess-endenummethodinstancesbyaddress-method.md)     | インスタンスの列挙中に使用される内部反復子によって使用されるリソースを解放します。             |
 
 ## <a name="remarks"></a>解説
 
-このインターフェイスはランタイム内に存在し、ヘッダーやライブラリ ファイルを通じて公開されません。 ただし、通常の COM メカニズムを通じて取得`IUnknown`できる`5c552ab6-fc09-4cb3-8e36-22fa03c798b7`GUID から派生する COM インターフェイスです。
+このインターフェイスはランタイム内に存在し、ヘッダーまたはライブラリファイルを介して公開されることはありません。 ただし、これは、 `IUnknown` `5c552ab6-fc09-4cb3-8e36-22fa03c798b7` 通常の com 機構を通じて取得できる GUID を使用してから派生する com インターフェイスです。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
-**ヘッダー:** なし  
-**ライブラリ:** なし  
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
+**ヘッダー:** 存在  
+**ライブラリ:** 存在  
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
 - [デバッグ](index.md)
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
