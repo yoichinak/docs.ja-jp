@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: e2b0e2db-3fae-4b56-844e-d30a125a660c
 topic_type:
 - apiref
-ms.openlocfilehash: c012e4e2b5e41737f7bbe6a0fb887693b0ba22c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 505c16cb7ead7950b6d2d6d401730cc3368fb6aa
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176423"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703301"
 ---
 # <a name="iclrruntimehostexecuteinappdomain-method"></a>ICLRRuntimeHost::ExecuteInAppDomain メソッド
-指定した<xref:System.AppDomain>マネージ コードを実行する対象を指定します。  
+指定し <xref:System.AppDomain> たマネージコードを実行するを指定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,37 +37,37 @@ HRESULT ExecuteInAppDomain(
   
 ## <a name="parameters"></a>パラメーター  
  `AppDomainId`  
- [in]指定したメソッドを<xref:System.AppDomain>実行する対象の数値 ID。  
+ から<xref:System.AppDomain>指定したメソッドを実行するの数値 ID。  
   
  `pCallback`  
- [in]指定した<xref:System.AppDomain>内で実行する関数へのポインター。  
+ から指定した内で実行する関数へのポインター <xref:System.AppDomain> 。  
   
  `cookie`  
- [in]呼び出し元が割り当てたメモリを不透明にするポインター。 このパラメーターは、共通言語ランタイム (CLR) によってドメイン コールバックに渡されます。 ランタイム管理ヒープメモリではありません。このメモリの割り当てと有効期間の両方が呼び出し元によって制御されます。  
+ から非透過的な呼び出し元に割り当てられたメモリへのポインター。 このパラメーターは、共通言語ランタイム (CLR) によってドメインコールバックに渡されます。 ランタイムによって管理されるヒープメモリではありません。このメモリの割り当てと有効期間は、どちらも呼び出し元によって制御されます。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`ExecuteInAppDomain`正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
-|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージドコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返した場合、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返す場合、そのプロセス内で CLR は使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>解説  
- `ExecuteInAppDomain`ホストは、指定されたマネージ<xref:System.AppDomain>メソッドを実行するマネージを制御できます。 [GetCurrentAppDomainId メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)を呼び出すことによって、プロパティの値に対応するアプリケーション<xref:System.AppDomain.Id%2A>ドメインの識別子の値を取得できます。  
+ `ExecuteInAppDomain`指定したマネージメソッドを実行する管理対象をホストで制御できるように <xref:System.AppDomain> します。 アプリケーションドメインの識別子の値を取得できます。これは、 <xref:System.AppDomain.Id%2A> [GetCurrentAppDomainId メソッド](iclrruntimehost-getcurrentappdomainid-method.md)を呼び出すことによって、プロパティの値に対応します。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [ICLRRuntimeHost インターフェイス](iclrruntimehost-interface.md)

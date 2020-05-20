@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d82d633e-cce6-427c-8b02-8227e34e12ba
 topic_type:
 - apiref
-ms.openlocfilehash: d8df78e3d5cebe5378dfba11dc0ea93cc8e346eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e32714bba2403752f1ac2551ab182f2655f1fa75
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178103"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83703854"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy メソッド
-指定したアセンブリのバインディング ポリシーを変更し、新しいバージョンのポリシーを作成します。  
+指定したアセンブリのバインディングポリシーを変更し、新しいバージョンのポリシーを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,51 +41,51 @@ HRESULT  ModifyApplicationPolicy (
   
 ## <a name="parameters"></a>パラメーター  
  `pwzSourceAssemblyIdentity`  
- [in]変更するアセンブリの ID。  
+ から変更するアセンブリの id。  
   
  `pwzTargetAssemblyIdentity`  
- [in]変更されたアセンブリの新しい ID。  
+ から変更されたアセンブリの新しい id。  
   
  `pbApplicationPolicy`  
- [in]変更するアセンブリのバインディング ポリシー データを格納するバッファーへのポインター。  
+ から変更するアセンブリのバインディングポリシーデータを格納しているバッファーへのポインター。  
   
  `cbAppPolicySize`  
- [in]置き換えるバインディング ポリシーのサイズ。  
+ から置換されるバインディングポリシーのサイズ。  
   
  `dwPolicyModifyFlags`  
- [in]リダイレクトの制御[を](../../../../docs/framework/unmanaged-api/hosting/ehostbindingpolicymodifyflags-enumeration.md)示す値の論理 OR の組み合わせ。  
+ からリダイレクトの制御を示す[Ehostbindingpolicymodifyflags](ehostbindingpolicymodifyflags-enumeration.md)値の論理的または組み合わせ。  
   
  `pbNewApplicationPolicy`  
- [アウト]新しいバインディング ポリシー データを格納するバッファーへのポインター。  
+ 入出力新しいバインドポリシーデータを格納しているバッファーへのポインター。  
   
  `pcbNewAppPolicySize`  
- [イン、アウト]新しいバインディング ポリシー バッファのサイズへのポインタ。  
+ [入力、出力]新しいバインドポリシーバッファーのサイズへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
-|S_OK|ポリシーは正常に変更されました。|  
-|E_INVALIDARG|`pwzSourceAssemblyIdentity`または`pwzTargetAssemblyIdentity`null 参照です。|  
+|S_OK|ポリシーが正常に変更されました。|  
+|E_INVALIDARG|`pwzSourceAssemblyIdentity`または `pwzTargetAssemblyIdentity` が null 参照です。|  
 |ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` が小さすぎます。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
-|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返した後、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>解説  
- この`ModifyApplicationPolicy`メソッドは 2 回呼び出すことができます。 最初の呼び出しでは、パラメーターに`pbNewApplicationPolicy`null 値を指定する必要があります。 この呼び出しは、 に`pcbNewAppPolicySize`必要な値を返します。 2 番目の呼び出し`pcbNewAppPolicySize`では、この値を に指定し、`pbNewApplicationPolicy`そのサイズの バッファーを指定します。  
+ メソッドは、 `ModifyApplicationPolicy` 2 回呼び出すことができます。 最初の呼び出しでは、パラメーターに null 値を指定する必要があり `pbNewApplicationPolicy` ます。 この呼び出しは、に必要な値で返され `pcbNewAppPolicySize` ます。 2番目の呼び出しでは、にこの値を指定 `pcbNewAppPolicySize` し、のサイズのバッファーを指す必要があり `pbNewApplicationPolicy` ます。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRHostBindingPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrhostbindingpolicymanager-interface.md)
+- [ICLRHostBindingPolicyManager インターフェイス](iclrhostbindingpolicymanager-interface.md)
