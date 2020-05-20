@@ -90,7 +90,7 @@ Console.WriteLine("{0}, {1}", a, b);
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/classes.md#instance-constructors)」の[インスタンス コンストラクター](~/_csharplang/spec/classes.md#static-constructors)と[静的コンストラクター](/dotnet/csharp/language-reference/language-specification/introduction)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[インスタンス コンストラクター](~/_csharplang/spec/classes.md#instance-constructors)と[静的コンストラクター](~/_csharplang/spec/classes.md#static-constructors)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 

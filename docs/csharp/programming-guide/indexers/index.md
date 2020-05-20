@@ -65,7 +65,7 @@ C# 7.0 以降、get アクセサーと set アクセサーのどちらも、式�
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語の仕様](~/_csharplang/spec/classes.md#indexers)」の「[インデクサー](/dotnet/csharp/language-reference/language-specification/introduction)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の「[インデクサー](~/_csharplang/spec/classes.md#indexers)」を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 

@@ -53,7 +53,7 @@ C# ソース ファイル内に名前空間を明示的に宣言しているか�
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/namespaces.md)に関する記事の「[名前空間](~/_csharplang/spec/introduction.md)」に関するセクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関する記事の「[名前空間](~/_csharplang/spec/namespaces.md)」に関するセクションを参照してください。
 
 ## <a name="see-also"></a>参照
 

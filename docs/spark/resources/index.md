@@ -15,7 +15,7 @@ ms.locfileid: "69620044"
 
 * [.NET for Apache Spark の C# と F# のサンプル](https://github.com/dotnet/spark#samples)に関するページには、データフレームと SparkSQL、構造化ストリームおよび TPC-H クエリなどのいくつかの分析シナリオを扱ったサンプルがあります。
 
-* **Stack Overflow** で [spark-dotnet](https://stackoverflow.com/questions/tagged/spark-dotnet) タグを使用すると、開発者コミュニティとつながることができます。
+* [Stack Overflow](https://stackoverflow.com/questions/tagged/spark-dotnet) で **spark-dotnet** タグを使用すると、開発者コミュニティとつながることができます。
 
 * 投稿に関心をお持ちですか? ソースから構築する方法については、[GitHub リポジトリ](https://github.com/dotnet/spark)を参照してください。
 

@@ -31,7 +31,7 @@ ms.locfileid: "76789670"
 
 ## <a name="remarks"></a>解説
 
-\<summary> タグは、型または型のメンバーの説明に使用します。 型の説明に補足情報を追加するには、[\<remarks>](./remarks.md) タグを使用します。 [DocFX](./cref-attribute.md) や [Sandcastle](https://dotnet.github.io/docfx/) などのドキュメント ツールでコード要素のドキュメント ページへの内部ハイパーリンクを作成できるようにするには、[cref 属性](https://github.com/EWSoftware/SHFB)を使用します。
+\<summary> タグは、型または型のメンバーの説明に使用します。 型の説明に補足情報を追加するには、[\<remarks>](./remarks.md) タグを使用します。 [DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://github.com/EWSoftware/SHFB) などのドキュメント ツールでコード要素のドキュメント ページへの内部ハイパーリンクを作成できるようにするには、[cref 属性](./cref-attribute.md)を使用します。
 
 \<summary> タグのテキストは、IntelliSense の型に関する唯一のソースで、オブジェクト ブラウザー ウィンドウにも表示されます。
 

@@ -213,7 +213,7 @@ ms.locfileid: "79397789"
 
 ## <a name="recommendation"></a>推奨
 
-レコメンデーション タスクによって、推奨される製品やサービスの一覧を作成できます。 ML.NET では、カタログ内に製品のレーティングの履歴データがある場合は、レコメンデーション用の[協調フィルタリング](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29) アルゴリズムである[行列因子分解 (MF)](https://en.wikipedia.org/wiki/Collaborative_filtering) が使用されます。 たとえば、ユーザーによる映画の採点の履歴データがあるときに、そのユーザーが次に見たいと思う映画を推薦できます。
+レコメンデーション タスクによって、推奨される製品やサービスの一覧を作成できます。 ML.NET では、カタログ内に製品のレーティングの履歴データがある場合は、レコメンデーション用の[協調フィルタリング](https://en.wikipedia.org/wiki/Collaborative_filtering) アルゴリズムである[行列因子分解 (MF)](https://en.wikipedia.org/wiki/Matrix_factorization_%28recommender_systems%29) が使用されます。 たとえば、ユーザーによる映画の採点の履歴データがあるときに、そのユーザーが次に見たいと思う映画を推薦できます。
 
 ### <a name="recommendation-training-algorithms"></a>レコメンデーション トレーニング アルゴリズム
 

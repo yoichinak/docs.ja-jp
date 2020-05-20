@@ -86,7 +86,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/classes.md#static-classes)」の[静的クラス](~/_csharplang/spec/classes.md#static-and-instance-members)と[静的およびインスタンス メンバー](/dotnet/csharp/language-reference/language-specification/introduction)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[静的クラス](~/_csharplang/spec/classes.md#static-classes)と[静的およびインスタンス メンバー](~/_csharplang/spec/classes.md#static-and-instance-members)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 

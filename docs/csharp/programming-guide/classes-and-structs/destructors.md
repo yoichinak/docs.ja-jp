@@ -84,7 +84,7 @@ protected override void Finalize()
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/classes.md#destructors)」の [デストラクタ―](/dotnet/csharp/language-reference/language-specification/introduction)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の [デストラクタ―](~/_csharplang/spec/classes.md#destructors)に関するセクションを参照してください。
   
 ## <a name="see-also"></a>参照
 

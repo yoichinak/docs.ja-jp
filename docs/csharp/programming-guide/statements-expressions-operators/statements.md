@@ -86,7 +86,7 @@ ms.locfileid: "75711936"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/statements.md)の「[ステートメント](~/_csharplang/spec/introduction.md)」セクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[ステートメント](~/_csharplang/spec/statements.md)」セクションを参照してください。
 
 ## <a name="see-also"></a>参照
 

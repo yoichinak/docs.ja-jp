@@ -27,7 +27,7 @@ ms.locfileid: "75713041"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/statements.md#the-try-statement)」の「[try ステートメント](~/_csharplang/spec/introduction.md)」セクションを参照してください。
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[try ステートメント](~/_csharplang/spec/statements.md#the-try-statement)」セクションを参照してください。
 
 ## <a name="see-also"></a>参照
 

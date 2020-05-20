@@ -71,7 +71,7 @@ public override string ToString()
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-ラムダ演算子の詳細については、「[C# 言語仕様](~/_csharplang/spec/expressions.md#anonymous-function-expressions)」の[匿名関数の式](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+ラムダ演算子の詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の[匿名関数の式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>参照
 

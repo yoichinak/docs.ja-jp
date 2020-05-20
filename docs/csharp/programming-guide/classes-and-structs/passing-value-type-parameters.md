@@ -13,7 +13,7 @@ ms.lasthandoff: 03/14/2020
 ms.locfileid: "76744499"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>値型パラメーターの引き渡し (C# プログラミング ガイド)
-データへの参照を含む[参照型](../../language-reference/builtin-types/value-types.md)変数とは対照的に、[値型](../../language-reference/keywords/reference-types.md)変数にはデータが直接含まれます。 値型変数を値渡しでメソッドに渡すと、変数のコピーがメソッドに渡されます。 メソッド内部で生じるパラメーターに対する変更の影響は、引数の変数に格納されている元のデータには及びません。 呼び出したメソッドで引数の値を変更する場合は、[ref](../../language-reference/keywords/ref.md) キーワードまたは [out](../../language-reference/keywords/out-parameter-modifier.md) キーワードを使用して、参照によって渡す必要があります。 また、[in](../../language-reference/keywords/in-parameter-modifier.md) キーワードを使用し、参照で値パラメーターを渡してコピーを回避し、同時に値が変更されないようにすることができます。 わかりやすくするために、次の例では `ref` を使用しています。  
+データへの参照を含む[参照型](../../language-reference/keywords/reference-types.md)変数とは対照的に、[値型](../../language-reference/builtin-types/value-types.md)変数にはデータが直接含まれます。 値型変数を値渡しでメソッドに渡すと、変数のコピーがメソッドに渡されます。 メソッド内部で生じるパラメーターに対する変更の影響は、引数の変数に格納されている元のデータには及びません。 呼び出したメソッドで引数の値を変更する場合は、[ref](../../language-reference/keywords/ref.md) キーワードまたは [out](../../language-reference/keywords/out-parameter-modifier.md) キーワードを使用して、参照によって渡す必要があります。 また、[in](../../language-reference/keywords/in-parameter-modifier.md) キーワードを使用し、参照で値パラメーターを渡してコピーを回避し、同時に値が変更されないようにすることができます。 わかりやすくするために、次の例では `ref` を使用しています。  
   
 ## <a name="passing-value-types-by-value"></a>値渡しによる値型の引き渡し  
  次の例では、値型のパラメーターを値渡しで渡す方法について説明します。 変数 `n` を、値渡しでメソッド `SquareIt` に渡します。 メソッド内で生じた変更が、変数の元の値に影響することはありません。  

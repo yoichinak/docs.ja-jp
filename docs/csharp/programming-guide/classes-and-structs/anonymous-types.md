@@ -47,7 +47,7 @@ var anonArray = new[] { new { name = "apple", diam = 4 }, new { name = "grape", 
 ```  
   
 ## <a name="remarks"></a>解説  
- 匿名型は [object](../../language-reference/keywords/class.md) から直接派生した [class](../../language-reference/builtin-types/reference-types.md) 型であり、[object](../../language-reference/builtin-types/reference-types.md) 以外の型にキャストできません。 コンパイラは各匿名型に名前を付けますが、この名前にアプリケーションはアクセスできません。 共通言語ランタイムから見た場合、匿名型と他の参照型に違いはありません。  
+ 匿名型は [object](../../language-reference/builtin-types/reference-types.md) から直接派生した [class](../../language-reference/keywords/class.md) 型であり、[object](../../language-reference/builtin-types/reference-types.md) 以外の型にキャストできません。 コンパイラは各匿名型に名前を付けますが、この名前にアプリケーションはアクセスできません。 共通言語ランタイムから見た場合、匿名型と他の参照型に違いはありません。  
   
  アセンブリ内の複数の匿名オブジェクト初期化子が、同じ順序で同じ名前や型を持つプロパティのシーケンスを指定する場合、コンパイラはそれらのオブジェクトを同じ型のインスタンスとして処理します。 これらのオブジェクトは、コンパイラで生成された同一の型情報を共有します。  
   

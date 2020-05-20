@@ -67,7 +67,7 @@ public interface INamed
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/interfaces.md)の「[インターフェイス](~/_csharplang/spec/introduction.md)」セクションと [C# 8.0 の既定のインターフェイス メンバー](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)に関するページを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[インターフェイス](~/_csharplang/spec/interfaces.md)」セクションと [C# 8.0 の既定のインターフェイス メンバー](~/_csharplang/proposals/csharp-8.0/default-interface-methods.md)に関するページを参照してください。
 
 ## <a name="see-also"></a>参照
 

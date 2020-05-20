@@ -29,7 +29,7 @@ ms.locfileid: "75712001"
   
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語仕様](~/_csharplang/spec/expressions.md#anonymous-function-expressions)」の[無名関数の式](~/_csharplang/spec/introduction.md)に関するセクションを参照してください。
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の[無名関数の式](~/_csharplang/spec/expressions.md#anonymous-function-expressions)に関するセクションを参照してください。
   
 ## <a name="see-also"></a>参照
 

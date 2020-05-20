@@ -32,7 +32,7 @@ System.Convert.ToInt32("35");
   
 ## <a name="overflows"></a>オーバーフロー
 
- 値の型の最大値よりも値が大きくなると、数式でオーバーフローが発生することがあります。 詳細については、[Checked と Unchecked](../../language-reference/keywords/checked-and-unchecked.md) に関する記事と[組み込みの数値変換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)に関する記事の「[明示的な数値変換](../../language-reference/builtin-types/numeric-conversions.md)」セクションを参照してください。
+ 値の型の最大値よりも値が大きくなると、数式でオーバーフローが発生することがあります。 詳細については、[Checked と Unchecked](../../language-reference/keywords/checked-and-unchecked.md) に関する記事と[組み込みの数値変換](../../language-reference/builtin-types/numeric-conversions.md)に関する記事の「[明示的な数値変換](../../language-reference/builtin-types/numeric-conversions.md#explicit-numeric-conversions)」セクションを参照してください。
   
 ## <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
 
@@ -84,7 +84,7 @@ C# は*式形式のメンバー*をサポートしています。式形式のメ
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md)の「[式](~/_csharplang/spec/introduction.md)」セクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[式](~/_csharplang/spec/expressions.md)」セクションを参照してください。
 
 ## <a name="see-also"></a>参照
 

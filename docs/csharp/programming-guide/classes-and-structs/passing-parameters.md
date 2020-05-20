@@ -30,7 +30,7 @@ C# では、引数を値または参照によってパラメーターに渡す�
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 
-詳細については、[C# 言語の仕様](~/_csharplang/spec/expressions.md#argument-lists)に関する記事の[引数リスト](/dotnet/csharp/language-reference/language-specification/introduction)を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)に関する記事の[引数リスト](~/_csharplang/spec/expressions.md#argument-lists)を参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
 ## <a name="see-also"></a>参照
 

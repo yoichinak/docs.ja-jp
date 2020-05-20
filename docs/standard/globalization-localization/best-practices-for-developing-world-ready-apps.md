@@ -49,7 +49,7 @@ ms.locfileid: "73141307"
 
 9. 国際対応オペレーティング システムで、国際対応データを使用してアプリケーションの機能をテストします。
 
-10. 文字列比較操作または大文字と小文字の変更操作の結果に基づいてセキュリティ上の決定を行う場合は、カルチャに依存しない文字列操作を使用してください。 こうすることで、`CultureInfo.CurrentCulture` の値が結果に影響を及ぼすことがなくなります。 カルチャに依存した文字列比較により矛盾した結果がどのように生成されるかを示す例については、「[文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)」の「[現在のカルチャを使用する文字列比較](../../../docs/standard/base-types/best-practices-strings.md)」を参照してください。
+10. 文字列比較操作または大文字と小文字の変更操作の結果に基づいてセキュリティ上の決定を行う場合は、カルチャに依存しない文字列操作を使用してください。 こうすることで、`CultureInfo.CurrentCulture` の値が結果に影響を及ぼすことがなくなります。 カルチャに依存した文字列比較により矛盾した結果がどのように生成されるかを示す例については、「[文字列を使用するためのベスト プラクティス](../../../docs/standard/base-types/best-practices-strings.md)」の「[現在のカルチャを使用する文字列比較](../../../docs/standard/base-types/best-practices-strings.md#string-comparisons-that-use-the-current-culture)」を参照してください。
 
 ## <a name="localization-best-practices"></a>推奨されるローカリゼーション手順
 

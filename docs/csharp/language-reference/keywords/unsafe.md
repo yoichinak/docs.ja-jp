@@ -50,7 +50,7 @@ unsafe
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、「[C# 言語の仕様](~/_csharplang/spec/unsafe-code.md)」の[アンセーフ コード](/dotnet/csharp/language-reference/language-specification/introduction)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
+詳細については、「[C# 言語の仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[アンセーフ コード](~/_csharplang/spec/unsafe-code.md)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
 
 ## <a name="see-also"></a>参照
 

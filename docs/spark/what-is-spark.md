@@ -33,7 +33,7 @@ ms.locfileid: "73458169"
 
 ### <a name="real-time-data-stream-processing"></a>リアルタイムのデータ ストリーム処理
 
-ストリーミング (あるいはリアルタイム) データは移動中のデータです。 IoT デバイス、ウェブログ、クリックストリームからのテレメトリはすべて、ストリーミング データの例です。 リアルタイム データを処理し、地理空間分析、リモート監視、異常検出など、有益な情報を提供できます。 リレーショナル データと同じように、データを出力シンクに移動する前に、フィルター処理したり、集計したり、ストリーミング データの準備をしたりできます。 Apache Spark では、[Spark Streaming](/azure/architecture/data-guide/big-data/real-time-processing) による[リアルタイムのデータ ストリーム処理](https://spark.apache.org/streaming/)がサポートされています。
+ストリーミング (あるいはリアルタイム) データは移動中のデータです。 IoT デバイス、ウェブログ、クリックストリームからのテレメトリはすべて、ストリーミング データの例です。 リアルタイム データを処理し、地理空間分析、リモート監視、異常検出など、有益な情報を提供できます。 リレーショナル データと同じように、データを出力シンクに移動する前に、フィルター処理したり、集計したり、ストリーミング データの準備をしたりできます。 Apache Spark では、[Spark Streaming](https://spark.apache.org/streaming/) による[リアルタイムのデータ ストリーム処理](/azure/architecture/data-guide/big-data/real-time-processing)がサポートされています。
 
 ### <a name="batch-processing"></a>バッチ処理
 

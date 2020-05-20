@@ -45,7 +45,7 @@ ms.locfileid: "73039207"
 
 [!code-csharp-interactive[format string example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#2)]
 
-詳細については、「[複合書式設定](../../standard/base-types/composite-formatting.md#format-string-component)」トピックの「[Format String コンポーネント](../../standard/base-types/composite-formatting.md)」のセクションを参照してください。 このセクションでは、.NET の基本データ型でサポートされる標準とカスタムの書式設定文字列について説明するトピックへのリンクを提供しています。
+詳細については、「[複合書式設定](../../standard/base-types/composite-formatting.md)」トピックの「[Format String コンポーネント](../../standard/base-types/composite-formatting.md#format-string-component)」のセクションを参照してください。 このセクションでは、.NET の基本データ型でサポートされる標準とカスタムの書式設定文字列について説明するトピックへのリンクを提供しています。
 
 ## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>書式設定された補間式のフィールドの幅と配置を制御する方法
 
@@ -69,7 +69,7 @@ ms.locfileid: "73039207"
 
 出力例が示すように、書式設定された式の結果の長さが指定したフィールドの幅を超える場合、*alignment* の値は無視されます。
 
-詳細については、「[複合書式設定](../../standard/base-types/composite-formatting.md#alignment-component)」トピックの「[Alignment コンポーネント](../../standard/base-types/composite-formatting.md)」のセクションを参照してください。
+詳細については、「[複合書式設定](../../standard/base-types/composite-formatting.md)」トピックの「[Alignment コンポーネント](../../standard/base-types/composite-formatting.md#alignment-component)」のセクションを参照してください。
 
 ## <a name="how-to-use-escape-sequences-in-an-interpolated-string"></a>挿入文字列でエスケープ シーケンスを使用する方法
 
@@ -77,7 +77,7 @@ ms.locfileid: "73039207"
 
 エスケープ シーケンスをリテラルで解釈するには、[verbatim](../language-reference/tokens/verbatim.md) 文字列リテラルを使用します。 verbatim 補間文字列は、`$` 文字で始まり、`@` 文字が続きます。 C# 8.0 以降では、`$` と `@` のトークンを任意の順序で使用できます。`$@"..."` と `@$"..."` はどちらも有効な verbatim 補間文字列です。
 
-中かっこ "{" または "}" を結果文字列に含める場合は、2 つの中かっこ "{{" または "}}" を使用します。 詳細については、「[複合書式設定](../../standard/base-types/composite-formatting.md#escaping-braces)」トピックの「[エスケープ中かっこ ({})](../../standard/base-types/composite-formatting.md)」のセクションを参照してください。
+中かっこ "{" または "}" を結果文字列に含める場合は、2 つの中かっこ "{{" または "}}" を使用します。 詳細については、「[複合書式設定](../../standard/base-types/composite-formatting.md)」トピックの「[エスケープ中かっこ ({})](../../standard/base-types/composite-formatting.md#escaping-braces)」のセクションを参照してください。
 
 次の例は、結果文字列に中かっこを含め、verbatim 挿入文字列を作成する方法を示しています。
 

@@ -71,7 +71,7 @@ C# 8.0 以降では、null 合体割り当て演算子 `??=` を使用して、�
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/expressions.md#assignment-operators)の「[Assignment operators (代入演算子)](~/_csharplang/spec/introduction.md)」セクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[Assignment operators (代入演算子)](~/_csharplang/spec/expressions.md#assignment-operators)」セクションを参照してください。
 
 ref 代入演算子 `= ref` の詳細については、[機能提案メモ](~/_csharplang/proposals/csharp-7.3/ref-local-reassignment.md)を参照してください。
 

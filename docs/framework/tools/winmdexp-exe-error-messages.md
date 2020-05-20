@@ -165,7 +165,7 @@ ms.lasthandoff: 03/15/2020
 ms.locfileid: "74447300"
 ---
 # <a name="winmdexpexe-error-messages"></a>Winmdexp.exe のエラー メッセージ
-Visual Studio 2012 で [Windows ランタイム コンポーネント](winmdexp-exe-windows-runtime-metadata-export-tool.md) テンプレートを使用すると、ビルド プロセスで **Winmdexp.exe (Windows ランタイム メタデータ エクスポート ツール)** が呼び出されるため、Winmdexp.exe のエラー メッセージが **[エラー一覧]** に表示されます。 Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。 コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。  
+Visual Studio 2012 で **Windows ランタイム コンポーネント** テンプレートを使用すると、ビルド プロセスで [Winmdexp.exe (Windows ランタイム メタデータ エクスポート ツール)](winmdexp-exe-windows-runtime-metadata-export-tool.md) が呼び出されるため、Winmdexp.exe のエラー メッセージが **[エラー一覧]** に表示されます。 Winmdexp.exe は `/target:winmdobj` オプションでコンパイルされるモジュールで動作します。 コンパイルされたモジュールが入力として必要となるため、コンパイルが成功した場合を除き、そのエラー メッセージは表示されません。  
   
  エラー メッセージは、報告されるエラー条件への対処に必要なすべての情報が含まれるように設計されています。 ただし、一部の問題ではメッセージに収まりきらない、より多くの情報が必要となります。 追加の情報は、「[Windows ランタイム コンポーネントのエラー条件の診断](https://docs.microsoft.com/previous-versions/hh977010(v=vs.110))」で確認できます。  
   

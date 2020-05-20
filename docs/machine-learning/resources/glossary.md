@@ -24,7 +24,7 @@ ML.NET でカスタム モデルをビルドする際に役立つ機械学習の
 
 ## <a name="binary-classification"></a>二項分類
 
-[ラベル](#classification)が 2 つのクラスのうちの 1 つである[分類](#label)です。 詳細については、トピック「[機械学習のタスク](tasks.md#binary-classification)」のセクションの「[二項分類](tasks.md)」を参照してください。
+[ラベル](#label)が 2 つのクラスのうちの 1 つである[分類](#classification)です。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクションの「[二項分類](tasks.md#binary-classification)」を参照してください。
 
 ## <a name="calibration"></a>較正
 
@@ -104,7 +104,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 ## <a name="multiclass-classification"></a>多クラス分類
 
-[ラベル](#classification)が 3 つ以上のクラスのうちの 1 つである[分類](#label)です。 詳細については、トピック「[機械学習のタスク](tasks.md#multiclass-classification)」のセクション「[多クラス分類](tasks.md)」を参照してください。
+[ラベル](#label)が 3 つ以上のクラスのうちの 1 つである[分類](#classification)です。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクション「[多クラス分類](tasks.md#multiclass-classification)」を参照してください。
 
 ## <a name="n-gram"></a>N グラム
 
@@ -139,7 +139,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 ## <a name="regression"></a>回帰
 
-出力が実際の値 (たとえば、倍精度) である[教師あり機械学習](#supervised-machine-learning)タスクです。 例として、株価の予測などがあります。 詳細については、トピック「[機械学習のタスク](tasks.md#regression)」のセクション「[回帰](tasks.md)」を参照してください。
+出力が実際の値 (たとえば、倍精度) である[教師あり機械学習](#supervised-machine-learning)タスクです。 例として、株価の予測などがあります。 詳細については、トピック「[機械学習のタスク](tasks.md)」のセクション「[回帰](tasks.md#regression)」を参照してください。
 
 ## <a name="relative-absolute-error"></a>相対絶対誤差
 
