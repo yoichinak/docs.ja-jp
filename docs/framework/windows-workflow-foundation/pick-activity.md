@@ -1,18 +1,19 @@
 ---
 title: Pick アクティビティ
+description: Workflow Foundation では、Pick アクティビティによって、一連のイベントトリガーとそれに続く対応するハンドラーのモデリングが簡略化されます。
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: 672de5fd3df5e8dde6c54118503bf2a11353b116
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb59dc20919ed2d30a48f920ad154d4b0d99c41f
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182891"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421463"
 ---
 # <a name="pick-activity"></a>Pick アクティビティ
-<xref:System.Activities.Statements.Pick> アクティビティを使用すると、イベント トリガー セットとそれに続く対応するハンドラーのモデル化が単純になります。  <xref:System.Activities.Statements.Pick> アクティビティには、<xref:System.Activities.Statements.PickBranch> アクティビティのコレクションが含まれます。各 <xref:System.Activities.Statements.PickBranch> は <xref:System.Activities.Statements.PickBranch.Trigger%2A> アクティビティと <xref:System.Activities.Statements.PickBranch.Action%2A> アクティビティの組み合わせです。  実行時に、すべての分岐のトリガーが並行して実行されます。  1 つのトリガーが完了すると、対応するアクションが実行され、その他すべてのトリガーが取り消されます。  アクティビティの[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<xref:System.Activities.Statements.Pick>動作は、.NET Framework 3.5<xref:System.Workflow.Activities.ListenActivity>アクティビティに似ています。  
+<xref:System.Activities.Statements.Pick> アクティビティを使用すると、イベント トリガー セットとそれに続く対応するハンドラーのモデル化が単純になります。  <xref:System.Activities.Statements.Pick> アクティビティには、<xref:System.Activities.Statements.PickBranch> アクティビティのコレクションが含まれます。各 <xref:System.Activities.Statements.PickBranch> は <xref:System.Activities.Statements.PickBranch.Trigger%2A> アクティビティと <xref:System.Activities.Statements.PickBranch.Action%2A> アクティビティの組み合わせです。  実行時に、すべての分岐のトリガーが並行して実行されます。  1 つのトリガーが完了すると、対応するアクションが実行され、その他すべてのトリガーが取り消されます。  アクティビティの動作 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] <xref:System.Activities.Statements.Pick> は、.NET Framework 3.5 アクティビティに似てい <xref:System.Workflow.Activities.ListenActivity> ます。  
   
- 次の「[Pick アクティビティの使用](./samples/using-the-pick-activity.md)」に含まれる SDK サンプルのスクリーンショットは、2 つの分岐がある Pick アクティビティを示しています。  1 つ目の分岐には **Read input** というトリガーがあります。これはコマンド ラインから入力を読み取るカスタム アクティビティです。 2 つ目の分岐には <xref:System.Activities.Statements.Delay> アクティビティ トリガーがあります。 **[読み取り] 入力**アクティビティが<xref:System.Activities.Statements.Delay>アクティビティが完了する<xref:System.Activities.Statements.Delay>前にデータを受信すると、Delay はキャンセルされ、グリーティングがコンソールに書き込まれます。  それ以外の場合、**Read input** が割り当て時間内にデータを受信しないときは、アクティビティは取り消され、タイムアウト メッセージがコンソールに書き込まれます。  これは、任意のアクションにタイムアウトを追加するために使用される一般的なパターンです。  
+ 次の「[Pick アクティビティの使用](./samples/using-the-pick-activity.md)」に含まれる SDK サンプルのスクリーンショットは、2 つの分岐がある Pick アクティビティを示しています。  1 つ目の分岐には **Read input** というトリガーがあります。これはコマンド ラインから入力を読み取るカスタム アクティビティです。 2 つ目の分岐には <xref:System.Activities.Statements.Delay> アクティビティ トリガーがあります。 アクティビティが完了する前に**Read input**アクティビティがデータを受信する <xref:System.Activities.Statements.Delay> <xref:System.Activities.Statements.Delay> と、遅延が取り消され、メッセージがコンソールに書き込まれます。  それ以外の場合、**Read input** が割り当て時間内にデータを受信しないときは、アクティビティは取り消され、タイムアウト メッセージがコンソールに書き込まれます。  これは、任意のアクションにタイムアウトを追加するために使用される一般的なパターンです。  
   
  ![Pick アクティビティ](./media/pick-activity/pick-activity-two-branches.jpg)  
   

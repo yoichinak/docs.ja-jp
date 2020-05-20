@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6d1dc41b-8aa2-4889-bb00-1cbccc00c123
 topic_type:
 - apiref
-ms.openlocfilehash: 3ae48df9e66890161c1aef944d37b0a279939d56
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: 8d958e949612b502ab218f5c6b75779174d34e19
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76790539"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421086"
 ---
 # <a name="icorpublishprocess-interface"></a>ICorPublishProcess インターフェイス
 プロセスについて表示される情報にアクセスするメソッドを提供します。  
@@ -28,21 +28,21 @@ ms.locfileid: "76790539"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[EnumAppDomains メソッド](icorpublishprocess-enumappdomains-method.md)|この `ICorPublishProcess`によって参照されるプロセス内のアプリケーションドメインを含む[ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)インスタンスを取得します。|  
-|[GetDisplayName メソッド](icorpublishprocess-getdisplayname-method.md)|この `ICorPublishProcess`によって参照されるプロセスの実行可能ファイルの完全パスを取得します。|  
-|[GetProcessID メソッド](icorpublishprocess-getprocessid-method.md)|この `ICorPublishProcess`によって参照されるプロセスのオペレーティングシステム識別子を取得します。|  
-|[IsManaged メソッド](icorpublishprocess-ismanaged-method.md)|この `ICorPublishProcess` によって参照されるプロセスがマネージコードを実行していることがわかっているかどうかを示す値を取得します。|  
+|[EnumAppDomains メソッド](icorpublishprocess-enumappdomains-method.md)|このによって参照されるプロセス内のアプリケーションドメインを格納している[ICorPublishAppDomainEnum](icorpublishappdomainenum-interface.md)インスタンスを取得し `ICorPublishProcess` ます。|  
+|[GetDisplayName メソッド](icorpublishprocess-getdisplayname-method.md)|このによって参照されるプロセスの実行可能ファイルの完全パスを取得し `ICorPublishProcess` ます。|  
+|[GetProcessID メソッド](icorpublishprocess-getprocessid-method.md)|このによって参照されるプロセスのオペレーティングシステム識別子を取得し `ICorPublishProcess` ます。|  
+|[IsManaged メソッド](icorpublishprocess-ismanaged-method.md)|このによって参照されるプロセス `ICorPublishProcess` がマネージコードを実行していることがわかっているかどうかを示す値を取得します。|  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグ インターフェイス](debugging-interfaces.md)
+- [デバッグのインターフェイス](debugging-interfaces.md)
 - [CorpubPublish コクラス](corpubpublish-coclass.md)

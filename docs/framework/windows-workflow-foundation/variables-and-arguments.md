@@ -1,18 +1,19 @@
 ---
 title: 変数と引数
+description: この記事では、データの格納を表す変数と、Workflow Foundation のアクティビティとの間のデータフローを表す引数について説明します。
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: f975f46a1858d204d12588f7570b7ea5a365e650
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79182692"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421307"
 ---
 # <a name="variables-and-arguments"></a>変数と引数
-Windows ワークフロー基盤 (WF) では、変数はデータの格納を表し、引数はアクティビティに出入りするデータのフローを表します。 アクティビティには一連の引数があり、その引数はアクティビティの署名を構成します。 また、アクティビティは開発者がワークフローの設計時に変数を追加または削除できる変数のリストを保持しています。 引数は、値を返す式を使用してバインドされます。  
+Windows Workflow Foundation (WF) では、変数はデータのストレージを表し、引数はアクティビティとの間のデータフローを表します。 アクティビティには一連の引数があり、その引数はアクティビティの署名を構成します。 また、アクティビティは開発者がワークフローの設計時に変数を追加または削除できる変数のリストを保持しています。 引数は、値を返す式を使用してバインドされます。  
   
-## <a name="variables"></a>変数:  
+## <a name="variables"></a>変数  
  変数はデータを保存する場所です。 変数はワークフロー定義の一部として宣言されます。 変数は実行時に値を受け取ります。これらの値はワークフロー インスタンスの状態の一部として保存されます。 変数の定義では、変数の型を指定します。オプションで名前を指定する場合もあります。 変数を宣言し、<xref:System.Activities.Statements.Assign%601> アクティビティを使用して変数に値を代入し、その値を <xref:System.Activities.Statements.WriteLine> アクティビティを使用してコンソールに表示する方法を次のコードに示します。  
   
 ```csharp  
@@ -67,7 +68,7 @@ Variable<string> var = new Variable<string>
   
 2. <xref:System.Activities.InOutArgument%601.Set%2A> が呼び出されると、ランタイムはすぐにその値を設定します。  
   
-3. 必要に応じて、引数に <xref:System.Activities.Argument.EvaluationOrder%2A> を指定できます。 <xref:System.Activities.Argument.EvaluationOrder%2A> は引数の評価順序を指定するゼロベースの値です。 既定では引数の評価順序は指定されておらず、<xref:System.Activities.Argument.UnspecifiedEvaluationOrder> の値と同じです。 <xref:System.Activities.Argument.EvaluationOrder%2A> に 0 以上の値を設定して、この引数の評価順序を指定します。 Windows ワークフロー ファウンデーションは、指定された評価順序で引数を昇順で評価します。 評価順序が指定されていない引数は、評価順序が指定されている引数の前に評価されることに注意してください。  
+3. 必要に応じて、引数に <xref:System.Activities.Argument.EvaluationOrder%2A> を指定できます。 <xref:System.Activities.Argument.EvaluationOrder%2A> は引数の評価順序を指定するゼロベースの値です。 既定では引数の評価順序は指定されておらず、<xref:System.Activities.Argument.UnspecifiedEvaluationOrder> の値と同じです。 <xref:System.Activities.Argument.EvaluationOrder%2A> に 0 以上の値を設定して、この引数の評価順序を指定します。 Windows Workflow Foundation は、指定された評価順序で引数を昇順で評価します。 評価順序が指定されていない引数は、評価順序が指定されている引数の前に評価されることに注意してください。  
   
  アクティビティの作成者は、引数を公開する場合に厳密な型指定のメカニズムを使用できます。 これを行うには、<xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601>、および <xref:System.Activities.InOutArgument%601> の型のプロパティを宣言します。 これにより、アクティビティの作成者は、アクティビティに受け渡しするデータの特定のコントラクトを確立できます。  
   
@@ -141,4 +142,4 @@ public sealed class Add : CodeActivity<int>
 }  
 ```  
   
- コード内の引数、変数、および式の操作の詳細については、「強制コードと[必須引数とオーバーロード グループ](required-arguments-and-overload-groups.md)[を使用したワークフロー、アクティビティ、および式の作成](authoring-workflows-activities-and-expressions-using-imperative-code.md)」を参照してください。
+ コードで引数、変数、および式を使用する方法の詳細については、「命令型コードと[必須の引数およびオーバーロードグループ](required-arguments-and-overload-groups.md)[を使用したワークフロー、アクティビティ、および式の作成](authoring-workflows-activities-and-expressions-using-imperative-code.md)」を参照してください。

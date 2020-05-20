@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7c0af9e9-a73f-41aa-a685-b21c439e059d
 topic_type:
 - apiref
-ms.openlocfilehash: 77e801b048709949c384f642fc0d0ecb5d7eb512
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc76274d3b0acbbe0b03eb141d2b3e6ff9063afb
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178381"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421125"
 ---
 # <a name="icorpublishprocessgetdisplayname-method"></a>ICorPublishProcess::GetDisplayName メソッド
 この[ICorPublishProcess](icorpublishprocess-interface.md)によって参照されるプロセスの実行可能ファイルの完全パスを取得します。  
@@ -41,19 +41,19 @@ HRESULT GetDisplayName (
  [in] `szName` 配列のサイズ。  
   
  `pcchName`  
- [アウト]配列に返されるワイド文字の`szName`数。  
+ 入出力配列内で返されたワイド文字の数 `szName` 。  
   
  `szName`  
- [アウト]実行可能ファイルの完全なパスを含む名前を格納する配列。 名前は NULL で終わる。  
+ 入出力実行可能ファイルの完全パスを含む、名前を格納する配列。 名前が null で終了しています。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コルパブ.idl,コルパブ.h  
+ **ヘッダー:** CorPub .idl、CorPub .h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

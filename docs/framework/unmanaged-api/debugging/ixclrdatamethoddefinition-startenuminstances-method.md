@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 84e0ad392c5fee8377115427482d80543454fff3
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: b0c37c666f23f04239ed827246b87c43ee8d5ad9
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397204"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420930"
 ---
 # <a name="ixclrdatamethoddefinitionstartenuminstances-method"></a>IXCLRDataMethodDefinition:: StartEnumInstances メソッド
 
@@ -51,7 +51,7 @@ HRESULT StartEnumInstances(
 
 ## <a name="requirements"></a>要件
 
-**:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
 **ヘッダー:** 存在  
 **ライブラリ:** 存在  
 **.NET Framework のバージョン:**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
