@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: b3222c85-da88-4485-97d7-3a6ee3e8d358
 topic_type:
 - apiref
-ms.openlocfilehash: f3b51c1b376fa9c664de53aa76ec724ca305ae6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2dd004a44b20d48dafc72711ac23abcb55739224
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178176"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617201"
 ---
 # <a name="getfileversion-function"></a>GetFileVersion 関数
-指定したバッファーを使用して、指定したファイルの共通言語ランタイム (CLR) バージョン情報を取得します。  
+指定したバッファーを使用して、指定したファイルの共通言語ランタイム (CLR) のバージョン情報を取得します。  
   
- この関数は、.NET Framework 4 では廃止されました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,24 +39,24 @@ HRESULT GetFileVersion (
   
 ## <a name="parameters"></a>パラメーター  
  `szFilename`  
- [in]検査するファイルのパス。  
+ から検査するファイルのパス。  
   
  `szBuffer`  
- [イン、アウト]返されるバージョン情報に割り当てられたバッファー。  
+ [入力、出力]返されたバージョン情報に割り当てられたバッファー。  
   
  `cchBuffer`  
- [in]のサイズ (ワイド文字)`szBuffer`です。  
+ からのサイズ (ワイド文字単位) `szBuffer` 。  
   
  `dwLength`  
- [アウト]返された`szBuffer`のサイズ (バイト単位)  
+ 入出力返されたのサイズ (バイト単位) `szBuffer` 。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

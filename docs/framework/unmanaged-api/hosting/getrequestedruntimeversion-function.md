@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 82f596a4-483d-4509-b0c5-a84c53c3da1b
 topic_type:
 - apiref
-ms.openlocfilehash: 6be0bc5d08f612dcb8ed7d256711e0c4367b9274
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b7a38d28b55842e9358bd9c7019b84c529526613
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178138"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617166"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 関数
 指定したアプリケーションによって要求された共通言語ランタイム (CLR) のバージョン番号を取得します。 そのバージョンがインストールされていない場合は、要求されるバージョンより前にインストールされた最も新しいバージョンを取得します。  
   
- この関数は、.NET Framework 4 では廃止されました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,37 +40,37 @@ HRESULT GetRequestedRuntimeVersion (
   
 ## <a name="parameters"></a>パラメーター  
  `pExe`  
- [in]アプリケーションの名前。  
+ からアプリケーションの名前。  
   
  `pVersion`  
- [アウト]正常終了した場合に、バージョン番号文字列を格納するバッファー。  
+ 入出力正常に完了したときのバージョン番号の文字列を格納するバッファー。  
   
  `cchBuffer`  
- [in]バージョン バッファーの長さ。  
+ からバージョンバッファーの長さ。  
   
  `pdwLength`  
- [アウト]バージョン番号文字列の長さへのポインター。  
+ 入出力バージョン番号文字列の長さへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、WinError.h で定義されている次の値に加えて、標準のコンポーネント オブジェクト モデル (COM) エラー コードを返します。  
+ このメソッドは、次の値に加えて、Winerror.h で定義されている標準のコンポーネントオブジェクトモデル (COM) エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|ERROR_INSUFFICIENT_BUFFER|バージョン バッファーのサイズが、バージョン文字列を格納するのに十分ではありません。|  
+|ERROR_INSUFFICIENT_BUFFER|バージョンバッファーが、バージョン文字列を格納するのに十分な大きさではありません。|  
 |E_POINTER|`pdwLength` が null です。|  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetRequestedRuntimeInfo 関数](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [GetVersionFromProcess 関数](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [GetRequestedRuntimeInfo 関数](getrequestedruntimeinfo-function.md)
+- [GetVersionFromProcess 関数](getversionfromprocess-function.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

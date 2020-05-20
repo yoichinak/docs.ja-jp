@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9432487e-f276-45d6-9a13-9a68024dbd46
 topic_type:
 - apiref
-ms.openlocfilehash: 4d9de489bdeb0ab506f56ff08f4afb4cf6d0ab4f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7037065be138c369b847e7f86de7b46fc5ae601a
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178286"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83616880"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters 構造体
 イベントの型名と、イベントに関連付けられている現在の例外のパラメーターを格納します。  
@@ -38,17 +38,17 @@ typedef struct _BucketParameters {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`fInited`|`true`この構造体の残りの部分が有効な場合は、この構造体を参照します。それ以外`false`の場合は、 .|  
+|`fInited`|`true`この構造体の残りの部分が有効な場合は。それ以外の場合は `false` 。|  
 |`pszEventTypeName`|イベントの種類の名前。|  
-|`pszParams`|イベントに関連付けられている現在の例外のパラメーターを指定する文字列の配列。|  
+|`pszParams`|文字列の配列。各文字列は、イベントに関連付けられている現在の例外のパラメーターを指定します。|  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** MSCorEE.idl  
+ **ヘッダー:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト構造体](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
+- [ホスト構造体](hosting-structures.md)

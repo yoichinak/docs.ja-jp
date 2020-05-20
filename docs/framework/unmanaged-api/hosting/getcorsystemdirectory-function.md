@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3dcd16a7-dafc-4ca8-b5cd-20ffb37db91d
 topic_type:
 - apiref
-ms.openlocfilehash: bdafacfe52d678aacfcd44de1e924bcb88547424
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 137b2e30916cb1934d4389c5668bfb7eb5066064
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178202"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617231"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 関数
-プロセスに読み込まれる共通言語ランタイム (CLR) のインストール ディレクトリを返します。 インストール ディレクトリは、"c:\windows\microsoft.net\framework\v1.0.3705" など、完全修飾ディレクトリです。  
+プロセスに読み込まれる共通言語ランタイム (CLR) のインストールディレクトリを返します。 インストールディレクトリは完全に修飾されています。たとえば、"c:\windows\microsoft.net\framework\v1.0.3705" のようになります。  
   
- この関数の使用は非推奨とされます。 これは、.NET フレームワーク 4 で提供[されるメソッドに](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)置き換えられます。  
+ この関数の使用は非推奨とされます。 .NET Framework 4 で提供される[ICLRRuntimeInfo:: GetRuntimeDirectory](iclrruntimeinfo-getruntimedirectory-method.md)メソッドに置き換えられています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,28 +39,28 @@ HRESULT GetCORSystemDirectory (
   
 ## <a name="parameters"></a>パラメーター  
  `pbuffer`  
- [アウト]プロセスに読み込まれるランタイムのインストール ディレクトリの完全修飾名を含む文字列をランタイムが返すバッファー。 ランタイムがまだプロセスに読み込まれていない場合、この関数は、コンピューターにインストールされている最新バージョンのランタイムに対応するディレクトリ情報を返します。  
+ 入出力プロセスに読み込まれたランタイムのインストールディレクトリの完全修飾名が含まれた文字列をランタイムが返すバッファー。 ランタイムがまだプロセスに読み込まれていない場合、関数はコンピューターにインストールされている最新バージョンのランタイムの適切なディレクトリ情報を返します。  
   
  `cchBuffer`  
- [in]のサイズ (バイト単位)`pbuffer`です。  
+ からのサイズ (バイト単位) `pbuffer` 。  
   
  `dwLength`  
- [アウト]で返される文字数`pbuffer`。  
+ 入出力で返された文字数 `pbuffer` 。  
   
 ## <a name="remarks"></a>解説  
   
 > [!CAUTION]
-> CLR のバージョン 4 を実行しているプロセスでは、この関数を使用しないでください。 以前のバージョンの CLR がコンピューターにインストールされている場合、この関数は、そのバージョンのインストール ディレクトリを返します。  
+> CLR のバージョン4を実行しているプロセスでは、この関数を使用しないでください。 コンピューターに以前のバージョンの CLR がインストールされている場合、この関数はそのバージョンのインストールディレクトリを返します。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

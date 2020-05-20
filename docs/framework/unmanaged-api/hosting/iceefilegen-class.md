@@ -14,20 +14,20 @@ helpviewer_keywords:
 ms.assetid: 90368606-506e-40df-be1f-8d595159203f
 topic_type:
 - apiref
-ms.openlocfilehash: 8f9761cc8bc881cd694f5d9620e5c4ab5987a2ed
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fc0de164b9489c9661bc6cb0ffb681f75e88ea26
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176397"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83617010"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen クラス
-ネイティブポータブル実行可能 (PE) ファイルを作成するための機能を提供します。 通常、このインターフェイスは、コンパイルされた出力実行可能ファイルを生成するためにコンパイラによって使用されます。  
+ネイティブのポータブル実行可能 (PE) ファイルを作成するための機能を提供します。 インターフェイスは、通常、コンパイルされた出力実行可能ファイルを生成するためにコンパイラによって使用されます。  
   
 > [!NOTE]
-> `ICeeFileGen`は .NET Framework インフラストラクチャをサポートしており、コードから直接使用するためのものではありません。  
+> `ICeeFileGen`は .NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
   
- このインターフェイスは非推奨となっており、今後のリリースでは削除される予定です。  
+ このインターフェイスは非推奨とされており、今後のリリースでは削除される予定です。  
   
 ## <a name="syntax"></a>構文  
   
@@ -234,13 +234,13 @@ public:
 };  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** ファイルファイル・ファイル・h  
+ **ヘッダー:** ICeeFileGen  
   
- **.NET フレームワークバージョン:** 1.0  
+ **.NET Framework のバージョン:** 1.0  
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [ホスト インターフェイス](hosting-interfaces.md)
