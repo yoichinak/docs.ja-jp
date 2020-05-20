@@ -6,12 +6,12 @@ metadata:
   description: .NET アプリの設計、構築、移行について推奨される方法について説明します。
   ms.topic: landing-page
   ms.date: 03/19/2020
-  ms.openlocfilehash: dc358f45532625bd5474b01af630674a170baf0b
-  ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+  ms.openlocfilehash: ff3b842d33ea3fd5d9cbed5b39b2757933c1a616
+  ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 05/15/2020
-  ms.locfileid: "83418980"
+  ms.lasthandoff: 05/19/2020
+  ms.locfileid: "83613643"
 landingContent:
 - title: ASP.NET Core MVC アプリの開発
   linkLists:
@@ -27,7 +27,7 @@ landingContent:
   linkLists:
   - linkListType: concept
     links:
-    - text: Azure 向けクラウド ネイティブ .NET アプリの設計 (プレビュー)
+    - text: Azure 向けクラウド ネイティブ .NET アプリの設計
       url: cloud-native/index.md
     - text: 'サーバーレス アプリ: アーキテクチャ、パターン、および Azure の実装'
       url: serverless/index.md
