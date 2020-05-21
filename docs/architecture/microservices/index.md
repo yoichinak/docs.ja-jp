@@ -23,7 +23,7 @@ ms.locfileid: "80988792"
 
 - この電子書籍は、PDF 形式 (英語版のみ) で[ダウンロード](https://aka.ms/microservicesebook)することもできます
 
-- 参照アプリケーションを複製/フォーク[ on GitHub の eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
+- 参照アプリケーションをクローン/フォーク[ on GitHub の eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers)
 
 - [Channel 9 で入門ビデオ](https://aka.ms/microservices-video)を視聴
 
