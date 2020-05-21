@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b1b432a-d234-4002-839b-81366c3a8bdc
 topic_type:
 - apiref
-ms.openlocfilehash: 427895ffea94e6c657d775ebdeb8571070a61c6e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18492f3e95947a3a11da9d5d303651c04d764a8f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178062"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762631"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate メソッド
 指定されたファイル内のポータブル実行可能 (PE) または Microsoft 中間言語 (MSIL) を検証します。  
@@ -42,49 +42,49 @@ HRESULT Validate (
   
 ## <a name="parameters"></a>パラメーター  
  `veh`  
- [in]検証エラーを処理`IVEHandler`するインスタンスへのポインター。  
+ から`IVEHandler`検証エラーを処理するインスタンスへのポインター。  
   
  `ulAppDomainId`  
- [in]現在<xref:System.AppDomain>の .  
+ から現在のの識別子 <xref:System.AppDomain> 。  
   
  `ulFlags`  
- [in]実行する検証の種類を示す[、検証フラグ](../../../../docs/framework/unmanaged-api/hosting/validatorflags-enumeration.md)の値の組み合わせ。  
+ から実行する必要のある検証の種類を示す、 [Validatorflags](validatorflags-enumeration.md)値の組み合わせ。  
   
  `ulMaxError`  
- [in]検証を終了するまでに許容されるエラーの最大数。  
+ から検証を終了するまでに許容されるエラーの最大数。  
   
  `token`  
- [in]未使用。  
+ から未使用.  
   
  `fileName`  
- [in]検証するファイルの名前。  
+ から検証するファイルの名前。  
   
  `pe`  
- [in]ファイル バッファーへのポインター。  
+ からファイルバッファーへのポインター。  
   
  `ulSize`  
- [in]検証するファイルのサイズ (バイト単位)。  
+ から検証するファイルのサイズ (バイト単位)。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`Validate`正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
-|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返すと、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** イバリデーター.idl、イバリデーター.h  
+ **ヘッダー:** IValidator、IValidator  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRValidator インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)
+- [ICLRValidator インターフェイス](iclrvalidator-interface.md)
