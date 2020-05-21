@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 98ae174f-bff0-48f1-9e05-6cb63b451824
 topic_type:
 - apiref
-ms.openlocfilehash: 36851ac4573d0d65caffaa3f82a1f6fc8440a2d0
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 7d201962976d198372226eb686696fcdccf3eb69
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73092755"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762163"
 ---
 # <a name="iclrruntimeinfosetdefaultstartupflags-method"></a>ICLRRuntimeInfo::SetDefaultStartupFlags メソッド
-ランタイムを開始するために使用されるスタートアップフラグとホスト構成ファイルを設定します。 このメソッドは、 [Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)および[Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)関数での `startupFlags` パラメーターの使用よりも優先されます。  
+ランタイムを開始するために使用されるスタートアップフラグとホスト構成ファイルを設定します。 このメソッドは、 `startupFlags` [Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)および[Corbindtoruntimeex](corbindtoruntimehost-function.md)関数でのパラメーターの使用よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,7 +35,7 @@ HRESULT SetDefaultStartupFlags(
   
 ## <a name="parameters"></a>パラメーター  
  `dwStartupFlags`  
- から設定するホストスタートアップフラグ。 [Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)および[Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)関数と同じフラグを使用します。  
+ から設定するホストスタートアップフラグ。 [Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)および[Corbindtoruntimeex](corbindtoruntimehost-function.md)関数と同じフラグを使用します。  
   
  `pwzHostConfigFile`  
  から設定するホスト構成ファイルのディレクトリパス。  
@@ -47,20 +47,20 @@ HRESULT SetDefaultStartupFlags(
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
   
-## <a name="remarks"></a>Remarks  
- マルチスレッドホストは、このメソッドの呼び出しを同期する必要があります。 それ以外の場合は、スレッド B が `SetStartupFlags` への呼び出しを完了し、スレッド B がランタイムを開始する前に、`SetStartupFlags` メソッドを呼び出すことがあります。  
+## <a name="remarks"></a>解説  
+ マルチスレッドホストは、このメソッドの呼び出しを同期する必要があります。 それ以外の場合、スレッド B は、の `SetStartupFlags` 呼び出しを完了し `SetStartupFlags` てからランタイムを開始する前に、メソッドを呼び出すことがあります。  
   
-## <a name="requirements"></a>［要件］  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** メタホスト .h  
   
  **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRRuntimeInfo インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)
-- [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
-- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeInfo インターフェイス](iclrruntimeinfo-interface.md)
+- [ホスト インターフェイス](hosting-interfaces.md)
+- [ホスティング](index.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82b03a59-5a87-43ed-9b75-e04b256e1a46
 topic_type:
 - apiref
-ms.openlocfilehash: bb3778a55e7f395ad65f6a9841ca1f31f1de4ebc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2174afe0ee96bd153b7b40c73c0185d9058a0dc
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178258"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83760339"
 ---
 # <a name="icorthreadpoolcorchangetimer-method"></a>ICorThreadpool::CorChangeTimer メソッド
 このメソッドは、.NET Framework インフラストラクチャをサポートします。独自に作成したコードから直接使用するためのものではありません。  
@@ -36,15 +36,15 @@ HRESULT CorChangeTimer (
 );  
 ```  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICorThreadpool インターフェイス](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-interface.md)
+- [ICorThreadpool インターフェイス](icorthreadpool-interface.md)

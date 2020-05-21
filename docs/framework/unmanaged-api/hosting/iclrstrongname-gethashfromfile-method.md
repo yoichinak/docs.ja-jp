@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e50480a-8ada-4044-b2a5-97bb14ed3525
 topic_type:
 - apiref
-ms.openlocfilehash: ed735c3d7830551581df35793f3f6fdc4953dc8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4a5f6440a016176cf06704b342c173b29748e78
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178074"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762111"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile メソッド
 指定したファイルの内容に対してハッシュが生成されます。  
@@ -39,36 +39,36 @@ HRESULT GetHashFromFile (
   
 ## <a name="parameters"></a>パラメーター  
  `szFilePath`  
- [in]ハッシュするファイルの名前。  
+ からハッシュするファイルの名前。  
   
  `piHashAlg`  
- [イン、アウト]ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムは、Win32 CryptoAPI によって定義されるアルゴリズムです。 0`piHashAlg`に設定すると、デフォルトのアルゴリズム CALG_SHA-1 が使用されます。  
+ [入力、出力]ハッシュを生成するときに使用するアルゴリズム。 有効なアルゴリズムは、Win32 CryptoAPI によって定義されているものです。 が0に設定されている場合は、 `piHashAlg` 既定のアルゴリズム CALG_SHA-1 が使用されます。  
   
  `pbHash`  
- [アウト]生成されたハッシュを含むバイト配列。  
+ 入出力生成されたハッシュを格納しているバイト配列。  
   
  `cchHash`  
- [in]指す`pbHash`バッファーの最大サイズ。  
+ からが指すバッファーの最大サイズ `pbHash` 。  
   
  `pchHash`  
- [アウト]返された`pbHash`のサイズ (バイト単位)  
+ 入出力返されたのサイズ (バイト単位) `pbHash` 。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK`メソッドが正常に完了した場合。それ以外の場合は、失敗を示す HRESULT 値です (リストの[HRESULT の共通値](/windows/win32/seccrypto/common-hresult-values)を参照)。  
+ `S_OK`メソッドが正常に完了した場合は。それ以外の場合は、失敗を示す HRESULT 値 (「リストの[一般的な Hresult 値](/windows/win32/seccrypto/common-hresult-values)」を参照してください)。  
   
 ## <a name="remarks"></a>解説  
- このメソッドは、ファイル名の指定が Unicode ではなく ANSI であることを除いて[、ICLRStrongName::GetHashFromFileW](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)メソッドと同じです。  
+ このメソッドは[ICLRStrongName:: GetHashFromFileW](iclrstrongname-gethashfromfilew-method.md)メソッドと同じですが、ファイル名の指定は Unicode ではなく ANSI です。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** メタホスト.h  
+ **ヘッダー:** メタホスト .h  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [GetHashFromFileW メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)
-- [ICLRStrongName インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+- [GetHashFromFileW メソッド](iclrstrongname-gethashfromfilew-method.md)
+- [ICLRStrongName インターフェイス](iclrstrongname-interface.md)
