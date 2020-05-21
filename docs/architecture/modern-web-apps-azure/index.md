@@ -55,7 +55,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 - この電子書籍は、PDF 形式 (英語版のみ) で[ダウンロード](https://aka.ms/webappebook)することもできます
 
-- 参照アプリケーションを複製/フォーク [GitHub の eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)
+- 参照アプリケーションをクローン/フォーク [GitHub の eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)
 
 ## <a name="introduction"></a>はじめに
 
