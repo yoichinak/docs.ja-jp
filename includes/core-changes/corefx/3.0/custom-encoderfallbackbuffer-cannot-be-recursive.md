@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 820825f0545aa78729414c388385b339225b1235
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: 00c32c10f77995284264e795d386f699082dcb84
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021561"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721648"
 ---
 ### <a name="custom-encoderfallbackbuffer-instances-cannot-fall-back-recursively"></a>カスタム EncoderFallbackBuffer インスタンスが再帰的にフォールバックしない
 
@@ -47,7 +47,7 @@ Core .NET ライブラリ
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `Overload:System.Text.EncoderFallbackBuffer.Fallback`
 - `M:System.Text.EncoderFallbackBuffer.GetNextChar`

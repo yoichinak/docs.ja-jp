@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 071e73bd-4795-470f-9373-cfaef553b7f2
 topic_type:
 - apiref
-ms.openlocfilehash: 8d987614c1a5a2c90ccb3faa11c605767ae5cfda
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e6aa8cb814e509d310c2f5b5524e0fd6727fc43f
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79178018"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83804284"
 ---
 # <a name="ihostpolicymanagerondefaultaction-method"></a>IHostPolicyManager::OnDefaultAction メソッド
-共通言語ランタイム (CLR) が、スレッドの中止または<xref:System.AppDomain>アンロードに応答して[ICLRPolicyManager::SetDefaultAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setdefaultaction-method.md)メソッドの呼び出しによって設定された既定のアクションを実行しようとしていることをホストに通知します。  
+スレッドの中止またはアンロードに応じて、 [ICLRPolicyManager:: SetDefaultAction](iclrpolicymanager-setdefaultaction-method.md)メソッドの呼び出しによって設定された既定のアクションを共通言語ランタイム (CLR: common language runtime) が実行しようとしていることをホストに通知し <xref:System.AppDomain> ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,34 +36,34 @@ HRESULT OnDefaultAction (
   
 ## <a name="parameters"></a>パラメーター  
  `operation`  
- [in]CLR が応答するイベントの種類を示す[、EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)値の 1 つ。  
+ から[EClrOperation](eclroperation-enumeration.md)値の1つ。 CLR が応答するイベントの種類を示します。  
   
  `action`  
- [in]イベントに応答して CLR が実行しているアクションを示す[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)値の 1 つ。  
+ からイベントへの応答として CLR が実行しているアクションを示す[Epolicyaction](epolicyaction-enumeration.md)値の1つ。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`OnDefaultAction`正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージ コードを実行したり呼び出しを処理できない状態にしています。 正しく|  
-|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
+|HOST_E_CLRNOTAVAILABLE|CLR がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しを処理できません。 なく|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返すと、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [EClrOperation 列挙型](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [EPolicyAction 列挙型](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [ICLRPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [IHostPolicyManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostpolicymanager-interface.md)
+- [EClrOperation 列挙型](eclroperation-enumeration.md)
+- [EPolicyAction 列挙型](epolicyaction-enumeration.md)
+- [ICLRPolicyManager インターフェイス](iclrpolicymanager-interface.md)
+- [IHostPolicyManager インターフェイス](ihostpolicymanager-interface.md)

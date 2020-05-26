@@ -2,13 +2,14 @@
 title: カスタム .NET Core ランタイム ホストを作成する
 description: .NET Core ランタイムの動作を制御する必要がある高度なシナリオをサポートするために、ネイティブ コードから .NET Core ランタイムをホストする方法について説明します。
 author: mjrousos
+ms.topic: how-to
 ms.date: 12/21/2018
-ms.openlocfilehash: 46c7873a1865db04cf1c2b1bb2ded2b5dacbcc8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 342a0cec78303f70db3a5b31294be1d465459f55
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78239899"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394850"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 

@@ -4,12 +4,12 @@ description: 式ツリーの構造を調べるためのコードの記述方法�
 ms.date: 06/20/2016
 ms.technology: csharp-advanced-concepts
 ms.assetid: adf73dde-1e52-4df3-9929-2e0670e28e16
-ms.openlocfilehash: 1283d7d957c72558652b96cb428efd0f071f0184
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5734e1be6b59bfe3eae97f29d1bd91e7e3a3623f
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79146009"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761864"
 ---
 # <a name="interpreting-expressions"></a>式の解釈
 
@@ -51,7 +51,7 @@ The value of the constant value is 24
 Expression<Func<int>> sum = () => 1 + 2;
 ```
 
-> この式ツリーを宣言するために `var` を使用していません。それは代入の右側は暗黙的に型指定されているためです。 このことを詳しく理解するには、[ここ](implicitly-typed-lambda-expressions.md)をお読みください。
+> この式ツリーを宣言するために `var` を使用していません。それは代入の右側は暗黙的に型指定されているためです。
 
 ルート ノードは `LambdaExpression` です。 `=>` 演算子の右側で関心があるコードを取得するため、`LambdaExpression` の子のいずれかを検索する必要があります。 このセクションのすべての式について、この操作を行います。 親ノードは `LambdaExpression` の戻り値の型を検索するのに役立ちます。
 

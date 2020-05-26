@@ -2,13 +2,14 @@
 title: .NET Core CLI を使用したライブラリの開発
 description: .NET Core CLI を使用して .NET Core ライブラリを作成する方法について説明します。 複数のフレームワークをサポートするライブラリを作成します。
 author: cartermp
+ms.topic: how-to
 ms.date: 05/01/2017
-ms.openlocfilehash: c23c1f027b4d6d09c50eb2257d34f72ec56302f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7aadaf7bf7819d52a57c3a137beff46d924d8cb0
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77503511"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396201"
 ---
 # <a name="develop-libraries-with-the-net-core-cli"></a>.NET Core CLI を使用したライブラリの開発
 

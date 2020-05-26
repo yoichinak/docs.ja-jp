@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9631e64bb403a3fe7b1b91e8ac592b57ce8068d9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bba74f26eafd52b966928835d5003d03af1eabdc
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937052"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721422"
 ---
 ### <a name="donotsupportselectallshortcutinmultilinetextbox-compatibility-switch-not-supported"></a>DoNotSupportSelectAllShortcutInMultilineTextBox 互換性スイッチはサポートされていません
 
@@ -34,7 +34,7 @@ Windows フォーム
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

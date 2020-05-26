@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: c6dcca8384cbd97a968b77e4bc834afa1f683298
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: b90821d0d3495f6006d1d97b3d3377e984c74c5e
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895671"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83613591"
 ---
 # <a name="net-docs"></a>.NET ドキュメント
 
@@ -12,7 +12,6 @@ ms.locfileid: "82895671"
 
 このリポジトリには、.NET の概念に関するドキュメントが含まれています。 [.NET ドキュメント サイト](https://docs.microsoft.com/dotnet)は次のものに加え、複数のリポジトリから構築されています。
 
-- [コード サンプルとスニペット](https://github.com/dotnet/samples)
 - [API リファレンス](https://github.com/dotnet/dotnet-api-docs)
 - [.NET Compiler Platform SDK リファレンス](https://github.com/dotnet/roslyn-api-docs)
 

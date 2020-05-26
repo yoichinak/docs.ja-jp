@@ -740,18 +740,6 @@
                                   href: programming-guide/concepts/linq/intermediate-materialization.md
                                 - name: 標準クエリ演算子の連結
                                   href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
-                            - name: 'チュートリアル: クエリの連結'
-                              items:
-                                - name: LINQ to XML における遅延実行とレイジー評価
-                                  href: programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-                                - name: 遅延実行の例
-                                  href: programming-guide/concepts/linq/deferred-execution-example.md
-                                - name: クエリの連結の例
-                                  href: programming-guide/concepts/linq/chaining-queries-example.md
-                                - name: 中間結果の具体化
-                                  href: programming-guide/concepts/linq/intermediate-materialization.md
-                                - name: 標準クエリ演算子の連結
-                                  href: programming-guide/concepts/linq/chaining-standard-query-operators-together.md
                             - name: 'チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作'
                               items:
                                 - name: WordprocessingML ドキュメントの構造

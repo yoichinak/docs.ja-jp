@@ -4,12 +4,12 @@ description: この上級チュートリアルでは、非同期ストリーム�
 ms.date: 02/10/2019
 ms.technology: csharp-async
 ms.custom: mvc
-ms.openlocfilehash: 03254e5208a048469f4753d632de7b0d451cde40
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: fd9fed3469d18c919102640df7bb501b116f5e0e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200107"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420371"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>チュートリアル: C#8.0 および .NET Core 3.0 を使用して非同期ストリームを生成および使用する
 
@@ -42,7 +42,7 @@ C# 8.0 では、データのストリーミング元をモデル化する**非�
 
 ## <a name="run-the-starter-application"></a>初期アプリケーションを実行する
 
-このチュートリアルで使用される初期アプリケーションのコードは、[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) フォルダー内の [dotnet/docs](https://github.com/dotnet/docs) リポジトリから取得できます。
+このチュートリアルで使用される初期アプリケーションのコードは、[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/start) フォルダー内の [dotnet/docs](https://github.com/dotnet/docs) リポジトリから取得できます。
 
 初期アプリケーションは、[GitHub GraphQL](https://developer.github.com/v4/) インターフェイスを使用して、[dotnet/docs](https://github.com/dotnet/docs) リポジトリに書き込まれた最近の問題を取得するコンソール アプリケーションです。 まず、初期アプリの `Main` メソッドについて次のコードを参照します。
 
@@ -144,7 +144,7 @@ try
 
 :::code language="csharp" source="snippets/generate-consume-asynchronous-streams/finished/Program.cs" id="SnippetEnumerateWithCancellation" :::
 
-完了したチュートリアルのコードは、[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) フォルダー内の [dotnet/docs](https://github.com/dotnet/docs) リポジトリから取得できます。
+完了したチュートリアルのコードは、[csharp/tutorials/AsyncStreams](https://github.com/dotnet/docs/tree/master/docs/csharp/tutorials/snippets/generate-consume-asynchronous-streams/finished) フォルダー内の [dotnet/docs](https://github.com/dotnet/docs) リポジトリから取得できます。
 
 ## <a name="run-the-finished-application"></a>完成したアプリケーションを実行する
 

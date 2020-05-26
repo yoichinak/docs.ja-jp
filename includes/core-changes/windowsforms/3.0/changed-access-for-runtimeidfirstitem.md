@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 5bbbf9075683b0f124e126b661b4ab85011e6c2e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ea2d70a7cfe04cc4c4b9b58ea6bb6fa0226b245
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "74643929"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721548"
 ---
 ### <a name="change-of-access-for-accessibleobjectruntimeidfirstitem"></a>AccessibleObject.RuntimeIDFirstItem のアクセスに対する変更
 
@@ -36,7 +36,7 @@ Windows フォーム
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis.
 
