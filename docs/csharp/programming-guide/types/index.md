@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 1e0141ceafe4c3450b3f798463ddc62ea79f1b36
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615216"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802928"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -92,10 +92,10 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 
 値型には、[構造体](../../language-reference/builtin-types/struct.md)と[列挙体](../../language-reference/builtin-types/enum.md)の 2 つのカテゴリがあります。
 
-組み込みの数値型は構造体であり、次のようにしてアクセスできるプロパティとメソッドを持ちます。
+組み込みの数値型は構造体であり、次のようにしてアクセスできるフィールドとメソッドを持ちます。
 
 ```csharp
-// Static method on type byte.
+// constant field on type byte.
 byte b = byte.MaxValue;
 ```
 

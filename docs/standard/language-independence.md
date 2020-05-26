@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 03751fa3758c239cb9eea5fe826dff66c1c1605b
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: f04ff902743c91147a6f056bca3292ee47952bbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249579"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420553"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -341,7 +341,7 @@ CLS 準拠型 | 説明
 
 .NET Framework のクラス ライブラリまたはその他のクラス ライブラリには、CLS に準拠していない他の型が含まれる場合があります。次に例を示します。
 
-* ボックス化された値型。 次の C# コード例では、`Value` という名前の型 `int`* のパブリック プロパティを持つクラスを作成します。 `int`* はボックス化された値型であるため、コンパイラは CLS 非準拠としてフラグを設定します。
+* ボックス化された値型。 次の C# コード例では、`int*` という名前の型 `Value` のパブリック プロパティを持つクラスを作成します。 `int*` はボックス化された値型であるため、コンパイラは CLS 非準拠としてフラグを設定します。
 
 ```csharp
 using System;

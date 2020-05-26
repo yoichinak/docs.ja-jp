@@ -2,12 +2,12 @@
 title: ランタイムの構成オプション
 description: ランタイム構成設定を使用して .NET Core アプリケーションを構成する方法について説明します。
 ms.date: 01/21/2020
-ms.openlocfilehash: d49707b93e272f0e527ff536a80140ec98e5c1a8
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 68690689fd4f936e3af76ab647f0b58d8ec6ca27
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506784"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761955"
 ---
 # <a name="net-core-run-time-configuration-settings"></a>.NET Core ランタイム構成設定
 
@@ -27,6 +27,9 @@ ms.locfileid: "82506784"
 - [MSBuild プロパティ](#msbuild-properties)
 
 - [環境変数](#environment-variables)
+
+> [!TIP]
+> 環境変数を使用して実行時オプションを構成すると、すべての .NET Core アプリに設定が適用されます。 *runtimeconfig.json* またはプロジェクト ファイルで実行時オプションを構成すると、そのアプリケーションにのみ設定が適用されます。
 
 一部の構成値は、<xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> メソッドを呼び出すことによって、プログラムで設定することもできます。
 
@@ -106,11 +109,11 @@ ms.locfileid: "82506784"
 </Project>
 ```
 
-実行時の動作を構成する MSBuild プロパティについては、[ガベージ コレクション](garbage-collector.md)に関するページなど、各領域の個々の記事に記載されています。
+実行時の動作を構成する MSBuild プロパティについては、[ガベージ コレクション](garbage-collector.md)に関するページなど、各領域の個々の記事に記載されています。 これらは、SDK スタイルのプロジェクトの MSBuild プロパティ リファレンスの「[実行時構成](../project-sdk/msbuild-props.md#run-time-configuration-properties)」セクションにも記載されています。
 
 ## <a name="environment-variables"></a>環境変数
 
-環境変数を使用すると、ランタイムの構成情報を指定できます。 環境変数として指定された構成ノブには、一般に **COMPlus_** のプレフィックスが付いています。
+環境変数を使用すると、ランタイムの構成情報を指定できます。 環境変数を使用して実行時オプションを構成すると、すべての .NET Core アプリに設定が適用されます。 環境変数として指定された構成ノブには、一般に **COMPlus_** のプレフィックスが付いています。
 
 環境変数は、Windows のコントロール パネル、コマンド ライン、または Windows と Unix ベースのシステムの両方で <xref:System.Environment.SetEnvironmentVariable(System.String,System.String)?displayProperty=nameWithType> メソッドを呼び出すことによって、プログラムで定義できます。
 
