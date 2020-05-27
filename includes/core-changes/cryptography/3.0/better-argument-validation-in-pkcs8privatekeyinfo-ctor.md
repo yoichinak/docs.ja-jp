@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8d3a8712528d2d35c706cc26b8c388b65d6ad506
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32030698c12de87daef5e1d8851a0f55ec36d688
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449221"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721092"
 ---
 ### <a name="better-argument-validation-in-the-pkcs8privatekeyinfo-constructor"></a>Pkcs8PrivateKeyInfo コンストラクターでの引数の検証の改善
 
@@ -41,17 +41,17 @@ var info = new Pkcs8PrivateKeyInfo(algorithmId, algorithmParameters, privateKey)
 
 例外の処理が必要な場合、有効な `algorithmParameters` 値のみを指定するようにします。そのようにしなければ、`Pkcs8PrivateKeyInfo` コンストラクターへのその呼び出しは <xref:System.ArgumentException> と <xref:System.Security.Cryptography.CryptographicException> の両方に対してテストされます。
 
-### <a name="category"></a>カテゴリ
+#### <a name="category"></a>カテゴリ
 
 暗号
 
-### <a name="affected-apis"></a>影響を受ける API
+#### <a name="affected-apis"></a>影響を受ける API
 
 - [Pkcs8PrivateKeyInfo コンストラクター](xref:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.%23ctor(System.Security.Cryptography.Oid,System.Nullable%7BSystem.ReadOnlyMemory%7BSystem.Byte%7D%7D,System.ReadOnlyMemory%7BSystem.Byte%7D,System.Boolean))
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.Pkcs8PrivateKeyInfo.#ctor(System.Security.Cryptography.Oid,System.Nullable{System.ReadOnlyMemory{System.Byte}},System.ReadOnlyMemory{System.Byte},System.Boolean)`
 

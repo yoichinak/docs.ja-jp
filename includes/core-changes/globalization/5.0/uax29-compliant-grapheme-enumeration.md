@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f131933f3cf7890939854c46f115e8deb8da1cc2
-ms.sourcegitcommit: 2b3b2d684259463ddfc76ad680e5e09fdc1984d2
+ms.openlocfilehash: c0c1c9c9d8e3aeb6f689f754d09b50b208b54112
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80888172"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702313"
 ---
 ### <a name="stringinfo-and-textelementenumerator-are-now-uax29-compliant"></a>StringInfo と TextElementEnumerator は現在 UAX29 に準拠する
 
@@ -91,21 +91,23 @@ Grapheme 1: "🤷🏽‍♀️"
 
 .NET 5.0 Preview 1
 
-### <a name="recommended-action"></a>推奨アクション
+#### <a name="recommended-action"></a>推奨アクション
 
 何らかのアクションをとる必要はありません。 アプリは、さまざまなグローバリゼーション関連のシナリオで、標準に準拠した方法で自動的に動作します。
 
-### <a name="category"></a>カテゴリ
+#### <a name="category"></a>カテゴリ
 
 グローバリゼーション
 
-### <a name="affected-apis"></a>影響を受ける API
+#### <a name="affected-apis"></a>影響を受ける API
 
 - <xref:System.Globalization.StringInfo?displayProperty=fullName>
 - <xref:System.Globalization.TextElementEnumerator?displayProperty=fullName>
 - <xref:Microsoft.VisualBasic.Strings.StrReverse%2A?displayProperty=fullName>
 
 <!--
+
+#### Affected APIs
 
 - `T:System.Globalization.StringInfo`
 - `T:System.Globalization.TextElementEnumerator`

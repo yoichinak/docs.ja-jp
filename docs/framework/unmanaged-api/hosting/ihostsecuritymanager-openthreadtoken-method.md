@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d5999052-8bf0-4a9e-8621-da6284406b18
 topic_type:
 - apiref
-ms.openlocfilehash: 11d042ea9eecc8d428761da6eaa15f7c2907ebd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 85c7308f794929d753b50f58f69168f67a31cb85
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176267"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803874"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken メソッド
-現在実行中のスレッドに関連付けられている任意のアクセス トークンを開きます。  
+現在実行中のスレッドに関連付けられている随意アクセストークンを開きます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,40 +37,40 @@ HRESULT OpenThreadToken (
   
 ## <a name="parameters"></a>パラメーター  
  `dwDesiredAccess`  
- [in]スレッド トークンへのアクセスの要求された種類を指定するアクセス値のマスク。 これらの値は Win32`OpenThreadToken`関数で定義されます。 要求されたアクセスの種類は、トークンの随意アクセス制御リスト (DACL) に対して調整され、許可または拒否するアクセスの種類を決定します。  
+ からスレッドトークンへの要求されたアクセスの種類を指定するアクセス値のマスク。 これらの値は、Win32 関数で定義されてい `OpenThreadToken` ます。 要求されたアクセスの種類は、付与または拒否するアクセスの種類を決定するために、トークンの随意アクセス制御リスト (DACL) に対して調整されます。  
   
  `bOpenAsSelf`  
- [in]`true`呼び出し元スレッドのプロセスのセキュリティ コンテキストを使用してアクセス チェックを行うことを指定します。`false`呼び出し元スレッド自体のセキュリティ コンテキストを使用してアクセス チェックを実行するように指定します。 スレッドがクライアントを偽装している場合、セキュリティ コンテキストはクライアント プロセスのコンテキストにすることができます。  
+ [入力] `true`呼び出し元スレッドのプロセスのセキュリティコンテキストを使用してアクセスチェックを行うように指定する場合は。`false`呼び出し元スレッドのセキュリティコンテキストを使用してアクセスチェックを実行するように指定する場合は。 スレッドがクライアントを偽装している場合は、クライアントプロセスのセキュリティコンテキストになります。  
   
  `phThreadToken`  
- [アウト]新しく開いたアクセス トークンへのポインター。  
+ 入出力新しく開かれたアクセストークンへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`OpenThreadToken`正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
-|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返すと、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>解説  
- `IHostSecurityManager::OpenThreadToken`Win32 関数では、呼び出し元が任意のスレッドにハンドルを渡し、呼び出し元スレッドに関連付けられたトークンのみを`IHostSecurityManager::OpenThreadToken`開くことを許可する点を除いて、同じ名前の対応する Win32 関数と同様に動作します。  
+ `IHostSecurityManager::OpenThreadToken`は、同じ名前の対応する Win32 関数と同じように動作します。ただし、Win32 関数では、呼び出し元が任意のスレッドへのハンドルを渡すことを許可し、 `IHostSecurityManager::OpenThreadToken` は呼び出し元のスレッドに関連付けられたトークンのみを開くことができます。  
   
- 型`HANDLE`は COM に準拠していない、つまり、そのサイズはオペレーティング システムに固有であり、カスタム マーシャリングが必要です。 したがって、このトークンは、プロセス内で、CLR とホストの間でのみ使用されます。  
+ `HANDLE`この型は COM に準拠していません。つまり、そのサイズはオペレーティングシステムに固有であり、カスタムマーシャリングが必要です。 したがって、このトークンは、CLR とホストの間でプロセス内でのみ使用されます。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IHostSecurityContext インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [IHostSecurityManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+- [IHostSecurityContext インターフェイス](ihostsecuritycontext-interface.md)
+- [IHostSecurityManager インターフェイス](ihostsecuritymanager-interface.md)

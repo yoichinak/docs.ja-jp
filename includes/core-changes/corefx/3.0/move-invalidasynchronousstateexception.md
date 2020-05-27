@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: d1562cb76f37b6cc2aeb6fe2f7c17c393e169e84
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 78678b4b352bb063d1521e9aee3492c0cee059b8
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158479"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721420"
 ---
 ### <a name="invalidasynchronousstateexception-moved-to-another-assembly"></a>InvalidAsynchronousStateException が別のアセンブリに移動された
 
@@ -34,7 +34,7 @@ Core .NET ライブラリ
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: f2299ac807c845dab482306cc4c710560bb7f1e7
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 0fb21b09fbf97f9c9ac2bf2982c391b87e2debc1
+ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607863"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83614358"
 ---
 # <a name="deploy-net-core-apps-with-visual-studio"></a>Visual Studio を使用して .NET Core アプリを展開する
 
@@ -38,8 +38,8 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
    エディターで *Program.cs* または *Program.vb* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+   [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
+   [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. アプリのデバッグ ビルドを作成します。
 
@@ -89,8 +89,8 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
    エディターで *Program.cs* または *Program.vb* ファイルを開き、自動生成されたコードを次のコードに置き換えます。 テキストの入力を求めるプロンプトが表示されてから、ユーザーが入力した個々の単語が表示されます。 正規表現 `\w+` を使用して、入力テキストの単語を分離します。
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+   [!code-csharp[deployment#1](./snippets/deploy-with-vs/csharp/deployment-example.cs)]
+   [!code-vb[deployment#1](./snippets/deploy-with-vs/vb/deployment-example.vb)]
 
 1. グローバリゼーション インバリアント モードを使用するかどうかを決定します。
 
@@ -98,7 +98,7 @@ Visual Studio を使用して、.NET Core アプリケーションを開発す�
 
    インバリアント モードを有効にするには、**ソリューション エクスプローラー**で (ソリューションではなく) プロジェクトを右クリックし、 **[SCD.csproj の編集]** または **[SCD.vbproj の編集]** を選択します。 次の強調表示された行をファイルに追加します。
 
-   [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj?highlight=6-8)]
+   [!code-xml[globalization-invariant-mode](./snippets/deploy-with-vs/xml/invariant.csproj?highlight=6-8)]
 
 1. アプリケーションのデバッグ ビルドを作成します。
 

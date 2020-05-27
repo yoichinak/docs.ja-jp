@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 95a4c807f5c1077cf52f54b196e904ebc98c32f8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 535a73c6b748166a1e4a4661a6bab0671c653278
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76116378"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721511"
 ---
 ### <a name="microsoftvisualbasicconstantsvbnewline-is-obsolete"></a>Microsoft.VisualBasic.Constants.vbNewLine は古い
 
@@ -36,7 +36,7 @@ Visual Basic
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `F:Microsoft.VisualBasic.Constants.vbNewLine`
 

@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9583d868ee01117d7bd6e465e7d89a734489d1a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b861dbaa02c97a03c015fdf4e63d25c40c90ea0a
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77449223"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721460"
 ---
 ### <a name="boolean-parameter-of-signedcmscomputesignature-is-respected"></a>SignedCms.ComputeSignature のブール型パラメーターの尊重
 
@@ -24,17 +24,17 @@ ms.locfileid: "77449223"
 
 必要に応じて PIN プロンプトが表示されるようにするには、デスクトップ アプリケーションで <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType> を呼び出し、ブール型パラメーターを `false` に設定する必要があります。 結果の動作は、サイレント コンテキストが無効かどうかに関係なく .NET Framework と同じになります。
 
-### <a name="category"></a>カテゴリ
+#### <a name="category"></a>カテゴリ
 
 暗号
 
-### <a name="affected-apis"></a>影響を受ける API
+#### <a name="affected-apis"></a>影響を受ける API
 
 - <xref:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)?displayProperty=nameWithType>
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - `M:System.Security.Cryptography.Pkcs.SignedCms.ComputeSignature(System.Security.Cryptography.Pkcs.CmsSigner,System.Boolean)`
 

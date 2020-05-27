@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 1e081c9f37fbd7ab754ce44ba89d7aa5cabfc219
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8395428e1729a00fc1af72cf53fe689ee95b5fdf
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75901944"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721373"
 ---
 ### <a name="mvc-precompilation-tool-deprecated"></a>MVC:プリコンパイル ツールは非推奨です
 
@@ -42,7 +42,7 @@ None
 
 <!-- 
 
-### Affected APIs
+#### Affected APIs
 
 Not detectable via API analysis
 

@@ -4,12 +4,12 @@ description: dotnet テストおよび xUnit を使用したサンプル ソリ�
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: c9e3d63a2cf4f560591459833340b729ffec1b95
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8cf0e29c8a482b39bd7e99bcde1fd60301f046f
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240897"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702950"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した .NET Core での単体テスト C#
 
@@ -52,18 +52,18 @@ ms.locfileid: "78240897"
 * *PrimeService.cs* のコードを、次のコードに置き換えます。
   
   ```csharp
-    using System;
+  using System;
 
-    namespace Prime.Services
-    {
-        public class PrimeService
-        {
-            public bool IsPrime(int candidate)
-            {
-                throw new NotImplementedException("Not implemented.");
-            }
-        }
-    }
+  namespace Prime.Services
+  {
+      public class PrimeService
+      {
+          public bool IsPrime(int candidate)
+          {
+              throw new NotImplementedException("Not implemented.");
+          }
+      }
+  }
   ```
 
 * 上記のコードでは次の操作が行われます。
@@ -85,7 +85,7 @@ ms.locfileid: "78240897"
   ```
 
 * 上記のコマンドにより、次のことが行われます。
-  * *PrimeService.Tests* ディレクトリに *PrimeService.Tests* プロジェクトが作成されます。 このテスト プロジェクトでは、テスト ライブラリとして [xUnit](https://xunit.github.io/) が使用されます。
+  * *PrimeService.Tests* ディレクトリに *PrimeService.Tests* プロジェクトが作成されます。 このテスト プロジェクトでは、テスト ライブラリとして [xUnit](https://xunit.net/) が使用されます。
   * プロジェクト ファイルに次の `<PackageReference />` 要素を追加することで、テスト ランナーを構成します。
     * "Microsoft.NET.Test.Sdk"
     * "xunit"
@@ -190,7 +190,6 @@ Assert.False(result, "1 should not be prime");
 パラメーターだけを変更するときにテスト コードをコピーすると、コードの重複が発生してテストが膨張します。 次の xUnit 属性を使用して、類似する一連のテストを記述できます。
 
 - `[Theory]` は同じコードを実行するものの、異なる入力引数が含まれる一連のテストを表します。
-
 - `[InlineData]` 属性は、これらの入力の値を指定します。
 
 新しいテストを作成するのではなく、上記の xUnit 属性を適用することで、単一の理論を作成できます。 以下のコードを
@@ -230,6 +229,6 @@ TDD アプローチに従って、失敗するテストをさらに追加した�
 
 ### <a name="additional-resources"></a>その他のリソース
 
-- [xUnit.net の公式サイト](https://xunit.github.io)
+- [xUnit.net の公式サイト](https://xunit.net)
 - [ASP.NET Core のコントローラー ロジックをテストする](/aspnet/core/mvc/controllers/testing)
 - [`dotnet add reference`](../tools/dotnet-add-reference.md)

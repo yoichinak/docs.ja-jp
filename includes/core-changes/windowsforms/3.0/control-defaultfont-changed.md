@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: b0c4e9617677cf95e3a059b57f3d50ddfb072f4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b2d3c1383246d4259c6d906ecf9dab927f4bdb1
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75937093"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83721093"
 ---
 ### <a name="default-control-font-changed-to-segoe-ui-9-pt"></a>既定のコントロール フォントが Segoe UI 9 pt に変更されました
 
@@ -48,7 +48,7 @@ public MyForm()
 
 <!--
 
-### Affected APIs
+#### Affected APIs
 
 - Not detectable via API analysis
 

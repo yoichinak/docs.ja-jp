@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: fef2f56fd000a8610a40661a30aa306ae5a7884e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7079a915c0402df62afa5648317619af82c943b0
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177997"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83841985"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask メソッド
-ホストに新しいタスクの作成を要求します。  
+ホストが新しいタスクを作成することを要求します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,44 +38,44 @@ HRESULT CreateTask (
   
 ## <a name="parameters"></a>パラメーター  
  `stacksize`  
- [in]要求されたスタックの要求されたサイズ (バイト単位) またはデフォルト サイズの 0 (ゼロ)。  
+ から要求されたスタックの要求されたサイズ (バイト単位)、または既定のサイズの 0 (ゼロ)。  
   
  `pStartAddress`  
- [in]タスクが実行する関数へのポインター。  
+ からタスクが実行する関数へのポインター。  
   
  `pParameter`  
- [in]関数に渡されるユーザー データへのポインター。  
+ から関数に渡されるユーザーデータへのポインター。関数がパラメーターを受け取らない場合は null。  
   
  `ppTask`  
- [アウト]ホストによって作成された[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンスのアドレスへのポインター。 タスクは[、IHostTask::Start](../../../../docs/framework/unmanaged-api/hosting/ihosttask-start-method.md)の呼び出しによって明示的に開始されるまで中断状態のままになります。  
+ 入出力ホストによって作成された[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンスのアドレスへのポインター。タスクを作成できない場合は null。 このタスクは、 [IHostTask:: Start](ihosttask-start-method.md)の呼び出しによって明示的に開始されるまで、中断状態のままになります。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`CreateTask`正常に返されました。|  
-|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージ コードを実行できない状態または呼び出しを正常に処理できない状態にあります。|  
-|HOST_E_TIMEOUT|通話がタイムアウトしました。|  
+|HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) がプロセスに読み込まれていないか、CLR がマネージコードを実行できない状態であるか、または呼び出しが正常に処理されていません。|  
+|HOST_E_TIMEOUT|呼び出しがタイムアウトしました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
-|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバが待機しているときにイベントがキャンセルされました。|  
-|E_FAIL|不明な致命的なエラーが発生しました。 メソッドがE_FAILを返すと、CLR はプロセス内で使用できなくなります。 ホスト メソッドへの後続の呼び出しは、HOST_E_CLRNOTAVAILABLEを返します。|  
-|E_OUTOFMEMORY|メモリ不足で、要求されたタスクを作成できませんでした。|  
+|HOST_E_ABANDONED|ブロックされたスレッドまたはファイバーが待機しているときに、イベントが取り消されました。|  
+|E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
+|E_OUTOFMEMORY|要求されたタスクを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>解説  
- ホストが新`CreateTask`しいタスクを作成することを要求する CLR 呼び出し。 ホストは、インスタンスへのインターフェイス ポインター`IHostTask`を返します。 返されたタスクは、 への呼び出しによって明示的に開始されるまで`IHostTask::Start`中断されたままにする必要があります。  
+## <a name="remarks"></a>コメント  
+ CLR はを呼び出して、 `CreateTask` ホストが新しいタスクを作成することを要求します。 ホストは、インスタンスへのインターフェイスポインターを返し `IHostTask` ます。 を呼び出すことによって明示的に開始されるまで、返されたタスクは中断されたままである必要があり `IHostTask::Start` ます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
-- [ICLRTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
-- [IHostTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)
-- [IHostTaskManager インターフェイス](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-interface.md)
+- [ICLRTask インターフェイス](iclrtask-interface.md)
+- [ICLRTaskManager インターフェイス](iclrtaskmanager-interface.md)
+- [IHostTask インターフェイス](ihosttask-interface.md)
+- [IHostTaskManager インターフェイス](ihosttaskmanager-interface.md)
