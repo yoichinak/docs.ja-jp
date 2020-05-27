@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 6b5be4fc-2e86-499c-8b09-833160bca767
 topic_type:
 - apiref
-ms.openlocfilehash: 8ca5ab70f60de4d783800fb18612a8f04cb9cee1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ccc4843864f375c167acdb12575c282dbe3a49e1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177715"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004817"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField メソッド
-指定したメタデータ シグネチャを持つフィールドの定義を作成し、そのフィールド定義へのトークンを取得します。  
+指定したメタデータシグネチャを持つフィールドの定義を作成し、そのフィールド定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -43,42 +43,42 @@ HRESULT DefineField (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]外側`mdTypeDef`のクラスまたはインターフェイスのトークン。  
+ から`mdTypeDef`外側のクラスまたはインターフェイスのトークン。  
   
  `szName`  
- [in]ユニコードのフィールド名。  
+ からUnicode でのフィールド名。  
   
  `dwFieldFlags`  
- [in]フィールド属性。 これは値の`CorFieldAttr`ビットマスクです。  
+ からフィールド属性。 これは、値のビットマスクです `CorFieldAttr` 。  
   
  `pvSigBlob`  
- [in]BLOB としてのフィールド シグネチャ。  
+ からBLOB としてのフィールドシグネチャ。  
   
  `cbSigBlob`  
- [in]のバイト数`pvSigBlob`。  
+ からのバイト数 `pvSigBlob` 。  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_`*\** 定数値の場合。 これは値です`CorElementType`。 フィールドの定数値を定義しない場合は、 を`ELEMENT_TYPE_END`使用します。  
+ から`ELEMENT_TYPE_` *\** 定数値の。 これは `CorElementType` 値です。 フィールドの定数値を定義していない場合は、を使用し `ELEMENT_TYPE_END` ます。  
   
  `pValue`  
- [in]フィールドの定数値。  
+ からフィールドの定数値。  
   
  `cchValue`  
- [in]のサイズ (Unicode) 文字`pValue`  
+ からの (Unicode) 文字のサイズ `pValue` 。  
   
  `pmd`  
- [アウト]割`mdFieldDef`り当てられたトークン。  
+ 入出力`mdFieldDef`割り当てられたトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

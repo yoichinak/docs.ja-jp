@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f14f986e-f6ce-42bc-aa23-18150c46d28c
 topic_type:
 - apiref
-ms.openlocfilehash: 8216dc3030b18428ab52fbf8385d392f81057aa0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 199a649b0481c2a740926636345eefbda6831ef2
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176150"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007547"
 ---
 # <a name="corpinvokemap-enumeration"></a>CorPinvokeMap 列挙型
 PInvoke 呼び出しのオプションを指定します。  
@@ -65,36 +65,36 @@ typedef enum  CorPinvokeMap {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`pmNoMangle`|各メンバー名を指定どおりに使用します。|  
+|`pmNoMangle`|各メンバー名は、指定されたとおりに使用します。|  
 |`pmCharSetMask`|予約済み。|  
 |`pmCharSetNotSpec`|予約済み。|  
 |`pmCharSetAnsi`|マルチバイト文字として文字列をマーシャリングします。|  
 |`pmCharSetUnicode`|Unicode 2 バイト文字として文字列をマーシャリングします。|  
-|`pmCharSetAuto`|対象オペレーティング システムに適するように、自動的に文字列をマーシャリングします。 デフォルトは、Windows NT、Windows 2000、Windows XP、および Windows Server 2003 ファミリのユニコードです。デフォルトは、Windows 98 および Windows Me の ANSI です。|  
+|`pmCharSetAuto`|対象オペレーティング システムに適するように、自動的に文字列をマーシャリングします。 既定値は、Windows NT、Windows 2000、Windows XP、および Windows Server 2003 ファミリの Unicode です。Windows 98 および Windows Me では、既定値は ANSI です。|  
 |`pmBestFitUseAssem`|予約済み。|  
-|`pmBestFitEnabled`|ANSI 文字セットで完全に一致しない Unicode 文字の最適なマッピングを実行します。|  
-|`pmBestFitDisabled`|Unicode 文字の最適なマッピングを実行しないでください。 この場合、すべてのマップできない文字は'?' に置き換えられます。|  
+|`pmBestFitEnabled`|ANSI 文字セットと完全に一致しない Unicode 文字の最適マッピングを実行します。|  
+|`pmBestFitDisabled`|Unicode 文字の最適マッピングを実行しないでください。 この場合、マップされていないすべての文字は、'? ' に置き換えられます。|  
 |`pmBestFitMask`|予約済み。|  
 |`pmThrowOnUnmappableCharUseAssem`|予約済み。|  
-|`pmThrowOnUnmappableCharEnabled`|相互運用マーシャラーがマップできない文字を検出したときに例外をスローします。|  
-|`pmThrowOnUnmappableCharDisabled`|相互運用マーシャラーがマップできない文字を検出した場合は、例外をスローしないでください。|  
+|`pmThrowOnUnmappableCharEnabled`|相互運用マーシャラーがマップされていない文字を検出したときに、例外をスローします。|  
+|`pmThrowOnUnmappableCharDisabled`|相互運用マーシャラーがマップ不可能な文字を検出した場合は、例外をスローしないでください。|  
 |`pmThrowOnUnmappableCharMask`|予約済み|  
-|`pmSupportsLastError`|呼び出し先が、属性付きメソッド`SetLastError`から戻る前に Win32 関数を呼び出すことを許可します。|  
+|`pmSupportsLastError`|`SetLastError`属性付きメソッドから戻る前に、呼び出し先が Win32 関数を呼び出すことができるようにします。|  
 |`pmCallConvMask`|予約済み|  
-|`pmCallConvWinapi`|既定のプラットフォーム呼び出し規約を使用します。 たとえば、Windows では既定の設定`StdCall`が、Windows CE .NET`Cdecl`では .|  
-|`pmCallConvCdecl`|呼び`Cdecl`出し規約を使用します。 この場合、呼び出し元はスタックをクリーンアップします。 これにより、関数の呼`varargs`び出し (可変個のパラメーターを受け取る関数) が可能になります。|  
-|`pmCallConvStdcall`|呼び`StdCall`出し規約を使用します。 この場合、呼び出し先はスタックをクリーンアップします。 これは、プラットフォーム呼び出しでアンマネージ関数を呼び出すための既定の規約です。|  
-|`pmCallConvThiscall`|呼び`ThisCall`出し規約を使用します。 この場合、最初のパラメータは`this`ポインタであり、レジスタECXに格納されます。 その他のパラメーターは、スタックにプッシュされます。 呼`ThisCall`び出し規約は、アンマネージ DLL からエクスポートされたクラスのメソッドを呼び出すために使用されます。|  
+|`pmCallConvWinapi`|既定のプラットフォーム呼び出し規約を使用します。 たとえば、Windows では、既定値はで `StdCall` あり、Windows CE .net ではです `Cdecl` 。|  
+|`pmCallConvCdecl`|呼び出し規約を使用し `Cdecl` ます。 この場合、呼び出し元はスタックを消去します。 これにより `varargs` 、(つまり、可変個のパラメーターを受け取る関数) を使用して関数を呼び出すことができます。|  
+|`pmCallConvStdcall`|呼び出し規約を使用し `StdCall` ます。 この場合、呼び出し先がスタックを消去します。 これは、プラットフォーム呼び出しでアンマネージ関数を呼び出すための既定の規約です。|  
+|`pmCallConvThiscall`|呼び出し規約を使用し `ThisCall` ます。 この場合、最初のパラメーターはポインターであり、 `this` レジスタ ECX に格納されます。 その他のパラメーターは、スタックにプッシュされます。 `ThisCall`呼び出し規約は、アンマネージ DLL からエクスポートされたクラスのメソッドを呼び出すために使用されます。|  
 |`pmCallConvFastcall`|予約済み。|  
 |`pmMaxValue`|予約済み。|  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コルドル.h  
+ **ヘッダー:** CorHdr. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

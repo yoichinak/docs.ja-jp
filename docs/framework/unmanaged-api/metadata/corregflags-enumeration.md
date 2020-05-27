@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 8d3080ee-39fe-4c57-8950-51323632d045
 topic_type:
 - apiref
-ms.openlocfilehash: 8fe6216e11a64ea182d796247d888b862b1e8377
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d8d7a43848929e49a8cb48fb957f37213ac78f2e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177927"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007352"
 ---
 # <a name="corregflags-enumeration"></a>CorRegFlags 列挙型
-モジュールまたは複合イメージをインストールするときに登録に使用するフラグ値を提供します。  
+モジュールまたは複合イメージをインストールするときに登録に使用されるフラグ値を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,19 +39,19 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`regNoCopy`|ファイルをコピー先にコピーしないように指定します。|  
-|`regConfig`|モジュールまたはコンポジットが構成であることを指定します。|  
-|`regHasRefs`|モジュールまたは複合がクラス参照を持っていることを指定します。|  
+|`regNoCopy`|転送先にファイルをコピーしないことを指定します。|  
+|`regConfig`|モジュールまたは複合が構成であることを指定します。|  
+|`regHasRefs`|モジュールまたは複合にクラス参照があることを指定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

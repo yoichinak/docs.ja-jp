@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47132dda-fa92-4bd1-ae4b-24cd9a60665a
 topic_type:
 - apiref
-ms.openlocfilehash: b921118f7c43edef3c07cbb34cbbd9119d36ce51
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 220556ec130c7bff7c413405820c4fee0582b051
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177548"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008015"
 ---
 # <a name="imetadataemitsetfieldprops-method"></a>IMetaDataEmit::SetFieldProps メソッド
-指定したフィールド トークンによって参照されるフィールドの既定値を設定または更新します。  
+指定したフィールドトークンによって参照されるフィールドの既定値を設定または更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +39,30 @@ HRESULT SetFieldProps (
   
 ## <a name="parameters"></a>パラメーター  
  `fd`  
- [in]ターゲット フィールドのトークン。  
+ からターゲットフィールドのトークン。  
   
  `dwFieldFlags`  
- [in]フィールド属性。 これは値の`CorFieldAttr`ビットマスクです。  
+ からフィールド属性。 これは、値のビットマスクです `CorFieldAttr` 。  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_`*\** 定数値の場合。 これは値です`CorElementType`。 定数が定義されていない場合は、この値を に`ELEMENT_TYPE_END`設定します。  
+ から`ELEMENT_TYPE_` *\** 定数値の。 これは `CorElementType` 値です。 定数が定義されていない場合は、この値をに設定 `ELEMENT_TYPE_END` します。  
   
  `pValue`  
- [in]フィールドの定数値。  
+ からフィールドの定数値。  
   
  `cchValue`  
- [in]のサイズ (Unicode 文字) `pValue`  
+ からのサイズ (Unicode 文字) `pValue` 。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

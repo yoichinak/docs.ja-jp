@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b500a260-1d57-4953-95e1-c27063f7c8da
 topic_type:
 - apiref
-ms.openlocfilehash: 129750644962cee3206b9e38cbeaa77d38dddd71
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2f66d34fcfdd8c61dcc92817ec1a928ac5b603fc
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176111"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008899"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc メソッド
-コード ベースに .reloc 命令を追加します。  
+コードベースに reloc 命令を追加します。  
   
- このメソッドは廃止され、使用しないでください。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,26 +40,26 @@ HRESULT AddSectionReloc (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in]reloc 命令を追加するメモリ内コードのセクション。  
+ からReloc 命令を追加するメモリ内コードのセクション。  
   
  `offset`  
- [in]セクションのオフセット。  
+ からセクションのオフセット。  
   
  `relativeTo`  
- [in]参照先の`offset`セクション。  
+ からが参照するセクション `offset` 。  
   
  `relocType`  
- [in]追加する[.reloc](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)命令の種類を示す、1 つの値です。  
+ から[CeeSectionRelocType](ceesectionreloctype-enumeration.md)値の1つ。追加する reloc 命令の種類を示します。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen インターフェイス](iceegen-interface.md)

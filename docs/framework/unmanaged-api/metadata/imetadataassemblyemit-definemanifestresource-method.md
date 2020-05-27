@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 27f6d295-0fe9-4cda-b77e-6e7d5c53df09
 topic_type:
 - apiref
-ms.openlocfilehash: 5aa5d78faa8ca9261594e2a649b11088e1d78ee7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 026f5efe195cdb34999b65c5f47de6f68d30e11a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177871"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008132"
 ---
 # <a name="imetadataassemblyemitdefinemanifestresource-method"></a>IMetaDataAssemblyEmit::DefineManifestResource メソッド
 指定したマニフェスト リソースのメタデータを含む `ManifestResource` 構造体を作成し、関連付けられたメタデータ トークンを返します。  
@@ -39,32 +39,32 @@ HRESULT DefineManifestResource (
   
 ## <a name="parameters"></a>パラメーター  
  `szName`  
- [in]リソースの名前。  
+ からリソースの名前。  
   
  `tkImplementation`  
- [in]型`mdtFile`のメタデータ トークン、または`mdtAssemblyRef`リソース プロバイダーにマップされるメタデータ トークン。 NULL 値は、メタデータが埋め込まれているファイルがリソース プロバイダーであることを示します。  
+ から`mdtFile`リソースプロバイダーにマップされる型またはのメタデータトークン `mdtAssemblyRef` 。 NULL 値は、メタデータが埋め込まれているファイルがリソースプロバイダーであることを示します。  
   
  `dwOffset`  
- [in]ファイル内のリソースの先頭へのオフセット。 スタンドアロン ファイルのリソースの場合、これは常に 0 になります。 リソースが PE (ポータブル実行可能ファイル) ファイルに埋め込まれている場合、これは cor.h ヘッダー ファイルで指定された場所から開始されるリソース BLOB のオフセットです。  
+ からファイル内のリソースの先頭へのオフセット。 スタンドアロンファイルのリソースの場合、この値は常に0になります。 リソースが PE (ポータブル実行可能ファイル) ファイルに埋め込まれている場合、これはリソース BLOB のオフセットになります。これは、cor ヘッダーファイルで指定された場所から開始されます。  
   
  `dwResourceFlags`  
- [in]リソース定義のプロパティ設定を指定するフラグ値のビットごとの組み合わせ。  
+ からリソース定義のプロパティ設定を指定するフラグ値のビットごとの組み合わせ。  
   
  `pmdmr`  
- [アウト]返されたメタデータ トークンへのポインター。  
+ 入出力返されたメタデータトークンへのポインター。  
   
-## <a name="remarks"></a>解説  
- アセンブリ`ManifestResource`のファイルごとに実装されるリソースごとに、1 つのメタデータ構造を定義する必要があります。  
+## <a name="remarks"></a>コメント  
+ `ManifestResource`各アセンブリのファイルに実装されている各リソースに対して、1つのメタデータ構造を定義する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[「システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit インターフェイス](imetadataassemblyemit-interface.md)

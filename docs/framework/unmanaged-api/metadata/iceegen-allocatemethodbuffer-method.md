@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 845ab77e-9639-47f5-99fb-f3b619e3e779
 topic_type:
 - apiref
-ms.openlocfilehash: 38b9ea2ffab439f55f0a6d34d7f42c7669629168
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8dc7f439cac56c2d55916ff8631ec3095c67680d
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177921"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008886"
 ---
 # <a name="iceegenallocatemethodbuffer-method"></a>ICeeGen::AllocateMethodBuffer メソッド
-メソッドの指定されたサイズのバッファーを作成し、メソッドの相対仮想アドレスを取得します。  
+メソッドに対して指定したサイズのバッファーを作成し、メソッドの相対仮想アドレスを取得します。  
   
- このメソッドは廃止され、使用しないでください。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +39,23 @@ HRESULT AllocateMethodBuffer (
   
 ## <a name="parameters"></a>パラメーター  
  `cchBuffer`  
- [in]作成するバッファーの長さ。  
+ から作成するバッファーの長さ。  
   
  `lpBuffer`  
- [アウト]返されたバッファー。  
+ 入出力返されたバッファー。  
   
  `RVA`  
- [アウト]メソッドの相対仮想アドレス。  
+ 入出力メソッドの相対仮想アドレス。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen インターフェイス](iceegen-interface.md)

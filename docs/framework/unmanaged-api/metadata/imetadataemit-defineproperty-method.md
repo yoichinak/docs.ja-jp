@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5c4c1dc2-d40d-4173-bbe6-7058fb21c98f
 topic_type:
 - apiref
-ms.openlocfilehash: eb3ecbf39376e7126b5ec93a26badcbf5076d1db
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 479cb25ad8e1c263d3539a4203ac5bea781eb931
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175786"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009380"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty メソッド
-指定した型のプロパティ定義を、指定`get`したメソッド アクセサ`set`ーとメソッド アクセサーで作成し、そのプロパティ定義へのトークンを取得します。  
+指定したアクセサーとメソッドアクセサーを使用して、指定した型のプロパティ定義を作成 `get` `set` し、そのプロパティ定義へのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -46,51 +46,51 @@ HRESULT DefineProperty (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]プロパティが定義されているクラスまたはインターフェイスのトークン。  
+ からプロパティが定義されているクラスまたはインターフェイスのトークン。  
   
  `szProperty`  
- [in]プロパティの名前。  
+ からプロパティの名前。  
   
  `dwPropFlags`  
- [in]プロパティフラグ。  
+ からプロパティフラグ。  
   
  `pvSig`  
- [in]プロパティのシグネチャ。  
+ からプロパティシグネチャ。  
   
  `cbSig`  
- [in]のバイト数`pvSig`。  
+ からのバイト数 `pvSig` 。  
   
  `dwCPlusTypeFlag`  
- [in]プロパティの既定値の型。  
+ からプロパティの既定値の型。  
   
  `pValue`  
- [in]プロパティの既定値。  
+ からプロパティの既定値。  
   
  `cchValue`  
- [in]の (Unicode) 文字の`pValue`数。  
+ から内の (Unicode) 文字の数 `pValue` 。  
   
  `mdSetter`  
- [in]プロパティ値を設定するメソッド。  
+ からプロパティ値を設定するメソッド。  
   
  `mdGetter`  
- [in]プロパティ値を取得するメソッド。  
+ からプロパティ値を取得するメソッド。  
   
  `rmdOtherMethods[]`  
- [in]プロパティに関連付けられている他のメソッドの配列。 配列を で終了`mdTokenNil`します。  
+ からプロパティに関連付けられている他のメソッドの配列。 を使用して配列を終了 `mdTokenNil` します。  
   
  `pmdProp`  
- [アウト]割`mdProperty`り当てられたトークン。  
+ 入出力`mdProperty`割り当てられたトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)
