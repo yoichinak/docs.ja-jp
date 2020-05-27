@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 694c0fa0-7011-41a9-9dfd-f0e16ea574b5
 topic_type:
 - apiref
-ms.openlocfilehash: 51741aa3a6d965c1e9743081628d8ad62e8fb04e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1836f26af99f91ab1765107573f6b067edd5e95
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176202"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007924"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 列挙型
 属性を適用できるアプリケーション要素を指定します。  
@@ -63,7 +63,7 @@ typedef enum CorAttributeTargets
 |メンバー|説明|  
 |------------|-----------------|  
 |`catAssembly`|アセンブリに属性を適用できます。|  
-|`catModule`|属性は、ポータブル実行可能 (.dll または .exe) モジュールに適用できます。|  
+|`catModule`|属性は、移植可能な実行可能ファイル (.dll または .exe) モジュールに適用できます。|  
 |`catClass`|クラスに属性を適用できます。|  
 |`catStruct`|構造体、つまり、値型に属性を適用できます。|  
 |`catEnum`|列挙体に属性を適用できます。|  
@@ -77,20 +77,20 @@ typedef enum CorAttributeTargets
 |`catDelegate`|デリゲートに属性を適用できます。|  
 |`catGenericParameter`|ジェネリック パラメーターに属性を適用できます。|  
 |`catAll`|任意のアプリケーション要素に属性を適用できます。|  
-|`catClassMembers`|属性はクラスのメンバーに適用できます。|  
+|`catClassMembers`|属性は、クラスのメンバーに適用できます。|  
   
-## <a name="remarks"></a>解説  
- 列挙`CorAttributeTargets`値をビットごとの OR 演算と組み合わせて、優先する組み合わせを取得できます。  
+## <a name="remarks"></a>コメント  
+ `CorAttributeTargets`列挙値をビットごとの or 演算と組み合わせて、適切な組み合わせを取得できます。  
   
- マネージ`CorAttributeTargets`<xref:System.AttributeTargets?displayProperty=nameWithType>列挙体と並列処理を行います。  
+ は、 `CorAttributeTargets` マネージ列挙に似て <xref:System.AttributeTargets?displayProperty=nameWithType> います。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コルドル.h  
+ **ヘッダー:** CorHdr. h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

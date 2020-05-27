@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 2f9325f3795262a0c33af02f87fc5d3a020658cf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 021ef8de602d6dd928f49e69e36f8d4a61425745
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177641"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008366"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope メソッド
-新しいメタデータを作成できる領域をメモリ内に作成します。  
+新しいメタデータを作成できる新しい領域をメモリ内に作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,37 +38,37 @@ HRESULT DefineScope (
   
 ## <a name="parameters"></a>パラメーター  
  `rclsid`  
- [in]作成するメタデータ構造のバージョンの CLSID。 この値は、.NET Framework バージョン 2.0 のCLSID_CorMetaDataRuntimeする必要があります。  
+ から作成されるメタデータ構造のバージョンの CLSID。 この値は、.NET Framework バージョン2.0 の CLSID_CorMetaDataRuntime である必要があります。  
   
  `dwCreateFlags`  
- [in]オプションを指定するフラグ。 この値は、.NET Framework 2.0 の場合は 0 である必要があります。  
+ からオプションを指定するフラグ。 .NET Framework 2.0 の場合、この値は0である必要があります。  
   
  `riid`  
- [in]返される必要なメタデータ インターフェイスの IID。呼び出し元は、インターフェイスを使用して新しいメタデータを作成します。  
+ から返される、必要なメタデータインターフェイスの IID。呼び出し元は、インターフェイスを使用して新しいメタデータを作成します。  
   
- の値は`riid`、"emit"インタフェースの1つを指定する必要があります。 有効な値は、IID_IMetaDataEmit、IID_IMetaDataAssemblyEmit、またはIID_IMetaDataEmit2です。  
+ の値には `riid` 、"emit" インターフェイスのいずれかを指定する必要があります。 有効な値は、IID_IMetaDataEmit、IID_IMetaDataAssemblyEmit、または IID_IMetaDataEmit2 です。  
   
  `ppIUnk`  
- [アウト]返されたインターフェイスへのポインター。  
+ 入出力返されたインターフェイスへのポインター。  
   
-## <a name="remarks"></a>解説  
- `DefineScope`インメモリ メタデータ テーブルのセットを作成し、メタデータの一意の GUID (モジュール バージョン識別子、または MVID) を生成し、生成されるコンパイル 単位のモジュール テーブルにエントリを作成します。  
+## <a name="remarks"></a>コメント  
+ `DefineScope`メモリ内メタデータテーブルのセットを作成し、メタデータの一意の GUID (モジュールバージョン識別子または MVID) を生成し、出力されるコンパイル単位のエントリをモジュールテーブルに作成します。  
   
- 必要に応じて[、IMetaDataEmit::SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)または[IMetaDataEmit::DefineCustomAttribute](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definecustomattribute-method.md)メソッドを使用して、メタデータ スコープ全体に属性をアタッチできます。  
+ 必要に応じて、 [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)または[IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md)メソッドを使用して、メタデータスコープ全体に属性をアタッチできます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[「システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataDispenser インターフェイス](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx インターフェイス](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit インターフェイス](imetadataassemblyemit-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

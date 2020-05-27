@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 03abf921-5154-4070-88fa-10b7092901fb
 topic_type:
 - apiref
-ms.openlocfilehash: e414bc5a7d537e8d153541f05b22dd91578e8739
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 447ec44ed3efc4eec84d1e4acd6f2ec1a730bf74
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177750"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008028"
 ---
 # <a name="imetadataemitdefinepinvokemap-method"></a>IMetaDataEmit::DefinePinvokeMap メソッド
-指定したトークンによって参照されるメソッドの PInvoke シグネチャの機能を設定します。  
+指定したトークンによって参照されるメソッドの PInvoke 署名の特徴を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT DefinePinvokeMap (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]ターゲット メソッドのトークン。  
+ からターゲットメソッドのトークン。  
   
  `dwMappingFlags`  
- [in]PInvoke がマッピングを実行するために使用するフラグ。  
+ からマッピングを行うために PInvoke によって使用されるフラグ。  
   
  `szImportName`  
- [in]アンマネージ DLL 内のターゲット エクスポート メソッドの名前。  
+ からアンマネージ DLL 内の対象のエクスポートメソッドの名前。  
   
  `mrImportDLL`  
- [in]ターゲットネイティブ DLL のトークン。  
+ からターゲットのネイティブ DLL のトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

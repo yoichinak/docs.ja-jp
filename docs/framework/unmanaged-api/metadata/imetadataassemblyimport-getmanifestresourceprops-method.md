@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 00be4789-ac63-4397-b2ec-1629a5c5a585
 topic_type:
 - apiref
-ms.openlocfilehash: d87d0d46ede65cf44c84edba92fe246174088a4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c0b6d53ce3be3aed6a577bf6e38a281928499848
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177653"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009029"
 ---
 # <a name="imetadataassemblyimportgetmanifestresourceprops-method"></a>IMetaDataAssemblyImport::GetManifestResourceProps メソッド
-指定したメタデータ シグネチャを持つマニフェスト リソースのプロパティのセットを取得します。  
+指定されたメタデータシグネチャを持つマニフェストリソースのプロパティのセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,35 +41,35 @@ HRESULT GetManifestResourceProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mdmr`  
- [in]プロパティ`mdManifestResource`を取得するリソースを表すトークン。  
+ から`mdManifestResource`プロパティを取得する対象のリソースを表すトークン。  
   
  `szName`  
- [アウト]リソースの名前。  
+ 入出力リソースの名前。  
   
  `cchName`  
- [in]のサイズ、ワイド文字で`szName`、 のサイズ。  
+ からのサイズ (ワイド文字数) `szName` 。  
   
  `pchName`  
- [アウト]で実際に返されるワイド文字の数へのポインタ`szName`。  
+ 入出力実際にで返されるワイド文字数へのポインター `szName` 。  
   
  `ptkImplementation`  
- [アウト]リソースを`mdFile`含むファイルまたはアセンブリ`mdAssemblyRef`を表すトークンまたはトークンへのポインター。  
+ 入出力リソースを格納し `mdFile` `mdAssemblyRef` ているファイルまたはアセンブリを表すトークンまたはトークンへのポインター。  
   
  `pdwOffset`  
- [アウト]ファイル内のリソースの先頭へのオフセットを指定する値へのポインター。  
+ 入出力ファイル内のリソースの先頭へのオフセットを指定する値へのポインター。  
   
  `pdwResourceFlags`  
- [アウト]リソースに適用されるメタデータを記述するフラグへのポインター。 フラグ値は、1 つ以上の[CorManifestResourceFlags](../../../../docs/framework/unmanaged-api/metadata/cormanifestresourceflags-enumeration.md)値の組み合わせです。  
+ 入出力リソースに適用されるメタデータを記述するフラグへのポインター。 Flags 値は、1つ以上の[Cormanifestresourceflags](cormanifestresourceflags-enumeration.md)値を組み合わせたものです。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](imetadataassemblyimport-interface.md)

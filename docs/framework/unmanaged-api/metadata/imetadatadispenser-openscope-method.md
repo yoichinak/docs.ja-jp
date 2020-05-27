@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 65063ad5-e0d9-4c01-8f8b-9a5950109fa6
 topic_type:
 - apiref
-ms.openlocfilehash: 5185fb6663910c85ce5dae1225b9b10c5dd8bb28
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8d9de753f1c44338a96e990def80643d591f2a8b
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175942"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007469"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope メソッド
-既存のディスク上のファイルを開き、そのメタデータをメモリにマップします。  
+ディスク上の既存のファイルを開き、そのメタデータをメモリにマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,44 +38,44 @@ HRESULT OpenScope (
   
 ## <a name="parameters"></a>パラメーター  
  `szScope`  
- [in]開くファイルの名前。 ファイルには、共通言語ランタイム (CLR) メタデータが含まれている必要があります。  
+ から開くファイルの名前。 ファイルには、共通言語ランタイム (CLR) メタデータが含まれている必要があります。  
   
  `dwOpenFlags`  
- [in]開くときのモード (読み取り、書き込みなど) を指定する[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列挙体の値。  
+ から開くためのモード (読み取り、書き込みなど) を指定する[Coropenflags](coropenflags-enumeration.md)列挙体の値。  
   
  `riid`  
- [in]返される必要なメタデータ インターフェイスの IID。呼び出し元は、インターフェイスを使用してメタデータをインポート (読み取り) または出力 (書き込み) します。  
+ から返される、必要なメタデータインターフェイスの IID。呼び出し元は、インターフェイスを使用して、メタデータのインポート (読み取り) または出力 (書き込み) を行います。  
   
- の値は`riid`、"インポート" または "出力" インターフェイスのいずれかを指定する必要があります。 有効な値は、IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2、またはIID_IMetaDataImport2です。  
+ の値には `riid` 、"import" インターフェイスまたは "emit" インターフェイスのいずれかを指定する必要があります。 有効な値は、IID_IMetaDataEmit、IID_IMetaDataImport、IID_IMetaDataAssemblyEmit、IID_IMetaDataAssemblyImport、IID_IMetaDataEmit2、または IID_IMetaDataImport2 です。  
   
  `ppIUnk`  
- [アウト]返されたインターフェイスへのポインター。  
+ 入出力返されたインターフェイスへのポインター。  
   
-## <a name="remarks"></a>解説  
- メタデータのインメモリ コピーは、"import" インターフェイスの 1 つからのメソッドを使用してクエリを実行したり、"emit" インターフェイスのメソッドを使用して追加したりできます。  
+## <a name="remarks"></a>コメント  
+ メタデータのメモリ内コピーは、"import" インターフェイスのいずれかのメソッドを使用してクエリを実行するか、"emit" インターフェイスのいずれかのメソッドを使用してに追加できます。  
   
- ターゲット ファイルに CLR メタデータが含まれていない場合`OpenScope`、メソッドは失敗します。  
+ ターゲットファイルに CLR メタデータが含まれていない場合、 `OpenScope` メソッドは失敗します。  
   
- .NET Framework バージョン 1.0 およびバージョン 1.1 では、スコープ`dwOpenFlags`が ofRead に設定されて開かれている場合、共有の対象となります。 つまり、以前に開いたファイル`OpenScope`の名前を渡す後続の呼び出しが行われた場合、既存のスコープが再利用され、新しいデータ構造のセットは作成されません。 しかし、この共有のために問題が発生する可能性があります。  
+ .NET Framework バージョン1.0 およびバージョン1.1 では、ofRead に設定してスコープを開くと、 `dwOpenFlags` 共有の対象になります。 つまり、それ以降の呼び出し `OpenScope` で、以前に開いたファイルの名前が渡された場合、既存のスコープが再利用され、新しいデータ構造体のセットは作成されません。 ただし、この共有によって問題が発生する可能性があります。  
   
- .NET Framework バージョン 2.0 では、ofRead に設定して`dwOpenFlags`開いたスコープは共有されなくなります。 の値を使用して、スコープを共有できるようにします。 スコープが共有されている場合、「読み取り/書き込み」メタデータ インターフェイスを使用するクエリは失敗します。  
+ .NET Framework バージョン2.0 では、ofRead に設定して開いたスコープ `dwOpenFlags` は共有されなくなりました。 スコープを共有できるようにするには、ofReadOnly 値を使用します。 スコープが共有されると、"読み取り/書き込み" メタデータインターフェイスを使用するクエリは失敗します。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
-- [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
-- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataDispenser インターフェイス](imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx インターフェイス](imetadatadispenserex-interface.md)
+- [IMetaDataAssemblyEmit インターフェイス](imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](imetadataassemblyimport-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

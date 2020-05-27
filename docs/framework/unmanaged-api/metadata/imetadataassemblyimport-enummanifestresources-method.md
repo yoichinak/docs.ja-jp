@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 9543b111-5705-40c9-935c-a3ffc7a581aa
 topic_type:
 - apiref
-ms.openlocfilehash: 22141cf46a965c0624c076bd1d86d2624e5a09f3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 560a6adf85fab7f421b86cba52224d5b1bfe1089
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176020"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84006260"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources メソッド
-現在のアセンブリ マニフェストで参照されるリソースの列挙子へのポインターを取得します。  
+現在のアセンブリマニフェストで参照されているリソースの列挙子へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,33 +38,33 @@ HRESULT EnumManifestResources (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [イン、アウト]列挙子へのポインター。 メソッドが初めて呼び出されたとき`EnumManifestResources`は、この値は NULL 値である必要があります。  
+ [入力、出力]列挙子へのポインター。 メソッドを初めて呼び出すときは、null 値を指定する必要があり `EnumManifestResources` ます。  
   
  `rManifestResources`  
- [アウト]メタデータ トークンを格納するために`mdManifestResource`使用される配列。  
+ 入出力メタデータトークンを格納するために使用される配列 `mdManifestResource` 。  
   
  `cMax`  
- [in]に配置できるトークン`mdManifestResource`の最大数`rManifestResources`。  
+ から`mdManifestResource`に格納できるトークンの最大数 `rManifestResources` 。  
   
  `pcTokens`  
- [アウト]に実際に`mdManifestResource`配置されたトークンの`rManifestResources`数。  
+ 入出力`mdManifestResource`実際に配置されたトークンの数 `rManifestResources` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumManifestResources`正常に返されました。|  
-|`S_FALSE`|列挙するトークンがありません。 この場合、`pcTokens`ゼロに設定されます。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTokens` は0に設定されます。|  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)
+- [IMetaDataAssemblyImport インターフェイス](imetadataassemblyimport-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8eaee971-40bf-45e2-a3d8-6e57674213b6
 topic_type:
 - apiref
-ms.openlocfilehash: de4cfdf2a9353eebdebaf4df9e481d06d776ff04
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1e6ee1f2f497ef30a5390e7afac55c54705248ed
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177485"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007807"
 ---
 # <a name="imetadataemitsetpermissionsetprops-method"></a>IMetaDataEmit::SetPermissionSetProps メソッド
-以前の呼び出しで定義されたアクセス許可セットのメタデータ シグネチャ[:Dの](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definepermissionset-method.md)機能を設定または更新します。  
+[IMetaDataEmit::D efinepermissionset](imetadataemit-definepermissionset-method.md)の前の呼び出しで定義されたアクセス許可セットのメタデータ署名の機能を設定または更新します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +39,30 @@ HRESULT SetPermissionSetProps (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]装飾されるオブジェクトを表すメタデータ トークン。  
+ から修飾されるオブジェクトを表すメタデータトークン。  
   
  `dwAction`  
- [in]使用する宣言セキュリティの種類を指定する[CorDeclSecurity](../../../../docs/framework/unmanaged-api/metadata/cordeclsecurity-enumeration.md)値。  
+ から使用する宣言セキュリティの種類を指定する[CorDeclSecurity](cordeclsecurity-enumeration.md)値です。  
   
  `pvPermission`  
- [in]アクセス許可 BLOB。  
+ からアクセス許可 BLOB。  
   
  `cbPermission`  
- [in]のサイズ (バイト単位)`pvPermission`です。  
+ からのサイズ (バイト単位) `pvPermission` 。  
   
  `ppm`  
- [アウト]更新`mdPermission`されたアクセス許可を表すメタデータ トークン。  
+ 入出力`mdPermission`更新されたアクセス許可を表すメタデータトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

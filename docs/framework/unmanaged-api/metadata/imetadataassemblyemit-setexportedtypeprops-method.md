@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c090153-fd5f-46c7-9cff-39a78d992c8f
 topic_type:
 - apiref
-ms.openlocfilehash: dd1d6f1da6e49837eebd9356500f403c199b011b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fa4f1f57cb8fe1ca81bbad6438a88bb43c48e7bf
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177849"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008080"
 ---
 # <a name="imetadataassemblyemitsetexportedtypeprops-method"></a>IMetaDataAssemblyEmit::SetExportedTypeProps メソッド
 指定された `ExportedType` メタデータ構造体を変更します。  
@@ -38,29 +38,29 @@ HRESULT SetExportedTypeProps (
   
 ## <a name="parameters"></a>パラメーター  
  `ct`  
- [in]変更するメタデータ構造を`ExportedType`指定するメタデータ トークン。  
+ から変更するメタデータ構造を指定するメタデータトークン `ExportedType` 。  
   
  `tkImplementation`  
- [in]この型`File`の実装方法`AssemblyRef`を指定する`ExportedType`、種類 、または のトークン。  
+ から`File` `AssemblyRef` `ExportedType` この型の実装方法を指定する、、、または型のトークン。  
   
  `tkTypeDef`  
- [in]コード`TypeDef`ファイルで参照されるトークン。  
+ から`TypeDef`コードファイルで参照されるトークン。  
   
  `dwExportedTypeFlags`  
- [in]型の属性を指定する値のビットごとの組み合わせ。  
+ から型の属性を指定する値のビットごとの組み合わせ。  
   
-## <a name="remarks"></a>解説  
- メタデータ構造を`ExportedType`作成するには、[メソッド :Dを](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineexportedtype-method.md)使用します。  
+## <a name="remarks"></a>コメント  
+ メタデータ構造を作成するには `ExportedType` 、 [IMetaDataAssemblyEmit::D efineExportedType](imetadataassemblyemit-defineexportedtype-method.md)メソッドを使用します。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit インターフェイス](imetadataassemblyemit-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 480d596a-759f-4d29-ac1a-3dbff8f3544d
 topic_type:
 - apiref
-ms.openlocfilehash: e59e7695246b2c83171e77352e16464258516f8d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b05527f118de059c674ea659b1a22b7895126cf4
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177463"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007768"
 ---
 # <a name="imetadataemitsettypedefprops-method"></a>IMetaDataEmit::SetTypeDefProps メソッド
-[:D 以前](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)の呼び出しで定義された型の機能を設定します。  
+[IMetaDataEmit::D efineTypeDef](imetadataemit-definetypedef-method.md)の前の呼び出しで定義された型の機能を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT SetTypeDefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]元`mdTypeDef`の呼び出しから取得したトークン[:D。](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)  
+ から`mdTypeDef` [IMetaDataEmit::D efineTypeDef](imetadataemit-definetypedef-method.md)の元の呼び出しから取得されたトークン。  
   
  `dwTypeDefFlags`  
- [in]`TypeDef`属性を指定します。 これは値の`CorTypeAttr`ビットマスクです。  
+ [入力] `TypeDef`アトリビュート. これは、値のビットマスクです `CorTypeAttr` 。  
   
  `tkExtends`  
- [in]基本`mdToken`クラスの。 [:D 以前](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)の呼び出しから取得しました`null`。  
+ から`mdToken`基本クラスの。 [IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md)、またはの以前の呼び出しから取得さ `null` れます。  
   
  `rtkImplements[]`  
- [in]この型が実装するインターフェイスのトークンの配列。 これらの`mdTypeRef`トークンは[、IMetaDataEmit::DefineImportType](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)を使用して取得されます。 配列の最後の要素は にする`mdTokenNil`必要があります。  
+ からこの型が実装するインターフェイスのトークンの配列。 これらの `mdTypeRef` トークンは、 [IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md)を使用して取得されます。 配列の最後の要素は、である必要があり `mdTokenNil` ます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d7f794e5-8e25-4d65-850a-7c34fbfce87d
 topic_type:
 - apiref
-ms.openlocfilehash: 816e2f2dc7d4d00f74f67720ee45d7b3483e57fa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 832adacac4a6df9ccf21578538a1c557150f3ba1
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177726"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008782"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption メソッド
-現在のメタデータ スコープの指定されたオプションの値を取得します。 このオプションは、現在のメタデータ スコープへの呼び出しの処理方法を制御します。  
+現在のメタデータスコープの指定したオプションの値を取得します。 オプションは、現在のメタデータスコープへの呼び出しの処理方法を制御します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,38 +36,38 @@ HRESULT GetOption (
   
 ## <a name="parameters"></a>パラメーター  
  `optionId`  
- [in]取得するオプションを指定する GUID へのポインター。 サポートされている GUID の一覧については、「解説」を参照してください。  
+ から取得するオプションを指定する GUID へのポインター。 サポートされている Guid の一覧については、「解説」を参照してください。  
   
  `pValue`  
- [アウト]返されるオプションの値。 この値の型は、指定されたオプションの型のバリアントになります。  
+ 入出力返されたオプションの値。 この値の型は、指定されたオプションの型のバリアントになります。  
   
-## <a name="remarks"></a>解説  
- このメソッドでサポートされている GUID を次に示します。 詳細については[、メソッドを](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)参照してください。 この`optionId`リストに含まれていない場合、このメソッドは、誤`E_INVALIDARG`ったパラメーターを示す HRESULT を返します。  
+## <a name="remarks"></a>コメント  
+ 次の一覧は、このメソッドでサポートされている Guid を示しています。 説明については、 [IMetaDataDispenserEx:: SetOption](imetadatadispenserex-setoption-method.md)メソッドを参照してください。 `optionId`がこのリストに含まれていない場合、このメソッドは HRESULT を返し `E_INVALIDARG` ます。パラメーターが正しくないことを示します。  
   
-- メタデータチェック重複  
+- MetaDataCheckDuplicatesFor  
   
-- をチェックします。  
+- MetaDataRefToDefCheck  
   
-- トークンの動き  
+- MetaDataNotificationForTokenMovement  
   
-- メタデータセットエンク  
+- MetaDataSetENC  
   
-- 注文のエラーをエラーします。  
+- MetaDataErrorIfEmitOutOfOrder  
   
-- メタデータ生成TCEアダプター  
+- MetaDataGenerateTCEAdapters  
   
-- メタデータリンカーのオプション  
+- MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[「システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataDispenserEx インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)
-- [IMetaDataDispenser インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)
+- [IMetaDataDispenserEx インターフェイス](imetadatadispenserex-interface.md)
+- [IMetaDataDispenser インターフェイス](imetadatadispenser-interface.md)

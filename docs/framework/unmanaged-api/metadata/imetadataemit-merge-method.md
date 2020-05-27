@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7596220c-f699-4b6c-8ae7-c83220610650
 topic_type:
 - apiref
-ms.openlocfilehash: 759358822ed865c89f6f55084d1e7f6143506e93
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7fe5cbe27c0771a71e4c03d14ab68ada7d0741a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175708"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004193"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge メソッド
-指定されたインポートされたスコープを、マージするスコープのリストに追加します。  
+マージするスコープの一覧に、指定したインポートされたスコープを追加します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,27 +37,27 @@ HRESULT Merge (
   
 ## <a name="parameters"></a>パラメーター  
  `pImport`  
- [in]マージするインポートされたスコープを識別する[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)オブジェクトへのポインター。  
+ からマージするインポートされたスコープを識別する[IMetaDataImport](imetadataimport-interface.md)オブジェクトへのポインター。  
   
  `pIMap`  
- [in]トークンの再マップを指定する[IMapToken](../../../../docs/framework/unmanaged-api/metadata/imaptoken-interface.md)オブジェクトへのポインター。  
+ からトークンの再マップを指定する[IMapToken](imaptoken-interface.md)オブジェクトへのポインター。  
   
  `pHandler`  
- [in]エラーを指定する[IUnknown](/cpp/atl/iunknown)オブジェクトへのポインター。  
+ からエラーを指定する[IUnknown](/cpp/atl/iunknown)オブジェクトへのポインター。  
   
-## <a name="remarks"></a>解説  
- 呼び出し[IMetaDataEmit::MergeEnd](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-mergeend-method.md)を呼び出して、メタデータの単一のスコープへの結合をトリガーします。  
+## <a name="remarks"></a>コメント  
+ [IMetaDataEmit:: MergeEnd](imetadataemit-mergeend-method.md)を呼び出して、メタデータの1つのスコープへのマージをトリガーします。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

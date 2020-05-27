@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 27064ca2-4186-4433-90a7-3b297785e891
 topic_type:
 - apiref
-ms.openlocfilehash: fadd1974cd4fa8a51a06700835f46df24e37d7fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c33ede841324820da16e33d35bbf5e8f8e75924f
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175773"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009369"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet メソッド
-指定したトークンによって参照されるオブジェクトにアタッチするセキュリティ アクセス許可のセットを作成します。  
+指定したトークンによって参照されるオブジェクトにアタッチするセキュリティアクセス許可のセットを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,27 +38,27 @@ HRESULT DefineSecurityAttributeSet (
   
 ## <a name="parameters"></a>パラメーター  
  `tkObj`  
- [in]セキュリティ情報がアタッチされるトークン。  
+ からセキュリティ情報がアタッチされるトークン。  
   
  `rSecAttrs`  
- [in]構造体の`COR_SECATTR`配列。  
+ から`COR_SECATTR`構造体の配列。  
   
  `cSecAttrs`  
- [in]内の要素の数`rSecAttrs`。  
+ から内の要素の数 `rSecAttrs` 。  
   
  `pulErrorAttr`  
- [アウト]メソッドが失敗した場合は、問題の`rSecAttrs`原因となった要素のインデックスを指定します。  
+ 入出力メソッドが失敗した場合、は、 `rSecAttrs` 問題の原因となった要素ののインデックスを指定します。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

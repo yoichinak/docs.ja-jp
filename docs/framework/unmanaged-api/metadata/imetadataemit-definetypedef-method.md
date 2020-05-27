@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: dd11c485-be95-4b97-9cd8-68679a4fb432
 topic_type:
 - apiref
-ms.openlocfilehash: 4f1c3e823b35fcf7d5935eee111e042b2291d216
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dc064b00e32bb6b1d8c2d0c20f571b35919eae23
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175760"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84009341"
 ---
 # <a name="imetadataemitdefinetypedef-method"></a>IMetaDataEmit::DefineTypeDef メソッド
-共通言語ランタイム型の型定義を作成し、その型定義のメタデータ トークンを取得します。  
+共通言語ランタイム型の型定義を作成し、その型定義のメタデータトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,37 +39,37 @@ HRESULT DefineTypeDef (
   
 ## <a name="parameters"></a>パラメーター  
  `szTypeDef`  
- [in]ユニコードの型の名前。  
+ からUnicode での型の名前。  
   
  `dwTypeDefFlags`  
- [in]`TypeDef`属性を指定します。 これは値の`CoreTypeAttr`ビットマスクです。  
+ [入力] `TypeDef`アトリビュート. これは、値のビットマスクです `CoreTypeAttr` 。  
   
  `tkExtends`  
- [in]基本クラスのトークン。 トークンまたはトークン`mdTypeDef`のいずれか`mdTypeRef`である必要があります。  
+ から基本クラスのトークン。 またはトークンのいずれかである必要があり `mdTypeDef` `mdTypeRef` ます。  
   
  `rtkImplements`  
- [in]このクラスまたはインターフェイスが実装するインターフェイスを指定するトークンの配列。  
+ からこのクラスまたはインターフェイスが実装するインターフェイスを指定するトークンの配列。  
   
  `ptd`  
- [アウト]割`mdTypeDef`り当てられたトークン。  
+ 入出力`mdTypeDef`割り当てられたトークン。  
   
-## <a name="remarks"></a>解説  
- フラグを指定`dwTypeDefFlags`する型は、作成する型が共通型システム参照型 (クラスまたはインターフェイス) であるか、または共通の型システム値型であるかを指定します。  
+## <a name="remarks"></a>コメント  
+ のフラグは、 `dwTypeDefFlags` 作成される型が共通型システム参照型 (クラスまたはインターフェイス) であるか、共通型システム値型であるかを指定します。  
   
- 指定されたパラメーターによっては、このメソッドは、副作用として、この型によって継承または実装`mdInterfaceImpl`される各インターフェイスのレコードを作成することもあります。 ただし、このメソッドは、これらの`mdInterfaceImpl`トークンを返しません。 クライアントが後でトークンを追加または変更する`mdInterfaceImpl`場合は、インターフェイスを使用`IMetaDataImport`してトークンを列挙する必要があります。 `[default]`インターフェイスの COM セマンティクスを使用する場合は、既定のインターフェイスを の最初の要素として`rtkImplements`指定する必要があります。クラスに設定されたカスタム属性は、クラスに既定のインターフェイスがあることを示します (これは常にクラスに対して`mdInterfaceImpl`宣言された最初のトークンであると想定されます)。  
+ このメソッドは、指定されたパラメーターに応じて、 `mdInterfaceImpl` この型によって継承または実装される各インターフェイスのレコードを作成することもできます。 ただし、このメソッドはこれらのトークンを返しません `mdInterfaceImpl` 。 クライアントが後でトークンを追加または変更する場合は、 `mdInterfaceImpl` インターフェイスを使用してトークンを列挙する必要があり `IMetaDataImport` ます。 インターフェイスの COM セマンティクスを使用する場合は `[default]` 、既定のインターフェイスをの最初の要素として指定する必要があり `rtkImplements` ます。クラスに設定されたカスタム属性は、クラスに既定のインターフェイスがあることを示します (これは常に、クラスに対して宣言されている最初のトークンと見なされ `mdInterfaceImpl` ます)。  
   
- 配列の各要素`rtkImplements`は、`mdTypeDef`または`mdTypeRef`トークンを保持します。 配列の最後の要素は`mdTokenNil`.  
+ 配列の各要素 `rtkImplements` `mdTypeDef` は、または `mdTypeRef` トークンを保持します。 配列の最後の要素は、である必要があり `mdTokenNil` ます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

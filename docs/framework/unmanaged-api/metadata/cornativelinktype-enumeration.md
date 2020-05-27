@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f86ff37-2dab-4e64-819a-76b3bfe828ff
 topic_type:
 - apiref
-ms.openlocfilehash: 0b613ebacdff82a29fdbc3f4caa0f2b8bb5d3f6a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 29f2401e2e3faccae05ca5249fcd7d9e89aacb46
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176163"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007612"
 ---
 # <a name="cornativelinktype-enumeration"></a>CorNativeLinkType 列挙型
 ネイティブ コード内のリンクの種類を示す値を提供します。  
@@ -42,22 +42,22 @@ typedef enum
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`nltNone`|キーワードが指定されていない場合に指定します。|  
+|`nltNone`|キーワードが指定されていないことを示します。|  
 |`nltAnsi`|ANSI キーワードが指定されていることを示します。|  
 |`nltUnicode`|Unicode キーワードが指定されていることを示します。|  
-|`nltAuto`|auto キーワードが指定されていることを示します。|  
+|`nltAuto`|Auto キーワードが指定されていることを示します。|  
 |`nltOle`|OLE キーワードが指定されていることを示します。|  
 |`nltMaxValue`|使用されていません。|  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [メタデータ列挙体](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [メタデータ列挙体](metadata-enumerations.md)

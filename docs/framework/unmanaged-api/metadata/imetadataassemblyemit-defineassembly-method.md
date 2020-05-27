@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a0637d66-74bf-4f2d-8137-9ff838bccece
 topic_type:
 - apiref
-ms.openlocfilehash: 14bd352099890e4ca36321d550b8e982d4373231
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 17c91200730431c4c6e230b8c1561ce7c4863868
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177885"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008184"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly メソッド
-指定した`Assembly`アセンブリのメタデータを含む構造体を作成し、関連付けられたメタデータ トークンを返します。  
+`Assembly`指定したアセンブリのメタデータを格納している構造体を作成し、関連付けられているメタデータトークンを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,38 +41,38 @@ HRESULT DefineAssembly (
   
 ## <a name="parameters"></a>パラメーター  
  `pbPublicKey`  
- [in]アセンブリの発行者を識別する公開キー。  
+ からアセンブリの発行元を識別する公開キー。アセンブリに厳密な名前が付けられていない場合は NULL。  
   
  `cbPublicKey`  
- [in]のサイズ (バイト`pbPublicKey`単位)  
+ からのサイズ (バイト単位) `pbPublicKey` 。  
   
  `uHashAlgId`  
- [in]アセンブリ内のファイルの暗号化に使用するハッシュ アルゴリズムの識別子。または NULL を使用して SHA-1 アルゴリズムを指定します。  
+ からアセンブリ内のファイルを暗号化するために使用するハッシュアルゴリズムの識別子。または、SHA-1 アルゴリズムを指定する場合は NULL。  
   
  `szName`  
- [in]アセンブリの人間が判読できるテキスト名。 この値は 1024 文字を超えることはできません。  
+ からユーザーが判読できる、アセンブリのテキスト名。 この値は、1024文字を超えないようにする必要があります。  
   
  `pMetaData`  
- [in]アセンブリのバージョン、プラットフォーム、およびロケール情報を含む ASSEMBLYMETADATA インスタンスへのポインター。  
+ からアセンブリのバージョン、プラットフォーム、およびロケール情報を格納している ASSEMBLYMETADATA インスタンスへのポインター。  
   
  `dwAssemblyFlags`  
- [in]アセンブリの機能を記述する[CorAssemblyFlags](../../../../docs/framework/unmanaged-api/metadata/corassemblyflags-enumeration.md)値の組み合わせ。  
+ からアセンブリの機能を記述する[Corassemblyflags](corassemblyflags-enumeration.md)値の組み合わせ。  
   
  `pmda`  
- [アウト]メタデータ トークンへのポインター。  
+ 入出力メタデータトークンへのポインター。  
   
-## <a name="remarks"></a>解説  
- マニフェスト内`Assembly`で定義できるメタデータ構造は 1 つだけです。  
+## <a name="remarks"></a>コメント  
+ `Assembly`マニフェスト内で定義できるメタデータ構造は1つだけです。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataAssemblyEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+- [IMetaDataAssemblyEmit インターフェイス](imetadataassemblyemit-interface.md)

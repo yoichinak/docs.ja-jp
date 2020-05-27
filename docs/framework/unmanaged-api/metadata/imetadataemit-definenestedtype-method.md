@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1e994de6-4628-459c-b967-b34be1e9fe4f
 topic_type:
 - apiref
-ms.openlocfilehash: 3b8fd9876563bace52a6088747d1ca4ed26ea872
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2b24c2ca6907dfdb63ad934ec30557c246db174c
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175812"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004356"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType メソッド
-型定義のメタデータ シグネチャを作成し、その型`mdTypeDef`のトークンを返し、定義された型が`tdEncloser`パラメーターによって参照される型のメンバーであることを指定します。  
+型定義のメタデータシグネチャを作成し、 `mdTypeDef` その型のトークンを返します。また、定義された型がパラメーターによって参照される型のメンバーであることを指定し `tdEncloser` ます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,33 +40,33 @@ HRESULT DefineNestedType (
   
 ## <a name="parameters"></a>パラメーター  
  `szTypeDef`  
- [in]ユニコードの型の名前。  
+ からUnicode での型の名前。  
   
  `dwTypeDefFlags`  
- [in]`TypeDef`属性を指定します。 これは値の`CorTypeAttr`ビットマスクです。  
+ [入力] `TypeDef`アトリビュート. これは、値のビットマスクです `CorTypeAttr` 。  
   
  `tkExtends`  
- [in]基本クラスのトークン。 これは、トークン`mdTypeDef`またはトークンのいずれか`mdTypeRef`です。  
+ から基本クラスのトークン。 これは、 `mdTypeDef` またはトークンのいずれか `mdTypeRef` です。  
   
  `rtkImplements`[]  
- [in]このクラスまたはインターフェイスが実装するインターフェイスを指定するトークンの配列。  
+ からこのクラスまたはインターフェイスが実装するインターフェイスを指定するトークンの配列。  
   
  `tdEncloser`  
- [in]外側の型のトークン。 配列の最後の要素は`mdTokenNil`.  
+ から外側の型のトークン。 配列の最後の要素は、である必要があり `mdTokenNil` ます。  
   
  `ptd`  
- [アウト]割`mdTypeDef`り当てられたトークン。  
+ 入出力`mdTypeDef`割り当てられたトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

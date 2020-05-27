@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: bc789636-ca14-4f07-8f77-9305874d7495
 topic_type:
 - apiref
-ms.openlocfilehash: a300c2679ef11a84edb2ab89c8dea96e445c9ee3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a05cbe985c2cfebb67756fdfb54398b36e87f441
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177982"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008516"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 関数
 HRESULT 値を、指定したカルチャの適切なエラー メッセージに変換します。  
   
- この関数は、.NET Framework 4 では廃止されました。  
+ この関数は .NET Framework 4 で非推奨とされました。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,45 +41,45 @@ HRESULT LoadStringRCEx (
   
 ## <a name="parameters"></a>パラメーター  
  `lcid`  
- [in]カルチャ識別子。 既定のカルチャを`lcid`使用するには、-1 を渡します。  
+ からカルチャ識別子。 既定のカルチャを使用するには、に-1 を渡し `lcid` ます。  
   
  `iResourceID`  
- [in]HRESULT。  
+ からHRESULT。  
   
  `szBuffer`  
- [アウト]正常終了時にエラー メッセージが格納されているバッファー。  
+ 入出力正常に完了したときのエラーメッセージを格納するバッファー。  
   
  `iMax`  
- [in]エラー メッセージ バッファーのサイズ。  
+ からエラーメッセージバッファーのサイズ。  
   
  `bQuiet`  
- [in]無視。  
+ から無効.  
   
  `pcwchUsed`  
- [アウト]エラー メッセージの長さへのポインター。  
+ 入出力エラーメッセージの長さへのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、WinError.h で定義されている標準 COM エラー コードを返します。  
+ このメソッドは、次の値に加えて、Winerror.h で定義されている標準の COM エラーコードを返します。  
   
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`szBuffer`は null`iMax`であるか、ゼロ (0) です。|  
+|E_INVALIDARG|`szBuffer`が null であるか、または `iMax` がゼロ (0) です。|  
   
-## <a name="remarks"></a>解説  
- メソッドが正常に完了しなかった場合は、`szBuffer`空の文字列が含まれます。  
+## <a name="remarks"></a>コメント  
+ メソッドが正常に完了しなかった場合、には `szBuffer` 空の文字列が含まれます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** msCorEE.h  
+ **ヘッダー:** Mscoree.dll  
   
- **ライブラリ:** MSCorEE.dll  
+ **ライブラリ:** Mscoree.dll  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Globalization.CultureInfo.LCID%2A?displayProperty=nameWithType>
-- [LoadStringRC 関数](../../../../docs/framework/unmanaged-api/hosting/loadstringrc-function.md)
-- [非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [LoadStringRC 関数](loadstringrc-function.md)
+- [非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)

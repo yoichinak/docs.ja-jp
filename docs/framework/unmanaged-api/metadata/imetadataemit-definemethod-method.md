@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3e2102c5-48b7-4c0e-b805-7e2b5e156e3d
 topic_type:
 - apiref
-ms.openlocfilehash: d4f3c95428d6f0f8807e284c5b54582428176511
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 514f227e3c0c385f61090079d2f5214dac9b3924
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177675"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004531"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod メソッド
-指定したシグネチャを持つメソッドまたはグローバル関数の定義を作成し、そのメソッド定義にトークンを返します。  
+指定したシグネチャを使用してメソッドまたはグローバル関数の定義を作成し、そのメソッド定義に対するトークンを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,75 +42,75 @@ HRESULT DefineMethod (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]メソッド`mdTypedef`の親クラスまたは親インターフェイスのトークン。 グローバル`td`関数`mdTokenNil`を定義する場合は、 に設定します。  
+ から`mdTypedef`メソッドの親クラスまたは親インターフェイスのトークン。 `td` `mdTokenNil` グローバル関数を定義する場合は、に設定します。  
   
  `szName`  
- [in]ユニコードのメンバー名。  
+ からUnicode のメンバー名。  
   
  `dwMethodFlags`  
- [in]メソッドまたはグローバル関数の属性を指定する[CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列挙体の値。  
+ からメソッドまたはグローバル関数の属性を指定する[CorMethodAttr](cormethodattr-enumeration.md)列挙体の値。  
   
  `pvSigBlob`  
- [in]メソッド シグネチャ。 署名は、指定されたとおりに永続化されます。 パラメーターに追加情報を指定する必要がある場合は、[メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setparamprops-method.md)を使用します。  
+ からメソッドシグネチャ。 署名は、指定されたとおりに永続化されます。 任意のパラメーターの追加情報を指定する必要がある場合は、 [IMetaDataEmit:: SetParamProps](imetadataemit-setparamprops-method.md)メソッドを使用します。  
   
  `cbSigBlob`  
- [in]のバイト数`pvSigBlob`。  
+ からのバイト数 `pvSigBlob` 。  
   
  `ulCodeRVA`  
- [in]コードのアドレス。  
+ からコードのアドレス。  
   
  `dwImplFlags`  
- [in]メソッドの実装機能を指定する[CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)列挙の値。  
+ からメソッドの実装機能を指定する[Cormethodimpl](cormethodimpl-enumeration.md)列挙体の値。  
   
  `pmd`  
- [アウト]メンバー トークン。  
+ 入出力メンバートークン。  
   
-## <a name="remarks"></a>解説  
- メタデータ API は、メソッドを、パラメーターで指定されている特定の外側のクラスまたはインターフェイスに対して呼び出し元が出力する順序と`td`同じ順序で永続化します。  
+## <a name="remarks"></a>コメント  
+ メタデータ API は、呼び出し元が指定された外側のクラスまたはインターフェイスに対してメソッドを出力するのと同じ順序でメソッドを永続化することを保証します。これは、パラメーターで指定し `td` ます。  
   
- 使用および特定のパラメータ設定`DefineMethod`に関する追加情報は以下に示します。  
+ および特定のパラメーター設定の使用に関する追加情報 `DefineMethod` を以下に示します。  
   
-## <a name="slots-in-the-v-table"></a>V テーブル内のスロット  
- ランタイムはメソッド定義を使用して v テーブル スロットを設定します。 COM インターフェイス レイアウトとのパリティを保持するなど、1 つ以上のスロットをスキップする必要がある場合は、v テーブル内のスロットまたはスロットを取り込むダミー メソッドが定義されます。`dwMethodFlags``mdRTSpecialName`[を、CorMethodAttr](../../../../docs/framework/unmanaged-api/metadata/cormethodattr-enumeration.md)列挙体の値に設定し、名前を次のように指定します。  
+## <a name="slots-in-the-v-table"></a>V テーブルのスロット  
+ ランタイムは、メソッド定義を使用して、v テーブルスロットを設定します。 COM インターフェイスのレイアウトでパリティを保持するなど、1つ以上のスロットをスキップする必要がある場合は、v テーブルのスロットまたはスロットを取得するためにダミーメソッドが定義されています。を `dwMethodFlags` `mdRTSpecialName` [CorMethodAttr](cormethodattr-enumeration.md)列挙の値に設定し、名前をとして指定します。  
   
- _VtblGap\<*シーケンス*>\<番号\_*カウントの数*>
+ _VtblGap\<*SequenceNumber*>\<\_*CountOfSlots*>
   
- シーケンス*番号*はメソッドのシーケンス番号で *、CountOfSlots*は v テーブルでスキップするスロットの数です。 *CountOfSlots を*省略すると、1 が想定されます。 これらのダミー メソッドは、マネージ コードまたはアンマネージ コードから呼び出す可能性があり、マネージ コードまたはアンマネージ コードから呼び出そうとすると例外が生成されます。 その唯一の目的は、ランタイムが COM 統合用に生成する v テーブル内の領域を取り込むためです。  
+ ここで、 *SequenceNumber*はメソッドのシーケンス番号、 *CountOfSlots*は v テーブルでスキップするスロットの数です。 *CountOfSlots*を省略すると、1が想定されます。 これらのダミーメソッドは、マネージコードまたはアンマネージコードから呼び出すことはできません。また、マネージコードまたはアンマネージコードから呼び出しを試みると、例外が生成されます。 その唯一の目的は、ランタイムが COM 統合用に生成する v テーブルの領域を占有することです。  
   
-## <a name="duplicate-methods"></a>メソッドの重複  
- 重複するメソッドを定義しないでください。 つまり`DefineMethod`、 `td`、および`wzName``pvSig`パラメーターの値の重複したセットを呼び出す必要はありません。 (これらの 3 つのパラメーターを一緒にメソッドを一意に定義します。 ただし、メソッド定義の 1 つに対して、パラメーターにビットを`mdPrivateScope`設定する場合は、重複するトリプル`dwMethodFlags`を使用できます。 (ビット`mdPrivateScope`は、コンパイラがこのメソッド定義への参照を出力しないことを意味します。  
+## <a name="duplicate-methods"></a>重複するメソッド  
+ 重複するメソッドは定義しないでください。 つまり、、、およびの各 `DefineMethod` パラメーターで、重複する値のセットを指定してを呼び出すことはできません `td` `wzName` `pvSig` 。 (これら3つのパラメーターを組み合わせて、メソッドを一意に定義します)。 ただし、メソッドの定義の1つに対して、パラメーターにビットを設定するという3つの方法を使用できます `mdPrivateScope` `dwMethodFlags` 。 (ビットは、 `mdPrivateScope` コンパイラがこのメソッド定義への参照を生成しないことを意味します)。  
   
-## <a name="method-implementation-information"></a>メソッド実装情報  
- メソッドの実装に関する情報は、メソッドが宣言された時点では不明な場合があります。 したがって、 を呼び出すときに、`ulCodeRVA`パラメータ`dwImplFlags`に値を`DefineMethod`渡す必要はありません。 値は、必要に応じて[後で IMetaDataEmit:::SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)または[IMetaDataEmit::SetRVA](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setrva-method.md)を介して指定できます。  
+## <a name="method-implementation-information"></a>メソッドの実装情報  
+ メソッドの実装に関する情報は、多くの場合、メソッドが宣言されているときには認識されません。 したがって、 `ulCodeRVA` を呼び出すときに、パラメーターとパラメーターに値を渡す必要はありません `dwImplFlags` `DefineMethod` 。 値は、必要に応じて、後で[IMetaDataEmit:: SetMethodImplFlags](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmethodimplflags-method.md)または[IMetaDataEmit:: SetRVA](imetadataemit-setrva-method.md)を使用して指定できます。  
   
- プラットフォーム呼び出し (PInvoke) や COM 相互運用シナリオなど、状況によっては、メソッド本体は提供されず`ulCodeRVA`、0 に設定する必要があります。 このような場合、ランタイムは実装を検索するため、メソッドを抽象としてタグ付けしないでください。  
+ プラットフォーム呼び出し (PInvoke) や COM 相互運用のシナリオなど、状況によっては、メソッド本体が提供されず、 `ulCodeRVA` 0 に設定する必要があります。 このような状況では、ランタイムによって実装が特定されるため、メソッドを abstract としてタグ付けすることはできません。  
   
 ## <a name="defining-a-method-for-pinvoke"></a>PInvoke のメソッドの定義  
- PInvoke を通じて呼び出されるアンマネージ関数ごとに、ターゲットアンマネージ関数を表すマネージ メソッドを定義する必要があります。 マネージ メソッドを定義するには、PInvoke の使用方法に応じて、いくつかのパラメーターを特定の値に設定して使用`DefineMethod`します。  
+ PInvoke を通じて呼び出される各アンマネージ関数に対して、対象のアンマネージ関数を表すマネージメソッドを定義する必要があります。 マネージメソッドを定義するには、 `DefineMethod` PInvoke の使用方法に応じて、特定の値に設定されているいくつかのパラメーターと共にを使用します。  
   
-- True PInvoke - アンマネージ DLL に存在する外部アンマネージ メソッドの呼び出しを伴います。  
+- True PInvoke-アンマネージ DLL に存在する外部アンマネージメソッドの呼び出しが含まれます。  
   
-- ローカル PInvoke - 現在のマネージ モジュールに埋め込まれているネイティブアンマネージ メソッドの呼び出しを含みます。  
+- ローカル PInvoke-現在のマネージモジュールに埋め込まれているネイティブアンマネージメソッドの呼び出しが含まれます。  
   
- パラメータの設定は次の表のとおりです。  
+ パラメーターの設定を次の表に示します。  
   
-|パラメーター|真の PInvoke の値|ローカル PInvoke の値|  
+|パラメーター|True PInvoke の値|ローカル PInvoke の値|  
 |---------------|-----------------------------|------------------------------|  
-|`dwMethodFlags`||設定`mdStatic`;クリア`mdSynchronized`および`mdAbstract`.|  
-|`pvSigBlob`|有効なマネージ型のパラメーターを持つ有効な共通言語ランタイム (CLR) メソッドシグネチャ。|有効なマネージ型のパラメーターを持つ有効な CLR メソッド シグネチャ。|  
+|`dwMethodFlags`||`mdStatic` `mdSynchronized` を設定します。とをクリアし `mdAbstract` ます。|  
+|`pvSigBlob`|有効なマネージ型であるパラメーターを持つ有効な共通言語ランタイム (CLR) メソッドシグネチャ。|有効なマネージ型であるパラメーターを含む有効な CLR メソッドシグネチャ。|  
 |`ulCodeRVA`||0|  
 |`dwImplFlags`|`miCil` と `miManaged` を設定します。|`miNative` と `miUnmanaged` を設定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

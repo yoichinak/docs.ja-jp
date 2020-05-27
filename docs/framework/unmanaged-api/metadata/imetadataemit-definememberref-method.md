@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21b5bcb8-ea75-4962-8acc-ad17584061e5
 topic_type:
 - apiref
-ms.openlocfilehash: e371330336002c673f2c54d882e70dbed41b743c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 576f4561ed782f091840ac378831110a1bfef9c6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175838"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004695"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef メソッド
 現在のスコープ外のモジュールのメンバーへの参照を定義し、その参照定義へのトークンを取得します。  
@@ -39,30 +39,30 @@ HRESULT DefineMemberRef (
   
 ## <a name="parameters"></a>パラメーター  
  `tkImport`  
- [in]対象メンバのクラスまたはインターフェイスのトークン (グローバルでない場合)。メンバーがグローバルである場合は、`mdModuleRef`その他のファイルのトークン。  
+ からメンバーがグローバルでない場合は、ターゲットメンバーのクラスまたはインターフェイスのトークン。メンバーがグローバルの場合は、 `mdModuleRef` その他のファイルのトークン。  
   
  `szName`  
- [in]ターゲット メンバーの名前。  
+ からターゲットメンバーの名前。  
   
  `pvSigBlob`  
- [in]ターゲット メンバーのシグネチャ。  
+ からターゲットメンバーのシグネチャ。  
   
  `cbSigBlob`  
- [in]のバイト数`pvSigBlob`。  
+ からのバイト数 `pvSigBlob` 。  
   
  `pmr`  
- [アウト]割`mdMemberRef`り当てられたトークン。  
+ 入出力`mdMemberRef`割り当てられたトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

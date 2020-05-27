@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37fd27af-8062-4904-ace4-51bb78ec600a
 topic_type:
 - apiref
-ms.openlocfilehash: 6825a5198976cc7ab2c04ebd6e782418dcf4a8f7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edce5cb93b770fb5730e5a06633ffffacf332f7a
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177677"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004694"
 ---
 # <a name="imetadataemitdefineimporttype-method"></a>IMetaDataEmit::DefineImportType メソッド
 現在のスコープの外部で定義されている指定した型への参照を作成し、その参照のトークンを定義します。  
@@ -41,39 +41,39 @@ HRESULT DefineImportType (
   
 ## <a name="parameters"></a>パラメーター  
  `pAssemImport`  
- [in]ターゲット型のインポート元のアセンブリを表す[IMetaDataAssemblyImport](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyimport-interface.md)インターフェイス。  
+ から対象の型のインポート元のアセンブリを表す[IMetaDataAssemblyImport](imetadataassemblyimport-interface.md)インターフェイス。  
   
  `pbHashValue`  
- [in]で指定されたアセンブリのハッシュを格納する`pAssemImport`配列。  
+ からによって指定されたアセンブリのハッシュを格納している配列 `pAssemImport` 。  
   
  `cbHashValue`  
  [in] `pbHashValue` 配列のバイト数。  
   
  `pImport`  
- [in]ターゲット型のインポート元のメタデータ スコープを表す[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)インターフェイス。  
+ から対象の型のインポート元のメタデータスコープを表す[IMetaDataImport](imetadataimport-interface.md)インターフェイス。  
   
  `tdImport`  
- [in]ターゲット`mdTypeDef`の型を指定するトークン。  
+ から`mdTypeDef`対象の型を指定するトークンです。  
   
  `pAssemEmit`  
- [in]ターゲット型のインポート先のアセンブリを表す[IMetaDataAssemblyEmit](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)インターフェイス。  
+ からターゲット型がインポートされるアセンブリを表す[IMetaDataAssemblyEmit](imetadataassemblyemit-interface.md)インターフェイス。  
   
  `ptr`  
- [アウト]型`mdTypeRef`参照の現在のスコープで定義されているトークン。  
+ 入出力`mdTypeRef`型参照の現在のスコープで定義されているトークン。  
   
-## <a name="remarks"></a>解説  
- [:D メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimportmember-method.md)を呼び出す前に、`DefineImportType`メソッドを使用して、メンバーの親クラスまたは親インターフェイスの現在のスコープ内の型参照を作成できます。  
+## <a name="remarks"></a>コメント  
+ [IMetaDataEmit::D efineImportMember](imetadataemit-defineimportmember-method.md)メソッドを呼び出す前に、メソッドを使用して、 `DefineImportType` メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成できます。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)
