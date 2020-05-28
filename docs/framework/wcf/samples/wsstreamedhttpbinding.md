@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 36b4db5270205aec55ad52db40500c8d434a1560
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: 663b7921e4e8a66d9b905404bad00f613e2f04cc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74714548"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144657"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 
@@ -21,7 +21,7 @@ ms.locfileid: "74714548"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Binding\WSStreamedHttpBinding`
 
@@ -53,7 +53,7 @@ ms.locfileid: "74714548"
 
 2. 構成サポートを追加する
 
-    構成を使用してトランスポートを公開するため、サンプルではさらに、`WSStreamedHttpBindingConfigurationElement` クラスと `WSStreamedHttpBindingSection` クラスという 2 つのクラスを実装します。 クラス `WSStreamedHttpBindingSection` は、WCF 構成システムに `WSStreamedHttpBinding` を公開する <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> です。 実装の大部分は `WSStreamedHttpBindingConfigurationElement` で代行されます。これは <xref:System.ServiceModel.Configuration.StandardBindingElement> の派生です。 クラス `WSStreamedHttpBindingConfigurationElement` には `WSStreamedHttpBinding` のプロパティに対応するプロパティがあり、各構成要素をバインディングにマップする関数があります。
+    構成を使用してトランスポートを公開するため、サンプルではさらに、`WSStreamedHttpBindingConfigurationElement` クラスと `WSStreamedHttpBindingSection` クラスという 2 つのクラスを実装します。 クラスは、 `WSStreamedHttpBindingSection` <xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602> `WSStreamedHttpBinding` WCF 構成システムに公開するです。 実装の大部分は `WSStreamedHttpBindingConfigurationElement` で代行されます。これは <xref:System.ServiceModel.Configuration.StandardBindingElement> の派生です。 クラス `WSStreamedHttpBindingConfigurationElement` には `WSStreamedHttpBinding` のプロパティに対応するプロパティがあり、各構成要素をバインディングにマップする関数があります。
 
     次のセクションをサービスの構成ファイルに追加することにより、ハンドラを構成システムに登録します。
 
@@ -137,7 +137,7 @@ public class StreamedEchoService : IStreamedEchoService
 
 ## <a name="the-wsstreamedhttpbinding-sample-client"></a>WSStreamedHttpBinding クライアントのサンプル
 
-`WSStreamedHttpBinding` を使用してサービスとやり取りするクライアントは、クライアント サブディレクトリにあります。 このサンプルで使用される証明書は、Makecert で作成されたテスト証明書であるため、 https://localhost/servicemodelsamples/service.svc などのブラウザーで HTTPS アドレスにアクセスしようとすると、セキュリティ警告が表示されます。 WCF クライアントがテスト証明書を使用できるようにするために、セキュリティの警告を抑制するために、クライアントに追加のコードがいくつか追加されています。 そのためのコードとそれに必要なクラスは、本運用の証明書を使用するときには不要です。
+`WSStreamedHttpBinding` を使用してサービスとやり取りするクライアントは、クライアント サブディレクトリにあります。 このサンプルで使用される証明書は、Makecert で作成されたテスト証明書であるため、などのブラウザーで HTTPS アドレスにアクセスしようとすると、セキュリティ警告が表示され `https://localhost/servicemodelsamples/service.svc` ます。 WCF クライアントがテスト証明書を使用できるようにするために、セキュリティの警告を抑制するために、クライアントに追加のコードがいくつか追加されています。 そのためのコードとそれに必要なクラスは、本運用の証明書を使用するときには不要です。
 
 ```csharp
 // WARNING: This code is only required for test certificates such as those created by makecert. It is

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: aa782c46d6530bb30055c536dd10d78f9ab9f79f
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963773"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84143564"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows プロセス アクティブ化サービスでのホスティング
 Windows プロセス アクティブ化サービス (WAS) は、Windows Communication Foundation (WCF) サービスをホストするアプリケーションが含まれているワーカー プロセスのアクティブ化と有効期間を管理します。 WAS プロセス モデルは、HTTP への依存性を取り除くことで、HTTP サーバーの IIS 6.0 プロセス モデルを一般化します。 これにより、WCF サービスは、メッセージベースのアクティブ化をサポートするホスティング環境で HTTP プロトコルと非 HTTP プロトコルの両方を使用できるようになり、特定のコンピューターで多数のアプリケーションをホストできるようになります。  
@@ -34,11 +34,11 @@ Windows プロセス アクティブ化サービス (WAS) は、Windows Communic
   
  HTTP と 非 HTTP サイト バインディングの両方の WAS サイト用に考えられるアドレス シナリオを次の表に示します。  
   
-|通信の種類|サイトのバインド|アプリケーション パス|ベース アプリケーション URI|  
+|シナリオ|サイト バインディング|アプリケーション パス|ベース アプリケーション URI|  
 |--------------|-------------------|----------------------|---------------------------|  
-|HTTP のみ|http: *:80:\*|/appTwo|http://localhost/appTwo/|  
-|HTTP と 非 HTTP の混在|http: *:80:\*<br /><br /> net.tcp: 808:\*|/appTwo|http://localhost/appTwo/<br />net.tcp://localhost/appTwo/|  
-|非 HTTP のみ|net.pipe: *|/appThree|net.pipe://appThree/|  
+|HTTP のみ|http: *:80:\*|/appTwo|`http://localhost/appTwo/`|  
+|HTTP と 非 HTTP の混在|http: *:80:\*<br /><br /> net.tcp: 808:\*|/appTwo|`http://localhost/appTwo/`<br />`net.tcp://localhost/appTwo/`|  
+|非 HTTP のみ|net.pipe: *|/appThree|`net.pipe://appThree/`|  
   
  アプリケーション内のサービスとリソースにもアドレスを指定できます。 アプリケーション内では、アプリケーション リソースにベース アプリケーション パスに対する相対アドレスが指定されます。 たとえば、コンピューター名 contoso.com のサイトに HTTP と Net.TCP プロトコルの両方のサイト バインドがあるとします。 さらに、そのサイトには 1 つのアプリケーションが /Billing に格納されており、GetOrders.svc でサービスを公開しているとします。 このとき、GetOrders.svc サービスで SecureEndpoint の相対アドレスを持つエンドポイントが公開されている場合、サービスのエンドポイントは次の 2 つの URI で公開されることになります。  
   
@@ -52,6 +52,6 @@ Windows プロセス アクティブ化サービス (WAS) は、Windows Communic
 
 - [WAS アクティベーション アーキテクチャ](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [WCF で使用するための WAS を設定する](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [方法 : WCF アクティブ化コンポーネントをインストールして設定する](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [方法 : WAS で WCF サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [方法: WCF アクティブ化コンポーネントをインストールして設定する](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [方法: WAS で WCF サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
 - [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

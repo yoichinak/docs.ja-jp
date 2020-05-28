@@ -98,11 +98,6 @@
         - name: ライブラリを単体テストする
           href: tutorials/testing-library-with-visual-studio.md
           displayName: 'tutorials, visual studio, vs'
-        - name: ライブラリを使用する
-          href: tutorials/consuming-library-with-visual-studio.md
-          displayName: 'tutorials, visual studio, vs'
-        - name: ライブ単体テスト
-          href: /visualstudio/test/live-unit-testing-start
         - name: パッケージをインストールして使用する
           href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
           displayName: 'tutorials, visual studio, vs'

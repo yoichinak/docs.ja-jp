@@ -2,12 +2,12 @@
 title: トランスポート セキュリティ付き BasicBinding
 ms.date: 03/30/2017
 ms.assetid: f49b1de6-0254-4362-8ef2-fccd8ff9688b
-ms.openlocfilehash: 6c7426de0a2d2b0001442960819dd385f7b9ea9e
-ms.sourcegitcommit: 5fb5b6520b06d7f5e6131ec2ad854da302a28f2e
+ms.openlocfilehash: adf245d29ca57d919957276dfc54d82a0f45373b
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74716074"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144878"
 ---
 # <a name="basicbinding-with-transport-security"></a>トランスポート セキュリティ付き BasicBinding
 
@@ -18,7 +18,7 @@ ms.locfileid: "74716074"
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) と [!INCLUDE[wf1](../../../../includes/wf1-md.md)] サンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\TransportSecurity`
 
@@ -56,7 +56,7 @@ ms.locfileid: "74716074"
 </system.serviceModel>
 ```
 
-このサンプルで使用される証明書は、Makecert で作成されたテスト証明書であるため、ブラウザーで HTTPS: アドレスにアクセスしようとすると (https://localhost/servicemodelsamples/service.svc など)、セキュリティ警告が表示されます。 Windows Communication Foundation (WCF) クライアントがテスト証明書を使用できるようにするには、セキュリティの警告を抑制するために、いくつかの追加コードをクライアントに追加します。 そのためのコードとそれに必要なクラスは、実際の証明書を使用するときには不要です。
+このサンプルで使用される証明書は、Makecert で作成されたテスト証明書であるため、ブラウザーで HTTPS: アドレスにアクセスしようとすると (など)、セキュリティ警告が表示されます `https://localhost/servicemodelsamples/service.svc` 。 Windows Communication Foundation (WCF) クライアントがテスト証明書を使用できるようにするには、セキュリティの警告を抑制するために、いくつかの追加コードをクライアントに追加します。 そのためのコードとそれに必要なクラスは、実際の証明書を使用するときには不要です。
 
 ```csharp
 // This code is required only for test certificates such as those

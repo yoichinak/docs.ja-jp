@@ -2,12 +2,12 @@
 title: 探索のセキュリティのサンプル
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: 44022ee756f189347aaec606427ecb3c4c5ffa95
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: c6ec9b7e13234b7dae03541eb09ccba98f4cc93a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728419"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144904"
 ---
 # <a name="discovery-security-sample"></a>探索のセキュリティのサンプル
 
@@ -38,7 +38,7 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
 > [!NOTE]
 > `PrefixList` は、Discovery プロトコルの 2008 バージョンで追加されました。  
   
- このサンプルでは、署名を計算するために、展開される署名のアイテムを特定します。 WS-Discovery 仕様の規定のとおり、XML 署名 (`SignedInfo`) が `ds` 名前空間プレフィックスを使用して作成されます。 探索の本文とすべてのヘッダーおよびアドレス名前空間は署名で参照されるため、改ざんされることはありません。 参照される各要素は、排他的正規化 (http://www.w3.org/2001/10/xml-exc-c14n# ) を使用して変換された後、sha-1 ダイジェストhttp://www.w3.org/2000/09/xmldsig#sha1値が計算されます ()。 参照されるすべての要素とそのダイジェスト値に基づいて、署名値は RSA アルゴリズム (http://www.w3.org/2000/09/xmldsig#rsa-sha1 ) を使用して計算されます。  
+ このサンプルでは、署名を計算するために、展開される署名のアイテムを特定します。 WS-Discovery 仕様の規定のとおり、XML 署名 (`SignedInfo`) が `ds` 名前空間プレフィックスを使用して作成されます。 探索の本文とすべてのヘッダーおよびアドレス名前空間は署名で参照されるため、改ざんされることはありません。 参照される各要素は、排他的正規化 () を使用して変換され <http://www.w3.org/2001/10/xml-exc-c14n#> た後、sha-1 ダイジェスト値が計算され <http://www.w3.org/2000/09/xmldsig#sha1> ます ()。 参照されるすべての要素とそのダイジェスト値に基づいて、署名値は RSA アルゴリズム () を使用して計算され <http://www.w3.org/2000/09/xmldsig#rsa-sha1> ます。  
   
  メッセージは、クライアントが指定した証明書を使用して署名されます。 バインド要素を作成するときに、ストアの場所、名前、および証明書のサブジェクト名を指定する必要があります。 コンパクトな署名の `KeyId` は、署名トークンのキー識別子を表します。これは、署名トークンのサブジェクト キー識別子 (SKI) か、署名トークンの公開キーの SHA-1 ハッシュ (SKI が存在しない場合) です。  
   
@@ -72,6 +72,6 @@ Discovery 仕様では、探索プロセスに参加するエンドポイント�
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DiscoveryScenario`  
