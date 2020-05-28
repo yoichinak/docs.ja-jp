@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d86a3d14-4796-4909-9591-dfafe3de5ce4
 topic_type:
 - apiref
-ms.openlocfilehash: 2807458549db02598ba05f2aa80fa6ea6fbc5a13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a58e03875ec021b41479085fa9e27a4321ae965e
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177695"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004358"
 ---
 # <a name="imetadataemitdefineparam-method"></a>IMetaDataEmit::DefineParam メソッド
-指定したトークンによって参照されるメソッドの指定したシグネチャを持つパラメーター定義を作成し、そのパラメーター定義のトークンを取得します。  
+指定したトークンによって参照されるメソッドに対して、指定したシグネチャを持つパラメーター定義を作成し、そのパラメーター定義のトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,42 +42,42 @@ HRESULT DefineParam (
   
 ## <a name="parameters"></a>パラメーター  
  `md`  
- [in]パラメーターが定義されているメソッドのトークン。  
+ からパラメーターが定義されているメソッドのトークン。  
   
  `ulParamSeq`  
- [in]パラメーターのシーケンス番号。  
+ からパラメーターのシーケンス番号。  
   
  `szName`  
- [in]ユニコードのパラメータの名前。  
+ からUnicode でのパラメーターの名前。  
   
  `dwParamFlags`  
- [in]パラメーターのフラグ。 これは値の`CorParamAttr`ビットマスクです。  
+ からパラメーターのフラグ。 これは、値のビットマスクです `CorParamAttr` 。  
   
  `dwCPlusTypeFlag`  
- [in]`ELEMENT_TYPE_`を定数値に対して指定*\** します。  
+ [入力] `ELEMENT_TYPE_` *\** 定数値の。  
   
  `pValue`  
- [in]パラメーターの定数値。  
+ からパラメーターの定数値。  
   
  `cchValue`  
- [in]のサイズ (Unicode 文字) `pValue`  
+ からのサイズ (Unicode 文字) `pValue` 。  
   
  `ppd`  
- [アウト]割`mdParamDef`り当てられたトークン。  
+ 入出力`mdParamDef`割り当てられたトークン。  
   
-## <a name="remarks"></a>解説  
- シーケンス値は、`ulParamSeq`パラメーターの場合は 1 から始まります。 戻り値のシーケンス番号は 0 です。  
+## <a name="remarks"></a>コメント  
+ パラメーターの場合、のシーケンス値は `ulParamSeq` 1 から始まります。 戻り値のシーケンス番号は0です。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MSCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)

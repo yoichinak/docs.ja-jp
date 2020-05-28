@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cced5298-277f-4a5a-8ecf-a0050c1096ea
 topic_type:
 - apiref
-ms.openlocfilehash: 646952d5cd55b74081a0ba6171a6eee6b0138512
-ms.sourcegitcommit: 9a39f2a06f110c9c7ca54ba216900d038aa14ef3
+ms.openlocfilehash: 70fb637cd1edf81be140b0e3306e3b0a483653a6
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/23/2019
-ms.locfileid: "74443962"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007989"
 ---
 # <a name="cor_field_offset-structure"></a>COR_FIELD_OFFSET 構造体
 指定したフィールドのクラス内の相対位置を格納します。  
@@ -37,21 +37,21 @@ typedef struct COR_FIELD_OFFSET {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`ridOfField`|フィールドを表す `mdFieldDef` メタデータトークン。|  
+|`ridOfField`|`mdFieldDef`フィールドを表すメタデータトークン。|  
 |`ulOffset`|クラス内のフィールドのオフセット。|  
   
 ## <a name="remarks"></a>コメント  
- [IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)メソッドと[IMetaDataEmit:: SetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setclasslayout-method.md)メソッドは `COR_FIELD_OFFSET`型のパラメーターを受け取ります。  
+ [IMetaDataImport:: GetClassLayout](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-getclasslayout-method.md)メソッドと[IMetaDataEmit:: SetClassLayout](imetadataemit-setclasslayout-method.md)メソッドは、型のパラメーターを受け取り `COR_FIELD_OFFSET` ます。  
   
-## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>必要条件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorHdr .h、Corprof.idl  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [メタデータ構造体](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [メタデータ構造体](metadata-structures.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)

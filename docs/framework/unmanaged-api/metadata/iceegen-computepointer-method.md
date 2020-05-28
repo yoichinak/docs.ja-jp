@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b6b95c04-0f2c-4fcc-a8bc-3b1dcbdba731
 topic_type:
 - apiref
-ms.openlocfilehash: 9587bbe8f087fd9a51bba67492af1d5acb53ae4a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 206dcd3a0a82da9b6211c8c2045e4e9d3d991973
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176098"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008873"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer メソッド
-指定したコード セクションのバッファーを決定します。  
+指定されたコードセクションのバッファーを決定します。  
   
- このメソッドは廃止され、使用しないでください。  
+ このメソッドは互換性のために残されています。使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,23 +39,23 @@ HRESULT ComputePointer (
   
 ## <a name="parameters"></a>パラメーター  
  `section`  
- [in]バッファーを返すコード セクション。  
+ からバッファーを返す対象のコードセクション。  
   
  `RVA`  
- [in]ポインターを取得するメソッドの相対仮想アドレス。  
+ からポインターを取得するメソッドの相対仮想アドレス。  
   
  `lpBuffer`  
- [アウト]返されたバッファーへのポインター。  
+ 入出力返されたバッファーへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [ICeeGen インターフェイス](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [ICeeGen インターフェイス](iceegen-interface.md)
