@@ -6,12 +6,12 @@ helpviewer_keywords:
 - type constraints [C#]
 - type parameters [C#], constraints
 - unbound type parameter [C#]
-ms.openlocfilehash: 0035f7d8aa862b4bd1b09a6f122a89786a6e295b
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 376befe4c969ac653e234479c8946d7fd4242999
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738252"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442216"
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>型パラメーターの制約 (C# プログラミング ガイド)
 
@@ -113,7 +113,7 @@ C# 7.3 以降、基底クラスの制約として <xref:System.Enum?displayPrope
 
 [!code-csharp[using the enum constraint](~/samples/snippets/csharp/keywords/GenericWhereConstraints.cs#18)]
 
-メソッドはリフレクションを使用していました。これはパフォーマンスに影響します。 このメソッドを呼び出して、リフレクションを必要とする呼び出しを繰り返すことなく、キャッシュおよび再利用されるコレクションをビルドできます。
+`Enum.GetValues` と `Enum.GetName` ではリフレクションが使用されます。これは、パフォーマンスに影響を与えます。 リフレクションを必要とする呼び出しを繰り返すのではなく、`EnumNamedValues` を呼び出してキャッシュおよび再利用されるコレクションを作成できます。
 
 次の例で示すように、このメソッドを使用して、列挙を作成し、その値と名前のディクショナリをビルドできます。
 

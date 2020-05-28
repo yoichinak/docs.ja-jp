@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: e633b6c1d03a3d1cd70e277395da10f70f315f16
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523971"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83441007"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 
@@ -317,18 +317,20 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 
 - <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドと `ToString` メソッドを使用している場合、`provider` パラメーター (<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> または <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> など) を持つオーバー ロードを呼び出し、それに <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティ、目的のカルチャを表す <xref:System.Globalization.CultureInfo> インスタンス、または <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> プロパティを渡します。
 
-- 文字列連結の場合、コンパイラに暗黙の変換の実行を許可しないでください。 代わりに、`provider` パラメーターを持つ `ToString` オーバーロードを呼び出すことで、明示的な変換を実行します。 たとえば、次の C# コードでは、<xref:System.Double> 値を文字列に変換するときに、コンパイラでは現在のカルチャが暗黙的に使用されます。
+- 文字列連結の場合、コンパイラに暗黙の変換の実行を許可しないでください。 代わりに、`provider` パラメーターを持つ `ToString` オーバーロードを呼び出すことで、明示的な変換を実行します。 たとえば、次のコードでは、<xref:System.Double> 値を文字列に変換するときに、コンパイラでは現在のカルチャが暗黙的に使用されます。
 
-  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+  [!code-csharp[Implicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#1)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#1)]
 
-  代わりに、次の C# コードのように、<xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> メソッドを呼び出して、変換に使用する書式指定規則を持つカルチャを明示的に指定することができます。
+  代わりに、次のコードのように、<xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> メソッドを呼び出して、変換に使用する書式指定規則を持つカルチャを明示的に指定することができます。
 
-  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+  [!code-csharp[Explicit String Conversion](./snippets/best-practices-strings/csharp/tostring/Program.cs#2)]
+  [!code-vb[Implicit String Conversion](./snippets/best-practices-strings/vb/tostring/Program.vb#2)]
 
 - 文字列補間の場合、挿入文字列を <xref:System.String> インスタンスに割り当てるのではなく、<xref:System.FormattableString> に割り当てます。 その後、その <xref:System.FormattableString.ToString?displayProperty=nameWithType> メソッドを呼び出して、現在のカルチャの規則を反映する結果の文字列を生成することも、<xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> メソッドを呼び出して、指定したカルチャの規則を反映する結果の文字列を生成することもできます。 また、書式設定可能な文字列を静的 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> メソッドに渡して、インバリアント カルチャの規則を反映する結果の文字列を生成することもできます。 このアプローチの例を次に示します。 (この例の出力には en-US の現在のカルチャが反映されます)。
 
-  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
-  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+  [!code-csharp[String interpolation](./snippets/best-practices-strings/csharp/formattable/Program.cs)]
+  [!code-vb[String interpolation](./snippets/best-practices-strings/vb/formattable/Program.vb)]
 
 文字列以外のデータは、バイナリ データまたは書式付きデータとして保持できます。 書式付きデータとして保存するには、`provider` パラメーターを含む書式指定メソッドのオーバーロードを呼び出し、そのパラメーターを <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティに渡す必要があります。 インバリアント カルチャは、カルチャとコンピューターに依存しない書式付きデータに一貫した書式を提供します。 これに対し、インバリアント カルチャ以外のカルチャを使用して書式設定するデータの保持には、さまざまな制限があります。
 

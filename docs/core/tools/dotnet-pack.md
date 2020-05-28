@@ -2,12 +2,12 @@
 title: dotnet pack コマンド
 description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
 ms.date: 04/28/2020
-ms.openlocfilehash: 26a8581f55a8dc9e61aa52e62ed94c73eefd3e03
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.openlocfilehash: 00cda2c52a12a7a3aef5f61291120f522536131d
+ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595755"
+ms.lasthandoff: 05/16/2020
+ms.locfileid: "83442229"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -64,7 +64,7 @@ Web プロジェクトは既定でパッケージ化可能ではありません�
 
 `PROJECT | SOLUTION`
 
-  パックするプロジェクトまたはソリューション。 [csproj ファイル](csproj.md)、ソリューション ファイル、またはディレクトリのいずれかへのパスです。 指定されていない場合、コマンドによりプロジェクトまたはソリューション ファイルが現在のディレクトリで検索されます。
+  パックするプロジェクトまたはソリューション。 [csproj ファイル](csproj.md)、vbproj ファイル、fsproj ファイル、ソリューション ファイル、またはディレクトリのいずれかへのパスです。 指定されていない場合、コマンドによりプロジェクトまたはソリューション ファイルが現在のディレクトリで検索されます。
 
 ## <a name="options"></a>オプション
 

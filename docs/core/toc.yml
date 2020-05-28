@@ -81,59 +81,95 @@
   href: compatibility/
 - name: チュートリアル
   items:
-    - name: 概要
+    - name: Visual Studio を使用する
+      items:
+        - name: コンソール アプリを作成する
+          href: tutorials/with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: アプリをデバッグする
+          href: tutorials/debugging-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: アプリの発行
+          href: tutorials/publishing-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: ライブラリを作成する
+          href: tutorials/library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: ライブラリを単体テストする
+          href: tutorials/testing-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: ライブラリを使用する
+          href: tutorials/consuming-library-with-visual-studio.md
+          displayName: 'tutorials, visual studio, vs'
+        - name: ライブ単体テスト
+          href: /visualstudio/test/live-unit-testing-start
+        - name: パッケージをインストールして使用する
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+        - name: パッケージの作成と公開
+          href: /nuget/quickstart/create-and-publish-a-package-using-visual-studio
+          displayName: 'tutorials, visual studio, vs'
+    - name: Visual Studio Code の使用
+      items:
+        - name: コンソール アプリを作成する
+          href: tutorials/with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: コンソール アプリを作成して公開する
+          href: tutorials/cli-create-console-app.md
+          displayName: 'tutorials, cli'
+        - name: ライブラリを作成して単体テストする - macOS
+          href: tutorials/using-on-macos.md
+          displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: パッケージをインストールして使用する
+          href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
+          displayName: 'tutorials, cli'
+        - name: パッケージの作成と公開
+          href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
+          displayName: tutorials
+    - name: Visual Studio for Mac の使用
+      items:
+        - name: コンソール アプリを作成する
+          href: tutorials/using-on-mac-vs.md
+          displayName: tutorials
+        - name: ライブラリを作成して単体テストする
+          href: tutorials/using-on-mac-vs-full-solution.md
+          displayName: tutorials
+        - name: パッケージをインストールして使用する
+          href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+          displayName: tutorials
+    - name: 高度なトピック
+      items:
+        - name: xUnit でアプリを単体テストする
+          href: tutorials/testing-with-cli.md
+          displayName: 'tutorials, cli'
+        - name: ライブラリを作成する方法
+          href: tutorials/libraries.md
+        - name: CLI のテンプレートを作成する
+          items:
+            - name: 1 - 項目テンプレートを作成する
+              href: tutorials/cli-templates-create-item-template.md
+              displayName: 'tutorials, cli'
+            - name: 2 - プロジェクト テンプレートを作成する
+              href: tutorials/cli-templates-create-project-template.md
+              displayName: 'tutorials, cli'
+            - name: 3 - テンプレート パックを作成する
+              href: tutorials/cli-templates-create-template-pack.md
+              displayName: 'tutorials, cli'
+        - name: CLI のツールを作成する
+          items:
+            - name: 1 - ツールを作成する
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-create.md
+            - name: 2 - グローバル ツールを使用する
+              displayName: 'tools, tutorials, cli'
+              href: tools/global-tools-how-to-use.md
+            - name: 3 - ローカル ツールを使用する
+              href: tools/local-tools-how-to-use.md
+              displayName: 'tools, tutorials, cli'
+        - name: プラグインを使用してアプリを作成する
+          href: tutorials/creating-app-with-plugin-support.md
+    - name: その他のチュートリアル
       href: tutorials/index.md
-    - name: Visual Studio を使用した .NET Core の概要
-      href: tutorials/with-visual-studio.md
-    - name: Visual Studio Code を使用した .NET Core の概要
-      href: tutorials/with-visual-studio-code.md
-    - name: CLI を使用する .NET Core に関する概要
-      href: tutorials/cli-create-console-app.md
-    - name: macOS 上での Visual Studio Code を使用した .NET Core の概要
-      href: tutorials/using-on-macos.md
-    - name: Visual Studio for Mac を使用した .NET Core の概要
-      href: tutorials/using-on-mac-vs.md
-    - name: Visual Studio を使用したアプリケーションのデバッグ
-      href: tutorials/debugging-with-visual-studio.md
-    - name: Visual Studio でのアプリケーションの発行
-      href: tutorials/publishing-with-visual-studio.md
-    - name: Visual Studio での .NET Standard ライブラリの作成
-      href: tutorials/library-with-visual-studio.md
-    - name: Visual Studio での .NET Standard ライブラリのテスト
-      href: tutorials/testing-library-with-visual-studio.md
-    - name: Visual Studio での .NET Standard ライブラリの使用
-      href: tutorials/consuming-library-with-visual-studio.md
-    - name: macOS での完全な .NET Core ソリューションの構築
-      href: tutorials/using-on-mac-vs-full-solution.md
-    - name: .NET Core CLI を使用したプロジェクトの整理およびテスト
-      href: tutorials/testing-with-cli.md
-    - name: クロスプラットフォーム ツールによるライブラリの開発
-      href: tutorials/libraries.md
-    - name: プラグインを使用した .NET Core アプリの作成
-      href: tutorials/creating-app-with-plugin-support.md
-    - name: ASP.NET Core MVC アプリの開発
-      href: tutorials/aspnet-core.md
-    - name: ネイティブ コードからの .NET Core のホスト
-      href: tutorials/netcore-hosting.md
-    - name: CLI のテンプレートを作成する
-      items:
-        - name: 1 - 項目テンプレートを作成する
-          href: tutorials/cli-templates-create-item-template.md
-        - name: 2 - プロジェクト テンプレートを作成する
-          href: tutorials/cli-templates-create-project-template.md
-        - name: 3 - テンプレート パックを作成する
-          href: tutorials/cli-templates-create-template-pack.md
-    - name: CLI のツールを作成する
-      items:
-        - name: 1 - ツールを作成する
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-create.md
-        - name: 2 - グローバル ツールを使用する
-          displayName: 'tools, tutorials'
-          href: tools/global-tools-how-to-use.md
-        - name: 3 - ローカル ツールを使用する
-          href: tools/local-tools-how-to-use.md
-          displayName: 'tools, tutorials'
 - name: プロジェクト SDK
   items:
     - name: 概要
@@ -441,6 +477,8 @@
   href: distribution-packaging.md
 - name: COM への .NET Core コンポーネントの公開
   href: native-interop/expose-components-to-com.md
+- name: ネイティブ コードからの .NET Core のホスト
+  href: tutorials/netcore-hosting.md
 - name: パッケージ、メタパッケージ、フレームワーク
   href: packages.md
 - name: 継続的インテグレーション

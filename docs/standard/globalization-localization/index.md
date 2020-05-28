@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: eae1c38c2383d13bfb4dab83f2fe9551970b39f4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120882"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83842011"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET アプリケーションのグローバライズとローカライズ
 
@@ -50,6 +50,10 @@ ms.locfileid: "73120882"
 
 国際対応アプリケーションを作成するための最初の手順を説明します。カルチャや言語に依存しないアプリケーションの設計とコーディングを行います。
 
+[.NET グローバリゼーションと ICU](globalization-icu.md)
+
+.NET グローバリゼーションで [ICU (International Components for Unicode)](http://site.icu-project.org/home) がどのように使用されるかについて説明します。
+
 [ローカライズ化の確認](localizability-review.md)
 
 ローカライズされたアプリケーションを作成するための 2 つ目の手順を説明します。ローカライズのための潜在的な問題点を識別します。
@@ -66,7 +70,7 @@ ms.locfileid: "73120882"
 
 国際対応 ASP.NET アプリケーションのグローバリゼーション、ローカリゼーション、および開発の推奨手順について説明します。
 
-## <a name="reference"></a>リファレンス
+## <a name="reference"></a>関連項目
 
 - <xref:System.Globalization?displayProperty=nameWithType> 名前空間
 
