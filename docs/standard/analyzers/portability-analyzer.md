@@ -4,12 +4,12 @@ description: .NET Portability Analyzer ツールを使って、さまざまな .
 ms.date: 09/13/2019
 ms.technology: dotnet-standard
 ms.assetid: 0375250f-5704-4993-a6d5-e21c499cea1e
-ms.openlocfilehash: 8d019bef5fddac9f7c3d93e416cea061905c82ff
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 94dd6de8839b03bbdc33ae1ed03599853241d40b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728439"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209367"
 ---
 # <a name="the-net-portability-analyzer"></a>.NET Portability Analyzer
 
@@ -19,7 +19,7 @@ ms.locfileid: "82728439"
 
 ## <a name="common-targets"></a>一般的なターゲット
 
-- [.NET Core](../../core/index.yml): モジュール型の設計で、side-by-side を採用しており、クロスプラットフォームのシナリオを対象としています。 side-by-side 機能により、他のアプリに影響を与えることなく新しい .NET Core バージョンを導入することができます。 クロスプラットフォームをサポートする .NET Core にアプリを移植することが目的である場合は、これが推奨されるターゲットです。
+- [.NET Core](../../core/index.yml): モジュール型の設計で、side-by-side インストールをサポートしており、クロスプラットフォームのシナリオを対象としています。 side-by-side インストールにより、他のアプリに影響を与えることなく新しい .NET Core バージョンを導入することができます。 .NET Core にアプリを移植し、複数のプラットフォームをサポートすることが目的である場合は、これが推奨されるターゲットです。
 - [.NET Standard](../../standard/net-standard.md): .NET のすべての実装で使用できる .NET Standard API が含まれています。 .NET でサポートされるすべてのプラットフォームでライブラリを実行させることが目的である場合は、これが推奨されるターゲットです。
 - [ASP.NET Core](/aspnet/core): .NET Core 上に構築された最新の Web フレームワークです。 複数のプラットフォームをサポートするために .NET Core に Web アプリを移植することが目的である場合は、これが推奨されるターゲットです。
 - .NET Core と[プラットフォーム拡張機能](../../core/porting/windows-compat-pack.md): Windows 互換機能パックに加えて .NET Core API が含まれます。 .NET Framework で利用可能なテクノロジの多くが提供されます。 Windows で .NET Framework から .NET Core にアプリを移植する場合は、これが推奨されるターゲットです。

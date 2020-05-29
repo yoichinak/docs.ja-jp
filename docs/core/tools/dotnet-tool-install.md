@@ -2,12 +2,12 @@
 title: dotnet tool install コマンド
 description: dotnet tool install コマンドでは、お使いのコンピューター上に指定された .NET Core ツールをインストールします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 723d25caa6009288dbb55d55f173b04d7b983450
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 067f90124833da537370a36934ff212aba7577f3
+ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463360"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83702813"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -55,7 +55,7 @@ dotnet tool install -h|--help
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
 
-ローカル ツールは、現在のディレクトリ下にある *.config*ディレクトリ内の *tool-manifest.json* ファイルに追加されます。 マニフェスト ファイルがまだ存在しない場合は、次のコマンドを実行して作成します。
+ローカル ツールは、現在のディレクトリ下にある *.config* ディレクトリ内の *dotnet-tools.json* ファイルに追加されます。 マニフェスト ファイルがまだ存在しない場合は、次のコマンドを実行して作成します。
 
 ```dotnetcli
 dotnet new tool-manifest

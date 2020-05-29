@@ -1,19 +1,19 @@
 ---
 title: .NET for Apache Spark ジョブを Databricks に送信する
 description: spark-submit と Set Jar を使用して、.NET for Apache Spark ジョブを Databricks に送信する方法について説明します。
-ms.date: 12/05/2019
+ms.date: 05/11/2020
 ms.topic: conceptual
 ms.custom: mvc,how-to
-ms.openlocfilehash: 65976f9095ecef66e0538c398492033c612c1430
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a158110854f80921740954403a8fd51b30cbcb12
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187609"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379652"
 ---
 # <a name="submit-a-net-for-apache-spark-job-to-databricks"></a>.NET for Apache Spark ジョブを Databricks に送信する
 
-.NET for Apache Spark ジョブの Databricks へのデプロイには、`spark-submit` と Set Jar の 2 つの方法があります。
+.NET for Apache Spark ジョブを Databricks クラスター上で実行できますが、すぐに行うことはできません。 .NET for Apache Spark ジョブの Databricks へのデプロイには、`spark-submit` と Set Jar の 2 つの方法があります。
 
 ## <a name="deploy-using-spark-submit"></a>spark-submit を使用して展開する
 
@@ -80,7 +80,7 @@ ms.locfileid: "79187609"
 
 4. **[Databricks クラスター] > [ジョブ] > <ジョブ名> > [今すぐ実行]** を選択して、ジョブを実行します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 * [.NET for Apache Spark の概要](../tutorials/get-started.md)
 * [.NET for Apache Spark アプリケーションを Databricks にデプロイする](../tutorials/databricks-deployment.md)

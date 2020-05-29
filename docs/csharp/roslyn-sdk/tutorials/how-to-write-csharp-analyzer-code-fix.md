@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: d6c3ddff288bf114e1c257ae77ebf3a419913990
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 23ebf4befc75e08592890d85f2dda51251f59cd6
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895452"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396283"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
@@ -235,7 +235,7 @@ var newLocal = trimmedLocal
 
 [!code-csharp[Format the new declaration](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FormatLocal  "Format the new declaration")]
 
-このコード用に新しい名前空間が必要です。 次の `using` ステートメントをファイルの先頭に追加します。
+このコード用に新しい名前空間が必要です。 次の `using` ディレクティブをファイルの先頭に追加します。
 
 ```csharp
 using Microsoft.CodeAnalysis.Formatting;
@@ -497,7 +497,7 @@ var' キーワードを正しい型名に置き換えるには、コード修正
 
 [!code-csharp[Replace Var designations](~/samples/snippets/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceVar "Replace a var designation with the explicit type")]
 
-<xref:Microsoft.CodeAnalysis.Simplification.Simplifier> 型を使用するには、1 つの `using` ステートメントを追加する必要があります。
+<xref:Microsoft.CodeAnalysis.Simplification.Simplifier> 型を使用するには、1 つの `using` ディレクティブを追加する必要があります。
 
 ```csharp
 using Microsoft.CodeAnalysis.Simplification;

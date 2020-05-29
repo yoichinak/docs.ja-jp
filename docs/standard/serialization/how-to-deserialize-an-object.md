@@ -1,5 +1,6 @@
 ---
 title: XmlSerializer を使用してオブジェクトを逆シリアル化する方法
+description: オブジェクトを逆シリアル化する方法を説明します。 転送形式によって、ストリーム オブジェクトとファイル オブジェクトのどちらを作成するかが決まります。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: c24ba466a208fe5abdbf565169c41c4ee3f47482
-ms.sourcegitcommit: f8c36054eab877de4d40a705aacafa2552ce70e9
-ms.translationtype: MT
+ms.openlocfilehash: e08ae0d77539219223650fd3bcbd1bcee4df2739
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75559899"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379111"
 ---
 # <a name="how-to-deserialize-an-object-using-xmlserializer"></a>XmlSerializer を使用してオブジェクトを逆シリアル化する方法
 
@@ -23,7 +24,7 @@ ms.locfileid: "75559899"
 
 1. 逆シリアル化するオブジェクトの型を使用して、<xref:System.Xml.Serialization.XmlSerializer> を構築します。
 
-1. <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> メソッドを呼び出して、オブジェクトのレプリカを生成します。 逆シリアル化する場合は、次の例に示すように、返されたオブジェクトを元のの型にキャストする必要があります。この例では、ファイルからオブジェクトを逆シリアル化しています (ただし、ストリームから逆シリアル化することもできます)。
+1. <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> メソッドを呼び出して、オブジェクトのレプリカを生成します。 逆シリアル化を行う際には、次の例に示すように、返されたオブジェクトを元の型にキャストする必要があります。この例では、オブジェクトをファイルから逆シリアル化しています (ストリームから逆シリアル化することもできます)。
 
     ```vb
     ' Construct an instance of the XmlSerializer with the type
@@ -46,7 +47,7 @@ ms.locfileid: "75559899"
     var myObject = (MySerializableClass) mySerializer.Deserialize(myFileStream)
     ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML シリアル化の概要](introducing-xml-serialization.md)
-- [方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)
+- [方法: オブジェクトをシリアル化する](how-to-serialize-an-object.md)

@@ -2,12 +2,12 @@
 title: WCF 開発者向け ASP.NET Core gRPC - WCF 開発者向け gRPC
 description: WCF 開発者向け ASP.NET Core 3.0 で gRPC サービスを構築する方法の概要
 ms.date: 09/02/2019
-ms.openlocfilehash: 175dfbf1880a0937615543c248fba3bed0e25c23
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6e18ecfdb8fcbe20f71fd0a7c77076166451427a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988961"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144358"
 ---
 # <a name="aspnet-core-grpc-for-wcf-developers"></a>WCF 開発者向け ASP.NET Core gRPC
 
@@ -31,7 +31,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 
 ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。
 
-https://www.microsoft.com の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
+<https://www.microsoft.com> の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
 
 Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を得て使用しています。
 

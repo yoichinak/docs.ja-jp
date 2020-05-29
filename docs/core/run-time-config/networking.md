@@ -3,12 +3,12 @@ title: ネットワークの構成設定
 description: .NET Core アプリのネットワークを構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 8d02087ad7260cc78c096090bf3b06a716d34678
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 6b5e03b127f95911b712b66c0be8a4f5a2929fc2
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989104"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761942"
 ---
 # <a name="run-time-configuration-options-for-networking"></a>ネットワークのランタイム構成オプション
 
@@ -16,7 +16,7 @@ ms.locfileid: "80989104"
 
 - HTTP/2 プロトコルのサポートを有効にするかどうかを構成します。
 
-- 既定:無効 (`false`)。
+- この設定を省略した場合、HTTP/2 プロトコルのサポートは無効になります。 これは、値を `false` に設定した場合と同じです。
 
 - .NET Core 3.0 で導入されました。
 
@@ -32,7 +32,7 @@ ms.locfileid: "80989104"
   > [!NOTE]
   > <xref:System.Net.Http.HttpClientHandler> クラスを直接インスタンス化するのではなく、高レベルのネットワーク API を使用している可能性があります。 この設定は、<xref:System.Net.Http.HttpClient> や [HttpClientFactory](https://docs.microsoft.com/previous-versions/aspnet/hh995280(v%3dvs.118)) などの高レベル ネットワーク API で使用される HTTP プロトコル スタックにも影響します。
 
-- 既定:<xref:System.Net.Http.SocketsHttpHandler> を使用します (`true`)。
+- この設定を省略した場合、<xref:System.Net.Http.HttpClientHandler> では <xref:System.Net.Http.SocketsHttpHandler> が使用されます。 これは、値を `true` に設定した場合と同じです。
 
 - この設定は、<xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> メソッドを呼び出すことによりプログラムで構成できます。
 

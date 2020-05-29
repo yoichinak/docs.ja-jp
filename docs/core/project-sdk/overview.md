@@ -1,14 +1,15 @@
 ---
 title: .NET Core プロジェクト SDK の概要
+titleSuffix: ''
 description: .NET Core プロジェクト SDK について説明します。
 ms.date: 02/02/2020
 ms.topic: conceptual
-ms.openlocfilehash: d0ac01dca31dffea482745126e00c34b1da20774
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 88ec1bf2c4917c69b80b997d090219097694d2bc
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389670"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206057"
 ---
 # <a name="net-core-project-sdks"></a>.NET Core プロジェクト SDK
 
@@ -82,9 +83,9 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 
 ### <a name="default-compilation-includes"></a>コンパイルへの既定の組み込み
 
-コンパイル項目と埋め込みリソースの既定の組み込みと除外が、SDK で定義されています。 SDK 以外の .NET Framework プロジェクトとは異なり、既定値がほとんどの一般的なユース ケースに対応しているため、これらの項目をプロジェクト ファイルで指定する必要はありません。 その結果、プロジェクト ファイルが小さくなり、わかりやすく、編集が必要な場合に手動で編集しやすくなります。
+コンパイル項目、埋め込みリソース、および `None` 項目の既定の組み込みと除外が SDK で定義されています。 SDK 以外の .NET Framework プロジェクトとは異なり、既定値がほとんどの一般的なユース ケースに対応しているため、これらの項目をプロジェクト ファイルで指定する必要はありません。 これにより、プロジェクト ファイルのサイズがより小さく、より簡単に理解できるようになり、必要に応じて手作業で編集できます。
 
-次の表は、.NET Core SDK に含まれる、および除外される要素と [glob](https://en.wikipedia.org/wiki/Glob_(programming)) の一覧です。
+次の表は、.NET Core SDK に組み込まれる、および除外される要素と [glob](https://en.wikipedia.org/wiki/Glob_(programming)) の一覧を示します。
 
 | 要素           | 含まれる glob                              | 除外される glob                                                  | glob の削除              |
 |-------------------|-------------------------------------------|---------------------------------------------------------------|--------------------------|
@@ -95,39 +96,43 @@ MSBuild では、`dotnet msbuild -preprocess` コマンドを使用して、SDK 
 > [!NOTE]
 > `./bin` フォルダーと `./obj` フォルダーは、`$(BaseOutputPath)` と `$(BaseIntermediateOutputPath)` の MSBuild プロパティによって表され、既定で glob から除外されます。 除外は `$(DefaultItemExcludes)` プロパティによって表されます。
 
-これらの項目をプロジェクト ファイルに明示的に定義すると、次のエラーが発生する可能性があります。
+#### <a name="build-errors"></a>ビルド エラー
 
-**重複するコンパイル項目が含まれていました。.NET SDK には、既定でプロジェクト ディレクトリのコンパイル項目が含まれています。これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultCompileItems' プロパティを 'false' に設定することができます。**
+これらの項目をプロジェクト ファイルに明示的に定義すると、次のような "NETSDK1022" ビルド エラーが発生する可能性があります。
 
-このエラーを解決するには、前の表に示した暗黙の項目と一致する明示的な `Compile` 項目を削除するか、または `EnableDefaultCompileItems` プロパティを `false` に設定します。これにより、暗黙的な組み込みが無効になります。
+  > 重複する 'Compile' 項目が含まれていました。 .NET SDK には、既定でプロジェクト ディレクトリの 'Compile' 項目が含まれています。 これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultCompileItems' プロパティを 'false' に設定することができます。
 
-```xml
-<PropertyGroup>
-  <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-</PropertyGroup>
-```
+  > 重複する 'EmbeddedResource' 項目が含まれていました。 .NET SDK には、既定でプロジェクト ディレクトリの 'EmbeddedResource' 項目が含まれています。 これらの項目をプロジェクト ファイルから削除するか、プロジェクト ファイルに明示的に含める場合は 'EnableDefaultEmbeddedResourceItems' プロパティを 'false' に設定することができます。
 
-たとえばアプリで発行する一部のファイルを指定する場合は、そのために既知の MSBuild のしくみ (たとえば `Content` 要素) を使用することができます。
+このエラーを解決するには、次のいずれかの操作を行います。
 
-`EnableDefaultCompileItems` は `Compile` glob のみを無効にし、\*.cs 項目にも適用される暗黙的 `None` glob など、他の glob には影響しません。 そのため、Visual Studio のソリューション エクスプローラーには、\*.cs 項目がプロジェクトの一部として (`None` 項目として組み込まれて) 引き続き表示されます。 暗黙的な `None` glob を無効にするには、`EnableDefaultNoneItems` を `false` に設定します。
+- 前の表に列挙されている暗黙的な項目と一致する明示的な `Compile`、`EmbeddedResource`、または `None` の項目を削除します。
 
-```xml
-<PropertyGroup>
-  <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
-</PropertyGroup>
-```
+- 次のように `EnableDefaultItems` プロパティを `false` に設定して、暗黙的なファイルの組み込みをすべて無効にします。
 
-"*すべて*" の暗黙的な glob を無効にするには、`EnableDefaultItems` プロパティを `false` に設定します。
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultItems>false</EnableDefaultItems>
+  </PropertyGroup>
+  ```
 
-```xml
-<PropertyGroup>
-  <EnableDefaultItems>false</EnableDefaultItems>
-</PropertyGroup>
-```
+  アプリで発行する一部のファイルを指定する必要がある場合は、そのために既知の MSBuild のしくみ (たとえば `Content` 要素) を引き続き使用できます。
+
+- `EnableDefaultCompileItems`、`EnableDefaultEmbeddedResourceItems`、または `EnableDefaultNoneItems` プロパティを `false` に設定することによって、`Compile`、`EmbeddedResource`、または `None` glob のみを選択的に無効にします。
+
+  ```xml
+  <PropertyGroup>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultNoneItems>false</EnableDefaultNoneItems>
+  </PropertyGroup>
+  ```
+
+  `Compile` glob のみを無効にすると、Visual Studio のソリューション エクスプローラーに \*.cs 項目がプロジェクトの一部として (`None` 項目として組み込まれて) 引き続き表示されます。 暗黙的な `None` glob を無効にするには、`EnableDefaultNoneItems` も `false` に設定します。
 
 ## <a name="customize-the-build"></a>ビルドのカスタマイズ
 
-[ビルドをカスタマイズする](/visualstudio/msbuild/customize-your-build)には、さまざまな方法があります。 プロパティを引数として [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) または [dotnet](../tools/index.md) コマンドに渡すことによって、プロパティをオーバーライドすることができます。 また、プロパティをプロジェクト ファイルに追加することや、*Directory.Build.props* ファイルに追加することができます。 .NET Core プロジェクトの便利なプロパティの一覧については、「[.NET Core SDK プロジェクトの MSBuild プロパティ](msbuild-props.md)」を参照してください。
+[ビルドをカスタマイズする](/visualstudio/msbuild/customize-your-build)には、さまざまな方法があります。 プロパティを引数として [msbuild](/visualstudio/msbuild/msbuild-command-line-reference) または [dotnet](../tools/index.md) コマンドに渡すことによって、プロパティをオーバーライドすることができます。 また、プロパティをプロジェクト ファイルに追加することや、*Directory.Build.props* ファイルに追加することができます。 .NET Core プロジェクトの便利なプロパティの一覧については、「[.NET Core SDK プロジェクトの MSBuild リファレンス](msbuild-props.md)」を参照してください。
 
 ### <a name="custom-targets"></a>カスタム ターゲット
 

@@ -1,5 +1,6 @@
 ---
 title: アセンブリのセキュリティに関する考慮事項
+description: .NET アセンブリを作成するときに、アセンブリの実行に必要となるアクセス許可を指定できます。 この記事では、厳密な名前付きアセンブリと署名ツールについて説明します。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], security
@@ -15,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 77c9f9131b556e0b8fa639cd723bf1ca8cd6602e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73972309"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378658"
 ---
 # <a name="assembly-security-considerations"></a>アセンブリのセキュリティに関する考慮事項
 アセンブリを作成する場合は、アセンブリの実行に必要となるアクセス許可セットを指定できます。 アセンブリに対して特定のアクセス許可を付与するかどうかは、証拠に基づいて決定されます。  
@@ -60,7 +61,7 @@ ms.locfileid: "73972309"
   
  厳密な名前と [SignTool.exe (署名ツール)](../../framework/tools/signtool-exe.md) を使用する署名によって整合性が保証されるため、これら 2 種類のアセンブリ証拠に基づいてコード アクセス セキュリティ ポリシーを設定できます。 厳密な名前と [SignTool.exe (署名ツール)](../../framework/tools/signtool-exe.md) を使用する署名では、デジタル署名と証明書によって整合性が保証されます。 以上で述べた技術 (ハッシュ検査、厳密な名前、[SignTool.exe (署名ツール)](../../framework/tools/signtool-exe.md) を使用する署名) をすべて組み合わせて使用することで、アセンブリがどのような方法によっても変更されていないことが保証されます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [厳密な名前付きアセンブリ](strong-named.md)
 - [.NET のアセンブリ](index.md)

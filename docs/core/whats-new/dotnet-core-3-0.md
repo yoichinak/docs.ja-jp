@@ -6,12 +6,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 01/27/2020
-ms.openlocfilehash: be5c26c81480dc2854b849dd7f2b1c46ee3e526a
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 422cb7b20e2644ab44f9573f101fb6b53ab1dd2f
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80989169"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378821"
 ---
 # <a name="whats-new-in-net-core-30"></a>.NET Core 3.0 の新機能
 
@@ -233,6 +233,8 @@ ReadyToRun としてプロジェクトをコンパイルするには、次の手
 ロールフォワードしません。 指定されたバージョンにのみバインドします。 このポリシーは、最新のパッチにロールフォワードする機能が無効になるため、一般的な使用にはお勧めできません。 この値はテスト用にのみ推奨されます。
 
 **Disable** の設定を除くすべての設定では、利用できる最新のパッチ バージョンが使用されます。
+
+既定では、(アプリケーションの `.runtimeconfig.json` で指定されているように) 要求されたバージョンがリリース バージョンである場合、リリース バージョンだけがロールフォワード対象と見なされます。 プレリリース バージョンはすべて無視されます。 一致するリリース バージョンがない場合は、プレリリース バージョンが考慮されます。 この動作は `DOTNET_ROLL_FORWARD_TO_PRERELEASE=1` を設定することによって変更できます。この場合、すべてのバージョンが常に考慮されます。
 
 ### <a name="build-copies-dependencies"></a>ビルドによる依存関係のコピー
 

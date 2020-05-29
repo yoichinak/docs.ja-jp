@@ -5,25 +5,25 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 089d5d7c7a95e2de4629f53255d9d9790fd5508a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7bcc7e68810c97142cebca7595266a0e4a69ed51
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705393"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207937"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードによるバージョン管理 (C# プログラミング ガイド)
 C# 言語は、異なるライブラリ内の[基底](../../language-reference/keywords/base.md)クラスと派生クラス間でのバージョン管理を進化させると同時に、下位互換性も維持されるよう設計されています。 そのため、たとえば、派生クラスのメンバーと同じ名前を使用して基底[クラス](../../language-reference/keywords/class.md)の新規メンバーが導入されても、C# では完全にサポートされ、予期しない動作は発生しません。 ただしこのことは、メソッドが派生メソッドをオーバーライドするためのものなのか、それとも同じ名前の派生メソッドを非表示にする新規メソッドなのかを、クラスで明示的に記述しなければならないということでもあります。  
   
  C# では、派生クラスに基底クラスと同じ名前のメソッドを含めることができます。  
-  
-- 基底クラスのメソッドは、[virtual](../../language-reference/keywords/virtual.md) で定義する必要があります。  
-  
+
 - 派生クラスのメソッドの前に [new](../../language-reference/keywords/new-modifier.md) または [override](../../language-reference/keywords/override.md) キーワードがない場合、コンパイラは警告を発し、メソッドは `new` キーワードが存在する場合と同様に動作します。  
   
 - 派生クラスのメソッドの前に `new` キーワードがある場合、そのメソッドは基底クラスのメソッドに依存しないメソッドとして定義されます。  
   
 - 派生クラスのメソッドの前に `override` キーワードがある場合、派生クラスのオブジェクトは、基底クラスのメソッドの代わりにそのメソッドを呼び出します。  
+
+- 派生クラスのメソッドに `override` キーワードを適用するには、基底クラスのメソッドを[仮想](../../language-reference/keywords/virtual.md)に定義する必要があります。
   
 - 基底クラスのメソッドは、`base` キーワードを使用して派生クラス内から呼び出すことができます。  
   
@@ -61,7 +61,7 @@ C# 言語は、異なるライブラリ内の[基底](../../language-reference/k
   
  [!code-csharp[csProgGuideInheritance#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#31)]  
   
- `new` キーワードを使用すると、その定義によって基底クラス内の定義が非表示にされることがコンパイラに伝えられます。 これは既定の動作です。  
+ `new` キーワードを使用すると、その定義によって基底クラス内の定義が非表示にされることがコンパイラに伝えられます。 これが既定の動作です。  
   
 ## <a name="override-and-method-selection"></a>オーバーライドとメソッド選択  
  クラスでメソッドを指定したときに、その呼び出しと互換性のあるメソッドが 2 つ以上ある場合、C# コンパイラはどのメソッドを呼び出すのが最適かを選択します (たとえば、同じ名前のメソッドが 2 つあり、そのパラメーターと、渡されたパラメーターとの間に互換性がある場合)。 たとえば、次の各メソッドには互換性があります。  
@@ -78,9 +78,9 @@ C# 言語は、異なるライブラリ内の[基底](../../language-reference/k
   
  `new` と `override` の例について詳しくは、「[Override キーワードと New キーワードを使用する場合について](./knowing-when-to-use-override-and-new-keywords.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [クラスと構造体](./index.md)
 - [メソッド](./methods.md)
 - [継承](./inheritance.md)

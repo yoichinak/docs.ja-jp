@@ -1,5 +1,6 @@
 ---
 title: 相互運用固有の属性の適用
+description: この記事では、System.Runtime.InteropServices 名前空間の COM 相互運用属性の概要を示します。これには、デザイン時および変換ツールの属性が含まれます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - design-time attributes
@@ -13,12 +14,12 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: ca104c512641774217de5e270dc50b7393fc5725
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159248"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420540"
 ---
 # <a name="applying-interop-attributes"></a>相互運用固有の属性の適用
 <xref:System.Runtime.InteropServices> 名前空間では、デザイン時にユーザーが適用する属性、変換処理中に COM 相互運用ツールおよび API によって適用される属性、ユーザーまたは COM 相互運用機能によって適用される属性という 3 つのカテゴリの相互運用固有の属性が提供されます。  

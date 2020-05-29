@@ -3,12 +3,12 @@ title: ガベージ コレクター構成の設定
 description: ガベージ コレクターでの .NET Core アプリ用のメモリの管理方法を構成するための、実行時設定について学習します。
 ms.date: 01/09/2020
 ms.topic: reference
-ms.openlocfilehash: ec575bdd17c8a7c290673b7085074bbba94cedef
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: d7e3d040cd634eeb020beff806c60f834cc02585
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102867"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761981"
 ---
 # <a name="run-time-configuration-options-for-garbage-collection"></a>ガベージ コレクションの実行時構成オプション
 
@@ -33,7 +33,7 @@ ms.locfileid: "82102867"
 ### <a name="systemgcservercomplus_gcserver"></a>System.GC.Server/COMPlus_gcServer
 
 - アプリケーションで、ワークステーション ガベージ コレクションとサーバー ガベージ コレクションのどちらを使用するかを構成します。
-- 既定:ワークステーション ガベージ コレクション (`false`)。
+- 既定:ワークステーション ガベージ コレクション。 これは、値を `false` に設定した場合と同じです。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
@@ -71,7 +71,7 @@ ms.locfileid: "82102867"
 ### <a name="systemgcconcurrentcomplus_gcconcurrent"></a>System.GC.Concurrent/COMPlus_gcConcurrent
 
 - バックグラウンド (同時実行) ガベージ コレクションを有効にするかどうかを構成します。
-- 既定:有効 (`true`)。
+- 既定:バックグラウンド GC を使用します。 これは、値を `true` に設定した場合と同じです。
 - 詳しくは、「[バックグラウンド ガベージ コレクション](../../standard/garbage-collection/background-gc.md)」をご覧ください。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
@@ -200,7 +200,7 @@ ms.locfileid: "82102867"
   64 ビットの Windows コンピューターに複数の CPU グループがある (つまり、64 を超えるプロセッサがある) 場合、この要素を有効にすると、すべての CPU グループ全体にガベージ コレクションが拡張されます。 ガベージ コレクターではすべてのコアを使用し、ヒープを作成して分散させます。
 
 - 64 ビット Windows オペレーティング システムのみのサーバー ガベージ コレクションに適用されます。
-- 既定:無効 (`0`)。
+- 既定:GC は複数の CPU グループに拡張されません。 これは、値を `0` に設定した場合と同じです。
 - 詳細については、Maoni Stephens のブログの「[CPU が 64 を超えるコンピューター上での GC のための CPU 構成の向上](https://devblogs.microsoft.com/dotnet/making-cpu-configuration-better-for-gc-on-machines-with-64-cpus/)」を参照してください。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
@@ -216,7 +216,7 @@ ms.locfileid: "82102867"
 
 - ガベージ コレクション スレッドをプロセッサに "*関係付ける*" かどうかを指定します。 GC スレッドを関係付けることは、その特定の CPU でのみ実行できることを意味します。 各 GC スレッドに対してヒープが作成されます。
 - サーバー ガベージ コレクションにのみ適用されます。
-- 既定:ガベージ コレクション スレッドをプロセッサに関係付けます (`false`)。
+- 既定:ガベージ コレクション スレッドをプロセッサに関係付けます。 これは、値を `false` に設定した場合と同じです。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
@@ -299,7 +299,7 @@ ms.locfileid: "82102867"
 ### <a name="systemgcretainvmcomplus_gcretainvm"></a>System.GC.RetainVM/COMPlus_GCRetainVM
 
 - 削除する必要があるセグメントを、後で使用するためにスタンバイ リストに配置するか、解放してオペレーティング システム (OS) に戻すかを構成します。
-- 既定:セグメントを解放してオペレーティング システムに戻します (`false`)。
+- 既定:セグメントを解放してオペレーティング システムに戻します。 これは、値を `false` に設定した場合と同じです。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
 | - | - | - | - |
@@ -338,7 +338,7 @@ ms.locfileid: "82102867"
 ### <a name="complus_gclargepages"></a>COMPlus_GCLargePages
 
 - ヒープのハード制限が設定されている場合に、大きいページを使用する必要があるかどうかを指定します。
-- 既定:無効 (`0`)。
+- 既定:ヒープのハード制限が設定されている場合は、大きいページを使用しません。 これは、値を `0` に設定した場合と同じです。
 - これは試験段階の設定です。
 
 | | 設定の名前 | 値 | 導入されたバージョン |
@@ -351,7 +351,7 @@ ms.locfileid: "82102867"
 ### <a name="complus_gcallowverylargeobjects"></a>COMPlus_gcAllowVeryLargeObjects
 
 - 合計サイズが 2 ギガバイト (GB) を超える配列に対して、64 ビット プラットフォームでのガベージ コレクター サポートを構成します。
-- 既定:有効 (`1`)。
+- 既定:GC では、2 GB を超える配列がサポートされます。 これは、値を `1` に設定した場合と同じです。
 - このオプションは、将来のバージョンの .NET で廃止される可能性があります。
 
 | | 設定の名前 | 値 | 導入されたバージョン |

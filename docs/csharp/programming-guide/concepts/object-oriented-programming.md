@@ -1,13 +1,13 @@
 ---
 title: オブジェクト指向プログラミング (C#)
-ms.date: 02/08/2020
+ms.date: 05/13/2020
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 2b6be3384f76fa210c2b52c55ecf9bd865df43a6
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: 541d1a2581a3241f35fc8478040c007b6581e3b2
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82200094"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396687"
 ---
 # <a name="object-oriented-programming-c"></a>オブジェクト指向プログラミング (C#)
 
@@ -92,7 +92,6 @@ class SampleClass
 詳細については次を参照してください:
 
 - [get](../../language-reference/keywords/get.md)
-
 - [set](../../language-reference/keywords/set.md)
 
 #### <a name="methods"></a>メソッド
@@ -104,7 +103,7 @@ class SampleClass
 ```csharp
 class SampleClass
 {
-    public int sampleMethod(string sampleParam)
+    public int SampleMethod(string sampleParam)
     {
         // Insert code here
     }
@@ -116,8 +115,8 @@ class SampleClass
 メソッドをオーバーロードするコード例を次に示します。
 
 ```csharp
-public int sampleMethod(string sampleParam) {}
-public int sampleMethod(int sampleParam) {}
+public int SampleMethod(string sampleParam) { }
+public int SampleMethod(int sampleParam) { }
 ```
 
 ほとんどの場合、メソッドはクラス定義内で宣言します。 ただし、C# では、既存のクラスの実際の定義の外部にメソッドを追加できる "*拡張メソッド*" がサポートされています。
@@ -156,9 +155,7 @@ public class SampleClass
 クラスやオブジェクトは、何か重要なことが起こった場合に、イベントを使用して他のクラスまたはオブジェクトに通知を送ります。 イベントを送信する (発生させる) クラスは "*パブリッシャー*" と呼ばれ、イベントを受信する (処理する) クラスは "*サブスクライバー*" と呼ばれます。 イベント、およびイベントの発生と処理の詳細については、「[イベント](../../../standard/events/index.md)」をご覧ください。
 
 - クラスでイベントを宣言するには、[event](../../language-reference/keywords/event.md) キーワードを使います。
-
 - イベントを発生させるには、イベント デリゲートを呼び出します。
-
 - イベントをサブスクライブするには、`+=` 演算子を使用します。イベント サブスクリプションを解除するには、`-=` 演算子を使用します。
 
 #### <a name="nested-classes"></a>入れ子になったクラス
@@ -187,14 +184,14 @@ Container.Nested nestedInstance = new Container.Nested()
 
 次のアクセス修飾子を使用できます。
 
-|C# の修飾子|定義|
-|------------------|----------------|
-|[public](../../language-reference/keywords/public.md)|この型またはメンバーには、同じアセンブリ内の他のコードや、そのアセンブリを参照する別のアセンブリ内の任意のコードからアクセスできます。|
-|[private](../../language-reference/keywords/private.md)|この型またはメンバーには、同じクラスのコードのみがアクセスできます。|
-|[protected](../../language-reference/keywords/protected.md)|この型またはメンバーには、同じクラスまたは派生クラスのコードのみがアクセスできます。|
-|[internal](../../language-reference/keywords/internal.md)|この型またはメンバーには、同じアセンブリ内の任意のコードからアクセスできますが、別のアセンブリからはアクセスできません。|
-|[protected internal](../../language-reference/keywords/protected-internal.md)|この型またはメンバーには、同じアセンブリ内の任意のコード、または別のアセンブリ内の任意の派生クラスからアクセスできます。|
-|[private protected](../../language-reference/keywords/private-protected.md)|この型またはメンバーには、基底クラス アセンブリ内の同じクラスまたは派生クラスのコードがアクセスできます。|
+| C# の修飾子 | 定義 |
+|--|--|
+| [public](../../language-reference/keywords/public.md) | この型またはメンバーには、同じアセンブリ内の他のコードや、そのアセンブリを参照する別のアセンブリ内の任意のコードからアクセスできます。 |
+| [private](../../language-reference/keywords/private.md) | この型またはメンバーには、同じクラスのコードのみがアクセスできます。 |
+| [protected](../../language-reference/keywords/protected.md) | この型またはメンバーには、同じクラスまたは派生クラスのコードのみがアクセスできます。 |
+| [internal](../../language-reference/keywords/internal.md) | この型またはメンバーには、同じアセンブリ内の任意のコードからアクセスできますが、別のアセンブリからはアクセスできません。 |
+| [protected internal](../../language-reference/keywords/protected-internal.md) | この型またはメンバーには、同じアセンブリ内の任意のコード、または別のアセンブリ内の任意の派生クラスからアクセスできます。 |
+| [private protected](../../language-reference/keywords/private-protected.md) | この型またはメンバーには、基底クラス アセンブリ内の同じクラスまたは派生クラスのコードがアクセスできます。 |
 
 詳細については、「[アクセス修飾子](../classes-and-structs/access-modifiers.md)」を参照してください。
 
@@ -212,15 +209,18 @@ SampleClass sampleObject = new SampleClass();
 // Set a property value.
 sampleObject.sampleProperty = "Sample String";
 // Call a method.
-sampleObject.sampleMethod();
+sampleObject.SampleMethod();
 ```
 
 クラスのインスタンス化のプロセスでプロパティに値を割り当てるには、オブジェクト初期化子を使用します。
 
 ```csharp
 // Set a property value.
-SampleClass sampleObject = new SampleClass
-    { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new SampleClass
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 詳細については次を参照してください:
@@ -259,8 +259,11 @@ C# の静的クラスには静的メンバーだけがあり、インスタン�
 
 ```csharp
 // sampleObject is an instance of a simple anonymous type.
-var sampleObject =
-    new { FirstProperty = "A", SecondProperty = "B" };
+var sampleObject = new
+{
+    FirstProperty = "A",
+    SecondProperty = "B"
+};
 ```
 
 詳細については次を参照してください:[匿名型](../classes-and-structs/anonymous-types.md)。
@@ -275,7 +278,7 @@ var sampleObject =
 基底クラスを継承するコード例を次に示します。
 
 ```csharp
-class DerivedClass:BaseClass {}
+class DerivedClass:BaseClass { }
 ```
 
 既定では、すべてのクラスが継承可能になります。 ただし、クラスを基底クラスとして使用できないように指定したり、基底クラスとしてのみ使用できるクラスを作成したりできます。
@@ -295,7 +298,6 @@ public abstract class B { }
 詳細については次を参照してください:
 
 - [sealed](../../language-reference/keywords/sealed.md)
-
 - [abstract](../../language-reference/keywords/abstract.md)
 
 ### <a name="overriding-members"></a>メンバーのオーバーライド
@@ -304,12 +306,12 @@ public abstract class B { }
 
 プロパティやメソッドのオーバーライド方法を制御するには、次の修飾子を使用します。
 
-|C# の修飾子|定義|
-|------------------|----------------|
-|[virtual](../../language-reference/keywords/virtual.md)|派生クラスでのクラス メンバーのオーバーライドを許可します。|
-|[override](../../language-reference/keywords/override.md)|基底クラスで定義されている仮想メンバー (オーバーライドできるメンバー) をオーバーライドします。|
-|[abstract](../../language-reference/keywords/abstract.md)|派生クラスでのクラス メンバーのオーバーライドを必須にします。|
-|[new 修飾子](../../language-reference/keywords/new-modifier.md)|基底クラスから継承されたメンバーを隠ぺいします。|
+| C# の修飾子 | 定義 |
+|--|--|
+| [virtual](../../language-reference/keywords/virtual.md) | 派生クラスでのクラス メンバーのオーバーライドを許可します。 |
+| [override](../../language-reference/keywords/override.md) | 基底クラスで定義されている仮想メンバー (オーバーライドできるメンバー) をオーバーライドします。 |
+| [abstract](../../language-reference/keywords/abstract.md) | 派生クラスでのクラス メンバーのオーバーライドを必須にします。 |
+| [new 修飾子](../../language-reference/keywords/new-modifier.md) | 基底クラスから継承されたメンバーを隠ぺいします。 |
 
 ## <a name="interfaces"></a>インターフェイス
 
@@ -320,7 +322,7 @@ public abstract class B { }
 ```csharp
 interface ISampleInterface
 {
-    void doSomething();
+    void DoSomething();
 }
 ```
 
@@ -329,7 +331,7 @@ interface ISampleInterface
 ```csharp
 class SampleClass : ISampleInterface
 {
-    void ISampleInterface.doSomething()
+    void ISampleInterface.DoSomething()
     {
         // Method implementation.
     }
@@ -354,15 +356,14 @@ public class SampleGeneric<T>
 ジェネリック クラスのインスタンスを作成するコード例を次に示します。
 
 ```csharp
-SampleGeneric<string> sampleObject = new SampleGeneric<string>();
+var sampleObject = new SampleGeneric<string>();
 sampleObject.Field = "Sample string";
 ```
 
 詳細については次を参照してください:
 
-- [ジェネリック](../../../standard/generics/index.md)
-
-- [ジェネリック](../generics/index.md)
+- [.NET のジェネリック](../../../standard/generics/index.md)
+- [ジェネリック - C# プログラミング ガイド](../generics/index.md)
 
 ## <a name="delegates"></a>デリゲート
 
@@ -383,10 +384,11 @@ public delegate void SampleDelegate(string str);
 class SampleClass
 {
     // Method that matches the SampleDelegate signature.
-    public static void sampleMethod(string message)
+    public static void SampleMethod(string message)
     {
         // Add code here.
     }
+
     // Method that instantiates the delegate.
     void SampleDelegate()
     {

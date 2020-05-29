@@ -1,5 +1,6 @@
 ---
 title: アセンブリを作成する
+description: Visual Studio などの IDE や、Windows SDK によって提供されるコンパイラやツールを使って、単一ファイルまたはマルチファイルのアセンブリを作成する方法について説明します。
 ms.date: 08/19/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], multifile
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework], creating
 - multifile assemblies
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
-ms.openlocfilehash: 81fffb2b2e1d56d6068bf6f663a13fad6968a383
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3e17d6a066d937a161135b8b03c3f9258f3586b0
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73740506"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378518"
 ---
 # <a name="create-assemblies"></a>アセンブリを作成する
 

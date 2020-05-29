@@ -1,5 +1,6 @@
 ---
 title: COM 相互運用のための .NET 型の要件
+description: この記事では、COM 相互運用のために .NET アセンブリの型を COM アプリケーションに公開する際に役立つガイドラインを示します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - exposing .NET Framework components to COM
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - interoperation with unmanaged code, exposing .NET Framework components
 - COM interop, exposing COM components
 ms.assetid: 4b8afb52-fb8d-4e65-b47c-fd82956a3cdd
-ms.openlocfilehash: f0b9bc03225ae3d2365a21fd3b78d09c08d4fc1a
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5b122befffbcad39258393462c75ac20431d9136
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73091581"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420501"
 ---
 # <a name="qualifying-net-types-for-com-interoperation"></a>COM 相互運用のための .NET 型の要件
 COM アプリケーションにアセンブリ内の型を公開する場合は、設計時に COM 相互運用の要件を検討する必要があります。 以下のガイドラインに従うと、マネージド型 (クラス、インターフェイス、構造体、列挙型) は COM の型とシームレスに統合します。  

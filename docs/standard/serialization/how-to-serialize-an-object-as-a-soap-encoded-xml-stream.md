@@ -1,5 +1,6 @@
 ---
 title: '方法: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する'
+description: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する方法について説明します。 XmlSerializer クラスは、クラスをシリアル化し、エンコード済みの SOAP メッセージを生成するために使用できます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - XML serialization, SOAP
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
-ms.openlocfilehash: bfbdda0861a6f2867a2e7003dd7054129fd343b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: 09f1431d05248ef3ac3fdcf24bca35ff5cc2e22b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018022"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378396"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>方法: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する
   
@@ -75,6 +76,6 @@ XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);
 - [XML シリアル化および SOAP シリアル化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - [エンコード済み SOAP シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
 - [XML Web サービスを使用した XML シリアル化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [方法: オブジェクトをシリアル化します。](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [方法: オブジェクトを逆シリアル化します。](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [方法: SOAP エンコード済み XML シリアル化をオーバーライドします。](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+- [方法: オブジェクトをシリアル化する](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [方法: オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [方法: SOAP エンコード済み XML シリアル化をオーバーライドする](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)

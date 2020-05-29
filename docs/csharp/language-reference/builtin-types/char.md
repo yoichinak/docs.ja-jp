@@ -1,18 +1,18 @@
 ---
 title: char 型 - C# リファレンス
-ms.date: 11/22/2019
+ms.date: 05/11/2020
 f1_keywords:
 - char
 - char_CSharpKeyword
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: a07cae6e607bb6cda965240c669c655207632298
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: f771626e9777deab30e798559d847615d6124e6d
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739067"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205780"
 ---
 # <a name="char-c-reference"></a>char (C# リファレンス)
 
@@ -23,6 +23,8 @@ ms.locfileid: "81739067"
 |`char`|U+0000 ～ U+FFFF|16 ビット|<xref:System.Char?displayProperty=nameWithType>|
 
 `char` 型の既定値は `\0` (つまり U+0000) です。
+
+`char` 型では、[比較](../operators/comparison-operators.md)演算子、[等値](../operators/equality-operators.md)演算子、[インクリメント](../operators/arithmetic-operators.md#increment-operator-)演算子、および[デクリメント](../operators/arithmetic-operators.md#decrement-operator---)演算子がサポートされています。 さらに、`char` オペランドの場合、[算術](../operators/arithmetic-operators.md)演算子および[ビット論理](../operators/bitwise-and-shift-operators.md)演算子によって、対応する文字コードに対する演算が実行され、`int` 型の結果が生成されます。
 
 [string](reference-types.md#the-string-type) 型では、`char` 値のシーケンスとしてテキストを表わします。
 

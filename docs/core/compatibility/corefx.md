@@ -2,12 +2,12 @@
 title: 基本クラス ライブラリの破壊的変更
 description: Core .NET ライブラリにおける破壊的変更の一覧を示します。
 ms.date: 09/20/2019
-ms.openlocfilehash: a2eb4be89d78f50d201272f3449374bc27d8c785
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: ca50123b842c256607d47010dbef9b216ece4661
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859929"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420431"
 ---
 # <a name="core-net-libraries-breaking-changes"></a>Core .NET ライブラリの破壊的変更
 
@@ -38,6 +38,7 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 | [FileSystemInfo.Attributes によってスローされる UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes) | 1 |
 | [プロセス破損状態例外の処理がサポートされない](#handling-corrupted-state-exceptions-is-not-supported) | 1 |
 | [UriBuilder のプロパティでは今後、先頭に文字が付加されない](#uribuilder-properties-no-longer-prepend-leading-characters) | 1 |
+| [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start) | 1 |
 
 ## <a name="net-50"></a>.NET 5.0
 
@@ -128,5 +129,9 @@ Core .NET ライブラリでは、.NET Core で使用されるプリミティブ
 ***
 
 [!INCLUDE [uribuilder-behavior-changes](../../../includes/core-changes/corefx/1.0/uribuilder-behavior-changes.md)]
+
+***
+
+[!INCLUDE [startinfo-throws-exception](../../../includes/core-changes/corefx/1.0/startinfo-throws-exception.md)]
 
 ***

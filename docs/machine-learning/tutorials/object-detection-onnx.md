@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d9677c6c9da542123146fc9eef9c311ef30c174e
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 2bf44ec1657307161c13f88f7d1628b2c930fd05
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81608011"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83805523"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
@@ -34,7 +34,7 @@ ML.NET の事前トレーニング済みの ONNX モデルを使用して画像�
 - [Microsoft.ML NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ML/)
 - [Microsoft.ML.ImageAnalytics NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ML.ImageAnalytics/)
 - [Microsoft.ML.OnnxTransformer NuGet パッケージ](https://www.nuget.org/packages/Microsoft.ML.OnnxTransformer/)
-- [Tiny YOLOv2 事前トレーニング済みモデル](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2)
+- [Tiny YOLOv2 事前トレーニング済みモデル](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny-yolov2)
 - [Netron](https://github.com/lutzroeder/netron) (省略可能)
 
 ## <a name="onnx-object-detection-sample-overview"></a>ONNX オブジェクト検出サンプルの概要
@@ -64,7 +64,7 @@ ML.NET の事前トレーニング済みの ONNX モデルを使用して画像�
 
 ### <a name="understand-the-model"></a>モデルの概要
 
-オブジェクト検出は、画像処理タスクです。 そのため、この問題を解決するためにトレーニングされるほとんどのディープ ラーニング モデルは、CNN です。 このチュートリアルで使用するモデルは、次のドキュメントで説明されている YOLOv2 モデルのコンパクトなバージョンである Tiny YOLOv2 モデルです。[「YOLO9000:Better, Faster, Stronger」 (YOLO9000: より良く、より速く、より強く) (Redmon、Fadhari 著)](https://arxiv.org/pdf/1612.08242.pdf)。 Tiny YOLOv2 は Pascal VOC データセットでトレーニングされ、20 種類のクラスのオブジェクトを予測できる 15 個のレイヤーで構成されています。 Tiny YOLOv2 は元の YOLOv2 モデルを凝縮したバージョンなので、速度と精度のトレードオフが生じます。 Netron などのツールを使用して、モデルを構成するさまざまなレイヤーを視覚化できます。 モデルを検査すると、ニューラル ネットワークを構成するすべてのレイヤー間の接続のマッピングが生成されます。各レイヤーには、レイヤーの名前と共にそれぞれの入力/出力の寸法が含まれます。 モデルの入力と出力を記述するために使用されるデータ構造は、テンソルと呼ばれます。 テンソルは、データを N 次元に格納するコンテナーと考えることができます。 Tiny YOLOv2 の場合、入力レイヤーの名前は `image` であり、`3 x 416 x 416` の寸法のテンソルが想定されています。 出力レイヤーの名前は `grid` であり、`125 x 13 x 13` の寸法の出力テンソルが生成されます。
+オブジェクト検出は、画像処理タスクです。 そのため、この問題を解決するためにトレーニングされるほとんどのディープ ラーニング モデルは、CNN です。 このチュートリアルで使用するモデルは、次のドキュメントで説明されている YOLOv2 モデルのコンパクトなバージョンである Tiny YOLOv2 モデルです。[「YOLO9000:より良く、より速く、より強く」 (Redmon、Farhadi 著)](https://arxiv.org/pdf/1612.08242.pdf)。 Tiny YOLOv2 は Pascal VOC データセットでトレーニングされ、20 種類のクラスのオブジェクトを予測できる 15 個のレイヤーで構成されています。 Tiny YOLOv2 は元の YOLOv2 モデルを凝縮したバージョンなので、速度と精度のトレードオフが生じます。 Netron などのツールを使用して、モデルを構成するさまざまなレイヤーを視覚化できます。 モデルを検査すると、ニューラル ネットワークを構成するすべてのレイヤー間の接続のマッピングが生成されます。各レイヤーには、レイヤーの名前と共にそれぞれの入力/出力の寸法が含まれます。 モデルの入力と出力を記述するために使用されるデータ構造は、テンソルと呼ばれます。 テンソルは、データを N 次元に格納するコンテナーと考えることができます。 Tiny YOLOv2 の場合、入力レイヤーの名前は `image` であり、`3 x 416 x 416` の寸法のテンソルが想定されています。 出力レイヤーの名前は `grid` であり、`125 x 13 x 13` の寸法の出力テンソルが生成されます。
 
 ![非表示レイヤーに分割される入力レイヤー、次に出力レイヤー](./media/object-detection-onnx/netron-model-map-layers.png)
 

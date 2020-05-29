@@ -2,13 +2,13 @@
 title: dotnet new のカスタム テンプレート
 description: あらゆる種類の .NET プロジェクトまたはファイルのカスタム テンプレートについて説明します。
 author: thraka
-ms.date: 06/14/2019
-ms.openlocfilehash: 8e1ac4ca21a8a90ad0f7c9bd3dd11281eb4a6e02
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 05/20/2020
+ms.openlocfilehash: 19855c99b240b66dfa819e70d4a1bee5c8ed14ed
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73420876"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761916"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
@@ -16,7 +16,10 @@ ms.locfileid: "73420876"
 
 NuGet の *.nupkg* ファイルを直接参照するか、テンプレートが含まれるファイル システム ディレクトリを指定することで、任意の NuGet フィード上の NuGet パッケージからカスタム テンプレートをインストールできます。 テンプレート エンジンの機能を利用すると、テンプレートを使うときに、値を置き換えたり、ファイルを含めたり除外したり、独自の処理操作を実行したりできます。
 
-テンプレート エンジンはオープン ソースです。オンライン コード リポジトリは GitHub の [dotnet/templating](https://github.com/dotnet/templating/) にあります。 テンプレートのサンプルが必要であれば、[dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) リポジトリをご覧ください。 GitHub の「[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)」 (dotnet new で利用できるテンプレート) には、サードパーティのテンプレートなど、テンプレートが他にもあります。 カスタム テンプレートの作成と利用の詳細については、「[dotnet new の独自のテンプレートを作成する方法](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)」と「[dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)」を参照してください。
+テンプレート エンジンはオープン ソースです。オンライン コード リポジトリは GitHub の [dotnet/templating](https://github.com/dotnet/templating/) にあります。 GitHub の「[Available templates for dotnet new](https://github.com/dotnet/templating/wiki/Available-templates-for-dotnet-new)」 (dotnet new で利用できるテンプレート) には、サードパーティのテンプレートなど、テンプレートが他にもあります。 カスタム テンプレートの作成と利用の詳細については、「[dotnet new の独自のテンプレートを作成する方法](https://devblogs.microsoft.com/dotnet/how-to-create-your-own-templates-for-dotnet-new/)」と「[dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)」を参照してください。
+
+> [!NOTE]
+> テンプレートの例は、[dotnet/dotnet-template-samples](https://github.com/dotnet/dotnet-template-samples) GitHub リポジトリで入手できます。 ただし、これらの例はテンプレートの機能を学習するのに適したリソースですが、リポジトリはアーカイブされ、保守は行われていません。 これらの例は最新ではなく、機能しなくなっている可能性があります。
 
 チュートリアルでテンプレートを作成するには、「[dotnet new のカスタム テンプレートを作成する](../tutorials/cli-templates-create-item-template.md)」チュートリアルをご利用ください。
 
@@ -52,7 +55,7 @@ dotnet new --list
 
 *template.json* ファイルは、テンプレートのルート ディレクトリの *.template.config* フォルダーにあります。 このファイルは、テンプレート エンジンに構成情報を提供します。 最小構成には、次の表に示すメンバーが必要です。この最小構成があれば、実際に機能するテンプレートが作成されます。
 
-| メンバー            | [種類]          | [説明] |
+| メンバー            | 種類          | 説明 |
 | ----------------- | ------------- | ----------- |
 | `$schema`         | URI           | *template.json* ファイルの JSON スキーマ。 エディターが JSON スキーマ対応であれば、スキーマの指定時、JSON 編集機能が有効になります。 たとえば、[Visual Studio Code](https://code.visualstudio.com/) の場合、IntelliSense を有効にするためにこのメンバーが必要になります。 値として `http://json.schemastore.org/template` を使用します。 |
 | `author`          | string        | テンプレートの作成者。 |
@@ -65,7 +68,7 @@ dotnet new --list
 
 #### <a name="example"></a>例
 
-たとえば、次に示すテンプレート フォルダーには、2 つのコンテンツ ファイル *console.cs* と *readme.txt* が含まれます。 *template.json* ファイルが含まれる、*.template.config* という名前の必須フォルダーがあることに注意してください。
+たとえば、次に示すテンプレート フォルダーには、2 つのコンテンツ ファイル *console.cs* と *readme.txt* が含まれます。 *template.json* ファイルが含まれる、 *.template.config* という名前の必須フォルダーがあることに注意してください。
 
 ```text
 └───mytemplate
@@ -95,7 +98,7 @@ dotnet new --list
 
 カスタム テンプレートは、[dotnet pack](dotnet-pack.md) コマンドと *.csproj* ファイルでパッケージ化されます。 または、[nuget pack](https://docs.microsoft.com/nuget/tools/cli-ref-pack) コマンドと *.nuspec* ファイルで [NuGet](https://docs.microsoft.com/nuget/tools/nuget-exe-cli-reference) を使うこともできます。 ただし、NuGet の場合、Windows では .NET Framework が、Linux と MacOS では [Mono](https://www.mono-project.com/) が必要です。
 
-*.csproj* ファイルは、従来のコード プロジェクトの *.csproj* ファイルと若干異なります。 以下の設定に注意してください。
+*.csproj* ファイルは、従来のコード プロジェクトの *.csproj* ファイルと若干異なります。 次の設定を確認してください。
 
 01. 設定 `<PackageType>` が追加され、`Template` に設定されます。
 01. 設定 `<PackageVersion>` が追加され、有効な [NuGet のバージョン番号](/nuget/reference/package-versioning)に設定されます。
@@ -103,7 +106,7 @@ dotnet new --list
 01. ジェネリック メタデータの設定 `<Title>`、`<Authors>`、`<Description>`、`<PackageTags>` を設定する必要があります。
 01. テンプレート プロセスによって生成されるバイナリを使わない場合でも、設定 `<TargetFramework>` を設定する必要があります。 次の例では、`netstandard2.0` に設定されています。
 
-*.nupkg* NuGet パッケージの形式のテンプレート パックでは、すべてのテンプレートをパッケージ内の *content* フォルダーに格納する必要があります。 生成された *.nupkg* をテンプレート パックとしてインストールできるようにするため、*.csproj* ファイルに追加する設定がさらにいくつかあります。
+*.nupkg* NuGet パッケージの形式のテンプレート パックでは、すべてのテンプレートをパッケージ内の *content* フォルダーに格納する必要があります。 生成された *.nupkg* をテンプレート パックとしてインストールできるようにするため、 *.csproj* ファイルに追加する設定がさらにいくつかあります。
 
 01. プロジェクトで**コンテンツ**として設定されるすべてのファイルを NuGet パッケージに含めるには、設定 `<IncludeContentInPack>` を `true` に設定します。
 01. コンパイラによって生成されたすべてのバイナリを NuGet パッケージから除外するには、設定 `<IncludeBuildOutput>` を `false` に設定します。
@@ -111,7 +114,7 @@ dotnet new --list
 
 すべてのコード ファイルをテンプレート プロジェクトによってコンパイルされないように除外する簡単な方法は、プロジェクト ファイルの `<ItemGroup>` 要素内で `<Compile Remove="**\*" />` 項目を使うことです。
 
-テンプレート パックを構成する簡単な方法は、すべてのテンプレートを個別のフォルダーに格納した後、*.csproj* ファイルと同じディレクトリにある *templates* フォルダーの内部に各テンプレート フォルダーを格納することです。 これにより、1 つのプロジェクト項目を使って、すべてのファイルとフォルダーを**コンテンツ**として *templates* に含めることができます。 `<ItemGroup>` 要素の内部に、`<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 項目を作成します。
+テンプレート パックを構成する簡単な方法は、すべてのテンプレートを個別のフォルダーに格納した後、 *.csproj* ファイルと同じディレクトリにある *templates* フォルダーの内部に各テンプレート フォルダーを格納することです。 これにより、1 つのプロジェクト項目を使って、すべてのファイルとフォルダーを**コンテンツ**として *templates* に含めることができます。 `<ItemGroup>` 要素の内部に、`<Content Include="templates\**\*" Exclude="templates\**\bin\**;templates\**\obj\**" />` 項目を作成します。
 
 上記のすべてのガイドラインに従う *.csproj* ファイルの例を次に示します。 *templates* 子フォルダーを *content* パッケージ フォルダーにパッケージ化し、すべてのコード ファイルをコンパイルから除外します。
 
@@ -248,7 +251,7 @@ dotnet new -u <ABSOLUTE_FILE_SYSTEM_DIRECTORY>
 dotnet new <TEMPLATE>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [dotnet new のカスタム テンプレートを作成する (チュートリアル)](../tutorials/cli-templates-create-item-template.md)
 - [dotnet/templating GitHub リポジトリ Wiki](https://github.com/dotnet/templating/wiki)

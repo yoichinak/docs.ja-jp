@@ -1,5 +1,6 @@
 ---
-title: '方法 : オブジェクトをシリアル化する'
+title: '方法: オブジェクトをシリアル化する'
+description: この記事では、オブジェクトをシリアル化する方法について説明します。 XML ストリームをストリームとファイルのいずれとして格納する、転送形式を選択します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +9,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 3e24d890d47747c51086214530073fc551321079
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
-ms.translationtype: MT
+ms.openlocfilehash: 63446df3fa2c931c839eda91c648cee961715f93
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159885"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83377553"
 ---
-# <a name="how-to-serialize-an-object"></a>方法 : オブジェクトをシリアル化する
+# <a name="how-to-serialize-an-object"></a>方法: オブジェクトをシリアル化する
 オブジェクトをシリアル化するには、まず、シリアル化の対象となるオブジェクトを作成し、パブリック プロパティとパブリック フィールドを設定します。 この処理を行うには、転送形式、つまり XML ストリームをストリームとファイルのいずれとして格納するかを決定する必要があります。 たとえば、XML ストリームを永続的な形式で保存する必要がある場合は、<xref:System.IO.FileStream> オブジェクトを作成します。  
   
 > [!NOTE]
@@ -50,7 +51,7 @@ ms.locfileid: "78159885"
     myWriter.Close();  
     ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [方法 : オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [方法: オブジェクトを逆シリアル化する](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

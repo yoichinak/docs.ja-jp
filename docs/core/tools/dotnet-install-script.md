@@ -1,13 +1,13 @@
 ---
 title: dotnet-install スクリプト
 description: .NET Core SDK と共有ランタイムをインストールするための dotnet-install スクリプトについて学習します。
-ms.date: 01/23/2020
-ms.openlocfilehash: 591413a17db577560bd0324995066c8ea7a35895
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.date: 04/30/2020
+ms.openlocfilehash: 9f5cef9cfcca1d8b344021efe803c063a7393f8e
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463674"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802725"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install スクリプト リファレンス
 
@@ -31,7 +31,7 @@ dotnet-install.ps1 [-Architecture <ARCHITECTURE>] [-AzureFeed]
 dotnet-install.ps1 -Help
 ```
 
-Linux または macOS の場合:
+Linux/macOS:
 
 ```bash
 dotnet-install.sh  [--architecture <ARCHITECTURE>] [--azure-feed]
@@ -62,6 +62,8 @@ dotnet-install.sh --help
 スクリプトを実行する前に、必要な[依存関係](../install/dependencies.md)をすべてインストールします。
 
 `-Version|--version` 引数を使用して、特定のバージョンをインストールすることができます。 バージョンは 3 つの部分からなるバージョン (`2.1.0` など) を指定する必要があります。 指定しない場合は、`latest` バージョンが使用されます。
+
+インストール スクリプトでは、Windows 上のレジストリは更新されません。 zip 形式のバイナリがダウンロードされて、フォルダーにコピーされるだけです。 レジストリ キーの値を更新する必要がある場合は、.NET Core インストーラーを使用します。
 
 ## <a name="options"></a>オプション
 
@@ -98,7 +100,7 @@ dotnet-install.sh --help
 
 - **`-InstallDir|--install-dir <DIRECTORY>`**
 
-  インストール パスを指定します。 存在しない場合は、ディレクトリが作成されます。 既定値は *%LocalAppData%\Microsoft\dotnet*です。 バイナリは、このディレクトリに直接配置されます。
+  インストール パスを指定します。 存在しない場合は、ディレクトリが作成されます。 既定値は、 *%LocalAppData%\Microsoft\dotnet* (Windows) または */usr/share/dotnet* (Linux と macOS) です。 バイナリは、このディレクトリに直接配置されます。
 
 - **`-JSonFile|--jsonfile <JSONFILE>`**
 

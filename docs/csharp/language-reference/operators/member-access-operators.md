@@ -32,12 +32,12 @@ helpviewer_keywords:
 - hat operator [C#]
 - .. operator [C#]
 - range operator [C#]
-ms.openlocfilehash: 37a6cb7cd32a9d60607aec51b1994e4717c5349a
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: 59e01b17d78032714803629d503a92ba86a20fdc
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624866"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394638"
 ---
 # <a name="member-access-operators-and-expressions-c-reference"></a>メンバー アクセス演算子と式 (C# リファレンス)
 
@@ -159,7 +159,7 @@ if (handler != null)
 }
 ```
 
-これは、null 以外の `handler` のみが呼び出されるようにするためのスレッドセーフな方法です。 デリゲート インスタンスは不変であるため、`handler` ローカル変数によって参照される値を変更できるスレッドはありません。 具体的には、別のスレッドによって実行されるコードが `PropertyChanged` イベントから登録解除され、`handler` が呼び出される前に `PropertyChanged` が `null` になる場合、`handler` によって参照される値は影響を受けません。 `?.` 演算子では、左側のオペランドが 1 回だけ評価され、null 以外として検証された後に `null` に変更できないことが保証されます。
+これは、null 以外の `handler` のみが呼び出されるようにするためのスレッドセーフな方法です。 デリゲート インスタンスは不変であるため、`handler` ローカル変数によって参照されるオブジェクトを変更できるスレッドはありません。 具体的には、別のスレッドによって実行されるコードが `PropertyChanged` イベントから登録解除され、`handler` が呼び出される前に `PropertyChanged` が `null` になる場合、`handler` によって参照されるオブジェクトは影響を受けません。 `?.` 演算子では、左側のオペランドが 1 回だけ評価され、null 以外として検証された後に `null` に変更できないことが保証されます。
 
 ## <a name="invocation-expression-"></a>呼び出し式 ()
 

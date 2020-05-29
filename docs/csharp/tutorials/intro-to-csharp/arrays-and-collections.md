@@ -3,12 +3,12 @@ title: コレクションでの作業 - C# チュートリアルの概要
 description: このチュートリアルでは、リスト コレクションについて確認して C# を学習します。
 ms.date: 10/13/2017
 ms.custom: mvc
-ms.openlocfilehash: 554a4601157a7d4b873c22a46ee72b6601fc36d7
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: c99f5582702120db238de1206de42d964837cdbd
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635661"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396893"
 ---
 # <a name="learn-to-manage-data-collections-using-the-generic-list-type"></a>リスト型を使用したデータ コレクションの管理について説明します
 
@@ -86,7 +86,7 @@ Console.WriteLine($"The list has {names.Count} people in it");
 
 ## <a name="search-and-sort-lists"></a>リストを検索して並び替える
 
-サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。 そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。 <xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。 `Main` メソッドの下部に次のコードを追加します。
+サンプルでは比較的小さいリストを使用していますが、ご利用のアプリケーションでは、より多くの (場合によっては何千もの) 要素が含まれるリストを作成することもよくあるかもしれません。 そうした大規模なコレクションの中から要素を見つけるには、別々の項目をリストで検索する必要があります。 <xref:System.Collections.Generic.List%601.IndexOf%2A> メソッドは項目を検索し、その項目のインデックスを返します。 項目がリストにない場合、`IndexOf` は `-1` を返します。 `Main` メソッドの下部に次のコードを追加します。
 
 ```csharp
 var index = names.IndexOf("Felipe");

@@ -2,12 +2,12 @@
 title: ソース リンクと .NET ライブラリ
 description: ソース リンクを使用して .NET ライブラリのデバッグ機能を改善するためのベスト プラクティス推奨事項。
 ms.date: 01/15/2019
-ms.openlocfilehash: 3d768ae6e79efa23a8402ea37bc34cd58cd52c8c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0261019087bce8e9d088a90c5e36bdd0b22f556b
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "76744540"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83212426"
 ---
 # <a name="source-link"></a>ソース リンク
 
@@ -37,6 +37,10 @@ ms.locfileid: "76744540"
 ✔️ 検討 シンボル ファイルを発行する (`*.pdb`)。
 
 > デバッグのエクスペリエンスを最善にするには、ライブラリ上でシンボル ファイルを発行してソース リンクを使用する必要があります。 シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
+
+✔️ 検討 決定論的ビルドを有効にする
+
+> 決定論的ビルドでは、結果として得られるバイナリが指定されたソースから構築され、追跡可能性を提供することの検証を可能にします。 決定論的ビルドとそれを有効にするための手順の詳細については、[決定論的ビルド](https://github.com/clairernovotny/DeterministicBuilds)に関するページを参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](dependencies.md)

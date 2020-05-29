@@ -2,12 +2,12 @@
 title: dotnet コマンド
 description: dotnet コマンド (.NET Core CLI の汎用ドライバー) とその使用方法について説明します。
 ms.date: 02/13/2020
-ms.openlocfilehash: 6a08297499d955db44e342dc82fed25b7b9b8171
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 88e92b3ff5e8f68b980015a817434dd2d67df93a
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739079"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378839"
 ---
 # <a name="dotnet-command"></a>dotnet コマンド
 
@@ -110,7 +110,7 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
 ### <a name="runtime-options"></a>ランタイム オプション
 
-次のオプションは、`dotnet` でアプリケーションを実行するときに使用できます。 たとえば、`dotnet myapp.dll --fx-version 3.1.1` のようにします。
+次のオプションは、`dotnet` でアプリケーションを実行するときに使用できます。 たとえば、`dotnet myapp.dll --roll-forward Major` のようにします。
 
 - **`--additionalprobingpath <PATH>`**
 
@@ -120,23 +120,13 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
 
   追加の *.deps.json* ファイルへのパス。 *deps.json* ファイルには、依存関係、コンパイル依存関係、アセンブリ競合に対処するためのバージョン情報の一覧が含まれています。 詳細については、GitHub の「[Runtime Configuration Files](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)」 (ランタイム構成ファイル) を参照してください。
 
-- **`--fx-version <VERSION>`**
+- **`--depsfile <PATH_TO_DEPSFILE>`**
 
-  アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。
+  *deps.json* ファイルへのパス。 *deps. json* ファイルは、アプリケーションの実行に必要な依存関係に関する情報を含む構成ファイルです。 このファイルは、.NET Core SDK によって生成されます。
 
 - **`--runtimeconfig`**
 
   *runtimeconfig.json* ファイルへのパス。 *runtimeconfig.json* ファイルは、ランタイム設定を含む構成ファイルです。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
-
-- **`--roll-forward-on-no-candidate-fx <N>`** **.NET Core 2.x SDK で使用できます。**
-
-  必要な共有フレームワークが利用できない場合の動作を定義します。 `N` には以下があります。
-
-  - `0` - マイナー バージョンのロールフォワードでも無効にします。
-  - `1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。 これが既定の動作です。
-  - `2` - マイナー バージョンとメジャー バージョンをロール フォワードします。
-
-   詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
 
 - **`--roll-forward <SETTING>`** **.NET Core SDK 3.0 以降で使用できます。**
 
@@ -149,9 +139,27 @@ dotnet exec [--additionalprobingpath] [--additional-deps <PATH>]
   - `LatestMajor` - 要求されたメジャーが存在する場合でも、最上位のメジャー バージョンで最上位のマイナー バージョンにロール フォワードします。 コンポーネント ホスティング シナリオを対象としています。
   - `Disable` - ロール フォワードしません。 指定されたバージョンにのみバインドします。 このポリシーは、最新のパッチにロールフォワードする機能が無効になるため、一般的な使用にはお勧めできません。 この値はテスト用にのみ推奨されます。
 
-`Disable` を除いて、すべての設定は使用できる最高のパッチ バージョンを使用します。
+  `Disable` を除いて、すべての設定は使用できる最高のパッチ バージョンを使用します。
 
-ロール フォワード動作は、プロジェクト ファイル プロパティ、ランタイム構成ファイル プロパティ、および環境変数でも構成できます。 詳細については、「[メジャーバージョン ランタイムのロールフォワード](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)」を参照してください。
+  ロール フォワード動作は、プロジェクト ファイル プロパティ、ランタイム構成ファイル プロパティ、および環境変数でも構成できます。 詳細については、「[メジャーバージョン ランタイムのロールフォワード](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)」を参照してください。
+
+- **`--roll-forward-on-no-candidate-fx <N>`** **.NET Core 2.x SDK で使用できます。**
+
+  必要な共有フレームワークが利用できない場合の動作を定義します。 `N` には以下があります。
+
+  - `0` - マイナー バージョンのロールフォワードでも無効にします。
+  - `1` - マイナー バージョンはロール フォワードしますが、メジャー バージョンはしません。 これが既定の動作です。
+  - `2` - マイナー バージョンとメジャー バージョンをロール フォワードします。
+
+  詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
+
+  .NET Core 3.0 以降では、このオプションは `--roll-forward` に置き換えられており、代わりにこのオプションを使用する必要があります。
+
+- **`--fx-version <VERSION>`**
+
+  アプリケーションを実行するために使用する .NET Core ランタイムのバージョン。
+
+  このオプションは、アプリケーションの `.runtimeconfig.json` ファイル内の最初のフレームワーク参照のバージョンをオーバーライドします。 つまり、予期したとおりに動作するのは、フレームワーク参照が 1 つの場合のみです。 アプリケーションに複数のフレームワーク参照がある場合、このオプションを使用するとエラーが発生する可能性があります。
 
 ## <a name="dotnet-commands"></a>dotnet コマンド
 
@@ -274,13 +282,21 @@ dotnet myapp.dll
 
   .NET Core ランタイム、共有フレームワーク、または SDK がグローバルな場所から解決されるかどうかを指定します。 設定されていない場合、既定値は 1 (論理 `true`) です。 グローバルな場所から解決せず、.NET Core インストールを分離するには、0 (論理 `false`) に設定します。 複数レベルのルックアップの詳細については、「[Multi-level SharedFX Lookup](https://github.com/dotnet/core-setup/blob/master/Documentation/design-docs/multilevel-sharedfx-lookup.md)」 (複数レベルの SharedFX ルックアップ) を参照してください。
 
-- `DOTNET_ROLL_FORWARD` **.NET Core 3.x SDK 以降で使用できます。**
+- `DOTNET_ROLL_FORWARD` **.NET Core 3.x 以降で使用できます。**
 
   ロール フォワード動作を決定します。 詳細については、この記事で前述した `--roll-forward` オプションを参照してください。
 
-- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **.NET Core 2.x SDK で使用できます。**
+- `DOTNET_ROLL_FORWARD_TO_PRERELEASE` **.NET Core 3.x 以降で使用できます。**
+
+  `1` (有効) に設定した場合は、リリース バージョンからプレリリース バージョンへのロール フォワードが有効になります。 既定 (`0` - 無効) では、.NET Core ランタイムのリリース バージョンが要求されるとき、インストールされているリリース バージョンのみがロール フォワードによって考慮されます。
+
+  詳細については、「[Roll forward](../whats-new/dotnet-core-3-0.md#major-version-runtime-roll-forward)」(ロールフォワード) を参照してください。
+
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` **.NET Core 2.x で使用できます。**
 
   `0` に設定されている場合、マイナー バージョンのロールフォワードを無効にします。 詳細については、「[Roll forward](../whats-new/dotnet-core-2-1.md#roll-forward)」(ロールフォワード) を参照してください。
+
+  この設定は、.NET Core 3.0 では、`DOTNET_ROLL_FORWARD` によって置き換えられます。 代わりに、新しい設定を使用する必要があります。
 
 - `DOTNET_CLI_UI_LANGUAGE`
 
@@ -306,9 +322,25 @@ dotnet myapp.dll
 
   スタートアップ フックを読み込み、実行するアセンブリの一覧。
 
+- `DOTNET_BUNDLE_EXTRACT_BASE_DIR` **.NET Core 3.x 以降で使用できます。**
+
+  単一ファイル アプリケーションが実行前に抽出されるディレクトリを指定します。
+
+  詳細については、「[単一ファイルの実行可能ファイル](../whats-new/dotnet-core-3-0.md#single-file-executables)」を参照してください。
+
 - `COREHOST_TRACE`、`COREHOST_TRACEFILE`、`COREHOST_TRACE_VERBOSITY`
 
   `dotnet.exe`、`hostfxr`、`hostpolicy` などのホスティング コンポーネントからの診断トレースを制御します。
+
+  * `COREHOST_TRACE=[0/1]` - 既定値は `0` で、トレースは無効です。 `1` に設定すると、診断トレースが有効になります。
+  * `COREHOST_TRACEFILE=<file path>` - `COREHOST_TRACE=1` によってトレースが有効になっている場合のみ使用されます。 設定すると、指定したファイルにトレース情報が書き込まれます。それ以外の場合、トレース情報は `stderr` に書き込まれます。 **.NET Core 3.x 以降で使用できます。**
+  * `COREHOST_TRACE_VERBOSITY=[1/2/3/4]` - 規定値は `4` です。 この設定は、`COREHOST_TRACE=1` によってトレースが有効になっている場合にのみ使用されます。 **.NET Core 3.x 以降で使用できます。**
+    * `4` - すべてのトレース情報が書き込まれます。
+    * `3` - 情報、警告、およびエラー メッセージのみが書き込まれます。
+    * `2` - 警告およびエラー メッセージのみが書き込まれます。
+    * `1` - エラー メッセージのみが書き込まれます。
+
+  アプリケーションの起動に関して詳しいトレース情報を取得する一般的な方法は、`COREHOST_TRACE=1` と `COREHOST_TRACEFILE=host_trace.txt` を設定してアプリケーションを実行することです。 詳細情報を含む新しいファイル `host_trace.txt` が現在のディレクトリに作成されます。
 
 ## <a name="see-also"></a>関連項目
 

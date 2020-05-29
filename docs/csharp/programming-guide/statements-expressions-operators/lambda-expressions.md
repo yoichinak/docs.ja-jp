@@ -8,12 +8,12 @@ helpviewer_keywords:
 - expression lambda [C#]
 - expressions [C#], lambda
 ms.assetid: 57e3ba27-9a82-4067-aca7-5ca446b7bf93
-ms.openlocfilehash: 6fd2dab09fe97aa4af87d82e2d23664c4347c8b3
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: b86fe4fd91b395498926512650490f8d3a0383a1
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82101996"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761838"
 ---
 # <a name="lambda-expressions-c-programming-guide"></a>ラムダ式 (C# プログラミング ガイド)
 
@@ -33,7 +33,7 @@ ms.locfileid: "82101996"
 
 [ラムダ宣言演算子`=>`](../../language-reference/operators/lambda-operator.md)を使用して、ラムダのパラメーター リストを式本体から分離します。 ラムダ式を作成するには、ラムダ演算子の左辺に入力パラメーターを指定し (ある場合)、右辺に式またはステートメント ブロックを指定します。
 
-ラムダ式は、[デリゲート](../../language-reference/builtin-types/reference-types.md#the-delegate-type)型に変換できます。 ラムダ式を変換できるデリゲート型は、パラメータと戻り値の型で定義されます。 ラムダ式が値を返さない場合は `Action` デリゲート型のいずれかに変換でき、値を返す場合は`Func` デリゲート型のいずれかに変換できます。 たとえば、2 つのパラメーターがあり、値を返さないラムダ式は、<xref:System.Action%602> デリゲートに変換できます。 1 つのパラメーターがあり、値を返すラムダ式は、<xref:System.Func%602> デリゲートに変換できます。 次の例では、`x` という名前のパラメーターを指定し、`x` の二乗値を返すラムダ式 `x => x * x` をデリゲート型の変数に割り当てます。
+ラムダ式は、[デリゲート](../../language-reference/builtin-types/reference-types.md#the-delegate-type)型に変換できます。 ラムダ式を変換できるデリゲート型は、パラメータと戻り値の型で定義されます。 ラムダ式が値を返さない場合は `Action` デリゲート型のいずれかに変換でき、値を返す場合は`Func` デリゲート型のいずれかに変換できます。 たとえば、2 つのパラメーターがあり、値を返さないラムダ式は、<xref:System.Action%602> デリゲートに変換できます。 1 つのパラメーターがあり、値を返すラムダ式は、<xref:System.Func%602> デリゲートに変換できます。 次の例では、`x` という名前のパラメーターを指定し、`x` の二乗の値を返すラムダ式 `x => x * x` を、デリゲート型の変数に割り当てます。
 
 [!code-csharp-interactive[lambda is delegate](~/samples/snippets/csharp/programming-guide/lambda-expressions/Introduction.cs#Delegate)]
 
@@ -231,6 +231,5 @@ customers.Where(c => c.City == "London");
 - [統合言語クエリ (LINQ)](../concepts/linq/index.md)
 - [式ツリー](../concepts/expression-trees/index.md)
 - [ローカル関数とラムダ式の比較](../classes-and-structs/local-functions.md#local-functions-vs-lambda-expressions)
-- [暗黙的に型指定されるラムダ式](../../implicitly-typed-lambda-expressions.md)
 - [Visual Studio 2008 C# Samples (Visual Studio 2008 の C# サンプル) (LINQ サンプル クエリ ファイルと XQuery プログラムを参照してください)](https://code.msdn.microsoft.com/Visual-Studio-2008-C-d295cdba)
 - [Recursive lambda expressions (再帰的なラムダ式)](https://docs.microsoft.com/archive/blogs/madst/recursive-lambda-expressions)

@@ -3,12 +3,12 @@ title: 破壊的変更 - .NET Framework から .NET Core
 titleSuffix: ''
 description: .NET Framework から .NET Core への破壊的変更を一覧表示します。
 ms.date: 05/05/2020
-ms.openlocfilehash: bb18e38fecc0805dfafe6a16c853ae04fd2a2913
-ms.sourcegitcommit: d9c7ac5d06735a01c1fafe34efe9486734841a72
+ms.openlocfilehash: f830d4571f21752900b35a7462bf0881673d6d2e
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2020
-ms.locfileid: "82859947"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420449"
 ---
 # <a name="breaking-changes-for-migration-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移行の破壊的変更
 
@@ -23,6 +23,7 @@ ms.locfileid: "82859947"
 - [FileSystemInfo.Attributes によってスローされる UnauthorizedAccessException](#unauthorizedaccessexception-thrown-by-filesysteminfoattributes)
 - [プロセス破損状態例外の処理がサポートされない](#handling-corrupted-state-exceptions-is-not-supported)
 - [UriBuilder のプロパティでは今後、先頭に文字が付加されない](#uribuilder-properties-no-longer-prepend-leading-characters)
+- [開始されなかったプロセスについて Process.StartInfo が InvalidOperationException をスローする](#processstartinfo-throws-invalidoperationexception-for-processes-you-didnt-start)
 
 ### <a name="net-core-21"></a>.NET Core 2.1
 
@@ -44,6 +45,10 @@ ms.locfileid: "82859947"
 
 ***
 
+[!INCLUDE [startinfo-throws-exception](../../../includes/core-changes/corefx/1.0/startinfo-throws-exception.md)]
+
+***
+
 ## <a name="cryptography"></a>暗号
 
 - [SignedCms.ComputeSignature のブール型パラメーターの尊重](#boolean-parameter-of-signedcmscomputesignature-is-respected)
@@ -51,6 +56,16 @@ ms.locfileid: "82859947"
 ### <a name="net-core-21"></a>.NET Core 2.1
 
 [!INCLUDE [Boolean parameter of SignedCms.ComputeSignature is respected](~/includes/core-changes/cryptography/2.1/compute-signature-silent-parameter.md)]
+
+***
+
+## <a name="msbuild"></a>MSBuild
+
+- [リソース マニフェストのファイル名の変更](#resource-manifest-file-name-change)
+
+### <a name="net-core-30"></a>.NET Core 3.0
+
+[!INCLUDE[Resource file names](~/includes/core-changes/msbuild/3.0/resource-manifest-name.md)]
 
 ***
 

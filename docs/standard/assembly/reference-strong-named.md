@@ -1,5 +1,6 @@
 ---
 title: '方法: 厳密な名前のアセンブリを参照する'
+description: この記事では、コンパイル時または実行時に、厳密な名前の .NET アセンブリでタイプまたはリソースを参照する方法について説明します。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - strong-named assemblies, compile-time references
@@ -11,12 +12,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: adda4ed2ab5c59e3518b8e724044529a79840ad0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e42c1b461da16d7000605b9b9321138bbfebd307
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156479"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379873"
 ---
 # <a name="how-to-reference-a-strong-named-assembly"></a>方法: 厳密な名前のアセンブリを参照する
 通常、厳密な名前付きアセンブリ内にある型またはリソースを参照するプロセスは透過的です。 コンパイル時 (事前バインディング) または実行時に参照を作成できます。  

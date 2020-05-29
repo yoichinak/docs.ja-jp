@@ -5,12 +5,12 @@ author: richlander
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: b7934e5def202760ab05d363ee5fcda5d012ca72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2fd0237556f877af64708674f00e9efddf95869
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77124586"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83209644"
 ---
 # <a name="net-class-libraries"></a>.NET クラス ライブラリ
 
@@ -32,11 +32,11 @@ ms.locfileid: "77124586"
 
 ## <a name="portable-class-libraries"></a>ポータブル クラス ライブラリ
 
-ポータブル ライブラリは、複数の .NET 実装でサポートされます。 このライブラリは、既知の実行環境に依存することは同じですが、その環境は、完全な .NET 実装のセットの共通部分によって生成されます。 つまり、公開される API およびプラットフォームの前提は、プラットフォーム固有のライブラリで使用できる機能のサブセットです。
+ポータブル ライブラリは、複数の .NET 実装でサポートされます。 このライブラリは、既知の実行環境に依存することは同じですが、その環境は、完全な .NET 実装のセットの共通部分によって生成されます。 公開される API およびプラットフォームの前提は、プラットフォーム固有のライブラリで使用できる機能のサブセットです。
 
-ポータブル ライブラリを作成するときに、プラットフォームの構成を選択します。 これらはサポートする必要があるプラットフォーム (たとえば、.NET Framework 4.5 以降、Windows Phone 8.0 以降) のセットです。 サポートするプラットフォームが増えるほど、想定可能な API とプラットフォームが減り、共通分母が最小になります。 このような特性は、最初は混乱を招くことがあります。ユーザーは多くの場合、「多いほどよい」と考えますが、結果はサポートするプラットフォームが増えるほど、使用可能な API は少なくなります。
+ポータブル ライブラリを作成するときに、プラットフォームの構成を選択します。 そのプラットフォームの構成は、サポートする必要があるプラットフォーム (たとえば、.NET Framework 4.5 以降、Windows Phone 8.0 以降) のセットです。 サポートするプラットフォームが増えるほど、想定可能な API とプラットフォームが減り、共通分母が最小になります。 このような特性は、最初は混乱を招くことがあります。ユーザーは多くの場合、「多いほどよい」と考えますが、結果はサポートするプラットフォームが増えるほど、使用可能な API は少なくなります。
 
-多くのライブラリ開発者は、1 つのソースから複数のプラットフォーム固有のライブラリを生成する方法 (条件付きコンパイル ディレクティブを使用) からポータブル ライブラリに切り替えています。 ポータブル ライブラリ内のプラットフォーム固有の機能にアクセスする[方法はいくつか](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)あります。現時点で最も広く採用されている手法は、[bait-and-switch](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/) です。
+多くのライブラリ開発者は、1 つのソースから複数のプラットフォーム固有のライブラリを生成する方法 (条件付きコンパイル ディレクティブを使用) からポータブル ライブラリに切り替えています。 ポータブル ライブラリ内のプラットフォーム固有の機能にアクセスする[方法はいくつか](https://blog.stephencleary.com/2012/11/portable-class-library-enlightenment.html)あります。現時点で最も広く採用されている手法は、bait-and-switch です。
 
 ## <a name="net-standard-class-libraries"></a>.NET Standard クラス ライブラリ
 
@@ -57,8 +57,8 @@ ms.locfileid: "77124586"
 * Windows Phone
 * Windows Phone Silverlight
 
-詳細については、「[.NET Standard](net-standard.md)」トピックを参照してください。
+詳細については、「[.NET Standard](net-standard.md)」をご覧ください。
 
 ## <a name="mono-class-libraries"></a>Mono クラス ライブラリ
 
-クラス ライブラリは、上記の 3 種類のライブラリを含む Mono 上でサポートされます。 多くの場合、Mono は、Microsoft .NET Framework のクロスプラット フォームの実装として (正しく) 確認されています。 これは、部分的には、プラットフォーム固有の .NET Framework ライブラリを変更や再コンパイルせずに Mono ランタイム上で実行できたためです。 このような特徴は、ポータブル クラス ライブラリの作成前に見られたので、NET Framework と Mono の間でバイナリを移植できるようにすることが当然の選択肢でした。
+クラス ライブラリは、前述の 3 種類のライブラリを含む Mono 上でサポートされます。 多くの場合、Mono は、.NET Framework のクロスプラットフォームの実装として (正しく) 確認されています。 これは、部分的には、プラットフォーム固有の .NET Framework ライブラリを変更や再コンパイルせずに Mono ランタイム上で実行できたためです。 このような特徴は、ポータブル クラス ライブラリの作成前に見られたので、NET Framework と Mono の間でバイナリを移植できるようにすることが当然の選択肢でした。

@@ -4,12 +4,12 @@ description: ASP.NET Core と Azure を使用したモノリシックな Web ア
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/4/2019
-ms.openlocfilehash: 936a068507116033ad178f26e77945f30f70387e
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 8eebe9a8e530b244f4596adef1b5e6dd23e305bd
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507194"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144540"
 ---
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>ASP.NET Core および Azure での最新の Web アプリケーションの設計
 
@@ -35,7 +35,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 
 ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。
 
-https://www.microsoft.com の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
+<https://www.microsoft.com> の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
 
 Mac および macOS は Apple Inc. の商標です。
 
@@ -55,7 +55,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 - この電子書籍は、PDF 形式 (英語版のみ) で[ダウンロード](https://aka.ms/webappebook)することもできます
 
-- 参照アプリケーションをクローン/フォーク [GitHub の eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)
+- 参照アプリケーションを複製/フォーク [GitHub の eShopOnWeb](https://github.com/dotnet-architecture/eShopOnWeb)
 
 ## <a name="introduction"></a>はじめに
 

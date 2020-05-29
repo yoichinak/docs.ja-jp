@@ -3,12 +3,12 @@ title: Azure 向けクラウド ネイティブ .NET アプリケーションの
 description: Azure のコンテナー、マイクロサービス、サーバーレス機能を活用するクラウドネイティブなアプリケーションを構築するためのガイド。
 author: ardalis
 ms.date: 05/13/2020
-ms.openlocfilehash: 196671468e56147f714078d1671f44af21bcf327
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: b315f097b1584bd93f694c10f36ee7524d7e020a
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840885"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144384"
 ---
 # <a name="architecting-cloud-native-net-applications-for-azure"></a>Azure 向けクラウド ネイティブ .NET アプリケーションの設計
 
@@ -34,7 +34,7 @@ All rights reserved. 本書のいかなる部分も、書面による発行者�
 
 ここに記載したいくつかの例は、説明のためだけに提供された架空のものです。 実在のものとの関連性または関係性は一切ありません。
 
-[https://www.microsoft.com](https://www.microsoft.com) の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
+<https://www.microsoft.com> の "商標" Web ページに記載されている Microsoft および商標は、Microsoft グループの商標です。
 
 Mac および macOS は Apple Inc. の商標です。
 
@@ -44,7 +44,7 @@ Docker のクジラのロゴは Docker, Inc. の登録商標です。許可を�
 
 作成者:
 
-> **Rob Vettor**、Microsoft、プリンシパル クラウド システム アーキテクト/IP アーキテクト - [thinkingincloudnative.com](http://thinkingincloudnative.com/about/)
+> **Rob Vettor**、Microsoft、プリンシパル クラウド システム アーキテクト/IP アーキテクト - [thinkingincloudnative.com](https://thinkingincloudnative.com/about/)
 >
 > **Steve "ardalis" Smith**、ソフトウェア アーキテクトおよびトレーナー - [Ardalis.com](https://ardalis.com)
 

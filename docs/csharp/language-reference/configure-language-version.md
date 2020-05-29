@@ -1,13 +1,13 @@
 ---
 title: C# 言語のバージョン管理 - C# ガイド
 description: C# 言語のバージョンがプロジェクトに基づいて決定されるしくみとその選択の背後にある理由について説明します。 既定値を手動でオーバーライドする方法について説明します。
-ms.date: 02/21/2020
-ms.openlocfilehash: 850c4a860878593d80aaa3b7b38efaff9e003f43
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.date: 05/20/2020
+ms.openlocfilehash: bbe5b12e378cf47b7c9b2c8576088e949e526a9a
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102659"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83803006"
 ---
 # <a name="c-language-versioning"></a>C# 言語のバージョン管理
 
@@ -17,23 +17,23 @@ ms.locfileid: "82102659"
 
 C# 8.0 (以降) は .NET Core 3.x 以降のバージョンでのみサポートされています。 最新機能の多くには、.NET Core 3.x で導入されたライブラリとランタイムの機能が必要になります。
 
-- 既定のインターフェイス メンバー実装には、.NET Core 3.0 CLR の新機能が必要になります。
-- 非同期ストリームには、<xref:System.IAsyncDisposable?displayProperty=nameWithType>、<xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>、<xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType> という新しい型が必要になります。
-- インデックスと範囲には、<xref:System.Index?displayProperty=nameWithType> と <xref:System.Range?displayProperty=nameWithType> という新しい型が必要です。
-- null 参照型では、効果的に警告を与える目的でいくつかの[属性](attributes/nullable-analysis.md)が利用されます。 その属性は .NET Core 3.0 で追加されました。 他のターゲット フレームには、そのような属性に関する注釈が付けられていません。 つまり、null 許容警告は潜在的な問題を正確に反映していない可能性があります。
+- [既定のインターフェイスの実装](../whats-new/csharp-8.md#default-interface-methods)では、.NET Core 3.0 CLR の新機能が必要です。
+- [非同期ストリーム](../whats-new/csharp-8.md#asynchronous-streams)には、新しい型 <xref:System.IAsyncDisposable?displayProperty=nameWithType>、<xref:System.Collections.Generic.IAsyncEnumerable%601?displayProperty=nameWithType>、<xref:System.Collections.Generic.IAsyncEnumerator%601?displayProperty=nameWithType> が必要です。
+- [インデックスと範囲](../whats-new/csharp-8.md#indices-and-ranges)には、新しい型 <xref:System.Index?displayProperty=nameWithType> と <xref:System.Range?displayProperty=nameWithType> が必要です。
+- [null 許容参照型](../whats-new/csharp-8.md#nullable-reference-types)では、より適切な警告を提供するためにいくつかの[属性](attributes/nullable-analysis.md)が利用されます。 その属性は .NET Core 3.0 で追加されました。 他のターゲット フレームには、そのような属性に関する注釈が付けられていません。 つまり、null 許容警告は潜在的な問題を正確に反映していない可能性があります。
 
 ## <a name="defaults"></a>[既定値]
 
 コンパイラでは、以下の規則に基づいて既定値が決定されます。
 
-|ターゲット フレーム|version|C# 言語の既定のバージョン|
-|----------------|-------|---------------------------|
-|.NET Core|3.x|C# 8.0|
-|.NET Core|2.x|C# 7.3|
-|.NET Standard|2.1|C# 8.0|
-|.NET Standard|2.0|C# 7.3|
-|.NET Standard|1.x|C# 7.3|
-|.NET Framework|all|C# 7.3|
+| ターゲット フレーム | version | C# 言語の既定のバージョン |
+|------------------|---------|-----------------------------|
+| .NET Core        | 3.x     | C# 8.0                      |
+| .NET Core        | 2.x     | C# 7.3                      |
+| .NET Standard    | 2.1     | C# 8.0                      |
+| .NET Standard    | 2.0     | C# 7.3                      |
+| .NET Standard    | 1.x     | C# 7.3                      |
+| .NET Framework   | all     | C# 7.3                      |
 
 ご自分のプロジェクトが、対応するプレビュー バージョンの言語を持つプレビュー フレームワークをターゲットにしている場合、使用される言語バージョンはプレビュー バージョンの言語です。 環境を問わず、そのプレビューでは最新の機能が使用されます。リリース済みの .NET Core バージョンをターゲットにするプロジェクトに影響はありません。
 
@@ -75,19 +75,32 @@ C# のバージョンを明示的に指定する必要がある場合は、い�
 
 次の表では、現在のすべての C# 言語バージョンを示します。 コンパイラが古い場合、一部の値が正しく解釈されない可能性があります。 .NET Core 3.0 以降をインストールすれば、一覧にあるすべてにアクセスできます。
 
-|[値]|説明|
-|------------|-------------|
-|preview|コンパイラは、最新のプレビュー バージョンの有効な言語構文をすべて受け入れます。|
-|latest|コンパイラは、最新リリース バージョンのコンパイラ (マイナー バージョンを含む) の構文を受け入れます。|
-|latestMajor|コンパイラは、最新リリースのメジャー バージョンのコンパイラの構文を受け入れます。|
-|8.0|コンパイラは、C# 8.0 以下に含まれている構文のみを受け入れます。|
-|7.3|コンパイラは、C# 7.3 以下に含まれている構文のみを受け入れます。|
-|7.2|コンパイラは、C# 7.2 以下に含まれている構文のみを受け入れます。|
-|7.1|コンパイラは、C# 7.1 以下に含まれている構文のみを受け入れます。|
-|7|コンパイラは、C# 7.0 以下に含まれている構文のみを受け入れます。|
-|6|コンパイラは、C# 6.0 以下に含まれている構文のみを受け入れます。|
-|5|コンパイラは、C# 5.0 以下に含まれている構文のみを受け入れます。|
-|4|コンパイラは、C# 4.0 以下に含まれている構文のみを受け入れます。|
-|3|コンパイラは、C# 3.0 以下に含まれている構文のみを受け入れます。|
-|ISO-2|コンパイラは、ISO/IEC 23270:2006 C# (2.0) に含まれている構文のみを受け入れます。 |
-|ISO-1|コンパイラは、ISO/IEC 23270:2003 C# (1.0/1.2) に含まれている構文のみを受け入れます。 |
+[!INCLUDE [langversion-table](includes/langversion-table.md)]
+
+> [!TIP]
+> お使いのコンピューターで使用可能な言語バージョンの一覧を表示するには、[Visual Studio の開発者コマンド プロンプト](../../framework/tools/developer-command-prompt-for-vs.md)を開き、次のコマンドを実行します。
+>
+> ```CMD
+> csc -langversion:?
+> ```
+>
+> このように [-langversion](compiler-options/langversion-compiler-option.md) コンパイル オプションを指定すると、次のような内容が出力されます。
+>
+> ```CMD
+> Supported language versions:
+> default
+> 1
+> 2
+> 3
+> 4
+> 5
+> 6
+> 7.0
+> 7.1
+> 7.2
+> 7.3
+> 8.0 (default)
+> latestmajor
+> preview
+> latest
+> ```

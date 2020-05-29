@@ -1,17 +1,17 @@
 ---
 title: C# での非同期プログラミング
 description: C# 言語での async、await、Task、Task<T> を使用した非同期プログラミングのサポートの概要です
-ms.date: 03/18/2019
-ms.openlocfilehash: 4bf00d5c77138dfa2d527a262a6cd54a72a688f5
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.date: 05/26/2020
+ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83761851"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007963"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>async および await を使用した非同期プログラミング
 
-タスク非同期プログラミング モデル (TAP) では、非同期コードに対する抽象化が提供されます。 コードは、通常と同じようにステートメントのシーケンスとして記述します。 次のステートメントが始まる前に、各ステートメントが完了するものとして、コードを読むことができます。 これらのステートメントの一部は処理を開始し、進行中の作業を表す <xref:System.Threading.Tasks.Task> を返す可能性があるので、コンパイラではいくつかの変換が実行されます。
+[タスク非同期プログラミング モデル (TAP)](task-asynchronous-programming-model.md) では、非同期コードに対する抽象化が提供されます。 コードは、通常と同じようにステートメントのシーケンスとして記述します。 次のステートメントが始まる前に、各ステートメントが完了するものとして、コードを読むことができます。 これらのステートメントの一部は処理を開始し、進行中の作業を表す <xref:System.Threading.Tasks.Task> を返す可能性があるので、コンパイラではいくつかの変換が実行されます。
 
 それがこの構文の目的です。コードは、順番に実行されるステートメントのように書かれていますが、外部リソースの割り当てとタスク完了のタイミングに基づいて、はるかに複雑な順序で実行されます。 それは、人が非同期のタスクを含むプロセスの指示を与えるのと似ています。 この記事では、朝食を作る手順を例として使用し、`async` キーワードと `await` キーワードによって、一連の非同期命令を含むコードがどのように理解しやすくなるのかを見ていきます。 朝食を作る方法について説明する次の一覧のような手順を作成します。
 
@@ -30,7 +30,10 @@ ms.locfileid: "83761851"
 
 それでは、これと同じ命令が C# ステートメントとして書かれている場合を考えてみましょう。
 
-[!code-csharp[SynchronousBreakfast](./snippets/index/AsyncBreakfast-starter/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
+
+> [!NOTE]
+> `Coffee`、`Egg`、`Bacon`、`Toast`、および `Juice` クラスは空です。 これらは、デモンストレーション目的の単なるマーカー クラスであり、プロパティは含まれず、その他の目的はありません。
 
 コンピューターによって、人と同じように命令が解釈されることはありません。 コンピューターでは、作業が完了するまで各ステートメントはブロックされ、完了すると次のステートメントに進みます。 それではおいしい朝食はできません。 後のタスクは、前のタスクが完了するまで開始されません。 朝食の支度でこんなことをしていると、ずっと長い時間がかかり、提供される前に冷めてしまう料理もあるでしょう。
 
@@ -46,7 +49,10 @@ ms.locfileid: "83761851"
 
 タスクの実行中にスレッドをブロックしないように、このコードを更新することから始めましょう。 `await` キーワードを使用すると、ブロックしない方法でタスクを開始し、タスクが完了したら実行を継続できます。 朝食作成コードの簡単な非同期バージョンは、次のスニペットのようになります。
 
-[!code-csharp[SimpleAsyncBreakfast](./snippets/index/AsyncBreakfast-V2/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!TIP]
+> `FryEggsAsync`、`FryBaconAsync`、`ToastBreadAsync` のメソッド本体がすべて更新され、それぞれ `Task<Egg>`、`Task<Bacon>`、および `Task<Toast>` が返されます。 メソッドは、元のバージョンから名前が変更され、"Async" サフィックスが含まれるようになっています。 これらの実装は、この記事で後述する[最終バージョン](#final-version)の一部として表示されます。
 
 このコードでは、卵またはベーコンを調理している間、ブロックすることはありません。 ただし、このコードは他のタスクを開始しません。 まだ、トースターにトーストを入れた後、トーストが飛び出すまで眺めています。 ただし、少なくとも誰かが注意を引こうとしたら反応するようにはなります。 複数の注文を受けるレストランでは、料理人は最初の朝食を作っている間に、別の朝食を作り始めます。
 
@@ -65,20 +71,23 @@ ms.locfileid: "83761851"
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggsTask = FryEggs(2);
+
+Task<Egg> eggsTask = FryEggsAsync(2);
 Egg eggs = await eggsTask;
 Console.WriteLine("eggs are ready");
-Task<Bacon> baconTask = FryBacon(3);
+
+Task<Bacon> baconTask = FryBaconAsync(3);
 Bacon bacon = await baconTask;
 Console.WriteLine("bacon is ready");
-Task<Toast> toastTask = ToastBread(2);
+
+Task<Toast> toastTask = ToastBreadAsync(2);
 Toast toast = await toastTask;
 ApplyButter(toast);
 ApplyJam(toast);
 Console.WriteLine("toast is ready");
+
 Juice oj = PourOJ();
 Console.WriteLine("oj is ready");
-
 Console.WriteLine("Breakfast is ready!");
 ```
 
@@ -87,9 +96,11 @@ Console.WriteLine("Breakfast is ready!");
 ```csharp
 Coffee cup = PourCoffee();
 Console.WriteLine("coffee is ready");
-Task<Egg> eggsTask = FryEggs(2);
-Task<Bacon> baconTask = FryBacon(3);
-Task<Toast> toastTask = ToastBread(2);
+
+Task<Egg> eggsTask = FryEggsAsync(2);
+Task<Bacon> baconTask = FryBaconAsync(3);
+Task<Toast> toastTask = ToastBreadAsync(2);
+
 Toast toast = await toastTask;
 ApplyButter(toast);
 ApplyJam(toast);
@@ -116,11 +127,11 @@ Console.WriteLine("Breakfast is ready!");
 
 上記のコードでは、<xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> オブジェクトを使用して実行中のタスクを保持できることを示しました。 結果を使用する前に、各タスクを `await` します。 次のステップは、他の作業の組み合わせを表すメソッドを作成することです。 朝食を提供するには、バターとジャムを塗る前にパンを焼くタスクを待機します。 次のコードでその作業を表すことができます。
 
-[!code-csharp[ComposeToastTask](./snippets/index/AsyncBreakfast-V3/Program.cs#ComposeToastTask)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetComposeToastTask":::
 
 上のメソッドのシグニチャには `async` 修飾子が付いています。 それにより、コンパイラに対して、このメソッドに `await` ステートメントが含まれることが通知されます。それには非同期操作が含まれています。 このメソッドは、パンを焼いてからバターとジャムを塗るタスクを表します。 このメソッドからは、これら 3 つの操作の合成を表す <xref:System.Threading.Tasks.Task%601> が返されます。 これで、コードのメイン ブロックは次のようになります。
 
-[!code-csharp[StartConcurrentTasks](./snippets/index/AsyncBreakfast-V3/Program.cs#Main)]
+:::code language="csharp" source="snippets/index/AsyncBreakfast-V3/Program.cs" id="SnippetMain":::
 
 この変更では、非同期コードを使用するための重要な手法が示されています。 タスクを返す新しいメソッドに操作を分離することで、タスクを合成します。 そのタスクを待機するタイミングを選択できます。 他のタスクを同時に開始できます。
 
@@ -138,10 +149,33 @@ Console.WriteLine("Breakfast is ready!");
 
 もう 1 つのオプションは、<xref:System.Threading.Tasks.Task.WhenAny%2A> を使用することです。これは、引数のいずれかが完了すると完了する `Task<Task>` が返されます。 返されたタスクを待機して、既に完了したことを把握できます。 次のコードでは、<xref:System.Threading.Tasks.Task.WhenAny%2A> を使用して最初のタスクが完了するのを待った後、その結果を処理する方法が示されています。 完了したタスクの結果を処理した後、`WhenAny` に渡すタスクの一覧からその完了したタスクを削除します。
 
-[!code-csharp[AwaitAnyTask](./snippets/index/AsyncBreakfast-final/Program.cs#AwaitAnyTask)]
+```csharp
+var breakfastTasks = new List<Task> { eggsTask, baconTask, toastTask };
+while (breakfastTasks.Count > 0)
+{
+    Task finishedTask = await Task.WhenAny(breakfastTasks);
+    if (finishedTask == eggsTask)
+    {
+        Console.WriteLine("eggs are ready");
+    }
+    else if (finishedTask == baconTask)
+    {
+        Console.WriteLine("bacon is ready");
+    }
+    else if (finishedTask == toastTask)
+    {
+        Console.WriteLine("toast is ready");
+    }
+    breakfastTasks.Remove(finishedTask);
+}
+```
 
-すべてを変更した後、最終バージョンの `Main` は次のコードのようになります。
-
-[!code-csharp[Final](./snippets/index/AsyncBreakfast-final/Program.cs#Main)]
+すべてを変更した後、コードの最終バージョンは <a id="final-version"></a> のようになります。
+:::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
 
 この最後のコードは非同期です。 人が朝食を作る方法が、より正確に反映されています。 上のコードを、この記事の最初のコード サンプルと比較してください。 中核となるアクションはコードを読むと明らかです。 このコードは、この記事の最初にある朝食の作成手順と同じように読むことができます。 `async` および `await` の言語機能により、手順書に従うためにすべての人が行う変換が提供されます。つまり、可能になったらタスクを開始し、タスク完了の待機をブロックしないようにします。
+
+## <a name="next-steps"></a>次の手順
+
+> [!div class="nextstepaction"]
+> [タスク非同期プログラミング モデルについて](task-asynchronous-programming-model.md)

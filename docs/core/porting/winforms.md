@@ -4,12 +4,12 @@ description: .NET Framework Windows フォーム アプリケーションを .NE
 author: Thraka
 ms.author: adegeo
 ms.date: 01/24/2020
-ms.openlocfilehash: 80b4bb225d6a6748743d91a4c70e8b09c10cc94b
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: efa73428c816eddc00c62c2275d3457c92284388
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635509"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206134"
 ---
 # <a name="how-to-port-a-windows-forms-desktop-app-to-net-core"></a>Windows フォーム デスクトップ アプリを .NET Core に移植する方法
 
@@ -26,9 +26,10 @@ ms.locfileid: "80635509"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- デザイナー作業を行う必要がある場合、[Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) 以降。 最新の[プレビュー バージョンの Visual Studio](https://visualstudio.microsoft.com/vs/preview/) をお勧めします。
+- デザイナー作業を行う必要がある場合、[Visual Studio 2019 16.5 Preview 1](https://visualstudio.microsoft.com/thank-you-downloading-visual-studio/?sku=community&ch=pre&rel=16) 以降。 最新の[プレビュー バージョンの Visual Studio](https://visualstudio.microsoft.com/vs/preview/) に更新することをお勧めします。
 
   次の Visual Studio ワークロードをインストールします。
+  
   - .NET デスクトップ開発
   - .NET Core クロスプラットフォームの開発
 

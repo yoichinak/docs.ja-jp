@@ -1,5 +1,6 @@
 ---
 title: アセンブリ読み込みを解決する
+description: この記事では、.NET AppDomain.AssemblyResolve イベントについて説明します。 このイベントは、アセンブリの読み込みを制御する必要があるアプリケーションに使用します。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assemblies [.NET Framework], resolving loads
@@ -12,12 +13,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: d6314fae266505fbb4410aaaa351973070ab3811
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36f36b60a3a113c6b020cc1042c786c4091e567b
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156440"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378675"
 ---
 # <a name="resolve-assembly-loads"></a>アセンブリ読み込みを解決する
 .NET では、アセンブリの読み込みをより細かく制御する必要があるアプリケーションのために、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントが用意されています。 アプリケーションでこのイベントを処理することにより、通常のプローブ パスの外部から読み込みコンテキストにアセンブリを読み込んだり、アセンブリの複数のバージョンから読み込むものを選んだり、動的アセンブリを生成してそれを返したりすることができます。 ここでは、<xref:System.AppDomain.AssemblyResolve> イベントの処理について説明します。  

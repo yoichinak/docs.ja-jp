@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 911d4460-dd91-4958-85b2-2ca3299f9ec6
-ms.openlocfilehash: 6a0cc110c2b8bcd97b9f5c16a344db5a63046353
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d5b2fe4325000023acc98580a2a6d014f56fecbd
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709804"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83419110"
 ---
 # <a name="xmlschemavalidator-push-based-validation"></a>XmlSchemaValidator のプッシュ ベースの検証
 
@@ -456,7 +456,7 @@ static void SchemaValidationEventHandler(object sender, ValidationEventArgs e)
 |------------|-----------------|
 |&#124;|メソッドと状態 (縦棒の前後の項目) のいずれかを呼び出し可能です。|
 |?|疑問符の前のメソッドか状態はオプションです。呼び出す場合は 1 回しか呼べません。|
-|*|\* 記号の前のメソッドか状態はオプションです。複数回の呼び出しが可能です。|
+|\*|\* 記号の前のメソッドか状態はオプションです。複数回の呼び出しが可能です。|
 
 ## <a name="validation-context"></a>検証コンテキスト
 

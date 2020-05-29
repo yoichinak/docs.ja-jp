@@ -1,5 +1,6 @@
 ---
 title: タスク ベースの非同期パターンの実装
+description: この記事では、タスク ベースの非同期パターンを実装する方法について説明します。 これを使用し、計算主体の非同期操作と I/O バインドの非同期操作を実装できます。
 ms.date: 06/14/2017
 dev_langs:
 - csharp
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: fab6bd41-91bd-44ad-86f9-d8319988aa78
-ms.openlocfilehash: e09ed853598dcbb13cc8dc3fe963276e4b5e974d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: 7d031bab6ba0a4420062eff107aeb1262d9b3b40
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81739647"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83421229"
 ---
 # <a name="implementing-the-task-based-asynchronous-pattern"></a>タスク ベースの非同期パターンの実装
 タスク ベースの非同期パターン (TAP) は、3 つの方法 (Visual Studio の C# および Visual Basic コンパイラを使用する方法、手動で行う方法、またはコンパイラと手動による方法を組み合わせた方法) で実装できます。 以下のセクションでは、それぞれの方法について詳しく説明します。 TAP パターンを使用し、計算主体の非同期操作と I/O バインドの非同期操作の両方を実装できます。 [[ワークロード]](#workloads) セクションでは、操作の各種類を確認します。

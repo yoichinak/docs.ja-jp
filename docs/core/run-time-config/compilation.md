@@ -3,12 +3,12 @@ title: コンパイルの構成設定
 description: .NET Core アプリの JIT コンパイラの動作方法を構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 4db20ee6d36fe3d3d66f473644b70c02d4e02cb3
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cfcf9b5fc8d11a4ae35ab9b152f32133cd6930bf
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506845"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83762007"
 ---
 # <a name="run-time-configuration-options-for-compilation"></a>コンパイルのランタイム構成オプション
 
@@ -98,7 +98,7 @@ ms.locfileid: "82506845"
 - ループを含むメソッドに対して JIT コンパイラでクリック JIT を使用するかどうかを構成します。
 - ループに対するクイック JIT を有効にすると、起動時のパフォーマンスが向上する可能性があります。 ただし、長時間にわたって実行されるループでは、長期間にわたってあまり最適化されていないコードでスタックする可能性があります。
 - [クイック JIT](#quick-jit) が無効になっている場合、この設定は効果がありません。
-- 既定:無効 (`false`)。
+- この設定を省略すると、ループを含むメソッドに対してクイック JIT は使用されません。 これは、値を `false` に設定した場合と同じです。
 
 | | 設定の名前 | 値 |
 | - | - | - |
@@ -136,7 +136,7 @@ ms.locfileid: "82506845"
 
 - 使用可能な ReadyToRun データを含むイメージに対して、.NET Core ランタイムでプリコンパイル済みコードを使用するかどうかを構成します。 このオプションを無効にすると、ランタイムでフレームワーク コードが JIT コンパイルされます。
 - 詳細については、「[ReadyToRun](../whats-new/dotnet-core-3-0.md#readytorun-images)」を参照してください。
-- 既定:有効 (`1`)。
+- この設定を省略すると、.NET では ReadyToRun データが使用可能なときはそれが使用されます。 これは、値を `1` に設定した場合と同じです。
 
 | | 設定の名前 | 値 |
 | - | - | - |

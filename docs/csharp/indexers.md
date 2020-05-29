@@ -4,12 +4,12 @@ description: C# のインデクサーとインデックス付きプロパティ�
 ms.date: 06/20/2016
 ms.technology: csharp-fundamentals
 ms.assetid: 0e9496da-e766-45a9-b92b-91820d4a350e
-ms.openlocfilehash: 8e583b8a7cedab61ea6fdd56587608907610b6b4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e9b1cb18157982f068f1c1e4546e637f2bd707cb
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79145685"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394694"
 ---
 # <a name="indexers"></a>インデクサー
 
@@ -313,7 +313,7 @@ public class HistoricalWeatherData
 
 この例では、気象データを 2 つの異なる引数にマップするインデクサーを作成します。その引数は、city (`string` で表されます) と date (`DateTime` で表されます) です。 内部ストレージでは、2 つの `Dictionary` クラスを使用して、2 次元ディクショナリを表します。 パブリック API は、基になるストレージを表さなくなります。 代わりに、インデクサーの言語機能を使用すると、基になるストレージで別の主要コレクション型を使用する必要があっても、抽象化を表すパブリック インターフェイスを作成できます。
 
-このコードには、一部の開発者にはなじみのない部分が 2 つあります。 次の 2 つの `using` ステートメントです。
+このコードには、一部の開発者にはなじみのない部分が 2 つあります。 これら 2 つの `using` ディレクティブです。
 
 ```csharp
 using DateMeasurements = System.Collections.Generic.Dictionary<System.DateTime, IndexersSamples.Common.Measurements>;

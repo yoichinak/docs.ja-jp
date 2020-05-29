@@ -1,17 +1,17 @@
 ---
 title: Docker アプリの開発環境
 description: Docker 開発ライフサイクルをサポートする最も重要な開発ツールのオプションについて説明します。
-ms.date: 02/15/2019
-ms.openlocfilehash: 35236e75f47e830d0970ca9cfd074d9a69e6f85c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.date: 04/16/2020
+ms.openlocfilehash: b1df16db88fa85f794407c989f5428030c4cddf7
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "71214293"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83394897"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker アプリの開発環境
 
-## <a name="development-tools-choices-ide-or-editor"></a>開発ツールの選択: IDE またはエディター
+## <a name="development-tools-choices-ide-or-editor"></a>開発ツールの選択:IDE またはエディター
 
 完全で強力な IDE または軽量でアジャイルなエディターのどちらを選んでも、Microsoft は Docker アプリケーションの開発時に対応できます。
 
@@ -26,7 +26,7 @@ ms.locfileid: "71214293"
 
 ### <a name="visual-studio-with-docker-tools-windows-development-machine"></a>Docker ツールを備えた Visual Studio (Windows の開発用コンピューター)
 
-組み込みの Docker ツールが有効にされた Visual Studio 2017 以降を使用することをお勧めします。 Visual Studio により、選択した Docker 環境で、直接アプリケーションの開発、実行、および検証ができます。 F5 キーを押すと、Docker ホスト内で直接アプリケーション (1 つのコンテナー、または複数のコンテナー) をデバッグできます。または、Ctrl キーを押しながら F5 キーを押すと、コンテナーを再構築しなくても、アプリケーションを編集して更新できます。 これは、Linux または Windows の Docker コンテナーを作成する Windows 開発者にとって最も簡単で最も強力な選択肢です。
+組み込みの Docker ツールが有効にされた Visual Studio 2019 を使用することをお勧めします。 Visual Studio により、選択した Docker 環境で、直接アプリケーションの開発、実行、および検証ができます。 F5 キーを押すと、Docker ホスト内で直接アプリケーション (1 つのコンテナー、または複数のコンテナー) をデバッグできます。または、Ctrl キーを押しながら F5 キーを押すと、コンテナーを再構築しなくても、アプリケーションを編集して更新できます。 これは、Linux または Windows の Docker コンテナーを作成する Windows 開発者にとって最も簡単で最も強力な選択肢です。
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio for Mac (Mac の開発用コンピューター)
 
@@ -36,7 +36,7 @@ Docker ベースのアプリケーションを開発するときに、[Visual St
 
 最新の言語で Microsoft のツールを使用して Docker アプリケーションを開発できます。 次が初期一覧ですが、これに限定されているわけではありません。
 
-- .NET Core と ASP.NET Core
+- .NET Core および ASP.NET Core
 - Node.js
 - 移動
 - Java

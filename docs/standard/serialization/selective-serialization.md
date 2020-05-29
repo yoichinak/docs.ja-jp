@@ -1,5 +1,6 @@
 ---
 title: 選択的シリアル化
+description: この記事では、NonSerialized 属性でフィールドをマークして、フィールドをシリアル化できないようにする方法について説明します。
 ms.date: 08/07/2017
 dev_langs:
 - CSharp
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - serialization, selective serialization
 - binary serialization, selective serialization
 ms.assetid: 39c56635-95d2-4afd-aff1-b022e7649bb3
-ms.openlocfilehash: cc5d7964d5f3268f08721593fefc07e3eff853ca
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: c7203c4ea13c65f8d88c55de96988d3b1d9e9611
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159599"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83379159"
 ---
 # <a name="selective-serialization"></a>選択的シリアル化
 クラスには、シリアル化できないフィールドが含まれていることがよくあります。 たとえば、クラスのメンバー変数の 1 つにスレッド ID が格納されているとします。 クラスを逆シリアル化すると、クラスのシリアル化時に格納された ID を持つスレッドが実行されなくなることがあります。したがって、この値をシリアル化しても意味はありません。 以下のように、メンバー変数に [NonSerialized](xref:System.NonSerializedAttribute) 属性を使用してマークすることで、メンバー変数がシリアル化されないようにすることができます。  

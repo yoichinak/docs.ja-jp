@@ -1,17 +1,18 @@
 ---
 title: Windows の大きなオブジェクト ヒープ (LOH)
+description: この記事では、ラージ オブジェクト、.NET ガベージ コレクターによる管理方法、およびラージ オブジェクトを使用した場合のパフォーマンスへの影響について説明します。
 ms.date: 05/02/2018
 helpviewer_keywords:
 - large object heap (LOH)"
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: ab9beca58b3d6118bc0f5121b6f5dec71a9f9f36
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102269"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420579"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows システムの大きなオブジェクト ヒープ
 

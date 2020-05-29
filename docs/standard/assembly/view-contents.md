@@ -1,5 +1,6 @@
 ---
 title: '方法: アセンブリの内容を表示する'
+description: IL 逆アセンブラーを使用して、アセンブリの属性と、他のモジュールやアセンブリへの参照を表示できます。
 ms.date: 08/20/2019
 helpviewer_keywords:
 - assembly manifest, viewing information
@@ -14,12 +15,12 @@ dev_langs:
 - csharp
 - vb
 - cpp
-ms.openlocfilehash: 179b240bb06a319ff71009e14323d5c8f2740e5c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aed490459252466c6da06e5422b83b1bc20fb885
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79187385"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380064"
 ---
 # <a name="how-to-view-assembly-contents"></a>方法: アセンブリの内容を表示する
 

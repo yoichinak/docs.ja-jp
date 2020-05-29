@@ -1,19 +1,20 @@
 ---
 title: <dateTimeSerialization> 要素
+description: この記事では、DateTime オブジェクトのシリアル化モードを決定する <dateTimeSerialization> 要素について説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - dateTimeSerialization element
 - XML serialization, configuration
 - <dateTimeSerialization> element
 ms.assetid: 90fda55c-7730-41e9-bc4b-6423a4b920af
-ms.openlocfilehash: 180a4942dd4b701b56fe4788d5f8cd8607faaedd
-ms.sourcegitcommit: 944ddc52b7f2632f30c668815f92b378efd38eea
-ms.translationtype: MT
+ms.openlocfilehash: 652a88e25f59cd905e47ef71351e47e67f375286
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/03/2019
-ms.locfileid: "73459265"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83375826"
 ---
-# <a name="datetimeserialization-element"></a>\<dateTimeSerialization > 要素
+# <a name="datetimeserialization-element"></a>\<dateTimeSerialization> 要素
 <xref:System.DateTime> オブジェクトのシリアル化モードを決定します。  
   
  \<configuration>  
@@ -34,7 +35,7 @@ ms.locfileid: "73459265"
   
 |属性|説明|  
 |----------------|-----------------|  
-|`mode`|省略可能です。 シリアル化モードを指定します。 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 値のいずれかに設定します。 既定値は **RoundTrip** です。|  
+|`mode`|任意。 シリアル化モードを指定します。 <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode> 値のいずれかに設定します。 既定値は **RoundTrip** です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -57,5 +58,5 @@ ms.locfileid: "73459265"
 - <xref:System.Xml.Serialization.Configuration.DateTimeSerializationSection.DateTimeSerializationMode>
 - [構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)
 - [\<schemaImporterExtensions> 要素](../../../docs/standard/serialization/schemaimporterextensions-element.md)
-- [\<Schema> Terextensions の要素を追加 \<](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)
+- [\<schemaImporterExtensions>](../../../docs/standard/serialization/add-element-for-schemaimporterextensions.md)の \<add> 要素
 - [\<system.xml.serialization> 要素](../../../docs/standard/serialization/system-xml-serialization-element.md)

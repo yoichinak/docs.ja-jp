@@ -10,12 +10,12 @@ helpviewer_keywords:
 - versions, determining for .NET Framework
 - .NET Framework, determining version
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
-ms.openlocfilehash: 8469f977c6ed9691c81a2a8354935557b5c27171
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d25e4ae97877462b2a3b90e51262fb656921e392
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77093833"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83205498"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>方法: インストールされている .NET Framework バージョンを確認する
 
@@ -61,7 +61,7 @@ ms.locfileid: "77093833"
 | .NET Framework 4.7     | Windows 10 Creators Update:460798<br />他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):460805 |
 | .NET Framework 4.7.1   | Windows 10 Fall Creators Update および Windows Server バージョン 1709:461308<br/>他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):461310 |
 | .NET Framework 4.7.2   | Windows 10 April 2018 Update および Windows Server バージョン 1803:461808<br/>Windows 10 April 2018 Update および Windows Server バージョン 1803 以外のすべての Windows オペレーティング システム:461814 |
-| .NET Framework 4.8     | Windows 10 May 2019 Update および Windows 10 November 2019 Update:528040<br/>Windows 10 および Windows Server、バージョン 1909: 528209<br/>他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):528049 |
+| .NET Framework 4.8     | Windows 10 May 2019 Update および Windows 10 November 2019 Update:528040<br/>Windows 10 May 2020 Update:528209<br/>他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):528049 |
 
 ### <a name="minimum-version"></a>最小バージョン
 

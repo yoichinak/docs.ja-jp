@@ -1,18 +1,18 @@
 ---
 title: Microsoft.NET.Sdk の MSBuild プロパティ
-description: .NET Core SDK によって認識される MSBuild プロパティのリファレンスです。
+description: .NET Core SDK によって認識される MSBuild のプロパティと項目のリファレンスです。
 ms.date: 02/14/2020
 ms.topic: reference
-ms.openlocfilehash: 800ff59310d8437d7f770bf20a5bdf37714f8515
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: cda56b3e23592a341d9fe672fc1f1530adcdab49
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82795574"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83206107"
 ---
-# <a name="msbuild-properties-for-net-core-sdk-projects"></a>.NET Core SDK プロジェクトの MSBuild プロパティ
+# <a name="msbuild-reference-for-net-core-sdk-projects"></a>.NET Core SDK プロジェクトの MSBuild リファレンス
 
-このページでは、.NET Core プロジェクトを構成するための MSBuild プロパティについて説明します。 プロパティの子要素としてプロパティごとに "*メタデータ*" を指定できます。
+このページは、.NET Core プロジェクトの構成に使用できる、MSBuild のプロパティと項目のリファレンスです。
 
 > [!NOTE]
 > このページの編集は進行中であり、.NET Core SDK の便利な MSBuild プロパティがすべて記載されている訳ではありません。 一般的な MSBuild プロパティの一覧については、「[MSBuild プロジェクトの共通プロパティ](/visualstudio/msbuild/common-msbuild-project-properties)」を参照してください。
@@ -78,7 +78,7 @@ ms.locfileid: "82795574"
 </PropertyGroup>
 ```
 
-## <a name="publish-properties"></a>[発行] プロパティ
+## <a name="publish-properties-and-items"></a>プロパティと項目の発行
 
 - [RuntimeIdentifier](#runtimeidentifier)
 - [RuntimeIdentifiers](#runtimeidentifiers)
@@ -136,7 +136,23 @@ ms.locfileid: "82795574"
 
 ## <a name="compile-properties"></a>コンパイルのプロパティ
 
+- [EmbeddedResourceUseDependentUponConvention](#embeddedresourceusedependentuponconvention)
 - [LangVersion](#langversion)
+
+### <a name="embeddedresourceusedependentuponconvention"></a>EmbeddedResourceUseDependentUponConvention
+
+`EmbeddedResourceUseDependentUponConvention` プロパティは、リソース マニフェスト ファイル名が、リソース ファイルと併置されているソース ファイルの型情報から生成されるかどうかを定義します。 たとえば、*Form1.vb* が *Form1.cs* と同じフォルダーにあり、`EmbeddedResourceUseDependentUponConvention` が `true` に設定されている場合、生成された *.resources* ファイルは *Form1.cs* で定義されている最初の型から名前を受け取ります。 たとえば、`MyNamespace.Form1` が *Form1.cs* で定義されている最初の型である場合、生成されたファイル名は *MyNamespace.Form1.resources* になります。
+
+> [!NOTE]
+> `LogicalName`、`ManifestResourceName`、または `DependentUpon` メタデータが `EmbeddedResource` 項目に対して指定されている場合、そのリソース ファイルに対して生成されたマニフェスト ファイル名は、代わりにそのメタデータがベースになります。
+
+既定では、新しい .NET Core プロジェクトでは、このプロパティは `true` に設定されます。 `false` に設定され、かつプロジェクト ファイルの `EmbeddedResource` 項目に `LogicalName`、`ManifestResourceName`、`DependentUpon` のメタデータがどれも指定されていない場合、リソース マニフェストのファイル名は、プロジェクトのルート名前空間と、 *.resx* ファイルへの相対ファイル パスがベースになります。 詳細については、「[リソース マニフェスト ファイルの名前付けの方法](../resources/manifest-file-names.md)」を参照してください。
+
+```xml
+<PropertyGroup>
+  <EmbeddedResourceUseDependentUponConvention>true</EmbeddedResourceUseDependentUponConvention>
+</PropertyGroup>
+```
 
 ### <a name="langversion"></a>LangVersion
 
@@ -254,7 +270,7 @@ ms.locfileid: "82795574"
 </PropertyGroup>
 ```
 
-## <a name="reference-properties"></a>参照のプロパティ
+## <a name="reference-properties-and-items"></a>プロパティと項目の参照
 
 - [AssetTargetFallback](#assettargetfallback)
 - [PackageReference](#packagereference)
@@ -276,7 +292,7 @@ ms.locfileid: "82795574"
 
 ### <a name="packagereference"></a>PackageReference
 
-`PackageReference` では、NuGet パッケージへの参照が定義されます。 たとえば、[メタパッケージ](../packages.md#metapackages)ではなく 1 つのパッケージを参照する場合があります。
+`PackageReference` 項目では、NuGet パッケージへの参照が定義されます。 たとえば、[メタパッケージ](../packages.md#metapackages)ではなく 1 つのパッケージを参照する場合があります。
 
 `Include` 属性は、パッケージ ID を指定します。 `Version` 属性では、バージョンまたはバージョン範囲を指定します。 最小バージョン、最大バージョン、範囲、厳密一致を指定する方法については、「[バージョン範囲](/nuget/concepts/package-versioning#version-ranges)」を参照してください。 また、メタデータ `IncludeAssets`、`ExcludeAssets`、`PrivateAssets` をプロジェクト参照に追加できます。
 
@@ -308,7 +324,7 @@ ms.locfileid: "82795574"
 
 `Reference` 項目では、アセンブリ ファイルへの参照を定義します。
 
-`Include` 属性によってファイルの名前が指定され、`HintPath` 子要素によってアセンブリへのパスが指定されます。
+`Include` 属性によってファイルの名前が指定され、`HintPath` メタデータによってアセンブリへのパスが指定されます。
 
 ```xml
 <ItemGroup>

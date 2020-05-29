@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 0105db519f7accec6bf8bfbafdc6a67a444b1074
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
+ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249169"
+ms.lasthandoff: 05/15/2020
+ms.locfileid: "83420384"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -77,9 +77,7 @@ using System.Threading.Tasks;
 
 この時点でプロジェクトをビルドすると、このメソッドに対して警告が生成されます。これは、`await` 演算子がメソッドに含まれておらず、メソッドが同期的に実行されるためです。 現時点ではこの警告を無視してください。`await` 演算子は、メソッドを記述する際に追加します。
 
-次に、`namespace` ステートメントに定義されている名前空間の名前を、既定値の `ConsoleApp` から `WebAPIClient` に変更します。 後から、この名前空間で `repo` クラスを定義します。
-
-次に、`Main` メソッドを更新してこのメソッドを呼び出します。 `ProcessRepositories` メソッドはタスクを返します。そのタスクが完了する前にプログラムを終了しないでください。 そのため、`Main` のシグネチャを変更する必要があります。 `async` 修飾子を追加し、戻り値の型を `Task` に変更します。 次に、メソッドの本体で、呼び出しを `ProcessRepositories` に追加します。 そのメソッド呼び出しに `await` キーワードを追加します。
+次に、`ProcessRepositories` メソッドを呼び出すように `Main` メソッドを更新します。 `ProcessRepositories` メソッドはタスクを返します。そのタスクが完了する前にプログラムを終了しないでください。 そのため、`Main` のシグネチャを変更する必要があります。 `async` 修飾子を追加し、戻り値の型を `Task` に変更します。 次に、メソッドの本体で、呼び出しを `ProcessRepositories` に追加します。 そのメソッド呼び出しに `await` キーワードを追加します。
 
 ```csharp
 static async Task Main(string[] args)
@@ -173,6 +171,7 @@ var repositories = await JsonSerializer.DeserializeAsync<List<Repository>>(await
 新しい名前空間を使用しているため、ファイルの先頭にそれを追加する必要もあります。
 
 ```csharp
+using System.Collections.Generic;
 using System.Text.Json;
 ```
 

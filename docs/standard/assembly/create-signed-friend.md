@@ -1,16 +1,17 @@
 ---
 title: '方法: 署名されたフレンド アセンブリを作成する'
+description: この記事では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 .NET セキュリティについての情報が含まれています。
 ms.date: 08/19/2019
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 9912fa70014a8828e994cf528644aaa7cb351fea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b6176afed44e32911a37a0d753cea2bae7d8554e
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159495"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378542"
 ---
 # <a name="how-to-create-signed-friend-assemblies"></a>方法: 署名されたフレンド アセンブリを作成する
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  

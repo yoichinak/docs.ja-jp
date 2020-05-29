@@ -3,19 +3,19 @@ title: スレッドの構成設定
 description: .NET Core アプリのスレッドを構成するランタイム設定について説明します。
 ms.date: 11/27/2019
 ms.topic: reference
-ms.openlocfilehash: 68b8e93ca6ec3f708a7a627307655ada1955500a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c7c16993a07ef95223481791153b75ab2f61533
+ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789847"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83761929"
 ---
 # <a name="run-time-configuration-options-for-threading"></a>スレッドのランタイム構成オプション
 
 ## <a name="cpu-groups"></a>CPU グループ
 
 - CPU グループ全体にスレッドを自動的に配布するかどうかを構成します。
-- 既定:無効 (`0`)。
+- この設定を省略した場合、スレッドは CPU グループ間に分散されません。 これは、値を `0` に設定した場合と同じです。
 
 | | 設定の名前 | 値 |
 | - | - | - |

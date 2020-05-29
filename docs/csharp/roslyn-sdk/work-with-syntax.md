@@ -3,29 +3,29 @@ title: .NET Compiler Platform SDK 構文モデルを使用する
 description: この概要は、構文ノードを理解して操作するために使用する型を理解するためのものです。
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: 87b79c3af4958299fcd966dcc4b04868f88675c7
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: fdb13095c2b91e54d58988a51a51b05652e57ea6
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975915"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83208396"
 ---
 # <a name="work-with-syntax"></a>構文の使用
 
-**構文ツリー**は、コンパイラ API によって公開される基本的なデータ構造です。 これらのツリーは、ソース コードの字句および構文構造を表します。 これらは、次の 2 つの重要な目的を果たします。
+*構文ツリー*は、コンパイラ API によって公開される基本的なデータ構造です。 これらのツリーは、ソース コードの字句および構文構造を表します。 これらは、次の 2 つの重要な目的を果たします。
 
-1. IDE、アドイン、コード分析ツール、リファクタリングなどのツールで、ユーザーのプロジェクトのソース コードの構文構造を表示および処理できるようにします。
-2. リファクタリングや IDE などのツールで、自然な方法でソース コードを作成、変更、再配置できるようにします。テキストを直接編集する必要がありません。 ツリーを作成して操作することで、ツールでソース コードを簡単に作成して再配置することができます。
+- IDE、アドイン、コード分析ツール、リファクタリングなどのツールで、ユーザーのプロジェクトのソース コードの構文構造を表示して処理できるようにします。
+- リファクタリングや IDE などのツールで、自然な方法でソース コードを作成、変更、再配置できるようにします。テキストを直接編集する必要がありません。 ツリーを作成して操作することで、ツールでソース コードを簡単に作成して再配置することができます。
 
 ## <a name="syntax-trees"></a>構文ツリー
 
 構文ツリーは、コンパイル、コード分析、バインディング、リファクタリング、IDE 機能、コード生成に使用されるプライマリ構造です。 ソース コードは、最初に識別され、多くのよく知られている構造的な言語要素の 1 つに分類されないと、どの部分も認識されません。
 
-構文ツリーには、3 つのキー属性があります。 1 番目の属性は、構文ツリーがすべてのソース情報を正確に保持するためのものです。 これは、構文ツリーには、ソース テキスト内で見つかったすべての情報、すべての文法的なコンストラクト、すべての構文トークン、およびその間にある他のすべてのもの (空白文字、コメント、プリプロセッサ ディレクティブを含む) が含まれることを意味します。 たとえば、ソースに記載されている各リテラルは、入力されているとおりに表されます。 構文ツリーは、プログラムが不完全または形式が正しくない場合にも、構文ツリー内のスキップされたトークンまたは見つからないトークンを表すことで、ソース コードのエラーを表します。
+構文ツリーには、3 つのキー属性があります。 1 番目の属性は、構文ツリーがすべてのソース情報を正確に保持するためのものです。 完全な忠実性とは、構文ツリーには、ソース テキスト内で見つかったすべての情報、すべての文法的なコンストラクト、すべての構文トークン、およびその間にある他のすべてのもの (空白文字、コメント、プリプロセッサ ディレクティブを含む) が含まれることを意味します。 たとえば、ソースに記載されている各リテラルは、入力されているとおりに表されます。 また、構文ツリーは、プログラムが不完全または形式が正しくないときにも、スキップされたトークンまたは見つからないトークンを表すことで、ソース コードのエラーをキャプチャします。
 
-これにより、構文ツリーの 2 番目の属性が有効になります。 パーサーから取得された構文ツリーは、解析元の正確なテキストを生成できます。 任意の構文ノードから、そのノードで root 化されたサブツリーのテキスト表現を取得することができます。 これは、ソース テキストを構築および編集する方法として構文ツリーが使用できることを意味します。 ツリーを作成することによって、暗黙的に同じテキストを作成しており、構文ツリーを編集することで、既存のツリーへの変更から新しいツリーを作成し、効果的にテキストを編集しています。
+構文ツリーの 2 番目の属性は、解析元のテキストを正確に生成できることです。 任意の構文ノードから、そのノードで root 化されたサブツリーのテキスト表現を取得できます。 これは、ソース テキストを構築および編集する方法として構文ツリーが使用できることを意味します。 ツリーを作成することで、暗黙的に同じテキストを作成しています。また、構文ツリーを編集することで、既存のツリーへの変更から新しいツリーを作成し、効果的にテキストを編集しています。
 
-構文ツリーの 3 番目の属性は、変更不可でスレッド セーフです。  つまり、取得後のツリーは、コードの現在の状態のスナップショットで、変化しないことを意味します。 これにより、ロックや重複を発生させずに、複数のユーザーが異なるスレッドで同時に同じ構文ツリーと対話できます。 ツリーは変更不可でツリーを直接変更することはできないため、ツリーの追加のスナップショットを作成することで構文ツリーを作成および変更するファクトリ メソッドが役立ちます。 基になるノードを再利用するという点でツリーは効果的であるため、追加のメモリをほとんど使用せずに、新しいバージョンをすばやく再構築することができます。
+構文ツリーの 3 番目の属性は、変更不可でスレッド セーフです。 ツリーの取得後は、コードの現在の状態のスナップショットで、変化することはありません。 これにより、ロックや重複を発生させずに、複数のユーザーが異なるスレッドで同時に同じ構文ツリーと対話できます。 ツリーは変更不可でツリーを直接変更することはできないため、ツリーの追加のスナップショットを作成することで構文ツリーを作成および変更するファクトリ メソッドが役立ちます。 基になるノードを再利用するという点でツリーは効果的であるため、追加のメモリをほとんど使用せずに、新しいバージョンをすばやく再構築することができます。
 
 構文ツリーは、文字どおりのツリー データ構造で、非終端構造の要素が他の要素の親となります。 各構文ツリーは、ノード、トークン、およびトリビアで構成されます。
 
@@ -35,7 +35,7 @@ ms.locfileid: "82975915"
 
 すべての構文ノードは、構文ツリー内の非終端ノードで、これは他のノードとトークンを常に子として持つことを意味します。 別のノードの子として、各ノードは <xref:Microsoft.CodeAnalysis.SyntaxNode.Parent?displayProperty=nameWithType> プロパティからアクセスできる親ノードを持ちます。 ノードとツリーは変更できないため、ノードの親が変わることはありません。 ツリーのルートには Null 親があります。
 
-各ノードには <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> メソッドがあり、子ノードのリストをソース テキスト内の位置に基づいて順番に返します。 このリストにはトークンは含まれていません。 各ノードには、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>、または <xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> などの子孫を調べるメソッドもあります。これらは、そのノードをルートとするサブツリー内に存在するすべてのノード、トークン、またはトリビアのリストを表しています。
+各ノードには <xref:Microsoft.CodeAnalysis.SyntaxNode.ChildNodes?displayProperty=nameWithType> メソッドがあり、子ノードのリストをソース テキスト内の位置に基づいて順番に返します。 このリストにはトークンは含まれていません。 各ノードには、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantNodes%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTokens%2A>、<xref:Microsoft.CodeAnalysis.SyntaxNode.DescendantTrivia%2A> などの子孫を調べるメソッドもあります。これらは、そのノードをルートとするサブツリー内に存在するすべてのノード、トークン、またはトリビアのリストを表しています。
 
 さらに、構文ノードの各サブクラスは、厳密に型指定されたプロパティを通じて、まったく同じ子を公開します。 たとえば、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax> ノード クラスには二項演算子に固有の 3 つのプロパティ、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken>、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> があります。 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Left> と <xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.Right> の型は <xref:Microsoft.CodeAnalysis.CSharp.Syntax.ExpressionSyntax> で、<xref:Microsoft.CodeAnalysis.CSharp.Syntax.BinaryExpressionSyntax.OperatorToken> の型は <xref:Microsoft.CodeAnalysis.SyntaxToken> です。
 
@@ -57,7 +57,7 @@ ms.locfileid: "82975915"
 
 トリビアは通常の言語構文の一部ではなく、任意の 2 つのトークンの間の任意の場所に表示できるため、トリビアはノードの子として構文ツリーには含まれません。 しかしトリビアは、リファクタリングなどの機能を実装するときや、ソース テキストへの忠実性を維持するには重要なため、構文ツリーの一部として存在します。
 
-トークンの <xref:Microsoft.CodeAnalysis.SyntaxToken.LeadingTrivia?displayProperty=nameWithType> または <xref:Microsoft.CodeAnalysis.SyntaxToken.TrailingTrivia?displayProperty=nameWithType> コレクションを調べることで、トリビアにアクセスすることができます。 ソース テキストが解析される時に、トリビアのシーケンスがトークンに関連付けられます。 一般に、その後トークンは任意のトリビアを次のトークンまで同じ行で所有します。 その行以降のすべてのトリビアは、後続のトークンに関連付けられます。 ソース ファイル内の最初のトークンがすべての初期トリビアを取得し、ファイル内のトリビアの最後のシーケンスが EOF トークンに付加されます。それ以外の場合は幅が 0 になります。
+トークンの <xref:Microsoft.CodeAnalysis.SyntaxToken.LeadingTrivia?displayProperty=nameWithType> または <xref:Microsoft.CodeAnalysis.SyntaxToken.TrailingTrivia?displayProperty=nameWithType> コレクションを調べることで、トリビアにアクセスできます。 ソース テキストが解析される時に、トリビアのシーケンスがトークンに関連付けられます。 一般に、その後トークンは任意のトリビアを次のトークンまで同じ行で所有します。 その行以降のすべてのトリビアは、後続のトークンに関連付けられます。 ソース ファイル内の最初のトークンがすべての初期トリビアを取得し、ファイル内のトリビアの最後のシーケンスが EOF トークンに付加されます。それ以外の場合は幅が 0 になります。
 
 構文ノードやトークンとは異なり、構文トリビアには親がありません。 しかし、構文トリビアはツリーの一部で、それぞれが 1 つのトークンに関連付けられているため、<xref:Microsoft.CodeAnalysis.SyntaxTrivia.Token?displayProperty=nameWithType> プロパティを使用して、トリビアが関連付けられているトークンにアクセスすることができます。
 
@@ -95,6 +95,6 @@ ms.locfileid: "82975915"
 
 ソース テキストに構文エラーが含まれている場合でも、ソースへのラウンドトリップが可能な完全な構文ツリーが公開されます。 パーサーは、定義されている言語の構文に準拠しないコードを検出すると、次の 2 つのいずれかの手法を使って構文ツリーを作成します。
 
-1 つ目は、パーサーが特定の種類のトークンを想定していたがそれが見つからない場合、その見つからないトークンを構文ツリーの想定されていた場所に挿入します。 見つからないトークンは、想定されていた実際のトークンを表しますが、範囲は空で、その <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType> プロパティは `true` を返します。
+- パーサーが特定の種類のトークンを想定していたがそれが見つからない場合、その見つからないトークンを構文ツリーの想定されていた場所に挿入することがあります。 見つからないトークンは、想定されていた実際のトークンを表しますが、範囲は空で、その <xref:Microsoft.CodeAnalysis.SyntaxNode.IsMissing?displayProperty=nameWithType> プロパティは `true` を返します。
 
-2 つ目は、パーサーは解析を続行できるトークンが見つかるまでトークンをスキップします。 この場合、スキップされたトークンは、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia> の種類を持つトリビア ノードとしてアタッチされます。
+- パーサーが解析を続行できるトークンが見つかるまでトークンをスキップすることがあります。 この場合、スキップされたトークンは、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxKind.SkippedTokensTrivia> の種類を持つトリビア ノードとしてアタッチされます。

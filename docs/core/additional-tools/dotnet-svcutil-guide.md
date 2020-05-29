@@ -3,12 +3,12 @@ title: WCF svcutil ツールの概要
 description: .NET Framework プロジェクトの WCF svcutil ツールと同様に、.NET Core プロジェクトと ASP.NET Core プロジェクトの機能を追加する Microsoft WCF dotnet-svcutil ツールの概要。
 author: mlacouture
 ms.date: 02/22/2019
-ms.openlocfilehash: 1f500c9355112183a135c2b639807c7cd62fbbfc
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: fde42f7d040fba91f51ce6faa58282ed0206a853
+ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021258"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83396217"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 用 WCF dotnet-svcutil ツール
 
@@ -119,7 +119,7 @@ Windows、macOS、または Linux のコマンド ウィンドウから次の手
 
 2. 使用するクライアント クラスと操作の名前を検索します。 `Reference.cs` には `System.ServiceModel.ClientBase` を継承するクラスが含まれており、そのメソッドを使用してサービスで操作を呼び出すことができます。 この例では、_SayHello_ サービスの _Hello_ 操作を呼び出します。 `ServiceReference.SayHelloClient` はクライアント クラスの名前であり、操作の呼び出しに使用できる `HelloAsync` という名前のメソッドが含まれます。
 
-3. エディターで `Startup.cs` ファイルを開き、先頭にサービス参照名前空間に対する using ステートメントを追加します。
+3. エディターで `Startup.cs` ファイルを開き、先頭にサービス参照名前空間に対する `using`ディレクティブを追加します。
 
     ```csharp
     using ServiceReference;

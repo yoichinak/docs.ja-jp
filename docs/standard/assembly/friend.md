@@ -1,16 +1,17 @@
 ---
 title: フレンド アセンブリ
+description: フレンド アセンブリ とは、別のアセンブリの internal (C#) または Friend (Visual Basic) 型およびメンバーにアクセスできる .NET アセンブリです。
 ms.date: 08/20/2019
 ms.assetid: b65ea7de-0801-477a-a39c-e914c2cc107c
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a74d4b74ead8492028a092e090f9281231802a87
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 105621da2bd418c6294fa2bbec474809599cb6a5
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348178"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83378933"
 ---
 # <a name="friend-assemblies"></a>フレンド アセンブリ
 

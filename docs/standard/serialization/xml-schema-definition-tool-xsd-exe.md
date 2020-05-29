@@ -1,24 +1,25 @@
 ---
 title: XML Schema Definition Tool (Xsd.exe)
+description: XML シリアライザー ジェネレーター ツールは、指定されたアセンブリ内の型の XML シリアル化アセンブリを生成します。これにより、XmlSerializer の起動パフォーマンスが向上します。
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
-ms.openlocfilehash: 6ec99e77db4215184547ea2bbbe0d1ff8ad3c286
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
-ms.translationtype: MT
+ms.openlocfilehash: 9b2be0b0b267973bd25ffd021dec18a7b9bcadec
+ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389771"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83380050"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
 XML スキーマ定義ツール (Xsd.exe) は、XDR、XML、および XSD ファイル、またはランタイム アセンブリ内のクラスから XML スキーマ クラスまたは共通言語ランタイム クラスを生成します。
 
-XML スキーマ定義ツール (Xsd.exe) は、通常、次のパスにあります。
-_C:\\プログラム\\ファイル (x86)\\マイクロソフト\\SDK\\ウィンドウ\\{バージョン} ビン NETFX {バージョン} ツール\\_
+通常、XML スキーマ定義ツール (Xsd.exe) は、次のパスにあります。
+_C:\\Program Files (x86)\\Microsoft SDKs\\Windows\\{version}\\bin\\NETFX {version} Tools\\_
 
 ## <a name="syntax"></a>構文
 
-コマンド ラインからツールを実行します。
+コマンド ラインでツールを実行します。
 
 ```console
 xsd file.xdr [-outputdir:directory][/parameters:file.xml]
@@ -31,53 +32,53 @@ xsd {file.dll | file.exe} [-outputdir:directory] [/type:typename [...]][/paramet
 ```
   
 > [!TIP]
-> NET Framework ツールが正しく機能するには、 、`Path``Include`および 環境変数`Lib`を正しく設定する必要があります。 これらの環境変数を設定するには、\<SDK>\v2.0\Bin ディレクトリにある SDKVars.bat を実行します。 SDKVars.bat は、コマンド シェルごとに実行する必要があります。
+> .NET Framework ツールが適切に機能するには、 `Path`、`Include`、および `Lib` の各環境変数を正しく設定する必要があります。 これらの環境変数を設定するには、\<SDK>\v2.0\Bin ディレクトリにある SDKVars.bat を実行します。 SDKVars.bat は、コマンド シェルごとに実行する必要があります。
 
 ## <a name="argument"></a>引数
 
 |引数|説明|
 |--------------|-----------------|
-|*ファイル拡張子*|変換元の入力ファイルを指定します。 拡張子は、.xdr、.xml、.xsd、.dll、または .exe のいずれかとして指定する必要があります。<br /><br /> XDR スキーマ ファイル (拡張子 .xdr) を指定すると、Xsd.exe は XDR スキーマを XSD スキーマに変換します。 出力ファイルの名前は XDR スキーマと同じですが、拡張子は .xsd となります。<br /><br /> XML ファイル (拡張子 .xml) を指定すると、Xsd.exe はそのファイル内のデータからスキーマを推測して XSD スキーマを生成します。 出力ファイルの名前は XML ファイルと同じですが、拡張子は .xsd となります。<br /><br /> XML スキーマ ファイル (拡張子 .xsd) を指定すると、XML スキーマと対応するランタイム オブジェクト用のソース コードが生成されます。<br /><br /> ランタイム アセンブリ ファイル (拡張子 .exe または .dll) を指定すると、そのアセンブリに含まれる 1 つ以上の型用のスキーマが生成されます。 `/type` オプションを使用して、スキーマを生成する対象の型を指定できます。 出力スキーマには、schema0.xsd、schema1.xsd などの名前が付けられます。 Xsd.exe が複数のスキーマを生成するのは、指定した型によって、カスタム属性 `XMLRoot` を使用する名前空間が特定される場合のみです。|
+|*file.extension*|変換元の入力ファイルを指定します。 拡張子として、.xdr、.xml、.xsd、.dll、または .exe のいずれかを指定する必要があります。<br /><br /> XDR スキーマ ファイル (拡張子 .xdr) を指定すると、Xsd.exe は XDR スキーマを XSD スキーマに変換します。 出力ファイルの名前は XDR スキーマと同じですが、拡張子は .xsd となります。<br /><br /> XML ファイル (拡張子 .xml) を指定すると、Xsd.exe はそのファイル内のデータからスキーマを推測して XSD スキーマを生成します。 出力ファイルの名前は XML ファイルと同じですが、拡張子は .xsd となります。<br /><br /> XML スキーマ ファイル (拡張子 .xsd) を指定すると、XML スキーマと対応するランタイム オブジェクト用のソース コードが生成されます。<br /><br /> ランタイム アセンブリ ファイル (拡張子 .exe または .dll) を指定すると、そのアセンブリに含まれる 1 つ以上の型用のスキーマが生成されます。 `/type` オプションを使用して、スキーマを生成する対象の型を指定できます。 出力スキーマには、schema0.xsd、schema1.xsd などの名前が付けられます。 Xsd.exe が複数のスキーマを生成するのは、指定した型によって、カスタム属性 `XMLRoot` を使用する名前空間が特定される場合のみです。|
 
-## <a name="general-options"></a>[全般] のオプション
+## <a name="general-options"></a>一般オプション
 
 |オプション|説明|
 |------------|-----------------|
-|**/h\[エルプ\]**|このツールのコマンド構文とオプションを表示します。|
-|**/o\[ウット\]プディル :**_ディレクトリ_|出力ファイル用のディレクトリを指定します。 この引数は 1 回だけ指定できます。 既定値は現在のディレクトリです。|
+|**/h\[elp\]**|このツールのコマンド構文とオプションを表示します。|
+|**/o\[utputdir\]:** _directory_|出力ファイル用のディレクトリを指定します。 この引数は 1 回だけ指定できます。 既定値は、現在のディレクトリです。|
 |**/?**|このツールのコマンド構文とオプションを表示します。|
-|**/p\[アラ\]メーター :**_ファイル.xml_|指定された .xml ファイルから各種のオペレーション モードのためのオプションを読み込みます。 短縮形は `/p:` です。 詳細については、「[解説」](#remarks)を参照してください。|
+|**/p\[arameters\]:** _file.xml_|指定された .xml ファイルから各種のオペレーション モードのためのオプションを読み込みます。 短縮形は `/p:` です。 詳細については、「[解説](#remarks)」を参照してください。|
 
 ## <a name="xsd-file-options"></a>XSD ファイルのオプション
  .xsd ファイルについては、次のオプションのうち 1 つだけを指定する必要があります。
 
 |オプション|説明|
 |------------|-----------------|
-|**/c\[ラッセ\]**|指定したスキーマと対応するクラスを生成します。 オブジェクトに XML データを読み込むには、<xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドを使用します。|
-|**/d\[アタセット\]**|指定したスキーマに対応する <xref:System.Data.DataSet> から派生したクラスを生成します。 派生したクラスに XML データを読み込むには、<xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> メソッドを使用します。|
+|**/c\[lasses\]**|指定したスキーマと対応するクラスを生成します。 オブジェクトに XML データを読み込むには、<xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A?displayProperty=nameWithType> メソッドを使用します。|
+|**/d\[ataset\]**|指定したスキーマに対応する <xref:System.Data.DataSet> から派生したクラスを生成します。 派生したクラスに XML データを読み込むには、<xref:System.Data.DataSet.ReadXml%2A?displayProperty=nameWithType> メソッドを使用します。|
 
  .xsd ファイルについては、次のオプションのうち任意のオプションを指定できます。
 
 |オプション|説明|
 |------------|-----------------|
-|**/e\[レ\]メント :**_要素_|コードを生成する対象とする、スキーマ内の要素を指定します。 既定では、すべての要素が指定されます。 この引数は、複数回指定できます。|
+|**/e\[lement\]:** _element_|コードを生成する対象とする、スキーマ内の要素を指定します。 既定では、すべての要素が指定されます。 この引数は、複数回指定できます。|
 |**/enableDataBinding**|データ バインディングを有効にするために、生成されたすべての型に <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装します。 短縮形は `/edb` です。|
-|**/有効なデータセット**|(短い形式`/eld`: .)生成されたデータセットを LINQ to DataSet の使用に対してクエリできることを指定します。 このオプションは /dataset オプションも指定した場合に使用されます。 詳細については、「[LINQ to DataSet Overview](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)」(LINQ to DataSet Overview) と「[Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)」(型指定された DataSet のクエリ) を参照してください。 LINQ の使用に関する一般的な情報については、「[言語統合クエリ (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md)または[言語統合クエリ (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)」を参照してください。|
-|**/f\[イエルド\]**|プロパティの代わりにフィールドを生成します。 既定では、プロパティが生成されます。|
-|**/l\[アンゲージ\]:**_言語_|使用するプログラミング言語を指定します。 `CS` (C#、既定値)、`VB` (Visual Basic)、`JS` (JScript)、または `VJS` (Visual J#) から選択します。 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> を実装するクラスの完全修飾名を指定することもできます。|
-|**/n\[\]amespace :**_名前空間_|生成する型のランタイム名前空間を指定します。 既定の名前空間は `Schemas` です。|
+|**/enableLinqDataSet**|(短縮形: `/eld`)LINQ to DataSet を使用して、生成された DataSet を照会できるように指定します。 このオプションは /dataset オプションも指定した場合に使用されます。 詳細については、「[LINQ to DataSet Overview](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)」(LINQ to DataSet Overview) と「[Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)」(型指定された DataSet のクエリ) を参照してください。 LINQ の使用に関する一般的な情報については、「[統合言語クエリ (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md)」または「[統合言語クエリ (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)」を参照してください。|
+|**/f\[ields\]**|プロパティの代わりにフィールドを生成します。 既定では、プロパティが生成されます。|
+|**/l\[anguage\]:** _language_|使用するプログラミング言語を指定します。 `CS` (C#、既定値)、`VB` (Visual Basic)、`JS` (JScript)、または `VJS` (Visual J#) から選択します。 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> を実装するクラスの完全修飾名を指定することもできます。|
+|**/n\[amespace\]:** _namespace_|生成する型のランタイム名前空間を指定します。 既定の名前空間は `Schemas` です。|
 |**/nologo**|バナーを表示しません。|
 |**/order**|すべてのパーティクル メンバーに明示的な順序 ID を生成します。|
-|**/o\[\]ut :**_ディレクトリ名_|ファイルを格納する出力ディレクトリを指定します。 既定値は現在のディレクトリです。|
-|**/u\[\]ri :**_uri_|コードを生成する対象とする、スキーマ内の要素の URI を指定します。 指定した場合、この URI は `/element` オプションで指定したすべての要素に適用されます。|
+|**/o\[ut\]:** _directoryName_|ファイルを格納する出力ディレクトリを指定します。 既定値は、現在のディレクトリです。|
+|**/u\[ri\]:** _uri_|コードを生成する対象とする、スキーマ内の要素の URI を指定します。 指定した場合、この URI は `/element` オプションで指定したすべての要素に適用されます。|
 
 ## <a name="dll-and-exe-file-options"></a>DLL ファイルと EXE ファイルのオプション
 
 |オプション|説明|
 |------------|-----------------|
-|**/t\[ype\]:**_型名_|スキーマの作成対象とする型の名前を指定します。 複数の型の引数を指定できます。 *typename* によって名前空間が特定されない場合、指定された型を持つアセンブリに含まれるすべての型が対象となります。 *typename* によって名前空間が特定される場合は、その型だけが対象になります。 *typename* の末尾がアスタリスク (\*) の場合は、\* の前にある文字列で始まる型のすべてが対象となります。 `/type` オプションを省略すると、アセンブリに含まれるすべての型についてスキーマが生成されます。|
+|**/t\[ype\]:** _typename_|スキーマの作成対象とする型の名前を指定します。 複数の型の引数を指定できます。 *typename* によって名前空間が特定されない場合、指定された型を持つアセンブリに含まれるすべての型が対象となります。 *typename* によって名前空間が特定される場合は、その型だけが対象になります。 *typename* の末尾がアスタリスク (\*) の場合は、\* の前にある文字列で始まる型のすべてが対象となります。 `/type` オプションを省略すると、アセンブリに含まれるすべての型についてスキーマが生成されます。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 Xsd.exe が実行する操作を次の表に示します。
 
@@ -87,9 +88,9 @@ Xsd.exe が実行する操作を次の表に示します。
 |XML から XSD へ|XML ファイルから XML スキーマを生成します。|
 |XSD から DataSet へ|XSD スキーマ ファイルから共通言語ランタイムの <xref:System.Data.DataSet> クラスを生成します。 生成されるクラスには、標準の XML データ用のリッチ オブジェクト モデルが用意されています。|
 |XSD からクラスへ|XSD スキーマ ファイルからランタイム クラスを生成します。 生成されたクラスを <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> と組み合わせて使用すると、このスキーマに従う XML コードの読み書きを実行できます。|
-|クラスから XSD へ| ランタイム アセンブリ ファイルに含まれる 1 つ以上の型から XML スキーマを生成します。 生成されたスキーマは、 で使用される<xref:System.Xml.Serialization.XmlSerializer>XML 形式を定義します。|
+|クラスから XSD へ| ランタイム アセンブリ ファイルに含まれる 1 つ以上の型から XML スキーマを生成します。 生成されたスキーマは、<xref:System.Xml.Serialization.XmlSerializer> で使用される XML 形式を定義します。|
 
- Xsd.exe によって操作できるのは、W3C (World Wide Web Consortium) が提唱する XSD (XML スキーマ定義) に準拠した XML スキーマだけです。 XML スキーマ定義の提案または XML 標準の詳細については、<https://w3.org>を参照してください。
+ Xsd.exe によって操作できるのは、W3C (World Wide Web Consortium) が提唱する XSD (XML スキーマ定義) に準拠した XML スキーマだけです。 XML スキーマ定義の提唱や XML 標準の詳細については、<https://w3.org> を参照してください。
 
 ## <a name="setting-options-with-an-xml-file"></a>XML ファイルによるオプションの設定
 
@@ -104,7 +105,7 @@ Xsd.exe が実行する操作を次の表に示します。
 </xsd>
 ```
 
-上記の XML が GenerateSchemas.xml という名前のファイルに含まれている`/parameters`場合は、コマンド プロンプトで次のように入力し **、Enter**キーを押してスイッチを使用します。
+この XML が GenerateSchemas.xml というファイルに含まれる場合、コマンド プロンプトで、`/parameters` スイッチを使用して次のように入力し、**Enter** キーを押します。
 
 ```console
  xsd /p:GenerateSchemas.xml
@@ -121,7 +122,7 @@ Xsd.exe が実行する操作を次の表に示します。
 </xsd>
 ```
 
-しかし、上のコードを使用するには、コマンド プロンプトでアセンブリの名前も指定する必要があります。 コマンド プロンプトで次のように入力します (XML ファイルの名前は GenerateSchemaFromType.xml とします)。
+しかし、上のコードを使用するには、コマンド プロンプトでアセンブリの名前も指定する必要があります。 コマンド プロンプトで次のように入力します (XML ファイルの名前を GenerateSchemaFromType.xml と仮定します)。
 
 ```console
 xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
@@ -162,7 +163,7 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 |namespace|生成するコードの名前空間を指定します。 名前空間は、スペースやバックスラッシュ文字を使用しないなどの CLR 標準に準拠する必要があります。|
 |options|`none`、`properties` (パブリック フィールドの代わりにプロパティを生成)、`order`、または `enableDataBinding` (前の「XSD ファイルのオプション」セクションの `/order` と `/enableDataBinding` スイッチを参照) のいずれかの値です。|
 
- `DataSet` 要素を使用すると、`<generateDataSet>` コードを生成する方法を制御できます。 次の XML は、生成された`DataSet`コードが、指定した要素<xref:System.Data.DataTable>の Visual Basic コードを作成するために、クラスなどの構造体を使用することを指定します。 生成された DataSet 構造体では LINQ クエリがサポートされます。
+ `DataSet` 要素を使用すると、`<generateDataSet>` コードを生成する方法を制御できます。 次の XML は、生成されたコードが `DataSet` 構造体 (<xref:System.Data.DataTable> クラスなど) を使用して指定された要素のための Visual Basic コードを作成するように指定します。 生成された DataSet 構造体では LINQ クエリがサポートされます。
 
  ```xml
  <xsd xmlns='http://microsoft.com/dotnet/tools/xsd/'>
@@ -199,11 +200,11 @@ xsd /p:GenerateSchemaFromType.xml ConsoleApplication1.exe
 
 |属性|説明|
 |---------------|-----------------|
-|output|生成されたスキーマまたはコード ファイルが格納されるディレクトリの名前です。|
+|出力|生成されたスキーマまたはコード ファイルが格納されるディレクトリの名前です。|
 |nologo|バナーを表示しません。 `true` または `false` に設定します。|
 |help|このツールのコマンド構文とオプションを表示します。 `true` または `false` に設定します。|
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
  `myFile.xdr` から XML スキーマを生成し、現在のディレクトリに保存するコマンドを次に示します。
 
 ```console
@@ -236,5 +237,5 @@ xsd myAssembly.dll
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [LINQ to DataSet の概要](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)
 - [型指定された DataSet のクエリ](../../../docs/framework/data/adonet/querying-typed-datasets.md)
-- [LINQ (言語統合クエリ) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
-- [LINQ (言語統合クエリ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) (C#)](../../csharp/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/index.md)

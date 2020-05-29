@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: ef71e48daa7c4a6f33961d05a2f3def122087b0e
-ms.sourcegitcommit: fff146ba3fd1762c8c432d95c8b877825ae536fc
+ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
+ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2020
-ms.locfileid: "82975434"
+ms.lasthandoff: 05/22/2020
+ms.locfileid: "83802678"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -118,7 +118,7 @@ dotnet test -h|--help
 
 - **`-o|--output <OUTPUT_DIRECTORY>`**
 
-  実行するバイナリを検索するディレクトリです。 指定しない場合、既定のパスは `./bin/<configuration>/<framework>/` になります。  (`TargetFrameworks` プロパティを使用した) ターゲット フレームワークが複数あるプロジェクトの場合は、このオプションを指定するときに `--framework` も定義する必要があります。 `dotnet test` は常に、出力ディレクトリからテストを実行します。 <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> を使用して、出力ディレクトリ内のテスト資産を使用できます。
+  実行するバイナリを検索するディレクトリです。 指定しない場合、既定のパスは `./bin/<configuration>/<framework>/` になります。  (`TargetFrameworks` プロパティを使用した) ターゲット フレームワークが複数あるプロジェクトの場合は、このオプションを指定するときに `--framework` も定義する必要があります。 `dotnet test` では常に、出力ディレクトリからテストが実行されます。 <xref:System.AppDomain.BaseDirectory%2A?displayProperty=nameWithType> を使用して、出力ディレクトリ内のテスト資産を使用できます。
 
 - **`-r|--results-directory <PATH>`**
 

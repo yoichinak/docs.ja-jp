@@ -1,7 +1,7 @@
 ---
 title: 算術演算子 - C# リファレンス
 description: 数値型を使用して乗算、除算、剰余、加算、減算の演算を実行する C# 演算子について学習します。
-ms.date: 03/27/2019
+ms.date: 05/11/2020
 author: pkulikov
 f1_keywords:
 - ++_CSharpKeyword
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: ea9bf9e065b2953fd20e0503a19d1dc143064c5d
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d004ab466bc053ed286d85bcbee2766d8a087286
+ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738734"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83207237"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -42,6 +42,8 @@ ms.locfileid: "81738734"
 - 2 項演算子: [`*` (乗算)](#multiplication-operator-)、[`/` (除算)](#division-operator-)、[`%` (剰余)](#remainder-operator-)、[`+` (加算)](#addition-operator-)、[`-` (減算)](#subtraction-operator--)。
 
 これらの演算子は、[整数](../builtin-types/integral-numeric-types.md)と[浮動小数点](../builtin-types/floating-point-numeric-types.md)のすべての数値型によってサポートされています。
+
+整数型の場合は、これらの演算子 (`++` 演算子と `--` 演算子を除く) が、`int`、`uint`、`long`、および `ulong` 型に対して定義されます。 オペランドが他の整数型 (`sbyte`、`byte`、`short`、`ushort`、`char`) のときは、それらの値は `int` 型に変換され、演算の結果もその型になります。 オペランドが異なる整数型または浮動小数点型の場合、それらの値は格納されている最も近い型に変換されます (その型が存在する場合)。 詳しくは、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)」セクションをご覧ください。 `++` 演算子と `--` 演算子は、すべての整数数値型と浮動小数点数値型、および [char](../builtin-types/char.md) 型に対して定義されます。
 
 ## <a name="increment-operator-"></a>インクリメント演算子 ++
 
