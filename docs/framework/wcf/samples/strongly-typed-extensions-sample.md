@@ -1,18 +1,19 @@
 ---
-title: 厳密に型指定された拡張のサンプル
+title: 厳密に型指定された拡張機能のサンプル
 ms.date: 03/30/2017
 ms.assetid: 02220f11-1a83-441c-9e5a-85f9a9367572
-ms.openlocfilehash: 3cfbcddfdc7700618d499dd41d3a8c3b629bf550
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65f14b2c8db7553cb2f14bc7a1fe6f7128f523b6
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183313"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201548"
 ---
-# <a name="strongly-typed-extensions-sample"></a>厳密に型指定された拡張のサンプル
+# <a name="strongly-typed-extensions-sample"></a>厳密に型指定された拡張機能のサンプル
+
 このサンプルでは、例を示す目的で <xref:System.ServiceModel.Syndication.SyndicationFeed> クラスを使用します。 ただし、このサンプルで示すパターンは、拡張データをサポートするすべての配信クラスで使用できます。  
   
- 配信オブジェクト モデル (<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem>、および関連クラス) は、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> プロパティおよび <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> プロパティを使用することにより、拡張データへの弱い型定義によるアクセスをサポートします。 このサンプルでは、特定のアプリケーション固有の拡張を厳密に型指定されたプロパティとして使用できるようにする <xref:System.ServiceModel.Syndication.SyndicationFeed> および <xref:System.ServiceModel.Syndication.SyndicationItem> のカスタム派生クラスを実装することにより、拡張データへの厳密に型指定されたアクセスを提供する方法を示します。  
+ 配信オブジェクト モデル (<xref:System.ServiceModel.Syndication.SyndicationFeed>、<xref:System.ServiceModel.Syndication.SyndicationItem>、および関連クラス) は、<xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> プロパティおよび <xref:System.ServiceModel.Syndication.SyndicationFeed.ElementExtensions%2A> プロパティを使用することにより、拡張データへの弱い型定義によるアクセスをサポートします。 このサンプルでは <xref:System.ServiceModel.Syndication.SyndicationFeed> 、 <xref:System.ServiceModel.Syndication.SyndicationItem> 特定のアプリケーション固有の拡張機能を厳密に型指定されたプロパティとして使用できる、およびのカスタム派生クラスを実装することで、拡張データへの厳密に型指定されたアクセスを提供する方法を示します。  
   
  例として、このサンプルでは Atom Threading Extensions の RFC 案で定義された拡張要素を実装する方法を示しています。 このサンプルは、使い方を示すために用意されたものであり、仕様案を完全に実装するためのものではありません。  
   
@@ -40,10 +41,10 @@ ms.locfileid: "79183313"
 </entry>  
 ```  
   
- 要素`<in-reply-to>`は、追加の拡張属性`ref`と`type`拡張`href`要素の存在を許可しながら、3 つの必須属性 ( 、および ) を指定します。  
+ `<in-reply-to>`要素は、3つの必須の属性 (、および) を指定しますが、 `ref` 追加の `type` `href` 拡張属性と拡張要素も存在できるようにします。  
   
 ## <a name="modeling-the-in-reply-to-element"></a>In-Reply-To 要素のモデル化  
- このサンプルでは、`<in-reply-to>` 要素は <xref:System.Xml.Serialization.IXmlSerializable> を実装する CLR としてモデル化されており、<xref:System.Runtime.Serialization.DataContractSerializer> と共に使用できます。 さらに、次のサンプル コードに示すように、要素のデータにアクセスするメソッドおよびプロパティも実装しています。  
+ このサンプルでは、`<in-reply-to>` 要素は <xref:System.Xml.Serialization.IXmlSerializable> を実装する CLR としてモデル化されており、<xref:System.Runtime.Serialization.DataContractSerializer> と共に使用できます。 また、次のサンプルコードに示すように、要素のデータにアクセスするためのメソッドとプロパティも実装しています。  
   
 ```csharp  
 [XmlRoot(ElementName = "in-reply-to", Namespace = "http://contoso.org/syndication/thread/1.0")]  
@@ -211,7 +212,7 @@ public class ThreadedFeed : SyndicationFeed
 }  
 ```  
   
- `ThreadedItem` クラスは `SyndicationItem` から継承され、`InReplyToElement` を厳密に型指定されたプロパティとします。 これにより、`InReplyTo` 拡張データにプログラムによって簡単にアクセスできます。 また、次のコードに示すように、その拡張データの読み取り/書き込みを行う `TryParseElement` および `WriteElementExtensions` も実装します。  
+ クラスは、 `ThreadedItem` を継承 `SyndicationItem` し、 `InReplyToElement` 厳密に型指定されたプロパティとしてを作成します。 これにより、`InReplyTo` 拡張データにプログラムによって簡単にアクセスできます。 また、次のコードに示すように、その拡張データの読み取り/書き込みを行う `TryParseElement` および `WriteElementExtensions` も実装します。  
   
 ```csharp
 public class ThreadedItem : SyndicationItem  
@@ -272,17 +273,17 @@ public class ThreadedItem : SyndicationItem
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
 2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
   
-3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Syndication\StronglyTypedExtensions`  

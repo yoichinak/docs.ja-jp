@@ -2,12 +2,12 @@
 title: DataContractJsonSerializer を使用したスタンドアロン JSON シリアル化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
-ms.openlocfilehash: 259d5da544262b5cae08e1be9e8ea6e077d5b947
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6bd075405a3bca0cc64dda90225526096b6fa8e3
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144930"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202389"
 ---
 # <a name="stand-alone-json-serialization-using-datacontractjsonserializer"></a>DataContractJsonSerializer を使用したスタンドアロン JSON シリアル化
 
@@ -26,23 +26,23 @@ JSON を使用する場合、一部例外はありますが、<xref:System.Runti
 
 シリアル化および逆シリアル化の手順でマップされる場合の .NET 型と JSON/JavaScript 型の対応表を次に示します。
 
-|.NET 型|JSON/JavaScript|メモ|
+|.NET 型|JSON/JavaScript|ノート|
 |----------------|----------------------|-----------|
-|すべての数値型 (<xref:System.Int32>、<xref:System.Decimal>、<xref:System.Double> など)|Number|`Double.NaN`、`Double.PositiveInfinity`、`Double.NegativeInfinity` などの特殊な値はサポートされていないため、無効な JSON になります。|
-|<xref:System.Enum>|Number|このトピックの「列挙体と JSON」を参照してください。|
-|<xref:System.Boolean>|ブール型|--|
-|<xref:System.String>, <xref:System.Char>|String|--|
-|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|String|JSON でのこれらの型の形式は、XML の場合と同じです (実質的には、ISO 8601 の期間形式の TimeSpan、"12345678-abcd-abcd-890AB" 形式の GUID、"" などの自然文字列形式の URI http://www.example.com )。 詳細については、「[データコントラクトスキーマのリファレンス](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)」を参照してください。|
-|<xref:System.Xml.XmlQualifiedName>|String|形式は "name:namespace" です (最初のコロンの前が名前です)。 名前または名前空間が存在しない場合があります。 名前空間がない場合、コロンも省略されることがあります。|
+|すべての数値型 (<xref:System.Int32>、<xref:System.Decimal>、<xref:System.Double> など)|数値|`Double.NaN`、`Double.PositiveInfinity`、`Double.NegativeInfinity` などの特殊な値はサポートされていないため、無効な JSON になります。|
+|<xref:System.Enum>|数値|このトピックの「列挙体と JSON」を参照してください。|
+|<xref:System.Boolean>|ブール値|--|
+|<xref:System.String>, <xref:System.Char>|文字列|--|
+|<xref:System.TimeSpan>, <xref:System.Guid>, <xref:System.Uri>|文字列|JSON でのこれらの型の形式は、XML の場合と同じです (実質的には、ISO 8601 の期間形式の TimeSpan、"12345678-abcd-abcd-890AB" 形式の GUID、"" などの自然文字列形式の URI http://www.example.com )。 詳細については、「[データコントラクトスキーマのリファレンス](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)」を参照してください。|
+|<xref:System.Xml.XmlQualifiedName>|文字列|形式は "name:namespace" です (最初のコロンの前が名前です)。 名前または名前空間が存在しない場合があります。 名前空間がない場合、コロンも省略されることがあります。|
 |<xref:System.Array> 型の <xref:System.Byte>|数値の配列型|各数値は、1 バイトの値を表します。|
 |<xref:System.DateTime>|DateTime 型または文字列型|このトピックの「日付/時刻と JSON」を参照してください。|
 |<xref:System.DateTimeOffset>|複合型|このトピックの「日付/時刻と JSON」を参照してください。|
-|XML 型および ADO.NET 型 (<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode> の配列、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|String|このトピックの「XML 型と JSON」を参照してください。|
+|XML 型および ADO.NET 型 (<xref:System.Xml.XmlElement>、<br /><br /> <xref:System.Xml.Linq.XElement>. <xref:System.Xml.XmlNode> の配列、<br /><br /> <xref:System.Runtime.Serialization.ISerializable>,<br /><br /> <xref:System.Data.DataSet>).|文字列|このトピックの「XML 型と JSON」を参照してください。|
 |<xref:System.DBNull>|空の複合型|--|
 |コレクション、ディクショナリ、および配列|配列|このトピックの「コレクション、ディクショナリ、および配列」を参照してください。|
 |複合型 (<xref:System.Runtime.Serialization.DataContractAttribute> または <xref:System.SerializableAttribute> が適用された型)|複合型|データ メンバーは、JavaScript 複合型のメンバーになります。|
 |<xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装する複合型|複合型|他の複合型と同じですが、一部の <xref:System.Runtime.Serialization.ISerializable> 型はサポートされません。このトピックの「高度な情報」の「ISerializable のサポート」を参照してください。|
-|任意の型の `Null` 値|[Null]|Null 許容値型もサポートされており、null 非許容の値型と同じように JSON にマップされます。|
+|任意の型の `Null` 値|Null|Null 許容値型もサポートされており、null 非許容の値型と同じように JSON にマップされます。|
 
 ### <a name="enumerations-and-json"></a>列挙体と JSON
 
@@ -189,7 +189,7 @@ ASP.NET AJAX クライアントの JavaScript コードにより、このよう�
 
 #### <a name="preserving-type-information"></a>型情報の保持
 
-前述のように、ポリモーフィズムは JSON でサポートされていますが、いくつかの制限があります。 JavaScript は厳密に型指定されていない言語であるため、通常、型 ID は問題ではありません。 ただし、JSON を使用して厳密に型指定されたシステム (.NET) と厳密に型指定されていないシステム (JavaScript) 間で通信する場合、型 ID を保持していると役立ちます。 たとえば、"Square" と "Circle" というデータ コントラクト名を持つ型が "Shape" というデータ コントラクト名を持つ型から派生したとします。 "Circle" が .NET から JavaScript に送信され、後で "Shape" を必要とする .NET メソッドに返された場合、該当のオブジェクトが本来は "Circle" であったことが .NET 側でわかれば役立ちます。そうでない場合、派生型に固有の情報 ("Circle" のデータ メンバー "radius" など) が失われることがあります。
+前述のように、ポリモーフィズムは JSON でサポートされていますが、いくつかの制限があります。 JavaScript は厳密に型指定されていない言語であるため、通常、型 ID は問題ではありません。 ただし、厳密に型指定されたシステム (.NET) と厳密に型指定されていないシステム (JavaScript) との間で通信を行うために JSON を使用する場合は、型 id を保持すると便利です。 たとえば、"Square" と "Circle" というデータ コントラクト名を持つ型が "Shape" というデータ コントラクト名を持つ型から派生したとします。 "Circle" が .NET から JavaScript に送信され、後で "Shape" を必要とする .NET メソッドに返された場合、該当のオブジェクトが本来は "Circle" であったことが .NET 側でわかれば役立ちます。そうでない場合、派生型に固有の情報 ("Circle" のデータ メンバー "radius" など) が失われることがあります。
 
 型 ID を保持するために、複合型を JSON にシリアル化するときに "型ヒント" を追加できます。デシリアライザーはこのヒントを認識し、適切に動作します。 "型ヒント" は、"type" というキー名を持つ JSON のキーと値のペアです \_ \_ (2 つのアンダースコアの後に "type" という単語が続きます)。 値は、"DataContractName:DataContractNamespace" 形式の JSON 文字列です (最初のコロンまでが名前です)。 前述の例の "Circle" は、次のようにシリアル化できます。
 
@@ -229,7 +229,7 @@ JSON 表現では、型ヒントは最初に出現する必要があります。
 
 型ヒントにより、メッセージ サイズが大幅に増加することがあります (これを軽減する 1 つの方法として、可能であれば短いデータ コントラクト名前空間を使用します)。 そのため、次のルールによって型ヒントを出力するかどうかが制御されます。
 
-- ASP.NET AJAX を使用する場合、基本型と派生型の割り当てが存在しない場合でも (Circle を Circle に割り当てる場合など)、型ヒントは可能である限り常に出力されます  (これは、厳密に型指定されていない JSON 環境から厳密に型指定された .NET 環境への呼び出しプロセスにおいて、情報が予想外に失われることのないプロセスを完全に実現するために必要です)。
+- ASP.NET AJAX を使用する場合、基本型と派生型の割り当てが存在しない場合でも (Circle を Circle に割り当てる場合など)、型ヒントは可能である限り常に出力されます  (これは、厳密に型指定されていない JSON 環境から厳密に型指定された .NET 環境への呼び出しプロセスを完全に有効にするために必要ですが、情報が失われることはありません)。
 
 - ASP.NET と統合せずに AJAX サービスを使用する場合、基本型と派生型の割り当てが存在する場合にのみ、型ヒントが出力されます。つまり、Circle を Shape または <xref:System.Object> に割り当てるときは出力されますが、Circle に割り当てるときには出力されません。 この場合、JavaScript クライアントを適切に実装するために必要な最小限の情報しか提供されないため、パフォーマンスは向上しますが、適切に設計されていないクライアントでの型情報の損失を防ぐことはできません。 クライアントでこの問題に対処することを避ける必要がある場合は、サーバーで基本型と派生型の割り当てを一切行わないようにします。
 

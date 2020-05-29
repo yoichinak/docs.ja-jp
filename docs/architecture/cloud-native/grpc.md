@@ -3,12 +3,12 @@ title: gRPC
 description: GRPC、クラウドネイティブアプリケーションでのその役割、および HTTP RESTful 通信との違いについて説明します。
 author: robvet
 ms.date: 05/13/2020
-ms.openlocfilehash: f34b267d7f5c6b4e593841c80df44d1ccbde95ae
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 35a8325dd82e946d88b09b223287e2871be88ffa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83614046"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201330"
 ---
 # <a name="grpc"></a>gRPC
 
@@ -83,7 +83,7 @@ SDK には、エンドポイントルーティング、組み込み IoC、およ
 
 このドキュメントの執筆時点では、gRPC は主にバックエンドサービスで使用されています。 ほとんどの最新のブラウザーでは、フロントエンドの gRPC クライアントをサポートするために必要な HTTP/2 コントロールのレベルを提供できません。 ただし、JavaScript または Blazor WebAssembly でビルドされたブラウザーベースのアプリから gRPC 通信を可能にする[初期のイニシアチブ](https://devblogs.microsoft.com/aspnet/grpc-web-experiment/)があります。 [Grpc-Web for .net](https://github.com/grpc/grpc/blob/master/doc/PROTOCOL-WEB.md)を使用すると、ASP.NET Core grpc アプリで、ブラウザーアプリで grpc 機能をサポートできます。
 
-- 厳密に型指定されたコード生成クライアント
+- 厳密に型指定された、コード生成クライアント
 - Compact Protobuf メッセージ
 - サーバー ストリーミング。
 

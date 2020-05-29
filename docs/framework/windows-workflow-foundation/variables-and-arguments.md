@@ -3,12 +3,12 @@ title: 変数と引数
 description: この記事では、データの格納を表す変数と、Workflow Foundation のアクティビティとの間のデータフローを表す引数について説明します。
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 47b8a7bddc8c3a9a8427bcb3e93760a63e5fa976
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 5cce9931e9b0a37d5fafbfb84527ffd543a0a50f
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421307"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201957"
 ---
 # <a name="variables-and-arguments"></a>変数と引数
 Windows Workflow Foundation (WF) では、変数はデータのストレージを表し、引数はアクティビティとの間のデータフローを表します。 アクティビティには一連の引数があり、その引数はアクティビティの署名を構成します。 また、アクティビティは開発者がワークフローの設計時に変数を追加または削除できる変数のリストを保持しています。 引数は、値を返す式を使用してバインドされます。  
@@ -70,7 +70,7 @@ Variable<string> var = new Variable<string>
   
 3. 必要に応じて、引数に <xref:System.Activities.Argument.EvaluationOrder%2A> を指定できます。 <xref:System.Activities.Argument.EvaluationOrder%2A> は引数の評価順序を指定するゼロベースの値です。 既定では引数の評価順序は指定されておらず、<xref:System.Activities.Argument.UnspecifiedEvaluationOrder> の値と同じです。 <xref:System.Activities.Argument.EvaluationOrder%2A> に 0 以上の値を設定して、この引数の評価順序を指定します。 Windows Workflow Foundation は、指定された評価順序で引数を昇順で評価します。 評価順序が指定されていない引数は、評価順序が指定されている引数の前に評価されることに注意してください。  
   
- アクティビティの作成者は、引数を公開する場合に厳密な型指定のメカニズムを使用できます。 これを行うには、<xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601>、および <xref:System.Activities.InOutArgument%601> の型のプロパティを宣言します。 これにより、アクティビティの作成者は、アクティビティに受け渡しするデータの特定のコントラクトを確立できます。  
+ アクティビティの作成者は、厳密に型指定された機構を使用して引数を公開できます。 これを行うには、<xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601>、および <xref:System.Activities.InOutArgument%601> の型のプロパティを宣言します。 これにより、アクティビティの作成者は、アクティビティに受け渡しするデータの特定のコントラクトを確立できます。  
   
 ### <a name="defining-the-arguments-on-an-activity"></a>アクティビティの引数の定義  
  <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601>、および <xref:System.Activities.InOutArgument%601> 型のプロパティを指定することで、アクティビティに引数を定義できます。 次のコードでは、ユーザーに表示する文字列を受け取り、ユーザーの応答を含む文字列を返す `Prompt` アクティビティの引数を定義する方法を示します。  
