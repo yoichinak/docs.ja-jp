@@ -109,6 +109,9 @@
         - name: コンソール アプリを作成する
           href: tutorials/with-visual-studio-code.md
           displayName: 'tutorials, visual studio code, vs code, cli'
+        - name: アプリをデバッグする
+          href: tutorials/debugging-with-visual-studio-code.md
+          displayName: 'tutorials, visual studio code, vs code'
         - name: コンソール アプリを作成して公開する
           href: tutorials/cli-create-console-app.md
           displayName: 'tutorials, cli'
