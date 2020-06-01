@@ -2,12 +2,12 @@
 title: コレクション
 ms.date: 07/20/2015
 ms.assetid: 5f7749f3-aaf2-4319-b63c-bfa72e1e2b7a
-ms.openlocfilehash: 232b9ec7b5975092e73daf0a7384fa816f55f72f
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: d27761ba7a955d1dc8843ad168a82a9c9c27a6f6
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81646339"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202443"
 ---
 # <a name="collections-visual-basic"></a>コレクション (Visual Basic)
 
