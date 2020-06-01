@@ -2,12 +2,12 @@
 title: マネージド デバッガー - .NET Core
 description: Visual Studio および Visual Studio Code のマネージド デバッガーの概要。
 ms.date: 08/05/2019
-ms.openlocfilehash: 065b1b0fc32eb76b398cb3821c8592a1955c9359
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28cc21980bc78234f7af3b4668e2fa77fbf8ce5b
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75715567"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84200856"
 ---
 # <a name="net-core-managed-debuggers"></a>.NET Core マネージド デバッガー
 
@@ -33,5 +33,5 @@ Visual Studio は Windows アプリケーションですが、Linux および ma
 
 **Visual Studio Code** は、軽量のクロス プラットフォーム コード エディターです。 これは Visual Studio と同じ .NET Core デバッガー実装を使用しますが、簡略化されたユーザー インターフェイスを備えています。
 
-- [チュートリアル - Visual Studio Code を使用した .NET Core アプリケーションのデバッグ](../tutorials/with-visual-studio-code.md#debug)
+- [チュートリアル - Visual Studio Code を使用した .NET Core アプリケーションのデバッグ](../tutorials/debugging-with-visual-studio-code.md)
 - [Visual Studio Code でのデバッグ](https://code.visualstudio.com/docs/editor/debugging)

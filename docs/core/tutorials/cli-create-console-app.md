@@ -6,12 +6,12 @@ ms.author: adegeo
 ms.date: 12/05/2019
 ms.technology: dotnet-cli
 ms.custom: updateeachrelease
-ms.openlocfilehash: fe69521a6ac88055e3e8c8502a7e19a72667dbef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7658f2498b87a90b3925d83628f6ea9247a2fc15
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78240858"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840872"
 ---
 # <a name="get-started-with-net-core-using-the-net-core-cli"></a>.NET Core CLI を使用した .NET Core の概要
 
@@ -204,7 +204,21 @@ dotnet bin\Debug\netcoreapp3.1\publish\Hello.dll
 次の出力が得られます。
 
 ```console
-Hello World!
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
 ```
 
 この記事の冒頭で説明したように、オペレーティング システム固有の実行可能ファイルが `Hello.dll` と共に作成されています。 Windows では、これは `Hello.exe` になります。Linux または macOS では、これは `hello` になります。 上記の例では、ファイルの名前は `Hello.exe` または `Hello` になります。 この発行済みの実行可能ファイルを直接実行できます。
@@ -212,7 +226,21 @@ Hello World!
 ```console
 .\bin\Debug\netcoreapp3.1\publish\Hello.exe
 
-Hello World!
+0
+1
+1
+2
+3
+5
+8
+13
+21
+34
+55
+89
+144
+233
+377
 ```
 
 ## <a name="conclusion"></a>まとめ

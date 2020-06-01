@@ -11,12 +11,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: ca499f9762f52126720159fb7c22660b1001895c
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: fa0aa09b591f9b91a82113343a3655b2240ef490
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802928"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201212"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 

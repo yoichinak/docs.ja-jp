@@ -2,12 +2,12 @@
 title: コレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: d2996648690fc03b5f1d6a90e0be96155c5a24ed
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81645466"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201127"
 ---
 # <a name="collections-c"></a>コレクション (C#)
 

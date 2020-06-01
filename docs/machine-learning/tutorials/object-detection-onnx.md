@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 2bf44ec1657307161c13f88f7d1628b2c930fd05
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 199245aa0017d9232e3c9889c7845c3b9ec9877b
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805523"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144748"
 ---
 # <a name="tutorial-detect-objects-using-onnx-in-mlnet"></a>チュートリアル: ML.NET で ONNX を使用してオブジェクトを検出する
 
@@ -102,7 +102,7 @@ ONNX の概要と Tiny YOLOv2 のしくみについて全般的な知識が得�
 
 1. `assets` ディレクトリを "*ObjectDetection*" プロジェクト ディレクトリにコピーします。 このディレクトリとそのサブディレクトリには、このチュートリアルに必要な画像ファイル (次の手順でダウンロードして追加する Tiny YOLOv2 モデルを除く) が含まれています。
 
-1. [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny_yolov2) から [Tiny YOLOv2 モデル](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz)をダウンロードし、解凍します。
+1. [ONNX Model Zoo](https://github.com/onnx/models/tree/master/vision/object_detection_segmentation/tiny-yolov2) から [Tiny YOLOv2 モデル](https://onnxzoo.blob.core.windows.net/models/opset_8/tiny_yolov2/tiny_yolov2.tar.gz)をダウンロードし、解凍します。
 
     コマンド プロンプトを開き、次のコマンドを入力します。
 

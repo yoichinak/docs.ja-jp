@@ -4,12 +4,12 @@ description: Mac、Linux、および Windows でアプリとライブラリを�
 author: richlander
 ms.date: 03/16/2017
 titleSuffix: ''
-ms.openlocfilehash: 9fb87180bb001a7f54d93c6e95631562103c49e8
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 5a33158bdf02c5ac81379cfcdabb2f79230033e2
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83840924"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202190"
 ---
 # <a name="learn-net-core-and-the-net-core-sdk-tools-by-exploring-these-tutorials"></a>これらのチュートリアルを詳しく確認して .NET Core と .NET Core SDK ツールについて学習する
 
@@ -29,9 +29,10 @@ ms.locfileid: "83840924"
 
 ## <a name="use-visual-studio-code"></a>Visual Studio Code の使用
 
-Visual Studio Code またはその他のコード エディターを使用する場合は、これらのチュートリアルを選択してください。 すべての .NET Core の開発タスクに CLI が使用されているので、いずれでも任意のコード エディターの使用が可能です。
+Visual Studio Code またはその他のコード エディターを使用する場合は、これらのチュートリアルを選択してください。 すべての .NET Core の開発タスクに CLI が使用されているので、デバッグのチュートリアルを除いて、いずれでも任意のコード エディターの使用が可能です。
 
 - [コンソール アプリを作成する](with-visual-studio-code.md)
+- [アプリをデバッグする](debugging-with-visual-studio-code.md)
 - [コンソール アプリを作成して公開する](cli-create-console-app.md)
 - [F# コンソール アプリを作成する](../../fsharp/get-started/get-started-vscode.md)
 - [ライブラリを作成して単体テストする - macOS](using-on-macos.md)

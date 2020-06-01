@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: a4121bb10de7bfe51c5fec6bc14a40ad4bdcdaf7
-ms.sourcegitcommit: 7088f87e9a7da144266135f4b2397e611cf0a228
+ms.openlocfilehash: e4c5bc03038a3df9df2b7629da762caee175b6e8
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2020
-ms.locfileid: "75900892"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202148"
 ---
 # <a name="wcf-data-services-overview"></a>WCF Data Services の概要
 WCF Data Services では、Open Data Protocol (OData) を使用して、Web またはイントラネット用のデータ サービスを作成し、それらを使用することができます。 OData を使用すると、URI でアドレス指定できるリソースとしてデータを公開できます。 したがって、Representational State Transfer (REST) のセマンティクス (標準的な HTTP 動詞 GET、PUT、POST、DELETE) を使用してデータにアクセスし、そのデータを変更できます。 このトピックでは、OData で定義されるパターンとプラクティスの両方の概要について説明します。また、.NET Framework ベースのアプリケーションで OData を利用するために WCF Data Services で提供される機能についても説明します。  
@@ -18,9 +18,9 @@ WCF Data Services では、Open Data Protocol (OData) を使用して、Web ま�
 ## <a name="address-data-as-resources"></a>リソースとしてのデータのアドレス指定  
  OData は、URI でアドレス指定できるリソースとしてデータを公開します。 リソース パスは、Entity Data Model のエンティティとリレーションシップの規則に基づいて構築されます。 このモデルでは、エンティティはアプリケーション ドメイン内のデータの操作単位を表します (顧客、注文、項目、製品など)。 詳細については、「[Entity Data Model](../adonet/entity-data-model.md)」を参照してください。  
   
- OData では、エンティティ型のインスタンスを含むエンティティ セットとしてエンティティ リソースのアドレスを指定します。 たとえば、<https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders> という URI を指定すると、`Northwind` データ サービスから、`CustomerID` の値が `ALFKI.` である顧客に関連するすべての注文が返されます。  
+ OData では、エンティティ型のインスタンスを含むエンティティ セットとしてエンティティ リソースのアドレスを指定します。 たとえば、`https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders` という URI を指定すると、`Northwind` データ サービスから、`CustomerID` の値が `ALFKI.` である顧客に関連するすべての注文が返されます。  
   
- クエリ式を使用して、リソースに対して従来のクエリ操作 (フィルターの適用、並べ替え、ページングなど) を実行できます。 たとえば、<https://services.odata.org/Northwind/Northwind.svc/Customers( 'ALFKI')/Orders?$filter=Freight gt 50> という URI では、リソースがフィルター処理されて、$50 以上の運賃の注文だけが返されます。 詳細については、「[データ サービス リソースへのアクセス](accessing-data-service-resources-wcf-data-services.md)」を参照してください。  
+ クエリ式を使用して、リソースに対して従来のクエリ操作 (フィルターの適用、並べ替え、ページングなど) を実行できます。 たとえば、`https://services.odata.org/Northwind/Northwind.svc/Customers('ALFKI')/Orders?$filter=Freight gt 50` という URI は、リソースをフィルターして、$50 以上の運賃の注文だけを返します。 詳細については、「[データ サービス リソースへのアクセス](accessing-data-service-resources-wcf-data-services.md)」を参照してください。  
   
 ## <a name="interoperable-data-access"></a>相互運用可能なデータ アクセス  
  OData は標準的なインターネット プロトコルに基づいているので、データ サービスは .NET Framework 対応でないアプリケーションとも相互運用が可能です。 標準的な URI を使用してデータのアドレスを指定できるので、アプリケーションでは Representational State Transfer (REST) のセマンティクス (特に GET、PUT、POST、および DELETE の HTTP 動詞) を使用してデータにアクセスして変更できます。 そのため、標準的な HTTP プロトコルを介して転送されるデータの解析、およびこれらのデータへのアクセスを行うことができる任意のクライアントからこれらのサービスにアクセスできます。  

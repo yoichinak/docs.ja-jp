@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Span<T>
 - buffers"
 - pipeline processing
-ms.openlocfilehash: b61b1dbbedf4658fe113986fbb4a792a2f574534
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c60c08d27c0e41228a15e8acdf01a9af28a23762
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73121986"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201964"
 ---
 # <a name="memory--and-span-related-types"></a>メモリおよびスパンに関連する型
 
-.NET Core 2.1 以降、.NET には、任意のメモリの厳密に型指定された連続する領域を表す、相互に関連する型が多数含まれています。 チェックの内容は次のとおりです
+.NET Core 2.1 以降、.NET には、任意のメモリの厳密に型指定された連続する領域を表す、相互に関連する型が多数含まれています。 次の設定があります。
 
 - <xref:System.Span%601?displayProperty=nameWithType>: メモリの連続した領域にアクセスするために使う型です。 <xref:System.Span%601> インスタンスは、`T` 型の配列、<xref:System.String>、[stackalloc](../../csharp/language-reference/operators/stackalloc.md) を使って割り当てたバッファー、またはアンマネージ メモリへのポインターによってバックアップできます。 これはスタック上に割り当てる必要があるため、いくつかの制限があります。 たとえば、クラス内のフィールドを <xref:System.Span%601> 型にすることはできませんし、非同期操作でスパンを使うこともできません。
 
@@ -43,9 +43,9 @@ ms.locfileid: "73121986"
 
 ## <a name="working-with-memory-and-span"></a>メモリとスパンを使った作業
 
-通常、メモリおよびスパンに関連する型は処理パイプラインにデータを格納するために使われます。そのため開発者は、<xref:System.Span%601>、<xref:System.Memory%601>、および関連する型を使う場合に、一連のベスト プラクティスに従うことが重要です。 これらのベスト プラクティスは、「[Memory\<T> and Span\<T> usage guidelines](memory-t-usage-guidelines.md)」(Memory<T> および Span <T> の使用ガイドライン) でドキュメント化されています。
+通常、メモリおよびスパンに関連する型は処理パイプラインにデータを格納するために使われます。そのため開発者は、<xref:System.Span%601>、<xref:System.Memory%601>、および関連する型を使う場合に、一連のベスト プラクティスに従うことが重要です。 これらのベスト プラクティスは、「[Memory\<T>T> と Span\<T>T> の使用ガイドライン](memory-t-usage-guidelines.md)」でドキュメント化されています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Memory%601?displayProperty=nameWithType>
 - <xref:System.ReadOnlyMemory%601?displayProperty=nameWithType>

@@ -6,12 +6,12 @@ ms.author: luquinta
 ms.date: 12/12/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: a050d7673f7ef00cf11d959d04e709222cb2be8f
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: 2915259d7c7031b9e699c7fd0cf65cf723c41680
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607559"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144423"
 ---
 # <a name="tutorial-automated-visual-inspection-using-transfer-learning-with-the-mlnet-image-classification-api"></a>チュートリアル: 転移学習と ML.NET Image Classification API を利用した自動ビジュアル検査
 
@@ -94,7 +94,7 @@ Image Classification API のトレーニング プロセスは、事前トレー
 ### <a name="prepare-and-understand-the-data"></a>データを準備して理解する
 
 > [!NOTE]
-> このチュートリアルのデータセットの提供元: Maguire, Marc; Dorafshan, Sattar; and Thomas, Robert J., "SDNET2018:A concrete crack image dataset for machine learning applications" (2018). Browse all Datasets. Paper 48. [https://digitalcommons.usu.edu/all_datasets/48](https://digitalcommons.usu.edu/all_datasets/48 )
+> このチュートリアルのデータセットの提供元: Maguire, Marc; Dorafshan, Sattar; and Thomas, Robert J., "SDNET2018:A concrete crack image dataset for machine learning applications" (2018). Browse all Datasets. Paper 48. <https://digitalcommons.usu.edu/all_datasets/48>
 
 SDNET2018 は、ひび割れあり/ひび割れなしのコンクリート構造物 (橋床、壁、歩道) に関する注釈を含む画像データセットです。
 

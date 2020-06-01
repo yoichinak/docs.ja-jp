@@ -2,12 +2,12 @@
 title: 開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 開発環境またはテスト環境の統合イベント向けに RabbitMQ でイベント バスのメッセージングを実装します。
 ms.date: 10/02/2018
-ms.openlocfilehash: 12e37fabfe915b4d2089d27f7852528a9a037d3c
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 32259c76fe81d324ba3ea9b35f7fddc6a0f9cdbc
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988298"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144293"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 
@@ -117,7 +117,7 @@ Subscribe メソッドは IIntegrationEventHandler オブジェクト (現在の
 RabbitMQ に対応した実稼働可能なソリューション。
 
 - **EasyNetQ** - RabbitMQ 向けのオープン ソース .NET API クライアント \
-  <http://easynetq.com/>
+  <https://easynetq.com/>
 
 - **MassTransit** \
   <https://masstransit-project.com/>

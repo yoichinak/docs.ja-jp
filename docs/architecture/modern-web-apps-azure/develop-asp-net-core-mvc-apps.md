@@ -4,12 +4,12 @@ description: ASP.NET Core および Azure での最新の Web アプリケーシ
 author: ardalis
 ms.author: wiwagn
 ms.date: 12/04/2019
-ms.openlocfilehash: 3de70af23206b0ae0525541b3d2cb480dc5bb882
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 955d4ec4a0bd0ddf2d022d4154fc6528b2abf3d0
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80987908"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144553"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>ASP.NET Core MVC アプリを開発する
 
@@ -422,7 +422,7 @@ public void ConfigureServices(IServiceCollection services)
 > ### <a name="references--security"></a>参照 – セキュリティ
 >
 > - **セキュリティ ドキュメントの概要**  
->   https://docs.microsoft.com/aspnet/core/security/
+>   <https://docs.microsoft.com/aspnet/core/security/>
 > - **ASP.NET Core アプリで SSL を適用する**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **Identity の概要**  
@@ -493,7 +493,7 @@ public class Program
 > - **ASP.NET Core SignalR**  
 >   <https://github.com/dotnet/aspnetcore/tree/master/src/SignalR>
 > - **WebSocket マネージャー**  
->   https://github.com/radu-matei/websocket-manager
+>   <https://github.com/radu-matei/websocket-manager>
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>ドメイン駆動設計 – 適用する必要があるか?
 

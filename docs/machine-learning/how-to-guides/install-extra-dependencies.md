@@ -5,18 +5,18 @@ ms.date: 04/02/2020
 author: natke
 ms.author: nakersha
 ms.custom: how-to
-ms.openlocfilehash: c427439d0950bfea38f1d6d11af84216e0f1965f
-ms.sourcegitcommit: 348bb052d5cef109a61a3d5253faa5d7167d55ac
+ms.openlocfilehash: c744b42b4b95681de7b0cbeaef338cc890708fd8
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "82021848"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84008431"
 ---
 # <a name="install-extra-mlnet-dependencies"></a>追加の ML.NET 依存関係のインストール
 
 ほとんどの場合、すべてのオペレーティング システムで、ML.NET をインストールすることは、適切な NuGet パッケージを参照するのと同じくらい簡単です。
 
-```bash
+```dotnetcli
 dotnet add package Microsoft.ML
 ```
 

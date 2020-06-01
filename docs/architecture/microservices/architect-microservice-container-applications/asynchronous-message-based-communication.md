@@ -2,12 +2,12 @@
 title: メッセージベースの非同期通信
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | メッセージベースの非同期通信はマイクロサービスにとって極めて重要な概念です。マイクロサービス間の独立性を維持し、同時に、最終的には同期させる最良の方法であるためです。'
 ms.date: 09/20/2018
-ms.openlocfilehash: 84eaf70178cce91a86dae8a55badb0b4ddd6a7c1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 476e42ccb39374c2bb50f22e41f60c10c563dc66
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "73454234"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144345"
 ---
 # <a name="asynchronous-message-based-communication"></a>メッセージベースの非同期通信
 
@@ -90,7 +90,7 @@ ms.locfileid: "73454234"
   <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan。CQRS の明確化** \
-  <http://udidahan.com/2009/12/09/clarified-cqrs/>
+  <https://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **コマンド クエリ責務分離 (CQRS)**  \
   <https://docs.microsoft.com/azure/architecture/patterns/cqrs>

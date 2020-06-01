@@ -2,12 +2,12 @@
 title: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
 description: Web API アプリケーション レイヤーでの依存関係の挿入、メディエーター パターン、およびそれらの実装の詳細について理解します。
 ms.date: 01/30/2020
-ms.openlocfilehash: 76562d87b09a18e4a4ecb7625a2e823bc1ccff78
-ms.sourcegitcommit: e3cbf26d67f7e9286c7108a2752804050762d02d
+ms.openlocfilehash: 3efa4939bb8762534af398d4e92361e81e668b85
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "80988467"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144605"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 
@@ -214,7 +214,7 @@ Autofac には、[アセンブリをスキャンし、命名規則で型を登�
 // plus being able to update the data just once, when creating the object
 // through the constructor.
 // References on immutable commands:
-// http://cqrs.nu/Faq
+// https://cqrs.nu/Faq
 // https://docs.spine3.org/motivation/immutability.html
 // http://blog.gauffin.org/2012/06/griffin-container-introducing-command-support/
 // https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties
