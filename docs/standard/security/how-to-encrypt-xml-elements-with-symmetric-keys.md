@@ -16,17 +16,17 @@ helpviewer_keywords:
 - Advanced Encryption Standard algorithm
 - Rijndael
 ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
-ms.openlocfilehash: cda5a32e9a7421cd65b2046b403fde9e05230493
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 1ad75b7f36130a9f3acad97f724406650a7fdb68
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75706085"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277324"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法: 共通キーで XML 要素を暗号化する
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML の暗号化を使用すると、データが簡単に読み取られる心配をせずに機密性の高い XML を格納またはトランスポートできます。  この手順では、Advanced Encryption Standard (AES) アルゴリズム (Rijndael とも呼ばれます) を使用して XML 要素を暗号化します。  
   
- この手順で暗号化された XML 要素を復号化する方法については、「[方法: 対称キーを使用して Xml 要素を復号化](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)する」を参照してください。  
+ この手順で暗号化された XML 要素を復号化する方法については、「[方法: 対称キーを使用して Xml 要素を復号化](how-to-decrypt-xml-elements-with-symmetric-keys.md)する」を参照してください。  
   
  XML データの暗号化に AES のような対称アルゴリズムを使用するときは、XML データの暗号化と復号化に同じキーを使用する必要があります。  この手順の例では、暗号化された XML が同じキーを使用して復号化されること、および暗号化側と復号化側で使用するアルゴリズムとキーが一致していることを前提としています。  この例では、暗号化された XML 内での AES キーの格納や暗号化は行いません。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "75706085"
      [!code-csharp[HowToEncryptXMLElementSymmetric#9](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#9)]
      [!code-vb[HowToEncryptXMLElementSymmetric#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#9)]  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
   
 ```xml  
 <root>  
@@ -88,13 +88,13 @@ ms.locfileid: "75706085"
  [!code-csharp[HowToEncryptXMLElementSymmetric#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#1)]
  [!code-vb[HowToEncryptXMLElementSymmetric#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#1)]  
   
-## <a name="compiling-the-code"></a>コードのコンパイル方法  
+## <a name="compiling-the-code"></a>コードのコンパイル  
   
 - この例をコンパイルするには、`System.Security.dll` への参照を含める必要があります。  
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
+## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
  暗号化キーをプレーンテキストで保存したり、コンピューター間でプレーンテキストでキーを転送したりしないでください。  代わりに、セキュリティで保護されたキー コンテナーを使用して暗号化キーを格納します。  
   
  暗号化キーを使用して完了したら、各バイトをゼロ (0) にするか、マネージド暗号化クラスの <xref:System.Security.Cryptography.SymmetricAlgorithm.Clear%2A> メソッドを呼び出してメモリから消去します。  
@@ -102,4 +102,4 @@ ms.locfileid: "75706085"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Security.Cryptography.Xml>
-- [方法: 共通キーで XML 要素を復号化する](../../../docs/standard/security/how-to-decrypt-xml-elements-with-symmetric-keys.md)
+- [方法: 共通キーで XML 要素を復号化する](how-to-decrypt-xml-elements-with-symmetric-keys.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - time zones [.NET Framework], type options
 - DateTime structure
 ms.assetid: 07f17aad-3571-4014-9ef3-b695a86f3800
-ms.openlocfilehash: 5425d94daf8ab023bef4a1a68f06d5c276499825
-ms.sourcegitcommit: 559fcfbe4871636494870a8b716bf7325df34ac5
+ms.openlocfilehash: 5091d7104f400ae186d1a0ca94df9d2722f95b20
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73132578"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286146"
 ---
 # <a name="choosing-between-datetime-datetimeoffset-timespan-and-timezoneinfo"></a>DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け
 
@@ -38,14 +38,14 @@ ms.locfileid: "73132578"
 
 - 日付と時刻の演算を実行する (これにより、おそらく単一時点が一意かつ明確に識別される)。
 
-.NET には、<xref:System.DateTime>、<xref:System.DateTimeOffset>、<xref:System.TimeSpan>、および <xref:System.TimeZoneInfo> の種類が含まれており、これらすべてを使用して、日付と時刻を操作するアプリケーションを構築できます。
+.Net には、、、、およびの各型が含まれており、これらすべてを使用して <xref:System.DateTime> 、 <xref:System.DateTimeOffset> <xref:System.TimeSpan> <xref:System.TimeZoneInfo> 日付と時刻を操作するアプリケーションを構築できます。
 
 > [!NOTE]
-> このトピックでは、その機能が <xref:System.TimeZoneInfo> クラスにほぼ完全に組み込まれているため、<xref:System.TimeZone> については説明しません。 可能な限り、<xref:System.TimeZone> クラスではなく、<xref:System.TimeZoneInfo> クラスを使用してください。
+> このトピック <xref:System.TimeZone> では、その機能がほぼ完全にクラスに組み込まれているため、説明しません <xref:System.TimeZoneInfo> 。 可能な限り、クラス <xref:System.TimeZoneInfo> の代わりにクラスを使用し <xref:System.TimeZone> ます。
 
 ## <a name="the-datetime-structure"></a>DateTime 構造体
 
-<xref:System.DateTime> 値は、特定の日付と時刻を定義します。 これには、その日付と時刻が属するタイムゾーンに関する限られた情報を提供する <xref:System.DateTime.Kind%2A> プロパティが含まれています。 <xref:System.DateTimeKind> プロパティによって返される <xref:System.DateTime.Kind%2A> 値は、 <xref:System.DateTime> 値が現地時刻 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、世界協定時刻 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)、指定されていない時刻 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) のうちのどれを表すかを示します。
+<xref:System.DateTime> 値は、特定の日付と時刻を定義します。 これには、 <xref:System.DateTime.Kind%2A> その日付と時刻が属するタイムゾーンに関する限られた情報を提供するプロパティが含まれます。 <xref:System.DateTimeKind> プロパティによって返される <xref:System.DateTime.Kind%2A> 値は、 <xref:System.DateTime> 値が現地時刻 (<xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、世界協定時刻 (UTC) (<xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)、指定されていない時刻 (<xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>) のうちのどれを表すかを示します。
 
 <xref:System.DateTime> 構造体は、次の操作を実行するアプリケーションに適しています。
 
@@ -88,7 +88,7 @@ ms.locfileid: "73132578"
 [!code-csharp[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/cs/Conceptual1.cs#1)]
 [!code-vb[System.DateTimeOffset.Conceptual#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTimeOffset.Conceptual/vb/Conceptual1.vb#1)]
 
-この例の日付と時刻の値はそれぞれ少なくとも 3 つの異なるタイム ゾーンに属することができることを出力は示しています。 <xref:System.DateTimeOffset> 値の 6/10/2007 は、日付と時刻の値が夏時間を表す場合、UTC のそのオフセットは必ずしも元のタイム ゾーンの基本 UTC オフセット、またはその表示名から見つかる UTC のオフセットと一致しないことを示しています。 これは、単一の <xref:System.DateTimeOffset> 値はそのタイム ゾーンと密接に関連していないために夏時間との間のタイム ゾーンの遷移を反映することができないことを意味しています。 これは特に、日付と時刻の演算を使用して <xref:System.DateTimeOffset> 値を操作する際に問題となる可能性があります。 タイム ゾーンの調整規則を考慮に入れた日付と時刻の演算を実行する方法については、「[日付と時刻を使用した算術演算の実行](performing-arithmetic-operations.md)」を参照してください。
+この例の日付と時刻の値はそれぞれ少なくとも 3 つの異なるタイム ゾーンに属することができることを出力は示しています。 <xref:System.DateTimeOffset> 値の 6/10/2007 は、日付と時刻の値が夏時間を表す場合、UTC のそのオフセットは必ずしも元のタイム ゾーンの基本 UTC オフセット、またはその表示名から見つかる UTC のオフセットと一致しないことを示しています。 これは、単一の <xref:System.DateTimeOffset> 値はそのタイム ゾーンと密接に関連していないために夏時間との間のタイム ゾーンの遷移を反映することができないことを意味しています。 これは特に、日付と時刻の演算を使用して <xref:System.DateTimeOffset> 値を操作する際に問題となる可能性があります。 タイムゾーンの調整規則を考慮する方法で日付と時刻の演算を実行する方法については、「[日付と時刻を使用](performing-arithmetic-operations.md)した算術演算の実行」を参照してください。
 
 ## <a name="the-timespan-structure"></a>TimeSpan 構造体
 
@@ -96,11 +96,11 @@ ms.locfileid: "73132578"
 
 - 2 つの日付と時刻の値の間の時間を反映する。 たとえば、ある値から <xref:System.DateTime> 値を減算すると、 <xref:System.TimeSpan> 値が返されます。
 
-- 経過時間を測定する。 たとえば、<xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> プロパティは、経過時間の計測を開始するいずれかの <xref:System.Diagnostics.Stopwatch> メソッドの呼び出しから経過した時間間隔を反映する <xref:System.TimeSpan> 値を返します。
+- 経過時間を測定する。 たとえば、プロパティは、 <xref:System.Diagnostics.Stopwatch.Elapsed%2A?displayProperty=nameWithType> <xref:System.TimeSpan> <xref:System.Diagnostics.Stopwatch> 経過時間の計測を開始するメソッドの1つを呼び出した後に経過した時間間隔を反映する値を返します。
 
-値が特定の日を参照せずに時間を反映している場合は、<xref:System.TimeSpan> 値を <xref:System.DateTime> 値の置換として使用することもできます。 この使用方法は、<xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> プロパティと <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> プロパティに似ています。これらのプロパティは、日付への参照なしで時間を表す <xref:System.TimeSpan> 値を返します。 たとえば、 <xref:System.TimeSpan> 構造体を使用して、ストアの開店時刻または閉店時刻を反映したり、標準イベントが発生したときの時刻を表したりするために使用できます。
+値が <xref:System.TimeSpan> <xref:System.DateTime> 特定の日を参照せずに時間を反映している場合は、値の置換として値を使用することもできます。 この使用方法は、プロパティとプロパティに似てい <xref:System.DateTime.TimeOfDay%2A?displayProperty=nameWithType> <xref:System.DateTimeOffset.TimeOfDay%2A?displayProperty=nameWithType> ます。このプロパティは、 <xref:System.TimeSpan> 日付への参照なしで時間を表す値を返します。 たとえば、 <xref:System.TimeSpan> 構造体を使用して、ストアの開店時刻または閉店時刻を反映したり、標準イベントが発生したときの時刻を表したりするために使用できます。
 
-以下の例では、開店時刻と閉店時刻用の `StoreInfo` オブジェクト、およびストアのタイム ゾーンを表す <xref:System.TimeSpan> オブジェクトを含む <xref:System.TimeZoneInfo> 構造体を定義します。 構造体には、`IsOpenNow`、`IsOpenAt` という 2 つのメソッドも含まれます。これは、ローカル タイム ゾーンにいると想定されるユーザーによって指定された時刻にストアがオープンするかどうかを示します。
+以下の例では、開店時刻と閉店時刻用の `StoreInfo` オブジェクト、およびストアのタイム ゾーンを表す <xref:System.TimeSpan> オブジェクトを含む <xref:System.TimeZoneInfo> 構造体を定義します。 構造体には、 `IsOpenNow` 、 `IsOpenAt`という 2 つのメソッドも含まれます。これは、ローカル タイム ゾーンにいると想定されるユーザーによって指定された時刻にストアがオープンするかどうかを示します。
 
 [!code-csharp[Conceptual.ChoosingDates#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.choosingdates/cs/datetimereplacement1.cs#1)]
 [!code-vb[Conceptual.ChoosingDates#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.choosingdates/vb/datetimereplacement1.vb#1)]
@@ -120,4 +120,4 @@ ms.locfileid: "73132578"
 
 ## <a name="see-also"></a>関連項目
 
-- [日付、時刻およびタイム ゾーン](../../../docs/standard/datetime/index.md)
+- [日付、時刻、およびタイム ゾーン](index.md)
