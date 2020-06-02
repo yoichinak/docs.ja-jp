@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-ms.openlocfilehash: 0ad98af240cf8d1041d6a8b64ab71a56e763f76f
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: e435e0281165b4a9f12bbccbeb10401b57375dcb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83419058"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290202"
 ---
 # <a name="names-of-namespaces"></a>名前空間の名前
 他の命名ガイドラインと同様に、名前空間に名前を付ける際の目的は、名前空間の内容がどのようなものである可能性があるかをすぐに把握するために、フレームワークを使用するプログラマにとって十分なわかりやすいものにすることです。 次のテンプレートは、名前空間の名前付けに関する一般的な規則を指定します。
@@ -84,5 +84,5 @@ ms.locfileid: "83419058"
 
 ## <a name="see-also"></a>関連項目
 
-- [フレームワークデザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
-- [名前付けのガイドライン](../../../docs/standard/design-guidelines/naming-guidelines.md)
+- [フレームワークデザインのガイドライン](index.md)
+- [名前付けのガイドライン](naming-guidelines.md)

@@ -11,18 +11,18 @@ helpviewer_keywords:
 - cryptography [.NET Framework], asymmetric
 - asymmetric encryption
 ms.assetid: 7ecce51f-db5f-4bd4-9321-cceb6fcb2a77
-ms.openlocfilehash: 669b9c77ca0102ed94d8743cf37b18c0d0c528dc
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: 3230836b93ea191e5de27717a918038f2f8dead6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78159404"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288356"
 ---
 # <a name="encrypting-data"></a>データの暗号化
 対称暗号化と非対称暗号化は、異なるプロセスを使用して実行されます。 対称暗号化は、ストリーム上で実行されるため、大量のデータの暗号化に役立ちます。 非対称暗号化は、少ないバイト数で実行されるため、少量のデータにのみ役立ちます。  
   
 ## <a name="symmetric-encryption"></a>対称暗号化  
- マネージド対称暗号化クラスは、ストリームに読み取られるデータを暗号化する <xref:System.Security.Cryptography.CryptoStream> という特別なストリーム クラスと共に使用されます。 **CryptoStream** クラスは、マネージド ストリーム クラスを使用して初期化されます。クラスは、(暗号化アルゴリズムを実装するクラスから作成された) <xref:System.Security.Cryptography.ICryptoTransform> インターフェイス、および <xref:System.Security.Cryptography.CryptoStreamMode> CryptoStream **に対して許可されたアクセスの種類について記述した**列挙体を実装します。 **CryptoStream** クラスは、 <xref:System.IO.Stream> クラスから派生する任意のクラス ( <xref:System.IO.FileStream>、 <xref:System.IO.MemoryStream>、 <xref:System.Net.Sockets.NetworkStream>など) を使用して初期化できます。 これらのクラスを使用すると、さまざまなストリーム オブジェクトの対称暗号化を実行できます。  
+ マネージド対称暗号化クラスは、ストリームに読み取られるデータを暗号化する <xref:System.Security.Cryptography.CryptoStream> という特別なストリーム クラスと共に使用されます。 **CryptoStream** クラスは、マネージド ストリーム クラスを使用して初期化されます。クラスは、(暗号化アルゴリズムを実装するクラスから作成された) <xref:System.Security.Cryptography.ICryptoTransform> インターフェイス、および <xref:System.Security.Cryptography.CryptoStreamMode> CryptoStream **に対して許可されたアクセスの種類について記述した**列挙体を実装します。 **CryptoStream**クラスは、クラスから派生した任意のクラス (、、など) を使用して初期化でき <xref:System.IO.Stream> <xref:System.IO.FileStream> <xref:System.IO.MemoryStream> <xref:System.Net.Sockets.NetworkStream> ます。 これらのクラスを使用すると、さまざまなストリーム オブジェクトの対称暗号化を実行できます。  
   
  次の例は、Rijndael 暗号化アルゴリズムを実装する <xref:System.Security.Cryptography.RijndaelManaged> クラスの新しいインスタンスを作成し、これを使用して **CryptoStream** クラスで暗号化を実行する方法を示しています。 この例では、 **CryptoStream** は `myStream` と呼ばれるストリーム オブジェクトで初期化されています。これは任意の種類のマネージド ストリームにすることができます。 **RijndaelManaged** クラスの **CreateEncryptor** メソッドには、暗号化で使用されるキーと IV が渡されます。 この場合、 `rmCrypto` から生成された既定のキーと IV が使用されます。 最後に、ストリームへの書き込みのアクセスを指定する **CryptoStreamMode.Write** が渡されます。  
   
@@ -260,8 +260,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [暗号化と復号化のためのキーの生成](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
-- [データの復号化](../../../docs/standard/security/decrypting-data.md)
-- [暗号サービス](../../../docs/standard/security/cryptographic-services.md)
+- [暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)
+- [データの復号化](decrypting-data.md)
+- [暗号化サービス](cryptographic-services.md)

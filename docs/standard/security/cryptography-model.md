@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], model
 - encryption [.NET Framework], model
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
-ms.openlocfilehash: f878f73497b83aaf31f2ba3b23cca1f685867b3e
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: c2d28abacd34736764b69be750a850a0f2e8db85
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095269"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288382"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework の暗号モデル
 
@@ -45,11 +45,11 @@ ms.locfileid: "77095269"
 
 ## <a name="stream-design"></a>ストリーム デザイン
 
-共通言語ランタイムは、対称アルゴリズムおよびハッシュ アルゴリズムを実装するためのストリーム指向デザインを使用しています。 この設計の中心となるは、<xref:System.Security.Cryptography.CryptoStream> クラスから派生する <xref:System.IO.Stream> クラスです。 ストリーム ベースの暗号化オブジェクトは、単一の標準インターフェイス (`CryptoStream`) をサポートし、オブジェクトのデータ転送部分を処理します。 すべてのオブジェクトは標準のインターフェイス上に構築されるため、複数のオブジェクト (ハッシュ オブジェクトに続く暗号化オブジェクトなど) を連結したり、データ用の中間ストレージなしでデータ上で複数の操作を実行したりできます。 また、ストリーミング モデルを使用して、より小さなオブジェクトからオブジェクトを構築することもできます。 たとえば、複合暗号化とハッシュ アルゴリズムは 1 つのストリーム オブジェクトと見ることができますが、このオブジェクトは一連の複数のストリーム オブジェクトから作成されているかもしれません。
+共通言語ランタイムは、対称アルゴリズムおよびハッシュ アルゴリズムを実装するためのストリーム指向デザインを使用しています。 この設計の中心となるは、<xref:System.IO.Stream> クラスから派生する <xref:System.Security.Cryptography.CryptoStream> クラスです。 ストリーム ベースの暗号化オブジェクトは、単一の標準インターフェイス (`CryptoStream`) をサポートし、オブジェクトのデータ転送部分を処理します。 すべてのオブジェクトは標準のインターフェイス上に構築されるため、複数のオブジェクト (ハッシュ オブジェクトに続く暗号化オブジェクトなど) を連結したり、データ用の中間ストレージなしでデータ上で複数の操作を実行したりできます。 また、ストリーミング モデルを使用して、より小さなオブジェクトからオブジェクトを構築することもできます。 たとえば、複合暗号化とハッシュ アルゴリズムは 1 つのストリーム オブジェクトと見ることができますが、このオブジェクトは一連の複数のストリーム オブジェクトから作成されているかもしれません。
 
 ## <a name="cryptographic-configuration"></a>暗号化の構成
 
-暗号化の構成によって、アルゴリズムの特定の実装のアルゴリズム名への解決が可能になり、.NET Framework の暗号化クラスの機能を拡張できます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。 暗号化の構成の詳細については、「[暗号化クラスの構成](../../../docs/framework/configure-apps/configure-cryptography-classes.md)」を参照してください。
+暗号化の構成によって、アルゴリズムの特定の実装のアルゴリズム名への解決が可能になり、.NET Framework の暗号化クラスの機能を拡張できます。 アルゴリズムの独自のハードウェアまたはソフトウェア実装を追加して、実装を任意のアルゴリズム名にマップすることができます。 構成ファイルでアルゴリズムを指定しない場合は、既定の設定が使用されます。 暗号化の構成の詳細については、「[暗号化クラスの構成](../../framework/configure-apps/configure-cryptography-classes.md)」を参照してください。
 
 ## <a name="choosing-an-algorithm"></a>アルゴリズムの選択
 
@@ -57,23 +57,23 @@ ms.locfileid: "77095269"
 
 アプリケーションで推奨されるアルゴリズムの一覧を示します。
 
-- データのプライバシー :
+- データのプライバシー : 
   - <xref:System.Security.Cryptography.Aes>
-- データの整合性 :
+- データの整合性 : 
   - <xref:System.Security.Cryptography.HMACSHA256>
   - <xref:System.Security.Cryptography.HMACSHA512>
-- デジタル署名:
+- デジタル署名 : 
   - <xref:System.Security.Cryptography.ECDsa>
   - <xref:System.Security.Cryptography.RSA>
-- キー交換 :
+- キー交換 : 
   - <xref:System.Security.Cryptography.ECDiffieHellman>
   - <xref:System.Security.Cryptography.RSA>
-- 乱数生成 :
+- 乱数生成 : 
   - <xref:System.Security.Cryptography.RNGCryptoServiceProvider>
-- パスワードからのキー生成 :
+- パスワードからのキー生成 :  
   - <xref:System.Security.Cryptography.Rfc2898DeriveBytes>
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [暗号サービス](../../../docs/standard/security/cryptographic-services.md)
+- [暗号化サービス](cryptographic-services.md)
 - [C での暗号化プロトコル、アルゴリズム、およびソースコードの適用 (Schneier)](https://www.schneier.com/books/applied_cryptography/)

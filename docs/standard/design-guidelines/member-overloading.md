@@ -9,15 +9,15 @@ helpviewer_keywords:
 - overloaded members
 - signatures, members
 ms.assetid: 964ba19e-8b94-4b5b-b1e3-5a0b531a0bb1
-ms.openlocfilehash: c9cb178e838aab99c22089b527a6bd2e86b325de
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 6a2cd6d4dd293a7f4a408e1ee97a125c9454be41
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76727840"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289006"
 ---
 # <a name="member-overloading"></a>メンバーのオーバーロード
-メンバーのオーバーロードとは、同じ型に複数のメンバーを作成し、パラメーターの数または型だけではなく、同じ名前を持つことを意味します。 たとえば、次の例では、`WriteLine` メソッドがオーバーロードされています。
+メンバーのオーバーロードとは、同じ型に複数のメンバーを作成し、パラメーターの数または型だけではなく、同じ名前を持つことを意味します。 たとえば、次の例では、 `WriteLine` メソッドはオーバーロードされています。
 
 ```csharp
 public static class Console {
@@ -34,19 +34,19 @@ public static class Console {
 
  ✔️は、記述的なパラメーター名を使用して、短いオーバーロードによって使用される既定値を示すようにします。
 
- ❌ オーバーロード内のパラメーター名を変更しないようにします。 1つのオーバーロード内のパラメーターが、別のオーバーロード内のパラメーターと同じ入力を表している場合、パラメーターの名前は同じである必要があります。
+ ❌オーバーロードでは、任意のパラメーター名を変更しないようにします。 1つのオーバーロード内のパラメーターが、別のオーバーロード内のパラメーターと同じ入力を表している場合、パラメーターの名前は同じである必要があります。
 
- ❌、オーバーロードされたメンバーのパラメーターの順序に不整合が生じないようにします。 同じ名前のパラメーターは、すべてのオーバーロードで同じ位置に出現します。
+ ❌オーバーロードされたメンバーのパラメーターの順序が一致しないようにします。 同じ名前のパラメーターは、すべてのオーバーロードで同じ位置に出現します。
 
  ✔️は、最大のオーバーロード (拡張が必要な場合) のみにしてください。 より短いオーバーロードでは、より長いオーバーロードに対してを呼び出すだけで済みます。
 
- ❌ は、`ref` または `out` 修飾子を使用してメンバーをオーバーロードしないでください。
+ ❌`ref` `out` メンバーをオーバーロードするためにまたは修飾子を使用しないでください。
 
  一部の言語では、このようなオーバーロードの呼び出しを解決できません。 また、通常、このようなオーバーロードには完全に異なるセマンティクスがあり、オーバーロードは使用できませんが、2つの異なるメソッドを使用することをお勧めします。
 
- ❌ には、同じ位置にあるパラメーターを持つオーバーロードと、異なるセマンティクスを持つ類似した型があります。
+ ❌同じ位置にパラメーターを持つオーバーロードと、異なるセマンティクスを持つ同様の型を持つオーバーロードは使用しないでください。
 
- ✔️オプションの引数に対して `null` を渡すことを許可します。
+ ✔️ `null` 省略可能な引数に対してを渡すことができます。
 
  ✔️は、既定の引数を持つメンバーを定義するのではなく、メンバーのオーバーロードを使用します。
 
@@ -56,7 +56,7 @@ public static class Console {
 
  *2008 年 10 月 22 日に Microsoft Windows Development シリーズの一部として、Addison-Wesley Professional によって発行された、Krzysztof Cwalina および Brad Abrams による「[Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)」 (フレームワーク デザイン ガイドライン: 再利用可能な .NET ライブラリの規則、用法、パターン、第 2 版) から Pearson Education, Inc. の許可を得て再印刷されています。*
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [メンバーのデザインのガイドライン](../../../docs/standard/design-guidelines/member.md)
-- [フレームワーク デザインのガイドライン](../../../docs/standard/design-guidelines/index.md)
+- [メンバーデザインのガイドライン](member.md)
+- [フレームワークデザインのガイドライン](index.md)
