@@ -1,6 +1,6 @@
 ---
 title: セキュリティと実行時のコード生成
-description: 信頼度の低いコードに代わってコードを生成する場合、特に呼び出し元がコード生成に影響を与える可能性がある場合は、セキュリティ上の問題になります。
+description: より高い信頼で実行される信頼度の低いコードの代わりにコードを生成することは、特に呼び出し元がコード生成に影響を与える場合には、セキュリティ上の問題になります。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - security [.NET Framework], on-the-fly code generation
 - secure coding, on-the-fly code generation
 ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
-ms.openlocfilehash: 34ebda27a81ca29ebb27a721b77b735a12be882e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7e5168aa9305c559cf5ea2fb197b2c23ce2a05b0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186793"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291033"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>セキュリティと実行時のコード生成
 ライブラリによっては、コードを生成し、それを実行することによって、呼び出し元のためになんらかの処理を行います。 基本的に問題となるのは、より低い信頼度のコードの代わりに生成し、そのコードをより高い信頼度で実行することです。 呼び出し側がコードの生成に影響を及ぼすと問題はさらに悪化するため、安全と考えられるコードだけが生成されることを確認してください。  
@@ -27,4 +27,4 @@ ms.locfileid: "79186793"
   
 ## <a name="see-also"></a>関連項目
 
-- [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)
+- [安全なコーディングのガイドライン](secure-coding-guidelines.md)
