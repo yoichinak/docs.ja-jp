@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: de40369a661c347a2125075e820420af4eb71cac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: df69d895dee51f1bad1fb6164fcb18996ee3eef4
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75337253"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241657"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
 
-このセクションでは、C# 言語の重要な機能に関する詳細と、.NET Framework 経由でアクセスできる C# の機能について説明します。  
+このセクションでは、C# 言語の重要な機能に関する詳細と、.NET 経由でアクセスできる C# の機能について説明します。  
   
  このセクションの大部分は、C# と一般的なプログラミングの概念について、ある程度の知識を持っていることを前提として説明されています。 プログラミングや C# のまったくの初心者の方は、[C# チュートリアルの概要](../tutorials/intro-to-csharp/index.md) に関するページや [.NET In-Browser Tutorial](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)(ブラウザーでの .NET のチュートリアル) を参照してください。プログラミングの予備知識は必要ありません。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "75337253"
   
  [文字列](./strings/index.md)  
   
- [Properties](./classes-and-structs/properties.md)  
+ [プロパティ](./classes-and-structs/properties.md)  
   
  [インデクサー](./indexers/index.md)  
   
@@ -84,6 +84,6 @@ ms.locfileid: "75337253"
   
  [リフレクション](./concepts/reflection.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../language-reference/index.md)

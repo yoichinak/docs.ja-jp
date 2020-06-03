@@ -10,15 +10,16 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: afd9e688bd716375bafb370fad4af082a9498411
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb679fbffaf742739275c171ef6d88511b2a2a77
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79397660"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240760"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>クラスと構造体 (C# プログラミング ガイド)
-クラスと構造体は、.NET Framework の共通型システムの 2 つの基本構成です。 クラスと構造体は、どちらも基本的にはデータと動作のセットを 1 つの論理単位としてカプセル化するデータ構造です。 データと動作はクラスまたは構造体の "*メンバー*" です。このトピックで後述するように、メソッド、プロパティ、イベントなどが含まれます。  
+
+クラスと構造体は、.NET の共通型システムの 2 つの基本構成です。 クラスと構造体は、どちらも基本的にはデータと動作のセットを 1 つの論理単位としてカプセル化するデータ構造です。 データと動作はクラスまたは構造体の "*メンバー*" です。このトピックで後述するように、メソッド、プロパティ、イベントなどが含まれます。  
   
  クラスまたは構造体の宣言は、実行時にインスタンスやオブジェクトを作成するために使用する設計図のようなものです。 `Person` というクラスまたは構造体を定義すると、`Person` は型の名前になります。 型 `p` の変数 `Person` を宣言して初期化すると、`p` は `Person` のオブジェクトまたはインスタンスになります。 同じ `Person` 型のインスタンスを複数作成し、各インスタンスのプロパティとフィールドに異なる値を設定することができます。  
   
