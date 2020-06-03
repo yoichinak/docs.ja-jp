@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: c5c601d18d92d9b57781bc8a09f26f0bc3a9216a
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842011"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288291"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET アプリケーションのグローバライズとローカライズ
 
@@ -84,10 +84,10 @@ ms.locfileid: "83842011"
 
    ASCII、ANSI、Unicode、およびその他の文字エンコーディングを表すクラスが格納されている名前空間です。
 
-- [Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)
+- [Resgen.exe (リソース ファイル ジェネレーター)](../../framework/tools/resgen-exe-resource-file-generator.md)
 
    Resgen.exe を使用して .txt ファイルと XML ベース リソース フォーマット (.resx) ファイルを共通言語ランタイムのバイナリ .resources ファイルに変換する方法について説明します。
 
-- [Winres.exe (Windows フォーム リソース エディター)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)
+- [Winres.exe (Windows フォーム リソース エディター)](../../framework/tools/winres-exe-windows-forms-resource-editor.md)
 
    Winres.exe を使用して Windows フォームのフォームをローカライズする方法について説明します。

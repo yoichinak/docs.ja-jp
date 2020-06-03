@@ -26,12 +26,12 @@ helpviewer_keywords:
 - generic types
 - generic type parameters
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
-ms.openlocfilehash: 7f20e5108ad8bff602f5b761e65f093d987f2608
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d7f606126237d4d045f55dde03c125455c8a8634
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78156310"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84275959"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -63,7 +63,7 @@ ms.locfileid: "78156310"
   
 - 一般的な用語である *ジェネリック型* には、構築型とジェネリック型定義の両方が含まれます。  
   
-- ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、"*変性*" と総称されます。 詳細については、「[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)」を参照してください。  
+- ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、 *"変性"* と総称されます。 詳細については、「[共変性と反変性](covariance-and-contravariance.md)」を参照してください。  
   
 - *制約* は、ジェネリック型パラメーターに適用される制限です。 たとえば、型パラメーターを、 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装する型に制限して、型のインスタンスを並べ替えることができるようにできます。 また、型パラメーターを、特定の基底クラスを持つ型、パラメーターなしのコンストラクターを持つ型、または参照型や値型に制約することもできます。 ジェネリック型のユーザーは、制約を満たさない型引数に置き換えることはできません。  
   
@@ -94,20 +94,20 @@ ms.locfileid: "78156310"
   
 - 汎用デリゲートによって、複数のデリゲート クラスを作成せずにタイプ セーフなコールバックを使用できます。 たとえば、 <xref:System.Predicate%601> 汎用デリゲートを使用すると、特定の型を対象とした独自の検索条件を実装するメソッドを作成し、 <xref:System.Array> 、 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>などの <xref:System.Array.FindAll%2A>型のメソッドと共に自分のメソッドを使用することができます。  
   
-- ジェネリックによって、動的に生成されるコードが簡略化されます。 動的に生成されるコードでジェネリックを使用する場合、型を生成する必要がありません。 これにより、アセンブリ全体を生成する代わりに軽量の動的メソッドを使用できるシナリオの数が増えます。 詳細については、「[How to: Define and Execute Dynamic Methods](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)」 (方法: 動的メソッドを定義および実行する) および 「<xref:System.Reflection.Emit.DynamicMethod>」 を参照してください。  
+- ジェネリックによって、動的に生成されるコードが簡略化されます。 動的に生成されるコードでジェネリックを使用する場合、型を生成する必要がありません。 これにより、アセンブリ全体を生成する代わりに軽量の動的メソッドを使用できるシナリオの数が増えます。 詳細については、[動的メソッドを定義および実行する](../../framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)」と <xref:System.Reflection.Emit.DynamicMethod> をご覧ください。  
   
  ジェネリックの制限事項を次に示します。  
   
 - ジェネリック型は、 <xref:System.MarshalByRefObject> などのほとんどの基本クラスから派生できます (制約を使用して、ジェネリック型パラメーターが <xref:System.MarshalByRefObject>のような基本クラスから派生することを要求できます)。 ただし、.NET Framework では、コンテキスト バインドのジェネリック型はサポートしていません。 ジェネリック型は、 <xref:System.ContextBoundObject>から派生できますが、その型のインスタンスを作成しようとすると、 <xref:System.TypeLoadException>が発生します。  
   
-- 列挙型にジェネリック型パラメーターを含めることはできません。 列挙型が、単なる偶然によってジェネリックのみになる可能性はあります (たとえば、Visual Basic、C#、または C++ を使用して定義されたジェネリック型に入れ子にされているため)。 詳細については、[「Common Type System」](../../../docs/standard/base-types/common-type-system.md) の「列挙型」を参照してください。  
+- 列挙型にジェネリック型パラメーターを含めることはできません。 列挙型が、単なる偶然によってジェネリックのみになる可能性はあります (たとえば、Visual Basic、C#、または C++ を使用して定義されたジェネリック型に入れ子にされているため)。 詳細については、「 [共通型システム](../base-types/common-type-system.md)」の「列挙型」を参照してください。  
   
 - 軽量の動的メソッドをジェネリックにすることはできません。  
   
 - Visual Basic、C#、および C++ で、ジェネリック型に囲まれている入れ子にされた型は、外側のすべての型の型パラメーターに型が割り当てられていない限り、インスタンス化できません。 言い換えると、リフレクションでは、これらの言語を使用して定義されている入れ子にされた型には、その外側のすべての型の型パラメーターが含まれます。 これによって、外側の型の型パラメーターを、入れ子にされた型のメンバー定義で使用できます。 詳細については、「 <xref:System.Type.MakeGenericType%2A>」の「入れ子にされた型」を参照してください。  
   
     > [!NOTE]
-    > 動的アセンブリでコードを出力するか [Ilasm.exe (IL アセンブラー)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) を使用して定義されている入れ子にされた型に、外側の型の型パラメーターを含める必要はありません。ただし、これらを含んでいない場合、型パラメーターは入れ子にされたクラスのスコープから外れます。  
+    > 動的アセンブリでコードを出力するか [Ilasm.exe (IL アセンブラー)](../../framework/tools/ilasm-exe-il-assembler.md) を使用して定義されている入れ子にされた型に、外側の型の型パラメーターを含める必要はありません。ただし、これらを含んでいない場合、型パラメーターは入れ子にされたクラスのスコープから外れます。  
   
      詳細については、「 <xref:System.Type.MakeGenericType%2A>」の「入れ子にされた型」を参照してください。  
 
@@ -131,20 +131,20 @@ ms.locfileid: "78156310"
 
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|[説明]|  
+|Title|説明|  
 |-----------|-----------------|  
-|[ .NET の汎用コレクション](../../../docs/standard/generics/collections.md)|.NET のジェネリック コレクション クラスとその他のジェネリック型について説明します。|  
-|[配列とリストの操作に使用する汎用デリゲート](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)|配列またはコレクションの要素に対して実行される変換、検索述語、およびアクションの汎用デリゲートについて説明します。|  
-|[ジェネリック インターフェイス](../../../docs/standard/generics/interfaces.md)|ジェネリック型のファミリ間に共通する機能を提供するジェネリック インターフェイスについて説明します。|  
-|[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)|ジェネリック型パラメーターの共変性と反変性について説明します。|  
-|[ 一般的に使用されるコレクション型](../../../docs/standard/collections/commonly-used-collection-types.md)|ジェネリック型など、.NET のコレクション型の特性と使用シナリオの概要について説明します。|  
-|[ジェネリック コレクションの使用に適した状況](../../../docs/standard/collections/when-to-use-generic-collections.md)|ジェネリック コレクション型を使用するケースを決定するための一般的な規則について説明します。|  
-|[方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|ジェネリック型とジェネリック メソッドを含む動的アセンブリの生成方法について説明します。|  
+|[ .NET の汎用コレクション](collections.md)|.NET のジェネリック コレクション クラスとその他のジェネリック型について説明します。|  
+|[配列とリストの操作に使用する汎用デリゲート](delegates-for-manipulating-arrays-and-lists.md)|配列またはコレクションの要素に対して実行される変換、検索述語、およびアクションの汎用デリゲートについて説明します。|  
+|[ジェネリック インターフェイス](interfaces.md)|ジェネリック型のファミリ間に共通する機能を提供するジェネリック インターフェイスについて説明します。|  
+|[共変性と反変性](covariance-and-contravariance.md)|ジェネリック型パラメーターの共変性と反変性について説明します。|  
+|[ 一般的に使用されるコレクション型](../collections/commonly-used-collection-types.md)|ジェネリック型など、.NET のコレクション型の特性と使用シナリオの概要について説明します。|  
+|[ジェネリック コレクションを使用する状況](../collections/when-to-use-generic-collections.md)|ジェネリック コレクション型を使用するケースを決定するための一般的な規則について説明します。|  
+|[方法: リフレクション出力を使用してジェネリック型を定義する](../../framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|ジェネリック型とジェネリック メソッドを含む動的アセンブリの生成方法について説明します。|  
 |[Generic Types in Visual Basic](../../visual-basic/programming-guide/language-features/data-types/generic-types.md)|ジェネリック型の使用方法や定義方法に関するトピックなど、Visual Basic ユーザー向けにジェネリック機能について説明します。|  
 |[ジェネリックの概要](../../csharp/programming-guide/generics/index.md)|C# ユーザー向けにジェネリック型の定義方法や使用方法の概要について説明します。|  
 |[Visual C++ のジェネリックの概要](/cpp/windows/overview-of-generics-in-visual-cpp)|ジェネリックとテンプレートの違いなど、C++ ユーザー向けにジェネリック機能について説明します。|  
 
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
  <xref:System.Collections.Generic>  
   
  <xref:System.Collections.ObjectModel>  
