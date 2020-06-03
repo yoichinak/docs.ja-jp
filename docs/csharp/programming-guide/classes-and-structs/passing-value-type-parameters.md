@@ -5,12 +5,12 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: 670af18d4b2b356aa33a0a03a29c05f5ba9bf78f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13982254922d72337feeb502d2c84ebb42cf27bb
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76744499"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004557"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>値型パラメーターの引き渡し (C# プログラミング ガイド)
 データへの参照を含む[参照型](../../language-reference/keywords/reference-types.md)変数とは対照的に、[値型](../../language-reference/builtin-types/value-types.md)変数にはデータが直接含まれます。 値型変数を値渡しでメソッドに渡すと、変数のコピーがメソッドに渡されます。 メソッド内部で生じるパラメーターに対する変更の影響は、引数の変数に格納されている元のデータには及びません。 呼び出したメソッドで引数の値を変更する場合は、[ref](../../language-reference/keywords/ref.md) キーワードまたは [out](../../language-reference/keywords/out-parameter-modifier.md) キーワードを使用して、参照によって渡す必要があります。 また、[in](../../language-reference/keywords/in-parameter-modifier.md) キーワードを使用し、参照で値パラメーターを渡してコピーを回避し、同時に値が変更されないようにすることができます。 わかりやすくするために、次の例では `ref` を使用しています。  
@@ -38,8 +38,8 @@ ms.locfileid: "76744499"
   
  [!code-csharp[csProgGuideParameters#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#6)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [パラメーターの引き渡し](./passing-parameters.md)
 - [参照型パラメーターの引き渡し](./passing-reference-type-parameters.md)

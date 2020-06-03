@@ -1,104 +1,105 @@
 ---
 title: Visual Studio での .NET Core を使用した .NET Standard クラス ライブラリのテスト
 description: .NET Core クラス ライブラリ用の単体テスト プロジェクトを作成します。 .NET Core クラス ライブラリが単体テストで正しく動作することを確認します。
-ms.date: 12/24/2019
+ms.date: 05/21/2020
 dev_langs:
 - csharp
 - vb
-ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 307261088f5c7c69c0e69fbd6b99940c04842eec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.custom: vs-dotnet
+ms.openlocfilehash: 79b680022484bb9222b66c3df76bdd5a06de8117
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "78156622"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005012"
 ---
-# <a name="test-a-net-standard-library-with-net-core-in-visual-studio"></a>Visual Studio での .NET Core を使用した .NET Standard ライブラリのテスト
+# <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio"></a>チュートリアル: Visual Studio での .NET Core を使用した .NET Standard ライブラリのテスト
 
-「[Visual Studio での .NET Standard ライブラリの構築](library-with-visual-studio.md)」では、<xref:System.String> クラスに拡張メソッドを追加する簡単なクラス ライブラリを作成しました。 ここでは、それが期待どおり動作するかを確認する単体テストを作成しましょう。 この単体テスト プロジェクトは、前の記事で作成したソリューションに追加します。
+このチュートリアルでは、テスト プロジェクトをソリューションに追加して、単体テストを自動化する方法について説明します。
+
+## <a name="prerequisites"></a>必須コンポーネント
+
+- このチュートリアルでは、「[Visual Studio で .NET Standard ライブラリを構築する](library-with-visual-studio.md)」で作成したソリューションを使用します。
 
 ## <a name="create-a-unit-test-project"></a>単体テスト プロジェクトを作成する
 
-単体テスト プロジェクトを作成するには、次の操作を行います。
-
-1. [Visual Studio での .NET Standard ライブラリの構築](library-with-visual-studio.md)に関する記事で作成した `ClassLibraryProjects` ソリューションを開きます。
+1. 「[Visual Studio で .NET Standard ライブラリを構築する](library-with-visual-studio.md)」で作成した `ClassLibraryProjects` ソリューションを開きます。
 
 1. 「StringLibraryTest」 という名前の新しい単体テスト プロジェクトをソリューションに追加します。
 
    1. **ソリューション エクスプローラー**で、ソリューションを右クリックし、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
-   1. **[新しいプロジェクトの追加]** ページで、検索ボックスに「**mstest**」と入力します。 言語のリストから **[C#]** または **[Visual Basic]** を選択し、次に、プラットフォームのリストから **[すべてのプラットフォーム]** を選択します。 **[MsTest テスト プロジェクト (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
+   1. **[新しいプロジェクトの追加]** ページで、検索ボックスに「**mstest**」と入力します。 言語の一覧から **[C#]** または **[Visual Basic]** を選択し、次に、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。
 
-   1. **[新しいプロジェクトの構成]** ページで、**[プロジェクト名]** ボックスに「**StringLibraryTest**」と入力します。 **[作成]** を選択します。
+   1. **[MsTest テスト プロジェクト (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
+
+   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**StringLibraryTest**」と入力します。 次に、 **[作成]** を選択します。
 
    > [!NOTE]
-   > MSTest に加え、Visual Studio で .NET Core 用の xUnit と nUnit テスト プロジェクトを作成することもできます。
+   > MSTest は、選択できる 3 つのテストフレームワークのうちの 1 つです。 これ以外は、xUnit と nUnit です。
 
-1. Visual Studio によってプロジェクトが作成され、次のコードでクラス ファイルがコード ウィンドウに開かれます。
+1. Visual Studio によってプロジェクトが作成され、クラス ファイルが次のコードでコード ウィンドウに開かれます。 使用する言語で表示されていない場合は、ページの上部にある言語セレクターを変更します。
 
    ```csharp
    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    namespace StringLibraryTest
-    {
-        [TestClass]
-        public class UnitTest1
-        {
-            [TestMethod]
-            public void TestMethod1()
-            {
-            }
-        }
-    }
-    ```
+   namespace StringLibraryTest
+   {
+       [TestClass]
+       public class UnitTest1
+       {
+           [TestMethod]
+           public void TestMethod1()
+           {
+           }
+       }
+   }
+   ```
 
-    ```vb
-    Imports Microsoft.VisualStudio.TestTools.UnitTesting
+   ```vb
+   Imports Microsoft.VisualStudio.TestTools.UnitTesting
 
-    Namespace StringLibraryTest
-        <TestClass>
-        Public Class UnitTest1
-            <TestMethod>
-            Sub TestSub()
+   Namespace StringLibraryTest
+       <TestClass>
+       Public Class UnitTest1
+           <TestMethod>
+           Sub TestSub()
 
-            End Sub
-        End Class
-    End Namespace
-    ```
+           End Sub
+       End Class
+   End Namespace
+   ```
 
    単体テストのテンプレートで作成されたソース コードにより、次の処理が行われます。
 
    - 単体テストで使用される型が含まれた <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 名前空間がインポートされます。
+   - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 属性が `UnitTest1` クラスに適用されます。
+   - <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性を適用して、C# では `TestMethod1` を、また Visual Basic では `TestSub` が定義されます。
 
-   - [TestClass](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute) 属性が `UnitTest1` クラスに適用されます。 [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 属性でタグ付けされたテスト クラス内の各テスト メソッドは、単体テスト実行時に自動実行されます。
+   [[TestClass]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute)でタグ付けされたテスト クラスの [[TestMethod]](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) でタグ付けされた各テスト メソッドが、単体テスト実行時に自動実行されます。
 
-   - [TestMethod](xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute) 属性が適用され、単体テスト実行時に自動実行されるテスト メソッドとして、C# では `TestMethod1`、Visual Basic では `TestSub` が定義されます。
+1. **ソリューション エクスプローラー**で **[StringLibraryTest]** プロジェクトの **[依存関係]** ノードを右クリックし、コンテキスト メニューの **[プロジェクト参照の追加]** を選択します。
 
-1. **ソリューション エクスプローラー**で [**StringLibraryTest**] プロジェクトの [**依存関係**] ノードを右クリックし、コンテキスト メニューの [**参照の追加**] を選択します。
+1. **[参照マネージャー]** ダイアログで、 **[プロジェクト]** ノードを展開し、 **[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリに参照を追加すると、コンパイラが **StringLibraryTest** プロジェクトをコンパイル中に、**StringLibrary** メソッドを見つけることができるようになります。
 
-   > [!div class="mx-imgBorder"]
-   > ![StringLibraryTest の依存関係のコンテキスト メニュー](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
-
-1. **[参照マネージャー]** ダイアログで、 **[プロジェクト]** ノードを展開し、 **[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 クラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
-
-   ![Visual Studio の [参照マネージャー] ダイアログ](./media/testing-library-with-visual-studio/project-reference-manager.png)
+1. **[OK]** を選択します。
 
 ## <a name="add-and-run-unit-test-methods"></a>単体テスト メソッドの追加と実行
 
-Visual Studio で単体テストを実行すると、単体テスト クラス (<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 属性が適用されているクラス) 内の <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性でマークされた各メソッドが実行されます。 テスト メソッドは、最初の失敗が検出されたとき、またはそのメソッドに含まれているすべてのテストが成功したときに終了します。
+Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute> 属性でマークされたクラス内で、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性でマークされた各メソッドが実行されます。 テスト メソッドは、最初の失敗が検出されたとき、またはそのメソッドに含まれているすべてのテストが成功したときに終了します。
 
 一般的なテストでは、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert> クラスのメンバーが呼び出されます。 多くのアサート メソッドは最低 2 つのパラメーターを含んでいます。1 つは予期されるテスト結果、もう 1 つは実際のテスト結果です。 次の表に、`Assert` クラスの頻繁に呼び出されるメソッドをいくつか示します。
 
-| Assert メソッド     | Function |
+| Assert メソッド     | 関数 |
 | ------------------ | -------- |
 | `Assert.AreEqual`  | 2 つの値または 2 つのオブジェクトが等しいことを確認します。 値またはオブジェクトが等しくない場合、アサートは失敗します。 |
 | `Assert.AreSame`   | 2 つのオブジェクト変数が同じオブジェクトを参照していることを確認します。 変数が別々のオブジェクトを参照している場合、アサートは失敗します。 |
 | `Assert.IsFalse`   | 条件が `false` であることを確認します。 条件が `true` の場合、アサートは失敗します。 |
 | `Assert.IsNotNull` | オブジェクトが `null` でないことを確認します。 オブジェクトが `null` である場合、アサートは失敗します。 |
 
-また、テスト メソッドで <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A> メソッドを使用して、スローすることが期待される例外の種類を示すこともできます。 指定した例外がスローされない場合、テストは失敗します。
+また、テスト メソッドで <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.ThrowsException%2A?displayProperty=nameWithType> メソッドを使用して、スローすることが期待される例外の種類を示すこともできます。 指定した例外がスローされない場合、テストは失敗します。
 
-`StringLibrary.StartsWithUpper` メソッドのテストでは、大文字で始まる文字列を多く用意します。 これらの場合ではメソッドが `true` を返すと予測されるので、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A> メソッドを呼び出すことができます。 同様に、大文字以外で始まる文字列を多く用意します。 これらの場合ではメソッドが `false` を返すと予測されるので、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A> メソッドを呼び出すことができます。
+`StringLibrary.StartsWithUpper` メソッドのテストでは、大文字で始まる文字列を多く用意します。 これらの場合ではメソッドが `true` を返すと予測されるので、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue%2A?displayProperty=nameWithType> メソッドを呼び出すことができます。 同様に、大文字以外で始まる文字列を多く用意します。 これらの場合ではメソッドが `false` を返すと予測されるので、<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse%2A?displayProperty=nameWithType> メソッドを呼び出すことができます。
 
 ライブラリ メソッドは文字列を処理するため、[空の文字列 (`String.Empty`) ](xref:System.String.Empty) (文字がなく <xref:System.String.Length> が 0 である有効な文字列)、および初期化されていない `null` 文字列を正しく処理することも確認します。 <xref:System.String> インスタンスで `StartsWithUpper` が拡張メソッドとして呼び出される場合、それに `null` 文字列を渡すことはできません。 しかし、それを静的メソッドとして直接呼び出して、単一の <xref:System.String> 引数を渡すこともできます。
 
@@ -120,14 +121,14 @@ Visual Studio で単体テストを実行すると、単体テスト クラス (
 
 1. **[保存の確認]** ダイアログで **[はい]** ボタンを選択してファイルを保存します。
 
-1. [**保存オプションの詳細設定**] ダイアログの [**エンコード**] ドロップダウン リストから [**Unicode (UTF-8 シグネチャ付き) - コードページ 65001**] を選択し、[**OK**] の順に選択します。
+1. **[保存オプションの詳細設定]** ダイアログの **[エンコード]** ドロップダウン リストから **[Unicode (UTF-8 シグネチャ付き) - コードページ 65001]** を選択し、 **[OK]** の順に選択します。
 
    > [!div class="mx-imgBorder"]
    > ![Visual Studio の [保存オプションの詳細設定] ダイアログ](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    UTF8 でエンコードされたファイルにソース コードを保存できなかった場合、ASCII ファイルとして保存される場合があります。 その場合は、ランタイムで ASCII 範囲外の UTF8 文字が正確にデコードされず、テスト結果が正確でなくなります。
 
-1. メニュー バーで **[テスト]**  >  **[実行]**  >  **[すべてのテスト]** を選択します。 **[テスト エクスプローラー]** ウィンドウが開き、テストが正常に実行されたことを示します。 3 つのテストが **[成功したテスト]** セクションに表示され、 **[概要]** セクションにはテストの実行結果が表示されています。
+1. メニュー バーで **[テスト]**  >  **[すべてのテストを実行する]** を選択します。 **テスト エクスプローラー** ウィンドウが開かない場合は、 **[テスト]**  >  **[テスト エクスプローラー]** を選択して開きます。 3 つのテストが **[成功したテスト]** セクションに表示され、 **[概要]** セクションにはテストの実行結果が表示されています。
 
    > [!div class="mx-imgBorder"]
    > ![[テスト エクスプローラー] ウィンドウと成功したテスト](./media/testing-library-with-visual-studio/test-explorer-window.png)
@@ -149,12 +150,12 @@ Visual Studio で単体テストを実行すると、単体テスト クラス (
 
    ```
 
-1. **[テスト]**  >  **[実行]**  >  **[すべてのテスト]** をメニュー バーから選択してテストを実行します。 **[テスト エクスプローラー]** ウィンドウに、テストが 2 つ成功し、1 つ失敗したことが示されます。
+1. メニュー バーから **[テスト]**  >  **[すべてのテストを実行]** を選択してテストを実行します。 **[テスト エクスプローラー]** ウィンドウに、テストが 2 つ成功し、1 つ失敗したことが示されます。
 
    > [!div class="mx-imgBorder"]
    > ![[テスト エクスプローラー] ウィンドウと失敗したテスト](./media/testing-library-with-visual-studio/failed-test-window.png)
 
-1. 失敗したテスト `TestDoesNotStartWith` を選択します。 **[テスト エクスプローラー]** ウィンドウに、アサートによって生成されたメッセージ "Assert.IsFalse failed. Expected for 'Error': false; actual: True" が表示されます。 失敗のため、配列内の "Error" の後ろのすべての文字列はテストされませんでした。
+1. 失敗したテスト `TestDoesNotStartWith` を選択します。 **[テスト エクスプローラー]** ウィンドウに、アサートによって生成されたメッセージ"Assert.IsFalse failed. Expected for 'Error': false; actual:True" が表示されます。 失敗のため、配列内の "Error" の後ろのすべての文字列はテストされませんでした。
 
    > [!div class="mx-imgBorder"]
    > ![IsFalse アサーションの失敗を示す [テスト エクスプローラー] ウィンドウ](./media/testing-library-with-visual-studio/failed-test-detail.png)
@@ -163,7 +164,7 @@ Visual Studio で単体テストを実行すると、単体テスト クラス (
 
 ## <a name="test-the-release-version-of-the-library"></a>ライブラリのリリース バージョンのテスト
 
-ここまで、ライブラリのデバッグ バージョンをテストしてきました。 すべてのテストが成功し、ライブラリを十分にテストしたので、さらにライブラリのリリース ビルドに対してテストを行います。 コンパイラの最適化などのさまざまな要因により、デバッグ ビルドとリリース ビルドとでは動作が異なる場合があります。
+ライブラリのデバッグ バージョンを実行すると、すべてのテストが成功するようになったので、さらにライブラリのリリース ビルドに対してテストを行います。 コンパイラの最適化などのさまざまな要因により、デバッグ ビルドとリリース ビルドとでは動作が異なる場合があります。
 
 リリース ビルドをテストするには、次の操作を行います。
 
@@ -177,10 +178,25 @@ Visual Studio で単体テストを実行すると、単体テスト クラス (
    > [!div class="mx-imgBorder"]
    > ![StringLibrary のコンテキスト メニューとビルド コマンド](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
-1. **[テスト]**  >  **[実行]**  >  **[すべてのテスト]** をメニュー バーから選択して単体テストを実行します。 テストが成功します。
+1. **[テストの実行]**  >  **[すべてのテスト]** をメニュー バーから選択して単体テストを実行します。 テストが成功します。
 
-これでライブラリのテストが完了したので、次の手順では呼び出し元が使用できるようにします。 1 つまたは複数のアプリケーションとバンドルするか、NuGet パッケージとして配布することができます。 詳細については、　[.NET Standard クラス ライブラリの使用](consuming-library-with-visual-studio.md) に関するページを参照してください。
-
-## <a name="see-also"></a>参照
+## <a name="additional-resources"></a>その他の技術情報
 
 - [Visual Studio - 単体テストの基本](/visualstudio/test/unit-test-basics)
+
+## <a name="next-steps"></a>次の手順
+
+このチュートリアルでは、クラス ライブラリの単体テストを行いました。 ライブラリをパッケージとして [NuGet](https://nuget.org) に発行した場合、他のユーザーもそれを使用できます。 方法については、次の NuGet のチュートリアルに従ってください。
+
+> [!div class="nextstepaction"]
+> [Visual Studio を使用した NuGet パッケージの作成と公開](/nuget/quickstart/create-and-publish-a-package-using-visual-studio?tabs=netcore-cli)
+
+ライブラリを NuGet パッケージとして発行した場合、他のユーザーもそれをインストールして使用できます。 方法については、次の NuGet のチュートリアルに従ってください。
+
+> [!div class="nextstepaction"]
+> [Visual Studio でパッケージをインストールして使用する](/nuget/quickstart/install-and-use-a-package-in-visual-studio)
+
+ライブラリはパッケージとして配布する必要はありません。 それが使用されるコンソール アプリにバンドルすることができます。 コンソール アプリを発行する方法については、このシリーズの前のチュートリアルを参照してください。
+
+> [!div class="nextstepaction"]
+> [Visual Studio での .NET Core コンソール アプリケーションの発行](publishing-with-visual-studio.md)

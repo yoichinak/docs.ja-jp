@@ -13,7 +13,7 @@ ms.locfileid: "82794664"
 ---
 # <a name="console-app"></a>コンソール アプリ
 
-このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。 学習内容:
+このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。 内容は以下のとおりです。
 
 - .NET Core CLI の基本事項
 - C# コンソール アプリケーションの構造
@@ -25,7 +25,7 @@ ms.locfileid: "82794664"
 
 このチュートリアルには、多くの機能が含まれています。 それらを 1 つずつビルドしてみましょう。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - お使いのマシンを、.NET Core が実行されるように設定します。 インストールの手順については、[.NET Core のダウンロード](https://dotnet.microsoft.com/download) ページを参照してください。 このアプリケーションは、Windows、Linux、macOS 上、または Docker コンテナーで実行できます。
 
@@ -55,7 +55,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>ファイルの読み取りとエコー
 
-最初に追加する機能は、テキスト ファイルを読み取り、そのテキストすべてをコンソールに表示する機能です。 まず、テキスト ファイルを追加しましょう。 この[サンプル](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt)の GitHub リポジトリから、[sampleQuotes.txt](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter) ファイルをプロジェクト ディレクトリにコピーします。 これがアプリケーションのスクリプトとして機能します。 このトピックのサンプル アプリをダウンロードする方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」をご覧ください。
+最初に追加する機能は、テキスト ファイルを読み取り、そのテキストすべてをコンソールに表示する機能です。 まず、テキスト ファイルを追加しましょう。 この[サンプル](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)の GitHub リポジトリから、[sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) ファイルをプロジェクト ディレクトリにコピーします。 これがアプリケーションのスクリプトとして機能します。 このトピックのサンプル アプリをダウンロードする方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」をご覧ください。
 
 次に、以下のメソッドを `Program` クラス (`Main` メソッドの真下) に追加します。
 
@@ -115,7 +115,7 @@ foreach (var word in words)
 yield return Environment.NewLine;
 ```
 
-次に、ファイルの行を使用する方法を変更し、各語を書き込んだ後に遅延を追加する必要があります。 `Console.WriteLine(line)` メソッドの `Main` ステートメントを、次のブロックに置き換えます。
+次に、ファイルの行を使用する方法を変更し、各語を書き込んだ後に遅延を追加する必要があります。 `Main` メソッドの `Console.WriteLine(line)` ステートメントを、次のブロックに置き換えます。
 
 ```csharp
 Console.Write(line);
@@ -135,7 +135,7 @@ if (!string.IsNullOrWhiteSpace(line))
 using System.Threading.Tasks;
 ```
 
-このサンプルを実行し、出力を確認します。 これで、各語が出力されるたびに 200 ミリ秒の遅延が発生するようになりました。 しかし、表示される出力には問題があります。ソース テキスト ファイルには、改行なしで 80 文字を超える行が複数あるからです。 スクロール中にそれを読み取るのは困難です。 これは簡単に修正できます。 各行の長さを追跡して、行の長さが特定のしきい値に達したら新しい行を生成するだけです。 行の長さを保持する `words` メソッドの `ReadFrom` の宣言の後に、ローカル変数を宣言します。
+このサンプルを実行し、出力を確認します。 これで、各語が出力されるたびに 200 ミリ秒の遅延が発生するようになりました。 しかし、表示される出力には問題があります。ソース テキスト ファイルには、改行なしで 80 文字を超える行が複数あるからです。 スクロール中にそれを読み取るのは困難です。 これは簡単に修正できます。 各行の長さを追跡して、行の長さが特定のしきい値に達したら新しい行を生成するだけです。 行の長さを保持する `ReadFrom` メソッドの `words` の宣言の後に、ローカル変数を宣言します。
 
 ```csharp
 var lineLength = 0;
@@ -219,7 +219,7 @@ private static async Task GetInput()
 
 ここでは、ラムダ式を作成して、コンソールからキーを読み取り、ユーザーが "<" (未満) キーまたは ">" (大なり) キーを押したときの遅延を表すローカル変数を変更する <xref:System.Action> デリゲートを表します。 デリゲート メソッドは、ユーザーが "X" または "x" キーを押したときに終了し、ユーザーはテキスト表示をいつでも停止できます。 このメソッドは <xref:System.Console.ReadKey> を使用してブロックし、ユーザーがキーを押すまで待機します。
 
-この機能を完成させるには、これら両方のタスク (`async Task` と `GetInput`) を開始し、これら 2 つのタスク間で共有データを管理する、`ShowTeleprompter` を返す新しいメソッドを作成する必要があります。
+この機能を完成させるには、これら両方のタスク (`GetInput` と `ShowTeleprompter`) を開始し、これら 2 つのタスク間で共有データを管理する、`async Task` を返す新しいメソッドを作成する必要があります。
 
 これら 2 つのタスク間で共有データを処理するクラスを作成しましょう。 このクラスには、2 つのパブリック プロパティが含まれます。遅延、そして、ファイルが完全に読み取られたことを示すフラグ `Done` です。
 
@@ -268,7 +268,7 @@ private static async Task RunTeleprompter()
 
 ここでの 1 つの新しいメソッドは <xref:System.Threading.Tasks.Task.WhenAny(System.Threading.Tasks.Task[])> の呼び出しです。 これによって、その引数リスト内の任意のタスクが完了したらすぐに終了する `Task` が作成されます。
 
-次に、遅延の `ShowTeleprompter` オブジェクトを使用するように、`GetInput` メソッドと `config` メソッドの両方を更新する必要があります。
+次に、遅延の `config` オブジェクトを使用するように、`ShowTeleprompter` メソッドと `GetInput` メソッドの両方を更新する必要があります。
 
 ```csharp
 private static async Task ShowTeleprompter(TelePrompterConfig config)
@@ -303,7 +303,7 @@ private static async Task GetInput(TelePrompterConfig config)
 }
 ```
 
-この新しいバージョンの `ShowTeleprompter` は、`TeleprompterConfig` クラスの新しいメソッドを呼び出します。 ここで、`Main` を更新して `RunTeleprompter` の代わりに `ShowTeleprompter` を呼び出す必要があります。
+この新しいバージョンの `ShowTeleprompter` は、`TeleprompterConfig` クラスの新しいメソッドを呼び出します。 ここで、`Main` を更新して `ShowTeleprompter` の代わりに `RunTeleprompter` を呼び出す必要があります。
 
 ```csharp
 RunTeleprompter().Wait();

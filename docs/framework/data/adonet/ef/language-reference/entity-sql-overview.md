@@ -2,12 +2,12 @@
 title: Entity SQL の概要
 ms.date: 03/30/2017
 ms.assetid: f0bb8120-e709-40a3-ac1e-5520dc47477d
-ms.openlocfilehash: 880b81f2b6d4c4b893d28c919490f88dfb2a42e8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4fe852847d8b1b4bc0b80e3ba8e1f5b4aae9ff7
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79150377"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202246"
 ---
 # <a name="entity-sql-overview"></a>Entity SQL の概要
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、Entity Framework 内の概念モデルに対するクエリの実行に使用できる SQL に似た言語です。 概念モデルでは、データがエンティティおよびリレーションシップとして表されます。[!INCLUDE[esql](../../../../../../includes/esql-md.md)] を使用すると、SQL を使用したことのあるユーザーが慣れている形式でそれらのエンティティおよびリレーションシップに対してクエリを実行できます。  

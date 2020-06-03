@@ -29,11 +29,11 @@ ms.locfileid: "82795340"
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](~/_csharplang/spec/classes.md#type-parameter-constraints)の「[型パラメーターの制約](~/_csharplang/spec/introduction.md)」セクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[型パラメーターの制約](~/_csharplang/spec/classes.md#type-parameter-constraints)」セクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [ジェネリック](../../programming-guide/generics/index.md)

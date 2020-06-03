@@ -2,12 +2,12 @@
 title: 接続文字列
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: cb0b2831a22f3fe51dd7c5bfbe51e72f266a0003
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 3f56a487121757706ef6b4dfd11fcd761657431a
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980237"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202276"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 

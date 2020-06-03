@@ -16,12 +16,12 @@ helpviewer_keywords:
 - security [.NET Framework], assemblies
 - integrity with assemblies
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
-ms.openlocfilehash: 7f897241b121cf1bd52d02ee5f487aeafafc3cb0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d0b822f725444248d1037c21ffea9afe1cebb7e2
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378658"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290020"
 ---
 # <a name="assembly-security-considerations"></a>アセンブリのセキュリティに関する考慮事項
 アセンブリを作成する場合は、アセンブリの実行に必要となるアクセス許可セットを指定できます。 アセンブリに対して特定のアクセス許可を付与するかどうかは、証拠に基づいて決定されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "83378658"
 - コードを実行するために必要なアクセス許可を取得するためのアクセス許可要求は使用せず、アクセス許可が与えられなかった場合のセキュリティ例外を処理できるように準備しておく。  
   
   > [!NOTE]
-  > セキュリティは複雑な分野で、選択できるオプションも数多くあります。 詳細については、「[セキュリティの基本概念](../../standard/security/key-security-concepts.md)」を参照してください。  
+  > セキュリティは複雑な分野で、選択できるオプションも数多くあります。 詳細については、「[セキュリティの基本概念](../security/key-security-concepts.md)」を参照してください。  
   
  アセンブリの読み込み時に、セキュリティ ポリシーへの追加情報としてアセンブリの証拠が使用されます。 セキュリティ ポリシーは、エンタープライズとコンピューターの管理者、およびユーザー ポリシー設定によって確立され、すべてのマネージド コードが実行されるときに与えられるアクセス許可セットを決定します。 セキュリティ ポリシーは、アセンブリの発行者 (署名ツールで生成されたシグネチャがある場合)、アセンブリのダウンロード元の Web サイトおよびゾーン (Internet Explorer の用語)、またはアセンブリの厳密な名前に対して設定できます。 たとえば、コンピューター管理者は、Web サイトからダウンロードされ、所定のソフトウェア企業の署名のあるすべてのコードについて、コンピューター上のデータベースへのアクセスは許可するが、ディスクへの書き込みは許可しない、というセキュリティ ポリシーを設定できます。  
   

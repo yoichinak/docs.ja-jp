@@ -3,12 +3,12 @@ title: 構文変換の概要 (Roslyn API)
 description: 構文ツリーの走査、クエリおよびウォークに関する概要。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 232fe5fcba35f152dbc3f00b2f2c092b5df0dd35
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 5879dfd6ed0a5f6465829eec496d10cfcfd07362
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794794"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202121"
 ---
 # <a name="get-started-with-syntax-transformation"></a>構文変換の概要
 
@@ -34,7 +34,7 @@ Visual Studio を起動し、新しい C# の **Stand-Alone Code Analysis Tool**
 
 このプロジェクトでは、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> クラスのメソッドを使用して、`System.Collections.Generic` 名前空間を表す <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType> を構築します。
 
-`Program.cs` ファイルの先頭に次の using ディレクティブを追加して、<xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory> クラスのファクトリ メソッドと <xref:System.Console> のメソッドをインポートし、後で修飾せずに使用できるようにします。
+`Program.cs` の先頭に、次の using ディレクティブを追加します。
 
 [!code-csharp[import the SyntaxFactory class](../../../../samples/snippets/csharp/roslyn-sdk/SyntaxTransformationQuickStart/ConstructionCS/Program.cs#StaticUsings "import the Syntax Factory class and the System.Console class")]
 

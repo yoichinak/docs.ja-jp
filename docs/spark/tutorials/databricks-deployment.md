@@ -4,12 +4,12 @@ description: .NET for Apache Spark アプリケーションを Databricks にデ
 ms.date: 05/12/2020
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 245df14b9174a3b2ff152f90e6c50cc8766a2de9
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 4010f363e8ba606a7294ea32dc34587da6d6c8aa
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83397051"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202243"
 ---
 # <a name="tutorial-deploy-a-net-for-apache-spark-application-to-databricks"></a>チュートリアル: .NET for Apache Spark アプリケーションを Databricks にデプロイする
 
@@ -87,7 +87,7 @@ Databricks CLI がインストールされたので、認証の詳細を設定�
 
 1. Databricks CLI コマンド `databricks configure --token` を実行します。
 
-2. 構成コマンドの実行後、ホストを入力するように求められます。 ホスト URL には、**https://<\Location>.azuredatabricks.net** の形式を使用します。 たとえば、Azure Databricks サービスの作成時に **eastus2** を選択した場合、ホストは **https://eastus2.azuredatabricks.net** となります。
+2. 構成コマンドの実行後、ホストを入力するように求められます。 ホスト URL では、`https://<Location>.azuredatabricks.net` の形式が使用されます。 たとえば、Azure Databricks サービスの作成時に **eastus2** を選択した場合、ホストは `https://eastus2.azuredatabricks.net` となります。
 
 3. ホストの入力後、トークンを入力するように求められます。 Azure portal で **[ワークスペースの起動]** を選択して、Azure Databricks ワークスペースを起動します。
 

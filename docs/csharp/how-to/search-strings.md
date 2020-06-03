@@ -39,11 +39,11 @@ ms.locfileid: "81121487"
 
 文字列の検索には、<xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType> クラスを使用できます。 これらの検索の複雑さは、単純なテキスト パターンから複雑なテキスト パターンまでさまざまです。
 
-次のコード例では、文章内の "the" または "their" という単語を検索します (大文字と小文字の区別は無視されます)。 静的メソッドの <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> で検索を実行します。 検索対象の文字列と、検索パターンを指定します。 この例では、3 番目の引数で大文字と小文字を区別しない検索を指定します。 詳細については、<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> を参照してください。  
+次のコード例では、文章内の "the" または "their" という単語を検索します (大文字と小文字の区別は無視されます)。 静的メソッドの <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> で検索を実行します。 検索対象の文字列と、検索パターンを指定します。 この例では、3 番目の引数で大文字と小文字を区別しない検索を指定します。 詳細については、「<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType>」を参照してください。  
 
-検索パターンで検索対象のテキストを説明します。 次の表では、検索パターンの各要素について説明します (以下の表では、C# 文字列で `\` としてエスケープされる必要がある、単一の `\\` を使用します)。
+検索パターンで検索対象のテキストを説明します。 次の表では、検索パターンの各要素について説明します (以下の表では、C# 文字列で `\\` としてエスケープされる必要がある、単一の `\` を使用します)。
 
-| pattern  | 意味     |
+| pattern  | 説明     |
 | -------- |-------------|
 | the      | テキスト "the" と一致 |
 | (eir)?   | "eir" の 0 個または 1 個の出現箇所と一致 |
@@ -58,7 +58,7 @@ ms.locfileid: "81121487"
 
 次のコードでは正規表現を使用して、配列の各文字列の形式を検証します。 各文字列が電話番号の形式であることが検証されます。つまり、3 グループの数値がダッシュで区切られ、最初の 2 グループには 3 桁の数値が含まれ、3 つ目のグループには 4 桁の数値が含まれることが検証されます。 検索パターンでは正規表現の `^\\d{3}-\\d{3}-\\d{4}$` を使用します。 詳細については、「[正規表現言語 - クイック リファレンス](../../standard/base-types/regular-expression-language-quick-reference.md)」をご覧ください。
 
-| pattern  | 意味                             |
+| pattern  | 説明                             |
 | -------- |-------------------------------------|
 | ^        | 文字列の先頭と一致 |
 | \d{3}    | 3 桁の文字と完全に一致  |
@@ -74,9 +74,9 @@ ms.locfileid: "81121487"
 
 [GitHub リポジトリ](https://github.com/dotnet/docs/tree/master/samples/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](../../../samples/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../programming-guide/index.md)
+- [C# プログラミング ガイド](../programming-guide/index.md)
 - [文字列](../programming-guide/strings/index.md)
 - [LINQ と文字列](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>

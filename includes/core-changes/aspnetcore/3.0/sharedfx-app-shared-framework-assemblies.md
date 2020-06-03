@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 64e854b06895ca54a9ab9870b85868788a731c00
-ms.sourcegitcommit: 34dc3c0d0d0a1cc418abff259d9daa8078d00b81
+ms.openlocfilehash: d598d8d3203e804e5e935c3564b0053f9fc2e9a6
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2020
-ms.locfileid: "79549614"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144971"
 ---
 ### <a name="shared-framework-assemblies-removed-from-microsoftaspnetcoreapp"></a>共有フレームワーク: Microsoft.AspNetCore.App から削除されたアセンブリ
 
@@ -54,7 +54,7 @@ Json.NET と Entity Framework Core は、ASP.NET Core と引き続き連携し�
 
 この変更は、ASP.NET Core 2.x の `Microsoft.AspNetCore.App` を介して参照されるすべてのバイナリに適用されるわけではありません。 重要な例外は次のとおりです。
 
-- .NET Standard を引き続きターゲットとする `Microsoft.Extensions` ライブラリは、NuGet パッケージとして利用できます (https://github.com/dotnet/extensions) を参照してください)。
+- .NET Standard を引き続きターゲットとする `Microsoft.Extensions` ライブラリは、NuGet パッケージとして利用できます (<https://github.com/dotnet/extensions> を参照してください)。
 - ASP.NET Core チームによって生成され、`Microsoft.AspNetCore.App` に含まれていない API。 たとえば、次のコンポーネントは NuGet パッケージとして利用できます。
   - Entity Framework Core
   - サード パーティの統合を提供するAPI

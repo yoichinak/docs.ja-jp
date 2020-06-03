@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - LINQ [C#], features supporting LINQ
 ms.assetid: 524b0078-ebfd-45a7-b390-f2ceb9d84797
-ms.openlocfilehash: 9fc8adaa49d02f8b69c2db6e94a28b9fab36b3b0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 32ba8f5e60b3ed2efd813a8ae32e5f4009eb790d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635796"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202402"
 ---
 # <a name="c-features-that-support-linq"></a>LINQ をサポートする C# の機能
 
@@ -42,7 +42,7 @@ var query = from str in stringArray
 
 `var` として宣言された変数は、明示的に型を指定した変数とまったく同じように厳密に型指定されます。 `var` を使用すると匿名型を作成できますが、ローカル変数にのみ使用できます。 また、暗黙的な型指定を使用して、配列を宣言することもできます。
 
-詳細については、「[暗黙的に型指定されたローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。
+詳細については、「[暗黙的に型指定されるローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。
 
 ## <a name="object-and-collection-initializers"></a>オブジェクト初期化子とコレクション初期化子
 
@@ -100,6 +100,6 @@ select new {name = cust.Name, phone = cust.Phone};
 
 - [式ツリー (C#)](../expression-trees/index.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](./index.md)

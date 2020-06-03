@@ -29,11 +29,11 @@ ms.locfileid: "81739625"
 
 上記のメソッドでは:
 
-- `IBufferWriter<byte>` を使用して、`GetSpan(5)` から少なくとも 5 バイトのバッファーを要求します。
+- `GetSpan(5)` を使用して、`IBufferWriter<byte>` から少なくとも 5 バイトのバッファーを要求します。
 - 返された `Span<byte>` に、ASCII 文字列 "Hello" のバイトを書き込みます。
 - <xref:System.Buffers.IBufferWriter%601> を呼び出して、バッファーに書き込まれたバイト数を示します。
 
-この書き込みメソッドでは、`Memory<T>` によって提供される /`Span<T>``IBufferWriter<T>` バッファーが使用されています。 代わりに、<xref:System.Buffers.BuffersExtensions.Write%2A> 拡張メソッドを使用して既存のバッファーを `IBufferWriter<T>` にコピーすることもできます。 `Write` によって、`GetSpan`/`Advance` を呼び出す処理が適切に実行されます。そのため、書き込み後に `Advance` を呼び出す必要はありません。
+この書き込みメソッドでは、`IBufferWriter<T>` によって提供される `Memory<T>`/`Span<T>` バッファーが使用されています。 代わりに、<xref:System.Buffers.BuffersExtensions.Write%2A> 拡張メソッドを使用して既存のバッファーを `IBufferWriter<T>` にコピーすることもできます。 `Write` によって、`GetSpan`/`Advance` を呼び出す処理が適切に実行されます。そのため、書き込み後に `Advance` を呼び出す必要はありません。
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet2)]
 
@@ -51,8 +51,8 @@ ms.locfileid: "81739625"
 
 <xref:System.Buffers.ReadOnlySequence%601> は、`T` の隣接したシーケンス、または隣接しないシーケンスを表すことができる構造体です。 これは次のものから構築できます。
 
-1. `T[]` 変数
-1. `ReadOnlyMemory<T>` 変数
+1. `T[]`。
+1. `ReadOnlyMemory<T>`。
 1. リンク リスト ノード <xref:System.Buffers.ReadOnlySequenceSegment%601> と、シーケンスの開始位置および終了位置を表すインデックスのペア。
 
 最も興味深いのは 3 番目の表現方法です。`ReadOnlySequence<T>` のさまざまな操作に対してパフォーマンスへの影響があるためです。
@@ -104,7 +104,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 - セグメントごとにデータを解析し、解析されたセグメント内の `SequencePosition` とインデックスを追跡する。 これにより不要な割り当てを回避できますが、非効率的になる可能性があります (特に小さなバッファーの場合)。
 - `ReadOnlySequence<T>` を隣接した配列にコピーし、それを 1 つのバッファーとして扱う。
   - `ReadOnlySequence<T>` のサイズが小さい場合は、[stackalloc](../../csharp/language-reference/operators/stackalloc.md) 演算子を使用して、スタック割り当てバッファーにデータをコピーすることが適切な場合があります。
-  - `ReadOnlySequence<T>` を使用して、プールされた配列に <xref:System.Buffers.ArrayPool%601.Shared%2A?displayProperty=nameWithType> をコピーします。
+  - <xref:System.Buffers.ArrayPool%601.Shared%2A?displayProperty=nameWithType> を使用して、プールされた配列に `ReadOnlySequence<T>` をコピーします。
   - [`ReadOnlySequence<T>.ToArray()`](xref:System.Buffers.BuffersExtensions.ToArray%2A) を使用します。 これは、新しい `T[]` をヒープに割り当てるため、ホット パスでは推奨されません。
 
 次の例では、`ReadOnlySequence<byte>` を処理する一般的なケースをいくつか示しています。
@@ -119,9 +119,9 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 ##### <a name="process-text-data"></a>テキスト データの処理
 
-次に例を示します。
+次のような例です。
 
-- `\r\n` 内の最初の改行 (`ReadOnlySequence<byte>`) を検索し、out 'line' パラメーターを使用してそれを返します。
+- `ReadOnlySequence<byte>` 内の最初の改行 (`\r\n`) を検索し、out 'line' パラメーターを使用してそれを返します。
 - その line をトリミングし、入力バッファーから `\r\n` を除外します。
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet6)]
@@ -134,7 +134,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 上記のコードでは、空のセグメントを持つ `ReadOnlySequence<byte>` を作成し、それらの空のセグメントがさまざまな API にどのような影響を与えるかを示しています。
 
-- 空のセグメントを指す `ReadOnlySequence<T>.Slice` を使用した `SequencePosition` では、そのセグメントが保持されます。
+- 空のセグメントを指す `SequencePosition` を使用した `ReadOnlySequence<T>.Slice` では、そのセグメントが保持されます。
 - int を使用した `ReadOnlySequence<T>.Slice` では、空のセグメントがスキップされます。
 - `ReadOnlySequence<T>` を列挙すると、空のセグメントが列挙されます。
 
@@ -143,16 +143,16 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 `ReadOnlySequence<T>`/`SequencePosition` を扱うときには、通常の `ReadOnlySpan<T>`/`ReadOnlyMemory<T>`/`T[]`/`int` に対して、いくつかの通常とは異なる結果が発生します。
 
 - `SequencePosition` は特定の `ReadOnlySequence<T>` の位置マーカーであり、絶対位置ではありません。 これは特定の `ReadOnlySequence<T>` を基準にするため、発生元の `ReadOnlySequence<T>` の外部で使用されても意味がありません。
-- `SequencePosition` を使用せずに `ReadOnlySequence<T>` に対する算術演算を行うことはできません。 つまり、`position++` などの基本的な処理は、`ReadOnlySequence<T>.GetPosition(position, 1)` のように記述されます。
+- `ReadOnlySequence<T>` を使用せずに `SequencePosition` に対する算術演算を行うことはできません。 つまり、`position++` などの基本的な処理は、`ReadOnlySequence<T>.GetPosition(position, 1)` のように記述されます。
 - `GetPosition(long)` では、負のインデックスがサポートされて**いません**。 つまり、すべてのセグメントをたどることなく最後から 2 番目の文字を取得することはできません。
 - 2 つの `SequencePosition` を比較できないため、次のことが困難になります。
   - ある位置が別の位置より大きいか小さいかを確認する。
   - いくつかの解析アルゴリズムを記述する。
-- `ReadOnlySequence<T>` はオブジェクト参照よりも大きいため、可能な場合は [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) または [ref](../../csharp/language-reference/keywords/ref.md) によって渡す必要があります。 `ReadOnlySequence<T>` または `in` によって `ref` を渡すことで、[struct](../../csharp/language-reference/builtin-types/struct.md) のコピーを減らすことができます。
+- `ReadOnlySequence<T>` はオブジェクト参照よりも大きいため、可能な場合は [in](../../csharp/language-reference/keywords/in-parameter-modifier.md) または [ref](../../csharp/language-reference/keywords/ref.md) によって渡す必要があります。 `in` または `ref` によって `ReadOnlySequence<T>` を渡すことで、[struct](../../csharp/language-reference/builtin-types/struct.md) のコピーを減らすことができます。
 - 空のセグメントは:
   - `ReadOnlySequence<T>` 内で有効です。
   - `ReadOnlySequence<T>.TryGet` メソッドを使った反復処理中に発生する可能性があります。
-  - `ReadOnlySequence<T>.Slice()` オブジェクトと共に `SequencePosition` メソッドを使ったシーケンスのスライスで発生する可能性があります。
+  - `SequencePosition` オブジェクトと共に `ReadOnlySequence<T>.Slice()` メソッドを使ったシーケンスのスライスで発生する可能性があります。
 
 ## <a name="sequencereadert"></a>SequenceReader\<T\>
 
@@ -166,7 +166,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 ### <a name="access-data"></a>データにアクセスする
 
-`SequenceReader<T>` には、`ReadOnlySequence<T>` 内のデータを直接列挙するためのメソッドが用意されています。 次のコードは、一度に `ReadOnlySequence<byte>` ずつ `byte` を処理する例です。
+`SequenceReader<T>` には、`ReadOnlySequence<T>` 内のデータを直接列挙するためのメソッドが用意されています。 次のコードは、一度に `byte` ずつ `ReadOnlySequence<byte>` を処理する例です。
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet8)]
 
@@ -174,7 +174,7 @@ SequencePosition? FindIndexOf(in ReadOnlySequence<byte> buffer, byte data) => bu
 
 ### <a name="use-position"></a>位置の使用
 
-次のコードでは、`FindIndexOf` を使った `SequenceReader<T>` の実装例を示します。
+次のコードでは、`SequenceReader<T>` を使った `FindIndexOf` の実装例を示します。
 
 [!code-csharp[](~/samples/snippets/csharp/buffers/MyClass.cs?name=snippet9)]
 

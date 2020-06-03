@@ -2,12 +2,12 @@
 title: テクノロジのオプションとガイドライン
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: 1996a5f5b86715db099e52e163fd23be2497f5eb
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: e4016511920904ea14eac844a2564d6a77d9a817
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094463"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84202287"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET テクノロジのオプションとガイドライン
 

@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 01/09/2020
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 4a3a76d1ec9893c2c3e0353e305a19e59c586fe5
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 1d1d1bec8c6602e4fe34fa3ce243423290412736
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420384"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84004856"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -37,10 +37,10 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 最初に新しいアプリケーションを作成します。 コマンド プロンプトを開き、アプリケーション用の新しいディレクトリを作成します。 それを、現在のディレクトリとしてください。 コンソール ウィンドウに次のコマンドを入力します。
 
 ```dotnetcli
-dotnet new console --name WebApiClient
+dotnet new console --name WebAPIClient
 ```
 
-これで、基本的な "Hello World" アプリケーションのスターター ファイルが作成されます。 プロジェクト名は "WebApiClient" です。 これは新しいプロジェクトであるため、依存関係はありません。 1 回目の実行では、.NET Core フレームワークがダウンロードされ、開発証明書がインストールされ、NuGet パッケージ マネージャーが実行されて、不足している依存関係が復元されます。
+これで、基本的な "Hello World" アプリケーションのスターター ファイルが作成されます。 プロジェクト名は "WebAPIClient" です。 これは新しいプロジェクトであるため、依存関係はありません。 1 回目の実行では、.NET Core フレームワークがダウンロードされ、開発証明書がインストールされ、NuGet パッケージ マネージャーが実行されて、不足している依存関係が復元されます。
 
 変更を開始する前に、コマンド プロンプトに「`dotnet run`」(「[注](#dotnet-restore-note)」を参照してください) と入力してアプリケーションを実行します。 環境に依存関係がない場合、`dotnet run` では自動的に `dotnet restore` が実行されます。 アプリケーションのリビルドが必要な場合にも `dotnet build` が実行されます。
 初期設定の後は、プロジェクトにとって意味がある場合にのみ `dotnet restore` または `dotnet build` を実行する必要があります。

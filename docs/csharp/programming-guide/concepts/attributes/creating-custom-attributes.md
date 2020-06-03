@@ -29,7 +29,7 @@ public class Author : System.Attribute
 }  
 ```  
   
- クラス名は属性の名前の `Author` です。 このクラスは `System.Attribute` から派生しているので、カスタム属性クラスです。 コンストラクターのパラメーターはカスタム属性の位置指定パラメーターです。 この例では、`name` が位置指定パラメーターになります。 パブリックな読み取り/書き込みフィールドまたはプロパティは名前付きパラメーターです。 この場合は、`version` が唯一の名前付きパラメーターです。 `AttributeUsage` 属性を使用して、クラスと `Author` の宣言に対してのみ `struct` 属性を有効にしていることに注意してください。  
+ クラス名は属性の名前の `Author` です。 このクラスは `System.Attribute` から派生しているので、カスタム属性クラスです。 コンストラクターのパラメーターはカスタム属性の位置指定パラメーターです。 この例では、`name` が位置指定パラメーターになります。 パブリックな読み取り/書き込みフィールドまたはプロパティは名前付きパラメーターです。 この場合は、`version` が唯一の名前付きパラメーターです。 `AttributeUsage` 属性を使用して、クラスと `struct` の宣言に対してのみ `Author` 属性を有効にしていることに注意してください。  
   
  この新しい属性の使用方法は次のとおりです。  
   
@@ -63,10 +63,10 @@ class SampleClass
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Reflection>
-- [C# プログラミングガイド](../../index.md)
+- [C# プログラミング ガイド](../../index.md)
 - [カスタム属性の記述](../../../../standard/attributes/writing-custom-attributes.md)
 - [リフレクション (C#)](../reflection.md)
 - [属性 (C#)](./index.md)

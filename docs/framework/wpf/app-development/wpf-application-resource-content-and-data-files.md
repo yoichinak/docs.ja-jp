@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f17898972eeef66447060db32bae5fae377b710e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 19cb530fc5c70df3a7af7ac41836b3dfd97594e9
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79186200"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144813"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
 Microsoft Windows アプリケーションは、多くの場面で、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、イメージ、ビデオ、オーディオなどの実行可能ではないデータを格納したファイルを必要とします。 Windows Presentation Foundation (WPF) には、アプリケーション データ ファイルと呼ばれるこれらの種類のデータ ファイルを構成、識別、および使用するための特殊なサポート機能があります。 このサポートの中心となるのは、次のような特定のアプリケーション データ ファイルの種類のセットです。  
@@ -183,11 +183,11 @@ Microsoft Windows アプリケーションは、多くの場面で、[!INCLUDE[T
   
 - オーディオやビデオなど大容量のデータ ファイルを使用するアプリケーションで、ユーザーが選択した場合にのみファイルをダウンロードする場合。  
   
- このような種類のファイルを、file:/// スキームや http:// スキームなど、従来の URI スキームを使用して読み込むこともできます。  
+ このような種類のファイルを、`file:///` スキームや `http://` スキームなど、従来の URI スキームを使用して読み込むこともできます。  
   
  [!code-xaml[WPFAssemblyResourcesSnippets#AbsolutePackUriFileHttpReferenceXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAssemblyResourcesSnippets/CSharp/ResourcesSample/AbsolutePackUriPage.xaml#absolutepackurifilehttpreferencexaml)]  
   
- ただし、file:/// スキームや http:// スキームを使用する場合は、アプリケーションに完全信頼が必要です。 アプリケーションが、インターネットまたはイントラネットから起動された XAML ブラウザー アプリケーション (XBAP) であり、その場所から起動されたアプリケーションに対して許可されるアクセス許可のセットのみがアプリケーションによって要求される場合は、アプリケーションの起点サイト (起動場所) からのみ圧縮しないファイルを読み込むことができます。 このようなファイルを、"*起点サイト*" ファイルと呼びます。  
+ ただし、`file:///` スキームや `http://` スキームを使用する場合は、アプリケーションに完全信頼が必要です。 アプリケーションが、インターネットまたはイントラネットから起動された XAML ブラウザー アプリケーション (XBAP) であり、その場所から起動されたアプリケーションに対して許可されるアクセス許可のセットのみがアプリケーションによって要求される場合は、アプリケーションの起点サイト (起動場所) からのみ圧縮しないファイルを読み込むことができます。 このようなファイルを、"*起点サイト*" ファイルと呼びます。  
   
  起点サイト ファイルは部分信頼アプリケーションの唯一のオプションですが、部分信頼アプリケーション以外でも使用できます。 完全信頼アプリケーションでも、読み込むアプリケーション データ ファイルがビルド時点では不明な場合があります。完全信頼アプリケーションでは file:/// を使用できますが、アプリケーション データ ファイルがアプリケーション アセンブリと同じフォルダーにインストールされることも、サブフォルダーにインストールされることも考えられます。 この場合は、起点サイト参照を使用する方が、file:/// を使用するよりも簡単です。file:/// を使用するには、ファイルの完全パスを指定する必要があるためです。  
   

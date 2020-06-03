@@ -2,12 +2,12 @@
 title: dotnet test コマンド
 description: dotnet test コマンドは、指定されたプロジェクトで単体テストを実行する場合に使用されます。
 ms.date: 04/29/2020
-ms.openlocfilehash: 22b27007d26c98cff40733ef8d449ce334f87848
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: b427954fe0026e6ac96d3bbce2b70b5c44e884e0
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83802678"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84005376"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -79,6 +79,10 @@ dotnet test -h|--help
 - **`--collect <DATA_COLLECTOR_FRIENDLY_NAME>`**
 
   テストの実行のためのデータ コレクターを有効にします。 詳細については、[「Monitor and analyze test run」](https://aka.ms/vstest-collect) (テストの実行のモニターと分析) を参照してください。
+  
+  .NET Core でサポートされている任意のプラットフォーム上のコード カバレッジを収集するには、[Coverlet](https://github.com/coverlet-coverage/coverlet/blob/master/README.md) をインストールし、`--collect:"XPlat Code Coverage"` オプションを使用します。
+
+  Windows では、`--collect "Code Coverage"` オプションを使用してコード カバレッジを収集できます。 このオプションを選択すると、 *.coverage* ファイルが生成されます。このファイルは、Visual Studio 2019 Enterprise で開くことができます。 詳細については、[コード カバレッジの使用](/visualstudio/test/using-code-coverage-to-determine-how-much-code-is-being-tested)に関するページと「[コード カバレッジ分析のカスタマイズ](/visualstudio/test/customizing-code-coverage-analysis)」を参照してください。
 
 - **`-d|--diag <PATH_TO_DIAGNOSTICS_FILE>`**
 
@@ -171,6 +175,18 @@ dotnet test -h|--help
   dotnet test --logger trx
   ```
 
+- 現在のディレクトリでプロジェクトのテストを実行し、([Coverlet](https://github.com/tonerdo/coverlet/blob/master/README.md) をインストールした後) コード カバレッジ ファイルを生成します。
+
+  ```dotnetcli
+  dotnet test --collect:"XPlat Code Coverage"
+  ```
+
+- 現在のディレクトリでプロジェクトのテストを実行し、コード カバレッジ ファイルを生成します (Windows のみ)。
+
+  ```dotnetcli
+  dotnet test --collect "Code Coverage"
+  ```
+
 - 現在のディレクトリでプロジェクトのテストを実行し、詳細をコンソールに記録します。
 
   ```dotnetcli
@@ -195,6 +211,7 @@ dotnet test -h|--help
 | -------------- | --------------------------------------------------------------------------------------------------------- |
 | MSTest         | <ul><li>FullyQualifiedName</li><li>名前</li><li>ClassName</li><li>優先度</li><li>TestCategory</li></ul> |
 | xUnit          | <ul><li>FullyQualifiedName</li><li>DisplayName</li><li>Traits</li></ul>                                   |
+| NUnit          | <ul><li>FullyQualifiedName</li><li>名前</li><li>TestCategory</li><li>優先度</li></ul>                                   |
 
 `<operator>` は、プロパティと値の関係を示します。
 

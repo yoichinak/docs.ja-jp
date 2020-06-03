@@ -4,12 +4,12 @@ description: 既存の TensorFlow モデルから新しい ML.NET 画像分類�
 ms.date: 01/30/2020
 ms.topic: tutorial
 ms.custom: mvc, title-hack-0612
-ms.openlocfilehash: be21a94f571a1676d2a4bce2196dec34bf008121
-ms.sourcegitcommit: d9470d8b2278b33108332c05224d86049cb9484b
+ms.openlocfilehash: ae6094d5acd4d26482f3690e174d82bbf1807266
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81607572"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144436"
 ---
 # <a name="tutorial-generate-an-mlnet-image-classification-model-from-a-pre-trained-tensorflow-model"></a>チュートリアル: 事前トレーニング済みの TensorFlow モデルから ML.NET 画像分類モデルを生成する
 
@@ -66,9 +66,9 @@ TensorFlow モデルは、画像を 1,000 個のカテゴリに分類するた�
 >[!Note]
 > 上の画像は Wikimedia Commons に属し、次のように属性が付けられています。
 >
-> * "220px-Pepperoni_pizza.jpg" パブリック ドメイン、 https://commons.wikimedia.org/w/index.php?curid=79505 、
-> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" By [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 自己撮影、CC BY-SA 2.0、 https://commons.wikimedia.org/w/index.php?curid=48166 。
-> * "193px-Broodrooster.jpg" By [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 自分の作品、CC BY-SA 3.0、 https://commons.wikimedia.org/w/index.php?curid=27403
+> * "220px-Pepperoni_pizza.jpg" パブリック ドメイン、 <https://commons.wikimedia.org/w/index.php?curid=79505>、
+> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" By [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 自己撮影、CC BY-SA 2.0、 <https://commons.wikimedia.org/w/index.php?curid=48166>。
+> * "193px-Broodrooster.jpg" By [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 自分の作品、CC BY-SA 3.0、 <https://commons.wikimedia.org/w/index.php?curid=27403>
 
 `Inception model` は、画像を 1,000 個のカテゴリに分類するようにトレーニングされていますが、このチュートリアルでは、画像をより小さなカテゴリ セットにのみ分類する必要があります。 `transfer learning` の `transfer` 部分を入力します。 `Inception model` の画像を認識および分類する能力をカスタム画像分類器の新しい限られたカテゴリに転移ことができます。
 
@@ -110,7 +110,9 @@ toaster2.png    appliance
 <!-- markdownlint-enable MD010 -->
 
 トレーニングとテストの画像は、zip ファイルでダウンロードする資産フォルダー内にあります。 これらの画像は Wikimedia Commons に属します。
-> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208)、無料メディア リポジトリ。* 2018 年 10 月 17 日 10:48 に以下から取得: https://commons.wikimedia.org/wiki/Pizza https://commons.wikimedia.org/wiki/Toaster https://commons.wikimedia.org/wiki/Teddy_bear
+> *[Wikimedia Commons](https://commons.wikimedia.org/w/index.php?title=Main_Page&oldid=313158208)、無料メディア リポジトリ。* 2018 年 10 月 17 日 10:48 に以下から取得: <https://commons.wikimedia.org/wiki/Pizza>
+> <https://commons.wikimedia.org/wiki/Toaster>
+> <https://commons.wikimedia.org/wiki/Teddy_bear>
 
 ## <a name="setup"></a>セットアップ
 

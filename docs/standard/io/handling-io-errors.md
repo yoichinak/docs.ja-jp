@@ -23,12 +23,12 @@ ms.locfileid: "81242674"
 任意のメソッド呼び出しでスローできる例外 (システムに負荷がかかっているときの <xref:System.OutOfMemoryException> やプログラム エラーによる <xref:System.NullReferenceException> など) に加え、.NET ファイル システムのメソッドは、次の例外をスローできます。
 
 - <xref:System.IO.IOException?displayProperty=nameWithType>。すべての <xref:System.IO> 例外の種類の基底クラス。 これは、オペレーティング システムからのリターン コードが他の例外の種類に直接マップされないエラーに対してスローされます。
-- [https://login.microsoftonline.com/consumers/](<xref:System.IO.FileNotFoundException?displayProperty=nameWithType>)
-- [https://login.microsoftonline.com/consumers/](<xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>)
-- [https://login.microsoftonline.com/consumers/](<xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>)
-- [https://login.microsoftonline.com/consumers/](<xref:System.IO.PathTooLongException?displayProperty=nameWithType>)
-- [https://login.microsoftonline.com/consumers/](<xref:System.OperationCanceledException?displayProperty=nameWithType>)
-- [https://login.microsoftonline.com/consumers/](<xref:System.UnauthorizedAccessException?displayProperty=nameWithType>)
+- <xref:System.IO.FileNotFoundException?displayProperty=nameWithType>。
+- <xref:System.IO.DirectoryNotFoundException?displayProperty=nameWithType>.
+- <xref:System.IO.DriveNotFoundException??displayProperty=nameWithType>.
+- <xref:System.IO.PathTooLongException?displayProperty=nameWithType>.
+- <xref:System.OperationCanceledException?displayProperty=nameWithType>.
+- <xref:System.UnauthorizedAccessException?displayProperty=nameWithType>。
 - <xref:System.ArgumentException?displayProperty=nameWithType>、.NET Framework と .NET Core 2.0 以前のバージョンで、無効なパス文字に対してスローされます。
 - <xref:System.NotSupportedException?displayProperty=nameWithType>、.NET Framework で無効なコロンに対してスローされます。
 - <xref:System.Security.SecurityException?displayProperty=nameWithType>、.NET Framework で必要な権限が欠けている限定的な信頼で実行されているアプリケーションに対してスローされます (完全な信頼は .NET Framework の既定の設定です)。
@@ -47,7 +47,7 @@ ms.locfileid: "81242674"
 
 | 例外の種類 | .NET Core | .NET Framework |
 |---|---|---|
-| <xref:System.IO.IOException> | はい | はい |
+| <xref:System.IO.IOException> | [はい] | はい |
 | <xref:System.IO.FileNotFoundException> | はい | はい |
 | <xref:System.IO.DirectoryNotFoundException> | はい | はい |
 | <xref:System.IO.DriveNotFoundException?> | はい | はい |
@@ -55,7 +55,7 @@ ms.locfileid: "81242674"
 | <xref:System.OperationCanceledException> | はい | はい |
 | <xref:System.UnauthorizedAccessException> | はい | はい |
 | <xref:System.ArgumentException> | .NET Core 2.0 以前| はい |
-| <xref:System.NotSupportedException> | いいえ | はい |
+| <xref:System.NotSupportedException> | × | はい |
 | <xref:System.Security.SecurityException> | いいえ | 限定的な信頼のみ |
 
 ## <a name="handling-ioexception"></a>IOException の処理
@@ -71,7 +71,7 @@ ms.locfileid: "81242674"
 
 <xref:System.IO.IOException> の場合、[IOException.HResult](xref:System.Exception.HResult) プロパティから追加のエラー情報を取得できます。 HResult 値を Win32 エラー コードに変換するには、32 ビット値の上位 16 ビットを削除します。 次の表に、<xref:System.IO.IOException> にラップされる可能性があるエラー コードの一覧を示します。
 
-| HResult | 定数 | [説明] |
+| HResult | 定数 | 説明 |
 | --- | --- | --- |
 | ERROR_SHARING_VIOLATION | 32 | ファイル名が存在しないか、ファイルまたはディレクトリが使用中です。 |
 | ERROR_FILE_EXISTS | 80 | ファイルは既に存在します。 |
@@ -83,7 +83,7 @@ catch ステートメントの `When` 句を使用してこれらを処理でき
 [!code-csharp[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/cs/io-exceptions.cs)]
 [!code-vb[io-exception-handling](~/samples/snippets/standard/io/io-exceptions/vb/io-exceptions.vb)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [.NET での例外の処理とスロー](../exceptions/index.md)
 - [例外処理 (タスク並列ライブラリ)](../parallel-programming/exception-handling-task-parallel-library.md)

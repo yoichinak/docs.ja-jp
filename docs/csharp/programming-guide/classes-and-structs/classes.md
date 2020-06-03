@@ -16,7 +16,7 @@ ms.locfileid: "82102048"
 # <a name="classes-c-programming-guide"></a>クラス (C# プログラミング ガイド)
 
 ## <a name="reference-types"></a>参照型  
-[class](../../language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../language-reference/keywords/null.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../language-reference/operators/new-operator.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
+[class](../../language-reference/keywords/class.md) として定義された型は、*参照型*です。 実行時には、参照型の変数を宣言すると、[new](../../language-reference/operators/new-operator.md) 演算子を使用してクラスのインスタンスを明示的に作成するまで、変数には値 [null](../../language-reference/keywords/null.md) が格納されています。または、次の例に示すように、別の場所で作成された可能性がある、互換性のある型のオブジェクトを代入することもできます。
 
 ```csharp
 //Declaring an object of type MyClass.
@@ -99,13 +99,13 @@ C++ と異なり、C# のクラスは 1 つの基底クラスから直接継承�
 
 [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [オブジェクト指向プログラミング](../concepts/object-oriented-programming.md)
 - [ポリモーフィズム](polymorphism.md)
 - [識別子名](../inside-a-program/identifier-names.md)
-- [[メンバー]](members.md)
+- [メンバー](members.md)
 - [メソッド](methods.md)
 - [コンストラクター](constructors.md)
 - [ファイナライザー](destructors.md)

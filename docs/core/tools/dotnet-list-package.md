@@ -13,7 +13,7 @@ ms.locfileid: "81463659"
 
 **この記事の対象:** ✔️ .NET Core 2.2 SDK 以降のバージョン
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet list package` - プロジェクトまたはソリューションのパッケージ参照を一覧表示します。
 
@@ -28,9 +28,9 @@ dotnet list [<PROJECT>|<SOLUTION>] package [--config <SOURCE>]
 dotnet list package -h|--help
 ```
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
 
-`dotnet list package` コマンドでは、特定のプロジェクトまたはソリューションのすべての NuGet パッケージ参照を列挙する便利なオプションが提供されています。 このコマンドで処理するために必要なアセットを用意するには、最初にプロジェクトをビルドする必要があります。 次の例では、`dotnet list package`SentimentAnalysis[ プロジェクトに対する ](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) コマンドの出力を示します。
+`dotnet list package` コマンドでは、特定のプロジェクトまたはソリューションのすべての NuGet パッケージ参照を列挙する便利なオプションが提供されています。 このコマンドで処理するために必要なアセットを用意するには、最初にプロジェクトをビルドする必要があります。 次の例では、[SentimentAnalysis](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) プロジェクトに対する `dotnet list package` コマンドの出力を示します。
 
 ```output
 Project 'SentimentAnalysis' has the following package references
@@ -57,7 +57,7 @@ Project `SentimentAnalysis` has the following updates to its packages
    > Microsoft.ML         1.4.0       1.4.0      1.5.0-preview
 ```
 
-プロジェクトに推移的依存関係があるかどうかを確認する必要がある場合は、`--include-transitive` オプションを使用します。 推移的依存関係は、プロジェクトに追加したパッケージがさらに別のパッケージに依存している場合に発生します。 次の例では、`dotnet list package --include-transitive`HelloPlugin[ プロジェクトに対して ](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) コマンドを実行した出力を示します、最上位のパッケージと、それらが依存しているパッケージが表示されています。
+プロジェクトに推移的依存関係があるかどうかを確認する必要がある場合は、`--include-transitive` オプションを使用します。 推移的依存関係は、プロジェクトに追加したパッケージがさらに別のパッケージに依存している場合に発生します。 次の例では、[HelloPlugin](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin/HelloPlugin) プロジェクトに対して `dotnet list package --include-transitive` コマンドを実行した出力を示します、最上位のパッケージと、それらが依存しているパッケージが表示されています。
 
 ```output
 Project 'HelloPlugin' has the following package references
@@ -114,7 +114,7 @@ Project 'HelloPlugin' has the following package references
 
   より新しいパッケージを検索するときに使用する NuGet ソース。 `--outdated` オプションが必要です。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 - 特定のプロジェクトのパッケージ参照を一覧表示します。
 

@@ -1,142 +1,124 @@
 ---
-title: C# および Visual Studio Code の使用を開始する
-description: Visual Studio Code を使用した、C# で初めての .NET Core アプリケーションを作成してデバッグする方法について説明します。
-author: kendrahavens
-ms.date: 04/23/2020
-ms.openlocfilehash: 3dd7c4602fbb27e29bad977f8d3df34b6061bc23
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+title: Visual Studio Code を使用して .NET Core でコンソール アプリケーションを作成する
+description: Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成する方法について説明します。
+ms.date: 05/22/2020
+ms.openlocfilehash: 673c4a639a2cab26261b7cdafd5d8e20acfafb94
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506899"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201701"
 ---
-# <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
+# <a name="tutorial-create-a-console-application-with-net-core-using-visual-studio-code"></a>チュートリアル: Visual Studio Code を使用して .NET Core でコンソール アプリケーションを作成する
 
-.NET Core は、Windows、Linux および macOS で実行されるアプリケーションを作成するための、高速でモジュール型のプラットフォームを提供します。 Visual Studio Code を C# 拡張機能とともに使用して、C# IntelliSense の完全サポート (スマート コード補完) とデバッグによる強力な編集機能をご活用ください。
+このチュートリアルでは、Visual Studio Code と .NET Core CLI を使用して .NET Core コンソール アプリケーションを作成して実行する方法について説明します。 プロジェクトの作成、コンパイル、実行などのプロジェクト タスクは CLI を使用して行われるため、このチュートリアルに従って別のコード エディターを使用し、必要に応じてターミナルでコマンドを実行できます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-1. [Visual Studio Code](https://code.visualstudio.com/) のインストール。
-2. [.NET Core SDK](https://dotnet.microsoft.com/download) のインストール。
-3. Visual Studio Code の [C# 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)のインストール。 Visual Studio Code に拡張機能をインストールする方法については、[VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) を参照してください。
+1. [C# 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)がインストールされている [Visual Studio Code](https://code.visualstudio.com/)。 Visual Studio Code に拡張機能をインストールする方法については、[VS Code Extension Marketplace](https://code.visualstudio.com/docs/editor/extension-gallery) を参照してください。
+2. [.Net Core 3.1 SDK 以降](https://dotnet.microsoft.com/download)
 
-## <a name="hello-world"></a>Hello World
+## <a name="create-the-app"></a>アプリを作成する
 
-.NET Core でシンプルな "Hello World" プログラムを作成します。
+1. Visual Studio Code を開きます。
 
-1. プロジェクトを開く
+1. プロジェクトを作成します。
 
-    - Visual Studio Code を開きます。
-    - メイン メニューから **[ファイル]** 、 **[フォルダーを開く]** の順に選択します。
-    - *HelloWorld* という名前のフォルダーを作成し、 **[フォルダーを作成する]** をクリックします。 フォルダー名は既定でプロジェクト名と名前空間名になります。 このチュートリアルでは後でコードを追加しますが、プロジェクト名前空間は `HelloWorld` にします。
+   1. メイン メニューから **[ファイル]**  >  **[フォルダーを開く]** / **[開く...]** の順に選択し、*HelloWorld* フォルダーを作成して、 **[フォルダーの選択]** / **[開く]** の順にクリックします。
 
-1. C# プロジェクトを初期化する
+      フォルダー名は既定でプロジェクト名と名前空間名になります。 このチュートリアルでは後でコードを追加しますが、プロジェクト名前空間は `HelloWorld` にします。
 
-    - Visual Studio Code からターミナルを開きます。メイン メニューで **[表示]** > **[ターミナル]** の順に選択してください。
-    - ターミナル ウィンドウで「`dotnet new console`」と入力します。
+   1. メイン メニューで **[表示]**  >  **[ターミナル]** の順に選択して、Visual Studio Code で**ターミナル**を開きます。
 
-      このコマンドは、*HelloWorld.csproj* という名前の C# プロジェクト ファイルと共に、単純な "Hello World" プログラムが既に書き込まれた *Program.cs* ファイルをフォルダーに作成します。
+      **ターミナル**が開き、*HelloWorld* フォルダーにコマンド プロンプトが表示されます。
 
-      ![dotnet new コマンド](media/with-visual-studio-code/dotnet-new-command.png)
+   1. **ターミナル**で、次のコマンドを入力します。
 
-1. "Hello World" プログラムを実行する
+      ```dotnetcli
+      dotnet new console
+      ```
 
-    - ターミナル ウィンドウで「`dotnet run`」と入力します。
+.NET Core のコンソール アプリケーション テンプレートで、`Program` というクラスが、<xref:System.String> 配列を引数として必要とする単一のメソッド `Main` とともに定義されます。 *Program.cs* ファイルには、次のコードが含まれています。
 
-      ![dotnet run コマンド](media/with-visual-studio-code/dotnet-run-command.png)
+```csharp
+using System;
 
-## <a name="debug"></a>デバッグ
-
-1. *Program.cs* をクリックして開きます。 Visual Studio Code で初めて C# ファイルを開くと、[OmniSharp](https://www.omnisharp.net/) がエディターに読み込まれます。
-
-    ![Program.cs ファイルを開く](media/with-visual-studio-code/open-program-cs.png)
-
-1. Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められます。 **[Yes]\(はい\)** を選択します。
-
-    ![足りないアセットの入力を求める](media/with-visual-studio-code/missing-assets.png)
-
-1. デバッグ ビューを開くには、左側のメニューにある [デバッグ] アイコンをクリックします。
-
-    ![Visual Studio Code で [デバッグ] タブを開く](media/with-visual-studio-code/open-debug-tab.png)
-
-1. ウィンドウの上部で緑色の矢印を探します。 その横にあるドロップダウン リストで **[.NET Core Launch (console)]** \(.NET Core の起動 (コンソール)\) が選択されていることを確認します。
-
-    ![Visual Studio Code で .NET Core を選択する](media/with-visual-studio-code/select-net-core.png)
-
-1. 9 行目の横にある**エディター余白** (エディター内の行番号の左側の領域) をクリックして、プロジェクトにブレークポイントを追加するか、またはエディター内でテキスト カーソルを 9 行目に移動して <kbd>F9</kbd> キーを押します。
-
-    ![ブレークポイントの設定](media/with-visual-studio-code/set-breakpoint-vs-code.png)
-
-1. デバッグを開始するには、<kbd>F5</kbd> キーを押すか、緑色の矢印を選択します。 デバッガーは、前述の手順で設定したブレークポイントに達すると、プログラムの実行を停止します。
-    - デバッグ中は、左上のペインでローカル変数を確認するか、デバッグ コンソールを使用できます。
-
-1. 上部にある青色の矢印を選択してデバッグを継続するか、上部にある赤色の四角形を選択して停止します。
-
-    ![Visual Studio Code の実行とデバッグ](media/with-visual-studio-code/run-debug-vs-code.png)
-
-> [!TIP]
-> Visual Studio Code で OmniSharp を使用した .NET Core のデバッグの詳細とトラブルシューティングのヒントについては、「[Instructions for setting up the .NET Core debugger](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)」 (.NET Core デバッガーの設定に関する指示) を参照してください。
-
-## <a name="add-a-class"></a>クラスを追加する
-
-1. 新しいクラスを追加するには、*Program.cs* の下で VSCode エクスプローラーを右クリックし、 **[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
-1. ファイルに *MyClass.cs* という名前を指定します。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
-1. 次のコードを追加し、最初のクラスを作成します。
-
-    ``` csharp
-    using System;
-
-    namespace HelloWorld
+namespace HelloWorld
+{
+    class Program
     {
-        public class MyClass
+        static void Main(string[] args)
         {
-            public string ReturnMessage()
-            {
-                return "Happy coding!";
-            }
+            Console.WriteLine("Hello World!");
         }
     }
-    ```
+}
+```
 
-1. *Program.cs* のコードを次のコードに置換し、`Main` メソッドから新しいクラスを呼び出します。
+`Main` はアプリケーションのエントリ ポイントで、アプリケーションを起動するときに、ランタイムによって自動的に呼び出されるメソッドです。 アプリケーションが起動されるときに提供されるコマンドライン引数はすべて *args* 配列にあります。
 
-    ```csharp
-    using System;
+このテンプレートは、<xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> メソッドを呼び出して "Hello World!" を表示する単純なアプリケーションを作成し、 コンソール ウィンドウに表示します。
 
-    namespace HelloWorld
-    {
-        class Program
-        {
-            static void Main(string[] args)
-            {
-                var c1 = new MyClass();
-                Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
-            }
-        }
-    }
-    ```
+## <a name="run-the-app"></a>アプリを実行する
+
+**ターミナル**で次のコマンドを実行します。
+
+```dotnetcli
+dotnet run
+```
+
+プログラムによって "Hello World!" が表示されて 終了します。
+
+![dotnet run コマンド](media/with-visual-studio-code/dotnet-run-command.png)
+
+## <a name="enhance-the-app"></a>アプリを拡張する
+
+アプリケーションを拡張し、ユーザーに名前の入力を求め、日付と時刻と共にそれを表示するようにします。
+
+1. *Program.cs* をクリックして開きます。
+
+   Visual Studio Code で初めて C# ファイルを開くと、[OmniSharp](https://www.omnisharp.net/) がエディターに読み込まれます。
+
+   ![Program.cs ファイルを開く](media/with-visual-studio-code/open-program-cs.png)
+
+1. Visual Studio Code で、アプリのビルドとデバッグに必要なアセットの追加を求められたら、 **[はい]** を選択します。
+
+   ![足りない資産の入力を求める](media/with-visual-studio-code/missing-assets.png)
+
+1. *Program.cs* の `Main` メソッドの内容 (現在は `Console.WriteLine` を呼び出す行のみ) を以下のコードに置き換えます。
+
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
+
+   このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して **Enter** キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します。 最後に、これらの値がコンソール ウィンドウに表示されます。
+
+   `\n` は、改行文字を表します。
+
+   文字列の前にドル記号 (`$`) を付けると、変数名などの式を文字列で中かっこで囲むことができます。 式の値が、式の代わりに文字列に挿入されます。 この構文は、[補間された文字列](../../csharp/language-reference/tokens/interpolated.md)と呼ばれます。
 
 1. 変更内容を保存します。
 
-1. 再びプログラムを実行します。
+   > [!IMPORTANT]
+   > Visual Studio Code では、変更を明示的に保存する必要があります。 Visual Studio とは異なり、アプリをビルドして実行してもファイルの変更は自動的には保存されません。
 
-    ```dotnetcli
-    dotnet run
-    ```
+1. もう一度プログラムを実行します。
 
-    新しいメッセージと共に追加した文字列が表示されます。
+   ```dotnetcli
+   dotnet run
+   ```
 
-    ```console
-    Hello World! Happy coding!
-    ```
+1. プロンプトに対し、名前を入力し、**Enter** キーを押します。
 
-## <a name="faq"></a>よくあるご質問
+   :::image type="content" source="media/debugging-with-visual-studio-code/run-modified-program.png" alt-text="プログラムの出力が変更されたターミナル ウィンドウ":::
 
-### <a name="im-missing-required-assets-to-build-and-debug-c-in-visual-studio-code-my-debugger-says-no-configuration"></a>Visual Studio Code 内で C#\(C# をビルドおよびデバッグするのに必要なアセットが欠落しています\)。 デバッガーには、"No Configuration\(構成がありません\)" と表示されます。
+1. 任意のキーを押してプログラムを終了します。
 
-Visual Studio Code C# の拡張機能では、ビルドおよびデバッグするアセットを自動的に作成することができます。 C# プロジェクトを初めて開くと、これらのアセットを作成するように Visual Studio Code から求められます。 アセットを作成しなかった場合でも、このコマンドを実行する方法はあります。コマンド パレットを開き ( **[表示] > [コマンド パレット]** )、「>.NET:Generate Assets for Build and Debug」 と入力します。 これを選択すると、必要としている *.vscode*、*launch.json* および *tasks.json* の各構成ファイルが作成されます。
-
-## <a name="see-also"></a>関連項目
+## <a name="additional-resources"></a>その他の技術情報
 
 - [Visual Studio Code の設定](https://code.visualstudio.com/docs/setup/setup-overview)
-- [Visual Studio Code でのデバッグ](https://code.visualstudio.com/Docs/editor/debugging)
+
+## <a name="next-steps"></a>次の手順
+
+このチュートリアルでは、.NET Core アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
+
+> [!div class="nextstepaction"]
+> [Visual Studio Code を使用して .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio-code.md)

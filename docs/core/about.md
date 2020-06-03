@@ -2,12 +2,12 @@
 title: .NET Core の概要
 description: .NET Core の特性と構成について説明し、他の .NET 実装と比較します。
 ms.date: 03/26/2020
-ms.openlocfilehash: c9a63ddba14cf176be529e9520027c0610cfc087
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: e57451968ed8c4d5457acea084d3c6c9f998b8da
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391170"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144527"
 ---
 # <a name="net-core-overview"></a>.NET Core の概要
 
@@ -16,7 +16,7 @@ ms.locfileid: "80391170"
 - **クロス プラットフォーム:** Windows、macOS、Linux の[オペレーティング システム](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)で実行されます。
 - **オープン ソース:** .NET Core フレームワークは[オープン ソース](https://github.com/dotnet/core)であり、MIT および Apache 2 ライセンスを使用します。 .NET Core は [.NET Foundation](https://dotnetfoundation.org/) プロジェクトです。
 - **最新:** 非同期プログラミング、構造体を使用したコピーなしのパターン、コンテナーのリソース管理など、最新のパラダイムを実装しています。
-- **パフォーマンス:** [ハードウェア組み込み](https://devblogs.microsoft.com/dotnet/hardware-intrinsics-in-net-core/)、[階層化コンパイル](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/tiered-compilation.md)、[Span\<T>](../standard/memory-and-spans/index.md) などの機能を使用して、[高パフォーマンス](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core-3-0/)を提供します。
+- **パフォーマンス:** [ハードウェア組み込み](https://devblogs.microsoft.com/dotnet/hardware-intrinsics-in-net-core/)、[階層化コンパイル](https://github.com/dotnet/coreclr/blob/master/Documentation/design-docs/tiered-compilation.md)、[Span\<T>](../standard/memory-and-spans/index.md) などの機能を使用して、[ハイ パフォーマンス](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-core-3-0/)を提供します。
 - **環境全体での一貫性:** x64、x86、ARM を含めた複数のオペレーティング システムとアーキテクチャ上でコードが同じ動作で実行されます。
 - **コマンドライン ツール:** ローカル開発と継続的インテグレーションで使用できる、使いやすいコマンドライン ツールが含まれます。
 - **柔軟な展開:** アプリに .NET Core を含めたり、サイド バイ サイドでインストールしたりすること (ユーザー全体またはシステム全体のインストール) ができます。 [Docker コンテナー](docker/introduction.md)で使用できます。
@@ -28,7 +28,7 @@ ms.locfileid: "80391170"
 - [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)
 - [Visual Studio Code](https://code.visualstudio.com/download)
 
-エディターの統合は、[OmniSharp](https://www.omnisharp.net/) および [Ionide](http://ionide.io) プロジェクトの共同作成者によって、一部提供されています。
+エディターの統合は、[OmniSharp](https://www.omnisharp.net/) および [Ionide](https://ionide.io) プロジェクトの共同作成者によって、一部提供されています。
 
 ## <a name="apis"></a>API
 
@@ -69,6 +69,6 @@ ms.locfileid: "80391170"
 
 Microsoft からの .NET Core のバイナリ配布は、Azure 内のマイクロソフトが管理するサーバーで構築されてテストされ、Microsoft のエンジニアリングおよびセキュリティ プラクティスに従っています。
 
-Red Hat Enterprise Linux (RHEL) では [.NET Core は Red Hat によってサポート](http://redhatloves.net/)されます。 Red Hat がソースから .NET Core をビルドして、[Red Hat ソフトウェア コレクション](https://developers.redhat.com/products/softwarecollections/overview/)で使用できるようにします。 Red Hat とマイクロソフトが共同して、.NET Core が RHEL 上で適切に動作するようにします。
+Red Hat Enterprise Linux (RHEL) では [.NET Core は Red Hat によってサポート](https://developers.redhat.com/topics/dotnet/)されます。 Red Hat がソースから .NET Core をビルドして、[Red Hat ソフトウェア コレクション](https://developers.redhat.com/products/softwarecollections/overview/)で使用できるようにします。 Red Hat とマイクロソフトが共同して、.NET Core が RHEL 上で適切に動作するようにします。
 
 Tizen プラットフォームでは、[Tizen によって .NET Core がサポートされています](https://developer.tizen.org/development/training/.net-application)。

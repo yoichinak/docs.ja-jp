@@ -4,12 +4,12 @@ description: C# ライブラリやアプリケーションでの継承の使用�
 ms.date: 07/05/2018
 ms.technology: csharp-fundamentals
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 78833110db0e4f0382e5c0c6de7c6c8be9a16c8d
-ms.sourcegitcommit: a9b8945630426a575ab0a332e568edc807666d1b
+ms.openlocfilehash: 8e24ad3e93dcd11f39ae979a3acda4c4ada13dc5
+ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80391150"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84007729"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# と .NET での継承
 
@@ -58,9 +58,9 @@ C# と .NET は*単一継承*のみをサポートしています。 つまり�
 
 - [パブリック](../language-reference/keywords/public.md) メンバーは派生クラスで表示され、派生クラスのパブリック インターフェイスの一部です。 パブリックの継承されたメンバーは、派生クラスで定義された場合と同様に呼び出すことができます。 次の例では、クラス `A` が `Method1` という名前のメソッドを定義し、クラス `B` がクラス `A` から継承します。 そこでこの例は、`Method1` を `B` 上のインスタンス メソッドであるかのように呼び出します。
 
-[!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
+  [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-派生クラスはまた、代替実装を行うことにより、継承されたメンバーを*オーバーライド*することができます。 メンバーをオーバーライドするためには、基底クラスのメンバーは [virtual](../language-reference/keywords/virtual.md) のキーワードでマークされている必要があります。 既定では基底クラスのメンバーは `virtual` としてマークされていないので、オーバーライドすることはできません。 次の例のように、非仮想メンバーをオーバーライドしようとすると、コンパイラ エラー CS0506 "\<member> cannot override inherited member \<member>" ("継承されたメンバー <member> が virtual、abstract、または override でマークされていないため、<member> でオーバーライドすることができません") が生成されます。
+派生クラスはまた、代替実装を行うことにより、継承されたメンバーを*オーバーライド*することができます。 メンバーをオーバーライドするためには、基底クラスのメンバーは [virtual](../language-reference/keywords/virtual.md) のキーワードでマークされている必要があります。 既定では基底クラスのメンバーは `virtual` としてマークされていないので、オーバーライドすることはできません。 次の例のように、非仮想メンバーをオーバーライドしようとすると、コンパイラ エラー CS0506 "\<member> cannot override inherited member \<member> because it is not marked virtual, abstract, or override." ("継承されたメンバー member が virtual、abstract、または override でマークされていないため、member でオーバーライドすることができません") が生成されます。
 
 ```csharp
 public class A
@@ -181,7 +181,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - クラス階層をどの程度まで拡張すべきか。 1 つの基底クラスと 1 つまたは複数の派生クラスではなく、3 つ以上のクラス階層を作るかどうか。 たとえば、`Publication` は `Periodical` の基底クラスになり得ますが、この Periodical は `Magazine`、`Journal`、および `Newspaper` の基底クラスです。
 
-  この例では、`Publication` クラスと 1 つの派生クラス `Book` という小さな階層を使用します。 この例を拡張すると、`Magazine` や `Article` など、`Publication` から派生するクラスを簡単に追加で多く作成できます。
+  この例では、`Publication` クラスと 1 つの派生クラス `Book` という小さな階層を使用します。 この例を簡単に拡張して、`Magazine` や `Article` など、`Publication` から派生する多くの追加のクラスを作成できます。
 
 - 基底クラスのインスタンス化に意味があるのか。 意味がなければ、そのクラスには [abstract](../language-reference/keywords/abstract.md) キーワードを適用します。 それ以外の場合、`Publication` クラスはそのクラス コンストラクターを呼び出すことによってインスタンス化することができます。 `abstract` キーワードでマークされたクラスを、そのクラス コンストラクターへの直接呼び出しによってインスタンス化しようとすると、C# コンパイラはエラー CS0144 "Cannot create an instance of the abstract class or interface." ("抽象クラスまたはインターフェイスのインスタンスを作成できません") を生成します。 リフレクションを使用してクラスをインスタンス化しようとすると、そのリフレクション メソッドは <xref:System.MemberAccessException> をスローします。
 
@@ -191,7 +191,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 派生クラスで、特定のメンバーの基底クラス実装を継承する必要があるかどうか、基底クラス実装をオーバーライドするオプションがあるかどうか、または実装を提供する必要があるかどうか。 [abstract](../language-reference/keywords/abstract.md) キーワードを使用して、派生クラスで実装を提供するように強制します。 [virtual](../language-reference/keywords/virtual.md) キーワードを使用して、派生クラスによる基底クラス メソッドのオーバーライドを許可します。 既定では、基底クラスで定義されているメソッドはオーバーライド*できません*。
 
- `Publication` クラスには `abstract` メソッドはありませんが、クラス自体が `abstract` になります。
+  `Publication` クラスには `abstract` メソッドはありませんが、クラス自体が `abstract` になります。
 
 - 派生クラスが継承階層内の最後のクラスを表していて、それ自体が追加の派生クラスの基底クラスとして使用できないかどうか。 既定では、どのクラスも基底クラスとして使用できます。 [sealed](../language-reference/keywords/sealed.md) キーワードを適用すると、クラスが追加クラスの基底クラスとして使用できないことを示すことができます。 sealed クラスからの派生を試みると、コンパイラ エラー CS0509 "cannot derive from sealed type \<typeName>" ("シール型 typeName から派生することができません") が生成されます。
 

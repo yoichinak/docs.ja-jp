@@ -5,12 +5,12 @@ ms.date: 10/01/2018
 helpviewer_keywords:
 - Memory&lt;T&gt; and Span&lt;T&gt; best practices
 - using Memory&lt;T&gt; and Span&lt;T&gt;
-ms.openlocfilehash: b9405d746c141308c7d984dac9da0d65d1048d1e
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: cb9075a12bb8d842cd8e937e74f8869c910fc0ab
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380015"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201940"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> と Span\<T> の使用ガイドライン
 
@@ -65,7 +65,7 @@ class Program
 
 メソッド呼び出しの開始からメソッドから返されるまでの間に、`WriteInt32ToBuffer` メソッドはバッファー上にリースを持ちます (消費することができます)。 同様に、`DisplayBufferToConsole` は実行中にバッファー上にリースを持ち、メソッドがアンワインドするとリースは解放されます (リース管理のための API はありません。"リース" は概念的なものです)。
 
-## <a name="memoryt-and-the-ownerconsumer-model"></a>Memory\<T> と所有者/コンシューマー モデル
+## <a name="memoryt-and-the-ownerconsumer-model"></a>Memory\<T> と所有者またはコンシューマー モデル
 
 「[所有者、コンシューマー、有効期間管理](#owners-consumers-and-lifetime-management)」セクションで説明したように、バッファーには常に所有者がいます。 .NET Core は 2 つの所有権モデルをサポートしています。
 
@@ -89,7 +89,7 @@ class Program
 
 `WriteInt32ToBuffer` メソッドはバッファーに値を書き込むことが意図されていますが、`DisplayBufferToConsole` メソッドではそうではありません。 これを反映するために、型 <xref:System.ReadOnlyMemory%601> の引数を受け入れておくことができます。 <xref:System.ReadOnlyMemory%601> の詳細については、「[規則 2:バッファーを読み取り専用にする場合は ReadOnlySpan\<T> または ReadOnlyMemory\<T> を使用する](#rule-2)」を参照してください。
 
-### <a name="ownerless-memoryt-instances"></a>"所有者なしの" Memory\<T> インスタンス
+### <a name="ownerless-memoryt-instances"></a>"所有者なし" の Memory\<T> インスタンス
 
 <xref:System.Buffers.IMemoryOwner%601> を使用せずに <xref:System.Memory%601> インスタンスを作成できます。 この場合、バッファーの所有権は明示的ではなく暗黙的であり、単一の所有者モデルのみがサポートされます。 これは次の方法で実行できます。
 

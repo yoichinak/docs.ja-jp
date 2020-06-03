@@ -21,7 +21,7 @@ ms.locfileid: "81243350"
 
 .NET には、使用できるさまざまな例外があります。 ただし、いずれもニーズに合わない場合は、独自のカスタムの例外を作成できます。
 
-たとえば、`StudentNotFoundException` プロパティを含む `StudentName` を作成するとします。
+たとえば、`StudentName` プロパティを含む `StudentNotFoundException` を作成するとします。
 カスタムの例外を作成するには、次の手順を実行します。
 
 1. <xref:System.Exception> から継承されるシリアル化可能なクラスを作成します。 クラス名の末尾は "Exception" にするようにします。
@@ -165,7 +165,7 @@ Throw New StudentNotFoundException("The student cannot be found.", "John")
     > [!NOTE]
     > プロジェクト名が `TestProject` で、リソース ファイル *ExceptionMessages.resx* がプロジェクトの *Resources* フォルダー内にある場合、リソース ファイルの完全修飾名は `TestProject.Resources.ExceptionMessages` です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ユーザー定義の例外を作成する方法](how-to-create-user-defined-exceptions.md)
 - [デスクトップ アプリケーションに対するサテライト アセンブリの作成](../../framework/resources/creating-satellite-assemblies-for-desktop-apps.md)

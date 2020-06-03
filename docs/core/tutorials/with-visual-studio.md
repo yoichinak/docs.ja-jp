@@ -1,84 +1,83 @@
 ---
-title: Visual Studio での .NET Core を使用した Hello World アプリケーションの作成
-description: Visual Studio を使用して、C# または Visual Basic で最初の .NET Core コンソール アプリケーションを作成する方法について説明します。
+title: Visual Studio で .NET Core を使用してコンソール アプリケーションを作成する
+description: Visual Studio を使用して、C# または Visual Basic で.NET Core コンソール アプリケーションを作成する方法について説明します。
 author: BillWagner
 ms.author: wiwagn
-ms.date: 12/09/2019
+ms.date: 05/20/2020
+dev_langs:
+- csharp
+- vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 738fc49a820c3c5d94fb35c1bf7a8b718ed75cb3
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: 9c3456cd8c940e53e8a70c1d3a7c3b09de77c21d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83394827"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201584"
 ---
-# <a name="tutorial-create-your-first-net-core-console-application-in-visual-studio-2019"></a>チュートリアル: Visual Studio 2019 で最初の .NET Core コンソール アプリケーションを作成する
+# <a name="tutorial-create-a-net-core-console-application-in-visual-studio-2019"></a>チュートリアル: Visual Studio 2019 で .NET Core コンソール アプリケーションを作成する
 
-この記事では、Visual Studio 2019 で Hello World .NET Core コンソール アプリケーションを作成して実行するためのステップ バイ ステップの概要を説明します。 Hello World アプリケーションは、従来、初心者に新しいプログラミング言語に紹介するために使用されています。 このプログラムは、単に "Hello World!" という語句を 画面に出力しました。
+このチュートリアルでは、Visual Studio 2019 で .NET Core コンソール アプリケーションを作成して実行する方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- **.NET Core クロスプラットフォーム開発**ワークロードがインストールされている [Visual Studio 2019 バージョン 16.4 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET Core 3.1 SDK が自動的にインストールされます。
+- **.NET Core クロスプラットフォーム開発**ワークロードがインストールされている [Visual Studio 2019 バージョン 16.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 このワークロードを選択すると、.NET Core 3.1 SDK が自動的にインストールされます。
 
-詳細については、記事「[.NET Core SDK をインストールする](../install/sdk.md?pivots=os-windows)」の「[Visual Studio を使用してインストールする](../install/sdk.md?pivots=os-windows#install-with-visual-studio)」のセクションを参照してください。
+  詳細については、記事「[.NET Core SDK をインストールする](../install/sdk.md?pivots=os-windows)」の「[Visual Studio を使用してインストールする](../install/sdk.md?pivots=os-windows#install-with-visual-studio)」のセクションを参照してください。
 
 ## <a name="create-the-app"></a>アプリを作成する
 
-次の手順では、単純な Hello World コンソール アプリケーションを作成します。
-
 <!-- markdownlint-disable MD025 -->
-
-# <a name="c"></a>[C#](#tab/csharp)
 
 1. Visual Studio 2019 を開きます。
 
-1. "HelloWorld" という名前の新しい C# .NET Core コンソール アプリ プロジェクトを作成します。
+1. "HelloWorld" という名前の新しい .NET Core コンソール アプリ プロジェクトを作成します。
 
-   1. スタート ウィンドウで、 **[新しいプロジェクトの作成]** を選択します。
+   1. スタート ページで、 **[新しいプロジェクトの作成]** を選択します。
 
-      ![Visual Studio の [スタート] ウィンドウで [新しいプロジェクトの作成] ボタンが選択されています](./media/with-visual-studio/start-window.png)
+      ![Visual Studio のスタート ページで [新しいプロジェクトの作成] ボタンが選択されている](./media/with-visual-studio/start-window.png)
 
-   1. **[新しいプロジェクトの作成]** ページで、検索ボックスに「**コンソール**」と入力します。 次に、言語の一覧から **[C#]** を選択し、続いて、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。 **[コンソール アプリ (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
+   1. **[新しいプロジェクトの作成]** ページで、検索ボックスに「**コンソール**」と入力します。 次に、言語の一覧から **[C#]** または **[Visual Basic]** を選択してから、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。 **[コンソール アプリ (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
 
       ![フィルターが選択された状態の [新しいプロジェクトの作成] ウィンドウ](./media/with-visual-studio/create-new-project.png)
 
       > [!TIP]
-      > .NET Core テンプレートが表示されない場合は、必要なワークロードがインストールされていない可能性があります。 **[お探しの情報が見つかりませんでしたか?]** メッセージで、 **[さらにツールと機能をインストールする]** リンクを選択します。 Visual Studio インストーラーが開きます。 **.NET Core クロスプラットフォーム開発**ワークロードがインストールされていることを確認してください。
+      > .NET Core テンプレートが表示されない場合は、必要なワークロードが不足している可能性があります。 **[お探しの情報が見つかりませんでしたか?]** メッセージで、 **[さらにツールと機能をインストールする]** リンクを選択します。 Visual Studio インストーラーが開きます。 **.NET Core クロスプラットフォーム開発**ワークロードがインストールされていることを確認してください。
 
    1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**HelloWorld**」と入力します。 次に、 **[作成]** を選択します。
 
       ![プロジェクト名、場所、およびソリューション名のフィールドを使用して新しいプロジェクト ウィンドウを構成します](./media/with-visual-studio/configure-new-project.png)
 
-   .NET Core の C# コンソール アプリケーション テンプレートで、`Program` というクラスが、<xref:System.String> 配列を引数として必要とする単一のメソッド `Main` とともに自動的に定義されます。 `Main` はアプリケーションのエントリ ポイントで、アプリケーションを起動するときに、ランタイムによって自動的に呼び出されるメソッドです。 アプリケーションが起動されるときに提供されるコマンドライン引数はすべて *args* 配列にあります。
+   .NET Core のコンソール アプリケーション テンプレートで、`Program` というクラスが、<xref:System.String> 配列を引数として必要とする単一のメソッド `Main` とともに定義されます。 `Main` はアプリケーションのエントリ ポイントで、アプリケーションを起動するときに、ランタイムによって自動的に呼び出されるメソッドです。 アプリケーションが起動されるときに提供されるコマンドライン引数はすべて *args* 配列にあります。
 
-   ![Visual Studio と新しい HelloWorld プロジェクト](./media/with-visual-studio/visual-studio-main-window.png)
+   使用する言語が表示されていない場合は、ページの上部にある言語セレクターを変更します。
 
-# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
+   ```csharp
+   using System;
 
-1. Visual Studio 2019 を開きます。
+   namespace HelloWorld
+   {
+       class Program
+       {
+           static void Main(string[] args)
+           {
+               Console.WriteLine("Hello World!");
+           }
+       }
+   }
+   ```
 
-1. "HelloWorld" という名前の新しい Visual Basic .NET Core コンソール アプリを作成します。
+   ```vb
+   Imports System
 
-   1. スタート ウィンドウで、 **[新しいプロジェクトの作成]** を選択します。
+   Module Program
+       Sub Main(args As String())
+           Console.WriteLine("Hello World!")
+       End Sub
+   End Module
+   ```
 
-      ![Visual Studio の [スタート] ウィンドウで [新しいプロジェクトの作成] ボタンが選択されています](./media/with-visual-studio/start-window.png)
-
-   1. **[新しいプロジェクトの作成]** ページで、検索ボックスに「**コンソール**」と入力します。 次に、言語の一覧から **[Visual Basic]** を選択し、続いて、プラットフォームの一覧から **[すべてのプラットフォーム]** を選択します。 **[コンソール アプリ (.NET Core)]** テンプレートを選択し、 **[次へ]** を選択します。
-
-      ![コンソール アプリ (.NET Framework) 用の Visual Basic テンプレートを選択します。](./media/with-visual-studio/vb/create-new-project.png)
-
-      > [!TIP]
-      > .NET Core テンプレートが表示されない場合は、必要なワークロードがインストールされていない可能性があります。 **[お探しの情報が見つかりませんでしたか?]** メッセージで、 **[さらにツールと機能をインストールする]** リンクを選択します。 Visual Studio インストーラーが開きます。 **.NET Core クロスプラットフォーム開発**ワークロードがインストールされていることを確認してください。
-
-   1. **[新しいプロジェクトの構成]** ページで、 **[プロジェクト名]** ボックスに「**HelloWorld**」と入力します。 次に、 **[作成]** を選択します。
-
-   .NET Core のコンソール アプリ テンプレートで、`Program` というクラスが、<xref:System.String> 配列を引数として受け取る単一のメソッド `Main` とともに自動的に定義されます。 `Main` はアプリケーションのエントリ ポイントで、アプリケーションを起動するときに、ランタイムによって自動的に呼び出されるメソッドです。 アプリケーションが起動されるときに提供されるコマンド ライン引数はすべて `args` パラメーターにあります。
-
-   ![Visual Studio と新しい HelloWorld プロジェクト](./media/with-visual-studio/vb/visual-studio-main-window.png)
-
----
-
-   このテンプレートでは、シンプルな "Hello World" アプリケーションを作成します。 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> メソッドを呼び出し、リテラル文字列 "Hello World!" を コンソール ウィンドウに表示します。
+   このテンプレートでは、シンプルな "Hello World" アプリケーションを作成します。 <xref:System.Console.WriteLine(System.String)?displayProperty=nameWithType> メソッドを呼び出し、"Hello World!" を コンソール ウィンドウに表示します。
 
 ## <a name="run-the-app"></a>アプリを実行する
 
@@ -96,15 +95,17 @@ ms.locfileid: "83394827"
 
 アプリケーションを拡張し、ユーザーに名前の入力を求め、日付と時刻と共にそれを表示するようにします。 次の手順では、アプリを変更してから再度実行します。
 
-# <a name="c"></a>[C#](#tab/csharp)
-
 1. `Main` メソッド (現在は `Console.WriteLine` を呼び出す行のみ) の内容を以下のコードに置き換えます。
 
-   [!code-csharp[GettingStarted#1](~/samples/snippets/csharp/getting_started/with_visual_studio/HelloWorld.cs#1)]
+   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
 
-   このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して Enter キーを押すまで待機します。 これは文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します。 最後に[挿入文字列](../../csharp/language-reference/tokens/interpolated.md)を使用して、これらの値をコンソール ウィンドウに表示します。
+   :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="Snippet1":::
 
-1. **[ビルド]**  >  **[ソリューションのビルド]** と選択して、プログラムをコンパイルします。
+   このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して Enter キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します (Visual Basic では `currentDate`)。 最後に、これらの値がコンソール ウィンドウに表示されます。
+
+   `\n` (Visual Basic では `vbCrLf`) は、改行文字を表します。
+
+   文字列の前にドル記号 (`$`) を付けると、変数名などの式を文字列で中かっこで囲むことができます。 式の値が、式の代わりに文字列に挿入されます。 この構文は、[補間された文字列](../../csharp/language-reference/tokens/interpolated.md)と呼ばれます。
 
 1. プログラムを実行するには、ツール バーで **[HelloWorld]** を選択するか、**F5** キーを押します。
 
@@ -113,30 +114,10 @@ ms.locfileid: "83394827"
    ![プログラムの出力が変更されたコンソール ウィンドウ](./media/with-visual-studio/hello-world-update.png)
 
 1. 任意のキーを押して、コンソール ウィンドウを閉じます。
-
-# <a name="visual-basic"></a>[Visual Basic](#tab/vb)
-
-1. `Main` メソッド (現在は `Console.WriteLine` を呼び出す行のみ) の内容を以下のコードに置き換えます。
-
-   [!code-vb[GettingStarted#1](~/samples/snippets/core/tutorials/vb-with-visual-studio/Program.vb#1)]
-
-   このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して Enter キーを押すまで待機します。 これは文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します。 最後に[挿入文字列](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)を使用して、これらの値をコンソール ウィンドウに表示します。
-
-1. **[ビルド]**  >  **[ソリューションのビルド]** と選択して、プログラムをコンパイルします。
-
-1. プログラムを実行するには、ツール バーで **[HelloWorld]** を選択するか、**F5** キーを押します。
-
-1. プロンプトに対し、名前を入力し、**Enter** キーを押します。
-
-   ![プログラムの出力が変更されたコンソール ウィンドウ](./media/with-visual-studio/hello-world-update.png)
-
-1. 任意のキーを押して、コンソール ウィンドウを閉じます。
-
----
 
 ## <a name="next-steps"></a>次の手順
 
-この記事では、最初の .NET Core アプリケーションを作成して実行しました。 次の手順では、このアプリをデバッグします。
+このチュートリアルでは、.NET Core アプリケーションを作成しました。 次のチュートリアルでは、アプリをデバッグします。
 
 > [!div class="nextstepaction"]
-> [Visual Studio で .NET Core Hello World アプリケーションをデバッグする](debugging-with-visual-studio.md)
+> [Visual Studio で .NET Core コンソール アプリケーションをデバッグする](debugging-with-visual-studio.md)

@@ -2,13 +2,13 @@
 title: アンインストール ツール
 description: .NET CORE アンインストール ツールの概要です。これは、.NET Core SKD とランタイムの制御されたクリーンアップを可能にするガイド付きツールです。
 author: sfoslund
-ms.date: 01/06/2020
-ms.openlocfilehash: 45cf0841391d02636770e98666e2897d2598fab4
-ms.sourcegitcommit: d7666f6e49c57a769612602ea7857b927294ce47
+ms.date: 05/27/2020
+ms.openlocfilehash: 1ad31cd42d8f8f87e3501b422fc4298c643e2067
+ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/30/2020
-ms.locfileid: "82595716"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84144514"
 ---
 # <a name="net-core-uninstall-tool"></a>.NET Core アンインストール ツール
 
@@ -66,7 +66,7 @@ dotnet-core-uninstall list [options]
 
 * **`--hosting-bundle`**
 
-  このツールでアンインストールできるすべての .NET Core ランタイムとホスティングのバンドルを一覧表示します。
+  このツールでアンインストールできるすべての .NET Core ホスティング バンドルを一覧表示します。
 
 * **`--runtime`**
 

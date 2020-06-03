@@ -2,12 +2,12 @@
 title: dotnet build コマンド
 description: dotnet build コマンドは、プロジェクトとそのすべての依存関係をビルドします。
 ms.date: 02/14/2020
-ms.openlocfilehash: 1022df059493c7e045f81d4be93dff2fdab77eb1
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 5375df61dbf8e9b4db8772b0e2767e9bca0bb254
+ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102841"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83840911"
 ---
 # <a name="dotnet-build"></a>dotnet build
 
@@ -23,8 +23,8 @@ ms.locfileid: "82102841"
 dotnet build [<PROJECT>|<SOLUTION>] [-c|--configuration <CONFIGURATION>]
     [-f|--framework <FRAMEWORK>] [--force] [--interactive] [--no-dependencies]
     [--no-incremental] [--no-restore] [--nologo] [-o|--output <OUTPUT_DIRECTORY>]
-    [-r|--runtime <RUNTIME_IDENTIFIER>] [-v|--verbosity <LEVEL>]
-    [--version-suffix <VERSION_SUFFIX>]
+    [-r|--runtime <RUNTIME_IDENTIFIER>] [-s|--source <SOURCE>]
+    [-v|--verbosity <LEVEL>] [--version-suffix <VERSION_SUFFIX>]
 
 dotnet build -h|--help
 ```
@@ -120,6 +120,10 @@ dotnet build -h|--help
 - **`-r|--runtime <RUNTIME_IDENTIFIER>`**
 
   ターゲットのランタイムを指定します。 ランタイム ID (RID) の一覧については、[RID カタログ](../rid-catalog.md)に関するページをご覧ください。
+
+- **`-s|--source <SOURCE>`**
+
+  復元操作時に使用する NuGet パッケージ ソースの URI。
 
 - **`-v|--verbosity <LEVEL>`**
 
