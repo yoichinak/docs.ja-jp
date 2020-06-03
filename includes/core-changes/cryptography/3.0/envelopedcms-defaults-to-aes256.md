@@ -30,7 +30,7 @@ return cms.Encode();
 
 #### <a name="recommended-action"></a>推奨アクション
 
-この変更によって悪影響を受ける場合は、型 <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> を含む <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> コンストラクターで暗号化アルゴリズム識別子を明示的に指定することで、TripleDES 暗号化に戻すことができます。次に例を示します。
+この変更によって悪影響を受ける場合は、型 <xref:System.Security.Cryptography.Pkcs.AlgorithmIdentifier> を含む <xref:System.Security.Cryptography.Pkcs.EnvelopedCms> コンストラクターで暗号化アルゴリズム識別子を明示的に指定することで、TripleDES 暗号化に戻すことができます。次に例を示します。
 
 ```csharp
 Oid tripleDesOid = new Oid("1.2.840.113549.3.7", null);

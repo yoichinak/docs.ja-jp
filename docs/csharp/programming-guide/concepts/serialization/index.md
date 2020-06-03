@@ -1,12 +1,12 @@
 ---
 title: シリアル化 (C#)
 ms.date: 01/02/2020
-ms.openlocfilehash: d914298a370b09307e84c88959542b4823cf37ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b2532ccf281fdfaa951d56675066f1e239f9f480
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79167596"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241982"
 ---
 # <a name="serialization-c"></a>シリアル化 (C#)
 
@@ -65,7 +65,7 @@ XML シリアル化では、オブジェクトのパブリック フィールド
 
 バイナリおよび XML シリアル化は、2 つの方法で実行できます (基本およびカスタム)。
 
-基本的なシリアル化では、.NET Framework を使用して、オブジェクトが自動的にシリアル化されます。 唯一の要件は、クラスに <xref:System.SerializableAttribute> 属性が適用されていることです。 <xref:System.NonSerializedAttribute> を使用して、特定のフィールドがシリアル化されないようにすることができます。
+基本的なシリアル化では、.NET を使用して、オブジェクトが自動的にシリアル化されます。 唯一の要件は、クラスに <xref:System.SerializableAttribute> 属性が適用されていることです。 <xref:System.NonSerializedAttribute> を使用して、特定のフィールドがシリアル化されないようにすることができます。
 
 基本的なシリアル化を使用する場合、オブジェクトのバージョン管理によって問題が発生する場合があります。 バージョン管理の問題が重要な場合は、カスタムのシリアル化を使用します。 基本的なシリアル化は、シリアル化を実行する最も簡単な方法ですが、プロセスを細かく制御することはできません。
 
@@ -75,14 +75,14 @@ XML シリアル化では、オブジェクトのパブリック フィールド
 
 デザイナーのシリアル化はシリアル化の特殊な形式であり、開発ツールに関連付けられているオブジェクトの永続性の種類を含みます。 デザイナーのシリアル化は、後でオブジェクト グラフを復元できるように、オブジェクト グラフをソース ファイルに変換するプロセスです。 ソース ファイルには、コードとマークアップを含めることができますが、SQL テーブル情報を含めることもできます。
 
-## <a name="BKMK_RelatedTopics"></a>関連トピックと例  
+## <a name="related-topics-and-examples"></a><a name="BKMK_RelatedTopics"></a>関連トピックと例  
 
 [System.Text.Json の概要](../../../../standard/serialization/system-text-json-overview.md)。`System.Text.Json` ライブラリを取得する方法を示します。
 
 [.NET で JSON をシリアル化および逆シリアル化する方法](../../../../standard/serialization/system-text-json-how-to.md)。
 <xref:System.Text.Json.JsonSerializer> クラスを使用して JSON との間でオブジェクト データの読み取りと書き込みを行う方法について説明します。
 
-[チュートリアル: オブジェクトの永続化 (Visual Studio) (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
+[チュートリアル: オブジェクトの永続化 (Visual Studio (C#))](walkthrough-persisting-an-object-in-visual-studio.md)  
 シリアル化によってインスタンス間でオブジェクトのデータを永続化して値を保存しておき、次にそのオブジェクトをインスタンス化するときにその値を取得する方法を示します。
 
 [XML ファイルからオブジェクト データを読み取る方法 (C#)](how-to-read-object-data-from-an-xml-file.md)  
