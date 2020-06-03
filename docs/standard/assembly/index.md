@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assemblies [.NET Framework]
 - version boundaries
 - type boundaries
-ms.openlocfilehash: 87030bf9770c464709559b2fb8f4c0004009e48d
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 364a1a8c0fbaae93a02495aaf2e8c519ffb46451
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83379909"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290942"
 ---
 # <a name="assemblies-in-net"></a>.NET のアセンブリ
 
@@ -102,8 +102,8 @@ C# では、1 つのアプリケーションで同じアセンブリの 2 つの
 |[アセンブリのバージョン管理](versioning.md)|.NET Framework のバージョン管理ポリシーの概要。|
 |[アセンブリの配置](../../framework/app-domains/assembly-placement.md)|アセンブリの配置場所。|
 |[アセンブリと side-by-side 実行](side-by-side-execution.md)|複数のバージョンのランタイムやアセンブリの同時使用。|
-|[動的メソッドおよびアセンブリの出力](../../../docs/framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|動的アセンブリの作成方法。|
-|[ランタイムがアセンブリを検索する方法](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)|実行時に .NET Framework でアセンブリ参照がどのように解決されるか。|
+|[動的メソッドおよびアセンブリの出力](../../framework/reflection-and-codedom/emitting-dynamic-methods-and-assemblies.md)|動的アセンブリの作成方法。|
+|[ランタイムがアセンブリを検索する方法](../../framework/deployment/how-the-runtime-locates-assemblies.md)|実行時に .NET Framework でアセンブリ参照がどのように解決されるか。|
 
 ## <a name="reference"></a>関連項目
 

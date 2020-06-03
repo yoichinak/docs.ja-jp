@@ -4,12 +4,12 @@ description: Windows Presentation Foundation (WPF) アプリを .NET Core 3.0 �
 author: mjrousos
 ms.date: 09/12/2019
 ms.author: mikerou
-ms.openlocfilehash: ccd2fc5a49d9c2d31c693e48099732614b568c7b
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: fda4f618ddb4a3edbe6f2dd9fba0b10bc618e88d
+ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507456"
+ms.lasthandoff: 05/29/2020
+ms.locfileid: "84201566"
 ---
 # <a name="migrating-wpf-apps-to-net-core"></a>.NET Core への WPF アプリの移行
 
@@ -45,7 +45,7 @@ ms.locfileid: "82507456"
 
 ## <a name="about-the-sample"></a>サンプルについて
 
-この記事では、[Bean Trader サンプル アプリ](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)を参照しています。これは、実際の WPF アプリのものと類似するさまざまな依存関係がそこで使用されているためです。 このアプリは大きくはありませんが、複雑さの点で "Hello World" からのステップアップを意図しています。 このアプリでは、ユーザーが実際のアプリを移植するときに発生する可能性のある問題が実証されます。 このアプリは WCF サービスと通信するので、これを適切に実行するためには、BeanTraderServer プロジェクト (同じ GitHub リポジトリで入手できます) を実行し、BeanTraderClient の構成が正しいエンドポイントを指していることを確認する必要があります。 (既定では、このサンプルではサーバーが *http://localhost:8090* の同じコンピューターで実行されていることが前提となっています。BeanTraderServer をローカルで起動した場合はこれが該当します。)
+この記事では、[Bean Trader サンプル アプリ](https://github.com/dotnet/windows-desktop/tree/master/Samples/BeanTrader)を参照しています。これは、実際の WPF アプリのものと類似するさまざまな依存関係がそこで使用されているためです。 このアプリは大きくはありませんが、複雑さの点で "Hello World" からのステップアップを意図しています。 このアプリでは、ユーザーが実際のアプリを移植するときに発生する可能性のある問題が実証されます。 このアプリは WCF サービスと通信するので、これを適切に実行するためには、BeanTraderServer プロジェクト (同じ GitHub リポジトリで入手できます) を実行し、BeanTraderClient の構成が正しいエンドポイントを指していることを確認する必要があります。 (既定では、このサンプルではサーバーが `http://localhost:8090` の同じコンピューターで実行されていることが前提となっています。BeanTraderServer をローカルで起動した場合はこれが該当します。)
 
 このサンプル アプリは、.NET Core の移植に関する課題と解決策を示すことを目的としている点に留意してください。 WPF のベスト プラクティスを示すことを目的としたものではありません。 実際、いくつかのアンチパターンが意図的に組み込まれており、移植中に少なくともいくつかの有用な課題が確実に発生するようになっています。
 
@@ -76,7 +76,7 @@ ms.locfileid: "82507456"
 
 .Net Core 3.0 をターゲットとする場合、.NET Core または .NET Standard をターゲットとするパッケージはすべて動作するはずです (.NET Core では .NET Standard の領域が実装されるため)。 場合によっては、使用されているパッケージの特定のバージョンで .NET Core または .NET Standard がターゲットにならないことがありますが、新しいバージョンではターゲットになります。 この場合は、最新バージョンのパッケージにアップグレードすることを検討してください。
 
-.NET Framework をターゲットとするパッケージも使用できますが、それにはある程度のリスクが伴います。 .NET Core から .NET Framework への依存関係は許容されます。.NET Core と .NET Framework の領域は類似しているので、このような依存関係は "*多くの場合*" 機能するためです。 ただし、パッケージで .NET Core に存在しない .NET API を使用しようとすると、ランタイム例外が発生します。 そのため、選択可能なオプションが他にない場合にのみ .NET Framework パッケージを参照し、これを行うことによってテストの負担が生じることを理解する必要があります。
+.NET Framework をターゲットとするパッケージも使用できますが、それにはある程度のリスクが伴います。 .NET Core から .NET Framework への依存関係は許容されます。 .NET Core と .NET Framework の領域は類似しているので、このような依存関係は "*多くの場合*" 機能するためです。 ただし、パッケージで .NET Core に存在しない .NET API を使用しようとすると、ランタイム例外が発生します。 そのため、選択可能なオプションが他にない場合にのみ .NET Framework パッケージを参照し、これを行うことによってテストの負担が生じることを理解する必要があります。
 
 .NET Core や .NET Standard をターゲットとしないパッケージが参照されている場合は、他の代替手段を検討する必要があります。
 

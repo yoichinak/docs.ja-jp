@@ -223,6 +223,10 @@
           displayName: 'unmanaged resources, memory management'
         - name: Dispose メソッドの実装
           href: garbage-collection/implementing-dispose.md
+          displayName: 'using, Dispose, dispose pattern, IDisposable'
+        - name: DisposeAsync メソッドの実装
+          href: garbage-collection/implementing-disposeasync.md
+          displayName: 'await using, DisposeAsync, async dispose pattern, IAsyncDisposable'
         - name: IDisposable を実装するオブジェクトの使用
           href: garbage-collection/using-objects.md
     - name: ガベージ コレクション

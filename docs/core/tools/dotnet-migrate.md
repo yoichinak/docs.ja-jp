@@ -2,18 +2,18 @@
 title: dotnet migrate コマンド
 description: dotnet migrate コマンドは、プロジェクトとそのすべての依存関係を移行します。
 ms.date: 02/14/2020
-ms.openlocfilehash: 71f587c1bfadd445aca818448bdd5f136f009fe0
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 2e7f9ae5a1d11c54280d914b04df761f0d5aff99
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463635"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284093"
 ---
 # <a name="dotnet-migrate"></a>dotnet migrate
 
 **この記事の対象:** ✔️ .NET Core 2.x SDK
 
-## <a name="name"></a>name
+## <a name="name"></a>名前
 
 `dotnet migrate` - Preview 2 .NET Core プロジェクトを .NET Core SDK スタイルのプロジェクトに移行します。
 
@@ -28,7 +28,7 @@ dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json <REPORT_
 dotnet migrate -h|--help
 ```
 
-## <a name="description"></a>[説明]
+## <a name="description"></a>説明
 
 このコマンドは非推奨です。 `dotnet migrate` コマンドは、.NET Core 3.0 SDK 以降では使用できなくなりました。 これは、Preview 2 .NET Core プロジェクトを 1.x .NET Core プロジェクト (サポート対象外) にしか移行できません。
 
@@ -41,7 +41,7 @@ dotnet migrate -h|--help
 * *solution.sln* ファイル。ソリューションで参照されているプロジェクトを移行します。
 * 特定のディレクトリのすべてのサブディレクトリ (再帰的)。
 
-`dotnet migrate` コマンドは、*ディレクトリ内に移行された*project.json`backup` ファイルを保持します。ディレクトリが存在しない場合は作成されます。 この動作は、`--skip-backup` オプションを使ってオーバーライドされます。
+`dotnet migrate` コマンドは、`backup` ディレクトリ内に移行された *project.json* ファイルを保持します。ディレクトリが存在しない場合は作成されます。 この動作は、`--skip-backup` オプションを使ってオーバーライドされます。
 
 既定では、移行操作は、標準出力 (STDOUT) に移行プロセスの状態を出力します。 `--report-file <REPORT_FILE>` オプションを使うと、指定したファイルに出力が保存を指定します。
 
@@ -94,7 +94,7 @@ dotnet migrate -h|--help
 
 使用する xproj ファイルへのパス。 プロジェクト ディレクトリに複数の xproj がある場合に必要です。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
 現在のディレクトリのプロジェクトとそのプロジェクト間の依存関係をすべて移行します。
 
