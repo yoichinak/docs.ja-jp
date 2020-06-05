@@ -1,5 +1,6 @@
 ---
 title: 名前付けのガイドライン
+description: この概要では、フレームワーク開発で使用する名前付け規則について説明します。 大文字と小文字の区別、一般的な名前付け、およびその他のガイドラインに関する記事にアクセスしてください。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - names [.NET Framework]
 - format naming guidelines [.NET Framework]
 ms.assetid: fc076d66-9b5f-42d3-aa65-61d970c794a3
-ms.openlocfilehash: 1b137be60f4c8c1c7cf1fa1f807841d4bc209089
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: fbcf5ef5eb02a5e45b5c981b4247ffe1c9c2631b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290176"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447148"
 ---
 # <a name="naming-guidelines"></a>名前付けのガイドライン
 フレームワークの開発における一貫した名前付け規則に従うことは、フレームワークのユーザビリティに大きな影響を与える可能性があります。 これにより、多数の開発者が広範に分離されたプロジェクトでフレームワークを使用できるようになります。 フォームの一貫性を超えて、フレームワーク要素の名前を簡単に理解し、各要素の機能を伝達する必要があります。  

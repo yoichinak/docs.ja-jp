@@ -1,13 +1,13 @@
 ---
 title: コンテナーとコンテナー オーケストレーターの活用
 description: Azure での Docker コンテナーと Kubernetes Orchestrators 活用
-ms.date: 05/13/2020
-ms.openlocfilehash: b2fedac205d7a5bd8b8f8cf665ae370b9bf26654
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.date: 05/31/2020
+ms.openlocfilehash: 25e981e0fb7957e7180be09a19a406eddfe4e51b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84282585"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446868"
 ---
 # <a name="leveraging-containers-and-orchestrators"></a>コンテナーとコンテナー オーケストレーターの活用
 

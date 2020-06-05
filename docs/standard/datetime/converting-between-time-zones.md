@@ -1,5 +1,6 @@
 ---
 title: タイム ゾーン間での時刻の変換
+description: .NET でのタイムゾーン間での時刻の変換方法について説明します。 また、タイムゾーンの認識が制限されている DateTimeOffset 値を変換する方法についても説明します。
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - converting times
 - local time conversions
 ms.assetid: a51e1a3b-c983-4320-b31a-1f9fa3cf824a
-ms.openlocfilehash: e17b32131e6abc1dba8126799281206f02d46d35
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 7d1984866c5eacdfe21834389b8f0be4caf78fb7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84278182"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446842"
 ---
 # <a name="converting-times-between-time-zones"></a>タイム ゾーン間での時刻の変換
 
