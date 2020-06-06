@@ -3,13 +3,13 @@ title: <Subtypes>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 ms.openlocfilehash: bb719449f3769c5dbbde6d05efdb865c18bb4ab2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180932"
 ---
-# <a name="subtypes-element-net-native"></a>\<要素 (.NET ネイティブ)>サブタイプ
+# <a name="subtypes-element-net-native"></a>\<Subtypes>要素 (.NET ネイティブ)
 それを含む型から継承されたすべてのクラスに実行時ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -32,7 +32,7 @@ ms.locfileid: "79180932"
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|説明|  
+|属性|属性の型|Description|  
 |---------------|--------------------|-----------------|  
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|  
 |`Browse`|リフレクション|省略可能な属性です。 プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。|  
@@ -47,18 +47,18 @@ ms.locfileid: "79180932"
   
 ## <a name="all-attributes"></a>すべての属性  
   
-|Value|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<タイプ>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<Type>](type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>解説  
  `<Subtypes>` 要素は、それを含む型のすべてのサブタイプにポリシーを適用します。 派生型および基底クラスに異なるポリシーを適用する場合に使用します。  
@@ -89,7 +89,7 @@ ms.locfileid: "79180932"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<要素>タイプ](type-element-net-native.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレン](runtime-directives-rd-xml-configuration-file-reference.md)
+- [\<Type>Element](type-element-net-native.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)
 - [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)

@@ -8,19 +8,19 @@ helpviewer_keywords:
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
 ms.openlocfilehash: 6991e3f73ac180fc690ec48e1a0d15f40c915733
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154531"
 ---
-# <a name="remove-element-for-configsections"></a>\<構成>要素を\<削除するセクション>
+# <a name="remove-element-for-configsections"></a>\<configSections> の \<remove> 要素
 
-定義済みのセクションまたはセクション グループを削除します。
+定義済みセクションまたはセクショングループを削除します。
 
-[**\<構成>**](configuration-element.md)\
-&nbsp;&nbsp;[**\<構成セクション>**](configsections-element-for-configuration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<>を削除する**
+[**\<configuration>**](configuration-element.md)\
+&nbsp;&nbsp;[**\<configSections>**](configsections-element-for-configuration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
 
 ## <a name="syntax"></a>構文
 
@@ -32,13 +32,13 @@ ms.locfileid: "79154531"
 
 |           | 説明 |
 | --------- | ----------- |
-| **name**  | 必須の属性です。<br><br>削除するセクションまたはセクション グループの名前を指定します。 |
+| **name**  | 必須の属性です。<br><br>削除するセクションまたはセクショングループの名前を指定します。 |
 
 ## <a name="parent-element"></a>親要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<構成セクション>** 要素](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれます。 |
+| [**\<configSections>** Element](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -46,13 +46,13 @@ ms.locfileid: "79154531"
 
 ## <a name="remarks"></a>解説
 
-**\<削除>** 要素を使用して、構成ファイル階層の上位レベルで定義されたセクションおよびセクション グループをアプリケーションから削除できます。
+要素を使用して、 **\<remove>** 構成ファイル階層の上位レベルで定義されたセクションとセクショングループをアプリケーションから削除できます。
 
 ## <a name="example"></a>例
 
-次の例は、アプリケーション構成ファイルで**\<remove>** 要素を使用して、コンピューター構成ファイルで以前に定義されたセクションを削除する方法を示しています。
+次の例は、 **\<remove>** アプリケーション構成ファイルで要素を使用して、コンピューター構成ファイルで以前に定義されたセクションを削除する方法を示しています。
 
-次のマシン構成ファイル コードは、セクション**\<のサンプルセクション>** を宣言します。
+次のマシン構成ファイルのコードでは、セクションを宣言してい **\<sampleSection>** ます。
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ ms.locfileid: "79154531"
 </configuration>
 ```
 
-次のアプリケーション構成ファイル コードは、**\<セクションセクション>セクション**を削除します。 削除後、アプリケーションは**\<sampleSection>** の設定を取得できません。
+次のアプリケーション構成ファイルのコードでは、セクションが削除され **\<sampleSection>** ます。 削除後、アプリケーションはの設定を取得できません **\<sampleSection>** 。
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ ms.locfileid: "79154531"
 
 ## <a name="configuration-file"></a>構成ファイル
 
-この要素は、アプリケーションディレクトリレベルではないアプリケーション構成ファイル、マシン構成ファイル (*Machine.config*) および*Web.config*ファイルで使用できます。
+この要素は、アプリケーション構成ファイル *、コンピューター構成*ファイル (machine.config)、およびアプリケーションディレクトリレベルでは*ない web.config ファイル*で使用できます。
 
 ## <a name="see-also"></a>関連項目
 
-- [.NET Framework の構成ファイル スキーマ](index.md)
+- [.NET Framework の構成ファイルスキーマ](index.md)

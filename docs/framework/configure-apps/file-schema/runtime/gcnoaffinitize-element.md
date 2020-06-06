@@ -5,10 +5,10 @@ helpviewer_keywords:
 - gcNoAffinitize element
 - <gcNoAffinitize> element
 ms.openlocfilehash: 16d6e5adefe2b632d7251669650058d7df7cea70
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "84004739"
 ---
 # <a name="gcnoaffinitize-element"></a>\<GCNoAffinitize> 要素
@@ -38,7 +38,7 @@ Cpu を使用してサーバー GC スレッドを関係付けするかどうか
 
 #### <a name="enabled-attribute"></a>enabled 属性
 
-|値|[説明]|
+|値|Description|
 |-----------|-----------------|
 |`false`|アフィニティ化する server GC スレッドと Cpu。 既定値です。|
 |`true`|では、Cpu を使用してサーバー GC スレッドを関係付けません。|
@@ -49,12 +49,12 @@ Cpu を使用してサーバー GC スレッドを関係付けするかどうか
 
 ### <a name="parent-elements"></a>親要素
 
-|要素|説明|
+|要素|Description|
 |-------------|-----------------|
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 既定では、サーバー GC スレッドはそれぞれの Cpu とハード関係があります。 システムの使用可能な各プロセッサには、独自の GC ヒープとスレッドがあります。 これは、キャッシュの使用を最適化するため、通常は推奨される設定です。 4.6.2 .NET Framework 以降では、 **GCNoAffinitize**要素の属性をに設定することにより、 `enabled` `true` サーバー GC スレッドと cpu を密に結合しないように指定できます。
 
@@ -94,4 +94,4 @@ Cpu を使用してサーバー GC スレッドを関係付けしないように
 - [G不正 Apcount 要素](gcheapcount-element.md)
 - [ガベージ コレクションの基礎](../../../../standard/garbage-collection/fundamentals.md)
 - [ランタイム設定スキーマ](index.md)
-- [構成ファイルスキーマ](../index.md)
+- [構成ファイル スキーマ](../index.md)

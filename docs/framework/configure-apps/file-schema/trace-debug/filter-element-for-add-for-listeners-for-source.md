@@ -1,5 +1,5 @@
 ---
-title: <filter>用<listeners>の<add>要素<source>
+title: <filter>のの <add> 要素 <listeners><source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 ms.openlocfilehash: 0cb668782de263d5f784691f46cb8b74541d942b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153517"
 ---
-# <a name="filter-element-for-add-for-listeners-for-source"></a>\<ソース>の\<リスナー>の\<追加>のフィルター>要素\<
+# <a name="filter-element-for-add-for-listeners-for-source"></a>\<filter>のの \<add> 要素 \<listeners>\<source>
 トレース ソースの `Listeners` コレクション内のリスナーにフィルターを追加します。  
 
-[**\<構成>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<診断>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<ソース>**](sources-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<ソース>**](source-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<リスナー>**](listeners-element-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>を追加する**](add-element-for-listeners-for-source.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<フィルター>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<sources>**](sources-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<source>**](source-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<listeners>**](listeners-element-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<add>**](add-element-for-listeners-for-source.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<filter>**
 
 ## <a name="syntax"></a>構文  
   
@@ -42,30 +42,30 @@ ms.locfileid: "79153517"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`type`|必須の属性です。<br /><br /> クラスから継承する必要があるフィルターの型を指定します<xref:System.Diagnostics.TraceFilter>。 型の名前空間修飾名を使用して、型の<xref:System.Type.FullName%2A>プロパティに対応するか、またはプロパティに対応するアセンブリ情報を含む完全修飾型名を<xref:System.Type.AssemblyQualifiedName%2A>使用できます。 完全修飾型名の詳細については、「完全修飾[型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。|  
-|`initializeData`|省略可能な属性です。<br /><br /> 指定したフィルター クラスのコンストラクターに渡される文字列。|  
+|`type`|必須の属性です。<br /><br /> フィルターの種類を指定します。この型はクラスから継承する必要があり <xref:System.Diagnostics.TraceFilter> ます。 型の名前空間で修飾された名前を使用できます。これは、型のプロパティに対応し <xref:System.Type.FullName%2A> ます。または、プロパティに対応するアセンブリ情報を含む完全修飾型名を使用することもでき <xref:System.Type.AssemblyQualifiedName%2A> ます。 完全修飾型名の詳細については、「[完全修飾型名の指定](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)」を参照してください。|  
+|`initializeData`|省略可能な属性です。<br /><br /> 指定されたフィルタークラスのコンストラクターに渡される文字列。|  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
 |`sources`|トレース メッセージを開始するトレース ソースを保持します。|  
 |`source`|トレース メッセージを開始するトレース ソースを指定します。|  
-|`listeners`|メッセージを収集、格納、およびルーティングするリスナーが含まれています。 リスナーは、トレース出力を適切なターゲットに送ります。|  
+|`listeners`|メッセージを収集、格納、およびルーティングするリスナーを格納します。 リスナーは、適切なターゲットにトレース出力を送信します。|  
 |`add`|トレース ソースの `Listeners` コレクションにリスナーを追加します。|  
   
 ## <a name="remarks"></a>解説  
- 要素`<filter>`は[\<、sharedListeners ](sharedlisteners-element.md) `<add>`>で定義されたリスナーの名前だけでなく、リスナーの型を指定するトレース ソース リスナーの要素に含まれている必要があります。 リスナーが[\<sharedListeners>](sharedlisteners-element.md)で定義されている場合は、そのリスナーのフィルターがその要素で定義されている必要があります。  
+ `<filter>`要素は `<add>` 、で定義されているリスナーの名前だけでなく、リスナーの種類を指定するトレースソースリスナーの要素に格納されている必要があり [\<sharedListeners>](sharedlisteners-element.md) ます。 リスナーがで定義されている場合は [\<sharedListeners>](sharedlisteners-element.md) 、そのリスナーのフィルターをその要素で定義する必要があります。  
   
- この要素は、コンピューター構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、`<filter>`要素を使用して、コレクション内の`console``Listeners`トレース ソース`myTraceSource`のリスナーにフィルターを追加する方法を示しています。 `Error`  
+ 次の例では、要素を使用して、フィルター `<filter>` `console` `Listeners` イベントレベルをとして指定し、トレースソースのコレクション内のリスナーにフィルターを追加する方法を示し `myTraceSource` `Error` ます。  
   
 ```xml  
 <configuration>  
