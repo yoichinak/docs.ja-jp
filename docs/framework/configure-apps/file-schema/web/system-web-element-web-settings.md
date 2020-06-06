@@ -9,17 +9,17 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
 ms.openlocfilehash: b37b05bdf90630251cbfcf86751243a3a8b77663
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152842"
 ---
-# <a name="systemweb-element-web-settings"></a>\<要素> (Web 設定)
-ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方法に関する情報が含まれています。  
+# <a name="systemweb-element-web-settings"></a>\<system.web> 要素 (Web 設定)
+ASP.NET ホスティングレイヤーがプロセス全体の動作をどのように管理するかについて説明します。  
   
-[**\<構成>**](../configuration-element.md)  
-&nbsp;&nbsp;**\<ウェブ>**  
+[**\<configuration>**](../configuration-element.md)  
+&nbsp;&nbsp;**\<system.web>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -34,27 +34,27 @@ ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方�
   
 ### <a name="attributes"></a>属性  
 
-[なし] :  
+なし。  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<アプリケーションプール>](applicationpool-element-web-settings.md)|aspnet.config ファイル内の IIS アプリケーション プールの構成設定を指定します。|  
+|[\<applicationPool>](applicationpool-element-web-settings.md)|Aspnet ファイル内の IIS アプリケーションプールの構成設定を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<構成>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素を指定します。|  
+|[\<configuration>](../configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素を指定します。|  
   
 ## <a name="remarks"></a>解説  
 
-要素`system.web`とその子`applicationPool`要素は、.NET Framework 3.5 SP1 の時点で .NET Framework に追加されました。 統合モードで IIS 7.0 以降のバージョンを実行すると、この要素の組み合わせによって、ASP.NETがスレッドを管理する方法と、iIS アプリケーション プールでホストされている場合の要求ASP.NETキューに追加する方法を構成できます。 クラシック モードまたは ISAPI モードで IIS 7.0 以降のバージョンを実行する場合、これらの設定は無視されます。  
+`system.web`要素とその子 `applicationPool` 要素が .NET FRAMEWORK 3.5 SP1 の .NET Framework に追加されました。 IIS 7.0 以降のバージョンを統合モードで実行すると、この要素の組み合わせによって、ASP.NET がどのようにスレッドを管理し、ASP.NET が IIS アプリケーションプールでホストされている場合の要求をキューに配置するかを構成できます。 IIS 7.0 以降のバージョンをクラシックモードまたは ISAPI モードで実行した場合、これらの設定は無視されます。  
   
 ## <a name="example"></a>例  
 
-次の例は ASP.NET、iIS アプリケーション プールでASP.NETがホストされている場合に、aspnet.config ファイルでプロセス全体の動作を構成する方法を示ASP.NET。 この例では、IIS が統合モードで実行されており、アプリケーションが .NET Framework 3.5 SP1 以降のバージョンを使用していることを前提としています。 この現象は、.NET Framework 3.5 SP1 より前のバージョンの .NET Framework では発生しません。 この例の値はデフォルト値です。  
+次の例は、ASP.NET が IIS アプリケーションプールでホストされている場合に、ASP.NET ファイルでプロセス全体の動作を構成する方法を示しています。 この例では、IIS が統合モードで実行されており、アプリケーションが .NET Framework 3.5 SP1 以降のバージョンを使用していることを前提としています。 この動作は、.NET Framework 3.5 SP1 より前のバージョンの .NET Framework では発生しません。 この例の値は既定値です。  
   
 ```xml  
 <configuration>  
@@ -74,8 +74,8 @@ ASP.NET ホスト レイヤーがプロセス全体の動作を管理する方�
 |名前空間||  
 |スキーマ名||  
 |検証ファイル||  
-|空にできる||  
+|空にすることができます||  
   
 ## <a name="see-also"></a>関連項目
 
-- [\<アプリケーションプール>要素 (Web 設定)](applicationpool-element-web-settings.md)
+- [\<applicationPool>要素 (Web 設定)](applicationpool-element-web-settings.md)

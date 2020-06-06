@@ -3,13 +3,13 @@ title: <Assembly>要素 (.NET ネイティブ)
 ms.date: 03/30/2017
 ms.assetid: cfe629eb-1106-4113-86e1-052f402d8d8b
 ms.openlocfilehash: f3cf65b185b1db3289a0dbb785c2b91431951cc2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79181080"
 ---
-# <a name="assembly-element-net-native"></a>\<アセンブリ>要素 (.NET ネイティブ)
+# <a name="assembly-element-net-native"></a>\<Assembly>要素 (.NET ネイティブ)
 指定したアセンブリ内のすべての型にランタイム リフレクション ポリシーを適用します。  
   
 ## <a name="syntax"></a>構文  
@@ -33,7 +33,7 @@ ms.locfileid: "79181080"
   
 ### <a name="attributes"></a>属性  
   
-|属性|属性の型|説明|  
+|属性|属性の型|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|全般|必須の属性です。 アセンブリの簡易名を指定します。|  
 |`Activate`|リフレクション|省略可能な属性です。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。|  
@@ -49,13 +49,13 @@ ms.locfileid: "79181080"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|Value|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |*assembly_name*|ファイル拡張子のないアセンブリの簡易名です。 この属性は、<xref:System.Reflection.AssemblyName.Name%2A?displayProperty=nameWithType> プロパティに対応します。 たとえば、Extensions.dll というアセンブリの名前は "Extensions" です。<br /><br /> リテラル文字列 `*Application*` を指定して、アプリ パッケージ内のすべてのアセンブリに、読み込みの有無に関係なくポリシーを適用することもできます。 `*Application*` は、.NET Framework アセンブリにポリシーを適用しません。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|Value|説明|  
+|値|[説明]|  
 |-----------|-----------------|  
 |*policy_setting*|アセンブリ内のすべての型について、このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -63,21 +63,21 @@ ms.locfileid: "79181080"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<名前空間>](namespace-element-net-native.md)|子名前空間内のすべての型にリフレクション ポリシーを適用します。|  
-|[\<タイプ>](type-element-net-native.md)|型にリフレクション ポリシーを適用します。|  
-|[\<入力インスタンス化>](typeinstantiation-element-net-native.md)|構築されたジェネリック型にリフレクション ポリシーを適用します。|  
+|[\<Namespace>](namespace-element-net-native.md)|子名前空間内のすべての型にリフレクション ポリシーを適用します。|  
+|[\<Type>](type-element-net-native.md)|型にリフレクション ポリシーを適用します。|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|構築されたジェネリック型にリフレクション ポリシーを適用します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<アプリケーション>](application-element-net-native.md)|実行時にリフレクションで使用可能なメタデータを持つ、アプリケーション全体の型と型のメンバーのコンテナーとして機能します。 [\<アプリケーション>](application-element-net-native.md)要素には、0 個、1`<Assembly>`つ、または複数の要素を含めることができます。|  
-|[\<図書館>](library-element-net-native.md)|実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。 [\<ライブラリ>](library-element-net-native.md)要素には、0 または`<Assembly>`1 つの要素を指定できます。|  
+|[\<Application>](application-element-net-native.md)|実行時にリフレクションで使用可能なメタデータを持つ、アプリケーション全体の型と型のメンバーのコンテナーとして機能します。 要素には、 [\<Application>](application-element-net-native.md) 0 個以上の要素を含めることができ `<Assembly>` ます。|  
+|[\<Library>](library-element-net-native.md)|実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。 要素には、 [\<Library>](library-element-net-native.md) 0 個または1個の要素を含めることができ `<Assembly>` ます。|  
   
 ## <a name="remarks"></a>解説  
- `<Assembly>` 要素は、アセンブリ内のすべての型の実行時ポリシーを定義します。 [\<ライブラリ](library-element-net-native.md)を指定するライブラリ>要素とは異なりますが、ランタイム リフレクション ポリシーを定義するためにその子要素に依存します。 `<Assembly>` 要素は、子要素でオーバーライドされない限り、アセンブリ内のすべての型に適用されます。  
+ `<Assembly>` 要素は、アセンブリ内のすべての型の実行時ポリシーを定義します。 これは、 [\<Library>](library-element-net-native.md) ライブラリを指定する要素とは異なりますが、ランタイムリフレクションポリシーを定義するためにその子要素に依存します。 `<Assembly>` 要素は、子要素でオーバーライドされない限り、アセンブリ内のすべての型に適用されます。  
   
- 次の例では、`Name` 属性に "*Application\*" という値を割り当てて、アプリ パッケージ内のアセンブリのすべての型に実行時ポリシーを適用する方法を示しています。 要素`<Assembly>`は[\<、アプリケーション>](application-element-net-native.md)要素の子である必要があります。  
+ 次の例では、`Name` 属性に "*Application\*" という値を割り当てて、アプリ パッケージ内のアセンブリのすべての型に実行時ポリシーを適用する方法を示しています。 `<Assembly>`要素は要素の子である必要があり [\<Application>](application-element-net-native.md) ます。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">
@@ -92,5 +92,5 @@ ms.locfileid: "79181080"
 ## <a name="see-also"></a>関連項目
 
 - [ランタイム ディレクティブ ポリシーの設定](runtime-directive-policy-settings.md)
-- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレン](runtime-directives-rd-xml-configuration-file-reference.md)
+- [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)

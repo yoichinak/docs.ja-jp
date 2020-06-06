@@ -3,10 +3,10 @@ title: ランタイム ディレクティブ ポリシーの設定
 ms.date: 03/30/2017
 ms.assetid: cb52b1ef-47fd-4609-b69d-0586c818ac9e
 ms.openlocfilehash: 7a8933decaec45e8000f3f3d1717847f333deddd
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738494"
 ---
 # <a name="runtime-directive-policy-settings"></a>ランタイム ディレクティブ ポリシーの設定
@@ -16,7 +16,7 @@ ms.locfileid: "76738494"
 
 .NET ネイティブのランタイム ディレクティブ ポリシー設定は、実行時に型と型のメンバーのメタデータが使用可能かどうかを決定します。 必要なメタデータがない場合、COM または Windows ランタイムへの .NET Framework 型のリフレクション、シリアル化と逆シリアル化、またはマーシャリングを利用する操作が失敗し、例外をスローする可能性があります。 最も一般的な例外は、[MissingMetadataException](missingmetadataexception-class-net-native.md) と、[MissingInteropDataException](missinginteropdataexception-class-net-native.md) (相互運用の場合) です。
 
-実行時ポリシー設定は、ランタイム ディレクティブ (.rd.xml) ファイルによって制御されます。 各ランタイム ディレクティブは、アセンブリ ([\<Assembly>](assembly-element-net-native.md) 要素)、型 ([\<Type>](type-element-net-native.md) 要素)、またはメソッド ([\<Method>](method-element-net-native.md) 要素) などの特定のプログラム要素のポリシーを定義します。 ディレクティブには、次のセクションで説明する、リフレクション ポリシー種類、シリアル化ポリシー種類、および相互運用ポリシー種類を定義する属性が 1 つ以上含まれています。 属性の値はポリシー設定を定義します。
+実行時ポリシー設定は、ランタイム ディレクティブ (.rd.xml) ファイルによって制御されます。 各ランタイムディレクティブは、アセンブリ ( [\<Assembly>](assembly-element-net-native.md) 要素)、型 ( [\<Type>](type-element-net-native.md) 要素)、またはメソッド (要素) など、特定のプログラム要素のポリシーを定義し [\<Method>](method-element-net-native.md) ます。 ディレクティブには、次のセクションで説明する、リフレクション ポリシー種類、シリアル化ポリシー種類、および相互運用ポリシー種類を定義する属性が 1 つ以上含まれています。 属性の値はポリシー設定を定義します。
 
 ## <a name="policy-types"></a>ポリシーの種類
 
@@ -115,7 +115,7 @@ ms.locfileid: "76738494"
 
 各ポリシーの種類は、次の表に示すいずれかの値に設定できます。 型のメンバーを表す要素は、他の要素とは異なる一連のポリシー設定をサポートしていることに注意してください。
 
-|ポリシー設定|[説明]|`Assembly`、`Namespace`、`Type`、および `TypeInstantiation` 要素|`Event`、`Field`、`Method`、`MethodInstantiation`、および `Property` 要素|
+|ポリシー設定|Description|`Assembly`、`Namespace`、`Type`、および `TypeInstantiation` 要素|`Event`、`Field`、`Method`、`MethodInstantiation`、および `Property` 要素|
 |--------------------|-----------------|-----------------------------------------------------------------------|--------------------------------------------------------------------------------|
 |`All`|.NET ネイティブ ツール チェーンが削除しないすべての型とメンバーのポリシーを有効にします。|✔️||
 |`Auto`|そのプログラム要素のポリシーの種類に、既定のポリシーを使用する必要があることを指定します。 これは、そのポリシーの種類のポリシーを省略することと同じです。 `Auto` は通常、ポリシーが親要素から継承されることを示すために使用されます。|✔️|✔️|
@@ -128,7 +128,7 @@ ms.locfileid: "76738494"
 |`Required PublicAndInternal`|パブリックおよび内部の型またはメンバーのポリシーを有効にして、パブリックおよび内部の型とメンバーのメタデータが常に使用可能であるようにします。 この設定は、ツール チェーンが必要であると判断した場合にのみ、パブリックおよび内部の型とメンバーのメタデータを使用可能にする `PublicAndInternal` とは異なります。|✔️||
 |`Required All`|使用されているかどうかに関係なく、すべての型とメンバーを保持し、そのポリシーを有効にするために、ツール チェーンを要求します。|✔️||
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)

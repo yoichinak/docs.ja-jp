@@ -8,51 +8,51 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
 ms.openlocfilehash: 90d471888950347c041b4824b659ce33fda512d7
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "81242830"
 ---
 # <a name="application-settings-schema"></a>アプリケーション設定スキーマ
 
-アプリケーション設定を使用すると、Windows フォームまたはASP.NET アプリケーションは、アプリケーション スコープおよびユーザー スコープの設定を格納および取得できます。 このコンテキストでは、*設定*は、アプリケーションに固有の情報、または現在のユーザーに固有の情報の一部です。
+アプリケーション設定を使用すると、Windows フォームまたは ASP.NET アプリケーションで、アプリケーションスコープの設定とユーザースコープの設定を格納および取得できます。 このコンテキストでは、*設定*は、アプリケーションに固有の情報、または現在のユーザーに固有の情報です。データベース接続文字列からユーザーの優先される既定のウィンドウサイズに至るまでのあらゆるものです。
 
-既定では、Windows フォーム アプリケーションのアプリケーション設定では<xref:System.Configuration.LocalFileSettingsProvider>、.NET 構成システムを使用して設定を XML 構成ファイルに格納するクラスが使用されます。 アプリケーション設定で使用されるファイルの詳細については、「[アプリケーション設定のアーキテクチャ](../../winforms/advanced/application-settings-architecture.md)」を参照してください。
+既定では、Windows フォームアプリケーションのアプリケーション設定はクラスを使用します。このクラスは、 <xref:System.Configuration.LocalFileSettingsProvider> .net 構成システムを使用して XML 構成ファイルに設定を格納します。 アプリケーション設定で使用されるファイルの詳細については、「[アプリケーション設定アーキテクチャ](../../winforms/advanced/application-settings-architecture.md)」を参照してください。
 
-アプリケーション設定では、使用する構成ファイルの一部として、次の要素を定義します。
+アプリケーション設定は、使用する構成ファイルの一部として、次の要素を定義します。
 
-| 要素                    | 説明                                                                           |
+| 要素                    | Description                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<アプリケーション設定>** | アプリケーションに固有のすべての**\<設定>** タグが含まれます。                         |
-| **\<ユーザー設定>**        | 現在のユーザーに固有のすべての**\<設定>** タグが含まれます。                        |
-| **\<>の設定**             | 設定を定義します。 アプリケーションの子設定>または**\<ユーザー設定>。 ** ** \<** |
-| **\<値>**               | 設定の値を定義します。 **\<設定>** の子。                                   |
+| **\<applicationSettings>** | **\<setting>** アプリケーションに固有のすべてのタグが含まれます。                         |
+| **\<userSettings>**        | **\<setting>** 現在のユーザーに固有のすべてのタグが含まれます。                        |
+| **\<setting>**             | 設定を定義します。 **\<applicationSettings>** またはの子 **\<userSettings>** 。 |
+| **\<value>**               | 設定の値を定義します。 の子 **\<setting>** 。                                   |
 
-## <a name="applicationsettings-element"></a>\<アプリケーション設定>要素
+## <a name="applicationsettings-element"></a>\<applicationSettings> 要素
 
-この要素には、クライアント コンピューター**\<上のアプリケーションの**インスタンスに固有のすべての設定>タグが含まれます。 属性は定義されません。
+この要素に **\<setting>** は、クライアントコンピューター上のアプリケーションのインスタンスに固有のすべてのタグが含まれます。 属性は定義されません。
 
-## <a name="usersettings-element"></a>\<ユーザー設定>要素
+## <a name="usersettings-element"></a>\<userSettings> 要素
 
-この要素には、現在アプリケーションを使用しているユーザーに固有のすべての**\<設定>** タグが含まれます。 属性は定義されません。
+この要素 **\<setting>** には、アプリケーションを現在使用しているユーザーに固有のすべてのタグが含まれます。 属性は定義されません。
 
-## <a name="setting-element"></a>\<>要素の設定
+## <a name="setting-element"></a>\<setting> 要素
 
-この要素は、設定を定義します。 この属性には、次の属性があります。
+この要素は、設定を定義します。 これには次の属性があります。
 
 | 属性        | 説明 |
 | ---------------- | ----------- |
-| **name**         | 必須。 設定の一意の ID。 Visual Studio で作成された設定は、`ProjectName.Properties.Settings`という名前で保存されます。 |
-| **シリアライズア** | 必須。 値をテキストにシリアル化するために使用する形式。 有効な値は次のとおりです。<br><br>- `string`. 値は、<xref:System.ComponentModel.TypeConverter>を使用して文字列としてシリアル化されます。<br>- `xml`. 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`. 値は、バイナリ シリアル化を使用してテキスト エンコードされたバイナリとしてシリアル化されます。<br />- `custom`. 設定プロバイダーには、この設定に関する固有の知識があり、シリアル化と逆シリアル化を行います。 |
+| **name**         | 必須。 設定の一意の ID。 Visual Studio で作成された設定は、という名前で保存され `ProjectName.Properties.Settings` ます。 |
+| **serializeAs** | 必須。 値をテキストにシリアル化するために使用する形式。 有効な値は次のとおりです。<br><br>- `string`. 値は、を使用して文字列としてシリアル化され <xref:System.ComponentModel.TypeConverter> ます。<br>- `xml`. 値は、XML シリアル化を使用してシリアル化されます。<br>- `binary`. この値は、バイナリシリアル化を使用して、テキストエンコードバイナリとしてシリアル化されます。<br />- `custom`. 設定プロバイダーは、この設定に固有の情報を持ち、シリアル化および逆シリアル化を行います。 |
 
-## <a name="value-element"></a>\<要素>値
+## <a name="value-element"></a>\<value> 要素
 
 この要素には、設定の値が含まれます。
 
 ## <a name="example"></a>例
 
-次の例は、2 つのアプリケーション スコープ設定と 2 つのユーザー スコープの設定を定義するアプリケーション設定ファイルを示しています。
+次の例は、2つのアプリケーションスコープ設定と2つのユーザースコープ設定を定義するアプリケーション設定ファイルを示しています。
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

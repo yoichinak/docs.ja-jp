@@ -3,10 +3,10 @@ title: ランタイム ディレクティブ (rd.xml) 構成ファイル リフ�
 ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 ms.openlocfilehash: e74d34693446cca645003a9f93bc1777849e3182
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "76738411"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
@@ -42,17 +42,17 @@ ms.locfileid: "76738411"
 - [Directives](directives-element-net-native.md) [1:1]
   - [Application](application-element-net-native.md) [0:1]
     - [Assembly](assembly-element-net-native.md) [0:M]
-      - [名前空間](namespace-element-net-native.md)[0: M]。 。 。
-      - [「](type-element-net-native.md) [0: M]」と入力します。 。 。
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 。 。
+      - [名前空間](namespace-element-net-native.md)[0: M]。 . .
+      - [「](type-element-net-native.md) [0: M]」と入力します。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
     - [Namespace](namespace-element-net-native.md) [0:M]
-      - [名前空間](namespace-element-net-native.md)[0: M]。 。 。
-      - [「](type-element-net-native.md) [0: M]」と入力します。 。 。
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 。 。
+      - [名前空間](namespace-element-net-native.md)[0: M]。 . .
+      - [「](type-element-net-native.md) [0: M]」と入力します。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
     - [Type](type-element-net-native.md) [0:M]
       - [Subtypes](subtypes-element-net-native.md) (それを含む型のサブクラス) [O:1]
-      - [「](type-element-net-native.md) [0: M]」と入力します。 。 。
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 。 。
+      - [「](type-element-net-native.md) [0: M]」と入力します。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
       - [AttributeImplies](attributeimplies-element-net-native.md) (それを含む型が属性) [O:1]
       - [GenericParameter](genericparameter-element-net-native.md) [0:M]
       - [Method](method-element-net-native.md) [0:M]
@@ -64,8 +64,8 @@ ms.locfileid: "76738411"
       - [Field](field-element-net-native.md) [0:M]
       - [Event](event-element-net-native.md) [0:M]
     - [TypeInstantiation](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]
-      - [「](type-element-net-native.md) [0: M]」と入力します。 。 。
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 。 。
+      - [「](type-element-net-native.md) [0: M]」と入力します。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
       - [Method](method-element-net-native.md) [0:M]
         - [Parameter](parameter-element-net-native.md) [0:M]
         - [TypeParameter](typeparameter-element-net-native.md) [0:M]
@@ -76,17 +76,17 @@ ms.locfileid: "76738411"
       - [Event](event-element-net-native.md) [0:M]
   - [Library](library-element-net-native.md) [0:M]
     - [Assembly](assembly-element-net-native.md) [0:M]
-      - [名前空間](namespace-element-net-native.md)[0: M]。 。 。
-      - [「](type-element-net-native.md) [0: M]」と入力します。 。 。
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 。 。
+      - [名前空間](namespace-element-net-native.md)[0: M]。 . .
+      - [「](type-element-net-native.md) [0: M]」と入力します。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
     - [Namespace](namespace-element-net-native.md) [0:M]
-      - [名前空間](namespace-element-net-native.md)[0: M]。 。 。
-      - [「](type-element-net-native.md) [0: M]」と入力します。 。 。
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 。 。
+      - [名前空間](namespace-element-net-native.md)[0: M]。 . .
+      - [「](type-element-net-native.md) [0: M]」と入力します。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
     - [Type](type-element-net-native.md) [0:M]
       - [Subtypes](subtypes-element-net-native.md) (それを含む型のサブクラス) [O:1]
-      - [「](type-element-net-native.md) [0: M]」と入力します。 。 。
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 。 。
+      - [「](type-element-net-native.md) [0: M]」と入力します。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
       - [AttributeImplies](attributeimplies-element-net-native.md) (それを含む型が属性) [O:1]
       - [GenericParameter](genericparameter-element-net-native.md) [0:M]
       - [Method](method-element-net-native.md) [0:M]
@@ -95,8 +95,8 @@ ms.locfileid: "76738411"
       - [Field](field-element-net-native.md) [0:M]
       - [Event](event-element-net-native.md) [0:M]
     - [TypeInstantiation](typeinstantiation-element-net-native.md) (構築されたジェネリック型) [0:M]
-      - [「](type-element-net-native.md) [0: M]」と入力します。 。 。
-      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 。 。
+      - [「](type-element-net-native.md) [0: M]」と入力します。 . .
+      - [Typeinstantiation インスタンス化](typeinstantiation-element-net-native.md)(構築されたジェネリック型) [0: M]。 . .
       - [Method](method-element-net-native.md) [0:M]
       - [MethodInstantiation](methodinstantiation-element-net-native.md) (構築されたジェネリック メソッド) [0:M]
       - [Property](property-element-net-native.md) [0:M]
@@ -132,43 +132,43 @@ ms.locfileid: "76738411"
 
 [Application](application-element-net-native.md)、[Assembly](assembly-element-net-native.md)、[AttributeImplies](attributeimplies-element-net-native.md)、[Namespace](namespace-element-net-native.md)、[Subtypes](subtypes-element-net-native.md)、および [Type](type-element-net-native.md) 要素は、次のポリシーの種類をサポートしています。
 
-- [https://login.microsoftonline.com/consumers/](`Activate`) コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。
+- `Activate`. コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。
 
-- [https://login.microsoftonline.com/consumers/](`Browse`) プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。
+- `Browse`. プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。
 
-- [https://login.microsoftonline.com/consumers/](`Dynamic`) コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。
+- `Dynamic`. コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。
 
-- [https://login.microsoftonline.com/consumers/](`Serialize`) コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。
+- `Serialize`. コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。
 
-- [https://login.microsoftonline.com/consumers/](`DataContractSerializer`) <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用するシリアル化のポリシーを制御します。
+- `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用するシリアル化のポリシーを制御します。
 
-- [https://login.microsoftonline.com/consumers/](`DataContractJsonSerializer`) <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用する JSON シリアル化のポリシーを制御します。
+- `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用する JSON シリアル化のポリシーを制御します。
 
-- [https://login.microsoftonline.com/consumers/](`XmlSerializer`) <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> クラスを使用する XML シリアル化のポリシーを制御します。
+- `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> クラスを使用する XML シリアル化のポリシーを制御します。
 
-- [https://login.microsoftonline.com/consumers/](`MarshalObject`) WinRT と COM に参照型をマーシャリングするためのポリシーを制御します。
+- `MarshalObject`. WinRT と COM に参照型をマーシャリングするためのポリシーを制御します。
 
-- [https://login.microsoftonline.com/consumers/](`MarshalDelegate`) ネイティブ コードへの関数ポインターとしてデリゲート型をマーシャリングするためのポリシーを制御します。
+- `MarshalDelegate`. ネイティブ コードへの関数ポインターとしてデリゲート型をマーシャリングするためのポリシーを制御します。
 
-- [`MarshalStructure`]。 ネイティブ コードに構造体をマーシャリングするためのポリシーを制御します。
+- `MarshalStructure` . ネイティブ コードに構造体をマーシャリングするためのポリシーを制御します。
 
 これらのポリシーの種類に関連付けられている設定を次に示します。
 
-- [https://login.microsoftonline.com/consumers/](`All`) ツール チェーンが削除しないすべての型とメンバーに対するポリシーを有効にします。
+- `All`. ツール チェーンが削除しないすべての型とメンバーに対するポリシーを有効にします。
 
-- [https://login.microsoftonline.com/consumers/](`Auto`) 既定の動作を使用します。 (親要素などによってポリシーがオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)
+- `Auto`. 既定の動作を使用します。 (親要素などによってポリシーがオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)
 
-- [https://login.microsoftonline.com/consumers/](`Excluded`) プログラム要素のポリシーを無効にします。
+- `Excluded`. プログラム要素のポリシーを無効にします。
 
-- [https://login.microsoftonline.com/consumers/](`Public`) ツール チェーンがメンバーが不要なために削除すると判断した場合を除き、パブリック型またはメンバーのポリシーを有効にします。 (後者の場合は、`Required Public` を使用して、メンバーが保持されており、リフレクション機能があることを確認する必要があります。)
+- `Public`. ツール チェーンがメンバーが不要なために削除すると判断した場合を除き、パブリック型またはメンバーのポリシーを有効にします。 (後者の場合は、`Required Public` を使用して、メンバーが保持されており、リフレクション機能があることを確認する必要があります。)
 
-- [https://login.microsoftonline.com/consumers/](`PublicAndInternal`) パブリックおよび内部型またはメンバーがツール チェーンによって削除されていない場合、それらのポリシーを有効にします。
+- `PublicAndInternal`. パブリックおよび内部型またはメンバーがツール チェーンによって削除されていない場合、それらのポリシーを有効にします。
 
-- [https://login.microsoftonline.com/consumers/](`Required Public`) 使用されているかどうかに関係なく、パブリック型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
+- `Required Public`. 使用されているかどうかに関係なく、パブリック型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
 
-- [https://login.microsoftonline.com/consumers/](`Required PublicAndInternal`) 使用されているかどうかに関係なく、パブリックおよび内部両方の型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
+- `Required PublicAndInternal`. 使用されているかどうかに関係なく、パブリックおよび内部両方の型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
 
-- [https://login.microsoftonline.com/consumers/](`Required All`) 使用されているかどうかに関係なく、すべての型とメンバーを保持し、それらのポリシーを有効にするために、ツール チェーンを要求します。
+- `Required All`. 使用されているかどうかに関係なく、すべての型とメンバーを保持し、それらのポリシーを有効にするために、ツール チェーンを要求します。
 
 たとえば、次のランタイム ディレクティブ ファイルは、DataClasses.dll アセンブリ内のすべての型とメンバーのポリシーを定義します。 これは、すべてのパブリック プロパティのシリアル化のリフレクションを有効にし、すべての型と型のメンバーの参照を有効にし、すべての型のアクティブ化を (`Dynamic` 属性により) 有効にして、すべてのパブリック型とメンバーのリフレクションを有効にします。
 
@@ -445,7 +445,7 @@ ms.locfileid: "76738411"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、DataContractSerializer、DataContractJsonSerializer の各ポリシーの影響
 
-リフレクションベースのシリアライザーを対象とする `Serialize` ポリシーとは異なり、<xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer>、および <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> のポリシーを使用して、.NET ネイティブツールチェーンで認識されているシリアライザーのセットを有効にします。 これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。
+`Serialize`リフレクションベースのシリアライザーを対象とするポリシーとは異なり、、、およびの各ポリシーを使用して、 <xref:System.Xml.Serialization.XmlSerializer> <xref:System.Runtime.Serialization.DataContractSerializer> <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> .NET ネイティブツールチェーンで認識されているシリアライザーのセットを有効にします。 これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。
 
 これらのポリシーのいずれかを型に適用すると、対応するシリアライザーで型をシリアル化できるようになります。 また、シリアル化が必要であることをシリアル化エンジンが静的に決定できる、すべての型もシリアル化されます。
 
@@ -453,7 +453,7 @@ ms.locfileid: "76738411"
 
 詳細については、「[Windows ストア アプリの .NET ネイティブへの移行](migrating-your-windows-store-app-to-net-native.md)」の「シリアライザーの違い」セクションを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ランタイム ディレクティブ要素](runtime-directive-elements.md)
 - [リフレクションおよび .NET ネイティブ](reflection-and-net-native.md)

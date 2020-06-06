@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <relativeBindForResources> element
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 ms.openlocfilehash: cd49d424019a4e8422fee0ae16217d49cfc456b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153907"
 ---
-# <a name="relativebindforresources-element"></a>\<相対バインドフォーリソース>要素
+# <a name="relativebindforresources-element"></a>\<relativeBindForResources> 要素
 サテライト アセンブリのプローブを最適化します。  
   
-[**\<構成>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<ランタイム>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<リソース>を相対的に設定します。**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<relativeBindForResources>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,44 +33,44 @@ ms.locfileid: "79153907"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`enabled`|必須の属性です。<br /><br /> 共通言語ランタイムがサテライト アセンブリのプローブを最適化するかどうかを指定します。|  
+|`enabled`|必須の属性です。<br /><br /> 共通言語ランタイムがサテライトアセンブリのプローブを最適化するかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|Value|説明|  
+|値|Description|  
 |-----------|-----------------|  
-|`false`|ランタイムは、サテライト アセンブリのプローブを最適化しません。 これが既定値です。|  
-|`true`|ランタイムは、サテライト アセンブリのプローブを最適化します。|  
+|`false`|ランタイムは、サテライトアセンブリのプローブを最適化しません。 これが既定値です。|  
+|`true`|ランタイムは、サテライトアセンブリのプローブを最適化します。|  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  
   
 ## <a name="remarks"></a>解説  
- 一般に、リソース マネージャーは、「リソースの[パッケージ化とデプロイ](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)」トピックで説明されているように、リソースを調査します。 つまり、リソース マネージャーは、リソースの特定のローカライズされたバージョンを調査するときに、グローバル アセンブリ キャッシュを検索し、アプリケーションのコード ベースでカルチャ固有のフォルダーを検索し、サテライト アセンブリの Windows インストーラーを<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>照会し、イベントを発生させる可能性があります。 この`<relativeBindForResources>`要素は、リソース マネージャーがサテライト アセンブリを調査する方法を最適化します。 次の条件下でリソースを調査する場合、パフォーマンスが向上します。  
+ 一般に、リソースの[パッケージ化とデプロイ](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)に関するトピックで説明されているように、Resource Manager はリソースをプローブします。 これは、resource Manager が特定のローカライズされたバージョンのリソースをプローブするときに、グローバルアセンブリキャッシュを検索し、アプリケーションのコードベースでカルチャ固有のフォルダーを検索し、サテライトアセンブリの Windows インストーラーを照会して、イベントを発生させることができることを意味し <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> ます。 要素は、 `<relativeBindForResources>` リソースマネージャーがサテライトアセンブリをプローブする方法を最適化します。 次の条件下でリソースを調査するときにパフォーマンスを向上させることができます。  
   
-- サテライト アセンブリがコード アセンブリと同じ場所に配置される場合。 つまり、コード アセンブリがグローバル アセンブリ キャッシュにインストールされている場合は、サテライト アセンブリもそこにインストールする必要があります。 コード アセンブリがアプリケーションのコード ベースにインストールされている場合、サテライト アセンブリはコード ベースのカルチャ固有のフォルダーにもインストールする必要があります。  
+- サテライトアセンブリがコードアセンブリと同じ場所に配置されている場合。 つまり、コードアセンブリがグローバルアセンブリキャッシュにインストールされている場合は、サテライトアセンブリもインストールする必要があります。 コードアセンブリがアプリケーションのコードベースにインストールされている場合は、サテライトアセンブリをコードベースのカルチャ固有のフォルダーにもインストールする必要があります。  
   
-- Windows インストーラが使用されていない場合、またはサテライト アセンブリのオンデマンド インストールに使用されることはほとんどありません。  
+- Windows インストーラーが使用されていない場合、またはサテライトアセンブリのオンデマンドインストールではあまり使用されない場合。  
   
-- アプリケーション コードがイベントを<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>処理しない場合。  
+- アプリケーションコードがイベントを処理しない場合 <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 。  
   
- 次のように`enabled`、サテライト`true`アセンブリのリソース マネージャーのプローブを最適化する要素の属性を設定します。 `<relativeBindForResources>`  
+ `enabled`要素の属性 `<relativeBindForResources>` をに設定すると、次のように、 `true` サテライトアセンブリのリソースマネージャーのプローブが最適化されます。  
   
-- このサービスは、親コード アセンブリの場所を使用して、サテライト アセンブリをプローブします。  
+- 親コードアセンブリの場所を使用して、サテライトアセンブリをプローブします。  
   
-- Windows インストーラによるサテライト アセンブリのクエリは行われません。  
+- サテライトアセンブリの Windows インストーラーに対してはクエリを実行しません。  
   
-- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベントは発生しません。  
+- イベントは発生しません <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> 。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Packaging and Deploying Resources](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
+- [リソースのパッケージ化と配置](../../../resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [ランタイム設定スキーマ](index.md)
 - [構成ファイル スキーマ](../index.md)
