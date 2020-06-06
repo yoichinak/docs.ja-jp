@@ -3,10 +3,10 @@ title: Windows フォームの構成セクション
 ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 ms.openlocfilehash: 4de61ae3cb5eb8a3fc226881e2b7f842030dfddf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151833"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows フォームの構成セクション
@@ -30,7 +30,7 @@ Windows フォームのアプリケーション構成設定は、アプリケー
 
 ### <a name="attributes"></a>属性
 
-[なし] :
+なし。
 
 ### <a name="child-elements"></a>子要素
 
@@ -42,13 +42,13 @@ Windows フォームのアプリケーション構成設定は、アプリケー
 
 要素  |説明 |
 ---------|---------|
-[\<構成>](../configuration-element.md) | 共通言語ランタイムと Windows フォームのアプリケーションで使用されるすべての構成ファイルのルート要素です |
+[\<configuration>](../configuration-element.md) | 共通言語ランタイムと Windows フォームのアプリケーションで使用されるすべての構成ファイルのルート要素です |
 
 ## <a name="remarks"></a>解説
 
 .NET Framework 4.7 を使用すれば、.NET Framework の最近のリリースで追加された機能が利用できる Windows フォームのアプリケーションを、`<System.Windows.Forms.ApplicationConfigurationSection>` 要素で構成できます。
 
-要素`<System.Windows.Forms.ApplicationConfigurationSection>`には、1 つ以上の[`<add>`](windows-forms-add-configuration-element.md)子要素を含めることができ、各要素は特定の構成設定を定義します。
+要素には `<System.Windows.Forms.ApplicationConfigurationSection>` 1 つ以上の子要素を含めることができ [`<add>`](windows-forms-add-configuration-element.md) 、それぞれが特定の構成設定を定義します。
 
 ## <a name="see-also"></a>関連項目
 

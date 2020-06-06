@@ -1,20 +1,20 @@
 ---
-title: ワークフローの>を<します。
+title: ワークフローの System.servicemodel> を <する
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 6a8eb2bf-f925-40e1-ba5c-a49b1d3a3ac6
 ms.openlocfilehash: 9aa2bf0fdfd6fe4528a3fda4d05b3ba8f23637d3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79151950"
 ---
-# <a name="systemservicemodel-of-workflow"></a>\<ワークフローの>
+# <a name="systemservicemodel-of-workflow"></a>\<system.serviceModel>ワークフローの
 この構成セクションには、すべてのワークフロー構成要素が含まれます。  
 
-[**\<構成>**](../configuration-element.md)\
-&nbsp;&nbsp;**\<システム。サービスモデル>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;**\<system.ServiceModel>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -104,11 +104,11 @@ ms.locfileid: "79151950"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<動作>](behaviors-of-workflow.md)|このセクションでは、**サービスBehaviorsコレクションを**定義します。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、その一意の**name**属性によって識別されます。|  
-|[\<追跡>](tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、「[ワークフローの追跡と追跡と](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)[追跡の構成](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」を参照してください。|  
+|[\<behaviors>](behaviors-of-workflow.md)|このセクションでは、 **Servicebehaviors**コレクションを定義します。  各コレクション内の要素は、サービスによって使用されるそれぞれの動作要素を定義します。 各動作要素は、一意の**name**属性によって識別されます。|  
+|[\<tracking>](tracking.md)|ワークフロー サービスの追跡設定を定義する構成セクションを表します。<br /><br /> ワークフロー追跡とその構成の詳細については、「ワークフローの[追跡とトレース](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)」と「ワークフロー[の追跡の構成](../../../windows-workflow-foundation/configuring-tracking-for-a-workflow.md)」を参照してください。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<構成>](../configuration-element.md)|.NET 構成ファイルのすべての構成要素のルート要素。|
+|[\<configuration>](../configuration-element.md)|.NET 構成ファイルのすべての構成要素のルート要素。|

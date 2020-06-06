@@ -9,18 +9,18 @@ helpviewer_keywords:
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 ms.openlocfilehash: 9f1e382bbbaad2cb95e2c33bbbdfb4c505378c9e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154895"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement> 要素 (ネットワーク設定)
 ネットワーク ホストへの接続の最大数を指定します。  
 
-[**\<構成>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<接続管理>**
+&nbsp;&nbsp;&nbsp;&nbsp;**\<connectionManagement>**
 
 ## <a name="syntax"></a>構文  
   
@@ -33,30 +33,30 @@ ms.locfileid: "79154895"
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- [なし] :  
+ なし。  
   
 ### <a name="child-elements"></a>子要素  
   
-|**Element**|**説明**|  
+|**要素**|**説明**|  
 |-----------------|---------------------|  
-|[追加](add-element-for-connectionmanagement-network-settings.md)|IP アドレスまたは DNS 名を接続管理リストに追加します。|  
-|[クリア](clear-element-for-connectionmanagement-network-settings.md)|接続管理リストをクリアします。|  
-|[削除](remove-element-for-connectionmanagement-network-settings.md)|接続管理リストから IP アドレスまたは DNS 名を削除します。|  
+|[add](add-element-for-connectionmanagement-network-settings.md)|IP アドレスまたは DNS 名を接続管理リストに追加します。|  
+|[オフ](clear-element-for-connectionmanagement-network-settings.md)|接続管理の一覧をクリアします。|  
+|[remove](remove-element-for-connectionmanagement-network-settings.md)|接続管理リストから IP アドレスまたは DNS 名を削除します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|**Element**|**説明**|  
+|**要素**|**説明**|  
 |-----------------|---------------------|  
 |[system.net](system-net-element-network-settings.md)|.NET Framework がネットワークに接続する方法を指定するための設定が含まれています。|  
   
 ## <a name="remarks"></a>解説  
- この`connectionManagement`要素は、サーバーまたはサーバーのグループへの接続の最大数を定義します。  
+ 要素は、 `connectionManagement` サーバーまたはサーバーのグループへの接続の最大数を定義します。  
   
 ## <a name="configuration-files"></a>構成ファイル  
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、サーバーへの 4 つの接続と、`www.contoso.com`他のすべてのサーバーへの 2 つの接続を使用するようにアプリケーションを構成します。  
+ 次の例では、サーバーへの4つの接続 `www.contoso.com` と、他のすべてのサーバーへの2つの接続を使用するようにアプリケーションを構成します。  
   
 ```xml  
 <configuration>  

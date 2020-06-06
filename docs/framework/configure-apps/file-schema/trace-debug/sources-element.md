@@ -10,18 +10,18 @@ helpviewer_keywords:
 - <sources> element
 ms.assetid: c727b2e2-423a-4463-a223-013f40ff16a3
 ms.openlocfilehash: 2a76816ee73f516b3c7544877a77531acaa8e09c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79153270"
 ---
-# <a name="sources-element"></a>\<要素>ソース
-トレース メッセージを開始するトレース ソースを指定します。  
+# <a name="sources-element"></a>\<sources> 要素
+トレースメッセージを開始するトレースソースを指定します。  
 
-[**\<構成>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<診断>**](system-diagnostics-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<ソース>**
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.diagnostics>**](system-diagnostics-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<sources>**
 
 ## <a name="syntax"></a>構文  
   
@@ -35,13 +35,13 @@ ms.locfileid: "79153270"
  以降のセクションでは、属性、子要素、および親要素について説明します。  
   
 ### <a name="attributes"></a>属性  
- [なし] :  
+ なし。  
   
 ### <a name="child-elements"></a>子要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ソース>](source-element.md)|必須要素。<br /><br /> トレース メッセージを開始するトレース ソースを指定します。|  
+|[\<source>](source-element.md)|必須の要素です。<br /><br /> トレース メッセージを開始するトレース ソースを指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -51,10 +51,10 @@ ms.locfileid: "79153270"
 |`system.diagnostics`|メッセージを収集、格納、およびルーティングするトレース リスナーとトレース スイッチを設定するレベルを指定します。|  
   
 ## <a name="remarks"></a>解説  
- この要素は、コンピューター構成ファイル (Machine.config) とアプリケーション構成ファイルで使用できます。  
+ この要素は、コンピューターの構成ファイル (machine.config) とアプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、要素を`<sources>`使用してトレース ソース`mySource`を追加し、という名前`sourceSwitch`のソース スイッチのレベルを設定する方法を示しています。 トレース情報をコンソールに書き込むコンソール トレース リスナーが追加されます。  
+ 次の例では、要素を使用してトレースソースを追加し、と `<sources>` `mySource` いう名前のソーススイッチのレベルを設定する方法を示し `sourceSwitch` ます。 トレース情報をコンソールに書き込むコンソールトレースリスナーが追加されます。  
   
 ```xml  
 <configuration>  
@@ -88,4 +88,4 @@ ms.locfileid: "79153270"
 - <xref:System.Diagnostics.EventLogTraceListener>
 - <xref:System.Diagnostics.XmlWriterTraceListener>
 - [トレースおよびデバッグ設定のスキーマ](index.md)
-- [\<ソース>](source-element.md)
+- [\<source>](source-element.md)
