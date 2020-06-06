@@ -10,28 +10,28 @@ helpviewer_keywords:
 - elements [.NET Framework], custom settings in configuration files
 ms.assetid: 6e4cc793-c526-4007-b4e9-37d56295f2cb
 ms.openlocfilehash: 28f936e6fd7c9e7f6f895396df8e8b8d36ab9139
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155324"
 ---
 # <a name="configuration-sections-schema"></a>構成セクションのスキーマ
 
-構成セクション スキーマには、構成ファイルのカスタム設定を定義する要素が含まれています。 構成ファイルとスキーマの一般情報については、「 [.NET Framework の構成ファイル スキーマ](index.md)」を参照してください。
+構成セクションスキーマには、構成ファイルのカスタム設定を定義する要素が含まれています。 構成ファイルとスキーマに関する一般的な情報については、 [.NET Framework の構成ファイルスキーマ](index.md)に関する説明を参照してください。
 
-[**\<構成>**](configuration-element.md)
+[**\<configuration>**](configuration-element.md)
+[**\<configSections>**](configsections-element-for-configuration.md)
+[**\<clear>**](clear-element-for-configsections.md)
+[**\<remove>**](remove-element-for-configsections.md)
+[**\<section>**](section-element.md)
+[**\<sectionGroup>**](sectiongroup-element-for-configsections.md)
 
-[**セクションを削除>>セクション>グループ>>クリアする\<セクション**](configsections-element-for-configuration.md)[**\<**](clear-element-for-configsections.md)
-[**\<**](section-element.md)
-
-[**\<**](sectiongroup-element-for-configsections.md)[**\<**](remove-element-for-configsections.md)
-
-|     | 説明 |
+|     | Description |
 | --- | ----------- |
-| [構成の>を**\<****\<クリアするセクション>**](clear-element-for-configsections.md) | 以前に定義したすべてのセクションおよびセクション グループをクリアします。 |
-| [**\<クリア>**](clear-element-for-configsections.md) | 以前に定義したすべてのセクションおよびセクション グループをクリアします。 |
-| [**\<構成セクション>**](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれます。 |
-| [構成の>を**\<****\<削除するセクション>**](remove-element-for-configsections.md) | 定義済みのセクションまたはセクション グループを削除します。 |
-| [セクション>セクション>および**\<****\<セクショングループ>** ** \<**](section-element.md) | 構成セクションの宣言を含みます。 |
-| [**\<セクション構成**の**\<グループ>セクション>**](sectiongroup-element-for-configsections.md) | 構成セクションの名前空間を定義します。 |
+| [**\<clear>** の**\<configSections>**](clear-element-for-configsections.md) | 以前に定義したセクションとセクショングループをすべて消去します。 |
+| [**\<clear>**](clear-element-for-configsections.md) | 以前に定義したセクションとセクショングループをすべて消去します。 |
+| [**\<configSections>**](configsections-element-for-configuration.md) | 構成セクションと名前空間の宣言が含まれています。 |
+| [**\<remove>** の**\<configSections>**](remove-element-for-configsections.md) | 定義済みセクションまたはセクショングループを削除します。 |
+| [**\<section>** およびの場合 **\<configSections>****\<sectionGroup>**](section-element.md) | 構成セクションの宣言が含まれています。 |
+| [**\<sectionGroup>** の**\<configSections>**](sectiongroup-element-for-configsections.md) | 構成セクションの名前空間を定義します。 |

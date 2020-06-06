@@ -11,19 +11,19 @@ helpviewer_keywords:
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
 ms.openlocfilehash: 093b68d31e03094bedefa96a2f2d53eb3d84edf0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79155012"
 ---
-# <a name="add-element-for-connectionmanagement-network-settings"></a>\<接続>要素を追加する管理 (ネットワーク設定)
+# <a name="add-element-for-connectionmanagement-network-settings"></a>connectionManagement の \<add> 要素 (ネットワーク設定)
 IP アドレスまたは DNS 名を接続管理リストに追加します。  
 
-[**\<構成>**](../configuration-element.md)\
+[**\<configuration>**](../configuration-element.md)\
 &nbsp;&nbsp;[**\<system.net>**](system-net-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<接続管理>**](connectionmanagement-element-network-settings.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>を追加する**
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<connectionManagement>**](connectionmanagement-element-network-settings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<add>**
 
 ## <a name="syntax"></a>構文  
   
@@ -45,11 +45,11 @@ IP アドレスまたは DNS 名を接続管理リストに追加します。
 |`maxconnection`|サーバーに対して許可される接続の最大数。 値が指定されていない場合、既定値は 2 です。|  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|**Element**|**説明**|  
+|**要素**|**説明**|  
 |-----------------|---------------------|  
 |[connectionManagement](connectionmanagement-element-network-settings.md)|ネットワーク ホストへの接続の最大数を指定します。|  
   
@@ -62,7 +62,7 @@ IP アドレスまたは DNS 名を接続管理リストに追加します。
  この要素は、アプリケーション構成ファイルまたはマシン構成ファイル (Machine.config) で使用できます。  
   
 ## <a name="example"></a>例  
- 次の例では、サーバーへの 4 つの接続と、`www.contoso.com`他のすべてのサーバーへの 2 つの接続を使用するようにアプリケーションを構成します。  
+ 次の例では、サーバーへの4つの接続 `www.contoso.com` と、他のすべてのサーバーへの2つの接続を使用するようにアプリケーションを構成します。  
   
 ```xml  
 <configuration>  

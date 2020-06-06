@@ -3,14 +3,14 @@ title: .NET ネイティブによる起動時間の改善の測定
 ms.date: 03/30/2017
 ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 ms.openlocfilehash: 41a693f18ffea0e5ce0ca742bc251d147e8e3784
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79180999"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET ネイティブによる起動時間の改善の測定
-.NET ネイティブは、アプリの起動時間を大幅に短縮します。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
+.NET ネイティブすると、アプリの起動時間が大幅に短縮されます。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
   
  パフォーマンスの調査を容易にするために、.NET Framework と Windows では、イベントが発生したときにアプリからツールに通知できるようにする Windows イベント トレーシング (ETW) という名前のイベント フレームワークを使用しています。 PerfView というツールを使用して、ETW イベントを簡単に表示および分析できます。 このトピックでは、次の方法を説明します。  
   
@@ -93,7 +93,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  左ペインに示されているイベントをすべて選択し (Ctrl + A)、**Enter** キーを押します。 これで、各イベントのタイムスタンプを表示できるようになります。 これらのタイムスタンプは、トレースの開始時間を基準としています。そのため、起動時からの経過時間を調べるには、プロセスの開始時間から各イベントの時間を減算する必要があります。 Ctrl キーを押しながらクリックして 2 つのタイムスタンプを選択すると、ページ下部にあるステータス バーにそれらのタイムスタンプの差が表示されます。 これにより、表示されている 2 つのイベント間の経過時間が簡単にわかるようになります (プロセスの開始を含む)。 ビューのショートカット メニューを開いて、CSV ファイルにエクスポートしたり、Microsoft Excel を開いてデータを保存または処理したりするなど、便利なオプションを選択できます。  
   
- 元のアプリと .NET Native ツール チェーンを使用して構築したバージョンの両方に対して手順を繰り返すことで、パフォーマンスの違いを比較できます。   .NET ネイティブ アプリは、通常、ネイティブ アプリnon-.NETよりも高速に起動します。 より詳しく調べる場合は、最も時間がかかっているコードの部分を PerfView で特定することもできます。 詳細については、[PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)または [Vance Morrison のブログ エントリ](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)をご覧ください。  
+ 元のアプリと .NET ネイティブツールチェーンを使用して作成したバージョンの両方に対して手順を繰り返すことで、パフォーマンスの違いを比較できます。   .NET ネイティブアプリは、一般に non-.NET ネイティブアプリよりも高速に起動します。 より詳しく調べる場合は、最も時間がかかっているコードの部分を PerfView で特定することもできます。 詳細については、[PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)または [Vance Morrison のブログ エントリ](https://docs.microsoft.com/archive/blogs/vancem/publication-of-the-perfview-performance-analysis-tool)をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

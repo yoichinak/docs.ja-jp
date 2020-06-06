@@ -10,10 +10,10 @@ helpviewer_keywords:
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 ms.openlocfilehash: e53f4c5c9e24fb25b43b7f27b80ab984214eeac2
-ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "69927768"
 ---
 # <a name="configuring-cryptography-classes"></a>暗号化クラスの設定
@@ -30,5 +30,5 @@ Windows SDK を使用すると、コンピューター管理者は、.NET Framew
  [暗号化サービス](../../standard/security/cryptographic-services.md)  
  Windows SDK によって提供される暗号化サービスの概要について説明します。  
   
- [暗号化設定スキーマ](./file-schema/cryptography/index.md)  
+ [暗号設定スキーマ](./file-schema/cryptography/index.md)  
  アルゴリズムの表示名を、暗号化アルゴリズムを実装するクラスに割り当てる要素について説明します。

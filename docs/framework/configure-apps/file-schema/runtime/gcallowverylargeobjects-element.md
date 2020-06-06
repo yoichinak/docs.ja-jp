@@ -6,18 +6,18 @@ helpviewer_keywords:
 - <gcAllowVeryLargeObjects> element
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 ms.openlocfilehash: 8b2f39a0867228474afdee788474fda11f14ca82
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79154128"
 ---
-# <a name="gcallowverylargeobjects-element"></a>\<要素>オブジェクトを選択します。
+# <a name="gcallowverylargeobjects-element"></a>\<gcAllowVeryLargeObjects> 要素
 64 ビット プラットフォームで、合計サイズが 2 GB (ギガバイト) を超える配列を有効にします。  
   
-[**\<構成>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<ランタイム>**](runtime-element.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;**\<>オブジェクトを選択します。**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<runtime>**](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;**\<gcAllowVeryLargeObjects>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,17 +37,17 @@ ms.locfileid: "79154128"
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
-|Value|説明|  
+|値|Description|  
 |-----------|-----------------|  
-|`false`|合計サイズが 2 GB を超える配列は有効ではありません。 これは既定値です。|  
+|`false`|合計サイズが 2 GB を超える配列は有効ではありません。 既定値です。|  
 |`true`|64 ビット プラットフォームで、合計サイズが 2 GB を超える配列が有効になっています。|  
   
 ### <a name="child-elements"></a>子要素  
- [なし] :  
+ なし。  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |`runtime`|ランタイム初期化オプションに関する情報を含んでいます。|  

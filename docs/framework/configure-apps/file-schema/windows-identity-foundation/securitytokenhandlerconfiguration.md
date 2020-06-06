@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 28724cc6-020c-4a06-9a1f-d7594f315019
 author: BrucePerlerMS
 ms.openlocfilehash: e3e65820fa4dc341371d4f67689a288cd3f63951
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
+ms.lasthandoff: 06/06/2020
 ms.locfileid: "79152568"
 ---
-# <a name="securitytokenhandlerconfiguration"></a>\<>を構成します。
-トークン ハンドラーのコレクションの構成を提供します。  
+# \<securityTokenHandlerConfiguration>
+トークンハンドラーのコレクションの構成を提供します。  
   
-[**\<構成>**](../configuration-element.md)\
-&nbsp;&nbsp;[**\<>**](system-identitymodel.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;[**\<id構成>**](identityconfiguration.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<>**](securitytokenhandlers.md)\
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<>**  
+[**\<configuration>**](../configuration-element.md)\
+&nbsp;&nbsp;[**\<system.identityModel>**](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[**\<identityConfiguration>**](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[**\<securityTokenHandlers>**](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**\<securityTokenHandlerConfiguration>**  
   
 ## <a name="syntax"></a>構文  
   
@@ -40,29 +40,29 @@ ms.locfileid: "79152568"
   
 |属性|説明|  
 |---------------|-----------------|  
-|ブートストラップコンテキストを保存します。|ブートストラップ トークンをセッション トークンに含めるかどうかを指定します。 この値は`saveBootstrapContext`[\<、idConfiguration>](identityconfiguration.md)要素の属性を設定することで、トークン ハンドラー コレクションに設定することもできます。 トークン ハンドラー コレクションに設定された値は、サービスに設定されている値をオーバーライドします。|  
-|最大時計の傾斜|許容<xref:System.TimeSpan>される最大クロック スキューを指定する A。 サインイン セッションの有効期限を検証するなど、時間を区別する操作を実行する際に許容される最大クロック スキューを制御します。 デフォルトは 5 分の "00:05:00" です。 値の指定<xref:System.TimeSpan>方法の詳細については、「[タイムスパン値](../windows-workflow-foundation/index.md)」を参照してください。 最大クロック スキューは[\<、identityConfiguration>](identityconfiguration.md)要素の属性を`maximumClockSkew`設定することによって、サービス レベルで設定することもできます。 トークン ハンドラー コレクションに設定された値は、サービスに設定されている値をオーバーライドします。|  
+|saveBootstrapContext|ブートストラップトークンをセッショントークンに含める必要があるかどうかを指定します。 また、要素の属性を設定することによって、トークンハンドラーコレクションに値を設定することもでき `saveBootstrapContext` [\<identityConfiguration>](identityconfiguration.md) ます。 トークンハンドラーコレクションに設定された値は、サービスで設定された値よりも優先されます。|  
+|maximumClockSkew|<xref:System.TimeSpan>許容される最大のクロックスキューを指定する。 サインインセッションの有効期限の検証など、時間を区別する操作を実行するときに許容される最大のクロックスキューを制御します。 既定値は5分 "00:05:00" です。 値を指定する方法の詳細について <xref:System.TimeSpan> は、「 [Timespan values](../windows-workflow-foundation/index.md)」を参照してください。 また、要素の属性を設定することによって、サービスレベルで時刻のずれの最大値を設定することもでき `maximumClockSkew` [\<identityConfiguration>](identityconfiguration.md) ます。 トークンハンドラーコレクションに設定された値は、サービスで設定された値よりも優先されます。|  
   
 ### <a name="child-elements"></a>子要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<聴衆>を尿](audienceuris.md)|この証明書利用者の受け入れ可能な識別子である URI のセットを指定します。 省略可能。|  
-|[\<キャッシュ>](caches.md)|セッション トークンおよびトークンの再生検出に使用されるキャッシュを登録します。 サービス レベルまたはセキュリティ トークン ハンドラーコレクションで指定できます。 省略可能。|  
-|[\<証明書検証>](certificatevalidation.md)|トークン ハンドラーが証明書の検証に使用する設定を制御します。 サービス レベルまたはセキュリティ トークン ハンドラーコレクションで指定できます。 特定のハンドラーが独自の検証コントロールで構成されている場合、これらの設定はオーバーライドされます。 省略可能。|  
-|[\<レジストリ>](issuernameregistry.md)|トークン ハンドラーコレクション内のハンドラーによって使用される発行者名レジストリを構成します。 省略可能。|  
-|[\<>](issuertokenresolver.md)|トークン ハンドラー コレクション内のハンドラーによって使用される発行者トークン リゾルバーを登録します。 発行者トークン リゾルバーは、受信トークンとメッセージの署名トークンを解決するために使用されます。 省略可能。|  
-|[\<>](servicetokenresolver.md)|トークン ハンドラー コレクション内のハンドラーによって使用されるサービス トークン リゾルバーを登録します。 サービス トークン リゾルバーは、受信トークンとメッセージの暗号化トークンを解決するために使用されます。 省略可能。|  
-|[\<トークンリプレイ検出>](tokenreplaydetection.md)|トークン再生検出を有効にし、トークンの有効期限を指定します。 サービス レベルまたはセキュリティ トークン ハンドラーコレクションで指定できます。 省略可能。|  
+|[\<audienceUris>](audienceuris.md)|この証明書利用者の許容される識別子である Uri のセットを指定します。 省略可能。|  
+|[\<caches>](caches.md)|セッショントークンとトークンリプレイ検出に使用されるキャッシュを登録します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 省略可能。|  
+|[\<certificateValidation>](certificatevalidation.md)|トークンハンドラーが証明書を検証するために使用する設定を制御します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 特定のハンドラーが独自の検証コントロールを使用して構成されている場合、これらの設定はオーバーライドされます。 省略可能。|  
+|[\<issuerNameRegistry>](issuernameregistry.md)|トークンハンドラーコレクションのハンドラーによって使用される発行者名レジストリを構成します。 省略可能。|  
+|[\<issuerTokenResolver>](issuertokenresolver.md)|トークンハンドラーコレクションのハンドラーによって使用される発行者トークンリゾルバーを登録します。 発行者トークンリゾルバーは、受信トークンとメッセージの署名トークンを解決するために使用されます。 省略可能。|  
+|[\<serviceTokenResolver>](servicetokenresolver.md)|トークンハンドラーコレクションのハンドラーによって使用されるサービストークンリゾルバーを登録します。 サービストークンリゾルバーは、受信トークンとメッセージの暗号化トークンを解決するために使用されます。 省略可能。|  
+|[\<tokenReplayDetection>](tokenreplaydetection.md)|トークンリプレイ検出を有効にし、トークンの有効期限を指定します。 は、サービスレベルまたはセキュリティトークンハンドラーコレクションで指定できます。 省略可能。|  
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|説明|  
+|要素|Description|  
 |-------------|-----------------|  
-|[\<>](securitytokenhandlers.md)|エンドポイントに登録されているセキュリティ トークン ハンドラーのコレクションを指定します。|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|エンドポイントに登録されているセキュリティトークンハンドラーのコレクションを指定します。|  
   
 ## <a name="remarks"></a>解説  
- このセクションでは、オブジェクトのプロパティ<xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration>値を提供します。 このセクションで構成した設定は、サービスで構成された設定よりも優先されます。 これらの設定の一部は、セキュリティ トークン ハンドラーのコレクションにハンドラーが追加されるときに指定された設定によってオーバーライドされる場合があります。  
+ このセクションでは、オブジェクトのプロパティ値を提供 <xref:System.IdentityModel.Tokens.SecurityTokenHandlerConfiguration> します。 このセクションで構成した設定は、サービスで構成されている設定よりも優先されます。 これらの設定の一部は、ハンドラーがセキュリティトークンハンドラーコレクションに追加されたときに指定される設定によってオーバーライドされることがあります。  
   
 ## <a name="example"></a>例  
   
