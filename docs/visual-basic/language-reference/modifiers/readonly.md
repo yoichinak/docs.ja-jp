@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 8c7e7e7c1571fd7c595ebfd54fb5767078ef41f8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 405297a25d4b948a6920bd989c7826e8b6f66bb4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351276"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398208"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 変数またはプロパティを読み込めるが、書き込みはできないことを示します。
@@ -34,7 +34,7 @@ ms.locfileid: "74351276"
 
 ## <a name="when-to-use-a-readonly-variable"></a>ReadOnly 変数を使用するタイミング
 
-定数値の宣言と割り当てに [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md) を使用できない場合があります。 たとえば、`Const` ステートメントが割り当てたいデータ型を受け入れない場合や、コンパイル時に定数式を使用して値を計算できない場合があります。 コンパイル時に値がわからない場合もあります。 このような場合は、`ReadOnly` 変数を使用して定数値を保持できます。
+定数値の宣言と割り当てに [Const ステートメント](../statements/const-statement.md) を使用できない場合があります。 たとえば、`Const` ステートメントが割り当てたいデータ型を受け入れない場合や、コンパイル時に定数式を使用して値を計算できない場合があります。 コンパイル時に値がわからない場合もあります。 このような場合は、`ReadOnly` 変数を使用して定数値を保持できます。
 
 > [!IMPORTANT]
 > 変数のデータ型が配列やクラス インスタンスなどの参照型である場合は、変数自体が `ReadOnly` の場合でも、そのメンバーを変更できます。 次に例を示します。

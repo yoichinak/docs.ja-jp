@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Join statement [Visual Basic]
 - Join clause [Visual Basic]
 ms.assetid: 6dd37936-b27c-4e00-98ad-154b23f4de64
-ms.openlocfilehash: b0baca9f897a00b3c6c67699629477ff385d6ef7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f73dc31bbbb9014a8a1a315de406c53fa58d1c65
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353265"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359775"
 ---
 # <a name="join-clause-visual-basic"></a>Join 句 (Visual Basic)
 
@@ -94,9 +94,9 @@ On key1 Equals key2 [ And key3 Equals key4 [... ]
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [Select 句](select-clause.md)
+- [From 句](from-clause.md)
+- [Group Join 句](group-join-clause.md)
+- [WHERE 句](where-clause.md)

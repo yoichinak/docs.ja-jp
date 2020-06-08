@@ -35,12 +35,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, classes
 - GroupCollection class
 ms.assetid: 49a21470-64ca-4b5a-a889-8e24e3c0af7e
-ms.openlocfilehash: 8956be3cf8f96a8dd255f378d4927404c172c908
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ad7957fd555c1de8fe47c092d3eb399a803fb1fb
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160002"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290903"
 ---
 # <a name="the-regular-expression-object-model"></a>正規表現のオブジェクト モデル
 <a name="introduction"></a> ここでは、.NET の正規表現を扱うときに使用するオブジェクト モデルについて説明します。 次のセクションが含まれます。  
@@ -284,7 +284,7 @@ ms.locfileid: "78160002"
   
  <xref:System.Text.RegularExpressions.Group> クラスのプロパティには、キャプチャ グループの情報が保持されます。キャプチャされた部分文字列が `Group.Value` プロパティに含まれ、キャプチャ グループの入力テキスト内での開始位置が `Group.Index` プロパティによって示され、キャプチャされたテキストの長さが `Group.Length` プロパティに含まれ、部分文字列がキャプチャ グループによって定義されたパターンと一致したかどうかが `Group.Success` プロパティによって示されます。  
   
- 量指定子をグループに適用する場合 (詳細については、「[量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照)、キャプチャ グループごとに 1 つのキャプチャという関係が 2 つの方法で変更されます。  
+ 量指定子をグループに適用する場合 (詳細については、「[量指定子](quantifiers-in-regular-expressions.md)」を参照)、キャプチャ グループごとに 1 つのキャプチャという関係が 2 つの方法で変更されます。  
   
 - `*` 量指定子または `*?` 量指定子 (0 回以上の一致を指定する) をグループに適用した場合、キャプチャ グループには入力文字列で一致した文字列が含まれない可能性があります。 キャプチャされたテキストがない場合、<xref:System.Text.RegularExpressions.Group> オブジェクトのプロパティは次の表に示すように設定されます。  
   
@@ -352,5 +352,5 @@ ms.locfileid: "78160002"
 ## <a name="see-also"></a>参照
 
 - <xref:System.Text.RegularExpressions>
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [.NET の正規表現](regular-expressions.md)
+- [正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)

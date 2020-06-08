@@ -3,12 +3,12 @@ title: XML ドキュメントでの名前空間の管理
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
-ms.openlocfilehash: 1b3e57c0a8a37574a92d23cf1d623301cc54b984
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: b60e773183bd008c99022946a2ec53932234fe23
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82796153"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289149"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML ドキュメントでの名前空間の管理
 XML 名前空間は、XML ドキュメントの要素名と属性名をカスタムの定義済み URI に関連付けます。 この関係を作成するには、名前空間 URI のプレフィックスを定義し、そのプレフィックスを使用して XML データ内の要素名と属性名を修飾します。 名前空間は要素名や属性名の競合を防ぎ、同じ名前の要素や属性を個別に処理および評価できるようにします。  
@@ -83,4 +83,4 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.XmlNamespaceManager>
-- [XML ドキュメントと XML データ](../../../../docs/standard/data/xml/index.md)
+- [XML ドキュメントと XML データ](index.md)

@@ -2,12 +2,12 @@
 title: ジェネリック インターフェイスの分散
 ms.date: 07/20/2015
 ms.assetid: cf4096d0-4bb3-45a9-9a6b-f01e29a60333
-ms.openlocfilehash: 1f6913b322e2d3d9ec2234e556e63d67324277e5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df28a9f24518f24d1be89acba726da7dfbbf9570
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348989"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375591"
 ---
 # <a name="variance-in-generic-interfaces-visual-basic"></a>ジェネリック インターフェイスの変性 (Visual Basic)
 
@@ -70,7 +70,7 @@ Sub Test()
 End Sub
 ```
 
-詳しくは、「[ジェネリック コレクションに対するインターフェイスでの変性の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)」を参照してください。
+詳しくは、「[ジェネリック コレクションに対するインターフェイスでの変性の使用 (Visual Basic)](using-variance-in-interfaces-for-generic-collections.md)」を参照してください。
 
 ジェネリック インターフェイスでの変性がサポートされるのは参照型だけです。 値型は変性をサポートしていません。 たとえば、整数は値型によって表されるため、`IEnumerable(Of Integer)` を暗黙的に `IEnumerable(Of Object)` に変換することはできません。
 
@@ -94,7 +94,7 @@ Dim listObjects As IEnumerable(Of Object) = New List(Of String)
 
 ## <a name="see-also"></a>関連項目
 
-- [ジェネリック コレクションに対するインターフェイスでの分散の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-interfaces-for-generic-collections.md)
-- [バリアント ジェネリック インターフェイスの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/creating-variant-generic-interfaces.md)
+- [ジェネリック コレクションに対するインターフェイスでの分散の使用 (Visual Basic)](using-variance-in-interfaces-for-generic-collections.md)
+- [バリアント ジェネリック インターフェイスの作成 (Visual Basic)](creating-variant-generic-interfaces.md)
 - [ジェネリック インターフェイス](../../../../standard/generics/interfaces.md)
-- [デリゲートの変性 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-delegates.md)
+- [デリゲートの変性 (Visual Basic)](variance-in-delegates.md)

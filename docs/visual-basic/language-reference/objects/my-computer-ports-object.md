@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
-ms.openlocfilehash: 83874131655fd0bc2aac788c3beeaa1ca74195a6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6b1e1bc04d7a54162def98a845201137833fdba1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74332019"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372610"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports オブジェクト
 コンピューターのシリアル ポートにアクセスするためのプロパティとメソッドを提供します。  
@@ -18,7 +18,7 @@ ms.locfileid: "74332019"
 ## <a name="remarks"></a>Remarks  
  `My.Computer.Ports` オブジェクトのメソッドとプロパティについては、「 <xref:Microsoft.VisualBasic.Devices.Ports>」をご覧ください。  
   
- 詳細については、「[コンピューターのポートへのアクセス](../../../visual-basic/developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)」を参照してください。  
+ 詳細については、「[コンピューターのポートへのアクセス](../../developing-apps/programming/computer-resources/accessing-the-computer-s-ports.md)」を参照してください。  
   
 > [!NOTE]
 > <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType> クラスのプロパティとメソッドを使用して、コンピューターのシリアル ポートにアクセスすることもできます。  
@@ -32,4 +32,4 @@ ms.locfileid: "74332019"
   
 ## <a name="see-also"></a>関連項目
 
-- [My.Computer オブジェクト](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [My.Computer オブジェクト](my-computer-object.md)

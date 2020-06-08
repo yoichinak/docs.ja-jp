@@ -10,12 +10,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 30befaaf194d78d26a57f29c59bf0a603e9f07a3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 84df7a5cfdad3b5bc6764675725a5d0cb402b0b7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351496"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396208"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 クラスが基底クラスとしてのみ使用でき、オブジェクトを直接作成できないことを示します。  
@@ -45,11 +45,11 @@ ms.locfileid: "74351496"
 ## <a name="usage"></a>使用方法  
  `MustInherit` 修飾子は、次のコンテキストで使用できます。  
   
- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class ステートメント](../statements/class-statement.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [Inherits ステートメント](../statements/inherits-statement.md)
+- [NotInheritable](notinheritable.md)
+- [キーワード](../keywords/index.md)
+- [継承の基本](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)

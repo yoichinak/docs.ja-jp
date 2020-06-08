@@ -16,12 +16,12 @@ helpviewer_keywords:
 - global applications, localizability
 - localizing resources
 ms.assetid: 3aee2fbb-de47-4e37-8fe4-ddebb9719247
-ms.openlocfilehash: b286bdd2c5d7b03a0a2b5f94478e252da6cd0ae2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ef23cff2416792f13fda04dbe9beb34cbacfd7ea
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120864"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288278"
 ---
 # <a name="localizability-review"></a>ローカライズ化の確認
 
@@ -38,7 +38,7 @@ ms.locfileid: "73120864"
 <a name="global"></a>
 ## <a name="implement-globalization-recommendations"></a>グローバリゼーションの推奨事項を実装する
 
-ローカライズを考慮してアプリケーションの設計と開発を行い、[グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)に関する記事で説明されている推奨事項に従っている場合、ローカライズ化の確認は品質保証の点でほぼ合格です。 それ以外の場合は、この段階で[グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)の推奨事項を確認して実装し、ローカライズを妨げるソース コードのエラーを修正する必要があります。
+ローカライズを考慮してアプリケーションの設計と開発を行い、[グローバリゼーション](globalization.md)に関する記事で説明されている推奨事項に従っている場合、ローカライズ化の確認は品質保証の点でほぼ合格です。 それ以外の場合は、この段階で[グローバリゼーション](globalization.md)の推奨事項を確認して実装し、ローカライズを妨げるソース コードのエラーを修正する必要があります。
 
 <a name="culture"></a>
 ## <a name="handle-culture-sensitive-features"></a>カルチャに依存した機能を処理する
@@ -75,11 +75,11 @@ ms.locfileid: "73120864"
 
 - 予期しない結果が返される文字列の比較または等価比較。
 
-アプリケーションの開発時にグローバリゼーションの推奨事項に従い、カルチャに依存した機能を正しく処理し、テスト中に発生したローカライズの問題を特定して対処した場合は、次の手順である[ローカライズ](../../../docs/standard/globalization-localization/localization.md)に進むことができます。
+アプリケーションの開発時にグローバリゼーションの推奨事項に従い、カルチャに依存した機能を正しく処理し、テスト中に発生したローカライズの問題を特定して対処した場合は、次の手順である[ローカライズ](localization.md)に進むことができます。
 
 ## <a name="see-also"></a>参照
 
-- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
-- [ローカリゼーション](../../../docs/standard/globalization-localization/localization.md)
-- [グローバリゼーション](../../../docs/standard/globalization-localization/globalization.md)
-- [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
+- [グローバライズとローカライズ](index.md)
+- [ローカリゼーション](localization.md)
+- [グローバリゼーション](globalization.md)
+- [デスクトップ アプリケーションのリソース](../../framework/resources/index.md)

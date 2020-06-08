@@ -10,12 +10,12 @@ helpviewer_keywords:
 - managed execution process
 - common language runtime, managed execution process
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
-ms.openlocfilehash: 46a266849f137076170287aeb10becedf83ccf78
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3cfe66f188c5abf245370f841d4b4d31e7b6db8b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160223"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290072"
 ---
 # <a name="managed-execution-process"></a>マネージド実行プロセス
 <a name="introduction"></a> マネージド実行プロセスで実行される主な手順を次に示します。詳細については、後で説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "78160223"
 ## <a name="choosing-a-compiler"></a>コンパイラを選択します  
  共通言語ランタイム (CLR: Common Language Runtime) によって提供される機能を活用するには、Visual Basic、C#、Visual C++、F# などのランタイムに対応した言語コンパイラか、Eiffel、Perl、COBOL などのサードパーティのコンパイラを使用する必要があります。  
   
- 共通言語ランタイムは多言語実行環境であるため、さまざまなデータ型と言語機能をサポートしています。 使用する言語コンパイラによって、利用できる共通言語ランタイムの機能が決まり、その機能を使用してコードをデザインすることになります。 記述するコードの構文を決定するのは、共通言語ランタイムではなく、使用するコンパイラです。 作成したコンポーネントを他の言語で記述されたコンポーネントでも完全に使用できるようにするためには、そのコンポーネントからエクスポートされた型が、 [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md) (CLS) に規定されている言語機能だけを公開するようにする必要があります。 <xref:System.CLSCompliantAttribute> 属性を使用することにより、コードを確実に CLS に準拠させることができます。 詳しくは、「[言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)」を参照してください。  
+ 共通言語ランタイムは多言語実行環境であるため、さまざまなデータ型と言語機能をサポートしています。 使用する言語コンパイラによって、利用できる共通言語ランタイムの機能が決まり、その機能を使用してコードをデザインすることになります。 記述するコードの構文を決定するのは、共通言語ランタイムではなく、使用するコンパイラです。 作成したコンポーネントを他の言語で記述されたコンポーネントでも完全に使用できるようにするためには、そのコンポーネントからエクスポートされた型が、 [言語への非依存性、および言語非依存コンポーネント](language-independence-and-language-independent-components.md) (CLS) に規定されている言語機能だけを公開するようにする必要があります。 <xref:System.CLSCompliantAttribute> 属性を使用することにより、コードを確実に CLS に準拠させることができます。 詳しくは、「[言語への非依存性、および言語非依存コンポーネント](language-independence-and-language-independent-components.md)」を参照してください。  
   
  [先頭に戻る](#introduction)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "78160223"
   
 - .NET Framework の Just-In-Time (JIT) コンパイラ  
   
-- .NET Framework の [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
+- .NET Framework の [Ngen.exe (ネイティブ イメージ ジェネレーター)](../framework/tools/ngen-exe-native-image-generator.md)。  
   
 ### <a name="compilation-by-the-jit-compiler"></a>JIT コンパイラによるコンパイル  
  JIT コンパイルは、アプリケーション実行時に、アセンブリの内容が読み込まれて実行される際に、オン デマンドで MSIL をネイティブ コードに変換します。 共通言語ランタイムには、サポートされる CPU アーキテクチャごとに JIT コンパイラが用意されているため、開発者は MSIL アセンブリのセットを作成し、それを JIT でコンパイルして、異なるマシン アーキテクチャを持つさまざまなコンピューター上で実行できます。 ただし、マネージド コードがプラットフォーム固有のネイティブ API またはプラットフォーム固有のクラス ライブラリを呼び出す場合、そのコードはそのオペレーティング システムでしか実行されません。  
@@ -66,7 +66,7 @@ ms.locfileid: "78160223"
  JIT コンパイルは、実行時に呼び出されることがないコードがある可能性を考慮しています。 つまり、PE ファイル内にあるすべての MSIL をネイディブ コードに変換するために時間とメモリを費やす代わりに、実行時に必要とされる MSIL を変換し、結果として生成されるネイティブ コードをメモリに保存することで、そのプロセスのコンテキスト内の後続の呼び出しがこれを利用できるようにします。 型が読み込まれて初期化されるとき、ローダーはスタブを作成し、その型の各メソッドにそれを結び付けます。 メソッドが初めて呼び出されるとき、スタブは JIT コンパイラに制御を渡します。JIT コンパイラはそのメソッド用の MSIL をネイティブ コードに変換して、生成されたネイティブ コードを直接指すようスタブを変更します。 このため、JIT でコンパイルされたメソッドに対する後続の呼び出しでは、ネイティブ コードが直接実行されます。  
   
 ### <a name="install-time-code-generation-using-ngenexe"></a>NGen.exe を使用したインストール時のコード生成  
- JIT コンパイラは、アセンブリの MSIL を、そのアセンブリで定義されている個々のメソッドが呼び出されるときにネイティブ コードに変換するため、実行時のパフォーマンスが低下します。 ほとんどの場合、このパフォーマンスの低下は許容範囲内です。 より重要な点として、JIT コンパイラが生成したコードは、コンパイルを起動したプロセスにバインドされます。 複数のプロセスの間でこれを共有することはできません。 生成されたコードを、1 つのアプリケーションの複数の呼び出しの間で、または 1 つのアセンブリ セットを共有する複数のプロセスの間で共有できるようにするために、共通言語ランタイムは事前コンパイル モードをサポートします。 この Ahead Of Time コンパイル モードでは、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../docs/framework/tools/ngen-exe-native-image-generator.md) を使用して、JIT コンパイラと同様に MSIL アセンブリをネイティブ コードに変換します。 ただし、Ngen.exe の動作は、以下の 3 つの点で JIT コンパイラの動作と異なります。  
+ JIT コンパイラは、アセンブリの MSIL を、そのアセンブリで定義されている個々のメソッドが呼び出されるときにネイティブ コードに変換するため、実行時のパフォーマンスが低下します。 ほとんどの場合、このパフォーマンスの低下は許容範囲内です。 より重要な点として、JIT コンパイラが生成したコードは、コンパイルを起動したプロセスにバインドされます。 複数のプロセスの間でこれを共有することはできません。 生成されたコードを、1 つのアプリケーションの複数の呼び出しの間で、または 1 つのアセンブリ セットを共有する複数のプロセスの間で共有できるようにするために、共通言語ランタイムは事前コンパイル モードをサポートします。 この Ahead Of Time コンパイル モードでは、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../framework/tools/ngen-exe-native-image-generator.md) を使用して、JIT コンパイラと同様に MSIL アセンブリをネイティブ コードに変換します。 ただし、Ngen.exe の動作は、以下の 3 つの点で JIT コンパイラの動作と異なります。  
   
 - MSIL からネイティブ コードへの変換を、アプリケーション実行中ではなく、実行前に行います。  
   
@@ -107,12 +107,12 @@ ms.locfileid: "78160223"
   
 ## <a name="see-also"></a>参照
 
-- [概要](../../docs/framework/get-started/overview.md)
-- [言語への非依存性、および言語非依存コンポーネント](../../docs/standard/language-independence-and-language-independent-components.md)
-- [メタデータと自己言及的なコンポーネント](../../docs/standard/metadata-and-self-describing-components.md)
-- [Ilasm.exe (IL アセンブラー)](../../docs/framework/tools/ilasm-exe-il-assembler.md)
-- [セキュリティ](../../docs/standard/security/index.md)
-- [アンマネージ コードとの相互運用](../../docs/framework/interop/index.md)
-- [展開](../../docs/framework/deployment/net-framework-applications.md)
+- [概要](../framework/get-started/overview.md)
+- [言語への非依存性、および言語非依存コンポーネント](language-independence-and-language-independent-components.md)
+- [メタデータと自己言及的なコンポーネント](metadata-and-self-describing-components.md)
+- [Ilasm.exe (IL アセンブラー)](../framework/tools/ilasm-exe-il-assembler.md)
+- [セキュリティ](security/index.md)
+- [アンマネージ コードとの相互運用](../framework/interop/index.md)
+- [展開](../framework/deployment/net-framework-applications.md)
 - [.NET のアセンブリ](assembly/index.md)
-- [アプリケーション ドメイン](../../docs/framework/app-domains/application-domains.md)
+- [アプリケーション ドメイン](../framework/app-domains/application-domains.md)

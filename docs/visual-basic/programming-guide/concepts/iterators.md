@@ -2,20 +2,20 @@
 title: Iterators
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
-ms.openlocfilehash: 2789ac66690ebfd472b9bae5ccf08b1bdfaa0922
-ms.sourcegitcommit: 44a7cd8687f227fc6db3211ccf4783dc20235e51
+ms.openlocfilehash: e638d35aeb86837d91fb14681d300772e3c2375a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2020
-ms.locfileid: "77628736"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410930"
 ---
 # <a name="iterators-visual-basic"></a>反復子 (Visual Basic)
 
 *反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。
 
-iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 iterator メソッドは、[Yield](../../../visual-basic/language-reference/statements/yield-statement.md) ステートメントを使用して、各要素を 1 回に 1 つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。
+iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 iterator メソッドは、[Yield](../../language-reference/statements/yield-statement.md) ステートメントを使用して、各要素を 1 回に 1 つ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。
 
-[For Each…Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md) ステートメントまたは LINQ クエリを使用して、クライアント コードから反復子を呼び出します。
+[For Each…Next](../../language-reference/statements/for-each-next-statement.md) ステートメントまたは LINQ クエリを使用して、クライアント コードから反復子を呼び出します。
 
 次の例では、`For Each` ループの最初の反復子により、最初の `Yield` ステートメントに達するまで `SomeNumbers` iterator メソッドで実行が続行されます。 このイテレーションは 3 の値を返し、iterator メソッドの現在の場所が保持されます。 ループの次のイテレーションでは、iterator メソッドの実行が中断した場所から続行し、`Yield` ステートメントに達したときに再度停止します。 このイテレーションは 5 の値を返し、ここでも iterator メソッドの現在の場所が保持されます。 iterator メソッドの最後に達すると、ループが完了します。
 
@@ -39,7 +39,7 @@ Iterator メソッドまたは `get` アクセサーの戻り値の型は、<xre
 
 `Exit Function` または `Return` ステートメントを使用すると、反復を終了できます。
 
-Visual Basic の iterator 関数と `get` アクセサー宣言には、[Iterator](../../../visual-basic/language-reference/modifiers/iterator.md) 修飾子が含まれています。
+Visual Basic の iterator 関数と `get` アクセサー宣言には、[Iterator](../../language-reference/modifiers/iterator.md) 修飾子が含まれています。
 
 反復子は、Visual Studio 2012 の Visual Basic で導入されました。
 
@@ -62,11 +62,11 @@ Visual Basic の iterator 関数と `get` アクセサー宣言には、[Iterato
 - [反復子の使用](#BKMK_UseOfIterators)
 
 > [!NOTE]
-> このトピックの単純な反復子の例を除くすべての例には、`System.Collections` および `System.Collections.Generic` 名前空間の [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) ステートメントが含まれています。
+> このトピックの単純な反復子の例を除くすべての例には、`System.Collections` および `System.Collections.Generic` 名前空間の [Imports](../../language-reference/statements/imports-statement-net-namespace-and-type.md) ステートメントが含まれています。
 
 ## <a name="simple-iterator"></a><a name="BKMK_SimpleIterator"></a> 単純な反復子
 
-次の例では、[For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) ループ内に 1 つの `Yield` ステートメントが含まれます。 `Main` では、`For Each` ステートメント本文の各イテレーションで iterator 関数が呼び出され、これが次の `Yield` ステートメントに続行されます。
+次の例では、[For…Next](../../language-reference/statements/for-next-statement.md) ループ内に 1 つの `Yield` ステートメントが含まれます。 `Main` では、`For Each` ステートメント本文の各イテレーションで iterator 関数が呼び出され、これが次の `Yield` ステートメントに続行されます。
 
 ```vb
 Sub Main()
@@ -218,7 +218,7 @@ End Class
 
 ## <a name="try-blocks"></a><a name="BKMK_TryBlocks"></a> Try ブロック
 
-Visual Basic では、[Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)の `Try` ブロックで `Yield` ステートメントを使用できます。 `Yield` ステートメントがある `Try` ブロックには、`Catch` ブロックと `Finally` ブロックを記述することができます。
+Visual Basic では、[Try...Catch...Finally ステートメント](../../language-reference/statements/try-catch-finally-statement.md)の `Try` ブロックで `Yield` ステートメントを使用できます。 `Yield` ステートメントがある `Try` ブロックには、`Catch` ブロックと `Finally` ブロックを記述することができます。
 
 次の例では、iterator 関数の中に `Try`、`Catch`、`Finally` の各ブロックが存在します。 iterator 関数内の `Finally` ブロックは、`For Each` の反復が完了する前に実行されます。
 
@@ -441,7 +441,7 @@ Visual Basic の場合、"Yield" は予約語ではなく、`Iterator` メソッ
 
 反復子は、<xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> メソッドをサポートしません。 反復処理を最初から再度行う場合は、新しい反復子を取得する必要があります。
 
-詳細については、「[Visual Basic 言語の仕様](../../../visual-basic/reference/language-specification/index.md)」を参照してください。
+詳細については、「[Visual Basic 言語の仕様](../../reference/language-specification/index.md)」を参照してください。
 
 ## <a name="use-of-iterators"></a><a name="BKMK_UseOfIterators"></a> 反復子の使用
 
@@ -457,6 +457,6 @@ Visual Basic の場合、"Yield" は予約語ではなく、`Iterator` メソッ
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [Yield ステートメント](../../../visual-basic/language-reference/statements/yield-statement.md)
-- [Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)
+- [For Each...Next ステートメント](../../language-reference/statements/for-each-next-statement.md)
+- [Yield ステートメント](../../language-reference/statements/yield-statement.md)
+- [Iterator](../../language-reference/modifiers/iterator.md)

@@ -3,12 +3,12 @@ title: 単純型を推論するときの規則
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 394624d6-4da0-430a-8a88-46efe40f14de
-ms.openlocfilehash: 17429e77f7764873e607a8feaa62da1cc6e014a4
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 571019d13433312a5d31f581c3527aae901bbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710233"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289071"
 ---
 # <a name="rules-for-inferring-simple-types"></a>単純型を推論するときの規則
 <xref:System.Xml.Schema.XmlSchemaInference> クラスが属性と要素のデータ型を推論する方法を説明します。  
@@ -76,6 +76,6 @@ ms.locfileid: "75710233"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML スキーマ オブジェクト モデル (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
-- [XML ドキュメントからのスキーマの推論](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [スキーマのノード型および構造を推論するときの規則](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
+- [XML スキーマ オブジェクト モデル (SOM)](xml-schema-object-model-som.md)
+- [XML ドキュメントからのスキーマの推論](inferring-schemas-from-xml-documents.md)
+- [スキーマのノード型および構造を推論するときの規則](rules-for-inferring-schema-node-types-and-structure.md)

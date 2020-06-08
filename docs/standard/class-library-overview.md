@@ -37,12 +37,12 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-ms.openlocfilehash: 596c0fd8fec8f59d977f1db445f9000df23ad5ce
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b076298a5a5f90a3c2dd39e4c5c9684e02a291c4
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398767"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289253"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -76,7 +76,7 @@ ms.locfileid: "79398767"
   
  名前付けパターンを使用して関連する型を名前空間にグループ化する方法は、クラス ライブラリを構築および文書化するのに便利です。 ただし、この名前付け方法は、参照可能範囲、メンバー アクセス、継承、セキュリティ、バインディングには影響しません。 名前空間は複数のアセンブリにまたがって分割でき、また 1 つのアセンブリに複数の名前空間からの型を含めることができます。 アセンブリは、共通言語ランタイムにおけるバージョン管理、配置、セキュリティ、読み込み、および参照可能範囲のための構造を提供します。  
   
- 名前空間と型の名前の詳細については、「[共通型システム](../../docs/standard/base-types/common-type-system.md)」(共通型システム) を参照してください。  
+ 名前空間と型の名前の詳細については、「[共通型システム](base-types/common-type-system.md)」(共通型システム) を参照してください。  
   
 ## <a name="system-namespace"></a>System 名前空間
 
@@ -110,6 +110,6 @@ ms.locfileid: "79398767"
   
 ## <a name="see-also"></a>関連項目
 
-- [共通型システム](../../docs/standard/base-types/common-type-system.md)
+- [共通型システム](base-types/common-type-system.md)
 - [.NET API ブラウザー](../../api/index.md)
-- [概要](../../docs/framework/get-started/overview.md)
+- [概要](../framework/get-started/overview.md)

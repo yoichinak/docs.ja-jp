@@ -2,12 +2,12 @@
 title: '方法: 式ツリーを実行する'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: 2a2749eaed5279d04b72eb77b066c83de9722fa9
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 7b7b08ea1a7a1310b1d98876be96f1fa28ecba91
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346002"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375331"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>方法: 式ツリーを実行する (Visual Basic)
 このトピックでは、式ツリーを実行する方法について説明します。 式ツリーを実行すると値が返される場合がありますが、メソッドの呼び出しなどの処理が実行されるだけの場合もあります。  
@@ -48,5 +48,5 @@ MsgBox(result)
   
 ## <a name="see-also"></a>関連項目
 
-- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [方法: 式ツリーを変更する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [式ツリー (Visual Basic)](index.md)
+- [方法: 式ツリーを変更する (Visual Basic)](how-to-modify-expression-trees.md)

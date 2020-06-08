@@ -11,17 +11,17 @@ helpviewer_keywords:
 - raising events
 - events [.NET Framework], samples
 ms.assetid: 42afade7-3a02-4f2e-868b-95845f302f8f
-ms.openlocfilehash: 256b5ae9ac2145e339136985872dfa5423aca730
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4d0b24b8a6f1b914745d819b90b973752e32447c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131594"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279959"
 ---
 # <a name="how-to-raise-and-consume-events"></a>方法 : イベントを発生させる/処理する
 このトピックの例では、イベントを使用する方法を示します。 ここでは、<xref:System.EventHandler> デリゲートと <xref:System.EventHandler%601> デリゲート、およびカスタム デリゲートの例を使用して、データを持つイベントと持たないイベントを示します。  
   
- この例では、「[イベント](../../../docs/standard/events/index.md)」で説明されている概念を使用します。  
+ この例では、「[イベント](index.md)」で説明されている概念を使用します。  
   
 ## <a name="example"></a>例  
  最初の例は、データを持たないイベントを発生させて処理する方法を示しています。 この例には、`Counter` という名前のイベントを持つ、`ThresholdReached` という名前のクラスが含まれます。 このイベントは、カウンター値がしきい値と等しいか、またはそれを超えた場合に発生します。 イベントのデータが指定されていないため、<xref:System.EventHandler> デリゲートはイベントに関連付けられます。  
@@ -44,4 +44,4 @@ ms.locfileid: "73131594"
   
 ## <a name="see-also"></a>参照
 
-- [イベント](../../../docs/standard/events/index.md)
+- [イベント](index.md)

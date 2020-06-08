@@ -12,12 +12,12 @@ helpviewer_keywords:
 - tables [.NET Framework], type conversions
 - data types [.NET Framework], converting
 ms.assetid: 0ea65c59-85eb-4a52-94ca-c36d3bd13058
-ms.openlocfilehash: aa1ef8397338af949bd147fd3252b2d9ecaf53ef
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb696c65078a5dae0b81a48bffc786d2257496c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73103890"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290566"
 ---
 # <a name="type-conversion-tables-in-net"></a>.NET の型変換の表
 拡大変換は、1 つの型の値が、サイズが同じかそれ以上の別の型に変換されるときに発生します。 縮小変換は、1 つの型の値が、サイズがより小さい別の型の値に変換されるときに発生します。 このトピックの表は、両方の種類の変換の動作を示しています。  
@@ -72,4 +72,4 @@ ms.locfileid: "73103890"
 ## <a name="see-also"></a>参照
 
 - <xref:System.Convert?displayProperty=nameWithType>
-- [.NET での型変換](../../../docs/standard/base-types/type-conversion.md)
+- [.NET での型変換](type-conversion.md)

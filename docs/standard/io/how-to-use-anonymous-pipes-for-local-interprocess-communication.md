@@ -13,12 +13,12 @@ helpviewer_keywords:
 - one-way communication [.NET Framework]
 - local computer communication [.NET Framework], pipes
 ms.assetid: e7773c77-c646-4a01-8a96-a003d59fc4c9
-ms.openlocfilehash: ea4aee60d090a56eb0cf3f2a81c1b05c04806d4b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9962471697888041e98e38dd5f7feaecc306894d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77627995"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291787"
 ---
 # <a name="how-to-use-anonymous-pipes-for-local-interprocess-communication"></a>方法: ローカルのプロセス間通信で匿名パイプを使用する
 匿名パイプは、ローカル コンピューターでのプロセス間通信を実現します。 名前付きパイプと比較して提供する機能は少なくなりますが、オーバーヘッドも小さくなります。 匿名パイプを使用して、ローカル コンピューター上で容易にプロセス間通信を実行できます。 匿名パイプを使用してネットワーク経由の通信を行うことはできません。  
@@ -47,5 +47,5 @@ ms.locfileid: "77627995"
   
 ## <a name="see-also"></a>参照
 
-- [パイプ](../../../docs/standard/io/pipe-operations.md)
-- [方法: ネットワークのプロセス間通信で名前付きパイプを使用する](../../../docs/standard/io/how-to-use-named-pipes-for-network-interprocess-communication.md)
+- [パイプ](pipe-operations.md)
+- [方法: ネットワークのプロセス間通信で名前付きパイプを使用する](how-to-use-named-pipes-for-network-interprocess-communication.md)

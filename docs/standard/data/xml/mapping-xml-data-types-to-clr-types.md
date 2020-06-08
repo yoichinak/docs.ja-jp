@@ -3,12 +3,12 @@ title: XML データ型から CLR 型へのマッピング
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
-ms.openlocfilehash: 536c8dcd03d98879e24ae62d2b8a47e36564aaf6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: f14c8d961fe0934b8e843c39a217e7c2db8237c3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710662"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289110"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>XML データ型から CLR 型へのマッピング
 
@@ -78,4 +78,4 @@ XML データ型と共通言語ランタイム (CLR) 型の既定のマッピン
 
 ## <a name="see-also"></a>関連項目
 
-- [System.Xml クラスでの型のサポート](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)
+- [System.Xml クラスでの型のサポート](type-support-in-the-system-xml-classes.md)

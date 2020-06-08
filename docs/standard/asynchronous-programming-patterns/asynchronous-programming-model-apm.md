@@ -11,18 +11,18 @@ helpviewer_keywords:
 - stopping asynchronous operations
 - asynchronous programming, beginning operations
 ms.assetid: c9b3501e-6bc6-40f9-8efd-4b6d9e39ccf0
-ms.openlocfilehash: 0a9ea3c8c9c589bb5954fa9771ffd1bb095f6d73
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 96ad18e613d68ee97f4e5666afe77febadc6f991
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140141"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289981"
 ---
 # <a name="asynchronous-programming-model-apm"></a>非同期プログラミング モデル (APM)
 <xref:System.IAsyncResult> デザイン パターンを使用する非同期操作は `BeginOperationName` と `EndOperationName` という名前の、各 *OperationName* 非同期操作を開始および終了する 2 種類のメソッドとして実装されます。 たとえば、 <xref:System.IO.FileStream> クラスは、 <xref:System.IO.FileStream.BeginRead%2A> および <xref:System.IO.FileStream.EndRead%2A> メソッドを提供して、非同期的にファイルからバイトを読み取ります。 これらのメソッドは非同期バージョンの <xref:System.IO.FileStream.Read%2A> メソッドを実装します。  
   
 > [!NOTE]
-> .NET Framework 4 以降では、タスク並列ライブラリによって非同期/並列プログラミングの新しいモデルが提供されます。 詳細については、「 [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md) 」および「 [タスク ベースの非同期パターン (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)」を参照してください。  
+> .NET Framework 4 以降では、タスク並列ライブラリによって非同期/並列プログラミングの新しいモデルが提供されます。 詳細については、「 [タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md) 」および「 [タスク ベースの非同期パターン (TAP)](task-based-asynchronous-pattern-tap.md)」を参照してください。  
   
  `BeginOperationName` を呼び出した後、アプリケーションは別のスレッドで非同期操作が行われている間も、スレッドの呼び出しに関する命令の実行を続行できます。 `BeginOperationName` の呼び出しごとに、アプリケーションでは `EndOperationName` も呼び出して、操作の結果を取得する必要があります。  
   
@@ -53,18 +53,18 @@ ms.locfileid: "73140141"
   
  アプリケーション開発者には、非同期操作の結果にアクセスするための、デザイン上の選択肢がいくつかあります。 どの選択が適切になるかは、アプリケーションが操作の完了前に実行できる命令を持っているかどうかによって変わります。 非同期操作の結果を受け取るまで、アプリケーションが別の作業を実行できない場合は、結果が使用可能になるまで、そのアプリケーションをブロックする必要があります。 非同期操作が完了するまでブロックするには、次に示す方法の 1 つを使用します。  
   
-- アプリケーションのメイン スレッドから `EndOperationName` を呼び出し、操作が完了するまでアプリケーションの実行をブロックします。 この手法の例については、「[非同期操作の終了によるアプリケーション実行のブロック](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-by-ending-an-async-operation.md)」を参照してください。  
+- アプリケーションのメイン スレッドから `EndOperationName` を呼び出し、操作が完了するまでアプリケーションの実行をブロックします。 この手法の例については、「[非同期操作の終了によるアプリケーション実行のブロック](blocking-application-execution-by-ending-an-async-operation.md)」を参照してください。  
   
-- <xref:System.IAsyncResult.AsyncWaitHandle%2A> を使用して、1 つ以上の操作が完了するまでアプリケーションの実行をブロックします。 この手法の例については、「 [AsyncWaitHandle の使用によるアプリケーション実行のブロック](../../../docs/standard/asynchronous-programming-patterns/blocking-application-execution-using-an-asyncwaithandle.md)」を参照してください。  
+- <xref:System.IAsyncResult.AsyncWaitHandle%2A> を使用して、1 つ以上の操作が完了するまでアプリケーションの実行をブロックします。 この手法の例については、「 [AsyncWaitHandle の使用によるアプリケーション実行のブロック](blocking-application-execution-using-an-asyncwaithandle.md)」を参照してください。  
   
  非同期操作が完了するまでアプリケーションをブロックする必要がない場合は、次のいずれかの方法を使用します。  
   
-- <xref:System.IAsyncResult.IsCompleted%2A> プロパティを定期的に確認し、操作が完了したときに `EndOperationName` を呼び出して、操作完了ステータスをポーリングします。 この手法の例については、「 [非同期操作のステータスのポーリング](../../../docs/standard/asynchronous-programming-patterns/polling-for-the-status-of-an-asynchronous-operation.md)」を参照してください。  
+- <xref:System.IAsyncResult.IsCompleted%2A> プロパティを定期的に確認し、操作が完了したときに `EndOperationName` を呼び出して、操作完了ステータスをポーリングします。 この手法の例については、「 [非同期操作のステータスのポーリング](polling-for-the-status-of-an-asynchronous-operation.md)」を参照してください。  
   
-- <xref:System.AsyncCallback> デリゲートを使用して、操作が完了したときに呼び出されるメソッドを指定します。 この手法の例については、「 [AsyncCallback デリゲートの使用による非同期操作の終了](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)」を参照してください。  
+- <xref:System.AsyncCallback> デリゲートを使用して、操作が完了したときに呼び出されるメソッドを指定します。 この手法の例については、「 [AsyncCallback デリゲートの使用による非同期操作の終了](using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照
 
-- [イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)
-- [同期メソッドの非同期呼び出し](../../../docs/standard/asynchronous-programming-patterns/calling-synchronous-methods-asynchronously.md)
-- [AsyncCallback デリゲートおよび状態オブジェクトの使用](../../../docs/standard/asynchronous-programming-patterns/using-an-asynccallback-delegate-and-state-object.md)
+- [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)
+- [同期メソッドの非同期呼び出し](calling-synchronous-methods-asynchronously.md)
+- [AsyncCallback デリゲートおよび状態オブジェクトの使用](using-an-asynccallback-delegate-and-state-object.md)

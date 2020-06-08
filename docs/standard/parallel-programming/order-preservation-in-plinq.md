@@ -8,17 +8,17 @@ dev_langs:
 helpviewer_keywords:
 - PLINQ queries, order preservation
 ms.assetid: 10d202bc-19e1-4b5c-bbf1-9a977322a9ca
-ms.openlocfilehash: 0e9b4510757fc0f98b2edfbe1c656cdb5f6bce72
-ms.sourcegitcommit: 961ec21c22d2f1d55c9cc8a7edf2ade1d1fd92e3
+ms.openlocfilehash: 45752f3ffa64079079505934afd76e812daad7bd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2020
-ms.locfileid: "80588634"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290656"
 ---
 # <a name="order-preservation-in-plinq"></a>PLINQ における順序維持
 PLINQ では、正確性を維持しながらパフォーマンスを最大にすることが重要です。 クエリをできるだけ速く実行する一方で、正確な結果を生成する必要があります。 正確性のために、ソース シーケンスの順序の維持が必要な場合がありますが、順序付けには負荷がかかります。 したがって、既定では、PLINQ はソース シーケンスの順序を維持しません。 この点で、PLINQ は [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] と似ていますが、順序を維持する LINQ to Objects とは異なります。  
   
- 既定の動作をオーバーライドするには、ソース シーケンス上で <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 演算子を使用して、順序の維持を有効にします。 その後、<xref:System.Linq.ParallelEnumerable.AsUnordered%2A> メソッドを使用して、クエリでの順序の維持を無効にできます。 どちらの方法でも、クエリを並列実行するか順次実行するかを決定するヒューリスティックに基づいてクエリが処理されます。 詳細については、「[Understanding Speedup in PLINQ (PLINQ での高速化について)](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)」を参照してください。  
+ 既定の動作をオーバーライドするには、ソース シーケンス上で <xref:System.Linq.ParallelEnumerable.AsOrdered%2A> 演算子を使用して、順序の維持を有効にします。 その後、<xref:System.Linq.ParallelEnumerable.AsUnordered%2A> メソッドを使用して、クエリでの順序の維持を無効にできます。 どちらの方法でも、クエリを並列実行するか順次実行するかを決定するヒューリスティックに基づいてクエリが処理されます。 詳細については、「[Understanding Speedup in PLINQ (PLINQ での高速化について)](understanding-speedup-in-plinq.md)」を参照してください。  
   
  次の例では、結果を順序付けず、条件に一致するすべての要素をフィルター処理する、順序なしの並列クエリを示しています。  
   
@@ -122,5 +122,5 @@ PLINQ では、正確性を維持しながらパフォーマンスを最大に�
   
 ## <a name="see-also"></a>参照
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
-- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)
+- [並列プログラミング](index.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - string functions
 ms.assetid: f1bf9ac2-cbcf-4298-ae51-53182076bdc8
-ms.openlocfilehash: 2608159e28ee63a0fdb10c82054fd65efe79ac62
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 778e57eadd75baf1aabd100f9d8d41a490f79a04
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349979"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406289"
 ---
 # <a name="string-functions-visual-basic"></a>文字列関数 (Visual Basic)
 
@@ -47,7 +47,7 @@ Visual Basic で、文字列の検索と操作のために <xref:Microsoft.Visua
 |<xref:Microsoft.VisualBasic.Strings.Trim%2A>|指定された文字列から、先頭または末尾の空白を除いたコピーを格納する文字列を返します。|
 |<xref:Microsoft.VisualBasic.Strings.UCase%2A>|指定された文字列を大文字に変換して文字列型または char 型の値を返します。|
 
-[Option Compare](../../../visual-basic/language-reference/statements/option-compare-statement.md) ステートメントを使用して、文字列の比較方法を設定できます。比較方法は、システムのロケールで決定される、大文字と小文字を区別しないテキストの並べ替え順序 (`Text`)、または文字の内部バイナリ表現 (`Binary`) です。 既定のテキスト比較方法は `Binary` です。
+[Option Compare](../statements/option-compare-statement.md) ステートメントを使用して、文字列の比較方法を設定できます。比較方法は、システムのロケールで決定される、大文字と小文字を区別しないテキストの並べ替え順序 (`Text`)、または文字の内部バイナリ表現 (`Binary`) です。 既定のテキスト比較方法は `Binary` です。
 
 ## <a name="example-ucase"></a>例:UCase
 
@@ -89,7 +89,7 @@ Visual Basic で、文字列の検索と操作のために <xref:Microsoft.Visua
 
 ## <a name="see-also"></a>関連項目
 
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
-- [文字列操作の概要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)
+- [キーワード](../keywords/index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](../runtime-library-members.md)
+- [文字列操作の概要](../keywords/string-manipulation-summary.md)
 - [System.String クラスのメソッド](xref:System.String#methods)

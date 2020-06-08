@@ -9,12 +9,12 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 9e99856c3ac70b122c0def23e36bbc3059c5891c
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: d9a4631189d348c02ab36054257a54c9c4673018
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378459"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289669"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>エンコード済み SOAP シリアル化を制御する属性
 
@@ -22,7 +22,7 @@ World Wide Web コンソーシアム (W3C) のドキュメント『[Simple Objec
 
 これらの属性、およびその適用対象と機能を次の表に示します。 これらの属性を使用して XML シリアル化を制御する方法の詳細については、「[方法: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)」と「[方法: SOAP エンコード済み XML シリアル化をオーバーライドする](how-to-override-encoded-soap-xml-serialization.md)」を参照してください。
 
-属性の詳細については、「[属性](../../../docs/standard/attributes/index.md)」を参照してください。
+属性の詳細については、「[属性](../attributes/index.md)」を参照してください。
 
 |属性|対象|指定内容|
 |---------------|----------------|---------------|
@@ -38,7 +38,7 @@ World Wide Web コンソーシアム (W3C) のドキュメント『[Simple Objec
 - [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)
 - [方法: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
 - [方法: SOAP エンコード済み XML シリアル化をオーバーライドする](how-to-override-encoded-soap-xml-serialization.md)
-- [属性](../../../docs/standard/attributes/index.md)
+- [属性](../attributes/index.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
 - [方法: オブジェクトをシリアル化する](how-to-serialize-an-object.md)
 - [方法: オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)

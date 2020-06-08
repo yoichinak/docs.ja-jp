@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IObservable(Of T) interface
 - observer design pattern [.NET Framework]
 ms.assetid: 3680171f-f522-453c-aa4a-54f755a78f88
-ms.openlocfilehash: 817337cec604a431f9f7d4eacb04378ee0d3c227
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5794cd1ec9b63a6e151b35c28e09e29f86dcfac6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73131573"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291267"
 ---
 # <a name="observer-design-pattern"></a>オブサーバー デザイン パターン
 
@@ -93,6 +93,6 @@ ms.locfileid: "73131573"
 
 |タイトル|[説明]|
 |-----------|-----------------|
-|[オブザーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)|オブザーバー デザイン パターンを実装するアプリケーションを開発するときのベスト プラクティスについて説明します。|
-|[方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)|温度監視アプリケーションのプロバイダーを実装するための手順について説明します。|
-|[方法: オブザーバーを実装する](../../../docs/standard/events/how-to-implement-an-observer.md)|温度監視アプリケーションのオブザーバーを実装するための手順について説明します。|
+|[オブザーバー デザイン パターンのベスト プラクティス](observer-design-pattern-best-practices.md)|オブザーバー デザイン パターンを実装するアプリケーションを開発するときのベスト プラクティスについて説明します。|
+|[方法: プロバイダーを実装する](how-to-implement-a-provider.md)|温度監視アプリケーションのプロバイダーを実装するための手順について説明します。|
+|[方法: オブザーバーを実装する](how-to-implement-an-observer.md)|温度監視アプリケーションのオブザーバーを実装するための手順について説明します。|

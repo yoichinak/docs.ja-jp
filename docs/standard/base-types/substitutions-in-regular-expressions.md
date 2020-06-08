@@ -13,12 +13,12 @@ helpviewer_keywords:
 - constructs, substitutions
 - substitutions
 ms.assetid: d1f52431-1c7d-4dc6-8792-6b988256892e
-ms.openlocfilehash: 3562bd113ae4c9a3f721d8858a5d3625ef548d3a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e5773c220dccd4d139b4f85e19b55048a64e7ef
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160080"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288005"
 ---
 # <a name="substitutions-in-regular-expressions"></a>正規表現での置換
 置換は、置換パターン内でのみ認識される言語要素です。 置換では、正規表現パターンを使用して、入力文字列内の一致するテキストを置換するテキストの全体または一部を定義します。 置換パターンは、1 個以上の置換と、リテラル文字で構成されます。 置換パターンは、 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> パラメーターを持つ `replacement` メソッドのオーバーロードおよび <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドに対して用意されています。 メソッドは、一致するパターンを、 `replacement` パラメーターで定義されているパターンで置換します。  
@@ -42,10 +42,10 @@ ms.locfileid: "78160080"
  正規表現パターンと置換の両方に使用できる文字は `$` 文字だけですが、この文字の意味はコンテキストによって異なります。 正規表現パターンでは、 `$` は文字列の末尾に一致するアンカーです。 置換パターンでは、 `$` は置換の先頭を示します。  
   
 > [!NOTE]
-> 正規表現の中で置換パターンに似た機能を利用するには、前方参照を使用します。 前方参照の詳細については、「 [前方参照構成体](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)」を参照してください。  
+> 正規表現の中で置換パターンに似た機能を利用するには、前方参照を使用します。 前方参照の詳細については、「 [前方参照構成体](backreference-constructs-in-regular-expressions.md)」を参照してください。  
 
 ## <a name="substituting-a-numbered-group"></a>番号付きグループの置換  
- `$`*number* 言語要素は、 *number* キャプチャ グループに一致する最後の部分文字列を置換文字列に含めます。 *number* は、キャプチャ グループのインデックスです。 たとえば、置換パターン `$1` は、一致した部分文字列がキャプチャされた最初のグループに置き換えられることを示します。 番号付きキャプチャ グループの詳細については、「 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」を参照してください。  
+ `$`*number* 言語要素は、 *number* キャプチャ グループに一致する最後の部分文字列を置換文字列に含めます。 *number* は、キャプチャ グループのインデックスです。 たとえば、置換パターン `$1` は、一致した部分文字列がキャプチャされた最初のグループに置き換えられることを示します。 番号付きキャプチャ グループの詳細については、「 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)」を参照してください。  
   
  `$` 以降のすべての数字が、 *number* グループに所属すると解釈されます。 そうしたくない場合は、代わりに名前付きグループを使用できます。 たとえば、 `${1}1` の代わりに、置換文字列 `$11` を使用して、最初のキャプチャ グループの値と数字 "1" を置換文字列として定義できます。 詳細については、「 [名前付きグループの置換](#substituting-a-named-group)」を参照してください。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "78160080"
 |`(\s?\d+[.,]?\d*)`|空白の後に 1 つ以上の 10 進数、0 個または 1 個のピリオドまたはコンマ、さらに 0 個以上の 10 進数が続くパターンに一致します。 これが最初のキャプチャ グループです。 置換パターンは `$1`であるため、 <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを呼び出すと、一致する部分文字列全体がこのキャプチャされたグループに置き換えられます。|  
 
 ## <a name="substituting-a-named-group"></a>名前付きグループの置換  
- `${`*name*`}` 言語要素は、 *name* キャプチャ グループに一致する最後の部分文字列を置換します。ここで、 *name* は `(?<`*name*`>)` 言語要素で定義されているキャプチャ グループの名前です。 名前付きキャプチャ グループの詳細については、「 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」を参照してください。  
+ `${`*name*`}` 言語要素は、 *name* キャプチャ グループに一致する最後の部分文字列を置換します。ここで、 *name* は `(?<`*name*`>)` 言語要素で定義されているキャプチャ グループの名前です。 名前付きキャプチャ グループの詳細については、「 [Grouping Constructs](grouping-constructs-in-regular-expressions.md)」を参照してください。  
   
  *name* が正規表現パターンで定義されている有効な名前付きキャプチャ グループを指定していないものの、数字で構成されている場合、 `${`*name*`}` は番号付きグループとして解釈されます。  
   
@@ -199,4 +199,4 @@ ms.locfileid: "78160080"
   
 ## <a name="see-also"></a>関連項目
 
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)

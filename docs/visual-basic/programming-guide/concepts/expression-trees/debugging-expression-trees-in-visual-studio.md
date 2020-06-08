@@ -2,12 +2,12 @@
 title: 式ツリーのデバッグ (Visual Studio)
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: 287f3096a1af8b9fa42d252c5240d7caefa6bac8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3811958353d1d55ce74da41c6a45dbe730cc9790
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616900"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375435"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>式ツリーのデバッグ (Visual Studio) (Visual Basic)
 アプリケーションをデバッグするときに、式ツリーの構造および内容を分析できます。 式ツリーの構造の概要を簡単に取得するには、`DebugView` プロパティ使用できます。このプロパティでは、[特殊な構文を使って](debugview-syntax.md)式ツリーが表されます。 (`DebugView` はデバッグ モードでのみ使用できることに注意してください。)  
@@ -40,7 +40,7 @@ ms.locfileid: "83616900"
 
 ## <a name="see-also"></a>関連項目
 
-- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
+- [式ツリー (Visual Basic)](index.md)
 - [Visual Studio でのデバッグ](/visualstudio/debugger/debugger-feature-tour)
 - [カスタム ビジュアライザーを作成する](/visualstudio/debugger/create-custom-visualizers-of-data)
 - [`DebugView` 構文](debugview-syntax.md)

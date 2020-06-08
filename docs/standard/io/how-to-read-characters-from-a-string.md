@@ -13,12 +13,12 @@ helpviewer_keywords:
 - reading data, strings
 - streams, reading characters from string
 ms.assetid: 27ea5e52-6db8-42d8-980a-50bcfc7fd270
-ms.openlocfilehash: ed267ad62e46f6216c94906df1bcefb0684ab51b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6d32e9c5f89dba7590958bae6cc0489f104cd19a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155764"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291774"
 ---
 # <a name="how-to-read-characters-from-a-string"></a>方法: 文字列からの文字の読み取り
 次のコード例は、文字列から同期的または非同期的に文字を読み取る方法を示しています。  
@@ -39,11 +39,11 @@ ms.locfileid: "78155764"
 
 - <xref:System.IO.StringReader>  
 - <xref:System.IO.StringReader.Read%2A?displayProperty=nameWithType>  
-- [非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
+- [非同期ファイル I/O](asynchronous-file-i-o.md)  
 - [方法: ディレクトリ一覧を作成する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5cf8zcfh(v=vs.100))  
-- [方法: 新しく作成されたデータ ファイルに対して読み書きする](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [方法: ログ ファイルを開いて情報を追加する](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [方法: ファイルからテキストを読み取る](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [方法: テキストのファイルへの書き込み](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [方法: 文字列への文字の書き込み](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
-- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)
+- [方法: 新しく作成されたデータ ファイルに対して読み書きする](how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [方法: ログ ファイルを開いて情報を追加する](how-to-open-and-append-to-a-log-file.md)  
+- [方法: ファイルからテキストを読み取る](how-to-read-text-from-a-file.md)  
+- [方法: テキストのファイルへの書き込み](how-to-write-text-to-a-file.md)  
+- [方法: 文字列への文字の書き込み](how-to-write-characters-to-a-string.md)  
+- [ファイルおよびストリーム入出力](index.md)

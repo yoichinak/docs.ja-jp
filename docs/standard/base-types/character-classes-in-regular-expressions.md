@@ -12,12 +12,12 @@ helpviewer_keywords:
 - characters, matching syntax
 - .NET Framework regular expressions, character classes
 ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
-ms.openlocfilehash: 07bd63c90bc8d78c9831e2007695a232a85111b1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 85107bf2234eda1705126e524acd5b35952094bc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159339"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84292099"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
@@ -58,7 +58,7 @@ ms.locfileid: "78159339"
 
 `[*character_group*]`
 
- ここで、*character_group* は、入力文字列に含まれるなら一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
+ ここで、*character_group* は、入力文字列に含まれるなら一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
  文字の範囲を指定する構文は次のとおりです。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "78159339"
 
 `[*^character_group*]`
 
- ここで、*character_group* は、入力文字列に含まれない場合に一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
+ ここで、*character_group* は、入力文字列に含まれない場合に一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
  文字の範囲を指定する構文は次のとおりです。  
 
@@ -158,7 +158,7 @@ ms.locfileid: "78159339"
 ## <a name="any-character-"></a>任意の文字: .  
  ピリオド文字 (.) は、`\n` (改行文字、\u000A) を除く任意の文字と一致しますが、次の 2 つの制限があります。  
   
-- 正規表現パターンが <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションで修飾されている場合、または `.` 文字クラスを含むパターンの一部が `s` オプションで修飾されている場合は、`.` は任意の文字と一致します。 詳細については、「 [正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」を参照してください。  
+- 正規表現パターンが <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションで修飾されている場合、または `.` 文字クラスを含むパターンの一部が `s` オプションで修飾されている場合は、`.` は任意の文字と一致します。 詳細については、「 [正規表現のオプション](regular-expression-options.md)」を参照してください。  
   
      `.` 文字クラスの既定の動作と <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションが指定されている場合の動作の違いの例を次に示します。 正規表現 `^.+` は文字列の先頭から開始し、すべての文字と一致します。 既定では、照合は 1 行目の末尾で終了します。正規表現パターンは復帰文字 `\r` (\u000D) と一致しますが、`\n` とは一致しません。 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションは入力文字列全体を単一行として解釈するので、`\n` を含む入力文字列内のすべての文字と一致します。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "78159339"
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  
   
 > [!NOTE]
-> `.` 言語要素は任意の文字と一致するので、正規表現パターンが任意の文字と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
+> `.` 言語要素は任意の文字と一致するので、正規表現パターンが任意の文字と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](quantifiers-in-regular-expressions.md)」を参照してください。  
   
 <a name="CategoryOrBlock"></a>
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode カテゴリまたは Unicode ブロック: \p{}  
@@ -237,10 +237,10 @@ ms.locfileid: "78159339"
 |Nd|Number, Decimal Digit (数、10 進数字)|  
 |Pc|Punctuation, Connector (句読点、接続)。 このカテゴリには 10 文字が含まれ、そのうち最もよく使用される文字は LOWLINE 文字 (_)、u+005F です。|  
   
- ECMAScript 準拠の動作が指定された場合、`\w` は `[a-zA-Z_0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
+ ECMAScript 準拠の動作が指定された場合、`\w` は `[a-zA-Z_0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
 > [!NOTE]
-> `\w` 言語要素は単語に使用される任意の文字と一致するので、正規表現パターンが単語に使用される任意の文字の後に特定の単語に使用される文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
+> `\w` 言語要素は単語に使用される任意の文字と一致するので、正規表現パターンが単語に使用される任意の文字の後に特定の単語に使用される文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](quantifiers-in-regular-expressions.md)」を参照してください。  
   
  `\w` 言語要素を使用して単語内の重複する文字を照合する例を次に示します。 この例では、次のように解釈できる正規表現パターン `(\w)\1` を定義しています。  
   
@@ -271,10 +271,10 @@ ms.locfileid: "78159339"
 |Nd|Number, Decimal Digit (数、10 進数字)|  
 |Pc|Punctuation, Connector (句読点、接続)。 このカテゴリには 10 文字が含まれ、そのうち最もよく使用される文字は LOWLINE 文字 (_)、u+005F です。|  
   
- ECMAScript 準拠の動作が指定された場合、`\W` は `[^a-zA-Z_0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
+ ECMAScript 準拠の動作が指定された場合、`\W` は `[^a-zA-Z_0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
 > [!NOTE]
-> `\W` 言語要素は単語に使用されない任意の文字と一致するので、正規表現パターンが単語に使用されない任意の文字の後に特定の単語に使用されない文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「[正規表現での量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
+> `\W` 言語要素は単語に使用されない任意の文字と一致するので、正規表現パターンが単語に使用されない任意の文字の後に特定の単語に使用されない文字が続く語と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「[正規表現での量指定子](quantifiers-in-regular-expressions.md)」を参照してください。  
   
  `\W` 文字クラスの例を次に示します。  この例では、単語の後に 1 つまたは 2 つの単語に使用されない文字 (空白や句読点など) が続く場合に一致する正規表現パターン `\b(\w+)(\W){1,2}` を定義しています。 この正規表現の解釈を次の表に示します。  
   
@@ -303,7 +303,7 @@ ms.locfileid: "78159339"
 |`\x85`|省略記号または NEXT LINE (NEL) 文字 (…) (\u0085)。|  
 |`\p{Z}`|任意の区切り記号と一致します。|  
   
- ECMAScript 準拠の動作が指定された場合、`\s` は `[ \f\n\r\t\v]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
+ ECMAScript 準拠の動作が指定された場合、`\s` は `[ \f\n\r\t\v]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
  `\s` 文字クラスの例を次に示します。 この例では、"s" または "es" で終わる単語の後に空白文字または入力文字列の末尾が続く場合に一致する正規表現パターン `\b\w+(e)?s(\s|$)` を定義しています。 この正規表現の解釈を次の表に示します。  
   
@@ -322,7 +322,7 @@ ms.locfileid: "78159339"
 ## <a name="non-whitespace-character-s"></a>空白以外の文字: \S  
  `\S` は、空白文字以外の任意の文字と一致します。 `[^\f\n\r\t\v\x85\p{Z}]` 正規表現パターン、または空白文字と一致する `\s` に相当する正規表現パターンの逆と同じ結果をもたらします。 詳細については、「[空白文字: \s](#WhitespaceCharacter)」を参照してください。  
   
- ECMAScript 準拠の動作が指定された場合、`\S` は `[^ \f\n\r\t\v]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
+ ECMAScript 準拠の動作が指定された場合、`\S` は `[^ \f\n\r\t\v]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
  `\S` 言語要素の例を次に示します。 正規表現パターン `\b(\S+)\s?` は、空白文字で区切られた文字列と一致します。 一致部分の <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトの 2 番目の要素に一致する文字列が含まれます。 この正規表現の解釈を次の表に示します。  
   
@@ -339,7 +339,7 @@ ms.locfileid: "78159339"
 ## <a name="decimal-digit-character-d"></a>10 進数字: \d  
  `\d` は、10 進数字と一致します。 標準の 10 進数 0 ～ 9 およびその他の各種文字セットの 10 進数を含む `\p{Nd}` 正規表現パターンと同じ結果をもたらします。  
   
- ECMAScript 準拠の動作が指定された場合、`\d` は `[0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
+ ECMAScript 準拠の動作が指定された場合、`\d` は `[0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
  `\d` 言語要素の例を次に示します。 この例では、入力文字列が米国およびカナダの有効な電話番号を表すかどうかをテストします。 正規表現パターン `^(\(?\d{3}\)?[\s-])?\d{3}-\d{4}$` は、次の表に示すように定義されています。  
   
@@ -361,7 +361,7 @@ ms.locfileid: "78159339"
 ## <a name="non-digit-character-d"></a>数字以外の文字: \D  
  `\D` は、数字以外の文字と一致します。 `\P{Nd}` 正規表現パターンと同じ結果をもたらします。  
   
- ECMAScript 準拠の動作が指定された場合、`\D` は `[^0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
+ ECMAScript 準拠の動作が指定された場合、`\D` は `[^0-9]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
   
  \D 言語要素の例を次に示します。 部品番号などの文字列が 10 進数および 10 進数以外の文字を適切に組み合わせて構成されているかどうかをテストします。 正規表現パターン `^\D\d{1,5}\D*$` は、次の表に示すように定義されています。  
   
@@ -570,5 +570,5 @@ ms.locfileid: "78159339"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Char.GetUnicodeCategory%2A>
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)
+- [正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)
+- [正規表現のオプション](regular-expression-options.md)

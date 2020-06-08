@@ -12,12 +12,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, backreference constructs
 - regular expressions, backreference constructs
 ms.assetid: 567a4b8d-0e79-49dc-8df9-f4b1aa376a2a
-ms.openlocfilehash: 905578d763ebe5d5b8eb96a9056fbe11fbfab137
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87c3dbde2eb2b5a19b91f34bb2b088af5c0d1827
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711533"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290605"
 ---
 # <a name="backreference-constructs-in-regular-expressions"></a>正規表現での前方参照コンストラクト
 
@@ -26,7 +26,7 @@ ms.locfileid: "75711533"
 > [!NOTE]
 > 別の構文を使用して、置換文字列内の名前付きおよび番号付きのキャプチャ グループを参照します。 詳細については、「 [置換](substitutions-in-regular-expressions.md)」を参照してください。
 
-.NET では、番号付きおよび名前付きのキャプチャ グループを参照する個別の言語要素が定義されています。 キャプチャ グループの詳細については、「[グループ化コンストラクト](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」を参照してください。
+.NET では、番号付きおよび名前付きのキャプチャ グループを参照する個別の言語要素が定義されています。 キャプチャ グループの詳細については、「[グループ化コンストラクト](grouping-constructs-in-regular-expressions.md)」を参照してください。
 
 ## <a name="numbered-backreferences"></a>番号付き前方参照
 
@@ -138,4 +138,4 @@ ms.locfileid: "75711533"
 
 ## <a name="see-also"></a>参照
 
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
+- [正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)

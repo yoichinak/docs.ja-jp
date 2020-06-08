@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: 2f2bebfd06d4614f05cb66834cc5bef40524ce3b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 78a10624107cea349b01f484c641190a945dbd7e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348457"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400112"
 ---
 # <a name="include-visual-basic"></a>\<include> (Visual Basic)
 ソース コード内の型とメンバーを記述する別のファイルを参照します。  
@@ -61,4 +61,4 @@ ms.locfileid: "74348457"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML のコメント用タグ](index.md)

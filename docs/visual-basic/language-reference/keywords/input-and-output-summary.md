@@ -6,12 +6,12 @@ helpviewer_keywords:
 - output, Visual Basic functions
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
-ms.openlocfilehash: 12651977609d8a689f13777b0fe2244cdb10819c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 44321d75ce88beead2c631318392e5d630bae74b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348522"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373474"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>入出力の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -33,5 +33,5 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
   
 ## <a name="see-also"></a>関連項目
 
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+- [キーワード](index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](../runtime-library-members.md)

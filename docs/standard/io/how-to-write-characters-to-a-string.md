@@ -11,12 +11,12 @@ helpviewer_keywords:
 - streams, writing characters to strings
 - I/O [.NET Framework], writing characters to strings
 ms.assetid: 1222cbeb-0760-44bf-9888-914a2a37174b
-ms.openlocfilehash: ecbfa2de2c21ff79df269f74eeddfa0738e7e25c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 04fc21c452258a88292a886d952353ac55573121
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160282"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288252"
 ---
 # <a name="how-to-write-characters-to-a-string"></a>方法: 文字列への文字の書き込み
 次のコード例では、文字列の配列から同期または非同期的に文字が書き込まれます。  
@@ -38,11 +38,11 @@ ms.locfileid: "78160282"
 - <xref:System.IO.StringWriter>  
 - <xref:System.IO.StringWriter.Write%2A?displayProperty=nameWithType>  
 - <xref:System.Text.StringBuilder>  
-- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)  
-- [非同期ファイル I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
-- [方法: ディレクトリとファイルを列挙する](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [方法: 新しく作成されたデータ ファイルに対して読み書きする](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
-- [方法: ログ ファイルを開いて情報を追加する](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [方法: ファイルからテキストを読み取る](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [方法: テキストのファイルへの書き込み](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [方法: 文字列からの文字の読み取り](../../../docs/standard/io/how-to-read-characters-from-a-string.md)
+- [ファイルおよびストリーム入出力](index.md)  
+- [非同期ファイル I/O](asynchronous-file-i-o.md)  
+- [方法: ディレクトリとファイルを列挙する](how-to-enumerate-directories-and-files.md)  
+- [方法: 新しく作成されたデータ ファイルに対して読み書きする](how-to-read-and-write-to-a-newly-created-data-file.md)  
+- [方法: ログ ファイルを開いて情報を追加する](how-to-open-and-append-to-a-log-file.md)  
+- [方法: ファイルからテキストを読み取る](how-to-read-text-from-a-file.md)  
+- [方法: テキストのファイルへの書き込み](how-to-write-text-to-a-file.md)  
+- [方法: 文字列からの文字の読み取り](how-to-read-characters-from-a-string.md)

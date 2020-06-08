@@ -2,12 +2,12 @@
 title: 共通の属性
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 2889411779a275baa8c91862d4cac2f820d660d0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 57ef8f103d64a51d896f46d2889d78ec99ff3223
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353528"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400720"
 ---
 # <a name="common-attributes-visual-basic"></a>一般的な属性 (Visual Basic)
 
@@ -228,9 +228,9 @@ End Class
 |---|---|---|
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|呼び出し元を含むソース ファイルのフル パスです。 これはコンパイル時のパスです。|`String`|
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|メソッドの呼び出し元であるソース ファイルの行番号。|`Integer`|
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼び出し元のメソッド名またはプロパティ名。 詳細については、「[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)」を参照してください。|`String`|
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|呼び出し元のメソッド名またはプロパティ名。 詳細については、「[呼び出し元情報 (Visual Basic)](../caller-information.md)」を参照してください。|`String`|
 
-呼び出し元情報属性の詳細については、「[呼び出し元情報 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)」を参照してください。
+呼び出し元情報属性の詳細については、「[呼び出し元情報 (Visual Basic)](../caller-information.md)」を参照してください。
 
 ## <a name="visual-basic-attributes"></a><a name="VB"></a>Visual Basic の属性
 
@@ -273,7 +273,7 @@ End Structure
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../../index.md)
 - [属性](../../../../standard/attributes/index.md)
-- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [リフレクションを使用した属性へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- [リフレクション (Visual Basic)](../reflection.md)
+- [リフレクションを使用した属性へのアクセス (Visual Basic)](accessing-attributes-by-using-reflection.md)

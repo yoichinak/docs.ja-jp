@@ -7,12 +7,12 @@ helpviewer_keywords:
 - asynchronous programming, design patterns
 - asynchronous programming
 ms.assetid: c6baed9f-2a25-4728-9a9a-53b7b14840cf
-ms.openlocfilehash: ee8c90d63478e444b7d25cb7cbb5c969963d7c63
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 604e7a944579a284004817009b06c11b268d5daf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73130945"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289435"
 ---
 # <a name="event-based-asynchronous-pattern-eap"></a>イベント ベースの非同期パターン (EAP)
 
@@ -60,7 +60,7 @@ ms.locfileid: "73130945"
  [タスク並列ライブラリ (TPL)](../parallel-programming/task-parallel-library-tpl.md)  
  非同期操作および並列操作のプログラミング モデルについて説明します。  
   
- [スレッド化](../../../docs/standard/threading/index.md)  
+ [スレッド化](../threading/index.md)  
  .NET のマルチスレッド機能について説明します。  
   
 ## <a name="see-also"></a>参照

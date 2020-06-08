@@ -17,18 +17,18 @@ helpviewer_keywords:
 - standard TimeSpan format strings
 - formatting [.NET Framework], time intervals
 ms.assetid: 9f6c95eb-63ae-4dcc-9c32-f81985c75794
-ms.openlocfilehash: ec06edc16829c6d4caf8c760922aac1471e365c2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2ed9ca7337e40b5520ddbfc92925c5bedb45f701
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75346628"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289279"
 ---
 # <a name="standard-timespan-format-strings"></a>標準 TimeSpan 書式指定文字列
 
-標準の <xref:System.TimeSpan> 書式指定文字列では、単一の書式指定子の使用により、書式設定操作によって生成される <xref:System.TimeSpan> 値のテキスト表現が定義されます。 空白を含む複数の文字で構成される書式指定文字列は、カスタムの <xref:System.TimeSpan> 書式指定文字列として解釈されます。 詳細については、「[カスタム TimeSpan 書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)」を参照してください。  
+標準の <xref:System.TimeSpan> 書式指定文字列では、単一の書式指定子の使用により、書式設定操作によって生成される <xref:System.TimeSpan> 値のテキスト表現が定義されます。 空白を含む複数の文字で構成される書式指定文字列は、カスタムの <xref:System.TimeSpan> 書式指定文字列として解釈されます。 詳細については、「[カスタム TimeSpan 書式指定文字列](custom-timespan-format-strings.md)」を参照してください。  
   
- <xref:System.TimeSpan> 値の文字列形式は、<xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> メソッドのオーバーロードの呼び出しと、<xref:System.String.Format%2A?displayProperty=nameWithType> などの複合書式指定をサポートするメソッドによって生成されます。 詳細については、「[型の書式設定](../../../docs/standard/base-types/formatting-types.md)」と「[複合書式指定](../../../docs/standard/base-types/composite-formatting.md)」をご覧ください。 次の例では、書式設定操作で標準書式指定文字列を使用する方法を示しています。  
+ <xref:System.TimeSpan> 値の文字列形式は、<xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> メソッドのオーバーロードの呼び出しと、<xref:System.String.Format%2A?displayProperty=nameWithType> などの複合書式指定をサポートするメソッドによって生成されます。 詳細については、「[型の書式設定](formatting-types.md)」と「[複合書式指定](composite-formatting.md)」をご覧ください。 次の例では、書式設定操作で標準書式指定文字列を使用する方法を示しています。  
   
  [!code-csharp[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.timespan.standard/cs/formatexample1.cs#2)]
  [!code-vb[Conceptual.TimeSpan.Standard#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.standard/vb/formatexample1.vb#2)]  
@@ -122,6 +122,6 @@ ms.locfileid: "75346628"
   
 ## <a name="see-also"></a>関連項目
 
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
-- [カスタム時間間隔書式指定文字列](../../../docs/standard/base-types/custom-timespan-format-strings.md)
-- [文字列の解析](../../../docs/standard/base-types/parsing-strings.md)
+- [型の書式設定](formatting-types.md)
+- [カスタム時間間隔書式指定文字列](custom-timespan-format-strings.md)
+- [文字列の解析](parsing-strings.md)

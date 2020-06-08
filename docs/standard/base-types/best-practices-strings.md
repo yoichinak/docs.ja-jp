@@ -18,12 +18,12 @@ helpviewer_keywords:
 - comparing strings
 - strings [.NET Framework],comparing
 ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
-ms.openlocfilehash: 0fb7ec8d9de8fae7a0443984511e538d38d93c7a
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 28c1397c71debeed181acb2c1acb01b0f8cee7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441007"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289366"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 
@@ -309,7 +309,7 @@ LATIN SMALL LETTER A 文字 "a" (\u0061) は、COMBINING RING ABOVE 文字 "+ " 
 数値、日時など、文字列以外のデータをユーザーに表示するには、ユーザーのカルチャ設定を使用して書式設定します。 既定では、以下のすべてで、書式設定操作での現在のスレッド カルチャが使用されます。
 
 - [C#](../../csharp/language-reference/tokens/interpolated.md) と [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) のコンパイラでサポートされている挿入文字列。
-- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) または [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) の連結演算子を使用または <xref:System.String.Concat%2A?displayProperty=nameWithType> メソッドを直接呼び出す文字列連結操作。
+- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) または [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md) の連結演算子を使用または <xref:System.String.Concat%2A?displayProperty=nameWithType> メソッドを直接呼び出す文字列連結操作。
 - <xref:System.String.Format%2A?displayProperty=nameWithType> メソッド。
 - 数値型と日時型の `ToString` メソッド。
 

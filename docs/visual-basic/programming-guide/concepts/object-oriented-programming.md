@@ -2,12 +2,12 @@
 title: オブジェクト指向プログラミング
 ms.date: 07/20/2015
 ms.assetid: 49794de4-64c3-473c-b8ed-fe98835df69c
-ms.openlocfilehash: 3739919273f4cdd285d519c414c542f1a82a16d2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f7e222cde8ce80d4c52cc8b4b111c576eb4041b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401305"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413194"
 ---
 # <a name="object-oriented-programming-visual-basic"></a>オブジェクト指向プログラミング (Visual Basic)
 
@@ -61,8 +61,8 @@ End Structure
 
 詳細については次を参照してください:
 
-- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Class ステートメント](../../language-reference/statements/class-statement.md)
+- [Structure ステートメント](../../language-reference/statements/structure-statement.md)
 
 ### <a name="class-members"></a>クラス メンバー
 
@@ -114,11 +114,11 @@ End Class
 
 詳細については次を参照してください:
 
-- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
-- [Get ステートメント](../../../visual-basic/language-reference/statements/get-statement.md)
-- [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)
-- [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
-- [WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)
+- [Property ステートメント](../../language-reference/statements/property-statement.md)
+- [Get ステートメント](../../language-reference/statements/get-statement.md)
+- [Set ステートメント](../../language-reference/statements/set-statement.md)
+- [ReadOnly](../../language-reference/modifiers/readonly.md)
+- [WriteOnly](../../language-reference/modifiers/writeonly.md)
 
 #### <a name="methods"></a>メソッド
 
@@ -154,10 +154,10 @@ End Sub
 
 詳細については次を参照してください:
 
-- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [Function ステートメント](../../language-reference/statements/function-statement.md)
+- [Sub ステートメント](../../language-reference/statements/sub-statement.md)
+- [Overloads](../../language-reference/modifiers/overloads.md)
+- [拡張メソッド](../language-features/procedures/extension-methods.md)
 
 #### <a name="constructors"></a>コンストラクター
 
@@ -173,7 +173,7 @@ Class SampleClass
 End Class
 ```
 
-詳細については次を参照してください:[オブジェクトの有効期間: オブジェクトの作成と破棄](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
+詳細については次を参照してください:[オブジェクトの有効期間: オブジェクトの作成と破棄](../language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 
 #### <a name="destructors"></a>デストラクター
 
@@ -185,13 +185,13 @@ End Class
 
 クラスやオブジェクトは、何か重要なことが起こった場合に、イベントを使用して他のクラスまたはオブジェクトに通知を送ります。 イベントを送信する (発生させる) クラスは "*パブリッシャー*" と呼ばれ、イベントを受信する (処理する) クラスは "*サブスクライバー*" と呼ばれます。 イベント、およびイベントの発生と処理の詳細については、「[イベント](../../../standard/events/index.md)」をご覧ください。
 
-- イベントを宣言するには、[Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)を使用します。
+- イベントを宣言するには、[Event ステートメント](../../language-reference/statements/event-statement.md)を使用します。
 
-- イベントを発生させるには、[RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)を使用します。
+- イベントを発生させるには、[RaiseEvent ステートメント](../../language-reference/statements/raiseevent-statement.md)を使用します。
 
-- 宣言によってイベント ハンドラーを指定するには、[WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md) ステートメントと [Handles](../../../visual-basic/language-reference/statements/handles-clause.md) 句を使用します。
+- 宣言によってイベント ハンドラーを指定するには、[WithEvents](../../language-reference/modifiers/withevents.md) ステートメントと [Handles](../../language-reference/statements/handles-clause.md) 句を使用します。
 
-- イベントに関連付けるイベント ハンドラーを動的に追加、削除、変更できるようにするには、[AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)と [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)に [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)を組み合わせて使用します。
+- イベントに関連付けるイベント ハンドラーを動的に追加、削除、変更できるようにするには、[AddHandler ステートメント](../../language-reference/statements/addhandler-statement.md)と [RemoveHandler ステートメント](../../language-reference/statements/removehandler-statement.md)に [AddressOf 演算子](../../language-reference/operators/addressof-operator.md)を組み合わせて使用します。
 
 #### <a name="nested-classes"></a>入れ子になったクラス
 
@@ -219,13 +219,13 @@ Dim nestedInstance As Container.Nested = New Container.Nested()
 
 |Visual Basic の修飾子|定義|
 |---------------------------|----------------|
-|[Public](../../../visual-basic/language-reference/modifiers/public.md)|この型またはメンバーには、同じアセンブリ内の他のコードや、そのアセンブリを参照する別のアセンブリ内の任意のコードからアクセスできます。|
-|[Private](../../../visual-basic/language-reference/modifiers/private.md)|この型またはメンバーには、同じクラスのコードのみがアクセスできます。|
-|[Protected](../../../visual-basic/language-reference/modifiers/protected.md)|この型またはメンバーには、同じクラスまたは派生クラスのコードのみがアクセスできます。|
-|[Friend](../../../visual-basic/language-reference/modifiers/friend.md)|この型またはメンバーには、同じアセンブリ内の任意のコードからアクセスできますが、別のアセンブリからはアクセスできません。|
+|[Public](../../language-reference/modifiers/public.md)|この型またはメンバーには、同じアセンブリ内の他のコードや、そのアセンブリを参照する別のアセンブリ内の任意のコードからアクセスできます。|
+|[Private](../../language-reference/modifiers/private.md)|この型またはメンバーには、同じクラスのコードのみがアクセスできます。|
+|[Protected](../../language-reference/modifiers/protected.md)|この型またはメンバーには、同じクラスまたは派生クラスのコードのみがアクセスできます。|
+|[Friend](../../language-reference/modifiers/friend.md)|この型またはメンバーには、同じアセンブリ内の任意のコードからアクセスできますが、別のアセンブリからはアクセスできません。|
 |`Protected Friend`|この型またはメンバーには、同じアセンブリ内の任意のコード、または別のアセンブリ内の任意の派生クラスからアクセスできます。|
 
-詳しくは、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+詳しくは、「[Visual Basic でのアクセス レベル](../language-features/declared-elements/access-levels.md)」を参照してください。
 
 ### <a name="instantiating-classes"></a>クラスのインスタンス化
 
@@ -253,8 +253,8 @@ Dim sampleObject = New SampleClass With
 
 詳細については次を参照してください:
 
-- [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
-- [オブジェクト初期化子: 名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [New 演算子](../../language-reference/operators/new-operator.md)
+- [オブジェクト初期化子: 名前付きの型と匿名型](../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 
 ### <a name="shared-classes-and-members"></a>共有クラスおよびメンバー
 
@@ -278,8 +278,8 @@ MsgBox(SampleClass.SampleString)
 
  詳細については次を参照してください:
 
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)
+- [Shared](../../language-reference/modifiers/shared.md)
+- [Module ステートメント](../../language-reference/statements/module-statement.md)
 
 ### <a name="anonymous-types"></a>匿名型
 
@@ -293,7 +293,7 @@ Dim sampleObject =
     New With {Key .FirstProperty = "A", .SecondProperty = "B"}
 ```
 
-詳細については次を参照してください:[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)。
+詳細については次を参照してください:[匿名型](../language-features/objects-and-classes/anonymous-types.md)。
 
 ## <a name="inheritance"></a>継承
 
@@ -328,9 +328,9 @@ End Class
 
 詳細については次を参照してください:
 
-- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
+- [Inherits ステートメント](../../language-reference/statements/inherits-statement.md)
+- [NotInheritable](../../language-reference/modifiers/notinheritable.md)
+- [MustInherit](../../language-reference/modifiers/mustinherit.md)
 
 ### <a name="overriding-members"></a>メンバーのオーバーライド
 
@@ -340,11 +340,11 @@ End Class
 
 |Visual Basic の修飾子|定義|
 |---------------------------|----------------|
-|[Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)|派生クラスでのクラス メンバーのオーバーライドを許可します。|
-|[Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)|基底クラスで定義されている仮想メンバー (オーバーライドできるメンバー) をオーバーライドします。|
-|[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)|継承するクラスでのメンバーのオーバーライドを禁止します。|
-|[MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)|派生クラスでのクラス メンバーのオーバーライドを必須にします。|
-|[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)|基底クラスから継承されたメンバーを隠ぺいします。|
+|[Overridable](../../language-reference/modifiers/overridable.md)|派生クラスでのクラス メンバーのオーバーライドを許可します。|
+|[Overrides](../../language-reference/modifiers/overrides.md)|基底クラスで定義されている仮想メンバー (オーバーライドできるメンバー) をオーバーライドします。|
+|[NotOverridable](../../language-reference/modifiers/notoverridable.md)|継承するクラスでのメンバーのオーバーライドを禁止します。|
+|[MustOverride](../../language-reference/modifiers/mustoverride.md)|派生クラスでのクラス メンバーのオーバーライドを必須にします。|
+|[Shadows](../../language-reference/modifiers/shadows.md)|基底クラスから継承されたメンバーを隠ぺいします。|
 
 ## <a name="interfaces"></a>インターフェイス
 
@@ -371,9 +371,9 @@ End Class
 
 詳細については次を参照してください:
 
-- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
-- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)
+- [インターフェイス](../language-features/interfaces/index.md)
+- [Interface ステートメント](../../language-reference/statements/interface-statement.md)
+- [Implements ステートメント](../../language-reference/statements/implements-statement.md)
 
 ## <a name="generics"></a>ジェネリック
 
@@ -397,7 +397,7 @@ sampleObject.Field = "Sample string"
 詳細については次を参照してください:
 
 - [ジェネリック](../../../standard/generics/index.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Generic Types in Visual Basic](../language-features/data-types/generic-types.md)
 
 ## <a name="delegates"></a>デリゲート
 
@@ -430,10 +430,10 @@ End Class
 
 詳細については次を参照してください:
 
-- [デリゲート](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [デリゲート](../language-features/delegates/index.md)
+- [Delegate ステートメント](../../language-reference/statements/delegate-statement.md)
+- [AddressOf 演算子](../../language-reference/operators/addressof-operator.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic プログラミング ガイド](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../index.md)

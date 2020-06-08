@@ -2,12 +2,12 @@
 title: デリゲートの分散
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
-ms.openlocfilehash: 11146bc4a60f55fc0373f0b5dfa5d44dcf748a5b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 86ea9f3f744381bcff71a88e9d88485cafa4a568
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348998"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84375617"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>デリゲートの変性 (Visual Basic)
 
@@ -76,7 +76,7 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-詳細については、「[デリゲートの変性の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)」および「[Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)」を参照してください。
+詳細については、「[デリゲートの変性の使用 (Visual Basic)](using-variance-in-delegates.md)」および「[Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)」を参照してください。
 
 ## <a name="variance-in-generic-type-parameters"></a>ジェネリック型パラメーターの変性
 
@@ -133,7 +133,7 @@ End Sub
 
 - <xref:System.Converter%602> デリゲート
 
-使用例を含む詳細については、「[Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)」を参照してください。
+使用例を含む詳細については、「[Func および Action 汎用デリゲートでの変性の使用 (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)」を参照してください。
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>汎用デリゲートのバリアント型パラメーターの宣言
 
@@ -154,7 +154,7 @@ Public Delegate Sub DContravariant(Of In A)(ByVal a As A)
 > [!IMPORTANT]
 > Visual Basic の `ByRef` パラメーターを、バリアントとしてマークすることはできません。
 
-同じデリゲートで、型パラメーターが異なる場合は、変性と共変性の両方をサポートすることもできます。 これを次の例に示します。
+同じデリゲートで、型パラメーターが異なる場合は、変性と共変性の両方をサポートすることもできます。 次の例を参照してください。
 
 ```vb
 Public Delegate Function DVariant(Of In A, Out R)(ByVal a As A) As R
@@ -209,9 +209,9 @@ End Sub
 
 ## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Visual Basic における厳密でないデリゲート変換
 
-厳密でないデリゲート変換を使用すると、メソッドのシグネチャをデリゲート型と照合する際の寛容性を大きくすることができます。 たとえば、デリゲートにメソッドを代入する際に、関数の戻り値を省略したり、パラメーターの指定を省略したりすることが可能です。 詳細については、「[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。
+厳密でないデリゲート変換を使用すると、メソッドのシグネチャをデリゲート型と照合する際の寛容性を大きくすることができます。 たとえば、デリゲートにメソッドを代入する際に、関数の戻り値を省略したり、パラメーターの指定を省略したりすることが可能です。 詳細については、「[厳密でないデリゲート変換](../../language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - [ジェネリック](../../../../standard/generics/index.md)
-- [Func および Action 汎用デリゲートでの分散の使用 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)
+- [Func および Action 汎用デリゲートでの分散の使用 (Visual Basic)](using-variance-for-func-and-action-generic-delegates.md)

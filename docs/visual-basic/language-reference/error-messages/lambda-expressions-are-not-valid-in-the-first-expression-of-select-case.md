@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: e9bf248da980705f070be878208c55b0cc6dae01
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 08f7cd9dd95a10cad0df6539ba43122495347bae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64589725"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397364"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>ラムダ式は、'Select Case' ステートメントの最初の式では有効ではありません
 ラムダ式は、`Select Case` ステートメントのテスト式に使用できません。 ラムダ式の定義では関数を返しますが、`Select Case` ステートメントのテスト式は基本データ型である必要があります。  
@@ -42,6 +42,6 @@ End Select
   
 ## <a name="see-also"></a>関連項目
 
-- [ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [Select...Case ステートメント](../../../visual-basic/language-reference/statements/select-case-statement.md)
+- [ラムダ式](../../programming-guide/language-features/procedures/lambda-expressions.md)
+- [If...Then...Else ステートメント](../statements/if-then-else-statement.md)
+- [Select...Case ステートメント](../statements/select-case-statement.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - variables [Visual Basic], defining
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
-ms.openlocfilehash: f63f0f0212913f95baab2a8a43c4b7f25a859cd9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 09fe53f4bc2b6d025b762c6595c5337263456bae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401467"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401980"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic におけるステートメント
 
@@ -54,7 +54,7 @@ Visual Basic におけるステートメントは完全な命令です。 キー
 
 [!code-vb[VbVbalrStatements#81](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#81)]
 
-変数がオブジェクト変数である場合は、次の例に示すように、[New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)キーワードを使用して宣言するときに、そのクラスのインスタンスを明示的に作成できます。
+変数がオブジェクト変数である場合は、次の例に示すように、[New 演算子](../../language-reference/operators/new-operator.md)キーワードを使用して宣言するときに、そのクラスのインスタンスを明示的に作成できます。
 
 [!code-vb[VbVbalrStatements#82](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#82)]
 
@@ -82,7 +82,7 @@ Visual Basic におけるステートメントは完全な命令です。 キー
 
 ### <a name="eligible-programming-elements"></a>対象となるプログラミング要素
 
-代入演算子の左辺のプログラミング要素では、値を受け入れて格納できる必要があります。 これは、[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) ではない変数またはプロパティである必要があるか、あるいは配列要素である必要があることを意味します。 代入ステートメントのコンテキストでは、このような要素は、"左辺値" の場合、*lvalue* と呼ばれることもあります。
+代入演算子の左辺のプログラミング要素では、値を受け入れて格納できる必要があります。 これは、[ReadOnly](../../language-reference/modifiers/readonly.md) ではない変数またはプロパティである必要があるか、あるいは配列要素である必要があることを意味します。 代入ステートメントのコンテキストでは、このような要素は、"左辺値" の場合、*lvalue* と呼ばれることもあります。
 
 代入演算子の右辺の値は、式によって生成されます。これは、リテラル、定数、変数、プロパティ、配列要素、その他の式、または関数呼び出しの任意の組み合わせで構成できます。 次に例を示します。
 
@@ -112,7 +112,7 @@ Visual Basic におけるステートメントは完全な命令です。 キー
 
 [!code-vb[VbVbalrStatements#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#78)]
 
-この型の演算子を使用することで、さまざまな複合代入演算を実行できます。 これらの演算子の一覧と詳細については、「[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)」を参照してください。
+この型の演算子を使用することで、さまざまな複合代入演算を実行できます。 これらの演算子の一覧と詳細については、「[代入演算子](../../language-reference/operators/assignment-operators.md)」を参照してください。
 
 連結代入演算子 (`&=`) は、次の例に示すように、既存の文字列の末尾に文字列を追加する場合に便利です。
 
@@ -168,25 +168,25 @@ Visual Basic におけるステートメントは完全な命令です。 キー
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
-   詳細については、「[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)」を参照してください。
+   詳細については、「[機能別の演算子一覧](../../language-reference/operators/operators-listed-by-functionality.md)」を参照してください。
 
 - 代入演算子 (`=`、`&=`、`:=`、`+=`、`-=`、`*=`、`/=`、`\=`、`^=`、`<<=`、`>>=`) の後。 次に例を示します。
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   詳細については、「[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)」を参照してください。
+   詳細については、「[機能別の演算子一覧](../../language-reference/operators/operators-listed-by-functionality.md)」を参照してください。
 
 - 式内の 2 項演算子 (`+`、`-`、`/`、`*`、`Mod`、`<>`、`<`、`>`、`<=`、`>=`、`^`、`>>`、`<<`、`And`、`AndAlso`、`Or`、`OrElse`、`Like`、`Xor`) の後。 次に例を示します。
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
-   詳細については、「[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)」を参照してください。
+   詳細については、「[機能別の演算子一覧](../../language-reference/operators/operators-listed-by-functionality.md)」を参照してください。
 
 - `Is` および `IsNot` 演算子の後。 次に例を示します。
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
-   詳細については、「[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)」を参照してください。
+   詳細については、「[機能別の演算子一覧](../../language-reference/operators/operators-listed-by-functionality.md)」を参照してください。
 
 - メンバー修飾子文字 (`.`) の後、およびメンバー名の前。 次に例を示します。
 
@@ -196,37 +196,37 @@ Visual Basic におけるステートメントは完全な命令です。 キー
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   詳細については、「[With...End With ステートメント](../../../visual-basic/language-reference/statements/with-end-with-statement.md)」または「[オブジェクト初期化子: 名前付きの型と匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)」を参照してください。
+   詳細については、「[With...End With ステートメント](../../language-reference/statements/with-end-with-statement.md)」または「[オブジェクト初期化子: 名前付きの型と匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)」を参照してください。
 
 - XML 軸プロパティの修飾子 (`.`、`.@` または `...`) の後。 しかし、`With` キーワードを使用する場合は、メンバー修飾子を指定するときに行連結文字 (`_`) を含める必要があります。 次に例を示します。
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   詳細については、「[XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)」を参照してください。
+   詳細については、「[XML 軸プロパティ](../../language-reference/xml-axis/index.md)」を参照してください。
 
 - 属性を指定する場合は、小なり記号 (<) の後、または大なり記号 (`>`) の前。 また、属性を指定する場合は、大なり記号 (`>`) の後。 しかし、アセンブリ レベルまたはモジュール レベルの属性を指定する場合は、行連結文字 (`_`) を含める必要があります。 次に例を示します。
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
-   詳細については、「[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)」を参照してください。
+   詳細については、「[属性の概要](../concepts/attributes/index.md)」を参照してください。
 
 - クエリ演算子 (`Aggregate`、`Distinct`、`From`、`Group By`、`Group Join`、`Join`、`Let`、`Order By`、`Select`、`Skip`、`Skip While`、`Take`、`Take While`、`Where`、`In`、`Into`、`On`、`Ascending`、および `Descending`) の前か後。 複数のキーワードで構成されているクエリ演算子 (`Order By`、`Group Join`、`Take While`、および `Skip While`) のキーワードの間で改行することはできません。 次に例を示します。
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
-   詳細については、「[クエリ](../../../visual-basic/language-reference/queries/index.md)」を参照してください。
+   詳細については、「[クエリ](../../language-reference/queries/index.md)」を参照してください。
 
 - `For Each` ステートメント内の `In` キーワードの後。 次に例を示します。
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   詳細については、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md) を参照してください。
+   詳細については、[For Each...Next ステートメント](../../language-reference/statements/for-each-next-statement.md) を参照してください。
 
 - コレクション初期化子内の `From` キーワードの後。 次に例を示します。
 
    [!code-vb[VbVbalrLineContinuation#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#13)]
 
-   詳細については、「[コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)」を参照してください。
+   詳細については、「[コレクション初期化子](collection-initializers/index.md)」を参照してください。
 
 ## <a name="adding-comments"></a>コメントの追加
 
@@ -244,7 +244,7 @@ Visual Basic におけるステートメントは完全な命令です。 キー
 
 |用語|定義|
 |---|---|
-|[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|`=`、`*=`、`&=` などの代入演算子に関する言語リファレンス ページへのリンクを提供します。|
+|[代入演算子](../../language-reference/operators/assignment-operators.md)|`=`、`*=`、`&=` などの代入演算子に関する言語リファレンス ページへのリンクを提供します。|
 |[演算子および式](./operators-and-expressions/index.md)|要素を演算子と組み合わせて新しい値を生成する方法を示します。|
-|[方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|1 つのステートメントを複数の行に分割する方法と、複数のステートメントを同じ行に配置する方法を示します。|
-|[方法: ステートメントへのラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|コード行にラベルを付ける方法を示します。|
+|[方法: コード内でステートメントを分割および連結する](../program-structure/how-to-break-and-combine-statements-in-code.md)|1 つのステートメントを複数の行に分割する方法と、複数のステートメントを同じ行に配置する方法を示します。|
+|[方法: ステートメントへのラベル付け](../program-structure/how-to-label-statements.md)|コード行にラベルを付ける方法を示します。|

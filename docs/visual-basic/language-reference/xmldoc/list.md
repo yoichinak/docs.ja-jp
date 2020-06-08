@@ -13,12 +13,12 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: db5c571d2f2c59419c886f6596f4e4dbd30d7baf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 955c1a4c5c5619f908b8d03dbf12360c23574478
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352318"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400087"
 ---
 # <a name="list-visual-basic"></a>\<list> (Visual Basic)
 リストまたはテーブルを定義します。  
@@ -55,7 +55,7 @@ ms.locfileid: "74352318"
   
  リストまたはテーブルでは、必要な数の `<item>` ブロックを使用できます。  
   
- コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
  この例では、`<list>` タグを使用して、解説セクションの箇条書きを定義します。  
@@ -64,4 +64,4 @@ ms.locfileid: "74352318"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML のコメント用タグ](index.md)

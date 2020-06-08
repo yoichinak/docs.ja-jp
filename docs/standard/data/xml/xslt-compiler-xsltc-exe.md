@@ -3,12 +3,12 @@ title: XSLT コンパイラ (xsltc.exe)
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 672a5ac8-8305-4d28-ba10-11089c2c0924
-ms.openlocfilehash: 83d880da65c2fc0730819f0a51c4e8b29deb4c8f
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 18f351546699487316858198b705e970de4856c1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75709726"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282611"
 ---
 # <a name="xslt-compiler-xsltcexe"></a>XSLT コンパイラ (xsltc.exe)
 XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。 コンパイルしたスタイル シートを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。 xsltc.exe を使用して署名があるアセンブリを生成することはできません。  
@@ -83,5 +83,5 @@ xsltc booksort.xsl output.xsl
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Xsl.XslCompiledTransform>
-- [方法: アセンブリを使用して XSLT 変換を実行する](../../../../docs/standard/data/xml/how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
-- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [方法: アセンブリを使用して XSLT 変換を実行する](how-to-perform-an-xslt-transformation-by-using-an-assembly.md)
+- [XSLT 変換](xslt-transformations.md)

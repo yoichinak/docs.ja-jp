@@ -2,12 +2,12 @@
 title: LINQ の概要
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: add442583bd81665533b704c0c9721b111cddd78
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b0fa27fd81b85eb89712f9e81f42e06505878f86
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338904"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397559"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ の概要 (Visual Basic)
 統合言語クエリ (LINQ) は、.NET Framework Version 3.5 で導入された、オブジェクトとデータの溝を埋める画期的な手法です。  
@@ -23,16 +23,16 @@ ms.locfileid: "74338904"
  ![Intellisense を使用する LINQ クエリを示す図。](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>次の手順  
- LINQ の詳細については、最初に「[Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)」の概要に関するセクションで基本的な概念を理解し、次に関心のある LINQ テクノロジのドキュメントを参照してください。  
+ LINQ の詳細については、最初に「[Visual Basic の LINQ の概要](getting-started-with-linq.md)」の概要に関するセクションで基本的な概念を理解し、次に関心のある LINQ テクノロジのドキュメントを参照してください。  
   
 - SQL Server データベース:[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)  
   
-- XML ドキュメント:[LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)  
+- XML ドキュメント:[LINQ to XML (Visual Basic)](linq-to-xml.md)  
   
 - ADO.NET データセット:[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
-- .NET のコレクション、ファイル、文字列など:[LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)  
+- .NET のコレクション、ファイル、文字列など:[LINQ to Objects (Visual Basic)](linq-to-objects.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) (Visual Basic)](index.md)

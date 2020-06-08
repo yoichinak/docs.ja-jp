@@ -7,12 +7,12 @@ helpviewer_keywords:
 - objects [Visual Basic], accessing
 - object variables [Visual Basic]
 ms.assetid: 6169a196-2b13-4ba5-a205-154bc1b87844
-ms.openlocfilehash: 7eb860bc732f923316b8ce1d7b94ecdb368bfec3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a5e61f9308d3484dc228a7d09cc2fd30a2f41b35
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351792"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410336"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic におけるオブジェクト変数
 
@@ -46,8 +46,8 @@ ctrlActv.Show()
 
 ## <a name="see-also"></a>関連項目
 
-- [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [方法: 長い修飾パスを持つオブジェクトへのアクセス時間を短縮する](../../../../visual-basic/programming-guide/language-features/variables/how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)
-- [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [オブジェクト変数の代入](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
+- [変数宣言](variable-declaration.md)
+- [方法: 長い修飾パスを持つオブジェクトへのアクセス時間を短縮する](how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md)
+- [オブジェクト変数の宣言](object-variable-declaration.md)
+- [オブジェクト変数の代入](object-variable-assignment.md)
+- [オブジェクト変数の値](object-variable-values.md)

@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: e21eea20d953e64e91522074c25f037451145bf8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa04c558abbcc4259c2821cdcbdc1669b91ffee0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664209"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402773"
 ---
-# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename>' は、基底 \<type> のアクセスをアセンブリの外側に展開しているため、\<type> '\<basetypename>' から継承できません
+# <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>ベース \<typename> のアクセスをアセンブリの外側に展開しているため、'\<type>' は \<basetypename> '\<type>' から継承できません。
 クラスまたはインターフェイスは、基底クラスまたはインターフェイスから継承されますが、アクセス レベルの制限が緩くなります。  
   
  たとえば、`Public` インターフェイスは `Friend` インターフェイスから継承し、または `Protected` クラスは、`Private` クラスから継承します。 これにより、目的のレベルを超えてアクセスする基底クラスまたはインターフェイスが公開されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "64664209"
   
 ## <a name="see-also"></a>関連項目
 
-- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
-- [Inherits ステートメント](../../../visual-basic/language-reference/statements/inherits-statement.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
+- [Class ステートメント](../statements/class-statement.md)
+- [Interface ステートメント](../statements/interface-statement.md)
+- [Inherits ステートメント](../statements/inherits-statement.md)
+- [Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)

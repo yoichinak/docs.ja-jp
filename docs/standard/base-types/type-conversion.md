@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Implicit operator
 - data types [.NET Framework], converting
 ms.assetid: ba36154f-064c-47d3-9f05-72f93a7ca96d
-ms.openlocfilehash: 0e88303f2bac2dae90a97f9d2de92af1d2a0f80d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 33b8c49033c901917e674879048558799f484194
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73976488"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291657"
 ---
 # <a name="type-conversion-in-the-net-framework"></a>.NET Framework における型変換
 すべての値には関連付けられた型があり、その値に割り振られる容量、可能な値の範囲、使用できるメンバーなどの属性を定義しています。 多くの値は複数の型として表現できます。 たとえば、値 4 は整数または浮動小数点数として表現できます。 型変換を実行すると、変換元の型の値と等価な値が新しい型で作成されますが、それが元のオブジェクトと同一である (値が正確に一致する) とは限りません。  
@@ -157,7 +157,7 @@ ms.locfileid: "73976488"
  [!code-csharp[Conceptual.Conversion#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.conversion/cs/convert1.cs#9)]
  [!code-vb[Conceptual.Conversion#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.conversion/vb/convert1.vb#9)]  
   
- <xref:System.Convert> クラスでサポートされる拡大変換と縮小変換の一覧表については、「[型変換の表](../../../docs/standard/base-types/conversion-tables.md)」を参照してください。  
+ <xref:System.Convert> クラスでサポートされる拡大変換と縮小変換の一覧表については、「[型変換の表](conversion-tables.md)」を参照してください。  
 
 ### <a name="custom-conversions-with-the-changetype-method"></a>ChangeType メソッドを使用するカスタム変換  
  <xref:System.Convert> クラスは、各基本型どうしの変換をサポートするだけでなく、カスタム型を 1 つ以上の定義済みの型に変換できます。 この変換は <xref:System.Convert.ChangeType%28System.Object%2CSystem.Type%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドによって実行されます。さらに、このメソッドが、<xref:System.IConvertible.ToType%2A?displayProperty=nameWithType> パラメーターの `value` メソッドに対する呼び出しをラップします。 したがって、`value` パラメーターで指定されるオブジェクトに、<xref:System.IConvertible> インターフェイスが実装されている必要があります。  
@@ -194,4 +194,4 @@ ms.locfileid: "73976488"
 
 - <xref:System.Convert?displayProperty=nameWithType>
 - <xref:System.IConvertible>
-- [型変換の表](../../../docs/standard/base-types/conversion-tables.md)
+- [型変換の表](conversion-tables.md)
