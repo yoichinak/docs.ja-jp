@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 39bbdb30-6a7a-4202-8da3-67ae9a0ab3a8
 topic_type:
 - apiref
-ms.openlocfilehash: e70d8ee40e16e37a12f8ed4033d2aa7489f0f25e
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fa0fe827300a86a906a254292434e2a56ebb4a47
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863961"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84498402"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID メソッド
 マネージスレッドの場合、現在のスレッドの ID を取得します。  
@@ -36,17 +36,17 @@ HRESULT GetCurrentThreadID(
  `pThreadId`  
  入出力返されたマネージスレッドの ID へのポインター。  
   
-## <a name="remarks"></a>コメント  
- 現在のスレッドが内部ランタイムスレッドまたはその他のアンマネージスレッドである場合、`GetCurrentThreadID` は HRESULT として CORPROF_E_NOT_MANAGED_THREAD を返し、`pThreadId` パラメーターの戻り値は null になります。  
+## <a name="remarks"></a>解説  
+ 現在のスレッドが内部ランタイムスレッドまたはその他のアンマネージスレッドである場合、は `GetCurrentThreadID` CORPROF_E_NOT_MANAGED_THREAD を HRESULT として返し、パラメーターの戻り値は null になり `pThreadId` ます。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

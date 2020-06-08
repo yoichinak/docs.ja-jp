@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 47b2a3b6-907d-43dc-858d-1ae7dca1316a
 topic_type:
 - apiref
-ms.openlocfilehash: 1868d13a9dbb73dbdf64e49c395bdbff02ce89d4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4401ea8a70e7ace8d8efc5e0a6d29f6db51b3df
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177451"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503813"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam メソッド
-ジェネリック型パラメーターの定義を作成し、そのジェネリック型パラメーターのトークンを取得します。  
+ジェネリック型パラメーターの定義を作成し、そのジェネリック型パラメーターへのトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,36 +41,36 @@ HRESULT DefineGenericParam (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]ジェネリック`mdTypeDef``mdMethodDef`パラメーターを定義するメソッドまたはコンストラクターを表すトークン。  
+ から`mdTypeDef` `mdMethodDef` ジェネリックパラメーターを定義するメソッドまたはコンストラクターを表すまたはトークン。  
   
  `ulParamSeq`  
- [in]ジェネリック パラメーターのインデックス。  
+ からジェネリックパラメーターのインデックス。  
   
  `dwParamFlags`  
- [in]ジェネリック パラメーターの型を記述する[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列挙体の値。  
+ からジェネリックパラメーターの型を記述する[Corgenericparamattr](corgenericparamattr-enumeration.md)列挙体の値。  
   
  `szname`  
- [in]パラメーターの名前。  
+ からパラメーターの名前。  
   
  `reserved`  
- [in]このパラメーターは、将来の拡張のために予約されています。  
+ からこのパラメーターは、将来の拡張のために予約されています。  
   
  `rtkConstraints`  
- [in]型制約のゼロで終わる配列。 配列メンバーは`mdTypeDef`、 、`mdTypeRef`または`mdTypeSpec`メタデータ・トークンでなければなりません。  
+ から型制約の0から終わる配列。 配列メンバーは `mdTypeDef` 、、 `mdTypeRef` 、またはメタデータトークンである必要があり `mdTypeSpec` ます。  
   
  `pgp`  
- [アウト]ジェネリック パラメーターを表すトークン。  
+ 入出力ジェネリックパラメーターを表すトークン。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)
