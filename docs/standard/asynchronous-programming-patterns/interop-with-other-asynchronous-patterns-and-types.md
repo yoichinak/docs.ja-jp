@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
-ms.openlocfilehash: 981c13c68eaf1eb0c19f95eb1b097935ea02a16d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fe5d8321a62b67a54dc09507e8fd86ee8d5cf74d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159755"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276557"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>他の非同期パターンと型との相互運用
-.NET Framework 1.0 では、 <xref:System.IAsyncResult> とも、 [非同期プログラミング モデル (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)パターンとも呼ばれる `Begin/End` パターンが導入されました。  .NET Framework 2.0 では、 [イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)が追加されました。  .NET Framework 4 以降では、 [タスク ベースの非同期パターン (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) が APM および EAP よりも優先されますが、以前のパターンからの移行ルーチンを簡単にビルドする機能が提供されます。  
+.NET Framework 1.0 では、 <xref:System.IAsyncResult> とも、 [非同期プログラミング モデル (APM)](asynchronous-programming-model-apm.md)パターンとも呼ばれる `Begin/End` パターンが導入されました。  .NET Framework 2.0 では、 [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md)が追加されました。  .NET Framework 4 以降では、 [タスク ベースの非同期パターン (TAP)](task-based-asynchronous-pattern-tap.md) が APM および EAP よりも優先されますが、以前のパターンからの移行ルーチンを簡単にビルドする機能が提供されます。  
   
  このトピックの内容:  
   
@@ -35,7 +35,7 @@ ms.locfileid: "78159755"
   
 <a name="ApmToTap"></a>
 ### <a name="from-apm-to-tap"></a>APM から TAP へ  
- [非同期プログラミング モデル (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) パターンは高度に構造化されているため、ラッパーをビルドして APM 実装を TAP 実装として公開するのはとても簡単です。 実際、.NET Framework では、.NET Framework 4 以降で、この変換を行うために <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドのオーバーロードという形でヘルパー ルーチンが用意されています。  
+ [非同期プログラミング モデル (APM)](asynchronous-programming-model-apm.md) パターンは高度に構造化されているため、ラッパーをビルドして APM 実装を TAP 実装として公開するのはとても簡単です。 実際、.NET Framework では、.NET Framework 4 以降で、この変換を行うために <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドのオーバーロードという形でヘルパー ルーチンが用意されています。  
   
  <xref:System.IO.Stream> クラスと、そのクラスの <xref:System.IO.Stream.BeginRead%2A> および <xref:System.IO.Stream.EndRead%2A> メソッドについて考えてみましょう。これらのメソッドは、同期 <xref:System.IO.Stream.Read%2A> メソッドに対応する APM 側のメソッドです。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "78159755"
   
 <a name="EAP"></a>
 ## <a name="tasks-and-the-event-based-asynchronous-pattern-eap"></a>タスクとイベント ベースの非同期パターン (EAP)  
- [イベント ベースの非同期パターン (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md) 実装をラップする手順は、APM パターンをラップするより複雑です。EAP パターンのほうが APM パターンよりもバリエーションが多く、構造化の程度が低いためです。  例を示すために、次のコードでは `DownloadStringAsync` メソッドをラップしています。  `DownloadStringAsync` は、URI を受け付け、進行状況として複数の統計情報をレポートするためにダウンロード中に `DownloadProgressChanged` イベントを発生させ、完了時に `DownloadStringCompleted` イベントを発生させます。  最終結果は、指定された URI にあるページのコンテンツを含む文字列です。  
+ [イベント ベースの非同期パターン (EAP)](event-based-asynchronous-pattern-eap.md) 実装をラップする手順は、APM パターンをラップするより複雑です。EAP パターンのほうが APM パターンよりもバリエーションが多く、構造化の程度が低いためです。  例を示すために、次のコードでは `DownloadStringAsync` メソッドをラップしています。  `DownloadStringAsync` は、URI を受け付け、進行状況として複数の統計情報をレポートするためにダウンロード中に `DownloadProgressChanged` イベントを発生させ、完了時に `DownloadStringCompleted` イベントを発生させます。  最終結果は、指定された URI にあるページのコンテンツを含む文字列です。  
   
  [!code-csharp[Conceptual.AsyncInterop#11](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/EAP1.cs#11)]
  [!code-vb[Conceptual.AsyncInterop#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/EAP1.vb#11)]  
@@ -102,7 +102,7 @@ ms.locfileid: "78159755"
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
   
- また、待機ハンドルに依存せず、代わりにタスクで完全に動作する非同期セマフォもビルドできます。 これを行うには、 [T:System.Threading.Tasks.Task](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) の上位にデータ構造をビルドするという「 <xref:System.Threading.Tasks.Task>が追加されました。  
+ また、待機ハンドルに依存せず、代わりにタスクで完全に動作する非同期セマフォもビルドできます。 これを行うには、 [T:System.Threading.Tasks.Task](consuming-the-task-based-asynchronous-pattern.md) の上位にデータ構造をビルドするという「 <xref:System.Threading.Tasks.Task>が追加されました。  
   
 <a name="TapToWH"></a>
 ### <a name="from-tap-to-wait-handles"></a>TAP から待機ハンドルへ  
@@ -113,6 +113,6 @@ ms.locfileid: "78159755"
   
 ## <a name="see-also"></a>参照
 
-- [タスク ベースの非同期パターン (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
-- [タスク ベースの非同期パターンの実装](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
-- [タスク ベースの非同期パターンの利用](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [タスク ベースの非同期パターン (TAP)](task-based-asynchronous-pattern-tap.md)
+- [タスク ベースの非同期パターンの実装](implementing-the-task-based-asynchronous-pattern.md)
+- [タスク ベースの非同期パターンの利用](consuming-the-task-based-asynchronous-pattern.md)

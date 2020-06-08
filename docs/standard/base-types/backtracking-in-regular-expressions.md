@@ -17,15 +17,15 @@ helpviewer_keywords:
 - strings [.NET Framework], regular expressions
 - parsing text with regular expressions, backtracking
 ms.assetid: 34df1152-0b22-4a1c-a76c-3c28c47b70d8
-ms.openlocfilehash: 9c525229eb1ba5ca00ad1042864f92621bb366d2
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: d9fb976c73891646df60b5329beb09493acbae8a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243233"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277805"
 ---
 # <a name="backtracking-in-regular-expressions"></a>正規表現におけるバックトラッキング
-バックトラッキングは、正規表現パターンに省略可能な[量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)または[代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
+バックトラッキングは、正規表現パターンに省略可能な[量指定子](quantifiers-in-regular-expressions.md)または[代替構成体](alternation-constructs-in-regular-expressions.md)が含まれている場合に発生します。この場合、正規表現エンジンは、一致の検索を継続するために、以前に保存した状態に戻ります。 バックトラッキングは、正規表現を強力にするための中心的な機能で、これにより、非常に複雑なパターンを照合できる強力かつ柔軟な正規表現を作成できるようになります。 その一方で、バックトラッキングにはマイナス面もあり、 多くの場合、正規表現エンジンのパフォーマンスを左右する最大の要因になります。 さいわい、正規表現エンジンの動作とバックトラッキングの使用方法は開発者が制御できます。 ここでは、バックトラッキングの動作のしくみと、バックトラッキングを制御する方法について説明します。  
   
 > [!NOTE]
 > 一般に、.NET 正規表現エンジンのような非決定性有限オートマトン (NFA: Nondeterministic Finite Automaton) エンジンでは、効率的かつ高速な正規表現を作成する責任は開発者にあります。  
@@ -103,7 +103,7 @@ ms.locfileid: "81243233"
  このようにして、正規表現エンジンがすべての可能な一致の組み合わせを試行し終わるまで入力文字列と正規表現の比較が続けられます。一致しないという結論に到達するのはその後です。 この比較は、入れ子になった量指定子があるため、O(2<sup>n</sup>) (指数演算、*n* は入力文字列の文字数) です。 そのため、最悪のケースでは、30 文字の入力文字列で約 1,073,741,824 回、40 文字の入力文字列では約 1,099,511,627,776 回の比較が必要になります。 使用する文字列の長さがこのレベル以上になると、正規表現パターンに一致しない入力を処理するときに、正規表現メソッドの完了までに膨大な時間がかかる可能性があります。
 
 ## <a name="controlling-backtracking"></a>バックトラッキングの制御  
- バックトラッキングを使用すると、強力かつ柔軟な正規表現を作成できますが、 前のセクションで見たように、受け入れられないほどのパフォーマンスの低下が伴うことがあります。 過度なバックトラッキングを回避するには、 <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化したり静的な正規表現の一致メソッドを呼び出したりするときに、タイムアウト間隔を定義する必要があります。 これについては、次のセクションで説明します。 また、.NET では、バックトラッキングを制限または抑制する 3 つの正規表現言語要素がサポートされています。これらを使用すると、パフォーマンスをほとんど低下させずに複雑な正規表現を使用できます。それらの言語要素とは、[アトミック グループ](#atomic-groups)、[後読みアサーション](#lookbehind-assertions)、および[先読みアサーション](#lookahead-assertions)です。 各言語要素の詳細については、[コンストラクトのグループ化](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)に関するページを参照してください。  
+ バックトラッキングを使用すると、強力かつ柔軟な正規表現を作成できますが、 前のセクションで見たように、受け入れられないほどのパフォーマンスの低下が伴うことがあります。 過度なバックトラッキングを回避するには、 <xref:System.Text.RegularExpressions.Regex> オブジェクトをインスタンス化したり静的な正規表現の一致メソッドを呼び出したりするときに、タイムアウト間隔を定義する必要があります。 これについては、次のセクションで説明します。 また、.NET では、バックトラッキングを制限または抑制する 3 つの正規表現言語要素がサポートされています。これらを使用すると、パフォーマンスをほとんど低下させずに複雑な正規表現を使用できます。それらの言語要素とは、[アトミック グループ](#atomic-groups)、[後読みアサーション](#lookbehind-assertions)、および[先読みアサーション](#lookahead-assertions)です。 各言語要素の詳細については、[コンストラクトのグループ化](grouping-constructs-in-regular-expressions.md)に関するページを参照してください。  
 
 ### <a name="defining-a-time-out-interval"></a>タイムアウト間隔の定義  
  .NET Framework 4.5 以降では、試行が中止されて <xref:System.Text.RegularExpressions.RegexMatchTimeoutException> 例外がスローされるまでの、正規表現エンジンが単一の一致を検索する最長間隔を表すタイムアウト値を設定できます。 タイムアウト間隔を指定するには、インスタンス正規表現の <xref:System.TimeSpan> コンストラクターに <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%2CSystem.TimeSpan%29> 値を指定します。 また、各静的パターン一致メソッドには、 <xref:System.TimeSpan> パラメーターを持つオーバーロードがあり、これを使用してタイムアウト値を指定できます。 既定のタイムアウト間隔は <xref:System.Text.RegularExpressions.Regex.InfiniteMatchTimeout?displayProperty=nameWithType> に設定されており、正規表現エンジンはタイムアウトしません。  
@@ -190,8 +190,8 @@ ms.locfileid: "81243233"
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)
-- [代替構成体](../../../docs/standard/base-types/alternation-constructs-in-regular-expressions.md)
-- [グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)
+- [.NET の正規表現](regular-expressions.md)
+- [正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)
+- [量指定子](quantifiers-in-regular-expressions.md)
+- [代替構成体](alternation-constructs-in-regular-expressions.md)
+- [グループ化構成体](grouping-constructs-in-regular-expressions.md)

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9c3456cd8c940e53e8a70c1d3a7c3b09de77c21d
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 144d7bb087034839ad2cde2fa28a4961cff4321f
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201584"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306995"
 ---
 # <a name="tutorial-create-a-net-core-console-application-in-visual-studio-2019"></a>チュートリアル: Visual Studio 2019 で .NET Core コンソール アプリケーションを作成する
 
@@ -97,9 +97,8 @@ ms.locfileid: "84201584"
 
 1. `Main` メソッド (現在は `Console.WriteLine` を呼び出す行のみ) の内容を以下のコードに置き換えます。
 
-   :::code language="csharp" source="./snippets/with-visual-studio/csharp/Program.cs" id="Snippet1":::
-
-   :::code language="vb" source="./snippets/with-visual-studio/vb/Program.vb" id="Snippet1":::
+   [!code-csharp[GettingStarted#1](./snippets/with-visual-studio/csharp/Program.cs#1)]
+   [!code-vb[GettingStarted#1](./snippets/with-visual-studio/vb/Program.vb#1)]
 
    このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して Enter キーを押すまで待機します。 これはこの文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `date` という変数に代入します (Visual Basic では `currentDate`)。 最後に、これらの値がコンソール ウィンドウに表示されます。
 

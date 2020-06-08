@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Select clause [Visual Basic]
 - queries [Visual Basic], Select
 ms.assetid: 27a3f61c-5960-4692-9b91-4d0c4b6178fe
-ms.openlocfilehash: 5ebb813229d5d517b369036c69b2d23c8ee1c9f5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a909b1d79b10f82ece03bab788ae889c64b27124
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350405"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359695"
 ---
 # <a name="select-clause-visual-basic"></a>Select 句 (Visual Basic)
 クエリの結果を定義します。  
@@ -32,7 +32,7 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
  必須です。 クエリ結果に返されるフィールドの名前。  
   
 ## <a name="remarks"></a>Remarks  
- `Select` 句を使用して、クエリから返される結果を定義できます。 これにより、クエリによって作成された新しい匿名型のメンバーを定義することも、クエリによって返される名前付きの型のメンバーを対象にすることもできます。 `Select` 句は、クエリには必要ありません。 `Select` 句が指定されていない場合、クエリは、現在のスコープで識別される範囲変数のすべてのメンバーに基づいて型を返します。 詳細については、「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。 クエリで名前付きの型を作成すると、型 <xref:System.Collections.Generic.IEnumerable%601> の結果が返されます。ここで `T` は作成された型です。  
+ `Select` 句を使用して、クエリから返される結果を定義できます。 これにより、クエリによって作成された新しい匿名型のメンバーを定義することも、クエリによって返される名前付きの型のメンバーを対象にすることもできます。 `Select` 句は、クエリには必要ありません。 `Select` 句が指定されていない場合、クエリは、現在のスコープで識別される範囲変数のすべてのメンバーに基づいて型を返します。 詳細については、「[匿名型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。 クエリで名前付きの型を作成すると、型 <xref:System.Collections.Generic.IEnumerable%601> の結果が返されます。ここで `T` は作成された型です。  
   
  `Select` 句は、現在のスコープ内の任意の変数を参照できます。 これには、`From` 句 (または `From` 句) で識別される範囲変数が含まれます。 また、`Aggregate`、`Let`、`Group By`、`Group Join` の各句による別名で作成された新しい変数、またはクエリ式の前の `Select` 句からの変数も含まれます。 また、`Select` 句には静的な値を含めることもできます。 たとえば、次のコード例は、`Select` 句で `ProductName`、`Price`、`Discount`、および `DiscountedPrice` の 4 つのメンバーを持つ新しい匿名型としてクエリ結果を定義するクエリ式を示しています。 `ProductName` メンバーと `Price` メンバーの値は、`From` 句で定義されている製品の範囲変数から取得されます。 `DiscountedPrice` メンバーの値は、`Let` 句で計算されます。 `Discount` メンバーは静的な値です。  
   
@@ -53,9 +53,9 @@ Select [ var1 = ] fieldName1 [, [ var2 = ] fieldName2 [...] ]
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
-- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [From 句](from-clause.md)
+- [WHERE 句](where-clause.md)
+- [Order By 句](order-by-clause.md)
+- [匿名型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

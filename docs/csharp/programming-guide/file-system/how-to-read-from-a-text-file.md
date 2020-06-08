@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reading data, text files
 - text files, reading
 ms.assetid: 92246c5b-e819-4eea-9370-1a9460e12de3
-ms.openlocfilehash: d401a1d1bb2c6fccb203c440f367bd14c80e70e3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8f79d22a86390ca931b05262e50865d852c154c7
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705016"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241748"
 ---
 # <a name="how-to-read-from-a-text-file-c-programming-guide"></a>テキスト ファイルから読み取る方法 (C# プログラミング ガイド)
 この例では、<xref:System.IO.File?displayProperty=nameWithType> クラスの静的メソッド <xref:System.IO.File.ReadAllText%2A> と <xref:System.IO.File.ReadAllLines%2A> を使用してテキスト ファイルの内容を読み取ります。  
@@ -37,11 +37,11 @@ ms.locfileid: "75705016"
   
 - ファイルが存在しない、または指定した場所に存在しない。 ファイル名のパスとスペルを確認してください。  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+## <a name="net-security"></a>.NET セキュリティ  
  ファイル名に基づいてファイルの内容を判断しないでください。 たとえば、`myFile.cs` というファイルが C# のソース ファイルではない可能性もあります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)

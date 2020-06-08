@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - for keyword [C#]
 ms.assetid: 34041a40-2c87-467a-9ffb-a0417d8f67a8
-ms.openlocfilehash: cb83fa015eea19b156faebb5bed18cc1f0970cc1
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: db7cecc697a9cc9e5ff6b94b78747b799ed7e505
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738806"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401902"
 ---
 # <a name="for-c-reference"></a>for (C# リファレンス)
 
@@ -33,7 +33,7 @@ for (initializer; condition; iterator)
 
 次の例では、`for` ステートメントと定義されているすべてのセクションが示されています。
 
-[!code-csharp-interactive[for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#5)]
+[!code-csharp-interactive[for loop example](snippets/IterationKeywordsExamples.cs#5)]
 
 ### <a name="the-initializer-section"></a>*initializer* セクション
 
@@ -97,11 +97,11 @@ i++
 
 次の例は、`for` ステートメント セクションのやや特殊な使用例です。*initializer* セクションで外部ループ変数に値を代入し、*initializer* セクションと *iterator* セクションの両方でメソッドを呼び出しています。さらに、*iterator* セクションで 2 つの変数の値を変更しています。 **[実行]** を選択して、コード例を実行します。 その後に、コードを変更し、もう一度実行することができます。
 
-[!code-csharp-interactive[not typical for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#6)]
+[!code-csharp-interactive[not typical for loop example](snippets/IterationKeywordsExamples.cs#6)]
 
 次の例では、無限 `for` ループが定義されます。
 
-[!code-csharp[infinite for loop example](~/samples/snippets/csharp/keywords/IterationKeywordsExamples.cs#7)]
+[!code-csharp[infinite for loop example](snippets/IterationKeywordsExamples.cs#7)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

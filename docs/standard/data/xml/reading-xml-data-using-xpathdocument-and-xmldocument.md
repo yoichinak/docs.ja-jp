@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-ms.openlocfilehash: 87ae96944f9a9f2bbcefb54c343f429c75c3022d
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: da1cb81c819e55f572e9faaabef4dd49ee7397de
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710389"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288681"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>XPathDocument および XmlDocument を使用した XML データの読み取り
 <xref:System.Xml.XPath?displayProperty=nameWithType> 名前空間で XML ドキュメントを読み取る方法は 2 つあります。 1 つは読み取り専用の <xref:System.Xml.XPath.XPathDocument> クラスを使用して XML ドキュメントを読み取る方法で、もう 1 つは、<xref:System.Xml.XmlDocument> 名前空間で編集可能な <xref:System.Xml?displayProperty=nameWithType> クラスを使用して XML ドキュメントを読み取る方法です。  
@@ -75,7 +75,7 @@ document.Load("books.xml");
 - <xref:System.Xml.XmlDocument>
 - <xref:System.Xml.XPath.XPathDocument>
 - <xref:System.Xml.XPath.XPathNavigator>
-- [XPath データ モデルを使用した XML データの処理](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
-- [XPathNavigator による XML データへのアクセス](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
-- [XPathNavigator による XML データの編集](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
-- [XPathNavigator を使用したスキーマ検証](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)
+- [XPath データ モデルを使用した XML データの処理](process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator による XML データへのアクセス](accessing-xml-data-using-xpathnavigator.md)
+- [XPathNavigator による XML データの編集](editing-xml-data-using-xpathnavigator.md)
+- [XPathNavigator を使用したスキーマ検証](schema-validation-using-xpathnavigator.md)

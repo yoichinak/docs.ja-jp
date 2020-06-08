@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Group Join statement [Visual Basic]
 - queries [Visual Basic], Group Join
 ms.assetid: 37dbf79c-7b5c-421b-bbb7-dadfd2b92a1c
-ms.openlocfilehash: 0546c86322663ce6c56a89e63311d0f02f88cfe4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7916e51293c06016b2581b7109df3f0a599404ca
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346852"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359835"
 ---
 # <a name="group-join-clause-visual-basic"></a>Group Join 句 (Visual Basic)
 2 つのコレクションを、単一の階層コレクションに結合します。 結合操作は、一致するキーに基づきます。  
@@ -40,11 +40,11 @@ Group Join element [As type] In collection _
 |`expressionList`|必須です。 コレクションの要素のグループを集計する方法を示す 1 つ以上の式です。 グループ化された結果のメンバー名を特定するには、`Group` キーワード (`<alias> = Group`) を使用します。 グループに適用する集計関数を含めることもできます。|  
   
 ## <a name="remarks"></a>Remarks  
- `Group Join` 句は、結合されるコレクションからの一致するキー値に基づいて、2 つのコレクションを組み合わせます。 結果のコレクションには、最初のコレクションのキー値に一致する 2 つ目のコレクションの要素のコレクションを参照するメンバーを含めることができます。 さらに、2 つ目のコレクションのグループ化された要素に適用する集計関数を指定することもできます。 集計関数の詳細については、「[Aggregate 句 ](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
+ `Group Join` 句は、結合されるコレクションからの一致するキー値に基づいて、2 つのコレクションを組み合わせます。 結果のコレクションには、最初のコレクションのキー値に一致する 2 つ目のコレクションの要素のコレクションを参照するメンバーを含めることができます。 さらに、2 つ目のコレクションのグループ化された要素に適用する集計関数を指定することもできます。 集計関数の詳細については、「[Aggregate 句 ](aggregate-clause.md)」を参照してください。  
   
  たとえば、マネージャーのコレクションと従業員のコレクションを考えてみましょう。 両方のコレクションの要素には、特定のマネージャーに報告する従業員を識別する ManagerID プロパティがあります。 結合操作の結果には、一致する ManagerID 値を持つ各マネージャーと従業員の結果が含まれます。 `Group Join` 操作の結果には、マネージャーの完全な一覧が含まれます。 各マネージャーの結果には、特定のマネージャーに一致した従業員の一覧を参照したメンバーが含まれます。  
   
- `Group Join` 操作の結果のコレクションには、`From` 句に指定されたコレクションと `Group Join` 句の `Into` 句に指定された式からの値の任意の組み合わせが含まれる可能性があります。 `Into` 句の有効な式の詳細については、「[Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
+ `Group Join` 操作の結果のコレクションには、`From` 句に指定されたコレクションと `Group Join` 句の `Into` 句に指定された式からの値の任意の組み合わせが含まれる可能性があります。 `Into` 句の有効な式の詳細については、「[Aggregate 句](aggregate-clause.md)」を参照してください。  
   
  `Group Join` 操作では、`Group Join` 演算子の左側に指定されたコレクションからのすべての結果が返されます。 これは、結合されているコレクションに一致するものがない場合でも当てはまります。 これは、SQL の `LEFT OUTER JOIN` に似ています。  
   
@@ -57,10 +57,10 @@ Group Join element [As type] In collection _
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Join 句](../../../visual-basic/language-reference/queries/join-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
-- [Group By 句](../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [Select 句](select-clause.md)
+- [From 句](from-clause.md)
+- [Join 句](join-clause.md)
+- [WHERE 句](where-clause.md)
+- [Group By 句](group-by-clause.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 5920dd125ded34969d60feb299568b56402056ab
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 932ff3d57995ce47c4b74e8e888a479f0d09d0ed
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82140554"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397429"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定サイズ バッファー (C# プログラミング ガイド)
 
@@ -26,11 +26,11 @@ private fixed char name[30];
 
 `struct` が参照であるため、次の `pathName` のサイズは配列内の要素の数に依存しません。
 
-[!code-csharp[Struct with embedded array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#6)]
+[!code-csharp[Struct with embedded array](snippets/FixedKeywordExamples.cs#6)]
 
 アンセーフ コードでは、`struct` に埋め込み配列を含めることができます。 以下の例の `fixedBuffer` 配列は固定サイズです。 `fixed` ステートメントを使用して、先頭要素へのポインターを確立します。 このポインターを使用して配列の要素にアクセスします。 `fixed` ステートメントによって、`fixedBuffer` インスタンス フィールドがメモリ内の特定の位置に固定されます。
 
-[!code-csharp[Struct with embedded inline array](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#7)]
+[!code-csharp[Struct with embedded inline array](snippets/FixedKeywordExamples.cs#7)]
 
 要素数 128 の `char` 配列のサイズは 256 バイトです。 固定サイズの [char](../../language-reference/builtin-types/char.md) 型バッファーは、エンコーディングに関係なく常に、1 文字あたり 2 バイトを消費します。 これは、char 型のバッファーが、`CharSet = CharSet.Auto` または `CharSet = CharSet.Ansi` で API メソッドや構造体にマーシャリングされたときにも当てはまります。 詳細については、「<xref:System.Runtime.InteropServices.CharSet>」を参照してください。
 

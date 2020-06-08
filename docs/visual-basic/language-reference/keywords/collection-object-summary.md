@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Collection object, summary
 ms.assetid: c4586369-d817-4453-9cb0-1a272fc66737
-ms.openlocfilehash: 061999d7b46f04838e9740330f22f14733a9306b
-ms.sourcegitcommit: 9a97c76e141333394676bc5d264c6624b6f45bcf
+ms.openlocfilehash: 2bef46745697fa3ff7f207c13015423cea11db1f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/08/2020
-ms.locfileid: "75741033"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84362386"
 ---
 # <a name="collection-object-summary-visual-basic"></a>Collection オブジェクトの概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -24,5 +24,5 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
   
 ## <a name="see-also"></a>関連項目
 
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+- [キーワード](index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](../runtime-library-members.md)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 2f2d42ae02a07a5e1b82cefd004f4d03b2a16dff
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 6e9a6975977588ba7692c925d7940cd2ec26671f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635381"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406691"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 
@@ -62,7 +62,7 @@ finally
 
 次の例では、専用 `balanceLock` インスタンスをロックすることでそのプライベート `balance` フィールドへのアクセスを同期する `Account` クラスが定義されます。 ロッキングに同じインスタンスを使用すると、2 つのスレッドが `Debit` または `Credit` メソッドを同時に呼び出すことによって `balance` フィールドを同時に更新することができなくなります。
 
-[!code-csharp[lock-statement-example](~/samples/snippets/csharp/keywords/LockStatementExample.cs)]
+[!code-csharp[lock-statement-example](snippets/LockStatementExample.cs)]
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

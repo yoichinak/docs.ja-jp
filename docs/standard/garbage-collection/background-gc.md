@@ -5,18 +5,18 @@ ms.date: 04/21/2020
 helpviewer_keywords:
 - garbage collection, background
 - background garbage collection
-ms.openlocfilehash: dcb1d348e679e07646273b8fbc4ea29b44ee4974
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 8134c0af55d74e57dcfce8c7174265b8c9902feb
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82103497"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307073"
 ---
 # <a name="background-garbage-collection"></a>バックグラウンド ガベージ コレクション
 
 バックグラウンド ガベージ コレクション (GC) では、ジェネレーション 2 のコレクションの実行中に、必要に応じて短期ジェネレーション (0 および 1) のコレクションが行われます。 バックグラウンド ガベージ コレクションは、バックグラウンド GC かサーバー GC かによって 1 つまたは複数の専用スレッドで実行され、ジェネレーション 2 のコレクションにのみ適用されます。
 
-バックグラウンド ガベージ コレクションは既定で有効になっています。 これは、.NET Framework アプリの [gcConcurrent](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 構成設定または .NET Core アプリの [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) 設定で有効または無効にすることができます。
+バックグラウンド ガベージ コレクションは既定で有効になっています。 これは、.NET Framework アプリの [gcConcurrent](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md) 構成設定または .NET Core アプリの [System.GC.Concurrent](../../core/run-time-config/garbage-collector.md#systemgcconcurrentcomplus_gcconcurrent) 設定で有効または無効にすることができます。
 
 > [!NOTE]
 > [バックグラウンド ガベージ コレクション](#concurrent-garbage-collection)は同時実行ガベージ コレクションに取って代わり、.NET Framework 4 以降で利用できます。 .NET Framework 4 では、"*ワークステーション*" ガベージ コレクションのみでサポートされます。 .NET Framework 4.5 以降では、バックグラウンド ガベージ コレクションは、"*ワークステーション*" と "*サーバー*" の両方のガベージ コレクションで使用できます。
@@ -39,11 +39,11 @@ ms.locfileid: "82103497"
 
 次の図は、別々の専用スレッドで実行される "*ワークステーション*" のバックグラウンド ガベージ コレクションを示しています。
 
-![バックグラウンド ワークステーション ガベージ コレクション](./media/fundamentals/background-workstation-garbage-collection.png)
+![バックグラウンド ワークステーション ガベージ コレクション](media/fundamentals/background-workstation-garbage-collection.png)
 
 次の図は、別々の専用スレッドで実行される "*サーバー*" のバックグラウンド ガベージ コレクションを示しています。
 
-![バックグラウンド サーバー ガベージ コレクション](./media/fundamentals/background-server-garbage-collection.png)
+![バックグラウンド サーバー ガベージ コレクション](media/fundamentals/background-server-garbage-collection.png)
 
 ## <a name="concurrent-garbage-collection"></a>同時実行ガベージ コレクション
 
@@ -55,7 +55,7 @@ ms.locfileid: "82103497"
 >
 > 後のバージョンでは、バックグラウンド ガベージ コレクションが同時実行ガベージに取って代わります。
 
-ワークステーションまたはサーバーのガベージ コレクションでは、[同時実行ガベージ コレクションを有効にする](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)ことで、複数のスレッドを同時に実行できます。同時実行ガベージ コレクションでは、コレクションの実行中は、ほとんどの場合、ガベージ コレクションの処理を行う専用のスレッドが使用されます。 このオプションは、ジェネレーション 2 のガベージ コレクションにのみ影響します。ジェネレーション 0 と 1 の処理はすぐに終了するため、常に非同時実行で行われます。
+ワークステーションまたはサーバーのガベージ コレクションでは、[同時実行ガベージ コレクションを有効にする](../../framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)ことで、複数のスレッドを同時に実行できます。同時実行ガベージ コレクションでは、コレクションの実行中は、ほとんどの場合、ガベージ コレクションの処理を行う専用のスレッドが使用されます。 このオプションは、ジェネレーション 2 のガベージ コレクションにのみ影響します。ジェネレーション 0 と 1 の処理はすぐに終了するため、常に非同時実行で行われます。
 
 同時実行ガベージ コレクションでは、コレクションの一時停止を最小限にすることで、インタラクティブ アプリケーションの応答性を高めることができます。 マネージド スレッドは、同時実行ガベージ コレクションのスレッドが実行されている間も、ほぼ常に処理を続けることができます。 そのため、ガベージ コレクションの実行中の一時停止が短くなります。
 
@@ -63,7 +63,7 @@ ms.locfileid: "82103497"
 
 次の図は、別々の専用のスレッドで実行される同時実行ガベージ コレクションを示しています。
 
-![同時実行ガベージ コレクションのスレッド](./media/gc-concurrent.png)
+![同時実行ガベージ コレクションのスレッド](media/gc-concurrent.png)
 
 ## <a name="see-also"></a>関連項目
 

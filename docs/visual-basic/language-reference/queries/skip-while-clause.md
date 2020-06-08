@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip While clause [Visual Basic]
 - queries [Visual Basic], Skip While
 ms.assetid: 5dee8350-7520-4f1a-b00d-590cacd572d6
-ms.openlocfilehash: 47703e445865435f5bf5312c3fe41833ac21aa3f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b357320a92ace1b7a261991737ed653d54d0eeab
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333138"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359646"
 ---
 # <a name="skip-while-clause-visual-basic"></a>Skip While 句 (Visual Basic)
 指定された条件が `true` である限り、コレクションの要素をバイパスし、残りの要素を返します。  
@@ -44,10 +44,10 @@ Skip While expression
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Skip 句](../../../visual-basic/language-reference/queries/skip-clause.md)
-- [Take While 句](../../../visual-basic/language-reference/queries/take-while-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [Select 句](select-clause.md)
+- [From 句](from-clause.md)
+- [Skip 句](skip-clause.md)
+- [Take While 句](take-while-clause.md)
+- [WHERE 句](where-clause.md)

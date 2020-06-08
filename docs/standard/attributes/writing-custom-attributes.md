@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Inherited property
 - attribute classes, declaring
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
-ms.openlocfilehash: 6570c6994c0f2e6571361c3eadc73b02a55f1584
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d05df02bfc75e9aeb2c583a831bcee8b7b971206
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73140588"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276133"
 ---
 # <a name="writing-custom-attributes"></a>カスタム属性の記述
 独自のカスタム属性をデザインするために、多くの新しい概念を習得する必要はありません。 オブジェクト指向プログラミングに精通してクラスをデザインする方法を理解しているなら、必要な知識をほぼすべて持っています。 カスタム属性は、基本的には、<xref:System.Attribute?displayProperty=nameWithType> から直接的に派生したか間接的に派生した従来のクラスです。 従来のクラスと同じように、カスタム属性には、データを格納したり取得したりするメソッドが含まれます。  
@@ -150,4 +150,4 @@ ms.locfileid: "73140588"
 
 - <xref:System.Attribute?displayProperty=nameWithType>
 - <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
-- [属性](../../../docs/standard/attributes/index.md)
+- [属性](index.md)

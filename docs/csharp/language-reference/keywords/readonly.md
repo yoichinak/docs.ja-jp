@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - readonly keyword [C#]
 ms.assetid: 2f8081f6-0de2-4903-898d-99696c48d2f4
-ms.openlocfilehash: 03b0aa63eda3e7a9d8745baaa33479fd5e85b01b
-ms.sourcegitcommit: c91110ef6ee3fedb591f3d628dc17739c4a7071e
+ms.openlocfilehash: 66a096e8831f72a2216e8ba5dd9866046504624f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2020
-ms.locfileid: "81389058"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84368622"
 ---
 # <a name="readonly-c-reference"></a>readonly (C# リファレンス)
 
@@ -38,7 +38,7 @@ ms.locfileid: "81389058"
 
 この例では、`year` フィールドの値は、クラス コンストラクターで値が割り当てられていても `ChangeYear` メソッドでは変更できません。
 
-[!code-csharp[Readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyField)]
+[!code-csharp[Readonly Field example](snippets/ReadonlyKeywordExamples.cs#ReadonlyField)]
 
 `readonly` のフィールドに値を割り当てることができるのは、次のコンテキスト内に限られます。
 
@@ -60,7 +60,7 @@ ms.locfileid: "81389058"
 > public static readonly uint timeStamp = (uint)DateTime.Now.Ticks;
 > ```
 
-[!code-csharp[Initialize readonly Field example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#InitReadonlyField)]
+[!code-csharp[Initialize readonly Field example](snippets/ReadonlyKeywordExamples.cs#InitReadonlyField)]
 
 上の例で、次の例のようなステートメントを使うものとします。
 
@@ -76,7 +76,7 @@ p2.y = 66;        // Error
 
 `ref return`での `readonly` 修飾子は、返される参照を変更できないことを示します。 次の例は、origin に参照を返します。 `readonly` 修飾子を使用して、呼び出し元が origin を変更できないことを示しています。
 
-[!code-csharp[readonly return example](~/samples/snippets/csharp/keywords/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
+[!code-csharp[readonly return example](snippets/ReadonlyKeywordExamples.cs#ReadonlyReturn)]
 
 返される型を `readonly struct` にする必要はありません。 `ref` で返すことができる任意の型を、`ref readonly` で返すことができます。
 

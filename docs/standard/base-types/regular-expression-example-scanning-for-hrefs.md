@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: fae2c15b-7adf-4b15-b118-58eb3906994f
-ms.openlocfilehash: d8546980dd0cf58ca7c095750f2749d5a6bc7723
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 47364aef49bb0f43b79b805e2adf305c549d7340
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084225"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276162"
 ---
 # <a name="regular-expression-example-scanning-for-hrefs"></a>正規表現の例: HREF のスキャン
 次の例では、入力文字列を検索して、文字列中のすべての href="…" 値とその場所を表示します。  
@@ -56,4 +56,4 @@ ms.locfileid: "73084225"
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET の正規表現](regular-expressions.md)

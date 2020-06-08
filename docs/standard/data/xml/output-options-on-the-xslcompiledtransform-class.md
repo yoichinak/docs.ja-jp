@@ -3,12 +3,12 @@ title: XslCompiledTransform クラスの出力オプション
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
-ms.openlocfilehash: 504057bd5e10498d39b2bce908742fc20b112c52
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: e9ffdc1377dbf124f042802279e7e7a275222eff
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75710506"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288707"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform クラスの出力オプション
 このトピックでは、XSLT で使用できる出力オプションについて説明します。 出力オプションは、スタイル シート内で、または <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドで指定できます。  
@@ -57,4 +57,4 @@ ms.locfileid: "75710506"
   
 ## <a name="see-also"></a>関連項目
 
-- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
+- [XSLT 変換](xslt-transformations.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - memory-mapped files
 - inter-process communication
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
-ms.openlocfilehash: 004da94bc7345bdc294562f0e1bedf6f1735adec
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a8c087449ed623e93f8c8ea467200f5e3e7e70f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159716"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278793"
 ---
 # <a name="memory-mapped-files"></a>メモリ マップト ファイル
 メモリ マップト ファイルには、仮想メモリ内のファイルの内容が含まれています。 ファイルとメモリ空間の間のこのマッピングによって、複数のプロセスを含むアプリケーションは、メモリを直接読み書きすることでファイルを変更できます。 .NET Framework 4 以降では、「[Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))」 (メモリ マップ ファイルの管理) で説明されているように、マネージド コードを使用して、ネイティブ Windows 関数がメモリ マップ ファイルにアクセスする場合と同じ方法でメモリ マップ ファイルにアクセスできます。  
@@ -147,4 +147,4 @@ Process C says: True
   
 ## <a name="see-also"></a>参照
 
-- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)
+- [ファイルおよびストリーム入出力](index.md)

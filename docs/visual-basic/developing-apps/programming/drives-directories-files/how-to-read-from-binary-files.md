@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: c33bc72a5c79901e3715ed6a587ffdb8e3565e48
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b4108034b86d99143fff6943e68ca0077ebd21b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74335297"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359930"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>方法: Visual Basic でバイナリ ファイルを読み取る
 
@@ -56,6 +56,6 @@ ms.locfileid: "74335297"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
-- [ファイルの読み取り](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
-- [方法: 複数の書式を持つテキスト ファイルを読み取る](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files-with-multiple-formats.md)
-- [クリップボードのデータの格納と読み取り](../../../../visual-basic/developing-apps/programming/computer-resources/storing-data-to-and-reading-from-the-clipboard.md)
+- [ファイルの読み取り](reading-from-files.md)
+- [方法: 複数の書式を持つテキスト ファイルを読み取る](how-to-read-from-text-files-with-multiple-formats.md)
+- [クリップボードのデータの格納と読み取り](../computer-resources/storing-data-to-and-reading-from-the-clipboard.md)

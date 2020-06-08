@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, forced
 ms.assetid: 019008fe-4708-4e65-bebf-04fd9941e149
-ms.openlocfilehash: 604b49ef577a46204b523ebf5a8575a30b81635e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 36dff45587c6c28ba17fd7389dc3863893ff8f61
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73120927"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286042"
 ---
 # <a name="induced-collections"></a>発生したコレクション
 ほとんどの場合、コレクションの実行に最適なタイミングはガベージ コレクターが判断できるので、ガベージ コレクターに任せるのが良い方法です。 ただし、ごくまれに、強制的にコレクションを実行するとアプリケーションのパフォーマンスが向上する場合があります。 このような場合は、<xref:System.GC.Collect%2A?displayProperty=nameWithType> メソッドを使用してガベージ コレクションを強制的に実行できます。  
@@ -36,5 +36,5 @@ ms.locfileid: "73120927"
   
 ## <a name="see-also"></a>参照
 
-- [待機モード](../../../docs/standard/garbage-collection/latency.md)
-- [ガベージ コレクション](../../../docs/standard/garbage-collection/index.md)
+- [待機モード](latency.md)
+- [ガベージ コレクション](index.md)

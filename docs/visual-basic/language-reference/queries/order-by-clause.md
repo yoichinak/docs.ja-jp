@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Order By clause [Visual Basic]
 - Order By statement [Visual Basic]
 ms.assetid: fa911282-6b81-44c7-acfa-46b5bb93df75
-ms.openlocfilehash: a7104e3dd82ff2dde2911861ce98a7367faf3b25
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 63f454064e88bc18f252940f3abd8e59b8900e5b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350423"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359749"
 ---
 # <a name="order-by-clause-visual-basic"></a>Order By 句 (Visual Basic)
 クエリ結果の並べ替え順序を指定します。  
@@ -52,7 +52,7 @@ Order By orderExp1 [ Ascending | Descending ] [, orderExp2 [...] ]
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [Select 句](select-clause.md)
+- [From 句](from-clause.md)

@@ -2,12 +2,12 @@
 title: XML ファイルからオブジェクト データを読み取る方法 (C#)
 ms.date: 07/20/2015
 ms.assetid: 6ad60d96-a4d9-48e6-a8b0-d7f6f803cafa
-ms.openlocfilehash: 18428cbe2f2d3b9434a77ee4d063ceabbba6bcb8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2365d1260d3f6e239f294b2af3399c2fb659575
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167819"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241878"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-c"></a>XML ファイルからオブジェクト データを読み取る方法 (C#)
 次の例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、XML ファイルに以前に書き込まれたオブジェクト データを読み込みます。  
@@ -58,12 +58,12 @@ public void ReadXML()
   
 - ファイルが存在しない (<xref:System.IO.IOException>)。  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+## <a name="net-security"></a>.NET セキュリティ  
  入力を常に検証し、信頼できないソースから決してデータを逆シリアル化しないでください。 再作成されたオブジェクトは、そのオブジェクトを逆シリアル化したコードと同じアクセス許可を持つローカル コンピューターで実行されます。 アプリケーションでデータを使用する前に、入力をすべて検証してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.StreamWriter>
 - [XML ファイルにオブジェクト データを書き込む方法 (C#)](./how-to-write-object-data-to-an-xml-file.md)
 - [シリアル化 (C#)](./index.md)
-- [C# プログラミングガイド](../../index.md)
+- [C# プログラミング ガイド](../../index.md)

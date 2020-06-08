@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Skip statement [Visual Basic]
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
-ms.openlocfilehash: c582b014bad4fa8fa3165d2b756f4bc955840cfc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 427d14453260a54bd3f2ab9a8ac75dedacd291f4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349654"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84359659"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip 句 (Visual Basic)
 コレクション内の指定された数の要素をバイパスし、残りの要素を返します。  
@@ -33,7 +33,7 @@ Skip count
   
  `Take` 句と共に `Skip` 句を使用すると、クエリの任意のセグメントからのデータの範囲を返すことができます。 これを行うには、範囲の最初の要素のインデックスを `Skip` 句に渡し、範囲のサイズを `Take` 句に渡します。  
   
- クエリで `Skip` 句を使用する場合は、`Skip` 句で目的の結果がバイパスされるような順番で、結果が返されるようにする必要がある場合もあります。 クエリ結果の順序付けの詳細については、「[Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)」を参照してください。  
+ クエリで `Skip` 句を使用する場合は、`Skip` 句で目的の結果がバイパスされるような順番で、結果が返されるようにする必要がある場合もあります。 クエリ結果の順序付けの詳細については、「[Order By 句](order-by-clause.md)」を参照してください。  
   
  指定した条件に応じて、特定の要素のみが無視されるように指定するには、`SkipWhile` 句を使用できます。  
   
@@ -44,10 +44,10 @@ Skip count
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [Select 句](select-clause.md)
+- [From 句](from-clause.md)
+- [Order By 句](order-by-clause.md)
+- [Skip While 句](skip-while-clause.md)
+- [Take 句](take-clause.md)

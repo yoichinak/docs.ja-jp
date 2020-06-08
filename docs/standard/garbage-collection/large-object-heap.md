@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LOH
 - garbage collection, large object heap
 - GC [.NET ], large object heap
-ms.openlocfilehash: dae8a3690d63d77a47a5cd2e76f210ca8210f058
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: 87105acbd43eb8eda0daa00c65ca0635f5e1cc74
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420579"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286029"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows システムの大きなオブジェクト ヒープ
 
@@ -203,7 +203,7 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 ### <a name="a-debugger"></a>デバッガー
 
-メモリ ダンプしかない状態で、LOH に実際にどのオブジェクトが存在するかを確認する必要がある場合は、.NET で提供される [SoS デバッガー拡張](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)を使用できます。
+メモリ ダンプしかない状態で、LOH に実際にどのオブジェクトが存在するかを確認する必要がある場合は、.NET で提供される [SoS デバッガー拡張](../../framework/tools/sos-dll-sos-debugging-extension.md)を使用できます。
 
 > [!NOTE]
 > このセクションに示されているデバッグ コマンドは、[Windows デバッガー](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)に適用できます。

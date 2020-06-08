@@ -13,12 +13,12 @@ helpviewer_keywords:
 - DataSet class, serializing
 - XML Schema, serializing
 ms.assetid: 8c63200d-db63-4a03-a93d-21641623df62
-ms.openlocfilehash: 7534ad702039b37a85a24223576320aea8052e9e
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: d9b71b7530debde7708ee107c990541e2b97cd44
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83421268"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84277961"
 ---
 # <a name="xml-serialization"></a>XML シリアル化
 
@@ -33,7 +33,7 @@ ms.locfileid: "83421268"
 
  オブジェクトのデータは、クラス、フィールド、プロパティ、プリミティブ型、配列などのプログラミング構成要素、および **XmlElement** オブジェクトまたは **XmlAttribute** オブジェクトの形で埋め込まれている XML を使用して記述されます。 属性で注釈を付けて独自のクラスを作成するか、または XML スキーマ定義ツールを使用して、既存の XML スキーマに基づいたクラスを生成できます。
 
- XML スキーマがある場合は、XML スキーマ定義ツールを実行して、そのスキーマに厳密に型指定された一連のクラスを生成し、属性を使用して注釈を付けることができます。 このようなクラスのインスタンスをシリアル化すると、元の XML スキーマに準拠した XML が生成されます。 このようなクラスを用意することにより、操作が簡単なオブジェクト モデルを使用してプログラミングできると同時に、生成される XML も確実に XML スキーマに準拠したものになります。 .NET Framework の他のクラス (**XmlReader** クラス、**XmlWriter** クラスなど) を使用する代わりに、この方法を使用して XML ストリームの解析や書き込みを実行できます。 詳細については、「[XML ドキュメントと XML データ](../../../docs/standard/data/xml/index.md)」を参照してください。 これらのクラスを使用すると、任意の XML ストリームを解析できます。 これに対し、既知の XML スキーマに準拠した XML ストリームが求められる場合には、**XmlSerializer** を使用します。
+ XML スキーマがある場合は、XML スキーマ定義ツールを実行して、そのスキーマに厳密に型指定された一連のクラスを生成し、属性を使用して注釈を付けることができます。 このようなクラスのインスタンスをシリアル化すると、元の XML スキーマに準拠した XML が生成されます。 このようなクラスを用意することにより、操作が簡単なオブジェクト モデルを使用してプログラミングできると同時に、生成される XML も確実に XML スキーマに準拠したものになります。 .NET Framework の他のクラス (**XmlReader** クラス、**XmlWriter** クラスなど) を使用する代わりに、この方法を使用して XML ストリームの解析や書き込みを実行できます。 詳細については、「[XML ドキュメントと XML データ](../data/xml/index.md)」を参照してください。 これらのクラスを使用すると、任意の XML ストリームを解析できます。 これに対し、既知の XML スキーマに準拠した XML ストリームが求められる場合には、**XmlSerializer** を使用します。
 
  属性を使用して XML ストリームの XML 名前空間、要素名、属性名などを設定することで、**XmlSerializer** クラスによって生成される XML ストリームを制御できます。 これらの属性、および属性による XML シリアル化の制御方法については、「[属性を使用した XML シリアル化の制御](controlling-xml-serialization-using-attributes.md)」を参照してください。 また、生成される XML を制御するこれらの属性の一覧については、「[XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)」を参照してください。
 

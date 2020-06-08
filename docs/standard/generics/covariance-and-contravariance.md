@@ -11,12 +11,12 @@ helpviewer_keywords:
 - covariance and contravariance in generics
 - generic type parameters
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
-ms.openlocfilehash: 909b03588d2a41f667bfa117a5cecb420b125088
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b11b5fc93d9b7289e62d6abc9d3ca19027a107c5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708398"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287559"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 共変性と反変性は、元の指定よりも強い派生型 (具体性が高い) と弱い派生型 (具体性が低い) を使用する能力を示す用語です。 ジェネリック型パラメーターは、ジェネリック型の代入と使用の柔軟性を向上させるために、共変性と反変性をサポートしています。 型システムにおいて、共変性、反変性、および不変性は、次のように定義されます。 各例では、基底クラスが `Base` という名前であり、派生クラスが `Derived`という名前であるとします。  
@@ -126,18 +126,18 @@ ms.locfileid: "75708398"
  .NET Framework 4 以降では、Visual Basic と C# の両方で、インターフェイスやデリゲートのジェネリック型パラメーターを共変または反変としてマークするためのキーワードが提供されています。  
   
 > [!NOTE]
-> ジェネリック型パラメーターの分散注釈は .NET Framework Version 2.0 以降の共通言語ランタイムでサポートされていますが、 .NET Framework 4 より前で、これらの注釈を含むジェネリック クラスを定義するには、クラスを [Ilasm.exe (IL アセンブラー)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) を使ってコンパイル、またはそれを動的アセンブリに出力することで、Microsoft Intermediate Language (MSIL) を使用する方法しかありませんでした。  
+> ジェネリック型パラメーターの分散注釈は .NET Framework Version 2.0 以降の共通言語ランタイムでサポートされていますが、 .NET Framework 4 より前で、これらの注釈を含むジェネリック クラスを定義するには、クラスを [Ilasm.exe (IL アセンブラー)](../../framework/tools/ilasm-exe-il-assembler.md) を使ってコンパイル、またはそれを動的アセンブリに出力することで、Microsoft Intermediate Language (MSIL) を使用する方法しかありませんでした。  
   
- 共変の型パラメーターをマークするには、 `out` キーワード (Visual Basic では`Out` キーワード、 `+` MSIL アセンブラー [では](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) を使用します。 共変の型パラメーターは、インターフェイスに属するメソッドの戻り値として使用したり、デリゲートの戻り値の型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することはできません。  
+ 共変の型パラメーターをマークするには、 `out` キーワード (Visual Basic では`Out` キーワード、 `+` MSIL アセンブラー [では](../../framework/tools/ilasm-exe-il-assembler.md)) を使用します。 共変の型パラメーターは、インターフェイスに属するメソッドの戻り値として使用したり、デリゲートの戻り値の型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することはできません。  
   
 > [!NOTE]
 > インターフェイスのメソッドに汎用デリゲート型のパラメーターがある場合は、インターフェイス型の共変の型パラメーターを使用してデリゲート型の反変の型パラメーターを指定できます。  
   
- 反変の型パラメーターをマークするには、 `in` キーワード (Visual Basic では`In` キーワード、 `-` MSIL アセンブラー [では](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) を使用します。 反変の型パラメーターは、インターフェイスに属するメソッドのパラメーターの型として使用したり、デリゲートのパラメーターの型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することもできます。  
+ 反変の型パラメーターをマークするには、 `in` キーワード (Visual Basic では`In` キーワード、 `-` MSIL アセンブラー [では](../../framework/tools/ilasm-exe-il-assembler.md)) を使用します。 反変の型パラメーターは、インターフェイスに属するメソッドのパラメーターの型として使用したり、デリゲートのパラメーターの型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することもできます。  
   
  バリアント型パラメーターを持つことができるのは、インターフェイス型とデリゲート型だけです。 インターフェイス型やデリゲート型は、共変と反変の両方の型パラメーターを持つことができます。  
   
- Visual Basic と C# では、共変および反変の型パラメーターの使用規則に違反したり、インターフェイスとデリゲート以外の型の型パラメーターに共変性や反変性の注釈を追加したりすることは許可されません。 [MSIL アセンブラー](../../../docs/framework/tools/ilasm-exe-il-assembler.md) ではそのようなチェックは行われませんが、規則に違反する型を読み込もうとすると <xref:System.TypeLoadException> がスローされます。  
+ Visual Basic と C# では、共変および反変の型パラメーターの使用規則に違反したり、インターフェイスとデリゲート以外の型の型パラメーターに共変性や反変性の注釈を追加したりすることは許可されません。 [MSIL アセンブラー](../../framework/tools/ilasm-exe-il-assembler.md) ではそのようなチェックは行われませんが、規則に違反する型を読み込もうとすると <xref:System.TypeLoadException> がスローされます。  
   
  詳細およびコード例については、「[ジェネリック インターフェイスの変性 (C#)](../../csharp/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)」および「[ジェネリック インターフェイスの変性 (Visual Basic)](../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)」を参照してください。  
 

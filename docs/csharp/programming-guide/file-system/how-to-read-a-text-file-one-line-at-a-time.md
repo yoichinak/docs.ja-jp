@@ -6,12 +6,12 @@ helpviewer_keywords:
 - reading text files, line by line
 - text files [C#]
 ms.assetid: d62e22c5-a13c-48db-af9b-f10c801b0cb1
-ms.openlocfilehash: e4a9ba2da2548991f442c2f5ab09d39243137875
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b54d072ce9837f9b15694f2d7100817de62e9762
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167516"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241774"
 ---
 # <a name="how-to-read-a-text-file-one-line-at-a-time-c-programming-guide"></a>テキスト ファイルを 1 行ずつ読み取る方法 (C# プログラミング ガイド)
 次の例では、`StreamReader` クラスの `ReadLine` メソッドを使用して、テキスト ファイルの内容を一度に 1 行ずつ文字列に読み込みます。 各テキスト行は文字列 `line` に格納され、画面に表示されます。  
@@ -47,11 +47,11 @@ System.Console.ReadLine();
   
 - ファイルが存在しない。  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+## <a name="net-security"></a>.NET セキュリティ  
  ファイル名からファイルの内容を判断しないでください。 たとえば、`myFile.cs` ファイルが C# ソース ファイルとは限りません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)

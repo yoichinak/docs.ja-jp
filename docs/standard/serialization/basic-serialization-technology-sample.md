@@ -3,12 +3,12 @@ title: 基本的なシリアル化の技術サンプル
 description: このサンプルでは、メモリ内のオブジェクト グラフをシリアル化してストリームに変換する、CLR の機能の例を示します。 このサンプルは、SoapFormatter または BinaryFormatter を使用できます。
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: fcbf790c3b3d48a0aeb27fd1ef6f75dcd7609ae0
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: 3f2273e6afb3a72f9734444ffe92d30871fb762b
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378441"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84276570"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本的なシリアル化の技術サンプル
 
@@ -100,9 +100,9 @@ Serialize.exe -sb Test.bin 10000 >somefile.txt
 - <xref:System.Runtime.Serialization.IFormatter>
 - <xref:System.SerializableAttribute>
 - <xref:System.Xml.Serialization>
-- [基本的なシリアル化](../../../docs/standard/serialization/basic-serialization.md)
-- [バイナリ シリアル化](../../../docs/standard/serialization/binary-serialization.md)
-- [属性を使用した XML シリアル化の制御](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
-- [XML シリアル化の概要](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [シリアル化](../../../docs/standard/serialization/index.md)
-- [XML シリアル化および SOAP シリアル化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [基本的なシリアル化](basic-serialization.md)
+- [バイナリ シリアル化](binary-serialization.md)
+- [属性を使用した XML シリアル化の制御](controlling-xml-serialization-using-attributes.md)
+- [XML シリアル化の概要](introducing-xml-serialization.md)
+- [シリアル化](index.md)
+- [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - unmanaged resource cleanup
 - Finalize method
 ms.assetid: a17b0066-71c2-4ba4-9822-8e19332fc213
-ms.openlocfilehash: 2d8b22063a184773928e5bc072f51a9f7d5d45ba
-ms.sourcegitcommit: 046a9c22487551360e20ec39fc21eef99820a254
+ms.openlocfilehash: aeb39f32c97424646b85b26ed9c4ed0e350d196b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2020
-ms.locfileid: "83396988"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287611"
 ---
 # <a name="cleaning-up-unmanaged-resources"></a>アンマネージ リソースのクリーンアップ
 
@@ -44,7 +44,7 @@ ms.locfileid: "83396988"
 
 「[Dispose メソッドの実装](implementing-dispose.md)」では、アンマネージ リソースを解放する破棄パターンを実装する方法について説明します。
 
-「[`IDisposable` を実装するオブジェクトの使用](../../../docs/standard/garbage-collection/using-objects.md)」では、型のコンシューマーが <xref:System.IDisposable.Dispose%2A> の実装を確実に呼び出す方法について説明します。 このためには、C# の `using` ステートメント (または Visual Basic の `Using` ステートメント) を使用することをお勧めします。
+「[`IDisposable` を実装するオブジェクトの使用](using-objects.md)」では、型のコンシューマーが <xref:System.IDisposable.Dispose%2A> の実装を確実に呼び出す方法について説明します。 このためには、C# の `using` ステートメント (または Visual Basic の `Using` ステートメント) を使用することをお勧めします。
 
 ## <a name="reference"></a>関連項目
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 0a9e2cc64da56c376445efce32e8da36ba9b6cdc
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: d917ea097cf9253a65c1907efdca71a640df9497
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738234"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240669"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>イベントのサブスクリプションとサブスクリプション解除を行う方法 (C# プログラミング ガイド)
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
@@ -101,6 +101,6 @@ ms.locfileid: "81738234"
 
 - [イベント](./index.md)
 - [event](../../language-reference/keywords/event.md)
-- [.NET Framework ガイドラインに準拠したイベントを発行する方法](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
+- [.NET ガイドラインに準拠したイベントを発行する方法](./how-to-publish-events-that-conform-to-net-framework-guidelines.md)
 - [- および -= 演算子](../../language-reference/operators/subtraction-operator.md)
 - [+ および += 演算子](../../language-reference/operators/addition-operator.md)

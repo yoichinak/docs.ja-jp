@@ -13,12 +13,12 @@ helpviewer_keywords:
 - regular expressions [.NET Framework], examples
 - pattern-matching with regular expressions, examples
 ms.assetid: 5fcc75a5-09d7-45ae-a4c0-9ad6085ac83d
-ms.openlocfilehash: 358e26957747073fec9dfe9eb0d404cb438afaf9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4290bf0d6ee9deec8129c5f4f6092eedb08345f0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73084188"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276180"
 ---
 # <a name="regular-expression-example-changing-date-formats"></a>正規表現の例: 日付形式の変更
 次のコード例では、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドを使用して、*mm*/*dd*/*yy* 形式の日付を *dd*-*mm*-*yy* 形式の日付に置き換えます。  
@@ -57,4 +57,4 @@ ms.locfileid: "73084188"
   
 ## <a name="see-also"></a>参照
 
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET の正規表現](regular-expressions.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - generics [.NET Framework], interfaces
 - ordering comparisons [.NET Framework]
 ms.assetid: 88bf5b04-d371-4edb-ba38-01ec7cabaacf
-ms.openlocfilehash: 704ada32d428c468d5b71a3f1390568ca586079e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 21a244a5d44b036a987d8eb8a79aef2c4b8e9a76
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75708325"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287520"
 ---
 # <a name="generic-interfaces"></a>ジェネリック インターフェイス
 このトピックでは、ジェネリック型のファミリ間に共通する機能を提供するジェネリック インターフェイスについて概説します。  
@@ -22,7 +22,7 @@ ms.locfileid: "75708325"
  ジェネリック インターフェイスは、順序付け比較や等価比較、およびジェネリック コレクション型で共有される機能のために、非ジェネリック インターフェイスに対応するタイプ セーフな機能を提供します。  
   
 > [!NOTE]
-> .NET Framework 4 以降では、いくつかのジェネリック インターフェイスの型パラメーターが共変または反変としてマークされ、それらのインターフェイスを実装する型をより柔軟に割り当てたり使用したりできます。 「 [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)を参照してください。  
+> .NET Framework 4 以降では、いくつかのジェネリック インターフェイスの型パラメーターが共変または反変としてマークされ、それらのインターフェイスを実装する型をより柔軟に割り当てたり使用したりできます。 「 [共変性と反変性](covariance-and-contravariance.md)を参照してください。  
   
 ### <a name="equality-and-ordering-comparisons"></a>等価比較と順序付け比較  
  <xref:System> 名前空間で、<xref:System.IComparable%601?displayProperty=nameWithType> と <xref:System.IEquatable%601?displayProperty=nameWithType> ジェネリック インターフェイスは、対応する非ジェネリック インターフェイスと同じように、順序付け比較と等価比較の方法をそれぞれ定義します。 型は、そのような比較の実施能力を提供するために、これらのインターフェイスを実装します。  
@@ -44,7 +44,7 @@ ms.locfileid: "75708325"
 
 - <xref:System.Collections.Generic?displayProperty=nameWithType>
 - <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
-- [ジェネリック](../../../docs/standard/generics/index.md)
-- [.NET Framework のジェネリック コレクション](../../../docs/standard/generics/collections.md)
-- [配列とリストの操作に使用する汎用デリゲート](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
-- [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)
+- [ジェネリック](index.md)
+- [.NET Framework のジェネリック コレクション](collections.md)
+- [配列とリストの操作に使用する汎用デリゲート](delegates-for-manipulating-arrays-and-lists.md)
+- [共変性と反変性](covariance-and-contravariance.md)

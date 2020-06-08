@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - PLINQ queries, how to iterate directories
 ms.assetid: 354e8ce3-35c4-431c-99ca-7661d1f3901b
-ms.openlocfilehash: 208076cb9b7b56ab13458fa0dd4d92f2023106b9
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: abf31ea69af6a85140efb783959a9a586ef6a59e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635845"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278000"
 ---
 # <a name="how-to-iterate-file-directories-with-plinq"></a>方法: PLINQ を使用してファイル ディレクトリを反復処理する
 
@@ -19,7 +19,7 @@ ms.locfileid: "80635845"
 2 番目のクエリでは、即座に結果を返し始める静的な <xref:System.IO.Directory.EnumerateDirectories%2A> メソッドと <xref:System.IO.DirectoryInfo.EnumerateFiles%2A> メソッドを使用します。 この方法での処理は、大規模なディレクトリ ツリーの反復処理では高速になる場合がありますが、処理時間は最初の例に比べると多くの要素に左右されます。  
   
 > [!NOTE]
-> これらの例は使用法を示すことを目的としており、同等の LINQ to Objects 順次クエリよりも実行速度が遅い場合があります。 高速化の詳細については、「[PLINQ での高速化について](../../../docs/standard/parallel-programming/understanding-speedup-in-plinq.md)」を参照してください。  
+> これらの例は使用法を示すことを目的としており、同等の LINQ to Objects 順次クエリよりも実行速度が遅い場合があります。 高速化の詳細については、「[PLINQ での高速化について](understanding-speedup-in-plinq.md)」を参照してください。  
   
 ## <a name="getfiles-example"></a>GetFiles の例
 
@@ -33,10 +33,10 @@ ms.locfileid: "80635845"
   
  [!code-csharp[PLINQ#34](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/plinqfileiteration.cs#34)]  
   
- <xref:System.IO.Directory.GetFiles%2A> を使用する場合は、ツリー内のすべてのディレクトリに対して必要なアクセス許可があることを確認してください。 アクセス許可がないと例外がスローされ、結果は返されません。 PLINQ クエリで <xref:System.IO.Directory.EnumerateDirectories%2A> を使用する場合、反復処理を続行できるように I/O 例外を適切に処理することが問題となります。 コードで I/O 例外または承認されていないアクセスの例外を処理する必要がある場合は、「[方法: Parallel クラスを使用してファイル ディレクトリを反復処理する](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-the-parallel-class.md)」で説明する方法を検討することをお勧めします。  
+ <xref:System.IO.Directory.GetFiles%2A> を使用する場合は、ツリー内のすべてのディレクトリに対して必要なアクセス許可があることを確認してください。 アクセス許可がないと例外がスローされ、結果は返されません。 PLINQ クエリで <xref:System.IO.Directory.EnumerateDirectories%2A> を使用する場合、反復処理を続行できるように I/O 例外を適切に処理することが問題となります。 コードで I/O 例外または承認されていないアクセスの例外を処理する必要がある場合は、「[方法: Parallel クラスを使用してファイル ディレクトリを反復処理する](how-to-iterate-file-directories-with-the-parallel-class.md)」で説明する方法を検討することをお勧めします。  
   
- ネットワーク経由のファイル I/O などで I/O の待機時間が問題となる場合は、「[TPL と従来の .NET 非同期プログラミング](../../../docs/standard/parallel-programming/tpl-and-traditional-async-programming.md)」およびこの[ブログの投稿](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)で説明する非同期 I/O の手法のいずれかを使用することを検討してください。  
+ ネットワーク経由のファイル I/O などで I/O の待機時間が問題となる場合は、「[TPL と従来の .NET 非同期プログラミング](tpl-and-traditional-async-programming.md)」およびこの[ブログの投稿](https://devblogs.microsoft.com/pfxteam/parallel-extensions-and-io/)で説明する非同期 I/O の手法のいずれかを使用することを検討してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

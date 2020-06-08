@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parsing strings, other strings
 - Boolean data type, parsing strings
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
-ms.openlocfilehash: 08e891501bbefcf8b32eff10dd7294af9d81adac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a3503e0e499c6010fcc3d8669fa5c1eaf2dbf570
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73127569"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84277545"
 ---
 # <a name="parsing-other-strings-in-net"></a>.NET でのその他の文字列の解析
 数値および <xref:System.DateTime> 文字列だけでなく、<xref:System.Char>、<xref:System.Boolean>、<xref:System.Enum> 型を表す文字列をデータ型に解析することもできます。  
@@ -50,6 +50,6 @@ ms.locfileid: "73127569"
   
 ## <a name="see-also"></a>参照
 
-- [文字列の解析](../../../docs/standard/base-types/parsing-strings.md)
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
-- [.NET での型変換](../../../docs/standard/base-types/type-conversion.md)
+- [文字列の解析](parsing-strings.md)
+- [型の書式設定](formatting-types.md)
+- [.NET での型変換](type-conversion.md)
