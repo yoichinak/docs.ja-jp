@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Equals method
 - StartsWith method
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
-ms.openlocfilehash: e63b2a8ac44d6171f9c48990882780ea420f8c76
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7997f3098265b76f8fe2ef4fc7ab0e17f6e81d69
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73101672"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289331"
 ---
 # <a name="comparing-strings-in-net"></a>.NET で文字列を比較する
 .NET は、文字列の値を比較するためのメソッドをいくつか提供します。 これらの値の比較メソッドとその説明を次の表に示します。  
@@ -59,7 +59,7 @@ ms.locfileid: "73101672"
   
  この例は、コンソールに `-1` と出力します。  
   
- 既定では、上の例はカルチャによって異なります。 カルチャに依存しない文字列操作を実行するには、 <xref:System.String.Compare%2A?displayProperty=nameWithType> culture *パラメーターを指定することによって使用するカルチャを指定することを可能にする* メソッドのオーバーロードを使用します。 <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドを使用してカルチャに依存しない比較を実行する例については、「 [カルチャを認識しない文字列比較の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)」を参照してください。  
+ 既定では、上の例はカルチャによって異なります。 カルチャに依存しない文字列操作を実行するには、 <xref:System.String.Compare%2A?displayProperty=nameWithType> culture *パラメーターを指定することによって使用するカルチャを指定することを可能にする* メソッドのオーバーロードを使用します。 <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドを使用してカルチャに依存しない比較を実行する例については、「 [カルチャを認識しない文字列比較の実行](../globalization-localization/performing-culture-insensitive-string-comparisons.md)」を参照してください。  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> メソッドは、ローカル カルチャを考慮せずに 2 つの文字列オブジェクトを比較します。 このメソッドの戻り値は、上の表で示した **Compare** メソッドによって返される値と同じです。  
@@ -89,7 +89,7 @@ ms.locfileid: "73101672"
   
  この例は、コンソールに `-1` と出力します。  
   
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドのすべてのオーバーロードは、既定で、カルチャに依存して大文字小文字を区別する比較を実行します。 このメソッドのオーバーロードで、カルチャに依存しない比較を実行できるものはありません。 コードを理解しやすくするために、 **String.Compare** メソッドを使用することをお勧めします。その際、カルチャに依存する操作には <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> を指定し、カルチャに依存しない操作には <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> を指定します。 **String.Compare** メソッドを使用してカルチャに依存する比較とカルチャに依存しない比較の両方を実行する例については、「 [カルチャを認識しない文字列比較の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)」を参照してください。  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドのすべてのオーバーロードは、既定で、カルチャに依存して大文字小文字を区別する比較を実行します。 このメソッドのオーバーロードで、カルチャに依存しない比較を実行できるものはありません。 コードを理解しやすくするために、 **String.Compare** メソッドを使用することをお勧めします。その際、カルチャに依存する操作には <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> を指定し、カルチャに依存しない操作には <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> を指定します。 **String.Compare** メソッドを使用してカルチャに依存する比較とカルチャに依存しない比較の両方を実行する例については、「 [カルチャを認識しない文字列比較の実行](../globalization-localization/performing-culture-insensitive-string-comparisons.md)」を参照してください。  
   
 ## <a name="equals"></a>等しい  
  **String.Equals** メソッドを使用すると、2 つの文字列が等しいかどうかを簡単に確認できます。 このメソッドは大文字と小文字を区別し、 **True** または **False** の Boolean 値を返します。 このメソッドは、次の例に示すように、既存のクラスで使用できます。 **Equals** メソッドを使用して、文字列オブジェクトに "Hello World" という語句が含まれているかどうかを確認する例を次に示します。  
@@ -150,7 +150,7 @@ ms.locfileid: "73101672"
   
 ## <a name="see-also"></a>参照
 
-- [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)
-- [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
+- [基本的な文字列操作](basic-string-operations.md)
+- [カルチャを認識しない文字列操作の実行](../globalization-localization/performing-culture-insensitive-string-operations.md)
 - [並べ替え重みテーブル (Windows 上の .NET 用)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [デフォルト Unicode 照合基本テーブル (Linux と macOS 上の .NET Core 用)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

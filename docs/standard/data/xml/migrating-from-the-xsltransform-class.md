@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9404d758-679f-4ffb-995d-3d07d817659e
-ms.openlocfilehash: 8383d8cb3e5819c46a0716c59323e492bb9add8e
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: d18cf72f0629d347fb5f55ad7332e6046614c01b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937990"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84282390"
 ---
 # <a name="migrating-from-the-xsltransform-class"></a>XslTransform クラスからの移行
 
@@ -35,7 +35,7 @@ XSLT アーキテクチャは、Visual Studio 2005 リリースで設計が変�
 [!code-csharp[XML_Migration#16](../../../../samples/snippets/csharp/VS_Snippets_Data/XML_Migration/CS/migration.cs#16)]
 [!code-vb[XML_Migration#16](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XML_Migration/VB/migration.vb#16)]
 
-詳しくは、「[XSLT のセキュリティに関する考慮事項](../../../../docs/standard/data/xml/xslt-security-considerations.md)」をご覧ください。
+詳しくは、「[XSLT のセキュリティに関する考慮事項](xslt-security-considerations.md)」をご覧ください。
 
 ## <a name="new-features"></a>新機能
 
@@ -97,7 +97,7 @@ using (XmlWriter writer = doc.CreateNavigator().AppendChild()) {
 
 ### <a name="discretionary-behavior"></a>随意動作
 
-W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を実装者が決定できる事項があります。 このような事項は、随意動作と見なされています。 事項によっては、<xref:System.Xml.Xsl.XslCompiledTransform> クラスと <xref:System.Xml.Xsl.XslTransform> クラスで動作が異なります。 詳しくは、「[XSLT エラーの解決](../../../../docs/standard/data/xml/recoverable-xslt-errors.md)」をご覧ください。
+W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を実装者が決定できる事項があります。 このような事項は、随意動作と見なされています。 事項によっては、<xref:System.Xml.Xsl.XslCompiledTransform> クラスと <xref:System.Xml.Xsl.XslTransform> クラスで動作が異なります。 詳しくは、「[XSLT エラーの解決](recoverable-xslt-errors.md)」をご覧ください。
 
 ### <a name="extension-objects-and-script-functions"></a>拡張オブジェクトとスクリプト関数
 
@@ -109,7 +109,7 @@ W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を�
 
 <xref:System.Xml.Xsl.XslCompiledTransform> では、スクリプト関数へのバインド (メソッド名参照) がコンパイル時に実行されます。XslTransform を利用するスタイル シートを <xref:System.Xml.Xsl.XslCompiledTransform> によって読み込むと、例外が発生する場合があります。
 
-<xref:System.Xml.Xsl.XslCompiledTransform> では、`msxsl:using` 要素内に子要素として `msxsl:assembly` および `msxsl:script` を含めることがサポートされます。 `msxsl:using` 要素と `msxsl:assembly` 要素を使用して、スクリプト ブロックで使用する追加の名前空間とアセンブリを宣言できます。 詳しくは、「[msxsl:script を使用したスクリプト ブロック](../../../../docs/standard/data/xml/script-blocks-using-msxsl-script.md)」をご覧ください。
+<xref:System.Xml.Xsl.XslCompiledTransform> では、`msxsl:using` 要素内に子要素として `msxsl:assembly` および `msxsl:script` を含めることがサポートされます。 `msxsl:using` 要素と `msxsl:assembly` 要素を使用して、スクリプト ブロックで使用する追加の名前空間とアセンブリを宣言できます。 詳しくは、「[msxsl:script を使用したスクリプト ブロック](script-blocks-using-msxsl-script.md)」をご覧ください。
 
 <xref:System.Xml.Xsl.XslCompiledTransform> では、複数のオーバーロードおよびそれと同数の引数を含む拡張オブジェクトは使用できません。
 
@@ -127,5 +127,5 @@ W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を�
 
 ## <a name="see-also"></a>関連項目
 
-- [XSLT 変換](../../../../docs/standard/data/xml/xslt-transformations.md)
-- [XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)
+- [XSLT 変換](xslt-transformations.md)
+- [XslCompiledTransform クラスの使用](using-the-xslcompiledtransform-class.md)

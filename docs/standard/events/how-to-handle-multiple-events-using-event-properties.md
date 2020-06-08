@@ -12,12 +12,12 @@ helpviewer_keywords:
 - event handling [.NET Framework], with multiple events
 - events [.NET Framework], multiple
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
-ms.openlocfilehash: f74d75a09da350b34dfb067c3d0db8fc669116ac
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c5be541c1a40c5d16a0502e76adef24f6a41cc89
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124769"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288473"
 ---
 # <a name="how-to-handle-multiple-events-using-event-properties"></a>方法 : イベント プロパティを使用して複数のイベントを処理する
 イベント プロパティを使用するには、イベントを発生させるクラスにイベント プロパティを定義し、そのイベントを処理するクラスにイベント プロパティのデリゲートを設定します。 1 つのクラスにイベント プロパティを複数実装するには、そのクラス内部に、各イベント用に定義されたデリゲートを格納および保持する必要があります。 通常は、イベント キーをインデックスとするデリゲート コレクションを実装することによってこれを実現します。  
@@ -48,6 +48,6 @@ ms.locfileid: "73124769"
 ## <a name="see-also"></a>参照
 
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
-- [イベント](../../../docs/standard/events/index.md)
+- [イベント](index.md)
 - <xref:System.Web.UI.Control.Events%2A?displayProperty=nameWithType>
 - [方法: カスタム イベントを宣言してメモリを節約する](../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

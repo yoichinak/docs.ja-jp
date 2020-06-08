@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, how to traverse a tree
 ms.assetid: 4265d169-6c69-4f36-b10d-b7ae7f72f4df
-ms.openlocfilehash: b79337e6ee8057506ff87c696cecd6b038eeebfc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5ac81a61691ec20daafc9e18978ba5814a150383
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73141645"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288070"
 ---
 # <a name="how-to-traverse-a-binary-tree-with-parallel-tasks"></a>方法: 並列タスクでバイナリ ツリーを走査する
 次の例では、ツリー データ構造を走査する並列タスクを使用する 2 つの方法を示します。 ツリー自体の作成は、演習として残しておきます。  
@@ -26,4 +26,4 @@ ms.locfileid: "73141645"
   
 ## <a name="see-also"></a>参照
 
-- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [タスク並列ライブラリ (TPL)](task-parallel-library-tpl.md)

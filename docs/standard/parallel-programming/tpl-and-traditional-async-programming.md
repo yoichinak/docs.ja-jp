@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, with other asynchronous models
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
-ms.openlocfilehash: e71c609b500bc6771c405cfb6f4ac14923cc3939
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 7db031c655980dd800de77cbbd6a07a0ba94b33b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507547"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284885"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL と従来の .NET Framework 非同期プログラミング
 .NET Framework の I/O バインドの非同期操作および計算主体の非同期操作には、次の 2 つの標準パターンがあります。  
@@ -102,7 +102,7 @@ ms.locfileid: "82507547"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- 追加の例外処理や、クライアント コードからメソッドを呼び出す方法などを示したより包括的な例については、「[方法:タスクに EAP パターンをラップする](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)」を参照してください。  
+ 追加の例外処理や、クライアント コードからメソッドを呼び出す方法などを示したより包括的な例については、「[方法:タスクに EAP パターンをラップする](how-to-wrap-eap-patterns-in-a-task.md)」を参照してください。  
   
  <xref:System.Threading.Tasks.TaskCompletionSource%601> によって作成されたタスクは、その TaskCompletionSource によって開始されるので、ユーザー コードがそのタスクで Start メソッドを呼び出さないようにする必要があります。  
   
@@ -119,4 +119,4 @@ ms.locfileid: "82507547"
   
 ## <a name="see-also"></a>関連項目
 
-- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [タスク並列ライブラリ (TPL)](task-parallel-library-tpl.md)

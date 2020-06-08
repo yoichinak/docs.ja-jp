@@ -8,12 +8,12 @@ helpviewer_keywords:
 - threading [.NET Framework],exceptions in managed threads
 - managed threading
 ms.assetid: 11294769-2e89-43cb-890e-ad4ad79cfbee
-ms.openlocfilehash: 6c14c60b30f8f70aa5e888ed45d6f867154e18d8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 56900ddab5e1e6ee5375c8979dc19694d4ad9c54
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159651"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279699"
 ---
 # <a name="exceptions-in-managed-threads"></a>マネージド スレッドの例外
 .NET Framework バージョン 2.0 以降では、共通言語ランタイムはスレッド内のほとんどのハンドルされない例外をそのまま続行させます。 ほとんどの場合、これはハンドルされない例外によってアプリケーションが終了することを意味します。  
@@ -64,7 +64,7 @@ ms.locfileid: "78159651"
   
 - プロセスを終了できるように、スレッドを中止する必要がある場合は、スレッドをバックグラウンド スレッドにして、プロセス終了時にスレッドが自動的に終了するようにします。  
   
- どのような場合でも、方法は例外に関するデザイン ガイドラインに従う必要があります。 「[例外のデザイン ガイドライン](../../../docs/standard/design-guidelines/exceptions.md)」を参照してください。  
+ どのような場合でも、方法は例外に関するデザイン ガイドラインに従う必要があります。 「[例外のデザイン ガイドライン](../design-guidelines/exceptions.md)」を参照してください。  
   
 ### <a name="application-compatibility-flag"></a>アプリケーション互換性フラグ  
  一時的な互換性対策として、管理者はアプリケーション構成ファイルの `<runtime>` セクションに互換性フラグを配置できます。 これにより、共通言語ランタイムをバージョン 1.0 および 1.1 の動作に戻すことができます。  
@@ -74,8 +74,8 @@ ms.locfileid: "78159651"
 ```  
   
 ## <a name="host-override"></a>ホストのオーバーライド  
- .NET Framework バージョン 2.0 では、アンマネージ ホストはホスト API の [ICLRPolicyManager](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) インターフェイスを使用して、共通言語ランタイムの既定のハンドルされない例外ポリシーをオーバーライドできます。 [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 関数を使用して、ハンドルされない例外のポリシーを設定します。  
+ .NET Framework バージョン 2.0 では、アンマネージ ホストはホスト API の [ICLRPolicyManager](../../framework/unmanaged-api/hosting/iclrpolicymanager-interface.md) インターフェイスを使用して、共通言語ランタイムの既定のハンドルされない例外ポリシーをオーバーライドできます。 [ICLRPolicyManager::SetUnhandledExceptionPolicy](../../framework/unmanaged-api/hosting/iclrpolicymanager-setunhandledexceptionpolicy-method.md) 関数を使用して、ハンドルされない例外のポリシーを設定します。  
   
 ## <a name="see-also"></a>参照
 
-- [マネージド スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)
+- [マネージド スレッド処理の基本](managed-threading-basics.md)

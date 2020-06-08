@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - tasks, continuations
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
-ms.openlocfilehash: 7de8c4e44e1866e3df36c666c9ecc210dc6a7d83
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c6952b4b341a76e15d9699a06cd64ae7b6b4f047
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159365"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84285613"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 非同期プログラミングでは、非同期操作で完了時に 2 番目の操作を呼び出してデータを渡すのが一般的です。 これまで、継続はコールバック メソッドを使用して行っていました。 タスク並列ライブラリでは、 *継続タスク*に同じ機能が用意されています。 継続タスク (単に "継続" とも呼ばれます) とは、別のタスク (" *継続元*" と呼ばれます) が終了したときにそのタスクによって呼び出される非同期タスクのことです。  
@@ -75,7 +75,7 @@ ms.locfileid: "78159365"
  [!code-csharp[TPL_Continuations#2](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result1.cs#2)]
  [!code-vb[TPL_Continuations#2](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result1.vb#2)]  
   
- 継続元が正常に完了するまで実行されなかった場合でも継続を実行する場合は、例外を防ぐ必要があります。 1 つの方法として、継続元の <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> プロパティをテストし、状態が <xref:System.Threading.Tasks.Task%601.Result%2A> でも <xref:System.Threading.Tasks.TaskStatus.Faulted> でもない場合にのみ <xref:System.Threading.Tasks.TaskStatus.Canceled>プロパティへのアクセスを試みるようにします。 また、継続元の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティを調べることもできます。 詳細については、「[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」を参照してください。 次の例では、前の例を変更して、状態が <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> の場合にだけ継続元の <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>プロパティにアクセスするようにします。  
+ 継続元が正常に完了するまで実行されなかった場合でも継続を実行する場合は、例外を防ぐ必要があります。 1 つの方法として、継続元の <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> プロパティをテストし、状態が <xref:System.Threading.Tasks.Task%601.Result%2A> でも <xref:System.Threading.Tasks.TaskStatus.Faulted> でもない場合にのみ <xref:System.Threading.Tasks.TaskStatus.Canceled>プロパティへのアクセスを試みるようにします。 また、継続元の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティを調べることもできます。 詳細については、「[例外処理](exception-handling-task-parallel-library.md)」を参照してください。 次の例では、前の例を変更して、状態が <xref:System.Threading.Tasks.Task%601.Result%2A?displayProperty=nameWithType> の場合にだけ継続元の <xref:System.Threading.Tasks.TaskStatus.RanToCompletion?displayProperty=nameWithType>プロパティにアクセスするようにします。  
   
  [!code-csharp[TPL_Continuations#7](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/result2.cs#7)]
  [!code-vb[TPL_Continuations#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/result2.vb#7)]  
@@ -114,12 +114,12 @@ ms.locfileid: "78159365"
  [!code-csharp[TPL_Continuations#10](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/detached1.cs#10)]
  [!code-vb[TPL_Continuations#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/detached1.vb#10)]  
   
- 継続元の最終的な状態は、アタッチされた子タスクの最終的な状態に依存します。 デタッチされた子タスクの状態は、親には影響しません。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)」を参照してください。  
+ 継続元の最終的な状態は、アタッチされた子タスクの最終的な状態に依存します。 デタッチされた子タスクの状態は、親には影響しません。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](attached-and-detached-child-tasks.md)」を参照してください。  
   
 ## <a name="associating-state-with-continuations"></a>状態と継続の関連付け  
  任意の状態とタスクの継続を関連付けることができます。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドは、それぞれが継続の状態を表す <xref:System.Object> 値を受け取る、オーバーロードされたバージョンを提供します。 後でこの状態オブジェクトにアクセスするには、 <xref:System.Threading.Tasks.Task.AsyncState%2A?displayProperty=nameWithType> プロパティを使用します。 値を指定しない場合、この状態オブジェクトは `null` です。  
   
- 継続の状態は、TPL を使用するために、[非同期プログラミング モデル (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) を使った既存のコードを変換する場合に有用です。 APM では通常、**Begin**_Method_ メソッドでオブジェクト状態を指定し、後から <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> プロパティを使って、その状態にアクセスします。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドを使用すると、APM を使用するコードを TPL を使用するように変換するときに、この状態を維持できます。  
+ 継続の状態は、TPL を使用するために、[非同期プログラミング モデル (APM)](../asynchronous-programming-patterns/asynchronous-programming-model-apm.md) を使った既存のコードを変換する場合に有用です。 APM では通常、**Begin**_Method_ メソッドでオブジェクト状態を指定し、後から <xref:System.IAsyncResult.AsyncState%2A?displayProperty=nameWithType> プロパティを使って、その状態にアクセスします。 <xref:System.Threading.Tasks.Task.ContinueWith%2A> メソッドを使用すると、APM を使用するコードを TPL を使用するように変換するときに、この状態を維持できます。  
   
  継続の状態は、Visual Studio デバッガーで <xref:System.Threading.Tasks.Task> オブジェクトを使用するときにも有用です。 たとえば、 **[並列タスク]** ウィンドウの **[タスク]** の列に、各タスクの状態オブジェクトの文字列表現が表示されます。 **[並列タスク]** ウィンドウの詳細については、「[[タスク] ウィンドウの使用](/visualstudio/debugger/using-the-tasks-window)」を参照してください。  
   
@@ -146,10 +146,10 @@ ms.locfileid: "78159365"
      [!code-csharp[TPL_Continuations#11](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#11)]
      [!code-vb[TPL_Continuations#11](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#11)]  
   
-     詳細については、「[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」を参照してください。  
+     詳細については、「[例外処理](exception-handling-task-parallel-library.md)」を参照してください。  
   
-- アタッチされた子タスクで、 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> オプションを使用して継続が作成された場合、アタッチされているその他の子と同様、その例外は親によって呼び出し元のスレッドに反映されます。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)」を参照してください。  
+- アタッチされた子タスクで、 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> オプションを使用して継続が作成された場合、アタッチされているその他の子と同様、その例外は親によって呼び出し元のスレッドに反映されます。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](attached-and-detached-child-tasks.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照
 
-- [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
+- [タスク並列ライブラリ (TPL)](task-parallel-library-tpl.md)
