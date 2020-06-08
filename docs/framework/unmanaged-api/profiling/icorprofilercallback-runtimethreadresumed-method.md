@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: da984f89-4f53-4ab0-ae6f-3e2ee6085994
 topic_type:
 - apiref
-ms.openlocfilehash: 5a9ca2f4587c4881820e1aa3d4134f90ce47d557
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: d3949189a72583ebb50b67a270694a31f1eb23dc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76865897"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503212"
 ---
 # <a name="icorprofilercallbackruntimethreadresumed-method"></a>ICorProfilerCallback::RuntimeThreadResumed メソッド
 指定したスレッドが中断された後に再開されたことをプロファイラーに通知します。  
@@ -37,13 +37,13 @@ HRESULT RuntimeThreadResumed(
  から再開されたスレッドの ID。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

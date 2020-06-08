@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: aaac8f98-5cf4-42c7-b04b-556cce367e36
 topic_type:
 - apiref
-ms.openlocfilehash: f14dff33217656c35379a214f007ccb3642ef4b1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b79c8dd9f27805e00535dde53c6ee9f5ee457b42
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866456"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500264"
 ---
 # <a name="icorprofilercallbackexceptionclrcatcherexecute-method"></a>ICorProfilerCallback::ExceptionCLRCatcherExecute メソッド
-例外の `catch` ブロックが共通言語ランタイム (CLR) 自体の内部で実行されるときに呼び出されます。 このメソッドは .NET Framework バージョン2.0 では廃止されています。  
+`catch`例外のブロックが共通言語ランタイム (CLR) 自体の内部で実行されるときに呼び出されます。 このメソッドは .NET Framework バージョン2.0 では廃止されています。  
   
 ## <a name="syntax"></a>構文  
   
@@ -32,7 +32,7 @@ HRESULT ExceptionCLRCatcherExecute();
 ```  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   

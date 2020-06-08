@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea422217-988b-4acd-b2db-c55357938275
 topic_type:
 - apiref
-ms.openlocfilehash: 190bcacc84646cfd9294cf2b6b53b0474f38758f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 58ab9ee9381fce4d7af1910df6c8d3bb813bcf13
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177213"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490893"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA メソッド
 指定したトークンによって表されるメソッドまたはフィールドの相対仮想アドレス (RVA) および実装フラグを取得します。  
@@ -37,24 +37,24 @@ HRESULT GetRVA (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]RVA を返すコード オブジェクトを表す MethodDef または FieldDef メタデータ トークン。 トークンが FieldDef の場合、フィールドはグローバル変数である必要があります。  
+ からRVA を返すコードオブジェクトを表す MethodDef または FieldDef のメタデータトークン。 トークンが FieldDef の場合、フィールドはグローバル変数である必要があります。  
   
  `pulCodeRVA`  
- [アウト]トークンによって表されるコード オブジェクトの相対仮想アドレスへのポインター。  
+ 入出力トークンによって表されるコードオブジェクトの相対仮想アドレスへのポインター。  
   
  `pdwImplFlags`  
- [アウト]メソッドの実装フラグへのポインター。 この値は[、CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)列挙型のビットマスクです。 の値`pdwImplFlags`は、MethodDef`tk`トークンの場合にのみ有効です。  
+ 入出力メソッドの実装フラグへのポインター。 この値は[Cormethodimpl](cormethodimpl-enumeration.md)列挙子のビットマスクです。 の値は、 `pdwImplFlags` `tk` が MethodDef トークンの場合にのみ有効です。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

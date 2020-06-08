@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 29da20ca-bf39-4356-8099-d9c3ac3423a9
 topic_type:
 - apiref
-ms.openlocfilehash: 98d5dcf3b691f16f63390851e207f518bf26ab11
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 708981155589d491a3b1819adb611a28072dd1bf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866521"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500321"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed メソッド
 COM 相互運用機能の vtable が破棄されていることをプロファイラーに通知します。  
@@ -41,29 +41,29 @@ HRESULT COMClassicVTableDestroyed(
 
 - `wrappedClassId`
 
-  \[] この vtable が作成されたクラスの ID。
+  \[in] この vtable が作成されたクラスの ID。
 
 - `implementedIID`
 
-  \[] クラスによって実装されるインターフェイスの ID。 この値は、インターフェイスが内部でのみ使用されている場合は NULL になります。
+  \[in] クラスによって実装されるインターフェイスの ID。 この値は、インターフェイスが内部でのみ使用されている場合は NULL になります。
 
 - `pVTable`
 
-  \[] には、vtable の先頭へのポインターが含まれています。
+  \[) vtable の先頭へのポインター。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   
  プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

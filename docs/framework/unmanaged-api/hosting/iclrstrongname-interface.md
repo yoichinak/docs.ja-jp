@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2fac66fd-6b3b-4dbd-8baf-86038bd85526
 topic_type:
 - apiref
-ms.openlocfilehash: 04260429dd69f5ba1d6a94b6628979341d12b9e8
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 0b6efcbe4458977e8e938afabd7ae59171bc065a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762077"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501652"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName インターフェイス
 厳密な名前でアセンブリに署名するための基本的なグローバル静的関数を提供します。 すべて `ICLRStrongName` のメソッドは、標準 COM hresult を返します。  
@@ -35,7 +35,7 @@ ms.locfileid: "83762077"
 |[GetHashFromFileW メソッド](iclrstrongname-gethashfromfilew-method.md)|Unicode 文字列で指定されたファイルの内容に対してハッシュが作成されます。|  
 |[GetHashFromHandle メソッド](iclrstrongname-gethashfromhandle-method.md)|指定したハッシュ アルゴリズムを使用して、指定したファイル ハンドルを含むファイルの内容に対してハッシュが作成されます。|  
 |[StrongNameCompareAssemblies メソッド](iclrstrongname-strongnamecompareassemblies-method.md)|厳密な名前の署名に基づいて 2 つのアセンブリが異なるかどうかが判定されます。|  
-|[StrongNameFreeBuffer メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamefreebuffer-method.md)|[StrongNameGetPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)、 [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)などの厳密な名前のメソッドに対する以前の呼び出しで割り当てられたメモリを解放します。|  
+|[StrongNameFreeBuffer メソッド](iclrstrongname-strongnamefreebuffer-method.md)|[StrongNameGetPublicKey](iclrstrongname-strongnamegetpublickey-method.md)、 [StrongNameTokenFromPublicKey](iclrstrongname-strongnametokenfrompublickey-method.md)、 [StrongNameSignatureGeneration](iclrstrongname-strongnamesignaturegeneration-method.md)などの厳密な名前のメソッドに対する以前の呼び出しで割り当てられたメモリを解放します。|  
 |[StrongNameGetBlob メソッド](iclrstrongname-strongnamegetblob-method.md)|指定したアドレスにある実行可能ファイルのバイナリ表現が、指定したバッファーに入れられます。|  
 |[StrongNameGetBlobFromImage メソッド](iclrstrongname-strongnamegetblobfromimage-method.md)|指定したメモリ アドレスにあるアセンブリ イメージのバイナリ表現が取得されます。|  
 |[StrongNameGetPublicKey メソッド](iclrstrongname-strongnamegetpublickey-method.md)|秘密/公開キーの組から公開キーが取得されます。|  

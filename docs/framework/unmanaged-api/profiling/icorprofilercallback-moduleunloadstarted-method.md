@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2debcaab-6005-4245-afdb-4268bb7e74bd
 topic_type:
 - apiref
-ms.openlocfilehash: fcfdddbd5316c098754ea7b0d4714b050c64fe55
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7ad94bf766e0fcdbff95b0766cf68c2196a2c71
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175149"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503335"
 ---
 # <a name="icorprofilercallbackmoduleunloadstarted-method"></a>ICorProfilerCallback::ModuleUnloadStarted メソッド
 モジュールがアンロードされていることをプロファイラーに通知します。  
@@ -34,19 +34,19 @@ HRESULT ModuleUnloadStarted(
   
 ## <a name="parameters"></a>パラメーター  
  `moduleId`  
- [in]アンロードされるモジュールの ID。  
+ からアンロードされるモジュールの ID。  
   
 ## <a name="remarks"></a>解説  
- メソッド`moduleId`が返された後`ModuleUnloadStarted`の情報要求の値は無効です。  
+ の値は、 `moduleId` メソッドから制御が戻った後の情報要求に対して有効ではありません `ModuleUnloadStarted` 。これは、このモジュールに関する情報を取得する最後の機会です。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

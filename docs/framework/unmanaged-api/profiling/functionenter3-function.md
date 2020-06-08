@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef782c53-dae7-4990-b4ad-fddb1e690d4e
 topic_type:
 - apiref
-ms.openlocfilehash: 3ba014cbae4a71713f29968f0137ac053033c661
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: b435e1a3504dd623421f977ffc48264f8b0dcb5a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866958"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500703"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 関数
 コントロールが関数に渡されていることをプロファイラーに通知します。  
@@ -34,12 +34,12 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 
 - `functionOrRemappedID`
 
-  \[] には、コントロールが渡される関数の識別子を指定します。
+  \[in] コントロールが渡される関数の識別子。
 
-## <a name="remarks"></a>コメント  
- `FunctionEnter3` のコールバック関数は、関数が呼び出されていることをプロファイラーに通知しますが、引数の検査はサポートしていません。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
+## <a name="remarks"></a>解説  
+ `FunctionEnter3`コールバック関数は、関数が呼び出されていることをプロファイラーに通知しますが、引数の検査はサポートしていません。 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3 メソッド](icorprofilerinfo3-setenterleavefunctionhooks3-method.md)を使用して、この関数の実装を登録します。  
   
- `FunctionEnter3` 関数はコールバックです。実装する必要があります。 実装では、`__declspec(naked)` のストレージクラス属性を使用する必要があります。  
+ `FunctionEnter3`関数はコールバックであるため、実装する必要があります。 実装では、ストレージクラス属性を使用する必要があり `__declspec(naked)` ます。  
   
  この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
   
@@ -48,13 +48,13 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 - 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

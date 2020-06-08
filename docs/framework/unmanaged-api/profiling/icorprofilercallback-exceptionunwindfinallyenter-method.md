@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c7fab986-b69f-4ec8-b7b7-91dcfc239cd0
 topic_type:
 - apiref
-ms.openlocfilehash: ab7c8cbc41967af04c4c9a8813f32b9b1f01c6a1
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f5e4939c814239c297fc0aa88644dc0472b0c419
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866352"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500157"
 ---
 # <a name="icorprofilercallbackexceptionunwindfinallyenter-method"></a>ICorProfilerCallback::ExceptionUnwindFinallyEnter メソッド
-例外処理のアンワインドフェーズが、指定された関数に含まれる `finally` 句を入力していることをプロファイラーに通知します。  
+例外処理のアンワインドフェーズが、指定された `finally` 関数に含まれる句を入力していることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,21 +36,21 @@ HRESULT ExceptionUnwindFinallyEnter(
 
 - `functionId`
 
-  \[] `finally` 句を含む関数の ID。
+  \[in] 句を含む関数の ID `finally` 。
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  プロファイラーは、このメソッドの実装でブロックしないでください。スタックがガベージコレクションを許可する状態にならないため、プリエンプティブガベージコレクションを有効にすることはできません。 プロファイラーがここでブロックし、ガベージコレクションを実行しようとすると、このコールバックが戻るまでランタイムはブロックします。  
   
  プロファイラーによるこのメソッドの実装では、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

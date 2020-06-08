@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 625c3dd5-a3f0-442c-adde-310dadbb5054
 topic_type:
 - apiref
-ms.openlocfilehash: f97490e89e835716911072dbad5f70d8e55e76e6
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 162def0d703ea81efc3df3ea5ee08b58e34822e6
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805027"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501574"
 ---
 # <a name="ihostassemblystoreprovideassembly-method"></a>IHostAssemblyStore::ProvideAssembly メソッド
-[IHostAssemblyManager:: GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)から返された[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)によって参照されていないアセンブリへの参照を取得します。 共通言語ランタイム (CLR) は、 `ProvideAssembly` 一覧に表示されない各アセンブリに対してを呼び出します。  
+[IHostAssemblyManager:: GetNonHostStoreAssemblies](ihostassemblymanager-getnonhoststoreassemblies-method.md)から返された[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)によって参照されていないアセンブリへの参照を取得します。 共通言語ランタイム (CLR) は、 `ProvideAssembly` 一覧に表示されない各アセンブリに対してを呼び出します。  
   
 ## <a name="syntax"></a>構文  
   

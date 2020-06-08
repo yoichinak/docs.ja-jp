@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ce259d1d-cd81-4490-a7a1-0d0ea0804872
 topic_type:
 - apiref
-ms.openlocfilehash: 1e881b4a55a99bac3f9ca0e8db1556807b888f13
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8622920a81f4b469361ffa879f7a4eeda697cab9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616971"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504226"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats メソッド
 共通言語ランタイムのガベージコレクションシステムに関する現在の統計のセットを取得します。  
@@ -51,7 +51,7 @@ HRESULT GetStats (
 ## <a name="remarks"></a>解説  
  CLR は、のフィールドによって指定された統計のみを計算して返し `Flags` `pStats` ます。  
   
- フィールドを `Flags` [COR_GC_STAT_TYPES](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stat-types-enumeration.md)列挙体の1つ以上の値に設定して、 [COR_GC_STATS](cor-gc-stats-structure.md)構造内のどの統計情報を設定するかを指定します。  
+ フィールドを `Flags` [COR_GC_STAT_TYPES](cor-gc-stat-types-enumeration.md)列挙体の1つ以上の値に設定して、 [COR_GC_STATS](cor-gc-stats-structure.md)構造内のどの統計情報を設定するかを指定します。  
   
  使用例を次に示します。  
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 9ad70ffd-6963-4ab2-8c84-3d86c3fb8deb
 topic_type:
 - apiref
-ms.openlocfilehash: 9d6c9d22f4e50c21e2f41b7efd402907ff5843db
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 6b6f2dbaa49c29f6614e9c39a3f408d4d1453983
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805213"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501626"
 ---
 # <a name="igchost-interface"></a>IGCHost インターフェイス
 ガベージコレクションシステムに関する情報を取得し、ガベージコレクションのいくつかの側面を制御するためのメソッドを提供します。  
   
 > [!NOTE]
-> .NET Framework 4.5 以降では、 [IGCHost2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/igchost2-setgcstartuplimitsex-method.md)メソッドを使用して、ガベージコレクションセグメントのサイズと、ガベージコレクションシステムのジェネレーション0の最大サイズを、 `DWORD` [SetGCStartupLimits](igchost-setgcstartuplimits-method.md)メソッドによって設定された制限を超える値に設定できます。  
+> .NET Framework 4.5 以降では、 [IGCHost2:: SetGCStartupLimitsEx](igchost2-setgcstartuplimitsex-method.md)メソッドを使用して、ガベージコレクションセグメントのサイズと、ガベージコレクションシステムのジェネレーション0の最大サイズを、 `DWORD` [SetGCStartupLimits](igchost-setgcstartuplimits-method.md)メソッドによって設定された制限を超える値に設定できます。  
   
 > [!NOTE]
 > このインターフェイスは、専門家による使用のみを目的としています。 不適切に使用した場合、アプリケーションのパフォーマンスに影響を与える可能性があります。  

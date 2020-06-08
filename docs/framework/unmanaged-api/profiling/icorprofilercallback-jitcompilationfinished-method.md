@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8dcd7537-d0c6-498c-8a56-2c060310ef65
 topic_type:
 - apiref
-ms.openlocfilehash: f1cfef464569b577923fbb16624c99358998d29c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0da67f0d4be779cc21481d03a21209620289888e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866248"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500061"
 ---
 # <a name="icorprofilercallbackjitcompilationfinished-method"></a>ICorProfilerCallback::JITCompilationFinished メソッド
 Just-in-time (JIT) コンパイラが関数のコンパイルを完了したことをプロファイラーに通知します。  
@@ -38,26 +38,26 @@ HRESULT JITCompilationFinished(
 
 - `functionId`
 
-  \[] コンパイルされた関数の ID。
+  \[in] コンパイルされた関数の ID。
 
 - `hrStatus`
 
-  \[] コンパイルが成功したかどうかを示す値。
+  \[in] コンパイルが成功したかどうかを示す値。
 
 - `fIsSafeToBlock`
 
-  \[] ブロッキングがランタイムの操作に影響を与えるかどうかをプロファイラーに示す値。 この値は、ブロックによって、呼び出し元のスレッドがこのコールバックから戻るまでランタイムが待機する場合に `true` ます。それ以外の場合は、`false`ます。
+  \[in] プロファイラーに対して、ブロックがランタイムの操作に影響を与えるかどうかを示す値。 この値は、ブロックによって、 `true` ランタイムが呼び出し元のスレッドがこのコールバックから戻るのを待機する場合は、それ以外の場合はです `false` 。
 
-  `true` の値はランタイムに害を及ぼすことはありませんが、プロファイルの結果をスキューできます。
+  の値は `true` ランタイムに害を及ぼすことはありませんが、プロファイルの結果をスキューできます。
 
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b1e26bff-d3ea-436e-9867-29720df999f4
 topic_type:
 - apiref
-ms.openlocfilehash: 41955bd2f64d53e3620dede6b6da4cef2aab45f4
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 1981fdf25440a296801bdbd06c41ebcb4b87e870
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83842297"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501397"
 ---
 # <a name="ihosttaskmanagerreverseenterruntime-method"></a>IHostTaskManager::ReverseEnterRuntime メソッド
 アンマネージコードから共通言語ランタイム (CLR) への呼び出しが行われていることをホストに通知します。  
@@ -43,13 +43,13 @@ HRESULT ReverseEnterRuntime ();
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたリソース割り当てを完了するために必要なメモリが不足しています。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  マネージコードで開始されたシーケンスから CLR への呼び出しが行われる場合、への各呼び出しは、 `ReverseEnterRuntime` [ReverseLeaveRuntime](ihosttaskmanager-reverseleaveruntime-method.md)の呼び出しに対応します。  
   
 > [!NOTE]
-> 呼び出しは、入れ子になっていなくてもアンマネージコードから発生することがあります。 この場合、 [Enterruntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)、all [veruntime](ihosttaskmanager-leaveruntime-method.md)、またはが呼び出され `ReverseLeaveRuntime` ておらず、への呼び出しの回数がの `ReverseEnterRuntime` 呼び出しの数と等しくありません `ReverseLeaveRuntime` 。  
+> 呼び出しは、入れ子になっていなくてもアンマネージコードから発生することがあります。 この場合、 [Enterruntime](ihosttaskmanager-enterruntime-method.md)、all [veruntime](ihosttaskmanager-leaveruntime-method.md)、またはが呼び出され `ReverseLeaveRuntime` ておらず、への呼び出しの回数がの `ReverseEnterRuntime` 呼び出しの数と等しくありません `ReverseLeaveRuntime` 。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  

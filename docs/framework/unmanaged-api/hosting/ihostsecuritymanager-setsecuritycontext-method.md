@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e4372384-ee69-48d7-97e0-8fab7866597a
 topic_type:
 - apiref
-ms.openlocfilehash: 79ef08ef70ad1132ceacc3e2b997651e57032b9a
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 6a6b4d0351e22026dc873aad8281d0259d871a14
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803811"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501483"
 ---
 # <a name="ihostsecuritymanagersetsecuritycontext-method"></a>IHostSecurityManager::SetSecurityContext メソッド
 現在実行中のスレッドのセキュリティコンテキストを設定します。  
@@ -53,7 +53,7 @@ HRESULT SetSecurityContext (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
   
 ## <a name="remarks"></a>解説  
- CLR は `SetSecurityContext` いくつかのシナリオでを呼び出します。 CLR は、クラスコンストラクターとモジュールコンストラクター、およびファイナライザーを実行する前にを呼び出して、 `SetSecurityContext` ホストが実行エラーから保護されるようにします。 次に、への別の呼び出しを使用して、コンストラクターまたはファイナライザーの実行後に、セキュリティコンテキストを元の状態にリセットし `SetSecurityContext` ます。 同様のパターンは、i/o の完了時に発生します。 ホストが[Ihostiocompletionmanager manager](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)を実装している場合、CLR は `SetSecurityContext` ホストが[Iclriocomplete Manager:: oncomplete](iclriocompletionmanager-oncomplete-method.md)を呼び出した後にを呼び出します。  
+ CLR は `SetSecurityContext` いくつかのシナリオでを呼び出します。 CLR は、クラスコンストラクターとモジュールコンストラクター、およびファイナライザーを実行する前にを呼び出して、 `SetSecurityContext` ホストが実行エラーから保護されるようにします。 次に、への別の呼び出しを使用して、コンストラクターまたはファイナライザーの実行後に、セキュリティコンテキストを元の状態にリセットし `SetSecurityContext` ます。 同様のパターンは、i/o の完了時に発生します。 ホストが[Ihostiocompletionmanager manager](ihostiocompletionmanager-interface.md)を実装している場合、CLR は `SetSecurityContext` ホストが[Iclriocomplete Manager:: oncomplete](iclriocompletionmanager-oncomplete-method.md)を呼び出した後にを呼び出します。  
   
  ワーカースレッドの非同期ポイントでは、CLR は `SetSecurityContext` 、 <xref:System.Threading.ThreadPool.QueueUserWorkItem%2A?displayProperty=nameWithType> ホストまたは clr がスレッドプールを実装しているかどうかに応じて、 [IHostThreadPoolManager:: QueueUserWorkItem](ihostthreadpoolmanager-queueuserworkitem-method.md)内または内でを呼び出します。  
   

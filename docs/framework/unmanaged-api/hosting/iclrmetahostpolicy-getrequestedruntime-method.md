@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 59ec1832-9cc1-4b5c-983d-03407e51de56
 topic_type:
 - apiref
-ms.openlocfilehash: 52da5ec7ccd6ce48871e13a94f5957fa00d2a613
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 37167b7a9aefa6cd9d5e4df043e8bbc1b0514261
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703540"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504122"
 ---
 # <a name="iclrmetahostpolicygetrequestedruntime-method"></a>ICLRMetaHostPolicy::GetRequestedRuntime メソッド
 
-ホスト ポリシー、マネージド アセンブリ、バージョン文字列、および構成ストリームに基づいて、適切な共通言語ランタイム (CLR) のバージョンへのインターフェイスを提供します。 このメソッドは、実際には CLR の読み込みもアクティブ化も行いませんが、単にポリシー結果を表す[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイスを返します。 このメソッドは、 [Getrequestedruntimeinfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)、 [getrequestedruntimeinfo](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)、 [corbindtoruntimehost](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimehost-function.md)、 [Corbindtoruntimebycfg](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)、および[getcorrequiredversion](getcorrequiredversion-function.md)メソッドを置き換えます。
+ホスト ポリシー、マネージド アセンブリ、バージョン文字列、および構成ストリームに基づいて、適切な共通言語ランタイム (CLR) のバージョンへのインターフェイスを提供します。 このメソッドは、実際には CLR の読み込みもアクティブ化も行いませんが、単にポリシー結果を表す[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスを返します。 このメソッドは、 [Getrequestedruntimeinfo](getrequestedruntimeinfo-function.md)、 [getrequestedruntimeinfo](getrequestedruntimeversion-function.md)、 [corbindtoruntimehost](corbindtoruntimehost-function.md)、 [Corbindtoruntimebycfg](corbindtoruntimebycfg-function.md)、および[getcorrequiredversion](getcorrequiredversion-function.md)メソッドを置き換えます。
 
 ## <a name="syntax"></a>構文
 
@@ -53,7 +53,7 @@ HRESULT GetRequestedRuntime(
 |`pcchVersion`|[in、out] 必須です。 バッファー オーバーランを回避するため、入力として必要なサイズの `pwzVersion` を指定します。 `pwzVersion` が null の場合、`GetRequestedRuntime` が返されるときに、`pcchVersion` には必要なサイズの `pwzVersion` が含まれて、事前の割り当てが可能になります。それ以外の場合、`pcchVersion` には `pwzVersion` に書き込まれる文字数が含まれます。|
 |`pwzImageVersion`|[out] 省略可能です。 が返されるときに `GetRequestedRuntime` 、返される[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスに対応する CLR バージョンを格納します。|
 |`pcchImageVersion`|[in、out] 省略可能です。 バッファー オーバーランを回避するため、入力として `pwzImageVersion` のサイズを指定します。 `pwzImageVersion` が null の場合、`GetRequestedRuntime` が返されるとき、`pcchImageVersion` には必要なサイズの `pwzImageVersion` が含まれて、事前の割り当てが可能になります。|
-|`pdwConfigFlags`|[out] 省略可能です。 が `GetRequestedRuntime` バインドプロセス中に構成ファイルを使用する場合、が返されるときに、 `pdwConfigFlags` [ \< スタートアップの>](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)要素に属性セットがあるかどうか、および属性の値が設定されているかどうかを示す[METAHOST_CONFIG_FLAGS](metahost-config-flags-enumeration.md)値が含まれ `useLegacyV2RuntimeActivationPolicy` ます。 に関連する値を取得するには、 [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](metahost-config-flags-enumeration.md)マスクをに適用し `pdwConfigFlags` `useLegacyV2RuntimeActivationPolicy` ます。|
+|`pdwConfigFlags`|[out] 省略可能です。 が `GetRequestedRuntime` バインドプロセス中に構成ファイルを使用する場合、が返されるときに、 `pdwConfigFlags` 要素に属性セットがあるかどうか、 [METAHOST_CONFIG_FLAGS](metahost-config-flags-enumeration.md) [\<startup>](../../configure-apps/file-schema/startup/startup-element.md) `useLegacyV2RuntimeActivationPolicy` および属性の値が含まれているかどうかを示す METAHOST_CONFIG_FLAGS 値を格納します。 に関連する値を取得するには、 [METAHOST_CONFIG_FLAGS_LEGACY_V2_ACTIVATION_POLICY_MASK](metahost-config-flags-enumeration.md)マスクをに適用し `pdwConfigFlags` `useLegacyV2RuntimeActivationPolicy` ます。|
 |`riid`|から要求された[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスのインターフェイス識別子 IID_ICLRRuntimeInfo を指定します。|
 |`ppRuntime`|入出力が返されるときに `GetRequestedRuntime` 、対応する[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスへのポインターを格納します。|
 

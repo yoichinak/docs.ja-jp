@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: e97c97a6-6e4f-41f5-9af1-9b3cf3bdbd6b
 topic_type:
 - apiref
-ms.openlocfilehash: b8a65b0748fec0e474d8b3b5dc03473fbd716108
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 68cdefe7ab362b26bbf060fa46766068eb0d7094
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177333"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503758"
 ---
 # <a name="imetadataimportenummemberrefs-method"></a>IMetaDataImport::EnumMemberRefs メソッド
 指定した型のメンバーを表す MemberRef トークンを列挙します。  
@@ -39,37 +39,37 @@ HRESULT EnumMemberRefs (
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [イン、アウト]列挙子へのポインター。  
+ [入力、出力]列挙子へのポインター。  
   
  `tkParent`  
- [in]メンバーを列挙する型の型定義、型定義、メソッド定義、またはモジュール参照トークン。  
+ からメンバーを列挙する型の TypeDef、TypeRef、MethodDef、または ModuleRef トークン。  
   
  `rMemberRefs`  
- [アウト]メンバー参照トークンを格納するために使用される配列。  
+ 入出力MemberRef トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rMemberRefs` 配列の最大サイズ。  
   
  `pcTokens`  
- [アウト]に返された MemberRef トークンの`rMemberRefs`実際の数。  
+ 入出力で返された MemberRef トークンの実際の数 `rMemberRefs` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumMemberRefs`正常に返されました。|  
-|`S_FALSE`|列挙する MemberRef トークンがありません。 その場合、`pcTokens`ゼロになります。|  
+|`S_FALSE`|列挙する MemberRef トークンがありません。 この場合、 `pcTokens` はゼロになります。|  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

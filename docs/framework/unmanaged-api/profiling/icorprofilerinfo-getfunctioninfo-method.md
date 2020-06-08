@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c42b5891-019d-46b3-b551-4606295b75b8
 topic_type:
 - apiref
-ms.openlocfilehash: 823cc5638ff3e0955aca0bd9ba5795f6b369c6b0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: e7193526bb0da1d28da4bf6bde108fc4d3fba273
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76863622"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503017"
 ---
 # <a name="icorprofilerinfogetfunctioninfo-method"></a>ICorProfilerInfo::GetFunctionInfo メソッド
 指定された関数の親クラスとメタデータトークンを取得します。  
@@ -48,19 +48,19 @@ HRESULT GetFunctionInfo(
  `pToken`  
  [out] 関数のメタデータ トークンへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  プロファイラーコードは、 [ICorProfilerInfo:: GetModuleMetaData](icorprofilerinfo-getmodulemetadata-method.md)を呼び出して、指定されたモジュールのメタデータインターフェイスを取得できます。 `pToken` が参照している場所に返されるメタデータ トークンを使用すると、関数のメタデータにアクセスできます。  
   
- ジェネリッククラスでの関数の `ClassID` は、関数の使用に関するコンテキスト情報がなくても取得できない場合があります。 この場合、`pClassId` は0になります。 プロファイラーコードでは、 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)と COR_PRF_FRAME_INFO 値を使用して、より多くのコンテキストを提供する必要があります。  
+ `ClassID`ジェネリッククラスの関数は、関数の使用に関するコンテキスト情報がないと取得できない可能性があります。 この場合、 `pClassId` は0になります。 プロファイラーコードでは、 [ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)と COR_PRF_FRAME_INFO 値を使用して、より多くのコンテキストを提供する必要があります。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

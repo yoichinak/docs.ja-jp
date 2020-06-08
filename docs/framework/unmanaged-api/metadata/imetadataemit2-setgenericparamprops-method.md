@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: cd93a48d-1fed-4706-bec6-a05dc3b64fbd
 topic_type:
 - apiref
-ms.openlocfilehash: fd7f149e806727d849cdceb3ffbc5dc7392fcf1d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8feba8e67f3a90dd48fd957065a9c166c204b87c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177404"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492735"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps メソッド
-指定したトークンによって参照されるジェネリック パラメーター定義のプロパティ値を設定します。  
+指定したトークンによって参照されるジェネリックパラメーター定義のプロパティ値を設定します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,30 +39,30 @@ HRESULT SetGenericParamProps (
   
 ## <a name="parameters"></a>パラメーター  
  `gp`  
- [in]値を設定するジェネリック パラメーター定義のトークン。  
+ から値を設定するジェネリックパラメーター定義のトークン。  
   
  `dwParamFlags`  
- [in]ジェネリック パラメーターの型を記述する[CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)列挙体の値。  
+ からジェネリックパラメーターの型を記述する[Corgenericparamattr](corgenericparamattr-enumeration.md)列挙体の値。  
   
  `szName`  
- [in] オプション。 値を設定するパラメータの名前。  
+ [in] オプション。 値を設定するパラメーターの名前。  
   
  `reserved`  
  [入力] 将来の機能拡張に備えて予約されています。  
   
  `rtkConstraints`  
- [in] オプション。 型制約のゼロで終わる配列。 配列メンバーは`mdTypeDef`、 、`mdTypeRef`または`mdTypeSpec`メタデータ・トークンでなければなりません。  
+ [in] オプション。 型制約の0から終わる配列。 配列メンバーは `mdTypeDef` 、、 `mdTypeRef` 、またはメタデータトークンである必要があり `mdTypeSpec` ます。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataEmit2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [IMetaDataEmit インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 インターフェイス](imetadataemit2-interface.md)
+- [IMetaDataEmit インターフェイス](imetadataemit-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9fb1c03-417f-41d4-aed4-02cb4ade8def
 topic_type:
 - apiref
-ms.openlocfilehash: bff45e6f6f57b95d07ac5073cb70020818cce000
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0ea584bfff4340e5e9635d6c31e177e88765b582
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867166"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500872"
 ---
 # <a name="cor_prf_gc_root_kind-enumeration"></a>COR_PRF_GC_ROOT_KIND 列挙型
 [ICorProfilerCallback2:: RootReferences2](icorprofilercallback2-rootreferences2-method.md)コールバックによって公開されるガベージコレクションルートの種類を示します。  
@@ -45,14 +45,14 @@ typedef enum {
 |`COR_PRF_GC_ROOT_OTHER`|ルートの種類が指定されていません。|  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のプロファイリング](profiling-enumerations.md)
+- [列挙体のプロファイリング](profiling-enumerations.md)

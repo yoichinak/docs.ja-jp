@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [.NET Framework hosting]
 - hosting enumerations [.NET Framework]
 ms.assetid: e09131eb-1f7d-4f52-ae42-7393e9b62ef6
-ms.openlocfilehash: e6fb22f91d57a356a9a7c3749e44a9fb3c36b699
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8edace3191ee4477b19f199d5db6c891c993dcd5
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616113"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504304"
 ---
 # <a name="hosting-enumerations"></a>ホスティングの列挙体
 このセクションでは、ホスティング API が使用するアンマネージ列挙について説明します。  
@@ -72,13 +72,13 @@ ms.locfileid: "83616113"
  特定のメモリ割り当てが要求されたが、満たされない場合のエラーの影響を示す値を格納します。  
   
  [EPolicyAction 列挙型](epolicyaction-enumeration.md)  
- [EClrOperation 列挙](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)によって記述される操作と、 [Eclrfailure 列挙](eclrfailure-enumeration.md)によって記述されるエラーについて、ホストが設定できるポリシーアクションについて説明します。  
+ [EClrOperation 列挙](eclroperation-enumeration.md)によって記述される操作と、 [Eclrfailure 列挙](eclrfailure-enumeration.md)によって記述されるエラーについて、ホストが設定できるポリシーアクションについて説明します。  
   
  [ESymbolReadingPolicy 列挙型](esymbolreadingpolicy-enumeration.md)  
  プログラムデータベース (PDB) ファイルを読み取るためのポリシーを設定する値が含まれます。  
   
  [ETaskType 列挙型](etasktype-enumeration.md)  
- [ICLRTask インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)または[IHostTask](ihosttask-interface.md)インターフェイスインターフェイスによって表されるタスクの種類を示す値を格納します。  
+ [ICLRTask インターフェイス](iclrtask-interface.md)または[IHostTask](ihosttask-interface.md)インターフェイスインターフェイスによって表されるタスクの種類を示す値を格納します。  
   
  [HOST_TYPE 列挙型](host-type-enumeration.md)  
  アプリケーションを起動しているホストの種類を指定する値を格納します。  

@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 72dd76ba-239e-45ac-9ded-318fb07d6c6d
 topic_type:
 - apiref
-ms.openlocfilehash: 8788d6e2220778a3f0926d5ed3dd59142487bcca
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 901c62e6f2519fc4f9251f348c77b11bbe0992be
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616191"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504346"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 列挙型
-[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)によって記述された操作や[eclrfailure](eclrfailure-enumeration.md)によって記述されたエラーについて、ホストが設定できるポリシーアクションについて説明します。  
+[EClrOperation](eclroperation-enumeration.md)によって記述された操作や[eclrfailure](eclrfailure-enumeration.md)によって記述されたエラーについて、ホストが設定できるポリシーアクションについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,7 +57,7 @@ typedef enum {
 |`eUnloadAppDomain`|をアンロードすることを指定し <xref:System.AppDomain> ます。 CLR はファイナライザーの実行を試みます。|  
   
 ## <a name="remarks"></a>解説  
- ホストは、 [ICLRPolicyManager](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)インターフェイスのメソッドを呼び出すことによって、ポリシーアクションを設定します。 ルードと正常な中止の詳細については、 [EClrOperation](eclroperation-enumeration.md)列挙体を参照してください。  
+ ホストは、 [ICLRPolicyManager](iclrpolicymanager-interface.md)インターフェイスのメソッドを呼び出すことによって、ポリシーアクションを設定します。 ルードと正常な中止の詳細については、 [EClrOperation](eclroperation-enumeration.md)列挙体を参照してください。  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
@@ -73,4 +73,4 @@ typedef enum {
 - [EClrFailure 列挙型](eclrfailure-enumeration.md)
 - [ICLRPolicyManager インターフェイス](iclrpolicymanager-interface.md)
 - [IHostPolicyManager インターフェイス](ihostpolicymanager-interface.md)
-- [ホスティングの列挙体](hosting-enumerations.md)
+- [ホスティングの列挙型](hosting-enumerations.md)

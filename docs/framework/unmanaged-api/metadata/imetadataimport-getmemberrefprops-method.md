@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ea73055-ece0-4151-a094-414c88ef8941
 topic_type:
 - apiref
-ms.openlocfilehash: a61254ba751e47b0089a3f7528aca337a32e2db3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00693f1a87334620442e8865e76183b2dab68878
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175370"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503617"
 ---
 # <a name="imetadataimportgetmemberrefprops-method"></a>IMetaDataImport::GetMemberRefProps メソッド
 指定したトークンによって参照されるメンバーに関連付けられているメタデータを取得します。  
@@ -41,36 +41,36 @@ HRESULT GetMemberRefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mr`  
- [in]関連するメタデータを返す MemberRef トークン。  
+ から関連付けられたメタデータを返す MemberRef トークン。  
   
  `ptk`  
- [アウト]メンバーを宣言するクラスを表す TypeDef または TypeRef トークン、またはメンバーを宣言するモジュール クラスを表す ModuleRef トークン、またはメンバーを表す MethodDef。  
+ 入出力メンバーを宣言するクラスを表す TypeDef または TypeRef または TypeSpec トークン、またはメンバーを宣言するモジュールクラスを表す ModuleRef トークン、またはメンバーを表す MethodDef。  
   
  `szMember`  
- [アウト]メンバーの名前の文字列バッファー。  
+ 入出力メンバーの名前の文字列バッファー。  
   
  `cchMember`  
- [in]要求されたサイズは、 の`szMember`ワイド文字で表示されます。  
+ からのワイド文字で要求されたサイズ `szMember` 。  
   
  `pchMember`  
- [アウト]返されるサイズは、 の`szMember`ワイド文字で表示されます。  
+ 入出力のワイド文字で返されたサイズ `szMember` 。  
   
  `ppvSibBlob`  
- [アウト]メンバーのバイナリ メタデータ シグネチャへのポインター。  
+ 入出力メンバーのバイナリメタデータシグネチャへのポインター。  
   
  `pbSig`  
- [アウト]のサイズ (バイト`ppvSigBlob`単位)  
+ 入出力のサイズ (バイト単位) `ppvSigBlob` 。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

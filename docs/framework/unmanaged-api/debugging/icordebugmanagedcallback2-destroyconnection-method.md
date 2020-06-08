@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf7940e9-4558-4319-925c-09f6c98c8fcd
 topic_type:
 - apiref
-ms.openlocfilehash: c5527f3bd0b04857a1ebc520016b81ddbe3c23f8
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: a3093f33f2220b22b7b4b373f6d79a341abf8c9c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83208903"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501938"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>ICorDebugManagedCallback2::DestroyConnection メソッド
 指定された接続が終了したことをデバッガーに通知します。  
@@ -41,10 +41,10 @@ HRESULT DestroyConnection (
  `dwConnectionId`  
  から破棄された接続の ID。  
   
-## <a name="remarks"></a>Remarks  
- ホストがホスト `DestroyConnection` [API](../hosting/index.md)で[ICLRDebugManager:: endconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)を呼び出すと、コールバックが発生します。  
+## <a name="remarks"></a>解説  
+ ホストがホスト `DestroyConnection` [API](../hosting/index.md)で[ICLRDebugManager:: endconnection](../hosting/iclrdebugmanager-endconnection-method.md)を呼び出すと、コールバックが発生します。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

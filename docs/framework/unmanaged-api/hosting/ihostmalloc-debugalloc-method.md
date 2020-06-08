@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0bfbc527-bea2-43ce-b041-69186f4440dd
 topic_type:
 - apiref
-ms.openlocfilehash: 8475362ede5ea28009d5abc54c286d6f2a6fed0f
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 3f85e7c7fd54079ddce37f739a3a7bc0fa830d31
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804637"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493293"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc メソッド
 ホストがヒープから指定された量のメモリを割り当て、さらにメモリが割り当てられた場所を追跡するように要求します。  
@@ -66,7 +66,7 @@ HRESULT DebugAlloc (
 |E_OUTOFMEMORY|割り当て要求を完了するのに十分なメモリがありませんでした。|  
   
 ## <a name="remarks"></a>解説  
- CLR は、 [IHostMemoryManager:: CreateMalloc](ihostmemorymanager-createmalloc-method.md)メソッドを呼び出すことによって、 [IHostMalloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)インスタンスへのインターフェイスポインターを取得します。 `DebugAlloc`ランタイムがデバッグ中に使用するコードファイルの情報を取得できるようにします。  
+ CLR は、 [IHostMemoryManager:: CreateMalloc](ihostmemorymanager-createmalloc-method.md)メソッドを呼び出すことによって、 [IHostMalloc](ihostmalloc-interface.md)インスタンスへのインターフェイスポインターを取得します。 `DebugAlloc`ランタイムがデバッグ中に使用するコードファイルの情報を取得できるようにします。  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  

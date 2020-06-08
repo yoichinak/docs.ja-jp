@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4e2d88c6-8a3a-4fbe-900b-b4f4c06bf6bf
 topic_type:
 - apiref
-ms.openlocfilehash: 91a19e5e15dddd446208dfa3b2c32826282067eb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a031cdb875b5eb046428d4d235d3093caddb7a6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175396"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491291"
 ---
 # <a name="imetadataimportgetfieldmarshal-method"></a>IMetaDataImport::GetFieldMarshal メソッド
-指定したフィールド メタデータ トークンによって表されるフィールドのネイティブでアンマネージ型へのポインターを取得します。  
+指定されたフィールドメタデータトークンによって表されるフィールドの、ネイティブなアンマネージ型へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,24 +37,24 @@ HRESULT GetFieldMarshal (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]相互運用マーシャリング情報を取得するフィールドを表すメタデータ トークン。  
+ から相互運用マーシャリング情報を取得するフィールドを表すメタデータトークン。  
   
  `ppvNativeType`  
- [アウト]フィールドのネイティブ型のメタデータ シグネチャへのポインター。  
+ 入出力フィールドのネイティブ型のメタデータシグネチャへのポインター。  
   
  `pcbNativeType`  
- [アウト]のサイズ (バイト`ppvNativeType`単位)  
+ 入出力のサイズ (バイト単位) `ppvNativeType` 。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

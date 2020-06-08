@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET Framework 2.0, hosting global static functions
 - hosting global static functions [.NET Framework], version 2.0
 ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
-ms.openlocfilehash: 8925278bdf4d48efc9e589ffc4e181d904444e6b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 083d0ff285abb4a99ad05c791bc504ff7f282c6a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616425"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504369"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>非推奨の CLR ホスト関数
 このセクションでは、以前のバージョンのホスト API で使用されていたアンマネージ グローバル静的関数について説明します。  
@@ -24,7 +24,7 @@ ms.locfileid: "83616425"
  非推奨になりました。 指定したマネージド型のインスタンスを作成します。  
   
  [CoInitializeCor 関数](coinitializecor-function.md)  
- 互換性のために残されています。 共通言語ランタイム (CLR) を初期化するには、 [Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)または[Corbindtoの entruntime](corbindtocurrentruntime-function.md)を使用します。  
+ 互換性のために残されています。 共通言語ランタイム (CLR) を初期化するには、 [Corbindtoruntimeex](corbindtoruntimeex-function.md)または[Corbindtoの entruntime](corbindtocurrentruntime-function.md)を使用します。  
   
  [CoInitializeEE 関数](coinitializeee-function.md)  
  非推奨になりました。 CLR 実行エンジンがプロセスに読み込まれていることを確認します。 代わりに[ICLRRuntimeHost:: Start](iclrruntimehost-start-method.md)メソッドを使用してください。  
