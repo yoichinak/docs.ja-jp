@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 50b4de2de3e74a5835ee5706999892735269d4c2
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: c88279d361ea78a2e910c4621e92c500902d9124
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861737"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495126"
 ---
 # <a name="icorprofilerinfo8isfunctiondynamic-method"></a>ICorProfilerInfo8:: IsFunctionDynamic メソッド
 
@@ -33,25 +33,25 @@ HRESULT IsFunctionDynamic( [in]  FunctionID  functionId,
 
 - `functionId`
 
-  \[] には、対象の関数を識別する `FunctionID` を指定します。
+  \[in] `FunctionID` 対象の関数を識別する。
 
 - `isDynamic`
 
-  \[out] 関数にメタデータが含まれていないかどうかを示す値を格納する `BOOL` へのポインター。
+  \[out] `BOOL` 関数にメタデータが含まれていないかどうかを示す値を格納するへのポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 関数は、メタデータがない場合は動的と見なされます。 IL スタブや LCG メソッドなどの特定のメソッドには、IMetaDataImport Api を使用して取得できるメタデータが関連付けられていません。 これらのメソッドは、命令ポインターを通じて、または[ICorProfilerCallback::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)をリッスンすることによって、プロファイラーによって検出されます。
 
 ## <a name="requirements"></a>要件
 
-**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
 **ライブラリ:** CorGuids.lib
 
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 

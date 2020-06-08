@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ded1e492-a782-4185-9c66-709e421c1782
 topic_type:
 - apiref
-ms.openlocfilehash: 9326484c6a9f96d245e3c61a0ac3e3465a8a6dcd
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b7dcdcc6d9d0106af1bb83ee591cff76239b416
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616646"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504434"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 関数
 XML ファイルから読み取られたバージョン情報を使用して、共通言語ランタイム (CLR) をプロセスに読み込みます。  
@@ -50,7 +50,7 @@ HRESULT CorBindToRuntimeByCfg (
  からCLR の起動動作を指定する[STARTUP_FLAGS](startup-flags-enumeration.md)列挙体の値。  
   
  `rclsid`  
- から`CLSID` [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)または[ICLRRuntimeHost](iclrruntimehost-interface.md)のいずれかのインターフェイスを実装するコクラスの。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
+ から`CLSID` [ICorRuntimeHost](icorruntimehost-interface.md)または[ICLRRuntimeHost](iclrruntimehost-interface.md)のいずれかのインターフェイスを実装するコクラスの。 サポートされている値は CLSID_CorRuntimeHost と CLSID_CLRRuntimeHost です。  
   
  `riid`  
  から`IID` `ICorRuntimeHost` インターフェイスまたは `ICLRRuntimeHost` インターフェイスの。 サポートされている値は IID_ICorRuntimeHost と IID_ICLRRuntimeHost です。  

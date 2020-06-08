@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72822b95-a7fb-485e-9d55-1cb016d9a458
 topic_type:
 - apiref
-ms.openlocfilehash: ec33e55f840fe735091364ebc35cb7b7c165c10a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 409a21238f172e5ecdaa8d5bfa237a9f3fe46345
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867187"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500911"
 ---
 # <a name="cor_prf_gc_reason-enumeration"></a>COR_PRF_GC_REASON 列挙型
 ガベージ コレクションが発生している理由を示します。  
@@ -37,18 +37,18 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_GC_INDUCED`|ガベージコレクションは、<xref:System.GC.Collect%2A> メソッドによって発生しました。|  
+|`COR_PRF_GC_INDUCED`|ガベージコレクションは、メソッドによって発生しました <xref:System.GC.Collect%2A> 。|  
 |`COR_PRF_GC_OTHER`|理由が指定されていません。|  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型のプロファイリング](profiling-enumerations.md)
+- [列挙体のプロファイリング](profiling-enumerations.md)

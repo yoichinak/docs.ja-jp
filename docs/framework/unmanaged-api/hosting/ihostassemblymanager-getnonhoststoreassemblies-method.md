@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2250b38-c76a-40ce-80c8-ba45149886e8
 topic_type:
 - apiref
-ms.openlocfilehash: 0dc2f625da7f4e37583f198c8d6dba86f6dcdb10
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 9a1440be7011130b16d7112ae15026eb74856190
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83805067"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501595"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies メソッド
 ホストが読み込みのために共通言語ランタイム (CLR) を必要とするアセンブリのリストを表す[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)へのインターフェイスポインターを取得します。  
@@ -56,7 +56,7 @@ HRESULT GetNonHostStoreAssemblies (
   
 - アセンブリが一覧に表示されている場合、CLR は通常どおりにバインドします。  
   
-- アセンブリが一覧に表示されず、ホストが[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)の実装を提供した場合、CLR は[IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md)を呼び出して、バインド先のアセンブリをホストが指定できるようにします。  
+- アセンブリが一覧に表示されず、ホストが[IHostAssemblyStore](ihostassemblystore-interface.md)の実装を提供した場合、CLR は[IHostAssemblyStore::P rovideassembly](ihostassemblystore-provideassembly-method.md)を呼び出して、バインド先のアセンブリをホストが指定できるようにします。  
   
 - それ以外の場合、CLR はアセンブリへのバインドに失敗します。  
   

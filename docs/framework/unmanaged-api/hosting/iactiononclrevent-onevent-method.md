@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0970f10c-4304-4c12-91c0-83e51455afb4
 topic_type:
 - apiref
-ms.openlocfilehash: a216a2925382016adeb100554bdceefdf3ee902b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: bbf5e299285071ba6d43fd2c40fc724d19bc7b2a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616061"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504356"
 ---
 # <a name="iactiononclreventonevent-method"></a>IActionOnCLREvent::OnEvent メソッド
 [ICLROnEventManager:: RegisterActionOnEvent](iclroneventmanager-registeractiononevent-method.md)メソッドの呼び出しを使用して登録されたイベントに対してコールバックを実行します。  
@@ -55,7 +55,7 @@ HRESULT OnEvent (
 ## <a name="remarks"></a>解説  
  `data`パラメーターが、指定されていない型のオブジェクトへのポインターです。 `event`パラメーターがの場合 `Event_DomainUnload` 、 `data` は、 <xref:System.AppDomain> アンロードされたの数値識別子です。 ホストは、この識別子をキーとして使用して適切なアクションを実行できます。  
   
- がの場合 `event` `Event_MDAFired` 、 `data` はマネージデバッグアシスタント (MDA) からのメッセージ出力を格納する[MDAInfo](../../../../docs/framework/unmanaged-api/hosting/mdainfo-structure.md)インスタンスへのポインターです。 Mda は、開発者がデバッグを支援する CLR の機能です。これは、特にトラップが困難なイベントに関する XML メッセージを生成することによって行われます。 このようなメッセージは、マネージコードとアンマネージコードの間の遷移をデバッグする場合に特に役立ちます。 詳細については、「[マネージデバッグアシスタントによるエラーの診断](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)」を参照してください。  
+ がの場合 `event` `Event_MDAFired` 、 `data` はマネージデバッグアシスタント (MDA) からのメッセージ出力を格納する[MDAInfo](mdainfo-structure.md)インスタンスへのポインターです。 Mda は、開発者がデバッグを支援する CLR の機能です。これは、特にトラップが困難なイベントに関する XML メッセージを生成することによって行われます。 このようなメッセージは、マネージコードとアンマネージコードの間の遷移をデバッグする場合に特に役立ちます。 詳細については、「[マネージデバッグアシスタントによるエラーの診断](../../debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)」を参照してください。  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  

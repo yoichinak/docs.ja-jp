@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3546316-e24d-417f-9909-e45d42c9d471
 topic_type:
 - apiref
-ms.openlocfilehash: 57df124f15f78daad053d9634e1baa969a65cc35
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f273cb03ad00957afb2bd78fe538a940fae236a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175279"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501236"
 ---
 # <a name="imetadatatablesgetguid-method"></a>IMetaDataTables::GetGuid メソッド
 指定したインデックス位置にある行から GUID を取得します。  
@@ -36,25 +36,25 @@ HRESULT GetGuid (
   
 ## <a name="parameters"></a>パラメーター  
  `ixGuid`  
- [in]GUID を取得する行のインデックス。  
+ からGUID の取得元となる行のインデックス。  
   
  `ppGuid`  
- [アウト]GUID へのポインターへのポインター。  
+ 入出力GUID へのポインターへのポインター。  
   
 ## <a name="remarks"></a>解説  
 
-  このメソッドは一貫した結果を返さないため、このメソッドを使用することはお勧めしません。 GUID テーブルの詳細については、共通言語インフラストラクチャ (CLI) のドキュメント、特に「パーティション II: メタデータの定義とセマンティクス」を参照してください。 ドキュメントはオンラインで入手できます。[「ECMA C# および共通言語インフラストラクチャ標準](../../../standard/components.md#applicable-standards)と[標準 ECMA-335 - 共通言語インフラストラクチャ (CLI)」](http://www.ecma-international.org/publications/standards/Ecma-335.htm)を参照してください。  
+  このメソッドは、一貫性のある結果を返さないため、使用しないことをお勧めします。 GUID テーブルの詳細については、共通言語基盤 (CLI) のドキュメント (特に「パーティション II: メタデータの定義とセマンティクス」) を参照してください。 ドキュメントはオンラインで入手できます。「 [Ecma C# および共通言語基盤の標準](../../../standard/components.md#applicable-standards)と[標準 ecma-335-共通言語基盤 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables インターフェイス](imetadatatables-interface.md)
+- [IMetaDataTables2 インターフェイス](imetadatatables2-interface.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b0d25f76-0bd5-4aa6-96cf-bfec0e1de28b
 topic_type:
 - apiref
-ms.openlocfilehash: b75de955e3b6857c9cc1b5411df4b0f262c4cb9a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 1263202c1fe524c924a88b9356e5ab9116cea553
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76862699"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502861"
 ---
 # <a name="icorprofilerinfo2getobjectgeneration-method"></a>ICorProfilerInfo2::GetObjectGeneration メソッド
 指定されたオブジェクトを格納しているヒープのセグメントを取得します。  
@@ -40,17 +40,17 @@ HRESULT GetObjectGeneration(
  `range`  
  入出力ガベージコレクション中のジェネレーション内のメモリの範囲 (つまり、ブロック) を記述する[COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)構造体へのポインター。 この範囲には、指定されたオブジェクトが含まれます。  
   
-## <a name="remarks"></a>コメント  
- `GetObjectGeneration` メソッドは、ガベージコレクションが実行されていない場合、任意のプロファイラーコールバックから呼び出すことができます。 つまり、 [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)と[ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)の間で発生するものを除き、任意のコールバックから呼び出すことができます。  
+## <a name="remarks"></a>解説  
+ `GetObjectGeneration`ガベージコレクションが実行されていない場合は、任意のプロファイラーコールバックからメソッドを呼び出すことができます。 つまり、 [ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)と[ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)の間で発生するものを除き、任意のコールバックから呼び出すことができます。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

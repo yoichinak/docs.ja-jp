@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a10749f1-ab91-47cf-982f-d8ccd2e81bd2
 topic_type:
 - apiref
-ms.openlocfilehash: a0d6496e014b767b2bdaf68cdc62017813e1e57f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d482e25c7bf0f028e2478c8e7b7863bc54d7aeb9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703640"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504195"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime メソッド
-共通言語ランタイム (CLR) の特定のバージョンに対応する[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイスを取得します。 このメソッドは、 [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md)フラグと共に使用される[Corbindtoruntimeex](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)関数よりも優先されます。  
+共通言語ランタイム (CLR) の特定のバージョンに対応する[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスを取得します。 このメソッドは、 [STARTUP_LOADER_SAFEMODE](startup-flags-enumeration.md)フラグと共に使用される[Corbindtoruntimeex](corbindtoruntimeex-function.md)関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -59,7 +59,7 @@ HRESULT GetRuntime (
 |E_POINTER|`pwzVersion` または `ppRuntime` が null です。|  
   
 ## <a name="remarks"></a>解説  
- このメソッドは、 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)インターフェイスや、非推奨の関数などの従来の関数のようなレガシインターフェイスと常に相互作用し `CorBindTo*` ます (「.NET FRAMEWORK 2.0 ホスティング API の[非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)」を参照してください)。 つまり、レガシ API で読み込まれたランタイムは新しい API から参照でき、新しい API で読み込まれたランタイムはレガシ API から参照できます。  
+ このメソッドは、 [ICorRuntimeHost](icorruntimehost-interface.md)インターフェイスや、非推奨の関数などの従来の関数のようなレガシインターフェイスと常に相互作用し `CorBindTo*` ます (「.NET FRAMEWORK 2.0 ホスティング API の[非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)」を参照してください)。 つまり、レガシ API で読み込まれたランタイムは新しい API から参照でき、新しい API で読み込まれたランタイムはレガシ API から参照できます。  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  

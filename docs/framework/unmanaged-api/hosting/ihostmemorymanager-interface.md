@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: a945d439-3b34-4aa4-b575-8413dd7806ce
 topic_type:
 - apiref
-ms.openlocfilehash: 4e7e76a4a3ab291ee97ad0912e3d6224cdf96fba
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 09b4a06892cdc450eed9dead503a990b6f19804e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804484"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501509"
 ---
 # <a name="ihostmemorymanager-interface"></a>IHostMemoryManager インターフェイス
 標準の Win32 仮想メモリ関数を使用する代わりに、共通言語ランタイム (CLR) がホストを介して仮想メモリ要求を行うことができるようにするメソッドを提供します。  
@@ -29,7 +29,7 @@ ms.locfileid: "83804484"
 |メソッド|説明|  
 |------------|-----------------|  
 |[AcquiredVirtualAddressSpace メソッド](ihostmemorymanager-acquiredvirtualaddressspace-method.md)|共通言語ランタイム (CLR) が、指定されたメモリをオペレーティングシステムから取得したことをホストに通知します。|  
-|[CreateMAlloc メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-createmalloc-method.md)|ホストによって作成されたヒープからメモリ割り当てを要求するために使用される[IHostMAlloc](ihostmalloc-interface.md)インスタンスへのインターフェイスポインターを取得します。|  
+|[CreateMAlloc メソッド](ihostmemorymanager-createmalloc-method.md)|ホストによって作成されたヒープからメモリ割り当てを要求するために使用される[IHostMAlloc](ihostmalloc-interface.md)インスタンスへのインターフェイスポインターを取得します。|  
 |[GetMemoryLoad メソッド](ihostmemorymanager-getmemoryload-method.md)|ホストによって報告された、現在使用されている物理メモリの量を取得します。|  
 |[NeedsVirtualAddressSpace メソッド](ihostmemorymanager-needsvirtualaddressspace-method.md)|CLR が指定されたメモリを使用しようとしていることをホストに通知します。|  
 |[RegisterMemoryNotificationCallback メソッド](ihostmemorymanager-registermemorynotificationcallback-method.md)|コンピューターの現在のメモリ負荷を CLR に通知するために、ホストが呼び出すコールバック関数へのポインターを登録します。|  

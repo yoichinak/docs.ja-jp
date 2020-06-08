@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e835062c-c7d6-4945-8a44-2de7ebf3928e
 topic_type:
 - apiref
-ms.openlocfilehash: 717a3d12528a34eafbd918c29d8e13bb87097d82
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 653c8d1d3edd38e646b4e90c0e48dbe15bed102a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615778"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504265"
 ---
 # <a name="iclrdebugmanager-interface"></a>ICLRDebugManager インターフェイス
 ホストが一連のタスクを識別子とフレンドリ名に関連付けることができるようにするメソッドを提供します。  
@@ -32,7 +32,7 @@ ms.locfileid: "83615778"
 |[EndConnection メソッド](iclrdebugmanager-endconnection-method.md)|タスクのリストと id とフレンドリ名の間の関連付けを削除します。|  
 |[GetDacl メソッド](iclrdebugmanager-getdacl-method.md)|このメソッドは実装されていません。|  
 |[IsDebuggerAttached メソッド](iclrdebugmanager-isdebuggerattached-method.md)|デバッガーがプロセスにアタッチされているかどうかを示す値を取得します。|  
-|[SetConnectionTasks メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)|[ICLRTask](iclrtask-interface.md)インスタンスのリストを識別子とフレンドリ名に関連付けます。|  
+|[SetConnectionTasks メソッド](iclrdebugmanager-setconnectiontasks-method.md)|[ICLRTask](iclrtask-interface.md)インスタンスのリストを識別子とフレンドリ名に関連付けます。|  
 |[SetDacl メソッド](iclrdebugmanager-setdacl-method.md)|このメソッドは実装されていません。|  
 |[SetSymbolReadingPolicy メソッド](iclrdebugmanager-setsymbolreadingpolicy-method.md)|プログラムデータベース (PDB) ファイルを読み取るためのポリシーを設定します。 ポリシーは、行番号とファイルに関する情報が呼び出し履歴に含まれるかどうかを決定します。|  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52794819-0a59-4bb1-a265-0f158cd5cd65
 topic_type:
 - apiref
-ms.openlocfilehash: 0851ac33a2bac4fcf727cf09e5225f6b83481b50
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 722a1e0adea41a13ca25829c53372c29187b80bd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866677"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500469"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished メソッド
 アプリケーションドメインがプロセスからアンロードされたことをプロファイラーに通知します。  
@@ -37,25 +37,25 @@ HRESULT AppDomainShutdownFinished(
 
 - `appDomainId`
 
-  の \[] アプリケーションのアセンブリが格納されているドメインを識別します。
+  \[in] は、アプリケーションのアセンブリが格納されているドメインを識別します。
 
 - `hrStatus`
 
-  \[] アプリケーションドメインが正常にアンロードされたかどうかを示す HRESULT。
+  \[in] アプリケーションドメインが正常にアンロードされたかどうかを示す HRESULT。
 
-## <a name="remarks"></a>コメント  
- `appDomainId` の値は、 [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md)メソッドが返された後の情報要求に対して無効です。  
+## <a name="remarks"></a>解説  
+ `appDomainId` [ICorProfilerCallback:: AppDomainShutdownStarted](icorprofilercallback-appdomainshutdownstarted-method.md)メソッドがを返すと、の値は情報要求に対して有効ではありません。  
   
- アプリケーションドメインのアンロードの一部は、`AppDomainCreationFinished` コールバックの後も続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、アプリケーションドメインのアンロードの最初の部分が成功したことのみを示します。  
+ アプリケーションドメインのアンロードの一部は、コールバック後に続行される場合があり `AppDomainCreationFinished` ます。 のエラー HRESULT は `hrStatus` エラーを示します。 ただし、の成功 HRESULT は、 `hrStatus` アプリケーションドメインのアンロードの最初の部分が成功したことを示します。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

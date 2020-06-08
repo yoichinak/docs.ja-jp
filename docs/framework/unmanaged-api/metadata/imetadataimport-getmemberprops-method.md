@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 42790918-4142-4938-b8f4-a56979a55846
 topic_type:
 - apiref
-ms.openlocfilehash: 72e14ea0414ebdeb8f54a4bdef8ce5208fc8ef72
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0357444aa8fa38bce5a7175cf6aacfe1a2b2b16e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177230"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503641"
 ---
 # <a name="imetadataimportgetmemberprops-method"></a>IMetaDataImport::GetMemberProps メソッド
-指定したメタデータ トークンによって参照されるメンバーの名前、バイナリ シグネチャ、相対仮想アドレスなど、指定した<xref:System.Type>メンバー定義のメタデータに格納されている情報を取得します。 これは単純なヘルパー メソッドです: *mb*がメソッド定義の場合は **、GetMethodProps**が呼び出されます。*mb*がフィールド定義の場合は **、GetFieldProps が**呼び出されます。 詳細については、他の方法を参照してください。
+指定された <xref:System.Type> メタデータトークンによって参照されるメンバーの、名前、バイナリ署名、相対仮想アドレスなど、指定されたメンバー定義のメタデータに格納されている情報を取得します。 これは単純なヘルパーメソッドです。 *mb*が MethodDef の場合は、 **getmethodprops**が呼び出されます。*mb*が FieldDef の場合は、 **getfieldprops**が呼び出されます。 詳細については、これらの他の方法を参照してください。
   
 ## <a name="syntax"></a>構文  
   
@@ -47,54 +47,54 @@ HRESULT GetMemberProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in]関連付けられたメタデータを取得するメンバーを参照するトークン。  
+ から関連付けられているメタデータを取得するメンバーを参照するトークン。  
   
  `pClass`  
- [アウト]メンバーのクラスを表すメタデータ トークンへのポインター。  
+ 入出力メンバーのクラスを表すメタデータトークンへのポインター。  
   
  `szMember`  
- [アウト]メンバーの名前。  
+ 入出力メンバーの名前。  
   
  `cchMember`  
- [in]バッファーのワイド文字で示される`szMember`サイズ。  
+ からバッファーのサイズ (ワイド文字単位) `szMember` 。  
   
  `pchMember`  
- [アウト]返された名前のワイド文字で示されるサイズ。  
+ 入出力返される名前のワイド文字単位のサイズ。  
   
  `pdwAttr`  
- [アウト]メンバーに適用されるフラグ値。  
+ 入出力メンバーに適用されるフラグ値。  
   
  `ppvSigBlob`  
- [アウト]メンバーのバイナリ メタデータ シグネチャへのポインター。  
+ 入出力メンバーのバイナリメタデータシグネチャへのポインター。  
   
  `pcbSigBlob`  
- [アウト]のサイズ (バイト`ppvSigBlob`単位)  
+ 入出力のサイズ (バイト単位) `ppvSigBlob` 。  
   
  `pulCodeRVA`  
- [アウト]メンバーの相対仮想アドレスへのポインター。  
+ 入出力メンバーの相対仮想アドレスへのポインター。  
   
  `pdwImplFlags`  
- [アウト]メンバーに関連付けられたメソッド実装フラグ。  
+ 入出力メンバーに関連付けられているメソッド実装フラグ。  
   
  `pdwCPlusTypeFlag`  
- [アウト]をマークするフラグ。 <xref:System.ValueType> これは値の`ELEMENT_TYPE_*`1 つです。
+ 入出力をマークするフラグ <xref:System.ValueType> 。 値の1つです `ELEMENT_TYPE_*` 。
   
  `ppValue`  
- [アウト]このメンバーによって返される定数文字列値。  
+ 入出力このメンバーによって返される定数文字列値。  
   
  `pcchValue`  
- [アウト]のサイズを文字`ppValue`で指定`ppValue`します。  
+ 入出力の文字数のサイズ `ppValue` `ppValue` 。が文字列を保持しない場合は0。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

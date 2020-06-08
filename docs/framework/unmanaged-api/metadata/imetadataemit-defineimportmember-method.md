@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7dd94c6-335b-46ff-9dfe-505056db5673
 topic_type:
 - apiref
-ms.openlocfilehash: ec8a24251ac4f0701b1adab19829078270229ced
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 2facc63023a20dd6aaac64d7d036324c31658bc8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84004596"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501314"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember メソッド
 現在のスコープの外部で定義されている型またはモジュールの指定したメンバーへの参照を作成し、その参照のトークンを定義します。  
@@ -65,18 +65,18 @@ HRESULT DefineImportMember (
  `pmr`  
  入出力`mdMemberRef`メンバー参照の現在のスコープで定義されているトークン。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  メソッドは、で指定された `DefineImportMember` メンバーを検索し `mbMember` ます。このメンバーは、で指定した別のスコープで定義され、 `pImport` そのプロパティを取得します。 この情報を使用して、現在のスコープで[IMetaDataEmit::D efinememberref](imetadataemit-definememberref-method.md)メソッドを呼び出し、メンバー参照を作成します。  
   
- 一般に、メソッドを使用する前に、 `DefineImportMember` ターゲットメンバーの親クラス、インターフェイス、またはモジュールの型参照またはモジュール参照を、現在のスコープで作成する必要があります。 その後、この参照のメタデータトークンが引数として渡され `tkParent` ます。 後でコンパイラまたはリンカーによって解決される場合は、ターゲットメンバーの親への参照を作成する必要はありません。 まとめると次のようになります。  
+ 一般に、メソッドを使用する前に、 `DefineImportMember` ターゲットメンバーの親クラス、インターフェイス、またはモジュールの型参照またはモジュール参照を、現在のスコープで作成する必要があります。 その後、この参照のメタデータトークンが引数として渡され `tkParent` ます。 後でコンパイラまたはリンカーによって解決される場合は、ターゲットメンバーの親への参照を作成する必要はありません。 まとめ  
   
-- ターゲットメンバーがフィールドまたはメソッドの場合は、 [IMetaDataEmit::D efinetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)または[IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md)メソッドを使用して、メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成します。  
+- ターゲットメンバーがフィールドまたはメソッドの場合は、 [IMetaDataEmit::D efinetyperefbyname](imetadataemit-definetyperefbyname-method.md)または[IMetaDataEmit::D efineImportType](imetadataemit-defineimporttype-method.md)メソッドを使用して、メンバーの親クラスまたは親インターフェイスの型参照を現在のスコープ内に作成します。  
   
 - ターゲットメンバーがグローバル変数またはグローバル関数 (つまり、クラスまたはインターフェイスのメンバーではない) である場合は、 [IMetaDataEmit::D efinemoduleref](imetadataemit-definemoduleref-method.md)メソッドを使用して、メンバーの親モジュールに対して、現在のスコープでモジュール参照を作成します。  
   
 - ターゲットメンバーの親が、後でコンパイラまたはリンカーによって解決される場合は、を渡し `mdTokenNil` `tkParent` ます。 これが適用される唯一のシナリオは、グローバル関数またはグローバル変数が、最終的に現在のモジュールにリンクされ、メタデータがマージされる .obj ファイルからインポートされる場合です。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  

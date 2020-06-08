@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cca0f799-09b8-4689-a33c-6d6537943a9b
 topic_type:
 - apiref
-ms.openlocfilehash: 7fb58c0eb2446253bd658434fc9d68bb857fe0e6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 25a4b101388bfc0151ba7c9c52da6561d48f806b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175123"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503160"
 ---
 # <a name="icorprofilercallbackthreadcreated-method"></a>ICorProfilerCallback::ThreadCreated メソッド
 スレッドが作成されたことをプロファイラーに通知します。  
@@ -34,19 +34,19 @@ HRESULT ThreadCreated(
   
 ## <a name="parameters"></a>パラメーター  
  `threadId`  
- [in]作成されたスレッドの ID。  
+ から作成されたスレッドの ID。  
   
 ## <a name="remarks"></a>解説  
- 値`threadId`は直ちに有効です。  
+ この `threadId` 値はすぐに有効です。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

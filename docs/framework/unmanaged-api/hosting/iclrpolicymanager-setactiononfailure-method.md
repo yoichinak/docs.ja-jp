@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4664033f-db97-4388-b988-2ec470796e58
 topic_type:
 - apiref
-ms.openlocfilehash: fb2ecc80f272a3fc9b63b20c5956e7a28f117784
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 727cd82226b9a59c4879ffea5e87f93dd5fe38c9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703463"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504109"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure メソッド
 指定したエラーが発生したときに共通言語ランタイム (CLR) が実行するポリシーアクションを指定します。  
@@ -54,20 +54,20 @@ HRESULT SetActionOnFailure (
 |E_INVALIDARG|指定された操作に対してポリシーアクションを設定できないか、操作に無効なポリシーアクションが指定されました。|  
   
 ## <a name="remarks"></a>解説  
- 既定では、メモリなどのリソースの割り当てに失敗した場合、CLR は例外をスローします。 `SetActionOnFailure`エラー発生時に実行するポリシーアクションを指定して、ホストがこの動作をオーバーライドできるようにします。 次の表は、サポートされている[Eclrfailure](eclrfailure-enumeration.md)値と[epolicyaction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)値の組み合わせを示しています。 (FAIL_ プレフィックスは[Eclrfailure](eclrfailure-enumeration.md)値から省略されています)。  
+ 既定では、メモリなどのリソースの割り当てに失敗した場合、CLR は例外をスローします。 `SetActionOnFailure`エラー発生時に実行するポリシーアクションを指定して、ホストがこの動作をオーバーライドできるようにします。 次の表は、サポートされている[Eclrfailure](eclrfailure-enumeration.md)値と[epolicyaction](epolicyaction-enumeration.md)値の組み合わせを示しています。 (FAIL_ プレフィックスは[Eclrfailure](eclrfailure-enumeration.md)値から省略されています)。  
   
 ||NonCriticalResource|CriticalResource|Fat (Alruntime)|OrphanedLock|StackOverflow|AccessViolation|CodeContract|  
 |-|-------------------------|----------------------|------------------|------------------|-------------------|---------------------|------------------|  
-|`eNoAction`|x|x||||該当なし||  
-|の例外|x|x||||該当なし||  
-|`eAbortThread`|x|x||||該当なし|x|  
-|`eRudeAbortThread`|x|x||||該当なし|x|  
-|`eUnloadAppDomain`|x|x||x||該当なし|x|  
-|`eRudeUnloadAppDomain`|x|x||x|x|該当なし|x|  
-|`eExitProcess`|x|x||x|x|該当なし|x|  
-|eFastExitProcess|x|x||x|x|該当なし||  
-|`eRudeExitProcess`|x|x|x|x|x|該当なし||  
-|`eDisableRuntime`|x|x|x|x|x|該当なし||  
+|`eNoAction`|X|X||||該当なし||  
+|の例外|X|X||||該当なし||  
+|`eAbortThread`|X|X||||該当なし|X|  
+|`eRudeAbortThread`|X|X||||該当なし|X|  
+|`eUnloadAppDomain`|X|X||X||該当なし|X|  
+|`eRudeUnloadAppDomain`|X|X||X|X|該当なし|X|  
+|`eExitProcess`|X|X||X|X|該当なし|X|  
+|eFastExitProcess|X|X||X|X|該当なし||  
+|`eRudeExitProcess`|X|X|X|X|X|該当なし||  
+|`eDisableRuntime`|X|X|X|X|X|該当なし||  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  

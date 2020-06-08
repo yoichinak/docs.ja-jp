@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9294d702-b4e5-441c-a930-e63d27b86bfd
 topic_type:
 - apiref
-ms.openlocfilehash: b6c3dc78b9c503747c7a2d404706eb797790b931
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1ff167121a5bb752c70edd2c5901133503326bea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175201"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500807"
 ---
 # <a name="cor_prf_monitor-enumeration"></a>COR_PRF_MONITOR 列挙型
 プロファイラーがサブスクライブしようとする動作、機能、またはイベントの指定で使用する値を含めます。  
@@ -98,9 +98,9 @@ typedef enum {
 ```  
   
 ## <a name="members"></a>メンバー  
- 次のセクションでは`COR_PRF_MONITOR`、カテゴリ別の列挙メンバーを示します。 カテゴリは次のとおりです。  
+ 次のセクションでは、 `COR_PRF_MONITOR` 列挙型のメンバーをカテゴリ別に一覧表示します。 カテゴリは次のとおりです。  
   
-- [フラグが設定されていない](#None)  
+- [フラグが設定していません](#None)  
   
 - [コールバック フラグ](#Callback)  
   
@@ -123,39 +123,39 @@ typedef enum {
 |メンバー|説明|  
 |------------|-----------------|  
 |`COR_PRF_MONITOR_ALL`|すべてのコールバック イベントを有効にします。|  
-|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|インターフェイスの`AppDomainCreation*`コールバック`AppDomainShutdown*`と[コールバック](icorprofilercallback-interface.md)を制御します。|  
-|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|インターフェイスの`AssemblyLoad*`コールバック`AssemblyUnload*`と[コールバック](icorprofilercallback-interface.md)を制御します。|  
-|`COR_PRF_MONITOR_CACHE_SEARCHES`|インターフェイス内`JITCachedFunctionSearch*`のコールバック[を](icorprofilercallback-interface.md)制御します。<br /><br /> このフラグの動作は、.NET Framework バージョン 2.0 で変更されています。|  
-|`COR_PRF_MONITOR_CCW`|インターフェイス内`COMClassicVTable*`のコールバック[を](icorprofilercallback-interface.md)制御します。|  
-|`COR_PRF_MONITOR_CLASS_LOADS`|インターフェイスの`ClassLoad*`コールバック`ClassUnload*`と[コールバック](icorprofilercallback-interface.md)を制御します。|  
-|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|インターフェイス内`ExceptionCLRCatcher*`のコールバック[を](icorprofilercallback-interface.md)制御します。|  
-|`COR_PRF_MONITOR_CODE_TRANSITIONS`|[インターフェイス](icorprofilercallback-interface.md)の[コールバック](icorprofilercallback-unmanagedtomanagedtransition-method.md)を制御します。 [ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md)|  
-|`COR_PRF_MONITOR_ENTERLEAVE`|グローバル静的`FunctionEnter*`関数`FunctionLeave*`、 `FunctionTailCall*`、 、 および[プロファイリングのグローバル静的関数](profiling-global-static-functions.md)を制御します。|  
-|`COR_PRF_MONITOR_EXCEPTIONS`|[インターフェイス](icorprofilercallback-interface.md)内の[例外スロー](icorprofilercallback-exceptionthrown-method.md)コールバック`ExceptionSearch*`と`ExceptionOSHandler*``ExceptionCatcher*` `ExceptionUnwind*`、、、、、およびコールバックを制御します。|  
-|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|[インターフェイス](icorprofilercallback-interface.md)の[コールバックを制御](icorprofilercallback-functionunloadstarted-method.md)します。|  
-|`COR_PRF_MONITOR_GC`|インターフェイス内の[ガベージコレクション開始](icorprofilercallback2-garbagecollectionstarted-method.md)、[ガベージコレクション終了](icorprofilercallback2-garbagecollectionfinished-method.md)、[移動参照](icorprofilercallback-movedreferences-method.md)、[移動参照2、](icorprofilercallback4-movedreferences2-method.md)[生存参照](icorprofilercallback2-survivingreferences-method.md)、[生存参照2、](icorprofilercallback4-survivingreferences2-method.md)[オブジェクト参照](icorprofilercallback-objectreferences-method.md)、[オブジェクト割り当て済みクラス](icorprofilercallback-objectsallocatedbyclass-method.md)、[ルート参照](icorprofilercallback-rootreferences-method.md)、[ルート参照2、](icorprofilercallback2-rootreferences2-method.md)[ハンドル作成](icorprofilercallback2-handlecreated-method.md)、[ハンドル破棄](icorprofilercallback2-handledestroyed-method.md)、[および終了可能なオブジェクトキュー](icorprofilercallback2-finalizeableobjectqueued-method.md)コールバック`ICorProfilerCallback*`を制御します。 割`COR_PRF_MONITOR_GC`り当てられると、同時実行ガベージ コレクションは無効になります。|  
-|`COR_PRF_MONITOR_JIT_COMPILATION`|インターフェイス内`JITCompilation*`のコールバック[、JITFunctionPitched](icorprofilercallback-jitfunctionpitched-method.md)、および[JITInlining](icorprofilercallback-jitinlining-method.md) [コールバック](icorprofilercallback-interface.md)を制御します。|  
-|`COR_PRF_MONITOR_MODULE_LOADS`|インターフェイスの`ModuleLoad*`コールバック`ModuleUnload*`、、および[モジュールアタッチト アセンブリ](icorprofilercallback-moduleattachedtoassembly-method.md)[ICorProfilerCallback](icorprofilercallback-interface.md)コールバックを制御します。|  
-|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|[インターフェイス内](icorprofilercallback-interface.md)の[オブジェクト割り当て](icorprofilercallback-objectallocated-method.md)コールバックを制御します。|  
-|`COR_PRF_MONITOR_REMOTING`|インターフェイス内`Remoting*`のコールバック[を](icorprofilercallback-interface.md)制御します。|  
+|`COR_PRF_MONITOR_APPDOMAIN_LOADS`|`AppDomainCreation*` `AppDomainShutdown*` [ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスのおよびコールバックを制御します。|  
+|`COR_PRF_MONITOR_ASSEMBLY_LOADS`|`AssemblyLoad*` `AssemblyUnload*` [ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスのおよびコールバックを制御します。|  
+|`COR_PRF_MONITOR_CACHE_SEARCHES`|`JITCachedFunctionSearch*` [ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスのコールバックを制御します。<br /><br /> このフラグの動作は、.NET Framework バージョン 2.0 で変更されています。|  
+|`COR_PRF_MONITOR_CCW`|`COMClassicVTable*` [ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスのコールバックを制御します。|  
+|`COR_PRF_MONITOR_CLASS_LOADS`|`ClassLoad*` `ClassUnload*` [ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスのおよびコールバックを制御します。|  
+|`COR_PRF_MONITOR_CLR_EXCEPTIONS`|`ExceptionCLRCatcher*` [ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスのコールバックを制御します。|  
+|`COR_PRF_MONITOR_CODE_TRANSITIONS`|[ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイス内の[UnmanagedToManagedTransition](icorprofilercallback-unmanagedtomanagedtransition-method.md)および[ManagedToUnmanagedTransition](icorprofilercallback-managedtounmanagedtransition-method.md)コールバックを制御します。|  
+|`COR_PRF_MONITOR_ENTERLEAVE`|`FunctionEnter*`、 `FunctionLeave*` 、および `FunctionTailCall*` [プロファイリンググローバル静的関数](profiling-global-static-functions.md)を制御します。|  
+|`COR_PRF_MONITOR_EXCEPTIONS`|[Exceptionthrown](icorprofilercallback-exceptionthrown-method.md)されたコールバックと、ICorProfilerCallback インターフェイスの、、、およびの各コールバックを制御し `ExceptionSearch*` `ExceptionOSHandler*` `ExceptionUnwind*` `ExceptionCatcher*` ます。 [ICorProfilerCallback](icorprofilercallback-interface.md)|  
+|`COR_PRF_MONITOR_FUNCTION_UNLOADS`|[ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスの[FunctionUnloadStarted](icorprofilercallback-functionunloadstarted-method.md)コールバックを制御します。|  
+|`COR_PRF_MONITOR_GC`|インターフェイスの[GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)、 [GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)、 [movedreferences](icorprofilercallback-movedreferences-method.md)、 [MovedReferences2](icorprofilercallback4-movedreferences2-method.md)、 [SurvivingReferences](icorprofilercallback2-survivingreferences-method.md)、 [SurvivingReferences2](icorprofilercallback4-survivingreferences2-method.md)、 [ObjectReferences](icorprofilercallback-objectreferences-method.md)、 [objectsallocatedbyclass](icorprofilercallback-objectsallocatedbyclass-method.md)、 [rootreferences](icorprofilercallback-rootreferences-method.md)、 [RootReferences2](icorprofilercallback2-rootreferences2-method.md)、 [HandleCreated](icorprofilercallback2-handlecreated-method.md)、 [handledestroyed](icorprofilercallback2-handledestroyed-method.md)、および[finalizeableobjectqueued](icorprofilercallback2-finalizeableobjectqueued-method.md)の各コールバックを制御し `ICorProfilerCallback*` ます。 `COR_PRF_MONITOR_GC`が割り当てられると、同時実行ガベージコレクションが無効になります。|  
+|`COR_PRF_MONITOR_JIT_COMPILATION`|ICorProfilerCallback インターフェイスの、、 `JITCompilation*` [JITFunctionPitched](icorprofilercallback-jitfunctionpitched-method.md)、 [JITInlining](icorprofilercallback-jitinlining-method.md)の各[ICorProfilerCallback](icorprofilercallback-interface.md)コールバックを制御します。|  
+|`COR_PRF_MONITOR_MODULE_LOADS`|`ModuleLoad*`ICorProfilerCallback インターフェイスの、、 `ModuleUnload*` および[ModuleAttachedToAssembly](icorprofilercallback-moduleattachedtoassembly-method.md)コールバック[ICorProfilerCallback](icorprofilercallback-interface.md)を制御します。|  
+|`COR_PRF_MONITOR_OBJECT_ALLOCATED`|[ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスの[ObjectAllocated](icorprofilercallback-objectallocated-method.md)コールバックを制御します。|  
+|`COR_PRF_MONITOR_REMOTING`|`Remoting*` [ICorProfilerCallback](icorprofilercallback-interface.md)インターフェイスのコールバックを制御します。|  
 |`COR_PRF_MONITOR_REMOTING_ASYNC`|`Remoting*` コールバックが非同期イベントを監視するかどうかを制御します。|  
 |`COR_PRF_MONITOR_REMOTING_COOKIE`|クッキーが `Remoting*` コールバックに渡されるかどうかを制御します。|  
-|`COR_PRF_MONITOR_SUSPENDS`|インターフェイス内`RuntimeSuspend*`の`RuntimeResume*`コールバック 、ランタイム[スレッドの中断](icorprofilercallback-runtimethreadsuspended-method.md)、および[ランタイム スレッド再開コールバック](icorprofilercallback-runtimethreadresumed-method.md)[を制御](icorprofilercallback-interface.md)します。|  
-|`COR_PRF_MONITOR_THREADS`|インターフェイスで[スレッド作成](icorprofilercallback-threadcreated-method.md)、[スレッド破棄](icorprofilercallback-threaddestroyed-method.md)、[スレッド割り当てToOSThread](icorprofilercallback-threadassignedtoosthread-method.md)、および[スレッド名を変更した](icorprofilercallback2-threadnamechanged-method.md)[コールバックを制御](icorprofilercallback-interface.md)します[。](icorprofilercallback2-interface.md)|  
+|`COR_PRF_MONITOR_SUSPENDS`|`RuntimeSuspend*`ICorProfilerCallback インターフェイスの、、 `RuntimeResume*` [runtimethreadsuspended](icorprofilercallback-runtimethreadsuspended-method.md)、および[runtimethreadsuspended](icorprofilercallback-runtimethreadresumed-method.md)コールバック[ICorProfilerCallback](icorprofilercallback-interface.md)を制御します。|  
+|`COR_PRF_MONITOR_THREADS`|[ICorProfilerCallback](icorprofilercallback-interface.md)および[ICorProfilerCallback2](icorprofilercallback2-interface.md)インターフェイスの[threadcreated](icorprofilercallback-threadcreated-method.md)、 [threadcreated](icorprofilercallback-threadassignedtoosthread-method.md)、および[threadnamechanged](icorprofilercallback2-threadnamechanged-method.md)コールバックを制御します。 [ThreadDestroyed](icorprofilercallback-threaddestroyed-method.md)|  
   
 <a name="Feature"></a>
 ### <a name="feature-enabling-flags"></a>機能の有効化フラグ  
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`COR_PRF_ENABLE_FRAME_INFO`|[FunctionEnter2](functionenter2-function.md)コールバックによって`ClassID`返される値を使用して[GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドを`COR_PRF_FRAME_INFO`呼び出すことによって、ジェネリック関数の正確な取得を有効にします。|  
-|`COR_PRF_ENABLE_FUNCTION_ARGS`|[関数のコールバックまたは関数を](functionenter2-function.md)使用して引数[トレースを有効](functionenter3withinfo-function.md)にします。 [GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md)|  
-|`COR_PRF_ENABLE_FUNCTION_RETVAL`|[コールバックまたは関数](functionleave2-function.md)[Leave3WithInfo](functionleave3withinfo-function.md)コールバックと[GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md)メソッドを使用して戻り値のトレースを有効にします。|  
+|`COR_PRF_ENABLE_FRAME_INFO`|`ClassID` [GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md) `COR_PRF_FRAME_INFO` [FunctionEnter2](functionenter2-function.md)コールバックによって返される値を使用して GetFunctionInfo2 メソッドを呼び出すことによって、ジェネリック関数の正確なを取得できるようにします。|  
+|`COR_PRF_ENABLE_FUNCTION_ARGS`|[FunctionEnter2](functionenter2-function.md) callback または[FunctionEnter3WithInfo](functionenter3withinfo-function.md) callback と[GetFunctionEnter3Info](icorprofilerinfo3-getfunctionenter3info-method.md)メソッドを使用して、引数のトレースを有効にします。|  
+|`COR_PRF_ENABLE_FUNCTION_RETVAL`|[FunctionLeave2](functionleave2-function.md) callback または[FunctionLeave3WithInfo](functionleave3withinfo-function.md) callback および[GetFunctionLeave3Info](icorprofilerinfo3-getfunctionleave3info-method.md)メソッドを使用して、戻り値のトレースを有効にします。|  
 |`COR_PRF_ENABLE_INPROC_DEBUGGING`|非推奨になりました。<br /><br /> プロセス中のデバッグはサポートされていません。 このフラグは無効です。|  
-|`COR_PRF_ENABLE_JIT_MAPS`|非推奨になりました。<br /><br /> プロファイラーが[GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)を使用して IL からネイティブへのマップを取得できるようにします。 .NET Framework 2.0 以降、ランタイムは常に IL-to-native マップを追跡するため、このフラグは常に設定されていると見なされます。|  
-|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|プロファイラーがオブジェクトの割り当て通知を必要とする可能性があることをランタイムに通知します。 このフラグは、初期化中に設定する必要があります。 このオプションを使用すると、プロファイラー`COR_PRF_MONITOR_OBJECT_ALLOCATED`は、後でフラグを使用して[ObjectAllocated](icorprofilercallback-objectallocated-method.md)コールバックを受け取ることができます。|  
-|`COR_PRF_ENABLE_REJIT`|[メソッドの呼](icorprofilerinfo4-requestrejit-method.md)び出しを有効[にします](icorprofilerinfo4-requestrevert-method.md)。 プロファイラーは起動時にこのフラグを設定する必要があります。  プロファイラーがこのフラグを設定する場合は、`COR_PRF_DISABLE_ALL_NGEN_IMAGES` も指定する必要があります。|  
-|`COR_PRF_ENABLE_STACK_SNAPSHOT`|[メソッド](icorprofilerinfo2-dostacksnapshot-method.md)の呼び出しを有効にします。|  
+|`COR_PRF_ENABLE_JIT_MAPS`|非推奨になりました。<br /><br /> [GetILToNativeMapping](icorprofilerinfo-getiltonativemapping-method.md)を使用して、プロファイラーが IL からネイティブへのマップを取得できるようにします。 .NET Framework 2.0 以降、ランタイムは常に IL-to-native マップを追跡するため、このフラグは常に設定されていると見なされます。|  
+|`COR_PRF_ENABLE_OBJECT_ALLOCATED`|プロファイラーがオブジェクトの割り当て通知を必要とする可能性があることをランタイムに通知します。 このフラグは、初期化中に設定する必要があります。 これにより、プロファイラーは、後でフラグを使用して `COR_PRF_MONITOR_OBJECT_ALLOCATED` [ObjectAllocated](icorprofilercallback-objectallocated-method.md)コールバックを受け取ることができます。|  
+|`COR_PRF_ENABLE_REJIT`|[RequestReJIT](icorprofilerinfo4-requestrejit-method.md)メソッドと[RequestRevert](icorprofilerinfo4-requestrevert-method.md)メソッドの呼び出しを有効にします。 プロファイラーは起動時にこのフラグを設定する必要があります。  プロファイラーがこのフラグを設定する場合は、`COR_PRF_DISABLE_ALL_NGEN_IMAGES` も指定する必要があります。|  
+|`COR_PRF_ENABLE_STACK_SNAPSHOT`|[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)メソッドの呼び出しを有効にします。|  
   
 <a name="Config"></a>
 ### <a name="configuration-flags"></a>構成フラグ  
@@ -180,16 +180,16 @@ typedef enum {
 |`COR_PRF_REQUIRE_PROFILE_IMAGE`|プロファイルが強化されたイメージを必要とするすべての `COR_PRF_MONITOR` フラグを表しています。|  
   
 ## <a name="remarks"></a>解説  
- `COR_PRF_MONITOR`値は、共通言語ランタイムがプロファイラーに対して行うイベント通知を定義するために[、ICorProfilerInfo::GetEventMask](icorprofilerinfo-geteventmask-method.md)および[ICorProfilerInfo::SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッドと共に使用されます。  
+ `COR_PRF_MONITOR` [ICorProfilerInfo:: geteventmask](icorprofilerinfo-geteventmask-method.md)メソッドと[ICorProfilerInfo:: seteventmask](icorprofilerinfo-seteventmask-method.md)メソッドで値を使用して、共通言語ランタイムがプロファイラーに対して行うイベント通知を定義します。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

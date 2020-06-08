@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c28d1983-83f7-46e2-990f-dbb9dc07c818
 topic_type:
 - apiref
-ms.openlocfilehash: 90675d9be71342efa903767abbf63102b40a2c35
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 095872f8d4bd4f7d3351b8b3e3f8f8445b615cd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804690"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501539"
 ---
 # <a name="ihostiocompletionmanager-interface"></a>IHostIoCompletionManager インターフェイス
 共通言語ランタイム (CLR) がホストによって提供される i/o 完了ポートと対話できるようにするメソッドを提供します。  
@@ -36,7 +36,7 @@ ms.locfileid: "83804690"
 |[GetMaxThreads メソッド](ihostiocompletionmanager-getmaxthreads-method.md)|ホストがサービス i/o 要求に割り当てることができるスレッドの最大数を取得します。|  
 |[GetMinThreads メソッド](ihostiocompletionmanager-getminthreads-method.md)|ホストが i/o 要求を処理するために提供するスレッドの最小数を取得します。|  
 |[InitializeHostOverlapped メソッド](ihostiocompletionmanager-initializehostoverlapped-method.md)|I/o 要求に関するカスタムデータを初期化する機会をホストに提供します。|  
-|[SetCLRIoCompletionManager メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-setclriocompletionmanager-method.md)|CLR によって実装されている[Iclrio提供マネージャー](iclriocompletionmanager-interface.md)インスタンスへのインターフェイスポインターをホストに提供します。|  
+|[SetCLRIoCompletionManager メソッド](ihostiocompletionmanager-setclriocompletionmanager-method.md)|CLR によって実装されている[Iclrio提供マネージャー](iclriocompletionmanager-interface.md)インスタンスへのインターフェイスポインターをホストに提供します。|  
 |[SetMaxThreads メソッド](ihostiocompletionmanager-setmaxthreads-method.md)|ホストが大量の i/o 要求を処理するスレッドの最大数を設定します。|  
 |[SetMinThreads メソッド](ihostiocompletionmanager-setminthreads-method.md)|ホストが i/o 完了に割り当てる必要があるスレッドの最小数を設定します。|  
   

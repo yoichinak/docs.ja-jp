@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 907a2b43-68db-44a7-acac-89e792e7bb3c
 topic_type:
 - apiref
-ms.openlocfilehash: 2b679a9ea427d53d67474a196b5b3ae2c698ea5e
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 240712296254e02f4d268a00e1c15ef34f4519f1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804790"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501548"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort メソッド
 ホストが新しい i/o 完了ポートを作成することを要求します。  
@@ -50,7 +50,7 @@ HRESULT CreateIoCompletionPort (
 |E_OUTOFMEMORY|要求されたリソースを割り当てるのに十分なメモリがありませんでした。|  
   
 ## <a name="remarks"></a>解説  
- CLR は、メソッドを呼び出して、 `CreateIoCompletionPort` ホストが新しい i/o 完了ポートを作成するように要求します。 このポートは、 [Ihoを](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)呼び出して、このポートに i/o 操作をバインドします。 ホストは、 [Iclriocomplete manager:: OnComplete](iclriocompletionmanager-oncomplete-method.md)を呼び出すことによって、状態を CLR に報告します。  
+ CLR は、メソッドを呼び出して、 `CreateIoCompletionPort` ホストが新しい i/o 完了ポートを作成するように要求します。 このポートは、 [Ihoを](ihostiocompletionmanager-bind-method.md)呼び出して、このポートに i/o 操作をバインドします。 ホストは、 [Iclriocomplete manager:: OnComplete](iclriocompletionmanager-oncomplete-method.md)を呼び出すことによって、状態を CLR に報告します。  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  

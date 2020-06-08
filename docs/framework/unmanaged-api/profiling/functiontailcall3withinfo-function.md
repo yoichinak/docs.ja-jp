@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46380fcc-0198-43ae-a1f5-2d4939425886
 topic_type:
 - apiref
-ms.openlocfilehash: 0aa43954c3e10d04524bf976d0dd3b29d2bc724c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f076044b44859cc39d90be528ee6648f5eaa626c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866831"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500586"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 関数
 現在実行中の関数が別の関数の末尾呼び出しを実行しようとしていることをプロファイラーに通知し、スタックフレームを取得するために[ICorProfilerInfo3:: GetFunctionTailcall3Info メソッド](icorprofilerinfo3-getfunctiontailcall3info-method.md)に渡すことができるハンドルを提供します。  
@@ -36,16 +36,16 @@ void __stdcall FunctionTailcall3WithInfo(
 
 - `functionIDOrClientID`
 
-  \[] では、末尾呼び出しを実行しようとしている現在実行中の関数の識別子。
+  \[in] 末尾呼び出しを実行しようとしている現在実行中の関数の識別子。
 
 - `eltInfo`
 
-  \[in] 特定のスタックフレームに関する情報を表す不透明なハンドル。 このハンドルは、渡されるコールバック中にのみ有効です。
+  \[in) 特定のスタックフレームに関する情報を表す不透明なハンドル。 このハンドルは、渡されるコールバック中にのみ有効です。
 
-## <a name="remarks"></a>Remarks  
- `FunctionTailcall3WithInfo` のコールバックメソッドは、関数が呼び出されたことをプロファイラーに通知します。また、プロファイラーは[ICorProfilerInfo3:: GetFunctionTailcall3Info メソッド](icorprofilerinfo3-getfunctiontailcall3info-method.md)を使用してスタックフレームを調べることができます。 スタックフレーム情報にアクセスするには、`COR_PRF_ENABLE_FRAME_INFO` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask メソッド](icorprofilerinfo-seteventmask-method.md)を使用してイベントフラグを設定し、 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo メソッド](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)を使用してこの関数の実装を登録できます。  
+## <a name="remarks"></a>解説  
+ `FunctionTailcall3WithInfo`コールバックメソッドは、関数が呼び出されたことをプロファイラーに通知します。また、プロファイラーは[ICorProfilerInfo3:: GetFunctionTailcall3Info メソッド](icorprofilerinfo3-getfunctiontailcall3info-method.md)を使用してスタックフレームを調べることができます。 スタックフレーム情報にアクセスするには、 `COR_PRF_ENABLE_FRAME_INFO` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask メソッド](icorprofilerinfo-seteventmask-method.md)を使用してイベントフラグを設定し、 [ICorProfilerInfo3:: SetEnterLeaveFunctionHooks3WithInfo メソッド](icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md)を使用してこの関数の実装を登録できます。  
   
- `FunctionTailcall3WithInfo` 関数はコールバックです。実装する必要があります。 実装では、`__declspec(naked)` のストレージクラス属性を使用する必要があります。  
+ `FunctionTailcall3WithInfo`関数はコールバックであるため、実装する必要があります。 実装では、ストレージクラス属性を使用する必要があり `__declspec(naked)` ます。  
   
  この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
   
@@ -53,18 +53,18 @@ void __stdcall FunctionTailcall3WithInfo(
   
 - 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
   
- `FunctionTailcall3WithInfo` の実装では、ガベージコレクションが遅延するため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにする必要があります。 ガベージコレクションを実行しようとすると、ランタイムは `FunctionTailcall3WithInfo` が返されるまでブロックします。  
+ の実装では `FunctionTailcall3WithInfo` 、ガベージコレクションが遅延するため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにする必要があります。 ガベージコレクションが試行された場合、ランタイムはが返されるまでブロックし `FunctionTailcall3WithInfo` ます。  
   
  また、FunctionTailcall3WithInfo 関数は、マネージコードを呼び出さないようにするか、マネージメモリ割り当てを行う必要があります。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9720428-c353-4f07-a7e8-899e106a1b37
 topic_type:
 - apiref
-ms.openlocfilehash: a1cd932051a9ed90a29ff5eeaa818a67104192bb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6f4764f016360a2ec0ab054b7a89ccb3f86aeb43
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175253"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84490225"
 ---
 # <a name="imetadatatablesgetnextstring-method"></a>IMetaDataTables::GetNextString メソッド
 現在のテーブル列の次の文字列のインデックスを取得します。  
@@ -36,21 +36,21 @@ HRESULT GetNextString (
   
 ## <a name="parameters"></a>パラメーター  
  `ixString`  
- [in]文字列テーブル列のインデックス値。  
+ から文字列テーブル列からのインデックス値。  
   
  `pNext`  
- [アウト]列内の次の文字列のインデックスへのポインター。  
+ 入出力列内の次の文字列のインデックスへのポインター。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables インターフェイス](imetadatatables-interface.md)
+- [IMetaDataTables2 インターフェイス](imetadatatables2-interface.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 22fc0a3f-dce4-4766-9a3c-9fab15f4b4ca
 topic_type:
 - apiref
-ms.openlocfilehash: 2e22b8a2d0213b3bd766d80218d6f396721a90e1
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 7b09bb9c3abcb23997bfd412c3ea939404e583c1
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703770"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504174"
 ---
 # <a name="iclrmetahostenumerateloadedruntimes-method"></a>ICLRMetaHost::EnumerateLoadedRuntimes メソッド
-指定されたプロセスに読み込まれる共通言語ランタイム (CLR) の各バージョンの有効な[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイスポインターを含む列挙体を返します。 このメソッドは、 [Getversionfromprocess](getversionfromprocess-function.md)関数よりも優先されます。  
+指定されたプロセスに読み込まれる共通言語ランタイム (CLR) の各バージョンの有効な[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスポインターを含む列挙体を返します。 このメソッドは、 [Getversionfromprocess](getversionfromprocess-function.md)関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   

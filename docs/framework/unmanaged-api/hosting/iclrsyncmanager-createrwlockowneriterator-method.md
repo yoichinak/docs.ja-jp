@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b5535b87-9439-424e-b9b3-7d6fafb9819e
 topic_type:
 - apiref
-ms.openlocfilehash: 9eace3e7330d3f8c0c9762e0b1b456ad1bf8a3ac
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: f8fde4905c41dffde90c6361b5a8cdffa15deb4a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763190"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503966"
 ---
 # <a name="iclrsyncmanagercreaterwlockowneriterator-method"></a>ICLRSyncManager::CreateRWLockOwnerIterator メソッド
 リーダーライターロックを待機しているタスクのセットを決定するために使用するホストの反復子を共通言語ランタイム (CLR) が作成することを要求します。  
@@ -39,7 +39,7 @@ HRESULT CreateRWLockOwnerIterator (
  から目的のリーダーライターロックに関連付けられているクッキー。  
   
  `pIterator`  
- 入出力[GetRWLockOwnerNext](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getrwlockownernext-method.md)メソッドおよび[DeleteRWLockOwnerIterator](iclrsyncmanager-deleterwlockowneriterator-method.md)メソッドに渡すことができる反復子へのポインター。  
+ 入出力[GetRWLockOwnerNext](iclrsyncmanager-getrwlockownernext-method.md)メソッドおよび[DeleteRWLockOwnerIterator](iclrsyncmanager-deleterwlockowneriterator-method.md)メソッドに渡すことができる反復子へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
   

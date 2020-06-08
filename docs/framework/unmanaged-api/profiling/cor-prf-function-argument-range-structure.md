@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f469eac-ac66-419b-8668-fe705bc1a51f
 topic_type:
 - apiref
-ms.openlocfilehash: dae5ed7c25f85051d1a28681fb88b056617c4de0
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 8b3785955ec138bbf898e84aa4deb5ed2a6e6b53
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867250"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500950"
 ---
 # <a name="cor_prf_function_argument_range-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 構造体
 メモリに左から右方向へ連続で格納される関数の引数のブロックを表します。  
@@ -41,13 +41,13 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 |`length`|連続するブロックの長さ。|  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

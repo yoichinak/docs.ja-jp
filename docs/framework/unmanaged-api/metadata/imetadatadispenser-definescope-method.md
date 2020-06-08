@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: af28db02-29af-45ac-aec6-8d6c6123c2ff
 topic_type:
 - apiref
-ms.openlocfilehash: 021ef8de602d6dd928f49e69e36f8d4a61425745
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 12a32b5d2f0647ea2d9b696d08d6644e30be0c65
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84008366"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501366"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope メソッド
 新しいメタデータを作成できる新しい領域をメモリ内に作成します。  
@@ -51,12 +51,12 @@ HRESULT DefineScope (
  `ppIUnk`  
  入出力返されたインターフェイスへのポインター。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  `DefineScope`メモリ内メタデータテーブルのセットを作成し、メタデータの一意の GUID (モジュールバージョン識別子または MVID) を生成し、出力されるコンパイル単位のエントリをモジュールテーブルに作成します。  
   
- 必要に応じて、 [IMetaDataEmit:: SetModuleProps](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-setmoduleprops-method.md)または[IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md)メソッドを使用して、メタデータスコープ全体に属性をアタッチできます。  
+ 必要に応じて、 [IMetaDataEmit:: SetModuleProps](imetadataemit-setmoduleprops-method.md)または[IMetaDataEmit::D efinecustomattribute](imetadataemit-definecustomattribute-method.md)メソッドを使用して、メタデータスコープ全体に属性をアタッチできます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **プラットフォーム:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  

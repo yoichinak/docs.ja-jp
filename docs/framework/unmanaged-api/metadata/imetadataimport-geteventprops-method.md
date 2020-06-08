@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5eaf3b4a-92b7-4d5b-97e0-1e83721e0052
 topic_type:
 - apiref
-ms.openlocfilehash: 306c1748b4997309ee15fb7751bc818b0287aaf0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 3b47d1559300a462ccda42bc88da43f66c1043ec
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177266"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491304"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps メソッド
-宣言型、デリゲートの add メソッドと remove メソッド、フラグおよびその他の関連付けられたデータなど、指定したイベント トークンによって表されるイベントのメタデータ情報を取得します。  
+宣言する型、デリゲートの add メソッドおよび remove メソッド、すべてのフラグおよびその他の関連データを含む、指定したイベントトークンによって表されるイベントのメタデータ情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,51 +47,51 @@ HRESULT GetEventProps (
   
 ## <a name="parameters"></a>パラメーター  
  `ev`  
- [in]メタデータを取得するイベントを表すイベント メタデータ トークン。  
+ からメタデータを取得するイベントを表すイベントメタデータトークン。  
   
  `pClass`  
- [アウト]イベントを宣言するクラスを表す TypeDef トークンへのポインター。  
+ 入出力イベントを宣言するクラスを表す TypeDef トークンへのポインター。  
   
  `szEvent`  
- [アウト]によって`ev`参照されるイベントの名前。  
+ 入出力によって参照されるイベントの名前 `ev` 。  
   
  `pchEvent`  
- [in]要求された長さは、 の`szEvent`ワイド文字で表示されます。  
+ からのワイド文字で要求された長さ `szEvent` 。  
   
  `pdwEventFlags`  
- [アウト]返される長さは、 の`szEvent`ワイド文字で返されます。  
+ 入出力のワイド文字で返された長さ `szEvent` 。  
   
  `ptkEventType`  
- [アウト]イベントの型を表す<xref:System.Delegate>TypeRef または TypeDef メタデータ トークンへのポインター。  
+ 入出力イベントの種類を表す TypeRef または TypeDef メタデータトークンへのポインター <xref:System.Delegate> 。  
   
  `pmdAddOn`  
- [アウト]イベントのハンドラーを追加するメソッドを表すメタデータ トークンへのポインター。  
+ 入出力イベントのハンドラーを追加するメソッドを表すメタデータトークンへのポインター。  
   
  `pmdRemoveOn`  
- [アウト]イベントのハンドラーを削除するメソッドを表すメタデータ トークンへのポインター。  
+ 入出力イベントのハンドラーを削除するメソッドを表すメタデータトークンへのポインター。  
   
  `pmdFire`  
- [アウト]イベントを発生させるメソッドを表すメタデータ トークンへのポインター。  
+ 入出力イベントを発生させるメソッドを表すメタデータトークンへのポインター。  
   
  `rmdOtherMethod`  
- [アウト]イベントに関連付けられた他のメソッドへのトークン ポインターの配列。  
+ 入出力イベントに関連付けられている他のメソッドへのトークンポインターの配列。  
   
  `cMax`  
  [in] `rmdOtherMethod` 配列の最大サイズ。  
   
  `pcOtherMethod`  
- [アウト]に返される`rmdOtherMethod`トークンの数。  
+ 入出力で返されたトークンの数 `rmdOtherMethod` 。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

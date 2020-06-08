@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 36ba4f15-78e5-4e52-b3b8-6341f710c696
 topic_type:
 - apiref
-ms.openlocfilehash: 6eb7d7dc19ab5cbb7e78dc589202a12d9f1f599b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 5b2309fabc1c00110c5108ca2f36e857b3c62dcd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76869164"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502926"
 ---
 # <a name="icorprofilerinfosetfunctionrejit-method"></a>ICorProfilerInfo::SetFunctionReJIT メソッド
-実装されていません。 [使用しない]。  
+実装されていません。 使用しないでください。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,7 +33,7 @@ HRESULT SetFunctionReJIT(
 ```  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   

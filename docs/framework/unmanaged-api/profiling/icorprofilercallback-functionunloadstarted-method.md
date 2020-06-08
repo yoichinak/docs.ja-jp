@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6a5fa8b-09c6-47a5-b60e-6cf2e355df30
 topic_type:
 - apiref
-ms.openlocfilehash: 988843559e55cc4cacd2a40bb3e6ac51721e99b6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 320aaf074452fd02cd8ee8e80194a4c35b831eb4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175162"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503381"
 ---
 # <a name="icorprofilercallbackfunctionunloadstarted-method"></a>ICorProfilerCallback::FunctionUnloadStarted メソッド
 ランタイムが関数のアンロードを開始したことをプロファイラーに通知します。  
@@ -36,19 +36,19 @@ HRESULT FunctionUnloadStarted(
 
 - `functionId`
 
-  \[in] アンロードされている関数の ID。
+  \[in] アンロードされる関数の ID。
 
 ## <a name="remarks"></a>解説  
- このメソッドが呼`functionId`び出し元に戻った後、パラメーターの値は無効になります。  
+ パラメーターの値 `functionId` は、このメソッドが呼び出し元に戻った後に有効ではなくなりました。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

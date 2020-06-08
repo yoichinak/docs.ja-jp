@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b38bbc9a-872c-41a9-b8c3-ca011d25456a
 topic_type:
 - apiref
-ms.openlocfilehash: 81b6f009ea61294f398a21c4def927ef2609f32b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f63b761497b3e9a19a9b939b45acf60d5a7d37b0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615749"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504239"
 ---
 # <a name="iclrdebugmanagersetconnectiontasks-method"></a>ICLRDebugManager::SetConnectionTasks メソッド
 [ICLRTask](iclrtask-interface.md)インスタンスのリストを識別子とフレンドリ名に関連付けます。  
@@ -58,7 +58,7 @@ HRESULT SetConnectionTasks (
 |E_INVALIDARG|[Beginconnection](iclrdebugmanager-beginconnection-method.md)がこの値を使用して呼び出されていないか、 `id` `dwCount` またはが0であるか、または `id` の要素の1つが `ppCLRTask` null です。|  
   
 ## <a name="remarks"></a>解説  
- [ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)では、、、および endconnection という3つのメソッドを使用し `BeginConnection` `SetConnectionTasks` て、タスクリストを識別子とフレンドリ名に関連付けることができます。 [EndConnection](iclrdebugmanager-endconnection-method.md)  
+ [ICLRDebugManager](iclrdebugmanager-interface.md)では、、、および endconnection という3つのメソッドを使用し `BeginConnection` `SetConnectionTasks` て、タスクリストを識別子とフレンドリ名に関連付けることができます。 [EndConnection](iclrdebugmanager-endconnection-method.md)  
   
 > [!IMPORTANT]
 > これら3つのメソッドは、一連のタスクごとに特定の順序で呼び出す必要があります。 `BeginConnection`は、新しい接続を確立するために最初に呼び出されます。 `SetConnectionTasks`は、その接続に関連する一連のタスクを提供するために、次に呼び出されます。 `EndConnection`は、タスク一覧と識別子とフレンドリ名の間の関連付けを削除するために最後に呼び出されます。ただし、異なる接続の呼び出しは入れ子にすることができます。  

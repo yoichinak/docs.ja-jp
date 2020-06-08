@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ad32fb84-c2b6-41cd-888d-787ff3a90449
 topic_type:
 - apiref
-ms.openlocfilehash: dab155b82d87609b3d3f390133e6490502a43518
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fce4f3875fbdb110134d6b7f684eff40821f6bdd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177279"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503680"
 ---
 # <a name="imetadataimportfindmember-method"></a>IMetaDataImport::FindMember メソッド
-指定した名前とメタデータ シグネチャを持つフィールドまたはメソッドの MemberDef<xref:System.Type>トークンへのポインターを取得します。  
+指定した <xref:System.Type> と指定した名前とメタデータシグネチャを持つフィールドまたはメソッドの MemberDef トークンへのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,40 +39,40 @@ HRESULT FindMember (
   
 ## <a name="parameters"></a>パラメーター  
  `td`  
- [in]検索するメンバーを囲むクラスまたはインターフェイスの TypeDef トークン。 この値が`mdTokenNil`の場合、グローバル変数またはグローバル関数の検索が行われます。  
+ から検索対象のメンバーを囲むクラスまたはインターフェイスの TypeDef トークン。 この値がの場合 `mdTokenNil` 、グローバル変数またはグローバル関数の参照が行われます。  
   
  `szName`  
- [in]検索するメンバーの名前。  
+ から検索対象のメンバーの名前。  
   
  `pvSigBlob`  
- [in]メンバーのバイナリ メタデータ シグネチャへのポインター。  
+ からメンバーのバイナリメタデータシグネチャへのポインター。  
   
  `cbSigBlob`  
- [in]のサイズ (バイト`pvSigBlob`単位)  
+ からのサイズ (バイト単位) `pvSigBlob` 。  
   
  `pmb`  
- [アウト]一致する MemberDef トークンへのポインター。  
+ 入出力一致する MemberDef トークンへのポインター。  
   
 ## <a name="remarks"></a>解説  
- メンバーを指定するには、外側のクラスまたはインターフェイス (`td`) 、`szName`その名前 ( )`pvSigBlob`、およびオプションでそのシグネチャ ( ) を使用します。 クラスまたはインターフェイス内に同じ名前のメンバーが複数存在する場合があります。 その場合は、メンバーの署名を渡して一意の一致を見つけます。  
+ メンバーは、外側のクラスまたはインターフェイス ( `td` )、その名前 ( `szName` )、および必要に応じてシグネチャ () を使用して指定し `pvSigBlob` ます。 クラスまたはインターフェイスに同じ名前のメンバーが複数存在する可能性があります。 その場合は、メンバーのシグネチャを渡して、一意の一致を検索します。  
   
- 渡された署名は`FindMember`、特定のスコープにバインドされているため、現在のスコープで生成されている必要があります。 シグネチャは、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルへのインデックスです。 現在のスコープのコンテキストの外部でランタイム シグネチャを作成し、そのシグネチャを`FindMember`入力として使用することはできません。  
+ 署名は特定のスコープにバインドされるため、に渡されるシグネチャは、 `FindMember` 現在のスコープで生成される必要があります。 署名には、外側のクラスまたは値の型を識別するトークンを埋め込むことができます。 トークンは、ローカルの TypeDef テーブルのインデックスです。 現在のスコープのコンテキスト外でランタイムシグネチャを作成し、その署名を入力として使用してへの入力として使用することはできません `FindMember` 。  
   
- `FindMember`は、クラスまたはインターフェイスで直接定義されたメンバーのみを検索します。継承されたメンバーは見つかりません。  
+ `FindMember`クラスまたはインターフェイスで直接定義されたメンバーのみを検索します。継承されたメンバーは見つかりません。  
   
 > [!NOTE]
-> `FindMember`はヘルパー メソッドです。 を呼[び](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findmethod-method.md)出します。その呼び出しが一致を`FindMember`見つけられない場合は[、IMetaDataImport::FindField](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-findfield-method.md)を呼び出します。  
+> `FindMember`は、ヘルパーメソッドです。 [IMetaDataImport:: FindMethod](imetadataimport-findmethod-method.md); を呼び出します。この呼び出しで一致するものが見つからない場合は、 `FindMember` [IMetaDataImport:: findfield](imetadataimport-findfield-method.md)を呼び出します。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

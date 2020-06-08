@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: fb511c9b-3fe4-41b0-822a-6ba4a079d1f5
 topic_type:
 - apiref
-ms.openlocfilehash: 76a50be6da790ed7bd193c489d36e2823cdbe587
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: f878e2f1f86bc42c0ff5abada8d7df4feb9ed228
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616964"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504194"
 ---
 # <a name="iclrgcmanager-interface"></a>ICLRGCManager インターフェイス
 ホストが共通言語ランタイムのガベージコレクションシステムと対話できるようにするメソッドを提供します。  
   
 > [!NOTE]
-> .NET Framework 4.5 以降では、 [ICLRGCManager2:: SetGCStartupLimitsEx](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager2-setgcstartuplimitsex-method.md)メソッドを使用して、ガベージコレクションセグメントのサイズと、ガベージコレクションシステムのジェネレーション0の最大サイズを、 `DWORD` [SetGCStartupLimits](iclrgcmanager-setgcstartuplimits-method.md)メソッドによって設定された制限を超える値に設定できます。  
+> .NET Framework 4.5 以降では、 [ICLRGCManager2:: SetGCStartupLimitsEx](iclrgcmanager2-setgcstartuplimitsex-method.md)メソッドを使用して、ガベージコレクションセグメントのサイズと、ガベージコレクションシステムのジェネレーション0の最大サイズを、 `DWORD` [SetGCStartupLimits](iclrgcmanager-setgcstartuplimits-method.md)メソッドによって設定された制限を超える値に設定できます。  
   
 ## <a name="methods"></a>メソッド  
   

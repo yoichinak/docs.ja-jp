@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6ece160-26ad-4d39-abd7-05acd6f78c48
 topic_type:
 - apiref
-ms.openlocfilehash: 0eb1f57e3505f9ce5bb8b831d30c3891e51097c3
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: b7a068efcf20b2028e9c193567d15b59e582febf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158568"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500924"
 ---
 # <a name="cor_prf_gc_generation-enumeration"></a>COR_PRF_GC_GENERATION 列挙型
 ガベージコレクションの生成を識別します。  
@@ -46,7 +46,7 @@ typedef enum {
 |`COR_PRF_GC_LARGE_OBJECT_HEAP`|オブジェクトは、ラージオブジェクトヒープに格納されます。|  
 |`COR_PRF_GC_PINNED_OBJECT_HEAP`|オブジェクトは、固定されたオブジェクトヒープに格納されます。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  ガベージコレクターは、オブジェクトを経過期間に基づいてジェネレーションに分割することによって、メモリ管理のパフォーマンスを向上させます。 現在、ガベージコレクターは、番号0、1、および2の3つのジェネレーションと、2つの特殊なヒープセグメント (大きなオブジェクト用とピン留めオブジェクト用) を使用しています。
   
  サイズがしきい値を超えるオブジェクトは、大きなオブジェクトヒープに格納されます。 ピン留めされたオブジェクトは、通常のヒープに割り当てた場合のパフォーマンスコストを回避するために、固定されたオブジェクトヒープに割り当てることができます。 割り当てられた他のオブジェクトは、ジェネレーション0に属しています。 ジェネレーション0でガベージコレクションが発生した後に存在するすべてのオブジェクトは、ジェネレーション1に昇格されます。 ジェネレーション1でガベージコレクションが発生した後に存在するオブジェクトは、ジェネレーション2に移動します。  
@@ -56,7 +56,7 @@ typedef enum {
  `COR_PRF_GC_GENERATION`列挙体は、 [COR_PRF_GC_GENERATION_RANGE](cor-prf-gc-generation-range-structure.md)構造体によって使用されます。  
   
 ## <a name="requirements"></a>要件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   

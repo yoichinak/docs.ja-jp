@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49e647be-9d63-4250-9d11-704e2a400d1b
 topic_type:
 - apiref
-ms.openlocfilehash: 51d34e68851bc6a60d25f643f63d112396abdc4e
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 8e31f0a649fd1ca80d6557a0a7176549c67bf203
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83209072"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501925"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection メソッド
 新しい接続が作成されたことをデバッガーに通知します。  
@@ -45,14 +45,14 @@ HRESULT CreateConnection (
  `pConnName`  
  から新しい接続の名前へのポインター。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>解説  
  `CreateConnection`コールバックは、次のいずれかの場合に発生します。  
   
 - デバッガーが接続を含むプロセスにアタッチする場合。 この場合、ランタイムは、 `CreateConnection` プロセス内の各接続に対して、イベントと、 [ICorDebugManagedCallback2:: ChangeConnection](icordebugmanagedcallback2-changeconnection-method.md)イベントを生成してディスパッチします。  
   
-- ホストが[ホスティング API](../hosting/index.md)で[ICLRDebugManager:: beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md)を呼び出すとき。  
+- ホストが[ホスティング API](../hosting/index.md)で[ICLRDebugManager:: beginconnection](../hosting/iclrdebugmanager-beginconnection-method.md)を呼び出すとき。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  

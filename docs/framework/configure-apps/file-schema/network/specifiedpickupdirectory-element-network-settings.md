@@ -1,5 +1,6 @@
 ---
 title: <specifiedPickupDirectory> 要素 (ネットワーク設定)
+description: <specifiedPickupDirectory>Network settings 要素は、.NET Framework の SMTP サーバーオプションのローカルディレクトリを構成します。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#specifiedPickupDirectory
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - specifiedPickupDirectory element
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
-ms.openlocfilehash: 4b0cbaf9a7bfe2a9b1610811f4201253d219a6b2
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: f0c4c1845e9542d0f3b836ff03f16bdf2979ebd8
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "79154609"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504499"
 ---
 # <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory> 要素 (ネットワーク設定)
 SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。  
@@ -46,7 +47,7 @@ SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレ�
   
 ### <a name="parent-elements"></a>親要素  
   
-|要素|Description|  
+|要素|説明|  
 |-------------|-----------------|  
 |[\<smtp>要素 (ネットワーク設定)](smtp-element-network-settings.md)|SMTP (Simple Mail Transport Protocol) メール送信オプションを構成します。|  
   

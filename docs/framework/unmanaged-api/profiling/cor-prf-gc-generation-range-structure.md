@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: e7e07273-8d10-4a68-807e-59634e3f8c5e
 topic_type:
 - apiref
-ms.openlocfilehash: 682aac9729519e0861ae6e6f60df78a30063c278
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 91fb902aab678e29c6e74380e3576fa5c4ae62d4
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76867212"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500897"
 ---
 # <a name="cor_prf_gc_generation_range-structure"></a>COR_PRF_GC_GENERATION_RANGE 構造体
 ガーベッジ コレクションを実行中のメモリ範囲 (ブロック) を説明します。  
@@ -44,17 +44,17 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
 |`rangeLength`|メモリブロックの使用されている部分のサイズ (つまり、ブロック内で使用されているメモリの量) を指定する整数へのポインター。|  
 |`rangeLengthReserved`|メモリブロックのサイズ (つまり、ブロックに予約されているメモリの量) を指定する整数へのポインター。|  
   
-## <a name="remarks"></a>コメント  
- `rangeLength` 値が正確であることが保証されるのは、 [ICorProfilerInfo2:: GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md)または[ICorProfilerInfo2:: getobjectgeneration](icorprofilerinfo2-getobjectgeneration-method.md)(両方が `COR_PRF_GC_GENERATION_RANGE` 構造体を使用している場合) が[ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)メソッドまたは[ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)メソッドから呼び出された場合だけです。  
+## <a name="remarks"></a>解説  
+ 値は、 `rangeLength` [ICorProfilerInfo2:: GetGenerationBounds](icorprofilerinfo2-getgenerationbounds-method.md)または[ICorProfilerInfo2:: getobjectgeneration](icorprofilerinfo2-getobjectgeneration-method.md)(両方とも構造体を使用する) `COR_PRF_GC_GENERATION_RANGE` が[ICorProfilerCallback2:: GarbageCollectionStarted](icorprofilercallback2-garbagecollectionstarted-method.md)メソッドまたは[ICorProfilerCallback2:: GarbageCollectionFinished](icorprofilercallback2-garbagecollectionfinished-method.md)メソッドから呼び出された場合にのみ正確であることが保証されます。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

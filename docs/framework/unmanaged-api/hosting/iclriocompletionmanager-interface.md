@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c6c3ace6-e5e7-4450-8cc5-a9a48208c493
 topic_type:
 - apiref
-ms.openlocfilehash: 822b51531b7afc1c824c74b9580d9208e347e13b
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 71afc5e9772f82b922e8f428e6d808e46d092704
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703553"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504213"
 ---
 # <a name="iclriocompletionmanager-interface"></a>ICLRIoCompletionManager インターフェイス
 ホストが、指定された i/o 要求のステータスの共通言語ランタイム (CLR) に通知するためのコールバックメソッドを実装します。  
@@ -28,7 +28,7 @@ ms.locfileid: "83703553"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[OnComplete メソッド](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md)|[Ihohooの](ihostiocompletionmanager-bind-method.md)呼び出しを使用して作成された i/o 要求の状態を CLR に通知します:: Bind メソッド。|  
+|[OnComplete メソッド](iclriocompletionmanager-oncomplete-method.md)|[Ihohooの](ihostiocompletionmanager-bind-method.md)呼び出しを使用して作成された i/o 要求の状態を CLR に通知します:: Bind メソッド。|  
   
 ## <a name="remarks"></a>解説  
  ホストは、 [Ihohoocompletion manager](ihostiocompletionmanager-interface.md)インターフェイスを使用して i/o 完了の抽象化を実装します。 CLR はこのインターフェイスを介して i/o 要求を行い、ホストはインターフェイスを使用して、そのような要求の結果をランタイムに通知し `ICLRIoCompletionManager` ます。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6136be87-e631-4756-81ed-74b66581bad4
 topic_type:
 - apiref
-ms.openlocfilehash: 8d6a4e1ca934c748352b0c4f5120536a4dd24e0b
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 644b31ae8e8f0c51c08bcad57220a028406cfd3a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703963"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504076"
 ---
 # <a name="iclrruntimehostsethostcontrol-method"></a>ICLRRuntimeHost::SetHostControl メソッド
 [IHostControl インターフェイス](ihostcontrol-interface.md)のホストの実装を取得するために共通言語ランタイム (CLR) が使用できるインターフェイスポインターを設定します。  
@@ -50,7 +50,7 @@ HRESULT SetHostControl(
 |E_CLR_ALREADY_STARTED|CLR は既に初期化されています。|  
   
 ## <a name="remarks"></a>解説  
- CLR が初期化される前にを呼び出す必要があり `SetHostControl` ます。つまり、 [Start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)を呼び出すか、任意の[メタデータインターフェイス](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)を使用します。 `SetHostControl` [Corbindtoの entruntime 関数](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)または[Corbindtocurrentruntime 関数](corbindtoruntimeex-function.md)を呼び出した直後にを呼び出すことをお勧めします。  
+ CLR が初期化される前にを呼び出す必要があり `SetHostControl` ます。つまり、 [Start メソッド](iclrruntimehost-start-method.md)を呼び出すか、任意の[メタデータインターフェイス](../metadata/metadata-interfaces.md)を使用します。 `SetHostControl` [Corbindtoの entruntime 関数](corbindtocurrentruntime-function.md)または[Corbindtocurrentruntime 関数](corbindtoruntimeex-function.md)を呼び出した直後にを呼び出すことをお勧めします。  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  

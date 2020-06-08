@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ae0836d0-1170-4494-bac5-d0e809df51a2
 topic_type:
 - apiref
-ms.openlocfilehash: 40857620e47befce361ff8cb04af527915051df3
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: e1df31ed8b652837a33b360b1378f99e6800cbea
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83804209"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501522"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>IHostSecurityContext::Capture メソッド
-[IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)への呼び出しから返された[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)インスタンスの複製を取得します。  
+[IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)への呼び出しから返された[IHostSecurityContext](ihostsecuritycontext-interface.md)インスタンスの複製を取得します。  
   
 ## <a name="syntax"></a>構文  
   

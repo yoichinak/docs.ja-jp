@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7d90dcee-0206-4540-807b-06982fe65f1a
 topic_type:
 - apiref
-ms.openlocfilehash: 47377e892aaf2bdd96a297630c47fe52215b0564
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: eb0ebab0f4e05d81730d5beb2b5345e319e8e274
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177381"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492539"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked メソッド
-指定したメタデータ トークンが処理済みとしてマークされているかどうかを示す値を取得します。  
+指定したメタデータトークンが処理済みとしてマークされているかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,20 +36,20 @@ HRESULT IsTokenMarked (
   
 ## <a name="parameters"></a>パラメーター  
  `tk`  
- [in]処理マークを調べるトークン。  
+ から処理マークを調べるトークン。  
   
  `pIsMarked`  
- [アウト]処理済みの`true`場合`tk`の値。それ`false`以外の場合は、  
+ 入出力が `true` 処理された場合は値。それ以外の場合は `tk` `false` 。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataFilter インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+- [IMetaDataFilter インターフェイス](imetadatafilter-interface.md)

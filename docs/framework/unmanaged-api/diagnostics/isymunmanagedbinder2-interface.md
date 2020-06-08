@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a59f405-73e8-4434-8bcc-a9dc45ea08e6
 topic_type:
 - apiref
-ms.openlocfilehash: 8a4fbb40ec2426d000628fbd6d5f0241d3152c18
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: f6155eb777b5071ff522af4f27d5fb2d73aa25ef
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83441670"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501834"
 ---
 # <a name="isymunmanagedbinder2-interface"></a>ISymUnmanagedBinder2 インターフェイス
 アンマネージコードのシンボルバインダーを表し、 [ISymUnmanagedBinder](isymunmanagedbinder-interface.md)インターフェイスを拡張します。  
@@ -31,7 +31,7 @@ ms.locfileid: "83441670"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetReaderForFile2 メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|メタデータインターフェイスとファイル名を指定すると、モジュールに関連付けられているデバッグシンボルを読み取る正しい[ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスが返されます。 [ISymUnmanagedBinder:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md)メソッドよりも広範な検索を提供します。|  
+|[GetReaderForFile2 メソッド](isymunmanagedbinder2-getreaderforfile2-method.md)|メタデータインターフェイスとファイル名を指定すると、モジュールに関連付けられているデバッグシンボルを読み取る正しい[ISymUnmanagedReader](isymunmanagedreader-interface.md)インターフェイスが返されます。 [ISymUnmanagedBinder:: GetReaderForFile](isymunmanagedbinder-getreaderforfile-method.md)メソッドよりも広範な検索を提供します。|  
   
 ## <a name="requirements"></a>要件  
  **ヘッダー:** CorSym .idl、CorSym .h  

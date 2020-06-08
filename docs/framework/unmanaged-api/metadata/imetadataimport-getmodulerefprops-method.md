@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b558e766-4c11-4628-ae47-b4e0a1800168
 topic_type:
 - apiref
-ms.openlocfilehash: f46033b9e643ef6b4a0063c4995b8c024b8c1f7e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f1784c9f3085ce188f9e540887dd02064f8448f3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175357"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503579"
 ---
 # <a name="imetadataimportgetmodulerefprops-method"></a>IMetaDataImport::GetModuleRefProps メソッド
 指定したメタデータ トークンによって参照されるモジュールの名前を取得します。  
@@ -38,27 +38,27 @@ HRESULT GetModuleRefProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mur`  
- [in]メタデータ情報を取得するモジュールを参照する ModuleRef メタデータ トークン。  
+ からメタデータ情報を取得するモジュールを参照する ModuleRef メタデータトークン。  
   
  `szName`  
- [アウト]モジュール名を保持するバッファー。  
+ 入出力モジュール名を保持するバッファー。  
   
  `cchName`  
- [in]ワイド文字で指定`szName`されたサイズ。  
+ から要求されたサイズ ( `szName` ワイド文字単位)。  
   
  `pchName`  
- [アウト]ワイド文字`szName`で返されるサイズ。  
+ 入出力返されたのサイズを `szName` ワイド文字数で返します。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

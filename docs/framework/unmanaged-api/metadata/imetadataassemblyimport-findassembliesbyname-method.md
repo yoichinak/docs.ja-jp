@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4db97cf9-e4c1-4233-8efa-cbdc0e14a8e4
 topic_type:
 - apiref
-ms.openlocfilehash: 05902436c09d082f90af01f48c7e918650317ce7
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: d2693a94f02214df6d7265b26e3d70d91adcf8a7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84009419"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503836"
 ---
 # <a name="imetadataassemblyimportfindassembliesbyname-method"></a>IMetaDataAssemblyImport::FindAssembliesByName メソッド
 `szAssemblyName`参照を解決するために共通言語ランタイム (CLR) によって採用されている標準規則を使用して、指定したパラメーターを持つアセンブリの配列を取得します。  
@@ -64,16 +64,16 @@ HRESULT FindAssembliesByName (
 |`S_OK`|`FindAssembliesByName`正常に返されました。|  
 |`S_FALSE`|アセンブリがありません。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  アセンブリ名が指定されている場合、メソッドは、 `FindAssembliesByName` アセンブリ参照を解決するための標準の規則に従って、アセンブリを検索します。 (詳細については、「[ランタイムがアセンブリを検索する方法](../../deployment/how-the-runtime-locates-assemblies.md)」を参照してください)。`FindAssembliesByName`呼び出し元は、アプリケーションベースやプライベート検索パスなど、アセンブリリゾルバーコンテキストのさまざまな側面を構成できます。  
   
- `FindAssembliesByName`メソッドでは、アセンブリ解決ロジックを呼び出すために、プロセスで CLR を初期化する必要があります。 したがって、を呼び出す前に[Coinitializeee](../../../../docs/framework/unmanaged-api/hosting/coinitializeee-function.md) (COINITEE_DEFAULT を渡す) を呼び出してから、CoUninitializeCor の呼び出しを実行する必要があり `FindAssembliesByName` [CoUninitializeCor](../hosting/couninitializecor-function.md)ます。  
+ `FindAssembliesByName`メソッドでは、アセンブリ解決ロジックを呼び出すために、プロセスで CLR を初期化する必要があります。 したがって、を呼び出す前に[Coinitializeee](../hosting/coinitializeee-function.md) (COINITEE_DEFAULT を渡す) を呼び出してから、CoUninitializeCor の呼び出しを実行する必要があり `FindAssembliesByName` [CoUninitializeCor](../hosting/couninitializecor-function.md)ます。  
   
  `FindAssembliesByName`渡されたアセンブリ名のアセンブリマニフェストを格納しているファイルへの[IMetaDataImport](imetadataimport-interface.md)ポインターを返します。 指定したアセンブリ名が完全に指定されていない場合 (たとえば、バージョンが含まれていない場合) は、複数のアセンブリが返されることがあります。  
   
  `FindAssembliesByName`は、コンパイル時に参照アセンブリの検索を試行するコンパイラによって一般的に使用されます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Cor  
