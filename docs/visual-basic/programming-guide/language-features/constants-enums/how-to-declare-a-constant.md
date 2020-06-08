@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 5054d4a4fc02d8bd22efceb01770fc54167d8cb3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ffaa98f6af3d4b276f5c0b1153841acdea0809d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347466"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414480"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>方法: 定数を宣言する (Visual Basic)
 定数とその値を宣言するには、`Const` ステートメントを使用します。 定数を宣言することで、値にわかりやすい名前を割り当てます。 宣言した定数を変更したり、新しい値を割り当てたりすることはできません。  
@@ -45,7 +45,7 @@ ms.locfileid: "74347466"
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
-     [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) に `Off` を指定し、[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) に `On` を指定した場合は、データ型 (`Boolean`、`Byte`、`Char`、`DateTime`、`Decimal`、`Double`、`Integer`、`Long`、`Short`、`Single`、または `String`) を指定して明示的に定数を宣言する必要があります。  
+     [Option Infer](../../../language-reference/statements/option-infer-statement.md) に `Off` を指定し、[Option Strict](../../../language-reference/statements/option-strict-statement.md) に `On` を指定した場合は、データ型 (`Boolean`、`Byte`、`Char`、`DateTime`、`Decimal`、`Double`、`Integer`、`Long`、`Short`、`Single`、または `String`) を指定して明示的に定数を宣言する必要があります。  
   
      `Option Infer` に `On` を指定するか、`Option Strict` に `Off` を指定している場合は、`As` 句でデータ型を指定することなく定数を宣言できます。 コンパイラは、式の型から定数の型を判断します。 詳細については、[定数とリテラルのデータ型](constant-and-literal-data-types.md)に関するページを参照してください。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "74347466"
   
 ## <a name="see-also"></a>関連項目
 
-- [Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const ステートメント](../../../language-reference/statements/const-statement.md)
 - [定数とリテラルのデータ型](constant-and-literal-data-types.md)
 - [定数の概要](constants-overview.md)
 - [方法: 定数を宣言する](how-to-declare-a-constant.md)
@@ -86,5 +86,5 @@ ms.locfileid: "74347466"
 - [定数の概要](constants-overview.md)
 - [方法: 列挙型を宣言する](how-to-declare-enumerations.md)
 - [列挙型と名前の修飾](enumerations-and-name-qualification.md)
-- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)
+- [定数と列挙体](../../../language-reference/constants-and-enumerations.md)

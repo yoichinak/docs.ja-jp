@@ -2,12 +2,12 @@
 title: '方法: 2 つのフォルダーの内容を比較する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 903c7e9a-f48d-4a07-a8a8-5450d2646efa
-ms.openlocfilehash: 05031466eeafae2dc63db36e9380034ddf9cbf15
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 63a062c562e2c79ea81ac270651aa16776801b99
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75337542"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410761"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-visual-basic"></a>方法: 2 つのフォルダーの内容を比較する (LINQ) (Visual Basic)
 
@@ -120,5 +120,5 @@ System.Linq 名前空間の `Imports` ステートメントを使用して、Vis
 
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)

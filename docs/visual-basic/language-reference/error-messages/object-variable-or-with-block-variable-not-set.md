@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 07c215d373e4ac1cbadf82a48b8cb3d90efdbdb4
-ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
+ms.openlocfilehash: d1778e2bb58d32e976f10b3fba1637918278d36e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70040555"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409284"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>オブジェクト変数または With ブロック変数が設定されていません。
 無効なオブジェクト変数が参照されています。   このエラーが発生する原因は複数あります。
@@ -19,7 +19,7 @@ ms.locfileid: "70040555"
     たとえば、`Dim x` で宣言された変数は、`Object;` 型になり、`Dim x As String` で宣言された変数は、`String` 型になります。
 
     > [!TIP]
-    > `Option Strict` ステートメントでは、結果が `Object` 型となる暗黙の型指定が許可されません。 型を省略すると、コンパイル時エラーが発生します。 「[Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)」を参照してください。
+    > `Option Strict` ステートメントでは、結果が `Object` 型となる暗黙の型指定が許可されません。 型を省略すると、コンパイル時エラーが発生します。 「[Option Strict ステートメント](../statements/option-strict-statement.md)」を参照してください。
 
 - `Nothing` に設定されているオブジェクトを参照しようとしています。
 
@@ -52,6 +52,6 @@ ms.locfileid: "70040555"
 
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクト変数の宣言](../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [ReDim ステートメント](../../../visual-basic/language-reference/statements/redim-statement.md)
-- [With...End With ステートメント](../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [オブジェクト変数の宣言](../../programming-guide/language-features/variables/object-variable-declaration.md)
+- [ReDim ステートメント](../statements/redim-statement.md)
+- [With...End With ステートメント](../statements/with-end-with-statement.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: f64b52c7-8b11-4410-93a6-cb3aeebcc772
-ms.openlocfilehash: 6d5f9d38b413b79f111a14ec3829c57a9797ce54
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4dbe6146b70181864a6717146071f9b93a1f583e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346719"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414570"
 ---
 # <a name="how-to-create-an-add-extension-method-used-by-a-collection-initializer-visual-basic"></a>方法: コレクション初期化子によって使用される拡張メソッドを作成して追加する (Visual Basic)
 コレクション初期化子を使用してコレクションを作成すると、`Add` メソッドのパラメーターがコレクション初期化子の値の型と一致するコレクション型の `Add` メソッドが、Visual Basic コンパイラによって検索されます。 この `Add` メソッドは、コレクションに、コレクション初期化子の値を設定するときに使用されます。  
@@ -27,5 +27,5 @@ ms.locfileid: "74346719"
   
 ## <a name="see-also"></a>関連項目
 
-- [コレクション初期化子](../../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [方法: コレクション初期化子によって使用されるコレクションを作成する](../../../../visual-basic/programming-guide/language-features/collection-initializers/how-to-create-a-collection-used-by-a-collection-initializer.md)
+- [コレクション初期化子](index.md)
+- [方法: コレクション初期化子によって使用されるコレクションを作成する](how-to-create-a-collection-used-by-a-collection-initializer.md)

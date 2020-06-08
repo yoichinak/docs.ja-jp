@@ -21,12 +21,12 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 73cf56dd72f2baac0474d6f5c4e88228a1fe38cf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 611f3d8faf2148b8a983467d9ace4fd6c18b30e6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349848"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84373890"
 ---
 # <a name="derived-math-functions-visual-basic"></a>数値演算関数の導出 (Visual Basic)
 次の表に、<xref:System.Math?displayProperty=nameWithType> オブジェクトの組み込み数学関数から導出できる非組み込み数学関数を示します。 組み込み数学関数にアクセスするには、ファイルまたはプロジェクトに `Imports System.Math` を追加します。  
@@ -56,4 +56,4 @@ ms.locfileid: "74349848"
   
 ## <a name="see-also"></a>関連項目
 
-- [数値演算関数](../../../visual-basic/language-reference/functions/math-functions.md)
+- [数値演算関数](../functions/math-functions.md)

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - object variables [Visual Basic], declaring
 - declaring object variables [Visual Basic]
 ms.assetid: 2fa77dde-1fb2-439a-80d4-3e9787649fad
-ms.openlocfilehash: eaaeda2a986584e6e1a2e0d2cda3890fb6187598
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d9a8c1fb30bfa5988d48202e41202e7ede0f5f27
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75344232"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410504"
 ---
 # <a name="how-to-declare-an-object-variable-and-assign-an-object-to-it-in-visual-basic"></a>方法: Visual Basic でオブジェクト変数を宣言してオブジェクトを代入する
 
-[Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)の変数は、[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)で `As Object` を指定して宣言します。 このような変数にオブジェクトを代入するには、代入ステートメントまたは初期化句で等号 (`=`) の後にオブジェクトを配置します。
+[Object データ型](../../../language-reference/data-types/object-data-type.md)の変数は、[Dim ステートメント](../../../language-reference/statements/dim-statement.md)で `As Object` を指定して宣言します。 このような変数にオブジェクトを代入するには、代入ステートメントまたは初期化句で等号 (`=`) の後にオブジェクトを配置します。
 
 ## <a name="example"></a>例
 
@@ -43,10 +43,10 @@ Dim thisObject As Object= "This is an Object"
 
 ## <a name="see-also"></a>関連項目
 
-- [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)
-- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [変数宣言](variable-declaration.md)
+- [オブジェクト変数](object-variables.md)
+- [オブジェクト変数の宣言](object-variable-declaration.md)
+- [Object 型](../../../language-reference/data-types/object-data-type.md)
+- [Dim ステートメント](../../../language-reference/statements/dim-statement.md)
+- [ローカル型の推論](local-type-inference.md)
+- [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: b696c79cd3cada4416b3f4b6cdf96f00b89a5a0a
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 539ad639320615c1e53176fe47e5468864aa21d8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266925"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414390"
 ---
 # <a name="nested-control-structures-visual-basic"></a>入れ子になった制御構造 (Visual Basic)
 `For...Next` ループ内の `If...Then...Else` ブロックなど、制御ステートメントを他の制御ステートメントに配置することができます。 別の制御ステートメントに配置された制御ステートメントは、"*入れ子にされた*" ステートメントと呼ばれます。  
@@ -73,7 +73,7 @@ Next ctl
   
 ## <a name="see-also"></a>関連項目
 
-- [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [条件判断構造](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
-- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [その他の制御構造](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)
+- [制御フロー](index.md)
+- [条件判断構造](decision-structures.md)
+- [ループ構造](loop-structures.md)
+- [その他の制御構造](other-control-structures.md)

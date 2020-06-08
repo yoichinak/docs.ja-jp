@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-ms.openlocfilehash: 16d7409c802e97b1f33474d810134db4d9f0ad6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7c076cd2198c85560f7c63c69e051697966c9524
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401401"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415597"
 ---
 # <a name="long-data-type-visual-basic"></a>Long データ型 (Visual Basic)
 
@@ -79,9 +79,9 @@ Dim number = &H_0FAC_0326_1489_D68CL
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Int64>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データの種類](index.md)
+- [Integer データ型](integer-data-type.md)
+- [Short データ型](short-data-type.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

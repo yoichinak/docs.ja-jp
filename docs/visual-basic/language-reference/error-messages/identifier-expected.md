@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30203
 ms.assetid: c05162ee-55d0-4d7f-84bb-e7758d4c5081
-ms.openlocfilehash: 619b1c55ef035530c6854fa15763fb9c187565a6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e33450e921f1859c97edf1fbf123a0a95267767f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662031"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402889"
 ---
 # <a name="identifier-expected"></a>識別子が必要です。
 コンテキストで要素名が必要な場所に、認識可能な宣言された要素名ではないプログラミング要素が出現します。 考えられる原因の 1 つは、属性がステートメントの先頭以外の場所に指定されていることです。  
@@ -27,5 +27,5 @@ ms.locfileid: "64662031"
   
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [属性の概要](../../programming-guide/concepts/attributes/index.md)

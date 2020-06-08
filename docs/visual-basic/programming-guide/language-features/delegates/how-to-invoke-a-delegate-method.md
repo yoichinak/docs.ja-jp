@@ -2,12 +2,12 @@
 title: '方法: デリゲート メソッドを呼び出す'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
-ms.openlocfilehash: 520bacfbe6103490e0459cd5af149c1d55a8fce4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f319727c007b93c7b334af0598f1b9f7c034144d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345266"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410722"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>方法: デリゲート メソッドを呼び出す (Visual Basic)
 
@@ -45,7 +45,7 @@ ms.locfileid: "74345266"
 
 ## <a name="see-also"></a>関連項目
 
-- [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Delegate ステートメント](../../../language-reference/statements/delegate-statement.md)
+- [デリゲート](index.md)
+- [イベント](../events/index.md)
 - [マルチスレッド アプリケーション](../../../../standard/threading/using-threads-and-threading.md)

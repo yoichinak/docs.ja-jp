@@ -7,12 +7,12 @@ helpviewer_keywords:
 - threading [.NET], synchronizing threads
 - managed threading
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
-ms.openlocfilehash: a70bd3070d8b1dcd06e55d330a01d29071293f6c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 7f064738472a65ce89f17efc4d7ea00ac98280d0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159391"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291098"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 
@@ -22,11 +22,11 @@ ms.locfileid: "78159391"
   
 - 同期されたコード領域。 <xref:System.Threading.Monitor> クラス、またはこのクラスに対するコンパイラ サポートを使用して、パフォーマンスを向上させながら、同期を必要とするコード ブロックだけを同期できます。  
   
-- 手動での同期。 .NET クラス ライブラリによって提供されている同期オブジェクトを使用できます。 「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。これには、<xref:System.Threading.Monitor> クラスの説明が含まれています。  
+- 手動での同期。 .NET クラス ライブラリによって提供されている同期オブジェクトを使用できます。 「[同期プリミティブの概要](overview-of-synchronization-primitives.md)」を参照してください。これには、<xref:System.Threading.Monitor> クラスの説明が含まれています。  
   
 - 同期されたコンテキスト。 .NET Framework および Xamarin アプリケーションでは、<xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> を使用することで、<xref:System.ContextBoundObject> オブジェクトの単純な自動同期を有効にすることができます。  
   
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間のコレクション クラス。 これらのクラスには、同期された追加操作および削除操作が組み込まれています。 詳しくは、「[スレッド セーフなコレクション](../../../docs/standard/collections/thread-safe/index.md)」を参照してください。  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間のコレクション クラス。 これらのクラスには、同期された追加操作および削除操作が組み込まれています。 詳しくは、「[スレッド セーフなコレクション](../collections/thread-safe/index.md)」を参照してください。  
   
  共通言語ランタイムにはスレッド モデルが用意されていて、要件に応じたさまざまな方法で同期することができる多数のカテゴリにクラスを分類できます。 次の表に、各同期カテゴリで提供されるフィールドおよびメソッドに対する同期サポートを示します。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "78159391"
  これは、オブジェクトに対する既定の設定です。 すべてのスレッドが、すべてのメソッドまたはフィールドにいつでもアクセスできます。 ただし、これらのオブジェクトにアクセスできるスレッドは一度に 1 つだけです。  
   
 ## <a name="manual-synchronization"></a>手動での同期  
- .NET クラス ライブラリには、スレッドを同期するための多数のクラスがあります。 「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。  
+ .NET クラス ライブラリには、スレッドを同期するための多数のクラスがあります。 「[同期プリミティブの概要](overview-of-synchronization-primitives.md)」を参照してください。  
   
 ## <a name="synchronized-code-regions"></a>同期されたコード領域  
  <xref:System.Threading.Monitor> クラスまたはコンパイラ キーワードを使用して、コード ブロック、インスタンス メソッド、静的メソッドを同期できます。 同期された静的フィールドに対するサポートはありません。  
@@ -70,7 +70,7 @@ ms.locfileid: "78159391"
 ## <a name="see-also"></a>参照
 
 - <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute>
-- [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)
-- [同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)
+- [スレッドおよびスレッド処理](threads-and-threading.md)
+- [同期プリミティブの概要](overview-of-synchronization-primitives.md)
 - [SyncLock ステートメント](../../visual-basic/language-reference/statements/synclock-statement.md)
 - [lock ステートメント](../../csharp/language-reference/keywords/lock-statement.md)

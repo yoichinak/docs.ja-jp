@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: addf35afa2a4c88faf73ebc3d60fbcf9c4db1518
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 9d85f9c0390a659e59e372ad949cffdd17715189
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636706"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413259"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>初めての LINQ クエリの作成 (Visual Basic)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、各種データ ソースに合わせてさまざまな言語が開発されてきました。 このため、アプリケーション開発者は、サポートするデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。  
@@ -57,7 +57,7 @@ Dim db As New DataContext("C:\Northwind\Northwnd.mdf")
 Dim customers As Table(Of Customer) = db.GetTable(Of Customer)  
 ```  
   
- それぞれの種類のデータ ソースを作成する方法の詳細については、対応する LINQ プロバイダーのドキュメントを参照してください。 (該当するプロバイダーの一覧については、[LINQ (統合言語クエリ)](../../../../visual-basic/programming-guide/concepts/linq/index.md) に関するページを参照してください)。基本的な規則は単純です。LINQ データ ソースは、ジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスか、これを継承するインターフェイスをサポートする任意のオブジェクトです。  
+ それぞれの種類のデータ ソースを作成する方法の詳細については、対応する LINQ プロバイダーのドキュメントを参照してください。 (該当するプロバイダーの一覧については、[LINQ (統合言語クエリ)](index.md) に関するページを参照してください)。基本的な規則は単純です。LINQ データ ソースは、ジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスか、これを継承するインターフェイスをサポートする任意のオブジェクトです。  
   
 > [!NOTE]
 > 非ジェネリック <xref:System.Collections.IEnumerable> インターフェイスをサポートする <xref:System.Collections.ArrayList> などの型も、LINQ データ ソースとして使用できます。 <xref:System.Collections.ArrayList> の使用例については、「[方法: LINQ を使用して ArrayList を照会する (Visual Basic)](how-to-query-an-arraylist-with-linq.md)」を参照してください。  
@@ -69,7 +69,7 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
   
  [!code-vb[VbLINQFirstQuery#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQFirstQuery/VB/Class1.vb#1)]  
   
- このクエリ式には、`From`、`Where`、`Select` の 3 つの句が含まれています。 クエリ式の各句の具体的な関数と目的は、「[基本的なクエリ操作 (Visual Basic)](basic-query-operations.md)」で説明しています。 詳細については、「[クエリ](../../../../visual-basic/language-reference/queries/index.md)」を参照してください。 LINQ では多くの場合、クエリの定義はまず変数に格納され、その後実行されます。 前の例の `evensQuery` のように、クエリ変数はクエリ可能型であることが必要です。 `evensQuery` の型は `IEnumerable(Of Integer)` で、コンパイラによってローカル型推論を使用して割り当てられます。  
+ このクエリ式には、`From`、`Where`、`Select` の 3 つの句が含まれています。 クエリ式の各句の具体的な関数と目的は、「[基本的なクエリ操作 (Visual Basic)](basic-query-operations.md)」で説明しています。 詳細については、「[クエリ](../../../language-reference/queries/index.md)」を参照してください。 LINQ では多くの場合、クエリの定義はまず変数に格納され、その後実行されます。 前の例の `evensQuery` のように、クエリ変数はクエリ可能型であることが必要です。 `evensQuery` の型は `IEnumerable(Of Integer)` で、コンパイラによってローカル型推論を使用して割り当てられます。  
   
  クエリ変数自体は何も処理を行わず、データを返さないという点に注意してください。 あくまでクエリの定義が格納されるだけです。 前の例で、クエリを実行するのは `For Each` ループです。  
   
@@ -121,8 +121,8 @@ Dim customers As Table(Of Customer) = db.GetTable(Of Customer)
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic の LINQ の概要](getting-started-with-linq.md)
-- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [ローカル型の推論](../../language-features/variables/local-type-inference.md)
 - [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [Visual Basic における LINQ の概要](../../language-features/linq/introduction-to-linq.md)
+- [LINQ](../../language-features/linq/index.md)
+- [クエリ](../../../language-reference/queries/index.md)

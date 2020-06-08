@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /errorreport compiler option [Visual Basic]
 - errorreport compiler option [Visual Basic]
 ms.assetid: a7fe83a2-a6d8-460c-8dad-79a8f433f501
-ms.openlocfilehash: a9741f7a8283f8603e02dae5abea151c6ee5d75e
-ms.sourcegitcommit: 559259da2738a7b33a46c0130e51d336091c2097
+ms.openlocfilehash: b6a1c8fce17e3e5a54366c2ff4dff4e6aa668f56
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72775666"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408661"
 ---
 # <a name="-errorreport"></a>-errorreport
 
@@ -38,9 +38,9 @@ Visual Basic コンパイラで内部コンパイラ エラーを報告する方
 |`send`|内部コンパイラ エラーが発生した場合、マシンとユーザーのポリシー設定で許可されていれば、コンパイラによってデータが Microsoft に送信されます。<br /><br /> オプション `-errorreport:send` では、[Windows エラー報告](/windows/desktop/wer/windows-error-reporting)システム設定でレポートが有効になっている場合、Microsoft にエラー情報を自動的に送信するよう試みられます。 |
 |`none`|内部コンパイラ エラーが発生すると、そのエラーは収集されず、Microsoft に送信されません。|
 
-コンパイラによって、エラー発生時にスタックを含むデータが送信されます。これには通常、いくつかのソース コードが含まれています。 `-errorreport` を [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) オプションと共に使用すると、ソース ファイル全体が送信されます。
+コンパイラによって、エラー発生時にスタックを含むデータが送信されます。これには通常、いくつかのソース コードが含まれています。 `-errorreport` を [-bugreport](bugreport.md) オプションと共に使用すると、ソース ファイル全体が送信されます。
 
-Microsoft のエンジニアがエラーをより簡単に再現できるようになるため、このオプションを [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md) オプションと共に使用することをお勧めします。
+Microsoft のエンジニアがエラーをより簡単に再現できるようになるため、このオプションを [-bugreport](bugreport.md) オプションと共に使用することをお勧めします。
 
 > [!NOTE]
 > `-errorreport` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。
@@ -55,6 +55,6 @@ vbc -errorreport:prompt t2.vb
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
+- [-bugreport](bugreport.md)

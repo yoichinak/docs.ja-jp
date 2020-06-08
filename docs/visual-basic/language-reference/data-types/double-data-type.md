@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 347b5c7b7af4c4aafec0f91aca46a8cf640236b9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 899554f427ac77ead465752c35e51ca88d045763
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344012"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415635"
 ---
 # <a name="double-data-type-visual-basic"></a>倍精度浮動小数点数型 (Double) (Visual Basic)
 
@@ -38,7 +38,7 @@ ms.locfileid: "74344012"
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
-- **精度。** 浮動小数点数を操作する場合、それらがメモリ内で常に正確な表現が使用されているとは限らないことに注意してください。 これにより、値の比較や `Mod` 演算子など、特定の操作によって、予期しない結果につながる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
+- **精度。** 浮動小数点数を操作する場合、それらがメモリ内で常に正確な表現が使用されているとは限らないことに注意してください。 これにより、値の比較や `Mod` 演算子など、特定の操作によって、予期しない結果につながる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
 
 - **末尾のゼロ。** 浮動小数点データ型には、末尾がゼロの文字の内部表現はありません。 たとえば、4.2000 と 4.2 は区別されません。 そのため、浮動小数点値を表示または出力すると、末尾がゼロの文字は表示されません。
 
@@ -60,11 +60,11 @@ ms.locfileid: "74344012"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Double?displayProperty=nameWithType>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
-- [Single データ型](../../../visual-basic/language-reference/data-types/single-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [データの種類](index.md)
+- [Decimal データ型](decimal-data-type.md)
+- [Single データ型](single-data-type.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [トラブルシューティング (データ型)](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [型文字](../../programming-guide/language-features/data-types/type-characters.md)

@@ -9,17 +9,17 @@ helpviewer_keywords:
 - literals [Visual Basic], coercing data type
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
-ms.openlocfilehash: 8ebecddfab0724023c269e92c1fc5534f096bf1c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b94259326b42104db05d9fc5bb09f686075d0759
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74333725"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414532"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>定数とリテラルのデータ型 (Visual Basic)
 リテラルとは、数字の 3 や文字列 "Hello" など、変数値や式の結果ではなく、それ自体として表される値のことです。 定数とは、リテラルの代わりとなるわかりやすい名前のことです。プログラム内で値が変わりうる変数とは異なり、プログラム全体で同じ値を保持します。  
   
- [Option Infer](../../../../visual-basic/language-reference/statements/option-infer-statement.md) に `Off` を指定し、[Option Strict](../../../../visual-basic/language-reference/statements/option-strict-statement.md) に `On` を指定した場合、すべての定数にデータ型を指定して明示的に宣言する必要があります。 次の例では、`MyByte` のデータ型をデータ型 `Byte` として明示的に宣言しています。  
+ [Option Infer](../../../language-reference/statements/option-infer-statement.md) に `Off` を指定し、[Option Strict](../../../language-reference/statements/option-strict-statement.md) に `On` を指定した場合、すべての定数にデータ型を指定して明示的に宣言する必要があります。 次の例では、`MyByte` のデータ型をデータ型 `Byte` として明示的に宣言しています。  
   
  [!code-vb[VbVbalrConstants#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConstants/VB/Class1.vb#1)]  
   
@@ -63,13 +63,13 @@ myDecimal = 100000000000000000000   ' This causes a compiler error.
   
 ## <a name="see-also"></a>関連項目
 
-- [ユーザー定義定数](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)
-- [方法: 定数を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)
-- [定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [Option Explicit ステートメント](../../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [列挙型の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [方法: 列挙型を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
-- [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
-- [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [ユーザー定義定数](user-defined-constants.md)
+- [方法: 定数を宣言する](how-to-declare-a-constant.md)
+- [定数の概要](constants-overview.md)
+- [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)
+- [Option Explicit ステートメント](../../../language-reference/statements/option-explicit-statement.md)
+- [列挙型の概要](enumerations-overview.md)
+- [方法: 列挙型を宣言する](how-to-declare-enumerations.md)
+- [列挙型と名前の修飾](enumerations-and-name-qualification.md)
+- [データの種類](../../../language-reference/data-types/index.md)
+- [定数と列挙体](../../../language-reference/constants-and-enumerations.md)

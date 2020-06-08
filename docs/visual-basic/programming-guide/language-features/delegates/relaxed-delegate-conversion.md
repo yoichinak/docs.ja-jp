@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: ffb242842553382ba26121333c38fc65eaa168a9
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a581ffae77c496908d2e4e38df53491a54ae2ab8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345219"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410671"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>厳密でないデリゲート変換 (Visual Basic)
 厳密でないデリゲート変換を使用すると、シグネチャが同じでない場合でも、Sub プロシージャや関数をデリゲートまたはハンドラーに割り当てることができます。 したがって、デリゲートへのバインドは、メソッドの呼び出しに対して既に許可されているバインドと整合します。  
@@ -84,9 +84,9 @@ End Sub
   
 ## <a name="see-also"></a>関連項目
 
-- [ラムダ式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
-- [拡大変換と縮小変換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [方法: Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [ラムダ式](../procedures/lambda-expressions.md)
+- [拡大変換と縮小変換](../data-types/widening-and-narrowing-conversions.md)
+- [デリゲート](index.md)
+- [方法: Visual Basic でプロシージャを別のプロシージャに渡す](how-to-pass-procedures-to-another-procedure.md)
+- [ローカル型の推論](../variables/local-type-inference.md)
+- [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)

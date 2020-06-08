@@ -16,12 +16,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, anchors
 - .NET Framework regular expressions, atomic zero-width assertions
 ms.assetid: 336391f6-2614-499b-8b1b-07a6837108a7
-ms.openlocfilehash: c4853a6854f5da1a3217c976a03ddbde3b528560
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e86bae8a687e89acba9a0b713630b43809f081d1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78159664"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290630"
 ---
 # <a name="anchors-in-regular-expressions"></a>正規表現のアンカー
 アンカー (アトミック ゼロ幅アサーション) は、文字列が一致する位置を指定します。 検索式でアンカーを使用した場合、正規表現エンジンは、後方の文字列を読み込んだり、文字に一致させたりすることはしません。指定された位置での一致のみが検索されます。 たとえば、 `^` は、行または文字列の先頭に一致する必要があることを指定します。 したがって、正規表現 `^http:` は、"http:" が行の先頭にある場合にのみ一致します。 次の表は、.NET の正規表現でサポートされているアンカーの一覧です。  
@@ -38,7 +38,7 @@ ms.locfileid: "78159664"
 |`\B`|ワード境界以外に一致します。 詳細については、「 [ワード境界以外](#non-word-boundary-b)」を参照してください。|  
 
 ## <a name="start-of-string-or-line-"></a>文字列または行の先頭: ^  
- 既定では、`^` アンカーは、その後に続くパターンが、文字列の最初の文字位置から始まる必要があることを指定します。 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションを指定して `^` を使用した場合は (「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」を参照)、各行の先頭に一致します。  
+ 既定では、`^` アンカーは、その後に続くパターンが、文字列の最初の文字位置から始まる必要があることを指定します。 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> オプションを指定して `^` を使用した場合は (「[正規表現のオプション](regular-expression-options.md)」を参照)、各行の先頭に一致します。  
   
  次の例では、正規表現で `^` アンカーを使用して、プロ野球チームが存続した年数に関する情報を抽出します。 この例では、 <xref:System.Text.RegularExpressions.Regex.Matches%2A?displayProperty=nameWithType> メソッドの 2 つのオーバーロードを呼び出しています。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "78159664"
 |`,?`|リテラルのコンマ文字の 0 回または 1 回の繰り返しに一致します。|
 
 ## <a name="word-boundary-b"></a>ワード境界: \b  
- `\b` アンカーは、単語文字 ( `\w` 言語要素) と単語以外の文字 ( `\W` 言語要素) の境界に一致する必要があることを示します。 単語文字は英数字とアンダースコアで構成され、単語以外の文字は、英数字でもアンダースコアでもない任意の文字で構成されます 詳細については、「[文字クラス](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)」を参照してください。文字列の先頭または末尾にあるワード境界にも一致する可能性があります。  
+ `\b` アンカーは、単語文字 ( `\w` 言語要素) と単語以外の文字 ( `\W` 言語要素) の境界に一致する必要があることを示します。 単語文字は英数字とアンダースコアで構成され、単語以外の文字は、英数字でもアンダースコアでもない任意の文字で構成されます 詳細については、「[文字クラス](character-classes-in-regular-expressions.md)」を参照してください。文字列の先頭または末尾にあるワード境界にも一致する可能性があります。  
   
  `\b` アンカーは、部分式を単語の先頭または末尾ではなく単語全体に一致させる目的で頻繁に使用されます。 次の例の正規表現 `\bare\w*\b` は、この使用方法を示しています。 これは、部分文字列 "are" で始まる任意の単語に一致します。 この例の出力から、 `\b` は入力文字列の先頭と末尾の両方に一致することもわかります。  
   
@@ -153,5 +153,5 @@ ms.locfileid: "78159664"
   
 ## <a name="see-also"></a>関連項目
 
-- [正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)
-- [正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)
+- [正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)
+- [正規表現のオプション](regular-expression-options.md)

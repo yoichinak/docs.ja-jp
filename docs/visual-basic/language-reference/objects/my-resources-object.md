@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: 7f5d81194123ad2151a494a3cb79aa1955e0fdad
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2b7c82c31d2e31ccbf573cf1dfa138af2d99ce29
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350327"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372461"
 ---
 # <a name="myresources-object"></a>My.Resources オブジェクト
 アプリケーションのリソースにアクセスするためのプロパティとクラスを提供します。  
@@ -40,11 +40,11 @@ ms.locfileid: "74350327"
   
 |カテゴリ|プロパティのデータ型|  
 |---|---|  
-|**文字列**|[String](../../../visual-basic/language-reference/data-types/string-data-type.md)|  
+|**文字列**|[String](../data-types/string-data-type.md)|  
 |**イメージ**|<xref:System.Drawing.Bitmap>|  
 |**アイコン**|<xref:System.Drawing.Icon>|  
 |**オーディオ**|<xref:System.IO.UnmanagedMemoryStream><br /><br /> <xref:System.IO.UnmanagedMemoryStream> クラスは <xref:System.IO.Stream> クラスから導出されるため、<xref:Microsoft.VisualBasic.Devices.Audio.Play%2A> メソッドなどのストリームを受け取るメソッドで使用できます。|  
-|**ファイル**|-   [String](../../../visual-basic/language-reference/data-types/string-data-type.md) (テキスト ファイルの場合)。<br />-   <xref:System.Drawing.Bitmap> (イメージ ファイルの場合)。<br />-   <xref:System.Drawing.Icon> (アイコン ファイルの場合)。<br />-   <xref:System.IO.UnmanagedMemoryStream> (音声ファイルの場合)。|  
+|**ファイル**|-   [String](../data-types/string-data-type.md) (テキスト ファイルの場合)。<br />-   <xref:System.Drawing.Bitmap> (イメージ ファイルの場合)。<br />-   <xref:System.Drawing.Icon> (アイコン ファイルの場合)。<br />-   <xref:System.IO.UnmanagedMemoryStream> (音声ファイルの場合)。|  
 |**その他**|デザイナーの **[型]** 列の情報によって決まります。|  
   
 ## <a name="classes"></a>クラス  

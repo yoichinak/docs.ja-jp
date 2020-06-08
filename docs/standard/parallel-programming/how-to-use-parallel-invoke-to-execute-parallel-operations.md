@@ -9,19 +9,19 @@ helpviewer_keywords:
 - task parallelism in .NET
 - parallel programming, task parallelism
 ms.assetid: 6b3ecd79-dec9-4ce1-abf4-62e5392a59c6
-ms.openlocfilehash: f61bbf10bbeef736f66710f50e621c3619355a1d
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 2b353fb8cb5e04ee4cab6b49f55539ecb40fab4f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635803"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290799"
 ---
 # <a name="how-to-use-parallelinvoke-to-execute-parallel-operations"></a>方法: Parallel.Invoke を使用して並列操作を実行する
 
 この例では、タスク並列ライブラリの <xref:System.Threading.Tasks.Parallel.Invoke%2A> を使用して操作を並列化する方法を示します。 共有データ ソースで 3 つの操作が実行されます。 この操作は、操作でソースが変更されることがないため、簡単に並列実行できます。
 
 > [!NOTE]
-> ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式に精通していない場合は、「[PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
+> ここでは、ラムダ式を使用して TPL でデリゲートを定義します。 C# または Visual Basic のラムダ式に精通していない場合は、「[PLINQ および TPL のラムダ式](lambda-expressions-in-plinq-and-tpl.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -38,6 +38,6 @@ ms.locfileid: "80635803"
 
 ## <a name="see-also"></a>関連項目
 
-- [並列プログラミング](../../../docs/standard/parallel-programming/index.md)
-- [方法: タスクとその子を取り消す](../../../docs/standard/parallel-programming/how-to-cancel-a-task-and-its-children.md)
-- [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)
+- [並列プログラミング](index.md)
+- [方法: タスクとその子を取り消す](how-to-cancel-a-task-and-its-children.md)
+- [Parallel LINQ (PLINQ)](introduction-to-plinq.md)

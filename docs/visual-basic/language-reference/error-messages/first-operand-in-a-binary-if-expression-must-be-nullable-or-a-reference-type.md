@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
-ms.openlocfilehash: 4b520949cb59b63ea39441632dc5e2c6d000d711
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: ca16c6604ee071668a5c65d7e9052b233e2313c7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249527"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403019"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>バイナリ 'If' 式の最初のオペランドは Null 許容または参照型である必要があります
 `If` 式は、2 つまたは 3 つの引数を取ることができます。 2 つの引数のみを送信する場合、最初の引数は参照型または Null 許容値型である必要があります。 最初の引数が `Nothing` 以外に評価される場合は、その値が返されます。 最初の引数が `Nothing` に評価される場合は、2 番目の引数が評価されて返されます。  
@@ -55,6 +55,6 @@ Console.WriteLine(If(booleanVar, "Test returns True.", "Test returns False."))
   
 ## <a name="see-also"></a>関連項目
 
-- [If 演算子](../../../visual-basic/language-reference/operators/if-operator.md)
-- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
+- [If 演算子](../operators/if-operator.md)
+- [If...Then...Else ステートメント](../statements/if-then-else-statement.md)
+- [null 許容値型](../../programming-guide/language-features/data-types/nullable-value-types.md)

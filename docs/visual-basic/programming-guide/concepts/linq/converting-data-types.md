@@ -2,12 +2,12 @@
 title: データ型の変換
 ms.date: 07/20/2015
 ms.assetid: 9b0cf1ab-de48-4c6e-9f00-05b40fade46e
-ms.openlocfilehash: 25d21954f0bb7555f1f5666f83fb37f4f73e2a60
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1394f53923ba850ae11fbc326a25c279589c3be1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354253"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410852"
 ---
 # <a name="converting-data-types-visual-basic"></a>データ型の変換 (Visual Basic)
 
@@ -83,6 +83,6 @@ End Sub
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)
-- [方法: LINQ を使用して ArrayList を照会する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [From 句](../../../language-reference/queries/from-clause.md)
+- [方法: LINQ を使用して ArrayList を照会する (Visual Basic)](how-to-query-an-arraylist-with-linq.md)

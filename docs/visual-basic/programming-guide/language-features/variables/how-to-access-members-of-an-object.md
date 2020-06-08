@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: d44b538e8413eb1412e937375e9bca77600a29b7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2826a3c98b9f19b08cc943d0f67cdd34ac90f526
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348666"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410543"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>方法: オブジェクトのメンバーにアクセスする (Visual Basic)
 
@@ -28,7 +28,7 @@ ms.locfileid: "74348666"
     currentText = newForm.Text
     ```
 
-    メンバーが [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) である場合は、そのメンバーにアクセスするために変数は必要ありません。
+    メンバーが [Shared](../../../language-reference/modifiers/shared.md) である場合は、そのメンバーにアクセスするために変数は必要ありません。
 
 ## <a name="accessing-members-of-an-object-of-known-type"></a>既知の型のオブジェクトのメンバーへのアクセス
 
@@ -58,7 +58,7 @@ ms.locfileid: "74348666"
 
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>コンパイル時に型がわからないオブジェクトのメンバーにアクセスするには
 
-1. オブジェクト変数を [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)として宣言します。 (変数を `Object` として宣言することは、<xref:System.Object?displayProperty=nameWithType> として宣言することと同じです。)
+1. オブジェクト変数を [Object データ型](../../../language-reference/data-types/object-data-type.md)として宣言します。 (変数を `Object` として宣言することは、<xref:System.Object?displayProperty=nameWithType> として宣言することと同じです。)
 
     ```vb
     Dim someControl As Object
@@ -79,7 +79,7 @@ ms.locfileid: "74348666"
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>
-- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [オブジェクト変数の宣言](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [オブジェクト変数](object-variables.md)
+- [オブジェクト変数の宣言](object-variable-declaration.md)
+- [Object 型](../../../language-reference/data-types/object-data-type.md)
+- [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)

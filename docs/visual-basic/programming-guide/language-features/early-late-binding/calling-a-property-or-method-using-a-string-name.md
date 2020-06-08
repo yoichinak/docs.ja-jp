@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: cb584f0dfbd905ca071f9a86b1eab231f3017538
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 29072479db36f9f8a81ffd7f3f5b10208ebaa984
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345209"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410658"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>文字列名によるプロパティまたはメソッドの呼び出し (Visual Basic)
 オブジェクトのプロパティやメソッドは、デザイン時に把握して、これらを処理するコードを作成できることがほとんどです。 しかし、オブジェクトのプロパティやメソッドを事前に知ることができない場合や、実行時にエンド ユーザーがプロパティを指定したりメソッドを実行したりできる柔軟性を持たせたい場合があります。  
@@ -49,4 +49,4 @@ ms.locfileid: "74345209"
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Interaction.CallByName%2A>
-- [オブジェクトの型の決定](../../../../visual-basic/programming-guide/language-features/early-late-binding/determining-object-type.md)
+- [オブジェクトの型の決定](determining-object-type.md)

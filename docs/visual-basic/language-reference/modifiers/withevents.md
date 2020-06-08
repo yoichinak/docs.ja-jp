@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 2309c675b50a2025d73841a47fe8e30e7cecd522
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 48261e27de302c1809c9725e6e2fc0705a803930
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350748"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386777"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 1 つ以上の宣言されたメンバー変数が、イベントを発生させる可能性のあるクラスのインスタンスを参照していることを示します。
@@ -31,7 +31,7 @@ ms.locfileid: "74350748"
 
 **要素型。** オブジェクト変数として `WithEvents` 変数を宣言して、クラス インスタンスを受け入れられるようにする必要があります。 C++ では、これらを `Object` として宣言することはできません。 イベントを発生可能な特定のクラスとして宣言する必要があります。
 
-`WithEvents` 修飾子は、次のコンテキストで使用できます。[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+`WithEvents` 修飾子は、次のコンテキストで使用できます。[Dim ステートメント](../statements/dim-statement.md)
 
 ## <a name="example"></a>例
 
@@ -41,6 +41,6 @@ Dim WithEvents app As Application
 
 ## <a name="see-also"></a>関連項目
 
-- [Handles](../../../visual-basic/language-reference/statements/handles-clause.md)
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [Handles](../statements/handles-clause.md)
+- [キーワード](../keywords/index.md)
+- [イベント](../../programming-guide/language-features/events/index.md)

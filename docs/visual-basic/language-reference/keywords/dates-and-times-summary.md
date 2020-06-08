@@ -10,12 +10,12 @@ helpviewer_keywords:
 - time, Visual Basic keywords and run-time library members
 - time data types [Visual Basic]
 ms.assetid: 914d0563-b53c-492c-ac62-d833ce805f2f
-ms.openlocfilehash: d377c5fe4c0726b468014639e39df1f2f0cc1c64
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 071da9305c3e58fbc35d82d0cd5a275c35467901
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349873"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402721"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>日付と時刻の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  
@@ -31,5 +31,5 @@ Visual Basic 言語のキーワードとランタイム ライブラリ メン�
   
 ## <a name="see-also"></a>関連項目
 
-- [キーワード](../../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic ランタイム ライブラリのメンバー](../../../visual-basic/language-reference/runtime-library-members.md)
+- [キーワード](index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](../runtime-library-members.md)

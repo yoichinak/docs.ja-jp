@@ -6,12 +6,12 @@ helpviewer_keywords:
 - events [Visual Basic], custom
 - custom events [Visual Basic]
 ms.assetid: 998b6a90-67c5-4d2c-8b11-366d3e355505
-ms.openlocfilehash: 8d73d9c4590afb33e7176f647069cafcb3a9d7d8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a9f9529d468a036d81c4e436429cbdb3207efd6e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345147"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405158"
 ---
 # <a name="how-to-declare-custom-events-to-avoid-blocking-visual-basic"></a>方法: カスタム イベントを宣言してブロックを回避する (Visual Basic)
 場合によっては、あるイベント ハンドラーにより後続のイベント ハンドラーがブロックされないようにする必要があります。 カスタム イベントを使用すると、イベントでそのイベント ハンドラーを非同期的に呼び出すことができます。  
@@ -31,5 +31,5 @@ ms.locfileid: "74345147"
 
 - <xref:System.Collections.ArrayList>
 - <xref:System.Web.Services.Protocols.LogicalMethodInfo.BeginInvoke%2A>
-- [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)
-- [方法: カスタム イベントを宣言してメモリを節約する](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [イベント](index.md)
+- [方法: カスタム イベントを宣言してメモリを節約する](how-to-declare-custom-events-to-conserve-memory.md)

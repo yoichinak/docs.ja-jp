@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keystrokes
 - CapsLock property
 ms.assetid: aa37d54c-5c98-4b44-b98a-c26d2a03c038
-ms.openlocfilehash: 4e4a6aa3567094ca87e41367e82d5fa6c61fe100
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f837c01d297f8fc7375b02497c87db7798187115
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74329546"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410089"
 ---
 # <a name="accessing-the-keyboard-visual-basic"></a>キーボードへのアクセス (Visual Basic)
 
@@ -30,7 +30,7 @@ ms.locfileid: "74329546"
 |CTRL キーが押されているかどうかを判断する|<xref:Microsoft.VisualBasic.Devices.Keyboard.CtrlKeyDown%2A>|  
 |NUM LOCK がオンになっているかどうかを判断する|<xref:Microsoft.VisualBasic.Devices.Keyboard.NumLock%2A>|  
 |SCROLL LOCK がオンになっているかどうかを判断する|<xref:Microsoft.VisualBasic.Devices.Keyboard.ScrollLock%2A>|  
-|アプリケーションを起動してキーストロークを送る|[方法: アプリケーションを起動してキーストロークを送る (Visual Basic)](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-start-an-application-and-send-it-keystrokes.md)|  
+|アプリケーションを起動してキーストロークを送る|[方法: アプリケーションを起動してキーストロークを送る (Visual Basic)](how-to-start-an-application-and-send-it-keystrokes.md)|  
   
 ## <a name="see-also"></a>参照
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Info object
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
-ms.openlocfilehash: c5ccbe0932f31353bd075d57a648775e02313a30
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b8853ba3939d5b19b6e09c0c027309f12e3b1f21
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344141"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414208"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info オブジェクト
 バージョン番号、説明、読み込まれたアセンブリなど、アプリケーションに関する情報を取得するためにプロパティを提供します。  
@@ -30,4 +30,4 @@ ms.locfileid: "74344141"
   
 ## <a name="see-also"></a>関連項目
 
-- [My.Application オブジェクト](../../../visual-basic/language-reference/objects/my-application-object.md)
+- [My.Application オブジェクト](my-application-object.md)

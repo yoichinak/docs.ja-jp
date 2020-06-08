@@ -12,12 +12,12 @@ helpviewer_keywords:
 - time [.NET Framework], round-trip values
 - formatting strings [.NET Framework], round-trip values
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
-ms.openlocfilehash: 3aa615dc7d7d1d49dce4897f8508b5210b364fc0
-ms.sourcegitcommit: 1c1a1f9ec0bd1efb3040d86a79f7ee94e207cca5
+ms.openlocfilehash: 60483a6e29c65fc0c5803e8084053d53d9fc3c37
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2020
-ms.locfileid: "80635139"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290449"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>方法: 日付と時刻の値をラウンドトリップさせる
 
@@ -99,5 +99,5 @@ ms.locfileid: "80635139"
 
 ## <a name="see-also"></a>関連項目
 
-- [DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](../../../docs/standard/datetime/choosing-between-datetime.md)
-- [標準の日時形式文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け](../datetime/choosing-between-datetime.md)
+- [標準の日時形式文字列](standard-date-and-time-format-strings.md)

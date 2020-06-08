@@ -2,16 +2,16 @@
 title: 非同期の戻り値の型
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 96d3a945a49a12f7c2d5d60e8ee59ce047a0bae6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5d19fc9831580412da24333be0885fce55384658
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347977"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396715"
 ---
 # <a name="async-return-types-visual-basic"></a>非同期の戻り値の型 (Visual Basic)
 
-非同期メソッドには、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、および void の 3 とおりの戻り値の型があります。 Visual Basic では、void の戻り値の型は [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) プロシージャとして作成されます。 非同期メソッドの詳細については、「[Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
+非同期メソッドには、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task>、および void の 3 とおりの戻り値の型があります。 Visual Basic では、void の戻り値の型は [Sub](../../language-features/procedures/sub-procedures.md) プロシージャとして作成されます。 非同期メソッドの詳細については、「[Async および Await を使用した非同期プログラミング (Visual Basic)](index.md)」を参照してください。
 
 それぞれの戻り値の型は、次のセクションの 1 つで確認でき、トピックの最後で 3 種類のすべてを使用する例を参照できます。
 
@@ -20,7 +20,7 @@ ms.locfileid: "74347977"
 
 ## <a name="taskt-return-type"></a><a name="BKMK_TaskTReturnType"></a>Task(T) 型
 
-`TResult` 型のオペランドを持つ [Return](../../../../visual-basic/language-reference/statements/return-statement.md) ステートメントを含む非同期メソッドには、戻り値の型として <xref:System.Threading.Tasks.Task%601> が使用されます。
+`TResult` 型のオペランドを持つ [Return](../../../language-reference/statements/return-statement.md) ステートメントを含む非同期メソッドには、戻り値の型として <xref:System.Threading.Tasks.Task%601> が使用されます。
 
 次の例では、`TaskOfT_MethodAsync` 非同期メソッドには整数を返す return ステートメントが含まれます。 そのため、メソッド宣言では、戻り値の型を `Task(Of Integer)` と指定する必要があります。
 
@@ -47,7 +47,7 @@ Async Function TaskOfT_MethodAsync() As Task(Of Integer)
 End Function
 ```
 
-`TaskOfT_MethodAsync` が await 式の中から呼び出されると、await 式は `leisureHours` から返されるタスクに格納されている整数値 (`TaskOfT_MethodAsync` の値) を取得します。 await 式の詳細については、「[Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)」を参照してください。
+`TaskOfT_MethodAsync` が await 式の中から呼び出されると、await 式は `leisureHours` から返されるタスクに格納されている整数値 (`TaskOfT_MethodAsync` の値) を取得します。 await 式の詳細については、「[Await 演算子](../../../language-reference/operators/await-operator.md)」を参照してください。
 
 次のコードは、`TaskOfT_MethodAsync` メソッドを呼び出して待機します。 結果は `result1` 変数に割り当てられます。
 
@@ -83,7 +83,7 @@ textBox1.Text &= $"Value of resultTask.Result:  {integerTask.Result}" & vbCrLf
 
 ## <a name="task-return-type"></a><a name="BKMK_TaskReturnType"></a>Task 型
 
-return ステートメントを含まない非同期メソッド、またはオペランドを返さない return ステートメントを含む非同期メソッドは、通常は <xref:System.Threading.Tasks.Task> 戻り値の型を指定します。 そのようなメソッドは、仮に同期的に実行するように作成された場合、[Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) プロシージャとなります。 非同期メソッドに戻り値の型 `Task` を使用した場合、呼び出し元のメソッドは `Await` 演算子を使って、呼び出された async のメソッドが終了するまで、呼び出し元の完了を中断します。
+return ステートメントを含まない非同期メソッド、またはオペランドを返さない return ステートメントを含む非同期メソッドは、通常は <xref:System.Threading.Tasks.Task> 戻り値の型を指定します。 そのようなメソッドは、仮に同期的に実行するように作成された場合、[Sub](../../language-features/procedures/sub-procedures.md) プロシージャとなります。 非同期メソッドに戻り値の型 `Task` を使用した場合、呼び出し元のメソッドは `Await` 演算子を使って、呼び出された async のメソッドが終了するまで、呼び出し元の完了を中断します。
 
 次の例では、非同期メソッド `Task_MethodAsync` には、return ステートメントが含まれていません。 したがって、`Task` を待機させるメソッドに、戻り値の型 `Task_MethodAsync` を指定します。 `Task` 型の定義は、戻り値を格納する `Result` プロパティを含みません。
 
@@ -130,7 +130,7 @@ Await simpleTask
 
 void を返す非同期メソッドの呼び出し元は、メソッドがスローする例外をキャッチすることはできません。そのようなハンドルされない例外によって、アプリケーションが失敗する可能性が高くなります。 <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> を返す非同期メソッドで例外が発生すると、例外は返されたタスクに格納され、タスクが待機するときに再スローされます。 したがって、例外を生成する場合がある非同期メソッドは <xref:System.Threading.Tasks.Task> または <xref:System.Threading.Tasks.Task%601> の戻り値の型を持つこと、またメソッドの呼び出しが待機することを確認します。
 
-非同期のメソッドで例外をキャッチする方法の詳細については、「[Try...Catch...Finally Statement (Try...Catch...Finally ステートメント)](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)」を参照してください。
+非同期のメソッドで例外をキャッチする方法の詳細については、「[Try...Catch...Finally Statement (Try...Catch...Finally ステートメント)](../../../language-reference/statements/try-catch-finally-statement.md)」を参照してください。
 
 次のコードは非同期のイベント ハンドラーを定義します。
 
@@ -300,7 +300,7 @@ End Sub
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
-- [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [非同期プログラムにおける制御フロー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
-- [Async](../../../../visual-basic/language-reference/modifiers/async.md)
-- [Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [非同期プログラムにおける制御フロー (Visual Basic)](control-flow-in-async-programs.md)
+- [Async](../../../language-reference/modifiers/async.md)
+- [Await 演算子](../../../language-reference/operators/await-operator.md)

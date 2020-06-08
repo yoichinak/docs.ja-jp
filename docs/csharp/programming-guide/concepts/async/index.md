@@ -1,13 +1,13 @@
 ---
 title: C# での非同期プログラミング
 description: C# 言語での async、await、Task、Task<T> を使用した非同期プログラミングのサポートの概要です
-ms.date: 05/26/2020
-ms.openlocfilehash: 703392ca6ba4e6fb08dd8a88817babc167394788
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.date: 06/04/2020
+ms.openlocfilehash: fbbd08f8c0e650c366ca1d283825e629fcb952d7
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84007963"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446443"
 ---
 # <a name="asynchronous-programming-with-async-and-await"></a>async および await を使用した非同期プログラミング
 
@@ -32,6 +32,10 @@ ms.locfileid: "84007963"
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-starter/Program.cs" highlight="8-27":::
 
+:::image type="content" source="media/synchronous-breakfast.png" alt-text="同期的な朝食":::
+
+同期的に準備された朝食は、合計が個々のタスクの合計であるため、約 30 分かかりました。
+
 > [!NOTE]
 > `Coffee`、`Egg`、`Bacon`、`Toast`、および `Juice` クラスは空です。 これらは、デモンストレーション目的の単なるマーカー クラスであり、プロパティは含まれず、その他の目的はありません。
 
@@ -50,6 +54,9 @@ ms.locfileid: "84007963"
 タスクの実行中にスレッドをブロックしないように、このコードを更新することから始めましょう。 `await` キーワードを使用すると、ブロックしない方法でタスクを開始し、タスクが完了したら実行を継続できます。 朝食作成コードの簡単な非同期バージョンは、次のスニペットのようになります。
 
 :::code language="csharp" source="snippets/index/AsyncBreakfast-V2/Program.cs" id="SnippetMain":::
+
+> [!IMPORTANT]
+> 合計経過時間は、初期の同期バージョンとほぼ同じです。 このコードでは、非同期プログラミングの主要な機能のいくつかがまだ利用されています。
 
 > [!TIP]
 > `FryEggsAsync`、`FryBaconAsync`、`ToastBreadAsync` のメソッド本体がすべて更新され、それぞれ `Task<Egg>`、`Task<Bacon>`、および `Task<Toast>` が返されます。 メソッドは、元のバージョンから名前が変更され、"Async" サフィックスが含まれるようになっています。 これらの実装は、この記事で後述する[最終バージョン](#final-version)の一部として表示されます。
@@ -116,6 +123,10 @@ Console.WriteLine("bacon is ready");
 Console.WriteLine("Breakfast is ready!");
 ```
 
+:::image type="content" source="media/asynchronous-breakfast.png" alt-text="非同期的な朝食":::
+
+非同期的に準備された朝食は、約 20 分かかりました。これは、いくつかのタスクを同時に実行できたことが理由です。
+
 上のコードの方がより適切に動作します。 すべての非同期タスクを一度に開始します。 結果が必要なときにのみ、各タスクを待機します。 上記のコードは、異なるマイクロサービスに要求を行って 1 つのページに結果をまとめる Web アプリケーションのコードに似ているかもしれません。 すべての要求をすぐに行った後、すべてのタスクを `await` して、Web ページを作成します。
 
 ## <a name="composition-with-tasks"></a>タスクの合成
@@ -172,6 +183,10 @@ while (breakfastTasks.Count > 0)
 
 すべてを変更した後、コードの最終バージョンは <a id="final-version"></a> のようになります。
 :::code language="csharp" source="snippets/index/AsyncBreakfast-final/Program.cs" highlight="9-40":::
+
+:::image type="content" source="media/whenany-async-breakfast.png" alt-text="非同期的な朝食がある場合":::
+
+非同期に準備された朝食の最終バージョンは、約 15 分かかりました。これは、いくつかのタスクを同時に実行でき、コードで一度に複数のタスクを監視して必要なときにのみアクションを実行できるようになったためです。
 
 この最後のコードは非同期です。 人が朝食を作る方法が、より正確に反映されています。 上のコードを、この記事の最初のコード サンプルと比較してください。 中核となるアクションはコードを読むと明らかです。 このコードは、この記事の最初にある朝食の作成手順と同じように読むことができます。 `async` および `await` の言語機能により、手順書に従うためにすべての人が行う変換が提供されます。つまり、可能になったらタスクを開始し、タスク完了の待機をブロックしないようにします。
 

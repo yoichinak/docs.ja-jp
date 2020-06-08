@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Aggregate statement [Visual Basic]
 - queries [Visual Basic], Aggregate
 ms.assetid: 1315a814-5db6-4077-b34b-b141e11cc0eb
-ms.openlocfilehash: 5aa4b9afea4b6b26b853d4f4f6d4c8db08554e19
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 326c3306368ceca2122e912556efd84e4bfef1f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350882"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413002"
 ---
 # <a name="aggregate-clause-visual-basic"></a>Aggregate 句 (Visual Basic)
 1 つ以上の集計関数をコレクションに適用します。  
@@ -76,7 +76,7 @@ Aggregate element [As type] In collection _
 
 ### <a name="group"></a>グループ化
 
-`Group By` または `Group Join` 句の結果として、グループ化されたクエリ結果を参照します。 `Group` 関数は、`Group By` または `Group Join` 句の `Into` 句でのみ有効です。 詳細と例については、「[Group By 句](../../../visual-basic/language-reference/queries/group-by-clause.md)」と「[Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)」を参照してください。
+`Group By` または `Group Join` 句の結果として、グループ化されたクエリ結果を参照します。 `Group` 関数は、`Group By` または `Group Join` 句の `Into` 句でのみ有効です。 詳細と例については、「[Group By 句](group-by-clause.md)」と「[Group Join 句](group-join-clause.md)」を参照してください。
 
 ### <a name="longcount"></a>LongCount
 
@@ -108,9 +108,9 @@ Aggregate element [As type] In collection _
   
 ## <a name="creating-user-defined-aggregate-functions"></a>ユーザー定義集計関数の作成
 
- <xref:System.Collections.Generic.IEnumerable%601> 型に拡張メソッドを追加することで、独自のカスタム集計関数をクエリ式に含めることができます。 カスタム メソッドが、集計関数を参照した列挙可能なコレクションに対して計算や操作を実行できるようになります。 拡張メソッドについて詳しくは、「[拡張メソッド](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)」をご覧ください。  
+ <xref:System.Collections.Generic.IEnumerable%601> 型に拡張メソッドを追加することで、独自のカスタム集計関数をクエリ式に含めることができます。 カスタム メソッドが、集計関数を参照した列挙可能なコレクションに対して計算や操作を実行できるようになります。 拡張メソッドについて詳しくは、「[拡張メソッド](../../programming-guide/language-features/procedures/extension-methods.md)」をご覧ください。  
   
- たとえば、次の例では、数値のコレクションの中央値を計算するカスタム集計関数を示しています。 `Median` 拡張メソッドには、2 つのオーバーロードがあります。 最初のオーバーロードでは、入力として `IEnumerable(Of Double)` 型のコレクションを受け入れます。 `Double` 型のクエリ フィールドに対して `Median` 集計関数が呼び出されると、このメソッドが呼び出されます。 `Median` メソッドの 2 つ目のオーバーロードには、任意のジェネリック型を渡すことができます。 `Median` メソッドのジェネリック オーバーロードは、`Func(Of T, Double)` ラムダ式を参照する 2 つ目のパラメーターを受け取ります。このパラメーターは、ある型 (コレクションからの) の値を `Double` 型の対応する値としてプロジェクションします。 次に、中央値の計算を `Median` メソッドの他のオーバーロードにデリゲートします。 ラムダ式について詳しくは、「[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)」をご覧ください。  
+ たとえば、次の例では、数値のコレクションの中央値を計算するカスタム集計関数を示しています。 `Median` 拡張メソッドには、2 つのオーバーロードがあります。 最初のオーバーロードでは、入力として `IEnumerable(Of Double)` 型のコレクションを受け入れます。 `Double` 型のクエリ フィールドに対して `Median` 集計関数が呼び出されると、このメソッドが呼び出されます。 `Median` メソッドの 2 つ目のオーバーロードには、任意のジェネリック型を渡すことができます。 `Median` メソッドのジェネリック オーバーロードは、`Func(Of T, Double)` ラムダ式を参照する 2 つ目のパラメーターを受け取ります。このパラメーターは、ある型 (コレクションからの) の値を `Double` 型の対応する値としてプロジェクションします。 次に、中央値の計算を `Median` メソッドの他のオーバーロードにデリゲートします。 ラムダ式について詳しくは、「[ラムダ式](../../programming-guide/language-features/procedures/lambda-expressions.md)」をご覧ください。  
   
  [!code-vb[VbSimpleQuerySamples#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/UserDefinedAggregates.vb#18)]  
   
@@ -120,9 +120,9 @@ Aggregate element [As type] In collection _
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
-- [Group By 句](../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [Select 句](select-clause.md)
+- [From 句](from-clause.md)
+- [WHERE 句](where-clause.md)
+- [Group By 句](group-by-clause.md)

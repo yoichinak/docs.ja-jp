@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 237622d0dc6c57f66d402f491a6191a5911574e2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619530"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409739"
 ---
 # <a name="declaration-expected"></a>宣言が必要です。
 代入ステートメントやループ ステートメントなどの非宣言ステートメントが、プロシージャの外側に記述されています。 プロシージャの外側で許可されるのは宣言のみです。  
@@ -31,5 +31,5 @@ ms.locfileid: "64619530"
   
 ## <a name="see-also"></a>関連項目
 
-- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [手順](../../programming-guide/language-features/procedures/index.md)
+- [Dim ステートメント](../statements/dim-statement.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - zeros, trailing
 - numbers [Visual Basic], floating point
 ms.assetid: 224a2795-4cd5-496c-8f7a-a4f05a06d45d
-ms.openlocfilehash: 60a688c510f6e36dca5809566b37a388429e18c7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ecb0f5f6416a2dd4ddd6888cb80ed3ac11ee58df
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343918"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415532"
 ---
 # <a name="single-data-type-visual-basic"></a>単精度浮動小数点型 (Single) (Visual Basic)
 
@@ -39,7 +39,7 @@ ms.locfileid: "74343918"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
-- **精度。** 浮動小数点数を操作する場合、それらがメモリ内で常に正確な表現が使用されているとは限らないことに注意してください。 これにより、値の比較や `Mod` 演算子など、特定の操作によって、予期しない結果につながる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。  
+- **精度。** 浮動小数点数を操作する場合、それらがメモリ内で常に正確な表現が使用されているとは限らないことに注意してください。 これにより、値の比較や `Mod` 演算子など、特定の操作によって、予期しない結果につながる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。  
   
 - **拡大変換。** `Single` データ型は、`Double` に拡大変換されます。 これは、<xref:System.OverflowException?displayProperty=nameWithType> エラーを発生させることなく、`Single` を `Double` に変換できることを意味します。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "74343918"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Single?displayProperty=nameWithType>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [Decimal データ型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)
-- [Double 型](../../../visual-basic/language-reference/data-types/double-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [データの種類](index.md)
+- [Decimal データ型](decimal-data-type.md)
+- [Double 型](double-data-type.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [トラブルシューティング (データ型)](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)

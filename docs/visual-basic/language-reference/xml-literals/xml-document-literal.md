@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML documents [Visual Basic], creating
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
-ms.openlocfilehash: db77cccd26c87e271d6db45ce514ab6dabbc53e3
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3a2182d2937827bc8dc45e22307a3668420261a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349382"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400203"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML ドキュメント リテラル (Visual Basic)
 <xref:System.Xml.Linq.XDocument> オブジェクトを表すリテラル。  
@@ -34,8 +34,8 @@ rootElement
 |---|---|  
 |`encoding`|任意。 ドキュメントが使用するエンコードを宣言するリテラル テキスト。|  
 |`standalone`|任意。 リテラル テキスト。 "yes" または "no" にする必要があります。|  
-|`piCommentList`|任意。 XML 処理命令と XML コメントのリスト。 次の形式を使用します。<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 各 `piComment` に次のいずれかを指定できます。<br /><br /> -   [XML 処理命令リテラル](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)。<br />-   [XML コメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)。|  
-|`rootElement`|必須です。 ドキュメントのルート要素。 形式は次のいずれかです。<br /><br /> <ul><li>[XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)。</li><li>`<%=` `elementExp` `%>` 形式の埋め込み式。 `elementExp` は次のいずれかを返します。<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> オブジェクト。</li><li>1 つの <xref:System.Xml.Linq.XElement> オブジェクトと、任意の数の <xref:System.Xml.Linq.XProcessingInstruction> および <xref:System.Xml.Linq.XComment> オブジェクトを含むコレクション。</li></ul></li></ul><br /> 詳細については、「[XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。|  
+|`piCommentList`|任意。 XML 処理命令と XML コメントのリスト。 次の形式を使用します。<br /><br /> `piComment [` `piComment` `... ]`<br /><br /> 各 `piComment` に次のいずれかを指定できます。<br /><br /> -   [XML 処理命令リテラル](xml-processing-instruction-literal.md)。<br />-   [XML コメント リテラル](xml-comment-literal.md)。|  
+|`rootElement`|必須です。 ドキュメントのルート要素。 形式は次のいずれかです。<br /><br /> <ul><li>[XML 要素リテラル](xml-element-literal.md)。</li><li>`<%=` `elementExp` `%>` 形式の埋め込み式。 `elementExp` は次のいずれかを返します。<br /><br /> <ul><li><xref:System.Xml.Linq.XElement> オブジェクト。</li><li>1 つの <xref:System.Xml.Linq.XElement> オブジェクトと、任意の数の <xref:System.Xml.Linq.XProcessingInstruction> および <xref:System.Xml.Linq.XComment> オブジェクトを含むコレクション。</li></ul></li></ul><br /> 詳細については、「[XML での埋め込み式](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。|  
   
 ## <a name="return-value"></a>戻り値  
  <xref:System.Xml.Linq.XDocument> オブジェクト。  
@@ -61,9 +61,9 @@ rootElement
 - <xref:System.Xml.Linq.XProcessingInstruction>
 - <xref:System.Xml.Linq.XComment>
 - <xref:System.Xml.Linq.XDocument>
-- [XML 処理命令リテラル](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)
-- [XML コメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
-- [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [XML 処理命令リテラル](xml-processing-instruction-literal.md)
+- [XML コメント リテラル](xml-comment-literal.md)
+- [XML 要素リテラル](xml-element-literal.md)
+- [XML リテラル](index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)
+- [XML での埋め込み式](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)

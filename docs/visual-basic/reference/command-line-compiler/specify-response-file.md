@@ -4,12 +4,12 @@ ms.date: 03/13/2018
 helpviewer_keywords:
 - '@ (Specify Response File) compiler option [Visual Basic]'
 ms.assetid: a6847eaa-e5f9-4303-9421-45b55484b9ca
-ms.openlocfilehash: c578495bbba0efee79f02da284c7feffb8c12fab
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 91cf1b5a55d16ab47a83fbd259dd1d83d8e9c31a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348551"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403097"
 ---
 # <a name="-specify-response-file-visual-basic"></a>@ (応答ファイルの指定) (Visual Basic)
 
@@ -40,7 +40,7 @@ ms.locfileid: "74348551"
 
 コマンド ラインで指定されたオプションと、1 つ以上の応答ファイルで指定されたオプションを組み合わせることができます。 コンパイラでは、検出した順にコマンド オプションが処理されます。 このため、コマンド ライン引数によって、応答ファイルで先に指定したオプションをオーバーライドできます。 反対に、応答ファイルのオプションにより、コマンド ラインや他の応答ファイルで先に指定したオプションがオーバーライドされることもあります。
 
-Visual Basic では、Vbc.exe ファイルと同じディレクトリに Vbc.rsp ファイルが提供されます。 `-noconfig` オプションを使用しない限り、Vbc.rsp ファイルは既定で含まれます。 詳細については、「[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)」を参照してください。
+Visual Basic では、Vbc.exe ファイルと同じディレクトリに Vbc.rsp ファイルが提供されます。 `-noconfig` オプションを使用しない限り、Vbc.rsp ファイルは既定で含まれます。 詳細については、「[-noconfig](noconfig.md)」を参照してください。
 
 > [!NOTE]
 > `@` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。
@@ -67,6 +67,6 @@ vbc @file1.rsp
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-noconfig](noconfig.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

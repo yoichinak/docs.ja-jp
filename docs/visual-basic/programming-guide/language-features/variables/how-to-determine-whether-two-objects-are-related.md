@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: b3f5fc017166ba9cf28359db5de850c81b73bd69
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 30e88a21e737aa57513745899577381ed34151a2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348630"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410465"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>方法: 2 つのオブジェクトが関連しているかどうかを判別する (Visual Basic)
 
@@ -53,7 +53,7 @@ End Class
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [方法: 2 つのオブジェクトが同一であるかどうかを判別する](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [Object 型](../../../language-reference/data-types/object-data-type.md)
+- [オブジェクト変数](object-variables.md)
+- [オブジェクト変数の値](object-variable-values.md)
+- [方法: 2 つのオブジェクトが同一であるかどうかを判別する](how-to-determine-whether-two-objects-are-identical.md)

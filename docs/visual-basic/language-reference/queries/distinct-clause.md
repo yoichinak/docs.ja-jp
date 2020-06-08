@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: 94471898807ef4552564c3e01465f2b2f6211d0c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5aecffbce036500d294d03a925798d51f1269af6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335372"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401395"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 句 (Visual Basic)
 現在の範囲変数の値を制限して、後続のクエリ結果内で重複する値を除去します。  
@@ -34,8 +34,8 @@ Distinct
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [クエリ](index.md)
+- [From 句](from-clause.md)
+- [Select 句](select-clause.md)
+- [WHERE 句](where-clause.md)

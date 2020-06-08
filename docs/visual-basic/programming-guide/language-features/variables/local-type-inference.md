@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: f79ac70aecb5805a3a4a4fea8f7e7ccd3f8243fc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3979396d32aa5d3b853aa087d43f70d5987e510b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351833"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410400"
 ---
 # <a name="local-type-inference-visual-basic"></a>ローカル型の推論 (Visual Basic)
 
@@ -73,14 +73,14 @@ Visual Basic コンパイラは、"*型推論*" を使用し、`As` 句を使用
 
 ファイルの `Option Infer` に設定した値が IDE またはコマンド ラインに設定した値と競合した場合は、ファイルの値が優先されます。
 
-詳細については、「[Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)」および「[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)」を参照してください。
+詳細については、「[Option Infer ステートメント](../../../language-reference/statements/option-infer-statement.md)」および「[[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [事前バインディングと遅延バインディング](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
-- [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [For...Next ステートメント](../../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [-optioninfer](../../../../visual-basic/reference/command-line-compiler/optioninfer.md)
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [匿名型](../objects-and-classes/anonymous-types.md)
+- [事前バインディングと遅延バインディング](../early-late-binding/index.md)
+- [For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)
+- [For...Next ステートメント](../../../language-reference/statements/for-next-statement.md)
+- [Option Infer ステートメント](../../../language-reference/statements/option-infer-statement.md)
+- [-optioninfer](../../../reference/command-line-compiler/optioninfer.md)
+- [Visual Basic における LINQ の概要](../linq/introduction-to-linq.md)

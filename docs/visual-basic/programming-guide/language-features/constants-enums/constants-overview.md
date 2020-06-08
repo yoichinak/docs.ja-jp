@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 9ccddfe44757c76992d641094e21ec8c2110ef83
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f45cb12c6ef0f90b9c90190f30ce8600fec80947
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74338343"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414519"
 ---
 # <a name="constants-overview-visual-basic"></a>定数の概要 (Visual Basic)
 定数とは、不変の数値または文字列の代わりとなるわかりやすい名前です。 定数に格納された値は、その名が示すとおり、アプリケーションの実行中に変わることはありません。 定数を使用することで、コードの可読性を大きく高め、管理を容易にすることができます。 これらは、繰り返し現れる値を含むコードや、覚えにくい数値または意味のわかりにくい数値に依存するコードで使用します。  
@@ -31,20 +31,20 @@ ms.locfileid: "74338343"
   
 |定義|用語|  
 |---|---|  
-|[方法: 定数を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)|`Const` ステートメントを使用して定数とその値を宣言する方法について説明します。定数を宣言することで、値にわかりやすい名前を付けることができます。|  
-|[ユーザー定義定数](../../../../visual-basic/programming-guide/language-features/constants-enums/user-defined-constants.md)|独自の定数の作成方法について、スコープの設定や循環参照の回避方法なども含めて説明します。|  
-|[定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)|`Option Explicit` が Off の場合に Visual Basic コンパイラが定数を初期化するしくみについて説明します。|  
-|[方法: 関連する定数値をまとめてグループ化する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-group-related-constant-values-together.md)|関連する定数の値をグループ化する方法について説明します。|  
+|[方法: 定数を宣言する](how-to-declare-a-constant.md)|`Const` ステートメントを使用して定数とその値を宣言する方法について説明します。定数を宣言することで、値にわかりやすい名前を付けることができます。|  
+|[ユーザー定義定数](user-defined-constants.md)|独自の定数の作成方法について、スコープの設定や循環参照の回避方法なども含めて説明します。|  
+|[定数とリテラルのデータ型](constant-and-literal-data-types.md)|`Option Explicit` が Off の場合に Visual Basic コンパイラが定数を初期化するしくみについて説明します。|  
+|[方法: 関連する定数値をまとめてグループ化する](how-to-group-related-constant-values-together.md)|関連する定数の値をグループ化する方法について説明します。|  
   
 ## <a name="reference"></a>関連項目  
   
 |定義|用語|  
 |---|---|  
-|[定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)|Visual Basic の事前定義定数の一覧を紹介します。|  
-|[Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)|`Const` ステートメントとその使用法について説明します。|  
-|[Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|`Option Strict` ステートメントとその使用法について説明します。|  
+|[定数と列挙体](../../../language-reference/constants-and-enumerations.md)|Visual Basic の事前定義定数の一覧を紹介します。|  
+|[Const ステートメント](../../../language-reference/statements/const-statement.md)|`Const` ステートメントとその使用法について説明します。|  
+|[Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)|`Option Strict` ステートメントとその使用法について説明します。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
-- [方法: Visual Basic で配列変数を初期化する](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [列挙型の概要](enumerations-overview.md)
+- [方法: Visual Basic で配列変数を初期化する](../arrays/how-to-initialize-an-array-variable.md)

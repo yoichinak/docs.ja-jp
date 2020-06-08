@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Object data type
 - Object data type [Visual Basic], reference
 ms.assetid: 61ea4a7c-3b3d-48d4-adc4-eacfa91779b2
-ms.openlocfilehash: 2ccb9b69b865c259d078ed9642d63c7f83514756
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 14770e74a0169dba3a45a04845dd32323e6201e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343966"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415584"
 ---
 # <a name="object-data-type"></a>Object Data Type
 
@@ -74,9 +74,9 @@ objDb = myCollection.Item(1)
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Object>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
-- [方法: 2 つのオブジェクトが関連しているかどうかを判別する](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [方法: 2 つのオブジェクトが同一であるかどうかを判別する](../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [データの種類](index.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [方法: 2 つのオブジェクトが関連しているかどうかを判別する](../../programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [方法: 2 つのオブジェクトが同一であるかどうかを判別する](../../programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

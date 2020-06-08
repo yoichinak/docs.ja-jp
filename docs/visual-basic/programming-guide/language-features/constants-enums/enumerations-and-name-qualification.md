@@ -17,12 +17,12 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - declarations [Visual Basic], namespaces
 ms.assetid: 08ba2738-df52-4140-bc55-f57c871c9b73
-ms.openlocfilehash: 4121266447b771ba954ad52a46e0d8b88de3f9cc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4b09284b8282c481e406050d37cbdb2f3c8686bc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347494"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414506"
 ---
 # <a name="enumerations-and-name-qualification-visual-basic"></a>列挙型と名前修飾 (Visual Basic)
 通常、列挙型のメンバーを参照する場合は、列挙型名でメンバー名を修飾する必要があります。 たとえば、`Days` 列挙型の `Sunday` メンバーを参照するには次の構文を使用します。  
@@ -50,13 +50,13 @@ ms.locfileid: "74347494"
   
 ## <a name="see-also"></a>関連項目
 
-- [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
-- [方法: 列挙型を宣言する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
-- [方法: 列挙型のメンバーを参照する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [方法: Visual Basic で列挙型を反復処理する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [方法: 列挙値に関連付けられている文字列を確認する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
-- [列挙型を使用する状況](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
-- [定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
-- [Enum ステートメント](../../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [定数と列挙体](../../../language-reference/constants-and-enumerations.md)
+- [方法: 列挙型を宣言する](how-to-declare-enumerations.md)
+- [方法: 列挙型のメンバーを参照する](how-to-refer-to-an-enumeration-member.md)
+- [方法: Visual Basic で列挙型を反復処理する](how-to-iterate-through-an-enumeration.md)
+- [方法: 列挙値に関連付けられている文字列を確認する](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [列挙型を使用する状況](when-to-use-an-enumeration.md)
+- [定数とリテラルのデータ型](constant-and-literal-data-types.md)
+- [Enum ステートメント](../../../language-reference/statements/enum-statement.md)
+- [Imports ステートメント (.NET 名前空間および型)](../../../language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [データの種類](../../../language-reference/data-types/index.md)

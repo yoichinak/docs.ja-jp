@@ -9,15 +9,15 @@ helpviewer_keywords:
 - events [Visual Basic], raising
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
-ms.openlocfilehash: 6f4c303604f9cf55b4ecd500636e0d2772b6234c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3da60014d7ac95189c5d56c3e339ff1b054a40dc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345087"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405094"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>チュートリアル: イベントの宣言と発生 (Visual Basic)
-このチュートリアルでは、`Widget` という名前のクラスのイベントを宣言し、発生させる方法について説明します。 この手順を完了したら、本トピックの対になっている「[チュートリアル: イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)」も読むことをお勧めします。こちらでは、`Widget` オブジェクトのイベントを使用して、アプリケーションの状態に関する情報を示す方法について説明しています。  
+このチュートリアルでは、`Widget` という名前のクラスのイベントを宣言し、発生させる方法について説明します。 この手順を完了したら、本トピックの対になっている「[チュートリアル: イベントの処理](walkthrough-handling-events.md)」も読むことをお勧めします。こちらでは、`Widget` オブジェクトのイベントを使用して、アプリケーションの状態に関する情報を示す方法について説明しています。  
   
 ## <a name="the-widget-class"></a>Widget クラス  
  このチュートリアルでは、`Widget` クラスがあるものと仮定します。 `Widget` クラスには、実行に時間のかかる可能性のあるメソッドが含まれているので、なんらかの完了率インジケーターをアプリケーションに表示することにします。  
@@ -71,11 +71,11 @@ ms.locfileid: "74345087"
   
  お気付きのとおり、このサンプルには別の欠陥もあります。 `Timer` プロパティが返すのは、午前 0 時からの経過時間 (秒) です。そのため、アプリケーションは、午前 0 時の直前に開始された場合停止してしまいます。 より適切に時間を測定する方法としては、このような境界条件を考慮するか、`Now` などのプロパティを使用してこうした条件を完全に回避することが考えられます。  
   
- これで、`Widget` クラスでイベントを発生させられるようになり、次のチュートリアルに進む用意が整いました。 [チュートリアル: イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)」で、`WithEvents` を使用してイベント ハンドラーを `PercentDone` イベントに関連付ける方法について学びましょう。  
+ これで、`Widget` クラスでイベントを発生させられるようになり、次のチュートリアルに進む用意が整いました。 [チュートリアル: イベントの処理](walkthrough-handling-events.md)」で、`WithEvents` を使用してイベント ハンドラーを `PercentDone` イベントに関連付ける方法について学びましょう。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>
 - <xref:Microsoft.VisualBasic.DateAndTime.Now%2A>
-- [チュートリアル: イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)
-- [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)
+- [チュートリアル: イベントの処理](walkthrough-handling-events.md)
+- [イベント](index.md)

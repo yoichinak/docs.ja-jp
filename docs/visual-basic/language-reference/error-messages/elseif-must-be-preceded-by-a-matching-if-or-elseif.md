@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: 4832fb80cfbe42c7a1303e0de69f36784711c05a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 808cf35fb05da092cdef560721b2f667778aa78f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803364"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409661"
 ---
 # <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。
 `#ElseIf` は条件付きコンパイル ディレクティブです。 `#If` または `#ElseIf` 句の前には、対応する `#ElseIf` が必要です。  
@@ -29,4 +29,4 @@ ms.locfileid: "61803364"
   
 ## <a name="see-also"></a>関連項目
 
-- [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [#If...Then...#Else ディレクティブ](../directives/if-then-else-directives.md)

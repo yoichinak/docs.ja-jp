@@ -11,12 +11,12 @@ helpviewer_keywords:
 - encoding, choosing
 - encoding, fallback strategy
 ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
-ms.openlocfilehash: 8e0cf961f4d6b481c354bdc854806f971458ce21
-ms.sourcegitcommit: e09dbff13f0b21b569a101f3b3c5efa174aec204
+ms.openlocfilehash: c626e79e7bbcd71c90775df8ee8c4d6570c29125
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/01/2020
-ms.locfileid: "82624944"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290579"
 ---
 # <a name="how-to-use-character-encoding-classes-in-net"></a>.NET で文字エンコーディング クラスを使用する方法
 
@@ -33,11 +33,11 @@ ms.locfileid: "82624944"
 
 .NET のすべての文字エンコーディング クラスは、すべての文字エンコーディングに共通の機能を定義する抽象クラスの <xref:System.Text.Encoding?displayProperty=nameWithType> クラスを継承します。 .NET に実装されている個々のエンコーディング オブジェクトにアクセスするには次の方法があります。
 
-- <xref:System.Text.Encoding> クラスの静的プロパティを使います。これらのプロパティは、.NET で使用できる標準の文字エンコーディング (ASCII、UTF-7、UTF-8、UTF-16、および UTF-32) を表すオブジェクトを返します。 たとえば、 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> プロパティは <xref:System.Text.UnicodeEncoding> オブジェクトを返します。 各オブジェクトでは、エンコードできない文字列とデコードできないバイトを処理するために、置換フォールバックが使用されます 詳細については、「[Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement)」をご覧ください。
+- <xref:System.Text.Encoding> クラスの静的プロパティを使います。これらのプロパティは、.NET で使用できる標準の文字エンコーディング (ASCII、UTF-7、UTF-8、UTF-16、および UTF-32) を表すオブジェクトを返します。 たとえば、 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> プロパティは <xref:System.Text.UnicodeEncoding> オブジェクトを返します。 各オブジェクトでは、エンコードできない文字列とデコードできないバイトを処理するために、置換フォールバックが使用されます 詳細については、「[Replacement Fallback](character-encoding.md#Replacement)」をご覧ください。
 
-- エンコーディングのクラス コンストラクターを呼び出します。 ASCII、UTF-7、UTF-8、UTF-16、および UTF-32 の各エンコーディングのオブジェクトは、この方法でインスタンス化できます。 既定では、各オブジェクトはエンコードできない文字列とデコードできないバイトを処理するために置換フォールバックを使用します。ただし、代わりに例外がスローされるように指定することもできます 詳細については、「[Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement)」および「[Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception)」セクションをご覧ください。
+- エンコーディングのクラス コンストラクターを呼び出します。 ASCII、UTF-7、UTF-8、UTF-16、および UTF-32 の各エンコーディングのオブジェクトは、この方法でインスタンス化できます。 既定では、各オブジェクトはエンコードできない文字列とデコードできないバイトを処理するために置換フォールバックを使用します。ただし、代わりに例外がスローされるように指定することもできます 詳細については、「[Replacement Fallback](character-encoding.md#Replacement)」および「[Exception Fallback](character-encoding.md#Exception)」セクションをご覧ください。
 
-- <xref:System.Text.Encoding.%23ctor%28System.Int32%29> コンストラクターを呼び出して、エンコーディングを表す整数を渡します。 エンコードできない文字列とデコードできないバイトの処理には、標準エンコーディングのエンコーディング オブジェクトでは置換フォールバックが、コード ページ エンコーディングと 2 バイト文字セット (DBCS) エンコーディングのエンコーディング オブジェクトでは最適フォールバックが使用されます 詳細については、「[Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit)」をご覧ください。
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29> コンストラクターを呼び出して、エンコーディングを表す整数を渡します。 エンコードできない文字列とデコードできないバイトの処理には、標準エンコーディングのエンコーディング オブジェクトでは置換フォールバックが、コード ページ エンコーディングと 2 バイト文字セット (DBCS) エンコーディングのエンコーディング オブジェクトでは最適フォールバックが使用されます 詳細については、「[Best-Fit Fallback](character-encoding.md#BestFit)」をご覧ください。
 
 - <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> メソッドを呼び出します。このメソッドは、.NET で使用できる任意のエンコーディング (標準、コード ページ、または DBCS) を返します。 オーバーロードを使用すると、エンコーダーおよびデコーダーの両方のフォールバック オブジェクトを指定できます。
 
@@ -145,7 +145,7 @@ Web アプリケーションでは、Web 要求への応答としてクライア
 最適マッピングは、Unicode データをコード ページ データにエンコードする <xref:System.Text.Encoding> オブジェクトの既定の動作です。レガシ アプリケーションの中には、この動作に依存するものがあります。 ただし、ほとんどの新しいアプリケーションでは、セキュリティ上の理由から、最適動作の使用を避ける必要があります。 たとえば、アプリケーションで、最適エンコードを使用してドメイン名を付けないでください。
 
 > [!NOTE]
-> エンコーディングに対してカスタムの最適フォールバック マッピングを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。
+> エンコーディングに対してカスタムの最適フォールバック マッピングを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 」セクションをご覧ください。
 
 エンコーディング オブジェクトの既定のフォールバック ストラテジが最適フォールバックである場合、 <xref:System.Text.Encoding> オブジェクトを取得するときに別のフォールバック ストラテジを選択することもできます。そのためには、 <xref:System.Text.Encoding.GetEncoding%28System.Int32%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> または <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> のオーバーロードを呼び出します。 次のセクションでは、コード ページ 1252 にマップできない文字をアスタリスク (*) に置き換える例を紹介します。
 
@@ -167,7 +167,7 @@ Web アプリケーションでは、Web 要求への応答としてクライア
 [!code-vb[Conceptual.Encoding#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/bestfit1a.vb#3)]
 
 > [!NOTE]
-> エンコーディング用の置換クラスを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。
+> エンコーディング用の置換クラスを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 」セクションをご覧ください。
 
 置換文字列としては、QUESTION MARK (U+003F) のほか、特に Unicode 文字列に正しく変換できないバイト シーケンスをデコードする場合に、Unicode REPLACEMENT CHARACTER (U+FFFD) がよく使用されます。 ただし、置換文字列は自由に選択できます。置換文字列に複数の文字を含めることもできます。
 
@@ -181,7 +181,7 @@ Web アプリケーションでは、Web 要求への応答としてクライア
 [!code-vb[Conceptual.Encoding#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.encoding/vb/exceptionascii.vb#4)]
 
 > [!NOTE]
-> エンコード操作用のカスタム例外ハンドラーを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom) 」セクションをご覧ください。
+> エンコード操作用のカスタム例外ハンドラーを実装することもできます。 詳しくは、「 [Implementing a Custom Fallback Strategy](character-encoding.md#Custom) 」セクションをご覧ください。
 
 <xref:System.Text.EncoderFallbackException> オブジェクトと <xref:System.Text.DecoderFallbackException> オブジェクトは、例外を引き起こした状況について以下の情報を提供します。
 
@@ -268,4 +268,4 @@ Web アプリケーションでは、Web 要求への応答としてクライア
 - <xref:System.Text.DecoderFallback>
 - <xref:System.Text.Encoding>
 - <xref:System.Text.EncoderFallback>
-- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
+- [グローバライズとローカライズ](../globalization-localization/index.md)

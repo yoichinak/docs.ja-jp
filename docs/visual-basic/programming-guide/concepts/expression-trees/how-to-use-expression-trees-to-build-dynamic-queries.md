@@ -2,12 +2,12 @@
 title: '方法: 式ツリーを使用して動的クエリをビルドする'
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
-ms.openlocfilehash: 616aa3eba1e07a92983bb5d2048a9dbae936e77c
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 1f686c37b5d04263ac5ae0dd6883aa8a519ed19e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346052"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410980"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>方法: 式ツリーを使用して動的クエリをビルドする (Visual Basic)
 
@@ -111,5 +111,5 @@ Next
 
 ## <a name="see-also"></a>関連項目
 
-- [式ツリー (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/index.md)
-- [方法: 式ツリーを実行する (Visual Basic)](../../../../visual-basic/programming-guide/concepts/expression-trees/how-to-execute-expression-trees.md)
+- [式ツリー (Visual Basic)](index.md)
+- [方法: 式ツリーを実行する (Visual Basic)](how-to-execute-expression-trees.md)

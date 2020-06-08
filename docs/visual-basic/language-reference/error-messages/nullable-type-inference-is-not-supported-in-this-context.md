@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
-ms.openlocfilehash: 42bde0b1843e52bbc16118bb056ade791591904e
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 52e5391fbcf30a4dada4d64a0e810c900ea85806
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249501"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409388"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Null 許容型の推論はこのコンテキストではサポートされていません
 値の型と構造体は、Null 許容と宣言できます。  
@@ -38,5 +38,5 @@ Dim b As Integer?
   
 ## <a name="see-also"></a>関連項目
 
-- [null 許容値型](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [null 許容値型](../../programming-guide/language-features/data-types/nullable-value-types.md)
+- [ローカル型の推論](../../programming-guide/language-features/variables/local-type-inference.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID458
 ms.assetid: bde4f4da-493b-452c-b6e4-1d370edba4cd
-ms.openlocfilehash: 944c0c63cd0d7ae7f9ff770fd123231464af1eaf
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7d52189e31823b63547c757434847c0e1717aada
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344828"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406548"
 ---
 # <a name="variable-uses-an-automation-type-not-supported-in-visual-basic"></a>Visual Basic でサポートされていないオートメーションが変数で使用されています。
 
@@ -25,4 +25,4 @@ Visual Basic でサポートされていないデータ型を持つタイプ ラ
 
 ## <a name="see-also"></a>関連項目
 
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [データの種類](../data-types/index.md)

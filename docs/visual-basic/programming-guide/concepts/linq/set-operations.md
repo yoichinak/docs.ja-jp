@@ -2,12 +2,12 @@
 title: セット操作
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: fe9d910415f30fe672dc702f719fdefdb9c0b3d1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b6ff14794343ae7623ee38894cef02cfc0a2a597
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350614"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406821"
 ---
 # <a name="set-operations-visual-basic"></a>セット操作 (Visual Basic)
 
@@ -59,7 +59,7 @@ LINQ のセット操作は、同一または別個のコレクション (また�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Distinct 句](../../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)
-- [方法: 2 つのリストの差集合を見つける (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [Distinct 句](../../../language-reference/queries/distinct-clause.md)
+- [方法: 文字列コレクションを結合および比較する (LINQ) (Visual Basic)](how-to-combine-and-compare-string-collections-linq.md)
+- [方法: 2 つのリストの差集合を見つける (LINQ) (Visual Basic)](how-to-find-the-set-difference-between-two-lists-linq.md)

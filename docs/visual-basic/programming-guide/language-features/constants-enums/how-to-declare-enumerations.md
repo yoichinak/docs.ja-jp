@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: 042aea045313bcaf3832274acf1000f87a084b72
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c8f228c205c93adf7f2f555dc840a7daac61950b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354043"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414454"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>方法: 列挙型を宣言する (Visual Basic)
 列挙型は、クラスまたはモジュールの宣言セクションで `Enum` ステートメントを使用して作成します。 メソッド内で列挙型を宣言することはできません。 `Private`、`Protected`、`Friend`、`Public` のいずれかを使用して、適切なアクセス レベルを指定します。  
@@ -20,7 +20,7 @@ ms.locfileid: "74354043"
   
  列挙型に浮動小数点値を指定することはできません。 `Option Strict On` を指定して列挙型に浮動小数点値を割り当てた場合、コンパイラ エラーが発生します。 `Option Strict` に `Off` を指定した場合は、値は自動的に `Enum` 型に変換されます。  
   
- 名前、および `Imports` ステートメントにより名前の修飾を不要にする方法については、[列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)に関するページを参照してください。  
+ 名前、および `Imports` ステートメントにより名前の修飾を不要にする方法については、[列挙型と名前の修飾](enumerations-and-name-qualification.md)に関するページを参照してください。  
   
 ### <a name="to-declare-an-enumeration"></a>列挙型を宣言するには  
   
@@ -44,11 +44,11 @@ ms.locfileid: "74354043"
   
 ## <a name="see-also"></a>関連項目
 
-- [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [方法: 列挙型のメンバーを参照する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
-- [方法: Visual Basic で列挙型を反復処理する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [方法: 列挙値に関連付けられている文字列を確認する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
-- [列挙型を使用する状況](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
-- [定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
-- [定数と列挙体](../../../../visual-basic/language-reference/constants-and-enumerations.md)
+- [列挙型と名前の修飾](enumerations-and-name-qualification.md)
+- [方法: 列挙型のメンバーを参照する](how-to-refer-to-an-enumeration-member.md)
+- [方法: Visual Basic で列挙型を反復処理する](how-to-iterate-through-an-enumeration.md)
+- [方法: 列挙値に関連付けられている文字列を確認する](how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [列挙型を使用する状況](when-to-use-an-enumeration.md)
+- [定数の概要](constants-overview.md)
+- [定数とリテラルのデータ型](constant-and-literal-data-types.md)
+- [定数と列挙体](../../../language-reference/constants-and-enumerations.md)

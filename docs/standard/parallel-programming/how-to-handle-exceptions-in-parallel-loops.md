@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - parallel loops, how to handle exceptions
 ms.assetid: 512f0d5a-4636-4875-b766-88f20044f143
-ms.openlocfilehash: 5d108937e6ab2483cd1633d4b398c1e250f5c098
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 87405425e85ed16d10b3e8b382c6e414fff10ddf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77453014"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84278533"
 ---
 # <a name="how-to-handle-exceptions-in-parallel-loops"></a>方法: 並列ループの例外を処理する
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> のオーバーロード には、スローされる可能性のある例外を処理する特別な仕組みはありません。 この点では、標準の `for` ループおよび `foreach` ループ (Visual Basic では `For` と `For Each`) と似ており、現在実行中のイテレーションがすべて終了すると、処理されない例外によってループはただちに終了します。
@@ -31,5 +31,5 @@ ms.locfileid: "77453014"
   
 ## <a name="see-also"></a>参照
 
-- [データの並列化](../../../docs/standard/parallel-programming/data-parallelism-task-parallel-library.md)
-- [PLINQ および TPL のラムダ式](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)
+- [データの並列化](data-parallelism-task-parallel-library.md)
+- [PLINQ および TPL のラムダ式](lambda-expressions-in-plinq-and-tpl.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
-ms.openlocfilehash: 740243c744a7ba5391659894812a00d80555fd80
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b9bd8435b56dd5e33d14eb35d76aacc7d60c8b5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665662"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413054"
 ---
 # <a name="ordinal-is-not-valid"></a>序数が有効ではありません。
 ダイナミック リンク ライブラリ (DLL) への呼び出しが、`#num` 構文を使用して、プロシージャ名の代わりに数値を使用するように指定されています。 このエラーには、次のような原因が考えられます。  
@@ -30,4 +30,4 @@ ms.locfileid: "64665662"
   
 ## <a name="see-also"></a>関連項目
 
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare ステートメント](../statements/declare-statement.md)

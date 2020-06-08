@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 9560a51332ea596d4cf2228f1e07c158a0457ece
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c905ff85c8e9729dd4d6068f0d34f729962bbb57
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350361"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372402"
 ---
 # <a name="mysettings-object"></a>My.Settings オブジェクト
 アプリケーションの設定にアクセスするためのプロパティとメソッドを提供します。  
@@ -47,10 +47,10 @@ ms.locfileid: "74350361"
   
 |終了|解決方法については、|  
 |---|---|  
-|アプリケーション設定を読み取る|[方法: Visual Basic でアプリケーション設定を読み取る](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
-|ユーザー設定を変更する|[方法: Visual Basic でユーザー設定を変更する](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
-|ユーザー設定を永続化する|[方法: Visual Basic でユーザー設定を永続化する](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
-|ユーザー設定のためのプロパティ グリッドを作成する|[方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
+|アプリケーション設定を読み取る|[方法: Visual Basic でアプリケーション設定を読み取る](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
+|ユーザー設定を変更する|[方法: Visual Basic でユーザー設定を変更する](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)|  
+|ユーザー設定を永続化する|[方法: Visual Basic でユーザー設定を永続化する](../../developing-apps/programming/app-settings/how-to-persist-user-settings.md)|  
+|ユーザー設定のためのプロパティ グリッドを作成する|[方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)|  
   
 ## <a name="example"></a>例  
  次の例は、`Nickname` の設定値を表示します。  
@@ -62,8 +62,8 @@ ms.locfileid: "74350361"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Configuration.ApplicationSettingsBase>
-- [方法: Visual Basic でアプリケーション設定を読み取る](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
-- [方法: Visual Basic でユーザー設定を変更する](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)
-- [方法: Visual Basic でユーザー設定を永続化する](../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)
-- [方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../../visual-basic/developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
+- [方法: Visual Basic でアプリケーション設定を読み取る](../../developing-apps/programming/app-settings/how-to-read-application-settings.md)
+- [方法: Visual Basic でユーザー設定を変更する](../../developing-apps/programming/app-settings/how-to-change-user-settings.md)
+- [方法: Visual Basic でユーザー設定を永続化する](../../developing-apps/programming/app-settings/how-to-persist-user-settings.md)
+- [方法: Visual Basic でユーザー設定のためのプロパティ グリッドを作成する](../../developing-apps/programming/app-settings/how-to-create-property-grids-for-user-settings.md)
 - [アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)

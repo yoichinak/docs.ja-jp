@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: db6b047f521d8ef44d2bd1b70b654a4233ebb1a7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0934799853323110e73087ba6d8975c30f84d8f7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347914"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387713"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 コンパイラが標準ライブラリを自動的に参照しないようにします。  
@@ -40,7 +40,7 @@ vbc -nostdlib -define:_MYTYPE=\"Empty\" T2.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [My で利用可能なオブジェクトのカスタマイズ](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)
+- [-noconfig](noconfig.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
+- [My で利用可能なオブジェクトのカスタマイズ](../../developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)

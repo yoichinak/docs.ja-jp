@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: 9a5822a097828f818da020735c3822e86eb3236b
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: dff7e0c3eb696b9b18f4c4e59240a26c1cb9782c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716636"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408550"
 ---
 # <a name="-libpath"></a>-libpath
 参照アセンブリの場所を指定します。  
@@ -29,7 +29,7 @@ ms.locfileid: "75716636"
 |`dirList`|必須です。 参照されているアセンブリが現在の作業ディレクトリ (コンパイラの呼び出し元のディレクトリ) または共通言語ランタイムのシステム ディレクトリに見つからない場合に、コンパイラによって検索されるディレクトリのセミコロン区切りの一覧。 ディレクトリ名に空白が含まれている場合は、名前を二重引用符 (" ") で囲みます。|  
   
 ## <a name="remarks"></a>Remarks  
- `-libpath` オプションでは、[-reference](../../../visual-basic/reference/command-line-compiler/reference.md) オプションによって参照されるアセンブリの場所を指定します。  
+ `-libpath` オプションでは、[-reference](reference.md) オプションによって参照されるアセンブリの場所を指定します。  
   
  コンパイラは、完全に修飾されていないアセンブリ参照を次の順序で検索します。  
   
@@ -59,5 +59,5 @@ vbc -libpath:c:\;"c:\New Assemblies" -reference:t2.dll t2.vb
 ## <a name="see-also"></a>関連項目
 
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: 01a0a4a261213d7e6e2016bf49128092e5b22308
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7d45c74056ce5b6aa66674c99e48b5ab60015f0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401383"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415571"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte データ型 (Visual Basic)
 
@@ -75,10 +75,10 @@ Dim number As SByte = &H_F9
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.SByte?displayProperty=nameWithType>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)
-- [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データの種類](index.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [Short データ型](short-data-type.md)
+- [Integer データ型](integer-data-type.md)
+- [Long データ型](long-data-type.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

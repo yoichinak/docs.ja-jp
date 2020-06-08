@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC40033
 ms.assetid: 060c4b08-798e-40f1-94cf-c05c524f1b8a
-ms.openlocfilehash: 68e1fb4f55d9f9b140f1b54cfde2bc5f60952dd2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e572189b958612bf9527c82ce702df3ab929a23f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592137"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409401"
 ---
-# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>CLS 準拠インターフェイスでは、CLS に準拠していない \<membername> は許可されません
+# <a name="non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface"></a>CLS に準拠していない \<membername> は、CLS に準拠しているインターフェイスに使用できません。
 インターフェイス自体が `<CLSCompliant(False)>` としてマークされているか、またはマークされていない場合、インターフェイス内のプロパティ、プロシージャ、またはイベントは `<CLSCompliant(True)>` としてマークされます。  
   
  インターフェイスを[言語への非依存性および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) に準拠させるには、そのすべてのメンバーが準拠している必要があります。  
@@ -37,4 +37,4 @@ ms.locfileid: "64592137"
   
 ## <a name="see-also"></a>関連項目
 
-- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interface ステートメント](../statements/interface-statement.md)

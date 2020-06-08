@@ -15,19 +15,19 @@ helpviewer_keywords:
 - format providers [.NET Framework]
 - custom format strings
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
-ms.openlocfilehash: 5345c90d966ea9ce0a0bbf6c884b8d8abc8b5fa7
-ms.sourcegitcommit: 79b0dd8bfc63f33a02137121dd23475887ecefda
+ms.openlocfilehash: d12899fff7d9e6cb63728ba0b160b70fa2a41a1a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80523935"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290514"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法: カスタム数値書式プロバイダーを定義して使用する
 .NET Framework では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
   
-- 標準の数値書式指定文字列: 数値をその文字列形式に変換するための定義済みの書式セットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの数値書式指定メソッドと共に使用できます。 詳細については、「[標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)」を参照してください。  
+- 標準の数値書式指定文字列: 数値をその文字列形式に変換するための定義済みの書式セットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの数値書式指定メソッドと共に使用できます。 詳細については、「[標準の数値書式指定文字列](standard-numeric-format-strings.md)」を参照してください。  
   
-- カスタム数値書式指定文字列: カスタム数値書式指定子を定義するために結合できる記号のセットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの任意の数値書式指定メソッドでも使用できます。 詳細については、「[カスタム数値書式指定文字列](../../../docs/standard/base-types/custom-numeric-format-strings.md)」を参照してください。  
+- カスタム数値書式指定文字列: カスタム数値書式指定子を定義するために結合できる記号のセットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの任意の数値書式指定メソッドでも使用できます。 詳細については、「[カスタム数値書式指定文字列](custom-numeric-format-strings.md)」を参照してください。  
   
 - カスタムの <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクト: 記号を定義し、数値の文字列形式を表示するために使用されるパターンの書式を設定します。 これらは、`provider` パラメーターを持つ <xref:System.Int32.ToString%2A> などの数値書式指定メソッドと共に使用できます。 通常、`provider` パラメーターは、カルチャに固有の書式を指定するために使用されます。  
   

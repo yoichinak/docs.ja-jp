@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
-ms.openlocfilehash: 506b69f1db12a51217d10ad261b1f1a44bfb2008
-ms.sourcegitcommit: 5a28f8eb071fcc09b045b0c4ae4b96898673192e
+ms.openlocfilehash: de0d825c7eec603f3ad1e43b1e4aaa0cc78fd1db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2019
-ms.locfileid: "73198160"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408511"
 ---
-# <a name="type-typename-has-no-constructors"></a>型 '\<typename>' にはコンストラクターがありません
+# <a name="type-typename-has-no-constructors"></a>型 '\<typename>' にはコンストラクターがありません。
 型が `Sub New()` の呼び出しをサポートしません。 コンパイラまたはバイナリ ファイルが破損していることが原因の 1 つとして考えられます。  
   
  **エラー ID:** BC30251  
@@ -31,5 +31,5 @@ ms.locfileid: "73198160"
   
 ## <a name="see-also"></a>関連項目
 
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)
 - [ご意見](/visualstudio/ide/feedback-options)

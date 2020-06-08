@@ -6,17 +6,17 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 5deebd4ffc5b277c94f5ae36c00fd6e5010a1551
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 67c3af8b7bdac3ad1c7e4908f1ac2684df7a87aa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348595"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410478"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>方法: 2 つのオブジェクトが同一であるかどうかを判別する (Visual Basic)
 Visual Basic において 2 つの変数参照は、それらのポインターが同じである場合、つまり、両方の変数がメモリ内の同じクラス インスタンスを指している場合、同一であると見なされます。 たとえば、Windows フォーム アプリケーションでは、現在のインスタンス (`Me`) が `Form2` などの特定のインスタンスと同じであるかどうかを判別するために比較を行いたい場合があります。  
   
- Visual Basic には、ポインターを比較するための演算子が 2 つ用意されています。 オブジェクトが同一である場合には、[Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md) から `True` が返され、そうでない場合には [IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md) から `True` が返されます。  
+ Visual Basic には、ポインターを比較するための演算子が 2 つ用意されています。 オブジェクトが同一である場合には、[Is 演算子](../../../language-reference/operators/is-operator.md) から `True` が返され、そうでない場合には [IsNot 演算子](../../../language-reference/operators/isnot-operator.md) から `True` が返されます。  
   
 ## <a name="determining-if-two-objects-are-identical"></a>2 つのオブジェクトが同一であるかどうかを判別する  
   
@@ -52,10 +52,10 @@ Visual Basic において 2 つの変数参照は、それらのポインター�
   
 ## <a name="see-also"></a>関連項目
 
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [方法: 2 つのオブジェクトが関連しているかどうかを判別する](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
-- [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [Object 型](../../../language-reference/data-types/object-data-type.md)
+- [オブジェクト変数](object-variables.md)
+- [オブジェクト変数の値](object-variable-values.md)
+- [Is 演算子](../../../language-reference/operators/is-operator.md)
+- [IsNot 演算子](../../../language-reference/operators/isnot-operator.md)
+- [方法: 2 つのオブジェクトが関連しているかどうかを判別する](how-to-determine-whether-two-objects-are-related.md)
+- [Me、My、MyBase、および MyClass](../../program-structure/me-my-mybase-and-myclass.md)

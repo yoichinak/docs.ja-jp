@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
-ms.openlocfilehash: 6d2e472cc996c42aa091ed95c6954d0879c98372
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 25905d7ac3ca4bb66a22ad1df421b400eaa6b08f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636758"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413272"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>チュートリアル: Visual Basic でのクエリの作成
 
@@ -45,15 +45,15 @@ ms.locfileid: "75636758"
 - `Student` クラスを定義し、クラスのインスタンスのリストを作成します。
 
   > [!IMPORTANT]
-  > `Student` クラスを定義し、このチュートリアルの各例で使用するリストを作成するために必要なコードは、「[方法: 項目のリストを作成する](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)」に掲載されています。 そこからコピーして、自分のプロジェクトに貼り付けてください。 プロジェクトの作成時にあったコードを新しいコードで置き換えます。
+  > `Student` クラスを定義し、このチュートリアルの各例で使用するリストを作成するために必要なコードは、「[方法: 項目のリストを作成する](how-to-create-a-list-of-items.md)」に掲載されています。 そこからコピーして、自分のプロジェクトに貼り付けてください。 プロジェクトの作成時にあったコードを新しいコードで置き換えます。
 
 ### <a name="to-add-a-new-student-to-the-students-list"></a>学生リストに新しい学生を追加するには
 
-- `getStudents` メソッドのパターンに従って、`Student` クラスのインスタンスを新たにリストに追加します。 学生を追加すると、オブジェクト初期化子が挿入されます。 詳細については、「[オブジェクト初期化子: 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)」を参照してください。
+- `getStudents` メソッドのパターンに従って、`Student` クラスのインスタンスを新たにリストに追加します。 学生を追加すると、オブジェクト初期化子が挿入されます。 詳細については、「[オブジェクト初期化子: 名前付きの型と匿名型](../../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)」を参照してください。
 
 ## <a name="create-a-query"></a>クエリを作成する
 
-このセクションで追加したクエリを実行すると、成績のランクがトップ 10 に入る学生のリストが生成されます。 このクエリでは都度、完全な `Student` オブジェクトが選択されるため、クエリの結果の型は `IEnumerable(Of Student)` です。 ただし通常、クエリの定義にクエリの型は指定されません。 コンパイラがローカル型推論を使用して型を特定します。 詳細については、「[ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。 クエリの範囲変数 `currentStudent` は、ソース `students` に含まれる各 `Student` インスタンスへの参照として機能します。`students` 内の各オブジェクトのプロパティには、それを通じてアクセスすることができます。
+このセクションで追加したクエリを実行すると、成績のランクがトップ 10 に入る学生のリストが生成されます。 このクエリでは都度、完全な `Student` オブジェクトが選択されるため、クエリの結果の型は `IEnumerable(Of Student)` です。 ただし通常、クエリの定義にクエリの型は指定されません。 コンパイラがローカル型推論を使用して型を特定します。 詳細については、「[ローカル型の推論](../../language-features/variables/local-type-inference.md)」を参照してください。 クエリの範囲変数 `currentStudent` は、ソース `students` に含まれる各 `Student` インスタンスへの参照として機能します。`students` 内の各オブジェクトのプロパティには、それを通じてアクセスすることができます。
 
 ### <a name="to-create-a-simple-query"></a>簡単なクエリを作成するには
 
@@ -69,7 +69,7 @@ ms.locfileid: "75636758"
 
 ## <a name="run-the-query"></a>クエリを実行する
 
-変数 `studentQuery` には、クエリの実行結果ではなくクエリの定義が格納されます。 クエリを実行するための通常のメカニズムは `For Each` ループです。 返されたシーケンス内の各要素には、ループの反復変数を介してアクセスします。 クエリの実行の詳細については、「[初めての LINQ クエリの作成](../../../../visual-basic/programming-guide/concepts/linq/writing-your-first-linq-query.md)」を参照してください。
+変数 `studentQuery` には、クエリの実行結果ではなくクエリの定義が格納されます。 クエリを実行するための通常のメカニズムは `For Each` ループです。 返されたシーケンス内の各要素には、ループの反復変数を介してアクセスします。 クエリの実行の詳細については、「[初めての LINQ クエリの作成](writing-your-first-linq-query.md)」を参照してください。
 
 ### <a name="to-run-the-query"></a>クエリを実行するには
 
@@ -123,7 +123,7 @@ ms.locfileid: "75636758"
 
 ### <a name="to-create-an-anonymous-type-in-the-select-clause"></a>Select 句で匿名型を作成するには
 
-1. クエリにおける匿名型の使用法を確認するために、このセクションのコードを追加します。 これらをクエリで使用するのは、レコード全体 (前の例では `currentStudent` レコード) や単一のフィールド (前セクションの `First`) ではなく複数のフィールドがデータ ソースから返されるようにしたい場合です。 結果に含めたいフィールドを格納する名前付きの型を新たに定義するのではなく、`Select` 句でフィールドを指定すると、それらのフィールドをプロパティとして持つ匿名型がコンパイラによって作成されます。 詳細については、「[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。
+1. クエリにおける匿名型の使用法を確認するために、このセクションのコードを追加します。 これらをクエリで使用するのは、レコード全体 (前の例では `currentStudent` レコード) や単一のフィールド (前セクションの `First`) ではなく複数のフィールドがデータ ソースから返されるようにしたい場合です。 結果に含めたいフィールドを格納する名前付きの型を新たに定義するのではなく、`Select` 句でフィールドを指定すると、それらのフィールドをプロパティとして持つ匿名型がコンパイラによって作成されます。 詳細については、「[匿名型](../../language-features/objects-and-classes/anonymous-types.md)」を参照してください。
 
     次の例では、成績のランクが 1 から 10 である最上級生 (Senior) の名前とランクを、成績のランク順に返すクエリを作成しています。 この例では、`studentQuery4` の型を推定する必要があります。`Select` 句で返されるのは匿名型のインスタンスであり、使用できる名前が匿名型にはないためです。
 
@@ -141,21 +141,21 @@ ms.locfileid: "75636758"
 
 クエリ操作の基本的な概念が理解できたら、興味がある種類の LINQ プロバイダーについて、ドキュメントやサンプルを読んでみましょう。
 
-- [LINQ to Objects](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
+- [LINQ to Objects](linq-to-objects.md)
 
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 
-- [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)
+- [LINQ to XML](linq-to-xml.md)
 
 - [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
-- [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [オブジェクト初期化子: 名前付きの型と匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [統合言語クエリ (LINQ) (Visual Basic)](index.md)
+- [Visual Basic の LINQ の概要](getting-started-with-linq.md)
+- [ローカル型の推論](../../language-features/variables/local-type-inference.md)
+- [オブジェクト初期化子: 名前付きの型と匿名型](../../language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [匿名型](../../language-features/objects-and-classes/anonymous-types.md)
+- [Visual Basic における LINQ の概要](../../language-features/linq/introduction-to-linq.md)
+- [LINQ](../../language-features/linq/index.md)
+- [クエリ](../../../language-reference/queries/index.md)

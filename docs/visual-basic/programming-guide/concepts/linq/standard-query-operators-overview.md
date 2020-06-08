@@ -2,12 +2,12 @@
 title: 標準クエリ演算子の概要
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 0f68d175b526a9da86853272c47b5e7d7b4a5992
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 7c229a576f6695282473352d6253d2c699c76604
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201079"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406782"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>標準クエリ演算子の概要 (Visual Basic)
 
@@ -66,7 +66,7 @@ MsgBox(output.ToString())
 
 ## <a name="query-expression-syntax"></a>クエリ式の構文
 
-頻繁に使用される標準クエリ演算子の中には、C# および Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ* *式*" の一部として呼び出すことができます。 専用キーワードおよびそれに対応する構文が使用されている標準クエリ演算子の詳細については、「[標準クエリ演算子のクエリ式構文 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)」を参照してください。
+頻繁に使用される標準クエリ演算子の中には、C# および Visual Basic 言語専用のキーワード構文が使用されているものがあります。こうした構文では、標準クエリ演算子を、"*クエリ* *式*" の一部として呼び出すことができます。 専用キーワードおよびそれに対応する構文が使用されている標準クエリ演算子の詳細については、「[標準クエリ演算子のクエリ式構文 (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)」を参照してください。
 
 ## <a name="extending-the-standard-query-operators"></a>標準クエリ演算子の拡張
 
@@ -76,39 +76,39 @@ MsgBox(output.ToString())
 
 次のリンクをクリックすると、さまざまな標準クエリ演算子に関する追加情報を機能別に確認することができます。
 
-- [データの並べ替え](../../../../visual-basic/programming-guide/concepts/linq/sorting-data.md)
+- [データの並べ替え](sorting-data.md)
 
-- [セット操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/set-operations.md)
+- [セット操作 (Visual Basic)](set-operations.md)
 
-- [データのフィルター処理 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/filtering-data.md)
+- [データのフィルター処理 (Visual Basic)](filtering-data.md)
 
-- [量指定子操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/quantifier-operations.md)
+- [量指定子操作 (Visual Basic)](quantifier-operations.md)
 
-- [射影操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projection-operations.md)
+- [射影操作 (Visual Basic)](projection-operations.md)
 
-- [データのパーティション分割 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/partitioning-data.md)
+- [データのパーティション分割 (Visual Basic)](partitioning-data.md)
 
-- [結合操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/join-operations.md)
+- [結合操作 (Visual Basic)](join-operations.md)
 
-- [データのグループ化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/grouping-data.md)
+- [データのグループ化 (Visual Basic)](grouping-data.md)
 
-- [生成操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/generation-operations.md)
+- [生成操作 (Visual Basic)](generation-operations.md)
 
-- [等値演算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/equality-operations.md)
+- [等値演算 (Visual Basic)](equality-operations.md)
 
-- [要素操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)
+- [要素操作 (Visual Basic)](element-operations.md)
 
-- [データ型の変換 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)
+- [データ型の変換 (Visual Basic)](converting-data-types.md)
 
-- [連結演算 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)
+- [連結演算 (Visual Basic)](concatenation-operations.md)
 
-- [集計操作 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)
+- [集計操作 (Visual Basic)](aggregation-operations.md)
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [LINQ の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
-- [標準クエリ演算子のクエリ式構文 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
-- [実行方法による標準クエリ演算子の分類 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
-- [拡張メソッド](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+- [LINQ の概要 (Visual Basic)](introduction-to-linq.md)
+- [標準クエリ演算子のクエリ式構文 (Visual Basic)](query-expression-syntax-for-standard-query-operators.md)
+- [実行方法による標準クエリ演算子の分類 (Visual Basic)](classification-of-standard-query-operators-by-manner-of-execution.md)
+- [拡張メソッド](../../language-features/procedures/extension-methods.md)

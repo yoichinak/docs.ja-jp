@@ -8,12 +8,12 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: 83670ae6af0904156b08398024658cf504b7663f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fe93e7bac2a21f1060d1f93765eb35e1ad0c7eb0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346814"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410413"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>方法: 長い修飾パスを持つオブジェクトに対するアクセス時間を短縮する (Visual Basic)
 
@@ -56,5 +56,5 @@ ms.locfileid: "74346814"
 
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [With...End With ステートメント](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)
+- [オブジェクト変数](object-variables.md)
+- [With...End With ステートメント](../../../language-reference/statements/with-end-with-statement.md)

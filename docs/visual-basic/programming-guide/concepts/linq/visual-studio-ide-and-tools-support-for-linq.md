@@ -2,12 +2,12 @@
 title: Visual Studio IDE およびツールの LINQ のサポート
 ms.date: 07/20/2015
 ms.assetid: e3bfe0d9-4a79-49cf-a31c-93297c688829
-ms.openlocfilehash: 36c3b051a0e8577a5e622f4cdf986945043dbdc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec9c4acf75a32caa7a078782702c0c8c52386702
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351034"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413285"
 ---
 # <a name="visual-studio-ide-and-tools-support-for-linq-visual-basic"></a>Visual Studio IDE およびツールの LINQ のサポート (Visual Basic)
 Visual Studio 統合開発環境 (IDE) では、LINQ アプリケーションの開発をサポートする次の機能が提供されています。  
@@ -26,4 +26,4 @@ Visual Studio 統合開発環境 (IDE) では、LINQ アプリケーションの
   
 ## <a name="see-also"></a>関連項目
 
-- [統合言語クエリ (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) (Visual Basic)](index.md)

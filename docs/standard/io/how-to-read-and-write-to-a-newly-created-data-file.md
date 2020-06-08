@@ -13,12 +13,12 @@ helpviewer_keywords:
 - I/O [.NET Framework], writing data
 - BinaryWriter class, examples
 ms.assetid: e209d949-31e8-44ea-8e38-87f9093f3093
-ms.openlocfilehash: 3772aeeb25d1251a13fde2a0e51a913e5e39eabc
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 18f44af81a38a48da3115d2082ef45af39f06529
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78155751"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291813"
 ---
 # <a name="how-to-read-and-write-to-a-newly-created-data-file"></a>方法: 新しく作成されたデータ ファイルに対して読み書きする
 <xref:System.IO.BinaryWriter?displayProperty=nameWithType> クラスおよび <xref:System.IO.BinaryReader?displayProperty=nameWithType> クラスは、文字列ではない形式でデータを書き込んだり読み取ったりするために使用します。 次の例では、空のファイル ストリームを作成し、それにデータを書き込み、それからデータを読み取る方法を示します。
@@ -39,10 +39,10 @@ ms.locfileid: "78155751"
 - <xref:System.IO.FileStream>  
 - <xref:System.IO.FileStream.Seek%2A?displayProperty=nameWithType>  
 - <xref:System.IO.SeekOrigin>  
-- [方法: ディレクトリとファイルを列挙する](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)  
-- [方法: ログ ファイルを開いて情報を追加する](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  
-- [方法: ファイルからテキストを読み取る](../../../docs/standard/io/how-to-read-text-from-a-file.md)  
-- [方法: テキストのファイルへの書き込み](../../../docs/standard/io/how-to-write-text-to-a-file.md)  
-- [方法: 文字列からの文字の読み取り](../../../docs/standard/io/how-to-read-characters-from-a-string.md)  
-- [方法: 文字列への文字の書き込み](../../../docs/standard/io/how-to-write-characters-to-a-string.md)  
-- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)
+- [方法: ディレクトリとファイルを列挙する](how-to-enumerate-directories-and-files.md)  
+- [方法: ログ ファイルを開いて情報を追加する](how-to-open-and-append-to-a-log-file.md)  
+- [方法: ファイルからテキストを読み取る](how-to-read-text-from-a-file.md)  
+- [方法: テキストのファイルへの書き込み](how-to-write-text-to-a-file.md)  
+- [方法: 文字列からの文字の読み取り](how-to-read-characters-from-a-string.md)  
+- [方法: 文字列への文字の書き込み](how-to-write-characters-to-a-string.md)  
+- [ファイルおよびストリーム入出力](index.md)
