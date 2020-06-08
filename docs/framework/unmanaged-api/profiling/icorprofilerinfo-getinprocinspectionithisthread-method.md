@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: badddccd-f85c-416e-9f0f-419eab2c9d42
 topic_type:
 - apiref
-ms.openlocfilehash: 0ab383f0968061667b3580a2058687eecda99dde
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0a4cb365ca8f7d52be505368a3d769a9728983bf
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76870043"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502965"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread メソッド
 のオブジェクトインターフェイスに対してクエリを実行できるオブジェクトを取得します。 このメソッドは .NET Framework バージョン2.0 では廃止されています。  
@@ -34,13 +34,13 @@ HRESULT GetInprocInspectionIThisThread(
   
 ## <a name="parameters"></a>パラメーター  
  `ppicd`  
- `ICorDebugThread` インターフェイスに対してクエリを実行できる[out](/cpp/atl/iunknown)オブジェクト。  
+ インターフェイスに対してクエリを実行できる[out](/cpp/atl/iunknown)オブジェクト `ICorDebugThread` 。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  共通言語ランタイム (CLR) のデバッグサービスでは、.NET Framework バージョン1.0 でサポートされているプロセス内デバッグが制限されています。 インプロセスデバッグでは、デバッグ API の検査部分を使用するプロファイラーが有効になりました。 お客様からのフィードバックの結果として、プロセス内デバッグはバージョン2.0 の .NET Framework から削除され、プロファイル API により多くの機能を備えた一連の機能に置き換えられました。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d1de53ad-9435-4b5f-9df7-07f21210e5b5
 topic_type:
 - apiref
-ms.openlocfilehash: b780ca513d8a0b4f88e66594e86e9ff8290f6523
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4521a3f15ec358a4d786a4533efb6b99d0e1c1cc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177354"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84492383"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum メソッド
-指定した列挙子によって取得された列挙体内の要素の数を取得します。  
+指定した列挙子によって取得された列挙体の要素の数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,24 +36,24 @@ HRESULT CountEnum (
   
 ## <a name="parameters"></a>パラメーター  
  `hEnum`  
- [in]列挙子のハンドル。  
+ から列挙子のハンドルです。  
   
  `pulCount`  
- [アウト]列挙された要素の数。  
+ 入出力列挙された要素の数。  
   
 ## <a name="remarks"></a>解説  
- 指定された`hEnum`ハンドルは、以前`Enum`の*名前*の呼び出しから取得されます (たとえば[、IMetaDataImport::EnumTypeDefs)。](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-enumtypedefs-method.md)  
+ によって指定されたハンドル `hEnum` は、前 `Enum` の*名前*の呼び出し (たとえば、 [IMetaDataImport:: enumtypedefs](imetadataimport-enumtypedefs-method.md)) から取得されます。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

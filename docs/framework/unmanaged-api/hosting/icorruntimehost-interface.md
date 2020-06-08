@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4369533d-7834-4497-bc37-bfea0ad737b1
 topic_type:
 - apiref
-ms.openlocfilehash: ac4787379436faa568727329e7b012f83d0a53d5
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 4b8018bb84dea08987d91f351b1ab0d9f3b48c56
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83760733"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503901"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost インターフェイス
 ホストが共通言語ランタイム (CLR) を明示的に開始および停止し、アプリケーションドメインの作成と構成、既定のドメインへのアクセス、およびプロセスで実行されているすべてのドメインの列挙を行うことができるようにするメソッドを提供します。  
@@ -34,7 +34,7 @@ ms.locfileid: "83760733"
 |[CreateDomain メソッド](icorruntimehost-createdomain-method.md)|アプリケーションドメインを作成します。 呼び出し元は、型のインターフェイスポインターを <xref:System._AppDomain> 型のインスタンスに受信し <xref:System.AppDomain?displayProperty=nameWithType> ます。|  
 |[CreateDomainEx メソッド](icorruntimehost-createdomainex-method.md)|アプリケーションドメインを作成します。 このメソッドを使用すると、呼び出し元は IAppDomainSetup インスタンスを渡して、返されたインスタンスの追加の機能を構成でき <xref:System._AppDomain> ます。|  
 |[CreateDomainSetup メソッド](icorruntimehost-createdomainsetup-method.md)|インスタンスへの型のインターフェイスポインターを取得し `IAppDomainSetup` <xref:System.AppDomainSetup> ます。 `IAppDomainSetup`アプリケーションドメインを作成する前に構成するためのメソッドを提供します。|  
-|[CreateEvidence メソッド](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createevidence-method.md)|型のインターフェイスポインターを取得します <xref:System.Security.Principal.IIdentity> 。これにより、ホストは、 [createdomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md)または[createdomainex](icorruntimehost-createdomainex-method.md)に渡すセキュリティ証拠を作成できます。|  
+|[CreateEvidence メソッド](icorruntimehost-createevidence-method.md)|型のインターフェイスポインターを取得します <xref:System.Security.Principal.IIdentity> 。これにより、ホストは、 [createdomain](icorruntimehost-createdomain-method.md)または[createdomainex](icorruntimehost-createdomainex-method.md)に渡すセキュリティ証拠を作成できます。|  
 |[CreateLogicalThreadState メソッド](icorruntimehost-createlogicalthreadstate-method.md)|使用しないでください。|  
 |[CurrentDomain メソッド](icorruntimehost-currentdomain-method.md)|<xref:System._AppDomain>現在のスレッドに読み込まれているドメインを表す型のインターフェイスポインターを取得します。|  
 |[DeleteLogicalThreadState メソッド](icorruntimehost-deletelogicalthreadstate-method.md)|使用しないでください。|  

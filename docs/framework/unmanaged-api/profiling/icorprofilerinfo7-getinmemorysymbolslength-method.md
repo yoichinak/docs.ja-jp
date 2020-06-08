@@ -9,12 +9,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: d62c4a4c-8a62-45aa-8f01-a8387cf36159
-ms.openlocfilehash: a675cc301d2dd32f87e3864a3123e2044761ef91
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 43d6bdeae5f522bd73b0bdf3a5c403ec69ee384c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868357"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495439"
 ---
 # <a name="icorprofilerinfo7getinmemorysymbolslength-method"></a>ICorProfilerInfo7:: Getinmemoryシンボルの長さメソッド
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
@@ -35,27 +35,27 @@ HRESULT GetInMemorySymbolsLength(
  からメモリ内ストリームを格納しているモジュールの識別子。  
   
  Pcountシンボルバイト数  
- 入出力メソッドから制御が戻るときに、ストリーム長がバイト単位で格納されている `DWORD` 値へのポインター。  
+ 入出力`DWORD`メソッドから制御が戻るときに、ストリーム長がバイト単位で格納されている値へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- このメソッドは、ゼロ (0) であっても、メモリストリームの長さを特定できる場合に `S_OK` を返します。  
+ `S_OK`メモリストリームの長さがゼロ (0) であっても、このメソッドはを返します。  
   
- メソッドが <xref:System.Reflection.Emit?displayProperty=nameWithType>を使用して作成された場合、メソッドは `CORPROF_E_MODULE_IS_DYNAMIC` を返します。  
+ メソッドが `CORPROF_E_MODULE_IS_DYNAMIC` を使用して作成された場合、メソッドはを返し <xref:System.Reflection.Emit?displayProperty=nameWithType> ます。  
   
-## <a name="remarks"></a>コメント  
- モジュールにメモリ内シンボルがある場合、ストリームの長さは `pCountSymbolBytes`に配置されます。 モジュールにメモリ内シンボルがない場合は、`*pCountSymbolBytes = 0`ます。  
+## <a name="remarks"></a>解説  
+ モジュールにメモリ内シンボルがある場合は、ストリームの長さがに配置され `pCountSymbolBytes` ます。 モジュールにメモリ内シンボルがない場合は `*pCountSymbolBytes = 0` 。  
   
 > [!NOTE]
-> 現在の実装では、リフレクションはサポートされていません。 モジュールがリフレクションを使用して作成された場合、メソッドは `CORPROF_E_MODULE_IS_DYNAMIC`を返します。  
+> 現在の実装では、リフレクションはサポートされていません。 モジュールがリフレクションを使用して作成された場合、メソッドは `CORPROF_E_MODULE_IS_DYNAMIC` を返します。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

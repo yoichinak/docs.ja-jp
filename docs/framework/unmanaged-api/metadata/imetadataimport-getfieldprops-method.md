@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7b0e9b10-8cef-4ba6-8432-40bf63e65ab1
 topic_type:
 - apiref
-ms.openlocfilehash: 8c3f98a124dbbcae3b0500932a2357ed1757951f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2bd05b49c3d51ac13865997910c99cc0cd5ca2d9
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177244"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491247"
 ---
 # <a name="imetadataimportgetfieldprops-method"></a>IMetaDataImport::GetFieldProps メソッド
 指定した FieldDef トークンによって参照されるフィールドに関連付けられているメタデータを取得します。  
@@ -45,48 +45,48 @@ HRESULT GetFieldProps (
   
 ## <a name="parameters"></a>パラメーター  
  `mb`  
- [in]関連付けられたメタデータを取得するフィールドを表す FieldDef トークン。  
+ から関連付けられたメタデータを取得する対象のフィールドを表す FieldDef トークン。  
   
  `pClass`  
- [アウト]フィールドが属するクラスの型を表す TypeDef トークンへのポインター。  
+ 入出力フィールドが属するクラスの型を表す TypeDef トークンへのポインター。  
   
  `szField`  
- [アウト]フィールドの名前。  
+ 入出力フィールドの名前。  
   
  `cchField`  
- [in]*szField*のバッファーのワイド文字でのサイズ。  
+ から*Szfield*のバッファーのサイズ (ワイド文字単位)。  
   
  `pchField`  
- [アウト]返されるバッファーの実際のサイズ。  
+ 入出力返されたバッファーの実際のサイズ。  
   
  `pdwAttr`  
- [アウト]フィールドのメタデータに関連付けられたフラグ。  
+ 入出力フィールドのメタデータに関連付けられているフラグ。  
   
  `ppvSigBlob`  
- [in]フィールドを記述するバイナリ メタデータ値へのポインター。  
+ からフィールドを説明するバイナリメタデータ値へのポインター。  
   
  `pcbSigBlob`  
- [アウト]のサイズ (バイト`ppvSigBlob`単位)  
+ 入出力のサイズ (バイト単位) `ppvSigBlob` 。  
   
  `pdwCPlusTypeFlag`  
- [アウト]フィールドの値の型を指定するフラグ。  
+ 入出力フィールドの値の型を指定するフラグ。  
   
  `ppValue`  
- [アウト]フィールドの定数値。  
+ 入出力フィールドの定数値。  
   
  `pcchValue`  
- [アウト]の文字`ppValue`で表されるサイズ。  
+ 入出力の文字数のサイズ `ppValue` 。文字列が存在しない場合は0。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

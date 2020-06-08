@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: afdb5ac9-5bf5-4b91-b7cb-f81db23d7da3
 topic_type:
 - apiref
-ms.openlocfilehash: 5346792cb2a1309268cb4ba48625aa559777fbaf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e4d0d9ed07c707e51e5833483b71079f2c330505
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79176995"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84496530"
 ---
 # <a name="icorprofilerinfo3getfunctiontailcall3info-method"></a>ICorProfilerInfo3::GetFunctionTailcall3Info メソッド
-関数によってプロファイラーに報告される関数のスタック フレーム[を](functiontailcall3withinfo-function.md)提供します。 このメソッドは、`FunctionTailcall3WithInfo` コールバック中にのみ呼び出すことができます。  
+[FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)関数によってプロファイラーに報告される関数のスタックフレームを提供します。 このメソッドは、`FunctionTailcall3WithInfo` コールバック中にのみ呼び出すことができます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -36,10 +36,10 @@ HRESULT GetFunctionTailcall3Info(
   
 ## <a name="parameters"></a>パラメーター  
  `functionId`  
- [in]返`FunctionID`される関数の。  
+ からを `FunctionID` 返す関数の。  
   
  `eltInfo`  
- [in] 特定のスタック フレームに関する情報を表す不透明ハンドル。 プロファイラーは、関数によって`eltInfo`プロファイラーに与えられたものと同`FunctionTailcall3WithInfo`じものを提供する必要があります。  
+ [in] 特定のスタック フレームに関する情報を表す不透明ハンドル。 プロファイラーは、 `eltInfo` 関数によってプロファイラーに与えられたものと同じを提供する必要があり `FunctionTailcall3WithInfo` ます。  
   
  `pFrameInfo`  
  [out] 特定のスタック フレームに関するジェネリック情報を表す不透明ハンドル。 このハンドルは、プロファイラーが `FunctionTailcall3WithInfo` メソッドを呼び出した `GetFunctionTailcall3Info` コールバック内でのみ有効です。  
@@ -47,19 +47,19 @@ HRESULT GetFunctionTailcall3Info(
 ## <a name="remarks"></a>解説  
   
 ## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [関数を入力します3ウィズインフォ](functionenter3withinfo-function.md)
-- [関数リーブ3ウィズインフォ](functionleave3withinfo-function.md)
+- [FunctionEnter3WithInfo](functionenter3withinfo-function.md)
+- [FunctionLeave3WithInfo](functionleave3withinfo-function.md)
 - [FunctionTailcall3WithInfo](functiontailcall3withinfo-function.md)
 - [ICorProfilerInfo3 インターフェイス](icorprofilerinfo3-interface.md)
 - [プロファイリングのインターフェイス](profiling-interfaces.md)
-- [プロファイリング](index.md)
+- [プロファイル](index.md)
