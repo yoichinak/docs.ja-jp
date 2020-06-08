@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected access modifier
 - Protected keyword [Visual Basic]
 ms.assetid: 74ad3d56-309f-49d2-b60c-1d0157d010e8
-ms.openlocfilehash: 740c998b8a6ccc6798bce37e9b08e408dac7c17d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d66ed68004f8b6ef21ae703f02b317589814764b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351299"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398221"
 ---
 # <a name="protected-visual-basic"></a>Protected (Visual Basic)
 
@@ -41,42 +41,42 @@ ms.locfileid: "74351299"
 
      保護されたアクセスは、フレンド アクセスのスーパーセットまたはサブセットではありません。
 
-- **アクセス修飾子。** アクセス レベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
+- **アクセス修飾子。** アクセス レベルを指定するキーワードは、*アクセス修飾子*と呼ばれます。 アクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。
 
 `Protected` 修飾子は、次のコンテキストで使用できます。
 
-- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Class ステートメント](../statements/class-statement.md)
 
-- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const ステートメント](../statements/const-statement.md)
 
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare ステートメント](../statements/declare-statement.md)
 
-- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegate ステートメント](../statements/delegate-statement.md)
 
-- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim ステートメント](../statements/dim-statement.md)
 
-- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Enum ステートメント](../statements/enum-statement.md)
 
-- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Event ステートメント](../statements/event-statement.md)
 
-- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function ステートメント](../statements/function-statement.md)
 
-- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interface ステートメント](../statements/interface-statement.md)
 
-- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property ステートメント](../statements/property-statement.md)
 
-- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Structure ステートメント](../statements/structure-statement.md)
 
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub ステートメント](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Public](public.md)
+- [Friend](friend.md)
+- [Private](private.md)
 - [Private Protected](private-protected.md)
 - [Protected Friend](protected-friend.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [手順](../../programming-guide/language-features/procedures/index.md)
+- [構造体](../../programming-guide/language-features/data-types/structures.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)

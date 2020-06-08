@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
-ms.openlocfilehash: 4312abef83728f432e2f6a492e5acad3450719b1
-ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
+ms.openlocfilehash: 474a920c9cfdfba7a8157320d9c88b8677958425
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2019
-ms.locfileid: "71592062"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406522"
 ---
-# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>変数 '\<variablename>' は、囲まれたブロック内の変数を非表示にします
+# <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>変数 '\<variablename>' は、囲まれたブロック内の変数を非表示にします。
 ブロックで囲まれた変数の名前が、別のローカル変数と同じ名前です。  
   
  **エラー ID:** BC30616  
@@ -36,5 +36,5 @@ ms.locfileid: "71592062"
   
 ## <a name="see-also"></a>関連項目
 
-- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
-- [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [Try...Catch...Finally ステートメント](../statements/try-catch-finally-statement.md)
+- [変数宣言](../../programming-guide/language-features/variables/variable-declaration.md)

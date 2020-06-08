@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: d5aae4d30abbf9ed2af260412352a5e0452e0dcc
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 9e4dbaf2f2800454c673cd58ddec4cf0f6e5c6b9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513033"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409508"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Expression は値であるため、代入式のターゲットにすることはできません。
 
@@ -60,6 +60,6 @@ exitButton.Location = exitLocation
 
 ## <a name="see-also"></a>関連項目
 
-- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)
-- [プロシージャのトラブルシューティング](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)
+- [演算子および式](../../programming-guide/language-features/operators-and-expressions/index.md)
+- [ステートメント](../../programming-guide/language-features/statements.md)
+- [プロシージャのトラブルシューティング](../../programming-guide/language-features/procedures/troubleshooting-procedures.md)

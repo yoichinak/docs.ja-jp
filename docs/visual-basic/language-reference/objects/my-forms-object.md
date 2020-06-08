@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Forms object
 ms.assetid: f6bff4e6-6769-4294-956b-037aa6106d2a
-ms.openlocfilehash: db86704fdc8120ccac5f4489c80a515834ad888f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 001f6fbfae2467ea0af5e98ca041b694d1e7b8f9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350373"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372441"
 ---
 # <a name="myforms-object"></a>My.Forms オブジェクト
 
@@ -75,7 +75,7 @@ ms.locfileid: "74350373"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Form.Close%2A>
-- [オブジェクト](../../../visual-basic/language-reference/objects/index.md)
-- [Is 演算子](../../../visual-basic/language-reference/operators/is-operator.md)
-- [IsNot 演算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [アプリケーション フォームへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-forms.md)
+- [オブジェクト](index.md)
+- [Is 演算子](../operators/is-operator.md)
+- [IsNot 演算子](../operators/isnot-operator.md)
+- [アプリケーション フォームへのアクセス](../../developing-apps/programming/accessing-application-forms.md)

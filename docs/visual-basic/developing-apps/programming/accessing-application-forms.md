@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My.Forms object
 - forms [Visual Basic], accessing all open
 ms.assetid: 9aaf5aaf-2012-4f97-89c7-6e62b9d17863
-ms.openlocfilehash: 332b6a7563160528b6c17210170af0db6e9bc0e7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 44f98632fd2fd6c4c087a78b805d5b7da750df87
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74349239"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410206"
 ---
 # <a name="accessing-application-forms-visual-basic"></a>アプリケーション フォームへのアクセス (Visual Basic)
 
@@ -25,7 +25,7 @@ ms.locfileid: "74349239"
   
 |ターゲット|参照先|  
 |---|---|  
-|アプリケーションのあるフォームから別のフォームにアクセスします。|[My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)|  
+|アプリケーションのあるフォームから別のフォームにアクセスします。|[My.Forms オブジェクト](../../language-reference/objects/my-forms-object.md)|  
 |アプリケーションのすべてのオープン フォームのタイトルを表示します。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>|  
 |アプリケーションの起動時に状態情報でスプラッシュ スクリーンを更新します。|<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>|  
   
@@ -33,4 +33,4 @@ ms.locfileid: "74349239"
 
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OpenForms%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.SplashScreen%2A>
-- [My.Forms オブジェクト](../../../visual-basic/language-reference/objects/my-forms-object.md)
+- [My.Forms オブジェクト](../../language-reference/objects/my-forms-object.md)

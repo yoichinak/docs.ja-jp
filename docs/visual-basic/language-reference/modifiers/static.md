@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: f020756466888f51298abb423997906ddc7caff7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3b323d5fb1c4f1357b9f476213793c69d29b7208
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350760"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402695"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 1 つ以上の宣言されているローカル変数が存在し続け、それらが宣言されているプロシージャの終了後もその最新の値が保持されるように指定します。  
@@ -26,7 +26,7 @@ ms.locfileid: "74350760"
   
      構造体プロシージャ内で `Static` を使用することはできません。  
   
-- `Static` ローカル変数のデータ型は推論できません。 詳細については、「[ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」を参照してください。  
+- `Static` ローカル変数のデータ型は推論できません。 詳細については、「[ローカル型の推論](../../programming-guide/language-features/variables/local-type-inference.md)」を参照してください。  
   
 - **結合された修飾子。** 同じ宣言内で `Static` を `ReadOnly`、`Shadows`、または `Shared` と共に指定することはできません。  
   
@@ -44,14 +44,14 @@ ms.locfileid: "74350760"
   
  `Static` 修飾子は、次のコンテキストで使用できます。  
   
- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim ステートメント](../statements/dim-statement.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Visual Basic における有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
-- [変数宣言](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Shadows](shadows.md)
+- [Shared](shared.md)
+- [Visual Basic における有効期間](../../programming-guide/language-features/declared-elements/lifetime.md)
+- [変数宣言](../../programming-guide/language-features/variables/variable-declaration.md)
+- [構造体](../../programming-guide/language-features/data-types/structures.md)
+- [ローカル型の推論](../../programming-guide/language-features/variables/local-type-inference.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)

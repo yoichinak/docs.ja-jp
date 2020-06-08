@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyfile compiler option [Visual Basic]
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
-ms.openlocfilehash: cffc3c5f0ff3dd48ca2c74bde346a967b209dc5f
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 3f476f6b6db1a788002a938eb5ae4bbbed7a5dae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266743"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408576"
 ---
 # <a name="-keyfile"></a>-keyfile
 アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。  
@@ -29,13 +29,13 @@ ms.locfileid: "78266743"
 ## <a name="remarks"></a>Remarks  
  コンパイラでは、アセンブリ マニフェストに公開キーを挿入してから、秘密キーで最終的なアセンブリに署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 詳細については、「[Sn.exe (厳密名ツール)](../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。  
   
- `-target:module` を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md) でアセンブリをコンパイルすると作成されるアセンブリに組み込まれます。  
+ `-target:module` を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、[-addmodule](addmodule.md) でアセンブリをコンパイルすると作成されるアセンブリに組み込まれます。  
   
- また、暗号化情報を [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) でコンパイラに渡すことができます。 部分的に署名されたアセンブリを作成する場合は、[-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) を使います。  
+ また、暗号化情報を [-keycontainer](keycontainer.md) でコンパイラに渡すことができます。 部分的に署名されたアセンブリを作成する場合は、[-delaysign](delaysign.md) を使います。  
   
  このオプションは、任意の Microsoft Intermediate Language モジュールのソース コードで、カスタム属性 (<xref:System.Reflection.AssemblyKeyFileAttribute>) として指定することもできます。  
   
- 同じコンパイルで (コマンドライン オプションまたはカスタム属性によって) `-keyfile` と [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) の両方が指定されている場合、コンパイラでは最初にキー コンテナーが試されます。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 コンパイラでは、キー コンテナーが見つからない場合、`-keyfile` で指定されたファイルが試されます。 これが成功すると、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため (`sn -i` と同様)、次のコンパイル時にはキー コンテナーが有効になります。  
+ 同じコンパイルで (コマンドライン オプションまたはカスタム属性によって) `-keyfile` と [-keycontainer](keycontainer.md) の両方が指定されている場合、コンパイラでは最初にキー コンテナーが試されます。 それが成功すると、アセンブリはキー コンテナーの情報で署名されます。 コンパイラでは、キー コンテナーが見つからない場合、`-keyfile` で指定されたファイルが試されます。 これが成功すると、アセンブリはキー ファイルの情報で署名され、キー情報はキー コンテナーにインストールされるため (`sn -i` と同様)、次のコンパイル時にはキー コンテナーが有効になります。  
   
  キー ファイルには公開キーだけが含まれる場合があることに注意してください。  
   
@@ -55,6 +55,6 @@ vbc -keyfile:myfile.sn input.vb
 ## <a name="see-also"></a>関連項目
 
 - [.NET のアセンブリ](../../../standard/assembly/index.md)
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-reference (Visual Basic)](reference.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

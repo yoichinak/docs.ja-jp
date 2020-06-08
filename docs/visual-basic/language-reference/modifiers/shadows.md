@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: e9a423fa69ad1dcd8c1d4a5b7085e5b5da548f93
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 7aed6bec21bd484cca019b061bd5915de13a9eb8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351262"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402708"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 
@@ -26,7 +26,7 @@ ms.locfileid: "74351262"
 
 シャドウ (*名前による非表示*とも呼ばれます) の主な目的は、クラス メンバーの定義を保持することです。 基底クラスには、既に定義されているものと同じ名前の要素を作成する変更が含まれる場合があります。 この場合、`Shadows` 修飾子は、クラスによる参照が、新しい基底クラス要素ではなく定義したメンバーに強制的に解決されるようにします。
 
-シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「[Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。
+シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、「[Visual Basic におけるシャドウ](../../programming-guide/language-features/declared-elements/shadowing.md)」を参照してください。
 
 ## <a name="rules"></a>ルール
 
@@ -46,40 +46,40 @@ ms.locfileid: "74351262"
 
 `Shadows` 修飾子は、次のコンテキストで使用できます。
 
-- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
+- [Class ステートメント](../statements/class-statement.md)
 
-- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
+- [Const ステートメント](../statements/const-statement.md)
 
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Declare ステートメント](../statements/declare-statement.md)
 
-- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [Delegate ステートメント](../statements/delegate-statement.md)
 
-- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)
+- [Dim ステートメント](../statements/dim-statement.md)
 
-- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)
+- [Enum ステートメント](../statements/enum-statement.md)
 
-- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
+- [Event ステートメント](../statements/event-statement.md)
 
-- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function ステートメント](../statements/function-statement.md)
 
-- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Interface ステートメント](../statements/interface-statement.md)
 
-- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property ステートメント](../statements/property-statement.md)
 
-- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
+- [Structure ステートメント](../statements/structure-statement.md)
 
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub ステートメント](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Static](../../../visual-basic/language-reference/modifiers/static.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
-- [Me、My、MyBase、および MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
-- [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
-- [Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)
-- [Overrides](../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
+- [Shared](shared.md)
+- [Static](static.md)
+- [Private](private.md)
+- [Me、My、MyBase、および MyClass](../../programming-guide/program-structure/me-my-mybase-and-myclass.md)
+- [継承の基本](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [MustOverride](mustoverride.md)
+- [NotOverridable](notoverridable.md)
+- [Overloads](overloads.md)
+- [Overridable](overridable.md)
+- [Overrides](overrides.md)
+- [Visual Basic におけるシャドウ](../../programming-guide/language-features/declared-elements/shadowing.md)

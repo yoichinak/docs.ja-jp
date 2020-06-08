@@ -9,12 +9,12 @@ helpviewer_keywords:
 - linkres compiler option [Visual Basic]
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
-ms.openlocfilehash: 0315645eccdc899ac9cf4d0be105297e1fa2a4c4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 43ebb61efa26ed11af573e2c4e73a6fd71ac0902
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74335482"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403201"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 マネージド リソースへのリンクを作成します。  
@@ -61,7 +61,7 @@ vbc -linkresource:rf.resource in.vb
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-resource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-target (Visual Basic)](target.md)
+- [-resource (Visual Basic)](resource.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

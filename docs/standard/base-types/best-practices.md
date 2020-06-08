@@ -10,12 +10,12 @@ helpviewer_keywords:
 - .NET Framework regular expressions, best practices
 - regular expressions, best practices
 ms.assetid: 618e5afb-3a97-440d-831a-70e4c526a51c
-ms.openlocfilehash: ff04b4950f48f2ba06f60b65cc3a46f1295711f3
-ms.sourcegitcommit: 7980a91f90ae5eca859db7e6bfa03e23e76a1a50
+ms.openlocfilehash: ecfe0cca59b50da9231709dbd9a2de9b56391d4f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2020
-ms.locfileid: "81243155"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291059"
 ---
 # <a name="best-practices-for-regular-expressions-in-net"></a>.NET の正規表現に関するベスト プラクティス
 
@@ -37,10 +37,10 @@ ms.locfileid: "81243155"
 
 - 正規表現パターンにほぼ一致するテキスト。
 
-制約のある入力を処理するために記述された正規表現で特に問題となるのは、最後の種類のテキストです。 その正規表現が広範な[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)にも依存している場合、一見何の問題もないように見えるテキストの処理に極端に長い時間 (場合によっては何時間も何日も) が費やされる可能性があります。
+制約のある入力を処理するために記述された正規表現で特に問題となるのは、最後の種類のテキストです。 その正規表現が広範な[バックトラッキング](backtracking-in-regular-expressions.md)にも依存している場合、一見何の問題もないように見えるテキストの処理に極端に長い時間 (場合によっては何時間も何日も) が費やされる可能性があります。
 
 > [!WARNING]
-> 次の例では、過度なバックトラッキングを生じる傾向があり、有効な電子メール アドレスを拒否する可能性がある正規表現を使用します。 電子メールの検証ルーチンで使用しないでください。 電子メール アドレスを検証する正規表現を使用する場合は、「[方法:文字列が有効な電子メール形式であるかどうかを検証する](../../../docs/standard/base-types/how-to-verify-that-strings-are-in-valid-email-format.md)」をご覧ください。
+> 次の例では、過度なバックトラッキングを生じる傾向があり、有効な電子メール アドレスを拒否する可能性がある正規表現を使用します。 電子メールの検証ルーチンで使用しないでください。 電子メール アドレスを検証する正規表現を使用する場合は、「[方法:文字列が有効な電子メール形式であるかどうかを検証する](how-to-verify-that-strings-are-in-valid-email-format.md)」をご覧ください。
 
 例として、電子メール アドレスのエイリアスを検証するための正規表現について見てみましょう。このような正規表現はよく使用されますが、きわめて大きな問題もはらんでいます。 有効と見なされる電子メール アドレスを処理するために、`^[0-9A-Z]([-.\w]*[0-9A-Z])*$` という正規表現を記述したとします。有効な電子メール アドレスは、英数字で始まり、その後に 0 個以上の文字 (英数字、ピリオド、またはハイフン) が続きます。 また、正規表現は英数字で終了する必要があります。 この正規表現は、次の例に示すように、有効な入力は簡単に処理できますが、有効に近い入力を処理するときに極端に処理効率が低下します。
 
@@ -161,7 +161,7 @@ ms.locfileid: "81243155"
 通常、正規表現エンジンは入力文字列内を直線的に進んで、入力文字列を正規表現パターンと比較します。 しかし、正規表現パターン内で不定量指定子 (`*`、`+`、`?` など) が使用されていると、パターン全体に対する一致を検索するために、それまでに見つかった部分的な一致を放棄して、以前に保存した状態に戻る場合があります。 このプロセスをバックトラッキングと呼びます。
 
 > [!NOTE]
-> バックトラッキングの詳細については、「[正規表現の動作の詳細](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)」と「[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)」を参照してください。 バックトラッキングに関する詳細な議論については、「[Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)」(正規表現のパフォーマンスの最適化、パート II: バックトラッキングの管理) を BCL チームのブログ上で参照してください。
+> バックトラッキングの詳細については、「[正規表現の動作の詳細](details-of-regular-expression-behavior.md)」と「[バックトラッキング](backtracking-in-regular-expressions.md)」を参照してください。 バックトラッキングに関する詳細な議論については、「[Optimizing Regular Expression Performance, Part II:Taking Charge of Backtracking](https://docs.microsoft.com/archive/blogs/bclteam/optimizing-regular-expression-performance-part-ii-taking-charge-of-backtracking-ron-petrusha)」(正規表現のパフォーマンスの最適化、パート II: バックトラッキングの管理) を BCL チームのブログ上で参照してください。
 
 バックトラッキングのサポートにより、正規表現はより強力かつ柔軟になります。 同時に、正規表現エンジンの動作を正規表現の開発者が制御することにもなります。 この責任を認識していない開発者によるバックトラッキングの誤用や過度なバックトラッキングへの依存が、多くの場合、正規表現のパフォーマンスを低下させる最大の要因になっています。 最悪のシナリオでは、入力文字列が 1 文字増えるたびに実行時間が倍増することもあります。 実際、バックトラッキングを過度に使用すると、入力が正規表現パターンにほぼ一致する場合に、プログラム的に無限ループと同等の状態に陥りやすくなります。そのような状態では、正規表現エンジンによる比較的短い入力文字列の処理に何時間も何日もかかることがあります。
 
@@ -204,7 +204,7 @@ ms.locfileid: "81243155"
 [!code-csharp[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/cs/backtrack4.cs#11)]
 [!code-vb[Conceptual.RegularExpressions.BestPractices#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regularexpressions.bestpractices/vb/backtrack4.vb#11)]
 
-.NET の正規表現言語には、入れ子になった量指定子を取り除くために使用できる次の言語要素が含まれています。 詳細については、「 [グループ化構成体](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)」を参照してください。
+.NET の正規表現言語には、入れ子になった量指定子を取り除くために使用できる次の言語要素が含まれています。 詳細については、「 [グループ化構成体](grouping-constructs-in-regular-expressions.md)」を参照してください。
 
 |言語要素|説明|
 |----------------------|-----------------|
@@ -265,7 +265,7 @@ ms.locfileid: "81243155"
 
 - <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> オプションを使用します。 これにより、正規表現パターン内の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 このオプションを使用した場合は、`(?<name>subexpression)` 言語要素を使用して定義した名前付きグループに一致する部分文字列のみがキャプチャされます。 <xref:System.Text.RegularExpressions.RegexOptions.ExplicitCapture> フラグは、`options` クラス コンストラクターの <xref:System.Text.RegularExpressions.Regex> パラメーターか、`options` の静的な一致メソッドの <xref:System.Text.RegularExpressions.Regex> パラメーターに渡すことができます。
 
-- `n` 言語要素の `(?imnsx)` オプションを使用します。 これにより、正規表現パターンでこの要素が出現する位置以降の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 パターンの末尾に到達するか、`(-n)` オプションによって名前のないキャプチャ (暗黙的なキャプチャ) が有効になるまで、キャプチャは無効のままです。 詳細については、「 [その他の構成体](../../../docs/standard/base-types/miscellaneous-constructs-in-regular-expressions.md)」を参照してください。
+- `n` 言語要素の `(?imnsx)` オプションを使用します。 これにより、正規表現パターンでこの要素が出現する位置以降の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 パターンの末尾に到達するか、`(-n)` オプションによって名前のないキャプチャ (暗黙的なキャプチャ) が有効になるまで、キャプチャは無効のままです。 詳細については、「 [その他の構成体](miscellaneous-constructs-in-regular-expressions.md)」を参照してください。
 
 - `n` 言語要素の `(?imnsx:subexpression)` オプションを使用します。 これにより、`subexpression` 内の名前のないキャプチャ (暗黙的なキャプチャ) がすべて無効になります。 入れ子になった名前のない (暗黙的な) キャプチャ グループによるキャプチャも無効になります。
 
@@ -273,6 +273,6 @@ ms.locfileid: "81243155"
 
 |Title|説明|
 |-----------|-----------------|
-|[正規表現の動作の詳細](../../../docs/standard/base-types/details-of-regular-expression-behavior.md)|.NET の正規表現エンジンの実装について検討します。 正規表現の柔軟性に焦点を当てて、正規表現エンジンの効率的かつ堅牢な動作を確保するための開発者の責任について説明します。|
-|[バックトラッキング](../../../docs/standard/base-types/backtracking-in-regular-expressions.md)|バックトラッキングの概要と、正規表現のパフォーマンスに与える影響について説明し、バックトラッキングの代わりに使用できる言語要素について検討します。|
-|[正規表現言語 - クイック リファレンス](../../../docs/standard/base-types/regular-expression-language-quick-reference.md)|.NET の正規表現言語の言語要素について説明します。各言語要素の詳細な説明へのリンクも含まれています。|
+|[正規表現の動作の詳細](details-of-regular-expression-behavior.md)|.NET の正規表現エンジンの実装について検討します。 正規表現の柔軟性に焦点を当てて、正規表現エンジンの効率的かつ堅牢な動作を確保するための開発者の責任について説明します。|
+|[バックトラッキング](backtracking-in-regular-expressions.md)|バックトラッキングの概要と、正規表現のパフォーマンスに与える影響について説明し、バックトラッキングの代わりに使用できる言語要素について検討します。|
+|[正規表現言語 - クイック リファレンス](regular-expression-language-quick-reference.md)|.NET の正規表現言語の言語要素について説明します。各言語要素の詳細な説明へのリンクも含まれています。|

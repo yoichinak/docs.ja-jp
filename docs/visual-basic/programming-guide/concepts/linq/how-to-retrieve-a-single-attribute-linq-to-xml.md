@@ -2,12 +2,12 @@
 title: '方法: 単一の属性を取得する (LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
-ms.openlocfilehash: 02afbc987cf9f55d16bb56912f3eaf45cd8c9a37
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 34c390fbffc1aea68a2fd8ae64b17d2637a1f4f1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347560"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397857"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>方法: 単一の属性を取得する (LINQ to XML) (Visual Basic)
 このトピックでは、属性名を指定して要素の単一の属性を取得する方法について説明します。 これは、特定の属性を持つ要素を検索するクエリ式を記述する場合に便利です。  
@@ -38,7 +38,7 @@ work
 ```  
   
 ## <a name="example"></a>例  
- 属性の値を取得する場合は、<xref:System.Xml.Linq.XElement> オブジェクトを使用して行う場合と同じように、その属性をキャストできます。 次に例を示します。  
+ 属性の値を取得する場合は、<xref:System.Xml.Linq.XElement> オブジェクトを使用して行う場合と同じように、その属性をキャストできます。 例を次に示します。  
   
 ```vb  
 Dim cust As XElement = <PhoneNumbers>  
@@ -92,6 +92,6 @@ home
 work  
 ```  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
-- [LINQ to XML 軸 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 軸 (Visual Basic)](linq-to-xml-axes.md)

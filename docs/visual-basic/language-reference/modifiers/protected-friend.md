@@ -4,12 +4,12 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: f92021f5f0dab9762470c270bdd5182187d587e5
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 202d4f4a3a05a64ab1d74621268f28f6b55e8952
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351315"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404837"
 ---
 # <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
 
@@ -24,12 +24,12 @@ ms.locfileid: "74351315"
 
 ## <a name="see-also"></a>関連項目
 
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
+- [Public](public.md)
+- [Protected](protected.md)
 - [Friend](friend.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Private](private.md)
 - [Private Protected](./private-protected.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [手順](../../programming-guide/language-features/procedures/index.md)
+- [構造体](../../programming-guide/language-features/data-types/structures.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)

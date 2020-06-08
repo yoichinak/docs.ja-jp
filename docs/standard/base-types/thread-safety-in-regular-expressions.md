@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parsing text with regular expressions, threads
 - pattern-matching with regular expressions, threads
 ms.assetid: 7c4a167b-5236-4cde-a2ca-58646230730f
-ms.openlocfilehash: db25028e10872cfca08d28518c795414d06c5d49
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fbcaaf4942f8af1d6c1de52ff5bc11317318f319
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73124800"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290890"
 ---
 # <a name="thread-safety-in-regular-expressions"></a>正規表現におけるスレッド セーフ
 <xref:System.Text.RegularExpressions.Regex> クラス自体はスレッド セーフであり、変更できません (読み取り専用)。 つまり、**Regex** オブジェクトは任意のスレッドで作成できます。また、スレッド間で共有できます。一致するメソッドは任意のスレッドから呼び出すことができますが、グローバルな状態を変更することはできません。  
@@ -27,4 +27,4 @@ ms.locfileid: "73124800"
   
 ## <a name="see-also"></a>参照
 
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET の正規表現](regular-expressions.md)

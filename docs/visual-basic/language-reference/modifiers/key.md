@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 92c8809779d6cab524f67ee47f355b72ab152403
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5b060f5fa0042dfb8ffa6876f5e172d3bcda67a3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351518"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396221"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key` キーワードを使用すると、匿名型のプロパティの動作を指定できます。 キー プロパティとして指定したプロパティのみが、匿名型インスタンス間の等価性のテスト、またはハッシュ コード値の計算に関与します。 キー プロパティの値は変更できません。  
@@ -31,7 +31,7 @@ ms.locfileid: "74351518"
   
  2 つのインスタンスが、名前、型、順序、および値が同じで、非キー プロパティのみで宣言されている場合、2 つのインスタンスは等しくありません。 キー プロパティを持たないインスタンスは、それ自体とのみ等しくなります。  
   
- 2 つの匿名型インスタンスが同じ匿名型のインスタンスである条件の詳細については、「[匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
+ 2 つの匿名型インスタンスが同じ匿名型のインスタンスである条件の詳細については、「[匿名型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
   
 ## <a name="hash-code-calculation"></a>ハッシュ コード計算  
  <xref:System.Object.Equals%2A> と同様に、匿名型の <xref:System.Object.GetHashCode%2A> に定義されているハッシュ関数は、型のキー プロパティに基づきます。 次の例に、キー プロパティとハッシュ コード値の間の相互作用を示します。  
@@ -55,6 +55,6 @@ ms.locfileid: "74351518"
   
 ## <a name="see-also"></a>関連項目
 
-- [匿名型の定義](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
-- [方法: 匿名型の宣言におけるプロパティ名と型を推論する](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
-- [匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [匿名型の定義](../../programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
+- [方法: 匿名型の宣言におけるプロパティ名と型を推論する](../../programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
+- [匿名型](../../programming-guide/language-features/objects-and-classes/anonymous-types.md)

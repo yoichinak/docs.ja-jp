@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UI literal type characters [Visual Basic]
 - data types [Visual Basic], integral
 ms.assetid: db7ddd34-4f23-46f5-84dd-8b0f83bb8729
-ms.openlocfilehash: ccff61608aed797734cb4f5ca0571d7ed73ba98b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 11070f6c7f3259b8c34528eb54d99b031b68f9f9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401377"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415545"
 ---
 # <a name="uinteger-data-type"></a>UInteger データ型
 
@@ -81,8 +81,8 @@ Dim number = &H_0FAC_14D7ui
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.UInt32>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データの種類](index.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

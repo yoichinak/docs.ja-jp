@@ -2,12 +2,12 @@
 title: データのグループ化
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: 9a4011b77f91ff241d23f7aeca95925a1e170483
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 8996eee748489c596bc5adc32f53b6b39dbfc6ac
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266821"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398384"
 ---
 # <a name="grouping-data-visual-basic"></a>データのグループ化 (Visual Basic)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
@@ -66,7 +66,7 @@ MsgBox(sb.ToString())
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
-- [方法: 拡張機能でファイルをグループ化する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
-- [方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [Group By 句](../../../language-reference/queries/group-by-clause.md)
+- [方法: 拡張機能でファイルをグループ化する (LINQ) (Visual Basic)](how-to-group-files-by-extension-linq.md)
+- [方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

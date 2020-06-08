@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: f7b6e42480075666ce9f7e8fc6966bd4bb6b888a
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 554c38c8f44999feba4cfa04d58ce2f07e955eb1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73977316"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409921"
 ---
-# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>GUID '\<number>' の形式が正しくないため、'\<attribute>' を適用できません
+# <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>GUID '\<attribute>' の形式が正しくないため、'\<number>' を適用できません。
 
 `COMClassAttribute` 属性ブロックで、グローバル一意識別子 (GUID) の適切な形式に準拠していない GUID が指定されています。 `COMClassAttribute` では、GUID を使用して、クラス、インターフェイス、および作成イベントが一意に識別されます。  
   
@@ -31,4 +31,4 @@ ms.locfileid: "73977316"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Guid>
-- [属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)
+- [属性の概要](../../programming-guide/concepts/attributes/index.md)

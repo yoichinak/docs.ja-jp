@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 11cf4f8d9457ebff385a601786dc97334f274324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 273ea592e73be5d76a4ffef077e691014a108347
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662068"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402928"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>省略可能なパラメーター型として使用されるジェネリック パラメーターは、クラスの制約がある型でなければなりません。
 プロシージャは、参照型に制限されていない型パラメーターを使用する省略可能なパラメーターで、宣言します。  
@@ -29,9 +29,9 @@ ms.locfileid: "64662068"
   
 ## <a name="see-also"></a>関連項目
 
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [型リスト](../../../visual-basic/language-reference/statements/type-list.md)
-- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
-- [省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
-- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [Nothing](../../../visual-basic/language-reference/nothing.md)
+- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [型リスト](../statements/type-list.md)
+- [Class ステートメント](../statements/class-statement.md)
+- [省略可能なパラメーター](../../programming-guide/language-features/procedures/optional-parameters.md)
+- [構造体](../../programming-guide/language-features/data-types/structures.md)
+- [Nothing](../nothing.md)

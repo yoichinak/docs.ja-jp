@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: 5035466de4aa17c374824e1b0f02ed594731a9d3
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: d0d1b03d9ab98f28a0112198f1ecc1e928d6d4a7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716809"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408713"
 ---
 # <a name="-define-visual-basic"></a>-define (Visual Basic)
 条件付きコンパイル定数を定義します。  
@@ -58,7 +58,7 @@ or
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [#Const ディレクティブ](../../../visual-basic/language-reference/directives/const-directive.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [#If...Then...#Else ディレクティブ](../../language-reference/directives/if-then-else-directives.md)
+- [#Const ディレクティブ](../../language-reference/directives/const-directive.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

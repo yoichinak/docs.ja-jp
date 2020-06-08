@@ -12,15 +12,15 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: d1964e3768124dde1deeabfada9006ff5a59def0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b6de52cf738a56a42c82978b54cef31574ab0bcb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351812"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410362"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>オブジェクト変数の宣言 (Visual Basic)
-通常の宣言ステートメントを使用して、オブジェクト変数を宣言します。 データ型については、`Object` (つまり、[Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)) またはオブジェクトの作成元となるより具体的なクラスを指定します。  
+通常の宣言ステートメントを使用して、オブジェクト変数を宣言します。 データ型については、`Object` (つまり、[Object データ型](../../../language-reference/data-types/object-data-type.md)) またはオブジェクトの作成元となるより具体的なクラスを指定します。  
   
  変数を `Object` として宣言することは、<xref:System.Object?displayProperty=nameWithType> として宣言することと同じです。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "74351812"
 Dim variablename As [New] { objectclass | Object }  
 ```  
   
- 宣言で [Public](../../../../visual-basic/language-reference/modifiers/public.md)、[Protected](../../../../visual-basic/language-reference/modifiers/protected.md)、[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)、`Protected Friend`、[Private](../../../../visual-basic/language-reference/modifiers/private.md)、[Shared](../../../../visual-basic/language-reference/modifiers/shared.md)、[Static](../../../../visual-basic/language-reference/modifiers/static.md) のいずれかを指定することもできます。 次の宣言の例は有効です。  
+ 宣言で [Public](../../../language-reference/modifiers/public.md)、[Protected](../../../language-reference/modifiers/protected.md)、[Friend](../../../language-reference/modifiers/friend.md)、`Protected Friend`、[Private](../../../language-reference/modifiers/private.md)、[Shared](../../../language-reference/modifiers/shared.md)、[Static](../../../language-reference/modifiers/static.md) のいずれかを指定することもできます。 次の宣言の例は有効です。  
   
 ```vb  
 Private objA As Object  
@@ -127,11 +127,11 @@ Dim anyForm As System.Windows.Forms.Form
   
 ## <a name="see-also"></a>関連項目
 
-- [オブジェクト変数](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
-- [オブジェクト変数の代入](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
-- [オブジェクト変数の値](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [方法: Visual Basic でオブジェクト変数を宣言し、オブジェクト変数にオブジェクトを代入する](../../../../visual-basic/programming-guide/language-features/variables/how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
-- [方法: オブジェクトのメンバーにアクセスする](../../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
-- [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)
-- [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
-- [ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
+- [オブジェクト変数](object-variables.md)
+- [オブジェクト変数の代入](object-variable-assignment.md)
+- [オブジェクト変数の値](object-variable-values.md)
+- [方法: Visual Basic でオブジェクト変数を宣言し、オブジェクト変数にオブジェクトを代入する](how-to-declare-an-object-variable-and-assign-an-object-to-it.md)
+- [方法: オブジェクトのメンバーにアクセスする](how-to-access-members-of-an-object.md)
+- [New 演算子](../../../language-reference/operators/new-operator.md)
+- [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)
+- [ローカル型の推論](local-type-inference.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Const statement [Visual Basic], directive (#Const)
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
-ms.openlocfilehash: 278219edb1bb5d1c0bb015611d69cbe4ae70014b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 91152771a4ef5ec74a7408511ccc2afe28dd442e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343845"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415467"
 ---
 # <a name="const-directive"></a>#Const ディレクティブ
 
@@ -54,8 +54,8 @@ Visual Basic の条件付きコンパイラ定数を定義します。
   
 ## <a name="see-also"></a>関連項目
 
-- [-define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)
-- [#If...Then...#Else ディレクティブ](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
-- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)
-- [条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
-- [If...Then...Else ステートメント](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [-define (Visual Basic)](../../reference/command-line-compiler/define.md)
+- [#If...Then...#Else ディレクティブ](if-then-else-directives.md)
+- [Const ステートメント](../statements/const-statement.md)
+- [条件付きコンパイル](../../programming-guide/program-structure/conditional-compilation.md)
+- [If...Then...Else ステートメント](../statements/if-then-else-statement.md)

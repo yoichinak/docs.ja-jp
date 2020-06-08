@@ -2,12 +2,12 @@
 title: LINQ to XML およびDOM
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: b25993fba4d878beb881dfdc46effe5a8ab3485b
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5813ca410e3e2b1ec284681451d0c0cec6f5e393
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74331704"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84389333"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML およびDOM (Visual Basic)
 このセクションでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] と、現在主流の XML プログラミング API である W3C ドキュメント オブジェクト モデル (DOM) との主な違いについて説明します。  
@@ -74,7 +74,7 @@ Dim contacts = _
   
  このように、XML ツリーを構築するコードのインデントにより、基になる XML の構造が示されます。  
   
- 詳細については、「[XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)」を参照してください。  
+ 詳細については、「[XML ツリーの作成 (Visual Basic)](creating-xml-trees.md)」を参照してください。  
   
 ## <a name="working-directly-with-xml-elements"></a>XML 要素の直接操作  
  一般に、XML によるプログラミングで重視されるのは XML 要素であり、その属性が重要となる場合が多くあります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、XML 要素と XML 属性を直接操作できます。 たとえば、次のようなことが可能です。  
@@ -104,7 +104,7 @@ doc.AppendChild(name)
  DOM にはその他に、ノードの名前を変更できないという問題もあります。 ノード名の変更が必要な場合は、新しいノードを作成し、そこにすべての子ノードをコピーする必要があります。この場合、元のノード固有の特性は失われます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、この問題を回避するために、ノードに対して <xref:System.Xml.Linq.XName> プロパティを設定できます。  
   
 ## <a name="static-method-support-for-loading-xml"></a>XML を読み込むための静的メソッドのサポート  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、インスタンス メソッドの代わりに静的メソッドを使用して XML を読み込むことができます。 これにより、読み込みと解析が簡略化されます。 詳細については、[ファイルから XML を読み込む方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md) に関するページを参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、インスタンス メソッドの代わりに静的メソッドを使用して XML を読み込むことができます。 これにより、読み込みと解析が簡略化されます。 詳細については、[ファイルから XML を読み込む方法 (Visual Basic)](how-to-load-xml-from-a-file.md) に関するページを参照してください。  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>DTD の構成要素に関するサポートの削除  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、XML プログラミングのさらなる簡略化のために、エンティティとエンティティ参照のサポートが削除されています。 エンティティの管理は複雑で、ほとんど利用されていません。 これらのサポートを削除することにより、パフォーマンスが向上し、プログラミング インターフェイスが簡略化されます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ツリーが設定されると、すべての DTD エンティティが展開されます。  
@@ -125,11 +125,11 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、空白は <xref:System.Xml.Linq.XText> ノードとして格納されます。DOM とは違って、特殊なノード型である <xref:System.Xml.XmlNodeType.Whitespace> は使用されません。  
   
 ## <a name="support-for-annotations"></a>注釈のサポート  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 要素は、注釈の拡張可能なセットをサポートしています。 このサポートは、スキーマの情報、要素が UI にバインドされているかどうかの情報、またはアプリケーション固有のその他の情報など、要素に関するさまざまな情報を追跡する場合に利用できます。 詳細については、「[LINQ to XML 注釈](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)」を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 要素は、注釈の拡張可能なセットをサポートしています。 このサポートは、スキーマの情報、要素が UI にバインドされているかどうかの情報、またはアプリケーション固有のその他の情報など、要素に関するさまざまな情報を追跡する場合に利用できます。 詳細については、「[LINQ to XML 注釈](linq-to-xml-annotations.md)」を参照してください。  
   
 ## <a name="support-for-schema-information"></a>スキーマ情報のサポート  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、<xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間の拡張メソッドによって XSD 検証がサポートされています。 これにより、XML ツリーが XSD に準拠しているかどうかを検証できます。 また、スキーマ検証後の情報セット (PSVI) を使用して XML ツリーを設定できます。 詳細については、[XSD を使用して検証する](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md)」と <xref:System.Xml.Schema.Extensions> を参照してください。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、<xref:System.Xml.Schema?displayProperty=nameWithType> 名前空間の拡張メソッドによって XSD 検証がサポートされています。 これにより、XML ツリーが XSD に準拠しているかどうかを検証できます。 また、スキーマ検証後の情報セット (PSVI) を使用して XML ツリーを設定できます。 詳細については、[XSD を使用して検証する](how-to-validate-using-xsd-linq-to-xml.md)」と <xref:System.Xml.Schema.Extensions> を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [はじめに (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+- [はじめに (LINQ to XML)](getting-started-linq-to-xml.md)

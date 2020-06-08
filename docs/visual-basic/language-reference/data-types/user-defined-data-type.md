@@ -23,12 +23,12 @@ helpviewer_keywords:
 - user-defined data types
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
-ms.openlocfilehash: 99eeb4b619f6bb23d00f8e449de953d41843f714
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fbd9536a54d7fb471d6cb2e130b14a84e40a4940
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343865"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415493"
 ---
 # <a name="user-defined-data-type"></a>ユーザー定義型
 
@@ -44,13 +44,13 @@ ms.locfileid: "74343865"
 
 ## <a name="declaration-format"></a>宣言の形式
 
-構造体宣言は、[Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)で始まり、`End Structure` ステートメントで終了します。 `Structure` ステートメントは、構造体の名前を指定します。これは、構造体で定義されるデータ型の識別子でもあります。 コードの他の部分では、この識別子を使用して、この構造体のデータ型の変数、パラメーター、および関数の戻り値を宣言できます。
+構造体宣言は、[Structure ステートメント](../statements/structure-statement.md)で始まり、`End Structure` ステートメントで終了します。 `Structure` ステートメントは、構造体の名前を指定します。これは、構造体で定義されるデータ型の識別子でもあります。 コードの他の部分では、この識別子を使用して、この構造体のデータ型の変数、パラメーター、および関数の戻り値を宣言できます。
 
 `Structure` ステートメントと `End Structure` ステートメントの間の宣言では、構造体のメンバーを定義します。
 
 ## <a name="member-access-levels"></a>メンバーのアクセス レベル
 
-すべてのメンバーを宣言するには、[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)を使用するか、[Public](../../../visual-basic/language-reference/modifiers/public.md)、[Friend](../../../visual-basic/language-reference/modifiers/friend.md)、[Private](../../../visual-basic/language-reference/modifiers/private.md) などのアクセス レベルを指定するステートメントを使用する必要があります。 `Dim` ステートメントを使用する場合、アクセス レベルの既定値はパブリックです。
+すべてのメンバーを宣言するには、[Dim ステートメント](../statements/dim-statement.md)を使用するか、[Public](../modifiers/public.md)、[Friend](../modifiers/friend.md)、[Private](../modifiers/private.md) などのアクセス レベルを指定するステートメントを使用する必要があります。 `Dim` ステートメントを使用する場合、アクセス レベルの既定値はパブリックです。
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
@@ -58,7 +58,7 @@ ms.locfileid: "74343865"
 
 - **相互運用の考慮事項。** オートメーション オブジェクトや COM オブジェクトのように、.NET Framework 向けに作成されていないコンポーネントとやり取りする場合、他の環境のユーザー定義型は Visual Basic の構造体型と互換性がないことに注意してください。
 
-- **拡大変換。** 任意の構造体のデータ型との間で自動変換が行われることはありません。 [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)を使用して構造体に変換演算子を定義できます。また、各変換演算子を `Widening` または `Narrowing` として宣言できます。
+- **拡大変換。** 任意の構造体のデータ型との間で自動変換が行われることはありません。 [Operator ステートメント](../statements/operator-statement.md)を使用して構造体に変換演算子を定義できます。また、各変換演算子を `Widening` または `Narrowing` として宣言できます。
 
 - **型文字。** 構造体のデータ型には、リテラルの型文字も識別子の型文字も含まれません。
 
@@ -80,11 +80,11 @@ End Structure
 
 - <xref:System.ValueType>
 - <xref:System.Runtime.InteropServices.StructLayoutAttribute>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
-- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データの種類](index.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [Structure ステートメント](../statements/structure-statement.md)
+- [Widening](../modifiers/widening.md)
+- [Narrowing](../modifiers/narrowing.md)
+- [構造体](../../programming-guide/language-features/data-types/structures.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

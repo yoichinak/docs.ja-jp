@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_NoStartupForm
 ms.assetid: 8e04af49-4bef-49de-a7ec-e407e9873da7
-ms.openlocfilehash: 301f249e6222c929d2c513964ecbb21df5fbc47f
-ms.sourcegitcommit: f348c84443380a1959294cdf12babcb804cfa987
+ms.openlocfilehash: 058deb1378ed9218274ae20c8340178f7c8fa58c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73976189"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409908"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a>スタートアップ フォームが指定されていません。
 
@@ -30,4 +30,4 @@ ms.locfileid: "73976189"
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>
-- [Visual Basic アプリケーション モデルの概要](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
+- [Visual Basic アプリケーション モデルの概要](../../developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)

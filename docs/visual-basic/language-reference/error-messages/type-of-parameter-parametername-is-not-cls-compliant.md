@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC40028
 ms.assetid: dfa1f6f9-bb88-44ad-b85f-149144363d41
-ms.openlocfilehash: 1f671b75972642670e28b9e761a8174d02d39c4e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: edbcadf271c4ccafc11e5b64eb103a0290976179
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642176"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413015"
 ---
-# <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>パラメーター '\<parametername>' の型は CLS に準拠していません
+# <a name="type-of-parameter-parametername-is-not-cls-compliant"></a>パラメーター '\<parametername>' の型は CLS に準拠していません。
 プロシージャが `<CLSCompliant(True)>` としてマークされていますが、`<CLSCompliant(False)>` としてマークされている型、マークされていない型、または非準拠の型であるために修飾されていない型を持つパラメーターを宣言しています。  
   
  プロシージャを[言語への非依存性および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) に準拠させるには、CLS 準拠型のみを使用する必要があります。 これは、パラメーターの型、戻り値の型、およびすべてのローカル変数の型に適用されます。  
   
  次の Visual Basic データ型は CLS に準拠していません。  
   
-- [SByte データ型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte データ型](../data-types/sbyte-data-type.md)  
   
-- [UInteger データ型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger データ型](../data-types/uinteger-data-type.md)  
   
-- [ULong データ型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong データ型](../data-types/ulong-data-type.md)  
   
-- [UShort データ型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort データ型](../data-types/ushort-data-type.md)  
   
  プログラミング要素に <xref:System.CLSCompliantAttribute> を適用する場合は、属性の `isCompliant` パラメーターを `True` または `False` のどちらかに設定して、準拠または非準拠を示します。 このパラメーターには既定値がありません。値を指定する必要があります。  
   

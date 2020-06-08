@@ -7,23 +7,23 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: cf0158692c1154a8a903c893ba287e51c1e34ac8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 077533a5b1fe241b61ded9516ad8f450d7dbbf5e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593272"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400345"
 ---
-# <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>プロパティ '\<propertyname>' の 'Set' アクセサーにアクセスできません
+# <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>プロパティ '\<propertyname>' の 'Set' アクセサーにアクセスできません。
 ステートメントは、プロパティの `Set` プロシージャにアクセスできない場合、プロパティの値を格納しようとします。  
   
- [Set ステートメント](../../../visual-basic/language-reference/statements/set-statement.md)がその [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)よりも制限の厳しいアクセス レベルでマークされている場合は、プロパティ値を設定しようとすると、次のような場合は失敗する可能性があります。  
+ [Set ステートメント](../statements/set-statement.md)がその [Property ステートメント](../statements/property-statement.md)よりも制限の厳しいアクセス レベルでマークされている場合は、プロパティ値を設定しようとすると、次のような場合は失敗する可能性があります。  
   
-- `Set` ステートメントが [Private](../../../visual-basic/language-reference/modifiers/private.md) とマークされていて、呼び出し元のコードが、プロパティが定義されているクラスまたは構造体の外側にある。  
+- `Set` ステートメントが [Private](../modifiers/private.md) とマークされていて、呼び出し元のコードが、プロパティが定義されているクラスまたは構造体の外側にある。  
   
-- `Set` ステートメントが [Protected](../../../visual-basic/language-reference/modifiers/protected.md) とマークされていて、呼び出し元のコードが、プロパティが定義されているクラスまたは構造体内にも、派生クラス内にもない。  
+- `Set` ステートメントが [Protected](../modifiers/protected.md) とマークされていて、呼び出し元のコードが、プロパティが定義されているクラスまたは構造体内にも、派生クラス内にもない。  
   
-- `Set` ステートメントが [Friend](../../../visual-basic/language-reference/modifiers/friend.md) とマークされていて、呼び出し元のコードが、プロパティが定義されているアセンブリと同じアセンブリ内にない。  
+- `Set` ステートメントが [Friend](../modifiers/friend.md) とマークされていて、呼び出し元のコードが、プロパティが定義されているアセンブリと同じアセンブリ内にない。  
   
  **エラー ID:** BC31102  
   
@@ -35,5 +35,5 @@ ms.locfileid: "64593272"
   
 ## <a name="see-also"></a>関連項目
 
-- [Property プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/property-procedures.md)
-- [方法: 複数のアクセス レベルを持つプロパティを宣言する](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)
+- [Property プロシージャ](../../programming-guide/language-features/procedures/property-procedures.md)
+- [方法: 複数のアクセス レベルを持つプロパティを宣言する](../../programming-guide/language-features/procedures/how-to-declare-a-property-with-mixed-access-levels.md)

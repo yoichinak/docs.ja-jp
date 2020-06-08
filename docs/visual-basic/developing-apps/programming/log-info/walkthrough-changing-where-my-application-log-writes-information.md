@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: bdee0a91360580b156c1734ef4c82139b18ce2b5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f9e45cdf4507840f62e32678f4c0a7be2c0be054
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74336731"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398293"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>チュートリアル: My.Application.Log による情報の書き込み先の変更 (Visual Basic)
 
@@ -18,9 +18,9 @@ ms.locfileid: "74336731"
 
 ## <a name="prerequisites"></a>前提条件
 
-`Log` オブジェクトは、複数のログ リスナーに情報を書き込むことができます。 ログ リスナーの構成を変更する前に、現在の構成を確認する必要があります。 詳細については、「 [Walkthrough: Determining Where My.Application.Log Writes Information](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)」を参照してください。
+`Log` オブジェクトは、複数のログ リスナーに情報を書き込むことができます。 ログ リスナーの構成を変更する前に、現在の構成を確認する必要があります。 詳細については、「 [Walkthrough: Determining Where My.Application.Log Writes Information](walkthrough-determining-where-my-application-log-writes-information.md)」を参照してください。
 
-必要に応じて、「[方法 : イベント情報をテキスト ファイルに書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)」または「[方法 : アプリケーション イベント ログに書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)」を参照してください。
+必要に応じて、「[方法 : イベント情報をテキスト ファイルに書き込む](how-to-write-event-information-to-a-text-file.md)」または「[方法 : アプリケーション イベント ログに書き込む](how-to-write-to-an-application-event-log.md)」を参照してください。
 
 ### <a name="to-add-listeners"></a>リスナーを追加するには
 
@@ -173,7 +173,7 @@ ms.locfileid: "74336731"
 
 1. ログ リスナーとして正しい型を確実に使用するために、完全修飾型名と厳密な名前のアセンブリ名を使用する必要があります。 厳密な名前を指定された型の構文は次のとおりです。
 
-     \<*型名*>, \<*アセンブリ名*>, \<*バージョン番号*>, \<*カルチャ*>, \<*厳密な名前*>
+     \<*type name*>, \<*assembly name*>, \<*version number*>, \<*culture*>, \<*strong name*>
 
 2. 次のコード例は、完全修飾された型の厳密な名前を確認する方法を示します。この例では "System.Diagnostics.FileLogTraceListener" です。
 
@@ -189,5 +189,5 @@ ms.locfileid: "74336731"
 - <xref:System.Diagnostics.TraceListener>
 - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType>
 - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>
-- [方法 : イベント情報をテキスト ファイルに書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-event-information-to-a-text-file.md)
-- [方法 : アプリケーション イベント ログに書き込む](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-to-an-application-event-log.md)
+- [方法 : イベント情報をテキスト ファイルに書き込む](how-to-write-event-information-to-a-text-file.md)
+- [方法 : アプリケーション イベント ログに書き込む](how-to-write-to-an-application-event-log.md)

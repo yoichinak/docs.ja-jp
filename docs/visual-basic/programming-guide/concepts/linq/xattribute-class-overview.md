@@ -2,12 +2,12 @@
 title: XAttribute クラスの概要
 ms.date: 07/20/2015
 ms.assetid: 7781580a-9583-4a1b-ae1e-91c5936eb0b1
-ms.openlocfilehash: ceafe5478e41fb4c2038fd9300ef7b1ee6cb8411
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 5b165044b4bea83e1a0789e3dd00367ed27b43e8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75636654"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413207"
 ---
 # <a name="xattribute-class-overview-visual-basic"></a>XAttribute クラスの概要 (Visual Basic)
 属性は、要素に関連付けられている名前と値のペアです。 <xref:System.Xml.Linq.XAttribute> クラスは、XML 属性を表します。  
@@ -76,4 +76,4 @@ Console.WriteLine(c)
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML プログラミングの概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML プログラミングの概要 (Visual Basic)](linq-to-xml-programming-overview.md)

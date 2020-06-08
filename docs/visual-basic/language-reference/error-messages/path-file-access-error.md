@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID75
 ms.assetid: 6ce3a161-7316-46bd-a785-0d50e5414020
-ms.openlocfilehash: 4f18c9216aa24840bc205534a97124d12698cb98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dfe96cd6eaa673438849fe8f799d46fa2617bfdd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799181"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387258"
 ---
 # <a name="pathfile-access-error"></a>パス/ファイル アクセス エラー
 ファイル アクセス操作またはディスク アクセス操作中に、オペレーティング システムがパスとファイル名の間の接続を作成できませんでした。  
@@ -26,4 +26,4 @@ ms.locfileid: "61799181"
   
 ## <a name="see-also"></a>関連項目
 
-- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [エラーの種類](../../programming-guide/language-features/error-types.md)

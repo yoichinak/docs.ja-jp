@@ -13,12 +13,12 @@ helpviewer_keywords:
 - command-line compilers [Visual Basic], Visual Basic
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
-ms.openlocfilehash: c7219c0497bb87f0cc44f27229eaf25f9b3eebce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ec6ae3328c2042af950d1ee78a33d3de97219f10
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344793"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414299"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>コマンド ラインからのビルド (Visual Basic)
 
@@ -35,18 +35,18 @@ MSBuild を使用して、コマンド プロンプトでプロジェクト (.vb
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[方法: コマンド ライン コンパイラを起動する](../../../visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md) \
+[方法: コマンド ライン コンパイラを起動する](how-to-invoke-the-command-line-compiler.md) \
 MS-DOS プロンプトで、または特定のサブディレクトリからコマンドライン コンパイラを起動する方法について説明します。
 
-[コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md) \
+[コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md) \
 独自に使用するために変更できるサンプル コマンド ラインの一覧を示します。
 
 ## <a name="related-sections"></a>関連項目
 
-[Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md) \
+[Visual Basic のコマンド ライン コンパイラ](index.md) \
 アルファベット順または目的別に構成された、コンパイラ オプションの一覧を提供します。
 
-[条件付きコンパイル](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md) \
+[条件付きコンパイル](../../programming-guide/program-structure/conditional-compilation.md) \
 コードの特定のセクションをコンパイルする方法について説明します。
 
 [Visual Studio でのプロジェクトとソリューションのビルドおよびクリーン](/visualstudio/ide/building-and-cleaning-projects-and-solutions-in-visual-studio) \

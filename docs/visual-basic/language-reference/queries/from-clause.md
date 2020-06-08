@@ -10,12 +10,12 @@ helpviewer_keywords:
 - From clause [Visual Basic]
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
-ms.openlocfilehash: a63fb41fc2b0ad885acf76ad5d56e446922f5b90
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 33680f49247b3b2a6082b3a6b27ca64f8401e42d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74343778"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396182"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
 クエリを実行する 1 つ以上の範囲変数とコレクションを指定します。  
@@ -36,7 +36,7 @@ From element [ As type ] In collection [ _ ]
 |`collection`|必須です。 クエリ対象のコレクションを参照します。 列挙可能な型である必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
- `From` 句は、クエリのソース データと、ソース コレクションの要素を参照するために使用される変数を識別するために使用します。 このような変数は*範囲変数*と呼ばれます。 `Aggregate` 句を使用して、集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「[Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)」を参照してください。  
+ `From` 句は、クエリのソース データと、ソース コレクションの要素を参照するために使用される変数を識別するために使用します。 このような変数は*範囲変数*と呼ばれます。 `Aggregate` 句を使用して、集計結果のみを返すクエリを識別する場合を除き、クエリには `From` 句が必要です。 詳細については、「[Aggregate 句](aggregate-clause.md)」を参照してください。  
   
  クエリで複数の `From` 句を指定して、結合する複数のコレクションを識別できます。 複数のコレクションを指定している場合、それらは個別に反復処理するか、またはそれらが関連付けられている場合は結合できます。 コレクションは、`Select` 句を使用して暗黙的に結合することも、`Join` または `Group Join` 句を使用して明示的に結合することもできます。 または、1 つの `From` 句で、関連する各範囲変数とコレクションをそれぞれコンマで区切って、複数の範囲変数とコレクションを指定することもできます。 次のコード例に、`From` 句の両方の構文オプションを示しています。  
   
@@ -71,19 +71,19 @@ From element [ As type ] In collection [ _ ]
   
 ## <a name="see-also"></a>関連項目
 
-- [クエリ](../../../visual-basic/language-reference/queries/index.md)
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)
-- [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
-- [WHERE 句](../../../visual-basic/language-reference/queries/where-clause.md)
-- [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [Distinct 句](../../../visual-basic/language-reference/queries/distinct-clause.md)
-- [Join 句](../../../visual-basic/language-reference/queries/join-clause.md)
-- [Group Join 句](../../../visual-basic/language-reference/queries/group-join-clause.md)
-- [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)
-- [Let 句](../../../visual-basic/language-reference/queries/let-clause.md)
-- [Skip 句](../../../visual-basic/language-reference/queries/skip-clause.md)
-- [Take 句](../../../visual-basic/language-reference/queries/take-clause.md)
-- [Skip While 句](../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [Take While 句](../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [クエリ](index.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [For Each...Next ステートメント](../statements/for-each-next-statement.md)
+- [For...Next ステートメント](../statements/for-next-statement.md)
+- [Select 句](select-clause.md)
+- [WHERE 句](where-clause.md)
+- [Aggregate 句](aggregate-clause.md)
+- [Distinct 句](distinct-clause.md)
+- [Join 句](join-clause.md)
+- [Group Join 句](group-join-clause.md)
+- [Order By 句](order-by-clause.md)
+- [Let 句](let-clause.md)
+- [Skip 句](skip-clause.md)
+- [Take 句](take-clause.md)
+- [Skip While 句](skip-while-clause.md)
+- [Take While 句](take-while-clause.md)

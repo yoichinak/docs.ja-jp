@@ -14,17 +14,17 @@ helpviewer_keywords:
 - COM interop, exposing COM components
 - COM interop, applying attributes
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
-ms.openlocfilehash: 831f8d79030264ef013a75cd91cb771c9d168576
-ms.sourcegitcommit: 9a4488a3625866335e83a20da5e9c5286b1f034c
+ms.openlocfilehash: f9ccf59e52c1ef27649cd70a57f7b24bb5a8e9bf
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2020
-ms.locfileid: "83420540"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291332"
 ---
 # <a name="applying-interop-attributes"></a>相互運用固有の属性の適用
 <xref:System.Runtime.InteropServices> 名前空間では、デザイン時にユーザーが適用する属性、変換処理中に COM 相互運用ツールおよび API によって適用される属性、ユーザーまたは COM 相互運用機能によって適用される属性という 3 つのカテゴリの相互運用固有の属性が提供されます。  
   
- マネージド コードに属性を適用する作業に慣れていない場合は、「[属性を使用したメタデータの拡張](../../../docs/standard/attributes/index.md)」を参照してください。 他のカスタム属性の場合と同様に、相互運用固有の属性は、型、メソッド、プロパティ、パラメーター、フィールド、およびその他のメンバーに対して適用できます。  
+ マネージド コードに属性を適用する作業に慣れていない場合は、「[属性を使用したメタデータの拡張](../attributes/index.md)」を参照してください。 他のカスタム属性の場合と同様に、相互運用固有の属性は、型、メソッド、プロパティ、パラメーター、フィールド、およびその他のメンバーに対して適用できます。  
   
 ## <a name="design-time-attributes"></a>デザイン時属性  
  COM 相互運用ツールおよび API によって実行された変換処理の結果を調整するには、デザイン時属性を使用します。 マネージド ソース コードに適用できる属性の説明を次の表に示します。 COM 相互運用ツールで、この表に示す属性を適用できる場合もあります。  
@@ -70,7 +70,7 @@ ms.locfileid: "83420540"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.InteropServices>
-- [COM への .NET Framework コンポーネントの公開](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
-- [属性](../../../docs/standard/attributes/index.md)
-- [要件 (相互運用のための .NET 型の)](../../../docs/standard/native-interop/qualify-net-types-for-interoperation.md)
-- [COM 用の .NET Framework アセンブリのパッケージ化](../../../docs/framework/interop/packaging-an-assembly-for-com.md)
+- [COM への .NET Framework コンポーネントの公開](../../framework/interop/exposing-dotnet-components-to-com.md)
+- [属性](../attributes/index.md)
+- [要件 (相互運用のための .NET 型の)](qualify-net-types-for-interoperation.md)
+- [COM 用の .NET Framework アセンブリのパッケージ化](../../framework/interop/packaging-an-assembly-for-com.md)

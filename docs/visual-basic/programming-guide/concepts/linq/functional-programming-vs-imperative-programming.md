@@ -2,12 +2,12 @@
 title: 関数型プログラミングと命令型プログラミング
 ms.date: 07/20/2015
 ms.assetid: 6a1f3b57-00e6-447d-9906-74c7c4d5d85c
-ms.openlocfilehash: 704beadc29af0de606b8f246360dc6fffca8cfcc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0090761dc07218673e1e0299951530d5a4763ffe
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353439"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364800"
 ---
 # <a name="functional-programming-vs-imperative-programming-visual-basic"></a>関数型プログラミングと命令型プログラミング (Visual Basic)
 このトピックでは、関数型プログラミングを従来の命令型 (手続き型) プログラミングと比較対照します。  
@@ -52,6 +52,6 @@ ms.locfileid: "74353439"
   
 ## <a name="see-also"></a>関連項目
 
-- [純粋関数型変換の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)
+- [純粋関数型変換の概要 (Visual Basic)](introduction-to-pure-functional-transformations.md)
 - [XSLT 変換](../../../../standard/data/xml/xslt-transformations.md)
-- [純粋関数へのリファクタリング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [純粋関数へのリファクタリング (Visual Basic)](refactoring-into-pure-functions.md)

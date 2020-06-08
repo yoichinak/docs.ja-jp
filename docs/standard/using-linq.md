@@ -9,12 +9,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 76872f3ba3ed5106a4cb5bfdd918ae607acc092d
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: cd0260de3facdd37c46e9fb2f09ddc4cac08e71b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82507521"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291072"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (統合言語クエリ)
 
@@ -113,7 +113,7 @@ End Function
 
 コードを記述して XML ドキュメントを手動でスキャンし、このタスクを実行するのはとても難しいことです。
 
-XML との対話が、LINQ プロバイダーでできる唯一のことではありません。 [Linq to SQL](../../docs/framework/data/adonet/sql/linq/index.md) は、MSSQL Server データベースの必要最低限のオブジェクト リレーショナル マッパー (ORM) です。 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) ライブラリでは、LINQ を使用して効率的に JSON ドキュメントをトラバースできます。 さらに、必要な作業を行うライブラリがない場合は、[独自の LINQ プロバイダーを記述する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))こともできます。
+XML との対話が、LINQ プロバイダーでできる唯一のことではありません。 [Linq to SQL](../framework/data/adonet/sql/linq/index.md) は、MSSQL Server データベースの必要最低限のオブジェクト リレーショナル マッパー (ORM) です。 [JSON.NET](https://www.newtonsoft.com/json/help/html/LINQtoJSON.htm) ライブラリでは、LINQ を使用して効率的に JSON ドキュメントをトラバースできます。 さらに、必要な作業を行うライブラリがない場合は、[独自の LINQ プロバイダーを記述する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/bb546158(v=vs.110))こともできます。
 
 ## <a name="why-use-the-query-syntax"></a>クエリ構文を使用する理由
 

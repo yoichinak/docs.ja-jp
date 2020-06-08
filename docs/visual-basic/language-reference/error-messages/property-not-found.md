@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID422
 ms.assetid: 127e0f5f-0997-4ac5-b9af-2e6a2eb513a2
-ms.openlocfilehash: c45c8458e9acb7f168fc9afb6b1979a950a38dc7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ddf08aa0bebb36acc781a243705cebbe78281c99
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920784"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400449"
 ---
 # <a name="property-not-found"></a>プロパティが見つかりません。
 このオブジェクトは、指定されたプロパティをサポートしていません。  
@@ -22,4 +22,4 @@ ms.locfileid: "61920784"
   
 ## <a name="see-also"></a>関連項目
 
-- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [エラーの種類](../../programming-guide/language-features/error-types.md)

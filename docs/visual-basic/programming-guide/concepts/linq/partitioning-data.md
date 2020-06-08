@@ -2,12 +2,12 @@
 title: データのパーティション分割
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
-ms.openlocfilehash: 2ab4e27ef6d825b9100fc3c15b7a9554ae49e516
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 34749f9d7b137bade66b6103650871246c3cc532
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353152"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406847"
 ---
 # <a name="partitioning-data-visual-basic"></a>データのパーティション分割 (Visual Basic)
 LINQ におけるパーティション分割とは、要素を並べ替えずに入力シーケンスを 2 つのセクションに分割し、それらのセクションの 1 つを返す操作を指します。  
@@ -52,8 +52,8 @@ LINQ におけるパーティション分割とは、要素を並べ替えずに
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Skip 句](../../../../visual-basic/language-reference/queries/skip-clause.md)
-- [Skip While 句](../../../../visual-basic/language-reference/queries/skip-while-clause.md)
-- [Take 句](../../../../visual-basic/language-reference/queries/take-clause.md)
-- [Take While 句](../../../../visual-basic/language-reference/queries/take-while-clause.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [Skip 句](../../../language-reference/queries/skip-clause.md)
+- [Skip While 句](../../../language-reference/queries/skip-while-clause.md)
+- [Take 句](../../../language-reference/queries/take-clause.md)
+- [Take While 句](../../../language-reference/queries/take-while-clause.md)

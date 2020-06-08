@@ -2,16 +2,16 @@
 title: リフレクションを使用した属性へのアクセス
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: 94352f07cf1f7e4a35f023503f138596ae5ac227
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c0da5c4ae00eb2bc80b10f63f4bfd39763445e55
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353556"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400759"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>リフレクションを使用した属性へのアクセス (Visual Basic)
 
-カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、「<xref:System.Attribute>」を参照してください。
+カスタム属性を定義し、それらをソース コード内に配置することができても、その情報を取得して操作する手段がなければ、ほとんど価値はありません。 リフレクションを使用すれば、カスタム属性を使用して定義された情報を取得することができます。 鍵となるメソッドは `GetCustomAttributes` です。このメソッドは、ソース コード属性の実行時の等価オブジェクトを配列で返します。 このメソッドには、いくつかのオーバー ロード バージョンがあります。 詳細については、<xref:System.Attribute> を参照してください。
 
 次のような属性指定は、
 
@@ -101,12 +101,12 @@ Class TestAuthorAttribute
 End Class
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 - <xref:System.Reflection>
 - <xref:System.Attribute>
-- [Visual Basic プログラミング ガイド](../../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../../index.md)
 - [属性に格納されている情報の取得](../../../../standard/attributes/retrieving-information-stored-in-attributes.md)
-- [リフレクション (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
-- [属性 (Visual Basic)](../../../../visual-basic/language-reference/attributes.md)
-- [カスタム属性の作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/attributes/creating-custom-attributes.md)
+- [リフレクション (Visual Basic)](../reflection.md)
+- [属性 (Visual Basic)](../../../language-reference/attributes.md)
+- [カスタム属性の作成 (Visual Basic)](creating-custom-attributes.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 98f8ed947c9f4376c5778011a3a91ca8b094f9ec
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4ac8e5942cf6097642ec111992ebfcdb91e8d7c1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351559"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392172"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 1 つ以上の宣言されたプログラミング要素が、その宣言を含むアセンブリ内からのみアクセス可能であることを示します。  
@@ -32,7 +32,7 @@ ms.locfileid: "74351559"
 > [!NOTE]
 > また、[Protected Friend](protected-friend.md) アクセス修飾子を使用することもできます。これにより、クラス メンバーには、クラス内、派生クラス、およびクラスが定義されている同じアセンブリからアクセスできます。 クラス内および同じアセンブリ内の派生クラスからのメンバーへのアクセスを制限するには、[Private Protected](private-protected.md) アクセス修飾子を使用します。
 
- `Friend` とその他のアクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
+ `Friend` とその他のアクセス修飾子の比較については、「[Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
 > [!NOTE]
 > 別のアセンブリがフレンド アセンブリであることを指定できます。これにより、`Friend` としてマークされているすべての型とメンバーにアクセスできるようになります。 詳細については、[Friend アセンブリ](../../../standard/assembly/friend.md)に関するページを参照してください。
@@ -45,41 +45,41 @@ ms.locfileid: "74351559"
 ## <a name="usage"></a>使用方法  
  `Friend` 修飾子は、次のコンテキストで使用できます。  
   
- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
+ [Class ステートメント](../statements/class-statement.md)  
   
- [Const ステートメント](../../../visual-basic/language-reference/statements/const-statement.md)  
+ [Const ステートメント](../statements/const-statement.md)  
   
- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+ [Declare ステートメント](../statements/declare-statement.md)  
   
- [Delegate ステートメント](../../../visual-basic/language-reference/statements/delegate-statement.md)  
+ [Delegate ステートメント](../statements/delegate-statement.md)  
   
- [Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ [Dim ステートメント](../statements/dim-statement.md)  
   
- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)  
+ [Enum ステートメント](../statements/enum-statement.md)  
   
- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
+ [Event ステートメント](../statements/event-statement.md)  
   
- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
+ [Function ステートメント](../statements/function-statement.md)  
   
- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
+ [Interface ステートメント](../statements/interface-statement.md)  
   
- [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)  
+ [Module ステートメント](../statements/module-statement.md)  
   
- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
+ [Property ステートメント](../statements/property-statement.md)  
   
- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)  
+ [Structure ステートメント](../statements/structure-statement.md)  
   
- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
+ [Sub ステートメント](../statements/sub-statement.md)  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
-- [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
-- [Private](../../../visual-basic/language-reference/modifiers/private.md)
+- [Public](public.md)
+- [Protected](protected.md)
+- [Private](private.md)
 - [Private Protected](./private-protected.md)
 - [Protected Friend](./protected-friend.md)
-- [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
-- [手順](../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [構造体](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [Visual Basic でのアクセス レベル](../../programming-guide/language-features/declared-elements/access-levels.md)
+- [手順](../../programming-guide/language-features/procedures/index.md)
+- [構造体](../../programming-guide/language-features/data-types/structures.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)

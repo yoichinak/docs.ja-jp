@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: 04320c7a2fd27749e6de24f0ad21cc51c86ddda2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 107d93429ad0440ed18169bc6b6ca7b2e21cb77a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345156"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405145"
 ---
 # <a name="error-types-visual-basic"></a>エラーの種類 (Visual Basic)
 Visual Basic では、エラーは構文エラー、実行時エラー、論理エラーという 3 つのカテゴリのいずれかに分類されます。
@@ -34,5 +34,5 @@ Visual Basic では、エラーは構文エラー、実行時エラー、論理�
 
 ## <a name="see-also"></a>関連項目
 
-- [Try...Catch...Finally ステートメント](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+- [Try...Catch...Finally ステートメント](../../language-reference/statements/try-catch-finally-statement.md)
 - [デバッガーの基本事項](/visualstudio/debugger/debugger-feature-tour)

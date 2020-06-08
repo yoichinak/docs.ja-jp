@@ -6,12 +6,12 @@ helpviewer_keywords:
 - addmodule compiler option [Visual Basic]
 - -addmodule compiler option [Visual Basic]
 ms.assetid: fb4b89d4-4926-4f20-868d-427fa28497b2
-ms.openlocfilehash: dd98b45d75ff421dc81666ed47695132a49bfa3a
-ms.sourcegitcommit: 4f4a32a5c16a75724920fa9627c59985c41e173c
+ms.openlocfilehash: 9e8146497d63d949f138d6cd08c9ea8c7b03c651
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72524482"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414312"
 ---
 # <a name="-addmodule"></a>-addmodule
 指定ファイル内のすべての型情報を現在のコンパイル対象のプロジェクトで使用できるようにします。  
@@ -31,9 +31,9 @@ ms.locfileid: "72524482"
   
  `-addmodule` で追加したモジュールはすべて、実行時に出力ファイルと同じディレクトリに置かれている必要があります。 つまり、コンパイル時には任意のディレクトリからモジュールを指定できますが、実行時にはアプリケーション ディレクトリにこのモジュールが置かれている必要があります。 そうでない場合、<xref:System.TypeLoadException> エラーが発生します。  
   
- `-addmodule` で `-target:module` 以外の [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md) オプションを (暗黙的または明示的に) 指定すると、`-addmodule` に渡すファイルはプロジェクトのアセンブリの一部になります。 `-addmodule` で追加された 1 つ以上のファイルを含む出力ファイルを実行するには、アセンブリが必要です。  
+ `-addmodule` で `-target:module` 以外の [-target (Visual Basic)](target.md) オプションを (暗黙的または明示的に) 指定すると、`-addmodule` に渡すファイルはプロジェクトのアセンブリの一部になります。 `-addmodule` で追加された 1 つ以上のファイルを含む出力ファイルを実行するには、アセンブリが必要です。  
   
- アセンブリが含まれるファイルからメタデータをインポートするには、[-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md) を使用します。  
+ アセンブリが含まれるファイルからメタデータをインポートするには、[-reference (Visual Basic)](reference.md) を使用します。  
   
 > [!NOTE]
 > `-addmodule` オプションは、Visual Studio 開発環境からは利用できません。これはコマンド ラインからコンパイルするときにのみ使用できます。  
@@ -51,7 +51,7 @@ ms.locfileid: "72524482"
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [-reference (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-target (Visual Basic)](target.md)
+- [-reference (Visual Basic)](reference.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

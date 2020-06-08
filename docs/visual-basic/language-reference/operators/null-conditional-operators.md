@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ?. operator [Visual Basic]
 - ?[] operator [C#]
 - ?[] operator [Visual Basic]
-ms.openlocfilehash: 003f579a7128bbe2462b7fbe7057de03e61bfbe6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bffbba859968e0a050397cd9e685c142f801798a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348289"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401473"
 ---
 # <a name="-and--null-conditional-operators-visual-basic"></a>?. および ?() Null 条件演算子 (Visual Basic)
 
@@ -112,5 +112,5 @@ SendNews?.Invoke("Just in...")
 ## <a name="see-also"></a>関連項目
 
 - [演算子 (Visual Basic)](index.md)
-- [Visual Basic プログラミング ガイド](../../../visual-basic/programming-guide/index.md)
-- [Visual Basic の言語リファレンス](../../../visual-basic/language-reference/index.md)
+- [Visual Basic プログラミング ガイド](../../programming-guide/index.md)
+- [Visual Basic の言語リファレンス](../index.md)

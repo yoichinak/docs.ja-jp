@@ -7,20 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
-ms.openlocfilehash: 290d025985663bc45fe605a2e9904fc90fb2bc63
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a52f9f5f5b044273a45da5ef9478e2212def57a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350348"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84372363"
 ---
 # <a name="mywebservices-object"></a>My.WebServices オブジェクト
 現在のプロジェクトによって参照される各 XML Web サービスの単一のインスタンスを作成してアクセスするためのプロパティを提供します。  
   
 ## <a name="remarks"></a>Remarks  
- `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 プロジェクトへの Web サービスの追加の詳細については、「[アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
+ `My.WebServices` オブジェクトは、現在のプロジェクトにより参照されている各 Web サービスのインスタンスを提供します。 各インスタンスは要求に応じてインスタンス化されます。 これらの Web サービスには `My.WebServices` オブジェクトのプロパティを介してアクセスできます。 プロパティの名前は、プロパティがアクセスする Web サービスの名前と同じになります。 <xref:System.Web.Services.Protocols.SoapHttpClientProtocol> から継承されたクラスはすべて Web サービスです。 プロジェクトへの Web サービスの追加の詳細については、「[アプリケーションの Web サービスへのアクセス](../../developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
- `My.WebServices` オブジェクトでは、現在のプロジェクトに関連付けられている Web サービスのみが公開されます。 参照されている DLL で宣言されている Web サービスへのアクセスは提供されません。 DLL で提供されている Web サービスにアクセスするには、Web サービスの修飾名を *DllName*.*WebServiceName* の形式で使用する必要があります。 詳細については、「[アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
+ `My.WebServices` オブジェクトでは、現在のプロジェクトに関連付けられている Web サービスのみが公開されます。 参照されている DLL で宣言されている Web サービスへのアクセスは提供されません。 DLL で提供されている Web サービスにアクセスするには、Web サービスの修飾名を *DllName*.*WebServiceName* の形式で使用する必要があります。 詳細については、「[アプリケーションの Web サービスへのアクセス](../../developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
  オブジェクトとそのプロパティは、Web アプリケーションで使用できません。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "74350348"
   
  [!code-vb[VbVbalrMyWebService#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyWebService/VB/Form1.vb#1)]  
   
- この例を機能させるには、プロジェクトで `Converter` という名前の Web サービスを参照し、その Web サービスで `ConvertTemperature` メソッドを公開している必要があります。 詳細については、「[アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
+ この例を機能させるには、プロジェクトで `Converter` という名前の Web サービスを参照し、その Web サービスで `ConvertTemperature` メソッドを公開している必要があります。 詳細については、「[アプリケーションの Web サービスへのアクセス](../../developing-apps/programming/accessing-application-web-services.md)」を参照してください。  
   
  このコードは、Web アプリケーション プロジェクトでは機能しません。  
   
@@ -66,4 +66,4 @@ ms.locfileid: "74350348"
 
 - <xref:System.Web.Services.Protocols.SoapHttpClientProtocol>
 - <xref:System.ArgumentException>
-- [アプリケーションの Web サービスへのアクセス](../../../visual-basic/developing-apps/programming/accessing-application-web-services.md)
+- [アプリケーションの Web サービスへのアクセス](../../developing-apps/programming/accessing-application-web-services.md)

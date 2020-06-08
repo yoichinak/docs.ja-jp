@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
-ms.openlocfilehash: dfa1d1600c7943e503b4f5ec2e2b8ecd6fbb9fe0
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 6fa4639b97e4314d8752ae520e94a58a189b7cbb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70254201"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397169"
 ---
-# <a name="name-name-is-not-declared"></a>名前 '\<name>' は宣言されていません
+# <a name="name-name-is-not-declared"></a>名前 '\<name>' は宣言されていません。
 ステートメントでプログラミング要素を参照していますが、名前が完全に一致する要素をコンパイラが見つけることができません。  
   
  **エラー ID:** BC30451  
@@ -43,7 +43,7 @@ ms.locfileid: "70254201"
 
 ## <a name="see-also"></a>関連項目
 
-- [宣言と定数の概要](../../../visual-basic/language-reference/keywords/declarations-and-constants-summary.md)
-- [Visual Basic の名前付け規則](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
-- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [宣言と定数の概要](../keywords/declarations-and-constants-summary.md)
+- [Visual Basic の名前付け規則](../../programming-guide/program-structure/naming-conventions.md)
+- [宣言された要素の名前](../../programming-guide/language-features/declared-elements/declared-element-names.md)
+- [宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)

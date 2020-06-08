@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36633
 ms.assetid: 5d5470e4-3de5-49c2-8831-1087625f4a77
-ms.openlocfilehash: 5e071970eec70828841c686e89aa673d38ff9918
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 290ca81dea500558ed73956c91bdf7bfec312014
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64661623"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400397"
 ---
 # <a name="range-variable-variable-hides-a-variable-in-an-enclosing-block-a-previously-defined-range-variable-or-an-implicitly-declared-variable-in-a-query-expression"></a>範囲変数 \<variable> により、それを囲むブロック内の変数、以前に定義された範囲変数、またはクエリ式内で暗黙的に宣言された変数が非表示になります
 `Select`、`From`、`Aggregate`、または `Let` 句で指定された範囲変数名が、クエリで既に指定されている範囲変数の名前、またはクエリによって暗黙的に宣言された変数の名前 (フィールド名や集計関数の名前など) と重複しています。  
@@ -25,8 +25,8 @@ ms.locfileid: "64661623"
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [From 句](../../../visual-basic/language-reference/queries/from-clause.md)
-- [Let 句](../../../visual-basic/language-reference/queries/let-clause.md)
-- [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [Select 句](../../../visual-basic/language-reference/queries/select-clause.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [From 句](../queries/from-clause.md)
+- [Let 句](../queries/let-clause.md)
+- [Aggregate 句](../queries/aggregate-clause.md)
+- [Select 句](../queries/select-clause.md)

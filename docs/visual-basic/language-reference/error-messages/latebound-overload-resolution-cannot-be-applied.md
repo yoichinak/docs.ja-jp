@@ -8,14 +8,14 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 1fe3c4a29b542302b3615459142a3c565aa8244f
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 4500a177c7a4729fe5131af1b007fd38e77afe07
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68513026"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397338"
 ---
-# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>アクセスするインスタンスがインターフェイス型であるため、遅延バインドされたオーバーロードの解決は '\<procedurename>' に適用されません
+# <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>アクセスするインスタンスがインターフェイス型であるため、遅延バインドされたオーバーロードの解決は '\<procedurename>' に適用されません。
 
 コンパイラでは、オーバーロードされたプロパティまたはプロシージャへの参照を解決しようとしますが、引数の型が `Object` であり、参照元のオブジェクトがインターフェイスのデータ型を持つため、参照が失敗します。 `Object` 引数は、コンパイラに参照を遅延バインドとして強制的に解決させます。
 
@@ -68,6 +68,6 @@ refer.s1(CType(o1, Double))
 
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャのオーバーロード](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [オーバーロードの解決](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
-- [CType 関数](../../../visual-basic/language-reference/functions/ctype-function.md)
+- [プロシージャのオーバーロード](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [オーバーロードの解決](../../programming-guide/language-features/procedures/overload-resolution.md)
+- [CType 関数](../functions/ctype-function.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - extension indexer [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: a16a4b13-54be-432c-82b3-a87091464ada
-ms.openlocfilehash: 5f91dc8a6b1a0d82daa4891cf826c16e2716839f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c91061d49e22e648b7bf75a812071b352793abcb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352695"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401343"
 ---
 # <a name="extension-indexer-property-visual-basic"></a>拡張インデクサー プロパティ (Visual Basic)
 コレクション内の個々の要素にアクセスできます。  
@@ -44,7 +44,7 @@ object(index)
   
  このインデクサー プロパティは、<xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Linq.IQueryable%601> を実装するコレクションの拡張プロパティと似ています。つまり、コレクションにインデクサーまたは既定のプロパティがない場合にのみ使用されます。  
   
- <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> オブジェクト コレクションの最初の要素の値には、XML `Value` プロパティを使用してアクセスできます。 詳細については、「[XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)」を参照してください。  
+ <xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XAttribute> オブジェクト コレクションの最初の要素の値には、XML `Value` プロパティを使用してアクセスできます。 詳細については、「[XML Value プロパティ](xml-value-property.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、拡張インデクサーを使用して、<xref:System.Xml.Linq.XElement> オブジェクト コレクションの 2 番目の子ノードにアクセスする方法を示しています。 コレクションには子軸プロパティを使用してアクセスします。これにより、`contact` オブジェクトの `phone` という名前の子要素すべてが取得されます。  
@@ -58,7 +58,7 @@ object(index)
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XElement>
-- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML Value プロパティ](../../../visual-basic/language-reference/xml-axis/xml-value-property.md)
+- [XML 軸プロパティ](index.md)
+- [XML リテラル](../xml-literals/index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)
+- [XML Value プロパティ](xml-value-property.md)

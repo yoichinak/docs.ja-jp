@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 71b00b669804e644d1171480192b9d55455bdf53
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b3acec04060367a0b9e54b19c0106644d028357b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352264"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400035"
 ---
 # <a name="permission-visual-basic"></a>\<permission> (Visual Basic)
 メンバーの必要な権限を指定します。  
@@ -31,7 +31,7 @@ ms.locfileid: "74352264"
 ## <a name="remarks"></a>Remarks  
  `<permission>` タグを使用して、メンバーのアクセスを文書化します。 <xref:System.Security.PermissionSet> クラスを使用して、メンバーへのアクセスを指定します。  
   
- コンパイル時に [-doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
+ コンパイル時に [-doc](../../reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   
 ## <a name="example"></a>例  
  この例では、`<permission>` タグを使用して、<xref:System.Security.Permissions.FileIOPermission> が `ReadFile` メソッドに必要であることを記述します。  
@@ -40,4 +40,4 @@ ms.locfileid: "74352264"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
+- [XML のコメント用タグ](index.md)

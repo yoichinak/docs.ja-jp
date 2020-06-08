@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 helpviewer_keywords:
 - thread-safe collections, when to upgrade
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
-ms.openlocfilehash: 5a0abef6de9f932f44fc7e3239b98c3a27846580
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e2c5d612abb824c93c611514a836c811e6e65efe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711221"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288876"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>スレッドセーフなコレクションを使用する状況
 .NET Framework 4 では、マルチスレッドでの追加や削除の操作をサポートするよう特別に設計された、5 つの新しいコレクション型が導入されました。 これらの新しい型では、スレッド セーフを確保するために、さまざまな種類の効率的なロックやロック制御不要の同期機構が用いられます。 同期を行うと、操作にオーバーヘッドが加わります。 どれほどのオーバーヘッドが加わるかは、同期や操作の種類、およびその他の要因 (コレクションに同時にアクセスしようとするスレッドの数など) によって異なります。  
@@ -63,5 +63,5 @@ ms.locfileid: "75711221"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections.Concurrent?displayProperty=nameWithType>
-- [スレッドセーフなコレクション](../../../../docs/standard/collections/thread-safe/index.md)
-- [並列プログラミング](../../../../docs/standard/parallel-programming/index.md)
+- [スレッドセーフなコレクション](index.md)
+- [並列プログラミング](../../parallel-programming/index.md)

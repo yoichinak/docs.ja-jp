@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 3ee94df096b756be544964cfbbd405355e3f728f
-ms.sourcegitcommit: 1f12db2d852d05bed8c53845f0b5a57a762979c8
+ms.openlocfilehash: c9bb302e2b34ebe1f51cf39bb3db1094d420d7f4
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72581266"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408700"
 ---
 # <a name="-delaysign"></a>-delaysign
 
@@ -30,7 +30,7 @@ ms.locfileid: "72581266"
 
 ## <a name="remarks"></a>Remarks
 
-`-delaysign` オプションは、[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) または [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md) と共に使用しない場合、無効になります。
+`-delaysign` オプションは、[-keyfile](keyfile.md) または [-keycontainer](keycontainer.md) と共に使用しない場合、無効になります。
 
 アセンブリに完全に署名するように指定すると、コンパイラはマニフェスト (アセンブリ メタデータ) を含むファイルをハッシュし、秘密キーでそのハッシュに署名します。 結果として得られるデジタル署名は、マニフェストを含むファイルに格納されます。 アセンブリを遅延署名に設定すると、コンパイラは署名の計算も格納も行いませんが、後で署名を追加できるようにファイルに領域を確保します。
 
@@ -48,7 +48,7 @@ ms.locfileid: "72581266"
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-keyfile](keyfile.md)
+- [-keycontainer](keycontainer.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

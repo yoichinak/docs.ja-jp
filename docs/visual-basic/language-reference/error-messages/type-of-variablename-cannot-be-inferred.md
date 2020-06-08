@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: c3086f79fb71693810bc8f14e8c0f493aa1e6515
-ms.sourcegitcommit: 463f3f050cecc0b6403e67f19a61f870fb8e7b7d
+ms.openlocfilehash: 74b690ce3dee87e481c629a254e629be4b40f8cd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "68512704"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387011"
 ---
-# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>ループの境界とステップ変数が同じ型に拡大変換されないため、'\<variablename>' の型を推論できません
+# <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>ループの境界とステップの句が同じ型に変換されないため、'\<variablename>' の型を推論できません
 
 `For...Next` ループを記述していますが、次の条件が当てはまるため、コンパイラがそのループの中でループ制御変数のデータ型を推論できません。
 
@@ -66,9 +66,9 @@ Dim n = 20
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
-- [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [ローカル型の推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [Option Infer ステートメント](../../../visual-basic/language-reference/statements/option-infer-statement.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [For...Next ステートメント](../statements/for-next-statement.md)
+- [暗黙の型変換と明示的な型変換](../../programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [ローカル型の推論](../../programming-guide/language-features/variables/local-type-inference.md)
+- [Option Infer ステートメント](../statements/option-infer-statement.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [拡大変換と縮小変換](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

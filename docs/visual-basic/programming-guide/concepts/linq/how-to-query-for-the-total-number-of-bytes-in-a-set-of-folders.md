@@ -2,12 +2,12 @@
 title: '方法: 一連のフォルダーの合計バイト数を照会する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: bfe85ed2-44dc-4ef1-aac7-241622b80a69
-ms.openlocfilehash: 25e2c2894d9feccf42ee92bdddd17d8558779e6c
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: c6490c8863b5762b0b487c6f3f3b2809e16d6519
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266977"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397935"
 ---
 # <a name="how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq-visual-basic"></a>方法: 一連のフォルダーの合計バイト数を照会する (LINQ) (Visual Basic)
 この例では、指定したフォルダーとそのすべてのサブフォルダーに格納されている全ファイルの合計バイト数を取得する方法について説明します。  
@@ -76,5 +76,5 @@ System.Linq 名前空間の `Imports` ステートメントを使用して、Vis
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)

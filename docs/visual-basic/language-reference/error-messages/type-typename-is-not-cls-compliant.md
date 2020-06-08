@@ -7,27 +7,27 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: 2805cac71cb36d21f5ab21a5875183803d07a4b4
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: eacf5036ebc6fc31dfa0e8de39c4fb574c9072b3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642367"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386959"
 ---
-# <a name="type-typename-is-not-cls-compliant"></a>型 \<typename> は CLS に準拠していません
+# <a name="type-typename-is-not-cls-compliant"></a>型 \<typename> は CLS に準拠していません。
 変数、プロパティ、または関数の戻り値が、CLS に準拠していないデータ型で宣言されています。  
   
  アプリケーションを[言語への非依存性および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) に準拠させるには、CLS 準拠型のみを使用する必要があります。  
   
  次の Visual Basic データ型は CLS に準拠していません。  
   
-- [SByte データ型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte データ型](../data-types/sbyte-data-type.md)  
   
-- [UInteger データ型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger データ型](../data-types/uinteger-data-type.md)  
   
-- [ULong データ型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong データ型](../data-types/ulong-data-type.md)  
   
-- [UShort データ型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort データ型](../data-types/ushort-data-type.md)  
   
  **エラー ID:** BC40041  
   

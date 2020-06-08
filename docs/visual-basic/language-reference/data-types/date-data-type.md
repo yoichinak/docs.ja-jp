@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 972df72874753a0f1213f3a4942468c59e3913ce
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 46c25e14db56d4cc3c6d59ec7649b37c35676e2e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344021"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387427"
 ---
 # <a name="date-data-type-visual-basic"></a>日付型 (Date) (Visual Basic)
 
@@ -85,9 +85,9 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.DateTime?displayProperty=nameWithType>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
+- [データの種類](index.md)
 - [標準の日時形式文字列](../../../standard/base-types/standard-date-and-time-format-strings.md)
 - [カスタム日時形式文字列](../../../standard/base-types/custom-date-and-time-format-strings.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

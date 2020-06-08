@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 4151a680050f234d450d8de5e67a767c54e8df68
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 582957c91eac63cf7f72dd2f6c0cf40e627be686
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266912"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84402032"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>チュートリアル: Visual Basic での IEnumerable(Of T) の実装
 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスは、値のシーケンスを、一度に 1 項目ずつ返すことができるクラスによって実装されます。 一度に 1 項目ずつデータを返す利点は、データ セット全体をメモリに読み込んで操作する必要がないことです。 データから 1 つの項目を読み込むのに必要なメモリを使用するだけで済みます。 `IEnumerable(T)` インターフェイスを実装するクラスを、`For Each` ループまたは LINQ クエリで使用できます。  
@@ -95,7 +95,7 @@ ms.locfileid: "78266912"
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [制御フロー](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
-- [ループ構造](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)
+- [Visual Basic における LINQ の概要](../linq/introduction-to-linq.md)
+- [制御フロー](index.md)
+- [ループ構造](loop-structures.md)
+- [For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)

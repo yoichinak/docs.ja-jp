@@ -2,12 +2,12 @@
 title: 射影操作
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: d7efb46ccfe3208ae6c58043a64c236171d0c147
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4795bdaba53949b34fe380ea9c51025ce43c40db
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346628"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396338"
 ---
 # <a name="projection-operations-visual-basic"></a>射影操作 (Visual Basic)
 
@@ -178,9 +178,9 @@ End Sub
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Linq>
-- [標準クエリ演算子の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)
-- [方法: 結合を使用したデータの結合](../../../../visual-basic/programming-guide/language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
-- [方法: 複数のソースからオブジェクトコレクションにデータを設定する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
-- [方法: 特定の型での LINQ クエリ結果の取得](../../../../visual-basic/programming-guide/language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
-- [方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- [標準クエリ演算子の概要 (Visual Basic)](standard-query-operators-overview.md)
+- [Select 句](../../../language-reference/queries/select-clause.md)
+- [方法: 結合を使用したデータの結合](../../language-features/linq/how-to-combine-data-with-linq-by-using-joins.md)
+- [方法: 複数のソースからオブジェクトコレクションにデータを設定する (LINQ) (Visual Basic)](how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [方法: 特定の型での LINQ クエリ結果の取得](../../language-features/linq/how-to-return-a-linq-query-result-as-a-specific-type.md)
+- [方法: グループを使用してファイルを複数のファイルに分割する (LINQ) (Visual Basic)](how-to-split-a-file-into-many-files-by-using-groups-linq.md)

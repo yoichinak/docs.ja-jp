@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 1f66b86a61fb0344a449bf0aa46b7655813c7c30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 89e2d1d18b456c96f62d6b9ee1dd8dc9d41bf665
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664254"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386933"
 ---
-# <a name="type-typename-is-not-defined"></a>型 '\<typename>' が定義されていません
+# <a name="type-typename-is-not-defined"></a>型 '\<typename>' が定義されていません。
 ステートメントで、定義されていない型の参照が行われました。 `Enum`、`Structure`、`Class`、`Interface` などの宣言ステートメントで型を定義できます。  
   
  **エラー ID:** BC30002  
@@ -33,9 +33,9 @@ ms.locfileid: "64664254"
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)
-- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)
-- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)
-- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)
+- [Visual Basic における名前空間](../../programming-guide/program-structure/namespaces.md)
+- [Enum ステートメント](../statements/enum-statement.md)
+- [Structure ステートメント](../statements/structure-statement.md)
+- [Class ステートメント](../statements/class-statement.md)
+- [Interface ステートメント](../statements/interface-statement.md)
 - [プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)

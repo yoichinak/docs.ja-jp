@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 02cdbcc59e8817ff4ec06c2f78f835cad77b10f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9abb87f3f6cdefefef29eb37c2c2d4d15155e93d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74333781"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406652"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>チュートリアル: .NET Framework のメソッドによるファイル操作 (Visual Basic)
 
@@ -156,4 +156,4 @@ Visual Studio を起動し、ユーザーが指定のファイルへの書き込
 
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
-- [チュートリアル](../../../../visual-basic/walkthroughs.md)
+- [チュートリアル](../../../walkthroughs.md)

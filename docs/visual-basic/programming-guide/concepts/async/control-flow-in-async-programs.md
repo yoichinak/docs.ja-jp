@@ -2,12 +2,12 @@
 title: 非同期プログラムにおける制御フロー
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: 94b2c2ea89f729e882229d4ecce7faa169c24267
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0c479b9dd2a691b1b353fac54ee3320a895b1c7f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347938"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396663"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>非同期プログラムにおける制御フロー (Visual Basic)
 
@@ -16,7 +16,7 @@ ms.locfileid: "74347938"
 > [!NOTE]
 > `Async` キーワードおよび `Await` キーワードは、Visual Studio 2012 で導入されました。
 
-一般に、[Async](../../../../visual-basic/language-reference/modifiers/async.md) 修飾子を使用した非同期コードを含むメソッドをマークします。 async 修飾子でマークされたメソッドでは、[Await (Visual Basic)](../../../../visual-basic/language-reference/operators/await-operator.md) 演算子を使用して、呼び出される非同期処理の終了をメソッドが待機する場所を指定できます。 詳細については、「[Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
+一般に、[Async](../../../language-reference/modifiers/async.md) 修飾子を使用した非同期コードを含むメソッドをマークします。 async 修飾子でマークされたメソッドでは、[Await (Visual Basic)](../../../language-reference/operators/await-operator.md) 演算子を使用して、呼び出される非同期処理の終了をメソッドが待機する場所を指定できます。 詳細については、「[Async および Await を使用した非同期プログラミング (Visual Basic)](index.md)」を参照してください。
 
 次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。
 
@@ -258,7 +258,7 @@ Length of the downloaded string: 33946.
 
 ![手順 1. および 2.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-onetwo.png "AsyncTrace-ONETWO")
 
-`AccessTheWebAsync` と `client.GetStringAsync` の戻り値の型はどちらも <xref:System.Threading.Tasks.Task%601> です。 `AccessTheWebAsync` では、TResult は整数です。 `GetStringAsync` では、TResult は文字列です。 非同期メソッドの戻り値の型について詳しくは、「[非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)」を参照してください。
+`AccessTheWebAsync` と `client.GetStringAsync` の戻り値の型はどちらも <xref:System.Threading.Tasks.Task%601> です。 `AccessTheWebAsync` では、TResult は整数です。 `GetStringAsync` では、TResult は文字列です。 非同期メソッドの戻り値の型について詳しくは、「[非同期の戻り値の型 (Visual Basic)](async-return-types.md)」を参照してください。
 
 タスクを返す非同期のメソッドは、制御が呼び出し元に戻ると、タスク インスタンスを返します。 `Await` 演算子が呼び出されたメソッドで実行されるか、または呼び出されたメソッドが終了すると、非同期メソッドから呼び出し元に制御が戻ります。 「3」から「6」のラベルの付いた表示行はこのプロセスの部分をトレースします。
 
@@ -369,7 +369,7 @@ Dim contentLength As Integer = Await getLengthTask
 
 ## <a name="see-also"></a>関連項目
 
-- [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
+- [Async および Await を使用した非同期プログラミング (Visual Basic)](index.md)
+- [非同期の戻り値の型 (Visual Basic)](async-return-types.md)
+- [チュートリアル: Async と Await を使用した Web へのアクセス (Visual Basic)](walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [Async Sample:非同期プログラムにおける制御フロー (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

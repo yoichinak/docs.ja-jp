@@ -7,25 +7,25 @@ f1_keywords:
 helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
-ms.openlocfilehash: 7d4566637da74726867c55ddf89b965d055e5d14
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 79faf0038b2b313bdc21e12c8ae76854bcd6957f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589922"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406574"
 ---
-# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>enum の基になる型 \<typename> は CLS に準拠していません
+# <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>enum の基になる型 '\<typename>' は CLS に準拠していません。
 この列挙型に指定されたデータ型は、[言語への非依存性、および言語非依存コンポーネント](../../../standard/language-independence-and-language-independent-components.md) (CLS) の一部ではありません。 .NET Framework と Visual Basic では、このデータ型をサポートしているため、コンポーネント内でエラーにはなりません。 ただし、厳密に CLS に準拠しているコードで記述された別のコンポーネントでは、このデータ型をサポートしていない可能性があります。 そのようなコンポーネントでは、使用しているコンポーネントと正常にやり取りできない場合があります。  
   
  次の Visual Basic データ型は CLS に準拠していません。  
   
-- [SByte データ型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte データ型](../data-types/sbyte-data-type.md)  
   
-- [UInteger データ型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger データ型](../data-types/uinteger-data-type.md)  
   
-- [ULong データ型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong データ型](../data-types/ulong-data-type.md)  
   
-- [UShort データ型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort データ型](../data-types/ushort-data-type.md)  
   
  既定では、このメッセージは警告です。 警告を非表示にする方法や、警告をエラーとして扱う方法の詳細については、「 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)」を参照してください。  
   

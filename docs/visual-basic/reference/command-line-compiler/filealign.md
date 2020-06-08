@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /filealign compiler option [Visual Basic]
 - filealign compiler option [Visual Basic]
 ms.assetid: cc61ec3d-ad38-4b28-9659-099d73cad099
-ms.openlocfilehash: fef2652f591e713140c651a9cb0df1ea9e6236c8
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 3877757185030b0dba914a79d8c760fb8033ae5f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005588"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408648"
 ---
 # <a name="-filealign"></a>-filealign
 出力ファイルでセクションをアラインするサイズを指定します。  
@@ -41,4 +41,4 @@ ms.locfileid: "72005588"
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)

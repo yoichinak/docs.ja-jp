@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 3c50c68c2a39aa04cff2dd43b5dfde709aec290f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: e633c5a00693f188270b1610abaf2decb656b00a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349065"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414596"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>配列のトラブルシューティング (Visual Basic)
 ここでは、配列を使用しているときに発生する可能性のある一般的な問題について説明します。  
@@ -22,7 +22,7 @@ ms.locfileid: "74349065"
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>配列の宣言と初期化のコンパイル エラー  
  コンパイル エラーは、配列の宣言、作成、および初期化に関する規則の解釈の誤りが原因で発生する可能性があります。 エラーの最も一般的な原因は次のとおりです。  
   
-- 配列変数宣言で、次元の長さを指定した後に [new 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)句を指定した。 次のコード行は、この型の無効な宣言を示しています。  
+- 配列変数宣言で、次元の長さを指定した後に [new 演算子](../../../language-reference/operators/new-operator.md)句を指定した。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -59,5 +59,5 @@ ms.locfileid: "74349065"
   
 ## <a name="see-also"></a>関連項目
 
-- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [方法: Visual Basic で配列変数を初期化する](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)
+- [配列](index.md)
+- [方法: Visual Basic で配列変数を初期化する](how-to-initialize-an-array-variable.md)

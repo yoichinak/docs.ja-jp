@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5606ae8188c12142800adef46819791b732ff73c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946550"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387271"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>オーバーフローしました。(Visual Basic ランタイム エラー)
 代入の対象の制限を超える代入を試みると、オーバーフローが発生します。  
@@ -26,5 +26,5 @@ ms.locfileid: "61946550"
 
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [エラーの種類](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [データの種類](../data-types/index.md)
+- [エラーの種類](../../programming-guide/language-features/error-types.md)

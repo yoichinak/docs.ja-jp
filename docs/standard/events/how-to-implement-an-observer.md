@@ -9,15 +9,15 @@ helpviewer_keywords:
 - observers [.NET Framework], observer design pattern
 - observer design pattern [.NET Framework], implementing observers
 ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
-ms.openlocfilehash: e6aba4d85e502563291478640927bd0f234736a8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 969b83bcd11159509a2cc1ed843836679ffd1705
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "73139305"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289721"
 ---
 # <a name="how-to-implement-an-observer"></a>方法: オブザーバーを実装する
-オブザーバー デザイン パターンでは、通知を登録するオブザーバーと、データを監視して 1 人以上のオブザーバーに通知を送信するプロバイダーを分ける必要があります。 このトピックでは、オブザーバーを作成する方法について説明します。 プロバイダーの作成方法については、関連トピックの「[方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)」を参照してください。  
+オブザーバー デザイン パターンでは、通知を登録するオブザーバーと、データを監視して 1 人以上のオブザーバーに通知を送信するプロバイダーを分ける必要があります。 このトピックでは、オブザーバーを作成する方法について説明します。 プロバイダーの作成方法については、関連トピックの「[方法: プロバイダーを実装する](how-to-implement-a-provider.md)」を参照してください。  
   
 ### <a name="to-create-an-observer"></a>オブザーバーを作成するには  
   
@@ -50,6 +50,6 @@ ms.locfileid: "73139305"
 ## <a name="see-also"></a>参照
 
 - <xref:System.IObserver%601>
-- [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)
-- [方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)
-- [オブザーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [オブサーバー デザイン パターン](observer-design-pattern.md)
+- [方法: プロバイダーを実装する](how-to-implement-a-provider.md)
+- [オブザーバー デザイン パターンのベスト プラクティス](observer-design-pattern-best-practices.md)

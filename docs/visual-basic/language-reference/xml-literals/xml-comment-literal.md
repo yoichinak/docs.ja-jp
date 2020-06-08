@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 8d9db66aabe344bd5c8f9a92ac8618b7bc1abb43
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 93c1346e54106b93f3932a494dea85d082ec994d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349396"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400216"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML コメント リテラル (Visual Basic)
 <xref:System.Xml.Linq.XComment> オブジェクトを表すリテラル。  
@@ -58,6 +58,6 @@ ms.locfileid: "74349396"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XComment>
-- [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 要素リテラル](xml-element-literal.md)
+- [XML リテラル](index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)

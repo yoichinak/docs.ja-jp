@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: 44823b409cfa81dc889aabacf101fac90bf851e0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: bd0931cab520f8580c0d7473a44e350752e287bb
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351411"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392107"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 
@@ -29,7 +29,7 @@ ms.locfileid: "74351411"
 
 - **宣言コンテキスト。** `Overloads` は、プロパティまたはプロシージャの宣言ステートメントでのみ使用できます。
 
-- **結合された修飾子。** 同じプロシージャ宣言内で `Overloads` を [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md) と共に指定することはできません。
+- **結合された修飾子。** 同じプロシージャ宣言内で `Overloads` を [Shadows](shadows.md) と共に指定することはできません。
 
 - **必要な相違点。** この宣言内の*シグネチャ*は、オーバーロードされるすべてのプロパティまたはプロシージャのシグネチャと異なる必要があります。 シグネチャは、プロパティまたはプロシージャの名前と以下の項目で構成されます。
 
@@ -67,18 +67,18 @@ ms.locfileid: "74351411"
 
 `Overloads` 修飾子は、次のコンテキストで使用できます。
 
-- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function ステートメント](../statements/function-statement.md)
 
-- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../statements/operator-statement.md)
 
-- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)
+- [Property ステートメント](../statements/property-statement.md)
 
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [Sub ステートメント](../statements/sub-statement.md)
 
 ## <a name="see-also"></a>関連項目
 
-- [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
-- [プロシージャのオーバーロード](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [方法: 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [Shadows](shadows.md)
+- [プロシージャのオーバーロード](../../programming-guide/language-features/procedures/procedure-overloading.md)
+- [Generic Types in Visual Basic](../../programming-guide/language-features/data-types/generic-types.md)
+- [演算子プロシージャ](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [方法: 変換演算子を定義する](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)

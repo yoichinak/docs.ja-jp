@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: 91f2a27ed9b6fb296dbb9e50fc488fd012311890
-ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.openlocfilehash: 5530da4c784346df4a1088998b8d2027feee08e3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005508"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403162"
 ---
 # <a name="-main"></a>-main
 `Sub Main` プロシージャを格納するクラスまたはモジュールを指定します。  
@@ -29,7 +29,7 @@ ms.locfileid: "72005508"
 ## <a name="remarks"></a>Remarks  
  このオプションは、実行可能ファイルまたは Windows 実行可能プログラムを作成するときに使用します。 **-main** オプションを省略した場合、すべてのパブリック クラスとモジュールから、有効な共有 `Sub Main` がコンパイラにより検索されます。  
   
- `Main` プロシージャのさまざまな形式については、「[Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)」を参照してください。  
+ `Main` プロシージャのさまざまな形式については、「[Visual Basic の Main プロシージャ](../../programming-guide/program-structure/main-procedure.md)」を参照してください。  
   
  `location` が <xref:System.Windows.Forms.Form> から継承されるクラスである場合にクラスに `Main` プロシージャがないとき、アプリケーションを起動する既定の `Main` プロシージャがコンパイラによって提供されます。 これにより、開発環境で作成されたコードを、コマンド ラインでコンパイルできます。  
   
@@ -54,7 +54,7 @@ vbc t2.vb t3.vb -main:Test2
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-target (Visual Basic)](target.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)
+- [Visual Basic の Main プロシージャ](../../programming-guide/program-structure/main-procedure.md)

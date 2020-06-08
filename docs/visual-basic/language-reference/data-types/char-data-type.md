@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Char data type [Visual Basic], character literals
 ms.assetid: cd7547a9-7855-4e8e-b216-35d74a362657
-ms.openlocfilehash: 1ed5b19a307d094fc1d5a6bb0251c57052dc9bc1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3dbbf9f6a2c4079775e05f5d2dcd8704c1ec4259
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74344045"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387479"
 ---
 # <a name="char-data-type-visual-basic"></a>文字型 (Char) (Visual Basic)
 
@@ -37,7 +37,7 @@ Unicode の最初の 128 コード ポイント (0 ～ 127) は、標準の米�
 
 Visual Basic では、`Char` と数値型の間で直接に変換されません。 <xref:Microsoft.VisualBasic.Strings.Asc%2A> または <xref:Microsoft.VisualBasic.Strings.AscW%2A> 関数を使用して、`Char` 値をそのコード ポイントを表す `Integer` に変換できます。 <xref:Microsoft.VisualBasic.Strings.Chr%2A> または <xref:Microsoft.VisualBasic.Strings.ChrW%2A> 関数を使用して、`Integer` 値をそのコード ポイントを持つ `Char` に変換できます。
 
-型チェック スイッチ ([Option Strict ステートメント](../../../visual-basic/language-reference/statements/option-strict-statement.md)) がオンになっている場合、リテラル型の文字を 1 文字の文字列リテラルに追加して、`Char` データ型として識別する必要があります。 次に例を示します。 `charVar` 変数への最初の代入では、`Option Strict` がオンになっているため、コンパイラ エラー [BC30512](../../misc/bc30512.md) が生成されます。 2 つ目は、リテラル型の文字 `c` によって、リテラルが `Char` 値として識別されるため、正常にコンパイルされます。
+型チェック スイッチ ([Option Strict ステートメント](../statements/option-strict-statement.md)) がオンになっている場合、リテラル型の文字を 1 文字の文字列リテラルに追加して、`Char` データ型として識別する必要があります。 次に例を示します。 `charVar` 変数への最初の代入では、`Option Strict` がオンになっているため、コンパイラ エラー [BC30512](../../misc/bc30512.md) が生成されます。 2 つ目は、リテラル型の文字 `c` によって、リテラルが `Char` 値として識別されるため、正常にコンパイルされます。
 
 ```vb
 Option Strict On
@@ -74,9 +74,9 @@ End Module
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - <xref:Microsoft.VisualBasic.Strings.Chr%2A>
 - <xref:Microsoft.VisualBasic.Strings.ChrW%2A>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データの種類](index.md)
+- [String データ型](string-data-type.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [方法: 符号なしの型を使用する Windows の機能を呼び出す](../../programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)

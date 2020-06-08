@@ -2,12 +2,12 @@
 title: '方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ)'
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
-ms.openlocfilehash: 723a42e79f1def171a08b28986049ffa04945fc4
-ms.sourcegitcommit: 43d10ef65f0f1fd6c3b515e363bde11a3fcd8d6d
+ms.openlocfilehash: 107f3457fe7361fab16c2c8ce837c90484fc7633
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2020
-ms.locfileid: "78266990"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397948"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ) (Visual Basic)
 この例では、ファイル サイズ (バイト単位) に関連した 5 つのクエリを紹介しています。  
@@ -122,5 +122,5 @@ System.Linq 名前空間の `Imports` ステートメントを使用して、Vis
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)
-- [LINQ とファイル ディレクトリ (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects (Visual Basic)](linq-to-objects.md)
+- [LINQ とファイル ディレクトリ (Visual Basic)](linq-and-file-directories.md)

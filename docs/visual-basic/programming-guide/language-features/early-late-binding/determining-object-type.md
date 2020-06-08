@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: a77cc0603a0b61f58a4aa703c4b1e6ef4c26729c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3b1c4ad0ab4fd8d2897aff6ad9097cdc81272455
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345199"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410645"
 ---
 # <a name="determining-object-type-visual-basic"></a>オブジェクトの型の決定 (Visual Basic)
 汎用オブジェクト変数 (`Object` として宣言する変数) では、あらゆるクラスのオブジェクトを保持できます。 `Object` 型の変数を使用する場合、オブジェクトのクラスによって異なるアクションを実行しなければならないことがあります。たとえば、オブジェクトによっては、特定のプロパティやメソッドがサポートされません。 Visual Basic では、`TypeName` 関数と `TypeOf...Is` 演算子という 2 つの方法によって、オブジェクト変数に格納されているオブジェクトの型を特定できます。  
@@ -47,8 +47,8 @@ ms.locfileid: "74345199"
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
-- [文字列名によるプロパティまたはメソッドの呼び出し](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
-- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [If...Then...Else ステートメント](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)
-- [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
-- [Integer データ型](../../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [文字列名によるプロパティまたはメソッドの呼び出し](calling-a-property-or-method-using-a-string-name.md)
+- [Object 型](../../../language-reference/data-types/object-data-type.md)
+- [If...Then...Else ステートメント](../../../language-reference/statements/if-then-else-statement.md)
+- [String データ型](../../../language-reference/data-types/string-data-type.md)
+- [Integer データ型](../../../language-reference/data-types/integer-data-type.md)

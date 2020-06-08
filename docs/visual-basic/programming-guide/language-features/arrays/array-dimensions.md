@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 12e983ae62fa9f9ea762d434ffe5b73873a4a2e8
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f971f0c3693177adbcb8869d487e3ad41d49ddc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351908"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413105"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列の次元
 
@@ -95,5 +95,5 @@ Dim salesAmounts(4, 11, 30) As Double
 
 ## <a name="see-also"></a>関連項目
 
-- [配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [配列のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [配列](index.md)
+- [配列のトラブルシューティング](troubleshooting-arrays.md)

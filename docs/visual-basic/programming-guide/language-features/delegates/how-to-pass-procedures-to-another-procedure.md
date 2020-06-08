@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: 300489935ce54d78b989d09211a7f6ba95c2f514
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 36f623068372614ae034a8a7b31bffb7496f98b1
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345247"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410696"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>方法: Visual Basic でプロシージャを別のプロシージャに渡す
 この例では、デリゲートを使用してプロシージャを別のプロシージャに渡す方法を示します。  
@@ -47,7 +47,7 @@ ms.locfileid: "74345247"
   
 ## <a name="see-also"></a>関連項目
 
-- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [AddressOf 演算子](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [方法: デリゲート メソッドを呼び出す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [デリゲート](index.md)
+- [AddressOf 演算子](../../../language-reference/operators/addressof-operator.md)
+- [Delegate ステートメント](../../../language-reference/statements/delegate-statement.md)
+- [方法: デリゲート メソッドを呼び出す](how-to-invoke-a-delegate-method.md)

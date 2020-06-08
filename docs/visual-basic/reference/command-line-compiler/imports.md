@@ -6,12 +6,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: 2a1dd19189ff65413255b9bc137e1a7f0227bbe1
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: cc9fc222843bdfe8e49d2d291dc36ff3e0c63fc2
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716648"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408596"
 ---
 # <a name="-imports-visual-basic"></a>-imports (Visual Basic)
 指定されたアセンブリから名前空間をインポートします。  
@@ -31,7 +31,7 @@ ms.locfileid: "75716648"
 ## <a name="remarks"></a>Remarks  
  `-imports` オプションでは、参照アセンブリから、あるいはソース ファイルの現在のセット内に定義されている名前空間をインポートします。  
   
- `-imports` で指定された名前空間のメンバーは、コンパイル時にすべてのソースコード ファイルで使用できます。 単一のソースコード ファイルで名前空間を使用するには、[ ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md) を使用します。  
+ `-imports` で指定された名前空間のメンバーは、コンパイル時にすべてのソースコード ファイルで使用できます。 単一のソースコード ファイルで名前空間を使用するには、[ ステートメント (.NET 名前空間および型)](../../language-reference/statements/imports-statement-net-namespace-and-type.md) を使用します。  
   
 |Visual Studio 統合開発環境で -imports を設定するには|  
 |---|  
@@ -50,6 +50,6 @@ End Module
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [参照と Imports ステートメント](../../programming-guide/program-structure/references-and-the-imports-statement.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

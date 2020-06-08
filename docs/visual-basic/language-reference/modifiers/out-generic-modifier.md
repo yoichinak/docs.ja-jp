@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Out keyword [Visual Basic]
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
-ms.openlocfilehash: 0460015b44971fa638dba47183690ffcc89ca55f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 28ae7d6fd51170aa822072fc2f5357443f51a353
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351422"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392094"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (ジェネリック修飾子) (Visual Basic)
 
@@ -64,4 +64,4 @@ Visual Basic では、デリゲート型を指定せずに共変のインター�
 ## <a name="see-also"></a>関連項目
 
 - [ジェネリック インターフェイスの変性](../../programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)
-- [In](../../../visual-basic/language-reference/modifiers/in-generic-modifier.md)
+- [In](in-generic-modifier.md)

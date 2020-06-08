@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -debug compiler option [Visual Basic]
 - debug compiler option [Visual Basic]
 ms.assetid: c2b0bea5-1d5e-499f-9bd5-4f6c6b715ea2
-ms.openlocfilehash: df65d1c095f5a22d562d78e15baf750a20ec2556
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60c6e512a648f093bb9c70b5af86d5719e544adc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75716773"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408726"
 ---
 # <a name="-debug-visual-basic"></a>-debug (Visual Basic)
 
@@ -32,7 +32,7 @@ or
 
 ## <a name="arguments"></a>引数
 
-|用語|定義|
+|項目|定義|
 |---|---|
 |`+` &#124; `-`|任意。 `+` または `-debug` を指定すると、コンパイラによってデバッグ情報が生成され、.pdb ファイルに配置されます。 `-` を指定することは、`-debug` を指定しない場合と同じ効果があります。|
 |`full` &#124; `pdbonly`|任意。 コンパイラによって生成されるデバッグ情報の種類を指定します。 `-debug:pdbonly` を指定しない場合、既定値は `full` になります。これにより、実行中のプログラムにデバッガーをアタッチできます。 `pdbonly` 引数を指定すると、プログラムがデバッガーで開始されたときに、ソースコードのデバッグが可能になりますが、実行中のプログラムがデバッガーにアタッチされているときにのみアセンブリ言語コードが表示されます。|
@@ -59,6 +59,6 @@ vbc -debug -out:app.exe test.vb
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic のコマンド ライン コンパイラ](../../../visual-basic/reference/command-line-compiler/index.md)
-- [-bugreport](../../../visual-basic/reference/command-line-compiler/bugreport.md)
-- [コンパイル コマンド ラインのサンプル](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Visual Basic のコマンド ライン コンパイラ](index.md)
+- [-bugreport](bugreport.md)
+- [コンパイル コマンド ラインのサンプル](sample-compilation-command-lines.md)

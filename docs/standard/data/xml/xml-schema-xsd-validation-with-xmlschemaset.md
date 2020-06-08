@@ -7,12 +7,12 @@ dev_langs:
 - vb
 - cpp
 ms.assetid: 359b10eb-ec05-4cc6-ac96-c2b060afc4de
-ms.openlocfilehash: 34215c2b06db08a74b5b9c13589ac84f26a2ef8f
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 1729380180d4440ac107885a39eff706c7fc8e5c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158581"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290293"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemaset"></a>XmlSchemaSet による XML スキーマ (XSD) 検証
 
@@ -44,5 +44,5 @@ XML ドキュメントは、<xref:System.Xml.Schema.XmlSchemaSet> の XML スキ
   
 ## <a name="see-also"></a>関連項目
 
-- [スキーマをコンパイルするための XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
-- [XML スキーマの使用](../../../../docs/standard/data/xml/working-with-xml-schemas.md)
+- [スキーマをコンパイルするための XmlSchemaSet](xmlschemaset-for-schema-compilation.md)
+- [XML スキーマの使用](working-with-xml-schemas.md)

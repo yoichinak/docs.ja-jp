@@ -2,12 +2,12 @@
 title: '方法: XML ファイルにオブジェクト データを書き込む'
 ms.date: 07/20/2015
 ms.assetid: f7966480-5ed2-43ac-9894-33427436de2a
-ms.openlocfilehash: 989920709428f0e9cb4ddb8aeacfc71a2df220d2
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 9608a48cb8b3fac1c71affa7a0a17e9789f94b18
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75345978"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84413155"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-visual-basic"></a>方法: XML ファイルにオブジェクト データを書き込む (Visual Basic)
 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、クラスから XML ファイルにオブジェクトを書き込む例を次に示します。  
@@ -57,5 +57,5 @@ End Module
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.IO.StreamWriter>
-- [方法: XML ファイルからオブジェクト データを読み込む (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/how-to-read-object-data-from-an-xml-file.md)
-- [シリアル化 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/serialization/index.md)
+- [方法: XML ファイルからオブジェクト データを読み込む (Visual Basic)](how-to-read-object-data-from-an-xml-file.md)
+- [シリアル化 (Visual Basic)](index.md)

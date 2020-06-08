@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: fe70f8fb655579049bb36fc324d04530259d25f2
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2c696d5b8c83ae55caf61e4710630ad1e34c088d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74348924"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401772"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework のファイル I/O とファイル システムで使用するクラス (Visual Basic)
 
@@ -65,4 +65,4 @@ ms.locfileid: "74348924"
 - [ストリームの構成](../../../../standard/io/composing-streams.md)
 - [ファイルおよびストリーム入出力](../../../../standard/io/index.md)
 - [非同期ファイル I/O](../../../../standard/io/asynchronous-file-i-o.md)
-- [.NET Framework のファイル I/O とファイル システムの基礎 (Visual Basic)](../../../../visual-basic/developing-apps/programming/drives-directories-files/basics-of-net-framework-file-io-and-the-file-system.md)
+- [.NET Framework のファイル I/O とファイル システムの基礎 (Visual Basic)](basics-of-net-framework-file-io-and-the-file-system.md)

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - I literal type character [Visual Basic]
 - Integer data type
 ms.assetid: a8f233b4-4be3-455c-861b-05af2fbb6c60
-ms.openlocfilehash: c5b1041b8ef0ca9898a846fea03888537bb4abbf
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: aa7b64162308d6af2763b29034c5a7276c973876
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401347"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84415610"
 ---
 # <a name="integer-data-type-visual-basic"></a>整数データ型 (Visual Basic)
 
@@ -98,9 +98,9 @@ k = 5.5
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Int32?displayProperty=nameWithType>
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [Long データ型](../../../visual-basic/language-reference/data-types/long-data-type.md)
-- [Short データ型](../../../visual-basic/language-reference/data-types/short-data-type.md)
-- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [変換の概要](../../../visual-basic/language-reference/keywords/conversion-summary.md)
-- [データ型の有効な使用方法](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データの種類](index.md)
+- [Long データ型](long-data-type.md)
+- [Short データ型](short-data-type.md)
+- [データ型変換関数](../functions/type-conversion-functions.md)
+- [変換の概要](../keywords/conversion-summary.md)
+- [データ型の有効な使用方法](../../programming-guide/language-features/data-types/efficient-use-of-data-types.md)
