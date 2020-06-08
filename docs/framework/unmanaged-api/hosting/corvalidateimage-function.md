@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0117e080-05f9-4772-885d-e1847230947c
 topic_type:
 - apiref
-ms.openlocfilehash: 8841fab0517353849ef99594bcbd03dda772c766
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 426b39aa3d1ada5ae44565a742b70681a7bcf6d3
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616503"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493475"
 ---
 # <a name="_corvalidateimage-function"></a>_CorValidateImage 関数
 マネージド モジュール イメージを検証し、それらが読み込まれると、オペレーティング システム ローダーに通知します。  
@@ -59,7 +59,7 @@ STDAPI _CorValidateImage (
   
 - マネージモジュールイメージが読み込まれると、ローダーに戻ります。  
   
- 実行可能イメージの場合、オペレーティングシステムローダーは、実行可能ファイルで指定されたエントリポイントに関係なく、 [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)関数を呼び出します。 DLL アセンブリイメージの場合、ローダーは[_CorDllMain](cordllmain-function.md)関数を呼び出します。  
+ 実行可能イメージの場合、オペレーティングシステムローダーは、実行可能ファイルで指定されたエントリポイントに関係なく、 [_CorExeMain](corexemain-function.md)関数を呼び出します。 DLL アセンブリイメージの場合、ローダーは[_CorDllMain](cordllmain-function.md)関数を呼び出します。  
   
  `_CorExeMain`またはは `_CorDllMain` 、次の操作を実行します。  
   

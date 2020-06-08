@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: ce7a21f9-0ca3-4b92-bc4b-bb803cae3f51
 topic_type:
 - apiref
-ms.openlocfilehash: 9aeb7a294beb10f9c2968e6161c72fdc362c4991
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c88e97f8187ac347f4ff39890c8d87ee80c8f9e
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177060"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500716"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 関数
-コントロールが関数に渡されることをプロファイラーに通知し、スタック フレームと関数の引数に関する情報を提供します。 この関数は[関数の関数を置](functionenter-function.md)き換えます。  
+コントロールが関数に渡されていることをプロファイラーに通知し、スタックフレームと関数の引数に関する情報を提供します。 この関数は、 [Functionenter](functionenter-function.md)関数よりも優先されます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,47 +39,47 @@ void __stdcall FunctionEnter2 (
 
 - `funcId`
 
-  \[in] コントロールの受け渡し先の関数の識別子。
+  \[in] コントロールが渡される関数の識別子。
 
 - `clientData`
 
-  \[in] 再マップされた関数識別子。 [FunctionIDMapper](functionidmapper-function.md)
+  \[では、マップされた関数の識別子。これは、プロファイラーが以前に[Functionidmapper](functionidmapper-function.md)関数を使用して指定したものです。
   
 - `func`
 
-  \[in]`COR_PRF_FRAME_INFO`スタック フレームに関する情報を指す値。
+  \[in] `COR_PRF_FRAME_INFO` スタックフレームに関する情報を示す値。
   
-  プロファイラーは、[これを ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに返すことができる不透明なハンドルとして扱う必要があります。  
+  プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。  
   
 - `argumentInfo`
 
-  \[in] 関数の引数のメモリ内の位置を指定する[COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md)構造体へのポインター。
+  \[では、関数の引数のメモリ内の場所を指定する[COR_PRF_FUNCTION_ARGUMENT_INFO](cor-prf-function-argument-info-structure.md)構造体へのポインター。
 
-  引数情報にアクセスするには、フラグを`COR_PRF_ENABLE_FUNCTION_ARGS`設定する必要があります。 プロファイラーは、イベント フラグを設定するのに[は、](icorprofilerinfo-seteventmask-method.md)メソッドを使用できます。
+  引数情報にアクセスするには、 `COR_PRF_ENABLE_FUNCTION_ARGS` フラグを設定する必要があります。 プロファイラーは、 [ICorProfilerInfo:: SetEventMask](icorprofilerinfo-seteventmask-method.md)メソッドを使用してイベントフラグを設定できます。
 
 ## <a name="remarks"></a>解説  
- 値が変更されたり`func`破棄`argumentInfo`されたりする可能性があるため、`FunctionEnter2`関数が戻った後は、 および パラメーターの値は無効になります。  
+ 値が変更さ `func` `argumentInfo` `FunctionEnter2` れるか、値が破棄される可能性があるため、関数から制御が戻った後に、パラメーターとパラメーターの値が無効になります。  
   
- 関数`FunctionEnter2`はコールバックです。それを実装する必要があります。 実装では、 ( `__declspec``naked`) ストレージ クラス属性を使用する必要があります。  
+ `FunctionEnter2`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec` ( `naked` ) ストレージクラス属性を使用する必要があります。  
   
- 実行エンジンは、この関数を呼び出す前にレジスタを保存しません。  
+ この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
   
-- 入力時には、使用するすべてのレジスタ (浮動小数点単位 (FPU) 内のレジスタも含む) を保存する必要があります。  
+- 入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。  
   
-- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップオフしてスタックを復元する必要があります。  
+- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
   
- の実装`FunctionEnter2`はガベージ コレクションを遅延するため、ブロックしないでください。 スタックがガベージ コレクションに優しい状態ではない可能性があるため、実装はガベージ コレクションを試行しないでください。 ガベージ コレクションが試行されると、ランタイムは、戻るまで`FunctionEnter2`ブロックします。  
+ の実装は、 `FunctionEnter2` ガベージコレクションを遅延させるため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにしてください。 ガベージコレクションが試行された場合、ランタイムはが返されるまでブロックし `FunctionEnter2` ます。  
   
- また、この`FunctionEnter2`関数はマネージ コードを呼び出したり、マネージ メモリ割り当てを引き起こしたりしないでください。  
+ また、 `FunctionEnter2` 関数はマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コルプロフ.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

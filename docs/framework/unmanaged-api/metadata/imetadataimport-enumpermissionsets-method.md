@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 347d7e5c-c90f-45ad-bd1e-2c7912b0b19c
 topic_type:
 - apiref
-ms.openlocfilehash: e628cf5dab8006b0df0ab6c60dc995cd0c6bb29d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 79b1493d262288c1d85a56538810e35a73441595
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175448"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84491764"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets メソッド
 指定したメタデータ スコープ内のオブジェクトのアクセス許可を列挙します。  
@@ -40,40 +40,40 @@ HRESULT EnumPermissionSets
   
 ## <a name="parameters"></a>パラメーター  
  `phEnum`  
- [イン、アウト]列挙子へのポインター。 このメソッドの最初の呼び出しでは、NULL にする必要があります。  
+ [入力、出力]列挙子へのポインター。 このメソッドの最初の呼び出しでは、この値は NULL である必要があります。  
   
  `tk`  
- [in]検索の範囲を制限するメタデータ トークン、または可能な限り広い範囲を検索する場合は NULL。  
+ から検索範囲を制限するメタデータトークン。または、可能な限り広い範囲を検索する場合は NULL。  
   
  `dwActions`  
- [in]に含`rPermission`める値<xref:System.Security.Permissions.SecurityAction>を表すフラグ、または すべてのアクションを返す 0。  
+ から<xref:System.Security.Permissions.SecurityAction>に含める値を表すフラグ `rPermission` 。すべてのアクションを返す場合は0。  
   
  `rPermission`  
- [アウト]アクセス許可トークンの格納に使用される配列。  
+ 入出力アクセス許可トークンを格納するために使用される配列。  
   
  `cMax`  
  [in] `rPermission` 配列の最大サイズ。  
   
  `pcTokens`  
- [アウト]で返されるアクセス許可トークンの`rPermission`数。  
+ 入出力で返されたアクセス許可トークンの数 `rPermission` 。  
   
 ## <a name="return-value"></a>戻り値  
   
 |HRESULT|説明|  
 |-------------|-----------------|  
 |`S_OK`|`EnumPermissionSets`正常に返されました。|  
-|`S_FALSE`|列挙するトークンがありません。 その場合は、`pcTokens`ゼロです。|  
+|`S_FALSE`|列挙するトークンがありません。 この場合、 `pcTokens` は0になります。|  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll にリソースとして含まれる  
+ **ライブラリ:** Mscoree.dll にリソースとして含まれています  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataImport インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [IMetaDataImport2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport インターフェイス](imetadataimport-interface.md)
+- [IMetaDataImport2 インターフェイス](imetadataimport2-interface.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2ca8a7a2-7b54-4ba3-8e73-277c7df485f3
 topic_type:
 - apiref
-ms.openlocfilehash: 248f1d281697923e2da14517ca174fe615bba4ff
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 359dd84032fce920892631dda2615f63aa54fa6b
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616204"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504382"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 列挙型
 特定のメモリ割り当てが要求されたが、満たされない場合のエラーの影響を示す値を格納します。  
@@ -43,7 +43,7 @@ typedef enum {
 |`eTaskCritical`|割り当てを要求したタスクを実行するために割り当てが不可欠であることを示します。 メモリを割り当てることができない場合、CLR はタスクを実行できることを保証できません。 エラーが発生した場合、CLR は <xref:System.Threading.ThreadAbortException> 物理操作システムスレッドでを発生させます。|  
   
 ## <a name="remarks"></a>解説  
- [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)インターフェイスと[IHostMAlloc](ihostmalloc-interface.md)インターフェイスで定義されているメモリ割り当てメソッドは、この型のパラメーターを受け取ります。 障害の重大度に応じて、割り当て要求を直ちに失敗させるか、または満たされるまで待機するかをホストが決定できます。  
+ [IHostMemoryManager](ihostmemorymanager-interface.md)インターフェイスと[IHostMAlloc](ihostmalloc-interface.md)インターフェイスで定義されているメモリ割り当てメソッドは、この型のパラメーターを受け取ります。 障害の重大度に応じて、割り当て要求を直ちに失敗させるか、または満たされるまで待機するかをホストが決定できます。  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
@@ -57,4 +57,4 @@ typedef enum {
 ## <a name="see-also"></a>関連項目
 
 - [ICLRMemoryNotificationCallback インターフェイス](iclrmemorynotificationcallback-interface.md)
-- [ホスティングの列挙体](hosting-enumerations.md)
+- [ホスティングの列挙型](hosting-enumerations.md)

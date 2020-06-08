@@ -6,12 +6,12 @@ helpviewer_keywords:
 - profiling interfaces [.NET Framework]
 - interfaces [.NET Framework profiling]
 ms.assetid: d9303db8-e881-4217-91b7-8c7573c8ef9e
-ms.openlocfilehash: 8b6b9acff2945e2d8fd684bfa31e4af086ea5ab9
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f073794b4fdf89f289b70fed9967ee37b5f4e133
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868149"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84494034"
 ---
 # <a name="profiling-interfaces"></a>プロファイリングのインターフェイス
 ここでは、共通言語ランタイム (CLR) で実行中のプログラムに対してプロファイルを可能にするアンマネージ インターフェイスについて説明します。  
@@ -63,7 +63,7 @@ ms.locfileid: "76868149"
  .NET Framework 2.0 以降でサポートされるメソッドによって、`ICorProfilerInfo` インターフェイスを拡張します。  
   
  [ICorProfilerInfo3 インターフェイス](icorprofilerinfo3-interface.md)  
- .NET Framework 4 以降のバージョンでサポートされているメソッドを使用して、`ICorProfilerInfo2` インターフェイスを拡張します。  
+ `ICorProfilerInfo2`.NET Framework 4 以降のバージョンでサポートされているメソッドを使用して、インターフェイスを拡張します。  
   
  [ICorProfilerInfo4 インターフェイス](icorprofilerinfo4-interface.md)  
  コード プロファイラーが、イベントの監視および情報の要求を制御するために CLR との通信で使用するメソッドを提供します。  
@@ -81,7 +81,7 @@ ms.locfileid: "76868149"
  アプリケーションまたはプロファイラーによってロードされたモジュールのコレクションを順番に反復処理するためのメソッドを提供します。  
   
  [ICorProfilerObjectEnum インターフェイス](icorprofilerobjectenum-interface.md)  
- [Ngen.exe (ネイティブイメージジェネレーター)](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)によって生成される固定されたオブジェクトのコレクションを順番に反復処理するメソッドを提供します。  
+ [Ngen.exe (ネイティブイメージジェネレーター)](../../tools/ngen-exe-native-image-generator.md)によって生成される固定されたオブジェクトのコレクションを順番に反復処理するメソッドを提供します。  
   
  [ICorProfilerThreadEnum インターフェイス](icorprofilerthreadenum-interface.md)  
  CLR でスレッドのコレクションを順番に反復処理するためのメソッドを提供します。  
@@ -89,11 +89,11 @@ ms.locfileid: "76868149"
  [IMethodMalloc インターフェイス](imethodmalloc-interface.md)  
  新しい Microsoft 中間言語 (MSIL) 関数の本体にメモリを割り当てるための[Alloc](imethodmalloc-alloc-method.md)メソッドを提供します。  
   
-## <a name="related-sections"></a>関連セクション  
- [プロファイルの概要](profiling-overview.md)  
+## <a name="related-sections"></a>関連項目  
+ [プロファイリングの概要](profiling-overview.md)  
   
  [グローバル静的関数のプロファイル](profiling-global-static-functions.md)  
   
- [列挙型のプロファイリング](profiling-enumerations.md)  
+ [列挙体のプロファイリング](profiling-enumerations.md)  
   
  [構造体のプロファイリング](profiling-structures.md)

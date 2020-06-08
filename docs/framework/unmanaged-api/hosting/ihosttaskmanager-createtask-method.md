@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6f8ad36-61e1-42b0-9db2-add575646d18
 topic_type:
 - apiref
-ms.openlocfilehash: 7079a915c0402df62afa5648317619af82c943b0
-ms.sourcegitcommit: e5772b3ddcc114c80b4c9767ffdb3f6c7fad8f05
+ms.openlocfilehash: 4037ffe63d8ebfca67cbd0b3293d36be7481b1bd
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/26/2020
-ms.locfileid: "83841985"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501418"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask メソッド
 ホストが新しいタスクを作成することを要求します。  
@@ -47,7 +47,7 @@ HRESULT CreateTask (
  から関数に渡されるユーザーデータへのポインター。関数がパラメーターを受け取らない場合は null。  
   
  `ppTask`  
- 入出力ホストによって作成された[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンスのアドレスへのポインター。タスクを作成できない場合は null。 このタスクは、 [IHostTask:: Start](ihosttask-start-method.md)の呼び出しによって明示的に開始されるまで、中断状態のままになります。  
+ 入出力ホストによって作成された[IHostTask](ihosttask-interface.md)インスタンスのアドレスへのポインター。タスクを作成できない場合は null。 このタスクは、 [IHostTask:: Start](ihosttask-start-method.md)の呼び出しによって明示的に開始されるまで、中断状態のままになります。  
   
 ## <a name="return-value"></a>戻り値  
   
@@ -61,10 +61,10 @@ HRESULT CreateTask (
 |E_FAIL|原因不明の致命的なエラーが発生しました。 メソッドが E_FAIL を返すと、そのプロセス内で CLR が使用できなくなります。 後続のホストメソッドの呼び出しでは HOST_E_CLRNOTAVAILABLE が返されます。|  
 |E_OUTOFMEMORY|要求されたタスクを作成するのに十分なメモリがありませんでした。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  CLR はを呼び出して、 `CreateTask` ホストが新しいタスクを作成することを要求します。 ホストは、インスタンスへのインターフェイスポインターを返し `IHostTask` ます。 を呼び出すことによって明示的に開始されるまで、返されたタスクは中断されたままである必要があり `IHostTask::Start` ます。  
   
-## <a name="requirements"></a>必要条件  
+## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー:** Mscoree.dll  
