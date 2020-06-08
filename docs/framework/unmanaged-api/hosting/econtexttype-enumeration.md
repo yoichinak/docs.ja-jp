@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92b926a9-b87e-408a-9036-df7b752c9492
 topic_type:
 - apiref
-ms.openlocfilehash: ceb68410e808bf7843149e3f05a39c7a98d0c000
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: b93b27957cc715a5b4718dd9ef61cd11f4a39914
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616295"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493418"
 ---
 # <a name="econtexttype-enumeration"></a>EContextType 列挙型
 現在実行中のスレッドのセキュリティコンテキストを記述します。  
@@ -37,7 +37,7 @@ typedef enum {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`eCurrentContext`|共通言語ランタイム (CLR) が[IHostSecurityManager:: GetSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)メソッドを呼び出す時点での現在のスレッドのコンテキスト、または[IHostSecurityManager:: SetSecurityContext](ihostsecuritymanager-setsecuritycontext-method.md)メソッドの呼び出しで CLR によって要求されたコンテキストを示します。|  
+|`eCurrentContext`|共通言語ランタイム (CLR) が[IHostSecurityManager:: GetSecurityContext](ihostsecuritymanager-getsecuritycontext-method.md)メソッドを呼び出す時点での現在のスレッドのコンテキスト、または[IHostSecurityManager:: SetSecurityContext](ihostsecuritymanager-setsecuritycontext-method.md)メソッドの呼び出しで CLR によって要求されたコンテキストを示します。|  
 |`eRestrictedContext`|ホストが低い特権 (ガベージコレクター、クラスまたはモジュールコンストラクターなど) を持つコンテキストを示します。|  
   
 ## <a name="remarks"></a>解説  
@@ -56,4 +56,4 @@ typedef enum {
 
 - [IHostSecurityContext インターフェイス](ihostsecuritycontext-interface.md)
 - [IHostSecurityManager インターフェイス](ihostsecuritymanager-interface.md)
-- [ホスティングの列挙体](hosting-enumerations.md)
+- [ホスティングの列挙型](hosting-enumerations.md)

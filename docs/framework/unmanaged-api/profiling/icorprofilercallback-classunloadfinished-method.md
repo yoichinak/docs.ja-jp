@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55674b68-678a-4747-ae06-4e91519c7305
 topic_type:
 - apiref
-ms.openlocfilehash: 5d9474f78dd8b999a37f60e0698cfd04240b897a
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 14eb90c707618796d6d62ed2ec5710ceba31ba6c
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866573"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500378"
 ---
 # <a name="icorprofilercallbackclassunloadfinished-method"></a>ICorProfilerCallback::ClassUnloadFinished メソッド
 クラスのアンロードが終了したことをプロファイラーに通知します。  
@@ -37,23 +37,23 @@ HRESULT ClassUnloadFinished(
 
 - `classId`
 
-  の \[] は、アンロードされたクラスを識別します。
+  \[in] は、アンロードされたクラスを識別します。
 
 - `hrStatus`
 
-  \[]) クラスが正常にアンロードされたかどうかを示す HRESULT。
+  \[in] クラスが正常にアンロードされたかどうかを示す HRESULT。
   
-## <a name="remarks"></a>Remarks  
- `ClassUnloadFinished` コールバックの後に、クラスのアンロードの一部が続行される場合があります。 `hrStatus` のエラー HRESULT はエラーを示します。 ただし、`hrStatus` の成功 HRESULT は、クラスのアンロードの最初の部分が成功したことのみを示します。  
+## <a name="remarks"></a>解説  
+ クラスのアンロードの一部は、コールバック後に続行される場合があり `ClassUnloadFinished` ます。 のエラー HRESULT は `hrStatus` エラーを示します。 ただし、の成功 HRESULT は、 `hrStatus` クラスのアンロードの最初の部分が成功したことを示します。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

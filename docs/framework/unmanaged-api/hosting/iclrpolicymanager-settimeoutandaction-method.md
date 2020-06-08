@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 60454f91-d855-4ddf-bb6d-60a02f5eabab
 topic_type:
 - apiref
-ms.openlocfilehash: efd30ef04c148d5e098110efcb37e50f143884e4
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: 02e836601be72d54f561e077cd3c466470bafb25
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83703427"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504096"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction メソッド
 指定された操作のタイムアウト値を設定し、操作が発生したときに共通言語ランタイム (CLR) が実行するポリシーアクションを指定します。  
@@ -37,7 +37,7 @@ HRESULT SetTimeoutAndAction (
   
 ## <a name="parameters"></a>パラメーター  
  `operation`  
- からタイムアウトとポリシーを設定する操作を示す[EClrOperation](eclroperation-enumeration.md)値の1つ `action` 。 次の値がサポートされています。  
+ からタイムアウトとポリシーを設定する操作を示す[EClrOperation](eclroperation-enumeration.md)値の1つ `action` 。 サポートされている値を次に示します。  
   
 - OPR_AppDomainUnload  
   
@@ -66,7 +66,7 @@ HRESULT SetTimeoutAndAction (
 |E_INVALIDARG|指定されたに対してタイムアウトを設定できない `operation` か、に無効な値が指定されました `action` 。|  
   
 ## <a name="remarks"></a>解説  
- `SetTimeoutAndAction`[ICLRPolicyManager:: SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md)メソッドと[ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md)メソッドの機能をカプセル化し、これら2つのメソッドの順次呼び出しの代わりに呼び出すことができます。  
+ `SetTimeoutAndAction`[ICLRPolicyManager:: SetTimeout](iclrpolicymanager-settimeout-method.md)メソッドと[ICLRPolicyManager:: SetActionOnTimeout](iclrpolicymanager-setactionontimeout-method.md)メソッドの機能をカプセル化し、これら2つのメソッドの順次呼び出しの代わりに呼び出すことができます。  
   
 > [!IMPORTANT]
 > すべてのポリシーアクション値は、CLR 操作のタイムアウト動作として指定できるわけではありません。 有効な値については、これら2つの方法に関するトピックの「解説」セクションを参照してください。  

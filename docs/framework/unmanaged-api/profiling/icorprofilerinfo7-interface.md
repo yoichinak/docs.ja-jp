@@ -2,12 +2,12 @@
 title: ICorProfilerInfo7 インターフェイス
 ms.date: 03/30/2017
 ms.assetid: cf37c462-73c5-412a-a7f8-bb26ca746313
-ms.openlocfilehash: f80f310c10bae33583cb7cd2048ede4f5efbe14c
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 0e9f76717aeff27e863245faac241927e7495076
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861750"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495490"
 ---
 # <a name="icorprofilerinfo7-interface"></a>ICorProfilerInfo7 インターフェイス
 [.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
@@ -18,16 +18,16 @@ ms.locfileid: "76861750"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[ApplyMetaData メソッド](icorprofilerinfo7-applymetadata-method.md)|`IMetadataEmit::Define*` メソッドによって新たに定義されたメタデータを、指定したモジュールに適用します。|  
+|[ApplyMetaData メソッド](icorprofilerinfo7-applymetadata-method.md)|メソッドによって新たに定義されたメタデータ `IMetadataEmit::Define*` を、指定したモジュールに適用します。|  
 |[GetInMemorySymbolsLength メソッド](icorprofilerinfo7-getinmemorysymbolslength-method.md)|メモリ内シンボルストリームの長さを返します。|  
 |[ReadInMemorySymbols](icorprofilerinfo7-readinmemorysymbols.md)|メモリ内シンボルストリームからバイトを読み取ります。|  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

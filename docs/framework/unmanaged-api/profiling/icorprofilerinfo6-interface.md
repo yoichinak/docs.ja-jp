@@ -8,12 +8,12 @@ api_location:
 api_type:
 - COM
 ms.assetid: 6f2bb148-1e2b-4e45-a5a5-0ceddc40064b
-ms.openlocfilehash: 80ac17a96e5c1c8c32cfc336da6c2be30eaf80fd
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: fba57a88cd3af582b4edf0e5bdbf6ac48020c9f7
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76868370"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495515"
 ---
 # <a name="icorprofilerinfo6-interface"></a>ICorProfilerInfo6 インターフェイス
 [.NET Framework 4.6 以降のバージョンでサポートされています]  
@@ -27,11 +27,11 @@ ms.locfileid: "76868370"
 |[ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod メソッド](icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md)|特定の NGen モジュールに属し、特定のメソッドの本体にインライン化されているすべてのメソッドの列挙子を返します。|  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

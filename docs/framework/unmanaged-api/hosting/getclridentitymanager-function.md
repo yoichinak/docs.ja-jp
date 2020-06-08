@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66eeca30-adb4-45f4-aff5-347564c95724
 topic_type:
 - apiref
-ms.openlocfilehash: 57f771d933e896677dfc0bd5d9dac58da2af22c8
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 8b1e918edf641d38dd6b91d790bcaff8020293a0
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83617257"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84493267"
 ---
 # <a name="getclridentitymanager-function"></a>GetCLRIdentityManager 関数
 共通言語ランタイム (CLR) が id を管理できるようにするインターフェイスへのポインターを取得します。  
@@ -40,7 +40,7 @@ STDAPI GetCLRIdentityManager(
  から`REFIID`取得するインターフェイスを指定する (インターフェイス識別子)。 この値は IID_ICLRAssemblyIdentityManager または IID_ICLRHostBindingPolicyManager のいずれかである必要があります。  
   
  `ppManager`  
- 入出力[ICLRAssemblyIdentityManager](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)または[ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md)オブジェクトのいずれかのアドレスへのポインター。  
+ 入出力[ICLRAssemblyIdentityManager](iclrassemblyidentitymanager-interface.md)または[ICLRHostBindingPolicyManager](iclrhostbindingpolicymanager-interface.md)オブジェクトのいずれかのアドレスへのポインター。  
   
 ## <a name="remarks"></a>解説  
  関数へのポインターを取得するには、 [GetRealProcAddress](getrealprocaddress-function.md)関数を呼び出し `GetCLRIdentityManager` ます。  

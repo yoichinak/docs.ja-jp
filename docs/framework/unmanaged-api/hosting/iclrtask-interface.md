@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b3a44df3-578a-4451-b55e-70c8e7695f5e
 topic_type:
 - apiref
-ms.openlocfilehash: 419baaf64397830ef86cfd9e5c3437e3f5b57795
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: b1327e13006ca4b3f9074c1348b1817c9a1b3728
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83763008"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84503953"
 ---
 # <a name="iclrtask-interface"></a>ICLRTask インターフェイス
 ホストが共通言語ランタイム (CLR) の要求を行うことができるようにするメソッド、または関連付けられたタスクについて CLR に通知を提供するためのメソッドを提供します。  
@@ -41,7 +41,7 @@ ms.locfileid: "83763008"
 |[YieldTask メソッド](iclrtask-yieldtask-method.md)|CLR がプロセッサ時間を他のタスクで使用できるようにすることを要求します。 CLR では、処理時間を生成できる状態にタスクが配置されるという保証はありません。|  
   
 ## <a name="remarks"></a>解説  
- `ICLRTask`は、CLR のタスクの表現です。 コードの実行中はいつでも、実行中または実行の待機中のいずれかのタスクを記述できます。 ホストは、メソッドを呼び出して、 `ICLRTask::SwitchIn` 現在のインスタンスが表すタスクが操作可能 `ICLRTask` な状態になったことを CLR に通知します。 を呼び出した後、 `ICLRTask::SwitchIn` ホストは任意のオペレーティングシステムスレッドでタスクをスケジュールできます。ただし、 [IHostTaskManager:: beginthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-beginthreadaffinity-method.md)メソッドと[IHostTaskManager:: endthreadaffinity](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-endthreadaffinity-method.md)メソッドの呼び出しで指定されているように、ランタイムにスレッドアフィニティが必要な場合を除きます。 しばらくすると、オペレーティングシステムは、スレッドからタスクを削除して、実行されていない状態にする可能性があります。 たとえば、タスクが同期プリミティブでブロックされた場合や、i/o 操作が完了するまで待機している場合に発生することがあります。 ホストは[Switchout](iclrtask-switchout-method.md)を呼び出して、現在のインスタンスによって表されるタスクが操作可能 `ICLRTask` な状態ではなくなったことを CLR に通知します。  
+ `ICLRTask`は、CLR のタスクの表現です。 コードの実行中はいつでも、実行中または実行の待機中のいずれかのタスクを記述できます。 ホストは、メソッドを呼び出して、 `ICLRTask::SwitchIn` 現在のインスタンスが表すタスクが操作可能 `ICLRTask` な状態になったことを CLR に通知します。 を呼び出した後、 `ICLRTask::SwitchIn` ホストは任意のオペレーティングシステムスレッドでタスクをスケジュールできます。ただし、 [IHostTaskManager:: beginthreadaffinity](ihosttaskmanager-beginthreadaffinity-method.md)メソッドと[IHostTaskManager:: endthreadaffinity](ihosttaskmanager-endthreadaffinity-method.md)メソッドの呼び出しで指定されているように、ランタイムにスレッドアフィニティが必要な場合を除きます。 しばらくすると、オペレーティングシステムは、スレッドからタスクを削除して、実行されていない状態にする可能性があります。 たとえば、タスクが同期プリミティブでブロックされた場合や、i/o 操作が完了するまで待機している場合に発生することがあります。 ホストは[Switchout](iclrtask-switchout-method.md)を呼び出して、現在のインスタンスによって表されるタスクが操作可能 `ICLRTask` な状態ではなくなったことを CLR に通知します。  
   
  タスクは通常、コード実行の終了時に終了します。 その時点で、ホストは `ICLRTask::ExitTask` を呼び出して、関連付けられているを破棄し `ICLRTask` ます。 ただし、の呼び出しを使用してタスクをリサイクルすることもでき `ICLRTask::Reset` ます。これにより、 `ICLRTask` インスタンスを再度使用できます。 この方法では、インスタンスを繰り返し作成および破棄するオーバーヘッドを回避できます。  
   

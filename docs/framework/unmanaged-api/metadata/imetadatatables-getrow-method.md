@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: a7408d51-0bce-45a2-b58f-da4660bbc039
 topic_type:
 - apiref
-ms.openlocfilehash: 71f6c496816fec1a7537f5ccdfdc1b47d17da871
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 13d514157382c75a2eb9799837f9355d0e469c99
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79177116"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84489913"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow メソッド
-指定したテーブル インデックスのテーブル内の指定した行インデックスの行を取得します。  
+指定したテーブルインデックスにあるテーブル内の指定した行インデックスにある行を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,28 +37,28 @@ HRESULT GetRow (
   
 ## <a name="parameters"></a>パラメーター  
  `ixTbl`  
- [in]行の取得元となるテーブルのインデックス。  
+ から行の取得元となるテーブルのインデックス。  
   
  `rid`  
- [in]取得する行のインデックス。  
+ から取得する行のインデックス。  
   
  `ppRow`  
- [アウト]行へのポインターへのポインター。  
+ 入出力行へのポインターへのポインター。  
   
 ## <a name="remarks"></a>解説  
 
-  このメソッドは一貫した結果を返さないため、このメソッドを使用することはお勧めしません。 GUID テーブルの詳細については、共通言語インフラストラクチャ (CLI) のドキュメント、特に「パーティション II: メタデータの定義とセマンティクス」を参照してください。 ドキュメントはオンラインで入手できます。[「ECMA C# および共通言語インフラストラクチャ標準](../../../standard/components.md#applicable-standards)と[標準 ECMA-335 - 共通言語インフラストラクチャ (CLI)」](http://www.ecma-international.org/publications/standards/Ecma-335.htm)を参照してください。  
+  このメソッドは、一貫性のある結果を返さないため、使用しないことをお勧めします。 GUID テーブルの詳細については、共通言語基盤 (CLI) のドキュメント (特に「パーティション II: メタデータの定義とセマンティクス」) を参照してください。 ドキュメントはオンラインで入手できます。「 [Ecma C# および共通言語基盤の標準](../../../standard/components.md#applicable-standards)と[標準 ecma-335-共通言語基盤 (CLI)](http://www.ecma-international.org/publications/standards/Ecma-335.htm)」を参照してください。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コル・h  
+ **ヘッダー:** Cor  
   
- **ライブラリ:** MsCorEE.dll のリソースとして使用されます。  
+ **ライブラリ:** Mscoree.dll のリソースとして使用されます。  
   
- **.NET フレームワークのバージョン**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [IMetaDataTables インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [IMetaDataTables2 インターフェイス](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+- [IMetaDataTables インターフェイス](imetadatatables-interface.md)
+- [IMetaDataTables2 インターフェイス](imetadatatables2-interface.md)

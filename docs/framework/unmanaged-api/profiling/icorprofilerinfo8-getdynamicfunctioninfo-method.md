@@ -11,12 +11,12 @@ api_type:
 - COM
 author: davmason
 ms.author: davmason
-ms.openlocfilehash: 9b5059d9e4bf9b79dc67664c7a7971041d1cf35b
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: eaf33f3b0de7a18e400cd16d29c046784e2e190f
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76861685"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84495321"
 ---
 # <a name="icorprofilerinfo8getdynamicfunctioninfo-method"></a>ICorProfilerInfo8:: GetDynamicFunctionInfo メソッド
 
@@ -38,15 +38,15 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `functionId`
 
-  \[] 情報を取得する関数の ID。
+  \[in] 情報を取得する関数の ID。
 
 - `moduleId`
 
-  で \[] 関数の親クラスが定義されているモジュールへのポインター。
+  \[では、関数の親クラスが定義されているモジュールへのポインター。
 
 - `ppvSig`
 
-  \[out] 関数の署名へのポインター。
+  \[out] 関数のシグネチャへのポインター。
 
 - `pbSig`
 
@@ -54,17 +54,17 @@ HRESULT GetDynamicFunctionInfo( [in]  FunctionID              functionId,
 
 - `cchName`
 
-  \[] `wszName` 配列の最大サイズ。
+  \[in] 配列の最大サイズ `wszName` 。
 
 - `pcchName`
 
-  \[out] `wszName` 配列内の文字数。
+  \[out] 配列内の文字数 `wszName` 。
 
 - `wszName`
 
-  \[out] 関数の名前 (存在する場合) を `WCHAR` の配列。
+  \[out] `WCHAR` 関数の名前 (存在する場合) の配列。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 IL スタブや LCG などの特定のメソッドには、 [IMetaDataImport](../metadata/imetadataimport-interface.md) Api と[IMetaDataImport2](../metadata/imetadataimport2-interface.md) api を使用して取得できるメタデータが関連付けられていません。 このようなメソッドは、命令ポインターを通じて、または[ICorProfilerCallback8::D ynamicmethodjitcompilationstarted](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)をリッスンすることによって、プロファイラーによって検出されます。
 
@@ -72,13 +72,13 @@ IL スタブや LCG などの特定のメソッドには、 [IMetaDataImport](..
 
 ## <a name="requirements"></a>要件
 
-**:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。
+**:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。
 
 **ヘッダー** : CorProf.idl、CorProf.h
 
 **ライブラリ:** CorGuids.lib
 
-**.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+**.NET Framework のバージョン:**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>関連項目
 
