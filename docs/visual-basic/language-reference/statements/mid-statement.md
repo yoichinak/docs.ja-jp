@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: eeef4c13743b75a3d5e61ac46afb94d9ea105b7a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 90408fd8a8cfc9b74c8422d0571d61f8534403f3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348027"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404454"
 ---
 # <a name="mid-statement"></a>Mid ステートメント
 `String` 変数内の指定した数の文字を別の文字列の文字に置き換えます。  
@@ -63,7 +63,7 @@ Mid( _
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **名前空間:** [Microsoft.VisualBasic](../runtime-library-members.md)  
   
  **モジュール:** `Strings`  
   
@@ -72,5 +72,5 @@ Mid( _
 ## <a name="see-also"></a>関連項目
 
 - <xref:Microsoft.VisualBasic.Strings.Mid%2A>
-- [文字列](../../../visual-basic/programming-guide/language-features/strings/index.md)
-- [Visual Basic の文字列の概要](../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [文字列](../../programming-guide/language-features/strings/index.md)
+- [Visual Basic の文字列の概要](../../programming-guide/language-features/strings/introduction-to-strings.md)

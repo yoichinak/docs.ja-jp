@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
-ms.openlocfilehash: 276cb1411c66e1f7205507a1b1053cc8642c7cb0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c5ff802a0f6e081acd00d7cdfab4a8296b4daad9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345407"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84392858"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>方法: 派生クラスによって非表示になっている変数にアクセスする (Visual Basic)
 
@@ -53,12 +53,12 @@ ms.locfileid: "74345407"
 
 ## <a name="see-also"></a>関連項目
 
-- [宣言された要素の参照](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Visual Basic におけるシャドウ](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
-- [シャドウとオーバーライドの違い](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)
-- [方法: 自分で宣言した変数と同じ名前の変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
-- [方法: 継承された変数を隠す](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)
-- [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)
-- [Overrides](../../../../visual-basic/language-reference/modifiers/overrides.md)
-- [Me、My、MyBase、および MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
-- [継承の基本](../../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [宣言された要素の参照](references-to-declared-elements.md)
+- [Visual Basic におけるシャドウ](shadowing.md)
+- [シャドウとオーバーライドの違い](differences-between-shadowing-and-overriding.md)
+- [方法: 自分で宣言した変数と同じ名前の変数を隠す](how-to-hide-a-variable-with-the-same-name-as-your-variable.md)
+- [方法: 継承された変数を隠す](how-to-hide-an-inherited-variable.md)
+- [Shadows](../../../language-reference/modifiers/shadows.md)
+- [Overrides](../../../language-reference/modifiers/overrides.md)
+- [Me、My、MyBase、および MyClass](../../program-structure/me-my-mybase-and-myclass.md)
+- [継承の基本](../objects-and-classes/inheritance-basics.md)

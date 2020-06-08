@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: aa6ae3977977ded05e47d12dabe72f09251f262d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f9e6ffe5a49715592399321ab471d73826e05d8e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353806"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404396"
 ---
 # <a name="operator-statement"></a>Operator Statement
 
@@ -43,25 +43,25 @@ End Operator
 ## <a name="parts"></a>指定項目
 
 `attrlist`  
-任意。 「[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)」を参照してください。
+任意。 「[属性リスト](attribute-list.md)」を参照してください。
 
 `Public`  
-必須です。 この演算子プロシージャが [Public](../../../visual-basic/language-reference/modifiers/public.md) アクセス権を持つことを示します。
+必須です。 この演算子プロシージャが [Public](../modifiers/public.md) アクセス権を持つことを示します。
 
 `Overloads`  
-任意。 「[Overloads](../../../visual-basic/language-reference/modifiers/overloads.md)」を参照してください。
+任意。 「[Overloads](../modifiers/overloads.md)」を参照してください。
 
 `Shared`  
-必須です。 この演算子プロシージャが [Shared](../../../visual-basic/language-reference/modifiers/shared.md)プロシージャであることを示します。
+必須です。 この演算子プロシージャが [Shared](../modifiers/shared.md)プロシージャであることを示します。
 
 `Shadows`  
-任意。 「[Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)」を参照してください。
+任意。 「[Shadows](../modifiers/shadows.md)」を参照してください。
 
 `Widening`  
-`Narrowing` を指定しない場合、変換演算子に必須です。 この演算子プロシージャでは、[拡大](../../../visual-basic/language-reference/modifiers/widening.md)変換を定義していることを示します。 このヘルプページの「拡大変換と縮小変換」を参照してください。
+`Narrowing` を指定しない場合、変換演算子に必須です。 この演算子プロシージャでは、[拡大](../modifiers/widening.md)変換を定義していることを示します。 このヘルプページの「拡大変換と縮小変換」を参照してください。
 
 `Narrowing`  
-`Widening` を指定しない場合、変換演算子に必須です。 この演算子プロシージャでは、[縮小](../../../visual-basic/language-reference/modifiers/narrowing.md)変換を定義していることを示します。 このヘルプページの「拡大変換と縮小変換」を参照してください。
+`Widening` を指定しない場合、変換演算子に必須です。 この演算子プロシージャでは、[縮小](../modifiers/narrowing.md)変換を定義していることを示します。 このヘルプページの「拡大変換と縮小変換」を参照してください。
 
 `operatorsymbol`  
 必須です。 この演算子プロシージャで定義する演算子のシンボルまたは識別子。
@@ -78,8 +78,8 @@ End Operator
 
 |パーツ|説明|
 |----------|-----------------|
-|`ByVal`|省略可能ですが、引渡し方法は [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) にする必要があります。|
-|`operandname`|必須です。 このオペランドを表す変数の名前。 「 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
+|`ByVal`|省略可能ですが、引渡し方法は [ByVal](../modifiers/byval.md) にする必要があります。|
+|`operandname`|必須です。 このオペランドを表す変数の名前。 「 [Declared Element Names](../../programming-guide/language-features/declared-elements/declared-element-names.md)」を参照してください。|
 |`operandtype`|`Option Strict` が `On` である場合を除き、省略可能です。 このオペランドのデータ型。|
 
 `type`  
@@ -96,7 +96,7 @@ End Operator
 
 ## <a name="remarks"></a>Remarks
 
-`Operator` は、クラスまたは構造体でのみ使用できます。 つまり、演算子の*宣言コンテキスト*は、ソース ファイル、名前空間、モジュール、インターフェイス、プロシージャ、ブロックにすることができません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。
+`Operator` は、クラスまたは構造体でのみ使用できます。 つまり、演算子の*宣言コンテキスト*は、ソース ファイル、名前空間、モジュール、インターフェイス、プロシージャ、ブロックにすることができません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](declaration-contexts-and-default-access-levels.md)」を参照してください。
 
 すべての演算子は `Public Shared` である必要があります。 どのオペランドにも `ByRef`、`Optional`、`ParamArray` を指定することはできません。
 
@@ -160,7 +160,7 @@ End Operator
 
 ## <a name="widening-and-narrowing-conversions"></a>Widening and Narrowing Conversions
 
-*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。 詳細については、「 [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+*拡大変換*は実行時に常に成功しますが、*縮小変換*は実行時に失敗する可能性があります。 詳細については、「 [Widening and Narrowing Conversions](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
 変換プロシージャを `Widening` として宣言する場合、プロシージャ コードでエラーが発生しないようにする必要があります。 これは、次のことを意味します。
 
@@ -180,13 +180,13 @@ End Operator
 
 ## <a name="see-also"></a>関連項目
 
-- [IsFalse 演算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
-- [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)
-- [Widening](../../../visual-basic/language-reference/modifiers/widening.md)
-- [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
-- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [演算子プロシージャ](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [方法: 演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [方法: 変換演算子を定義する](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
-- [方法: 演算子プロシージャを呼び出す](../../../visual-basic/programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
-- [方法: 演算子を定義するクラスを使用する](../../../visual-basic/programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
+- [IsFalse 演算子](../operators/isfalse-operator.md)
+- [IsTrue 演算子](../operators/istrue-operator.md)
+- [Widening](../modifiers/widening.md)
+- [Narrowing](../modifiers/narrowing.md)
+- [拡大変換と縮小変換](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [演算子プロシージャ](../../programming-guide/language-features/procedures/operator-procedures.md)
+- [方法: 演算子を定義する](../../programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [方法: 変換演算子を定義する](../../programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [方法: 演算子プロシージャを呼び出す](../../programming-guide/language-features/procedures/how-to-call-an-operator-procedure.md)
+- [方法: 演算子を定義するクラスを使用する](../../programming-guide/language-features/procedures/how-to-use-a-class-that-defines-operators.md)
