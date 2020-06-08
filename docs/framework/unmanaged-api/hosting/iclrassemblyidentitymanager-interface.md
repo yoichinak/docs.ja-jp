@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a81c6fe-cc22-4062-ae27-d6eeee03a7b9
 topic_type:
 - apiref
-ms.openlocfilehash: f06c8228d5eb850c0d5ff94d12be03d7fb75023b
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: 3611de471001d31c40984e71d49ce376bb3e4607
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83615918"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504291"
 ---
 # <a name="iclrassemblyidentitymanager-interface"></a>ICLRAssemblyIdentityManager インターフェイス
 ホストと、アセンブリに関する共通言語ランタイム (CLR) 間の通信をサポートするメソッドを提供します。  
@@ -30,9 +30,9 @@ ms.locfileid: "83615918"
 |------------|-----------------|  
 |[GetBindingIdentityFromFile メソッド](iclrassemblyidentitymanager-getbindingidentityfromfile-method.md)|指定したファイルパスにあるアセンブリのアセンブリ id バインドデータを取得します。|  
 |[GetBindingIdentityFromStream メソッド](iclrassemblyidentitymanager-getbindingidentityfromstream-method.md)|指定したストリーム内のアセンブリの正規アセンブリ id データを取得します。|  
-|[GetCLRAssemblyReferenceList メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)|指定された部分アセンブリ id のリストから[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)インスタンスを取得します。|  
-|[GetProbingAssembliesFromReference メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md)|指定した id を持つアセンブリによって参照されるアセンブリ id の[ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md)列挙子を取得します。|  
-|[GetReferencedAssembliesFromFile メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md)|指定したファイルパスにあるアセンブリによって参照されるアセンブリのリストを含む[ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md)インスタンスを取得します。|  
+|[GetCLRAssemblyReferenceList メソッド](iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md)|指定された部分アセンブリ id のリストから[ICLRAssemblyReferenceList](iclrassemblyreferencelist-interface.md)インスタンスを取得します。|  
+|[GetProbingAssembliesFromReference メソッド](iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md)|指定した id を持つアセンブリによって参照されるアセンブリ id の[ICLRProbingAssemblyEnum](iclrprobingassemblyenum-interface.md)列挙子を取得します。|  
+|[GetReferencedAssembliesFromFile メソッド](iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md)|指定したファイルパスにあるアセンブリによって参照されるアセンブリのリストを含む[ICLRReferenceAssemblyEnum](iclrreferenceassemblyenum-interface.md)インスタンスを取得します。|  
 |[GetReferencedAssembliesFromStream メソッド](iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md)|`ICLRReferenceAssemblyEnum`指定したストリーム内のアセンブリによって参照されるアセンブリのアセンブリ id データを格納しているオブジェクトへのポインターを取得します。|  
 |[IsStronglyNamed メソッド](iclrassemblyidentitymanager-isstronglynamed-method.md)|指定したアセンブリに厳密な名前が付けられているかどうかを示す値を取得します。|  
   

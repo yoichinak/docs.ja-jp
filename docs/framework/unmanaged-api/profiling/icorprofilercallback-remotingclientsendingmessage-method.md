@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54d9a5a5-3877-49c1-a503-ce7c7943bc2a
 topic_type:
 - apiref
-ms.openlocfilehash: 8ae58344a7a17637bf08b9b5179abdba7e7060d6
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: 820a37c8ca16f4962bf1d72b1f0f404cffd92a1a
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866027"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499962"
 ---
 # <a name="icorprofilercallbackremotingclientsendingmessage-method"></a>ICorProfilerCallback::RemotingClientSendingMessage メソッド
 クライアントがサーバーに要求を送信していることをプロファイラーに通知します。  
@@ -46,16 +46,16 @@ HRESULT RemotingClientSendingMessage(
  これにより、リモート処理呼び出しと論理呼び出し履歴の作成を簡単に組み合わせることができます。  
   
  `fIsAsync`  
- から呼び出しが非同期の場合に `true` される値。それ以外の場合は、`false`ます。  
+ から`true`呼び出しが非同期の場合は、それ以外の場合はとなる `false` 値。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

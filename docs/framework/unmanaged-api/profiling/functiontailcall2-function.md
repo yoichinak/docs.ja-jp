@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 249f9892-b5a9-41e1-b329-28a925904df6
 topic_type:
 - apiref
-ms.openlocfilehash: 60276327617ae24e9bdcebf958613c21d3808429
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb7e21e0c6aad5ebb328ae5d1a993716f96e8d47
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79175188"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84500573"
 ---
 # <a name="functiontailcall2-function"></a>FunctionTailcall2 関数
-現在実行中の関数が別の関数に対して末尾呼び出しを実行しようとしていることをプロファイラーに通知し、スタック フレームに関する情報を提供します。  
+現在実行中の関数が別の関数の末尾呼び出しを実行しようとしていることをプロファイラーに通知し、スタックフレームに関する情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -38,43 +38,43 @@ void __stdcall FunctionTailcall2 (
 
 - `funcId`
 
-  \[in] 末尾呼び出しを行おうとしている現在実行中の関数の識別子。
+  \[in] 末尾呼び出しを実行しようとしている現在実行中の関数の識別子。
 
 - `clientData`
 
-  \[in] 再マップされた関数識別子( プロファイラーが以前に[FunctionIDMapper](functionidmapper-function.md)を介して指定した) で、現在実行されている末尾呼び出しを行おうとしている関数の識別子です。
+  \[では、現在実行中の関数の末尾呼び出しを実行しようとしているときに、プロファイラーが以前に[Functionidmapper](functionidmapper-function.md)を使用して指定したリマップ関数識別子。
   
 - `func`
 
-  \[in]`COR_PRF_FRAME_INFO`スタック フレームに関する情報を指す値。
+  \[in] `COR_PRF_FRAME_INFO` スタックフレームに関する情報を示す値。
 
-  プロファイラーは、[これを ICorProfilerInfo2::GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに返すことができる不透明なハンドルとして扱う必要があります。
+  プロファイラーは、これを[ICorProfilerInfo2:: GetFunctionInfo2](icorprofilerinfo2-getfunctioninfo2-method.md)メソッドの実行エンジンに渡すことができる不透明なハンドルとして処理する必要があります。
 
 ## <a name="remarks"></a>解説  
- テールコールのターゲット関数は現在のスタックフレームを使用し、テールコールを行った関数の呼び出し元に直接戻ります。 これは、Tail 呼び出しの対象である関数に対して[FunctionLeave2](functionleave2-function.md)コールバックが発行されないことを意味します。  
+ Tail 呼び出しの対象となる関数は、現在のスタックフレームを使用し、末尾呼び出しを行った関数の呼び出し元に直接戻ります。 つまり、 [FunctionLeave2](functionleave2-function.md)コールバックは、末尾呼び出しのターゲットである関数に対しては発行されません。  
   
- 値が`func`変更されたり破棄されたりする可能性があるため、`FunctionTailcall2`関数が戻った後は、パラメーターの値が無効になります。  
+ `func` `FunctionTailcall2` 値が変更または破棄される可能性があるため、関数がを返すと、パラメーターの値が無効になります。  
   
- 関数`FunctionTailcall2`はコールバックです。それを実装する必要があります。 実装では、 ( `__declspec``naked`) ストレージ クラス属性を使用する必要があります。  
+ `FunctionTailcall2`関数はコールバックであるため、実装する必要があります。 実装では、 `__declspec` ( `naked` ) ストレージクラス属性を使用する必要があります。  
   
- 実行エンジンは、この関数を呼び出す前にレジスタを保存しません。  
+ この関数を呼び出す前に、実行エンジンはレジスタを保存しません。  
   
-- 入力時には、使用するすべてのレジスタ (浮動小数点単位 (FPU) 内のレジスタも含む) を保存する必要があります。  
+- 入力時には、浮動小数点単位 (FPU) に含まれるすべてのレジスタを含め、使用するすべてのレジスタを保存する必要があります。  
   
-- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップオフしてスタックを復元する必要があります。  
+- 終了時に、呼び出し元によってプッシュされたすべてのパラメーターをポップして、スタックを復元する必要があります。  
   
- の実装`FunctionTailcall2`はガベージ コレクションを遅延するため、ブロックしないでください。 スタックがガベージ コレクションに優しい状態ではない可能性があるため、実装はガベージ コレクションを試行しないでください。 ガベージ コレクションが試行されると、ランタイムは、戻るまで`FunctionTailcall2`ブロックします。  
+ の実装は、 `FunctionTailcall2` ガベージコレクションを遅延させるため、ブロックしないでください。 スタックがガベージコレクションに対応していない可能性があるため、この実装ではガベージコレクションを実行しないようにしてください。 ガベージコレクションが試行された場合、ランタイムはが返されるまでブロックし `FunctionTailcall2` ます。  
   
- また、この`FunctionTailcall2`関数はマネージ コードを呼び出したり、マネージ メモリ割り当てを引き起こしたりしないでください。  
+ また、 `FunctionTailcall2` 関数はマネージコードを呼び出さないようにするか、マネージメモリ割り当てを発生させることはできません。  
   
-## <a name="requirements"></a>必要条件  
- **:**「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+## <a name="requirements"></a>要件  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
- **ヘッダー:** コルプロフ.idl  
+ **ヘッダー:** Corprof.idl  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

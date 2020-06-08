@@ -1,5 +1,6 @@
 ---
 title: <smtp> 要素 (ネットワーク設定)
+description: <smtp>ネットワーク設定要素は、.NET Framework の電子メールオプションを送信するための配信形式、配信方法、および差出人アドレスを構成します。
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/mailSettings/smtp
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-ms.openlocfilehash: 625c3cb82a8659c742b540724e5cf31be65a705e
-ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
+ms.openlocfilehash: b30b82922a69ea660f4c4abfd808e89fa9945183
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2020
-ms.locfileid: "74089094"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504512"
 ---
 # <a name="smtp-element-network-settings"></a>\<smtp> 要素 (ネットワーク設定)
 電子メールの送信に使用する配信形式、配信方法、差出人アドレスを構成します。  

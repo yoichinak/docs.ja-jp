@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c3be2cbd-2d93-438b-9888-9a0251b63c03
 topic_type:
 - apiref
-ms.openlocfilehash: b2c334c7a757c2f4044d08787bdae93ffc2804e4
-ms.sourcegitcommit: d223616e7e6fe2139079052e6fcbe25413fb9900
+ms.openlocfilehash: 237fe23493460df77a79ba3aed9f0a809cd8aa23
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2020
-ms.locfileid: "83803894"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84501470"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager インターフェイス
 現在実行中のスレッドのセキュリティコンテキストに対するアクセスと制御を許可するメソッドを提供します。  
@@ -28,7 +28,7 @@ ms.locfileid: "83803894"
   
 |メソッド|説明|  
 |------------|-----------------|  
-|[GetSecurityContext メソッド](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)|ホストから要求された[IHostSecurityContext](ihostsecuritycontext-interface.md)を取得します。|  
+|[GetSecurityContext メソッド](ihostsecuritymanager-getsecuritycontext-method.md)|ホストから要求された[IHostSecurityContext](ihostsecuritycontext-interface.md)を取得します。|  
 |[ImpersonateLoggedOnUser メソッド](ihostsecuritymanager-impersonateloggedonuser-method.md)|現在のユーザー id の資格情報を使用して、コードの実行を要求します。|  
 |[OpenThreadToken メソッド](ihostsecuritymanager-openthreadtoken-method.md)|現在のスレッドに関連付けられている随意アクセストークンを開きます。|  
 |[RevertToSelf メソッド](ihostsecuritymanager-reverttoself-method.md)|現在のユーザー id の偽装を終了し、元のスレッドトークンを返します。|  

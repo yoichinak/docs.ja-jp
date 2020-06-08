@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ea4b283b-1210-4f41-a7a2-c398b1adde4e
 topic_type:
 - apiref
-ms.openlocfilehash: 90ddb30c3d27d5f431c355abd3a6f792564e616d
-ms.sourcegitcommit: b11efd71c3d5ce3d9449c8d4345481b9f21392c6
+ms.openlocfilehash: f5786db1f17e8a463dc78f9c93464145be3a8f32
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76866047"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84499988"
 ---
 # <a name="icorprofilercallbackremotingclientinvocationfinished-method"></a>ICorProfilerCallback::RemotingClientInvocationFinished メソッド
 リモート処理呼び出しがクライアントで完了まで実行されたことをプロファイラーに通知します。  
@@ -31,12 +31,12 @@ ms.locfileid: "76866047"
 HRESULT RemotingClientInvocationFinished();  
 ```  
   
-## <a name="remarks"></a>コメント  
- リモート処理の呼び出しが同期されている場合は、サーバー上でも完了まで実行されます。 リモート処理呼び出しが非同期の場合は、呼び出しが処理されるときに応答が必要になることがあります。 応答が予想される場合は、 [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md)への呼び出しとして、および非同期呼び出しの必要なセカンダリ処理を示すために `RemotingClientInvocationFinished` への追加の呼び出しとして発生します。  
+## <a name="remarks"></a>解説  
+ リモート処理の呼び出しが同期されている場合は、サーバー上でも完了まで実行されます。 リモート処理呼び出しが非同期の場合は、呼び出しが処理されるときに応答が必要になることがあります。 応答が予想される場合は、 [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md)の呼び出しとして、および `RemotingClientInvocationFinished` 非同期呼び出しの必要なセカンダリ処理を示すための追加の呼び出しとして発生します。  
   
  次のコールバックの各ペアは、同じスレッドで実行されます。  
   
-- `RemotingClientInvocationStarted` と[ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
+- `RemotingClientInvocationStarted`and [ICorProfilerCallback:: RemotingClientSendingMessage](icorprofilercallback-remotingclientsendingmessage-method.md)  
   
 - [ICorProfilerCallback:: RemotingClientReceivingReply](icorprofilercallback-remotingclientreceivingreply-method.md)と[ICorProfilerCallback:: RemotingClientInvocationFinished](icorprofilercallback-remotingclientinvocationfinished-method.md)  
   
@@ -49,13 +49,13 @@ HRESULT RemotingClientInvocationFinished();
 - プロファイラーは、非同期のリモート処理イベントに対して正確な通知を受信しません。  
   
 ## <a name="requirements"></a>要件  
- **:** 「[システム要件](../../../../docs/framework/get-started/system-requirements.md)」を参照してください。  
+ **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
   
  **ヘッダー** : CorProf.idl、CorProf.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

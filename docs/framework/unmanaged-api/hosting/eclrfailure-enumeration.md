@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37b95cce-9bfb-4ecf-a00b-33dcba782c67
 topic_type:
 - apiref
-ms.openlocfilehash: e07210203d8a8010890eeb511ff1c08821bfc4a7
-ms.sourcegitcommit: 27db07ffb26f76912feefba7b884313547410db5
+ms.openlocfilehash: fa2b5052a1d569487f0c6c72699ff9ab571beefc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83616334"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504395"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 列挙型
 ホストがポリシーアクションを設定できるエラーのセットについて説明します。  
@@ -51,7 +51,7 @@ typedef enum {
 |`FAIL_CodeContract`|コードコントラクトエラーが発生しました。 「[コードコントラクト](../../debug-trace-profile/code-contracts.md)」を参照してください。|  
   
 ## <a name="remarks"></a>解説  
- エラー条件のポリシーアクションを指定するためにホストで使用できる[Epolicyaction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)値の一覧については、 [ICLRPolicyManager:: SetActionOnFailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)メソッドを参照してください。 クリティカルな、またはクリティカルでないコード領域の詳細については、「 [EClrOperation](eclroperation-enumeration.md)」を参照してください。  
+ エラー条件のポリシーアクションを指定するためにホストで使用できる[Epolicyaction](epolicyaction-enumeration.md)値の一覧については、 [ICLRPolicyManager:: SetActionOnFailure](iclrpolicymanager-setactiononfailure-method.md)メソッドを参照してください。 クリティカルな、またはクリティカルでないコード領域の詳細については、「 [EClrOperation](eclroperation-enumeration.md)」を参照してください。  
   
 ## <a name="requirements"></a>要件  
  **:**「[システム要件](../../get-started/system-requirements.md)」を参照してください。  
@@ -67,4 +67,4 @@ typedef enum {
 - [ICLRPolicyManager インターフェイス](iclrpolicymanager-interface.md)
 - [SetActionOnFailure メソッド](iclrpolicymanager-setactiononfailure-method.md)
 - [IHostPolicyManager インターフェイス](ihostpolicymanager-interface.md)
-- [ホスティングの列挙体](hosting-enumerations.md)
+- [ホスティングの列挙型](hosting-enumerations.md)

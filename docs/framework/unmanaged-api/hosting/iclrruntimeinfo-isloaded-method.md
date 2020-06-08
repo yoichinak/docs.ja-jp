@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fdc5a3a7-71ff-4025-99a1-59e4ee0bfe1b
 topic_type:
 - apiref
-ms.openlocfilehash: 3275a69683a312340f35841815685066def10b23
-ms.sourcegitcommit: c76c8b2c39ed2f0eee422b61a2ab4c05ca7771fa
+ms.openlocfilehash: 45e27ac3c2d4912d2ed3e5d43ea3020b9db5dbdc
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83762527"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84504031"
 ---
 # <a name="iclrruntimeinfoisloaded-method"></a>ICLRRuntimeInfo::IsLoaded メソッド
 [ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスに関連付けられている共通言語ランタイム (CLR) をプロセスに読み込むかどうかを示します。 ランタイムは、起動しなくても読み込むことができます。  
@@ -57,7 +57,7 @@ HRESULT IsLoaded(
   
 - 非推奨 `CorBindTo*` の関数 (「.NET Framework 2.0 ホスティング API での[非推奨の CLR ホスト関数](deprecated-clr-hosting-functions.md)」を参照してください)。  
   
- ホストは、 `CorBindTo*` [Corbindtoruntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)関数など、非推奨の関数の1つを呼び出して、特定のバージョンの CLR をインスタンス化することができます。 ホストは[ICLRMetaHost:: GetRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-getruntime-method.md)メソッドを呼び出し、同じバージョン番号を指定して[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスを取得することができます。  
+ ホストは、 `CorBindTo*` [Corbindtoruntime](corbindtoruntime-function.md)関数など、非推奨の関数の1つを呼び出して、特定のバージョンの CLR をインスタンス化することができます。 ホストは[ICLRMetaHost:: GetRuntime](iclrmetahost-getruntime-method.md)メソッドを呼び出し、同じバージョン番号を指定して[ICLRRuntimeInfo](iclrruntimeinfo-interface.md)インターフェイスを取得することができます。  
   
  その後、返された ICLRRuntimeInfo インターフェイスでホストがメソッドを呼び出すと、はを返します。 `IsLoaded` [ICLRRuntimeInfo](iclrruntimeinfo-interface.md) `pbLoaded` `true` それ以外の場合はを返し `false` ます。  
   
