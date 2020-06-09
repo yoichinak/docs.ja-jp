@@ -11,65 +11,65 @@ helpviewer_keywords:
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: 1827eb5630ed217527de25fc9d9c2bb8994b9aff
 ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/25/2020
 ms.locfileid: "80249670"
 ---
 # <a name="lambda-expressions-visual-basic"></a>ラムダ式 (Visual Basic)
 
-*ラムダ式*は、デリゲートが有効な場所であれば、名前のない関数またはサブルーチンです。 ラムダ式は、関数またはサブルーチンで、単一行または複数行の場合があります。 現在のスコープからラムダ式に値を渡すことができます。
+"*ラムダ式*" は、デリゲートが有効な場所であればどこでも使用できる、名前のない関数またはサブルーチンです。 ラムダ式は関数またはサブルーチンにすることができ、単一行または複数行にすることができます。 値を現在のスコープからラムダ式に渡すことができます。
 
 > [!NOTE]
-> この`RemoveHandler`ステートメントは例外です。 のデリゲート パラメーターにラムダ式を 渡すことはできません`RemoveHandler`。
+> `RemoveHandler` ステートメントは例外です。 `RemoveHandler` のデリゲート パラメーターにラムダ式を渡すことはできません。
 
-ラムダ式は、標準の`Function`関数`Sub`またはサブルーチンを作成するのと同じように、 or キーワードを使用して作成します。 ただし、ラムダ式はステートメントに含まれます。
+標準の関数またはサブルーチンを作成する場合と同様に、`Function` または `Sub` キーワードを使用してラムダ式を作成します。 ただし、ラムダ式はステートメントに含まれます。
 
-次の例は、引数をインクリメントして値を返すラムダ式です。 この例では、関数の単一行と複数行のラムダ式の構文の両方を示します。
+次の例は、引数をインクリメントして値を返すラムダ式です。 この例は、関数の単一行および複数行のラムダ式の構文を示しています。
 
 [!code-vb[VbVbalrLambdas#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#14)]
 
-次の例は、コンソールに値を書き込むラムダ式です。 この例では、サブルーチンの単一行と複数行のラムダ式の構文の両方を示しています。
+次の例は、コンソールに値を書き込むラムダ式です。 この例は、サブルーチンの単一行および複数行のラムダ式の構文を示しています。
 
 [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]
 
-前の例では、ラムダ式が変数名に割り当てられていることに注意してください。 変数を参照するたびに、ラムダ式を呼び出します。 次の例に示すように、ラムダ式を同時に宣言して呼び出すこともできます。
+上記の例では、ラムダ式が変数名に割り当てられていることに注意してください。 変数を参照するときは常にラムダ式を呼び出します。 次の例に示すように、ラムダ式の宣言と呼び出しを同時に行うこともできます。
 
 [!code-vb[VbVbalrLambdas#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#3)]
 
-ラムダ式は、関数呼び出しの値として返されるか (このトピックの後の[「Context」](#context)セクションの例で示されているように)、デリゲート型を受け取るパラメーターに引数として渡されます。
+ラムダ式は関数呼び出しの値として返すことも (このトピックで後述する「[コンテキスト](#context)」の例を参照)、次の例に示すように、デリゲート型を受け取るパラメーターに引数として渡すこともできます。
 
 [!code-vb[VbVbalrLambdas#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class2.vb#8)]
 
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文
 
-ラムダ式の構文は、標準関数またはサブルーチンの構文に似ています。 相違点は、次のとおりです。
+ラムダ式の構文は、標準の関数またはサブルーチンの構文に似ています。 相違点は、次のとおりです。
 
-- ラムダ式に名前がありません。
+- ラムダ式には名前はありません。
 
-- ラムダ式には、 や`Overloads``Overrides`などの修飾子を指定できません。
+- ラムダ式には、`Overloads` や `Overrides` などの修飾子を含めることはできません。
 
-- 単一行のラムダ関数では、`As`戻り値の型を指定する句は使用しません。 その代わりに、ラムダ式の本体が評価する値から型が推論されます。 たとえば、ラムダ式の本体が の場合`cust.City = "London"`、その戻り値`Boolean`の型は です。
+- 単一行のラムダ関数では、`As` 句を戻り値の型を指定しません。 代わりに、ラムダ式の本体が評価される値から型が推論されます。 たとえば、ラムダ式の本体が `cust.City = "London"` の場合、戻り値の型は `Boolean` になります。
 
-- 複数行のラムダ関数では、句を使用して戻り値の型`As`を指定するか、または`As`戻り値の型が推論されるように句を省略できます。 複数行`As`のラムダ関数に対して句を省略すると、戻り値の型は、複数行のラムダ関数のすべての`Return`ステートメントから主要な型であると推論されます。 *ドミナント型*は、他のすべての型が拡大できる一意の型です。 この一意の型を決定できない場合、主要な型は、配列内の他のすべての型が絞り込むことができる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合、に設定`Option Strict``On`されている場合は、コンパイラ エラーが発生します。
+- 複数行のラムダ関数では、`As` 句を使用して戻り値の型を指定することも、戻り値の型が推論されるように `As` 句を省略することもできます。 複数行のラムダ関数で `As` 句を省略すると、戻り値の型として、複数行のラムダ関数のすべての `Return` ステートメントから最も優先度の高い型が推論されます。 "*最も優先度の高い型*" は、他のすべての型から拡大変換できる一意の型です。 この一意の型を特定できない場合、最も優先度の高い型は、配列内の他のすべての型から縮小変換できる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合、`Option Strict` が `On` に設定されていると、コンパイラ エラーが発生します。
 
-     たとえば、ステートメントに指定された`Return`式に 、 `Integer` `Long`、 、および`Double`の値が含まれている場合、結果`Double`の配列は型 です。 両方`Integer`に`Long`広く`Double`、そして`Double`唯一. そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+     たとえば、`Return` ステートメントに指定された式に、`Integer`、`Long`、`Double` の各型の値が含まれている場合、結果の配列は `Double` 型になります。 `Integer` と `Long` はどちらも `Double` に拡大変換され、`Double` のみになります。 そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
-- 単一行関数の本体は、ステートメントではなく値を返す式である必要があります。 単一行`Return`関数のステートメントはありません。 単一行関数によって返される値は、関数本体の式の値です。
+- 単一行の関数の本体は、ステートメントではなく、値を返す式である必要があります。 単一行の関数の `Return` ステートメントはありません。 単一行の関数によって返される値は、関数の本体に含まれる式の値です。
 
-- 単一行のサブルーチンの本体は、単一行のステートメントでなければなりません。
+- 単一行のサブルーチンの本体は、単一行のステートメントである必要があります。
 
-- 単一行の関数およびサブルーチンには、 または`End Function``End Sub`ステートメントは含まれません。
+- 単一行の関数とサブルーチンには、`End Function` または `End Sub` ステートメントは含まれません。
 
-- `As`ラムダ式パラメーターのデータ型は、キーワードを使用して指定するか、パラメーターのデータ型を推論できます。 すべてのパラメーターにデータ型を指定するか、またはすべて推論する必要があります。
+- `As` キーワードを使用して、ラムダ式のパラメーターのデータ型を指定できます。また、パラメーターのデータ型を推論することもできます。 すべてのパラメーターにデータ型が指定されているか、すべて推論される必要があります。
 
-- `Optional`および`Paramarray`パラメーターは許可されません。
+- `Optional` および `Paramarray` パラメーターは使用できません。
 
 - ジェネリック パラメーターは使用できません。
 
 ## <a name="async-lambdas"></a>非同期ラムダ
 
-[非同期](../../../../visual-basic/language-reference/modifiers/async.md)演算子キーワードと[Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md)キーワードを使用すると、非同期処理を組み込んだラムダ式とステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
+[Async](../../../../visual-basic/language-reference/modifiers/async.md) キーワードと [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md) キーワードを使用すると、非同期処理を組み込んだラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
 
 ```vb
 Public Class Form1
@@ -110,45 +110,45 @@ Public Class Form1
 End Class
 ```
 
-非同期メソッドの作成方法と使用方法の詳細については、「[非同期と Await を使用した非同期プログラミング](../../../../visual-basic/programming-guide/concepts/async/index.md)」を参照してください。
+非同期メソッドの作成および使用方法の詳細については、「[Asynchronous programming with Async and Await (Async および Await を使用した非同期プログラミング)](../../../../visual-basic/programming-guide/concepts/async/index.md)」をご覧ください。
 
-## <a name="context"></a>Context
+## <a name="context"></a>コンテキスト
 
-ラムダ式は、そのコンテキストを定義されているスコープと共有します。 このオブジェクトには、包含スコープで記述されたコードと同じアクセス権があります。 これには、メンバー変数、関数とサブ、および`Me`パラメーター、および、そのスコープ内のローカル変数へのアクセスが含まれます。
+ラムダ式は、その式が定義されているスコープとコンテキストを共有します。 包含スコープで記述されたコードと同じアクセス権を持ちます。 これには、包含スコープ内のメンバー変数、関数とサブルーチン、`Me`、パラメーターとローカル変数へのアクセスが含まれます。
 
-格納スコープ内のローカル変数およびパラメーターへのアクセスは、そのスコープの有効期間を超えて拡張できます。 ラムダ式を参照するデリゲートがガベージ コレクションで使用できない限り、元の環境の変数へのアクセスは保持されます。 次の例では、ラム`target`ダ式`playTheGame`が`makeTheGame`定義されているメソッドに対して変数がローカルになります。 返されたラムダ式は、`takeAGuess`に`Main`割り当てられ、依然としてローカル変数`target`にアクセスできます。
+包含スコープ内のローカル変数とパラメーターへのアクセスは、そのスコープの有効期間を超えて拡張できます。 ラムダ式を参照するデリゲートがガベージ コレクションで使用できない間は、元の環境の変数へのアクセスが保持されます。 次の例では、変数 `target` は、`makeTheGame` に対してローカルです。これは、ラムダ式 `playTheGame` が定義されているメソッドです。 `Main` で `takeAGuess` に割り当てられた、返されたラムダ式は、引き続きローカル変数 `target` にアクセスできます。
 
 [!code-vb[VbVbalrLambdas#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class6.vb#12)]
 
-入れ子になったラムダ式のアクセス権の範囲を示す例を次に示します。 返されたラムダ式が`Main``aDel`から実行されると、 は、次の要素にアクセスします。
+次の例は、入れ子になったラムダ式の幅広いアクセス権を示しています。 返されたラムダ式は、`Main` から `aDel` として実行されると、次の要素にアクセスします。
 
-- 定義されているクラスのフィールド。`aField`
+- それが定義されているクラスのフィールド: `aField`
 
-- 定義されているクラスのプロパティ。`aProp`
+- それが定義されているクラスのプロパティ: `aProp`
 
-- 定義されているメソッド`functionWithNestedLambda`のパラメータ:`level1`
+- それが定義されている `functionWithNestedLambda` メソッドのパラメーター: `level1`
 
-- のローカル変数`functionWithNestedLambda`。`localVar`
+- `functionWithNestedLambda` のローカル変数: `localVar`
 
-- 入れ子になっているラムダ式のパラメータ。`level2`
+- それが入れ子になっているラムダ式のパラメーター: `level2`
 
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]
 
 ## <a name="converting-to-a-delegate-type"></a>デリゲート型への変換
 
-ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性の一般的な要件については、「[デリゲート変換の緩和](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」を参照してください。 たとえば、次のコード例は、暗黙的にデリゲートシグネチャに`Func(Of Integer, Boolean)`変換するラムダ式または一致するデリゲート シグネチャを示しています。
+ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性に関する一般的な要件については、「[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」をご覧ください。 たとえば、次のコード例は、`Func(Of Integer, Boolean)` または一致するデリゲート シグネチャに暗黙的に変換するラムダ式を示しています。
 
 [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]
 
-次のコード例は、暗黙的に変換するラムダ式`Sub(Of Double, String, Double)`、または一致するデリゲート シグネチャを示しています。
+次のコード例は、`Sub(Of Double, String, Double)` または一致するデリゲート シグネチャに暗黙的に変換するラムダ式を示しています。
 
 [!code-vb[VbVbalrLambdas#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/class7.vb#23)]
 
-ラムダ式をデリゲートに割り当てたり、プロシージャに引数として渡したりするときには、パラメーター名を指定できますが、そのデータ型を省略して、デリゲートから型を取得できます。
+ラムダ式をデリゲートに割り当てるか、引数としてプロシージャに渡す場合、パラメーター名を指定できますが、データ型を省略することで、デリゲートから型を取得できます。
 
-## <a name="examples"></a>例
+## <a name="examples"></a>使用例
 
-- 次の例では、null 許容値`True`型引数に値が割り当てられている場合、およびその`False`値が の場合`Nothing`に返すラムダ式を定義します。
+- 次の例では、null 許容値型引数に値が割り当てられている場合は `True` を返し、値が `Nothing` の場合は `False` を返すラムダ式を定義します。
 
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]
 
@@ -158,12 +158,12 @@ End Class
 
 ## <a name="see-also"></a>関連項目
 
-- [プロシージャ](./index.md)
+- [手順](./index.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [null 許容値型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [方法 : Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [方法: Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
 - [方法: ラムダ式を作成する](./how-to-create-a-lambda-expression.md)
 - [厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
