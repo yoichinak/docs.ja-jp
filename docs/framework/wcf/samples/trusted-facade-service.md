@@ -2,15 +2,15 @@
 title: 信頼されたファサード サービス
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 17901b7a68d4701287d02bc7ee3174683e777fd1
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e7aa5e96fb8104c8140a8cebc6be45d2000821aa
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143747"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84591320"
 ---
 # <a name="trusted-facade-service"></a>信頼されたファサード サービス
-このシナリオのサンプルでは、Windows 通信基盤 (WCF) セキュリティ インフラストラクチャを使用して、呼び出し元の ID 情報をあるサービスから別のサービスにフローする方法を示します。  
+このシナリオのサンプルでは、Windows Communication Foundation (WCF) セキュリティインフラストラクチャを使用して、呼び出し元の id 情報をあるサービスから別のサービスにフローする方法を示します。  
   
  ファサード サービスを使用してサービスから提供される機能をパブリック ネットワークに公開するのは、一般的なデザイン パターンです。 ファサード サービスは、通常は境界ネットワーク (DMZ、非武装地帯、およびスクリーン サブネットとも呼ばれます) 内に存在し、ビジネス ロジックを実装して内部データにアクセスする、バックエンド サービスと通信します。 ファサード サービスとバックエンド サービス間の通信チャネルはファイアウォールを通過し、通常は 1 つの目的のみに限定されます。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "79143747"
   
 - 電卓バックエンド サービス  
   
- ファサード サービスは、要求を検証して呼び出し元を認証します。 認証と検証が正常に完了すると、ファサード サービスは、境界ネットワークから内部ネットワークへの制御された通信チャネルを使用して、バックエンド サービスに要求を転送します。 ファサード サービスは、転送される要求の一部として呼び出し元の ID に関する情報を格納し、バックエンド サービスがプロセスでこの情報を使用できるようにします。 呼び出し元の ID は、メッセージの `Username` ヘッダー内部にある `Security` セキュリティ トークンを使用して送信されます。 このサンプルでは、WCF セキュリティ インフラストラクチャを使用して、ヘッダーから`Security`この情報を送信および抽出します。  
+ ファサード サービスは、要求を検証して呼び出し元を認証します。 認証と検証が正常に完了すると、ファサード サービスは、境界ネットワークから内部ネットワークへの制御された通信チャネルを使用して、バックエンド サービスに要求を転送します。 ファサード サービスは、転送される要求の一部として呼び出し元の ID に関する情報を格納し、バックエンド サービスがプロセスでこの情報を使用できるようにします。 呼び出し元の ID は、メッセージの `Username` ヘッダー内部にある `Security` セキュリティ トークンを使用して送信されます。 このサンプルでは、WCF セキュリティインフラストラクチャを使用して、この情報をヘッダーから送信および抽出し `Security` ます。  
   
 > [!IMPORTANT]
 > バックエンド サービスは、ファサード サービスを信頼して呼び出し元を認証します。 このため、バックエンド サービスは呼び出し元の再認証を行いません。つまり、ファサード サービスから転送された要求内の ID 情報を使用します。 こうした信頼関係があるので、バックエンド サービスでは、転送メッセージが信頼されたソース (この場合はファサード サービス) から送信されことを確認するために、ファサード サービスを認証する必要があります。  
@@ -109,9 +109,9 @@ public class MyUserNamePasswordValidator : UserNamePasswordValidator
 </bindings>  
 ```  
   
- [\<バインディング要素>セキュリティ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)は、最初の呼び出し元のユーザー名の送信と抽出を処理します。 [ \<windowsStreamSecurity>](../../../../docs/framework/configure-apps/file-schema/wcf/windowsstreamsecurity.md)と[\<tcpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/tcptransport.md)ファサードとバックエンド サービスの認証とメッセージ保護を処理します。  
+ バインド要素によって、 [\<security>](../../configure-apps/file-schema/wcf/security-of-custombinding.md) 最初の呼び出し元のユーザー名の転送と抽出が行われます。 とは、 [\<windowsStreamSecurity>](../../configure-apps/file-schema/wcf/windowsstreamsecurity.md) [\<tcpTransport>](../../configure-apps/file-schema/wcf/tcptransport.md) ファサードとバックエンドサービスおよびメッセージ保護の認証を行います。  
   
- 要求を転送するには、ファサード サービスの実装は、WCF セキュリティ インフラストラクチャが転送されたメッセージにこの値を配置できるように、最初の呼び出し元のユーザー名を提供する必要があります。 最初の呼び出し元のユーザー名をファサード サービスの実装で提供するには、ファサード サービスがバックエンド サービスとの通信に使用するクライアント プロキシ インスタンスの `ClientCredentials` プロパティに、このユーザー名を設定します。  
+ 要求を転送するには、ファサードサービスの実装で、最初の呼び出し元のユーザー名を指定する必要があります。これにより、WCF セキュリティインフラストラクチャでは、転送されたメッセージにこれを配置できます。 最初の呼び出し元のユーザー名をファサード サービスの実装で提供するには、ファサード サービスがバックエンド サービスとの通信に使用するクライアント プロキシ インスタンスの `ClientCredentials` プロパティに、このユーザー名を設定します。  
   
  `GetCallerIdentity` メソッドをファサード サービスに実装する方法を次のコードに示します。 他のメソッドも同じパターンを使用します。  
   
@@ -126,9 +126,9 @@ public string GetCallerIdentity()
 }  
 ```  
   
- 前のコードに示すように、 `ClientCredentials` プロパティではパスワードは設定されず、ユーザー名のみが設定されています。 WCF セキュリティ インフラストラクチャは、この場合、パスワードなしでユーザー名セキュリティ トークンを作成します。  
+ 前のコードに示すように、 `ClientCredentials` プロパティではパスワードは設定されず、ユーザー名のみが設定されています。 この場合、WCF セキュリティインフラストラクチャでは、パスワードを使用せずにユーザー名セキュリティトークンが作成されます。この場合、このシナリオではまさにこれが必要です。  
   
- バックエンド サービスでは、ユーザー名セキュリティ トークンに含まれる情報が認証される必要があります。 既定では、WCF セキュリティは、指定されたパスワードを使用して、Windows アカウントにユーザーをマップしようとします。 この場合、パスワードは指定されず、バックエンド サービスはユーザー名を認証する必要がありません。ファサード サービスで既に認証が行われているからです。 WCF でこの機能を実装するには、トークン`UserNamePasswordValidator`でユーザー名が指定され、追加の認証を実行しないのみ、カスタムが提供されます。  
+ バックエンド サービスでは、ユーザー名セキュリティ トークンに含まれる情報が認証される必要があります。 既定では、WCF セキュリティは、指定されたパスワードを使用して、ユーザーを Windows アカウントにマップしようとします。 この場合、パスワードは指定されず、バックエンド サービスはユーザー名を認証する必要がありません。ファサード サービスで既に認証が行われているからです。 WCF でこの機能を実装するには、ユーザー `UserNamePasswordValidator` 名がトークンで指定され、追加の認証を実行しないようにするカスタムのが用意されています。  
   
 ```csharp  
 public class MyUserNamePasswordValidator : UserNamePasswordValidator  
@@ -209,7 +209,7 @@ public string GetCallerIdentity()
 }  
 ```  
   
- ファサード サービス アカウント情報は、 `ServiceSecurityContext.Current.WindowsIdentity` プロパティを使用して抽出されます。 最初の呼び出し元に関する情報にアクセスするには、バックエンド サービスで `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` プロパティを使用します。 そして、型 `Identity` を含む `Name`クレームを検索します。 この要求は、セキュリティ トークンに含まれる情報から、WCF`Username`セキュリティ インフラストラクチャによって自動的に生成されます。  
+ ファサード サービス アカウント情報は、 `ServiceSecurityContext.Current.WindowsIdentity` プロパティを使用して抽出されます。 最初の呼び出し元に関する情報にアクセスするには、バックエンド サービスで `ServiceSecurityContext.Current.AuthorizationContext.ClaimSets` プロパティを使用します。 そして、型 `Identity` を含む `Name`クレームを検索します。 この要求は、セキュリティトークンに含まれている情報から、WCF セキュリティインフラストラクチャによって自動的に生成され `Username` ます。  
   
 ## <a name="running-the-sample"></a>サンプルの実行  
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 クライアントをシャットダウンするには、クライアント ウィンドウで Enter キーを押します。 ファサード サービスまたはバックエンド サービスのコンソール ウィンドウで Enter キーを押すと、サービスがシャットダウンされます。  
@@ -260,9 +260,9 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには  
   
@@ -276,7 +276,7 @@ Press <ENTER> to terminate client.
   
 5. Client.exe を \client\bin で起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-6. クライアントとサービスが通信できない場合は、「 WCF[サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+6. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
@@ -287,6 +287,6 @@ Press <ENTER> to terminate client.
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\TrustedFacade`  

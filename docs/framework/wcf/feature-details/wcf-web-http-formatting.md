@@ -1,15 +1,15 @@
 ---
-title: WCF Web HTTP の書式設定
+title: WCF Web HTTP 書式設定
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: b6c9728fe40e26977366b73337e72b1514a12a19
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 011ff4f2e667268fac1aa2d82c0a2c4ffefc8dde
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184191"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585559"
 ---
-# <a name="wcf-web-http-formatting"></a>WCF Web HTTP の書式設定
+# <a name="wcf-web-http-formatting"></a>WCF Web HTTP 書式設定
 WCF Web HTTP プログラミング モデルでは、サービス操作で返す応答の最適な形式を動的に判断できます。 適切な形式を判断するための方法として、自動と明示的の 2 つがサポートされます。  
   
 ## <a name="automatic-formatting"></a>自動書式  
@@ -23,7 +23,7 @@ WCF Web HTTP プログラミング モデルでは、サービス操作で返す
   
 4. WebHttpBehavior での既定の形式設定。  
   
- 要求メッセージに Accept ヘッダーが含まれている場合、Windows 通信基盤 (WCF) インフラストラクチャは、サポートする型を検索します。 `Accept` ヘッダーにメディアの種類のプロパティが指定されている場合は、それに従います。 適切な形式が `Accept` ヘッダーで見つからない場合は、要求メッセージのコンテンツの種類が使用されます。 適切なコンテンツの種類が指定されていない場合は、その操作の既定の形式設定が使用されます。 既定の形式は、`ResponseFormat` の <xref:System.ServiceModel.Web.WebGetAttribute> パラメーターおよび <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性で設定されます。 その操作に既定の形式が指定されていない場合は、<xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> プロパティの値が使用されます。 形式の自動選択は、<xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> プロパティに依存します。 このプロパティが `true` に設定されている場合は、使用する最適な形式が WCF インフラストラクチャで決定されます。 形式の自動選択は、既定で、下位互換性のために無効になっています。 形式の自動選択は、プログラムで有効にすることも、構成ファイルを使用して有効にすることもできます。 形式の自動選択をコードで有効にする方法を次の例に示します。  
+ 要求メッセージに Accept ヘッダーが含まれている場合は、Windows Communication Foundation (WCF) インフラストラクチャによって、サポートされている型が検索されます。 `Accept` ヘッダーにメディアの種類のプロパティが指定されている場合は、それに従います。 適切な形式が `Accept` ヘッダーで見つからない場合は、要求メッセージのコンテンツの種類が使用されます。 適切なコンテンツの種類が指定されていない場合は、その操作の既定の形式設定が使用されます。 既定の形式は、`ResponseFormat` の <xref:System.ServiceModel.Web.WebGetAttribute> パラメーターおよび <xref:System.ServiceModel.Web.WebInvokeAttribute> 属性で設定されます。 その操作に既定の形式が指定されていない場合は、<xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> プロパティの値が使用されます。 形式の自動選択は、<xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> プロパティに依存します。 このプロパティが `true` に設定されている場合は、使用する最適な形式が WCF インフラストラクチャで決定されます。 形式の自動選択は、既定で、下位互換性のために無効になっています。 形式の自動選択は、プログラムで有効にすることも、構成ファイルを使用して有効にすることもできます。 形式の自動選択をコードで有効にする方法を次の例に示します。  
   
 ```csharp
 // This code assumes the service name is MyService and the service contract is IMyContract
@@ -167,7 +167,7 @@ public class Service : IService
 
 - <xref:System.UriTemplate>
 - <xref:System.UriTemplateMatch>
-- [WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
-- [UriTemplate と UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
-- [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
+- [WCF Web HTTP プログラミング モデル](wcf-web-http-programming-model.md)
+- [UriTemplate と UriTemplateTable](uritemplate-and-uritemplatetable.md)
+- [WCF Web HTTP プログラミング モデルの概要](wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP プログラミング オブジェクト モデル](wcf-web-http-programming-object-model.md)

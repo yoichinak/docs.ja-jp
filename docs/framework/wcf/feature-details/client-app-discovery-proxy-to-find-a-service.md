@@ -1,16 +1,16 @@
 ---
-title: 探索プロキシを使用してサービスを検索するクライアント アプリケーションの実装方法
+title: '方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する'
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
-ms.openlocfilehash: 33ee5d2c9206b16b1667abd5f6d6c811ff955969
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a1e770531a196d73dfc7d93bf70ed432df343c88
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185381"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587015"
 ---
-# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>探索プロキシを使用してサービスを検索するクライアント アプリケーションの実装方法
-これは、探索プロキシの実装方法に関する 3 つのトピックのうちの、3 番目のトピックです。 前のトピックでは、[方法: 探索プロキシに登録する探索可能なサービスを実装](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)する、探索プロキシに自分自身を登録する WCF サービスを実装しました。 このトピックでは、探索プロキシを使用して WCF サービスを検索する WCF クライアントを作成します。  
+# <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する
+これは、探索プロキシの実装方法に関する 3 つのトピックのうちの、3 番目のトピックです。 前のトピック「[方法: 探索プロキシに登録する探索可能なサービスを実装](discoverable-service-that-registers-with-the-discovery-proxy.md)する」では、探索プロキシに登録する WCF サービスを実装しています。 このトピックでは、探索プロキシを使用して WCF サービスを検索する WCF クライアントを作成します。  
   
 ### <a name="implement-the-client"></a>クライアントの実装  
   
@@ -101,7 +101,7 @@ ms.locfileid: "79185381"
     }  
     ```  
   
- これで、クライアント アプリケーションの実装が完了しました。 「[方法: 探索プロキシをテストする」に](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)進みます。  
+ これで、クライアント アプリケーションの実装が完了しました。 [「方法: 探索プロキシをテスト](how-to-test-the-discovery-proxy.md)する」に進みます。  
   
 ## <a name="example"></a>例  
  このトピックのコード全体の一覧を以下に示します。  
@@ -283,6 +283,6 @@ namespace Microsoft.Samples.Discovery
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [探索プロキシを実装する方法](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [探索プロキシで登録される探索可能なサービスの実装方法](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [WCF Discovery の概要](wcf-discovery-overview.md)
+- [方法: 探索プロキシを実装する](how-to-implement-a-discovery-proxy.md)
+- [方法: 探索プロキシで登録される探索可能なサービスの実装する](discoverable-service-that-registers-with-the-discovery-proxy.md)

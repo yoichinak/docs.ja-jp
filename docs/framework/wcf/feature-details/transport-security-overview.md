@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 6796ca0b16e65a07735aec075d63b0cdfe38d080
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 5c6b6389122b32ed8db701020a8c13ba17225867
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464012"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585689"
 ---
 # <a name="transport-security-overview"></a>トランスポート セキュリティの概要
-Windows 通信基盤 (WCF) のトランスポート セキュリティ メカニズムは、使用されているバインドとトランスポートによって異なります。 たとえば、<xref:System.ServiceModel.WSHttpBinding> クラスを使用する場合、トランスポートは HTTP であり、トランスポートをセキュリティで保護するための主要機構は SSL (Secure Sockets Layer) over HTTP (一般に HTTPS と呼ばれます) です。 ここでは、WCF システム提供のバインディングで使用される主要なトランスポート セキュリティ メカニズムについて説明します。  
+Windows Communication Foundation (WCF) のトランスポートセキュリティ機構は、使用されているバインディングとトランスポートによって異なります。 たとえば、<xref:System.ServiceModel.WSHttpBinding> クラスを使用する場合、トランスポートは HTTP であり、トランスポートをセキュリティで保護するための主要機構は SSL (Secure Sockets Layer) over HTTP (一般に HTTPS と呼ばれます) です。 このトピックでは、WCF システム指定のバインディングで使用される主要なトランスポートセキュリティ機構について説明します。  
   
 > [!NOTE]
-> SSL セキュリティを .NET Framework 3.5 以降で使用する場合、WCF クライアントは、証明書ストア内の中間証明書と SSL ネゴシエーション中に受信した中間証明書の両方を使用して、サービスの証明書に対する証明書チェーン検証を実行します。 .NET Framework 3.0 では、ローカルの証明書ストアにインストールされている中間証明書のみが使用されます。  
+> .NET Framework 3.5 以降で SSL セキュリティを使用する場合、WCF クライアントは、証明書ストア内の中間証明書と SSL ネゴシエーション中に受信した中間証明書の両方を使用して、サービスの証明書に対して証明書チェーンの検証を実行します。 .NET Framework 3.0 では、ローカルの証明書ストアにインストールされている中間証明書のみが使用されます。  
   
 > [!WARNING]
-> トランスポート セキュリティを使用した場合、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティが上書きされることがあります。 このような事態を防ぐには、 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType>を に設定します。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> は、サービスの説明で設定できる、サービスの動作です。  
+> トランスポート セキュリティを使用した場合、<xref:System.Threading.Thread.CurrentPrincipal%2A?displayProperty=nameWithType> プロパティが上書きされることがあります。 この問題が発生しないようにするには、 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A?displayProperty=nameWithType> をに設定し <xref:System.ServiceModel.Description.PrincipalPermissionMode.None?displayProperty=nameWithType> ます。 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> は、サービスの説明で設定できる、サービスの動作です。  
   
 ## <a name="basichttpbinding"></a>BasicHttpBinding  
  既定では、<xref:System.ServiceModel.BasicHttpBinding> クラスはセキュリティを提供しません。 このバインディングは、セキュリティを実装していない Web サービス プロバイダーとの相互運用性のためにデザインされています。 ただし、<xref:System.ServiceModel.BasicHttpSecurity.Mode%2A> プロパティを <xref:System.ServiceModel.BasicHttpSecurityMode.None> 以外の値に設定することにより、セキュリティを有効にすることができます。 トランスポート セキュリティを有効にするには、このプロパティを <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> に設定します。  
@@ -47,22 +47,22 @@ Windows 通信基盤 (WCF) のトランスポート セキュリティ メカニ
  以下のセクションでは、その他のクライアント資格情報の種類について説明します。  
   
 #### <a name="basic"></a>Basic  
- これは、IIS の基本認証方法に対応しています。 このモードを使用する場合は、Windows ユーザー アカウントと、適切な NTFS ファイル システムのアクセス許可を使用して IIS サーバーを構成する必要があります。 IIS 6.0 の詳細については、「[基本認証の有効化と領域名の構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「[基本認証 (IIS 7) の構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10))」を参照してください。  
+ これは、IIS の基本認証方法に対応しています。 このモードを使用する場合は、Windows ユーザー アカウントと、適切な NTFS ファイル システムのアクセス許可を使用して IIS サーバーを構成する必要があります。 IIS 6.0 の詳細については、「[基本認証を有効にする」および「領域名を構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc785293(v=ws.10))する」を参照してください。 IIS 7.0 の詳細については、「[基本認証を構成する (iis 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10))」を参照してください。  
   
 #### <a name="certificate"></a>Certificate  
- IIS には、クライアントに証明書を使用してログオンすることを要求するオプションがあります。 この機能により、IIS はクライアント証明書を Windows アカウントにマップすることもできます。 IIS 6.0 の詳細については、「 [IIS 6.0 でクライアント証明書を有効にする](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「 [IIS 7 でサーバー証明書を構成する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))」を参照してください。  
+ IIS には、クライアントに証明書を使用してログオンすることを要求するオプションがあります。 この機能により、IIS はクライアント証明書を Windows アカウントにマップすることもできます。 IIS 6.0 の詳細については、「 [iis 6.0 でクライアント証明書を有効にする](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc727994(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「 [iis 7 でサーバー証明書を構成する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))」を参照してください。  
   
 #### <a name="digest"></a>ダイジェスト  
- ダイジェスト認証は基本認証と似ていますが、資格情報をクリア テキストではなくハッシュとして送信できるという利点があります。 IIS 6.0 の詳細については、「 [IIS 6.0 でのダイジェスト認証](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「[ダイジェスト認証 (IIS 7) の構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10))」を参照してください。  
+ ダイジェスト認証は基本認証と似ていますが、資格情報をクリア テキストではなくハッシュとして送信できるという利点があります。 IIS 6.0 の詳細については、「 [iis 6.0 でのダイジェスト認証](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc782661(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「[ダイジェスト認証を構成する (iis 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10))」を参照してください。  
   
 #### <a name="windows"></a>Windows  
- これは、IIS の統合 Windows 認証に対応しています。 この値に設定する場合、サーバーは、Kerberos プロトコルを使用する Windows ドメインにドメイン コントローラーとして存在することにもなっています。 サーバーが Kerberos ベースのドメインに存在しない場合、または Kerberos システムに障害が発生した場合は、次のセクションで説明する NTLM (NT LAN Manager) 値を使用できます。 IIS 6.0 の詳細については、「 [IIS 6.0 での統合 Windows 認証](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「 [IIS 7 でサーバー証明書を構成する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))」を参照してください。
+ これは、IIS の統合 Windows 認証に対応しています。 この値に設定する場合、サーバーは、Kerberos プロトコルを使用する Windows ドメインにドメイン コントローラーとして存在することにもなっています。 サーバーが Kerberos ベースのドメインに存在しない場合、または Kerberos システムに障害が発生した場合は、次のセクションで説明する NTLM (NT LAN Manager) 値を使用できます。 IIS 6.0 の詳細については、「 [iis 6.0 での統合 Windows 認証](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc738016(v=ws.10))」を参照してください。 IIS 7.0 の詳細については、「 [iis 7 でサーバー証明書を構成する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))」を参照してください。
   
 #### <a name="ntlm"></a>NTLM  
- この値を使用すると、Kerberos プロトコルが失敗した場合に、サーバーは、NTLM を使用して認証を実行できます。 IIS 6.0 で IIS を構成する方法の詳細については、「 [NTLM 認証の強制](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10))」を参照してください。 IIS 7.0 の場合、Windows 認証には NTLM 認証が含まれています。 詳細については、「 [IIS 7 でサーバー証明書を構成する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))」を参照してください。
+ この値を使用すると、Kerberos プロトコルが失敗した場合に、サーバーは、NTLM を使用して認証を実行できます。 Iis 6.0 での IIS の構成の詳細については、「 [NTLM 認証を強制](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc786486(v=ws.10))する」を参照してください。 IIS 7.0 では、Windows 認証に NTLM 認証が含まれています。 詳細については、「 [IIS 7 でサーバー証明書を構成する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))」を参照してください。
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
- <xref:System.ServiceModel.WSHttpBinding> クラスは、WS-* 仕様を実装するサービスと共に相互運用するようにデザインされています。 このバインディングのトランスポート セキュリティは、SSL (Secure Sockets Layer) over HTTP または HTTPS です。 SSL を使用する WCF アプリケーションを作成するには、IIS を使用してアプリケーションをホストします。 自己ホスト型アプリケーションを作成する場合は、HttpCfg.exe ツールを使用して、X.509 証明書をコンピューターの特定のポートにバインドします。 ポート番号は、エンドポイント アドレスとして WCF アプリケーションの一部として指定されます。 トランスポート モードを使用する場合は、エンドポイント アドレスに HTTPS プロトコルを含める必要があります。そうしないと、実行時に例外が発生します。 詳細については、「 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)」を参照してください。  
+ <xref:System.ServiceModel.WSHttpBinding> クラスは、WS-* 仕様を実装するサービスと共に相互運用するようにデザインされています。 このバインディングのトランスポート セキュリティは、SSL (Secure Sockets Layer) over HTTP または HTTPS です。 SSL を使用する WCF アプリケーションを作成するには、IIS を使用してアプリケーションをホストします。 自己ホスト型アプリケーションを作成する場合は、HttpCfg.exe ツールを使用して、X.509 証明書をコンピューターの特定のポートにバインドします。 ポート番号は、WCF アプリケーションの一部としてエンドポイントアドレスとして指定されます。 トランスポート モードを使用する場合は、エンドポイント アドレスに HTTPS プロトコルを含める必要があります。そうしないと、実行時に例外が発生します。 詳細については、「 [HTTP トランスポートセキュリティ](http-transport-security.md)」を参照してください。  
   
  クライアント認証の場合、<xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A> クラスの <xref:System.ServiceModel.HttpTransportSecurity> プロパティを <xref:System.ServiceModel.HttpClientCredentialType> 列挙値のいずれかに設定します。 この列挙値は、<xref:System.ServiceModel.BasicHttpBinding> のクライアント資格情報の種類と同一であり、IIS サービスを使用してホストされるようにデザインされています。  
   
@@ -82,18 +82,18 @@ Windows 通信基盤 (WCF) のトランスポート セキュリティ メカニ
  [!code-csharp[c_ProgrammingSecurity#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#12)]
  [!code-vb[c_ProgrammingSecurity#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#12)]  
   
-#### <a name="client"></a>Client  
+#### <a name="client"></a>クライアント  
  クライアントでは、<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> クラスの <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> メソッドを使用して証明書を指定する必要があります。  
   
 > [!NOTE]
 > Windows セキュリティを使用している場合には、証明書は不要です。  
   
- 証明書の拇印を使用するコードを次に示します。拇印により、証明書が一意に識別されます。 証明書の詳細については、「[証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)」を参照してください。  
+ 証明書の拇印を使用するコードを次に示します。拇印により、証明書が一意に識別されます。 証明書の詳細については、「[証明書の使用](working-with-certificates.md)」を参照してください。  
   
  [!code-csharp[c_ProgrammingSecurity#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_programmingsecurity/cs/source.cs#13)]
  [!code-vb[c_ProgrammingSecurity#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_programmingsecurity/vb/source.vb#13)]  
   
- または、クライアントの構成で、クライアントの構成で、クライアントの構成で、クライアントの資格情報[\<>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)の要素を使用して、動作セクションで指定します。  
+ または、[動作] セクションの要素を使用して、クライアントの構成で証明書を指定し [\<clientCredentials>](../../configure-apps/file-schema/wcf/clientcredentials.md) ます。  
   
 ```xml  
 <behaviors>  
@@ -112,14 +112,14 @@ Windows 通信基盤 (WCF) のトランスポート セキュリティ メカニ
  同じネットワーク上の 2 台のコンピューター間に名前付きパイプ チャネルを作成できますが、<xref:System.ServiceModel.NetNamedPipeBinding> クラスは、コンピューター内通信 (つまり、同じコンピューター上で実行されるプロセス) を効率的に行うことができるようにデザインされています。 このバインディングが提供するのは、トランスポート レベルのセキュリティだけです。 このバインディングを使用してアプリケーションを作成する場合は、エンドポイント アドレスにプロトコルとして "net.pipe" を含める必要があります。  
   
 ## <a name="wsfederationhttpbinding"></a>WSFederationHttpBinding  
- トランスポート セキュリティを使用する場合、このバインディングでは SSL over HTTP を使用します。SSL over HTTP は HTTPS とも呼ばれ、発行済みトークン (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>) を含みます。 フェデレーション アプリケーションの詳細については、「[フェデレーションと発行済みトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)」を参照してください。  
+ トランスポート セキュリティを使用する場合、このバインディングでは SSL over HTTP を使用します。SSL over HTTP は HTTPS とも呼ばれ、発行済みトークン (<xref:System.ServiceModel.WSFederationHttpSecurityMode.TransportWithMessageCredential>) を含みます。 フェデレーションアプリケーションの詳細については、「[フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。  
   
 ## <a name="netpeertcpbinding"></a>NetPeerTcpBinding  
- <xref:System.ServiceModel.NetPeerTcpBinding> クラスは、ピアツーピア ネットワーク機能を使用して効率的に通信できるようにデザインされた、セキュリティ保護されたトランスポートです。 クラスとバインディングの名前が示すように、プロトコルは TCP です。 セキュリティ モードが Transport に設定されている場合、このバインディングは TLS over TCP を実装します。 ピア ツー ピア機能の詳細については、「ピア ツー[ピア ネットワーク](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)」を参照してください。  
+ <xref:System.ServiceModel.NetPeerTcpBinding> クラスは、ピアツーピア ネットワーク機能を使用して効率的に通信できるようにデザインされた、セキュリティ保護されたトランスポートです。 クラスとバインディングの名前が示すように、プロトコルは TCP です。 セキュリティ モードが Transport に設定されている場合、このバインディングは TLS over TCP を実装します。 ピアツーピア機能の詳細については、「[ピアツーピアネットワーク](peer-to-peer-networking.md)」を参照してください。  
   
 ## <a name="msmqintegrationbinding-and-netmsmqbinding"></a>MsmqIntegrationBinding と NetMsmqBinding  
- メッセージ キュー (以前は MSMQ と呼ばれている) によるトランスポート セキュリティの詳細については、「[トランスポート セキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)」を参照してください。  
+ メッセージキュー (旧称 MSMQ) を使用したトランスポートセキュリティの詳細については、「[トランスポートセキュリティを使用したメッセージのセキュリティ保護](securing-messages-using-transport-security.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+- [WCF セキュリティのプログラミング](programming-wcf-security.md)

@@ -2,16 +2,16 @@
 title: チャネルのチャンキング
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 7b436e2ce708a122a7eae3b07ad01515fb2dce96
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 7a5e5292bcb37e83de21458716e34887a0557d91
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463978"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585546"
 ---
 # <a name="chunking-channel"></a>チャネルのチャンキング
 
-Windows 通信基盤 (WCF) を使用して大きなメッセージを送信する場合、多くの場合、これらのメッセージをバッファリングするために使用されるメモリの量を制限することが望ましいです。 解決策の 1 つとして、メッセージ本文のストリーミングが考えられます (データの大部分が本文にある場合)。 ただし、一部のプロトコルではメッセージ全体のバッファが必要です。 たとえば、信頼できるメッセージとセキュリティの 2 つがこの例として挙げられます。 そこで別の解決策として、サイズの大きいメッセージをチャンクと呼ばれるサイズの小さいメッセージに分割し、そうしたチャンクを 1 つずつ送信し、受信側でサイズの大きいメッセージに再構成するという方法が考えられます。 アプリケーション自体でこうしたチャンキングおよびチャンキング解除を行うことができるほか、カスタム チャネルを使用して行うこともできます。 チャネルのチャンキングのサンプルでは、カスタム プロトコル チャネルまたはカスタム階層チャネルを使用して、サイズの大きい任意のメッセージのチャンキングおよびチャンキング解除を行う方法を示します。
+Windows Communication Foundation (WCF) を使用してサイズの大きいメッセージを送信する場合、多くの場合、これらのメッセージをバッファーするために使用されるメモリの量を制限することをお勧めします。 解決策の 1 つとして、メッセージ本文のストリーミングが考えられます (データの大部分が本文にある場合)。 ただし、一部のプロトコルではメッセージ全体のバッファが必要です。 たとえば、信頼できるメッセージとセキュリティの 2 つがこの例として挙げられます。 そこで別の解決策として、サイズの大きいメッセージをチャンクと呼ばれるサイズの小さいメッセージに分割し、そうしたチャンクを 1 つずつ送信し、受信側でサイズの大きいメッセージに再構成するという方法が考えられます。 アプリケーション自体でこうしたチャンキングおよびチャンキング解除を行うことができるほか、カスタム チャネルを使用して行うこともできます。 チャネルのチャンキングのサンプルでは、カスタム プロトコル チャネルまたはカスタム階層チャネルを使用して、サイズの大きい任意のメッセージのチャンキングおよびチャンキング解除を行う方法を示します。
 
 チャンキングは常に、送信されるメッセージ全体が構築された後にのみ使用する必要があります。 チャネルのチャンキングは常に、セキュリティ チャネルおよび信頼できるセッション チャネルの下位の階層に置く必要があります。
 
@@ -23,7 +23,7 @@ Windows 通信基盤 (WCF) を使用して大きなメッセージを送信す�
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Channels\ChunkingChannel`
 
@@ -209,11 +209,11 @@ as the ChunkingStart message.
 
 1 つ下のレベルでは、`ChunkingChannel` がいくつかのコンポーネントに依存して、チャンキングを行うプロトコルを実装します。 送信側では、このチャネルは、実際にチャンキングを行う <xref:System.Xml.XmlDictionaryWriter> というカスタム `ChunkingWriter` を使用します。 `ChunkingWriter` は内部チャネルを使用して直接チャンクを送信します。 カスタム `XmlDictionaryWriter` を使用すると、本文のサイズが大きい元のメッセージの書き込みと同時にチャンクを送信できます。 つまり、元のメッセージ全体はバッファされません。
 
-![チャンク チャネル送信アーキテクチャを示す図。](./media/chunking-channel/chunking-channel-send.gif)
+![チャンキングチャネル送信アーキテクチャを示す図。](./media/chunking-channel/chunking-channel-send.gif)
 
 受信側では、`ChunkingChannel` は内部チャネルからメッセージをプルし、<xref:System.Xml.XmlDictionaryReader> というカスタム `ChunkingReader` に渡します。これにより、受信チャンクから元のメッセージが再構成されます。 `ChunkingChannel` は、この `ChunkingReader` を `Message` というカスタム `ChunkingMessage` 実装でラップし、このメッセージを上の層に戻します。 `ChunkingReader` と `ChunkingMessage` を組み合わせて使用すると、元のメッセージ本文全体をバッファーする代わりに、元のメッセージ本文が上の層によって読み取られるのと同時にメッセージのチャンキング解除を行うことができます。 `ChunkingReader` には、バッファー対象のチャンクの構成可能な最大数を上限として受信チャンクをバッファーするキューがあります。 この上限に達すると、リーダーは、上の層によってメッセージがキューから出される (つまり元のメッセージ本文の読み取りだけが行われる) まで待機するか、または受信タイムアウトの上限に達するまで待機します。
 
-![チャンク チャネル受信アーキテクチャを示す図。](./media/chunking-channel/chunking-channel-receive.gif)
+![チャンキングチャネル受信アーキテクチャを示す図。](./media/chunking-channel/chunking-channel-receive.gif)
 
 ## <a name="chunking-programming-model"></a>プログラミング モデルのチャンキング
 
@@ -256,7 +256,7 @@ interface ITestService
 
 - Send に渡されるタイムアウトは、すべてのチャンクの送信を含む送信操作全体のタイムアウトとして使用されます。
 
-- 元のメッセージ本文全体がバッファされないように、カスタムの <xref:System.Xml.XmlDictionaryWriter> デザインが選択されています。 <xref:System.Xml.XmlDictionaryReader> を使用して本文の `message.GetReaderAtBodyContents` を取得する場合、本文全体がバッファされます。 代わりに、 に渡<xref:System.Xml.XmlDictionaryWriter>されるカスタムがあります`message.WriteBodyContents`。 メッセージがライタの WriteBase64 を呼び出すと、ライタはチャンクをパッケージ化してメッセージを作成し、内部チャンネルを使用して送信します。 WriteBase64 は、チャンクが送信されるまでブロックされます。
+- 元のメッセージ本文全体がバッファされないように、カスタムの <xref:System.Xml.XmlDictionaryWriter> デザインが選択されています。 <xref:System.Xml.XmlDictionaryReader> を使用して本文の `message.GetReaderAtBodyContents` を取得する場合、本文全体がバッファされます。 代わりに、 <xref:System.Xml.XmlDictionaryWriter> に渡されるカスタムがあり `message.WriteBodyContents` ます。 メッセージがライタの WriteBase64 を呼び出すと、ライタはチャンクをパッケージ化してメッセージを作成し、内部チャンネルを使用して送信します。 WriteBase64 は、チャンクが送信されるまでブロックされます。
 
 ## <a name="implementing-the-receive-operation"></a>Receive 操作の実装
 
@@ -282,7 +282,7 @@ interface ITestService
 
 ### <a name="onclose"></a>OnClose
 
-`OnClose` は、保留状態の `stopReceive` が停止したことを通知するため、最初に `true` を `ReceiveChunkLoop` に設定します。 次に、`receiveStopped`<xref:System.Threading.ManualResetEvent>停止したときに`ReceiveChunkLoop`設定される を待機します。 `ReceiveChunkLoop` が指定されたタイムアウト内で停止した場合、`OnClose` はタイムアウトの残り時間で `innerChannel.Close` を呼び出します。
+`OnClose` は、保留状態の `stopReceive` が停止したことを通知するため、最初に `true` を `ReceiveChunkLoop` に設定します。 次に、が `receiveStopped` <xref:System.Threading.ManualResetEvent> 停止したときに設定されるを待機し `ReceiveChunkLoop` ます。 `ReceiveChunkLoop` が指定されたタイムアウト内で停止した場合、`OnClose` はタイムアウトの残り時間で `innerChannel.Close` を呼び出します。
 
 ### <a name="onabort"></a>OnAbort
 
@@ -306,9 +306,9 @@ interface ITestService
 
 ## <a name="implementing-binding-element-and-binding"></a>バインディング要素とバインディングの実装
 
-`ChunkingBindingElement` は、`ChunkingChannelFactory` および `ChunkingChannelListener` を作成します。 T `ChunkingBindingElement`>と`CanBuildChannelFactory`\<`CanBuildChannelListener`\<T>の T が`IDuplexSessionChannel`型 (チャンク チャネルでサポートされる唯一のチャネル) であるかどうか、およびバインディング内の他のバインド要素がこのチャネル型をサポートしているかどうかを確認します。
+`ChunkingBindingElement` は、`ChunkingChannelFactory` および `ChunkingChannelListener` を作成します。 は、 `ChunkingBindingElement` との T `CanBuildChannelFactory` \<T> `CanBuildChannelListener` \<T> が型 `IDuplexSessionChannel` (チャンキングチャネルでサポートされる唯一のチャネル) であること、およびバインディング内の他のバインド要素がこのチャネルの種類をサポートしているかどうかを確認します。
 
-`BuildChannelFactory`\<T>最初に、要求されたチャネルの種類を構築できるかどうかをチェックし、次にチャンクされるメッセージ アクションの一覧を取得します。 詳しくは、次のセクションをご覧ください。 次に、新しい `ChunkingChannelFactory` を作成し、それに内部チャネル ファクトリ (`context.BuildInnerChannelFactory<IDuplexSessionChannel>` から返されたままの状態での)、メッセージ アクションのリスト、およびバッファするチャンクの最大数を渡します。 チャンクの最大数は、`MaxBufferedChunks` によって公開される `ChunkingBindingElement` というプロパティによって指定されます。
+`BuildChannelFactory`\<T>は、要求されたチャネルの種類を構築できることを最初に確認し、次にチャンク対象のメッセージアクションのリストを取得します。 詳しくは、次のセクションをご覧ください。 次に、新しい `ChunkingChannelFactory` を作成し、それに内部チャネル ファクトリ (`context.BuildInnerChannelFactory<IDuplexSessionChannel>` から返されたままの状態での)、メッセージ アクションのリスト、およびバッファするチャンクの最大数を渡します。 チャンクの最大数は、`MaxBufferedChunks` によって公開される `ChunkingBindingElement` というプロパティによって指定されます。
 
 `BuildChannelListener<T>` には、`ChunkingChannelListener` を作成してこれに内部チャネル リスナーを渡す同様の実装があります。
 
@@ -320,23 +320,23 @@ interface ITestService
 
 チャネルのチャンキングによってチャンクされるメッセージは、`ChunkingBehavior` 属性を介して識別されるメッセージのみです。 `ChunkingBehavior` クラスは `IOperationBehavior` を実装し、`AddBindingParameter` メソッドの呼び出しによって実装されます。 このメソッドでは、`ChunkingBehavior` が `AppliesTo` プロパティの値 (`InMessage` または`OutMessage` のいずれか、またはその両方) を調べ、どのメッセージがチャンク対象かを判断します。 次に、チャンク対象の各メッセージのアクションを (`OperationDescription` の Messages コレクションから) 取得し、これを `ChunkingBindingParameter` のインスタンス内に含まれている文字列コレクションに追加します。 そして、この `ChunkingBindingParameter` を指定された `BindingParameterCollection` に追加します。
 
-この `BindingParameterCollection` は、バインド要素がチャネル ファクトリまたはチャネル リスナを作成するときに、`BindingContext` 内でバインディングの各バインド要素に渡されます。 の`ChunkingBindingElement``BuildChannelFactory<T>`実装`BuildChannelListener<T>`と`ChunkingBindingParameter`これを s`BindingContext’``BindingParameterCollection`から引き出す. 次に、`ChunkingBindingParameter` に含まれているアクションのコレクションが `ChunkingChannelFactory` または `ChunkingChannelListener` に渡され、その後 `ChunkingDuplexSessionChannel` に渡されます。
+この `BindingParameterCollection` は、バインド要素がチャネル ファクトリまたはチャネル リスナを作成するときに、`BindingContext` 内でバインディングの各バインド要素に渡されます。 のの実装では、これをから `ChunkingBindingElement` `BuildChannelFactory<T>` 取得し `BuildChannelListener<T>` `ChunkingBindingParameter` `BindingContext’` `BindingParameterCollection` ます。 次に、`ChunkingBindingParameter` に含まれているアクションのコレクションが `ChunkingChannelFactory` または `ChunkingChannelListener` に渡され、その後 `ChunkingDuplexSessionChannel` に渡されます。
 
 ## <a name="running-the-sample"></a>サンプルの実行
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1. 次のコマンドASP.NET使用して、4.0 をインストールします。
+1. 次のコマンドを使用して、ASP.NET 4.0 をインストールします。
 
     ```console
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。
+2. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
 
-3. ソリューションをビルドするには、「 [Windows コミュニケーション ファウンデーション のサンプルの構築](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
+3. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。
 
-4. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。
+4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。
 
 5. 最初に Service.exe を実行して次に Client.exe を実行し、両方のコンソール ウィンドウで出力を表示します。
 
