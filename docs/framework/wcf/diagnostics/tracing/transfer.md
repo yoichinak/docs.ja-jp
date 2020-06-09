@@ -2,18 +2,18 @@
 title: 転送
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: e0ebfff97cd33e7a588a1ab92399a97a0fbec039
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52b0cf35a2f8bab17252d3711f3143738c2bc39c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185703"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84587769"
 ---
 # <a name="transfer"></a>転送
-このトピックでは、Windows 通信ファウンデーション (WCF) アクティビティ トレース モデルでの転送について説明します。  
+このトピックでは、Windows Communication Foundation (WCF) アクティビティトレースモデルでの転送について説明します。  
   
 ## <a name="transfer-definition"></a>転送の定義  
- アクティビティ間の転送は、エンドポイント内の関連アクティビティで発生したイベント間の因果関係を表します。 制御が 2 つのアクティビティ間を流れる場合 (アクティビティの境界を越えたメソッド呼び出しなど)、転送によってこれらのアクティビティが関連付けられます。 WCF では、サービスでバイトが受信されると、メッセージ オブジェクトが作成される受信バイト アクティビティに待機アクティビティが転送されます。 エンド ツー エンドのトレース シナリオ、およびそれぞれのアクティビティとトレースの設計の一覧については、「[エンド ツー エンドトレース シナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)」を参照してください。  
+ アクティビティ間の転送は、エンドポイント内の関連アクティビティで発生したイベント間の因果関係を表します。 制御が 2 つのアクティビティ間を流れる場合 (アクティビティの境界を越えたメソッド呼び出しなど)、転送によってこれらのアクティビティが関連付けられます。 WCF では、サービスでバイトが受信されると、メッセージオブジェクトが作成されたときに、受信側の受信アクティビティが Bytes Receive アクティビティに転送されます。 エンドツーエンドのトレースシナリオの一覧と、それぞれのアクティビティとトレースの設計については、「[エンドツーエンドのトレースのシナリオ](end-to-end-tracing-scenarios.md)」を参照してください。  
   
  転送トレースを出力するには、次の構成コードのように、トレース ソースに `ActivityTracing` を設定します。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "79185703"
   
  アクティビティ M とアクティビティ N の間に制御のフローが存在する場合、転送トレースは M から N に出力されます。たとえば、メソッド呼び出しがアクティビティの境界を越えるため、N が M に代わって何らかの処理を実行するとします。 N は既に存在する場合もあれば、作成されている場合もあります。 N が、M に代わって何らかの処理を実行する新しいアクティビティである場合、N は M によって発生します。  
   
- M から N への転送の後に、N から M に転送することはできません。これは、M は N で処理を発生させることはできますが、N がその処理をいつ完了するかまでは追跡しないからです。 実際、N がタスクを完了する前に M が終了する場合があります。 これは、リスナー アクティビティ (N) を生成し、終了する "オープンサービスホスト" アクティビティ (M) で発生します。 N から M への転送は、N が M に関連する処理を完了したことを意味します。  
+ M から N への転送の後に、N から M に転送することはできません。これは、M は N で処理を発生させることはできますが、N がその処理をいつ完了するかまでは追跡しないからです。 実際、N がタスクを完了する前に M が終了する場合があります。 これは、リスナーアクティビティ (N) を生成して終了する "Open ServiceHost" アクティビティ (M) で発生します。 N から M への転送は、N が M に関連する処理を完了したことを意味します。  
   
  N は、M に関連しない他の処理を引き続き実行できます。たとえば、既存の認証システム アクティビティ (N) は、さまざまなログイン アクティビティからのログイン要求 (M) を受信し続けることができます。  
   
@@ -104,7 +104,7 @@ ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);
   
 ## <a name="see-also"></a>関連項目
 
-- [トレースの構成](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
-- [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
-- [エンドツーエンドのトレースのシナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
-- [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [トレースの構成](configuring-tracing.md)
+- [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [エンドツーエンドのトレースのシナリオ](end-to-end-tracing-scenarios.md)
+- [サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../service-trace-viewer-tool-svctraceviewer-exe.md)

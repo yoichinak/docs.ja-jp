@@ -2,12 +2,12 @@
 title: WCF モニカーの COM クライアントと組み合わせての使用
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: c1d5e0c7d7460e207fedba601e991f25281ddb6e
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: 76b7697f431575e7bde83204739cb23f96d27064
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202078"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596488"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>WCF モニカーの COM クライアントと組み合わせての使用
 このサンプルでは、Windows Communication Foundation (WCF) サービスモニカーを使用して、Microsoft Office Visual Basic for Applications (Office VBA) や Visual Basic 6.0 などの COM ベースの開発環境に Web サービスを統合する方法を示します。 このサンプルは、Windows スクリプト ホストのクライアント (.vbs)、サポート クライアント ライブラリ (.dll)、およびインターネット インフォメーション サービス (IIS) でホストされるサービス ライブラリ (.dll) で構成されています。 このサービスは電卓サービスの 1 つであり、COM クライアントはサービスの算術演算 (Add、Subtract、Multiply、および Divide) を呼び出します。 クライアント アクティビティは、メッセージ ボックス ウィンドウに表示されます。  
@@ -50,7 +50,7 @@ public interface ICalculator
 - Metadata Exchange コントラクト – 実行時に Metadata Exchange (MEX) エンドポイントから取得されます。  
   
 ## <a name="typed-contract"></a>型指定のあるコントラクト  
- 型指定のあるコントラクトと共にモニカーを使用するには、属性が適切に設定されているサービス コントラクトの型を COM に登録する必要があります。 まず、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、クライアントを生成する必要があります。 次のコマンドをクライアント ディレクトリでコマンド プロンプトから実行して、型指定のあるプロキシを生成します。  
+ 型指定のあるコントラクトと共にモニカーを使用するには、属性が適切に設定されているサービス コントラクトの型を COM に登録する必要があります。 まず、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、クライアントを生成する必要があります。 次のコマンドをクライアント ディレクトリでコマンド プロンプトから実行して、型指定のあるプロキシを生成します。  
   
 ```console  
 svcutil.exe /n:http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples http://localhost/servicemodelsamples/service.svc /out:generatedClient.cs  
@@ -184,9 +184,9 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。  
   
 3. Visual Studio の開発者コマンドプロンプトで、言語固有のフォルダーの下にある \ client\bin フォルダーを開きます。  
   

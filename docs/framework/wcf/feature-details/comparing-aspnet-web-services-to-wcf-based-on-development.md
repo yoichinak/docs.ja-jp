@@ -2,12 +2,12 @@
 title: 開発者の視点から見た ASP.NET Web サービスと WCF との比較
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: c5a2145a6d7b631a666df94eb0c1fc53cbc3c55f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c6e83bb234751dc477776f0fa540ffa8688dc667
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202261"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597593"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>開発者の視点から見た ASP.NET Web サービスと WCF との比較
 
@@ -201,7 +201,7 @@ public class LineItem
 }
 ```
 
-Windows ソフトウェア開発キット (SDK) には、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)と呼ばれるコマンドラインツールが含まれています。 ASP.NET Web サービスで使用される xsd.exe ツールと同様に、Svcutil.exe は XML スキーマから .NET データ型の定義を生成できます。 <xref:System.Runtime.Serialization.DataContractSerializer> が XML スキーマで定義された形式の XML を出力できる場合、型はデータ コントラクトの形に変換されます。そうでなければ、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化します。 Svcutil.exe では、スイッチを使用してデータコントラクトから XML スキーマを生成することもでき `dataContractOnly` ます。
+Windows ソフトウェア開発キット (SDK) には、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)と呼ばれるコマンドラインツールが含まれています。 ASP.NET Web サービスで使用される xsd.exe ツールと同様に、Svcutil.exe は XML スキーマから .NET データ型の定義を生成できます。 <xref:System.Runtime.Serialization.DataContractSerializer> が XML スキーマで定義された形式の XML を出力できる場合、型はデータ コントラクトの形に変換されます。そうでなければ、<xref:System.Xml.Serialization.XmlSerializer> を使用してシリアル化します。 Svcutil.exe では、スイッチを使用してデータコントラクトから XML スキーマを生成することもでき `dataContractOnly` ます。
 
 > [!NOTE]
 > ASP.NET ウェブサービスではを使用しますが、 <xref:System.Xml.Serialization.XmlSerializer> wcf ASP.NET 互換モードでは wcf サービスが ASP.NET Web サービスの動作を模倣しますが、ASP.NET compatibility オプションでは、を使用するように制限されていません <xref:System.Xml.Serialization.XmlSerializer> 。 必要であれば ASP.NET 互換モードでも <xref:System.Runtime.Serialization.DataContractSerializer> も使えるようになっています。
@@ -418,9 +418,9 @@ WCF ASP.NET 互換モードオプションを使用するには、IIS または 
 
 ## <a name="client-development"></a>クライアント開発
 
-ASP.NET Web サービスのクライアントの開発にはコマンド ライン ツール WSDL.exe を使用します。.asmx ファイルの URL を入力として指定します。 WCF によって提供される対応ツールは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)です。 これにより、サービスコントラクトの定義と WCF クライアントクラスの定義を含むコードモジュールが生成されます。 また、サービスのアドレスとバインディングを指定して、構成ファイルを生成することもできます。
+ASP.NET Web サービスのクライアントの開発にはコマンド ライン ツール WSDL.exe を使用します。.asmx ファイルの URL を入力として指定します。 WCF によって提供される対応ツールは、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)です。 これにより、サービスコントラクトの定義と WCF クライアントクラスの定義を含むコードモジュールが生成されます。 また、サービスのアドレスとバインディングを指定して、構成ファイルを生成することもできます。
 
-リモート サービスのクライアントを開発する場合、通常は、非同期パターンに従ってプログラムを記述するようお勧めします。 WSDL.exe ツールは、特段の指定をしなくても、同期パターンと非同期パターンを使ったコードをそれぞれ生成します。 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されたコードは、どちらのパターンでも提供できます。 特に指定しなければ同期パターン用です。 `/async` スイッチを指定して実行すれば、生成されるコードは非同期パターン用になります。
+リモート サービスのクライアントを開発する場合、通常は、非同期パターンに従ってプログラムを記述するようお勧めします。 WSDL.exe ツールは、特段の指定をしなくても、同期パターンと非同期パターンを使ったコードをそれぞれ生成します。 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されたコードは、どちらのパターンでも提供できます。 特に指定しなければ同期パターン用です。 `/async` スイッチを指定して実行すれば、生成されるコードは非同期パターン用になります。
 
 ASP によって生成される WCF クライアントクラスに名前があることは保証されません。既定では、.NET の WSDL.EXE ツールは、Svcutil.exe ツールによって生成される WCF クライアントクラスの名前と一致します。 特に、<xref:System.Xml.Serialization.XmlSerializer> でシリアル化したクラスのプロパティ名は、Svcutil.exe で生成した場合 "Property" という接頭辞が付きますが、WSDL.exe の場合はそうなりません。
 
@@ -765,4 +765,4 @@ ASP.NET 構成言語では、個々のサービスごとにカルチャを指定
 
 ## <a name="see-also"></a>関連項目
 
-- [使用目的と使用標準に基づく ASP.NET Web サービスと WCF との比較](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [使用目的と使用標準に基づく ASP.NET Web サービスと WCF との比較](comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
