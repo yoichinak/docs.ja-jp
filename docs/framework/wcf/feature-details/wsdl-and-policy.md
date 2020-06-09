@@ -2,12 +2,12 @@
 title: WSDL とポリシー
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: b032f91999695d848f20fac5009047dcc2e20451
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 201920a8ebf639c74acfb20b2e990c8bbc0c5b55
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144683"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600102"
 ---
 # <a name="wsdl-and-policy"></a>WSDL とポリシー
 このトピックでは、Windows Communication Foundation (WCF) WSDL 1.1、WS-POLICY および WS-POLICY 添付の実装の詳細、および WCF によって導入された追加の WS-POLICY アサーションと WSDL 1.1 拡張について説明します。  
@@ -74,6 +74,6 @@ ms.locfileid: "84144683"
   
 ## <a name="see-also"></a>関連項目
 
-- [カスタム WSDL パブリケーション](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [方法: カスタム WSDL をエクスポートする](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [方法: カスタム WSDL をインポートする](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [カスタム WSDL パブリケーション](../samples/custom-wsdl-publication.md)
+- [方法: カスタム WSDL をエクスポートする](../extending/how-to-export-custom-wsdl.md)
+- [方法: カスタム WSDL をインポートする](../extending/how-to-import-custom-wsdl.md)

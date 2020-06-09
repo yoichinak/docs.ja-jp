@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 01470bd7f317acca068b3c1be1c751e3050ee7e8
-ms.sourcegitcommit: 628e8147ca10187488e6407dab4c4e6ebe0cac47
+ms.openlocfilehash: fd78f2cd8266f94c577801623a84b56919c82973
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72320207"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600855"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation とは
 Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するためのフレームワークです。 WCF を使用すると、サービスエンドポイント間で非同期メッセージとしてデータを送信できます。 サービス エンドポイントには、IIS でホストされている、継続的に使用可能なサービスの一部を使用したり、アプリケーションでホストされているサービスを使用できます。 エンドポイントには、サービス エンドポイントからデータを要求するサービスのクライアントを使用できます。 メッセージは XML として送信された 1 文字または 1 語の簡単なものでも、バイナリ データのストリームのような複雑なものでも構いません。 サンプル シナリオをいくつか挙げます。
@@ -52,7 +52,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 - **データ コントラクト**
 
-     WCF は .NET Framework を使用して構築されているため、適用するコントラクトを提供するコードフレンドリなメソッドも含まれています。 汎用的な型のコントラクトの 1 つにデータ コントラクトがあります。 本質的に、Visual C# または Visual Basic を使用してサービスをコード化した場合、データを処理する最も簡単な方法は、データ エンティティを表すクラスにデータ エンティティに属するプロパティを作成する方法です。 WCF には、この簡単な方法でデータを操作するための包括的なシステムが含まれています。 データを表すクラスを作成すると、設計したデータ型にクライアントが準拠できるメタデータがサービスによって自動生成されます。 詳細については、「[データコントラクトの使用](../../../docs/framework/wcf/feature-details/using-data-contracts.md)」を参照してください。
+     WCF は .NET Framework を使用して構築されているため、適用するコントラクトを提供するコードフレンドリなメソッドも含まれています。 汎用的な型のコントラクトの 1 つにデータ コントラクトがあります。 本質的に、Visual C# または Visual Basic を使用してサービスをコード化した場合、データを処理する最も簡単な方法は、データ エンティティを表すクラスにデータ エンティティに属するプロパティを作成する方法です。 WCF には、この簡単な方法でデータを操作するための包括的なシステムが含まれています。 データを表すクラスを作成すると、設計したデータ型にクライアントが準拠できるメタデータがサービスによって自動生成されます。 詳細については、「[データコントラクトの使用](feature-details/using-data-contracts.md)」を参照してください。
 
 - **Security**
 
@@ -64,7 +64,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 - **キューに置かれた信頼性のあるメッセージ**
 
-     WCF は、WS-TRUST メッセージングと MSMQ を使用して実装された信頼できるセッションを使用して、信頼性の高いメッセージ交換をサポートします。 キューに置かれたメッセージングに対する WCFのサポートの詳細については、[、「キューと信頼できるセッション](./feature-details/queues-and-reliable-sessions.md)」を参照してください。
+     WCF は、WS-TRUST メッセージングと MSMQ を使用して実装された信頼できるセッションを使用して、信頼性の高いメッセージ交換をサポートします。 WCF での信頼性の高い、キューに置かれたメッセージングサポートの詳細については[、「キューと信頼できるセッション](./feature-details/queues-and-reliable-sessions.md)」を参照してください。
 
 - **非揮発性メッセージ**
 
@@ -72,7 +72,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 - **トランザクション**
 
-     また、WCF では、AtomicTransactions、<xref:System.Transactions> 名前空間の Api、および Microsoft 分散トランザクションコーディネーターの3つのトランザクションモデルのいずれかを使用したトランザクションもサポートしています。 WCF でのトランザクションサポートの詳細については、「[トランザクション](./feature-details/transactions-in-wcf.md)」を参照してください。
+     WCF では、AtomicTransactions、名前空間の Api、および Microsoft 分散トランザクションコーディネーターの3つのトランザクションモデルのいずれかを使用したトランザクションもサポートしてい <xref:System.Transactions> ます。 WCF でのトランザクションサポートの詳細については、「[トランザクション](./feature-details/transactions-in-wcf.md)」を参照してください。
 
 - **AJAX および REST サポート**
 
@@ -99,8 +99,8 @@ Windows Server AppFabric アプリケーションサーバーのホスト機能�
 - <xref:System.ServiceModel>
 - [Windows Communication Foundation の基本概念](fundamental-concepts.md)
 - [Windows Communication Foundation のアーキテクチャ](architecture.md)
-- [ガイドラインとベスト プラクティス](guidelines-and-best-practices.md)
-- [チュートリアル入門](getting-started-tutorial.md)
+- [ガイドラインと最適な使用方法](guidelines-and-best-practices.md)
+- [はじめにチュートリアル](getting-started-tutorial.md)
 - [ドキュメントのガイド](guide-to-the-documentation.md)
 - [基本的な WCF プログラミング](basic-wcf-programming.md)
 - [Windows Communication Foundation サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751514%28v=vs.90%29)

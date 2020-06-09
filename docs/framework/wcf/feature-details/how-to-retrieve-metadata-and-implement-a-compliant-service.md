@@ -1,41 +1,41 @@
 ---
-title: '方法 : メタデータの取得および準拠サービスの実装をする'
+title: '方法: メタデータの取得および準拠サービスの実装をする'
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: 0a13d504b1c7c38ec13fee58c36913a75119271b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6bd67ec8dcc0e73d097796b44974dce00b9a4eb2
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184860"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601219"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>方法 : メタデータの取得および準拠サービスの実装をする
-サービスのデザイン担当者と実装担当者が同じであるとは限りません。 アプリケーションの相互運用が重要な環境では、コントラクトを Web サービス記述言語 (WSDL) でデザインまたは記述した場合、開発者はそのコントラクトに準拠するサービスを実装する必要があります。 また、既存のサービスを Windows 通信基盤 (WCF) に移行し、回線形式を保持することもできます。 さらに、双方向コントラクトでは、呼び出し元でコールバック コントラクトを実装する必要もあります。  
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>方法: メタデータの取得および準拠サービスの実装をする
+サービスのデザイン担当者と実装担当者が同じであるとは限りません。 アプリケーションの相互運用が重要な環境では、コントラクトを Web サービス記述言語 (WSDL) でデザインまたは記述した場合、開発者はそのコントラクトに準拠するサービスを実装する必要があります。 また、既存のサービスを Windows Communication Foundation (WCF) に移行し、ワイヤ形式を維持することもできます。 さらに、双方向コントラクトでは、呼び出し元でコールバック コントラクトを実装する必要もあります。  
   
- このような場合は、サービス コントラクト の要件を満たすために実装できるマネージ言語でサービス コントラクト インターフェイスを生成するのには[、ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) (または同等のツール) を使用する必要があります。 通常[、ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe) は](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)、チャネル ファクトリまたは WCF クライアントの種類で使用されるサービス コントラクトを取得する際に使用されるだけでなく、正しいバインディングとアドレスを設定するクライアント構成ファイルを使用します。 生成された構成ファイルを使用するには、それをサービスの構成ファイルに変更する必要があります。 また、サービス コントラクトを変更する必要もあります。  
+ このような場合は、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md) (または同等のツール) を使用して、コントラクトの要件を満たすために実装できるマネージ言語のサービスコントラクトインターフェイスを生成する必要があります。 通常、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)は、チャネルファクトリまたは WCF クライアントの種類で使用されるサービスコントラクトを取得するために使用されます。また、正しいバインディングとアドレスを設定するクライアント構成ファイルでも使用されます。 生成された構成ファイルを使用するには、それをサービスの構成ファイルに変更する必要があります。 また、サービス コントラクトを変更する必要もあります。  
   
 ### <a name="to-retrieve-data-and-implement-a-compliant-service"></a>データを取得して準拠サービスを実装するには  
   
-1. メタデータ ファイルまたはメタデータ エンドポイントに対して[サービス モデル メタデータ ユーティリティ ツール (Svcutil.exe) を](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用して、コード ファイルを生成します。  
+1. メタデータファイルまたはメタデータエンドポイントに対して[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、コードファイルを生成します。  
   
-2. 出力コード ファイルを検索し、<xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 属性でマークされた対象のインターフェイス (複数ある場合) 部分を見つけます。 次のコード例は、サービス モデル[メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成される 2 つのインターフェイスを示しています。 最初の例 (`ISampleService`) は、準拠サービスを作成するために実装するサービス コントラクト インターフェイスです。 2 番目の例 (`ISampleServiceChannel`) は、サービス コントラクト インターフェイスと <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> の両方を拡張するクライアント用のヘルパー インターフェイスです。これはクライアント アプリケーションでも使用されます。  
+2. 出力コード ファイルを検索し、<xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 属性でマークされた対象のインターフェイス (複数ある場合) 部分を見つけます。 次のコード例は、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成される2つのインターフェイスを示しています。 最初の例 (`ISampleService`) は、準拠サービスを作成するために実装するサービス コントラクト インターフェイスです。 2 番目の例 (`ISampleServiceChannel`) は、サービス コントラクト インターフェイスと <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> の両方を拡張するクライアント用のヘルパー インターフェイスです。これはクライアント アプリケーションでも使用されます。  
   
      [!code-csharp[ClientProxyCodeSample#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#2)]  
   
 3. すべての操作に対する応答アクションを WSDL で指定していない場合、生成後の操作コントラクトでは、<xref:System.ServiceModel.OperationContractAttribute.ReplyAction%2A> プロパティがワイルドカード文字 (*) に設定される場合があります。 このプロパティの設定を削除します。 削除しない場合は、サービス コントラクト メタデータを実装するときに、それらの操作のメタデータをエクスポートできません。  
   
-4. クラスにインターフェイスを実装してサービスをホストします。 例については、「方法[: サービス コントラクトを実装](../../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)する 」を参照するか、「例」セクションの下の簡単な実装を参照してください。  
+4. クラスにインターフェイスを実装してサービスをホストします。 例については、「[方法: サービスコントラクトを実装](../how-to-implement-a-wcf-contract.md)する」を参照するか、「例」の簡単な実装を参照してください。  
   
-5. [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe) が](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成するクライアント構成ファイルで、[\<クライアント>](../../../../docs/framework/configure-apps/file-schema/wcf/client.md)構成セクションを[\<サービス>](../../../../docs/framework/configure-apps/file-schema/wcf/services.md)構成セクションに変更します。 (生成されたクライアント アプリケーション構成ファイルの例については、次の例を参照してください)。  
+5. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されるクライアント構成ファイルで、構成セクション [\<client>](../../configure-apps/file-schema/wcf/client.md) を構成セクションに変更し [\<services>](../../configure-apps/file-schema/wcf/services.md) ます。 (生成されたクライアント アプリケーション構成ファイルの例については、次の例を参照してください)。  
   
-6. サービス[\<>](../../../../docs/framework/configure-apps/file-schema/wcf/services.md)構成セクション内で、[\<サービス](../../../../docs/framework/configure-apps/file-schema/wcf/services.md)実装の`name`サービス>構成セクションに属性を作成します。  
+6. 構成セクション内で、 [\<services>](../../configure-apps/file-schema/wcf/services.md) `name` [\<services>](../../configure-apps/file-schema/wcf/services.md) サービス実装の [構成] セクションに属性を作成します。  
   
 7. サービスの `name` 属性をユーザーのサービス実装の構成名に設定します。  
   
 8. 実装するサービス コントラクトを使用するエンドポイント構成要素をサービス構成セクションに追加します。  
   
 ## <a name="example"></a>例  
- 次のコード例は、メタデータ ファイルに対して[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe) を](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)実行することによって生成されるコード ファイルの大部分を示しています。  
+ 次のコード例は、 [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)をメタデータファイルに対して実行することによって生成されるコードファイルの大部分を示しています。  
   
  このコードには、次の項目が示されています。  
   
@@ -61,4 +61,4 @@ ms.locfileid: "79184860"
   
 ## <a name="see-also"></a>関連項目
 
-- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

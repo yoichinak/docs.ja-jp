@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: 0d7b952382b50daae0291ed6afb22bb612447670
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: abd81b5e7bf611fc6b4f446a82628b83130f2d54
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76920148"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599205"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点
 このトピックでは、Windows Vista、Windows Server 2003、および Windows XP の Windows Communication Foundation (WCF) キュー機能の違いについて説明します。  
@@ -26,9 +26,9 @@ ms.locfileid: "76920148"
   
  有害な処理に関連する Windows Vista、Windows Server 2003、および Windows XP でのメッセージキュー (MSMQ) の主な違いは、次のとおりです。  
   
-- Windows Vista の MSMQ はサブキューをサポートしていますが、Windows Server 2003 および Windows XP ではサブキューがサポートされていません。 サブキューは、有害メッセージ処理で使用されます。 再試行キューと有害キューは、有害メッセージ処理の設定に基づいて作成されるアプリケーション キューのサブキューです。 作成する再試行サブキューの数は、`MaxRetryCycles` で指定します。 このため、Windows Server 2003 または Windows XP で実行している場合、`MaxRetryCycles` は無視され、`ReceiveErrorHandling.Move` は許可されません。  
+- Windows Vista の MSMQ はサブキューをサポートしていますが、Windows Server 2003 および Windows XP ではサブキューがサポートされていません。 サブキューは、有害メッセージ処理で使用されます。 再試行キューと有害キューは、有害メッセージ処理の設定に基づいて作成されるアプリケーション キューのサブキューです。 作成する再試行サブキューの数は、`MaxRetryCycles` で指定します。 このため、Windows Server 2003 または Windows XP で実行している場合、は無視され、許可され `MaxRetryCycles` `ReceiveErrorHandling.Move` ません。  
   
-- Windows Vista の MSMQ は否定受信確認をサポートしていますが、Windows Server 2003 および Windows XP ではサポートされていません。 受信側キュー マネージャーから否定受信確認を受け取ると、送信側キュー マネージャーは拒否されたメッセージを配信不能キューに入れます。 そのため、`ReceiveErrorHandling.Reject` は、Windows Server 2003 および Windows XP では許可されていません。  
+- Windows Vista の MSMQ は否定受信確認をサポートしていますが、Windows Server 2003 および Windows XP ではサポートされていません。 受信側キュー マネージャーから否定受信確認を受け取ると、送信側キュー マネージャーは拒否されたメッセージを配信不能キューに入れます。 そのため、 `ReceiveErrorHandling.Reject` Windows Server 2003 および WINDOWS XP では使用できません。  
   
 - Windows Vista の MSMQ では、メッセージの配信が試行された回数を保持するメッセージプロパティをサポートしています。 この中止回数のプロパティは、Windows Server 2003 および Windows XP では使用できません。 WCF では、abort count がメモリ内に保持されるため、同じメッセージが Web ファーム内の複数の WCF サービスによって読み取られる場合、このプロパティに正確な値が含まれていない可能性があります。  
   
@@ -37,5 +37,5 @@ ms.locfileid: "76920148"
   
 ## <a name="see-also"></a>関連項目
 
-- [配信不能キューを使用したメッセージ転送エラー処理](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
-- [有害メッセージ処理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
+- [配信不能キューを使用したメッセージ転送エラー処理](using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [有害メッセージ処理](poison-message-handling.md)

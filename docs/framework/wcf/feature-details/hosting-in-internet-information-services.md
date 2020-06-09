@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 2e0fb579897797b732859692092665225a0d6168
-ms.sourcegitcommit: cdf5084648bf5e77970cbfeaa23f1cab3e6e234e
+ms.openlocfilehash: baf13af39fe575a75f1304b21f3b4ad70dd370ab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76919352"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597320"
 ---
 # <a name="host-in-internet-information-services"></a>インターネットインフォメーションサービスのホスト
 
@@ -23,7 +23,7 @@ WCF は、次のオペレーティングシステム上の IIS の次のバー�
 
 - Windows Server 2003 上の IIS 6.0: IIS 6.0 は、スケーラビリティ、信頼性、およびアプリケーションの分離が強化された高度なプロセス モデルを提供します。 この環境は、HTTP 通信のみを使用する WCF サービスの運用環境へのデプロイに適しています。
 
-- Windows Vista および Windows Server 2008 の IIS 7.0。 IIS 7.0 は、IIS 6.0 と同じ高度なプロセスモデルを提供しますが、Windows プロセスアクティブ化サービス (WAS) を使用して、HTTP 以外のプロトコルを介したアクティベーションとネットワーク通信を許可します。 この環境は、WCF でサポートされている任意のネットワークプロトコル (HTTP、net.tcp、net.pipe、および net.tcp を含む) を介して通信する WCF サービスの開発に適しています。 WAS の詳細については、「 [Windows プロセスアクティブ化サービスでのホスト](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)」を参照してください。
+- Windows Vista および Windows Server 2008 の IIS 7.0。 IIS 7.0 は、IIS 6.0 と同じ高度なプロセスモデルを提供しますが、Windows プロセスアクティブ化サービス (WAS) を使用して、HTTP 以外のプロトコルを介したアクティベーションとネットワーク通信を許可します。 この環境は、WCF でサポートされている任意のネットワークプロトコル (HTTP、net.tcp、net.pipe、および net.tcp を含む) を介して通信する WCF サービスの開発に適しています。 WAS の詳細については、「 [Windows プロセスアクティブ化サービスでのホスト](hosting-in-windows-process-activation-service.md)」を参照してください。
 
 - [Windows Server AppFabric](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))は、IIS 7.0 および Windows プロセスアクティブ化サービス (WAS) と連携して、NET4 WCF および WF サービスのための豊富なアプリケーションホスティング環境を提供します。 この利点には、プロセス ライフサイクル管理、プロセス リサイクル、共有ホスティング、迅速な障害保護、プロセスの孤立化、オンデマンド アクティブ化、状態監視などがあります。 詳細については、「 [appfabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))」と「 [appfabric のホスティングの概念](https://docs.microsoft.com/previous-versions/appfabric/ee677371(v=azure.10))」を参照してください。
 
@@ -33,13 +33,13 @@ IIS で WCF サービスをホストすると、いくつかの利点があり�
 
 - IIS でホストされている WCF サービスは、ASP.NET アプリケーションや ASMX など、他の種類の IIS アプリケーションと同様に展開および管理されます。
 
-- IIS によって、プロセスをアクティブ化する機能、状態管理機能、およびリサイクル機能が提供され、ホストされるアプリケーションの信頼性が向上します。
+- IIS はプロセスのアクティブ化、状態管理、リサイクル機能を提供し、ホストされるアプリケーションの信頼性を向上します。
 
 - ASP.NET と同様に、ASP.NET でホストされる WCF サービスは、サーバーの密度とスケーラビリティを向上させるために、共通のワーカープロセス内に複数のアプリケーションが存在する ASP.NET 共有ホスティングモデルを利用できます。
 
 - IIS でホストされる WCF サービスは、ASP.NET 2.0 と同じ動的コンパイルモデルを使用します。これにより、ホステッドサービスの開発とデプロイが簡単になります。
 
-IIS で WCF サービスをホストする場合は、IIS 5.1 と IIS 6.0 が HTTP 通信のみに制限されていることに注意することが重要です。 ホスティング環境の選択の詳細については、「[ホスティングサービス](../../../../docs/framework/wcf/hosting-services.md)」を参照してください。
+IIS で WCF サービスをホストする場合は、IIS 5.1 と IIS 6.0 が HTTP 通信のみに制限されていることに注意することが重要です。 ホスティング環境の選択の詳細については、「[ホスティングサービス](../hosting-services.md)」を参照してください。
 
 ## <a name="deploy-an-iis-hosted-wcf-service"></a>IIS でホストされる WCF サービスを展開する
 
@@ -55,17 +55,17 @@ IIS でホストされる WCF サービスの開発と展開は、次のタス�
 
 - WCF サービスを構成します。
 
-これらの各タスクの詳細については、「[インターネットインフォメーションサービスでホストされる WCF サービスの配置](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)」を参照してください。
+これらの各タスクの詳細については、「[インターネットインフォメーションサービスでホストされる WCF サービスの配置](deploying-an-internet-information-services-hosted-wcf-service.md)」を参照してください。
 
 ## <a name="wcf-services-and-aspnet"></a>WCF サービスと ASP.NET
 
-WCF サービスは、ASP.NET とサイドバイサイドでホストすることも、ASP.NET 互換モードでホストすることもできます。このモードでは、ASP.NET Web アプリケーションプラットフォームによって提供される機能をサービスが最大限に活用できます。 これらの機能の詳細については、「 [WCF Services と ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)」を参照してください。
+WCF サービスは、ASP.NET とサイドバイサイドでホストすることも、ASP.NET 互換モードでホストすることもできます。このモードでは、ASP.NET Web アプリケーションプラットフォームによって提供される機能をサービスが最大限に活用できます。 これらの機能の詳細については、「 [WCF Services と ASP.NET](wcf-services-and-aspnet.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [ServiceHostFactory を使用したホストの拡張](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
-- [インターネット インフォメーション サービスでホストされる WCF サービスの配置](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
-- [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
-- [インターネット インフォメーション サービス ホスティングのベスト プラクティス](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
-- [Windows Communication Foundation での Internet Information Services 7.0 の構成](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
+- [ServiceHostFactory を使用したホストの拡張](../extending/extending-hosting-using-servicehostfactory.md)
+- [インターネット インフォメーション サービスでホストされる WCF サービスの配置](deploying-an-internet-information-services-hosted-wcf-service.md)
+- [WCF サービスと ASP.NET](wcf-services-and-aspnet.md)
+- [インターネット インフォメーション サービス ホスティングのベスト プラクティス](internet-information-services-hosting-best-practices.md)
+- [Windows Communication Foundation での Internet Information Services 7.0 の構成](configuring-iis-for-wcf.md)
 - [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

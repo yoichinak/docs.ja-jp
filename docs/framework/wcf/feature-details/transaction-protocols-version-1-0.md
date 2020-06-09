@@ -2,15 +2,15 @@
 title: トランザクション プロトコル バージョン 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: 6063c643be4c60e9830a020d10ac9fbcd236dac2
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: f725361b9a90c9336b763cc7f292ae043e445966
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144774"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598711"
 ---
 # <a name="transaction-protocols-version-10"></a>トランザクション プロトコル バージョン 1.0
-Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION および WS-ATOMICTRANSACTION プロトコルのバージョン1.0 を実装します。 バージョン1.1 の詳細については、「[トランザクションプロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)」を参照してください。  
+Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION および WS-ATOMICTRANSACTION プロトコルのバージョン1.0 を実装します。 バージョン1.1 の詳細については、「[トランザクションプロトコル](transaction-protocols.md)」を参照してください。  
   
 |仕様/ドキュメント|Link|  
 |-----------------------------|----------|  
@@ -99,7 +99,7 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
 #### <a name="activation-message-binding-configuration"></a>アクティベーション メッセージのバインド構成  
  アクティベーション メッセージは通常、アプリケーションとローカルのトランザクション マネージャー間で発生するため、相互運用には参加しません。  
   
- B1221: WCF では、アクティベーションメッセージに双方向 HTTPS バインド (「[メッセージングプロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)」で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
+ B1221: WCF では、アクティベーションメッセージに双方向 HTTPS バインド (「[メッセージングプロトコル](messaging-protocols.md)」で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
   
@@ -110,11 +110,11 @@ Windows Communication Foundation (WCF) version 1 は、WS-ATOMICTRANSACTION お�
  `t:IssuedTokens`送信メッセージに添付するための新しいヘッダーを生成する必要があり `wscoor:CreateCoordinationContextResponse` ます。  
   
 #### <a name="registration-message-binding-configuration"></a>登録メッセージのバインディング構成  
- B1231: WCF では、双方向の HTTPS バインド (「[メッセージングプロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)」で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
+ B1231: WCF では、双方向の HTTPS バインド (「[メッセージングプロトコル](messaging-protocols.md)」で説明) を使用します。 要求および応答メッセージは、WS-Addressing 2004/08 を使用して関連付けられます。  
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
   
- R1232: 送信 `wscoor:Register` メッセージには、 `IssuedTokenOverTransport` 「[セキュリティプロトコル](../../../../docs/framework/wcf/feature-details/security-protocols.md)」で説明されている認証モードを使用する必要があります。  
+ R1232: 送信 `wscoor:Register` メッセージには、 `IssuedTokenOverTransport` 「[セキュリティプロトコル](security-protocols.md)」で説明されている認証モードを使用する必要があります。  
   
  `wsse:Timestamp`要素は、発行されたを使用して署名する必要があり `SecurityContextToken STx` ます。 この署名は特定のトランザクションに関連付けられたトークンを所有していることの証明であり、トランザクションに登録されている参加要素の認証で使用されます。 RegistrationResponse メッセージは、HTTPS を使用して返信されます。  
   

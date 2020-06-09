@@ -2,17 +2,17 @@
 title: サービス エンドポイントとキューのアドレス指定
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 8b323993a698dac219e0f2be43e9b508a19065dd
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: a17e680732cd257fbdfd95eb09df8c53f5894400
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202424"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600388"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>サービス エンドポイントとキューのアドレス指定
 ここでは、キューから読み取るサービスをクライアントがアドレス指定するしくみと、サービス エンドポイントがキューにマップされるしくみについて説明します。 次の図は、従来の Windows Communication Foundation (WCF) のキューに置かれたアプリケーションの展開を示しています。  
   
- ![キューに置かれたアプリケーションの図](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "配信キュー図")  
+ ![キューに置かれたアプリケーションの図](media/distributed-queue-figure.jpg "配信キュー図")  
   
  クライアントは、メッセージをサービスに送信するために、メッセージをターゲット キューにアドレス指定します。 サービスは、キューからメッセージを読み取るために、リッスン アドレスをターゲット キューに設定します。 WCF でのアドレス指定は Uniform Resource Identifier (URI) ベースですが、メッセージキュー (MSMQ) キュー名は URI ベースではありません。 このため、WCF を使用して MSMQ で作成されたキューのアドレスを解決する方法を理解することが不可欠です。  
   
@@ -46,7 +46,7 @@ ms.locfileid: "84202424"
   
  キュー アドレスは、メッセージを読み取るリスナーにより、リッスン URI として使用されます。 つまり、キュー アドレスは TCP ソケットのリッスン ポートと同じです。  
   
- キューから読み取りを行うエンドポイントは、ServiceHost を開いたときにあらかじめ指定されているスキームと同じスキームを使用して、キューのアドレスを指定する必要があります。 例については、「 [NET MSMQ Binding](../../../../docs/framework/wcf/samples/net-msmq-binding.md)」を参照してください。  
+ キューから読み取りを行うエンドポイントは、ServiceHost を開いたときにあらかじめ指定されているスキームと同じスキームを使用して、キューのアドレスを指定する必要があります。 例については、「 [NET MSMQ Binding](../samples/net-msmq-binding.md)」を参照してください。  
   
 ### <a name="multiple-contracts-in-a-queue"></a>キュー内の複数のコントラクト  
  キュー内のメッセージは、さまざまなコントラクトを実装している可能性があります。 この場合、すべてのメッセージを正常に読み取って処理するためには、次のいずれかの処置を行う必要があります。  
@@ -89,7 +89,7 @@ ms.locfileid: "84202424"
   
  net.tcp://localhost/[private/] \<*custom-dead-letter-queue-name*> 。  
   
- WCF サービスは、受信したすべてのメッセージが、リッスンしている特定のキューにアドレス指定されていることを確認します。 メッセージの送信先キューとメッセージが置かれているキューが一致しない場合、サービスはメッセージを処理しません。 この問題には、配信不能キューをリッスンしているサービスが対処する必要があります。これは、配信不能キューにあるメッセージが、他の場所に配信されることになっていたメッセージであるためです。 配信不能キューや有害メッセージ キューからメッセージを読み取るには、`ServiceBehavior` パラメーターが設定された <xref:System.ServiceModel.AddressFilterMode.Any> を使用する必要があります。 例については、「[配信不能キュー](../../../../docs/framework/wcf/samples/dead-letter-queues.md)」を参照してください。  
+ WCF サービスは、受信したすべてのメッセージが、リッスンしている特定のキューにアドレス指定されていることを確認します。 メッセージの送信先キューとメッセージが置かれているキューが一致しない場合、サービスはメッセージを処理しません。 この問題には、配信不能キューをリッスンしているサービスが対処する必要があります。これは、配信不能キューにあるメッセージが、他の場所に配信されることになっていたメッセージであるためです。 配信不能キューや有害メッセージ キューからメッセージを読み取るには、`ServiceBehavior` パラメーターが設定された <xref:System.ServiceModel.AddressFilterMode.Any> を使用する必要があります。 例については、「[配信不能キュー](../samples/dead-letter-queues.md)」を参照してください。  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding とサービスのアドレス指定  
  `MsmqIntegrationBinding` は、従来の MSMQ アプリケーションとの通信に使用されます。 既存の MSMQ アプリケーションとの相互運用を容易にするために、WCF では、形式名のアドレス指定のみがサポートされています。 そのため、このバインディングを使用して送信されるメッセージは、次の URI スキームに従う必要があります。  
@@ -106,4 +106,4 @@ ms.locfileid: "84202424"
   
 ## <a name="see-also"></a>関連項目
 
-- [キューに置かれたアプリケーションの Web ホスト](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+- [キューに置かれたアプリケーションの Web ホスト](web-hosting-a-queued-application.md)
