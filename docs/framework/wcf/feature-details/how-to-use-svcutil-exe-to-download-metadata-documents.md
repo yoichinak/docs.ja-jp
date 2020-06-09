@@ -1,21 +1,21 @@
 ---
-title: '方法 : Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする'
+title: '方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする'
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 359cdb58ef65c9fb69c0ecfc759f70164a369cce
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: c04b63fa4963a5df0f910da8702643a6484a4edd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212114"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596930"
 ---
-# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>方法 : Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする
+# <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする
 Svcutil.exe を使用すると、実行中のサービスからメタデータをダウンロードして、ローカル ファイルに保存できます。 HTTP および HTTPS の URL スキームの場合、Svcutil.exe は Ws-metadataexchange と[XML Web サービス探索](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/fxx6cfx2(v=vs.100))を使用してメタデータを取得しようとします。 その他の URL スキームの場合、Svcutil.exe は WS-MetadataExchange のみを使用します。  
   
  既定で、Svcutil.exe は <xref:System.ServiceModel.Description.MetadataExchangeBindings> クラスに定義されているバインディングを使用します。 WS-MetadataExchange で使用するバインディングを構成するには、Svcutil.exe の構成ファイル (svcutil.exe.config) でクライアント エンドポイントを定義する必要があります。このとき、クライアント エンドポイントが `IMetadataExchange` コントラクトを使用し、メタデータ エンドポイントのアドレスの URI (Uniform Resource Identifier) スキームと同じ名前を持つように定義します。  
   
 > [!CAUTION]
-> Svcutil.exe を実行して、それぞれに同じ名前の操作が含まれている2つの異なるサービスコントラクトを公開するサービスのメタデータを取得する場合、Svcutil.exe によって "メタデータを取得できません" というエラーが表示されます。たとえば、操作が `Get(Car c)` `ICarService` という名前のサービスコントラクトを公開するサービスがあり、同じサービスが `Get(Book b)`操作を持つ `IBookService` と呼ばれるサービスコントラクトを公開している場合などです。 この問題を回避するには、次のいずれかの操作を実行します。
+> Svcutil.exe を実行して、それぞれに同じ名前の操作が含まれている2つの異なるサービスコントラクトを公開するサービスのメタデータを取得する場合、Svcutil.exe によって "メタデータを取得できません" というエラーが表示されます。たとえば、操作を持つという名前のサービスコントラクトを公開 `ICarService` `Get(Car c)` し、同じサービスが操作を持つという名前のサービスコントラクトを公開するサービスがあるとし `IBookService` `Get(Book b)` ます。 この問題を回避するには、次のいずれかのようにします。
 >
 > - 操作の名前を変更する。
 > - <xref:System.ServiceModel.OperationContractAttribute.Name%2A> を別の名前に設定する。
@@ -35,11 +35,11 @@ Svcutil.exe を使用すると、実行中のサービスからメタデータ�
   
      メタデータをダウンロードするには `/t:metadata` オプションを指定する必要があります。 このオプションを指定しないと、クライアントのコードと構成が生成されます。  
   
-3. <`url`> 引数では、メタデータを提供するサービスエンドポイントの URL、またはオンラインでホストされているメタデータドキュメントを指定します。 `epr`> 引数は、Ws-metadataexchange をサポートするサービスエンドポイントの WS-ADDRESSING `EndpointAddress` を含む XML ファイルへのパスを指定します。  
+3. <>引数には、 `url` メタデータを提供するサービスエンドポイントの URL、またはオンラインでホストされているメタデータドキュメントを指定します。 <`epr`> 引数は、 `EndpointAddress` ws-metadataexchange をサポートするサービスエンドポイントの ws-addressing を含む XML ファイルへのパスを指定します。  
   
- メタデータのダウンロードにこのツールを使用する方法の詳細については、「 [ServiceModel Metadata Utility tool (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)」を参照してください。  
+ メタデータのダウンロードにこのツールを使用する方法の詳細については、「 [ServiceModel Metadata Utility tool (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)」を参照してください。  
   
-## <a name="example"></a>使用例  
+## <a name="example"></a>例  
  次のコマンドにより、実行中のサービスからメタデータ ドキュメントがダウンロードされます。  
   
 ```console
@@ -48,4 +48,4 @@ svcutil /t:metadata http://service/metadataEndpoint
   
 ## <a name="see-also"></a>関連項目
 
-- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d48f01b5-582b-4c8b-b547-8adddae7e371
-ms.openlocfilehash: 7d542a3dcae514e75194b49c23a8dec5dd7e8c3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bb2053fb50931756e79d5346a3f14d2acbe04f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047257"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595311"
 ---
 # <a name="how-to-use-the-channelfactory"></a>方法: ChannelFactory を使用する
 <xref:System.ServiceModel.ChannelFactory%601> ジェネリック クラスは、複数チャネルの作成に使用できるチャネル ファクトリの作成を必要とする高度なシナリオで使用します。  
   
 ### <a name="to-create-and-use-the-channelfactory-class"></a>ChannelFactory クラスの作成方法と使用方法  
   
-1. ビルドして、Windows Communication Foundation (WCF) サービスを実行します。 詳細については、次を参照してください。[のデザインと実装サービス](../../../../docs/framework/wcf/designing-and-implementing-services.md)、[サービスを構成する](../../../../docs/framework/wcf/configuring-services.md)、および[ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)します。  
+1. Windows Communication Foundation (WCF) サービスをビルドして実行します。 詳細については、「[サービスの設計と実装](../designing-and-implementing-services.md)」、「[サービスの構成](../configuring-services.md)」、および「[ホスティングサービス](../hosting-services.md)」を参照してください。  
   
-2. 使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)クライアントのコントラクト (インターフェイス) を生成します。  
+2. [ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用して、クライアントのコントラクト (インターフェイス) を生成します。  
   
 3. クライアント コード内で、<xref:System.ServiceModel.ChannelFactory%601> クラスを使用して複数のエンドポイント リスナーを作成します。  
   

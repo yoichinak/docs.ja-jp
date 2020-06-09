@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: bfe6dcfe6850ee17a7bbb59f3a6ccad6c3c3e7d7
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: d020f3e97023d07abb572d30dd53896bfec1da46
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964244"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597021"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>方法 : 証明書 (WCF) を取得する
 X.509 証明書を使用するの Windows Communication Foundation (WCF) 機能のいずれかを使用するには、最初に証明書を取得するだけです。  
@@ -29,5 +29,5 @@ X.509 証明書を使用するの Windows Communication Foundation (WCF) 機能�
   
 ## <a name="see-also"></a>関連項目
 
-- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [方法 : 開発中に使用する一時的な証明書を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)
+- [証明書の使用](working-with-certificates.md)
+- [方法: 開発中に使用する一時的な証明書を作成する](how-to-create-temporary-certificates-for-use-during-development.md)

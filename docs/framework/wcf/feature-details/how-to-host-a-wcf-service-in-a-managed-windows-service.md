@@ -1,32 +1,32 @@
 ---
-title: '方法 : マネージド Windows サービスで WCF サービスをホストする'
+title: '方法: マネージド Windows サービスで WCF サービスをホストする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: 698a5134683341fedf2a37f7d6383770e14c232c
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: dbd51abbc30b1010f7c4f206aad9a773eca0a714
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964796"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593179"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>方法 : マネージド Windows サービスで WCF サービスをホストする
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>方法: マネージド Windows サービスで WCF サービスをホストする
 
 このトピックでは、Windows サービスによってホストされる Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 このシナリオは、メッセージがアクティブ化されていないセキュリティで保護された環境でインターネットインフォメーションサービス (IIS) の外部でホストされている長時間実行される WCF サービスである、マネージ Windows サービスホストオプションによって有効になります。 サービスの有効期限は代わりにオペレーティング システムによって制御されます。 このホスト オプションは Windows のすべてのバージョンで使用できます。
 
 Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.ManagementConsole.SnapIn を使用して管理し、システムのブート時に自動的に起動するように構成できます。 このホストオプションは、WCF サービスをホストするアプリケーションドメイン (AppDomain) をマネージ Windows サービスとして登録することで構成されます。これにより、サービスのプロセス有効期間は Windows サービス用のサービスコントロールマネージャー (SCM) によって制御されます。
 
-サービス コードには、サービス コントラクトのサービス実装、Windows サービス クラス、およびインストーラー クラスが含まれています。 サービス実装クラス `CalculatorService`は、WCF サービスです。 一方、`CalculatorWindowsService` は Windows サービスです。 Windows サービスとして限定するため、このクラスは `ServiceBase` を継承し、`OnStart` メソッドと `OnStop` メソッドを実装しています。 `OnStart` では、<xref:System.ServiceModel.ServiceHost> 型の `CalculatorService` が作成され、開かれます。 `OnStop` では、このサービスが停止され、破棄されます。 ホストはベース アドレスをサービス ホストに提供する必要もあります。サービス ホストは、アプリケーション設定で構成されます。 インストーラー クラスは <xref:System.Configuration.Install.Installer> を継承します。このクラスを使用すると、Installutil.exe ツールにより、プログラムを Windows サービスとしてインストールできます。
+サービス コードには、サービス コントラクトのサービス実装、Windows サービス クラス、およびインストーラー クラスが含まれています。 サービス実装クラスは、 `CalculatorService` WCF サービスです。 一方、`CalculatorWindowsService` は Windows サービスです。 Windows サービスとして限定するため、このクラスは `ServiceBase` を継承し、`OnStart` メソッドと `OnStop` メソッドを実装しています。 `OnStart` では、<xref:System.ServiceModel.ServiceHost> 型の `CalculatorService` が作成され、開かれます。 `OnStop` では、このサービスが停止され、破棄されます。 ホストはベース アドレスをサービス ホストに提供する必要もあります。サービス ホストは、アプリケーション設定で構成されます。 インストーラー クラスは <xref:System.Configuration.Install.Installer> を継承します。このクラスを使用すると、Installutil.exe ツールにより、プログラムを Windows サービスとしてインストールできます。
 
-## <a name="construct-the-service-and-provide-the-hosting-code"></a>サービスを構築してホスティング コードを提供する
+## <a name="construct-the-service-and-provide-the-hosting-code"></a> サービスを構築してホスティング コードを提供する
 
 1. **Service**という名前の新しい Visual Studio**コンソールアプリ**プロジェクトを作成します。
 
 2. Program.cs を Service.cs に変更します。
 
-3. 名前空間を `Microsoft.ServiceModel.Samples`に変更します。
+3. 名前空間をに変更 `Microsoft.ServiceModel.Samples` します。
 
 4. 次のアセンブリへの参照を追加します。
 
@@ -110,21 +110,21 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
     </configuration>
     ```
 
-     **ソリューションエクスプローラー**で app.config ファイルを右クリックし、 **[プロパティ]** を選択します。 **[出力ディレクトリにコピー]** で、 **[新しい場合はコピー]** する を選択します。
+     **ソリューションエクスプローラー**で app.config ファイルを右クリックし、[**プロパティ**] を選択します。 [**出力ディレクトリにコピー** ] で、[**新しい場合はコピー**する] を選択します。
 
-     この例では、構成ファイルにエンドポイントを明示的に指定します。 エンドポイントをサービスに追加しない場合、ランタイムによって既定のエンドポイントが追加されます。 この例では、サービスには <xref:System.ServiceModel.Description.ServiceMetadataBehavior> に設定された `true` があるので、サービスで公開メタデータも有効化されています。 既定のエンドポイントについては、「[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。
+     この例では、構成ファイルにエンドポイントを明示的に指定します。 エンドポイントをサービスに追加しない場合、ランタイムによって既定のエンドポイントが追加されます。 この例では、サービスには <xref:System.ServiceModel.Description.ServiceMetadataBehavior> に設定された `true` があるので、サービスで公開メタデータも有効化されています。 既定のエンドポイントについては、「[Simplified Configuration](../simplified-configuration.md)」 (簡易構成) と「[Simplified Configuration for WCF Services](../samples/simplified-configuration-for-wcf-services.md)」 (WCF サービスの簡易構成) を参照してください。
 
 ## <a name="install-and-run-the-service"></a>サービスをインストールして実行する
 
 1. ソリューションをビルドして `Service.exe` 実行可能ファイルを作成します。
 
-2. Visual Studio の開発者コマンドプロンプトを開き、プロジェクトディレクトリに移動します。 コマンド プロンプトで「`installutil bin\service.exe`」と入力して、Windows サービスをインストールします
+2. Visual Studio の開発者コマンドプロンプトを開き、プロジェクトディレクトリに移動します。 コマンド プロンプトで「`installutil bin\service.exe`」と入力して、Windows サービスをインストールします 
 
      コマンド プロンプトで「`services.msc`」と入力してサービス コントロール マネージャー (SCM) にアクセスします。 Windows サービスは、[Services] に "WCFWindowsServiceSample" として表示されます。 WCF サービスは、Windows サービスが実行されている場合にのみ、クライアントに応答できます。 サービスを開始するには、SCM でそのサービスを右クリックし、[開始] を選択するか、コマンドプロンプトで「 **net Start WCFWindowsServiceSample** 」と入力します。
 
 3. サービスを変更する場合は、まずそのサービスを停止してからアンインストールする必要があります。 サービスを停止するには、SCM でサービスを右クリックし、[停止] を選択するか、コマンドプロンプトで「 **net Stop WCFWindowsServiceSample** 」と入力します。 Windows サービスを停止してクライアントを実行すると、クライアントがこのサービスにアクセスしようとしたときに <xref:System.ServiceModel.EndpointNotFoundException> 例外が発生することに注意してください。 Windows サービスをアンインストールするには、コマンドプロンプトで「 **installutil.exe/u bin\service.exe** 」と入力します。
 
-## <a name="example"></a>使用例
+## <a name="example"></a>例
 
 このトピックで使用されているコードの完全な一覧を次に示します。
 
@@ -135,7 +135,7 @@ Windows サービスは、Microsoft 管理コンソール (MMC) の Microsoft.Ma
 
 ## <a name="see-also"></a>関連項目
 
-- [簡略化された構成](../../../../docs/framework/wcf/simplified-configuration.md)
-- [マネージド アプリケーションのホスト](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
-- [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)
+- [簡略化された構成](../simplified-configuration.md)
+- [マネージド アプリケーションのホスト](hosting-in-a-managed-application.md)
+- [ホスティング サービス](../hosting-services.md)
 - [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))
