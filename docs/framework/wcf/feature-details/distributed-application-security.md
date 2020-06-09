@@ -5,17 +5,17 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: cb271bcf8fb27bae4c8ef6b60df0f8d2940ecb9a
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 3cae20cfe8d52497646ca173740533a22326c8f8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964821"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599153"
 ---
 # <a name="distributed-application-security"></a>分散アプリケーションのセキュリティ
 Windows Communication Foundation (WCF) セキュリティは、転送セキュリティ、アクセス制御、監査という3つの主要な機能領域に分割されます。 転送セキュリティは、整合性、機密性、および認証を実現します。 転送セキュリティは、トランスポート セキュリティ、メッセージ セキュリティ、または `TransportWithMessageCredential` のいずれかによって提供されます。  
   
- WCF メッセージセキュリティの概要については、「[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)」を参照してください。 WCF セキュリティのその他の2つの部分の詳細については、「[承認](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)と[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)」を参照してください。  
+ WCF メッセージセキュリティの概要については、「[セキュリティの概要](security-overview.md)」を参照してください。 WCF セキュリティのその他の2つの部分の詳細については、「[承認](authorization-in-wcf.md)と[監査](auditing-security-events.md)」を参照してください。  
   
 ## <a name="transfer-security-scenarios"></a>転送セキュリティのシナリオ  
  WCF 転送セキュリティを使用する一般的なシナリオには、次のものがあります。  
@@ -29,10 +29,10 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
 ## <a name="integrity-confidentiality-and-authentication"></a>整合性、機密性、および認証  
  整合性、機密性、および認証の 3 つの機能は、合わせて転送セキュリティと呼ばれます。 転送セキュリティは、分散アプリケーションに対する脅威の軽減に役立つ機能を提供します。 転送セキュリティを構成するこれら 3 つの機能について、次の表で簡単に説明します。  
   
-|関数|説明|  
+|関数|Description|  
 |--------------|-----------------|  
 |整合性|*整合性*とは、データが完全かつ正確であることを保証することです。特に、ある地点から別のポイントに走査した後に、多くのアクターによって読み取られた場合に役立ちます。 整合性は、データの改ざんを防止するために保持する必要があり、一般にメッセージのデジタル署名によって実現されます。|  
-|機密性|*機密性*とは、メッセージが目的の閲覧者以外のユーザーによって読み取られていないことを保証することです。 たとえば、クレジット カード番号などは、インターネット経由で送信されるときに機密性を保持する必要があります。 機密性は、多くの場合、公開キー/秘密キー スキームを使用するデータ暗号化によって実現されます。|  
+|機密情報|*機密性*とは、メッセージが目的の閲覧者以外のユーザーによって読み取られていないことを保証することです。 たとえば、クレジット カード番号などは、インターネット経由で送信されるときに機密性を保持する必要があります。 機密性は、多くの場合、公開キー/秘密キー スキームを使用するデータ暗号化によって実現されます。|  
 |認証|*認証*は、要求された id の検証です。 たとえば、銀行口座の使用時には、口座の実際の所有者だけが預金の引き出しを許可されるようにすることが必須です。 認証は、さまざまな手段によって実現できます。 一般的な方法の 1 つとして、ユーザー/パスワード システムがあります。 また、サードパーティから提供される X.509 証明書を使用する方法もあります。|  
   
 ## <a name="security-modes"></a>セキュリティ モード  
@@ -40,11 +40,11 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
   
 |モード|説明|  
 |----------|-----------------|  
-|[なし]|トランスポート層とメッセージ層でセキュリティが一切提供されません。 [\<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)要素を除き、または <xref:System.ServiceModel.BasicHttpBinding> コードを使用する場合は、定義済みのバインディングでこのモードを既定で使用しません。|  
-|Transport|HTTPS など、セキュリティで保護されたトランスポートを使用して、整合性、機密性、および相互認証を実現します。|  
-|[メッセージ]|SOAP メッセージ セキュリティを使用して、整合性、機密性、および相互認証を実現します。 SOAP メッセージは、WS-Security 標準に従ってセキュリティ保護されます。|  
+|なし|トランスポート層とメッセージ層でセキュリティが一切提供されません。 既定では、要素を除き [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 、またはコードを使用する場合は、定義済みバインディングでこのモードを使用しません <xref:System.ServiceModel.BasicHttpBinding> 。|  
+|トランスポート|HTTPS など、セキュリティで保護されたトランスポートを使用して、整合性、機密性、および相互認証を実現します。|  
+|Message|SOAP メッセージ セキュリティを使用して、整合性、機密性、および相互認証を実現します。 SOAP メッセージは、WS-Security 標準に従ってセキュリティ保護されます。|  
 |混在モード|トランスポート セキュリティを使用して、整合性、機密性、およびサーバー認証を実現します。 クライアント認証のためにメッセージ セキュリティ (WS-Security およびその他の標準) を使用します。<br /><br /> (このモードの列挙体は `TransportWithMessageCredential` になります)。|  
-|両方|両方のレベルで保護と認証を実行します。 このモードは、 [\<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)要素でのみ使用できます。|  
+|両方|両方のレベルで保護と認証を実行します。 このモードは、要素でのみ使用でき [\<netMsmqBinding>](../../configure-apps/file-schema/wcf/netmsmqbinding.md) ます。|  
   
 ## <a name="credentials-and-transfer-security"></a>資格情報と転送セキュリティ  
  *資格情報*とは、要求された id または機能のいずれかを確立するために提示されるデータです。 資格情報の提示には、データ自体の提示とデータの所有証明の提示が関与します。 WCF では、トランスポートとメッセージの両方のセキュリティレベルで、さまざまな種類の資格情報をサポートしています。 WCF バインディングの資格情報の種類を指定できます。  
@@ -57,16 +57,16 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
   
  証明書資格情報では、サブジェクト名、サブジェクト代替名、または証明書内の特定のフィールドを使用して、クレーム ID と資格を表すことができます。 資格情報に含まれるデータの所有権の証明は、署名の生成のために関連付けられた秘密キーを使用して行われます。  
   
- 転送セキュリティのプログラミングおよび資格情報の指定の詳細については、「[バインドとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)と[セキュリティの動作](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)」を参照してください。  
+ 転送セキュリティのプログラミングおよび資格情報の指定の詳細については、「[バインドとセキュリティ](bindings-and-security.md)と[セキュリティの動作](security-behaviors-in-wcf.md)」を参照してください。  
   
 ### <a name="transport-client-credential-types"></a>トランスポート クライアント資格情報の種類  
  転送セキュリティを使用するアプリケーションを作成するときに使用できる値を次の表に示します。 これらの値は、コードまたはバインディング設定で使用できます。  
   
 |設定|説明|  
 |-------------|-----------------|  
-|[なし]|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
+|なし|クライアントが資格情報を提示する必要がないことを指定します。 匿名クライアントであると解釈されます。|  
 |Basic|基本認証を指定します。 詳細については、「RFC2617、[HTTP authentication: Basic And Digest authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)」を参照してください。|  
-|Digest|ダイジェスト認証を指定します。 詳細については、「RFC2617、[HTTP authentication: Basic And Digest authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)」を参照してください。|  
+|ダイジェスト|ダイジェスト認証を指定します。 詳細については、「RFC2617、[HTTP authentication: Basic And Digest authentication](http://schemas.xmlsoap.org/ws/2004/10/discovery/ws-discovery.pdf)」を参照してください。|  
 |Ntlm|Windows ドメインで SSPI ネゴシエーションを使用する Windows 認証を指定します。<br /><br /> SSPI ネゴシエーションの結果、Kerberos プロトコルまたは NTLM (NT LanMan) を使用することになります。|  
 |Windows|Windows ドメインで SSPI を使用する Windows 認証を指定します。 SSPI では、認証サービスとして Kerberos プロトコルまたは NTLM が選択されます。<br /><br /> SSPI は、最初に Kerberos プロトコルの使用を試み、使用できない場合は NTLM を使用します。|  
 |Certificate|証明書 (通常は X.509) を使用して、クライアント認証を実行します。|  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
   
 |設定|説明|  
 |-------------|-----------------|  
-|[なし]|サービスが匿名クライアントとやり取りを行うことが可能になります。|  
+|なし|サービスが匿名クライアントとやり取りを行うことが可能になります。|  
 |Windows|Windows 資格情報の認証済みコンテキストで SOAP メッセージ交換を実行できるようにします。 SSPI ネゴシエーション機構を使用して、認証サービスとして Kerberos プロトコルまたは NTLM を選択します。|  
 |ユーザー名|ユーザー名資格情報を使用したクライアントの認証をサービスで要求できるようにします。 WCF では、署名の生成やデータの暗号化など、ユーザー名を使用した暗号化操作が許可されていないことに注意してください。 そのため、ユーザー名の資格情報を使用する場合、WCF はトランスポートがセキュリティで保護されることを強制します。|  
 |Certificate|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。|  
@@ -96,7 +96,7 @@ Windows Communication Foundation (WCF) セキュリティは、転送セキュ�
   
 ## <a name="see-also"></a>関連項目
 
-- [エンドポイントの作成の概要](../../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [システム標準のバインディング](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [エンドポイントの作成の概要](../endpoint-creation-overview.md)
+- [システム標準のバインディング](../system-provided-bindings.md)
+- [セキュリティの概要](security-overview.md)
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

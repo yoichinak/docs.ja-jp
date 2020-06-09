@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: 716bcb2bb43656051beffb15da9c7a988942ecd8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c2a2afaa450e9abe17b62f6be07a2dc41459ca20
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183797"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600024"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。 このサンプルでは、シリアル化および逆シリアル化の際に CLR 型と xsi:type 表現との間にマッピングを行うために DataContractResolver を使用する方法を示します。
@@ -152,7 +152,7 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには
 
-1. 2012 年を使用して、DCRSample.sln ソリューション ファイルを開きます。
+1. Visual Studio 2012 を使用して、DCRSample .sln ソリューションファイルを開きます。
 
 2. ソリューションを実行するには、F5 キーを押します。
 
@@ -161,10 +161,10 @@ class MyDataContractResolver : DataContractResolver
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Data\DataContractResolver`  
   
 ## <a name="see-also"></a>関連項目
 
-- [データ コントラクト リゾルバーの使用](../../../../docs/framework/wcf/feature-details/using-a-data-contract-resolver.md)
+- [データ コントラクト リゾルバーの使用](../feature-details/using-a-data-contract-resolver.md)

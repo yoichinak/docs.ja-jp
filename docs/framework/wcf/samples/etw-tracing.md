@@ -2,20 +2,20 @@
 title: ETW トレース
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
-ms.openlocfilehash: 07379a464e6635a3de10c08647dbc769a5885e4e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0bdbf6699a0cfa3dce58abda4c989fb25d764459
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183699"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600564"
 ---
 # <a name="etw-tracing"></a>ETW トレース
-このサンプルでは、Event Tracing for Windows (ETW) と、このサンプルに用意されている `ETWTraceListener` を使用して、エンドツーエンド (E2E) のトレースを実装する方法を示します。 サンプルは[、作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいており、ETW トレースが含まれています。  
+このサンプルでは、Event Tracing for Windows (ETW) と、このサンプルに用意されている `ETWTraceListener` を使用して、エンドツーエンド (E2E) のトレースを実装する方法を示します。 このサンプルは[はじめに](getting-started-sample.md)に基づいており、ETW トレースが含まれています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
   
- このサンプルは、[トレースとメッセージ ログ](../../../../docs/framework/wcf/samples/tracing-and-message-logging.md)に精通していることを前提としています。  
+ このサンプルでは、[トレースとメッセージログ](tracing-and-message-logging.md)について理解していることを前提としています。  
   
  <xref:System.Diagnostics> トレース モデル内の各トレース ソースでは、データのトレース場所とトレース方法を決定するトレース リスナーを複数設定できます。 リスナの種類では、トレース データの記録形式が定義されます。 リスナを構成に追加する方法を、次のコード サンプルに示します。  
   
@@ -50,11 +50,11 @@ ms.locfileid: "79183699"
  このリスナを使用する前に、ETW トレース セッションを開始する必要があります。 このセッションは、Logman.exe または Tracelog.exe を使用して開始できます。 このサンプルには、ETW トレース セッションをセットアップするための SetupETW.bat ファイルと、セッションを閉じてログ ファイルを完了するための CleanupETW.bat ファイルが含まれています。  
   
 > [!NOTE]
-> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。 これらのツールの詳細については、<https://go.microsoft.com/fwlink/?LinkId=56580>  
+> このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。 これらのツールの詳細については、「」を参照してください。<https://go.microsoft.com/fwlink/?LinkId=56580>  
   
- ETWTraceListener を使用する場合、トレースはバイナリの .etl ファイルにログ記録されます。 ServiceModel トレースが有効な場合、生成されるすべてのトレースは同じファイルに表示されます。 [サービス トレース ビューアー ツール (SvcTraceViewer.exe) を](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)使用して、.etl および .svclog ログ ファイルを表示します。 このビューアでは、メッセージを送信側から受信側や使用地点までトレースできる、システムのエンドツーエンドのビューが作成されます。  
+ ETWTraceListener を使用する場合、トレースはバイナリの .etl ファイルにログ記録されます。 ServiceModel トレースが有効な場合、生成されるすべてのトレースは同じファイルに表示されます。 .Etl と .svclog のログファイルを表示するには、[サービストレースビューアーツール (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)を使用します。 このビューアでは、メッセージを送信側から受信側や使用地点までトレースできる、システムのエンドツーエンドのビューが作成されます。  
   
- ETW トレース リスナは、循環ログをサポートします。 この機能を有効にするには、[**スタート**] メニューの [**ファイル名を指定して実行**] をクリックし、コマンド コンソールを起動`cmd`します。 次のコマンドでは、`<logfilename>` パラメータを使用するログ ファイル名に置き換えます。  
+ ETW トレース リスナは、循環ログをサポートします。 この機能を有効にするには、[**スタート**]、[**実行**] の各ページにアクセスして、 `cmd` コマンドコンソールを起動します。 次のコマンドでは、`<logfilename>` パラメータを使用するログ ファイル名に置き換えます。  
   
 ```console  
 logman create trace Wcf -o <logfilename> -p "{411a0819-c24b-428c-83e2-26b41091702e}" -f bincirc -max 1000  
@@ -74,22 +74,22 @@ logman start Wcf
 logman stop Wcf  
 ```  
   
- このプロセスは、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)または Tracerpt を含む、選択したツールで処理できるバイナリ循環ログを生成します。  
+ このプロセスでは、[サービストレースビューアーツール (svctraceviewer.exe)](../service-trace-viewer-tool-svctraceviewer-exe.md)や Tracerpt など、選択したツールで処理できるバイナリ循環ログが生成されます。  
   
- 循環ログを実行する代替リスナーの詳細については、[循環トレース](../../../../docs/framework/wcf/samples/circular-tracing.md)のサンプルを確認することもできます。  
+ 循環[トレース](circular-tracing.md)のサンプルを参照して、循環ログを実行する代替リスナーの詳細情報を確認することもできます。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーション ファウンデーション サンプルの 1 回限りのセットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行していることを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行していることを確認してください。  
   
-2. ソリューションをビルドするには、「 [Windows コミュニケーション ファウンデーション のサンプルの構築](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。  
   
     > [!NOTE]
-    > RegisterProvider.bat、SetupETW.bat、および CleanupETW.bat コマンドを使用するには、ローカル管理者アカウントで実行する必要があります。 Windows Vista 以降を使用している場合は、管理者特権を使用してコマンド プロンプトも実行する必要があります。 これを行うには、コマンド プロンプト アイコンを右クリックし、[**管理者として実行**] をクリックします。  
+    > RegisterProvider.bat、SetupETW.bat、および CleanupETW.bat コマンドを使用するには、ローカル管理者アカウントで実行する必要があります。 Windows Vista 以降を使用している場合は、管理者特権でコマンドプロンプトを実行する必要もあります。 これを行うには、コマンドプロンプトのアイコンを右クリックし、[**管理者として実行**] をクリックします。  
   
 3. サンプルを実行する前に、クライアントとサーバーで RegisterProvider.bat を実行します。 この結果、トレースを生成する ETWTracingSampleLog.etl ファイルがセットアップされます。このトレースはサービス トレース ビューアで読み取ることができます。 このファイルは、C:\logs フォルダにあります。 このフォルダーが存在しない場合はフォルダーを作成する必要があります。作成しない場合、トレースは生成されません。 次に、クライアント コンピューターとサーバー コンピューターで SetupETW.bat を実行し、ETW トレース セッションを開始します。 SetupETW.bat ファイルは、CS\Client フォルダーの下にあります。  
   
-4. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには、「 [Windows コミュニケーション ファウンデーション サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。  
+4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
 5. サンプルの使用が終わったら、CleanupETW.bat を実行して ETWTracingSampleLog.etl ファイルの作成を完了します。  
   
@@ -102,7 +102,7 @@ logman stop Wcf
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\AnalyticTrace`  
   

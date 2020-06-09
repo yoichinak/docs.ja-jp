@@ -2,15 +2,15 @@
 title: コンテキスト交換プロトコル
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: 00adb68d96f77ce0953811d13b5377ec4ed1e0ea
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 86d2a19b086fbd5d6be6f1a084bfd7aaace0e250
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185264"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597437"
 ---
 # <a name="context-exchange-protocol"></a>コンテキスト交換プロトコル
-このセクションでは、Windows 通信ファウンデーション (WCF) リリース .NET Framework バージョン 3.5 で導入されたコンテキスト交換プロトコルについて説明します。 このプロトコルを使用すると、クライアント チャネルはサービスから送られたコンテキストを受け入れ、以降はそのコンテキストを、同じクライアント チャネル インスタンス経由でそのサービスに送信されるすべての要求に適用できます。 コンテキスト交換プロトコルを実装されると、2 つの機構 (HTTP クッキーまたは SOAP ヘッダー) のいずれか 1 つを使用し、サーバーとクライアント間でコンテキストを伝達できます。  
+このセクションでは、Windows Communication Foundation (WCF) リリース .NET Framework バージョン3.5 で導入されたコンテキスト交換プロトコルについて説明します。 このプロトコルを使用すると、クライアント チャネルはサービスから送られたコンテキストを受け入れ、以降はそのコンテキストを、同じクライアント チャネル インスタンス経由でそのサービスに送信されるすべての要求に適用できます。 コンテキスト交換プロトコルを実装されると、2 つの機構 (HTTP クッキーまたは SOAP ヘッダー) のいずれか 1 つを使用し、サーバーとクライアント間でコンテキストを伝達できます。  
   
  コンテキスト交換プロトコルは、カスタム チャネル層に実装されます。 チャネルでは <xref:System.ServiceModel.Channels.ContextMessageProperty> プロパティを使用して、アプリケーション層とコンテキストを送受信します。 エンドポイント間の転送については、コンテキストの値は、チャネル層で SOAP ヘッダーとしてシリアル化されるか、HTTP 要求および応答を表すメッセージ プロパティとの間で双方向に変換されます。 後者の場合、下位のチャネル層のいずれか 1 つで、HTTP 要求および応答のメッセージ プロパティをそれぞれ HTTP クッキーとの間で双方向に変換する必要があります。 コンテキスト交換に使用する機構の選択は、<xref:System.ServiceModel.Channels.ContextExchangeMechanism> の <xref:System.ServiceModel.Channels.ContextBindingElement> プロパティを使用します。 有効な値は `HttpCookie` または `SoapHeader`です。  
   
@@ -69,4 +69,4 @@ ms.locfileid: "79185264"
   
 ## <a name="see-also"></a>関連項目
 
-- [Web サービス プロトコルの相互運用性ガイド](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)
+- [Web サービス プロトコルの相互運用性ガイド](web-services-protocols-interoperability-guide.md)

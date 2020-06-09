@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: d335cd47de68dccdbb6af7f402d1182fcd811a7d
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6703da4f97cba38ee0dc334d3010ca509d1fb3ef
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184313"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598698"
 ---
 # <a name="transport-security-with-windows-authentication"></a>トランスポート セキュリティと Windows 認証
-次のシナリオは、Windows のセキュリティで保護された WCF (WCF) クライアントとサービスを示しています。 プログラミングの詳細については、「 方法[: Windows 資格情報を使用してサービスをセキュリティで保護する](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)」を参照してください。  
+次のシナリオは、Windows セキュリティによって保護された Windows Communication Foundation (WCF) クライアントとサービスを示しています。 プログラミングの詳細については、「[方法: Windows 資格情報を使用してサービスをセキュリティで保護](../how-to-secure-a-service-with-windows-credentials.md)する」を参照してください。  
   
  イントラネットの Web サービスでは人事情報を表示しています。 クライアントは Windows フォーム アプリケーションです。 このアプリケーションは、Kerberos コントローラーで保護されたドメインに展開されています。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "79184313"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>クライアント  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
@@ -119,6 +119,6 @@ ms.locfileid: "79184313"
   
 ## <a name="see-also"></a>関連項目
 
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [方法: Windows 資格情報でサービスをセキュリティで保護する](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [セキュリティの概要](security-overview.md)
+- [方法: Windows 資格情報でサービスをセキュリティで保護する](../how-to-secure-a-service-with-windows-credentials.md)
 - [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

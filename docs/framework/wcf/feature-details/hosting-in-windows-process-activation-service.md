@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 1882feee4e8071f1d32fb59ab02519c6e6fe2684
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: d0253202b0fad9a452507ed4296bc4a09b78e569
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84143564"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597307"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows プロセス アクティブ化サービスでのホスティング
 Windows プロセス アクティブ化サービス (WAS) は、Windows Communication Foundation (WCF) サービスをホストするアプリケーションが含まれているワーカー プロセスのアクティブ化と有効期間を管理します。 WAS プロセス モデルは、HTTP への依存性を取り除くことで、HTTP サーバーの IIS 6.0 プロセス モデルを一般化します。 これにより、WCF サービスは、メッセージベースのアクティブ化をサポートするホスティング環境で HTTP プロトコルと非 HTTP プロトコルの両方を使用できるようになり、特定のコンピューターで多数のアプリケーションをホストできるようになります。  
   
- WAS ホスティング環境で実行される WCF サービスの構築の詳細については、「[方法: was で Wcf サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)する」を参照してください。  
+ WAS ホスティング環境で実行される WCF サービスの構築の詳細については、「[方法: was で Wcf サービスをホスト](how-to-host-a-wcf-service-in-was.md)する」を参照してください。  
   
  WAS プロセスモデルは、信頼性が高く管理も容易でリソースを効果的に使用する方法でアプリケーションのホストを実現するいくつかの機能を提供します。  
   
@@ -50,8 +50,8 @@ Windows プロセス アクティブ化サービス (WAS) は、Windows Communic
   
 ## <a name="see-also"></a>関連項目
 
-- [WAS アクティベーション アーキテクチャ](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
-- [WCF で使用するための WAS を設定する](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [方法: WCF アクティブ化コンポーネントをインストールして設定する](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [方法: WAS で WCF サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [WAS アクティベーション アーキテクチャ](was-activation-architecture.md)
+- [WCF で使用するための WAS を設定する](configuring-the-wpa--service-for-use-with-wcf.md)
+- [方法: WCF アクティブ化コンポーネントをインストールして設定する](how-to-install-and-configure-wcf-activation-components.md)
+- [方法: WAS で WCF サービスをホストする](how-to-host-a-wcf-service-in-was.md)
 - [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

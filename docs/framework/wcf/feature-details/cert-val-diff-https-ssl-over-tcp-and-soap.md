@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF], validation differences
 ms.assetid: 953a219f-4745-4019-9894-c70704f352e6
-ms.openlocfilehash: 0e82d1898bec7cda474a5a92958b5af1b30c9de7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcde7bb4cc193d18737d26facbbd69ccd597d66b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185404"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599335"
 ---
 # <a name="certificate-validation-differences-between-https-ssl-over-tcp-and-soap-security"></a>HTTPS、SSL Over TCP、SOAP セキュリティ間における証明書検証方法の相違点
-HTTP (HTTPS) または TCP 経由のトランスポート層セキュリティ (TLS) に加えて、メッセージ層 (SOAP) セキュリティを備えた WCF (WCF) の証明書を使用できます。 ここでは、このような証明書の検証方法の違いについて説明します。  
+Windows Communication Foundation (WCF) の証明書は、トランスポート層セキュリティ (TLS) over HTTP (HTTPS) または TCP に加えて、メッセージ層 (SOAP) セキュリティと共に使用できます。 ここでは、このような証明書の検証方法の違いについて説明します。  
   
 ## <a name="validation-of-https-client-certificates"></a>HTTPS クライアント証明書の検証  
- HTTPS を使用してクライアントとサービス間で通信を行う場合、サービスに対して認証を行うためにクライアントが使用する証明書はチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 ない場合、HTTP 層は、「リモート<xref:System.Net.WebException>サーバーがエラーを返しました: (403) 禁止」というメッセージを表示します。 WCF では、この例外は<xref:System.ServiceModel.Security.MessageSecurityException>.  
+ HTTPS を使用してクライアントとサービス間で通信を行う場合、サービスに対して認証を行うためにクライアントが使用する証明書はチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 それ以外の場合は、HTTP 層によってが発生し、 <xref:System.Net.WebException> "リモートサーバーがエラーを返しました: (403) 許可されていません" というメッセージが表示されます。 WCF は、この例外をとして公開 <xref:System.ServiceModel.Security.MessageSecurityException> します。  
   
 ## <a name="validation-of-https-service-certificates"></a>HTTP サービス証明書の検証  
  HTTPS を使用してクライアントとサービス間で通信を行う場合、サーバーが認証に使用する証明書は既定でチェーン信頼をサポートしている必要があります。 つまり、信頼されたルート証明機関にチェーンされている必要があります。 証明書が失効しているかどうかを確認するためのオンライン チェックは行われません。 この動作は、<xref:System.Net.Security.RemoteCertificateValidationCallback> コールバックを登録することによってオーバーライドできます。コードは次のようになります。  
@@ -50,4 +50,4 @@ HTTP (HTTPS) または TCP 経由のトランスポート層セキュリティ (
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Net.Security.RemoteCertificateValidationCallback>
-- [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [証明書の使用](working-with-certificates.md)

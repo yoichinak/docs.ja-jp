@@ -2,12 +2,12 @@
 title: 探索検索と FindCriteria
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: da4c3c4a1d765e4f91b03f4f8fc1a73c3fea1535
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 1d6a0e3fcca45c3fe57aab84b0f2b6b86fabb404
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964845"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599179"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索検索と FindCriteria
 
@@ -31,7 +31,7 @@ ms.locfileid: "75964845"
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByExact?displayProperty=nameWithType>: 大文字と小文字が区別される基本の文字列比較を実行します。
 
-  - "/" で区切られたセグメントで一致を <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType> します。 `http://contoso/building1` の検索は、スコープ `http://contoso/building/floor1`を持つサービスと一致します。 最後の2つのセグメントが一致しないため、`http://contoso/building100` と一致しないことに注意してください。
+  - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByPrefix?displayProperty=nameWithType>"/" で区切られたセグメントで一致します。 の検索は、 `http://contoso/building1` スコープを持つサービスと一致 `http://contoso/building/floor1` します。 `http://contoso/building100`最後の2つのセグメントが一致しないため、一致しないことに注意してください。
 
   - <xref:System.ServiceModel.Discovery.FindCriteria.ScopeMatchByLdap?displayProperty=nameWithType>: LDAP URL を使用してセグメント単位でスコープの一致を判定します。
 
@@ -70,7 +70,7 @@ Console.WriteLine("Found {0} ICalculatorService endpoint(s).", findResponse.Endp
 
 ## <a name="see-also"></a>関連項目
 
-- [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [探索クライアント チャネルの使用](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)
-- [スコープを使用した探索](../../../../docs/framework/wcf/samples/discovery-with-scopes-sample.md)
-- [基本](../../../../docs/framework/wcf/samples/basic-sample.md)
+- [WCF Discovery の概要](wcf-discovery-overview.md)
+- [探索クライアント チャネルの使用](using-the-discovery-client-channel.md)
+- [スコープを使用した探索](../samples/discovery-with-scopes-sample.md)
+- [Basic](../samples/basic-sample.md)

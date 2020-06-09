@@ -2,15 +2,15 @@
 title: トランザクション プロトコル
 ms.date: 03/30/2017
 ms.assetid: 2820b0ec-2f32-430c-b299-1f0e95e1f2dc
-ms.openlocfilehash: 8f16f7a6c13ca557ce4160d927ef6f075a79b4c8
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 17131c4cd10d9441ec65f9da4137147a703eb87c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81464037"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600985"
 ---
 # <a name="transaction-protocols"></a>トランザクション プロトコル
-WCF (WCF) は、WS-アトミック トランザクションプロトコルと WS-調整プロトコルを実装します。  
+Windows Communication Foundation (WCF) は、WS-ATOMICTRANSACTION および WS-ATOMICTRANSACTION プロトコルを実装します。  
   
 |仕様/ドキュメント|Version|Link|  
 |-----------------------------|-------------|----------|  
@@ -21,25 +21,25 @@ WCF (WCF) は、WS-アトミック トランザクションプロトコルと WS
   
  ここでは、WS-AtomicTransaction (WS-AT) 仕様のセキュリティに関する構成と、トランザクション マネージャー間の通信に使用されるセキュリティで保護されたバインディングについて説明します。 このドキュメントで説明されているアプローチは、IBM、IONA、Sun Microsystems などを含む WS-AT および WS-Coordination の各種の実装でテスト済みのものです。  
   
- 次の図は、トランザクション マネージャー 1 とトランザクション マネージャー 2 の 2 つのトランザクション マネージャーと、アプリケーション 1 とアプリケーション 2 の 2 つのアプリケーション間の相互運用性を示しています。  
+ 次の図は、2つのトランザクションマネージャー (トランザクションマネージャー1とトランザクションマネージャー 2) と2つのアプリケーション (アプリケーション1とアプリケーション 2) 間の相互運用性を示しています。  
   
- ![トランザクション マネージャー間の対話を示すスクリーンショット。](./media/transaction-protocols/transaction-managers-flow.gif)  
+ ![トランザクションマネージャー間の対話を示すスクリーンショット。](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  1 つのイニシエーター (I) と 1 つの参加要素 (P) を持つ、一般的な WS-Coordination/WS-AtomicTransaction のシナリオを考えます。 イニシエーターと参加要素の両方にトランザクション マネージャー (それぞれ ITM および PTM と呼びます) があります。 2 フェーズ コミットは、このトピックでは 2PC と呼びます。  
   
 |||  
 |-|-|  
-|1. コーディネーションコンテキストの作成|12. アプリケーションメッセージ応答|  
-|2. 調整コンテキスト応答の作成|13. コミット(完了)|  
-|3. 登録(完了)|14. 準備 (2PC)|  
-|4. 登録応答|15. 準備 (2PC)|  
+|1. CreateCoordinationContext|12. アプリケーションメッセージの応答|  
+|2. CreateCoordinationContextResponse|13. コミット (完了)|  
+|3. 登録 (完了)|14. 準備 (2PC)|  
+|4. RegisterResponse|15. 準備 (2PC)|  
 |5. アプリケーションメッセージ|16. 準備済み (2PC)|  
-|6. コンテキストを使用したコーディネーションコンテキストの作成|17. 準備済み (2PC)|  
-|7. レジスタ(耐久性)|18. コミット (完了)|  
-|8. 登録応答|19. コミット (2PC)|  
-|9. 調整コンテキスト応答の作成|20. コミット (2PC)|  
-|10. レジスター (耐久性)|21. コミット済み (2PC)|  
-|11. 登録応答|22. コミット済み (2PC)|  
+|6. CreateCoordinationContext とコンテキスト|17. 準備済み (2PC)|  
+|7. Register (持続性)|18. コミット (完了)|  
+|8. RegisterResponse|19. コミット (2PC)|  
+|9. CreateCoordinationContextResponse|20. コミット (2PC)|  
+|10. レジスタ (持続性)|21. コミット済み (2PC)|  
+|11. RegisterResponse|22. コミット済み (2PC)|  
   
  このドキュメントでは、WS-AtomicTransaction 仕様のセキュリティに関する構成と、トランザクション マネージャー間の通信に使用されるセキュリティで保護されたバインディングについて説明します。 このドキュメントで説明されているアプローチは、WS-AT および WS-Coordination の各種の実装でテスト済みのものです。  
   
@@ -53,7 +53,7 @@ WCF (WCF) は、WS-アトミック トランザクションプロトコルと WS
   
 - アプリケーション メッセージ  
   
- 最初の 3 つのメッセージ クラスはトランザクション マネージャーのメッセージと考えられます。これらのクラスのバインド構成については、後の「アプリケーション メッセージ交換」で説明します。 4 番目のメッセージ クラスは、アプリケーション間のメッセージであり、後の「メッセージの例」で説明します。 ここでは、WCF でこれらのクラスのそれぞれで使用されるプロトコル バインディングについて説明します。  
+ 最初の 3 つのメッセージ クラスはトランザクション マネージャーのメッセージと考えられます。これらのクラスのバインド構成については、後の「アプリケーション メッセージ交換」で説明します。 4 番目のメッセージ クラスは、アプリケーション間のメッセージであり、後の「メッセージの例」で説明します。 ここでは、これらの各クラスに対して WCF によって使用されるプロトコルバインドについて説明します。  
   
  このドキュメントでは、次の XML 名前空間と関連付けられたプレフィックスが使用されます。  
   
@@ -68,7 +68,7 @@ WCF (WCF) は、WS-アトミック トランザクションプロトコルと WS
 |xsd||<https://www.w3.org/2001/XMLSchema>|  
   
 ## <a name="transaction-manager-bindings"></a>トランザクション マネージャー バインディング  
- R1001: WS-AT 1.0 トランザクションに参加するトランザクション マネージャは、WS-Atomic トランザクションおよび WS-コーディネーション メッセージ交換に SOAP 1.1 および WS-Addressing 2004/08 を使用する必要があります。  
+ R1001: WS-AT 1.0 トランザクションに参加しているトランザクションマネージャーは、WS-POLICY トランザクションと WS-ATOMICTRANSACTION メッセージ交換に SOAP 1.1 と WS-ADDRESSING 2004/08 を使用する必要があります。  
   
  R1002 : WS-AT 1.1 トランザクションに参加するトランザクション マネージャーは、SOAP 1.1、WS-Addressing 2005/08 for WS-Atomic Transaction、および WS-Coordination メッセージ交換を使用する必要があります。  
   
@@ -85,12 +85,12 @@ WCF (WCF) は、WS-アトミック トランザクションプロトコルと WS
 - B1112 : X.509 のサブジェクト名のチェックが成功するには、システム内の送信者と受信者の各ペア間で、DNS が機能している必要があります。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>アクティベーションと登録のバインド構成  
- WCF では、HTTPS に対する相関関係を持つ要求/応答の双方向バインディングが必要です。 (関連付けと要求/応答メッセージ交換パターンの詳細については、WS-AtomicTransaction 仕様のセクション 8 を参照してください)。  
+ WCF では、HTTPS 経由の相関関係を持つ要求/応答双方向バインドが必要です。 (関連付けと要求/応答メッセージ交換パターンの詳細については、WS-AtomicTransaction 仕様のセクション 8 を参照してください)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインディング構成  
- WCF は、HTTPS 経由の一方向 (データグラム) メッセージをサポートします。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
+ WCF では、HTTPS 経由の一方向 (データグラム) メッセージがサポートされています。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
   
- B1131: WCF の`wsa:ReferenceParameters`2PC メッセージの相関関係を実現するために、実装は WS-Addressing で説明されているようにサポートする必要があります。  
+ B1131: 実装では、 `wsa:ReferenceParameters` 「ws-addressing」で説明されているようにをサポートして、WCF の2pc メッセージの相関関係を実現する必要があります。  
   
 ### <a name="transaction-manager-mixed-security-binding"></a>トランザクション マネージャーによる混合セキュリティ バインディング  
  これは、ID を確立するために、トランスポート セキュリティを WS-Coordination 発行済みトークン モデルと組み合わせて使用する代替の (混合モードの) バインディングです。 2 つのバインディングを区別する要素は、アクティベーションと登録のみです。  
@@ -101,7 +101,7 @@ WCF (WCF) は、WS-アトミック トランザクションプロトコルと WS
 #### <a name="activation-message-binding-configuration"></a>アクティベーション メッセージのバインド構成  
  アクティベーション メッセージは通常、アプリケーションとローカルのトランザクション マネージャー間で発生するため、相互運用には参加しません。  
   
- B1221: WCF は、アクティブ化メッセージに双方向 HTTPS バインディング ([メッセージング プロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)で説明) を使用します。 要求/応答メッセージは、WS-AT 1.0 の WS-Addressing 2004/08 と WS-AT 1.1 の WS-Addressing 2005/08 を使用して関連付けられます。  
+ B1221: WCF では、アクティベーションメッセージに双方向 HTTPS バインド (「[メッセージングプロトコル](messaging-protocols.md)」で説明) を使用します。 要求/応答メッセージは、WS-AT 1.0 の WS-Addressing 2004/08 と WS-AT 1.1 の WS-Addressing 2005/08 を使用して関連付けられます。  
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
   
@@ -109,21 +109,21 @@ WCF (WCF) は、WS-アトミック トランザクションプロトコルと WS
   
 - R1223 : アクティベーションが既存のコーディネーション コンテキスト内で発生した場合、既存のコンテキストに関連付けられた `t:IssuedTokens` がある `SecurityContextToken` ヘッダーは、`CreateCoordinationContext` メッセージでフローする必要があります。  
   
- 送信`wscoor:CreateCoordinationContextResponse`メッセージ`t:IssuedTokens`に添付するための新しいヘッダーを生成する必要があります。  
+ `t:IssuedTokens`送信メッセージに添付するための新しいヘッダーを生成する必要があり `wscoor:CreateCoordinationContextResponse` ます。  
   
 #### <a name="registration-message-binding-configuration"></a>登録メッセージのバインディング構成  
- B1231: WCF は双方向 HTTPS バインディングを使用します ([メッセージング プロトコル](../../../../docs/framework/wcf/feature-details/messaging-protocols.md)で説明)。 要求/応答メッセージは、WS-AT 1.0 の WS-Addressing 2004/08 と WS-AT 1.1 の WS-Addressing 2005/08 を使用して関連付けられます。  
+ B1231: WCF では、双方向の HTTPS バインド (「[メッセージングプロトコル](messaging-protocols.md)」で説明) を使用します。 要求/応答メッセージは、WS-AT 1.0 の WS-Addressing 2004/08 と WS-AT 1.1 の WS-Addressing 2005/08 を使用して関連付けられます。  
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
   
- R1232:`wscoor:Register`送信メッセージは`IssuedTokenOverTransport`[、「セキュリティ プロトコル](../../../../docs/framework/wcf/feature-details/security-protocols.md)」で説明されている認証モードを使用する必要があります。  
+ R1232: 送信 `wscoor:Register` メッセージには、 `IssuedTokenOverTransport` 「[セキュリティプロトコル](security-protocols.md)」で説明されている認証モードを使用する必要があります。  
   
- 要素`wsse:Timestamp`は、発行済みで`SecurityContextToken STx`署名する必要があります。 この署名は特定のトランザクションに関連付けられたトークンを所有していることの証明であり、トランザクションに登録されている参加要素の認証で使用されます。 RegistrationResponse メッセージは、HTTPS を使用して返信されます。  
+ `wsse:Timestamp`要素は、発行されたを使用して署名する必要があり `SecurityContextToken STx` ます。 この署名は特定のトランザクションに関連付けられたトークンを所有していることの証明であり、トランザクションに登録されている参加要素の認証で使用されます。 RegistrationResponse メッセージは、HTTPS を使用して返信されます。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC プロトコルのバインディング構成  
- WCF は、HTTPS 経由の一方向 (データグラム) メッセージをサポートします。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
+ WCF では、HTTPS 経由の一方向 (データグラム) メッセージがサポートされています。 メッセージ間の関連付けは、実装詳細の状態にしておきます。  
   
- B1241: WCF の`wsa:ReferenceParameters`2PC メッセージの相関関係を実現するために、実装は WS-Addressing で説明されているようにサポートする必要があります。  
+ B1241: 実装では、 `wsa:ReferenceParameters` 「ws-addressing」で説明されているようにをサポートして、WCF の2pc メッセージの相関関係を実現する必要があります。  
   
 ## <a name="application-message-exchange"></a>アプリケーション メッセージ交換  
  アプリケーションでは、バインディングが次のセキュリティ要件を満たしている限り、アプリケーション間メッセージに任意のバインディングを使用できます。  
@@ -132,16 +132,16 @@ WCF (WCF) は、WS-アトミック トランザクションプロトコルと WS
   
 - R2002 : `t:IssuedToken` の整合性と機密性が提供される必要があります。  
   
- `CoordinationContext` ヘッダーには `wscoor:Identifier` が含まれます。 の`xsd:AnyURI`定義では、絶対 URI と相対 URI の両方の使用が`wscoor:Identifiers`許可されますが、WCF では、絶対 URI であるのみサポートされます。  
+ `CoordinationContext` ヘッダーには `wscoor:Identifier` が含まれます。 の定義では `xsd:AnyURI` 絶対 uri と相対 uri の両方を使用できますが、WCF で `wscoor:Identifiers` は絶対 uri であるのみがサポートされています。  
   
- B2003:`wscoor:Identifier`の`wscoor:CoordinationContext`が相対 URI の場合、トランザクション WCF サービスからエラーが返されます。  
+ B2003: のが `wscoor:Identifier` `wscoor:CoordinationContext` 相対 URI の場合、トランザクション WCF サービスからエラーが返されます。  
   
 ## <a name="message-examples"></a>メッセージの例  
   
 ### <a name="createcoordinationcontext-requestresponse-messages"></a>CreateCoordinationContext 要求/応答メッセージ  
  次のメッセージは、要求/応答のパターンに従います。  
   
-#### <a name="createcoordinationcontext-with-wscoor-10"></a>WSCoor 1.0 でのコンコーディネーションコンテキストの作成  
+#### <a name="createcoordinationcontext-with-wscoor-10"></a>CreateCoordinationContext WSCoor 1.0  
   
 ```xml  
 <s:Envelope>  
@@ -474,7 +474,7 @@ Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
 </s:Envelope>  
 ```  
   
-#### <a name="register-response-with-wscoor-10"></a>WSCoor 1.0 で応答を登録する  
+#### <a name="register-response-with-wscoor-10"></a>WSCoor 1.0 での応答の登録  
   
 ```xml  
 <s:Envelope>  
@@ -544,7 +544,7 @@ xmlns:wssu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-u
 ### <a name="two-phase-commit-protocol-messages"></a>2 フェーズ コミット プロトコル メッセージ  
  次のメッセージは、2 フェーズ コミット (2PC) プロトコルに関連しています。  
   
-#### <a name="commit-with-wsat-10"></a>WSAT 1.0 でコミットする  
+#### <a name="commit-with-wsat-10"></a>WSAT 1.0 を使用してコミットする  
   
 ```xml  
 <s:Envelope>  
