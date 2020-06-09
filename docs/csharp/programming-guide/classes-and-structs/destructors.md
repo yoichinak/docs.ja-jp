@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, finalizers
 - finalizers [C#]
 ms.assetid: 1ae6e46d-a4b1-4a49-abe5-b97f53d9e049
-ms.openlocfilehash: c8ad738baa3ff76cf9ae8367f2fd2a1fb44a79d6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a266cfd5996aca7b7a6b297b0775526cf38b8f64
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170300"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241423"
 ---
 # <a name="finalizers-c-programming-guide"></a>ファイナライザー (C# プログラミング ガイド)
 ガベージ コレクターによってクラス インスタンスが収集されている場合は、ファイナライザー (**デストラクター**とも呼ばれます) を使用して、最終的に必要なすべてのクリーンアップが実行されます。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>Remarks  
   
 - ファイナライザーは、構造体には定義できません。 クラスでだけ使用します。  
   
@@ -64,7 +64,7 @@ protected override void Finalize()
  <xref:System.GC.Collect%2A> を呼び出すことによって、ガベージ コレクションを強制的に行うことができます。ただし、パフォーマンスに問題が発生する可能性があるため、通常はこの処理を避けます。  
   
 ## <a name="using-finalizers-to-release-resources"></a>ファイナライザーを使ったリソースの解放  
- 一般に C# では、ガベージ コレクションでランタイムにターゲットを設定しない言語で開発する場合ほど、メモリ管理を必要としません。 .NET Framework のガベージ コレクターが、オブジェクトに対するメモリの割り当てと解放を暗黙的に管理するからです。 ただし、ウィンドウ、ファイル、ネットワーク接続などのアンマネージ リソースをアプリケーションでカプセル化するとき、ファイナライザーを使ってこれらのリソースを解放する必要があります。 終了処理が可能なオブジェクトの場合、ガベージ コレクターはそのオブジェクトの `Finalize` メソッドを実行します。  
+ 一般に C# では、ガベージ コレクションでランタイムにターゲットを設定しない言語で開発する場合ほど、メモリ管理を必要としません。 .NET のガベージ コレクターが、オブジェクトに対するメモリの割り当てと解放を暗黙的に管理するからです。 ただし、ウィンドウ、ファイル、ネットワーク接続などのアンマネージ リソースをアプリケーションでカプセル化する場合は、ファイナライザーを使ってこれらのリソースを解放する必要があります。 終了処理が可能なオブジェクトの場合、ガベージ コレクターはそのオブジェクトの `Finalize` メソッドを実行します。
   
 ## <a name="explicit-release-of-resources"></a>リソースの明示的な解放  
  アプリケーションで高額な外部リソースを使用している場合、ガベージ コレクターがオブジェクトを解放する前にリソースを明示的に解放する手段を用意することが推奨されます。 この処理を行うには、オブジェクトに対して必要なクリーンアップを実行する `Dispose` メソッドを <xref:System.IDisposable> インターフェイスから実装します。 これによって、アプリケーションのパフォーマンスを大幅に向上させることができます。 このようにリソースを明示的に制御する場合でも、ファイナライザーは、`Dispose` メソッドの呼び出しが失敗したときにリソースをクリーンアップするための安全装置になります。  
@@ -86,9 +86,9 @@ protected override void Finalize()
 
 詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の [デストラクタ―](~/_csharplang/spec/classes.md#destructors)に関するセクションを参照してください。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IDisposable>
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [コンストラクター](./constructors.md)
 - [ガベージ コレクション](../../../standard/garbage-collection/index.md)

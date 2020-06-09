@@ -2,12 +2,12 @@
 title: 非同期アプリにおける再入の処理 (C#)
 ms.date: 07/20/2015
 ms.assetid: 47c5075e-c448-45ce-9155-ed4e7e98c677
-ms.openlocfilehash: d46a87ed2200dc92b8e3d23be80306a31a01e501
-ms.sourcegitcommit: 465547886a1224a5435c3ac349c805e39ce77706
+ms.openlocfilehash: e03e0f6ecd8e74dd8518f84ec03c76c1ef5b9ee6
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/21/2020
-ms.locfileid: "81738304"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241813"
 ---
 # <a name="handling-reentrancy-in-async-apps-c"></a>非同期アプリにおける再入の処理 (C#)
 
@@ -536,7 +536,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
     TOTAL bytes returned:  915908
     ```
 
-- 最初に開始したグループ A についてのみ、`FinishOneGroupAsync` 開始時の、`pendingWork` タスクは null になります。 `FinishOneGroupAsync` に達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
+- 最初に開始したグループ A についてのみ、`FinishOneGroupAsync` 開始時の、`pendingWork` タスクは null になります。 `FinishOneGroupAsync` に到達したとき、グループ A はまだ await 式を完了していません。 したがって、コントロールは `AccessTheWebAsync` に戻っておらず、`pendingWork` への最初の割り当ては発生していません。
 
 - 次の 2 行は、出力に必ず同時に表示されます。 `StartButton_Click` のグループ操作が開始してから、グループのタスクが `pendingWork` に割り当てられるまでの間、コードが中断されることは決してありません。
 
@@ -590,7 +590,7 @@ private async Task FinishOneGroupAsync(List<string> urls, Task<byte[]>[] content
 
 6. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。
 
-     タブが表示されない場合は、**ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、 **[コードの表示]** を選択します。
+     タブが表示されない場合は、 **ソリューション エクスプローラー**で MainWindow.xaml のショートカット メニューを開き、 **[コードの表示]** を選択します。
 
 7. MainWindow.xaml の **XAML** ビューで、コードを次のコードに置き換えます。
 

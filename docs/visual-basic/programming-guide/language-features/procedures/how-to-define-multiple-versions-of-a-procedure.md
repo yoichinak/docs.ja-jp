@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: e8ed9a6356b7177b2c029a9280d0790a93676653
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 870a18dbf3a7e28b7d7b612e853beeec6908cf6f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347598"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84387934"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>方法: プロシージャの複数のバージョンを定義する (Visual Basic)
 同じ名前を使用し、バージョンごとに異なるパラメーター リストを使用して、"*オーバーロード*" することにより、複数のバージョンのプロシージャを定義できます。 オーバーロードの目的は、名前で区別する必要なく、プロシージャの密接に関連する複数のバージョンを定義することです。  
@@ -24,7 +24,7 @@ ms.locfileid: "75347598"
   
 1. 定義するプロシージャのバージョンごとに、`Sub` または `Function` 宣言ステートメントを記述します。 すべての宣言で同じプロシージャ名を使用します。  
   
-2. 各宣言の `Sub` または `Function` キーワードの前に [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) キーワードを指定します。 必要に応じて、宣言で `Overloads` を省略することもできますが、宣言のいずれかに含めた場合は、すべての宣言に含める必要があります。  
+2. 各宣言の `Sub` または `Function` キーワードの前に [Overloads](../../../language-reference/modifiers/overloads.md) キーワードを指定します。 必要に応じて、宣言で `Overloads` を省略することもできますが、宣言のいずれかに含めた場合は、すべての宣言に含める必要があります。  
   
 3. 各宣言ステートメントの後に、呼び出し元のコードでそのバージョンのパラメーター リストと一致する引数が指定されたときにそのケースを処理するプロシージャ コードを記述します。 呼び出し元のコードでどのパラメーターが指定されているかをテストする必要はありません。 Visual Basic は、プロシージャの一致するバージョンに制御を渡します。  
   

@@ -3,18 +3,18 @@ title: dotnet-svcutil.xmlserializer の使用
 description: .NET Core プロジェクト用にシリアル化アセンブリを事前に生成する `dotnet-svcutil.xmlserializer` NuGet パッケージの使用方法について説明します。
 author: huanwu
 ms.date: 11/27/2018
-ms.openlocfilehash: 4811647c294118cb160d25805e7d3ada97f071f9
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 14bb2e8a85ec35f08b0a83b9734a64d751074f1b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75344900"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84284326"
 ---
 # <a name="using-dotnet-svcutilxmlserializer-on-net-core"></a>.NET Core で dotnet-svcutil.xmlserializer を使用する
 
 `dotnet-svcutil.xmlserializer` NuGet パッケージは、.NET Core プロジェクト用にシリアル化アセンブリを事前に生成することができます。 これは、クライアント アプリケーション内の型で、WCF サービス コントラクトによって使われ XmlSerializer によってシリアル化できるものに対して、C# のシリアル化コードを事前に生成します。 これにより、それらの型のオブジェクトをシリアル化または逆シリアル化するときに XML シリアル化の起動時のパフォーマンスが向上します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 * [.NET Core 2.1 SDK](https://dotnet.microsoft.com/download) 以降
 * 任意のコード エディター

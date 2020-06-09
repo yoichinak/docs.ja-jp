@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 393e3bd24c4bc8b89064e01e1048b24254f5f83b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d20f5d826620ad8654ddf1e9471ecc894b2c0391
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635952"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408524"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ によるデータ変換 (C#)
 統合言語クエリ (LINQ) で行うことができるのは、データの取得だけではありません。 データ変換のための強力なツールとしても使用できます。 LINQ クエリを使用することにより、ソース シーケンスを入力として使用し、さまざまな方法で加工して新しい出力シーケンスを作成できます。 要素自体を変更せずに、並べ替えやグループ化してシーケンス自体を変更できます。 しかし、LINQ クエリの最も強力な機能は、新しい型を作成する機能です。 この操作は [select](../../../language-reference/keywords/select-clause.md) 句内で行います。 たとえば、次のタスクを実行できます。  
@@ -90,14 +90,18 @@ ms.locfileid: "75635952"
  詳細については、「[C# での XML ツリーの作成 (LINQ to XML)](./creating-xml-trees-linq-to-xml-2.md)」を参照してください。  
   
 ## <a name="performing-operations-on-source-elements"></a>ソース要素に対して操作を実行する  
- 出力シーケンスには、ソース シーケンスの要素または要素のプロパティが 1 つも含まれない場合があります。 代わりに、ソース要素を入力引数として使用することで計算された値のシーケンスを出力として生成できます。 次の簡単なクエリを実行すると、`double` 型の要素のソース シーケンスに基づく計算を表す値を含む文字列のシーケンスが出力されます。  
+ 出力シーケンスには、ソース シーケンスの要素または要素のプロパティが 1 つも含まれない場合があります。 代わりに、ソース要素を入力引数として使用することで計算された値のシーケンスを出力として生成できます。
+
+ 次のクエリでは、円の半径を表す一連の数値を取得し、各半径での面積を計算し、計算された領域で書式設定された文字列を含む出力シーケンスを返します。
+
+ 出力シーケンスの各文字列は、[文字列補間](../../../language-reference/tokens/interpolated.md)を使用して書式設定されます。 補間された文字列には、文字列の開始引用符の前に `$` が含まれます。操作は、補間された文字列内に配置された中かっこ内で実行できます。 これらの操作を実行すると、結果が連結されます。
   
 > [!NOTE]
 > クエリが他のドメインに変換される場合、クエリ式でのメソッド呼び出しはサポートされません。 たとえば、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] で C# の通常のメソッドを呼び出すことはできません。これは、C# のメソッドのコンテキストが SQL Server にないためです。 ただし、ストアド プロシージャをメソッドにマップして呼び出すことは可能です。 詳細については、「[ストアド プロシージャ](../../../../framework/data/adonet/sql/linq/stored-procedures.md)」を参照してください。  
   
  [!code-csharp[CsLINQGettingStarted#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#10)]  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](./index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)

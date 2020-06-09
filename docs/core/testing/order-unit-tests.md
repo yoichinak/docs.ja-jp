@@ -1,5 +1,5 @@
 ---
-title: 注文の単体テスト
+title: 単体テストの順序を設定する
 description: .NET Core で単体テストの順序を設定する方法について説明します。
 author: IEvangelist
 ms.date: 05/18/2020
@@ -11,7 +11,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 05/20/2020
 ms.locfileid: "83704533"
 ---
-# <a name="order-unit-tests"></a>注文の単体テスト
+# <a name="order-unit-tests"></a>単体テストの順序を設定する
 
 場合によっては、単体テストを特定の順序で実行する必要があります。 理想的には、単体テストの実行順序が問題になるようなことがあっては "_ならず_"、単体テストの順序を設定しなくて済むようにするのが[ベスト プラクティス](unit-testing-best-practices.md)です。 そうはいっても、それを行うことが必要になる場合があります。 この記事では、そのような場合にテストの実行順序を設定する方法について説明します。
 

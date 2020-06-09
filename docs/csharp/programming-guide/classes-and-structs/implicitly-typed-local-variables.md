@@ -5,16 +5,16 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: d39e4c4dd180ba35b7555d61211a34d696b04f50
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 842f73b7af9671157495df961f5db22702ae897e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79398431"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240708"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>暗黙的に型指定されるローカル変数 (C# プログラミング ガイド)
 
-ローカル変数は、明示的な型を指定しないで宣言できます。 `var` キーワードは、初期化ステートメントの右辺にある式から変数の型を推論するようにコンパイラに指示します。 推論される型は、組み込み型、匿名型、ユーザー定義型、または .NET Framework クラス ライブラリで定義されている型である可能性があります。 `var` で配列を初期化する方法の詳細については、「[暗黙的に型指定される配列](../arrays/implicitly-typed-arrays.md)」を参照してください。
+ローカル変数は、明示的な型を指定しないで宣言できます。 `var` キーワードは、初期化ステートメントの右辺にある式から変数の型を推論するようにコンパイラに指示します。 推論される型は、組み込み型、匿名型、ユーザー定義型、または .NET クラス ライブラリで定義されている型である可能性があります。 `var` で配列を初期化する方法の詳細については、「[暗黙的に型指定される配列](../arrays/implicitly-typed-arrays.md)」を参照してください。
 
 ローカル変数を `var` で宣言するさまざまな方法を次の例に示します。
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cross-references [C#]
 - see C# XML tag
 ms.assetid: 0200de01-7e2f-45c4-9094-829d61236383
-ms.openlocfilehash: f4834f88c646b44269f8290c2ad08698c34e714a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0f10feb0931c6d38c817fdecb925f68d439abb59
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77627673"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287247"
 ---
 # <a name="see-c-programming-guide"></a>\<see> (C# プログラミング ガイド)
 
@@ -33,11 +33,11 @@ ms.locfileid: "77627673"
 
 ## <a name="remarks"></a>Remarks
 
-\<see> タグを使用すると、テキスト内でリンクを指定できます。 テキストが参照セクションに配置されていることを示すには、[\<seealso>](./seealso.md) を使用します。 コード要素のドキュメント ページへの内部ハイパーリンクを作成するには、[cref 属性](./cref-attribute.md)を使用します。
+`<see>` タグを使用すると、テキスト内からリンクを指定できます。 テキストが「関連項目」セクションに配置されていることを示すには、[\<seealso>](./seealso.md) を使用します。 コード要素のドキュメント ページへの内部ハイパーリンクを作成するには、[cref 属性](./cref-attribute.md)を使用します。
 
 コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
 
-次の例では、summary セクション内の \<see> タグを示しています。
+次の例では、「概要」セクション内の `<see>` タグを示しています。
 
 [!code-csharp[csProgGuideDocComments#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#12)]
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - expressions [Visual Basic], lambda
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
-ms.openlocfilehash: 1827eb5630ed217527de25fc9d9c2bb8994b9aff
-ms.sourcegitcommit: 99b153b93bf94d0fecf7c7bcecb58ac424dfa47c
+ms.openlocfilehash: 54a9c0cf275a67c77748c32771c3c5dcbdb916d7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2020
-ms.locfileid: "80249670"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406704"
 ---
 # <a name="lambda-expressions-visual-basic"></a>ラムダ式 (Visual Basic)
 
@@ -53,7 +53,7 @@ ms.locfileid: "80249670"
 
 - 複数行のラムダ関数では、`As` 句を使用して戻り値の型を指定することも、戻り値の型が推論されるように `As` 句を省略することもできます。 複数行のラムダ関数で `As` 句を省略すると、戻り値の型として、複数行のラムダ関数のすべての `Return` ステートメントから最も優先度の高い型が推論されます。 "*最も優先度の高い型*" は、他のすべての型から拡大変換できる一意の型です。 この一意の型を特定できない場合、最も優先度の高い型は、配列内の他のすべての型から縮小変換できる一意の型になります。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合、`Option Strict` が `On` に設定されていると、コンパイラ エラーが発生します。
 
-     たとえば、`Return` ステートメントに指定された式に、`Integer`、`Long`、`Double` の各型の値が含まれている場合、結果の配列は `Double` 型になります。 `Integer` と `Long` はどちらも `Double` に拡大変換され、`Double` のみになります。 そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。
+     たとえば、`Return` ステートメントに指定された式に、`Integer`、`Long`、`Double` の各型の値が含まれている場合、結果の配列は `Double` 型になります。 `Integer` と `Long` はどちらも `Double` に拡大変換され、`Double` のみになります。 そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
 - 単一行の関数の本体は、ステートメントではなく、値を返す式である必要があります。 単一行の関数の `Return` ステートメントはありません。 単一行の関数によって返される値は、関数の本体に含まれる式の値です。
 
@@ -69,7 +69,7 @@ ms.locfileid: "80249670"
 
 ## <a name="async-lambdas"></a>非同期ラムダ
 
-[Async](../../../../visual-basic/language-reference/modifiers/async.md) キーワードと [Await Operator](../../../../visual-basic/language-reference/operators/await-operator.md) キーワードを使用すると、非同期処理を組み込んだラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
+[Async](../../../language-reference/modifiers/async.md) キーワードと [Await Operator](../../../language-reference/operators/await-operator.md) キーワードを使用すると、非同期処理を組み込んだラムダ式およびステートメントを簡単に作成できます。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。
 
 ```vb
 Public Class Form1
@@ -88,7 +88,7 @@ Public Class Form1
 End Class
 ```
 
-[AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)で非同期ラムダを使用して、同じイベント ハンドラーを追加できます。 次の例に示すように、このハンドラーを追加するには、ラムダ パラメーター リストの前に `Async` 修飾子を追加します。
+[AddHandler ステートメント](../../../language-reference/statements/addhandler-statement.md)で非同期ラムダを使用して、同じイベント ハンドラーを追加できます。 次の例に示すように、このハンドラーを追加するには、ラムダ パラメーター リストの前に `Async` 修飾子を追加します。
 
 ```vb
 Public Class Form1
@@ -110,7 +110,7 @@ Public Class Form1
 End Class
 ```
 
-非同期メソッドの作成および使用方法の詳細については、「[Asynchronous programming with Async and Await (Async および Await を使用した非同期プログラミング)](../../../../visual-basic/programming-guide/concepts/async/index.md)」をご覧ください。
+非同期メソッドの作成および使用方法の詳細については、「[Asynchronous programming with Async and Await (Async および Await を使用した非同期プログラミング)](../../concepts/async/index.md)」をご覧ください。
 
 ## <a name="context"></a>コンテキスト
 
@@ -136,7 +136,7 @@ End Class
 
 ## <a name="converting-to-a-delegate-type"></a>デリゲート型への変換
 
-ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性に関する一般的な要件については、「[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)」をご覧ください。 たとえば、次のコード例は、`Func(Of Integer, Boolean)` または一致するデリゲート シグネチャに暗黙的に変換するラムダ式を示しています。
+ラムダ式は、互換性のあるデリゲート型に暗黙的に変換できます。 互換性に関する一般的な要件については、「[厳密でないデリゲート変換](../delegates/relaxed-delegate-conversion.md)」をご覧ください。 たとえば、次のコード例は、`Func(Of Integer, Boolean)` または一致するデリゲート シグネチャに暗黙的に変換するラムダ式を示しています。
 
 [!code-vb[VbVbalrLambdas#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#16)]
 
@@ -159,11 +159,11 @@ End Class
 ## <a name="see-also"></a>関連項目
 
 - [手順](./index.md)
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [null 許容値型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
-- [方法: Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Visual Basic における LINQ の概要](../linq/introduction-to-linq.md)
+- [デリゲート](../delegates/index.md)
+- [Function ステートメント](../../../language-reference/statements/function-statement.md)
+- [Sub ステートメント](../../../language-reference/statements/sub-statement.md)
+- [null 許容値型](../data-types/nullable-value-types.md)
+- [方法: Visual Basic でプロシージャを別のプロシージャに渡す](../delegates/how-to-pass-procedures-to-another-procedure.md)
 - [方法: ラムダ式を作成する](./how-to-create-a-lambda-expression.md)
-- [厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+- [厳密でないデリゲート変換](../delegates/relaxed-delegate-conversion.md)

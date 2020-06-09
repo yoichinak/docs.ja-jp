@@ -2,12 +2,12 @@
 title: コレクション (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: 30aa3e34f362f34fc601f90ee61613acd6e4bc68
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: ecab30d50be58f810246e58e637b331d492e4a47
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84201127"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241397"
 ---
 # <a name="collections-c"></a>コレクション (C#)
 
@@ -182,7 +182,7 @@ public class Galaxy
 
 ## <a name="kinds-of-collections"></a>コレクションの種類
 
-.NET Framework は、多くの共通のコレクションを提供します。 各コレクションの型は、固有の目的に合わせてデザインされています。
+.NET は、多くの共通のコレクションを提供します。 各コレクションの型は、固有の目的に合わせてデザインされています。
 
 このセクションでは、次の共通のコレクション クラスをいつくか説明します:
 
@@ -214,7 +214,7 @@ public class Galaxy
 
 ### <a name="systemcollectionsconcurrent-classes"></a>System.Collections.Concurrent のクラス
 
-.NET Framework 4 以降では、<xref:System.Collections.Concurrent> 名前空間のコレクションによって、複数のスレッドからコレクション項目にアクセスするための効率的なスレッド セーフ操作が可能になります。
+.NET Framework 4 以降のバージョンでは、<xref:System.Collections.Concurrent> 名前空間のコレクションによって、複数のスレッドからコレクション項目にアクセスするための効率的なスレッド セーフ操作が可能になります。
 
 <xref:System.Collections.Concurrent> 名前空間のクラスは、複数のスレッドがコレクションに同時にアクセスするときに、<xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間および <xref:System.Collections?displayProperty=nameWithType> 名前空間の対応する型の代わりに使用する必要があります。 詳しくは、「[スレッド セーフなコレクション](../../../standard/collections/thread-safe/index.md)」と「<xref:System.Collections.Concurrent>」を参照してください。
 
@@ -482,7 +482,7 @@ public class Car : IComparable<Car>
 
 <xref:System.Collections.Generic.IEnumerable%601> または <xref:System.Collections.IEnumerable> のインターフェイスを実装してコレクションを定義できます。
 
-カスタム コレクションを定義できますが、通常は、.NET Framework に含まれるコレクションを使用することが推奨されます。これについては、このトピックの[コレクションの種類](#BKMK_KindsOfCollections)で既に説明されています。
+カスタム コレクションを定義できますが、通常は、.NET に含まれるコレクションを使用することが推奨されます。これについては、この記事の[コレクションの種類](#BKMK_KindsOfCollections)で既に説明されています。
 
 次の例は、`AllColors` という名前のカスタム コレクション クラスを定義します。 このクラスは、<xref:System.Collections.IEnumerable> メソッドの実装を必要とする <xref:System.Collections.IEnumerable.GetEnumerator%2A> インターフェイスを実装します。
 

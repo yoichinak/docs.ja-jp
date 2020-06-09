@@ -12,12 +12,12 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: cb289b26e9bc12d561892c421fb40da18d8c3513
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 78eec992671dab1aa59717a007a8e3a2662f6e87
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789755"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287338"
 ---
 # <a name="list-c-programming-guide"></a>\<list> (C# プログラミング ガイド)
 
@@ -46,13 +46,13 @@ ms.locfileid: "76789755"
 
   行頭文字または番号付きリストの項目、または `term` の定義です。
   
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-\< > ブロックを使用して、テーブルまたは定義の一覧の見出し行を定義します。 テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。
+`<listheader>` ブロックを使用して、テーブルまたは定義リストの見出し行を定義します。 テーブルを定義するときにのみ、見出しの用語のエントリを指定する必要があります。
 
-リスト内の各項目は、\<item> ブロックで指定されます。 定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。 ただし、テーブル、箇条書きリスト、または番号付きリストの場合は、`description` のエントリを指定するだけで済みます。
+リストの各項目は、`<item>` ブロックで指定されます。 定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。 ただし、テーブル、箇条書きリスト、または番号付きリストの場合は、`description` のエントリを指定するだけで済みます。
 
-リストまたはテーブルでは、必要な数の \<item> ブロックを使用できます。
+リストまたはテーブルでは、必要な数の `<item>` ブロックを使用できます。
 
 コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
 
@@ -60,7 +60,7 @@ ms.locfileid: "76789755"
 
 [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

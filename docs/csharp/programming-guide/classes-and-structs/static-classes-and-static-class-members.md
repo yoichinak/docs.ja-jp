@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 7add512b262afbabe996f752c083566a2c394dfd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f5e355d66d9b022a037d53e1241e76282852888e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75705432"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241462"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静的クラスと静的クラス メンバー (C# プログラミング ガイド)
 
@@ -23,7 +23,7 @@ ms.locfileid: "75705432"
 UtilityClass.MethodA();  
 ```  
   
- 静的クラスは、入力パラメーターに対してのみ処理を行い、内部のインスタンス フィールドを取得したり設定したりする必要のない一連のメソッドを格納する、便利なコンテナーとして使用できます。 たとえば、.NET Framework クラス ライブラリでは、静的クラス <xref:System.Math?displayProperty=nameWithType> に、数値演算を実行するメソッドが含まれており、<xref:System.Math> クラスの特定のインスタンスに固有のデータを格納または取得する必要はありません。 つまり、次の例に示すように、クラス名とメソッド名を指定して、クラスのメンバーを適用します。  
+ 静的クラスは、入力パラメーターに対してのみ処理を行い、内部のインスタンス フィールドを取得したり設定したりする必要のない一連のメソッドを格納する、便利なコンテナーとして使用できます。 たとえば、.NET クラス ライブラリでは、静的クラス <xref:System.Math?displayProperty=nameWithType> に、数値演算を実行するメソッドが含まれており、<xref:System.Math> クラスの特定のインスタンスに固有のデータを格納または取得する必要はありません。 つまり、次の例に示すように、クラス名とメソッド名を指定して、クラスのメンバーを適用します。  
   
 ```csharp  
 double dub = -3.14;  
@@ -37,7 +37,7 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 // 3  
 ```  
   
- すべてのクラス型の場合と同様に、静的クラスの型情報は、.NET Framework の共通言語ランタイム (CLR) によって、そのクラスを参照しているプログラムが読み込まれるときに読み込まれます。 プログラムでは、クラスが読み込まれるタイミングを正確に指定することはできません。 ただし、クラスがプログラム内で最初に参照される前に、そのクラスが読み込まれ、そのフィールドが初期化され、その静的コンストラクターが呼び出されることが保証されます。 静的コンストラクターは一度だけ呼び出され、静的クラスは、プログラムが存在するアプリケーション ドメインの有効期間にわたってメモリに保持されます。  
+ すべてのクラス型の場合と同様に、静的クラスの型情報は、.NET ランタイムによって、そのクラスを参照しているプログラムが読み込まれるときに読み込まれます。 プログラムでは、クラスが読み込まれるタイミングを正確に指定することはできません。 ただし、クラスがプログラム内で最初に参照される前に、そのクラスが読み込まれ、そのフィールドが初期化され、その静的コンストラクターが呼び出されることが保証されます。 静的コンストラクターは一度だけ呼び出され、静的クラスは、プログラムが存在するアプリケーション ドメインの有効期間にわたってメモリに保持されます。  
   
 > [!NOTE]
 > インスタンスの作成を 1 つしか許可しない非静的クラスを作成する場合は、「[C# でのシングルトンの実装](https://docs.microsoft.com/previous-versions/msp-n-p/ff650316%28v=pandp.10%29)」を参照してください。  
@@ -88,9 +88,9 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
 
 詳細については、「[C# 言語仕様](/dotnet/csharp/language-reference/language-specification/introduction)」の[静的クラス](~/_csharplang/spec/classes.md#static-classes)と[静的およびインスタンス メンバー](~/_csharplang/spec/classes.md#static-and-instance-members)に関するセクションを参照してください。 言語仕様は、C# の構文と使用法に関する信頼性のある情報源です。
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [static](../../language-reference/keywords/static.md)
 - [クラス](./classes.md)
 - [class](../../language-reference/keywords/class.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - code XML tag
 - <code> C# XML tag
 ms.assetid: f235e3bc-a709-43cf-8a9f-bd57cabdf6da
-ms.openlocfilehash: 1b292f0e1f93f815cc31ef3dfb7015b8950bf8a6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52d4b6caa0ea9e1a2d0212398f86374bc8af0402
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789846"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287442"
 ---
 # <a name="code-c-programming-guide"></a>\<code> (C# プログラミング ガイド)
 
@@ -29,17 +29,17 @@ ms.locfileid: "76789846"
 
   コードとしてマークするテキストです。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-\<code> タグを使用すると、複数行をコードとして指定できます。 説明内のテキストをコードとしてマークする場合は、[\<c](./code-inline.md) タグを使用します。
+`<code>` タグを使用して、複数行をコードとして指定します。 説明内の単一行テキストをコードとしてマークすることを示すには、[\<c>](./code-inline.md) を使用します。
 
 コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
 
 ## <a name="example"></a>例
 
-\<code> タグの使用例については、「[\<example](./example.md)」を参照してください。
+`<code>` タグの使用例については、[\<example>](./example.md) の記事を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

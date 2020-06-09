@@ -5,12 +5,12 @@ description: ASP.NET Core における破壊的変更をリストアップしま
 ms.date: 04/29/2020
 author: scottaddie
 ms.author: scaddie
-ms.openlocfilehash: 63d39b1aa6e46b6bcbeb5a409efacac01dea4262
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 2e89a14c948365da1e7a04fc8d5ca4008842f8d8
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728339"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446973"
 ---
 # <a name="aspnet-core-breaking-changes"></a>ASP.NET Core の破壊的変更
 
@@ -55,6 +55,7 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 - [Kestrel:要求トレーラー ヘッダーを新しいコレクションに移動](#kestrel-request-trailer-headers-moved-to-new-collection)
 - [Kestrel:トランスポート抽象化レイヤーの変更](#kestrel-transport-abstractions-removed-and-made-public)
 - [ローカリゼーション:API を古いとしてマーク](#localization-resourcemanagerwithculturestringlocalizer-and-withculture-marked-obsolete)
+- [ローカリゼーション:"Pubternal" API の削除](#localization-pubternal-apis-removed)
 - [ローカリゼーション:ResourceManagerWithCultureStringLocalizer クラスと WithCulture インターフェイス メンバーを削除](#localization-resourcemanagerwithculturestringlocalizer-class-and-withculture-interface-member-removed)
 - [ログ:internal になった DebugLogger クラス](#logging-debuglogger-class-made-internal)
 - [MVC:コントローラー アクション Async サフィックスを削除](#mvc-async-suffix-trimmed-from-controller-action-names)
@@ -94,6 +95,10 @@ ASP.NET Core からは、.NET Core で使用される Web アプリ開発機能�
 ***
 
 [!INCLUDE[HTTP: Kestrel and IIS BadHttpRequestException types marked obsolete and replaced](~/includes/core-changes/aspnetcore/5.0/http-badhttprequestexception-obsolete.md)]
+
+***
+
+[!INCLUDE [Localization: "Pubternal" APIs removed](~/includes/core-changes/aspnetcore/5.0/localization-pubternal-apis-removed.md)]
 
 ***
 

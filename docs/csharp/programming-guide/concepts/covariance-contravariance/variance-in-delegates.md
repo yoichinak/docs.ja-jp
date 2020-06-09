@@ -2,12 +2,12 @@
 title: デリゲートの変性 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: fd1b4824dc3d8f12347e01b804a6e39fe2e086c8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d41c0d3d54df96031fc7989e0fdc78e9f358a40a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79169715"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241345"
 ---
 # <a name="variance-in-delegates-c"></a>デリゲートの変性 (C#)
 .NET Framework 3.5 では、C# のすべてのデリゲートで、メソッド シグネチャとデリゲート型を一致させるために変性 (共変性と反変性) のサポートが導入されました。 つまり、シグネチャが一致するメソッドだけでなく、デリゲート型で指定された型よりも強い派生型を返す (共変性) メソッドや、弱い派生型のパラメーターを受け取る (反変性) メソッドを、デリゲートに割り当てることができます。 これには、汎用デリゲートと非汎用デリゲートの両方が含まれます。  
@@ -109,8 +109,9 @@ public static void Test()
 }  
 ```  
   
-### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework のバリアント型パラメーターが含まれる汎用デリゲート  
- .NET Framework 4 では、既存の複数の汎用デリゲートで、ジェネリック型パラメーターに対して変性サポートが導入されました。  
+### <a name="generic-delegates-that-have-variant-type-parameters-in-net"></a>.NET のバリアント型パラメーターが含まれる汎用デリゲート
+
+.NET Framework 4 では、既存の複数の汎用デリゲートで、ジェネリック型パラメーターに対して変性サポートが導入されました。  
   
 - <xref:System> 名前空間の `Action` デリゲート。<xref:System.Action%601>、<xref:System.Action%602> など  
   
@@ -142,7 +143,7 @@ public delegate void DContravariant<in A>(A a);
 > [!IMPORTANT]
 > C# の `ref`、`in`、`out` パラメーターを、バリアントとしてマークすることはできません。  
   
- 同じデリゲートで、型パラメーターが異なる場合は、変性と共変性の両方をサポートすることもできます。 次の例を参照してください。  
+ 同じデリゲートで、型パラメーターが異なる場合は、変性と共変性の両方をサポートすることもできます。 これを次の例に示します。  
   
 ```csharp  
 public delegate R DVariant<in A, out R>(A a);  
@@ -196,8 +197,8 @@ public static void Test()
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ジェネリック](../../../../standard/generics/index.md)
-- [Func および Action 汎用デリゲートでの分散の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
 - [デリゲートを結合する方法 (マルチキャスト デリゲート)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

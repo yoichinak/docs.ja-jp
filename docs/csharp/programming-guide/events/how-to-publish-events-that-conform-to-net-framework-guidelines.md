@@ -1,19 +1,19 @@
 ---
-title: .NET Framework ガイドラインに準拠したイベントを発行する方法 - C# プログラミング ガイド
+title: .NET ガイドラインに準拠したイベントを発行する - C# プログラミング ガイド
 ms.date: 05/26/2020
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 137e52b80703491a4528a3eddc7fa12f9dce6f52
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: df2f643f867b93b74d04d8fbd673df545c28938e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144800"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240747"
 ---
-# <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>.NET Framework ガイドラインに準拠したイベントを発行する方法 (C# プログラミング ガイド)
+# <a name="how-to-publish-events-that-conform-to-net-guidelines-c-programming-guide"></a>.NET ガイドラインに準拠したイベントを発行する方法 (C# プログラミング ガイド)
 
-ここでは、.NET Framework の標準のパターンに従うイベントをクラスおよび構造体に追加する方法について説明します。 .NET Framework クラス ライブラリ内のすべてのイベントは、次のように定義されている <xref:System.EventHandler> デリゲートに基づいています。
+ここでは、.NET の標準のパターンに従うイベントをクラスおよび構造体に追加する方法について説明します。 .NET Framework クラス ライブラリ内のすべてのイベントは、次のように定義されている <xref:System.EventHandler> デリゲートに基づいています。
 
 ```csharp
 public delegate void EventHandler(object sender, EventArgs e);
@@ -22,11 +22,11 @@ public delegate void EventHandler(object sender, EventArgs e);
 > [!NOTE]
 > .NET Framework 2.0 には、このデリゲートのジェネリック バージョンである <xref:System.EventHandler%601> が導入されています。 次の例は、両方のバージョンの使用方法を示しています。
 
-ユーザー定義のクラス内のイベントは、値を返すデリゲートを含む、あらゆる有効なデリゲートに基づいて発行できますが、一般的には、次の例のように <xref:System.EventHandler> を使用して、.NET Framework のパターンに基づいて発行することをお勧めします。
+ユーザー定義のクラス内のイベントは、値を返すデリゲートを含む、あらゆる有効なデリゲート型に基づいて発行できますが、一般的には、次の例のように <xref:System.EventHandler> を使用して、.NET のパターンに基づいて発行することをお勧めします。
 
 名前 `EventHandler` は、実際にはイベントを処理しないため、混乱を招く可能性があります。 <xref:System.EventHandler>、およびジェネリックの <xref:System.EventHandler%601> はデリゲート型です。 シグネチャがデリゲート定義と一致するメソッドまたはラムダ式は、"*イベント ハンドラー*" で、イベントが発生したときに呼び出されます。
 
-### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>EventHandler パターンに基づいてイベントを発行するには
+## <a name="publish-events-based-on-the-eventhandler-pattern"></a>EventHandler パターンに基づいてイベントを発行する
 
 1. (イベントと共にカスタム データを送信する必要がない場合は、この手順を省略して手順 3a. に進んでください。)パブリッシャー クラスとサブスクライバー クラスの両方から参照できるスコープで、カスタム データのクラスを宣言します。 次に、カスタム イベント データを保持する必須メンバーを追加します。 この例では、単純な文字列が 1 つ返されます。
 

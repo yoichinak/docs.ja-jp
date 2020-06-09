@@ -2,19 +2,19 @@
 title: バリアント ジェネリック インターフェイスの作成 (C#)
 ms.date: 07/20/2015
 ms.assetid: 30330ec4-9df2-4838-a535-6c406d0ed4df
-ms.openlocfilehash: 4ba72f28cd2ddd800f169387cc2c742159d4cb1b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 27760fd73c8c40fc108106b87b2102ab5e07263c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "69595315"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241384"
 ---
 # <a name="creating-variant-generic-interfaces-c"></a>バリアント ジェネリック インターフェイスの作成 (C#)
 
 インターフェイスのジェネリック型パラメーターは、共変または反変として宣言できます。 "*共変性*" により、インターフェイス メソッドの戻り値の型の派生を、ジェネリック型パラメーターで定義されている型よりも強くすることができます。 "*反変性*" により、インターフェイス メソッドの引数の型の派生を、ジェネリック パラメーターで指定されている型よりも弱くすることができます。 共変または反変のジェネリック型パラメーターを持つジェネリック インターフェイスは、"*バリアント*" と呼ばれます。
 
 > [!NOTE]
-> .NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、変性のサポートが導入されています。 .NET Framework のバリアント インターフェイスの一覧については、「[ジェネリック インターフェイスの変性 (C#)](./variance-in-generic-interfaces.md)」を参照してください。
+> .NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、変性のサポートが導入されています。 .NET のバリアント インターフェイスの一覧については、「[ジェネリック インターフェイスの変性 (C#)](./variance-in-generic-interfaces.md)」を参照してください。
 
 ## <a name="declaring-variant-generic-interfaces"></a>バリアント ジェネリック インターフェイスの宣言
 
@@ -190,7 +190,7 @@ class Program
 
 この例では、`pets.GetEnumerator` メソッドで `Cat` と `Dog` がどのように選択されるかが明らかではありません。 そのため、コードで問題が発生する可能性があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ジェネリック インターフェイスの変性 (C#)](./variance-in-generic-interfaces.md)
-- [Func および Action 汎用デリゲートでの分散の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [Func および Action 汎用デリゲートでの変性の使用 (C#)](./using-variance-for-func-and-action-generic-delegates.md)

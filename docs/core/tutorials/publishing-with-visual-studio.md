@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: e4ef8c12f3e52faa7cf09058a98abae65b0dcfce
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 745fb2af332afa278c78ec9baeea7230fe725c02
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005106"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241496"
 ---
 # <a name="tutorial-publish-a-net-core-console-application-with-visual-studio"></a>チュートリアル: Visual Studio での .NET Core コンソール アプリケーションの発行
 
@@ -59,25 +59,25 @@ ms.locfileid: "84005106"
 
    この図に示すように、発行された出力には次のファイルが含まれます。
 
-      * *HelloWorld.deps.json*
+   * *HelloWorld.deps.json*
 
-         このファイルは、アプリケーションのランタイム依存関係ファイルです。 これは、アプリの実行に必要な .NET Core コンポーネントとライブラリ (アプリケーションが含まれる動的リンク ライブラリを含む) を定義します。 詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。
+      このファイルは、アプリケーションのランタイム依存関係ファイルです。 これは、アプリの実行に必要な .NET Core コンポーネントとライブラリ (アプリケーションが含まれる動的リンク ライブラリを含む) を定義します。 詳細については、「[ランタイム構成ファイル](https://github.com/dotnet/cli/blob/85ca206d84633d658d7363894c4ea9d59e515c1a/Documentation/specs/runtime-configuration-file.md)」を参照してください。
 
-      * *HelloWorld.dll*
+   * *HelloWorld.dll*
 
-         これは、[フレームワークに依存する展開](../deploying/deploy-with-cli.md#framework-dependent-deployment)バージョンのアプリケーションです。 このダイナミック リンク ライブラリを実行するには、コマンド プロンプトで`dotnet HelloWorld.dll` を入力します。
+      これは、[フレームワークに依存する展開](../deploying/deploy-with-cli.md#framework-dependent-deployment)バージョンのアプリケーションです。 このダイナミック リンク ライブラリを実行するには、コマンド プロンプトで`dotnet HelloWorld.dll` を入力します。 アプリ実行のこの方法は、.NET Core ランタイムがインストールされている任意のプラットフォームで動作します。
 
-      * *HelloWorld.exe*
+   * *HelloWorld.exe*
 
-         これは、[フレームワークに依存する実行可能ファイル](../deploying/deploy-with-cli.md#framework-dependent-executable) バージョンのアプリケーションです。 これを実行するには、コマンド プロンプトで `HelloWorld.exe` を入力します。
+      これは、[フレームワークに依存する実行可能ファイル](../deploying/deploy-with-cli.md#framework-dependent-executable) バージョンのアプリケーションです。 これを実行するには、コマンド プロンプトで `HelloWorld.exe` を入力します。 ファイルはオペレーティング システム固有のものです。
 
-      * *HelloWorld.pdb* (配置は省略可能)
+   * *HelloWorld.pdb* (配置は省略可能)
 
-         これは、デバッグ シンボル ファイルです。 このファイルはアプリケーションと一緒に配置する必要はありませんが、発行されるバージョンのアプリケーションをデバッグする必要がある場合に保存しておく必要があります。
+      これは、デバッグ シンボル ファイルです。 このファイルはアプリケーションと一緒に配置する必要はありませんが、発行されるバージョンのアプリケーションをデバッグする必要がある場合に保存しておく必要があります。
 
-      * *HelloWorld.runtimeconfig.json*
+   * *HelloWorld.runtimeconfig.json*
 
-         これは、アプリケーションのランタイム構成ファイルです。 ビルドされたアプリケーションが実行時に基盤とする .NET Core のバージョンを識別します。 構成オプションを追加することもできます。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
+      これは、アプリケーションのランタイム構成ファイルです。 ビルドされたアプリケーションが実行時に基盤とする .NET Core のバージョンを識別します。 構成オプションを追加することもできます。 詳細については、「[.NET Core ランタイム構成設定](../run-time-config/index.md#runtimeconfigjson)」を参照してください。
 
 ## <a name="run-the-published-app"></a>発行済みアプリを実行する
 
@@ -91,13 +91,13 @@ ms.locfileid: "84005106"
 
 1. 実行可能ファイルを使用してアプリを実行します。
 
-   1. 「`HelloWorld.exe`」と入力し、Enter キーを押します。
+   1. 「`HelloWorld.exe`」と入力して、<kbd>Enter</kbd> キーを押します。
 
    1. プロンプトに応答して名前を入力し、任意のキーを押して終了します。
 
 1. `dotnet` コマンドを使用して、アプリを実行します。
 
-   1. 「`dotnet HelloWorld.dll`」と入力し、Enter キーを押します。
+   1. 「`dotnet HelloWorld.dll`」と入力して、<kbd>Enter</kbd> キーを押します。
 
    1. プロンプトに応答して名前を入力し、任意のキーを押して終了します。
 

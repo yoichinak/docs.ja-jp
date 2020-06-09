@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.date: 10/10/2018
-ms.openlocfilehash: 78d9a6490c0479d9c21e01d0bcba41294d674a5c
-ms.sourcegitcommit: 62285ec11fa8e8424bab00511a90760c60e63c95
+ms.openlocfilehash: 3e6f3a921238a5897c7aa4b6034be979724b7167
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/20/2020
-ms.locfileid: "81644379"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283443"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1 の新機能
 
@@ -91,7 +91,7 @@ dotnet tool install -g dotnetsay
 
 .NET Core 2.0 以降のすべての .NET Core アプリケーションは、システムにインストールされている最新の*マイナー バージョン*に自動的にロールフォワードされます。
 
-.NET Core 2.0 以降では、アプリケーションのビルドに使用した .NET Core のバージョンが実行時に存在しない場合、インストールされている .NET Core の最新の*マイナー バージョン*に対してアプリケーションが自動的に実行されます。 つまり、アプリケーションが .NET Core 2.0 を使用してビルドされ、ホスト システムにインストールされているのが .NET Core 2.0 ではなく .NET Core 2.1 である場合は、.NET Core 2.1 を使用してアプリケーションが実行されます。
+.NET Core 2.0 以降では、アプリケーションのビルドに使用した .NET Core のバージョンが実行時に存在しない場合、インストールされている .NET Core の最新の "*マイナー バージョン*" に対してアプリケーションが自動的に実行されます。 つまり、アプリケーションが .NET Core 2.0 を使用してビルドされ、ホスト システムにインストールされているのが .NET Core 2.0 ではなく .NET Core 2.1 である場合は、.NET Core 2.1 を使用してアプリケーションが実行されます。
 
 > [!IMPORTANT]
 > このロールフォワードの動作はプレビュー リリースには適用されません。 既定では、メジャー リリースにも適用されませんが、次の設定で変更できます。

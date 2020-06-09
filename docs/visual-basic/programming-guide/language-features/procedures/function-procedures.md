@@ -9,12 +9,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], Function procedures
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
-ms.openlocfilehash: d7a0293e2ec520c2278f67156be56315d1def2b5
-ms.sourcegitcommit: 13e79efdbd589cad6b1de634f5d6b1262b12ab01
+ms.openlocfilehash: b0ba96a875fd8785e45eee565beefe4b961ffc9d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2020
-ms.locfileid: "76780078"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388752"
 ---
 # <a name="function-procedures-visual-basic"></a>Function プロシージャ (Visual Basic)
 
@@ -111,7 +111,7 @@ End Function
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
+- [Function ステートメント](../../../language-reference/statements/function-statement.md)
 - [方法: 値を返すプロシージャを作成する](./how-to-create-a-procedure-that-returns-a-value.md)
 - [方法: プロシージャから値を返す](./how-to-return-a-value-from-a-procedure.md)
 - [方法: 値を返すプロシージャを呼び出す](./how-to-call-a-procedure-that-returns-a-value.md)

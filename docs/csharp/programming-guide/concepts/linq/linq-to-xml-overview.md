@@ -2,12 +2,12 @@
 title: LINQ to XML の概要 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: 334788a50832b8fe42ecc9a3272dd71f2f2af4ee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dd41d8607ef3f2e6e6be9a1f3964ef0ae937e2ac
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79168416"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241839"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML の概要 (C#)
 
@@ -25,7 +25,7 @@ XML は、多くのコンテキストでデータを書式設定する方法と�
 
 ## <a name="what-is-linq-to-xml"></a>LINQ to XML とは
 
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、.NET Framework プログラミング言語から XML を操作できるようにする、LINQ に対応したメモリ内 XML プログラミング インターフェイスです。
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、.NET プログラミング言語から XML を操作できるようにする、LINQ に対応したメモリ内 XML プログラミング インターフェイスです。
 
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、XML ドキュメントをメモリに読み込むという点で、ドキュメント オブジェクト モデル (DOM) に似ています。 ドキュメントに対するクエリや変更を行うことができ、変更したドキュメントをファイルに保存したり、シリアル化してインターネット経由で送信したりできます。 ただし、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は DOM とは異なります。より軽量で使いやすく、C# の言語機能を利用する、新しいオブジェクト モデルが提供されています。
 

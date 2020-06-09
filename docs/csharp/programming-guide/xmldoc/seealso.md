@@ -12,12 +12,12 @@ helpviewer_keywords:
 - cross-references [C#], tags
 - <seealso> C# XML tag
 ms.assetid: 8e157f3f-f220-4fcf-9010-88905b080b18
-ms.openlocfilehash: e24d5910ab21f01aebb5a32ce7646cf56886a81a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1b801ac1b5a0a59d97ccc35ec78930d99223e846
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093462"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287221"
 ---
 # <a name="seealso-c-programming-guide"></a>\<seealso> (C# プログラミング ガイド)
 
@@ -35,9 +35,9 @@ ms.locfileid: "77093462"
 
   ジェネリック型への cref 参照を作成する方法については、[cref 属性](./cref-attribute.md)に関するページを参照してください。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-\<seealso > タグを使用して、「See Also」セクションに表示するテキストを指定することができます。 [\<see>](./see.md) タグを使用すると、テキスト内からリンクを指定できます。
+`<seealso>` タグを使用して、「関連項目」セクションに表示するテキストを指定することができます。 [\<see>](./see.md) を使用すると、テキスト内からリンクを指定できます。
 
 コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "77093462"
 
 \<seealso> の使用例については、[\<summary>](./summary.md) を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

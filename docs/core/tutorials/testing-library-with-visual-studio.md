@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet
-ms.openlocfilehash: 79b680022484bb9222b66c3df76bdd5a06de8117
-ms.sourcegitcommit: 03fec33630b46e78d5e81e91b40518f32c4bd7b5
+ms.openlocfilehash: 48ada77b8422030fd93aa29df1df50a3ae5104fe
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/27/2020
-ms.locfileid: "84005012"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283508"
 ---
 # <a name="tutorial-test-a-net-standard-library-with-net-core-in-visual-studio"></a>チュートリアル: Visual Studio での .NET Core を使用した .NET Standard ライブラリのテスト
 
@@ -109,8 +109,8 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 1. *UnitTest1.cs* または *UnitTest1.vb* コード ウィンドウで、コードを次のコードに置き換えます。
 
-   [!code-csharp[Test#1](~/samples/snippets/csharp/getting_started/with_visual_studio_2017/testlib1.cs)]
-   [!code-vb[Test#1](~/samples/snippets/core/tutorials/vb-library-with-visual-studio/testlib.vb)]
+   :::code language="csharp" source="./snippets/library-with-visual-studio/csharp/StringLibraryTest/UnitTest1.cs":::
+   :::code language="vb" source="./snippets/library-with-visual-studio/vb/StringLibraryTest/UnitTest1.vb":::
 
    `TestStartsWithUpper` メソッドの大文字のテストには、ギリシャ語の大文字のアルファ (U+0391) とキリル文字の大文字 EM (U+041C) が含まれています。 `TestDoesNotStartWithUpper` メソッドの小文字のテストには、ギリシャ語の小文字のアルファ (U+03B1) とキリル文字の小文字 Ghe (U+0433) が含まれています。
 
@@ -135,7 +135,7 @@ Visual Studio で単体テストを実行すると、<xref:Microsoft.VisualStudi
 
 ## <a name="handle-test-failures"></a>テストの失敗の処理
 
-テスト実行にはエラーがなかったので、少し変更を加えてテスト メソッドが 1 つ失敗するようにしてみましょう。
+テスト駆動開発 (TDD) を行っている場合、最初にテストを作成すると、1 回目のテスト実行は失敗します。 その後、テストを成功させるコードをアプリに追加します。 この場合は、検証するアプリ コードを記述した後にテストを作成しているので、テストの失敗が確認されることはありません。 テストの失敗が予想されるときにテストが失敗することを検証するには、テスト入力に無効な値を追加します。
 
 1. `TestDoesNotStartWithUpper` メソッドの `words` 配列を変更し、文字列 "Error" を含めます。 ソリューションをビルドし、テストを実行するときに、Visual Studio では、自動的に開いているファイルが保存されるため、ファイルは保存する必要はありません。
 

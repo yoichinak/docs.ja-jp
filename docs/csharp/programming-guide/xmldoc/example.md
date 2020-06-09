@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: 615eccbc427b6a5bbbed061acd0c8b0b9be7f46c
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e8d26f82562cc5140662f5b32ea9fedf5481d8f8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "76789814"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287391"
 ---
 # <a name="example-c-programming-guide"></a>\<example> (C# プログラミング ガイド)
 
@@ -29,9 +29,9 @@ ms.locfileid: "76789814"
 
   コード例の説明です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-\<example> タグでは、メソッドまたはその他のライブラリ メンバーの使用例を指定できます。 一般的に、[\<code>](./code.md) タグが使用されます。
+`<example>` タグを使用すると、メソッドまたは他のライブラリ メンバーの使用例を指定できます。 一般的に、[\<code>](./code.md) タグが使用されます。
 
 コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
 
@@ -39,7 +39,7 @@ ms.locfileid: "76789814"
 
 [!code-csharp[csProgGuideDocComments#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#3)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

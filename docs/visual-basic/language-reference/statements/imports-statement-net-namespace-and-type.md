@@ -60,7 +60,7 @@ Imports System.Collections.Generic
 `Imports` ステートメントによって、他のプロジェクトおよびアセンブリの要素をプロジェクトで使用できなくなることに注意してください。 インポートは、参照の設定の代わりになりません。 これにより、プロジェクトで既に使用可能な名前を修飾する必要がなくなるだけです。 詳細については、「[宣言された要素の参照](../../programming-guide/language-features/declared-elements/references-to-declared-elements.md)」の "コンテナー要素のインポート" に関するセクションを参照してください。
 
 > [!NOTE]
-> 暗黙的な `Imports` ステートメントを定義するには、「[[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)」を使用します。 詳細については、[インポートした名前空間を追加または削除する (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)」を参照してください。
+> 暗黙的な `Imports` ステートメントを定義するには、「[[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)」を使用します。 詳細については、[方法:インポートした名前空間を追加または削除する (Visual Basic)](/visualstudio/ide/how-to-add-or-remove-imported-namespaces-visual-basic)」を参照してください。
 
 ## <a name="import-aliases"></a>インポート エイリアス
 

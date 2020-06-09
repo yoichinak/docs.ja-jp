@@ -2,12 +2,12 @@
 title: dotnet new コマンド
 description: dotnet new コマンドは、指定されたテンプレートに基づいて新しい .NET Core プロジェクトを作成します。
 ms.date: 04/10/2020
-ms.openlocfilehash: 1544f519f2a5f6a1a6e042c1db720eff45f5d98c
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 39301ad95761848b60b45cb5c18ede937f70c32c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83442242"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84283976"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -75,6 +75,7 @@ dotnet new -h|--help
 | MVC ViewImports                              | [viewimports](#namespace)       | [C#]         | Web/ASP.NET                           | 2.0        |
 | MVC ViewStart                                | `viewstart`                     | [C#]         | Web/ASP.NET                           | 2.0        |
 | Blazor サーバー アプリ                            | [blazorserver](#blazorserver)   | [C#]         | Web/Blazor                            | 3.0        |
+| Blazor WebAssembly アプリ                       | `blazorwasm`                    | [C#]         | Web/Blazor/WebAssembly                            | 3.1.300    |
 | ASP.NET Core 空                           | [web](#web)                     | [C#], F#     | Web/Empty                             | 1        |
 | ASP.NET Core Web アプリ (モデル ビュー コントローラー) | [mvc](#web-options)             | [C#], F#     | Web/MVC                               | 1        |
 | ASP.NET Core Web アプリ                         | [webapp、razor](#web-options)   | [C#]         | Web/MVC/Razor Pages                   | 2.2、2.0   |
@@ -148,7 +149,7 @@ dotnet new -h|--help
   このオプションにパラメーターを指定しないと、コマンドによって、インストールされたテンプレートとそれらに関する詳細が表示されます。
 
   > [!NOTE]
-  > `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<ユーザー>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
+  > `PATH` を使用してテンプレートをアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:/Users/\<USER>/Documents/Templates/GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
   > テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
 
 - **`--update-apply`**

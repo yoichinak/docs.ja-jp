@@ -21,12 +21,12 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: a21dfeb12e8d99f5f8b8afede084846711c299ab
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4470e5c178c0f66dc33956ea0131d4eabc51d46
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79401431"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84397468"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic における Me、My、MyBase、MyClass
 Visual Basic の `Me`、`My`、`MyBase`、`MyClass` は、名前は似ていますが目的が異なります。 このトピックでは、これらのエンティティを区別するために、それぞれについて説明します。  
@@ -60,4 +60,4 @@ ChangeFormColor(Me)
   
 ## <a name="see-also"></a>関連項目
 
-- [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [継承の基本](../language-features/objects-and-classes/inheritance-basics.md)

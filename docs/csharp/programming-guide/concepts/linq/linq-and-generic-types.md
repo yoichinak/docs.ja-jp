@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 9a2d1ac72f70e7cd314d349e81ab2bc815a5bf13
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2cbff0b31cac091a57ea35cbd01535b7d0c4b78a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75635575"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241761"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ とジェネリック型 (C#)
 LINQ クエリは、.NET Framework のバージョン 2.0 で導入されたジェネリック型に基づいています。 クエリを記述するために、ジェネリックについて詳しく知っておく必要ありません。 ただし、次の 2 つの基本的な概念を理解しておくと役立ちます。  
@@ -34,8 +34,8 @@ LINQ クエリは、.NET Framework のバージョン 2.0 で導入されたジ�
   
  [!code-csharp[csLINQGettingStarted#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#35)]  
   
- `var` キーワードは、変数の型が明らかな場合、または入れ子にされたジェネリック型 (グループ クエリで生成されたものなど) を明示的に指定する必要がない場合に便利です。 一般に、`var` を使用すると、他の開発者にとってコードが読みにくくなる可能性があることを理解しておくことをお勧めします。 詳細については、「[暗黙的に型指定されたローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
+ `var` キーワードは、変数の型が明らかな場合、または入れ子にされたジェネリック型 (グループ クエリで生成されたものなど) を明示的に指定する必要がない場合に便利です。 一般に、`var` を使用すると、他の開発者にとってコードが読みにくくなる可能性があることを理解しておくことをお勧めします。 詳細については、「[暗黙的に型指定されるローカル変数](../../classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ジェネリック](../../generics/index.md)

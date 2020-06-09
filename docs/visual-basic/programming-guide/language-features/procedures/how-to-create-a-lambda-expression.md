@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic]
 - expressions [Visual Basic], lambda
 ms.assetid: 3279bd5c-80f7-410a-a7ba-f7085ed36aa5
-ms.openlocfilehash: 1c65841e4c124252cfa41bcd4d0c305a426687ee
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: 7affc84fa501ba98bdfa93835f0b0e381580b9bd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75632351"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388388"
 ---
 # <a name="how-to-create-a-lambda-expression-visual-basic"></a>方法: ラムダ式を作成する (Visual Basic)
 "*ラムダ式*" は、名前のない関数またはサブルーチンです。 ラムダ式は、デリゲート型が有効であれば使用できます。  
@@ -108,9 +108,9 @@ ms.locfileid: "75632351"
 
 - <xref:System.Linq.Enumerable>
 - [ラムダ式](./lambda-expressions.md)
-- [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [方法: Visual Basic でプロシージャを別のプロシージャに渡す](../../../../visual-basic/programming-guide/language-features/delegates/how-to-pass-procedures-to-another-procedure.md)
-- [Delegate ステートメント](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+- [Function ステートメント](../../../language-reference/statements/function-statement.md)
+- [Sub ステートメント](../../../language-reference/statements/sub-statement.md)
+- [デリゲート](../delegates/index.md)
+- [方法: Visual Basic でプロシージャを別のプロシージャに渡す](../delegates/how-to-pass-procedures-to-another-procedure.md)
+- [Delegate ステートメント](../../../language-reference/statements/delegate-statement.md)
+- [Visual Basic における LINQ の概要](../linq/introduction-to-linq.md)

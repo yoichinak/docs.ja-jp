@@ -5,12 +5,12 @@ helpviewer_keywords:
 - dynamic [C#], about dynamic type
 - dynamic type [C#]
 ms.assetid: 3828989d-c967-4a51-b948-857ebc8fdf26
-ms.openlocfilehash: c5ac5b3692266010f0be8672ef744baaa32e6a03
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 24d48605e560038d70f1818611f339a94ecc2bba
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "75711858"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241969"
 ---
 # <a name="using-type-dynamic-c-programming-guide"></a>dynamic 型の使用 (C# プログラミング ガイド)
 
@@ -39,7 +39,7 @@ C# 4 では、`dynamic` という新しい型が導入されています。 こ�
 
 次の「変換」のセクションに変換例を示します。
 
-## <a name="conversions"></a>コンバージョン
+## <a name="conversions"></a>変換
 
 動的オブジェクトとその他の型との変換は簡単です。 そのため、開発者は動的な動作と動的でない動作を切り替えることができます。
 
@@ -59,7 +59,7 @@ C# 4 では、`dynamic` という新しい型が導入されています。 こ�
 
 ## <a name="dynamic-language-runtime"></a>動的言語ランタイム
 
-動的言語ランタイム (DLR) は、.NET Framework 4 の新しい API です。 DLR は、C# の `dynamic` 型だけでなく、IronPython や IronRuby などの動的プログラミング言語の実装もサポートするインフラストラクチャを提供します。 DLR の詳細については、「[動的言語ランタイムの概要](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)」を参照してください。
+動的言語ランタイム (DLR) は、.NET Framework 4 に導入された API です。 DLR は、C# の `dynamic` 型だけでなく、IronPython や IronRuby などの動的プログラミング言語の実装もサポートするインフラストラクチャを提供します。 DLR の詳細については、「[動的言語ランタイムの概要](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)」を参照してください。
 
 ## <a name="com-interop"></a>COM 相互運用
 
@@ -73,7 +73,7 @@ C# 4 には、Office オートメーション API などの COM API との相互
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|[説明]|
+|Title|説明|
 |-----------|-----------------|
 |[dynamic](../../language-reference/builtin-types/reference-types.md)|`dynamic` キーワードの使用法について説明します。|
 |[動的言語ランタイムの概要](../../../framework/reflection-and-codedom/dynamic-language-runtime-overview.md)|DLR の概要について説明します。DLR は動的言語の一連のサービスを共通言語ランタイム (CLR) に追加するランタイム環境です。|

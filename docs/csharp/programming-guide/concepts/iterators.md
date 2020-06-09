@@ -2,12 +2,12 @@
 title: C# でのコレクションの反復処理
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: aceedd11466c75cedad3c67224c3a5595b4cabfa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 15b77fd11c0ff606119425ec7aae8e7127315e82
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77626271"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84240695"
 ---
 # <a name="iterators-c"></a>反復子 (C#)
 
@@ -350,7 +350,7 @@ C# の場合、`yield` は予約語ではなく、`return` または `break` キ
 
 - 最初の `foreach` ループ イテレーションの後に一覧シーケンスを変更する。
 
-- 最初の `foreach` ループ イテレーションの前に大きい一覧が完全に読み込まれないようにする。 例として、ページ フェッチでのテーブル行のバッチの読み込みなどがあります。 また、別の例として、<xref:System.IO.DirectoryInfo.EnumerateFiles%2A> メソッドでの .NET Framework 内の反復子の実装があります。
+- 最初の `foreach` ループ イテレーションの前に大きい一覧が完全に読み込まれないようにする。 例として、ページ フェッチでのテーブル行のバッチの読み込みなどがあります。 また、別の例として、<xref:System.IO.DirectoryInfo.EnumerateFiles%2A> メソッドでの .NET 内の反復子の実装があります。
 
 - 反復子に一覧の作成をカプセル化する。 iterator メソッドでは、一覧を作成してから、ループで各結果を生成することができます。
 

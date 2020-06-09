@@ -6,12 +6,12 @@ helpviewer_keywords:
 - extension methods [C#]
 - methods [C#], extension
 ms.assetid: 175ce3ff-9bbf-4e64-8421-faeb81a0bb51
-ms.openlocfilehash: fc816123134995b753beda0a6f281133d6ddd691
-ms.sourcegitcommit: 1cb64b53eb1f253e6a3f53ca9510ef0be1fd06fe
+ms.openlocfilehash: 5db2797870b6c2e1998f17f1d8e4df8aa3f95c9e
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82506819"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241410"
 ---
 # <a name="extension-methods-c-programming-guide"></a>拡張メソッド (C# プログラミング ガイド)
 
@@ -97,7 +97,7 @@ static class DomainEntityExtensions
 
 ### <a name="extending-predefined-types"></a>定義済みの型の拡張
 
-再利用可能な機能を作成する必要があるときに、新しいオブジェクトを作成するのではなく、多くの場合、.NET Framework や CLR 型などの既存の型を拡張できます。 たとえば、拡張メソッドを使用しない場合は、コード内の複数の場所から呼び出すことができる `Engine` または `Query` クラスを作成して、SQL サーバーに対するクエリの実行を処理することが考えられます。 一方、代わりに拡張メソッドを使用して <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> クラスを拡張すると、SQL サーバーに接続している任意の場所からそのクエリを実行することができます。 他の例としては、<xref:System.String?displayProperty=nameWithType> クラスへの共通機能の追加、<xref:System.IO.File?displayProperty=nameWithType> および <xref:System.IO.Stream?displayProperty=nameWithType> オブジェクトのデータ処理機能の拡張、特定のエラー処理機能のための <xref:System.Exception?displayProperty=nameWithType> オブジェクトなどがあります。 この種のユース ケースは、開発者の想像力と良識によってのみ制限されます。
+再利用可能な機能を作成する必要があるときに、新しいオブジェクトを作成するのではなく、多くの場合、.NET や CLR 型などの既存の型を拡張できます。 たとえば、拡張メソッドを使用しない場合は、コード内の複数の場所から呼び出すことができる `Engine` または `Query` クラスを作成して、SQL サーバーに対するクエリの実行を処理することが考えられます。 一方、代わりに拡張メソッドを使用して <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> クラスを拡張すると、SQL サーバーに接続している任意の場所からそのクエリを実行することができます。 他の例としては、<xref:System.String?displayProperty=nameWithType> クラスへの共通機能の追加、<xref:System.IO.File?displayProperty=nameWithType> および <xref:System.IO.Stream?displayProperty=nameWithType> オブジェクトのデータ処理機能の拡張、特定のエラー処理機能のための <xref:System.Exception?displayProperty=nameWithType> オブジェクトなどがあります。 この種のユース ケースは、開発者の想像力と良識によってのみ制限されます。
 
 `struct` 型は、メソッドに値で渡されるため、定義済みの型を拡張するのが難かしい場合があります。 これは、構造体への変更が構造体のコピーに対して行われることを意味します。 そのような変更は、拡張メソッドが終了した後では認識できません。 C# 7.2 以降では、拡張メソッドの最初の引数に `ref` 修飾子を追加できます。 `ref` 修飾子を追加すると、最初の引数が参照によって渡されます。 これにより、拡張されている構造体の状態を変更する拡張メソッドを記述できます。
 
@@ -114,7 +114,7 @@ static class DomainEntityExtensions
 - 拡張メソッドが型で定義されているメソッドと同じシグネチャを持つ場合、その拡張メソッドは呼び出されません。
 - 拡張メソッドは名前空間レベルでスコープ内に取り込まれます。 たとえば、`Extensions` という名前の単一の名前空間に、拡張メソッドを含む複数の静的クラスがある場合、`using Extensions;` ディレクティブによって、それらのすべての拡張メソッドがスコープ内に取り込まれます。
 
-実装したクラス ライブラリでは、アセンブリのバージョン番号のインクリメントを避けるために、拡張メソッドは使用しないでください。 ソース コードを所有するライブラリに重要な機能を追加する場合は、アセンブリのバージョン管理について標準の .NET Framework ガイドラインに従う必要があります。 詳細については、「[アセンブリのバージョン管理](../../../standard/assembly/versioning.md)」を参照してください。
+実装したクラス ライブラリでは、アセンブリのバージョン番号のインクリメントを避けるために、拡張メソッドは使用しないでください。 ソース コードを所有するライブラリに重要な機能を追加する場合は、アセンブリのバージョン管理について、.NET ガイドラインに従う必要があります。 詳細については、「[アセンブリのバージョン管理](../../../standard/assembly/versioning.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

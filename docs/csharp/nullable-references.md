@@ -3,12 +3,12 @@ title: null 許容参照型
 description: この記事では、C# 8.0 で追加された null 許容参照型の概要を説明します。 新規および既存のプロジェクトにおいて、その機能によって null 参照例外に対する安全性がどのように提供されるかを学習します。
 ms.technology: csharp-null-safety
 ms.date: 04/21/2020
-ms.openlocfilehash: 589118ffaa9ad39f000e3e5adf2896d114f68dd3
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 6d068760805a21e41712a4f70735bef41ce2052f
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82101978"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84446673"
 ---
 # <a name="nullable-reference-types"></a>null 許容参照型
 
@@ -130,3 +130,4 @@ null 許容警告コンテキストで **null かもしれない**変数また�
 - [null 許容参照型仕様の下書き](~/_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md)
 - [null 許容参照の概要チュートリアル](tutorials/nullable-reference-types.md)
 - [既存のコードベースを null 許容参照に移行する](tutorials/upgrade-to-nullable-references.md)
+- [-nullable (C# コンパイラ オプション)](language-reference/compiler-options/nullable-compiler-option.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - object equality [C#]
 ms.assetid: 10b865ea-4e7b-4127-9242-c9b8f57d9f04
-ms.openlocfilehash: f09d9891f79eda44c428d5509e341a54ad3a3eee
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 46d6881955252b21de6a92e25d65d1f76c8ec06c
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79157105"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241917"
 ---
 # <a name="equality-comparisons-c-programming-guide"></a>等価比較 (C# プログラミング ガイド)
 
@@ -50,13 +50,13 @@ if (b == a)
   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|[説明]|  
+|Title|説明|  
 |-----------|-----------------|  
 |[参照の等価性 (同値) をテストする方法](./how-to-test-for-reference-equality-identity.md)|2 つの変数に参照の等価性があるかどうかを確認する方法を説明します。|  
 |[型の値の等価性を定義する方法](./how-to-define-value-equality-for-a-type.md)|型の値の等価性にカスタムの定義を指定する方法を説明します。|  
-|[C# プログラミングガイド](../index.md)|C# 言語の重要な機能に関する詳細情報へのリンクを示します。また、.NET Framework 経由でアクセスできる C# の機能について説明します。|  
+|[C# プログラミング ガイド](../index.md)|C# 言語の重要な機能に関する詳細情報へのリンクを示します。また、.NET 経由でアクセスできる C# の機能について説明します。|  
 |[型](../types/index.md)|C# 型システムについて説明し、詳細情報へのリンクを示します。|  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)

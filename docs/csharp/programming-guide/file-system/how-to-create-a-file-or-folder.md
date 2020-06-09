@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: cdcc0a375aa1eca29c024d1e0c9008f337d0c772
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5efe3b7dc600645488816d6f931df57fc236efc9
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79167558"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241644"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>ファイルまたはフォルダーを作成する方法 (C# プログラミング ガイド)
 プログラムによって、コンピューター上でのフォルダーの作成、サブフォルダーの作成、サブフォルダー内でのファイルの作成、およびファイルへのデータの記述を行うことができます。  
@@ -62,13 +62,13 @@ ms.locfileid: "79167558"
   
 - フォルダー名がコロン (":") だけである場合 (<xref:System.IO.PathTooLongException> クラス)。  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+## <a name="net-security"></a>.NET セキュリティ  
  部分的に信頼された状況では、<xref:System.Security.SecurityException> クラスのインスタンスがスローされることがあります。  
   
  フォルダーの作成に必要なアクセス許可が与えられていない場合、この例では <xref:System.UnauthorizedAccessException> クラスのインスタンスがスローされます。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.IO?displayProperty=nameWithType>
-- [C# プログラミングガイド](../index.md)
+- [C# プログラミング ガイド](../index.md)
 - [ファイル システムとレジストリ (C# プログラミング ガイド)](./index.md)

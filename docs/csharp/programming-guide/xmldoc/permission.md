@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C# XML tag
 - permission C# XML tag
 ms.assetid: 769e93fe-8404-443f-bf99-577aa42b6a49
-ms.openlocfilehash: 4f76d28d5531c1b9f01fa950589407934cc1244a
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: bb7172042f0b472d03c3fa2d9dbd0d4d4265076b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "77093475"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287273"
 ---
 # <a name="permission-c-programming-guide"></a>\<permission> (C# プログラミング ガイド)
 
@@ -35,9 +35,9 @@ ms.locfileid: "77093475"
 
   メンバーへのアクセスの説明です。
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
-\<permission> タグを使用すると、メンバーのアクセスを文書化できます。 <xref:System.Security.PermissionSet> クラスを使用すると、メンバーへのアクセスを指定できます。
+`<permission>` タグを使用すると、メンバーのアクセスをドキュメント化できます。 <xref:System.Security.PermissionSet> クラスを使用すると、メンバーへのアクセスを指定できます。
 
 コンパイル時に [-doc](../../language-reference/compiler-options/doc-compiler-option.md) を指定して、ドキュメント コメントをファイルに出力します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "77093475"
 
 [!code-csharp[csProgGuideDocComments#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#8)]
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [ドキュメント コメント用の推奨タグ](./recommended-tags-for-documentation-comments.md)

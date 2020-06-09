@@ -1,15 +1,15 @@
 ---
 title: using ステートメント - C# リファレンス
-ms.date: 04/07/2020
+ms.date: 05/29/2020
 helpviewer_keywords:
 - using statement [C#]
 ms.assetid: afc355e6-f0b9-4240-94dd-0d93f17d9fc3
-ms.openlocfilehash: 3c479faeeb66865b8c368edba881429a7cb956ec
-ms.sourcegitcommit: 5988e9a29cedb8757320817deda3c08c6f44a6aa
+ms.openlocfilehash: b889d2fcbdf854dbe8948744810f9b74e9f0dac2
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2020
-ms.locfileid: "82199678"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84307047"
 ---
 # <a name="using-statement-c-reference"></a>using ステートメント (C# リファレンス)
 
@@ -29,7 +29,7 @@ C# 8.0 以降では、中かっこを必要としない `using` ステートメ�
 
 <xref:System.IO.File> と <xref:System.Drawing.Font> は、アンマネージド リソース (この場合はファイル ハンドルとデバイス コンテキスト) にアクセスするマネージド型の例です。 アンマネージ リソースや、それをカプセル化するクラス ライブラリ型は他にもたくさんあります。 このようなすべての型は、<xref:System.IDisposable> インターフェイスまたは <xref:System.IAsyncDisposable> インターフェイスを実装する必要があります。
 
-`IDisposable` オブジェクトの有効期間が 1 つのメソッドに限定されているとき、それを `using` ステートメントで宣言し、インスタンス化してください。 `using` ステートメントは、オブジェクトで正しく <xref:System.IDisposable.Dispose%2A> メソッドを呼び出します。(前述のようにこのステートメントを使用する場合) <xref:System.IDisposable.Dispose%2A> が呼び出されるとすぐに、オブジェクト自体がスコープの外側に出されます。 オブジェクトは、`using` ブロック内では読み取り専用です。変更したり再割り当てしたりすることはできません。 オブジェクトに `IDisposable` ではなく `IAsyncDisposable` が実装されている場合、`using` ステートメントからは <xref:System.IAsyncDisposable.DisposeAsync%2A> が呼び出され、返される <xref:System.Threading.Tasks.Task> の `awaits` を行います。
+`IDisposable` オブジェクトの有効期間が 1 つのメソッドに限定されているとき、それを `using` ステートメントで宣言し、インスタンス化してください。 `using` ステートメントは、オブジェクトで正しく <xref:System.IDisposable.Dispose%2A> メソッドを呼び出します。(前述のようにこのステートメントを使用する場合) <xref:System.IDisposable.Dispose%2A> が呼び出されるとすぐに、オブジェクト自体がスコープの外側に出されます。 オブジェクトは、`using` ブロック内では読み取り専用です。変更したり再割り当てしたりすることはできません。 オブジェクトに `IDisposable` ではなく `IAsyncDisposable` が実装されている場合、`using` ステートメントからは <xref:System.IAsyncDisposable.DisposeAsync%2A> が呼び出され、返される <xref:System.Threading.Tasks.ValueTask> の `awaits` を行います。 <xref:System.IAsyncDisposable> の詳細については、「[DisposeAsync メソッドの実装](../../../standard/garbage-collection/implementing-disposeasync.md)」を参照してください。
 
 `using` ステートメントにより、`using` ブロック内で例外が発生した場合でも必ず <xref:System.IDisposable.Dispose%2A> (または <xref:System.IAsyncDisposable.DisposeAsync%2A>) が呼び出されます。 オブジェクトを `try` ブロックに配置し、`finally` ブロック内で <xref:System.IDisposable.Dispose%2A> (または <xref:System.IAsyncDisposable.DisposeAsync%2A>) を呼び出しても、同じ結果が得られます。実際には、コンパイラによって `using` ステートメントがこのように変換されます。 前のコード例は、コンパイル時に次のコードに展開されます (オブジェクトのスコープ制限を定義する中かっこが加えられていることに注意してください)。
 

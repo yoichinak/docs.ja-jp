@@ -4,12 +4,12 @@ description: C# の名前のないタプルと名前付きタプルについて
 ms.date: 05/15/2018
 ms.technology: csharp-fundamentals
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: 9ce9e1d4395d1a75f36004384ec215c615cd9802
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 497f95811677c300e1fadad65eb495dced7f2da3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79156910"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374617"
 ---
 # <a name="c-tuple-types"></a>C# のタプル型
 
@@ -149,7 +149,7 @@ named = differentShape;
 > この例では、未修正のサンプル標準偏差を計算します。
 > 修正後のサンプル標準偏差式は、`Average` 拡張メソッドで行われるのと同様に、平均値との差の二乗和を、N ではなく (N-1) で除算します。 標準偏差のこうした数式の間に生じる差の詳細については、統計値のテキストを参照してください。
 
-上のコードは、標準偏差の教科書どおりの数式に従っています。 正しい答えが生成されますが、非効率的な実装です。 このメソッドは、シーケンスを 2 回列挙します。1 回は平均値を生成するため、もう 1 回は平均値との差を 2 乗して、その平均値を生成するためです
+上のコードは、標準偏差の教科書どおりの数式に従っています。 正しい答えが生成されますが、非効率的な実装です。 このメソッドでは、シーケンスが 2 回列挙されます。1 回は平均値を生成するため、もう 1 回は平均値との差を 2 乗して、その平均値を生成するためです
 (前述のとおり、LINQ クエリは遅延評価されるため、平均値との差と、その差の平均値の計算で生成される列挙は 1 つだけです)。
 
 シーケンスの列挙を 1 つだけ使用して標準偏差を計算する、別の数式があります。  この計算では、シーケンスを列挙しながら、2 つの値が生成されます。1 つはシーケンス内のすべての項目の合計、もう 1 つは各値の二乗和です。
@@ -252,7 +252,7 @@ public class Point
 
 上に示したように、すべてのタプル型を分解できます。 また、ユーザー定義型 (クラス、構造体、またはインターフェイス) も簡単に分解できます。
 
-型の作成者は、型を構成するデータ要素を表す任意の数の `out` 変数に対して値を割り当てる `Deconstruct` メソッドを 1 つ以上定義できます。 たとえば、次の `Person` 型は、person オブジェクトを、名と姓を表す要素に分解する `Deconstruct` メソッドを定義しています。
+型の作成者は、型を構成するデータ要素を表す任意の数の [`out` 変数](language-reference/keywords/out-parameter-modifier.md)に対して値を割り当てる `Deconstruct` メソッドを 1 つ以上定義できます。 たとえば、次の `Person` 型は、person オブジェクトを、名と姓を表す要素に分解する `Deconstruct` メソッドを定義しています。
 
 [!code-csharp[TypeWithDeconstructMethod](../../samples/snippets/csharp/tuples/person.cs#12_TypeWithDeconstructMethod "Type with a deconstruct method")]
 
@@ -286,7 +286,7 @@ if (("Althea", "Goodwin") == p)
 
 ## <a name="tuples-as-out-parameters"></a>out パラメーターとしてのタプル
 
-タプルは、"*それ自体*" を out パラメーターとして使用できます。 前述の「[分解](#deconstruction)」セクションで説明したあいまいさと混同しないようにしてください。 メソッド呼び出しでは、タプルのシェイプについてのみ記述する必要があります。
+タプルは、"*それ自体*" を [`out` パラメーター](language-reference/keywords/out-parameter-modifier.md)として使用できます。 前述の「[分解](#deconstruction)」セクションで説明したあいまいさと混同しないようにしてください。 メソッド呼び出しでは、タプルのシェイプについてのみ記述する必要があります。
 
 [!code-csharp[TuplesAsOutParameters](~/samples/snippets/csharp/tuples/program.cs#01_TupleAsOutVariable "Tuples as out parameters")]
 
