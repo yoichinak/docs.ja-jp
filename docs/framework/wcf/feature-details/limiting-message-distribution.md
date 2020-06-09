@@ -2,12 +2,12 @@
 title: メッセージ配布の制限
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: 36d9d43760e68f6bcf0099ac17dec5a8278d0e49
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 188d7bd365caad7d4cd438744c78ae8e7cd95e7e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211906"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84586313"
 ---
 # <a name="limiting-message-distribution"></a>メッセージ配布の制限
 
@@ -71,4 +71,4 @@ ms.locfileid: "76211906"
 
 ## <a name="see-also"></a>関連項目
 
-- [ピア チャネル アプリケーションの構築](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)
+- [ピア チャネル アプリケーションの構築](building-a-peer-channel-application.md)

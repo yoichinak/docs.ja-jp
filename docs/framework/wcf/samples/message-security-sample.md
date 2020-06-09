@@ -2,15 +2,15 @@
 title: メッセージ セキュリティ サンプル
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: 43e1a9104bdd44509d86bd198559c5e7477a9964
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 935695a46e907bf1deeb2e5cb24917ba92b81fe0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183519"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84584852"
 ---
 # <a name="message-security-sample"></a>メッセージ セキュリティ サンプル
-このサンプルでは、`basicHttpBinding` とメッセージ セキュリティを使用するアプリケーションを実装する方法を示します。 このサンプルは、電卓サービスを実装する[作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)に基づいています。  
+このサンプルでは、`basicHttpBinding` とメッセージ セキュリティを使用するアプリケーションを実装する方法を示します。 このサンプルは、電卓サービスを実装する[はじめに](getting-started-sample.md)に基づいています。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -34,7 +34,7 @@ ms.locfileid: "79183519"
 </system.serviceModel>  
 ```  
   
- バインディング構成`mode`は、`Message``clientCredentialType``Certificate`[\<次](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)の構成例に示すように、セキュリティー>の属性を設定し[\<、メッセージ>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-basichttpbinding.md)の属性を設定します。  
+ バインディング構成は、の `mode` 属性を [\<security>](../../configure-apps/file-schema/wcf/security-of-basichttpbinding.md) に設定 `Message` し、 `clientCredentialType` の属性をに設定し [\<message>](../../configure-apps/file-schema/wcf/message-of-basichttpbinding.md) `Certificate` ます。次のサンプル構成を参照してください。  
   
 ```xml  
 <bindings>  
@@ -112,9 +112,9 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>サンプルを同じコンピューターで実行するには  
   
@@ -127,7 +127,7 @@ Press <ENTER> to terminate client.
   
 3. クライアント アプリケーションを \client\bin で実行します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。  
   
-4. クライアントとサービスが通信できない場合は、「 WCF[サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+4. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 5. サンプルの使用が終わったら、Cleanup.bat を実行して証明書を削除してください。 他のセキュリティ サンプルでも同じ証明書を使用します。  
   
@@ -141,15 +141,15 @@ Press <ENTER> to terminate client.
   
 4. クライアント プログラム ファイルを、クライアント コンピュータに作成したクライアント ディレクトリにコピーします。 Setup.bat、Cleanup.bat、ImportServiceCert.bat の各ファイルもクライアントにコピーします。  
   
-5. サーバーで `setup.bat service` を実行します。 引数`setup.bat`を指定`service`して実行すると、マシンの完全修飾ドメイン名を持つサービス証明書が作成され、Service.cer という名前のファイルにサービス証明書がエクスポートされます。  
+5. サーバーで `setup.bat service` を実行します。 引数を指定してを実行する `setup.bat` `service` と、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service .cer という名前のファイルにエクスポートされます。  
   
-6. Service.exe.config を編集して、マシンの`findValue`完全修飾ドメイン名と同じ新しい証明書名[\<(serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)要素の属性) を反映します。 さらに、ベース アドレスの値を `.` から完全修飾コンピュータ名に変更します。  
+6. サービスの .exe を編集して、新しい証明書名 (要素の属性) を反映します。 `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) これは、コンピューターの完全修飾ドメイン名と同じです。 さらに、ベース アドレスの値を `.` から完全修飾コンピュータ名に変更します。  
   
 7. Service.cer ファイルを、サービス ディレクトリからクライアント コンピューターのクライアント ディレクトリにコピーします。  
   
 8. クライアントで `setup.bat client` を実行します。 `setup.bat`に `client` 引数を指定して実行すると、client.com というクライアント証明書が作成され、Client.cer というファイルにエクスポートされます。  
   
-9. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。 そのためには、localhost をサーバーの完全修飾ドメイン名に置き換えます。 また[\<、defaultCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)の`findValue`属性を、サーバーの完全修飾ドメイン名である新しいサービス証明書名に変更します。  
+9. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。 そのためには、localhost をサーバーの完全修飾ドメイン名に置き換えます。 また `findValue` 、の属性を、 [\<defaultCertificate>](../../configure-apps/file-schema/wcf/defaultcertificate-element.md) サーバーの完全修飾ドメイン名である新しいサービス証明書の名前に変更します。  
   
 10. Client.cer ファイルを、クライアント ディレクトリからサーバーのサービス ディレクトリにコピーします。  
   
@@ -161,20 +161,20 @@ Press <ENTER> to terminate client.
   
 14. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。  
   
-    1. クライアントとサービスが通信できない場合は、「 WCF[サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
+    1. クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
 - サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
     > [!NOTE]
-    > このサンプルを別のマシンで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 複数のコンピューターで証明書を使用する Windows 通信基盤 (WCF) サンプルを実行している場合は、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をクリアしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。  
+    > このサンプルを別のマシンで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行した場合は、CurrentUser-TrustedPeople ストアにインストールされているサービス証明書を必ずオフにしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  

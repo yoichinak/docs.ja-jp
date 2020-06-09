@@ -2,12 +2,12 @@
 title: メッセージ インスペクター
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 705401a182d5d816bc2682f5f21ff09ca95f21c7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a5519e815a6714e087a77c69e943a3a8c65db68
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144449"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585079"
 ---
 # <a name="message-inspectors"></a>メッセージ インスペクター
 このサンプルでは、クライアントとサービスのメッセージ インスペクタを実装して構成する方法を示します。  
@@ -202,7 +202,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>動作  
- メッセージ インスペクタは、クライアント ランタイムまたはディスパッチ ランタイムに対する拡張機能です。 このような拡張機能は、*ビヘイビア*を使用して構成されます。 動作はサービス モデル ランタイムの動作を変更するクラスです。この変更は、既定の構成を変更するか、または拡張機能 (メッセージ インスペクタなど) を追加したりすることによって行われます。  
+ メッセージ インスペクタは、クライアント ランタイムまたはディスパッチ ランタイムに対する拡張機能です。 このような拡張機能は、*ビヘイビアー*を使用して構成されます。 動作はサービス モデル ランタイムの動作を変更するクラスです。この変更は、既定の構成を変更するか、または拡張機能 (メッセージ インスペクタなど) を追加したりすることによって行われます。  
   
  次の `SchemaValidationBehavior` クラスは、このサンプルのメッセージ インスペクタをクライアント ランタイムまたはディスパッチ ランタイムに追加するときに使用される動作です。 この実装は、どちらの場合でも基本的な実装です。 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> と <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A> ではメッセージ インスペクタが作成され、それぞれのランタイムの <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> コレクションに追加されます。  
   
@@ -259,7 +259,7 @@ public class SchemaValidationBehavior : IEndpointBehavior
 > この特定の動作は属性の代わりにはなりません。したがって、サービス型のコントラクト型に宣言して追加することはできません。 これは設計上の判断です。スキーマ コレクションを属性の宣言で読み込むことはできず、この属性で他の構成場所 (アプリケーション設定など) を参照することによって、残りのサービス モデル構成と一貫性を持たない構成要素が作成されるからです。 したがって、この動作は、強制的にコードおよびサービス モデル構成の拡張を使用してのみ追加できます。  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>構成を使用したメッセージ インスペクタの追加  
- アプリケーション構成ファイル内のエンドポイントでカスタム動作を構成するには、サービス モデルで実装者が<xref:System.ServiceModel.Configuration.BehaviorExtensionElement>派生したクラスで表される構成要素*拡張要素*を作成する必要があります。 次に、この拡張機能を拡張用のサービス モデルの構成セクションに追加する必要があります。このセクションで説明する拡張機能を参照してください。  
+ アプリケーション構成ファイルのエンドポイントでカスタム動作を構成するには、サービスモデルで、から派生したクラスによって表される構成*拡張要素*を作成する実装が必要です <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 。 次に、この拡張機能を拡張用のサービス モデルの構成セクションに追加する必要があります。このセクションで説明する拡張機能を参照してください。  
   
 ```xml  
 <system.serviceModel>  
@@ -398,17 +398,17 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションをビルドするには、「 [Windows コミュニケーション ファウンデーション のサンプルの構築](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。  
   
-3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

@@ -1,17 +1,18 @@
 ---
 title: パラメーターに名前を付ける
+description: パラメーターの名前付けのガイドラインについて説明します。 たとえば、説明的なパラメーター名 & camel 形式で使用し、型ではなく意味に基づいて名前を付ける & を検討します。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - parameters, names
 - names [.NET Framework], parameters
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
-ms.openlocfilehash: 0d5c5cd144fbae88439ee981fbdb6e30ff487005
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 54f37c4d6a0f9a6931fa69d612bf0e45bf1f2ce7
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84290163"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583519"
 ---
 # <a name="naming-parameters"></a>パラメーターに名前を付ける
 読みやすくするために、パラメーター名のガイドラインに従うことが重要です。これは、ビジュアルデザインツールが Intellisense とクラス参照機能を提供する場合に、ドキュメントとデザイナーにパラメーターが表示されるためです。

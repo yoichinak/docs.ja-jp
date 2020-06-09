@@ -2,15 +2,15 @@
 title: XMLSerializer サンプル
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: c6d10a74a00bf534000f79457f2c80b0a9361230
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: fd787b5caabf698e471a9ebe4604688bc422e99e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143344"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84583948"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer サンプル
-このサンプルでは、<xref:System.Xml.Serialization.XmlSerializer> と互換性のある型をシリアル化および逆シリアル化する方法を示します。 既定の Wcf (WCF) フォーマッタ<xref:System.Runtime.Serialization.DataContractSerializer>は、クラスです。 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用すると、<xref:System.Runtime.Serialization.DataContractSerializer> クラスを使用できない場合に、型をシリアル化および逆シリアル化できます。 これは、XML を厳密に制御する必要がある場合、たとえば、データの一部が XML 属性であるが XML 要素ではない、などと制御する必要がある場合に多く該当します。 また、非<xref:System.Xml.Serialization.XmlSerializer>WCF サービス用のクライアントを作成するときに、多くの場合、自動的に選択されます。  
+このサンプルでは、<xref:System.Xml.Serialization.XmlSerializer> と互換性のある型をシリアル化および逆シリアル化する方法を示します。 既定の Windows Communication Foundation (WCF) フォーマッタは <xref:System.Runtime.Serialization.DataContractSerializer> クラスです。 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用すると、<xref:System.Runtime.Serialization.DataContractSerializer> クラスを使用できない場合に、型をシリアル化および逆シリアル化できます。 これは、XML を厳密に制御する必要がある場合、たとえば、データの一部が XML 属性であるが XML 要素ではない、などと制御する必要がある場合に多く該当します。 また、は、 <xref:System.Xml.Serialization.XmlSerializer> WCF 以外のサービス用のクライアントを作成するときに、自動的に選択されます。  
   
  この例では、クライアントはコンソール アプリケーション (.exe) であり、サービスはインターネット インフォメーション サービス (IIS) によってホストされます。  
   
@@ -84,7 +84,7 @@ public class XmlSerializerCalculatorService : IXmlSerializerCalculator
 }  
 ```  
   
- クライアント実装でも複素数を使用します。 サービス コントラクトとデータ型の両方が、サービス メタデータ からサービス モデル メタデータ[ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成されたgeneratedClient.cs ソース ファイルで定義されます。 コントラクトが <xref:System.Runtime.Serialization.DataContractSerializer> でシリアル化されずにこの場合の送出元の `XmlSerializable` 型に戻る場合、Svcutil.exe で検出することができます。 <xref:System.Xml.Serialization.XmlSerializer> を強制的に使用する場合は、/serializer:XmlSerializer (XmlSerializer を使用) コマンド オプションを Svcutil.exe ツールに渡します。  
+ クライアント実装でも複素数を使用します。 サービスコントラクトとデータ型はどちらも、サービスメタデータから[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって生成された generatedClient.cs ソースファイルで定義されています。 コントラクトが <xref:System.Runtime.Serialization.DataContractSerializer> でシリアル化されずにこの場合の送出元の `XmlSerializable` 型に戻る場合、Svcutil.exe で検出することができます。 <xref:System.Xml.Serialization.XmlSerializer> を強制的に使用する場合は、/serializer:XmlSerializer (XmlSerializer を使用) コマンド オプションを Svcutil.exe ツールに渡します。  
   
 ```csharp  
 // Create a client.  
@@ -119,17 +119,17 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。  
   
-3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  

@@ -1,16 +1,16 @@
 ---
-title: 'Windows Communication Foundation の採用: 将来の移行の簡略化'
+title: Windows Communication Foundation 導入の準備:将来の移行の簡略化
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 995bdaaaba96bf8697ea75c1f1a17fa8e51ec2d5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b43f509bd49ebe89d7ed0be4c37b3ed179aaeb8c
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185471"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84576500"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation の採用: 将来の移行の簡略化
-新しいASP.NET アプリケーションを WCF に移行しやすくするには、前述の推奨事項と次の推奨事項に従います。  
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>Windows Communication Foundation 導入の準備:将来の移行の簡略化
+新しい ASP.NET アプリケーションを WCF に簡単に移行できるようにするには、前述の推奨事項に加えて、次の推奨事項に従ってください。  
   
 ## <a name="protocols"></a>プロトコル  
  ASP.NET 2.0 の SOAP 1.2 サポートを無効にします。  
@@ -27,12 +27,12 @@ ms.locfileid: "79185471"
 </configuration>  
 ```  
   
- WCF では、SOAP 1.1 や SOAP 1.2 などの異なるプロトコルに準拠したメッセージを別のエンドポイントを使用して実行する必要があるため、この方法をお勧めします。 ASP.NET 2.0 Web サービスが SOAP 1.1 と SOAP 1.2 の両方をサポートするように構成されている場合 (デフォルトの構成) は、元 ASP.NETのアドレスにある単一の WCF エンドポイントに移行できません。サービスの既存のクライアント。 また、SOAP 1.1 ではなく 1.2 を選択すると、サービスの利用者がさらに厳しく制限されます。  
+ WCF では、SOAP 1.1 や SOAP 1.2 などのさまざまなプロトコルに準拠したメッセージをさまざまなエンドポイントを使用して処理する必要があるため、この方法をお勧めします。 ASP.NET 2.0 Web サービスが、既定の構成である SOAP 1.1 と SOAP 1.2 の両方をサポートするように構成されている場合は、すべての ASP.NET Web サービスの既存のクライアントと確実に互換性があるように、元のアドレスで単一の WCF エンドポイントに移行することはできません。 また、SOAP 1.1 ではなく 1.2 を選択すると、サービスの利用者がさらに厳しく制限されます。  
   
 ## <a name="service-development"></a>サービスの開発  
- WCF では、インターフェイスまたはクラス<xref:System.ServiceModel.ServiceContractAttribute>のいずれかに適用してサービス コントラクトを定義できます。 この属性は、クラスではなくインターフェイスに適用することをお勧めします。これにより、任意の数のクラスでさまざまに実装できるコントラクト定義が作成されます。 ASP.NET 2.0 では、<xref:System.Web.Services.WebService> 属性をクラスだけでなくインターフェイスに適用することもできます。 ただし、既に説明したように ASP.NET 2.0 には不具合があり、<xref:System.Web.Services.WebService> 属性をクラスではなくインターフェイスに適用した場合、この属性の名前空間パラメーターが有効化されません。 通常は、属性の Namespace パラメーターを使用して、`http://tempuri.org`サービス ASP.NET<xref:System.Web.Services.WebService><xref:System.ServiceModel.ServiceContractAttribute>の名前空間を既定値から変更することをお勧めします。  
+ WCF では、を <xref:System.ServiceModel.ServiceContractAttribute> インターフェイスまたはクラスのいずれかに適用することで、サービスコントラクトを定義できます。 この属性は、クラスではなくインターフェイスに適用することをお勧めします。これにより、任意の数のクラスでさまざまに実装できるコントラクト定義が作成されます。 ASP.NET 2.0 では、<xref:System.Web.Services.WebService> 属性をクラスだけでなくインターフェイスに適用することもできます。 ただし、既に説明したように ASP.NET 2.0 には不具合があり、<xref:System.Web.Services.WebService> 属性をクラスではなくインターフェイスに適用した場合、この属性の名前空間パラメーターが有効化されません。 通常は、サービスの名前空間を既定値から変更することをお勧めします。これは、 `http://tempuri.org` 属性の namespace パラメーターを使用して、 <xref:System.Web.Services.WebService> <xref:System.ServiceModel.ServiceContractAttribute> インターフェイスまたはクラスのいずれかに属性を適用することによって、ASP.NET Web サービスの定義を続ける必要があるためです。  
   
-- これらのインターフェイスを定義するメソッドに含めるコードは、できるだけ少なくします。 これらのメソッドの作業を他のクラスに委任します。 新しい WCF サービスの種類は、これらのクラスにそれらの実質的な作業をデリゲートすることもできます。  
+- これらのインターフェイスを定義するメソッドに含めるコードは、できるだけ少なくします。 これらのメソッドの作業を他のクラスに委任します。 新しい WCF サービスの種類では、そのようなクラスに対して、そのような作業を委任することもできます。  
   
 - `MessageName` の <xref:System.Web.Services.WebMethodAttribute> パラメーターを使用して、サービスの動作の明示的な名前を指定します。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "79185471"
     string Echo(string input);  
     ```  
   
-     この操作は重要です。なぜなら、ASP.NETの操作の既定の名前は WCF によって提供される既定の名前とは異なるためです。 明示的な名前を指定することで、既定の名前への依存を避けることができます。  
+     ASP.NET での操作の既定の名前は、WCF によって提供される既定の名前とは異なるため、この操作は重要です。 明示的な名前を指定することで、既定の名前への依存を避けることができます。  
   
-- WCF ではポリモーフィック メソッドを使用した操作の実装はサポートされていないため、ポリモーフィック メソッドを使用して ASP.NET Web サービス操作を実装しないでください。  
+- ASP.NET Web サービス操作をポリモーフィックなメソッドで実装しないでください。 WCF では、ポリモーフィックなメソッドを使用した操作の実装はサポートされていません。  
   
 - <xref:System.Web.Services.Protocols.SoapDocumentMethodAttribute> を使用して、HTTP 要求をメソッドにルーティングする SOAPAction HTTP ヘッダーの明示的な値を指定します。  
   
@@ -53,12 +53,12 @@ ms.locfileid: "79185471"
     string Echo(string input);  
     ```  
   
-     この方法を使用すると、ASP.NETと WCF が同じで使用する既定の SOAPAction 値に依存する必要が回避されます。  
+     このアプローチを採用すると、ASP.NET と WCF で使用される既定の SOAPAction 値に依存しなくても済むようになります。  
   
-- SOAP 拡張機能は使用しないでください。 SOAP 拡張機能が必要な場合は、それらが検討される目的が、既に WCF によって提供されている機能であるかどうかを判断します。 実際にそうである場合は、すぐに WCF を採用しないという選択を再検討してください。  
+- SOAP 拡張機能は使用しないでください。 SOAP 拡張機能が必要な場合は、その目的が WCF によって既に提供されている機能であるかどうかを判断します。 そのような場合は、WCF をすぐに導入しないことを再検討してください。  
   
 ## <a name="state-management"></a>状態管理  
- サービスで状態を維持する必要がないようにします。 状態の維持はアプリケーションのスケーラビリティを損なう傾向があるだけでなく、wcf wcf では互換性モードでASP.NETメカニズムをサポートしていますが、ASP.NETと WCF の状態管理メカニズムは大 ASP.NETきく異なります。  
+ サービスで状態を維持する必要がないようにします。 状態を維持することは、アプリケーションのスケーラビリティを損なう傾向があるだけでなく、ASP.NET と WCF の状態管理メカニズムは大きく異なりますが、WCF では ASP.NET 互換モードの ASP.NET メカニズムがサポートされています。  
   
 ## <a name="exception-handling"></a>例外処理  
  サービスで送受信するデータ型の構造を設計するときは、クライアントに伝達する必要があり、サービス内で発生する可能性のあるさまざまな種類の例外を表現する構造も設計します。  
@@ -113,17 +113,17 @@ throw new SoapException(
      exception.ToXML());  
 ```  
   
- これらの例外クラスは、WCF<xref:System.ServiceModel.FaultException%601>クラスを使用して簡単に再利用可能になり、新しい`FaultException<AnticipatedException>(anticipatedException);`  
+ これらの例外クラスは、WCF クラスを使用して簡単に再利用でき、 <xref:System.ServiceModel.FaultException%601> 新しいをスローします。`FaultException<AnticipatedException>(anticipatedException);`  
   
 ## <a name="security"></a>Security  
  セキュリティに関する推奨事項を次にいくつか示します。  
   
-- サービスが WCF に移行された場合、ASP.NET統合モードの使用を制限するので、ASP.NET 2.0 プロファイルの使用を避けてください。  
+- ASP.NET 2.0 プロファイルは使用しないでください。これを使用すると、サービスが WCF に移行された場合に ASP.NET 統合モードの使用が制限されます。  
   
-- Web サービスがインターネット インフォメーション サービス (IIS) を使用して ACL をサポートASP.NET、WCF ではホスト用の IIS ASP.NET に依存しているため、サービスへのアクセスを制御するために ACL を使用することは避けてください。  
+- サービスへのアクセスを制御するために Acl を使用しないでください。 ASP.NET Web サービスはインターネットインフォメーションサービス (IIS) を使用して Acl をサポートしています。 ASP.NET Web サービスはホスト用の IIS に依存しているため、WCF は必ずしも IIS でホストされている必要はありません。  
   
 - サービスのリソースへのアクセスを承認するには、ASP.NET 2.0 ロール プロバイダーの使用を検討してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows Communication Foundation 導入の準備 : 将来的な統合の容易化](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+- [Windows Communication Foundation 導入の準備:将来的な統合の容易化](anticipating-adopting-the-wcf-easing-future-integration.md)
