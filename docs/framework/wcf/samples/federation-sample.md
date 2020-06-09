@@ -2,18 +2,18 @@
 title: フェデレーション サンプル
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 9ec462f88c0e3a039b7f288554be3e28f13ece08
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 00cb9a13a01687fb41f1d5c09f277d582f706e3b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79144670"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594687"
 ---
 # <a name="federation-sample"></a>フェデレーション サンプル
 このサンプルではフェデレーション セキュリティを示します。  
   
 ## <a name="sample-details"></a>サンプルの詳細  
- Windows 通信基盤 (WCF) を使用してフェデレーション セキュリティ アーキテクチャを`wsFederationHttpBinding`展開するためのサポートを提供します。 `wsFederationHttpBinding` は、セキュリティで保護された、信頼できる、相互運用が可能なバインディングを提供します。このバインディングでは、要求/応答の通信のための基になるトランスポート機構として HTTP を使用でき、エンコーディングのためのワイヤ形式として Text/XML を使用できます。 WCF のフェデレーションの詳細については、「[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)」を参照してください。  
+ Windows Communication Foundation (WCF) では、を介したフェデレーションセキュリティアーキテクチャの展開がサポートされて `wsFederationHttpBinding` います。 `wsFederationHttpBinding` は、セキュリティで保護された、信頼できる、相互運用が可能なバインディングを提供します。このバインディングでは、要求/応答の通信のための基になるトランスポート機構として HTTP を使用でき、エンコーディングのためのワイヤ形式として Text/XML を使用できます。 WCF でのフェデレーションの詳細については、「[フェデレーション](../feature-details/federation.md)」を参照してください。  
   
  シナリオは、次の 4 つの部分から構成されます。  
   
@@ -82,22 +82,22 @@ ms.locfileid: "79144670"
  このサンプルの設定および実行方法については、次の手順を参照してください。  
   
 > [!NOTE]
-> このサンプルを実行するには **、wwwroot**ディレクトリへの書き込みアクセス許可が必要です。  
+> このサンプルを実行するには、 **wwwroot**ディレクトリに対する書き込みアクセス許可が必要です。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
 1. SDK コマンド ウィンドウを開きます。 Setup.bat をサンプルのパスで実行します。 これにより、サンプルに必要な仮想ディレクトリが作成され、必要な証明書が適切な権限を付与されてインストールされます。  
   
     > [!NOTE]
-    > Setup.bat バッチ ファイルは、Windows SDK コマンド プロンプトから実行します。 MSSDK 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Windows SDK コマンド プロンプトで自動設定されます。 Windows Vista では、セットアップで IIS 管理者スクリプトが使用されるため、IIS 6.0 管理互換がインストールされていることを確認する必要があります。 Windows Vista でセットアップ スクリプトを実行するには、管理者権限が必要です。  
+    > Setup.bat バッチ ファイルは、Windows SDK コマンド プロンプトから実行します。 MSSDK 環境変数が SDK のインストール ディレクトリを指している必要があります。 この環境変数は、Windows SDK コマンド プロンプトで自動設定されます。 Windows Vista では、セットアップで IIS 管理者スクリプトが使用されるため、IIS 6.0 管理互換がインストールされていることを確認する必要があります。 Windows Vista でセットアップスクリプトを実行するには、管理者特権が必要です。  
   
-2. Visual Studio でフェデレーションサンプル.sln を開き、[**ビルド**] メニューから **[ソリューションのビルド**] を選択します。 これによって共通のプロジェクト ファイル、Bookstore サービス、Bookstore STS、および HomeRealm STS が作成され、IIS に展開されます。 さらに Bookstore クライアント アプリケーションがビルドされ、FederationSample\BookStoreClient\bin\Debug フォルダーに実行可能ファイル BookStoreClient.exe が配置されます。  
+2. Visual Studio で FederationSample を開き、[**ビルド**] メニューの [**ソリューションのビルド**] をクリックします。 これによって共通のプロジェクト ファイル、Bookstore サービス、Bookstore STS、および HomeRealm STS が作成され、IIS に展開されます。 さらに Bookstore クライアント アプリケーションがビルドされ、FederationSample\BookStoreClient\bin\Debug フォルダーに実行可能ファイル BookStoreClient.exe が配置されます。  
   
 3. BookStoreClient.exe をダブルクリックします。 BookStoreClient ウィンドウが表示されます。  
   
-4. [ブックの参照] をクリックすると、本屋で利用可能な**書籍を参照**できます。  
+4. 書店で利用可能な書籍を参照するには、[**参照**] をクリックします。  
   
-5. 特定のブックを購入するには、リストからブックを選択し、[**ブックを購入**] をクリックします。 アプリケーションが起動し、HomeRealm セキュリティ トークン サービスを使用した Windows 認証によって認証を行います。  
+5. 特定の本を購入するには、一覧で本を選択し、[ **Book book**] をクリックします。 アプリケーションが起動し、HomeRealm セキュリティ トークン サービスを使用した Windows 認証によって認証を行います。  
   
      サンプルは、ユーザーが 15 ドル以下の本を購入できるように構成されています。 15 ドルを超える本を購入しようとすると、クライアントは、BookStore サービスからアクセス拒否のメッセージを受け取ります。  
   
@@ -113,6 +113,6 @@ ms.locfileid: "79144670"
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Federation`  

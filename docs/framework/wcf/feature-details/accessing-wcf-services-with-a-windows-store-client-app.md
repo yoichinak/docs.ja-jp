@@ -2,12 +2,12 @@
 title: Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: b4b91c103aa91e3b2c9e811c642a8347c7db1a88
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ff6638936f476bd8fe75a065d3e61e96790cb7f4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185484"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597697"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>Windows ストア クライアント アプリを使用した WCF サービスへのアクセス
 Windows 8 では、Windows ストア アプリケーションと呼ばれる新しい種類のアプリケーションが導入されています。 これらのアプリケーションはタッチ スクリーンのインターフェイスを念頭にデザインされています。 .NET Framework 4.5 により、Windows ストア アプリケーションから WCF サービスを呼び出すことができます。  
@@ -52,10 +52,10 @@ Windows 8 では、Windows ストア アプリケーションと呼ばれる新�
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
- テキスト エンコードとバイナリ エンコードの両方がサポートされています。 すべての WCF 転送モードがサポートされています。 詳細については、「 [Streaming Message Transfer](../../../../docs/framework/wcf/feature-details/streaming-message-transfer.md)」を参照してください。  
+ テキスト エンコードとバイナリ エンコードの両方がサポートされています。 すべての WCF 転送モードがサポートされています。 詳細については、「 [Streaming Message Transfer](streaming-message-transfer.md)」を参照してください。  
   
 ### <a name="add-service-reference"></a>サービス参照の追加  
- WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。 Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。 まず、構成ファイルが生成されません。 Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。 この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。 このファイルを表示するには、ソリューション エクスプローラーで [すべてのファイルを表示] を選択してください。 このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。 Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。 詳細については、「[非同期タスク - タスクを使用した非同期プログラミングの簡略化](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)」を参照してください。  
+ WCF サービスを Windows ストア アプリケーションから呼び出すには、Visual Studio 2012 の "サービス参照の追加" 機能を使用します。 Windows ストア アプリケーションでは、"サービス参照の追加" 機能にいくつかの変更が行われていることがわかります。 まず、構成ファイルが生成されません。 Windows ストア アプリケーションでは構成ファイルが使用されないため、コードで構成する必要があります。 この構成コードは、"サービス参照の追加" によって生成される References.cs ファイルにあります。 このファイルを表示するには、ソリューションエクスプローラーで [すべてのファイルを表示] を選択してください。 このファイルは、[サービス参照] の下のプロジェクト内の Reference.svcmap ノードにあります。 Windows ストア アプリケーション内で WCF サービスに対して生成されるすべての操作は非同期で、タスク ベースの非同期パターンが使用されます。 詳細については、「[非同期タスク-タスクを使用した非同期プログラミングの簡素化](https://docs.microsoft.com/archive/msdn-magazine/2010/september/async-tasks-simplify-asynchronous-programming-with-tasks)」を参照してください。  
   
  構成がコードで生成されるようになったため、サービス参照を更新するたびに、Reference.cs ファイルで行ったすべての変更が上書きされます。 この状況に対処するために、構成コードは部分メソッド内に生成され、これをクライアント プロキシ クラスで実装できます。 部分メソッドは次のように宣言されています。  
   
@@ -108,7 +108,7 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 ### <a name="security"></a>Security  
 
-Windows ストア アプリケーションでは、次のセキュリティ モードがサポートされています。
+Windows ストアアプリケーションでは、次のセキュリティモードがサポートされています。
   
 1. <xref:System.ServiceModel.SecurityMode.None>  
   
@@ -118,11 +118,11 @@ Windows ストア アプリケーションでは、次のセキュリティ モ�
   
 4. <xref:System.ServiceModel.SecurityMode.Message>
   
-Windows ストア アプリケーションでは、次のクライアント資格情報の種類がサポートされています。
+Windows ストアアプリケーションでは、次のクライアント資格情報の種類がサポートされています。
   
 1. なし  
   
-2. Basic  
+2. 基本  
   
 3. ダイジェスト  
   
@@ -139,7 +139,7 @@ Windows ストア アプリケーションでは、次のクライアント資�
  Windows ストア アプリケーションから既定の Windows 資格情報にアクセスして送信するためには、Package.appmanifest ファイル内でこの機能を有効にする必要があります。 このファイルを開き、[機能] タブを選択し、[既定の Windows 資格情報] を選択します。 これにより、ドメイン資格情報を必要とするイントラネット リソースにアプリケーションが接続できるようになります。  
   
 > [!IMPORTANT]
-> Windows ストア アプリケーションがマシン間の呼び出しを行うには、"ホーム/ワーク ネットワーク" という別の機能を有効にする必要があります。 この設定は、機能タブの下の Package.appmanifest ファイルにも含まれています。 これで、アプリケーションは、自宅や職場など、ユーザーが信頼できる場所のネットワークに着信および発信アクセスできるようになります。 着信方向の重要なポートは常にブロックされます。 また、インターネット上のサービスにアクセスするには、インターネット (クライアント) の機能も有効にする必要があります。  
+> Windows ストアアプリケーションでコンピューター間の呼び出しを行うには、"ホーム/社内ネットワーク" と呼ばれる別の機能を有効にする必要があります。 この設定は、appmanifest.xaml ファイルの [機能] タブにもあります。 [ホーム/社内ネットワーク] チェックボックスをオンにします。 これで、アプリケーションは、自宅や職場など、ユーザーが信頼できる場所のネットワークに着信および発信アクセスできるようになります。 着信方向の重要なポートは常にブロックされます。 また、インターネット上のサービスにアクセスするには、インターネット (クライアント) の機能も有効にする必要があります。  
   
 ### <a name="misc"></a>その他  
  Windows ストア アプリケーションでは、次のクラスの使用がサポートされています。  
@@ -180,5 +180,5 @@ void async SomeMethod()
 - [WCF Windows ストア クライアントおよびセキュリティ](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-adding-security)
 - [Windows ストア アプリとコンピューター間の呼び出し](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
 - [Azure にデプロイされた WCF サービスの Windows ストア アプリからの呼び出し](https://docs.microsoft.com/archive/blogs/piyushjo/calling-a-wcf-service-from-a-metro-application-cross-machine-scenario)
-- [WCF セキュリティのプログラミング](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
-- [バインド](../../../../docs/framework/wcf/bindings.md)
+- [WCF セキュリティのプログラミング](programming-wcf-security.md)
+- [バインド](../bindings.md)

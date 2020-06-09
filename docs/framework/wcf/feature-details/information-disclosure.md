@@ -1,15 +1,15 @@
 ---
-title: 情報の漏えい
+title: 情報漏えい
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 0bcf1aa04d7ba7477a6c3f1559a77bbda1f974af
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: a58ac4dd3715052031c7fb5c1da480c0d01396ea
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76211951"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596865"
 ---
-# <a name="information-disclosure"></a>情報の漏えい
+# <a name="information-disclosure"></a>情報漏えい
 
 情報が漏えいすると、攻撃者はシステムに関する重要情報を入手できます。 そのため、どのような情報を公開しているか、また、その情報が悪意のあるユーザーによって使用される可能性があるかどうかに常に気を配る必要があります。 考えられる情報漏えい攻撃とその軽減策を以下に示します。
 
@@ -19,7 +19,7 @@ HTTP トランスポート層でメッセージ レベルのセキュリティ�
 
 ## <a name="policy-information"></a>ポリシー情報
 
-ポリシーをセキュリティで保護することが重要です。特に、機密事項が含まれる発行済みトークンの要件や、トークン発行者の情報がポリシーで公開されるフェデレーション シナリオでは重要です。 このような場合は、フェデレーション サービスのポリシー エンドポイントをセキュリティで保護し、発行済みトークンに含まれるクレームの種類などサービスに関する情報が攻撃者の手に渡らないようにしたり、クライアントが悪意のあるトークン発行者にリダイレクトされたりしないようにすることをお勧めします。 たとえば、攻撃者は、フェデレーション信頼チェーンが man-in-the-middle 攻撃を実行する発行者で終了するように再構成することで、ユーザー名/パスワードのペアを発見することがあります。 また、ポリシーの取得によってバインディングを取得するフェデレーション クライアントの場合は、取得したフェデレーション信頼チェーンに含まれる発行者の信頼性を検証することもお勧めします。 フェデレーションシナリオの詳細については、「[フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)」を参照してください。
+ポリシーをセキュリティで保護することが重要です。特に、機密事項が含まれる発行済みトークンの要件や、トークン発行者の情報がポリシーで公開されるフェデレーション シナリオでは重要です。 このような場合は、フェデレーション サービスのポリシー エンドポイントをセキュリティで保護し、発行済みトークンに含まれるクレームの種類などサービスに関する情報が攻撃者の手に渡らないようにしたり、クライアントが悪意のあるトークン発行者にリダイレクトされたりしないようにすることをお勧めします。 たとえば、攻撃者は、フェデレーション信頼チェーンが man-in-the-middle 攻撃を実行する発行者で終了するように再構成することで、ユーザー名/パスワードのペアを発見することがあります。 また、ポリシーの取得によってバインディングを取得するフェデレーション クライアントの場合は、取得したフェデレーション信頼チェーンに含まれる発行者の信頼性を検証することもお勧めします。 フェデレーションシナリオの詳細については、「[フェデレーション](federation.md)」を参照してください。
 
 ## <a name="memory-dumps-can-reveal-claim-information"></a>メモリ ダンプによるクレーム情報の漏えい
 
@@ -55,7 +55,7 @@ Windows ドメイン環境の既定では、Windows 認証は Kerberos プロト
 
 クライアントの作成時に、ドメイン名なしでクライアント資格情報を指定するか、無効なサーバー ID を指定すると、Kerberos プロトコルではなく NTLM が使用されます (`AllowNtlm` プロパティが `true` に設定されている場合)。 NTLM ではサーバー認証を行わないため、情報が漏えいするおそれがあります。
 
-たとえば、次のビジュアルC#コードに示すように、ドメイン名を使用せずに Windows クライアント資格情報を指定することができます。
+たとえば、次の Visual C# コードに示すように、ドメイン名を使用せずに Windows クライアント資格情報を指定することができます。
 
 ```csharp
 MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCredential("username", "password");
@@ -63,13 +63,13 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
 
 このコードではドメイン名が指定されておらず、そのため NTLM が使用されます。
 
-ドメインを指定していても、エンドポイント ID 機能を使用して無効なサービス プリンシパル名を指定した場合は、NTLM が使用されます。 エンドポイント id を指定する方法の詳細については、「[サービス id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)」を参照してください。
+ドメインを指定していても、エンドポイント ID 機能を使用して無効なサービス プリンシパル名を指定した場合は、NTLM が使用されます。 エンドポイント id を指定する方法の詳細については、「[サービス id と認証](service-identity-and-authentication.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-- [セキュリティの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [権限の昇格](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [サービス拒否](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
-- [改変](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [サポートされていないシナリオ:](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
-- [リプレイ攻撃](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
+- [セキュリティの考慮事項](security-considerations-in-wcf.md)
+- [特権の昇格](elevation-of-privilege.md)
+- [サービス拒否](denial-of-service.md)
+- [改ざん](tampering.md)
+- [サポートされていないシナリオ](unsupported-scenarios.md)
+- [リプレイ攻撃](replay-attacks.md)

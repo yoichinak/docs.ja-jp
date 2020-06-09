@@ -2,12 +2,12 @@
 title: WCF で使用されるセキュリティの概要
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: faf7b44c0ff1b207a7b017163ad2b032f26199b8
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: f852ba4e1100103289bc5fd879b19ebd40443b8d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743882"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595181"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF で使用されるセキュリティの概要
 Windows Communication Foundation (WCF) セキュリティは、さまざまなセキュリティインフラストラクチャで既に使用および展開されている概念に基づいて構築されています。  
@@ -31,7 +31,7 @@ Microsoft のパターンとプラクティスグループでは、 [WCF セキ�
  X.509 証明書は、セキュリティ アプリケーションで使用される主要な資格情報の形式です。 X.509 証明書の詳細については、「 [X.509 公開キー証明書](/windows/win32/seccertenroll/about-x-509-public-key-certificates)」を参照してください。 X.509 証明書は証明書ストア内に格納されます。 Windows を実行しているコンピューターには、それぞれ目的が異なる数種類の証明書ストアがあります。 さまざまなストアの詳細については、「[証明書ストア](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2003/cc757138(v=ws.10))」を参照してください。  
   
 ## <a name="web-services-security-specifications"></a>Web サービスのセキュリティ仕様  
- システム定義のバインディングでは、一般に使用されるさまざまな Web サービスのセキュリティ仕様をサポートしています。 システム指定のバインディングとそれらがサポートする web サービスの仕様の完全な一覧については、「[システム提供の相互運用性バインディングでサポートされる Web サービスプロトコル](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)」を参照してください。  
+ システム定義のバインディングでは、一般に使用されるさまざまな Web サービスのセキュリティ仕様をサポートしています。 システム指定のバインディングとそれらがサポートする web サービスの仕様の完全な一覧については、「[システム提供の相互運用性バインディングでサポートされる Web サービスプロトコル](web-services-protocols-supported-by-system-provided-interoperability-bindings.md)」を参照してください。  
   
 ## <a name="access-control-mechanisms"></a>アクセス制御機構  
  WCF には、サービスや操作へのアクセスを制御するさまざまな方法が用意されています。 次に例を示します。  
@@ -46,9 +46,9 @@ Microsoft のパターンとプラクティスグループでは、 [WCF セキ�
   
 5. ID モデル  
   
- これらのトピックの詳細については、「」、「 [Access Control メカニズム](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)」を参照してください。  
+ これらのトピックの詳細については、「」、「 [Access Control メカニズム](access-control-mechanisms.md)」を参照してください。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric のセキュリティモデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
+- [セキュリティの概要](security-overview.md)
+- [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))
