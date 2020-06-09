@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: 2746c608fb47b94446c5d7e10748ba185d555e7f
-ms.sourcegitcommit: 71b8f5a2108a0f1a4ef1d8d75c5b3e129ec5ca1e
+ms.openlocfilehash: c5efd921d3826ef814bf45d6895255981101d992
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84202328"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592958"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>方法: セキュリティで保護されたメタデータ エンドポイント
 
@@ -22,7 +22,7 @@ ms.locfileid: "84202328"
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-code"></a>セキュリティで保護された HTTPS GET メタデータ エンドポイントをコードで作成するには
 
-1. 適切な X.509 証明書を使用してポートを構成します。 この証明書は信頼された証明機関から発行され、かつ "サービス承認" の用途に使用される必要があります。 証明書をポートに関連付けるには、HttpCfg.exe ツールを使用する必要があります。 「[方法: SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。
+1. 適切な X.509 証明書を使用してポートを構成します。 この証明書は信頼された証明機関から発行され、かつ "サービス承認" の用途に使用される必要があります。 証明書をポートに関連付けるには、HttpCfg.exe ツールを使用する必要があります。 「[方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)」を参照してください。
 
     > [!IMPORTANT]
     > 証明書またはそのドメイン ネーム システム (DNS: Domain Name System) のサブジェクトが、コンピューターの名前と一致している必要があります。 これは、HTTPS 機構が最初に実行する手順に、呼び出されたアドレスと同じ URI (Uniform Resource Identifier) に対して証明書が発行されているかどうかのチェックが含まれるために必要です。
@@ -40,21 +40,21 @@ ms.locfileid: "84202328"
 
 ### <a name="to-create-a-secure-https-get-metadata-endpoint-in-configuration"></a>セキュリティで保護された HTTPS GET メタデータ エンドポイントを構成で作成するには
 
-1. [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) [\<system.serviceModel>](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md) サービスの構成ファイルの要素に要素を追加します。
+1. [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) サービスの構成ファイルの要素に要素を追加します。
 
-2. 要素 [\<serviceBehaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md) に要素を追加 [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md) します。
+2. 要素 [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md) に要素を追加 [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) します。
 
-3. 要素 [\<behavior>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) に要素を追加 `<serviceBehaviors>` します。
+3. 要素 [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md) に要素を追加 `<serviceBehaviors>` します。
 
 4. `name` 要素の `<behavior>` 属性を適切な値に設定します。 `name` 属性は必須です。 下の例では、`mySvcBehavior` を値として使用しています。
 
-5. を [\<serviceMetadata>](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md) 要素に追加し `<behavior>` ます。
+5. を [\<serviceMetadata>](../../configure-apps/file-schema/wcf/servicemetadata.md) 要素に追加し `<behavior>` ます。
 
 6. `httpsGetEnabled` 要素の `<serviceMetadata>` 属性を `true` に設定します。
 
 7. `httpsGetUrl` 要素の `<serviceMetadata>` 属性を適切な値に設定します。 絶対アドレスを指定する場合、URL はスキームで始まる必要があることに注意してください `https://` 。 相対アドレスを指定する場合は、サービス ホストに HTTPS ベースのアドレスを指定する必要があります。 このプロパティが設定されていない場合、既定のアドレスは ""、またはサービスに HTTPS ベースのアドレスを直接指定したものになります。
 
-8. サービスで動作を使用するには、 `behaviorConfiguration` 要素の属性を [\<service>](../../../../docs/framework/configure-apps/file-schema/wcf/service.md) behavior 要素の name 属性の値に設定します。 完全な構成コードを次の例に示します。
+8. サービスで動作を使用するには、 `behaviorConfiguration` 要素の属性を [\<service>](../../configure-apps/file-schema/wcf/service.md) behavior 要素の name 属性の値に設定します。 完全な構成コードを次の例に示します。
 
     ```xml
     <?xml version="1.0" encoding="utf-8" ?>
@@ -100,7 +100,7 @@ ms.locfileid: "84202328"
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [方法: SSL 証明書を使用してポートを構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [証明書の使用](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [証明書の使用](working-with-certificates.md)
+- [メタデータを使用する場合のセキュリティ上の考慮事項](security-considerations-with-metadata.md)
+- [サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)

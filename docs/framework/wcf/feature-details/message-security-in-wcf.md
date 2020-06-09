@@ -2,16 +2,16 @@
 title: WCF のメッセージのセキュリティ
 ms.date: 03/30/2017
 ms.assetid: a80efb59-591a-4a37-bb3c-8fffa6ca0b7d
-ms.openlocfilehash: 32f6659f6ac744ab7af07c23e7e26ea1124d020c
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 6875339df327371a79bc9b9072aca2df0bc7d3f6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212069"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602662"
 ---
 # <a name="message-security-in-wcf"></a>WCF のメッセージのセキュリティ
 
-Windows Communication Foundation (WCF) には、セキュリティを提供するための2つの主要モード (`Transport` と `Message`) と、2つのモードを組み合わせた3つのモード (`TransportWithMessageCredential`) があります。 ここでは、メッセージ セキュリティとその必要性について説明します。
+Windows Communication Foundation (WCF) には、セキュリティを提供するための2つの主要モード ( `Transport` と `Message` ) と、2つのモード () を組み合わせた3つのモードがあり `TransportWithMessageCredential` ます。 ここでは、メッセージ セキュリティとその必要性について説明します。
 
 ## <a name="what-is-message-security"></a>メッセージ セキュリティとは
 
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) には、セキュリティを提供す�
 
 - 複数のトランスポートに対するサポート。 複数のトランスポートに対するサポート : セキュリティ用のプロトコルに依存することなく、名前付きパイプ、TCP などの複数の異なるトランスポートを経由して、セキュリティで保護されたメッセージを送信できます。 トランスポート レベルのセキュリティでは、すべてのセキュリティ情報の有効範囲が 1 つの特定のトランスポート接続に限定されるので、メッセージの内容からその情報を使用することはできません。 メッセージ セキュリティでは、メッセージの送信に使用するトランスポートの種類に関係なく、メッセージがセキュリティで保護されます。セキュリティ コンテキストはメッセージの内部に直接埋め込まれます。
 
-- 資格情報とクレームのセットを広範囲にサポート。 メッセージ セキュリティは、SOAP メッセージの内部で任意の種類のクレームを送信できる拡張可能なフレームワークを提供する WS-Security 仕様に基づいています。 トランスポート セキュリティとは異なり、使用できる認証機構またはクレームはトランスポートの機能によって制限されません。 WCF メッセージセキュリティには、複数の種類の認証とクレーム転送が含まれており、必要に応じて追加の型をサポートするように拡張できます。 このため、たとえば、フェデレーション資格情報シナリオは、メッセージ セキュリティなしでは実現できません。 WCF がサポートするフェデレーションシナリオの詳細については、「[フェデレーションと発行済みトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)」を参照してください。
+- 資格情報とクレームのセットを広範囲にサポート。 メッセージ セキュリティは、SOAP メッセージの内部で任意の種類のクレームを送信できる拡張可能なフレームワークを提供する WS-Security 仕様に基づいています。 トランスポート セキュリティとは異なり、使用できる認証機構またはクレームはトランスポートの機能によって制限されません。 WCF メッセージセキュリティには、複数の種類の認証とクレーム転送が含まれており、必要に応じて追加の型をサポートするように拡張できます。 このため、たとえば、フェデレーション資格情報シナリオは、メッセージ セキュリティなしでは実現できません。 WCF がサポートするフェデレーションシナリオの詳細については、「[フェデレーションと発行済みトークン](federation-and-issued-tokens.md)」を参照してください。
 
 ## <a name="how-message-and-transport-security-compare"></a>メッセージ セキュリティとトランスポート セキュリティの比較
 
@@ -65,7 +65,7 @@ Windows Communication Foundation (WCF) には、セキュリティを提供す�
 
 ## <a name="see-also"></a>関連項目
 
-- [Securing Services and Clients](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [方法 : トランスポート セキュリティとメッセージ資格情報を使用する](../../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
-- [Microsoft のパターンとプラクティス、第3章: トランスポートとメッセージ層のセキュリティの実装](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))
+- [サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)
+- [トランスポートセキュリティ](transport-security.md)
+- [方法: トランスポート セキュリティとメッセージ資格情報を使用する](how-to-use-transport-security-and-message-credentials.md)
+- [Microsoft Patterns and Practices, Chapter 3: Implementing Transport and Message Layer Security](https://docs.microsoft.com/previous-versions/msp-n-p/ff647370(v=pandp.10))

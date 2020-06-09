@@ -2,12 +2,12 @@
 title: HTTP トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 4bd3fbfd39538eee4344ef0a8ca4fe61b372ab70
-ms.sourcegitcommit: 09b4090b78f52fd09b0e430cd4b26576f1fdf96e
+ms.openlocfilehash: 28d0ac164022f585f25b44b16c68994b592ef041
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2020
-ms.locfileid: "76212131"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84592724"
 ---
 # <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 トランスポートとして HTTP を使用すると、SSL (Secure Sockets Layer) によりセキュリティが提供されます。 SSL はクライアントに対してサービスの認証を行い、機密性 (暗号化) をチャネルに提供する技術としてインターネットで広く使用されています。 このトピックでは、SSL のしくみと Windows Communication Foundation (WCF) での実装方法について説明します。  
@@ -51,9 +51,9 @@ IIS 7.0 で使用する証明書を構成する方法については、「 [iis 
 
  自己ホスト型 WCF アプリケーションを作成する場合は、 [httpcfg.exe](/windows/win32/http/httpcfg-exe)ツールを使用します。
   
- Httpcfg.exe ツールを使用して x.509 証明書でポートを設定する方法の詳細については、「[方法: SSL 証明書を使用](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)してポートを構成する」を参照してください。  
+ Httpcfg.exe ツールを使用して x.509 証明書でポートを設定する方法の詳細については、「[方法: SSL 証明書を使用](how-to-configure-a-port-with-an-ssl-certificate.md)してポートを構成する」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [メッセージのセキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
+- [トランスポートセキュリティ](transport-security.md)
+- [メッセージのセキュリティ](message-security-in-wcf.md)

@@ -2,15 +2,15 @@
 title: 'トランスポート : UDP 経由のカスタム トランザクションのサンプル'
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ba9fb91623606d3aaba5ba56784b20bb92d343a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ce1e6f0aedff46aaf58e22d8c23c37b03f8789dd
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143799"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596540"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>トランスポート : UDP 経由のカスタム トランザクションのサンプル
-このサンプルは、Windows 通信基盤 (WCF)[トランスポートの拡張性](../../../../docs/framework/wcf/samples/transport-extensibility.md)の[トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルに基づいています。 ここでは、カスタム トランザクション フローをサポートするように UDP トランスポートのサンプルを拡張し、<xref:System.ServiceModel.Channels.TransactionMessageProperty> プロパティの使用方法について説明します。  
+このサンプルは、Windows Communication Foundation (WCF)[トランスポート拡張](transport-extensibility.md)における[transport: UDP](transport-udp.md)サンプルを基にしています。 ここでは、カスタム トランザクション フローをサポートするように UDP トランスポートのサンプルを拡張し、<xref:System.ServiceModel.Channels.TransactionMessageProperty> プロパティの使用方法について説明します。  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>UDP トランスポート サンプルのコードの変更  
  トランザクション フローを示すため、サンプルでは、`ICalculatorContract` のサービス コントラクトが `CalculatorService.Add()` のトランザクション スコープを要求するように変更されています。 また、サンプルでは、別の `System.Guid` パラメータを `Add` 操作のコントラクトに追加します。 このパラメータは、クライアント トランザクションの識別子をサービスに渡すために使用されます。  
@@ -38,7 +38,7 @@ class CalculatorService : IDatagramContract, ICalculatorContract
 }  
 ```  
   
- [トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルでは、UDP パケットを使用して、クライアントとサービス間でメッセージを受け渡します。 [トランスポート: カスタム 転送サンプル](../../../../docs/framework/wcf/samples/transport-custom-transactions-over-udp-sample.md)は、同じメカニズムを使用してメッセージを転送しますが、トランザクションがフローされると、エンコードされたメッセージと共に UDP パケットに挿入されます。  
+ [Transport: udp](transport-udp.md)サンプルでは、udp パケットを使用して、クライアントとサービスの間でメッセージを受け渡します。 [トランスポート: カスタムトランスポートのサンプル](transport-custom-transactions-over-udp-sample.md)では、同じメカニズムを使用してメッセージを転送しますが、トランザクションがフローされるときには、エンコードされたメッセージと共に UDP パケットに挿入されます。  
   
 ```csharp  
 byte[] txmsgBuffer = TransactionMessageBuffer.WriteTransactionMessageBuffer(txPropToken, messageBuffer);  
@@ -48,7 +48,7 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  `TransactionMessageBuffer.WriteTransactionMessageBuffer` は、メッセージ エンティティを使用して現在のトランザクションの反映トークンをマージし、それをバッファに配置する新しい機能を持つヘルパー メソッドです。  
   
- カスタム トランザクション フロー トランスポートの場合、クライアント実装は、トランザクション フローを必要とするサービス操作を認識し、この情報を WCF に渡す必要があります。 また、ユーザー トランザクションをトランスポート層に転送するための機構もあります。 このサンプルでは、"WCF メッセージ インスペクタ" を使用してこの情報を取得します。 ここで実装されるクライアント メッセージ インスペクタは `TransactionFlowInspector` と呼ばれ、次のタスクを実行します。  
+ カスタムトランザクションフロートランスポートの場合、クライアントの実装では、トランザクションフローが必要なサービス操作を認識し、この情報を WCF に渡す必要があります。 また、ユーザー トランザクションをトランスポート層に転送するための機構もあります。 このサンプルでは、"WCF メッセージインスペクター" を使用してこの情報を取得します。 ここで実装されるクライアント メッセージ インスペクタは `TransactionFlowInspector` と呼ばれ、次のタスクを実行します。  
   
 - 指定されたメッセージ アクションに対してトランザクションをフローする必要があるかどうかを判断します (これは `IsTxFlowRequiredForThisOperation()` で行われます)。  
   
@@ -176,9 +176,9 @@ if (transaction != null)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. ソリューションをビルドするには、「 [Windows コミュニケーション ファウンデーション のサンプルの構築](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+1. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。  
   
-2. 現在のサンプルは[、トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプルと同様に実行する必要があります。 実行するには、UdpTestService.exe を使用してサービスを開始します。 Windows Vista を実行している場合は、昇格された特権でサービスを開始する必要があります。 これを行うには、ファイル エクスプローラーで UdpTestService.exe を右クリックし、[**管理者として実行**] をクリックします。  
+2. 現在のサンプルは、 [Transport: UDP](transport-udp.md)サンプルと同様に実行する必要があります。 実行するには、UdpTestService.exe を使用してサービスを開始します。 Windows Vista を実行している場合は、昇格された特権でサービスを開始する必要があります。 これを行うには、エクスプローラーで Udptestservice.exe を右クリックし、[**管理者として実行**] をクリックします。  
   
 3. これによって次の文字列が出力されます。  
   
@@ -258,10 +258,10 @@ if (transaction != null)
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>関連項目
 
-- [トランスポート: UDP](../../../../docs/framework/wcf/samples/transport-udp.md)
+- [トランスポート:UDP](transport-udp.md)
