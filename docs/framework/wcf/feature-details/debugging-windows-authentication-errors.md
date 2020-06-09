@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 4a5e56f6b7f33a4c6f29aa384635737eeee37ddd
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: eb3274b98234324bd47aa456feb4845da5a7f3a9
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77095035"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599283"
 ---
 # <a name="debug-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
 
@@ -37,11 +37,11 @@ ms.locfileid: "77095035"
   
  この表の列見出しは、サーバーが使用すると考えられるアカウントの種類を示します。 左の列は、クライアントが使用すると考えられるアカウントの種類を示します。  
   
-||ローカル ユーザー|[ローカル システム]|ドメイン ユーザー|Domain Machine|  
+||Local User|[ローカル システム]|Domain User|Domain Machine|  
 |-|----------------|------------------|-----------------|--------------------|  
-|ローカル ユーザー|NTLM|NTLM|NTLM|NTLM|  
+|Local User|NTLM|NTLM|NTLM|NTLM|  
 |[ローカル システム]|匿名 NTLM|匿名 NTLM|匿名 NTLM|匿名 NTLM|  
-|ドメイン ユーザー|NTLM|NTLM|Kerberos|Kerberos|  
+|Domain User|NTLM|NTLM|Kerberos|Kerberos|  
 |Domain Machine|NTLM|NTLM|Kerberos|Kerberos|  
   
  具体的には、次の 4 種類のアカウントがあります。  
@@ -50,9 +50,9 @@ ms.locfileid: "77095035"
   
 - Local System : ドメインに参加していないコンピューターの SYSTEM ビルトイン アカウント。  
   
-- Domain User : Windows ドメインのユーザー アカウント。 (例: `DomainName\ProfileName`)。  
+- Domain User : Windows ドメインのユーザー アカウント。 たとえば、 `DomainName\ProfileName`と指定します。  
   
-- Domain Machine : Windows ドメインに参加しているコンピューターで実行されている、コンピューター ID を使用するプロセス。 (例: `MachineName\Network Service`)。  
+- Domain Machine : Windows ドメインに参加しているコンピューターで実行されている、コンピューター ID を使用するプロセス。 たとえば、 `MachineName\Network Service`と指定します。  
   
 > [!NOTE]
 > サービス資格情報は、<xref:System.ServiceModel.ICommunicationObject.Open%2A> クラスの <xref:System.ServiceModel.ServiceHost> メソッドが呼び出されたときにキャプチャされます。 クライアント資格情報は、クライアントがメッセージを送信するたびに読み取られます。  
@@ -63,7 +63,7 @@ ms.locfileid: "77095035"
 ### <a name="kerberos-protocol"></a>Kerberos プロトコル  
   
 #### <a name="spnupn-problems-with-the-kerberos-protocol"></a>Kerberos プロトコルでの SPN と UPN の問題  
- Windows 認証を使用し、SSPI が Kerberos プロトコルを使用またはネゴシエートする場合、クライアント エンドポイントが使用する URL には、サービス URL 内のサービスのホストの完全修飾ドメイン名が含まれている必要があります。 これは、サービスを実行しているアカウントが、コンピューターを Active Directory ドメインに追加したときに作成されるコンピューター (既定) のサービスプリンシパル名 (SPN) キーにアクセスできることを前提としています。これは、通常、ネットワークサービスアカウント。 サービスがコンピューターの SPN キーにアクセスできない場合は、クライアントのエンドポイント ID でサービスを実行しているアカウントの正しい SPN またはユーザー プリンシパル名 (UPN: User Principal Name) を指定する必要があります。 WCF での SPN と UPN の使用方法の詳細については、「[サービス id と認証](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)」を参照してください。  
+ Windows 認証を使用し、SSPI が Kerberos プロトコルを使用またはネゴシエートする場合、クライアント エンドポイントが使用する URL には、サービス URL 内のサービスのホストの完全修飾ドメイン名が含まれている必要があります。 これは、サービスを実行しているアカウントがコンピューターの (既定の) サービス プリンシパル名 (SPN: Service Principal Name) キーにアクセスできることを前提としています。このキーは、コンピューターを Active Directory ドメインに追加したときに作成されます。コンピューターの SPN キーにアクセスできるようにするには、Network Service アカウントでサービスを実行するのが最も一般的な方法です。 サービスがコンピューターの SPN キーにアクセスできない場合は、クライアントのエンドポイント ID でサービスを実行しているアカウントの正しい SPN またはユーザー プリンシパル名 (UPN: User Principal Name) を指定する必要があります。 WCF での SPN と UPN の使用方法の詳細については、「[サービス id と認証](service-identity-and-authentication.md)」を参照してください。  
   
  Web ファームや Web ガーデンなどの負荷分散シナリオでは、各アプリケーションに一意のアカウントを定義し、そのアカウントに SPN を割り当て、アプリケーションのサービスすべてがそのアカウントで実行されるようにするのが一般的です。  
   
@@ -94,12 +94,12 @@ ms.locfileid: "77095035"
   
     1. NTLM を使用できないようにするには、コードで `ChannelFactory.Credentials.Windows.AllowNtlm = false` ステートメントを使用します。  
   
-    2. 構成ファイルで `allowNtlm` 属性を `false` に設定することもできます。 この属性は、 [windows >\<](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)に含まれています。  
+    2. 構成ファイルで `allowNtlm` 属性を `false` に設定することもできます。 この属性は、に含まれてい [\<windows>](../../configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md) ます。  
   
 ### <a name="ntlm-protocol"></a>NTLM プロトコル  
   
 #### <a name="negotiate-ssp-falls-back-to-ntlm-but-ntlm-is-disabled"></a>ネゴシエート SSP は NTLM にフォールバックするが、NTLM が無効になっている  
- <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A> プロパティは `false`に設定されます。これにより、Windows Communication Foundation (WCF) は、NTLM が使用されている場合に、ベストエフォートで例外をスローします。 このプロパティを `false` に設定すると、NTLM 資格情報がネットワーク経由で送信されるのを防ぐことができなくなる場合があります。  
+ <xref:System.ServiceModel.Security.WindowsClientCredential.AllowNtlm%2A>プロパティがに設定されている `false` 場合、NTLM が使用されている場合、WINDOWS COMMUNICATION FOUNDATION (WCF) がベストエフォートで例外をスローします。 このプロパティをに設定すると `false` 、NTLM 資格情報がネットワーク経由で送信されるのを防ぐことができません。  
   
  NTLM へのフォールバックを無効にする方法を次に示します。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "77095035"
  [!code-csharp[C_DebuggingWindowsAuth#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_debuggingwindowsauth/cs/source.cs#6)]
  [!code-vb[C_DebuggingWindowsAuth#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_debuggingwindowsauth/vb/source.vb#6)]  
   
- 権限借用の詳細については、「[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)」を参照してください。  
+ 権限借用の詳細については、「[委任と偽装](delegation-and-impersonation-with-wcf.md)」を参照してください。  
   
  もう 1 つの方法として、SYSTEM ビルトイン アカウントを使用する Windows サービスとしてクライアントを実行します。  
   
@@ -145,11 +145,11 @@ ms.locfileid: "77095035"
 #### <a name="developing-and-deploying-with-different-identities"></a>異なる ID を使用した開発と展開  
  アプリケーションを 1 台のコンピューターで開発し、別のコンピューターに展開し、異なるアカウントの種類を使用して各コンピューターで認証を行う場合、動作の違いが発生する場合があります。 たとえば、`SSPI Negotiated` 認証モードを使用して Windows XP Professional コンピューターでアプリケーションを開発するとします。 ローカル ユーザー アカウントを使用して認証する場合は、NTLM プロトコルが使用されます。 アプリケーションを開発した後は、ドメイン アカウントで実行されるサービスを Windows Server 2003 コンピューターに展開します。 この時点では、クライアントは Kerberos およびドメインコントローラーを使用するため、サービスを認証できません。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.ClientBase%601>
-- [委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [サポートされていないシナリオ](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [委任と偽装](delegation-and-impersonation-with-wcf.md)
+- [サポートされていないシナリオ](unsupported-scenarios.md)

@@ -2,24 +2,24 @@
 title: メッセージ セキュリティを使用したメッセージのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: a17ebe67-836b-4c52-9a81-2c3d58e225ee
-ms.openlocfilehash: a6b062d0d6a74ce2a2ff9afa7e8a0a18853dbd22
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 70c645101033c31da01d79f624ab03ce328dd3a6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76746445"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84589982"
 ---
 # <a name="securing-messages-using-message-security"></a>メッセージ セキュリティを使用したメッセージのセキュリティ保護
-このセクションでは、<xref:System.ServiceModel.NetMsmqBinding>を使用する場合の WCF メッセージセキュリティについて説明します。  
+このセクションでは、を使用する場合の WCF メッセージセキュリティについて説明 <xref:System.ServiceModel.NetMsmqBinding> します。  
   
 > [!NOTE]
-> このトピックを読む前に、「[セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)」を読むことをお勧めします。  
+> このトピックを読む前に、「[セキュリティの概念](security-concepts.md)」を読むことをお勧めします。  
   
  次の図は、WCF を使用したキュー通信の概念モデルを示しています。 この図および用語を使用して、トランスポート セキュリティの  
   
  概念について解説します。  
   
- ![キューに登録されたアプリケーションの図](../../../../docs/framework/wcf/feature-details/media/distributed-queue-figure.jpg "配信キュー図")  
+ ![キューに置かれたアプリケーションの図](media/distributed-queue-figure.jpg "配信キュー図")  
   
  WCF を使用してキューに置かれたメッセージを送信する場合、WCF メッセージはメッセージキュー (MSMQ) メッセージの本文として添付されます。 トランスポート セキュリティが MSMQ メッセージ全体を保護するのに対し、メッセージ (SOAP) セキュリティは MSMQ メッセージの本文だけを保護します。  
   
@@ -63,9 +63,9 @@ ms.locfileid: "76746445"
 ## <a name="using-transport-and-message-security"></a>トランスポート セキュリティとメッセージ セキュリティの使用  
  トランスポート セキュリティとメッセージ セキュリティの両方を使用する場合は、トランスポート レベルと SOAP メッセージ レベルの両方で同じ証明書を使用してメッセージを保護する必要があります。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-- [トランスポート セキュリティを使用したメッセージのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
-- [メッセージ キューを介したメッセージ セキュリティ](../../../../docs/framework/wcf/samples/message-security-over-message-queuing.md)
-- [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [サービスおよびクライアントのセキュリティ保護](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [トランスポート セキュリティを使用したメッセージのセキュリティ保護](securing-messages-using-transport-security.md)
+- [メッセージ キューを介したメッセージ セキュリティ](../samples/message-security-over-message-queuing.md)
+- [セキュリティの概念](security-concepts.md)
+- [サービスおよびクライアントのセキュリティ保護](securing-services-and-clients.md)

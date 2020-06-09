@@ -2,16 +2,16 @@
 title: 承認ポリシー
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 36ec1029c8fed57957eb463808de442e74abdf9c
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 5b93f7e05261d9770650335160ddb56404aed94d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463947"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84585507"
 ---
 # <a name="authorization-policy"></a>承認ポリシー
 
-このサンプルでは、カスタム クレーム承認ポリシーと、関連するカスタム サービス承認マネージャーを実装する方法を示します。 この方法は、サービスがクレームに基づくアクセス チェックをサービス操作に行う場合や、アクセス チェックを行う前に呼び出し元に特定の権限を与える場合に便利です。 このサンプルでは、クレームの追加プロセスと、完了したクレーム セットに対してアクセス チェックを行うプロセスの両方を示します。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 `wsHttpBinding` バインディングを使用する際の既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows NT アカウントへのログオンに使用されます。 このサンプルでは、カスタム <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> を使用してクライアントを認証する方法を示します。 さらにこのサンプルでは、クライアントが X.509 証明書を使用してサービスを認証する方法を示します。 また、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> と <xref:System.ServiceModel.ServiceAuthorizationManager> の実装も示します。これらの間では、特定のユーザーに対するサービスの特定のメソッドへのアクセスが許可されます。 このサンプルは[、メッセージ セキュリティ ユーザー名](../../../../docs/framework/wcf/samples/message-security-user-name.md)に基づいていますが、呼び出し前にクレーム<xref:System.ServiceModel.ServiceAuthorizationManager>変換を実行する方法を示します。
+このサンプルでは、カスタム クレーム承認ポリシーと、関連するカスタム サービス承認マネージャーを実装する方法を示します。 この方法は、サービスがクレームに基づくアクセス チェックをサービス操作に行う場合や、アクセス チェックを行う前に呼び出し元に特定の権限を与える場合に便利です。 このサンプルでは、クレームの追加プロセスと、完了したクレーム セットに対してアクセス チェックを行うプロセスの両方を示します。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 `wsHttpBinding` バインディングを使用する際の既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows NT アカウントへのログオンに使用されます。 このサンプルでは、カスタム <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> を使用してクライアントを認証する方法を示します。 さらにこのサンプルでは、クライアントが X.509 証明書を使用してサービスを認証する方法を示します。 また、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> と <xref:System.ServiceModel.ServiceAuthorizationManager> の実装も示します。これらの間では、特定のユーザーに対するサービスの特定のメソッドへのアクセスが許可されます。 このサンプルは、[メッセージセキュリティユーザー名](message-security-user-name.md)に基づいていますが、が呼び出される前に要求変換を実行する方法を示してい <xref:System.ServiceModel.ServiceAuthorizationManager> ます。
 
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。
@@ -30,7 +30,7 @@ ms.locfileid: "81463947"
 
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy> の実装方法。
 
-サービスは、構成ファイル App.config を使用して定義された、サービスとの通信用の 2 つのエンドポイントを公開します。各エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 1 つのバインディングの構成には、WS-Security とクライアントのユーザー名認証を使用する、標準の `wsHttpBinding` バインディングが使用されます。 もう 1 つのバインディングの構成には、WS-Security とクライアント証明書による認証を使用する、標準の `wsHttpBinding` バインディングが使用されます。 [ \<>動作](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)では、ユーザー資格情報をサービス認証に使用するように指定します。 サーバー証明書には、`SubjectName``findValue`[\<プロパティ](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)の属性と同じ値が>含まれている必要があります。
+サービスは、構成ファイル App.config を使用して定義された、サービスと通信するための2つのエンドポイントを公開します。各エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 1 つのバインディングの構成には、WS-Security とクライアントのユーザー名認証を使用する、標準の `wsHttpBinding` バインディングが使用されます。 もう 1 つのバインディングの構成には、WS-Security とクライアント証明書による認証を使用する、標準の `wsHttpBinding` バインディングが使用されます。 は、 [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ユーザーの資格情報をサービス認証に使用することを指定します。 サーバー証明書の `SubjectName` プロパティに `findValue` は、の属性と同じ値が含まれている必要があり [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。
 
 ```xml
 <system.serviceModel>
@@ -117,7 +117,7 @@ ms.locfileid: "81463947"
 </system.serviceModel>
 ```
 
-各クライアント エンドポイント構成は、構成名、サービス エンドポイントの絶対アドレス、バインディング、およびコントラクトで構成されます。 クライアント バインドは、この場合セキュリティ>で指定された適切な[\<セキュリティ](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)モードで構成`clientCredentialType`され、メッセージ[\<>](../../../../docs/framework/configure-apps/file-schema/wcf/message-of-wshttpbinding.md)で指定されたとおりです。
+各クライアント エンドポイント構成は、構成名、サービス エンドポイントの絶対アドレス、バインディング、およびコントラクトで構成されます。 クライアントバインディングは、「」および「」で指定されているように、適切なセキュリティモードで構成され [\<security>](../../configure-apps/file-schema/wcf/security-of-wshttpbinding.md) `clientCredentialType` [\<message>](../../configure-apps/file-schema/wcf/message-of-wshttpbinding.md) ます。
 
 ```xml
 <system.serviceModel>
@@ -261,14 +261,14 @@ public class MyCustomUserNamePasswordValidator : UserNamePasswordValidator
 }
 ```
 
-サービス コードに検証を実装した場合、使用する検証インスタンスをサービス ホストに通知する必要があります。 これは、次のコードを使用して行われます。
+サービス コードに検証を実装した場合、使用する検証インスタンスをサービス ホストに通知する必要があります。 これを行うには、次のコードを使用します。
 
 ```csharp
 Servicehost.Credentials.UserNameAuthentication.UserNamePasswordValidationMode = UserNamePasswordValidationMode.Custom;
 serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator = new MyCustomUserNamePasswordValidatorProvider();
 ```
 
-または、構成で同じことを行うことができます。
+または、次の構成でも同じことを行うことができます。
 
 ```xml
 <behavior>
@@ -282,9 +282,9 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>
 ```
 
-Windows 通信基盤 (WCF) は、アクセス チェックを実行するための豊富なクレーム ベース モデルを提供します。 <xref:System.ServiceModel.ServiceAuthorizationManager> オブジェクトを使用するとアクセス チェックが実行され、クライアントに関連付けられたクレームがサービス メソッドへのアクセスに必要な要件を満たすかどうかが判断されます。
+Windows Communication Foundation (WCF) は、アクセスチェックを実行するための豊富な要求ベースのモデルを提供します。 <xref:System.ServiceModel.ServiceAuthorizationManager> オブジェクトを使用するとアクセス チェックが実行され、クライアントに関連付けられたクレームがサービス メソッドへのアクセスに必要な要件を満たすかどうかが判断されます。
 
-デモンストレーションの目的で、このサンプルは、呼び出し<xref:System.ServiceModel.ServiceAuthorizationManager>が許可されている操作<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>の Action URI が値を持つ型`http://example.com/claims/allowedoperation`の要求に基づいて、メソッドへのユーザーのアクセスを許可するメソッドを実装する実装を示しています。
+このサンプルでは、このサンプルでは、メソッドを実装して、呼び出しが許可されて <xref:System.ServiceModel.ServiceAuthorizationManager> <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> `http://example.com/claims/allowedoperation` いる操作のアクション URI を値とする型の要求に基づいて、ユーザーがメソッドにアクセスできるようにするの実装を示します。
 
 ```csharp
 public class MyServiceAuthorizationManager : ServiceAuthorizationManager
@@ -442,7 +442,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 ### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには
 
-1. ソリューションをビルドするには、「 [Windows コミュニケーション ファウンデーション のサンプルの構築](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
+1. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。
 
 2. サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。
 
@@ -451,60 +451,60 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>サンプルを同じコンピューターで実行するには
 
-1. 管理者特権で Visual Studio の開発者コマンド プロンプトを開き、サンプル インストール フォルダーから*Setup.bat*を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
+1. 管理者特権で Visual Studio の開発者コマンドプロンプトを開き、サンプルのインストールフォルダーから*setup.exe*を実行します。 これにより、サンプルの実行に必要なすべての証明書がインストールされます。
 
     > [!NOTE]
-    > Setup.bat バッチ ファイルは、Visual Studio の開発者コマンド プロンプトから実行するように設計されています。 開発者用コマンド プロンプト内で設定された環境変数 PATH は *、Setup.bat*スクリプトで必要な実行可能ファイルを含むディレクトリを指します。
+    > セットアップの .bat バッチファイルは、Visual Studio の開発者コマンドプロンプトから実行するように設計されています。 Visual Studio の開発者コマンドプロンプト内で設定された PATH 環境変数は、*セットアップの .bat*スクリプトで必要な実行可能ファイルが格納されているディレクトリを指します。
 
-1. *サービス\ビンからサービス.exe*を起動します。
+1. *Service\bin*から Service .exe を起動します。
 
-1. *\クライアント\ビン*から Client.exe を起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
+1. - *Client\bin*から client.exe を起動します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
 
-クライアントとサービスが通信できない場合は、「 WCF[サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
+クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
 
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには
 
 1. サービス コンピューターにディレクトリを作成します。
 
-2. サービス プログラム ファイルを*\service\bin*からサービス コンピュータのディレクトリにコピーします。 Setup.bat、Cleanup.bat、GetComputerName.vbs、ImportClientCert.bat の各ファイルもサービス コンピューターにコピーします。
+2. サービスプログラムファイルを*\ service\bin*からサービスコンピューターのディレクトリにコピーします。 Setup.bat、Cleanup.bat、GetComputerName.vbs、ImportClientCert.bat の各ファイルもサービス コンピューターにコピーします。
 
 3. クライアント コンピューターにクライアント バイナリ用のディレクトリを作成します。
 
 4. クライアント プログラム ファイルを、クライアント コンピューターに作成したクライアント ディレクトリにコピーします。 Setup.bat、Cleanup.bat、ImportServiceCert.bat の各ファイルもクライアントにコピーします。
 
-5. サーバーで、管理者特権`setup.bat service`で開かれた Visual Studio の開発者コマンド プロンプトで実行します。
+5. サーバーで、 `setup.bat service` 管理者特権で開いた Visual Studio の開発者コマンドプロンプトでを実行します。
 
-    引数`setup.bat`を指定`service`して実行すると、コンピュータの完全修飾ドメイン名を持つサービス証明書が作成され *、Service.cer*という名前のファイルにサービス証明書がエクスポートされます。
+    引数を指定してを実行する `setup.bat` `service` と、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service *.cer*という名前のファイルにエクスポートされます。
 
-6. *Service.exe.config*を編集して、コンピューターの`findValue`完全修飾ドメイン名と同じ新しい証明書名 ([\<サービス](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)証明書>の属性 ) を反映します。 また、\<サービス>/\<baseAddresses>要素の**コンピュータ名**を localhost からサービス コンピュータの完全修飾名に変更します。
+6. *サービスの .exe*を編集して、新しい証明書名 (の属性) を反映します。 `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) これは、コンピューターの完全修飾ドメイン名と同じです。 また、要素の**computername**を \<service> / \<baseAddresses> localhost からサービスコンピューターの完全修飾名に変更します。
 
-7. *Service.cer*ファイルをサービス ディレクトリからクライアント コンピューター上のクライアント ディレクトリにコピーします。
+7. サービスの *.cer*ファイルを、サービスディレクトリからクライアントコンピューターのクライアントディレクトリにコピーします。
 
-8. クライアントで、管理者特権`setup.bat client`で開かれた Visual Studio の開発者コマンド プロンプトで実行します。
+8. クライアントで、 `setup.bat client` 管理者特権で開いた Visual Studio の開発者コマンドプロンプトでを実行します。
 
-    引数を指定して`setup.bat`実行すると **、test1**という名前のクライアント証明書が作成され *、Client.cer*という名前のファイルにクライアント証明書がエクスポートされます。 `client`
+    引数を指定してを実行する `setup.bat` `client` と、 **test1**という名前のクライアント証明書が作成され、クライアント証明書が*クライアント .cer*という名前のファイルにエクスポートされます。
 
-9. クライアント コンピューターの*Client.exe.config*ファイルで、エンドポイントのアドレス値を変更して、サービスの新しいアドレスと一致させます。 これを行うには **、localhost**をサーバーの完全修飾ドメイン名に置き換えます。
+9. クライアントコンピューターの*クライアントの .exe*ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに変更します。 これを行うには、 **localhost**をサーバーの完全修飾ドメイン名に置き換えます。
 
 10. Client.cer ファイルを、クライアント ディレクトリからサーバーのサービス ディレクトリにコピーします。
 
-11. クライアントで、管理者特権で開かれた Visual Studio の開発者コマンド プロンプトで*ImportServiceCert.bat*を実行します。
+11. クライアントで、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトで*importservicecert.bat*を実行します。
 
-    これにより、サービス証明書が Service.cer ファイルから **[現在のユーザー - 信頼されたユーザー** ] ストアにインポートされます。
+    これにより、サービス証明書がサービス .cer ファイルから**CurrentUser-TrustedPeople**ストアにインポートされます。
 
-12. サーバーで、管理者特権で開かれた Visual Studio の開発者コマンド プロンプトで*ImportClientCert.bat*を実行します。
+12. サーバーで、管理者特権で開かれた Visual Studio の開発者コマンドプロンプトで*importclientcert.bat*を実行します。
 
-    クライアント証明書が Client.cer ファイルからローカル マシン **- TrustedPeople**ストアにインポートされます。
+    これにより、クライアント証明書がクライアント .cer ファイルから**LocalMachine-TrustedPeople**ストアにインポートされます。
 
 13. サーバー コンピューターで、コマンド プロンプト ウィンドウから Service.exe を起動します。
 
 14. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。
 
-    クライアントとサービスが通信できない場合は、「 WCF[サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
+    クライアントとサービスが通信できない場合は、「 [WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))」を参照してください。
 
-### <a name="clean-up-after-the-sample"></a>サンプルの後のクリーンアップ
+### <a name="clean-up-after-the-sample"></a>サンプルの後にクリーンアップする
 
-サンプルの実行が完了したら、サンプルの後にクリーンアップするには、サンプル フォルダーで*Cleanup.bat*を実行します。 これにより、証明書ストアからサーバー証明書とクライアント証明書が削除されます。
+サンプルの実行後にクリーンアップするには、サンプルの実行が完了したら、samples フォルダーで*Cleanup*を実行します。 これにより、証明書ストアからサーバー証明書とクライアント証明書が削除されます。
 
 > [!NOTE]
-> このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 複数のコンピューターで証明書を使用する WCF サンプルを実行している場合は、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をクリアしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。
+> このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する WCF サンプルを実行している場合は、CurrentUser-TrustedPeople ストアにインストールされているサービス証明書を必ずオフにしてください。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` となります。
