@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f5ce46b-e259-4bc9-a0b9-89d06fc9341c
-ms.openlocfilehash: b226eed9218207cde99add61ef1f3eb64b459009
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: f90906b4c3fc1d1d76977451abfb238bb33fb581
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184303"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595116"
 ---
 # <a name="trusted-subsystem"></a>信頼できるサブシステム
 クライアントは、ネットワーク全体に分散している 1 つ以上の Web サービスにアクセスします。 Web サービスは、追加のリソース (データベースや他の Web サービスなど) に対するアクセスが、Web サービスのビジネス ロジック内にカプセル化されるように設計されています。 これらのリソースは、非承認のアクセスに対して保護する必要があります。 信頼できるサブシステムの処理を次の図に示します。  
   
- ![信頼されたサブシステム](../../../../docs/framework/wcf/feature-details/media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
+ ![信頼されたサブシステム](media/wcfc-trustedsubsystemc.gif "wcfc_TrustedSubsystemc")  
   
  上図に示した信頼できるサブシステムの処理について、以下の手順で説明します。  
   
@@ -32,13 +32,13 @@ ms.locfileid: "79184303"
 |特徴|説明|  
 |--------------------|-----------------|  
 |セキュリティ モード|Message|  
-|相互運用性|WCF (WCF) のみ。|  
+|相互運用性|Windows Communication Foundation (WCF) のみ。|  
 |認証 (サービス)|セキュリティ トークン サービスはクライアントの認証と承認を行います。|  
 |認証 (クライアント)|信頼できるサブシステムがクライアントを認証し、リソースが信頼できるサブシステム サービスを認証します。|  
 |整合性|はい|  
 |機密情報|はい|  
 |トランスポート|クライアントと信頼できるサブシステム サービス間にある HTTP<br /><br /> 信頼できるサブシステム サービスとリソース (バックエンド サービス) の間にある NET.TCP|  
-|バインド|<xref:System.ServiceModel.WSHttpBinding><xref:System.ServiceModel.NetTcpBinding>[および\<>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
+|バインド|<xref:System.ServiceModel.WSHttpBinding>そして<xref:System.ServiceModel.NetTcpBinding>[\<wsFederationHttpBinding>](../../configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|  
   
 ## <a name="resource-back-end-service"></a>リソース (バックエンド サービス)  
   
@@ -163,7 +163,7 @@ ms.locfileid: "79184303"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>クライアント  
   
 ### <a name="code"></a>コード  
  次のコードでは、HTTP プロトコル上のメッセージ セキュリティで認証にユーザー名とパスワードを使用することで、信頼できるサブシステムと通信を行うクライアントを作成する方法を示します。  
@@ -212,5 +212,5 @@ ms.locfileid: "79184303"
   
 ## <a name="see-also"></a>関連項目
 
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [セキュリティの概要](security-overview.md)
 - [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

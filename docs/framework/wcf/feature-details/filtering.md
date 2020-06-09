@@ -2,17 +2,17 @@
 title: フィルター処理
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: efbedc16fe48d83cdc4223862bc691e9cbe15c10
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: d04141e4720320784bc92c332a3f0b96a7b1ac92
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964287"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595467"
 ---
 # <a name="filtering"></a>フィルター処理
 Windows Communication Foundation (WCF) フィルター処理システムは、宣言型フィルターを使用してメッセージを照合し、操作上の決定を行うことができます。 フィルターを使用してメッセージの一部を調べることで、そのメッセージで必要な操作を決定できます。 たとえば、キュー プロセスでは、XPath 1.0 クエリを使用して既知のヘッダー優先度要素をチェックし、メッセージをキューの先頭に移動するべきかどうかを決定します。  
   
- フィルター処理システムは、特定の WCF メッセージに対してどのフィルターセットが `true` されているかを効率的に判断できる一連のクラスで構成されています。  
+ フィルター処理システムは、 `true` 特定の WCF メッセージに対するフィルターのセットを効率的に判断できる一連のクラスで構成されています。  
   
  フィルター処理システムは、WCF メッセージングのコアコンポーネントです。非常に高速になるように設計されています。 各フィルターの実装は、WCF メッセージに対する特定の種類の照合に対して最適化されています。  
   
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) フィルター処理システムは、�
   
 ### <a name="prefix-endpoint-address-filters"></a>プレフィックス エンドポイント アドレス フィルター  
   
-1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> は、メッセージ URI のプレフィックスとも一致できるという点を除けば、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> フィルターと同じように動作します。 たとえば、アドレス `http://www.adatum.com` を指定するフィルターは、`http://www.adatum.com/userA`宛てのメッセージと一致します。  
+1. <xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter> は、メッセージ URI のプレフィックスとも一致できるという点を除けば、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> フィルターと同じように動作します。 たとえば、アドレスを指定するフィルターは、 `http://www.adatum.com` 宛てのメッセージと一致 `http://www.adatum.com/userA` します。  
   
 ### <a name="xpath-message-filters"></a>XPath メッセージ フィルター  
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilter> は、XPath 式を使用して、XML ドキュメントに特定の要素、属性、テキスト、その他の XML 構文が含まれているかどうかを判定します。 このフィルターは、XPath の厳密なサブセットに対して非常に効率的に処理できるように最適化されています。 XML パス言語については、 [W3C 勧告『 Xml Path language 1.0](https://www.w3.org/TR/xpath/all/)』を参照してください。  
@@ -68,7 +68,7 @@ Windows Communication Foundation (WCF) フィルター処理システムは、�
   
  <xref:System.ServiceModel.Dispatcher.XPathMessageFilterTable%601> クラスは、ほとんどのメッセージ シナリオをカバーし、XPath 1.0 の文法を完全にサポートする XPath のサブセットに合わせてマッチングを最適化します。 また、効率的な並列マッチング用のアルゴリズムも最適化します。  
   
- このテーブルには、`Match` および <xref:System.Xml.XPath.XPathNavigator> 上で動作する特殊な <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> メソッドがいくつかあります。 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> は、<xref:System.Xml.XPath.XPathNavigator> プロパティを追加することで、<xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> クラスを拡張します。 このプロパティを使用すると、ナビゲーターを複製せずに XML ドキュメント内の位置を迅速に保存し、読み込むことができます。<xref:System.Xml.XPath.XPathNavigator> を使用してそうした操作を行うには、大量のメモリ領域を割り当てる必要があります。 WCF XPath エンジンでは、XML ドキュメントに対してクエリを実行する過程でカーソルの位置を頻繁に記録する必要があるため、<xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> はメッセージ処理のための重要な最適化を提供します。  
+ このテーブルには、`Match` および <xref:System.Xml.XPath.XPathNavigator> 上で動作する特殊な <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> メソッドがいくつかあります。 <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> は、<xref:System.Xml.XPath.XPathNavigator> プロパティを追加することで、<xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator.CurrentPosition%2A> クラスを拡張します。 このプロパティを使用すると、ナビゲーターを複製せずに XML ドキュメント内の位置を迅速に保存し、読み込むことができます。<xref:System.Xml.XPath.XPathNavigator> を使用してそうした操作を行うには、大量のメモリ領域を割り当てる必要があります。 WCF XPath エンジンでは、XML ドキュメントに対してクエリを実行する過程でカーソルの位置を頻繁に記録する必要があるため、は <xref:System.ServiceModel.Dispatcher.SeekableXPathNavigator> メッセージ処理のための重要な最適化を提供します。  
   
 ## <a name="customer-scenarios"></a>顧客シナリオ  
  フィルター処理は、メッセージに含まれるデータに応じて、異なる処理モジュールにメッセージを送信する必要がある場合に、いつでも使用できます。 一般的なのは、アクション コードに基づいてメッセージをルーティングするシナリオと、メッセージのエンドポイント アドレスに基づいてメッセージのストリームを分離化するシナリオの 2 つです。  
@@ -85,4 +85,4 @@ Windows Communication Foundation (WCF) フィルター処理システムは、�
   
 ## <a name="see-also"></a>関連項目
 
-- [データ転送とシリアル化](../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)
+- [データ転送とシリアル化](data-transfer-and-serialization.md)

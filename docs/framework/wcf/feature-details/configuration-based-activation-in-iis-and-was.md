@@ -2,12 +2,12 @@
 title: IIS と WAS における構成ベースのアクティブ化
 ms.date: 03/30/2017
 ms.assetid: 6a927e1f-b905-4ee5-ad0f-78265da38238
-ms.openlocfilehash: 6515d6621798a9dab67aa7b73a39b9481c1779fc
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: 5e1672f4dd67950178c95d3e043e16072fcd0ef4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75963484"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593582"
 ---
 # <a name="configuration-based-activation-in-iis-and-was"></a>IIS と WAS における構成ベースのアクティブ化
 
@@ -15,7 +15,7 @@ ms.locfileid: "75963484"
 
 ## <a name="configuration-based-activation"></a>構成ベースのアクティブ化
 
-構成ベースのアクティブ化では、以前は .svc ファイルに配置されていたメタデータを受け取り、それを Web.config ファイルに配置します。 `serviceHostingEnvironment`> 要素内には、<`serviceActivations`> 要素があります。 `serviceActivations`> 要素は、ホステッドサービスごとに1つの`add`要素である1つ以上の < > ます。 <`add`> 要素には、サービスおよびサービスの種類またはサービスホストファクトリの相対アドレスを設定できる属性が含まれています。 次の構成コード例は、このセクションの使用方法を示しています。
+構成ベースのアクティブ化では、以前は .svc ファイルに配置されていたメタデータを受け取り、それを Web.config ファイルに配置します。 <`serviceHostingEnvironment`> 要素内に <`serviceActivations`> 要素があります。 <`serviceActivations`> 要素内には、ホストされる `add` サービスごとに1つの <> 要素が1つ以上含まれます。 <の> 要素には、サービス `add` の相対アドレス、サービスの種類、サービスホストファクトリを設定できる属性が含まれています。 次の構成コード例は、このセクションの使用方法を示しています。
 
 > [!NOTE]
 > 各 <`add`> 要素には、サービスまたはファクトリ属性を指定する必要があります。 サービスとファクトリ属性の両方を指定することもできます。
@@ -33,7 +33,7 @@ ms.locfileid: "75963484"
 > [!NOTE]
 >
 > - 構成ベースのアクティブ化機能を使用する場合、.svc ファイルのインライン コードはサポートされません。
-> - `relativeAddress` 属性は、"\<サブディレクトリ >/servicesub-directory" や "~/\<" などの相対アドレスに設定する必要があります。
+> - 属性は、 `relativeAddress` " \<sub-directory> /servicesub-directory" や "~/ \< /service .svc" などの相対アドレスに設定する必要があります。
 > - WCF と関連付けられている既知の拡張子を持たない相対アドレスを登録すると、構成例外がスローされます。
 > - 指定された相対アドレスは、仮想アプリケーションのルートが基準になります。
 > - 構成の階層的モデルにより、コンピューター レベルおよびサイト レベルの登録された相対アドレスは、仮想アプリケーションによって継承されます。
@@ -43,7 +43,7 @@ ms.locfileid: "75963484"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection.ServiceActivations%2A>
-- [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)
-- [ワークフロー サービスのホストの概要](../../../../docs/framework/wcf/feature-details/hosting-workflow-services-overview.md)
-- [\<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)
+- [ホスティング サービス](../hosting-services.md)
+- [ワークフロー サービスのホストの概要](hosting-workflow-services-overview.md)
+- [\<serviceHostingEnvironment>](../../configure-apps/file-schema/wcf/servicehostingenvironment.md)
 - [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

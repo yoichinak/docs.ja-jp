@@ -1,5 +1,6 @@
 ---
 title: 暗号化サービス
+description: ClickOnce マニフェスト、Suite B、& Cryptography Next Generation (CNG) のサポートなど、.NET でサポートされる暗号化の方法と手法の概要について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -24,12 +25,12 @@ helpviewer_keywords:
 - cryptography [.NET Framework], about
 - random number generation
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
-ms.openlocfilehash: e67b1feb27b6eae7062e7b3e02ac79c8929f1df1
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 701dce82669395743c884a613512bfadc06c91b3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288408"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596333"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
@@ -57,7 +58,7 @@ ms.locfileid: "84288408"
 
 これらの目標を達成するために、暗号プリミティブと呼ばれるアルゴリズムと手法の組み合わせを使用して暗号スキームを作成します。 暗号プリミティブとその用途の一覧を次の表に示します。
 
-|暗号プリミティブ|用途|
+|暗号プリミティブ|使用|
 |-----------------------------|---------|
 |共有キー暗号方式 (対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、単一の共有キーを使用してデータの暗号化と復号化が行われます。|
 |公開キー暗号方式 (非対称暗号化方式)|データに対して変換処理を実行し、データが第三者に読み取られるのを防ぎます。 このタイプの暗号方式では、公開キーと秘密キーのペアを使用してデータの暗号化と復号化が行われます。|

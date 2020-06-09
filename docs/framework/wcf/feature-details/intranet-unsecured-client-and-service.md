@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 2fa13a12a377cc16a95318367605d8b5d92769a7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 591f7db0f6b4e928a991961d3bc7c404f41028bf
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184695"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579281"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>セキュリティで保護されていないイントラネットのクライアントとサービス
-次の図は、セキュリティで保護されたプライベート ネットワークに関する情報を WCF アプリケーションに提供するために開発された、単純な WCF (WCF) サービスを示しています。 データの重要性が低い、ネットワークが本質的にセキュリティで保護されると予想される、またはセキュリティが WCF インフラストラクチャの下の層によって提供されるため、セキュリティは必要ありません。  
+次の図は、セキュリティで保護されたプライベートネットワークに関する情報を WCF アプリケーションに提供するために開発された simple Windows Communication Foundation (WCF) サービスを示しています。 データが重要度の低い、ネットワークが本質的にセキュリティで保護されている、または WCF インフラストラクチャの下にあるレイヤーによってセキュリティが提供されるため、セキュリティは必要ありません。  
   
- ![セキュリティで保護されていないイントラネットのクライアントおよびサービスシナリオ。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
+ ![イントラネットのセキュリティで保護されていないクライアントとサービスのシナリオ。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |特徴|説明|  
 |--------------------|-----------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "79184695"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>クライアント  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
@@ -115,5 +115,5 @@ ms.locfileid: "79184695"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.NetTcpBinding>
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [セキュリティの概要](security-overview.md)
 - [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

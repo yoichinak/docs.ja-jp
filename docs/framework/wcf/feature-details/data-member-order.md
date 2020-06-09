@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], ordering members
 ms.assetid: 0658a47d-b6e5-4ae0-ba72-ababc3c6ff33
-ms.openlocfilehash: 2a5d7430953bdc31644e92b9207cd2865209cce5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 717d7014f4c4a56249ead0c839cf05f4f83a6f5f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185198"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593465"
 ---
 # <a name="data-member-order"></a>データ メンバーの順序
 一部のアプリケーションでは、各種のデータ メンバーから送信される、または受信されると予想できるデータの順序 (たとえばシリアル化された XML でデータが表れる順序) がわかると便利です。 この順序を変更する必要が生じることもあります。 ここでは、このような順序を決定する規則について説明します。  
@@ -28,7 +28,7 @@ ms.locfileid: "79185198"
   
  アルファベット順は、<xref:System.String.CompareOrdinal%2A> メソッドを呼び出すことによって確立されます。  
   
-## <a name="examples"></a>例  
+## <a name="examples"></a>使用例  
  次のコードについて考えてみましょう。  
   
  [!code-csharp[C_DataContractNames#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#4)]
@@ -65,5 +65,5 @@ ms.locfileid: "79185198"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [データ コントラクトの等価性](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
-- [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
+- [データ コントラクトの等価性](data-contract-equivalence.md)
+- [データ コントラクトの使用](using-data-contracts.md)

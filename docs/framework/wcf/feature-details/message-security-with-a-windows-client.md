@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 01e7d0b8-10f9-45c3-a4c5-53d44dc61eb8
-ms.openlocfilehash: bcfeb5f863b1dd6cf9171a7fc53c8984ea68ecb3
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: dcb311523c6ec41b62f6e69fe6bc7635b9d49708
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184625"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595233"
 ---
 # <a name="message-security-with-a-windows-client"></a>Windows クライアントとのメッセージ セキュリティ
-このシナリオでは、メッセージ セキュリティ モードによってセキュリティで保護された Windows 通信基盤 (WCF) クライアントとサーバーを示します。 クライアントとサービスは、Windows 資格情報を使用して認証します。  
+このシナリオは、メッセージセキュリティモードによってセキュリティ保護された Windows Communication Foundation (WCF) クライアントおよびサーバーを示しています。 クライアントとサービスは、Windows 資格情報を使用して認証します。  
   
- ![Windows クライアントによるメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
+ ![Windows クライアントを使用したメッセージセキュリティ](media/1c8618d4-0005-4022-beb6-32fd087a8c3c.gif "1c8618d4-0005-4022-beb6-32fd087a8c3c")  
   
 |特徴|説明|  
 |--------------------|-----------------|  
@@ -72,7 +72,7 @@ ms.locfileid: "79184625"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>クライアント  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
@@ -118,5 +118,5 @@ ms.locfileid: "79184625"
   
 ## <a name="see-also"></a>関連項目
 
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [セキュリティの概要](security-overview.md)
 - [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

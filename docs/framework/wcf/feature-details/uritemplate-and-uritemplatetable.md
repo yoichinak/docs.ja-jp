@@ -2,12 +2,12 @@
 title: UriTemplate と UriTemplateTable
 ms.date: 03/30/2017
 ms.assetid: 5cbbe03f-4a9e-4d44-9e02-c5773239cf52
-ms.openlocfilehash: 2742217cb082f5c0354510a7e66818bafd6f1393
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 106ba21b58dabab96afbc8fb6db5cb305386f2fe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144696"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595077"
 ---
 # <a name="uritemplate-and-uritemplatetable"></a>UriTemplate と UriTemplateTable
 Web 開発者は、サービスの応答先となる URI の形状とレイアウトを記述できる必要があります。 Windows Communication Foundation (WCF) では、開発者が自分の Uri を制御できるように、2つの新しいクラスが追加されました。 <xref:System.UriTemplate>と <xref:System.UriTemplateTable> は、WCF における URI ベースのディスパッチエンジンの基礎となります。 これらのクラスは、独自に使用することもできます。これにより、開発者は、WCF サービスを実装することなく、テンプレートと URI マッピング機構を利用できます。  
@@ -15,7 +15,7 @@ Web 開発者は、サービスの応答先となる URI の形状とレイア�
 ## <a name="templates"></a>テンプレート  
  テンプレートとは、一連の相対 URI を記述する方法です。 次の表の URI テンプレートのセットは、各種気象情報を取得するシステムがどのように定義されているかを示しています。  
   
-|データ|Template|  
+|Data|Template|  
 |----------|--------------|  
 |国の天気予報|weather/national|  
 |州の天気予報|weather/{state}|  
@@ -326,8 +326,8 @@ Console.WriteLine("Bound URI: {0}", boundUri);
   
 ## <a name="see-also"></a>関連項目
 
-- [WCF Web HTTP プログラミング モデルの概要](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)
-- [WCF Web HTTP プログラミング オブジェクト モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
-- [UriTemplate](../../../../docs/framework/wcf/samples/uritemplate-sample.md)
-- [UriTemplate テーブル](../../../../docs/framework/wcf/samples/uritemplate-table-sample.md)
-- [UriTemplate テーブル ディスパッチャー](../../../../docs/framework/wcf/samples/uritemplate-table-dispatcher-sample.md)
+- [WCF Web HTTP プログラミング モデルの概要](wcf-web-http-programming-model-overview.md)
+- [WCF Web HTTP プログラミング オブジェクト モデル](wcf-web-http-programming-object-model.md)
+- [UriTemplate](../samples/uritemplate-sample.md)
+- [UriTemplate テーブル](../samples/uritemplate-table-sample.md)
+- [UriTemplate テーブル ディスパッチャー](../samples/uritemplate-table-dispatcher-sample.md)

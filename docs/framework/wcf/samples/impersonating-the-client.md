@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 10a8d243b3f053879f183864e955d9260c07865b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b5272d8b4dbac60e14fe87accbb08a2073ed65ab
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183608"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594635"
 ---
 # <a name="impersonating-the-client"></a>クライアントの偽装
 偽装のサンプルでは、サービスで呼び出し元のアプリケーションを偽装し、サービスが呼び出し元の代わりにシステム リソースにアクセスできるようにする方法を示します。  
   
- このサンプルは、セルフ[ホスト](../../../../docs/framework/wcf/samples/self-host.md)のサンプルに基づいています。 サービスとクライアントの構成ファイルは、[セルフホスト](../../../../docs/framework/wcf/samples/self-host.md)サンプルのファイルと同じです。  
+ このサンプルは、[自己ホスト](self-host.md)のサンプルに基づいています。 サービスとクライアントの構成ファイルは、[自己ホスト](self-host.md)のサンプルと同じです。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -102,18 +102,18 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  このサンプルを実行すると、操作要求と応答がサービスとクライアントの両方のコンソール ウィンドウに表示されます。 どちらかのコンソールで Enter キーを押すと、サービスとクライアントがどちらもシャットダウンされます。  
   
 > [!NOTE]
-> サービスは、管理アカウントで実行するか、または URI を HTTP レイヤーに登録する権限`http://localhost:8000/ServiceModelSamples`を付与する必要があります。 このような権限は、 [Httpcfg.exe ツール](/windows/win32/http/httpcfg-exe)を使用して[名前空間の予約](/windows/win32/http/namespace-reservations-registrations-and-routing)を設定することで付与できます。  
+> サービスは、管理者アカウントで実行するか、または実行するアカウントに HTTP レイヤーを使用して URI を登録する権限が付与されている必要があり `http://localhost:8000/ServiceModelSamples` ます。 このような権限は、 [httpcfg.exe ツール](/windows/win32/http/httpcfg-exe)を使用して[名前空間の予約](/windows/win32/http/namespace-reservations-registrations-and-routing)を設定することによって付与できます。  
   
 > [!NOTE]
-> Windows Server 2003 を実行しているコンピュータでは、Host.exe アプリケーションに偽装特権がある場合にのみ、偽装がサポートされます。 (既定では、管理者だけがこのアクセス許可を持っています)。サービスを実行しているアカウントにこの特権を追加**Properties**するには、[**管理ツール**] の [**ローカル セキュリティ ポリシー**]**を開きます**。 **User Rights Assignment** **Impersonate a Client after Authentication**  
+> Windows Server 2003 を実行しているコンピューターでは、ホストの .exe アプリケーションに偽装特権がある場合にのみ、偽装がサポートされます。 (既定では、管理者のみがこのアクセス許可を持っています)。この特権をサービスが実行されているアカウントに追加するには、[**管理ツール**]、[**ローカルセキュリティポリシー**]、[**ローカルポリシー**]、[**ユーザー権利の割り当て**] の順に選択し、[**認証後にクライアントを偽装**] をクリックし、[**プロパティ**] をダブルクリックしてユーザーまたはグループを追加します。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。  
   
-3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
 4. サービスが呼び出し元を偽装していることを示すため、サービスが実行されているアカウントとは異なるアカウントでクライアントを実行します。 これを行うには、コマンド プロンプトに次のコマンドを入力します。  
   

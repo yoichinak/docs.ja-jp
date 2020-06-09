@@ -1,31 +1,31 @@
 ---
-title: '方法 : ASP.NET のロール プロバイダーとサービスを使用する'
+title: '方法: ASP.NET のロール プロバイダーとサービスを使用する'
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: ddfedeb2491998f64ab241ceba303d50d0714351
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 45eeda046e877b4379d7d0e5edd90fac305f5e44
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184770"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84595298"
 ---
-# <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>方法 : ASP.NET のロール プロバイダーとサービスを使用する
+# <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>方法: ASP.NET のロール プロバイダーとサービスを使用する
 
-ASP.NET ロール プロバイダ (ASP.NET メンバーシップ プロバイダーと組み合わせた) は、ASP.NET開発者が、ユーザーがサイトを持つアカウントを作成したり、承認用にロールを割り当てたりできる Web サイトを作成できるようにする機能です。 この機能を使用すれば、ユーザーはだれでもサイトでアカウントを作成し、そのサイトにログインしてサービスに排他的にアクセスできます。 これは、ユーザーが Windows ドメイン内にアカウントを持っていることが必要な Windows セキュリティとは対照的です。 代わりに、資格情報 (ユーザー名とパスワードの組み合わせ) を提供するすべてのユーザーが、サイトとそのサービスを使用できます。  
+ASP.NET ロールプロバイダー (ASP.NET メンバーシッププロバイダーと共に) は、ASP.NET 開発者がサイトを使用してアカウントを作成し、承認のためにロールを割り当てることができる Web サイトを作成できるようにする機能です。 この機能を使用すれば、ユーザーはだれでもサイトでアカウントを作成し、そのサイトにログインしてサービスに排他的にアクセスできます。 これは、ユーザーが Windows ドメイン内にアカウントを持っていることが必要な Windows セキュリティとは対照的です。 代わりに、資格情報 (ユーザー名とパスワードの組み合わせ) を指定するすべてのユーザーが、サイトとそのサービスを使用できます。  
   
-サンプル アプリケーションについては、「[メンバーシップとロール プロバイダ](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)」を参照してください。 ASP.NET メンバーシップ プロバイダ機能の詳細については、「[方法 : ASP.NET メンバーシップ プロバイダを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)」を参照してください。  
+サンプルアプリケーションについては、「[メンバーシップとロールプロバイダー](../samples/membership-and-role-provider.md)」を参照してください。 メンバーシッププロバイダーの ASP.NET 機能の詳細については、「[方法: ASP.NET メンバーシッププロバイダーを使用](how-to-use-the-aspnet-membership-provider.md)する」を参照してください。  
   
-ロール プロバイダー機能では、SQL Server データベースを使用してユーザー情報を格納します。 Windows 通信基盤 (WCF) の開発者は、セキュリティ上の目的でこれらの機能を利用できます。 WCF アプリケーションに統合する場合、ユーザーは、WCF クライアント アプリケーションにユーザー名とパスワードの組み合わせを指定する必要があります。 WCF<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>でデータベースを使用できるようにするには、クラスのインスタンスを作成し、その<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A>プロパティを に<xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>設定し、サービスをホスト<xref:System.ServiceModel.ServiceHost>している動作のコレクションにインスタンスを追加する必要があります。  
+ロール プロバイダー機能では、SQL Server データベースを使用してユーザー情報を格納します。 Windows Communication Foundation (WCF) 開発者は、これらの機能をセキュリティ上の目的で利用できます。 WCF アプリケーションに統合されている場合、ユーザーは、WCF クライアントアプリケーションに対してユーザー名とパスワードの組み合わせを指定する必要があります。 WCF でデータベースを使用できるようにするには、クラスのインスタンスを作成し、 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> その <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> プロパティをに設定 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles> して、サービスをホストしているへの動作のコレクションにインスタンスを追加する必要があり <xref:System.ServiceModel.ServiceHost> ます。  
   
-## <a name="configure-the-role-provider"></a>ロール プロバイダーを構成する  
+## <a name="configure-the-role-provider"></a>ロールプロバイダーを構成する  
   
-1. Web.config ファイルの`system.web`<>要素の下に、<>`roleManager`要素を追加し、`enabled`その属性`true`を に設定します。  
+1. Web.config ファイルの < > 要素の下に `system.web` < > 要素を追加し、 `roleManager` その `enabled` 属性をに設定し `true` ます。  
   
 2. `defaultProvider` 属性を `SqlRoleProvider` に設定します。  
   
-3. <`roleManager`>要素の子として、<>`providers`要素を追加します。  
+3. <> 要素の子として `roleManager` 、<> 要素を追加し `providers` ます。  
   
-4. `providers` <>要素の子として、次の例に示`add`すように、次の属性を適切な値`name` `type`、、、、`connectionStringName`および`applicationName`に設定した<>要素を追加します。  
+4. <> 要素の子として、次の `providers` `add` `name` `type` `connectionStringName` `applicationName` 例に示すように、、、、およびの各属性を適切な値に設定して、<> 要素を追加します。  
   
     ```xml  
     <!-- Configure the Sql Role Provider. -->  
@@ -40,17 +40,17 @@ ASP.NET ロール プロバイダ (ASP.NET メンバーシップ プロバイダ
     </roleManager>  
     ```  
   
-## <a name="configure-the-service-to-use-the-role-provider"></a>ロール プロバイダーを使用するようにサービスを構成する  
+## <a name="configure-the-service-to-use-the-role-provider"></a>ロールプロバイダーを使用するようにサービスを構成する  
   
-1. Web.config ファイルに[\<、システム.サービスモデル>要素を](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)追加します。  
+1. Web.config ファイルで、要素を追加し [\<system.serviceModel>](../../configure-apps/file-schema/wcf/system-servicemodel.md) ます。  
   
-2. `system.ServiceModel` <>[\<要素に、動作>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)要素を追加します。  
+2. 要素を [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) <`system.ServiceModel`> 要素に追加します。  
   
-3. [\<サービス](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)`behaviors`を追加する><>要素にします。  
+3. [\<serviceBehaviors>](../../configure-apps/file-schema/wcf/servicebehaviors.md)<> 要素にを追加 `behaviors` します。  
   
-4. 要素[\<>動作を](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)追加し、属性`name`を適切な値に設定します。  
+4. 要素を追加 [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) し、 `name` 属性を適切な値に設定します。  
   
-5. サービス認証>を<>`behavior`要素に追加します。 [ \<](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)  
+5. [\<serviceAuthorization>](../../configure-apps/file-schema/wcf/serviceauthorization-element.md)<> 要素にを追加 `behavior` します。  
   
 6. `principalPermissionMode` 属性を `UseAspNetRoles` に設定します。  
   
@@ -69,5 +69,5 @@ ASP.NET ロール プロバイダ (ASP.NET メンバーシップ プロバイダ
   
 ## <a name="see-also"></a>関連項目
 
-- [メンバーシップとロール プロバイダー](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
-- [方法 : ASP.NET メンバーシップ プロバイダーを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [メンバーシップとロール プロバイダー](../samples/membership-and-role-provider.md)
+- [方法: ASP.NET メンバーシップ プロバイダーを使用する](how-to-use-the-aspnet-membership-provider.md)

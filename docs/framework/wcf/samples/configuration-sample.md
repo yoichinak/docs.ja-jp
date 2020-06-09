@@ -2,25 +2,25 @@
 title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 52747e6d964022d5028b0edb91dc8bc0ac0e82bc
-ms.sourcegitcommit: 927b7ea6b2ea5a440c8f23e3e66503152eb85591
+ms.openlocfilehash: 6d84085d06da117ebf13fa4bb714513aacc3abd6
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81463965"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594726"
 ---
 # <a name="configuration-sample"></a>構成サンプル
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  
   
 > [!NOTE]
-> このサンプルでは、探索を構成ファイルで実装しています。 コードで検出を実装するサンプルについては、「[基本](../../../../docs/framework/wcf/samples/basic-sample.md)」を参照してください。  
+> このサンプルでは、探索を構成ファイルで実装しています。 コードに検出を実装するサンプルについては、「 [Basic](basic-sample.md)」を参照してください。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\Configuration`  
   
@@ -85,7 +85,7 @@ ms.locfileid: "81463965"
         </endpointBehaviors>  
 ```  
   
- スコープの詳細については、「 探索の[検索と検索基準](../../../../docs/framework/wcf/feature-details/discovery-find-and-findcriteria.md)」を参照してください。  
+ スコープの詳細については、「[検出検索と FindCriteria](../feature-details/discovery-find-and-findcriteria.md)」を参照してください。  
   
  探索エンドポイントに固有の詳細を制御することもできます。 この制御には <xref:System.ServiceModel.Configuration.StandardEndpointsSection> を使用します。 このサンプルでは、次のコード例に示すように、使用するプロトコルのバージョンを変更し、`maxResponseDelay` 属性を追加します。  
   
@@ -260,7 +260,7 @@ ms.locfileid: "81463965"
   
 #### <a name="to-use-this-sample"></a>このサンプルを使用するには  
   
-1. このサンプルでは HTTP エンドポイントを使用します。このサンプルを実行するには、適切な URL ACL を追加する必要があります。 詳細については[、「HTTP および HTTPS の設定](../feature-details/configuring-http-and-https.md)」を参照してください。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. このサンプルでは HTTP エンドポイントを使用します。このサンプルを実行するには、適切な URL ACL を追加する必要があります。 詳細については、「 [HTTP および HTTPS の構成](../feature-details/configuring-http-and-https.md)」を参照してください。 管理特権で次のコマンドを実行すると、適切な ACL が追加されます。 そのままではコマンドが動作しない場合は、代わりに、ドメインとユーザー名を引数に指定して実行してみてください。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
 2. ソリューションをビルドします。  
   

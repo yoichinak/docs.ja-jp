@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 361ed623e50b409147387a0edec7f42c733f3d48
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 3ac7f0b165b99a1ed3702628958f7d4c7702f5b1
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664124"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84593517"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>エンドポイント:アドレス、バインディング、およびコントラクト
 
-を介して Windows Communication Foundation (WCF) サービスとすべての通信が行われます、*エンドポイント*サービス。 エンドポイントは、WCF サービスによって提供される機能へのアクセスをクライアントに提供します。
+Windows Communication Foundation (WCF) サービスとの通信はすべて、サービスの*エンドポイント*を介して行われます。 エンドポイントは、クライアントが WCF サービスによって提供される機能にアクセスできるようにします。
 
 各エンドポイントは、次の 4 つのプロパティで構成されます。
 
@@ -27,21 +27,21 @@ ms.locfileid: "67664124"
 
 - エンドポイントのローカル実装の詳細を指定する一連の動作。
 
-このトピックでは、エンドポイントの構造について説明し、WCF オブジェクト モデルでの表現方法について説明します。
+このトピックでは、このエンドポイント構造について説明し、WCF オブジェクトモデルでの表現方法について説明します。
 
 ## <a name="the-structure-of-an-endpoint"></a>エンドポイントの構造
 
 各エンドポイントの構造は次のとおりです。
 
-- アドレス:アドレスは一意にエンドポイントを識別し、潜在的な指示があるサービスのコンシューマーです。 WCF オブジェクト モデルで表されます、<xref:System.ServiceModel.EndpointAddress>クラス。 <xref:System.ServiceModel.EndpointAddress> クラスには次のものが含まれます。
+- アドレス : アドレスは、エンドポイントを一意に識別し、サービスの潜在的ユーザーにそのエンドポイントの場所を示します。 これは、WCF オブジェクトモデルでクラスによって表され <xref:System.ServiceModel.EndpointAddress> ます。 <xref:System.ServiceModel.EndpointAddress> クラスには次のものが含まれます。
 
   - <xref:System.ServiceModel.EndpointAddress.Uri%2A> プロパティは、サービスのアドレスを表します。
 
   - <xref:System.ServiceModel.EndpointAddress.Identity%2A> プロパティは、サービスのセキュリティ ID とオプションのメッセージ ヘッダーのコレクションを表します。 オプションのメッセージ ヘッダーは、エンドポイントの識別またはエンドポイントとの対話のための、より詳細なアドレス指定情報を追加するために使用されます。
 
-  詳細については、次を参照してください。[エンドポイント アドレスを指定する](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)します。
+  詳細については、「[エンドポイントアドレスの指定](../specifying-an-endpoint-address.md)」を参照してください。
 
-- バインディング:バインディングはエンドポイントとの通信方法を指定します。 バインディングには、以下の項目が含まれます。
+- バインディング : バインディングは、エンドポイントとの通信方法を指定します。 これには次のものが含まれます
 
   - 使用するトランスポート プロトコル (例 : TCP や HTTP)。
 
@@ -49,9 +49,9 @@ ms.locfileid: "67664124"
 
   - 必要なセキュリティ要件 (例 : SSL メッセージ セキュリティや SOAP メッセージ セキュリティ)。
 
-  詳細については、次を参照してください。 [WCF のバインディングの概要](../../../../docs/framework/wcf/bindings-overview.md)します。 バインディングは抽象基本クラスで WCF オブジェクト モデルで表される<xref:System.ServiceModel.Channels.Binding>します。 ほとんどのシナリオでは、システム指定のバインディングを使用できます。 詳細については、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。
+  詳細については、「 [WCF バインディングの概要](../bindings-overview.md)」を参照してください。 バインドは、WCF オブジェクトモデルで抽象基本クラスによって表され <xref:System.ServiceModel.Channels.Binding> ます。 ほとんどのシナリオでは、システム指定のバインディングを使用できます。 詳細については、「[システム指定のバインディング](../system-provided-bindings.md)」を参照してください。
 
-- コントラクト:コントラクトでは、クライアントに公開するエンドポイント機能について説明します。 コントラクトは、以下の項目を指定します。
+- コントラクト : コントラクトは、エンドポイントがクライアントに公開する機能を示します。 コントラクトは、以下の項目を指定します。
 
   - クライアントから呼び出すことができる操作。
 
@@ -61,37 +61,37 @@ ms.locfileid: "67664124"
 
   - クライアントが予期できる処理メッセージまたは応答メッセージの種類。
 
-  コントラクトを定義する詳細については、次を参照してください。 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)します。
+  コントラクトを定義する方法の詳細については、「[サービスコントラクトの設計](../designing-service-contracts.md)」を参照してください。
 
-- 動作:エンドポイントの動作を使用して、サービス エンドポイントのローカル動作をカスタマイズすることができます。 エンドポイントの動作は、WCF ランタイムの作成プロセスで参加することでこれを実現します。 エンドポイントの動作の一例は、<xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> プロパティです。このプロパティにより、SOAP アドレスまたは Web サービス記述言語 (WSDL) アドレスとは異なるリッスン アドレスを指定できます。 詳細については、次を参照してください。 [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)します。
+- 動作 : エンドポイントの動作を使用すると、サービス エンドポイントのローカル動作をカスタマイズできます。 エンドポイント動作では、WCF ランタイムの構築プロセスに参加することによってこれを実現します。 エンドポイントの動作の一例は、<xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> プロパティです。このプロパティにより、SOAP アドレスまたは Web サービス記述言語 (WSDL) アドレスとは異なるリッスン アドレスを指定できます。 詳細については、「 [ClientViaBehavior](../diagnostics/wmi/clientviabehavior.md)」を参照してください。
 
 ## <a name="defining-endpoints"></a>エンドポイントの定義
 
-サービスのエンドポイントは、コードを使用して強制的に指定するか、構成を介して宣言として指定することができます。 詳細については、「[方法 :サービス エンドポイントの構成で作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)と[方法。コードでサービス エンドポイントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)します。
+サービスのエンドポイントは、コードを使用して強制的に指定するか、構成を介して宣言として指定することができます。 詳細については、「[方法: 構成でサービスエンドポイントを作成](how-to-create-a-service-endpoint-in-configuration.md)する」および「[方法: コードでサービスエンドポイントを作成する](how-to-create-a-service-endpoint-in-code.md)」を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 このセクションでは、バインディング、エンドポイント、およびアドレスの目的を説明し、バインディングとエンドポイントの構成方法および `ClientVia` 動作と `ListenUri` プロパティの使用方法を示します。
 
-[アドレス](../../../../docs/framework/wcf/feature-details/endpoint-addresses.md)\
-Wcf エンドポイントのアドレス指定する方法について説明します。
+[扱い](endpoint-addresses.md)\
+WCF でのエンドポイントのアドレス指定方法について説明します。
 
-[バインド](../../../../docs/framework/wcf/feature-details/bindings.md)\
+[現存](bindings.md)\
 バインディングを使用して、クライアントとサービスが相互に通信するために必要なトランスポート、エンコーディング、およびプロトコルの詳細を指定する方法について説明します。
 
-[コントラクト](../../../../docs/framework/wcf/feature-details/contracts.md)\
+[関する](contracts.md)\
 コントラクトでサービスのメソッドが定義されるしくみについて説明します。
 
-[方法: 構成でサービス エンドポイントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)\
+[方法: 構成にサービスエンドポイントを作成する](how-to-create-a-service-endpoint-in-configuration.md)\
 構成にサービス エンドポイントを作成する方法について説明します。
 
-[方法: コードでサービス エンドポイントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)\
+[方法: コードでサービスエンドポイントを作成する](how-to-create-a-service-endpoint-in-code.md)\
 コード内にサービス エンドポイントを作成する方法について説明します。
 
-[方法: Svcutil.exe を使用して、コンパイル済みサービス コードを検証するには](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
-使用してサービスをホストせず、サービス実装と構成でエラーを検出する方法について説明します、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。
+[方法: Svcutil.exe を使用してコンパイル済みサービスコードを検証する](how-to-use-svcutil-exe-to-validate-compiled-service-code.md)\
+[ServiceModel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)を使用してサービスをホストせずにサービスの実装と構成でエラーを検出する方法について説明します。
 
 ## <a name="see-also"></a>関連項目
 
-- [サービスの構成](../../../../docs/framework/wcf/configuring-services.md)
-- [バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [サービスの構成](../configuring-services.md)
+- [バインディングの拡張](../extending/extending-bindings.md)
