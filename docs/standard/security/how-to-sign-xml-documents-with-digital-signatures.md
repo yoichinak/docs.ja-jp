@@ -1,5 +1,6 @@
 ---
 title: '方法: デジタル署名で XML ドキュメントに署名する'
+description: デジタル署名を使用して XML ドキュメントに署名する方法について説明します。 .NET では、System.xml 名前空間のクラスを使用します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - XML signing
 - signing XML
 ms.assetid: 99692ac1-d8c9-42d7-b1bf-2737b01037e4
-ms.openlocfilehash: 81fa5e4c503f26dc13758090f845fd8387287084
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 97bd23182ed54b899b76dbf43e179fe0c94b011d
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84277181"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598568"
 ---
 # <a name="how-to-sign-xml-documents-with-digital-signatures"></a>方法: デジタル署名で XML ドキュメントに署名する
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用すると、XML ドキュメントまたは XML ドキュメントの一部にデジタル署名で署名することができます。  XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。  XMLDSIG 標準の詳細については、「World Wide Web コンソーシアム (W3C) 勧告」 [XML 署名の構文と処理](https://www.w3.org/TR/xmldsig-core/)に関する説明を参照してください。  
@@ -111,7 +112,7 @@ ms.locfileid: "84277181"
   
 - 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
-## <a name="net-framework-security"></a>.NET Framework のセキュリティ  
+## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、「[暗号化と復号化のためのキーの生成](generating-keys-for-encryption-and-decryption.md)」を参照してください。  
   
  秘密キーをソース コードに直接埋め込まないでください。  埋め込みキーは、 [ildasm.exe (IL 逆アセンブラー)](../../framework/tools/ildasm-exe-il-disassembler.md)を使用するか、メモ帳などのテキストエディターでアセンブリを開くことで、簡単にアセンブリから読み取ることができます。  

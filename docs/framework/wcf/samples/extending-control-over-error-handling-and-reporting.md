@@ -2,15 +2,15 @@
 title: エラー処理およびレポートに対する制御の拡張
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 68f3381e8db9d7c0222720dda335b47e30f57ac7
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: c7ca8d85220d65905bc4d9d220de366c331504a4
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79183679"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600543"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>エラー処理およびレポートに対する制御の拡張
-このサンプルでは、インターフェイスを使用して、Windows 通信基盤 (WCF) サービスでエラー処理とエラー報告の<xref:System.ServiceModel.Dispatcher.IErrorHandler>制御を拡張する方法を示します。 このサンプルは、エラーを処理するためにサービスに追加されたコードを含む[「はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)」に基づいています。 クライアントは、強制的にエラーが発生する状態にされます。 サービスはエラーを途中受信して、ファイルに記録します。  
+このサンプルでは、インターフェイスを使用して、Windows Communication Foundation (WCF) サービスのエラー処理およびエラー報告に対する制御を拡張する方法を示し <xref:System.ServiceModel.Dispatcher.IErrorHandler> ます。 このサンプルは、エラーを処理するためにサービスに追加のコードが追加された[はじめに](getting-started-sample.md)に基づいています。 クライアントは、強制的にエラーが発生する状態にされます。 サービスはエラーを途中受信して、ファイルに記録します。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -132,7 +132,7 @@ FaultException: FaultException - Invalid Argument: The argument must be greater 
 Press <ENTER> to terminate client.  
 ```  
   
- ファイル c:\logs\errors.txt には、サービスによって記録されたエラーに関する情報が格納されます。 サービスがディレクトリに書き込まれるには、サービスが実行されているプロセス (通常はASP.NETまたはネットワーク サービス) にディレクトリへの書き込みアクセス許可があることを確認する必要があります。  
+ ファイル c:\logs\errors.txt には、サービスによって記録されたエラーに関する情報が格納されます。 サービスがディレクトリに書き込むには、サービスを実行しているプロセス (通常は ASP.NET または Network Service) にディレクトリへの書き込みアクセス許可があることを確認する必要があります。  
   
 ```txt
 Fault: Reason = Invalid Argument: The second argument must not be zero.  
@@ -141,19 +141,19 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションをビルドするには、「 [Windows コミュニケーション ファウンデーション のサンプルの構築](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。  
   
 3. error.txt ファイル用に c:\logs ディレクトリを作成したことを確認します。 または、`CalculatorErrorHandler.HandleError` で使用されるファイル名を変更します。  
   
-4. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
+4. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  

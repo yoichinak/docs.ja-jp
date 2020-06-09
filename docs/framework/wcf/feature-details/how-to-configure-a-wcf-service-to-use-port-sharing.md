@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6400bc71-a858-4ac2-8d5a-caa72d3b5482
-ms.openlocfilehash: cd8d76137ac195e452a7d66fb6ddbeda405a922f
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 28f2858d68de99839d7fec66b0fe4528d7e42325
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185098"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84579528"
 ---
 # <a name="how-to-configure-a-windows-communication-foundation-service-to-use-port-sharing"></a>方法 : ポート共有を使用するように Windows Communication Foundation サービスを構成する
-Windows 通信基盤 (WCF) アプリケーションで net.tcp:// ポート共有を使用する最も簡単な方法<xref:System.ServiceModel.NetTcpBinding>は、 を使用してサービスを公開することです。  
+Windows Communication Foundation (WCF) アプリケーションで net.tcp://ポート共有を使用する最も簡単な方法は、を使用してサービスを公開することです <xref:System.ServiceModel.NetTcpBinding> 。  
   
  このバインディングは、<xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A> プロパティを提供します。このプロパティは、このバインディングを使用して構成されるサービスに対して net.tcp:// ポート共有を有効にするかどうかを制御します。  
   
@@ -21,7 +21,7 @@ Windows 通信基盤 (WCF) アプリケーションで net.tcp:// ポート共�
   
 ### <a name="to-enable-nettcp-port-sharing-on-a-nettcpbinding-in-code"></a>コードで NetTcpBinding の net.tcp:// ポート共有を有効にするには  
   
-1. というコントラクトを実装するサービスを作成`IMyService`し、`MyService`を呼び出します。  
+1. というコントラクトを実装するサービスを作成し、という名前 `IMyService` `MyService` を呼び出します。  
   
      [!code-csharp[c_ConfigurePortSharing#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_configureportsharing/cs/source.cs#1)]
      [!code-vb[c_ConfigurePortSharing#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_configureportsharing/vb/source.vb#1)]  
@@ -62,5 +62,5 @@ Windows 通信基盤 (WCF) アプリケーションで net.tcp:// ポート共�
   
 ## <a name="see-also"></a>関連項目
 
-- [Net.TCP ポート共有](../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)
-- [方法 : Net.TCP ポート共有サービスを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)
+- [Net.TCP ポート共有](net-tcp-port-sharing.md)
+- [方法: Net.TCP ポート共有サービスを有効にする](how-to-enable-the-net-tcp-port-sharing-service.md)

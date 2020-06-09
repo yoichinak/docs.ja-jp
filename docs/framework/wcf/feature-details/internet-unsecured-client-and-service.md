@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: 7eb640576bc00bc767ba16f8dc4a5d5952a479c6
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0b02d1efc98f02390555861871d280f9800ced1e
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184727"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598880"
 ---
 # <a name="internet-unsecured-client-and-service"></a>セキュリティで保護されていないインターネット環境のクライアントとサービス
-次の図は、セキュリティで保護されていないパブリックな Windows 通信基盤 (WCF) クライアントとサービスの例を示しています。  
+次の図は、セキュリティで保護されていないパブリック Windows Communication Foundation (WCF) クライアントとサービスの例を示しています。  
   
- ![セキュリティで保護されていないインターネット シナリオを示すスクリーンショット](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
+ ![セキュリティで保護されていないインターネットシナリオを示すスクリーンショット](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |特徴|説明|  
 |--------------------|-----------------|  
 |セキュリティ モード|なし|  
 |トランスポート|HTTP|  
-|バインド|<xref:System.ServiceModel.BasicHttpBinding>コード内、または構成内の[\<基本 HttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)要素。|  
+|バインド|<xref:System.ServiceModel.BasicHttpBinding>コード内、または [\<basicHttpBinding>](../../configure-apps/file-schema/wcf/basichttpbinding.md) 構成内の要素。|  
 |相互運用性|既存の Web サービス クライアントとサービスを使用する|  
 |認証|なし|  
 |整合性|なし|  
@@ -67,7 +67,7 @@ ms.locfileid: "79184727"
 </configuration>  
 ```  
   
-## <a name="client"></a>Client  
+## <a name="client"></a>クライアント  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
 - コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
@@ -111,6 +111,6 @@ ms.locfileid: "79184727"
   
 ## <a name="see-also"></a>関連項目
 
-- [一般的なセキュリティ シナリオ](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [一般的なセキュリティ シナリオ](common-security-scenarios.md)
+- [セキュリティの概要](security-overview.md)
 - [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

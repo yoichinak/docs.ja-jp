@@ -4,16 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 33205f9e12fcee53f2f29b63b836ea0cbc792025
-ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
+ms.openlocfilehash: e8dc9177afc590a6467855decfa8450b37c6fc77
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71834733"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84601284"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>方法: ユーザー名とパスワードで認証する
 
-このトピックでは、Windows Communication Foundation (WCF) サービスを有効にして、Windows ドメインのユーザー名とパスワードを使用してクライアントを認証する方法について説明します。 自己ホスト型 WCF サービスが稼働していることを前提としています。 基本的な自己ホスト型 WCF サービスを作成する例については、[はじめにチュートリアル](../../../../docs/framework/wcf/getting-started-tutorial.md)を参照してください。 このトピックでは、サービスがコードで構成されているものとします。 構成ファイルを使用して同様のサービスを構成する例については、「[メッセージセキュリティユーザー名](../samples/message-security-user-name.md)」を参照してください。
+このトピックでは、Windows Communication Foundation (WCF) サービスを有効にして、Windows ドメインのユーザー名とパスワードを使用してクライアントを認証する方法について説明します。 自己ホスト型 WCF サービスが稼働していることを前提としています。 基本的な自己ホスト型 WCF サービスを作成する例については、[はじめにチュートリアル](../getting-started-tutorial.md)を参照してください。 このトピックでは、サービスがコードで構成されているものとします。 構成ファイルを使用して同様のサービスを構成する例については、「[メッセージセキュリティユーザー名](../samples/message-security-user-name.md)」を参照してください。
 
 Windows ドメイン ユーザー名とパスワードを使用してクライアントを認証するようにサービスを構成するには、<xref:System.ServiceModel.WSHttpBinding> を使用し、その `Security.Mode` プロパティを `Message` に設定します。 また、ユーザー名とパスワードをクライアントからサービスに送信するときに X.509 証明書を指定する必要があります。この証明書は、ユーザー名とパスワードの暗号化に使用されます。
 
@@ -40,7 +40,7 @@ Windows ドメイン ユーザー名とパスワードを使用してクライ�
     // ...
     ```
 
-    独自の証明書を使用する場合は、その証明書を参照するようにコードを変更します。 証明書の作成と使用の詳細については、「[証明書の](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)使用」を参照してください。 証明書がローカル コンピューターの信頼されたユーザー証明書ストア内に存在することを確認します。 これを行うには、mmc.exe を実行し、 **[ファイル]** メニューの スナップインの **[追加と削除]** メニュー項目を選択します。 スナップインの **[追加と削除]** ダイアログで、[**証明書] スナップ**インを選択し、 **[追加]** をクリックします。 証明書スナップイン ダイアログで、**コンピューターアカウント** を選択します。 既定では、「メッセージ セキュリティ ユーザー名」のサンプルから生成された証明書は個人/証明書フォルダーに配置されます。  これは、MMC ウィンドウの [発行先] 列の下に "localhost" として表示されます。 証明書を [**信頼さ**れた People] フォルダーにドラッグアンドドロップします。 これにより、WCF は、認証の実行時に、証明書を信頼された証明書として処理することができます。
+    独自の証明書を使用する場合は、その証明書を参照するようにコードを変更します。 証明書の作成と使用の詳細については、「[証明書の](working-with-certificates.md)使用」を参照してください。 証明書がローカル コンピューターの信頼されたユーザー証明書ストア内に存在することを確認します。 これを行うには、mmc.exe を実行し、[**ファイル**] メニューの [スナップインの**追加と削除**] メニュー項目を選択します。 [スナップインの**追加と削除**] ダイアログで、[**証明書] スナップ**インを選択し、[**追加**] をクリックします。 [証明書スナップイン] ダイアログで、[**コンピューターアカウント**] を選択します。 既定では、「メッセージ セキュリティ ユーザー名」のサンプルから生成された証明書は個人/証明書フォルダーに配置されます。  これは、MMC ウィンドウの [発行先] 列の下に "localhost" として表示されます。 証明書を [**信頼さ**れた People] フォルダーにドラッグアンドドロップします。 これにより、WCF は、認証の実行時に、証明書を信頼された証明書として処理することができます。
 
 ## <a name="to-call-the-service-passing-username-and-password"></a>ユーザー名とパスワードを渡すサービスを呼び出すには
 
@@ -91,6 +91,6 @@ Windows ドメイン ユーザー名とパスワードを使用してクライ�
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [基本認証を使用する場合のトランスポート セキュリティ](transport-security-with-basic-authentication.md)
+- [基本認証でのトランスポート セキュリティ](transport-security-with-basic-authentication.md)
 - [分散アプリケーションのセキュリティ](distributed-application-security.md)
 - [\<wsHttpBinding>](../../configure-apps/file-schema/wcf/wshttpbinding.md)

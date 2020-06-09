@@ -2,12 +2,12 @@
 title: 永続性インスタンス コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: d70617fef7ebe0a94e22e858ee403d5d4f1840e3
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 567ca62d48e80993328548b11f8b59c4fcd355fe
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728405"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600595"
 ---
 # <a name="durable-instance-context"></a>永続性インスタンス コンテキスト
 
@@ -49,7 +49,7 @@ class DurableInstanceContextChannelBase
 }
 ```
 
-これら 2 つのメソッドは、`IContextManager` 実装を使用して、メッセージへのコンテキスト ID の書き込みと、メッセージからのコンテキスト ID の読み取りを行います  (`IContextManager`は、すべてのコンテキストマネージャーのコントラクトを定義するために使用されるカスタムインターフェイスです)。チャネルは、カスタム SOAP ヘッダーまたは HTTP クッキーヘッダーにコンテキスト ID を含めることができます。 各コンテキスト マネージャの実装は、`ContextManagerBase` クラスを継承します。このクラスには、すべてのコンテキスト マネージャについての共通機能が含まれています。 このクラスの `GetContextId` メソッドは、コンテキスト ID をクライアント側で生成する際に使用されます。 コンテキスト ID が最初に生成されると、このメソッドはこれをテキスト ファイルに保存します。テキスト ファイルの名前は、リモート エンドポイント アドレスによって作成されます (通常の URI に含まれる、ファイル名として無効な文字は、@ 文字に置き換えられます)。
+これら 2 つのメソッドは、`IContextManager` 実装を使用して、メッセージへのコンテキスト ID の書き込みと、メッセージからのコンテキスト ID の読み取りを行います  ( `IContextManager` は、すべてのコンテキストマネージャーのコントラクトを定義するために使用されるカスタムインターフェイスです)。チャネルは、カスタム SOAP ヘッダーまたは HTTP クッキーヘッダーにコンテキスト ID を含めることができます。 各コンテキスト マネージャの実装は、`ContextManagerBase` クラスを継承します。このクラスには、すべてのコンテキスト マネージャについての共通機能が含まれています。 このクラスの `GetContextId` メソッドは、コンテキスト ID をクライアント側で生成する際に使用されます。 コンテキスト ID が最初に生成されると、このメソッドはこれをテキスト ファイルに保存します。テキスト ファイルの名前は、リモート エンドポイント アドレスによって作成されます (通常の URI に含まれる、ファイル名として無効な文字は、@ 文字に置き換えられます)。
 
 コンテキスト ID が後で同じリモート エンドポイントで必要になると、このメソッドは適切なファイルが存在するかどうかをチェックします。 ファイルが存在する場合は、コンテキスト ID を読み取って返します。 存在しない場合は、新しく生成されたコンテキスト ID を返してこれをファイルに保存します。 既定の構成では、これらのファイルは、現在のユーザーの temp ディレクトリに存在する ContextStore という名前のディレクトリに配置されます。 ただし、この場所はバインド要素を使用して構成できます。
 
@@ -89,7 +89,7 @@ message.Properties.Add(DurableInstanceContextUtility.ContextIdProperty, contextI
 
 次に進む前に、`Properties` クラスの `Message` コレクションの使用方法について理解することが重要です。 通常、この `Properties` コレクションは、チャネル レイヤのデータを下位レベルから上位レベルに渡すときに使用されます。 この方法により、必要なデータを、プロトコルの詳細に関係なく一貫した方法で上位レベルに渡すことができます。 つまり、チャネル層は、SOAP ヘッダーまたは HTTP クッキーヘッダーとしてコンテキスト ID を送受信できます。 しかし、上位レベルではこうした詳細を認識する必要はありません。チャネル レイヤにより、この情報が `Properties` コレクションで使用できるためです。
 
-`DurableInstanceContextChannelBase` クラスを配備したら、必要な 10 のインターフェイス (IOutputChannel、IInputChannel、IOutputSessionChannel、IInputSessionChannel、IRequestChannel、IReplyChannel、IRequestSessionChannel、IReplySessionChannel、IDuplexChannel、および IDuplexSessionChannel) のすべてを実装する必要があります。 これらは、使用可能なすべてのメッセージ交換パターン (データグラム、単一方向、双方向、およびそれらのセッションフル variant) に似ています。 これらの各実装は、前に説明した基本`ApplyContext`クラス`ReadContextId`を継承し、適切にを呼び出します。 たとえば、IOutputChannel インターフェイスを実装する `DurableInstanceContextOutputChannel` は、メッセージを送信する各メソッドから `ApplyContext` メソッドを呼び出します。
+`DurableInstanceContextChannelBase` クラスを配備したら、必要な 10 のインターフェイス (IOutputChannel、IInputChannel、IOutputSessionChannel、IInputSessionChannel、IRequestChannel、IReplyChannel、IRequestSessionChannel、IReplySessionChannel、IDuplexChannel、および IDuplexSessionChannel) のすべてを実装する必要があります。 これらは、使用可能なすべてのメッセージ交換パターン (データグラム、単一方向、双方向、およびそれらのセッションフル variant) に似ています。 これらの各実装は、前に説明した基本クラスを継承し、 `ApplyContext` 適切にを呼び出し `ReadContextId` ます。 たとえば、IOutputChannel インターフェイスを実装する `DurableInstanceContextOutputChannel` は、メッセージを送信する各メソッドから `ApplyContext` メソッドを呼び出します。
 
 ```csharp
 public void Send(Message message, TimeSpan timeout)
@@ -100,7 +100,7 @@ public void Send(Message message, TimeSpan timeout)
 }
 ```
 
-一方、-インターフェイスを`DurableInstanceContextInputChannel` `IInputChannel`実装するは、メッセージを受信する`ReadContextId`各メソッドでメソッドを呼び出します。
+一方、 `DurableInstanceContextInputChannel` -インターフェイスを実装するは、 `IInputChannel` `ReadContextId` メッセージを受信する各メソッドでメソッドを呼び出します。
 
 ```csharp
 public Message Receive(TimeSpan timeout)
@@ -122,7 +122,7 @@ if (isFirstMessage)
 }
 ```
 
-これらのチャネル実装は、 `DurableInstanceContextBindingElement`クラスと`DurableInstanceContextBindingElementSection`クラスによって WCF チャネルランタイムに適切に追加されます。 バインド要素とバインド要素のセクションの詳細については、 [Httpcookiesession](../../../../docs/framework/wcf/samples/httpcookiesession.md) channel サンプルドキュメントを参照してください。
+これらのチャネル実装は、クラスとクラスによって WCF チャネルランタイムに適切に追加され `DurableInstanceContextBindingElement` `DurableInstanceContextBindingElementSection` ます。 バインド要素とバインド要素のセクションの詳細については、 [Httpcookiesession](httpcookiesession.md) channel サンプルドキュメントを参照してください。
 
 ## <a name="service-model-layer-extensions"></a>サービス モデル レイヤの拡張
 
@@ -136,7 +136,7 @@ public interface IStorageManager
 }
 ```
 
-`SqlServerStorageManager` クラスには、既定の `IStorageManager` 実装が含まれます。 その`SaveInstance`メソッドでは、指定されたオブジェクトは XmlSerializer を使用してシリアル化され、SQL Server データベースに保存されます。
+`SqlServerStorageManager` クラスには、既定の `IStorageManager` 実装が含まれます。 そのメソッドでは、 `SaveInstance` 指定されたオブジェクトは XmlSerializer を使用してシリアル化され、SQL Server データベースに保存されます。
 
 ```csharp
 XmlSerializer serializer = new XmlSerializer(state.GetType());
@@ -171,7 +171,7 @@ using (SqlConnection connection = new SqlConnection(GetConnectionString()))
 }
 ```
 
-`GetInstance`メソッドでは、シリアル化されたデータが特定のコンテキスト ID に対して読み取られ、そこから構築されたオブジェクトが呼び出し元に返されます。
+メソッドでは、シリアル化された `GetInstance` データが特定のコンテキスト ID に対して読み取られ、そこから構築されたオブジェクトが呼び出し元に返されます。
 
 ```csharp
 object data;
@@ -234,13 +234,13 @@ else
 
 この処理の最初の手順として、チャネル レイヤを通過したコンテキスト ID を現在の InstanceContext に保存する必要があります。 InstanceContext は、WCF ディスパッチャーとサービスインスタンス間のリンクとして機能するランタイムコンポーネントです。 これを使用すると、追加の状態と動作をサービス インスタンスに提供できます。 セッションの多い通信では、コンテキスト ID は最初のメッセージだけに含まれて送信されるので、これが重要になります。
 
-WCF では、拡張可能なオブジェクトパターンを使用して新しい状態と動作を追加することで、InstanceContext ランタイムコンポーネントを拡張できます。 拡張可能オブジェクトパターンは、既存のランタイムクラスを新しい機能で拡張するか、オブジェクトに新しい状態機能を追加するために WCF で使用されます。 拡張可能オブジェクトパターンには、IExtensibleObject\<T>、iextension\<T>、および iextensioncollection\<T> の3つのインターフェイスがあります。
+WCF では、拡張可能なオブジェクトパターンを使用して新しい状態と動作を追加することで、InstanceContext ランタイムコンポーネントを拡張できます。 拡張可能オブジェクトパターンは、既存のランタイムクラスを新しい機能で拡張するか、オブジェクトに新しい状態機能を追加するために WCF で使用されます。 拡張可能オブジェクトパターンには、IExtensibleObject \<T> 、iextension \<T> 、および IExtensionCollection の3つのインターフェイスがあり \<T> ます。
 
-- IExtensibleObject\<T> インターフェイスは、機能をカスタマイズする拡張を可能にするオブジェクトによって実装されます。
+- IExtensibleObject \<T> インターフェイスは、機能をカスタマイズする拡張を可能にするオブジェクトによって実装されます。
 
-- IExtension\<T> インターフェイスは、t 型のクラスの拡張であるオブジェクトによって実装されます。
+- IExtension インターフェイスは、 \<T> T 型のクラスの拡張であるオブジェクトによって実装されます。
 
-- IExtensionCollection\<T> インターフェイスは iextensions のコレクションであり、その型を使用して iextensions を取得できます。
+- IExtensionCollection \<T> インターフェイスは iextensions のコレクションであり、その型を使用して IExtensions を取得できます。
 
 このため、IExtension インターフェイスを実装して、コンテキスト ID を保存するために必要な状態を定義する、InstanceContextExtension クラスを作成する必要があります。 このクラスではさらに、使用される記憶域マネージャを保持する状態も提供されます。 新しい状態が保存された後では、その状態を変更できません。 したがって、インスタンスが作成される際、読み取り専用のプロパティを使用してのみアクセス可能になった時点で、状態がインスタンスに提供され、保存されます。
 
@@ -282,7 +282,7 @@ public void Initialize(InstanceContext instanceContext, Message message)
 
 既に説明したように、コンテキスト ID は `Properties` クラスの `Message` コレクションから読み取られ、拡張クラスのコンストラクタに渡されます。 これによって、レイヤ間で情報を交換する場合の一貫性のある方法が示されます。
 
-次の重要な手順は、サービス インスタンスの作成手順をオーバーライドすることです。 WCF を使用すると、カスタムのインスタンス化動作を実装し、IInstanceProvider インターフェイスを使用してランタイムにフックできます。 新しい `InstanceProvider` クラスがこの処理を行うために実装されます。 インスタンスプロバイダーから要求されるサービスの種類は、コンストラクターで受け入れられます。 これは、後で新しいインスタンスの作成に使用されます。 `GetInstance`実装では、保存されたインスタンスを検索するために、ストレージマネージャーのインスタンスが作成されます。 がを返す`null`場合は、サービス型の新しいインスタンスがインスタンス化され、呼び出し元に返されます。
+次の重要な手順は、サービス インスタンスの作成手順をオーバーライドすることです。 WCF を使用すると、カスタムのインスタンス化動作を実装し、IInstanceProvider インターフェイスを使用してランタイムにフックできます。 新しい `InstanceProvider` クラスがこの処理を行うために実装されます。 インスタンスプロバイダーから要求されるサービスの種類は、コンストラクターで受け入れられます。 これは、後で新しいインスタンスの作成に使用されます。 実装では、保存されたインスタンスを検索するために、 `GetInstance` ストレージマネージャーのインスタンスが作成されます。 がを返す場合 `null` は、サービス型の新しいインスタンスがインスタンス化され、呼び出し元に返されます。
 
 ```csharp
 public object GetInstance(InstanceContext instanceContext, Message message)
@@ -302,11 +302,11 @@ public object GetInstance(InstanceContext instanceContext, Message message)
 }
 ```
 
-次に重要な手順は、、 `InstanceContextExtension` `InstanceContextInitializer`、および`InstanceProvider`の各クラスをサービスモデルランタイムにインストールすることです。 カスタム属性を使用すると、サービス実装クラスの詳細を指定して、動作をインストールできます。 `DurableInstanceContextAttribute` にはこの属性の実装が含まれ、サービス側のランタイム全体を拡張できるようにするために `IServiceBehavior` インターフェイスを実装します。
+次に重要な手順は、 `InstanceContextExtension` 、 `InstanceContextInitializer` 、およびの各クラスを `InstanceProvider` サービスモデルランタイムにインストールすることです。 カスタム属性を使用すると、サービス実装クラスの詳細を指定して、動作をインストールできます。 `DurableInstanceContextAttribute` にはこの属性の実装が含まれ、サービス側のランタイム全体を拡張できるようにするために `IServiceBehavior` インターフェイスを実装します。
 
-このクラスには、使用される記憶域マネージャの型を受け入れるプロパティがあります。 このように実装することで、ユーザーは独自`IStorageManager`の実装をこの属性のパラメーターとして指定できるようになります。
+このクラスには、使用される記憶域マネージャの型を受け入れるプロパティがあります。 このように実装することで、ユーザーは独自の `IStorageManager` 実装をこの属性のパラメーターとして指定できるようになります。
 
-`ApplyDispatchBehavior`実装では、現在`InstanceContextMode` `ServiceBehavior`の属性のが検証されています。 このプロパティが Singleton に設定されている場合、永続性インスタンスを有効化できず、`InvalidOperationException` がスローされてホストに通知されます。
+実装で `ApplyDispatchBehavior` `InstanceContextMode` は、現在の属性のが `ServiceBehavior` 検証されています。 このプロパティが Singleton に設定されている場合、永続性インスタンスを有効化できず、`InvalidOperationException` がスローされてホストに通知されます。
 
 ```csharp
 ServiceBehaviorAttribute serviceBehavior =
@@ -351,13 +351,13 @@ foreach (ChannelDispatcherBase cdb in serviceHostBase.ChannelDispatchers)
 
 残りの手順は、サービス インスタンスを永続ストレージに保存することです。 既に説明したとおり、`IStorageManager` 実装に状態を保存するには、あらかじめ必要な機能があります。 これを WCF ランタイムと統合する必要があります。 これを行うには、サービス実装クラスのメソッドに適用可能な別の属性が必要です。 つまりこの属性は、サービス インスタンスの状態を変更するメソッドに適用できることが必要です。
 
-この機能は、`SaveStateAttribute` クラスに実装されています。 また、各`IOperationBehavior`操作の WCF ランタイムを変更するクラスも実装します。 メソッドがこの属性でマークされている場合、適切な`ApplyBehavior` `DispatchOperation`が構築されている間、WCF ランタイムはメソッドを呼び出します。 このメソッドの実装には、次の1行のコードがあります。
+この機能は、`SaveStateAttribute` クラスに実装されています。 また、 `IOperationBehavior` 各操作の WCF ランタイムを変更するクラスも実装します。 メソッドがこの属性でマークされている場合、 `ApplyBehavior` 適切な `DispatchOperation` が構築されている間、WCF ランタイムはメソッドを呼び出します。 このメソッドの実装には、次の1行のコードがあります。
 
 ```csharp
 dispatch.Invoker = new OperationInvoker(dispatch.Invoker);
 ```
 
-この手順により `OperationInvoker` 型のインスタンスが作成され、作成される `Invoker` の `DispatchOperation` プロパティに割り当てられます。 `OperationInvoker` クラスは、`DispatchOperation` 用に作成された既定の操作呼び出しのラッパーです。 このクラスによって、`IOperationInvoker` インターフェイスが実装されます。 `Invoke`メソッドの実装では、実際のメソッド呼び出しが内部操作呼び出し元に委任されます。 ただし、この結果が返される前に `InstanceContext` の記憶域マネージャが使用され、サービス インスタンスが保存されます。
+この手順により `OperationInvoker` 型のインスタンスが作成され、作成される `Invoker` の `DispatchOperation` プロパティに割り当てられます。 `OperationInvoker` クラスは、`DispatchOperation` 用に作成された既定の操作呼び出しのラッパーです。 このクラスは、 `IOperationInvoker` インターフェイスを実装します。 メソッドの `Invoke` 実装では、実際のメソッド呼び出しが内部操作呼び出し元に委任されます。 ただし、この結果が返される前に `InstanceContext` の記憶域マネージャが使用され、サービス インスタンスが保存されます。
 
 ```csharp
 object result = innerOperationInvoker.Invoke(instance,
@@ -444,11 +444,11 @@ Press ENTER to shut down client
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。
 
-2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
+2. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。
 
-3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)」の手順に従います。
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。
 
 > [!NOTE]
 > このサンプルを実行するには、SQL Server 2005 または SQL Express 2005 を実行している必要があります。 SQL Server 2005 を実行している場合は、サービスの接続文字列の構成を変更する必要があります  複数コンピューターで実行している場合、SQL Server が必要なのはサーバー コンピューターだけです。
@@ -458,6 +458,6 @@ Press ENTER to shut down client
 >
 > `<InstallDrive>:\WF_WCF_Samples`
 >
-> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての[!INCLUDE[wf1](../../../../includes/wf1-md.md)] Windows Communication Foundation (wcf) とサンプルをダウンロードしてください。 このサンプルは、次のディレクトリに格納されます。
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`
