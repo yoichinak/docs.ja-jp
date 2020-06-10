@@ -2,12 +2,12 @@
 title: Windows サービス アプリケーションのホスト
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: a07aade4619b644dadd1d5acdcb5252b305b94d0
-ms.sourcegitcommit: c01c18755bb7b0f82c7232314ccf7955ea7834db
+ms.openlocfilehash: ba49d123508ceb8da677d1e9c67721e4f86aa7c3
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "75964491"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597333"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>Windows サービス アプリケーションのホスト
 Windows サービス (従来 Windows NT サービスと呼ばれていたもの) が提供するプロセス モデルが特に適しているのは、長い期間にわたって動作し続ける必要があり、どのような形式でもユーザー インターフェイスを表示することのないアプリケーションです。 Windows サービス アプリケーションのプロセスの有効期間を管理するのは、サービス コントロール マネージャー (SCM) です。SCM を使用して、Windows サービス アプリケーションを起動、停止、および一時停止できます。 コンピューターの起動時に自動的に開始するように Windows サービスプロセスを構成し、"always on" アプリケーション用の適切なホスティング環境にすることができます。 Windows サービスアプリケーションの詳細については、「 [Windows サービスアプリケーション](https://go.microsoft.com/fwlink/?LinkId=89450)」を参照してください。  
@@ -30,7 +30,7 @@ Windows サービス (従来 Windows NT サービスと呼ばれていたもの)
   
     - <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> をオーバーライドして、<xref:System.ServiceModel.ServiceHost> のインスタンスを必要な個数開くようにします。 1つの Windows サービスアプリケーションで、1つのグループとして開始および停止する複数の WCF サービスをホストできます。  
   
-    - <xref:System.ServiceProcess.ServiceBase.OnStop%2A> をオーバーライドして、<xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29>中に開始された実行中の WCF サービス <xref:System.ServiceModel.ServiceHost> で <xref:System.ServiceModel.Channels.CommunicationObject.Closed> を呼び出します。  
+    - <xref:System.ServiceProcess.ServiceBase.OnStop%2A>をオーバーライド <xref:System.ServiceModel.Channels.CommunicationObject.Closed> して、で <xref:System.ServiceModel.ServiceHost> 開始された実行中の WCF サービスでを呼び出し <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> ます。  
   
     - <xref:System.ServiceModel.Channels.CommunicationObject.Faulted> の <xref:System.ServiceModel.ServiceHost> イベントを定期受信し、エラー時には、<xref:System.ServiceProcess.ServiceController> クラスを使用して Windows サービス アプリケーションをシャットダウンします。  
   
@@ -40,7 +40,7 @@ Windows サービス (従来 Windows NT サービスと呼ばれていたもの)
 
 - <xref:System.ServiceProcess>
 - [チュートリアル: コンポーネント デザイナーによる Windows サービス アプリケーションの作成](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [方法 : マネージド Windows サービスで WCF サービスをホストする](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [Windows サービス ホスト](../../../../docs/framework/wcf/samples/windows-service-host.md)
+- [方法: マネージド Windows サービスで WCF サービスをホストする](how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [Windows サービス ホスト](../samples/windows-service-host.md)
 - [サービス アプリケーションのプログラミング アーキテクチャ](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [AppFabric のホスティング機能](https://docs.microsoft.com/previous-versions/appfabric/ee677189(v=azure.10))

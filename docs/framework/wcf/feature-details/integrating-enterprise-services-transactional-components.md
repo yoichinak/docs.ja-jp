@@ -2,16 +2,16 @@
 title: エンタープライズ サービスのトランザクション コンポーネントの統合
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
-ms.openlocfilehash: 292573f911459d8a8419e09d81fd1e54dbc6c70b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1c4fabfadb113c79b216fa10ff80b551ba0f9716
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79184738"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596852"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>エンタープライズ サービスのトランザクション コンポーネントの統合
 
-Windows 通信基盤 (WCF) は、エンタープライズ サービスとの統合のための自動メカニズムを提供します ( [COM+ アプリケーションとの統合を](integrating-with-com-plus-applications.md)参照してください ) 。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能は<xref:System.Transactions>インフラストラクチャ上に構築されているため、エンタープライズ サービスと WCF を統合するプロセスは、エンタープライズ サービスと[COM+ トランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))との相互運用性で説明されているように、エンタープライズ サービスとエンタープライズ サービス間<xref:System.Transactions>の相互運用性を指定するためのプロセスと同じです。  
+Windows Communication Foundation (WCF) は、エンタープライズサービスと統合するための自動メカニズムを提供します (「 [COM + アプリケーションとの統合](integrating-with-com-plus-applications.md)」を参照してください)。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能はインフラストラクチャ上に構築されているため <xref:System.Transactions> 、Enterprise services と wcf を統合するプロセスは、エンタープライズサービス <xref:System.Transactions> [と com + トランザクションとの相互運用性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms229974(v=vs.85))に関する説明にあるとおり、エンタープライズサービス間の相互運用性を指定するためのものと同じです。  
   
  フローされる受信トランザクションと COM+ コンテキスト トランザクションの間に必要なレベルの相互運用性を提供するには、サービス実装で <xref:System.Transactions.TransactionScope> インスタンスを作成し、<xref:System.Transactions.EnterpriseServicesInteropOption> 列挙型の適切な値を使用する必要があります。  
   
@@ -95,5 +95,5 @@ static void Main()
   
 ## <a name="see-also"></a>関連項目
 
-- [COM+ アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [COM アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications.md)
+- [COM + アプリケーションとの統合](integrating-with-com-plus-applications.md)
+- [COM アプリケーションとの統合](integrating-with-com-applications.md)

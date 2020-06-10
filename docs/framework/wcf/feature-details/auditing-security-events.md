@@ -4,35 +4,35 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: 535f19741ff26e9472ce56ff06b670f7d0523be8
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b130ed57ba086535122c8c8795c42863348870d0
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185452"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597658"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
-Windows 通信基盤 (WCF) で作成されたアプリケーションは、監査機能を使用してセキュリティ イベント (成功、失敗、またはその両方) をログに記録できます。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
+Windows Communication Foundation (WCF) を使用して作成されたアプリケーションは、監査機能を使用してセキュリティイベント (成功、失敗、またはその両方) をログに記録できます。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
   
  監査を使用すると、管理者は既に発生した攻撃や現在進行中の攻撃を検出できます。 また、開発者がセキュリティ関連の問題をデバッグする際にも役立ちます。 たとえば、認証またはポリシー チェックの構成エラーによって承認済みユーザーへのアクセスが拒否された場合、開発者は、イベント ログを検査することによって、このエラーの原因をすばやく発見し、取り出すことができます。  
   
- WCF セキュリティの詳細については、「[セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)」を参照してください。 WCF のプログラミングの詳細については、「[基本 WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)」を参照してください。  
+ WCF セキュリティの詳細については、「[セキュリティの概要](security-overview.md)」を参照してください。 WCF のプログラミングの詳細については、「[基本的な Wcf プログラミング](../basic-wcf-programming.md)」を参照してください。  
   
 ## <a name="audit-level-and-behavior"></a>監査レベルと動作  
  セキュリティ監査には次の 2 つのレベルがあります。  
   
 - 呼び出し元を承認するサービス承認レベル。  
   
-- WCF がメッセージの有効性をチェックし、呼び出し元を認証するメッセージ レベル。  
+- メッセージレベル。 WCF がメッセージの有効性をチェックし、呼び出し元を認証します。  
   
- 両方の監査レベルで成功または失敗を確認*できます。*  
+ 成功または失敗の両方の監査レベルを確認できます。これは、*監査の動作*と呼ばれます。  
   
 ## <a name="audit-log-location"></a>監査ログの場所  
- 監査のレベルと動作を決定したら、ユーザー (または管理者) は監査ログの場所を指定できます。 監査ログの場所は、Default、Application、および Security の 3 つから選択できます。 Default を指定した場合、ログの実際の場所は、ユーザーが使用しているシステムと、セキュリティ ログへの書き込みがサポートされているかどうかによって決まります。 詳細については、このトピックの「オペレーティング システム」を参照してください。  
+ 監査のレベルと動作を決定したら、ユーザー (または管理者) は監査ログの場所を指定できます。 監査ログの場所は、Default、Application、および Security の 3 つから選択できます。 Default を指定した場合、ログの実際の場所は、ユーザーが使用しているシステムと、セキュリティ ログへの書き込みがサポートされているかどうかによって決まります。 詳細については、このトピックで後述する「オペレーティングシステム」を参照してください。  
   
  セキュリティ ログへの書き込みを行うには、`SeAuditPrivilege` が必要です。 既定では、この権限は Local System アカウントと Network Service アカウントだけに与えられています。 セキュリティ ログの `read` および `delete` 機能を管理するには、`SeSecurityPrivilege` が必要です。 既定では、この権限は管理者だけに与えられています。  
   
- これに対し、アプリケーション ログは認証済みユーザーが読み書きできます。 Windows XP では、既定で監査イベントがアプリケーション ログに書き込まれます。 すべての認証済みユーザーに表示される個人情報をログに格納することもできます。  
+ これに対し、アプリケーション ログは認証済みユーザーが読み書きできます。 既定では、Windows XP は監査イベントをアプリケーションログに書き込みます。 すべての認証済みユーザーに表示される個人情報をログに格納することもできます。  
   
 ## <a name="suppressing-audit-failures"></a>監査エラーの抑制  
  監査中に監査エラーを表示しないように指定するオプションも用意されています。 既定では、監査エラーはアプリケーションに影響を与えません。 ただし、必要に応じて、このオプションを `false` に設定し、例外をスローすることもできます。  
@@ -51,10 +51,10 @@ Windows 通信基盤 (WCF) で作成されたアプリケーションは、監�
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.ServiceAuthorizationAuditLevel%2A>|サービス レベルで監査されるサービス承認イベントの種類を指定します。 `None`、`Failure`、`Success` および `SuccessOrFailure` から選択できます。|  
 |<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A>|監査が失敗した場合に、クライアント要求をどのように処理するかを指定します。 たとえば、`SeAuditPrivilege` を持たないサービスがセキュリティ ログへの書き込みを試行したとします。 この場合、既定値の `true` が設定されていると、エラーは無視され、クライアント要求は正常に処理されます。|  
   
- 監査イベントをログに記録するアプリケーションの設定例については、「[方法 : セキュリティ イベントを監査する](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)」を参照してください。  
+ 監査イベントをログに記録するようにアプリケーションを設定する例については、「[方法: セキュリティイベントを監査](how-to-audit-wcf-security-events.md)する」を参照してください。  
   
 ### <a name="configuration"></a>構成  
- 構成を使用して、 の動作の下に[\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)を追加して監査[\<動作を指定>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)することもできます。 次のコードに示すように、[\<動作>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)の下に要素を追加する必要があります。  
+ 構成を使用して、の下にを追加することによって監査の動作を指定することもでき [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md) [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md) ます。 次のコードに示すように、の下に要素を追加する必要があり [\<behavior>](../../configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ます。  
   
 ```xml  
 <configuration>  
@@ -73,12 +73,12 @@ Windows 通信基盤 (WCF) で作成されたアプリケーションは、監�
 </configuration>  
 ```  
   
- 監査が有効になっているが、`auditLogLocation` が指定されていない場合、セキュリティ ログへの書き込みをサポートしているプラットフォームでの既定のログ名は "セキュリティ" ログになります。それ以外の場合は、"アプリケーション" ログになります。 セキュリティ ログへの書き込みをサポートするのは、Windows Server 2003 および Windows Vista オペレーティング システムだけです。 詳細については、このトピックの「オペレーティング システム」を参照してください。  
+ 監査が有効になっているが、`auditLogLocation` が指定されていない場合、セキュリティ ログへの書き込みをサポートしているプラットフォームでの既定のログ名は "セキュリティ" ログになります。それ以外の場合は、"アプリケーション" ログになります。 セキュリティログへの書き込みをサポートしているのは、Windows Server 2003 および Windows Vista オペレーティングシステムだけです。 詳細については、このトピックで後述する「オペレーティングシステム」を参照してください。  
   
 ## <a name="security-considerations"></a>セキュリティに関する考慮事項  
  監査が有効になっていることが悪意のあるユーザーに知られた場合、そのユーザーは監査エントリの書き込みにつながる無効なメッセージを送信する可能性があります。 このような方法で監査ログに書き込みが行われると、監査システムに障害が発生します。 これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。  
   
- Windows XP 上のアプリケーション ログに書き込まれた監査イベントは、認証されたユーザーに対して可視になります。  
+ Windows XP 上のアプリケーションログに書き込まれる監査イベントは、認証されたユーザーに表示されます。  
   
 ## <a name="choosing-between-application-and-security-event-logs"></a>アプリケーションまたはセキュリティ イベント ログの選択  
  アプリケーション イベント ログとセキュリティ イベント ログのどちらにログを記録するかを選択するには、次の表の情報を参考にしてください。  
@@ -88,7 +88,7 @@ Windows 通信基盤 (WCF) で作成されたアプリケーションは、監�
 |システム|アプリケーション ログ|Security log|  
 |------------|---------------------|------------------|  
 |Windows XP SP2 以降|サポートされています|サポートされていません|  
-|2003 SP1 およびウィンドウズ ビスタ|サポートされています|スレッド コンテキストが `SeAuditPrivilege` を持つ必要があります。|  
+|Windows Server 2003 SP1 および Windows Vista|サポートされています|スレッド コンテキストが `SeAuditPrivilege` を持つ必要があります。|  
   
 #### <a name="other-factors"></a>その他の要素  
  オペレーティング システム以外に、ログ記録の使用可能性を制御する設定を次の表に示します。  
@@ -102,9 +102,9 @@ Windows 通信基盤 (WCF) で作成されたアプリケーションは、監�
 
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
-- [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [方法 : セキュリティ イベントを監査する](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
-- [\<>を監査します。](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
-- [\<動作>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [セキュリティの概要](security-overview.md)
+- [基本的な WCF プログラミング](../basic-wcf-programming.md)
+- [方法: セキュリティ イベントを監査する](how-to-audit-wcf-security-events.md)
+- [\<serviceSecurityAudit>](../../configure-apps/file-schema/wcf/servicesecurityaudit.md)
+- [\<behaviors>](../../configure-apps/file-schema/wcf/behaviors.md)
 - [Windows Server AppFabric のセキュリティ モデル](https://docs.microsoft.com/previous-versions/appfabric/ee677202(v=azure.10))

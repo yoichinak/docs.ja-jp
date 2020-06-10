@@ -2,12 +2,12 @@
 title: X.509 証明書検証
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
-ms.openlocfilehash: ba73381bb6211dcbd1ddad1457f9ae8611008d43
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 32d99b93ef014967aa04bc70f73fbd2ebcfe2c60
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141212"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84594830"
 ---
 # <a name="x509-certificate-validator"></a>X.509 証明書検証
 
@@ -23,7 +23,7 @@ ms.locfileid: "82141212"
 
 - サーバーがそのサーバーの X.509 証明書を使用して認証される。
 
-サービスは、構成ファイル App.config を使用して定義された、サービスと通信するための単一のエンドポイントを公開します。エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 バインディングは、既定でとクライアント`wsHttpBinding`証明書の認証`WSSecurity`を使用する標準で構成されます。 サービス動作では、クライアントの X.509 証明書を検証するためのカスタム モード、および検証クラスの型を指定します。 さらに、serviceCertificate 要素を使用しているサーバー証明書も指定します。 サーバー証明書には、 `SubjectName` [ \<serviceCertificate>](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)のと同じ値が`findValue`含まれている必要があります。
+サービスは、構成ファイル App.config を使用して定義された、サービスと通信するための単一のエンドポイントを公開します。エンドポイントは、アドレス、バインディング、およびコントラクトで構成されます。 バインディングは、 `wsHttpBinding` 既定でとクライアント証明書の認証を使用する標準で構成され `WSSecurity` ます。 サービス動作では、クライアントの X.509 証明書を検証するためのカスタム モード、および検証クラスの型を指定します。 さらに、serviceCertificate 要素を使用しているサーバー証明書も指定します。 サーバー証明書には、のと同じ値が含まれている必要があり `SubjectName` `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) ます。
 
 ```xml
   <system.serviceModel>
@@ -305,7 +305,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 #### <a name="to-set-up-and-build-the-sample"></a>サンプルをセットアップしてビルドするには
 
-1. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
+1. ソリューションをビルドするには、「 [Windows Communication Foundation サンプルのビルド](building-the-samples.md)」の手順に従います。
 
 2. サンプルを単一コンピューター構成で実行するか、複数コンピューター構成で実行するかに応じて、次の手順に従います。
 
@@ -332,13 +332,13 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
 4. クライアント プログラム ファイルを、クライアント コンピューターに作成したクライアント ディレクトリにコピーします。 Setup.bat、Cleanup.bat、ImportServiceCert.bat の各ファイルもクライアントにコピーします。
 
-5. サーバーで、管理者`setup.bat service`特権で開かれた Visual Studio の開発者コマンドプロンプトでを実行します。 引数を指定してを実行`setup.bat`すると、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service .cer という名前のファイルにエクスポートされます。 `service`
+5. サーバーで、 `setup.bat service` 管理者特権で開かれた Visual Studio の開発者コマンドプロンプトでを実行します。 引数を指定してを実行する `setup.bat` `service` と、コンピューターの完全修飾ドメイン名を使用してサービス証明書が作成され、service .cer という名前のファイルにエクスポートされます。
 
-6. ServiceCertificate を編集して、新しい証明書名 ( `findValue` [>の属性) を反映します。これは、コンピューターの完全修飾ドメイン名と同じ\<](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)です。 また、 \<service>/\<baseaddresses> 要素のコンピューター名を localhost からサービスコンピューターの完全修飾名に変更します。
+6. サービスの .exe を編集して、新しい証明書名 (の属性) を反映します。 `findValue` [\<serviceCertificate>](../../configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md) これは、コンピューターの完全修飾ドメイン名と同じです。 また、要素のコンピューター名 \<service> / \<baseAddresses> を localhost からサービスコンピューターの完全修飾名に変更します。
 
 7. Service.cer ファイルを、サービス ディレクトリからクライアント コンピューターのクライアント ディレクトリにコピーします。
 
-8. クライアントで、管理者`setup.bat client`特権で開かれた Visual Studio の開発者コマンドプロンプトでを実行します。 `setup.bat`に `client` 引数を指定して実行すると、client.com というクライアント証明書が作成され、Client.cer というファイルにエクスポートされます。
+8. クライアントで、 `setup.bat client` 管理者特権で開かれた Visual Studio の開発者コマンドプロンプトでを実行します。 `setup.bat`に `client` 引数を指定して実行すると、client.com というクライアント証明書が作成され、Client.cer というファイルにエクスポートされます。
 
 9. クライアント コンピューターの Client.exe.config ファイルで、エンドポイントのアドレス値をサービスの新しいアドレスに合わせます。 そのためには、localhost をサーバーの完全修飾ドメイン名に置き換えます。
 
