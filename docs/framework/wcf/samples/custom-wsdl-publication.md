@@ -2,12 +2,12 @@
 title: カスタム WSDL パブリケーション
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
-ms.openlocfilehash: ae6d5fdf243d5000090e993bd3353c6180d0ccaa
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b18ac2f72d58c768b3784e1c414a71cdaec50c01
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79145060"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84596696"
 ---
 # <a name="custom-wsdl-publication"></a>カスタム WSDL パブリケーション
 このサンプルでは次の操作を行います。  
@@ -18,7 +18,7 @@ ms.locfileid: "79145060"
   
 - カスタム コントラクトの動作とカスタム操作の動作に、それぞれ <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> と <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> を実装し、インポートされたコントラクトと操作の CodeDOM に、インポートされた注釈をコメントとして書き込みます。  
   
-- WSDL<xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType>をダウンロードする場合、カスタム<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>WSDL インポーターを使用して WSDL をインポート<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>する、および Wsdl アノテーションを含む Windows 通信基盤 (WCF) クライアント コードを C# および Visual Basic のコメント //および '' として生成する場合に使用します。  
+- を使用して、 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> wsdl をダウンロードし、 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType> カスタム WSDL インポーターを使用して wsdl をインポートするためにを使用し <xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType> ます。また、C# および Visual Basic のコメントとして wsdl 注釈を使用して Windows Communication Foundation (WCF) クライアントコードを生成するには、を使用します。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -234,7 +234,7 @@ public void GenerateOperation(OperationContractGenerationContext context)
 </client>  
 ```  
   
- カスタム インポーターを指定すると、WCF メタデータ システムは、その目的のために作成された任意<xref:System.ServiceModel.Description.WsdlImporter>のカスタム インポーターを読み込みます。 このサンプルでは、<xref:System.ServiceModel.Description.MetadataExchangeClient> を使用してメタデータをダウンロードし、適切に構成された <xref:System.ServiceModel.Description.WsdlImporter> を使用してサンプルで作成されたカスタム インポータによってメタデータをインポートします。さらに、<xref:System.ServiceModel.Description.ServiceContractGenerator> を使用して、変更されたコントラクト情報を Visual Basic および C# のクライアント コードにコンパイルします。このコードは Intellisense をサポートする Visual Studio で使用するか、または XML ドキュメントにコンパイルできます。  
+ カスタムインポーターが指定されると、WCF メタデータシステムは、 <xref:System.ServiceModel.Description.WsdlImporter> その目的のために作成されたにカスタムインポーターを読み込みます。 このサンプルでは、<xref:System.ServiceModel.Description.MetadataExchangeClient> を使用してメタデータをダウンロードし、適切に構成された <xref:System.ServiceModel.Description.WsdlImporter> を使用してサンプルで作成されたカスタム インポータによってメタデータをインポートします。さらに、<xref:System.ServiceModel.Description.ServiceContractGenerator> を使用して、変更されたコントラクト情報を Visual Basic および C# のクライアント コードにコンパイルします。このコードは Intellisense をサポートする Visual Studio で使用するか、または XML ドキュメントにコンパイルできます。  
   
 ```csharp
 /// From WSDL Documentation:  
@@ -292,17 +292,17 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。  
+2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の手順に従います。  
   
-3. 単一または複数のコンピューターにまたがる構成でサンプルを実行するには[、「Windows コミュニケーション ファウンデーション サンプルの実行」の手順に](../../../../docs/framework/wcf/samples/running-the-samples.md)従います。  
+3. サンプルを単一コンピューター構成または複数コンピューター構成で実行するには、「 [Windows Communication Foundation サンプルの実行](running-the-samples.md)」の手順に従います。  
   
 > [!IMPORTANT]
 > サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Metadata\WsdlDocumentation`  

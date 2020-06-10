@@ -2,15 +2,15 @@
 title: '方法 : 一方向コントラクトと要求/応答コントラクトを使用して WCF サービスにアクセスする'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 533b97892b15c9034679efba6e4da5e72b56099b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 9c8bd0d21be1d87d536eb6f943e782fc4da352a8
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79185142"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84597190"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>方法 : 一方向コントラクトと要求/応答コントラクトを使用して WCF サービスにアクセスする
-次の手順では、一方向コントラクトと要求/応答コントラクトを定義し、双方向通信パターンを使用しない Windows 通信基盤 (WCF) サービスにアクセスする方法について説明します。  
+次の手順では、一方向コントラクトと要求/応答コントラクトを定義し、双方向通信パターンを使用しない Windows Communication Foundation (WCF) サービスにアクセスする方法について説明します。  
   
 ### <a name="to-define-the-service"></a>サービスを定義するには  
   
@@ -109,7 +109,7 @@ ms.locfileid: "79185142"
   
 ### <a name="to-access-the-service"></a>サービスにアクセスするには  
   
-1. 次のサンプル コードに示すように、メタデータ交換エンドポイント アドレスを使用してサービスメタデータ[ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) [を](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)実行し`Svcutil http://localhost:8000/Service`、サービスのクライアント クラスを作成します。  
+1. 次のサンプルコードに示すように、servicemodel メタデータユーティリティツール ( [svcutil.exe](../servicemodel-metadata-utility-tool-svcutil-exe.md) ) を実行して、メタデータ交換エンドポイントアドレスを使用してサービスのクライアントクラスを作成します。 `Svcutil http://localhost:8000/Service` また、 [Servicemodel メタデータユーティリティツール (svcutil.exe)](../servicemodel-metadata-utility-tool-svcutil-exe.md)によって、一連のインターフェイスとクラスが生成されます。  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -402,4 +402,4 @@ namespace Microsoft.ServiceModel.Samples
   
 ## <a name="see-also"></a>関連項目
 
-- [一方向サービス](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+- [一方向サービス](one-way-services.md)

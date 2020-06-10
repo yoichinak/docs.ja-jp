@@ -2,17 +2,17 @@
 title: 弱い型指定の JSON のシリアル化のサンプル
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: bdeaffe31ba9bced28eebcfe294fc9944e5d05d0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a503878f1cbb60090b648da8dfec741edbf02d1b
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79143591"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602324"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱い型指定の JSON のシリアル化のサンプル
-特定のワイヤ形式にユーザー定義型をシリアル化するときや、ユーザー定義型にワイヤ形式を逆シリアル化するときは、そのユーザー定義型がサービスとクライアントの両方で使用可能である必要があります。 通常、これを実現するために、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性がこのユーザー定義型に適用され、 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性がそのメンバに適用されます。 この機構は、「 [How to: Serialize and Deserialize JSON Data](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)」トピックで説明されているように、JavaScript Object Notation (JSON) オブジェクトを使用する場合にも適用されます。  
+特定のワイヤ形式にユーザー定義型をシリアル化するときや、ユーザー定義型にワイヤ形式を逆シリアル化するときは、そのユーザー定義型がサービスとクライアントの両方で使用可能である必要があります。 通常、これを実現するために、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性がこのユーザー定義型に適用され、 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性がそのメンバに適用されます。 この機構は、「 [How to: Serialize and Deserialize JSON Data](../feature-details/how-to-serialize-and-deserialize-json-data.md)」トピックで説明されているように、JavaScript Object Notation (JSON) オブジェクトを使用する場合にも適用されます。  
   
- シナリオによっては、Windows 通信基盤 (WCF) サービスまたはクライアントは、開発者の制御の範囲外にあるサービスまたはクライアントによって生成された JSON オブジェクトにアクセスする必要があります。 JSON API を公開する Web サービスが増えるほど、任意の JSON オブジェクトを逆シリアル化するローカルのユーザー定義型を WCF 開発者が構築することは現実的ではありません。 このサンプルでは、ユーザー定義型を作成せずに、逆シリアル化された任意の JSON オブジェクトを使用する WCF 開発者を使用できるようにするメカニズムを提供します。 このしくみは、JSON オブジェクトが逆シリアル化される型がコンパイル時に不明なため、JSON オブジェクトの *弱い型指定のシリアル化* と呼ばれます。  
+ 場合によっては、Windows Communication Foundation (WCF) サービスまたはクライアントが、開発者の管理外にあるサービスまたはクライアントによって生成された JSON オブジェクトにアクセスする必要があります。 JSON Api を公開している Web サービスの数が増えるにつれて、WCF 開発者は、任意の JSON オブジェクトを逆シリアル化するためにローカルユーザー定義型を構築するのが現実的ではなくなる可能性があります。 このサンプルでは、WCF 開発者がユーザー定義型を作成せずに、逆シリアル化された任意の JSON オブジェクトを操作できるようにするメカニズムを提供します。 このしくみは、JSON オブジェクトが逆シリアル化される型がコンパイル時に不明なため、JSON オブジェクトの *弱い型指定のシリアル化* と呼ばれます。  
   
 > [!NOTE]
 > このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -23,7 +23,7 @@ ms.locfileid: "79143591"
 {"personal": {"name": "Paul", "age": 23, "height": 1.7, "isSingle": true, "luckyNumbers": [5,17,21]}, "favoriteBands": ["Band ABC", "Band XYZ"]}  
 ```  
   
- このオブジェクトを逆シリアル化するには、WCF クライアントは、次のユーザー定義型を実装する必要があります。  
+ このオブジェクトを逆シリアル化するには、WCF クライアントは次のユーザー定義型を実装する必要があります。  
   
 ```csharp  
 [DataContract]  
@@ -58,7 +58,7 @@ ms.locfileid: "79143591"
   
  この手順は、特にクライアントが複数の型の JSON オブジェクトを処理する必要がある場合に、複雑になる可能性があります。  
   
- このサンプルで示す `JsonObject` 型では、逆シリアル化された JSON オブジェクトの弱い型指定の表現を使用します。 `JsonObject`JSON オブジェクトと .NET Framework ディクショナリの間の自然なマッピング、および JSON 配列と .NET Framework 配列の間のマッピングに依存します。 `JsonObject` 型のコードを次に示します。  
+ このサンプルで示す `JsonObject` 型では、逆シリアル化された JSON オブジェクトの弱い型指定の表現を使用します。 `JsonObject`は、JSON オブジェクトと .NET Framework ディクショナリ間の自然なマッピング、および JSON 配列と .NET Framework 配列間のマッピングに依存しています。 `JsonObject` 型のコードを次に示します。  
   
 ```csharp  
 // Instantiation of JsonObject json omitted  
@@ -78,7 +78,7 @@ string[] favoriteBands = {
                                     };  
 ```  
   
- コンパイル時に型を宣言せずに、JSON オブジェクトと配列を "参照" できます。 トップレベルの `["root"]` オブジェクトの詳細については、「 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)」トピックで説明されているように、JavaScript Object Notation (JSON) オブジェクトを使用する場合にも適用されます。  
+ コンパイル時に型を宣言せずに、JSON オブジェクトと配列を "参照" できます。 トップレベルの `["root"]` オブジェクトの詳細については、「 [Mapping Between JSON and XML](../feature-details/mapping-between-json-and-xml.md)」トピックで説明されているように、JavaScript Object Notation (JSON) オブジェクトを使用する場合にも適用されます。  
   
 > [!NOTE]
 > `JsonObject` クラスは、例としてのみ提供されています。 テストが完全には行われていないため、運用環境では使用しないでください。 弱い型指定の JSON のシリアル化の明確な影響の 1 つは、 `JsonObject`の使用時にタイプ セーフがなくなることです。  
@@ -110,7 +110,7 @@ XmlDictionaryReader reader = channel.GetMemberProfile().GetReaderAtBodyContents(
 JsonObject json = new JsonObject(reader);  
 ```  
   
- `JsonObject` コンストラクタは、 <xref:System.Xml.XmlDictionaryReader>メソッドを使用して取得される <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> を受け取ります。 リーダーには、クライアントによって受信された JSON メッセージの XML 表現が含まれています。 詳細については、[トピック「JSON と XML のマッピング](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)」を参照してください。  
+ `JsonObject` コンストラクタは、 <xref:System.Xml.XmlDictionaryReader>メソッドを使用して取得される <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents%2A> を受け取ります。 リーダーには、クライアントによって受信された JSON メッセージの XML 表現が含まれています。 詳細については、「 [JSON と XML 間のマッピング](../feature-details/mapping-between-json-and-xml.md)」を参照してください。  
   
  このプログラムの出力は、次のようになります。  
   
@@ -125,9 +125,9 @@ My favorite bands are Band ABC and Band XYZ.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. [Windows コミュニケーションファウンデーション サンプルのワンタイム セットアップ手順を](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)実行したことを確認します。  
+1. [Windows Communication Foundation サンプルの1回限りのセットアップ手順](one-time-setup-procedure-for-the-wcf-samples.md)を実行したことを確認します。  
   
-2. 「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の説明に従って、ソリューション WeaklyTypedJson.sln をビルドします。  
+2. 「 [Building the Windows Communication Foundation Samples](building-the-samples.md)」の説明に従って、ソリューション WeaklyTypedJson.sln をビルドします。  
   
 3. ソリューションを実行する  
   
@@ -136,6 +136,6 @@ My favorite bands are Band ABC and Band XYZ.
 >
 > `<InstallDrive>:\WF_WCF_Samples`  
 >
-> このディレクトリが存在しない場合は[、.NET Framework 4 の Windows コミュニケーション ファウンデーション (WCF) および Windows ワークフローファウンデーション (WF) サンプル](https://www.microsoft.com/download/details.aspx?id=21459)に移動して、すべての Windows 通信基盤 (WCF) とサンプルを[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ダウンロードします。 このサンプルは、次のディレクトリに格納されます。  
+> このディレクトリが存在しない場合は、 [Windows Communication Foundation (wcf) および Windows Workflow Foundation (WF) のサンプルの .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=21459)にアクセスして、すべての WINDOWS COMMUNICATION FOUNDATION (wcf) とサンプルをダウンロードして [!INCLUDE[wf1](../../../../includes/wf1-md.md)] ください。 このサンプルは、次のディレクトリに格納されます。  
 >
 > `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
