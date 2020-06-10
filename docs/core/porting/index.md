@@ -3,12 +3,12 @@ title: .NET Framework から .NET Core への移植
 description: 移植プロセスを理解し、.NET Framework プロジェクトを .NET Core に移植する際に役立つツールを確認します。
 author: cartermp
 ms.date: 10/22/2019
-ms.openlocfilehash: c6797a5b3a97ddd01f86498d896e859baf8997be
-ms.sourcegitcommit: c2c1269a81ffdcfc8675bcd9a8505b1a11ffb271
+ms.openlocfilehash: 74fe4519e41a07bc78a4dc346f8d1b52b5c7d092
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/25/2020
-ms.locfileid: "82158287"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502770"
 ---
 # <a name="overview-of-porting-from-net-framework-to-net-core"></a>.NET Framework から .NET Core への移植の概要
 
@@ -39,6 +39,9 @@ ms.locfileid: "82158287"
 
 - [Visual Studio の依存関係図](/visualstudio/modeling/create-layer-diagrams-from-your-code)に関する説明からは、ソリューション内のコードの有向グラフを作成できます。
 - `msbuild _SolutionPath_ /t:GenerateRestoreGraphFile /p:RestoreGraphOutputPath=graph.dg.json` を実行すると、プロジェクト参照の一覧を含む json ドキュメントを生成できます。
+- アセンブリの依存関係図を取得するには、`-r DGML` スイッチを使用して [.NET Portability Analyzer](../../standard/analyzers/portability-analyzer.md) を実行します。 詳細については、[このページ](../../standard/analyzers/portability-analyzer.md#solution-wide-view)を参照してください。
+
+依存関係の情報を取得した後は、その情報を使用してリーフ ノードから開始し、次のセクションのステップを適用して依存関係ツリーを操作できます。
 
 ## <a name="per-project-steps"></a>プロジェクト別の手順
 
