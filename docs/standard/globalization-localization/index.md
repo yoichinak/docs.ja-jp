@@ -1,5 +1,6 @@
 ---
 title: .NET アプリケーションのグローバライズとローカライズ
+description: 国際化対応アプリケーションを開発する方法について説明します。 .NET でのグローバリゼーション、ローカライズ可能性の確認、ローカライズについて説明します。
 ms.date: 06/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - application development [.NET], globalization
 - multilingual application development
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
-ms.openlocfilehash: 10d07a02a7ff744a87b920fd97df24b076c22cc3
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: a3894b7bf9b8aa013b346c169d21c6db270fe987
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288291"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84600790"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET アプリケーションのグローバライズとローカライズ
 

@@ -1,5 +1,6 @@
 ---
 title: 属性を使用したメタデータの拡張
+description: .NET の属性を使用してメタデータを拡張する方法について説明します。 属性は、型やフィールドなどのプログラミング要素に注釈を付けるための、キーワードに似た記述的な宣言です。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - runtime, attributes
 - extending metadata
 ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
-ms.openlocfilehash: d27dc3d77a8f72123f23d9f5a893d144bacee662
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: c77de970c5550bd896e83854414592d70eb9dc48
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84598633"
 ---
 # <a name="extending-metadata-using-attributes"></a>属性を使用したメタデータの拡張
 共通言語ランタイムでは、属性と呼ばれるキーワードに似た記述的な宣言を追加して、型、フィールド、メソッド、プロパティなどのプログラミング要素に注釈を付けることができます。 ランタイム用にコードをコンパイルすると、コードは Microsoft Intermediate Language (MSIL) に変換され、コンパイラによって生成されるメタデータと共に、ポータブル実行可能 (PE) ファイルに格納されます。 属性を使用すると、ランタイム リフレクション サービスで抽出できる記述的な情報をメタデータに追加できます。 属性は、<xref:System.Attribute?displayProperty=nameWithType> から派生する特殊なクラスのインスタンスを宣言するときに、コンパイラによって作成されます。  

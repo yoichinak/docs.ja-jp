@@ -1,17 +1,18 @@
 ---
 title: マネージド スレッド処理
+description: 基本、ベスト プラクティス、スレッド オブジェクトと機能、リファレンス ページなどについては、.NET でのマネージ スレッド処理に関する記事へのリンクをご覧ください。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - threading [.NET Framework], about threading
 - managed threading
 ms.assetid: 7b46a7d9-c6f1-46d1-a947-ae97471bba87
-ms.openlocfilehash: e4c19b664e8fc040fdc4a284b30f6104d676088d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 570db45138c85c4252967404da4404d434660d69
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84279155"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84599751"
 ---
 # <a name="managed-threading"></a>マネージド スレッド処理
 アプリケーションを開発する場合、対象のコンピューターがプロセッサがシングルまたはマルチのいずれの場合でも、アプリケーションにユーザーとの迅速な対話を提供する必要があります。これはアプリケーションがほかの処理の実行中であっても同じことです。 アプリケーションによるユーザーへの迅速な応答を維持すると同時に、ユーザー イベントの合間やその処理中にプロセッサを使用する最も強力な方法は、複数の実行スレッドを使用することです。 ここでは、スレッド処理の基本概念について、マネージド スレッド処理の概念と使用方法を中心に説明します。  
