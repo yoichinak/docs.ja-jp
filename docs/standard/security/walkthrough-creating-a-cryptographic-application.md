@@ -1,5 +1,6 @@
 ---
 title: 'チュートリアル: 暗号化アプリケーションの作成'
+description: 暗号化アプリケーションの作成について説明します。 Windows フォームアプリケーションでコンテンツを暗号化および復号化する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - cryptography [NET Framework], cryptographic application example
 - cryptography [NET Framework], application example
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
-ms.openlocfilehash: 246028566c59e5c8a77b26a21729d3f143d38d07
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 72116227fbec2435d428ad2bbdb4cc74e5c3663f
+ms.sourcegitcommit: cdb295dd1db589ce5169ac9ff096f01fd0c2da9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84289708"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84602181"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>チュートリアル: 暗号化アプリケーションの作成
 このチュートリアルでは、コンテンツの暗号化および復号化の方法を示します。 コード例は、Windows フォーム アプリケーション向けに設計されています。 このアプリケーションは、スマート カードを使用するなどの実際のシナリオは示していません。 代わりに、暗号化と復号化の基礎を示しています。  
@@ -43,7 +44,7 @@ ms.locfileid: "84289708"
 |公開キーのインポート|キーを XML ファイルからキー コンテナーに読み込みます。|  
 |アプリケーションのテスト|このアプリケーションをテストするための手順を一覧に示します。|  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
 - <xref:System.IO> 名前空間と <xref:System.Security.Cryptography> 名前空間への参照。  
@@ -51,7 +52,7 @@ ms.locfileid: "84289708"
 ## <a name="creating-a-windows-forms-application"></a>Windows フォーム アプリケーションの作成  
  このチュートリアルにあるほとんどのコード例は、ボタン コントロールのイベント ハンドラーとして設計されています。 次の表は、サンプル アプリケーションに必要なコントロールと、コード例に一致する必要な名前を示しています。  
   
-|Control|名前|テキストのプロパティ (必要に応じて)|  
+|コントロール|名前|テキストのプロパティ (必要に応じて)|  
 |-------------|----------|---------------------------------|  
 |<xref:System.Windows.Forms.Button>|`buttonEncryptFile`|ファイルの暗号化|  
 |<xref:System.Windows.Forms.Button>|`buttonDecryptFile`|ファイルの復号化|  
