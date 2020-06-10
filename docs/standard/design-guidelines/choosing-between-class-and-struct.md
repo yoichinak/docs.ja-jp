@@ -1,5 +1,6 @@
 ---
 title: クラスまたは構造体の選択
+description: 型をクラスとしてデザインするか、構造体として型をデザインするかを決定する方法について説明します。 .NET での参照型と値型の違いについて説明します。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - classes [.NET Framework], vs. structures
 - type design guidelines, classes
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
-ms.openlocfilehash: 4b4a619214fe6ba49f21a88cd132dcb3f2704608
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 9d757e77292c1226fbe2328cce082033ae8f7003
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280362"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662603"
 ---
 # <a name="choosing-between-class-and-struct"></a>クラスまたは構造体の選択
 すべてのフレームワークデザイナーの面で基本的な設計上の決定事項の1つは、型をクラスとしてデザインするか (参照型)、または構造体 (値型) として設計するかということです。 この選択を行うには、参照型と値型の動作の違いをよく理解していることが重要です。

@@ -1,5 +1,6 @@
 ---
 title: 標準例外型の使用
+description: .NET での標準の例外の種類について説明します。 SystemException、ApplicationException、ArgumentException、ComException などについて説明します。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - exceptions, catching
 - exceptions, throwing
 ms.assetid: ab22ce03-78f9-4dca-8824-c7ed3bdccc27
-ms.openlocfilehash: b8e05f22a66fabeab28cc83a074471df29aae218
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: f95529eabd87d9ec7c379b9f790e039e1192ac53
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291358"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663058"
 ---
 # <a name="using-standard-exception-types"></a>標準例外型の使用
 このセクションでは、フレームワークによって提供される標準の例外とその使用法の詳細について説明します。 リストは、完全な手段ではありません。 他のフレームワークの例外の種類の使用方法については、.NET Framework リファレンスドキュメントを参照してください。
