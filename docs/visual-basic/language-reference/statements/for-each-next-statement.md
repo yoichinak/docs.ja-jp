@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: 572f1efc0148bd8df4f13fa5651e74249caa45a7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0feb938121a97b06509b472652e6a753841ab2b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74351205"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404655"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next ステートメント (Visual Basic)
 
@@ -62,13 +62,13 @@ Next [ element ]
 コレクションまたは配列の要素ごとに一連のステートメントを繰り返す場合は、`For Each`...`Next` ループを使用します。
 
 > [!TIP]
-> [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md) は、ループの各反復を制御変数に関連付けて、その変数の初期値と最終値を決定できる場合に適しています。 ただし、コレクションを処理する場合、初期値と最終値の概念は意味がなく、コレクションに含まれる要素の数がわかるとは限りません。 このような場合は、`For Each`...`Next` ループの方が適していることがよくあります。
+> [For...Next ステートメント](for-next-statement.md) は、ループの各反復を制御変数に関連付けて、その変数の初期値と最終値を決定できる場合に適しています。 ただし、コレクションを処理する場合、初期値と最終値の概念は意味がなく、コレクションに含まれる要素の数がわかるとは限りません。 このような場合は、`For Each`...`Next` ループの方が適していることがよくあります。
 
 次の例では、`For Each`...`Next` ステートメントは、リスト コレクションのすべての要素を反復処理します。
 
 [!code-vb[VbVbalrStatements#121](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#121)]
 
-その他の例については、[コレクション](../../../standard/collections/index.md)および[配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)に関するページを参照してください。
+その他の例については、[コレクション](../../../standard/collections/index.md)および[配列](../../programming-guide/language-features/arrays/index.md)に関するページを参照してください。
 
 ## <a name="nested-loops"></a>Nested Loops
 
@@ -80,13 +80,13 @@ Next [ element ]
 
 ループを入れ子にする場合、各ループには一意の `element` 変数が必要です。
 
-また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になった制御構造](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
+また、さまざまな種類の制御構造を相互に入れ子にすることもできます。 詳細については、「[入れ子になった制御構造](../../programming-guide/language-features/control-flow/nested-control-structures.md)」を参照してください。
 
 ## <a name="exit-for-and-continue-for"></a>Exit For と Continue For
 
-[Exit For](../../../visual-basic/language-reference/statements/exit-statement.md) ステートメントは、実行により `For`...`Next` ループを終了し、`Next` ステートメントの次のステートメントに制御を移します。
+[Exit For](exit-statement.md) ステートメントは、実行により `For`...`Next` ループを終了し、`Next` ステートメントの次のステートメントに制御を移します。
 
-`Continue For` ステートメントは、ループの次の反復に直ちに制御を移します。 詳細については、「[Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)」を参照してください。
+`Continue For` ステートメントは、ループの次の反復に直ちに制御を移します。 詳細については、「[Continue ステートメント](continue-statement.md)」を参照してください。
 
 `Continue For` および `Exit For` ステートメントを使用する方法の例を次に示します。
 
@@ -100,7 +100,7 @@ Next [ element ]
 
 - `Try`...`Catch`...`Finally` で例外がキャッチされる。`Finally` ブロックの末尾で `Exit For` を使用することもできます。
 
-- 無限ループがある。無限ループは、膨大な回数または無限に実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)」を参照してください。
+- 無限ループがある。無限ループは、膨大な回数または無限に実行されるループです。 このような条件を検出した場合は、`Exit For` を使用してループをエスケープできます。 詳細については、「[Do...Loop ステートメント](do-loop-statement.md)」を参照してください。
 
 ## <a name="iterators"></a>Iterators
 
@@ -108,11 +108,11 @@ Next [ element ]
 
 `For Each...Next` ステートメントを使用して、反復子を呼び出します。 `For Each` ループの各イテレーションは、反復子を呼び出します。 `Yield` ステートメントが反復子に到達すると、`Yield` ステートメント内の式が返され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
 
-次の例は、iterator 関数を使用します。 iterator 関数には、[For…Next](../../../visual-basic/language-reference/statements/for-next-statement.md) ループ内に `Yield` ステートメントがあります。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本文の各反復で iterator 関数が呼び出され、これが次の `Yield` ステートメントに続行されます。
+次の例は、iterator 関数を使用します。 iterator 関数には、[For…Next](for-next-statement.md) ループ内に `Yield` ステートメントがあります。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本文の各反復で iterator 関数が呼び出され、これが次の `Yield` ステートメントに続行されます。
 
 [!code-vb[VbVbalrStatements#127](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class9.vb#127)]
 
-詳細については、「[反復子](../../programming-guide/concepts/iterators.md)」、「[Yield ステートメント](../../../visual-basic/language-reference/statements/yield-statement.md)」、および「[Iterator](../../../visual-basic/language-reference/modifiers/iterator.md)」を参照してください。
+詳細については、「[反復子](../../programming-guide/concepts/iterators.md)」、「[Yield ステートメント](yield-statement.md)」、および「[Iterator](../modifiers/iterator.md)」を参照してください。
 
 ## <a name="technical-implementation"></a>技術的な実装
 
@@ -152,7 +152,7 @@ Visual Basic は、`Next` ステートメントを検出するたびに、`For E
 
 ただし、この変更のブロックは、Visual Basic によってではなく、<xref:System.Collections.IEnumerable> インターフェイスの実装によって決まります。 反復中の変更を許可する方法で `IEnumerable` を実装することができます。 このような動的な変更を検討している場合は、使用しているコレクションでの `IEnumerable` 実装の特性を理解しておいてください。
 
-**コレクションの要素の変更。** 列挙子オブジェクトの <xref:System.Collections.IEnumerator.Current%2A> プロパティは [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md) であり、各コレクション要素のローカル コピーを返します。 つまり、`For Each`...`Next` ループで要素自体を変更することはできません。 行った変更は、`Current` からのローカル コピーにのみ適用され、基になるコレクションには反映されません。 ただし、要素が参照型の場合は、その要素が指すインスタンスのメンバーを変更できます。 次の例では、各 `thisControl` 要素の `BackColor` メンバーを変更します。 ただし、`thisControl` 自体を変更することはできません。
+**コレクションの要素の変更。** 列挙子オブジェクトの <xref:System.Collections.IEnumerator.Current%2A> プロパティは [ReadOnly](../modifiers/readonly.md) であり、各コレクション要素のローカル コピーを返します。 つまり、`For Each`...`Next` ループで要素自体を変更することはできません。 行った変更は、`Current` からのローカル コピーにのみ適用され、基になるコレクションには反映されません。 ただし、要素が参照型の場合は、その要素が指すインスタンスのメンバーを変更できます。 次の例では、各 `thisControl` 要素の `BackColor` メンバーを変更します。 ただし、`thisControl` 自体を変更することはできません。
 
 ```vb
 Sub LightBlueBackground(thisForm As System.Windows.Forms.Form)
@@ -185,11 +185,11 @@ End Sub
 ## <a name="see-also"></a>関連項目
 
 - [コレクション](../../../standard/collections/index.md)
-- [For...Next ステートメント](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [ループ構造](../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
-- [While...End While ステートメント](../../../visual-basic/language-reference/statements/while-end-while-statement.md)
-- [Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)
-- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
-- [オブジェクト初期化子: 名前付きの型と匿名型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [コレクション初期化子](../../../visual-basic/programming-guide/language-features/collection-initializers/index.md)
-- [配列](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [For...Next ステートメント](for-next-statement.md)
+- [ループ構造](../../programming-guide/language-features/control-flow/loop-structures.md)
+- [While...End While ステートメント](while-end-while-statement.md)
+- [Do...Loop ステートメント](do-loop-statement.md)
+- [拡大変換と縮小変換](../../programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [オブジェクト初期化子: 名前付きの型と匿名型](../../programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [コレクション初期化子](../../programming-guide/language-features/collection-initializers/index.md)
+- [配列](../../programming-guide/language-features/arrays/index.md)

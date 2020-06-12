@@ -1,13 +1,14 @@
 ---
 title: 非同期プログラミング
+description: .NET Framework Data Provider for SQL Server の非同期プログラミングについて説明します。 .NET Framework 4.5 で導入された機能強化についても説明します。
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 7bf492e45a9ebabdd36caa8e21605739bb410695
-ms.sourcegitcommit: 7e2128d4a4c45b4274bea3b8e5760d4694569ca1
+ms.openlocfilehash: 2e5f48b0818ab9cfabc75ba47c95c8198e0fe7fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2020
-ms.locfileid: "75937590"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287104"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 

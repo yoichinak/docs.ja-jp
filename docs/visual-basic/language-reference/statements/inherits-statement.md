@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic]
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
-ms.openlocfilehash: 6e6e9cc9210232059210862f2bda691c57b372d6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 5d88a01f90bc91a88229d19aa2368f8c71075b2f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353226"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404500"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 現在のクラスまたはインターフェイスで、属性、変数、プロパティ、プロシージャ、およびイベントを別のクラスまたは一連のインターフェイスから継承させます。  
@@ -65,8 +65,8 @@ Inherits basetypenames
   
 ## <a name="see-also"></a>関連項目
 
-- [MustInherit](../../../visual-basic/language-reference/modifiers/mustinherit.md)
-- [NotInheritable](../../../visual-basic/language-reference/modifiers/notinheritable.md)
-- [クラスとオブジェクト](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
-- [継承の基本](../../../visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
-- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [MustInherit](../modifiers/mustinherit.md)
+- [NotInheritable](../modifiers/notinheritable.md)
+- [クラスとオブジェクト](../../programming-guide/language-features/objects-and-classes/index.md)
+- [継承の基本](../../programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+- [インターフェイス](../../programming-guide/language-features/interfaces/index.md)

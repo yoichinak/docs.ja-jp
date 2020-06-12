@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Handles keyword [Visual Basic]
 ms.assetid: 1b051c0e-f499-42f6-acb5-6f4f27824b40
-ms.openlocfilehash: 2fecad919722f3da25c48f133a9c92b5e683d5e4
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: df786e4b0f0ab3795592ea57f7af17695b086cfa
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345910"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404577"
 ---
 # <a name="handles-clause-visual-basic"></a>Handles 句 (Visual Basic)
 プロシージャが指定されたイベントを処理することを宣言します。  
@@ -33,9 +33,9 @@ proceduredeclaration Handles eventlist
 ## <a name="remarks"></a>Remarks  
  プロシージャ宣言の最後で `Handles` キーワードを使用すると、 `WithEvents` キーワードで宣言されたオブジェクト変数によって発生したイベントが処理されるようになります。 また、`Handles` キーワードを派生クラスで使用すると、基底クラスからのイベントを処理することもできます。  
   
- `Handles` キーワードと `AddHandler` ステートメントはどちらも特定のプロシージャで特定のイベントを処理するように指定できますが、両者には違いがあります。 `Handles` キーワードは、プロシージャの定義時に特定のイベントを処理するよう指定する場合に使用します。 `AddHandler` ステートメントは、実行時にプロシージャをイベントに接続します。 詳細については、「[AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)」を参照してください。  
+ `Handles` キーワードと `AddHandler` ステートメントはどちらも特定のプロシージャで特定のイベントを処理するように指定できますが、両者には違いがあります。 `Handles` キーワードは、プロシージャの定義時に特定のイベントを処理するよう指定する場合に使用します。 `AddHandler` ステートメントは、実行時にプロシージャをイベントに接続します。 詳細については、「[AddHandler ステートメント](addhandler-statement.md)」を参照してください。  
   
- カスタム イベントの場合、アプリケーションは、プロシージャをイベント ハンドラーとして追加するときにイベントの `AddHandler` アクセサーを呼び出します。 カスタム イベントの詳細については、「[Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)」を参照してください。  
+ カスタム イベントの場合、アプリケーションは、プロシージャをイベント ハンドラーとして追加するときにイベントの `AddHandler` アクセサーを呼び出します。 カスタム イベントの詳細については、「[Event ステートメント](event-statement.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrEvents#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#2)]  
@@ -56,9 +56,9 @@ proceduredeclaration Handles eventlist
   
 ## <a name="see-also"></a>関連項目
 
-- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
-- [AddHandler ステートメント](../../../visual-basic/language-reference/statements/addhandler-statement.md)
-- [RemoveHandler ステートメント](../../../visual-basic/language-reference/statements/removehandler-statement.md)
-- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)
-- [RaiseEvent ステートメント](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
-- [イベント](../../../visual-basic/programming-guide/language-features/events/index.md)
+- [WithEvents](../modifiers/withevents.md)
+- [AddHandler ステートメント](addhandler-statement.md)
+- [RemoveHandler ステートメント](removehandler-statement.md)
+- [Event ステートメント](event-statement.md)
+- [RaiseEvent ステートメント](raiseevent-statement.md)
+- [イベント](../../programming-guide/language-features/events/index.md)

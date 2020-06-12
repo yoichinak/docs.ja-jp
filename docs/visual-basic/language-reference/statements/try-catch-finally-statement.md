@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Visual Basic code, handling errors while running
 - structured exception handling, Try...Catch...Finally statements
 ms.assetid: d6488026-ccb3-42b8-a810-0d97b9d6472b
-ms.openlocfilehash: bb6f17f7ce88caea0b9d30ec880194f2bb71c6a6
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 22f1611786a3da512632b5b547b7ef141c8f65c6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705770"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84391769"
 ---
 # <a name="trycatchfinally-statement-visual-basic"></a>Try...Catch...Finally ステートメント (Visual Basic)
 
@@ -126,7 +126,7 @@ End Try
 
 ## <a name="async-methods"></a>非同期メソッド
 
-メソッドに [Async](../modifiers/async.md) 修飾子を付けると、そのメソッドで [Await](../operators/await-operator.md) 演算子を使用できます。 `Await` 演算子を含むステートメントは、待機しているタスクが完了するまでメソッドの実行を中断します。 このタスクは、進行中の作業を表します。 `Await` 演算子に関連付けられているタスクが終了すると、実行は同じメソッド内で再開されます。 詳細については、「[非同期プログラムにおける制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)」を参照してください。
+メソッドに [Async](../modifiers/async.md) 修飾子を付けると、そのメソッドで [Await](../operators/await-operator.md) 演算子を使用できます。 `Await` 演算子を含むステートメントは、待機しているタスクが完了するまでメソッドの実行を中断します。 このタスクは、進行中の作業を表します。 `Await` 演算子に関連付けられているタスクが終了すると、実行は同じメソッド内で再開されます。 詳細については、「[非同期プログラムにおける制御フロー](../../programming-guide/concepts/async/control-flow-in-async-programs.md)」を参照してください。
 
 非同期メソッドによって返されるタスクは、ハンドルされない例外が原因で完了したことを示す違反状態で終了することがあります。 また、タスクは取り消された状態で終了することもあります。その結果、await 式から `OperationCanceledException` がスローされます。 いずれかの種類の例外をキャッチするには、タスクに関連付けられている `Await` 式を `Try` ブロックに配置し、`Catch` ブロックで例外をキャッチします。 例については、このトピックで後述します。
 

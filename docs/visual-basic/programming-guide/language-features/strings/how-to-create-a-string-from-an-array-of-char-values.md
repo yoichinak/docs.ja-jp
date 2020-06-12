@@ -5,12 +5,12 @@ helpviewer_keywords:
 - examples [Visual Basic], arrays
 - examples [Visual Basic], Char data type
 ms.assetid: 69f94e85-d57c-4ccc-a62a-426e829f5c5e
-ms.openlocfilehash: bf37ceba901e712df10ad4b39f9ad74194843136
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: d9ec897467f0caac0afc089a028516c0316a2bda
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75346770"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84410594"
 ---
 # <a name="how-to-create-a-string-from-an-array-of-char-values-visual-basic"></a>方法: 方法: char 値の配列から文字列を作成する (Visual Basic)
 この例では、個々の文字から文字列 "abcd" を作成します。  
@@ -29,5 +29,5 @@ ms.locfileid: "75346770"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.String>
-- [Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)
-- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [Char データ型](../../../language-reference/data-types/char-data-type.md)
+- [データの種類](../data-types/index.md)
