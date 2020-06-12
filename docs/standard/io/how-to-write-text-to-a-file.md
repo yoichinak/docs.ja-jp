@@ -1,5 +1,6 @@
 ---
 title: '方法: テキストのファイルへの書き込み'
+description: .NET アプリでファイルにテキストを書き込む方法、または追加する方法について説明します。 StreamWriter クラスまたは File クラスのメソッドを使用して、同期的または非同期的にテキストを書き込みます。
 ms.date: 01/04/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - streams, writing text to files
 - data streams, writing text to files
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
-ms.openlocfilehash: ba1c1815f0e49c02d1f0ee3c48ba01b7c2f5e727
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 52d3d07f4ffdbdc6510425a65fc173d36e674d06
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160249"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447213"
 ---
 # <a name="how-to-write-text-to-a-file"></a>方法: テキストのファイルへの書き込み
 このトピックでは、.NET アプリ用のファイルにテキストを書き込むさまざまな方法を示します。
@@ -67,8 +68,8 @@ ms.locfileid: "78160249"
 - <xref:System.IO.StreamWriter>
 - <xref:System.IO.Path>
 - <xref:System.IO.File.CreateText%2A?displayProperty=nameWithType>
-- [方法: ディレクトリとファイルを列挙する](../../../docs/standard/io/how-to-enumerate-directories-and-files.md)
-- [方法: 新しく作成されたデータ ファイルに対して読み書きする](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)
-- [方法: ログ ファイルを開いて情報を追加する](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)
-- [方法: ファイルからテキストを読み取る](../../../docs/standard/io/how-to-read-text-from-a-file.md)
-- [ファイルおよびストリーム入出力](../../../docs/standard/io/index.md)
+- [方法: ディレクトリとファイルを列挙する](how-to-enumerate-directories-and-files.md)
+- [方法: 新しく作成されたデータ ファイルに対して読み書きする](how-to-read-and-write-to-a-newly-created-data-file.md)
+- [方法: ログ ファイルを開いて情報を追加する](how-to-open-and-append-to-a-log-file.md)
+- [方法: ファイルからテキストを読み取る](how-to-read-text-from-a-file.md)
+- [ファイルおよびストリーム入出力](index.md)

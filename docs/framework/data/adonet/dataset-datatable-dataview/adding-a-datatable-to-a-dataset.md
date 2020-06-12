@@ -1,16 +1,17 @@
 ---
 title: DataSet への DataTable の追加
+description: このコード例を参照して、DataTable オブジェクトを作成し、ADO.NET 内の既存の DataSet に追加する方法を学習します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 556d29a3-8fc9-4e38-b3ee-c188f7e7b155
-ms.openlocfilehash: a1249718d1e1e1e64fd6fa6ee9ee8157545b5e0b
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 42bd36b394de560884a2ec607f4cbc65d1171e4e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786635"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286961"
 ---
 # <a name="adding-a-datatable-to-a-dataset"></a>DataSet への DataTable の追加
 ADO.NET を使用して <xref:System.Data.DataTable> オブジェクトを作成し、そのオブジェクトを既存の <xref:System.Data.DataSet> に追加できます。 <xref:System.Data.DataTable> プロパティと <xref:System.Data.DataTable.PrimaryKey%2A> プロパティを使用することで、<xref:System.Data.DataColumn.Unique%2A> の制約情報を設定できます。  

@@ -1,13 +1,14 @@
 ---
 title: サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)
+description: この記事では、LINQ to Entities クエリでサポートされている標準クエリ演算子とサポートされていない標準クエリ演算子をまとめます。
 ms.date: 03/30/2017
 ms.assetid: 7f3ffa5f-f819-4730-bcdb-09b23de3b6d0
-ms.openlocfilehash: 54805e8d3f0d5081c2d7d8fdbdcfbdcb63f9bcb6
-ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
+ms.openlocfilehash: 0d01cc6ccecef0f10aed48fa7475ad1a16ad4ea1
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70249006"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286780"
 ---
 # <a name="supported-and-unsupported-linq-methods-linq-to-entities"></a>サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)
 このセクションでは、LINQ to Entities クエリでサポート対象またはサポート非対象になっている統合言語クエリ (LINQ) 標準クエリ演算子について説明します。 LINQ 標準クエリ演算子の多くには、整数の引数を取るオーバーロード バージョンがあります。 整数の引数は、<xref:System.Collections.Generic.IEqualityComparer%601>または <xref:System.Collections.Generic.IComparer%601> で操作されるシーケンス内の 0 から始まるインデックスに対応しています。 特に指定がなければ、LINQ 標準クエリ演算子のオーバーロード バージョンはサポートされず、このバージョンを使用しようとすると例外がスローされます。  

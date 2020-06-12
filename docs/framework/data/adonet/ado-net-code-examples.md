@@ -1,22 +1,23 @@
 ---
 title: コード例
+description: これらの例では、.NET Framework プログラマに対して、ADO.NET データ プロバイダーと ADO.NET Entity Framework を使用してデータベースからデータを取得する方法が示されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: 6e0c34e1db50030c78db295f26fcc25b431d3dde
-ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
+ms.openlocfilehash: 54df0e253716c970cf23446434d96b104b8e9b03
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80111804"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287169"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET のコード例
 
 このページのコード リストでは、次の ADO.NET テクノロジを使用してデータベースからデータを取得する方法が示されています。
 
-- ADO.NET データ プロバイダー: 
+- ADO.NET データ プロバイダー:
 
   - [SqlClient](#sqlclient) (`System.Data.SqlClient`)
 

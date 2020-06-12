@@ -1,16 +1,17 @@
 ---
 title: クエリの実行
+description: 遅延クエリ実行、即時クエリ実行、ストア実行など、LINQ to Entities クエリを実行するさまざまな方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c0e6cf23-63ac-47dd-bfe9-d5bdca826fac
-ms.openlocfilehash: e372744eea3eed7fc3f7ee9c8bbdd711c95b586e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e776df6d35b6cc8c24cd83e902bc4d050347343b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149974"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286793"
 ---
 # <a name="query-execution"></a>クエリの実行
 ユーザーによって作成された LINQ クエリは、コマンド ツリーに変換されます。 コマンド ツリーは、Entity Framework と互換性のあるクエリの表現です。 コマンド ツリーは、その後データ ソースに対して実行されます。 クエリの実行時には、すべてのクエリ式 (つまりクエリの全コンポーネント) が評価されます。これには結果の具体化で使用される式も含まれます。  

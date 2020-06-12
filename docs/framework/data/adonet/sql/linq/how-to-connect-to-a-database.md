@@ -1,16 +1,17 @@
 ---
 title: '方法: データベースに接続する'
+description: LINQ to SQL で DataContext を使用してデータベースに接続する方法について説明します。 DataContext を使用してデータベースに接続し、行を取得する方法については、これらの例を参照してください。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c33d74b3-530d-421b-a121-96786dd263a5
-ms.openlocfilehash: 837919b1cfcdf46026ccfb37cbbec951c0ae41b8
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: c3320a598cb8407ab584530c615c2e5ef0de53c8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634678"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286405"
 ---
 # <a name="how-to-connect-to-a-database"></a>方法: データベースに接続する
 データベースへの接続、データベースからのオブジェクトの取得、およびデータベースへの変更内容の反映では、<xref:System.Data.Linq.DataContext> を仲介役として使用します。 <xref:System.Data.Linq.DataContext> の使い方は、ADO.NET の <xref:System.Data.SqlClient.SqlConnection> と同じです。 つまり、接続または接続文字列を指定して、<xref:System.Data.Linq.DataContext> を初期化します。 詳しくは、「[DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)」をご覧ください。  

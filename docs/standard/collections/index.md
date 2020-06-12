@@ -1,5 +1,6 @@
 ---
 title: コレクションとデータ構造体
+description: .NET でコレクションとデータ構造を使用する方法について説明します。 スレッドセーフな操作でジェネリックと非ジェネリック コレクションを使用します。
 ms.date: 04/30/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - Collections classes
 - collections [.NET Framework]
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
-ms.openlocfilehash: 0b87121a4a2003d3f85cf58f6d93f156fc121e54
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 3d5b16dccdd9867293a52c74a2d379c807fd93e7
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84287953"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662746"
 ---
 # <a name="collections-and-data-structures"></a>コレクションとデータ構造体
 

@@ -1,5 +1,6 @@
 ---
 title: '方法: 日付および時刻の値のミリ秒部分を表示する'
+description: この記事では、.NET で、書式設定された日付と時刻の文字列に、日付と時刻のミリ秒部分を含める方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - dates [.NET Framework], milliseconds
 - milliseconds [.NET Framework]
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
-ms.openlocfilehash: 36d99753503d9ba4b1bde4143c86ba184674e53e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a6dbe6a3bf4f8c08493ec925bea4316d071f4182
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "74960398"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447070"
 ---
 # <a name="how-to-display-milliseconds-in-date-and-time-values"></a>方法: 日付および時刻の値のミリ秒部分を表示する
 <xref:System.DateTime.ToString?displayProperty=nameWithType> などの既定の日付および時刻書式指定メソッドは時刻値の時間、分、秒を含めますが、ミリ秒の部分は含めません。 ここでは、書式設定された日付および時刻文字列の中にミリ秒部分を含める方法について説明します。  
@@ -49,7 +50,7 @@ ms.locfileid: "74960398"
 > [!NOTE]
 > 1/10000 秒、1/100000 秒などの非常に小さな端数単位を表示することが可能です。 ただし、このような値を表示してもあまり意味がない可能性があります。 日付および時刻の値の精度は、システム クロックの分解能に依存します。 Windows NT 3.5 以降および Windows Vista オペレーティング システムでは、クロックの解像力は約 10-15 ミリ秒です。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Globalization.DateTimeFormatInfo>
-- [カスタム日時形式文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [カスタム日時形式文字列](custom-date-and-time-format-strings.md)

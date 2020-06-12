@@ -1,5 +1,6 @@
 ---
 title: 標準の日時書式指定文字列
+description: この記事では、.NET で、標準の日時書式指定文字列を使用して、日付と時刻の値のテキスト表現を定義する方法について説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,16 +15,16 @@ helpviewer_keywords:
 - formatting [.NET Framework], time
 - date and time strings
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
-ms.openlocfilehash: d6bde74441334a4454865c1fdb890a4e859bc072
-ms.sourcegitcommit: 7b1497c1927cb449cefd313bc5126ae37df30746
+ms.openlocfilehash: 5db9088a6b0d75ae5293b9be35346c4c2ddf81c6
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/16/2020
-ms.locfileid: "83440903"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447226"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 
-標準の日時書式指定文字列は、単一の書式指定子を使用して日付と時刻の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、カスタム日時書式指定文字列として解釈されます。詳細については、「[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)」をご覧ください。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。
+標準の日時書式指定文字列は、単一の書式指定子を使用して日付と時刻の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、カスタム日時書式指定文字列として解釈されます。詳細については、「[カスタム日時書式指定文字列](custom-date-and-time-format-strings.md)」をご覧ください。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。
 
 - 書式設定操作によって生成される文字列を定義する。
 
@@ -450,7 +451,7 @@ RFC 1123 標準では、時刻は世界協定時刻 (UTC: Coordinated Universal 
 
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.DateTimeOffset?displayProperty=nameWithType>
-- [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
-- [カスタム日時形式文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [型の書式設定](formatting-types.md)
+- [カスタム日時形式文字列](custom-date-and-time-format-strings.md)
 - [サンプル: .NET Core WinForms 書式設定ユーティリティ (C#)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-cs)
 - [サンプル: .NET Core WinForms 書式設定ユーティリティ (Visual Basic)](https://docs.microsoft.com/samples/dotnet/samples/windowsforms-formatting-utility-vb)

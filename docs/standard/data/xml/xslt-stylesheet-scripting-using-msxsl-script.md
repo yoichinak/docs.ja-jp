@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
-ms.openlocfilehash: 9bf57e0f74a353fb6512a24214e9479c1d813aab
-ms.sourcegitcommit: 00aa62e2f469c2272a457b04e66b4cc3c97a800b
+ms.openlocfilehash: aef2471a375469f7cd4dff27084b305ef9394d5e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78160210"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291969"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script> を使用した XSLT スタイルシートのスクリプト
 <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。  
   
 > [!NOTE]
-> .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
+> .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](migrating-from-the-xsltransform-class.md)」をご覧ください。  
   
  <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数がクラス定義でラップされることによって Microsoft Intermediate Language (MSIL) にコンパイルされるため、パフォーマンスが低下しません。  
   
@@ -231,4 +231,4 @@ public class Sample
   
 ## <a name="see-also"></a>関連項目
 
-- [XslTransform クラスによる XSLT プロセッサの実装](../../../../docs/standard/data/xml/xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform クラスによる XSLT プロセッサの実装](xsltransform-class-implements-the-xslt-processor.md)

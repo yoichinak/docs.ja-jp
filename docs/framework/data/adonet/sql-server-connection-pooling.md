@@ -1,16 +1,17 @@
 ---
 title: SQL Server の接続プール
+description: ADO.NET で、SQL Server 接続プールを使用することによって接続を開くコストが最小限に抑えられるしくみについて説明します。これにより、新しい接続のオーバーヘッドが削減されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 149511bd4e84baabf11eca014257127b587830df
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 1a95aab9e09d69a3d26b3404d4cb2b70371a3fe8
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79148999"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286560"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
 通常、データベース サーバーへの接続は、時間のかかるいくつかの手順で構成されています。 ソケットまたは名前付きパイプなどの物理チャネルの確立、サーバーとの最初のハンドシェイクの実行、接続文字列の情報の解析、サーバーによる接続の認証、現在のトランザクションへ参加するための検証などの手順を行う必要があります。  

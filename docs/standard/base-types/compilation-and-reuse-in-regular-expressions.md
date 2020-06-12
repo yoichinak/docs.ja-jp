@@ -12,12 +12,12 @@ helpviewer_keywords:
 - pattern-matching with regular expressions, compilation
 - regular expressions, engines
 ms.assetid: 182ec76d-5a01-4d73-996c-0b0d14fcea18
-ms.openlocfilehash: b89f7f88233ecdab25ba2a74647aafeb4d8b74af
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 54f14a4f31bef00dd222686cc523935b2d9dd5fa
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80344187"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84279039"
 ---
 # <a name="compilation-and-reuse-in-regular-expressions"></a>正規表現におけるコンパイルと再利用
 正規表現エンジンが式をどのようにコンパイルするか、および正規表現がどのようにキャッシュされるかを理解することで、正規表現を幅広く使用するアプリケーションのパフォーマンスを最適化できます。 このトピックでは、コンパイルとキャッシュの両方について説明します。  
@@ -27,7 +27,7 @@ ms.locfileid: "80344187"
   
  <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> オプションを使用して <xref:System.Text.RegularExpressions.Regex> オブジェクトを構築した場合、このオブジェクトは、高度な正規表現の内部命令ではなく明示的な MSIL コードに正規表現をコンパイルします。 これにより、.NET の Just-In-Time (JIT) コンパイラは、式をネイティブのマシン コードに変換してパフォーマンスを高めることができます。  <xref:System.Text.RegularExpressions.Regex> オブジェクトの作成にかかるコストは高くなる場合がありますが、それとの照合の実行にかかるコストは大幅に小さくなる可能性があります。
 
- 事前にコンパイルされた正規表現を使用するという方法もあります。 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> メソッドを利用し、すべての式をコンパイルして再利用可能な DLL を作成できます。 実行時にコンパイルしなくても、コンパイルした正規表現のスピードが得られます。  
+ 事前にコンパイルされた正規表現を使用するという方法もあります。 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A> メソッドを利用し、すべての式をコンパイルして再利用可能な DLL を作成できます。 これにより、コンパイルされた高速な正規表現を利用しながら、実行時にコンパイルする必要性を回避できます。  
   
 ## <a name="the-regular-expressions-cache"></a>正規表現のキャッシュ  
  パフォーマンスを高めるために、正規表現エンジンは、コンパイルされた正規表現のアプリケーション全体のキャッシュを保持します。 キャッシュは、静的メソッド呼び出しでのみ使用される正規表現パターンを格納します (インスタンス メソッドに渡される正規表現パターンはキャッシュされません)。これにより、式を使用するたびに高度なバイト コードに再解析する必要がなくなります。  
@@ -44,4 +44,4 @@ ms.locfileid: "80344187"
   
 ## <a name="see-also"></a>関連項目
 
-- [.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)
+- [.NET の正規表現](regular-expressions.md)

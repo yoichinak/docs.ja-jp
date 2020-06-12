@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Collections classes
 - grouping data in collections, selecting collection class
 ms.assetid: ba049f9a-ce87-4cc4-b319-3f75c8ddac8a
-ms.openlocfilehash: d79f1ca0d264a5a17306bb66f285b6fbe6b4e7ca
-ms.sourcegitcommit: 7370aa8203b6036cea1520021b5511d0fd994574
+ms.openlocfilehash: 62f4f768753637043ab91219cfb63c741a194b96
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/02/2020
-ms.locfileid: "82728479"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287927"
 ---
 # <a name="selecting-a-collection-class"></a>コレクション クラスの選択
 
@@ -34,9 +34,9 @@ ms.locfileid: "82728479"
 
 - FIFO や LIFO など特定の順序で要素にアクセスする必要がありますか。またはランダムにアクセスできますか。
 
-  - <xref:System.Collections.Queue> クラス、<xref:System.Collections.Generic.Queue%601>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、および <xref:System.Collections.Immutable.ImmutableQueue%601> ジェネリック クラスはすべて、FIFO アクセスを提供します。 詳細については、「[スレッド セーフなコレクションを使用する状況](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)」をご覧ください。
+  - <xref:System.Collections.Queue> クラス、<xref:System.Collections.Generic.Queue%601>、<xref:System.Collections.Concurrent.ConcurrentQueue%601>、および <xref:System.Collections.Immutable.ImmutableQueue%601> ジェネリック クラスはすべて、FIFO アクセスを提供します。 詳細については、「[スレッド セーフなコレクションを使用する状況](thread-safe/when-to-use-a-thread-safe-collection.md)」をご覧ください。
 
-  - <xref:System.Collections.Stack> クラス、<xref:System.Collections.Generic.Stack%601>、<xref:System.Collections.Concurrent.ConcurrentStack%601>、および <xref:System.Collections.Immutable.ImmutableStack%601> ジェネリック クラスはすべて、LIFO アクセスを提供します。 詳細については、「[スレッド セーフなコレクションを使用する状況](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)」をご覧ください。
+  - <xref:System.Collections.Stack> クラス、<xref:System.Collections.Generic.Stack%601>、<xref:System.Collections.Concurrent.ConcurrentStack%601>、および <xref:System.Collections.Immutable.ImmutableStack%601> ジェネリック クラスはすべて、LIFO アクセスを提供します。 詳細については、「[スレッド セーフなコレクションを使用する状況](thread-safe/when-to-use-a-thread-safe-collection.md)」をご覧ください。
 
   - <xref:System.Collections.Generic.LinkedList%601> ジェネリック クラスは、先頭から末尾または末尾から先頭への順次アクセスを可能にします。
 
@@ -68,7 +68,7 @@ ms.locfileid: "82728479"
 
 - 高速な検索と情報の取得が必要ですか。
 
-  - <xref:System.Collections.Specialized.ListDictionary> は、小規模なコレクション (10 個以下のアイテム) では <xref:System.Collections.Hashtable> より高速です。 <xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスは、<xref:System.Collections.Generic.SortedDictionary%602> ジェネリック クラスよりも高速の参照を提供します。 マルチスレッドの実装は <xref:System.Collections.Concurrent.ConcurrentDictionary%602> です。 <xref:System.Collections.Concurrent.ConcurrentBag%601> は、順序指定されていないデータのために、高速なマルチスレッドの挿入を提供します。 両方のマルチスレッドのタイプについては、「[スレッド セーフなコレクションを使用する状況](../../../docs/standard/collections/thread-safe/when-to-use-a-thread-safe-collection.md)」を参照してください。
+  - <xref:System.Collections.Specialized.ListDictionary> は、小規模なコレクション (10 個以下のアイテム) では <xref:System.Collections.Hashtable> より高速です。 <xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスは、<xref:System.Collections.Generic.SortedDictionary%602> ジェネリック クラスよりも高速の参照を提供します。 マルチスレッドの実装は <xref:System.Collections.Concurrent.ConcurrentDictionary%602> です。 <xref:System.Collections.Concurrent.ConcurrentBag%601> は、順序指定されていないデータのために、高速なマルチスレッドの挿入を提供します。 両方のマルチスレッドのタイプについては、「[スレッド セーフなコレクションを使用する状況](thread-safe/when-to-use-a-thread-safe-collection.md)」を参照してください。
 
 - 文字列だけを受け入れるコレクションは必要ですか。
 
@@ -80,11 +80,11 @@ ms.locfileid: "82728479"
 
 LINQ to Objects により、開発者は、オブジェクト型で <xref:System.Collections.IEnumerable> または <xref:System.Collections.Generic.IEnumerable%601> を実装している限り、LINQ クエリを使用してインメモリ オブジェクトにアクセスできます。 LINQ クエリはデータ アクセス用の一般的なパターンです。通常、これは標準の `foreach` ループよりも簡潔で読みやすく、フィルター処理、並べ替え、およびグループ化機能を備えています。 詳細については、「[LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)」および「[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)」を参照してください。
 
-PLINQ は、マルチコア コンピューターをより効率的に使用することにより、多くのシナリオでより高速にクエリを実行できる LINQ to Objects の並列実装を提供します。 詳細については、「[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/introduction-to-plinq.md)」を参照してください。
+PLINQ は、マルチコア コンピューターをより効率的に使用することにより、多くのシナリオでより高速にクエリを実行できる LINQ to Objects の並列実装を提供します。 詳細については、「[Parallel LINQ (PLINQ)](../parallel-programming/introduction-to-plinq.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Collections>
 - <xref:System.Collections.Specialized>
 - <xref:System.Collections.Generic>
-- [スレッドセーフなコレクション](../../../docs/standard/collections/thread-safe/index.md)
+- [スレッドセーフなコレクション](thread-safe/index.md)

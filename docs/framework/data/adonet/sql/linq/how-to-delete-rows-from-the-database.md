@@ -1,16 +1,17 @@
 ---
 title: '方法: 行をデータベースから削除する'
+description: テーブルに関連付けられたコレクションから LINQ to SQL オブジェクトを削除することによって、データベース内の行を削除する方法について説明します。 LINQ to SQL では、削除操作が SQL DELETE コマンドに変換されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 421735567c527ac9a70cc5eefdbd7570599faac7
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: d08621e834961e1db9312cac36bd2e69133142b5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70782005"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286392"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>方法: 行をデータベースから削除する
 

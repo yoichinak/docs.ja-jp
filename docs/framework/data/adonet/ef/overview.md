@@ -1,13 +1,14 @@
 ---
 title: Entity Framework の概要
+description: ADO.NET の Entity Framework では、従来のアプリケーションよりも高度なレベルの抽象化を使用して動作する、データ指向アプリケーションの開発がサポートされています。
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: ff0c85da89c44834620831c041df3ccdcaf8282f
-ms.sourcegitcommit: 700ea803fb06c5ce98de017c7f76463ba33ff4a9
+ms.openlocfilehash: 1f1ab5d44c2d6c7e1f54a761dbc706d537664ef6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2020
-ms.locfileid: "77452527"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286806"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework の概要
 

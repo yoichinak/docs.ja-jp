@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
 ms.openlocfilehash: 9f9a386308480509b7f0cb99ff6b32e082861c52
 ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76727856"
 ---
 # <a name="input-wpf"></a>入力 (WPF)
-Windows Presentation Foundation (WPF) には、いくつかの種類の入力がサポートされています。 この入力には、テキスト、タッチ、マウス、コマンド、フォーカス、タッチ、ドラッグアンドドロップ、およびデジタルインクが含まれます。 ここでは、WPF での入力に関連するトピックについて説明します。  
+Windows Presentation Foundation (WPF) では、いくつかの種類の入力がサポートされています。 この入力には、テキスト、タッチ、マウス、コマンド、フォーカス、タッチ、ドラッグ アンド ドロップ、およびデジタル インクが含まれます。 このセクションでは、WPF の入力に関連するトピックについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [入力の概要](input-overview.md)  
@@ -23,10 +23,10 @@ Windows Presentation Foundation (WPF) には、いくつかの種類の入力が
  [フォーカスの概要](focus-overview.md)  
  [コントロールのフォーカスのスタイルと FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
  [チュートリアル: 初めてのタッチ アプリケーションの作成](walkthrough-creating-your-first-touch-application.md)  
- [データ バインドに関する「方法」トピック](input-and-commands-how-to-topics.md)  
+ [方法トピック](input-and-commands-how-to-topics.md)  
  [デジタル インク](digital-ink.md)  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
  <xref:System.Windows.UIElement>  
   
  <xref:System.Windows.FrameworkElement>  

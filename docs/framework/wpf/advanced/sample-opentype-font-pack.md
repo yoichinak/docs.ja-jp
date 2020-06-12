@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
 ms.openlocfilehash: 30cb69fcf05108822e8f3e2d45c9e79dbced26ca
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79181906"
 ---
 # <a name="sample-opentype-font-pack"></a>OpenType フォント パックのサンプル
-このトピックでは、Windows SDK で配布される OpenType フォントのサンプルの概要を説明します。 サンプル フォントは、アプリケーションで使用できる拡張 OpenType[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]機能をサポートしています。  
+このトピックでは、Windows SDK で配布されている OpenType フォントのサンプルの概要を説明します。 サンプル フォントは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションで使用可能な拡張 OpenType 機能をサポートしています。  
 
 <a name="overview"></a>
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType フォント パックのフォント  
- Windows SDK には、アプリケーションの作成[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]に使用できる OpenType フォントのサンプル セットが用意されています。 サンプル フォントは、Ascender Corporation のライセンスを受けて提供されています。 これらのフォントは、OpenType 形式で定義されたフィーチャのサブセットのみを実装します。 次の表は、OpenType フォントのサンプル名の一覧です。  
+ Windows SDK には、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの作成に使用できる OpenType フォント サンプルのセットが用意されています。 サンプル フォントは、Ascender Corporation のライセンスを受けて提供されています。 これらのフォントには、OpenType フォーマットで定義されている機能全体のサブセットだけが実装されています。 サンプルの OpenType フォント名の一覧を次の表に示します。  
   
-|**名前**|**ファイル**|  
+|**Name**|**ファイル**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  
@@ -31,7 +31,7 @@ ms.locfileid: "79181906"
 |Pescadero|Pesca.ttf|  
 |Pescadero Bold|Pescab.ttf|  
   
- 次の図は、OpenType フォントのサンプルを示しています。  
+ 次の図は OpenType フォントのサンプルが、どのように表示されるかを示しています。  
   
  ![サンプル フォント パック内のフォント名の一覧](./media/sample-opentype-font-pack/font-names-sample-pack.gif)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "79181906"
   
 <a name="installing_the_fonts"></a>
 ## <a name="installing-the-fonts"></a>フォントのインストール  
- サンプルの OpenType フォントを既定の Windows フォント ディレクトリ**\WINDOWS\Fonts**にインストールするオプションがあります。 フォントをインストールするには、コントロール パネルの [フォント] を使用します。 これらのフォントがコンピュータにインストールされると、既定の Windows フォントを参照するすべてのアプリケーションからアクセスできるようになります。 フォント ファイルをダブルクリックして、各フォントの文字を異なるいくつかのフォント サイズで表示できます。 次のスクリーン ショットは、Lindsey フォント ファイル (Linds.ttf) を表示したものです。  
+ サンプルの OpenType フォントを、既定の Windows フォント ディレクトリである **\WINDOWS\Fonts** にインストールできます。 フォントをインストールするには、コントロール パネルの [フォント] を使用します。 これらのフォントをコンピューターにインストールすると、既定の Windows フォントを参照するすべてのアプリケーションからアクセスできるようになります。 フォント ファイルをダブルクリックして、各フォントの文字を異なるいくつかのフォント サイズで表示できます。 次のスクリーン ショットは、Lindsey フォント ファイル (Linds.ttf) を表示したものです。  
   
  ![Lindsey フォント &#40;OpenType&#41;](./media/typographyinwpf-04.png "TypographyInWPF_04")  
 Lindsey フォントの表示  

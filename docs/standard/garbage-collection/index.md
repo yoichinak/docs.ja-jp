@@ -1,5 +1,6 @@
 ---
 title: .NET ガベージ コレクション
+description: .NET のガベージ コレクションについて説明します。 .NET のガベージ コレクターは、アプリケーションのメモリの割り当てと解放を管理します。
 ms.date: 04/21/2020
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -18,12 +19,12 @@ helpviewer_keywords:
 - runtime, garbage collection
 - garbage collection, about
 ms.assetid: 22b6cb97-0c80-4eeb-a2cf-5ed7655e37f9
-ms.openlocfilehash: ef7e078c6ef2f0b4081c49aa0db09316e79f0702
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: dde0012ff7233eb7ee13efab1931f129b0eae276
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84286055"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662486"
 ---
 # <a name="garbage-collection"></a>ガベージ コレクション
 

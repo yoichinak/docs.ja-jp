@@ -1,13 +1,14 @@
 ---
 title: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)'
+description: このチュートリアルに従って、サンプル データベース内のテーブルをモデル化するエンティティ クラスを作成します。 その後、シンプルなクエリを作成して、特定の場所にいる顧客を一覧表示します。
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: a9b3b57e37331cd13f2cd30b8a7663f2fb39d8c1
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 4637fabecc1726d8fec12857a667073912cfbed5
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70792129"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286302"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)
 

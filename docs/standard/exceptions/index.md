@@ -1,5 +1,6 @@
 ---
 title: .NET での例外の処理とスロー
+description: .NET で例外を処理およびスローする方法について説明します。 例外は、.NET 操作がアプリケーションのエラーを示す方法です。
 ms.date: 06/19/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -11,12 +12,12 @@ helpviewer_keywords:
 - exceptions [.NET]
 - common language runtime, exceptions
 ms.assetid: f99a1d29-a2a8-47af-9707-9909f9010735
-ms.openlocfilehash: 8e78b2a8d7a815637e143eeb88bcfb51ded33771
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 89d88e3128917125d1a09466ed4e230604d6978c
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75741346"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662772"
 ---
 # <a name="handling-and-throwing-exceptions-in-net"></a>.NET での例外の処理とスロー
 
@@ -46,7 +47,7 @@ ms.locfileid: "75741346"
 
 次の表は、一般的な例外とそれらの原因の例をいくつか示しています。
 
-| 例外の種類 | [説明] | 例 |
+| 例外の種類 | 説明 | 例 |
 | -------------- | ----------- | ------- |
 | <xref:System.Exception> | すべての例外の基底クラスです。 | なし (この例外の派生クラスを使用)。 |
 | <xref:System.IndexOutOfRangeException> | 配列のインデックスが誤っている場合にのみ、ランタイムによってスローされます。 | 次のように、配列に対して配列の有効範囲外のインデックスを付けた場合。 <br /> `arr[arr.Length+1]` |
@@ -56,7 +57,7 @@ ms.locfileid: "75741346"
 | <xref:System.ArgumentNullException> | null の引数を許可しないメソッドによってスローされます。 | `String s = null;` <br /> `"Calculate".IndexOf(s);`|
 | <xref:System.ArgumentOutOfRangeException> | 引数が特定の範囲内にあることを検査するメソッドによってスローされます。 | `String s = "string";` <br /> `s.Substring(s.Length+1);` |
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Exception クラスとプロパティ](exception-class-and-properties.md)
 - [方法: Try ブロックと Catch ブロックを使用して例外をキャッチする](how-to-use-the-try-catch-block-to-catch-exceptions.md)

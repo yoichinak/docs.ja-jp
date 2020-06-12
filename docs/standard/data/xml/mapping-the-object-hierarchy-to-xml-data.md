@@ -6,12 +6,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 450e350b-6a68-4634-a2a5-33f4dc33baf0
-ms.openlocfilehash: 4ad505749625e22a09406549329179990b81c140
-ms.sourcegitcommit: de7f589de07a9979b6ac28f54c3e534a617d9425
+ms.openlocfilehash: 8507c4b323f97279c3054b76aaf8d52f14f0d4ad
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82794391"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289136"
 ---
 # <a name="mapping-the-object-hierarchy-to-xml-data"></a>オブジェクト階層の XML データへのマップ
 メモリに読み込まれた XML ドキュメントは、ツリーという概念で表現されます。 プログラミングでは、オブジェクト階層を利用してツリーのノードにアクセスします。 XML コンテンツがどのようにノードに変換されるかを次の例に示します。  
@@ -30,7 +30,7 @@ ms.locfileid: "82794391"
   
  この入力は、メモリ上で次のようなノード ツリーとして表現され、ノード型プロパティが割り当てられます。  
   
- ![サンプル ノード ツリー](../../../../docs/standard/data/xml/media/simple-xml.gif "Simple_XML")  
+ ![サンプル ノード ツリー](media/simple-xml.gif "Simple_XML")  
 book と title のノード ツリー表現  
   
  `book` 要素は **XmlElement** オブジェクトになり、次の要素の `title` も **XmlElement** になりますが、要素コンテンツは **XmlText** オブジェクトになります。 **XmlElement** のメソッドとプロパティは、**XmlText** オブジェクトで使用できるメソッドとプロパティとは異なります。 実行可能なアクションはノード型によって決定されるため、XML マークアップがどのノード型になるかを理解することがきわめて重要です。  
@@ -214,10 +214,10 @@ public class Sample
   
  有効なアクションの種類と設定および取得できるプロパティの種類はノード型によって決まるため、割り当てられているノード型を知っておく必要があります。  
   
- 空白ノードの作成は、データが DOM に読み込まれるときに **PreserveWhitespace** フラグによって制御されます。 詳細については、「[DOM を読み込むときの空白および有意の空白の処理](../../../../docs/standard/data/xml/white-space-and-significant-white-space-handling-when-loading-the-dom.md)」を参照してください。  
+ 空白ノードの作成は、データが DOM に読み込まれるときに **PreserveWhitespace** フラグによって制御されます。 詳細については、「[DOM を読み込むときの空白および有意の空白の処理](white-space-and-significant-white-space-handling-when-loading-the-dom.md)」を参照してください。  
   
- DOM に新しいノードを追加するには、「[XML ドキュメントへのノードの挿入](../../../../docs/standard/data/xml/inserting-nodes-into-an-xml-document.md)」を参照してください。 DOM からノードを削除するには、「[XML ドキュメントからのノード、コンテンツ、値の削除](../../../../docs/standard/data/xml/removing-nodes-content-and-values-from-an-xml-document.md)」を参照してください。 DOM のノードのコンテンツを編集するには、「[XML ドキュメントのノード、コンテンツ、値の変更](../../../../docs/standard/data/xml/modifying-nodes-content-and-values-in-an-xml-document.md)」を参照してください。  
+ DOM に新しいノードを追加するには、「[XML ドキュメントへのノードの挿入](inserting-nodes-into-an-xml-document.md)」を参照してください。 DOM からノードを削除するには、「[XML ドキュメントからのノード、コンテンツ、値の削除](removing-nodes-content-and-values-from-an-xml-document.md)」を参照してください。 DOM のノードのコンテンツを編集するには、「[XML ドキュメントのノード、コンテンツ、値の変更](modifying-nodes-content-and-values-in-an-xml-document.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント オブジェクト モデル (DOM)](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+- [XML ドキュメント オブジェクト モデル (DOM)](xml-document-object-model-dom.md)

@@ -10,20 +10,20 @@ helpviewer_keywords:
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
 ms.openlocfilehash: 8cfb7d903ad46e8d394f1e404693da908aeab1d9
 ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76731779"
 ---
 # <a name="resources-wpf"></a>リソース (WPF)
-リソースは、アプリケーションのさまざまな場所で再利用できるオブジェクトです。 WPF では、さまざまな種類のリソースがサポートされています。 これらのリソースには、主に、XAML リソースとリソースデータファイルという2種類のリソースがあります。 XAML リソースの例としては、ブラシやスタイルなどがあります。 リソースデータファイルは、アプリケーションで必要とされる実行可能ではないデータファイルです。  
+リソースは、アプリケーションのさまざまな場所で再利用できるオブジェクトです。 WPF では、さまざまな種類のリソースがサポートされています。 これらのリソースは、主に 2 種類のリソースです。XAML リソースとリソース データ ファイルです。 XAML リソースの例として、ブラシやスタイルがあります。 リソース データ ファイルは、アプリケーションに必要な、実行可能ではないデータ ファイルです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [XAML リソース](../../../desktop-wpf/fundamentals/xaml-resources-define.md)  
  [WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル](../app-development/wpf-application-resource-content-and-data-files.md)  
  [WPF におけるパッケージの URI](../app-development/pack-uris-in-wpf.md)  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
  <xref:System.Windows.ResourceDictionary>  
   
  [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)  

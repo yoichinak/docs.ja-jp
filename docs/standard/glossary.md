@@ -3,12 +3,12 @@ title: .NET 用語集
 description: .NET のドキュメントで使われている用語からいくつか選択してその意味を説明します。
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: e7608ee7e68300d691df51aed923db0e8b518165
-ms.sourcegitcommit: 73aa9653547a1cd70ee6586221f79cc29b588ebd
+ms.openlocfilehash: 11ab0de4757a23c940ae04418a5a82ea79f71761
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2020
-ms.locfileid: "82102477"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287455"
 ---
 # <a name="net-glossary"></a>.NET 用語集
 
@@ -18,7 +18,7 @@ ms.locfileid: "82102477"
 
 Ahead Of Time コンパイラ。
 
-[JIT](#jit) と同様に、このコンパイラも [IL](#il) をマシン コードに変換します。 JIT コンパイルとは異なり、AOT コンパイルはアプリケーションが実行される前に行われ、通常は、別のコンピューターで実行されます。 AOT ツール チェーンは実行時にコンパイルしないので、コンパイルに費やされる時間を最小限に抑える必要はありません。 つまり、より多くの時間を最適化に費やすことができます。 AOT のコンテキストはアプリケーション全体であるため、AOT コンパイラはモジュール間のリンクとプログラム全体の分析も実行します。これは、すべての参照が追跡されて、1 つの実行可能ファイルが生成されることを意味します。
+[JIT](#jit) と同様に、このコンパイラも [IL](#il) をマシン コードに変換します。 JIT コンパイルとは異なり、AOT コンパイルはアプリケーションが実行される前に行われ、通常は、別のコンピューターで実行されます。 AOT ツール チェーンは実行時にコンパイルされないので、コンパイルに費やされる時間を最小限に抑える必要はありません。 つまり、より多くの時間を最適化に費やすことができます。 AOT のコンテキストはアプリケーション全体であるため、AOT コンパイラはモジュール間のリンクとプログラム全体の分析も実行します。これは、すべての参照が追跡されて、1 つの実行可能ファイルが生成されることを意味します。
 
 「[CoreRT](#corert)」と「[.NET Native](#net-native)」を参照してください。
 

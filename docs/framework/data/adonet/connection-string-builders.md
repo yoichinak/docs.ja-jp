@@ -1,16 +1,17 @@
 ---
 title: 接続文字列ビルダー
+description: ADO.NET のさまざまなプロバイダー向けに使用される接続文字列ビルダー クラスについて説明します。これらはすべて DbConnectionStringBuilder から継承されます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 8cadeac0bcbf301f7d973e93435885de82052603
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: e493140b4cf5a939e8ae8f42b617fb739ed09dec
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151664"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287065"
 ---
 # <a name="connection-string-builders"></a>接続文字列ビルダー
 以前のバージョンの ADO.NET では、文字列値の連結によって構築された接続文字列がコンパイル時にはチェックされません。そのため、不適切なキーワードが使用された場合、実行時に <xref:System.ArgumentException> が発生します。 接続文字列のキーワードの構文は .NET Framework データ プロバイダーごとに異なるため、有効な接続文字列を手動で作成するのが難しいという問題がありました。 この問題に対処するため、ADO.NET 2.0 では、各 .NET Framework データ プロバイダー用の新しい接続文字列ビルダーが導入されました。 各データ プロバイダーは、<xref:System.Data.Common.DbConnectionStringBuilder> を継承した、厳密に型指定された接続文字列ビルダー クラスを提供しています。 次の表は、各 .NET Framework データ プロバイダーおよび対応する接続文字列ビルダー クラスの一覧です。  

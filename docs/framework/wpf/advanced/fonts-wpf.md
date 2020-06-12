@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 6c766a95-ad03-475e-a36f-2243e9495941
 ms.openlocfilehash: bf1101c5a32c05230aec92f61ab74c2e4d5037fc
 ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 01/24/2020
 ms.locfileid: "76737912"
 ---
 # <a name="fonts-wpf"></a>フォント (WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、OpenType フォントを使用したテキストのリッチ表示のサポートが含まれています。 OpenType フォントのサンプルパックは、Windows SDK に含まれています。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、OpenType フォントを使用するテキストのリッチ プレゼンテーションのサポートが含まれています。 OpenType フォントのサンプル パックは、Windows SDK に含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [OpenType フォントの機能](opentype-font-features.md)  
  [アプリケーションでのフォントのパッケージング](packaging-fonts-with-applications.md)  
  [OpenType フォント パックのサンプル](sample-opentype-font-pack.md)  
- [データ バインドに関する「方法」トピック](fonts-how-to-topics.md)  
+ [方法トピック](fonts-how-to-topics.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.FontStyle>
 - <xref:System.Windows.SystemFonts>

@@ -1,16 +1,17 @@
 ---
 title: 作業の開始
+description: このサンプル コードを使用して LINQ to SQL の使用を開始し、LINQ テクノロジを使用して、メモリ内コレクションにアクセスする場合と同じように SQL データベースにアクセスします。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
-ms.openlocfilehash: 3bff4e9f268e9eac84c244cb58eed8b4384e717d
-ms.sourcegitcommit: 7bc6887ab658550baa78f1520ea735838249345e
+ms.openlocfilehash: a46c42e917bdab0d32ee594bbcd604ee9e3d26bc
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75634692"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286418"
 ---
 # <a name="getting-started"></a>作業の開始
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用すると、LINQ テクノロジを使用して、メモリ内コレクションへのアクセスと同じように SQL データベースにアクセスできます。  
