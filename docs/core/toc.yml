@@ -95,13 +95,13 @@ items:
             displayName: 'tutorials, visual studio code, vs code'
           - name: アプリの発行
             href: tutorials/publishing-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: ライブラリを作成する
             href: tutorials/library-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: ライブラリを単体テストする
             href: tutorials/testing-library-with-visual-studio-code.md
-            displayName: 'tutorials, visual studio, vs'
+            displayName: 'tutorials, visual studio code, vs code'
           - name: パッケージをインストールして使用する
             href: /nuget/quickstart/install-and-use-a-package-using-the-dotnet-cli
             displayName: 'tutorials, cli'
@@ -111,13 +111,25 @@ items:
       - name: Visual Studio for Mac の使用
         items:
           - name: コンソール アプリを作成する
-            href: tutorials/using-on-mac-vs.md
-            displayName: tutorials
-          - name: ライブラリを作成して単体テストする
-            href: tutorials/using-on-mac-vs-full-solution.md
-            displayName: tutorials
+            href: tutorials/with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac, cli'
+          - name: アプリをデバッグする
+            href: tutorials/debugging-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: アプリの発行
+            href: tutorials/publishing-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: ライブラリを作成する
+            href: tutorials/library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: ライブラリを単体テストする
+            href: tutorials/testing-library-with-visual-studio-mac.md
+            displayName: 'tutorials, visual studio for mac, vs for mac'
           - name: パッケージをインストールして使用する
             href: /nuget/quickstart/install-and-use-a-package-in-visual-studio-mac
+            displayName: 'tutorials, visual studio for mac, vs for mac'
+          - name: パッケージの作成と公開
+            href: /nuget/quickstart/create-and-publish-a-package-using-the-dotnet-cli
             displayName: tutorials
       - name: 高度なトピック
         items:
