@@ -1,13 +1,14 @@
 ---
 title: 新着記事
+description: SqlClient データ プロバイダーや ADO.NET Entity Framework の新機能など、.NET Framework 4.5 の ADO.NET の新機能について説明します。
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 2ac8ebced700dc6c874ac22304773b3b9c19f8b3
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 536b9314dd83366202f7fd9b489759681021fd9e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76979770"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286172"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET の新機能
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e61b4dac109f714b5cf25226d1029237ca77032d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801622"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84409479"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>型 \<type> の式はクエリ不可能です
 型 \<type> の式はクエリ不可能です。 LINQ プロバイダーに対してアセンブリ参照や名前空間インポートが不足していないことを確認してください。  
@@ -38,9 +38,9 @@ ms.locfileid: "61801622"
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 - <xref:System.Xml.Linq>
-- [Visual Basic における LINQ の概要](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
-- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [参照と Imports ステートメント](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
-- [Imports ステートメント (.NET 名前空間および型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [Visual Basic における LINQ の概要](../../programming-guide/language-features/linq/introduction-to-linq.md)
+- [LINQ](../../programming-guide/language-features/linq/index.md)
+- [XML](../../programming-guide/language-features/xml/index.md)
+- [参照と Imports ステートメント](../../programming-guide/program-structure/references-and-the-imports-statement.md)
+- [Imports ステートメント (.NET 名前空間および型)](../statements/imports-statement-net-namespace-and-type.md)
 - [[参照設定] ページ (プロジェクト デザイナー) (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)

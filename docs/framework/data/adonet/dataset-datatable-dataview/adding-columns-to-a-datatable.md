@@ -1,16 +1,17 @@
 ---
 title: DataTable への列の追加
+description: DataTable には、テーブルの Columns プロパティによって参照される DataColumn オブジェクトが格納されます。 次のコード例を使用して、ADO.NET のテーブルに列を追加します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e85c4a0e-4f3f-458c-b58b-0ddbc06bf974
-ms.openlocfilehash: 6e0dcd819dc354e1fd23b244692dff5091142004
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 9d6d21696acd7a6b63cfd6d2ea7e906ec2acd7c9
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70784859"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286948"
 ---
 # <a name="adding-columns-to-a-datatable"></a>DataTable への列の追加
 <xref:System.Data.DataTable> には、テーブルの **Columns** プロパティによって参照される <xref:System.Data.DataColumn> オブジェクトのコレクションが格納されます。 この列のコレクションと制約によって、テーブルのスキーマ (構造) が定義されます。  

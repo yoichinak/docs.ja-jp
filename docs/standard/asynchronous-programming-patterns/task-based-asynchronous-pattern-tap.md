@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Task-based Asynchronous Pattern, .NET Framework support for
 - .NET Framework, asynchronous design patterns
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
-ms.openlocfilehash: 89c486618729c334bf74f0a1f4f9dd1b3cee8b0e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 4a08c8a72116ea509f559e412c5f270f3471bf1c
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78158169"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84276440"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>タスク ベースの非同期パターン (TAP)
 タスク ベースの非同期パターン (TAP) は、任意の非同期操作を表すために使用される <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 名前空間の <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 型および <xref:System.Threading.Tasks?displayProperty=nameWithType> 型に基づいています。 TAP は、新規開発に推奨の非同期デザイン パターンです。  
@@ -30,9 +30,9 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
   
  TAP メソッドのパラメーターには、対応する同期メソッドと同じパラメーターを、同じ順序で指定する必要があります。  ただし、`out` パラメーターと `ref` パラメーターはこの規則に該当せず、すべて回避する必要があります。 `out` パラメーターまたは `ref` パラメーターで返されるデータは、代わりに複数の値を格納するために、タプルまたはカスタム データ構造を使用して、`TResult` により返される <xref:System.Threading.Tasks.Task%601> の一部として返す必要があります。 さらに、TAP メソッドに対応する同期メソッドでは提供されていない場合でも、<xref:System.Threading.CancellationToken> パラメーターの追加を検討する必要があります。
 
- タスクの作成、操作、または組み合わせのためだけに使用されるメソッド (メソッド名またはメソッドが属する型の名前でメソッドの非同期の意図が明確な場合) は、この名前付けパターンに従う必要はありません。このようなメソッドは、*連結子*と呼ばれることもあります。 連結子の例には、<xref:System.Threading.Tasks.Task.WhenAll%2A> および <xref:System.Threading.Tasks.Task.WhenAny%2A> があります。詳細については、記事「[タスク ベースの非同期パターンの利用](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)」の「[タスク ベースの組み込み連結子の使用](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators)」セクションを参照してください。  
+ タスクの作成、操作、または組み合わせのためだけに使用されるメソッド (メソッド名またはメソッドが属する型の名前でメソッドの非同期の意図が明確な場合) は、この名前付けパターンに従う必要はありません。このようなメソッドは、*連結子*と呼ばれることもあります。 連結子の例には、<xref:System.Threading.Tasks.Task.WhenAll%2A> および <xref:System.Threading.Tasks.Task.WhenAny%2A> があります。詳細については、記事「[タスク ベースの非同期パターンの利用](consuming-the-task-based-asynchronous-pattern.md)」の「[タスク ベースの組み込み連結子の使用](consuming-the-task-based-asynchronous-pattern.md#combinators)」セクションを参照してください。  
   
- 非同期プログラミング モデル (APM) やイベント ベースの非同期パターン (EAP) など、従来の非同期プログラミング パターンで使用される構文とは異なる TAP 構文の例については、「[非同期プログラミングのパターン](../../../docs/standard/asynchronous-programming-patterns/index.md)」を参照してください。  
+ 非同期プログラミング モデル (APM) やイベント ベースの非同期パターン (EAP) など、従来の非同期プログラミング パターンで使用される構文とは異なる TAP 構文の例については、「[非同期プログラミングのパターン](index.md)」を参照してください。  
   
 ## <a name="initiating-an-asynchronous-operation"></a>非同期操作の開始  
  TAP に基づく非同期メソッドは、引数の検証や非同期操作の開始などの少量の作業を同期をとって実行してから結果のタスクを返すことができます。 このような同期作業は必要最低限にし、非同期メソッドからすぐに制御を戻すようにします。 制御をすぐに戻す理由は次のとおりです。  
@@ -189,9 +189,9 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
   
 ## <a name="related-topics"></a>関連トピック  
   
-|タイトル|[説明]|  
+|Title|説明|  
 |-----------|-----------------|  
-|[非同期プログラミングのパターン](../../../docs/standard/asynchronous-programming-patterns/index.md)|非同期操作を実行するための 3 種類のパターンとして、タスク ベースの非同期パターン (TAP)、非同期プログラミング モデル (APM)、およびイベント ベースの非同期パターン (EAP) を紹介します。|  
-|[タスク ベースの非同期パターンの実装](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|タスク ベースの非同期パターン (TAP) の実装の 3 つの方法として、Visual Studio の C# および Visual Basic コンパイラを使用する方法、手動で行う方法、またはコンパイラと手動による方法を組み合わせた方法を説明します。|  
-|[タスク ベースの非同期パターンの利用](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|タスクとコールバックを使用して、ブロックすることなく待機できる方法を説明します。|  
-|[他の非同期パターンと型との相互運用](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|タスク ベースの非同期パターン (TAP) を使用して、非同期プログラミング モデル (APM) とイベント ベースの非同期パターン (EAP) を実装する方法について説明します。|
+|[非同期プログラミングのパターン](index.md)|非同期操作を実行するための 3 種類のパターンとして、タスク ベースの非同期パターン (TAP)、非同期プログラミング モデル (APM)、およびイベント ベースの非同期パターン (EAP) を紹介します。|  
+|[タスク ベースの非同期パターンの実装](implementing-the-task-based-asynchronous-pattern.md)|タスク ベースの非同期パターン (TAP) の実装の 3 つの方法として、Visual Studio の C# および Visual Basic コンパイラを使用する方法、手動で行う方法、またはコンパイラと手動による方法を組み合わせた方法を説明します。|  
+|[T:System.Threading.Tasks.Task](consuming-the-task-based-asynchronous-pattern.md)|タスクとコールバックを使用して、ブロックすることなく待機できる方法を説明します。|  
+|[他の非同期パターンと型との相互運用](interop-with-other-asynchronous-patterns-and-types.md)|タスク ベースの非同期パターン (TAP) を使用して、非同期プログラミング モデル (APM) とイベント ベースの非同期パターン (EAP) を実装する方法について説明します。|

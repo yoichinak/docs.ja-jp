@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: ee5a9f687765ce064eb3c3f84218ed36eb916d9d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fa220998d12206e620c242b9b39df3dc1b639d29
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349710"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388259"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>方法: プロパティを作成する (Visual Basic)
 プロパティ定義は、`Property` ステートメントと `End Property` ステートメントで囲みます。 この定義内で、`Get` プロシージャ、`Set` プロシージャ、またはその両方を定義します。 プロパティのすべてのコードは、これらのプロシージャ内にあります。  
@@ -21,7 +21,7 @@ ms.locfileid: "74349710"
   
 ### <a name="to-create-a-property"></a>プロパティを作成するには  
   
-1. 任意のプロパティまたはプロシージャの外部で、[ Property ステートメント ](../../../../visual-basic/language-reference/statements/property-statement.md) を使用し、その後に `End Property` ステートメントを使用します。  
+1. 任意のプロパティまたはプロシージャの外部で、[ Property ステートメント ](../../../language-reference/statements/property-statement.md) を使用し、その後に `End Property` ステートメントを使用します。  
   
 2. プロパティがパラメーターを受け取る場合は、`Property` キーワードの後にプロシージャの名前を指定し、その後にかっこで囲んだパラメーター リストを指定します。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "74349710"
   
 ### <a name="to-create-a-get-procedure-that-retrieves-a-property-value"></a>プロパティ値を取得する Get プロシージャを作成するには  
   
-1. `Property` ステートメントと `End Property` ステートメントの間に、[Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)を記述し、その後に `End Get` ステートメントを記述します。 `Get` プロシージャのパラメーターを定義する必要はありません。  
+1. `Property` ステートメントと `End Property` ステートメントの間に、[Get ステートメント](../../../language-reference/statements/get-statement.md)を記述し、その後に `End Get` ステートメントを記述します。 `Get` プロシージャのパラメーターを定義する必要はありません。  
   
 2. `Get` ステートメントと `End Get` ステートメントの間に、プロパティの値を取得するコード ステートメントを配置します。 このコードでは、プロパティの値を生成して返すだけでなく、他の計算やデータ操作も含めることができます。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74349710"
   
 ### <a name="to-create-a-set-procedure-that-writes-a-propertys-value"></a>プロパティの値を書き込む Set プロシージャを作成するには  
   
-1. `Property` ステートメントと `End Property` ステートメントの間に、[Set ステートメント](../../../../visual-basic/language-reference/statements/set-statement.md)を記述し、その後に `End Set` ステートメントを記述します。  
+1. `Property` ステートメントと `End Property` ステートメントの間に、[Set ステートメント](../../../language-reference/statements/set-statement.md)を記述し、その後に `End Set` ステートメントを記述します。  
   
 2. `Set` ステートメントで、`Set` キーワードの後に、かっこで囲まれたパラメーター リストを指定します。 このパラメーター リストには、呼び出し元のコードから渡される値の値パラメーターが少なくとも含まれている必要があります。 この値パラメーターの既定の名前は `Value` ですが、必要に応じて別の名前を使用できます。 値パラメーターは、プロパティ自体と同じデータ型である必要があります。  
   

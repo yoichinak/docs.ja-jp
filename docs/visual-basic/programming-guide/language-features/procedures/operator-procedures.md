@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: b395f5fcf1b89bb49e55e207c4910e95f2aae69d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a1dd183570c8aa50efff85bdaebef90bd3b0120f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345999"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84364319"
 ---
 # <a name="operator-procedures-visual-basic"></a>演算子プロシージャ (Visual Basic)
 
@@ -28,7 +28,7 @@ ms.locfileid: "74345999"
 
 Visual Basic では、基本的なデータ型でのみ演算子を定義します。 オペランドの一方または両方がクラスまたは構造体の型である場合、演算子の動作を定義できます。
 
-詳細については、「[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)」をご覧ください。
+詳細については、「[Operator Statement](../../../language-reference/statements/operator-statement.md)」をご覧ください。
 
 ## <a name="types-of-operator-procedure"></a>演算子プロシージャの型
 
@@ -56,7 +56,7 @@ Public Shared [Widening | Narrowing] Operator operatorsymbol ( operand1 [,  oper
 End Operator
 ```
 
-`Widening` または `Narrowing` キーワードは、型変換演算子でのみ使用します。 型変換演算子では、演算子記号は常に [CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)です。
+`Widening` または `Narrowing` キーワードは、型変換演算子でのみ使用します。 型変換演算子では、演算子記号は常に [CType 関数](../../../language-reference/functions/ctype-function.md)です。
 
 2 項演算子を定義するには、2 つのオペランドを宣言し、型変換演算子を含め、単項演算子を定義するには、1 つのオペランドを宣言します。 すべてのオペランドを `ByVal` で宣言する必要があります。
 
@@ -66,7 +66,7 @@ End Operator
 
 定義済みのクラスまたは構造体で演算子を定義するため、オペランドの少なくとも一方は、そのクラスまたは構造体のデータ型である必要があります。 型変換演算子の場合、オペランドまたは戻り値の型が、クラスまたは構造体のデータ型である必要があります。
 
-詳細については、「[Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)」をご覧ください。
+詳細については、「[Operator Statement](../../../language-reference/statements/operator-statement.md)」をご覧ください。
 
 ## <a name="calling-syntax"></a>呼び出しの構文
 
@@ -95,7 +95,7 @@ End Operator
 - [Function プロシージャ](./function-procedures.md)
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator ステートメント](../../../language-reference/statements/operator-statement.md)
 - [方法: 演算子を定義する](./how-to-define-an-operator.md)
 - [方法: 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
 - [方法: 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)

@@ -1,13 +1,14 @@
 ---
 title: パフォーマンスに関する考慮事項 (Entity Framework)
+description: ADO.NET Entity Framework のパフォーマンス特性と、Entity Framework アプリケーションのパフォーマンスの向上に役立つ考慮事項について説明します。
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: 0ff018fe0d8199dcd790bcd3de18751662e0a92b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: edf82e4db3e72fab1555eea9bfcd34cd34ddbba7
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149740"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286767"
 ---
 # <a name="performance-considerations-entity-framework"></a>パフォーマンスに関する考慮事項 (Entity Framework)
 このトピックでは、ADO.NET Entity Framework のパフォーマンス特性を示し、Entity Framework アプリケーションのパフォーマンスを向上させるために役立つ注意事項について説明します。  
@@ -128,7 +129,7 @@ ms.locfileid: "79149740"
   
  サイズが非常に大きいモデルで作業する場合は、次の点に注意してください。  
   
- .NET メタデータ形式では、特定のバイナリ内のユーザー文字列の数が 16,777,215 (0xFFFFFF) に制限されます。 サイズが非常に大きいモデルのビューを生成中に、ビュー ファイルがこのサイズ制限に達した場合、"ユーザー文字列を作成する論理スペースがありません。"  というコンパイル エラーが表示されます。 このサイズ制限は、すべてのマネージド バイナリに適用されます。 詳細については、[ブログ](https://docs.microsoft.com/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework)を参照してください。サイズが大きい複合モデルでの作業中にエラーを回避する方法を解説しています。  
+ .NET メタデータ形式では、特定のバイナリ内のユーザー文字列の数が 16,777,215 (0xFFFFFF) に制限されます。 サイズが非常に大きいモデルのビューを生成中に、ビュー ファイルがこのサイズ制限に達した場合、"ユーザー文字列を作成する論理スペースがありません。" というコンパイル エラーが表示されます。 このサイズ制限は、すべてのマネージド バイナリに適用されます。 詳細については、[ブログ](https://docs.microsoft.com/archive/blogs/appfabriccat/solving-the-no-logical-space-left-to-create-more-user-strings-error-and-improving-performance-of-pre-generated-views-in-visual-studio-net4-entity-framework)を参照してください。サイズが大きい複合モデルでの作業中にエラーを回避する方法を解説しています。  
   
 #### <a name="consider-using-the-notracking-merge-option-for-queries"></a>クエリの NoTracking マージ オプションの使用を検討する  
  オブジェクト コンテキスト内で返されたオブジェクトを追跡するにはコストが生じます。 オブジェクトに対する変更内容を検出したり、同じ論理エンティティに対する複数の要求で同じオブジェクト インスタンスが返されるようにするには、オブジェクトを <xref:System.Data.Objects.ObjectContext> インスタンスにアタッチする必要があります。 オブジェクトの更新または削除を行う予定がなく、ID 管理が不要である場合には、クエリ実行時に <xref:System.Data.Objects.MergeOption.NoTracking> マージ オプションを使用することを検討してください。  

@@ -1,13 +1,14 @@
 ---
 title: データセット
+description: メモリ内に常駐するデータ表現で、ADO.NET のデータ ソースの違いにかかわらず、一貫性のあるリレーショナル プログラミング モデルを提供する、DataSet について説明します。
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 86c14f516ff82e4d9acf7cc3078e04590971a8a1
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 2fc5963937f7bf15dc192c6dc0a980d544a23194
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980302"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287130"
 ---
 # <a name="adonet-datasets"></a>ADO.NET データセット
 <xref:System.Data.DataSet> オブジェクトは、ADO.NET で非接続型分散データ シナリオをサポートするうえで中心的な役割を果たします。 **DataSet** はメモリ内に常駐するデータ表現であり、データ ソースの違いにかかわらず、一貫性のあるリレーショナル プログラミング モデルを提供します。 複数の異なるデータ ソースや XML データと組み合わせて使用でき、アプリケーションにとってローカルなデータの管理にも使用できます。 **DataSet** では、関連テーブル、制約、およびテーブル間のリレーションシップを含む、完全なデータ セットが表されます。 次の図は、**DataSet** オブジェクト モデルを示したものです。  

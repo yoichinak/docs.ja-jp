@@ -2,12 +2,12 @@
 title: 依存関係と .NET ライブラリ
 description: .NET ライブラリの NuGet の依存関係を管理するためのベスト プラクティスの推奨事項。
 ms.date: 10/02/2018
-ms.openlocfilehash: 265e92e86d22c778f65476e7f1383d32e4964655
-ms.sourcegitcommit: 957c49696eaf048c284ef8f9f8ffeb562357ad95
+ms.openlocfilehash: 344d5dff564b64b9d70bbd61afb0b7bc057c8f21
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82895707"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84291371"
 ---
 # <a name="dependencies"></a>依存関係
 
@@ -24,7 +24,7 @@ ms.locfileid: "82895707"
 ほとんどのひし形の依存関係は簡単に解決できますが、状況によっては問題が発生することがあります。
 
 1. **競合する NuGet パッケージ参照**があると、パッケージの復元中にバージョンが解決されません。
-2. **バージョン間に互換性に影響する変更**があると、実行時にバグと例外が発生します。
+2. **バージョン間で破壊的変更**があると、実行時にバグと例外が発生します。
 3. **パッケージ アセンブリが厳密な名前**で、アセンブリ バージョンが変わり、アプリが .NET Framework 上で実行されている場合。 アセンブリのバインド リダイレクトが必要です。
 
 自分のパッケージと共に使用されるパッケージを知ることはできません。 ライブラリが中断するひし形の依存関係の可能性を減らすには、依存しているパッケージの数を最小限に抑えることをお勧めします。

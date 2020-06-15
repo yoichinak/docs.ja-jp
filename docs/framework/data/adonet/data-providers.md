@@ -1,16 +1,17 @@
 ---
 title: .NET Framework データ プロバイダー
+description: ADO.NET で、.NET Framework データ プロバイダーを使用して、データベースに接続し、コマンドを実行したり、結果を取得したりする方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 2c986aab33f2c4dcefb5924ea61e8b9f6b3c50a3
-ms.sourcegitcommit: 30a558d23e3ac5a52071121a52c305c85fe15726
+ms.openlocfilehash: 2d4c513b7a4b0e111f2b7e7384c6ee4970d5665f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/25/2019
-ms.locfileid: "75347809"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287000"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー
 .NET Framework データ プロバイダーは、データベースに接続して、コマンドを実行したり、結果を取得したりする目的で使用されます。 その結果は、直接処理されるか、必要に応じてユーザーに公開されるように <xref:System.Data.DataSet> に格納されるか、取得したデータセットを複数のソースからのデータと組み合わせるか、または、層間でリモート処理されます。 軽量な .NET Framework データ プロバイダーでは、データ ソースとコード間に形成される層が最小限で済むため、機能を犠牲にすることなく、パフォーマンスを高めることができます。  

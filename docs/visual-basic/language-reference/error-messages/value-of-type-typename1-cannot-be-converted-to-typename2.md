@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6b35efbc445887c537b94dd299b317a28e5f689
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64621201"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406561"
 ---
-# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>型 '\<typename1>' の値を '\<typename2>' に変換できません
+# <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>型 '\<typename1>' の値を '\<typename2>' に変換できません。
 型 '\<typename1>' の値を '\<typename2>' に変換できません。 ファイル参照とアセンブリ '\<assemblyname>' へのプロジェクト参照との混在により、型の不一致が生じた可能性があります。 プロジェクト '\<projectname1>' の '\<filepath>' へのファイル参照を '\<projectname2>' へのプロジェクト参照で置き換えてください。  
   
  プロジェクトがプロジェクト参照とファイル参照の両方を行う場合、コンパイラは、1 つの型を別の型に変換できることを保証できません。  
@@ -61,5 +61,5 @@ ms.locfileid: "64621201"
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における型変換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic における型変換](../../programming-guide/language-features/data-types/type-conversions.md)
 - [プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)

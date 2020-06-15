@@ -6,12 +6,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 1371e4ed0ff28f9caf56eabf2a1bb9290edbe75c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 917e52b711645fbf94a132216a3fa90b0dfc15b3
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346024"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84414325"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>方法: プロシージャから値を返す (Visual Basic)
 `Function` プロシージャは、`Return` ステートメントを実行するか、`Exit Function` または `End Function` ステートメントを検出すると、呼び出し元のコードに値を返します。  
@@ -42,7 +42,7 @@ ms.locfileid: "74346024"
   
 4. `End Function` ステートメントは、`Function` プロシージャに 1 つだけ含めることができます。  
   
-     詳細と例については、「[Function Statement (Function ステートメント)](../../../../visual-basic/language-reference/statements/function-statement.md)」の戻り値に関するセクションをご覧ください。  
+     詳細と例については、「[Function Statement (Function ステートメント)](../../../language-reference/statements/function-statement.md)」の戻り値に関するセクションをご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -51,7 +51,7 @@ ms.locfileid: "74346024"
 - [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [Return ステートメント](../../../../visual-basic/language-reference/statements/return-statement.md)
+- [Function ステートメント](../../../language-reference/statements/function-statement.md)
+- [Return ステートメント](../../../language-reference/statements/return-statement.md)
 - [方法: 値を返すプロシージャを作成する](./how-to-create-a-procedure-that-returns-a-value.md)
 - [方法: 値を返すプロシージャを呼び出す](./how-to-call-a-procedure-that-returns-a-value.md)

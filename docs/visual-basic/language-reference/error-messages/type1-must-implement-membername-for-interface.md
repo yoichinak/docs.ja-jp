@@ -7,15 +7,15 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: a824b66eaad964049ced5cae5eb2cc370d00ba7f
-ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.openlocfilehash: 4ffe18e11c388a8c69ef0592bde1b78f5b219680
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71696891"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386855"
 ---
-# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1>'\<typename>' は、インターフェイス '\<interfacename>' に対して '\<membername>' を実装しなければなりません
-\<typename>' は、インターフェイス '\<interfacename>' に対して '\<membername>' を実装しなければなりません。 プロパティの実装には、一致する 'ReadOnly'/'WriteOnly' 指定子が必要です。  
+# <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1>'\<typename>' は、インターフェイス '\<interfacename>' に対して '\<membername>' を実装しなければなりません。
+'\<typename>' は、インターフェイス '\<interfacename>' に対して '\<membername>' を実装しなければなりません。 プロパティの実装には、一致する 'ReadOnly'/'WriteOnly' 指定子が必要です。  
   
  クラスまたは構造体では、インターフェイスを実装することが要求されますが、インターフェイスによって定義されるプロシージャ、プロパティ、またはイベントは実装しません。 インターフェイスのすべてのメンバーを実装する必要があります。  
   
@@ -37,5 +37,5 @@ ms.locfileid: "71696891"
   
 ## <a name="see-also"></a>関連項目
 
-- [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)
-- [インターフェイス](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [Implements ステートメント](../statements/implements-statement.md)
+- [インターフェイス](../../programming-guide/language-features/interfaces/index.md)

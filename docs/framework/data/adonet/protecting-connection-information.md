@@ -1,13 +1,14 @@
 ---
 title: 接続情報の保護
+description: 接続文字列のセキュリティの脆弱性について説明します。これは、接続文字列の構築方法と保持方法、および認証の種類が原因で生じる場合があります。
 ms.date: 03/30/2017
 ms.assetid: 1471f580-bcd4-4046-bdaf-d2541ecda2f4
-ms.openlocfilehash: 1039d3fd797a16391876b59aa018b30b7f397aeb
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0e693fd99384a2808a621b358f8e70c6777c3930
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149220"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286651"
 ---
 # <a name="protecting-connection-information"></a>接続情報の保護
 アプリケーションのセキュリティを実現するうえで、データ ソースへのアクセスを保護することは、最も重要な目標の 1 つです。 保護されていない接続文字列は脆弱性を招く原因になります。 接続情報をテキスト形式で保存したり、メモリ内に保持したりすると、システム全体のセキュリティが損なわれる可能性があります。 ソース コードに組み込まれた接続文字列は、[Ildasm.exe (IL Disassembler)](../../tools/ildasm-exe-il-disassembler.md) を使って、コンパイル済みアセンブリの Microsoft Intermediate Language (MSIL) を表示することで読み取ることができます。  
@@ -37,7 +38,7 @@ ms.locfileid: "79149220"
  `Persist Security Info` の既定値は false です。すべての接続文字列には、この既定値を使用することをお勧めします。 `Persist Security Info` を `true` または `yes` に設定すると、ユーザー ID やパスワードなどのセキュリティ関連情報を、接続を開いた後にその接続から取得できます。 `Persist Security Info` を `false` または `no` に設定した場合、その情報を使って接続を開いた後で、セキュリティ情報が破棄されるため、信頼できないソースによってセキュリティ関連情報がアクセスされることを確実に防ぐことができます。  
   
 ## <a name="encrypt-configuration-files"></a>構成ファイルの暗号化  
- 接続文字列は構成ファイルに保存することもでき、そうすることで、アプリケーションのコードに接続文字列を組み込むことを避けられます。 構成ファイルは、.NET Framework が基本的な要素を定義するために使用する標準的な XML ファイルです。 通常、構成ファイル内の接続文字列は、**app.config** (Windows アプリケーションの場合) または **web.config** ファイル (ASP.NET アプリケーションの場合) の **\<connectionStrings** 要素に格納されます。 構成ファイルへの接続文字列の格納、構成ファイルからの接続文字列の取得、および暗号化については、「[接続文字列と構成ファイル](connection-strings-and-configuration-files.md)」を参照してください。  
+ 接続文字列は構成ファイルに保存することもでき、そうすることで、アプリケーションのコードに接続文字列を組み込むことを避けられます。 構成ファイルは、.NET Framework が基本的な要素を定義するために使用する標準的な XML ファイルです。 通常、構成ファイル内の接続文字列は、**app.config** ファイル (Windows アプリケーションの場合) または **web.config** ファイル (ASP.NET アプリケーションの場合) の **\<connectionStrings>** 要素に格納されます。 構成ファイルへの接続文字列の格納、構成ファイルからの接続文字列の取得、および暗号化については、「[接続文字列と構成ファイル](connection-strings-and-configuration-files.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

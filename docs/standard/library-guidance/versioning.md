@@ -2,12 +2,12 @@
 title: バージョン管理および .NET ライブラリ
 description: .NET ライブラリのバージョン管理に関するベスト プラクティスの推奨事項。
 ms.date: 12/10/2018
-ms.openlocfilehash: a274410714791e2790da0e3deb2a595390ee9389
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: ab15d56e40abedd842b681496b9e5ee737c8b1cd
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79398497"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84290124"
 ---
 # <a name="versioning"></a>バージョン管理
 
@@ -49,9 +49,9 @@ NuGet パッケージ バージョンは、最も開発者の目に留まるバ�
 <AssemblyVersion>1.0.0.0</AssemblyVersion>
 ```
 
-Windows .NET Framework の CLR では、厳密な名前のアセンブリを読み込むには、完全一致が求められます。 たとえば、`Libary1, Version=1.0.0.0` が `Newtonsoft.Json, Version=11.0.0.0` への参照を使ってコンパイルされたとします。 .NET Framework は、該当の正確なバージョンである `11.0.0.0` のみを読み込みます。 実行時に別のバージョンを読み込むには、バインド リダイレクトが .NET アプリケーションの構成ファイルに追加される必要があります。
+.NET Framework の CLR では、厳密な名前のアセンブリを読み込むには、完全一致が求められます。 たとえば、`Libary1, Version=1.0.0.0` が `Newtonsoft.Json, Version=11.0.0.0` への参照を使ってコンパイルされたとします。 .NET Framework は、バージョンが厳密に同じである `11.0.0.0` のみを読み込みます。 実行時に別のバージョンを読み込むには、バインド リダイレクトが .NET アプリケーションの構成ファイルに追加される必要があります。
 
-アセンブリ バージョンと組み合わせた厳密な名前によって、[厳密なアセンブリ バージョンの読み込み](../assembly/versioning.md)が可能になります。 ライブラリに厳密な名前を付与すると多くのメリットがありますが、しばしば、アセンブリが見つからないという実行時例外に陥り、修正のために`app.config`/`web.config` の[バインド リダイレクトを要求する](../../framework/configure-apps/redirect-assembly-versions.md)必要があります。 .NET Core アセンブリの読み込みが厳密ではなくなり、.NET Core CLR は、実行時により新しいバージョンでアセンブリを自動的に読み込みます。
+アセンブリ バージョンと組み合わせた厳密な名前によって、[厳密なアセンブリ バージョンの読み込み](../assembly/versioning.md)が可能になります。 ライブラリに厳密な名前を付与すると多くのメリットがありますが、しばしば、アセンブリが見つからないという実行時例外に陥り、修正のために `app.config` または `web.config` での[バインド リダイレクトが必要](../../framework/configure-apps/redirect-assembly-versions.md)になります。 .NET Core では、アセンブリの読み込みはより緩やかです。 .NET Core ランタイムは、実行時に、より新しいバージョンのアセンブリを自動的に読み込みます。
 
 ✔️ 検討 AssemblyVersion にメジャー バージョンのみを含める。
 
@@ -67,7 +67,7 @@ Windows .NET Framework の CLR では、厳密な名前のアセンブリを読�
 
 ### <a name="assembly-file-version"></a>アセンブリ ファイル バージョン
 
-アセンブリ ファイル バージョンでは、Windows でファイル バージョンを表示するために使用され、実行時の動作に影響を及ぼしません。 このバージョンの設定は省略可能です。 これは、Windows エクスプローラーの [ファイルのプロパティ] ダイアログに表示できます。
+アセンブリ ファイル バージョンは、Windows でファイル バージョンを表示するために使用されますが、実行時の動作には影響を及ぼしません。 このバージョンの設定は省略可能です。 これは、Windows エクスプローラーの [ファイルのプロパティ] ダイアログに表示できます。
 
 ```xml
 <FileVersion>11.0.2.21924</FileVersion>

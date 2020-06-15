@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML axis [Visual Basic], attribute
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
-ms.openlocfilehash: 109c4b45a5e3ed4e3e4db49687df5cb127a5e0c6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3f60190a949856cb2bbc2eba09d097c09089bea7
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352672"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84408433"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 属性軸プロパティ (Visual Basic)
 <xref:System.Xml.Linq.XElement> オブジェクトの属性の値または <xref:System.Xml.Linq.XElement> オブジェクト コレクションの最初の要素にアクセスできるようにします。  
@@ -44,7 +44,7 @@ object.@<attribute>
 |パーツ|説明|  
 |----------|-----------------|  
 |`prefix`|任意。 属性の XML 名前空間プレフィックス。 `Imports` ステートメントを使用して定義されているグローバル XML 名前空間を指定する必要があります。|  
-|`name`|必須です。 ローカル属性名。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|  
+|`name`|必須です。 ローカル属性名。 「[宣言する XML 要素と属性の名前](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。|  
   
  \>  
  任意。 Visual Basic で `attribute` が有効な識別子ではない場合に、属性の名前の末尾を表します。  
@@ -57,10 +57,10 @@ object.@<attribute>
   
  @ 識別子を使用して XML 属性を参照すると、属性値は文字列として返されるため、<xref:System.Xml.Linq.XAttribute.Value%2A> プロパティを明示的に指定する必要がありません。  
   
- XML 属性の名前付けルールは、Visual Basic 識別子の名前付けルールとは異なります。 名前が有効な Visual Basic 識別子ではない XML 属性にアクセスするには、山かっこ (\< および >) で名前を囲みます。  
+ XML 属性の名前付けルールは、Visual Basic 識別子の名前付けルールとは異なります。 名前が有効な Visual Basic 識別子ではない XML 属性にアクセスするには、山かっこ (\< and >) で名前を囲みます。  
   
 ## <a name="xml-namespaces"></a>XML 名前空間  
- 属性軸プロパティの名前では、`Imports` ステートメントを使用してグローバルに宣言されている XML 名前空間プレフィックスのみを使用できます。 XML 要素リテラル内でローカルに宣言されている XML 名前空間プレフィックスは使用できません。 詳細については、「[Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。  
+ 属性軸プロパティの名前では、`Imports` ステートメントを使用してグローバルに宣言されている XML 名前空間プレフィックスのみを使用できます。 XML 要素リテラル内でローカルに宣言されている XML 名前空間プレフィックスは使用できません。 詳細については、「[Imports ステートメント (XML 名前空間)](../statements/imports-statement-xml-namespace.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例は、`type` という名前の XML 属性の値を、`phone` という名前の XML 要素のコレクションから取得する方法を示しています。  
@@ -109,7 +109,7 @@ object.@<attribute>
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XElement>
-- [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [XML 軸プロパティ](index.md)
+- [XML リテラル](../xml-literals/index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)
+- [宣言する XML 要素と属性の名前](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)

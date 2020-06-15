@@ -2,12 +2,12 @@
 title: eShopOnContainers で DDD マイクロサービスの CQRS と CQS のアプローチを適用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | CQRS を eShopOnContainers の注文マイクロサービスに実装する方法を理解する。
 ms.date: 03/03/2020
-ms.openlocfilehash: 0fd38a93a1056cda4abd2f9f89ee9efc626985c8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 2916df596a6d0f887411f3ef0074aed395ef58ba
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144280"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306943"
 ---
 # <a name="apply-cqrs-and-cqs-approaches-in-a-ddd-microservice-in-eshoponcontainers"></a>eShopOnContainers の DDD マイクロサービスに CQRS および CQS のアプローチを適用する
 
@@ -27,9 +27,9 @@ eShopOnContainers 参照アプリケーションの注文マイクロサービ�
 
 「クエリ サイド」を実装する場合、EF Core、AutoMapper プロジェクション、ストアド プロシージャ、ビュー、具体化されたビュー、マイクロ ORM など本格的な ORM の多様なアプローチから選択できます。
 
-このガイドと eShopOnContainers (具体的には注文マイクロサービス) では、[Dapper](https://github.com/StackExchange/dapper-dot-net) のようなマイクロ ORM を使用して直接的なクエリを実装します。 この場合、SQL ステートメントに基づくクエリを実装でき、わずかなオーバーヘッドしかない軽量フレームワークのおかげで、最良のパフォーマンスが得られます。
+このガイドと eShopOnContainers (具体的には注文マイクロサービス) では、[Dapper](https://github.com/StackExchange/dapper-dot-net) のようなマイクロ ORM を使用して直接的なクエリを実装します。 この場合、SQL ステートメントに基づくクエリを実装でき、オーバーヘッドが小さい軽量フレームワークのおかげで、最良のパフォーマンスが得られます。
 
-このアプローチを使用するにあたり、モデルに加える更新が原因で SQL データベースにエンティティを保存する方法に影響が及ぶ場合は、Dapper など、クエリ実行のための独立した (EF 以外の) アプローチで使用される SQL クエリにも、別途更新が必要であることにご注意ください。
+このアプローチを使用するにあたり、モデルに加える更新が原因で SQL データベースにエンティティを保持する方法に影響が及ぶ場合は、Dapper など、クエリ実行のための独立した (EF 以外の) アプローチで使用される SQL クエリにも、別途更新が必要になります。
 
 ## <a name="cqrs-and-ddd-patterns-are-not-top-level-architectures"></a>CQRS パターンと DDD パターンは最上位のアーキテクチャではない
 

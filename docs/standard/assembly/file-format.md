@@ -5,12 +5,12 @@ author: richlander
 ms.date: 08/20/2019
 ms.technology: dotnet-standard
 ms.assetid: 6520323e-ff28-4c8a-ba80-e64a413199e6
-ms.openlocfilehash: 4cf6522d66d7a1efccde45078768a773db6e6cb0
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: b4aa961c3a6f2d4fa1580ff608aaf2a40d462fa0
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "75711585"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288512"
 ---
 # <a name="net-assembly-file-format"></a>.NET アセンブリ ファイルの形式
 
@@ -24,7 +24,7 @@ ms.locfileid: "75711585"
 
 .NET アセンブリ形式は、特定のプログラムまたはライブラリの構造をとてもわかりやすく記述することもできます。 アセンブリの内部コンポーネント、具体的にはアセンブリ参照や定義済みの型とそれらの内部構造を記述します。 ツールまたは API で表示のためにこの情報の読み取り、処理を行ったり、プログラムによる決定を行うことができます。
 
-## <a name="format"></a>Format
+## <a name="format"></a>形式
 
 .NET バイナリ形式は、Windows [PE ファイル](https://en.wikipedia.org/wiki/Portable_Executable)形式に基づいています。 実際には、.NET クラス ライブラリは Windows PE に準拠し、Windows ダイナミック リンク ライブラリ (DLL) またはアプリケーション実行可能ファイル (EXE) のように見えます。 これは Windows 上でとても便利な特性であり、ネイティブな実行可能バイナリのように偽装して、実行可能バイナリと同じように扱うことができます (OS ロード、PE ツールなど)。
 

@@ -10,19 +10,19 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: b01188ed8a9ff4da95a6975dcac3509625fdffb2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4de5d94a94e764d1fc543ffae41b00a9bb729c94
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349682"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84388155"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>方法: Visual Basic で既定のプロパティを宣言して呼び出す
 "*既定のプロパティ*" とは、コードで指定しなくてもアクセスできるクラスまたは構造体のプロパティです。 呼び出し元のコードでクラスまたは構造体の名前を指定し、プロパティ名を指定していないときに、コンテキストでプロパティへのアクセスが許可されている場合、Visual Basic はアクセスをそのクラスまたは構造体の既定のプロパティ (存在する場合) に解決します。  
   
  クラスまたは構造体は、最大 1 つの既定のプロパティを持つことができます。 ただし、既定のプロパティをオーバーロードし、複数のバージョンを用意することができます。  
   
- 詳細については、「[Default](../../../../visual-basic/language-reference/modifiers/default.md)」をご覧ください。  
+ 詳細については、「[Default](../../../language-reference/modifiers/default.md)」をご覧ください。  
   
 ### <a name="to-declare-a-default-property"></a>既定のプロパティを宣言するには  
   
@@ -75,7 +75,7 @@ ms.locfileid: "74349682"
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  既定のプロパティを使用すると、ソース コード文字が少し少なくなる可能性がありますが、コードが読みにくくなる可能性があります。 呼び出し元のコードがクラスまたは構造体をよく理解していない場合は、クラスまたは構造体の名前を参照するときに、その参照がクラスまたは構造体自体、または既定のプロパティにアクセスするかどうかがわかりません。 これにより、コンパイラ エラーや実行時の微妙なロジック エラーが発生する可能性があります。  
   
- 常に [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)を使用してコンパイラの型チェックを `On` に設定することにより、既定のプロパティ エラーが発生する可能性を多少減らすことができます。  
+ 常に [Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)を使用してコンパイラの型チェックを `On` に設定することにより、既定のプロパティ エラーが発生する可能性を多少減らすことができます。  
   
  定義済みのクラスまたは構造体をコード内で使用する予定の場合は、既定のプロパティがあるかどうかと、ある場合はその名前を確認する必要があります。  
   
@@ -85,8 +85,8 @@ ms.locfileid: "74349682"
 
 - [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [default](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Property ステートメント](../../../language-reference/statements/property-statement.md)
+- [default](../../../language-reference/modifiers/default.md)
 - [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)
 - [方法: プロパティを作成する](./how-to-create-a-property.md)
 - [方法: 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)

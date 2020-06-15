@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: d6d900ca6868cfffe6b0e5b349321a79c5716c46
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d6a91de4e279816bafd29f46bb4f5422cbd934ff
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347027"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400190"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 要素リテラル (Visual Basic)
 
@@ -42,7 +42,7 @@ ms.locfileid: "74347027"
     |パーツ|説明|
     |---|---|
     |`ePrefix`|任意。 要素の XML 名前空間プレフィックス。 ファイル内またはプロジェクト レベルで `Imports` ステートメントで定義されたグローバル XML 名前空間か、この要素または親要素で定義されたローカル XML 名前空間である必要があります。|
-    |`eName`|必須です。 要素名 形式は次のいずれかです。<br /><br /> - リテラル テキスト。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。<br />- `<%= eNameExp %>` 形式の埋め込み式。 `eNameExp` の型は `String` か、暗黙的に <xref:System.Xml.Linq.XName> に変換可能な型である必要があります。|
+    |`eName`|必須です。 要素名 形式は次のいずれかです。<br /><br /> - リテラル テキスト。 「[宣言する XML 要素と属性の名前](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。<br />- `<%= eNameExp %>` 形式の埋め込み式。 `eNameExp` の型は `String` か、暗黙的に <xref:System.Xml.Linq.XName> に変換可能な型である必要があります。|
 
   - `<%= nameExp %>` 形式の埋め込み式。 `nameExp` の型は `String` か、暗黙的に <xref:System.Xml.Linq.XName> に変換可能な型である必要があります。 埋め込み式は、要素の終了タグでは使用できません。
 
@@ -59,7 +59,7 @@ ms.locfileid: "74347027"
     |パーツ|説明|
     |---|---|
     |`aPrefix`|任意。 属性の XML 名前空間プレフィックス。 `Imports` ステートメントで定義されたグローバル XML 名前空間か、この要素または親要素で定義されたローカル XML 名前空間である必要があります。|
-    |`aName`|必須です。 属性の名前。 形式は次のいずれかです。<br /><br /> - リテラル テキスト。 「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。<br />- `<%= aNameExp %>` 形式の埋め込み式。 `aNameExp` の型は `String` か、暗黙的に <xref:System.Xml.Linq.XName> に変換可能な型である必要があります。|
+    |`aName`|必須です。 属性の名前。 形式は次のいずれかです。<br /><br /> - リテラル テキスト。 「[宣言する XML 要素と属性の名前](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。<br />- `<%= aNameExp %>` 形式の埋め込み式。 `aNameExp` の型は `String` か、暗黙的に <xref:System.Xml.Linq.XName> に変換可能な型である必要があります。|
     |`aValue`|任意。 属性の値。 形式は次のいずれかです。<br /><br /> - 引用符で囲まれたリテラル テキスト。<br />- `<%= aValueExp %>` 形式の埋め込み式。 任意の型を使用できます。|
 
   - `<%= aExp %>` 形式の埋め込み式。
@@ -86,11 +86,11 @@ ms.locfileid: "74347027"
 
   - XML 要素リテラル。
 
-  - XML コメント リテラル。 「[XML コメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)」を参照してください。
+  - XML コメント リテラル。 「[XML コメント リテラル](xml-comment-literal.md)」を参照してください。
 
-  - XML 処理命令リテラル。 「[XML 処理命令リテラル](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)」を参照してください。
+  - XML 処理命令リテラル。 「[XML 処理命令リテラル](xml-processing-instruction-literal.md)」を参照してください。
 
-  - XML CDATA リテラル。 「[XML CDATA リテラル](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)」を参照してください。
+  - XML CDATA リテラル。 「[XML CDATA リテラル](xml-cdata-literal.md)」を参照してください。
 
 - `</[name]>`
 
@@ -107,13 +107,13 @@ XML 要素リテラル構文を使用して、コード内に <xref:System.Xml.L
 > [!NOTE]
 > XML リテラルは、行連結文字を使用せずに、複数行にまたがることができます。 この機能を使用すると、XML ドキュメントからコンテンツをコピーして、Visual Basic プログラムに直接貼り付けることができます。
 
-`<%= exp %>` 形式の埋め込み式を使用すると、XML 要素リテラルに動的な情報を追加できます。 詳細については、「[XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。
+`<%= exp %>` 形式の埋め込み式を使用すると、XML 要素リテラルに動的な情報を追加できます。 詳細については、「[XML での埋め込み式](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)」を参照してください。
 
 XML 要素リテラルは、Visual Basic コンパイラによって、<xref:System.Xml.Linq.XElement.%23ctor%2A> コンストラクターへの呼び出しに変換されます。また、必要に応じて、<xref:System.Xml.Linq.XAttribute.%23ctor%2A> コンストラクターへの呼び出しに変換されます。
 
 ## <a name="xml-namespaces"></a>XML 名前空間
 
-XML 名前空間プレフィックスは、コード内で同じ名前空間の要素を使用して XML リテラルを何度も作成する必要がある場合に役立ちます。 グローバル XML 名前空間プレフィックス (`Imports` ステートメントを使用して定義) またはローカル プレフィックス (`xmlns:xmlPrefix="xmlNamespace"` 属性構文を使用して定義) を使用できます。 詳細については、「[Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)」を参照してください。
+XML 名前空間プレフィックスは、コード内で同じ名前空間の要素を使用して XML リテラルを何度も作成する必要がある場合に役立ちます。 グローバル XML 名前空間プレフィックス (`Imports` ステートメントを使用して定義) またはローカル プレフィックス (`xmlns:xmlPrefix="xmlNamespace"` 属性構文を使用して定義) を使用できます。 詳細については、「[Imports ステートメント (XML 名前空間)](../statements/imports-statement-xml-namespace.md)」を参照してください。
 
 XML 名前空間のスコープ規則に従って、ローカル プレフィックスはグローバル プレフィックスよりも優先されます。 ただし、XML リテラルで XML 名前空間が定義されている場合、その名前空間は、埋め込み式に出現する式では使用できません。 埋め込み式は、グローバル XML 名前空間だけにアクセスできます。
 
@@ -163,15 +163,15 @@ XML リテラルで使用されているグローバル XML 名前空間はそ�
 </ns:outer>
 ```
 
-コンパイラによって、グローバル XML 名前空間のプレフィックスが、XML 名前空間のプレフィックス定義に変換されていることに注意してください。 \<ns:middle> 要素により、\<ns:inner1> 要素の XML 名前空間プレフィックスが再定義されます。 ただし、\<ns: inner2> 要素では、`Imports` ステートメントで定義された名前空間が使用されます。
+コンパイラによって、グローバル XML 名前空間のプレフィックスが、XML 名前空間のプレフィックス定義に変換されていることに注意してください。 \<ns:middle> 要素により、\<ns:inner1> 要素の XML 名前空間プレフィックスが再定義されます。 ただし、\<ns:inner2> 要素では、`Imports` ステートメントで定義された名前空間が使用されます。
 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XElement>
-- [宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
-- [XML コメント リテラル](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
-- [XML CDATA リテラル](../../../visual-basic/language-reference/xml-literals/xml-cdata-literal.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
-- [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
+- [宣言する XML 要素と属性の名前](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [XML コメント リテラル](xml-comment-literal.md)
+- [XML CDATA リテラル](xml-cdata-literal.md)
+- [XML リテラル](index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)
+- [XML での埋め込み式](../../programming-guide/language-features/xml/embedded-expressions-in-xml.md)
+- [Imports ステートメント (XML 名前空間)](../statements/imports-statement-xml-namespace.md)

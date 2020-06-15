@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 41a971896fe726cbe9849fd46334910e7288afe0
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f8accc74fbdd9b1d8cf9bc3d8f6ddd26f73452b8
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352598"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363877"
 ---
 # <a name="procedure-overloading-visual-basic"></a>プロシージャのオーバーロード (Visual Basic)
 
@@ -74,7 +74,7 @@ ms.locfileid: "74352598"
 
 ### <a name="overloaded-versions"></a>オーバーロードされたバージョン
 
-別の方法として、単一のプロシージャ名をオーバーロードします。 次のように、[Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md) キーワードを使用して、パラメーター リストごとにプロシージャのバージョンを定義できます。
+別の方法として、単一のプロシージャ名をオーバーロードします。 次のように、[Overloads](../../../language-reference/modifiers/overloads.md) キーワードを使用して、パラメーター リストごとにプロシージャのバージョンを定義できます。
 
 [!code-vb[VbVbcnProcedures#72](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#72)]
 
@@ -99,5 +99,5 @@ ms.locfileid: "74352598"
 - [方法: 不特定数のパラメーターを受け取るプロシージャをオーバーロードする](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
 - [プロシージャのオーバーロードに関する注意事項](./considerations-in-overloading-procedures.md)
 - [オーバーロードの解決](./overload-resolution.md)
-- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Overloads](../../../language-reference/modifiers/overloads.md)
+- [Generic Types in Visual Basic](../data-types/generic-types.md)

@@ -2,15 +2,15 @@
 title: モデル ビルダーの Azure トレーニング リソース
 description: Azure Machine Learning のリソース ガイド
 ms.topic: reference
-ms.date: 02/27/2020
+ms.date: 06/01/2020
 ms.author: luquinta
 author: luisquintanilla
-ms.openlocfilehash: a19e13955d0eaea344109eb817f3a3959c3dd883
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: d9eb5560ef33f8f80dbe53e17087c606a8697378
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "79185822"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84289474"
 ---
 # <a name="model-builder-azure-training-resources"></a>モデル ビルダーの Azure トレーニング リソース
 
@@ -49,6 +49,10 @@ Azure Machine Learning ワークスペースの作成には、次が必要です
     | Standard_NC24   | 24 | 224 | 1440 | 4 | 48 | 64 | 4 |
 
     GPU に最適化されたコンピューティングの種類の詳細については、[NC シリーズの Linux VM のドキュメント](https://docs.microsoft.com/azure/virtual-machines/nc-series?toc=/azure/virtual-machines/linux/toc.json&bc=/azure/virtual-machines/linux/breadcrumb/toc.json)に関するページを参照してください。
+- コンピューティングの優先度
+
+  - 低優先度:実行時間の短いタスクに適しています。 中断や、可用性が失われることによる影響を受ける可能性があります。 Azure の余剰容量を利用するため、通常はコストが低くなります。
+  - 専用:どのような実行時間のタスクにも適していますが、特に長時間実行されるジョブに適しています。 中断や、可用性が失われることによる影響を受けません。 タスクのために、Azure に専用のコンピューティング リソースのセットを予約するため、通常はコストが高くなります。
 
 ## <a name="training"></a>トレーニング
 

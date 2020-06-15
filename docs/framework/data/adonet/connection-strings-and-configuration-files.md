@@ -1,16 +1,17 @@
 ---
 title: 接続文字列と構成ファイル
+description: セキュリティとメンテナンスのためのベスト プラクティスとして、ADO.NET アプリケーションの接続文字列をアプリケーション構成ファイルに格納する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 8862aa34c2d2677f5bc3e737c01cc61036c243e1
-ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
+ms.openlocfilehash: 572c5be1bd639e8d4b38935f5be49782f0b0316e
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2020
-ms.locfileid: "80345057"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287039"
 ---
 # <a name="connection-strings-and-configuration-files"></a>接続文字列と構成ファイル
 

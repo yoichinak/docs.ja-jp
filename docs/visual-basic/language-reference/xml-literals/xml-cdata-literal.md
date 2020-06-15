@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XML CDATA literal [Visual Basic]
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
-ms.openlocfilehash: 72e899e7bd30f2edf0e88207bb3b75bdf36fa11c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: b9cc830d27625f192d8f5e059bd3783d05d8ba3b
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349432"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400229"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA リテラル (Visual Basic)
 <xref:System.Xml.Linq.XCData> オブジェクトを表すリテラル。  
@@ -59,6 +59,6 @@ ms.locfileid: "74349432"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XCData>
-- [XML 要素リテラル](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [XML リテラル](../../../visual-basic/language-reference/xml-literals/index.md)
-- [Visual Basic での XML の作成](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [XML 要素リテラル](xml-element-literal.md)
+- [XML リテラル](index.md)
+- [Visual Basic での XML の作成](../../programming-guide/language-features/xml/creating-xml.md)

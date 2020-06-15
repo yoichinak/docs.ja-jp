@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: af0b857e98ffbe0ff9f12108174b79f873c2b38f
-ms.sourcegitcommit: d6bd7903d7d46698e9d89d3725f3bb4876891aa3
+ms.openlocfilehash: eb11f0b8ddd34df7c6970c275d4b83cb95f59a53
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83378390"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84287494"
 ---
 # <a name="serialization-guidelines"></a>シリアル化のガイドライン
 このドキュメントには、シリアル化できるように API をデザインする際に考慮すべきガイドラインを示します。  
@@ -92,7 +92,7 @@ ms.locfileid: "83378390"
      [!code-csharp[SerializationGuidelines#5](../../../samples/snippets/csharp/VS_Snippets_CFX/serializationguidelines/cs/source.cs#5)]
      [!code-vb[SerializationGuidelines#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/serializationguidelines/vb/source.vb#5)]  
   
-     詳細については、「[上位互換性のあるデータ コントラクト](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)」を参照してください。  
+     詳細については、「[上位互換性のあるデータ コントラクト](../../framework/wcf/feature-details/forward-compatible-data-contracts.md)」を参照してください。  
   
 #### <a name="supporting-xml-serialization"></a>XML シリアル化のサポート  
  データ コントラクトのシリアル化は .NET Framework の主な (既定の) シリアル化テクノロジですが、データ コントラクトのシリアル化ではサポートされないシリアル化シナリオがあります。 たとえば、シリアライザーによって作成または使用された XML の形状は完全に制御できません。 そのような微調整が必要な場合は、*XML シリアル化*を使用する必要があり、このシリアル化テクノロジをサポートする型を自分でデザインする必要があります。  
@@ -140,10 +140,10 @@ ms.locfileid: "83378390"
   
 ## <a name="see-also"></a>関連項目
 
-- [データ コントラクトの使用](../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [データ コントラクト シリアライザー](../../../docs/framework/wcf/feature-details/data-contract-serializer.md)
-- [データ コントラクト シリアライザーでサポートされる型](../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [データ コントラクトの使用](../../framework/wcf/feature-details/using-data-contracts.md)
+- [データ コントラクト シリアライザー](../../framework/wcf/feature-details/data-contract-serializer.md)
+- [データ コントラクト シリアライザーでサポートされる型](../../framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
 - [バイナリ シリアル化](binary-serialization.md)
 - [.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))
 - [XML シリアル化および SOAP シリアル化](xml-and-soap-serialization.md)
-- [セキュリティとシリアル化](../../../docs/framework/misc/security-and-serialization.md)
+- [セキュリティとシリアル化](../../framework/misc/security-and-serialization.md)

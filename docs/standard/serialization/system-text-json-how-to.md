@@ -1,17 +1,21 @@
 ---
-title: ''
+title: C# を使用して JSON をシリアル化および逆シリアル化する方法 - .NET
 description: この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。
-ms.date: ''
+ms.date: 05/13/2020
 no-loc:
 - System.Text.Json
 - Newtonsoft.Json
-helpviewer_keywords: []
-ms.openlocfilehash: f1a5da448b08f9b4f1cf3fa6cba67fb376b00a6f
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+helpviewer_keywords:
+- JSON serialization
+- serializing objects
+- serialization
+- objects, serializing
+ms.openlocfilehash: 7ad2721f12c5d14b61b35ecf7696ff0d6a6f27da
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702292"
+ms.lasthandoff: 06/06/2020
+ms.locfileid: "84289513"
 ---
 # <a name="how-to-serialize-and-deserialize-marshal-and-unmarshal-json-in-net"></a>.NET 内で JSON のシリアル化と逆シリアル化 (マーシャリングとマーシャリングの解除) を行う方法
 
@@ -380,46 +384,10 @@ Summary が `Hot` の場合、既定では、シリアル化された JSON に�
 シリアル化するオブジェクトと JSON 出力の例を次に示します。
 
 |プロパティ |[値]  |
-|---
-title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Date    | 8/1/2019 12:00:00 AM -07:00| | TemperatureCelsius| 25 | | Summary| null|
+|---------|---------|
+| Date    | 8/1/2019 12:00:00 AM -07:00|
+| TemperatureCelsius| 25 |
+| まとめ| null|
 
 ```json
 {
@@ -672,65 +640,13 @@ ms.date: no-loc:
 前に示した JSON をこのサンプル型に逆シリアル化すると、余分なデータが `ExtensionData` プロパティのキーと値のペアになります。
 
 |プロパティ |[値]  |メモ  |
-|---
-title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------|--- title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
--
-title: description:「この記事では、System.Text.Json 名前空間を使用して .NET 内で JSON のシリアル化と逆シリアル化を行う方法について説明します。 これにはサンプル コードが含まれます。」
-ms.date: no-loc:
-- 'System.Text.Json'
-- 'Newtonsoft.Json' helpviewer_keywords:
-- 
-- 
-- 
-- 
-
------| | Date    | 8/1/2019 12:00:00 AM -07:00|| | TemperatureCelsius| 0 | 大文字と小文字の区別が一致しないため (JSON では `temperatureCelsius`)、プロパティは設定されません。 | | Summary | Hot || | ExtensionData | temperatureCelsius:25 |大文字と小文字の区別が一致しなかったため、この JSON プロパティは余分で、ディクショナリ内のキーと値のペアになります。| || DatesAvailable:<br>  8/1/2019 12:00:00 AM -07:00<br>8/2/2019 12:00:00 AM -07:00 |JSON からの余分なプロパティは、値オブジェクトとしての配列を持つキーと値のペアになります。| | |SummaryWords:<br>Cool<br>強風<br>Humid |JSON からの余分なプロパティは、値オブジェクトとしての配列を持つキーと値のペアになります。|
+|---------|---------|---------|
+| Date    | 8/1/2019 12:00:00 AM -07:00||
+| TemperatureCelsius| 0 | 大文字と小文字の区別が一致しないため (JSON では `temperatureCelsius`)、プロパティは設定されません。 |
+| まとめ | ホット ||
+| ExtensionData | temperatureCelsius:25 |大文字と小文字の区別が一致しなかったため、この JSON プロパティは余分で、ディクショナリ内のキーと値のペアになります。|
+|| DatesAvailable:<br>  8/1/2019 12:00:00 AM -07:00<br>8/2/2019 12:00:00 AM -07:00 |JSON からの余分なプロパティは、値オブジェクトとしての配列を持つキーと値のペアになります。|
+| |SummaryWords:<br>Cool<br>強風<br>Humid |JSON からの余分なプロパティは、値オブジェクトとしての配列を持つキーと値のペアになります。|
 
 ターゲット オブジェクトがシリアル化されると、拡張データのキーと値のペアは、受信 JSON 内にあった場合と同様に JSON プロパティになります。
 

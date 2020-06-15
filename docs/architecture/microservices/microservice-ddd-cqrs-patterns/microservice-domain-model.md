@@ -2,12 +2,12 @@
 title: マイクロサービス ドメイン モデルの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | DDD 指向ドメイン モデルの設計時の主な概念を理解する
 ms.date: 01/30/2020
-ms.openlocfilehash: 234d6e518eac8de5b2f130b91adb32b6a24a7265
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: fe78e719570d5758b71531beab883e5c24a88dca
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144592"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306912"
 ---
 # <a name="design-a-microservice-domain-model"></a>マイクロサービス ドメイン モデルの設計
 
@@ -35,7 +35,7 @@ DDD のドメイン エンティティは、エンティティ データ (アク
 
 **図 7-8**。 データとビヘイビアーを実装するドメイン エンティティ設計の例
 
-ドメイン モデル エンティティでは、メソッドからビヘイビアーを実装します。つまり、"貧血症" モデルではありません。 もちろん、エンティティ クラスの一部としてどのロジックも実装しないエンティティを持つ場合もあります。 この状況は、大部分のロジックが集約ルートで定義されており、子エンティティが特別なロジックを持たない場合に、集約内の子エンティティで発生する場合があります。 ドメイン エンティティではなく、サービス クラスに多数のロジックが実装されている複雑なマイクロサービスがある場合は、ドメイン モデル貧血症になる場合があります。ドメイン モデル貧血症については、次のセクションで説明します。
+ドメイン モデル エンティティでは、メソッドからビヘイビアーを実装します。つまり、"貧血症" モデルではありません。 もちろん、エンティティ クラスの一部としてどのロジックも実装しないエンティティを持つ場合もあります。 この状況は、大部分のロジックが集約ルートで定義されており、子エンティティが特別なロジックを持たない場合に、集約内の子エンティティで発生する場合があります。 ドメイン エンティティではなくサービス クラスにロジックが実装されている複雑なマイクロサービスがある場合は、ドメイン モデル貧血症になる場合があります。ドメイン モデル貧血症については、次のセクションで説明します。
 
 ### <a name="rich-domain-model-versus-anemic-domain-model"></a>リッチ ドメイン モデルと貧血症ドメイン モデルの比較
 
@@ -114,14 +114,14 @@ EF Core 2.0 以降のバージョンには、後で詳しく説明している�
 
 DDD ドメイン モデルは集約から構成され、集約には 1 つまたは複数のエンティティを含めることができ、値オブジェクトも含めることができます。 バイヤー集約は、ドメインによっては、eShopOnContainers 参照アプリケーションの注文マイクロサービスの場合と同様、追加の子エンティティを持つことができることに注意してください。 図 7-9 は、集約ルートのみを含む集約の例として、バイヤーが 1 つのエンティティを持つケースを示しています。
 
-集約を分離し、集約間の境界を明確にし続けるためには、DDD ドメイン モデルで、集約間の直接の移動を禁止し、eShopOnContainers の[注文マイクロサービス ドメイン モデル](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)に実装されている外部キー (FK) フィールドのみを持つことをお勧めします。 注文エンティティは、次のコードに示すように、バイヤーの FK フィールドのみを持ち、EF コア ナビゲーション プロパティは持ちません。
+集約を分離し、集約間の境界を明確にし続けるためには、DDD ドメイン モデルで、集約間の直接の移動を禁止し、eShopOnContainers の[注文マイクロサービス ドメイン モデル](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.Domain/AggregatesModel/OrderAggregate/Order.cs)に実装されている外部キー (FK) フィールドのみを持つことをお勧めします。 注文エンティティは、次のコードに示すように、バイヤーの外部キー フィールドのみを持ち、EF Core ナビゲーション プロパティは持ちません。
 
 ```csharp
 public class Order : Entity, IAggregateRoot
 {
     private DateTime _orderDate;
     public Address Address { get; private set; }
-    private int? _buyerId; //FK pointing to a different aggregate root
+    private int? _buyerId; // FK pointing to a different aggregate root
     public OrderStatus OrderStatus { get; private set; }
     private readonly List<OrderItem> _orderItems;
     public IReadOnlyCollection<OrderItem> OrderItems => _orderItems;

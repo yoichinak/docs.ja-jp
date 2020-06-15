@@ -1,16 +1,17 @@
 ---
 title: '方法: データベースの行を更新する'
+description: テーブルに関連付けられたコレクションの LINQ to SQL オブジェクトを変更することによって、データベース内の行を更新する方法について説明します。 LINQ to SQL は、追加内容を SQL UPDATE コマンドに変換します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: c2055e1dd988352b50a439531ab5533f34a4965e
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: f25efb91fb5a83fb1c7c109bd018c8210edaec8b
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793134"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286340"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>方法: データベースの行を更新する
 

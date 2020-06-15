@@ -2,24 +2,22 @@
 title: SQL Server データベースを Azure に移行する
 description: SQL Server データベースをオンプレミスの SQL Server から Azure に移行する方法について説明します。
 ms.topic: how-to
-ms.date: 11/15/2017
-ms.openlocfilehash: dac35970f2d77e232c2ee1a5e3a1f6e7bfec2317
-ms.sourcegitcommit: e48a54ebe62e874500a7043f6ee0b77a744d55b4
+ms.date: 05/27/2020
+ms.openlocfilehash: ed5d6ef9395dca14d8e0ecba82d3fc18cb3d629a
+ms.sourcegitcommit: a241301495a84cc8c64fe972330d16edd619868b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2020
-ms.locfileid: "81433326"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84241449"
 ---
 # <a name="migrate-a-sql-server-database-to-azure"></a>SQL Server データベースを Azure に移行する
 
-この短い記事では、SQL Server データベースを Azure に移行するための 2 つのオプションについて概説します。
-
-Azure では、運用 SQL Server データベースを移行する際の主な選択肢として、次の 2 つがあります。
+この記事では、SQL Server データベースを Azure に移行するための 2 つの選択肢について概説します。 Azure では、運用 SQL Server データベースを移行するための主な選択肢が 3 つあります。 この記事では、次の 2 つの選択肢を中心に説明します。
 
 1. [Azure VM 上の SQL Server](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview): Azure で実行されている Windows 仮想マシンにインストールされ、ホストされている SQL Server インスタンス。これは、サービスとしてのインフラストラクチャ (IaaS) とも呼ばれます。
 2. [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview):フル マネージドの Azure SQL データベース サービス。これは、サービスとしてのプラットフォーム (PaaS) とも呼ばれます。
 
-それぞれに、移行前に評価する必要がある長所と短所があります。
+それぞれに、移行前に評価する必要がある長所と短所があります。 3 番目の選択肢は、[Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) です。
 
 ## <a name="get-started"></a>作業開始
 
@@ -63,10 +61,10 @@ Azure では、運用 SQL Server データベースを移行する際の主な�
 | 移行 | データベースの最小限の変更が必要です。 | [Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595) によって Azure SQL で利用できないと判断された機能を使用する場合や、ローカルにインストールされた実行可能ファイルなどの他の依存関係がある場合、データベースの変更が必要になることがあります。|
 | 可用性、復旧、アップグレードの管理 | 可用性と復旧は手動で構成します。 アップグレードは、[VM Scale Sets](https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-automatic-upgrade) を使用して自動化できます。 | 自動的に管理されます。 |
 | 基になる OS 構成 | 手動で構成します。 | 自動的に管理されます。 |
-| データベース サイズの管理 | SQL Server インスタンスごとに最大 64 TB のストレージをサポートします。 | 行方向のパーティション分割が必要になるまでに 4 TB のストレージをサポートします。 |
+| データベース サイズの管理 | SQL Server インスタンスごとに最大 256 TB のストレージをサポートします。 | 行方向のパーティション分割が必要になるまでに 8 TB のストレージをサポートします。 |
 | コストの管理 | SQL Server ライセンスのコスト、Windows Server ライセンスのコスト、VM のコスト (コア数、RAM、ストレージに基づく) を管理する必要があります。 | ([eDTU または DTU](https://docs.microsoft.com/azure/sql-database/sql-database-what-is-a-dtu)、ストレージ、データベースの数 (エラスティック プールを使用している場合) に基づいて) サービス コストを管理する必要があります。 また、SLA のコストも管理する必要があります。 |
 
-この 2 つの違いの詳細については、クラウド SQL Server オプションの選択に関する記事をご覧ください ([Azure SQL Database または Azure VM 上の SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas))。
+この 2 つの違いの詳細については、[Azure SQL での適切なデプロイ オプションの選択](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)に関する記事を参照してください。
 
 ## <a name="faq"></a>よくあるご質問
 

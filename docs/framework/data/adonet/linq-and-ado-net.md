@@ -1,14 +1,15 @@
 ---
 title: LINQ と ADO.NET
+description: ADO.NET で統合言語クエリ (LINQ) を使用することにより、別のクエリ言語を使用せずに、アプリケーション コード内でセット ベースのクエリを作成する方法について説明します。
 titleSuffix: ''
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: c5b56fa78ce0276953597d63b3d6e2f45d88c8ab
-ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
+ms.openlocfilehash: a663d36f1e07c53d20e22d051e38123bd8873f06
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/09/2020
-ms.locfileid: "77094437"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286754"
 ---
 # <a name="linq-and-adonet"></a>LINQ と ADO.NET
 

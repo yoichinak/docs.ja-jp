@@ -1,13 +1,14 @@
 ---
 title: データの取得と変更
+description: .NET Framework では、ADO.NET のデータ プロバイダーは、アプリケーションとデータ ソースの間でデータの読み取りや更新を行うためのブリッジとして機能します。
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
-ms.openlocfilehash: 65c373ecff004e219527754bf2e9cc56837dc305
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: f916324dc829526a5e6b0078021b09786755f666
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980055"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286612"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET でのデータの取得および変更
 データベース アプリケーションの主な機能は、データ ソースとの接続およびデータベースに格納されているデータの取得です。 ADO.NET の .NET Framework データ プロバイダーは、アプリケーションとデータ ソースの間のブリッジとして機能し、**DataReader** または **DataAdapter** を使用して、コマンドを実行したり、データを取得したりできるようになります。 データベースに格納されているデータを更新する機能は、データベース アプリケーションの重要な機能の 1 つです。 ADO.NET でデータを更新するには、**DataAdapter** と <xref:System.Data.DataSet>、および **Command** オブジェクトを使用する必要があります。また、トランザクションを使用することが必要な場合もあります。  

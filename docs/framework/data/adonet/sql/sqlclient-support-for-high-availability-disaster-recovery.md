@@ -1,13 +1,14 @@
 ---
 title: 高可用性障害復旧のための SqlClient サポート
+description: AlwaysOn 可用性グループを使用した、SQL Server での高可用性、ディザスター リカバリーのための SqlClient アプリケーション サポートについて説明します。
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: b51c3cb1eb3c8726b7de007a1c1519eae0733392
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: eba243d37db8262970d161cfa786d3aee4462950
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70791615"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286211"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性障害復旧のための SqlClient サポート
 このトピックでは、高可用性、ディザスター リカバリーのための SqlClient サポート (.NET Framework 4.5 で追加) である AlwaysOn 可用性グループについて説明します。  AlwaysOn 可用性グループの機能は SQL Server 2012 に追加されています。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  

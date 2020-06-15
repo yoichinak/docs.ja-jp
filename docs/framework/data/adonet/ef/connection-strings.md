@@ -1,13 +1,14 @@
 ---
 title: ADO.NET Entity Framework での接続文字列
+description: Entity Framework での接続文字列について説明します。これには、ADO.NET データ プロバイダーに接続するための情報と、モデル ファイルとマッピング ファイルに関する情報が含まれています。
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
-ms.openlocfilehash: 392e51022dc0f98b9fad656b9f950cd25588f31a
-ms.sourcegitcommit: ad800f019ac976cb669e635fb0ea49db740e6890
+ms.openlocfilehash: 2ae25f5881c033a84d65f5b0b4ed14b4866dbcb3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73040332"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286871"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework での接続文字列
 
@@ -96,7 +97,7 @@ Metadata=.\
 
 |用語|説明|
 |----------|-----------------|
-|`&#124;DataDirectory&#124;`|マッピング ファイルとメタデータ ファイルの相対パスに解決されます。 この値は、`AppDomain.SetData("DataDirectory", objValue)` メソッドで設定される値です。 `DataDirectory` 置換文字列はパイプ文字で囲む必要があり、その名前とパイプ文字の間に空白を含めることはできません。 `DataDirectory` の名前では大文字と小文字は区別されません。<br /><br /> "DataDirectory" という名前の物理ディレクトリをメタデータ パスのリストのメンバーとして渡す必要がある場合は、名前の片側または両側に空白文字を追加します。 たとえば、`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` のように指定します。 ASP.NET アプリケーションでは、&#124;DataDirectory&#124; は "\<アプリケーション ルート>/app_data" フォルダーに解決されます。|
+|`&#124;DataDirectory&#124;`|マッピング ファイルとメタデータ ファイルの相対パスに解決されます。 この値は、`AppDomain.SetData("DataDirectory", objValue)` メソッドで設定される値です。 `DataDirectory` 置換文字列はパイプ文字で囲む必要があり、その名前とパイプ文字の間に空白を含めることはできません。 `DataDirectory` の名前では大文字と小文字は区別されません。<br /><br /> "DataDirectory" という名前の物理ディレクトリをメタデータ パスのリストのメンバーとして渡す必要がある場合は、名前の片側または両側に空白文字を追加します。 たとえば、`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"` のように指定します。 ASP.NET アプリケーションでは、&#124;DataDirectory&#124; は "\<application root>/app_data" フォルダーに解決されます。|
 |~|Web アプリケーション ルートに解決されます。 先頭の ~ 文字は、有効なローカル サブディレクトリを表すこともありますが、常に Web アプリケーション ルート演算子 (~) として解釈されます。 このようなローカル サブディレクトリを参照するには、ユーザーが明示的に `./~` を渡す必要があります。|
 
 `DataDirectory` と ~ 演算子は、パスの先頭にのみ指定する必要があります。その他の位置では解決されません。 Entity Framework では、`~/data` の解決は試行されますが、`/data/~` は物理パスとして処理されます。

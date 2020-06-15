@@ -1,5 +1,6 @@
 ---
 title: Windows システムのファイル パス形式
+description: この記事では、従来の DOS パス、DOS デバイス パス、汎用名前付け規則 (UNC) パスなど、Windows システム上のファイル パス形式について説明します。
 ms.date: 06/06/2019
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - I/O, long paths
 - long paths
 - path formats, Windows
-ms.openlocfilehash: b3510be5d417b555d2db163636eac5ce0c0779e4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 2d3ede97b372dd8922a10a377f69155a12f88bda
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "77628047"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447135"
 ---
 # <a name="file-path-formats-on-windows-systems"></a>Windows システムのファイル パス形式
 
@@ -30,7 +31,7 @@ ms.locfileid: "77628047"
 
 3 つのコンポーネントがすべて存在する場合、パスは絶対パスになります。 ボリュームまたはドライブ文字が指定されておらず、ディレクトリ名が[ディレクトリ区切り文字](<xref:System.IO.Path.DirectorySeparatorChar>)で始まる場合、パスは現在のドライブのルートからの相対パスとなります。 それ以外の場合、パスは現在のディレクトリに相対となります。 次の表では、想定されるディレクトリとファイル パスをいくつかまとめています。
 
-|Path  |[説明]  |
+|パス  |説明  |
 | -- | -- |
 | `C:\Documents\Newsletters\Summer2018.pdf` | ドライブ C: のルートからの絶対ファイル パス。 |
 | `\Program Files\Custom Utilities\StringFinder.exe` | 現在のドライブのルートからの絶対パス。 |
@@ -62,7 +63,7 @@ UNC (汎用命名規則) パスはネットワーク リソースへのアクセ
 
 UNC パスの例を次に示します。
 
-|Path  |[説明]  |
+|パス  |説明  |
 | -- | -- |
 | `\\system07\C$\` | `system07` の C: のルート ディレクトリ。 |
 | `\\Server2\Share\Test\Foo.txt` | \\\\Server2\\Share ボリュームの Test ディレクトリの Foo.txt ファイル。|
@@ -104,7 +105,7 @@ DOS デバイス パスは次の要素から構成されます。
 
 DOS デバイス パスは定義によって完全修飾されます。 相対ディレクトリ セグメント (`.` や `..`) は許可されません。 現在のディレクトリが使用されることはありません。
 
-## <a name="example-ways-to-refer-to-the-same-file"></a>例: 同じファイルを参照する方法
+## <a name="example-ways-to-refer-to-the-same-file"></a>例:同じファイルを参照する方法
 
 次の例では、<xref:System.IO> 名前空間で API を使用するとき、あるファイルを参照する方法をいくつか示しています。 この例では <xref:System.IO.FileInfo> オブジェクトをインスタンス化し、その <xref:System.IO.FileInfo.Name> プロパティと <xref:System.IO.FileInfo.Length> プロパティを使用してファイルの名前と長さを表示します。
 

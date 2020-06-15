@@ -1,16 +1,17 @@
 ---
 title: DataReader によるデータの取得
+description: ADO.NET で DataReader を使用してデータを取得する方法について、サンプル コードで説明します。 DataReader は、バッファリングされないデータ ストリームを提供します。
 ms.date: 10/29/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
-ms.openlocfilehash: 88cd85ce343aaab08b944f81c9659918014da0a5
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 6e5161cc325bf0379bb9241b99c473c539ad1081
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79149025"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286599"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader を使用してデータを取得する
 **DataReader** を使用してデータを取得するには、**Command** オブジェクトのインスタンスを作成した後、**Command.ExecuteReader** を呼び出して **DataReader** を作成し、データ ソースから行を取得します。 **DataReader** では、手続きロジックがデータ ソースからの結果を順番に効率的に処理できるようにするバッファリングされないデータ ストリームが提供されます。 **DataReader** はデータをメモリにキャッシュしないため、大量のデータを取得する場合に適しています。

@@ -1,16 +1,17 @@
 ---
 title: XML からの DataSet の読み込み
+description: XML から ADO.NET DataSet にコンテンツを追加する方法について説明します。 .NET Framework では、読み込む対象と DataSet の構造を柔軟に指定できます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 49c083b7-a5ed-41cf-aabc-5aaba96f00e6
-ms.openlocfilehash: c21ed3bb31add285d64272040680433fff4e16fd
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 8c81e6e29678fe2e30af7c15d8d6e90f23dd0762
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79151066"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286884"
 ---
 # <a name="loading-a-dataset-from-xml"></a>XML からの DataSet の読み込み
 ADO.NET では、XML ストリームまたは XML ドキュメントから <xref:System.Data.DataSet> の内容を作成できます。 また、.NET Framework では、XML から読み込まれる情報と <xref:System.Data.DataSet> のスキーマまたはリレーショナル構造の作成方法を柔軟に変更できます。  

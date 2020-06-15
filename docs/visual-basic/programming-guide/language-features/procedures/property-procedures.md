@@ -13,12 +13,12 @@ helpviewer_keywords:
 - property procedures
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
-ms.openlocfilehash: a4b8ac3e27348764f537ee9502ce1fbb165bb3ef
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cb5b0e12512e476b7c96bbfb19f8e4f470f6b498
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352560"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363734"
 ---
 # <a name="property-procedures-visual-basic"></a>Property プロシージャ (Visual Basic)
 
@@ -29,7 +29,7 @@ Visual Basic には、次のプロパティ プロシージャが用意されて
 - `Get` プロシージャは、プロパティの値を返します。 式でプロパティにアクセスするときに呼び出されます。
 - `Set` プロシージャは、プロパティを値 (オブジェクト参照を含む) に設定します。 プロパティに値を割り当てるときに呼び出されます。
 
-通常は、`Get` および `Set` ステートメントを使用して、プロパティ プロシージャをペアで定義しますが、プロパティが読み取り専用 ([Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)) または書き込み専用 ([Set ステートメント](../../../../visual-basic/language-reference/statements/set-statement.md)) の場合は、いずれかのプロシージャだけを定義できます。
+通常は、`Get` および `Set` ステートメントを使用して、プロパティ プロシージャをペアで定義しますが、プロパティが読み取り専用 ([Get ステートメント](../../../language-reference/statements/get-statement.md)) または書き込み専用 ([Set ステートメント](../../../language-reference/statements/set-statement.md)) の場合は、いずれかのプロシージャだけを定義できます。
 
 自動実装プロパティを使用する場合は、`Get` および `Set` プロシージャを省略できます。 詳細については、「[自動実装プロパティ](./auto-implemented-properties.md)」を参照してください。
 
@@ -39,7 +39,7 @@ Visual Basic には、次のプロパティ プロシージャが用意されて
 
 ## <a name="declaration-syntax"></a>宣言の構文
 
-プロパティ自体は、[Property ステートメント](../../../../visual-basic/language-reference/statements/property-statement.md)と `End Property` ステートメントで囲まれたコード ブロックによって定義されます。 このブロック内では、各プロパティ プロシージャは、宣言ステートメント (`Get` または `Set`) と、対応する `End` 宣言で囲まれた内部ブロックとして表示されます。
+プロパティ自体は、[Property ステートメント](../../../language-reference/statements/property-statement.md)と `End Property` ステートメントで囲まれたコード ブロックによって定義されます。 このブロック内では、各プロパティ プロシージャは、宣言ステートメント (`Get` または `Set`) と、対応する `End` 宣言で囲まれた内部ブロックとして表示されます。
 
 プロパティとそのプロシージャを宣言するための構文は次のとおりです。
 
@@ -60,7 +60,7 @@ End Property
 [Default] [Modifiers] Property PropertyName [(ParameterList)] [As DataType]
 ```
 
-`Modifiers` では、アクセス レベルと、オーバーロード、オーバーライド、共有、シャドウに関する情報、およびプロパティが読み取り専用または書き込み専用かどうかを指定できます。 `Get` または `Set` プロシージャの `AccessLevel` には、プロパティ自体に指定されたアクセス レベルよりも制限の厳しい任意のレベルを指定できます。 詳細については、「[Property Statement (Property ステートメント)](../../../../visual-basic/language-reference/statements/property-statement.md)」をご覧ください。
+`Modifiers` では、アクセス レベルと、オーバーロード、オーバーライド、共有、シャドウに関する情報、およびプロパティが読み取り専用または書き込み専用かどうかを指定できます。 `Get` または `Set` プロシージャの `AccessLevel` には、プロパティ自体に指定されたアクセス レベルよりも制限の厳しい任意のレベルを指定できます。 詳細については、「[Property Statement (Property ステートメント)](../../../language-reference/statements/property-statement.md)」をご覧ください。
 
 ### <a name="data-type"></a>データの種類
 
@@ -68,7 +68,7 @@ End Property
 
 ### <a name="access-level"></a>アクセス レベル
 
-プロパティのプリンシパル アクセス レベルを定義し、プロパティ プロシージャの 1 つでアクセス レベルをさらに制限できます。 たとえば、`Public` プロパティを定義し、`Private Set` プロシージャを定義できます。 `Get` プロシージャは `Public` のままです。 アクセス レベルは、プロパティのプロシージャの 1 つでのみ変更することができ、プリンシパル アクセス レベルよりも厳しい制限にすることだけが可能です。 詳細については、[方法: 複数のアクセス レベルを持つプロパティを宣言する](how-to-declare-a-property-with-mixed-access-levels.md) をご覧ください。
+プロパティのプリンシパル アクセス レベルを定義し、プロパティ プロシージャの 1 つでアクセス レベルをさらに制限できます。 たとえば、`Public` プロパティを定義し、`Private Set` プロシージャを定義できます。 `Get` プロシージャは `Public` のままです。 アクセス レベルは、プロパティのプロシージャの 1 つでのみ変更することができ、プリンシパル アクセス レベルよりも厳しい制限にすることだけが可能です。 詳細については、「[方法:方法: 複数のアクセス レベルを持つプロパティを宣言する](how-to-declare-a-property-with-mixed-access-levels.md) をご覧ください。
 
 ## <a name="parameter-declaration"></a>パラメーターの宣言
 

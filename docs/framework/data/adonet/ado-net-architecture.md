@@ -1,13 +1,14 @@
 ---
 title: アーキテクチャ
+description: データへのアクセスと操作に関する 2 つの主要なコンポーネントである、.NET Framework データ プロバイダーと DataSet を含む、ADO.NET のアーキテクチャについて説明します。
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: de33c9964f3c03b18593b0df0607f941d2117be0
-ms.sourcegitcommit: 19014f9c081ca2ff19652ca12503828db8239d48
+ms.openlocfilehash: 91e5b1e33ed1bc6e2acf6068a03bb8185324470d
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2020
-ms.locfileid: "76980315"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84287182"
 ---
 # <a name="adonet-architecture"></a>ADO.NET のアーキテクチャ
 従来のデータ処理は、主に接続をベースとした 2 層モデルに基づいていました。 近年、データ処理では多層アーキテクチャの採用が増えてきており、アプリケーションのスケーラビリティを高める非接続型アプローチが主流になりつつあります。  

@@ -2,18 +2,18 @@
 title: 一般的なガイダンス
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | 一般的なガイダンス'
 ms.date: 09/11/2018
-ms.openlocfilehash: e3bb4b8cf3e371c31d783fe4cfafeac282fb72b8
-ms.sourcegitcommit: ee5b798427f81237a3c23d1fd81fff7fdc21e8d3
+ms.openlocfilehash: 6e63d7804abc1703f17378584d58d66a933022c7
+ms.sourcegitcommit: 5280b2aef60a1ed99002dba44e4b9e7f6c830604
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84144566"
+ms.lasthandoff: 06/03/2020
+ms.locfileid: "84306878"
 ---
 # <a name="general-guidance"></a>一般的なガイダンス
 
 このセクションでは、どのような場合に .NET Core または .NET Framework を選択すべきかの概要を示します。 後続のセクションでこれらの選択の詳細について説明します。
 
-次の場合には、コンテナー化された Docker サーバー アプリケーションで、.NET Core と Linux または Windows のコンテナーを併用する必要があります。
+次の場合には、コンテナー化された Docker サーバー アプリケーションで、.NET Core と Linux または Windows のコンテナーを併用します。
 
 - クロスプラット フォームが必要である。 たとえば、Linux と Windows のコンテナーの両方を使用する場合。
 
@@ -25,7 +25,7 @@ ms.locfileid: "84144566"
 
 .NET Core を使用するその他の利点は、同じマシンで複数の .NET バージョンのアプリケーションを同時に実行できることです。 この利点は、コンテナーを使用しないサーバーまたは VM にとってはさらに重要になります。コンテナーは、アプリが必要とする .NET バージョンを特定するためです。 (基礎となる OS と互換性がある場合。)
 
-次の場合には、コンテナー化された Docker サーバー アプリケーションで、.NET Framework を使用する必要があります。
+次の場合には、コンテナー化された Docker サーバー アプリケーションで、.NET Framework を使用します。
 
 - 現在、アプリケーションで .NET Framework を使用し、Windows で強い依存関係がある場合。
 

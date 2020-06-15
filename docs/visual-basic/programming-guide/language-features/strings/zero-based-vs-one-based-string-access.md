@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - strings [Visual Basic], indexing
 ms.assetid: 0ed39f35-d68e-421d-ae14-460a5c0373b8
-ms.openlocfilehash: 97e60038bc7ec0f030939d0980b786bffebcfb9a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: ce2fcb2610c09a9591a5fd79da4baa74cc533c99
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354300"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84363657"
 ---
 # <a name="zero-based-vs-one-based-string-access-in-visual-basic"></a>0 から始まる文字列アクセスと1 から始まる文字列アクセスの比較 (Visual Basic)
 このトピックでは、Visual Basic と .NET Framework が文字列内の文字へのアクセスを提供する方法を比較します。 .NET Framework では、文字列内の文字にアクセスする際に、常に 0 から始まるアクセスが提供されます。一方、Visual Basic では、関数に応じて、0 から始まるアクセスと 1 から始まるアクセスが提供されます。  
@@ -26,4 +26,4 @@ ms.locfileid: "74354300"
 - <xref:Microsoft.VisualBasic.Strings.Split%2A>
 - <xref:System.String.Substring%2A>
 - <xref:System.String.Split%2A>
-- [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
+- [Visual Basic の文字列の概要](introduction-to-strings.md)

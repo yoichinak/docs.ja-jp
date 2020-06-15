@@ -1,5 +1,6 @@
 ---
 title: 例外の推奨事項 - .NET
+description: try/catch/finally の使用、例外のない一般的な条件の処理、事前定義済みの .NET の例外の種類の使用など、例外に対するベスト プラクティスについて説明します。
 ms.date: 12/05/2018
 ms.technology: dotnet-standard
 dev_langs:
@@ -9,12 +10,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: 1de231b01e3fa97e78a87ae6b0595a9b5536374e
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 90dda00acd32852b032fc383580c5f34022ec9b4
+ms.sourcegitcommit: b16c00371ea06398859ecd157defc81301c9070f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2020
-ms.locfileid: "78160171"
+ms.lasthandoff: 06/05/2020
+ms.locfileid: "84447096"
 ---
 # <a name="best-practices-for-exceptions"></a>例外の推奨事項
 
@@ -88,7 +89,7 @@ ms.locfileid: "78160171"
 
 - 文字列メッセージと内部例外を受け取る <xref:System.Exception.%23ctor%28System.String%2CSystem.Exception%29>。
 
-例については、「[方法: ユーザー定義の例外を作成する](how-to-create-user-defined-exceptions.md)」を参照してください。
+例については、「[方法: ユーザー定義の例外を作成する](how-to-create-user-defined-exceptions.md)」をご覧ください。
 
 ## <a name="ensure-that-exception-data-is-available-when-code-executes-remotely"></a>コードがリモートで実行されるときに、例外データが利用できるようにする
 
@@ -214,6 +215,6 @@ Catch ex As Exception
 End Try
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [例外](index.md)

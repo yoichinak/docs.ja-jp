@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
-ms.openlocfilehash: 45dc0403468fa40888a6c5e6bdfe6ca782e98325
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7056bbf2b4de26feba3bfbe0e02b3239311271c9
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664196"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84382173"
 ---
-# <a name="typename-is-a-delegate-type"></a>'\<typename>' はデリゲート型です
+# <a name="typename-is-a-delegate-type"></a>'\<typename>' はデリゲート型です。
 '\<typename>' はデリゲート型です。 デリゲート コンストラクションでは、引数リストとして 1 つの AddressOf 式のみが許可されます。 多くの場合、デリゲート コンストラクションの代わりに AddressOf 式を使用できます。  
   
  デリゲート クラスのインスタンスを作成する `New` 句は、デリゲート コンストラクターに無効な引数リストを指定します。  
@@ -31,7 +31,7 @@ ms.locfileid: "64664196"
   
 ## <a name="see-also"></a>関連項目
 
-- [New 演算子](../../../visual-basic/language-reference/operators/new-operator.md)
-- [AddressOf 演算子](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [デリゲート](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [方法: デリゲート メソッドを呼び出す](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [New 演算子](../operators/new-operator.md)
+- [AddressOf 演算子](../operators/addressof-operator.md)
+- [デリゲート](../../programming-guide/language-features/delegates/index.md)
+- [方法: デリゲート メソッドを呼び出す](../../programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

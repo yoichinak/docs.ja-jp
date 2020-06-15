@@ -1,16 +1,17 @@
 ---
 title: DataTable の作成
+description: ADO.NET で DataTable を作成する方法について説明します。これは、インメモリ リレーショナル データの 1 つのテーブルを表し、単独で使用することも、他の .NET Framework オブジェクトで使用することもできます。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: eecf9d78-60e3-4fdc-8de0-e56c13a89414
-ms.openlocfilehash: e48359041f92e7b534513aa461a293a822bede19
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 335137eeef02e590539c6d83e46cb39901a1e03f
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70786492"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286922"
 ---
 # <a name="creating-a-datatable"></a>DataTable の作成
 <xref:System.Data.DataTable> は 1 つのインメモリ リレーショナル データのテーブルを表します。DataTable は単独で作成および使用することも、他の .NET Framework オブジェクトから <xref:System.Data.DataSet> のメンバーとして使用することもできます。  

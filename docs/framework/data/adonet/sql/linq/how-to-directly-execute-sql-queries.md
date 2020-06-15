@@ -1,16 +1,17 @@
 ---
 title: '方法: SQL クエリを直接実行する'
+description: ExecuteQuery を使用してクエリを実行し、LINQ to SQL クエリでは不十分な場合は、その結果を直接オブジェクトに変換する方法について説明します。
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: a4971bc05b22c38790c5fd1493e70cccf5eaae16
-ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.openlocfilehash: 59bd404e41f6be1181d6a625c31ee23358db0df3
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70793783"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286366"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>方法: SQL クエリを直接実行する
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、作成したクエリをパラメーター化された SQL クエリ (テキスト形式) に変換し、それを SQL Server に送って処理します。  

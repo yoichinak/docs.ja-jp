@@ -1,13 +1,14 @@
 ---
 title: SQL Server での認証
+description: Windows 認証モードや混合モードなど、ADO.NET の SQL Server での認証について説明します。
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 0fb92f9e854e2a7a800335390d0195243a749b33
-ms.sourcegitcommit: 42ed59871db1f29a32b3d8e7abeb20e6eceeda7c
+ms.openlocfilehash: e9915598acfbdefb59069d6a9c6ef4b7c824e4c6
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74959975"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84286547"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
 SQL Server は、Windows 認証モードと混合モードの 2 つの認証モードをサポートしています。  
