@@ -10,12 +10,12 @@ dev_langs:
 - csharp
 helpviewer_keywords:
 - encoding, understanding
-ms.openlocfilehash: 086430a720e6dc7f39d459a4b99d5bbdb1cfcac3
-ms.sourcegitcommit: 839777281a281684a7e2906dccb3acd7f6a32023
+ms.openlocfilehash: 1b6ec6a7275408d4a8061c0de92cdf6e82dd533a
+ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "82141307"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84288044"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 
@@ -25,13 +25,13 @@ ms.locfileid: "82141307"
 
 ## <a name="the-string-and-char-types"></a>string 型と char 型
 
-[string](xref:System.String) クラスのインスタンスは、あるテキストを表します。 `string` は、論理的には 16 ビット値のシーケンスであり、そのそれぞれが [char](xref:System.Char) 構造体のインスタンスです。 [string.Length](xref:System.String.Length) プロパティでは、`string` インスタンスに含まれる `char` インスタンスの数が返されます。
+[string](xref:System.String) クラスのインスタンスは、何らかのテキストを表します。 `string` は、論理的には 16 ビット値のシーケンスであり、そのそれぞれが [char](xref:System.Char) 構造体のインスタンスです。 [string.Length](xref:System.String.Length) プロパティでは、`string` インスタンスに含まれる `char` インスタンスの数が返されます。
 
 次のサンプル関数では、`string` に含まれるすべての `char` インスタンスの 16 進表記の値が出力されます。
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/PrintStringChars.cs" id="SnippetPrintChars":::
 
-この関数に文字列 "Hello" を渡すと、次の出力が得られます。
+この関数に string "Hello" を渡すと、次の出力が得られます。
 
 ```csharp
 PrintChars("Hello");
@@ -186,7 +186,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 :::image type="content" source="media/character-encoding-introduction/scalar-values.svg" alt-text="スカラー値":::
 
-### <a name="the-opno-locrune-type-as-a-scalar-value"></a>スカラー値としての Rune 型
+### <a name="the-rune-type-as-a-scalar-value"></a>スカラー値としての Rune 型
 
 .NET Core 3.0 以降では、<xref:System.Text.Rune?displayProperty=fullName> 型によって Unicode スカラー値が表されます。 **`Rune` は、.NET Core 2.x または .NET Framework 4.x では使用できません。**
 
@@ -202,7 +202,7 @@ actual =  65,536 + ((55,356 - 55,296) * 1,024) + (57,145 - 56320)
 
 :::code language="csharp" source="snippets/character-encoding-introduction/csharp/InstantiateRunes.cs" id="SnippetInvalidHigh":::
 
-### <a name="opno-locrune-usage-example-changing-letter-case"></a>Rune の使用例: 大文字と小文字の変更
+### <a name="rune-usage-example-changing-letter-case"></a>Rune の使用例: 大文字と小文字の変更
 
 `char` を受け取り、スカラー値であるコード ポイントを操作していると仮定する API は、その `char` がサロゲート ペアのものであった場合、正しく動作しません。 たとえば、string に含まれる各 char に対して <xref:System.Char.ToUpperInvariant%2A?displayProperty=nameWithType> を呼び出す、次のようなメソッドを考えてみます。
 
@@ -217,7 +217,7 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
   :::code language="csharp" source="snippets/character-encoding-introduction/csharp/ConvertToUpper.cs" id="SnippetGoodExample":::
 
-### <a name="other-opno-locrune-apis"></a>その他の Rune API
+### <a name="other-rune-apis"></a>その他の Rune API
 
 `Rune` 型では、多くの `char` API と類似した機能が公開されています。 たとえば、以下のメソッドは、`char` 型の静的 API に対応しています。
 
@@ -264,7 +264,7 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
 `string` の書記素クラスターを列挙するには、次の例に示すように <xref:System.Globalization.StringInfo> クラスを使用します。 Swift に慣れている場合、.NET の `StringInfo` 型は、概念的に [Swift の `character` 型](https://developer.apple.com/documentation/swift/character)と似ています。
 
-### <a name="example-count-opno-locchar-opno-locrune-and-text-element-instances"></a>例: char、Rune、テキスト要素のインスタンス数を数える
+### <a name="example-count-char-rune-and-text-element-instances"></a>例: char、Rune、テキスト要素のインスタンス数を数える
 
 .NET API では、書記素クラスターは "*テキスト要素*" と呼ばれます。 次のメソッドは、`string` に含まれる `char`、`Rune`、およびテキスト要素のインスタンスの違いを示しています。
 
@@ -274,7 +274,7 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
 .NET Framework または .NET Core 3.1 以前でこのコードを実行すると、絵文字のテキスト要素の数として `4` が表示されます。 これは、.NET 5 で修正されている `StringInfo` クラスのバグが原因です。
 
-### <a name="example-splitting-opno-locstring-instances"></a>例: string インスタンスの分割
+### <a name="example-splitting-string-instances"></a>例: string インスタンスの分割
 
 `string` インスタンスを分割する場合は、サロゲート ペアと書記素クラスターを分割しないようにします。 不適切なコードを示す次の例について考えてみましょう。ここでは、string 内の 10 文字ごとに改行を挿入しようとしています。
 
@@ -292,7 +292,7 @@ string を適切に大文字に変換するための 2 つのオプションを�
 
 ## <a name="utf-8-and-utf-32"></a>UTF-8 と UTF-32
 
-前のセクションでは、UTF-16 に焦点を当てました。.NET では `string` インスタンスをエンコードするために UTF-16 が使用されるためです。 Unicode には、他のエンコード システムもあります: [UTF-8](https://www.unicode.org/faq/utf_bom.html#UTF8) と [UTF-32](https://www.unicode.org/faq/utf_bom.html#UTF32) です。 これらのエンコードでは、8 ビットのコード単位と 32 ビットのコード単位がそれぞれ使用されます。
+前のセクションでは、UTF-16 に焦点を当てました。 .NET では `string` インスタンスをエンコードするために UTF-16 が使用されるためです。 Unicode には、他のエンコード システムもあります: [UTF-8](https://www.unicode.org/faq/utf_bom.html#UTF8) と [UTF-32](https://www.unicode.org/faq/utf_bom.html#UTF32) です。 これらのエンコードでは、8 ビットのコード単位と 32 ビットのコード単位がそれぞれ使用されます。
 
 UTF-16 と同様に、UTF-8 では、一部の Unicode スカラー値を表すために複数のコード単位が必要になります。 UTF-32 では、1 つの 32 ビット コード単位で任意のスカラー値を表すことができます。
 
@@ -389,4 +389,4 @@ string asString = encoding.GetString(utf8Bytes); // will throw if 'utf8Bytes' is
 - <xref:System.String>
 - <xref:System.Char>
 - <xref:System.Text.Rune>
-- [グローバライズとローカライズ](../../../docs/standard/globalization-localization/index.md)
+- [グローバライズとローカライズ](../globalization-localization/index.md)

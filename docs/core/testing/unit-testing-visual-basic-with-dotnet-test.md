@@ -4,12 +4,12 @@ description: dotnet テストおよび xUnit を使用した Visual Basic ソリ
 author: billwagner
 ms.author: wiwagn
 ms.date: 05/18/2020
-ms.openlocfilehash: ed1291a980f9a39284525877bab8d0a93389fbd0
-ms.sourcegitcommit: 0926684d8d34f4c6b5acce58d2193db093cb9cf2
+ms.openlocfilehash: d87550d692e0b7f3bfee1633bd00cbf501cc2e67
+ms.sourcegitcommit: da21fc5a8cce1e028575acf31974681a1bc5aeed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/20/2020
-ms.locfileid: "83702957"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84502757"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-xunit"></a>dotnet テストと xUnit を使用した Visual Basic .NET Core ライブラリでの単体テスト
 
@@ -222,7 +222,7 @@ Public Function IsPrime(candidate As Integer) As Boolean
 End Function
 ```
 
-TDD アプローチに従って、失敗するテストをさらに追加した後、ターゲット コードを更新します。 [テストの最終版](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb)と、[ライブラリの完全な実装](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-using-dotnet-test/PrimeService/PrimeService.vb)を参照してください。
+TDD アプローチに従って、失敗するテストをさらに追加した後、ターゲット コードを更新します。 [テストの最終版](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService.Tests/PrimeService_IsPrimeShould.vb)と、[ライブラリの完全な実装](https://github.com/dotnet/samples/blob/master/core/getting-started/unit-testing-vb-dotnet-test/PrimeService/PrimeService.vb)を参照してください。
 
 完成した `IsPrime` メソッドは、素数性をテストするための効率的なアルゴリズムではありません。
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 58980bd0d70d8a778cdb208f56d31ee8465871a4
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 65f5c882ec4d7f8cbcc7ec7bf535091febfba64d
+ms.sourcegitcommit: 7137e12f54c4e83a94ae43ec320f8cf59c1772ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2020
-ms.locfileid: "79170170"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84662655"
 ---
 # <a name="polymorphism-c-programming-guide"></a>ポリモーフィズム (C# プログラミング ガイド)
 
@@ -50,7 +50,7 @@ C# では、すべての型がポリモーフィックです。これは、ユ�
 
 フィールドは仮想にできません。仮想にできるのは、メソッド、プロパティ、イベント、インデクサーに限られます。 派生クラスが仮想メンバーをオーバーライドすると、派生クラスのメンバーは、そのクラスのインスタンスが基底クラスのインスタンスとしてアクセスされるときでも呼び出されます。 次にコード例を示します。
 
-[!code-csharp[Virtual overview example](~/samples/snippets/csharp/objectoriented/Inheritance.cs#VirtualMethods)]
+[!code-csharp[Virtual overview example](~/samples/snippets/csharp/objectoriented/Inheritance.cs#SnippetTestVirtualMethods)]
 
 仮想メソッドとプロパティを使用すると、派生クラスは、基底クラスのメソッドの実装を使用せずに基底クラスを拡張できます。 詳細については、「[Override キーワードと New キーワードによるバージョン管理](./versioning-with-the-override-and-new-keywords.md)」を参照してください。 1 つまたは一連のメソッドを定義し、その実装を派生クラスに任せるもう 1 つの方法として、インターフェイスがあります。 詳細については、「[インターフェイス](../interfaces/index.md)」を参照してください。
 
