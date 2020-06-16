@@ -1,5 +1,6 @@
 ---
 title: フレームワーク デザインのガイドライン
+description: API の一貫性と使いやすさを確保するために、.NET を拡張して操作するライブラリを設計するためのフレームワークデザインガイドラインを参照してください。
 titleSuffix: ''
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], about
 - class library design guidelines [.NET Framework]
 ms.assetid: 5fbcaf4f-ea2a-4d20-b0d6-e61dee202b4b
-ms.openlocfilehash: 5a4edca70844a2b2a3972381b34efe85664f353d
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 17998adb1d18579f6763a80a82944e742e284e4e
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84276037"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769068"
 ---
 # <a name="framework-design-guidelines"></a>フレームワーク デザインのガイドライン
 このセクションでは、.NET Framework を拡張および操作するライブラリを設計するためのガイドラインを示します。 この目標は、開発に使用されるプログラミング言語に依存しない統合プログラミングモデルを提供することで、ライブラリデザイナーが API の一貫性と使いやすさを保証できるようにすることです。 .NET Framework を拡張するクラスおよびコンポーネントを開発する場合は、これらのデザインガイドラインに従うことをお勧めします。 一貫性のないライブラリ設計は、開発者の生産性に悪影響を及ぼし、導入を推奨しません。  

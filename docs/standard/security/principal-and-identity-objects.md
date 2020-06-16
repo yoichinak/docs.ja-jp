@@ -1,5 +1,6 @@
 ---
 title: プリンシパル オブジェクトと ID オブジェクト
+description: .NET のユーザーを表す id オブジェクトについて説明します。 また、ロール & id オブジェクトの両方をカプセル化するプリンシパルオブジェクトについても説明します。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -12,12 +13,12 @@ helpviewer_keywords:
 - security [.NET Framework], principals
 - WindowsPrincipal objects
 ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
-ms.openlocfilehash: cece51370fb269121e776e865275cd464c1af095
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 5fd3f1c80f22c1ebe7b2c10653ee137f00321de8
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84291228"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84768847"
 ---
 # <a name="principal-and-identity-objects"></a>プリンシパル オブジェクトと ID オブジェクト
 マネージコードでは、オブジェクト <xref:System.Security.Principal.IPrincipal> への参照を含むオブジェクトを使用して、プリンシパルの id またはロールを検出でき <xref:System.Security.Principal.IIdentity> ます。 ID オブジェクトとプリンシパル オブジェクトは、ユーザーとグループ アカウントのようななじみのある概念と比較するとわかりやすいでしょう。 ほとんどのネットワーク環境で、ユーザー アカウントは人またはプログラムを表し、グループ アカウントは特定のカテゴリのユーザーやそのユーザーが所有する権限を表します。 同様に、.NET Framework の ID オブジェクトはユーザーを表し、ロールはメンバーシップやセキュリティ コンテキストを表します。 .NET Framework で、プリンシパル オブジェクトは、ID オブジェクトとロールの両方をカプセル化します。 .NET Framework アプリケーションは、ID または一般的にはロール メンバーシップに基づいてプリンシパルに権限を付与します。  

@@ -1,5 +1,6 @@
 ---
 title: 大文字の使用規則
+description: 識別子、複合語、および一般的な用語の大文字小文字の表記規則を適用します。 .NET での大文字と小文字の区別のしくみについて説明します。
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-ms.openlocfilehash: 10d628700a9cbf0e842416878ec2c7febfa3d6f5
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: 4903dc587d84ef36bfaa641cfbda59484266c23c
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84280401"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84767794"
 ---
 # <a name="capitalization-conventions"></a>大文字の使用規則
 この章のガイドラインでは、一貫して適用されている場合に、型、メンバー、およびパラメーターの識別子を読みやすくするための簡単な方法を説明します。
@@ -50,11 +51,11 @@ ms.locfileid: "84280401"
 |識別子|大文字小文字の区別|例|
 |----------------|------------|-------------|
 |名前空間|Pascal|`namespace System.Security { ... }`|
-|Type|Pascal|`public class StreamReader { ... }`|
+|種類|Pascal|`public class StreamReader { ... }`|
 |インターフェイス|Pascal|`public interface IEnumerable { ... }`|
-|Method|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
+|メソッド|Pascal|`public class Object {` <br />  `public virtual string ToString();` <br /> `}`|
 |プロパティ|Pascal|`public class String {` <br />  `public int Length { get; }` <br /> `}`|
-|Event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
+|event|Pascal|`public class Process {` <br />  `public event EventHandler Exited;` <br /> `}`|
 |フィールド|Pascal|`public class MessageQueue {` <br />  `public static readonly TimeSpan` <br /> `InfiniteTimeout;` <br /> `}` <br /> `public struct UInt32 {` <br />  `public const Min = 0;` <br /> `}`|
 |列挙値|Pascal|`public enum FileMode {` <br />  `Append,` <br />  `...` <br /> `}`|
 |パラメーター|Camel|`public class Convert {` <br />  `public static int ToInt32(string value);` <br /> `}`|

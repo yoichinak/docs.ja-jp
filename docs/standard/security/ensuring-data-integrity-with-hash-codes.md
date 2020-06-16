@@ -1,5 +1,6 @@
 ---
 title: ハッシュ コードによるデータの整合性の保証
+description: .NET でハッシュコードを使用してデータの整合性を確保する方法について説明します。 ハッシュ値は、データを一意に識別する固定長の数値です。
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,12 +15,12 @@ helpviewer_keywords:
 - encryption [.NET Framework], hash
 - hash
 ms.assetid: 33660f33-b70f-4dca-8c87-ab35cfc2961a
-ms.openlocfilehash: 4938cd75af32caa4f9da6ed682f18e9f6c73ad5b
-ms.sourcegitcommit: 33deec3e814238fb18a49b2a7e89278e27888291
+ms.openlocfilehash: ffc5e78228f4e7c56febdc0872a0bc0fc581f162
+ms.sourcegitcommit: 5fd4696a3e5791b2a8c449ccffda87f2cc2d4894
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/02/2020
-ms.locfileid: "84288343"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84769055"
 ---
 # <a name="ensuring-data-integrity-with-hash-codes"></a>ハッシュ コードによるデータの整合性の保証
 ハッシュ値は、データを一意に識別する固定長の数値です。 ハッシュ値は、大量のデータを非常に小さな数値として表現するため、デジタル署名と一緒に使用されます。 大きな値で署名するよりも、ハッシュ値を使用すれば効率的に署名できます。 ハッシュ値は、安全でないチャネルを介して送信されたデータの整合性を検証するためにも役立ちます。 受信したデータのハッシュ値を送信したデータのハッシュ値と比較すると、データが変更されたかどうかを判断できます。  
