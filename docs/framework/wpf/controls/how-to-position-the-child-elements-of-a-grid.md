@@ -1,5 +1,5 @@
 ---
-title: '方法 : グリッドの子要素を配置する'
+title: '方法: グリッドの子要素を配置する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,28 +9,28 @@ helpviewer_keywords:
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
 ms.openlocfilehash: 44268c32732a9409ea30f028adaa8a2631a06c5c
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79186717"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a>方法 : グリッドの子要素を配置する
-この例では、子要素を配置するために定義されている get メソッド<xref:System.Windows.Controls.Grid>と set メソッドを使用する方法を示します。  
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>方法: グリッドの子要素を配置する
+この例では、<xref:System.Windows.Controls.Grid> で定義されている get メソッドと set メソッドを使用して、子要素を配置する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例では、3<xref:System.Windows.Controls.Grid>つの`grid1`列と 3 つの行を持つ親要素 ( ) を定義します。 子<xref:System.Windows.Shapes.Rectangle>要素 (`rect1`) が列<xref:System.Windows.Controls.Grid>位置 0、行位置 0 に追加されます。 <xref:System.Windows.Controls.Button>要素は、要素を内部で再配置<xref:System.Windows.Shapes.Rectangle>するために呼び出すことができるメソッド<xref:System.Windows.Controls.Grid>を表します。 ユーザーがボタンをクリックすると、関連するメソッドがアクティブになります。  
+ 次の例では、3 つの列と 3 つの行を持つ親 <xref:System.Windows.Controls.Grid> 要素 (`grid1`) を定義します。 子 <xref:System.Windows.Shapes.Rectangle> 要素 (`rect1`) は、列位置 0、行位置 0 の <xref:System.Windows.Controls.Grid> に追加されます。 <xref:System.Windows.Controls.Button> 要素によって表されるメソッドを呼び出すことで、<xref:System.Windows.Controls.Grid> 内の <xref:System.Windows.Shapes.Rectangle> 要素の位置を変更できます。 ユーザーがボタンをクリックすると、関連するメソッドがアクティブ化されます。  
   
  [!code-xaml[gridGetSetMethods](~/samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml)]  
   
- 次のコード ビハインドの例では、ボタン<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントが発生するメソッドを処理します。 この例では、関連する<xref:System.Windows.Controls.TextBlock>get メソッドを使用して新しいプロパティ値を文字列として出力する要素に、これらのメソッド呼び出しを書き込みます。  
+ 次のコードビハインドの例では、ボタンの <xref:System.Windows.Controls.Primitives.ButtonBase.Click> イベントが発生するメソッドが処理されています。 この例では、これらのメソッドの呼び出しが <xref:System.Windows.Controls.TextBlock> 要素に書き込まれ、そこで関連する get メソッドを使用して新しいプロパティ値が文字列として出力されます。  
   
  [!code-csharp[gridGetSetMethods#2](~/samples/snippets/csharp/VS_Snippets_Wpf/gridGetSetMethods/CSharp/Window1.xaml.cs#2)]
  [!code-vb[gridGetSetMethods#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridGetSetMethods/VisualBasic/Window1.xaml.vb#2)]  
- 完成した結果はこちら!
+ 完成した結果を次に示します。
 
- ![スクリーンショットは 2 つの列を持つ WPF ユーザー インターフェイスを示し、右側には 3 x 3 のグリッドがあり、左側にはグリッドの列と行の間に色付きの四角形を移動するボタンがあります](././media/grid-methods-sample.png)
+ ![2 つの列を持つ WPF ユーザー インターフェイスを示すスクリーンショット。右側には 3 × 3 のグリッドがあり、左側にはグリッドの列と行の間で色付きの四角形を移動するボタンがある](././media/grid-methods-sample.png)
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Controls.Grid>
-- [パネル概要](panels-overview.md)
+- [パネルの概要](panels-overview.md)

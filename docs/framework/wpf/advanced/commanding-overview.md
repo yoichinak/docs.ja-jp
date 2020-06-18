@@ -15,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: bc208dfe-367d-426a-99de-52b7e7511e81
 ms.openlocfilehash: 3477e6a9eda40edeadaab9cd6d3de2f016250fc8
 ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/12/2020
 ms.locfileid: "79186208"
@@ -25,7 +25,7 @@ ms.locfileid: "79186208"
   
  この概要では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でのコマンドとはどういうものか、コマンド実行モデルに含まれるクラス、アプリケーションでコマンドを作成して使用する方法を定義します。  
   
- このトピックには、次のセクションが含まれます。  
+ このトピックは、次のセクションで構成されています。  
   
 - [コマンドとは](#commands_at_10000_feet)  
   
@@ -173,9 +173,9 @@ ms.locfileid: "79186208"
 ## <a name="command-library"></a>コマンド ライブラリ  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、定義済みのコマンドのセットが用意されています。  コマンド ライブラリは、<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands>、<xref:System.Windows.Documents.EditingCommands>、<xref:System.Windows.Input.ComponentCommands> というクラスで構成されています。  これらのクラスでは、<xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.NavigationCommands.BrowseBack%2A> と <xref:System.Windows.Input.NavigationCommands.BrowseForward%2A>、<xref:System.Windows.Input.MediaCommands.Play%2A>、<xref:System.Windows.Input.MediaCommands.Stop%2A>、<xref:System.Windows.Input.MediaCommands.Pause%2A> などのコマンドが提供されます。  
   
- これらのコマンドの多くには、既定の入力バインディングのセットが含まれます。  たとえば、アプリケーションがコピー コマンドを処理することを指定した場合、自動的にキーボード のバインド "Ctrl + C" Tablet PC ペン ジェスチャや音声情報などの他の入力デバイスのバインドも取得します。  
+ これらのコマンドの多くには、既定の入力バインディングのセットが含まれます。  たとえば、アプリケーションがコピー コマンドを処理することを指定すると、キーボード バインディング "Ctrl + C" が自動的に有効になります。また、タブレット PC のペン ジェスチャや音声情報などの他の入力デバイスに対するバインディングも有効になります。  
   
- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使ってさまざまなコマンド ライブラリのコマンドを参照するときは、通常、静的なコマンド プロパティを公開するライブラリ クラスのクラス名を省略できます。 一般に、コマンド名に文字列としての曖昧さはなく、所有する型は、コマンドの論理グループを提供するために存在しますが、曖昧さの解消のためには必要ありません。 たとえば、詳細な `Command="ApplicationCommands.Cut"` ではなく`Command="Cut"` と指定できます。 これは、コマンド用に[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサに組み込まれている便利なメカニズムです (より正確には、<xref:System.Windows.Input.ICommand>[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサが読み込み時に参照する型コンバーターの動作です)。  
+ [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] を使ってさまざまなコマンド ライブラリのコマンドを参照するときは、通常、静的なコマンド プロパティを公開するライブラリ クラスのクラス名を省略できます。 一般に、コマンド名に文字列としての曖昧さはなく、所有する型は、コマンドの論理グループを提供するために存在しますが、曖昧さの解消のためには必要ありません。 たとえば、詳細な `Command="ApplicationCommands.Cut"` ではなく`Command="Cut"` と指定できます。 これは、コマンドに対する [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサに組み込まれた便利なメカニズムです (つまり、これは <xref:System.Windows.Input.ICommand> の型コンバーターの動作であり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] プロセッサは読み込み時にこれを参照します)。  
   
 <a name="creating_commands"></a>
 ## <a name="creating-custom-commands"></a>カスタム コマンドの作成  
