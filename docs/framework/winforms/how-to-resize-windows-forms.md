@@ -1,5 +1,6 @@
 ---
 title: フォームのサイズ変更
+description: '[サイズ] プロパティに新しい値を設定してフォームの高さと幅の両方を変更する方法、または [高さ] プロパティと [幅] プロパティを個別に調整する方法について説明します。'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +10,14 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 8d4ce46ada505f952fc3090d10c5d893338d19f2
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 0d6383e4d29d9407d3da97bf8b94761f06d99748
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76739303"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903273"
 ---
-# <a name="how-to-resize-windows-forms"></a>方法 : Windows フォームのサイズを変更する
+# <a name="how-to-resize-windows-forms"></a>方法: Windows フォームのサイズ変更
 
 Windows フォームのサイズは、いくつかの方法で指定できます。 <xref:System.Windows.Forms.Form.Size%2A> プロパティに新しい値を設定したり、<xref:System.Windows.Forms.Control.Height%2A> プロパティまたは <xref:System.Windows.Forms.Control.Width%2A> プロパティを個別に調整したりすることで、フォームの高さと幅の両方をプログラムで変更できます。 Visual Studio を使用している場合は、Windows フォームデザイナーを使用してサイズを変更できます。 「[方法: デザイナーを使用して Windows フォームのサイズを変更する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))」も参照してください。
 
@@ -58,7 +59,7 @@ Form1->Width = 300;
 
 または
 
-<xref:System.Drawing.Size.Width%2A> プロパティを設定して、<xref:System.Drawing.Size.Height%2A> または <xref:System.Windows.Forms.Form.Size%2A> を変更します。
+<xref:System.Windows.Forms.Form.Size%2A> プロパティを設定して、<xref:System.Drawing.Size.Width%2A> または <xref:System.Drawing.Size.Height%2A> を変更します。
 
 ただし、次のコード例が示すように、この方法は、<xref:System.Windows.Forms.Control.Width%2A> プロパティまたは <xref:System.Windows.Forms.Control.Height%2A> プロパティをただ設定する方法よりも煩雑になります。
 
@@ -93,7 +94,7 @@ Form1->Width += 200;
 ```
 
 > [!CAUTION]
-> <xref:System.Drawing.Size.Height%2A> プロパティを新しい <xref:System.Drawing.Size.Width%2A> 構造に設定することにより高さと幅の両方のディメンションを同時に設定するというのでない限り、フォームのディメンションを変更するには、常に <xref:System.Windows.Forms.Form.Size%2A> プロパティまたは <xref:System.Drawing.Size> プロパティを使用します。 <xref:System.Windows.Forms.Form.Size%2A> プロパティは、値型である <xref:System.Drawing.Size> 構造を返します。 値型のプロパティに新しい値を割り当てることはできません。 このため、次のコード例はコンパイルされません。
+> <xref:System.Windows.Forms.Form.Size%2A> プロパティを新しい <xref:System.Drawing.Size> 構造に設定することにより高さと幅の両方のディメンションを同時に設定するというのでない限り、フォームのディメンションを変更するには、常に <xref:System.Drawing.Size.Height%2A> プロパティまたは <xref:System.Drawing.Size.Width%2A> プロパティを使用します。 <xref:System.Windows.Forms.Form.Size%2A> プロパティは、値型である <xref:System.Drawing.Size> 構造を返します。 値型のプロパティに新しい値を割り当てることはできません。 このため、次のコード例はコンパイルされません。
 
 ```vb
 ' NOTE: CODE WILL NOT COMPILE
@@ -113,7 +114,7 @@ Form^ f = gcnew Form();
 f->Size->X += 100;
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>こちらもご覧ください
 
-- [Windows フォームについて](getting-started-with-windows-forms.md)
+- [Windows フォームでのはじめに](getting-started-with-windows-forms.md)
 - [Windows フォーム アプリケーションの拡張](./advanced/index.md)

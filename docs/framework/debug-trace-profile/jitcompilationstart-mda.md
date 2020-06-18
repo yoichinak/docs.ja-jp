@@ -1,5 +1,6 @@
 ---
 title: jitCompilationStart MDA
+description: JitCompilationStart マネージデバッグアシスタント (MDA) を使用して、just-in-time (JIT) コンパイラが .NET 関数のコンパイルを開始するタイミングを報告します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - JIT compilation
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - JitCompilationStart MDA
 - managed debugging assistants (MDAs), JIT compilation
 ms.assetid: 5ffd2857-d0ba-4342-9824-9ffe04ec135d
-ms.openlocfilehash: 9cae942bc01e9263720dbfe9acfb21bbb70bc548
-ms.sourcegitcommit: 9c54866bcbdc49dbb981dd55be9bbd0443837aa2
+ms.openlocfilehash: bf2d09f433f0b8e4056fecd1f4e82bf3b91dd2bc
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77216256"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904131"
 ---
 # <a name="jitcompilationstart-mda"></a>jitCompilationStart MDA
 `jitCompilationStart` マネージド デバッグ アシスタント (MDA: Managed Debugging Assistant) が起動すると、Just-In-Time (JIT) コンパイラが関数のコンパイルを開始した時刻が報告されます。  
@@ -37,7 +38,7 @@ method name="Test!ns2.C0::m"
 ```  
   
 ## <a name="configuration"></a>構成  
- 次の構成ファイルでは、最初に JIT コンパイルされたときに報告されるメソッドを絞り込むためのさまざまなフィルターを確認できます。 Name 属性の値を \*に設定することによって、すべてのメソッドを報告するように指定できます。  
+ 次の構成ファイルでは、最初に JIT コンパイルされたときに報告されるメソッドを絞り込むためのさまざまなフィルターを確認できます。 Name 属性の値をに設定することによって、すべてのメソッドを報告するように指定でき \* ます。  
   
 ```xml  
 <mdaConfig>  
@@ -155,7 +156,7 @@ namespace ns2
 }  
 ```  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>こちらもご覧ください
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [マネージド デバッグ アシスタントによるエラーの診断](diagnosing-errors-with-managed-debugging-assistants.md)

@@ -1,5 +1,6 @@
 ---
-title: _WritingCancelled イベント (システム.Windows.Xps)
+title: _WritingCancelled System.windows.xps.xpsdocumentwriter> イベント (System. Windows. Xps)
+description: .NET で XML Paper Specification (XPS) Write または WriteAsync 操作が取り消されたときに発生する _WritingCancelled System.windows.xps.xpsdocumentwriter> イベントについて説明します。
 ms.date: 10/17/2017
 api_location:
 - system.printing.dll
@@ -11,14 +12,14 @@ api_type:
 - Assembly
 topic_type:
 - apiref
-ms.openlocfilehash: 79f9d3c4163b05719d2296d30b87a35a4c282212
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 5e07085ed3573f01acdb63962ca868debb7b49fa
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155610"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903494"
 ---
-# <a name="xpsdocumentwriter_writingcancelled-event"></a>を使用します。\_書き込みキャンセルされたイベント
+# <a name="xpsdocumentwriter_writingcancelled-event"></a>System.windows.xps.xpsdocumentwriter>。 \_WritingCancelled イベント
 
 <xref:System.Windows.Xps.XpsDocumentWriter.Write%2A> または <xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A> 操作がキャンセルされたときに発生します。
 
@@ -30,8 +31,8 @@ internal event WritingCancelledEventHandler _WritingCancelled
 
 ## <a name="requirements"></a>必要条件
 
-**名前空間:**<xref:System.Windows.Xps>
+**名前空間:** <xref:System.Windows.Xps>
 
-**アセンブリ:** システム.印刷(システム印刷.dll内)
+**アセンブリ:**[印刷] (system.printing.dll)
 
-**.NET フレームワークのバージョン:** 3.0以降で利用可能
+**.NET Framework のバージョン:** 3.0 以降で使用可能

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 51625fd0-7399-49c7-b22b-5dfb05451fe6
 topic_type:
 - apiref
-ms.openlocfilehash: c9999961ec20a31cf82d5ad60104bcdd04c340d1
-ms.sourcegitcommit: 488aced39b5f374bc0a139a4993616a54d15baf0
+ms.openlocfilehash: 3d4e44eefaf99a40b9c4f1c45e7dd81192f8b607
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83210177"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904274"
 ---
 # <a name="icordebugheapsegmentenumnext-method"></a>ICorDebugHeapSegmentEnum::Next メソッド
-マネージヒープのメモリ領域に関する情報を格納している、指定した数の[COR_HEAPOBJECT](cor-heapobject-structure.md)インスタンスを取得します。  
+マネージヒープのメモリ領域に関する情報を格納している、指定した数の[COR_SEGMENT](cor-segment-structure.md)インスタンスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -39,10 +39,10 @@ HRESULT Next(
  から取得するセグメントの数。  
   
  セグメント  
- 入出力ポインターの配列。各ポインターは、マネージヒープ内のメモリ領域に関する情報を提供する[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトを指します。  
+ 入出力ポインターの配列。各ポインターは、マネージヒープ内のメモリ領域に関する情報を提供する[COR_SEGMENT](cor-segment-structure.md)オブジェクトを指します。  
   
  pceltFetched  
- 入出力実際にで返される[COR_HEAPOBJECT](cor-heapobject-structure.md)オブジェクトの数へのポインター `segments` 。 `celt` が 1 の場合、この値は`null` になることがあります。  
+ 入出力実際にで返される[COR_SEGMENT](cor-segment-structure.md)オブジェクトの数へのポインター `segments` 。 `celt` が 1 の場合、この値は`null` になることがあります。  
   
 ## <a name="remarks"></a>解説  
   
@@ -55,7 +55,7 @@ HRESULT Next(
   
  **.NET Framework のバージョン:**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [ICorDebugHeapSegmentEnum インターフェイス](icordebugheapsegmentenum-interface.md)
 - [デバッグのインターフェイス](debugging-interfaces.md)

@@ -1,5 +1,6 @@
 ---
 title: 作業の開始
+description: Windows フォームを使用して、データを表示し、ユーザー入力を処理し、アプリケーションの展開を支援する強力な Windows ベースのアプリケーションを作成する方法について説明します。
 ms.date: 03/30/2017
 f1_keywords:
 - Designer_System.Windows.Forms.Design.FormDocumentDesigner
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, getting started
 - getting started [Windows Forms], Windows Forms
 ms.assetid: a031aa58-5027-4082-b590-df7c12c77dec
-ms.openlocfilehash: c5ea75bf826aa658269ec983b60e9dd2eb520ce0
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: ac4f166ca264f2533c5f174273fe60dcb9622a29
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76743468"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903598"
 ---
 # <a name="getting-started-with-windows-forms"></a>Windows フォームについて
 Windows フォームを使用すると、強力な Windows ベースのアプリケーションを作成できます。 次のトピックでは、Windows フォームの機能を活用してデータを表示し、ユーザー入力を処理し、アプリケーションを簡単かつセキュリティ強化して展開する方法について詳しく説明します。  
@@ -25,7 +26,7 @@ Windows フォームを使用すると、強力な Windows ベースのアプリ
  [新しい Windows フォームの作成](creating-a-new-windows-form.md)  
  Windows フォームアプリケーションを作成するための基本的な概念について説明するトピックへのリンクが含まれています。  
   
- [Windows フォーム内のイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)  
+ [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)  
  Windows フォームイベントハンドラーの作成方法について説明するトピックへのリンクが含まれています。  
   
  [Windows フォームのサイズとスケールを調整する](adjusting-the-size-and-scale-of-windows-forms.md)  
@@ -34,7 +35,7 @@ Windows フォームを使用すると、強力な Windows ベースのアプリ
  [Windows フォームの表示形式の変更](changing-the-appearance-of-windows-forms.md)  
  Windows フォーム アプリケーションの外観を変更する方法について説明したトピックへのリンクを示します。  
   
- [Windows フォーム コントロール](./controls/index.md)  
+ [Windows フォームコントロール](./controls/index.md)  
  Windows フォームコントロールとコンポーネントの使用方法について説明するトピックへのリンクを示します。  
   
  [Windows フォームでのユーザー入力](user-input-in-windows-forms.md)  

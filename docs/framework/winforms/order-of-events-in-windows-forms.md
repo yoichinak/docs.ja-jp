@@ -1,5 +1,6 @@
 ---
 title: イベントの順序
+description: アプリケーションとコントロールの有効期間におけるいくつかの重要な段階で、Windows フォームにおけるイベントの順序について詳しく説明します。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - events [Windows Forms], order of
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 618ac5a6a6a32ae1a53fc60ac80700d7648c81a7
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: b16d544d11500b2c684e87a915fc4b8eec071faa
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76734862"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84904339"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows フォームのイベントの順序
 Windows フォーム アプリケーションでイベントが発生する順序は、各イベントを順番に処理する必要がある開発者にとって重要な問題です。 フォームの構成要素を再描画するときなど、イベント処理に細心の注意が必要な状況では、実行時におけるイベントの正確な発生順序に気を配る必要があります。 このトピックでは、アプリケーションとコントロールの有効期間におけるいくつかの重要な段階での、イベントの順序について詳しく説明します。 マウス入力イベントの順序の詳細については、「 [Windows フォームのマウスイベント](mouse-events-in-windows-forms.md)」を参照してください。 Windows フォームのイベントの概要については、「[イベントの概要](events-overview-windows-forms.md)」を参照してください。 イベントハンドラーの詳細については、「[イベントハンドラーの概要](event-handlers-overview-windows-forms.md)」を参照してください。  
@@ -46,7 +47,7 @@ Windows フォーム アプリケーションでイベントが発生する順�
   
 - <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
- <xref:System.Windows.Forms.Application.ApplicationExit> クラスの <xref:System.Windows.Forms.Application> イベントは、メイン フォームのシャットダウン イベントの後に発生します。  
+ <xref:System.Windows.Forms.Application> クラスの <xref:System.Windows.Forms.Application.ApplicationExit> イベントは、メイン フォームのシャットダウン イベントの後に発生します。  
   
 > [!NOTE]
 > Visual Basic 2005 には、追加のアプリケーション イベント (<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup?displayProperty=nameWithType> や <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown?displayProperty=nameWithType> など) があります。  
@@ -80,6 +81,6 @@ Windows フォーム アプリケーションでイベントが発生する順�
   
 - <xref:System.Windows.Forms.Control.Validated>  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>こちらもご覧ください
 
-- [Windows フォーム内のイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
+- [Windows フォーム内でのイベント ハンドラーの作成](creating-event-handlers-in-windows-forms.md)
