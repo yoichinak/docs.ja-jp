@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: 16b6cdc5a849b50f6caa8b7963dac5c12d63cf3e
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 270e8ca26185e4a68def3b95f4ce6ab4c57a629c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346305"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393586"
 ---
 # <a name="structure-variables-visual-basic"></a>構造体の変数 (Visual Basic)
 
@@ -33,7 +33,7 @@ Dim mySystem, yourSystem As systemInfo
 ```
 
 > [!NOTE]
-> クラスとモジュールで、[Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)を使用して宣言された構造体は、既定でパブリック アクセスになります。 構造体をプライベートにする場合は、[Private](../../../../visual-basic/language-reference/modifiers/private.md) キーワードを使用して宣言してください。
+> クラスとモジュールで、[Dim ステートメント](../../../language-reference/statements/dim-statement.md)を使用して宣言された構造体は、既定でパブリック アクセスになります。 構造体をプライベートにする場合は、[Private](../../../language-reference/modifiers/private.md) キーワードを使用して宣言してください。
 
 ## <a name="access-to-structure-values"></a>構造体の値へのアクセス
 
@@ -57,13 +57,13 @@ yourSystem = mySystem
 
 ## <a name="see-also"></a>関連項目
 
-- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [方法: 構造体を宣言する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
-- [構造体とその他のプログラミング要素](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
-- [構造体とクラス](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)
+- [データの種類](index.md)
+- [基本データ型](elementary-data-types.md)
+- [複合データ型](composite-data-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [構造体](structures.md)
+- [トラブルシューティング (データ型)](troubleshooting-data-types.md)
+- [方法: 構造体を宣言する](how-to-declare-a-structure.md)
+- [構造体とその他のプログラミング要素](structures-and-other-programming-elements.md)
+- [構造体とクラス](structures-and-classes.md)
+- [Structure ステートメント](../../../language-reference/statements/structure-statement.md)

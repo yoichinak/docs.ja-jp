@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 3353935a74bb77fa4a630e706aa425063c7a610a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: d252d9216a9b825ad0663a5779d7ce7f81fa9011
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74346326"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393573"
 ---
 # <a name="structures-and-classes-visual-basic"></a>構造体とクラス (Visual Basic)
 Visual Basic では構造体とクラスの構文が統一されており、結果として、両方のエンティティで同じ機能の大部分がサポートされます。 ただし、構造体とクラスの間には重要な違いもあります。  
@@ -53,7 +53,7 @@ Visual Basic では構造体とクラスの構文が統一されており、結�
   
 - 構造体要素を `Protected` として宣言することはできません。クラス メンバーは宣言できます。  
   
-- 構造体プロシージャがイベントを処理できるのは、それが[共有](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub` プロシージャであり、[AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)を使用する場合のみです。すべてのクラス プロシージャは、[Handles](../../../../visual-basic/language-reference/statements/handles-clause.md) キーワードまたは `AddHandler` ステートメントを使用してイベントを処理できます。 詳細については、「[イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)」を参照してください。  
+- 構造体プロシージャがイベントを処理できるのは、それが[共有](../../../language-reference/modifiers/shared.md) `Sub` プロシージャであり、[AddHandler ステートメント](../../../language-reference/statements/addhandler-statement.md)を使用する場合のみです。すべてのクラス プロシージャは、[Handles](../../../language-reference/statements/handles-clause.md) キーワードまたは `AddHandler` ステートメントを使用してイベントを処理できます。 詳細については、「[イベント](../events/index.md)」を参照してください。  
   
 - 構造体変数の宣言では、配列の初期化子または初期サイズを指定できません。クラス変数の宣言ではできます。  
   
@@ -76,7 +76,7 @@ Visual Basic では構造体とクラスの構文が統一されており、結�
   
 - **変数の割り当て。** ある構造体変数を別の構造体変数に割り当てたり、構造体インスタンスをプロシージャ引数に渡したりすると、すべての変数要素の現在の値が新しい構造体にコピーされます。 あるオブジェクト変数を別のオブジェクト変数に割り当てたり、オブジェクト変数をプロシージャに渡したりすると、参照ポインターだけがコピーされます。  
   
-- **Nothing の割り当て。** 値 [Nothing](../../../../visual-basic/language-reference/nothing.md) を構造体変数に割り当てることができますが、インスタンスはその変数に関連付けられたままになります。 引き続き、メソッドを呼び出してデータ要素にアクセスすることができますが、変数要素は割り当てによって再初期化されています。  
+- **Nothing の割り当て。** 値 [Nothing](../../../language-reference/nothing.md) を構造体変数に割り当てることができますが、インスタンスはその変数に関連付けられたままになります。 引き続き、メソッドを呼び出してデータ要素にアクセスすることができますが、変数要素は割り当てによって再初期化されています。  
   
      対照的に、オブジェクト変数を `Nothing` に設定した場合は、クラス インスタンスとの関連付けが解除され、別のインスタンスを割り当てるまで変数を介してメンバーにアクセスすることはできません。  
   
@@ -88,10 +88,10 @@ Visual Basic では構造体とクラスの構文が統一されており、結�
   
 ## <a name="see-also"></a>関連項目
 
-- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [複合データ型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [構造体](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [構造体とその他のプログラミング要素](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
-- [クラスとオブジェクト](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
+- [データの種類](index.md)
+- [複合データ型](composite-data-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [構造体](structures.md)
+- [トラブルシューティング (データ型)](troubleshooting-data-types.md)
+- [構造体とその他のプログラミング要素](structures-and-other-programming-elements.md)
+- [クラスとオブジェクト](../objects-and-classes/index.md)

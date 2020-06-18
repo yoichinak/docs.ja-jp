@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], numeric
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
-ms.openlocfilehash: 790c680744e2100a40a7cea8b8cef80c68d586bb
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: f30b78a2f0c38f233796e18006c889438dce4c58
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348732"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84396831"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>方法: 符号なしの型を使用する Windows の機能を呼び出す (Visual Basic)
 
@@ -27,7 +27,7 @@ ms.locfileid: "74348732"
 
 ## <a name="to-call-a-windows-function-that-takes-an-unsigned-type"></a>符号なしの型を使用する Windows の関数を呼び出すには
 
-1. [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)を使用して、どのライブラリに関数が含まれるか、そのライブラリ内での名前、呼び出し元シーケンス、および呼び出す際の文字列の変換方法を Visual Basic に指定します。
+1. [Declare ステートメント](../../language-reference/statements/declare-statement.md)を使用して、どのライブラリに関数が含まれるか、そのライブラリ内での名前、呼び出し元シーケンス、および呼び出す際の文字列の変換方法を Visual Basic に指定します。
 
 2. `Declare` ステートメントでは、符号なしの型の各パラメーターで必要に応じて、`UInteger`、`ULong`、`UShort`、または `Byte` を使用します。
 
@@ -80,8 +80,8 @@ ms.locfileid: "74348732"
 
 ## <a name="see-also"></a>関連項目
 
-- [データの種類](../../../visual-basic/language-reference/data-types/index.md)
-- [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [UInteger データ型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)
-- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [チュートリアル: Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
+- [データの種類](../../language-reference/data-types/index.md)
+- [Integer データ型](../../language-reference/data-types/integer-data-type.md)
+- [UInteger データ型](../../language-reference/data-types/uinteger-data-type.md)
+- [Declare ステートメント](../../language-reference/statements/declare-statement.md)
+- [チュートリアル: Windows API の呼び出し](walkthrough-calling-windows-apis.md)
