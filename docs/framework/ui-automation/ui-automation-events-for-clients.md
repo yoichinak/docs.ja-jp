@@ -1,16 +1,17 @@
 ---
 title: クライアントの UI オートメーション イベント
+description: .NET の UI オートメーションクライアントが Microsoft UI オートメーションイベントを使用する方法について説明します。 UI オートメーションを使用すると、クライアントは対象のイベントをサブスクライブできます。
 ms.date: 03/30/2017
 helpviewer_keywords:
 - UI Automation, events for clients
 - events, UI Automation clients
 ms.assetid: b909e388-3f24-4997-b6d4-bd9c35c2dc27
-ms.openlocfilehash: d7105e9211c35e7d6125c3017e8b4b829a25b128
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 84568cf228a30535ec603cdad5bddbfd5697be0a
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79179902"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903741"
 ---
 # <a name="ui-automation-events-for-clients"></a>クライアントの UI オートメーション イベント
 > [!NOTE]
@@ -23,15 +24,15 @@ ms.locfileid: "79179902"
  また、定義されたスコープ内のイベントだけをリッスンできるため、効率性も向上します。 たとえば、クライアントはツリー内のすべての [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素のフォーカス変更イベントをリッスンすることも、1 つの要素とその子孫のフォーカス変更イベントだけをリッスンすることもできます。  
   
 > [!NOTE]
-> あらゆるイベントが、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーによって生成されるわけではないことに注意してください。 たとえば、すべてのプロパティの変更によって、Windows フォームコントロールと Win32 コントロールの標準プロキシ プロバイダによってイベントが発生するわけではありません。  
+> あらゆるイベントが、[!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロバイダーによって生成されるわけではないことに注意してください。 たとえば、すべてのプロパティの変更によって、Windows フォームおよび Win32 コントロールの標準プロキシプロバイダーによってイベントが発生するとは限りません。  
   
- イベントの詳細なビュー[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]については、「 [UI オートメーション イベントの概要](ui-automation-events-overview.md)」を参照してください。  
+ イベントの詳細なビューについ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ては、「 [UI Automation イベントの概要](ui-automation-events-overview.md)」を参照してください。  
   
 <a name="Subscribing_to_Events"></a>
 ## <a name="subscribing-to-events"></a>イベントのサブスクライブ  
  クライアント アプリケーションは特定の種類のイベントをサブスクライブするために、次のいずれかのメソッドを使用してイベント ハンドラーを登録します。  
   
-|Method|イベントの種類|イベント引数の種類|デリゲート型|  
+|メソッド|イベントの種類|イベント引数の種類|デリゲート型|  
 |------------|----------------|--------------------------|-------------------|  
 |<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A>|フォーカスの変更|<xref:System.Windows.Automation.AutomationFocusChangedEventArgs>|<xref:System.Windows.Automation.AutomationFocusChangedEventHandler>|  
 |<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A>|プロパティの変更|<xref:System.Windows.Automation.AutomationPropertyChangedEventArgs>|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|  
@@ -48,18 +49,18 @@ ms.locfileid: "79179902"
   
  シャットダウン時、またはアプリケーションで [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントに意味がなくなった場合、UI オートメーション クライアントが次のいずれかのメソッドを呼び出す必要があります。  
   
-|Method|説明|  
+|メソッド|説明|  
 |------------|-----------------|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationEventHandler%2A> を使用して登録されたイベント ハンドラーの登録を解除します。|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationFocusChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationFocusChangedEventHandler%2A> を使用して登録されたイベント ハンドラーの登録を解除します。|  
 |<xref:System.Windows.Automation.Automation.RemoveAutomationPropertyChangedEventHandler%2A>|<xref:System.Windows.Automation.Automation.AddAutomationPropertyChangedEventHandler%2A> を使用して登録されたイベント ハンドラーの登録を解除します。|  
 |<xref:System.Windows.Automation.Automation.RemoveAllEventHandlers%2A>|登録済みのすべてのイベント ハンドラーの登録を解除します。|  
   
- 例のコードについては、「 [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)」を参照してください。  
+ コード例については、「 [UI オートメーションイベントのサブスクライブ](subscribe-to-ui-automation-events.md)」を参照してください。  
   
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>こちらもご覧ください
 
 - [UI オートメーション イベントのサブスクライブ](subscribe-to-ui-automation-events.md)
 - [UI オートメーション イベントの概要](ui-automation-events-overview.md)
 - [UI オートメーション プロパティの概要](ui-automation-properties-overview.md)
-- [トラックフォーカスのサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)
+- [TrackFocus サンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/FocusTracker)

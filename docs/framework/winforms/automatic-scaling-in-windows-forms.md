@@ -1,16 +1,17 @@
 ---
 title: 自動スケーリング
+description: 自動スケーリングによって、1台のコンピューター上で設計されたフォームとそのコントロールが、別のコンピューターで適切に表示されるしくみについて説明します。
 ms.date: 06/15/2017
 helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: 96dbbb5ed20027e25f1bde89748710766ec06506
-ms.sourcegitcommit: de17a7a0a37042f0d4406f5ae5393531caeb25ba
+ms.openlocfilehash: 93d6b9097c85d7fa7ca88b405ee3d3654e51304b
+ms.sourcegitcommit: 3824ff187947572b274b9715b60c11269335c181
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76732376"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84903689"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows フォームでの自動スケーリング
 
@@ -32,21 +33,21 @@ ms.locfileid: "76732376"
 
 1. デザイン時は、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> プロパティ (これは現在非推奨とされます) が、開発者のマシンの既定のシステム フォントの高さと幅に設定されていました。
 
-2. 実行時は、ユーザーのマシンの既定のシステム フォントが <xref:System.Windows.Forms.Control.Font%2A> クラスの <xref:System.Windows.Forms.Form> プロパティを初期化するために使用されていました。
+2. 実行時は、ユーザーのマシンの既定のシステム フォントが <xref:System.Windows.Forms.Form> クラスの <xref:System.Windows.Forms.Control.Font%2A> プロパティを初期化するために使用されていました。
 
 3. フォームを表示する前に、フォームのスケーリングのため、<xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> メソッドが呼び出されました。 このメソッドは、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> と <xref:System.Windows.Forms.Control.Font%2A> から相対スケール サイズを計算し、<xref:System.Windows.Forms.Control.Scale%2A> メソッドを呼び出してフォームとその子を実際にスケーリングしました。
 
-4. <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> への後続の呼び出しがフォームを段階的にサイズ変更することがないよう、<xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> の値が更新されました。
+4. <xref:System.Windows.Forms.Form.ApplyAutoScaling%2A> への後続の呼び出しがフォームを段階的にサイズ変更することがないよう、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> の値が更新されました。
 
 このメカニズムは、ほとんどの目的では十分ですが、次の制限がありました。
 
-- <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> プロパティは、ベースラインのフォントサイズを整数値として表すため、複数の解像度でフォームを循環すると、丸めエラーが発生します。
+- プロパティは <xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A> ベースラインのフォントサイズを整数値として表すため、複数の解像度によってフォームが循環しているときに、丸めエラーが発生します。
 
 - 自動スケーリングは <xref:System.Windows.Forms.Form> クラスでのみ実装されており、<xref:System.Windows.Forms.ContainerControl> クラスでは実装されていませんでした。 その結果、ユーザー コントロールは、それがフォームと同じ解像度で設計されていて、かつデザイン時にそのユーザー コントロールがそのフォームに配置された場合にのみ、正しくスケーリングされるということになっていました。
 
 - フォームとその子コントロールの設計作業を複数の開発者によって並行して進めることができたのは、マシンの解像度が同じ場合に限られていました。 同じように、フォームの継承は、親フォームに関連付けられている解像度に依存していました。
 
-- <xref:System.Windows.Forms.FlowLayoutPanel> や <xref:System.Windows.Forms.TableLayoutPanel>などの .NET Framework バージョン2.0 で導入された新しいレイアウトマネージャーと互換性がありません。
+- .NET Framework バージョン 2.0 (やなど) で導入された新しいレイアウトマネージャーと互換性がありません <xref:System.Windows.Forms.FlowLayoutPanel> <xref:System.Windows.Forms.TableLayoutPanel> 。
 
 - .NET Compact Framework との互換性を確保するために必要なディスプレイの解像度に直接基づくスケーリングをサポートしていませんでした。
 
@@ -84,7 +85,7 @@ Windows フォームは、次のロジックを使用して、フォームとそ
 
 4. また、<xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A> は次のような状況でも自動的に呼び出されます。
 
-    - スケーリング モードが <xref:System.Windows.Forms.Control.OnFontChanged%2A> の場合の <xref:System.Windows.Forms.AutoScaleMode.Font> イベントへの応答。
+    - スケーリング モードが <xref:System.Windows.Forms.AutoScaleMode.Font> の場合の <xref:System.Windows.Forms.Control.OnFontChanged%2A> イベントへの応答。
 
     - コンテナー コントロールのレイアウトが再開され、<xref:System.Windows.Forms.ContainerControl.AutoScaleDimensions%2A> プロパティまたは <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A> プロパティで変更が検出されたとき。
 
@@ -98,7 +99,7 @@ Windows フォームは、次のロジックを使用して、フォームとそ
 
     - <xref:System.Windows.Forms.Control.ScaleControl%2A> メソッドをオーバーライドして、現在のコントロールのスケーリングのロジックを変更することができます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>こちらもご覧ください
 
 - <xref:System.Windows.Forms.ContainerControl.AutoScaleMode%2A>
 - <xref:System.Windows.Forms.Control.Scale%2A>
