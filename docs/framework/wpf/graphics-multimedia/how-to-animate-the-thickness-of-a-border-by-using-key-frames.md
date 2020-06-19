@@ -1,5 +1,5 @@
 ---
-title: '方法 : キー フレームを使用して境界線の太さをアニメーション化する'
+title: '方法: キー フレームを使用して境界線の太さをアニメーション化する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], border thickness with key frames
@@ -8,22 +8,22 @@ helpviewer_keywords:
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
 ms.openlocfilehash: 884b62e88c347449ae39caa9c028d09db39b9f4b
 ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2020
 ms.locfileid: "80344694"
 ---
-# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>方法 : キー フレームを使用して境界線の太さをアニメーション化する
-この例では、 のプロパティをアニメーション<xref:System.Windows.Controls.Control.BorderThickness%2A>化する方法<xref:System.Windows.Controls.Border>を示します。  
+# <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>方法: キー フレームを使用して境界線の太さをアニメーション化する
+この例では、<xref:System.Windows.Controls.Border> の <xref:System.Windows.Controls.Control.BorderThickness%2A> プロパティをアニメーション化する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames>クラスを使用して、<xref:System.Windows.Controls.Control.BorderThickness%2A>のプロパティを<xref:System.Windows.Controls.Border>アニメーション化します。 このアニメーションは、次の方法で 3 つのキー フレームを使用します。  
+ 次の例では、<xref:System.Windows.Media.Animation.ThicknessAnimationUsingKeyFrames> クラスを使用して、<xref:System.Windows.Controls.Border> の <xref:System.Windows.Controls.Control.BorderThickness%2A> プロパティをアニメーション化します。 このアニメーションは、次の方法で 3 つのキー フレームを使用します。  
   
-1. 最初の半秒の間に、クラスのインスタンス<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>を使用して、徐々に境界線の厚さを増やします。 この例では<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame>、値間のスムーズな線形増加を作成するために使用します。  
+1. 最初の 0.5 秒間は、<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> クラスのインスタンスを使用して、境界線の太さを徐々に太くします。 この例では、<xref:System.Windows.Media.Animation.LinearThicknessKeyFrame> を使用して、値と値の間に滑らかな線形増加を作成します。  
   
-2. 次の半分の秒の終わりに、クラスのインスタンスを<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>使用して、境界線の厚さを突然増加させます。 派生したような離散的な<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame>キー フレームは、値の間に突然ジャンプを作成します。  
+2. 次の 0.5 秒間の終わりに、<xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> クラスのインスタンスを使用して、境界線の太さを突然太くします。 <xref:System.Windows.Media.Animation.DiscreteThicknessKeyFrame> から派生するような不連続キー フレームによって、ある値から次の値への突然の変化が作成されます。つまり、アニメーションの動きがぎくしゃくします。  
   
-3. 最後の 2 秒間に、クラスのインスタンス<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>を使用して境界線の厚さを小さくします。 スプライン キー フレームは、<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame>プロパティの値<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A>に従って値間の可変遷移を作成します。 このキー フレームでは、アニメーションはゆっくりと始まりますが、時間セグメントの終点に向かって急激に速くなります。  
+3. 最後の 2 秒間は、<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> クラスのインスタンスを使用して、境界線の太さを細くします。 <xref:System.Windows.Media.Animation.SplineThicknessKeyFrame> から派生するようなスプライン キー フレームは、<xref:System.Windows.Media.Animation.SplineThicknessKeyFrame.KeySpline%2A> プロパティの値に従って、ある値から次の値への可変遷移を作成します。 このキー フレームでは、アニメーションはゆっくりと始まりますが、時間セグメントの終点に向かって急激に速くなります。  
   
  [!code-xaml[keyframes_snip#ThicknessAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/ThicknessAnimationUsingKeyFramesExample.xaml#thicknessanimationusingkeyframeswholepage)]  
   

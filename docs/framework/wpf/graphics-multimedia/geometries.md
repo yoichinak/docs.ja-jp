@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 47ad531d-a4da-4e99-b12e-1de710c32493
 ms.openlocfilehash: 0d060f8b80f88af7e5419276bdec0fcfecc466c6
 ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80112272"
 ---
 # <a name="geometries"></a>ジオメトリ
-<xref:System.Windows.Media.Geometry>は、2D グラフィックス、ヒット テスト オブジェクト、およびクリッピング領域の定義に使用される、多目的なクラスです。  
+<xref:System.Windows.Media.Geometry> は、2D グラフィックスのレンダリング、オブジェクトのヒットテスト、およびクリッピング領域の定義に使用される汎用性の高いクラスです  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [パス マークアップ構文](path-markup-syntax.md)  
  [ジオメトリの概要](geometry-overview.md)  
- [ハウツートピック](geometries-how-to-topics.md)  
+ [方法トピック](geometries-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 

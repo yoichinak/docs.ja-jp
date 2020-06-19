@@ -1,5 +1,6 @@
 ---
-title: 接続クラス (System.Net)
+title: Connection クラス (System.Net)
+description: .NET の Connection クラスについて説明します。 このクラスは、サーバーの応答、キューの要求、およびパイプライン要求を解析します。 System.NET 名前空間にあります。
 ms.date: 05/01/2017
 ms.technology: dotnet-networking
 topic_type:
@@ -11,16 +12,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-ms.openlocfilehash: dc0a594f7ae2bb9fc1883ec7ef672805bbc08778
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: cb28724ed782fc5395dc74e9c59249ebdea44ddf
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79156182"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989823"
 ---
 # <a name="connection-class"></a>Connection クラス
 
-この`Connection`クラスは、サーバーの応答、キュー要求、およびパイプライン要求を解析します。
+クラスは、 `Connection` サーバーの応答、キューの要求、およびパイプライン要求を解析します。
 
 ## <a name="syntax"></a>構文
   
@@ -29,14 +30,14 @@ internal class Connection : PooledStream
 ```
 
 > [!WARNING]
-> クラス`Connection`は内部クラスであり、コード内で直接使用するためのものではありません。
+> `Connection`クラスは内部であり、コードで直接使用するためのものではありません。
 >
-> マイクロソフトでは、どのような状況でも、運用環境のアプリケーションでこのクラスを使用することはできません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのクラスの使用はサポートしていません。
 
 ## <a name="requirements"></a>必要条件
 
-**名前空間:**<xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (システム.dll 内)
+**アセンブリ:** システム (System.dll)
 
-**.NET フレームワークのバージョン:** 2.0 以降で利用可能。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: 2520a7684b8710abd949543e3f17f77d3c631d22
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 9cbd3a5b8685178259b76d97919ea097ae72f6ae
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352479"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401967"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
 このヘルプ ページでは、Visual Basic でカルチャ情報を使用して、文字列の変換と比較を実行する方法について説明します。  
@@ -25,7 +25,7 @@ ms.locfileid: "74352479"
 ## <a name="culture-sensitive-functions"></a>カルチャに依存する関数  
  Visual Basic のすべての文字列変換関数 (`Str` および `Val` 関数を除く) は、アプリケーションのカルチャ情報を使用して、変換と比較がアプリケーションのユーザーのカルチャに適していることを確認します。  
   
- カルチャ設定が異なるコンピューターで実行されるアプリケーションで文字列変換関数を正しく使用するには、特定のカルチャ設定を使用する関数と、現在のカルチャ設定を使用する関数を理解することが重要です。 既定では、アプリケーションのカルチャ設定は、オペレーティング システムのカルチャ設定から継承されることに注意してください。 詳細については、<xref:Microsoft.VisualBasic.Strings.Asc%2A>、<xref:Microsoft.VisualBasic.Strings.AscW%2A>、<xref:Microsoft.VisualBasic.Strings.Chr%2A>、<xref:Microsoft.VisualBasic.Strings.ChrW%2A>、<xref:Microsoft.VisualBasic.Strings.Format%2A>、<xref:Microsoft.VisualBasic.Conversion.Hex%2A>、<xref:Microsoft.VisualBasic.Conversion.Oct%2A> に関する記事、および「[データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)」をご覧ください。  
+ カルチャ設定が異なるコンピューターで実行されるアプリケーションで文字列変換関数を正しく使用するには、特定のカルチャ設定を使用する関数と、現在のカルチャ設定を使用する関数を理解することが重要です。 既定では、アプリケーションのカルチャ設定は、オペレーティング システムのカルチャ設定から継承されることに注意してください。 詳細については、<xref:Microsoft.VisualBasic.Strings.Asc%2A>、<xref:Microsoft.VisualBasic.Strings.AscW%2A>、<xref:Microsoft.VisualBasic.Strings.Chr%2A>、<xref:Microsoft.VisualBasic.Strings.ChrW%2A>、<xref:Microsoft.VisualBasic.Strings.Format%2A>、<xref:Microsoft.VisualBasic.Conversion.Hex%2A>、<xref:Microsoft.VisualBasic.Conversion.Oct%2A> に関する記事、および「[データ型変換関数](../../../language-reference/functions/type-conversion-functions.md)」をご覧ください。  
   
  `Str` (数値を文字列に変換) および `Val` (文字列を数値に変換) 関数では、文字列と数値間の変換時にアプリケーションのカルチャ情報を使用しません。 代わりに、ピリオド (.) だけを有効な小数点として認識します。 これらの関数の、カルチャに対応する類似関数は次のとおりです。  
   
@@ -81,5 +81,5 @@ ms.locfileid: "74352479"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Globalization.CultureInfo>
-- [Visual Basic の文字列の概要](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
-- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [Visual Basic の文字列の概要](introduction-to-strings.md)
+- [データ型変換関数](../../../language-reference/functions/type-conversion-functions.md)

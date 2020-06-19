@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
 ms.openlocfilehash: 01b8dc50860757b0eddee477219db1e19d27f40f
 ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/11/2020
 ms.locfileid: "77124404"
 ---
 # <a name="control-styles-and-templates"></a>コントロールのスタイルとテンプレート
-Windows Presentation Foundation (WPF) のコントロールには、そのコントロールのビジュアルツリーを含む <xref:System.Windows.Controls.ControlTemplate> があります。 コントロールの構造と外観を変更するには、コントロールの <xref:System.Windows.Controls.ControlTemplate> を変更します。 コントロールのビジュアルツリーの一部だけを置換することはできません。コントロールのビジュアルツリーを変更するには、コントロールの [<xref:System.Windows.Controls.Control.Template%2A>] プロパティを新しい完全な <xref:System.Windows.Controls.ControlTemplate>に設定する必要があります。  
+Windows Presentation Foundation (WPF) のコントロールには、そのコントロールのビジュアル ツリーを含む <xref:System.Windows.Controls.ControlTemplate> があります。 コントロールの構造と外観を変更するには、そのコントロールの <xref:System.Windows.Controls.ControlTemplate> を変更します。 コントロールのビジュアル ツリーの一部のみを置き換える方法はありません。コントロールのビジュアル ツリーを変更するには、コントロールの <xref:System.Windows.Controls.Control.Template%2A> プロパティを新しい完全な <xref:System.Windows.Controls.ControlTemplate> に設定する必要があります。  
   
  デスクトップ テーマにより、使用するリソース ディクショナリが決まります。 デスクトップ テーマのリソース ディクショナリを取得するには、「[既定の WPF テーマ](https://github.com/Microsoft/WPF-Samples/tree/master/Graphics/2DTransforms)」を参照してください。  
   
@@ -67,7 +67,7 @@ Windows Presentation Foundation (WPF) のコントロールには、そのコン
  [TreeView のスタイルとテンプレート](treeview-styles-and-templates.md)  
  [ウィンドウのスタイルとテンプレート](window-styles-and-templates.md)  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
  <xref:System.Windows.Controls>  
   
  <xref:System.Windows.Controls.ControlTemplate>  

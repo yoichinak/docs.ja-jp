@@ -18,17 +18,17 @@ helpviewer_keywords:
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
 ms.openlocfilehash: 26956b8ae692d6092a1c81643b94d05e297ef130
 ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80111908"
 ---
 # <a name="transformations"></a>変換
-変換は、オブジェクトの回転、拡大/縮小、移動、<xref:System.Windows.FrameworkElement>または傾斜に使用されます。  
+変換は、<xref:System.Windows.FrameworkElement> オブジェクトの回転、拡大縮小、平行移動、傾斜を行うために使用します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [変換の概要](transforms-overview.md)  
- [ハウツートピック](transformations-how-to-topics.md)  
+ [方法トピック](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -8,19 +8,19 @@ helpviewer_keywords:
 ms.assetid: adca9cb1-066b-4de8-abbb-6b4007579ee7
 ms.openlocfilehash: 0d229b0a714cc53459943fae751ab4d4f787d7d8
 ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80112246"
 ---
 # <a name="how-to-animate-a-3d-rotation-using-quaternions"></a>方法: 四元数を使用して 3D 回転をアニメーション化する
-この例では、四元数を使用して 3D オブジェクトの回転をアニメートする方法を示します。  
+この例では、四元数を使用して 3D オブジェクトの回転をアニメーション化する方法を示します。  
   
- 次のコードは、<xref:System.Windows.Media.Media3D.QuaternionRotation3D>の<xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A>プロパティの値として使用されます<xref:System.Windows.Media.Media3D.RotateTransform3D>。  
+ 次のコードは、<xref:System.Windows.Media.Media3D.RotateTransform3D> の <xref:System.Windows.Media.Media3D.RotateTransform3D.Rotation%2A> プロパティの値として使用される <xref:System.Windows.Media.Media3D.QuaternionRotation3D> を示しています。  
   
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationExample.xaml#quaternionanimationexampleinline1)]  
   
- これは<xref:System.Windows.Media.Media3D.QuaternionRotation3D>、以下のコード<xref:System.Windows.Media.Animation.QuaternionAnimation>を使用<xref:System.Windows.Media.Animation.Storyboard>して、内のでアニメーション化されます。  
+ この <xref:System.Windows.Media.Media3D.QuaternionRotation3D> は、次のコードを使用して <xref:System.Windows.Media.Animation.Storyboard> 内の <xref:System.Windows.Media.Animation.QuaternionAnimation> でアニメーション化されます。  
   
  [!code-xaml[Animation3DGallery_snip#QuaternionAnimationExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/QuaternionAnimationExample.xaml#quaternionanimationexampleinline2)]  
   
@@ -36,4 +36,4 @@ ms.locfileid: "80112246"
 - [3D グラフィックスの概要](3-d-graphics-overview.md)
 - [変換の概要](transforms-overview.md)
 - [ストーリーボードを使用して 3D 回転をアニメーション化する](how-to-animate-a-3-d-rotation-using-storyboards.md)
-- [回転 3D アニメーションを使用して 3D 回転をアニメーション化する](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)
+- [Rotation3DAnimation を使用して 3D 回転をアニメーション化する](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)

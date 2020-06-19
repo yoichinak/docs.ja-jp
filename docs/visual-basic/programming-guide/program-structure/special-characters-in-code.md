@@ -30,18 +30,18 @@ helpviewer_keywords:
 - exclamation point operator (!)
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
-ms.openlocfilehash: f4ab35b56d48ae86bdb024ffea27735b39decdc2
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c9b170ed812474cdeee100f1dc388d5c7e85f2cc
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347268"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84400592"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>コード内の特殊文字 (Visual Basic)
 コードで特殊文字 (アルファベットまたは数字以外の文字) を使用することが必要な場合があります。 Visual Basic の文字セットに含まれる区切り文字と特殊文字には、プログラム テキストの整理から、コンパイラやコンパイル済みプログラムが実行するタスクの定義まで、さまざまな用途があります。 実行するオペレーションを指定するのには使用されません。  
   
 ## <a name="parentheses"></a>かっこ  
- かっこは、`Sub` や `Function` などのプロシージャを定義するときに使用します。 プロシージャのすべての引数リストをかっこで囲む必要があります。 特に、複雑な式で演算子の既定の優先順位をオーバーライドするために、変数や引数を論理グループに配置する際にもかっこを使用します。 次に例を示します。  
+ かっこは、`Sub` や `Function` などのプロシージャを定義するときに使用します。 プロシージャのすべての引数リストをかっこで囲む必要があります。 特に、複雑な式で演算子の既定の優先順位をオーバーライドするために、変数や引数を論理グループに配置する際にもかっこを使用します。 次の例を使って説明します。  
   
  [!code-vb[VbVbcnConventions#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#11)]  
   
@@ -52,9 +52,9 @@ ms.locfileid: "74347268"
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   
- 詳細については、[コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)」をご覧ください。  
+ 詳細については、「[方法:コード内でステートメントを分割および連結する](how-to-break-and-combine-statements-in-code.md)」をご覧ください。  
   
- コロン (`:`) 文字は、ステートメント ラベルの識別にも使用されます。 詳細については、[ステートメントにラベルを付ける](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)」をご覧ください。  
+ コロン (`:`) 文字は、ステートメント ラベルの識別にも使用されます。 詳細については、「[方法:ステートメントにラベルを付ける](how-to-label-statements.md)」をご覧ください。  
   
 ## <a name="concatenation"></a>連結  
  `&` 演算子は、"*連結*" (文字列の結合) に使用します。 数値を加算する `+` 演算子と混同しないでください。 数値を操作するときに `+` 演算子を使用して連結すると、間違った結果を得る可能性があります。 次に例を示します。  
@@ -67,7 +67,7 @@ ms.locfileid: "74347268"
  型のメンバーにアクセスするには、型名とメンバー名の間にドット (`.`) または感嘆符 (`!`) 演算子を使用します。  
   
 ### <a name="dot--operator"></a>ドット (.) 演算子  
- `.` 演算子は、クラス、構造体、インターフェイス、または列挙型でメンバー アクセス演算子として使用します。 メンバーには、フィールド、プロパティ、イベント、またはメソッドを指定できます。 次に例を示します。  
+ `.` 演算子は、クラス、構造体、インターフェイス、または列挙型でメンバー アクセス演算子として使用します。 メンバーには、フィールド、プロパティ、イベント、またはメソッドを指定できます。 次の例を使って説明します。  
   
  [!code-vb[VbVbcnConventions#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#14)]  
   
@@ -89,5 +89,5 @@ ms.locfileid: "74347268"
   
 ## <a name="see-also"></a>関連項目
 
-- [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
-- [型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
+- [プログラム構造とコード規則](program-structure-and-code-conventions.md)
+- [型文字](../language-features/data-types/type-characters.md)

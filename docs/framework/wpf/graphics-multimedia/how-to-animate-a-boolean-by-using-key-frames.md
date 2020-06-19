@@ -1,5 +1,5 @@
 ---
-title: '方法 : キー フレームを使用してブール値をアニメーション化する'
+title: '方法: キー フレームを使用してブール値をアニメーション化する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: 4b0fac96-6231-4fcf-9775-4dd673ddc785
 ms.openlocfilehash: 35704996dcf21fe463169dc13572941bcd8fbad1
 ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2020
 ms.locfileid: "80344935"
 ---
-# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>方法 : キー フレームを使用してブール値をアニメーション化する
-この例では、キー フレームを使用してコントロールの Boolean<xref:System.Windows.Controls.Button>プロパティ値をアニメーション化する方法を示します。  
+# <a name="how-to-animate-a-boolean-by-using-key-frames"></a>方法: キー フレームを使用してブール値をアニメーション化する
+この例では、キー フレームを使用して、<xref:System.Windows.Controls.Button> コントロールの Boolean プロパティ値をアニメーション化する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames>クラスを使用してコントロールの<xref:System.Windows.UIElement.IsEnabled%2A>プロパティをアニメーション<xref:System.Windows.Controls.Button>化します。 この例のすべてのキー フレームでは、クラスのインスタンスを<xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame>使用します。 値の間に<xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame>突然ジャンプを作成するような離散的なキー フレーム、つまりアニメーションの動きがぎくしゃくします。  
+ 次の例では、<xref:System.Windows.Media.Animation.BooleanAnimationUsingKeyFrames> クラスを使用して、<xref:System.Windows.Controls.Button> コントロールの <xref:System.Windows.UIElement.IsEnabled%2A> プロパティをアニメーション化します。 この例のすべてのキー フレームでは、<xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> クラスのインスタンスが使用されます。 <xref:System.Windows.Media.Animation.DiscreteBooleanKeyFrame> のような不連続キー フレームによって、ある値から次の値への突然の変化が作成されます。つまり、アニメーションの動きがぎくしゃくします。  
   
  [!code-csharp[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/BooleanAnimationUsingKeyFramesExample.cs#booleananimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#BooleanAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/booleananimationusingkeyframesexample.vb#booleananimationusingkeyframeswholepage)]

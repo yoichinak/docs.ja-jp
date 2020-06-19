@@ -7,7 +7,7 @@ helpviewer_keywords:
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
 ms.openlocfilehash: 7f957a6e4f2dfea3f744365d2d065442d3b85183
 ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 11/22/2019
 ms.locfileid: "74350925"
@@ -31,7 +31,7 @@ ms.locfileid: "74350925"
   
  [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [Visual Basic の論理演算子とビット処理演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [Visual Basic の論理演算子とビット演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

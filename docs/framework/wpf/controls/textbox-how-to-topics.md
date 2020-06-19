@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
 ms.openlocfilehash: 82da07620135224b5f7353f2acce087d939c1855
 ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/11/2020
 ms.locfileid: "77124235"
@@ -32,7 +32,7 @@ ms.locfileid: "77124235"
  [コンテキスト メニューでスペル チェックを使用する](how-to-use-spell-checking-with-a-context-menu.md)  
  [TextBox へのウォーターマークの追加](how-to-add-a-watermark-to-a-textbox.md)  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -41,7 +41,7 @@ ms.locfileid: "77124235"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [WPF Controls Gallery Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox のスタイルとテンプレート](textbox-styles-and-templates.md)

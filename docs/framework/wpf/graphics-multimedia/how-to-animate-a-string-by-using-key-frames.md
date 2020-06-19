@@ -1,5 +1,5 @@
 ---
-title: '方法 : キー フレームを使用して文字列をアニメーション化する'
+title: '方法: キー フレームを使用して文字列をアニメーション化する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - animation [WPF], strings with key frames
@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
 ms.openlocfilehash: c954806ca901bbfc3ab6d4bbcc237cd0e404f154
 ms.sourcegitcommit: 59e36e65ac81cdd094a5a84617625b2a0ff3506e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/27/2020
 ms.locfileid: "80344670"
 ---
-# <a name="how-to-animate-a-string-by-using-key-frames"></a>方法 : キー フレームを使用して文字列をアニメーション化する
-この例では、キー フレームを使用して、コントロールの<xref:System.Windows.Controls.ContentControl.Content%2A>プロパティである文字列を<xref:System.Windows.Controls.Button>アニメーション化する方法を示します。  
+# <a name="how-to-animate-a-string-by-using-key-frames"></a>方法: キー フレームを使用して文字列をアニメーション化する
+この例では、キー フレームを使用して、文字列をアニメーション化する方法を示します。この例で使用する文字列は、<xref:System.Windows.Controls.Button> コントロールの <xref:System.Windows.Controls.ContentControl.Content%2A> プロパティです。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>クラスを使用して、<xref:System.Windows.Controls.ContentControl.Content%2A>のプロパティを<xref:System.Windows.Controls.Button>アニメーション化します。  
+ 次の例では、<xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames> クラスを使用して、<xref:System.Windows.Controls.Button> の <xref:System.Windows.Controls.ContentControl.Content%2A> プロパティをアニメーション化します。  
   
- この例のすべてのキー フレームは<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>、キー フレームを使用して作成される文字列アニメーションは個別のキー フレームしか使用できないため、クラスのインスタンスを使用します。 値の間に<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>突然ジャンプを作成するような離散的なキー フレーム、つまりアニメーションの変更はすばやく発生し、微妙ではありません。  
+ この例のすべてのキー フレームは、<xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> クラスのインスタンスを使用します。これは、キー フレームを使用して作成される文字列アニメーションでは、不連続キー フレームしか使用できないためです。 <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame> のような不連続キー フレームは、ある値から次の値への突然の変化を作成します。つまり、アニメーションの変化は急速に行われ、滑らかではありません。  
   
  [!code-xaml[keyframes_snip#StringAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/StringAnimationUsingKeyFramesExample.xaml#stringanimationusingkeyframeswholepage)]  
   

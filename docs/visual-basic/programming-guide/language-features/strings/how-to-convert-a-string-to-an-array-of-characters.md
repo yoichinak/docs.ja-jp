@@ -8,12 +8,12 @@ helpviewer_keywords:
 - strings [Visual Basic], converting to arrays
 - string conversion [Visual Basic], arrays
 ms.assetid: 1b54b686-ab29-413b-adce-6bd5422376eb
-ms.openlocfilehash: d2f7128f97e576d37216d3aa9736921f13f77004
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: eca8cd7be8da1f6149dadf1e9edeab5e5225ab9f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352446"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84360671"
 ---
 # <a name="how-to-convert-a-string-to-an-array-of-characters-in-visual-basic"></a>方法: Visual Basic で文字列を文字の配列に変換する
 文字列を解析する場合など、文字列の文字と文字列内でのそれらの文字の位置に関するデータがあると便利な場合があります。 この例では、文字列の <xref:System.String.ToCharArray%2A> メソッドを呼び出して、文字列の文字の配列を取得する方法を示します。  
@@ -32,6 +32,6 @@ ms.locfileid: "74352446"
 
 - <xref:System.String.Chars%2A>
 - <xref:System.Globalization.StringInfo?displayProperty=nameWithType>
-- [方法: 文字列の文字にアクセスする](../../../../visual-basic/programming-guide/language-features/strings/how-to-access-characters-in-strings.md)
-- [Visual Basic で、文字列型とその他のデータ型との変換を行う](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
-- [文字列](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [方法: 文字列の文字にアクセスする](how-to-access-characters-in-strings.md)
+- [Visual Basic で、文字列型とその他のデータ型との変換を行う](converting-between-strings-and-other-data-types.md)
+- [文字列](index.md)

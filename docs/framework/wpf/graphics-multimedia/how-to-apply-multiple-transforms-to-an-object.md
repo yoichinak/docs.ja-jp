@@ -1,5 +1,5 @@
 ---
-title: '方法 : オブジェクトに複数の変換を適用する'
+title: '方法: オブジェクトに複数の変換を適用する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
 ms.openlocfilehash: 3ef11104b2a4fc775d29d2a388c9a70a69a3f10f
 ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80112116"
 ---
-# <a name="how-to-apply-multiple-transforms-to-an-object"></a>方法 : オブジェクトに複数の変換を適用する
-この例では、 を使用<xref:System.Windows.Media.TransformGroup>して 2 つ<xref:System.Windows.Media.Transform>以上のオブジェクトを<xref:System.Windows.Media.Transform>1 つの複合にグループ化する方法を示します。  
+# <a name="how-to-apply-multiple-transforms-to-an-object"></a>方法: オブジェクトに複数の変換を適用する
+この例では、<xref:System.Windows.Media.TransformGroup> を使用して、2 つ以上の <xref:System.Windows.Media.Transform> オブジェクトを 1 つの複合 <xref:System.Windows.Media.Transform> にグループ化する方法を示します。  
   
 ## <a name="example"></a>例  
- 次の例では、<xref:System.Windows.Media.TransformGroup>を使用<xref:System.Windows.Media.ScaleTransform>して<xref:System.Windows.Media.RotateTransform>a<xref:System.Windows.Controls.Button>と a を に適用します。  
+ 次の例では、<xref:System.Windows.Media.TransformGroup> を使用して、<xref:System.Windows.Media.ScaleTransform> と <xref:System.Windows.Media.RotateTransform> を <xref:System.Windows.Controls.Button> に適用します。  
   
  [!code-xaml[Transforms_snip#MultipleTransformExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Transforms_snip/CS/MultipleTransformExample.xaml#multipletransformexamplewholepage)]  
   

@@ -1,5 +1,6 @@
 ---
-title: 接続.m_WriteListフィールド
+title: 接続. m_WriteList フィールド
+description: .NET の m_WriteList フィールドに関する情報を取得します。 この ArrayList フィールドには、HTTP 経由で送信するためにキューに登録されている HttpWebRequest オブジェクトがあります。
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
-ms.openlocfilehash: 6c60831ddf23ce8ac9afcf244383d24732c3ef8b
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: a627cb062036e3ab098c2d6e97f9a77ebfa75a33
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155838"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989592"
 ---
-# <a name="connectionm_writelist-field"></a>接続.m\_書き込みリスト フィールド
+# <a name="connectionm_writelist-field"></a>接続. m \_ writelist フィールド
 
-`Connection.m_WriteList`は、HTTP<xref:System.Net.HttpWebRequest>経由で<xref:System.Collections.ArrayList>送信されるキューに入れられます。
+`Connection.m_WriteList`は、 <xref:System.Collections.ArrayList> <xref:System.Net.HttpWebRequest> HTTP 経由で送信されるようにキューに登録されているオブジェクトのです。
 
 ## <a name="syntax"></a>構文
   
@@ -28,14 +29,14 @@ private ArrayList m_WriteList
 ```
 
 > [!WARNING]
-> フィールド`Connection.m_WriteList`はプライベートであり、コード内で直接使用するためのものではありません。
+> `Connection.m_WriteList`フィールドはプライベートであり、コードで直接使用するためのものではありません。
 >
-> マイクロソフトは、どのような状況においても、本稼動アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
 ## <a name="requirements"></a>必要条件
 
-**名前空間:**<xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (システム.dll 内)
+**アセンブリ:** システム (System.dll)
 
-**.NET フレームワークのバージョン:** 2.0 以降で利用可能。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

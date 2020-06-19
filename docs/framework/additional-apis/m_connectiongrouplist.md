@@ -1,5 +1,6 @@
 ---
-title: サービスポイント.m_ConnectionGroupListフィールド
+title: ServicePoint. m_ConnectionGroupList フィールド
+description: ServicePoint. m_ConnectionGroupList フィールドについて説明します。これは、各接続グループのハッシュテーブルであり、それぞれが .NET の ServicePoint URI の接続を保持します。
 ms.date: 05/01/2017
 topic_type:
 - apiref
@@ -10,16 +11,16 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
-ms.openlocfilehash: 2b1b46085ed035b67fd01447727b406fe3895980
-ms.sourcegitcommit: 7588136e355e10cbc2582f389c90c127363c02a5
+ms.openlocfilehash: 0ebfeb782147f21abfde536b8053fa15b1e1a602
+ms.sourcegitcommit: 45c8eed045779b70a47b23169897459d0323dc89
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2020
-ms.locfileid: "79155896"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84989708"
 ---
-# <a name="servicepointm_connectiongrouplist-field"></a>\_接続グループ リスト フィールド
+# <a name="servicepointm_connectiongrouplist-field"></a>ServicePoint. m \_ connectiongrouplist フィールド
 
-`ServicePoint.m_ConnectionGroupList`は接続<xref:System.Collections.Hashtable>グループの 1 で、それぞれが 's URI の接続を<xref:System.Net.ServicePoint>保持しています。
+`ServicePoint.m_ConnectionGroupList`は、 <xref:System.Collections.Hashtable> それぞれの URI の接続を保持する接続グループのです <xref:System.Net.ServicePoint> 。
 
 ## <a name="syntax"></a>構文
   
@@ -28,14 +29,14 @@ private Hashtable m_ConnectionGroupList
 ```
 
 > [!WARNING]
-> フィールド`ServicePoint.m_ConnectionGroupList`はプライベートであり、コード内で直接使用するためのものではありません。
+> `ServicePoint.m_ConnectionGroupList`フィールドはプライベートであり、コードで直接使用するためのものではありません。
 >
-> マイクロソフトは、どのような状況においても、本稼動アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft では、どのような状況でも、実稼働アプリケーションでのこのフィールドの使用はサポートしていません。
 
 ## <a name="requirements"></a>必要条件
 
-**名前空間:**<xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (システム.dll 内)
+**アセンブリ:** システム (System.dll)
 
-**.NET フレームワークのバージョン:** 2.0 以降で利用可能。
+**.NET Framework のバージョン:** 2.0 以降で使用できます。

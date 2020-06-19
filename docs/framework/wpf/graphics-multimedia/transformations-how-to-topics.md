@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
 ms.openlocfilehash: 77e101bf428dec40ba827cf9c6b6fbac3dbf8806
 ms.sourcegitcommit: 267d092663aba36b6b2ea853034470aea493bfae
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/21/2020
 ms.locfileid: "80111934"
 ---
 # <a name="transformations-how-to-topics"></a>変換に関する方法のトピック
-このセクションのトピックでは、オブジェクトに異なる変換を適用する方法について説明します。  
+このセクションのトピックでは、オブジェクトにさまざまな変換を適用する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [イベントの発生時に要素に変換を適用する](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  

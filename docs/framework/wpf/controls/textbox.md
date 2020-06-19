@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: 3b1b15739b1ba1787ba160a9a4d829d83fb10db1
 ms.sourcegitcommit: 011314e0c8eb4cf4a11d92078f58176c8c3efd2d
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 02/11/2020
 ms.locfileid: "77123638"
@@ -19,9 +19,9 @@ ms.locfileid: "77123638"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [TextBox の概要](textbox-overview.md)  
- [データ バインドに関する「方法」トピック](textbox-how-to-topics.md)  
+ [方法トピック](textbox-how-to-topics.md)  
   
-## <a name="reference"></a>リファレンス  
+## <a name="reference"></a>関連項目  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,7 +30,7 @@ ms.locfileid: "77123638"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [WPF Controls Gallery Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Getting%20Started/ControlsAndLayout)
 - [TextBox のスタイルとテンプレート](textbox-styles-and-templates.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: 44a021ed3ce1d10613cf6ab7c959c62feec6046c
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: fa5920cfd25f61f6e6c7d5438ef7c0e38a48fa1e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352456"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401954"
 ---
 # <a name="how-to-access-characters-in-strings-in-visual-basic"></a>方法: Visual Basic で文字列の文字にアクセスする
 この例では、<xref:System.String.Chars%2A> プロパティを使用して、文字列内の指定された位置にある文字にアクセスする方法を示します。  
@@ -23,13 +23,13 @@ ms.locfileid: "74352456"
  <xref:System.String.Chars%2A> プロパティの `index` パラメーターは 0 から始まります。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
- <xref:System.String.Chars%2A> プロパティは、指定された位置の文字を返します。 ただし、一部の Unicode 文字は複数の文字で表すことができます。 Unicode 文字を操作する方法の詳細については、[文字列を文字の配列に変換する方法](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)に関する記事をご覧ください。  
+ <xref:System.String.Chars%2A> プロパティは、指定された位置の文字を返します。 ただし、一部の Unicode 文字は複数の文字で表すことができます。 Unicode 文字を操作する方法の詳細については、[文字列を文字の配列に変換する方法](how-to-convert-a-string-to-an-array-of-characters.md)に関する記事をご覧ください。  
   
  <xref:System.String.Chars%2A> プロパティは、`index` パラメーターが文字列の長さ以上である場合、またはゼロ未満の場合に、<xref:System.IndexOutOfRangeException> 例外をスローします。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.String.Chars%2A>
-- [方法: 文字列を文字の配列に変換する](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
-- [Visual Basic で、文字列型とその他のデータ型との変換を行う](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
-- [文字列](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [方法: 文字列を文字の配列に変換する](how-to-convert-a-string-to-an-array-of-characters.md)
+- [Visual Basic で、文字列型とその他のデータ型との変換を行う](converting-between-strings-and-other-data-types.md)
+- [文字列](index.md)

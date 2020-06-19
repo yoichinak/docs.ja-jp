@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: 61cd397b82b4bb9a8b24a1a7d30eaea68e37368f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: cf6003206566dfe8f70a7f75cd4d7ec7565794a5
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347355"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84403175"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic の Main プロシージャ
 すべての Visual Basic アプリケーションには、`Main` と呼ばれるプロシージャが含まれている必要があります。 このプロシージャは、アプリケーションの開始点となり、アプリケーションの全体的な制御を行います。 .NET Framework では、アプリケーションが読み込まれ、制御を渡す準備ができると、`Main` プロシージャを呼び出します。 Windows フォーム アプリケーションを作成する場合を除き、単独で実行されるアプリケーションでは、`Main` プロシージャを記述する必要があります。
@@ -113,10 +113,10 @@ ms.locfileid: "74347355"
 - <xref:Microsoft.VisualBasic.Interaction.MsgBox%2A>
 - <xref:System.Array.Length%2A>
 - <xref:Microsoft.VisualBasic.Information.UBound%2A>
-- [Visual Basic プログラムの構造](../../../visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md)
-- [-main](../../../visual-basic/reference/command-line-compiler/main.md)
-- [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
-- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)
-- [Integer データ型](../../../visual-basic/language-reference/data-types/integer-data-type.md)
-- [String データ型](../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [Visual Basic プログラムの構造](structure-of-a-visual-basic-program.md)
+- [-main](../../reference/command-line-compiler/main.md)
+- [Shared](../../language-reference/modifiers/shared.md)
+- [Sub ステートメント](../../language-reference/statements/sub-statement.md)
+- [Function ステートメント](../../language-reference/statements/function-statement.md)
+- [Integer データ型](../../language-reference/data-types/integer-data-type.md)
+- [String データ型](../../language-reference/data-types/string-data-type.md)

@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: 4230fd88b4b60c631135f5b7fb15f4b6272b5351
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 81d2c8d305e828b2963a0af9d97ec35b1745197a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347299"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84398332"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML ファイルの処理 (Visual Basic)
-コンパイラは、ドキュメントを生成するためにタグ付けされたコードのコンストラクトごとに、ID 文字列を生成します。 (コードをタグ付けする方法については、[XML ドキュメント コメントのタグ](../../../visual-basic/language-reference/xmldoc/index.md)に関する記事をご覧ください。)ID 文字列によって、コンストラクトは一意に識別されます。 XML ファイルを処理するプログラムでは、ID 文字列を使用して、対応する .NET Framework のメタデータまたはリフレクション項目を識別できます。  
+コンパイラは、ドキュメントを生成するためにタグ付けされたコードのコンストラクトごとに、ID 文字列を生成します。 (コードをタグ付けする方法については、[XML ドキュメント コメントのタグ](../../language-reference/xmldoc/index.md)に関する記事をご覧ください。)ID 文字列によって、コンストラクトは一意に識別されます。 XML ファイルを処理するプログラムでは、ID 文字列を使用して、対応する .NET Framework のメタデータまたはリフレクション項目を識別できます。  
   
  XML ファイルは、コードの階層表現ではなく、要素ごとに生成された ID を持つフラット リストです。  
   
@@ -43,5 +43,5 @@ ms.locfileid: "74347299"
   
 ## <a name="see-also"></a>関連項目
 
-- [-doc](../../../visual-basic/reference/command-line-compiler/doc.md)
-- [方法: XML ドキュメントを作成する](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [-doc](../../reference/command-line-compiler/doc.md)
+- [方法: XML ドキュメントを作成する](how-to-create-xml-documentation.md)
