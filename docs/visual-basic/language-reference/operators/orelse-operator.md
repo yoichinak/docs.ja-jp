@@ -11,12 +11,12 @@ helpviewer_keywords:
 - short-circuit evaluation
 - OrElse operator [Visual Basic]
 ms.assetid: 253803d8-05b0-47d7-b213-abd222847779
-ms.openlocfilehash: 361de44711c3b41411f2fa1dd81a3dd8db6b01e6
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 3095a11523eeb8ec531c7f312fca74d2a070c92f
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348242"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401408"
 ---
 # <a name="orelse-operator-visual-basic"></a>OrElse 演算子 (Visual Basic)
 2 つの式の短絡包含的論理和を求めます。  
@@ -42,18 +42,18 @@ result = expression1 OrElse expression2
   
  いずれかまたは両方の式が `True` に評価される場合、`result` は `True` です。 次の表は、`result` がどのように決定されるかを示しています。  
   
-|`expression1` が次の場合|かつ、`expression2` が次の場合|`result` の値は次のようになります|  
+|`expression1` が次の場合|かつ、`expression2` が次の場合|`result` の値は次のとおり|  
 |-------------------------|--------------------------|------------------------------|  
 |`True`|(評価されていない)|`True`|  
 |`False`|`True`|`True`|  
 |`False`|`False`|`False`|  
   
 ## <a name="data-types"></a>データの種類  
- `OrElse` 演算子は [Boolean データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)に対してのみ定義されます。 Visual Basic は、式を評価する前に、必要に応じて各オペランドを `Boolean` に変換します。 結果を数値型に代入すると、Visual Basic によって `Boolean` からその型への変換が行われ、`False` が `0` になり、`True` が `-1` になります。
+ `OrElse` 演算子は [Boolean データ型](../data-types/boolean-data-type.md)に対してのみ定義されます。 Visual Basic は、式を評価する前に、必要に応じて各オペランドを `Boolean` に変換します。 結果を数値型に代入すると、Visual Basic によって `Boolean` からその型への変換が行われ、`False` が `0` になり、`True` が `-1` になります。
 詳細については、[ブール型変換](../data-types/boolean-data-type.md#type-conversions)に関する記事をご覧ください。
   
 ## <a name="overloading"></a>オーバーロード  
- [Or 演算子](../../../visual-basic/language-reference/operators/or-operator.md)と [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、このクラスまたは構造体はその動作を再定義できます。 `Or` と `IsTrue` の演算子をオーバーロードすると、`OrElse` 演算子の動作に影響します。 コードで、`Or` と `IsTrue` をオーバーロードするクラスまたは構造体で `OrElse` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ [Or 演算子](or-operator.md)と [IsTrue 演算子](istrue-operator.md)は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、このクラスまたは構造体はその動作を再定義できます。 `Or` と `IsTrue` の演算子をオーバーロードすると、`OrElse` 演算子の動作に影響します。 コードで、`Or` と `IsTrue` をオーバーロードするクラスまたは構造体で `OrElse` を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`OrElse` 演算子を使用して、2 つの式の論理和を求めます。 結果は、2 つの式のいずれかが true かどうかを表す `Boolean` 値です。 最初の式が `True` 場合、2 番目の式は評価されません。  
@@ -69,9 +69,9 @@ result = expression1 OrElse expression2
   
 ## <a name="see-also"></a>関連項目
 
-- [論理/ビット演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Or 演算子](../../../visual-basic/language-reference/operators/or-operator.md)
-- [IsTrue 演算子](../../../visual-basic/language-reference/operators/istrue-operator.md)
-- [Visual Basic の論理演算子とビット演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [論理/ビット演算子 (Visual Basic)](logical-bitwise-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [Or 演算子](or-operator.md)
+- [IsTrue 演算子](istrue-operator.md)
+- [Visual Basic の論理演算子とビット演算子](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

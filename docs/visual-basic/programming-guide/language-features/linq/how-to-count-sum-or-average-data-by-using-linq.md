@@ -15,19 +15,19 @@ helpviewer_keywords:
 - query samples [Visual Basic]
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
-ms.openlocfilehash: 7e105c75653f979f53567ef49f1f4cdeafaa4d0f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 8be585c3e11bc3637b2dd1cfaf3437620aa2ba09
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74345010"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84405018"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>方法: LINQ を使用したデータの数、合計、または平均の算出 (Visual Basic)
 統合言語クエリ (LINQ) を使用すると、データベース情報に簡単にアクセスしてクエリを実行できます。  
   
- 次の例は、SQL Server データベースに対してクエリを実行する新しいアプリケーションを作成する方法を示しています。 このサンプルでは、`Aggregate` と `Group By` 句を使用して、結果の数、合計、平均を算出します。 詳細については、「[Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)」および「[Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)」を参照してください。  
+ 次の例は、SQL Server データベースに対してクエリを実行する新しいアプリケーションを作成する方法を示しています。 このサンプルでは、`Aggregate` と `Group By` 句を使用して、結果の数、合計、平均を算出します。 詳細については、「[Aggregate 句](../../../language-reference/queries/aggregate-clause.md)」および「[Group By 句](../../../language-reference/queries/group-by-clause.md)」を参照してください。  
   
- このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがない場合は、 Microsoft ダウンロード センターからダウンロードできます。 手順については、「[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)」を参照してください。  
+ このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、「[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)」を参照してください。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -45,7 +45,7 @@ ms.locfileid: "74345010"
   
 2. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。 **[LINQ to SQL クラス]** 項目テンプレートを選択します。  
   
-3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 オブジェクト リレーショナル デザイナー (O/R デザイナー) が northwind.dbml ファイルを対象にして開きます。  
+3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 オブジェクト リレーショナル デザイナー (O/R デザイナー) が northwind.dbml ファイル用に開きます。  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーにクエリを実行する対象のテーブルを追加するには  
   
@@ -67,7 +67,7 @@ ms.locfileid: "74345010"
   
 2. Form1 をダブルクリックして、フォームの `Load` イベントにコードを追加します。  
   
-3. テーブルを O/R デザイナーに追加したときに、デザイナーによって <xref:System.Data.Linq.DataContext> オブジェクトがプロジェクトに追加されました。 このオブジェクトには、これらのテーブルにアクセスするため、および各テーブルの個々のオブジェクトとコレクションにアクセスするために必要なコードが含まれます。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトには、.dbml ファイルの名前に基づいて名前が付けられます。 このプロジェクトでは、<xref:System.Data.Linq.DataContext> オブジェクトに `northwindDataContext` という名前が付けられています。  
+3. テーブルを O/R デザイナーに追加したときに、デザイナーによって <xref:System.Data.Linq.DataContext> オブジェクトがプロジェクトに追加されました。 このオブジェクトには、これらのテーブルにアクセスするため、および各テーブルの個々のオブジェクトとコレクションにアクセスするために必要なコードが含まれます。 プロジェクトの <xref:System.Data.Linq.DataContext> オブジェクトの名前は、.dbml ファイルの名前に基づいて付けられます。 このプロジェクトでは、<xref:System.Data.Linq.DataContext> オブジェクトに `northwindDataContext` という名前が付けられています。  
   
      コード内で <xref:System.Data.Linq.DataContext> のインスタンスを作成し、O/R デザイナーによって指定されたテーブルに対してクエリを実行できます。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "74345010"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ](index.md)
+- [クエリ](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)
-- [Aggregate 句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
-- [Group By 句](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [Aggregate 句](../../../language-reference/queries/aggregate-clause.md)
+- [Group By 句](../../../language-reference/queries/group-by-clause.md)

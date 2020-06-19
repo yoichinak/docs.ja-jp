@@ -8,12 +8,12 @@ helpviewer_keywords:
 - << operator [Visual Basic]
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
-ms.openlocfilehash: 327d0e5cbd1ebcc43bd47fb068f4513940c2165a
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 1128b32a739e7dbf3893dcd19b37247cd4643c85
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350982"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84370636"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 演算子 (Visual Basic)
 ビット パターンに対して算術左シフトを実行します。  
@@ -46,12 +46,12 @@ result = pattern << amount
 |`Integer`、`UInteger`|31|&H0000001F|  
 |`Long`、`ULong`|63|&H0000003F|  
   
- `amount` が 0 の場合、`result` の値は `pattern` の値と同じになります。 `amount` が負の場合は、符号なしの値として取得され、適切なサイズ マスクでマスクされます。  
+ `amount` が 0 の場合、`result` の値は `pattern` の値と同じになります。 `amount` が負の場合は、符号なしの値として扱われ、適切なサイズ マスクでマスクされます。  
   
  算術シフトではオーバーフロー例外は発生しません。  
   
 > [!NOTE]
-> `<<` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+> `<<` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子を使用する場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`<<` 演算子を使用して、整数値に対して算術左シフトを実行しています。 結果のデータ型は、シフトする式のデータ型と常に同じになります。  
@@ -74,9 +74,9 @@ result = pattern << amount
   
 ## <a name="see-also"></a>関連項目
 
-- [ビット シフト演算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
-- [<<= 演算子](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [ビット シフト演算子](bit-shift-operators.md)
+- [代入演算子](assignment-operators.md)
+- [<<= 演算子](left-shift-assignment-operator.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [Visual Basic における算術演算子](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

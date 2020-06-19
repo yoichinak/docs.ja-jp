@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GetXmlNamespace operator [Visual Basic]
 - GetXmlNamespace keyword [Visual Basic]
 ms.assetid: d0d28cfd-0755-4896-ae0b-4981aa35517c
-ms.openlocfilehash: 4d6e738f4e3a47d73e37c395dd74fe19e99d81bd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 85422fb9e11d78e228577adc25cba746149c645a
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74353192"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371117"
 ---
 # <a name="getxmlnamespace-operator-visual-basic"></a>GetXmlNamespace 演算子 (Visual Basic)
 指定した XML 名前空間プレフィックスに対応する <xref:System.Xml.Linq.XNamespace> オブジェクトを取得します。  
@@ -26,7 +26,7 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="parts"></a>指定項目  
  `xmlNamespacePrefix`  
- 任意。 XML 名前空間プレフィックスを識別する文字列です。 指定する場合、文字列は有効な XML 識別子である必要があります。 詳細については、「[宣言する XML 要素と属性の名前](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。 プレフィックスが指定されていない場合は、既定の名前空間が返されます。 既定の名前空間が指定されていない場合は、空の名前空間が返されます。  
+ 任意。 XML 名前空間プレフィックスを識別する文字列です。 指定する場合、文字列は有効な XML 識別子である必要があります。 詳細については、「[宣言する XML 要素と属性の名前](../../programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)」を参照してください。 プレフィックスが指定されていない場合は、既定の名前空間が返されます。 既定の名前空間が指定されていない場合は、空の名前空間が返されます。  
   
 ## <a name="return-value"></a>戻り値  
  XML 名前空間プレフィックスに対応する <xref:System.Xml.Linq.XNamespace> オブジェクト。  
@@ -47,5 +47,5 @@ GetXmlNamespace(xmlNamespacePrefix)
   
 ## <a name="see-also"></a>関連項目
 
-- [Imports ステートメント (XML 名前空間)](../../../visual-basic/language-reference/statements/imports-statement-xml-namespace.md)
-- [Visual Basic での XML へのアクセス](../../../visual-basic/programming-guide/language-features/xml/accessing-xml.md)
+- [Imports ステートメント (XML 名前空間)](../statements/imports-statement-xml-namespace.md)
+- [Visual Basic での XML へのアクセス](../../programming-guide/language-features/xml/accessing-xml.md)

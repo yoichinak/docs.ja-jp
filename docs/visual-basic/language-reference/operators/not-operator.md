@@ -14,12 +14,12 @@ helpviewer_keywords:
 - logical negation
 - operators [Visual Basic], negation
 ms.assetid: 8f2ea83c-d2ed-480a-a474-3042a1cad9b5
-ms.openlocfilehash: 08b091ccf6c50438b5ad9d6c445510112abe7418
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 56cdeb80a217dbce15921eddd6a43d8d1b049376
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74348306"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401460"
 ---
 # <a name="not-operator-visual-basic"></a>Not 演算子 (Visual Basic)
 `Boolean` 式の場合は論理否定、数値式の場合はビットごとの否定を求めます。  
@@ -59,7 +59,7 @@ result = Not expression
  ブール値の否定の場合、結果のデータ型は `Boolean` になります。 ビットごとの否定の場合、結果のデータ型は `expression` のデータ型と同じになります。 ただし、式が `Decimal` の場合、結果は `Long` になります。  
   
 ## <a name="overloading"></a>オーバーロード  
- `Not` 演算子は "*オーバーロード*" できます。つまり、オペランドがあるクラスまたは構造体の型を持っているときに、そのクラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `Not` 演算子は "*オーバーロード*" できます。つまり、オペランドがあるクラスまたは構造体の型を持っているときに、そのクラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を必ず理解してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`Boolean` 式で `Not` 演算子を使用して論理否定を実行しています。 この結果は、式の値の反転を表す `Boolean` 値です。  
@@ -77,7 +77,7 @@ result = Not expression
   
 ## <a name="see-also"></a>関連項目
 
-- [論理/ビット演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic の論理演算子とビット演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+- [論理/ビット演算子 (Visual Basic)](logical-bitwise-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [Visual Basic の論理演算子とビット演算子](../../programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

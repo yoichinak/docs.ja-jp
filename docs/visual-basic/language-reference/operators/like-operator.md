@@ -22,12 +22,12 @@ helpviewer_keywords:
 - data [Visual Basic], string comparisons
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
-ms.openlocfilehash: 5db9488bbec716156a3ab464042c0853241a82b1
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 4279d90c74c80403146448a8ba5a6051ec9d12f6
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350946"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401558"
 ---
 # <a name="like-operator-visual-basic"></a>Like 演算子 (Visual Basic)
 文字列をパターンと比較します。  
@@ -55,7 +55,7 @@ result = string Like pattern
  `string` の値が `pattern` に格納されているパターンを満たす場合、`result` は `True` になります。 文字列がパターンを満たさない場合、`result` は `False` になります。 `string` と `pattern` の両方が空の文字列の場合、結果は `True` になります。  
   
 ## <a name="comparison-method"></a>比較方法  
- `Like` 演算子の動作は、[Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)に基づきます。 各ソース ファイルの既定の文字列比較方法は `Option Compare Binary` です。  
+ `Like` 演算子の動作は、[Option Compare ステートメント](../statements/option-compare-statement.md)に基づきます。 各ソース ファイルの既定の文字列比較方法は `Option Compare Binary` です。  
   
 ## <a name="pattern-options"></a>パターンのオプション  
  組み込みのパターン マッチングでは、文字列比較に使用できるさまざまなツールが用意されています。 パターン マッチング機能を使用すると、`string` 内の各文字を、特定の文字、ワイルドカード文字、文字リスト、または文字範囲と一致させることができます。 次の表に、`pattern` で使用できる文字と、それらが何に一致するかを示します。  
@@ -76,7 +76,7 @@ result = string Like pattern
 ## <a name="special-characters"></a>特殊文字  
  特殊文字の左角かっこ (`[`)、疑問符 (`?`)、番号記号 (`#`)、およびアスタリスク (`*`) を一致させるには、これらを角かっこで囲みます。 右角かっこ (`]`) は、グループ内でそれ自体を一致させるために使用できませんが、グループの外側で個別の文字として使用できます。  
   
- 文字シーケンス `[]` は、長さが 0 の文字列 (`""`) と見なされます。 ただし、これを角かっこで囲まれた文字リストの一部にすることはできません。 `Like` を 2 回使用すると、`string` 内のある場所に、文字グループのいずれかの文字が含まれているか、または文字がまったく含まれていないか確認できます。 例については、「[方法: 文字列がパターンに一致するかを調べる](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)」を参照してください。  
+ 文字シーケンス `[]` は、長さが 0 の文字列 (`""`) と見なされます。 ただし、これを角かっこで囲まれた文字リストの一部にすることはできません。 `Like` を 2 回使用すると、`string` 内のある場所に、文字グループのいずれかの文字が含まれているか、または文字がまったく含まれていないか確認できます。 例については、「[方法: 文字列がパターンに一致するかを調べる](../../programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)」を参照してください。  
   
 ## <a name="character-ranges"></a>文字範囲  
  ハイフン (`–`) を使用して範囲の下限と上限を区切ることにより、`charlist` で文字の範囲を指定できます。 たとえば、`string` 内の対応する文字位置に、`A`–`Z` の範囲の任意の文字が含まれている場合、`[A–Z]` は一致と見なされます。また、対応する文字位置に `H`–`L` の範囲外の文字が含まれている場合、`[!H–L]` は一致と見なされます。  
@@ -98,7 +98,7 @@ result = string Like pattern
  digraph 文字を使用する言語がシステムのロケール設定で指定されている場合、`pattern` または `string` に 1 つの digraph 文字があると、その digraph 文字は他の文字列内の同等の連続する 2 文字に一致します。 同様に、角かっこ (それ自体、リスト内、または範囲内) で囲まれた `pattern` 内の digraph 文字は、`string` 内の同等の連続する 2 文字と一致します。  
   
 ## <a name="overloading"></a>オーバーロード  
- `Like` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `Like` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  この例では、`Like` 演算子を使用して、文字列をさまざまなパターンと比較します。 結果は、各文字列がパターンを満たすかどうかを示す `Boolean` 変数に格納されます。  
@@ -109,9 +109,9 @@ result = string Like pattern
 
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
-- [比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Option Compare ステートメント](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
-- [方法: 文字列がパターンに一致するかを調べる](../../../visual-basic/programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)
+- [比較演算子](comparison-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [Option Compare ステートメント](../statements/option-compare-statement.md)
+- [演算子および式](../../programming-guide/language-features/operators-and-expressions/index.md)
+- [方法: 文字列がパターンに一致するかを調べる](../../programming-guide/language-features/operators-and-expressions/how-to-match-a-string-against-a-pattern.md)

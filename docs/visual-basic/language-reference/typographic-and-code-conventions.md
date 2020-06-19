@@ -10,12 +10,12 @@ helpviewer_keywords:
 - conventions [Visual Basic], documentation
 - Visual Basic code, conventions
 ms.assetid: 1916cd81-ea9d-4faa-81f7-4a0d864b60f4
-ms.openlocfilehash: 4906c5ebadb7ce77f2d0e53b2fc5dbab69c5b41f
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 0e36d9d61b0dd2701210ce614d15fd38f08f5401
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352711"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401356"
 ---
 # <a name="typographic-and-code-conventions-visual-basic"></a>表記規則とコード規則 (Visual Basic)
 
@@ -27,7 +27,7 @@ Visual Basic のドキュメントでは、次の表記規則とコード規則�
 |-------------|-----------------|  
 |`Sub`, `If`, `ChDir`, `Print`, `True`, `Debug`|言語固有のキーワードとランタイム メンバーは、先頭文字が大文字であり、この例のように書式設定されます。|  
 |**SmallProject**、**ButtonCollection**|入力を求められる語句は、この例のように書式設定されます。|  
-|[Module ステートメント](../../visual-basic/language-reference/statements/module-statement.md)|別のヘルプ ページにアクセスするためにクリックするリンクは、この例のように書式設定されます。|  
+|[Module ステートメント](statements/module-statement.md)|別のヘルプ ページにアクセスするためにクリックするリンクは、この例のように書式設定されます。|  
 |*object*、*variableName*、`argumentList`|指定する情報のプレースホルダーは、この例のように書式設定されます。|  
 |[ Shadows ]、[ *expressionList* ]|構文では、省略可能な項目は角かっこで囲まれています。|  
 |{ `Public` &#124; `Friend` &#124; `Private` }|構文で、2 つ以上の項目のいずれかを選択する必要がある場合、項目は中かっこで囲まれ、縦棒で区切られます。<br /><br /> 項目を 1 つだけ選択する必要があります。|  
@@ -49,9 +49,9 @@ Visual Basic のドキュメントでは、次の表記規則とコード規則�
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)
-- [キーワード](../../visual-basic/language-reference/keywords/index.md)
-- [Visual Basic ランタイム ライブラリのメンバー](../../visual-basic/language-reference/runtime-library-members.md)
-- [Visual Basic の名前付け規則](../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-- [方法: コード内でステートメントを分割および連結する](../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
-- [コード内のコメント](../../visual-basic/programming-guide/program-structure/comments-in-code.md)
+- [Visual Basic の言語リファレンス](index.md)
+- [キーワード](keywords/index.md)
+- [Visual Basic ランタイム ライブラリのメンバー](runtime-library-members.md)
+- [Visual Basic の名前付け規則](../programming-guide/program-structure/naming-conventions.md)
+- [方法: コード内でステートメントを分割および連結する](../programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [コード内のコメント](../programming-guide/program-structure/comments-in-code.md)

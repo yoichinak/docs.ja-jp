@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - modules, Visual Basic
 ms.assetid: 370bfc90-e8f2-4942-bdec-9897ce605d31
-ms.openlocfilehash: 6869d981cdca20b915a588969134fc50e8d1ff47
-ms.sourcegitcommit: a4f9b754059f0210e29ae0578363a27b9ba84b64
+ms.openlocfilehash: df7e32a81746a97a78a4a2a28e57032affa73cc0
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74838248"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84386596"
 ---
 # <a name="modules-visual-basic"></a>モジュール (Visual Basic)
 
@@ -32,4 +32,4 @@ Visual Basic には、文字列の操作、算術計算の実行、システム�
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)
+- [Visual Basic の言語リファレンス](index.md)

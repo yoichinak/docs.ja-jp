@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GetType operator [Visual Basic]
 - GetType keyword [Visual Basic]
 ms.assetid: 4f733297-2503-4607-850c-15eba65fff90
-ms.openlocfilehash: 4e59bcfaa24c9545ed75c6b5c1d29cad398ac2de
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 37644a9c37ffde084120c5f1e1ee8c87a04ffc3c
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349552"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84371156"
 ---
 # <a name="gettype-operator-visual-basic"></a>GetType 演算子 (Visual Basic)
 指定した型の <xref:System.Type> オブジェクトを返します。 <xref:System.Type> オブジェクトは、そのプロパティ、メソッド、イベントなど、型に関する情報を提供します。  
@@ -59,6 +59,6 @@ GetType(typename)
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [演算子および式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [演算子および式](../../programming-guide/language-features/operators-and-expressions/index.md)

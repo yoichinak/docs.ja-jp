@@ -9,17 +9,17 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: 1084743b0c50d381375b76a3116ed7c9e6f9d769
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: c8ed792bf3ffefd903d60522f621958e44546d32
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74354200"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84404953"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>方法: 特定の型での LINQ クエリ結果の取得 (Visual Basic)
 統合言語クエリ (LINQ) を使用すると、データベース情報に簡単にアクセスしてクエリを実行できます。 既定では、LINQ クエリは、オブジェクトの一覧を匿名型として返します。 また、`Select` 句を使用して、クエリが特定の型の一覧を返すように指定することもできます。  
   
- 次の例は、SQL Server データベースに対してクエリを実行し、特定の名前付きの型として結果を射影する新しいアプリケーションの作成方法を示しています。 詳細については、「[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」および「[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)」を参照してください。  
+ 次の例は、SQL Server データベースに対してクエリを実行し、特定の名前付きの型として結果を射影する新しいアプリケーションの作成方法を示しています。 詳細については、「[匿名型](../objects-and-classes/anonymous-types.md)」および「[Select 句](../../../language-reference/queries/select-clause.md)」を参照してください。  
   
  このトピックの例では、Northwind サンプル データベースを使用します。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード センターからダウンロードできます。 手順については、「[サンプル データベースのダウンロード](../../../../framework/data/adonet/sql/linq/downloading-sample-databases.md)」を参照してください。  
   
@@ -41,7 +41,7 @@ ms.locfileid: "74354200"
   
 3. そのファイルに `northwind.dbml` という名前を付けます。 **[追加]** をクリックします。 オブジェクト リレーショナル デザイナー (O/R デザイナー) が northwind.dbml ファイル用に開きます。  
   
-### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーにクエリを実行するテーブルを追加するには  
+### <a name="to-add-tables-to-query-to-the-or-designer"></a>O/R デザイナーにクエリを実行する対象のテーブルを追加するには  
   
 1. **[サーバー エクスプローラー]** / **[データベース エクスプローラー]** で、Northwind データベースへの接続を展開します。 **[テーブル]** フォルダーを展開します。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "74354200"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
-- [クエリ](../../../../visual-basic/language-reference/queries/index.md)
+- [LINQ](index.md)
+- [クエリ](../../../language-reference/queries/index.md)
 - [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)
 - [DataContext メソッド (O/R デザイナー)](/visualstudio/data-tools/datacontext-methods-o-r-designer)

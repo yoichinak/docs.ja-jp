@@ -7,12 +7,12 @@ helpviewer_keywords:
 - rapid application development (RAD), My.Settings
 - My.Resources object [Visual Basic], developing applications
 ms.assetid: 68284ab1-b685-4814-a2a4-01ae40445ff8
-ms.openlocfilehash: ce9a5bf76ba3132f58aa40227a145d8b5bf1591d
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 6c53d11a3830a5a8a2cb898728bed8694a226686
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74349264"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84411669"
 ---
 # <a name="rapid-application-development-with-myresources-and-mysettings-visual-basic"></a>My.Resources と My.Settings による Rapid Application Development (Visual Basic)
 
@@ -26,10 +26,10 @@ ms.locfileid: "74349264"
   
  `My.Resources` オブジェクトは、グローバル リソースのみを公開します。 フォームに関連付けられたリソース ファイルへのアクセスは提供しません。 フォームのリソースには、フォームからアクセスする必要があります。  
   
- 同様に、`My.Settings` オブジェクトは、アプリケーションの設定へのアクセスを提供し、アプリケーションのプロパティ設定やその他の情報を動的に格納し、取得できるようにします。 詳細については、「[My.Resources オブジェクト](../../../visual-basic/language-reference/objects/my-resources-object.md)」と「[My.Settings オブジェクト](../../../visual-basic/language-reference/objects/my-settings-object.md)」を参照してください。  
+ 同様に、`My.Settings` オブジェクトは、アプリケーションの設定へのアクセスを提供し、アプリケーションのプロパティ設定やその他の情報を動的に格納し、取得できるようにします。 詳細については、「[My.Resources オブジェクト](../../language-reference/objects/my-resources-object.md)」と「[My.Settings オブジェクト](../../language-reference/objects/my-settings-object.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [My.Resources オブジェクト](../../../visual-basic/language-reference/objects/my-resources-object.md)
-- [My.Settings オブジェクト](../../../visual-basic/language-reference/objects/my-settings-object.md)
-- [アプリケーション設定へのアクセス](../../../visual-basic/developing-apps/programming/app-settings/index.md)
+- [My.Resources オブジェクト](../../language-reference/objects/my-resources-object.md)
+- [My.Settings オブジェクト](../../language-reference/objects/my-settings-object.md)
+- [アプリケーション設定へのアクセス](../programming/app-settings/index.md)

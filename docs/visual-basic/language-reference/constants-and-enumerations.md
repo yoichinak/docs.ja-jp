@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 5109bf42c9caa7528c5405bb1a5cff0cfb62a5ac
-ms.sourcegitcommit: 5f236cd78cf09593c8945a7d753e0850e96a0b80
+ms.openlocfilehash: 60cd1ddac9bca685ddc5778e7d289710245a183e
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2020
-ms.locfileid: "75705757"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84374487"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>定数と列挙型 (Visual Basic)
 
@@ -27,7 +27,7 @@ Visual Basic には、開発者向けの定義済み定数と列挙型が多数�
 |---|---|  
 |`CONFIG`|**構成マネージャー**の **[アクティブ ソリューション構成]** ボックスの現在の設定に対応する文字列。|  
 |`DEBUG`|**[プロジェクト プロパティ]** ダイアログ ボックスで設定できる `Boolean` 値。 既定では、プロジェクトのデバッグ構成によって `DEBUG` が定義されます。 `DEBUG` を定義すると、<xref:System.Diagnostics.Debug> クラスのメソッドは **[出力]** ウィンドウに出力を生成します。 これを定義しない場合、<xref:System.Diagnostics.Debug> クラスのメソッドはコンパイルされず、デバッグ出力も生成されません。|  
-|`TARGET`|プロジェクトの出力の種類、またはコマンド ラインの **-target** オプションの設定を表す文字列。 `TARGET` に指定できる値は次のとおりです。<br /><br /> - Windows アプリケーションの場合は "winexe"。<br />- コンソール アプリケーションの場合は "exe"。<br />- クラス ライブラリの場合は "library"。<br />- モジュールの場合は "module"。<br />- **-target** オプションは、Visual Studio 統合開発環境で設定できます。 詳細については、「[-target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)」を参照してください。|  
+|`TARGET`|プロジェクトの出力の種類、またはコマンド ラインの **-target** オプションの設定を表す文字列。 `TARGET` に指定できる値は次のとおりです。<br /><br /> - Windows アプリケーションの場合は "winexe"。<br />- コンソール アプリケーションの場合は "exe"。<br />- クラス ライブラリの場合は "library"。<br />- モジュールの場合は "module"。<br />- **-target** オプションは、Visual Studio 統合開発環境で設定できます。 詳細については、「[-target (Visual Basic)](../reference/command-line-compiler/target.md)」を参照してください。|  
 |`TRACE`|**[プロジェクト プロパティ]** ダイアログ ボックスで設定できる `Boolean` 値。 既定では、プロジェクトのすべての構成で `TRACE` が定義されます。 `TRACE` を定義すると、<xref:System.Diagnostics.Trace> クラスのメソッドは **[出力]** ウィンドウに出力を生成します。 これを定義しない場合、<xref:System.Diagnostics.Trace> クラスのメソッドはコンパイルされず、`Trace` 出力も生成されません。|  
 |`VBC_VER`|Visual Basic のバージョンを "*major*.*minor*" のフォーマットで表す番号。|  
   
@@ -83,6 +83,6 @@ Visual Basic には、開発者向けの定義済み定数と列挙型が多数�
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Basic の言語リファレンス](../../visual-basic/language-reference/index.md)
-- [定数の概要](../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
-- [列挙型の概要](../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
+- [Visual Basic の言語リファレンス](index.md)
+- [定数の概要](../programming-guide/language-features/constants-enums/constants-overview.md)
+- [列挙型の概要](../programming-guide/language-features/constants-enums/enumerations-overview.md)

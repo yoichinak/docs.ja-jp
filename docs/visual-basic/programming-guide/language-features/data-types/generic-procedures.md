@@ -12,12 +12,12 @@ helpviewer_keywords:
 - generics [Visual Basic], procedures
 - generic procedures [Visual Basic], type inference
 ms.assetid: 95577b28-137f-4d5c-a149-919c828600e5
-ms.openlocfilehash: 16a629e07cf711778b3d8d1863958ec7a6300649
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 2efc0410b9d4bb663e1ff19d5a5456d7ff2c99bd
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350085"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84394066"
 ---
 # <a name="generic-procedures-in-visual-basic"></a>Visual Basic におけるジェネリック プロシージャ
 "*ジェネリック プロシージャ*" は、"*ジェネリック メソッド*" とも呼ばれる、少なくとも 1 つの型パラメーターを含むように定義されたプロシージャです。 これによって、呼び出し元のコードが、プロシージャを呼び出すたびに、要件に合わせてデータ型を調整できるようになります。  
@@ -66,10 +66,10 @@ End Sub
   
 ## <a name="see-also"></a>関連項目
 
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [方法: 複数のデータ型に同一の機能を提供できるクラスを定義する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)
-- [方法: ジェネリック クラスを使用する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [手順](../../../../visual-basic/programming-guide/language-features/procedures/index.md)
-- [プロシージャのパラメーターと引数](../../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
-- [型リスト](../../../../visual-basic/language-reference/statements/type-list.md)
-- [パラメーター リスト](../../../../visual-basic/language-reference/statements/parameter-list.md)
+- [Generic Types in Visual Basic](generic-types.md)
+- [方法: 複数のデータ型に同一の機能を提供できるクラスを定義する](how-to-define-a-class-that-can-provide-identical-functionality.md)
+- [方法: ジェネリック クラスを使用する](how-to-use-a-generic-class.md)
+- [手順](../procedures/index.md)
+- [プロシージャのパラメーターと引数](../procedures/procedure-parameters-and-arguments.md)
+- [型リスト](../../../language-reference/statements/type-list.md)
+- [パラメーター リスト](../../../language-reference/statements/parameter-list.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: cabf8c569435cc0fc98282f5e8f5fd410e6708dc
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 10b07da22b8b43d6a966fa7c334ac6a0ef4b430d
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74347820"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84406367"
 ---
 # <a name="-operator-visual-basic"></a>>> 演算子 (Visual Basic)
 ビット パターンに対して算術右シフトを実行します。  
@@ -55,7 +55,7 @@ result = pattern >> amount
  算術シフトではオーバーフロー例外は生成されません。  
   
 ## <a name="overloading"></a>オーバーロード  
- `>>` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
+ `>>` 演算子は "*オーバーロード*" できます。つまり、オペランドがクラスまたは構造体の型を持っているときに、クラスまたは構造体はその動作を再定義できます。 コードで、そのようなクラスまたは構造体に対してこの演算子が使用される場合は、再定義された動作を理解していることを確認してください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、`>>` 演算子を使用して、整数値に対して算術右シフトを実行しています。 結果のデータ型は、シフトする式のデータ型と常に同じになります。  
@@ -88,9 +88,9 @@ result = pattern >> amount
   
 ## <a name="see-also"></a>関連項目
 
-- [ビット シフト演算子](../../../visual-basic/language-reference/operators/bit-shift-operators.md)
-- [代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
-- [>>= 演算子](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [ビット シフト演算子](bit-shift-operators.md)
+- [代入演算子](assignment-operators.md)
+- [>>= 演算子](right-shift-assignment-operator.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [Visual Basic における算術演算子](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

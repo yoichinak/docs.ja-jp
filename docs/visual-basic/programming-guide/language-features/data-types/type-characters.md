@@ -36,12 +36,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: 628461c8136946dd902c0a52048eee7c516c52cd
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: a48260694c1dfcbbb8f804f220fe89b1663c7319
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74352935"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393079"
 ---
 # <a name="type-characters-visual-basic"></a>型文字 (Visual Basic)
 
@@ -142,10 +142,10 @@ Dim number As Integer = &H_C305_F860
 
 ## <a name="see-also"></a>関連項目
 
-- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [基本データ型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [変数宣言](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
+- [データの種類](index.md)
+- [基本データ型](elementary-data-types.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [Visual Basic における型変換](type-conversions.md)
+- [トラブルシューティング (データ型)](troubleshooting-data-types.md)
+- [変数宣言](../variables/variable-declaration.md)
+- [データの種類](../../../language-reference/data-types/index.md)

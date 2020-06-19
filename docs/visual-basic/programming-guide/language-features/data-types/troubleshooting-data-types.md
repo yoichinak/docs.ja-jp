@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 63b2513e420320742bf7e25314743f08404f46a7
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 239e1c2f908a9023aeca6e92aff4633b60f27b69
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350513"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84393404"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>データ型のトラブルシューティング (Visual Basic)
 
@@ -32,7 +32,7 @@ ms.locfileid: "74350513"
 
 ## <a name="floating-point-expressions-do-not-compare-as-equal"></a>浮動小数点式を比較したときに等しくならない
 
-浮動小数点数 ([Single データ型](../../../../visual-basic/language-reference/data-types/single-data-type.md)および [Double データ型](../../../../visual-basic/language-reference/data-types/double-data-type.md)) を扱うときは、それらがバイナリの分数として格納されることに注意してください。 つまり、これらは、バイナリの分数 (形式は k / (2 ^ n)、k と n は整数) ではない数量表現を保持できません。 たとえば、0.5 (= 1/2) と 0.3125 (= 5/16) は正確な値を保持できますが、0.2 (= 1/5) と 0.3 (= 3/10) は概算値しか保持できません。
+浮動小数点数 ([Single データ型](../../../language-reference/data-types/single-data-type.md)および [Double データ型](../../../language-reference/data-types/double-data-type.md)) を扱うときは、それらがバイナリの分数として格納されることに注意してください。 つまり、これらは、バイナリの分数 (形式は k / (2 ^ n)、k と n は整数) ではない数量表現を保持できません。 たとえば、0.5 (= 1/2) と 0.3125 (= 5/16) は正確な値を保持できますが、0.2 (= 1/5) と 0.3 (= 3/10) は概算値しか保持できません。
 
 この誤差のため、浮動小数点値の演算では、正確な結果かどうか信頼できません。 特に、理論的には等しい 2 つの値の表現が多少異なる場合があります。
 
@@ -48,9 +48,9 @@ ms.locfileid: "74350513"
 
 ## <a name="mod-operator-does-not-return-accurate-result"></a>Mod 演算子が正確な結果を返さない
 
-浮動小数点数の格納が正確でないため、少なくとも 1 つのオペランドが浮動小数点数である場合、[Mod 演算子](../../../../visual-basic/language-reference/operators/mod-operator.md)は予期しない結果を返す可能性があります。
+浮動小数点数の格納が正確でないため、少なくとも 1 つのオペランドが浮動小数点数である場合、[Mod 演算子](../../../language-reference/operators/mod-operator.md)は予期しない結果を返す可能性があります。
 
-[Decimal データ型](../../../../visual-basic/language-reference/data-types/decimal-data-type.md)では、浮動小数点表現は使用されません。 `Single` と `Double` で正確ではない多くの数値は、`Decimal` では正確です (0.2 や 0.3 など)。 浮動小数点型より `Decimal` では算術が遅くなりますが、パフォーマンスが低下しても精度が高まる値打ちがあります。
+[Decimal データ型](../../../language-reference/data-types/decimal-data-type.md)では、浮動小数点表現は使用されません。 `Single` と `Double` で正確ではない多くの数値は、`Decimal` では正確です (0.2 や 0.3 など)。 浮動小数点型より `Decimal` では算術が遅くなりますが、パフォーマンスが低下しても精度が高まる値打ちがあります。
 
 |浮動小数点数の整数の剰余を求めるには|
 |---|
@@ -70,7 +70,7 @@ ms.locfileid: "74350513"
 
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean 型が数値型に正確に変換されない
 
-[Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)の値は数値として格納されず、格納された値は数値と等価であると見なされません。 以前のバージョンとの互換性のために、Visual Basic は変換キーワード ([CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)、`CBool`、`CInt` など) を使用して、`Boolean` と数値型の間で変換を行います。 ただし、その他の言語では、.NET Framework メソッドと同様に、これらの変換が異なる方法で実行されることがあります。
+[Boolean データ型](../../../language-reference/data-types/boolean-data-type.md)の値は数値として格納されず、格納された値は数値と等価であると見なされません。 以前のバージョンとの互換性のために、Visual Basic は変換キーワード ([CType 関数](../../../language-reference/functions/ctype-function.md)、`CBool`、`CInt` など) を使用して、`Boolean` と数値型の間で変換を行います。 ただし、その他の言語では、.NET Framework メソッドと同様に、これらの変換が異なる方法で実行されることがあります。
 
 `True` と `False` に対して等価の数値に依存するコードを記述することは避けてください。 可能な限り、`Boolean` 変数には、仕様で定められている論理値以外の値を使用しないようにしてください。 `Boolean` 値と数値を混在させる必要がある場合は、選択する変換方法をよく理解してください。
 
@@ -88,11 +88,11 @@ ms.locfileid: "74350513"
 
 型文字が存在しない場合、Visual Basic によってリテラルの既定データ型と見なされます。 二重引用符 (`" "`) で囲まれた文字リテラルの既定型は `String` です。
 
-`String` データ型は [Char データ型](../../../../visual-basic/language-reference/data-types/char-data-type.md)に拡大変換されません。 つまり、`Char` 変数にリテラルを代入する場合は、縮小変換を行うか、リテラルを強制的に `Char` 型にする必要があります。
+`String` データ型は [Char データ型](../../../language-reference/data-types/char-data-type.md)に拡大変換されません。 つまり、`Char` 変数にリテラルを代入する場合は、縮小変換を行うか、リテラルを強制的に `Char` 型にする必要があります。
 
 |変数または定数に代入する Char リテラルを作成するには|
 |---|
-|1.変数または定数を `Char` として宣言します。<br />2.文字値を二重引用符 `" "` で囲みます。<br />3.終わりの二重引用符の後にリテラルの型文字 `C` を指定して、リテラルを強制的に `Char` にします。 これは型チェック スイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) が `On` の場合に必須ですが、どのような場合でもお勧めします。|
+|1.変数または定数を `Char` として宣言します。<br />2.文字値を二重引用符 `" "` で囲みます。<br />3.終わりの二重引用符の後にリテラルの型文字 `C` を指定して、リテラルを強制的に `Char` にします。 これは型チェック スイッチ ([Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)) が `On` の場合に必須ですが、どのような場合でもお勧めします。|
 
 次の例では、`Char` 変数へのリテラルの代入の失敗と成功の両方を示します。
 
@@ -102,18 +102,18 @@ ms.locfileid: "74350513"
 
 ## <a name="string-conversion-fails-at-run-time"></a>実行時に文字列変換が失敗する
 
-[String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)は、非常に多くの拡大変換に関連します。 `String` はそれ自体と `Object` に拡大変換され、`Char` と `Char()` (`Char` 配列) のみが `String` に拡大変換されます。 これは、`String` の変数と定数には、他のデータ型に含めることができない値が含まれている可能性があるためです。
+[String データ型](../../../language-reference/data-types/string-data-type.md)は、非常に多くの拡大変換に関連します。 `String` はそれ自体と `Object` に拡大変換され、`Char` と `Char()` (`Char` 配列) のみが `String` に拡大変換されます。 これは、`String` の変数と定数には、他のデータ型に含めることができない値が含まれている可能性があるためです。
 
-型チェック スイッチ ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) が `On` のとき、コンパイラによって暗黙の縮小変換がすべて禁止されます。 これには、`String` に関係するものも含まれます。 .NET Framework が変換を試行するように指示する変換キーワード (`CStr` や [CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)など) をコードで引き続き使用できます。
+型チェック スイッチ ([Option Strict ステートメント](../../../language-reference/statements/option-strict-statement.md)) が `On` のとき、コンパイラによって暗黙の縮小変換がすべて禁止されます。 これには、`String` に関係するものも含まれます。 .NET Framework が変換を試行するように指示する変換キーワード (`CStr` や [CType 関数](../../../language-reference/functions/ctype-function.md)など) をコードで引き続き使用できます。
 
 > [!NOTE]
-> `For Each…Next` コレクション内の要素からループ制御変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)」の縮小変換に関するセクションを参照してください。
+> `For Each…Next` コレクション内の要素からループ制御変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、「[For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)」の縮小変換に関するセクションを参照してください。
 
 ### <a name="narrowing-conversion-protection"></a>縮小変換の保護
 
 縮小変換の欠点は、実行時にエラーが発生する可能性があることです。 たとえば、`String` 変数に "True" または "False" 以外が含まれる場合は、`Boolean` に変換できません。 区切り文字が含まれている場合は、どの数値型への変換も失敗します。 `String` 変数が、変換先の型で受け入れ可能な値を常に保持していることがわかっている場合を除き、変換を試行しないでください。
 
-`String` から別のデータ型に変換する必要がある場合、最も安全な手順は、[Try...Catch...Finally ステートメント](../../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)に変換の試行を含めることです。 これにより、実行時エラーに対処できます。
+`String` から別のデータ型に変換する必要がある場合、最も安全な手順は、[Try...Catch...Finally ステートメント](../../../language-reference/statements/try-catch-finally-statement.md)に変換の試行を含めることです。 これにより、実行時エラーに対処できます。
 
 ### <a name="character-arrays"></a>文字配列
 
@@ -125,10 +125,10 @@ ms.locfileid: "74350513"
 
 ## <a name="see-also"></a>関連項目
 
-- [データの種類](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
-- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
-- [データ型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [データ型の有効な使用方法](../../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- [データの種類](index.md)
+- [型文字](type-characters.md)
+- [Value Types and Reference Types](value-types-and-reference-types.md)
+- [Visual Basic における型変換](type-conversions.md)
+- [データの種類](../../../language-reference/data-types/index.md)
+- [データ型変換関数](../../../language-reference/functions/type-conversion-functions.md)
+- [データ型の有効な使用方法](efficient-use-of-data-types.md)

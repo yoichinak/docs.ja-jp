@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: b7552550d4b0496d6ad7ee76a7327054d544b874
-ms.sourcegitcommit: 17ee6605e01ef32506f8fdc686954244ba6911de
+ms.openlocfilehash: 32065567799b023556a018ae2f5ba338796e0b49
+ms.sourcegitcommit: f8c270376ed905f6a8896ce0fe25b4f4b38ff498
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/22/2019
-ms.locfileid: "74350915"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84401512"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
 
@@ -73,13 +73,13 @@ End Module
 
 `number1` または `number2` のいずれかが浮動小数点値の場合、除算の浮動小数点の剰余が返されます。 結果のデータ型は、`number1` と `number2` のデータ型による除算によって得られる可能性のあるすべての値を保持できる最小のデータ型です。
 
-`number1` または `number2` が [Nothing](../../../visual-basic/language-reference/nothing.md) に評価された場合は、0 として扱われます。
+`number1` または `number2` が [Nothing](../nothing.md) に評価された場合は、0 として扱われます。
 
 関連する演算子には、次のものがあります。
 
-- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md) では、除算の整数の商が返されます。 たとえば、式 `14 \ 4` は 3 に評価されます。
+- [\ 演算子 (Visual Basic)](integer-division-operator.md) では、除算の整数の商が返されます。 たとえば、式 `14 \ 4` は 3 に評価されます。
 
-- [/ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md) では、剰余を含めた完全な商が浮動小数点数として返されます。 たとえば、式 `14 / 4` は 3.5 に評価されます。
+- [/ 演算子 (Visual Basic)](floating-point-division-operator.md) では、剰余を含めた完全な商が浮動小数点数として返されます。 たとえば、式 `14 / 4` は 3.5 に評価されます。
 
 ## <a name="attempted-division-by-zero"></a>0 除算を試行した場合
 
@@ -98,11 +98,11 @@ End Module
 
 ## <a name="floating-point-imprecision"></a>浮動小数点の誤差
 
-浮動小数点数を操作する場合、メモリ内で常に正確な 10 進数表現が使用されるとは限らないことに注意してください。 これにより、値の比較や `Mod` 演算子など、特定の演算によって、予期しない結果につながる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
+浮動小数点数を操作する場合、メモリ内で常に正確な 10 進数表現が使用されるとは限らないことに注意してください。 これにより、値の比較や `Mod` 演算子など、特定の演算によって、予期しない結果につながる可能性があります。 詳細については、「[データ型のトラブルシューティング](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)」を参照してください。
 
 ## <a name="overloading"></a>オーバーロード
 
-`Mod` 演算子は "*オーバーロード*" できます。つまり、クラスまたは構造体がその動作を再定義できます。 コードによって、そのようなオーバーロードを含むクラスまたは構造体のインスタンスに `Mod` を適用する場合は、その再定義された動作を確実に理解しておいてください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
+`Mod` 演算子は "*オーバーロード*" できます。つまり、クラスまたは構造体がその動作を再定義できます。 コードによって、そのようなオーバーロードを含むクラスまたは構造体のインスタンスに `Mod` を適用する場合は、その再定義された動作を確実に理解しておいてください。 詳細については、「 [Operator Procedures](../../programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -120,9 +120,9 @@ End Module
 
 - <xref:Microsoft.VisualBasic.Conversion.Int%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Fix%2A>
-- [算術演算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [Visual Basic における演算子の優先順位](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [トラブルシューティング (データ型)](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
-- [Visual Basic における算術演算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
-- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
+- [算術演算子](arithmetic-operators.md)
+- [Visual Basic における演算子の優先順位](operator-precedence.md)
+- [機能別の演算子一覧](operators-listed-by-functionality.md)
+- [トラブルシューティング (データ型)](../../programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Visual Basic における算術演算子](../../programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+- [\ 演算子 (Visual Basic)](integer-division-operator.md)
